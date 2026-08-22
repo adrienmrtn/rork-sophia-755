@@ -1,14 +1,14 @@
 {
   "id": "course_196_merlin_l_enchanteur",
-  "title": "Zaklínač Merlin",
+  "title": "Čaroděj Merlin",
   "subtitle": "Artušův mág",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Merlin, Artušův rádce, prorok a mág: postava zrozená z démona a křtu, architekt Camelotu, vězeň vlastní lásky.",
+  "description": "Merlin, Artušův rádce, prorok a mág: postava zrozená z démona a křtu, stavitel Camelotu, vězeň vlastní lásky.",
   "hero": {
     "image": "merlin_l_enchanteur",
     "ratio": "16:9",
-    "hook": "Syn démona, pokřtěný z kolébky: Merlin slouží dobru se silami zrozenými ze zla."
+    "hook": "Syn démona, pokřtěný od kolébky: Merlin slouží dobru silami zrozenými ze zla."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Merlin** je nejslavnější kouzelník západního středověku. Bard, prorok, rádce krále **Arthure**: stojí na hranici mezi starověkým keltským světem a křesťanským rytířstvím."
+          "text": "**Merlin** je nejslavnější kouzelník západního středověku. Bard, prorok, rádce krále **Artuše**: stojí na hranici mezi starým keltským světem a křesťanským rytířstvím."
         },
         {
           "type": "paragraph",
-          "text": "Jeho povaha je paradoxní. Část pochází z démonů, druhá z nebe. Jeho příběh není příběhem kouzelnického představení: je to boj hybridní bytosti, která se rozhodla sloužit dobru, dokud ho láska neodstraní ze světa."
+          "text": "Jeho povaha je paradoxní. Jedna část jde od démonů, druhá z nebe. Jeho příběh není kouzelnická show: je to boj hybridní bytosti, která se rozhodne sloužit dobru, dokud ji láska nevyvede ze světa."
         }
       ]
     },
@@ -33,21 +33,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V básníkovi **Robert de Boron** (12. století) chtějí démoni stvořit antikrista. [[inkubový démon]], duch, který se spojí se spící ženou, svede mladou zbožnou křesťanku. Plán se nezdaří: matka se přizná a nechá dítě pokřtít."
+          "text": "U básníka **Roberta de Boron** (12. století) chtějí démoni stvořit antikrista. [[Incubus démon]], duch, který se spojí se spící ženou, svede zbožnou křesťanku. Plán selže: matka se vyzpovídá a dá dítě pokřtít."
         },
         {
           "type": "image",
           "asset": "merlin_wizard_medieval_manuscript_illumination",
           "ratio": "4:3",
-          "caption": "Merlin, postava středověkého mága mezi lesem a nádvořím."
+          "caption": "Merlin, postava středověkého mága mezi lesem a dvorem"
         },
         {
           "type": "funFact",
-          "text": "Jméno „Merlin“ pochází z velšského **Myrddin**. Geoffrey z Monmouthu změnil „d“ na „l“, aby se vyhnul slovní hříčce příliš blízké latinskému *hovno*."
+          "text": "Jméno „Merlin” jde z velšského **Myrddin**. Geoffrey z Monmouthu změnil „d” na „l”, aby se vyhnul slovní hříčce moc blízké latině *merda*."
         },
         {
           "type": "paragraph",
-          "text": "[[Křest]] smaže kletbu, ale ponechá síly: znalost minulosti (démonické dědictví) a dar [[Proroctví ve středověké kultuře]]. Merlin může měnit tvar. Za ním najdeme **Myrddina Wylltová**, velšského barda ze 6. století, který šílený po bitvě uprchl do lesa [[Celyddon]]."
+          "text": "[[Křest]] kletbu smaže, ale nechá schopnosti: znalost minulosti (démonické dědictví) a dar [[proroctví ve středověké kultuře]]. Merlin se umí proměňovat. Za ním stojí **Myrddin Wyllt**, velšský bard 6. století, který se po bitvě zblázní a uteče do lesa zvaného [[Celyddon]]."
         }
       ]
     },
@@ -58,61 +58,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin není iluzionista. Je garantem království. Pomáhá králi [[Utherpendragon]] převzít rysy vévody z Cornwallu a připojit se k vévodkyni **Igerne**. Z této noci se narodil **Arthure**."
+          "text": "Merlin není iluzionista. Je ručitelem království. Pomůže králi jménem [[Utherpendragon]] vzít na sebe rysy vévody z Cornwallu, aby přišel k vévodkyni **Igerne**. Z té noci se narodí **Artuš**."
         },
         {
           "type": "image",
           "asset": "merlin_arthur_camelot_medieval_illustration",
           "ratio": "4:3",
-          "caption": "Merlin vede Artuše na trůn a Camelot."
+          "caption": "Merlin vede Artuše k trůnu a k Camelotu"
         },
         {
           "type": "paragraph",
-          "text": "V tajnosti vychovává dítě, řídí meč v kovadlině a poté vede Artura k Paní jezera, aby získal [[Excalibur]], jehož pochva chrání před smrtelnými zraněními. V **Camelot** navrhuje **Kulatý stůl** a umísťuje [[Nebezpečné obléhání]], volné místo vyhrazené pro nejčistšího rytíře. Vidí přicházející nebezpečí. Ví také, že osud nakonec vždy pomine."
+          "text": "Dítě vychová v tajnosti, zosnuje meč v kovadlině a pak zavede Artuše k Paní jezera pro [[Excalibur]], jejíž pochva chrání před smrtelnými ranami. V **Camelotu** vymyslí **Kulatý stůl** a umístí [[Nebezpečné obléhání]], prázdné místo vyhrazené nejčistšímu rytíři. Vidí, jak nebezpečí přicházejí. Ví taky, že osud nakonec vždycky projde."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p3",
-      "title": "Pád kouzelníka: láska a zapomenutí",
+      "title": "Pád kouzelníka: láska a zapomnění",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin dosáhne svého konce. Zamiluje se však do **Viviane**, Paní jezera, poblíž Barentonovy fontány. Učí ji svá nejtajnější kouzla, i když ví, že o to přijde."
+          "text": "Merlin zná svůj konec. Přesto se zamiluje do **Viviany**, Paní jezera, u pramene Barenton. Naučí ji nejsvětější kouzla, i když ví, že ho ztratí."
         },
         {
           "type": "image",
           "asset": "viviane_lady_of_the_lake_merlin_medieval_art",
           "ratio": "4:3",
-          "caption": "Viviane zamkne Merlina: konec času mágů."
+          "caption": "Viviana zavře Merlina: konec času mágů"
         },
         {
           "type": "funFact",
-          "text": "V závislosti na verzi ho Viviane zavře do keře hlohu, skleněné věže nebo dutiny **Brocéliande**. Nesmrtelný Merlin není mrtvý: spí mimo svět."
+          "text": "Podle verzí ho Viviana zavře do hlohového keře, skleněné věže nebo dutiny v **Brocéliande**. Nesmrtelný Merlin není mrtvý: spí mimo svět."
         },
         {
           "type": "paragraph",
-          "text": "Když rytíři odejdou ke grálu, Merlinova magie už nemá místo. Jeho stažení znamená přechod z doby mýtů do doby víry."
+          "text": "Když rytíři odejdou ke grálu, Merlinova magie už nemá místo. Jeho odchod značí přechod od času mýtů k času víry."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p4",
-      "title": "Literární dědictví a postava arcimága",
+      "title": "Literární odkaz a postava archimága",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin zíral na obraz starého moudrého muže: vousy, hůl, hádanky. Od něj sestupují **Gandalf** pro Tolkiena a **Brumbál** pro Rowlingovou. Je to adjuvant, který ví, ale nemůže jednat místo hrdiny."
+          "text": "Merlin zafixoval obraz starého mudrce: vous, hůl, hádanky. Od něj jdou **Gandalf** u Tolkiena a **Dumbledore** u Rowlingové. Je pomocník, který ví, ale nemůže jednat místo hrdiny."
         },
         {
           "type": "paragraph",
-          "text": "Most mezi divokým lesem a dvorem, drží otisk [[Druidský]], zatímco radí králům. I dnes našeptává, že říše jsou křehké a že moudrost se ne vždy ochrání."
+          "text": "Most mezi divokým lesem a dvorem, nese [[druidský]] otisk, a přitom radí králům. Ještě dnes šeptá, že říše jsou křehké a moudrost tě ne vždycky ochrání před sebou samým."
         },
         {
           "type": "takeaway",
-          "text": "**Merlin**, zrozený z démona a zachráněný křtem, buduje osud **Arthure** a poté zmizí, vězeň **Viviane**: trvalý model západního kouzelníka."
+          "text": "**Merlin**, zrozený z démona a zachráněný křtem, postaví osud **Artuše** a pak zmizí, vězeň **Viviany**: trvalý vzor západního kouzelníka."
         }
       ]
     }

@@ -18,6 +18,7 @@ Usage:
     python scripts/check_course_translation.py --lang ro --json report.json
     python scripts/check_course_translation.py --lang nl --json report.json
     python scripts/check_course_translation.py --lang el --json report.json
+    python scripts/check_course_translation.py --lang cs --json report.json
 """
 
 from __future__ import annotations
@@ -415,6 +416,28 @@ HUNGARIAN_RULES = LanguageRules(
     era_hint="should be i. e. / i. sz.",
 )
 
+CZECH_RULES = LanguageRules(
+    # Bare "a" / "i" are ordinary conjunctions and list items ("Alarich I,").
+    stranded_spaced=re.compile(
+        r"\b(na|do|od|po|za|pro|p\u0159i|nad|pod|bez|ke|ze|ve|se|\u017ee)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "a," / "i," are ordinary in lists. Only "že" cannot end a clause.
+    stranded_tight=re.compile(
+        r"\b(\u017ee)\s*([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=("ten ", "ta ", "to ", "ti ", "ty "),
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # Czech decimals are commas
+    century_hint="should be '15. století'",
+    era_hint="should be př. n. l. / n. l.",
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
@@ -428,6 +451,7 @@ RULES_BY_LANG: dict[str, LanguageRules] = {
     "el": GREEK_RULES,
     "sv": SWEDISH_RULES,
     "hu": HUNGARIAN_RULES,
+    "cs": CZECH_RULES,
 }
 
 
@@ -510,6 +534,7 @@ ARTICLE_BEFORE_RE = {
     ),
     "sv": re.compile(r"\b(en|ett|den|det|de)$", re.IGNORECASE),
     "hu": re.compile(r"\b(a|az|egy)$", re.IGNORECASE),
+    "cs": re.compile(r"\b(ten|ta|to|ti|ty)$", re.IGNORECASE),
 }
 
 

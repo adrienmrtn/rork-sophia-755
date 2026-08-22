@@ -1,14 +1,14 @@
 {
   "id": "course_198_sindbad_le_marin",
-  "title": "Sindibád námořník",
+  "title": "Námořník Sindibád",
   "subtitle": "Sedm cest",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Sindibád námořník: Sedm cest, příšery a poklady. Za podivuhodným je portrét obchodníka-dobrodruha islámského zlatého věku.",
+  "description": "Námořník Sindibád: sedm cest, nestvůry a poklady. Pod zázrakem portrét kupce-dobrodruha zlatého věku islámu.",
   "hero": {
     "image": "sindbad_le_marin",
     "ratio": "16:9",
-    "hook": "Sedmkrát odchází bohatý nebo zvědavý. Sedmkrát ji moře prolomí. Sedmkrát se vrací ještě bohatší."
+    "hook": "Sedmkrát odjede bohatý nebo zvědavý. Sedmkrát ho moře zlomí. Sedmkrát se vrátí ještě bohatší."
   },
   "sections": [
     {
@@ -18,57 +18,57 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Sindibád námořník** patří do **Arabské noci**, ale ne do starého perského jádra sbírky. Jeho cyklus sedmi cest se odehrál později, v Egyptě, kolem 15. století."
+          "text": "**Námořník Sindibád** patří k **Tisíci a jedné noci**, ale ne ke starému perskému jádru sbírky. Cyklus sedmi cest se ustálil později, v Egyptě, kolem 15. století."
         },
         {
           "type": "paragraph",
-          "text": "Ztělesňuje cestovatele-obchodníka **Islamského zlatého věku**: zbožnost, chamtivost, odvahu a neschopnost sedět na místě, kdysi bohatý. Za příšerami čteme alegorii štěstí stoupajícího a klesajícího."
+          "text": "Ztělesňuje cestovatele-kupce **zlatého věku islámu**: zbožnost, chtivost, odvahu a neschopnost zůstat v klidu, jakmile zbohatne. Pod nestvůrami čteš alegorii štěstí, které stoupá a padá."
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p1",
-      "title": "Cyklická struktura dobrodružství",
+      "title": "Cyklická stavba dobrodružství",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Příběh začíná v Bagdádu. **Sindibád námořník**, nyní starý a bohatý, vypráví své utrpení vrátnému také jménem Sindibád (někdy Hindbad). Třídní kontrast je okamžitý."
+          "text": "Příběh se otevře v Bagdádu. **Námořník Sindibád**, teď starý a zámožný, vypráví své zkoušky nosiči, který se taky jmenuje Sindibád (někdy Hindbád). Třídní kontrast je okamžitý."
         },
         {
           "type": "image",
           "asset": "baghdad_medieval_islamic_golden_age_trade",
           "ratio": "4:3",
-          "caption": "Bagdád, výchozí a návratový bod Sindibádových cest."
+          "caption": "Bagdád, výchozí i návratový bod Sindibádových cest"
         },
         {
           "type": "paragraph",
-          "text": "Každá cesta se řídí stejnou mechanikou: únava ze sedavého života, vyplutí z přístavu [[Basra]], ztroskotání, přežití v neznámé zemi, návrat naložený poklady. Číslo sedm, nabité významem v [[Islámská kosmologie]], dává sérii iniciační rozměr: od nerozvážnosti k moudrosti."
+          "text": "Každá cesta má stejnou mechaniku: nuda usedlého života, odjezd z přístavu [[Basra]], ztroskotání, přežití v neznámé zemi, návrat naložený poklady. Číslo sedm, plné významu uvnitř [[Islámská kosmologie]], dává sérii iniciační rozměr: od nerozumu k moudrosti."
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p2",
-      "title": "Fantastický bestiář mezi mýtem a realitou",
+      "title": "Fantastický bestiář mezi mýtem a skutečností",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Rock** (neboli Rokh), pták, jehož rozpětí křídel zakrývá slunce, zanechal svou stopu ve světové představivosti. Vidíme ozvěnu příběhů arabských cestovatelů na pobřeží východní Afriky."
+          "text": "**Roc** (neboli Roch), pták, jehož rozpětí zastíní slunce, poznamenal světovou představivost. Vidíš v něm ozvěnu zpráv arabských cestovatelů z východoafrického pobřeží."
         },
         {
           "type": "image",
           "asset": "sinbad_roc_giant_bird_illustration",
           "ratio": "4:3",
-          "caption": "Roc, obří pták Sindibádových cest."
+          "caption": "Roc, obří pták Sindibádových cest"
         },
         {
           "type": "funFact",
-          "text": "Roc je pravděpodobně inspirován **Aepyornis**, sloním ptákem z Madagaskaru, který zmizel kolem roku 1000. Jeho vejce byla až 150krát větší než objem slepičího vejce."
+          "text": "Roc se pravděpodobně inspiruje **Aepyornisem**, sloním ptákem z Madagaskaru, který zmizel kolem roku 1000. Jeho vejce měla až 150násobek objemu slepičího."
         },
         {
           "type": "paragraph",
-          "text": "Sindibád také čelí **Ostarci z více**, který se drží na zádech, a **Želvímu ostrově**, klamné zemi. Údolí diamantů ****, kam se hází maso k nalepení drahokamů, už koluje mezi Antiky. Nádherné sedimenty staletí [[Středověké arabské obchodní cesty]]."
+          "text": "Sindibád čelí i **Stařeci moře**, který se mu pověsí na záda, a **želvímu ostrovu**, klamné půdě. **Údolí diamantů**, kam se hází maso, aby se nalepily drahokamy, koluje už u antických autorů. Zázračno vrství staletí jevu [[Středověké arabské obchodní cesty]]."
         }
       ]
     },
@@ -79,36 +79,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Prostředí je historické. V 8. a 9. století ovládli Indický oceán námořníci z Basry a Sirafu. Sindibadovy zastávky evokují skutečná místa: [[Serendib]] (Cejlon) pro koření, jihovýchodní Asie pro kafr, pobřeží pro perly."
+          "text": "Rámec je historický. V 8. a 9. století námořníci z Basry a Síráfu ovládají Indický oceán. Sindibádovy zastávky evokují skutečná místa: [[Serendib]] (Cejlon) pro koření, jihovýchodní Asii pro kafr, pobřeží pro perly."
         },
         {
           "type": "image",
           "asset": "arab_indian_ocean_trade_routes_medieval_ship",
           "ratio": "4:3",
-          "caption": "Arabské lodě na trasách Indického oceánu."
+          "caption": "Arabské lodě na cestách Indického oceánu"
         },
         {
           "type": "paragraph",
-          "text": "Sindibád není válečník: je to obchodník-dobrodruh, prestižní postavení ve společnosti, která si cení obchodu. Tam najdeme monzun, lodě šité kokosovými vlákny spíše než přibité. Západní rovnoběžka: [[Marco Polo (západní rovnoběžka)]], která popisuje Asii ve faktech, kde ji Sindibád maluje v divech."
+          "text": "Sindibád není válečník: je kupec-dobrodruh, prestižní status ve společnosti, která si obchodu cení. Najdeš monzun, lodě šité kokosovými vlákny místo hřebíků. Západní paralela: [[Marco Polo jako západní paralela]], který Asii popisuje fakty, zatímco Sindibád ji maluje zázraky."
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p4",
-      "title": "Univerzální dědictví: od východu na západ",
+      "title": "Univerzální odkaz: z Východu na Západ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cestování, které v 18. století přeložil **Antoine Galland**, vyživuje evropský [[Dobrodružný román]], od Defoea po Julese Verna. Kino z něj často dělá soukromníka ve službách princezen. Chyba: Sindibád je původně obyvatelem města z Bagdádu, který přežil díky víře a vynalézavosti."
+          "text": "Přeložené v 18. století **Antoinem Gallandem**, cesty živí evropský [[Dobrodružný román]], od Defoea k Julesi Verneovi. Film z něj často udělá korzára ve službách princezen. Omyl: Sindibád je především bagdádský měšťan, který přežije vírou a důvtipem."
         },
         {
           "type": "funFact",
-          "text": "Jméno Sindibád by evokovalo „knížete řeky Sindhu“, Indu, na křižovatce arabského a indického světa."
+          "text": "Jméno Sindibád prý evokuje „prince řeky Sindh”, Indu, na křižovatce arabského a indického světa."
         },
         {
           "type": "takeaway",
-          "text": "**Sindibád** ztělesňuje islámský námořní zlatý věk v **sedmi** cyklických plavbách: Skála a diamanty maskují realitu, realitu arabských obchodníků, pánů Indického oceánu."
+          "text": "**Sindibád** ztělesňuje námořní zlatý věk islámu v **sedmi** cyklických cestách: Roc a diamanty maskují skutečnost arabských kupců, pánů Indického oceánu."
         }
       ]
     }

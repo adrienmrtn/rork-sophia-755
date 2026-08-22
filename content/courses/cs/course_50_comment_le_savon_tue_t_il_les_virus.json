@@ -4,11 +4,11 @@
   "subtitle": "Hygiena",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Mýdlo není „kouzlo“. Napadá tukovou schránku určitých virů a vytahuje je z kůže. Zde je důvod, proč na 20 sekundách záleží.",
+  "description": "Mýdlo není „kouzelné”. Napadne mastný obal některých virů a strhne je z kůže. Proto záleží na 20 sekundách.",
   "hero": {
     "image": "comment_le_savon_tue_les_virus",
     "ratio": "16:9",
-    "hook": "Jednoduchá zbraň proti virům: molekuly, které mají rády vodu… a tuk."
+    "hook": "Jednoduchá zbraň proti virům: molekuly, které mají rády vodu... i tuk."
   },
   "sections": [
     {
@@ -18,51 +18,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Během pandemie COVID-19 se opět stalo ústředním velmi jednoduché gesto: mytí rukou mýdlem. Není potřeba laboratoř. Jen voda, mýdlo a trochu času."
+          "text": "Za pandemie covidu-19 se znovu stalo ústředním velmi jednoduché gesto: mýt si ruce mýdlem. Nepotřebuješ laboratoř. Stačí voda, mýdlo a trochu času navíc."
         },
         {
           "type": "paragraph",
-          "text": "Proč to tak dobře funguje? Protože mnoho nebezpečných virů nese obal vyrobený z tuku. A na ničení mastnoty je výborné mýdlo."
+          "text": "Proč to funguje tak dobře? Protože mnoho nebezpečných virů nese obal vyrobený z tuku. A mýdlo je výborné právě na to, aby ten tuk zničilo."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p1",
-      "title": "Slabost některých virů",
+      "title": "Slabina některých virů",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Některé viry, jako je **koronavirus** nebo virus chřipky, mají vnější obal tvořený lipidy (tuky). Tato obálka je chrání... dokud nenarazí na mýdlo."
+          "text": "Některé viry, jako **koronaviry** nebo virus chřipky, mají vnější obal z lipidů, tedy z tuků. Ten obal je chrání... až do chvíle, kdy potká mýdlo a jeho molekuly tuk roztrhnou."
         },
         {
           "type": "paragraph",
-          "text": "Jiné viry, nazývané „nahé“, tuto obálku nemají. Jsou odolnější vůči mýdlu a alkoholu. Naštěstí je mnoho virů, které procházejí rukama a kapénkami, obaleno."
+          "text": "Jiné viry, zvané „nahé”, ten obal nemají. Mýdlu i alkoholu odolají líp. Naštěstí hodně virů, které obíhají rukama a kapénkami, ten mastný obal nese, a proto mýdlo stačí."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
-      "title": "Mýdlo, oboustranná molekula",
+      "title": "Mýdlo, molekula se dvěma tvářemi",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "handwashing_soap_water_hands",
           "ratio": "4:3",
-          "caption": "Tření pomáhá mýdlu dostat se do každého koutku rukou."
+          "caption": "Tření pomůže mýdlu dostat se do všech záhybů rukou"
         },
         {
           "type": "paragraph",
-          "text": "Molekuly mýdla jsou [[povrchově aktivní látky]] molekuly. Mají hlavu, která má ráda vodu a ocas, který má rád tuk. Ocas se ponoří do tukového obalu viru. Hlava zůstává otočená směrem k vodě."
+          "text": "Molekuly mýdla jsou [[povrchově aktivní látky]]. Mají hlavu, která má ráda vodu, a ocas, který má rád tuk. Ocas se zaboří do mastného obalu viru. Hlava zůstane otočená k vodě."
         },
         {
           "type": "paragraph",
-          "text": "Výsledek: obálka se roztrhne. Virus je zakázán. Poté voda odnese trosky. Mýdlo „nespaluje“ virus jako kyselina: **rozpouští** a odstraňuje jej."
+          "text": "Výsledek: obal se roztrhne. Virus se vypne. Pak voda odnese trosky. Mýdlo virus „nespálí” jako kyselina: **rozpustí** ho a sundá z kůže."
         },
         {
           "type": "funFact",
-          "text": "Je to stejný princip, který odstraňuje mastnotu z pánve: mýdlo chytne mastnotu a pustí ji s vodou."
+          "text": "Je to stejný princip, který sundá mastnotu z pánve: mýdlo chytí tuk a nechá ho odejít s vodou."
         }
       ]
     },
@@ -73,26 +73,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Chvíli trvá, než se mýdlo dostane do všech záhybů: mezi prsty, pod nehty, kolem zápěstí. Přibližně **20 sekund** tření, toto je často doporučované minimum."
+          "text": "Chce to čas, aby mýdlo došlo do všech záhybů: mezi prsty, pod nehty, kolem zápěstí. Zhruba **20 sekund** tření je minimum, které se často doporučuje, aby mýdlo došlo všude."
         },
         {
           "type": "paragraph",
-          "text": "Bez tření funguje mýdlo hůře. Ani samotná voda: nenapadá účinně tukový obal."
+          "text": "Bez tření mýdlo funguje hůř. Samotná voda na to taky nestačí: mastný obal viru účinně nenapadne."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p4",
-      "title": "Mýdlo nebo hydroalkoholový gel?",
+      "title": "Mýdlo, nebo alkoholový gel?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gel s alespoň **60%** alkoholu může také zničit mnoho obalených virů. Pokud je však viditelná špína nebo mastnota, gel je méně účinný: špína funguje jako clona. V tomto případě zůstává nejlepší volbou mýdlo a voda."
+          "text": "Gel s nejméně **60%** alkoholu umí taky zničit hodně obalených virů. Když je ale viditelná špína nebo mastnota, gel je slabší: nečistoty udělají clonu. V tom případě zůstávají mýdlo a voda nejlepší volbou."
         },
         {
           "type": "takeaway",
-          "text": "Mýdlo zabíjí mnoho virů tím, že odtrhne jejich tukové obaly a poté je smyje vodou. Čas + tření = účinnost."
+          "text": "Mýdlo zabije hodně virů tím, že roztrhne jejich mastný obal a pak je odnese vodou. Čas + tření = účinnost."
         }
       ]
     }

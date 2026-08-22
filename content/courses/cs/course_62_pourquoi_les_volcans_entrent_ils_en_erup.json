@@ -1,14 +1,14 @@
 {
   "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup",
   "title": "Proč sopky vybuchují?",
-  "subtitle": "Magma a talíře",
+  "subtitle": "Magma a desky",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Sopka je otvor v zemské kůře. Magma pod tlakem tam stoupá a stává se lávou. To je důvod, proč Země „plivne“.",
+  "description": "Sopka je otvor v zemské kůře. Magma pod tlakem stoupá a stane se lávou. Proto Země „plive”.",
   "hero": {
     "image": "pourquoi_les_volcans_entrent_en_eruption",
     "ratio": "16:9",
-    "hook": "Pod našima nohama není Země zamrzlá. Někdy otevře ohnivé okno."
+    "hook": "Pod našima nohama Země nestojí. Občas otevře okno z ohně."
   },
   "sections": [
     {
@@ -18,40 +18,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sopka není jen hora, která dýchá ohněm. Je to otvor ve vnějším obalu Země. Tímto způsobem stoupá **magma**: směs roztavených hornin a plynu pod vysokým tlakem. Jakmile je toto magma pod širým nebem, stává se **vyprané**."
+          "text": "Sopka není jen hora, která chrlí oheň. Je to otvor ve vnějším obalu Země. Tudy stoupá **magma**: směs tavených hornin a plynů pod velkým tlakem. Na vzduchu se z magmatu stane **láva** a na vzduchu z něj bude láva."
         },
         {
           "type": "paragraph",
-          "text": "Abyste pochopili erupci, musíte se podívat pod povrch: teplo uvnitř planety, pohyb desek a způsob, jakým plyny vytvářejí tlak, trochu jako třesení lahví sody."
+          "text": "Abychom pochopili erupci, musíme se podívat pod povrch: vnitřní teplo planety, pohyb desek a způsob, jakým plyny zvedají tlak, trochu jako v protřepané sodovce, kterou zatřeseš a pak otevřeš."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p1",
-      "title": "Pod našima nohama se nic nehýbe",
+      "title": "Pod nohama nic nestojí",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Země je tvořena vrstvami. Na povrchu je **krust** pevný obal, **5 až 70 km silný. Níže leží **mantle**** do hloubky asi **2 900 km**. Srst je většinou pevná, ale po velmi dlouhou dobu může stékat velmi pomalu, jako ultra hustý med."
+          "text": "Země má vrstvy. Na povrchu je **kůra**, tuhý obal tlustý **5 až 70 km**. Pod ní se táhne **plášť** až do hloubky asi **2.900 km**. Plášť je většinou pevný, ale v dlouhých časech teče velmi pomalu, jako extra hustý med, pod níž se hornina chová jako velmi pomalá pasta."
         },
         {
           "type": "image",
           "asset": "volcano_eruption_lava",
           "ratio": "auto",
-          "caption": "Erupce: výstup magmatu na povrch."
+          "caption": "Erupce: magma stoupá až na povrch."
         },
         {
           "type": "paragraph",
-          "text": "Toto vnitřní teplo způsobuje, že hmota stoupá a klesá: jedná se o **konvekční proudy**. Vytlačují velké kusy kůry zvané plaky. To je [[Desková tektonika]]: zemský povrch je rozřezán na desky, které se od sebe vzdalují, narážejí nebo klouzají po sobě."
+          "text": "To vnitřní teplo žene hmotu nahoru a zase dolů: jsou to **konvekční proudy**. Tlačí velké kusy kůry, kterým říkáme desky. To je [[Desková tektonika]]: zemský povrch je rozřezaný na desky, které se oddalují, srážejí nebo kloužou jedna podél druhé a tím pohánějí pohyb desek."
         },
         {
           "type": "funFact",
-          "text": "Určité velmi rychlé vzestupy přinášejí zpět diamanty vytvořené v hloubce větší než **150 km**. Nemají čas se cestou převléknout."
+          "text": "Některé velmi rychlé výstupy vynášejí diamanty z hloubky přes **150 km**. Cestou nestihnou přeměnit se za pár hodin, ne za miliony let."
         },
         {
           "type": "paragraph",
-          "text": "Při [[hřebeny]] se desky vzdalují a magma snadno stoupá. V oblasti [[Subdukce]] se jedna deska potápí pod druhou a nese s sebou vodu. Tato voda snižuje bod tání hornin: tvoří se magma, pak stoupá."
+          "text": "Tam, kde jsou [[hřebeny]], se desky oddalují a magma stoupá snadno. V zóně [[subdukce]] se jedna deska noří pod druhou a bere s sebou vodu. Ta voda snižuje bod tání hornin: vznikne magma a pak stoupá a magma má volnější cestu vzhůru."
         }
       ]
     },
@@ -62,53 +62,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kámen neroztaje jen „protože je horko“. Existují tři spouštěče: zvýšení teploty, pokles tlaku nebo přidání vody. Jakmile se magma vytvoří, je méně husté než hornina kolem něj. Snaží se proto stoupat, trochu jako vzduchová bublina ve vodě."
+          "text": "Hornina netaje jen „proto, že je horko”. Platí tři spouštěče: růst teploty, pokles tlaku, nebo přídavek vody. Jakmile magma vznikne, je řidší než okolní hornina. Proto se snaží stoupat, trochu jako bublina ve vodě, nebo pokles tlaku, nebo přísun vody."
         },
         {
           "type": "paragraph",
-          "text": "Často se nejprve zastaví v **magmatické komoře**, nádrži několik kilometrů pod povrchem. Tam rozpuštěné plyny při poklesu tlaku tvoří bubliny. Pokud „zástrčka“ skály nahoře již nedrží, začne erupce."
+          "text": "Často se nejdřív zastaví v **magmatickém krbu**, zásobníku pár kilometrů pod povrchem. Tam rozpuštěné plyny tvoří bubliny, když tlak klesne. Když „zátka” horniny nahoře neudrží, erupce začne, než si najde cestu k povrchu."
         },
         {
           "type": "funFact",
-          "text": "Erupce **Tambora** v **1815** v Indonésii byla tak silná, že ochladila globální klima. **1816** byl přezdíván „rok bez léta“, s katastrofálními sklizněmi v Evropě a Severní Americe."
+          "text": "Erupce **Tambory** roku **1815** v Indonésii byla tak silná, že ochladila světové klima. Rok **1816** dostal přezdívku „rok bez léta”, s katastrofálními sklizněmi v Evropě i Severní Americe."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p3",
-      "title": "Tekutina nebo výbušnina?",
+      "title": "Tekuté, nebo výbušné?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ne všechny zlomy jsou stejné. Vše závisí na **viskozita** magmatu, tedy zda je spíše tekuté nebo lepkavé. Tekuté magma, jako na **Havaj** nebo na Piton de la Fournaise (ostrov Réunion), nechává plyny unikat. Lávové proudy: erupce **efuzivní**."
+          "text": "Ne každá erupce vypadá stejně. Záleží na **viskozitě** magmatu, tedy jestli je spíš tekuté, nebo lepivé. Tekuté magma, jako na **Havaji** nebo u Pitonu de la Fournaise (Réunion), nechá plyny uniknout. Láva teče: erupce je **efuzivní** a jak snadno z něj uniknou plyny."
         },
         {
           "type": "paragraph",
-          "text": "Lepkavé magma zachycuje plyny. Tlak se zvyšuje, pak vše exploduje. Popel, bloky a [[ohnivé mraky]] (hořící oblaka plynu a popela valící se ze svahů) pak mohou zdevastovat okolí. Toto je styl sopek jako Mount **Svatá Helena** (Spojené státy americké) nebo **Pinatubo** (Filipíny)."
+          "text": "Lepivé magma plyny uvězní. Tlak stoupá a pak všechno vybuchne. Popel, bloky a [[pyroklastické toky]] (žhavá mračna plynů a popela, která se řítí ze svahů) pak mohou zpustošit okolí. Takové jsou sopky jako hora **Saint Helens** (Spojené státy) nebo **Pinatubo** (Filipíny) a po svahu se valí žhavé mračno."
         },
         {
           "type": "paragraph",
-          "text": "Sopka může také zůstat klidná po staletí. V **79** po. př. n. l., **Vesuv**, poblíž Neapole, pohřbil Pompeje pod popelem. Přibližně **80 %** světové sopečné činnosti se odehrává pod oceány, daleko od našich očí."
+          "text": "Sopka může taky staletí mlčet. Roku **79** n. l. **Vesuv** u Neapole zasype Pompeje popelem. Asi **80%** světové sopečné činnosti se děje pod oceány, daleko od našich očí, který tehdy pohřbil Pompeje."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p4",
-      "title": "Nebezpečí, plodnost, propastný život",
+      "title": "Nebezpečí, úrodnost, hlubinný život",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sopky utvářely ranou atmosféru Země vypouštěním plynů. Jejich popel také obohacuje půdu: na úpatí aktivních sopek žije mnoho úrodných zemědělských oblastí. Ale velmi velká erupce může poslat částice síry vysoko do atmosféry a ochlazovat klima na měsíce."
+          "text": "Sopky formovaly prvotní atmosféru Země vypouštěním plynů. Jejich popel taky obohacuje půdu: mnoho úrodných zemědělských krajů žije u paty činných sopek. Ale velmi velká erupce může vyhnat sirné částice vysoko do atmosféry a ochladit klima na měsíce a úrodné půdy, na kterých se dobře pěstuje."
         },
         {
           "type": "paragraph",
-          "text": "Některá místa, jako například Yellowstonský [[supervulkán]] ve Spojených státech, jsou pečlivě sledována. Pod mořem, poblíž hřebenů, chrlí [[černé kuřáky]] spalující tekutiny bohaté na minerály. Ekosystémy tam žijí bez slunečního záření, živené chemií horkých pramenů."
+          "text": "Některá místa, jako [[supervulkán]] Yellowstone ve Spojených státech, se bedlivě hlídají. Pod mořem, u hřebenů, [[černé kuřáky]] chrlí žhavé tekutiny bohaté na minerály. Ekosystémy tam žijí bez slunečního světla, živené chemií horkých pramenů, schopná změnit klima na celá léta."
         },
         {
           "type": "takeaway",
-          "text": "Sopky vytlačují magma pod tlakem, zejména na hranicích tektonických desek. Viskozita magmatu rozhoduje o tom, zda erupce proudí tiše, nebo exploduje."
+          "text": "Sopky vyvrhují magma pod tlakem, hlavně na hranicích tektonických desek. Viskozita magmatu rozhodne, jestli erupce tiše teče, nebo vybuchne, kde se desky rozcházejí nebo srážejí."
         }
       ]
     }

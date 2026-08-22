@@ -4,11 +4,11 @@
   "subtitle": "1861-1865",
   "subject": "histoire",
   "subcategory": "Cold War & Contemporary World",
-  "description": "Od **1861** do **1865** jsou Spojené státy roztrhané: více než **620 000** mrtvých. Jádrem konfliktu je otroctví, národní jednota a zrod silnějšího federálního státu.",
+  "description": "Od **1861** do **1865** se Spojené státy roztrhnou: víc než **620.000** mrtvých. Uprostřed konfliktu otroctví, národní jednota a zrod silnějšího federálního státu.",
   "hero": {
     "image": "la_guerre_de_secession_americaine",
     "ratio": "16:9",
-    "hook": "Nejsmrtelnější válka v americké historii, pro Unii a proti otroctví."
+    "hook": "Nejvražednější válka amerických dějin, za Unii a proti otroctví."
   },
   "sections": [
     {
@@ -18,82 +18,82 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od **1861** do **1865** Spojené státy zažívají nejvážnější krizi: občanskou válku. Sever (Unie) versus Jih (Konfederace). Už žádní mrtví **620 000**."
+          "text": "Od **1861** do **1865** prožijí Spojené státy nejtěžší krizi: občanskou válku. Sever (Unie) proti Jihu (Konfederace). Víc než **620.000** mrtvých."
         },
         {
           "type": "paragraph",
-          "text": "Konflikt proměňuje mladou republiku v průmyslovou velmoc za cenu trvalého traumatu národní jednoty a otroctví."
+          "text": "Konflikt promění mladou republiku v průmyslovou mocnost, za cenu trvalého traumatu kolem národní jednoty a otroctví."
         }
       ]
     },
     {
       "id": "course_40_la_guerre_de_secession_americaine_1861_1_p1",
-      "title": "Dvě Ameriky tváří v tvář",
+      "title": "Dvě Ameriky proti sobě",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Severní** se industrializuje se mzdami a protekcionismem. **Shih** zůstává venkovem, bohatým na bavlnu produkovanou **4 miliony** otroků."
+          "text": "**Sever** se industrializuje, se mzdami a ochranářstvím. **Jih** zůstane venkovský, bohatý z bavlny, kterou vyrábí **4 miliony** otroků."
         },
         {
           "type": "image",
           "asset": "slaves_american_southern_plantation",
           "ratio": "4:3",
-          "caption": "Southern Plantation: Otroctví v srdci ekonomiky Konfederace."
+          "caption": "Plantáž na Jihu: otroctví v srdci konfederační ekonomiky"
         },
         {
           "type": "paragraph",
-          "text": "Debata se týká také **[[Práva států vs. federální vláda]]**: kdo rozhoduje o otroctví, místní stát nebo Washington? Volba **Abraham Lincolna** (**listopad 1860**), republikána proti rozšíření otroctví, bez jediného hlasu z Jihu, spouští secesi. Sedm států založilo Konfederaci s prezidentem **[[Jefferson Davis]]** a ve svých ústavách garantovalo otroctví."
+          "text": "Spor se točí i kolem **[[Práva států vs. federální vláda]]**: kdo rozhodne o otroctví, místní stát, nebo Washington? Zvolení **Abrahama Lincolna** (**listopad 1860**), republikána proti rozšiřování otroctví, bez jediného hlasu z Jihu, spustí odtržení. Sedm států založí Konfederaci, s prezidentem **[[Jefferson Davis]]**, a otroctví si zapíšou do ústavy."
         },
         {
           "type": "funFact",
-          "text": "Před válkou jsme často říkali „Spojené státy *je*“ v množném čísle. Poté je podstatné použití jednotného čísla („*Východní*“): nedělitelný národ."
+          "text": "Před válkou se často říkalo „Spojené státy *jsou*” v množném čísle. Potom se prosadí jednotné („*je*”): jeden nedělitelný národ."
         }
       ]
     },
     {
       "id": "course_40_la_guerre_de_secession_americaine_1861_1_p2",
-      "title": "Totální válka, pak emancipace",
+      "title": "Totální válka a pak emancipace",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**A 12. dubna 1861**, jižní děla ostřelují Fort Sumter v Jižní Karolíně. Válka, o které jsme si mysleli, že bude krátká, se stala průmyslovou. V **Antietam** (**Száří 1862**), **23 000** obětí za dvanáct hodin: nejkrvavější den v americké vojenské historii."
+          "text": "**12. dubna 1861** jižanská děla bombardují Fort Sumter v Jižní Karolíně. Válka, kterou čekali krátkou, se stane průmyslovou. U **Antietamu** (**17. září 1862**) **23.000** obětí za dvanáct hodin: nejkrvavější den amerických vojenských dějin."
         },
         {
           "type": "paragraph",
-          "text": "Neúspěch **[[Robert E. Lee]]**, předního generála Konfederace, umožnil Lincolnovi podepsat **[[Vyhlášení emancipace]]** (**Leden 1, 1863**), která osvobodila otroky v povstaleckých státech. Válka o Unii se stala také válkou za svobodu, která zavřela dveře evropské podpoře Jihu. **Gettysburg** (červenec **1863**) narušuje konfederační dynamiku."
+          "text": "Neúspěch **[[Robert E. Lee]]**, hlavního konfederačního generála, umožní Lincolnovi podepsat **[[Prohlášení o emancipaci]]** (**1. ledna 1863**), které osvobodí otroky v povstaleckých státech. Válka za Unii se stane i válkou za svobodu, což Jihu zavře dveře k evropské podpoře. **Gettysburg** (červenec **1863**) zlomí konfederační dech."
         },
         {
           "type": "image",
           "asset": "american_civil_war_battle",
           "ratio": "4:3",
-          "caption": "Bitva občanské války: bezprecedentní průmyslové násilí."
+          "caption": "Bitva občanské války: průmyslové násilí, jaké Amerika ještě neviděla"
         }
       ]
     },
     {
       "id": "course_40_la_guerre_de_secession_americaine_1861_1_p3",
-      "title": "Severní vítězství, Lincolnova smrt",
+      "title": "Vítězství Severu, Lincolnova smrt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**[[Ulysses Grant]]**, vrchní generál Unie, vede opotřebovací válku. Jeho poručík **William Tecumseh Sherman** zpustošil Gruzii během svého „pochodu k moři“. Lee se vzdal v **AAppomattox** dne **A 9. dubna 1865**."
+          "text": "**[[Ulysses Grant]]**, vrchní generál Unie, vede opotřebovací válku. Jeho podřízený **William Tecumseh Sherman** zpustoší Georgii při „Pochodu k moři”. Lee kapituluje u **Appomattoxu** **9. dubna 1865**."
         },
         {
           "type": "image",
           "asset": "abraham_lincoln_portrait",
           "ratio": "1:1",
-          "caption": "Abraham Lincoln, prezident Unie, zavražděn pět dní po Appomattox."
+          "caption": "Abraham Lincoln, prezident Unie, zavražděný pět dní po Appomattoxu"
         },
         {
           "type": "paragraph",
-          "text": "O pět dní později byl Lincoln zavražděn **John Wilkes Booth**, jižanský herec. Bez něj začíná **[[Rekonstrukce]]**, období rekonstrukce jihu. V prosinci **1865**, [[13. dodatek]] celostátně ruší otroctví."
+          "text": "O pět dní později Lincolna zavraždí **John Wilkes Booth**, jižanský herec. **[[Rekonstrukce]]**, období obnovy Jihu, začne bez něj. V prosinci **1865** [[13. dodatek]] zruší otroctví v celé zemi."
         },
         {
           "type": "funFact",
-          "text": "Válka také urychlila chirurgii: lékaři jako **Gurdon Buck** provedli první rekonstrukce obličeje vojáků znetvořených kulkami Minié."
+          "text": "Válka zrychlí i chirurgii: lékaři jako **Gurdon Buck** udělají první obličejové rekonstrukce vojákům znetvořeným Miniéovými kulkami."
         }
       ]
     },
@@ -104,19 +104,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Podle **[[Rekonstrukce]]** (**1865-1877**) volili a byli zvoleni Afroameričané. Pak přichází reakce: **[[Ku Klux Klan]]** (**1865**), bílá teroristická organizace, stažení federálních jednotek (**1877**), zákony o segregaci Jima Crowa. Právní segregace by trvala téměř století."
+          "text": "Za **[[Rekonstrukce (1865-1877)]]** (**1865-1877**) Afroameričané volí a jsou volení. Pak přijde reakce: **[[Ku Klux Klan]]** (**1865**), bílá teroristická organizace, stažení federálních vojsk (**1877**), segregační zákony Jim Crow. Zákonná segregace vydrží skoro století."
         },
         {
           "type": "paragraph",
-          "text": "Na mapě sjednocený národ bez legálního otroctví. Ve skutečnosti hluboká rasová propast. A nástroje budoucí světové velmoci: těžký průmysl, železnice, silný federální stát."
+          "text": "Na mapě sjednocený národ bez zákonného otroctví. Ve skutečnosti hluboká rasová trhlina. A nástroje budoucí světové mocnosti: těžký průmysl, železnice, silný federální stát."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1860",
-              "title": "Lincolnovy volby",
-              "detail": "Začátek secese."
+              "title": "Lincoln zvolený",
+              "detail": "Spoušť odtržení."
             },
             {
               "date": "1861",
@@ -126,7 +126,7 @@
             {
               "date": "1863",
               "title": "Emancipace",
-              "detail": "Gettysburg Proklamace a bod obratu."
+              "detail": "Prohlášení a zlom u Gettysburgu."
             },
             {
               "date": "1865",
@@ -137,7 +137,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Občanská válka (**1861-1865**) sjednotila Spojené státy a zrušila otroctví za cenu úmrtí **620 000**, přičemž zanechala rasovou propast, kterou zákony Jima Crowa prodlouží."
+          "text": "Občanská válka (**1861-1865**) sjednotí Spojené státy a zruší otroctví, za cenu **620.000** mrtvých, a přitom nechá rasovou trhlinu, kterou zákony Jim Crow protáhnou."
         }
       ]
     }

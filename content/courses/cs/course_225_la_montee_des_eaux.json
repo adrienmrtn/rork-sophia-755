@@ -1,14 +1,14 @@
 {
   "id": "course_225_la_montee_des_eaux",
-  "title": "Stoupající vody",
+  "title": "Stoupání moří",
   "subtitle": "Hladina moří stoupá",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Do roku 2100 by se hladiny oceánů mohly zvýšit o **ónový metr**. Pro celé země a pobřežní megaměsta to už není vzdálená hypotéza, ale otázka plánování.",
+  "description": "Do roku 2100 může hladina oceánů vystoupat o **metr**. Pro celé země i pobřežní velkoměsta to už není vzdálená hypotéza, ale otázka plánování.",
   "hero": {
     "image": "la_montee_des_eaux",
     "ratio": "16:9",
-    "hook": "Moře se každým rokem zvedá o něco více a některé země už plánují svůj přesun."
+    "hook": "Moře každý rok vystoupá o kousek výš a některé země už plánují stěhování."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Po tisíce let zůstaly hladiny oceánů zhruba stabilní. Od průmyslové éry stoupá a rychlost tohoto vzestupu se rok od roku zrychluje."
+          "text": "Po tisíce let zůstávala hladina oceánů zhruba stejná a skoro se nehýbala z místa. Od průmyslové éry stoupá a rychlost toho stoupání se rok od roku zrychluje."
         },
         {
           "type": "paragraph",
-          "text": "Do roku 2100 by se hladina oceánů mohla zvýšit o 30 centimetrů až jeden metr v závislosti na našich volbách v oblasti emisí. Pro mnoho pobřeží to již není vzdálená hrozba, ale velmi konkrétní plánovací problém."
+          "text": "Do roku 2100 mohou oceány vystoupat o 30 centimetrů až o metr, podle toho, jak budeme vypouštět emise. Pro mnoho pobřeží to už není vzdálená hrozba, ale konkrétní problém územního plánu."
         }
       ]
     },
@@ -33,94 +33,94 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hladina moří stoupá ze dvou různých fyzikálních důvodů. První je [[Tepelná roztažnost]]: když se voda zahřeje, její molekuly se více pohybují a její objem se trochu zvětší, jako u každé kapaliny. Oceány od roku 1970 absorbovaly více než 90 % přebytečného tepla generovaného lidskou činností a toto teplo zvětšuje jejich objem."
+          "text": "Hladina moří stoupá ze dvou různých fyzikálních důvodů. První je [[Tepelná roztažnost]]: když se voda ohřeje, molekuly se víc hýbou a objem trochu naroste, jako u každé jiné kapaliny. Oceány od roku 1970 pohltily víc než 90% přebytečného tepla z lidské činnosti a právě to teplo jejich objem nafoukne."
         },
         {
           "type": "paragraph",
-          "text": "Druhým důvodem je tání ledu umístěného na souši. Pozor, neplést s arktickou ledovou krou, která už plave na vodě a jejíž tání nezpůsobuje zvýšení hladiny moří. To jsou [[Ledový štít]], tyto obrovské ledové čepice umístěné na půdě Grónska a Antarktidy, které skutečně rozlévají oceány přidáním sladké vody."
+          "text": "Druhý důvod je tání ledu, který leží na pevnině. Dej pozor, ať si ho nespleteš s plovoucím arktickým mořským ledem, který už plave na vodě a jeho tání hladinu moří nezvedne. Skutečně oceány přelijí [[Ledový štít]], ty obří čepice ledu položené na půdě Grónska a Antarktidy, protože do moře přidají sladkou vodu."
         },
         {
           "type": "image",
           "asset": "greenland_ice_sheet_melting_glacier",
           "ratio": "16:9",
-          "caption": "Pokud by tání Grónska bylo úplné, zvedlo by oceány o 7 metrů."
+          "caption": "Úplné tání Grónska by oceány zvedlo o 7 metrů."
         },
         {
           "type": "funFact",
-          "text": "Grónsko ztrácí každý rok kolem 280 miliard tun ledu, tedy tolik vody, aby pokrylo celou Francii vrstvou 50 centimetrů."
+          "text": "Grónsko každý rok ztratí asi 280 miliard tun ledu, tedy dost sladké vody na to, aby celou Francii přikryla vrstva 50 centimetrů."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p2",
-      "title": "Rychlost, která vědce znepokojuje",
+      "title": "Tempo, které vědce zneklidňuje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od roku 1880 se hladina světových moří zvedla asi o 20 centimetrů. Výzkumníky znepokojuje především současná rychlost: ve 20. století to bylo kolem 1,4 mm za rok, v porovnání se **3,6 mm za rok** dnes, což je zrychlení o více než 150 %."
+          "text": "Od roku 1880 světová hladina moří vystoupala asi o 20 centimetrů. Vědce nejvíc děsí právě dnešní rychlost: v 20. století to bylo asi 1,4 mm za rok, dnes **3,6 mm za rok**, zrychlení o víc než 150%."
         },
         {
           "type": "paragraph",
-          "text": "Experti [[IPCC]] odhadují, že tento trend bude pokračovat po celá desetiletí, i když se nyní emise drasticky snížily, protože oceánům chvíli trvá, než reagují na změny teploty."
+          "text": "Odborníci z [[IPCC]] odhadují, že ten trend poběží ještě desítky let, i kdybychom emise ostře seřízli hned teď, protože oceány potřebují hodně času, než na změnu teploty zareagují."
         },
         {
           "type": "image",
           "asset": "coastal_flooding_sea_level_rise_city",
           "ratio": "4:3",
-          "caption": "Nárůst o 50 cm může proměnit 100letou povodeň v každoroční událost."
+          "caption": "Růst o 50 cm může stoletou povodeň proměnit v každoroční událost."
         },
         {
           "type": "paragraph",
-          "text": "Skutečným nebezpečím není jen průměrně mírně vyšší moře, ale znásobení [[Bouřkové vlny a stoleté povodně]]: převýšení o 50 centimetrů může stačit k tomu, aby se očekávaná katastrofa jednoho století proměnila v téměř každoroční událost."
+          "text": "Skutečné nebezpečí není jen o něco vyšší průměrné moře, ale množení jevu [[Bouřkové vlny a stoleté povodně]]: zvednutí hladiny o 50 centimetrů stačí, aby se katastrofa čekaná jednou za století stala skoro každoroční událostí."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p3",
-      "title": "Geografická nespravedlnost",
+      "title": "Zeměpisná nespravedlnost",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Stoupající hladina vody postihuje především regiony, které se na globálním oteplování podílely nejméně. Velké říční delty, jako jsou Nil, Mekong nebo Ganga, jsou v první linii. V Bangladéši, kde žije 170 milionů obyvatel, by nárůst o jeden metr mohl způsobit ztrátu 17 % území."
+          "text": "Stoupání vod bije především do krajů, které k klimatickému oteplování přispěly nejméně. Velké říční delty, jako je Nil, Mekong nebo Ganga, stojí v první linii. V Bangladéši, kde žije 170 milionů lidí, by metr navíc mohl sebrat 17% území."
         },
         {
           "type": "paragraph",
-          "text": "Pro malé ostrovní státy jako Maledivy nebo Kiribati už není úplné zmizení pod vodou hypotézou sci-fi, ale skutečným předmětem politického plánování. Naopak bohatá megaměsta jako Miami nebo New York investují miliardy do hrází a pump."
+          "text": "Pro malé ostrovní státy jako Maledivy nebo Kiribati už úplné zmizení pod vodou není hypotéza ze sci-fi, ale skutečné téma politického plánování do blízké budoucnosti. Bohatá velkoměsta jako Miami nebo New York naopak sypou miliardy do hrází a čerpadel."
         },
         {
           "type": "image",
           "asset": "jakarta_indonesia_sinking_flooding_maldives",
           "ratio": "16:9",
-          "caption": "Jakarta kombinuje stoupající vody a poklesy země, dvojí hrozbu."
+          "caption": "Jakarta spojuje stoupání vod s klesáním půdy, dvojitou hrozbu."
         },
         {
           "type": "funFact",
-          "text": "V roce 2009 uspořádala maledivská vláda schůzi podvodního kabinetu v neoprenových oblecích, aby varovala svět před velkou konferencí o klimatu."
+          "text": "V roce 2009 vláda Malediv uspořádala zasedání ministrů pod vodou, v potápěčských oblecích, aby svět varovala před velkou konferencí o klimatu."
         },
         {
           "type": "paragraph",
-          "text": "V **Jakarta** v Indonésii se město kvůli nadměrnému čerpání podzemní vody propadá hlouběji do země. Tváří v tvář této dvojí hrozbě přijala země radikální rozhodnutí vybudovat na ostrově Borneo zcela nové hlavní město Nusantara."
+          "text": "V **Jakartě** v Indonésii se město navíc propadá do země kvůli nadměrnému čerpání podzemních vod. Před tou dvojitou hrozbou země rozhodla radikálně: postavit úplně nové hlavní město Nusantara na ostrově Borneo."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p4",
-      "title": "Přizpůsobte se, nebo ustupte",
+      "title": "Přizpůsobit se, nebo ustoupit",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tváří v tvář této výzvě se vzájemně doplňují dvě strategie. Prvním je omezit oteplování, aby se zpomalil nárůst po roce 2100. Druhým je přizpůsobit se tomu, co je již nevyhnutelné, posílením přirozené obrany, jako jsou [[Mangovník]] nebo duny, nebo těžšími řešeními, jako jsou hlavní díla v Nizozemsku."
+          "text": "Proti té výzvě se doplňují dvě strategie. První je omezit oteplování, aby se růst po roce 2100 přibrzdil. Druhá je přizpůsobit se tomu, co už je jisté, posílením přírodních štítů, jako je [[Mangovník]] nebo duny, nebo těžšími stavbami, jako jsou velké práce Nizozemska."
         },
         {
           "type": "paragraph",
-          "text": "V některých případech bude jediným řešením návrat zpět: přesun lidí a činností do vnitrozemí, než se katastrofy budou opakovat příliš často. To je skutečná změna zvyku společností, které byly po staletí připoutány k pobřeží."
+          "text": "V některých případech zbude jen ústup: přestěhovat obyvatele i činnost do vnitrozemí, než se katastrofy začnou opakovat příliš často. Pro společnosti přivázané k pobřeží po celá staletí je to skutečná změna navyklého života."
         },
         {
           "type": "takeaway",
-          "text": "Hladina moří stoupá o 3,6 mm za rok v důsledku kombinovaného účinku tepelné roztažnosti a tání pevninského ledu. Do roku 2100 by tento vzestup mohl dosáhnout jednoho metru a vynutit si vysídlení stovek milionů lidí."
+          "text": "Hladina moří stoupá o 3,6 mm za rok, spojením tepelné roztažnosti a tání pevninského ledu. Do roku 2100 může ten růst dosáhnout jednoho metru a donutit ke stěhování stovky milionů obyvatel pobřeží."
         }
       ]
     }

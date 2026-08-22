@@ -1,14 +1,14 @@
 {
   "id": "course_219_la_fracture_numerique_mondiale",
-  "title": "Globální digitální propast",
-  "subtitle": "Třetina lidstva offline",
+  "title": "Světová digitální propast",
+  "subtitle": "Třetina lidstva mimo síť",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "2,7 miliardy lidí stále nemá přístup k internetu. Ve stále digitálnějším světě se tento nedostatek spojení stává novou formou vyloučení.",
+  "description": "2,7 miliardy lidí pořád nemá přístup k internetu. Ve světě, který je čím dál digitálnější, se tahle absence stává novou formou vyloučení.",
   "hero": {
     "image": "la_fracture_numerique_mondiale",
     "ratio": "16:9",
-    "hook": "Keňa vynalezla platbu po telefonu deset let před Evropou, kvůli nedostatku bankovních poboček."
+    "hook": "Keňa vymyslela platbu telefonem o deset let dřív než Evropa, protože chyběly bankovní pobočky."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zatímco rozvinuté společnosti zažívají revoluci řízenou umělou inteligencí, brutální realita přetrvává: **2,7 miliardy lidí**, tedy přibližně třetina lidstva, stále nemá přístup k internetu."
+          "text": "Zatímco vyspělé společnosti žijí revolucí nesenou umělou inteligencí, drží se tvrdá skutečnost: **2,7 miliardy lidí**, tedy zhruba třetina lidstva, pořád nemá přístup k internetu."
         },
         {
           "type": "paragraph",
-          "text": "Toto **digitální rozdělení** není jen technickým zpožděním: stalo se skutečnou bariérou, která drží miliony lidí daleko od vzdělání, zdraví a globální ekonomiky. Zde je důvod, proč přetrvává a jak se jej některé země snaží naplnit."
+          "text": "Tahle **digitální propast** není jen technické zpoždění: stala se skutečnou bariérou, která miliony lidí odřízne od vzdělání, zdraví i světové ekonomiky. Tady je, proč ta propast pořád drží a jak se ji některé země snaží zasypat."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p1",
-      "title": "Dvourychlostní mapa světa",
+      "title": "Mapa světa na dvě rychlosti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Do roku 2024 bude celosvětově připojeno k internetu asi 5,4 miliardy lidí, ale pokrok v nejchudších regionech stagnuje. Evropa a Severní Amerika překračují 90% spojení, zatímco subsaharská Afrika zůstává pouze na 37%."
+          "text": "V roce 2024 je k internetu ve světě připojeno asi 5,4 miliardy lidí, ale v nejchudších regionech postup připojení stojí na místě. Evropa a Severní Amerika překračují 90% připojení, zatímco subsaharská Afrika zůstává na pouhých 37%."
         },
         {
           "type": "paragraph",
-          "text": "Toto vyloučení je způsobeno několika příčinami. Za prvé, nedostatečná infrastruktura: Operátoři považují instalaci optických vláken v určitých izolovaných regionech za příliš nákladnou. Pak cena: v některých zemích představuje jednoduchý základní telefon [[smartphone]] několik měsíců platu. A konečně jazyková bariéra (přibližně 70 % webového obsahu je v angličtině) a nedostatek digitálního školení omezují používání, i když existuje připojení."
+          "text": "Tohle vyloučení má víc příčin. Nejdřív chybí infrastruktura: položit optické vlákno v některých odlehlých krajích operátoři považují za příliš drahé. Pak cena: v některých zemích obyčejný [[smartphone]] základní řady stojí několik měsíčních platů. Nakonec jazyková bariéra (asi 70% obsahu webu je anglicky) a chybějící digitální školení omezí použití i tam, kde už připojení je."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p2",
-      "title": "Když nedostatek infrastruktury nutí inovace",
+      "title": "Když chybějící síť donutí k inovaci",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tento předěl funguje jako násobitel nerovností. Ve světě, kde se práce na dálku, elektronický obchod a online vzdělávání ([[MOOC]]) stávají normou, nebýt připojen znamená stát se pro globální ekonomiku neviditelným."
+          "text": "Tahle propast působí jako násobič nerovností. Ve světě, kde práce z domu, obchod po síti a online výuka ([[MOOC]]) začínají být norma, zůstat bez připojení znamená stát se neviditelným pro světovou ekonomiku."
         },
         {
           "type": "image",
           "asset": "digital_divide_africa_rural_village_smartphone",
           "ratio": "16:9",
-          "caption": "V mnoha venkovských oblastech zůstává mobilní telefon jediným přístupovým bodem k internetu."
+          "caption": "V mnoha venkovských krajích zůstává mobil jediným vstupem na internet."
         },
         {
           "type": "paragraph",
-          "text": "Keňa ilustruje další cestu: kvůli nedostatku dostatečných bankovních poboček země v roce 2007 masivně přijala jednoduchý SMS platební systém [[Keňský M-Pesa]], který porazil Evropu o deset let. Tento systém umožnil milionům lidí bez bankovních účtů provádět bezpečné transakce pouze pomocí telefonu."
+          "text": "Keňa ukazuje jinou cestu: protože bankovních poboček bylo málo, země od roku 2007 masově přijala platbu obyčejnou SMS, systém [[Keňský M-Pesa]], a předběhla Evropu o deset let. Ten systém dovolil milionům lidí bez bankovního účtu dělat bezpečné převody s obyčejným telefonem."
         },
         {
           "type": "funFact",
-          "text": "Keňa tuto strategii nazvala technologickým skokem: místo instalace drahé a zastaralé infrastruktury se země přesunula přímo k modernějšímu a levnějšímu řešení."
+          "text": "Keňa tuhle strategii pojmenovala technologický „skočný krok“: místo aby stavěla drahou a zastaralou infrastrukturu, země šla rovnou k modernějšímu a levnějšímu řešení."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p3",
-      "title": "Satelitní internet: řešení podléhající podmínkám",
+      "title": "Internet ze satelitu: řešení s podmínkami",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aby propojili ty nejizolovanější vesnice, noví hráči spoléhají na prostor. Projekt [[Starlink]] vysílá tisíce satelitů na nízkou oběžnou dráhu, což umožňuje rychlé spojení i v pouštích nebo vysokých horách, aniž by bylo nutné pokládat jediný kabel."
+          "text": "Aby se připojily nejodlehlejší vesnice, noví hráči sázejí na vesmír. Projekt [[Starlink]] posílá tisíce satelitů na nízkou oběžnou dráhu a dá rychlé připojení i v poušti nebo ve vysokých horách, aniž by bylo třeba položit jediný kabel."
         },
         {
           "type": "paragraph",
-          "text": "Náklady na předplatné a vybavení však zůstávají v souladu se západními standardy, což činí tato řešení nedostupná pro nejchudší venkovské obyvatelstvo bez vnější pomoci. Řešení digitální propasti proto nelze dosáhnout pouze technologií: vyžaduje to také politickou vůli, aby byl internet něčím dostupným pro všechny."
+          "text": "Cena předplatného i hardwaru ale zůstává srovnaná se západními standardy, což tyhle služby dělá nedostupnými pro nejchudší venkov bez pomoci zvenčí. Digitální propast se proto technologií samotnou nezasype: potřebuje i politickou vůli, aby se z internetu stalo zboží dostupné všem."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p4",
-      "title": "Umělá inteligence, nová mezera",
+      "title": "Umělá inteligence, nová trhlina",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rychlý vzestup umělé inteligence hrozí, že tuto propast ještě rozšíří. Vyžaduje to obrovský výpočetní a datový výkon, zdroje soustředěné v rukou několika zemí a společností. Odpojené populace pak riskují, že se stanou závislými na nástrojích navržených bez ohledu na jejich kulturu nebo jazyk."
+          "text": "Rychlý růst umělé inteligence hrozí tu propast ještě prohloubit. Chce obrovský výpočetní výkon a data, zdroje soustředěné v rukou několika zemí a firem. Lidé bez připojení pak riskují, že budou závislí na nástrojích navržených bez ohledu na jejich kulturu nebo jazyk."
         },
         {
           "type": "paragraph",
-          "text": "Propast v dovednostech mezi připojenými a nepřipojenými studenty by se také mohla velmi rychle rozšířit. Výzvou pro nadcházející roky tedy již nebude jen poskytovat připojení, ale zaručit spravedlivý přístup k vytváření digitální hodnoty, a to kombinací nižších nákladů, místního obsahu a školení."
+          "text": "Rozdíl dovedností mezi připojenými a nepřipojenými žáky se může taky velmi rychle prohloubit. V příštích letech už nepůjde jen o to přinést připojení, ale o spravedlivý přístup k tvorbě digitální hodnoty, kombinací nižších cen, místního obsahu a školení."
         },
         {
           "type": "takeaway",
-          "text": "Z internetu je dnes vyloučeno 2,7 miliardy lidí, což je propast, která se s umělou inteligencí může ještě zhoršit. Snížení této mezery vyžaduje přeměnu konektivity ve skutečné zboží dostupné všem, a ne pouze v produkt k prodeji."
+          "text": "2,7 miliardy lidí dnes zůstává vyloučených z internetu, propast, kterou umělá inteligence může ještě prohloubit. Zmenšit ten odstup znamená udělat z připojení skutečné dobro dostupné všem, a ne jen zboží na prodej."
         }
       ]
     }

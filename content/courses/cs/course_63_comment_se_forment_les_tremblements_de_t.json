@@ -1,14 +1,14 @@
 {
   "id": "course_63_comment_se_forment_les_tremblements_de_t",
   "title": "Jak vznikají zemětřesení?",
-  "subtitle": "Chyby a vlny",
+  "subtitle": "Zlomy a vlny",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Každý rok zažije Země statisíce zemětřesení. Většina je neviditelná. Několik jich změní celá města.",
+  "description": "Každý rok Země zaznamená statisíce otřesů. Většina je neviditelná. Několik jich změní celá města.",
   "hero": {
     "image": "comment_se_forment_les_tremblements_de_terre",
     "ratio": "16:9",
-    "hook": "Zemětřesení není rozmar země. To je energie, která čekala příliš dlouho."
+    "hook": "Zemětřesení není rozmar půdy. Je to energie, která čekala příliš dlouho."
   },
   "sections": [
     {
@@ -18,97 +18,97 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Každý rok Země zaznamená přibližně **500 000 zjištěnítelných zemětřesení**. Jen malá část způsobuje velké škody. Zemětřesení není náhoda: je to náhlý konec dlouhého hromadění energie v horninách."
+          "text": "Každý rok Země zaznamená asi **500.000** zjistitelných **zemětřesení**. Jen malá část z nich napáchá velké škody. Otřes není náhoda: je to náhlý konec dlouhého hromadění energie v horninách, která se uvolní naráz."
         },
         {
           "type": "paragraph",
-          "text": "Abychom to pochopili, musíme vidět povrch planety jako skládačku pohyblivých desek. Tam, kde se tyto desky třou o sebe, narůstá napětí...až se zlomí."
+          "text": "Abychom to pochopili, musíme vidět povrch planety jako puzzle desek v pohybu. Tam, kde se ty desky třou, napětí stoupá, a to tak dlouho, až to praskne."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p1",
-      "title": "Desky, které se neustále pohybují",
+      "title": "Desky, které se pořád hýbou",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zemský povrch je rozdělen na přibližně deset velkých **tektonický stůl**. Kloužou po měkčí vrstvě kabátu, [[Astenosféra]]. Jejich rychlost? Přibližně **1 až 10 cm za rok**, přibližně stejně jako růst nehtu."
+          "text": "Zemský povrch je rozřezaný na desítku velkých **tektonických desek**. Kloužou po poddajnější vrstvě pláště, [[Astenosféra]]. Jejich rychlost? Asi **1 až 10 cm za rok**, zhruba jako růst nehtu na prstu."
         },
         {
           "type": "image",
           "asset": "earthquake_collapsed_buildings_urban",
           "ratio": "auto",
-          "caption": "Zemětřesení náhle uvolní energii nahromaděnou podél zlomů."
+          "caption": "Zemětřesení naráz uvolní energii nahromaděnou podél zlomů."
         },
         {
           "type": "paragraph",
-          "text": "Na hranicích dominují tři scénáře. Desky se od sebe vzdalují (oceánské hřbety). Srazí se: někdy se jeden ponoří pod druhého, je to [[Subdukce]]. Nebo kloužou vedle sebe, jako po [[Zlom San Andreas]] v Kalifornii, dlouhé přibližně **1 300 km**."
+          "text": "Na hranicích vládnou tři scénáře. Desky se oddalují (oceánské hřebeny). Srážejí se: někdy se jedna noří pod druhou, to je [[Subdukce]]. Nebo kloužou vedle sebe, jako podél [[Zlom San Andreas]] v Kalifornii, dlouhého asi **1.300 km**."
         },
         {
           "type": "funFact",
-          "text": "Podél San Andreas se Los Angeles přibližuje San Franciscu přibližně o **6 cm** ročně. Za **15 milionů let** by tato dvě města sousedila."
+          "text": "Podél San Andreas se Los Angeles přibližuje k San Francisku asi o **6 cm** za rok. Za **15 milionů let** by obě města byla sousedé."
         },
         {
           "type": "paragraph",
-          "text": "Právě na těchto hranicích dochází k zemětřesení. Pohybu desek brání tření hornin. Energie se tiše hromadí."
+          "text": "Právě na těch hranicích zemětřesení hlavně vznikají. Pohyb desek brzdí tření hornin. Energie se hromadí potichu, dlouho, než se kámen už neudrží."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p2",
-      "title": "Když závada povolí",
+      "title": "Když zlom povolí",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "K zemětřesení dochází podél **poruchy**: zlomu mezi dvěma bloky horniny. Teoreticky by desky měly klouzat nepřetržitě. V praxi toto skluzování často blokuje tření."
+          "text": "Zemětřesení vznikne podél **zlomu**: trhliny mezi dvěma bloky horniny. Teoreticky by desky měly klouzat pořád. V praxi tření ten skluz často zablokuje a zastaví."
         },
         {
           "type": "paragraph",
-          "text": "Během této doby plaky dále rostou. Skála se trochu deformuje, jako když se natahuje luk. Mluvíme o elastických omezeních. To může trvat desetiletí, někdy i staletí."
+          "text": "Mezitím desky dál tlačí. Hornina se trochu deformuje, jako luk, který natahuješ. Říká se tomu pružná napětí, jako když natahuješ luk. Může to trvat desetiletí, někdy staletí."
         },
         {
           "type": "paragraph",
-          "text": "Při překročení meze odporu bloky náhle sklouznou. Energie odchází ve formě **eismických vln**. Bod zlomu hloubky se nazývá **soustředit**. Na povrchu je bod těsně nad **epicentrum**, kde jsou účinky často nejsilnější."
+          "text": "Když se překročí mez pevnosti, bloky naráz sklouznou. Energie odejde jako **seismické vlny**. Bod protržení v hloubce se jmenuje **ohnisko**. Na povrchu bod přímo nad ním je **epicentrum**, kde bývají účinky nejsilnější a nejvíc viditelné."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p3",
-      "title": "Měření síly, strach z tsunami",
+      "title": "Měřit sílu, bát se tsunami",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "K měření energie zemětřesení využívají seismologové především moment [[Stupnice velikosti]]. Je to logaritmická stupnice: každý stupeň násobí energii přibližně **32**. Zemětřesení o velikosti **8** proto uvolní přibližně **1000krát** více energie než při zemětřesení o velikosti **6**."
+          "text": "Energii otřesu seismologové měří hlavně [[Stupnice velikosti]] momentu. Je logaritmická: každý stupeň násobí energii asi **32**. Zemětřesení magnitudy **8** proto uvolní asi **1.000krát** víc energie než zemětřesení magnitudy **6**."
         },
         {
           "type": "funFact",
-          "text": "Dochází také k zemětřesení **0** nebo záporné magnitudy. Jedná se o velmi malé události, viditelné pouze velmi citlivými senzory."
+          "text": "Existují i otřesy magnitudy **0** nebo záporné. Jsou to úplně drobné jevy, viditelné jen velmi citlivými čidly."
         },
         {
           "type": "paragraph",
-          "text": "Nejsilnější, jaká kdy byla naměřena moderními přístroji, je **Valdivia** v Chile v **1960**: velikost **9,5**. Pokud je ohnisko pod oceánem a zvedá mořské dno, může posunutý vodní sloupec vytvořit **tsunami**. V **2004** vyvolalo zemětřesení o síle **9.1** poblíž Sumatry vlnu tsunami, která zasáhla 14 zemí a vyžádala si přibližně **227 000** obětí."
+          "text": "Nejsilnější, jaké kdy změřily moderní přístroje, je otřes ve **Valdivii** v Chile roku **1960**: magnituda **9,5**. Když je ohnisko pod oceánem a zvedne mořské dno, posunutý vodní sloupec může vytvořit **tsunami**. Roku **2004** otřes magnitudy **9,1** u Sumatry spustil tsunami, které zasáhlo 14 zemí a mělo asi **227.000** obětí."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p4",
-      "title": "Vlny, pohotovost a budovy, které odolávají",
+      "title": "Vlny, varování a budovy, které vydrží",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Po rozchodu odchází několik typů vln. **P vlny** (primární) přicházejí jako první: stlačují skálu jako harmoniku. Pak přijdou **ZZ** (sekundární) vlny, pomalejší a často ničivější. Povrchové vlny pak způsobí, že se země velmi viditelně rozkmitá."
+          "text": "Po protržení vyrazí několik typů vln. **Vlny P** (primární) dorazí první: stlačují horninu jako harmonika. Pak přijdou **vlny S** (sekundární), pomalejší a často ničivější. Povrchové vlny pak rozhoupají zem velmi viditelně a často práší domy."
         },
         {
           "type": "paragraph",
-          "text": "Zatím nevíme, jak přesně předpovědět den velkého zemětřesení. Na druhou stranu mapujeme rizikové oblasti. [[Zemětřesné inženýrství]] navrhuje budovy schopné odolat otřesům: mobilní základy, obří tlumiče, konstrukce pohlcující energii. V Japonsku včasné varování detekuje vlny P a může zastavit plyn nebo zpomalit vlaky dříve, než dorazí nejnebezpečnější vlny."
+          "text": "Přesný den velkého otřesu ještě předpovědět neumíme. Zato mapujeme rizikové zóny. [[Zemětřesné inženýrství]] navrhuje budovy, které otřesy zvládnou: pohyblivé základy, obří tlumiče, konstrukce, které energii pohltí. V Japonsku včasné výstrahy zachytí vlny P a mohou vypnout plyn nebo zpomalit vlaky, než dorazí ty nejnebezpečnější vlny, které teprve ničí."
         },
         {
           "type": "takeaway",
-          "text": "Zemětřesení nastane, když kameny přilepené podél zlomu náhle uvolní desítky let napětí. Energie se šíří ve vlnách a každý stupeň magnitudy tuto energii násobí přibližně **32**."
+          "text": "Zemětřesení vznikne, když zablokované horniny podél zlomu naráz uvolní desetiletí napětí. Energie cestuje vlnami a každý stupeň magnitudy tu energii násobí asi **32**."
         }
       ]
     }

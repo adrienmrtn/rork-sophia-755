@@ -1,14 +1,14 @@
 {
   "id": "course_182_osiris_et_set_mythologie_egyptienne",
-  "title": "Osiris a Set (egyptská mytologie)",
+  "title": "Usir a Sutech (egyptská mytologie)",
   "subtitle": "Egyptská mytologie",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Vražda, rozkouskování, mumie a pomsta: cyklus Osirise a Seta, zakladatelů egyptské královské rodiny a naděje na život po smrti.",
+  "description": "Vražda, rozřezání, mumie a pomsta: cyklus Usira a Sutecha zakládá egyptské království a naději na život po smrti.",
   "hero": {
     "image": "osiris_et_set_mythologie_egyptienne",
     "ratio": "16:9",
-    "hook": "Bratr zabije krále, rozřeže jeho tělo na čtrnáct kusů. Sestra ho dává dohromady. Syn se mstí. Z tohoto zločinu se dostává celý Egypt."
+    "hook": "Bratr zabije krále a rozřeže tělo na čtrnáct kusů. Sestra ho složí. Syn pomstí. Celý Egypt vyjde z toho zločinu."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cyklus **Osiris** a **Soubor** je velkým příběhem starověkého Egypta. Nejde jen o rodinnou tragédii. Je to boj mezi řádem ([[ma'at]], harmonie) a sterilním chaosem."
+          "text": "Cyklus **Usira** a **Sutecha** je velké vyprávění starého Egypta. Není to jen rodinná tragédie. Je to boj mezi řádem ([[ma'at]], harmonií) a neplodným chaosem."
         },
         {
           "type": "paragraph",
-          "text": "Prostřednictvím vraždy, rozřezání a vzkříšení Osirise Egypťané přemýšlejí o královské moci, plodnosti Nilu a životě po smrti. Každý žijící faraon je **Horus**. Každý mrtvý král se stává **Osiris**."
+          "text": "Skrze vraždu, rozřezání a vzkříšení Usira Egypťané myslí království, úrodnost Nilu a život po smrti. Každý živý faraon je **Horem**. Každý mrtvý král se stane **Usirem**."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p1",
-      "title": "Set zabije Osirise",
+      "title": "Sutech zabije Usira",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Osiris** je civilizační král. Se svou sestrou-manželkou **Isis** vyučuje zemědělství a práva. Jeho bratr **Soubor**, bůh pouště a násilí, ho nenávidí. Na banketu představuje Set skvostnou truhlu: nabídne ji tomu, kdo se k ní dokonale hodí."
+          "text": "**Usir** je civilizační král. Se sestrou-manželkou **Eset** učí zemědělství a zákony. Bratr **Sutech**, bůh pouště a násilí, ho nenávidí. Na hostině Sutech ukáže nádhernou truhlu: daruje ji tomu, komu bude sedět dokonale."
         },
         {
           "type": "image",
           "asset": "osiris_egyptian_god_green_skin_painting",
           "ratio": "4:3",
-          "caption": "Osiris se zelenou kůží: ne smrt, ale znovuzrození vegetace."
+          "caption": "Usir se zelenou kůží: ne smrt, ale vegetace, která znovu ožívá"
         },
         {
           "type": "paragraph",
-          "text": "Poté, co v tajnosti provedl Osirisovy míry, Set ho přinutí lehnout si, uzamkne truhlu, zapečetí ji olovem a hodí ho do Nilu. Později, když Isis najde tělo, Set ho rozřeže na **14 kusů** a rozhází je po údolí. Bez neporušeného těla není mír v posmrtném životě."
+          "text": "Když si Usirovy míry vzal potají, Sutech ho nechá ulehnout, truhlu zamkne, zapečetí olovem a hodí do Nilu. Později, když Eset tělo najde, Sutech ho rozřeže na **14 kusů** a rozháže po údolí. Bez celého těla není v záhrobí klid."
         },
         {
           "type": "funFact",
-          "text": "Osiris je často malován zeleně. Tato barva neříká hnilobu: říká znovuzrození, jako pole po záplavách Nilu."
+          "text": "Usira často malují zeleně. Ta barva neříká hnilobu: říká znovuzrození, jako pole po nilské záplavě."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p2",
-      "title": "Isis vynalezla mumii",
+      "title": "Eset vymyslí mumii",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Isis**, velký kouzelník, jde hledat úlomky. S pomocí své sestry Nephthys a boha [[Anubis]] staví svatyni na každém místě, kde najde kousek. Jeden problém zůstává: falus sežrala ryba [[Oxyrhynchus]]. Isis vytvoří náhradu."
+          "text": "**Eset**, velká kouzelnice, vyrazí hledat úlomky. S pomocí sestry Nebthety a boha [[Anubis]] vztyčí svatyni na každém místě, kde najde kus. Zůstane problém: falus sežrala ryba [[Oxyrhynchus]]. Eset vyrobí náhradu."
         },
         {
           "type": "image",
           "asset": "isis_egyptian_goddess_winged_resurrection_painting",
           "ratio": "4:3",
-          "caption": "Isis s roztaženými křídly: dech, který oživuje Osirise."
+          "caption": "Eset s rozepjatými křídly: dech, který Usira oživí"
         },
         {
           "type": "paragraph",
-          "text": "Shromážděním kousků a jejich zabalením do proužků vytvoří Isis a Anubis první mumii ****. Isis mávnutím svých křídel vdechla Osirisovi krátký život. Tehdy počala **Horus**, dědice určeného k obnovení pořádku."
+          "text": "Když složí kusy a zabalí je do obinadel, Eset a Anubis stvoří **první mumii**. Mávnutím křídel Eset Usirovi vdechne krátký život. Tehdy počne **Hora**, dědice určeného k obnově řádu."
         },
         {
           "type": "funFact",
-          "text": "Podle některých textů byly slzy Isis během jejího hledání tak hojné, že v nich Egypťané viděli mýtický původ každoroční potopy Nilu."
+          "text": "Podle některých textů byly slzy Eset při hledání tak hojné, že v nich Egypťané viděli mýtický původ každoroční nilské záplavy."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p3",
-      "title": "Hor pomstí svého otce",
+      "title": "Hor pomstí otce",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vyrostl v tajnosti v bažinách [[Khemmis]], **Horus** roste do podoby jestřába. Jako dospělý si nárokuje trůn před tribunálem bohů, kterému předsedá [[D]]. Konflikt se Setem trvá desítky let: souboje, triky, zranění. Hor přichází o oko; Set ztrácí svou plodnost."
+          "text": "Vychovaný v tajnosti v bažinách [[Khemmis]] **Hor** vyroste v podobě sokola. Dospělý žádá trůn před soudem bohů, kterému předsedá [[Ra]]. Konflikt se Sutechem trvá desetiletí: souboje, lsti, rány. Hor ztratí oko; Sutech ztratí plodnost."
         },
         {
           "type": "image",
           "asset": "eye_of_horus_egyptian_symbol_protection",
           "ratio": "4:3",
-          "caption": "The Eye of Horus (Oudjat): integrita znovu získána z chaosu."
+          "caption": "Horovo oko (udžat): celistvost získaná zpět z chaosu"
         },
         {
           "type": "paragraph",
-          "text": "Oko, překomponované pomocí [[Thoth]], se stává symbolem léčení a ochrany. Bohové se rozhodnou: Set je odsouzen sloužit, zejména bojem s hadem [[Apophis]] na solární lodi. Horus je korunován. Každý faraon bude od nynějška „živým Horem“."
+          "text": "Oko, složené bohem [[Thoth]], se stane symbolem hojení a ochrany. Bohové rozhodnou: Sutech je odsouzený sloužit, zvlášť bojovat s hadem [[Apophis]] na sluneční bárce. Hor je korunován. Každý faraon bude odteď „živý Hor”."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p4",
-      "title": "Osiris, soudce mrtvých",
+      "title": "Usir, soudce mrtvých",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mumifikovaný Osiris už nemůže vládnout na Zemi. Stává se vládcem **Amenti**, království mrtvých. Pod jeho pohledem se odehrává **vážení srdce**, popsané v [[Kniha mrtvých]]. Srdce zesnulého je umístěno na stupnici čelem k pírku Ma'at."
+          "text": "Mumifikovaný Usir už nemůže vládnout na zemi. Stane se panovníkem **Amenti**, říše mrtvých. Pod jeho pohledem probíhá **vážení srdce**, popsané v díle [[Kniha mrtvých]]. Srdce zemřelého položí na váhu proti peru Maat."
         },
         {
           "type": "paragraph",
-          "text": "Pokud je srdce lehké, má zesnulý „správný hlas“ a vstupuje do věčnosti Osirise. Je-li plná chyb, příšera [[Ammit]] ji sežere: definitivní zapomnění. Král a rolník jsou posuzováni podle stejných kritérií. Hor řídí přítomnost; Osiris se postará o zbytek."
+          "text": "Je-li srdce lehké, zemřelý je „spravedlivý hlasem” a vstoupí do Usirovy věčnosti. Je-li těžké vinami, nestvůra [[Ammit]] ho sežere: definitivní zapomnění. Král i sedlák se soudí podle týchž měřítek. Hor spravuje přítomnost; Usir zajišťuje pokračování."
         },
         {
           "type": "takeaway",
-          "text": "Mýtus o **Osiris** a **Soubor** zakládá tři pilíře Egypta: královská hodnost (živý Horus), mumifikace (neporušené tělo pro posmrtný život) a naděje na spravedlnost po smrti pod pohledem Osirise."
+          "text": "Mýtus o **Usirovi** a **Sutechovi** zakládá tři pilíře Egypta: království (živý Hor), mumifikaci (celé tělo pro záhrobí) a naději na spravedlnost po smrti pod Usirovým pohledem."
         }
       ]
     }

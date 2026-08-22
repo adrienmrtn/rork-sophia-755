@@ -1,14 +1,14 @@
 {
   "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr",
-  "title": "Proč existují roční období na jiných planetách?",
-  "subtitle": "Planety a oběžné dráhy",
+  "title": "Proč roční období existují i na jiných planetách?",
+  "subtitle": "Planety a dráhy",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Na Zemi roční období pocházejí ze sklonu osy. Jinde stejný princip dává zimy 42 let… nebo téměř žádnou sezónu.",
+  "description": "Na Zemi roční období jdou ze sklonu osy. Jinde tentýž princip dá zimy o 42 letech… nebo skoro žádné období.",
   "hero": {
     "image": "pourquoi_les_saisons_existent_sur_d_autres_planetes",
     "ratio": "16:9",
-    "hook": "Naše čtyři roční období jsou umírněným případem. Jinde může léto trvat desítky let."
+    "hook": "Naše čtyři období jsou mírný případ. Jinde může léto trvat desetiletí."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na Zemi vzniká léto a zima hlavně ze sklonu **** osy: přibližně **23,5°**. Slunce dopadá silněji na jednu polokouli, pak na druhou. Tento model se zdá být jasný. Ve Sluneční soustavě jde spíše o umírněnou verzi."
+          "text": "Na Zemi léto a zima vznikají hlavně ze **sklonu** osy: asi **23,5°**. Slunce silněji bije na jednu polokouli, pak na druhou. Ten model vypadá samozřejmý. Ve sluneční soustavě je to spíš mírná verze."
         },
         {
           "type": "paragraph",
-          "text": "Každá planeta kombinuje svůj sklon a tvar své oběžné dráhy. Výsledek: světy bez ročních období, jiné s extrémními kontrasty a zimy, které trvají desítky let."
+          "text": "Každá planeta kombinuje sklon a tvar dráhy. Výsledek: světy bez období, jiné s extrémními kontrasty a zimy, které trvají desetiletí."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p1",
-      "title": "Náklon, motor kontrastů",
+      "title": "Sklon, motor kontrastů",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Křivolakost]] je úhel mezi osou rotace planety a kolmicí k její oběžné dráze. Čím je větší, tím výraznější jsou roční období."
+          "text": "[[Křivolakost]] je úhel mezi osou rotace planety a kolmicí k její dráze. Čím je větší, tím ostřejší jsou období."
         },
         {
           "type": "image",
           "asset": "uranus_planet_nasa",
           "ratio": "auto",
-          "caption": "Uran, nakloněný asi o 98°, zažívá extrémní období trvající 42 let."
+          "caption": "Uran, skloněný asi na 98°, zná extrémní období o 42 letech."
         },
         {
           "type": "paragraph",
-          "text": "**Uran** je extrémní případ: sklon přibližně **98°**, téměř vleže. Oběh kolem Slunce trvá **84 let**. Každý pól pak obdrží téměř **42 písmen** nepřetržitého dne a poté **42 písmen** celkové noci. **Pochod** na **25,2°** se podobá Zemi, ale její rok trvá **687 pozemských dnů**: jaro a podzim šest měsíců. **Jupiter** a **Rtuť**, téměř rovné, nemají téměř žádná roční období."
+          "text": "**Uran** je extrémní případ: sklon asi **98°**, skoro naležato. Oběhne Slunce za **84 let**. Každý pól pak dostane skoro **42 let** souvislého dne a pak **42 let** úplné noci. **Mars** při **25,2°** Zemi připomíná, ale jeho rok trvá **687** pozemských **dní**: jara a podzimy o šesti měsících. **Jupiter** a **Merkur**, skoro vzpřímené, období skoro nemají."
         },
         {
           "type": "funFact",
-          "text": "Na Uranu a Neptunu by extrémní tlaky mohly „pršet“ diamanty vytvořené z atmosférického uhlíku."
+          "text": "Na Uranu a Neptunu by extrémní tlaky mohly „pršet” diamanty vzniklé z atmosférického uhlíku."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p2",
-      "title": "Když záleží i na vzdálenosti od Slunce",
+      "title": "Když vzdálenost od Slunce taky počítá",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na Zemi je oběžná dráha téměř kruhová: vzdálenost od Slunce se mění jen málo. Není to tedy to, co dělá léto nebo zimu, ale úhel paprsků."
+          "text": "Na Zemi je dráha skoro kruhová: vzdálenost od Slunce se mění málo. Léto nebo zimu tedy nedělá ona, ale úhel paprsků."
         },
         {
           "type": "paragraph",
-          "text": "Na **Pochod** je oběžná dráha mnohem oválnější, více **výstřední**: od **207 až 249 milionů km**. In the southern hemisphere, summer falls near [[přísluní]], the closest point to the Sun. Kratší, ale teplejší léta. Tento tepelný šok někdy spustí planetární prachové bouře ****, které zatemní oblohu."
+          "text": "Na **Marsu** je dráha mnohem oválnější, víc **excentrická**: od **207 do 249 milionů km**. Na jižní polokouli léto padne blízko [[přísluní]], bodu nejblíž Slunci. Léta kratší, ale teplejší. Ten tepelný šok někdy spustí planetární **prachové bouře**, které zakryjí oblohu."
         },
         {
           "type": "funFact",
-          "text": "V **2018** sezónní marťanská bouře trvale zastavila rover Opportunity tím, že zablokovala Slunce."
+          "text": "Roku **2018** sezónní marťanská bouře nadobro zastavila rover Opportunity, protože mu zakryla Slunce."
         }
       ]
     },
@@ -77,34 +77,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Rtuť**, bez skutečné atmosféry nebo sklonu, žije převážně v denních **** extrémní:**430 °C** na Slunci, **-180 °C** v noci. **Venus** se otáčí opačně, v [[Retrográdní rotace]] od východu na západ, s extrémním sklonem, ale jeho monstrózní skleníkový efekt zachycuje teplo v atmosféře a neustále a všude vyrovnává teplotu na **460 °C**."
+          "text": "**Merkur** bez opravdové atmosféry i sklonu žije hlavně **denními** extrémy: **430 °C** na slunci, **-180 °C** v noci. **Venuše** se točí naruby, v režimu [[Retrográdní rotace]] od východu na západ, s extrémním sklonem, ale její monstrózní **skleníkový efekt** teplo v atmosféře uvězní a vyrovná teplotu k **460 °C** všude a pořád."
         },
         {
           "type": "paragraph",
-          "text": "**Saturn**, nakloněný jako Země, má roční období přibližně **7 písmen**. Úhel [[prstence Saturnu]] mění světlo přijímané každou hemisférou a dokonce mění barvu mraků."
+          "text": "**Saturn**, skloněný jako Země, má období asi **7 let**. Úhel, který svírají [[prstence Saturnu]], změní světlo, které každá polokoule dostane, a upraví i barvu mraků."
         },
         {
           "type": "funFact",
-          "text": "Na Venuši jeden den, její rotace trvá déle než rok, její revoluce: **243** pozemské dny proti **225**."
+          "text": "Na Venuši jeden den, její rotace, trvá déle než rok, její oběh: **243** pozemských dní proti **225**."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p4",
-      "title": "Proč má Země stabilní roční období?",
+      "title": "Proč má Země stabilní období",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bez **Měsíce** by sklon Země po miliony let chaoticky osciloval mezi 0° a více než 80°. Období uranského typu by učinilo klima téměř neobyvatelným. Měsíc funguje jako **gravitační stabilizátor**."
+          "text": "Bez **Měsíce** by zemský sklon chaoticky kolísal mezi 0° a víc než 80° po miliony let. Období typu Uran by klima skoro znemožnila k životu. Měsíc působí jako **gravitační stabilizátor**."
         },
         {
           "type": "paragraph",
-          "text": "Při hledání obyvatelné [[exoplanety]] astronomové sledují také stabilitu osy. Mírná a pravidelná roční období nejsou detail: jsou součástí podmínek udržitelného života."
+          "text": "Když hledají obyvatelné [[exoplanety]], astronomové proto hlídají i stabilitu osy. Mírná a pravidelná období nejsou detail: patří k podmínkám trvalého života."
         },
         {
           "type": "takeaway",
-          "text": "Roční období vznikají především ze sklonu osy. Na Uranu trvají desítky let; na Marsu je oválná dráha dělá asymetrickými. Měsíc chrání ty na Zemi."
+          "text": "Období vznikají hlavně ze sklonu osy. Na Uranu trvají desetiletí; na Marsu je oválná dráha udělá nesouměrná. Měsíc ta pozemská chrání."
         }
       ]
     }
