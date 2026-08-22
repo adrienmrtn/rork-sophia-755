@@ -1,14 +1,14 @@
 {
   "id": "course_88_la_poetique_aristote",
-  "title": "Poética, Aristóteles",
-  "subtitle": "Siglo IV a.C. d.C.",
+  "title": "La Poética, Aristóteles",
+  "subtitle": "siglo IV a. C.",
   "subject": "litterature",
   "subcategory": "Griegos y filósofos antiguos",
-  "description": "Aristóteles analiza la tragedia griega e inventa palabras por todas partes: mimesis, catarsis, peripeteia. La poética es el primer gran manual de instrucciones de la narrativa.",
+  "description": "Aristóteles analiza la tragedia griega y acuña palabras que siguen por todas partes: mímesis, catarsis, peripecia. La Poética es el primer gran manual de contar historias.",
   "hero": {
     "image": "la_poetique_aristote",
     "ratio": "16:9",
-    "hook": "Antes de los manuales de guiones, estuvieron Aristóteles y la tragedia griega."
+    "hook": "Mucho antes de los manuales de guion, estaban Aristóteles y la tragedia griega."
   },
   "sections": [
     {
@@ -18,87 +18,87 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En el siglo IV a. C. **Aristóteles**, alumno de Platón y luego pensador independiente, fundador del **Escuela secundaria** de Atenas, escribió la **Poética**. No es un poema. Es un análisis de la poesía, especialmente **tragedia**, un género teatral griego que representa la caída de un héroe. ¿Cómo una historia causa miedo y lástima? ¿Por qué esto nos hace sentir bien?"
+          "text": "En el **siglo IV a. C.**, **Aristóteles**, discípulo de Platón que se volvió pensador independiente y fundó el **Liceo** en Atenas, escribe la **Poética**. No es un poema. Es un análisis de la poesía, y sobre todo de la **tragedia**, la forma dramática griega que pone en escena la caída de un héroe. ¿Cómo produce un relato miedo y piedad? ¿Por qué eso nos hace bien?"
         },
         {
           "type": "paragraph",
-          "text": "El texto que nos ha llegado es parcial, a veces seco, escrito en forma de notas. Sin embargo, dio forma al teatro, a la novela y luego al cine. Muchas reglas de la “buena narración” encuentran allí un ancestro griego. Aristóteles observa lo que funciona en el escenario y luego extrae principios de ello."
+          "text": "El texto que nos ha llegado está incompleto, a veces seco, anotado en forma de notas. Aun así, modeló el teatro, luego la novela, luego el cine. Muchas reglas del “buen relato” tienen aquí su antepasado griego. Aristóteles observa lo que funciona en escena y luego saca principios."
         }
       ]
     },
     {
       "id": "course_88_la_poetique_aristote_p1",
-      "title": "Imitar no es hacer trampa",
+      "title": "Imitar no es engañar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Platón desconfiaba de las imágenes, a las que comparaba con sombras engañosas. Aristóteles rehabilita el . Para él, el arte imita selectivamente la naturaleza. Muestra las cosas no como son, sino como podrían ser. Representar las acciones humanas no es mentir. Es aprendizaje. El niño imita para comprender. Arte también. [[La mimesis aristotélica]]"
+          "text": "Platón desconfiaba de las imágenes, que comparaba con sombras engañosas. Aristóteles las rehabilita con la [[mimesis aristotélica]]. Para él, el arte imita la naturaleza de forma selectiva. Muestra las cosas no como son, sino como podrían ser. Representar las acciones humanas no es mentir. Es aprender. Un niño imita para comprender. El arte también."
         },
         {
           "type": "image",
           "asset": "aristotle_portrait_bust_sculpture",
           "ratio": "1:1",
-          "caption": "Aristóteles: clasificando el mundo, incluidas las historias que nos contamos a nosotros mismos."
+          "caption": "Aristóteles: clasificar el mundo, incluidas las historias que nos contamos"
         },
         {
           "type": "paragraph",
-          "text": "La tragedia imita acciones serias, completas y de cierta magnitud. El criterio no es el documental exacto. Este es el **probable** y el **necesario**: lo que tenía que pasar en esta historia, según la lógica interna de la historia. Aristóteles también distingue la épica, una larga historia en verso, y la tragedia, la acción teatral en un tiempo limitado."
+          "text": "La tragedia imita acciones serias, completas y de cierta escala. La prueba no es la exactitud documental. Es lo **probable** y lo **necesario**: lo que tenía que ocurrir en este relato, dada la lógica interna de la trama. Aristóteles también separa la epopeya, un relato largo en verso, de la tragedia, una acción escénica en un lapso limitado."
         }
       ]
     },
     {
       "id": "course_88_la_poetique_aristote_p2",
-      "title": "Catarsis: miedo, lástima, alivio.",
+      "title": "Catarsis: miedo, piedad, alivio",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aristóteles dice que la tragedia cumple el [[La catarsis]] de las emociones de compasión y miedo. El significado exacto de la palabra ha sido debatido durante veinticinco siglos: ¿purificación, evacuación, clarificación? La idea central permanece: el espectáculo violento no sólo emociona. Él **orden** nuestros afectos. Lloramos y temblamos en la seguridad, en el teatro."
+          "text": "Aristóteles dice que la tragedia logra la [[catarsis]] de las emociones de piedad y de miedo. El sentido exacto de la palabra se discute desde hace veinticinco siglos: ¿purificación, purga, clarificación? La idea central se sostiene: un espectáculo violento no solo nos excita. **Ordena** nuestros sentimientos. Lloramos y temblamos a salvo, dentro del teatro."
         },
         {
           "type": "funFact",
-          "text": "En la Edad Media y el Renacimiento, el texto pasó por traducciones árabes y latinas, incluidas las vinculadas a [[Averroes]], filósofo andaluz del siglo XII. Aristóteles regresa a Europa mediante desvíos académicos, no en línea directa."
+          "text": "En la Edad Media y el Renacimiento, el texto viajó por traducciones árabes y latinas, incluidas las ligadas a [[Averroes]], el filósofo andalusí del siglo XII. Aristóteles volvió a Europa por desvíos eruditos, no en línea recta."
         },
         {
           "type": "image",
           "asset": "ancient_greek_theater_epidaurus",
           "ratio": "16:9",
-          "caption": "El teatro de Epidauro: el espacio donde la ciudad griega contemplaba sus mitos."
+          "caption": "El teatro de Epidauro: el espacio donde una ciudad griega veía sus propios mitos"
         }
       ]
     },
     {
       "id": "course_88_la_poetique_aristote_p3",
-      "title": "Intriga, giro, reconocimiento.",
+      "title": "Trama, vuelco, reconocimiento",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Para Aristóteles, el corazón del drama es el *muthos*, la trama, la secuencia de acciones. Valora el **peripecia**, el cambio repentino de la situación, y el **reconocimiento**, la *anagnorisis*, el momento en que un personaje pasa de la ignorancia al conocimiento. **OEdipo Rey** de Sófocles es su ejemplo estrella: el héroe descubre demasiado tarde quién es."
+          "text": "Para Aristóteles, el corazón del drama es el *muthos*, la trama, la cadena de acciones. Premia el **vuelco**, el giro súbito de la fortuna, y el **reconocimiento**, la *anagnórisis*, el momento en que un personaje pasa de la ignorancia al saber. **Edipo rey** de Sófocles es su ejemplo estrella: el héroe descubre demasiado tarde quién es."
         },
         {
           "type": "paragraph",
-          "text": "Prefiere el **error**, el *hamartia*, la falta involuntaria o el juicio distorsionado, a la pura maldad. El héroe no es ni perfectamente bueno ni monstruoso. Su caída debe parecer lógica y, por tanto, terrible. Es esta mezcla la que provoca lástima: reconocemos una debilidad humana, no sólo un villano caricaturizado."
+          "text": "Prefiere un **error**, la *hamartia*, una falta no querida o un juicio torcido, a la maldad pura. El héroe no es perfectamente bueno ni monstruoso. Su caída tiene que parecer lógica, y eso es lo que la vuelve terrible. La mezcla es lo que produce piedad: reconocemos una debilidad humana, no solo a un villano de dibujo."
         }
       ]
     },
     {
       "id": "course_88_la_poetique_aristote_p4",
-      "title": "Un manual de usuario que ha sobrevivido",
+      "title": "Un manual que sobrevivió",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Clasicismos franceses del siglo XVII, dramaturgias modernas, lanzamientos de Hollywood: encontramos en todas partes la unidad de la acción, el nudo, el desenlace. Podemos discutir con Aristóteles. Todavía lo citamos. El [[teatro de Epidauro]], un teatro griego notable por su acústica, ya no es el único lugar de la historia, pero persisten las preguntas."
+          "text": "El clasicismo francés del siglo XVII, la dramaturgia moderna, los pitches de Hollywood: la unidad de acción, el nudo y la resolución aparecen por todas partes. Se puede discutir a Aristóteles. Se le sigue citando. El [[teatro de Epidauro]], un teatro griego notable por su acústica, ya no es la única casa del relato, pero las preguntas que se hacían allí siguen."
         },
         {
           "type": "paragraph",
-          "text": "Aristóteles también recuerda que la poesía dice el **** general, digamos que la historia lo dice**** particular. Una trama bien hecha muestra lo que podría haber sucedido según la probabilidad. Por eso Edipo sigue siendo un modelo: cada revelación parece a la vez sorprendente e inevitable. Los autores de teatro clásico, y luego los guionistas modernos, han asumido esta exigencia de necesidad narrativa."
+          "text": "Aristóteles también recuerda que la poesía habla de lo **general**, mientras que la historia habla de lo **particular**. Una trama bien construida muestra lo que podría haber ocurrido, según lo probable. Por eso Edipo sigue siendo un modelo: cada revelación parece sorprendente e inevitable a la vez. Los dramaturgos clásicos, y luego los guionistas modernos, tomaron esta exigencia de necesidad narrativa."
         },
         {
           "type": "takeaway",
-          "text": "La **Poética** de Aristóteles ofrece a Occidente su primer gran vocabulario narrativo: imitar, conmover, cambiar la situación. Antes de escribir una historia, muchos todavía piensan en ella con él."
+          "text": "La **Poética** de Aristóteles dio a Occidente su primer gran vocabulario para contar: imitar, conmover, volcar la situación. Antes de escribir una historia, mucha gente sigue pensándola con él."
         }
       ]
     }
