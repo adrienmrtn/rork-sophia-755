@@ -1,14 +1,14 @@
 {
   "id": "course_89_les_travaux_et_les_jours_hesiode",
-  "title": "Obras e Dias, Hesíodo",
-  "subtitle": "Século 8 aC DC",
+  "title": "Os Trabalhos e os Dias, Hesíodo",
+  "subtitle": "século VIII a.C.",
   "subject": "litterature",
   "subcategory": "Gregos & Filósofos antigos",
-  "description": "Hesíodo fala ao irmão Perses: trabalhe, seja justo, cuidado com os excessos. Entre o mito de Pandora e o calendário agrícola nasce uma ética do trabalho.",
+  "description": "Hesíodo fala com o irmão Perses: trabalhe, seja justo, fuja do excesso. Entre o mito de Pandora e o calendário agrícola, nasce uma ética do trabalho.",
   "hero": {
     "image": "les_travaux_et_les_jours_hesiode",
     "ratio": "16:9",
-    "hook": "Diante de manuais de sabedoria, um poeta-agricultor dá um sermão ao irmão."
+    "hook": "Antes dos manuais de sabedoria, um poeta-camponês sermoneia o irmão."
   },
   "sections": [
     {
@@ -18,87 +18,87 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Por volta do século **8 aC**, em , uma região da Grécia central ao norte da Ática, o poeta **Hesíodo** escreveu o **Dias de Obras e Ossos**. Este não é um épico de heróis guerreiros. É um poema dirigido ao seu irmão **Persès**, acusado de ter fraudado uma herança familiar com a ajuda de juízes corruptos. [[Beócia]]"
+          "text": "Por volta do **século VIII a.C.**, na [[Beócia]], região da Grécia central ao norte da Ática, o poeta **Hesíodo** escreve **Os Trabalhos e os Dias**. Não é uma epopeia de heróis guerreiros. É um poema dirigido ao irmão **Perses**, acusado de ter trapaceado numa herança familiar com a ajuda de juízes corruptos."
         },
         {
           "type": "paragraph",
-          "text": "Hesíodo mistura mito, moralidade e conselhos agrícolas. Trabalhar a terra, respeitar a justiça, evitar o orgulho: a vida cotidiana torna-se matéria poética. Com Homero, seus textos fundaram grande parte da mitologia e da reflexão grega."
+          "text": "Hesíodo mistura mito, moral e conselhos agrícolas. Trabalhar a terra, respeitar a justiça, evitar o orgulho: o cotidiano vira matéria poética. Com Homero, seus textos fundam boa parte da mitologia e do pensamento gregos."
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p1",
-      "title": "Um poeta que fala da sua área",
+      "title": "Um poeta que fala do próprio campo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ao contrário de **Homero**, figura semi-lendária do poema épico, Hesíodo se coloca no palco. Ele conta sobre sua aldeia, **Ashra**, uma localidade da Beócia, seu pai que veio da Ásia Menor, região da atual Türkiye, seu julgamento contra Perses. A **Musa**, deusa inspiradora das artes, o escolheu, disse ele. Mas o tom continua concreto: semear, colher, navegar na hora certa."
+          "text": "Ao contrário de **Homero**, figura semilendária do poema épico, Hesíodo se coloca em cena. Ele fala de sua aldeia, **Ascra**, localidade beócia, do pai vindo da Ásia Menor, região da atual Turquia, e do processo contra Perses. A **Musa**, deusa que inspira as artes, o escolhe, diz ele. Mas o tom segue concreto: semear, colher, navegar na hora certa."
         },
         {
           "type": "image",
           "asset": "hesiod_ancient_greek_poet_illustration",
           "ratio": "4:3",
-          "caption": "Hesíodo: A poesia grega também desce aos campos."
+          "caption": "Hesíodo: a poesia grega também desce aos campos"
         },
         {
           "type": "paragraph",
-          "text": "Essa voz pessoal anuncia algo moderno: o autor que se envolve, não apenas o bardo anônimo. Hesíodo fala da terra, não do palácio ou do campo de batalha. Ele inventa a poesia didática, a poesia que ensina."
+          "text": "Essa voz pessoal anuncia algo moderno: o autor que se envolve, não só o bardo anônimo. Hesíodo fala da terra, não do palácio nem do campo de batalha. Ele inventa uma poesia didática, uma poesia que ensina."
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p2",
-      "title": "Prometeu, Pandora e o Declínio",
+      "title": "Prometeu, Pandora e o declínio",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Para explicar a dureza da vida, Hesíodo conta a **Prometeu**, titã que rouba fogo para os homens, e **Pandora**, primeira mulher cujo jarro libera males no mundo. Ele adiciona o [[As cinco idades da humanidade (Hesíodo)]]: ouro, prata, bronze, herói, ferro. Estamos vivendo na **Idade do Ferro**, a pior, onde a justiça vacila e o trabalho é difícil."
+          "text": "Para explicar a dureza da vida, Hesíodo conta **Prometeu**, titã que rouba o fogo para os homens, e **Pandora**, a primeira mulher cuja jarra libera os males sobre o mundo. Ele acrescenta as [[cinco idades da humanidade]]: ouro, prata, bronze, heróis, ferro. Vivemos a **idade do ferro**, a pior, em que a justiça vacila e o trabalho é penoso."
         },
         {
           "type": "funFact",
-          "text": ", outro grande poema do mesmo autor, fala do nascimento dos deuses a partir do **Caos**, o vazio original. As Obras descem do céu em direção ao arado. [[A Teogonia de Hesíodo]]"
+          "text": "[[A Teogonia de Hesíodo]], outro grande poema do mesmo autor, conta o nascimento dos deuses desde o **Caos**, o vazio original. *Os Trabalhos e os Dias*, por sua vez, descem do céu até o arado."
         },
         {
           "type": "image",
           "asset": "prometheus_fire_myth_painting",
           "ratio": "4:3",
-          "caption": "Prometeu e o fogo: o progresso técnico tem um preço, em Hesíodo."
+          "caption": "Prometeu e o fogo: o progresso técnico tem um preço, em Hesíodo"
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p3",
-      "title": "Dikè contra a arrogância",
+      "title": "Diké contra a hybris",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O cerne moral do poema opõe *Dique*, justiça, ordem justa, a [[Hybris]], o excesso que leva o homem a acreditar-se igual aos deuses. Reis injustos são ameaçados por **Zeus**, rei dos deuses. O camponês honesto tem uma chance. Hesíodo não promete o paraíso. Ele promete que o esforço é melhor que a fraude."
+          "text": "O coração moral do poema opõe *Diké*, a justiça, a ordem justa, à [[Hybris]], a desmedida que leva o homem a crer que é igual aos deuses. Os reis injustos são ameaçados por **Zeus**, rei dos deuses. Já o camponês honesto tem uma chance. Hesíodo não promete o paraíso. Ele promete que o esforço vale mais que a fraude."
         },
         {
           "type": "paragraph",
-          "text": "O calendário de trabalho **** dá ritmo ao texto: quando arar, quando colher, quando ter cuidado com o mar. A sabedoria é sazonal. Conhecer os ritmos da natureza significa também respeitar uma ordem maior que o apetite do momento. Perses recebe sermões como um irmão preguiçoso, não como um rei."
+          "text": "O **calendário dos trabalhos** ritma o texto: quando lavrar, quando colher a uva, quando desconfiar do mar. A sabedoria é sazonal. Conhecer os ritmos da natureza é também respeitar uma ordem maior que o apetite do momento. Perses é sermoneado como um irmão preguiçoso, não como um rei."
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p4",
-      "title": "O ancestral dos poemas terrestres",
+      "title": "O ancestral dos poemas da terra",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Virgílio**, poeta latino do século I aC. BC, será lembrado no , poema educativo sobre agricultura. Os moralistas, desde , um humanista do Renascimento, até os modernos, leem ali uma ética do trabalho. Hesíodo não é gentil. É claro: sem trabalho e justiça a comunidade apodrece. [[Geórgicas]] [[Erasmo]]"
+          "text": "**Virgílio**, poeta latino do século I a.C., se lembrou disso nas [[Geórgicas]], poema didático sobre a agricultura. Os moralistas, de [[Erasmo]], humanista do Renascimento, aos modernos, leem ali uma ética do trabalho. Hesíodo não é meigo. Ele é claro: sem trabalho e sem justiça, a comunidade apodrece."
         },
         {
           "type": "paragraph",
-          "text": "Hesíodo também fala da **boa Eris**, deusa da rivalidade útil que empurra o vizinho a trabalhar melhor, contra a **minha Éris**, deusa do ódio e da provação. Num mundo difícil, esta distinção é importante: emulação não é guerra. O poema torna-se assim uma arte de convivência, ancorada nas estações e na medida."
+          "text": "Hesíodo fala também da **boa Éris**, deusa da rivalidade útil que leva o vizinho a trabalhar melhor, contra a **má Éris**, deusa do ódio e do processo. Num mundo duro, essa distinção importa: a emulação não é a guerra. O poema vira assim uma arte de viver juntos, ancorada nas estações e na medida."
         },
         {
           "type": "takeaway",
-          "text": "Os **Dias de Obras e Ossos** inventam uma poesia do quotidiano agrícola. Hesíodo disse ao irmão, e a nós: cultive o seu campo, evite os excessos, porque a Idade do Ferro não perdoa a preguiça nem a injustiça."
+          "text": "**Os Trabalhos e os Dias** inventam uma poesia do cotidiano agrícola. Hesíodo diz ao irmão, e a nós: cultive seu campo, fuja do excesso, pois a idade do ferro não perdoa a preguiça nem a injustiça."
         }
       ]
     }
