@@ -19,6 +19,7 @@ Usage:
     python scripts/check_course_translation.py --lang nl --json report.json
     python scripts/check_course_translation.py --lang el --json report.json
     python scripts/check_course_translation.py --lang cs --json report.json
+    python scripts/check_course_translation.py --lang bg --json report.json
 """
 
 from __future__ import annotations
@@ -438,6 +439,29 @@ CZECH_RULES = LanguageRules(
     era_hint="should be př. n. l. / n. l.",
 )
 
+BULGARIAN_RULES = LanguageRules(
+    # Bare "и" / "а" are ordinary conjunctions and list items ("Аларих I,").
+    stranded_spaced=re.compile(
+        r"\b(\u043d\u0430|\u0432|\u043e\u0442|\u0434\u043e|\u0437\u0430|\u043f\u043e|\u043f\u0440\u0438|"
+        r"\u0431\u0435\u0437|\u043a\u044a\u043c|\u0441\u044a\u0441|\u0447\u0435)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "и," / "а," are ordinary in lists. Only "че" cannot end a clause.
+    stranded_tight=re.compile(
+        r"\b(\u0447\u0435)\s*([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=("този ", "тази ", "това ", "тези "),
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # Bulgarian decimals are commas
+    century_hint="should be '15. век'",
+    era_hint="should be пр.н.е. / сл.Хр.",
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
@@ -452,6 +476,7 @@ RULES_BY_LANG: dict[str, LanguageRules] = {
     "sv": SWEDISH_RULES,
     "hu": HUNGARIAN_RULES,
     "cs": CZECH_RULES,
+    "bg": BULGARIAN_RULES,
 }
 
 
@@ -535,6 +560,7 @@ ARTICLE_BEFORE_RE = {
     "sv": re.compile(r"\b(en|ett|den|det|de)$", re.IGNORECASE),
     "hu": re.compile(r"\b(a|az|egy)$", re.IGNORECASE),
     "cs": re.compile(r"\b(ten|ta|to|ti|ty)$", re.IGNORECASE),
+    "bg": re.compile(r"\b(\u0442\u043e\u0437\u0438|\u0442\u0430\u0437\u0438|\u0442\u043e\u0432\u0430|\u0442\u0435\u0437\u0438)$", re.IGNORECASE),
 }
 
 
