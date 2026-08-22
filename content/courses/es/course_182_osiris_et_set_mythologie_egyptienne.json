@@ -1,14 +1,14 @@
 {
   "id": "course_182_osiris_et_set_mythologie_egyptienne",
-  "title": "Osiris y Set (mitología egipcia)",
-  "subtitle": "mitología egipcia",
+  "title": "Osiris y Seth (mitología egipcia)",
+  "subtitle": "Mitología egipcia",
   "subject": "mythologie",
   "subcategory": "Otras mitologías",
-  "description": "Asesinato, desmembramiento, momia y venganza: el ciclo de Osiris y Set fundó la realeza egipcia y la esperanza de la vida después de la muerte.",
+  "description": "Asesinato, desmembramiento, una momia y la venganza: el ciclo de Osiris y Seth funda la realeza egipcia y la esperanza de una vida después de la muerte.",
   "hero": {
     "image": "osiris_et_set_mythologie_egyptienne",
     "ratio": "16:9",
-    "hook": "Un hermano mata al rey y corta su cuerpo en catorce pedazos. Una hermana lo reúne. Un hijo se venga. Todo Egipto está saliendo de este crimen."
+    "hook": "Un hermano mata al rey y corta su cuerpo en catorce trozos. Una hermana lo recompone. Un hijo se venga. Todo Egipto nace de ese crimen."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El ciclo de **Osiris** y **Colocar** es la gran historia del antiguo Egipto. Esta no es sólo una tragedia familiar. Es la lucha entre el orden (, armonía) y el caos estéril. [[Ma'at]]"
+          "text": "El ciclo de **Osiris** y **Seth** es el gran relato del Egipto antiguo. No es solo una tragedia familiar. Es la lucha entre el orden ([[Ma'at]], la armonía) y el caos estéril."
         },
         {
           "type": "paragraph",
-          "text": "A través del asesinato, el desmembramiento y la resurrección de Osiris, los egipcios piensan en la realeza, la fertilidad del Nilo y la vida después de la muerte. Todo faraón viviente es un **Horus**. Cada rey muerto se convierte en un **Osiris**."
+          "text": "A través del asesinato, el desmembramiento y la resurrección de Osiris, los egipcios pensaron la realeza, la fertilidad del Nilo y la vida después de la muerte. Cada faraón vivo era un **Horus**. Cada rey muerto se convertía en un **Osiris**."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p1",
-      "title": "Set mata a Osiris",
+      "title": "Seth mata a Osiris",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Osiris** es un rey civilizador. Con su hermana y esposa **Isis**, enseña agricultura y leyes. Su hermano **Colocar**, dios del desierto y la violencia, lo odia. En un banquete, Set presenta un cofre magnífico: se lo ofrecerá a quien se ajuste perfectamente a él."
+          "text": "**Osiris** es un rey que civiliza. Con **Isis**, su hermana y su esposa, enseña la agricultura y la ley. Su hermano **Seth**, dios del desierto y de la violencia, lo odia. En un banquete, Seth exhibe un cofre magnífico: se lo dará a quien quepa dentro a la perfección."
         },
         {
           "type": "image",
           "asset": "osiris_egyptian_god_green_skin_painting",
           "ratio": "4:3",
-          "caption": "Osiris de piel verde: no muerte, sino vegetación renacida."
+          "caption": "Osiris de piel verde: no la muerte, sino las plantas que vuelven a la vida"
         },
         {
           "type": "paragraph",
-          "text": "Habiendo tomado las medidas de Osiris en secreto, Set lo hace acostarse, cierra el cofre, lo sella con plomo y lo arroja al Nilo. Más tarde, cuando Isis encuentra el cuerpo, Set lo corta en **14 piezas** y los esparce por todo el valle. Sin un cuerpo intacto no hay paz en el más allá."
+          "text": "Seth ha tomado en secreto las medidas de Osiris. Lo hace recostarse, cierra el cofre, lo sella con plomo y lo lanza al Nilo. Más tarde, cuando Isis encuentra el cuerpo, Seth lo corta en **14 trozos** y los esparce por el valle. Sin un cuerpo intacto, no hay paz en el más allá."
         },
         {
           "type": "funFact",
-          "text": "Osiris suele estar pintado de verde. Este color no dice podredumbre: dice renacimiento, como los campos después de las inundaciones del Nilo."
+          "text": "A Osiris se lo pinta a menudo de verde. El color no habla de podredumbre. Habla de renacimiento, como los campos después de la crecida del Nilo."
         }
       ]
     },
@@ -58,21 +58,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Isis**, gran mago, parte en busca de los fragmentos. Ayudada por su hermana Neftis y el dios , erige un santuario en cada lugar donde encuentra una pieza. Queda un problema: el falo fue devorado por el pez . Isis crea un reemplazo. [[Anubis]] [[Oxirrinco]]"
+          "text": "**Isis**, gran hechicera, parte a buscar los fragmentos. Ayudada por su hermana Neftis y por el dios [[Anubis]], alza un santuario en cada lugar donde recupera un trozo. Queda un problema: el falo lo ha comido el pez [[Oxirrinco]]. Isis fabrica uno de reemplazo."
         },
         {
           "type": "image",
           "asset": "isis_egyptian_goddess_winged_resurrection_painting",
           "ratio": "4:3",
-          "caption": "Isis con las alas extendidas: el aliento que revive a Osiris."
+          "caption": "Isis con las alas abiertas: el aliento que reanima a Osiris"
         },
         {
           "type": "paragraph",
-          "text": "Al reunir las piezas y envolverlas en tiras, Isis y Anubis crean la primera momia ****. Con un edificio encima, por desgracia, Isis insufló una breve vida a Osiris. Fue entonces queando concibió a**Horus**, el heredero destinado a restablecer el orden."
+          "text": "Al reunir los trozos y envolverlos en vendas de lino, Isis y Anubis crean la **primera momia**. Con un golpe de alas, Isis devuelve a Osiris una vida breve. Entonces concibe a **Horus**, el heredero que restablecerá el orden."
         },
         {
           "type": "funFact",
-          "text": "Según algunos textos, las lágrimas de Isis durante su búsqueda fueron tan abundantes que los egipcios vieron en ellas el origen mítico de la inundación anual del Nilo."
+          "text": "Algunos textos dicen que las lágrimas de Isis durante la búsqueda fueron tantas que los egipcios vieron en ellas el origen mítico de la crecida anual del Nilo."
         }
       ]
     },
@@ -83,17 +83,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cria[[D]]o en secreto en los pantanos de [[jemmis]], **Horus** crece hasta adoptar la forma de un halcón. Ya adulto, reclama el trono ante el tribunal de los dioses, presidido por . El conflicto con Set dura décadas: duelos, engaños, lesiones. Horus pierde un ojo; Set pierde su fertilidad."
+          "text": "Criado en secreto en los pantanos de [[Chemmis]], **Horus** crece con forma de halcón. Ya adulto reclama el trono ante el tribunal de los dioses, presidido por [[Ra]]. El conflicto con Seth dura décadas: duelos, trampas, heridas. Horus pierde un ojo. Seth pierde la fertilidad."
         },
         {
           "type": "image",
           "asset": "eye_of_horus_egyptian_symbol_protection",
           "ratio": "4:3",
-          "caption": "El Ojo de Horus (Oudjat): integridad recuperada del caos."
+          "caption": "El ojo de Horus (el Udyat): la integridad reconquistada al caos"
         },
         {
           "type": "paragraph",
-          "text": "El ojo, recompuesto por , se convierte en símbolo de curación y protección. Los dioses deciden: Set es condenado a servir, en particular luchando contra la serpiente  en el barco solar. Horus es coronado. Cada faraón será en adelante un “Horus viviente”. [[Thot]] [[Apofis]]"
+          "text": "El ojo, recompuesto por [[Thot]], se convierte en el símbolo de la curación y de la protección. Los dioses dictan sentencia: Seth queda condenado a servir, sobre todo luchando contra la serpiente [[Apofis]] en la barca solar. Horus es coronado. Desde entonces cada faraón será un “Horus vivo”."
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Momificado, Osiris ya no puede reinar en la tierra. Se convierte en gobernante de **Amenti**, el reino de los muertos. Bajo su mirada se produce el **pesando el corazon**, descrito en . El corazón del difunto se coloca sobre una balanza frente a la pluma de Ma'at. [[El Libro de los Muertos]]"
+          "text": "Momificado, Osiris ya no puede reinar en la tierra. Se convierte en soberano del **Amenti**, el reino de los muertos. Bajo su mirada tiene lugar el **pesaje del corazón**, descrito en [[El Libro de los Muertos]]. El corazón del difunto se pone en una balanza contra la pluma de Maat."
         },
         {
           "type": "paragraph",
-          "text": "Si el corazón es ligero, el difunto tiene “la voz correcta” y entra en la eternidad de Osiris. Si está lleno de errores, el monstruo  lo devora: el olvido definitivo. Rey y campesino son juzgados según los mismos criterios. Horus gestiona el presente; Osiris se encarga del resto. [[Ammout]]"
+          "text": "Si el corazón es ligero, el muerto es “justo de voz” y entra en la eternidad de Osiris. Si está pesado de pecados, el monstruo [[Ammut]] lo devora: el olvido total. Rey y campesino se juzgan con la misma medida. Horus se ocupa del presente. Osiris se ocupa de lo que viene después."
         },
         {
           "type": "takeaway",
-          "text": "El mito de **Osiris** y **Colocar** establece tres pilares de Egipto: la realeza (Horus vivo), la momificación (cuerpo intacto para el más allá) y la esperanza de justicia después de la muerte bajo la mirada de Osiris."
+          "text": "El mito de **Osiris** y **Seth** funda tres pilares de Egipto: la realeza (el Horus vivo), la momificación (un cuerpo intacto para el más allá) y la esperanza de justicia después de la muerte bajo la mirada de Osiris."
         }
       ]
     }

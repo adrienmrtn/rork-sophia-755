@@ -1,14 +1,14 @@
 {
   "id": "course_220_la_desinformation_et_les_fake_news",
-  "title": "Desinformación y noticias falsas",
-  "subtitle": "Mentir en la era viral",
+  "title": "La desinformación y las fake news",
+  "subtitle": "Mentir en la era de la viralidad",
   "subject": "comprendreLeMonde",
   "subcategory": "Economía y sociedad",
-  "description": "La información falsa se difunde 6 veces más rápido que la verdad en las redes sociales. ¿Por qué y cómo protegerse?",
+  "description": "La información falsa se propaga 6 veces más rápido que la verdad en las redes sociales. ¿Por qué, y cómo protegerse?",
   "hero": {
     "image": "la_desinformation_et_les_fake_news",
     "ratio": "16:9",
-    "hook": "Un estudio del MIT demostró que las noticias falsas viajan 6 veces más rápido que la verdad en Twitter. He aquí por qué."
+    "hook": "Un estudio del MIT halló que las fake news viajan 6 veces más rápido que la verdad en Twitter. Aquí está el porqué."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mentir para cumplir un propósito político no es nada nuevo: se han encontrado rastros de ello desde la Antigüedad. Pero Internet y las redes sociales han cambiado la situación: la información falsa ya no circula sólo de un Estado a su población, sino que ahora se difunde horizontalmente, entre los ciudadanos."
+          "text": "Mentir para servir un fin político no es nada nuevo, y hay rastros de ello desde la Antigüedad. Pero internet y las redes sociales cambiaron el juego: la información falsa ya no fluye solo de un Estado hacia su pueblo, ahora se extiende de lado, de ciudadano a ciudadano."
         },
         {
           "type": "paragraph",
-          "text": "Este cambio ha creado un mundo donde la verdad a veces parece opcional frente a la viralidad. Comprender cómo se difunde la desinformación y quién se beneficia de ella se ha vuelto esencial para preservar la confianza entre los ciudadanos."
+          "text": "Ese giro creó un mundo en el que la verdad puede parecer opcional frente a la viralidad. Entender cómo se propaga la **desinformación**, y quién gana con ella, se ha vuelto esencial para conservar la confianza entre ciudadanos."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p1",
-      "title": "¿Por qué las mentiras viajan más rápido que la verdad?",
+      "title": "Por qué una mentira viaja más rápido que la verdad",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Debemos distinguir la desinformación, difundida deliberadamente para manipular, de los simples errores honestos. El éxito de estas noticias falsas depende de lo que los investigadores llaman la economía de la atención: los algoritmos de las redes sociales están diseñados para maximizar el tiempo frente a la pantalla, y nuestros cerebros responden con más fuerza a las emociones y al shock que a los matices."
+          "text": "La desinformación, difundida a propósito para manipular, no es lo mismo que un error honesto. El éxito de estas falsedades descansa en lo que los investigadores llaman la **economía de la atención**: los algoritmos de las redes están hechos para maximizar el tiempo delante de una pantalla, y nuestro cerebro reacciona mucho más a la emoción y al choque que a los matices."
         },
         {
           "type": "funFact",
-          "text": "Un estudio de [[MIT]] publicado en 2018 mostró que las noticias falsas se difunden aproximadamente 6 veces más rápido que las noticias verificadas en Twitter porque parecen más frescas y emocionalmente más intensas."
+          "text": "Un estudio de 2018 del [[MIT]] mostró que las historias falsas se propagan unas 6 veces más rápido que la información verificada en Twitter, porque parecen más nuevas y golpean más fuerte en lo emocional."
         },
         {
           "type": "paragraph",
-          "text": "Los algoritmos también encierran a los internautas en : sólo les muestran contenidos que confirman sus opiniones ya existentes. Una persona convencida de una teoría de la conspiración ve cada nueva información falsa como una prueba adicional, lo que hace muy difícil cualquier corrección posterior. [[filtrar burbujas]]"
+          "text": "Los algoritmos también encierran a los usuarios dentro de [[burbujas de filtro]], y les muestran solo contenido que confirma las opiniones que ya tienen. Alguien convencido por una teoría conspirativa lee entonces cada pieza nueva de información falsa como una prueba más, lo que hace muy difícil cualquier corrección posterior."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p2",
-      "title": "Una industria de mentiras, entre Estados y ganancias.",
+      "title": "Una industria de la mentira, entre Estados y beneficio",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La desinformación se ha convertido en una verdadera industria. Estados como Rusia, a través de la Agencia de Investigación de Internet, han creado miles de cuentas automatizadas falsas para provocar tensiones dentro de las democracias occidentales, sin siquiera intentar defender un campo específico: el objetivo a menudo es crear caos y hacer creer a la gente que “todos mienten”."
+          "text": "La desinformación se ha vuelto una industria de verdad. Estados como Rusia, a través de la Internet Research Agency, crearon miles de cuentas falsas automatizadas para avivar la tensión dentro de las democracias occidentales, sin siquiera defender un bando en particular. El fin suele ser crear caos y hacer creer que “todos mienten”."
         },
         {
           "type": "image",
           "asset": "fake_news_social_media_manipulation_phone",
           "ratio": "4:3",
-          "caption": "Información falsa se difunde en segundos en las redes sociales."
+          "caption": "La información falsa se extiende por las redes sociales en segundos"
         },
         {
           "type": "paragraph",
-          "text": "También hay una dimensión puramente lucrativa: en la ciudad de Veles, en Macedonia del Norte, jóvenes emprendedores crearon en 2016 sitios sensacionalistas sin ninguna convicción política, únicamente para ganar dinero a través del tráfico generado en las redes sociales. La mentira se convierte entonces en un simple bien rentable."
+          "text": "Hay también un lado puramente comercial. En la ciudad de Veles, en Macedonia del Norte, jóvenes emprendedores construyeron sitios sensacionalistas en 2016 sin ninguna convicción política, solo para ganar dinero con el tráfico que les enviaban las redes. La mentira se vuelve un producto rentable como cualquier otro."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p3",
-      "title": "Cómo separar la realidad de la ficción",
+      "title": "Cómo distinguir lo verdadero de lo falso",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ante esta avalancha, el mundo de la información se está organizando. **verificación de hechos**, es decir, la verificación de hechos, se ha convertido en una disciplina periodística por derecho propio. Agencias como  o redacciones especializadas utilizan herramientas de búsqueda de imágenes para detectar falsificaciones y analizar contenidos sospechosos. [[AFP]]"
+          "text": "Ante el diluvio, el mundo de la información se organiza. El **fact-checking**, la verificación sistemática de las afirmaciones, se ha vuelto una disciplina periodística por derecho propio. Agencias como [[AFP]] y redacciones especializadas usan herramientas de búsqueda inversa de imágenes para detectar falsificaciones y analizar contenido sospechoso."
         },
         {
           "type": "paragraph",
-          "text": "Pero la carrera entre ataque y defensa sigue siendo desigual. La aparición de [[Deepfakes]], vídeos manipulados por inteligencia artificial en los que se obliga a una persona a decir cualquier cosa con un realismo inquietante, hace que la distinción entre verdadero y falso sea cada vez más difícil para un ojo inexperto."
+          "text": "Pero la carrera entre ataque y defensa sigue desigual. La llegada de los [[Deepfakes]], vídeos falseados por inteligencia artificial que pueden poner cualquier palabra en la boca de cualquiera con un realismo inquietante, hace cada vez más difícil distinguir lo verdadero de lo falso a simple vista."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p4",
-      "title": "Encontrar confianza en un mundo de imágenes",
+      "title": "Reconstruir la confianza en un mundo de imágenes",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El efecto a largo plazo de la desinformación es profundo: ahora estamos hablando de una era **posverdad**, donde los hechos objetivos a veces tienen menos peso que las emociones y las creencias personales. Esta relativización generalizada debilita la confianza necesaria para abordar juntos desafíos globales como el clima o la salud pública."
+          "text": "El efecto a largo plazo de la desinformación llega hondo. Se habla ahora de una era de **posverdad**, en la que los hechos objetivos a veces pesan menos que la emoción y la creencia personal. Ese relativismo general debilita la confianza que necesitamos para enfrentar juntos los desafíos globales, del clima a la salud pública."
         },
         {
           "type": "paragraph",
-          "text": "La respuesta más sólida sigue siendo la educación mediática: aprender a verificar una fuente, comparar varias piezas de información y comprender cómo funcionan los algoritmos. Algunos también se basan en tecnologías de certificación de contenidos, para garantizar el origen de un vídeo desde su creación. Mientras tanto, la vigilancia de todos sigue siendo la primera línea de defensa."
+          "text": "La respuesta más fuerte sigue siendo la educación mediática: aprender a comprobar una fuente, a comparar varios relatos y a entender cómo funcionan los algoritmos. Algunos también cuentan con una tecnología de certificación de contenido, que probaría de dónde viene un vídeo en el momento de hacerse. Hasta entonces, la vigilancia de cada uno es la primera línea de defensa."
         },
         {
           "type": "takeaway",
-          "text": "La información falsa se difunde en promedio 6 veces más rápido que la verdad en las redes sociales, porque explota nuestras emociones y nuestra sed de novedad. Frente a los deepfakes y las granjas de trolls, la educación mediática sigue siendo la mejor arma para preservar la confianza colectiva."
+          "text": "La información falsa se propaga de media 6 veces más rápido que la verdad en las redes sociales, porque se alimenta de nuestras emociones y de nuestro apetito de novedad. Frente a los deepfakes y a las granjas de trolls, la educación mediática sigue siendo la mejor arma para proteger la confianza colectiva."
         }
       ]
     }

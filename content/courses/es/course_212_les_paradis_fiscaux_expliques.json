@@ -1,14 +1,14 @@
 {
   "id": "course_212_les_paradis_fiscaux_expliques",
-  "title": "Paraísos fiscales",
-  "subtitle": "10 billones escondidos",
+  "title": "Los paraísos fiscales, explicados",
+  "subtitle": "10 billones de dólares escondidos",
   "subject": "comprendreLeMonde",
   "subcategory": "Economía y sociedad",
-  "description": "Alrededor del 10% de la riqueza mundial escapa a impuestos en territorios opacos. ¿Cómo funciona este sistema y por qué es tan resistente?",
+  "description": "Alrededor del 10% de la riqueza mundial escapa al impuesto en territorios opacos. ¿Cómo funciona el sistema, y por qué resiste tan bien?",
   "hero": {
     "image": "les_paradis_fiscaux_expliques",
     "ratio": "16:9",
-    "hook": "Las Islas Caimán tienen una población de 65.000 habitantes y más de 100.000 empresas. Bienvenido al mundo de los paraísos fiscales."
+    "hook": "Las islas Caimán tienen 65.000 habitantes y más de 100.000 empresas. Bienvenidos al mundo de los paraísos fiscales."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ciertos territorios, a menudo minúsculos, permiten a empresas y grandes fortunas escapar casi por completo del impuesto de su país de origen. A estos los llamamos **paraísos fiscales**. Se estima que allí se encuentran alrededor de 10 billones de dólares, o entre el 8 y el 10% de la riqueza mundial."
+          "text": "Algunos territorios, a menudo minúsculos, dejan que empresas y grandes fortunas escapen de casi todo el impuesto que deberían pagar en su país. Son los **paraísos fiscales**. Se estima que 10 billones de dólares, alrededor del 8 al 10% de la riqueza mundial, están en ellos."
         },
         {
           "type": "paragraph",
-          "text": "Esto no es sólo un problema de los contables: priva a los estados de 600 mil millones de dólares al año, dinero que podría haber financiado hospitales o escuelas. Así es como funciona este discreto sistema y por qué resiste tan bien los intentos de regulación."
+          "text": "Esto no es solo un problema de contables. Priva a los Estados de 600 mil millones de dólares al año, dinero que podría haber pagado hospitales o escuelas. Así funciona este sistema discreto, y por qué resiste tan bien a la regulación."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p1",
-      "title": "¿Cómo se esconde el dinero?",
+      "title": "Cómo se esconde el dinero",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un paraíso fiscal se basa en tres pilares: impuestos cercanos a cero, gran opacidad y poca cooperación con otros países. Estos territorios atraen así capitales de todo el mundo, lo que llamamos la economía . [[Offshore]]"
+          "text": "Un paraíso fiscal descansa en tres pilares: impuestos cercanos a cero, un secreto profundo y muy poca cooperación con otros países. Territorios así atraen capital de todo el mundo, en lo que se conoce como la economía [[offshore]]."
         },
         {
           "type": "paragraph",
-          "text": "En muchos de estos territorios es posible crear una empresa fantasma: un negocio sin oficina ni empleados, que sólo existe en el papel. Su único propósito suele ser ocultar la identidad del verdadero propietario del dinero, denominado beneficiario efectivo."
+          "text": "En varios de ellos se puede crear una sociedad pantalla: una empresa sin oficina y sin empleados, que existe solo en el papel. Su único fin suele ser esconder la identidad de quien posee de verdad el dinero, el beneficiario real."
         },
         {
           "type": "image",
           "asset": "cayman_islands_offshore_banking_paradise",
           "ratio": "4:3",
-          "caption": "Las Islas Caimán, uno de los centros financieros más grandes del mundo a pesar de su pequeño tamaño."
+          "caption": "Las islas Caimán, uno de los mayores centros financieros del mundo pese a su tamaño pequeño"
         },
         {
           "type": "funFact",
-          "text": "Las Islas Caimán tienen sólo 65.000 habitantes, pero más de 100.000 empresas están registradas allí: es el quinto centro financiero del mundo en depósitos bancarios, en una superficie más pequeña que París."
+          "text": "Las islas Caimán tienen solo 65.000 habitantes, pero hay más de 100.000 empresas registradas allí. Eso las convierte en el quinto centro financiero mundial por depósitos bancarios, en un territorio más pequeño que París."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p2",
-      "title": "El arte de obtener ganancias desaparece",
+      "title": "El arte de hacer desaparecer un beneficio",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Para las grandes empresas, el objetivo no es necesariamente ilegal: estamos hablando de **optimización fiscal**, es decir del uso hábil de las normas de cada país para pagar menos impuestos. La herramienta principal se llama : una propia empresa fija el precio de los intercambios entre sus propias filiales, para mostrar sus beneficios allí donde el impuesto es más bajo. [[precio de transferencia]]"
+          "text": "Para las grandes empresas el objetivo no es necesariamente ilegal. Se llama **optimización fiscal**: usar con astucia las reglas de cada país para pagar menos. La herramienta principal son los [[precios de transferencia]], con los que una empresa fija el precio de los intercambios entre sus propias filiales, para que sus beneficios aparezcan donde el impuesto es más bajo."
         },
         {
           "type": "paragraph",
-          "text": "Un método común es transferir una marca o patente a una filial ubicada en un paraíso fiscal. Las demás filiales, situadas por ejemplo en Francia, deben pagar enormes sumas de dinero por el derecho a utilizar esta marca. Estos pagos reducen su beneficio imponible localmente, mientras que lo aumentan en el paraíso fiscal."
+          "text": "Un método habitual es trasladar una marca o una patente a una filial radicada en un paraíso fiscal. Las demás filiales, en Francia por ejemplo, tienen entonces que pagar sumas enormes por el derecho a usar esa marca. Esos pagos recortan su beneficio imponible local, y lo inflan en el paraíso fiscal."
         },
         {
           "type": "funFact",
-          "text": "La palabra francesa “paraíso fiscal” proviene de un error de traducción: el inglés dice “paraíso fiscal”, un puerto seguro para el dinero (haven), no un paraíso (heaven). Una confusión de sonidos ha cambiado el significado de la palabra."
+          "text": "La expresión francesa “paradis fiscal” viene de una mala traducción. El inglés dice “haven”, un puerto seguro para el dinero, no “heaven”. Dos palabras que suenan parecido cambiaron el sentido."
         }
       ]
     },
@@ -77,30 +77,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La crisis financiera de 2008 y la publicación de [[Panama Papers]] en 2016 provocaron una ola de indignación. Bajo la presión de la OCDE y el G20, los bancos ahora deben transmitir automáticamente información sobre sus clientes extranjeros a las administraciones tributarias."
+          "text": "La crisis financiera de 2008, luego la publicación de los [[Panama Papers]] en 2016, desató una oleada de indignación. Bajo presión de la OCDE y del G20, los bancos deben ahora transmitir automáticamente a las haciendas la información sobre sus clientes extranjeros."
         },
         {
           "type": "paragraph",
-          "text": "El avance más significativo se produjo en 2021, con un acuerdo internacional que establece una tasa impositiva mínima del 15% para las multinacionales. La idea: evitar que los países compitan entre sí reduciendo sin cesar sus impuestos para atraer empresas. Si una empresa sólo paga el 5% en un paraíso fiscal, su país de origen ahora puede reclamar el 10% restante."
+          "text": "El paso más grande llegó en 2021, con un acuerdo internacional que fija un tipo mínimo del 15% para las multinacionales. La idea es impedir que los países compitan bajando sus impuestos sin fin para atraer empresas. Si una firma paga solo el 5% en un paraíso fiscal, su país de origen puede ahora reclamar el 10% restante."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p4",
-      "title": "La justicia fiscal sigue siendo frágil",
+      "title": "Avances frágiles hacia la justicia fiscal",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cuando las mayores fortunas escapan a los impuestos, son las clases medias y las pequeñas empresas locales las que soportan una mayor proporción de la carga fiscal. Esto también debilita servicios públicos como la salud o la educación, por falta de recursos."
+          "text": "Cuando las mayores fortunas escapan al impuesto, la clase media y las pequeñas empresas locales cargan con una parte mayor. Los servicios públicos como la salud y la educación se debilitan también, por falta de dinero."
         },
         {
           "type": "paragraph",
-          "text": "La batalla ahora avanza hacia lo digital: las plataformas en línea ya no necesitan oficinas para ganar dinero en un país, lo que hace que las fronteras fiscales sean cada vez más porosas. Las administraciones utilizan ahora el big data para detectar anomalías y exigen registros públicos que revelen la identidad de los verdaderos propietarios de las empresas."
+          "text": "La batalla se desplaza ahora al mundo digital. Las plataformas en línea ya no necesitan oficinas para ganar dinero en un país, lo que hace las fronteras fiscales cada vez más porosas. Las haciendas usan ahora big data para detectar anomalías, y los activistas quieren registros públicos que muestren quién posee de verdad cada empresa."
         },
         {
           "type": "takeaway",
-          "text": "Los paraísos fiscales albergan alrededor del 10% de la riqueza mundial gracias al secreto bancario y a una tributación casi nula. Desde 2021, una tasa impositiva mínima global del 15% ha intentado limitar esta evasión, pero la batalla está lejos de estar ganada."
+          "text": "Los paraísos fiscales guardan alrededor del 10% de la riqueza mundial, gracias al secreto bancario y a impuestos cercanos a cero. Desde 2021 un tipo mínimo mundial del 15% intenta limitar esta fuga de capitales, pero la batalla está lejos de ganarse."
         }
       ]
     }

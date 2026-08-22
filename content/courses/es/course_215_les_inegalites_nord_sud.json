@@ -1,14 +1,14 @@
 {
   "id": "course_215_les_inegalites_nord_sud",
-  "title": "Desigualdades Norte-Sur",
-  "subtitle": "Un mundo de dos velocidades",
+  "title": "Las desigualdades Norte-Sur",
+  "subtitle": "Un mundo a dos velocidades",
   "subject": "comprendreLeMonde",
   "subcategory": "Economía y sociedad",
-  "description": "El 10% más rico del planeta capta más de la mitad del ingreso global. Sin embargo, la pobreza extrema se ha dividido por cuatro en treinta años.",
+  "description": "El 10% más rico del planeta se lleva más de la mitad de todos los ingresos mundiales. Y aun así la pobreza extrema es un cuarto de lo que era hace treinta años.",
   "hero": {
     "image": "les_inegalites_nord_sud",
     "ratio": "16:9",
-    "hook": "Un estadounidense gana en una hora lo que gana un residente de Níger en un día entero de trabajo."
+    "hook": "Un estadounidense gana en una hora lo que alguien en Níger gana en un día entero de trabajo."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La brecha entre países ricos y pobres sigue siendo uno de los hechos más sorprendentes del mundo actual. La globalización prometió un acercamiento en los niveles de vida, pero las brechas de riqueza siguen siendo inmensas entre las naciones."
+          "text": "La brecha entre países ricos y pobres sigue siendo uno de los hechos más llamativos del mundo de hoy. La globalización prometió que los niveles de vida se acercarían, pero las diferencias de riqueza entre naciones siguen siendo enormes."
         },
         {
           "type": "paragraph",
-          "text": "Sin embargo, la historia reciente no sólo es sombría: la pobreza extrema ha disminuido más rápido que nunca en treinta años. Este curso explora las raíces de estas desigualdades y las razones de esta extraña paradoja."
+          "text": "La historia reciente no es toda oscura, sin embargo. La pobreza extrema ha retrocedido más rápido en los últimos treinta años que nunca. Este curso mira las raíces de estas desigualdades, y las razones de esa paradoja extraña."
         }
       ]
     },
     {
       "id": "course_215_les_inegalites_nord_sud_p1",
-      "title": "Un mundo de dos velocidades",
+      "title": "Un mundo a dos velocidades",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El **** **** 10% más rico de la población mundial capta más del 52% del ingreso global. El 50% más pobre debe compartir sólo el 8% del pastel. Esta concentración de riqueza nunca ha sido mayor en la historia de la humanidad."
+          "text": "El **10% más rico** de la población mundial se lleva más del 52% de los ingresos globales. El 50% más pobre comparte solo el 8% del pastel. La riqueza no ha estado nunca tan concentrada en la historia humana."
         },
         {
           "type": "paragraph",
-          "text": "Esta brecha también se observa en la esperanza de vida: llega a 83 años en Japón, pero cae a 55 años en la República Centroafricana. Estas brechas no se deben al azar: provienen de un acceso muy desigual al agua potable, los alimentos y la atención médica."
+          "text": "La brecha se ve también en la esperanza de vida: 83 años en Japón, pero 55 años en la República Centroafricana. Estos huecos no son accidentes. Vienen de un acceso profundamente desigual al agua potable, a la comida y a la sanidad."
         },
         {
           "type": "funFact",
-          "text": "Un habitante de los Estados Unidos gana por término medio, en una hora de trabajo, tanto como un habitante de Níger en un día entero."
+          "text": "En una hora de trabajo, el residente medio de Estados Unidos gana tanto como alguien en Níger gana en un día entero."
         }
       ]
     },
     {
       "id": "course_215_les_inegalites_nord_sud_p2",
-      "title": "Las raíces históricas siguen vivas",
+      "title": "Raíces históricas que siguen vivas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Para comprender estas diferencias, debemos remontarnos a la colonización. Las potencias europeas organizaron muchos territorios del sur como proveedores de materias primas (café, cacao, algodón), desacelerando su propia industrialización para proteger sus propias fábricas."
+          "text": "Para entender estas brechas hay que volver a la colonización. Las potencias europeas organizaron muchos territorios del Sur como proveedores de materias primas (café, cacao, algodón), y frenaron su industrialización para proteger sus propias fábricas."
         },
         {
           "type": "image",
           "asset": "global_inequality_rich_poor_contrast_photograph",
           "ratio": "16:9",
-          "caption": "Las diferencias de riqueza entre el Norte y el Sur siguen estando entre las más amplias del planeta."
+          "caption": "La brecha de riqueza entre Norte y Sur sigue entre las más anchas del planeta"
         },
         {
           "type": "paragraph",
-          "text": "Esta lógica continúa hoy a través del [[términos de comercio]]: los países del Sur venden a menudo materias primas cuyo precio varía mucho, mientras compran productos manufacturados cuyo precio sólo aumenta. A esto se suma el peso de la deuda: el reembolso de los intereses a veces ocupa más espacio en el presupuesto nacional que la educación o la salud."
+          "text": "La misma lógica continúa hoy a través de los [[términos de intercambio]]: los países del Sur venden sobre todo materias primas cuyos precios oscilan con violencia, mientras compran bienes manufacturados cuyos precios solo suben. La deuda añade peso, porque pagar los intereses a veces se lleva una parte mayor del presupuesto nacional que la educación o la salud."
         }
       ]
     },
     {
       "id": "course_215_les_inegalites_nord_sud_p3",
-      "title": "Progreso real, pero desigual",
+      "title": "Avances reales, mal repartidos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sin embargo, en los últimos treinta años se ha producido una disminución espectacular de la pobreza absoluta, que afectaba al 36% de la población mundial en 1990, frente a menos del 10% antes de 2020. Este progreso proviene principalmente del crecimiento meteórico de China y la India."
+          "text": "Los últimos treinta años han traído aun así un retroceso espectacular de la pobreza absoluta, que afectaba al 36% de la población mundial en 1990 y a menos del 10% antes de 2020. Ese avance viene sobre todo del crecimiento deslumbrante de China y de India."
         },
         {
           "type": "paragraph",
-          "text": "Este progreso tiene un lado oculto: esto es lo que muestra el [[curva de elefante]] del economista Branko Milanovic. Las clases medias asiáticas han visto sus ingresos explotar, pero las clases trabajadoras en los países ricos se han estancado, frente a la competencia global. Por lo tanto, la reducción de las desigualdades entre países no ha evitado nuevas tensiones incluso dentro de los países ricos."
+          "text": "El avance tiene una cara oculta, y eso es lo que muestra la [[curva del elefante]] dibujada por el economista Branko Milanovic. Los ingresos explotaron para las clases medias asiáticas, mientras los ingresos de las clases populares en los países ricos se estancaban bajo la presión de la competencia mundial. Estrechar la brecha entre países no impidió tensiones nuevas dentro de los propios países ricos."
         }
       ]
     },
     {
       "id": "course_215_les_inegalites_nord_sud_p4",
-      "title": "El clima, una nueva línea divisoria",
+      "title": "El clima, la nueva línea de falla",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El futuro de las desigualdades Norte-Sur depende ahora del clima. Los países del Sur, históricamente los menos responsables de las emisiones de gases de efecto invernadero, son sin embargo los más expuestos a sequías, inundaciones y aumento del nivel del agua."
+          "text": "El futuro de la desigualdad Norte-Sur se decide ahora en el clima. Los países del Sur, históricamente los menos responsables de las emisiones de gases de efecto invernadero, son los más expuestos a sequías, inundaciones y subida del mar."
         },
         {
           "type": "paragraph",
-          "text": "Para reducir estas brechas de forma sostenible, la comunidad internacional está explorando nuevas vías:  centradas en la transición energética o la cancelación de la deuda de los países más frágiles. Mientras la riqueza de los más ricos crezca más rápido que la de los más pobres, las tensiones seguirán siendo altas. [[asistencia oficial para el desarrollo]]"
+          "text": "Para cerrar estas brechas de verdad, la comunidad internacional explora rutas nuevas: la [[ayuda oficial al desarrollo]] dirigida a la transición energética, o cancelar la deuda de los países más frágiles. Mientras la riqueza de los más ricos crezca más rápido que la de los más pobres, las tensiones seguirán altas."
         },
         {
           "type": "takeaway",
-          "text": "El 10% más rico del mundo capta más de la mitad del ingreso global, pero la pobreza extrema ha disminuido más rápido que nunca en treinta años gracias al ascenso de China y la India. El próximo gran desafío en esta división Norte-Sur será el clima."
+          "text": "El 10% más rico del mundo se lleva más de la mitad de los ingresos globales, pero la pobreza extrema ha caído más rápido en treinta años que nunca, gracias al auge de China y de India. El siguiente gran desafío de esta brecha Norte-Sur será el clima."
         }
       ]
     }

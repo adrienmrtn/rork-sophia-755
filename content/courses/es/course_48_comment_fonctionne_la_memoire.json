@@ -4,11 +4,11 @@
   "subtitle": "Cerebro",
   "subject": "sciences",
   "subcategory": "Nuestro día a día explicado",
-  "description": "La memoria no es una cámara. Cada recuerdo se reconstruye. Así es como el cerebro codifica, almacena… y a veces inventa.",
+  "description": "La memoria no es una cámara. Cada recuerdo se reconstruye. Así es cómo el cerebro codifica, guarda… y a veces inventa.",
   "hero": {
     "image": "comment_fonctionne_la_memoire",
     "ratio": "16:9",
-    "hook": "Recordar no es releer un archivo. Está reconstruyendo una escena."
+    "hook": "Acordarse no es releer un archivo. Es reconstruir una escena."
   },
   "sections": [
     {
@@ -18,87 +18,87 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A menudo imaginamos la memoria como un disco duro: grabamos, almacenamos, releemos. El cerebro no funciona así. Cada vez que lo recuerdas, **reconstruido** una escena a partir de fragmentos."
+          "text": "A menudo imaginamos la memoria como un disco duro: se graba, se guarda, se vuelve a leer. El cerebro no funciona así. Cada vez que te acuerdas, **reconstruyes** una escena a partir de fragmentos."
         },
         {
           "type": "paragraph",
-          "text": "Es poderoso... y falible. Comprender esto significa comprender por qué olvidamos, por qué cometemos errores y por qué aprendemos."
+          "text": "Es potente… y falible. Entender eso es entender por qué olvidamos, por qué nos equivocamos y por qué aprendemos."
         }
       ]
     },
     {
       "id": "course_48_comment_fonctionne_la_memoire_p1",
-      "title": "Varios recuerdos, no solo uno.",
+      "title": "Varias memorias, no una sola",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "human_brain_anatomy",
           "ratio": "4:3",
-          "caption": "Diferentes áreas del cerebro manejan diferentes formas de memoria."
+          "caption": "Distintas zonas del cerebro gestionan distintas formas de memoria"
         },
         {
           "type": "paragraph",
-          "text": "Primero está el [[La memoria de trabajo]]: lo que tienes “en mente” durante unos segundos, como un número de teléfono. Es limitado, alrededor de **7 elementos** en promedio. Luego, **memoria a largo plazo**: hechos, recuerdos de acontecimientos, habilidades como andar en bicicleta."
+          "text": "Está primero la [[memoria de trabajo]]: lo que tienes “en la cabeza” unos segundos, como un número de teléfono. Es limitada, unos **7 elementos** de media. Luego, la **memoria a largo plazo**: hechos, recuerdos de acontecimientos, saberes como montar en bici."
         },
         {
           "type": "paragraph",
-          "text": "No todos estos sistemas viven en el mismo lugar del cerebro. La corteza prefrontal****, la parte frontal del cerebro fuera del frente, ayuda mucho con la memoria de trabajo. Otras regiones, como la**neocortex**, la capa externa del cerebro, almacenan a largo plazo."
+          "text": "Esos sistemas no viven todos en el mismo sitio del cerebro. La **corteza prefrontal**, la parte de delante del cerebro detrás de la frente, ayuda mucho a la memoria de trabajo. Otras regiones, como el **neocórtex**, la capa externa del cerebro, guardan el largo plazo."
         }
       ]
     },
     {
       "id": "course_48_comment_fonctionne_la_memoire_p2",
-      "title": "Cómo se arregla un recuerdo",
+      "title": "Cómo se fija un recuerdo",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "hippocampus_brain_anatomy_scan",
           "ratio": "4:3",
-          "caption": "El hipocampo, una estructura profunda, ayuda a formar nuevos recuerdos."
+          "caption": "El hipocampo, una estructura profunda, ayuda a formar recuerdos nuevos"
         },
         {
           "type": "paragraph",
-          "text": "Para que la información pase de frágil a duradera, el cerebro debe fortalecer las conexiones entre **neuronas**, las células nerviosas. Estamos hablando de **consolidación**, la transformación de un recuerdo reciente en una huella duradera. Una pequeña estructura llamada **caballito de mar**, con forma de caballito de mar en el lóbulo temporal, desempeña un papel clave en los recuerdos de los acontecimientos."
+          "text": "Para que una información pase de frágil a duradera, el cerebro tiene que reforzar las conexiones entre **neuronas**, las células nerviosas. Se habla de **consolidación**, la transformación de un recuerdo reciente en una huella duradera. Una pequeña estructura llamada **hipocampo**, en forma de caballito de mar en el lóbulo temporal, juega un papel clave para los recuerdos de acontecimientos."
         },
         {
           "type": "funFact",
-          "text": "El sueño, especialmente en determinadas fases, ayuda a consolidar lo aprendido durante el día. Repasar y luego dormir suele funcionar mejor que repasar hasta las 3 a.m."
+          "text": "El sueño, sobre todo ciertas fases, ayuda a consolidar lo que se ha aprendido en el día. Repasar y luego dormir suele funcionar mejor que repasar hasta las 3 de la mañana."
         },
         {
           "type": "paragraph",
-          "text": "Una regla famosa, vinculada al investigador de **Donald Hebb**: las neuronas que se activan juntas tienden a conectarse más fuerte. En resumen: “lo que ilumina junta”. Este es el principio de **neuroplasticidad**, la capacidad del cerebro para modificar sus conexiones."
+          "text": "Una regla famosa, ligada al investigador **Donald Hebb**: las neuronas que se activan juntas tienden a conectarse más fuerte. En resumen: “lo que se enciende junto se liga junto”. Es el principio de la **neuroplasticidad**, la capacidad del cerebro de modificar sus conexiones."
         }
       ]
     },
     {
       "id": "course_48_comment_fonctionne_la_memoire_p3",
-      "title": "Recordar es modificar",
+      "title": "Acordarse es modificar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cuando recuerdas un recuerdo, se vuelve temporalmente **maleable**, editable. Los detalles del presente pueden colarse. Luego el cerebro los almacena nuevamente. Por eso dos testigos de un mismo accidente pueden contar versiones diferentes."
+          "text": "Cuando recuperas un recuerdo, se vuelve temporalmente **maleable**, modificable. Detalles del presente pueden colarse. Luego el cerebro lo guarda otra vez. Por eso dos testigos de un mismo accidente pueden contar versiones distintas."
         },
         {
           "type": "paragraph",
-          "text": "Incluso podemos crear **falsos recuerdos**: escenas que creemos que son ciertas, pero que nunca sucedieron, o no así. El cerebro llena los vacíos con lo que ya sabe."
+          "text": "Incluso se pueden crear **falsos recuerdos**: escenas que creemos verdaderas, pero que nunca ocurrieron, o no así. El cerebro rellena los huecos con lo que ya conoce."
         }
       ]
     },
     {
       "id": "course_48_comment_fonctionne_la_memoire_p4",
-      "title": "Olvidar no siempre es un fracaso",
+      "title": "Olvidar no es siempre un fracaso",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Si recordaras cada detalle innecesario, estarías saturado. Olvidar nos ayuda a generalizar, a decidir, a quedarnos con lo esencial. Una buena memoria clasifica tanto como retiene."
+          "text": "Si recordaras cada detalle inútil, estarías saturado. El olvido ayuda a generalizar, a decidir, a quedarse con lo esencial. Una buena memoria clasifica tanto como conserva."
         },
         {
           "type": "takeaway",
-          "text": "La memoria es una reconstrucción activa, no una grabación perfecta. Se basa en varios sistemas, se consolida especialmente durante el sueño y puede distorsionarse con cada recordatorio."
+          "text": "La memoria es una reconstrucción activa, no una grabación perfecta. Se apoya en varios sistemas, se consolida sobre todo durante el sueño y puede deformarse en cada recuerdo."
         }
       ]
     }

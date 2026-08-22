@@ -4,11 +4,11 @@
   "subtitle": "Fallas y ondas",
   "subject": "sciences",
   "subcategory": "La Tierra y el Universo",
-  "description": "Cada año, la Tierra experimenta cientos de miles de terremotos. La mayoría son invisibles. Algunos cambian ciudades enteras.",
+  "description": "Cada año, la Tierra registra cientos de miles de seísmos. La mayoría son invisibles. Algunos cambian ciudades enteras.",
   "hero": {
     "image": "comment_se_forment_les_tremblements_de_terre",
     "ratio": "16:9",
-    "hook": "Un terremoto no es un capricho de la tierra. Esta es una energía que ha esperado demasiado."
+    "hook": "Un seísmo no es un capricho del suelo. Es una energía que ha esperado demasiado tiempo."
   },
   "sections": [
     {
@@ -18,97 +18,97 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cada año, la Tierra registra aproximadamente **500.000 motos de cross detectables**. Sólo una pequeña parte causa grandes daños. Un terremoto no es una coincidencia: es el final repentino de una larga acumulación de energía en las rocas."
+          "text": "Cada año, la Tierra registra unos **500.000 seísmos** detectables. Solo una parte pequeña causa grandes daños. Un terremoto no es un azar: es el final brusco de una larga acumulación de energía en las rocas."
         },
         {
           "type": "paragraph",
-          "text": "Para entender esto, debemos ver la superficie del planeta como un rompecabezas de placas en movimiento. Cuando estas placas rozan, la tensión aumenta... hasta que se rompe."
+          "text": "Para comprenderlo hay que ver la superficie del planeta como un puzle de placas en movimiento. Allí donde esas placas se frotan, la tensión sube… hasta que se rompe."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p1",
-      "title": "Placas que se mueven constantemente",
+      "title": "Unas placas que se mueven sin cesar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La superficie terrestre está dividida en unas diez grandes placas tectónicas ****. Si pierdes un pelaje más suave, es. ¿Qué tan rápido? Aproximadamente**1 a 10 cm por año**, aproximadamente lo mismo que el crecimiento de una uña. [[Astenosfera]]"
+          "text": "La superficie terrestre está cortada en una decena de grandes **placas tectónicas**. Se deslizan sobre una capa más blanda del manto, la [[astenosfera]]. ¿Su velocidad? Unos **1 a 10 cm por año**, más o menos como crece una uña."
         },
         {
           "type": "image",
           "asset": "earthquake_collapsed_buildings_urban",
           "ratio": "auto",
-          "caption": "Los terremotos liberan repentinamente la energía acumulada a lo largo de las fallas."
+          "caption": "Los seísmos liberan de un golpe la energía acumulada a lo largo de las fallas"
         },
         {
           "type": "paragraph",
-          "text": "En las fronteras dominan tres escenarios. Las placas se están separando (cordilleras oceánicas). Chocan: a veces uno se sumerge debajo del otro, es . O se deslizan uno al lado del otro, como a lo largo de la [[La subducción]] en California, de aproximadamente **1.300 kilómetros** de longitud. [[La falla de San Andrés]]"
+          "text": "En las fronteras, dominan tres escenarios. Las placas se apartan (dorsales oceánicas). Se golpean: a veces una se hunde bajo la otra, es [[La subducción]]. O se deslizan lado a lado, como a lo largo de [[La falla de San Andrés]] en California, de unos **1.300 km** de largo."
         },
         {
           "type": "funFact",
-          "text": "A lo largo del San Andreas, Los Ángeles se acerca a San Francisco unos **6 cm** al año. En **15 millones de años**, las dos ciudades serían vecinas."
+          "text": "A lo largo de San Andrés, Los Ángeles se acerca a San Francisco unos **6 cm** por año. En **15 millones de años**, las dos ciudades serían vecinas."
         },
         {
           "type": "paragraph",
-          "text": "Es especialmente en estas fronteras donde ocurren los terremotos. El movimiento de las placas se ve obstaculizado por la fricción de las rocas. La energía se acumula silenciosamente."
+          "text": "Es sobre todo en esas fronteras donde nacen los seísmos. El movimiento de las placas lo frena el roce de las rocas. La energía se acumula en silencio."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p2",
-      "title": "Cuando la culpa se suelta",
+      "title": "Cuando la falla suelta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un terremoto ocurre a lo largo de una **falla**: una fractura entre dos bloques de roca. En teoría, las placas deberían deslizarse continuamente. En la práctica, la fricción bloquea a menudo este deslizamiento."
+          "text": "Un seísmo se produce a lo largo de una **falla**: una fractura entre dos bloques de roca. En teoría, las placas deberían deslizarse sin parar. En la práctica, el roce bloquea a menudo ese deslizamiento."
         },
         {
           "type": "paragraph",
-          "text": "Durante este tiempo, las placas siguen creciendo. La roca se deforma un poco, como si se tensara un arco. Hablamos de restricciones elásticas. Esto puede durar décadas, a veces siglos."
+          "text": "Mientras tanto, las placas siguen empujando. La roca se deforma un poco, como un arco que se tensa. Se habla de tensiones elásticas. Puede durar décadas, a veces siglos."
         },
         {
           "type": "paragraph",
-          "text": "Cuando se excede el límite de resistencia, los bloques se deslizan repentinamente. La energía sale en forma de **ondas sísmicas**. El punto de ruptura de profundidad se llama **enfocar**. En la superficie, el punto justo encima es el **epicentro**, donde los efectos suelen ser más fuertes."
+          "text": "Cuando se supera el límite de resistencia, los bloques se deslizan de un golpe. La energía parte en forma de **ondas sísmicas**. El punto de ruptura en profundidad se llama el **foco**. En la superficie, el punto situado justo encima es el **epicentro**, allí donde los efectos son a menudo los más fuertes."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p3",
-      "title": "Midiendo el poder, temiendo el tsunami",
+      "title": "Medir la potencia, temer el tsunami",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Para medir la energía de un terremoto, los sismólogos utilizan principalmente el momento . Es una escala logarítmica: cada grado multiplica la energía por aproximadamente **32**. Por lo tanto, un terremoto de magnitud **8** libera aproximadamente **1.000 veces** más energía que un terremoto de magnitud **6**. [[La escala de magnitud (Richter/Momento)]]"
+          "text": "Para medir la energía de un seísmo, los sismólogos usan sobre todo la [[escala de magnitud]] de momento. Es una escala logarítmica: cada grado multiplica la energía por unos **32**. Un seísmo de magnitud **8** libera por tanto unas **1.000 veces** más energía que un seísmo de magnitud **6**."
         },
         {
           "type": "funFact",
-          "text": "También hay terremotos de **0** o magnitud negativa. Se trata de eventos muy pequeños, visibles sólo con sensores muy sensibles."
+          "text": "También existen seísmos de magnitud **0** o negativa. Son acontecimientos muy pequeños, visibles solo con sensores muy sensibles."
         },
         {
           "type": "paragraph",
-          "text": "El más fuerte jamás medido con instrumentos modernos es el de **Valdivia**, en Chile, en **1960**: magnitud **9.5**. Si el foco está debajo del océano y eleva el fondo marino, la columna de agua desplazada puede crear un **tsunami**. En **2004**, un terremoto de magnitud **9,1** cerca de Sumatra desencadenó un tsunami que azotó 14 países y se cobró aproximadamente **227.000** vidas."
+          "text": "El más fuerte jamás medido con instrumentos modernos es el de **Valdivia**, en Chile, en **1960**: magnitud **9,5**. Si el foco está bajo el océano y levanta el fondo marino, la columna de agua desplazada puede crear un **tsunami**. En **2004**, un seísmo de magnitud **9,1** cerca de Sumatra disparó un tsunami que golpeó 14 países y causó unas **227.000** víctimas."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p4",
-      "title": "Olas, alerta y edificios que resisten",
+      "title": "Ondas, alerta y edificios que resisten",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tras la ruptura, salen varios tipos de ondas. Las **ondas p** (primarias) llegan primero: comprimen la roca como un acordeón. Luego vienen las ondas **ZZ** (secundarias), más lentas y a menudo más destructivas. Las ondas superficiales hacen que el suelo oscile de forma muy visible."
+          "text": "Tras la ruptura, parten varios tipos de ondas. Las **ondas P** (primarias) llegan primero: comprimen la roca como un acordeón. Luego vienen las **ondas S** (secundarias), más lentas y a menudo más destructoras. Las ondas de superficie hacen oscilar después el suelo de forma muy visible."
         },
         {
           "type": "paragraph",
-          "text": "Todavía no sabemos cómo predecir el día exacto de un gran terremoto. Por otro lado, mapeamos las zonas de riesgo.  diseña edificios capaces de resistir impactos: cimientos móviles, amortiguadores gigantes, estructuras que absorben energía. En Japón, las alertas tempranas detectan ondas P y pueden cortar el suministro de combustible o reducir la velocidad de los trenes antes de que lleguen las ondas más peligrosas. [[Ingeniería sísmica]]"
+          "text": "Aún no se sabe predecir el día exacto de un gran seísmo. En cambio, se cartografían las zonas de riesgo. La [[Ingeniería sismorresistente]] concibe edificios capaces de aguantar las sacudidas: cimientos móviles, amortiguadores gigantes, estructuras que absorben la energía. En Japón, unas alertas tempranas detectan las ondas P y pueden cortar el gas o frenar los trenes antes de que lleguen las ondas más peligrosas."
         },
         {
           "type": "takeaway",
-          "text": "Un terremoto ocurre cuando las rocas atrapadas a lo largo de una falla liberan repentinamente décadas de tensión. La energía viaja en ondas y cada grado de magnitud multiplica esa energía por aproximadamente **32**."
+          "text": "Un seísmo nace cuando unas rocas bloqueadas a lo largo de una falla liberan de un golpe décadas de tensión. La energía viaja en ondas, y cada grado de magnitud multiplica esa energía por unos **32**."
         }
       ]
     }

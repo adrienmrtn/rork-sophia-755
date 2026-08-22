@@ -4,11 +4,11 @@
   "subtitle": "Océanos",
   "subject": "sciences",
   "subcategory": "Nuestro día a día explicado",
-  "description": "Un litro de agua de mar contiene aproximadamente 35 gramos de sal. Esta sal se ha acumulado durante miles de millones de años. De aquí viene.",
+  "description": "Un litro de agua de mar contiene unos 35 gramos de sal. Esa sal se ha acumulado durante miles de millones de años. Aquí está de dónde viene.",
   "hero": {
     "image": "pourquoi_l_eau_de_mer_est_salee",
     "ratio": "16:9",
-    "hook": "Los ríos son suaves. Los océanos son salados. El secreto es el tiempo y la evaporación."
+    "hook": "Los ríos son dulces. Los océanos son salados. El secreto es el tiempo y la evaporación."
   },
   "sections": [
     {
@@ -18,66 +18,66 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Los océanos cubren más del **70%** del planeta. De media, un litro de agua de mar contiene aproximadamente **35 gramos de sal**. Esto no es una coincidencia: es el resultado de un proceso muy largo."
+          "text": "Los océanos cubren más del **70%** del planeta. De media, un litro de agua de mar contiene unos **35 gramos de sal**. No es un azar: es el resultado de un proceso muy largo."
         },
         {
           "type": "paragraph",
-          "text": "La sal no “cae” del cielo ya preparada. Viaja desde los continentes y luego queda atrapado en el océano."
+          "text": "La sal no “cae” del cielo ya hecha. Viaja desde los continentes, y luego queda atrapada en el océano."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
-      "title": "La sal viene primero de la tierra.",
+      "title": "La sal viene primero de la tierra",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La lluvia, al pasar por el aire, recoge un poco de dióxido de carbono. Se vuelve ligeramente ácido. Al caer sobre las rocas, las ataca suavemente: esto es **erosión química**."
+          "text": "La lluvia, al atravesar el aire, se carga un poco de gas carbónico. Se vuelve ligeramente ácida. Al caer sobre las rocas, las ataca con suavidad: es la **erosión química**."
         },
         {
           "type": "image",
           "asset": "ocean_sea_salt_evaporation",
           "ratio": "auto",
-          "caption": "Marismas: la evaporación concentra la sal disuelta en el agua de mar."
+          "caption": "Salinas: la evaporación concentra la sal disuelta en el agua de mar"
         },
         {
           "type": "paragraph",
-          "text": "Luego, los ríos transportan minerales disueltos, especialmente **sodio** y **cloro**, los dos ingredientes de la sal de mesa. Los arrojan al mar."
+          "text": "Los ríos se llevan entonces minerales disueltos, sobre todo **sodio** y **cloro**, los dos ingredientes de la sal de mesa. Los vierten en el mar."
         },
         {
           "type": "funFact",
-          "text": "Los volcanes submarinos y las fuentes termales en el fondo del océano también añaden sales. Pero la mayor parte todavía procede de los continentes."
+          "text": "Los volcanes submarinos y las fuentes calientes del fondo de los océanos añaden también sales. Pero lo esencial sigue viniendo de los continentes."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
-      "title": "¿Por qué los ríos no son salados?",
+      "title": "Por qué los ríos no son salados",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Buena pregunta: si los ríos traen sal, ¿por qué el agua del Ródano o del Sena no es salada? Porque allí la sal está muy diluida, y porque el agua de los ríos se renueva constantemente."
+          "text": "Buena pregunta: si los ríos aportan sal, ¿por qué el agua del Ródano o del Sena no es salada? Porque la sal está muy diluida, y porque el agua de los ríos se renueva sin cesar."
         },
         {
           "type": "paragraph",
-          "text": "En el océano es diferente. Bajo el Sol, el agua **evaporado** y regresa al cielo. La sal, **, queda**. Año tras año, siglo tras siglo, se acumula. Lo llamamos . [[Ciclo hidrológico y acumulación de sales]]"
+          "text": "En el océano es distinto. Bajo el Sol, el agua se **evapora** y vuelve al cielo. La sal, ella, **se queda**. Año tras año, siglo tras siglo, se acumula. A eso se le llama el [[ciclo hidrológico y la acumulación de sales]]."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
-      "title": "La sal también circula por los océanos.",
+      "title": "La sal también hace circular los océanos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El agua salada es más **denso** (“más pesada” para el mismo volumen) que el agua dulce. En los polos, cuando el agua superficial se congela, parte de la sal se libera en el agua líquida circundante. Esta agua se vuelve aún más densa y se hunde hasta el fondo."
+          "text": "El agua salada es más **densa** (más “pesada” para el mismo volumen) que el agua dulce. En los polos, cuando el agua de superficie se hiela, la sal se rechaza en parte al agua líquida de alrededor. Esa agua se vuelve aún más densa y se hunde hacia el fondo."
         },
         {
           "type": "paragraph",
-          "text": "Este movimiento ayuda a impulsar grandes corrientes oceánicas. Estas corrientes transportan calor y nutrientes por todo el mundo. La sal no es sólo una cuestión de gusto: es parte del motor climático del planeta."
+          "text": "Ese movimiento ayuda a arrastrar grandes corrientes oceánicas. Esas corrientes transportan calor y nutrientes alrededor del globo. La sal no es solo un asunto de sabor: forma parte del motor climático del planeta."
         }
       ]
     },
@@ -88,11 +88,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La salinidad no es la misma en todas partes. Cerca del ecuador, una fuerte evaporación puede concentrar la sal. Cerca de grandes ríos o témpanos de hielo que se derriten, el agua es más blanda. El Mar Muerto es un caso extremo: sale muy poca agua, queda mucha sal."
+          "text": "La salinidad no es la misma en todas partes. Cerca del ecuador, la evaporación fuerte puede concentrar la sal. Cerca de los grandes ríos o de los hielos que se funden, el agua es más dulce. El mar Muerto es un caso extremo: sale muy poca agua, queda mucha sal."
         },
         {
           "type": "takeaway",
-          "text": "El agua de mar es salada porque los ríos traen minerales de los continentes y la evaporación deja la sal en el océano. Esta acumulación se ha producido durante miles de millones de años."
+          "text": "El agua de mar es salada porque los ríos aportan minerales desde los continentes, y porque la evaporación deja la sal en el océano. Esta acumulación dura desde hace miles de millones de años."
         }
       ]
     }

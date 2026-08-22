@@ -1,14 +1,14 @@
 {
   "id": "course_184_romulus_et_remus_la_fondation_de_rome",
   "title": "Rómulo y Remo: la fundación de Roma",
-  "subtitle": "mitología romana",
+  "subtitle": "Mitología romana",
   "subject": "mythologie",
   "subcategory": "Otras mitologías",
-  "description": "Amamantado por una loba, fundadores de Roma… y fratricidas. Un mito que antepone la ley y los límites a la sangre.",
+  "description": "Amamantados por una loba, fundadores de Roma y asesinos de un hermano. Un mito que pone la ley y el límite sagrado por encima de la sangre.",
   "hero": {
     "image": "romulus_et_remus_la_fondation_de_rome",
     "ratio": "16:9",
-    "hook": "Roma no nació de un pacto blando. Nació de una loba, de un surco sagrado... y de un hermano asesinado."
+    "hook": "Roma no nace de un pacto suave. Nace de una loba, de un surco sagrado y de un hermano asesinado."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La historia de **Rómulo** y **Remo** es el mito fundacional de Roma. Este no es un cuento para niños. Es la historia de una doble ruptura: una  que rompe su voto de castidad, luego una **fratricida** que antepone la ley a la sangre. [[vestal]]"
+          "text": "La historia de **Rómulo** y **Remo** es el mito fundador de Roma. No es un cuento para niños. Es el relato de una doble ruptura: una [[vestal]] que rompe su voto de castidad, luego un **fratricidio** que pone la ley por encima de la sangre."
         },
         {
           "type": "paragraph",
-          "text": "La tradición romana no oculta este crimen. La convierte en la base de una ciudad construida sobre la frontera sagrada y la supervivencia del Estado, más que sobre la familia."
+          "text": "La tradición romana no esconde el crimen. Lo convierte en el cimiento de una ciudad construida sobre el límite sagrado y sobre la supervivencia del Estado, más que sobre la familia."
         }
       ]
     },
@@ -33,27 +33,27 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En Alba la Larga, ciudad de los descendientes de Eneas, el usurpador **amulio** caza a su hermano Numitor. Para extinguir el linaje, obliga a su sobrina **Rea Silvia** a convertirse en vestal. Pero **Marzo**, dios de la guerra, se une a ella. Nacen gemelos."
+          "text": "En Alba Longa, la ciudad de los descendientes de Eneas, el usurpador **Amulio** expulsa a su hermano Numitor. Para cortar el linaje, obliga a su sobrina **Rea Silvia** a hacerse vestal. Pero **Marte**, dios de la guerra, se une a ella. Nacen gemelos."
         },
         {
           "type": "image",
           "asset": "mars_rhea_silvia_roman_mythology_painting",
           "ratio": "4:3",
-          "caption": "Marte y Rea Silvia: el nacimiento divino de los gemelos."
+          "caption": "Marte y Rea Silvia: el nacimiento divino de los gemelos"
         },
         {
           "type": "paragraph",
-          "text": "Amulio ordena que los ahoguen en el Tíber. El río desbordado deposita la cuna cerca del **Palatino**, bajo la higuera . A **loba** los amamanta; un pájaro carpintero, ave de Marte, les da de comer. Los crían el pastor Fáustulo y su esposa Acca Larentia. [[Ficus Ruminalis]]"
+          "text": "Amulio ordena ahogarlos en el Tíber. El río, crecido, deja la cuna cerca del **Palatino**, bajo la higuera llamada [[Ficus Ruminalis]]. Una **loba** los amamanta, y un pico, el ave de Marte, los alimenta. El pastor Fáustulo y su esposa Aca Larentia los crían."
         },
         {
           "type": "image",
           "asset": "capitoline_wolf_romulus_remus_bronze_sculpture",
           "ratio": "1:1",
-          "caption": "La loba capitolina, imagen de la Roma huérfana y depredadora."
+          "caption": "La loba capitolina, imagen de Roma huérfana y depredadora"
         },
         {
           "type": "funFact",
-          "text": "En latín, “lupa” significa loba… y prostituta. Autores antiguos ya sugerían que Acca Larentia, apodada así, era el verdadero “lobo” de la leyenda."
+          "text": "En latín, “lupa” significa loba, y también prostituta. Los autores antiguos ya sugerían que Aca Larentia, que llevaba ese apodo, era la verdadera “loba” de la leyenda."
         }
       ]
     },
@@ -64,36 +64,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De adultos, los gemelos derrocan a Amulius y restauran a Numitor. Luego quieren fundar su propia ciudad. Rómulo elige el **Palatino**; Remo, el Aventino. Para decidir, toman el [[augures]]: Remus ve seis buitres primero; A continuación, Rómulo ve doce."
+          "text": "Ya adultos, los gemelos derriban a Amulio y devuelven el trono a Numitor. Luego quieren fundar su propia ciudad. Rómulo elige el **Palatino**, Remo el Aventino. Para decidirlo consultan los [[augures]]: Remo ve primero seis buitres, luego Rómulo ve doce."
         },
         {
           "type": "image",
           "asset": "palatine_hill_rome_founding_myth",
           "ratio": "4:3",
-          "caption": "El Palatino: la colina donde Rómulo recorre Roma."
+          "caption": "El Palatino: la colina donde Rómulo traza Roma"
         },
         {
           "type": "paragraph",
-          "text": "Romulus traza el [[pomoerium]], el surco sagrado del recinto, y promete la muerte a todo aquel que lo atraviese. Remus salta desafiante. Romulus (o su lugarteniente Celer) lo mata. Roma fue fundada el 21 de abril del 753 a.C., año I del calendario . [[Ab Urbe Condita (753 a. C.)]]"
+          "text": "Rómulo traza el [[pomoerium]], el surco sagrado de la muralla, y promete la muerte a quien lo cruce. Remo lo salta por desafío. Rómulo, o su oficial Céler, lo mata. Roma se funda el **21 de abril de 753 a. C.**, año uno del calendario [[Ab Urbe Condita (753 a. C.)]]."
         },
         {
           "type": "funFact",
-          "text": "El 21 de abril sigue siendo el “Natale di Roma”. Al mediodía, el sol golpea la entrada del Panteón: un efecto que los antiguos arquitectos habrían diseñado para magnificar el poder."
+          "text": "El 21 de abril sigue siendo el “Natale di Roma”. Al mediodía el sol golpea la entrada del Panteón, un efecto que se atribuye a los arquitectos antiguos para glorificar el poder."
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p3",
-      "title": "El secuestro de los sabinos",
+      "title": "El rapto de las sabinas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Primer problema: la ciudad carece de mujeres. Romulus organiza juegos e invita a los vecinos. En plena fiesta, los romanos secuestran a las jóvenes: las **El rapto de las Sabinas**. Los **sabinos**, liderados por Titus Tatius, declaran la guerra."
+          "text": "Primer problema: la ciudad no tiene mujeres. Rómulo organiza juegos e invita a los vecinos. En plena fiesta, los romanos se llevan a las jóvenes: el **rapto de las sabinas**. Los **sabinos**, dirigidos por Tito Tacio, declaran la guerra."
         },
         {
           "type": "paragraph",
-          "text": "En el campo de batalla, las sabinas, que ya eran madres de hijos romanos, intervinieron entre padres y maridos. La guerra se detiene. Los dos pueblos se fusionan. Rómulo y Tito Tacio gobiernan juntos. Los romanos adoptaron el nombre de . Roma se convierte en una sociedad que integra al enemigo. [[Quirites]]"
+          "text": "En el campo de batalla las sabinas, ya madres de hijos romanos, se interponen entre sus padres y sus maridos. La guerra se detiene. Los dos pueblos se fusionan. Rómulo y Tito Tacio reinan juntos. Los romanos toman el nombre de [[Quirites]]. Roma se vuelve una sociedad que absorbe a su enemigo."
         }
       ]
     },
@@ -104,29 +104,29 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Después de treinta y siete años de reinado y de la creación de un Senado de cien \"padres\", Rómulo desapareció durante una tormenta en el Campo de Marte. La versión oficial dice que Marte lo lleva al cielo: se convierte en el dios **Quirino**. Otra versión susurra que los senadores lo asesinaron."
+          "text": "Tras treinta y siete años de reinado y la creación de un Senado de cien “padres”, Rómulo desaparece durante una tormenta en el Campo de Marte. La versión oficial dice que Marte lo llevó al cielo: se convierte en el dios **Quirino**. Otra versión susurra que los senadores lo asesinaron."
         },
         {
           "type": "paragraph",
-          "text": "La imagen de [[El lobo capitolino]] permanece: una ciudad huérfana, alimentada por el salvajismo, capaz de transformar a los marginados en amos del mundo."
+          "text": "Lo que queda es la imagen de [[La loba capitolina]]: una ciudad huérfana, alimentada por lo salvaje, capaz de convertir a los extraños en dueños del mundo."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "Mito",
-              "title": "nacimiento de gemelos",
+              "title": "Nacimiento de los gemelos",
               "detail": "Marte y Rea Silvia; la loba del Tíber."
             },
             {
-              "date": "753 a.C. d.C.",
+              "date": "753 a. C.",
               "title": "Fundación de Roma",
-              "detail": "Romulus mata a Remus y rastrea el pomoerium."
+              "detail": "Rómulo mata a Remo y traza el pomoerium."
             },
             {
-              "date": "Siguiente",
-              "title": "El rapto de las sabinas",
-              "detail": "Guerra, luego fusión de pueblos."
+              "date": "Más tarde",
+              "title": "Rapto de las sabinas",
+              "detail": "Guerra, luego fusión de los dos pueblos."
             },
             {
               "date": "+37 años",
@@ -137,7 +137,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Fundada sobre el fratricidio y el secuestro, Roma extrae de su mito una idea clara: la supervivencia del Estado y el respeto de la frontera sagrada están por encima de los lazos de sangre."
+          "text": "Fundada sobre un fratricidio y un rapto, Roma saca de su mito una idea clara: la supervivencia del Estado y el respeto del límite sagrado van antes que los lazos de sangre."
         }
       ]
     }

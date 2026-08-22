@@ -1,14 +1,14 @@
 {
   "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
-  "title": "Libertad de prensa en el mundo",
-  "subtitle": "Una ley bajo presión",
+  "title": "La libertad de prensa en el mundo",
+  "subtitle": "Un derecho bajo presión",
   "subject": "comprendreLeMonde",
   "subcategory": "Medio ambiente y futuro",
-  "description": "Menos del **10% de la población mundial** vive en un país donde la prensa es verdaderamente libre. Entre la censura estatal y la presión económica, este derecho esencial está en declive en casi todas partes.",
+  "description": "Menos del **10% de la población mundial** vive en un país donde la prensa es de verdad libre. Entre censura de Estado y presiones económicas, este derecho esencial retrocede casi en todas partes.",
   "hero": {
     "image": "la_liberte_de_la_presse_dans_le_monde",
     "ratio": "16:9",
-    "hook": "Informar a veces cuesta libertad, o incluso la vida: un viaje al corazón de un derecho frágil."
+    "hook": "Informar cuesta a veces la libertad, o incluso la vida: un viaje al corazón de un derecho frágil."
   },
   "sections": [
     {
@@ -18,103 +18,103 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**libertad de propiedad** es uno de los mejores indicadores de la salud democrática de un país. No se limita al derecho a publicar: incluye la capacidad de los ciudadanos de acceder a información verificada independientemente de los poderes vigentes. En todo el mundo, este derecho está bajo doble presión: la represión directa en los regímenes autoritarios y un debilitamiento más discreto en las propias democracias."
+          "text": "La **libertad de prensa** es uno de los mejores indicadores de la salud democrática de un país. No se limita al derecho de publicar: incluye la capacidad de los ciudadanos de acceder a una información verificada e independiente de los poderes en el cargo. En todo el mundo, este derecho sufre una doble presión: una represión directa en los regímenes autoritarios, y un debilitamiento más discreto en las propias democracias."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p1",
-      "title": "Una profesión cada vez más peligrosa",
+      "title": "Un oficio cada vez más peligroso",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cada año, la organización  publica un informe de referencia sobre los obstáculos a la profesión del periodismo en todo el mundo. [[Reporteros Sin Fronteras (RSF)]]"
+          "text": "Cada año, la organización [[Reporteros Sin Fronteras (RSF)]] publica un informe de referencia sobre los obstáculos al oficio de periodista en el mundo."
         },
         {
           "type": "image",
           "asset": "press_freedom_world_map_RSF_index",
           "ratio": "16:9",
-          "caption": "Menos del 10% de la población mundial vive en un país donde la prensa es verdaderamente libre."
+          "caption": "Menos del 10% de la población mundial vive en un país donde la prensa es de verdad libre"
         },
         {
           "type": "paragraph",
-          "text": "Los datos de 2024 son alarmantes: menos del **10%** de la población mundial vive en una zona donde la prensa trabaja sin obstáculos. Mientras países como Noruega mantienen altos estándares, grandes regiones como China, Rusia e Irán consideran que el periodismo de investigación es una forma de traición."
+          "text": "Los datos de 2024 son alarmantes: menos del **10%** de la población mundial vive en una zona donde la prensa trabaja sin trabas. Si países como Noruega mantienen estándares altos, vastas regiones como China, Rusia o Irán tratan el periodismo de investigación como una forma de traición."
         },
         {
           "type": "funFact",
-          "text": "En Turkmenistán, el Estado controla la información de manera tan estricta que prohibió la palabra “coronavirus” en los medios de comunicación al comienzo de la pandemia de 2020."
+          "text": "En Turkmenistán, el Estado controla la información con tanta rigurosidad que prohibió la palabra “coronavirus” en los medios al inicio de la pandemia de 2020."
         },
         {
           "type": "paragraph",
-          "text": "En 2023, al menos 79 periodistas perdieron la vida en el ejercicio de su profesión, a menudo como objetivo para silenciar investigaciones vergonzosas. Casi 600 periodistas son encarcelados cada año en todo el mundo."
+          "text": "En 2023, al menos 79 periodistas perdieron la vida en el ejercicio de su oficio, a menudo atacados para silenciar una investigación incómoda. Cerca de 600 periodistas están encarcelados cada año en el mundo."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p2",
-      "title": "Las democracias no son inmunes",
+      "title": "Las democracias tampoco están a salvo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Contrariamente a la creencia popular, la libertad de prensa no está garantizada para siempre en los países occidentales. Allí experimentó transformaciones más discretas, ligadas al [[concentración de medios]] y a la influencia financiera de algunos grandes grupos."
+          "text": "Al contrario de una idea extendida, la libertad de prensa no está ganada para siempre en los países occidentales. Allí sufre transformaciones más discretas, ligadas a la [[concentración de medios]] y a la influencia financiera de unos pocos grandes grupos."
         },
         {
           "type": "paragraph",
-          "text": "En Hungría,  implementó una estrategia eficaz: en lugar de prohibir los medios de la oposición, favoreció su toma de control por parte de personas cercanas al gobierno, transformando gradualmente el panorama mediático en una cámara de resonancia oficial. [[Viktor Orbán]]"
+          "text": "En Hungría, [[Viktor Orbán]] puso en marcha una estrategia eficaz: en lugar de prohibir los medios de oposición, favoreció que los compraran cercanos al gobierno, y poco a poco convirtió el paisaje mediático en una cámara de eco oficial."
         },
         {
           "type": "paragraph",
-          "text": "En Francia, el debate gira principalmente en torno a la concentración de los medios de comunicación en manos de unos pocos grandes grupos, lo que hace temer una autocensura por parte de la redacción. En otros lugares, están aumentando los procedimientos legales abusivos, llamados , para intimidar las voces críticas. [[SLAPP]]"
+          "text": "En Francia, el debate se centra sobre todo en la concentración de los medios en manos de unos pocos grandes grupos, lo que hace temer la autocensura de las redacciones. En otros sitios, las demandas abusivas llamadas [[SLAPP]] se multiplican para intimidar las voces críticas."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p3",
-      "title": "El dinero, el nuevo adversario del periodismo",
+      "title": "El dinero, nuevo adversario del periodismo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Más allá de las amenazas políticas, el periodismo enfrenta una profunda crisis económica. El modelo histórico, basado en las ventas y la publicidad individuales, se ha derrumbado con la tecnología digital, y las grandes plataformas capturan ahora la mayor parte de la publicidad online."
+          "text": "Más allá de las amenazas políticas, el periodismo enfrenta una crisis económica profunda. El modelo histórico, basado en la venta al número y en la publicidad, se derrumbó con lo digital: las grandes plataformas captan ahora lo esencial de la publicidad en línea."
         },
         {
           "type": "image",
           "asset": "newspaper_crisis_digital_transformation_journalism",
           "ratio": "4:3",
-          "caption": "El modelo económico histórico de la prensa se ha derrumbado con la tecnología digital."
+          "caption": "El modelo económico histórico de la prensa se derrumbó con lo digital"
         },
         {
           "type": "paragraph",
-          "text": "Esta caída de recursos está provocando el cierre de muchos periódicos locales, creando “desiertos de información” donde nadie supervisa la acción de los funcionarios electos locales. Frente a esto, están surgiendo nuevos modelos, financiados mediante donaciones o suscripciones directas, como Mediapart en Francia o ProPublica en Estados Unidos, que demuestran que el periodismo independiente también puede ser rentable."
+          "text": "Esa pérdida de recursos cierra muchos periódicos locales y crea “desiertos de información” donde ya nadie vigila la acción de los electos locales. Frente a eso, surgen modelos nuevos, financiados por donaciones o suscripciones directas, como Mediapart en Francia o ProPublica en Estados Unidos, que prueban que un periodismo independiente también puede ser rentable."
         },
         {
           "type": "funFact",
-          "text": "El primer periódico impreso de la historia, el “Relation”, fue lanzado en Estrasburgo en 1605 por Johann Carolus, mucho antes de la invención legal de la libertad de prensa."
+          "text": "El primer periódico impreso de la historia, la “Relation”, lo lanzó Johann Carolus en Estrasburgo en 1605, mucho antes de que existiera en la ley la libertad de prensa."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
-      "title": "Comprobando la realidad en un mundo saturado de imágenes",
+      "title": "Verificar lo real en un mundo saturado de imágenes",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La era digital ha hecho que la información sea más rápida, pero también ha abierto la puerta al . Los algoritmos de las redes sociales favorecen el contenido emocional sobre el análisis de hechos, fragmentando nuestra visión compartida del mundo. [[desinformación]]"
+          "text": "La era digital hizo la información más rápida, pero también abrió la puerta a la [[desinformación]]. Los algoritmos de las redes sociales favorecen los contenidos emocionales frente al análisis de hechos, y fragmentan nuestra visión común del mundo."
         },
         {
           "type": "paragraph",
-          "text": "Por tanto, el papel del periodista evoluciona hacia el de “verificador” de la realidad, en un flujo permanente de imágenes y datos. Las cuestiones éticas se vuelven más complejas, como en el fotoperiodismo en zonas de conflicto, donde el respeto por la dignidad humana a veces choca con la necesidad de mostrar."
+          "text": "El papel del periodista evoluciona así hacia el de un “verificador” de lo real, dentro de un flujo permanente de imágenes y de datos. Las preguntas éticas se vuelven más complejas, como en el fotoperiodismo en zona de conflicto, donde el respeto a la dignidad humana choca a veces con la necesidad de mostrar."
         },
         {
           "type": "paragraph",
-          "text": "Por lo tanto, defender la libertad de prensa requiere una mejor regulación de las principales plataformas digitales y una educación mediática fortalecida. Sin una prensa libre capaz de verificar los hechos, el debate democrático corre el riesgo de disolverse en un mundo donde todas las opiniones son iguales, independientemente de su veracidad."
+          "text": "Defender la libertad de prensa supone por tanto una mejor regulación de las grandes plataformas digitales y una educación mediática más fuerte. Sin una prensa libre capaz de verificar los hechos, el debate democrático corre el riesgo de disolverse en un mundo donde todas las opiniones valen igual, da igual su veracidad."
         },
         {
           "type": "takeaway",
-          "text": "Menos del 10% de la población mundial vive en un país donde la prensa es verdaderamente libre. Entre la represión directa, las presiones económicas y la desinformación digital, este derecho esencial a la democracia está en declive en casi todas partes."
+          "text": "Menos del 10% de la población mundial vive en un país donde la prensa es de verdad libre. Entre represión directa, presiones económicas y desinformación digital, este derecho esencial para la democracia retrocede casi en todas partes."
         }
       ]
     }

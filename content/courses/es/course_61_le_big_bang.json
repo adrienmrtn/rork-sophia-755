@@ -1,14 +1,14 @@
 {
   "id": "course_61_le_big_bang",
-  "title": "El gran estallido",
-  "subtitle": "13,8 mil millones de años",
+  "title": "El Big Bang",
+  "subtitle": "13.800 millones de años",
   "subject": "sciences",
   "subcategory": "La Tierra y el Universo",
-  "description": "Hace 13.800 millones de años, el universo comenzó a expandirse. No es una bomba en el vacío: es el espacio mismo el que está creciendo.",
+  "description": "Hace 13.800 millones de años, el universo empieza a extenderse. No es una bomba en el vacío: es el espacio mismo el que crece.",
   "hero": {
     "image": "le_big_bang",
     "ratio": "16:9",
-    "hook": "El Big Bang no es una explosión en el espacio. Es el espacio que empieza a crecer."
+    "hook": "El Big Bang no es una explosión en el espacio. Es el espacio que se pone a crecer."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Hace 13.800 millones de años**, todo lo que existe hoy estaba concentrado en un estado extremadamente denso y caliente. Los científicos a veces llaman a este comienzo : un punto donde la densidad y la temperatura son tan extremas que nuestras leyes habituales ya no son suficientes para describir la situación. [[singularidad]]"
+          "text": "Hace **13.800 millones de años**, todo lo que existe hoy estaba concentrado en un estado extremadamente denso y caliente. Los científicos llaman a veces a ese comienzo una [[singularidad]]: un punto en el que densidad y temperatura son tan extremas que nuestras leyes habituales ya no bastan para describir la situación."
         },
         {
           "type": "paragraph",
-          "text": "Entonces el universo comienza a expandirse. No es una bomba que arroja materia al vacío que ya existe. Es **espacio-tiempo**, el tejido que une el espacio y el tiempo, que crece llevándose consigo la materia. Esta historia continúa hoy."
+          "text": "Luego el universo se pone a extenderse. No es una bomba que lanza materia a un vacío ya allí. Es el **espacio-tiempo**, el tejido que une el espacio y el tiempo, el que crece y se lleva la materia consigo. Esta historia sigue hoy."
         }
       ]
     },
@@ -33,21 +33,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El nombre **“Gran explosión”** es confuso. A menudo imaginamos fuegos artificiales en medio de una habitación vacía. Pero ante este acontecimiento no hay ni lugar ni exterior. El espacio y el tiempo tal como los conocemos comienzan con él. Pregunte \"¿qué había antes?\" » se vuelve entonces muy delicado: el “antes” ya no tiene el mismo significado."
+          "text": "El nombre **“Big Bang”** presta a confusión. A menudo se imagina un fuego artificial en medio de una habitación vacía. Ahora bien, antes de ese acontecimiento no hay habitación ni afuera. El espacio y el tiempo tal como los conocemos empiezan con él. Preguntar “¿qué había antes?” se vuelve por tanto muy delicado: el “antes” ya no tiene el mismo sentido."
         },
         {
           "type": "image",
           "asset": "big_bang_universe_expansion_galaxies",
           "ratio": "auto",
-          "caption": "La expansión del Universo desde el Big Bang."
+          "caption": "La expansión del universo desde el Big Bang"
         },
         {
           "type": "funFact",
-          "text": "El término \"Big Bang\" fue acuñado en **1949** por el astrofísico británico **Fred Hoyle**, que no creía en él. Quería reírse de la idea. El apodo se quedó."
+          "text": "El término “Big Bang” lo inventó en **1949** el astrofísico británico **Fred Hoyle**, que no creía en ello. Quería burlarse de la idea. El apodo se quedó."
         },
         {
           "type": "paragraph",
-          "text": "Para imaginar la expansión, imagina puntos dibujados en un globo. Cuando inflas el globo, cada punto se aleja de los demás. Ningún punto de la superficie es \"el centro\". En el universo, la idea es un poco la misma: las **galaxias**, inmensos grupos de estrellas, se alejan unas de otras porque el espacio entre ellas se alarga."
+          "text": "Para representarse la expansión, imagina unos puntos dibujados en un globo. Cuando se infla el globo, cada punto se aleja de los otros. Ningún punto de la superficie es “el centro”. En el universo es un poco la misma idea: las **galaxias**, inmensos conjuntos de estrellas, se alejan unas de otras porque el espacio entre ellas se estira."
         }
       ]
     },
@@ -58,38 +58,38 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En **1929**, el astrónomo estadounidense **Edwin Hubble** observó que cuanto más lejos está una galaxia, más rápido se aleja. Por tanto, el universo no es fijo: está creciendo. Esta es la ley de **Hubble**, la relación entre la distancia y la velocidad de escape de las galaxias."
+          "text": "En **1929**, el astrónomo estadounidense **Edwin Hubble** observa que cuanto más lejos está una galaxia, más rápido se aleja. El universo no está, pues, fijo: crece. Es la **ley de Hubble**, la relación entre distancia y velocidad de huida de las galaxias."
         },
         {
           "type": "paragraph",
-          "text": "En **1965**, dos ingenieros, **Arno Penzias** y **Roberto Wilson**, captaron un crujido de radio procedente de todas partes. Se trata del [[El fondo cósmico de microondas (CMB)]]: una especie de eco térmico del universo joven, emitido cuando la luz pudo circular libremente por primera vez, aproximadamente **380.000 años** después del comienzo."
+          "text": "En **1965**, dos ingenieros, **Arno Penzias** y **Robert Wilson**, captan un crepitar de radio que viene de todas partes. Es el [[fondo cósmico de microondas]]: una especie de eco térmico del universo joven, emitido cuando la luz pudo circular con libertad por primera vez, unos **380.000 años** después del comienzo."
         },
         {
           "type": "funFact",
-          "text": "Una pequeña parte de la “nieve” de los viejos televisores analógicos mal sintonizados procedía de este fondo cósmico."
+          "text": "Una pequeña parte de la “nieve” de los viejos televisores analógicos mal sintonizados venía de ese fondo cósmico de microondas."
         },
         {
           "type": "paragraph",
-          "text": "Tercer pilar: las proporciones de los elementos ligeros. Los cálculos predicen que aproximadamente **75%** de hidrógeno y **25%** de helio se formaron en los primeros minutos. Las observaciones confirman estas cifras. Se trata del [[nucleosíntesis primordial]], la fábrica de los primeros núcleos atómicos en los minutos posteriores al Big Bang."
+          "text": "Tercer pilar: las proporciones de los elementos ligeros. Los cálculos prevén alrededor de un **75%** de hidrógeno y un **25%** de helio formados en los primeros minutos. Las observaciones confirman esas cifras. Es la [[nucleosíntesis primordial]], la fábrica de los primeros núcleos atómicos en los minutos que siguen al Big Bang."
         }
       ]
     },
     {
       "id": "course_61_le_big_bang_p3",
-      "title": "Un cronograma acelerado",
+      "title": "Una cronología acelerada",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Justo después del comienzo, el universo pasa por una fase de **inflación**, una expansión extremadamente rápida en una fracción de segundo. Luego, alrededor de **3 minutos**, **protones** y **neutrones**, partículas que forman los núcleos atómicos, se ensamblan en los primeros núcleos. Durante mucho tiempo, el universo permanece como una niebla opaca: la luz no viaja libremente."
+          "text": "Justo después del comienzo, el universo atraviesa una fase de **inflación**, una expansión extremadamente rápida en una fracción de segundo. Luego, hacia los **3 minutos**, **protones** y **neutrones**, partículas que componen los núcleos atómicos, se ensamblan en los primeros núcleos. Durante mucho tiempo, el universo se queda como una niebla opaca: la luz no viaja con libertad."
         },
         {
           "type": "paragraph",
-          "text": "Alrededor de **380.000 años**, los **electrones**, partículas ligeras que orbitan alrededor de los núcleos, se unen a los núcleos para formar átomos neutros. La luz se libera: es la emisión del fondo difuso. Las primeras estrellas nacieron mucho más tarde, unos **200 millones de años** después. Nuestro Sol apareció hace sólo **4.600 millones de años**, a partir de material reciclado por estrellas antiguas."
+          "text": "Hacia los **380.000 años**, los **electrones**, partículas ligeras que orbitan alrededor de los núcleos, se unen a los núcleos para formar átomos neutros. La luz se libera: es la emisión del fondo difuso. Las primeras estrellas nacen mucho más tarde, unos **200 millones de años** después. Nuestro Sol, él, aparece solo hace **4.600 millones de años**, a partir de materia reciclada por estrellas antiguas."
         },
         {
           "type": "funFact",
-          "text": "Si la historia del universo transcurriera en un año, el Big Bang tendría lugar el 1 de enero a la medianoche, y la humanidad no aparecería hasta el 31 de diciembre a las 23:52 horas. ."
+          "text": "Si la historia del universo cupiera en un año, el Big Bang tendría lugar el 1 de enero a medianoche, y la humanidad aparecería solo el **31 de diciembre a las 23:52**."
         }
       ]
     },
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Durante mucho tiempo, la gente se preguntó si la gravedad acabaría por frenar la expansión. En **1998**, la observación de los lejanos , explosiones de estrellas utilizadas como marcadores de distancia, muestra lo contrario: el . Una misteriosa **energía oscura**, una fuerza repulsiva que aleja a las galaxias, parecería alejar esta distancia, y representaría aproximadamente **68%** del contenido del universo. La materia ordinaria, aquella de la que estamos hechos, sólo produciría aproximadamente **5 %**. [[supernovas]] [[expansión acelerada del universo]]"
+          "text": "Durante mucho tiempo se preguntó si la gravedad acabaría por frenar la expansión. En **1998**, la observación de [[supernovas]] lejanas, explosiones de estrellas usadas como balizas de distancia, muestra lo inverso: la [[expansión acelerada del universo]]. Una misteriosa **energía oscura**, fuerza repulsiva que empuja a las galaxias a alejarse, parecería empujar ese alejamiento, y representaría alrededor del **68%** del contenido del universo. La materia ordinaria, aquella de la que estamos hechos, no haría más que alrededor del **5%**."
         },
         {
           "type": "paragraph",
-          "text": "Si esta aceleración continúa, el universo podría tender hacia un enfriamiento extremo, a veces apodado **gran helada**, el fin del frío. Una cosa es segura: lo que vemos es sólo una parte del todo. A medida que la luz viaja hacia nosotros, el espacio continúa estirándose."
+          "text": "Si esa aceleración continúa, el universo podría tender hacia un enfriamiento extremo, a veces apodado **Big Freeze**, el fin por el frío. Una cosa es segura: lo que vemos no es más que una porción del conjunto. Mientras la luz viaja hacia nosotros, el espacio sigue estirándose."
         },
         {
           "type": "takeaway",
-          "text": "El Big Bang, **hace 13.800 millones de años**, no es una explosión en el espacio vacío: es la expansión del espacio mismo, confirmada por el vuelo de las galaxias, el fondo cósmico de microondas y las proporciones de hidrógeno y helio."
+          "text": "El Big Bang, hace **13.800 millones de años**, no es una explosión en un espacio vacío: es la expansión del espacio mismo, confirmada por la huida de las galaxias, el fondo cósmico de microondas y las proporciones de hidrógeno y helio."
         }
       ]
     }

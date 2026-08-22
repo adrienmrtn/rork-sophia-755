@@ -1,10 +1,10 @@
 {
   "id": "course_76_pourquoi_les_feuilles_changent_elles_de",
-  "title": "¿Por qué las hojas cambian de color?",
+  "title": "¿Por qué cambian de color las hojas?",
   "subtitle": "Otoño y pigmentos",
   "subject": "sciences",
   "subcategory": "La Tierra y el Universo",
-  "description": "El otoño no inventa los colores: quita el verde que los enmascaraba. Detrás del espectáculo, una estrategia de supervivencia para pasar el invierno.",
+  "description": "El otoño no inventa los colores: quita el verde que los tapaba. Detrás del espectáculo hay una estrategia de supervivencia para pasar el invierno.",
   "hero": {
     "image": "pourquoi_les_feuilles_changent_de_couleur",
     "ratio": "16:9",
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cada otoño, los bosques cambian del verde al dorado, al cobre y al morado. Esto no es un capricho estético. Es una estrategia: el árbol recupera lo que puede antes de dejar caer sus hojas para el invierno."
+          "text": "Cada otoño, los bosques pasan del verde al oro, al cobre, al púrpura. No es un capricho estético. Es una estrategia: el árbol recupera lo que puede antes de dejar caer sus hojas para el invierno."
         },
         {
           "type": "paragraph",
-          "text": "Los colores cálidos no aparecen de la nada. A menudo ya estaban allí, escondidos bajo el verde. Comprender el otoño significa comprender una importante limpieza bioquímica."
+          "text": "Los colores cálidos no aparecen de la nada. A menudo ya estaban allí, escondidos bajo el verde. Comprender el otoño es comprender una gran limpieza bioquímica."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
-      "title": "El verde que todo lo esconde",
+      "title": "El verde que lo tapa todo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Desde la primavera hasta finales del verano, las hojas están llenas de **clorofila**, el pigmento que impulsa la fotosíntesis. Se degrada con la luz, pero el árbol lo reemplaza constantemente. Mientras domina, la hoja permanece verde."
+          "text": "De la primavera al final del verano, las hojas rebosan de **clorofila**, el pigmento que alimenta la fotosíntesis. Se degrada bajo la luz, pero el árbol la sustituye sin cesar. Mientras domina, la hoja se queda verde."
         },
         {
           "type": "image",
           "asset": "leaf_color_change_autumn_chlorophyll",
           "ratio": "auto",
-          "caption": "En otoño, la clorofila desaparece y deja al descubierto los colores de las hojas."
+          "caption": "En otoño, la clorofila desaparece y revela los colores de las hojas"
         },
         {
           "type": "paragraph",
-          "text": "Sin embargo, la hoja también contiene **carotenoides**, pigmentos amarillos y naranjas (como en las zanahorias). En verano están ahí, pero invisibles bajo el verde. En otoño, se detiene la producción de clorofila. El verde se desvanece, el amarillo y el naranja se revelan."
+          "text": "Ahora bien, la hoja también contiene **carotenoides**, pigmentos amarillos y anaranjados (como en la zanahoria). En verano están allí, pero invisibles bajo el verde. En otoño, la producción de clorofila se para. El verde se borra, el amarillo y el naranja se revelan."
         },
         {
           "type": "funFact",
-          "text": "“Clorofila” proviene del griego *cloro* (verde) y *filón* (hoja). El “carotenoide” comparte la raíz de… la zanahoria, donde se identificó por primera vez este pigmento."
+          "text": "“Clorofila” viene del griego *chloros* (verde) y *phyllon* (hoja). “Carotenoide” comparte la raíz de… la zanahoria, donde se identificó primero ese pigmento."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
-      "title": "El verdadero detonante: las noches que se hacen más largas",
+      "title": "El verdadero disparador: las noches que se alargan",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "No es principalmente el frío lo que inicia el otoño, sino la duración de las noches. Los árboles lo miden mediante sensores de luz, el . Cuando las noches se hacen más largas, llega una señal hormonal a cada hoja. [[fitocromos]]"
+          "text": "No es sobre todo el frío el que lanza el otoño, sino la duración de las noches. Los árboles la miden gracias a unos captadores de luz, los [[fitocromos]]. Cuando las noches se alargan, una señal hormonal parte hacia cada hoja."
         },
         {
           "type": "paragraph",
-          "text": "En la base del pecíolo se forma un [[La zona de separación (abcisión)]], una especie de casquete. La savia sube menos, los azúcares bajan mal. Aislada, la hoja degrada más rápidamente su clorofila. Los amarillos más estables permanecen durante algunas semanas y luego la hoja cae."
+          "text": "En la base del pecíolo se forma una [[zona de separación]], una especie de tapón. La savia sube menos, los azúcares bajan mal. Aislada, la hoja degrada su clorofila más rápido. Los amarillos más estables se quedan unas semanas, y luego la hoja cae."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
-      "title": "¿De dónde vienen los rojos brillantes?",
+      "title": "De dónde vienen los rojos vivos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El amarillo ya estaba ahí. El rojo y el morado suelen **hecho** al final de la temporada. Estos son , que se producen cuando los azúcares quedan atrapados en la hoja. [[Las antocianinas]]"
+          "text": "El amarillo ya estaba allí. El rojo y el violeta, ellos, a menudo se **fabrican** al final de la estación. Son las [[antocianinas]], producidas cuando unos azúcares se quedan atrapados en la hoja."
         },
         {
           "type": "paragraph",
-          "text": "¿Por qué invertir energía justo antes de tirar el papel? Probablemente para proteger **** durante el reciclaje. El árbol se recuperará.**azine** y otros nutrientes valiosos. Sin clorofila, el sol puede dañar los tejidos aún activos. Las antocianinas actúan como filtro solar durante el gran avance hacia las raíces."
+          "text": "¿Por qué invertir energía justo antes de tirar la hoja? Probablemente para **protegerla** durante el reciclaje. El árbol recupera el **nitrógeno** y otros nutrientes preciosos. Sin clorofila, el sol puede dañar los tejidos aún activos. Las antocianinas actúan como un filtro solar el tiempo del gran traslado hacia las raíces."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
-      "title": "Por qué algunos otoños arden más",
+      "title": "Por qué ciertos otoños arden más",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Los tintos más bellos suelen nacer de días soleados y noches frescas y sin heladas. Mucha azúcar, transformación en antocianinas. Un otoño gris y lluvioso da tonalidades más apagadas. Una helada temprana mata las hojas antes del espectáculo."
+          "text": "Los rojos más bellos nacen a menudo de días soleados y de noches frescas sin helada. Mucho azúcar, transformación en antocianinas. Un otoño gris y lluvioso da tonos más apagados. Una helada temprana mata las hojas antes del espectáculo."
         },
         {
           "type": "paragraph",
-          "text": "Al final lo único que queda son los, sustancias marrones del suelo del bosque. Algunos estudios también piensan que los colores brillantes advierten al [[taninos]]: árbol en forma, defensas fuertes, mejor ir a otro lado. [[pulgones]]"
+          "text": "Al final, apenas quedan los [[taninos]], sustancias marrones de la alfombra del bosque. Algunos estudios piensan también que los colores vivos avisan a los [[pulgones]]: árbol en forma, defensas fuertes, más vale irse a otra parte."
         },
         {
           "type": "takeaway",
-          "text": "El otoño revela los amarillos que ya están presentes cuando la clorofila desaparece y, a veces, se vuelve roja para proteger el reciclaje de nutrientes antes de la caída de las hojas."
+          "text": "El otoño revela los amarillos ya presentes cuando desaparece la clorofila, y a veces fabrica rojo para proteger el reciclaje de los nutrientes antes de la caída de las hojas."
         }
       ]
     }

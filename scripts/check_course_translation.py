@@ -10,7 +10,7 @@ untranslated number formats) plus the typography rules of that language.
 Usage:
     python scripts/check_course_translation.py --lang en
     python scripts/check_course_translation.py --lang de --verbose course_10*
-    python scripts/check_course_translation.py --lang de --json report.json
+    python scripts/check_course_translation.py --lang es --json report.json
 """
 
 from __future__ import annotations
@@ -61,6 +61,18 @@ STRANDED_SPACED_RE = re.compile(
 #: semicolon after one is evidence of a term deleted from the slot.
 STRANDED_TIGHT_RE = re.compile(r"\b(the|an)\s*([,;:.!?])(?=\s|$)|\bof\s*([,;:])(?=\s|$)", re.IGNORECASE)
 
+#: Spanish edition: articles and short prepositions left in front of a hole.
+ES_STRANDED_SPACED_RE = re.compile(
+    r"\b(el|la|los|las|un|una|de|del|por|con|para|al)"
+    r"\s+([,;:.!?])(?=\s|$)",
+    re.IGNORECASE,
+)
+ES_STRANDED_TIGHT_RE = re.compile(
+    r"\b(el|la|los|las|un|una)\s*([,;:.!?])(?=\s|$)"
+    r"|\b(de|del)\s*([,;:])(?=\s|$)",
+    re.IGNORECASE,
+)
+
 FRENCH_LEFTOVERS = re.compile(
     r"\b(les|des|une|dans|avec|sont|qui|quoi|aussi|si\u00e8cle|si\u00e8cles|"
     r"ainsi|alors|entre|leur|leurs|cette|cet|ces|tout|tous|toute|toutes|"
@@ -106,6 +118,9 @@ ABBREVIATION_TAIL_RE = re.compile(
 
 # Articles that must not precede a glossary key that already carries one.
 LEADING_ARTICLES = ("the ", "a ", "an ")
+ES_LEADING_ARTICLES = ("el ", "la ", "los ", "las ", "un ", "una ")
+#: Words that are French leftovers in English but ordinary Spanish.
+ES_LEFTOVER_EXCLUDE = frozenset({"entre", "que", "les", "une"})
 
 # "30 000" -- a French thousands separator. English wants "30,000".
 FRENCH_THOUSANDS_RE = re.compile(r"\b\d{1,3}(?: \d{3})+\b")
@@ -184,9 +199,23 @@ GERMAN_RULES = LanguageRules(
     era_hint="should be v. Chr. / n. Chr.",
 )
 
+SPANISH_RULES = LanguageRules(
+    stranded_spaced=ES_STRANDED_SPACED_RE,
+    stranded_tight=ES_STRANDED_TIGHT_RE,
+    leading_articles=ES_LEADING_ARTICLES,
+    leftover_extra_skip=ES_LEFTOVER_EXCLUDE,
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # Spanish decimals are commas
+    century_hint="should be 'siglo XV' (no French ordinal)",
+    era_hint="should be a. C. / d. C.",
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
+    "es": SPANISH_RULES,
 }
 
 
@@ -255,6 +284,7 @@ def residual_french(text: str, extra_skip: frozenset[str] = frozenset()) -> tupl
 ARTICLE_BEFORE_RE = {
     "en": re.compile(r"\b(the|a|an)$", re.IGNORECASE),
     "de": re.compile(r"\b(der|die|das|dem|den|des|ein|eine|eines|einem|einen)$", re.IGNORECASE),
+    "es": re.compile(r"\b(el|la|los|las|un|una)$", re.IGNORECASE),
 }
 
 

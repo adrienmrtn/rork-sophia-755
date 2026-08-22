@@ -1,14 +1,14 @@
 {
   "id": "course_234_la_securite_alimentaire_mondiale",
-  "title": "Seguridad alimentaria mundial",
+  "title": "La seguridad alimentaria mundial",
   "subtitle": "800 millones de personas",
   "subject": "comprendreLeMonde",
   "subcategory": "Medio ambiente y futuro",
-  "description": "La Tierra produce suficientes alimentos para todos. Entonces, ¿por qué **800 millones de personas** siguen pasando hambre?",
+  "description": "La Tierra produce comida suficiente para todo el mundo. Entonces, ¿por qué **800 millones de personas** siguen pasando hambre?",
   "hero": {
     "image": "la_securite_alimentaire_mondiale",
     "ratio": "16:9",
-    "hook": "El hambre de 800 millones de seres humanos no es un problema de comida, sino de compartir."
+    "hook": "El hambre de 800 millones de humanos no es un problema de comida, sino de reparto."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hoy en día, alrededor de **800 millones de personas** padecen hambre en el mundo, o sea una de cada diez personas. Esta cifra es tanto más extraña cuanto que la humanidad nunca ha producido tantos alimentos: estadísticamente, hay más que suficiente para comer para todos."
+          "text": "Hoy, alrededor de **800 millones de personas** pasan hambre en el mundo, una de cada diez. La cifra es aún más extraña porque la humanidad nunca ha producido tanta comida: en estadística, hay de sobra para todos."
         },
         {
           "type": "paragraph",
-          "text": "Por tanto, el hambre no es un problema de cantidad, sino de distribución. Comprender la seguridad alimentaria global significa comprender por qué la abundancia y el hambre pueden coexistir en el mismo planeta."
+          "text": "El hambre no es, por tanto, un problema de cantidad, sino de distribución. Entender la seguridad alimentaria mundial es entender por qué la abundancia y la hambruna pueden coexistir en el mismo planeta."
         }
       ]
     },
@@ -33,78 +33,78 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Según , la agencia alimentaria de las Naciones Unidas, la desnutrición crónica seguirá afectando a unos 800 millones de personas en 2024. Esta cifra global esconde realidades muy diferentes. Las zonas más afectadas se encuentran en el África subsahariana, donde más de una cuarta parte de la población carece periódicamente de alimentos, y en el sur de Asia. **[[fao]]**"
+          "text": "Según la **[[FAO (Organización de las Naciones Unidas para la Alimentación y la Agricultura)]]**, la subalimentación crónica afectaba todavía a unos 800 millones de personas en 2024. Esa cifra global esconde realidades muy distintas. Las zonas más golpeadas están en África subsahariana, donde más de un cuarto de la población carece a menudo de comida, y en el sur de Asia."
         },
         {
           "type": "image",
           "asset": "famine_sub_saharan_africa_malnutrition_child",
           "ratio": "auto",
-          "caption": "El hambre todavía afecta a cientos de millones de personas, especialmente en el África subsahariana."
+          "caption": "El hambre sigue alcanzando a cientos de millones de personas, sobre todo en África subsahariana"
         },
         {
           "type": "paragraph",
-          "text": "Hay varias formas de malestar alimentario. **desnutrición** corresponde a la falta de calorías. **Deficiencias de micronutrientes**, a menudo llamadas “hambre oculta”, afectan a 2 mil millones de personas que carecen de vitaminas o minerales esenciales, con consecuencias para el crecimiento o la salud. Finalmente, **desnutrición** sorprendentemente también incluye la obesidad: en muchos países en desarrollo, la gente está reemplazando gradualmente los productos frescos con alimentos procesados, ricos en calorías pero pobres en nutrientes."
+          "text": "Hay varias formas de apuro alimentario. La **subalimentación** es una falta de calorías. Las **carencias de micronutrientes**, a menudo llamadas “hambre oculta”, afectan a 2.000 millones de personas que carecen de vitaminas o de minerales esenciales, con consecuencias para el crecimiento o la salud. Por último, la **malnutrición** incluye también, de forma sorprendente, la obesidad: en muchos países en desarrollo, los habitantes van sustituyendo los productos frescos por alimentos procesados, ricos en calorías pero pobres en nutrientes."
         },
         {
           "type": "funFact",
-          "text": "Si redujéramos el desperdicio mundial de alimentos en sólo un 25%, en teoría podríamos alimentar a los 800 millones de personas que hoy padecen hambre."
+          "text": "Si se redujera el desperdicio alimentario mundial solo un 25%, en teoría se podría alimentar a los 800 millones de personas que hoy pasan hambre."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p2",
-      "title": "La paradoja de la abundancia y el desperdicio",
+      "title": "La paradoja de la abundancia y del desperdicio",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El mundo produce actualmente el equivalente a 2.800 kilocalorías por persona al día, más que suficiente para eliminar el hambre. Por tanto, el verdadero problema no es la escasez, sino el acceso: las poblaciones más pobres simplemente no tienen los medios para comprar alimentos cuyo precio varía constantemente en los mercados mundiales."
+          "text": "El mundo produce hoy el equivalente a 2.800 kilocalorías por persona y por día, de sobra para acabar con el hambre. El verdadero problema no es la escasez, sino el **acceso**: las poblaciones más pobres simplemente no pueden comprar alimentos cuyo precio varía sin cesar en los mercados mundiales."
         },
         {
           "type": "paragraph",
-          "text": "La otra cara de esta paradoja es **desperdiciar**. Cada año se pierde alrededor de un tercio de la producción mundial, o 1.300 millones de toneladas de alimentos. En los países pobres, las pérdidas se producen tempranamente: falta de lugares de almacenamiento, ausencia de cámaras frigoríficas, carreteras en mal estado. En los países ricos, el desperdicio se produce más tarde, durante la distribución y el consumo."
+          "text": "La otra cara de esta paradoja es el **desperdicio**. Alrededor de un tercio de la producción mundial, unos 1.300 millones de toneladas de comida, se pierde cada año. En los países pobres, las pérdidas llegan pronto: falta de almacenes, ausencia de cámaras frías, carreteras en mal estado. En los países ricos, el desperdicio ocurre más tarde, en la distribución y en el consumo."
         },
         {
           "type": "funFact",
-          "text": "Desde la década de 2010, la obesidad y las enfermedades relacionadas con la obesidad han matado cada año a más personas en todo el mundo que la desnutrición, un punto de inflexión histórico para la salud pública mundial."
+          "text": "Desde los años 2010, la obesidad y las enfermedades ligadas al sobrepeso matan cada año a más personas en el mundo que la subnutrición, un giro histórico para la salud pública mundial."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p3",
-      "title": "Cuando la comida se convierte en un arma geopolítica",
+      "title": "Cuando la comida se vuelve un arma geopolítica",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La seguridad alimentaria también es una cuestión de geopolítica. Muchos países dependen de las exportaciones de unas pocas potencias agrícolas importantes, lo que los hace muy vulnerables al más mínimo bloqueo. Ucrania y Rusia juntas representan casi el 30% de las exportaciones mundiales de trigo. Cuando este flujo se detiene, los precios se disparan en el **[[mercado de futuros]]** de Chicago, donde se negocian las cosechas futuras, y países como Egipto o el Líbano caen en una grave crisis social."
+          "text": "La seguridad alimentaria es también una cuestión de geopolítica. Muchos países dependen de las exportaciones de unas pocas potencias agrícolas, lo que los deja muy vulnerables ante el menor bloqueo. Ucrania y Rusia aseguran juntas cerca del 30% de las exportaciones mundiales de trigo. Cuando ese flujo se para, los precios se disparan en el **[[mercado de futuros]]** de Chicago, donde se negocian las cosechas futuras, y países como Egipto o el Líbano caen en una crisis social grave."
         },
         {
           "type": "paragraph",
-          "text": "Esta fragilidad también proviene de una elección hecha en los años 60: el . Esta ola de nuevas técnicas agrícolas ha aumentado considerablemente los rendimientos, pero también ha reducido la diversidad de cultivos y hecho que los agricultores dependan de los fertilizantes químicos. Como resultado, cada aumento en el precio del petróleo tiene repercusiones directas en el precio del pan. **[[La revolución verde]]**"
+          "text": "Esta fragilidad viene también de una elección hecha en los años 1960: la **[[revolución verde]]**. Esa ola de técnicas agrícolas nuevas permitió subir con fuerza los rendimientos, pero también redujo la diversidad de los cultivos y dejó a los agricultores dependientes de los abonos químicos. Resultado: cada subida del precio del petróleo se nota de inmediato en el precio del pan."
         },
         {
           "type": "paragraph",
-          "text": "El concepto de **poder para comer** se refiere precisamente al uso voluntario de las exportaciones de alimentos como medio de presión diplomática, o incluso como sanción contra un país contrario."
+          "text": "El concepto de **food power** designa justo esto: el uso voluntario de las exportaciones de comida como medio de presión diplomática, o incluso como sanción contra un país rival."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p4",
-      "title": "Alimentar a 10 mil millones de humanos sin agotar el planeta",
+      "title": "Alimentar a 10.000 millones de humanos sin agotar el planeta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Para 2050, se espera que la población mundial alcance los 10 mil millones. El cambio climático ya está amenazando los rendimientos al aumentar las sequías e inundaciones, desplazando las tierras cultivables. La agricultura intensiva también agota el suelo y las aguas subterráneas, que a veces se agotan más rápido de lo que se llenan."
+          "text": "De aquí a 2050, la población mundial debería alcanzar los 10.000 millones de habitantes. El cambio climático ya amenaza los rendimientos al multiplicar sequías e inundaciones, y al desplazar las tierras cultivables. La agricultura intensiva también agota los suelos y las capas de agua subterránea, que a veces se vacían más rápido de lo que se recargan."
         },
         {
           "type": "paragraph",
-          "text": "Una de las vías de futuro se llama : producir basándose en ciclos naturales, como el compost o la rotación de cultivos, en lugar de combatirlos con productos químicos. El desafío es garantizar, para cada ser humano, el acceso permanente a alimentos saludables, sin seguir agotando el planeta. **[[agroecología]]**"
+          "text": "Una de las pistas de futuro se llama **[[agroecología]]**: producir apoyándose en los ciclos naturales, como el compost o la rotación de cultivos, en lugar de combatirlos a golpe de productos químicos. El reto es garantizar, para cada ser humano, un acceso permanente a una comida sana, sin agotar más el planeta."
         },
         {
           "type": "takeaway",
-          "text": "La Tierra produce suficientes calorías para alimentar a todos. El hambre de 800 millones de personas proviene, por tanto, de un problema de acceso, de despilfarro y de crisis geopolíticas, agravadas por el cambio climático."
+          "text": "La Tierra produce calorías suficientes para alimentar a todo el mundo. El hambre de 800 millones de personas viene, por tanto, de un problema de acceso, de desperdicio y de crisis geopolíticas, agravado por el cambio climático."
         }
       ]
     }
