@@ -1,14 +1,14 @@
 {
   "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
-  "title": "Azték istenek és emberáldozatok",
-  "subtitle": "Vért a napért",
+  "title": "Az azték istenek és az emberi áldozatok",
+  "subtitle": "Vér a napnak",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Az aztékoknál a nap csak akkor kel fel, ha az istenek vért kapnak. Kemény, de koherens kozmológia a birodalmuk szívében.",
+  "description": "Az aztékoknál a nap csak akkor kel fel, ha az istenek vért kapnak. Kemény, de következetes kozmológia a birodalmuk közepén.",
   "hero": {
     "image": "les_dieux_azteques_et_les_sacrifices_humains",
     "ratio": "16:9",
-    "hook": "Vér nélkül megállna a nap: ekkora az aztékok kozmikus adóssága."
+    "hook": "Vér nélkül megállna a nap: ez az aztékok kozmikus adóssága."
   },
   "sections": [
     {
@@ -18,61 +18,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **aztékok** vagy Mexikó úgy gondolja, hogy az univerzum törékeny. Az isteneknek vérre van szükségük ahhoz, hogy a nap folytassa útját. Felajánlások nélkül visszatérne a káosz."
+          "text": "Az **aztékok**, vagy mexikák, úgy hiszik, hogy a világegyetem törékeny. Az isteneknek vér kell, hogy a nap továbbmenjen. Áldozat nélkül visszatérne a káosz."
         },
         {
           "type": "paragraph",
-          "text": "Ami megrémítette a spanyolokat, az világos elképzelésen alapul: az istenek és az emberek élete összefügg. Íme, hogyan működik ez a kozmológia."
+          "text": "Ami a spanyolokat elborzasztotta, tiszta ötleten áll: az istenek élete és az embereké össze van kötve. Íme, hogyan működik ez a kozmológia."
         }
       ]
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
-      "title": "Az öt nap: egy világ már négyszer meghalt",
+      "title": "Az Öt Nap: egy világ, amely már négyszer meghalt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A [[Öt Nap]] mítosza szerint már négy korszak tűnt el katasztrófaszerűen. Megtapasztaljuk az ötödik napot, a [[Nahui Ollin]] („4-mozgás”), amely az ígéretek szerint földrengésekkel végződik."
+          "text": "Az [[Öt Nap]] mítosza szerint négy korszak már katasztrófákban tűnt el. Mi az ötödik napban élünk, a [[Nahui Ollin]] („4-Mozgás”) korában, amelyet földrengések zárnak majd le."
         },
         {
           "type": "image",
           "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
           "ratio": "4:3",
-          "caption": "A Nap köve: Az azték idők egymást követő korszakokká változik."
+          "caption": "A Napköve: az azték idő egymást követő korszakokban forog"
         },
         {
           "type": "paragraph",
-          "text": "**Teotihuacán**-ben, egy szent városban a központi fennsíkon, az istenek tűzbe vetik magukat, hogy Nappal és Holddá váljanak. De a nap mozdulatlan marad. A többi isten ezután a saját vérét ajánlja fel, hogy mozgásba hozza azt. A férfiak öröklik ezt az adósságot."
+          "text": "**Teotihuacánban**, a fennsík szent városában az istenek tűzbe vetik magukat, hogy nappá és holddá váljanak. A nap azonban mozdulatlan marad. A többi isten akkor a saját vérét adja, hogy elindítsa. Az emberek ezt az adósságot öröklik."
         },
         {
           "type": "funFact",
-          "text": "Az aztékoknál az áldozat nem ingyenes kegyetlenség: isteni adósság törlesztése, a [[Az Öt Nap kozmológiája és a kozmikus adósság]]."
+          "text": "Az aztékoknál az áldozat nem ingyen kegyetlenség: isteni adósság törlesztése, [[Az Öt Nap kozmológiája és a kozmikus adósság]]."
         }
       ]
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p2",
-      "title": "A kettősségek panteonja",
+      "title": "Kettősségek panteonja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A központi isten [[Huitzilopochtli]], a háború és a déli nap istene. Minden este megküzd a sötétséggel, hogy reggel újjászülethessen. Az oldalán [[Tlaloc]] esőt ad, tehát termést, vagy éhínséget."
+          "text": "A központi isten [[Huitzilopochtli]], a háború és a déli nap istene. Minden éjjel harcol a sötétséggel, hogy reggel újjászülessen. Mellette [[Tlaloc]] adja az esőt, tehát a termést, vagy az éhínséget."
         },
         {
           "type": "image",
           "asset": "huitzilopochtli_aztec_sun_god_codex",
           "ratio": "4:3",
-          "caption": "Huitzilopochtli, harcos nap, aki táplálékot kíván."
+          "caption": "Huitzilopochtli, a harcos nap, amely táplálást követel"
         },
         {
           "type": "paragraph",
-          "text": "[[Quetzalcoatl]], a Tollas Kígyó, a tudást és a civilizációt testesíti meg. Riválisa, [[Tezcatlipoca]], a füstölgő tükör uralja az éjszakát, a sorsot és a varázslatot. A földnek magának szörnyű arca van: [[Coatlicue]], faló anyaistennő."
+          "text": "[[Quetzalcoatl]], a Tollas Kígyó, a tudást és a civilizációt testesíti meg. Riválisa, [[Tezcatlipoca]], a Füstölgő Tükör, az éjszakán, a sorson és a mágián uralkodik. Magának a földnek is rettenetes arca van: [[Coatlicue]], a falánk anyaistennő."
         },
         {
           "type": "funFact",
-          "text": "Az isteneknek felajánlott értékes vért [[chalchihuatl]]-nek, „értékes víznek” nevezik. A kinyert szívet úgy gondolják, mint egy napszikrát, amely visszatért az égre."
+          "text": "Az isteneknek adott drága vér neve [[chalchihuatl]], „drága víz”. A kitépett szívet olyan nap-szikrának gondolják, amelyet visszaadnak az égnek."
         }
       ]
     },
@@ -83,17 +83,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az áldozatok megszerzése érdekében az aztékok megszervezik a [[Xochiyaoyotl]], a „virágháborúkat”: rituális harcokat, amelyek célja nem a megölés, hanem a felajánlásra érdemes élő harcosok elfogása."
+          "text": "Hogy áldozatot szerezzenek, az aztékok megszervezik a [[Xochiyaoyotl]] rítusait, a „virágháborúkat”: szertartásos harcokat, amelyeknek nem a gyilkolás a célja, hanem élő harcosok elfogása, akik méltók az áldozatra."
         },
         {
           "type": "image",
           "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
           "ratio": "4:3",
-          "caption": "Áldozat a templom tetején: a napnak bemutatott szív."
+          "caption": "Áldozat a templom tetején: a szívet a napnak mutatják"
         },
         {
           "type": "paragraph",
-          "text": "A **Templo polgármestere** tetején Tenochtitlánban, a tóparti fővárosban egy pap késsel húzza ki a szívet a **Obszidián** éles vulkáni kőből. A gesztus nyilvános, ünnepélyes, a napnak tett szolgálatnak tekintik."
+          "text": "Tenochtitlán tavi fővárosában, a **Templo Mayor** tetején egy pap **obszidián** késsel, éles vulkáni kővel tép ki egy szívet. A gesztus nyilvános, ünnepélyes, a napnak tett szolgálatnak gondolják."
         },
         {
           "type": "timeline",
@@ -101,17 +101,17 @@
             {
               "date": "Mítosz",
               "title": "Az istenek áldozata",
-              "detail": "A nap isteni vért kap, hogy előrehaladjon."
+              "detail": "A nap isteni vért kap, hogy továbbmenjen."
             },
             {
               "date": "Birodalom",
               "title": "Virágháborúk",
-              "detail": "Harcosok elfogása felajánlásokért."
+              "detail": "Harcosokat fognak az áldozatokhoz."
             },
             {
               "date": "1519",
               "title": "Spanyol sokk",
-              "detail": "Cortés érkezik; a rendszer összeomlik."
+              "detail": "Cortés megérkezik. A rendszer összeomlik."
             }
           ]
         }
@@ -119,20 +119,20 @@
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
-      "title": "Világvége, maradandó nyomok",
+      "title": "Egy világ vége, tartós nyomok",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A spanyol krónikák néha felfújják a számokat, hogy igazolják a hódítást. De az áldozati rendszer nagyon is valóságos. A **1519**-ben **Hernán Cortés** érkezése a rituális univerzum végét jelenti."
+          "text": "A spanyol krónikák néha felfújják a számokat, hogy igazolják a hódítást. De az áldozati rendszer valós. **1519**-ben **Hernán Cortés** érkezése sietteti ennek a szertartásos világnak a végét."
         },
         {
           "type": "paragraph",
-          "text": "Az azték alakok azonban szinkretizmusban élnek: a guadalupe-i Szűz megjelenik egy oldalon, amelyet egykor egy anyaistennőhöz kapcsoltak. Megérteni ezeket az áldozatokat annyi, mint megérteni egy olyan kultúrát, amely a kozmosz fennmaradását az egyén fölé helyezi."
+          "text": "Mégis azték alakok élnek tovább a szinkretizmusban: a guadalupei Szűz olyan helyen jelenik meg, amely egykor egy anyaistennőhöz kötődött. Ezeket az áldozatokat megérteni annyi, mint megérteni egy kultúrát, amely a kozmosz túlélését az egyén fölé helyezi."
         },
         {
           "type": "takeaway",
-          "text": "Az aztékok körében emberi vér táplálta a napot. Az istenek már az életükkel fizettek: az emberek áldozatokkal törlesztik ezt az adósságot, nevezetesen a **virágháborúkkal**."
+          "text": "Az aztékoknál az emberi vér táplálja a napot. Az istenek már az életükkel fizettek: az emberek áldozattal törlesztik ezt az adósságot, főként a **virágháborúkon** át."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_150_la_nuit_etoilee_van_gogh",
-  "title": "Csillagos éjszaka, Van Gogh",
+  "title": "Csillagos éj, Van Gogh",
   "subtitle": "1889",
   "subject": "art",
   "subcategory": "Iconic works",
-  "description": "**1889**-ben, a Saint-Rémy-de-Provence-i menedékházból **Vincent Van Gogh** megfestette *A Csillagos éjszakát*. Kavarog az ég: a művészet abbahagyja a valóság másolását érzelem kifejezésére.",
+  "description": "**1889**-ben, a saint-rémy-de-provence-i elmegyógyintézetből **Vincent van Gogh** megfestette a *Csillagos éjt*. Az ég örvénylik: a művészet már nem a valóságot másolja, hanem egy érzést mond el.",
   "hero": {
     "image": "la_nuit_etoilee_van_gogh",
     "ratio": "16:9",
-    "hook": "Van Gogh egy menedékszobából olyan eget fest, amely nem hajlandó bölcs maradni."
+    "hook": "Egy intézeti szobából Van Gogh olyan eget festett, amely nem akar szelíd maradni."
   },
   "sections": [
     {
@@ -18,72 +18,72 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "*A csillagos éjszaka* (**1889**) **Vincent Van Gogh**, [[Hollandia]]-ben született festő leghíresebb festménye. A Saint-Rémy-de-Provence-i menedékházban készült, fordulópontot jelent: már nem csak azt festjük, amit látunk. Azt festjük, amit érzünk."
+          "text": "A *Csillagos éj* (**1889**) **Vincent van Gogh** leghíresebb képe, a [[Hollandia]] szülötte festőé. A saint-rémy-de-provence-i intézetben festette, és fordulatot jelölt: már nemcsak azt fested, amit látsz. Azt fested, amit érzel."
         },
         {
           "type": "paragraph",
-          "text": "Kavargó égbolt, fekete lángként ciprus, kitalált falu: az alkotás utat nyit a 20. század kifejező művészetéhez."
+          "text": "Örvénylő ég, ciprus, mint fekete láng, kitalált falu: a mű megnyitotta az utat a 20. század expresszív művészete felé."
         }
       ]
     },
     {
       "id": "course_150_la_nuit_etoilee_van_gogh_p1",
-      "title": "Saint-Rémy: teremtés a menedékházból",
+      "title": "Saint-Rémy: alkotás az intézetből",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1889. **májusban**, a [[Arles dráma Gauguinnel]] (a válság, amely a fülébe került) után Van Goghot a Saint-Rémy melletti **Saint-Paul-de-Mausole**-be internálták. Kap egy szobát, ahol festhet. Az éjszakai látvány először a szobája rácsai mögött születik meg."
+          "text": "**1889 májusában**, [[Az arles-i dráma Gauguinnel]] után (a válság, amelybe a füle egy részét veszítette), Van Gogh a **Saint-Paul-de-Mausole** intézetbe vonult, Saint-Rémy mellett. Kapott egy szobát, ahol festhetett. Az éjszakai látvány először a rácsok mögül született."
         },
         {
           "type": "image",
           "asset": "van_gogh_saint_paul_asylum_saint_remy_provence",
           "ratio": "4:3",
-          "caption": "A Saint-Rémy menedékház: a kényszer és az intenzív alkotás keretei."
+          "caption": "A saint-rémy-i intézet: kényszer kerete, és sűrű alkotásé"
         },
         {
           "type": "paragraph",
-          "text": "A vásznon keveredik a megfigyelés és a találmány. Felismerjük az Alpilles dombjait és egy nagy **ciprus**-t. De a falu nem pontos másolat. Van Gogh úgy rekonstruálja a tájat, hogy az érzelmeket szolgálja."
+          "text": "A vászon megfigyelést és kitalációt kever. Felismered az Alpilles dombjait és egy nagy **ciprust**. A falu mégsem pontos másolat. Van Gogh a tájat az érzelemhez építette újra."
         }
       ]
     },
     {
       "id": "course_150_la_nuit_etoilee_van_gogh_p2",
-      "title": "Az égbolt faragása ecsettel",
+      "title": "Az ég faragása az ecsettel",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Technikailag Van Gogh **Impasto**-t használ: a festék vastag, szinte faragatlan. Tizenegy csillag úgy forog, mint a köd. A narancssárga hold sugárzik. Az égbolt lesz az igazi karakter."
+          "text": "Technikailag Van Gogh **impasztót** használt: a festék vastag, szinte faragott. Tizenegy csillag forog, mint ködök. A narancs hold sugároz. Az ég lesz az igazi szereplő."
         },
         {
           "type": "image",
           "asset": "starry_night_cypress_tree_van_gogh_painting",
           "ratio": "4:3",
-          "caption": "A ciprus sötét lángként köti össze a földet az éggel."
+          "caption": "A ciprus a földet az éggel köti össze, sötét lángként"
         },
         {
           "type": "funFact",
-          "text": "Az égbolt nagy volutái a [[Nagy hullám Kanagawánál]] dinamikáját idézik, amely egy Van Gogh által csodált japán nyomat. Ezt az energiát kozmoszká alakítja."
+          "text": "Az ég nagy kacskaringói [[A nagy hullám Kanagawánál]] dinamikájára emlékeztetnek, arra a japán nyomatra, amelyet Van Gogh csodált. Ezt az energiát kozmosszá fordította."
         },
         {
           "type": "paragraph",
-          "text": "Ez a gesztus bejelenti a [[A művészet mint belső kifejezés]]: a vászon lelkiállapotot mond, nem időjárás-jelentést."
+          "text": "Ez a gesztus [[A művészet mint belső kifejezés]] felé mutat: a vászon lelkiállapotot mond, nem időjárás-jelentést."
         }
       ]
     },
     {
       "id": "course_150_la_nuit_etoilee_van_gogh_p3",
-      "title": "A zseni, amit senki sem vett meg",
+      "title": "A zseni, akit senki sem vett",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Van Gogh tíz év alatt közel **900 festményt** festett, de meghalt **1890 júliusában** Auvers-sur-Oise-ban, **37 éve**, szinte ismeretlen. Sógornője, **Johanna van Gogh-Bonger** mentette meg a munkát: kiállítások, eladások, bátyjának, Théónak írt levelek kiadása."
+          "text": "Van Gogh tíz év alatt közel **900 képet** festett, de **1890 júliusában** halt meg Auvers-sur-Oise-ban, **37 évesen**, szinte ismeretlenül. A sógornője, **Johanna van Gogh-Bonger** mentette meg a művet: kiállítások, eladások, a Théohoz írt levelek kiadása."
         },
         {
           "type": "paragraph",
-          "text": "*Csillagos éjszaka* kevés pénzért többször cserélt gazdát, mielőtt belépett a New York-i **MoMA**-be. A megvetett festmény ikonná válik. A [[Fauves]], a 20. század eleji heves színvilágú festők egy őst ismernek fel benne."
+          "text": "A *Csillagos éj* kevés pénzért cserélt gazdát, mielőtt a New York-i **MoMA**-ba került. A lenézett kép ikonná vált. A [[Fauves]], a 20. század elejének vad színű festői, ősüket ismerték fel benne."
         }
       ]
     },
@@ -94,7 +94,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A ciprus összeköti a földet az éggel: kapcsolat a földi élet és máshol között. Van Gogh azt írta, hogy a csillagokra nézve úgy álmodott a halálról, mint egy utazásról. A modern tanulmányok még azt is sugallják, hogy a ciprusfa közelében lévő fényes csillag a Vénusz lehet, amelyet hajnalban figyeltek meg."
+          "text": "A ciprus a talajt az éggel köti: kapocs a földi élet és a túloldal között. Van Gogh azt írta, a csillagokat nézve a halált utazásként álmodta. Mai kutatások szerint a ciprus melletti fényes csillag akár a Vénusz is lehetett, hajnalban."
         },
         {
           "type": "timeline",
@@ -102,23 +102,23 @@
             {
               "date": "1888",
               "title": "Arles-i válság",
-              "detail": "A Gauguinnal való szakítás megelőzi az internálást."
+              "detail": "A Gauguinnel való szakítás megelőzte a bevonulást."
             },
             {
               "date": "1889",
-              "title": "Csillagos éjszaka",
-              "detail": "Van Gogh Saint-Rémyből festi az eget."
+              "title": "Csillagos éj",
+              "detail": "Van Gogh Saint-Rémyből festette az eget."
             },
             {
               "date": "1890",
-              "title": "Halál Auversben",
-              "detail": "A művész 37 évesen halt meg, még mindig kevéssé ismert."
+              "title": "Halál Auvers-ban",
+              "detail": "A művész 37 évesen halt meg, még ismeretlenül."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "*Csillagos éjszaka* a szenvedést vizuális nyelvvé alakítja. Van Gogh nem másolja az éjszakát: feltalál egy belső eget, és megnyitja a kaput a modern expresszív művészet előtt."
+          "text": "A *Csillagos éj* a szenvedést vizuális nyelvvé tette. Van Gogh nem másolta az éjszakát: belső eget talált ki, és kinyitotta az ajtót a modern expresszív művészetnek."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "A 6. kihalás",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "A vadon élő állatok populációja **69%-kal csökkent 1970** óta. A Föld történetében a hatodik tömeges kihalást éljük meg, az elsőt egyetlen faj okozza: mi.",
+  "description": "A vadállatok állományai **1970 óta 69%**-kal zuhantak. A Föld történetének hatodik tömeges kihalását éljük, az elsőt, amelyet egyetlen faj okoz: mi.",
   "hero": {
     "image": "la_crise_de_la_biodiversite",
     "ratio": "16:9",
-    "hook": "Nincs aszteroida, nincs vulkán: ezúttal a tömeges kihalás emberi arca van."
+    "hook": "Nincs aszteroida, nincs vulkán: ezúttal a tömeges kihalásnak emberi arca van."
   },
   "sections": [
     {
@@ -18,113 +18,113 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A Föld már öt jelentős tömeges kihaláson ment keresztül, amelyeket aszteroidák vagy óriási vulkánkitörések okoztak. Ma már a hatodik is folyamatban van, de most először nincs természetes oka."
+          "text": "A Föld már átélt öt nagy tömeges kihalást, aszteroidáktól vagy óriási vulkánkitörésektől. Ma a hatodik tart, de először nincs természetes oka."
         },
         {
           "type": "paragraph",
-          "text": "A fajok eltűnnek ma **100-1000-szer gyorsabban**, mint a természetes sebesség, és a bűnös egyetlen faj: a miénk. Ez a kurzus elmagyarázza a probléma nagyságát, okait és azt, hogy miért érint közvetlenül bennünket."
+          "text": "A fajok ma **100-1.000-szer gyorsabban** tűnnek el, mint a természetes ütem, és a felelős egyetlen faj: a miénk. Ez a kurzus a baj méretét, az okait, és azt mutatja meg, miért érint téged közvetlenül."
         }
       ]
     },
     {
       "id": "course_222_la_crise_de_la_biodiversite_p1",
-      "title": "Mért összeomlás, ábráról ábrára",
+      "title": "Mért összeomlás, számról számra",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A természet állapotának nyomon követésére a tudósok a **Élő Bolygó Index** használják, amelyet a [[WWF]] szervezet évente tesz közzé. A 2022-re vonatkozó megfigyelés éles: 1970 és 2018 között a vadon élő állatok (emlősök, madarak, halak, hüllők, kétéltűek) populációi átlagosan **69%-kal** csökkentek világszerte."
+          "text": "A természet állapotát a tudósok az **Élő Bolygó Indexszel** követik, amelyet a [[WWF]] ad ki minden évben. A 2022-es kép durva: 1970 és 2018 között a vadállatok (emlősök, madarak, halak, hüllők, kétéltűek) állományai világszerte átlag **69%**-kal zuhantak."
         },
         {
           "type": "paragraph",
-          "text": "Ez a csökkenés elsősorban a trópusi régiókat érinti, ahol a legtöbb faj él. Latin-Amerikában eléri a 94%-ot. Ez nem azt jelenti, hogy a fajok 94%-a eltűnt, hanem azt, hogy populációik lecsökkent, ami nagyon törékennyé teszi őket a teljes kihalás előtt."
+          "text": "A zuhanás főleg a trópusokat érinti, ahol a legtöbb faj él. Latin-Amerikában 94%. Ez nem azt jelenti, hogy a fajok 94%-a eltűnt, hanem hogy az állományaik olvadtak. Ettől nagyon törékenyek egy teljes kihalással szemben."
         },
         {
           "type": "image",
           "asset": "amazon_deforestation_rainforest_aerial",
           "ratio": "16:9",
-          "caption": "Az Amazonas erdőirtásai tönkreteszik a bolygó egyik leggazdagabb élettárát."
+          "caption": "Az amazóniai erdőirtás a bolygó egyik leggazdagabb életkészletét pusztítja"
         },
         {
           "type": "funFact",
-          "text": "Ha a Föld története 24 óráig tart, az emberek 23:58-kor jelentek volna meg. Mindössze két másodpercbe telt, hogy kiváltsák a tömeges kihalást."
+          "text": "Ha a Föld története 24 óra lenne, az ember 23:58-kor jelent meg. Két másodperc elég volt egy tömeges kihalás elindításához."
         },
         {
           "type": "paragraph",
-          "text": "A [[IPBES]] szerint jelenleg körülbelül egymillió állat- és növényfajt fenyeget a kihalás, esetenként a következő évtizedekben."
+          "text": "Az [[IPBES]] szerint ma nagyjából egymillió állat- és növényfajt fenyeget az eltűnés, néha a következő évtizedekben."
         }
       ]
     },
     {
       "id": "course_222_la_crise_de_la_biodiversite_p2",
-      "title": "Öt ok, egy eredet",
+      "title": "Öt ok, egyetlen forrás",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ez a katasztrófa nem véletlen: közvetlenül a mi előállításunkból és fogyasztásunkból fakad. A tudósok öt fő okot azonosítanak. Az első és legpusztítóbb a földhasználat megváltozása: az állattenyésztés miatti erdőirtás, az urbanizáció, az intenzív mezőgazdaság, amely a természetes élőhelyeket olyan apró darabokra vágja, amelyek túlságosan elszigeteltek ahhoz, hogy túléljék."
+          "text": "Ez a katasztrófa nem véletlen. Közvetlenül a termelésünkből és a fogyasztásunkból jön. A tudósok öt fő okot látnak. Az első és a legpusztítóbb a földhasználat változása: erdőirtás a legeltetésért, urbanizáció, intenzív mezőgazdaság, amely az élőhelyeket túl kicsi, elszigetelt darabokra vágja."
         },
         {
           "type": "paragraph",
-          "text": "Aztán jön a túlzott kizsákmányolás (túlhalászás, illegális vadászat) és a környezetszennyezés: növényvédő szerek, műtrágyák, amelyek holt zónákat hoznak létre az óceánokban, mikroműanyagok, amelyek az egész táplálékláncban megtalálhatók."
+          "text": "Aztán jön a túlhasználat (túlhalászat, illegális vadászat) és a szennyezés: növényvédők, műtrágyák, amelyek holt zónákat hoznak létre a tengerekben, mikroműanyagok, amelyek az egész táplálékláncban megjelennek."
         },
         {
           "type": "image",
           "asset": "plastic_pollution_ocean_wildlife",
           "ratio": "4:3",
-          "caption": "A mikroműanyagok ma már a tengeri tápláléklánc minden szintjét szennyezik."
+          "caption": "A mikroműanyagok ma a tengeri tápláléklánc minden szintjét szennyezik"
         },
         {
           "type": "paragraph",
-          "text": "Az utolsó két hajtóerő a máshonnan származó, gyakran tévesen a globális kereskedelem által szállított fajok, amelyek átveszik a helyi fajok helyét, és az éghajlatváltozás, amely gyorsabban változtatja a hőmérsékletet, mint ahogy a fajok alkalmazkodni tudnak."
+          "text": "Az utolsó két motor a máshonnan jött fajok, gyakran véletlenül a világkereskedelemben, amelyek kiszorítják a helyieket, és a klímaváltozás, amely gyorsabban billenti a hőmérsékletet, mint ahogy a fajok alkalmazkodni tudnának."
         }
       ]
     },
     {
       "id": "course_222_la_crise_de_la_biodiversite_p3",
-      "title": "Miért nem szabad a természet?",
+      "title": "Miért nem ingyen a természet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A biodiverzitás nem csak esztétikai kérdés. A természet alapvető [[Ökoszisztéma szolgáltatások]], gyakran láthatatlanok, mert ingyenesek. A [[Dasgupta Review]] jelentés olyasmire emlékeztet, amit túl gyakran elfelejtenek: gazdaságunk a természettől függ, nem pedig fordítva."
+          "text": "A biodiverzitás nem csak esztétika. A természet létfontosságú [[ökoszisztéma-szolgáltatások]] sorát adja, gyakran láthatatlanul, mert ingyenesek. A [[Dasgupta Review]] jelentés egy túl gyakran elfeledett evidenciát ismétel: a gazdaságunk a természettől függ, nem fordítva."
         },
         {
           "type": "image",
           "asset": "bee_flower_pollination_agriculture",
           "ratio": "4:3",
-          "caption": "A világ élelmiszernövényeinek körülbelül 75%-a beporzó rovaroktól függ."
+          "caption": "A világ élelmiszernövényeinek nagyjából 75%-a a beporzó rovarokra támaszkodik"
         },
         {
           "type": "paragraph",
-          "text": "Konkrét példa: a világ élelmiszernövényeinek körülbelül 75%-a a beporzandó rovaroktól függ. A természet a legnagyobb gyógyszertárunk is, hiszen a modern gyógyszerek 25%-a növényekben található molekulákból származik. Szabályozza a vizet, termékeny talajt képez és elnyeli a felesleges CO₂ egy részét."
+          "text": "Konkrét példa: a világ élelmiszernövényeinek nagyjából 75%-a rovarokra támaszkodik a beporzáshoz. A természet a legnagyobb patikánk is, mert a modern gyógyszerek 25%-a növényi molekulákból jön. Szabályozza a vizet, termékeny talajt képez, és a fölösleges CO₂ egy részét elnyeli."
         },
         {
           "type": "paragraph",
-          "text": "A biológiai sokféleség elpusztításával tehát a saját gazdasági és élelmezési életünket fenntartó természeti tőkét semmisítjük meg azzal, hogy a bolygó erőforrásait sokkal gyorsabban fogyasztjuk el, mint ahogy azok megújulnak."
+          "text": "A biodiverzitás pusztításával tehát azt a természeti tőkét romboljuk, amely a saját gazdasági és élelmiszeréletünket tartja, miközben a bolygó erőforrásait sokkal gyorsabban fogyasztjuk, mint ahogy megújulnak."
         }
       ]
     },
     {
       "id": "course_222_la_crise_de_la_biodiversite_p4",
-      "title": "Határok, amelyeket nem szabad átlépni, lehetőség a visszapattanásra",
+      "title": "Határok, amelyeket nem szabad átlépni",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A biodiverzitás egyike annak a kilenc [[bolygóhatárok]]-nek, amelyet nem szabad túllépni ahhoz, hogy a Föld lakható maradjon, és ezt a küszöböt már átlépték. Az igazi veszélyt a [[Ökológiai fordulópontok]] jelenti: küszöbök, ahol egy ökoszisztéma hirtelen és visszafordíthatatlan módon omlik össze, akár egy amazóniai erdő átalakul szavannává."
+          "text": "A biodiverzitás a kilenc [[bolygóhatárok]] egyike, amelyeket nem szabad átlépni, ha lakható Földet akarunk, és ezt a küszöböt már átléptük. Az igazi veszély az [[ökológiai fordulópontok]]: olyan küszöbök, ahol egy ökoszisztéma hirtelen omlik össze, szinte visszafordíthatatlanul, mint egy amazóniai erdő, amely szavannává válna."
         },
         {
           "type": "paragraph",
-          "text": "Megoldások azonban léteznek. A 2022-es montreali [[COP15]] rendezvényen a világ országai azt a célt tűzték ki, hogy 2030-ra a szárazföldek és a tengerek 30%-ának védelmét tűzzék ki célul. Ez magában foglalja a mezőgazdaság átalakítását, a vizes élőhelyek helyreállítását és a fajok áramlásának folyosóit."
+          "text": "Megoldások mégis vannak. A 2022-es montreali [[COP15]] találkozón a világ országai azt tűzték ki, hogy 2030-ig a földek és a tengerek 30%-át védik. Ehhez át kell alakítani a mezőgazdaságot, helyreállítani a vizes élőhelyeket, és folyosókat hagyni, hogy a fajok mozoghassanak."
         },
         {
           "type": "paragraph",
-          "text": "A természet nagy kapacitással rendelkezik [[rugalmasság]], ha teret és időt adunk neki. Az erdő védelme fajok millióinak védelmét jelenti, miközben fenntartjuk a globális felmelegedés elleni alapvető szén-elnyelőt."
+          "text": "A természetnek nagy a [[rugalmasság]] képessége, ha teret és időt kap. Egy erdő védelme milliónyi fajt véd, és egyben lényeges szénelnyelőt tart a felmelegedés ellen."
         },
         {
           "type": "takeaway",
-          "text": "1970 és 2018 között 69%-kal csökkent a vadon élő állatok populációja: ez a hatodik tömeges kihalás, az első egyetlen faj által okozott kihalás, ami megkérdőjelezi a természet által számunkra ingyenesen nyújtott létfontosságú szolgáltatásokat."
+          "text": "A vadállatok állományai 69%-kal zuhantak 1970 és 2018 között: ez a 6. tömeges kihalás, az első, amelyet egyetlen faj okoz, és ezzel azok a létfontosságú szolgáltatások is veszélybe kerülnek, amelyeket a természet ingyen ad."
         }
       ]
     }

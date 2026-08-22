@@ -1,14 +1,14 @@
 {
   "id": "course_82_l_iliade_homere",
-  "title": "Az Iliász, Homérosz",
-  "subtitle": "Kr.e. 8. század",
+  "title": "Iliász, Homérosz",
+  "subtitle": "i. e. 8. század",
   "subject": "litterature",
   "subcategory": "Ancient Greeks & Philosophers",
-  "description": "Nem az egész trójai háború: 51 nap harag. Akhilleusz visszavonul, Patroklosz meghal, Hektór elesik. Homérosz megmutatja, hogyan válhat a dicsőség állativá, majd emberré.",
+  "description": "Nem az egész trójai háború: 51 nap harag. Akhilleusz visszavonul, Patroklosz meghal, Hektór elesik. Homérosz megmutatja, hogyan lesz a dicsőségből vadállatiság, aztán emberség.",
   "hero": {
     "image": "l_iliade_homere",
     "ratio": "16:9",
-    "hook": "Egyetlen szó nyitja a verset: harag. És az egész háború fenekestül felfordul."
+    "hook": "Egyetlen szó nyitja a költeményt: a harag. És az egész háború megbillen."
   },
   "sections": [
     {
@@ -18,112 +18,112 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gyakran úgy gondolják, hogy a **Iliász** a teljes **Trójai háborút** felidézi. A valóságban a **Homernek**-nek tulajdonított vers csak **51 napra** összpontosít, az ostrom tizedik évének szívében. A háború egy görög koalíciót állít szembe a trójai várossal. Hélène elrablása váltotta ki. Az első témája nem a Trója: ez a **harag** **Akhilleusz**, a legjobb görög harcos."
+          "text": "Gyakran azt hiszik, az **Iliász** az egész **trójai háborút** meséli. Valójában a **Homérosznak** tulajdonított költemény csak **51 napra** koncentrál, az ostrom tizedik évének közepén. A háború görög koalíciót állít a trójai város ellen. Heléné elrablása indította. Az első témája nem Trója: **Akhilleusz** **haragja**, a legjobb görög harcosé."
         },
         {
           "type": "paragraph",
-          "text": "A cím a **Ilium** nevéből származik, amely a mai Türkiye partján fekvő város, Trója másik elnevezése. Homérosz istenek, párbaj és erőszak alatt egy egyszerű kérdést tesz fel: mit ér a dicsőség, ha mindenki meghal? A vers nem ünnepli a háborút árnyalatok nélkül. Megmutatja az emberi költségeket."
+          "text": "A cím **Ilionból** jön, Trója másik nevéből, a mai Törökország partján. Istenek, párbajok és erőszak alatt Homérosz egyszerű kérdést tesz fel: mit ér a dicsőség, ha mindenki meghal? A költemény nem ünnepli árnyalat nélkül a háborút. Megmutatja az emberi árát."
         }
       ]
     },
     {
       "id": "course_82_l_iliade_homere_p1",
-      "title": "Miért hagyja el Akhilleusz a harcot",
+      "title": "Miért hagyja ott Akhilleusz a harcot",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A mitikus ürügy ismert: **Párizs**, trójai herceg, elrabolta **Hélène** Spárta királynőjét. **Agamemnon**, Mükéné királya és a görögök vezetője vezeti a koalíciót. De a vers egy belső válsággal nyit. Agamemnon megalázza Akhilleust azzal, hogy foglyul ejti **Briseis**-t. Akhilleusz számára ez a [[idő]] elleni támadás, a harcos érdemeinek köszönhető nyilvános kitüntetés. Idő hiányában a hősnek már nincs oka a harcra."
+          "text": "A mitikus ürügy ismert: **Párisz**, trójai herceg, elrabolta **Helénét**, Spárta királynéját. **Agamemnón**, Mükéné királya és a görögök vezére viszi a koalíciót. A költemény mégis belső válsággal nyit. Agamemnón megalázza Akhilleuszt, amikor elveszi tőle **Briszéiszt**, a foglyát. Akhilleusz számára ez az [[idő]] sérelme, a harcos érdemének járó nyilvános becsületé. Idő, vagyis timé nélkül a hősnek nincs oka harcolni."
         },
         {
           "type": "image",
           "asset": "achilles_agamemnon_quarrel_painting",
           "ratio": "4:3",
-          "caption": "Akhilleusz és Agamemnón vitája, az egész Iliász kiindulópontja."
+          "caption": "Akhilleusz és Agamemnón vitája, az egész Iliász kiindulása"
         },
         {
           "type": "paragraph",
-          "text": "Akhilleusz visszavonul a sátrába. Ami még rosszabb: megkéri édesanyját, **Thétis**-t, a tenger istennőjét, hogy szerezzen görög vereséget **Zeusz**-től, az istenek királyától. Be akarja bizonyítani, hogy nem tudunk nélküle. Neheztelése megelőzi társai túlélését. A háború először az ego kérdése lesz, nem csak a hódításé. Homérosz így megmutatja, hogy egyetlen ember haragja megváltoztathatja egy egész hadsereg sorsát."
+          "text": "Akhilleusz a sátrába vonul. Rosszabb: anyját, **Thétiszt**, a tengeri istennőt kéri, szerezzen **Zeusztól**, az istenek királyától görög vereséget. Be akarja bizonyítani, hogy nélküle nem megy. A sértődése előbbre való, mint a társai élete. A háború először egoügy, nemcsak hódítás. Homérosz így mutatja: egyetlen ember haragja egy egész sereg sorsát billentheti."
         }
       ]
     },
     {
       "id": "course_82_l_iliade_homere_p2",
-      "title": "Patroclus meghal, a harag megváltoztatja a természetet",
+      "title": "Patroklosz meghal, a harag más természetű lesz",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bajnokuk nélkül a görögök bedobják. A **Hector** herceg, Priamosz király fia és Trója hős védelmezője által vezetett trójaiak még görög hajókat is fenyegetnek. **Patroclus**, Akhilleusz legközelebbi társa, kölcsönkéri páncélját, hogy megijesztse az ellenséget. Akhilleusz elfogadja, de megtiltja neki, hogy túl messzire menjen, és továbbmenjen Trója falaihoz."
+          "text": "Bajnokuk nélkül a görögök meghajolnak. A trójaiak **Hektór** herceggel, Priamosz király fiával, Trója védőhősével még a görög hajókat is fenyegetik. **Patroklosz**, Akhilleusz legközelebbi társa, kölcsönkéri a páncélját, hogy megijessze az ellenséget. Akhilleusz beleegyezik, de megtiltja, hogy túl messzire menjen, és Trója faláig üldözzön."
         },
         {
           "type": "funFact",
-          "text": "Az Iliászban az istenek is bántják egymást. A harcos **Diomedes** megsebesíti **Aphroditét**, a szerelem istennőjét a kezében. A háború istenének **Arès**-nek sikoltozva kell menekülnie. Még az Olümposz is ismeri a csatatér erőszakosságát."
+          "text": "Az Iliászban az istenek is megsebesülnek. **Diomédész** harcos **Aphroditét**, a szerelem istennőjét a kezén sebesíti. **Arész** hadistennek üvöltve kell menekülnie. Még az Olümposz is ismeri a csatatér erőszakát."
         },
         {
           "type": "paragraph",
-          "text": "Patroclus nem engedelmeskedik. Hector megöli, segít **Apollo**, az íjász isten. Achilles kezdetben társadalmi haragja megváltozik a természetben. Már nem az idő nyomja: a gyász fegyverezi fel a hőst. Homérosz megmutatja, hogyan válhat egy érzelem pusztítóvá."
+          "text": "Patroklosz engedetlen. Hektór megöli, **Apollón**, az íjász isten segítségével. Akhilleusz haragja, amely először társadalmi volt, más természetű lesz. Már nem a timé hajtja: a gyász fegyverzi fel. Homérosz megmutatja, hogyan válhat egy érzelem pusztítóvá."
         }
       ]
     },
     {
       "id": "course_82_l_iliade_homere_p3",
-      "title": "Akhilleusz Hektor ellen: a dicsőség állativá válik",
+      "title": "Akhilleusz Hektór ellen: a dicsőség megvadul",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Achilles visszatér. **Héphaisztosz**, a kovácsisten által felfegyverkezve belép [[Homeros Aristeia]]. Ez egy hosszú sorozat, amelyben egy hős emberfeletti mutatványokat hajt végre. Megöli Hectort Trója falai előtt. Aztán a holttestet a szekerére köti, és a poron keresztül vonszolja, a herceg családjának szeme láttára. Ez rendkívüli megaláztatás."
+          "text": "Akhilleusz visszatér. **Héphaisztosz**, a kovácsisten fegyverzi fel, és belép [[Homérosz aristeia]] szakaszába. Hosszú sorozat, amelyben egy hős emberfeletti tetteket visz véghez. Trója falai előtt megöli Hektórt. Aztán a holttestet a szekeréhez köti, és a porban vonszolja, a herceg családjának szeme láttára. Szélsőséges megalázás."
         },
         {
           "type": "image",
           "asset": "trojan_war_ancient_greek_vase_painting",
           "ratio": "4:3",
-          "caption": "A trójai háború egy görög vázán: dicsőség, erőszak és sors keveredik."
+          "caption": "A trójai háború görög vázán: dicsőség, erőszak és sors együtt"
         },
         {
           "type": "paragraph",
-          "text": "A görögök számára a **temetési szertartások** megtagadása meghaladja az emberi létet. A halottak temetése általi tisztelete szent kötelesség. Akhilleusz, az abszolút hős, szinte vadállattá válik. Homer show the price of [[Mênis (harag) a görög kultúrában]]. A vers első szava, a *Mênis* kvázi kozmikus témát hirdet. Akhilleusz haragja éppúgy destabilizálja a világrendet, mint magát a háborút."
+          "text": "A görögöknél a **temetési rítusok** megtagadása kilépés az emberiből. A holtakat sírral tisztelni szent kötelesség. Akhilleusz, a tökéletes hős, majdnem vadállat lesz. Homérosz [[Mênis (harag) a görög kultúrában]] árát mutatja. A költemény első szava, a *Mênis*, szinte kozmikus témát hirdet. Akhilleusz haragja annyira billenti a világrendet, mint maga a háború."
         }
       ]
     },
     {
       "id": "course_82_l_iliade_homere_p4",
-      "title": "Priamosz Akhilleusz előtt: az emberiség visszatér",
+      "title": "Priamosz Akhilleusz előtt: visszatér az emberség",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az öreg király **Priam**, Hektor apja, egyedül lépi át az ellenséges vonalakat, hogy megcsókolja a fiát megölő kezet. A megtört apával szembesülve Achille saját apjára, **Peleus**-re gondol, akit soha többé nem fog látni. Visszaadja a holttestet, és fegyverszünetet köt a temetésre. A vers Hektor temetésével ér véget. A [[Trójai faló]], Odüsszeusz Trója behatolási trükkje egyáltalán nem jelenik meg."
+          "text": "Az öreg **Priamosz** király, Hektór apja, egyedül kel át az ellenséges vonalakon, hogy megcsókolja a kezeket, amelyek a fiát ölték. Ezzel a tört apával szemben Akhilleusz a saját apjára, **Péleuszra** gondol, akit soha többé nem lát. Visszaadja a testet, és fegyverszünetet ad a temetésre. A költemény Hektór temetésével zárul. A [[Trójai faló]], Odüsszeusz csele, hogy bejusson Trójába, egyáltalán nincs benne."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1. nap",
-              "title": "Achilles-Agamemnon vita",
-              "detail": "Achilles időhiány miatt kivonul a harcból."
+              "title": "Akhilleusz-Agamemnón vita",
+              "detail": "Akhilleusz kilép a harcból, timé híján."
             },
             {
-              "date": "Közepes",
+              "date": "Közép",
               "title": "Patroklosz halála",
-              "detail": "A bosszú váltja fel a sérült becsületet."
+              "detail": "A bosszú váltja a sértett becsületet."
             },
             {
               "date": "Párbaj",
-              "title": "Hector halála",
-              "detail": "Akhilleusz diadalmaskodik, majd megszentségteleníti a testet."
+              "title": "Hektór halála",
+              "detail": "Akhilleusz győz, aztán megszentségteleníti a testet."
             },
             {
-              "date": "VÉGE",
+              "date": "Vég",
               "title": "Priamosz és Akhilleusz",
-              "detail": "A közös gyász visszahoz egy kis emberséget."
+              "detail": "A közös gyász egy kevés emberséget hoz vissza."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "A **Iliász** nem egy dicsőség kézikönyv. A **51 napban** Homérosz megmutatja, hogyan pusztít a düh, majd hogyan ismeri fel két ellenség ugyanabban a fájdalomban. A vers a halottak békéjével ér véget, nem a győzelemmel."
+          "text": "Az **Iliász** nem dicsőségkézikönyv. **51 napban** Homérosz megmutatja, hogyan pusztít a harag, aztán hogyan ismeri fel két ellenség ugyanazt a fájdalmat. A költemény a holtak békéjén zárul, nem a győzelemen."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_197_les_mille_et_une_nuits_sheherazade",
-  "title": "Az arab éjszakák (Shéherazade)",
-  "subtitle": "Mondd, hogy éld túl",
+  "title": "Az Ezeregyéjszaka (Seherezádé)",
+  "subtitle": "Mesélni, hogy túlélj",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Scheherazade 1001 éjszakát túlél történetek mesélésével. Perzsia, Bagdad és Egyiptom között született gyűjtemény, amely világmítosszá vált.",
+  "description": "Seherezádé 1001 éjszakán át mesél, hogy életben maradjon. Perzsia, Bagdad és Egyiptom között született gyűjtemény, amely világmítosszá vált.",
   "hero": {
     "image": "les_mille_et_une_nuits_sheherazade",
     "ratio": "16:9",
-    "hook": "Minden este egy nő elmesél egy történetet, hogy ne haljon meg hajnalban."
+    "hook": "Minden éjjel egy nő mesél egy történetet, hogy hajnalban ne haljon meg."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **Arab éjszakák** (*Alf Layla wa-Layla*) nem egyetlen szerző könyve. Ez egy palimpszeszt: több évszázados szóbeli és írott mesék, indiai, perzsa, arab, egyiptomi."
+          "text": "Az **Ezeregyéjszaka** (*Alf Layla wa-Layla*) nem egyetlen szerző könyve. Palimpszeszt: évszázadok szóbeli és írott meséi, indiai, perzsa, arab, egyiptomi."
         },
         {
           "type": "paragraph",
-          "text": "A középpontban egy szédítő ötlet: egy nő, **Scheherazade** pajzssá alakítja a történetet. Amíg beszél, a királynak, aki meg akarta ölni, várnia kell. Így válik a beszéd a túlélés fegyverévé."
+          "text": "A közepén szédítő ötlet áll: egy nő, **Seherezádé**, pajzzsá változtatja a mesét. Amíg beszél, a király, aki meg akarta ölni, várni kényszerül. Íme, hogyan lesz a szóból túlélő fegyver."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p1",
-      "title": "A papír architektúrája: egy világszöveg keletkezése",
+      "title": "Papírarchitektúra: egy szöveg-világ születése",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A mag egy perzsa forrásból származik, a [[Hazār Afsāna]] („Ezer mese”), amelyet maguk is indiai hagyományok táplálnak. Bagdadban, a [[Abbászidák]] kalifák alatt (8-13. század) a gyűjtemény arabizálódott: városi legendák, udvari anekdoták, olykor szatirikus hangvétel."
+          "text": "A mag perzsa alapból jön, a [[Hazār Afsāna]] („Ezer mese”) gyűjteményből, amelyet indiai hagyományok is tápláltak. Bagdadban, az [[Abbászidák]] kalifái alatt (8-13. század) a gyűjtemény elarabosodik: városi legendák, udvari anekdoták, hol szatirikus hang."
         },
         {
           "type": "image",
           "asset": "one_thousand_and_one_nights_arabic_manuscript",
           "ratio": "4:3",
-          "caption": "Az Ezeregyéjszaka kézirata: formálódó világszöveg."
+          "caption": "Ezeregyéjszaka-kézirat: egy szöveg-világ formálódik"
         },
         {
           "type": "funFact",
-          "text": "Az „ezer és egy” nem jelent pontos számot. Arabul ez a szám a bőséget, szinte a végtelenséget sugallja. Egyes írástudók még a gonosz szem elleni talizmánnak is tekintették."
+          "text": "Az „ezeregy” nem pontos számolás. Arabban ez a szám bőséget, szinte végtelent sugall. Egyes írnokok még a rontás elleni talizmánnak is látták."
         },
         {
           "type": "paragraph",
-          "text": "Egyiptomban a [[Mameluk]] idején új ciklusokat adtak hozzá. Meglepetés a Nyugat számára: **Aladdin** és **Ali Baba** hiányzik a középkori arab kéziratokból. Ezek „árva mesék”, amelyek később Európán keresztül kerültek be."
+          "text": "Egyiptomban, a [[Mameluk]] korban új ciklusok kerülnek bele. Meglepetés a Nyugatnak: **Aladdin** és **Ali Baba** hiányzik a középkori arab kéziratokból. Ezek „árva mesék”, később, Európán át kerültek be."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p2",
-      "title": "Seherezádé hegemóniája: a narráció, mint pajzs",
+      "title": "Seherezádé uralma: a mesélés mint pajzs",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Shahryar** király, akit első felesége elárult, minden este feleségül vesz egy fiatal nőt, akit hajnalban megölnek. **Scheherazade**, a vezír lánya felajánlja magát. Elmondja… és a legfeszültebb pillanatban megáll."
+          "text": "**Sahriár** király, akit első felesége elárult, minden este feleségül vesz egy fiatal nőt, és hajnalban megöleti. **Seherezádé**, a vezír lánya, önként jelentkezik. Mesél... és a legfeszültebb ponton megáll."
         },
         {
           "type": "image",
           "asset": "scheherazade_shahryar_king_storyteller_painting",
           "ratio": "4:3",
-          "caption": "Scheherazade Shahryarral szemben: narráció, mint pajzs."
+          "caption": "Seherezádé Sahriárral szemben: a mesélés mint pajzs"
         },
         {
           "type": "paragraph",
-          "text": "Felhalmoz [[Beágyazott történetek (keretes narratíva)]]: egyik szereplő mesél a másiknak, ki a harmadiknak. A király, akit foglyul ejt a vágy, hogy hallja, mi történik ezután, elhalasztja a kivégzést. A **Ezeregyéjszakán** után a hallgatás megváltoztatta Shahryart: újra megtalálta az empátiát. Scheherazade nem csak szórakozott. Kijavított egy zsarnokot."
+          "text": "Egymásra rakja a [[beágyazott történetek (keretes narratíva)]] láncát: egy szereplő mesél egy másikat, az meg egy harmadikat. A király, a folytatás vágyának foglya, elhalasztja a kivégzést. **Ezeregy éjszaka** után a hallgatás megváltoztatja Sahriárt: visszakapja az empátiát. Seherezádé nemcsak szórakoztatott. Megjavított egy zsarnokot."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p3",
-      "title": "Nyugat felé való elmozdulás és egy mítosz feltalálása",
+      "title": "A Nyugatra billenés és egy mítosz feltalálása",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **1704** és **1717** között a francia orientalista, **Antoine Galland** közli fordítását. A szöveget **Lajos XIV** udvarának ízléséhez igazítja, és hozzáfűzi a [[Hanna Diyab]], egy átutazó szíriai meséket. Aladdin így belép a korpuszba."
+          "text": "**1704** és **1717** között **Antoine Galland** francia orientalista kiadja a fordítását. **XIV. Lajos** udvarának ízlésére igazítja a szöveget, és hozzátesz meséket, amelyeket [[Hanna Diyab]], egy arra járó szír mesélt neki. Így kerül Aladdin a korpuszba."
         },
         {
           "type": "image",
           "asset": "antoine_galland_thousand_nights_french_translation",
           "ratio": "4:3",
-          "caption": "Galland megnyitja az éjszakát a 18. századi Európa felé."
+          "caption": "Galland megnyitja az Éjszakákat a 18. századi Európa előtt"
         },
         {
           "type": "funFact",
-          "text": "A fiatalok néha azzal ébresztették fel Gallandot éjszaka, hogy kiabáltak az ablaka alatt: „Mr. Galland, ha nem tud aludni, mesélje el nekünk az egyik történetét!” »"
+          "text": "Fiatalok néha éjjel ébresztették Gallandot, és az ablaka alatt kiabáltak: „Monsieur Galland, ha nem alszik, meséljen egyet a történeteiből!”"
         },
         {
           "type": "paragraph",
-          "text": "A siker feltalál egy [[Európai orientalizmus]]: repülő szőnyegek, dzsinnek, álcázott kalifák. Fantáziakép, gyakran reduktív, de hatalmas hatású, **Proust**-től **Borges**-ig, aki ezekben a narratív hurkokban az irodalmi végtelenség képét látta."
+          "text": "A siker feltalál egy [[európai orientalizmus]] képet: repülő szőnyegek, dzsinnek, álruhás kalifák. Ábrándkép, gyakran leegyszerűsítő, de hatalmas hatású, **Prousttól** **Borgesig**, aki ezekben a narratív hurkokban magát az irodalmi végtelent látta."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p4",
-      "title": "A történet modernsége és filozófiai terjedelme",
+      "title": "Modernitás és a mese filozófiai tétje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Miért mondod? Az éjszakák válasza: távol tartani a halált. Amíg Scheherazade hangja visszhangzik, a végzetes hajnal felfüggesztődik. A fikció formát ad a káosznak."
+          "text": "Miért mesélünk? Az Éjszakák így válaszolnak: hogy távol tartsuk a halált. Amíg Seherezádé hangja szól, a végzetes hajnal függőben marad. A fikció formát ad a káosznak."
         },
         {
           "type": "paragraph",
-          "text": "Ez a mechanizmus máig táplálja sorozatunkat: a [[filmsorozat]], ez a szakadék szélén lévő vágás, a narrátor közvetlen örököse. A végtelenségig nyitott könyv, amely nem hajlandó bezárni."
+          "text": "Ez a mechanika ma is táplálja a [[filmsorozat]] ritmusát: a szakítás a szakadék szélén a mesélő közvetlen örököse. Egy könyv, amely a végtelenre nyílik, és nem akar becsukódni."
         },
         {
           "type": "takeaway",
-          "text": "**Scheherazade** túléli a **1001** éjszakákat a beágyazott történeteknek köszönhetően: feltalálja a feszültséget, mint túlélési eszközt, és a beszédet politikai hatalommá alakítja."
+          "text": "**Seherezádé** **1001** éjszakát él túl a beágyazott mesékkel: feltalálja a feszültséget mint túlélő eszközt, és politikai hatalommá teszi a szót."
         }
       ]
     }

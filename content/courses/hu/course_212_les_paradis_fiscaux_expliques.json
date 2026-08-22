@@ -1,14 +1,14 @@
 {
   "id": "course_212_les_paradis_fiscaux_expliques",
-  "title": "Adóparadicsomok magyarázták",
-  "subtitle": "10 000 milliárd elrejtve",
+  "title": "Az adóparadicsomok, röviden",
+  "subtitle": "10.000 milliárd dollár rejtőzik",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "A globális vagyon körülbelül 10%-a elkerüli az adót az átláthatatlan területeken. Hogyan működik ez a rendszer, és miért olyan rugalmas?",
+  "description": "A világ vagyonának mintegy 10%-a titkos területeken kerüli el az adót. Hogyan működik a rendszer, és miért él túl ilyen jól?",
   "hero": {
     "image": "les_paradis_fiscaux_expliques",
     "ratio": "16:9",
-    "hook": "A Kajmán-szigeteken 65 000 lakos és több mint 100 000 vállalkozás működik. Üdvözöljük az adóparadicsomok világában."
+    "hook": "A Kajmán-szigeteknek 65.000 lakosa van, és több mint 100.000 cége. Üdv az adóparadicsomok világában."
   },
   "sections": [
     {
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bizonyos, gyakran apró területek lehetővé teszik a vállalatok és a nagy vagyonok számára, hogy szinte teljesen megmeneküljenek származási országuk adója alól. Ezeket **adóparadicsomoknak**-nek hívjuk. Becslések szerint körülbelül 10 billió dollár, vagyis a világ vagyonának 8-10%-a található ott."
+          "text": "Egyes területek, gyakran aprók, lehetővé teszik, hogy cégek és nagy vagyonok szinte minden adót elkerüljenek, amit otthon fizetniük kellene. Ezek az **adóparadicsomok**. Becslés szerint 10.000 milliárd dollár, a világ vagyonának nagyjából 8-10%-a ül bennük."
         },
         {
           "type": "paragraph",
-          "text": "Ez nem csak a könyvelők problémája: évente 600 milliárd dollártól fosztja meg az államokat, amiből kórházakat vagy iskolákat lehetett volna finanszírozni. Íme, hogyan működik ez a diszkrét rendszer, és miért ellenáll olyan jól a szabályozási kísérleteknek."
+          "text": "Ez nem csak könyvelők baja. Évente 600 milliárd dollárt vesz el az államoktól, pénzt, amelyből kórház vagy iskola jöhetett volna. Így működik ez a diszkrét rendszer, és ezért áll ellen ennyire a szabályozásnak."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p1",
-      "title": "Hogyan van elrejtve a pénz",
+      "title": "Hogyan bújik el a pénz",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az adóparadicsom három pilléren nyugszik: a nullához közeli adókon, nagy átláthatatlanságon és kevés együttműködésen más országokkal. Ezek a területek tehát a világ minden tájáról vonzzák a tőkét, amit [[Offshore]] gazdaságnak nevezünk."
+          "text": "Egy adóparadicsom három pilléren áll: nullához közeli adón, mély titkon és nagyon kevés együttműködésen más országokkal. Az ilyen területek a világ minden tájáról vonzzák a tőkét, ezt hívják [[offshore]] gazdaságnak."
         },
         {
           "type": "paragraph",
-          "text": "Sok ilyen területen lehetőség van egy héjcég létrehozására: egy iroda vagy alkalmazottak nélküli vállalkozás, amely csak papíron létezik. Ennek egyetlen célja gyakran az, hogy elrejtse a pénz valódi tulajdonosának, az úgynevezett haszonélvezőnek kilétét."
+          "text": "Több helyen postafiókcéget is alapíthatsz: üzletet iroda és alkalmazottak nélkül, csak papíron. A célja többnyire egyszerű: elrejteni annak a személynek a kilétét, akié igazán a pénz, a haszonélvezőét."
         },
         {
           "type": "image",
           "asset": "cayman_islands_offshore_banking_paradise",
           "ratio": "4:3",
-          "caption": "A Kajmán-szigetek, kis méretük ellenére a világ egyik legnagyobb pénzügyi központja."
+          "caption": "A Kajmán-szigetek, a világ egyik legnagyobb pénzügyi központja, apró mérete ellenére"
         },
         {
           "type": "funFact",
-          "text": "A Kajmán-szigeteknek mindössze 65 ezer lakosa van, de több mint 100 ezer céget tartanak nyilván: a világ ötödik bankbetéti pénzügyi központja, Párizsnál kisebb területen."
+          "text": "A Kajmán-szigeteknek csak 65.000 lakosa van, de több mint 100.000 cég van bejegyezve ott. Ettől a világ ötödik legnagyobb pénzügyi központja bankbetétekben, egy Párizsnál kisebb területen."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p2",
-      "title": "A profitszerzés művészete eltűnik",
+      "title": "A haszon eltüntetésének művészete",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A nagyvállalatoknál a cél nem feltétlenül illegális: **adóoptimalizálásról** beszélünk, vagyis az egyes országok szabályainak ügyes felhasználásáról, hogy kevesebb adót fizessenek. A fő eszköz a [[Transzferár]]: a vállalat maga határozza meg a saját leányvállalatai közötti cserék árát, hogy ott mutassa nyereségét, ahol a legalacsonyabb az adó."
+          "text": "A nagy cégeknek a cél nem feltétlenül törvénytelen. Ezt **adóoptimalizálásnak** hívják: ügyesen használni minden ország szabályait, hogy kevesebbet fizessenek. A fő eszköz a [[transzferár]]: a cég maga szabja meg a leányvállalatai közti ügyletek árát, hogy a haszon ott jelenjen meg, ahol az adó a legalacsonyabb."
         },
         {
           "type": "paragraph",
-          "text": "Gyakori módszer a márka vagy szabadalom átruházása egy adóparadicsomban található leányvállalatra. A többi leányvállalatnak, például Franciaországban, óriási összegeket kell fizetnie a márka használati jogáért. Ezek a kifizetések csökkentik az adóköteles nyereségüket helyben, miközben növelik az adóparadicsomban."
+          "text": "Gyakori módszer, hogy egy márkát vagy szabadalmat adóparadicsomban ülő leányvállalathoz visznek. A többi leányvállalatnak, például Franciaországban, aztán hatalmas összeget kell fizetnie a márka használatáért. Ezek a díjak helyben csökkentik az adóköteles hasznot, az adóparadicsomban viszont felduzzasztják."
         },
         {
           "type": "funFact",
-          "text": "A francia „tax haven” szó fordítási hibából származik: az angol azt mondja, hogy „tax haven”, a safe harbor for money (menedék), nem a paradicsom (mennyország). A hangok összetévesztése megváltoztatta a szó jelentését."
+          "text": "A francia „paradis fiscal” kifejezés félrefordításból jött. Az angol „haven” biztonságos kikötőt jelent a pénznek, nem mennyországot. Két hasonló hangzású szó megváltoztatta a jelentést."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p3",
-      "title": "A világ reagál (kicsit)",
+      "title": "A világ reagál (egy kicsit)",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A 2008-as pénzügyi válság, majd a [[Panama papírok]] 2016-os megjelenése felháborodási hullámot váltott ki. Az OECD és a G20 nyomására a bankoknak mostantól automatikusan továbbítaniuk kell a külföldi ügyfeleikre vonatkozó információkat az adóhatóságoknak."
+          "text": "A 2008-as pénzügyi válság, aztán a [[Panama papírok]] 2016-os megjelenése felháborodási hullámot indított. Az OECD és a G20 nyomására a bankoknak ma automatikusan továbbítaniuk kell a külföldi ügyfeleik adatait az adóhatóságoknak."
         },
         {
           "type": "paragraph",
-          "text": "A legjelentősebb előrelépés 2021-ben történt, egy nemzetközi megállapodás 15%-os minimális adókulcsot ír elő a multinacionális vállalatok számára. Az ötlet: megakadályozni az országokat abban, hogy versenyezzenek egymással azáltal, hogy végtelenül csökkentik az adóikat, hogy vonzzák a vállalkozásokat. Ha egy cég csak 5%-ot fizet egy adóparadicsomban, akkor a hazája immár igényelheti a fennmaradó 10%-ot."
+          "text": "A legnagyobb lépés 2021-ben jött, egy nemzetközi egyezménnyel, amely 15%-os minimumadókulcsot szabott a multinacionálisokra. Az ötlet: megállítani, hogy az országok a végtelenségig vágják az adójukat a cégek odacsábításáért. Ha egy cég csak 5%-ot fizet egy adóparadicsomban, a hazája ma követelheti a maradék 10%-ot."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p4",
-      "title": "Az adó igazságszolgáltatása még mindig törékeny",
+      "title": "Törékeny haladás az adóigazságosság felé",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Amikor a legnagyobb vagyonok elkerülik az adót, a középosztály és a helyi kisvállalkozások viselik az adóteher nagyobb részét. Ez forráshiány miatt gyengíti az olyan közszolgáltatásokat is, mint az egészségügy vagy az oktatás."
+          "text": "Amikor a legnagyobb vagyonok elkerülik az adót, a középosztály és a kis helyi cégek nagyobb részt visznek. A közszolgáltatások, az egészség és az oktatás is gyengülnek, pénz híján."
         },
         {
           "type": "paragraph",
-          "text": "A csata most a digitális felé halad: az online platformoknak már nincs szükségük irodákra, hogy pénzt keressenek egy országban, ami az adóhatárokat egyre porózusabbá teszi. Az adminisztrációk most big data segítségével észlelik az anomáliákat, és nyilvános nyilvántartásokat követelnek, amelyek felfedik a cégek valódi tulajdonosainak kilétét."
+          "text": "A csata most a digitális világba költözik. Az online platformoknak már nincs szükségük irodára, hogy egy országban keressenek, és az adóhatárok egyre porózusabbak. Az adóhatóságok ma nagy adatokkal keresik a furcsaságokat, a kampányolók pedig nyilvános nyilvántartást akarnak arról, kié igazán minden cég."
         },
         {
           "type": "takeaway",
-          "text": "Az adóparadicsomok a világ vagyonának körülbelül 10%-át biztosítják a banktitok és a szinte nulla adózás miatt. 2021 óta a 15%-os globális minimális adókulcs megpróbálja korlátozni ezt a kijátszást, de a csata még mindig messze van a nyeréstől."
+          "text": "Az adóparadicsomok a világ vagyonának mintegy 10%-át tartják, banktitokkal és nullához közeli adóval. 2021 óta egy 15%-os globális minimumadókulcs próbálja korlátozni ezt a tőkemenekülést, de a csata messze nincs megnyerve."
         }
       ]
     }

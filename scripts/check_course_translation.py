@@ -394,6 +394,27 @@ SWEDISH_RULES = LanguageRules(
     era_hint="should be f.Kr. / e.Kr.",
 )
 
+HUNGARIAN_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(a|az|egy|\u00e9s|vagy|hogy|de|mint|el|\u00e9s)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "és," / "vagy," are ordinary in lists. Bare "a," is often a list item.
+    stranded_tight=re.compile(
+        r"\b(az)\s*([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=("a ", "az ", "egy "),
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # Hungarian decimals are commas
+    century_hint="should be '15. század'",
+    era_hint="should be i. e. / i. sz.",
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
@@ -406,6 +427,7 @@ RULES_BY_LANG: dict[str, LanguageRules] = {
     "nl": DUTCH_RULES,
     "el": GREEK_RULES,
     "sv": SWEDISH_RULES,
+    "hu": HUNGARIAN_RULES,
 }
 
 
@@ -487,6 +509,7 @@ ARTICLE_BEFORE_RE = {
         re.IGNORECASE,
     ),
     "sv": re.compile(r"\b(en|ett|den|det|de)$", re.IGNORECASE),
+    "hu": re.compile(r"\b(a|az|egy)$", re.IGNORECASE),
 }
 
 

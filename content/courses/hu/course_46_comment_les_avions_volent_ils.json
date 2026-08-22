@@ -1,14 +1,14 @@
 {
   "id": "course_46_comment_les_avions_volent_ils",
   "title": "Hogyan repülnek a repülők?",
-  "subtitle": "Repülési fizika",
+  "subtitle": "A repülés fizikája",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Egy több száz tonnás repülőgép repül. Ez nem varázslat: ez a szárnyforma, a sebesség és az egymást kiegyensúlyozó erők kérdése.",
+  "description": "Egy több száz tonnás gép a levegőben marad. Ez nem varázslat: a szárny alakja, a sebesség és az egymást kiegyenlítő erők.",
   "hero": {
     "image": "comment_les_avions_volent",
     "ratio": "16:9",
-    "hook": "Nehezebb, mint egy teherautó, és mégis a levegőben marad. Íme, hogyan."
+    "hook": "Nehezebb egy teherautónál, mégis fent marad. Így megy ez."
   },
   "sections": [
     {
@@ -18,81 +18,81 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Egy nagy utasszállító repülőgép súlya **Z száz mennydörgött**. Hogyan maradhat valami ilyen nehéz a levegőben? A válasz a szárnyak alakjában és a repülőgép sebességében rejlik."
+          "text": "Egy nagy utasszállító **több száz tonnát** is nyomhat. Hogy maradhat valami ilyen nehéz a levegőben? A válasz a szárnyak alakjában és a gép sebességében van."
         },
         {
           "type": "paragraph",
-          "text": "Négy fő erő játszik szerepet: **tolóerő** (előre), **húzza** (légfék), **súly** (lefelé) és **lift** (felfelé)."
+          "text": "Négy fő erő dolgozik: a **tolóerő** (előre), a **légellenállás** (ami fékezi), a **súly** (lefelé) és a **felhajtóerő** (felfelé)."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p1",
-      "title": "A szárny, intelligens forma",
+      "title": "A szárny, egy okos forma",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oldalról nézve a repülőgép szárnya nem lapos. A teteje lekerekítettebb, mint az alsó. Amikor a repülőgép gyorsan mozog, a levegőnek ezt az alakzatot kell megkerülnie."
+          "text": "Oldalról nézve a repülőgép szárnya nem lapos. A teteje domborúbb, mint az alja. Amikor a gép gyorsan megy, a levegőnek meg kell kerülnie ezt a formát."
         },
         {
           "type": "image",
           "asset": "airplane_wing_cross_section_flight",
           "ratio": "auto",
-          "caption": "A szárny profilja hozza létre a síkot felemelő emelést."
+          "caption": "A szárnyprofil hozza létre a felhajtóerőt, amely felemeli a gépet"
         },
         {
           "type": "paragraph",
-          "text": "A fent áthaladó levegő kissé felgyorsul. A nyomása leesik. A szárny alatt a nyomás erősebb marad. Ez a különbség felfelé tolja a szárnyat: ez a **lift**. Ezt gyakran a 18. századi tudósról elnevezett **Bernoulli** elvvel magyarázzák, és azzal, hogy a szárny a levegőt is lefelé tereli."
+          "text": "A felül áthaladó levegő kicsit felgyorsul. A nyomása csökken. A szárny alatt a nyomás erősebb marad. Ez a különbség felfelé tolja a szárnyat: ez a **felhajtóerő**. Gyakran **Bernoulli** elvével magyarázzák, egy 18. századi tudós nevével, és azzal, hogy a szárny lefelé is téríti a levegőt."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p2",
-      "title": "Gyorsaság kell",
+      "title": "Sebesség kell hozzá",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sebesség nélkül nem halad át elég levegő a szárnyon, nincs elég emelőerő. Ezért van az, hogy egy gépnek hosszú kifutópályára van szüksége a felszálláshoz: a hajtóműveknek elég erősen kell gyorsítaniuk."
+          "text": "Sebesség nélkül kevés levegő megy a szárnyon, kevés a felhajtóerő. Ezért kell hosszú kifutó a felszálláshoz: a hajtóműveknek eléggé fel kell gyorsítaniuk a gépet."
         },
         {
           "type": "funFact",
-          "text": "A madarak ugyanazt az általános elképzelést használják: szárnyaik emelést hoznak létre. De szárnyaikat csapkodva haladnak előre. A gép a hajtóműveknek köszönhetően halad előre."
+          "text": "A madarak ugyanazt az alapötletet használják: a szárnyuk felhajtóerőt ad. Ők viszont csapkodnak, hogy előre menjenek. A repülő a hajtóműveivel halad."
         },
         {
           "type": "paragraph",
-          "text": "A körutazás során az emelés egyensúlyba hozza a súlyt. A motorok tolóereje egyensúlyba hozza a légellenállást. Ezután a gép megközelítőleg állandó sebességgel halad előre."
+          "text": "Utazórepülésben a felhajtóerő kiegyenlíti a súlyt. A hajtóművek tolóereje kiegyenlíti a levegő ellenállását. A gép ekkor nagyjából állandó sebességgel megy."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p3",
-      "title": "Menj fel, le, fordulj",
+      "title": "Emelkedés, süllyedés, kanyar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A mászáshoz a pilóta (vagy a fedélzeti számítógép) kissé felfelé billenti az orrát, és beállítja a tolóerőt. Az ereszkedéshez gyakran csökkentjük a tolóerőt. A forduláshoz a gépet a szárnyak mozgatható részei, a csűrők segítségével oldalra döntik."
+          "text": "Emelkedéshez a pilóta (vagy a fedélzeti számítógép) kicsit felbillenti az orrot, és állítja a tolóerőt. Süllyedéshez gyakran csökkentik a tolóerőt. Kanyarodáskor a gépet oldalra döntik a szárny mozgó részeivel, a csűrőkkel."
         },
         {
           "type": "paragraph",
-          "text": "Leszálláskor lelassulunk. A szárnyak kinyúlnak a szárnyból, hogy növeljék az emelést alacsony sebességnél. Ekkor a kerekek érintik a talajt, és a fékek (néha a tolóirányváltók is) megállítják a gépet."
+          "text": "Leszálláskor lassítanak. A szárnyból ívelőlapok nyílnak ki, hogy alacsony sebességnél is nőjön a felhajtóerő. Aztán a kerekek földet érnek, és a fékek (néha a tolóerő-fordítók is) megállítják a gépet."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p4",
-      "title": "Nem \"könnyebb a levegőnél\"",
+      "title": "Ez nem „könnyebb a levegőnél”",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A hélium ballon lebeg, mert kevésbé sűrű, mint a levegő. Egy repülő, nem: sokkal sűrűbb. Repül, mert **erő** úgy néz ki, mintha hordozná, köszönhetően a sebességének és a szárnyak alakjának."
+          "text": "A héliumos lufi azért lebeg, mert ritkább a levegőnél. A repülő nem: sokkal sűrűbb. Azért repül, mert **kényszeríti** a levegőt, hogy tartsa, a sebességével és a szárnyai alakjával."
         },
         {
           "type": "takeaway",
-          "text": "Egy repülőgép repül a **lift**-nek köszönhetően, amelyet a levegőben mozgó szárnyai alkotnak. A gyorsaság elengedhetetlen: enélkül a szárny már nem „nyomja” felfelé annyira, hogy kompenzálja a súlyt."
+          "text": "A repülő a szárnyai által keltett **felhajtóerő** miatt repül, miközben a levegőben mozog. A sebesség nélkülözhetetlen: nélküle a szárny már nem „tol” eléggé felfelé ahhoz, hogy ellensúlyozza a súlyt."
         }
       ]
     }

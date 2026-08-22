@@ -1,14 +1,14 @@
 {
   "id": "course_233_le_droit_d_asile_explique",
-  "title": "A menedékjog magyarázata",
+  "title": "A menedékjog, röviden",
   "subtitle": "Genfi Egyezmény, 1951",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "1951 óta egy szabály védi az üldözött embereket szerte a világon. De nem látta előre a mai migrációs válságokat.",
+  "description": "1951 óta egy szabály védi az üldözötteket a világon. A mai migrációs válságokra azonban nem készült.",
   "hero": {
     "image": "le_droit_d_asile_explique",
     "ratio": "16:9",
-    "hook": "1951 óta egy szabály védi az üldözötteket az egész világon. De nem jósolta meg az éghajlatot."
+    "hook": "1951 óta egy szabály védi a világ üldözötteit. Az éghajlatot viszont nem látta előre."
   },
   "sections": [
     {
@@ -18,30 +18,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Világszerte az emberek elmenekülnek országaikból, mert életüket vagy szabadságukat veszély fenyegeti. Évszázadok óta íratlan szabály volt, hogy ajtót nyitunk nekik: ez a **menedékjog**. Ezt a kaput a 20. század óta sajátos törvények határozzák meg, és ma egyre inkább vitatott."
+          "text": "A világon sokan azért menekülnek el, mert az életük vagy a szabadságuk otthon veszélyben van. Századok óta íratlan szabály, hogy ilyenkor ajtót nyitunk: ez a **menedékjog**. A 20. századtól pontos törvények keretezik, ma mégis egyre vitatottabb ez az ajtó."
         }
       ]
     },
     {
       "id": "course_233_le_droit_d_asile_explique_p1",
-      "title": "1951 után lerakott alapok",
+      "title": "Az 1951 után lerakott alapok",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A menedékjog modern jogi keretei az 1951-es **[[Genfi Egyezmény]]**-en alapulnak, amelyet a második világháború után írtak, amikor még emberek milliói vándoroltak Európában. Eredetileg Európára korlátozódott, de egy kiegészítő protokollnak köszönhetően 1967-ben vált általánossá."
+          "text": "A menedékjog mai kerete az 1951-es **[[Genfi Egyezmény (1951)]]**, a második világháború után íródott, amikor még milliók bolyongtak Európában. Először csak Európára szólt, 1967-ben egy kiegészítő jegyzőkönyv tette egyetemessé."
         },
         {
           "type": "paragraph",
-          "text": "Az Egyezmény pontosan meghatározza a **menekült** szót: hazáján kívülre eső személy, aki nem térhet vissza oda, mert attól tart, hogy faja, vallása, nemzetisége, társadalmi csoporthoz való tartozása vagy politikai nézetei miatt üldözik. Ez a meghatározás zavaró módon kizárja a természeti katasztrófák vagy az éhínség áldozatait."
+          "text": "Az egyezmény pontosan megmondja, ki a **menekült**: aki a saját országán kívül van, és nem térhet vissza, mert faja, vallása, nemzetisége, társadalmi csoportja vagy politikai véleménye miatt üldözéstől tart. A meghatározás, zavarba ejtő módon, kihagyja a természeti katasztrófák és az éhínségek áldozatait."
         },
         {
           "type": "paragraph",
-          "text": "Ennek a védelemnek a lényege a **[[A visszaküldés tilalmának elve]]** elve: megtiltja, hogy valakit olyan helyre vigyenek vissza, ahol kínzást vagy halált kockáztatnak. Az Egyesült Nemzetek Szervezete a **[[UNHCR]]** ügynökségre, az otthonuktól elszakadt emberek védelmére szakosodott ügynökségre támaszkodik annak alkalmazásában."
+          "text": "A védelem magva **[[A visszaküldés tilalmának elve]]**: tilos valakit oda visszaküldeni, ahol kínzás vagy halál fenyegeti. Az Egyesült Nemzetek a **[[UNHCR]]** ügynökségére támaszkodik, amely a gyökerestül elmozdított emberek védelmére szakosodott, hogy ezt betartsák."
         },
         {
           "type": "funFact",
-          "text": "Gyakran úgy képzeljük el, hogy a menekültek fogadása teher a gazdag országok számára. Ennek ellenére a világ menekültjeinek körülbelül 75%-át alacsony és közepes jövedelmű országok fogadják konfliktusövezetek közelében."
+          "text": "Sokan a gazdag országok terhének képzelik a menekültek fogadását. Holott a világ menekültjeinek mintegy 75%-át alacsony vagy közepes jövedelmű országok fogadják, a konfliktuszónák közelében."
         }
       ]
     },
@@ -52,11 +52,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A nyilvános vitákban gyakran összekeverik a migráns és a menekült szavakat, de ezek eltérő jogi helyzeteket jelölnek. Egy **menedékkérő** védelem iránti kérelmet nyújtott be, és annak megvizsgálására hatóságra vár. Ha pozitív választ kap, hivatalosan **menekült** lesz, és joga van véglegesen maradni és dolgozni."
+          "text": "A közéleti vitában a migráns és a menekült szavait gyakran keverik, pedig más jogi helyzetet jelölnek. A **menedékkérő** védelmet kért, és arra vár, hogy egy hatóság elbírálja. Ha igent kap, hivatalosan **menekült** lesz: tartósan maradhat, és dolgozhat."
         },
         {
           "type": "paragraph",
-          "text": "Ezzel szemben egy **ZZZeGazdasági bevándorló** önként hagyja el országát, hogy jobb életet keressen, és a Genfi Egyezmény nem vonatkozik rá. Ez a megkülönböztetés politikai feszültség forrása, mert a tényleges utak gyakran vegyesek, a pályázat elbírálása több évig is eltarthat, ami alatt a jelentkezőknek gyakran nincs munkavállalási joguk."
+          "text": "A **gazdasági migráns** ezzel szemben önként megy el, jobb életet keres, és a genfi egyezmény nem vonatkozik rá. Ez a megkülönböztetés politikai feszültséget szül, mert a valódi utak gyakran kevertek, egy kérelem vizsgálata pedig évekig tarthat, amikor a kérőknek gyakran nincs munkajoguk."
         }
       ]
     },
@@ -67,40 +67,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **2015** év fordulópontot jelentett Európa számára: több mint egymillió ember kelt át a Földközi-tengeren, főként a szíriai polgárháború elől menekülve. Ez a beáramlás feltárta a **[[dublini rendelet]]** hibáit, amely előírja, hogy minden kérelmet az első érkezési országnak kell feldolgoznia, ami túlterheli Görögországot és Olaszországot."
+          "text": "**2015** fordulópont volt Európának: több mint egymillió ember kelt át a Földközi-tengeren, főként a szíriai polgárháború elől. Az áradat megmutatta a **[[dublini rendelet]]** réseit: az első érkezési országnak kell minden kérelmet vizsgálnia, és ettől Görögország és Olaszország túlterhelődött."
         },
         {
           "type": "image",
           "asset": "mediterranean_migrant_boat_rescue_refugees",
           "ratio": "16:9",
-          "caption": "2015-ben több mint egymillió ember kelt át a Földközi-tengeren, hogy elérje Európát."
+          "caption": "2015-ben több mint egymillió ember kelt át a Földközi-tengeren, hogy Európába jusson"
         },
         {
           "type": "paragraph",
-          "text": "A válsággal szemben Európa szétszórt módon reagált. 2016-ban az EU és Törökország között létrejött megállapodás kompromisszumot javasolt: pénzügyi támogatásért cserébe Törökország beleegyezett abba, hogy blokkolja az Európába irányuló indulásokat, ezt a stratégiát kritizálták a visszaküldés tilalmának esetleges figyelmen kívül hagyása miatt. 2024-ben az EU új migrációs paktumot fogad el, amely egyensúlyt keres a szolidaritás és a határőrizet között."
+          "text": "A válságra Európa szétesve reagált. 2016-ban az EU és Törökország kompromisszumot kötött: pénzügyi segítségért Törökország megállítja az Európába indulókat. A lépést azért bírálták, mert sértheti a visszaküldés tilalmát. 2024-ben az EU új migrációs paktumot fogadott el, a szolidaritás és a határőrizet egyensúlyát keresve."
         },
         {
           "type": "funFact",
-          "text": "A történelem egyik leghíresebb menekültje Albert Einstein. 1933-ban zsidó származása miatt a nácik megfenyegették, lemondott német állampolgárságáról, és menedékjogot kapott az Egyesült Államokban."
+          "text": "A történelem egyik legismertebb menekültje Albert Einstein. 1933-ban, zsidó származása miatt a nácik fenyegették, lemondott a német állampolgárságról, és az Egyesült Államokban kapott menedéket."
         }
       ]
     },
     {
       "id": "course_233_le_droit_d_asile_explique_p4",
-      "title": "Az új kihívás: klíma és politizálás",
+      "title": "Az új kihívás: éghajlat és politizálás",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A menedékjog jövője olyan valósággal néz szembe, amelyet az 1951-es fogalmazók nem láttak előre: az éghajlati válsággal. 2050-re emberek százmilliói költözhetnek el az emelkedő tengerek vagy az elsivatagosodás miatt, de a klímamenekült státusz még mindig nem létezik, mert ezek az emberek nem tudják bizonyítani az Egyezmény szerinti „üldözést”."
+          "text": "A menedékjog jövője olyan valóságnak ütközik, amelyet az 1951-es szerkesztők nem láttak: a klímaválságnak. 2050-ig több százmillió embert mozdíthat el a tengerszint vagy az elsivatagosodás, klímamenekült státusz mégsem létezik, mert ezek az emberek nem tudnak „üldözést” bizonyítani az egyezmény szerint."
         },
         {
           "type": "paragraph",
-          "text": "Ugyanakkor a menekültügy egyre inkább átpolitizált témává válik a nyugati demokráciákban: az eljárások szigorúbbá válnak, a tartós integrációhoz képest egyre inkább teret nyer a csak ideiglenes védelem gondolata."
+          "text": "Eközben a menedék a nyugati demokráciákban egyre politikaiabb téma: a procedúrák keményednek, és a csak ideiglenes védelem gondolata terjed a tartós beilleszkedéssel szemben."
         },
         {
           "type": "takeaway",
-          "text": "Az 1951. évi genfi ​​egyezmény a visszaküldés tilalmának elvének köszönhetően védi a politikai, vallási vagy társadalmi okokból üldözött személyeket. De továbbra is alkalmatlan az éghajlati menekültek új áramlásával és a mai vegyes migrációs válságokkal szemben."
+          "text": "Az 1951-es Genfi Egyezmény a politikai, vallási vagy társadalmi okból üldözött embereket védi, a visszaküldés tilalmának elvével. A mai klímamenekültekre és kevert migrációs válságokra azonban továbbra sem illeszkedik."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_59_la_decouverte_de_l_anesthesie",
   "title": "Az érzéstelenítés felfedezése",
-  "subtitle": "Gyógyszer",
+  "subtitle": "Orvostudomány",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "1846 előtt gyakran tudatosan és rendkívül fájdalmasan hajtottak végre műtétet. Az érzéstelenítés a műtétet ápolássá, nem kínzássá alakítja.",
+  "description": "1846 előtt a műtétet gyakran ébren, irtózatos fájdalomban végezték. Az érzéstelenítés a sebészetet gyógyítássá tette, nem kínzássá.",
   "hero": {
     "image": "la_decouverte_de_l_anesthesie",
     "ratio": "16:9",
-    "hook": "1846-ban egy napon Bostonban a műtét már nem versenyfutás a fájdalommal."
+    "hook": "1846-ban, Bostonban a sebészet egyszerre abbahagyta a versenyt a fájdalommal."
   },
   "sections": [
     {
@@ -18,28 +18,28 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Képzeljen el egy amputációt elalvás nélkül. A 19. század közepe előtt ez volt a norma. Szíjazzuk a beteget, gyorsan haladunk, imádkozunk."
+          "text": "Képzelj el egy amputációt altatás nélkül. A 19. század közepe előtt ez volt a norma. A beteget lekötözték, gyorsan vágtak, és imádkoztak."
         },
         {
           "type": "paragraph",
-          "text": "A **anesztézia** mindent megváltoztat: lehetővé teszi, hogy a fájdalom tudata nélkül működjön. A modern sebészet végre időt vehet igénybe."
+          "text": "Az **érzéstelenítés** mindent megváltoztatott: ettől lehetett operálni anélkül, hogy a beteg érezte volna a fájdalmat. A modern sebészet végre ráérhetett."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p1",
-      "title": "Előtte: sebesség versus szenvedés",
+      "title": "Előtte: sebesség a szenvedés ellen",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "surgery_without_anesthesia_19th_century",
           "ratio": "4:3",
-          "caption": "Érzéstelenítés nélkül a sebésznek rendkívül gyorsnak kellett lennie."
+          "caption": "Érzéstelenítés nélkül a sebésznek villámgyorsnak kellett lennie."
         },
         {
           "type": "paragraph",
-          "text": "A sebészeket sebességük alapján ítélték meg. Alkoholt, ópiumot vagy nyers erőszakot használtak az emberek mozgásképtelenné tételére. Sok beteg halt meg sokk, fertőzés vagy vérzés következtében."
+          "text": "A sebészeket a sebességük alapján ítélték meg. Alkoholt, ópiumot vagy nyers erőt használtak, hogy a beteget mozdulatlanná tegyék. Sokan sokkban, fertőzésben vagy vérzésben haltak meg."
         }
       ]
     },
@@ -52,45 +52,45 @@
           "type": "image",
           "asset": "ether_anesthesia_first_demonstration_1846",
           "ratio": "4:3",
-          "caption": "Bostonban egy nyilvános tüntetés meggyőzte az orvosvilágot."
+          "caption": "Bostonban egy nyilvános bemutató meggyőzte az orvosvilágot."
         },
         {
           "type": "paragraph",
-          "text": "**1846. október 16.** Bostonban a fogorvos **William Morton** belélegzi a pácienst **éter**. **John Warren** sebész egy nyaki daganatot operál. A beteg nem sikoltoz. A szoba elképedt."
+          "text": "**1846. október 16-án** Bostonban **William Morton** fogorvos **étert** lélegeztetett be egy beteggel. **John Warren** sebész egy nyaki daganatot operált. A beteg nem sikoltozott. A terem megdöbbent."
         },
         {
           "type": "funFact",
-          "text": "Warren állítólag azt mondta: \"Uraim, ez nem humbug.\" A kifejezés híres maradt."
+          "text": "Warren állítólag ezt mondta: „Uraim, ez nem humbug.” A mondat híres maradt."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p3",
-      "title": "Következő: kloroform és viták",
+      "title": "Aztán jött a kloroform és a viták",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Más termékek következtek, mint például a **kloroform**, amely különösen Nagy-Britanniában népszerűvé vált. Rivalizálás támad afelől, hogy ki mit „talált fel”. A szabadalom nem számít: az ötlet az egész világon terjed."
+          "text": "Más szerek következtek, például a **kloroform**, amely főleg Nagy-Britanniában terjedt el. Viták robbantak ki arról, ki „találta fel” mit. A szabadalom nem számított: az ötlet az egész világon szétfutott."
         },
         {
           "type": "paragraph",
-          "text": "Marad egy probléma: elaltatni ölés nélkül. Adagolnia kell, figyelnie kell a légzését és a szívét. Új szakterület születik."
+          "text": "Maradt egy gond: elaltatni anélkül, hogy megölnéd a beteget. Adagolni kellett, figyelni a légzést és a szívet. Új szakterület született."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p4",
-      "title": "Érzéstelenítés ma",
+      "title": "Az érzéstelenítés ma",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az aneszteziológus ma precíz gázokat és gyógyszereket használ, olyan gépeket, amelyek mindent mérnek. Elaltathatja az egész testet vagy csak egy területet (helyi vagy lokoregionális érzéstelenítés)."
+          "text": "Ma az altatóorvos pontos gázokat és gyógyszereket használ, gépekkel mér mindent. Elaltathatja az egész testet, vagy csak egy területet (helyi vagy regionális érzéstelenítés)."
         },
         {
           "type": "takeaway",
-          "text": "A **1846** éter bemutatása óta az érzéstelenítés átalakította a műtétet: kevesebb fájdalom, több idő, nagyobb precizitás... és a biztonság már önmagában is tudomány lett."
+          "text": "Az **1846**-os éterbemutató óta az érzéstelenítés átalakította a sebészetet: kevesebb fájdalom, több idő, nagyobb pontosság, és egy biztonság, amely ma már külön tudomány."
         }
       ]
     }

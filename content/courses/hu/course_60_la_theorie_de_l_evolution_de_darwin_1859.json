@@ -1,14 +1,14 @@
 {
   "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
-  "title": "Darwin evolúciós elmélete",
+  "title": "Darwin evolúcióelmélete",
   "subtitle": "1859",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "1859-ben Darwin kiadta A fajok eredetét. A központi gondolat: az élőlények idővel a természetes szelekció révén változnak.",
+  "description": "1859-ben Darwin kiadta A fajok eredetét. A lényeg: az élővilág idővel változik, természetes szelekcióval.",
   "hero": {
     "image": "la_theorie_de_l_evolution_de_darwin",
     "ratio": "16:9",
-    "hook": "A fajok nincsenek rögzítve. Változnak. Lassan. De biztosan."
+    "hook": "A fajok nem merevek. Változnak. Lassan. De biztosan."
   },
   "sections": [
     {
@@ -18,17 +18,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **1859**-ben **Charles Darwin** publikálta a *A fajok eredetéről*. A könyv sokkol, lenyűgöz, megoszt. Ennek központi gondolata azonban egyszerűen megfogalmazható."
+          "text": "**1859**-ben **Charles Darwin** kiadta *A fajok eredetét*. A könyv sokkolt, lázba hozott, megosztott. A központi ötletét mégis egyszerű kimondani."
         },
         {
           "type": "paragraph",
-          "text": "Az élőlények változatosak. Egyes változatok segítenek a túlélésben és a szaporodásban. Ezeket a változatokat továbbítják. Nemzedékek során változik a népesség."
+          "text": "Az élőlények változnak. Egyes változatok segítenek túlélni és szaporodni. Ezek a változatok öröklődnek. Nemzedékről nemzedékre a populációk átalakulnak."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
-      "title": "A szemet nyitó utazás",
+      "title": "Az utazás, amely kinyitotta a szemét",
       "free": false,
       "blocks": [
         {
@@ -39,47 +39,47 @@
         },
         {
           "type": "paragraph",
-          "text": "Darwin kisfiúként elhagyja a **Vizsla** hajót. Évekig figyelte a növényeket, kövületeket, madarakat. A Galápagos-szigeteken észrevette, hogy a közeli madarak csőre különböző tápláléktól függően."
+          "text": "Fiatalon Darwin a **Beagle** hajón indult útnak. Éveken át növényeket, kövületeket, madarakat figyelt. A Galápagos-szigeteken észrevette, hogy közeli madarak csőre más, aszerint, mit esznek."
         },
         {
           "type": "image",
           "asset": "darwin_finches_galapagos_beaks",
           "ratio": "4:3",
-          "caption": "Különböző diétákhoz igazított fúvókák: erős indikátor."
+          "caption": "Különféle étrendre szabott csőrök: erős nyom"
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
-      "title": "Természetes kiválasztás, magyar nyelven",
+      "title": "A természetes szelekció, egyszerűen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Képzeljünk el egy állatpopulációt. Vannak, akik egy kicsit gyorsabban futnak, kicsit jobban emésztik, kicsit jobban ellenállnak a hidegnek. Ha ez segíti őket a túlélésben és a fiatalokban, ezek a tulajdonságok gyakoribbá válnak."
+          "text": "Képzelj el egy állatpopulációt. Egyesek kicsit gyorsabban futnak, kicsit jobban emésztenek, kicsit jobban bírják a hideget. Ha ez segít túlélni és utódot nevelni, ezek a jegyek gyakoribbá válnak."
         },
         {
           "type": "paragraph",
-          "text": "Nem arról van szó, hogy az egyének „akarnak” fejlődni. Ez egy szűrő: a környezet megtartja azt, ami működik. Darwin ezt **természetes kiválasztásnak**-nek nevezi."
+          "text": "Nem arról van szó, hogy az egyedek „akarnak” fejlődni. Ez egy szűrő: a környezet inkább azt tartja meg, ami működik. Darwin ezt **természetes szelekciónak** nevezte."
         },
         {
           "type": "funFact",
-          "text": "Darwin sokáig várt, mielőtt megjelentette volna. Botránytól tartott. Egy másik természettudós, **Alfred Russell Wallace** hasonló ötletekre jutott: ez késztette Darwint, hogy kiadja könyvét."
+          "text": "Darwin sokáig várt a megjelenéssel. Félt a botránytól. Egy másik természettudós, **Alfred Russel Wallace**, hasonló ötletekre jutott: ez lökte Darwint, hogy kiadja a könyvét."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
-      "title": "Az eszmék ütközése",
+      "title": "Az ötletek ütközése",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A 19. században sokan azt hitték, hogy a fajokat úgy hozták létre, ahogy voltak. Ha azt mondjuk, hogy változnak, és az embereknek közös történelmük van más állatokkal, felrázza a vallást és a társadalmat."
+          "text": "A 19. században sokan azt hitték, a fajokat úgy teremtették, ahogy vannak. Azt mondani, hogy változnak, és hogy az ember más állatokkal közös történetet visel, felkavarta a vallást és a társadalmat."
         },
         {
           "type": "paragraph",
-          "text": "A tudomány halad: a kövületek, a fajföldrajz, majd később a genetika is megerősíti az általános elképzelést."
+          "text": "A tudomány viszont haladt: a kövületek, a fajok földrajza, majd később a genetika igazolta az általános képet."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ma már tudjuk, hogy a DNS változatokat hordoz. Figyeljük az evolúciót a laboratóriumban (baktériumok, vírusok) és a természetben. Küzdünk az antibiotikumokkal szemben rezisztens baktériumok ellen is: ez az élő evolúció."
+          "text": "Ma már tudjuk, hogy a DNS hordozza a változatokat. Az evolúciót laborban is látjuk (baktériumok, vírusok), és a természetben is. Az antibiotikumoknak ellenálló baktériumok ellen is küzdünk: ez élő evolúció."
         },
         {
           "type": "takeaway",
-          "text": "Darwin kimutatta, hogy az élőlények a természetes szelekció útján fejlődnek: a túléléshez és a szaporodáshoz hasznos tulajdonságok terjednek. A modern genetika megerősítette és tisztázta ezt a keretet."
+          "text": "Darwin megmutatta, hogy az élővilág természetes szelekcióval fejlődik: a túlélést és a szaporodást segítő jegyek elterjednek. A modern genetika megerősítette és pontosította ezt a keretet."
         }
       ]
     }

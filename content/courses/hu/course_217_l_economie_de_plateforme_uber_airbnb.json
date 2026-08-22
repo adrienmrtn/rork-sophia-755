@@ -1,14 +1,14 @@
 {
   "id": "course_217_l_economie_de_plateforme_uber_airbnb",
-  "title": "A platformgazdaság (Uber, Airbnb stb.)",
+  "title": "A platformgazdaság (Uber, Airbnb...)",
   "subtitle": "Kapitalizmus gyárak nélkül",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Az Uber, az Airbnb, a Deliveroo szinte semmit sem birtokol: nincs autó, nincs lakás, nincsenek alkalmazottak. Hogyan váltak ezekből a platformokból globális óriások?",
+  "description": "Az Uber, az Airbnb és a Deliveroo szinte semmit sem birtokol: se autót, se lakást, se alkalmazottat. Hogyan lettek ezek a platformok világóriások?",
   "hero": {
     "image": "l_economie_de_plateforme",
     "ratio": "16:9",
-    "hook": "Az Ubernek soha egyetlen autója sem volt, mégis megzavarta a közlekedést szerte a világon."
+    "hook": "Az Uber soha nem birtokolt egyetlen autót sem, és mégis felforgatta a közlekedést az egész világon."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az Uber, az Airbnb, az Amazon vagy a Deliveroo a cégek új kategóriájába tartozik: **digitális platformok**. Nemcsak a már létező szolgáltatásokat digitalizálják, hanem megváltoztatják a tulajdonlás, a munkavégzés és a védelem módját is."
+          "text": "Az Uber, az Airbnb, az Amazon és a Deliveroo egy újfajta céghez tartozik: a **digitális platformhoz**. Nem egyszerűen online teszik a meglévő szolgáltatásokat. Megváltoztatják, mit jelent birtokolni, dolgozni és védve lenni."
         },
         {
           "type": "paragraph",
-          "text": "Ez a modell feltalálta a kapitalizmus új formáját, amely megkérdőjelezi társadalmi szerződésünket. Megértjük, hogyan működik, és miért olyan vita tárgyát képezi."
+          "text": "Ez a modell új kapitalizmust talált ki, olyat, amely megkérdőjelezi a társadalmi szerződésünket. Nézd meg, hogyan működik, és miért szül ennyi vitát."
         }
       ]
     },
@@ -33,74 +33,74 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Egy hagyományos vállalat gyárakat, járműveket, készleteket birtokol, és alkalmazottakat alkalmaz. Egy platform megtöri ezt a modellt: egyszerű digitális infrastruktúrává válik, amely összekapcsolja a keresletet és a kínálatot anélkül, hogy maga termelne semmit."
+          "text": "Egy hagyományos cég gyárakat, járműveket és készletet birtokol, és személyzetet alkalmaz. A platform ezt a modellt töri meg. Egyszerű digitális infrastruktúra lesz, amely összeköti a kínálatot és a keresletet, anélkül hogy maga bármit termelne."
         },
         {
           "type": "paragraph",
-          "text": "Ez a rendszer a [[Hálózati hatás]] alapul: minél több felhasználója van egy platformnak, annál hasznosabbá válik, ami még több felhasználót vonz. Egy szállítási szolgáltatásnál minél több sofőr áll rendelkezésre, annál rövidebb a várakozás, ami több ügyfelet vonz, akik viszont több sofőrt vonzanak. Ez a kör szinte mindig kvázi monopolhelyzetekhez vezet."
+          "text": "A rendszer a [[hálózati hatás]] elvén megy: minél több felhasználója van egy platformnak, annál hasznosabb, és ez még több felhasználót vonz. Egy fuvarszolgáltatásnál minél több a sofőr, annál rövidebb a várakozás, ez több ügyfelet hoz, akik aztán több sofőrt hoznak. Ez a kör majdnem mindig valami monopóliumhoz közeli helyzetben ér véget."
         },
         {
           "type": "funFact",
-          "text": "Az Uber dollármilliárdokat költött az önvezető autók kutatására, hogy végül megszabaduljon utolsó nagy költségétől: az emberi sofőrtől."
+          "text": "Az Uber milliárdokat költött önvezető autók kutatására, azzal a hosszú távú céllal, hogy megszabaduljon az utolsó nagy költségétől: az emberi sofőrtől."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p2",
-      "title": "Munkavégzés a foglalkoztatás védelme nélkül",
+      "title": "Munka a foglalkoztatás védelme nélkül",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ezt a technikai újítást egy sokkal vitatottabb jogi újítás kíséri. A [[Koncertgazdaság és uberizáció]]-ben a platform megtagadja a munkáltatói státuszt, hogy egyszerű technológiai közvetítőként mutassa be magát, amely elkerüli a társadalombiztosítási járulék, a minimálbér vagy a fizetett szabadság megfizetését."
+          "text": "Ehhez a technikai újításhoz egy sokkal vitatottabb jogi is járul. Ez [[koncertgazdaság és uberizáció]] világa: a platform elutasítja a munkaadói szerepet, és egyszerű technológiai közvetítőnek állítja magát, így megússza a járulékokat, a minimálbért és a fizetett szabadságot."
         },
         {
           "type": "image",
           "asset": "gig_economy_workers_strike_protest",
           "ratio": "16:9",
-          "caption": "A sofőröket és a kézbesítőket gyakran önálló vállalkozónak minősítik, nem pedig alkalmazottnak."
+          "caption": "A sofőröket és a futárokat gyakran önálló vállalkozónak sorolják be, nem alkalmazottnak"
         },
         {
           "type": "paragraph",
-          "text": "A munkavállaló önálló munkavállalóvá válik, aki egyedül viseli az összes kockázatot: betegség, baleset, keresletcsökkenés. Azonban gyakran az alkalmazás szabályai (kiszabott árak, minősítés, szankciók) hatálya alá tartoznak, ezt a helyzetet **algoritmikus alárendeltségnek** nevezzük. Ezzel szemben a bíróságok több országban megkezdték e szerződések [[Átminősítés]] tényleges fizetési foglalkoztatásba kényszerítését."
+          "text": "A dolgozó vállalkozó lesz, aki egyedül visel minden kockázatot: betegséget, balesetet, a kereslet zuhanását. Az app szabályai mégis érvényesek, a rögzített tarifáktól az értékeléseken és a büntetéseken át, ezt **algoritmikus alárendeltségnek** hívják. Válaszul több ország bírósága elrendelte az [[Átminősítés]] alkalmazását: ezek a szerződések valójában munkaviszonyok."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p3",
-      "title": "A városok fenekestül felfordultak",
+      "title": "Felforgatott városok",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "E platformok hatása túlmutat a munka világán: a városokat is átalakítja. Az Airbnb a rövid távú turisztikai bérbeadás megkönnyítésével versenyez a hagyományos szállodákkal, miközben csökkenti a lakosok számára elérhető szálláshelyek számát."
+          "text": "Ezeknek a platformoknak a hatása túlmegy a munka világán. A városokat is átrajzolja. Azáltal, hogy megkönnyíti a rövid távú turistabérlést, az Airbnb versenyez a hagyományos szállodákkal, miközben csökkenti a helyieknek elérhető lakások számát."
         },
         {
           "type": "paragraph",
-          "text": "Eredmény: a bérleti díjak emelkednek a városközpontokban, és az olyan metropoliszoknak, mint Párizs vagy Barcelona, ​​szigorú szabályokat kellett bevezetniük, például a bérleti napokra vonatkozó kvótákat. Az államok a **három adózás** létrehozására is törekszenek, hogy ezek a platformok ott fizessék ki az adójukat, ahol ténylegesen megkeresik a pénzt."
+          "text": "Az eredmény emelkedő belvárosi bérleti díj, és olyan városoknak, mint Párizs és Barcelona, szigorú szabályokat kellett hozniuk, például éjszakakorlátot arra, hány éjre adható ki egy otthon. Az államok **digitális adózást** is próbálnak bevezetni, hogy ezek a platformok ott fizessék az adójukat, ahol igazán keresnek."
         },
         {
           "type": "funFact",
-          "text": "New Yorkban az Airbnb-vel szembeni szigorú szabályozás 2023-ban néhány hónap alatt 80%-kal csökkent a legális listák száma."
+          "text": "New Yorkban az Airbnb 2023-as szigorú szabályozása néhány hónap alatt 80%-kal vágta a törvényes hirdetések számát."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p4",
-      "title": "A dolgozók új státusza felé?",
+      "title": "Új státusz felé a dolgozóknak?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A platformgazdaság gyors és gyakran olcsóbb szolgáltatásokat hozott, és megkönnyítette egyesek számára a jövedelemszerzést. De ez a hatékonyság a 20. században épített védelmek gyengülésén alapul."
+          "text": "A platformgazdaság gyors, gyakran olcsóbb szolgáltatásokat hozott, és egyeseknek megkönnyítette, hogy jövedelemhez jussanak. De ez a hatékonyság a 20. században felépített védelmek gyengítésén nyugszik."
         },
         {
           "type": "paragraph",
-          "text": "A jelenlegi vita egy köztes státusz létrehozásáról szól a munkavállaló és az önálló vállalkozó között, a jogok hordozhatóságával: minden munkavállaló halmozná fel a szociális védelmet, függetlenül attól, hogy hány platformon dolgozik. Ennek a modellnek a jövője attól függ, hogy a szabályozók képesek-e szabályozni az innováció elfojtása nélkül."
+          "text": "A mai vita egy köztes státusz létrehozásáról szól, alkalmazott és vállalkozó között, hordozható jogokkal: minden dolgozó szociális védelmet gyűjtene, bármennyi platformnak dolgozik. A modell jövője azon múlik, a szabályozók keretet tudnak-e adni neki anélkül, hogy megfojtanák az újítást."
         },
         {
           "type": "takeaway",
-          "text": "A platformgazdaság a gyárak nélküli kapitalizmuson alapul, amely kihasználja a hálózati hatást, miközben dolgozóit gyakran bizonytalan szabadúszóvá alakítja. A jobb szociális védelemért folytatott harc – anélkül, hogy ezt a modellt megtörné – még csak most kezdődött."
+          "text": "A platformgazdaság gyárak nélküli kapitalizmuson nyugszik, amely a hálózati hatást aknázza ki, miközben a dolgozóit gyakran bizonytalan helyzetű vállalkozókká teszi. A jobb szociális védelem harca, a modell széttörése nélkül, csak most kezdődik."
         }
       ]
     }

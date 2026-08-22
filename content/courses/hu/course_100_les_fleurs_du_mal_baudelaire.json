@@ -1,14 +1,14 @@
 {
   "id": "course_100_les_fleurs_du_mal_baudelaire",
-  "title": "A gonosz virágai, Baudelaire",
+  "title": "A romlás virágai, Baudelaire",
   "subtitle": "1857",
   "subject": "litterature",
   "subcategory": "French & European Classics",
-  "description": "Baudelaire kivonja a szépséget a gonoszból és a mindennapi párizsi életből. Az 1857-ben elítélt gyűjtemény a modern költészetet alapozta meg.",
+  "description": "Baudelaire a rosszból és a párizsi mindennapokból húzza ki a szépséget. Az 1857-ben elítélt kötet a modern költészetet alapozza meg.",
   "hero": {
     "image": "les_fleurs_du_mal_baudelaire",
     "ratio": "16:9",
-    "hook": "Hat cenzúrázott vers, egy meggyőződés és a modern költészet születése."
+    "hook": "Hat betiltott vers, egy ítélet, és a modern költészet születése."
   },
   "sections": [
     {
@@ -18,117 +18,117 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **1857**-ben **Charles Baudelaire** közzétette a **A gonosz virágai**-t. A gyűjtemény fordulópontot jelent a költészet történetében. Addig a **[[Romantika]]** dominált: a költők idealizálták a természetet és a nagy érzéseket. Baudelaire mást tesz. Rútságról, bűnről, városról, gyötrelemről ír."
+          "text": "**1857**-ben **Charles Baudelaire** megjelentette **A romlás virágai** című kötetet. A gyűjtemény fordulatot hozott a költészet történetében. Addig a **[[Romantika]]** uralkodott: a költők a természetet és a nagy érzéseket idealizálták. Baudelaire mást csinált. Rútságról, bűnről, városról, szorongásról írt."
         },
         {
           "type": "paragraph",
-          "text": "A könyv botrányt kavart. „A közerkölcs megsértéséért” ítélték el. Baudelaire azonban egy erős gondolatot véd: szépséget meríthetünk abból, ami megdöbbent vagy undort kelt. A költőt alkimistához hasonlítja. Ahol mások csak sarat látnak, ő aranyat keres."
+          "text": "A könyv botrányt kavart. „A közerkölcs megsértése” miatt ítélték el. Baudelaire mégis erős gondolatot védett: szépséget lehet kinyerni abból, ami megdöbbent vagy undort kelt. A költőt alkimistához hasonlította. Ahol mások csak sarat láttak, ő aranyat keresett."
         }
       ]
     },
     {
       "id": "course_100_les_fleurs_du_mal_baudelaire_p1",
-      "title": "Baudelaire: az elátkozott dandy",
+      "title": "Baudelaire, az elátkozott dandy",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Charles Baudelaire** a **Átkozott költőt** játssza: a peremen élő írót, akit kora nem szeretett. Nehéz élete táplálja munkáját. Szereti az eleganciát és a kifinomultságot, amit mi **dendiség**-nek hívunk, de ismeri a romlást és az adósságot is."
+          "text": "**Charles Baudelaire** az **elátkozott költő** alakját testesítette meg: a peremen élő írót, akit a kora nem szeretett. Nehéz élete táplálta a művét. Szerette az eleganciát és a finomságot, amit **dandizmusnak** hívtak, de ismerte a romlást és az adósságot is."
         },
         {
           "type": "paragraph",
-          "text": "**6 este** édesapja árván maradt, és összeveszett apósával, **Aupick** tábornokkal, aki vagyona egy részét irányítja. Szereti **Jeanne Duval** színésznőt és énekesnőt. Kapcsolatuk szenvedélyes és konfliktusos. A gyűjtemény több versét is inspirálja."
+          "text": "**6 évesen** elvesztette az apját, és összeveszett a nevelőapjával, **Aupick** tábornokkal, aki a vagyona egy részét kezelte. Szerette **Jeanne Duval** színésznőt és énekesnőt. A kapcsolatuk szenvedélyes és viharos volt. Ő ihlette a kötet több versét."
         },
         {
           "type": "image",
           "asset": "charles_baudelaire_portrait_photograph",
           "ratio": "4:3",
-          "caption": "Charles Baudelaire: elegancia, fájdalom és modernség."
+          "caption": "Charles Baudelaire: elegancia, fájdalom és modernség"
         },
         {
           "type": "funFact",
-          "text": "Hat verset 1857-ben ítéltek el, és hivatalosan csak 1949-ben, azaz 92 évvel az ítélet után rehabilitálták."
+          "text": "Hat verset 1857-ben elítéltek, és hivatalosan csak 1949-ben rehabilitáltak, 92 évvel az ítélet után."
         },
         {
           "type": "paragraph",
-          "text": "A **1857** ügyben, a **[[Bovary asszony]]** perének évében, **A gonosz virágai** is bíróság elé került. Flaubert-t és Baudelaire-t erkölcstelenség vádjával állítják bíróság elé. Ezenkívül Baudelaire lefordítja **Edgar Allan Poe** amerikai fantasy-írót. „Lélektestvérnek” tartja, megosztja ízlését a hátborzongató dolgok iránt."
+          "text": "**1857**-ben, ugyanabban az évben, amikor **[[Bovary asszony]]** pere folyt, **A romlás virágai** is bíróság elé került. Flaubert-t és Baudelaire-t egyaránt erkölcstelenséggel vádolták. Baudelaire emellett **Edgar Allan Poe**-t fordította, a hátborzongató amerikai mestert. „Lélektestvérnek” tartotta, mert osztozott a hátborzongató iránti ízlésén."
         }
       ]
     },
     {
       "id": "course_100_les_fleurs_du_mal_baudelaire_p2",
-      "title": "A gyűjtemény építészete",
+      "title": "A kötet szerkezete",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A könyv nem egy egyszerű versgyűjtemény. Baudelaire előrehaladást követ itt. **„Lép és ideális”**, az első nagyobb rész, két állapottal áll szemben. **lép**, az angolból kölcsönzött szó, mély unalomra, ok nélküli melankóliára utal. A **ideal** az emelkedettség és a tiszta szépség szomja."
+          "text": "A könyv nem egyszerű versgyűjtemény. Baudelaire ívet rajzolt belé. Az első nagy szakasz, **„Spleen és ideál”**, két állapotot állít szembe. A **spleen**, angolból átvett szó, mély unalomra, ok nélküli búnra utal. Az **ideál** a magasság és a tiszta szépség szomja."
         },
         {
           "type": "paragraph",
-          "text": "A **„Az albatrosz”** című művében a költő ehhez a tengeri madárhoz hasonlítja magát. Repülés közben fenséges. A hajó fedélzetén ügyetlenné és nevetségessé válik. A kép összefoglalja a meg nem értett művész magányát."
+          "text": "**„Az albatrosz”** című versben a költő ehhez a tengeri madárhoz hasonlítja magát. Repülés közben fenséges. A hajófedélzeten ügyetlen és nevetséges. A kép a meg nem értett művész magányát sűríti."
         },
         {
           "type": "image",
           "asset": "paris_1850s_night_streets_gas_lamps",
           "ratio": "4:3",
-          "caption": "Éjszakai Párizs az 1850-es években: Baudelairi lép beállítása."
+          "caption": "Éjszakai Párizs az 1850-es években: a baudelaire-i spleen díszlete"
         },
         {
           "type": "paragraph",
-          "text": "**„Parizsi fesztiválok”** belső dekorációvá varázsolja a várost. Utcák, tömegek és járókelők tükrözik a költő hangulatait. **[[Haussmann báró]]** alatt Párizs átalakul: széles körutak, új épületek. Baudelaire ezután **babakocsi**-ként bolyong, vagyis sétálóként, aki pontos cél nélkül figyeli a várost. A „Bor”, „A gonosz virágai” és „A lázadás” részek a „Halál” következtetés előtti szökési kísérleteket vizsgálják."
+          "text": "**„Párizsi képek”** a várost belső tájjá változtatja. Utcák, tömegek és járókelők tükrözik a költő hangulatait. **[[Haussmann báró]]** idején Párizs átalakult: széles körutak, új bérházak. Baudelaire **flâneurként** kószált, cél nélküli sétálóként, aki figyeli a várost. A „Bor”, „A romlás virágai” és „A lázadás” szakaszok menekülést próbálnak, mielőtt a kötet a „Halál”-lal zárul."
         }
       ]
     },
     {
       "id": "course_100_les_fleurs_du_mal_baudelaire_p3",
-      "title": "Levelezés és költői alkímia",
+      "title": "Megfelelések és költői alkímia",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Baudelaire elsajátítja a klasszikus formákat. Gyakran ír **szonett** nyelven, egy 14 soros verset, vagy a **alexandriai** 12 szótagos sorokat. De új látásmódot hoz bele. **„Levelezések”** című verse a természetet templomként írja le, ahol a parfümök, a színek és a hangok reagálnak egymásra."
+          "text": "Baudelaire uralta a klasszikus formákat. Gyakran írt **szonettet**, 14 soros verset, vagy **alexandrint**, 12 szótagos sort. De új látást hozott beléjük. **„Megfelelések”** című verse a természetet templomként írja le, ahol illatok, színek és hangok felelnek egymásnak."
         },
         {
           "type": "quote",
-          "text": "A természet egy templom, ahol élő oszlopok / Néha zavaros szavakat engednek ki.",
-          "attribution": "Charles Baudelaire: „Levelezések”"
+          "text": "A természet templom, ahol élő oszlopok / Néha zavaros szavakat engednek ki.",
+          "attribution": "Charles Baudelaire, „Megfelelések”"
         },
         {
           "type": "paragraph",
-          "text": "Baudelaire továbbfejleszti a **szinesztézia** ötletét: az érzékek keverednek. Egy színt „szagolhatunk”, vagy „láthatunk” egy parfümöt. A világ jelek hálózatává válik, amelyet a költőnek meg kell fejtenie. Ez a poétika nyitja meg az utat a később Verlaine és Mallarmé által hordozott **[[szimbolizmus]]** felé."
+          "text": "Itt bontja ki a **szinesztézia** gondolatát: az érzékek keverednek. „Szagolhatod” a színt, vagy „láthatod” a parfümöt. A világ jelek hálózata lesz, amelyet a költőnek kell megfejtenie. Ez a poétika nyitja az utat **[[A szimbolizmus és Baudelaire öröksége]]** felé, amelyet később Verlaine és Mallarmé vitt tovább."
         },
         {
           "type": "paragraph",
-          "text": "Az egész projektet egy híres képlet foglalja össze: „Te adtad nekem a saradat, és aranyat csináltam belőle”. Baudelaire nem tagadja a rosszat vagy a csúnyaságot. Művészeti anyaggá alakítja át őket."
+          "text": "Az egész terv egy híres mondatba fér: „Sarat adtál, és aranyat csináltam belőle.” Baudelaire nem tagadja a rosszat és a rútat. Művészeti anyaggá alakítja őket."
         }
       ]
     },
     {
       "id": "course_100_les_fleurs_du_mal_baudelaire_p4",
-      "title": "Modernitás és utókor",
+      "title": "Modernség és utókor",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Baudelaire számára a **[[Modernség]]** abból áll, hogy megragadja azt, ami elmúlik: a városi életet, a mulandót, a mindennapokat. De azt is keresi, ami marad. A modern költő úgy figyeli az idejét, hogy nem menekül előle."
+          "text": "Baudelaire-nek a **[[Modernség]]** azt jelenti, hogy elkapja, ami múlik: a városi életet, a pillanatnyit, a mindennapit. De azt is keresi, ami megmarad. A modern költő a saját korát figyeli, nem menekül előle."
         },
         {
           "type": "paragraph",
-          "text": "Ez a városra való odafigyelés készíti elő a **[[Prózai költemény]]** verses és rím nélküli verses szöveget. Baudelaire a **[[Le Spleen de Paris]]**-ben fejlesztette ki, amely Párizsról szóló rövidprózaversek posztumusz gyűjteménye."
+          "text": "Ez a városra figyelés készítette elő a **[[Prózai költemény]]** formáját, a versmérték és rím nélküli költői szöveget. Baudelaire **[[Le Spleen de Paris]]** kötetében bontotta ki, a Párizsról szóló rövid prózaversek posztumusz gyűjteményében."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1857",
-              "title": "Kiadvány",
-              "detail": "Botrány és elítélés az erkölcstelenségért."
+              "title": "Megjelenés",
+              "detail": "Botrány, majd erkölcstelenség miatti ítélet."
             },
             {
               "date": "1949",
               "title": "Rehabilitáció",
-              "detail": "A hat cenzúrázott költemény végre felemelkedik."
+              "detail": "A hat betiltott vers tilalmát végül feloldották."
             },
             {
               "date": "Utókor",
@@ -139,11 +139,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Baudelaire a költő szerepét is újradefiniálja. Hugóban még mindig a költő vezeti a nemzetet. Baudelaire-ben marginális emberré válik, aki látja, hogy a társadalom mit szeretne eltitkolni. A **A gonosz virágai** először botrányt keltett, majd az egész következő évszázad referenciájává vált."
+          "text": "Baudelaire a költő szerepét is újraírta. Hugónál a költő még a nemzetet vezeti. Baudelaire-nél kívülálló lesz, aki azt látja, amit a társadalom elrejtene. **A romlás virágai** először botrányt keltett, aztán az egész következő évszázad mércéje lett."
         },
         {
           "type": "takeaway",
-          "text": "A **A gonosz virágai** forradalmasítja a költészetet azáltal, hogy kivonja a szépséget a gonoszból és a mindennapi városi életből. A gyűjtemény a közel egy évszázados elítélés ellenére a **[[Modernség]]** és a **[[szimbolizmus]]** alapjait hozza létre."
+          "text": "**A romlás virágai** forradalmasította a költészetet: a rosszból és a városi mindennapokból húzta ki a szépséget. A kötet megalapozta a **[[Modernség]]** versét, és utat nyitott **[[A szimbolizmus és Baudelaire öröksége]]** felé, noha majdnem egy évszázadig tiltás alatt állt."
         }
       ]
     }

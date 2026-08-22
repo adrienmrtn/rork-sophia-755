@@ -1,14 +1,14 @@
 {
   "id": "course_61_le_big_bang",
-  "title": "Az ősrobbanás",
+  "title": "Az Ősrobbanás",
   "subtitle": "13,8 milliárd év",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "13,8 milliárd évvel ezelőtt az univerzum tágulni kezdett. Ez nem egy bomba a légüres térben: maga a tér növekszik.",
+  "description": "13,8 milliárd éve az univerzum tágulni kezdett. Ez nem bomba a semmiben: maga a tér nő.",
   "hero": {
     "image": "le_big_bang",
     "ratio": "16:9",
-    "hook": "Az Ősrobbanás nem egy robbanás az űrben. Ez az a tér, amely növekedni kezd."
+    "hook": "Az Ősrobbanás nem robbanás a térben. A tér kezd el nőni."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**13,8 milliárd évvel ezelőtt**, minden, ami ma létezik, rendkívül sűrű és forró állapotban koncentrálódott. A tudósok ezt a kezdetet néha [[szingularitás]]-nek nevezik: olyan pont, ahol a sűrűség és a hőmérséklet olyan szélsőséges, hogy a szokásos törvényeink már nem elegendőek a helyzet leírására."
+          "text": "**13,8 milliárd éve** minden, ami ma létezik, egy rendkívül sűrű és forró állapotban zsúfolódott össze. A tudósok ezt a kezdetet néha [[szingularitás]] néven emlegetik: olyan pontként, ahol a sűrűség és a hőmérséklet annyira szélsőséges, hogy a szokásos törvényeink már nem írják le jól a helyzetet."
         },
         {
           "type": "paragraph",
-          "text": "Aztán az univerzum tágulni kezd. Ez nem egy bomba, amely az anyagot a már ott lévő űrbe dobja. Ez a **tér-idő**, a teret és az időt egyesítő szövet, amely növekszik, magával viszi az anyagot. Ez a történet ma is folytatódik."
+          "text": "Aztán az univerzum tágulni kezdett. Ez nem bomba, amely anyagot lő egy már ott lévő űrbe. A **téridő**, a teret és az időt összefogó szövet nő, és viszi magával az anyagot. Ez a történet ma is tart."
         }
       ]
     },
     {
       "id": "course_61_le_big_bang_p1",
-      "title": "Nem robbanás az ürességben",
+      "title": "Nem robbanás az űrben",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **„Big Bang”** név zavaró. Gyakran elképzeljük a tűzijátékot egy üres szoba közepén. De ez előtt az esemény előtt nincs se hely, se kívül. Az általunk ismert tér és idő vele kezdődik. Kérdezd meg: \"mi volt azelőtt?\" » ezért nagyon kényessé válik: az „előtte” már nem ugyanazt jelenti."
+          "text": "A **„Big Bang”** név félrevezet. Gyakran tűzijátékot képzelünk egy üres szoba közepén. Holott ezelőtt nincs szoba, nincs kint. A tér és az idő, ahogy ismerjük, vele kezdődik. Ezért kényes a kérdés, „mi volt előtte”: az „előtte” már nem ugyanazt jelenti."
         },
         {
           "type": "image",
@@ -43,53 +43,53 @@
         },
         {
           "type": "funFact",
-          "text": "A \"Big Bang\" kifejezést a **1949** brit asztrofizikus, **Fred Hoyle** alkotta meg, aki nem hitt benne. Nevetni akart az ötleten. A becenév megragadt."
+          "text": "A „Big Bang” kifejezést **1949**-ben találta ki **Fred Hoyle** brit asztrofizikus, aki nem hitt benne. Gúnyolódni akart. A ragadványnév megmaradt."
         },
         {
           "type": "paragraph",
-          "text": "A bővítés elképzeléséhez képzeljen el egy léggömbre rajzolt pontokat. Amikor felfújod a léggömböt, minden pont eltávolodik a többitől. A felszínen egyetlen pont sem a „középpont”. Az univerzumban ez egy kicsit ugyanaz: a **galaxisok**, hatalmas csillagcsoportok távolodnak egymástól, mert a köztük lévő tér megnyúlik."
+          "text": "A tágulást így képzeld el: pontok egy lufin. Ha fújod a lufit, minden pont távolodik a többitől. A felszínen egyik pont sem „a középpont”. Az univerzumban hasonló a helyzet: a **galaxisok**, hatalmas csillaghalmazok, azért távolodnak egymástól, mert a köztük lévő tér nyúlik."
         }
       ]
     },
     {
       "id": "course_61_le_big_bang_p2",
-      "title": "Három nagyszerű bizonyíték",
+      "title": "Három nagy bizonyíték",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **1929**-ben **Edwin Hubble** amerikai csillagász megfigyelte, hogy minél távolabb van egy galaxis, annál gyorsabban távolodik. Az univerzum tehát nem rögzített: növekszik. Ez a **Hubble-törvény**, a távolság és a galaxisok szökési sebessége közötti összefüggés."
+          "text": "**1929**-ben **Edwin Hubble** amerikai csillagász azt látta, hogy minél távolabbi egy galaxis, annál gyorsabban távolodik. Az univerzum tehát nem merev: nő. Ez a **Hubble-törvény**, a galaxisok távolsága és menekülési sebessége közti viszony."
         },
         {
           "type": "paragraph",
-          "text": "**1965**-ben két mérnök, **Arno Penzias** és **Robert Wilson** mindenhonnan rádiócsörgést észlelt. Ez a ZZ0ZZkozmikus háttér: egyfajta hővisszhang a fiatal univerzumból, ami akkor keletkezik, amikor a fény először tudott szabadon keringeni, körülbelül **3380 000 évvel** a kezdetek után. [[kozmikus mikrohullámú háttér]]"
+          "text": "**1965**-ben két mérnök, **Arno Penzias** és **Robert Wilson**, mindenhonnan jövő rádiós sercegést fogott. Ez a [[kozmikus mikrohullámú háttér]]: a fiatal univerzum hővisszhangja, akkor bocsátódott ki, amikor a fény először szabadon járhatott, nagyjából **380.000 évvel** a kezdet után."
         },
         {
           "type": "funFact",
-          "text": "A régi, rosszul hangolt analóg televíziók „hójának” egy kis része ebből a kozmikus háttérből származott."
+          "text": "A rosszul hangolt régi analóg tévék „havazásának” egy kis része ebből a kozmikus háttérből jött."
         },
         {
           "type": "paragraph",
-          "text": "Harmadik pillér: a fényelemek arányai. A számítások körülbelül **75%** hidrogént és **25%** héliumot jósolnak az első néhány percben. A megfigyelések megerősítik ezeket a számokat. Ez a [[primordiális nukleoszintézis]], az első atommagok gyára az Ősrobbanást követő percekben."
+          "text": "A harmadik pillér: a könnyű elemek aránya. A számítások nagyjából **75%** hidrogént és **25%** héliumot jósolnak, amely az első percekben keletkezett. A megfigyelések ezt igazolják. Ez a [[primordiális nukleoszintézis]], az első atommagok műhelye az Ősrobbanást követő percekben."
         }
       ]
     },
     {
       "id": "course_61_le_big_bang_p3",
-      "title": "Gyorsított idővonal",
+      "title": "Gyorsított időrend",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Közvetlenül a kezdet után az univerzum a **infláció** fázisán megy keresztül, ami egy rendkívül gyors tágulás a másodperc töredéke alatt. Ezután **3 perc körül**, **protonok** és **neutronok**, az atommagokat alkotó részecskék, az első atommagokká állnak össze. Az univerzum sokáig olyan marad, mint egy átlátszatlan köd: a fény nem terjed szabadon."
+          "text": "Közvetlenül a kezdet után az univerzum **infláción** ment át, egy villámgyors táguláson egy másodperc töredéke alatt. Aztán, nagyjából **3 perc** körül, a **protonok** és **neutronok**, az atommagokat alkotó részecskék, első magokká álltak össze. Sokáig az univerzum átlátszatlan köd maradt: a fény nem utazott szabadon."
         },
         {
           "type": "paragraph",
-          "text": "Körülbelül **380 000 év**, a **elektronok**, az atommagok körül keringő könnyű részecskék, amelyek összekapcsolódnak az atommagokkal, és semleges atomokat képeznek. A fény felszabadul: ez a diffúz háttér kibocsátása. Az első csillagok jóval később, körülbelül **200 millió évvel** később születtek. Napunk csak **4,6 milliárd évvel ezelőtt jelent meg**, az ősi csillagok által újrahasznosított anyagból."
+          "text": "Nagyjából **380.000 év** körül az **elektronok**, a magok körül keringő könnyű részecskék, csatlakoztak a magokhoz, és semleges atomok lettek. A fény kiszabadult: ekkor született a kozmikus háttér. Az első csillagok jóval később, nagyjából **200 millió év** múlva születtek. A mi Napunk csak **4,6 milliárd éve** jelent meg, régi csillagok újrahasznosított anyagából."
         },
         {
           "type": "funFact",
-          "text": "Ha az univerzum története egy év alatt játszódna le, akkor az ősrobbanás január 1-jén éjfélkor következne be, és az emberiség csak december 31-én, 23 óra 52 perckor jelenne meg. ."
+          "text": "Ha az univerzum története egy évbe férne, az Ősrobbanás január 1-jén éjfélkor történne, az emberiség pedig csak **december 31-én 23:52-kor** jelenne meg."
         }
       ]
     },
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az emberek sokáig azon töprengtek, vajon a gravitáció végül lelassítja-e a terjeszkedést. A **1998**-ben a távoli [[szupernóvák]], távolságjelzőként használt csillagok robbanásai az ellenkezőjét mutatják: a [[Az univerzum felgyorsult tágulása]]. Egy titokzatos **sötét energia**, egy taszító erő, amely a galaxisokat odébb taszítja, mintha ezt a távolságot taszítaná, és az univerzum tartalmának hozzávetőleg **68%-át** képviselné. A közönséges anyagból, amiből mi készültünk, csak körülbelül **5 %** lenne."
+          "text": "Sokáig azt kérdeztük, a gravitáció végül lelassítja-e a tágulást. **1998**-ban távoli [[szupernóvák]] megfigyelése, távolságjelző csillagrobbanásoké, az ellenkezőjét mutatta: [[az univerzum felgyorsult tágulása]]. Egy titokzatos **sötét energia**, taszító erő, amely a galaxisokat löki szét, látszólag ezt a távolodást gyorsítja, és az univerzum tartalmának nagyjából **68%**-át tenné ki. A közönséges anyag, amiből mi is vagyunk, csak nagyjából **5%**."
         },
         {
           "type": "paragraph",
-          "text": "Ha ez a gyorsulás folytatódik, az univerzum szélsőséges lehűlés felé fordulhat, amelyet néha **Big Freeze** becenéven is becéznek, és a végén a hideg. Egy dolog biztos: amit látunk, az csak egy része az egésznek. Ahogy a fény felénk halad, a tér tovább nyúlik."
+          "text": "Ha ez a gyorsulás folytatódik, az univerzum szélsőséges lehűlés felé tarthat, amit néha **Big Freeze**-nek, fagyos végnek neveznek. Egy biztos: amit látunk, csak egy szelet az egészből. Amíg a fény felénk utazik, a tér tovább nyúlik."
         },
         {
           "type": "takeaway",
-          "text": "Az ősrobbanás, **13,8 milliárd évvel ezelőtt**, nem robbanás az üres térben: ez maga a tér tágulása, amit a galaxisok repülése, a kozmikus mikrohullámú háttér, valamint a hidrogén és a hélium aránya is megerősít."
+          "text": "Az Ősrobbanás, **13,8 milliárd éve**, nem robbanás üres térben: maga a tér tágulása, amelyet a galaxisok menekülése, a kozmikus mikrohullámú háttér és a hidrogén-hélium arány igazol."
         }
       ]
     }

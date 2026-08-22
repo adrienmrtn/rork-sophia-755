@@ -1,14 +1,14 @@
 {
   "id": "course_68_la_theorie_de_la_relativite_pour_tous",
   "title": "A relativitáselmélet mindenkinek",
-  "subtitle": "Einstein 1905 és 1915",
+  "subtitle": "Einstein, 1905 és 1915",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "1905-ben és 1915-ben Einstein megváltoztatta a térről, az időről és a gravitációról alkotott elképzelésünket. Számításai nélkül pedig a GPS több kilométert is tévedne.",
+  "description": "1905-ben és 1915-ben Einstein megváltoztatta a térről, az időről és a gravitációról alkotott képünket. A számításai nélkül a GPS-ed több kilométert tévedne.",
   "hero": {
     "image": "la_theorie_de_la_relativite_pour_tous",
     "ratio": "16:9",
-    "hook": "Az idő nem univerzális óra. A gravitáció pedig nem egy láthatatlan húr."
+    "hook": "Az idő nem egyetemes óra. A gravitáció sem láthatatlan kötél."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **1905** és a **1915**-ben **Albert Einstein** két elméletet tett közzé, amelyek megrázták a fizikát. Addig leginkább a [[Newton]] követtük: mindenkinél, mindenhol egyformán telt az idő."
+          "text": "**1905**-ben és **1915**-ben **Albert Einstein** két elméletet közölt, amelyek felforgatták a fizikát. Addig főleg [[Newton]] nyomán gondoltuk: az idő mindenkinél, mindenhol ugyanúgy folyik."
         },
         {
           "type": "paragraph",
-          "text": "Einstein megmutatja, hogy a tér és az idő összekapcsolódik, és hogy a gravitáció felfogható e szövet görbületeként. Ezek az ötletek magyarázzák a [[fekete lyukak]] és a [[Ősrobbanás]]. Ezenkívül minden nap javítják a telefon GPS-ét."
+          "text": "Einstein megmutatta, hogy a tér és az idő össze van kötve, és a gravitáció ennek a szövetnek a görbületeként érthető. Ezek az ötletek magyarázzák a [[fekete lyukak]] létét és az [[Ősrobbanás]] modelljét. Mindennap a telefonod GPS-ét is helyesbítik."
         }
       ]
     },
     {
       "id": "course_68_la_theorie_de_la_relativite_pour_tous_p1",
-      "title": "1905: speciális relativitáselmélet",
+      "title": "1905: a speciális relativitás",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Speciális relativitáselmélet** két egyszerű gondolaton alapul. A természet törvényei mindenkire azonosak, aki állandó sebességgel mozog. És a fény sebessége vákuumban, **kb. 300 000 km/s**, mindenki számára azonos, akár közeledünk, akár távolodunk tőle."
+          "text": "A **speciális relativitás** két egyszerű ötleten áll. A természet törvényei ugyanazok mindenkinek, aki állandó sebességgel mozog. És a fény sebessége vákuumban, **nagyjából 300.000 km/s**, mindenkinek ugyanaz, akár közeledsz felé, akár távolodsz tőle."
         },
         {
           "type": "image",
@@ -43,15 +43,15 @@
         },
         {
           "type": "paragraph",
-          "text": "Ahhoz, hogy a fény mindig ugyanazt a sebességet tartsa, az időnek módosítania kell. Ez a [[idődilatáció]]: minél gyorsabban halad egy tárgy, annál lassabban telik el számára az idő, mint a nyugalomban lévőknél. Ez nem illúzió. **atomos órák**, olyan műszerek, amelyek rendkívüli pontossággal mérik az időt."
+          "text": "Ahhoz, hogy a fény mindig ugyanazzal a sebességgel menjen, az időnek igazodnia kell. Ez az [[idődilatáció]]: minél gyorsabban megy egy tárgy, annál lassabban telik neki az idő egy nyugalomban lévőhöz képest. Ez nem csalódás. **Atomórák**, a rendkívül pontos időmérők, megmérték."
         },
         {
           "type": "paragraph",
-          "text": "Einstein is rajzol [[E=mc²]]: a tömeg az energia nagyon koncentrált formája. Mivel a **c**, a fénysebesség óriási, egy nagyon kis tömeg kolosszális energiát szabadíthat fel. A [[magfizika]], az atommagok és reakcióik tanulmányozásának pillére."
+          "text": "Einstein ebből vonta le az [[E=mc²]] összefüggést is: a tömeg nagyon sűrű energia. Mivel **c**, a fénysebesség, hatalmas, egy apró tömeg kolosszális energiát szabadíthat fel. Ez a [[magfizika]] egyik pillére, az atommagok és reakcióik tanulmányozásáé."
         },
         {
           "type": "funFact",
-          "text": "1905-ben Einstein nem volt egyetemi tanár. Vizsgálóként dolgozik a svájci berni szabadalmi hivatalban."
+          "text": "1905-ben Einstein nem egyetemi tanár volt. Vizsgálóként dolgozott a berni szabadalmi hivatalban, Svájcban."
         }
       ]
     },
@@ -62,38 +62,38 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tíz évvel később Einstein kiadta a **Általános relativitáselméletet**. Newton a gravitációt egy láthatatlan erőnek tekintette, amely tömegeket húz egymás felé. Einstein egy másik képet kínál: **tér-idő**, a tér és az idő egyetlen szövetben egyesülve rugalmas szövetet alkot."
+          "text": "Tíz évvel később Einstein közzétette az **általános relativitást**. Newton a gravitációt láthatatlan erőnek látta, amely a tömegeket egymás felé húzza. Einstein más képet adott: a **téridő**, a tér és az idő egyetlen szövetté kötve, hajlékony anyag."
         },
         {
           "type": "paragraph",
-          "text": "A Naphoz hasonlóan nehéz tömeg kiüríti ezt a szövetet. Képzelj el egy bowlinglabdát a trambulinon. A mellé dobott labda nem megy egyenesen: követi a mélyedést. Hasonlóképpen a Föld kering, mert követi a Nap által létrehozott görbületet."
+          "text": "Egy nehéz tömeg, mint a Nap, bemélyeszti ezt a szövetet. Képzelj el egy bowlinggolyót egy trambulinon. Egy mellé dobott golyó nem megy egyenesen: követi a gödröt. Ugyanígy a Föld azért kering, mert a Nap által vájt görbületet követi."
         },
         {
           "type": "paragraph",
-          "text": "Még a fény is követi ezeket a görbéket. A **1919**-ben **Arthur Eddington** brit csillagász egy fogyatkozás során igazolta: a csillagok látszólagos helyzete a Nap mögött kissé eltolódott. Einstein egyik napról a másikra híressé válik."
+          "text": "Még a fény is követi ezeket a görbéket. **1919**-ben a brit csillagász, **Arthur Eddington** egy fogyatkozáskor ellenőrizte: a Nap mögötti csillagok látszólagos helyzete kicsit elcsúszott. Einstein egyik napról a másikra híres lett."
         }
       ]
     },
     {
       "id": "course_68_la_theorie_de_la_relativite_pour_tous_p3",
-      "title": "GPS, zsebbiztos",
+      "title": "A GPS, zsebbe való bizonyíték",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A GPS-műholdak körülbelül **14 000 km/h**, **20 000 km** magasságban forognak. Ahhoz, hogy a legközelebbi méteres helyzetbe kerüljön, az óráiknak szinkronban kell maradniuk a földön lévőkkel. De két relativisztikus hatás működik egyszerre."
+          "text": "A GPS-műholdak nagyjából **14.000 km/h**-val keringenek, **20.000 km** magasan. Ahhoz, hogy méterre pontosan elhelyezzenek, az óráiknak szinkronban kell maradniuk a földiekkel. Két relativisztikus hatás játszik egyszerre."
         },
         {
           "type": "paragraph",
-          "text": "Gyorsaságuk miatt az idő valamivel lassabban telik, ami a speciális relativitáselmélet hatása: kb. **7 mikrohullámú sütő** késés naponta. A gyengébb magassági gravitáció miatt ott egy kicsit gyorsabban telik az idő, az általános relativitáselmélet hatása: kb. **45 mikrohullámú sütő** előre."
+          "text": "A sebességük miatt ott az idő kicsit lassabban telik, a speciális relativitás hatása: nagyjából **7 mikroszekundum** késés naponta. A gyengébb gravitáció miatt a magasságban az idő kicsit gyorsabban telik, az általános relativitás hatása: nagyjából **45 mikroszekundum** előny."
         },
         {
           "type": "funFact",
-          "text": "Relativisztikus korrekciók nélkül a GPS-pozíció hibája megközelítőleg elérheti a napi **11 km** értéket."
+          "text": "Relativisztikus korrekciók nélkül a GPS helyzeti hibája elérhetné a napi **11 km**-t."
         },
         {
           "type": "paragraph",
-          "text": "Az eredmény körülbelül **38 mikrohullámú sütő** nettó előleg naponta. Kicsinek tűnik. Fénysebességnél ez már óriási a navigációhoz."
+          "text": "A mérleg nagyjából **38 mikroszekundum** nettó előny naponta. Aprónak tűnik. Fénysebességnél a navigációnak ez már hatalmas."
         }
       ]
     },
@@ -104,19 +104,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az általános relativitáselmélet fekete lyukakat jósol: olyan régiókat, ahol a görbület olyan erős, hogy már a fény sem jön ki. Einstein kételkedett valódi létezésükben. [[rádiócsillagászat]], az égbolt rádióhullámokban történő megfigyelése, és a friss képek ezt igazolták."
+          "text": "Az általános relativitás megjósolja a fekete lyukakat: olyan tartományokat, ahol a görbület annyira erős, hogy még a fény sem jön ki. Einstein kételkedett a valós létükben. A [[rádiócsillagászat]], az ég rádióhullámos megfigyelése, és a friss képek igazolták őket."
         },
         {
           "type": "paragraph",
-          "text": "A **1916**-ben a **gravitációs hullámokat** is megjósolta: kozmikus katasztrófák, például két fekete lyuk egyesülése által előidézett tér-idő hullámzásokat. Meg kell várnunk, amíg a **2015** és a **LIGO** obszervatórium, az űrrezgésekre érzékeny földdetektor észleli őket."
+          "text": "**1916**-ban a **gravitációs hullámokat** is megjósolta: a téridő redőit, amelyeket kozmikus katasztrófák keltenek, például két fekete lyuk összeolvadása. **2015**-ig és a **LIGO** obszervatóriumig, egy földi, a tér rezgéseire érzékeny detektorig kellett várni az észlelésükre."
         },
         {
           "type": "paragraph",
-          "text": "Végül ezek az egyenletek megnyitják az utat a táguló univerzum felé, amely az ősrobbanás modelljének alapja. Einstein először hozzáadott egy kozmológiai állandót****, egy matematikai kifejezést egy rögzített univerzum kikényszerítésére. Hubble megfigyelései később meggyőzték az ellenkezőjéről."
+          "text": "Végül ezek az egyenletek utat nyitottak egy táguló univerzumnak, az Ősrobbanás-modell alapjának. Einstein először **kozmológiai állandót** tett hozzá, egy matematikai tagot, hogy merev univerzumot kényszerítsen. Hubble megfigyelései aztán meggyőzték az ellenkezőjéről."
         },
         {
           "type": "takeaway",
-          "text": "A **E=mc²** összekapcsolja a tömeget és az energiát. Az általános relativitáselmélet szerint a gravitáció meghajlítja a téridőt. E korrekciók nélkül a GPS naponta több kilométert tévedne."
+          "text": "Az **E=mc²** a tömeget és az energiát köti össze. Az általános relativitás azt mondja, a gravitáció görbíti a téridőt. E korrekciók nélkül a GPS-ed naponta több kilométert tévedne."
         }
       ]
     }

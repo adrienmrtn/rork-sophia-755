@@ -1,14 +1,14 @@
 {
   "id": "course_225_la_montee_des_eaux",
-  "title": "Emelkedő vizek",
-  "subtitle": "A tengerszint emelkedik",
+  "title": "A tengerszint emelkedése",
+  "subtitle": "A tengerek szintje nő",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "2100-ra az óceánok szintje **óna méterrel** emelkedhet. Egész országok és tengerparti megavárosok esetében ez már nem távoli hipotézis, hanem tervezés kérdése.",
+  "description": "2100-ig az óceánok szintje akár **egy métert** is emelkedhet. Egész országoknak és parti megavárosoknak ez már nem távoli feltevés, hanem tervezési kérdés.",
   "hero": {
     "image": "la_montee_des_eaux",
     "ratio": "16:9",
-    "hook": "A tenger minden évben egy kicsit jobban emelkedik, és néhány ország már tervezi a lépést."
+    "hook": "A tenger minden évben egy kicsit magasabb, és egyes országok már a költözést tervezik."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Évezredek óta az óceánok szintje nagyjából stabil maradt. Az ipari korszak óta folyamatosan emelkedik, és ennek az emelkedésnek a sebessége évről évre gyorsul."
+          "text": "Évezredeken át az óceánok szintje nagyjából stabil maradt. Az ipari kor óta emelkedik, és ennek az emelkedésnek a sebessége évről évre gyorsul."
         },
         {
           "type": "paragraph",
-          "text": "2100-ra az óceánok magassága 30 centiméterrel egy méterrel emelkedhet a kibocsátási döntéseinktől függően. Sok partszakasz számára ez már nem távoli fenyegetés, hanem nagyon konkrét tervezési probléma."
+          "text": "2100-ig az óceánok 30 centimétertől egy méterig emelkedhetnek, a kibocsátási döntéseinktől függően. Sok partnak ez már nem távoli fenyegetés, hanem konkrét településrendezési baj."
         }
       ]
     },
@@ -33,46 +33,46 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A tengerszint két különböző fizikai ok miatt emelkedik. Az első a [[Hőtágulás]]: amikor a víz felmelegszik, a molekulái jobban mozognak, és a térfogata kicsit megnő, mint minden folyadéknak. Az óceánok 1970 óta elnyelték az emberi tevékenység által termelt többlethő több mint 90%-át, és ez a hő növeli a térfogatukat."
+          "text": "A tengerszint két különböző fizikai okból nő. Az első a [[Hőtágulás]]: ha a víz melegszik, a molekulái jobban mozognak, és a térfogata egy kicsit nő, mint bármely folyadéknál. Az óceánok 1970 óta a többlethő több mint 90%-át elnyelték, amelyet az emberi tevékenység termelt, és ez a hő felfújja a térfogatukat."
         },
         {
           "type": "paragraph",
-          "text": "A második ok a szárazon elhelyezett jég olvadása. Ügyeljen arra, hogy ne keverje össze a sarkvidéki jégtáblával, amely már úszik a vízen, és amelynek olvadása nem okoz tengerszint-emelkedést. Ezek a [[Jéglap]], ezek a Grönland és az Antarktisz talaján elhelyezett hatalmas jégsapkák, amelyek édesvíz hozzáadásával valóban túlcsordulnak az óceánokon."
+          "text": "A második ok a szárazföldön ülő jég olvadása. Ne keverd a sarkvidéki tengeri jéggel: az már a vízen úszik, az olvadása nem emeli a tengerek szintjét. Az igazi többlet a [[Jéglap]] hatalmas sapnáiból jön, amelyek Grönland és az Antarktisz talaján ülnek, és édesvizet adnak az óceánhoz."
         },
         {
           "type": "image",
           "asset": "greenland_ice_sheet_melting_glacier",
           "ratio": "16:9",
-          "caption": "Grönland olvadása, ha teljes lenne, 7 méterrel megemelné az óceánokat."
+          "caption": "Ha Grönland teljesen elolvadna, az óceánok 7 métert emelkednének"
         },
         {
           "type": "funFact",
-          "text": "Grönland évente körülbelül 280 milliárd tonna jeget veszít, vagyis annyi vizet, hogy Franciaország egészét 50 centiméteres réteggel borítsa be."
+          "text": "Grönland évente nagyjából 280 milliárd tonna jeget veszít, annyi vizet, amennyi egész Franciaországot 50 centiméteres réteggel fedné."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p2",
-      "title": "Olyan sebesség, ami aggasztja a tudósokat",
+      "title": "Egy sebesség, amely riadóztatja a tudósokat",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1880 óta a globális tengerszint körülbelül 20 centiméterrel emelkedett. Mindenekelőtt a jelenlegi sebesség riasztja a kutatókat: ez a 20. században évi 1,4 mm körül volt, szemben a mai **üreges 3,6mm-rel**, ami több mint 150%-os gyorsulás."
+          "text": "1880 óta a világ tengerszintje nagyjából 20 centimétert nőtt. A kutatókat főleg a mai sebesség riasztja: a 20. században évi nagyjából 1,4 mm volt, ma **évi 3,6 mm**, több mint 150%-os gyorsulás."
         },
         {
           "type": "paragraph",
-          "text": "A [[IPCC]] szakértői becslések szerint ez a tendencia még évtizedekig folytatódik, még akkor is, ha most drasztikusan csökkentenék a kibocsátást, mert az óceánoknak időbe telik, hogy reagáljanak a hőmérséklet-változásokra."
+          "text": "Az [[IPCC]] szakértői szerint ez a trend évtizedekig tart, még akkor is, ha most drasztikusan csökkentenénk a kibocsátást, mert az óceánok lassan reagálnak a hőmérséklet-változásra."
         },
         {
           "type": "image",
           "asset": "coastal_flooding_sea_level_rise_city",
           "ratio": "4:3",
-          "caption": "50 cm-es emelkedés egy 100 éves árvizet éves eseménnyé változtathat."
+          "caption": "50 cm emelkedés százéves árvizet tehet majdnem éves eseménnyé"
         },
         {
           "type": "paragraph",
-          "text": "Az igazi veszély nem csak az átlagosan valamivel magasabb tengerszint, hanem a [[Viharhullámok és százéves árvizek]]: 50 centiméteres emelkedés elég lehet ahhoz, hogy egy évszázadonként egyszer várható katasztrófa szinte éves eseménnyé váljon."
+          "text": "Az igazi veszély nem csak egy kicsit magasabb átlagos tenger. A [[Viharhullámok és százéves árvizek]] megszaporodása: 50 centiméter elég lehet ahhoz, hogy egy százévente várt katasztrófa majdnem évente jöjjön."
         }
       ]
     },
@@ -83,44 +83,44 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A vízszint emelkedése elsősorban azokat a régiókat érinti, amelyek a legkevésbé járultak hozzá a globális felmelegedéshez. A nagy folyó deltái, mint például a Nílus, a Mekong vagy a Gangesz, a frontvonalon vannak. Bangladesben, ahol 170 millió lakos él, egy méteres növekedés a terület 17%-ának elvesztését okozhatja."
+          "text": "A vízszintemelkedés főleg azokat a vidékeket üti, amelyek a legkevesebbet adták a felmelegedéshez. A nagy folyódelták, a Nílus, a Mekong, a Gangesz, az első vonalban vannak. Bangladesben, ahol 170 millióan élnek, egy méteres emelkedés a terület 17%-ába kerülhet."
         },
         {
           "type": "paragraph",
-          "text": "Az olyan kis szigetállamok számára, mint a Maldív-szigetek vagy Kiribati, a víz alatti teljes eltűnés már nem tudományos-fantasztikus hipotézis, hanem a politikai tervezés valódi tárgya. Ezzel szemben a gazdag megavárosok, mint Miami vagy New York, milliárdokat fektetnek töltésekbe és szivattyúkba."
+          "text": "Kis szigetállamoknak, a Maldív-szigeteknek vagy Kiribatinak, a teljes víz alá kerülés már nem sci-fi, hanem politikai tervezési téma. Ezzel szemben gazdag megavárosok, Miami vagy New York, milliárdokat ölnek gátakba és szivattyúkba."
         },
         {
           "type": "image",
           "asset": "jakarta_indonesia_sinking_flooding_maldives",
           "ratio": "16:9",
-          "caption": "Jakarta egyesíti az emelkedő vizet és a talaj süllyedését, ami kettős veszély."
+          "caption": "Jakarta a vízszintemelkedést és a talajsüllyedést egyszerre viseli"
         },
         {
           "type": "funFact",
-          "text": "2009-ben a Maldív-szigetek kormánya víz alatti kormányülést tartott búvárruhában, hogy figyelmeztesse a világot egy jelentős klímakonferencia előtt."
+          "text": "2009-ben a maldív kormány víz alatt tartott minisztertanácsot, búvárruhában, hogy a világ figyelmét felhívja egy nagy klímakonferencia előtt."
         },
         {
           "type": "paragraph",
-          "text": "Az indonéziai **Jakarta** város a talajvíz túlzott szivattyúzása miatt egyre mélyebbre süllyed a talajba. Ezzel a kettős fenyegetéssel szembesülve az ország radikális döntést hozott, hogy egy vadonatúj fővárost, Nusantarát épít Borneó szigetén."
+          "text": "**Jakartában**, Indonéziában, a város a talajba is süllyed a túlzott talajvízszivattyúzás miatt. Ezzel a kettős fenyegetéssel szemben az ország radikális döntést hozott: új fővárost épít, Nusantarát, Borneó szigetén."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p4",
-      "title": "Alkalmazkodj, vagy lépj vissza",
+      "title": "Alkalmazkodni, vagy hátrálni",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "E kihívással szemben két stratégia kiegészíti egymást. Az első a felmelegedés korlátozása, hogy lelassítsa a növekedést 2100 után. A második az, hogy alkalmazkodni kell ahhoz, ami már elkerülhetetlen, a természetes védekezés megerősítésével, mint a [[Mangrove]]s vagy a dűnék, vagy olyan nehezebb megoldásokkal, mint a főbb holland munkák."
+          "text": "Két stratégia egészíti ki egymást. Az első a felmelegedés fékezése, hogy 2100 után is lassuljon az emelkedés. A második lépés: alkalmazkodni ahhoz, ami már elkerülhetetlen. Természetes védelmet kell erősíteni, a [[Mangrove]] övezeteket vagy a dűnéket, vagy nehezebb megoldásokat hozni, mint a holland nagy művek."
         },
         {
           "type": "paragraph",
-          "text": "Egyes esetekben az egyetlen megoldás a visszalépés: az emberek és a tevékenységek szárazföldre költöztetése, mielőtt a katasztrófák túl gyakran megismétlődnének. Ez egy igazi szokásváltás azokban a társadalmakban, amelyek évszázadok óta kötődnek a tengerparthoz."
+          "text": "Egyes helyeken az egyetlen megoldás a hátrálás lesz: lakókat és tevékenységeket beljebb vinni, mielőtt a katasztrófák túl sűrűn ismétlődnek. Ez igazi szokásváltás azoknak a társadalmaknak, amelyek évszázadok óta a parthoz kötődnek."
         },
         {
           "type": "takeaway",
-          "text": "A tengerszint évente 3,6 mm-rel emelkedik a hőtágulás és a szárazföldi jég olvadásának együttes hatására. 2100-ra ez az emelkedés elérheti az egy métert, és több száz millió ember elköltöztetését kényszerítheti ki."
+          "text": "A tengerszint évi 3,6 mm-rel nő, a hőtágulás és a szárazföldi jég olvadásának együtteséből. 2100-ig ez az emelkedés elérheti az egy métert, és több százmillió embert kényszeríthet költözésre."
         }
       ]
     }

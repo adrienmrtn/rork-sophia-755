@@ -1,14 +1,14 @@
 {
   "id": "course_165_orphee_et_eurydice",
-  "title": "Orpheus és Eurydice",
+  "title": "Orpheusz és Eurüdiké",
   "subtitle": "A szerelem, amely dacol a halállal",
   "subject": "mythologie",
   "subcategory": "Greece: the gods",
-  "description": "Orpheusz leszáll az alvilágba, hogy visszahozza Euridikét. Zenéje elhajlítja a halált. Egyetlen tiltott pillantás elég ahhoz, hogy mindent elveszítsen.",
+  "description": "Orpheusz leszáll az Alvilágba, hogy visszahozza Eurüdikét. A zenéje meghajlítja a halált. Egyetlen tiltott pillantás elég, hogy mindent elveszítsen.",
   "hero": {
     "image": "orphee_et_eurydice",
     "ratio": "16:9",
-    "hook": "Lírája megnyugtatja az Alvilágot. Kétségei örökre hagyják Eurydice-t."
+    "hook": "A lantja megnyugtatja az Alvilágot. A kételye örökre elveszi Eurüdikét."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Orfeusz** egy zenész, akinek lírája még köveket is mozgat. Amikor felesége, **Eurydice** meghal, nem hajlandó gyászolni. Élve lemegy a halottak közé, hogy visszahozza."
+          "text": "**Orpheusz** zenész, akinek a lantja még a köveket is megindítja. Amikor a felesége, **Eurüdiké**, meghalt, nem fogadta el a gyászt. Élve ment le a holtakhoz, hogy visszahozza."
         },
         {
           "type": "paragraph",
-          "text": "[[Virgil]] és [[Ovidius]] latin költők rögzítették ezt az elbeszélést. A tragikus szerelemen túl ez a történet a kételyről, a türelmetlenségről és a művészet erejéről a halállal szemben."
+          "text": "A latin költők, [[Virgil]] és [[Ovidius]], rögzítették ezt a történetet. A tragikus szerelem mögött ez a kételyről, a türelmetlenségről és a művészet halál feletti erejéről szól."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p1",
-      "title": "A fegyvereknél erősebb zenész",
+      "title": "Zenész, aki erősebb a fegyvernél",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orpheus a Múzsa **Calliope** fia. A **lant**, a **Apollo**, a művészetek istenének ajándéka, nem csak a tetszésre szolgál. Megnyugtatja az állatokat, mozgatja a fákat, megnyugtatja a vad természetet. Ahol más hősök erővel győznek, Orpheusz harmóniával győzedelmeskedik."
+          "text": "Orpheusz **Kalliope** múzsa fia. A **lantja**, **Apollón**, a művészetek istene ajándéka, nem csak tetszeni akar. Megnyugtatja az állatokat, megmozgatja a fákat, lecsillapítja a vad természetet. Ahol más hősök erővel győznek, Orpheusz harmóniával diadalmaskodik."
         },
         {
           "type": "image",
           "asset": "orpheus_lyre_painting_ancient_myth",
           "ratio": "4:3",
-          "caption": "Orpheusz és lírája: a művészet mint hatalom a világ felett."
+          "caption": "Orpheusz és a lantja: a művészet mint hatalom a világ fölött"
         },
         {
           "type": "paragraph",
-          "text": "A **Argonauták** expedíciója során a hős [[Jason]] vezetésével a Sirens megpróbálja magához vonzani a legénységet. Orpheus hangosabban énekel, és megmenti társait. Aztán feleségül veszi a **Eurydice** driádot, egy fanimfát. A boldogság rövid."
+          "text": "Az **argonauták** expedícióján, amelyet [[Jason]] hős vezetett, a szirének a legénységet akarták csalogatni. Orpheusz hangosabban énekelt, és megmentette a társait. Aztán feleségül vette **Eurüdikét**, az erdei driádot. A boldogság rövid volt."
         },
         {
           "type": "funFact",
-          "text": "Az esküvő napján Eurydice elmenekül [[Aristaeus]] pásztor elől. Kígyóra lép. A méreg megöli. Árnyéka a [[Styx]], a Pokol folyója felé indul."
+          "text": "Az esküvő napján Eurüdiké elszaladt [[Aristaeus]] pásztor elől. Kígyóra lépett. A méreg megölte. Az árnyéka a [[Styx]] felé indult, az Alvilág folyója felé."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p2",
-      "title": "Élve szállj le a holtak közé",
+      "title": "Élve lemenni a holtakhoz",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orpheus megkísérli a [[Katabázis]]: leszállást a pokolba. Nincsenek fegyverek. Csak a zenéje. Elaltatja [[Cerberus]]-t, a bejáratot őrző háromfejű kutyát. Meghajlítja [[Charon]]-t, a holtak csónakosát."
+          "text": "Orpheusz [[Katabázis]] útjára indult: leszállt az Alvilágba. Fegyver nélkül. Csak a zenéjével. Elaltatta [[Cerberus]] háromfejű kutyáját, aki a kaput őrzi. Meghajlította [[Charon]] hajósát, a holtak révészét."
         },
         {
           "type": "paragraph",
-          "text": "**Hádész** és **Perszephone**, az alvilág uralkodói előtt Orpheus élete legmegindítóbb dallamát játssza. Az alvilág egy pillanatra megáll. **Sziszifusz** és **Tantalusz** elfelejti a kínzást. Könnyeket hullattak a [[Ernyes]], a bosszú istennői."
+          "text": "**Hadész** és **Perszephoné**, az alvilág uralkodói előtt Orpheusz élete legmegrendítőbb dalát játszotta. Az Alvilág egy pillanatra megállt. **Sziszüphosz** és **Tantalosz** elfelejtette a kínját. Az [[Ernyes]], a bosszú istennői, könnyeztek."
         },
         {
           "type": "funFact",
-          "text": "Egyes változatokban Orpheusz megérinti Perszephoné-t, emlékeztetve őt saját Hádész általi elrablására. A holtak királynője felismeri fájdalmát."
+          "text": "Egyes változatokban Orpheusz Perszephonét azzal érintette meg, hogy emlékeztette a saját elrablására. A holtak királynője felismerte a fájdalmát."
         },
         {
           "type": "paragraph",
-          "text": "Hádész elfogadja a lehetetlent: Eurydice visszamehet. De abszolút feltétel. Orfeusznak előtte kell mennie anélkül, hogy megfordulna, amíg el nem érik a fényt."
+          "text": "Hadész elfogadta a lehetetlent: Eurüdiké feljöhet. De egy abszolút feltétellel. Orpheusznak előtte kell mennie, és nem nézhet hátra, amíg el nem érik a fényt."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p3",
-      "title": "A tekintet, ami mindent elveszít",
+      "title": "A pillantás, amely mindent elveszít",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A visszamászás egy megpróbáltatás. Mögötte csend. Az árnyékok nem adnak zajt. A kijárat közelében kétség uralkodik. Mi van, ha Hádész megcsalta? Orphée **megfordul**."
+          "text": "A feljövetel kínszenvedés volt. Mögötte csend. Az árnyak nem adnak hangot. A kijárat közelében a kétely győzött. Mi van, ha Hadész becsapta? Orpheusz **hátranézett**."
         },
         {
           "type": "paragraph",
-          "text": "A tekintetük egy pillanatra találkozik. Ekkor Euridikét elhatalmasodik a sötétség. A veszteséget ezúttal emberi mulasztás okozta. Az átjáró bezárul. Orpheusz elvándorol, majd visszavonul Trákiába."
+          "text": "A tekintetük egy másodpercre találkozott. Aztán Eurüdikét elnyelte a sötétség. Ezúttal emberi hiba okozta a veszteséget. Az átjáró bezárult. Orpheusz kóborolt, aztán Trákiába vonult vissza."
         },
         {
           "type": "funFact",
-          "text": "Halála után Orpheus feje a [[Hebrus]] folyóba dobva Leszboszra sodródott volna. Ott orákulum lett volna, olyan erős, hogy **Apollo** maga követelte volna a csendet."
+          "text": "Halála után Orpheusz fejét a [[Hebrus]] folyóba dobták, és az elúszott Leszboszig. Ott jóslóvá vált, olyan erőssé, hogy **Apollón** maga követelte a hallgatását."
         },
         {
           "type": "paragraph",
-          "text": "Bármilyen új szerelem visszautasítása a [[Maenads]] dühét váltja ki, **Dionüszosz** papnőit, akiket rituális delírium fog el. Széttépik. Lírája azonban tovább énekel, magával ragadja az áramlat."
+          "text": "Mert semmilyen új szerelmet nem akart, felbőszítette a [[Maenads]] csoportját, **Dionüszosz** papnőit, akiket szertartásos őrület fogott el. Széttépték. A lantja mégis tovább énekelt, ahogy a sodrás vitte."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p4",
-      "title": "Amit a mítosz üzent",
+      "title": "Amit a mítosz továbbadott",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orpheusz halálából született meg a [[Orphizmus]] vallási mozgalom, amely a lélek üdvösségét ígérte a tisztító rítusokon keresztül. A halál már nem egy sivár vég, hanem egy átmenet, amelyre felkészülni kell."
+          "text": "Orpheusz halálából született az [[Orphizmus]], vallási irányzat, amely a lélek üdvét ígérte tisztító rítusokkal. A halál ott már nem sivár vég, hanem előkészítendő átjáró."
         },
         {
           "type": "paragraph",
-          "text": "Az „Orpheus tekintete” még mindig inspirálja az operát, a mozit, különösen a [[Jean Cocteau]]-t és az irodalmat. [[Maurice Blanchot]] számára a művész az, aki a sötétségbe néz, akár annak az árán is, hogy elveszíti azt, amit szeret. Az istenek végül elhelyezik a lírát az égen, egy csillagképben: a művészet tovább tart, mint a művész."
+          "text": "Az „orpheuszi pillantás” ma is ihleti az operát, a filmet, különösen [[Jean Cocteau]] munkáiban, és az irodalmat. [[Maurice Blanchot]] szerint a művész a sötétségbe néz, akkor is, ha elveszíti, amit szeret. Az istenek végül a lantot az égbe helyezték, csillagképként: a művészet tovább tart, mint a művész."
         },
         {
           "type": "takeaway",
-          "text": "**Orfeusz** elbűvöli zenéjével az Alvilágot, majd elveszíti **Eurydice**-t, mivel túl korán megfordul. A művészet képes meghajlítani a halált; az emberi kétség az utolsó szó."
+          "text": "**Orpheusz** a zenéjével megbabonázza az Alvilágot, aztán elveszíti **Eurüdikét**, mert túl korán hátranéz. A művészet meghajlíthatja a halált. Az emberi kételynek jut az utolsó szó."
         }
       ]
     }

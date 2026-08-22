@@ -1,14 +1,14 @@
 {
   "id": "course_121_la_renaissance_italienne",
-  "title": "Az olasz reneszánsz",
-  "subtitle": "század 14-16",
+  "title": "Az itáliai reneszánsz",
+  "subtitle": "14-16. század",
   "subject": "art",
   "subcategory": "Painting & Movements",
-  "description": "Két évszázad alatt Olaszország újra feltalálta a festészetet, a szobrászatot és az építészetet, és megváltoztatta a világot.",
+  "description": "Két évszázad alatt Itália újra feltalálta a festészetet, a szobrászatot és az építészetet, és megváltoztatta, ahogyan a világot nézzük.",
   "hero": {
     "image": "la_renaissance_italienne",
     "ratio": "16:9",
-    "hook": "Két évszázad alatt Olaszország újra feltalálta a művészetet és a mi világnézetünket."
+    "hook": "Két évszázad alatt Itália újra feltalálta a művészetet és a tekintetünket."
   },
   "sections": [
     {
@@ -18,135 +18,135 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az olasz reneszánsz (14-16. század) nem csupán stílusváltás. Ez egy újfajta világlátás. Két évszázad alatt Olaszország mindenek középpontjába a megfigyelést, az értelmet és az egyént helyezte."
+          "text": "Az itáliai reneszánsz (14-16. század) nem csak stílusváltás volt. Új módja volt a világ látásának. Két évszázad alatt Itália a megfigyelést, az észt és az egyént tette minden középpontjába."
         },
         {
           "type": "paragraph",
-          "text": "A félsziget gazdag városaiban született forradalom újra feltalálja a festészetet, a szobrászatot és az építészetet. Két hajtóerő hajtja: a görög és római ókor újrafelfedezése, valamint a merész műszaki találmányok."
+          "text": "A félsziget gazdag városaiban született ez a fordulat, és újra feltalálta a festészetet, a szobrászatot és az építészetet. Két motor hajtotta: a görög-római ókor újrafelfedezése és merész technikai találmányok."
         }
       ]
     },
     {
       "id": "course_121_la_renaissance_italienne_p1",
-      "title": "Firenze, a város, amely meggyújtja a biztosítékot",
+      "title": "Firenze, a város, amely meggyújtotta a kanócot",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Minden **Firenze**-ben kezdődik, amely a 14. században uralta az európai gazdaságot a textil- és bankszektornak köszönhetően. Ott a **Medici** család vette át a hatalmat. Ezek a bankárok presztízseszközként használják a [[Pártfogás]]-t, a művészfinanszírozást."
+          "text": "Minden **Firenzében** indult, amely a 14. században a textilnek és a banknak köszönhetően uralta Európa gazdaságát. Ott vette át a hatalmat a **Medici** család. Ezek a bankárok a [[pártfogás]] eszközét, a művészek finanszírozását presztízsnek használták."
         },
         {
           "type": "funFact",
-          "text": "A kamatos hitelezés tilalmának megkerülésére Mediciek banki trükköket találtak ki. Az egyház mindaddig szemet huny, amíg kápolnákat finanszíroznak."
+          "text": "A kamatra adott kölcsön tilalmát ügyes banki trükkökkel kerülték meg. Az Egyház hunyt szemet, amíg ők kápolnákat fizettek."
         },
         {
           "type": "image",
           "asset": "lorenzo_de_medici_portrait_florence",
           "ratio": "4:3",
-          "caption": "Laurent de Medici, a „Csodálatos”, a művészek nagy védelmezője."
+          "caption": "Lorenzo de' Medici, „a Nagyszerű”, a művészek nagy pártfogója"
         },
         {
           "type": "paragraph",
-          "text": "Ugyanakkor a **humanizmus** megváltoztatja az ember helyét. Az olyan gondolkodók, mint [[Pico della Mirandola]] azt állítják, hogy az emberi lények képesek megérteni a természetet az értelem révén. A **1453**-ben Konstantinápoly bukása Olaszországba taszítja a tudósokat elfeledett görög kéziratokkal."
+          "text": "Közben a **humanizmus** áthelyezte az ember helyét. Olyan gondolkodók, mint [[Pico della Mirandola]], azt állították, hogy az ember ésszel megértheti a természetet. **1453**-ban Konstantinápoly eleste tudósokat tolt Itália felé, elfeledett görög kéziratokkal."
         }
       ]
     },
     {
       "id": "course_121_la_renaissance_italienne_p2",
-      "title": "A valóság megfestése: perspektíva és test",
+      "title": "A valóság festése: perspektíva és test",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A 15. században **Brunelleschi** építész **1420** körül feltalálta a [[lineáris perspektíva]]. Elmúlt a középkor, ahol nagyobbra festették a fontosabbat: a tér ma matematikai szabályokat követ, mint a valóságra nyitott ablak."
+          "text": "A 15. században **Brunelleschi** építész **1420** körül feltalálta a [[lineáris perspektíva]] szabályait. Eltűnt a középkori szokás, hogy a fontosat nagyobbra festik. A tér matematikai szabályokat követett, mint egy ablak a valóságra."
         },
         {
           "type": "image",
           "asset": "brunelleschi_linear_perspective_florence",
           "ratio": "4:3",
-          "caption": "A perspektíva a mélység illúzióját adja egy sík felületen."
+          "caption": "A perspektíva mélységillúziót ad egy sík felületen"
         },
         {
           "type": "paragraph",
-          "text": "**Leonardo da Vinci** tovább megy: testeket boncolgat, hogy megértse az izmokat és az idegeket, és érzelmeket is lefest. A Flandriából származó olajfesték fokozatosan felváltja a [[Tempera]]-t, és lehetővé teszi a [[Chiaroscuro]]: az árnyék és a fény ezen kontrasztjait, amelyek megkönnyebbülést adnak."
+          "text": "**Leonardo da Vinci** továbbment. Testeket boncolt, hogy értse az izmokat és az idegeket, és az érzelmeket is fesse. A Flandriából jött olajfesték lassan felváltotta a [[tempera]] technikát, és lehetővé tette a [[chiaroscuro]] játékát: a fény és árnyék kontrasztját, amely valódi mélységet ad az alaknak."
         },
         {
           "type": "funFact",
-          "text": "Leonardo leginkább egy százéves férfi testét tanulmányozta. Ezt megvizsgálva leírta az egyik első ismert esetet, amikor az artéria az életkor miatt elzáródott."
+          "text": "A test, amelyet Leonardo a legalaposabban vizsgált, egy százéves öregemberé volt. Vizsgálatakor az egyik első ismert, korral elzáródott artériát írta le."
         }
       ]
     },
     {
       "id": "course_121_la_renaissance_italienne_p3",
-      "title": "Leonardo, Michelangelo, Raphael",
+      "title": "Leonardo, Michelangelo, Raffaello",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A 16. század elején Róma vette át Firenze helyét, amelyet olyan építőpápák vittek magukkal, mint a **Julius II**. Ez a „teljes ember” korszaka. **Leonardo da Vinci** a modell: festő, mérnök, anatómus."
+          "text": "A 16. század elején Róma vette át Firenze helyét, építkező pápákkal, mint **II. Gyula**. Ez volt a „teljes ember” kora. **Leonardo da Vinci** volt a minta: festő, mérnök, anatómus."
         },
         {
           "type": "paragraph",
-          "text": "**Michelangelo** az erőt testesíti meg. **David**-je Firenze szimbólumává válik. **1508** és **1512** között a **Siszteusz-kápolna** mennyezetét festette ki: 500 négyzetméter a Genesis-en."
+          "text": "**Michelangelo** az erőt testesítette meg. **Dávid**ja Firenze jelképe lett. **1508** és **1512** között a **Sixtus-kápolna** mennyezetét festette: 500 négyzetmétert a Teremtés könyvéről."
         },
         {
           "type": "image",
           "asset": "michelangelo_david_sistine_chapel_ceiling",
           "ratio": "4:3",
-          "caption": "Michelangelo, Dávidtól a Sixtus-kápolna mennyezetéig."
+          "caption": "Michelangelo, a Dávidtól a Sixtus-kápolna mennyezetéig"
         },
         {
           "type": "funFact",
-          "text": "A *Az utolsó ítélet* című művében Michelangelo saját arcát festette le nyírt bőrre: ezzel kifejezve, mennyire kimerítette ez a munka."
+          "text": "Az *Utolsó ítélet*ben Michelangelo a saját arcát egy lenyúzott bőrre festette: így mondta el, mennyire kimerítette a munka."
         },
         {
           "type": "paragraph",
-          "text": "**Raphaël** a kecsességet testesíti meg. Freskója *Az athéni iskola* az ókor nagy gondolkodóit fogja össze harmóniában, amely évszázadokon át mintául szolgál majd."
+          "text": "**Raffaello** a kegyelmet testesítette meg. *Az athéni iskola* freskója egy harmóniába gyűjti az ókor nagy gondolkodóit, és évszázadokig mintául szolgált."
         }
       ]
     },
     {
       "id": "course_121_la_renaissance_italienne_p4",
-      "title": "Egy örökség, amely átszeli Európát",
+      "title": "Örökség, amely átszelte Európát",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Raphaël halála után a **1520**-ben az egyensúly megbomlik. A művészek megnyújtják a testeket, erőltetik a színeket: ez a [[Modorosság]], nyugtalanabb művészet. Franciaország királya, **Ferenc I** meghívja Leonardot, és elindítja a **Francia Reneszánsz**-t a Loire kastélyaival."
+          "text": "Raffaello **1520**-as halála után a mérleg felbomlott. A művészek megnyújtották az alakokat, és feszítették a színeket: ez volt a [[modorosság]], egy nyugtalanabb művészet. **I. Ferenc** francia király északra hívta Leonardót, és elindította a **francia reneszánszt** a Loire-menti kastélyokkal."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1420",
-              "title": "Lineáris perspektíva",
-              "detail": "Brunelleschi egyenletbe helyezi a teret Firenzében."
+              "title": "A lineáris perspektíva",
+              "detail": "Firenzében Brunelleschi egyenletekbe foglalja a teret."
             },
             {
               "date": "1453",
-              "title": "Konstantinápoly bukása",
-              "detail": "A tudósok görög kézirataikkal Olaszországba menekülnek."
+              "title": "Konstantinápoly eleste",
+              "detail": "Tudósok menekülnek Itáliába görög kézirataikkal."
             },
             {
               "date": "1504",
               "title": "Michelangelo Dávidja",
-              "detail": "Firenze a polgári büszkeség szimbólumát választja."
+              "detail": "Firenze a polgári büszkeség jelképét választja."
             },
             {
               "date": "1508-1512",
               "title": "Sixtus-kápolna",
-              "detail": "Michelangelo megfestette a Genesis mennyezetét."
+              "detail": "Michelangelo a Teremtés mennyezetét festi."
             },
             {
               "date": "1520",
-              "title": "Raphael halála",
-              "detail": "A magas reneszánsz véget ér, kezdődik a manierizmus."
+              "title": "Raffaello halála",
+              "detail": "A magas reneszánsz véget ér, a modorosság kezdődik."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "A Medicieknek köszönhetően Firenzében született, az olasz reneszánsz forradalmasította a művészetet a perspektívával (1420 körül) és a test tanulmányozásával, mielőtt Rómában érte volna el csúcspontját Leonardo, Michelangelo és Raphaellel."
+          "text": "Firenzében, a Medicieknek köszönhetően született az itáliai reneszánsz, a perspektívával (1420 körül) és a test tanulmányozásával fordította meg a művészetet, majd Rómában érte el a csúcsát Leonardóval, Michelangelóval és Raffaellóval."
         }
       ]
     }

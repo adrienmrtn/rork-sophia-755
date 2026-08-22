@@ -1,14 +1,14 @@
 {
   "id": "course_228_la_sante_mentale_comme_enjeu_de_societe",
-  "title": "A mentális egészség, mint társadalmi probléma",
-  "subtitle": "A néma járvány",
+  "title": "A mentális egészség mint társadalmi ügy",
+  "subtitle": "A csendes járvány",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "A mentális egészség a világ betegségeinek **20%-át jelenti**, de csak az egészségügyi költségvetés 2%-át kapja. Ez az oka annak, hogy ez a rég elfeledett ügy válik jelentős társadalmi problémává.",
+  "description": "A mentális egészség a **világ betegségeinek 20%-át** adja, de az egészségügyi költségvetéseknek csak 2%-át kapja. Ezért lett ez a sokáig elfeledett ügy nagy társadalmi tét.",
   "hero": {
     "image": "la_sante_mentale_comme_enjeu_de_societe",
     "ratio": "16:9",
-    "hook": "A világon minden ötödik betegség az elmét érinti, de az egészségügyi költségvetés alig 2%-át kapja."
+    "hook": "A világ betegségeinek egyötöde a lelket érinti, de az egészségügyi költségvetéseknek alig 2%-át kapja."
   },
   "sections": [
     {
@@ -18,65 +18,65 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az orvostudomány által régóta elhanyagolt mentális egészség a 21. század egyik legnagyobb kihívásává válik. Ez nem korlátozódik a pszichiátriai rendellenességek hiányára: ez egy olyan jóléti állapot, amely lehetővé teszi, hogy mindenki felismerje a benne rejlő lehetőségeket és megbirkózzon az élet nehézségeivel."
+          "text": "A medicina sokáig félretette, a mentális egészség a 21. század egyik nagy kihívása lett. Nem csak a pszichiátriai zavarok hiánya: olyan jóllét, amelyből kihozhatod a benned lévőt, és megállhatsz a nehézségekkel szemben."
         },
         {
           "type": "paragraph",
-          "text": "Mindazonáltal egy feltűnő paradoxon továbbra is fennáll: ezek a rendellenességek világszerte a betegségek körülbelül 20%-át teszik ki, de az egészségügyi költségvetésnek csak 2%-át teszik ki. Ez a kurzus ennek a csendes válságnak a gyökereit kutatja."
+          "text": "Egy feltűnő paradoxon mégis megmarad: ezek a zavarok a világ betegségeinek nagyjából 20%-át adják, de az egészségügyi költségvetéseknek csak 2%-át kapják. Ez a kurzus ennek a csendes válságnak a gyökereit járja körül."
         }
       ]
     },
     {
       "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p1",
-      "title": "Egy alábecsült egészségügyi válság",
+      "title": "Alulbecsült egészségügyi válság",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**depresszió** ma a rokkantság vezető oka a világon, megelőzve a szívbetegségeket és a cukorbetegséget. Ez a betegség, amelyet tartós szomorúság és minden iránti érdeklődés elvesztése jellemez, a lakosság minden kategóriáját érinti, de a világ számos régiójában továbbra is aluldiagnosztizált."
+          "text": "A **depresszió** ma a világ első számú rokkantsági oka, a szívbetegségek és a cukorbetegség előtt. Ezt a betegséget tartós szomorúság és minden iránti érdeklődésvesztés jelzi. Minden társadalmi csoportot érint, de sok vidéken aluldiagnosztizált marad."
         },
         {
           "type": "image",
           "asset": "depression_mental_health_person_dark",
           "ratio": "4:3",
-          "caption": "A depresszió ma a fogyatékosság vezető globális oka."
+          "caption": "A depresszió ma a világ első számú rokkantsági oka"
         },
         {
           "type": "paragraph",
-          "text": "A generalizált szorongás körülbelül 300 millió embert érint világszerte. Ez a szenvedés néha öngyilkossághoz vezet, ami évente 700 000 halálesetért felelős, ami több, mint a háborúk és természeti katasztrófák áldozatainak száma együttvéve."
+          "text": "A generalizált szorongás nagyjából 300 millió embert érint a világon. Ez a szenvedés néha öngyilkossághoz vezet, évi 700.000 halálhoz, többhöz, mint a háborúk és a természeti katasztrófák együtt."
         },
         {
           "type": "funFact",
-          "text": "A „melankólia” szó az ógörögből származik, és szó szerint „fekete epét” jelent. Az ókorban úgy gondolták, hogy a depressziót ennek a folyadéknak a feleslege okozza a szervezetben."
+          "text": "A „melankólia” szó az ógörögből jön, szó szerint „fekete epe”. Az ókorban azt hitték, a depressziót ennek a folyadéknak a többlete okozza."
         },
         {
           "type": "paragraph",
-          "text": "2019-ben az Egészségügyi Világszervezet szimbolikus lépést tett a [[Kiégés (foglalkozási kimerültség)]] munkával kapcsolatos jelenségként való elismerésével. Ez a felismerés a felelősséget egyedül az egyénről a munkahelyi környezetére helyezi át."
+          "text": "2019-ben az Egészségügyi Világszervezet szimbolikus lépést tett: a [[Kiégés (foglalkozási kimerültség)]] jelenséget munkához kötöttnek ismerte el. Ez a felelősséget az egyedülálló egyénről a munkahelyi környezetre viszi."
         }
       ]
     },
     {
       "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p2",
-      "title": "A fiatalok különösen érintettek",
+      "title": "Különösen érintett ifjúság",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Míg az egész lakosságot érinti, a serdülők és a fiatal felnőttek különös aggodalomra adnak okot. Az Egyesült Államokban a szorongás és a depresszió a 12-25 évesek körében egy évtized alatt csaknem megkétszereződött, és 2012 körül egyértelmű fordulópont következett be."
+          "text": "Ha az egész népesség érintett, a serdülők és a fiatal felnőttek különösen nyugtalanítanak. Az Egyesült Államokban a 12-25 évesek szorongása és depressziója majdnem megduplázódott egy évtized alatt, tiszta fordulattal 2012 körül."
         },
         {
           "type": "image",
           "asset": "teenagers_smartphones_social_media_anxiety",
           "ratio": "16:9",
-          "caption": "A közösségi média robbanása egybeesik a fiatalok szorongásának jelentős növekedésével."
+          "caption": "A közösségi hálók robbanása egybeesik a fiatalok szorongásának meredek emelkedésével"
         },
         {
           "type": "paragraph",
-          "text": "Ez a dátum az okostelefon és a közösségi hálózatok általánosításának felel meg. Jean Twenge pszichológus úgy véli, hogy ez a változás megzavarta a fiatalok szociabilitását: a [[Felfelé irányuló társadalmi összehasonlítás]], ahol irreális életszínvonalhoz hasonlítjuk magunkat, mély alkalmatlanság érzést kelt."
+          "text": "Ez a dátum az okostelefon és a közösségi hálók általánosodásához kötődik. Jean Twenge pszichológus szerint ez a váltás felforgatta a fiatalok társas életét: a [[Felfelé irányuló társadalmi összehasonlítás]], amikor irreális életmintákhoz méred magad, mély alkalmatlanságérzetet hoz."
         },
         {
           "type": "paragraph",
-          "text": "Ehhez jön még a [[Kiber-áldozattá válás]] és a képernyők fénye okozta alváshiány. A közösségi hálózatok a [[Dopaminerg megerősítés]] hurkjain működnek, amelyek függőséget okozhatnak, és elvonják a fiatalok figyelmét a sportolásról vagy a pihentető alvásról."
+          "text": "Ehhez jön a [[Kiber-áldozattá válás]] és a képernyőfény okozta alváshiány. A közösségi hálók [[Dopaminerg megerősítés]] hurkokon mennek, amelyek függővé tehetnek, és elvonhatják a fiatalokat a sporttól vagy a regeneráló alvástól."
         }
       ]
     },
@@ -87,40 +87,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A mentális egészség nem csak a magánéletről szól, hanem közvetlenül befolyásolja a termelékenységet is. A munkahelyi kiégés és szenvedés éves költségét csak az Egyesült Államokban 300 milliárd dollárra becsülik, a hiányzások, az ismételt távozások és a jelenlévő, de hatékonyan dolgozni képtelen alkalmazottak között."
+          "text": "A mentális egészség nem csak magánügy: közvetlenül a termelékenységet is üti. A kiégés és a munkahelyi szenvedés éves költsége csak az Egyesült Államokban 300 milliárd dollár, hiányzások, ismételt távozások és jelen lévő, de hatástalan dolgozók között."
         },
         {
           "type": "image",
           "asset": "workplace_burnout_stress_mental_health",
           "ratio": "4:3",
-          "caption": "A kiégés költsége évente több százmilliárd dollár."
+          "caption": "A kiégés költsége évi több száz milliárd dollár"
         },
         {
           "type": "paragraph",
-          "text": "Ezzel a költséggel szemben a vállalatok prevenciós programokat dolgoznak ki, de a kihívás továbbra is a szegény országokban marad, ahol szinte lehetetlen pszichiáterrel való konzultáció. Az egyik legerősebb eszköz továbbra is a desztigmatizálás: amikor egy közszereplő, például Simone Biles sportoló nyíltan beszél nehézségeiről, segít a szégyenforrást valódi egészségügyi problémává alakítani."
+          "text": "Ezzel a költséggel szemben a cégek megelőző programokat építenek, de a szegényebb országokban a kihívás teljes: pszichiáterhez jutni szinte lehetetlen. Az egyik legerősebb emelő a stigma oldása. Ha egy közszereplő, például Simone Biles atléta, nyíltan beszél a nehézségeiről, a szégyenforrásból valódi egészségügyi témát csinál."
         }
       ]
     },
     {
       "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p4",
-      "title": "A megelőző megközelítés felé",
+      "title": "Egy megelőző megközelítés felé",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A mentális egészség jövője azon múlik, hogy képesek vagyunk-e áttérni a válságot kezelő orvoslásról a megelőző megközelítésre. Ehhez újra kell gondolni a várostervezést, az iskoláztatást és a munkatempót, hogy csökkentsék a stresszforrásokat, mielőtt azok hatást gyakorolnának."
+          "text": "A mentális egészség jövője azon múlik, el tudunk-e mozdulni a válságot utólag kezelő medicinától a megelőzés felé. Ehhez újra kell gondolni a várost, az iskolát és a munkaritmust, hogy a stresszforrásokat csökkentsük, mielőtt hatnának."
         },
         {
           "type": "paragraph",
-          "text": "Új utak jelennek meg, mint például a digitális terápiák vagy a mesterséges intelligencia a gyakorló szakemberek hiányának kompenzálására, bár ezek az eszközök is kérdéseket vetnek fel az adatok bizalmas kezelésével kapcsolatban."
+          "text": "Új utak jönnek, digitális terápiák vagy mesterséges intelligencia, hogy pótolják a szakemberek hiányát, bár ezek az eszközök az adatok titkosságát is felvetik."
         },
         {
           "type": "paragraph",
-          "text": "A mentális egészség a jelenlegi nagy válságokhoz is kapcsolódik: az öko-szorongás fogalma világosan megmutatja, hogy a globális fenyegetések, mint például az éghajlat, hogyan befolyásolják közvetlenül pszichológiai egyensúlyunkat. A mentális egészség társadalmaink alapvető pilléreként való elismerése a jövőbeli válságokkal való szembenézés feltételévé válik."
+          "text": "A mentális egészség a mai nagy válságokhoz is kötődik: az ökoszorongás fogalma jól mutatja, hogyan ütik a globális fenyegetések, például a klíma, közvetlenül a lelki egyensúlyunkat. A mentális egészséget a társadalmaink lényeges pillérének látni feltétel lesz a következő válságokhoz."
         },
         {
           "type": "takeaway",
-          "text": "A mentális egészség a megbetegedések 20%-át teszi ki világszerte, de az egészségügyi költségvetésnek csak 2%-át. A depresszió, a kiégés és a digitális technológia fiatalokra gyakorolt ​​hatása között ez éppoly sürgős, mint gazdasági társadalmi kérdéssé válik."
+          "text": "A mentális egészség a világ betegségeinek 20%-át adja, az egészségügyi költségvetéseknek csak 2%-át. Depresszió, kiégés és a digitális hatás a fiatalokon: társadalmi ügy lett, olyan sürgős, mint gazdasági."
         }
       ]
     }

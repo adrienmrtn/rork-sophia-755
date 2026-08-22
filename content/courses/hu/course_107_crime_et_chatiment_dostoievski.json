@@ -4,11 +4,11 @@
   "subtitle": "1866",
   "subject": "litterature",
   "subcategory": "Anglo-Saxons & world literature",
-  "description": "1866-ban Raszkolnyikov megölt egy kölcsöncápát, hogy bebizonyítsa, szupermen. Dosztojevszkij ezt a bűntényt a lelkiismeret és a megváltás laboratóriumává alakítja.",
+  "description": "1866-ban Raszkolnyikov megöl egy zálogost, hogy bebizonyítsa: ő felsőbbrendű ember. Dosztojevszkij a bűnt a lelkiismeret és a megváltás laboratóriumává teszi.",
   "hero": {
     "image": "crime_et_chatiment_dostoievski",
     "ratio": "16:9",
-    "hook": "Egy elmélet miatt elkövetett gyilkosság. És megbocsáthatatlan lelkiismeret."
+    "hook": "Gyilkosság egy elmélet nevében. És egy lelkiismeret, amely nem bocsát meg."
   },
   "sections": [
     {
@@ -18,91 +18,91 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **1866** számban megjelent **[[Bűn és büntetés]]** **Fjodor Dosztojevszkij** egyik legnagyobb regénye. **Rodion Raszkolnyikov**, szegény diák **Szentpétervárból** kettős gyilkosságot követ el, miközben azt hiszi, hogy egy elvont eszmét véd. A könyv sokkal több, mint egy pszichológiai thriller, a bűntudatot, a **nihilizmust** és a spirituális újjászületés lehetőségét kutatja."
+          "text": "**1866**-ban jelent meg **[[Bűn és büntetés]]**, **Fjodor Dosztojevszkij** egyik legnagyobb regénye. **Rogyion Raszkolnyikov**, szegény **szentpétervári** diák, kettős gyilkosságot követ el, mert egy elvont eszmét véd. A könyv több, mint lélektani thriller: a bűntudatot, a **nihilizmust** és a lelki újjászületés esélyét járja körül."
         },
         {
           "type": "paragraph",
-          "text": "Dosztojevszkij nemcsak egy bűntényt mesél el. Laboratóriummá teszi, ahol egy intellektuális elmélet brutálisan ütközik az emberi tudat valóságával. A regény feltesz egy égető kérdést: tudunk-e ölni egy felsőbbrendű ötlet nevében?"
+          "text": "Dosztojevszkij nem pusztán egy bűntörténetet mesél. Laboratóriumot csinál belőle, ahol egy értelmiségi elmélet az emberi lelkiismeret valóságába ütközik. A regény máig égő kérdést tesz fel: ölhetsz-e egy magasabb eszme nevében?"
         }
       ]
     },
     {
       "id": "course_107_crime_et_chatiment_dostoievski_p1",
-      "title": "A szerző a szakadékkal szemben: életrajz és kontextus",
+      "title": "A szerző a szakadéknál: élet és kor",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dosztojevszkij ezt a regényt adósságokkal teli, kiadója nyomására írta. A **1849**-ben, a **[[Petrasevszkij kör]]** tagja, a **Semenovski** téren színlelt lövöldözést szenvedett, majd a **[[Omszk büntetés-végrehajtási telep]]**re távozott négy év szibériai munkára. Ez a halállal való szembenézés mélyen átalakítja a világról alkotott képét."
+          "text": "Dosztojevszkij adósságban, a kiadója nyomása alatt írta a regényt. **1849**-ben, a **[[Petrasevszkij kör]]** tagjaként, színlelt kivégzést élt át a **Szemjonovszkij téren**, aztán **[[Omszk erőd]]** szibériai kényszermunkájára vitték négy évre. Ez a halálközeli élmény megváltoztatta, ahogy a világot látta."
         },
         {
           "type": "image",
           "asset": "fyodor_dostoevsky_portrait_photograph",
           "ratio": "4:3",
-          "caption": "Fjodor Dosztojevszkij, a lelkiismeret és a szenvedés regényírója."
+          "caption": "Fjodor Dosztojevszkij, a lelkiismeret és a szenvedés regényírója"
         },
         {
           "type": "funFact",
-          "text": "Dosztojevszkij első személyben égette el az első kéziratot, mielőtt harmadik személyben újrakezdte volna, hogy elmesélje a távolságot."
+          "text": "Dosztojevszkij elégette az első, egyes szám első személyű változatot, aztán egyes szám harmadikban kezdte újra, hogy távolságot tartson."
         },
         {
           "type": "paragraph",
-          "text": "A száműzetésből hazatérve harcolt a **[[Az 1860-as évek orosz nihilizmusa]]**, egy olyan szellemi mozgalom ellen, amely az értelem és a tudomány nevében elutasított minden erkölcsi és vallási tekintélyt. **Bűn és büntetés** megmutatja, hogyan vezethet bűnözéshez egy konkrét élettől és szerelemtől elszakított ötlet. Raszkolnyikov nem egy szörnyeteg: egy zseniális értelmiségi, aki szuperembernek tartja magát."
+          "text": "A száműzetésből hazatérve **[[Az 1860-as évek orosz nihilizmusa]]** ellen küzdött, az értelmiségi mozgalom ellen, amely minden erkölcsi és vallási tekintélyt elvetett az ész és a tudomány nevében. **Bűn és büntetés** megmutatja, hogyan vezet gyilkossághoz az életből és a szeretetből kiszakított eszme. Raszkolnyikov nem szörnyeteg: ragyogó értelmiségi, aki felsőbbrendű embernek képzeli magát."
         }
       ]
     },
     {
       "id": "course_107_crime_et_chatiment_dostoievski_p2",
-      "title": "A szuperember kísértése: Raszkolnyikov elmélete",
+      "title": "A felsőbbrendű ember kísértése: Raszkolnyikov elmélete",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Raszkolnyikov az emberiséget „hétköznapira” és „rendkívülire” osztja. Utóbbinak, akárcsak **Napoleon**, joga lenne egy magasabb cél érdekében áthágni az erkölcsi törvényt. Elméletének tesztelésére a portástól kölcsönzött fejszével megöl egy öreg kölcsöncápát, akit haszontalannak és a társadalomra károsnak tart."
+          "text": "Raszkolnyikov az emberiséget „hétköznapira” és „rendkívülire” osztja. A második csoportnak, **Napóleon** fajta embereknek, joguk volna áthágni az erkölcsi törvényt egy magasabb célért. Az elméletét próbára téve megöl egy öreg zálogosasszonyt, akit haszontalannak és a társadalomra károsnak ítél, a házmestertől kölcsönzött baltával."
         },
         {
           "type": "image",
           "asset": "saint_petersburg_19th_century_poverty_street",
           "ratio": "16:9",
-          "caption": "19. századi Szentpétervár: szegénység és intellektuális láz."
+          "caption": "Szentpétervár a 19. században: szegénység és szellemi láz"
         },
         {
           "type": "paragraph",
-          "text": "A bûn rosszul sül el: megöli **Lizavetát**-t, az öregasszony ártatlan húgát is, aki kihallgatja a gyilkosságot. Nem profitál az ellopott pénzből, amit egy szikla alá rejt. Raszkolnyikov rájön, hogy nem az a szuperember, akire gondolt: a lelkiismerete nem bírja a vért, és a láz emészti."
+          "text": "A bűn elromlik: **Lizavetát** is megöli, az öregasszony ártatlan húgát, aki rájuk nyit. Az ellopott pénzt soha nem használja, kő alá rejti. Raszkolnyikov rájön, hogy nem az a felsőbbrendű ember, akinek hitte: a lelkiismerete nem bírja a vért, és a láz feléli."
         }
       ]
     },
     {
       "id": "course_107_crime_et_chatiment_dostoievski_p3",
-      "title": "Büntetés: lelki kínzás",
+      "title": "A büntetés: lélektani kínzás",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A „büntetés” a gyilkossággal kezdődik, még jóval a bíróság előtt. Raszkolnyikov elszigeteli magát, nem tudja elviselni anyja **Poulcheria** vagy nővére **Dounia** kapcsolatát. **Porfiri Petrovics** bíró, a **[[Törvényszéki pszichológia]]** mestere tudja, hogy bűnös, de hagyja, hogy magát vádolja."
+          "text": "A „büntetés” magával a gyilkossággal kezdődik, jóval a tárgyalóterem előtt. Raszkolnyikov bezárkózik, nem bírja **Pulherija** anyját és **Dunya** nővérét. **Porfirij Petrovics** vizsgálóbíró, **[[Törvényszéki pszichológia]]** mestere, tudja, hogy bűnös, de hagyja, hogy ő vádolja magát."
         },
         {
           "type": "paragraph",
-          "text": "Előtte **Sonya Marmeladova** bukkan fel, egy fiatal nő, akit prostitúciónak áldoztak fel, hogy táplálja családját. Elolvassa a **[[Lázár feltámadása]]** epizódját, és megnyílik egy nem racionális út: a vallomás és a szerelem. Ahol Raszkolnyikov az intellektuális büszkeség révén emelkedett ki, ő a mások iránti szeretetből süllyedt."
+          "text": "Vele szemben áll **Szonya Marmeladova**, a családját tartó, prostitúcióba kényszerített lány. Felolvassa neki **[[Lázár feltámadása]]** történetét, és egy nem racionális utat nyit: a beismerést és a szeretetet. Ahol Raszkolnyikov szellemi gőggel emelkedett, ő mások szeretetével ereszkedett le."
         }
       ]
     },
     {
       "id": "course_107_crime_et_chatiment_dostoievski_p4",
-      "title": "A teljes mű feltámadása és öröklése",
+      "title": "Feltámadás és egy totális regény utóélete",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az epilógus Szibériában lassú és nehéz **[[Megváltás a szenvedés által]]**. Raszkolnyikov nem hagyja el azonnal a szuperember elméletét, de Sonia szerelme fokozatosan áthatol intellektuális héján. **Nietzsche** később Dosztojevszkijt a bűntudat és a törvényszegés kivételes pszichológusának ismerte fel."
+          "text": "A szibériai utószó **[[Megváltás a szenvedés által]]** lassú, nehéz útját mutatja. Raszkolnyikov nem dobja el rögtön a felsőbbrendű ember elméletét, de Szonya szeretete lassan repeszti a szellemi páncélját. **Nietzsche** később rendkívüli bűntudat- és transzgresszió-lélektanost ismert fel Dosztojevszkijben."
         },
         {
           "type": "paragraph",
-          "text": "A regény ma is forró: tudunk-e ölni egy elvont ötlet, egy „nagy ügy” nevében? Dosztojevszkij azt válaszolja, hogy az emberi lelkiismeret végül mindig követeli, amit megillet, és hogy az igazi újjászületés megaláztatáson és szereteten keresztül jön létre, nem csak az értelem által."
+          "text": "A regény ma is ég: ölhetsz-e egy elvont eszme, egy „nagy ügy” nevében? Dosztojevszkij azt feleli, hogy az emberi lelkiismeret mindig beszedné, ami jár neki, és az igazi újjászületés megaláztatáson és szereteten át jön, nem pusztán az észen."
         },
         {
           "type": "takeaway",
-          "text": "**Bűn és büntetés** az intellektuális büszkeség kudarcát mutatja be az erkölcsi valósággal szemben. Raszkolnyikov igazi büntetése nem börtön, hanem a lélek elszigetelése."
+          "text": "**Bűn és büntetés** megmutatja, hogyan bukik el a szellemi gőg az erkölcsi valóságon. Raszkolnyikov igazi büntetése nem a börtön, hanem a lelke elszigeteltsége."
         }
       ]
     }

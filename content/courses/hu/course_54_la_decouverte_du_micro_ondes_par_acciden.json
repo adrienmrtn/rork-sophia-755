@@ -4,11 +4,11 @@
   "subtitle": "Véletlenül",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "1945-ben egy mérnök észrevette, hogy a cukorkája megolvadt egy radar közelében. Ebből a megfigyelésből született meg a mikrohullámú sütő.",
+  "description": "1945-ben egy mérnök észrevette, hogy a csokitáblája megolvadt egy radar mellett. Ebből a megfigyelésből született a mikrohullámú sütő.",
   "hero": {
     "image": "la_decouverte_du_micro_ondes",
     "ratio": "16:9",
-    "hook": "Egy olvasztott csokoládé… és a modern konyha megváltozik."
+    "hook": "Egy megolvadt csokitábla... és a modern konyha megváltozik."
   },
   "sections": [
     {
@@ -18,32 +18,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az egyesült államokbeli **1945** területén **Percy Spencer** mérnök radarokon dolgozik. Egy nap észreveszi, hogy a zsebében lévő cukorka megolvadt. Nem a testhő miatt: a radarhullámok miatt."
+          "text": "**1945**-ben az Egyesült Államokban **Percy Spencer** mérnök radarokon dolgozott. Egy nap észrevette, hogy a zsebében lévő csokitábla megolvadt. Nem a testhőtől: a radar hullámaitól."
         },
         {
           "type": "paragraph",
-          "text": "Kukoricával tesztel: kipattog a pattogatott kukorica. Megszületett a másképp melegítő sütő ötlete."
+          "text": "Kukoricával próbálta: a popcorn szétpattant. Megszületett az ötlet egy sütőről, amely másképp melegít."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
-      "title": "A radartól a konyháig",
+      "title": "Radartól a konyháig",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "percy_spencer_microwave_discovery_radar",
           "ratio": "4:3",
-          "caption": "A második világháborús radarok már mikrohullámokat használtak."
+          "caption": "A második világháború radarjai már mikrohullámokat használtak"
         },
         {
           "type": "paragraph",
-          "text": "A **Mikrohullámok** olyan elektromágneses hullámok, mint a rádiófény, de sokkal „energetikusabbak”, mint sok hagyományos rádióhullám. A háború alatt főleg radarként használták repülőgépek és csónakok észlelésére."
+          "text": "A **mikrohullámok** elektromágneses hullámok, mint a rádióhullámok, de „energiásabbak”, mint sok klasszikus rádióhullám. A háborúban főleg radarokhoz kellett, hogy repülőket és hajókat észleljenek."
         },
         {
           "type": "paragraph",
-          "text": "Spencer megérti, hogy az élelmiszerben lévő vizet és zsírokat is felkavarhatják... és ezért felmelegíthetik."
+          "text": "Spencer megértette, hogy az ételekben a vizet és a zsírokat is felkavarhatják... és így melegíthetik őket."
         }
       ]
     },
@@ -56,45 +56,45 @@
           "type": "image",
           "asset": "first_microwave_oven_radarange_1947",
           "ratio": "4:3",
-          "caption": "Az első kereskedelmi forgalomban kapható mikrohullámú sütő egy szekrény méretű volt."
+          "caption": "Az első kereskedelmi mikrohullámú sütő akkora, mint egy szekrény"
         },
         {
           "type": "paragraph",
-          "text": "Az első kereskedelmi modell, a **Radarange** **1947** körül jelent meg. Hatalmas, drága, és főleg éttermekbe vagy hajókra szánják. Évtizedekbe fog telni, hogy kicsinyítsék és megfizethető legyen az otthonok számára."
+          "text": "Az első kereskedelmi modell, a **Radarange**, **1947** körül jött ki. Hatalmas volt, drága, és inkább éttermeknek vagy hajóknak szánták. Évtizedek kellettek, hogy kicsinyítsék, és megfizethető legyen a háztartásoknak."
         },
         {
           "type": "funFact",
-          "text": "Eleinte néhányan attól tartottak, hogy a sütő „radioaktívvá teszi az ételt”. Hamis: a mikrohullámú sütő felmelegszik, nem tesz radioaktívvá."
+          "text": "Eleinte néhányan attól féltek, hogy a sütő „radioaktívvá teszi az ételt”. Hamis: a mikrohullámok melegítenek, nem tesznek radioaktívvá."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
-      "title": "Tényleg hogy melegszik fel?",
+      "title": "Hogyan melegít valójában",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A mikrohullámok főként vízmolekulákat (és egy kis zsírt és cukrot) rezegtetnek. Ez a keverés **forró levél** az ételben, nem csak a felületén, mint egy serpenyőben."
+          "text": "A mikrohullámok főleg a vízmolekulákat rezgetik (és kicsit a zsírokat és cukrokat). Ez a mozgás hőt kelt az étel **belsejében**, nem csak a felületén, mint egy serpenyő."
         },
         {
           "type": "paragraph",
-          "text": "Ezért lehet egy edény kívülről forró, közepe langyos, ha vastag: a hullámok nem hatolnak be végtelenül mélyre."
+          "text": "Ezért lehet egy vastag étel kívül forró, belül langyos: a hullámok nem hatolnak végtelenül mélyre."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
-      "title": "Mindennapi tárgy",
+      "title": "Egy hétköznapi tárgy",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az 1970-es és 1980-as évektől a mikrohullámú sütő több millió konyhába került be. Megváltoztatja a szokásokat: gyors melegítés, készételek, gyorsabb élet."
+          "text": "Az 1970-1980-as évektől a mikrohullámú sütő millió konyhába került. Megváltoztatta a szokásokat: gyors melegítés, készételek, gyorsabb élet."
         },
         {
           "type": "takeaway",
-          "text": "A mikrohullámú sütő egy véletlenből született, amelyet Percy Spencer észlelt egy radar közelében. A hullámok főként az ételben lévő vizet kavarják és belülről melegítik fel."
+          "text": "A mikrohullámú sütő Percy Spencer radar melletti véletlenéből született. A hullámok főleg az étel vizét kavarják, és belülről melegítik."
         }
       ]
     }

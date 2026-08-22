@@ -1,14 +1,14 @@
 {
   "id": "course_129_l_art_abstrait_kandinsky_et_mondrian",
-  "title": "Absztrakt művészet: Kandinsky és Mondrian",
-  "subtitle": "1910-1920-as évek",
+  "title": "Az absztrakt művészet: Kandinsky és Mondrian",
+  "subtitle": "1910-es, 1920-as évek",
   "subject": "art",
   "subcategory": "Painting & Movements",
-  "description": "Most először fordul elő, hogy egy festmény már semmit sem képvisel a látható világból. A **Kandinszkij** űrlapokat szabadít fel; A **Mondrian** mindent geometriára redukál.",
+  "description": "Először fordult elő, hogy egy kép semmit sem ábrázolt a látható világból. **Kandinsky** felszabadította a formákat; **Mondrian** mindent geometriára vágott.",
   "hero": {
     "image": "l_art_abstrait_kandinsky_et_mondrian",
     "ratio": "16:9",
-    "hook": "Mi van, ha egy festménynek már nem kell elmesélnie a világ történetét ahhoz, hogy megmozgassa az embereket?"
+    "hook": "Mi van, ha egy képnek már nem kell a világot elmesélnie ahhoz, hogy megérintsen?"
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **1910** és a **1920** években az absztrakció megszegte a festészet legrégebbi szabályát: [[mimézis]], a látható világ ábrázolásának kötelezettségét. Az asztal többé nem ablak: autonóm objektum."
+          "text": "Az **1910-es** és **1920-as** években az absztrakció széttörte a festészet legrégibb szabályát: a [[mimézis]] szabályát, a látható világ ábrázolásának kötelességét. A kép többé nem ablak: önálló tárgy."
         },
         {
           "type": "paragraph",
-          "text": "Két párhuzamos küldetés: **Wassily Kandinsky** a lelket szabad formákon keresztül fordítja le; **Piet Mondrian** a világegyetem törvényeit tiszta geometriában keresi."
+          "text": "Két párhuzamos keresés: **Wassily Kandinsky** szabad formákba fordította a lelket, **Piet Mondrian** pedig tiszta geometriában kereste a világegyetem törvényeit."
         }
       ]
     },
     {
       "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_p1",
-      "title": "Kandinsky: festészet, mint egy alkot",
+      "title": "Kandinsky: festeni, ahogyan zenét komponálsz",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Waszilij Kandinszkij** (1866-1944), orosz ügyvédből lett festő, Münchenben telepedett le. **1910** körül alkonyatkor hazatérve elnyomja egy festmény, amelynek témáját nem ismeri fel. Az egyik az övé, fejjel lefelé. A valósághoz való hasonlóság ekkor akadályként jelenik meg számára."
+          "text": "**Wassily Kandinsky** (1866-1944), orosz jogász, aki festő lett, Münchenben telepedett le. **1910** körül, alkonyatkor hazatérve, olyan vászon döbbentette meg, amelynek a tárgyát nem ismerte fel. A sajátja volt, fejjel lefelé. Ettől fogva a valósághoz való hasonlóság akadálynak tűnt."
         },
         {
           "type": "image",
           "asset": "kandinsky_first_abstract_watercolor_1910",
           "ratio": "4:3",
-          "caption": "1910 körül Kandinszkij megtette a lépést az absztrakció felé."
+          "caption": "1910 körül Kandinsky átlépte az absztrakció küszöbét"
         },
         {
           "type": "funFact",
-          "text": "Szinesztéziával megajándékozott, azt mondta, hogy „hallott” színeket és „látott” hangokat. Innen a címei: Kompozíciók, Improvizációk."
+          "text": "Szinestetaként azt mondta, „hallja” a színeket és „látja” a hangokat. Innen a címei: Kompozíciók, Improvizációk."
         },
         {
           "type": "paragraph",
-          "text": "A **1911**-ben publikálta a *Spiritualitás a művészetben* című művét, és elméletileg megfogalmazta a [[lírai absztrakció]]-t. Minden színnek van egy rezgése: a kék az égieket idézi; sárga, agresszívabb, tud „szólni”, mint egy trombita. A festészetnek úgy kell hatnia a lélekre, mint a zenének, narratíva nélkül."
+          "text": "**1911**-ben megjelentette *A szellemiről a művészetben* című könyvet, és kidolgozta a [[lírai absztrakció]] elméletét. Minden színnek rezgése van: a kék az égit idézi, a sárga, keményebben, „szólhat” mint egy trombita. A festészetnek úgy kell hatnia a lélekre, mint a zenének, történet nélkül."
         }
       ]
     },
@@ -58,85 +58,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A holland **Piet Mondrian** (1872-1944) a valóság lassú [[dekantálás]] révén éri el az absztrakciót. A **1908** és a **1912** közötti fasorok a törzset és az ágakat mutatják, amelyek eltűnnek egy vonalkeret javára."
+          "text": "A holland **Piet Mondrian** (1872-1944) lassú [[dekantálás]] révén jutott az absztrakcióhoz, a valóság fokozatos tisztításán. **1908** és **1912** között a fa-sorozatai azt mutatják, ahogy a törzs és az ágak vonalhálóvá oldódnak."
         },
         {
           "type": "image",
           "asset": "mondrian_tree_series_abstraction_painting",
           "ratio": "4:3",
-          "caption": "A fától a vonalhálózatig: Mondrian leegyszerűsíti a lényegre."
+          "caption": "A fától a vonalhálóig: Mondrian a lényegig egyszerűsít"
         },
         {
           "type": "funFact",
-          "text": "Gyakran kérte, hogy az éttermekben háttal üljön az ablaknak, hogy ne lásson fákat és kerteket, amelyeket túlságosan rendetlennek tartott."
+          "text": "Étteremben gyakran kért háttal az ablaknak, hogy ne kelljen fákat és kerteket néznie, amelyeket túl rendezetlennek tartott."
         },
         {
           "type": "paragraph",
-          "text": "A **1917**-ben megalapította a **De Stijl** mozgalmat, és elméleteket fogalmazott meg a **neoplazmatikusságról**: a művészetet a kozmosz elemeire redukálta. Csak az egyenes vonal és a három alapszín marad. A derékszögnek tükröznie kell az egyetemes erők egyensúlyát, távol az egyéni érzelmektől. Még a túlságosan „természetesnek” tartott zöldet is kitiltotta műterméből."
+          "text": "**1917**-ben megalapította a **De Stijl** mozgalmat, és kidolgozta a **neoplaszticizmust**: a művészetet a kozmosz elemeire kell szűkíteni. Csak az egyenes vonal és a három alapszín marad. A derékszögnek az egyetemes erők egyensúlyát kell kifejeznie, távol az egyéni érzelemtől. Még a zöldet is kitiltotta a műterméből, mert túl „természetesnek” tartotta."
         }
       ]
     },
     {
       "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_p3",
-      "title": "A Bauhaus: absztrakció az életben",
+      "title": "A Bauhaus: absztrakció a mindennapban",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az absztrakció nem marad a múzeumban. A [[Walter Gropius]] által a **1919**-ben alapított építészeti és iparművészeti iskolában, a [[Bauhaus]]-ben festők, építészek és tervezők működnek együtt. Kandinsky ott tanít; Mondrian esztétikája inspirálja a terveket és a homlokzatokat."
+          "text": "Az absztrakció nem maradt múzeumban. A [[Bauhaus]] iskolában, az építészeti és iparművészeti műhelyben, amelyet [[Walter Gropius]] alapított **1919**-ben, festők, építészek és tervezők dolgoztak egymás mellett. Kandinsky ott tanított, Mondrian esztétikája pedig alaprajzokba és homlokzatokba szivárgott."
         },
         {
           "type": "image",
           "asset": "bauhaus_weimar_gropius_building_1919",
           "ratio": "4:3",
-          "caption": "A Bauhaus: amikor az absztrakt művészet találkozik a tervezéssel és az építészettel."
+          "caption": "A Bauhaus: amikor az absztrakt művészet találkozik a designnal és az építészettel"
         },
         {
           "type": "funFact",
-          "text": "A Bauhausban Kandinsky tanítványai formákat és színeket társítottak. Következtetése: sárga háromszög, piros négyzet, kék kör."
+          "text": "A Bauhausban Kandinsky formákat párosíttatott színekhez a tanítványaival. A következtetése: sárga háromszög, piros négyzet, kék kör."
         },
         {
           "type": "paragraph",
-          "text": "Megszületik a modern design: „a forma követi a funkciót”. Gerrit Rietveld híres vörös és kék széke 3D Mondriannak tűnik. Mondrian úgy találta, hogy a valódi tárgy megtörte az absztrakció tisztaságát."
+          "text": "Megszületett a modern design: „a forma a funkciót követi”. Gerrit Rietveld híres Vörös-kék széke olyan, mint egy Mondrian három dimenzióban. Maga Mondrian úgy vélte, a valódi tárgy megtöri az absztrakció tisztaságát."
         }
       ]
     },
     {
       "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_p4",
-      "title": "Egy örökség körülöttünk",
+      "title": "Örökség mindenütt körülöttünk",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Elmondható történet nélkül a festmény felkéri a nézőt, hogy kivetítse saját jelentését. Ez a szabadság nyitja meg a [[Fogalmi művészet]]-t, ahol az ötlet elsőbbséget élvez az anyaggal szemben. A háborúk után az absztrakció azt is megmondja, amit a figuráció már nem képes átadni."
+          "text": "Történet nélkül a kép arra hív, hogy te vetíts rá értelmet. Ez a szabadság nyitotta meg a [[Fogalmi művészet]] ajtaját, ahol az ötlet többet ér, mint az anyag. A háborúk után az absztrakció azt is kimondta, amit a figurális festészet már nem bírt el."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1910-1911",
-              "title": "Absztrakt Kandinszkij",
-              "detail": "A Spiritual in Art elmélete a lírai absztrakció."
+              "title": "Kandinsky absztrahál",
+              "detail": "A szellemiről a művészetben a lírai absztrakciót írja le."
             },
             {
               "date": "1917",
               "title": "De Stijl",
-              "detail": "Mondrian a művészetet vonalakra és alapszínekre redukálja."
+              "detail": "Mondrian vonalakra és alapszínekre szűkíti a művészetet."
             },
             {
               "date": "1919",
               "title": "Bauhaus",
-              "detail": "Az absztrakció belép a tervezésbe és az építészetbe."
+              "detail": "Az absztrakció belép a designba és az építészetbe."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Okostelefonos felületeinktől a városi jelzésekig az ő leckéjük marad. Az amerikai [[Absztrakt expresszionizmus]] és a [[Minimális Art]] folytatja a forradalmat."
+          "text": "Az okostelefon felületeitől az utcai táblákig a leckéjük megmarad. Az amerikai [[Absztrakt expresszionizmus]] és a [[Minimális Art]] vitte tovább a fordulatot."
         },
         {
           "type": "takeaway",
-          "text": "Az absztrakt művészet kétféleképpen születik: Kandinszkij felszabadítja a formákat a lélek kifejezésére; Mondrian geometrizálja a világot, hogy az egyetemesre törekedjen."
+          "text": "Az absztrakt művészet két úton született: Kandinsky felszabadította a formát, hogy a lélekről beszéljen; Mondrian geometriává tette a világot, hogy az egyetemesig érjen."
         }
       ]
     }

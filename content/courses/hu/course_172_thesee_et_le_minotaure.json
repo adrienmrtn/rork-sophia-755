@@ -1,14 +1,14 @@
 {
   "id": "course_172_thesee_et_le_minotaure",
-  "title": "Thészeusz és a Minotaurusz",
-  "subtitle": "A cérna, a szörny, a vitorlák",
+  "title": "Thészeusz és a Minótaurosz",
+  "subtitle": "A fonál, a szörny, a vitorlák",
   "subject": "mythologie",
   "subcategory": "Greece: the heroes",
-  "description": "Thészeusz megöli a Minotauruszt Ariadné fonalával. De elfelejti vitorlát cserélni: apja, Égeusz beleveti magát a tengerbe, amely még mindig az ő nevét viseli.",
+  "description": "Thészeusz Ariadné fonalával megöli a Minótauroszt. De elfelejti kicserélni a vitorlákat: apja, Aigeusz, a tengerbe veti magát, amely ma is az ő nevét viseli.",
   "hero": {
     "image": "thesee_et_le_minotaure",
     "ratio": "16:9",
-    "hook": "Egy szörnyeteg egy labirintusban. Egy szál, hogy kikerüljön. Elfelejtett vitorlák, amelyek tengert keresztelnek."
+    "hook": "Egy szörny a labirintusban. Egy fonál, hogy kijuss. Elfeledett vitorlák, amelyek tengert keresztelnek."
   },
   "sections": [
     {
@@ -18,82 +18,82 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Thészeusz**, Athén alapító hőse, szembeszáll a **Minotaurusszal**, egy félig ember, félig bika lénnyel, amely a krétai [[Labirintus]]-ben rejtőzik. A történet ötvözi a bátorságot, a romantikus ravaszságot és a családi tragédiát."
+          "text": "**Thészeusz**, Athén alapító hőse, a **Minótaurosszal** néz szembe, a félig ember, félig bika lénnyel, amelyet a krétai [[Labirintus]] rejt. A történet bátorságot, szerelmi ravaszságot és családi tragédiát kever."
         },
         {
           "type": "paragraph",
-          "text": "A szörny megölésével Thészeusz megszabadítja Athént egy véres adó alól. De egy elfeledett részlet, a fehér helyett fekete vitorlák, apja életébe fog kerülni, és az Égei-tengernek adja a nevét."
+          "text": "A szörny megölésével Thészeusz megszabadítja Athént a véres adótól. De egy elfeledett részlet, fekete vitorlák a fehérek helyett, az apjába kerül, és az Égei-tenger kapja a nevét."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p1",
-      "title": "A Minotaurusz és Athén tisztelete",
+      "title": "A Minótaurosz és Athén adója",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Minos** krétai király nem hajlandó feláldozni egy fehér bikát **Poszeidón**-nek, a tengerek istenének. Hogy bosszút álljon, Poszeidon **Pasiphaé** királynőben szenvedélyt kelt az állat iránt. Megszületik a Minotaurusz. Minos megbízza a feltalálót, [[Labirintus]] egy kijárat nélküli börtönt: a Labirintust."
+          "text": "Kréta királya, **Minósz**, nem akarja feláldozni a fehér bikát **Poszeidónnak**, a tengerek istenének. Bosszúból Poszeidón **Pasziphaé** királynőben állati vágyat kelt. Megszületik a Minótaurosz. Minósz [[Daedalus]] feltalálóra bízza, hogy kijárat nélküli börtönt építsen: a Labirintust."
         },
         {
           "type": "image",
           "asset": "theseus_minotaur_cretan_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "A Minotaurusz, a krétai labirintusba zárva."
+          "caption": "A Minótaurosz, bezárva a krétai Labirintusba"
         },
         {
           "type": "paragraph",
-          "text": "Kréta ekkor uralja a tengert: egy [[Thalassocracy]]. Egy elvesztett háború után Athénnak kilencévente át kell adnia **hét fiatal férfit és hét fiatal lányt** élelemként a szörnyetegnek. A harmadik szállításnál **Thészeusz**, **Égei** király fia önkénteskedik."
+          "text": "Kréta akkor a tengert uralta: ez volt a [[Thalassocracy]]. Egy elvesztett háború után Athénnak kilencévente **hét ifjút és hét lányt** kellett a szörnynek adnia. A harmadik szállítmánykor **Thészeusz**, **Aigeusz** király fia, önként jelentkezett."
         },
         {
           "type": "funFact",
-          "text": "Égeusz és Thészeusz megállapodnak a jelben: **fehér** vitorlázik, ha a hős élve tér vissza, **fekete pedig**, ha meghalt. Ez a részlet dönt majd a drámáról."
+          "text": "Aigeusz és Thészeusz jelben egyeztek meg: **fehér** vitorlák, ha a hős élve tér vissza, **fekete** vitorlák, ha meghalt. Ez a részlet döntött a drámáról."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p2",
-      "title": "Zsemlemorzsa",
+      "title": "Ariadné fonala",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Krétán **Ariane**, Minos lánya beleszeret Thészeuszba. Tudja, hogy az erő nem elég a Labirintusban. Daedalus segítségével egy gyapjúgolyót ad neki: [[Zsemlemorzsa]]. A bejárathoz rögzíti, és előrehaladva letekerteti a cérnát."
+          "text": "Krétán **Ariadné**, Minósz lánya, beleszeretett Thészeuszba. Tudta, hogy a Labirintusban az erő nem elég. Daidalosz segítségével gyapjúgombolyagot adott neki: [[Ariadné fonala]]. A bejárathoz kötötte, és haladva letekerte."
         },
         {
           "type": "image",
           "asset": "ariadne_thread_theseus_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "Ariadné Thészeusznak adja azt a fonalat, amely megmenti az életét."
+          "caption": "Ariadné átadja Thészeusznak a fonalat, amely megmenti az életét"
         },
         {
           "type": "paragraph",
-          "text": "Thészeusz megöli a Minotauruszt, majd visszatekeri a fonalat, hogy kijusson. A fiatal athéniakkal és Ariadnéval együtt menekül. De **Naxos** szigetén elhagyja az alvást. Egyesek azt mondják, hogy a **Dionüszosz** isten a feleségének akarta őt. A kétségbeesett, majd megistenített Ariadné arany koronát kap, amely csillagkép lett."
+          "text": "Thészeusz megölte a Minótauroszt, aztán visszatekerte a fonalat, hogy kijöjjön. Az athéni ifjakkal és Ariadnéval menekült. **Naxosz** szigetén azonban alva hagyta. Egyesek szerint **Dionüszosz** isten akarta feleségül. Ariadné, előbb kétségbeesve, aztán istenné emelve, aranykoszorút kapott, amely csillagkép lett."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p3",
-      "title": "Cape Sounion fekete vitorlái",
+      "title": "A Szúnion-fok fekete vitorlái",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A visszatérés ünnep legyen. A győzelemtől megrészegülten vagy Ariadné elhagyása miatt Thészeusz elfelejti felhúzni a fehér vitorlákat. A hajó fekete vitorlák alatt közeledik Athén felé."
+          "text": "A hazatérés ünnep kellett volna legyen. A győzelemtől kábán vagy Ariadné elhagyásától zavartan Thészeusz elfelejtette felhúzni a fehér vitorlákat. A hajó fekete vitorlákkal közeledett Athénhoz."
         },
         {
           "type": "image",
           "asset": "cape_sounion_aegean_sea_cliff_sunset",
           "ratio": "4:3",
-          "caption": "Sounion-fok, ahonnan Égeusz fia visszatérését figyelte."
+          "caption": "A Szúnion-fok, ahonnan Aigeusz a fia visszatértét leste"
         },
         {
           "type": "paragraph",
-          "text": "A **Cape Sounion**-nél az öreg Égeusz király a horizontot fürkészi. Csak a gyász feketeségét látja. Meggyőződése, hogy fia meghalt, ledobja magát a szikláról. A tengert azóta is nevezik: **Aegei-tenger**. Thészeusz király érkezik... és saját hanyagsága miatt árván maradt."
+          "text": "A **Szúnion-fokon** az öreg Aigeusz király az horizontot fürkészte. Csak a gyász feketéjét látta. Meggyőződve, hogy a fia meghalt, a szikláról a tengerbe vetette magát. A tenger azóta az ő nevét viseli: az **Égei-tenger**. Thészeusz királyként szállt partra... és a saját figyelmetlensége miatt árva lett."
         },
         {
           "type": "funFact",
-          "text": "A „Tészeusz hajója” filozófiai paradoxonná vált: ha az összes deszkát egyenként cseréljük ki, akkor is ugyanaz a hajó?"
+          "text": "A „Thészeusz hajója” filozófiai paradoxonná vált: ha deszkáról deszkára mindent kicserélsz, az még ugyanaz a hajó?"
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Thészeusz megkoronázva szervező király lesz. [[Szinoecizmus]] neki tulajdonítható: Attika városainak egyesítése Athén körül. Létrehozta a [[Panathenaia]]-t, a nagyobb városi fesztiválokat. Kombinálható a jobbal."
+          "text": "Megkoronázva Thészeusz szervező király lett. Neki tulajdonítják a [[Szinoecizmus]] folyamatát: Attika falvainak egyesítését Athén körül. Ő hozta létre a [[Panathenaia]] ünnepeit, a város nagy ünnepeit. Az erő a joggal szövetkezett."
         },
         {
           "type": "paragraph",
-          "text": "Uralkodása más kalandokat is magában foglal, például a [[Amazonok]] elleni harcot. De a Labirintus továbbra is a nyoma marad: tudja, hogyan kell megfejteni a kibogozhatatlant, miközben kiszolgáltatott marad a feledésnek. Thészeusz egy családi tragédia hamvaiból kovácsolja Athén nagyságát."
+          "text": "Az uralkodása más kalandokat is hozott, például az [[Amazonok]] elleni harcot. De a Labirintus maradt a jele: tudni kibogozni a kibogozhatatlant, miközben sebezhető maradsz a feledésre. Thészeusz Athén nagyságát egy családi dráma hamujára építette."
         },
         {
           "type": "takeaway",
-          "text": "A **Thészeusz** megöli a **Minotaurusz**-t a **Ariane** szálának köszönhetően. Azzal, hogy elfelejti kicserélni a vitorlát, öngyilkosságot okoz apja, **Égei**, aki az Égei-tengernek adja a nevét."
+          "text": "**Thészeusz** **Ariadné** fonalával megöli a **Minótauroszt**. Mert elfelejti kicserélni a vitorlákat, apja, **Aigeusz**, öngyilkos lesz, és az Égei-tenger az ő nevét kapja."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "Röntgen, 1895",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "1895-ben Wilhelm Röntgen felfedezte a láthatatlan sugárzást, amely képes áthaladni az anyagon. Néhány hónap alatt forradalmat látott az orvostudomány.",
+  "description": "1895-ben Wilhelm Röntgen egy láthatatlan sugárzást fedezett fel, amely átjárja az anyagot. Hónapok alatt az orvostudomány forradalmat látott benne.",
   "hero": {
     "image": "la_decouverte_des_rayons_x_rontgen",
     "ratio": "16:9",
-    "hook": "Egy kéz, csontok, egy fénykép. Az orvostudomány soha többé nem lesz vak."
+    "hook": "Egy kéz, csontok, egy fotó. Az orvostudomány többé nem vak."
   },
   "sections": [
     {
@@ -18,64 +18,64 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1895. november 8.** Würzburgban (Németország) a fizikus **Wilhelm Röntgen** észrevesz egy képernyőt, amely ragyog... noha a látható fény nem befolyásolja. Valami láthatatlan átszeli a szobát."
+          "text": "**1895. november 8**-án Würzburgban (Németország) **Wilhelm Röntgen** fizikus észrevett egy képernyőt, amely világít... pedig nem éri látható fény. Valami láthatatlan szeli át a szobát."
         },
         {
           "type": "paragraph",
-          "text": "Ezt **X** sugaraknak nevezi, az „X” jelentése „ismeretlen”. Néhány héten belül lefényképezte felesége kezének csontjait. Megszületett a radiológia."
+          "text": "**Röntgensugaraknak** nevezte, az „X” az „ismeretlent” jelentette. Heteken belül lefényképezte a felesége kezének csontjait. Megszületett a radiológia."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
-      "title": "Laboratóriumi baleset",
+      "title": "Egy laboratóriumi véletlen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Röntgen egy csővel dolgozik, ahol az elektronok célba érnek. A csövet fekete kartonpapírral borította. A fluoreszkáló képernyő azonban távolról világít. Megérti, hogy láthatatlan sugárzás jön ki a csőből."
+          "text": "Röntgen egy csővel dolgozott, amelyben elektronok csapódnak egy céltárgynak. Fekete kartonnal takarta a csövet. Mégis egy fluoreszkáló ernyő távolról világított. Megértette, hogy láthatatlan sugárzás jön ki a csőből."
         },
         {
           "type": "image",
           "asset": "wilhelm_rontgen_x_ray_hand_1895",
           "ratio": "4:3",
-          "caption": "A híres kép: a kézcsontok és a jegygyűrű."
+          "caption": "A híres kép: a kéz csontjai és a jegygyűrű"
         },
         {
           "type": "funFact",
-          "text": "Röntgen soha nem nyújtott be szabadalmat a röntgensugárzásra. Azt akarta, hogy minden tudomány szabadon felhasználhassa őket."
+          "text": "Röntgen soha nem szabadalmaztatta a röntgensugarakat. Azt akarta, hogy az egész tudomány szabadon használhassa őket."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
-      "title": "Az orvostudomány megragadja az eszközt",
+      "title": "Az orvostudomány magához veszi az eszközt",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "early_x_ray_medical_radiograph",
           "ratio": "4:3",
-          "caption": "Nagyon gyorsan az orvosok és a hadseregek röntgensugarakat használtak."
+          "caption": "Nagyon hamar orvosok és hadseregek használták a röntgensugarakat"
         },
         {
           "type": "paragraph",
-          "text": "Korábban egy törés vagy golyó „látásához” gyakran ki kellett nyitnia. Röntgenfelvétellel vágás nélkül kapunk képet a belső térről. A kórházak és a hadseregek rohamosan alkalmazzák a technikát."
+          "text": "Addig egy töréshez vagy egy golyóhoz gyakran vágni kellett. A röntgensugarakkal belső képet kaptak vágás nélkül. A kórházak és a hadseregek őrült sebességgel vették át a technikát."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
-      "title": "Régóta figyelmen kívül hagyott veszély",
+      "title": "Sokáig figyelmen kívül hagyott veszély",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Eleinte figyelmen kívül hagyjuk a kockázatokat. Az operátorok órákon át röntgenfelvételeket készítenek. Égési sérülések, majd rákos megbetegedések jelennek meg. Időbe telik, amíg megértjük, hogy a röntgensugarak erősek… és veszélyesek."
+          "text": "Eleinte nem ismerték a kockázatokat. Kezelők órákon át készítettek felvételeket. Égések, aztán rákok jelentek meg. Időbe telt megérteni, hogy a röntgensugarak erősek... és veszélyesek."
         },
         {
           "type": "paragraph",
-          "text": "Ma védjük a betegeket és a gondozókat: korlátozott adagok, ólomkötények, szigorú ellenőrzések."
+          "text": "Ma védik a betegeket és a gondozókat: korlátozott dózisok, ólomkötények, szigorú ellenőrzések."
         }
       ]
     },
@@ -86,11 +86,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A röntgensugarak megnyitották az utat minden modern képalkotás előtt: szkennerek, ipari vezérlők, és még a kristályok szerkezetének tanulmányozása is (később DNS számára is hasznos volt)."
+          "text": "A röntgensugarak utat nyitottak a modern képalkotásnak: CT, ipari ellenőrzések, sőt a kristályok szerkezetének vizsgálatához is (később ez kellett a DNS-hez)."
         },
         {
           "type": "takeaway",
-          "text": "A **1895**-ben Röntgen felfedezte a röntgensugárzást, egy láthatatlan sugárzást, amely áthalad az anyagon. Az orvostudomány új perspektívát nyer... azzal a feltétellel, hogy a kockázatokat kontroll alatt tartják."
+          "text": "**1895**-ben Röntgen felfedezte a röntgensugarakat, egy láthatatlan sugárzást, amely átjárja az anyagot. Az orvostudomány új tekintetet kapott... ha uralja a kockázatokat."
         }
       ]
     }

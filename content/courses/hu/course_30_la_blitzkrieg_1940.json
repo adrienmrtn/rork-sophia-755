@@ -1,14 +1,14 @@
 {
   "id": "course_30_la_blitzkrieg_1940",
-  "title": "A Blitzkrieg",
+  "title": "A villámháború",
   "subtitle": "1940",
   "subject": "histoire",
   "subcategory": "Cold War & Contemporary World",
-  "description": "**hat hét alatt**, **max 10.** és 1940. **június 22.** között a német hadsereg meghódította Franciaországot és a Benelux államokat. A „Blitzkrieg” a sebesség révén forradalmasítja a háború művészetét.",
+  "description": "**Hat hét** alatt, **1940. május 10-től június 22-ig** a német sereg elfoglalja Franciaországot és a Benelux államokat. A villámháború a sebességgel írja újra a hadviselést.",
   "hero": {
     "image": "la_blitzkrieg_1940",
     "ratio": "16:9",
-    "hook": "Hat hét az első európai hadseregnek hitt hadsereg lerombolására."
+    "hook": "Hat hét, és ledől, amit Európa első hadseregének hittek."
   },
   "sections": [
     {
@@ -18,76 +18,76 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**max 10.** és 1940. **június 22.** között mindössze hat hét alatt a német hadsereg meghódította Franciaországot, Hollandiát, Belgiumot és Luxemburgot. Európa vezető katonai hatalma összeomlik a világ szeme láttára."
+          "text": "**1940. május 10-től június 22-ig**, mindössze hat hét alatt a német sereg elfoglalja Franciaországot, Hollandiát, Belgiumot és Luxemburgot. Európa első katonai hatalma a világ szeme előtt omlik össze."
         },
         {
           "type": "paragraph",
-          "text": "A **Villámháború** (blitzkrieg) nem csupán győzelmek sorozata. Ez egy forradalom: az ellenség gyorsasága és szervezetlensége többet jelent, mint azonnali fizikai megsemmisítése."
+          "text": "A **Blitzkrieg** (villámháború) nem csak győzelmek sora. Forradalom: az ellenség szétzilálása és a sebesség többet számít, mint az azonnali fizikai megsemmisítés."
         }
       ]
     },
     {
       "id": "course_30_la_blitzkrieg_1940_p1",
-      "title": "Üss erősen, üss gyorsan",
+      "title": "Ütni erősen, ütni gyorsan",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A Blitzkrieg szó nem hivatalos a [[Wehrmacht]]-ben, a német hadseregben 1935 és 1945 között. Az angolszász sajtó találta ki. A németek mozgásháborúról beszélnek. A [[Schwerpunkt]] elve: összpontosítson minden eszközt egy keskeny pontra, hogy megtörje az elejét."
+          "text": "A Blitzkrieg szó nem hivatalos a [[Wehrmacht]] nyelvében, a német hadseregben 1935 és 1945 között. Az angolszász sajtó találja ki. A németek mozgóháborúról beszélnek. A [[Schwerpunkt]] elve: minden erőt egy keskeny pontra sűríteni, hogy áttörjék a frontot."
         },
         {
           "type": "funFact",
-          "text": "A Stukák szirénáinak, ezeknek a „Jerikó trombitáinak” nevezett búvárbombázóknak nincs valódi katonai felhasználásuk. Csak a katonák és a civilek terrorizálására szolgálnak."
+          "text": "A Stukák szirénája, ezeké a zuhanóbombázóké, amelyeket „jerikói trombitáknak” hívtak, katonailag semmit sem ad. Csak azért szól, hogy katonát és civilt ijesztsen."
         },
         {
           "type": "paragraph",
-          "text": "Ahol a franciák szétszórták a tankokat a gyalogság támogatására, a németek autonóm páncéloshadosztályokba csoportosították őket, amelyeket rádió köt össze. A stukák úgy viselkednek, mint a repülő tüzérség. Mindeközben Franciaország továbbra is hisz a [[A Maginot vonal]]-ben, ebben a német határ menti erődláncban."
+          "text": "Ahol a franciák a harckocsikat a gyalogság mellé szórják, a németek önálló páncéloshadosztályokba vonják őket, rádióval összekötve. A Stukák repülő tüzérségként dolgoznak. Franciaország eközben még [[A Maginot vonal]] mögött bízik, a német határ mentén emelt erődláncban."
         }
       ]
     },
     {
       "id": "course_30_la_blitzkrieg_1940_p2",
-      "title": "A sarlócsapás",
+      "title": "A sarlóvágás",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hitler **Erich von Manstein** tábornok tanácsára elfogadta a [[Sichelschnitt]]-t, a „sarlómozgást”: a szövetségeseket Belgiumba vonzza, miközben a páncélosok zöme, a német tankok átkeltek a **ArdennesZZENDBOLDassZZ-on. **május**13 éves** **Heinz Guderian** tábornok átkelt a Meuse-n **Szedán**-nél. A Csatorna útvonala megnyílt."
+          "text": "**Erich von Manstein** tábornok tanácsára Hitler elfogadja a [[Sichelschnitt]] tervét, a „sarlóvágást”: a szövetségeseket Belgiumba csalják, amíg a páncélosok zöme, a német tankok, átkelnek az **Ardenneken**, amelyet járhatatlannak tartottak. **Május 13-án** **Heinz Guderian** tábornok átkel a Maason **Sedannál**. Nyitva a tengeri út a La Manche felé."
         },
         {
           "type": "image",
           "asset": "german_tanks_blitzkrieg_1940",
           "ratio": "4:3",
-          "caption": "Német tankok az 1940-es hadjárat során."
+          "caption": "Német harckocsik az 1940-es hadjáratban"
         },
         {
           "type": "paragraph",
-          "text": "Egy hét alatt a szövetséges hadseregeket bekerítették, háttal a tengernek. Dunkerque-ben a [[Dinamo hadművelet (Dunkirk)]] **338 000** francia-brit katonákat evakuált. Nagy-Britannia megmenti a hadseregét. Franciaország egyedül marad."
+          "text": "Egy hét alatt a szövetséges seregek a tengernek háttal kerülnek bekerítésbe. Dunkerque-nél a [[Dinamo hadművelet (Dunkirk)]] **338.000** francia-brit katonát menekít ki. Nagy-Britannia megmenti a seregét. Franciaország egyedül marad."
         },
         {
           "type": "image",
           "asset": "dunkirk_evacuation_beach_1940",
           "ratio": "4:3",
-          "caption": "Dunkerque kiürítése, 1940. május-június."
+          "caption": "A dunkerque-i evakuálás, 1940. május-június"
         }
       ]
     },
     {
       "id": "course_30_la_blitzkrieg_1940_p3",
-      "title": "A fegyverszünet és a fellebbezés",
+      "title": "A fegyverszünet és a felhívás",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Legjobb hadosztályaitól megfosztva Franciaország összeomlott. Párizst június 14-én  nyitott várossá nyilvánítják. **Philippe Pétain** marsall fegyverszünetet kér, amelyet **június 22-én írtak alá** Compiègne-ben, ugyanabban a vagonban, mint a **1918**: Hitler bosszút áll."
+          "text": "A legjobb hadosztályai nélkül Franciaország összeomlik. Párizst nyílt várossá nyilvánítják **június 14-én**. **Philippe Pétain** marsall fegyverszünetet kér, amelyet **június 22-én** írnak alá Compiègne-ben, ugyanabban a vagonban, mint **1918**-ban: Hitler a revansot rendezi meg."
         },
         {
           "type": "funFact",
-          "text": "A szertartásra Hitler kivette a kocsit a Compiègne-i múzeumból, és pontosan oda helyezte, ahol Németország 22 évvel korábban kapitulált."
+          "text": "A ceremóniához Hitler kiviteti a vagont a compiègne-i múzeumból, és pontosan oda rakatja, ahol Németország 22 évvel korábban kapitulált."
         },
         {
           "type": "paragraph",
-          "text": "**június 18.** Londonból, **de Gaulle tábornok** fellebbezést nyújt be a BBC-nek: Franciaország csatát vesztett, nem háborút. Az azonnali hatás csekély. Lerakták a Szabad Franciaország alapjait."
+          "text": "**Június 18-án** Londonból **de Gaulle tábornok** a BBC-n elmondja a felhívását: Franciaország csatát vesztett, nem háborút. Az azonnali hatás gyenge. A Szabad Franciaország alapja mégis itt van."
         }
       ]
     },
@@ -98,36 +98,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1940-ben Németország lett Európa ura. De a Blitzkrieg egy rövid háborús stratégia: korlátozott üzemanyag, törékeny logisztika. A **1941**-ben a szovjet mérhetetlenséggel szembesülve megrekedt. **Marc Bloch** történész „Furcsa vereségről” fog beszélni: egy francia szellemi és anyagi kudarcról."
+          "text": "1940 Németországot Európa urává teszi. De a villámháború rövid háborúra való: kevés az üzemanyag, törékeny a logisztika. **1941**-ben, a szovjet térrel szemben, elakad. **Marc Bloch** történész „különös vereségről” ír: francia szellemi kudarc is, nemcsak anyagi."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1940. május 10",
-              "title": "Támadó nyugaton",
-              "detail": "Egyidejű támadás a Benelux államok ellen és áttörés az Ardennekben."
+              "date": "1940. május 10.",
+              "title": "Offenzíva nyugaton",
+              "detail": "Egyszerre támadják a Beneluxot, és áttörnek az Ardenneken."
             },
             {
-              "date": "1940. május 13",
-              "title": "Szedán áttörés",
-              "detail": "A páncélosok átkelnek a Meuse-n."
+              "date": "1940. május 13.",
+              "title": "Sedani áttörés",
+              "detail": "A páncélosok átkelnek a Maason."
             },
             {
               "date": "1940. május-június",
               "title": "Dunkerque",
-              "detail": "338 000 katonát evakuáltak Angliába."
+              "detail": "338.000 katonát evakuálnak Angliába."
             },
             {
-              "date": "1940. június 22",
+              "date": "1940. június 22.",
               "title": "Fegyverszünet",
-              "detail": "Franciaország leállítja a harcot Compiègne-nél."
+              "detail": "Franciaország Compiègne-ben leteszi a fegyvert."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Hat hét alatt a Blitzkrieg egyesíti a páncélt, a repülést és a rádiót, hogy porrá törjön egy védelmi doktrínát. A Maginot-vonalon az erők sebessége és koncentrációja érvényesült."
+          "text": "Hat hét alatt a villámháború páncélossal, légierővel és rádióval zúzza szét a védelmi tant. A sebesség és az erők sűrítése többet ér, mint a Maginot-vonal."
         }
       ]
     }
