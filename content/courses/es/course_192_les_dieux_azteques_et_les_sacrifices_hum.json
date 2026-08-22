@@ -1,14 +1,14 @@
 {
   "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
-  "title": "Dioses aztecas y sacrificios humanos",
+  "title": "Los dioses aztecas y los sacrificios humanos",
   "subtitle": "Sangre para el sol",
   "subject": "mythologie",
   "subcategory": "Otras mitologías",
-  "description": "Entre los aztecas, el sol sólo sale si los dioses reciben sangre. Una cosmología dura, pero coherente, en el corazón de su imperio.",
+  "description": "Para los aztecas, el sol solo sale si se da sangre a los dioses. Una cosmología dura, pero coherente, en el corazón mismo de su imperio.",
   "hero": {
     "image": "les_dieux_azteques_et_les_sacrifices_humains",
     "ratio": "16:9",
-    "hook": "Sin sangre, el sol se detendría: tal es la deuda cósmica de los aztecas."
+    "hook": "Sin sangre el sol se detendría: esa es la deuda cósmica de los aztecas."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Los **aztecas**, o mexicas, creen que el universo es frágil. Los dioses necesitan sangre para que el sol siga su curso. Sin ofrendas, el caos regresaría."
+          "text": "Los **aztecas**, o mexicas, creían que el universo era frágil. Los dioses necesitaban sangre para que el sol siguiera moviéndose. Sin ofrendas, el caos volvería."
         },
         {
           "type": "paragraph",
-          "text": "Lo que horrorizó a los españoles se basa en una idea clara: las vidas de los dioses y los hombres están unidas. Así es como funciona esta cosmología."
+          "text": "Lo que horrorizó a los españoles descansa en una idea clara: la vida de los dioses y la de los humanos están atadas. Así funciona esa cosmología."
         }
       ]
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
-      "title": "Los Cinco Soles: un mundo ya muerto cuatro veces",
+      "title": "Los Cinco Soles: un mundo que ya ha muerto cuatro veces",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Según el mito , cuatro eras ya han desaparecido en catástrofes. Estamos experimentando el quinto sol,  (“4-Movimiento”), que prometió terminar con los terremotos. [[Cinco Soles]] [[Nahui Ollin]]"
+          "text": "En el mito de los [[Cinco Soles]], cuatro edades ya han terminado en desastre. La nuestra es el quinto sol, [[Nahui Ollin]] (“4-Movimiento”), y está destinada a acabar en terremotos."
         },
         {
           "type": "image",
           "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
           "ratio": "4:3",
-          "caption": "Piedra del Sol: El tiempo azteca se convierte en eras sucesivas."
+          "caption": "La Piedra del Sol: el tiempo azteca gira de una era a otra"
         },
         {
           "type": "paragraph",
-          "text": "En **Teotihuacán**, ciudad sagrada en la meseta central, los dioses se arrojan al fuego para convertirse en sol y luna. Pero el sol permanece quieto. Los otros dioses ofrecen entonces su propia sangre para ponerlo en marcha. Los hombres heredan esta deuda."
+          "text": "En **Teotihuacán**, la ciudad sagrada de la meseta central, los dioses se lanzan a un fuego para volverse sol y luna. Pero el sol se queda quieto. Los demás dioses ofrecen entonces su propia sangre para ponerlo en marcha. Los humanos heredan esa deuda."
         },
         {
           "type": "funFact",
-          "text": "Para los aztecas, el sacrificio no es una crueldad gratuita: es el pago de una deuda divina, la . [[Cosmología de los Cinco Soles y deuda cósmica]]"
+          "text": "Para los aztecas, el sacrificio no era crueldad por sí misma: era el pago de una deuda divina, la [[Cosmología de los Cinco Soles y deuda cósmica]]."
         }
       ]
     },
@@ -58,60 +58,60 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El dios central es , dios de la guerra y del sol del mediodía. Cada noche lucha contra la oscuridad para renacer en la mañana. A su lado,  da lluvia, por tanto cosechas, o hambre. [[Huitzilopochtli, el dios solar]] [[Tláloc]]"
+          "text": "El dios central es [[Huitzilopochtli]], dios de la guerra y del sol del mediodía. Cada noche combate la oscuridad para renacer por la mañana. Junto a él, [[Tláloc]] reparte la lluvia, y con ella la cosecha, o el hambre."
         },
         {
           "type": "image",
           "asset": "huitzilopochtli_aztec_sun_god_codex",
           "ratio": "4:3",
-          "caption": "Huitzilopochtli, sol guerrero que exige ser nutrido."
+          "caption": "Huitzilopochtli, el sol guerrero que exige ser alimentado"
         },
         {
           "type": "paragraph",
-          "text": ", la Serpiente Emplumada, encarna el conocimiento y la civilización. Su rival , el Espejo Humeante, gobierna la noche, el destino y la magia. La tierra misma tiene un rostro terrible: , diosa madre devoradora. [[Quetzalcóatl]] [[Tezcatlipoca]] [[Coatlicue]]"
+          "text": "[[Quetzalcóatl]], la Serpiente Emplumada, representa el saber y la civilización. Su rival [[Tezcatlipoca]], el Espejo Humeante, manda en la noche, el destino y la magia. La tierra misma tiene un rostro terrible: [[Coatlicue]], la diosa madre devoradora."
         },
         {
           "type": "funFact",
-          "text": "La preciosa sangre ofrecida a los dioses se llama , “agua preciosa”. Se piensa que el corazón extraído es como una chispa solar que regresa al cielo. [[chalchihuatl]]"
+          "text": "La sangre preciosa ofrecida a los dioses se llama [[chalchihuatl]], “agua preciosa”. El corazón arrancado del cuerpo se imagina como una chispa de sol devuelta al cielo."
         }
       ]
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p3",
-      "title": "La guerra de las flores",
+      "title": "Las guerras floridas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Para obtener víctimas, los aztecas organizan las , las “guerras de las flores”: combates rituales cuyo objetivo no es matar, sino capturar guerreros vivos dignos de ser ofrecidos. [[Xochiyaoyotl]]"
+          "text": "Para obtener víctimas, los aztecas organizaban el [[Xochiyaoyotl]], las “guerras floridas”: combates rituales cuyo fin no era matar, sino capturar guerreros vivos dignos de ser ofrecidos."
         },
         {
           "type": "image",
           "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
           "ratio": "4:3",
-          "caption": "Sacrificio en lo alto del templo: el corazón presentado al sol."
+          "caption": "Sacrificio en lo alto del templo: el corazón alzado hacia el sol"
         },
         {
           "type": "paragraph",
-          "text": "En la cima del **Templo Mayor** en Tenochtitlán, la capital junto al lago, un sacerdote extrae el corazón con un cuchillo de **Obsidiana**, una piedra volcánica afilada. El gesto es público, solemne, considerado como un servicio prestado al sol."
+          "text": "En la cima del **Templo Mayor** de Tenochtitlán, la capital construida sobre un lago, un sacerdote extraía el corazón con un cuchillo de **obsidiana**, una piedra volcánica afilada como una navaja. El acto era público y solemne, entendido como un servicio rendido al sol."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "Mito",
-              "title": "sacrificio de los dioses",
-              "detail": "El sol recibe sangre divina para seguir adelante."
+              "title": "Sacrificio de los dioses",
+              "detail": "El sol recibe sangre divina para poder moverse."
             },
             {
               "date": "Imperio",
-              "title": "Guerras de flores",
-              "detail": "Capturar guerreros para ofrendas."
+              "title": "Guerras floridas",
+              "detail": "Capturar guerreros para las ofrendas."
             },
             {
               "date": "1519",
-              "title": "shock español",
-              "detail": "Llega Cortés; el sistema colapsa."
+              "title": "El choque español",
+              "detail": "Llega Cortés; el sistema se derrumba."
             }
           ]
         }
@@ -119,20 +119,20 @@
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
-      "title": "Fin de un mundo, huellas duraderas",
+      "title": "El fin de un mundo, huellas duraderas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Las crónicas españolas a veces inflan las cifras para justificar la conquista. Pero el sistema de sacrificios es muy real. En **1519**, la llegada de **Hernán Cortés** precipita el fin de este universo ritual."
+          "text": "Las crónicas españolas a veces inflaron las cifras para justificar la conquista. Pero el sistema sacrificial era bien real. En **1519**, la llegada de **Hernán Cortés** puso un fin brusco a este mundo ritual."
         },
         {
           "type": "paragraph",
-          "text": "Sin embargo, las figuras aztecas sobreviven en el sincretismo: la Virgen de Guadalupe aparece en un sitio que alguna vez estuvo vinculado a una diosa madre. Comprender estos sacrificios es comprender una cultura que sitúa la supervivencia del cosmos por encima del individuo."
+          "text": "Aun así, las figuras aztecas sobreviven en una religión mestiza: la Virgen de Guadalupe apareció en un sitio antaño ligado a una diosa madre. Entender estos sacrificios es entender una cultura que puso la supervivencia del cosmos por encima del individuo."
         },
         {
           "type": "takeaway",
-          "text": "Entre los aztecas, la sangre humana alimentaba el sol. Los dioses ya han pagado con sus vidas: los hombres pagan esta deuda mediante sacrificios, en particular mediante **guerras florales**."
+          "text": "Para los aztecas, la sangre humana alimentaba el sol. Los dioses ya habían pagado con su vida, así que la gente devolvía esa deuda mediante el sacrificio, sobre todo a través de las **guerras floridas**."
         }
       ]
     }
