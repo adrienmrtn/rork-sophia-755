@@ -16,6 +16,7 @@ Usage:
     python scripts/check_course_translation.py --lang tr --json report.json
     python scripts/check_course_translation.py --lang pl --json report.json
     python scripts/check_course_translation.py --lang ro --json report.json
+    python scripts/check_course_translation.py --lang nl --json report.json
 """
 
 from __future__ import annotations
@@ -324,6 +325,27 @@ ROMANIAN_RULES = LanguageRules(
     era_hint="should be î.Hr. / d.Hr.",
 )
 
+DUTCH_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(de|het|een|van|in|op|aan|met|voor|door|tot|en|of)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "een," / "en," / "of," are ordinary in lists; "een." is often a numeral.
+    stranded_tight=re.compile(
+        r"\b(de|het)\s*([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=("de ", "het ", "een "),
+    leftover_extra_skip=frozenset({"les", "dans", "des"}),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # Dutch decimals are commas
+    century_hint="should be '15e eeuw'",
+    era_hint="should be v.Chr. / n.Chr.",
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
@@ -333,6 +355,7 @@ RULES_BY_LANG: dict[str, LanguageRules] = {
     "tr": TURKISH_RULES,
     "pl": POLISH_RULES,
     "ro": ROMANIAN_RULES,
+    "nl": DUTCH_RULES,
 }
 
 
@@ -407,6 +430,7 @@ ARTICLE_BEFORE_RE = {
     "tr": re.compile(r"\b(bir|bu|\u015fu)$", re.IGNORECASE),
     "pl": re.compile(r"\b(ten|ta|to|ci|te)$", re.IGNORECASE),
     "ro": re.compile(r"\b(un|o)$", re.IGNORECASE),
+    "nl": re.compile(r"\b(de|het|een)$", re.IGNORECASE),
 }
 
 

@@ -1,14 +1,14 @@
 {
   "id": "course_217_l_economie_de_plateforme_uber_airbnb",
-  "title": "De platformeconomie (Uber, Airbnb, etc.)",
-  "subtitle": "Kapitalisme zonder fabrieken",
+  "title": "De platformeconomie (Uber, Airbnb...)",
+  "subtitle": "Een kapitalisme zonder fabrieken",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Uber, Airbnb en Deliveroo bezitten bijna niets: geen auto's, geen appartementen, geen werknemers. Hoe zijn deze platforms mondiale reuzen geworden?",
+  "description": "Uber, Airbnb, Deliveroo bezitten bijna niets: geen auto's, geen appartementen, geen werknemers. Hoe werden die platformen wereldreuzen?",
   "hero": {
     "image": "l_economie_de_plateforme",
     "ratio": "16:9",
-    "hook": "Uber heeft nog nooit een enkele auto gehad, maar toch heeft het het transport over de hele wereld verstoord."
+    "hook": "Uber heeft nooit één auto bezeten, en toch ontwrichtte het het transport over de hele wereld."
   },
   "sections": [
     {
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uber, Airbnb, Amazon of Deliveroo behoren tot een nieuwe categorie bedrijven: **digitale platforms**. Ze digitaliseren niet alleen diensten die al bestonden: ze veranderen de manier van bezitten, werken en beschermd worden."
+          "text": "Uber, Airbnb, Amazon of Deliveroo horen bij een nieuwe categorie bedrijven: de **digitale platformen**. Ze digitaliseren niet alleen diensten die al bestonden: ze veranderen de manier zelf van bezitten, werken en beschermd zijn."
         },
         {
           "type": "paragraph",
-          "text": "Dit model heeft een nieuwe vorm van kapitalisme uitgevonden, die ons sociaal contract in twijfel trekt. Laten we begrijpen hoe het werkt en waarom er zo over gedebatteerd wordt."
+          "text": "Dit model vond een ongekende vorm van kapitalisme uit, die ons sociaal contract bevraagt. Begrijp hoe het werkt, en waarom het zoveel debat uitlokt."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p1",
-      "title": "Kapitalisme zonder fabrieken of werknemers",
+      "title": "Een kapitalisme zonder fabrieken of werknemers",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Een traditioneel bedrijf bezit fabrieken, voertuigen, inventaris en heeft werknemers in dienst. Een platform doorbreekt dit model: het wordt een eenvoudige digitale infrastructuur die vraag en aanbod met elkaar verbindt, zonder zelf iets te produceren."
+          "text": "Een klassiek bedrijf bezit fabrieken, voertuigen, voorraden, en stelt werknemers tewerk. Een platform breekt dat model: het wordt een eenvoudige digitale infrastructuur die vraag en aanbod koppelt, zonder zelf iets te produceren."
         },
         {
           "type": "paragraph",
-          "text": "Dit systeem is gebaseerd op het [[Netwerkeffect]]: hoe meer gebruikers een platform heeft, hoe nuttiger het wordt, wat nog meer gebruikers aantrekt. Voor een transportdienst geldt: hoe meer chauffeurs beschikbaar zijn, hoe korter de wachttijd, wat meer klanten aantrekt, die op hun beurt meer chauffeurs aantrekken. Deze cirkel leidt vrijwel altijd tot quasi-monopoliesituaties."
+          "text": "Dat systeem steunt op het [[netwerkeffect]]: hoe meer gebruikers een platform heeft, hoe nuttiger het wordt, wat nog meer gebruikers aantrekt. Voor een vervoersdienst geldt: hoe meer chauffeurs beschikbaar zijn, hoe korter het wachten, wat meer klanten aantrekt, die op hun beurt meer chauffeurs aantrekken. Die cirkel leidt bijna altijd tot situaties van quasi-monopolie."
         },
         {
           "type": "funFact",
-          "text": "Uber heeft miljarden dollars uitgegeven aan onderzoek naar zelfrijdende auto’s, met als uiteindelijk doel de laatste grote kostenpost kwijt te raken: de menselijke bestuurder."
+          "text": "Uber gaf miljarden dollar uit aan onderzoek naar autonome auto's, met als doel op termijn zijn laatste grote kost kwijt te raken: de menselijke chauffeur."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p2",
-      "title": "Werk zonder de bescherming van de werkgelegenheid",
+      "title": "Werk zonder de bescherming van loondienst",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Deze technische innovatie gaat gepaard met een meer omstreden juridische innovatie. In de [[gig-economie en uberisatie]] weigert het platform de status van werkgever om zichzelf te presenteren als een eenvoudige technologische tussenpersoon, die het betalen van sociale zekerheidsbijdragen, een minimumloon of betaald verlof vermijdt."
+          "text": "Die technische innovatie gaat samen met een meer betwiste juridische innovatie. In de [[gig-economie en uberisatie]] weigert het platform de status van werkgever, en presenteert het zich als loutere technologische tussenpersoon, wat het toelaat geen sociale bijdragen, geen minimumloon of geen betaalde vakantie te betalen."
         },
         {
           "type": "image",
           "asset": "gig_economy_workers_strike_protest",
           "ratio": "16:9",
-          "caption": "Chauffeurs en bezorgers worden vaak geclassificeerd als zelfstandigen en niet als werknemers."
+          "caption": "Chauffeurs en bezorgers worden vaak als zelfstandigen geklasseerd, niet als werknemers"
         },
         {
           "type": "paragraph",
-          "text": "De werknemer wordt een onafhankelijke werknemer die als enige alle risico's draagt: ziekte, ongeval, vraaguitval. Het blijft echter vaak onderworpen aan de regels van de toepassing (opgelegde prijzen, rating, sancties), een situatie die we **algoritmische ondergeschiktheid** noemen. Geconfronteerd hiermee zijn rechtbanken in verschillende landen begonnen de [[Herclassificatie]] van deze contracten op te leggen als echte betaalde banen."
+          "text": "De werker wordt een zelfstandige die alle risico's alleen draagt: ziekte, ongeval, daling van de vraag. Toch blijft hij vaak onderworpen aan de regels van de app (opgelegde tarieven, scores, sancties), een situatie die men **algoritmische ondergeschiktheid** noemt. Daartegenover begonnen rechtbanken in meerdere landen de [[Herclassificatie]] van die contracten tot echte loondienst op te leggen."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p3",
-      "title": "Steden op hun kop",
+      "title": "Steden die overhoop liggen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De impact van deze platforms reikt verder dan de arbeidswereld: ze transformeren ook steden. Door toeristische verhuur op korte termijn mogelijk te maken, concurreert Airbnb met traditionele hotels en vermindert het aantal beschikbare accommodaties voor bewoners."
+          "text": "De impact van die platformen gaat verder dan de arbeidswereld: hij transformeert ook steden. Airbnb, door toeristische kortetermijnverhuur te vergemakkelijken, concurreert met klassieke hotels en vermindert het aantal woningen voor bewoners."
         },
         {
           "type": "paragraph",
-          "text": "Resultaat: de huurprijzen in stadscentra stijgen en metropolen als Parijs of Barcelona hebben strenge regels moeten opleggen, zoals quota voor huurdagen. Staten proberen ook **vingerhoedskruid belastingheffing** in te voeren, zodat deze platforms hun deel van de belastingen betalen waar ze daadwerkelijk hun geld verdienen."
+          "text": "Gevolg: de huren stijgen in de stadscentra, en metropolen als Parijs of Barcelona moesten strikte regels opleggen, zoals quota van verhuurdagen. Staten proberen ook een **digitale belasting** in te voeren, zodat die platformen hun deel belasting betalen waar ze echt hun geld verdienen."
         },
         {
           "type": "funFact",
-          "text": "In New York zorgde de strenge regelgeving tegen Airbnb in 2023 ervoor dat het aantal legale advertenties in een paar maanden tijd met 80% daalde."
+          "text": "In New York deed een strikte regulering tegen Airbnb in 2023 het aantal legale advertenties in enkele maanden met 80% dalen."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p4",
-      "title": "Naar een nieuwe status voor werknemers?",
+      "title": "Naar een nieuw statuut voor werkers?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De platformeconomie heeft snelle en vaak goedkopere diensten gebracht en het voor sommige mensen gemakkelijker gemaakt om een ​​inkomen te vinden. Maar deze effectiviteit is gebaseerd op een verzwakking van de beschermingsmaatregelen die in de twintigste eeuw zijn opgebouwd."
+          "text": "De platformeconomie bracht snelle en vaak goedkopere diensten, en liet sommige mensen makkelijker een inkomen vinden. Maar die efficiëntie rust op een verzwakking van de beschermingen die in de 20e eeuw zijn opgebouwd."
         },
         {
           "type": "paragraph",
-          "text": "Het huidige debat gaat over het creëren van een tussenstatus, tussen werknemer en zelfstandige, met overdraagbaarheid van rechten: elke werknemer zou sociale bescherming opbouwen, ongeacht het aantal platforms waarvoor hij werkt. De toekomst van dit model zal afhangen van het vermogen van de toezichthouders om het te reguleren zonder innovatie te belemmeren."
+          "text": "Het huidige debat gaat over de creatie van een tussenstatuut, tussen werknemer en zelfstandige, met overdraagbaarheid van rechten: elke werker zou sociale bescherming opbouwen, ongeacht het aantal platformen waarvoor hij werkt. De toekomst van dit model hangt af van het vermogen van toezichthouders het in te kaderen zonder de innovatie te smoren."
         },
         {
           "type": "takeaway",
-          "text": "De platformeconomie is gebaseerd op een fabrieksvrij kapitalisme dat het netwerkeffect uitbuit en tegelijkertijd zijn werknemers transformeert in vaak onzekere freelancers. De strijd voor betere sociale bescherming, zonder dit model te doorbreken, is nog maar net begonnen."
+          "text": "De platformeconomie rust op een kapitalisme zonder fabrieken dat het netwerkeffect uitbuit, en tegelijk zijn werkers omvormt tot vaak precairere zelfstandigen. De strijd voor betere sociale bescherming, zonder dit model te breken, is nog maar net begonnen."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_232_la_blockchain_et_les_cryptomonnaies",
-  "title": "Blockchain en cryptocurrencies",
+  "title": "De blockchain en de cryptomunten",
   "subtitle": "Sinds 2009",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "De **blockchain** heeft een grootboek uitgevonden waar niemand alleen mee kan knoeien, waardoor de weg wordt vrijgemaakt voor een nieuwe digitale economie.",
+  "description": "De **blockchain** bedacht een register dat niemand alleen kan vervalsen, en opende zo de weg naar een nieuwe digitale economie.",
   "hero": {
     "image": "la_blockchain_et_les_cryptomonnaies",
     "ratio": "16:9",
-    "hook": "Een rekeningboek dat niemand bezit, maar dat door duizenden computers samen wordt gecontroleerd."
+    "hook": "Een kasboek dat niemand bezit, maar dat duizenden computers samen bewaken."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Stel je een rekeningboek voor dat niemand bezit, maar dat duizenden computers tegelijkertijd bijwerken, over de hele wereld, en dat bijna onmogelijk te vervalsen is. Dit is het oorspronkelijke idee van de **blockchain**, een technologie die vaak wordt teruggebracht tot de eerste toepassing, de **Bitcoin**."
+          "text": "Stel je een kasboek voor dat niemand alleen bezit, maar dat duizenden computers tegelijk bijhouden, overal ter wereld, en dat bijna niet te vervalsen is. Dat is het startidee van de **blockchain**, een techniek die vaak wordt verengd tot haar eerste toepassing: **Bitcoin**."
         },
         {
           "type": "paragraph",
-          "text": "Door het mogelijk te maken waarde uit te wisselen zonder tussenkomst van een bank, heeft deze uitvinding aanleiding gegeven tot een volledige parallelle economie, tussen beloften van financiële vrijheid en scherpe kritiek op de energiekosten ervan."
+          "text": "Door waarde te ruilen zonder bank ontstond een hele parallelle economie, tussen beloftes van financiële vrijheid en scherpe kritiek op het energieverbruik."
         }
       ]
     },
@@ -33,78 +33,78 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De kern van blockchain is een eenvoudig idee: het **gedistribueerde grootboek**. In tegenstelling tot een bank, die haar rekeningen op eigen servers bewaart, is blockchain afhankelijk van een netwerk van [[leeftijdsgenoten]], dat wil zeggen duizenden computers die elk een identieke kopie bijhouden van alle transacties."
+          "text": "In het hart van de blockchain zit een eenvoudig idee: het **verdeelde register**. Anders dan een bank, die haar rekeningen op eigen servers houdt, steunt de blockchain op een netwerk van [[leeftijdsgenoten]], duizenden computers die elk een identieke kopie van alle transacties bewaren."
         },
         {
           "type": "funFact",
-          "text": "Het allereerste blok van de Bitcoin-blockchain, het ‘genesisblok’ genoemd, bevatte een verborgen boodschap: de voorpagina van een Britse krant van 3 januari 2009, die sprak over de staatssteun aan de banken. Een politiek knikje van de maker ervan."
+          "text": "Het allereerste blok van de Bitcoin-blockchain, het „genesisblok”, bevatte een verborgen boodschap: de voorpagina van een Britse krant van 3 januari 2009, over de redding van de banken door de staat. Een politieke knipoog van de maker."
         },
         {
           "type": "paragraph",
-          "text": "Elke transactie wordt eerst geverifieerd door het netwerk en vervolgens met anderen gegroepeerd in een **blok**. Dit blok wordt vervolgens aan het vorige gekoppeld dankzij een wiskundige berekening genaamd [[hashen]]: een soort unieke digitale vingerafdruk. Het resultaat is een ononderbroken keten van blokken, vandaar de naam blockchain. Om één enkele oude transactie aan te passen zou je de hele keten opnieuw moeten doorrekenen en meer dan de helft van het netwerk moeten overtuigen, wat op grote schaal vrijwel onmogelijk is."
+          "text": "Elke transactie wordt eerst door het netwerk gecontroleerd, en daarna met andere in een **blok** gezet. Dat blok wordt aan het vorige gekoppeld via een wiskundige berekening, [[hashen]]: een soort unieke digitale vingerafdruk. Zo ontstaat een ononderbroken keten van blokken, vandaar de naam blockchain. Om één oude transactie te wijzigen, zou je de hele keten opnieuw moeten berekenen en meer dan de helft van het netwerk moeten overtuigen. Op grote schaal is dat bijna onmogelijk."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p2",
-      "title": "Bitcoin en Ethereum: van betaling tot programma",
+      "title": "Bitcoin en Ethereum: van betaling naar programma",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De **Bitcoin**, gelanceerd in **2009** door een anonieme persoon (of groep) onder de naam [[Satoshi Nakamoto]], bewees dat een monetair systeem zou kunnen functioneren zonder een centrale bank. Om de schaarste ervan te garanderen, heeft de maker ervan een strikt plafond gesteld: er kunnen nooit meer dan **21 duizend bitcoins** bestaan, een beetje zoals goud op aarde beperkt is."
+          "text": "De **Bitcoin**, gelanceerd in **2009** door een persoon (of een groep) die anoniem bleef onder de naam [[Satoshi Nakamoto]], bewees dat een geldsysteem zonder centrale bank kan werken. Om schaarste te garanderen zette de maker een strikt plafond: er zullen nooit meer dan **21 miljoen bitcoins** bestaan, een beetje zoals goud op aarde beperkt is."
         },
         {
           "type": "image",
           "asset": "blockchain_technology_distributed_ledger_visualization",
           "ratio": "4:3",
-          "caption": "Elke transactie wordt geverifieerd door een netwerk van computers voordat deze aan de keten wordt toegevoegd."
+          "caption": "Elke transactie wordt door een netwerk van computers gecontroleerd voor ze aan de keten wordt toegevoegd"
         },
         {
           "type": "paragraph",
-          "text": "In 2015 verscheen een tweede generatie blockchain met **Ethereum**. De geweldige innovatie: **slanke contracten**. Dit zijn programma’s die automatisch draaien zodra aan een voorwaarde wordt voldaan, bijvoorbeeld automatische vergoeding bij treinvertraging, zonder tussenkomst van een tussenpersoon."
+          "text": "In 2015 verscheen een tweede generatie blockchain met **Ethereum**. De grote nieuwigheid: de **slimme contracten**. Dat zijn programma's die vanzelf lopen zodra een voorwaarde is vervuld, bijvoorbeeld een automatische terugbetaling bij een treinvertraging, zonder tussenpersoon."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
-      "title": "Critici: energie en instabiliteit",
+      "title": "De kritiek: energie en instabiliteit",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Het succes van cryptocurrencies is niet zonder problemen. Het meest besproken onderwerp betreft het **verbruikt** van het Bitcoin-netwerk: de jaarlijkse elektriciteitsuitgaven zijn tegenwoordig vergelijkbaar met die van een heel land als Argentinië."
+          "text": "Het succes van cryptomunten gaat niet zonder problemen. Het meest besproken punt is het **energieverbruik** van het Bitcoin-netwerk: de jaarlijkse stroomrekening is nu vergelijkbaar met die van een heel land als Argentinië."
         },
         {
           "type": "paragraph",
-          "text": "De markt heeft ook last van extreme **wisselvalligheid**: de prijs van Bitcoin kan binnen een paar uur met 10 of 20% variëren. Deze instabiliteit verhindert momenteel dat het een echte alledaagse valuta wordt."
+          "text": "De markt lijdt ook onder extreme **volatiliteit**: de prijs van Bitcoin kan in een paar uur 10 of 20% bewegen. Die onrust verhindert tot nu toe dat het een echte dagelijkse munt wordt."
         },
         {
           "type": "paragraph",
-          "text": "Ten slotte wordt de relatieve anonimiteit van transacties soms gebruikt voor illegale activiteiten. Maar de blockchain blijft eigenlijk volledig transparant: de autoriteiten kunnen de geldstroom volgen, wat het witwassen moeilijker maakt dan in het klassieke contante geldsysteem."
+          "text": "Ten slotte diende de relatieve anonimiteit van transacties soms voor illegale activiteiten. Maar de blockchain blijft in werkelijkheid volledig transparant: autoriteiten kunnen geldstromen volgen, wat witwassen lastiger maakt dan met klassiek contant geld."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p4",
-      "title": "Op weg naar institutionele integratie",
+      "title": "Op weg naar institutionele inbedding",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tegenwoordig verlaten cryptocurrencies de marges om traditionele financiële markten te betreden. Grote banken bieden nu aan om digitale activa aan te houden voor hun klanten, en verschillende staten overwegen om hun eigen officiële digitale valuta te creëren, een **[[MNBC]]** (digitale valuta van de centrale bank)."
+          "text": "Vandaag verlaten cryptomunten de marge en stappen ze de traditionele financiën binnen. Grote banken bewaren nu digitale activa voor hun klanten, en verschillende staten denken aan een eigen officiële digitale munt, een **[[CBDC]]** (digitale munt van de centrale bank)."
         },
         {
           "type": "paragraph",
-          "text": "**stabiele munten**, cryptocurrencies waarvan de prijs gestabiliseerd is dankzij een reserve van dollars of euro’s, dienen als brug tussen de twee werelden. Naast de financiële sector adopteren sectoren als de luxesector (om namaak tegen te gaan), de logistiek (om containers te traceren) of de gezondheidszorg (om medische dossiers te beveiligen) ook blockchain vanwege de betrouwbaarheid ervan."
+          "text": "De **stablecoins**, cryptomunten waarvan de prijs stabiel blijft dankzij een reserve in dollars of euro's, dienen als brug tussen beide werelden. Buiten de financiën nemen ook luxe (tegen namaak), logistiek (om containers te volgen) of gezondheid (om medische dossiers te beveiligen) de blockchain over vanwege de betrouwbaarheid."
         },
         {
           "type": "funFact",
-          "text": "In 2021 werd El Salvador het eerste land ter wereld dat Bitcoin als wettig betaalmiddel adopteerde, naast de Amerikaanse dollar, waardoor elke handelaar verplicht werd het te accepteren als hij over de technische middelen beschikt."
+          "text": "In 2021 werd El Salvador het eerste land ter wereld dat Bitcoin als wettig betaalmiddel invoerde, naast de Amerikaanse dollar, en elke handelaar verplichtte hem te aanvaarden als de techniek het toeliet."
         },
         {
           "type": "takeaway",
-          "text": "De blockchain, gecreëerd in 2009, is een gedeeld grootboek dat bijna onmogelijk te vervalsen is, met een maximaal aanbod van bitcoins van 21 miljoen eenheden. Het legde de basis voor een nieuwe digitale economie die vandaag de dag volledig institutioneel geïntegreerd is."
+          "text": "De blockchain, ontstaan in 2009, is een gedeeld register dat bijna niet te vervalsen is. Het maximumaantal bitcoins ligt vast op 21 miljoen. Ze legde de basis van een nieuwe digitale economie die nu in de instellingen wordt opgenomen."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_59_la_decouverte_de_l_anesthesie",
-  "title": "De ontdekking van anesthesie",
-  "subtitle": "Geneesmiddel",
+  "title": "De ontdekking van de anesthesie",
+  "subtitle": "Geneeskunde",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Vóór 1846 werd een operatie vaak bewust en met veel pijn uitgevoerd. Anesthesie verandert chirurgie in zorg, niet in marteling.",
+  "description": "Voor 1846 gebeurde een operatie vaak bij bewustzijn en in extreme pijn. Anesthesie maakt van chirurgie zorg, geen foltering.",
   "hero": {
     "image": "la_decouverte_de_l_anesthesie",
     "ratio": "16:9",
-    "hook": "Op een dag in 1846 was een operatie in Boston niet langer een race tegen de pijn."
+    "hook": "Op een dag in 1846, in Boston, houdt de chirurgie op een race tegen de pijn te zijn."
   },
   "sections": [
     {
@@ -18,28 +18,28 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Stel je een amputatie voor zonder in slaap te vallen. Vóór het midden van de 19e eeuw was dit de norm. We binden de patiënt vast, we handelen snel, we bidden."
+          "text": "Stel je een amputatie voor zonder verdoving. Voor het midden van de 19e eeuw was dat de norm. Men bond de patiënt vast, ging snel en bad."
         },
         {
           "type": "paragraph",
-          "text": "**anesthesie** verandert alles: het stelt u in staat te opereren zonder pijnbesef. Moderne chirurgie kan eindelijk de tijd nemen."
+          "text": "De **anesthesie** verandert alles: je kunt opereren zonder de pijn te voelen. De moderne chirurgie kan eindelijk de tijd nemen."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p1",
-      "title": "Vroeger: snelheid versus lijden",
+      "title": "Vroeger: snelheid tegen het lijden",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "surgery_without_anesthesia_19th_century",
           "ratio": "4:3",
-          "caption": "Zonder verdoving moest de chirurg extreem snel zijn."
+          "caption": "Zonder anesthesie moest de chirurg extreem snel zijn."
         },
         {
           "type": "paragraph",
-          "text": "Chirurgen werden beoordeeld op hun snelheid. Alcohol, opium of bruut geweld werden gebruikt om mensen te immobiliseren. Veel patiënten stierven door shock, infectie of bloeding."
+          "text": "Chirurgen werden beoordeeld op hun snelheid. Men gebruikte alcohol, opium of brute kracht om de patiënt stil te houden. Veel patiënten stierven aan de schok, aan infectie of aan een bloeding."
         }
       ]
     },
@@ -52,30 +52,30 @@
           "type": "image",
           "asset": "ether_anesthesia_first_demonstration_1846",
           "ratio": "4:3",
-          "caption": "In Boston overtuigde een openbare demonstratie de medische wereld."
+          "caption": "In Boston overtuigt een openbare demonstratie de medische wereld."
         },
         {
           "type": "paragraph",
-          "text": "**16 oktober 1846**, in Boston, laat de tandarts **Willem Morton** een patiënt **ether** inademen. Chirurg **John Warren** opereert aan een nektumor. De patiënt schreeuwt niet. De kamer is verbijsterd."
+          "text": "Op **16 oktober 1846**, in Boston, laat tandarts **William Morton** een patiënt **ether** inademen. Chirurg **John Warren** opereert een tumor in de hals. De patiënt schreeuwt niet. De zaal is verbijsterd."
         },
         {
           "type": "funFact",
-          "text": "Warren zei naar verluidt: “Heren, dit is geen onzin.” De uitdrukking is beroemd gebleven."
+          "text": "Warren zou hebben gezegd: „Heren, dit is geen humbug” (geen bedrog). De zin is beroemd gebleven."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p3",
-      "title": "Volgende: chloroform en debatten",
+      "title": "Daarna: chloroform en debatten",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Andere producten volgden, zoals **chloroform**, dat vooral in Groot-Brittannië populair werd. Er ontstaat rivaliteit over wie wat ‘uitgevonden’ heeft. Het patent doet er niet toe: het idee verspreidt zich over de hele wereld."
+          "text": "Andere middelen volgen, zoals **chloroform**, vooral populair in Groot-Brittannië. Er barsten ruzies los over wie wat heeft „uitgevonden”. Het patent telt niet: het idee verspreidt zich over de hele wereld."
         },
         {
           "type": "paragraph",
-          "text": "Er blijft één probleem over: inslapen zonder te doden. Je moet het doseren, je ademhaling en je hart controleren. Een nieuwe specialiteit is geboren."
+          "text": "Er blijft een probleem: in slaap brengen zonder te doden. Je moet doseren, de ademhaling bewaken, het hart. Er ontstaat een nieuw specialisme."
         }
       ]
     },
@@ -86,11 +86,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tegenwoordig gebruikt de anesthesioloog nauwkeurige gassen en medicijnen, machines die alles meten. U kunt het hele lichaam in slaap brengen of slechts een gebied (lokale of locoregionale anesthesie)."
+          "text": "Vandaag gebruikt de anesthesist precieze gassen en medicijnen, en machines die alles meten. Je kunt het hele lichaam in slaap brengen, of alleen een zone (lokale of locoregionale anesthesie)."
         },
         {
           "type": "takeaway",
-          "text": "Sinds de demonstratie van ether in **1846** heeft anesthesie de chirurgie getransformeerd: minder pijn, meer tijd, meer precisie... en veiligheid is een wetenschap op zich geworden."
+          "text": "Sinds de etherdemonstratie van **1846** heeft anesthesie de chirurgie veranderd: minder pijn, meer tijd, meer precisie, en een veiligheid die een wetenschap op zich is geworden."
         }
       ]
     }

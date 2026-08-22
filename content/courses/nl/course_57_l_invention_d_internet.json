@@ -1,14 +1,14 @@
 {
   "id": "course_57_l_invention_d_internet",
-  "title": "De uitvinding van het internet",
+  "title": "De uitvinding van internet",
   "subtitle": "Netwerken",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Het internet kent geen enkele uitvinder. Het is een lange keten: een militair netwerk, een gemeenschappelijke taal en vervolgens het web voor mensen.",
+  "description": "Internet heeft niet één uitvinder. Het is een lange keten: een militair netwerk, een gemeenschappelijke taal, daarna het web voor mensen.",
   "hero": {
     "image": "l_invention_d_internet",
     "ratio": "16:9",
-    "hook": "Eerst een netwerk om de oorlog te weerstaan. Dan stemt de hele wereld mee."
+    "hook": "Eerst een netwerk om de oorlog te weerstaan. Daarna sluit de hele wereld zich aan."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Het internet is niet ontstaan ​​uit één genie in een garage. Het is een collectieve constructie over meerdere decennia."
+          "text": "Internet is niet geboren uit één genie in een garage. Het is een collectieve bouw over meerdere decennia."
         },
         {
           "type": "paragraph",
-          "text": "Drie eenvoudige stappen om te onthouden: een eerste netwerk (ARPANET), een gemeenschappelijke taal (TCP/IP) en vervolgens een gemakkelijke interface (het web)."
+          "text": "Drie eenvoudige stappen om te onthouden: een eerste netwerk (ARPANET), een gemeenschappelijke taal (TCP/IP), daarna een makkelijke interface (het web)."
         }
       ]
     },
@@ -33,17 +33,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aan het einde van de **1960**-jaren, midden in de Koude Oorlog, financierde het Amerikaanse leger een project: computers verbinden zodat ze bleven communiceren, zelfs als een deel van het netwerk werd vernietigd."
+          "text": "Eind jaren **1960**, midden in de Koude Oorlog, financiert het Amerikaanse leger een project: computers verbinden zodat ze blijven communiceren, zelfs als een deel van het netwerk wordt vernietigd."
         },
         {
           "type": "image",
           "asset": "arpanet_1969_computer_ucla",
           "ratio": "4:3",
-          "caption": "ARPANET verbindt eerst enkele Amerikaanse universiteiten."
+          "caption": "ARPANET verbindt eerst een paar Amerikaanse universiteiten."
         },
         {
           "type": "paragraph",
-          "text": "Dit netwerk heet **ARPANET**. Berichten worden opgesplitst in kleine pakketjes die verschillende paden volgen. Als de ene weg wegvalt, neemt een andere het over."
+          "text": "Dat netwerk heet **ARPANET**. De berichten worden in kleine pakketten geknipt die verschillende wegen nemen. Valt één route uit, dan neemt een andere het over."
         }
       ]
     },
@@ -54,7 +54,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Om verschillende netwerken elkaar te laten begrijpen, zijn gemeenschappelijke regels nodig. **Vint Cerf** en **Bob Kahn** ontwikkelen het **TCP/IP**-protocol: een taal die vertelt hoe gegevens moeten worden geknipt, geadresseerd en opnieuw samengesteld."
+          "text": "Wil je dat verschillende netwerken elkaar begrijpen, dan heb je gemeenschappelijke regels nodig. **Vint Cerf** en **Bob Kahn** maken het protocol **TCP/IP**: een taal die zegt hoe je gegevens knipt, adresseert en weer in elkaar zet."
         },
         {
           "type": "image",
@@ -64,7 +64,7 @@
         },
         {
           "type": "funFact",
-          "text": "Op 1 januari **1983** schakelde ARPANET officieel over op TCP/IP. Velen beschouwen deze datum als de technische ‘geboorte’ van het internet."
+          "text": "Op 1 januari **1983** stapt ARPANET officieel over op TCP/IP. Velen zien die datum als de technische „geboorte” van internet."
         }
       ]
     },
@@ -75,11 +75,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Het internet is het netwerk. Het **wereld wijde web**, uitgevonden door **Tim Berners-Lee** bij CERN aan het begin van de jaren **1990**, is de gemakkelijke laag: pagina's, links, browsers."
+          "text": "Internet is het netwerk. Het **World Wide Web**, uitgevonden door **Tim Berners-Lee** bij CERN begin jaren **1990**, is de makkelijke laag: pagina's, links, browsers."
         },
         {
           "type": "paragraph",
-          "text": "Zonder het web zou het internet in de eerste plaats een hulpmiddel voor experts blijven. Hiermee kan iedereen klikken."
+          "text": "Zonder het web zou internet vooral een gereedschap van experts blijven. Met het web kan iedereen klikken."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tegenwoordig bevat internet e-mails, video's, banken, ziekenhuizen en GPS. Het heeft ook nieuwe problemen gecreëerd: desinformatie, surveillance, digitale kloof."
+          "text": "Vandaag draagt internet mails, video's, banken, ziekenhuizen, gps. Het schiep ook nieuwe problemen: desinformatie, surveillance, de digitale kloof."
         },
         {
           "type": "takeaway",
-          "text": "Het internet is ontstaan ​​uit ARPANET, werd universeel dankzij TCP/IP en toegankelijk dankzij het web. Dit is geen unieke uitvinding, het is een gedeelde architectuur."
+          "text": "Internet ontstaat uit ARPANET, wordt universeel dankzij TCP/IP, en toegankelijk dankzij het web. Het is geen unieke uitvinding, het is een gedeelde architectuur."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_121_la_renaissance_italienne",
-  "title": "De Italiaanse Renaissance",
+  "title": "De Italiaanse renaissance",
   "subtitle": "14e-16e eeuw",
   "subject": "art",
   "subcategory": "Painting & Movements",
-  "description": "In twee eeuwen tijd heeft Italië de schilderkunst, beeldhouwkunst en architectuur opnieuw uitgevonden en de manier veranderd waarop we naar de wereld kijken.",
+  "description": "In twee eeuwen vindt Italië de schilderkunst, de beeldhouwkunst en de architectuur opnieuw uit, en verandert hoe wij de wereld zien.",
   "hero": {
     "image": "la_renaissance_italienne",
     "ratio": "16:9",
-    "hook": "In twee eeuwen heeft Italië de kunst en onze manier van kijken naar de wereld opnieuw uitgevonden."
+    "hook": "In twee eeuwen vindt Italië de kunst opnieuw uit, en onze blik op de wereld."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De Italiaanse Renaissance (14e-16e eeuw) is niet alleen een stijlverandering. Het is een nieuwe manier om de wereld te zien. In twee eeuwen tijd plaatste Italië observatie, rede en het individu in het middelpunt van alles."
+          "text": "De Italiaanse renaissance (14e-16e eeuw) is meer dan een stijlwissel. Het is een nieuwe manier om de wereld te zien. In twee eeuwen zet Italië observatie, rede en het individu in het centrum."
         },
         {
           "type": "paragraph",
-          "text": "Geboren in de rijke steden van het schiereiland, vindt deze revolutie de schilderkunst, beeldhouwkunst en architectuur opnieuw uit. Twee drijvende krachten zijn de drijvende kracht: de herontdekking van de Griekse en Romeinse oudheid en gedurfde technische uitvindingen."
+          "text": "Geboren in de rijke steden van het schiereiland vindt deze revolutie de schilderkunst, de beeldhouwkunst en de architectuur opnieuw uit. Twee motoren dragen haar: de herontdekking van de Griekse en Romeinse oudheid, en gedurfde technische vondsten."
         }
       ]
     },
@@ -33,46 +33,46 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Het begint allemaal in **Florence**, dat in de 14e eeuw de Europese economie domineerde dankzij textiel en bankieren. De familie **Medici** nam daar de macht over. Deze bankiers gebruiken [[Bescherming]], kunstenaarsfinanciering, als prestige-instrument."
+          "text": "Alles begint in **Florence**, dat in de 14e eeuw de Europese economie domineert dankzij textiel en bankwezen. De familie **Medici** grijpt er de macht. Deze bankiers gebruiken de [[bescherming]], het financieren van kunstenaars, als prestige-instrument."
         },
         {
           "type": "funFact",
-          "text": "Om het verbod op het lenen met rente te omzeilen, bedachten de Medici banktrucs. De Kerk knijpt een oogje dicht zolang ze kapellen financiert."
+          "text": "Om het verbod op rente te omzeilen, verzinnen de Medici banktrucs. De Kerk kijkt weg zolang zij kapellen financieren."
         },
         {
           "type": "image",
           "asset": "lorenzo_de_medici_portrait_florence",
           "ratio": "4:3",
-          "caption": "Laurent de Medici, bekend als “de Grote”, grote beschermer van kunstenaars."
+          "caption": "Lorenzo de Medici, bijgenaamd „de Prachtlievende”, grote beschermer van kunstenaars."
         },
         {
           "type": "paragraph",
-          "text": "Tegelijkertijd verandert **humanisme** de plaats van de mens. Denkers als [[Pico della Mirandola]] beweren dat mensen in staat zijn de natuur te begrijpen door middel van de rede. In **1453** drijft de val van Constantinopel geleerden naar Italië met vergeten Griekse manuscripten."
+          "text": "Tegelijk verandert het **humanisme** de plaats van de mens. Denkers als [[Pico della Mirandola]] stellen dat de mens de natuur met de rede kan begrijpen. In **1453** drijft de val van Constantinopel geleerden naar Italië, met vergeten Griekse handschriften."
         }
       ]
     },
     {
       "id": "course_121_la_renaissance_italienne_p2",
-      "title": "Het echte schilderen: perspectief en lichaam",
+      "title": "Het ware schilderen: perspectief en lichaam",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In de 15e eeuw bedacht de architect **Brunelleschi** rond **1420** het [[lineair perspectief]]. Voorbij zijn de middeleeuwen, waarin wat belangrijker was groter werd geschilderd: de ruimte volgt nu wiskundige regels, als een raam dat openstaat voor de werkelijkheid."
+          "text": "In de 15e eeuw vindt architect **Brunelleschi** rond **1420** het [[lineair perspectief]] uit. Weg met de middeleeuwen, waarin het belangrijkst het grootst werd geschilderd: de ruimte volgt voortaan wiskundige regels, als een venster op het echte."
         },
         {
           "type": "image",
           "asset": "brunelleschi_linear_perspective_florence",
           "ratio": "4:3",
-          "caption": "Perspectief geeft de illusie van diepte op een plat oppervlak."
+          "caption": "Het perspectief wekt de illusie van diepte op een plat vlak."
         },
         {
           "type": "paragraph",
-          "text": "**Leonardo da Vinci** gaat verder: hij ontleedt lichamen om spieren en zenuwen te begrijpen, en schildert ook emoties. Olieverf, afkomstig uit Vlaanderen, vervangt geleidelijk [[Tempera]] en laat [[Clair-obscur]] toe: deze contrasten van schaduw en licht die reliëf geven."
+          "text": "**Leonardo da Vinci** gaat verder: hij ontleedt lichamen om spieren en zenuwen te begrijpen, en ook de emoties te schilderen. Olieverf, gekomen uit Vlaanderen, vervangt geleidelijk de [[tempera]] en maakt het [[clair-obscur]] mogelijk: die contrasten van schaduw en licht die reliëf geven."
         },
         {
           "type": "funFact",
-          "text": "Het lichaam dat Leonardo het meest bestudeerde, was dat van een honderdjarige man. Toen hij het onderzocht, beschreef hij een van de eerste bekende gevallen van een slagader die door ouderdom geblokkeerd was."
+          "text": "Het lichaam dat Leonardo het meest bestudeerde was dat van een oude man van honderd. Bij dat onderzoek beschreef hij een van de eerste bekende gevallen van een door ouderdom verstopt slagader."
         }
       ]
     },
@@ -83,59 +83,59 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aan het begin van de 16e eeuw nam Rome de plaats in van Florence, gedragen door pausen als **Julius II**. Dit is het tijdperk van de ‘volledige mens’. **Leonardo da Vinci** is het model: schilder, ingenieur, anatoom."
+          "text": "Aan het begin van de 16e eeuw neemt Rome de plaats van Florence in, gedragen door bouwlustige pausen als **Julius II**. Het is het tijdperk van de „volledige mens”. **Leonardo da Vinci** is het model: schilder, ingenieur, anatoom."
         },
         {
           "type": "paragraph",
-          "text": "**Michelangelo** belichaamt kracht. Zijn **David** wordt het symbool van Florence. Tussen **1508** en **1512** schilderde hij het plafond van de **Sixtijnse Kapel**: 500 vierkante meter op Genesis."
+          "text": "**Michelangelo** belichaamt de kracht. Zijn **David** wordt het symbool van Florence. Tussen **1508** en **1512** schildert hij het plafond van de **Sixtijnse Kapel**: 500 vierkante meter over Genesis."
         },
         {
           "type": "image",
           "asset": "michelangelo_david_sistine_chapel_ceiling",
           "ratio": "4:3",
-          "caption": "Michelangelo, van David tot het plafond van de Sixtijnse Kapel."
+          "caption": "Michelangelo, van de David tot het plafond van de Sixtijnse Kapel."
         },
         {
           "type": "funFact",
-          "text": "In *Het Laatste Oordeel* schilderde Michelangelo zijn eigen gezicht op een gevilde huid: een manier om uit te drukken hoezeer dit werk hem had uitgeput."
+          "text": "In *Het Laatste Oordeel* schilderde Michelangelo zijn eigen gezicht op een afgestroopte huid: een manier om te zeggen hoezeer dat werk hem had uitgeput."
         },
         {
           "type": "paragraph",
-          "text": "**Rafaël** belichaamt gratie. Zijn fresco *De School van Athene* brengt de grote denkers uit de oudheid samen in een harmonie die eeuwenlang als model zal dienen."
+          "text": "**Rafaël** belichaamt de gratie. Zijn fresco *De school van Athene* brengt de grote denkers van de oudheid samen in een harmonie die eeuwenlang model blijft."
         }
       ]
     },
     {
       "id": "course_121_la_renaissance_italienne_p4",
-      "title": "Een erfgoed dat Europa doorkruist",
+      "title": "Een erfenis die Europa doorkruist",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na het overlijden van Raphaël in **1520** is het evenwicht verstoord. De kunstenaars verlengen de lichamen en forceren de kleuren: dit is [[Maniërisme]], een rustelozere kunst. De koning van Frankrijk **Franciscus I** nodigt Leonardo uit en lanceert de **Franse Renaissance**, met de kastelen van de Loire."
+          "text": "Na de dood van Rafaël in **1520** raakt het evenwicht zoek. Kunstenaars rekken de lichamen en forceren de kleuren: dat is het [[maniërisme]], een onrustiger kunst. De Franse koning **Frans I** nodigt Leonardo uit en lanceert de **Franse renaissance**, met de kastelen van de Loire."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1420",
-              "title": "Lineair perspectief",
-              "detail": "Brunelleschi zet ruimte in vergelijkingen, in Florence."
+              "title": "Het lineair perspectief",
+              "detail": "Brunelleschi zet de ruimte in vergelijkingen, in Florence."
             },
             {
               "date": "1453",
               "title": "Val van Constantinopel",
-              "detail": "Geleerden vluchten met hun Griekse manuscripten naar Italië."
+              "detail": "Geleerden vluchten naar Italië met hun Griekse handschriften."
             },
             {
               "date": "1504",
-              "title": "David van Michelangelo",
+              "title": "De David van Michelangelo",
               "detail": "Florence kiest een symbool van burgerlijke trots."
             },
             {
               "date": "1508-1512",
               "title": "Sixtijnse Kapel",
-              "detail": "Michelangelo schilderde het Genesis-plafond."
+              "detail": "Michelangelo schildert het plafond van Genesis."
             },
             {
               "date": "1520",
@@ -146,7 +146,7 @@
         },
         {
           "type": "takeaway",
-          "text": "De Italiaanse Renaissance, geboren in Florence dankzij de Medici, bracht een revolutie teweeg in de kunst met perspectief (rond 1420) en de studie van het lichaam, voordat hij zijn hoogtepunt bereikte in Rome met Leonardo, Michelangelo en Raphael."
+          "text": "Geboren in Florence dankzij de Medici, revolutioneert de Italiaanse renaissance de kunst met het perspectief (rond 1420) en de studie van het lichaam, voor ze in Rome haar hoogtepunt bereikt met Leonardo, Michelangelo en Rafaël."
         }
       ]
     }

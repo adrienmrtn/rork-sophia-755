@@ -1,14 +1,14 @@
 {
   "id": "course_41_pourquoi_le_ciel_est_il_bleu",
   "title": "Waarom is de lucht blauw?",
-  "subtitle": "Licht & sfeer",
+  "subtitle": "Licht & atmosfeer",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Naar de blauwe lucht kijken is zo gewoon dat we vergeten te vragen waarom. Het antwoord ligt in het licht van de zon en de lucht waar we doorheen gaan om het te zien.",
+  "description": "Naar de blauwe lucht kijken is zo gewoon dat je vergeet te vragen waarom. Het antwoord zit in het zonlicht en in de lucht waar je doorheen kijkt.",
   "hero": {
     "image": "pourquoi_le_ciel_est_il_bleu",
     "ratio": "16:9",
-    "hook": "De lucht is niet blauw geschilderd: het is een goocheltruc van licht en lucht."
+    "hook": "De lucht is niet blauw geschilderd: licht en lucht doen het samen."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Naar de blauwe lucht kijken is zo gewoon dat we vergeten te vragen waarom dat zo is. De **sfeervreter**, de gaslaag die de aarde omringt, heeft echter geen eigen kleur. Deze kleur komt voort uit een zeer precieze ontmoeting tussen het licht van de zon en de gasmoleculen die om ons heen zweven."
+          "text": "Omhoogkijken naar de blauwe lucht is zo gewoon dat je vergeet te vragen waarom ze blauw is. De **atmosfeer**, de laag gassen rond de aarde, heeft zelf geen kleur. Die tint komt uit een heel precieze ontmoeting tussen het zonlicht en de gasmoleculen die om ons heen zweven."
         },
         {
           "type": "paragraph",
-          "text": "Dit blauw begrijpen betekent begrijpen hoe licht zich voortplant en **** verspreidt, dat wil zeggen dat het in alle richtingen terugkeert in plaats van rechtdoor te gaan. En leuke verrassing: het is precies hetzelfde fenomeen dat de lucht bij zonsondergang rood en oranje kleurt."
+          "text": "Dat blauw begrijpen is begrijpen hoe licht reist en zich **verspreidt**, dus in alle richtingen wordt teruggekaatst in plaats van rechtuit te gaan. En goede verrassing: het is precies hetzelfde verschijnsel dat de lucht rood en oranje kleurt bij zonsondergang."
         }
       ]
     },
@@ -33,80 +33,80 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zonlicht lijkt ons wit, maar bevat eigenlijk alle kleuren van de regenboog: het is het [[zichtbaar lichtspectrum]]. Elke kleur komt overeen met een **vragen**, de grootte van zijn lichtgolf. Blauw en violet hebben korte golven; rood heeft lange golven."
+          "text": "Zonlicht lijkt wit, maar het bevat eigenlijk alle kleuren van de regenboog: dat is [[Het zichtbare lichtspectrum]]. Elke kleur hoort bij een **golflengte**, de grootte van haar lichtgolf. Blauw en violet hebben korte golven; rood heeft lange golven."
         },
         {
           "type": "funFact",
-          "text": "Op de maan is er geen lucht die het licht verstrooit. Resultaat: daar blijft de lucht op klaarlichte dag **zwart**, zelfs als de zon schijnt. Bewijs dat de kleur van de lucht uit de lucht komt, en niet uit de zon."
+          "text": "Op de maan is er geen lucht om het licht te verspreiden. Gevolg: daar blijft de lucht **overdag zwart**, zelfs als de zon schijnt. Het bewijs dat de kleur van de lucht uit de lucht komt, niet uit de zon."
         },
         {
           "type": "paragraph",
-          "text": "Omdat de lucht tussen de zon en onze ogen niet leeg is: hij is gevuld met kleine **-gasmoleculen, vooral stikstof, ongeveer **Z78**%** van de lucht, en zuurstof, ongeveer **21%**. Ze zijn veel kleiner dan lichtgolven. Wanneer een straal hen raakt, gaat deze niet meer rechtdoor: hij wordt alle kanten op gestuurd. Dit kleine stuiteren is het startpunt voor de kleur van de lucht."
+          "text": "Want tussen de zon en je ogen is de lucht niet leeg: ze zit vol minuscule **gasmoleculen**, vooral stikstof, ongeveer **78%** van de lucht, en zuurstof, ongeveer **21%**. Ze zijn veel kleiner dan de lichtgolven. Als een straal ze raakt, gaat hij niet meer rechtuit: hij wordt alle kanten op gestuurd. Die kleine stuiter is het startpunt van de kleur van de lucht."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
-      "title": "Verspreiding: waarom blauw wint",
+      "title": "Verstrooiing: waarom blauw wint",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In **1871** heeft de Britse natuurkundige **Heer Rayleigh** dit fenomeen in een vergelijking omgezet. Hij ontdekte dat hoe korter een kleur een kleur heeft, hoe meer deze door luchtmoleculen in alle richtingen wordt gereflecteerd. Het is de [[Rayleigh-verstrooiing]]."
+          "text": "In **1871** zet de Britse natuurkundige **Lord Rayleigh** dit verschijnsel in een vergelijking. Hij ontdekt dat hoe korter de golf van een kleur, hoe meer ze alle kanten op wordt gestuurd door luchtmoleculen. Dat is de [[Rayleigh-verstrooiing]]."
         },
         {
           "type": "funFact",
-          "text": "De hemel van Mars is het tegenovergestelde van de onze: het ijzerrijke stof maakt hem overdag roze, maar de zonsondergangen zijn **blauw**. Het hangt allemaal af van wat de lucht bevat."
+          "text": "De lucht van Mars doet het omgekeerde van de onze: haar stof rijk aan ijzer maakt haar overdag roze, maar haar zonsondergangen zijn **blauw**. Alles hangt af van wat de lucht bevat."
         },
         {
           "type": "image",
           "asset": "blue_sky_sunlight_scattering_atmosphere",
           "ratio": "4:3",
-          "caption": "Blauw licht wordt door de lucht in alle richtingen verstrooid."
+          "caption": "Blauw licht wordt door de lucht alle kanten op verspreid."
         },
         {
           "type": "paragraph",
-          "text": "Concreet wordt blauw licht ongeveer **9 keer meer** verstrooid dan rood. Rood reist vrijwel in een rechte lijn door de lucht, terwijl blauw overal afketst. Dit is de reden waarom, waar je ook kijkt in de lucht, blauw altijd je ogen bereikt: de hele lucht lijkt te “gloeien” met dit verspreide blauw."
+          "text": "Concreet wordt blauw licht ongeveer **9 keer meer** verspreid dan rood. Rood gaat bijna recht door de lucht, terwijl blauw overal kaatst. Daarom komt er, waar je ook in de lucht kijkt, altijd blauw bij je ogen aan: de hele hemel lijkt te „gloeien” van dat verspreide blauw."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p3",
-      "title": "Dus waarom niet paars?",
+      "title": "Waarom dan geen violet?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Er rijst een logische vraag: als de kortste golven het meest verspreid zijn, zou violet moeten winnen, omdat de golf zelfs korter is dan die van blauw. De lucht bevat ook veel verspreid paars."
+          "text": "Een logische vraag: als de kortste golven het meest worden verspreid, zou violet moeten winnen, want zijn golf is nog korter dan die van blauw. De lucht bevat trouwens veel verspreid violet."
         },
         {
           "type": "paragraph",
-          "text": "Het antwoord ligt niet in de lucht, maar in ons oog. We vangen kleuren op met behulp van sensoren genaamd **kegels**, cellen in het netvlies die gevoelig zijn voor licht. Ze zijn veel gevoeliger voor blauw dan voor paars. Bovendien zendt de zon meer blauw licht uit dan violet licht. Onze hersenen doen dan een soort gemiddelde en zien een prachtig blauw. Een dier dat gevoelig is voor andere kleuren zou ongetwijfeld een heel andere lucht zien."
+          "text": "Het antwoord zit niet in de lucht, maar in je oog. We vangen kleuren met sensoren die **kegeltjes** heten, cellen van het netvlies die gevoelig zijn voor licht. Ze zijn veel gevoeliger voor blauw dan voor violet. Bovendien stuurt de zon meer blauw licht dan violet. Je brein maakt dan een soort gemiddelde en ziet een mooi blauw. Een dier dat andere kleuren ziet, zou vast een heel andere lucht zien."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p4",
-      "title": "En het avondrood?",
+      "title": "En het rood van de avond?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De zonsondergang volgt dezelfde regels, maar verandert één ding: de afstand. Rond het middaguur dringt het licht door een dunne luchtlaag. 's Avonds, als de zon laag staat, moeten de stralen door **veel meer lucht** gaan voordat ze ons bereiken."
+          "text": "De zonsondergang volgt dezelfde regels, maar verandert één ding: de afstand. 's Middags gaat het licht door een dunne luchtlaag. 's Avonds, als de zon laag staat, moeten haar stralen **veel meer lucht** doorkruisen voor ze ons bereiken."
         },
         {
           "type": "image",
           "asset": "sunset_red_orange_sky_atmosphere",
           "ratio": "16:9",
-          "caption": "Op horizonniveau gaat licht door een veel grotere luchtdikte."
+          "caption": "Laag bij de horizon gaat het licht door een veel grotere dikte lucht."
         },
         {
           "type": "paragraph",
-          "text": "Op deze lange reis wordt al het blauw ruim voordat het ons bereikt verspreid: het wordt gefilterd door de dikte van de lucht. Alleen de meest resistente kleuren blijven over: rood en oranje. Als er stof of vervuiling is, komt de [[Mie verstrooiing]] in beeld: deeltjes groter dan luchtmoleculen maken de lucht melkachtig of versterken deze oranje tinten."
+          "text": "Op dat lange traject is al het blauw verspreid lang voor het bij ons aankomt: het wordt als gefilterd door de dikte van de lucht. Dan blijven alleen de taaiste kleuren over, de roden en de oranjes. Als er stof of vervuiling is, komt de [[Mie verstrooiing]] in het spel: deeltjes groter dan luchtmoleculen maken de lucht melkachtig of versterken die oranje tinten."
         },
         {
           "type": "takeaway",
-          "text": "De lucht is blauw omdat korte golven ongeveer **Z9** keer meer door de lucht worden verspreid dan lange golven. Bij zonsondergang gaat het licht door zoveel lucht dat alleen het rood ons nog bereikt."
+          "text": "De lucht is blauw omdat korte golven ongeveer **9 keer meer** door de lucht worden verspreid dan lange golven. Bij zonsondergang gaat het licht door zoveel lucht dat alleen het rood ons nog bereikt."
         }
       ]
     }
