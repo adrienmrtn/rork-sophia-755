@@ -1,14 +1,14 @@
 {
   "id": "course_234_la_securite_alimentaire_mondiale",
-  "title": "Segurança alimentar mundial",
+  "title": "A segurança alimentar mundial",
   "subtitle": "800 milhões de pessoas",
   "subject": "comprendreLeMonde",
   "subcategory": "Ambiente & futuro",
-  "description": "A Terra produz alimentos suficientes para todos. Então por que **800 mil pessoas** ainda passam fome?",
+  "description": "A Terra produz comida suficiente para todo mundo. Então por que **800 milhões de pessoas** ainda passam fome?",
   "hero": {
     "image": "la_securite_alimentaire_mondiale",
     "ratio": "16:9",
-    "hook": "A fome de 800 milhões de humanos não é um problema de alimentação, mas de partilha."
+    "hook": "A fome de 800 milhões de humanos não é um problema de comida, e sim de partilha."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hoje, cerca de **800 mil pessoas** sofrem de fome no mundo, ou uma em cada dez pessoas. Este número é ainda mais estranho porque a humanidade nunca produziu tantos alimentos: estatisticamente, há mais do que o suficiente para comer para todos."
+          "text": "Hoje, cerca de **800 milhões de pessoas** passam fome no mundo, ou seja, uma em cada dez. O número fica ainda mais estranho porque a humanidade nunca produziu tanta comida: estatisticamente, há de sobra para alimentar a todos."
         },
         {
           "type": "paragraph",
-          "text": "A fome não é, portanto, um problema de quantidade, mas de distribuição. Compreender a segurança alimentar global significa compreender porque é que a abundância e a fome podem coexistir no mesmo planeta."
+          "text": "A fome, portanto, não é um problema de quantidade, e sim de distribuição. Entender a segurança alimentar mundial é entender por que a fartura e a fome podem coexistir no mesmo planeta."
         }
       ]
     },
@@ -33,78 +33,78 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Segundo a **[[FAO]]**, a agência alimentar das Nações Unidas, a subnutrição crónica ainda afecta cerca de 800 milhões de pessoas em 2024. Este número global esconde realidades muito diferentes. As áreas mais afectadas situam-se na África Subsariana, onde mais de um quarto da população carece regularmente de alimentos, e no Sul da Ásia."
+          "text": "Segundo **[[A FAO]]**, a agência das Nações Unidas para a alimentação, a subalimentação crônica ainda atingia cerca de 800 milhões de pessoas em 2024. Esse número global esconde realidades bem diferentes. As zonas mais atingidas ficam na África subsaariana, onde mais de um quarto da população passa fome com regularidade, e no Sul da Ásia."
         },
         {
           "type": "image",
           "asset": "famine_sub_saharan_africa_malnutrition_child",
           "ratio": "auto",
-          "caption": "A fome ainda afecta centenas de milhões de pessoas, especialmente na África Subsariana."
+          "caption": "A fome ainda atinge centenas de milhões de pessoas, sobretudo na África subsaariana"
         },
         {
           "type": "paragraph",
-          "text": "Existem várias formas de sofrimento alimentar. **desnutrição** corresponde à falta de calorias. **Deficiências de micronutrientes**, muitas vezes chamadas de “fome oculta”, afectam 2 mil milhões de pessoas que carecem de vitaminas ou minerais essenciais, com consequências para o crescimento ou a saúde. Finalmente, **desnutrição** também inclui surpreendentemente a obesidade: em muitos países em desenvolvimento, as pessoas estão gradualmente a substituir produtos frescos por alimentos processados, ricos em calorias mas pobres em nutrientes."
+          "text": "Existem várias formas de sofrimento alimentar. A **subalimentação** é a falta de calorias. As **carências de micronutrientes**, muitas vezes chamadas “fome oculta”, atingem 2 bilhões de pessoas que não têm vitaminas ou minerais essenciais, com efeitos sobre o crescimento ou a saúde. Por fim, a **desnutrição** inclui também, de modo surpreendente, a obesidade: em muitos países em desenvolvimento, os habitantes trocam aos poucos os produtos frescos por alimentos processados, ricos em calorias e pobres em nutrientes."
         },
         {
           "type": "funFact",
-          "text": "Se reduzíssemos o desperdício alimentar global em apenas 25%, poderíamos, teoricamente, alimentar todos os 800 milhões de pessoas que hoje sofrem de fome."
+          "text": "Se o desperdício alimentar mundial caísse só 25%, seria possível, em tese, alimentar o conjunto dos 800 milhões de pessoas que hoje passam fome."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p2",
-      "title": "O paradoxo da abundância e do desperdício",
+      "title": "O paradoxo da fartura e do desperdício",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O mundo produz atualmente o equivalente a 2.800 quilocalorias por pessoa por dia, mais do que suficiente para eliminar a fome. O verdadeiro problema não é, portanto, a escassez, mas o acesso: as populações mais pobres simplesmente não têm meios para comprar alimentos cujo preço varia constantemente nos mercados mundiais."
+          "text": "O mundo produz hoje o equivalente a 2.800 quilocalorias por pessoa e por dia, de sobra para acabar com a fome. O verdadeiro problema não é a escassez, e sim o **acesso**: as populações mais pobres simplesmente não têm como comprar alimentos cujo preço muda sem parar nos mercados mundiais."
         },
         {
           "type": "paragraph",
-          "text": "O outro lado deste paradoxo é **desperdício**. Cerca de um terço da produção mundial, ou 1,3 mil milhões de toneladas de alimentos, perde-se todos os anos. Nos países pobres, as perdas ocorrem precocemente: falta de locais de armazenamento, ausência de câmaras frigoríficas, estradas em más condições. Nos países ricos, o desperdício ocorre mais tarde, durante a distribuição e o consumo."
+          "text": "A outra face desse paradoxo é o **desperdício**. Cerca de um terço da produção mundial, ou 1,3 bilhão de toneladas de comida, se perde cada ano. Nos países pobres, as perdas vêm cedo: falta de locais de armazenamento, ausência de câmaras frias, estradas ruins. Nos países ricos, o desperdício ocorre mais tarde, na distribuição e no consumo."
         },
         {
           "type": "funFact",
-          "text": "Desde a década de 2010, a obesidade e as doenças relacionadas com a obesidade mataram mais pessoas em todo o mundo todos os anos do que a subnutrição, um ponto de viragem histórico para a saúde pública global."
+          "text": "Desde os anos 2010, a obesidade e as doenças ligadas ao sobrepeso matam cada ano mais pessoas no mundo do que a subnutrição, uma virada histórica para a saúde pública mundial."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p3",
-      "title": "Quando a comida se torna uma arma geopolítica",
+      "title": "Quando a comida vira arma geopolítica",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A segurança alimentar é também uma questão de geopolítica. Muitos países dependem das exportações de algumas grandes potências agrícolas, o que os torna muito vulneráveis ​​ao menor bloqueio. A Ucrânia e a Rússia representam juntas quase 30% das exportações mundiais de trigo. Quando este fluxo cessa, os preços disparam no Chicago , onde são negociadas as colheitas futuras, e países como o Egipto ou o Líbano caem numa grave crise social. **[[mercado futuro]]**"
+          "text": "A segurança alimentar também é uma questão de geopolítica. Muitos países dependem das exportações de algumas grandes potências agrícolas, o que os deixa muito vulneráveis ao menor bloqueio. A Ucrânia e a Rússia juntas respondem por cerca de 30% das exportações mundiais de trigo. Quando esse fluxo para, os preços disparam no **[[mercado a prazo]]** de Chicago, onde se negociam as colheitas futuras, e países como o Egito ou o Líbano entram em crise social grave."
         },
         {
           "type": "paragraph",
-          "text": "Essa fragilidade também vem de uma escolha feita na década de 1960: o . Esta onda de novas técnicas agrícolas aumentou enormemente os rendimentos, mas também reduziu a diversidade das culturas e tornou os agricultores dependentes de fertilizantes químicos. Como resultado, cada aumento no preço do petróleo tem repercussões directas no preço do pão. **[[A revolução verde]]**"
+          "text": "Essa fragilidade também vem de uma escolha feita nos anos 1960: a **[[revolução verde]]**. Essa onda de novas técnicas agrícolas permitiu aumentar muito os rendimentos, mas também reduziu a diversidade das culturas e deixou os agricultores dependentes de fertilizantes químicos. Resultado: cada alta do preço do petróleo se reflete direto no preço do pão."
         },
         {
           "type": "paragraph",
-          "text": "O conceito de **poder para comer** refere-se justamente ao uso voluntário da exportação de alimentos como meio de pressão diplomática, ou mesmo como sanção contra um país adversário."
+          "text": "O conceito de **food power** designa justamente o uso voluntário das exportações de comida como meio de pressão diplomática, ou até como sanção contra um país adversário."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p4",
-      "title": "Alimente 10 bilhões de humanos sem esgotar o planeta",
+      "title": "Alimentar 10 bilhões de humanos sem esgotar o planeta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Em 2050, espera-se que a população mundial atinja os 10 mil milhões. As alterações climáticas já estão a ameaçar os rendimentos ao aumentarem as secas e as inundações, deslocando terras aráveis. A agricultura intensiva também esgota o solo e as águas subterrâneas, que por vezes drenam mais rapidamente do que enchem."
+          "text": "Até 2050, a população mundial deve chegar a 10 bilhões de habitantes. A mudança climática já ameaça os rendimentos ao multiplicar secas e inundações, e desloca as terras cultiváveis. A agricultura intensiva também esgota os solos e os aquíferos, que às vezes se esvaziam mais depressa do que se enchem."
         },
         {
           "type": "paragraph",
-          "text": "Um dos caminhos para o futuro chama-se : produzir com base em ciclos naturais, como o composto ou a rotação de culturas, em vez de combatê-los com produtos químicos. O desafio é garantir, a cada ser humano, o acesso permanente a alimentos saudáveis, sem esgotar ainda mais o planeta. **[[agroecologia]]**"
+          "text": "Uma das pistas de futuro se chama **[[agroecologia]]**: produzir apoiando-se nos ciclos naturais, como o composto ou a rotação de culturas, em vez de combatê-los com produtos químicos. O desafio é garantir, para cada ser humano, um acesso permanente a uma comida saudável, sem esgotar ainda mais o planeta."
         },
         {
           "type": "takeaway",
-          "text": "A Terra produz calorias suficientes para alimentar todos. A fome de 800 milhões de pessoas resulta, portanto, de um problema de acesso, de desperdício e de crises geopolíticas, agravadas pelas alterações climáticas."
+          "text": "A Terra produz calorias suficientes para alimentar a todos. A fome de 800 milhões de pessoas vem, portanto, de um problema de acesso, de desperdício e de crises geopolíticas, agravado pela mudança climática."
         }
       ]
     }

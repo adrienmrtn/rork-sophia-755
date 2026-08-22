@@ -1,14 +1,14 @@
 {
   "id": "course_223_l_economie_circulaire",
   "title": "A economia circular",
-  "subtitle": "Afastando-se de tudo que é descartável",
+  "subtitle": "Sair do tudo-descartável",
   "subject": "comprendreLeMonde",
   "subcategory": "Ambiente & futuro",
-  "description": "**Extraia, crie, jogue fora**: este modelo está esgotando o planeta. A economia circular propõe o contrário: manter objetos e materiais em circulação pelo maior tempo possível.",
+  "description": "**Extrair, fabricar, jogar fora**: esse modelo esgota o planeta. A economia circular propõe o inverso: manter os objetos e os materiais em circulação o maior tempo possível.",
   "hero": {
     "image": "l_economie_circulaire",
     "ratio": "16:9",
-    "hook": "E se o desperdício não existisse? É a aposta de um modelo económico inspirado na natureza."
+    "hook": "E se o lixo não existisse? Essa é a aposta de um modelo econômico inspirado na natureza."
   },
   "sections": [
     {
@@ -18,65 +18,65 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Desde a revolução industrial, a nossa economia tem funcionado numa direção: extraímos recursos, fabricamos objetos e depois deitamo-los fora. Este modelo assume que os recursos são infinitos. Eles não são."
+          "text": "Desde a revolução industrial, nossa economia funciona num só sentido: extraímos recursos, fabricamos objetos e depois os jogamos fora. Esse modelo supõe que os recursos são infinitos. Eles não são."
         },
         {
           "type": "paragraph",
-          "text": "A **economia circular** oferece outra lógica, inspirada na natureza, onde nada se perde realmente. Visa manter o valor dos produtos e materiais em circulação pelo maior tempo possível, em vez de transformá-los em resíduos."
+          "text": "A **economia circular** propõe outra lógica, inspirada na natureza, em que nada se perde de verdade. O alvo é guardar o valor dos produtos e dos materiais em circulação o maior tempo possível, em vez de transformar tudo em lixo."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p1",
-      "title": "O modelo linear atinge seus limites",
+      "title": "O modelo linear chega aos limites",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A economia moderna foi construída sobre um modelo denominado **linear**: extrair, fabricar, jogar fora. Retiramos matérias-primas da natureza, fabricamos produtos a partir delas e, uma vez desgastados ou fora de moda, esses produtos tornam-se resíduos."
+          "text": "A economia moderna se construiu sobre um modelo dito **linear**: extrair, fabricar, jogar fora. Tira-se matéria-prima da natureza, faz-se produtos, e, uma vez gastos ou fora de moda, esses produtos viram lixo."
         },
         {
           "type": "image",
           "asset": "landfill_waste_garbage_linear_economy",
           "ratio": "16:9",
-          "caption": "O modelo “pegar, fazer, jogar fora” pressupõe recursos infinitos."
+          "caption": "O modelo “extrair, fabricar, jogar fora” supõe recursos infinitos."
         },
         {
           "type": "paragraph",
-          "text": "Este sistema baseia-se na ideia de que os recursos são ilimitados e que a natureza pode absorver toda a poluição. Mas hoje, a economia global consome o equivalente a 1, 7 planetas em recursos todos os anos. Certos metais essenciais para as tecnologias digitais, como o [[Lítio]], poderão tornar-se difíceis de encontrar já em 2040."
+          "text": "Esse sistema se apoia na ideia de que os recursos são ilimitados, e de que a natureza pode absorver toda a poluição. Mas hoje a economia mundial consome cada ano o equivalente a 1,7 planeta em recursos. Certos metais essenciais às tecnologias digitais, como o [[lítio]], podem ficar difíceis de achar já em 2040."
         },
         {
           "type": "funFact",
-          "text": "Apenas 9% de todo o plástico já produzido pela humanidade foi reciclado. O restante vai parar na natureza ou em aterros sanitários, onde pode permanecer por 450 anos."
+          "text": "Só 9% de todo o plástico já produzido pela humanidade foi reciclado. O resto acaba na natureza ou no aterro, onde pode ficar 450 anos."
         },
         {
           "type": "paragraph",
-          "text": "O custo de limpeza e gestão de resíduos quase nunca está incluído no preço de venda de um produto. É um custo oculto, pago posteriormente por todos."
+          "text": "O custo da limpeza e da gestão do lixo quase nunca entra no preço de venda de um produto. É um custo escondido, pago mais tarde por todo mundo."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p2",
-      "title": "Repare antes de reciclar",
+      "title": "Reparar antes de reciclar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A economia circular oferece vários circuitos, e sempre na mesma ordem de prioridade: o circuito mais curto é melhor, porque desperdiça menos energia e material. Tudo começa com **eco-design**, ou seja, pensar no impacto ambiental de um produto desde a sua criação, escolhendo materiais duráveis ​​e fáceis de desmontar."
+          "text": "A economia circular propõe vários circuitos, e sempre na mesma ordem de prioridade: vale mais o circuito mais curto, porque gasta menos energia e menos matéria. Tudo começa pelo **ecodesign**, ou seja, pensar o impacto ambiental de um produto desde a criação, ao escolher materiais duráveis e fáceis de desmontar."
         },
         {
           "type": "paragraph",
-          "text": "Depois vem o **reutilizar** (um objeto muda de proprietário sem ser transformado, como no mercado de segunda mão), depois o **reparar**, que prolonga a vida útil de um produto. Essas etapas combatem diretamente o [[Obsolescência planejada]], prática que reduz deliberadamente a vida útil de um objeto."
+          "text": "Em seguida vem a **reutilização** (um objeto muda de dono sem ser transformado, como num mercado de usados), depois a **reparação**, que alonga a vida de um produto. Essas etapas lutam direto contra [[A obsolescência programada]], essa prática que reduz de propósito a duração de um objeto."
         },
         {
           "type": "image",
           "asset": "recycling_sorting_waste_materials",
           "ratio": "4:3",
-          "caption": "A reciclagem vem como último recurso, após reutilização e reparo."
+          "caption": "A reciclagem chega em último recurso, depois da reutilização e da reparação."
         },
         {
           "type": "paragraph",
-          "text": "**uma reciclagem** ocorre apenas como último recurso. Continua a ser útil: reciclar o alumínio consome 95% menos energia do que extraí-lo do minério bruto, . Mas ainda é menos eficiente do que simplesmente reutilizar um objeto. [[Bauxita]]"
+          "text": "A **reciclagem** só entra em último recurso. Ela segue útil: reciclar alumínio gasta 95% menos energia do que extrair o metal a partir do minério bruto, a [[bauxita]]. Mas isso ainda é menos eficaz do que simplesmente reutilizar um objeto."
         }
       ]
     },
@@ -87,44 +87,44 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Apesar de todo o seu interesse, a economia circular enfrenta um problema simples: o modelo linear muitas vezes permanece **menos caro no curto prazo**. A extracção de novos materiais por vezes custa menos do que a triagem e reciclagem de resíduos complexos, especialmente quando as matérias-primas são baratas."
+          "text": "Apesar de todo o interesse, a economia circular esbarra num problema simples: o modelo linear muitas vezes segue **mais barato no curto prazo**. Extrair uma matéria nova às vezes custa menos do que separar e reciclar um lixo complexo, sobretudo quando as matérias-primas estão baratas."
         },
         {
           "type": "image",
           "asset": "repair_right_electronics_reuse",
           "ratio": "4:3",
-          "caption": "O “direito de reparar” exige que os fabricantes forneçam peças sobressalentes."
+          "caption": "O “direito à reparação” obriga os fabricantes a fornecer peças de reposição."
         },
         {
           "type": "paragraph",
-          "text": "Diante disso, o poder público intervém cada vez mais. A União Europeia lançou um plano em 2020 que impõe regras de sustentabilidade mais rigorosas. Um dos grandes eixos é o “direito à reparação”, que obriga os fabricantes de dispositivos eletrónicos a fornecer peças sobressalentes durante vários anos."
+          "text": "Diante disso, os poderes públicos intervêm cada vez mais. A União Europeia lançou em 2020 um plano que impõe regras mais rígidas de durabilidade. Um dos eixos maiores é o “direito à reparação”, que obriga os fabricantes de aparelhos eletrônicos a fornecer peças de reposição durante vários anos."
         },
         {
           "type": "paragraph",
-          "text": "Outra alavanca: o [[Responsabilidade Estendida do Produtor]], que faz com que os fabricantes paguem pela gestão dos resíduos dos seus produtos. Isto lhes dá um incentivo financeiro para projetar objetos que sejam menos poluentes e mais fáceis de reparar."
+          "text": "Outra alavanca: a [[Responsabilidade Estendida do Produtor]], que faz os fabricantes pagarem a gestão do lixo dos próprios produtos. Isso os incentiva financeiramente a conceber objetos menos poluentes e mais fáceis de consertar."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p4",
-      "title": "Rumo a uma sociedade de recursos",
+      "title": "Rumo a uma sociedade do recurso",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A economia circular não é apenas uma questão de reciclagem: é um projeto para uma sociedade mais sóbria e mais resiliente. Ao depender menos de matérias-primas importadas, um país também ganha segurança num mundo mais instável."
+          "text": "A economia circular não é só uma questão de reciclagem: é um projeto de sociedade mais sóbria e mais resistente. Ao depender menos das importações de matérias-primas, um país também ganha segurança num mundo mais instável."
         },
         {
           "type": "paragraph",
-          "text": "O sucesso desta transformação também depende de nós, enquanto consumidores. A regra dos 3R, reduzir, reutilizar, reciclar, começa pelo primeiro passo: reduzir, ou seja, pergunte-se se a compra é realmente necessária. É esta primeira ação que tem maior efeito no clima."
+          "text": "O sucesso dessa transformação também depende de nós, como consumidores. A regra dos 3R, reduzir, reutilizar, reciclar, começa pela primeira etapa: reduzir, ou seja, perguntar se a compra é mesmo necessária. É esse primeiro gesto que tem o maior efeito sobre o clima."
         },
         {
           "type": "funFact",
-          "text": "Hoje há mais ouro em uma tonelada de placas eletrônicas de smartphones antigos do que em uma tonelada de minério extraído de uma mina de ouro tradicional."
+          "text": "Há hoje mais ouro numa tonelada de placas eletrônicas velhas de smartphones do que numa tonelada de minério extraído de uma mina de ouro clássica."
         },
         {
           "type": "takeaway",
-          "text": "A economia circular visa quebrar o ciclo “extrair, fabricar, deitar fora”, mantendo os recursos em circulação através da concepção ecológica, da reparação e da reciclagem, para respeitar os limites físicos do nosso planeta."
+          "text": "A economia circular visa quebrar o ciclo “extrair, fabricar, jogar fora” ao manter os recursos em circulação graças ao ecodesign, à reparação e à reciclagem, para respeitar os limites físicos do nosso planeta."
         }
       ]
     }
