@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Představ si účetní knihu, kterou nikdo nevlastní sám, ale kterou tisíce počítačů aktualizují naráz, po celém světě, a kterou skoro nejde zfalšovat. To je výchozí myšlenka **blockchainu**, technologie často zúžené na první použití, **bitcoin**."
+          "text": "Představ si účetní knihu, kterou nikdo nevlastní sám, ale kterou tisíce počítačů aktualizují naráz, po celém světě, a kterou skoro nejde zfalšovat. To je výchozí myšlenka **blockchainu**, technologie často zúžené na první použití, **bitcoin**, často zúžené jen na první použití."
         },
         {
           "type": "paragraph",
-          "text": "Když dovolila směňovat hodnotu bez banky, tenhle vynález zrodil celou paralelní ekonomiku, mezi sliby finanční svobody a tvrdou kritikou energetické ceny."
+          "text": "Když dovolila směňovat hodnotu bez banky, tenhle vynález zrodil celou paralelní ekonomiku, mezi sliby finanční svobody a tvrdou kritikou její energetické ceny a na její obří energetickou cenu."
         }
       ]
     },
@@ -33,15 +33,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V srdci blockchainu je jednoduchá myšlenka: **distribuovaný registr**. Na rozdíl od banky, která účty drží na vlastních serverech, blockchain stojí na síti [[vrstevníci]], tedy na tisících počítačů, z nichž každý drží stejnou kopii všech transakcí."
+          "text": "V srdci blockchainu je jednoduchá myšlenka: **distribuovaný registr**. Na rozdíl od banky, která účty drží na vlastních serverech, blockchain stojí na síti [[vrstevníci]], tedy na tisících počítačů, z nichž každý drží stejnou kopii všech transakcí a nikdo z nich registr neřídí sám."
         },
         {
           "type": "funFact",
-          "text": "Úplně první blok bitcoinového blockchainu, zvaný „genesis blok“, nesl skrytou zprávu: titulek britských novin z 3. ledna 2009 o státní záchraně bank. Politické mrknutí od tvůrce."
+          "text": "Úplně první blok bitcoinového blockchainu, zvaný „genesis blok“, nesl skrytou zprávu: titulek britských novin z 3. ledna 2009 o státní záchraně bank. Politické mrknutí od jeho tvůrce, skryté v prvním bloku řetězu."
         },
         {
           "type": "paragraph",
-          "text": "Každá transakce se nejdřív ověří sítí a pak se s dalšími seskupí do **bloku**. Ten blok se pak napojí na předchozí výpočtem zvaným [[hašování]]: jedinečný digitální otisk. Výsledek je nepřerušený řetěz bloků, odtud jméno blockchain. Změnit jednu starou transakci by znamenalo přepočítat celý řetěz a přesvědčit víc než polovinu sítě, což ve velkém měřítku skoro nejde."
+          "text": "Každá transakce se nejdřív ověří sítí a pak se s dalšími seskupí do **bloku**. Ten blok se pak napojí na předchozí výpočtem zvaným [[hašování]]: jedinečný digitální otisk. Výsledek je nepřerušený řetěz bloků, odtud jméno blockchain. Změnit jednu starou transakci by znamenalo přepočítat celý řetěz a přesvědčit víc než polovinu sítě, což ve velkém měřítku skoro nejde a proto se řetězu říká blockchain."
         }
       ]
     },
@@ -52,7 +52,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Bitcoin**, spuštěný v **2009** člověkem (nebo skupinou) skrytým pod jménem [[Satoshi Nakamoto]], dokázal, že měnový systém může běžet bez centrální banky. Aby zaručil vzácnost, tvůrce stanovil tvrdý strop: nikdy víc než **21 milionů bitcoinů**, trochu jako je zlato na Zemi omezené."
+          "text": "**Bitcoin**, spuštěný v **2009** člověkem (nebo skupinou) skrytým pod jménem [[Satoshi Nakamoto]], dokázal, že měnový systém může běžet bez centrální banky. Aby zaručil vzácnost, tvůrce stanovil tvrdý strop: nikdy víc než **21 milionů bitcoinů**, trochu jako je zlato na Zemi omezené a proto má bitcoin vestavěnou vzácnost."
         },
         {
           "type": "image",
@@ -62,7 +62,7 @@
         },
         {
           "type": "paragraph",
-          "text": "V roce 2015 přišla druhá generace blockchainu s **Ethereum**. Velká novinka: **chytré kontrakty**. Jsou to programy, které se spustí samy, jakmile se splní podmínka, třeba automatická náhrada při zpoždění vlaku, bez prostředníka."
+          "text": "V roce 2015 přišla druhá generace blockchainu s **Ethereum**. Velká novinka: **chytré kontrakty**. Jsou to programy, které se spustí samy, jakmile se splní podmínka, třeba automatická náhrada při zpoždění vlaku, bez nutnosti jít přes prostředníka a bez lidského zásahu uprostřed."
         }
       ]
     },
@@ -73,15 +73,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Úspěch kryptoměn nejde bez problémů. Nejvíc se debatuje o **spotřebě energie** bitcoinové sítě: její roční elektřina je dnes srovnatelná s celou zemí, jako je Argentina."
+          "text": "Úspěch kryptoměn nejde bez problémů. Nejvíc se debatuje o **spotřebě energie** bitcoinové sítě: její roční spotřeba elektřiny je dnes srovnatelná s celou zemí, jako je Argentina podle roční spotřeby elektřiny."
         },
         {
           "type": "paragraph",
-          "text": "Trh taky trpí extrémní **volatilitou**: cena bitcoinu se může za pár hodin pohnout o 10 nebo 20%. Ta nestabilita mu zatím brání stát se skutečnou každodenní měnou."
+          "text": "Trh taky trpí extrémní **volatilitou**: cena bitcoinu se může za pár hodin pohnout o 10 nebo 20%. Ta nestabilita mu zatím brání stát se skutečnou každodenní měnou pro běžné denní platby."
         },
         {
           "type": "paragraph",
-          "text": "Nakonec relativní anonymita transakcí občas posloužila nelegální činnosti. Blockchain je ale ve skutečnosti úplně průhledný: úřady umí sledovat toky peněz, což praní špinavých peněz ztěžuje víc než u klasické hotovosti."
+          "text": "Nakonec relativní anonymita transakcí občas posloužila nelegální činnosti. Blockchain je ale ve skutečnosti úplně průhledný: úřady umí sledovat toky peněz, což praní špinavých peněz ztěžuje víc než u klasické hotovosti než u klasických bankovek v hotovosti."
         }
       ]
     },
@@ -92,11 +92,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dnes kryptoměny opouštějí okraj a vstupují do tradičních financí. Velké banky už nabízejí úschovu digitálních aktiv a několik států přemýšlí o vlastní oficiální digitální měně, **[[CBDC]]** (digitální měna centrální banky)."
+          "text": "Dnes kryptoměny opouštějí okraj a vstupují do tradičních financí. Velké banky už nabízejí úschovu digitálních aktiv pro své klienty a několik států přemýšlí o vlastní oficiální digitální měně, **[[CBDC]]** (digitální měna centrální banky) pod dohledem státu."
         },
         {
           "type": "paragraph",
-          "text": "**Stablecoiny**, kryptoměny, jejichž cena drží rezervu dolarů nebo eur, slouží jako most mezi oběma světy. Vedle financí blockchain berou i luxus (proti padělkům), logistika (sledování kontejnerů) nebo zdraví (zabezpečení zdravotních záznamů), kvůli spolehlivosti."
+          "text": "**Stablecoiny**, kryptoměny, jejichž cena je stabilizovaná rezervou dolarů nebo eur, slouží jako most mezi oběma světy. Vedle financí blockchain berou i luxus (proti padělkům), logistika (sledování kontejnerů) nebo zdraví (zabezpečení zdravotních záznamů), kvůli spolehlivosti a kvůli tomu, že se záznam nedá snadno přepsat."
         },
         {
           "type": "funFact",
@@ -104,7 +104,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Blockchain, vytvořený v roce 2009, je sdílený registr skoro nezfalšovatelný, s maximální nabídkou bitcoinů stanovenou na 21 milionů kusů. Položil základy nové digitální ekonomiky, která se dnes začleňuje do institucí."
+          "text": "Blockchain, vytvořený v roce 2009, je sdílený registr skoro nezfalšovatelný, s maximální nabídkou bitcoinů stanovenou na 21 milionů kusů. Položil základy nové digitální ekonomiky, která se dnes začleňuje do institucí a vstupuje do klasických financí."
         }
       ]
     }
