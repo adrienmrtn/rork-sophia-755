@@ -1,14 +1,14 @@
 {
   "id": "course_185_vishnou_et_shiva_mythologie_hindoue",
-  "title": "Vishnu y Shiva (mitología hindú)",
-  "subtitle": "mitología hindú",
+  "title": "Visnú y Shiva (mitología hindú)",
+  "subtitle": "Mitología hindú",
   "subject": "mythologie",
   "subcategory": "Otras mitologías",
-  "description": "Crear, preservar, destruir para renacer: Vishnu y Shiva, pilares de la Trimurti, dan la vuelta al tiempo cíclico del hinduismo.",
+  "description": "Crear, preservar, destruir para renacer: Visnú y Shiva, pilares de la Trimurti, hacen girar el tiempo cíclico del hinduismo.",
   "hero": {
     "image": "vishnou_et_shiva_mythologie_hindoue",
     "ratio": "16:9",
-    "hook": "Se desciende a la Tierra para salvar el orden. El otro baila para quemarlo todo y empezar de nuevo. Juntos, hacen que el universo dure."
+    "hook": "Uno baja a la Tierra para salvar el orden. El otro danza para quemarlo todo y empezar de nuevo. Juntos sostienen el universo."
   },
   "sections": [
     {
@@ -18,105 +18,105 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En la mitología hindú, el tiempo no es una línea recta. Es una serie de ciclos. En la parte superior está el [[Trimurti]]: tres funciones según el mismo principio. **Brahma** crea. **Visnú** conservas. **Shiva** destruido para permitir la renovación."
+          "text": "En la mitología hindú, el tiempo no es una línea recta. Es una serie de ciclos. Arriba está la [[Trimurti]]: tres funciones de un solo principio. **Brahma** crea. **Visnú** preserva. **Shiva** destruye para que el renovarse sea posible."
         },
         {
           "type": "paragraph",
-          "text": "Este curso sigue a Vishnu y Shiva, los dos pilares más vivos de esta trinidad. Sus atributos, sus encarnaciones y su simbolismo muestran cómo el hinduismo concilia vida y muerte, orden y transformación."
+          "text": "Este curso sigue a Visnú y a Shiva, los dos pilares más vivos de esa trinidad. Sus atributos, sus encarnaciones y sus símbolos muestran cómo el hinduismo sostiene juntos la vida y la muerte, el orden y la transformación."
         }
       ]
     },
     {
       "id": "course_185_vishnou_et_shiva_mythologie_hindoue_p1",
-      "title": "La Trimurti, tres caras de un mismo principio",
+      "title": "La Trimurti, tres caras de un principio",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Los múltiples dioses son rostros de una realidad última llamada . La Trimurti ofrece tres formas útiles. **Brahma** genera el universo al inicio de cada ciclo; su papel termina entonces, lo que explica por qué hoy en día es poco venerado en la India. [[Brahman]]"
+          "text": "Los muchos dioses son rostros de una realidad última llamada [[Brahman]]. La Trimurti le da tres formas útiles. **Brahma** hace nacer el universo al inicio de cada ciclo. Luego su papel se detiene, y por eso se lo adora poco en la India de hoy."
         },
         {
           "type": "image",
           "asset": "brahma_vishnu_shiva_trimurti_hindu_gods",
           "ratio": "4:3",
-          "caption": "Brahma, Vishnu, Shiva: crear, preservar, transformar."
+          "caption": "Brahma, Visnú, Shiva: crear, preservar, transformar"
         },
         {
           "type": "paragraph",
-          "text": "**Visnú** garantiza que el pedido se mantenga. **Shiva** destruye lo desgastado o corrompido. Esta destrucción no es un mal absoluto: da paso a un nuevo ciclo. Un “día de Brahma” dura miles de millones de años. Realmente no se pierde nada; todo empieza de nuevo."
+          "text": "**Visnú** vigila que el orden se sostenga. **Shiva** destruye lo gastado o lo corrupto. Esa destrucción no es un mal absoluto: deja el terreno libre para un ciclo nuevo. Un “día de Brahma” dura miles de millones de años. Nada se pierde de verdad, y todo recomienza."
         },
         {
           "type": "funFact",
-          "text": "Un solo “día de Brahma” (un Kalpa) dura **4.320 millones** años, una duración inquietantemente cercana a la edad de la Tierra estimada por la ciencia moderna."
+          "text": "Un solo “día de Brahma” (un Kalpa) dura **4,32 mil millones** de años, extrañamente cerca de la edad de la Tierra según la ciencia moderna."
         }
       ]
     },
     {
       "id": "course_185_vishnou_et_shiva_mythologie_hindoue_p2",
-      "title": "Vishnu y sus avatares",
+      "title": "Visnú y sus avatares",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Visnú** protege el [[Dharma]], la ley moral y cósmica. Cuando el mal amenaza con apoderarse del poder, desciende a la Tierra en forma de **avatar**. La tradición tiene diez, primero animales y luego humanos. [[Dashavatar]]"
+          "text": "**Visnú** protege el [[Dharma]], la ley moral y cósmica. Cuando el mal amenaza con vencer, baja a la Tierra como **avatar**. La tradición del [[Dashavatar]] cuenta diez, primero animales, luego humanos."
         },
         {
           "type": "image",
           "asset": "krishna_avatar_vishnu_hindu_god_painting",
           "ratio": "4:3",
-          "caption": "Krishna, avatar de Vishnu: sabiduría, amor y guerra justa."
+          "caption": "Krishna, avatar de Visnú: sabiduría, amor y guerra justa"
         },
         {
           "type": "paragraph",
-          "text": "Entre ellos, el rey **Rama** encarna la virtud; **Krishna**, sabiduría y amor divinos. El hinduismo incluso ha integrado al **Buda** como noveno avatar. El décimo, **Kalki**, vendrá sobre un caballo blanco para cerrar la edad oscura de . [[Kali Yuga]]"
+          "text": "Entre ellos, el rey **Rama** representa la virtud, y **Krishna** la sabiduría y el amor divino. El hinduismo incluso acogió al **Buda** como noveno avatar. El décimo, **Kalki**, vendrá sobre un caballo blanco para cerrar la era oscura del [[Kali Yuga]]."
         },
         {
           "type": "funFact",
-          "text": "Desde los años 80, los pioneros digitales han tomado prestada la palabra “avatar” para designar la representación de un usuario en un mundo virtual."
+          "text": "Desde los años 1980, los pioneros de la informática tomaron la palabra “avatar” para la figura que representa a un usuario en un mundo virtual."
         }
       ]
     },
     {
       "id": "course_185_vishnou_et_shiva_mythologie_hindoue_p3",
-      "title": "Shiva, la bailarina cósmica",
+      "title": "Shiva, el danzante cósmico",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Shiva** es el dios de las paradojas: asceta cubierto de cenizas en el monte  y, sin embargo, esposo de **Parvati**, padre de **Ganesha**. Él encarna la energía que transforma, especialmente a través de la danza. [[Kailash]]"
+          "text": "**Shiva** es el dios de las paradojas: un asceta cubierto de ceniza en el monte [[Kailash]], y sin embargo esposo de **Parvati** y padre de **Ganesha**. Encarna la energía que transforma, sobre todo a través de la danza."
         },
         {
           "type": "image",
           "asset": "shiva_nataraja_dancing_cosmic_bronze_sculpture",
           "ratio": "4:3",
-          "caption": "Nataraja: Shiva danza entre la creación y la destrucción."
+          "caption": "Nataraja: Shiva danza entre la creación y la destrucción"
         },
         {
           "type": "paragraph",
-          "text": "En la forma de **Nataraja**, “rey de la danza”, interpreta el **Tandava**. Por un lado, el [[Damaru]] marca el ritmo de la creación; en el otro, el fuego de la destrucción. Un pie aplasta la ignorancia; el otro, elevado, ofrece la liberación. El cambio es la única constante."
+          "text": "En la forma de **Nataraja**, “rey de la danza”, ejecuta el **Tandava**. En una mano el [[damaru]] marca el ritmo de la creación. En la otra arde el fuego de la destrucción. Un pie aplasta la ignorancia; el otro, alzado, ofrece la liberación. El cambio es la única constante."
         },
         {
           "type": "funFact",
-          "text": "En el CERN de Ginebra, una estatua de Nataraja ofrecida por la India recuerda a los físicos de partículas esta danza: creación y destrucción perpetua del universo."
+          "text": "En el CERN, en Ginebra, una estatua de Nataraja regalada por la India recuerda a los físicos de partículas esa danza: la creación y la destrucción sin fin del universo."
         }
       ]
     },
     {
       "id": "course_185_vishnou_et_shiva_mythologie_hindoue_p4",
-      "title": "Dos caminos, el mismo ciclo",
+      "title": "Dos caminos, un ciclo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vishnu estructura y guía a través de sus encarnaciones. Shiva libera rompiendo ilusiones y apegos. Juntos, hacen de [[Samsara y karma]] no una prisión, sino un camino: renacer, actuar, progresar."
+          "text": "Visnú da estructura y guía a través de sus encarnaciones. Shiva libera al romper las ilusiones y los apegos. Juntos convierten el [[Samsara y karma]] en un camino más que en una prisión: renacer, actuar, avanzar."
         },
         {
           "type": "paragraph",
-          "text": "De esta dualidad nacen el **vishnouismo** y el **shiivismo**, corrientes que se enriquecen mutuamente en lugar de chocar, particularmente en torno a . En esta visión, cada fin prepara una salida. [[La Bhagavad-Gita]]"
+          "text": "De esta dualidad nacieron el **vaisnavismo** y el **shaivismo**, corrientes que se enriquecen más que se combaten, sobre todo en torno a [[La Bhagavad-Gita]]. En esta visión, cada final prepara una partida."
         },
         {
           "type": "takeaway",
-          "text": "El **Trimurti** armoniza el universo: Brahma crea, Vishnu preserva a través de sus avatares, Shiva destruye para renacer. Visión cíclica donde el karma y el samsara hacen de cada destrucción la antesala de un nuevo ciclo."
+          "text": "La **Trimurti** pone el universo en equilibrio: Brahma crea, Visnú preserva mediante sus avatares, Shiva destruye para que la vida vuelva. Es una visión cíclica en la que el karma y el samsara hacen de cada destrucción la apertura de un ciclo nuevo."
         }
       ]
     }
