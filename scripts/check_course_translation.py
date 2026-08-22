@@ -15,6 +15,7 @@ Usage:
     python scripts/check_course_translation.py --lang it --json report.json
     python scripts/check_course_translation.py --lang tr --json report.json
     python scripts/check_course_translation.py --lang pl --json report.json
+    python scripts/check_course_translation.py --lang ro --json report.json
 """
 
 from __future__ import annotations
@@ -301,6 +302,28 @@ POLISH_RULES = LanguageRules(
     era_hint="should be p.n.e. / n.e.",
 )
 
+ROMANIAN_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(un|o|de|din|la|pe|cu|pentru|\u00een|\u0219i|sau)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "o," / "și," are ordinary in lists; only the masculine article
+    # cannot end a clause.
+    stranded_tight=re.compile(
+        r"\b(un)\s*([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=("un ", "o "),
+    leftover_extra_skip=frozenset({"des", "entre", "du"}),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # Romanian decimals are commas
+    century_hint="should be 'secolul XV'",
+    era_hint="should be î.Hr. / d.Hr.",
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
@@ -309,6 +332,7 @@ RULES_BY_LANG: dict[str, LanguageRules] = {
     "it": ITALIAN_RULES,
     "tr": TURKISH_RULES,
     "pl": POLISH_RULES,
+    "ro": ROMANIAN_RULES,
 }
 
 
@@ -382,6 +406,7 @@ ARTICLE_BEFORE_RE = {
     "it": re.compile(r"\b(il|lo|la|i|gli|le|un|uno|una)$", re.IGNORECASE),
     "tr": re.compile(r"\b(bir|bu|\u015fu)$", re.IGNORECASE),
     "pl": re.compile(r"\b(ten|ta|to|ci|te)$", re.IGNORECASE),
+    "ro": re.compile(r"\b(un|o)$", re.IGNORECASE),
 }
 
 
