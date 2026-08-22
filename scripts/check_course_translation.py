@@ -17,6 +17,7 @@ Usage:
     python scripts/check_course_translation.py --lang pl --json report.json
     python scripts/check_course_translation.py --lang ro --json report.json
     python scripts/check_course_translation.py --lang nl --json report.json
+    python scripts/check_course_translation.py --lang el --json report.json
 """
 
 from __future__ import annotations
@@ -346,6 +347,31 @@ DUTCH_RULES = LanguageRules(
     era_hint="should be v.Chr. / n.Chr.",
 )
 
+GREEK_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(\u03bf|\u03b7|\u03c4\u03bf|\u03bf\u03b9|\u03c4\u03b1|\u03ad\u03bd\u03b1|"
+        r"\u03bc\u03b9\u03b1|\u03ad\u03bd\u03b1\u03c2|\u03c4\u03bf\u03c5|\u03c4\u03b7\u03c2|"
+        r"\u03c4\u03c9\u03bd|\u03ba\u03b1\u03b9|\u03ae|\u03b1\u03c0\u03cc|\u03bc\u03b5|"
+        r"\u03b3\u03b9\u03b1|\u03c3\u03b5|\u03c3\u03c4\u03bf|\u03c3\u03c4\u03b7|"
+        r"\u03c3\u03c4\u03bf\u03bd|\u03c3\u03c4\u03b7\u03bd)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "και," / "ή," are ordinary in lists; only bare articles cannot end a clause.
+    stranded_tight=re.compile(
+        r"\b(\u03bf|\u03b7|\u03c4\u03bf)\s*([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=("ο ", "η ", "το ", "οι ", "τα ", "ένα ", "μια ", "ένας "),
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # Greek decimals are commas
+    century_hint="should be '15ος αιώνας'",
+    era_hint="should be π.Χ. / μ.Χ.",
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
@@ -356,6 +382,7 @@ RULES_BY_LANG: dict[str, LanguageRules] = {
     "pl": POLISH_RULES,
     "ro": ROMANIAN_RULES,
     "nl": DUTCH_RULES,
+    "el": GREEK_RULES,
 }
 
 
@@ -431,6 +458,11 @@ ARTICLE_BEFORE_RE = {
     "pl": re.compile(r"\b(ten|ta|to|ci|te)$", re.IGNORECASE),
     "ro": re.compile(r"\b(un|o)$", re.IGNORECASE),
     "nl": re.compile(r"\b(de|het|een)$", re.IGNORECASE),
+    "el": re.compile(
+        r"\b(\u03bf|\u03b7|\u03c4\u03bf|\u03bf\u03b9|\u03c4\u03b1|\u03ad\u03bd\u03b1|"
+        r"\u03bc\u03b9\u03b1|\u03ad\u03bd\u03b1\u03c2)$",
+        re.IGNORECASE,
+    ),
 }
 
 
