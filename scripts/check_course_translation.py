@@ -124,7 +124,7 @@ EN_ARTICLE_BEFORE_RE = re.compile(r"\b(the|a|an)$", re.IGNORECASE)
 ES_ARTICLE_BEFORE_RE = re.compile(r"\b(el|la|los|las|un|una)$", re.IGNORECASE)
 
 #: Words that are French leftovers in English but ordinary Spanish.
-ES_LEFTOVER_EXCLUDE = frozenset({"entre", "que"})
+ES_LEFTOVER_EXCLUDE = frozenset({"entre", "que", "les"})
 
 
 class LangConfig:
