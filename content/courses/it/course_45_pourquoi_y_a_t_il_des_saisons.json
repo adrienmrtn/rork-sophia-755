@@ -4,11 +4,11 @@
   "subtitle": "Terra e Sole",
   "subject": "sciences",
   "subcategory": "La nostra quotidianità spiegata",
-  "description": "Le stagioni non derivano dal fatto che la Terra è più vicina o più lontana dal Sole. La vera causa è l'inclinazione dell'asse terrestre.",
+  "description": "Le stagioni non arrivano perché la Terra è più vicina o più lontana dal Sole. La vera causa è l'inclinazione dell'asse terrestre.",
   "hero": {
     "image": "pourquoi_y_a_t_il_des_saisons",
     "ratio": "16:9",
-    "hook": "No, l'estate non arriverà perché la Terra si sta avvicinando al Sole."
+    "hook": "No, l'estate non arriva perché la Terra si avvicina al Sole."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Molte persone pensano che l'estate arrivi quando la Terra è **più vicina** al Sole, e l'inverno arrivi quando è **lontano**. Questo è falso. E lo vediamo subito: se in Francia è estate, in Australia è inverno."
+          "text": "Molti pensano che l'estate arrivi quando la Terra è più **vicina** al Sole, e l'inverno quando è più **lontana**. È falso. E si vede subito: quando è estate in Francia, è inverno in Australia."
         },
         {
           "type": "paragraph",
-          "text": "La vera spiegazione sta in una cosa: l'asse di rotazione della Terra è **inclinato**, inclinato rispetto al piano della sua orbita attorno al Sole."
+          "text": "La vera spiegazione sta in una cosa: l'asse di rotazione della Terra è **inclinato**, piegato rispetto al piano della sua orbita intorno al Sole."
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p1",
-      "title": "La Terra si inclina",
+      "title": "La Terra pende",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La Terra ruota sul proprio asse in **24 ore**: è giorno e notte. Inoltre orbita attorno al Sole in **anno anno** in un'orbita a forma di **ellisse**, un cerchio leggermente appiattito. Ma il suo asse, la linea immaginaria dal Polo Nord al Polo Sud, non è rettilineo rispetto alla sua orbita. Ha un'inclinazione di circa **23,5 gradi**: questo è lo . [[Inclinazione assiale della Terra (23,5°)]]"
+          "text": "La Terra gira su se stessa in **24 ore**: è il giorno e la notte. Gira anche intorno al Sole in **un anno**, su un'orbita a forma di **ellisse**, un cerchio leggermente schiacciato. Ma il suo asse, la linea immaginaria dal polo Nord al polo Sud, non è dritto rispetto all'orbita. Pende di circa **23,5 gradi**: è l'[[Inclinazione assiale della Terra (23,5°)]]."
         },
         {
           "type": "image",
@@ -43,7 +43,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Questa inclinazione rimane più o meno nella stessa direzione tutto l’anno. Punta sempre alla stessa regione del cielo, vicino alla Stella Polare. Risultato: a seconda di dove si trova la Terra nella sua orbita, un emisfero “guarda” di più il Sole, l'altro meno."
+          "text": "Questa inclinazione resta più o meno nella stessa direzione tutto l'anno. Punta sempre verso la stessa zona del cielo, vicino alla stella Polare. Risultato: a seconda di dove si trova la Terra sulla sua orbita, un emisfero “guarda” di più il Sole, l'altro di meno."
         }
       ]
     },
@@ -54,15 +54,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In estate nell’emisfero settentrionale, il Polo Nord si inclina verso il Sole. Le giornate sono più lunghe: aumenta lo **fotoperiodo**, il rapporto tra la durata del giorno e quella della notte. I raggi arrivano anche “dritti” al suolo: l'energia si concentra su una superficie più piccola. Quindi fa più caldo."
+          "text": "In estate nell'emisfero nord, il polo Nord pende verso il Sole. Le giornate sono più lunghe: il **fotoperiodo**, il rapporto tra durata del giorno e della notte, aumenta. I raggi arrivano anche più “dritti” sul suolo: l'energia si concentra su una superficie più piccola. Fa quindi più caldo."
         },
         {
           "type": "funFact",
-          "text": "A gennaio la Terra è ancora un po' **più vicina** al Sole che a luglio: è il **perielio**, il punto dell'orbita più vicino. Eppure qui è inverno. La prova che la distanza non spiega le stagioni."
+          "text": "A gennaio, la Terra è persino un po' **più vicina** al Sole che a luglio: è il **perielio**, il punto più vicino dell'orbita. Eppure da noi è inverno. Prova che la distanza non spiega le stagioni."
         },
         {
           "type": "paragraph",
-          "text": "In inverno è il contrario: giornate corte, raggi più obliqui, energia diffusa su una superficie più ampia. Meno calore ricevuto. Gli **solstizi**, i periodi in cui il Sole raggiunge la sua posizione più settentrionale o meridionale, segnano l'inizio dell'estate o dell'inverno."
+          "text": "In inverno è l'inverso: giorni corti, raggi più obliqui, energia sparsa su una superficie più grande. Meno calore ricevuto. I **solstizi**, i momenti in cui il Sole raggiunge la posizione più a nord o più a sud, segnano l'inizio dell'estate o dell'inverno."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In prossimità dell'**equatore**, la linea immaginaria che divide la Terra in due emisferi, l'inclinazione cambia poco la durata del giorno. Non ci sono vere e proprie quattro stagioni come in Europa, ma piuttosto periodi più secchi e periodi più umidi."
+          "text": "Vicino all'**equatore**, la linea immaginaria che divide la Terra in due emisferi, l'inclinazione cambia poco la durata del giorno. Non ci sono davvero quattro stagioni come in Europa, ma piuttosto periodi più secchi e più umidi."
         },
         {
           "type": "paragraph",
-          "text": "A **poli**, l'effetto è estremo: diversi mesi di giorno continuo in estate, diversi mesi di notte in inverno. Il contrasto è molto più forte lì che in Francia."
+          "text": "Ai **poli**, l'effetto è estremo: diversi mesi di giorno continuo in estate, diversi mesi di notte in inverno. Il contrasto è ben più forte che in Francia."
         }
       ]
     },
@@ -88,11 +88,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Se l’asse terrestre fosse perfettamente rettilineo, ogni luogo riceverebbe all’incirca la stessa quantità di luce solare durante tutto l’anno. Niente più vera estate, niente più vero inverno. Il clima, le culture, le migrazioni degli animali: tutto sarebbe diverso."
+          "text": "Se l'asse della Terra fosse perfettamente dritto, ogni luogo riceverebbe più o meno la stessa quantità di sole tutto l'anno. Niente vera estate, niente vero inverno. Il clima, le colture, le migrazioni degli animali: tutto sarebbe diverso."
         },
         {
           "type": "takeaway",
-          "text": "Le stagioni derivano dall'inclinazione dell'asse terrestre, circa **23,5°**, non dalla distanza dal Sole. Un emisfero è rivolto verso il Sole: è estate. L'altro tende al contrario: è inverno."
+          "text": "Le stagioni vengono dall'**inclinazione** dell'asse terrestre, circa **23,5°**, non dalla distanza dal Sole. Un emisfero pende verso il Sole: è estate. L'altro pende dalla parte opposta: è inverno."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "Orbita e gravità",
   "subject": "sciences",
   "subcategory": "La Terra e l'Universo",
-  "description": "La Luna cade costantemente verso la Terra. Le manca ogni volta. Questo è esattamente ciò che è un'orbita.",
+  "description": "La Luna cade verso la Terra in permanenza. Semplicemente la manca ogni volta. È esattamente questo, un'orbita.",
   "hero": {
     "image": "pourquoi_la_lune_ne_tombe_pas",
     "ratio": "16:9",
-    "hook": "La Luna sta cadendo verso di noi. Le manca la Terra ad ogni angolo."
+    "hook": "La Luna cade verso di noi. Semplicemente manca la Terra a ogni giro."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Se la gravità terrestre attira la Luna, perché non si schianta contro di noi? La risposta sembra bizzarra: la Luna **sta infatti cadendo** verso la Terra. Le manca ogni momento."
+          "text": "Se la gravità terrestre attira la Luna, perché non si schianta su di noi? La risposta sembra strana: la Luna **cade** davvero verso la Terra. La manca soltanto a ogni istante."
         },
         {
           "type": "paragraph",
-          "text": "Questo equilibrio tra caduta e velocità laterale è uno **orbitale**, una traiettoria curva attorno a una stella. Il fisico inglese **Isacco Newton** fu il primo a unificare con la stessa idea la caduta di una mela e il movimento delle stelle."
+          "text": "Questo equilibrio tra caduta e velocità laterale è un'**orbita**, una traiettoria curva intorno a un astro. Il fisico inglese **Isaac Newton** fu il primo a unire la caduta di una mela e il moto degli astri con la stessa idea."
         },
         {
           "type": "funFact",
-          "text": "Se sulla Terra pesassi **60 kg**, sulla Luna peseresti solo circa **10**: la sua gravità è sei volte più debole."
+          "text": "Se tu pesassi **60 kg** sulla Terra, sulla Luna ne peseresti circa **10**: la sua gravità è sei volte più debole."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
-      "title": "Il canone immaginario di Newton",
+      "title": "Il cannone immaginario di Newton",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton immagina un cannone in cima ad una montagna così alta da emergere dall'atmosfera. Tiriamo una palla in orizzontale. Con poca potenza, cade rapidamente. Con più forza, va oltre."
+          "text": "Newton immagina un cannone in cima a una montagna così alta da uscire dall'atmosfera. Si spara un proiettile in orizzontale. Con poca potenza, ricade in fretta. Con più forza, va più lontano."
         },
         {
           "type": "image",
           "asset": "newton_cannonball_orbit_thought_experiment",
           "ratio": "auto",
-          "caption": "Esperimento mentale della palla di cannone di Newton: la chiave per comprendere l'orbita."
+          "caption": "L'esperimento mentale del proiettile di Newton: la chiave per capire l'orbita"
         },
         {
           "type": "paragraph",
-          "text": "Ad una velocità specifica, chiamata , accade qualcosa di straordinario. Quando la palla cade, la Terra, che è rotonda, si curva sotto di essa alla stessa velocità. Il proiettile cade... senza mai toccare terra. È in **libera permanente**, trascinato dalla gravità senza schiantarsi. [[Velocità satellitare]]"
+          "text": "A una velocità precisa, chiamata [[Velocità di orbitazione]], succede qualcosa di notevole. Mentre il proiettile cade, la Terra, che è rotonda, si curva sotto di lui allo stesso ritmo. Il proiettile cade... senza mai toccare il suolo. È in **caduta libera permanente**, tirato dalla gravità senza schiantarsi."
         },
         {
           "type": "paragraph",
-          "text": "La Luna fa la stessa cosa. Ha abbastanza velocità laterale per trasformare una caduta in un loop. Senza questa velocità si getterebbe dritto verso di noi."
+          "text": "La Luna fa la stessa cosa. Ha abbastanza velocità di lato per trasformare una caduta in un anello. Senza questa velocità, cadrebbe dritta su di noi."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p2",
-      "title": "Due forze, un unico equilibrio",
+      "title": "Due forze, un equilibrio",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La Luna orbita a circa **384.000 km**. La sua velocità laterale è di circa **1 km/s**. Se si fermasse all'improvviso, si bloccherebbe nel giro di pochi giorni. Se la gravità sparisse all'improvviso, andrebbe in linea retta nello spazio, secondo il principio di [[Inerzia]]: un corpo mantiene la sua velocità se non viene rallentato."
+          "text": "La Luna orbita a circa **384.000 km**. La sua velocità laterale è di circa **1 km/s**. Se si fermasse di colpo, si schianterebbe in pochi giorni. Se la gravità sparisse all'improvviso, partirebbe in linea retta nello spazio, secondo il principio di [[Inerzia]]: un corpo tiene la sua velocità se non viene frenato."
         },
         {
           "type": "paragraph",
-          "text": " dice che ogni massa attrae ogni altra massa, e che l'attrazione diminuisce con la distanza, più precisamente con il quadrato della distanza. Più un satellite è vicino, più velocemente deve andare per evitare di cadere. [[La gravitazione universale di Newton]]"
+          "text": "La [[Gravitazione universale di Newton]] dice che ogni massa attira ogni altra massa, e che l'attrazione cala con la distanza, più precisamente con il quadrato della distanza. Più un satellite è vicino, più deve andare veloce per non cadere."
         },
         {
           "type": "funFact",
-          "text": "La Stazione Spaziale Internazionale, a soli **400 km**, viaggia a una velocità di circa **28.000 chilometri all'ora**. Fa il giro della Terra in **90 minuti**. La Luna, più lontana, impiega **27,3 giorni**."
+          "text": "La Stazione spaziale internazionale, a soli **400 km** di altitudine, vola a circa **28.000 km/h**. Fa il giro della Terra in **90 minuti**. La Luna, più lontana, ci mette **27,3 giorni**."
         },
         {
           "type": "paragraph",
-          "text": "Quindi l'orbita non è magica. È un compromesso costante tra \"sto cadendo\" e \"mi sto muovendo troppo velocemente per colpire\"."
+          "text": "L'orbita quindi non è magia. È un compromesso permanente tra “cado” e “avanzo troppo in fretta per toccare”."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p3",
-      "title": "Le maree spingono via la Luna",
+      "title": "Le maree allontanano la Luna",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'orbita non è fissa. Entrano in gioco gli . La gravità della Luna esercita una pressione maggiore sul lato della Terra rivolto ad essa che sul centro. Deforma gli oceani e crea un rigonfiamento d'acqua. [[Forze di marea]]"
+          "text": "L'orbita non è ferma. Entrano in gioco le [[forze di marea]]. La gravità della Luna tira più forte sul lato della Terra che le sta di fronte che al centro. Deforma gli oceani e crea un rigonfiamento d'acqua."
         },
         {
           "type": "paragraph",
-          "text": "Poiché la Terra ruota sul proprio asse più velocemente di quanto la Luna le ruota attorno, questa cresta avanza leggermente davanti alla Luna. L'attrito rallenta leggermente la rotazione terrestre: le nostre giornate si allungano di circa **1,4 millisecondi** al secolo. In cambio la Luna si allontana di circa **3,8 cm** all'anno."
+          "text": "Siccome la Terra gira su se stessa più in fretta di quanto la Luna le giri intorno, questo rigonfiamento avanza un po' davanti alla Luna. Lo sfregamento rallenta di pochissimo la rotazione terrestre: i nostri giorni si allungano di circa **1,4 millisecondi** al secolo. In cambio, la Luna si allontana di circa **3,8 cm** all'anno."
         },
         {
           "type": "paragraph",
-          "text": "Miliardi di anni fa, la Luna era molto più vicina. Le maree erano enormi. Questa miscelazione di acqua e chimica potrebbe aver aiutato le prime forme di vita. E i dinosauri vivevano su una Terra dove i giorni duravano solo **22 o 23 o**."
+          "text": "Miliardi di anni fa la Luna era ben più vicina. Le maree erano enormi. Questo rimescolio di acqua e chimica ha forse aiutato le prime forme di vita. E i dinosauri, loro, vivevano su una Terra dove i giorni duravano solo **22 o 23 ore**."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
-      "title": "Eclissi…per ora",
+      "title": "Eclissi, per ora",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oggi, per coincidenza geometrica, il Sole è circa **400 volt** più grande della Luna, ma anche **400 volt** più lontano. I due hanno quindi la stessa **dimensione apparente**, l'angolo con il quale li vediamo nel cielo. Sono possibili eclissi solari totali."
+          "text": "Oggi, per una coincidenza geometrica, il Sole è circa **400 volte** più grande della Luna, ma anche **400 volte** più lontano. I due hanno quindi la stessa **dimensione apparente**, l'angolo sotto cui li vediamo in cielo. Le eclissi totali di Sole sono possibili."
         },
         {
           "type": "paragraph",
-          "text": "Tra circa **600 milioni di anni**, la Luna sarà troppo lontana per oscurare completamente il Sole. Tutto ciò che rimarrà saranno le eclissi anulari: un anello di luce attorno al disco lunare. A lunghissimo termine, la Terra e la Luna potrebbero sincronizzarsi: ciascun corpo mostrerebbe sempre la stessa faccia all’altro. Ma il Sole, diventando **rosso gigante**, fase finale di una stella come la nostra, trasformerà il sistema molto prima."
+          "text": "Tra circa **600 milioni di anni** la Luna sarà troppo lontana per nascondere interamente il Sole. Resteranno solo eclissi anulari: un anello di luce intorno al disco lunare. A lunghissimo termine, Terra e Luna potrebbero sincronizzarsi: ciascun corpo mostrerebbe sempre la stessa faccia all'altro. Ma il Sole, diventando **gigante rossa**, fase finale di una stella come la nostra, trasformerà il sistema ben prima."
         },
         {
           "type": "takeaway",
-          "text": "La Luna non si schianta perché la sua velocità laterale bilancia l'attrazione terrestre: è in caduta libera permanente. E si allontana ancora di circa **3,8 cm** all'anno."
+          "text": "La Luna non si schianta perché la sua velocità laterale equilibra l'attrazione terrestre: è in caduta libera permanente. E si allontana ancora di circa **3,8 cm** all'anno."
         }
       ]
     }

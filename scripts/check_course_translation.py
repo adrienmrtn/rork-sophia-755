@@ -12,6 +12,7 @@ Usage:
     python scripts/check_course_translation.py --lang de --verbose course_10*
     python scripts/check_course_translation.py --lang es --json report.json
     python scripts/check_course_translation.py --lang pt --json report.json
+    python scripts/check_course_translation.py --lang it --json report.json
 """
 
 from __future__ import annotations
@@ -234,11 +235,34 @@ PORTUGUESE_RULES = LanguageRules(
     era_hint="should be a.C. / d.C.",
 )
 
+ITALIAN_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(il|lo|la|i|gli|le|un|uno|una|di|del|della|dei|delle|in|nel|"
+        r"nella|per|con|e|o)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "e," / "o," / "a," are ordinary in lists; "un." is often a numeral.
+    stranded_tight=re.compile(
+        r"\b(il|lo|la|i|gli|le|una)\s*([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=("il ", "lo ", "la ", "i ", "gli ", "le ", "un ", "uno ", "una "),
+    leftover_extra_skip=frozenset({"qui"}),  # Italian adverb "here"
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # Italian decimals are commas
+    century_hint="should be 'secolo XV'",
+    era_hint="should be a.C. / d.C.",
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
     "es": SPANISH_RULES,
     "pt": PORTUGUESE_RULES,
+    "it": ITALIAN_RULES,
 }
 
 
@@ -309,6 +333,7 @@ ARTICLE_BEFORE_RE = {
     "de": re.compile(r"\b(der|die|das|dem|den|des|ein|eine|eines|einem|einen)$", re.IGNORECASE),
     "es": re.compile(r"\b(el|la|los|las|un|una)$", re.IGNORECASE),
     "pt": re.compile(r"\b(o|a|os|as|um|uma)$", re.IGNORECASE),
+    "it": re.compile(r"\b(il|lo|la|i|gli|le|un|uno|una)$", re.IGNORECASE),
 }
 
 

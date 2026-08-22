@@ -1,14 +1,14 @@
 {
   "id": "course_226_l_ia_et_l_emploi",
-  "title": "IA e occupazione",
+  "title": "L'IA e il lavoro",
   "subtitle": "Minaccia o nuova ondata?",
   "subject": "comprendreLeMonde",
   "subcategory": "Ambiente & futuro",
-  "description": "Ogni rivoluzione tecnologica ha creato timori per l’occupazione. Ma l’intelligenza artificiale generativa sta influenzando per la prima volta le professioni **intellettuale**, non solo la forza fisica.",
+  "description": "Ogni rivoluzione tecnologica ha fatto paura per il lavoro. Ma l'IA generativa tocca per la prima volta i mestieri **intellettuali**, non solo la forza fisica.",
   "hero": {
     "image": "l_ia_et_l_emploi",
     "ratio": "16:9",
-    "hook": "Le macchine hanno già sostituito le braccia. Ora sostituiranno i cervelli?"
+    "hook": "Le macchine hanno già sostituito delle braccia. Adesso sostituiranno anche dei cervelli?"
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L’intelligenza artificiale distruggerà milioni di posti di lavoro o ne creerà di nuovi? Questa domanda è stata sollevata con ogni importante progresso tecnologico negli ultimi due secoli."
+          "text": "L'intelligenza artificiale distruggerà milioni di posti di lavoro, o ne creerà di nuovi? Questa domanda torna a ogni grande avanzata tecnologica da due secoli."
         },
         {
           "type": "paragraph",
-          "text": "Questa volta la novità è altrove: l’intelligenza artificiale non sostituisce più solo la forza fisica, ma compiti che pensavamo fossero riservati alla mente umana, come scrivere un testo o analizzare un file. Questo corso ripercorre questa antica paura ed esplora ciò che sta realmente cambiando oggi."
+          "text": "Questa volta, la novità sta altrove: l'IA non sostituisce più soltanto la forza fisica, ma compiti che si pensavano riservati alla mente umana, come scrivere un testo o analizzare un dossier. Questo corso ripercorre quella paura antica ed esplora ciò che cambia davvero oggi."
         }
       ]
     },
@@ -33,46 +33,46 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La paura che le macchine possano sostituire l’uomo non è nuova. All'inizio del XIX secolo, gli , lavoratori tessili britannici, distrussero i telai elettrici che minacciavano le loro capacità. [[I Luddisti (1811-1816)]]"
+          "text": "Il timore che la macchina sostituisca l'umano non è nuovo. All'inizio del secolo XIX, [[I Luddisti (1811-1816)]], operai del tessile britannico, hanno distrutto telai meccanici che minacciavano il loro mestiere."
         },
         {
           "type": "image",
           "asset": "luddites_industrial_revolution_machine_breaking",
           "ratio": "4:3",
-          "caption": "Nel XIX secolo i luddisti attaccarono le macchine che minacciavano la loro professione."
+          "caption": "Nel secolo XIX, i Luddisti se la prendevano con le macchine che minacciavano il loro lavoro"
         },
         {
           "type": "paragraph",
-          "text": "Ogni grande ondata tecnologica ha seguito la stessa logica: distrugge alcuni posti di lavoro, ma ne crea altri altrove. Lo spostamento dall’agricoltura all’industria ha ridotto in un secolo la percentuale di agricoltori dal 40% al 2% della popolazione attiva, senza causare disoccupazione permanente, poiché questi lavoratori si sono spostati verso nuovi settori."
+          "text": "Ogni grande ondata tecnologica ha seguito la stessa logica: distrugge certi posti, ma ne crea altri altrove. Il passaggio dall'agricoltura all'industria ha fatto cadere la quota degli agricoltori dal 40% al 2% della popolazione attiva in un secolo, senza provocare una disoccupazione permanente, perché quei lavoratori si sono spostati verso nuovi settori."
         },
         {
           "type": "funFact",
-          "text": "Si dice che la parola \"sabotaggio\" derivi dai lavoratori francesi che lanciavano le loro scarpe di legno, i sabot, negli ingranaggi delle macchine per bloccarle, anche se l'origine esatta della parola rimane dibattuta."
+          "text": "La parola “sabotaggio” verrebbe da operai francesi che gettavano i loro zoccoli di legno, i sabot, negli ingranaggi delle macchine per bloccarle, anche se l'origine esatta del termine resta discussa."
         }
       ]
     },
     {
       "id": "course_226_l_ia_et_l_emploi_p2",
-      "title": "Una svolta: l’intelligenza artificiale attacca le professioni della conoscenza",
+      "title": "Una rottura: l'IA attacca i mestieri del sapere",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": " segna un vero cambiamento, perché non segue più solo regole fissate in anticipo: crea contenuti originali. L’informatica classica ha sostituito attività ripetitive come l’immissione di dati. L’intelligenza artificiale moderna può scrivere, analizzare un contratto, comporre musica o persino aiutare a fare una diagnosi medica. [[Intelligenza artificiale generativa (AI)]]"
+          "text": "L'[[Intelligenza artificiale (IA) generativa]] segna un vero cambiamento, perché non segue più soltanto regole fissate in anticipo: crea contenuti originali. L'informatica classica sostituiva compiti ripetitivi come l'inserimento dati. L'IA moderna, invece, sa scrivere, analizzare un contratto, comporre musica o anche aiutare a fare una diagnosi medica."
         },
         {
           "type": "image",
           "asset": "AI_generative_writing_artificial_intelligence",
           "ratio": "4:3",
-          "caption": "L’intelligenza artificiale generativa affronta compiti che si pensava fossero riservati alla mente umana."
+          "caption": "L'IA generativa attacca compiti che si pensavano riservati alla mente umana"
         },
         {
           "type": "paragraph",
-          "text": "Questa versatilità mette in luce soprattutto le [[impiegati]], professioni del settore dei servizi il cui principale strumento di lavoro è l'analisi. Secondo recenti rapporti, avvocati, redattori e analisti finanziari sono tra le professioni più esposte a questo cambiamento."
+          "text": "Questa versatilità espone soprattutto i [[colletti bianchi]], i mestieri del settore dei servizi il cui strumento principale è l'analisi. Secondo rapporti recenti, giuristi, redattori e analisti finanziari fanno parte dei mestieri più esposti a questo cambiamento."
         },
         {
           "type": "funFact",
-          "text": "Nel 1950, Alan Turing predisse che un giorno una macchina avrebbe potuto ingannare un essere umano simulando il suo pensiero. Da allora alcune IA sono state accreditate come coautori di veri e propri brevetti scientifici."
+          "text": "Nel 1950, Alan Turing prediceva che una macchina avrebbe potuto un giorno ingannare un umano simulandone il pensiero. Alcune IA sono state poi accreditate come coautrici di veri brevetti scientifici."
         }
       ]
     },
@@ -83,15 +83,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Una visione più ottimistica vede l’intelligenza artificiale come un assistente piuttosto che come un sostituto. Automatizzando i compiti meno interessanti, come la ricerca documentaria o i riassunti, lascerebbe ai professionisti più tempo per l’aspetto umano, etico o strategico del loro lavoro."
+          "text": "Una visione più ottimista vede l'IA come un assistente piuttosto che un sostituto. Automatizzando i compiti meno interessanti, come le ricerche documentali o i riassunti, lascerebbe più tempo ai professionisti per l'aspetto umano, etico o strategico del loro lavoro."
         },
         {
           "type": "paragraph",
-          "text": "Stanno già facendo la loro comparsa nuove professioni, come , che sa formulare istruzioni precise per ottenere il meglio da un'IA. Un medico aiutato dall’AI non scompare: può seguire più pazienti con più precisione. [[Ingegnere tempestivo]]"
+          "text": "Nascono già mestieri nuovi, come l'[[Ingegnere dei prompt]], che sa formulare istruzioni precise per ottenere il meglio da un'IA. Un medico aiutato da un'IA non scompare: può seguire più pazienti con più precisione."
         },
         {
           "type": "paragraph",
-          "text": "Il punto preoccupante resta la velocità del cambiamento. Le precedenti rivoluzioni industriali hanno attraversato decenni, consentendo il tempo di adattarsi. La trasformazione dell’intelligenza artificiale avviene nell’arco di pochi anni, il che può creare un divario di competenze difficile da colmare per molti lavoratori."
+          "text": "Il punto di inquietudine resta la velocità del cambiamento. Le rivoluzioni industriali precedenti si estendevano su decenni, lasciando il tempo di adattarsi. Quella dell'IA si svolge in pochi anni, e questo può creare un divario di competenze difficile da colmare per molti lavoratori."
         }
       ]
     },
@@ -102,19 +102,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L’esito di questo cambiamento dipenderà soprattutto dalle scelte politiche che lo accompagneranno. La formazione continua diventa essenziale per aiutare i lavoratori a sviluppare nuove competenze."
+          "text": "L'esito di questo cambiamento dipenderà soprattutto dalle scelte politiche che lo accompagneranno. La formazione continua diventa indispensabile per aiutare i lavoratori a evolvere verso nuove competenze."
         },
         {
           "type": "paragraph",
-          "text": "Sta riemergendo anche il dibattito sulla redistribuzione della ricchezza creata dalle macchine. Se l’intelligenza artificiale rende possibile produrre di più con meno lavoratori, come possiamo finanziare i nostri sistemi sociali? È in questo contesto che si fa strada l’idea di uno , non come un’utopia, ma come una vera e propria rete di sicurezza. [[Reddito di base universale (UBI)]]"
+          "text": "Torna anche il dibattito sulla redistribuzione della ricchezza creata dalle macchine. Se l'IA permette di produrre di più con meno lavoratori, come finanziare i nostri sistemi sociali? È in questo contesto che l'idea di [[Il reddito di base universale (RUB)]] guadagna terreno, non come un'utopia, ma come una vera rete di sicurezza."
         },
         {
           "type": "paragraph",
-          "text": "Alcuni propongono anche una tassa sull’uso dell’intelligenza artificiale per compensare la riduzione dei contributi legati al lavoro. L’intelligenza artificiale alla fine ci spinge a ripensare il posto del lavoro stesso nelle nostre vite."
+          "text": "Certi propongono anche una tassa sull'uso dell'intelligenza artificiale per compensare il calo dei contributi legati al lavoro. Alla fine l'IA ci spinge a ripensare il posto stesso del lavoro nelle nostre vite."
         },
         {
           "type": "takeaway",
-          "text": "Le precedenti rivoluzioni industriali hanno distrutto posti di lavoro creandone altri altrove. L’intelligenza artificiale generativa è la prima a minacciare compiti cognitivi e creativi allo stesso tempo, rendendo l’adattamento più urgente che mai."
+          "text": "Le rivoluzioni industriali precedenti hanno distrutto posti di lavoro creandone altri altrove. L'IA generativa è la prima a minacciare insieme i compiti cognitivi e creativi, e questo rende l'adattamento più urgente che mai."
         }
       ]
     }

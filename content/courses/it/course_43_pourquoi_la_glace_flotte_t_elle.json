@@ -4,11 +4,11 @@
   "subtitle": "Acqua e molecole",
   "subject": "sciences",
   "subcategory": "La nostra quotidianità spiegata",
-  "description": "Il ghiaccio galleggia sull'acqua. Sembra normale, ma in realtà è molto raro. E fortunatamente per la vita sulla Terra.",
+  "description": "Il ghiaccio galleggia sull'acqua. Sembra normale, ma in realtà è rarissimo. E per fortuna per la vita sulla Terra.",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
-    "hook": "Se il ghiaccio scorresse, i laghi congelerebbero fino al fondo. E la vita nell’acqua avrebbe difficoltà a sopravvivere."
+    "hook": "Se il ghiaccio affondasse, i laghi gelerebbero fino in fondo. E la vita nell'acqua farebbe fatica a sopravvivere."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un cubetto di ghiaccio in un bicchiere, un iceberg nell'oceano: il ghiaccio **galleggianti**. Lo troviamo banale. Tuttavia, per la maggior parte delle sostanze, il solido è più **denso**, quindi più pesante a parità di volume: affonda."
+          "text": "Un cubetto in un bicchiere, un iceberg nell'oceano: il ghiaccio **galleggia**. Lo troviamo banale. Eppure, per la maggior parte delle sostanze, il solido è più **denso**, quindi più pesante a parità di volume: affonda."
         },
         {
           "type": "paragraph",
-          "text": "L'acqua fa il contrario. Questa eccezione deriva dalla forma della sua molecola. E ha salvato molti laghi in inverno."
+          "text": "L'acqua fa l'inverso. Questa eccezione viene dalla forma della sua molecola. E ha salvato parecchi laghi, d'inverno."
         }
       ]
     },
@@ -33,42 +33,42 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Una molecola d'acqua è un atomo di **ossigeno** collegato a due atomi di **idrogeno**. Non è dritto: forma uno **V**. A causa di questa forma, le cariche elettriche non sono distribuite equamente: la molecola è **polare**, con un'estremità leggermente negativa e l'altra leggermente positiva."
+          "text": "Una molecola d'acqua è un atomo di **ossigeno** legato a due atomi di **idrogeno**. Non è dritta: forma una **V**. A causa di questa forma, le cariche elettriche non sono ripartite in modo uguale: la molecola è **polare**, con un capo leggermente negativo e l'altro leggermente positivo."
         },
         {
           "type": "image",
           "asset": "water_molecule_model_crystal",
           "ratio": "4:3",
-          "caption": "La molecola dell'acqua: una V che attrae e respinge le sue vicine."
+          "caption": "La molecola d'acqua: una V che attira e respinge le vicine"
         },
         {
           "type": "paragraph",
-          "text": "Risultato: le molecole d'acqua si attraggono attraverso [[legami idrogeno]], come piccoli magneti. Nel liquido rimangono vicini ma si muovono comunque. Nel ghiaccio si congelano in modo diverso."
+          "text": "Risultato: le molecole d'acqua si attirano tra loro con dei [[legami a idrogeno]], come piccoli magneti. Nel liquido restano vicine ma si muovono ancora. Nel ghiaccio si bloccano in un altro modo."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
-      "title": "Quando l’acqua ghiaccia, occupa spazio",
+      "title": "Quando l'acqua si gela, occupa più spazio",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Intorno a **0 °C** l'acqua si solidifica. Per formare il ghiaccio, le molecole si organizzano in una rete **esagonale**, una sorta di nido d'ape a sei facce. Lasciano quindi tra loro più **vuoto** che allo stato liquido."
+          "text": "Verso **0 °C**, l'acqua si solidifica. Per formare il ghiaccio, le molecole si organizzano in una rete **esagonale**, una specie di nido d'ape a sei lati. Lasciano allora più **vuoto** tra loro che allo stato liquido."
         },
         {
           "type": "funFact",
-          "text": "Ecco perché una bottiglia piena d'acqua può **scoppia** nel congelatore: il ghiaccio occupa più volume dell'acqua liquida."
+          "text": "È per questo che una bottiglia d'acqua piena può **esplodere** nel congelatore: il ghiaccio occupa più volume dell'acqua liquida."
         },
         {
           "type": "paragraph",
-          "text": "Meno materiale nello stesso volume significa: **meno denso**. Tuttavia, un oggetto meno denso del liquido che lo circonda sale. Il ghiaccio quindi galleggia sull'acqua. Questa è chiamata **anomalia di espansione dell'acqua**: a differenza di quasi tutte le sostanze, l'acqua si espande quando si raffredda sotto **4 °C**."
+          "text": "Meno materia nello stesso volume significa: **meno densa**. Ora un oggetto meno denso del liquido intorno risale. Il ghiaccio galleggia dunque sull'acqua. È quella che si chiama l'**anomalia di dilatazione dell'acqua**: a differenza di quasi tutte le sostanze, l'acqua si dilata raffreddandosi sotto i **4 °C**."
         },
         {
           "type": "image",
           "asset": "iceberg_floating_arctic_ocean",
           "ratio": "16:9",
-          "caption": "Un iceberg galleggia perché il ghiaccio è meno denso dell’acqua liquida."
+          "caption": "Un iceberg galleggia perché il ghiaccio è meno denso dell'acqua liquida"
         }
       ]
     },
@@ -79,26 +79,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Immagina se il gelato scorresse. Si formerebbe in superficie, poi affonderebbe sul fondo. Il lago si congelerebbe strato dopo strato, fino al fondo. Spesso l'estate non basterebbe a sciogliere tutto."
+          "text": "Immagina se il ghiaccio affondasse. Si formerebbe in superficie, poi cadrebbe sul fondo. Il lago gelerebbe strato dopo strato, fino in basso. L'estate spesso non basterebbe a far fondere tutto."
         },
         {
           "type": "paragraph",
-          "text": "Fortunatamente il ghiaccio rimane in alto. Forma una **copertura isolante**. Sotto la superficie ghiacciata, l'acqua liquida può rimanere intorno a **4 °C**, la temperatura alla quale l'acqua liquida è più densa, sufficiente per la sopravvivenza di pesci e piante acquatiche."
+          "text": "Per fortuna, il ghiaccio resta in alto. Forma un **coperchio isolante**. Sotto la superficie gelata, l'acqua liquida può restare intorno ai **4 °C**, temperatura in cui l'acqua liquida è più densa, abbastanza perché pesci e piante acquatiche sopravvivano."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p4",
-      "title": "E anche per il clima",
+      "title": "E per il clima",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il lastrone di ghiaccio bianco riflette gran parte della luce solare nello spazio grazie al suo elevato **albedo**, il suo potere riflettente. Se scompare, l'oceano scuro assorbe più calore. Ciò accelera il riscaldamento: un circolo vizioso."
+          "text": "La banchisa bianca rimanda una gran parte della luce del Sole verso lo spazio grazie al suo **albedo** elevato, il suo potere riflettente. Se sparisce, l'oceano scuro assorbe più calore. Questo accelera il riscaldamento: un circolo vizioso."
         },
         {
           "type": "takeaway",
-          "text": "Il ghiaccio galleggia perché, solidificandosi, l’acqua forma una rete più “aerata”: diventa meno densa dell’acqua liquida. Questa eccezione protegge la vita acquatica in inverno."
+          "text": "Il ghiaccio galleggia perché, solidificandosi, l'acqua forma una rete più “ariosa”: diventa meno densa dell'acqua liquida. Questa eccezione protegge la vita acquatica d'inverno."
         }
       ]
     }

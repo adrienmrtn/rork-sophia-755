@@ -1,14 +1,14 @@
 {
   "id": "course_177_dipe_et_le_sphinx",
   "title": "Edipo e la Sfinge",
-  "subtitle": "L'enigma e la cecità",
+  "subtitle": "L'enigma e l'accecamento",
   "subject": "mythologie",
   "subcategory": "Grecia: gli eroi",
-  "description": "Edipo salva Tebe risolvendo l'enigma della Sfinge. Questa vittoria dello spirito, però, apre la porta alla tragedia più terribile.",
+  "description": "Edipo salva Tebe risolvendo l'enigma della Sfinge. Questa vittoria dello spirito apre però la porta alla più terribile delle tragedie.",
   "hero": {
     "image": "oedipe_et_le_sphinx",
     "ratio": "16:9",
-    "hook": "Un mostro pone un enigma. Edipo risponde “Uomo”. Salva una città... e cammina verso la propria sfortuna."
+    "hook": "Un mostro pone un enigma. Edipo risponde “l'Uomo”. Salva una città... e cammina verso la propria sventura."
   },
   "sections": [
     {
@@ -18,95 +18,95 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Prima di essere l'eroe tragico che uccide suo padre e sposa sua madre, **Edipo** è innanzitutto un salvatore. Di fronte a **Tebe**, una città della Beozia nella Grecia centrale, affronta la **Sfinge**, un mostro che divora chiunque sbagli il suo enigma."
+          "text": "Prima di essere l'eroe tragico che uccide il padre e sposa la madre, **Edipo** è innanzitutto un salvatore. Davanti a **Tebe**, città della Beozia nella Grecia centrale, affronta la **Sfinge**, mostro che divora chiunque fallisca il suo enigma."
         },
         {
           "type": "paragraph",
-          "text": "Vince con la mente, non con la spada. Ma questa vittoria lo pone su un trono dove dovrà affrontare ciò che non sa di se stesso. Il mito si oppone alla conoscenza dell'uomo in generale... e alla tragica ignoranza di se stessi."
+          "text": "Vince con lo spirito, non con la spada. Ma questa vittoria lo mette su un trono dove dovrà affrontare ciò che ignora di se stesso. Il mito oppone la conoscenza dell'uomo in generale... e l'ignoranza tragica di sé."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p1",
-      "title": "Un mostro sulla strada per Tebe",
+      "title": "Un mostro sulla strada di Tebe",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La Sfinge è una punizione divina, spesso legata a **Era**. Corpo di leone, busto di donna, ali di uccello, coda di serpente: una creatura ibrida. Installato vicino alla città, taglia le strade. Il re **Laio** è scomparso, ucciso da uno sconosciuto a un bivio. La città è senza un vero leader."
+          "text": "La Sfinge è un castigo divino, spesso legato a **Era**. Corpo di leone, busto di donna, ali d'uccello, coda di serpente: una creatura ibrida. Installata vicino alla città, taglia le strade. Il re **Laio** è scomparso, ucciso da uno sconosciuto a un crocevia. La città è senza un vero capo."
         },
         {
           "type": "image",
           "asset": "sphinx_greek_mythology_thebes_monster",
           "ratio": "4:3",
-          "caption": "La Sfinge di Tebe, custode di un enigma mortale."
+          "caption": "La Sfinge di Tebe, custode di un enigma mortale"
         },
         {
           "type": "paragraph",
-          "text": "Ogni passante deve rispondere. Il fallimento significa la morte. Anche Regent  fallisce. Il mostro incarna il trionfo dell'enigma sulla ragione... fino all'arrivo di uno sconosciuto di nome Edipo. [[Creonte]]"
+          "text": "Ogni passante deve rispondere. Il fallimento significa la morte. Anche il reggente [[Creonte]] fallisce. Il mostro incarna il trionfo dell'enigma sulla ragione... fino all'arrivo di uno straniero di nome Edipo."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p2",
-      "title": "«Quale essere ha quattro, due, poi tre piedi?»",
+      "title": "“Quale essere ha quattro, due, poi tre piedi?”",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Edipo fugge da Corinto. Un oracolo gli predisse che avrebbe ucciso suo padre e avrebbe sposato sua madre. Crede di evitare il destino. Sulla strada per Tebe, la Sfinge pone la sua domanda: quale essere ha quattro piedi al mattino, due a mezzogiorno, tre alla sera?"
+          "text": "Edipo fugge da Corinto. Un oracolo gli ha predetto che avrebbe ucciso il padre e sposato la madre. Crede di evitare il destino. Sulla strada di Tebe, la Sfinge pone la sua domanda: quale essere ha quattro piedi al mattino, due a mezzogiorno, tre alla sera?"
         },
         {
           "type": "image",
           "asset": "oedipus_answering_sphinx_ingres_painting",
           "ratio": "4:3",
-          "caption": "Edipo di fronte alla Sfinge, vittoria dell'intelligenza."
+          "caption": "Edipo di fronte alla Sfinge, vittoria dell'intelligenza"
         },
         {
           "type": "funFact",
-          "text": "La parola **Sfinge** deriva dal greco *sfinge*, “strizzare” o “strangolare”. Designa sia il modo in cui il mostro uccide... sia il modo in cui un enigma paralizza la mente."
+          "text": "La parola **Sfinge** viene dal greco *sphingein*, “stringere” o “strangolare”. Designa insieme il modo in cui il mostro uccide... e il modo in cui un enigma paralizza la mente."
         },
         {
           "type": "paragraph",
-          "text": "Edipo risponde: **“L'Uomo”**. Da bambino gattona a quattro zampe; da adulto cammina su due gambe; vecchio, si appoggia a un bastone. La Sfinge, sconfitta, si getta dalla roccia. È un brutale . Tebe è libera. Come promesso, Edipo riceve la corona e la mano della regina vedova, **Giocasta**. [[inversione di tendenza]]"
+          "text": "Edipo risponde: **“l'Uomo”**. Bambino, striscia a quattro zampe; adulto, cammina su due gambe; vecchio, si appoggia a un bastone. La Sfinge, sconfitta, si getta dalla roccia. È un [[colpo di scena]] brutale. Tebe è libera. Come promesso, Edipo riceve la corona e la mano della regina vedova, **Giocasta**."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p3",
-      "title": "Sapere tutto... tranne chi sei",
+      "title": "Sapere tutto... tranne chi si è",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Regna Edipo. La città prospera. Ma una pestilenza colpisce più tardi. **Apollo** rivela: il flagello finirà quando verrà ritrovato l'assassino di Laio. Edipo si avvia all'indagine con la stessa energia di prima di affrontare la Sfinge."
+          "text": "Edipo regna. La città prospera. Ma più tardi una peste colpisce. **Apollo** rivela: il flagello cesserà quando sarà trovato l'assassino di Laio. Edipo lancia un'inchiesta con la stessa energia di un tempo di fronte alla Sfinge."
         },
         {
           "type": "paragraph",
-          "text": "L'ironia è crudele. Chi ha definito “Uomo” non sa chi sia. Ha vinto un pubblico , un duello di argomenti, ma resta cieco alla sua identità. In **Sofocle**, in *Edipo Re*, è il cuore della tragedia. [[dialettica]]"
+          "text": "L'ironia è crudele. Chi ha definito “l'Uomo” non sa chi è. Ha vinto una [[dialettica]] pubblica, un duello di argomenti, ma resta cieco alla propria identità. In **Sofocle**, nell'*Edipo re*, è il cuore della tragedia."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p4",
-      "title": "La verità e gli occhi accecati",
+      "title": "La verità e gli occhi cavati",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La verità viene fuori: Edipo uccise Laio, suo padre, e sposò Giocasta, sua madre. Giocasta si suicida. Edipo si cava gli occhi. Divenuto cieco, finalmente “vede”. Vaga, sostenuto dalla figlia Antigone, diventando lui stesso il vecchio a tre gambe dell'enigma."
+          "text": "La verità esplode: Edipo ha ucciso Laio, suo padre, e sposato Giocasta, sua madre. Giocasta si suicida. Edipo si cava gli occhi. Diventato cieco, “vede” finalmente. Vaga, sostenuto dalla figlia Antigone, diventato lui stesso il vecchio a tre piedi dell'enigma."
         },
         {
           "type": "funFact",
-          "text": "**Freud** ha chiamato  in onore di questo mito: non per fare di Edipo un mostro, ma per parlare di desideri inconsci che la civiltà impara a reprimere. [[complesso di Edipo]]"
+          "text": "**Freud** battezza il [[complesso di Edipo]] a partire da questo mito: non per fare di Edipo un mostro, ma per parlare di desideri inconsci che la civiltà impara a rimuovere."
         },
         {
           "type": "paragraph",
-          "text": "La storia diventa un pilastro della cultura occidentale: intelligenza brillante, destino inevitabile e il terribile prezzo della verità su se stessi."
+          "text": "Il racconto diventa un pilastro della cultura occidentale: intelligenza brillante, destino inevitabile, e prezzo terribile della verità su di sé."
         },
         {
           "type": "takeaway",
-          "text": "Edipo libera Tebe rispondendo “Uomo” all'enigma della Sfinge. Questa genialità non gli impedisce di realizzare, senza saperlo, la profezia: il mito dell'autoinganno."
+          "text": "Edipo libera Tebe rispondendo “l'Uomo” all'enigma della Sfinge. Questo acume non gli impedisce di compiere, senza saperlo, la profezia: il mito dell'accecamento su se stessi."
         }
       ]
     }

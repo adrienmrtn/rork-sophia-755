@@ -1,14 +1,14 @@
 {
   "id": "course_219_la_fracture_numerique_mondiale",
-  "title": "Il divario digitale globale",
+  "title": "Il divario digitale mondiale",
   "subtitle": "Un terzo dell'umanità offline",
   "subject": "comprendreLeMonde",
   "subcategory": "Economia & società",
-  "description": "2,7 miliardi di persone non hanno ancora accesso a Internet. In un mondo sempre più digitale, questa mancanza di connessione diventa una nuova forma di esclusione.",
+  "description": "2,7 miliardi di persone non hanno ancora accesso a Internet. In un mondo sempre più digitale, questa assenza di connessione diventa una nuova forma di esclusione.",
   "hero": {
     "image": "la_fracture_numerique_mondiale",
     "ratio": "16:9",
-    "hook": "Il Kenya ha inventato il pagamento via telefono dieci anni prima dell’Europa, a causa della mancanza di filiali bancarie."
+    "hook": "Il Kenya ha inventato il pagamento per telefono dieci anni prima dell'Europa, per mancanza di sportelli bancari."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mentre le società sviluppate stanno vivendo una rivoluzione guidata dall’intelligenza artificiale, persiste una realtà brutale: **2,7 miliardi di persone**, ovvero circa un terzo dell’umanità, non hanno ancora accesso a Internet."
+          "text": "Mentre le società sviluppate vivono una rivoluzione portata dall'intelligenza artificiale, resta una realtà brutale: **2,7 miliardi di persone**, circa un terzo dell'umanità, non hanno ancora accesso a Internet."
         },
         {
           "type": "paragraph",
-          "text": "Questo **divario digitale** non è solo un ritardo tecnico: è diventato una vera e propria barriera, che tiene milioni di persone lontane dall’istruzione, dalla sanità e dall’economia globale. Ecco perché persiste e come alcuni paesi stanno cercando di colmarlo."
+          "text": "Questo **divario digitale** non è solo un ritardo tecnico: è diventato una barriera vera, che allontana milioni di persone dall'istruzione, dalla salute e dall'economia mondiale. Ecco perché persiste, e come alcuni paesi tentano di colmarlo."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p1",
-      "title": "Una mappa del mondo a due velocità",
+      "title": "Una carta del mondo a due velocità",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Entro il 2024, circa 5,4 miliardi di persone saranno connesse a Internet in tutto il mondo, ma i progressi sono stagnanti nelle regioni più povere. Europa e Nord America superano il 90% di connessione, mentre l’Africa sub-sahariana resta solo al 37%."
+          "text": "Nel 2024 circa 5,4 miliardi di persone sono connesse a Internet nel mondo, ma la crescita ristagna nelle regioni più povere. L'Europa e l'America del Nord superano il 90% di connessione, mentre l'Africa subsahariana resta al 37%."
         },
         {
           "type": "paragraph",
-          "text": "Questa esclusione è dovuta a diverse cause. Innanzitutto la mancanza di infrastrutture: installare la fibra ottica in alcune regioni isolate è considerato troppo costoso dagli operatori. Poi il prezzo: in alcuni paesi un semplice  entry-level equivale a diversi mesi di stipendio. Infine, la barriera linguistica (circa il 70% dei contenuti web è in inglese) e la mancanza di formazione digitale ne limitano la fruizione anche quando esiste una connessione. [[smartphone]]"
+          "text": "Questa esclusione ha più cause. Prima, la mancanza di infrastrutture: posare la fibra ottica in certe zone isolate costa troppo, secondo gli operatori. Poi il prezzo: in alcuni paesi un semplice [[smartphone]] di fascia bassa vale diversi mesi di salario. Infine la barriera della lingua (circa il 70% dei contenuti del web è in inglese) e la scarsa formazione digitale limitano l'uso anche quando una connessione esiste."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p2",
-      "title": "Quando la mancanza di infrastrutture costringe all’innovazione",
+      "title": "Quando la mancanza di infrastrutture forza l'innovazione",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Questo divario agisce come un moltiplicatore delle disuguaglianze. In un mondo in cui il lavoro a distanza, l’e-commerce e l’istruzione online () stanno diventando la norma, non essere connessi significa diventare invisibili all’economia globale. [[MOOC]]"
+          "text": "Questo divario moltiplica le disuguaglianze. In un mondo in cui il telelavoro, il commercio online e l'istruzione in rete (i [[MOOC]]) diventano la norma, non essere connessi equivale a diventare invisibili per l'economia mondiale."
         },
         {
           "type": "image",
           "asset": "digital_divide_africa_rural_village_smartphone",
           "ratio": "16:9",
-          "caption": "In molte zone rurali il cellulare resta l’unico punto di accesso a Internet."
+          "caption": "In molte regioni rurali il telefono cellulare resta l'unico punto di accesso a Internet."
         },
         {
           "type": "paragraph",
-          "text": "Il Kenya illustra un'altra strada: a causa della mancanza di filiali bancarie sufficienti, nel 2007 il Paese ha adottato in massa un semplice sistema di pagamento via SMS, , dieci anni avanti rispetto all'Europa. Questo sistema ha permesso a milioni di persone senza conto bancario di effettuare transazioni sicure con un semplice telefono. [[M-Pesa keniana]]"
+          "text": "Il Kenya mostra un'altra via: per mancanza di sportelli bancari sufficienti, dal 2007 il paese ha adottato in massa un sistema di pagamento via semplice SMS, il [[M-Pesa keniota]], anticipando l'Europa di dieci anni. Questo sistema ha permesso a milioni di persone senza conto in banca di fare transazioni sicure con un telefono qualunque."
         },
         {
           "type": "funFact",
-          "text": "Il Kenya ha soprannominato questa strategia “salto tecnologico”: invece di installare infrastrutture costose e obsolete, il paese è passato direttamente a una soluzione più moderna ed economica."
+          "text": "Il Kenya ha soprannominato questa strategia “salto della rana” tecnologico: invece di installare infrastrutture costose e già superate, il paese è passato subito a una soluzione più moderna e meno cara."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p3",
-      "title": "Internet via satellite: una soluzione condizionale",
+      "title": "Internet via satellite: una soluzione condizionata",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Per collegare i villaggi più isolati, i nuovi giocatori puntano sullo spazio. Il progetto  manda migliaia di satelliti in orbita bassa, consentendo un collegamento rapido anche nei deserti o in alta montagna, senza dover stendere un solo cavo. [[Starlink (SpaceX)]]"
+          "text": "Per connettere i villaggi più isolati, nuovi attori scommettono sullo spazio. Il progetto [[Starlink]] manda in orbita bassa migliaia di satelliti, e permette una connessione rapida anche nei deserti o in alta montagna, senza posare un solo cavo."
         },
         {
           "type": "paragraph",
-          "text": "Ma il costo dell’abbonamento e delle attrezzature rimane in linea con gli standard occidentali, il che rende queste soluzioni inaccessibili alle popolazioni rurali più povere senza assistenza esterna. La risoluzione del divario digitale non può quindi essere raggiunta solo attraverso la tecnologia: richiede anche la volontà politica per rendere Internet qualcosa di accessibile a tutti."
+          "text": "Ma il costo dell'abbonamento e del materiale resta allineato agli standard occidentali, e rende queste soluzioni inaccessibili alle popolazioni rurali più povere senza un aiuto esterno. Colmare il divario digitale non potrà quindi passare solo dalla tecnologia: serve anche una volontà politica per fare di Internet un bene accessibile a tutti."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p4",
-      "title": "Intelligenza artificiale, un nuovo divario",
+      "title": "L'intelligenza artificiale, un nuovo fossato",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La rapida ascesa dell’intelligenza artificiale minaccia di ampliare ulteriormente questo divario. Richiede un’immensa potenza di calcolo e di dati, risorse concentrate nelle mani di pochi paesi e aziende. Le popolazioni disconnesse rischiano quindi di diventare dipendenti da strumenti progettati senza tenere conto della loro cultura o lingua."
+          "text": "L'ascesa rapida dell'intelligenza artificiale minaccia di aggravare ancora questo divario. Esige immense potenze di calcolo e di dati, risorse concentrate nelle mani di pochi paesi e di poche imprese. Le popolazioni disconnesse rischiano allora di dipendere da strumenti pensati senza tenere conto della loro cultura o della loro lingua."
         },
         {
           "type": "paragraph",
-          "text": "Anche il divario di competenze tra studenti connessi e non connessi potrebbe ampliarsi molto rapidamente. La sfida per i prossimi anni non sarà quindi più solo quella di fornire una connessione, ma di garantire un accesso equo alla creazione di valore digitale, coniugando minori costi, contenuti locali e formazione."
+          "text": "Anche il gap di competenze tra alunni connessi e non connessi potrebbe allargarsi in fretta. La posta dei prossimi anni non sarà più soltanto portare una connessione, ma garantire un accesso giusto alla creazione di valore digitale, unendo calo dei costi, contenuti locali e formazione."
         },
         {
           "type": "takeaway",
-          "text": "Oggi 2,7 miliardi di persone restano escluse da Internet, un divario che rischia di aggravarsi con l’arrivo dell’intelligenza artificiale. Per ridurre questo divario è necessario trasformare la connettività in un vero bene accessibile a tutti e non solo in un prodotto da vendere."
+          "text": "2,7 miliardi di persone restano oggi escluse da Internet, un divario che rischia di aggravarsi con l'intelligenza artificiale. Ridurre questo scarto chiede di trasformare la connettività in un vero bene accessibile a tutti, e non soltanto in un prodotto da vendere."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
   "title": "La scoperta dei raggi X",
-  "subtitle": "Roentgen, 1895",
+  "subtitle": "Röntgen, 1895",
   "subject": "sciences",
   "subcategory": "Scoperte che hanno cambiato il mondo",
-  "description": "Nel 1895 Wilhelm Röntgen scoprì la radiazione invisibile capace di attraversare la materia. In pochi mesi la medicina vide una rivoluzione.",
+  "description": "Nel 1895 Wilhelm Röntgen scopre una radiazione invisibile capace di attraversare la materia. In pochi mesi la medicina ci vede una rivoluzione.",
   "hero": {
     "image": "la_decouverte_des_rayons_x_rontgen",
     "ratio": "16:9",
-    "hook": "Una mano, ossa, una foto. La medicina non sarà mai più cieca."
+    "hook": "Una mano, le ossa, una foto. La medicina non sarà più cieca."
   },
   "sections": [
     {
@@ -18,28 +18,28 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**8 novembre 1895**, a Würzburg (Germania), il fisico **Wilhelm Röntgen** nota uno schermo che brilla... anche se non viene influenzato dalla luce visibile. Qualcosa di invisibile attraversa la stanza."
+          "text": "L'**8 novembre 1895**, a Würzburg (Germania), il fisico **Wilhelm Röntgen** nota uno schermo che brilla, anche se non è toccato dalla luce visibile. Qualcosa di invisibile attraversa la stanza."
         },
         {
           "type": "paragraph",
-          "text": "Lo chiama raggi **X**, la “X” che significa “sconosciuto”. Nel giro di poche settimane fotografò le ossa della mano di sua moglie. È nata la radiologia."
+          "text": "Lo chiama **raggi X**, la “X” che sta per “sconosciuto”. In poche settimane fotografa le ossa della mano di sua moglie. Nasce la radiologia."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
-      "title": "Un incidente di laboratorio",
+      "title": "Un caso di laboratorio",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Röntgen funziona con un tubo in cui gli elettroni colpiscono un bersaglio. Ha coperto il tubo con cartone nero. Tuttavia, uno schermo fluorescente si illumina da lontano. Capisce che dal tubo esce una radiazione invisibile."
+          "text": "Röntgen lavora con un tubo dove gli elettroni colpiscono un bersaglio. Ha coperto il tubo di cartone nero. Eppure uno schermo fluorescente brilla a distanza. Capisce che una radiazione invisibile esce dal tubo."
         },
         {
           "type": "image",
           "asset": "wilhelm_rontgen_x_ray_hand_1895",
           "ratio": "4:3",
-          "caption": "L'immagine famosa: le ossa della mano e l'anello nuziale."
+          "caption": "La celebre immagine: le ossa della mano e la fede"
         },
         {
           "type": "funFact",
@@ -56,11 +56,11 @@
           "type": "image",
           "asset": "early_x_ray_medical_radiograph",
           "ratio": "4:3",
-          "caption": "Molto rapidamente, medici ed eserciti usarono i raggi X."
+          "caption": "In fretta medici ed eserciti usano i raggi X"
         },
         {
           "type": "paragraph",
-          "text": "Prima, per “vedere” una frattura o un proiettile, spesso dovevi aprirlo. Con i raggi X otteniamo un'immagine dell'interno senza tagli. Ospedali ed eserciti stanno adottando questa tecnica a una velocità vertiginosa."
+          "text": "Prima, per “vedere” una frattura o un proiettile, bisognava spesso aprire. Con i raggi X si ottiene un'immagine dell'interno senza tagliare. Ospedali ed eserciti adottano la tecnica a una velocità folle."
         }
       ]
     },
@@ -71,11 +71,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Inizialmente ignoriamo i rischi. Gli operatori eseguono radiografie per ore. Ustioni, poi compaiono i tumori. Ci vorrà del tempo per capire che i raggi X sono potenti... e pericolosi."
+          "text": "All'inizio si ignorano i rischi. Alcuni operatori fanno radiografie per ore. Compaiono ustioni, poi tumori. Ci vorrà tempo per capire che i raggi X sono potenti, e pericolosi."
         },
         {
           "type": "paragraph",
-          "text": "Oggi tuteliamo pazienti e caregiver: dosi limitate, grembiuli di piombo, controlli severi."
+          "text": "Oggi si proteggono i pazienti e gli operatori: dosi limitate, grembiuli di piombo, controlli stretti."
         }
       ]
     },
@@ -86,11 +86,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I raggi X hanno aperto la strada a tutta l'imaging moderno: scanner, controlli industriali e persino lo studio della struttura dei cristalli (successivamente utili per il DNA)."
+          "text": "I raggi X hanno aperto la strada a tutta la diagnostica per immagini moderna: scanner, controlli industriali, e anche lo studio della struttura dei cristalli (utile più tardi per il DNA)."
         },
         {
           "type": "takeaway",
-          "text": "In **1895**, Röntgen scoprì i raggi X, una radiazione invisibile che attraversa la materia. La medicina acquisisce una nuova prospettiva... a condizione che i rischi siano controllati."
+          "text": "Nel **1895** Röntgen scopre i raggi X, una radiazione invisibile che attraversa la materia. La medicina guadagna uno sguardo nuovo, a patto di dominarne i rischi."
         }
       ]
     }

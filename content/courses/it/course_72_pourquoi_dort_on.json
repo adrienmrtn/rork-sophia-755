@@ -1,14 +1,14 @@
 {
   "id": "course_72_pourquoi_dort_on",
-  "title": "Perché dormiamo?",
+  "title": "Perché si dorme?",
   "subtitle": "Corpo e cervello",
   "subject": "sciences",
   "subcategory": "La Terra e l'Universo",
-  "description": "Trascorriamo un terzo della nostra vita dormendo. Non è tempo perso: il sonno pulisce il cervello, ripara il corpo e incide i ricordi.",
+  "description": "Si passa un terzo della vita a dormire. Non è tempo perso: il sonno pulisce il cervello, ripara il corpo e incide i ricordi.",
   "hero": {
     "image": "pourquoi_dort_on",
     "ratio": "16:9",
-    "hook": "Dormire non è staccare la spina: è il grande lavoro notturno del corpo."
+    "hook": "Dormire non è spegnersi: è il grande cantiere notturno del corpo."
   },
   "sections": [
     {
@@ -18,70 +18,70 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nel corso di una vita di 75 anni, dormiamo vicino a **25 anni**. Per molto tempo abbiamo creduto che il sonno fosse solo una pausa. In realtà si tratta di un lavoro attivo, vitale quanto bere o mangiare."
+          "text": "Su una vita di 75 anni, si dorme quasi **25 anni**. A lungo si è creduto che il sonno fosse solo una pausa. In realtà è un lavoro attivo, altrettanto vitale che bere o mangiare."
         },
         {
           "type": "paragraph",
-          "text": "La scienza non ha ancora tutte le risposte al “perché” dormiamo. Ma lei sa benissimo cosa succede quando non dormiamo, e cosa la notte silenziosamente ripara."
+          "text": "La scienza non ha ancora tutte le risposte sul “perché” si dorme. Ma sa molto bene che cosa succede quando non si dorme, e che cosa la notte ripara in silenzio."
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p1",
-      "title": "Cosa rivela la mancanza di sonno",
+      "title": "Che cosa rivela la mancanza di sonno",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nel **1964**, lo studente americano **Randy Gardner** è rimasto **11 giorni** senza dormire. Allucinazioni, paranoie, collasso mentale: la prova che il cervello non può sopravvivere senza riposo."
+          "text": "Nel **1964**, lo studente americano **Randy Gardner** resta **11 giorni** senza dormire. Allucinazioni, paranoia, mente che crolla: la prova che il cervello non regge senza riposo."
         },
         {
           "type": "image",
           "asset": "sleeping_person_bedroom_night",
           "ratio": "auto",
-          "caption": "Il sonno, essenziale per il recupero del cervello e del corpo."
+          "caption": "Il sonno, indispensabile al recupero del cervello e del corpo"
         },
         {
           "type": "paragraph",
-          "text": "Nei ratti, l'assenza totale di sonno uccide in **2 o 3 settimane**, come la fame. Negli esseri umani, anche una rara malattia genetica, **insonia familiare fatale**, porta alla morte. Su base giornaliera, 17 ore di veglia equivalgono a un tasso di alcol nel sangue di **0,5 g/l**. Il cervello quindi forza gli , brevi interruzioni involontarie della coscienza. [[Microsonni]]"
+          "text": "Nel ratto, l'assenza totale di sonno uccide in **2-3 settimane**, come la fame. Nell'essere umano, una malattia genetica rara, l'**insonnia fatale familiare**, porta anche alla morte. Nel quotidiano, 17 ore di veglia equivalgono a un tasso alcolemico di **0,5 g/l**. Il cervello forza allora dei [[microsonni]], brevi interruzioni involontarie della coscienza."
         },
         {
           "type": "funFact",
-          "text": "Dopo il suo record, Randy Gardner ha dormito **14 oro** di fila. Si è svegliato in grado di funzionare, ma ci sono volute settimane perché il suo sonno tornasse a un ritmo normale."
+          "text": "Dopo il suo record, Randy Gardner ha dormito **14 ore** di fila. Si è svegliato capace di funzionare, ma il suo sonno ha messo settimane a ritrovare un ritmo normale."
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p2",
-      "title": "Di notte, il cervello si pulisce",
+      "title": "Di notte, il cervello fa pulizia",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Durante il sonno il cervello non si ferma: cambia modalità. Lo **ippocampo**, una struttura chiave della memoria a forma di cavalluccio marino, “ripete” la giornata e invia le informazioni allo , lo strato esterno del cervello, per una memorizzazione duratura. Risultato: spesso impariamo meglio **dal 20 al 40%** dopo una buona notte di sonno. [[Neocorteccia]]"
+          "text": "Durante il sonno, il cervello non si ferma: cambia modo. L'**ippocampo**, struttura chiave della memoria a forma di cavalluccio marino, “rigioca” la giornata e manda le info verso la [[neocorteccia]], lo strato esterno del cervello, per un archivio duraturo. Risultato: si impara spesso dal **20 al 40%** meglio dopo una buona notte."
         },
         {
           "type": "paragraph",
-          "text": "Il sonno profondo attiva anche l'ormone della crescita ****, ripristina muscoli e tessuti e stimola la segnalazione molecolare del sistema immunitario. Un'alternativa importante: la fuga dei cervelli**dieci volte** più attiva di notte. Rimuove i rifiuti, comprese le proteine ​​legate al rischio di Alzheimer. [[Citochine]] [[Il sistema glinfatico]]"
+          "text": "Il sonno profondo fa scattare anche l'**ormone della crescita**, che ripara muscoli e tessuti, e stimola le [[citochine]], molecole di segnale del sistema immunitario. Altra scoperta maggiore: il [[Sistema glinfatico]], una rete di drenaggio cerebrale **dieci volte** più attiva di notte. Evacua rifiuti, tra cui le proteine legate al rischio di Alzheimer."
         },
         {
           "type": "funFact",
-          "text": "Durante il sonno profondo, le cellule cerebrali si restringono di circa **60%**. Lo spazio così creato permette al liquido detergente di circolare meglio."
+          "text": "Durante il sonno profondo, le cellule del cervello si ritirano di circa il **60%**. Lo spazio così creato lascia circolare meglio il liquido di pulizia."
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p3",
-      "title": "Chi dorme, quanto e come",
+      "title": "Chi dorme quanto, e come",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I gatti dormono **12 va 16**: predatori al sicuro. Le giraffe a volte si accontentano di **da 30 minuti a 2 ore**, in brevi sonnellini, pronte a fuggire. I delfini dormono con **un singolo emisfero**, una metà del cervello, alla volta, per continuare a risalire per respirare."
+          "text": "I gatti dormono **12-16 ore**: predatori al sicuro. Le giraffe a volte si accontentano di **30 minuti-2 ore**, in piccoli sonnellini, pronte a fuggire. I delfini dormono con **un solo emisfero**, una metà del cervello, alla volta, per continuare a risalire a respirare."
         },
         {
           "type": "paragraph",
-          "text": "I bambini dormono fino alle **18**, con molto , la fase dei sogni con movimenti oculari rapidi. Questa fase aiuta , la creazione di connessioni tra i neuroni. [[sonno paradossale]] [[Sinaptogenesi]]"
+          "text": "I neonati, loro, dormono fino a **18 ore**, con molto [[Sonno REM]], la fase dei sogni con movimenti oculari rapidi. Questa fase aiuta la [[sinaptogenesi]], la fabbricazione delle connessioni tra neuroni."
         }
       ]
     },
@@ -92,15 +92,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Due forze ci spingono a letto: la stanchezza che si accumula durante la giornata e , l'orologio interno impostato su **24 ore**. Quando la luce si attenua, il cervello rilascia **melatonina**, un ormone che prepara il corpo al sonno senza imporlo. [[Ritmi circadiani e melatonina]]"
+          "text": "Due forze ci spingono a letto: la fatica che si accumula di giorno, e i [[Ritmi circadiani]], l'orologio interno tarato su **24 ore**. Quando la luce cala, il cervello libera **melatonina**, un ormone che prepara il corpo al sonno senza imporlo."
         },
         {
           "type": "paragraph",
-          "text": "La sera gli schermi ingannano l'orologio e ritardano l'addormentamento. Non si “ripara” davvero il debito di sonno nel fine settimana: la stanchezza diminuisce, ma non tutti i danni. Orari regolari, una stanza buia e fresca rimangono i migliori alleati."
+          "text": "Gli schermi la sera ingannano questo orologio e ritardano l'addormentamento. Non si “recupera” davvero un debito di sonno nel weekend: la fatica scende, non tutti i danni. Orari regolari, stanza buia e fresca restano i migliori alleati."
         },
         {
           "type": "takeaway",
-          "text": "Il sonno purifica il cervello, ripara il corpo e rafforza la memoria. La deprivazione totale uccide in poche settimane: dormire non è un lusso, è un mantenimento vitale."
+          "text": "Il sonno pulisce il cervello, ripara il corpo e consolida la memoria. Una privazione totale uccide in poche settimane: dormire non è un lusso, è una manutenzione vitale."
         }
       ]
     }

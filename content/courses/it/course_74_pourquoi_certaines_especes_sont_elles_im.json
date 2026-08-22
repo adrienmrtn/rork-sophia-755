@@ -4,11 +4,11 @@
   "subtitle": "Biologia e longevità",
   "subject": "sciences",
   "subcategory": "La Terra e l'Universo",
-  "description": "Alcune specie sembrano sfidare la morte. Meduse che ringiovaniscono, idratano senza invecchiare: il segreto sta nella riparazione cellulare.",
+  "description": "Alcune specie sembrano sfidare la morte. Meduse che ringiovaniscono, idre senza invecchiamento: il segreto sta nella riparazione cellulare.",
   "hero": {
     "image": "pourquoi_certaines_especes_sont_immortelles",
     "ratio": "16:9",
-    "hook": "L’invecchiamento non è una legge assoluta della vita. Alcune specie hanno trovato il difetto."
+    "hook": "Invecchiare non è una legge assoluta del vivente. Alcune specie hanno trovato la falla."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Invecchiamo e poi moriamo. Tuttavia, la medusa  può ritornare allo stadio giovanile e ricominciare. La vongola **Ming** visse **507 anni**. L’invecchiamento non è quindi una regola universale: è un processo che alcune specie aggirano. [[Turritopsis dohrnii]]"
+          "text": "Noi invecchiamo, poi moriamo. Eppure la medusa [[Turritopsis dohrnii]] può tornare a uno stadio giovanile e ricominciare. La vongola **Ming** visse **507 anni**. L'invecchiamento non è quindi una regola universale: è un processo che alcune specie aggirano."
         },
         {
           "type": "paragraph",
-          "text": "Studiando queste eccezioni, i ricercatori cercano non tanto l’immortalità fantascientifica quanto i trucchi della vita per riparare meglio le cellule."
+          "text": "Studiando queste eccezioni, i ricercatori cercano meno l'immortalità da fantascienza e più i trucchi del vivente per riparare meglio le cellule."
         }
       ]
     },
@@ -33,55 +33,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Invecchiare non significa semplicemente “consumarsi” come una macchina. È uno squilibrio: i danni si accumulano più velocemente delle riparazioni."
+          "text": "Invecchiare non è solo “usurarsi” come una macchina. È uno squilibrio: i danni si accumulano più in fretta delle riparazioni."
         },
         {
           "type": "image",
           "asset": "chromosome_dna_telomere_aging_cell",
           "ratio": "auto",
-          "caption": "I telomeri, alle estremità dei cromosomi, si accorciano ad ogni divisione cellulare."
+          "caption": "I telomeri, alle estremità dei cromosomi, si accorciano a ogni divisione cellulare."
         },
         {
           "type": "paragraph",
-          "text": "Alle estremità dei nostri cromosomi, gli  si comportano come le punte dei lacci delle scarpe. Ad ogni divisione cellulare si accorciano. Troppo breve, la cellula smette di dividersi. Allo stesso tempo, il metabolismo produce molecole aggressive che danneggiano le proteine ​​e il DNA. Le cellule “zombi” quindi si accumulano e infiammano i tessuti attorno a loro. [[I telomeri]]"
+          "text": "Alle estremità dei nostri cromosomi, [[I telomeri]] agiscono come i cappucci dei lacci. A ogni divisione cellulare si accorciano. Troppo corti, la cellula smette di dividersi. Intanto il metabolismo produce molecole aggressive che danneggiano proteine e DNA. Si accumulano allora cellule “zombie” e infiammano i tessuti intorno."
         },
         {
           "type": "funFact",
-          "text": "Il tardigrado, un minuscolo “orso acquatico”, può quasi smettere di vivere seccandosi. Il suo metabolismo scende a **99,99%** e sopravvive al vuoto dello spazio o alle radiazioni estreme senza invecchiare veramente."
+          "text": "Il tardigrado, minuscolo “orsetto d'acqua”, può quasi smettere di vivere disidratandosi. Il suo metabolismo crolla del **99,99%**, e sopravvive al vuoto spaziale o a radiazioni estreme senza davvero invecchiare."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
-      "title": "Campioni che evitano la morte",
+      "title": "I campioni che aggirano la morte",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lo [[Turritopsis dohrnii]] ferito o affamato trasforma le sue cellule adulte in cellule “vuote”, quindi diventa nuovamente un polipo, lo stadio iniziale. Questo passo indietro, chiamato transdifferenziazione, gli conferisce una forma di **immortalità biologica**."
+          "text": "La [[Turritopsis dohrnii]] ferita o affamata trasforma le sue cellule adulte in cellule “vergini”, poi torna polipo, lo stadio di partenza. Questo ritorno indietro, chiamato transdifferenziazione, le dà una forma di **immortalità biologica**."
         },
         {
           "type": "paragraph",
-          "text": "Lo **idra**, un piccolo polipo d'acqua dolce, rinnova tutto il suo corpo grazie ad una fornitura quasi illimitata di . Non mostra segni misurabili di invecchiamento. La balena della Groenlandia può superare i 200 anni**** grazie alla riparazione ultraefficiente del DNA e alla forte resistenza al cancro. [[cellule staminali]]"
+          "text": "L'**idra**, piccolo polipo d'acqua dolce, rinnova tutto il corpo grazie a una scorta quasi illimitata di [[cellule staminali]]. Non mostra alcun segno di invecchiamento misurabile. La balena della Groenlandia, invece, può superare i **200 anni** grazie a una riparazione del DNA ultra-efficiente e a una forte resistenza al cancro."
         },
         {
           "type": "funFact",
-          "text": "Le aragoste producono telomerasi ovunque nel loro corpo: i loro telomeri non si accorciano. Crescono per tutta la vita e muoiono soprattutto quando la muta diventa troppo costosa."
+          "text": "Le aragoste producono telomerasi in tutto il corpo: i loro telomeri non si accorciano. Crescono per tutta la vita e muoiono soprattutto quando la muta diventa troppo costosa."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
-      "title": "Cosa impara la medicina da ciò",
+      "title": "Cosa ne ricava la medicina",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'idea non è più solo quella di curare l'Alzheimer o l'artrosi uno per uno, ma di combattere l'invecchiamento stesso. **senolitici** mirano a eliminare le cellule zombie. Negli animali, questo ha già ringiovanito alcune funzioni."
+          "text": "L'idea non è più solo curare Alzheimer o artrosi caso per caso, ma attaccare l'invecchiamento stesso. I **senolitici** mirano a eliminare le cellule zombie. Negli animali, questo ha già ringiovanito alcune funzioni."
         },
         {
           "type": "paragraph",
-          "text": "Limitare le calorie senza malnutrizione attiva anche percorsi di riparazione, in particolare rallentando , una proteina che accelera la crescita... e talvolta il declino. Altri laboratori stanno cercando di “caricare l’orologio” delle cellule, come le meduse, senza trasformarle in tumori. [[mTOR]]"
+          "text": "Limitare le calorie senza malnutrizione attiva anche vie di riparazione, soprattutto frenando [[mTOR]], una proteina che accelera la crescita, e a volte il declino. Altri laboratori tentano di “riavvolgere l'orologio” delle cellule, come la medusa, senza trasformarle in tumori."
         }
       ]
     },
@@ -92,15 +92,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Anche una specie biologicamente immortale muore a causa di predatori, malattie o disastri. La morte rimane una forza trainante dell’evoluzione: lascia il posto a nuove generazioni più adattate."
+          "text": "Anche una specie biologicamente immortale muore per predatori, malattie o catastrofi. La morte resta un motore dell'evoluzione: lascia spazio a nuove generazioni meglio adattate."
         },
         {
           "type": "paragraph",
-          "text": "Per gli esseri umani la sfida realistica non è vivere per sempre, ma prolungare gli anni **in buon saluto**. La longevità trasformata in tecnologia solleverebbe anche enormi questioni di equità e risorse."
+          "text": "Per l'essere umano, l'obiettivo realistico non è vivere in eterno, ma allungare gli anni **in buona salute**. Una longevità diventata tecnologia solleverebbe anche enormi questioni di equità e di risorse."
         },
         {
           "type": "takeaway",
-          "text": "L’immortalità biologica si basa sulla riparazione o sul ripristino delle cellule. La medusa Turritopsis dohrnii sta ringiovanendo; l'idra si rinnova costantemente. L’invecchiamento non è una fatalità universale."
+          "text": "L'immortalità biologica poggia sulla riparazione o sul reset delle cellule. La medusa Turritopsis dohrnii ringiovanisce; l'idra si rinnova senza sosta. Invecchiare non è una fatalità universale."
         }
       ]
     }

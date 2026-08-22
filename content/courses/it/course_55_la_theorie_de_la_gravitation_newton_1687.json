@@ -4,11 +4,11 @@
   "subtitle": "Newton, 1687",
   "subject": "sciences",
   "subcategory": "Scoperte che hanno cambiato il mondo",
-  "description": "Nel 1687 Newton pubblicò un'idea semplice e immensa: la stessa forza fa cadere una mela e fa ruotare la Luna. Ecco cosa cambia.",
+  "description": "Nel 1687 Newton pubblica un'idea semplice e enorme: la stessa forza fa cadere una mela e girare la Luna. Ecco che cosa cambia.",
   "hero": {
     "image": "la_theorie_de_la_gravitation_newton",
     "ratio": "16:9",
-    "hook": "Una mela, la Luna, i pianeti: un'unica forza per spiegare tutto."
+    "hook": "Una mela, la Luna, i pianeti: una sola forza per spiegare tutto."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Prima di Newton, sapevamo già molto sui pianeti grazie a **Galileo**, fisico italiano del XVII secolo, e , astronomo che descrisse le orbite ellittiche. Ma mancava una chiara connessione tra ciò che cade sulla Terra e ciò che gira nel cielo. **[[Johannes Kepler]]**"
+          "text": "Prima di Newton si sapeva già molto sui pianeti grazie a **Galileo**, fisico italiano del secolo XVII, e a **[[Johannes Kepler]]**, astronomo che descrisse le orbite ellittiche. Ma mancava un legame chiaro tra ciò che cade sulla Terra e ciò che gira nel cielo."
         },
         {
           "type": "paragraph",
-          "text": "In **1687**, **Isacco Newton** ha pubblicato lo **, la *Principia*, l'opera fondatrice della musica classica. Rafforza la gravitazione**universale**: agisce ovunque, allo stesso modo. [[Philosophiae Naturalis Principia Mathematica]]"
+          "text": "Nel **1687** **Isaac Newton** pubblica i *[[Philosophiae Naturalis Principia Mathematica]]*, i *Principia*, opera fondatrice della fisica classica. Vi afferma che la gravitazione è **universale**: agisce ovunque, allo stesso modo."
         }
       ]
     },
@@ -33,11 +33,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Keplero aveva descritto le orbite dei pianeti con leggi precise: orbite in **ellisse**, aree spazzate uguali in tempo uguale. Galileo aveva studiato la caduta dei corpi. Ma perché i pianeti rimangono sulla loro traiettoria? Cosa li “tira”?"
+          "text": "Kepler aveva descritto le orbite dei pianeti con leggi precise: orbite in **ellisse**, aree spazzate uguali in tempi uguali. Galileo aveva studiato la caduta dei corpi. Ma perché i pianeti restano sulla loro traiettoria? Che cosa li “tira”?"
         },
         {
           "type": "paragraph",
-          "text": "Newton risponde: una **attrazione gravitazionale**, una forza che attira due masse l'una verso l'altra. La Terra attrae la Luna. Il Sole attrae la Terra. E attiri anche un po' della Terra... anche se piccolissima."
+          "text": "Newton risponde: un'**attrazione gravitazionale**, una forza che tira due masse l'una verso l'altra. La Terra attira la Luna. Il Sole attira la Terra. E tu attiri un po' anche la Terra, anche se è minuscolo."
         }
       ]
     },
@@ -50,51 +50,51 @@
           "type": "image",
           "asset": "isaac_newton_apple_tree_woolsthorpe",
           "ratio": "4:3",
-          "caption": "La storia della mela è soprattutto una storia. L'idea è reale."
+          "caption": "La storia della mela è soprattutto un racconto. L'idea, invece, è reale"
         },
         {
           "type": "paragraph",
-          "text": "Due corpi si attraggono con una forza che aumenta con la loro **massa**, la quantità di materia, e diminuisce man mano che si allontanano. Più precisamente: la forza si indebolisce con lo **quadrato della distanza**. Raddoppiando la distanza si divide l'attrazione per quattro. Più sei lontano, più velocemente l'attrazione si indebolisce."
+          "text": "Due corpi si attraggono con una forza che cresce con la loro **massa**, la quantità di materia, e cala quando li allontani. Più precisamente: la forza si indebolisce con il **quadrato della distanza**. Raddoppiare la distanza divide l'attrazione per quattro. Più sei lontano, più l'attrazione cala in fretta."
         },
         {
           "type": "image",
           "asset": "planets_orbit_solar_system_gravity",
           "ratio": "16:9",
-          "caption": "I pianeti “cadono” costantemente verso il Sole… e lo mancano: questa è l’orbita."
+          "caption": "I pianeti “cadono” senza sosta verso il Sole, e lo mancano: è l'orbita"
         },
         {
           "type": "funFact",
-          "text": "La Luna “cade” costantemente verso la Terra. Poiché ha anche un'elevata velocità laterale, gira su se stesso invece di schiantarsi."
+          "text": "La Luna “cade” verso la Terra senza sosta. Siccome ha anche una grande velocità laterale, gira intorno invece di schiantarsi."
         }
       ]
     },
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p3",
-      "title": "Le leggi del movimento",
+      "title": "Le leggi del moto",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton fornisce anche tre **gamba del movimento**. In sintesi: un oggetto mantiene la sua velocità se non c'è forza, il principio di **inerzia**; una forza cambia la velocità; ogni azione ha una reazione opposta."
+          "text": "Newton dà anche tre **leggi del moto**. In sintesi: un oggetto tiene la sua velocità se non c'è una forza, il principio di **inerzia**; una forza cambia la velocità; a ogni azione corrisponde una reazione opposta."
         },
         {
           "type": "paragraph",
-          "text": "In questo modo possiamo calcolare le traiettorie, le **maree**, la salita e la discesa degli oceani sotto l'effetto della Luna e del Sole e le orbite. La fisica diventa uno strumento di previsione."
+          "text": "Con questo si possono calcolare traiettorie, **maree**, le salite e le discese degli oceani sotto l'effetto della Luna e del Sole, e le orbite. La fisica diventa uno strumento di previsione."
         }
       ]
     },
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p4",
-      "title": "Potente... ma non l'ultima parola",
+      "title": "Potente, ma non l'ultima parola",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Due secoli dopo,  corresse Newton per casi estremi, velocità molto elevate e gravità molto elevata, con . La gravità diventa allora una curvatura dello spazio-tempo, e non più una forza invisibile. Ma per lanciare un razzo o comprendere le maree, Newton rimane eccellente. **[[Albert Einstein]]** [[La gravitazione relativistica (Einstein)]]"
+          "text": "Due secoli più tardi **[[Albert Einstein]]** correggerà Newton per i casi estremi, velocità molto grandi e gravità molto forti, con [[La gravitazione relativistica (Einstein)]]. La gravità diventa allora una curvatura dello spazio-tempo, e non più una forza invisibile. Ma per lanciare un razzo o capire le maree, Newton resta eccellente."
         },
         {
           "type": "takeaway",
-          "text": "Newton unifica cielo e terra: la gravitazione attrae masse ovunque. È una delle più grandi sintesi scientifiche della storia."
+          "text": "Newton unisce cielo e Terra: la gravitazione attira le masse ovunque. È una delle più grandi sintesi scientifiche della storia."
         }
       ]
     }
