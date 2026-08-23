@@ -78,7 +78,7 @@ final class AuthService {
 
     // MARK: - Sign in with Apple
     //
-    // Le bouton `SignInWithAppleButton` (SwiftUI) génère la requête : la vue crée un nonce,
+    // `AuthProvidersView` lance `ASAuthorizationController` : la vue crée un nonce,
     // envoie son SHA-256 à Apple (`request.nonce`) et transmet ici le résultat + le nonce brut.
 
     func handleAppleAuthorization(_ authorization: ASAuthorization, rawNonce: String) async throws {
