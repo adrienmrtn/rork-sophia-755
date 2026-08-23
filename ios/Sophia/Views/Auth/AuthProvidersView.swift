@@ -1,5 +1,6 @@
 import SwiftUI
 import AuthenticationServices
+import UIKit
 
 /// Boutons de connexion Apple + Google réutilisables (onboarding & réglages).
 ///
@@ -13,20 +14,29 @@ struct AuthProvidersView: View {
     @State private var isWorking = false
     @State private var currentNonce: String?
     @State private var errorMessage: String?
+    @State private var applePresenter = AppleSignInPresenter()
 
     var body: some View {
         VStack(spacing: 12) {
-            SignInWithAppleButton(.continue) { request in
-                let raw = AuthNonce.randomNonceString()
-                currentNonce = raw
-                request.requestedScopes = [.fullName, .email]
-                request.nonce = AuthNonce.sha256(raw)
-            } onCompletion: { result in
-                handleAppleCompletion(result)
+            // Official `SignInWithAppleButton` ignores the in-app language and stays
+            // on the system/bundle locale (usually French). Same capsule as Google,
+            // with a localized "Continue with Apple" label.
+            Button {
+                handleApple()
+            } label: {
+                HStack(spacing: 10) {
+                    Image(systemName: "apple.logo")
+                        .font(.system(size: 18, weight: .semibold))
+                    Text(languageManager.text("auth.continueWithApple"))
+                        .font(.jakarta(.body, weight: .semibold))
+                }
+                .foregroundStyle(.white)
+                .frame(maxWidth: .infinity)
+                .frame(height: 52)
+                .background(Color.black, in: Capsule(style: .continuous))
             }
-            .signInWithAppleButtonStyle(.black)
-            .frame(height: 52)
-            .clipShape(Capsule(style: .continuous))
+            .buttonStyle(SoftPressButtonStyle())
+            .opacity(isWorking ? 0.6 : 1)
             .disabled(isWorking)
 
             Button {
@@ -69,6 +79,15 @@ struct AuthProvidersView: View {
     }
 
     // MARK: - Actions
+
+    private func handleApple() {
+        let raw = AuthNonce.randomNonceString()
+        currentNonce = raw
+        applePresenter.onComplete = { result in
+            handleAppleCompletion(result)
+        }
+        applePresenter.start(hashedNonce: AuthNonce.sha256(raw))
+    }
 
     private func handleAppleCompletion(_ result: Result<ASAuthorization, Error>) {
         switch result {
@@ -163,5 +182,41 @@ struct GoogleGLogo: View {
             .trim(from: from, to: to)
             .stroke(color, style: StrokeStyle(lineWidth: lw, lineCap: .butt))
             .frame(width: ringSize, height: ringSize)
+    }
+}
+
+/// Runs Sign in with Apple so the visible button can follow the in-app language.
+@MainActor
+final class AppleSignInPresenter: NSObject, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+    var onComplete: ((Result<ASAuthorization, Error>) -> Void)?
+    private var controller: ASAuthorizationController?
+
+    func start(hashedNonce: String) {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.fullName, .email]
+        request.nonce = hashedNonce
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        self.controller = controller
+        controller.performRequests()
+    }
+
+    func authorizationController(
+        controller: ASAuthorizationController,
+        didCompleteWithAuthorization authorization: ASAuthorization
+    ) {
+        onComplete?(.success(authorization))
+    }
+
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        onComplete?(.failure(error))
+    }
+
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        let windows = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap(\.windows)
+        return windows.first(where: \.isKeyWindow) ?? windows.first ?? ASPresentationAnchor()
     }
 }

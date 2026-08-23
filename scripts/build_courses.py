@@ -141,11 +141,46 @@ def build(patterns: list[str], check_only: bool) -> int:
         print(f"\n{errors} course(s) failed validation.", file=sys.stderr)
         return 1
 
+    stale = check_bundle_sync(sources)
+    if stale:
+        print(
+            f"\n{stale} CoursesV2 bundle file(s) are stale. "
+            "The iOS app loads CoursesV2, not content/courses — run this script.",
+            file=sys.stderr,
+        )
+        return 1
+
     if check_only:
-        print(f"\nValidated {len(sources)} course(s).")
+        print(f"\nValidated {len(sources)} course(s). Bundles are in sync.")
     else:
         print(f"\nBuilt/updated {built} bundle file(s) from {len(sources)} source(s).")
     return 0
+
+
+def check_bundle_sync(fr_sources: list[Path]) -> int:
+    """Count translation (and French) bundles that do not match content/courses.
+
+    iOS renders ``Resources/CoursesV2/<id>.<lang>.json``. Rewriting
+    ``content/courses/<lang>`` alone leaves the old glossary-at-end text on device.
+    """
+    stale = 0
+    for source in fr_sources:
+        course_id = source.stem
+        for lang in LANGUAGES:
+            src = SOURCE_ROOT / lang / f"{course_id}.json"
+            if not src.is_file():
+                continue
+            bundle = BUNDLE_DIR / f"{course_id}.{lang}.json"
+            if not bundle.is_file():
+                print(f"  MISSING {bundle.name}", file=sys.stderr)
+                stale += 1
+                continue
+            if json.loads(src.read_text(encoding="utf-8")) != json.loads(
+                bundle.read_text(encoding="utf-8")
+            ):
+                print(f"  STALE {bundle.name}", file=sys.stderr)
+                stale += 1
+    return stale
 
 
 def main() -> int:
