@@ -6,7 +6,8 @@ import RevenueCat
 ///
 /// Welcome · Langue · Objectifs (multi) · « Sophia va t'aider » · « Me cultiver » (questions) ·
 /// Temps d'écran (slider) · Ta vie en années · « Transforme ce temps » · « Fais bon usage » ·
-/// Swipe · Loading · **Login** · Essai · Rappel · Paywall annuel · Paywall comparatif.
+/// Swipe · Loading · Profil · Notifications · **Login** · Essai · Rappel · Paywall annuel ·
+/// Paywall comparatif.
 struct OnboardingV2View: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AuthService.self) private var auth
@@ -21,11 +22,16 @@ struct OnboardingV2View: View {
     /// Blocks a second `advance()` fired within a short window (e.g. racing timers
     /// after the last swipe card), which would skip the loading screen.
     @State private var lastAdvanceAt: Date?
+    /// `true` once iOS has settled the notification authorization: the page asking for it can
+    /// no longer achieve anything, so it is skipped. Resolved at launch, long before the page
+    /// is reached; defaulting to `false` shows the page while the status is still unknown.
+    @State private var notificationsSettled = false
 
     private enum Screen: Hashable {
         case welcome, language, objectives, objectiveIntro
         case questions, phoneTime, yearsGrid, transform, review, personalize
-        case swipe, loading, profile, login, trialSteps, reminder, paywallAnnual, paywallComparison
+        case swipe, loading, profile, notifications, login
+        case trialSteps, reminder, paywallAnnual, paywallComparison
 
         /// Nom envoyé à l'analytics : la séquence étant dynamique (page d'essai retirée quand
         /// l'offering n'inclut pas d'essai), l'index seul ne désigne pas un écran stable.
@@ -44,6 +50,7 @@ struct OnboardingV2View: View {
             case .swipe: "swipe_courses"
             case .loading: "loading"
             case .profile: "profile"
+            case .notifications: "notifications"
             case .login: "login"
             case .trialSteps: "trial_steps"
             case .reminder: "reminder"
@@ -63,7 +70,7 @@ struct OnboardingV2View: View {
     private var screens: [Screen] {
         var list: [Screen] = [.welcome, .language, .objectives, .objectiveIntro,
                               .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
-                              .swipe, .loading, .profile, .login]
+                              .swipe, .loading, .profile, .notifications, .login]
         if store.offerings == nil || store.annualHasFreeTrial {
             list.append(.trialSteps)
         }
@@ -104,6 +111,9 @@ struct OnboardingV2View: View {
             AnalyticsService.trackOnboardingStarted()
             AnalyticsService.trackOnboardingStepViewed(stepIndex: 0, stepName: Screen.welcome.analyticsName)
         }
+        .task {
+            notificationsSettled = await NotificationPermission.isSettled()
+        }
     }
 
     // MARK: - Pages
@@ -137,6 +147,8 @@ struct OnboardingV2View: View {
             OnboardingV2Loading(onNext: advance)
         case .profile:
             OnboardingV2Profile(vm: vm, onNext: advance)
+        case .notifications:
+            OnboardingV2Notifications(vm: vm, onNext: advance)
         case .login:
             OnboardingV2Login(onSignedIn: advance)
         case .trialSteps:
@@ -159,8 +171,15 @@ struct OnboardingV2View: View {
         }
 
         let list = screens
-        let next = stepIndex + 1
+        var next = stepIndex + 1
         guard next < list.count else { finish(); return }
+
+        // La demande de notifications n'a rien à obtenir quand iOS a déjà tranché : le système
+        // n'affiche son alerte qu'une fois, la page ne coûterait qu'un tap de plus.
+        if list[next] == .notifications, notificationsSettled {
+            next += 1
+            guard next < list.count else { finish(); return }
+        }
 
         // Skip les paywalls si déjà premium.
         if list[next] == .paywallAnnual, store.isPremium {
