@@ -205,8 +205,17 @@ struct OnboardingV2SwipeCourses: View {
             }
             .onEnded { value in
                 crossedThreshold = false
-                if abs(value.translation.width) > 100 {
-                    swipeTop(like: value.translation.width > 0)
+                // Un swipe rapide ("flick") peut se terminer avant que la distance
+                // parcourue par le doigt ne dépasse le seuil de 100pt : on prend donc
+                // aussi en compte la vélocité via `predictedEndTranslation`, qui
+                // extrapole la position finale si le doigt continuait sur sa lancée.
+                let width = value.translation.width
+                let predictedWidth = value.predictedEndTranslation.width
+                let crossedByDistance = abs(width) > 100
+                let crossedByVelocity = abs(predictedWidth) > 200
+                if crossedByDistance || crossedByVelocity {
+                    let like = crossedByDistance ? width > 0 : predictedWidth > 0
+                    swipeTop(like: like)
                 } else {
                     withAnimation(.spring(response: 0.35, dampingFraction: 0.7)) { drag = .zero }
                 }
