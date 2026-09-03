@@ -43,7 +43,6 @@ struct ProgressConflictView: View {
             .padding(.horizontal, 20)
         }
         .interactiveDismissDisabled(true)
-        .preferredColorScheme(.light)
     }
 
     private func optionCard(title: String, progress: UserProgress, keepLocal: Bool) -> some View {

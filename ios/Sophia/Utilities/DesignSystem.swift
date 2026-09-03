@@ -11,48 +11,62 @@ import UIKit
 enum DS {
 
     // MARK: - Colors
+    //
+    // Tokens are dynamic: they resolve against the current trait collection so the
+    // same `DS.canvas` / `DS.ink` call sites adapt when the user picks Night (or
+    // Automatic) in Settings. Light values are the existing editorial palette.
 
-    /// App background — soft, slightly cool off-white.
-    static let canvas = Color(red: 0.969, green: 0.973, blue: 0.980)
+    /// App background — soft cool off-white / deep navy at night.
+    static let uiCanvas = DSAdaptive.color(light: (0.969, 0.973, 0.980), dark: (0.071, 0.090, 0.129))
+    static let canvas = Color(uiColor: uiCanvas)
     /// Primary surface (cards, panels).
-    static let surface = Color.white
-    /// Muted surface — the pale blue used for hero / featured cards.
-    static let surfaceMuted = Color(red: 0.914, green: 0.937, blue: 0.973)
+    static let uiSurface = DSAdaptive.color(light: (1, 1, 1), dark: (0.118, 0.145, 0.192))
+    static let surface = Color(uiColor: uiSurface)
+    /// Muted surface — pale blue hero cards / raised night panels.
+    static let uiSurfaceMuted = DSAdaptive.color(light: (0.914, 0.937, 0.973), dark: (0.145, 0.184, 0.247))
+    static let surfaceMuted = Color(uiColor: uiSurfaceMuted)
 
-    /// Primary text — deep navy.
-    static let ink = Color(red: 0.086, green: 0.149, blue: 0.239)
+    /// Primary text — deep navy / off-white at night.
+    static let uiInk = DSAdaptive.color(light: (0.086, 0.149, 0.239), dark: (0.925, 0.937, 0.957))
+    static let ink = Color(uiColor: uiInk)
     /// Secondary text — muted slate.
-    static let inkSecondary = Color(red: 0.333, green: 0.388, blue: 0.478)
+    static let uiInkSecondary = DSAdaptive.color(light: (0.333, 0.388, 0.478), dark: (0.655, 0.698, 0.757))
+    static let inkSecondary = Color(uiColor: uiInkSecondary)
     /// Tertiary text — light slate (captions, hints, credits).
-    static let inkTertiary = Color(red: 0.604, green: 0.643, blue: 0.698)
+    static let uiInkTertiary = DSAdaptive.color(light: (0.604, 0.643, 0.698), dark: (0.475, 0.522, 0.588))
+    static let inkTertiary = Color(uiColor: uiInkTertiary)
 
-    /// Primary accent — deep navy blue for solid CTAs.
-    static let accent = Color(red: 0.102, green: 0.227, blue: 0.420)
+    /// Primary accent — deep navy CTA by day; lifted blue at night for contrast.
+    static let uiAccent = DSAdaptive.color(light: (0.102, 0.227, 0.420), dark: (0.310, 0.490, 0.855))
+    static let accent = Color(uiColor: uiAccent)
     /// Softer accent — medium blue for links, counts, underlines.
-    static let accentSoft = Color(red: 0.180, green: 0.384, blue: 0.769)
-    /// Very light accent tint — subtle fills / selected states.
-    static let accentTint = Color(red: 0.914, green: 0.937, blue: 0.973)
+    static let uiAccentSoft = DSAdaptive.color(light: (0.180, 0.384, 0.769), dark: (0.480, 0.655, 0.960))
+    static let accentSoft = Color(uiColor: uiAccentSoft)
+    /// Subtle accent fill / selected states.
+    static let uiAccentTint = DSAdaptive.color(light: (0.914, 0.937, 0.973), dark: (0.145, 0.196, 0.298))
+    static let accentTint = Color(uiColor: uiAccentTint)
 
     /// Hairline separators & subtle borders.
-    static let hairline = Color(red: 0.894, green: 0.906, blue: 0.925)
+    static let uiHairline = DSAdaptive.color(light: (0.894, 0.906, 0.925), dark: (0.212, 0.247, 0.310))
+    static let hairline = Color(uiColor: uiHairline)
 
     /// Muted sage green — success / correct-answer semantics (quiz, completions).
-    static let success = Color(red: 0.220, green: 0.490, blue: 0.353)
+    static let uiSuccess = DSAdaptive.color(light: (0.220, 0.490, 0.353), dark: (0.380, 0.690, 0.510))
+    static let success = Color(uiColor: uiSuccess)
     /// Very light green tint for success surfaces.
-    static let successTint = Color(red: 0.878, green: 0.929, blue: 0.898)
+    static let uiSuccessTint = DSAdaptive.color(light: (0.878, 0.929, 0.898), dark: (0.129, 0.216, 0.176))
+    static let successTint = Color(uiColor: uiSuccessTint)
 
     /// Muted terracotta — error / incorrect-answer semantics.
-    static let danger = Color(red: 0.694, green: 0.310, blue: 0.259)
+    static let uiDanger = DSAdaptive.color(light: (0.694, 0.310, 0.259), dark: (0.890, 0.455, 0.400))
+    static let danger = Color(uiColor: uiDanger)
     /// Very light warm tint for error surfaces.
-    static let dangerTint = Color(red: 0.965, green: 0.906, blue: 0.894)
+    static let uiDangerTint = DSAdaptive.color(light: (0.965, 0.906, 0.894), dark: (0.259, 0.149, 0.141))
+    static let dangerTint = Color(uiColor: uiDangerTint)
 
     /// Warm amber — App Store star ratings.
-    static let warm = Color(red: 0.90, green: 0.70, blue: 0.20)
-
-    // MARK: - UIKit colors (for UITextView-based prose)
-
-    static let uiInk = UIColor(red: 0.086, green: 0.149, blue: 0.239, alpha: 1)
-    static let uiInkSecondary = UIColor(red: 0.333, green: 0.388, blue: 0.478, alpha: 1)
+    static let uiWarm = DSAdaptive.color(light: (0.90, 0.70, 0.20), dark: (0.95, 0.76, 0.32))
+    static let warm = Color(uiColor: uiWarm)
 
     // MARK: - Typography
     //
@@ -116,9 +130,27 @@ enum DS {
 
     /// Gentle diffuse shadow used on elevated surfaces.
     struct SoftShadow {
-        static let color = Color.black.opacity(0.06)
+        static let color = Color(uiColor: UIColor { traits in
+            traits.userInterfaceStyle == .dark
+                ? UIColor.black.withAlphaComponent(0.45)
+                : UIColor.black.withAlphaComponent(0.06)
+        })
         static let radius: CGFloat = 18
         static let y: CGFloat = 10
+    }
+}
+
+/// Light/dark pair resolved from the current trait collection.
+enum DSAdaptive {
+    static func color(
+        light: (CGFloat, CGFloat, CGFloat),
+        dark: (CGFloat, CGFloat, CGFloat),
+        alpha: CGFloat = 1
+    ) -> UIColor {
+        UIColor { traits in
+            let rgb = traits.userInterfaceStyle == .dark ? dark : light
+            return UIColor(red: rgb.0, green: rgb.1, blue: rgb.2, alpha: alpha)
+        }
     }
 }
 
