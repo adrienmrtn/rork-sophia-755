@@ -3,6 +3,7 @@ import Supabase
 
 struct SettingsView: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(AppearanceManager.self) private var appearance
     @Environment(AuthService.self) private var auth
     let progressManager: ProgressManager
     let store: StoreViewModel
@@ -18,8 +19,8 @@ struct SettingsView: View {
     @State private var showAmbassador: Bool = false
     @State private var hapticTrigger: Int = 0
 
-    private static let destructive = Color(red: 0.80, green: 0.31, blue: 0.31)
-    private static let destructiveTint = Color(red: 0.965, green: 0.925, blue: 0.925)
+    private static let destructive = DS.danger
+    private static let destructiveTint = DS.dangerTint
 
     private var appVersionString: String {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
@@ -48,6 +49,8 @@ struct SettingsView: View {
                             }
                             .padding(.horizontal, 20)
                         }
+
+                        appearanceSection
 
                         progressionSection
 
@@ -129,6 +132,22 @@ struct SettingsView: View {
     }
 
     // MARK: - Sections
+
+    private var appearanceSection: some View {
+        section(languageManager.text("settings.section.appearance")) {
+            VStack(alignment: .leading, spacing: 10) {
+                AppearancePickerControl()
+                    .padding(.horizontal, 20)
+                if appearance.preference == .system {
+                    Text(languageManager.text("settings.appearance.hint"))
+                        .font(DS.sans(.caption, .medium))
+                        .foregroundStyle(DS.inkSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(.horizontal, 24)
+                }
+            }
+        }
+    }
 
     private var accountSection: some View {
         section(languageManager.text("account.title")) {

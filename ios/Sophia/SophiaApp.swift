@@ -8,6 +8,7 @@ struct SophiaApp: App {
     @UIApplicationDelegateAdaptor(SophiaAppDelegate.self) private var appDelegate
 
     @State private var languageManager = LanguageManager.shared
+    @State private var appearanceManager = AppearanceManager.shared
     @State private var showOnboarding: Bool = !OnboardingViewModel.isOnboardingCompleted
     @State private var deepLinkCourseId: String?
 
@@ -56,8 +57,11 @@ struct SophiaApp: App {
                 }
             }
             .environment(languageManager)
+            .environment(appearanceManager)
             .environment(AuthService.shared)
             .environment(\.locale, languageManager.locale)
+            .preferredColorScheme(appearanceManager.preference.preferredColorScheme)
+            .animation(.easeInOut(duration: 0.25), value: appearanceManager.preference)
             .onAppear {
                 // ATT dès l'ouverture de l'app (avant/pendant l'onboarding), pas après.
                 MetaAdsService.requestTrackingAuthorizationAtLaunch()

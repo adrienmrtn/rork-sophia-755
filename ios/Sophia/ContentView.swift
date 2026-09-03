@@ -3,6 +3,7 @@ import RevenueCatUI
 
 struct ContentView: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(AppearanceManager.self) private var appearance
     @Environment(AuthService.self) private var auth
     var onResetOnboarding: (() -> Void)? = nil
     @Binding var deepLinkCourseId: String?
@@ -81,9 +82,11 @@ struct ContentView: View {
             .tint(DS.accent)
             .toolbarBackground(DS.canvas, for: .tabBar)
             .toolbarBackground(.visible, for: .tabBar)
-            .preferredColorScheme(.light)
             .sensoryFeedback(.selection, trigger: selectedTab)
             .onAppear { SophiaTabBarStyle.apply() }
+            .onChange(of: appearance.preference) { _, _ in
+                SophiaTabBarStyle.apply()
+            }
             .onChange(of: selectedCourse) { _, newCourse in
                 guard let course = newCourse else { return }
                 if !storeVM.isPremium {

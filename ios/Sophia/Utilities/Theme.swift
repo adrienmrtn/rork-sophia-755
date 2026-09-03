@@ -5,19 +5,14 @@ import UIKit
 /// muted slate for unselected items), replacing the previous cream/black neo-brutalist look.
 enum SophiaTabBarStyle {
     static func apply() {
-        let canvas = UIColor(red: 0.969, green: 0.973, blue: 0.980, alpha: 1)
-        let accent = UIColor(red: 0.102, green: 0.227, blue: 0.420, alpha: 1)
-        let inkTertiary = UIColor(red: 0.604, green: 0.643, blue: 0.698, alpha: 1)
-        let hairline = UIColor(red: 0.894, green: 0.906, blue: 0.925, alpha: 1)
-
         let appearance = UITabBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = canvas
-        appearance.shadowColor = hairline
+        appearance.backgroundColor = DS.uiCanvas
+        appearance.shadowColor = DS.uiHairline
         UITabBar.appearance().standardAppearance = appearance
         UITabBar.appearance().scrollEdgeAppearance = appearance
-        UITabBar.appearance().tintColor = accent
-        UITabBar.appearance().unselectedItemTintColor = inkTertiary
+        UITabBar.appearance().tintColor = DS.uiAccent
+        UITabBar.appearance().unselectedItemTintColor = DS.uiInkTertiary
     }
 }
 

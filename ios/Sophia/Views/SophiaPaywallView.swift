@@ -43,6 +43,12 @@ struct SophiaPaywallView: View {
     var onDismissed: (() -> Void)? = nil
 
     var body: some View {
+        paywall
+            .preferredColorScheme(.light)
+    }
+
+    @ViewBuilder
+    private var paywall: some View {
         switch context {
         case .offreDiscount:
             SophiaDiscountPaywall(
