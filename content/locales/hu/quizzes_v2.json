@@ -5,8 +5,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q1",
         "type": "mcq",
-        "question": "Ki a Les Fleurs du Mal szerzője?",
-        "explanation": "Charles Baudelaire 1857-ben adta ki a Les Fleurs du Mal-t, a modern költészet születési anyakönyvi kivonatát.",
+        "question": "Ki a A romlás virágai szerzője?",
+        "explanation": "Charles Baudelaire 1857-ben adta ki a A romlás virágai-t, a modern költészet születési anyakönyvi kivonatát.",
         "options": [
           "Charles Baudelaire",
           "Paul Verlaine",
@@ -18,7 +18,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q2",
         "type": "mcq",
-        "question": "Miért ítélték el a Les Fleurs du Mal-t 1857-ben?",
+        "question": "Miért ítélték el a A romlás virágai-t 1857-ben?",
         "explanation": "A gyűjteményt a „közerkölcs elleni felháborodás” miatt ítélték el, ez a botrány hivatalosan csak 1949-ben szűnik meg.",
         "options": [
           "A „közerkölcs megbotránkozásáért”",
@@ -31,7 +31,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q3",
         "type": "numericSlider",
-        "question": "Melyik évben rehabilitálták hivatalosan a Les Fleurs du Mal hat elítélt versét?",
+        "question": "Melyik évben rehabilitálták hivatalosan a A romlás virágai hat elítélt versét?",
         "explanation": "Az 1857-ben elítélt hat verset hivatalosan csak 92 évvel később, 1949-ben rehabilitálták.",
         "correctValue": 1949.0,
         "sliderMin": 1920.0,
@@ -9289,7 +9289,7 @@
           "Küklopsz, Poszeidón isten fia",
           "Ulyssesszel szövetséges görög király",
           "Az Olimposz istene",
-          "Ulysses testvére"
+          "Odüsszeusz testvére"
         ],
         "correctIndex": 0
       },
@@ -9310,7 +9310,7 @@
         "id": "course_173_ulysse_et_le_cyclope_q3",
         "type": "mcq",
         "question": "Milyen ravasz nevet ad Odüsszeusz Polyphemusnak?",
-        "explanation": "Ulysses „Senki” (görögül Outis) néven mutatkozik be, ez a név egyúttal a keveredést, a ravaszságot is idézi, és zavart kelt a támadás után.",
+        "explanation": "Odüsszeusz „Senki” (görögül Outis) néven mutatkozik be, ez a név egyúttal a keveredést, a ravaszságot is idézi, és zavart kelt a támadás után.",
         "options": [
           "Senki (Outis)",
           "Null",
@@ -9375,10 +9375,10 @@
         "question": "Mi a következménye Polyphemus átkának Odüsszeuszra?",
         "explanation": "Polyphemus apjához, Poszeidónhoz imádkozik, hogy Odüsszeusz sokáig vándoroljon, és elveszítse minden társát: ez az átok tíz évnyi tengeri próbát nyit meg.",
         "options": [
-          "Tíz évnyi tengeri vándorlást strukturál Ulysses számára",
-          "Ulysses-t küklopszlá változtatja",
+          "Tíz évnyi tengeri vándorlást strukturál Odüsszeusz számára",
+          "Odüsszeusz-t küklopszlá változtatja",
           "Azonnal megöli az összes társát",
-          "Megakadályozza, hogy Ulysses valaha is lássa Ithacát"
+          "Megakadályozza, hogy Odüsszeusz valaha is lássa Ithacát"
         ],
         "correctIndex": 0
       },
@@ -9386,7 +9386,7 @@
         "id": "course_173_ulysse_et_le_cyclope_q9",
         "type": "chronological",
         "question": "Tedd sorrendbe a Küklopsz-epizód ezen szakaszait.",
-        "explanation": "Az epizód a barlangba való belépéstől a megvakításig, majd a nevének a tengeren való megvallásáig olyan precíz folyamatot követ, amely megpecsételi Ulysses sorsát.",
+        "explanation": "Az epizód a barlangba való belépéstől a megvakításig, majd a nevének a tengeren való megvallásáig olyan precíz folyamatot követ, amely megpecsételi Odüsszeusz sorsát.",
         "items": [
           "Odüsszeusz és emberei belépnek Polyphemus barlangjába",
           "Polyphemus berúg, és megkérdezi vendége nevét",
@@ -9466,7 +9466,7 @@
         "id": "course_174_ulysse_et_les_sirenes_q6",
         "type": "mcq",
         "question": "Milyen társadalomtudományi koncepció illusztrálja Odüsszeusz jelenetét az árbochoz kötve?",
-        "explanation": "Tudván, hogy gyenge lesz a kísértéssel szemben, Ulysses maga is előre korlátozza a lehetőségeit: ez az előzetes elkötelezettség vagy előzetes elköteleződés.",
+        "explanation": "Tudván, hogy gyenge lesz a kísértéssel szemben, Odüsszeusz maga is előre korlátozza a lehetőségeit: ez az előzetes elkötelezettség vagy előzetes elköteleződés.",
         "options": [
           "Előzetes kötelezettségvállalás",
           "Megerősítő elfogultság",
@@ -9478,8 +9478,8 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q7",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: a dal meghallgatása után Ulysses tökéletesen nyugodt marad, és soha nem kéri, hogy elszakadjanak tőle.",
-        "explanation": "Amikor felcsendül a dal, Ulysses elveszti nyugalmát, és kiáltja, hogy oldják meg; csak a süket és a tervhez hű emberei akadályozzák meg abban, hogy megadja magát.",
+        "question": "Igaz vagy hamis: a dal meghallgatása után Odüsszeusz tökéletesen nyugodt marad, és soha nem kéri, hogy elszakadjanak tőle.",
+        "explanation": "Amikor felcsendül a dal, Odüsszeusz elveszti nyugalmát, és kiáltja, hogy oldják meg; csak a süket és a tervhez hű emberei akadályozzák meg abban, hogy megadja magát.",
         "options": [
           "Igaz",
           "Hamis"
@@ -9508,7 +9508,7 @@
           "Circe figyelmezteti Ulyssest a szirénák veszélyére",
           "Odüsszeusz viasszal takarja be társai fülét",
           "Odüsszeuszt a hajó árbocához kötik",
-          "Felcsendül a Szirének dala, és Ulysses szabadságát követeli"
+          "Felcsendül a Szirének dala, és Odüsszeusz szabadságát követeli"
         ]
       }
     ]
@@ -10137,7 +10137,7 @@
         "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_q9",
         "type": "mcq",
         "question": "Mit jelentenek a Trója bukása után emlegetett Nostoik?",
-        "explanation": "A Nosztájok a görög győztesek visszatérését jelölik, amelyek gyakran tragikusak: Agamemnont meggyilkolják, Ulysses még tíz évig vándorol.",
+        "explanation": "A Nosztájok a görög győztesek visszatérését jelölik, amelyek gyakran tragikusak: Agamemnont meggyilkolják, Odüsszeusz még tíz évig vándorol.",
         "options": [
           "A győztes görög hősök veszedelmes és gyakran tragikus visszatérései",
           "Trója új törvényei",
@@ -12739,7 +12739,7 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "Mit jelképez a Hegira a 622-ben?",
+        "question": "Mit jelképez a hidzsra a 622-ben?",
         "explanation": "A hidzsra Mohamed távozása, halállal fenyegetve Mekkában, Medina oázisa felé. Ez a dátum a muszlim naptár 1. éve lesz.",
         "options": [
           "Mohamed elutazása Mekkából Medinába",
@@ -12777,7 +12777,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
         "question": "Melyik évben halt meg Mohamed, és Arábiát egyetlen hatalom alatt egyesítette?",
-        "explanation": "Mohamed 632-ben halt meg, mindössze tíz évvel a Hegira után, amikor szinte egész Arábia egyesült.",
+        "explanation": "Mohamed 632-ben halt meg, mindössze tíz évvel a hidzsra után, amikor szinte egész Arábia egyesült.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
         "sliderMax": 660.0,
@@ -12790,7 +12790,7 @@
         "question": "Tedd időrendi sorrendbe ezeket az eseményeket Mohamed életében.",
         "explanation": "Ez a négy dátum (622, 624, 630, 632) jelzi azt a húsz évet, amikor Mohamed megfenyegetett prófétából az Arábiát egyesítő állam fejévé vált.",
         "items": [
-          "A Hegira: indulás Medinába",
+          "A hidzsra: indulás Medinába",
           "A badri csata",
           "Mekka elfoglalása",
           "Mohamed halála"
@@ -24771,7 +24771,7 @@
         "question": "Melyik görög hősnek kellett tíz év alatt hazatérnie a trójai háború után?",
         "explanation": "Odüsszeusznak, Ithaka királyának tíz évbe telik, hogy a trójai háború befejezése után hazatérjen: ez az Odüsszeia témája.",
         "options": [
-          "Ulysses",
+          "Odüsszeusz",
           "Akhilleusz",
           "Agamemnon",
           "Aeneas"
@@ -24784,7 +24784,7 @@
         "question": "Hogyan kezdődik az Odüsszeia története narratív értelemben?",
         "explanation": "Homérosz a cselekmény kellős közepén kezdi el történetét: Odüsszeusz, akit Calypso nimfa tart, majd visszaemlékezésben elmeséli múltbeli kalandjait.",
         "options": [
-          "In media res, az akció közepén, míg Ulysses-t Calypso tartja",
+          "In media res, az akció közepén, míg Odüsszeusz-t Calypso tartja",
           "Odüsszeusz születésének történetével",
           "A trójai háború kezdetére",
           "Odüsszeusz Ithakába való visszatérésével"
@@ -24794,7 +24794,7 @@
       {
         "id": "course_81_l_odyssee_homere_q3",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: Ulysses megszökik a Cyclops Polyphemus elől anélkül, hogy felfedné a nevét.",
+        "question": "Igaz vagy hamis: Odüsszeusz megszökik a Cyclops Polyphemus elől anélkül, hogy felfedné a nevét.",
         "explanation": "Odüsszeusz büszkén kiáltja valódi nevét, miután megvakította Polyphemust, és lehetővé teszi Küklopsznak, hogy leszólja apja, Poszeidón bosszúját rajta.",
         "options": [
           "Igaz",
@@ -24819,7 +24819,7 @@
         "id": "course_81_l_odyssee_homere_q5",
         "type": "mcq",
         "question": "Ki ismeri fel először Odüsszeuszt, amikor koldusnak álcázva visszatér Ithacába?",
-        "explanation": "A nagyon idős Argos kutya mindenki más előtt ismeri fel Ulysses-t, őt ápolója, Euriklea követi.",
+        "explanation": "A nagyon idős Argos kutya mindenki más előtt ismeri fel Odüsszeusz-t, őt ápolója, Euriklea követi.",
         "options": [
           "Öreg kutyája, Argos",
           "A felesége Penelope",
@@ -24877,7 +24877,7 @@
           "A háború tizedik évének 51 napja",
           "A trójai háború teljes tíz éve",
           "Egyetlen nap csata",
-          "Ulysses távollétének húsz éve"
+          "Odüsszeusz távollétének húsz éve"
         ],
         "correctIndex": 0
       },
@@ -24888,7 +24888,7 @@
         "explanation": "A költemény Akhilleusz haragjával kezdődik, amelyet Agamemnon megaláztatása váltott ki, még Trója kérdése előtt.",
         "options": [
           "Akhilleusz haragja",
-          "Ulysses trükkje",
+          "Odüsszeusz trükkje",
           "A trójai faló építése",
           "Párizs ítélete"
         ],

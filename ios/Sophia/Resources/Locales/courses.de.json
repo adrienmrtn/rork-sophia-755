@@ -36,7 +36,7 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "Was stellt die Hegira im Jahr 622 dar?",
+        "question": "Was stellt die Hidschra im Jahr 622 dar?",
         "explanation": "Die Hijra ist die Abreise Mohammeds, dem in Mekka der Tod droht, in Richtung der Oase Medina. Dieses Datum wird zum Jahr 1 des muslimischen Kalenders.",
         "options": [
           "Mohammeds Abreise von Mekka nach Medina",
@@ -73,8 +73,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr starb Mohammed und hinterließ Arabien vereint unter einer Autorität?",
-        "explanation": "Mohammed starb im Jahr 632, nur zehn Jahre nach der Hegira, als fast ganz Arabien vereint war.",
+        "question": "In welchem Jahr starb Mohammed und hinterließ Arabien vereint unter einer Autorität?",
+        "explanation": "Mohammed starb im Jahr 632, nur zehn Jahre nach der Hidschra, als fast ganz Arabien vereint war.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
         "sliderMax": 660.0,
@@ -84,10 +84,10 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q5",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse im Leben Mohammeds in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Ereignisse im Leben Mohammeds in chronologischer Reihenfolge an.",
         "explanation": "Diese vier Daten (622, 624, 630, 632) markieren die zwanzig Jahre, in denen Mohammed vom bedrohten Propheten zum Oberhaupt eines Staates wurde, der Arabien vereinte.",
         "items": [
-          "Die Hegira: Abfahrt nach Medina",
+          "Die Hidschra: Abfahrt nach Medina",
           "Die Schlacht von Badr",
           "Die Einnahme von Mekka",
           "Der Tod Mohammeds"
@@ -232,8 +232,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q6",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse in der Geschichte der Kreuzzüge in chronologischer Reihenfolge.",
-        "explanation": "Diese Meilensteine ​​reichen von 1071 bis 1187: Die byzantinische Niederlage geht dem Appell des Papstes voraus, der der Einnahme und anschließenden Rückeroberung Jerusalems vorausgeht.",
+        "question": "Ordne diese Ereignisse in der Geschichte der Kreuzzüge in chronologischer Reihenfolge.",
+        "explanation": "Diese Meilensteine reichen von 1071 bis 1187: Die byzantinische Niederlage geht dem Appell des Papstes voraus, der der Einnahme und anschließenden Rückeroberung Jerusalems vorausgeht.",
         "items": [
           "Byzantinische Niederlage von Mantzikert gegen die seldschukischen Türken",
           "Aufruf zum Kreuzzug im Rat von Clermont",
@@ -244,7 +244,7 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q7",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr eroberten die Kreuzfahrer Jerusalem?",
+        "question": "In welchem Jahr eroberten die Kreuzfahrer Jerusalem?",
         "explanation": "Jerusalem fiel am 15. Juli 1099, nachdem die Expedition 1096 aufgebrochen war und Antiochia belagert worden war.",
         "correctValue": 1099.0,
         "sliderMin": 1050.0,
@@ -268,7 +268,7 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q9",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr fiel Saint-Jean-d'Acre, die letzte Bastion der lateinischen Staaten des Ostens?",
+        "question": "In welchem Jahr fiel Saint-Jean-d'Acre, die letzte Bastion der lateinischen Staaten des Ostens?",
         "explanation": "Der Fall von Saint-Jean-d'Acre im Jahr 1291 markiert das Ende der lateinischen Präsenz im Heiligen Land.",
         "correctValue": 1291.0,
         "sliderMin": 1200.0,
@@ -389,7 +389,7 @@
       {
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q7",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse seit dem Untergang des Weströmischen Reiches in chronologischer Reihenfolge.",
+        "question": "Ordne diese Ereignisse seit dem Untergang des Weströmischen Reiches in chronologischer Reihenfolge.",
         "explanation": "Diese Phasen reichen von 402 bis 476: Der Rückzug nach Ravenna geht der Plünderung durch die Westgoten voraus, dann der zerstörerischeren Plünderung durch die Vandalen, bis zum Ende des Weströmischen Reiches.",
         "items": [
           "Honorius verlässt Rom und geht nach Ravenna",
@@ -401,7 +401,7 @@
       {
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q8",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr plünderten Alarich und die Westgoten Rom?",
+        "question": "In welchem Jahr plünderten Alarich und die Westgoten Rom?",
         "explanation": "Die Plünderung Roms durch die Westgoten fand im August 410 statt und war ein Schock für die gesamte antike Welt.",
         "correctValue": 410.0,
         "sliderMin": 350.0,
@@ -412,7 +412,7 @@
       {
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q9",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde der letzte weströmische Kaiser abgesetzt?",
+        "question": "In welchem Jahr wurde der letzte weströmische Kaiser abgesetzt?",
         "explanation": "Im Jahr 476 setzte der Anführer Odoaker Romulus Augustulus ab und beendete damit das Weströmische Reich.",
         "correctValue": 476.0,
         "sliderMin": 400.0,
@@ -533,8 +533,8 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q7",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse im Leben Karls des Großen in chronologischer Reihenfolge an.",
-        "explanation": "Diese Meilensteine ​​reichen von 768 bis 843: von der Thronbesteigung Karls des Großen über die langobardische Eroberung, dann die Krönung bis zur Aufteilung des Reiches zwischen seinen Enkeln.",
+        "question": "Ordne diese Ereignisse im Leben Karls des Großen in chronologischer Reihenfolge an.",
+        "explanation": "Diese Meilensteine reichen von 768 bis 843: von der Thronbesteigung Karls des Großen über die langobardische Eroberung, dann die Krönung bis zur Aufteilung des Reiches zwischen seinen Enkeln.",
         "items": [
           "Aufkommen des Frankenreichs",
           "Eroberung des lombardischen Königreichs Norditalien",
@@ -545,7 +545,7 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q8",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde Karl der Große in Rom zum Kaiser gekrönt?",
+        "question": "In welchem Jahr wurde Karl der Große in Rom zum Kaiser gekrönt?",
         "explanation": "Die Krönung fand am 25. Dezember 800 im Petersdom in Rom statt.",
         "correctValue": 800.0,
         "sliderMin": 750.0,
@@ -556,7 +556,7 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q9",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde das Reich im Vertrag von Verdun zwischen den Enkeln Karls des Großen aufgeteilt?",
+        "question": "In welchem Jahr wurde das Reich im Vertrag von Verdun zwischen den Enkeln Karls des Großen aufgeteilt?",
         "explanation": "Im Jahr 843 wurde das karolingische Reich im Vertrag von Verdun in drei Königreiche aufgeteilt, die Frankreich und Deutschland vorwegnahmen.",
         "correctValue": 843.0,
         "sliderMin": 800.0,
@@ -677,7 +677,7 @@
       {
         "id": "course_5_la_magna_carta_1215_q7",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse aus der Regierungszeit von John Lackland in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Ereignisse aus der Regierungszeit von John Lackland in chronologischer Reihenfolge an.",
         "explanation": "Diese Phasen reichen von 1204 bis 1216: Der Verlust der Normandie geht der Niederlage von Bouvines voraus, dann die Unterzeichnung der Charta und ihre Neuausstellung durch Heinrich III.",
         "items": [
           "Verlust der Normandie gegen Philippe Auguste",
@@ -689,7 +689,7 @@
       {
         "id": "course_5_la_magna_carta_1215_q8",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde die Magna Carta in Runnymede besiegelt?",
+        "question": "In welchem Jahr wurde die Magna Carta in Runnymede besiegelt?",
         "explanation": "König John Lackland versiegelte die Magna Carta im Juni 1215 in Runnymede Meadow.",
         "correctValue": 1215.0,
         "sliderMin": 1150.0,
@@ -760,7 +760,7 @@
       {
         "id": "course_6_la_peste_noire_en_europe_1347_1353_q2",
         "type": "mcq",
-        "question": "Auf welchem ​​Weg gelangt die Pest von Zentralasien ins Mittelmeer?",
+        "question": "Auf welchem Weg gelangt die Pest von Zentralasien ins Mittelmeer?",
         "explanation": "Die Pax Mongolica sichert die Seidenstraße und bietet den Bakterien eine schnelle Reiseroute zwischen Zentralasien und dem Mittelmeer.",
         "options": [
           "Die Seidenstraße, gesichert durch die Pax Mongolica",
@@ -821,7 +821,7 @@
       {
         "id": "course_6_la_peste_noire_en_europe_1347_1353_q7",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Schwarzen Todes in Europa in chronologischer Reihenfolge.",
+        "question": "Ordne diese Phasen des Schwarzen Todes in Europa in chronologischer Reihenfolge.",
         "explanation": "Diese Phasen reichen von 1346 bis 1353: von der Ankunft in Caffa bis zum Abklingen der Epidemie, nachdem sie ganz Europa verwüstet hatte.",
         "items": [
           "Die Pest erreicht den genuesischen Handelsposten Caffa auf der Krim",
@@ -833,7 +833,7 @@
       {
         "id": "course_6_la_peste_noire_en_europe_1347_1353_q8",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr brachten die genuesischen Galeeren die Pest nach Europa, nach Messina?",
+        "question": "In welchem Jahr brachten die genuesischen Galeeren die Pest nach Europa, nach Messina?",
         "explanation": "Im Oktober 1347 legten genuesische Galeeren auf der Flucht aus Caffa in Messina auf Sizilien an und brachten die Pest nach Europa.",
         "correctValue": 1347.0,
         "sliderMin": 1300.0,
@@ -954,7 +954,7 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q6",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr hob Jeanne d'Arc die Belagerung von Orléans auf?",
+        "question": "In welchem Jahr hob Jeanne d'Arc die Belagerung von Orléans auf?",
         "explanation": "Johanna durchbrach die Belagerung von Orléans im Mai 1429 in nur neun Tagen.",
         "correctValue": 1429.0,
         "sliderMin": 1400.0,
@@ -976,8 +976,8 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse im Leben von Jeanne d'Arc in chronologischer Reihenfolge an.",
-        "explanation": "Diese Meilensteine ​​reichen von 1420 bis 1431: der Vertrag von Troyes, dann Orléans und Reims im Jahr 1429, die Eroberung im Jahr 1430 und die Hinrichtung im Jahr 1431.",
+        "question": "Ordne diese Ereignisse im Leben von Jeanne d'Arc in chronologischer Reihenfolge an.",
+        "explanation": "Diese Meilensteine reichen von 1420 bis 1431: der Vertrag von Troyes, dann Orléans und Reims im Jahr 1429, die Eroberung im Jahr 1430 und die Hinrichtung im Jahr 1431.",
         "items": [
           "Der Vertrag von Troyes enterbt den Dauphin",
           "Johanna hebt die Belagerung von Orléans auf",
@@ -1025,7 +1025,7 @@
       {
         "id": "course_8_la_chute_de_constantinople_1453_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr fiel Konstantinopel an die Osmanen?",
+        "question": "In welchem Jahr fiel Konstantinopel an die Osmanen?",
         "explanation": "Konstantinopel fiel am 29. Mai 1453 nach 53 Tagen Belagerung.",
         "correctValue": 1453.0,
         "sliderMin": 1420.0,
@@ -1097,7 +1097,7 @@
       {
         "id": "course_8_la_chute_de_constantinople_1453_q7",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse des Falls Konstantinopels in chronologischer Reihenfolge.",
+        "question": "Ordne diese Ereignisse des Falls Konstantinopels in chronologischer Reihenfolge.",
         "explanation": "Diese vier Phasen reichen von 1204 bis 1453: die Schwächung von Byzanz, die Machtübernahme von Mehmed II., die Belagerung und dann der Fall.",
         "items": [
           "Die Plünderung der Stadt durch den 4. Kreuzzug",
@@ -1171,7 +1171,7 @@
       {
         "id": "course_9_l_empire_azteque_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr gründeten die Mexica Tenochtitlán?",
+        "question": "In welchem Jahr gründeten die Mexica Tenochtitlán?",
         "explanation": "Die Mexica gründeten Tenochtitlán im Jahr 1325 auf einer Insel im Texcoco-See.",
         "correctValue": 1325.0,
         "sliderMin": 1280.0,
@@ -1182,7 +1182,7 @@
       {
         "id": "course_9_l_empire_azteque_q2",
         "type": "mcq",
-        "question": "Nach welchem ​​Zeichen suchen die Mexica laut ihrem Gott Huitzilopochtli, um ihre Hauptstadt zu gründen?",
+        "question": "Nach welchem Zeichen suchen die Mexica laut ihrem Gott Huitzilopochtli, um ihre Hauptstadt zu gründen?",
         "explanation": "Die Mexica fanden dieses Zeichen auf einer Insel im Texcoco-See, wo sie 1325 Tenochtitlán gründeten.",
         "options": [
           "Ein Adler, der eine Schlange auf einem Kaktus verschlingt",
@@ -1208,7 +1208,7 @@
       {
         "id": "course_9_l_empire_azteque_q4",
         "type": "trueFalse",
-        "question": "Richtig oder falsch: Die Azteken benutzten Pferde und Ochsen, um die Steine ​​ihrer Pyramiden zu transportieren.",
+        "question": "Richtig oder falsch: Die Azteken benutzten Pferde und Ochsen, um die Steine ihrer Pyramiden zu transportieren.",
         "explanation": "Die Azteken hatten weder ein Transportrad noch ein Lasttier; Dennoch bewegten sie Millionen Tonnen Stein.",
         "options": [
           "Wahr",
@@ -1269,8 +1269,8 @@
       {
         "id": "course_9_l_empire_azteque_q9",
         "type": "chronological",
-        "question": "Bringen Sie diese Etappen der aztekischen Geschichte in chronologische Reihenfolge.",
-        "explanation": "Diese vier Meilensteine ​​reichen von 1325 bis 1521: die Gründung der Hauptstadt, die kaiserliche Expansion, die Ankunft der Spanier und dann der endgültige Fall.",
+        "question": "Bring diese Etappen der aztekischen Geschichte in chronologische Reihenfolge.",
+        "explanation": "Diese vier Meilensteine reichen von 1325 bis 1521: die Gründung der Hauptstadt, die kaiserliche Expansion, die Ankunft der Spanier und dann der endgültige Fall.",
         "items": [
           "Die Gründung von Tenochtitlán am Texcoco-See",
           "Die Bildung des Dreibundes",
@@ -1317,7 +1317,7 @@
       {
         "id": "course_10_la_decouverte_de_l_amerique_1492_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr erreichte Christoph Kolumbus die Bahamas?",
+        "question": "In welchem Jahr erreichte Christoph Kolumbus die Bahamas?",
         "explanation": "Kolumbus landete am 12. Oktober 1492 auf einer Insel auf den Bahamas, die er San Salvador nannte.",
         "correctValue": 1492.0,
         "sliderMin": 1450.0,
@@ -1426,7 +1426,7 @@
       {
         "id": "course_10_la_decouverte_de_l_amerique_1492_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Etappen der Expedition von Kolumbus in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Etappen der Expedition von Kolumbus in chronologischer Reihenfolge an.",
         "explanation": "Diese vier Etappen reichen von August 1492 bis 1507: Abreise, Ankunft auf den Bahamas, der Vertrag von Tordesillas und dann die Namensgebung des Kontinents.",
         "items": [
           "Die Abfahrt der drei Schiffe von Palos",
@@ -1572,7 +1572,7 @@
       {
         "id": "course_11_la_prise_de_la_bastille_1789_q9",
         "type": "chronological",
-        "question": "Bringen Sie diese Ereignisse des Sommers 1789 in chronologische Reihenfolge.",
+        "question": "Bring diese Ereignisse des Sommers 1789 in chronologische Reihenfolge.",
         "explanation": "Diese vier Phasen dauern von Mai bis August 1789: die königliche Vorladung, der Eid der Abgeordneten, der Sturm auf die Bastille und dann die Abschaffung der Privilegien.",
         "items": [
           "Die Einberufung der Generalstände",
@@ -1633,7 +1633,7 @@
       {
         "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr fand die Ulmer Kampagne statt?",
+        "question": "In welchem Jahr fand die Ulmer Kampagne statt?",
         "explanation": "Der Ulmer Feldzug fand im Oktober 1805 statt, wenige Wochen vor dem Sieg bei Austerlitz.",
         "correctValue": 1805.0,
         "sliderMin": 1780.0,
@@ -1718,7 +1718,7 @@
       {
         "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Etappen der Ulmer und Austerlitz-Feldzüge in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Etappen der Ulmer und Austerlitz-Feldzüge in chronologischer Reihenfolge an.",
         "explanation": "Diese vier Phasen dauern von Ende September bis Dezember 1805: die Wende nach Deutschland, die Einkreisung, die Kapitulation von Mack, dann der entscheidende Sieg von Austerlitz.",
         "items": [
           "Die Überquerung des Rheins durch die Grande Armée",
@@ -1779,7 +1779,7 @@
       {
         "id": "course_13_la_bataille_de_waterloo_1815_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr fand die Schlacht von Waterloo statt?",
+        "question": "In welchem Jahr fand die Schlacht von Waterloo statt?",
         "explanation": "Die Schlacht von Waterloo fand am 18. Juni 1815 in Belgien statt.",
         "correctValue": 1815.0,
         "sliderMin": 1780.0,
@@ -1866,7 +1866,7 @@
       {
         "id": "course_13_la_bataille_de_waterloo_1815_q8",
         "type": "chronological",
-        "question": "Bringen Sie diese Ereignisse der Hundert Tage in chronologische Reihenfolge.",
+        "question": "Bring diese Ereignisse der Hundert Tage in chronologische Reihenfolge.",
         "explanation": "Diese vier Etappen reichen vom 1. März bis zum 22. Juni 1815: die Rückkehr von der Insel Elba, der Teilsieg von Ligny, die Niederlage von Waterloo, dann die Abdankung.",
         "items": [
           "Napoleons Landung in der Nähe von Antibes",
@@ -2025,7 +2025,7 @@
       {
         "id": "course_14_la_commune_de_paris_1871_q9",
         "type": "chronological",
-        "question": "Bringen Sie diese Ereignisse der Pariser Kommune in chronologische Reihenfolge.",
+        "question": "Bring diese Ereignisse der Pariser Kommune in chronologische Reihenfolge.",
         "explanation": "Diese vier Phasen dauern von März bis Mai 1871: der Aufstand, die Ausrufung der Kommune und ihre Niederschlagung während der Blutwoche.",
         "items": [
           "Der Versuch, die Kanonen von Montmartre zu beschlagnahmen",
@@ -2129,7 +2129,7 @@
       {
         "id": "course_15_la_belle_epoque_1871_1914_q5",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wird in Paris die Weltausstellung eröffnet, die 50 Millionen Besucher anzieht?",
+        "question": "In welchem Jahr wird in Paris die Weltausstellung eröffnet, die 50 Millionen Besucher anzieht?",
         "explanation": "Die Weltausstellung von 1900 lockte 50 Millionen Besucher an und machte Paris zu einem weltweiten Schaufenster des Fortschritts.",
         "correctValue": 1900.0,
         "sliderMin": 1871.0,
@@ -2166,8 +2166,8 @@
       {
         "id": "course_15_la_belle_epoque_1871_1914_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse der Belle Époque chronologisch.",
-        "explanation": "Diese Meilensteine ​​reichen von 1871 bis 1914 und zeichnen den Aufstieg und dann das brutale Ende der Belle Époque nach.",
+        "question": "Ordne diese Ereignisse der Belle Époque chronologisch.",
+        "explanation": "Diese Meilensteine reichen von 1871 bis 1914 und zeichnen den Aufstieg und dann das brutale Ende der Belle Époque nach.",
         "items": [
           "Ende des Deutsch-Französischen Krieges",
           "Bau des Eiffelturms",
@@ -2299,8 +2299,8 @@
       {
         "id": "course_16_la_bataille_de_verdun_1916_q8",
         "type": "chronological",
-        "question": "Bringen Sie diese Etappen der Schlacht von Verdun und ihrer Erinnerung in chronologische Reihenfolge.",
-        "explanation": "Diese Meilensteine ​​reichen von der Eröffnung der deutschen Offensive im Februar 1916 bis zur deutsch-französischen Aussöhnung im Jahr 1984.",
+        "question": "Bring diese Etappen der Schlacht von Verdun und ihrer Erinnerung in chronologische Reihenfolge.",
+        "explanation": "Diese Meilensteine reichen von der Eröffnung der deutschen Offensive im Februar 1916 bis zur deutsch-französischen Aussöhnung im Jahr 1984.",
         "items": [
           "Eröffnung des deutschen Bombardements",
           "Fall von Fort Douaumont",
@@ -2435,8 +2435,8 @@
       {
         "id": "course_17_la_revolution_russe_1917_q7",
         "type": "chronological",
-        "question": "Bringen Sie diese Ereignisse der Russischen Revolution in chronologische Reihenfolge.",
-        "explanation": "Diese Meilensteine ​​reichen vom Sturz des Zarismus im Februar 1917 bis zur Gründung der UdSSR im Jahr 1922.",
+        "question": "Bring diese Ereignisse der Russischen Revolution in chronologische Reihenfolge.",
+        "explanation": "Diese Meilensteine reichen vom Sturz des Zarismus im Februar 1917 bis zur Gründung der UdSSR im Jahr 1922.",
         "items": [
           "Abdankung von Nikolaus II",
           "Aprilthesen Lenins",
@@ -2510,7 +2510,7 @@
       {
         "id": "course_18_la_grande_depression_1929_q1",
         "type": "mcq",
-        "question": "An welchem ​​Tag im Jahr 1929 kam es zum Absturz der New Yorker Börse, der die Weltwirtschaftskrise auslöste?",
+        "question": "An welchem Tag im Jahr 1929 kam es zum Absturz der New Yorker Börse, der die Weltwirtschaftskrise auslöste?",
         "explanation": "Am 24. Oktober 1929, auch Schwarzer Donnerstag genannt, brach die New Yorker Börse zusammen und löste die Weltwirtschaftskrise aus.",
         "options": [
           "24. Oktober, „Schwarzer Donnerstag“",
@@ -2571,7 +2571,7 @@
       {
         "id": "course_18_la_grande_depression_1929_q6",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse der Weltwirtschaftskrise in chronologischer Reihenfolge.",
+        "question": "Ordne diese Ereignisse der Weltwirtschaftskrise in chronologischer Reihenfolge.",
         "explanation": "Der Crash im Oktober 1929 führte zu einer Kette von Bankenpleiten, dann ebnete die Krise Anfang 1933 den Weg für Hitler und die Reaktion des New Deal.",
         "items": [
           "Schwarzer Donnerstag an der Wall Street",
@@ -2756,7 +2756,7 @@
       {
         "id": "course_19_la_bataille_de_stalingrad_1942_1943_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Schlacht von Stalingrad in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Phasen der Schlacht von Stalingrad in chronologischer Reihenfolge an.",
         "explanation": "Vom Sommer 1942 bis zum 2. Februar 1943 ging die Schlacht von einer siegreichen deutschen Offensive bis zur vollständigen Vernichtung der 6. Armee.",
         "items": [
           "Start der deutschen Case-Blue-Offensive",
@@ -2904,7 +2904,7 @@
       {
         "id": "course_20_hiroshima_et_nagasaki_1945_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse des Jahres 1945 chronologisch an.",
+        "question": "Ordne diese Ereignisse des Jahres 1945 chronologisch an.",
         "explanation": "In einem Monat bewegt sich die Menschheit vom ersten erfolgreichen Atomtest bis zum Ende des Zweiten Weltkriegs in Asien.",
         "items": [
           "Erfolgreicher Trinity-Atomtest",
@@ -3050,7 +3050,7 @@
       {
         "id": "course_21_rosa_parks_et_montgomery_1955_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse des Montgomery-Boykotts in chronologischer Reihenfolge.",
+        "question": "Ordne diese Ereignisse des Montgomery-Boykotts in chronologischer Reihenfolge.",
         "explanation": "Von der Verhaftung von Rosa Parks bis zum Ende des Boykotts vergingen zwischen Dezember 1955 und Dezember 1956 381 Tage.",
         "items": [
           "Verhaftung von Rosa Parks",
@@ -3198,8 +3198,8 @@
       {
         "id": "course_22_la_crise_des_missiles_de_cuba_1962_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse der Kubakrise in chronologischer Reihenfolge.",
-        "explanation": "Vom Scheitern der Schweinebucht im Jahr 1961 bis zum Abzug der Raketen im Oktober 1962 zeichnen diese Meilensteine ​​den Aufstieg und die Lösung der Krise nach.",
+        "question": "Ordne diese Ereignisse der Kubakrise in chronologischer Reihenfolge.",
+        "explanation": "Vom Scheitern der Schweinebucht im Jahr 1961 bis zum Abzug der Raketen im Oktober 1962 zeichnen diese Meilensteine den Aufstieg und die Lösung der Krise nach.",
         "items": [
           "Fehlgeschlagene Landung in der Schweinebucht",
           "Entdeckung sowjetischer Raketen in Kuba",
@@ -3358,8 +3358,8 @@
       {
         "id": "course_23_la_guerre_d_algerie_1954_1962_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse des Algerienkrieges in chronologischer Reihenfolge.",
-        "explanation": "Vom FLN-Aufstand im Jahr 1954 bis zum Evian-Abkommen im Jahr 1962 zeichnen diese Meilensteine ​​die acht Jahre des Algerienkrieges nach.",
+        "question": "Ordne diese Ereignisse des Algerienkrieges in chronologischer Reihenfolge.",
+        "explanation": "Vom FLN-Aufstand im Jahr 1954 bis zum Evian-Abkommen im Jahr 1962 zeichnen diese Meilensteine die acht Jahre des Algerienkrieges nach.",
         "items": [
           "Allerheiligen, Beginn des FLN-Aufstands",
           "Die Schlacht von Algier",
@@ -3491,7 +3491,7 @@
       {
         "id": "course_24_la_bataille_de_dien_bien_phu_1954_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Schlacht von Dien Bien Phu in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Phasen der Schlacht von Dien Bien Phu in chronologischer Reihenfolge an.",
         "explanation": "Die Operation Castor (November 1953), die Offensive vom 13. März 1954, die Kapitulation vom 7. Mai und dann die Genfer Abkommen (Juli 1954) markierten das Ende des Indochina-Krieges.",
         "items": [
           "Einrichtung des französischen Luft-Land-Stützpunkts",
@@ -3637,8 +3637,8 @@
       {
         "id": "course_25_le_genocide_armenien_1915_1916_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Meilensteine ​​des Völkermords an den Armeniern und seine Anerkennung in chronologischer Reihenfolge.",
-        "explanation": "Diese vier Meilensteine ​​reichen von der Straflosigkeit der ersten Massaker (1894-1896) bis zur späten Anerkennung des Völkermords durch bestimmte Staaten (2001 für Frankreich).",
+        "question": "Ordne diese Meilensteine des Völkermords an den Armeniern und seine Anerkennung in chronologischer Reihenfolge.",
+        "explanation": "Diese vier Meilensteine reichen von der Straflosigkeit der ersten Massaker (1894-1896) bis zur späten Anerkennung des Völkermords durch bestimmte Staaten (2001 für Frankreich).",
         "items": [
           "Hamidian-Massaker unter Sultan Abdülhamid II",
           "Verhaftung armenischer Intellektueller in Konstantinopel",
@@ -3904,7 +3904,7 @@
       {
         "id": "course_27_la_naissance_de_l_ue_de_la_ceca_a_maastr_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Etappen des europäischen Aufbauwerks in chronologischer Reihenfolge.",
+        "question": "Ordne diese Etappen des europäischen Aufbauwerks in chronologischer Reihenfolge.",
         "explanation": "Von der Schuman-Erklärung (1950) bis zur EGKS (1951), dann von den Römischen Verträgen (1957) bis Maastricht (1992) schreitet die europäische Integration schrittweise voran.",
         "items": [
           "Schuman-Erklärung zu Kohle und Stahl",
@@ -4050,8 +4050,8 @@
       {
         "id": "course_28_le_genocide_rwandais_1994_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Völkermords in Ruanda in chronologischer Reihenfolge an.",
-        "explanation": "Von der ethnischen Identitätskarte von 1933 bis zur Einnahme von Kigali am 4. Juli 1994 fassen diese Meilensteine ​​die Mechanismen des Völkermords und seines Endes zusammen.",
+        "question": "Ordne diese Phasen des Völkermords in Ruanda in chronologischer Reihenfolge an.",
+        "explanation": "Von der ethnischen Identitätskarte von 1933 bis zur Einnahme von Kigali am 4. Juli 1994 fassen diese Meilensteine die Mechanismen des Völkermords und seines Endes zusammen.",
         "items": [
           "Fixierung ethnischer Identitäten durch die belgische Kolonialverwaltung",
           "Angriff auf Präsidentenflugzeug",
@@ -4183,8 +4183,8 @@
       {
         "id": "course_29_la_chute_du_mur_de_berlin_1989_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Etappen in der Geschichte der Berliner Mauer in chronologischer Reihenfolge.",
-        "explanation": "Vom Bau der Mauer (1961) über ihren Fall (9. November 1989) bis zur Wiedervereinigung (3. Oktober 1990) umfassen diese Meilensteine ​​fast drei Jahrzehnte.",
+        "question": "Ordne diese Etappen in der Geschichte der Berliner Mauer in chronologischer Reihenfolge.",
+        "explanation": "Vom Bau der Mauer (1961) über ihren Fall (9. November 1989) bis zur Wiedervereinigung (3. Oktober 1990) umfassen diese Meilensteine fast drei Jahrzehnte.",
         "items": [
           "Bau der Mauer zwischen Ost- und Westberlin",
           "Öffnung der Grenze zwischen Ungarn und Österreich",
@@ -4329,7 +4329,7 @@
       {
         "id": "course_30_la_blitzkrieg_1940_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Feldzugs 1940 in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Phasen des Feldzugs 1940 in chronologischer Reihenfolge an.",
         "explanation": "Von der Offensive am 10. Mai bis zum Waffenstillstand am 22. Juni 1940 fassen diese Etappen die blitzschnelle Niederlage Frankreichs in sechs Wochen zusammen.",
         "items": [
           "Deutsche Offensive im Westen",
@@ -4596,8 +4596,8 @@
       {
         "id": "course_32_la_guerre_du_vietnam_1955_1975_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Vietnamkrieges in chronologischer Reihenfolge an.",
-        "explanation": "Diese Meilensteine ​​reichen von der Teilung 1954 bis zum Fall Saigons 1975, der die Wiedervereinigung des Landes unter dem Kommunismus besiegelte.",
+        "question": "Ordne diese Phasen des Vietnamkrieges in chronologischer Reihenfolge an.",
+        "explanation": "Diese Meilensteine reichen von der Teilung 1954 bis zum Fall Saigons 1975, der die Wiedervereinigung des Landes unter dem Kommunismus besiegelte.",
         "items": [
           "Teilung des Landes am 17. Breitengrad",
           "Vorfall im Golf von Tonkin",
@@ -4743,7 +4743,7 @@
       {
         "id": "course_33_le_proces_de_nuremberg_1945_1946_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Nürnberger Prozesse und ihr Erbe in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Phasen der Nürnberger Prozesse und ihr Erbe in chronologischer Reihenfolge an.",
         "explanation": "Vom Londoner Statut im August 1945 bis zur Gründung des Internationalen Strafgerichtshofs im Jahr 2002 ebnet Nürnberg den Weg zu einer dauerhaften internationalen Justiz.",
         "items": [
           "Unterzeichnung des Londoner Statuts",
@@ -4902,8 +4902,8 @@
       {
         "id": "course_34_la_decolonisation_panorama_1945_1975_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Dekolonisierung in chronologischer Reihenfolge an.",
-        "explanation": "Diese Meilensteine ​​reichen von der Unabhängigkeit Indiens im Jahr 1947 bis zum Ende der iberischen Reiche im Jahr 1975, das die Welle der Dekolonisierung beendete.",
+        "question": "Ordne diese Phasen der Dekolonisierung in chronologischer Reihenfolge an.",
+        "explanation": "Diese Meilensteine reichen von der Unabhängigkeit Indiens im Jahr 1947 bis zum Ende der iberischen Reiche im Jahr 1975, das die Welle der Dekolonisierung beendete.",
         "items": [
           "Unabhängigkeit Indiens und Pakistans",
           "Bandung-Konferenz",
@@ -5049,8 +5049,8 @@
       {
         "id": "course_35_l_apartheid_et_mandela_1948_1994_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Apartheid und ihres Untergangs in chronologischer Reihenfolge an.",
-        "explanation": "Von der gesetzlichen Einführung der Rassentrennung im Jahr 1948 bis zur Wahl Mandelas im Jahr 1994 umfassen diese Meilensteine ​​46 Jahre südafrikanischer Geschichte.",
+        "question": "Ordne diese Phasen der Apartheid und ihres Untergangs in chronologischer Reihenfolge an.",
+        "explanation": "Von der gesetzlichen Einführung der Rassentrennung im Jahr 1948 bis zur Wahl Mandelas im Jahr 1994 umfassen diese Meilensteine 46 Jahre südafrikanischer Geschichte.",
         "items": [
           "Institutionalisierung der Apartheid durch die National Party",
           "Sharpeville-Massaker",
@@ -5197,8 +5197,8 @@
       {
         "id": "course_36_la_revolution_culturelle_en_chine_1966_1_q9",
         "type": "chronological",
-        "question": "Bringen Sie diese Phasen der Kulturrevolution in chronologische Reihenfolge.",
-        "explanation": "Von Maos Appell im Jahr 1966 bis zu Deng Xiaopings Reformen im Jahr 1978 umfassen diese Meilensteine ​​ein Jahrzehnt der Säuberungen, gefolgt von einem wirtschaftlichen Wandel.",
+        "question": "Bring diese Phasen der Kulturrevolution in chronologische Reihenfolge.",
+        "explanation": "Von Maos Appell im Jahr 1966 bis zu Deng Xiaopings Reformen im Jahr 1978 umfassen diese Meilensteine ein Jahrzehnt der Säuberungen, gefolgt von einem wirtschaftlichen Wandel.",
         "items": [
           "Maos Aufruf, „das Hauptquartier zu bombardieren“",
           "Anstieg der Gewalt zwischen Fraktionen der Roten Garde",
@@ -5343,8 +5343,8 @@
       {
         "id": "course_37_la_shoah_mecanismes_d_un_genocide_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Holocaust in chronologischer Reihenfolge an.",
-        "explanation": "Von der rechtlichen Ausgrenzung im Jahr 1935 bis zur Befreiung der Lager im Jahr 1945 zeigen diese Meilensteine ​​einen Zustandsprozess, der sich stufenweise verschärft.",
+        "question": "Ordne diese Phasen des Holocaust in chronologischer Reihenfolge an.",
+        "explanation": "Von der rechtlichen Ausgrenzung im Jahr 1935 bis zur Befreiung der Lager im Jahr 1945 zeigen diese Meilensteine einen Zustandsprozess, der sich stufenweise verschärft.",
         "items": [
           "Verabschiedung der Nürnberger Gesetze zum Ausschluss deutscher Juden",
           "Massenerschießungen durch Einsatzgruppen im Osten",
@@ -5489,7 +5489,7 @@
       {
         "id": "course_38_le_11_septembre_2001_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse vom 11. September 2001 in chronologischer Reihenfolge.",
+        "question": "Ordne diese Ereignisse vom 11. September 2001 in chronologischer Reihenfolge.",
         "explanation": "Die beiden Türme wurden innerhalb weniger Minuten getroffen, bevor sie einstürzten, der Südturm vor dem Nordturm, obwohl er als zweiter getroffen wurde.",
         "items": [
           "Das erste Flugzeug landet im Nordturm",
@@ -5637,8 +5637,8 @@
       {
         "id": "course_39_la_democratie_athenienne_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Reformen und Ereignisse in der athenischen Demokratie in chronologischer Reihenfolge.",
-        "explanation": "Von Solon bis zum Tod des Sokrates decken diese Meilensteine ​​fast zwei Jahrhunderte des Aufbaus und der Infragestellung der athenischen Demokratie ab.",
+        "question": "Ordne diese Reformen und Ereignisse in der athenischen Demokratie in chronologischer Reihenfolge.",
+        "explanation": "Von Solon bis zum Tod des Sokrates decken diese Meilensteine fast zwei Jahrhunderte des Aufbaus und der Infragestellung der athenischen Demokratie ab.",
         "items": [
           "Solons Reformen",
           "Die Reformen des Kleisthenes",
@@ -5783,8 +5783,8 @@
       {
         "id": "course_40_la_guerre_de_secession_americaine_1861_1_q9",
         "type": "chronological",
-        "question": "Bringen Sie diese Phasen des Bürgerkriegs in chronologische Reihenfolge.",
-        "explanation": "Von Lincolns Wahl im Jahr 1860 bis zu Lees Kapitulation im Jahr 1865 decken diese Meilensteine ​​den gesamten Konflikt und seine abolitionistische Wendung ab.",
+        "question": "Bring diese Phasen des Bürgerkriegs in chronologische Reihenfolge.",
+        "explanation": "Von Lincolns Wahl im Jahr 1860 bis zu Lees Kapitulation im Jahr 1865 decken diese Meilensteine den gesamten Konflikt und seine abolitionistische Wendung ab.",
         "items": [
           "Wahl von Abraham Lincoln",
           "Bombardierung von Fort Sumter",
@@ -6136,7 +6136,7 @@
       {
         "id": "course_43_pourquoi_la_glace_flotte_t_elle_q4",
         "type": "mcq",
-        "question": "Was kann passieren, wenn Sie eine volle Flasche Wasser in den Gefrierschrank stellen?",
+        "question": "Was kann passieren, wenn du eine volle Flasche Wasser in den Gefrierschrank stellen?",
         "explanation": "Da Eis mehr Volumen einnimmt als flüssiges Wasser, kann eine volle Flasche beim Gefrieren platzen.",
         "options": [
           "Es kann platzen, weil Eis mehr Volumen einnimmt als flüssiges Wasser",
@@ -6234,7 +6234,7 @@
         "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_q1",
         "type": "mcq",
         "question": "Woher kommt das meiste Salz in den Ozeanen?",
-        "explanation": "Leicht saurer Regen erodiert Gesteine ​​und Flüsse transportieren gelöste Mineralien, insbesondere Natrium und Chlor, ins Meer.",
+        "explanation": "Leicht saurer Regen erodiert Gesteine und Flüsse transportieren gelöste Mineralien, insbesondere Natrium und Chlor, ins Meer.",
         "options": [
           "Aus der Erosion von Gesteinen auf den Kontinenten, transportiert durch Flüsse",
           "Zersetzende Fische und Meeresalgen",
@@ -7132,7 +7132,7 @@
       {
         "id": "course_50_comment_le_savon_tue_t_il_les_virus_q8",
         "type": "mcq",
-        "question": "In welchem ​​Fall sind Seife und Wasser hydroalkoholischem Gel vorzuziehen?",
+        "question": "In welchem Fall sind Seife und Wasser hydroalkoholischem Gel vorzuziehen?",
         "explanation": "Bei sichtbarem Schmutz oder Fett ist hydroalkoholisches Gel weniger wirksam, da dieser Schmutz als Sieb wirkt: Seife und Wasser bleiben dann die beste Wahl.",
         "options": [
           "Wenn sich sichtbarer Schmutz oder Fett auf den Händen befindet",
@@ -7268,7 +7268,7 @@
       {
         "id": "course_51_la_decouverte_de_la_penicilline_fleming_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Schritte in der Geschichte von Penicillin.",
+        "question": "Ordne diese Schritte in der Geschichte von Penicillin.",
         "explanation": "Fleming entdeckte Penicillin 1928, Florey und Chain entwickelten es Anfang der 1940er Jahre, während des Krieges wurde die Produktion industrialisiert, dann erhielten die drei Forscher 1945 den Nobelpreis.",
         "items": [
           "Fleming beobachtet Schimmel, der Bakterien auf einer Kulturschale abtötet",
@@ -7280,7 +7280,7 @@
       {
         "id": "course_51_la_decouverte_de_la_penicilline_fleming_q9",
         "type": "mcq",
-        "question": "Mit welchem ​​Risiko rechnete Fleming bereits in Bezug auf Antibiotika?",
+        "question": "Mit welchem Risiko rechnete Fleming bereits in Bezug auf Antibiotika?",
         "explanation": "Fleming hatte bereits davor gewarnt, dass Bakterien gegen falsch eingesetzte Antibiotika resistent werden könnten, ein Risiko, das heute sehr real geworden ist.",
         "options": [
           "Dass bestimmte Bakterien bei Missbrauch von Antibiotika resistent werden könnten",
@@ -7465,7 +7465,7 @@
       {
         "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr entdeckte Wilhelm Röntgen Röntgenstrahlen?",
+        "question": "In welchem Jahr entdeckte Wilhelm Röntgen Röntgenstrahlen?",
         "explanation": "Diese Entdeckung machte Röntgen am 8. November 1895 in Würzburg.",
         "correctValue": 1895.0,
         "sliderMin": 1850.0,
@@ -7599,7 +7599,7 @@
       {
         "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr bemerkte Percy Spencer, dass sein Schokoriegel in der Nähe eines Radars geschmolzen war?",
+        "question": "In welchem Jahr bemerkte Percy Spencer, dass sein Schokoriegel in der Nähe eines Radars geschmolzen war?",
         "explanation": "Im Jahr 1945 machte Spencer diese zufällige Entdeckung, als er am Radar arbeitete.",
         "correctValue": 1945.0,
         "sliderMin": 1900.0,
@@ -7649,7 +7649,7 @@
       {
         "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_q5",
         "type": "numericSlider",
-        "question": "Ungefähr in welchem ​​Jahr wurde der erste kommerzielle Mikrowellenherd, der Radarange, auf den Markt gebracht?",
+        "question": "Ungefähr in welchem Jahr wurde der erste kommerzielle Mikrowellenherd, der Radarange, auf den Markt gebracht?",
         "explanation": "Der Radarange kam um 1947 auf den Markt, war aber riesig und teuer.",
         "correctValue": 1947.0,
         "sliderMin": 1900.0,
@@ -7744,7 +7744,7 @@
       {
         "id": "course_55_la_theorie_de_la_gravitation_newton_1687_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr veröffentlichte Isaac Newton die Principia und seine Theorie der universellen Gravitation?",
+        "question": "In welchem Jahr veröffentlichte Isaac Newton die Principia und seine Theorie der universellen Gravitation?",
         "explanation": "Newton veröffentlichte 1687 die Principia und behauptete, dass die Gravitation universell sei.",
         "correctValue": 1687.0,
         "sliderMin": 1600.0,
@@ -7904,7 +7904,7 @@
       {
         "id": "course_56_la_decouverte_de_la_radioactivite_marie_q3",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr bemerkte Henri Becquerel, dass Uran Fotoplatten ohne Licht verschleiert?",
+        "question": "In welchem Jahr bemerkte Henri Becquerel, dass Uran Fotoplatten ohne Licht verschleiert?",
         "explanation": "Im Jahr 1896 machte Becquerel diese Beobachtung, die Marie Curie dazu veranlasste, das Phänomen im Detail zu untersuchen.",
         "correctValue": 1896.0,
         "sliderMin": 1850.0,
@@ -7952,7 +7952,7 @@
       {
         "id": "course_56_la_decouverte_de_la_radioactivite_marie_q7",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr erhielt Marie Curie allein den Nobelpreis für Chemie?",
+        "question": "In welchem Jahr erhielt Marie Curie allein den Nobelpreis für Chemie?",
         "explanation": "Nachdem sie bereits 1903 den Nobelpreis für Physik erhalten hatte, erhielt sie 1911 allein den Nobelpreis für Chemie.",
         "correctValue": 1911.0,
         "sliderMin": 1890.0,
@@ -7963,7 +7963,7 @@
       {
         "id": "course_56_la_decouverte_de_la_radioactivite_marie_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Etappen in der Geschichte der Radioaktivität in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Etappen in der Geschichte der Radioaktivität in chronologischer Reihenfolge an.",
         "explanation": "Diese Zeitleiste reicht von 1896 bis 1911, zwischen Becquerels erster Entdeckung und Marie Curies zweiter Nobelpreisverleihung.",
         "items": [
           "Henri Becquerel beobachtet, dass Uran fotografische Platten verschleiert",
@@ -8064,7 +8064,7 @@
       {
         "id": "course_57_l_invention_d_internet_q4",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde ARPANET offiziell auf TCP/IP umgestellt?",
+        "question": "In welchem Jahr wurde ARPANET offiziell auf TCP/IP umgestellt?",
         "explanation": "Am 1. Januar 1983 führte ARPANET offiziell TCP/IP ein, ein Datum, das oft als technische Geburtsstunde des Internets angesehen wird.",
         "correctValue": 1983.0,
         "sliderMin": 1960.0,
@@ -8099,7 +8099,7 @@
       {
         "id": "course_57_l_invention_d_internet_q7",
         "type": "chronological",
-        "question": "Ordnen Sie diese drei großen Etappen in der Geschichte des Internets in chronologischer Reihenfolge.",
+        "question": "Ordne diese drei großen Etappen in der Geschichte des Internets in chronologischer Reihenfolge.",
         "explanation": "ARPANET wurde Ende der 1960er Jahre geboren, TCP/IP setzte sich 1983 durch und dann kam das Web Anfang der 1990er Jahre auf den Markt.",
         "items": [
           "Die Schaffung des ARPANET-Netzwerks durch die amerikanische Armee",
@@ -8159,7 +8159,7 @@
       {
         "id": "course_58_la_structure_de_l_adn_watson_crick_1953_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr veröffentlichten Watson und Crick ihr Modell der DNA-Doppelhelix?",
+        "question": "In welchem Jahr veröffentlichten Watson und Crick ihr Modell der DNA-Doppelhelix?",
         "explanation": "Das Doppelhelix-Modell wurde 1953 veröffentlicht.",
         "correctValue": 1953.0,
         "sliderMin": 1900.0,
@@ -8246,7 +8246,7 @@
       {
         "id": "course_58_la_structure_de_l_adn_watson_crick_1953_q8",
         "type": "mcq",
-        "question": "Zu welchem ​​anderen Thema hat Rosalind Franklin ebenfalls große Arbeit geleistet?",
+        "question": "Zu welchem anderen Thema hat Rosalind Franklin ebenfalls große Arbeit geleistet?",
         "explanation": "Franklin leistete auch wichtige Arbeiten zu Viren, eine Rolle, die in populären Berichten lange Zeit unterschätzt wurde.",
         "options": [
           "Viren",
@@ -8295,7 +8295,7 @@
       {
         "id": "course_59_la_decouverte_de_l_anesthesie_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr fand in Boston die erste öffentliche Demonstration der Ätheranästhesie statt?",
+        "question": "In welchem Jahr fand in Boston die erste öffentliche Demonstration der Ätheranästhesie statt?",
         "explanation": "Am 16. Oktober 1846 fand in Boston die erste überzeugende öffentliche Demonstration der Anästhesie statt.",
         "correctValue": 1846.0,
         "sliderMin": 1800.0,
@@ -8429,7 +8429,7 @@
       {
         "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr veröffentlichte Charles Darwin „Über die Entstehung der Arten“?",
+        "question": "In welchem Jahr veröffentlichte Charles Darwin „Über die Entstehung der Arten“?",
         "explanation": "Darwin veröffentlichte sein Hauptwerk im Jahr 1859.",
         "correctValue": 1859.0,
         "sliderMin": 1800.0,
@@ -8440,7 +8440,7 @@
       {
         "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_q2",
         "type": "mcq",
-        "question": "Auf welchem ​​Schiff reiste Darwin jahrelang, um Pflanzen, Fossilien und Vögel zu beobachten?",
+        "question": "Auf welchem Schiff reiste Darwin jahrelang, um Pflanzen, Fossilien und Vögel zu beobachten?",
         "explanation": "Darwin bestieg das Schiff Beagle und verbrachte Jahre damit, die Natur auf der ganzen Welt zu beobachten.",
         "options": [
           "Der Beagle",
@@ -8602,7 +8602,7 @@
       {
         "id": "course_61_le_big_bang_q4",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr beobachtete Edwin Hubble, dass sich Galaxien umso schneller entfernen, je schneller sie sind?",
+        "question": "In welchem Jahr beobachtete Edwin Hubble, dass sich Galaxien umso schneller entfernen, je schneller sie sind?",
         "explanation": "Im Jahr 1929 zeigte Hubble, dass das Universum nicht statisch ist: Es wächst.",
         "correctValue": 1929.0,
         "sliderMin": 1900.0,
@@ -8637,7 +8637,7 @@
       {
         "id": "course_61_le_big_bang_q7",
         "type": "chronological",
-        "question": "Ordnen Sie diese wichtigen Etappen in der Geschichte des Universums in chronologischer Reihenfolge an.",
+        "question": "Ordne diese wichtigen Etappen in der Geschichte des Universums in chronologischer Reihenfolge an.",
         "explanation": "Diese Zeitleiste reicht von der anfänglichen Inflation bis zur Entstehung der Sonne vor 4,6 Milliarden Jahren, über die ersten Kerne etwa 3 Minuten und den diffusen Hintergrund vor etwa 380.000 Jahren.",
         "items": [
           "Die Inflationsphase, kurz nach dem Beginn des Universums",
@@ -8871,9 +8871,9 @@
         "id": "course_63_comment_se_forment_les_tremblements_de_t_q2",
         "type": "mcq",
         "question": "Warum gleiten tektonische Platten trotz ihrer ständigen Bewegung nicht kontinuierlich?",
-        "explanation": "An den Grenzen der Platten verhindert die Reibung der Gesteine ​​das Gleiten: Die Energie sammelt sich dann geräuschlos bis zum Bruch.",
+        "explanation": "An den Grenzen der Platten verhindert die Reibung der Gesteine das Gleiten: Die Energie sammelt sich dann geräuschlos bis zum Bruch.",
         "options": [
-          "Die Reibung der Steine ​​verhindert, dass sie an den Grenzen rutschen",
+          "Die Reibung der Steine verhindert, dass sie an den Grenzen rutschen",
           "Sie werden durch das Erdmagnetfeld zusammengehalten",
           "Die Schwerkraft verhindert, dass sie sich bewegen",
           "Der Erdmantel ist völlig fest und unbeweglich"
@@ -8931,7 +8931,7 @@
       {
         "id": "course_63_comment_se_forment_les_tremblements_de_t_q7",
         "type": "chronological",
-        "question": "Ordnen Sie die verschiedenen Arten seismischer Wellen nach dem Bruch einer Verwerfung in der Reihenfolge ihres Eintreffens an.",
+        "question": "Ordne die verschiedenen Arten seismischer Wellen nach dem Bruch einer Verwerfung in der Reihenfolge ihres Eintreffens an.",
         "explanation": "Nach dem Bruch treten zuerst P-Wellen auf, gefolgt von S-Wellen und dann Oberflächenwellen, die die sichtbarsten Schwingungen im Boden verursachen.",
         "items": [
           "P-Wellen, die das Gestein wie eine Ziehharmonika zusammendrücken",
@@ -9076,7 +9076,7 @@
       {
         "id": "course_64_la_catastrophe_de_tchernobyl_1986_q7",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Tschernobyl-Katastrophe in chronologischer Reihenfolge.",
+        "question": "Ordne diese Phasen der Tschernobyl-Katastrophe in chronologischer Reihenfolge.",
         "explanation": "Die Explosion ereignete sich am 26. April 1986, Pripjat wurde am nächsten Tag evakuiert, 1986 wurde ein erster Sarkophag gebaut, der 2016 durch einen neuen Bogen ersetzt wurde.",
         "items": [
           "Ein Sicherheitstest am Reaktor Nr. 4 geht schief und verursacht eine Explosion",
@@ -9369,7 +9369,7 @@
       {
         "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_q8",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr schlug Frank Drake seine Gleichung zur Schätzung der Anzahl kommunizierender Zivilisationen vor?",
+        "question": "In welchem Jahr schlug Frank Drake seine Gleichung zur Schätzung der Anzahl kommunizierender Zivilisationen vor?",
         "explanation": "Frank Drake schlug seine Gleichung 1961 vor.",
         "correctValue": 1961.0,
         "sliderMin": 1940.0,
@@ -9490,7 +9490,7 @@
       {
         "id": "course_67_qu_est_ce_qu_un_trou_noir_q6",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde das erste Bild eines Schwarzen Lochs (M87*) veröffentlicht?",
+        "question": "In welchem Jahr wurde das erste Bild eines Schwarzen Lochs (M87*) veröffentlicht?",
         "explanation": "Das erste Bild eines Schwarzen Lochs, das der Galaxie M87, wurde im April 2019 vom Event Horizon Telescope-Projekt veröffentlicht.",
         "correctValue": 2019.0,
         "sliderMin": 2010.0,
@@ -9659,7 +9659,7 @@
       {
         "id": "course_68_la_theorie_de_la_relativite_pour_tous_q9",
         "type": "mcq",
-        "question": "In welchem ​​Jahrzehnt wurden die von Einstein 1916 vorhergesagten Gravitationswellen erstmals entdeckt?",
+        "question": "In welchem Jahrzehnt wurden die von Einstein 1916 vorhergesagten Gravitationswellen erstmals entdeckt?",
         "explanation": "Wir mussten bis 2015 und am LIGO-Observatorium warten, um die von Einstein 1916 vorhergesagten Gravitationswellen zu entdecken.",
         "options": [
           "In den 2010er Jahren vom LIGO-Observatorium",
@@ -9745,7 +9745,7 @@
       {
         "id": "course_69_comment_se_forment_les_eclairs_q4",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Blitzentstehung.",
+        "question": "Ordne diese Phasen der Blitzentstehung.",
         "explanation": "Die Ladungen trennen sich zunächst in der Wolke, dann ionisiert die Luft, der zurückkommende Lichtbogen erleuchtet den Himmel und durch die plötzliche Ausdehnung der erhitzten Luft entsteht schließlich Donner.",
         "items": [
           "Kollisionen zwischen Eiskristallen und Schneeregen trennen elektrische Ladungen in der Wolke",
@@ -11261,7 +11261,7 @@
         "question": "Welcher griechische Held brauchte zehn Jahre, um nach dem Trojanischen Krieg nach Hause zurückzukehren?",
         "explanation": "Odysseus, König von Ithaka, braucht nach dem Ende des Trojanischen Krieges zehn Jahre, um nach Hause zurückzukehren: Dies ist das Thema der Odyssee.",
         "options": [
-          "Ulysses",
+          "Odysseus",
           "Achilles",
           "Agamemnon",
           "Äneas"
@@ -11492,8 +11492,8 @@
       {
         "id": "course_82_l_iliade_homere_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Schritte der Ilias.",
-        "explanation": "Diese vier Meilensteine ​​strukturieren das Gedicht: der erste Streit, die Trauer, die Achilleus bewaffnet, das entscheidende Duell, dann der Schauplatz der wiederentdeckten Menschheit.",
+        "question": "Ordne diese Schritte der Ilias.",
+        "explanation": "Diese vier Meilensteine strukturieren das Gedicht: der erste Streit, die Trauer, die Achilleus bewaffnet, das entscheidende Duell, dann der Schauplatz der wiederentdeckten Menschheit.",
         "items": [
           "Streit zwischen Achilles und Agamemnon",
           "Tod des Patroklos",
@@ -11849,7 +11849,7 @@
       {
         "id": "course_85_le_banquet_platon_q1",
         "type": "mcq",
-        "question": "In welchem ​​Kontext findet der Dialog des Banketts statt?",
+        "question": "In welchem Kontext findet der Dialog des Banketts statt?",
         "explanation": "Das Bankett findet im Rahmen eines Symposions statt, einem Bürgeressen, bei dem getrunken, diskutiert und eloquent konkurriert wird.",
         "options": [
           "Ein Essen der athenischen Bürger, ein Symposion",
@@ -12074,7 +12074,7 @@
       {
         "id": "course_86_la_republique_platon_q8",
         "type": "chronological",
-        "question": "Bringen Sie diese politischen Regime wieder in die von Platon beschriebene Degenerationsordnung.",
+        "question": "Bring diese politischen Regime wieder in die von Platon beschriebene Degenerationsordnung.",
         "explanation": "Platon beschreibt eine fortschreitende Degeneration von Regimen, von denen jedes aus den Lastern des vorherigen hervorgegangen ist, von der Aristokratie zur Tyrannei.",
         "items": [
           "Adel",
@@ -12136,7 +12136,7 @@
       {
         "id": "course_87_l_apologie_de_socrate_platon_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde Sokrates in Athen vor Gericht gestellt und zum Tode verurteilt?",
+        "question": "In welchem Jahr wurde Sokrates in Athen vor Gericht gestellt und zum Tode verurteilt?",
         "explanation": "Sokrates wurde 399 v. Chr. vor Gericht gestellt und verurteilt, ein Prozess, der zum Gründungsschauplatz der westlichen Philosophie wurde.",
         "correctValue": 399.0,
         "sliderMin": 380.0,
@@ -12456,7 +12456,7 @@
       {
         "id": "course_89_les_travaux_et_les_jours_hesiode_q5",
         "type": "mcq",
-        "question": "In welchem ​​Zeitalter leben wir gemäß den von Hesiod beschriebenen fünf Zeitaltern der Menschheit?",
+        "question": "In welchem Zeitalter leben wir gemäß den von Hesiod beschriebenen fünf Zeitaltern der Menschheit?",
         "explanation": "Hesiod ordnet seine Zeit der Eisenzeit zu, dem letzten und schlimmsten der fünf Zeitalter, in dem die Gerechtigkeit ins Wanken gerät.",
         "options": [
           "Die Eisenzeit, die schlimmste, in der die Gerechtigkeit schwankt",
@@ -12791,7 +12791,7 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Geschichte von Les Miserables.",
+        "question": "Ordne diese Phasen der Geschichte von Les Miserables.",
         "explanation": "Hugo begann den Roman 1845, nahm das Manuskript nach dem Staatsstreich von 1851 im Exil auf, bevor das Buch 1862 in Brüssel erschien.",
         "items": [
           "Hugo beginnt mit dem Schreiben des Romans unter dem Titel „Les Misères“",
@@ -12802,7 +12802,7 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q10",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde Les Misérables nach siebzehnjähriger Arbeit endlich veröffentlicht?",
+        "question": "In welchem Jahr wurde Les Misérables nach siebzehnjähriger Arbeit endlich veröffentlicht?",
         "explanation": "Les Miserables erschien 1862 in Brüssel, nach siebzehnjähriger Arbeit ab 1845.",
         "correctValue": 1862.0,
         "sliderMin": 1840.0,
@@ -13100,7 +13100,7 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q9",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde „The Red and the Black“ veröffentlicht?",
+        "question": "In welchem Jahr wurde „Rot und Schwarz“ veröffentlicht?",
         "explanation": "Der Roman erschien 1830, kurz vor den Trois Glorieuses.",
         "correctValue": 1830.0,
         "sliderMin": 1810.0,
@@ -13260,7 +13260,7 @@
       {
         "id": "course_94_candide_voltaire_q9",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde Candide veröffentlicht?",
+        "question": "In welchem Jahr wurde Candide veröffentlicht?",
         "explanation": "Candide erschien 1759, ohne Namen des Autors, vier Jahre nach dem Erdbeben von Lissabon.",
         "correctValue": 1759.0,
         "sliderMin": 1740.0,
@@ -13567,7 +13567,7 @@
       {
         "id": "course_96_l_etranger_camus_q9",
         "type": "numericSlider",
-        "question": "In welchem ​​Alter erhielt Camus den Nobelpreis für Literatur?",
+        "question": "In welchem Alter erhielt Camus den Nobelpreis für Literatur?",
         "explanation": "Camus erhielt 1957 im Alter von 44 Jahren den Nobelpreis für Literatur.",
         "correctValue": 44.0,
         "sliderMin": 30.0,
@@ -13703,7 +13703,7 @@
       {
         "id": "course_97_le_mythe_de_sisyphe_camus_q7",
         "type": "mcq",
-        "question": "Zu welchem ​​Zeitpunkt interessiert sich Camus genau für den Mythos von Sisyphos?",
+        "question": "Zu welchem Zeitpunkt interessiert sich Camus genau für den Mythos von Sisyphos?",
         "explanation": "Camus interessiert sich für den Moment des Abstiegs: Sisyphus ist seinem Schicksal überlegen, weil er sich dessen voll bewusst ist.",
         "options": [
           "Im Moment des Abstiegs, wenn Sisyphos sich seines Schicksals bewusst wird",
@@ -14102,8 +14102,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q1",
         "type": "mcq",
-        "question": "Wer ist der Autor von Les Fleurs du Mal?",
-        "explanation": "Charles Baudelaire veröffentlichte 1857 Les Fleurs du Mal, die Geburtsurkunde der modernen Poesie.",
+        "question": "Wer ist der Autor von Die Blumen des Bösen?",
+        "explanation": "Charles Baudelaire veröffentlichte 1857 Die Blumen des Bösen, die Geburtsurkunde der modernen Poesie.",
         "options": [
           "Charles Baudelaire",
           "Paul Verlaine",
@@ -14115,7 +14115,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q2",
         "type": "mcq",
-        "question": "Warum wurden Les Fleurs du Mal 1857 verurteilt?",
+        "question": "Warum wurden Die Blumen des Bösen 1857 verurteilt?",
         "explanation": "Die Sammlung wurde wegen „Verletzung der öffentlichen Moral“ verurteilt, ein Skandal, der erst 1949 offiziell aufgehoben wurde.",
         "options": [
           "Wegen „Verstoß gegen die öffentliche Moral“",
@@ -14128,7 +14128,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q3",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurden die sechs verurteilten Gedichte aus Les Fleurs du Mal offiziell rehabilitiert?",
+        "question": "In welchem Jahr wurden die sechs verurteilten Gedichte aus Die Blumen des Bösen offiziell rehabilitiert?",
         "explanation": "Die sechs 1857 verurteilten Gedichte wurden erst 1949, 92 Jahre später, offiziell rehabilitiert.",
         "correctValue": 1949.0,
         "sliderMin": 1920.0,
@@ -14363,7 +14363,7 @@
       {
         "id": "course_101_1984_george_orwell_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen in Orwells Leben und Werk.",
+        "question": "Ordne diese Phasen in Orwells Leben und Werk.",
         "explanation": "Diese vier Phasen kennzeichnen Orwells Karriere: der spanische Bürgerkrieg (1936-1937), die Farm der Tiere (1945), 1984 (1949) und dann sein Tod im Jahr 1950.",
         "items": [
           "Orwell kämpfte während des Spanischen Bürgerkriegs in den POUM-Milizen",
@@ -14485,7 +14485,7 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q6",
         "type": "chronological",
-        "question": "Ordnen Sie diese Schritte von Animal Farm.",
+        "question": "Ordne diese Schritte von Animal Farm.",
         "explanation": "Diese Sequenz zeigt den allmählichen Übergang von der egalitären Revolution hin zur Diktatur der Schweine.",
         "items": [
           "Die Tiere jagen Farmer Jones",
@@ -14964,7 +14964,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q9",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr veröffentlichte Aldous Huxley Brave New World?",
+        "question": "In welchem Jahr veröffentlichte Aldous Huxley Brave New World?",
         "explanation": "Huxley veröffentlichte diesen Roman 1932, nachdem er ihn im Jahr zuvor geschrieben hatte.",
         "correctValue": 1932.0,
         "sliderMin": 1900.0,
@@ -15048,7 +15048,7 @@
       {
         "id": "course_106_frankenstein_mary_shelley_q4",
         "type": "mcq",
-        "question": "Aus welchem ​​wissenschaftlichen Bereich lässt sich Mary Shelley für das Erwachen der Kreatur inspirieren?",
+        "question": "Aus welchem wissenschaftlichen Bereich lässt sich Mary Shelley für das Erwachen der Kreatur inspirieren?",
         "explanation": "Der Galvanismus, der tote Materie mit Elektrizität zu beleben schien, inspirierte direkt die Schöpfungsszene der Kreatur.",
         "options": [
           "Galvanismus, diese elektrischen Experimente an toter Materie",
@@ -15346,7 +15346,7 @@
       {
         "id": "course_108_le_proces_kafka_q4",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde „Der Prozess“ posthum von Max Brod veröffentlicht?",
+        "question": "In welchem Jahr wurde „Der Prozess“ posthum von Max Brod veröffentlicht?",
         "explanation": "Der Prozess wurde 1925, ein Jahr nach Kafkas Tod, veröffentlicht, dank Max Brod, der die Reihenfolge der Kapitel erraten hatte.",
         "correctValue": 1925.0,
         "sliderMin": 1900.0,
@@ -15558,7 +15558,7 @@
       {
         "id": "course_109_don_quichotte_cervantes_q9",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr veröffentlichte Cervantes den ersten Teil von Don Quijote mit sofortigem Erfolg?",
+        "question": "In welchem Jahr veröffentlichte Cervantes den ersten Teil von Don Quijote mit sofortigem Erfolg?",
         "explanation": "Der erste Teil von Don Quijote wurde 1605 veröffentlicht und hatte beim Publikum sofort großen Erfolg.",
         "correctValue": 1605.0,
         "sliderMin": 1580.0,
@@ -15705,7 +15705,7 @@
       {
         "id": "course_110_les_raisins_de_la_colere_steinbeck_q9",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde The Grapes of Wrath veröffentlicht, mitten in der Weltwirtschaftskrise?",
+        "question": "In welchem Jahr wurde The Grapes of Wrath veröffentlicht, mitten in der Weltwirtschaftskrise?",
         "explanation": "Der Roman wurde 1939 veröffentlicht und gewann im folgenden Jahr den Pulitzer-Preis.",
         "correctValue": 1939.0,
         "sliderMin": 1910.0,
@@ -15852,7 +15852,7 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Stationen der Romankarriere in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Stationen der Romankarriere in chronologischer Reihenfolge an.",
         "explanation": "Der Roman erschien 1960, erhielt 1961 den Pulitzer-Preis und wurde 1962 mit Gregory Peck für das Kino adaptiert.",
         "items": [
           "Veröffentlichung des Romans",
@@ -16457,7 +16457,7 @@
       {
         "id": "course_115_cent_ans_de_solitude_garcia_marquez_q10",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr erhielt García Márquez den Nobelpreis für Literatur?",
+        "question": "In welchem Jahr erhielt García Márquez den Nobelpreis für Literatur?",
         "explanation": "García Márquez erhielt 1982, fünfzehn Jahre nach der Veröffentlichung des Romans, den Nobelpreis für Literatur.",
         "correctValue": 1982.0,
         "sliderMin": 1960.0,
@@ -16617,7 +16617,7 @@
       {
         "id": "course_116_la_metamorphose_kafka_q10",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr schrieb Kafka „Die Verwandlung“?",
+        "question": "In welchem Jahr schrieb Kafka „Die Verwandlung“?",
         "explanation": "Kafka schrieb „Die Verwandlung“ 1912, in einer Zeit großer Kreativität, bevor es 1915 veröffentlicht wurde.",
         "correctValue": 1912.0,
         "sliderMin": 1880.0,
@@ -16988,7 +16988,7 @@
       {
         "id": "course_119_le_petit_prince_saint_exupery_q1",
         "type": "mcq",
-        "question": "Wo und in welchem ​​Kontext schrieb Saint-Exupéry „Der kleine Prinz“?",
+        "question": "Wo und in welchem Kontext schrieb Saint-Exupéry „Der kleine Prinz“?",
         "explanation": "Während der Besetzung Frankreichs in New York verbannt, schrieb Saint-Exupéry diese Wüstengeschichte im Komfort von Long Island.",
         "options": [
           "Im New Yorker Exil während der Besetzung Frankreichs",
@@ -17174,7 +17174,7 @@
       {
         "id": "course_120_l_alchimiste_paulo_coelho_q3",
         "type": "trueFalse",
-        "question": "Ob wahr oder falsch: Bei seiner Erstveröffentlichung im Jahr 1988 wurde „The Alchemist“ sofort ein großer kommerzieller Erfolg.",
+        "question": "Ob wahr oder falsch: Bei seiner Erstveröffentlichung im Jahr 1988 wurde „Der Alchimist“ sofort ein großer kommerzieller Erfolg.",
         "explanation": "Ein kleiner brasilianischer Verlag druckte 1988 nur 900 Exemplare und weigerte sich, es erneut zu drucken. Der weltweite Erfolg kommt später.",
         "options": [
           "Wahr",
@@ -17261,7 +17261,7 @@
       {
         "id": "course_120_l_alchimiste_paulo_coelho_q10",
         "type": "numericSlider",
-        "question": "Wie viele Exemplare gab es 1988 in der ersten brasilianischen Auflage von „The Alchemist“?",
+        "question": "Wie viele Exemplare gab es 1988 in der ersten brasilianischen Auflage von „Der Alchimist“?",
         "explanation": "Die erste brasilianische Ausgabe hatte nur 900 Exemplare und der Verlag weigerte sich, das Buch erneut zu drucken.",
         "correctValue": 900.0,
         "sliderMin": 100.0,
@@ -17345,7 +17345,7 @@
       {
         "id": "course_121_la_renaissance_italienne_q4",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr stellte Michelangelo die Decke der Sixtinischen Kapelle fertig?",
+        "question": "In welchem Jahr stellte Michelangelo die Decke der Sixtinischen Kapelle fertig?",
         "explanation": "Michelangelo malte zwischen 1508 und 1512 die Decke der Sixtinischen Kapelle auf einer Fläche von etwa 500 Quadratmetern.",
         "correctValue": 1512.0,
         "sliderMin": 1450.0,
@@ -17356,8 +17356,8 @@
       {
         "id": "course_121_la_renaissance_italienne_q5",
         "type": "chronological",
-        "question": "Ordnen Sie diese Meilensteine ​​der italienischen Renaissance in chronologischer Reihenfolge.",
-        "explanation": "Diese vier Meilensteine ​​(1420, 1453, 1504, 1512) umfassen fast ein Jahrhundert, von der technischen Erfindung der Perspektive bis zum künstlerischen Höhepunkt der Hochrenaissance in Rom.",
+        "question": "Ordne diese Meilensteine der italienischen Renaissance in chronologischer Reihenfolge.",
+        "explanation": "Diese vier Meilensteine (1420, 1453, 1504, 1512) umfassen fast ein Jahrhundert, von der technischen Erfindung der Perspektive bis zum künstlerischen Höhepunkt der Hochrenaissance in Rom.",
         "items": [
           "Brunelleschi erfindet die lineare Perspektive",
           "Fall von Konstantinopel",
@@ -17543,8 +17543,8 @@
       {
         "id": "course_122_la_naissance_de_l_impressionnisme_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Impressionismus in chronologischer Reihenfolge.",
-        "explanation": "Diese drei Meilensteine ​​reichen von 1863 bis 1886, vom ersten Skandal bis zum Ende der Gemeinschaftsausstellungen der Gruppe.",
+        "question": "Ordne diese Phasen des Impressionismus in chronologischer Reihenfolge.",
+        "explanation": "Diese drei Meilensteine reichen von 1863 bis 1886, vom ersten Skandal bis zum Ende der Gemeinschaftsausstellungen der Gruppe.",
         "items": [
           "Der Skandal um Manets Déjeuner sur l'herbe",
           "Die erste unabhängige Ausstellung in Nadar",
@@ -17554,7 +17554,7 @@
       {
         "id": "course_122_la_naissance_de_l_impressionnisme_q9",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr organisierten die Impressionisten ihre erste unabhängige Ausstellung?",
+        "question": "In welchem Jahr organisierten die Impressionisten ihre erste unabhängige Ausstellung?",
         "explanation": "Die erste unabhängige Ausstellung der Gruppe fand im April 1874 im Atelier des Fotografen Nadar statt.",
         "correctValue": 1874.0,
         "sliderMin": 1850.0,
@@ -17690,7 +17690,7 @@
       {
         "id": "course_123_le_caravage_et_le_clair_obscur_q8",
         "type": "numericSlider",
-        "question": "In welchem ​​Alter starb Caravaggio auf der Flucht in Porto Ercole?",
+        "question": "In welchem Alter starb Caravaggio auf der Flucht in Porto Ercole?",
         "explanation": "Gejagt und verletzt starb Caravaggio im Alter von 38 Jahren, wenige Tage vor einer päpstlichen Begnadigung.",
         "correctValue": 38.0,
         "sliderMin": 20.0,
@@ -17701,7 +17701,7 @@
       {
         "id": "course_123_le_caravage_et_le_clair_obscur_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse in Caravaggios Leben in chronologischer Reihenfolge.",
+        "question": "Ordne diese Ereignisse in Caravaggios Leben in chronologischer Reihenfolge.",
         "explanation": "Dieser Werdegang umfasst seine Ankunft um 1593, seinen Triumph im Jahr 1600, sein Exil nach 1606 und seinen Tod im Jahr 1610.",
         "items": [
           "Ankunft in Rom",
@@ -17749,7 +17749,7 @@
       {
         "id": "course_124_rembrandt_et_l_ecole_flamande_q1",
         "type": "mcq",
-        "question": "In welchem ​​politischen Raum agiert Rembrandt, angetrieben von einem bürgerlichen Kunstmarkt?",
+        "question": "In welchem politischen Raum agiert Rembrandt, angetrieben von einem bürgerlichen Kunstmarkt?",
         "explanation": "Im 17. Jahrhundert bestellte das niederländische protestantische Bürgertum Gemälde für seine Häuser, ohne den Weg über die Kirche oder den Hof zu gehen.",
         "options": [
           "Die Vereinigten Provinzen (Niederlande)",
@@ -17847,8 +17847,8 @@
       {
         "id": "course_124_rembrandt_et_l_ecole_flamande_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Abschnitte aus Rembrandts Leben in chronologischer Reihenfolge.",
-        "explanation": "Diese Meilensteine ​​reichen von 1631 bis 1669, von seiner triumphalen Installation in Amsterdam bis zu seinem Tod.",
+        "question": "Ordne diese Abschnitte aus Rembrandts Leben in chronologischer Reihenfolge.",
+        "explanation": "Diese Meilensteine reichen von 1631 bis 1669, von seiner triumphalen Installation in Amsterdam bis zu seinem Tod.",
         "items": [
           "Ankunft in Amsterdam",
           "Die Nachtwache",
@@ -17995,8 +17995,8 @@
       {
         "id": "course_125_le_romantisme_en_peinture_delacroix_geri_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Werke und Ereignisse der Romantik chronologisch an.",
-        "explanation": "Diese Meilensteine ​​reichen von 1816 bis 1832, vom tatsächlichen Schiffbruch bis zur Transformation der Palette von Delacroix durch den Orient.",
+        "question": "Ordne diese Werke und Ereignisse der Romantik chronologisch an.",
+        "explanation": "Diese Meilensteine reichen von 1816 bis 1832, vom tatsächlichen Schiffbruch bis zur Transformation der Palette von Delacroix durch den Orient.",
         "items": [
           "Der Untergang der Fregatte Méduse",
           "Das Floß der Medusa ist ausgestellt",
@@ -18132,8 +18132,8 @@
       {
         "id": "course_126_le_cubisme_picasso_et_braque_q8",
         "type": "chronological",
-        "question": "Bringen Sie diese Phasen des Kubismus in chronologische Reihenfolge.",
-        "explanation": "Diese Meilensteine ​​reichen von 1907 bis 1912, von der ersten Auflösung bis zur Erfindung der Collage.",
+        "question": "Bring diese Phasen des Kubismus in chronologische Reihenfolge.",
+        "explanation": "Diese Meilensteine reichen von 1907 bis 1912, von der ersten Auflösung bis zur Erfindung der Collage.",
         "items": [
           "Die jungen Damen von Avignon",
           "Der analytische Kubismus zerlegt das Objekt",
@@ -18143,7 +18143,7 @@
       {
         "id": "course_126_le_cubisme_picasso_et_braque_q9",
         "type": "numericSlider",
-        "question": "Ungefähr in welchem ​​Jahr vollendete Picasso Les Demoiselles d'Avignon?",
+        "question": "Ungefähr in welchem Jahr vollendete Picasso Les Demoiselles d'Avignon?",
         "explanation": "Picasso vollendete dieses Gründungsgemälde des Kubismus im Jahr 1907.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -18290,8 +18290,8 @@
       {
         "id": "course_127_le_surrealisme_dali_et_magritte_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Meilensteine ​​des Surrealismus in chronologischer Reihenfolge.",
-        "explanation": "Diese Meilensteine ​​reichen von 1924 bis 1939, von der Gründung der Bewegung bis zum Bruch zwischen Breton und Dalí.",
+        "question": "Ordne diese Meilensteine des Surrealismus in chronologischer Reihenfolge.",
+        "explanation": "Diese Meilensteine reichen von 1924 bis 1939, von der Gründung der Bewegung bis zum Bruch zwischen Breton und Dalí.",
         "items": [
           "Bretons Manifest des Surrealismus",
           "Dalí schließt sich der Gruppe der Surrealisten an",
@@ -18401,7 +18401,7 @@
       {
         "id": "course_128_l_expressionnisme_munch_et_le_cri_q6",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde das Wort „Expressionismus“ zum ersten Mal in der Berliner Secession verwendet?",
+        "question": "In welchem Jahr wurde das Wort „Expressionismus“ zum ersten Mal in der Berliner Secession verwendet?",
         "explanation": "Das Wort tauchte 1911 in der Berliner Secession auf, um Künstler zu kennzeichnen, die sich der impressionistischen Sanftmut widersetzten.",
         "correctValue": 1911.0,
         "sliderMin": 1880.0,
@@ -18511,7 +18511,7 @@
       {
         "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_q3",
         "type": "mcq",
-        "question": "In welchem ​​Buch theoretisierte Kandinsky 1911 die lyrische Abstraktion?",
+        "question": "In welchem Buch theoretisierte Kandinsky 1911 die lyrische Abstraktion?",
         "explanation": "Kandinsky veröffentlichte 1911 Du Spirituel dans l'Art, in dem er die emotionale Schwingung von Farben theoretisierte.",
         "options": [
           "Spiritualität in der Kunst",
@@ -18574,8 +18574,8 @@
       {
         "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Meilensteine ​​der abstrakten Kunst in chronologischer Reihenfolge.",
-        "explanation": "Diese Meilensteine ​​reichen von 1910 bis 1919, von den Anfängen Kandinskys bis zum Einzug der Abstraktion in das Design.",
+        "question": "Ordne diese Meilensteine der abstrakten Kunst in chronologischer Reihenfolge.",
+        "explanation": "Diese Meilensteine reichen von 1910 bis 1919, von den Anfängen Kandinskys bis zum Einzug der Abstraktion in das Design.",
         "items": [
           "Kandinsky wendet sich der Abstraktion zu",
           "Spiritual in Art wird veröffentlicht",
@@ -18586,7 +18586,7 @@
       {
         "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_q9",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr gründete Mondrian die De Stijl-Bewegung?",
+        "question": "In welchem Jahr gründete Mondrian die De Stijl-Bewegung?",
         "explanation": "Mondrian gründete De Stijl im Jahr 1917 und theoretisierte dort den Neoplastizismus.",
         "correctValue": 1917.0,
         "sliderMin": 1900.0,
@@ -18633,7 +18633,7 @@
       {
         "id": "course_130_le_pop_art_warhol_et_lichtenstein_q1",
         "type": "mcq",
-        "question": "In welchem ​​Land wurde die Pop-Art geboren, bevor sie in den Vereinigten Staaten explodierte?",
+        "question": "In welchem Land wurde die Pop-Art geboren, bevor sie in den Vereinigten Staaten explodierte?",
         "explanation": "Pop Art wurde in Großbritannien mit der Independent Group geboren, bevor sie in den 1960er Jahren in den Vereinigten Staaten explodierte.",
         "options": [
           "Großbritannien",
@@ -18722,7 +18722,7 @@
       {
         "id": "course_130_le_pop_art_warhol_et_lichtenstein_q8",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr erreichte ein Marilyn-Porträt von Warhol bei einer Auktion 195 Millionen US-Dollar?",
+        "question": "In welchem Jahr erreichte ein Marilyn-Porträt von Warhol bei einer Auktion 195 Millionen US-Dollar?",
         "explanation": "Im Jahr 2022 wird dieses Porträt von Marilyn zu einem der teuersten amerikanischen Kunstwerke, die jemals verkauft wurden.",
         "correctValue": 2022.0,
         "sliderMin": 1990.0,
@@ -18733,8 +18733,8 @@
       {
         "id": "course_130_le_pop_art_warhol_et_lichtenstein_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Meilensteine ​​der Pop-Art in chronologischer Reihenfolge.",
-        "explanation": "Diese Meilensteine ​​reichen von 1957 bis 2022, von der Definition der Bewegung bis zur Weihe ihrer Ikonen auf dem Kunstmarkt.",
+        "question": "Ordne diese Meilensteine der Pop-Art in chronologischer Reihenfolge.",
+        "explanation": "Diese Meilensteine reichen von 1957 bis 2022, von der Definition der Bewegung bis zur Weihe ihrer Ikonen auf dem Kunstmarkt.",
         "items": [
           "Richard Hamilton definiert Pop Art",
           "Warhol und Lichtenstein setzen in den USA eine Pop-Ästhetik durch",
@@ -18895,8 +18895,8 @@
       {
         "id": "course_131_la_naissance_de_la_musique_electronique_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Meilensteine ​​der elektronischen Musik in chronologischer Reihenfolge.",
-        "explanation": "Diese Meilensteine ​​reichen von 1920 bis in die 1980er Jahre, von Pionierlaboren bis zur Geburt des modernen elektronischen Tanzes.",
+        "question": "Ordne diese Meilensteine der elektronischen Musik in chronologischer Reihenfolge.",
+        "explanation": "Diese Meilensteine reichen von 1920 bis in die 1980er Jahre, von Pionierlaboren bis zur Geburt des modernen elektronischen Tanzes.",
         "items": [
           "Erfindung des Theremins",
           "Geburt der Musique Concrete in Paris",
@@ -18956,7 +18956,7 @@
       {
         "id": "course_132_bob_dylan_et_la_folk_protest_q2",
         "type": "mcq",
-        "question": "In welchem ​​Künstlerviertel Manhattans ließ sich Dylan nieder und unterschrieb bei Columbia Records?",
+        "question": "In welchem Künstlerviertel Manhattans ließ sich Dylan nieder und unterschrieb bei Columbia Records?",
         "explanation": "Greenwich Village, das Herz des Folk-Revivals, ist das Viertel, in dem Dylan durch die Cafés streifte, bevor er Ende 1961 bei Columbia unterschrieb.",
         "options": [
           "Greenwich Village",
@@ -18980,7 +18980,7 @@
       {
         "id": "course_132_bob_dylan_et_la_folk_protest_q4",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde das Album The Freewheelin' Bob Dylan veröffentlicht, das Blowin' in the Wind enthält?",
+        "question": "In welchem Jahr wurde das Album The Freewheelin' Bob Dylan veröffentlicht, das Blowin' in the Wind enthält?",
         "explanation": "Der 1963 veröffentlichte Freewheelin' Bob Dylan etablierte Blowin' in the Wind als Hymne des Protests.",
         "correctValue": 1963.0,
         "sliderMin": 1958.0,
@@ -19017,7 +19017,7 @@
       {
         "id": "course_132_bob_dylan_et_la_folk_protest_q7",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen von Bob Dylans Karriere in chronologischer Reihenfolge.",
+        "question": "Ordne diese Phasen von Bob Dylans Karriere in chronologischer Reihenfolge.",
         "explanation": "Von 1961 bis 2016 gelang es Dylan, von seiner Ankunft in New York bis zum Gewinn des Literaturnobelpreises zu gehen, indem er den Marsch auf Washington und die elektrische Wende in Newport überquerte.",
         "items": [
           "Ankunft in New York und Entdeckung von Greenwich Village",
@@ -19089,7 +19089,7 @@
       {
         "id": "course_133_le_hip_hop_naissance_d_une_culture_q1",
         "type": "mcq",
-        "question": "In welchem ​​Viertel New Yorks wurde Hip-Hop in den frühen 1970er Jahren geboren?",
+        "question": "In welchem Viertel New Yorks wurde Hip-Hop in den frühen 1970er Jahren geboren?",
         "explanation": "In der Bronx, die von der Zerstörung von Wohnraum und Immobilienspekulationen heimgesucht wurde, wurde Hip-Hop geboren.",
         "options": [
           "Die Bronx",
@@ -19165,7 +19165,7 @@
       {
         "id": "course_133_le_hip_hop_naissance_d_une_culture_q7",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr erschien „Rapper's Delight“ von der Sugarhill Gang, der erste große kommerzielle Rap-Erfolg?",
+        "question": "In welchem Jahr erschien „Rapper's Delight“ von der Sugarhill Gang, der erste große kommerzielle Rap-Erfolg?",
         "explanation": "Rapper's Delight erschien 1979 und bewies, dass Rap ein Welthit werden könnte.",
         "correctValue": 1979.0,
         "sliderMin": 1970.0,
@@ -19176,7 +19176,7 @@
       {
         "id": "course_133_le_hip_hop_naissance_d_une_culture_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Meilensteine ​​der Hip-Hop-Geschichte in chronologischer Reihenfolge.",
+        "question": "Ordne diese Meilensteine der Hip-Hop-Geschichte in chronologischer Reihenfolge.",
         "explanation": "Von der Gründungsparty 1973 bis zum Pulitzer-Preis 2018 entwickelte sich Hip-Hop von einer Nachbarschaftskultur zu einer institutionell anerkannten Kunst.",
         "items": [
           "Kool Herc erfindet den Breakbeat auf einer Party in der Bronx",
@@ -19285,7 +19285,7 @@
       {
         "id": "course_134_l_opera_de_verdi_q5",
         "type": "mcq",
-        "question": "Auf welchem ​​französischen Roman basiert „La Traviata“?",
+        "question": "Auf welchem französischen Roman basiert „La Traviata“?",
         "explanation": "La Traviata adaptiert Die Kameliendame, die mit ihrer zeitgenössischen und tuberkulösen Heldin schockiert.",
         "options": [
           "Die Kameliendame von Alexandre Dumas fils",
@@ -19309,7 +19309,7 @@
       {
         "id": "course_134_l_opera_de_verdi_q7",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr starb Verdi, gefolgt von mehr als 300.000 Menschen in Mailand?",
+        "question": "In welchem Jahr starb Verdi, gefolgt von mehr als 300.000 Menschen in Mailand?",
         "explanation": "Verdi starb 1901; Während seiner Beerdigung sang die Menge spontan Nabucco.",
         "correctValue": 1901.0,
         "sliderMin": 1850.0,
@@ -19320,7 +19320,7 @@
       {
         "id": "course_134_l_opera_de_verdi_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Verdi-Opern in der chronologischen Reihenfolge ihrer Entstehung an.",
+        "question": "Ordne diese Verdi-Opern in der chronologischen Reihenfolge ihrer Entstehung an.",
         "explanation": "Von Nabucco im Jahr 1842 bis Falstaff im Jahr 1893 umfasst Verdi mehr als fünfzig Jahre lyrischen Schaffens.",
         "items": [
           "Nabucco triumphiert und Va, pensiero wird zur Hymne",
@@ -19444,7 +19444,7 @@
       {
         "id": "course_135_mozart_enfant_prodige_et_vie_tragique_q6",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr starb Mozart im Alter von nur 35 Jahren?",
+        "question": "In welchem Jahr starb Mozart im Alter von nur 35 Jahren?",
         "explanation": "Mozart starb am 5. Dezember 1791 und hinterließ sein Requiem unvollendet.",
         "correctValue": 1791.0,
         "sliderMin": 1750.0,
@@ -19479,7 +19479,7 @@
       {
         "id": "course_135_mozart_enfant_prodige_et_vie_tragique_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Stationen aus Mozarts Leben in chronologischer Reihenfolge.",
+        "question": "Ordne diese Stationen aus Mozarts Leben in chronologischer Reihenfolge.",
         "explanation": "Von der Europatournee bis zu seinem Tod im Jahr 1791, über Rom und die Wiener Trennung beschleunigte sich Mozarts Leben bis zu seinem frühen Ende.",
         "items": [
           "Unter der Anleitung seines Vaters tourt Mozart durch Europa",
@@ -19540,7 +19540,7 @@
       {
         "id": "course_136_beethoven_genie_et_surdite_q2",
         "type": "mcq",
-        "question": "Bei welchem ​​berühmten Komponisten studierte Beethoven kurz nach seiner Ankunft in Wien im Jahr 1792?",
+        "question": "Bei welchem berühmten Komponisten studierte Beethoven kurz nach seiner Ankunft in Wien im Jahr 1792?",
         "explanation": "Nach seiner Ankunft in der Musikhauptstadt studierte Beethoven kurzzeitig bei Joseph Haydn.",
         "options": [
           "Joseph Haydn",
@@ -19590,7 +19590,7 @@
       {
         "id": "course_136_beethoven_genie_et_surdite_q6",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr vollendete Beethoven seine Neunte Symphonie?",
+        "question": "In welchem Jahr vollendete Beethoven seine Neunte Symphonie?",
         "explanation": "Beethoven vollendete die Neunte Symphonie im Jahr 1824, als er fast völlig taub war.",
         "correctValue": 1824.0,
         "sliderMin": 1780.0,
@@ -19625,7 +19625,7 @@
       {
         "id": "course_136_beethoven_genie_et_surdite_q9",
         "type": "chronological",
-        "question": "Bringen Sie diese Stationen in Beethovens Leben in chronologische Reihenfolge.",
+        "question": "Bring diese Stationen in Beethovens Leben in chronologische Reihenfolge.",
         "explanation": "Von seiner Ankunft in Wien im Jahr 1792 bis zur Neunten Symphonie von 1824 verwandelte Beethoven seine Tortur der Taubheit in eine monumentale Schöpfung.",
         "items": [
           "Beethoven lässt sich in Wien nieder und studiert bei Haydn",
@@ -19686,7 +19686,7 @@
       {
         "id": "course_137_la_naissance_du_rock_n_roll_q2",
         "type": "mcq",
-        "question": "Mit welchem ​​Produzenten nahm Elvis Presley 1954 That's All Right auf?",
+        "question": "Mit welchem Produzenten nahm Elvis Presley 1954 That's All Right auf?",
         "explanation": "Mit dem Produzenten Sam Phillips nahm Elvis in Memphis seinen ersten bedeutenden Song auf.",
         "options": [
           "Sam Phillips, in Memphis",
@@ -19749,7 +19749,7 @@
       {
         "id": "course_137_la_naissance_du_rock_n_roll_q7",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr nahm Elvis Presley „That's All Right“ im Haus von Sam Phillips auf?",
+        "question": "In welchem Jahr nahm Elvis Presley „That's All Right“ im Haus von Sam Phillips auf?",
         "explanation": "Diese Aufnahme von Sam Phillips markierte 1954 den eigentlichen Auftakt des Rock'n'Roll.",
         "correctValue": 1954.0,
         "sliderMin": 1945.0,
@@ -19760,7 +19760,7 @@
       {
         "id": "course_137_la_naissance_du_rock_n_roll_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Geburt des Rock'n'Roll in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Phasen der Geburt des Rock'n'Roll in chronologischer Reihenfolge an.",
         "explanation": "Von Elvis' Aufnahme im Jahr 1954 bis zur britischen Invasion in den 1960er Jahren wurde Rock'n'Roll aufgebaut und dann weltweit ausgestrahlt.",
         "items": [
           "Elvis Presley nimmt That's All Right im Haus von Sam Phillips auf",
@@ -19917,7 +19917,7 @@
       {
         "id": "course_138_bach_et_la_musique_baroque_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Meilensteine ​​in Bachs Leben und Vermächtnis in chronologischer Reihenfolge.",
+        "question": "Ordne diese Meilensteine in Bachs Leben und Vermächtnis in chronologischer Reihenfolge.",
         "explanation": "Von 1723 bis 1977 entwickelte sich Bach vom wenig bekannten Kantor zum Klangbotschafter der Menschheit im Weltraum.",
         "items": [
           "Bach wird Kantor der Thomaskirche in Leipzig",
@@ -20041,7 +20041,7 @@
       {
         "id": "course_139_la_naissance_du_jazz_americain_q7",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr veröffentlichte Miles Davis Kind of Blue, bis heute die meistverkaufte Jazzplatte der Welt?",
+        "question": "In welchem Jahr veröffentlichte Miles Davis Kind of Blue, bis heute die meistverkaufte Jazzplatte der Welt?",
         "explanation": "Kind of Blue, 1959 veröffentlicht, erfand den Modal Jazz, indem es Akkordwechsel verlangsamte.",
         "correctValue": 1959.0,
         "sliderMin": 1940.0,
@@ -20052,7 +20052,7 @@
       {
         "id": "course_139_la_naissance_du_jazz_americain_q8",
         "type": "chronological",
-        "question": "Bringen Sie diese Etappen der Jazzgeschichte in chronologische Reihenfolge.",
+        "question": "Bring diese Etappen der Jazzgeschichte in chronologische Reihenfolge.",
         "explanation": "Von Congo Square bis Kind of Blue durchläuft der Jazz fast ein Jahrhundert aufeinanderfolgender Erfindungen.",
         "items": [
           "Jazz entsteht in New Orleans rund um den Congo Square und Blaskapellen",
@@ -20198,7 +20198,7 @@
       {
         "id": "course_140_le_blues_racines_de_toute_la_musique_mod_q8",
         "type": "numericSlider",
-        "question": "Ungefähr in welchem ​​Jahr wurde der Blues in Chicago elektrisch, angetrieben von Muddy Waters?",
+        "question": "Ungefähr in welchem Jahr wurde der Blues in Chicago elektrisch, angetrieben von Muddy Waters?",
         "explanation": "In den 1940er Jahren wurde der ländliche Delta-Blues in Chicago elektrisierend.",
         "correctValue": 1945.0,
         "sliderMin": 1900.0,
@@ -20209,7 +20209,7 @@
       {
         "id": "course_140_le_blues_racines_de_toute_la_musique_mod_q9",
         "type": "chronological",
-        "question": "Bringen Sie diese Etappen der Blues-Geschichte in chronologische Reihenfolge.",
+        "question": "Bring diese Etappen der Blues-Geschichte in chronologische Reihenfolge.",
         "explanation": "Vom ländlichen tiefen Süden bis zum britischen Export hat der Blues fast ein Jahrhundert der Transformation durchgemacht.",
         "items": [
           "Der Blues wurde auf den Baumwollfeldern des tiefen Südens mit Rufen und Spirituals geboren",
@@ -20307,7 +20307,7 @@
       {
         "id": "course_141_la_naissance_de_la_photographie_q5",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr stellte Louis Daguerre sein Verfahren der Akademie der Wissenschaften vor?",
+        "question": "In welchem Jahr stellte Louis Daguerre sein Verfahren der Akademie der Wissenschaften vor?",
         "explanation": "Daguerre präsentierte die Daguerreotypie 1839 der Akademie der Wissenschaften.",
         "correctValue": 1839.0,
         "sliderMin": 1800.0,
@@ -20355,7 +20355,7 @@
       {
         "id": "course_141_la_naissance_de_la_photographie_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Meilensteine ​​in der Geschichte der Fotografie in chronologischer Reihenfolge.",
+        "question": "Ordne diese Meilensteine in der Geschichte der Fotografie in chronologischer Reihenfolge.",
         "explanation": "Von Niépces erstem Bild bis zur Demokratisierung von Kodak verbreitete sich die Fotografie in weniger als einem Jahrhundert.",
         "items": [
           "Niépce starrt aus seinem Fenster auf das erste dauerhafte Bild",
@@ -20453,7 +20453,7 @@
       {
         "id": "course_142_charlie_chaplin_et_le_cinema_muet_q5",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr erfand Chaplin das Tramp-Kostüm?",
+        "question": "In welchem Jahr erfand Chaplin das Tramp-Kostüm?",
         "explanation": "Im Jahr 1914 erfand Chaplin das Tramp-Kostüm fast zufällig in einer Studio-Umkleidekabine.",
         "correctValue": 1914.0,
         "sliderMin": 1895.0,
@@ -20488,8 +20488,8 @@
       {
         "id": "course_142_charlie_chaplin_et_le_cinema_muet_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen von Chaplins Karriere und Kino in chronologischer Reihenfolge.",
-        "explanation": "Diese vier Meilensteine ​​(1895, 1914, 1940, 1952) zeichnen die Geburt des Kinos, die Erfindung von Charlot, Chaplins politisches Engagement und dann sein erzwungenes Exil nach.",
+        "question": "Ordne diese Phasen von Chaplins Karriere und Kino in chronologischer Reihenfolge.",
+        "explanation": "Diese vier Meilensteine (1895, 1914, 1940, 1952) zeichnen die Geburt des Kinos, die Erfindung von Charlot, Chaplins politisches Engagement und dann sein erzwungenes Exil nach.",
         "items": [
           "Erste öffentliche Vorführung der Brüder Lumière",
           "Chaplin erfindet das Tramp-Kostüm",
@@ -20575,7 +20575,7 @@
       {
         "id": "course_143_orson_welles_et_citizen_kane_q3",
         "type": "mcq",
-        "question": "Mit welchem ​​Kameramann entwickelte Welles die Tiefenschärfetechnik in „Citizen Kane“?",
+        "question": "Mit welchem Kameramann entwickelte Welles die Tiefenschärfetechnik in „Citizen Kane“?",
         "explanation": "Zusammen mit dem Kameramann Gregg Toland sorgt Welles für die Tiefenschärfe, die dafür sorgt, dass alles vom Vordergrund bis zum Hintergrund des Bildes scharf bleibt.",
         "options": [
           "Gregg Toland",
@@ -20649,8 +20649,8 @@
       {
         "id": "course_143_orson_welles_et_citizen_kane_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Geschichte von Citizen Kane in chronologischer Reihenfolge an.",
-        "explanation": "Diese drei Meilensteine ​​(1938, 1941, 1950er Jahre) zeichnen den Aufstieg von Welles im Radio, den anfänglichen Misserfolg des Films und dann seine Rehabilitierung durch europäische Kritiker nach.",
+        "question": "Ordne diese Phasen der Geschichte von Citizen Kane in chronologischer Reihenfolge an.",
+        "explanation": "Diese drei Meilensteine (1938, 1941, 1950er Jahre) zeichnen den Aufstieg von Welles im Radio, den anfänglichen Misserfolg des Films und dann seine Rehabilitierung durch europäische Kritiker nach.",
         "items": [
           "Der Radioschwindel „Krieg der Welten“.",
           "Die Freilassung von Citizen Kane",
@@ -20796,8 +20796,8 @@
       {
         "id": "course_144_la_nouvelle_vague_francaise_q9",
         "type": "chronological",
-        "question": "Bringen Sie diese Phasen der Neuen Welle in chronologische Reihenfolge.",
-        "explanation": "Diese drei Meilensteine ​​(1951, 1959, 1960) zeigen den Übergang von einer kritischen Rezension zu einer Revolution im Autorenkino.",
+        "question": "Bring diese Phasen der Neuen Welle in chronologische Reihenfolge.",
+        "explanation": "Diese drei Meilensteine (1951, 1959, 1960) zeigen den Übergang von einer kritischen Rezension zu einer Revolution im Autorenkino.",
         "items": [
           "Stiftung Cahiers du cinéma",
           "Triumph der Vierhundert Schläge in Cannes",
@@ -20843,7 +20843,7 @@
       {
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr kam „2001: Odyssee im Weltraum“ in die Kinos?",
+        "question": "In welchem Jahr kam „2001: Odyssee im Weltraum“ in die Kinos?",
         "explanation": "2001: Odyssee im Weltraum wurde 1968 veröffentlicht und definierte Science-Fiction im Kino neu.",
         "correctValue": 1968.0,
         "sliderMin": 1950.0,
@@ -21092,7 +21092,7 @@
       {
         "id": "course_146_hitchcock_et_le_suspense_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese technischen Innovationen von Hitchcock in chronologischer Reihenfolge.",
+        "question": "Ordne diese technischen Innovationen von Hitchcock in chronologischer Reihenfolge.",
         "explanation": "Diese drei Innovationen (1948, 1954, 1958) markieren die Entwicklung von Hitchcocks Stil, von der Illusion der kontinuierlichen Ebene bis zur optischen Verzerrung des Schwindels.",
         "items": [
           "La Corde simuliert eine einzelne Sequenzaufnahme",
@@ -21202,7 +21202,7 @@
       {
         "id": "course_147_l_architecture_gothique_les_cathedrales_q6",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr begann der Bau von Notre-Dame de Paris?",
+        "question": "In welchem Jahr begann der Bau von Notre-Dame de Paris?",
         "explanation": "Notre-Dame de Paris begann im Jahr 1163 und nahm nach rund 180 Jahren Bauzeit um 1345 Gestalt an.",
         "correctValue": 1163.0,
         "sliderMin": 1100.0,
@@ -21237,8 +21237,8 @@
       {
         "id": "course_147_l_architecture_gothique_les_cathedrales_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der gotischen Architektur in chronologischer Reihenfolge an.",
-        "explanation": "Diese Meilensteine ​​(1140, 1163, 13. Jahrhundert, 19. Jahrhundert) zeigen die Geburt des Stils, seine Verbreitung, seinen klassischen Höhepunkt und dann seine moderne Wiederentdeckung.",
+        "question": "Ordne diese Phasen der gotischen Architektur in chronologischer Reihenfolge an.",
+        "explanation": "Diese Meilensteine (1140, 1163, 13. Jahrhundert, 19. Jahrhundert) zeigen die Geburt des Stils, seine Verbreitung, seinen klassischen Höhepunkt und dann seine moderne Wiederentdeckung.",
         "items": [
           "Suger gründet den Chor von Saint-Denis",
           "Baubeginn für Notre-Dame de Paris",
@@ -21385,8 +21385,8 @@
       {
         "id": "course_148_le_bauhaus_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Etappen der Bauhaus-Geschichte in chronologischer Reihenfolge.",
-        "explanation": "Diese drei Meilensteine ​​(1919, 1925, 1933) zeichnen die Gründung in Weimar, den industriellen Wandel in Dessau und dann die Schließung nach, die das Bauhaus auf der ganzen Welt verbreitete.",
+        "question": "Ordne diese Etappen der Bauhaus-Geschichte in chronologischer Reihenfolge.",
+        "explanation": "Diese drei Meilensteine (1919, 1925, 1933) zeichnen die Gründung in Weimar, den industriellen Wandel in Dessau und dann die Schließung nach, die das Bauhaus auf der ganzen Welt verbreitete.",
         "items": [
           "Gründung des Bauhauses in Weimar",
           "Das Bauhaus lässt sich in Dessau nieder und strebt die Massenproduktion an",
@@ -21519,7 +21519,7 @@
       {
         "id": "course_149_la_joconde_q8",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr tauchte die 1911 gestohlene Mona Lisa wieder auf?",
+        "question": "In welchem Jahr tauchte die 1911 gestohlene Mona Lisa wieder auf?",
         "explanation": "Das Gemälde taucht 1913 wieder auf und kehrt verwandelt in eine Weltberühmtheit in den Louvre zurück.",
         "correctValue": 1913.0,
         "sliderMin": 1911.0,
@@ -21530,8 +21530,8 @@
       {
         "id": "course_149_la_joconde_q9",
         "type": "chronological",
-        "question": "Bringen Sie diese Phasen der Mona Lisa-Geschichte in chronologische Reihenfolge.",
-        "explanation": "Diese Meilensteine ​​(1503, 1519, 1911, 1913) zeichnen die Entstehung des Porträts, den Tod von Leonardo und dann den Diebstahl nach, der das Werk in einen Weltmythos verwandelte.",
+        "question": "Bring diese Phasen der Mona Lisa-Geschichte in chronologische Reihenfolge.",
+        "explanation": "Diese Meilensteine (1503, 1519, 1911, 1913) zeichnen die Entstehung des Porträts, den Tod von Leonardo und dann den Diebstahl nach, der das Werk in einen Weltmythos verwandelte.",
         "items": [
           "Leonardo beginnt das Porträt in Florenz",
           "Tod von Leonardo da Vinci in Frankreich",
@@ -21665,7 +21665,7 @@
       {
         "id": "course_150_la_nuit_etoilee_van_gogh_q8",
         "type": "numericSlider",
-        "question": "In welchem ​​Alter starb Van Gogh im Jahr 1890?",
+        "question": "In welchem Alter starb Van Gogh im Jahr 1890?",
         "explanation": "Van Gogh starb im Juli 1890 in Auvers-sur-Oise im Alter von 37 Jahren, fast unbekannt.",
         "correctValue": 37.0,
         "sliderMin": 20.0,
@@ -21676,8 +21676,8 @@
       {
         "id": "course_150_la_nuit_etoilee_van_gogh_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen in Van Goghs Leben chronologisch an.",
-        "explanation": "Diese Meilensteine ​​(1888, 1889, 1890) zeichnen die Krise mit Gauguin, die Entstehung von „Sternennacht“ aus der Anstalt und dann den Tod des Künstlers nach.",
+        "question": "Ordne diese Phasen in Van Goghs Leben chronologisch an.",
+        "explanation": "Diese Meilensteine (1888, 1889, 1890) zeichnen die Krise mit Gauguin, die Entstehung von „Sternennacht“ aus der Anstalt und dann den Tod des Künstlers nach.",
         "items": [
           "Das Drama von Arles mit Gauguin",
           "Van Gogh malt „Die Sternennacht“ in Saint-Rémy",
@@ -21784,7 +21784,7 @@
       {
         "id": "course_151_guernica_picasso_q6",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr kehrte Guernica nach dem Tod Francos nach Spanien zurück?",
+        "question": "In welchem Jahr kehrte Guernica nach dem Tod Francos nach Spanien zurück?",
         "explanation": "Das Gemälde kehrte 1981 nach dem Ende der Franco-Diktatur nach Madrid zurück.",
         "correctValue": 1981.0,
         "sliderMin": 1960.0,
@@ -21808,7 +21808,7 @@
       {
         "id": "course_151_guernica_picasso_q8",
         "type": "chronological",
-        "question": "Bringen Sie diese Etappen der Geschichte von Guernica in chronologische Reihenfolge.",
+        "question": "Bring diese Etappen der Geschichte von Guernica in chronologische Reihenfolge.",
         "explanation": "Das Gemälde wurde nach dem Bombenangriff im April 1937 gemalt, im selben Jahr auf der Weltausstellung in Paris gezeigt, dann ins MoMA verbannt, bevor es 1981 nach Madrid zurückkehrte.",
         "items": [
           "Die Bombardierung der baskischen Stadt Guernica",
@@ -22029,7 +22029,7 @@
       {
         "id": "course_153_la_creation_d_adam_michel_ange_q3",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr vollendete Michelangelo die Decke der Sixtinischen Kapelle?",
+        "question": "In welchem Jahr vollendete Michelangelo die Decke der Sixtinischen Kapelle?",
         "explanation": "Michelangelo malte zwischen 1508 und 1512 die Decke der Sixtinischen Kapelle und vollendete das Werk im Jahr 1512.",
         "correctValue": 1512.0,
         "sliderMin": 1480.0,
@@ -22202,7 +22202,7 @@
       {
         "id": "course_154_impression_soleil_levant_monet_q5",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde das Gemälde bei Nadar ausgestellt und löste damit den Skandal aus, der der Bewegung ihren Namen gab?",
+        "question": "In welchem Jahr wurde das Gemälde bei Nadar ausgestellt und löste damit den Skandal aus, der der Bewegung ihren Namen gab?",
         "explanation": "Das Gemälde wurde 1874 in Nadar ausgestellt, wo Louis Leroy sich ironisch über den Titel äußerte.",
         "correctValue": 1874.0,
         "sliderMin": 1850.0,
@@ -22373,7 +22373,7 @@
       {
         "id": "course_155_nighthawks_hopper_q8",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr hat Hopper „Nighthawks“ fertiggestellt?",
+        "question": "In welchem Jahr hat Hopper „Nighthawks“ fertiggestellt?",
         "explanation": "Edward Hopper vollendete „Nighthawks“ 1942, kurz nach dem Kriegseintritt der Vereinigten Staaten.",
         "correctValue": 1942.0,
         "sliderMin": 1900.0,
@@ -22434,9 +22434,9 @@
         "id": "course_156_les_demoiselles_d_avignon_picasso_q2",
         "type": "mcq",
         "question": "Woher kommt der Titel Demoiselles d’Avignon?",
-        "explanation": "Der Titel bezieht sich auf eine Straße in Barcelona, ​​die mit Prostitution in Verbindung steht.",
+        "explanation": "Der Titel bezieht sich auf eine Straße in Barcelona, die mit Prostitution in Verbindung steht.",
         "options": [
-          "Aus einer Straße in Barcelona, ​​die mit Prostitution in Verbindung steht",
+          "Aus einer Straße in Barcelona, die mit Prostitution in Verbindung steht",
           "Aus einem Dorf im Süden Frankreichs",
           "Vom Namen des Hauptmodells",
           "Aus einem Auftrag der Stadt Avignon"
@@ -22520,7 +22520,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q9",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr vollendete Picasso Les Demoiselles d'Avignon?",
+        "question": "In welchem Jahr vollendete Picasso Les Demoiselles d'Avignon?",
         "explanation": "Picasso vollendete das Gemälde 1907 in Montmartre.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -22654,7 +22654,7 @@
       {
         "id": "course_157_la_persistance_de_la_memoire_dali_q8",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr malte Dalí „Die Beständigkeit der Erinnerung“?",
+        "question": "In welchem Jahr malte Dalí „Die Beständigkeit der Erinnerung“?",
         "explanation": "Dalí malte das Gemälde 1931.",
         "correctValue": 1931.0,
         "sliderMin": 1900.0,
@@ -22714,7 +22714,7 @@
       {
         "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_q2",
         "type": "mcq",
-        "question": "In welchem ​​religiösen und bürgerlichen Rahmen spielt sich die griechische Tragödie ab?",
+        "question": "In welchem religiösen und bürgerlichen Rahmen spielt sich die griechische Tragödie ab?",
         "explanation": "Die Dionysia, Feste des Dionysos, organisieren Wettbewerbe, bei denen Tragödien entstehen.",
         "options": [
           "Die Dionysia, Feste zu Ehren des Dionysos",
@@ -22924,7 +22924,7 @@
       {
         "id": "course_159_le_theatre_de_shakespeare_q8",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr starb Shakespeare?",
+        "question": "In welchem Jahr starb Shakespeare?",
         "explanation": "William Shakespeare starb 1616.",
         "correctValue": 1616.0,
         "sliderMin": 1550.0,
@@ -23157,7 +23157,7 @@
       {
         "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_q5",
         "type": "chronological",
-        "question": "Bringen Sie diese Phasen der griechischen Mythologie in chronologische Reihenfolge.",
+        "question": "Bring diese Phasen der griechischen Mythologie in chronologische Reihenfolge.",
         "explanation": "Von dieser ursprünglichen Leere bis zum Sieg des Zeus erzählt die griechische Mythologie von einer Reihe von Krisen und Familienübernahmen.",
         "items": [
           "Ursprüngliches Chaos",
@@ -23182,8 +23182,8 @@
       {
         "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_q7",
         "type": "mcq",
-        "question": "In welchem ​​Text erzählt der Dichter Hesiod von der Geburt der griechischen Götter?",
-        "explanation": "Hesiod erzählt in der Theogonie im 8. Jahrhundert v. Chr., wie die Welt vom Chaos zum Hof ​​des Zeus übergeht.",
+        "question": "In welchem Text erzählt der Dichter Hesiod von der Geburt der griechischen Götter?",
+        "explanation": "Hesiod erzählt in der Theogonie im 8. Jahrhundert v. Chr., wie die Welt vom Chaos zum Hof des Zeus übergeht.",
         "options": [
           "Theogonie",
           "Die Ilias",
@@ -23329,7 +23329,7 @@
       {
         "id": "course_162_promethee_le_voleur_de_feu_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Prometheus-Mythos.",
+        "question": "Ordne diese Phasen des Prometheus-Mythos.",
         "explanation": "Von der Opferlist über den Feuerdiebstahl bis hin zu Folter und Befreiung folgt der Mythos von Prometheus einem klaren Verlauf.",
         "items": [
           "Prometheus täuscht Zeus während des Opfers in Mekone",
@@ -23464,7 +23464,7 @@
       {
         "id": "course_163_pandore_et_la_boite_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Pandora-Mythos.",
+        "question": "Ordne diese Phasen des Pandora-Mythos.",
         "explanation": "Von seiner Entstehung bis zur tödlichen Öffnung des Glases folgt der Mythos von Pandora einem sehr präzisen Verlauf.",
         "items": [
           "Die Götter erschaffen Pandora auf Befehl von Zeus",
@@ -23601,7 +23601,7 @@
       {
         "id": "course_164_demeter_et_persephone_les_saisons_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Mythos von Demeter und Persephone.",
+        "question": "Ordne diese Phasen des Mythos von Demeter und Persephone.",
         "explanation": "Von der Entführung bis zur Jahresteilung erklärt dieser Mythos den Wechsel der Jahreszeiten.",
         "items": [
           "Persephones Entführung durch Hades",
@@ -23736,7 +23736,7 @@
       {
         "id": "course_165_orphee_et_eurydice_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Etappen des Mythos von Orpheus und Eurydike.",
+        "question": "Ordne diese Etappen des Mythos von Orpheus und Eurydike.",
         "explanation": "Von der Heirat bis zum endgültigen Verlust Eurydikes folgt dieser Mythos einer tragischen und präzisen Handlung.",
         "items": [
           "Orpheus heiratet die Nymphe Eurydike",
@@ -24009,7 +24009,7 @@
       {
         "id": "course_167_icare_et_dedale_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Mythos von Ikarus und Daedalus.",
+        "question": "Ordne diese Phasen des Mythos von Ikarus und Daedalus.",
         "explanation": "Vom Bau des Labyrinths bis zum Fall des Ikarus folgt die Geschichte einem präzisen Verlauf.",
         "items": [
           "Daedalus baut das Labyrinth für König Minos",
@@ -24157,7 +24157,7 @@
       {
         "id": "course_168_sisyphe_punition_eternelle_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Sisyphos-Mythos.",
+        "question": "Ordne diese Phasen des Sisyphos-Mythos.",
         "explanation": "Von der Offenbarung des Geheimnisses von Ägina bis zur ewigen Verdammnis folgt der Mythos von Sisyphos einem klaren Verlauf.",
         "items": [
           "Sisyphus offenbart Asopos, dass Zeus seine Tochter entführt hat",
@@ -24445,7 +24445,7 @@
       {
         "id": "course_170_meduse_et_persee_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Mythos von Medusa und Perseus.",
+        "question": "Ordne diese Phasen des Mythos von Medusa und Perseus.",
         "explanation": "Von Medusas Angriff bis zu Andromedas Befreiung folgt die Geschichte einem präzisen Verlauf.",
         "items": [
           "Poseidon greift Medusa im Tempel der Athene an",
@@ -24608,7 +24608,7 @@
       {
         "id": "course_171_hercule_et_ses_12_travaux_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Herakles-Mythos.",
+        "question": "Ordne diese Phasen des Herakles-Mythos.",
         "explanation": "Von dem durch Hera ausgelösten Wahnsinn bis zum Abstieg in die Unterwelt folgt die Arbeit des Herakles einem klaren Verlauf.",
         "items": [
           "Hera macht Herakles verrückt und bringt ihn dazu, seine Familie zu töten",
@@ -24695,7 +24695,7 @@
       {
         "id": "course_172_thesee_et_le_minotaure_q4",
         "type": "mcq",
-        "question": "Dank welchem ​​Gegenstand gelingt es Theseus, aus dem Labyrinth herauszukommen?",
+        "question": "Dank welchem Gegenstand gelingt es Theseus, aus dem Labyrinth herauszukommen?",
         "explanation": "Ariane gibt ihm ein Wollknäuel, das er beim Vorwärtsgehen ausrollt und dann wieder aufrollt, um den Ausgang zu finden.",
         "options": [
           "Ein Fadenknäuel, das Ariane ihm gegeben hat",
@@ -24758,7 +24758,7 @@
       {
         "id": "course_172_thesee_et_le_minotaure_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Mythos von Theseus und dem Minotaurus.",
+        "question": "Ordne diese Phasen des Mythos von Theseus und dem Minotaurus.",
         "explanation": "Die Weigerung von Minos löst die Geburt des Minotaurus aus, dann den Tribut, Ariadnes List und schließlich den versehentlichen Tod von Aigeus.",
         "items": [
           "Minos weigert sich, Poseidon einen weißen Stier zu opfern",
@@ -24833,7 +24833,7 @@
         "id": "course_173_ulysse_et_le_cyclope_q3",
         "type": "mcq",
         "question": "Welchen listigen Namen gibt Odysseus Polyphem?",
-        "explanation": "Ulysses stellt sich als „Niemand“ (Outis auf Griechisch) vor, ein Name, der auch Mischlingstum und List hervorruft und nach dem Angriff für Verwirrung sorgt.",
+        "explanation": "Odysseus stellt sich als „Niemand“ (Outis auf Griechisch) vor, ein Name, der auch Mischlingstum und List hervorruft und nach dem Angriff für Verwirrung sorgt.",
         "options": [
           "Niemand (Outis)",
           "Null",
@@ -24908,7 +24908,7 @@
       {
         "id": "course_173_ulysse_et_le_cyclope_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Cyclops-Episode.",
+        "question": "Ordne diese Phasen der Cyclops-Episode.",
         "explanation": "Vom Eintritt in die Höhle über die Blendung bis hin zum Bekenntnis des Namens auf See folgt die Episode einem präzisen Verlauf, der das Schicksal des Odysseus besiegelt.",
         "items": [
           "Odysseus und seine Männer betreten die Höhle des Polyphem",
@@ -25056,7 +25056,7 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Schritte aus der Folge „Die Meerjungfrauen“ in die richtige Reihenfolge.",
+        "question": "Ordne diese Schritte aus der Folge „Die Meerjungfrauen“ in die richtige Reihenfolge.",
         "explanation": "Circes Warnung geht der materiellen Vorbereitung voraus, dann der Prüfung des Liedes selbst, bei dem nur die vorherige Anordnung Odysseus rettet.",
         "items": [
           "Circe warnt Odysseus vor der Gefahr der Sirenen",
@@ -25148,7 +25148,7 @@
         "options": [
           "Als sich die Felsen öffnen, lässt Jason eine Taube frei, um sie zu testen",
           "Sie gehen auf einem anderen Weg um die Felsen herum",
-          "Poseidon bewegt die Steine ​​selbst",
+          "Poseidon bewegt die Steine selbst",
           "Sie warten auf eine mondlose Nacht, um unbemerkt zu bleiben"
         ],
         "correctIndex": 0
@@ -25206,7 +25206,7 @@
       {
         "id": "course_175_jason_et_la_toison_d_or_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Schritte in der Geschichte von Jason und dem Goldenen Vlies.",
+        "question": "Ordne diese Schritte in der Geschichte von Jason und dem Goldenen Vlies.",
         "explanation": "Von der Abreise nach Iolcos bis zu Medeas endgültiger Rache in Korinth folgt der Mythos einem kontinuierlichen Verlauf der Eroberung und des Untergangs.",
         "items": [
           "Jason verliert eine Sandale, während er einer alten Frau hilft",
@@ -25369,7 +25369,7 @@
       {
         "id": "course_176_achille_le_talon_et_l_invulnerabilite_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen im Leben von Achilles.",
+        "question": "Ordne diese Phasen im Leben von Achilles.",
         "explanation": "Von seinem Schutz als Kind bis zu seinem Tod im Kampf folgt Achilles' Schicksal einem Verlauf, der vom Ruhm und der Verhängnis seiner Ferse geprägt ist.",
         "items": [
           "Thetis stürzt den kleinen Achilles in den Styx und hält ihn an der Ferse",
@@ -25532,7 +25532,7 @@
       {
         "id": "course_177_dipe_et_le_sphinx_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Ödipus-Mythos.",
+        "question": "Ordne diese Phasen des Ödipus-Mythos.",
         "explanation": "Von der Flucht aus Korinth bis zur tragischen Enthüllung seiner Identität durchläuft Ödipus eine Reise, auf der seinem Sturz der Sieg über die Sphinx vorausgeht.",
         "items": [
           "Ödipus flieht aus Korinth, um einer Prophezeiung zu entgehen",
@@ -25695,7 +25695,7 @@
       {
         "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Tragödie der Antigone.",
+        "question": "Ordne diese Phasen der Tragödie der Antigone.",
         "explanation": "Vom Tod der beiden Brüder über Kreons Erlass bis hin zu Antigones Ungehorsam und ihrer Verurteilung folgt die Tragödie unaufhaltsam.",
         "items": [
           "Eteokles und Polyneikes töten sich gegenseitig für den Thron von Theben",
@@ -25858,7 +25858,7 @@
       {
         "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Trojanischen Krieges.",
+        "question": "Ordne diese Phasen des Trojanischen Krieges.",
         "explanation": "Vom Urteil von Paris bis zum letzten Trick des hölzernen Pferdes liegen zehn Jahre zwischen dem Ausbruch des Krieges und dem Fall der Stadt.",
         "items": [
           "Paris wählt Aphrodite und erlangt die Liebe Helenes",
@@ -26021,7 +26021,7 @@
       {
         "id": "course_180_thor_et_loki_mythologie_nordique_q10",
         "type": "chronological",
-        "question": "Lassen Sie uns diese Phasen der Beziehung zwischen Thor und Loki ordnen.",
+        "question": "Ordne diese Phasen der Beziehung zwischen Thor und Loki ordnen.",
         "explanation": "Von Lokis Integration in die Aesir bis zu Thors Tod in Ragnarök verwandelt sich die komische Allianz allmählich in eine tödliche Konfrontation.",
         "items": [
           "Loki schließt sich durch einen Pakt mit Odin dem Pantheon der Asen an",
@@ -26132,7 +26132,7 @@
       {
         "id": "course_181_ragnarok_la_fin_du_monde_nordique_q6",
         "type": "chronological",
-        "question": "Bringen Sie diese Phasen von Ragnarök in chronologische Reihenfolge.",
+        "question": "Bring diese Phasen von Ragnarök in chronologische Reihenfolge.",
         "explanation": "Vom Großen Winter bis zur Wiedergeburt der Erde folgt Ragnarök einem präzisen Ablauf: Warnzeichen, letzte Schlacht, Feuersbrunst, dann Erneuerung.",
         "items": [
           "Fimbulwinter, ein dreijähriger Winter ohne Sommer",
@@ -26268,7 +26268,7 @@
       {
         "id": "course_182_osiris_et_set_mythologie_egyptienne_q6",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Mythos von Osiris und Seth.",
+        "question": "Ordne diese Phasen des Mythos von Osiris und Seth.",
         "explanation": "Die Geschichte folgt einem klaren Ablauf: die Ermordung von Osiris, seine Rekonstitution durch Isis, die verborgene Jugend von Horus, dann seine Krönung nach dem Konflikt mit Set.",
         "items": [
           "Stellt Fallen und zerstückelt den Körper von Osiris",
@@ -26353,7 +26353,7 @@
       {
         "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_q1",
         "type": "mcq",
-        "question": "In welchem ​​Medium ist das Gilgamesch-Epos seit über 4.000 Jahren erhalten?",
+        "question": "In welchem Medium ist das Gilgamesch-Epos seit über 4.000 Jahren erhalten?",
         "explanation": "Der Text wurde in Keilschrift auf Tontafeln eingraviert, einem Medium, das dort überlebt hat, wo Papyrus verschwunden wäre.",
         "options": [
           "In Keilschrift eingravierte Tontafeln",
@@ -26366,7 +26366,7 @@
       {
         "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_q2",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr entschlüsselte der Assyriologe George Smith im British Museum die im Epos enthaltene Geschichte der Sintflut?",
+        "question": "In welchem Jahr entschlüsselte der Assyriologe George Smith im British Museum die im Epos enthaltene Geschichte der Sintflut?",
         "explanation": "George Smith entzifferte die Sintfluttafel im Jahr 1872 und enthüllte eine Geschichte, die etwa tausend Jahre älter als die der Genesis war.",
         "correctValue": 1872.0,
         "sliderMin": 1800.0,
@@ -26617,7 +26617,7 @@
       {
         "id": "course_184_romulus_et_remus_la_fondation_de_rome_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Gründung Roms.",
+        "question": "Ordne diese Phasen der Gründung Roms.",
         "explanation": "Von der verlassenen Wiege am Tiber bis zur Apotheose des Romulus folgt der Mythos einer präzisen Chronologie der Geburt, Gründung und Verschmelzung der Völker.",
         "items": [
           "Geburt von Zwillingen, Söhnen von Mars und Rhea Silvia",
@@ -27220,7 +27220,7 @@
       {
         "id": "course_188_les_titans_vs_les_dieux_titanomachie_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Titanomachie.",
+        "question": "Ordne diese Phasen der Titanomachie.",
         "explanation": "Von der Tyrannei von Kronos bis zur Aufteilung der Welt zwischen den drei Brüdern folgt die Titanomachie einem klaren Fortschritt in Richtung der olympischen Ordnung.",
         "items": [
           "Kronos verschlingt seine Kinder aus Angst, entthront zu werden",
@@ -27371,7 +27371,7 @@
       {
         "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen im Leben des Dionysos und seines Kults.",
+        "question": "Ordne diese Phasen im Leben des Dionysos und seines Kults.",
         "explanation": "Von seiner Geburt bis zur Geburt des Theaters folgt der Mythos des Dionysos einer klaren Entwicklung hin zur Bürgerkunst.",
         "items": [
           "Semele stirbt und Zeus vollendet die Schwangerschaft des Dionysos in seinem Oberschenkel",
@@ -27508,7 +27508,7 @@
       {
         "id": "course_191_enee_et_la_fondation_de_rome_virgile_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Etappen der Reise des Aeneas.",
+        "question": "Ordne diese Etappen der Reise des Aeneas.",
         "explanation": "Aeneas' Reise führt vom Fall Trojas über die tragische Liebe Karthagos bis zum italienischen Sieg, der die Linie Roms begründet.",
         "items": [
           "Flucht aus dem brennenden Troja mit Vater und Sohn",
@@ -27631,7 +27631,7 @@
       {
         "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_q6",
         "type": "mcq",
-        "question": "Mit welchem ​​Werkzeug extrahiert der Priester die Herzen der Opfer an der Spitze des Templo Mayor?",
+        "question": "Mit welchem Werkzeug extrahiert der Priester die Herzen der Opfer an der Spitze des Templo Mayor?",
         "explanation": "Der Priester extrahiert mit einem Obsidianmesser, einem scharfen Vulkanstein, das Herz an der Spitze des Templo Mayor in Tenochtitlán.",
         "options": [
           "Ein Obsidianmesser",
@@ -27808,7 +27808,7 @@
       {
         "id": "course_193_quetzalcoatl_q8",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen des Mythos von Quetzalcoatl.",
+        "question": "Ordne diese Phasen des Mythos von Quetzalcoatl.",
         "explanation": "Der Mythos folgt einem kontinuierlichen roten Faden: der Schöpfung, dann der Verbannung des Königspriesters und schließlich dem Wiederaufleben der Legende während der spanischen Eroberung.",
         "items": [
           "Der Schöpfergott erweckt die Menschen wieder zum Leben und bietet ihnen Mais an",
@@ -28106,7 +28106,7 @@
       {
         "id": "course_195_lancelot_guenievre_et_la_table_ronde_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Etappen der Artussage.",
+        "question": "Ordne diese Etappen der Artussage.",
         "explanation": "Der Artus-Zyklus folgt einem vollständigen Verlauf: glorreiche Gründung, spirituelle Suche, Aufdeckung von Verrat und schließlich endgültiger Untergang des Königreichs.",
         "items": [
           "Arthur entfernt Excalibur vom Felsen und gründet den Runden Tisch",
@@ -28456,7 +28456,7 @@
       {
         "id": "course_198_sindbad_le_marin_q3",
         "type": "mcq",
-        "question": "Auf welchem ​​echten und inzwischen ausgestorbenen Lebewesen würde der Roc, der Riesenvogel von Sindbad, basieren?",
+        "question": "Auf welchem echten und inzwischen ausgestorbenen Lebewesen würde der Roc, der Riesenvogel von Sindbad, basieren?",
         "explanation": "Der Roch ist wahrscheinlich vom Aepyornis inspiriert, einem Elefantenvogel aus Madagaskar, der um das Jahr 1000 verschwand und dessen Eier gigantisch waren.",
         "options": [
           "Der Aepyornis, Elefantenvogel Madagaskars",
@@ -28670,7 +28670,7 @@
       {
         "id": "course_199_les_titans_vs_les_dieux_la_titanomachie_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Stadien nach der Titanomachie.",
+        "question": "Ordne diese Stadien nach der Titanomachie.",
         "explanation": "Der olympische Orden wird in Etappen aufgebaut: militärischer Sieg, dann die Verteilung der Strafen, bevor die letzte Prüfung der Gigantomachie erfolgt.",
         "items": [
           "Die Zyklopen und die Hekatonchiren kippen den Krieg zugunsten von Zeus",
@@ -28820,7 +28820,7 @@
       {
         "id": "course_200_re_et_la_creation_du_monde_egypte_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Mythologie von Ra.",
+        "question": "Ordne diese Phasen der Mythologie von Ra.",
         "explanation": "Der Mythos folgt der Erschaffung der Welt, dann der Geburt der Götter, der Krise der menschlichen Revolte und schließlich der theologischen Synthese des Neuen Reiches.",
         "items": [
           "Atum entsteht aus dem Nomen auf dem Benben-Stein",
@@ -28881,7 +28881,7 @@
       {
         "id": "course_201_la_naissance_du_conflit_israelo_palestin_q2",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr gab die britische Regierung die Balfour-Erklärung heraus?",
+        "question": "In welchem Jahr gab die britische Regierung die Balfour-Erklärung heraus?",
         "explanation": "Die Balfour-Erklärung von 1917 versprach eine „nationale Heimat für das jüdische Volk“ in Palästina.",
         "correctValue": 1917.0,
         "sliderMin": 1880.0,
@@ -28914,7 +28914,7 @@
       {
         "id": "course_201_la_naissance_du_conflit_israelo_palestin_q5",
         "type": "chronological",
-        "question": "Bringen Sie diese Ereignisse in chronologische Reihenfolge.",
+        "question": "Bring diese Ereignisse in chronologische Reihenfolge.",
         "explanation": "Diese vier Daten (1897, 1917, 1947, 1948) markieren ein halbes Jahrhundert, von der Geburt des politischen Zionismus über die Gründung des Staates Israel bis zum palästinensischen Exodus.",
         "items": [
           "Basler Kongress",
@@ -29025,7 +29025,7 @@
       {
         "id": "course_202_la_rivalite_chine_etats_unis_q2",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr hat China seine Reformen zur wirtschaftlichen Öffnung eingeleitet?",
+        "question": "In welchem Jahr hat China seine Reformen zur wirtschaftlichen Öffnung eingeleitet?",
         "explanation": "Deng Xiaoping leitete 1978 die Öffnungsreformen ein, ein Wendepunkt, der China in die „Fabrik der Welt“ verwandelte.",
         "correctValue": 1978.0,
         "sliderMin": 1960.0,
@@ -29060,7 +29060,7 @@
       {
         "id": "course_202_la_rivalite_chine_etats_unis_q5",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr überholte China Japan und wurde zur zweitgrößten Volkswirtschaft der Welt?",
+        "question": "In welchem Jahr überholte China Japan und wurde zur zweitgrößten Volkswirtschaft der Welt?",
         "explanation": "China überholte Japan im Jahr 2010 und wurde neun Jahre nach seinem Beitritt zur Welthandelsorganisation zur zweitgrößten Volkswirtschaft der Welt.",
         "correctValue": 2010.0,
         "sliderMin": 1990.0,
@@ -29108,8 +29108,8 @@
       {
         "id": "course_202_la_rivalite_chine_etats_unis_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Rivalität zwischen China und den Vereinigten Staaten in chronologischer Reihenfolge an.",
-        "explanation": "Von 1978 bis zum Handelskrieg der Trump-Ära zeigen diese Meilensteine ​​die allmähliche Umwandlung Chinas in einen systemischen Rivalen der Vereinigten Staaten.",
+        "question": "Ordne diese Phasen der Rivalität zwischen China und den Vereinigten Staaten in chronologischer Reihenfolge an.",
+        "explanation": "Von 1978 bis zum Handelskrieg der Trump-Ära zeigen diese Meilensteine die allmähliche Umwandlung Chinas in einen systemischen Rivalen der Vereinigten Staaten.",
         "items": [
           "Deng Xiaoping leitet Öffnungsreformen ein",
           "Chinas Beitritt zur Welthandelsorganisation",
@@ -29193,7 +29193,7 @@
       {
         "id": "course_203_les_tensions_autour_de_taiwan_q4",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde TSMC in Taiwan gegründet?",
+        "question": "In welchem Jahr wurde TSMC in Taiwan gegründet?",
         "explanation": "TSMC wurde 1987 gegründet und entwickelte sich zum Herzstück der globalen Halbleiterindustrie.",
         "correctValue": 1987.0,
         "sliderMin": 1970.0,
@@ -29239,7 +29239,7 @@
       {
         "id": "course_203_les_tensions_autour_de_taiwan_q8",
         "type": "mcq",
-        "question": "Wie bezeichnen Sie die amerikanische Politik, die nie festlegt, ob die USA Taiwan im Falle eines Angriffs militärisch verteidigen würden?",
+        "question": "Wie nennst du die amerikanische Politik, die nie festlegt, ob die USA Taiwan im Falle eines Angriffs militärisch verteidigen würden?",
         "explanation": "Seit 1979 praktizieren die Vereinigten Staaten strategische Ambiguität: Sie bewaffnen Taiwan, ohne jemals eine direkte militärische Intervention zu bestätigen.",
         "options": [
           "Strategische Ambiguität",
@@ -29252,7 +29252,7 @@
       {
         "id": "course_203_les_tensions_autour_de_taiwan_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse in der Geschichte Taiwans in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Ereignisse in der Geschichte Taiwans in chronologischer Reihenfolge an.",
         "explanation": "Von der Niederlage der Kuomintang bis zu seinen ersten demokratischen Wahlen hat Taiwan in einem halben Jahrhundert eine Identität aufgebaut, die sich vom chinesischen Festland unterscheidet.",
         "items": [
           "Abzug der Kuomintang-Nationalisten auf der Insel Taiwan",
@@ -29337,7 +29337,7 @@
       {
         "id": "course_204_le_concept_de_monde_multipolaire_q4",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr beendete der Fall der UdSSR das bipolare Gleichgewicht des Kalten Krieges?",
+        "question": "In welchem Jahr beendete der Fall der UdSSR das bipolare Gleichgewicht des Kalten Krieges?",
         "explanation": "Die UdSSR brach 1991 zusammen und ebnete den Weg für den unipolaren Moment Amerikas.",
         "correctValue": 1991.0,
         "sliderMin": 1970.0,
@@ -29398,7 +29398,7 @@
       {
         "id": "course_204_le_concept_de_monde_multipolaire_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Etappen auf dem Weg zu einer multipolaren Welt in chronologischer Reihenfolge.",
+        "question": "Ordne diese Etappen auf dem Weg zu einer multipolaren Welt in chronologischer Reihenfolge.",
         "explanation": "Vom Gleichgewicht des Kalten Krieges bis zum Aufstieg der BRICS-Staaten hat sich die Weltordnung innerhalb weniger Jahrzehnte von einer starren Bipolarität zu einer unsicheren Multipolarität entwickelt.",
         "items": [
           "Bipolares Gleichgewicht im Kalten Krieg",
@@ -29446,7 +29446,7 @@
       {
         "id": "course_205_le_petrole_comme_source_de_conflits_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr bohrte der Ingenieur Edwin Drake die erste kommerzielle Ölquelle in Pennsylvania?",
+        "question": "In welchem Jahr bohrte der Ingenieur Edwin Drake die erste kommerzielle Ölquelle in Pennsylvania?",
         "explanation": "Edwin Drake bohrte 1859 die erste kommerzielle Bohrung und läutete damit das Zeitalter des industriellen Öls ein.",
         "correctValue": 1859.0,
         "sliderMin": 1800.0,
@@ -29470,7 +29470,7 @@
       {
         "id": "course_205_le_petrole_comme_source_de_conflits_q3",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr gründeten fünf Förderländer die OPEC in Bagdad?",
+        "question": "In welchem Jahr gründeten fünf Förderländer die OPEC in Bagdad?",
         "explanation": "Die OPEC wurde 1960 in Bagdad gegründet, um den Förderländern die Wiedererlangung der Kontrolle über ihre Ressourcen zu ermöglichen.",
         "correctValue": 1960.0,
         "sliderMin": 1940.0,
@@ -29542,7 +29542,7 @@
       {
         "id": "course_205_le_petrole_comme_source_de_conflits_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse in der Geschichte des Öls als Konfliktherd in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Ereignisse in der Geschichte des Öls als Konfliktherd in chronologischer Reihenfolge an.",
         "explanation": "Von der ersten kommerziellen Bohrung bis zur Invasion Kuwaits prägt die Ölförderung mehr als ein Jahrhundert geopolitischer Rivalitäten.",
         "items": [
           "Erste kommerzielle Ölquelle in Pennsylvania",
@@ -29601,7 +29601,7 @@
       {
         "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_q2",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde der Suezkanal eingeweiht?",
+        "question": "In welchem Jahr wurde der Suezkanal eingeweiht?",
         "explanation": "Der Suezkanal wurde 1869 nach zehnjährigen Bauarbeiten unter der Leitung von Ferdinand de Lesseps eingeweiht.",
         "correctValue": 1869.0,
         "sliderMin": 1800.0,
@@ -29625,7 +29625,7 @@
       {
         "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_q4",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr verstaatlichte der ägyptische Präsident Nasser den Suezkanal?",
+        "question": "In welchem Jahr verstaatlichte der ägyptische Präsident Nasser den Suezkanal?",
         "explanation": "Am 26. Juli 1956 verstaatlichte Nasser die Kanalgesellschaft und löste damit die Suez-Krise aus.",
         "correctValue": 1956.0,
         "sliderMin": 1930.0,
@@ -29695,7 +29695,7 @@
       {
         "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse in der Geschichte des Suezkanals in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Ereignisse in der Geschichte des Suezkanals in chronologischer Reihenfolge an.",
         "explanation": "Von seiner kolonialen Einweihung bis zu den Houthi-Angriffen bleibt der Suezkanal ein Barometer für das globale Kräftegleichgewicht.",
         "items": [
           "Einweihung des Suezkanals",
@@ -29743,7 +29743,7 @@
       {
         "id": "course_207_l_otan_a_quoi_ca_sert_encore_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde die NATO gegründet?",
+        "question": "In welchem Jahr wurde die NATO gegründet?",
         "explanation": "Die NATO wurde offiziell am 4. April 1949, mitten im Kalten Krieg, gegründet.",
         "correctValue": 1949.0,
         "sliderMin": 1930.0,
@@ -29802,7 +29802,7 @@
       {
         "id": "course_207_l_otan_a_quoi_ca_sert_encore_q6",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr marschierte Russland in die Ukraine ein und drängte die NATO, zu ihrer territorialen Verteidigungsmission zurückzukehren?",
+        "question": "In welchem Jahr marschierte Russland in die Ukraine ein und drängte die NATO, zu ihrer territorialen Verteidigungsmission zurückzukehren?",
         "explanation": "Der Einmarsch Russlands in die Ukraine im Jahr 2022 beendet jegliche Unsicherheit über den Nutzen der NATO.",
         "correctValue": 2022.0,
         "sliderMin": 2000.0,
@@ -29837,7 +29837,7 @@
       {
         "id": "course_207_l_otan_a_quoi_ca_sert_encore_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Etappen der NATO-Geschichte in chronologischer Reihenfolge.",
+        "question": "Ordne diese Etappen der NATO-Geschichte in chronologischer Reihenfolge.",
         "explanation": "Von ihrer Gründung gegen die UdSSR bis zum Beitritt Finnlands und Schwedens hat die NATO kontinuierlich expandiert und sich neu erfunden.",
         "items": [
           "Unterzeichnung des Nordatlantikvertrags in Washington",
@@ -29885,7 +29885,7 @@
       {
         "id": "course_208_l_onu_puissante_ou_impuissante_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde die UNO gegründet?",
+        "question": "In welchem Jahr wurde die UNO gegründet?",
         "explanation": "Die Vereinten Nationen wurden 1945 in den Trümmern des Zweiten Weltkriegs gegründet, um Gewalt durch Recht zu ersetzen.",
         "correctValue": 1945.0,
         "sliderMin": 1920.0,
@@ -29968,7 +29968,7 @@
       {
         "id": "course_208_l_onu_puissante_ou_impuissante_q8",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr erschien das Konzept der „Responsibility to Protect“ (R2P)?",
+        "question": "In welchem Jahr erschien das Konzept der „Responsibility to Protect“ (R2P)?",
         "explanation": "Das Konzept der Schutzverantwortung entstand 2005, um die Lücke zu schließen, die das Prinzip der nationalen Souveränität hinterlassen hat.",
         "correctValue": 2005.0,
         "sliderMin": 1990.0,
@@ -29990,8 +29990,8 @@
       {
         "id": "course_208_l_onu_puissante_ou_impuissante_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse der UN-Geschichte in chronologischer Reihenfolge an.",
-        "explanation": "Vom von Roosevelt erfundenen Namen bis zum Anschein der Schutzverantwortung zeigen diese Meilensteine ​​die Erfolge und Grenzen der Institution.",
+        "question": "Ordne diese Ereignisse der UN-Geschichte in chronologischer Reihenfolge an.",
+        "explanation": "Vom von Roosevelt erfundenen Namen bis zum Anschein der Schutzverantwortung zeigen diese Meilensteine die Erfolge und Grenzen der Institution.",
         "items": [
           "Franklin Roosevelt erfand den Namen „Vereinte Nationen“",
           "Gründung der Vereinten Nationen",
@@ -30038,7 +30038,7 @@
       {
         "id": "course_209_la_russie_de_poutine_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde Wladimir Putin zum ersten Mal zum Präsidenten Russlands gewählt?",
+        "question": "In welchem Jahr wurde Wladimir Putin zum ersten Mal zum Präsidenten Russlands gewählt?",
         "explanation": "Wladimir Putin wurde im März 2000 zum Präsidenten gewählt, nachdem er seit dem Rücktritt von Boris Jelzin als Interimspräsident fungiert hatte.",
         "correctValue": 2000.0,
         "sliderMin": 1990.0,
@@ -30110,7 +30110,7 @@
       {
         "id": "course_209_la_russie_de_poutine_q7",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr hat Russland die Krim illegal annektiert?",
+        "question": "In welchem Jahr hat Russland die Krim illegal annektiert?",
         "explanation": "Russland annektierte 2014 illegal die Krim und unterstützte einen bewaffneten Aufstand im Donbass, was die Rückkehr des Territorialkriegs in Europa markierte.",
         "correctValue": 2014.0,
         "sliderMin": 2000.0,
@@ -30121,7 +30121,7 @@
       {
         "id": "course_209_la_russie_de_poutine_q8",
         "type": "numericSlider",
-        "question": "Bis zu welchem ​​Jahr erlaubt die Verfassungsreform 2020 Putin theoretisch, Präsident zu bleiben?",
+        "question": "Bis zu welchem Jahr erlaubt die Verfassungsreform 2020 Putin theoretisch, Präsident zu bleiben?",
         "explanation": "Die Verfassungsreform von 2020 ermöglicht es Putin theoretisch, bis 2036 Präsident zu bleiben.",
         "correctValue": 2036.0,
         "sliderMin": 2020.0,
@@ -30132,7 +30132,7 @@
       {
         "id": "course_209_la_russie_de_poutine_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der Herrschaft Wladimir Putins in chronologischer Reihenfolge.",
+        "question": "Ordne diese Phasen der Herrschaft Wladimir Putins in chronologischer Reihenfolge.",
         "explanation": "Von seiner Wahl bis zum Einmarsch in die Ukraine zeigt dieses Vierteljahrhundert die allmähliche Umwandlung Russlands in ein kriegerisches autoritäres Regime.",
         "items": [
           "Putin wird Präsident Russlands",
@@ -30180,7 +30180,7 @@
       {
         "id": "course_210_la_guerre_en_ukraine_expliquee_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde die Ukraine unabhängig, als die UdSSR auseinanderbrach?",
+        "question": "In welchem Jahr wurde die Ukraine unabhängig, als die UdSSR auseinanderbrach?",
         "explanation": "Mit dem Zerfall der UdSSR wurde die Ukraine 1991 ein souveräner Staat.",
         "correctValue": 1991.0,
         "sliderMin": 1970.0,
@@ -30191,7 +30191,7 @@
       {
         "id": "course_210_la_guerre_en_ukraine_expliquee_q2",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr unterzeichnete die Ukraine das Budapester Memorandum und tauschte ihr Atomwaffenarsenal gegen Garantien der territorialen Integrität ein?",
+        "question": "In welchem Jahr unterzeichnete die Ukraine das Budapester Memorandum und tauschte ihr Atomwaffenarsenal gegen Garantien der territorialen Integrität ein?",
         "explanation": "Durch das Budapester Memorandum von 1994 entwaffnete die Ukraine im Austausch für Garantien der territorialen Integrität.",
         "correctValue": 1994.0,
         "sliderMin": 1985.0,
@@ -30215,7 +30215,7 @@
       {
         "id": "course_210_la_guerre_en_ukraine_expliquee_q4",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr startete Russland seine groß angelegte Invasion in der Ukraine?",
+        "question": "In welchem Jahr startete Russland seine groß angelegte Invasion in der Ukraine?",
         "explanation": "Russland startet am 24. Februar 2022 seine groß angelegte Invasion und löst damit den größten Konflikt in Europa seit 1945 aus.",
         "correctValue": 2022.0,
         "sliderMin": 2010.0,
@@ -30250,7 +30250,7 @@
       {
         "id": "course_210_la_guerre_en_ukraine_expliquee_q7",
         "type": "mcq",
-        "question": "Von welchem ​​internationalen Bankensystem sind russische Banken im Jahr 2022 ausgeschlossen?",
+        "question": "Von welchem internationalen Bankensystem sind russische Banken im Jahr 2022 ausgeschlossen?",
         "explanation": "Der Ausschluss russischer Banken aus dem SWIFT-System und das Einfrieren der Zentralbankreserven markieren einen historischen Bruch der westlichen Sanktionen.",
         "options": [
           "SCHNELL",
@@ -30274,8 +30274,8 @@
       {
         "id": "course_210_la_guerre_en_ukraine_expliquee_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Kriegsereignisse in der Ukraine in chronologischer Reihenfolge.",
-        "explanation": "Von der Unabhängigkeit im Jahr 1991 bis zur NATO-Erweiterung zeichnen diese Meilensteine ​​drei Jahrzehnte der Spannungen zwischen der Ukraine und Russland nach.",
+        "question": "Ordne diese Kriegsereignisse in der Ukraine in chronologischer Reihenfolge.",
+        "explanation": "Von der Unabhängigkeit im Jahr 1991 bis zur NATO-Erweiterung zeichnen diese Meilensteine drei Jahrzehnte der Spannungen zwischen der Ukraine und Russland nach.",
         "items": [
           "Unabhängigkeit der Ukraine",
           "Maidan-Revolution und Annexion der Krim",
@@ -30322,7 +30322,7 @@
       {
         "id": "course_211_comment_fonctionne_le_prix_du_petrole_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr gründeten die Förderländer die OPEC?",
+        "question": "In welchem Jahr gründeten die Förderländer die OPEC?",
         "explanation": "Die OPEC wurde 1960 gegründet, um den Förderländern die Einflussnahme auf den globalen Ölmarkt zu ermöglichen.",
         "correctValue": 1960.0,
         "sliderMin": 1940.0,
@@ -30344,7 +30344,7 @@
       {
         "id": "course_211_comment_fonctionne_le_prix_du_petrole_q3",
         "type": "numericSlider",
-        "question": "Seit welchem ​​Jahr ist Russland der Allianz beigetreten und hat die OPEC+ gegründet?",
+        "question": "Seit welchem Jahr ist Russland der Allianz beigetreten und hat die OPEC+ gegründet?",
         "explanation": "Russland trat der Allianz im Jahr 2016 bei und gründete die OPEC+.",
         "correctValue": 2016.0,
         "sliderMin": 2000.0,
@@ -30425,7 +30425,7 @@
       {
         "id": "course_211_comment_fonctionne_le_prix_du_petrole_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ölpreisereignisse in chronologischer Reihenfolge.",
+        "question": "Ordne diese Ölpreisereignisse in chronologischer Reihenfolge.",
         "explanation": "Von der Gründung der OPEC bis zum Preisanstieg im Jahr 2022 zeigen diese Ereignisse die chronische Volatilität des Ölmarktes.",
         "items": [
           "OPEC-Stiftung",
@@ -30484,7 +30484,7 @@
       {
         "id": "course_212_les_paradis_fiscaux_expliques_q2",
         "type": "mcq",
-        "question": "Mit welchem ​​Tool kann ein Unternehmen seine Gewinne dort ausweisen, wo die Steuern am niedrigsten sind?",
+        "question": "Mit welchem Tool kann ein Unternehmen seine Gewinne dort ausweisen, wo die Steuern am niedrigsten sind?",
         "explanation": "Bei der Verrechnungspreisgestaltung geht es für ein Unternehmen darum, den Preis für den Austausch zwischen seinen eigenen Tochtergesellschaften selbst festzulegen, um seine Gewinne in das Land zu verlagern, in dem die Steuer am niedrigsten ist.",
         "options": [
           "Der Transferpreis",
@@ -30508,7 +30508,7 @@
       {
         "id": "course_212_les_paradis_fiscaux_expliques_q4",
         "type": "chronological",
-        "question": "Bringen Sie diese Ereignisse in chronologische Reihenfolge.",
+        "question": "Bring diese Ereignisse in chronologische Reihenfolge.",
         "explanation": "Die Finanzkrise von 2008 und dann die Panama Papers von 2016 lösten eine Welle der Empörung aus, die 2021 zum internationalen Abkommen über den Mindeststeuersatz führte.",
         "items": [
           "Die globale Finanzkrise",
@@ -30664,7 +30664,7 @@
       {
         "id": "course_213_l_evasion_fiscale_des_multinationales_q5",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde in einem internationalen Abkommen die weltweite Mindeststeuer von 15 % für multinationale Unternehmen festgelegt?",
+        "question": "In welchem Jahr wurde in einem internationalen Abkommen die weltweite Mindeststeuer von 15 % für multinationale Unternehmen festgelegt?",
         "explanation": "Im Jahr 2021 wurde unter der Schirmherrschaft der OECD und der G20 in einem historischen Abkommen eine globale Mindeststeuer von 15 % festgelegt.",
         "correctValue": 2021.0,
         "sliderMin": 2000.0,
@@ -30774,7 +30774,7 @@
       {
         "id": "course_214_la_crise_de_l_etat_providence_q2",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde in Frankreich die Sozialversicherung eingeführt?",
+        "question": "In welchem Jahr wurde in Frankreich die Sozialversicherung eingeführt?",
         "explanation": "Frankreich schuf die soziale Sicherheit 1945 durch einen politischen Kompromiss im Nationalen Widerstandsrat.",
         "correctValue": 1945.0,
         "sliderMin": 1900.0,
@@ -31063,7 +31063,7 @@
         "id": "course_216_la_dette_mondiale_q2",
         "type": "numericSlider",
         "question": "Wie hoch ist die Staatsverschuldung Japans im Verhältnis zum BIP?",
-        "explanation": "Japans Schulden belaufen sich auf fast 260 % ​​seines BIP.",
+        "explanation": "Japans Schulden belaufen sich auf fast 260 % seines BIP.",
         "correctValue": 260.0,
         "sliderMin": 100.0,
         "sliderMax": 400.0,
@@ -31086,7 +31086,7 @@
       {
         "id": "course_216_la_dette_mondiale_q4",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr hat das Vereinigte Königreich seine Schulden aus den Napoleonischen Kriegen und der Finanzblase von 1720 vollständig beglichen?",
+        "question": "In welchem Jahr hat das Vereinigte Königreich seine Schulden aus den Napoleonischen Kriegen und der Finanzblase von 1720 vollständig beglichen?",
         "explanation": "Erst im Jahr 2015 beendete das Vereinigte Königreich die Rückzahlung seiner Schulden aus den Napoleonischen Kriegen und einer Finanzblase von 1720.",
         "correctValue": 2015.0,
         "sliderMin": 1950.0,
@@ -31408,7 +31408,7 @@
       {
         "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_q6",
         "type": "percentageSlider",
-        "question": "Bis zu welchem ​​Prozentsatz des weltweiten Umsatzes eines Unternehmens kann die DSGVO Geldstrafen verhängen?",
+        "question": "Bis zu welchem Prozentsatz des weltweiten Umsatzes eines Unternehmens kann die DSGVO Geldstrafen verhängen?",
         "explanation": "Die DSGVO kann Bußgelder in Höhe von bis zu 4 % des weltweiten Umsatzes eines Unternehmens verhängen, das sich nicht daran hält.",
         "correctValue": 4.0,
         "sliderMin": 0.0,
@@ -31672,7 +31672,7 @@
       {
         "id": "course_220_la_desinformation_et_les_fake_news_q4",
         "type": "mcq",
-        "question": "Zu welchem ​​Zweck hat die russische Internetforschungsagentur Tausende gefälschte Konten erstellt, um Spannungen in westlichen Demokratien zu schüren?",
+        "question": "Zu welchem Zweck hat die russische Internetforschungsagentur Tausende gefälschte Konten erstellt, um Spannungen in westlichen Demokratien zu schüren?",
         "explanation": "Die Internet Research Agency versuchte nicht, eine bestimmte Seite zu verteidigen: Das Ziel bestand oft darin, Chaos zu schaffen und die Menschen glauben zu lassen, dass „jeder lügt“.",
         "options": [
           "Schaffen Sie Chaos und lassen Sie die Menschen glauben, dass „jeder lügt“",
@@ -31810,7 +31810,7 @@
       {
         "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_q3",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr warnten Mario Molina und Frank Sherwood Rowland vor dem Zusammenhang zwischen FCKW und der Zerstörung von Ozon?",
+        "question": "In welchem Jahr warnten Mario Molina und Frank Sherwood Rowland vor dem Zusammenhang zwischen FCKW und der Zerstörung von Ozon?",
         "explanation": "1974 warnten die Chemiker Mario Molina und Frank Sherwood Rowland, dass FCKW Chlor freisetzen, das Ozon zerstört; Sie werden 1995 den Nobelpreis erhalten.",
         "correctValue": 1974.0,
         "sliderMin": 1930.0,
@@ -31880,7 +31880,7 @@
       {
         "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Schritte in der Geschichte des Ozonlochs in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Schritte in der Geschichte des Ozonlochs in chronologischer Reihenfolge an.",
         "explanation": "Diese vier Phasen kennzeichnen die Geschichte des Ozonlochs: die wissenschaftliche Warnung von 1974, die Bestätigung des Lochs im Jahr 1985, die Unterzeichnung des Vertrags im Jahr 1987 und dann der messbare Beginn der Erholung ab dem Jahr 2000.",
         "items": [
           "Der wissenschaftliche Alarm von Molina und Rowland",
@@ -31892,7 +31892,7 @@
       {
         "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_q10",
         "type": "numericSlider",
-        "question": "Bis zu welchem ​​Jahr sollte die Ozonschicht wieder den Zustand von 1980 erreichen, wenn der Vertrag weiterhin eingehalten wird?",
+        "question": "Bis zu welchem Jahr sollte die Ozonschicht wieder den Zustand von 1980 erreichen, wenn der Vertrag weiterhin eingehalten wird?",
         "explanation": "Wenn der Vertrag weiterhin eingehalten wird, dürfte die Ozonschicht zwischen 2065 und 2070 wieder ihren Zustand von 1980 erreichen.",
         "correctValue": 2065.0,
         "sliderMin": 2020.0,
@@ -32735,7 +32735,7 @@
       {
         "id": "course_227_le_populisme_pourquoi_ca_monte_partout_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Ereignisse im Zusammenhang mit dem Aufstieg des Populismus in chronologischer Reihenfolge.",
+        "question": "Ordne diese Ereignisse im Zusammenhang mit dem Aufstieg des Populismus in chronologischer Reihenfolge.",
         "explanation": "Drei symbolische Meilensteine: die Geburt der ersten modernen populistischen Partei im Jahr 1892, die europäische Migrationskrise von 2015 und dann der Angriff auf das Kapitol im Jahr 2021 nach der Anfechtung eines Wahlergebnisses.",
         "items": [
           "Gründung der Volkspartei in den Vereinigten Staaten",
@@ -32841,7 +32841,7 @@
       {
         "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_q6",
         "type": "numericSlider",
-        "question": "Ungefähr in welchem ​​Jahr erlebten die Vereinigten Staaten einen deutlichen Wendepunkt in der Zunahme von Angstzuständen und Depressionen bei 12- bis 25-Jährigen, der mit der weit verbreiteten Nutzung von Smartphones zusammenfiel?",
+        "question": "Ungefähr in welchem Jahr erlebten die Vereinigten Staaten einen deutlichen Wendepunkt in der Zunahme von Angstzuständen und Depressionen bei 12- bis 25-Jährigen, der mit der weit verbreiteten Nutzung von Smartphones zusammenfiel?",
         "explanation": "Dieser Wendepunkt fand um das Jahr 2012 statt, was der Verallgemeinerung von Smartphones und sozialen Netzwerken entspricht.",
         "correctValue": 2012.0,
         "sliderMin": 1990.0,
@@ -33181,7 +33181,7 @@
       {
         "id": "course_230_la_liberte_de_la_presse_dans_le_monde_q9",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde in Straßburg von Johann Carolus die erste gedruckte Zeitung der Geschichte herausgebracht, die „Relation“?",
+        "question": "In welchem Jahr wurde in Straßburg von Johann Carolus die erste gedruckte Zeitung der Geschichte herausgebracht, die „Relation“?",
         "explanation": "Die „Relation“, die erste gedruckte Zeitung der Geschichte, wurde 1605 von Johann Carolus in Straßburg herausgebracht.",
         "correctValue": 1605.0,
         "sliderMin": 1500.0,
@@ -33390,7 +33390,7 @@
       {
         "id": "course_232_la_blockchain_et_les_cryptomonnaies_q3",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde Bitcoin von Satoshi Nakamoto eingeführt?",
+        "question": "In welchem Jahr wurde Bitcoin von Satoshi Nakamoto eingeführt?",
         "explanation": "Bitcoin wurde 2009 von einer anonymen Person oder Gruppe unter dem Namen Satoshi Nakamoto ins Leben gerufen.",
         "correctValue": 2009.0,
         "sliderMin": 1995.0,
@@ -33511,7 +33511,7 @@
       {
         "id": "course_233_le_droit_d_asile_explique_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde die Genfer Flüchtlingskonvention unterzeichnet?",
+        "question": "In welchem Jahr wurde die Genfer Flüchtlingskonvention unterzeichnet?",
         "explanation": "Die Genfer Flüchtlingskonvention wurde 1951, nach dem Zweiten Weltkrieg, unterzeichnet.",
         "correctValue": 1951.0,
         "sliderMin": 1900.0,
@@ -33522,7 +33522,7 @@
       {
         "id": "course_233_le_droit_d_asile_explique_q2",
         "type": "mcq",
-        "question": "Welcher Grund berechtigt Sie gemäß der Genfer Konvention NICHT, den Flüchtlingsstatus zu erlangen?",
+        "question": "Welcher Grund berechtigt dich gemäß der Genfer Konvention NICHT, den Flüchtlingsstatus zu erlangen?",
         "explanation": "Die Flüchtlingsdefinition schließt Opfer von Naturkatastrophen oder Hungersnöten aus, die keine Verfolgung im Sinne der Konvention darstellen.",
         "options": [
           "Eine Naturkatastrophe oder eine Hungersnot",
@@ -33607,7 +33607,7 @@
       {
         "id": "course_233_le_droit_d_asile_explique_q9",
         "type": "chronological",
-        "question": "Ordnen Sie diese Asylphasen in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Asylphasen in chronologischer Reihenfolge an.",
         "explanation": "Diese Phasen reichen von 1951 bis 2024: die Genfer Konvention, ihre Universalisierung durch das Protokoll von 1967, die Migrationskrise von 2015, das EU-Türkei-Abkommen von 2016 und dann der europäische Pakt von 2024.",
         "items": [
           "Unterzeichnung der Genfer Flüchtlingskonvention",
@@ -33931,7 +33931,7 @@
       {
         "id": "course_236_le_soft_power_americain_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr erfand der Politikwissenschaftler Joseph Nye das Konzept der Soft Power?",
+        "question": "In welchem Jahr erfand der Politikwissenschaftler Joseph Nye das Konzept der Soft Power?",
         "explanation": "Joseph Nye erfand das Konzept der Soft Power 1990 in seinem Buch Bound to Lead.",
         "correctValue": 1990.0,
         "sliderMin": 1960.0,
@@ -34185,7 +34185,7 @@
       {
         "id": "course_237_les_gafam_puissance_et_derives_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Übernahmen und Regulierungen der Welt von GAFAM in chronologischer Reihenfolge.",
+        "question": "Ordne diese Übernahmen und Regulierungen der Welt von GAFAM in chronologischer Reihenfolge.",
         "explanation": "Diese Ereignisse reichen von 2012 bis 2024: die Übernahme von Instagram, die von WhatsApp, die Verabschiedung des Digital Markets Act, dann die rechtliche Überwachung künstlicher Intelligenz durch die EU.",
         "items": [
           "Übernahme von Instagram durch Facebook",
@@ -34233,7 +34233,7 @@
       {
         "id": "course_238_la_transition_energetique_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr wurde das Pariser Klimaabkommen unterzeichnet?",
+        "question": "In welchem Jahr wurde das Pariser Klimaabkommen unterzeichnet?",
         "explanation": "Das Pariser Abkommen wurde 2015 unterzeichnet und legt das Ziel fest, die Erwärmung möglichst auf unter 1,5 °C zu begrenzen.",
         "correctValue": 2015.0,
         "sliderMin": 1990.0,
@@ -34365,7 +34365,7 @@
       {
         "id": "course_239_le_futur_du_travail_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr führte Henry Ford die 40-Stunden-Woche ein?",
+        "question": "In welchem Jahr führte Henry Ford die 40-Stunden-Woche ein?",
         "explanation": "Henry Ford führte 1926 die 40-Stunden-Woche ein, eine Entscheidung, die durch die Idee motiviert war, dass auch Arbeitnehmer mit Freizeit zu Kunden wurden.",
         "correctValue": 1926.0,
         "sliderMin": 1880.0,
@@ -34497,7 +34497,7 @@
       {
         "id": "course_240_la_chine_et_son_modele_economique_q1",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr startete Deng Xiaoping die „Reform- und Öffnungspolitik“?",
+        "question": "In welchem Jahr startete Deng Xiaoping die „Reform- und Öffnungspolitik“?",
         "explanation": "Deng Xiaoping startete 1978, nach dem Tod von Mao Zedong, die Politik der „Reform und Öffnung“.",
         "correctValue": 1978.0,
         "sliderMin": 1950.0,
@@ -34556,7 +34556,7 @@
       {
         "id": "course_240_la_chine_et_son_modele_economique_q6",
         "type": "numericSlider",
-        "question": "In welchem ​​Jahr startete Xi Jinping die Belt and Road Initiative, die „neuen Seidenstraßen“?",
+        "question": "In welchem Jahr startete Xi Jinping die Belt and Road Initiative, die „neuen Seidenstraßen“?",
         "explanation": "Xi Jinping startete 2013 die „Belt and Road“-Initiative, eines der größten Infrastrukturinvestitionsprojekte der modernen Geschichte.",
         "correctValue": 2013.0,
         "sliderMin": 1995.0,
@@ -34591,7 +34591,7 @@
       {
         "id": "course_240_la_chine_et_son_modele_economique_q9",
         "type": "mcq",
-        "question": "Auf welchem ​​Gebiet konzentrieren sich die Spannungen zwischen China und dem Westen im Zusammenhang mit dem Zugang zu Halbleitern?",
+        "question": "Auf welchem Gebiet konzentrieren sich die Spannungen zwischen China und dem Westen im Zusammenhang mit dem Zugang zu Halbleitern?",
         "explanation": "Die Spannungen zwischen China und dem Westen konzentrieren sich insbesondere auf den Status Taiwans und den Zugang zu Halbleitern, die für die moderne Industrie von wesentlicher Bedeutung sind.",
         "options": [
           "Taiwan",
@@ -34604,8 +34604,8 @@
       {
         "id": "course_240_la_chine_et_son_modele_economique_q10",
         "type": "chronological",
-        "question": "Ordnen Sie diese Phasen der jüngsten chinesischen Wirtschaftsgeschichte in chronologischer Reihenfolge.",
-        "explanation": "Diese Meilensteine ​​reichen von 1978 bis 2022: Reform und Öffnung, die „Belt and Road“-Initiative, die Evergrande-Krise und dann der Beginn des demografischen Niedergangs.",
+        "question": "Ordne diese Phasen der jüngsten chinesischen Wirtschaftsgeschichte in chronologischer Reihenfolge.",
+        "explanation": "Diese Meilensteine reichen von 1978 bis 2022: Reform und Öffnung, die „Belt and Road“-Initiative, die Evergrande-Krise und dann der Beginn des demografischen Niedergangs.",
         "items": [
           "Beginn der Reform- und Öffnungspolitik",
           "Start der „Belt and Road“-Initiative",

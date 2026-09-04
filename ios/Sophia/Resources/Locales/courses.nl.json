@@ -36,7 +36,7 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "Wat vertegenwoordigt de Hegira in 622?",
+        "question": "Wat vertegenwoordigt de Hidjra in 622?",
         "explanation": "De Hijra is het vertrek van Mohammed, die in Mekka met de dood werd bedreigd, richting de oase van Medina. Deze datum wordt jaar 1 van de moslimkalender.",
         "options": [
           "Mohammeds vertrek van Mekka naar Medina",
@@ -74,7 +74,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
         "question": "In welk jaar stierf Mohammed, waardoor Arabië verenigd bleef onder één gezag?",
-        "explanation": "Mohammed stierf in 632, slechts tien jaar na de Hegira, toen bijna heel Arabië verenigd was.",
+        "explanation": "Mohammed stierf in 632, slechts tien jaar na de Hidjra, toen bijna heel Arabië verenigd was.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
         "sliderMax": 660.0,
@@ -87,7 +87,7 @@
         "question": "Zet deze gebeurtenissen in Mohammeds leven in chronologische volgorde.",
         "explanation": "Deze vier data (622, 624, 630, 632) markeren de twintig jaar waarin Mohammed van bedreigde profeet uitgroeide tot hoofd van een staat die Arabië verenigde.",
         "items": [
-          "De Hegira: vertrek naar Medina",
+          "De Hidjra: vertrek naar Medina",
           "De slag bij Badr",
           "De verovering van Mekka",
           "De dood van Mohammed"
@@ -11261,7 +11261,7 @@
         "question": "Welke Griekse held doet tien jaar over om terug naar huis te gaan na de Trojaanse oorlog?",
         "explanation": "Odysseus, koning van Ithaca, doet er tien jaar over om na het einde van de Troiaanse oorlog naar huis terug te keren: dat is het onderwerp van de Odyssee.",
         "options": [
-          "Ulysses",
+          "Odysseus",
           "Achilles",
           "Agamemnon",
           "Aeneas"
@@ -11272,7 +11272,7 @@
         "id": "course_81_l_odyssee_homere_q2",
         "type": "mcq",
         "question": "Hoe begint het verhaal van de Odyssee, op narratief vlak?",
-        "explanation": "Homer begint zijn verhaal midden in de actie: Ulysses, vastgehouden door de nimf Calypso, vertelt daarna zijn eerdere avonturen in een flashback.",
+        "explanation": "Homer begint zijn verhaal midden in de actie: Odysseus, vastgehouden door de nimf Calypso, vertelt daarna zijn eerdere avonturen in een flashback.",
         "options": [
           "In media res, midden in de actie, terwijl Odysseus door Calypso wordt vastgehouden",
           "Door het verhaal van de geboorte van Odysseus",
@@ -11285,7 +11285,7 @@
         "id": "course_81_l_odyssee_homere_q3",
         "type": "trueFalse",
         "question": "Waar of niet waar: Odysseus ontsnapt aan de Cycloop Polyphemus zonder ooit zijn naam te onthullen.",
-        "explanation": "Ulysses roept trots zijn echte naam nadat hij Polyphemus verblind heeft, waardoor de Cycloop de wraak van zijn vader Poseidon op hem kan aanroepen.",
+        "explanation": "Odysseus roept trots zijn echte naam nadat hij Polyphemus verblind heeft, waardoor de Cycloop de wraak van zijn vader Poseidon op hem kan aanroepen.",
         "options": [
           "Waar",
           "Onwaar"
@@ -11309,7 +11309,7 @@
         "id": "course_81_l_odyssee_homere_q5",
         "type": "mcq",
         "question": "Wie herkent Odysseus als eerste bij zijn terugkeer naar Ithaka, vermomd als bedelaar?",
-        "explanation": "De hond Argos, zeer oud, herkent Ulysses voordat iedereen hem herkent, gevolgd door zijn voedster Euryclée.",
+        "explanation": "De hond Argos, zeer oud, herkent Odysseus voordat iedereen hem herkent, gevolgd door zijn voedster Euryclée.",
         "options": [
           "Zijn oude hond Argos",
           "Zijn vrouw Penelope",
@@ -14102,8 +14102,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q1",
         "type": "mcq",
-        "question": "Wie is de auteur van Les Fleurs du Mal?",
-        "explanation": "Charles Baudelaire publiceerde in 1857 Les Fleurs du Mal, de geboorteakte van de moderne poëzie.",
+        "question": "Wie is de auteur van De bloemen van het kwaad?",
+        "explanation": "Charles Baudelaire publiceerde in 1857 De bloemen van het kwaad, de geboorteakte van de moderne poëzie.",
         "options": [
           "Charles Baudelaire",
           "Paul Verlaine",
@@ -14115,7 +14115,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q2",
         "type": "mcq",
-        "question": "Waarom werden Les Fleurs du Mal in 1857 veroordeeld?",
+        "question": "Waarom werden De bloemen van het kwaad in 1857 veroordeeld?",
         "explanation": "De collectie werd veroordeeld wegens “verontwaardiging over de publieke moraal”, een schandaal dat pas in 1949 officieel zou worden opgeheven.",
         "options": [
           "Wegens “verontwaardiging over de publieke moraal”",
@@ -14128,7 +14128,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q3",
         "type": "numericSlider",
-        "question": "In welk jaar werden de zes veroordeelde gedichten uit Les Fleurs du Mal officieel gerehabiliteerd?",
+        "question": "In welk jaar werden de zes veroordeelde gedichten uit De bloemen van het kwaad officieel gerehabiliteerd?",
         "explanation": "De zes in 1857 veroordeelde gedichten werden pas in 1949, 92 jaar later, officieel gerehabiliteerd.",
         "correctValue": 1949.0,
         "sliderMin": 1920.0,
@@ -17174,7 +17174,7 @@
       {
         "id": "course_120_l_alchimiste_paulo_coelho_q3",
         "type": "trueFalse",
-        "question": "Waar of niet waar: toen het voor het eerst verscheen in 1988, werd The Alchemist meteen een groot commercieel succes.",
+        "question": "Waar of niet waar: toen het voor het eerst verscheen in 1988, werd De alchemist meteen een groot commercieel succes.",
         "explanation": "Een kleine Braziliaanse uitgever drukte in 1988 slechts 900 exemplaren en weigerde te herdrukken; Mondiaal succes komt later.",
         "options": [
           "Waar",
@@ -17261,7 +17261,7 @@
       {
         "id": "course_120_l_alchimiste_paulo_coelho_q10",
         "type": "numericSlider",
-        "question": "Hoeveel exemplaren waren er in 1988 van de eerste Braziliaanse druk van The Alchemist?",
+        "question": "Hoeveel exemplaren waren er in 1988 van de eerste Braziliaanse druk van De alchemist?",
         "explanation": "De eerste Braziliaanse editie telde slechts 900 exemplaren en de uitgever weigerde het boek te herdrukken.",
         "correctValue": 900.0,
         "sliderMin": 100.0,
@@ -24810,7 +24810,7 @@
         "explanation": "Polyphemus is een Cycloop, een eenogige reus, zoon van de zeegod Poseidon.",
         "options": [
           "Een Cycloop, zoon van de god Poseidon",
-          "Een Griekse koning sloot zich aan bij Ulysses",
+          "Een Griekse koning sloot zich aan bij Odysseus",
           "Een god van Olympus",
           "De broer van Odysseus"
         ],
@@ -24833,7 +24833,7 @@
         "id": "course_173_ulysse_et_le_cyclope_q3",
         "type": "mcq",
         "question": "Welke sluwe naam geeft Odysseus aan Polyphemus?",
-        "explanation": "Ulysses stelt zichzelf voor als ‘Niemand’ (Outis in het Grieks), een naam die ook doet denken aan bastaardisme en sluwheid, en die na de aanval verwarring zaait.",
+        "explanation": "Odysseus stelt zichzelf voor als ‘Niemand’ (Outis in het Grieks), een naam die ook doet denken aan bastaardisme en sluwheid, en die na de aanval verwarring zaait.",
         "options": [
           "Niemand (Outis)",
           "nul",
@@ -24898,10 +24898,10 @@
         "question": "Wat is het gevolg van de vloek van Polyphemus over Odysseus?",
         "explanation": "Polyphemus bidt tot zijn vader Poseidon zodat Odysseus lang ronddwaalt en al zijn metgezellen verliest: deze vloek luidt tien jaar van beproevingen op zee in.",
         "options": [
-          "Het structureert tien jaar rondzwerven op zee voor Ulysses",
-          "Ze verandert Ulysses in Cyclops",
+          "Het structureert tien jaar rondzwerven op zee voor Odysseus",
+          "Ze verandert Odysseus in Cyclops",
           "Ze vermoordt onmiddellijk al haar metgezellen",
-          "Ze verhindert dat Ulysses Ithaca ooit nog ziet"
+          "Ze verhindert dat Odysseus Ithaca ooit nog ziet"
         ],
         "correctIndex": 0
       },
@@ -24909,7 +24909,7 @@
         "id": "course_173_ulysse_et_le_cyclope_q9",
         "type": "chronological",
         "question": "Zet deze fasen van de Cyclops-aflevering op volgorde.",
-        "explanation": "Van het betreden van de grot tot het verblind worden en het bekennen van zijn naam op zee: de episode volgt een nauwkeurig verloop dat het lot van Ulysses bezegelt.",
+        "explanation": "Van het betreden van de grot tot het verblind worden en het bekennen van zijn naam op zee: de episode volgt een nauwkeurig verloop dat het lot van Odysseus bezegelt.",
         "items": [
           "Odysseus en zijn mannen gaan de grot van Polyphemus binnen",
           "Polyphemus wordt dronken en vraagt ​​naar de naam van zijn gast",
@@ -25006,8 +25006,8 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q5",
         "type": "mcq",
-        "question": "Wie waarschuwde Ulysses voor het gevaar en de te volgen strategie tegen de Sirenen?",
-        "explanation": "Het was de magiër Circe die Ulysses waarschuwde en hem toestond zijn strategie voor te bereiden.",
+        "question": "Wie waarschuwde Odysseus voor het gevaar en de te volgen strategie tegen de Sirenen?",
+        "explanation": "Het was de magiër Circe die Odysseus waarschuwde en hem toestond zijn strategie voor te bereiden.",
         "options": [
           "De tovenaar Circe",
           "De godin Athene",
@@ -25020,7 +25020,7 @@
         "id": "course_174_ulysse_et_les_sirenes_q6",
         "type": "mcq",
         "question": "Welk sociaal-wetenschappelijk concept illustreert het tafereel van Odysseus vastgebonden aan de mast?",
-        "explanation": "Wetende dat hij zwak zal zijn als hij met verleiding wordt geconfronteerd, beperkt Ulysses zelf zijn opties van tevoren: dit is de voorafgaande toezegging, of vooringenomenheid.",
+        "explanation": "Wetende dat hij zwak zal zijn als hij met verleiding wordt geconfronteerd, beperkt Odysseus zelf zijn opties van tevoren: dit is de voorafgaande toezegging, of vooringenomenheid.",
         "options": [
           "Vooraf vastgelegde verplichting",
           "Bevestigingsvooroordeel",
@@ -25032,8 +25032,8 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q7",
         "type": "trueFalse",
-        "question": "Waar of niet waar: zodra het lied is gehoord, blijft Ulysses volkomen kalm en vraagt ​​hij nooit om afstandelijkheid.",
-        "explanation": "Als het lied opkomt, verliest Ulysses zijn kalmte en roept dat hij losgemaakt moet worden; alleen zijn mannen, doof en trouw aan het plan, weerhouden hem ervan toe te geven.",
+        "question": "Waar of niet waar: zodra het lied is gehoord, blijft Odysseus volkomen kalm en vraagt ​​hij nooit om afstandelijkheid.",
+        "explanation": "Als het lied opkomt, verliest Odysseus zijn kalmte en roept dat hij losgemaakt moet worden; alleen zijn mannen, doof en trouw aan het plan, weerhouden hem ervan toe te geven.",
         "options": [
           "Waar",
           "Onwaar"
@@ -25057,12 +25057,12 @@
         "id": "course_174_ulysse_et_les_sirenes_q9",
         "type": "chronological",
         "question": "Zet deze stappen uit de Mermaids-aflevering op volgorde.",
-        "explanation": "De waarschuwing van Circe gaat vooraf aan de materiële voorbereiding en vervolgens aan de test van het nummer zelf, waarbij alleen het voorafgaande arrangement Ulysses redt.",
+        "explanation": "De waarschuwing van Circe gaat vooraf aan de materiële voorbereiding en vervolgens aan de test van het nummer zelf, waarbij alleen het voorafgaande arrangement Odysseus redt.",
         "items": [
-          "Circe waarschuwt Ulysses voor het gevaar van de Sirenen",
+          "Circe waarschuwt Odysseus voor het gevaar van de Sirenen",
           "Odysseus bedekt de oren van zijn metgezellen met was",
           "Odysseus wordt vastgebonden aan de mast van het schip",
-          "Het lied van de Sirenen weerklinkt en Ulysses eist zijn vrijheid op"
+          "Het lied van de Sirenen weerklinkt en Odysseus eist zijn vrijheid op"
         ]
       }
     ]
@@ -25846,7 +25846,7 @@
         "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_q9",
         "type": "mcq",
         "question": "Wat betekenen de Nostoi, genoemd na de val van Troje?",
-        "explanation": "De Nostoi duiden de terugkeer aan van de Griekse overwinnaars, vaak tragisch: Agamemnon wordt vermoord, Ulysses dwaalt nog tien jaar rond.",
+        "explanation": "De Nostoi duiden de terugkeer aan van de Griekse overwinnaars, vaak tragisch: Agamemnon wordt vermoord, Odysseus dwaalt nog tien jaar rond.",
         "options": [
           "De gevaarlijke en vaak tragische terugkeer van de zegevierende Griekse helden",
           "De nieuwe wetten die aan Troje werden opgelegd",
@@ -33522,7 +33522,7 @@
       {
         "id": "course_233_le_droit_d_asile_explique_q2",
         "type": "mcq",
-        "question": "Welke grond staat u volgens het Verdrag van Genève NIET toe om de vluchtelingenstatus te verkrijgen?",
+        "question": "Welke grond heb je volgens het Verdrag van Genève NIET toe om de vluchtelingenstatus te verkrijgen?",
         "explanation": "De definitie van vluchteling sluit slachtoffers van natuurrampen of hongersnood uit, die geen vervolging vormen in de zin van het Verdrag.",
         "options": [
           "Een natuurramp of hongersnood",

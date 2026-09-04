@@ -36,7 +36,7 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "Vad representerar Hegira i 622?",
+        "question": "Vad representerar Hidjra i 622?",
         "explanation": "Hijra är Muhammeds avgång, hotad av döden i Mecka, mot oasen Medina. Detta datum blir år 1 i den muslimska kalendern.",
         "options": [
           "Muhammeds avgång från Mecka till Medina",
@@ -74,7 +74,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
         "question": "Vilket år dog Muhammed och lämnade Arabien enat under en auktoritet?",
-        "explanation": "Muhammed dog 632, bara tio år efter Hegira, då nästan hela Arabien var enat.",
+        "explanation": "Muhammed dog 632, bara tio år efter Hidjra, då nästan hela Arabien var enat.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
         "sliderMax": 660.0,
@@ -87,7 +87,7 @@
         "question": "Lägg dessa händelser i Muhammeds liv i kronologisk ordning.",
         "explanation": "Dessa fyra datum (622, 624, 630, 632) markerar de tjugo år då Muhammed gick från hotad profet till överhuvud för en stat som enade Arabien.",
         "items": [
-          "Hegira: avgång till Medina",
+          "Hidjra: avgång till Medina",
           "Slaget vid Badr",
           "Intagandet av Mecka",
           "Muhammeds död"
@@ -11261,7 +11261,7 @@
         "question": "Vilken grekisk hjälte tog tio år att återvända hem efter det trojanska kriget?",
         "explanation": "Odysseus, kung av Ithaca, tar tio år att återvända hem efter slutet av det trojanska kriget: detta är ämnet för Odyssey.",
         "options": [
-          "Ulysses",
+          "Odysseus",
           "Akilles",
           "Agamemnon",
           "Aeneas"
@@ -11274,7 +11274,7 @@
         "question": "Hur börjar historien om Odysséen, narrativt sett?",
         "explanation": "Homer börjar sin berättelse mitt i handlingen: Odysseus, hållen av nymfen Calypso, berättar sedan om sina tidigare äventyr i flashback.",
         "options": [
-          "In media res, mitt i handlingen, medan Ulysses hålls av Calypso",
+          "In media res, mitt i handlingen, medan Odysseus hålls av Calypso",
           "Av berättelsen om Odysseus födelse",
           "I början av det trojanska kriget",
           "Genom Odysseus återkomst till Ithaka"
@@ -11284,7 +11284,7 @@
       {
         "id": "course_81_l_odyssee_homere_q3",
         "type": "trueFalse",
-        "question": "Sant eller falskt: Ulysses flyr Cyclops Polyphemus utan att någonsin avslöja sitt namn.",
+        "question": "Sant eller falskt: Odysseus flyr Cyclops Polyphemus utan att någonsin avslöja sitt namn.",
         "explanation": "Odysseus ropar stolt sitt sanna namn efter att ha förblindat Polyphemus, och låtit Cyclops kalla ner sin far Poseidons hämnd på honom.",
         "options": [
           "Sant",
@@ -11309,7 +11309,7 @@
         "id": "course_81_l_odyssee_homere_q5",
         "type": "mcq",
         "question": "Vem känner igen Odysseus först när han återvänder till Ithaca, förklädd till en tiggare?",
-        "explanation": "Hunden Argos, mycket gammal, känner igen Ulysses före någon annan, följt av sin sköterska Euryclea.",
+        "explanation": "Hunden Argos, mycket gammal, känner igen Odysseus före någon annan, följt av sin sköterska Euryclea.",
         "options": [
           "Hans gamla hund Argos",
           "Hans fru Penelope",
@@ -11398,7 +11398,7 @@
           "51 dagar av det tionde krigsåret",
           "De fullständiga tio åren av det trojanska kriget",
           "En enda dag av strid",
-          "De tjugo åren av Ulysses frånvaro"
+          "De tjugo åren av Odysseus frånvaro"
         ],
         "correctIndex": 0
       },
@@ -11409,7 +11409,7 @@
         "explanation": "Dikten inleds med Akilles ilska, provocerad av den förnedring som Agamemnon åsamkade, redan före frågan om Troja.",
         "options": [
           "Akilles vrede",
-          "Ulysses trick",
+          "Odysseus trick",
           "Konstruktionen av den trojanska hästen",
           "Paris dom"
         ],
@@ -13100,7 +13100,7 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q9",
         "type": "numericSlider",
-        "question": "Vilket år publicerades The Red and the Black?",
+        "question": "Vilket år publicerades Rött och svart?",
         "explanation": "Romanen dök upp 1830, strax före Trois Glorieuses.",
         "correctValue": 1830.0,
         "sliderMin": 1810.0,
@@ -14102,8 +14102,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q1",
         "type": "mcq",
-        "question": "Vem är författaren till Les Fleurs du Mal?",
-        "explanation": "Charles Baudelaire publicerade Les Fleurs du Mal 1857, födelsebeviset för modern poesi.",
+        "question": "Vem är författaren till Ondskans blommor?",
+        "explanation": "Charles Baudelaire publicerade Ondskans blommor 1857, födelsebeviset för modern poesi.",
         "options": [
           "Charles Baudelaire",
           "Paul Verlaine",
@@ -14115,7 +14115,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q2",
         "type": "mcq",
-        "question": "Varför fördömdes Les Fleurs du Mal 1857?",
+        "question": "Varför fördömdes Ondskans blommor 1857?",
         "explanation": "Insamlingen fördömdes för \"skönhet mot den allmänna moralen\", en skandal som inte skulle hävas officiellt förrän 1949.",
         "options": [
           "För \"upprördhet mot allmän moral\"",
@@ -14128,7 +14128,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q3",
         "type": "numericSlider",
-        "question": "Vilket år rehabiliterades de sex fördömda dikterna från Les Fleurs du Mal officiellt?",
+        "question": "Vilket år rehabiliterades de sex fördömda dikterna från Ondskans blommor officiellt?",
         "explanation": "De sex dikter som fördömdes 1857 rehabiliterades inte officiellt förrän 1949, 92 år senare.",
         "correctValue": 1949.0,
         "sliderMin": 1920.0,
@@ -24810,9 +24810,9 @@
         "explanation": "Polyphemus är en kyklop, en enögd jätte, son till havsguden Poseidon.",
         "options": [
           "En kyklop, son till guden Poseidon",
-          "En grekisk kung allierad med Ulysses",
+          "En grekisk kung allierad med Odysseus",
           "En Olympus gud",
-          "Ulysses bror"
+          "Odysseus bror"
         ],
         "correctIndex": 0
       },
@@ -24833,7 +24833,7 @@
         "id": "course_173_ulysse_et_le_cyclope_q3",
         "type": "mcq",
         "question": "Vilket listigt namn ger Odysseus till Polyfemus?",
-        "explanation": "Ulysses presenterar sig själv som \"Ingen\" (Outis på grekiska), ett namn som också väcker blandare, list och som skapar förvirring efter attacken.",
+        "explanation": "Odysseus presenterar sig själv som \"Ingen\" (Outis på grekiska), ett namn som också väcker blandare, list och som skapar förvirring efter attacken.",
         "options": [
           "Ingen (outis)",
           "Null",
@@ -24898,10 +24898,10 @@
         "question": "Vad är konsekvensen av Polyfemos förbannelse över Odysseus?",
         "explanation": "Polyphemus ber till sin far Poseidon så att Odysseus vandrar länge och förlorar alla sina följeslagare: denna förbannelse öppnar tio år av prövningar till sjöss.",
         "options": [
-          "Det strukturerar tio års vandring till havs för Ulysses",
-          "Hon förvandlar Ulysses till Cyclops",
+          "Det strukturerar tio års vandring till havs för Odysseus",
+          "Hon förvandlar Odysseus till Cyclops",
           "Hon dödar omedelbart alla sina följeslagare",
-          "Hon hindrar Ulysses från att någonsin se Ithaca igen"
+          "Hon hindrar Odysseus från att någonsin se Ithaca igen"
         ],
         "correctIndex": 0
       },
@@ -24909,7 +24909,7 @@
         "id": "course_173_ulysse_et_le_cyclope_q9",
         "type": "chronological",
         "question": "Ordna dessa stadier av Cyclops-avsnittet.",
-        "explanation": "Från att gå in i grottan till att bli förblindad, sedan till att bekänna sitt namn till sjöss, följer avsnittet en exakt utveckling som förseglar Ulysses öde.",
+        "explanation": "Från att gå in i grottan till att bli förblindad, sedan till att bekänna sitt namn till sjöss, följer avsnittet en exakt utveckling som förseglar Odysseus öde.",
         "items": [
           "Odysseus och hans män går in i Polyfemos grotta",
           "Polyphemus blir full och frågar vad hans gäst heter",
@@ -25006,8 +25006,8 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q5",
         "type": "mcq",
-        "question": "Vem varnade Ulysses för faran och strategin att anta mot sirenerna?",
-        "explanation": "Det var magikern Circe som varnade Ulysses och lät honom förbereda sin strategi.",
+        "question": "Vem varnade Odysseus för faran och strategin att anta mot sirenerna?",
+        "explanation": "Det var magikern Circe som varnade Odysseus och lät honom förbereda sin strategi.",
         "options": [
           "Magikern Circe",
           "Gudinnan Athena",
@@ -25020,7 +25020,7 @@
         "id": "course_174_ulysse_et_les_sirenes_q6",
         "type": "mcq",
         "question": "Vilket samhällsvetenskapligt koncept illustrerar scenen av Odysseus bunden till masten?",
-        "explanation": "Med vetskapen om att han kommer att vara svag inför frestelser, begränsar Ulysses själv sina alternativ i förväg: detta är det föregående åtagandet, eller förengagemang.",
+        "explanation": "Med vetskapen om att han kommer att vara svag inför frestelser, begränsar Odysseus själv sina alternativ i förväg: detta är det föregående åtagandet, eller förengagemang.",
         "options": [
           "Förbindelse",
           "Bekräftelsebias",
@@ -25032,8 +25032,8 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q7",
         "type": "trueFalse",
-        "question": "Sant eller falskt: när låten väl hörs förblir Ulysses helt lugn och ber aldrig om att bli fristående.",
-        "explanation": "När sången stiger tappar Ulysses lugnet och ropar att han ska lossas; endast hans män, döva och trogna planen, hindrar honom från att ge efter.",
+        "question": "Sant eller falskt: när låten väl hörs förblir Odysseus helt lugn och ber aldrig om att bli fristående.",
+        "explanation": "När sången stiger tappar Odysseus lugnet och ropar att han ska lossas; endast hans män, döva och trogna planen, hindrar honom från att ge efter.",
         "options": [
           "Sant",
           "Falskt"
@@ -25057,12 +25057,12 @@
         "id": "course_174_ulysse_et_les_sirenes_q9",
         "type": "chronological",
         "question": "Ordna dessa steg från avsnittet Mermaids.",
-        "explanation": "Circes varning föregår materialförberedelsen, sedan testet av själva låten, där endast det tidigare arrangemanget räddar Ulysses.",
+        "explanation": "Circes varning föregår materialförberedelsen, sedan testet av själva låten, där endast det tidigare arrangemanget räddar Odysseus.",
         "items": [
-          "Circe varnar Ulysses för faran med Sirenerna",
+          "Circe varnar Odysseus för faran med Sirenerna",
           "Odysseus täcker sina kamraters öron med vax",
           "Odysseus blir bunden till fartygets mast",
-          "Sirenernas sång låter och Ulysses kräver sin frihet"
+          "Sirenernas sång låter och Odysseus kräver sin frihet"
         ]
       }
     ]
@@ -25846,7 +25846,7 @@
         "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_q9",
         "type": "mcq",
         "question": "Vad betyder Nostoi, som nämndes efter Trojas fall?",
-        "explanation": "Nostoi utpekar de grekiska segrarnas återkomst, ofta tragiskt: Agamemnon mördas, Ulysses vandrar i tio år till.",
+        "explanation": "Nostoi utpekar de grekiska segrarnas återkomst, ofta tragiskt: Agamemnon mördas, Odysseus vandrar i tio år till.",
         "options": [
           "De segerrika grekiska hjältarnas farliga och ofta tragiska återkomster",
           "De nya lagarna som infördes för Troja",

@@ -5,8 +5,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q1",
         "type": "mcq",
-        "question": "Kto jest autorem Les Fleurs du Mal?",
-        "explanation": "Charles Baudelaire opublikował w 1857 roku Les Fleurs du Mal, akt urodzenia współczesnej poezji.",
+        "question": "Kto jest autorem Kwiaty zła?",
+        "explanation": "Charles Baudelaire opublikował w 1857 roku Kwiaty zła, akt urodzenia współczesnej poezji.",
         "options": [
           "Charlesa Baudelaire’a",
           "Paula Verlaine’a",
@@ -18,7 +18,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q2",
         "type": "mcq",
-        "question": "Dlaczego w 1857 roku potępiono Les Fleurs du Mal?",
+        "question": "Dlaczego w 1857 roku potępiono Kwiaty zła?",
         "explanation": "Zbiór potępiono za „obrazę moralności publicznej”, co było skandalem, który został oficjalnie zniesiony dopiero w 1949 roku.",
         "options": [
           "Za „obrażenie moralności publicznej”",
@@ -31,7 +31,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q3",
         "type": "numericSlider",
-        "question": "W którym roku oficjalnie zrehabilitowano sześć potępionych wierszy z Les Fleurs du Mal?",
+        "question": "W którym roku oficjalnie zrehabilitowano sześć potępionych wierszy z Kwiaty zła?",
         "explanation": "Sześć wierszy potępionych w 1857 r. zostało oficjalnie zrehabilitowanych dopiero w 1949 r., 92 lata później.",
         "correctValue": 1949.0,
         "sliderMin": 1920.0,
@@ -12739,7 +12739,7 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "Co reprezentuje Hegira w roku 622?",
+        "question": "Co reprezentuje Hidżra w roku 622?",
         "explanation": "Hidżra to wyjazd Mahometa, zagrożonego śmiercią w Mekce, w stronę oazy Medyny. Data ta staje się pierwszym rokiem kalendarza muzułmańskiego.",
         "options": [
           "Wyjazd Mahometa z Mekki do Medyny",
@@ -12790,7 +12790,7 @@
         "question": "Ułóż te wydarzenia z życia Mahometa w porządku chronologicznym.",
         "explanation": "Te cztery daty (622, 624, 630, 632) wyznaczają dwadzieścia lat, w ciągu których Mahomet przeszedł od zagrożonego proroka do głowy państwa jednoczącego Arabię.",
         "items": [
-          "Hegira: wyjazd do Medyny",
+          "Hidżra: wyjazd do Medyny",
           "Bitwa pod Badrem",
           "Zdobycie Mekki",
           "Śmierć Mahometa"

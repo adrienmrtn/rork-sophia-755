@@ -36,7 +36,7 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "What does the Hegira represent in 622?",
+        "question": "What does the Hijra represent in 622?",
         "explanation": "The Hijra is the departure of Muhammad, threatened with death in Mecca, towards the oasis of Medina. This date becomes year 1 of the Muslim calendar.",
         "options": [
           "Muhammad's departure from Mecca to Medina",
@@ -74,7 +74,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
         "question": "In what year did Muhammad die, leaving Arabia unified under one authority?",
-        "explanation": "Muhammad died in 632, only ten years after the Hegira, when almost all of Arabia was unified.",
+        "explanation": "Muhammad died in 632, only ten years after the Hijra, when almost all of Arabia was unified.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
         "sliderMax": 660.0,
@@ -87,7 +87,7 @@
         "question": "Put these events in Muhammad's life in chronological order.",
         "explanation": "These four dates (622, 624, 630, 632) mark the twenty years in which Muhammad went from threatened prophet to head of a state unifying Arabia.",
         "items": [
-          "The Hegira: departure to Medina",
+          "The Hijra: departure to Medina",
           "The Battle of Badr",
           "The capture of Mecca",
           "The death of Muhammad"
@@ -11261,7 +11261,7 @@
         "question": "Which Greek hero took ten years to return home after the Trojan War?",
         "explanation": "Odysseus, king of Ithaca, takes ten years to return home after the end of the Trojan War: this is the subject of the Odyssey.",
         "options": [
-          "Ulysses",
+          "Odysseus",
           "Achilles",
           "Agamemnon",
           "Aeneas"
@@ -11274,7 +11274,7 @@
         "question": "How does the story of the Odyssey begin, narratively speaking?",
         "explanation": "Homer begins his story in the middle of the action: Odysseus, held by the nymph Calypso, then recounts his past adventures in flashback.",
         "options": [
-          "In media res, in the middle of the action, while Ulysses is held by Calypso",
+          "In media res, in the middle of the action, while Odysseus is held by Calypso",
           "By the story of the birth of Odysseus",
           "By the start of the Trojan War",
           "By Odysseus' return to Ithaca"
@@ -11284,7 +11284,7 @@
       {
         "id": "course_81_l_odyssee_homere_q3",
         "type": "trueFalse",
-        "question": "True or false: Ulysses escapes the Cyclops Polyphemus without ever revealing his name.",
+        "question": "True or false: Odysseus escapes the Cyclops Polyphemus without ever revealing his name.",
         "explanation": "Odysseus proudly shouts his true name after blinding Polyphemus, allowing Cyclops to call down his father Poseidon's vengeance on him.",
         "options": [
           "True",
@@ -11309,7 +11309,7 @@
         "id": "course_81_l_odyssee_homere_q5",
         "type": "mcq",
         "question": "Who recognizes Odysseus first when he returns to Ithaca, disguised as a beggar?",
-        "explanation": "The dog Argos, very old, recognizes Ulysses before anyone else, followed by his nurse Euryclea.",
+        "explanation": "The dog Argos, very old, recognizes Odysseus before anyone else, followed by his nurse Euryclea.",
         "options": [
           "His old dog Argos",
           "His wife Penelope",
@@ -11398,7 +11398,7 @@
           "51 days of the tenth year of the war",
           "The complete ten years of the Trojan War",
           "A single day of battle",
-          "The twenty years of Ulysses' absence"
+          "The twenty years of Odysseus' absence"
         ],
         "correctIndex": 0
       },
@@ -11409,7 +11409,7 @@
         "explanation": "The poem opens with the anger of Achilles, provoked by the humiliation inflicted by Agamemnon, even before the question of Troy.",
         "options": [
           "The Wrath of Achilles",
-          "Ulysses' trick",
+          "Odysseus' trick",
           "The construction of the Trojan horse",
           "The judgment of Paris"
         ],
@@ -24810,9 +24810,9 @@
         "explanation": "Polyphemus is a Cyclops, a one-eyed giant, son of the sea god Poseidon.",
         "options": [
           "A Cyclops, son of the god Poseidon",
-          "A Greek king allied with Ulysses",
+          "A Greek king allied with Odysseus",
           "A god of Olympus",
-          "Ulysses' brother"
+          "Odysseus' brother"
         ],
         "correctIndex": 0
       },
@@ -24833,7 +24833,7 @@
         "id": "course_173_ulysse_et_le_cyclope_q3",
         "type": "mcq",
         "question": "What cunning name does Odysseus give to Polyphemus?",
-        "explanation": "Ulysses introduces himself as “Nobody” (Outis in Greek), a name which also evokes mongrelism, cunning, and which sows confusion after the attack.",
+        "explanation": "Odysseus introduces himself as “Nobody” (Outis in Greek), a name which also evokes mongrelism, cunning, and which sows confusion after the attack.",
         "options": [
           "Nobody (Outis)",
           "Null",
@@ -24898,10 +24898,10 @@
         "question": "What is the consequence of Polyphemus' curse on Odysseus?",
         "explanation": "Polyphemus prays to his father Poseidon so that Odysseus wanders for a long time and loses all his companions: this curse opens ten years of trials at sea.",
         "options": [
-          "It structures ten years of wandering at sea for Ulysses",
-          "She transforms Ulysses into Cyclops",
+          "It structures ten years of wandering at sea for Odysseus",
+          "She transforms Odysseus into Cyclops",
           "She immediately kills all her companions",
-          "She prevents Ulysses from ever seeing Ithaca again"
+          "She prevents Odysseus from ever seeing Ithaca again"
         ],
         "correctIndex": 0
       },
@@ -24909,7 +24909,7 @@
         "id": "course_173_ulysse_et_le_cyclope_q9",
         "type": "chronological",
         "question": "Put these stages of the Cyclops episode in order.",
-        "explanation": "From the entry into the cave to the blinding, then to the confession of the name at sea, the episode follows a precise progression which seals the fate of Ulysses.",
+        "explanation": "From the entry into the cave to the blinding, then to the confession of the name at sea, the episode follows a precise progression which seals the fate of Odysseus.",
         "items": [
           "Odysseus and his men enter Polyphemus' cave",
           "Polyphemus gets drunk and asks the name of his guest",
@@ -25006,8 +25006,8 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q5",
         "type": "mcq",
-        "question": "Who warned Ulysses of the danger and the strategy to adopt against the Sirens?",
-        "explanation": "It was the magician Circe who warned Ulysses and allowed him to prepare his strategy.",
+        "question": "Who warned Odysseus of the danger and the strategy to adopt against the Sirens?",
+        "explanation": "It was the magician Circe who warned Odysseus and allowed him to prepare his strategy.",
         "options": [
           "The magician Circe",
           "The goddess Athena",
@@ -25020,7 +25020,7 @@
         "id": "course_174_ulysse_et_les_sirenes_q6",
         "type": "mcq",
         "question": "What social science concept illustrates the scene of Odysseus tied to the mast?",
-        "explanation": "Knowing that he will be weak in the face of temptation, Ulysses himself limits his options in advance: this is the prior commitment, or precommitment.",
+        "explanation": "Knowing that he will be weak in the face of temptation, Odysseus himself limits his options in advance: this is the prior commitment, or precommitment.",
         "options": [
           "Precommitment",
           "Confirmation bias",
@@ -25032,8 +25032,8 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q7",
         "type": "trueFalse",
-        "question": "True or false: once the song is heard, Ulysses remains perfectly calm and never asks to be detached.",
-        "explanation": "When the song rises, Ulysses loses his calm and shouts to be untied; only his men, deaf and faithful to the plan, prevent him from giving in.",
+        "question": "True or false: once the song is heard, Odysseus remains perfectly calm and never asks to be detached.",
+        "explanation": "When the song rises, Odysseus loses his calm and shouts to be untied; only his men, deaf and faithful to the plan, prevent him from giving in.",
         "options": [
           "True",
           "False"
@@ -25056,13 +25056,13 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q9",
         "type": "chronological",
-        "question": "Put these steps from the Mermaids episode in order.",
-        "explanation": "Circe's warning precedes the material preparation, then the test of the song itself, where only the prior arrangement saves Ulysses.",
+        "question": "Put these steps from the Sirens episode in order.",
+        "explanation": "Circe's warning precedes the material preparation, then the test of the song itself, where only the prior arrangement saves Odysseus.",
         "items": [
-          "Circe warns Ulysses of the danger of the Sirens",
+          "Circe warns Odysseus of the danger of the Sirens",
           "Odysseus covers his companions' ears with wax",
           "Odysseus gets tied to the ship's mast",
-          "The song of the Sirens resounds and Ulysses demands his freedom"
+          "The song of the Sirens resounds and Odysseus demands his freedom"
         ]
       }
     ]
@@ -25846,7 +25846,7 @@
         "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_q9",
         "type": "mcq",
         "question": "What do the Nostoi, mentioned after the fall of Troy, mean?",
-        "explanation": "The Nostoi designate the returns of the Greek victors, often tragic: Agamemnon is assassinated, Ulysses wanders for ten more years.",
+        "explanation": "The Nostoi designate the returns of the Greek victors, often tragic: Agamemnon is assassinated, Odysseus wanders for ten more years.",
         "options": [
           "The perilous and often tragic returns of the victorious Greek heroes",
           "The new laws imposed on Troy",
