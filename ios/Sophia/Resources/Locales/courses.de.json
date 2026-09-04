@@ -36,8 +36,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "Was stellt die Hidschra im Jahr 622 dar?",
-        "explanation": "Die Hijra ist die Abreise Mohammeds, dem in Mekka der Tod droht, in Richtung der Oase Medina. Dieses Datum wird zum Jahr 1 des muslimischen Kalenders.",
+        "question": "Wofür steht die Hidschra im Jahr 622?",
+        "explanation": "Die Hidschra ist Mohammeds Flucht aus Mekka, wo ihm der Tod droht, in die Oase Medina. Von da an zählt der muslimische Kalender das Jahr 1.",
         "options": [
           "Mohammeds Abreise von Mekka nach Medina",
           "Die erste Offenbarung, die Mohammed erhielt",
@@ -50,9 +50,9 @@
         "id": "course_1_la_naissance_de_l_islam_622_q2",
         "type": "mcq",
         "question": "Wer kontrollierte vor dem Islam den Handel rund um die Kaaba?",
-        "explanation": "Die Quraysh, der dominierende Stamm Mekkas, bezogen ihre Macht aus Pilgerfahrten und Handel rund um die polytheistische Kaaba.",
+        "explanation": "Die Quraisch, der herrschende Stamm in Mekka, bezogen ihre Macht aus Pilgerfahrt und Handel rund um die polytheistische Kaaba.",
         "options": [
-          "Der Stamm der Quraysh",
+          "Der Stamm der Quraisch",
           "Die Byzantiner",
           "Die sasanidischen Perser",
           "Die Bewohner von Medina"
@@ -87,7 +87,7 @@
         "question": "Ordne diese Ereignisse im Leben Mohammeds in chronologischer Reihenfolge an.",
         "explanation": "Diese vier Daten (622, 624, 630, 632) markieren die zwanzig Jahre, in denen Mohammed vom bedrohten Propheten zum Oberhaupt eines Staates wurde, der Arabien vereinte.",
         "items": [
-          "Die Hidschra: Abfahrt nach Medina",
+          "Die Hidschra: Aufbruch nach Medina",
           "Die Schlacht von Badr",
           "Die Einnahme von Mekka",
           "Der Tod Mohammeds"
@@ -96,13 +96,13 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q6",
         "type": "mcq",
-        "question": "Was ist das von den muslimischen Eroberern errichtete Dhimma?",
-        "explanation": "Dhimma ist der geschützte Status, der „Menschen des Buches“ berechtigt, ihre Religion gegen Zahlung von Jizya aufrechtzuerhalten.",
+        "question": "Was ist die Dhimma, die die muslimischen Eroberer einführten?",
+        "explanation": "Die Dhimma ist der Schutzstatus, der den „Leuten des Buches“ erlaubt, gegen Zahlung der Dschizya ihre Religion zu behalten.",
         "options": [
-          "Der Status ermöglicht es Christen und Juden, ihre Religion gegen eine Steuer beizubehalten",
+          "Der Status, der Christen und Juden gegen eine Steuer ihre Religion behalten lässt",
           "Der Name des muslimischen Kalenders",
           "Eine Steuer auf Handelskarawanen",
-          "Das Gericht hat die Aufgabe, Ungläubige zu verurteilen"
+          "Das Gericht, das Ungläubige verurteilen soll"
         ],
         "correctIndex": 0
       },
@@ -172,7 +172,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q1",
         "type": "mcq",
         "question": "Welches Ereignis ereignete sich beim Konzil von Clermont im November 1095?",
-        "explanation": "Auf dem Konzil von Clermont am 27. November 1095 rief Urban II. die westlichen Christen dazu auf, Jerusalem zu befreien, als Gegenleistung für die Vergebung ihrer Sünden.",
+        "explanation": "Auf dem Konzil von Clermont am 27. November 1095 rief Urban II. die westlichen Christen dazu auf, Jerusalem zu befreien — im Tausch gegen die Vergebung ihrer Sünden.",
         "options": [
           "Papst Urban II. ruft zum Kreuzzug zur Befreiung Jerusalems auf",
           "Papst exkommuniziert den byzantinischen Kaiser",
@@ -185,7 +185,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q2",
         "type": "mcq",
         "question": "Welches Ereignis veranlasste den byzantinischen Kaiser Alexios I. Komnenos, den Papst um Hilfe zu bitten?",
-        "explanation": "Im Jahr 1071 schlugen die seldschukischen Türken in Mantzikert die byzantinische Armee nieder und öffneten Anatolien, was Alexios I. Komnenos dazu drängte, eine Petition an Rom zu richten.",
+        "explanation": "1071 schlagen die Seldschuken bei Mantzikert die byzantinische Armee und öffnen Anatolien. Daraufhin bittet Alexios I. Komnenos Rom um Hilfe.",
         "options": [
           "Die Niederlage von Mantzikert gegen die seldschukischen Türken",
           "Die Eroberung Jerusalems durch die Muslime",
@@ -222,7 +222,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q5",
         "type": "trueFalse",
         "question": "Richtig oder falsch: Nach der Einnahme Jerusalems erklärte sich Gottfried von Bouillon zum König der Stadt.",
-        "explanation": "Gottfried von Bouillon lehnte den Titel eines Königs ab und zog es vor, Bekenner des Heiligen Grabes, Beschützer des Grabes Christi, genannt zu werden.",
+        "explanation": "Gottfried von Bouillon lehnte den Königstitel ab und ließ sich lieber Beschützer des Heiligen Grabes nennen.",
         "options": [
           "Wahr",
           "Falsch"
@@ -268,8 +268,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q9",
         "type": "numericSlider",
-        "question": "In welchem Jahr fiel Saint-Jean-d'Acre, die letzte Bastion der lateinischen Staaten des Ostens?",
-        "explanation": "Der Fall von Saint-Jean-d'Acre im Jahr 1291 markiert das Ende der lateinischen Präsenz im Heiligen Land.",
+        "question": "In welchem Jahr fiel Akkon, die letzte Bastion der lateinischen Staaten des Ostens?",
+        "explanation": "Der Fall Akkons 1291 markiert das Ende der lateinischen Präsenz im Heiligen Land.",
         "correctValue": 1291.0,
         "sliderMin": 1200.0,
         "sliderMax": 1350.0,
@@ -329,7 +329,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q2",
         "type": "trueFalse",
         "question": "Richtig oder falsch: Vor 410 war etwa acht Jahrhunderte lang keine feindliche Armee in Rom einmarschiert.",
-        "explanation": "Die letzte Eroberung Roms durch einen Feind geht auf die Plünderung Roms durch die Gallier im Jahr 390 v. Chr. zurück. Chr., fast 800 Jahre vor der Ankunft Alarichs.",
+        "explanation": "Die letzte Eroberung Roms durch einen Feind war die Plünderung durch die Gallier 390 v. Chr., fast 800 Jahre vor Alarich.",
         "options": [
           "Wahr",
           "Falsch"
@@ -376,10 +376,10 @@
       {
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q6",
         "type": "mcq",
-        "question": "Welches Werk schrieb der heilige Augustinus als Reaktion auf den Schock, der durch die Plünderung Roms verursacht wurde?",
-        "explanation": "Angesichts der Heiden, die das Christentum beschuldigen, Rom geschwächt zu haben, antwortet Augustinus in der Stadt Gottes, dass irdische Reiche vergehen, die Kirche aber bestehen bleibe.",
+        "question": "Welches Werk schrieb Augustinus als Antwort auf den Schock der Plünderung Roms?",
+        "explanation": "Gegen Heiden, die dem Christentum vorwerfen, Rom geschwächt zu haben, antwortet Augustinus in „Vom Gottesstaat“: irdische Reiche vergehen, die Kirche bleibt.",
         "options": [
-          "Die Stadt Gottes",
+          "Vom Gottesstaat",
           "Die Geständnisse",
           "Die antike Stadt",
           "Die punischen Kriege"
@@ -496,10 +496,10 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q4",
         "type": "mcq",
-        "question": "Was sind die von Karl dem Großen eingesetzten Missi Dominici?",
-        "explanation": "Die Missi Dominici sind Inspektoren, die paarweise in die Provinzen entsandt werden, um die Maßnahmen der örtlichen Zählungen zu überprüfen.",
+        "question": "Was sind die Missi dominici, die Karl der Große einsetzte?",
+        "explanation": "Die Missi dominici sind königliche Boten, die paarweise in die Provinzen ziehen und die örtlichen Grafen kontrollieren.",
         "options": [
-          "Inspektoren wurden paarweise entsandt, um die Provinzen zu kontrollieren",
+          "Inspektoren, die paarweise ausgesandt werden, um die Provinzen zu kontrollieren",
           "Mönche, die für das Abschreiben alter Texte verantwortlich sind",
           "Soldaten bewachen die Grenzen des Reiches",
           "Händler, die für die Münzprägung verantwortlich sind"
@@ -520,10 +520,10 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q6",
         "type": "mcq",
-        "question": "Welche Schrift verwendete Karl der Große, um die im Reich kopierten Texte zu standardisieren?",
-        "explanation": "Die Palastschule von Aachen verbreitete die Karolinenschrift, die im ganzen Reich lesbar war.",
+        "question": "Welche Schrift ließ Karl der Große für die im Reich kopierten Texte verbindlich machen?",
+        "explanation": "Die Palastschule in Aachen verbreitete die karolingische Minuskel, die im ganzen Reich lesbar war.",
         "options": [
-          "Carolines Schreiben",
+          "Die karolingische Minuskel",
           "Das griechische Alphabet",
           "Hieroglyphen",
           "Kyrillisches Alphabet"
@@ -603,8 +603,8 @@
       {
         "id": "course_5_la_magna_carta_1215_q1",
         "type": "mcq",
-        "question": "Warum zwangen die englischen Barone 1215 König John Lackland die Magna Carta auf?",
-        "explanation": "Angesichts der Steuern, Geiseln und willkürlichen Geldstrafen, die John Lackland für die Rückeroberung seiner Ländereien verhängte, rebellieren die Barone und verhängen einen Text, der seine Macht einschränkt.",
+        "question": "Warum zwangen die englischen Barone 1215 König Johann Ohneland die Magna Carta auf?",
+        "explanation": "Steuern, Geiseln und willkürliche Strafen für die Rückeroberung seiner Ländereien trieben die Barone zum Aufstand. Sie setzen ihm einen Text vor, der seine Macht begrenzt.",
         "options": [
           "Um königliche Willkür einzuschränken: Steuern, Geiseln und missbräuchliche Geldstrafen",
           "Um einen neuen Kreuzzug im Heiligen Land zu finanzieren",
@@ -616,8 +616,8 @@
       {
         "id": "course_5_la_magna_carta_1215_q2",
         "type": "trueFalse",
-        "question": "Richtig oder falsch: Vor 1215 verlor John Lackland die Normandie an den französischen König Philipp II. August.",
-        "explanation": "Im Jahr 1204 verlor John Lackland die Normandie an Philipp II. Augustus, ein Rückschlag, der ihn dauerhaft schwächte.",
+        "question": "Richtig oder falsch: Vor 1215 verlor Johann Ohneland die Normandie an den französischen König Philipp II. August.",
+        "explanation": "Im Jahr 1204 verlor Johann Ohneland die Normandie an Philipp II. August, ein Rückschlag, der ihn dauerhaft schwächte.",
         "options": [
           "Wahr",
           "Falsch"
@@ -654,18 +654,18 @@
         "question": "Was geschah im August 1215, kurz nach der Unterzeichnung der Magna Carta?",
         "explanation": "Johannes erwirkte im August 1215 die Aufhebung des Textes durch den Papst, was den Konflikt mit den Baronen erneut entfachte.",
         "options": [
-          "John Lackland lässt den Text vom Papst annullieren und der Bürgerkrieg geht weiter",
+          "Johann Ohneland lässt den Text vom Papst annullieren und der Bürgerkrieg geht weiter",
           "Der König wird von den Baronen abgesetzt",
           "Die Charta wird sofort im gesamten Königreich angewendet",
-          "John Lackland geht nach Frankreich ins Exil"
+          "Johann Ohneland geht nach Frankreich ins Exil"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_5_la_magna_carta_1215_q6",
         "type": "mcq",
-        "question": "Welche militärische Niederlage im Jahr 1214 isolierte John Lackland endgültig vor der Magna Carta?",
-        "explanation": "Im Jahr 1214 isolierte die Niederlage von Bouvines, bei der Philippe Auguste eine Koalition mit England besiegte, John Lackland.",
+        "question": "Welche militärische Niederlage im Jahr 1214 isolierte Johann Ohneland endgültig vor der Magna Carta?",
+        "explanation": "Im Jahr 1214 isolierte die Niederlage von Bouvines, bei der Philipp II. August eine Koalition mit England besiegte, Johann Ohneland.",
         "options": [
           "Die Niederlage von Bouvines",
           "Der Verlust der Gascogne",
@@ -677,10 +677,10 @@
       {
         "id": "course_5_la_magna_carta_1215_q7",
         "type": "chronological",
-        "question": "Ordne diese Ereignisse aus der Regierungszeit von John Lackland in chronologischer Reihenfolge an.",
+        "question": "Ordne diese Ereignisse aus der Regierungszeit von Johann Ohneland in chronologischer Reihenfolge an.",
         "explanation": "Diese Phasen reichen von 1204 bis 1216: Der Verlust der Normandie geht der Niederlage von Bouvines voraus, dann die Unterzeichnung der Charta und ihre Neuausstellung durch Heinrich III.",
         "items": [
-          "Verlust der Normandie gegen Philippe Auguste",
+          "Verlust der Normandie gegen Philipp II. August",
           "Niederlage von Bouvines",
           "Unterzeichnung der Magna Carta in Runnymede",
           "Neuausstellung der Charta durch Heinrich III"
@@ -690,7 +690,7 @@
         "id": "course_5_la_magna_carta_1215_q8",
         "type": "numericSlider",
         "question": "In welchem Jahr wurde die Magna Carta in Runnymede besiegelt?",
-        "explanation": "König John Lackland versiegelte die Magna Carta im Juni 1215 in Runnymede Meadow.",
+        "explanation": "König Johann Ohneland siegelte die Magna Carta im Juni 1215 auf der Wiese von Runnymede.",
         "correctValue": 1215.0,
         "sliderMin": 1150.0,
         "sliderMax": 1300.0,
@@ -942,7 +942,7 @@
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q5",
         "type": "mcq",
         "question": "Welche Mission, sagt Jeanne, habe sie durch ihre Stimmen erhalten?",
-        "explanation": "Seine Stimmen befehlen ihm, die Belagerung von Orléans aufzuheben und den Dauphin dann zur Krönung von Reims zu führen, dem einzigen Ritus, der einen wahren König ausmacht.",
+        "explanation": "Ihre Stimmen befehlen ihr, die Belagerung von Orléans zu sprengen und den Dauphin zur Krönung nach Reims zu führen — dem einzigen Ritus, der einen wahren König macht.",
         "options": [
           "Heben Sie die Belagerung von Orléans auf und führen Sie den Dauphin zur Krönung von Reims",
           "Vertreibung der Burgunder aus Paris",
@@ -1061,7 +1061,7 @@
         "id": "course_8_la_chute_de_constantinople_1453_q4",
         "type": "mcq",
         "question": "Was hat das Byzantinische Reich vor 1453 nachhaltig geschwächt?",
-        "explanation": "Christliche Kreuzfahrer aus dem Westen hatten die Stadt 1204 geplündert und das Byzantinische Reich unblutig zurückgelassen.",
+        "explanation": "Westliche Kreuzfahrer hatten die Stadt 1204 geplündert und das Byzantinische Reich ausgeblutet zurückgelassen.",
         "options": [
           "Die Plünderung Konstantinopels durch den 4. Kreuzzug im Jahr 1204",
           "Eine Pockenepidemie",
@@ -1209,7 +1209,7 @@
         "id": "course_9_l_empire_azteque_q4",
         "type": "trueFalse",
         "question": "Richtig oder falsch: Die Azteken benutzten Pferde und Ochsen, um die Steine ihrer Pyramiden zu transportieren.",
-        "explanation": "Die Azteken hatten weder ein Transportrad noch ein Lasttier; Dennoch bewegten sie Millionen Tonnen Stein.",
+        "explanation": "Die Azteken hatten weder Wagenrad noch Lasttier; trotzdem bewegten sie Millionen Tonnen Stein.",
         "options": [
           "Wahr",
           "Falsch"
@@ -1806,9 +1806,9 @@
         "question": "Was war Napoleons ursprünglicher Plan vor der Schlacht, die sogenannte Zentralposition?",
         "explanation": "Napoleon will sich zwischen die beiden feindlichen Armeen stellen und sie nacheinander besiegen, bevor sie sich vereinigen.",
         "options": [
-          "Stellen Sie sich zwischen Wellington und Blücher, um sie einzeln zu schlagen",
-          "Greifen Sie Brüssel direkt an",
-          "Warten Sie auf österreichische Verstärkung",
+          "Stell dich zwischen Wellington und Blücher, um sie einzeln zu schlagen",
+          "Greif Brüssel direkt an",
+          "Warte auf österreichische Verstärkung",
           "Umrundung von Wellington auf dem Seeweg"
         ],
         "correctIndex": 0
@@ -7526,11 +7526,11 @@
       {
         "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_q6",
         "type": "mcq",
-        "question": "Was war vor der Röntgenaufnahme oft erforderlich, um einen Bruch oder eine Kugel im Körper zu „sehen“?",
-        "explanation": "Um das Innere des Körpers zu sehen, musste man vor dem Röntgen oft operieren; Mit ihnen erhalten Sie ein Bild ohne Beschneiden.",
+        "question": "Was brauchte man vor den Röntgenstrahlen oft, um einen Bruch oder eine Kugel im Körper zu „sehen“?",
+        "explanation": "Vor den Röntgenstrahlen musste man den Körper oft aufschneiden, um das Innere zu sehen; mit ihnen bekommst du ein Bild, ohne zu operieren.",
         "options": [
-          "Musste in der Regel operativ geöffnet werden",
-          "Sie mussten auf natürliche Heilung warten",
+          "Meist eine Operation, um den Körper zu öffnen",
+          "Man musste auf natürliche Heilung warten",
           "Wir nutzten bereits einen Ultraschall",
           "Wir mussten systematisch amputieren"
         ],
@@ -12087,7 +12087,7 @@
       {
         "id": "course_86_la_republique_platon_q9",
         "type": "mcq",
-        "question": "Was stellt nach der Ideentheorie die sinnliche Welt dar, die wir wahrnehmen?",
+        "question": "Was ist nach der Ideenlehre die Sinnenwelt, die wir wahrnehmen?",
         "explanation": "Für Platon ist die sinnliche Welt nur ein Schatten im Vergleich zur Ideenwelt, die der Höhlenmythos veranschaulicht.",
         "options": [
           "Ein Schatten der realen Welt der Ideen",
@@ -12791,7 +12791,7 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q9",
         "type": "chronological",
-        "question": "Ordne diese Phasen der Geschichte von Les Miserables.",
+        "question": "Ordne diese Phasen der Geschichte von Die Elenden.",
         "explanation": "Hugo begann den Roman 1845, nahm das Manuskript nach dem Staatsstreich von 1851 im Exil auf, bevor das Buch 1862 in Brüssel erschien.",
         "items": [
           "Hugo beginnt mit dem Schreiben des Romans unter dem Titel „Les Misères“",
@@ -12802,8 +12802,8 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q10",
         "type": "numericSlider",
-        "question": "In welchem Jahr wurde Les Misérables nach siebzehnjähriger Arbeit endlich veröffentlicht?",
-        "explanation": "Les Miserables erschien 1862 in Brüssel, nach siebzehnjähriger Arbeit ab 1845.",
+        "question": "In welchem Jahr erschien Die Elenden nach siebzehn Jahren Arbeit endlich?",
+        "explanation": "Die Elenden erschien 1862 in Brüssel, nach siebzehnjähriger Arbeit ab 1845.",
         "correctValue": 1862.0,
         "sliderMin": 1840.0,
         "sliderMax": 1880.0,
@@ -12998,8 +12998,8 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q1",
         "type": "mcq",
-        "question": "Wer ist der Autor von „Le Rouge et le Noir“, dessen richtiger Name Henri Beyle ist?",
-        "explanation": "Stendhal, der mit bürgerlichem Namen Henri Beyle hieß, veröffentlichte 1830 „Le Rouge et le Noir“.",
+        "question": "Wer ist der Autor von Rot und Schwarz, der mit bürgerlichem Namen Henri Beyle hieß?",
+        "explanation": "Stendhal, mit bürgerlichem Namen Henri Beyle, veröffentlichte 1830 Rot und Schwarz.",
         "options": [
           "Stendhal",
           "Honoré de Balzac",
@@ -13467,8 +13467,8 @@
       {
         "id": "course_96_l_etranger_camus_q1",
         "type": "mcq",
-        "question": "Wer ist der Autor von The Stranger?",
-        "explanation": "Albert Camus veröffentlichte 1942 „The Stranger“, seinen ersten Roman.",
+        "question": "Wer ist der Autor von Der Fremde?",
+        "explanation": "Albert Camus veröffentlichte 1942 Der Fremde, seinen ersten Roman.",
         "options": [
           "Albert Camus",
           "Jean-Paul Sartre",
@@ -13941,7 +13941,7 @@
         "id": "course_99_le_pere_goriot_balzac_q1",
         "type": "mcq",
         "question": "Wer ist der Autor von Père Goriot?",
-        "explanation": "Honoré de Balzac veröffentlichte 1835 „Le Père Goriot“.",
+        "explanation": "Honoré de Balzac veröffentlichte 1835 Vater Goriot.",
         "options": [
           "Honoré de Balzac",
           "Victor Hugo",
@@ -14139,8 +14139,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q4",
         "type": "mcq",
-        "question": "Was stellt der Albatros im Abschnitt „Milz und Ideal“ dar?",
-        "explanation": "Der Albatros, majestätisch im Flug, aber lächerlich, sobald er auf den Boden gelegt wird, repräsentiert den Dichter in einer Welt, die ihn nicht versteht.",
+        "question": "Wofür steht der Albatros im Abschnitt „Spleen und Ideal“?",
+        "explanation": "Der Albatros, majestätisch im Flug, am Boden aber lächerlich: so sieht Baudelaire den Dichter in einer Welt, die ihn nicht versteht.",
         "options": [
           "Der Dichter, majestätisch im Flug, aber lächerlich am Boden",
           "Völlige Freiheit des Künstlers",
@@ -14156,7 +14156,7 @@
         "explanation": "„Parisian Paintings“ verwandelt die Stadt in eine psychologische Landschaft. Der Dichter wandert dort als Spaziergänger, als Beobachter des Pariser Lebens unter Haussmann.",
         "options": [
           "„Pariser Gemälde“",
-          "„Milz und Ideal“",
+          "„Spleen und Ideal“",
           "„Der Wein“",
           "\"Tod\""
         ],
@@ -14367,7 +14367,7 @@
         "explanation": "Diese vier Phasen kennzeichnen Orwells Karriere: der spanische Bürgerkrieg (1936-1937), die Farm der Tiere (1945), 1984 (1949) und dann sein Tod im Jahr 1950.",
         "items": [
           "Orwell kämpfte während des Spanischen Bürgerkriegs in den POUM-Milizen",
-          "Er veröffentlicht Animal Farm",
+          "Er veröffentlicht Farm der Tiere",
           "Er veröffentlichte 1984",
           "Er starb kurz nach der Veröffentlichung seines Romans in Schottland."
         ]
@@ -14422,8 +14422,8 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q1",
         "type": "mcq",
-        "question": "Welches historische Ereignis stellt Animal Farm in Form einer Allegorie dar?",
-        "explanation": "Orwell übersetzt die großen Etappen der Russischen Revolution und des stalinistischen Verrats in eine Tierfabel.",
+        "question": "Welches historische Ereignis steht hinter der Allegorie von Farm der Tiere?",
+        "explanation": "Orwell erzählt die Russische Revolution und den stalinistischen Verrat als Tierfabel.",
         "options": [
           "Die Russische Revolution",
           "Die Französische Revolution",
@@ -14435,13 +14435,13 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q2",
         "type": "mcq",
-        "question": "Welches Tier stellt Stalin in Orwells Allegorie dar?",
+        "question": "Welches Tier steht in Orwells Allegorie für Stalin?",
         "explanation": "Napoleon, das Schwein, das nach der Jagd auf Schneeball gewaltsam die Macht übernimmt, modelliert die Figur Stalins.",
         "options": [
           "Napoleon",
           "Der alte Major",
           "Schneeball",
-          "Malabar"
+          "Boxer"
         ],
         "correctIndex": 0
       },
@@ -14459,7 +14459,7 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q4",
         "type": "mcq",
-        "question": "Was stellen Napoleons Hunde in der Allegorie dar?",
+        "question": "Wofür stehen Napoleons Hunde in der Allegorie?",
         "explanation": "Die von Napoleon darauf trainierten Hunde, Schneeball zu jagen und die Farm zu terrorisieren, repräsentieren die sowjetische Geheimpolizei.",
         "options": [
           "Die Geheimpolizei",
@@ -14473,10 +14473,10 @@
         "id": "course_102_la_ferme_des_animaux_george_orwell_q5",
         "type": "mcq",
         "question": "Welches Tier verkörpert das bis zur Erschöpfung ausgebeutete Proletariat?",
-        "explanation": "Malabar, ein hingebungsvolles und unermüdliches Arbeitstier, symbolisiert ein Proletariat, das arbeitet, ohne jemals die Autorität in Frage zu stellen.",
+        "explanation": "Boxer, das treue, unermüdliche Zugpferd, steht für ein Proletariat, das schuftet, ohne die Macht je zu hinterfragen.",
         "options": [
-          "Malabar, das fleißige Pferd",
-          "Brille-Babil, der Propagandist",
+          "Boxer, das fleißige Pferd",
+          "Schwatzwutz, der Propagandist",
           "Der alte Major",
           "Schneeball"
         ],
@@ -14485,7 +14485,7 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q6",
         "type": "chronological",
-        "question": "Ordne diese Schritte von Animal Farm.",
+        "question": "Ordne diese Schritte aus Farm der Tiere.",
         "explanation": "Diese Sequenz zeigt den allmählichen Übergang von der egalitären Revolution hin zur Diktatur der Schweine.",
         "items": [
           "Die Tiere jagen Farmer Jones",
@@ -14521,7 +14521,7 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q9",
         "type": "numericSlider",
-        "question": "Wie viele Wörter hat Animal Farm ungefähr, ein bewusst sehr kurzer Text?",
+        "question": "Ungefähr wie viele Wörter hat Farm der Tiere — ein bewusst sehr kurzer Text?",
         "explanation": "Orwell liefert seine Allegorie in knapp 30.000 Wörtern, was die Wirksamkeit der Fabel verstärkt.",
         "correctValue": 30000.0,
         "sliderMin": 15000.0,
@@ -17198,8 +17198,8 @@
       {
         "id": "course_120_l_alchimiste_paulo_coelho_q5",
         "type": "mcq",
-        "question": "Was stellt das Konzept der Seele der Welt im Roman dar?",
-        "explanation": "Die Seele der Welt bezieht sich laut der Philosophie des Romans auf die einzigartige Energie, die angeblich alles, was existiert, teilt.",
+        "question": "Wofür steht die Seele der Welt in diesem Roman?",
+        "explanation": "Im Roman ist die Seele der Welt die eine Energie, die allem Seienden gemeinsam ist.",
         "options": [
           "Eine einzigartige Energie, die von allem, was existiert, geteilt wird",
           "Der Geist andalusischer Vorfahren",
@@ -17468,7 +17468,7 @@
         "id": "course_122_la_naissance_de_l_impressionnisme_q2",
         "type": "mcq",
         "question": "Welches Manet-Gemälde sorgte 1863 im Salon des Refusés für Aufsehen?",
-        "explanation": "Manet schockiert, indem er in Le Déjeuner sur l'herbe einen weiblichen Akt und zwei Männer in modernen Kostümen mischt.",
+        "explanation": "Manet schockiert, indem er in Das Frühstück im Grünen einen weiblichen Akt neben zwei Männern in zeitgenössischer Kleidung zeigt.",
         "options": [
           "Mittagessen auf der Wiese",
           "Druck, aufgehende Sonne",
@@ -17786,7 +17786,7 @@
       {
         "id": "course_124_rembrandt_et_l_ecole_flamande_q4",
         "type": "mcq",
-        "question": "Was stellt das Gemälde „Die Nachtwache“ wirklich dar?",
+        "question": "Was zeigt das Gemälde „Die Nachtwache“ wirklich?",
         "explanation": "Dies ist die Kompanie von Kapitän Frans Banning Cocq, eine Miliz, die in Bewegung gezeigt wird und nicht gemäß der Konvention ausgerichtet ist.",
         "options": [
           "Eine bürgerliche Milizkompanie in Bewegung",
@@ -19290,7 +19290,7 @@
         "options": [
           "Die Kameliendame von Alexandre Dumas fils",
           "Notre-Dame de Paris von Victor Hugo",
-          "Les Miserables von Victor Hugo",
+          "Die Elenden von Victor Hugo",
           "Madame Bovary von Gustave Flaubert"
         ],
         "correctIndex": 0
@@ -20893,7 +20893,7 @@
       {
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q5",
         "type": "mcq",
-        "question": "Was stellt HAL 9000 im Film dar?",
+        "question": "Wofür steht HAL 9000 im Film?",
         "explanation": "HAL 9000, der Bordcomputer, beschließt, Menschen zu eliminieren, um den Widerspruch in seiner Mission aufzulösen.",
         "options": [
           "Der Bordcomputer, der letztendlich die Besatzung eliminiert",
@@ -23689,10 +23689,10 @@
         "question": "Welche Bedingung stellt Hades an Orpheus, damit Eurydike wieder aufsteigen kann?",
         "explanation": "Hades akzeptiert die Rückkehr Eurydike unter der Bedingung, dass Orpheus vor ihr hergeht, ohne sich vor dem Licht umzudrehen.",
         "options": [
-          "Drehen Sie sich nicht um, bis Sie das Licht erreichen",
+          "Dreh dich nicht um, bis du das Licht erreichst",
           "Sprich nie wieder mit Eurydike",
-          "Gehen Sie in einer einzigen Nacht zurück",
-          "Bieten Sie Ihre Leier im Tausch an"
+          "Geh in einer einzigen Nacht zurück",
+          "Biete deine Leier im Tausch an"
         ],
         "correctIndex": 0
       },
@@ -23949,7 +23949,7 @@
         "question": "Welchen Rat gibt Dädalus Ikarus vor seiner Abreise?",
         "explanation": "Daedalus empfiehlt den Mittelweg: zu niedrig, die Luftfeuchtigkeit beschwert die Federn, zu hoch, die Sonne schmilzt das Wachs.",
         "options": [
-          "Folgen Sie einem Mittelweg, weder zu hoch noch zu niedrig",
+          "Halt dich an einen Mittelweg, weder zu hoch noch zu niedrig",
           "Fliegen Sie so hoch wie möglich, um Feuchtigkeit zu vermeiden",
           "Versteckt sich über den Wolken",
           "Fliegen Sie nur nachts"
@@ -27931,7 +27931,7 @@
       {
         "id": "course_194_le_mahabharata_q7",
         "type": "mcq",
-        "question": "Was stellt die Bhagavad-Gita in der Mahabharata-Geschichte dar?",
+        "question": "Welche Rolle hat die Bhagavad-Gita in der Mahabharata?",
         "explanation": "Die Bhagavad-Gita ist der etwa 700 Verse umfassende Dialog, in dem Krishna, Arjunas Wagenlenker, ihn Pflichtgefühl und selbstloses Handeln lehrt.",
         "options": [
           "Krishnas Dialog mit Arjuna über Pflicht und Handeln",

@@ -36,8 +36,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "Ce reprezintă Hegira în 622?",
-        "explanation": "Hijra este plecarea lui Muhammad, amenințat cu moartea la Mecca, spre oaza din Medina. Această dată devine anul 1 al calendarului musulman.",
+        "question": "Ce este Hegira din 622?",
+        "explanation": "Hegira e plecarea lui Mahomed din Mecca, unde era amenințat cu moartea, spre oaza Medina. Data devine anul 1 al calendarului musulman.",
         "options": [
           "Plecarea lui Muhammad de la Mecca la Medina",
           "Prima revelație primită de Muhammad",
@@ -49,8 +49,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q2",
         "type": "mcq",
-        "question": "Cine controla comerțul în jurul Kaaba înainte de Islam?",
-        "explanation": "Quraysh, tribul dominant din Mecca, și-a extras puterea din pelerinaj și comerț în jurul Kaaba politeistă.",
+        "question": "Cine controla comerțul din jurul Kaabei înainte de islam?",
+        "explanation": "Quraysh, tribul dominant din Mecca, își trage puterea din pelerinaj și din comerțul din jurul Kaabei păgâne.",
         "options": [
           "Tribul Quraysh",
           "Bizantinii",
@@ -62,8 +62,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q3",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: după ce a luat Mecca în 630, Mahomed și-a masacrat foștii persecutori.",
-        "explanation": "Mahomed, dimpotrivă, a acordat o grațiere generală, ceea ce a facilitat adunarea triburilor arabe la islam.",
+        "question": "Adevărat sau fals: după ce a luat Mecca în 630, Mahomed i-a masacrat pe foștii lui prigonitori.",
+        "explanation": "Dimpotrivă, Mahomed acordă o grațiere generală, iar triburile arabe aderă mai ușor la islam.",
         "options": [
           "Adevărat",
           "Fals"
@@ -74,7 +74,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
         "question": "În ce an a murit Muhammad, lăsând Arabia unită sub o singură autoritate?",
-        "explanation": "Muhammad a murit în 632, la numai zece ani după Hegira, când aproape toată Arabia a fost unificată.",
+        "explanation": "Mahomed moare în 632, la doar zece ani după Hegira, când aproape toată Arabia e deja unită.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
         "sliderMax": 660.0,
@@ -85,23 +85,23 @@
         "id": "course_1_la_naissance_de_l_islam_622_q5",
         "type": "chronological",
         "question": "Pune aceste evenimente din viața lui Muhammad în ordine cronologică.",
-        "explanation": "Aceste patru date (622, 624, 630, 632) marchează cei douăzeci de ani în care Mahomed a trecut de la profet amenințat la șef al unui stat care unește Arabia.",
+        "explanation": "Cele patru date (622, 624, 630, 632) acoperă douăzeci de ani: Mahomed trece de la profet amenințat la șeful unui stat care unește Arabia.",
         "items": [
           "Hegira: plecare spre Medina",
           "Bătălia de la Badr",
-          "Capturarea Meccai",
+          "Cucerirea Meccăi",
           "Moartea lui Muhammad"
         ]
       },
       {
         "id": "course_1_la_naissance_de_l_islam_622_q6",
         "type": "mcq",
-        "question": "Ce este Dhimma stabilită de cuceritorii musulmani?",
-        "explanation": "Dhimma este statutul protejat care îi autorizează pe „oamenii Cărții” să-și mențină religia la plata jizya.",
+        "question": "Ce este dhimma instituită de cuceritorii musulmani?",
+        "explanation": "Dhimma e statutul de protejat: „oamenii Cărții” își păstrează religia dacă plătesc jizya.",
         "options": [
-          "Statutul care permite creștinilor și evreilor să-și păstreze religia împotriva unei taxe",
+          "Statutul care le permite creștinilor și evreilor să-și păstreze religia în schimbul unei taxe",
           "Numele calendarului musulman",
-          "O taxă pe rulotele comerciale",
+          "O taxă pe caravanele comerciale",
           "Instanța însărcinată cu judecarea necredincioșilor"
         ],
         "correctIndex": 0
@@ -110,7 +110,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q7",
         "type": "mcq",
         "question": "Care două mari imperii au fost epuizate de războaiele lor din jurul Arabiei în secolul al VII-lea?",
-        "explanation": "Războaiele nesfârșite dintre Bizanț (Imperiul Roman de Răsărit) și perșii sasanizi au creat un vid geopolitic de care a profitat noul mesaj al lui Mahomed.",
+        "explanation": "Războaiele nesfârșite dintre Bizanț (Imperiul Roman de Răsărit) și perșii sasanizi lasă un gol de care profită mesajul lui Mahomed.",
         "options": [
           "Imperiile bizantin și sasanid",
           "Imperiile roman și chinez",
@@ -123,11 +123,11 @@
         "id": "course_1_la_naissance_de_l_islam_622_q8",
         "type": "mcq",
         "question": "Ce este Umma, fondată de Muhammad în Medina?",
-        "explanation": "Umma înlocuiește solidaritățile tribale tradiționale cu o comunitate bazată pe credință împărtășită.",
+        "explanation": "Umma înlocuiește legăturile de trib cu o comunitate bazată pe credința comună.",
         "options": [
           "Comunitatea credincioșilor, care trece dincolo de legăturile de sânge și de clan",
           "Numele calendarului musulman",
-          "Armata s-a ridicat împotriva Meccai",
+          "O armată adunată împotriva Meccăi",
           "Consiliul califilor"
         ],
         "correctIndex": 0
@@ -171,13 +171,13 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q1",
         "type": "mcq",
-        "question": "Ce eveniment a avut loc la Consiliul de la Clermont din noiembrie 1095?",
-        "explanation": "La Sinodul de la Clermont, din 27 noiembrie 1095, Urban al II-lea le-a cerut creștinilor occidentali să meargă să elibereze Ierusalimul, în schimbul iertării păcatelor lor.",
+        "question": "Ce se întâmplă la Sinodul de la Clermont, în noiembrie 1095?",
+        "explanation": "La Sinodul de la Clermont, pe 27 noiembrie 1095, Urban al II-lea cheamă creștinii din Apus să elibereze Ierusalimul, în schimbul iertării păcatelor.",
         "options": [
-          "Papa Urban al II-lea face apel la cruciada pentru eliberarea Ierusalimului",
-          "Papa l-a excomunicat pe împărat bizantin",
+          "Papa Urban al II-lea cheamă la cruciadă ca să elibereze Ierusalimul",
+          "Papa îl excomunică pe împăratul bizantin",
           "Turcii selgiucizi invadează Italia",
-          "Cruciații au găsit statele latine din Orient"
+          "Cruciații întemeiază statele latine din Orient"
         ],
         "correctIndex": 0
       },
@@ -185,11 +185,11 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q2",
         "type": "mcq",
         "question": "Ce eveniment l-a împins pe împăratul bizantin Alexios I Comnen să ceară ajutor papei?",
-        "explanation": "În 1071, la Mantzikert, turcii selgiucizi au zdrobit armata bizantină și au deschis Anatolia, împingându-l pe Alexios I Comnen să facă o petiție Romei.",
+        "explanation": "În 1071, la Mantzikert, turcii selgiucizi zdrobesc armata bizantină și deschid Anatolia — Alexios I Comnen trebuie să ceară ajutor Romei.",
         "options": [
-          "Înfrângerea lui Mantzikert împotriva turcilor selgiucizi",
+          "Înfrângerea de la Mantzikert în fața turcilor selgiucizi",
           "Cucerirea Ierusalimului de către musulmani",
-          "Sacrul Constantinopolului",
+          "Jefuirea Constantinopolului",
           "Moartea predecesorului său"
         ],
         "correctIndex": 0
@@ -198,7 +198,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q3",
         "type": "trueFalse",
         "question": "Adevărat sau fals: „cruciada oamenilor săraci” condusă de Petru Sihastrul a fost o armată disciplinată care a ajuns fără dificultate la Ierusalim.",
-        "explanation": "Fără disciplină sau provizii, această trupă de oameni săraci le-a prădat în cale și a fost decimată în Anatolia înainte de a ajunge la Ierusalim.",
+        "explanation": "Fără disciplină și fără provizii, trupa de săraci jefuiește totul în cale și e decimată în Anatolia înainte să ajungă la Ierusalim.",
         "options": [
           "Adevărat",
           "Fals"
@@ -221,8 +221,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q5",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: după capturarea Ierusalimului, Godfrey de Bouillon s-a proclamat rege al orașului.",
-        "explanation": "Godfrey de Bouillon a refuzat titlul de rege și a preferat să fie numit Declarat al Sfântului Mormânt, protector al mormântului lui Hristos.",
+        "question": "Adevărat sau fals: după cucerirea Ierusalimului, Godefroy de Bouillon se proclamă rege al orașului.",
+        "explanation": "Godefroy de Bouillon refuză titlul de rege și preferă să se numească Apărător al Sfântului Mormânt, protector al mormântului lui Hristos.",
         "options": [
           "Adevărat",
           "Fals"
@@ -233,19 +233,19 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q6",
         "type": "chronological",
         "question": "Pune aceste evenimente din istoria cruciadelor în ordine cronologică.",
-        "explanation": "Aceste repere variază între 1071 și 1187: înfrângerea bizantină precede apelul papei, care precede capturarea și apoi recucerirea Ierusalimului.",
+        "explanation": "De la 1071 la 1187: întâi înfrângerea bizantină, apoi apelul papei, cucerirea Ierusalimului și recucerirea lui.",
         "items": [
-          "Înfrângerea bizantină a lui Mantzikert împotriva turcilor selgiucizi",
-          "Apel la cruciada la Consiliul de la Clermont",
+          "Înfrângerea bizantină de la Mantzikert în fața turcilor selgiucizi",
+          "Apel la cruciada la Sinodul de la Clermont",
           "Cucerirea Ierusalimului de către cruciați",
-          "Reluarea Ierusalimului de către Saladin"
+          "Recucerirea Ierusalimului de către Saladin"
         ]
       },
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q7",
         "type": "numericSlider",
         "question": "În ce an au cucerit cruciații Ierusalimul?",
-        "explanation": "Ierusalimul a căzut pe 15 iulie 1099, după plecarea expediției în 1096 și asediul Antiohiei.",
+        "explanation": "Ierusalimul cade pe 15 iulie 1099, după expediția din 1096 și asediul Antiohiei.",
         "correctValue": 1099.0,
         "sliderMin": 1050.0,
         "sliderMax": 1150.0,
@@ -329,7 +329,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q2",
         "type": "trueFalse",
         "question": "Adevărat sau fals: înainte de 410, nicio armată inamică nu intrase în Roma timp de aproximativ opt secole.",
-        "explanation": "Ultima capturare a Romei de către un inamic datează de la jefuirea galilor din 390 î.Hr. î.Hr., cu aproape 800 de ani înainte de sosirea lui Alaric.",
+        "explanation": "Ultima oară când un inamic a luat Roma a fost jefuirea galilor din 390 î.Hr., la aproape 800 de ani înainte de Alaric.",
         "options": [
           "Adevărat",
           "Fals"
@@ -377,9 +377,9 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q6",
         "type": "mcq",
         "question": "Ce lucrare a scris Sfântul Augustin pentru a răspunde șocului provocat de jefuirea Romei?",
-        "explanation": "În fața păgânilor care acuză creștinismul că a slăbit Roma, Augustin răspunde în Cetatea lui Dumnezeu că imperiile pământești trec, dar că Biserica rămâne.",
+        "explanation": "Păgânii acuză creștinismul că a slăbit Roma. Augustin, în Cetatea lui Dumnezeu, răspunde: imperiile pământești trec, Biserica rămâne.",
         "options": [
-          "Orașul lui Dumnezeu",
+          "Cetatea lui Dumnezeu",
           "Confesiunile",
           "Orașul antic",
           "Războaiele punice"
@@ -390,11 +390,11 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q7",
         "type": "chronological",
         "question": "Pune aceste evenimente de la căderea Imperiului Roman de Apus în ordine cronologică.",
-        "explanation": "Aceste etape variază de la 402 la 476: retragerea la Ravenna precede sacul vizigot, apoi sacul vandal mai distructiv, până la sfârșitul Imperiului de Apus.",
+        "explanation": "De la 402 la 476: întâi retragerea la Ravenna, apoi jefuirea vizigotă, apoi jefuirea vandală, și mai dură, până la sfârșitul Imperiului de Apus.",
         "items": [
           "Honorius abandonează Roma pentru Ravenna",
-          "Pricul Romei de către Alaric și vizigoți",
-          "Pricul Romei de către vandali",
+          "Jefuirea Romei de către Alaric și vizigoți",
+          "Jefuirea Romei de către vandali",
           "Depunerea ultimului împărat occidental"
         ]
       },
@@ -472,10 +472,10 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q2",
         "type": "mcq",
-        "question": "Ce imperiu pretinde că reface încoronarea lui 800?",
-        "explanation": "Gestul lui Leon al III-lea urmărește restabilirea Imperiului Roman de Apus, care a dispărut de la depunerea lui Romulus Augustulus în 476.",
+        "question": "Ce imperiu pretinde că restaurează încoronarea din 800?",
+        "explanation": "Leon al III-lea vrea să refacă Imperiul Roman de Apus, dispărut de la detronarea lui Romulus Augustulus în 476.",
         "options": [
-          "Imperiul Roman de Apus, a dispărut din 476",
+          "Imperiul Roman de Apus, dispărut din 476",
           "Imperiul Bizantin de Răsărit",
           "Imperiul Persan Sasanian",
           "Regatul Lombard al Italiei"
@@ -669,7 +669,7 @@
         "options": [
           "Înfrângerea lui Bouvines",
           "Pierderea Gasconiei",
-          "Pricul Londrei de către baroni",
+          "Jefuirea Londrei de către baroni",
           "Revolta baronilor din nord"
         ],
         "correctIndex": 0
@@ -1171,7 +1171,7 @@
       {
         "id": "course_9_l_empire_azteque_q1",
         "type": "numericSlider",
-        "question": "În ce an au găsit Mexica Tenochtitlán?",
+        "question": "În ce an întemeiază mexica Tenochtitlán?",
         "explanation": "Mexica a fondat Tenochtitlán în 1325, pe o insuliță din Lacul Texcoco.",
         "correctValue": 1325.0,
         "sliderMin": 1280.0,
@@ -1183,7 +1183,7 @@
         "id": "course_9_l_empire_azteque_q2",
         "type": "mcq",
         "question": "Ce semn caută mexica pentru a-și fonda capitala, potrivit zeului lor Huitzilopochtli?",
-        "explanation": "Mexica au găsit acest semn pe o insuliță din Lacul Texcoco, unde au fondat Tenochtitlán în 1325.",
+        "explanation": "Mexica văd semnul pe o insulă din lacul Texcoco și acolo întemeiază Tenochtitlán, în 1325.",
         "options": [
           "Un vultur care devorează un șarpe pe un cactus",
           "O cometă traversând cerul",
@@ -2093,7 +2093,7 @@
         "id": "course_15_la_belle_epoque_1871_1914_q2",
         "type": "trueFalse",
         "question": "Adevărat sau fals: expresia „Belle Epoque” este folosită de oamenii care au trăit-o, înainte de 1914.",
-        "explanation": "Numele a apărut abia după 1914: supraviețuitorii tranșeelor ​​au fost cei care au inventat acest paradis pierdut, cu privirea retrospectivă a războiului.",
+        "explanation": "Numele a apărut abia după 1914: supraviețuitorii tranșeelor au fost cei care au inventat acest paradis pierdut, cu privirea retrospectivă a războiului.",
         "options": [
           "Adevărat",
           "Fals"
@@ -2300,7 +2300,7 @@
         "id": "course_16_la_bataille_de_verdun_1916_q8",
         "type": "chronological",
         "question": "Pune aceste etape ale Bătăliei de la Verdun și memoria ei în ordine cronologică.",
-        "explanation": "Aceste repere variază de la deschiderea ofensivei germane din februarie 1916 până la reconcilierea franco-germană din 1984.",
+        "explanation": "Aceste etape merg de la deschiderea ofensivei germane din februarie 1916 până la reconcilierea franco-germană din 1984.",
         "items": [
           "Deschiderea bombardamentului german",
           "Căderea Fortului Douaumont",
@@ -2436,7 +2436,7 @@
         "id": "course_17_la_revolution_russe_1917_q7",
         "type": "chronological",
         "question": "Pune aceste evenimente ale Revoluției Ruse în ordine cronologică.",
-        "explanation": "Aceste repere variază de la căderea țarismului în februarie 1917 până la întemeierea URSS în 1922.",
+        "explanation": "Aceste etape merg de la căderea țarismului în februarie 1917 până la întemeierea URSS în 1922.",
         "items": [
           "Abdicarea lui Nicolae al II-lea",
           "Tezele lui Lenin de aprilie",
@@ -3638,7 +3638,7 @@
         "id": "course_25_le_genocide_armenien_1915_1916_q9",
         "type": "chronological",
         "question": "Pune aceste repere ale genocidului armean și recunoașterea acestuia în ordine cronologică.",
-        "explanation": "Aceste patru etape variază de la impunitatea primelor masacre (1894-1896) până la recunoașterea târzie a genocidului de către anumite state (2001 pentru Franța).",
+        "explanation": "Aceste patru etape merg de la impunitatea primelor masacre (1894-1896) până la recunoașterea târzie a genocidului de către anumite state (2001 pentru Franța).",
         "items": [
           "Masacrele hamidiene sub sultanul Abdülhamid al II-lea",
           "Arestarea intelectualilor armeni la Constantinopol",
@@ -4597,7 +4597,7 @@
         "id": "course_32_la_guerre_du_vietnam_1955_1975_q8",
         "type": "chronological",
         "question": "Pune aceste etape ale războiului din Vietnam în ordine cronologică.",
-        "explanation": "Aceste repere variază de la împărțirea din 1954 până la căderea Saigonului în 1975, care a pecetluit reunificarea țării sub comunism.",
+        "explanation": "Aceste etape merg de la împărțirea din 1954 până la căderea Saigonului în 1975, care a pecetluit reunificarea țării sub comunism.",
         "items": [
           "Împărțirea țării la paralela 17",
           "Incident din Golful Tonkin",
@@ -4755,8 +4755,8 @@
       {
         "id": "course_33_le_proces_de_nuremberg_1945_1946_q9",
         "type": "mcq",
-        "question": "Ce limitări au fost criticate pentru procesele de la Nürnberg, cu privire la crimele comise chiar de Aliați?",
-        "explanation": "Masacrul de la Katyn, în care ofițerii polonezi au fost uciși de sovietici în 1940, nu a fost niciodată judecat, ceea ce a alimentat ideea justiției cu geometrie variabilă.",
+        "question": "Ce limită i s-a reproșat procesului de la Nürnberg, în privința crimelor comise chiar de Aliați?",
+        "explanation": "Masacrul de la Katyn, în care sovieticii au ucis ofițeri polonezi în 1940, n-a fost judecat niciodată. De-aia s-a vorbit de o justiție cu două măsuri.",
         "options": [
           "Lipsa de judecată asupra masacrului de la Katyn, comis de sovietici",
           "Absența oricărei probe documentare",
@@ -4903,7 +4903,7 @@
         "id": "course_34_la_decolonisation_panorama_1945_1975_q9",
         "type": "chronological",
         "question": "Pune aceste etape ale decolonizării în ordine cronologică.",
-        "explanation": "Aceste repere variază de la independența Indiei în 1947 până la sfârșitul imperiilor iberice în 1975, care a pus capăt valului decolonizării.",
+        "explanation": "Aceste etape merg de la independența Indiei în 1947 până la sfârșitul imperiilor iberice în 1975, care a pus capăt valului decolonizării.",
         "items": [
           "Independența Indiei și a Pakistanului",
           "Conferința de la Bandung",
@@ -5025,7 +5025,7 @@
       {
         "id": "course_35_l_apartheid_et_mandela_1948_1994_q7",
         "type": "percentageSlider",
-        "question": "Cu ce ​​procent din voturi Nelson Mandela a fost ales președinte în aprilie 1994?",
+        "question": "Cu ce procent din voturi Nelson Mandela a fost ales președinte în aprilie 1994?",
         "explanation": "La primele alegeri multirasiale, ANC a câștigat și Mandela a devenit președinte cu 62,6% din voturi.",
         "correctValue": 62.6,
         "sliderMin": 0.0,
@@ -6381,7 +6381,7 @@
         "id": "course_45_pourquoi_y_a_t_il_des_saisons_q2",
         "type": "trueFalse",
         "question": "Adevărat sau fals: vara este mai cald pentru că Pământul este mai aproape de Soare.",
-        "explanation": "Acest lucru este fals: în ianuarie, Pământul este chiar puțin mai aproape de Soare decât în ​​iulie, deși este iarnă în emisfera nordică.",
+        "explanation": "Acest lucru este fals: în ianuarie, Pământul este chiar puțin mai aproape de Soare decât în iulie, deși este iarnă în emisfera nordică.",
         "options": [
           "Adevărat",
           "Fals"
@@ -6415,7 +6415,7 @@
       {
         "id": "course_45_pourquoi_y_a_t_il_des_saisons_q5",
         "type": "mcq",
-        "question": "Ce demonstrează faptul că în ianuarie Pământul este mai aproape de Soare decât în ​​iulie, deși este iarnă în emisfera nordică?",
+        "question": "Ce demonstrează faptul că în ianuarie Pământul este mai aproape de Soare decât în iulie, deși este iarnă în emisfera nordică?",
         "explanation": "Această diferență de distanță arată clar că nu aceasta determină anotimpurile, ci înclinarea axei pământului.",
         "options": [
           "Că distanța de la Soare nu explică anotimpurile",
@@ -6433,7 +6433,7 @@
         "options": [
           "Nu sunt chiar patru anotimpuri, ci perioade mai uscate și mai umede",
           "Există o vară perpetuă fără iarnă",
-          "Zilele durează de două ori mai mult acolo decât în ​​altă parte",
+          "Zilele durează de două ori mai mult acolo decât în altă parte",
           "Soarele nu este niciodată vizibil acolo"
         ],
         "correctIndex": 0
@@ -6593,9 +6593,9 @@
         "id": "course_46_comment_les_avions_volent_ils_q8",
         "type": "mcq",
         "question": "În zborul de croazieră, ce se întâmplă când avionul se mișcă cu o viteză aproximativ constantă?",
-        "explanation": "La croazieră, liftul compensează exact greutatea, iar forța motoarelor compensează rezistența, ceea ce menține o viteză stabilă.",
+        "explanation": "La croazieră, portanța echilibrează greutatea, iar tracțiunea motoarelor echilibrează rezistența — viteza rămâne stabilă.",
         "options": [
-          "Ridicarea echilibrează greutatea, iar echilibrele de tracțiune trage",
+          "Portanța echilibrează greutatea, iar tracțiunea echilibrează rezistența",
           "Greutatea avionului devine zero",
           "Motoarele se opresc complet",
           "Dâra dispare complet"
@@ -6689,7 +6689,7 @@
       {
         "id": "course_47_pourquoi_baille_t_on_q5",
         "type": "mcq",
-        "question": "De ce căscă fătul că nu este pentru „lipsa de oxigen”?",
+        "question": "De ce căscatul fătului arată că nu e vorba de „lipsa de oxigen”?",
         "explanation": "Fătul căscă deși plămânii săi încă nu respiră aer, ceea ce arată că căscatul nu are legătură cu lipsa de oxigen.",
         "options": [
           "Pentru că în acest moment plămânii lui nu respiră încă aer",
@@ -6961,8 +6961,8 @@
       {
         "id": "course_49_pourquoi_a_t_on_des_frissons_q5",
         "type": "mcq",
-        "question": "De ce ți se face pielea de găină în timp ce vizionezi un film de groază, confortabil pe canapea ta?",
-        "explanation": "Sistemul nervos simpatic reacționează la frica resimțită în timpul vizionarii filmului, chiar și fără pericol real, ceea ce declanșează pielea de găină.",
+        "question": "De ce ți se face pielea de găină când te uiți la un film de groază, liniștit pe canapea?",
+        "explanation": "Sistemul nervos simpatic reacționează la frica din film, chiar fără pericol real, și-ți ridică pielea de găină.",
         "options": [
           "Sistemul nervos alert reacționează la frică, de parcă ar exista o amenințare reală",
           "Temperatura camerei scade mereu în timpul unui film înfricoșător",
@@ -7269,7 +7269,7 @@
         "id": "course_51_la_decouverte_de_la_penicilline_fleming_q8",
         "type": "chronological",
         "question": "Pune acești pași în istoria penicilinei în ordine.",
-        "explanation": "Fleming a descoperit penicilina în 1928, Florey și Chain au dezvoltat-o ​​la începutul anilor 1940, producția s-a industrializat în timpul războiului, apoi cei trei cercetători au primit Premiul Nobel în 1945.",
+        "explanation": "Fleming a descoperit penicilina în 1928, Florey și Chain au dezvoltat-o la începutul anilor 1940, producția s-a industrializat în timpul războiului, apoi cei trei cercetători au primit Premiul Nobel în 1945.",
         "items": [
           "Fleming observă mucegaiul care a ucis bacteriile pe un vas de cultură",
           "Florey și Chain izolează și testează penicilina la Oxford",
@@ -7695,10 +7695,10 @@
       {
         "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_q9",
         "type": "mcq",
-        "question": "De ce poate un vas gros să fie fierbinte la exterior și călduț în centru după ce l-ați gătit cu microunde?",
-        "explanation": "Valurile nu pătrund în mâncare la infinit, ceea ce explică de ce un vas gros se încălzește mai ales la suprafață.",
+        "question": "De ce un vas gros poate fi fierbinte pe dinafară și călduț în centru după ce l-ai gătit la microunde?",
+        "explanation": "Undele nu pătrund în mâncare la nesfârșit, de-asta un vas gros se încălzește mai ales la suprafață.",
         "options": [
-          "Valurile nu pătrund infinit adânc în mâncare",
+          "Undele nu pătrund la nesfârșit în adâncul mâncării",
           "Cuptorul distribuie prost căldura din cauza unui defect de fabricație",
           "Centrul este protejat de umiditate",
           "Vasul se întoarce prea repede în cuptor"
@@ -7891,7 +7891,7 @@
       {
         "id": "course_56_la_decouverte_de_la_radioactivite_marie_q2",
         "type": "mcq",
-        "question": "De ce a plecat Marie Curie să studieze mai degrabă la Paris decât în ​​Polonia?",
+        "question": "De ce a plecat Marie Curie să studieze mai degrabă la Paris decât în Polonia?",
         "explanation": "Născută în Polonia, a plecat să studieze la Paris pentru că universitățile locale au închis multe uși femeilor.",
         "options": [
           "Universitățile locale au închis multe uși femeilor",
@@ -8333,7 +8333,7 @@
         "id": "course_59_la_decouverte_de_l_anesthesie_q4",
         "type": "mcq",
         "question": "Cine este chirurgul care operează tumora gâtului în timpul acestei demonstrații?",
-        "explanation": "Chirurgul John Warren operează o tumoare la gât în ​​timp ce pacientul este pe eter.",
+        "explanation": "Chirurgul John Warren operează o tumoare la gât în timp ce pacientul este pe eter.",
         "options": [
           "John Warren",
           "Henri Becquerel",
@@ -9745,7 +9745,7 @@
       {
         "id": "course_69_comment_se_forment_les_eclairs_q4",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape de formare a fulgerului.",
+        "question": "Pune în ordine aceste etape de formare a fulgerului.",
         "explanation": "Încărcările se separă mai întâi în nor, apoi aerul se ionizează, arcul de întoarcere luminează cerul, iar expansiunea bruscă a aerului încălzit produce în cele din urmă tunete.",
         "items": [
           "Ciocnirile dintre cristalele de gheață și lapovița separă sarcinile electrice din nor",
@@ -10291,7 +10291,7 @@
         "explanation": "Telomerii acționează ca vârfurile șiretului la capetele cromozomilor; cu fiecare diviziune celulară se scurtează, iar dacă sunt prea scurte, celula încetează să se mai divizeze.",
         "options": [
           "Se termină la capetele cromozomilor, care se scurtează cu fiecare diviziune celulară",
-          "Proteine ​​care repară ADN-ul deteriorat",
+          "Proteine care repară ADN-ul deteriorat",
           "Celulele stem sunt prezente numai la nevertebrate",
           "Molecule care declanșează cancerul"
         ],
@@ -11492,7 +11492,7 @@
       {
         "id": "course_82_l_iliade_homere_q9",
         "type": "chronological",
-        "question": "Pune ordine în acești pași ai Iliadei.",
+        "question": "Pune în ordine acești pași ai Iliadei.",
         "explanation": "Aceste patru repere structurează poemul: argumentul inițial, doliul care îl înarmează pe Ahile, duelul decisiv, apoi scena umanității redescoperite.",
         "items": [
           "Disputa dintre Ahile și Agamemnon",
@@ -12087,7 +12087,7 @@
       {
         "id": "course_86_la_republique_platon_q9",
         "type": "mcq",
-        "question": "Conform teoriei ideilor, ce reprezintă lumea sensibilă pe care o percepem?",
+        "question": "După teoria ideilor, ce e lumea sensibilă pe care o vedem?",
         "explanation": "Pentru Platon, lumea sensibilă este doar o umbră în comparație cu lumea Ideilor, pe care o ilustrează mitul peșterii.",
         "options": [
           "O umbră a lumii reale a ideilor",
@@ -12691,7 +12691,7 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q1",
         "type": "mcq",
-        "question": "Pentru ce crimă a fost condamnat Jean Valjean la închisoare timp de nouăsprezece ani?",
+        "question": "Pentru ce delict e condamnat Jean Valjean la ocnă nouăsprezece ani?",
         "explanation": "Valjean este condamnat pentru furtul unei bucăți de pâine și petrece nouăsprezece ani în închisoare înainte de eliberare.",
         "options": [
           "Furtul unei bucăți de pâine",
@@ -12720,10 +12720,10 @@
         "question": "Sub ce identitate devine Valjean primar și industriaș filantropic?",
         "explanation": "Sub identitatea lui Monsieur Madeleine, Valjean devine primar filantropic, înainte ca Javert să ajungă să-l recunoască.",
         "options": [
-          "Domnule Madeleine",
-          "domnule Thénardier",
-          "domnule Javert",
-          "domnule Myriel"
+          "Monsieur Madeleine",
+          "Monsieur Thénardier",
+          "inspectorul Javert",
+          "episcopul Myriel"
         ],
         "correctIndex": 0
       },
@@ -12741,10 +12741,10 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q5",
         "type": "mcq",
-        "question": "De ce se scufundă Fantine în sărăcie?",
-        "explanation": "Fantine se sărăcește și se sacrifică pentru a plăti pensia fiicei sale Cosette, lăsată în mâinile Thénardier.",
+        "question": "De ce alunecă Fantine în mizerie?",
+        "explanation": "Fantine sărăcește și se sacrifică ca să plătească întreținerea fiicei Cosette, lăsată la Thénardier.",
         "options": [
-          "Să plătească pensia fiicei sale Cosette, încredințată Thénardier",
+          "Ca să plătească întreținerea fiicei Cosette, lăsată la Thénardier",
           "Pentru a finanța studiile fratelui său",
           "Pentru a plăti o datorie de jocuri de noroc",
           "Să fugă de poliție după un furt"
@@ -12754,8 +12754,8 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q6",
         "type": "mcq",
-        "question": "Ce eveniment istoric parizian structurează punctul culminant al romanului?",
-        "explanation": "Povestea se mută la Paris odată cu insurecția din iunie 1832, condusă de tineretul republican de la Friends of the ABC.",
+        "question": "Ce eveniment istoric parizian ține punctul culminant al romanului?",
+        "explanation": "Povestea basculează la Paris odată cu insurecția din iunie 1832, purtată de tineretul republican al Prietenilor ABC.",
         "options": [
           "Insurecția republicană din iunie 1832",
           "Asaltarea Bastiliei",
@@ -12791,10 +12791,10 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q9",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale poveștii Les Miserables.",
+        "question": "Pune în ordine aceste etape din povestea Mizerabililor.",
         "explanation": "Hugo a început romanul în 1845, a preluat manuscrisul în exil după lovitura de stat din 1851, înainte ca cartea să apară la Bruxelles în 1862.",
         "items": [
-          "Hugo începe să scrie romanul sub titlul „Les Misères”",
+          "Hugo începe romanul sub titlul „Mizeriile”",
           "Lovitura de stat întrerupe și apoi reîncepe scrisul în exil",
           "Romanul apare în sfârșit la Bruxelles"
         ]
@@ -12802,8 +12802,8 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q10",
         "type": "numericSlider",
-        "question": "În ce an a fost publicat în sfârșit Les Misérables, după șaptesprezece ani de muncă?",
-        "explanation": "Les Miserables a apărut în 1862 la Bruxelles, după șaptesprezece ani de muncă începând din 1845.",
+        "question": "În ce an apar în sfârșit Mizerabilii, după șaptesprezece ani de muncă?",
+        "explanation": "Mizerabilii apar în 1862 la Bruxelles, după șaptesprezece ani de muncă începuți în 1845.",
         "correctValue": 1862.0,
         "sliderMin": 1840.0,
         "sliderMax": 1880.0,
@@ -12849,7 +12849,7 @@
       {
         "id": "course_92_madame_bovary_flaubert_q1",
         "type": "mcq",
-        "question": "Cine este autorul cărții Madame Bovary?",
+        "question": "Cine a scris Madame Bovary?",
         "explanation": "Gustave Flaubert a publicat Madame Bovary în 1857, marcând nașterea realismului modern.",
         "options": [
           "Gustave Flaubert",
@@ -12928,8 +12928,8 @@
         "question": "Cum se sinucide Emma la sfârșitul romanului?",
         "explanation": "Emma se sinucide cu arsenul pe care îl fură de la farmacistul Homais, incapabil să-și facă față datoriilor și deziluziei.",
         "options": [
-          "Ea înghite arsenicul furat de la farmacistul Homais",
-          "Se varsă în Sena",
+          "Înghite arsenicul furat de la farmacistul Homais",
+          "Se aruncă în Sena",
           "Ea moare de durere",
           "Este ucisă de Charles"
         ],
@@ -12938,7 +12938,7 @@
       {
         "id": "course_92_madame_bovary_flaubert_q8",
         "type": "numericSlider",
-        "question": "Câți ani a petrecut Flaubert scriind pe Madame Bovary?",
+        "question": "Câți ani a petrecut Flaubert scriind Madame Bovary?",
         "explanation": "Flaubert s-a izolat în Croisset și s-a dedicat cinci ani, din 1851 până în 1856, scrierii acestui roman.",
         "correctValue": 5.0,
         "sliderMin": 1.0,
@@ -12998,8 +12998,8 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q1",
         "type": "mcq",
-        "question": "Cine este autorul cărții Le Rouge et le Noir, al cărui nume real este Henri Beyle?",
-        "explanation": "Stendhal, al cărui nume real era Henri Beyle, a publicat Le Rouge et le Noir în 1830.",
+        "question": "Cine e autorul romanului Roșu și Negru? Numele lui adevărat e Henri Beyle.",
+        "explanation": "Stendhal, pe numele adevărat Henri Beyle, publică Roșu și Negru în 1830.",
         "options": [
           "Stendhal",
           "Honoré de Balzac",
@@ -13101,7 +13101,7 @@
         "id": "course_93_le_rouge_et_le_noir_stendhal_q9",
         "type": "numericSlider",
         "question": "În ce an a fost publicat Roșu și Negru?",
-        "explanation": "Romanul a apărut în 1830, cu puțin timp înainte de Trois Glorieuses.",
+        "explanation": "Romanul apare în 1830, cu puțin înainte de cele Trei Zile Glorioase.",
         "correctValue": 1830.0,
         "sliderMin": 1810.0,
         "sliderMax": 1840.0,
@@ -13111,7 +13111,7 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q10",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: în fața morții, Julien își dublează eforturile de a scăpa de schelă prin înșelăciune.",
+        "question": "Adevărat sau fals: în fața morții, Julien se străduiește și mai tare să scape de eșafod prin șiretlic.",
         "explanation": "În închisoare, Julien nu mai calculează: în fața morții, refuză să-și salveze capul prin intrigi și își acceptă destinul.",
         "options": [
           "Adevărat",
@@ -13467,7 +13467,7 @@
       {
         "id": "course_96_l_etranger_camus_q1",
         "type": "mcq",
-        "question": "Cine este autorul cărții The Stranger?",
+        "question": "Cine a scris Străinul?",
         "explanation": "Albert Camus a publicat Străinul în 1942, primul său roman.",
         "options": [
           "Albert Camus",
@@ -13493,12 +13493,12 @@
       {
         "id": "course_96_l_etranger_camus_q3",
         "type": "mcq",
-        "question": "Ce refuză Meursault să facă, la înmormântarea mamei sale și în relația cu Marie?",
+        "question": "Ce refuză Meursault să facă, și la înmormântarea mamei, și cu Marie?",
         "explanation": "Meursault refuză să mintă despre sentimentele sale, trăind prezentul și senzațiile fizice mai mult decât moralitatea așteptată.",
         "options": [
-          "Mințit despre sentimentele tale",
-          "Participați la evenimente importante",
-          "Vorbește despre trecutul tău",
+          "Să mintă despre ce simte",
+          "Să participe la evenimente importante",
+          "Să vorbească despre trecutul lui",
           "Pleacă din Alger"
         ],
         "correctIndex": 0
@@ -13507,9 +13507,9 @@
         "id": "course_96_l_etranger_camus_q4",
         "type": "mcq",
         "question": "În ce circumstanțe ucide Meursault un bărbat pe plajă?",
-        "explanation": "Orbită de soarele de pe plajă, Meursault împușcă un bărbat într-un gest pe care romanul îl prezintă ca o coincidență tragică, fără ură sau răzbunare.",
+        "explanation": "Orbit de soarele de pe plajă, Meursault împușcă un bărbat — romanul prezintă gestul ca pe o coincidență tragică, fără ură și fără răzbunare.",
         "options": [
-          "Orbită de soare, într-un gest fără ură sau răzbunare",
+          "Orbit de soare, într-un gest fără ură și fără răzbunare",
           "Pentru a răzbuna un prieten",
           "În timpul unui zbor eșuat",
           "Din întâmplare, în timp ce mânuiești o armă"
@@ -13640,7 +13640,7 @@
       {
         "id": "course_97_le_mythe_de_sisyphe_camus_q2",
         "type": "mcq",
-        "question": "Cu ce ​​afirmație celebră își deschide Camus eseul?",
+        "question": "Cu ce afirmație celebră își deschide Camus eseul?",
         "explanation": "Camus își deschide eseul afirmând că singura problemă filozofică cu adevărat serioasă este a judeca dacă viața merită trăită.",
         "options": [
           "„Există o singură problemă filozofică cu adevărat serioasă și aceasta este sinuciderea”",
@@ -13940,8 +13940,8 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q1",
         "type": "mcq",
-        "question": "Cine este autorul cărții Père Goriot?",
-        "explanation": "Honoré de Balzac a publicat Le Père Goriot în 1835.",
+        "question": "Cine a scris Moș Goriot?",
+        "explanation": "Honoré de Balzac publică Moș Goriot în 1835.",
         "options": [
           "Honoré de Balzac",
           "Victor Hugo",
@@ -13953,8 +13953,8 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q2",
         "type": "mcq",
-        "question": "Din care grup romantic aparține părintele Goriot?",
-        "explanation": "Părintele Goriot este pivotul Comédie humaine, unde Balzac introduce pentru prima dată revenirea personajelor recurente.",
+        "question": "Din ce ciclu de romane face parte Moș Goriot?",
+        "explanation": "Moș Goriot e pivotul Comediei umane: aici Balzac aduce întâia oară personajele care revin dintr-un roman în altul.",
         "options": [
           "Comedia umană",
           "Soții Rougon-Macquart",
@@ -13966,7 +13966,7 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q3",
         "type": "mcq",
-        "question": "Pentru cine își sacrifică părintele Goriot toată averea?",
+        "question": "Pentru cine își sacrifică Moș Goriot toată averea?",
         "explanation": "Fost producător de vermicelli, Goriot a sacrificat totul pentru fiicele sale Anastasie și Delphine, care l-au abandonat odată ce s-au îmbogățit.",
         "options": [
           "Fiicele sale Anastasie și Delphine",
@@ -13979,7 +13979,7 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q4",
         "type": "mcq",
-        "question": "Unde locuiește părintele Goriot în timp ce resursele lui se epuizează?",
+        "question": "Unde locuiește Moș Goriot în timp ce resursele lui se epuizează?",
         "explanation": "Goriot coboară din etaj în etaj la pensiunea Vauquer pe măsură ce resursele lui se epuizează, până în camera cea mai modestă.",
         "options": [
           "La pensiunea Vauquer",
@@ -14016,12 +14016,12 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q7",
         "type": "mcq",
-        "question": "Ce oferă Vautrin în Rastignac pentru a face avere rapid?",
+        "question": "Ce-i propune Vautrin lui Rastignac ca să se îmbogățească repede?",
         "explanation": "Vautrin îi oferă lui Rastignac un pact cinic: să facă avere organizând o crimă, pe care Rastignac ajunge să o refuze.",
         "options": [
-          "Faceți o avere prin crimă",
-          "Căsătorește-te cu o moștenitoare bogată",
-          "Fură din fondul de pensii Vauquer",
+          "Să facă avere printr-o crimă",
+          "Să se însoare cu o moștenitoare bogată",
+          "Să fure casa de bani a pensiunii Vauquer",
           "Manipularea unui joc de cărți"
         ],
         "correctIndex": 0
@@ -14029,11 +14029,11 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q8",
         "type": "mcq",
-        "question": "Ce spune Rastignac din cimitirul Père-Lachaise la finalul romanului?",
-        "explanation": "Din Père-Lachaise, după moartea lui Goriot, Rastignac și-a lansat provocarea către Paris: „Acum suntem amândoi!” »",
+        "question": "Ce-i strigă Rastignac Parisului, de la Père-Lachaise, la final?",
+        "explanation": "De la Père-Lachaise, după moartea lui Goriot, Rastignac îi aruncă Parisului: „À nous deux maintenant !”",
         "options": [
-          "„Amândoi acum!” »",
-          "„Te blestem, Paris!” »",
+          "„À nous deux maintenant !”",
+          "„Te blestem, Paris!”",
           "„La revedere, tată!”",
           "„Vautrin a avut dreptate!”"
         ],
@@ -14043,7 +14043,7 @@
         "id": "course_99_le_pere_goriot_balzac_q9",
         "type": "mcq",
         "question": "Ce tehnică romanistică inaugurează Balzac cu acest roman?",
-        "explanation": "Părintele Goriot inaugurează în Comédie humaine întoarcerea personajelor, care reapar de la un roman la altul.",
+        "explanation": "Moș Goriot inaugurează în Comédie humaine întoarcerea personajelor, care reapar de la un roman la altul.",
         "options": [
           "Revenirea personajelor de la un roman la altul",
           "Monologul interior",
@@ -14129,7 +14129,7 @@
         "id": "course_100_les_fleurs_du_mal_baudelaire_q3",
         "type": "numericSlider",
         "question": "În ce an au fost reabilitate oficial cele șase poezii condamnate din Florile răului?",
-        "explanation": "Cele șase poezii condamnate în 1857 nu au fost reabilitate oficial decât în ​​1949, 92 de ani mai târziu.",
+        "explanation": "Cele șase poezii condamnate în 1857 nu au fost reabilitate oficial decât în 1949, 92 de ani mai târziu.",
         "correctValue": 1949.0,
         "sliderMin": 1920.0,
         "sliderMax": 1970.0,
@@ -14139,7 +14139,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q4",
         "type": "mcq",
-        "question": "Ce reprezintă albatrosul în secțiunea „Splină și ideal”?",
+        "question": "Ce e albatrosul în secțiunea „Spleen et Idéal”?",
         "explanation": "Albatrosul, maiestuos în zbor dar ridicol odată așezat pe pământ, îl reprezintă pe poet într-o lume care nu-l înțelege.",
         "options": [
           "Poetul, maiestuos în zbor dar ridicol pe pământ",
@@ -14272,7 +14272,7 @@
       {
         "id": "course_101_1984_george_orwell_q2",
         "type": "mcq",
-        "question": "Cu ce ​​conflict a luptat Orwell înainte de a scrie 1984?",
+        "question": "Cu ce conflict a luptat Orwell înainte de a scrie 1984?",
         "explanation": "Orwell a luptat în 1936-1937 în milițiile POUM în timpul războiului civil spaniol, unde a fost rănit.",
         "options": [
           "Războiul civil spaniol",
@@ -14363,12 +14363,12 @@
       {
         "id": "course_101_1984_george_orwell_q9",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale vieții și operei lui Orwell.",
+        "question": "Pune în ordine aceste etape ale vieții și operei lui Orwell.",
         "explanation": "Aceste patru etape marchează cariera lui Orwell: Războiul civil spaniol (1936-1937), Ferma animalelor (1945), 1984 (1949), apoi moartea sa în 1950.",
         "items": [
           "Orwell a luptat în milițiile POUM în timpul războiului civil spaniol",
-          "El publică Animal Farm",
-          "A publicat în 1984",
+          "Publică Ferma animalelor",
+          "Publică romanul 1984",
           "A murit în Scoția la scurt timp după publicarea romanului său."
         ]
       },
@@ -14459,7 +14459,7 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q4",
         "type": "mcq",
-        "question": "Ce reprezintă câinii lui Napoleon în alegorie?",
+        "question": "Ce sunt câinii lui Napoleon în alegorie?",
         "explanation": "Câinii dresați de Napoleon pentru a urmări bulgărele de zăpadă și a teroriza ferma reprezintă poliția secretă sovietică.",
         "options": [
           "Poliția secretă",
@@ -14521,7 +14521,7 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q9",
         "type": "numericSlider",
-        "question": "Aproximativ câte cuvinte are Animal Farm, un text intenționat foarte scurt?",
+        "question": "Cam câte cuvinte are Ferma animalelor, un text voit foarte scurt?",
         "explanation": "Orwell își oferă alegoria în abia 30.000 de cuvinte, ceea ce întărește eficiența fabulei.",
         "correctValue": 30000.0,
         "sliderMin": 15000.0,
@@ -14890,7 +14890,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q3",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: titlul original, Brave New World, citează în mod ironic o piesă de teatru de Shakespeare.",
+        "question": "Adevărat sau fals: titlul original, Brave New World, citează ironic o piesă de Shakespeare.",
         "explanation": "Titlul citează Furtuna de Shakespeare, a cărei minune naivă maschează aici un viitor dezumanizat.",
         "options": [
           "Adevărat",
@@ -14953,7 +14953,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q8",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: la sfârșitul romanului, John acceptă să trăiască confortabil în Brave New World.",
+        "question": "Adevărat sau fals: la sfârșitul romanului, John acceptă să trăiască liniștit în Minunata lume nouă.",
         "explanation": "John refuză soma și paradisul artificial propus de Mond: se sinucide, fără nicio reconciliere posibilă.",
         "options": [
           "Adevărat",
@@ -14964,7 +14964,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q9",
         "type": "numericSlider",
-        "question": "În ce an a publicat Aldous Huxley Brave New World?",
+        "question": "În ce an publică Aldous Huxley Minunata lume nouă?",
         "explanation": "Huxley a publicat acest roman în 1932, după ce l-a scris anul precedent.",
         "correctValue": 1932.0,
         "sliderMin": 1900.0,
@@ -15260,7 +15260,7 @@
       {
         "id": "course_107_crime_et_chatiment_dostoievski_q9",
         "type": "mcq",
-        "question": "Cu ce ​​mișcare intelectuală luptă în special Dostoievski prin acest roman?",
+        "question": "Cu ce mișcare intelectuală luptă în special Dostoievski prin acest roman?",
         "explanation": "Întors din exil, Dostoievski luptă cu nihilismul care mătură tinerii ruși în anii 1860, arătând cum o idee ruptă din viață duce la crimă.",
         "options": [
           "Nihilismul rusesc din anii 1860",
@@ -15765,7 +15765,7 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q2",
         "type": "mcq",
-        "question": "Ce reprezintă Atticus Finch în instanță, știind că va pierde?",
+        "question": "Ce arată Atticus Finch în instanță, deși știe că va pierde?",
         "explanation": "Atticus acceptă să-l apere pe Tom Robinson în ciuda certitudinii pierderii, pentru că în sudul segregaționist culoarea pielii acuzatului cântărește mai mult decât dovezile.",
         "options": [
           "Tom Robinson, un bărbat de culoare acuzat pe nedrept",
@@ -17089,7 +17089,7 @@
         "id": "course_119_le_petit_prince_saint_exupery_q9",
         "type": "mcq",
         "question": "Ce s-a întâmplat cu avionul lui Saint-Exupéry pe 31 iulie 1944?",
-        "explanation": "La 31 iulie 1944, avionul lui Saint-Exupéry a dispărut pe mare; epava sa nu va fi identificată decât în ​​anul 2000, în largul coastei Marsiliei.",
+        "explanation": "La 31 iulie 1944, avionul lui Saint-Exupéry a dispărut pe mare; epava sa nu va fi identificată decât în anul 2000, în largul coastei Marsiliei.",
         "options": [
           "A dispărut pe mare, iar epava sa nu a fost identificată până în anul 2000.",
           "A fost doborât peste Paris",
@@ -17198,7 +17198,7 @@
       {
         "id": "course_120_l_alchimiste_paulo_coelho_q5",
         "type": "mcq",
-        "question": "Ce reprezintă conceptul de Suflet al Lumii în roman?",
+        "question": "Ce e Sufletul Lumii în roman?",
         "explanation": "Sufletul lumii se referă la energia unică pe care se crede că tot ceea ce există o împărtășește, conform filozofiei romanului.",
         "options": [
           "O energie unică împărtășită de tot ceea ce există",
@@ -17468,7 +17468,7 @@
         "id": "course_122_la_naissance_de_l_impressionnisme_q2",
         "type": "mcq",
         "question": "Care pictură de Manet a scandalizat Salon des Refusés din 1863?",
-        "explanation": "Manet șochează amestecând un nud feminin și doi bărbați în costum modern în Le Déjeuner sur l'herbe.",
+        "explanation": "Manet șochează amestecând un nud feminin cu doi bărbați în haine moderne — e Dejunul pe iarbă.",
         "options": [
           "Prânzul pe iarbă",
           "Imprimare, soare răsare",
@@ -17775,7 +17775,7 @@
       {
         "id": "course_124_rembrandt_et_l_ecole_flamande_q3",
         "type": "trueFalse",
-        "question": "Adevărat sau fals: The Night Watch reprezintă de fapt o scenă de zi.",
+        "question": "Adevărat sau fals: Rondul de noapte înfățișează de fapt o scenă de zi.",
         "explanation": "Titlul este o interpretare greșită: scena este diurnă, dar secole de lac murdar au întunecat pânza până la punctul de a sugera noaptea.",
         "options": [
           "Adevărat",
@@ -17786,7 +17786,7 @@
       {
         "id": "course_124_rembrandt_et_l_ecole_flamande_q4",
         "type": "mcq",
-        "question": "Ce reprezintă cu adevărat tabloul cunoscut sub numele de The Night Watch?",
+        "question": "Ce înfățișează de fapt tabloul cunoscut ca Rondul de noapte?",
         "explanation": "Aceasta este Compania căpitanului Frans Banning Cocq, o miliție prezentată mai degrabă în mișcare decât aliniată așa cum o cere convenția.",
         "options": [
           "O companie de miliție burgheză în mișcare",
@@ -17996,7 +17996,7 @@
         "id": "course_125_le_romantisme_en_peinture_delacroix_geri_q9",
         "type": "chronological",
         "question": "Pune aceste lucrări și evenimente ale romantismului în ordine cronologică.",
-        "explanation": "Aceste repere variază între 1816 și 1832, de la naufragiul propriu-zis până la transformarea paletei lui Delacroix de către Orient.",
+        "explanation": "Aceste etape merg de la 1816 și 1832, de la naufragiul propriu-zis până la transformarea paletei lui Delacroix de către Orient.",
         "items": [
           "Scufundarea fregatei Méduse",
           "Pluta Medusei este expusă",
@@ -18070,7 +18070,7 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q3",
         "type": "mcq",
         "question": "Care pictură din 1907 marchează punctul de plecare al cubismului?",
-        "explanation": "Les Demoiselles d'Avignon, cu nudurile sale cu fațete ascuțite, i-au uimit chiar și pe cei apropiați lui Picasso.",
+        "explanation": "Domnișoarele din Avignon, cu nudurile tăiate în fațete ascuțite, i-au uluit până și pe apropiații lui Picasso.",
         "options": [
           "Fetele din Avignon",
           "Guernica",
@@ -18133,7 +18133,7 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q8",
         "type": "chronological",
         "question": "Pune aceste etape ale cubismului în ordine cronologică.",
-        "explanation": "Aceste repere variază între 1907 și 1912, de la destrămarea inițială până la inventarea colajului.",
+        "explanation": "Aceste etape merg de la 1907 și 1912, de la destrămarea inițială până la inventarea colajului.",
         "items": [
           "Fetele din Avignon",
           "Cubismul analitic disecă obiectul",
@@ -18143,7 +18143,7 @@
       {
         "id": "course_126_le_cubisme_picasso_et_braque_q9",
         "type": "numericSlider",
-        "question": "Cam în ce an a finalizat Picasso Les Demoiselles d'Avignon?",
+        "question": "Cam în ce an termină Picasso Domnișoarele din Avignon?",
         "explanation": "Picasso a finalizat această pictură fondatoare a cubismului în 1907.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -18291,7 +18291,7 @@
         "id": "course_127_le_surrealisme_dali_et_magritte_q9",
         "type": "chronological",
         "question": "Pune aceste repere ale suprarealismului în ordine cronologică.",
-        "explanation": "Aceste repere variază între 1924 și 1939, de la întemeierea mișcării până la ruptura dintre Breton și Dalí.",
+        "explanation": "Aceste etape merg de la 1924 și 1939, de la întemeierea mișcării până la ruptura dintre Breton și Dalí.",
         "items": [
           "Manifestul suprarealismului al lui Breton",
           "Dalí se alătură grupului suprarealist",
@@ -18575,7 +18575,7 @@
         "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_q8",
         "type": "chronological",
         "question": "Pune aceste repere ale artei abstracte în ordine cronologică.",
-        "explanation": "Aceste repere variază între 1910 și 1919, de la începuturile lui Kandinsky până la intrarea abstracției în design.",
+        "explanation": "Aceste etape merg de la 1910 și 1919, de la începuturile lui Kandinsky până la intrarea abstracției în design.",
         "items": [
           "Kandinsky se îndreaptă spre abstracție",
           "Spiritual in Art este publicat",
@@ -19540,7 +19540,7 @@
       {
         "id": "course_136_beethoven_genie_et_surdite_q2",
         "type": "mcq",
-        "question": "Cu ce ​​compozitor celebru a studiat pe scurt Beethoven la sosirea sa la Viena în 1792?",
+        "question": "Cu ce compozitor celebru a studiat pe scurt Beethoven la sosirea sa la Viena în 1792?",
         "explanation": "Beethoven a studiat pentru scurt timp cu Joseph Haydn la sosirea sa în capitala muzicală.",
         "options": [
           "Joseph Haydn",
@@ -19686,7 +19686,7 @@
       {
         "id": "course_137_la_naissance_du_rock_n_roll_q2",
         "type": "mcq",
-        "question": "Cu ce ​​producător a înregistrat Elvis Presley That's All Right în 1954?",
+        "question": "Cu ce producător a înregistrat Elvis Presley That's All Right în 1954?",
         "explanation": "Cu producătorul Sam Phillips în Memphis, Elvis a înregistrat prima sa melodie semnificativă.",
         "options": [
           "Sam Phillips, în Memphis",
@@ -20188,7 +20188,7 @@
         "id": "course_140_le_blues_racines_de_toute_la_musique_mod_q7",
         "type": "trueFalse",
         "question": "Adevărat sau fals: numele grupului britanic The Rolling Stones este preluat dintr-o melodie a lui Muddy Waters.",
-        "explanation": "The Rolling Stones și-a luat numele dintr-o melodie a lui Muddy Waters, pe care au ajutat-o ​​să o prezinte publicului alb.",
+        "explanation": "The Rolling Stones și-a luat numele dintr-o melodie a lui Muddy Waters, pe care au ajutat-o să o prezinte publicului alb.",
         "options": [
           "Adevărat",
           "Fals"
@@ -20575,7 +20575,7 @@
       {
         "id": "course_143_orson_welles_et_citizen_kane_q3",
         "type": "mcq",
-        "question": "Cu ce ​​director de imagine a dezvoltat Welles tehnica profunzimii câmpului în Citizen Kane?",
+        "question": "Cu ce director de imagine a dezvoltat Welles tehnica profunzimii câmpului în Citizen Kane?",
         "explanation": "Împreună cu directorul de fotografiat Gregg Toland, Welles impune adâncimea câmpului, care menține totul clar de la prim-plan până la fundalul imaginii.",
         "options": [
           "Gregg Toland",
@@ -20893,7 +20893,7 @@
       {
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q5",
         "type": "mcq",
-        "question": "Ce reprezintă HAL 9000 în film?",
+        "question": "Cine e HAL 9000 în film?",
         "explanation": "HAL 9000, computerul de bord, alege să elimine oamenii pentru a rezolva contradicția din misiunea sa.",
         "options": [
           "Computerul de bord care elimină în cele din urmă echipajul",
@@ -21935,7 +21935,7 @@
         "options": [
           "Îl deranjează pe noul rege Louis-Philippe de Orléans",
           "Este considerat prea prost vopsit",
-          "Însuși Delacroix a îndepărtat-o ​​din superstiție",
+          "Însuși Delacroix a îndepărtat-o din superstiție",
           "Este vândut unui colecționar străin"
         ],
         "correctIndex": 0
@@ -22227,7 +22227,7 @@
         "id": "course_154_impression_soleil_levant_monet_q7",
         "type": "trueFalse",
         "question": "Adevărat sau fals: în 2014, un astrofizician a reușit să dateze cu precizie scena din tablou folosind mareele și poziția soarelui.",
-        "explanation": "În 2014, un astrofizician a datat scena pe 13 noiembrie 1872 în jurul orei 7:35 a.m., datorită mareelor ​​și soarelui.",
+        "explanation": "În 2014, un astrofizician a datat scena pe 13 noiembrie 1872 în jurul orei 7:35 a.m., datorită mareelor și soarelui.",
         "options": [
           "Adevărat",
           "Fals"
@@ -22420,7 +22420,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q1",
         "type": "mcq",
-        "question": "În ce oraș a pictat Picasso Les Demoiselles d'Avignon în 1907?",
+        "question": "În ce oraș pictează Picasso Domnișoarele din Avignon în 1907?",
         "explanation": "Picasso a lucrat la Bateau-Lavoir din Montmartre, unde a finalizat pictura în 1907.",
         "options": [
           "Paris (Montmartre)",
@@ -22520,7 +22520,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q9",
         "type": "numericSlider",
-        "question": "În ce an a finalizat Picasso Les Demoiselles d'Avignon?",
+        "question": "În ce an termină Picasso Domnișoarele din Avignon?",
         "explanation": "Picasso a finalizat pictura în 1907, la Montmartre.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -22629,7 +22629,7 @@
         "id": "course_157_la_persistance_de_la_memoire_dali_q6",
         "type": "mcq",
         "question": "Ce instituție americană a achiziționat tabloul, contribuind la faima sa în întreaga lume?",
-        "explanation": "Lucrarea a fost achiziționată de MoMA, ceea ce a ajutat-o ​​să intre în cultura populară.",
+        "explanation": "Lucrarea a fost achiziționată de MoMA, ceea ce a ajutat-o să intre în cultura populară.",
         "options": [
           "MoMA",
           "Muzeul Metropolitan",
@@ -23329,7 +23329,7 @@
       {
         "id": "course_162_promethee_le_voleur_de_feu_q8",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale mitului lui Prometeu.",
+        "question": "Pune în ordine aceste etape ale mitului lui Prometeu.",
         "explanation": "De la viclenia sacrificiului la furtul focului, apoi la tortură și eliberare, mitul lui Prometeu urmează o progresie clară.",
         "items": [
           "Prometeu îl înșală pe Zeus în timpul sacrificiului de la Mekone",
@@ -23464,7 +23464,7 @@
       {
         "id": "course_163_pandore_et_la_boite_q8",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale mitului Pandora.",
+        "question": "Pune în ordine aceste etape ale mitului Pandora.",
         "explanation": "De la crearea sa până la deschiderea fatală a borcanului, mitul Pandorei urmează o progresie foarte precisă.",
         "items": [
           "Zeii fac Pandora la ordinul lui Zeus",
@@ -23601,7 +23601,7 @@
       {
         "id": "course_164_demeter_et_persephone_les_saisons_q8",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale mitului lui Demeter și Persefone.",
+        "question": "Pune în ordine aceste etape ale mitului lui Demeter și Persefone.",
         "explanation": "De la răpire până la împărțirea anului, acest mit explică alternanța anotimpurilor.",
         "items": [
           "Răpirea Persefonei de către Hades",
@@ -23736,7 +23736,7 @@
       {
         "id": "course_165_orphee_et_eurydice_q8",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale mitului lui Orfeu și Eurydice.",
+        "question": "Pune în ordine aceste etape ale mitului lui Orfeu și Eurydice.",
         "explanation": "De la căsătoria până la pierderea definitivă a lui Eurydice, acest mit urmează un complot tragic și precis.",
         "items": [
           "Orfeu se căsătorește cu nimfa Euridice",
@@ -23933,7 +23933,7 @@
       {
         "id": "course_167_icare_et_dedale_q2",
         "type": "mcq",
-        "question": "Cu ce ​​materiale face Daedalus aripile?",
+        "question": "Cu ce materiale face Daedalus aripile?",
         "explanation": "În timp ce observă păsările, Daedalus face aripi din lemn, pene și ceară de albine.",
         "options": [
           "Lemn, pene și ceară de albine",
@@ -24009,7 +24009,7 @@
       {
         "id": "course_167_icare_et_dedale_q8",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale mitului lui Icar și Daedalus.",
+        "question": "Pune în ordine aceste etape ale mitului lui Icar și Daedalus.",
         "explanation": "De la construcția Labirintului până la căderea lui Icar, povestea urmează o progresie precisă.",
         "items": [
           "Daedalus construiește Labirintul pentru Regele Minos",
@@ -24157,7 +24157,7 @@
       {
         "id": "course_168_sisyphe_punition_eternelle_q9",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale mitului lui Sisif.",
+        "question": "Pune în ordine aceste etape ale mitului lui Sisif.",
         "explanation": "De la revelarea secretului Eginei până la condamnarea veșnică, mitul lui Sisif urmează o progresie clară.",
         "items": [
           "Sisif îi dezvăluie lui Asopos că Zeus și-a răpit fiica",
@@ -24231,7 +24231,7 @@
       {
         "id": "course_169_tantale_et_son_supplice_q3",
         "type": "mcq",
-        "question": "Cu ce ​​înlocuiește Zeus umărul mâncat al lui Pelops când îl învie?",
+        "question": "Cu ce înlocuiește Zeus umărul mâncat al lui Pelops când îl învie?",
         "explanation": "Zeus îl învie pe Pelops și înlocuiește umărul mâncat cu o bucată de fildeș.",
         "options": [
           "O bucată de fildeș",
@@ -24445,7 +24445,7 @@
       {
         "id": "course_170_meduse_et_persee_q9",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale mitului Medusei și Perseus.",
+        "question": "Pune în ordine aceste etape ale mitului Medusei și Perseus.",
         "explanation": "De la atacul Medusei până la eliberarea Andromedei, povestea urmează o progresie precisă.",
         "items": [
           "Poseidon o atacă pe Medusa în templul Atenei",
@@ -24608,7 +24608,7 @@
       {
         "id": "course_171_hercule_et_ses_12_travaux_q10",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale mitului lui Heracles.",
+        "question": "Pune în ordine aceste etape ale mitului lui Heracles.",
         "explanation": "De la nebunia provocată de Hera până la coborârea în lumea interlopă, munca lui Heracles urmează o progresie clară.",
         "items": [
           "Hera îl înnebunește pe Heracles și îl face să-și omoare familia",
@@ -24758,7 +24758,7 @@
       {
         "id": "course_172_thesee_et_le_minotaure_q9",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale mitului lui Tezeu și Minotaur.",
+        "question": "Pune în ordine aceste etape ale mitului lui Tezeu și Minotaur.",
         "explanation": "Refuzul lui Minos declanșează nașterea Minotaurului, apoi tributul, viclenia Ariadnei și, în final, moartea lui Egeu din greșeală.",
         "items": [
           "Minos refuză să sacrifice un taur alb lui Poseidon",
@@ -24908,7 +24908,7 @@
       {
         "id": "course_173_ulysse_et_le_cyclope_q9",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale episodului Cyclops.",
+        "question": "Pune în ordine aceste etape ale episodului Cyclops.",
         "explanation": "De la intrarea în peșteră până la orbit, apoi până la mărturisirea numelui pe mare, episodul urmează o progresie precisă care pecetluiește soarta lui Ulise.",
         "items": [
           "Ulise și oamenii săi intră în peștera lui Polifem",
@@ -25369,7 +25369,7 @@
       {
         "id": "course_176_achille_le_talon_et_l_invulnerabilite_q10",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale vieții lui Ahile.",
+        "question": "Pune în ordine aceste etape ale vieții lui Ahile.",
         "explanation": "De la protecția sa de copil până la moartea sa în luptă, destinul lui Ahile urmează o traiectorie marcată de gloria și fatalitatea călcâiului său.",
         "items": [
           "Thetis îl aruncă pe copilul Ahile în Styx, ținându-l de călcâi",
@@ -25532,7 +25532,7 @@
       {
         "id": "course_177_dipe_et_le_sphinx_q10",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale mitului lui Oedip.",
+        "question": "Pune în ordine aceste etape ale mitului lui Oedip.",
         "explanation": "De la fuga din Corint până la revelarea tragică a identității sale, Oedip trece printr-o călătorie în care victoria asupra Sfinxului precede căderea sa.",
         "items": [
           "Oedip fuge din Corint pentru a scăpa de o profeție",
@@ -25695,7 +25695,7 @@
       {
         "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_q10",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale tragediei Antigonei.",
+        "question": "Pune în ordine aceste etape ale tragediei Antigonei.",
         "explanation": "De la moartea celor doi frați la decretul lui Creon, apoi la neascultarea Antigonei și condamnarea ei, tragedia urmează inexorabil.",
         "items": [
           "Eteocle și Polyneices se ucid reciproc pentru tronul Tebei",
@@ -25858,7 +25858,7 @@
       {
         "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_q10",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale războiului troian.",
+        "question": "Pune în ordine aceste etape ale războiului troian.",
         "explanation": "De la judecata Parisului până la viclenia finală a calului de lemn, zece ani separă izbucnirea războiului de căderea orașului.",
         "items": [
           "Paris o alege pe Afrodita și obține dragostea lui Helene",
@@ -26268,7 +26268,7 @@
       {
         "id": "course_182_osiris_et_set_mythologie_egyptienne_q6",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale mitului lui Osiris și Set.",
+        "question": "Pune în ordine aceste etape ale mitului lui Osiris și Set.",
         "explanation": "Povestea urmează o secvență clară: uciderea lui Osiris, reconstituirea lui de către Isis, tineretul ascuns al lui Horus, apoi încoronarea sa după conflictul împotriva lui Set.",
         "items": [
           "Pune capcane și dezmembră corpul lui Osiris",
@@ -26566,7 +26566,7 @@
         "id": "course_184_romulus_et_remus_la_fondation_de_rome_q6",
         "type": "mcq",
         "question": "Ce dată păstrează tradiția romană pentru întemeierea Romei?",
-        "explanation": "Potrivit tradiției, Roma a fost fondată la 21 aprilie 753 î.Hr. î.Hr., data de începere a calendarului roman.",
+        "explanation": "Potrivit tradiției, Roma a fost fondată la 21 aprilie 753 î.Hr., data de începere a calendarului roman.",
         "options": [
           "21 aprilie 753 î.Hr",
           "1 ianuarie 509 î.Hr",
@@ -26617,7 +26617,7 @@
       {
         "id": "course_184_romulus_et_remus_la_fondation_de_rome_q10",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale întemeierii Romei.",
+        "question": "Pune în ordine aceste etape ale întemeierii Romei.",
         "explanation": "De la leagănul abandonat de pe Tibru până la apoteoza lui Romulus, mitul urmează o cronologie precisă a nașterii, întemeierii și fuziunii popoarelor.",
         "items": [
           "Nașterea de gemeni, fii ai lui Marte și Rea Silvia",
@@ -27220,7 +27220,7 @@
       {
         "id": "course_188_les_titans_vs_les_dieux_titanomachie_q10",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale Titanomahiei.",
+        "question": "Pune în ordine aceste etape ale Titanomahiei.",
         "explanation": "De la tirania lui Kronos până la împărțirea lumii între cei trei frați, Titanomahia urmează o progresie clară către ordinea olimpică.",
         "items": [
           "Kronos își devorează copiii de teamă să nu fie detronat",
@@ -27508,7 +27508,7 @@
       {
         "id": "course_191_enee_et_la_fondation_de_rome_virgile_q8",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale călătoriei lui Eneas.",
+        "question": "Pune în ordine aceste etape ale călătoriei lui Eneas.",
         "explanation": "Călătoria lui Eneas duce de la căderea Troiei la dragostea tragică a Cartaginei, înainte de victoria Italiei care începe descendența Romei.",
         "items": [
           "Fugând din Troia în flăcări împreună cu tatăl și fiul",
@@ -27631,7 +27631,7 @@
       {
         "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_q6",
         "type": "mcq",
-        "question": "Cu ce ​​instrument extrage preotul inimile victimelor din vârful Templo Mayor?",
+        "question": "Cu ce instrument extrage preotul inimile victimelor din vârful Templo Mayor?",
         "explanation": "Preotul folosește un cuțit de obsidian, o piatră vulcanică ascuțită, pentru a extrage inima din vârful Templo Mayor din Tenochtitlán.",
         "options": [
           "Un cuțit obsidian",
@@ -27808,7 +27808,7 @@
       {
         "id": "course_193_quetzalcoatl_q8",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale mitului lui Quetzalcoatl.",
+        "question": "Pune în ordine aceste etape ale mitului lui Quetzalcoatl.",
         "explanation": "Mitul urmează un fir continuu: creația, apoi exilul regelui-preot și, în final, renașterea legendei în timpul cuceririi spaniole.",
         "items": [
           "Zeul creator îi readuce pe oameni la viață și le oferă porumb",
@@ -27931,7 +27931,7 @@
       {
         "id": "course_194_le_mahabharata_q7",
         "type": "mcq",
-        "question": "Ce reprezintă Bhagavad-Gita în povestea Mahabharata?",
+        "question": "Ce e Bhagavad-Gita în Mahabharata?",
         "explanation": "Bhagavad-Gita este dialogul de aproximativ 700 de versuri în care Krishna, conducătorul de car al lui Arjuna, îl învață datoria și acțiunea dezinteresată.",
         "options": [
           "Dialogul lui Krishna cu Arjuna despre datorie și acțiune",
@@ -28106,7 +28106,7 @@
       {
         "id": "course_195_lancelot_guenievre_et_la_table_ronde_q9",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale legendei arthuriene.",
+        "question": "Pune în ordine aceste etape ale legendei arthuriene.",
         "explanation": "Ciclul Arthurian urmează o traiectorie completă: fundație glorioasă, căutare spirituală, trădare dezvăluită, apoi căderea finală a regatului.",
         "items": [
           "Arthur îndepărtează Excalibur de pe stâncă și întemeiază Masa Rotundă",
@@ -28493,7 +28493,7 @@
       {
         "id": "course_198_sindbad_le_marin_q6",
         "type": "mcq",
-        "question": "Care este principala paralelă occidentală evocată cu Sindbad, dar care descrie Asia mai degrabă în fapte decât în ​​minuni?",
+        "question": "Care este principala paralelă occidentală evocată cu Sindbad, dar care descrie Asia mai degrabă în fapte decât în minuni?",
         "explanation": "Marco Polo este paralela vestică a lui Sindbad: el descrie Asia în fapte, unde Sindbad o pictează în minuni.",
         "options": [
           "Marco Polo",
@@ -28670,7 +28670,7 @@
       {
         "id": "course_199_les_titans_vs_les_dieux_la_titanomachie_q9",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape post-Titanomachie.",
+        "question": "Pune în ordine aceste etape post-Titanomachie.",
         "explanation": "Ordinul olimpic se construiește în etape: victoria militară, apoi împărțirea pedepselor, înainte de proba finală a Gigantomahiei.",
         "items": [
           "Ciclopii și Hecatonchirii înclină războiul în favoarea lui Zeus",
@@ -28757,7 +28757,7 @@
       {
         "id": "course_200_re_et_la_creation_du_monde_egypte_q4",
         "type": "mcq",
-        "question": "Cu ce ​​forță luptă Ra în fiecare noapte în timpul trecerii sale prin Duat?",
+        "question": "Cu ce forță luptă Ra în fiecare noapte în timpul trecerii sale prin Duat?",
         "explanation": "În fiecare noapte, barca lui Re traversează Douât-ul în război împotriva lui Isfet, dezordinea, pe care șarpele Apopis încearcă să o impună.",
         "options": [
           "Isfet, dezordine, întruchipată de șarpele Apopis",
@@ -28820,7 +28820,7 @@
       {
         "id": "course_200_re_et_la_creation_du_monde_egypte_q9",
         "type": "chronological",
-        "question": "Pune ordine în aceste etape ale mitologiei lui Ra.",
+        "question": "Pune în ordine aceste etape ale mitologiei lui Ra.",
         "explanation": "Mitul urmărește crearea lumii, apoi nașterea zeilor, criza revoltei umane și, în final, sinteza teologică a Noului Regat.",
         "items": [
           "Atum iese din substantivul de pe Piatra Benben",
@@ -30862,7 +30862,7 @@
         "options": [
           "Boală, ignoranță, condiții insalubre, lenevie și sărăcie",
           "Șomaj, război, foamete, exil și boli",
-          "Sărăcia, corupția, frauda, ​​criminalitatea și boala",
+          "Sărăcia, corupția, frauda, criminalitatea și boala",
           "Inflație, șomaj, datorii, război și foamete"
         ],
         "correctIndex": 0
@@ -32172,7 +32172,7 @@
         "id": "course_223_l_economie_circulaire_q8",
         "type": "mcq",
         "question": "În regula 3R (reduce, reutiliza, reciclează), care este primul pas, cel care are cel mai mare efect asupra climei?",
-        "explanation": "Reducerea, adică să vă întrebați dacă o achiziție este cu adevărat necesară, este primul pas al regulii 3R și cel care are cel mai mare efect asupra climei.",
+        "explanation": "Reducerea — adică să te întrebi dacă o cumpărătură e într-adevăr necesară — e primul pas al regulii 3R și cel cu cel mai mare efect asupra climei.",
         "options": [
           "Reduceți, întrebându-vă dacă achiziția este cu adevărat necesară",
           "Reciclați sistematic fiecare obiect",
@@ -33522,7 +33522,7 @@
       {
         "id": "course_233_le_droit_d_asile_explique_q2",
         "type": "mcq",
-        "question": "Conform Convenției de la Geneva, ce motiv NU vă permite să obțineți statutul de refugiat?",
+        "question": "Conform Convenției de la Geneva, ce motiv NU îți permite să obții statutul de refugiat?",
         "explanation": "Definiția refugiatului exclude victimele dezastrelor naturale sau ale foametei, care nu constituie persecuție în sensul Convenției.",
         "options": [
           "Un dezastru natural sau foamete",
@@ -33859,9 +33859,9 @@
         "id": "course_235_l_eau_prochaine_source_de_conflits_q7",
         "type": "mcq",
         "question": "Ce face irigarea prin picurare?",
-        "explanation": "Irigarea prin picurare furnizează apă direct la rădăcinile plantelor, reducând consumul agricol cu ​​30 până la 70 la sută.",
+        "explanation": "Irigarea prin picurare furnizează apă direct la rădăcinile plantelor, reducând consumul agricol cu 30 până la 70 la sută.",
         "options": [
-          "Reducerea consumului de apă agricol cu ​​30 până la 70%",
+          "Reducerea consumului de apă agricol cu 30 până la 70%",
           "Dublarea recoltelor agricole instantaneu",
           "Eliminați complet nevoia de irigare",
           "Transformă apa de mare în apă dulce"
@@ -34427,7 +34427,7 @@
         "question": "Ce oferă venitul de bază universal?",
         "explanation": "Venitul de bază universal propune plata unei sume fixe fiecărui cetățean, fără condiții, pentru a-și asigura cursurile vieții într-o economie în care munca devine mai intermitentă.",
         "options": [
-          "Plătește o sumă fixă ​​fiecărui cetățean, fără condiții",
+          "Plătește o sumă fixă fiecărui cetățean, fără condiții",
           "Reduceți timpul de lucru la 4 zile pe săptămână",
           "Înlocuiți toate locurile de muncă cu inteligență artificială",
           "Eliminați impozitele pe capital"

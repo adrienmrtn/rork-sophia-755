@@ -42,7 +42,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q4",
         "type": "mcq",
-        "question": "Vad representerar albatrossen i avsnittet \"Mjälte och ideal\"?",
+        "question": "Vad står albatrossen för i avsnittet \"Mjälte och ideal\"?",
         "explanation": "Albatrossen, majestätisk i flykt men löjlig en gång placerad på marken, representerar poeten i en värld som inte förstår honom.",
         "options": [
           "Poeten, majestätisk i flykten men löjlig på marken",
@@ -214,8 +214,8 @@
       {
         "id": "course_101_1984_george_orwell_q7",
         "type": "mcq",
-        "question": "Vad kallar du förmågan att acceptera två motsägelsefulla sanningar på en gång, 1984?",
-        "explanation": "Dubbeltänkande hänvisar till förmågan att acceptera två motsägelsefulla sanningar på en gång, en pelare i partiets tankekontroll.",
+        "question": "Vad kallas förmågan att godta två motstridiga sanningar på en gång, i 1984?",
+        "explanation": "Dubbeltänk är förmågan att godta två motstridiga sanningar på en gång, en pelare i partiets tankekontroll.",
         "options": [
           "Dubbeltänk",
           "Newspeak",
@@ -241,10 +241,10 @@
         "id": "course_101_1984_george_orwell_q9",
         "type": "chronological",
         "question": "Ordna dessa stadier av Orwells liv och arbete.",
-        "explanation": "Dessa fyra etapper markerar Orwells karriär: det spanska inbördeskriget (1936-1937), Animal Farm (1945), 1984 (1949), sedan hans död 1950.",
+        "explanation": "De fyra etapperna markerar Orwells bana: spanska inbördeskriget (1936–1937), Djurfarmen (1945), 1984 (1949) och hans död 1950.",
         "items": [
           "Orwell stred i POUM-milisen under det spanska inbördeskriget",
-          "Han ger ut Animal Farm",
+          "Han ger ut Djurfarmen",
           "Han publicerade 1984",
           "Han dog i Skottland kort efter publiceringen av hans roman."
         ]
@@ -268,8 +268,8 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q1",
         "type": "mcq",
-        "question": "Vilken historisk händelse skildrar Animal Farm i form av en allegori?",
-        "explanation": "Orwell omsätter de stora stadierna av den ryska revolutionen och det stalinistiska sveket till en djurfabel.",
+        "question": "Vilken historisk händelse skildrar Djurfarmen som allegori?",
+        "explanation": "Orwell lägger den ryska revolutionens och det stalinistiska sveket stora skeden i en djurfabel.",
         "options": [
           "Den ryska revolutionen",
           "Franska revolutionen",
@@ -281,13 +281,13 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q2",
         "type": "mcq",
-        "question": "Vilket djur representerar Stalin i Orwells allegori?",
-        "explanation": "Napoleon, grisen som tar makten med våld efter att ha jagat Snowball, modellerar figuren Stalin.",
+        "question": "Vilket djur står för Stalin i Orwells allegori?",
+        "explanation": "Napoleon, grisen som tar makten med våld efter att ha jagat iväg Snöboll, är gjord efter Stalin.",
         "options": [
           "Napoleon",
-          "Den gamle majoren",
+          "Gamle Major",
           "Snöboll",
-          "Malabar"
+          "Boxer"
         ],
         "correctIndex": 0
       },
@@ -305,8 +305,8 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q4",
         "type": "mcq",
-        "question": "Vad representerar Napoleons hundar i allegorin?",
-        "explanation": "Hundarna som tränats av Napoleon för att jaga Snowball och terrorisera gården representerar den sovjetiska hemliga polisen.",
+        "question": "Vad står Napoleons hundar för i allegorin?",
+        "explanation": "Hundarna som Napoleon tränat för att jaga iväg Snöboll och skrämma gården står för den sovjetiska hemliga polisen.",
         "options": [
           "Den hemliga polisen",
           "Tsarens reguljära armé",
@@ -319,11 +319,11 @@
         "id": "course_102_la_ferme_des_animaux_george_orwell_q5",
         "type": "mcq",
         "question": "Vilket djur förkroppsligar proletariatet som exploateras till utmattning?",
-        "explanation": "Malabar, en hängiven och outtröttlig arbetshäst, symboliserar ett proletariat som arbetar utan att någonsin ifrågasätta auktoritet.",
+        "explanation": "Boxer, den hängivna och outtröttliga arbetshästen, står för ett proletariat som sliter utan att ifrågasätta makten.",
         "options": [
-          "Malabar, den hårt arbetande hästen",
-          "Brille-Babil, propagandisten",
-          "Den gamle majoren",
+          "Boxer, den hårt arbetande hästen",
+          "Skrikhals, propagandisten",
+          "Gamle Major",
           "Snöboll"
         ],
         "correctIndex": 0
@@ -331,13 +331,13 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q6",
         "type": "chronological",
-        "question": "Ordna dessa steg från Animal Farm.",
+        "question": "Ordna dessa steg ur Djurfarmen.",
         "explanation": "Denna sekvens visar det gradvisa skiftet från den jämlika revolutionen mot svinens diktatur.",
         "items": [
-          "Djuren jagar Farmer Jones",
-          "Napoleon jagar Snowball med sina hundar",
-          "Grisar ändrar i hemlighet de sju budorden",
-          "Grisar börjar gå på två ben"
+          "Djuren jagar iväg bonden Jones",
+          "Napoleon jagar iväg Snöboll med sina hundar",
+          "Grisarna ändrar i hemlighet de sju budorden",
+          "Grisarna börjar gå på två ben"
         ]
       },
       {
@@ -367,7 +367,7 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q9",
         "type": "numericSlider",
-        "question": "Ungefär hur många ord har Animal Farm, en medvetet mycket kort text?",
+        "question": "Ungefär hur många ord har Djurfarmen, en medvetet mycket kort text?",
         "explanation": "Orwell levererar sin allegori i knappt 30 000 ord, vilket förstärker fabelns effektivitet.",
         "correctValue": 30000.0,
         "sliderMin": 15000.0,
@@ -643,8 +643,8 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q3",
         "type": "trueFalse",
-        "question": "Sant eller falskt: originaltiteln, Brave New World, citerar ironiskt nog en Shakespeare-pjäs.",
-        "explanation": "Titeln citerar Shakespeares Stormen, vars naiva förundran här maskerar en avhumaniserad framtid.",
+        "question": "Sant eller falskt: originaltiteln Du sköna nya värld citerar ironiskt en Shakespeare-pjäs.",
+        "explanation": "Titeln citerar Shakespeares Stormen, där den naiva förundran här döljer en avhumaniserad framtid.",
         "options": [
           "Sant",
           "Falskt"
@@ -706,7 +706,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q8",
         "type": "trueFalse",
-        "question": "Sant eller falskt: i slutet av romanen går John med på att leva bekvämt i Brave New World.",
+        "question": "Sant eller falskt: i slutet av romanen går John med på att leva bekvämt i Du sköna nya värld.",
         "explanation": "John vägrar soma och det konstgjorda paradis som Mond föreslår: han tar livet av sig, utan någon möjlig försoning.",
         "options": [
           "Sant",
@@ -717,7 +717,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q9",
         "type": "numericSlider",
-        "question": "Vilket år publicerade Aldous Huxley Brave New World?",
+        "question": "Vilket år gav Aldous Huxley ut Du sköna nya värld?",
         "explanation": "Huxley publicerade den här romanen 1932, efter att ha skrivit den föregående år.",
         "correctValue": 1932.0,
         "sliderMin": 1900.0,
@@ -996,7 +996,7 @@
         "id": "course_108_le_proces_kafka_q3",
         "type": "trueFalse",
         "question": "Sant eller falskt: Kafka bad sin vän Max Brod att bränna hans manuskript efter hans död.",
-        "explanation": "Kafka hade bett Max Brod att förstöra hans manuskript; Brod vägrade och publicerade The Trial 1925.",
+        "explanation": "Kafka hade bett Max Brod att förstöra hans manuskript. Brod vägrade och gav ut Processen 1925.",
         "options": [
           "Sant",
           "Falskt"
@@ -1203,7 +1203,7 @@
       {
         "id": "course_10_la_decouverte_de_l_amerique_1492_q1",
         "type": "numericSlider",
-        "question": "Vilket år nådde Christopher Columbus Bahamas?",
+        "question": "Vilket år nådde Kristoffer Columbus Bahamas?",
         "explanation": "Columbus landade den 12 oktober 1492 på en ö på Bahamas som han döpte till San Salvador.",
         "correctValue": 1492.0,
         "sliderMin": 1450.0,
@@ -1227,8 +1227,8 @@
       {
         "id": "course_10_la_decouverte_de_l_amerique_1492_q3",
         "type": "trueFalse",
-        "question": "Sant eller falskt: Christopher Columbus försökte framför allt bevisa att jorden var rund, en idé okänd före honom.",
-        "explanation": "Jordens sfäricitet beräknades redan av den grekiske forskaren Eratosthenes på 300-talet f.Kr. AD; Columbus mål var ekonomiskt.",
+        "question": "Sant eller falskt: Kristoffer Columbus ville främst bevisa att jorden var rund, en idé som var okänd före honom.",
+        "explanation": "Jordens rundhet hade redan räknats ut av den grekiske lärde Eratosthenes på 200-talet f.Kr. Columbus mål var ekonomiskt.",
         "options": [
           "Sant",
           "Falskt"
@@ -1275,8 +1275,8 @@
       {
         "id": "course_10_la_decouverte_de_l_amerique_1492_q7",
         "type": "mcq",
-        "question": "Vad är den colombianska börsen?",
-        "explanation": "Denna överföring tar potatis och tomater till Europa, och vete, hästar eller boskap till Amerika, vilket förändrar båda världarna för alltid.",
+        "question": "Vad är det colombianska utbytet?",
+        "explanation": "Utbytet för potatis och tomat till Europa, och vete, häst och boskap till Amerika, och förändrar båda världarna för alltid.",
         "options": [
           "En massiv överföring av växter, djur och sjukdomar mellan Europa och Amerika",
           "Ett fredsavtal mellan Spanien och Portugal",
@@ -1429,7 +1429,7 @@
       {
         "id": "course_110_les_raisins_de_la_colere_steinbeck_q9",
         "type": "numericSlider",
-        "question": "Vilket år publicerades The Grapes of Wrath, mitt under den stora depressionen?",
+        "question": "Vilket år utkom Vredens druvor, mitt under den stora depressionen?",
         "explanation": "Romanen publicerades 1939 och vann Pulitzerpriset året därpå.",
         "correctValue": 1939.0,
         "sliderMin": 1910.0,
@@ -1574,7 +1574,7 @@
       {
         "id": "course_112_le_grand_gatsby_fitzgerald_q2",
         "type": "mcq",
-        "question": "Vad symboliserar det gröna ljuset som Gatsby begrundar varje kväll i slutet av plattformen?",
+        "question": "Vad står den gröna lampan för, som Gatsby varje kväll ser längst ut på bryggan?",
         "explanation": "Det gröna ljuset i slutet av Buchanans plattform symboliserar framtiden som Gatsby strävar efter utan att någonsin kunna nå den.",
         "options": [
           "Framtiden han strävar efter, alltid utom räckhåll",
@@ -1587,7 +1587,7 @@
       {
         "id": "course_112_le_grand_gatsby_fitzgerald_q3",
         "type": "trueFalse",
-        "question": "Sant eller falskt: När den släpptes 1925 var The Great Gatsby en stor kommersiell framgång.",
+        "question": "Sant eller falskt: när Den store Gatsby kom 1925 blev den en stor kommersiell framgång.",
         "explanation": "Romanen sålde endast omkring 20 000 exemplar vid publicering; det var först efter Fitzgeralds död som det blev en klassiker.",
         "options": [
           "Sant",
@@ -2327,12 +2327,12 @@
         "id": "course_118_moby_dick_melville_q3",
         "type": "mcq",
         "question": "Hur börjar romanen, med en av de mest kända meningarna i amerikansk litteratur?",
-        "explanation": "Romanen inleds med frasen \"Call me Ishmael\", en av de mest berömda början i amerikansk litteratur.",
+        "explanation": "Romanen inleds med meningen \"Kalla mig Ismael\", en av de mest kända inledningarna i amerikansk litteratur.",
         "options": [
           "Kalla mig Ismael",
-          "Det var den bästa tiden",
-          "I början fanns Moby Dick",
-          "Det var en gång en val"
+          "Det var den bästa av tider",
+          "Alla lyckliga familjer liknar varandra",
+          "Jag är en osynlig man"
         ],
         "correctIndex": 0
       },
@@ -2391,7 +2391,7 @@
       {
         "id": "course_118_moby_dick_melville_q8",
         "type": "mcq",
-        "question": "Vad symboliserar valens vithet enligt Melville?",
+        "question": "Vad betyder valens vithet enligt Melville?",
         "explanation": "Melville använder valens vita för att betona naturens likgiltighet, ett skrämmande tomrum som universum inte reagerar på.",
         "options": [
           "Naturens likgiltighet, ett skrämmande tomrum utan något svar från universum",
@@ -2565,7 +2565,7 @@
         "question": "Vad sökte parisarna framför allt när de intog Bastiljen den 14 juli 1789?",
         "explanation": "Bastiljen innehöll endast 7 fångar; angriparna letade främst efter krutet som förvarats i fästningen.",
         "options": [
-          "Pulver för att försvara dig själv",
+          "Krut för att kunna försvara sig",
           "Frisläppandet av tusentals fångar",
           "Guld från den kungliga skattkammaren",
           "Det kungliga arkivet"
@@ -2650,7 +2650,7 @@
         "id": "course_11_la_prise_de_la_bastille_1789_q8",
         "type": "trueFalse",
         "question": "Sant eller falskt: när kungen fick veta om stormningen av Bastiljen svarade han att det var ett enkelt uppror.",
-        "explanation": "Tvärtom fick han höra \"No Sire, it's a revolution\", trots att kungen hade noterat \"Ingenting\" i sin jaktdagbok den 14:e.",
+        "explanation": "Tvärtom fick han höra: ”Nej sire, det är en revolution”, fast han själv hade skrivit ”Ingenting” i jaktdagboken den 14:e.",
         "options": [
           "Sant",
           "Falskt"
@@ -2675,10 +2675,10 @@
         "question": "Vad hände på landsbygden efter stormningen av Bastiljen, under inverkan av den stora rädslan?",
         "explanation": "Av rädsla för att hämnas från adelsmännen brände bönderna upp papper om sina seigneuriala rättigheter, vilket påskyndade avskaffandet av privilegier.",
         "options": [
-          "Bönderna bränner upp papper om seeignoriella rättigheter",
-          "Bönder reser sig mot nationalförsamlingen",
-          "Kampanjerna förblir likgiltiga för händelserna i Paris",
-          "Bönderna kräver att den absoluta kungen ska återvända"
+          "Bönderna bränner pappren om de feodala rättigheterna",
+          "Bönderna reser sig mot nationalförsamlingen",
+          "Landsbygden förblir likgiltig för händelserna i Paris",
+          "Bönderna kräver att den enväldige kungen ska återvända"
         ],
         "correctIndex": 0
       }
@@ -2740,7 +2740,7 @@
       {
         "id": "course_120_l_alchimiste_paulo_coelho_q5",
         "type": "mcq",
-        "question": "Vad representerar begreppet Världens själ i romanen?",
+        "question": "Vad betyder begreppet Världens själ i romanen?",
         "explanation": "Världens själ hänvisar till den unika energi som allt som existerar tros dela, enligt romanens filosofi.",
         "options": [
           "En unik energi som delas av allt som finns",
@@ -2880,12 +2880,12 @@
         "id": "course_121_la_renaissance_italienne_q6",
         "type": "mcq",
         "question": "Vilken Raphael-fresk samlar antikens stora tänkare?",
-        "explanation": "Raphael målar The School of Athens, som har Platon, Aristoteles och andra forntida filosofer i perfekt harmoni.",
+        "explanation": "Rafael målar Skolan i Aten, där Platon, Aristoteles och andra antika filosofer står i full harmoni.",
         "options": [
-          "Atens skola",
+          "Skolan i Aten",
           "Adams skapelse",
           "Mona Lisa",
-          "Den sista måltiden"
+          "Den sixtinska madonnan"
         ],
         "correctIndex": 0
       },
@@ -2948,12 +2948,12 @@
         "id": "course_122_la_naissance_de_l_impressionnisme_q2",
         "type": "mcq",
         "question": "Vilken Manet-målning skandaliserade Salon des Refusés 1863?",
-        "explanation": "Manet chockerar genom att blanda en kvinnlig naken och två män i modern kostym i Le Déjeuner sur l'herbe.",
+        "explanation": "Manet chockerar genom att blanda en kvinnlig naken och två män i modern kostym i Frukost i det gröna.",
         "options": [
-          "Lunch på gräset",
-          "Tryck, uppgående sol",
-          "Näckrosorna",
-          "Medusas flotte"
+          "Frukost i det gröna",
+          "Impression, soluppgång",
+          "Näckrosor",
+          "Olympia"
         ],
         "correctIndex": 0
       },
@@ -3092,7 +3092,7 @@
         "options": [
           "Matteus kallelse",
           "Nattvakten",
-          "De unga damerna i Avignon",
+          "Flickorna från Avignon",
           "Medusas flotte"
         ],
         "correctIndex": 0
@@ -3308,7 +3308,7 @@
       {
         "id": "course_125_le_romantisme_en_peinture_delacroix_geri_q3",
         "type": "trueFalse",
-        "question": "Sant eller falskt: Delacroix målade Liberty Leading the People för att fira julirevolutionen 1830.",
+        "question": "Sant eller falskt: Delacroix målade Friheten på barrikaderna för att fira julirevolutionen 1830.",
         "explanation": "Målningen firar de tre härliga åren, de revolutionära dagarna i juli 1830.",
         "options": [
           "Sant",
@@ -3426,12 +3426,12 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q3",
         "type": "mcq",
         "question": "Vilken målning från 1907 markerar kubismens utgångspunkt?",
-        "explanation": "Les Demoiselles d'Avignon, med sina skarpa nakenbilder, förvånade även de nära Picasso.",
+        "explanation": "Flickorna från Avignon, med sina skarpa nakenbilder, förvånade även dem som stod Picasso nära.",
         "options": [
-          "De unga damerna i Avignon",
+          "Flickorna från Avignon",
           "Guernica",
-          "Frihet leder folket",
-          "Lunch på gräset"
+          "Friheten på barrikaderna",
+          "Frukost i det gröna"
         ],
         "correctIndex": 0
       },
@@ -3491,7 +3491,7 @@
         "question": "Placera dessa stadier av kubismen i kronologisk ordning.",
         "explanation": "Dessa milstolpar sträcker sig från 1907 till 1912, från den första upplösningen till uppfinningen av collage.",
         "items": [
-          "De unga damerna i Avignon",
+          "Flickorna från Avignon",
           "Analytisk kubism dissekerar föremålet",
           "Collage och syntetisk kubism"
         ]
@@ -3499,8 +3499,8 @@
       {
         "id": "course_126_le_cubisme_picasso_et_braque_q9",
         "type": "numericSlider",
-        "question": "Runt vilket år färdigställde Picasso Les Demoiselles d'Avignon?",
-        "explanation": "Picasso avslutade denna grundmålning av kubismen 1907.",
+        "question": "Runt vilket år färdigställde Picasso Flickorna från Avignon?",
+        "explanation": "Picasso avslutade denna grundläggande kubistiska målning 1907.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
         "sliderMax": 1930.0,
@@ -3553,12 +3553,12 @@
         "id": "course_127_le_surrealisme_dali_et_magritte_q4",
         "type": "mcq",
         "question": "Vilken Dalí-målning visar mjuka klockor i ett katalanskt landskap?",
-        "explanation": "The Persistence of Memory, målad 1931, visar mjuka klockor i ett landskap inspirerat av Port Lligat.",
+        "explanation": "Minnets beständighet, målad 1931, visar mjuka klockor i ett landskap inspirerat av Port Lligat.",
         "options": [
           "Minnets beständighet",
           "Bildernas förräderi",
-          "Medusas flotte",
-          "Guernica"
+          "Guernica",
+          "Skriet"
         ],
         "correctIndex": 0
       },
@@ -3669,8 +3669,8 @@
       {
         "id": "course_128_l_expressionnisme_munch_et_le_cri_q4",
         "type": "mcq",
-        "question": "Var hade Munch visionen som inspirerade The Scream?",
-        "explanation": "Ursprunget till Cri går tillbaka till en promenad på Ekebergs kulle, där solnedgångshimlen blir en eld.",
+        "question": "Var hade Munch visionen som inspirerade Skriet?",
+        "explanation": "Skriet går tillbaka till en promenad på Ekebergsbacken, där solnedgångshimlen blir till eld.",
         "options": [
           "På Ekebergsbacken i Oslo",
           "På kajerna i Bergen",
@@ -3780,7 +3780,7 @@
           "Andlighet i konst",
           "Surrealismmanifestet",
           "De Stijl",
-          "De unga damerna i Avignon"
+          "Flickorna från Avignon"
         ],
         "correctIndex": 0
       },
@@ -3940,10 +3940,10 @@
         "question": "Vad hände med den franska flottan samma vecka som Ulms kapitulation?",
         "explanation": "Samma månad, vid Trafalgar, förstörde amiral Nelson den fransk-spanska flottan och lämnade England i kontroll över haven.",
         "options": [
-          "Den förstörs av Nelson i Trafalgar",
-          "Hon erövrar den engelska flottan",
-          "Det blockerar hamnen i Wien",
-          "Hon återvänder triumferande till Toulon"
+          "Den förstörs av Nelson vid Trafalgar",
+          "Den erövrar den engelska flottan",
+          "Den blockerar hamnen i Wien",
+          "Den återvänder i triumf till Toulon"
         ],
         "correctIndex": 0
       },
@@ -4513,7 +4513,7 @@
         "options": [
           "The Lady of the Camellias av Alexandre Dumas fils",
           "Notre-Dame de Paris av Victor Hugo",
-          "Les Miserables av Victor Hugo",
+          "Samhällets olycksbarn av Victor Hugo",
           "Madame Bovary av Gustave Flaubert"
         ],
         "correctIndex": 0
@@ -5210,7 +5210,7 @@
         "id": "course_13_la_bataille_de_waterloo_1815_q6",
         "type": "mcq",
         "question": "Vilken händelse utlöste den franska arméns panik och förvirring vid Waterloo?",
-        "explanation": "Det kejserliga gardet, som lanserades som en sista utväg, drar sig tillbaka för första gången och ropet \"The Guard retirerar!\" » förvandlar reträtt till rutt.",
+        "explanation": "Kejsargardet sätts in som sista utväg, viker för första gången, och ropet ”Gardet retirerar!” förvandlar reträtten till flykt.",
         "options": [
           "Det kejserliga gardets reträtt",
           "Napoleons död på slagfältet",
@@ -5892,7 +5892,7 @@
       {
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q5",
         "type": "mcq",
-        "question": "Vad representerar HAL 9000 i filmen?",
+        "question": "Vad är HAL 9000 i filmen?",
         "explanation": "HAL 9000, omborddatorn, väljer att eliminera människor för att lösa motsägelsen i sitt uppdrag.",
         "options": [
           "Omborddatorn som i slutändan eliminerar besättningen",
@@ -6346,7 +6346,7 @@
       {
         "id": "course_149_la_joconde_q4",
         "type": "mcq",
-        "question": "Varför verkar Mona Lisas leende förändras beroende på var du tittar?",
+        "question": "Varför verkar Mona Lisas leende ändras beroende på var du tittar?",
         "explanation": "När vi stirrar på ögonen uppfattar näthinnans kanter munnen i mjuka skuggor, vilket gör att leendet dyker upp eller försvinner.",
         "options": [
           "Det spelar med det mänskliga ögats perifera syn",
@@ -6548,7 +6548,7 @@
       {
         "id": "course_150_la_nuit_etoilee_van_gogh_q1",
         "type": "mcq",
-        "question": "Var målade Van Gogh Starry Night 1889?",
+        "question": "Var målade Van Gogh Stjärnenatt 1889?",
         "explanation": "Van Gogh målade Stjärnnatten från sitt rum i Saint-Paul-de-Mausole asyl, nära Saint-Rémy-de-Provence.",
         "options": [
           "På Saint-Paul-de-Mausole asyl, nära Saint-Rémy-de-Provence",
@@ -6574,7 +6574,7 @@
       {
         "id": "course_150_la_nuit_etoilee_van_gogh_q3",
         "type": "trueFalse",
-        "question": "Sant eller falskt: byn som avbildas i Starry Night är en exakt kopia av landskapet som syns från Van Goghs fönster.",
+        "question": "Sant eller falskt: byn som avbildas i Stjärnenatt är en exakt kopia av landskapet som syns från Van Goghs fönster.",
         "explanation": "Van Gogh blandar observation och uppfinning: han rekonstruerar landskapet och byn för att tjäna känslor, snarare än att exakt kopiera verkligheten.",
         "options": [
           "Sant",
@@ -6647,10 +6647,10 @@
         "id": "course_150_la_nuit_etoilee_van_gogh_q9",
         "type": "chronological",
         "question": "Placera dessa stadier av Van Goghs liv i kronologisk ordning.",
-        "explanation": "Dessa milstolpar (1888, 1889, 1890) spårar krisen med Gauguin, skapandet av Starry Night från asylanstalten, sedan konstnärens död.",
+        "explanation": "Milstolparna (1888, 1889, 1890) spårar krisen med Gauguin, tillkomsten av Stjärnenatt från asylen och sedan konstnärens död.",
         "items": [
           "Arles drama med Gauguin",
-          "Van Gogh målar The Starry Night i Saint-Rémy",
+          "Van Gogh målar Stjärnenatt i Saint-Rémy",
           "Van Goghs död i Auvers-sur-Oise"
         ]
       }
@@ -6765,7 +6765,7 @@
         "id": "course_152_la_liberte_guidant_le_peuple_delacroix_q1",
         "type": "mcq",
         "question": "Vilken händelse 1830 fick Delacroix att måla denna målning?",
-        "explanation": "År 1830 jagade Three Glorieuses bort kung Karl X och Delacroix målade omedelbart Liberty Leading the People.",
+        "explanation": "År 1830 jagade de tre gloriosa dagarna bort kung Karl X, och Delacroix målade genast Friheten på barrikaderna.",
         "options": [
           "De tre härliga flickorna som jagade Charles",
           "Stormningen av Bastiljen",
@@ -6790,7 +6790,7 @@
       {
         "id": "course_152_la_liberte_guidant_le_peuple_delacroix_q3",
         "type": "mcq",
-        "question": "Vad symboliserar kvinnan med den frygiska kepsen i mitten av målningen?",
+        "question": "Vad står kvinnan med frygisk mössa i målningens mitt för?",
         "explanation": "Kvinnan i den frygiska mössan förkroppsligar Marianne, en symbol för den franska republiken.",
         "options": [
           "Marianne, republikens allegori",
@@ -7204,7 +7204,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q1",
         "type": "mcq",
-        "question": "I vilken stad målade Picasso Les Demoiselles d'Avignon 1907?",
+        "question": "I vilken stad målade Picasso Flickorna från Avignon 1907?",
         "explanation": "Picasso arbetade på Bateau-Lavoir i Montmartre, där han färdigställde målningen 1907.",
         "options": [
           "Paris (Montmartre)",
@@ -7304,7 +7304,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q9",
         "type": "numericSlider",
-        "question": "Vilket år färdigställde Picasso Les Demoiselles d'Avignon?",
+        "question": "Vilket år färdigställde Picasso Flickorna från Avignon?",
         "explanation": "Picasso färdigställde målningen 1907, i Montmartre.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -7333,7 +7333,7 @@
       {
         "id": "course_157_la_persistance_de_la_memoire_dali_q2",
         "type": "mcq",
-        "question": "Vad symboliserar de mjuka klockorna på målningen?",
+        "question": "Vad står de mjuka klockorna på målningen för?",
         "explanation": "Klockor illustrerar långsam tid: tiden som upplevs är inte den för klockor.",
         "options": [
           "Inre tid, upplevd, annorlunda än tid mätt av klockor",
@@ -7407,7 +7407,7 @@
       {
         "id": "course_157_la_persistance_de_la_memoire_dali_q8",
         "type": "numericSlider",
-        "question": "Vilket år målade Dalí The Persistence of Memory?",
+        "question": "Vilket år målade Dalí Minnets beständighet?",
         "explanation": "Dalí målade tavlan 1931.",
         "correctValue": 1931.0,
         "sliderMin": 1900.0,
@@ -9283,8 +9283,8 @@
       {
         "id": "course_173_ulysse_et_le_cyclope_q1",
         "type": "mcq",
-        "question": "Vem är Polyfemus?",
-        "explanation": "Polyphemus är en kyklop, en enögd jätte, son till havsguden Poseidon.",
+        "question": "Vem är Polyfemos?",
+        "explanation": "Polyfemos är en kyklop, en enögd jätte, son till havsguden Poseidon.",
         "options": [
           "En kyklop, son till guden Poseidon",
           "En grekisk kung allierad med Odysseus",
@@ -9310,7 +9310,7 @@
         "id": "course_173_ulysse_et_le_cyclope_q3",
         "type": "mcq",
         "question": "Vilket listigt namn ger Odysseus till Polyfemus?",
-        "explanation": "Odysseus presenterar sig själv som \"Ingen\" (Outis på grekiska), ett namn som också väcker blandare, list och som skapar förvirring efter attacken.",
+        "explanation": "Odysseus presenterar sig som \"Ingen\" (Outis på grekiska), ett namn som också anspelar på metis, listen, och som sår förvirring efter attacken.",
         "options": [
           "Ingen (outis)",
           "Null",
@@ -9346,8 +9346,8 @@
       {
         "id": "course_173_ulysse_et_le_cyclope_q6",
         "type": "mcq",
-        "question": "Hur kommer Odysseus och hans följeslagare ut ur grottan iakttagna av de blinda kykloperna?",
-        "explanation": "Odysseus binder sina följeslagare under magen på de ulligaste fåren och själv hänger han under den största baggen för att lura de blinda kykloperna.",
+        "question": "Hur tar sig Odysseus och hans följeslagare ut ur grottan som den blinde kyklopen vaktar?",
+        "explanation": "Odysseus binder följeslagarna under magen på de ulligaste fåren och hänger själv under den största baggen för att lura den blinde kyklopen.",
         "options": [
           "Gömd under magen på hjordens får",
           "Genom att gräva en tunnel",
@@ -9439,7 +9439,7 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q4",
         "type": "mcq",
-        "question": "Hur lyckas Odysseus höra låten utan att ge efter för den?",
+        "question": "Hur lyckas Odysseus höra sången utan att ge efter för den?",
         "explanation": "Odysseus binder sig till masten och beordrar sina män att dra åt sina band om han kräver sin frihet, vad han än säger.",
         "options": [
           "Han är bunden vid masten med order att dra åt sina band om han ber om att bli frisläppt.",
@@ -9452,8 +9452,8 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q5",
         "type": "mcq",
-        "question": "Vem varnade Odysseus för faran och strategin att anta mot sirenerna?",
-        "explanation": "Det var magikern Circe som varnade Odysseus och lät honom förbereda sin strategi.",
+        "question": "Vem varnade Odysseus för faran och för strategin mot sirenerna?",
+        "explanation": "Det var trollkvinnan Kirke som varnade Odysseus och lät honom förbereda sin strategi.",
         "options": [
           "Magikern Circe",
           "Gudinnan Athena",
@@ -9478,7 +9478,7 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q7",
         "type": "trueFalse",
-        "question": "Sant eller falskt: när låten väl hörs förblir Odysseus helt lugn och ber aldrig om att bli fristående.",
+        "question": "Sant eller falskt: när sången väl hörs förblir Odysseus helt lugn och ber aldrig om att bli lossad.",
         "explanation": "När sången stiger tappar Odysseus lugnet och ropar att han ska lossas; endast hans män, döva och trogna planen, hindrar honom från att ge efter.",
         "options": [
           "Sant",
@@ -9502,13 +9502,13 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q9",
         "type": "chronological",
-        "question": "Ordna dessa steg från avsnittet Mermaids.",
-        "explanation": "Circes varning föregår materialförberedelsen, sedan testet av själva låten, där endast det tidigare arrangemanget räddar Odysseus.",
+        "question": "Ordna dessa steg ur sirenernas avsnitt.",
+        "explanation": "Kirkes varning kommer före de praktiska förberedelserna, sedan prövningen med sången, där bara den i förväg lagda planen räddar Odysseus.",
         "items": [
-          "Circe varnar Odysseus för faran med Sirenerna",
-          "Odysseus täcker sina kamraters öron med vax",
-          "Odysseus blir bunden till fartygets mast",
-          "Sirenernas sång låter och Odysseus kräver sin frihet"
+          "Kirke varnar Odysseus för sirenernas fara",
+          "Odysseus täpper till kamraternas öron med vax",
+          "Odysseus binds vid fartygets mast",
+          "Sirenernas sång ljuder och Odysseus kräver sin frihet"
         ]
       }
     ]
@@ -10820,7 +10820,7 @@
         "id": "course_184_romulus_et_remus_la_fondation_de_rome_q6",
         "type": "mcq",
         "question": "Vilket datum har den romerska traditionen för grundandet av Rom?",
-        "explanation": "Enligt traditionen grundades Rom den 21 april 753 f.Kr. f.Kr., startdatum för den romerska kalendern.",
+        "explanation": "Enligt traditionen grundades Rom den 21 april 753 f.Kr., startdatum för den romerska kalendern.",
         "options": [
           "21 april 753 f.Kr",
           "1 januari 509 f.Kr",
@@ -11487,8 +11487,8 @@
       {
         "id": "course_18_la_grande_depression_1929_q1",
         "type": "mcq",
-        "question": "Vilken dag 1929 kraschade New York Stock Exchange, vilket utlöste den stora depressionen?",
-        "explanation": "Den 24 oktober 1929, med smeknamnet Black Thursday, kollapsade New York Stock Exchange och utlöste den stora depressionen.",
+        "question": "Vilken dag 1929 kraschade New York-börsen och utlöste den stora depressionen?",
+        "explanation": "Den 24 oktober 1929, kallad svarta torsdagen, kollapsade New York-börsen och drog med sig världsekonomin.",
         "options": [
           "24 oktober, \"Black Thursday\"",
           "1 januari, nyårsdagen",
@@ -11589,9 +11589,9 @@
         "question": "Vilken politik lanserade Franklin D. Roosevelt för att svara på krisen?",
         "explanation": "Roosevelt valdes 1932 och lanserade New Deal: stora verk, bankreglering och början av socialt skydd, för att återuppliva ekonomin.",
         "options": [
-          "The New Deal, som sätter stopp för laissez-faire och återupplivar ekonomin genom staten",
+          "New Deal, som gör slut på laissez-faire och sätter fart på ekonomin via staten",
           "Kollektivisering av jordbruksmark",
-          "Restaurering av guldmyntfoten",
+          "Återinförande av guldmyntfoten",
           "En militär allians med Tyskland"
         ],
         "correctIndex": 0
@@ -11803,7 +11803,7 @@
         "options": [
           "Chalchihuatl",
           "Den heliga daggen",
-          "Vattnet i Lake Texcoco",
+          "Vattnet i Texcocosjön",
           "Den rituella pulken"
         ],
         "correctIndex": 0
@@ -12023,7 +12023,7 @@
       {
         "id": "course_194_le_mahabharata_q7",
         "type": "mcq",
-        "question": "Vad representerar Bhagavad-Gita i berättelsen om Mahabharata?",
+        "question": "Vad är Bhagavad-Gita i berättelsen om Mahabharata?",
         "explanation": "Bhagavad-Gita är dialogen med cirka 700 verser där Krishna, Arjunas vagnförare, lär honom plikt och osjälvisk handling.",
         "options": [
           "Krishnas dialog med Arjuna om plikt och handling",
@@ -12739,8 +12739,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "Vad representerar Hidjra i 622?",
-        "explanation": "Hijra är Muhammeds avgång, hotad av döden i Mecka, mot oasen Medina. Detta datum blir år 1 i den muslimska kalendern.",
+        "question": "Vad är Hidjra år 622?",
+        "explanation": "Hidjra är Muhammeds uppbrott från Mecka till oasen Medina, när han hotas till livet. Det året blir år 1 i den muslimska kalendern.",
         "options": [
           "Muhammeds avgång från Mecka till Medina",
           "Den första uppenbarelsen som Muhammed fick",
@@ -12753,7 +12753,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q2",
         "type": "mcq",
         "question": "Vem kontrollerade handeln kring Kaba före islam?",
-        "explanation": "Quraysh, den dominerande stammen i Mecka, hämtade sin makt från pilgrimsfärd och handel kring polyteisten Kaaba.",
+        "explanation": "Quraysh, den ledande stammen i Mecka, hämtade sin makt från pilgrimerna och handeln kring den då polyteistiska Kaba.",
         "options": [
           "Quraysh-stammen",
           "Bysantinerna",
@@ -12766,7 +12766,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q3",
         "type": "trueFalse",
         "question": "Sant eller falskt: efter att ha tagit Mecka år 630 massakrerade Muhammed sina tidigare förföljare.",
-        "explanation": "Muhammed, tvärtom, beviljade en allmän benådning, vilket underlättade samlingen av arabiska stammar till islam.",
+        "explanation": "Tvärtom: Muhammed utfärdade en allmän amnesti, vilket gjorde det lättare för de arabiska stammarna att sluta upp bakom islam.",
         "options": [
           "Sant",
           "Falskt"
@@ -12776,7 +12776,7 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
-        "question": "Vilket år dog Muhammed och lämnade Arabien enat under en auktoritet?",
+        "question": "Vilket år dog Muhammed, då Arabien var enat under en och samma makt?",
         "explanation": "Muhammed dog 632, bara tio år efter Hidjra, då nästan hela Arabien var enat.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
@@ -12799,21 +12799,21 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q6",
         "type": "mcq",
-        "question": "Vad är Dhimma etablerat av de muslimska erövrarna?",
-        "explanation": "Dhimma är den skyddade statusen som ger \"bokens folk\" rätt att behålla sin religion mot betalning av jizya.",
+        "question": "Vad är dhimma, som de muslimska erövrarna införde?",
+        "explanation": "Dhimma är den skyddade status som ger \"bokens folk\" rätt att behålla sin religion mot att de betalar jizya.",
         "options": [
           "Statusen som tillåter kristna och judar att behålla sin religion mot en skatt",
           "Namnet på den muslimska kalendern",
-          "En skatt på köpmansvagnar",
-          "Domstolen anklagade för att döma otrogna"
+          "En skatt på köpmanskaravaner",
+          "Domstolen som skulle döma otrogna"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_1_la_naissance_de_l_islam_622_q7",
         "type": "mcq",
-        "question": "Vilka två stora imperier var utmattade av sina krig kring Arabien på 700-talet?",
-        "explanation": "De ändlösa krigen mellan Bysans (östromerska riket) och sassanidernas perser skapade ett geopolitiskt vakuum som Muhammeds nya budskap utnyttjade.",
+        "question": "Vilka två stormakter var utmattade av sina krig kring Arabien på 600-talet?",
+        "explanation": "De ändlösa krigen mellan Bysans (östromerska riket) och de sasanidiska perserna skapade ett maktvakuum som Muhammeds nya budskap kunde utnyttja.",
         "options": [
           "Det bysantinska och sassanidiska imperiet",
           "Det romerska och kinesiska imperiet",
@@ -12826,11 +12826,11 @@
         "id": "course_1_la_naissance_de_l_islam_622_q8",
         "type": "mcq",
         "question": "Vad är Umma, grundad av Muhammed i Medina?",
-        "explanation": "Umma ersätter traditionella stamsolidariteter med en gemenskap baserad på delad tro.",
+        "explanation": "Umma ersätter de gamla stambanden med en gemenskap som vilar på gemensam tro.",
         "options": [
           "De troendes gemenskap, som går bortom blod och klanband",
           "Namnet på den muslimska kalendern",
-          "Armén reste sig mot Mecka",
+          "Armén som reste sig mot Mecka",
           "Kalifernas råd"
         ],
         "correctIndex": 0
@@ -14011,8 +14011,8 @@
         "question": "Vilket test, utfört den 16 juli 1945 i New Mexicos öken, validerade atombomben för första gången?",
         "explanation": "Trinity-testet, den 16 juli 1945, var den första kärnvapenexplosionen i historien och bekräftade att bomben fungerade.",
         "options": [
-          "Treenighetstestet",
-          "The Little Boy test",
+          "Trinity-provet",
+          "Little Boy-testet",
           "Fat Man-testet",
           "Manhattan-testet"
         ],
@@ -14048,7 +14048,7 @@
         "question": "Vilket land gick in i krig mot Japan samma dag som bombningen av Nagasaki den 9 augusti 1945?",
         "explanation": "Det sovjetiska inträdet i kriget mot Japan den 9 augusti 1945 förstörde hoppet om medling från Moskva.",
         "options": [
-          "USSR",
+          "Sovjetunionen",
           "Kina",
           "Storbritannien",
           "Frankrike"
@@ -17748,8 +17748,8 @@
         "question": "Vilken rörelse utlöste upproret den 1 november 1954, \"Alla helgons dag\"?",
         "explanation": "Den 1 november 1954 inledde FLN ett sextiotal attacker, vilket markerade starten på upproret.",
         "options": [
-          "FLN, National Liberation Front",
-          "OAS, Organisation of the Secret Army",
+          "FLN, Nationella befrielsefronten",
+          "OAS, Hemliga arméns organisation",
           "NAACP",
           "Franska kommunistpartiet"
         ],
@@ -18623,8 +18623,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q1",
         "type": "mcq",
-        "question": "Vilken händelse inträffade vid rådet i Clermont i november 1095?",
-        "explanation": "Vid konciliet i Clermont, den 27 november 1095, uppmanade Urban II västerländska kristna att gå och befria Jerusalem, i utbyte mot förlåtelse för sina synder.",
+        "question": "Vad hände vid konciliet i Clermont i november 1095?",
+        "explanation": "Vid konciliet i Clermont den 27 november 1095 uppmanade Urban II de västkristna att dra ut och befria Jerusalem, mot full förlåtelse för sina synder.",
         "options": [
           "Påven Urban II uppmanar till korståg för att befria Jerusalem",
           "Påven bannlyser den bysantinska kejsaren",
@@ -18636,8 +18636,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q2",
         "type": "mcq",
-        "question": "Vilken händelse fick den bysantinske kejsaren Alexios I Comnenus att be påven om hjälp?",
-        "explanation": "År 1071, i Mantzikert, krossade seljukturkarna den bysantinska armén och öppnade Anatolien och tvingade Alexios I Comnenus att göra en petition till Rom.",
+        "question": "Vilken händelse fick den bysantinske kejsaren Alexios I Komnenos att be påven om hjälp?",
+        "explanation": "År 1071 krossade seldjukerna den bysantinska armén vid Mantzikert och öppnade Anatolien. Då vände sig Alexios I Komnenos till Rom efter hjälp.",
         "options": [
           "Mantzikerts nederlag mot Seljukturkarna",
           "Muslimernas erövring av Jerusalem",
@@ -18650,7 +18650,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q3",
         "type": "trueFalse",
         "question": "Sant eller falskt: ”de fattigas korståg” ledd av Eremiten Peter var en disciplinerad armé som nådde Jerusalem utan svårighet.",
-        "explanation": "Utan disciplin eller förnödenheter plundrade denna trupp fattiga människor på deras väg och decimerades i Anatolien innan de nådde Jerusalem.",
+        "explanation": "Utan disciplin och utan underhåll plundrade de fattigas tross längs vägen och decimerades i Anatolien, långt innan Jerusalem.",
         "options": [
           "Sant",
           "Falskt"
@@ -18660,12 +18660,12 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q4",
         "type": "mcq",
-        "question": "Vad lovar Urban II till dem som går på korståg?",
-        "explanation": "Urban II lovar en plenum överseende: total syndernas förlåtelse för dem som tar korset.",
+        "question": "Vad lovar Urban II dem som ger sig av på korståg?",
+        "explanation": "Urban II lovar fullständig avlat: total förlåtelse för synderna åt dem som tar korset.",
         "options": [
-          "Full förlåtelse för straffen på grund av deras synder",
-          "Land garanterat i det heliga landet",
-          "En lön som betalas av kyrkan",
+          "Full förlåtelse för de straff som synderna medför",
+          "Garanterad jord i det heliga landet",
+          "En lön som kyrkan betalar",
           "En ärftlig adelstitel"
         ],
         "correctIndex": 0
@@ -18673,8 +18673,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q5",
         "type": "trueFalse",
-        "question": "Sant eller falskt: efter intagandet av Jerusalem utropade Godfrey av Bouillon sig till kung av staden.",
-        "explanation": "Godfrey av Bouillon vägrade titeln kung och föredrog att bli kallad Avowed av den heliga graven, beskyddare av Kristi grav.",
+        "question": "Sant eller falskt: efter intagandet av Jerusalem utropade Gottfrid av Bouillon sig till stadens kung.",
+        "explanation": "Gottfrid av Bouillon vägrade kungatiteln. Han ville kallas Den heliga gravens försvarare, Kristi gravs beskyddare.",
         "options": [
           "Sant",
           "Falskt"
@@ -18685,12 +18685,12 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q6",
         "type": "chronological",
         "question": "Lägg dessa händelser i korstågens historia i kronologisk ordning.",
-        "explanation": "Dessa milstolpar sträcker sig från 1071 till 1187: det bysantinska nederlaget föregår påvens vädjan, som föregår erövringen och sedan återerövringen av Jerusalem.",
+        "explanation": "Milstolparna går från 1071 till 1187: det bysantinska nederlaget kommer före påvens upprop, som i sin tur kommer före Jerusalems erövring och sedan Saladins återerövring.",
         "items": [
-          "Mantzikerts bysantinska nederlag mot Seljukturkarna",
-          "Uppmaning till korståg vid rådet i Clermont",
-          "Erövring av Jerusalem av korsfararna",
-          "Återupptagandet av Jerusalem av Saladin"
+          "Bysans nederlag mot seldjukerna vid Mantzikert",
+          "Uppropet till korståg vid konciliet i Clermont",
+          "Korsfararnas erövring av Jerusalem",
+          "Saladins återerövring av Jerusalem"
         ]
       },
       {
@@ -18708,7 +18708,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q8",
         "type": "mcq",
         "question": "Vilken muslimsk sultan återerövrar Jerusalem 1187?",
-        "explanation": "År 1187 återerövrade Sultan Saladin Jerusalem från korsfararna, vilket återupptog korstågens cykel.",
+        "explanation": "År 1187 tog sultanen Saladin tillbaka Jerusalem från korsfararna, och korstågen började om på nytt.",
         "options": [
           "Saladin",
           "Alp Arslan",
@@ -18720,8 +18720,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q9",
         "type": "numericSlider",
-        "question": "Vilket år föll Saint-Jean-d'Acre, den sista bastionen i de latinska staterna i öst?",
-        "explanation": "Saint-Jean-d'Acres fall 1291 markerar slutet på den latinska närvaron i det heliga landet.",
+        "question": "Vilket år föll Akko, de latinska staternas sista fäste i öst?",
+        "explanation": "Akkos fall 1291 markerar slutet på den latinska närvaron i det heliga landet.",
         "correctValue": 1291.0,
         "sliderMin": 1200.0,
         "sliderMax": 1350.0,
@@ -19284,7 +19284,7 @@
         "id": "course_34_la_decolonisation_panorama_1945_1975_q9",
         "type": "chronological",
         "question": "Placera dessa stadier av avkolonisering i kronologisk ordning.",
-        "explanation": "Dessa milstolpar sträcker sig från Indiens självständighet 1947 till slutet av de iberiska imperiet 1975, vilket avslutade avkoloniseringsvågen.",
+        "explanation": "Milstolparna går från Indiens självständighet 1947 till slutet på de iberiska imperierna 1975, då avkoloniseringsvågen ebbade ut.",
         "items": [
           "Indiens och Pakistans självständighet",
           "Bandung konferens",
@@ -19477,7 +19477,7 @@
       {
         "id": "course_36_la_revolution_culturelle_en_chine_1966_1_q6",
         "type": "mcq",
-        "question": "Vem utgjorde \"Gang of Four\", en radikal grupp som kämpade om makten i slutet av kulturrevolutionen?",
+        "question": "Vilka utgjorde De fyras gäng, den radikala grupp som slogs om makten i slutet av kulturrevolutionen?",
         "explanation": "Jiang Qing, Maos hustru, leder denna grupp radikaler som kämpar för makten efter Maos död.",
         "options": [
           "En grupp kring Jiang Qing, Maos hustru",
@@ -19894,7 +19894,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q2",
         "type": "trueFalse",
         "question": "Sant eller falskt: Före 410 hade ingen fiendearmé tagit sig in i Rom på cirka åtta århundraden.",
-        "explanation": "Den sista erövringen av Rom av en fiende går tillbaka till den galliska plundringen av 390 f.Kr. f.Kr., nästan 800 år före Alariks ankomst.",
+        "explanation": "Senaste gången en fiende intog Rom var den galliska plundringen 390 f.Kr., nästan 800 år före Alarik.",
         "options": [
           "Sant",
           "Falskt"
@@ -19917,8 +19917,8 @@
       {
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q4",
         "type": "mcq",
-        "question": "Vad nämns den romerska foedus i kursen?",
-        "explanation": "För att hålla sina gränser trots bristen på soldater bosatte imperiet germanska folk på sin mark i utbyte mot deras militärtjänst.",
+        "question": "Vad är den romerska foedus som kursen nämner?",
+        "explanation": "För att hålla gränserna trots soldatbrist lät riket germanska folk slå sig ner på romersk mark i utbyte mot krigstjänst.",
         "options": [
           "Ett fördrag genom vilket \"barbariska\" folk bosatte sig på romerskt territorium i utbyte mot militärtjänst",
           "En skatt som betalas av provinserna till Rom",
@@ -19955,12 +19955,12 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q7",
         "type": "chronological",
         "question": "Lägg dessa händelser från det västromerska rikets fall i kronologisk ordning.",
-        "explanation": "Dessa stadier sträcker sig från 402 till 476: tillbakadragandet till Ravenna föregår den visigotiska säcken, sedan den mer destruktiva vandalsäcken, fram till slutet av det västra imperiet.",
+        "explanation": "Stegen går från 402 till 476: reträtten till Ravenna kommer före västgoternas plundring, sedan vandalernas mer förödande plundring, fram till Västrikets slut.",
         "items": [
           "Honorius överger Rom för Ravenna",
-          "Sack of Rome av Alaric och visigoterna",
-          "Plundringen av Rom av vandalerna",
-          "Avsättning av den siste västerländska kejsaren"
+          "Alarik och västgoterna plundrar Rom",
+          "Vandalerna plundrar Rom",
+          "Den siste västromerske kejsaren avsätts"
         ]
       },
       {
@@ -21050,7 +21050,7 @@
         "options": [
           "Påven Leo III",
           "Påven Innocentius III",
-          "Bysantinske kejsaren Alexios I Comnenus",
+          "Bysantinske kejsaren Alexios I Komnenos",
           "Ärkebiskop Alcuin av York"
         ],
         "correctIndex": 0
@@ -21058,8 +21058,8 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q2",
         "type": "mcq",
-        "question": "Vilket imperium gör kröningen av 800 anspråk på att återställa?",
-        "explanation": "Leo III:s gest utger sig för att återställa det västromerska riket, som hade försvunnit sedan Romulus Augustulus avsattes 476.",
+        "question": "Vilket rike påstår kröningen år 800 att den återupprättar?",
+        "explanation": "Leo III:s gest gör anspråk på att återupprätta det västromerska riket, borta sedan Romulus Augustulus avsattes 476.",
         "options": [
           "Det västromerska riket har försvunnit sedan 476",
           "Östbysantinska riket",
@@ -21096,7 +21096,7 @@
         "id": "course_4_le_couronnement_de_charlemagne_800_q5",
         "type": "trueFalse",
         "question": "Sant eller falskt: i Konstantinopel hyllades Karl den Stores kröning som ett rättvist erkännande av hans makt.",
-        "explanation": "För bysantinerna fanns det bara en legitim romersk kejsare: Karl den Stores kröning sågs som en tillran.",
+        "explanation": "För bysantinerna fanns bara en legitim romersk kejsare. Karl den stores kröning sågs som en usurpation.",
         "options": [
           "Sant",
           "Falskt"
@@ -21106,10 +21106,10 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q6",
         "type": "mcq",
-        "question": "Vilken skrift använde Karl den Store för att standardisera de texter som kopierats i imperiet?",
-        "explanation": "Palatsskolan i Aix-la-Chapelle spred Caroline-skriften, läsbar i hela imperiet.",
+        "question": "Vilken skrift lät Karl den store införa för att göra de avskrivna texterna enhetliga i riket?",
+        "explanation": "Palatsskolan i Aachen spred den karolingiska minuskeln, läsbar i hela riket.",
         "options": [
-          "Caroline skriver",
+          "Karolingisk minuskel",
           "Det grekiska alfabetet",
           "Hieroglyfer",
           "Kyrilliska alfabetet"
@@ -21122,9 +21122,9 @@
         "question": "Lägg dessa händelser i Karl den Stores liv i kronologisk ordning.",
         "explanation": "Dessa milstolpar går från 768 till 843: från Karl den Stores tillträde till Lombardernas erövring, sedan till kröningen, tills imperiets uppdelning mellan hans barnbarn.",
         "items": [
-          "Frankiska rikets tillkomst",
-          "Erövring av det langobardiska riket i norra Italien",
-          "Imperialistisk kröning i Rom",
+          "Tillträdet till det frankiska riket",
+          "Erövringen av langobardernas rike i norra Italien",
+          "Kejsarkröningen i Rom",
           "Fördraget i Verdun som delar riket"
         ]
       },
@@ -21299,7 +21299,7 @@
         "id": "course_51_la_decouverte_de_la_penicilline_fleming_q4",
         "type": "trueFalse",
         "question": "Sant eller falskt: Fleming ensam lyckades rena penicillin tillräckligt för att behandla sjuka.",
-        "explanation": "Fleming kunde inte rena penicillin tillräckligt för att behandla patienter: detta arbete skulle senare falla på Florey and Chain.",
+        "explanation": "Fleming kunde inte rena penicillinet tillräckligt för att behandla sjuka. Det arbetet föll senare på Florey och Chain.",
         "options": [
           "Sant",
           "Falskt"
@@ -22230,8 +22230,8 @@
       {
         "id": "course_5_la_magna_carta_1215_q1",
         "type": "mcq",
-        "question": "Varför införde de engelska baronerna Magna Carta på kung John Lackland 1215?",
-        "explanation": "Inför skatter, gisslan och godtyckliga böter som John Lackland utdömt för att återerövra hans land, gör baronerna uppror och inför en text som begränsar hans makt.",
+        "question": "Varför tvingade de engelska baronerna Magna Carta på kung Johan utan land 1215?",
+        "explanation": "Inför skatter, gisslan och godtyckliga böter som Johan utan land krävde för att återta sina länder gjorde baronerna uppror och tvingade fram en text som begränsade hans makt.",
         "options": [
           "Att begränsa kungligt godtycke: skatter, gisslan och grova böter",
           "För att finansiera ett nytt korståg i det heliga landet",
@@ -22243,8 +22243,8 @@
       {
         "id": "course_5_la_magna_carta_1215_q2",
         "type": "trueFalse",
-        "question": "Sant eller falskt: före 1215 förlorade John Lackland Normandie till den franske kungen Filip II Augustus.",
-        "explanation": "1204 förlorade John Lackland Normandie till Philip II Augustus, ett bakslag som försvagade honom permanent.",
+        "question": "Sant eller falskt: före 1215 hade Johan utan land förlorat Normandie till den franske kungen Filip II August.",
+        "explanation": "1204 förlorade Johan utan land Normandie till Filip II August, ett bakslag som försvagade honom för lång tid.",
         "options": [
           "Sant",
           "Falskt"
@@ -22281,18 +22281,18 @@
         "question": "Vad hände i augusti 1215, kort efter undertecknandet av Magna Carta?",
         "explanation": "Johannes fick påvens annullering av texten i augusti 1215, vilket återupplöste konflikten med baronerna.",
         "options": [
-          "John Lackland får texten annullerad av påven och inbördeskriget återupptas",
+          "Johan utan land får texten ogiltigförklarad av påven och inbördeskriget blosser upp igen",
           "Kungen avsätts av baronerna",
           "Stadgan tillämpas omedelbart i hela riket",
-          "John Lackland går i exil i Frankrike"
+          "Johan utan land går i exil i Frankrike"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_5_la_magna_carta_1215_q6",
         "type": "mcq",
-        "question": "Vilket militärt nederlag 1214 isolerade definitivt John Lackland före Magna Carta?",
-        "explanation": "År 1214 isolerade Bouvines nederlag, där Philippe Auguste besegrade en koalition inklusive England, John Lackland.",
+        "question": "Vilket militärt nederlag 1214 isolerade definitivt Johan utan land före Magna Carta?",
+        "explanation": "År 1214 isolerade nederlaget vid Bouvines, där Filip II August slog en koalition som England ingick i, Johan utan land.",
         "options": [
           "Bouvines nederlag",
           "Förlusten av Gascogne",
@@ -22304,20 +22304,20 @@
       {
         "id": "course_5_la_magna_carta_1215_q7",
         "type": "chronological",
-        "question": "Lägg dessa händelser från John Lacklands regeringstid i kronologisk ordning.",
+        "question": "Lägg dessa händelser från Johan utan lands regeringstid i kronologisk ordning.",
         "explanation": "Dessa etapper går från 1204 till 1216: förlusten av Normandie föregår nederlaget för Bouvines, sedan undertecknandet av stadgan och dess återutgivning av Henrik III.",
         "items": [
-          "Förlust av Normandie mot Philippe Auguste",
-          "Bouvines nederlag",
-          "Signering av Magna Carta på Runnymede",
-          "Återutgivning av stadgan av Henry III"
+          "Förlusten av Normandie mot Filip II August",
+          "Nederlaget vid Bouvines",
+          "Undertecknandet av Magna Carta vid Runnymede",
+          "Henrik III ger ut stadgan på nytt"
         ]
       },
       {
         "id": "course_5_la_magna_carta_1215_q8",
         "type": "numericSlider",
         "question": "Vilket år förseglades Magna Carta på Runnymede?",
-        "explanation": "Kung John Lackland placerade sitt sigill på Magna Carta i juni 1215, i Runnymede Meadow.",
+        "explanation": "Kung Johan utan land satte sitt sigill på Magna Carta i juni 1215, på ängen vid Runnymede.",
         "correctValue": 1215.0,
         "sliderMin": 1150.0,
         "sliderMax": 1300.0,
@@ -22343,7 +22343,7 @@
       {
         "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_q1",
         "type": "numericSlider",
-        "question": "Vilket år publicerade Charles Darwin \"On the Origin of Species\"?",
+        "question": "Vilket år publicerade Charles Darwin Om arternas uppkomst?",
         "explanation": "Darwin publicerade sitt stora verk 1859.",
         "correctValue": 1859.0,
         "sliderMin": 1800.0,
@@ -23471,8 +23471,8 @@
       {
         "id": "course_6_la_peste_noire_en_europe_1347_1353_q3",
         "type": "trueFalse",
-        "question": "Sant eller falskt: Enligt legenden, vid belägringen av Caffa, slungade Golden Horde infekterade lik över stadsmuren.",
-        "explanation": "Den gyllene hordens belägring av Caffa nämns ofta som ett av de tidigaste exemplen på biologisk krigföring, med infekterade lik som slungades in i staden.",
+        "question": "Sant eller falskt: enligt legenden slungade Gyllene horden infekterade lik över murarna vid belägringen av Caffa.",
+        "explanation": "Gyllene hordens belägring av Caffa nämns ofta som ett av de tidigaste exemplen på biologisk krigföring: infekterade lik slungades in i staden.",
         "options": [
           "Sant",
           "Falskt"
@@ -23483,10 +23483,10 @@
         "id": "course_6_la_peste_noire_en_europe_1347_1353_q4",
         "type": "mcq",
         "question": "Vad är den verkliga smittspridaren av pesten, som dåtidens läkare inte kunde identifiera?",
-        "explanation": "Läkare tror på teorin om miasma, skadad luft, när den verkliga vektorn är råttloppan, Xenopsylla cheopis.",
+        "explanation": "Läkarna trodde på miasmateorin, fördärvad luft, medan den verkliga smittspridaren var råttloppan Xenopsylla cheopis.",
         "options": [
           "Råttloppan",
-          "Ser korrupt ut",
+          "Fördärvad luft",
           "Brunnsvatten",
           "Myggor"
         ],
@@ -24551,8 +24551,8 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q1",
         "type": "mcq",
-        "question": "Hur gammal var Jeanne d'Arc när hon anslöt sig till dauphinen Charles 1429?",
-        "explanation": "Jeanne var 17 när hon lämnade Domrémy för att övertyga dauphinen att anförtro henne en armé.",
+        "question": "Hur gammal var Jeanne d'Arc när hon 1429 anslöt sig till dauphin Karl?",
+        "explanation": "Jeanne var 17 år när hon lämnade Domrémy för att övertyga dauphinen att anförtro henne en armé.",
         "options": [
           "17 år gammal",
           "25 år gammal",
@@ -24578,7 +24578,7 @@
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q3",
         "type": "trueFalse",
         "question": "Sant eller falskt: Hundraårskriget ställde Frankrikes kungar mot Spaniens kungar.",
-        "explanation": "Hundraårskriget ställde Englands kungar, Plantagenets, mot kungarna av Frankrike, Valois, inte Spanien.",
+        "explanation": "Hundraårskriget stod mellan Englands kungar, Plantagenet, och Frankrikes kungar, Valois — inte Spanien.",
         "options": [
           "Sant",
           "Falskt"
@@ -24588,13 +24588,13 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q4",
         "type": "mcq",
-        "question": "Vad ger Troyesfördraget från 1420?",
-        "explanation": "Troyes-fördraget gör Dauphin Charles arvlöst till förmån för kungen av England, vars regeringstid utropas i Paris.",
+        "question": "Vad föreskriver Troyesfördraget från 1420?",
+        "explanation": "Troyesfördraget gör dauphin Karl arvlös till förmån för kungen av England, som utropas i Paris.",
         "options": [
-          "Dauphinen ärvs till förmån för kungen av England",
-          "Frankrike annekterar Bourgogne",
-          "Jeanne d'Arc görs till riddare",
-          "Den omedelbara kröningen av Karl VII i Reims"
+          "Dauphinen görs arvlös till förmån för kungen av England",
+          "Frankrike annekterar Burgund",
+          "Jeanne d'Arc slås till riddare",
+          "Karl VII kröns omedelbart i Reims"
         ],
         "correctIndex": 0
       },
@@ -24602,11 +24602,11 @@
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q5",
         "type": "mcq",
         "question": "Vilket uppdrag säger Jeanne att hon fått av sina röster?",
-        "explanation": "Hans röster beordrar honom att upphäva belägringen av Orléans och sedan leda dauphinen till Reims kröning, den enda riten som gör en sann kung.",
+        "explanation": "Rösterna befaller henne att häva belägringen av Orléans och sedan föra dauphinen till kröningen i Reims, den enda riten som gör en verklig kung.",
         "options": [
-          "Lyft belägringen av Orléans och led sedan dauphinen till Reims kröning",
-          "Att driva ut burgunderna från Paris",
-          "Gift dig med Dauphin Charles",
+          "Häva belägringen av Orléans och sedan föra dauphinen till kröningen i Reims",
+          "Driva ut burgunderna från Paris",
+          "Gifta sig med dauphin Karl",
           "Återerövra Normandie"
         ],
         "correctIndex": 0
@@ -24614,8 +24614,8 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q6",
         "type": "numericSlider",
-        "question": "Vilket år gjorde Jeanne d'Arc belägringen av Orléans?",
-        "explanation": "Joan bröt belägringen av Orléans i maj 1429, på bara nio dagar.",
+        "question": "Vilket år hävde Jeanne d'Arc belägringen av Orléans?",
+        "explanation": "Jeanne bröt belägringen av Orléans i maj 1429, på bara nio dagar.",
         "correctValue": 1429.0,
         "sliderMin": 1400.0,
         "sliderMax": 1450.0,
@@ -24626,7 +24626,7 @@
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q7",
         "type": "trueFalse",
         "question": "Sant eller falskt: Jeanne d'Arc dödade många fiender med sin egen hand under strid.",
-        "explanation": "Jeanne har aldrig dödat en fiende med sin egen hand; hon föredrog att bära sin fana att leda utan att själv utgjuta blod.",
+        "explanation": "Jeanne dödade aldrig en fiende med egen hand. Hon bar fanan och ledde utan att själv utgjuta blod.",
         "options": [
           "Sant",
           "Falskt"
@@ -24640,10 +24640,10 @@
         "explanation": "Dessa milstolpar går från 1420 till 1431: Troyes-fördraget, sedan Orléans och Reims 1429, tillfångatagandet 1430 och avrättningen 1431.",
         "items": [
           "Troyesfördraget gör dauphinen arvlös",
-          "Joan upphäver belägringen av Orléans",
-          "Kröningen av Karl VII i Reims",
-          "Fångandet av Jeanne vid Compiègne",
-          "Rouens bål"
+          "Jeanne häver belägringen av Orléans",
+          "Karl VII kröns i Reims",
+          "Jeanne tillfångatas vid Compiègne",
+          "Bålet i Rouen"
         ]
       }
     ]
@@ -24768,8 +24768,8 @@
       {
         "id": "course_81_l_odyssee_homere_q1",
         "type": "mcq",
-        "question": "Vilken grekisk hjälte tog tio år att återvända hem efter det trojanska kriget?",
-        "explanation": "Odysseus, kung av Ithaca, tar tio år att återvända hem efter slutet av det trojanska kriget: detta är ämnet för Odyssey.",
+        "question": "Vilken grekisk hjälte tar tio år på sig att komma hem efter trojanska kriget?",
+        "explanation": "Odysseus, kung av Ithaka, tar tio år på sig att komma hem efter trojanska kriget: det är Odysséens ämne.",
         "options": [
           "Odysseus",
           "Akilles",
@@ -24782,20 +24782,20 @@
         "id": "course_81_l_odyssee_homere_q2",
         "type": "mcq",
         "question": "Hur börjar historien om Odysséen, narrativt sett?",
-        "explanation": "Homer börjar sin berättelse mitt i handlingen: Odysseus, hållen av nymfen Calypso, berättar sedan om sina tidigare äventyr i flashback.",
+        "explanation": "Homeros börjar mitt i handlingen: Odysseus, hållen av nymfen Kalypso, berättar sedan sina tidigare äventyr i återblick.",
         "options": [
-          "In media res, mitt i handlingen, medan Odysseus hålls av Calypso",
-          "Av berättelsen om Odysseus födelse",
+          "In medias res, mitt i handlingen, medan Odysseus hålls av Kalypso",
+          "Med berättelsen om Odysseus födelse",
           "I början av det trojanska kriget",
-          "Genom Odysseus återkomst till Ithaka"
+          "Med Odysseus återkomst till Ithaka"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_81_l_odyssee_homere_q3",
         "type": "trueFalse",
-        "question": "Sant eller falskt: Odysseus flyr Cyclops Polyphemus utan att någonsin avslöja sitt namn.",
-        "explanation": "Odysseus ropar stolt sitt sanna namn efter att ha förblindat Polyphemus, och låtit Cyclops kalla ner sin far Poseidons hämnd på honom.",
+        "question": "Sant eller falskt: Odysseus slipper undan kyklopen Polyfemos utan att någonsin röja sitt namn.",
+        "explanation": "Odysseus ropar stolt ut sitt rätta namn efter att ha förblindat Polyfemos, och låter därmed kyklopen kalla ner sin far Poseidons hämnd.",
         "options": [
           "Sant",
           "Falskt"
@@ -24842,8 +24842,8 @@
       {
         "id": "course_81_l_odyssee_homere_q7",
         "type": "numericSlider",
-        "question": "Ungefär hur många låtar (delar) finns det i Odyssey?",
-        "explanation": "The Odyssey har 24 låtar och cirka 12 000 verser.",
+        "question": "Ungefär hur många sånger (delar) har Odysséen?",
+        "explanation": "Odysséen har 24 sånger och omkring 12 000 verser.",
         "correctValue": 24.0,
         "sliderMin": 10.0,
         "sliderMax": 40.0,
@@ -24853,8 +24853,8 @@
       {
         "id": "course_81_l_odyssee_homere_q8",
         "type": "mcq",
-        "question": "Vilken 1900-talsförfattare överförde Ulysses resa till en enda dag i Dublin?",
-        "explanation": "1922 publicerade James Joyce sin roman Ulysses, som omvandlar homerisk vandring till en enda dag i Dublin.",
+        "question": "Vilken 1900-talsförfattare förlade Odysseus resa till en enda dag i Dublin?",
+        "explanation": "1922 gav James Joyce ut romanen Ulysses, som förlägger den homeriska vandringen till en enda dag i Dublin.",
         "options": [
           "James Joyce",
           "Marcel Proust",
@@ -25049,7 +25049,7 @@
       {
         "id": "course_83_dipe_roi_sophocle_q5",
         "type": "mcq",
-        "question": "Enligt Aristoteles, vilka är de två nyckeleffekterna som han beundrar i Oedipus Rex?",
+        "question": "Enligt Aristoteles, vilka är de två nyckeleffekter han beundrar i Kung Oidipus?",
         "explanation": "Aristoteles beundrar peripeteia, den plötsliga vändningen av situationen och anagnorisen, ögonblicket då Oidipus förstår vem han är.",
         "options": [
           "Vändningen och erkännandet",
@@ -25810,8 +25810,8 @@
       {
         "id": "course_8_la_chute_de_constantinople_1453_q3",
         "type": "trueFalse",
-        "question": "Sant eller falskt: före 1453 hade de teodosiska murarna aldrig tvingats fram av jorden på tusen år.",
-        "explanation": "Denna trippelvall från 400-talet hade motstått alla landangrepp i ett årtusende, fram till det osmanska artilleriet 1453.",
+        "question": "Sant eller falskt: före 1453 hade de theodosianska murarna aldrig sprängts från landsidan på tusen år.",
+        "explanation": "Det tredubbla 400-talsvallen hade stått emot alla landangrepp i ett årtusende, ända tills det osmanska artilleriet kom 1453.",
         "options": [
           "Sant",
           "Falskt"
@@ -25834,8 +25834,8 @@
       {
         "id": "course_8_la_chute_de_constantinople_1453_q5",
         "type": "mcq",
-        "question": "Vad heter den gigantiska kanonen gjord av grundaren Urban för Mehmed II?",
-        "explanation": "Urban smider åt Mehmed II en 8 meter lång kanon som kallas basilikan, som kan avfyra 600 kg kanonkulor.",
+        "question": "Vad hette den jättelika kanon som gjutaren Urban smidde åt Mehmed II?",
+        "explanation": "Urban smider åt Mehmed II en 8 meter lång kanon som kallas Basilikan, stark nog att slunga 600 kilos kulor.",
         "options": [
           "Basilikan",
           "Den kungliga bombarden",
@@ -25876,7 +25876,7 @@
           "En moské",
           "Ett osmanskt kejserligt palats",
           "Ett bibliotek",
-          "Hon är förstörd"
+          "Den förstörs"
         ],
         "correctIndex": 0
       },
@@ -26106,7 +26106,7 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q9",
         "type": "chronological",
-        "question": "Ordna dessa stadier av berättelsen om Les Miserables.",
+        "question": "Ordna dessa stadier av berättelsen om Samhällets olycksbarn.",
         "explanation": "Hugo inledde romanen 1845, tog upp manuskriptet i exil efter statskuppen 1851, innan boken dök upp i Bryssel 1862.",
         "items": [
           "Hugo börjar skriva romanen under titeln \"Les Misères\"",
@@ -26117,8 +26117,8 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q10",
         "type": "numericSlider",
-        "question": "Vilket år publicerades äntligen Les Misérables, efter sjutton års arbete?",
-        "explanation": "Les Miserables dök upp 1862 i Bryssel, efter sjutton års arbete med början 1845.",
+        "question": "Vilket år utkom äntligen Samhällets olycksbarn, efter sjutton års arbete?",
+        "explanation": "Samhällets olycksbarn utkom 1862 i Bryssel, efter sjutton års arbete med början 1845.",
         "correctValue": 1862.0,
         "sliderMin": 1840.0,
         "sliderMax": 1880.0,
@@ -26251,8 +26251,8 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q1",
         "type": "mcq",
-        "question": "Vem är författaren till Le Rouge et le Noir, vars riktiga namn är Henri Beyle?",
-        "explanation": "Stendhal, vars riktiga namn var Henri Beyle, publicerade Le Rouge et le Noir 1830.",
+        "question": "Vem är författaren till Rött och svart, vars riktiga namn är Henri Beyle?",
+        "explanation": "Stendhal, vars riktiga namn var Henri Beyle, gav ut Rött och svart 1830.",
         "options": [
           "Stendhal",
           "Honoré de Balzac",
@@ -26277,7 +26277,7 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q3",
         "type": "mcq",
-        "question": "Vad symboliserar det röda och svarta i titeln?",
+        "question": "Vad står det röda och det svarta för i titeln?",
         "explanation": "Det röda på militäruniformen och det svarta på den kyrkliga klädseln var under restaurationen de enda maktbärarna för en utbildad allmoge.",
         "options": [
           "Militäruniformen och den kyrkliga klädseln, de enda vägarna till uppstigning för en allmänning",
@@ -26509,8 +26509,8 @@
       {
         "id": "course_95_les_confessions_rousseau_q1",
         "type": "mcq",
-        "question": "Vem är författaren till Confessions?",
-        "explanation": "Jean-Jacques Rousseau skrev Les Confessions, publicerad postumt mellan 1782 och 1789.",
+        "question": "Vem är författaren till Bekännelserna?",
+        "explanation": "Jean-Jacques Rousseau skrev Bekännelserna, utgiven postumt mellan 1782 och 1789.",
         "options": [
           "Jean-Jacques Rousseau",
           "Voltaire",
@@ -26627,8 +26627,8 @@
       {
         "id": "course_96_l_etranger_camus_q1",
         "type": "mcq",
-        "question": "Vem är författaren till The Stranger?",
-        "explanation": "Albert Camus publicerade Främlingen 1942, hans första roman.",
+        "question": "Vem är författaren till Främlingen?",
+        "explanation": "Albert Camus gav ut Främlingen 1942, hans första roman.",
         "options": [
           "Albert Camus",
           "Jean-Paul Sartre",
@@ -26876,13 +26876,13 @@
       {
         "id": "course_98_a_la_recherche_du_temps_perdu_proust_q1",
         "type": "mcq",
-        "question": "Vem är författaren till In Search of Lost Time?",
-        "explanation": "Marcel Proust skrev In Search of Lost Time mellan 1913 och 1927.",
+        "question": "Vem är författaren till På spaning efter den tid som flytt?",
+        "explanation": "Marcel Proust skrev På spaning efter den tid som flytt mellan 1913 och 1927.",
         "options": [
           "Marcel Proust",
           "André Gide",
           "Marcel Pagnol",
-          "Anatole Frankrike"
+          "Anatole France"
         ],
         "correctIndex": 0
       },
@@ -26943,7 +26943,7 @@
         "explanation": "André Gide, som hade föraktat manuskriptet, skulle senare erkänna att han gjort ett allvarligt fel.",
         "options": [
           "André Gide",
-          "Anatole Frankrike",
+          "Anatole France",
           "Paul Valéry",
           "Emile Zola"
         ],
@@ -26965,7 +26965,7 @@
       {
         "id": "course_98_a_la_recherche_du_temps_perdu_proust_q8",
         "type": "numericSlider",
-        "question": "Hur många volymer har In Search of Lost Time?",
+        "question": "Hur många volymer har På spaning efter den tid som flytt?",
         "explanation": "Romanen har sju volymer, publicerade mellan 1913 och 1927.",
         "correctValue": 7.0,
         "sliderMin": 3.0,
@@ -27007,8 +27007,8 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q1",
         "type": "mcq",
-        "question": "Vem är författaren till Père Goriot?",
-        "explanation": "Honoré de Balzac publicerade Le Père Goriot 1835.",
+        "question": "Vem är författaren till Pappa Goriot?",
+        "explanation": "Honoré de Balzac gav ut Pappa Goriot 1835.",
         "options": [
           "Honoré de Balzac",
           "Victor Hugo",
@@ -27138,8 +27138,8 @@
       {
         "id": "course_9_l_empire_azteque_q1",
         "type": "numericSlider",
-        "question": "Vilket år hittade Mexica Tenochtitlán?",
-        "explanation": "Mexican grundade Tenochtitlán 1325, på en holme i Lake Texcoco.",
+        "question": "Vilket år grundade mexica Tenochtitlán?",
+        "explanation": "Mexica grundade Tenochtitlán 1325, på en holme i Texcocosjön.",
         "correctValue": 1325.0,
         "sliderMin": 1280.0,
         "sliderMax": 1380.0,
@@ -27149,8 +27149,8 @@
       {
         "id": "course_9_l_empire_azteque_q2",
         "type": "mcq",
-        "question": "Vilket tecken letar Mexica efter för att grunda sin huvudstad, enligt deras gud Huitzilopochtli?",
-        "explanation": "Mexica hittade denna skylt på en holme i Lake Texcoco, där de grundade Tenochtitlán 1325.",
+        "question": "Vilket tecken söker mexica för att grunda sin huvudstad, enligt guden Huitzilopochtli?",
+        "explanation": "Mexica fann tecknet på en holme i Texcocosjön, där de grundade Tenochtitlán 1325.",
         "options": [
           "En örn som slukar en orm på en kaktus",
           "En komet som korsar himlen",
@@ -27163,7 +27163,7 @@
         "id": "course_9_l_empire_azteque_q3",
         "type": "mcq",
         "question": "Vad är chinampas, fulländade av aztekerna?",
-        "explanation": "Dessa ultrafertila konstgjorda öar hjälper sjöhuvudstaden Tenochtitlán att föda.",
+        "explanation": "De här konstgjorda, mycket bördiga öarna gör att sjöhuvudstaden Tenochtitlán kan föda sin befolkning.",
         "options": [
           "Fertila konstgjorda öar gjorda av lera och växter",
           "Tempel tillägnade solen",
@@ -27212,8 +27212,8 @@
       {
         "id": "course_9_l_empire_azteque_q7",
         "type": "mcq",
-        "question": "Vad var huvudfaktorn i det aztekiska imperiets snabba fall till spanjorerna?",
-        "explanation": "Den verkliga mördaren är smittkoppor, en europeisk sjukdom okänd för lokalbefolkningen, som decimerar aztekerna mycket mer än de spanska vapnen.",
+        "question": "Vad var huvudorsaken till att aztekriket föll så snabbt för spanjorerna?",
+        "explanation": "Den verkliga mördaren är smittkoppor, en europeisk sjukdom som lokalbefolkningen inte kände till och som decimerade aztekerna långt mer än de spanska vapnen.",
         "options": [
           "Smittkoppor, en sjukdom mot vilken aztekerna inte hade någon immunitet",
           "Bristen på aztekiska krigare",
@@ -27239,7 +27239,7 @@
         "question": "Placera dessa stadier av aztekernas historia i kronologisk ordning.",
         "explanation": "Dessa fyra milstolpar går från 1325 till 1521: grundandet av huvudstaden, den kejserliga expansionen, spanjorernas ankomst, sedan det sista fallet.",
         "items": [
-          "Grundandet av Tenochtitlán vid Lake Texcoco",
+          "Grundandet av Tenochtitlán vid Texcocosjön",
           "Bildandet av Trippelalliansen",
           "Cortés ankomst till Mexiko",
           "Tenochtitláns fall"

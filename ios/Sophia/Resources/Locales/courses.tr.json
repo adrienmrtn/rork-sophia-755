@@ -36,8 +36,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "622 yılında Hicret neyi temsil ediyor?",
-        "explanation": "Hicret, Mekke'de ölümle tehdit edilen Muhammed'in Medine vahasına doğru yola çıkışıdır. Bu tarih Müslüman takviminin 1. yılı olur.",
+        "question": "622'deki Hicret nedir?",
+        "explanation": "Hicret, Mekke'de ölümle tehdit edilen Muhammed'in Medine vahasına gidişidir. Müslüman takviminin 1. yılı bu tarihten başlar.",
         "options": [
           "Muhammed'in Mekke'den Medine'ye gidişi",
           "Muhammed'e gelen ilk vahiy",
@@ -50,7 +50,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q2",
         "type": "mcq",
         "question": "İslam'dan önce Kabe çevresindeki ticareti kim kontrol ediyordu?",
-        "explanation": "Mekke'nin hakim kabilesi olan Kureyş, gücünü müşrik Kabe çevresinde yapılan hac ve ticaretten alıyordu.",
+        "explanation": "Mekke'nin egemen kabilesi Kureyş, gücünü putperest Kabe çevresindeki hac ve ticaretten alıyordu.",
         "options": [
           "Kureyş kabilesi",
           "Bizanslılar",
@@ -63,7 +63,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q3",
         "type": "trueFalse",
         "question": "Doğru mu yanlış mı: Muhammed 630'da Mekke'yi aldıktan sonra kendisine daha önce zulmedenleri katletti.",
-        "explanation": "Muhammed ise tam tersine, Arap kabilelerinin İslam'a katılmasını kolaylaştıran genel bir af sağladı.",
+        "explanation": "Tersine Muhammed genel af ilan etti. Böylece Arap kabilelerinin İslam'a katılması kolaylaştı.",
         "options": [
           "Doğru",
           "Yanlış"
@@ -74,7 +74,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
         "question": "Muhammed hangi yılda öldü ve Arabistan'ı tek bir otorite altında birleştirdi?",
-        "explanation": "Muhammed, neredeyse tüm Arabistan'ın birleştiği Hicret'ten yalnızca on yıl sonra, 632'de öldü.",
+        "explanation": "Muhammed, neredeyse bütün Arabistan birleşmişken, Hicret'ten yalnızca on yıl sonra, 632'de öldü.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
         "sliderMax": 660.0,
@@ -85,7 +85,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q5",
         "type": "chronological",
         "question": "Muhammed'in hayatındaki bu olayları kronolojik sıraya koyun.",
-        "explanation": "Bu dört tarih (622, 624, 630, 632), Muhammed'in tehdit altındaki peygamberden Arabistan'ı birleştiren bir devletin başına geçtiği yirmi yılı işaret ediyor.",
+        "explanation": "Bu dört tarih — 622, 624, 630, 632 — Muhammed'in tehdit altındaki peygamberden Arabistan'ı birleştiren bir devletin başına geçtiği yirmi yılı işaret eder.",
         "items": [
           "Hicret: Medine'ye hareket",
           "Bedir Savaşı",
@@ -97,7 +97,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q6",
         "type": "mcq",
         "question": "Müslüman fatihlerin kurduğu zimmet nedir?",
-        "explanation": "Zimmet, \"Kitap ehli\"nin cizye karşılığında dinlerini korumalarına izin veren korunan bir statüdür.",
+        "explanation": "Zimmet, «Kitap ehli»nin cizye karşılığında dinlerini korumasına izin veren koruma statüsüdür.",
         "options": [
           "Hıristiyanların ve Yahudilerin vergiye karşı dinlerini korumalarına izin veren statü",
           "Müslüman takviminin adı",
@@ -110,7 +110,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q7",
         "type": "mcq",
         "question": "7. yüzyılda Arabistan çevresinde yapılan savaşlar nedeniyle tükenen iki büyük imparatorluk hangisidir?",
-        "explanation": "Bizans (Doğu Roma İmparatorluğu) ile Sasani Persleri arasındaki bitmek bilmeyen savaşlar, Muhammed'in yeni mesajının avantaj sağladığı jeopolitik bir boşluk yarattı.",
+        "explanation": "Bizans (Doğu Roma) ile Sasani Persleri arasındaki bitmeyen savaşlar jeopolitik bir boşluk açtı. Muhammed'in mesajı bu boşluktan yararlandı.",
         "options": [
           "Bizans ve Sasani imparatorlukları",
           "Roma ve Çin imparatorlukları",
@@ -123,7 +123,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q8",
         "type": "mcq",
         "question": "Muhammed'in Medine'de kurduğu ümmet nedir?",
-        "explanation": "Ümmet, geleneksel kabile dayanışmalarının yerini ortak inanca dayalı bir toplulukla değiştiriyor.",
+        "explanation": "Ümmet, kabile dayanışmasının yerini ortak inanca dayalı bir toplulukla alır.",
         "options": [
           "Kan ve kabile bağlarının ötesine geçen müminler topluluğu",
           "Müslüman takviminin adı",
@@ -171,10 +171,10 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q1",
         "type": "mcq",
-        "question": "Kasım 1095'te Clermont Konseyi'nde hangi olay meydana geldi?",
-        "explanation": "27 Kasım 1095'teki Clermont Konsili'nde II. Urban, Batılı Hıristiyanları, günahlarının bağışlanması karşılığında Kudüs'e gidip özgürleştirmeye çağırdı.",
+        "question": "Kasım 1095'te Clermont Konsili'nde hangi olay meydana geldi?",
+        "explanation": "27 Kasım 1095'te Clermont Konsili'nde II. Urban, Batılı Hıristiyanları günahlarının bağışlanması karşılığında Kudüs'ü kurtarmaya çağırdı.",
         "options": [
-          "Papa Urban II, Kudüs'ü kurtarmak için haçlı seferi çağrısında bulundu",
+          "Papa II. Urban, Kudüs'ü kurtarmak için haçlı seferi çağrısında bulundu",
           "Papa Bizans imparatorunu aforoz etti",
           "Selçuklu Türkleri İtalya'yı işgal etti",
           "Haçlılar Doğu'nun Latin Devletlerini buldu"
@@ -185,7 +185,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q2",
         "type": "mcq",
         "question": "Bizans imparatoru I. Aleksios Komnenos'u papadan yardım istemeye iten olay neydi?",
-        "explanation": "1071'de Malazgirt'te Selçuklu Türkleri Bizans ordusunu ezip Anadolu'yu açarak I. Aleksios Komnenos'u Roma'ya dilekçe vermeye zorladı.",
+        "explanation": "1071'de Malazgirt'te Selçuklu Türkleri Bizans ordusunu ezdi ve Anadolu'yu açtı. I. Aleksios Komnenos Roma'dan yardım istedi.",
         "options": [
           "Malazgirt'in Selçuklulara karşı yenilgisi",
           "Kudüs'ün Müslümanlar tarafından ele geçirilmesi",
@@ -208,8 +208,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q4",
         "type": "mcq",
-        "question": "Urban II haçlı seferine çıkanlara ne vaat ediyor?",
-        "explanation": "Urban II, genel bir hoşgörü vaat ediyor: çarmıha gerilenlerin günahlarının tamamen bağışlanması.",
+        "question": "II. Urban haçlı seferine çıkanlara ne vaat ediyor?",
+        "explanation": "II. Urban tam hoşgörü vaat eder: haçı kabul edenlerin günahlarının tümden bağışlanması.",
         "options": [
           "Günahlarından dolayı verilen cezaların tamamen affı",
           "Kutsal Topraklarda toprak garantisi",
@@ -222,7 +222,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q5",
         "type": "trueFalse",
         "question": "Doğru mu yanlış mı: Kudüs'ün ele geçirilmesinden sonra Bouillonlu Godfrey kendisini şehrin kralı ilan etti.",
-        "explanation": "Bouillon'lu Godfrey, kral unvanını reddetti ve İsa'nın mezarının koruyucusu, Kutsal Kabir'in Yeminlisi olarak anılmayı tercih etti.",
+        "explanation": "Bouillonlu Godefroy kral unvanını reddetti. İsa'nın mezarının koruyucusu, Kutsal Kabir'in Avukatı olarak anılmayı tercih etti.",
         "options": [
           "Doğru",
           "Yanlış"
@@ -236,7 +236,7 @@
         "explanation": "Bu dönüm noktaları 1071'den 1187'ye kadar değişmektedir: Bizans'ın yenilgisi, Papa'nın Kudüs'ün ele geçirilmesi ve ardından yeniden ele geçirilmesinden önce gelen çağrısından önce gelir.",
         "items": [
           "Bizans'ın Malazgirt'i Selçuklulara karşı yenilgiye uğratması",
-          "Clermont Konseyi'nde haçlı seferi çağrısı",
+          "Clermont Konsili'nde haçlı seferi çağrısı",
           "Kudüs'ün Haçlılar tarafından ele geçirilmesi",
           "Kudüs'ün Selahaddin tarafından yeniden ele geçirilmesi"
         ]
@@ -329,7 +329,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q2",
         "type": "trueFalse",
         "question": "Doğru mu yanlış mı: 410'dan önce yaklaşık sekiz yüzyıl boyunca hiçbir düşman ordusu Roma'ya girmemişti.",
-        "explanation": "Roma'nın bir düşman tarafından son ele geçirilmesi, MÖ 390'daki Galya yağmalamasına kadar uzanır. M.Ö., Alaric'in gelişinden neredeyse 800 yıl önce.",
+        "explanation": "Roma'nın bir düşman tarafından son ele geçirilişi, Alaric'ten neredeyse 800 yıl önce, M.Ö. 390'daki Galya yağmasına kadar gider.",
         "options": [
           "Doğru",
           "Yanlış"
@@ -352,7 +352,7 @@
       {
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q4",
         "type": "mcq",
-        "question": "Derste bahsedilen Roma foedus'u nedir?",
+        "question": "Derste geçen Roma foedus’u nedir?",
         "explanation": "İmparatorluk, asker eksikliğine rağmen sınırlarını korumak için, askerlik hizmetleri karşılığında Germen halklarını topraklarına yerleştirdi.",
         "options": [
           "\"Barbar\" halkların askerlik hizmeti karşılığında Roma topraklarına yerleşmesini öngören anlaşma",
@@ -390,7 +390,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q7",
         "type": "chronological",
         "question": "Batı Roma İmparatorluğu'nun çöküşünden itibaren bu olayları kronolojik sıraya koyun.",
-        "explanation": "Bu aşamalar 402'den 476'ya kadar değişir: Ravenna'ya çekilme, Visigotik yağmalamadan önce gelir, ardından daha yıkıcı olan Vandal yağmalama, Batı İmparatorluğu'nun sonuna kadar devam eder.",
+        "explanation": "Bu aşamalar 402'den 476'ya uzanır: Ravenna'ya çekiliş, Vizigot yağması, ardından daha yıkıcı Vandal yağması ve Batı İmparatorluğu'nun sonu.",
         "items": [
           "Honorius Ravenna için Roma'yı terk etti",
           "Alaric ve Vizigotlar tarafından Roma'nın yağmalanması",
@@ -485,8 +485,8 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q3",
         "type": "trueFalse",
-        "question": "Doğru mu yanlış mı: Charlemagne, Saksonlara karşı yaklaşık otuz yıl süren bir savaşa öncülük etti.",
-        "explanation": "Charlemagne, Saksonlarla otuz yıl boyunca savaştı ve özellikle onların zorla Hıristiyanlığa geçişini empoze etti.",
+        "question": "Doğru mu yanlış mı: Şarlman, Saksonlara karşı yaklaşık otuz yıl süren bir savaşa öncülük etti.",
+        "explanation": "Şarlman Saksonlarla otuz yıl savaştı ve özellikle zorla Hıristiyanlaştırmayı dayattı.",
         "options": [
           "Doğru",
           "Yanlış"
@@ -496,8 +496,8 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q4",
         "type": "mcq",
-        "question": "Charlemagne'ın kurduğu Missi Dominici'ler nelerdir?",
-        "explanation": "Missi Dominici, yerel sayımların eylemlerini doğrulamak için çiftler halinde eyaletlere gönderilen müfettişlerdir.",
+        "question": "Şarlman'ın kurduğu missi dominici nedir?",
+        "explanation": "Missi dominici, yerel kontların işini denetlemek için eyaletlere çiftler halinde gönderilen müfettişlerdir.",
         "options": [
           "İlleri kontrol etmek için müfettişler çiftler halinde gönderildi",
           "Antik metinlerin kopyalanmasından sorumlu keşişler",
@@ -520,10 +520,10 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q6",
         "type": "mcq",
-        "question": "Charlemagne imparatorlukta kopyalanan metinleri standartlaştırmak için hangi yazıyı benimsedi?",
-        "explanation": "Aix-la-Chapelle'in saray okulu, imparatorluğun her yerinde okunabilen Caroline yazısını yaydı.",
+        "question": "Şarlman, imparatorlukta kopyalanan metinleri standartlaştırmak için hangi yazıyı benimsedi?",
+        "explanation": "Aachen'deki saray okulu, imparatorluğun her yerinde okunabilen Karolenj yazısını yaydı.",
         "options": [
-          "Caroline'ın yazısı",
+          "Karolenj yazısı",
           "Yunan alfabesi",
           "Hiyeroglifler",
           "Kiril alfabesi"
@@ -533,7 +533,7 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q7",
         "type": "chronological",
-        "question": "Charlemagne'ın hayatındaki bu olayları kronolojik sıraya koyun.",
+        "question": "Şarlman'ın hayatındaki bu olayları kronolojik sıraya koy.",
         "explanation": "Bu kilometre taşları 768'den 843'e kadar uzanır: Şarlman'ın katılımından Lombard'ın fethine, ardından taç giyme törenine ve imparatorluğun torunları arasında bölünmesine kadar.",
         "items": [
           "Frenk krallığının gelişi",
@@ -545,7 +545,7 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q8",
         "type": "numericSlider",
-        "question": "Charlemagne hangi yılda Roma'da imparator olarak taç giydi?",
+        "question": "Şarlman hangi yılda Roma'da imparator olarak taç giydi?",
         "explanation": "Taç giyme töreni 25 Aralık 800'de Roma'daki Aziz Petrus Bazilikası'nda gerçekleşti.",
         "correctValue": 800.0,
         "sliderMin": 750.0,
@@ -603,8 +603,8 @@
       {
         "id": "course_5_la_magna_carta_1215_q1",
         "type": "mcq",
-        "question": "İngiliz baronları neden 1215'te Kral John Lackland'e Magna Carta'yı dayattılar?",
-        "explanation": "John Lackland'ın topraklarını yeniden ele geçirmek için uyguladığı vergiler, rehineler ve keyfi para cezalarıyla karşı karşıya kalan baronlar isyan eder ve gücünü sınırlayan bir metin empoze eder.",
+        "question": "İngiliz baronları neden 1215'te kral Yurtsuz John'a Magna Carta'yı dayattı?",
+        "explanation": "Yurtsuz John topraklarını geri almak için vergiler, rehineler ve keyfi cezalar yağdırınca baronlar ayaklandı ve gücünü sınırlayan bir metni dayattı.",
         "options": [
           "Kraliyet keyfiliğini sınırlamak için: vergiler, rehineler ve kötü niyetli para cezaları",
           "Kutsal Topraklarda yeni bir haçlı seferini finanse etmek",
@@ -616,8 +616,8 @@
       {
         "id": "course_5_la_magna_carta_1215_q2",
         "type": "trueFalse",
-        "question": "Doğru mu yanlış mı: 1215'ten önce John Lackland Normandiya'yı Fransız kralı Philip II Augustus'a kaptırdı.",
-        "explanation": "1204'te John Lackland Normandiya'yı Philip II Augustus'a kaptırdı ve bu onu kalıcı olarak zayıflatan bir başarısızlıktı.",
+        "question": "Doğru mu yanlış mı: 1215'ten önce Yurtsuz John Normandiya'yı Fransız kralı II. Philippe Auguste'a kaptırdı.",
+        "explanation": "1204'te Yurtsuz John Normandiya'yı II. Philippe Auguste'a kaptırdı. Bu yenilgi onu kalıcı olarak zayıflattı.",
         "options": [
           "Doğru",
           "Yanlış"
@@ -654,18 +654,18 @@
         "question": "Magna Carta'nın imzalanmasından kısa bir süre sonra, Ağustos 1215'te ne oldu?",
         "explanation": "John, Ağustos 1215'te papa tarafından metnin iptalini aldı ve bu, baronlarla çatışmayı yeniden alevlendirdi.",
         "options": [
-          "John Lackland metni Papa tarafından iptal ettirir ve iç savaş yeniden başlar",
+          "Yurtsuz John metni papaya iptal ettirir ve iç savaş yeniden başlar",
           "Kral baronlar tarafından tahttan indirildi",
           "Şart tüm krallıkta derhal uygulanır",
-          "John Lackland Fransa'ya sürgüne gidiyor"
+          "Yurtsuz John Fransa'ya sürgüne gider"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_5_la_magna_carta_1215_q6",
         "type": "mcq",
-        "question": "1214'teki hangi askeri yenilgi John Lackland'ı Magna Carta'dan önce kesin olarak izole etti?",
-        "explanation": "1214'te Philippe Auguste'un İngiltere'nin de dahil olduğu bir koalisyonu mağlup ettiği Bouvines'in yenilgisi John Lackland'ı izole etti.",
+        "question": "1214'teki hangi askeri yenilgi, Magna Carta'dan önce Yurtsuz John'u kesin olarak yalnız bıraktı?",
+        "explanation": "1214'te Philippe Auguste, İngiltere'nin de içinde olduğu bir koalisyonu Bouvines'de yendi. Bu yenilgi Yurtsuz John'u yalnız bıraktı.",
         "options": [
           "Bouvines'in yenilgisi",
           "Gaskonya'nın kaybı",
@@ -677,7 +677,7 @@
       {
         "id": "course_5_la_magna_carta_1215_q7",
         "type": "chronological",
-        "question": "John Lackland'ın saltanatına ait bu olayları kronolojik sıraya koyun.",
+        "question": "Yurtsuz John'un saltanatındaki bu olayları kronolojik sıraya koy.",
         "explanation": "Bu aşamalar 1204'ten 1216'ya kadar uzanır: Normandiya'nın kaybı, Bouvines'in yenilgisinden önce gelir, ardından tüzüğün imzalanması ve Henry III tarafından yeniden yayınlanması gelir.",
         "items": [
           "Philippe Auguste'a karşı Normandiya'nın kaybedilmesi",
@@ -690,7 +690,7 @@
         "id": "course_5_la_magna_carta_1215_q8",
         "type": "numericSlider",
         "question": "Runnymede'de Magna Carta hangi yılda imzalandı?",
-        "explanation": "Kral John Lackland, mührünü Haziran 1215'te Runnymede Meadow'da Magna Carta'ya koydu.",
+        "explanation": "Kral Yurtsuz John, mührünü Haziran 1215'te Runnymede çayırında Magna Carta'ya bastı.",
         "correctValue": 1215.0,
         "sliderMin": 1150.0,
         "sliderMax": 1300.0,
@@ -788,7 +788,7 @@
         "explanation": "Doktorlar, gerçek vektörün fare piresi Xenopsylla cheopis olduğu durumda, miasma yani bozuk hava teorisine inanıyorlar.",
         "options": [
           "Fare piresi",
-          "Bozuk görünüyor",
+          "Bozuk hava",
           "Kuyu suyu",
           "Sivrisinekler"
         ],
@@ -844,8 +844,8 @@
       {
         "id": "course_6_la_peste_noire_en_europe_1347_1353_q9",
         "type": "percentageSlider",
-        "question": "Derste verilen tahminlere göre 1347 ile 1353 yılları arasında Kara Ölüm nedeniyle kaybedilen Avrupa nüfusunun maksimum payı nedir?",
-        "explanation": "Kurs, Kara Ölüm'ün Avrupa nüfusunun %30 ila 60'ını, yani 25 ila 50 milyon insanı öldürdüğünü tahmin ediyor.",
+        "question": "1347-1353 arasında Kara Ölüm Avrupa nüfusunun en fazla yüzde kaçını aldı?",
+        "explanation": "Ders, Kara Ölüm'ün Avrupa nüfusunun yüzde 30 ila 60'ını, yani 25 ila 50 milyon insanı öldürdüğünü söylüyor.",
         "correctValue": 60.0,
         "sliderMin": 0.0,
         "sliderMax": 100.0,
@@ -891,7 +891,7 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q1",
         "type": "mcq",
-        "question": "Joan of Arc 1429'da veliaht Charles'a katıldığında kaç yaşındaydı?",
+        "question": "Jeanne d'Arc 1429'da veliaht Charles'ın yanına gittiğinde kaç yaşındaydı?",
         "explanation": "Jeanne, veliahtı kendisine bir ordu emanet etmeye ikna etmek için Domrémy'den ayrıldığında 17 yaşındaydı.",
         "options": [
           "17 yaşında",
@@ -904,7 +904,7 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q2",
         "type": "mcq",
-        "question": "Joan of Arc nereden geldi?",
+        "question": "Jeanne d'Arc nereden geliyordu?",
         "explanation": "Jeanne, Lorraine'deki Domrémy'den bir köylü kızıdır.",
         "options": [
           "Lorraine'deki Domrémy'den",
@@ -933,7 +933,7 @@
         "options": [
           "Veliaht, İngiltere Kralı lehine mirastan mahrum bırakıldı",
           "Fransa Burgundy'yi ilhak etti",
-          "Joan of Arc şövalye oldu",
+          "Jeanne d'Arc şövalye oldu",
           "Charles VII'nin Reims'de derhal taç giyme töreni"
         ],
         "correctIndex": 0
@@ -954,7 +954,7 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q6",
         "type": "numericSlider",
-        "question": "Joan of Arc hangi yılda Orleans kuşatmasını kaldırdı?",
+        "question": "Jeanne d'Arc hangi yılda Orléans kuşatmasını kaldırdı?",
         "explanation": "Joan, Mayıs 1429'da Orleans kuşatmasını yalnızca dokuz günde kırdı.",
         "correctValue": 1429.0,
         "sliderMin": 1400.0,
@@ -965,7 +965,7 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q7",
         "type": "trueFalse",
-        "question": "Doğru mu yanlış mı: Joan of Arc, savaş sırasında birçok düşmanı kendi eliyle öldürdü.",
+        "question": "Doğru mu yanlış mı: Jeanne d'Arc savaşta birçok düşmanı kendi eliyle öldürdü.",
         "explanation": "Jeanne asla kendi eliyle bir düşmanı öldürmedi; kendisi kan dökmeden bayrağını taşımayı tercih etti.",
         "options": [
           "Doğru",
@@ -976,7 +976,7 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q8",
         "type": "chronological",
-        "question": "Joan of Arc'ın hayatındaki bu olayları kronolojik sıraya koyun.",
+        "question": "Jeanne d'Arc'ın hayatındaki bu olayları kronolojik sıraya koy.",
         "explanation": "Bu kilometre taşları 1420'den 1431'e kadar uzanır: Troyes antlaşması, ardından 1429'da Orléans ve Reims antlaşması, 1430'da ele geçirme ve 1431'de idam.",
         "items": [
           "Troyes Antlaşması veliahtı mirastan mahrum bırakıyor",
@@ -1073,8 +1073,8 @@
       {
         "id": "course_8_la_chute_de_constantinople_1453_q5",
         "type": "mcq",
-        "question": "Kurucusu Urban'ın II. Mehmed için yaptığı dev topun adı nedir?",
-        "explanation": "Şehir, II. Mehmed için Bazilika adı verilen ve 600 kg'lık top güllesi atabilen 8 metrelik bir top dövüyor.",
+        "question": "Dökümcü Urban'ın II. Mehmed için yaptığı dev topun adı nedir?",
+        "explanation": "Urban, II. Mehmed için Basilika adlı, 600 kg'lık gülle atan 8 metrelik bir top döktü.",
         "options": [
           "Bazilika",
           "Kraliyet Bombardımanı",
@@ -1097,7 +1097,7 @@
       {
         "id": "course_8_la_chute_de_constantinople_1453_q7",
         "type": "chronological",
-        "question": "Konstantinopolis'in düşüşüyle ​​ilgili bu olayları kronolojik sıraya koyun.",
+        "question": "Konstantinopolis'in düşüşündeki bu olayları kronolojik sıraya koy.",
         "explanation": "Bu dört aşama 1204'ten 1453'e kadar uzanır: Bizans'ın zayıflaması, II. Mehmed'in iktidara gelmesi, kuşatma ve ardından düşüş.",
         "items": [
           "4. Haçlı Seferi'nde şehrin yağmalanması",
@@ -1171,8 +1171,8 @@
       {
         "id": "course_9_l_empire_azteque_q1",
         "type": "numericSlider",
-        "question": "Meksika Tenochtitlán'ı hangi yılda buldu?",
-        "explanation": "Meksikalılar Tenochtitlán'ı 1325 yılında Texcoco Gölü'ndeki bir adacıkta kurdu.",
+        "question": "Mexicalar Tenochtitlán'ı hangi yılda kurdu?",
+        "explanation": "Mexicalar Tenochtitlán'ı 1325 yılında Texcoco Gölü'ndeki bir adacıkta kurdu.",
         "correctValue": 1325.0,
         "sliderMin": 1280.0,
         "sliderMax": 1380.0,
@@ -1182,8 +1182,8 @@
       {
         "id": "course_9_l_empire_azteque_q2",
         "type": "mcq",
-        "question": "Tanrıları Huitzilopochtli'ye göre Meksikalılar başkentlerini kurmak için hangi işareti arıyorlar?",
-        "explanation": "Meksikalılar bu işareti 1325'te Tenochtitlán'ı kurdukları Texcoco Gölü'ndeki bir adacıkta buldu.",
+        "question": "Tanrıları Huitzilopochtli'ye göre Mexicalar başkentlerini kurmak için hangi işareti arıyorlar?",
+        "explanation": "Mexicalar bu işareti 1325'te Tenochtitlán'ı kurdukları Texcoco Gölü'ndeki bir adacıkta buldu.",
         "options": [
           "Kaktüsün üzerindeki yılanı yiyen kartal",
           "Gökyüzünden geçen bir kuyruklu yıldız",
@@ -1250,7 +1250,7 @@
         "options": [
           "Azteklerin bağışıklığının olmadığı bir hastalık olan çiçek hastalığı",
           "Aztek savaşçılarının eksikliği",
-          "Müstahkem bir sermayenin bulunmaması",
+          "Müstahkem bir başkentin olmaması",
           "Azteklerin savaşmayı reddetmesi"
         ],
         "correctIndex": 0
@@ -1259,7 +1259,7 @@
         "id": "course_9_l_empire_azteque_q8",
         "type": "numericSlider",
         "question": "Tenochtitlán'ın son kuşatması 1521'de kaç gün sürdü?",
-        "explanation": "Tenochtitlán, 80 gün süren kuşatmanın ardından 1521'de açlıktan ölmek ve hastalıklardan harap olmak üzere düştü.",
+        "explanation": "Tenochtitlán, 80 günlük kuşatmanın ardından 1521’de düştü: aç, susuz ve hastalıklardan kırılmıştı.",
         "correctValue": 80.0,
         "sliderMin": 20.0,
         "sliderMax": 150.0,
@@ -1318,7 +1318,7 @@
         "id": "course_10_la_decouverte_de_l_amerique_1492_q1",
         "type": "numericSlider",
         "question": "Kristof Kolomb Bahamalar'a hangi yılda ulaştı?",
-        "explanation": "Columbus, 12 Ekim 1492'de Bahamalar'da San Salvador adını verdiği bir adaya ayak bastı.",
+        "explanation": "Kolomb 12 Ekim 1492'de Bahamalar'da San Salvador adını verdiği bir adaya ayak bastı.",
         "correctValue": 1492.0,
         "sliderMin": 1450.0,
         "sliderMax": 1520.0,
@@ -1342,7 +1342,7 @@
         "id": "course_10_la_decouverte_de_l_amerique_1492_q3",
         "type": "trueFalse",
         "question": "Doğru mu yanlış mı: Kristof Kolomb her şeyden önce Dünya'nın yuvarlak olduğunu kanıtlamaya çalışıyordu; bu fikir kendisinden önce bilinmiyordu.",
-        "explanation": "Dünyanın yuvarlaklığı Yunan bilim adamı Eratosthenes tarafından M.Ö. 3. yüzyılda hesaplanmıştı. reklam; Columbus'un hedefi ekonomikti.",
+        "explanation": "Dünyanın yuvarlaklığı, Yunan bilgin Eratosthenes tarafından M.Ö. 3. yüzyılda hesaplanmıştı. Kolomb'un hedefi ekonomikti.",
         "options": [
           "Doğru",
           "Yanlış"
@@ -1377,9 +1377,9 @@
         "id": "course_10_la_decouverte_de_l_amerique_1492_q6",
         "type": "mcq",
         "question": "Kolomb, Asya'da olduklarına ikna olan, karşılaştığı yerli halklara ne ad verdi?",
-        "explanation": "Hint Adaları'na ulaştığına inanan Columbus, tanıştığı Tainolara \"Kızılderililer\" adını verir.",
+        "explanation": "Hint Adaları'na ulaştığına inanan Kolomb, karşılaştığı Tainolara «Kızılderililer» der.",
         "options": [
-          "Hintliler",
+          "Kızılderililer",
           "Aztekler",
           "Barbarlar",
           "Sarazenler"
@@ -1389,13 +1389,13 @@
       {
         "id": "course_10_la_decouverte_de_l_amerique_1492_q7",
         "type": "mcq",
-        "question": "Kolombiya Borsası nedir?",
-        "explanation": "Bu transfer, Avrupa'ya patates ve domates, Amerika'ya buğday, at veya sığır getirerek her iki dünyayı da sonsuza kadar değiştiriyor.",
+        "question": "Kolomb Takası nedir?",
+        "explanation": "Bu aktarım Avrupa'ya patates ve domates, Amerika'ya buğday, at ve sığır getirir. İki dünya da sonsuza dek değişir.",
         "options": [
           "Avrupa ve Amerika arasında büyük miktarda bitki, hayvan ve hastalık transferi",
           "İspanya ve Portekiz arasında barış anlaşması",
           "Afrika ile Batı Hint Adaları arasındaki köle ticareti",
-          "Columbus ve Tainoslar arasında savaş esirlerinin değişimi"
+          "Kolomb ve Tainoslar arasında savaş esirlerinin değişimi"
         ],
         "correctIndex": 0
       },
@@ -1477,7 +1477,7 @@
         "question": "Parisliler 14 Temmuz 1789'da Bastille'i aldıklarında her şeyden önce ne arıyorlardı?",
         "explanation": "Bastille'de yalnızca 7 mahkum vardı; Saldırganlar esas olarak kalede depolanan barutu arıyorlardı.",
         "options": [
-          "Kendinizi savunmak için toz",
+          "Savunmak için barut",
           "Binlerce mahkumun serbest bırakılması",
           "Kraliyet hazinesinden altın",
           "Kraliyet arşivleri"
@@ -1498,7 +1498,7 @@
       {
         "id": "course_11_la_prise_de_la_bastille_1789_q3",
         "type": "mcq",
-        "question": "Louis XVI neden Mayıs 1789'da Estates General'ı topladı?",
+        "question": "XVI. Louis neden Mayıs 1789'da Genel Meclis'i topladı?",
         "explanation": "Krallık, özellikle Amerikan kolonilerine verilen yüksek maliyetli destek nedeniyle mahvolur ve kral yeni vergiler arar.",
         "options": [
           "Krallığın iflası karşısında yeni vergileri artırmak",
@@ -1517,7 +1517,7 @@
           "Kendini Ulusal Meclis ilan ediyor",
           "Versay'dan ayrılıp Paris'e gidiyor",
           "Soylular arasına katılıyor",
-          "Estates General'i feshediyor"
+          "Genel Meclis'i feshediyor"
         ],
         "correctIndex": 0
       },
@@ -1538,7 +1538,7 @@
         "id": "course_11_la_prise_de_la_bastille_1789_q6",
         "type": "numericSlider",
         "question": "14 Temmuz sabahı Les Invalides'te kalabalık kaç tüfeğe el koydu?",
-        "explanation": "Kalabalık Les Invalides'ten yaklaşık 32.000 tüfek ele geçirdi, ancak barut hâlâ eksikti.",
+        "explanation": "Kalabalık Les Invalides’ten yaklaşık 32.000 tüfek aldı, ama barut hâlâ yoktu.",
         "correctValue": 32000.0,
         "sliderMin": 10000.0,
         "sliderMax": 50000.0,
@@ -1548,8 +1548,8 @@
       {
         "id": "course_11_la_prise_de_la_bastille_1789_q7",
         "type": "mcq",
-        "question": "Bastille'den bu kadar nefret edilmesini sağlayan önbellek mektubu nedir?",
-        "explanation": "Lettre de kaşet, birinin yargılanmadan hapse atılmasına izin veriyor, bu da Parislilerin gözünde kraliyet keyfiliğini temsil ediyor.",
+        "question": "Bastille'den bu kadar nefret ettiren lettre de cachet nedir?",
+        "explanation": "Lettre de cachet, birini yargılamadan hapsetmeye izin verir. Parislilerin gözünde kraliyet keyfiliğinin ta kendisidir.",
         "options": [
           "Yargılanmadan tutuklama kararı",
           "Ekmeğe kraliyet vergisi",
@@ -1576,8 +1576,8 @@
         "explanation": "Bu dört aşama Mayıs'tan Ağustos 1789'a kadar sürer: Kraliyet çağrısı, milletvekillerinin yemini, Bastille'in basılması ve ardından ayrıcalıkların kaldırılması.",
         "items": [
           "Genel Meclis'in toplanması",
-          "Palmiye Yemini Oyunu",
-          "Bastille'in fırtınası",
+          "Jeu de Paume Yemini",
+          "Bastille'in basılması",
           "Ayrıcalıkların kaldırılması"
         ]
       },
@@ -1589,7 +1589,7 @@
         "options": [
           "Köylüler derebeylik haklarının belgelerini yakıyor",
           "Köylüler Meclis'e karşı ayaklanıyor",
-          "Kampanyalar Paris'teki olaylara kayıtsız kalıyor",
+          "Kırsal kesim Paris'teki olaylara kayıtsız kalıyor",
           "Köylüler mutlak kralın geri dönüşünü talep ediyor"
         ],
         "correctIndex": 0
@@ -1668,7 +1668,7 @@
       {
         "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_q4",
         "type": "mcq",
-        "question": "Kampanyanın önemli bir varlığı olan Napolyon Kolordusu nedir?",
+        "question": "Kampanyanın önemli bir varlığı olan Napolyon kolordusu nedir?",
         "explanation": "Her bir kolordu, tek başına manevra yapabilen özerk bir kuvvettir ve yedi kolordu Ulm'a paralel olarak yürüyebilir.",
         "options": [
           "Piyadeleri, süvarileri ve toplarıyla küçük özerk bir ordu",
@@ -1682,7 +1682,7 @@
         "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_q5",
         "type": "mcq",
         "question": "Kuşatma manevrasında Mareşal Murat'ın rolü nedir?",
-        "explanation": "Murat, Mack'i batıdan işgal ederken, diğer polis memurları Viyana'ya giden yolu kesmek için kuzeyden Ulm'u atladılar.",
+        "explanation": "Murat Mack'i batıdan oyalarken, diğer mareşaller Viyana yolunu kesmek için kuzeyden Ulm'u dolaşır.",
         "options": [
           "Diğer birlikler Ulm'un etrafında dönerken Mack'in dikkatini batıya odaklıyor",
           "Avusturya filosunu yok etti",
@@ -1803,10 +1803,10 @@
       {
         "id": "course_13_la_bataille_de_waterloo_1815_q3",
         "type": "mcq",
-        "question": "Napolyon'un savaştan önceki Merkezi Konum adı verilen ilk planı neydi?",
+        "question": "Napolyon'un savaştan önceki merkez konum adı verilen ilk planı neydi?",
         "explanation": "Napolyon, iki düşman ordusunun arasında yer almak ve onları bir araya gelmeden önce birbiri ardına yenmek istiyor.",
         "options": [
-          "Wellington ve Blücher'i ayrı ayrı yenmek için kendinizi Wellington ve Blücher'in arasına yerleştirin",
+          "Wellington ile Blücher'in arasına girip onları ayrı ayrı yenmek",
           "Doğrudan Brüksel'e saldırın",
           "Avusturya takviyelerini bekleyin",
           "Wellington'u deniz yoluyla çevrelemek"
@@ -1841,7 +1841,7 @@
         "id": "course_13_la_bataille_de_waterloo_1815_q6",
         "type": "mcq",
         "question": "Waterloo'da Fransız ordusunun paniğini ve yenilgisini hangi olay tetikledi?",
-        "explanation": "Son çare olarak başlatılan İmparatorluk Muhafızları ilk kez geri çekiliyor ve \"Muhafız geri çekiliyor!\" » Geri çekilmeyi bozguna dönüştürür.",
+        "explanation": "Son çare olarak sürülen İmparatorluk Muhafızları ilk kez geri çekilir. «Muhafız geri çekiliyor!» çığlığı ricatı bozguna çevirir.",
         "options": [
           "İmparatorluk Muhafızlarının geri çekilmesi",
           "Napolyon'un savaş alanında ölümü",
@@ -1856,7 +1856,7 @@
         "question": "Napolyon Waterloo'daki son yenilgisinden sonra nereye sürgüne gönderildi?",
         "explanation": "22 Haziran 1815'te tahttan çekilmesinin ardından Napolyon, Güney Atlantik'te izole bir ada olan Saint Helena'ya sürgüne gönderildi ve 1821'de burada öldü.",
         "options": [
-          "Aziz Helena",
+          "Saint Helena",
           "Elba adası",
           "Korsika",
           "Malta"
@@ -2013,7 +2013,7 @@
         "id": "course_14_la_commune_de_paris_1871_q8",
         "type": "mcq",
         "question": "Komüne son veren son baskının adı nedir?",
-        "explanation": "21-28 Mayıs 1871 tarihleri ​​arasında Versailles birlikleri Kanlı Hafta sırasında ayaklanmayı bastırdı.",
+        "explanation": "21-28 Mayıs 1871 arasında Versailles birlikleri Kanlı Hafta sırasında ayaklanmayı bastırdı.",
         "options": [
           "Kanlı Hafta",
           "Uzun Bıçaklar Gecesi",
@@ -2079,7 +2079,7 @@
       {
         "id": "course_15_la_belle_epoque_1871_1914_q1",
         "type": "mcq",
-        "question": "1871 ile 1914 arasındaki Belle Epoque ne anlama geliyor?",
+        "question": "1871 ile 1914 arasındaki Belle Époque ne demek?",
         "explanation": "Belle Epoque, Fransa-Prusya Savaşı'nın (1871) sonundan, insanların bilime ve ilerlemeye inandığı bir dönem olan Birinci Dünya Savaşı'nın (1914) patlak vermesine kadar uzanır.",
         "options": [
           "İlerlemeye olan inancın damgasını vurduğu göreceli bir barış dönemi",
@@ -2218,8 +2218,8 @@
         "explanation": "Operasyon, General Falkenhayn tarafından seçilen Gericht, yani “mahkeme” adını taşıyor.",
         "options": [
           "Gericht",
-          "Barbaros",
-          "Mavi Kasa",
+          "Barbarossa",
+          "Mavi Durum",
           "Michael"
         ],
         "correctIndex": 0
@@ -2289,7 +2289,7 @@
         "id": "course_16_la_bataille_de_verdun_1916_q7",
         "type": "numericSlider",
         "question": "Verdun Muharebesi sırasında Fransız ve Almanların toplamından yaklaşık kaç kişi öldürüldü veya yaralandı?",
-        "explanation": "Savaş, yaklaşık 370.000 Fransız ve 330.000 Alman olmak üzere toplamda yaklaşık 700.000 kişinin ölümüne neden oldu.",
+        "explanation": "Savaş yaklaşık 700.000 kayıp verdi: 370.000 Fransız ve 330.000 Alman, ölü veya yaralı.",
         "correctValue": 700000.0,
         "sliderMin": 300000.0,
         "sliderMax": 1200000.0,
@@ -2306,7 +2306,7 @@
           "Fort Douaumont'un Düşüşü",
           "Müttefiklerin Somme saldırısı Verdun'u rahatlattı",
           "Verdun Savaşı'nın Sonu",
-          "Fransız ve Alman liderler arasında kemikliğin önünde el sıkışma"
+          "Fransız ve Alman liderler arasında kemikhanenin önünde el sıkışma"
         ]
       },
       {
@@ -2724,7 +2724,7 @@
         "options": [
           "Uranüs Operasyonu",
           "Operasyon Durumu Mavi",
-          "Barbarossa Harekatı",
+          "Barbarossasa Harekatı",
           "Gericht Operasyonu"
         ],
         "correctIndex": 0
@@ -3162,7 +3162,7 @@
         "id": "course_22_la_crise_des_missiles_de_cuba_1962_q6",
         "type": "numericSlider",
         "question": "Küba Füze Krizi Ekim 1962'de kaç gün sürdü?",
-        "explanation": "Kriz, Kruşçev'in füzelerin geri çekildiğini duyurmasından önce, 14-28 Ekim 1962 tarihleri ​​arasında 13 gün sürdü.",
+        "explanation": "Kriz, Kruşçev'in füzelerin geri çekildiğini duyurmasından önce, 14-28 Ekim 1962 tarihleri arasında 13 gün sürdü.",
         "correctValue": 13.0,
         "sliderMin": 1.0,
         "sliderMax": 40.0,
@@ -3759,7 +3759,7 @@
       {
         "id": "course_26_la_creation_de_l_onu_1945_q7",
         "type": "numericSlider",
-        "question": "Kursa göre bugün BM'ye kaç ülke üye?",
+        "question": "Bugün BM’ye kaç ülke üye?",
         "explanation": "1945'te 51 imzacıya kıyasla bugün BM'nin 193 üyesi var.",
         "correctValue": 193.0,
         "sliderMin": 150.0,
@@ -5332,8 +5332,8 @@
       {
         "id": "course_37_la_shoah_mecanismes_d_un_genocide_q8",
         "type": "percentageSlider",
-        "question": "Savaş öncesi Avrupalı ​​Yahudi nüfusunun ne kadarı Holokost'ta ortadan kayboldu?",
-        "explanation": "Savaş öncesi yaklaşık 9 milyon Avrupalı ​​Yahudinin yaklaşık üçte ikisi Holokost'ta ortadan kayboldu.",
+        "question": "Savaş öncesi Avrupalı Yahudi nüfusunun ne kadarı Holokost'ta ortadan kayboldu?",
+        "explanation": "Savaş öncesi yaklaşık 9 milyon Avrupalı Yahudinin yaklaşık üçte ikisi Holokost'ta ortadan kayboldu.",
         "correctValue": 66.0,
         "sliderMin": 0.0,
         "sliderMax": 100.0,
@@ -6726,7 +6726,7 @@
       {
         "id": "course_47_pourquoi_baille_t_on_q8",
         "type": "mcq",
-        "question": "Kursa göre fetüste esnemenin gelişmesine ne yardımcı olabilir?",
+        "question": "Fetüste esneme neyin gelişmesine yardımcı olabilir?",
         "explanation": "Fetüste esneme, çene ve yüz kaslarının gelişimine katkıda bulunabilir.",
         "options": [
           "Çene ve yüz kasları",
@@ -6961,7 +6961,7 @@
       {
         "id": "course_49_pourquoi_a_t_on_des_frissons_q5",
         "type": "mcq",
-        "question": "Kanepenizde rahat bir şekilde korku filmi izlerken neden tüyleriniz diken diken oluyor?",
+        "question": "Kanepende rahatça korku filmi izlerken tüylerin neden diken diken oluyor?",
         "explanation": "Sempatik sinir sistemi, filmi izlerken gerçek bir tehlike olmasa bile hissedilen korkuya tepki verir ve bu da tüylerin diken diken olmasına neden olur.",
         "options": [
           "Uyarıcı sinir sistemi korkuya sanki gerçek bir tehdit varmış gibi tepki verir.",
@@ -7416,7 +7416,7 @@
       {
         "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_q8",
         "type": "mcq",
-        "question": "Kursa göre bugün elektrikle ilgili temel zorluk nedir?",
+        "question": "Bugün elektrikle ilgili asıl zorluk nedir?",
         "explanation": "Artık zorluk sadece elektrik üretmek değil, tamamen bağlantılı bir dünya için bunu temiz ve güvenilir bir şekilde yapmaktır.",
         "options": [
           "Temiz ve güvenilir bir şekilde üretin",
@@ -8516,7 +8516,7 @@
       {
         "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_q8",
         "type": "mcq",
-        "question": "Kursa göre, mevcut örneklerden hangisi “canlı” evrimi göstermektedir?",
+        "question": "Bugün “canlı” evrimi gösteren örnek hangisi?",
         "explanation": "Antibiyotiğe dirençli bakterilerle mücadele, doğrudan gözlemlenebilecek bir evrim örneğidir.",
         "options": [
           "Antibiyotiğe dirençli bakteriler",
@@ -8565,7 +8565,7 @@
       {
         "id": "course_61_le_big_bang_q1",
         "type": "mcq",
-        "question": "Kursa göre Büyük Patlama nedir?",
+        "question": "Büyük Patlama nedir?",
         "explanation": "Büyük Patlama önceden var olan bir boşlukta meydana gelen bir patlama değildir; maddeyi de beraberinde alarak büyümeye başlayan uzayın kendisidir.",
         "options": [
           "Zaten orada olan bir boşluğa doğru patlama değil, uzayın kendisinin genişlemesi",
@@ -8795,20 +8795,20 @@
       {
         "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_q7",
         "type": "mcq",
-        "question": "Sualtı sırtlarının yakınında bulunan “siyah sigara içenler” nelerdir?",
-        "explanation": "Siyah sigara içenler, etrafında ışıksız ekosistemlerin yaşadığı, mineral bakımından zengin sıcak sıvıları kusan su altı bacalarıdır.",
+        "question": "Denizaltı sırtlarının yakınındaki “kara bacalar” nedir?",
+        "explanation": "Kara bacalar, mineral bakımından zengin sıcak sıvı püskürten denizaltı bacalarıdır. Çevrelerinde ışıksız ekosistemler yaşar.",
         "options": [
           "Mineral bakımından zengin yanan sıvıları yayan bacalar",
           "Kutup bölgelerine özgü buz gayzerleri",
           "Yüzeyde volkanik kül bulutları",
-          "Volkanları keşfetmek için robotlar kullanıldı"
+          "Volkanları keşfetmek için kullanılan robotlar"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_q8",
         "type": "mcq",
-        "question": "MS 79 yılında Vezüv Yanardağı'nın patlaması sonucu hangi antik kent yerle bir oldu? reklam mı?",
+        "question": "MS 79 yılında Vezüv Yanardağı'nın patlaması sonucu hangi antik kent yerle bir oldu?",
         "explanation": "MS 79'da Napoli yakınlarındaki Vezüv Yanardağı'nın patlaması Pompeii şehrini küllere gömdü.",
         "options": [
           "Pompei",
@@ -9002,8 +9002,8 @@
       {
         "id": "course_64_la_catastrophe_de_tchernobyl_1986_q1",
         "type": "mcq",
-        "question": "1 numaralı reaktörün gece vardiyası nasıl bir testti? 4 patlamadan önce mi yapılıyor?",
-        "explanation": "Mühendisler, dizel jeneratörler çalıştırılmadan önce, elektrik kesintisi durumunda hala dönmekte olan türbinlerin soğutma pompalarına güç verip veremeyeceğini test ediyorlardı.",
+        "question": "Patlamadan önce 4 numaralı reaktörün gece vardiyası hangi testi yapıyordu?",
+        "explanation": "Mühendisler, dizel jeneratörler devreye girmeden önce, elektrik kesilirse hâlâ dönen türbinlerin soğutma pompalarına güç verip veremeyeceğini test ediyordu.",
         "options": [
           "Elektrik kesintisi durumunda soğutma pompalarına giden güç kaynağına ilişkin güvenlik testi",
           "Binanın sismik dayanıklılık testi",
@@ -9427,7 +9427,7 @@
       {
         "id": "course_67_qu_est_ce_qu_un_trou_noir_q1",
         "type": "mcq",
-        "question": "Kara deliği nasıl tanımlarsınız?",
+        "question": "Kara deliği nasıl tanımlarsın?",
         "explanation": "Kara delik, yerçekiminin o kadar yoğun olduğu, kaçmak için gereken hızın ışığın hızını aştığı bir uzay-zaman bölgesidir.",
         "options": [
           "Yer çekiminin ışığın bile kaçamayacağı kadar yoğun olduğu bir bölge",
@@ -9745,7 +9745,7 @@
       {
         "id": "course_69_comment_se_forment_les_eclairs_q4",
         "type": "chronological",
-        "question": "Yıldırım oluşumunun bu aşamalarını sıralayınız.",
+        "question": "Yıldırım oluşumunun bu aşamalarını sıraya koy.",
         "explanation": "Yükler önce bulutta ayrışır, sonra hava iyonlaşır, geri dönen yay gökyüzünü aydınlatır ve ısınan havanın ani genleşmesi sonunda gök gürültüsüne neden olur.",
         "items": [
           "Buluttaki buz kristalleri ve karla karışık yağmur arasındaki çarpışmalar elektrik yüklerini ayırıyor",
@@ -9911,7 +9911,7 @@
       {
         "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_q7",
         "type": "mcq",
-        "question": "Derste bahsedilen IPCC nedir?",
+        "question": "IPCC nedir?",
         "explanation": "IPCC, binlerce klimatologun çalışmalarını sentezliyor ve 1950'den bu yana yaşanan ısınmanın benzeri görülmemiş ve insan kaynaklı olduğu sonucuna varıyor.",
         "options": [
           "Binlerce klimatologun çalışmalarını sentezleyen grup",
@@ -10043,7 +10043,7 @@
       {
         "id": "course_72_pourquoi_dort_on_q6",
         "type": "mcq",
-        "question": "Derste bahsedilen glimfatik sistem nedir?",
+        "question": "Glimfatik sistem nedir?",
         "explanation": "Glimfatik sistem, geceleri on kat daha aktif olan bir beyin drenaj ağıdır; Alzheimer riskine bağlı proteinler de dahil olmak üzere atıkları uzaklaştırır.",
         "options": [
           "Geceleri yaklaşık on kat daha aktif olan ve beyindeki atıkların dışarı atılmasını sağlayan beyin drenaj ağı",
@@ -10263,7 +10263,7 @@
       {
         "id": "course_74_pourquoi_certaines_especes_sont_elles_im_q1",
         "type": "numericSlider",
-        "question": "Derste adı geçen Ming deniz tarağı yaklaşık olarak kaç yıl yaşamıştır?",
+        "question": "Ming deniz tarağı yaklaşık kaç yıl yaşadı?",
         "explanation": "Ming deniz tarağı 507 yıl yaşadı; bu, hayvanlar arasında aşırı uzun ömürlülüğün çarpıcı bir örneğidir.",
         "correctValue": 507.0,
         "sliderMin": 200.0,
@@ -10275,7 +10275,7 @@
         "id": "course_74_pourquoi_certaines_especes_sont_elles_im_q2",
         "type": "mcq",
         "question": "Turritopsis dohrnii denizanası yaşlanmadan nasıl kurtulur?",
-        "explanation": "Yaralı veya aç kalan Turritopsis dohrnii, yetişkin hücrelerini bakir hücrelere dönüştürür, ardından tekrar polip haline gelir, başlangıç ​​aşamasıdır: bu, transdiferansiasyondur.",
+        "explanation": "Yaralı veya aç kalan Turritopsis dohrnii, yetişkin hücrelerini bakir hücrelere dönüştürür, ardından tekrar polip haline gelir, başlangıç aşamasıdır: bu, transdiferansiasyondur.",
         "options": [
           "Yetişkin hücrelerini bakir hücrelere dönüştürür ve tekrar polip olur.",
           "Ölmeden önce kendini aynı şekilde klonluyor",
@@ -10348,7 +10348,7 @@
       {
         "id": "course_74_pourquoi_certaines_especes_sont_elles_im_q8",
         "type": "mcq",
-        "question": "Derste tartışılan senolitik tedaviler neyi amaçlamaktadır?",
+        "question": "Senolitik tedaviler neyi hedefler?",
         "explanation": "Senolitikler dokuları biriken ve alevlendiren zombi hücrelerini yok etmeyi amaçlıyor; hayvanlarda bu, belirli işlevleri zaten canlandırmıştır.",
         "options": [
           "Yaşla birlikte biriken zombi hücrelerini ortadan kaldırın",
@@ -10504,7 +10504,7 @@
       {
         "id": "course_75_la_photosynthese_expliquee_simplement_q9",
         "type": "mcq",
-        "question": "Derste bahsi geçen deniz sümüklüböceği Elysia chlorotica'nın özelliği nedir?",
+        "question": "Deniz sümüklüböceği Elysia chlorotica’nın özelliği nedir?",
         "explanation": "Deniz sümüklüböceği Elysia chlorotica, yediği alglerden kloroplast çalarak bir nevi güneş enerjisiyle geçinecek kadar ileri gidiyor.",
         "options": [
           "Güneş enerjisi sayesinde biraz yaşayabilmek için alglerden kloroplast çalıyor",
@@ -10774,7 +10774,7 @@
       {
         "id": "course_77_qu_est_ce_que_la_matiere_noire_q8",
         "type": "mcq",
-        "question": "Kursa göre karanlık enerji çok uzak bir gelecekte nelere sebep olabilir?",
+        "question": "Karanlık enerji çok uzak bir gelecekte nelere yol açabilir?",
         "explanation": "Çok uzak bir gelecekte, karanlık enerji diğer galaksileri Samanyolu'ndan görünmez hale getirecek kadar uzaklaştırabilir.",
         "options": [
           "Diğer galaksileri Samanyolu'ndan görünmez hale getirecek kadar uzaklaştırın",
@@ -11027,7 +11027,7 @@
       {
         "id": "course_79_pourquoi_certains_sons_nous_donnent_ils_q5",
         "type": "mcq",
-        "question": "Kursa bağlı olarak müzikal heyecanı sıklıkla tetikleyen şey nedir?",
+        "question": "Müzikal ürpermeyi çoğu zaman ne tetikler?",
         "explanation": "Heyecan genellikle müzikal beklentinin ihlalinden kaynaklanır: Beyin sürekli olarak bir sonraki notayı tahmin eder ve armonik bir sürpriz duygusal uyarıyı tetikler.",
         "options": [
           "Beklenmeyen bir modülasyon gibi müzikal beklentinin ihlali",
@@ -11040,7 +11040,7 @@
       {
         "id": "course_79_pourquoi_certains_sons_nous_donnent_ils_q6",
         "type": "mcq",
-        "question": "Neden bazı şarkılar tüylerinizi diken diken ediyor?",
+        "question": "Neden bazı şarkılar tüylerini diken diken ediyor?",
         "explanation": "Tüylerin diken diken olması veya piloereksiyon, tüylerin daha uzun görünmesi veya sıcak kalması için kaldırılmasını sağlayan eski bir reflekstir; müzik onu şaşırtıyor.",
         "options": [
           "Bu, daha uzun görünmek veya sıcak tutmak için tüyleri kaldıran eski bir reflekstir.",
@@ -11332,8 +11332,8 @@
       {
         "id": "course_81_l_odyssee_homere_q7",
         "type": "numericSlider",
-        "question": "Odyssey'de yaklaşık olarak kaç şarkı (bölüm) var?",
-        "explanation": "Odyssey'de 24 şarkı ve yaklaşık 12.000 ayet bulunmaktadır.",
+        "question": "Odysseia’da yaklaşık kaç şarkı (bölüm) vardır?",
+        "explanation": "Odysseia’da 24 şarkı ve yaklaşık 12.000 dize vardır.",
         "correctValue": 24.0,
         "sliderMin": 10.0,
         "sliderMax": 40.0,
@@ -11405,7 +11405,7 @@
       {
         "id": "course_82_l_iliade_homere_q2",
         "type": "mcq",
-        "question": "Kursa göre şiirin gerçek ilk teması nedir?",
+        "question": "şiirin gerçek ilk teması nedir?",
         "explanation": "Şiir, Truva sorunundan önce bile Agamemnon'un aşağılamasının kışkırttığı Akhilleus'un öfkesiyle açılıyor.",
         "options": [
           "Aşil'in Gazabı",
@@ -11601,7 +11601,7 @@
       {
         "id": "course_83_dipe_roi_sophocle_q5",
         "type": "mcq",
-        "question": "Aristoteles'e göre Oedipus Rex'te hayran olduğu iki temel etki nedir?",
+        "question": "Aristoteles'e göre Kral Oidipus'ta hayran olduğu iki temel etki nedir?",
         "explanation": "Aristoteles, durumun aniden tersine dönmesi anlamına gelen peripeteia'ya ve Oedipus'un kim olduğunu anladığı an olan anagnorisise hayrandır.",
         "options": [
           "Geri dönüş ve tanınma",
@@ -11939,7 +11939,7 @@
         "id": "course_85_le_banquet_platon_q8",
         "type": "trueFalse",
         "question": "Doğru ya da yanlış: Gündelik dilde “platonik” aşk, Platon'un kendisiyle aynı anlama gelir.",
-        "explanation": "Gündelik dilde “platonik” etsiz anlamına gelirken, Platon'da beden bir utanç değil, meşru bir başlangıç ​​noktası olmaya devam ediyor.",
+        "explanation": "Gündelik dilde “platonik” etsiz anlamına gelirken, Platon'da beden bir utanç değil, meşru bir başlangıç noktası olmaya devam ediyor.",
         "options": [
           "Doğru",
           "Yanlış"
@@ -12087,7 +12087,7 @@
       {
         "id": "course_86_la_republique_platon_q9",
         "type": "mcq",
-        "question": "İdealar teorisine göre algıladığımız duyulur dünya neyi temsil eder?",
+        "question": "İdealar teorisine göre gördüğümüz duyulur dünya nedir?",
         "explanation": "Platon'a göre duyulur dünya, mağara mitinin örneklediği İdealar dünyası ile karşılaştırıldığında yalnızca bir gölgedir.",
         "options": [
           "Fikirlerin gerçek dünyasının bir gölgesi",
@@ -12758,7 +12758,7 @@
         "explanation": "Hikaye, ABC Dostları'nın cumhuriyetçi gençliğinin önderlik ettiği Haziran 1832'deki ayaklanmayla Paris'e kayar.",
         "options": [
           "Haziran 1832'deki cumhuriyetçi ayaklanma",
-          "Bastille'in fırtınası",
+          "Bastille'in basılması",
           "Napolyon'un taç giyme töreni",
           "Paris Komünü"
         ],
@@ -12863,7 +12863,7 @@
         "id": "course_92_madame_bovary_flaubert_q2",
         "type": "mcq",
         "question": "Romanın başında Emma kiminle evleniyor?",
-        "explanation": "Emma, ​​​​dürüst ama sıkıcı bir taşra doktoru olan Charles Bovary ile evlenir ve onunla birlikte Yonville'e yerleşir.",
+        "explanation": "Emma, dürüst ama sıkıcı bir taşra doktoru olan Charles Bovary ile evlenir ve onunla birlikte Yonville'e yerleşir.",
         "options": [
           "Charles Bovary, eyalet doktoru",
           "Rodolphe, zengin bir sahip",
@@ -12900,7 +12900,7 @@
         "id": "course_92_madame_bovary_flaubert_q5",
         "type": "mcq",
         "question": "Romana göre Emma'yı rüyalara ve zinaya iten şey nedir?",
-        "explanation": "Duygusal romanlarla dolu bir manastırda büyüyen Emma, ​​gerçek hayatı okuduğu kurgularla karıştırır ve bu da onun tatminsizliğini artırır.",
+        "explanation": "Duygusal romanlarla dolu bir manastırda büyüyen Emma, gerçek hayatı okuduğu kurgularla karıştırır ve bu da onun tatminsizliğini artırır.",
         "options": [
           "Manastırda okuduğu duygusal romanlar",
           "Annesinin tavsiyesi",
@@ -12912,8 +12912,8 @@
       {
         "id": "course_92_madame_bovary_flaubert_q6",
         "type": "mcq",
-        "question": "Mallarını krediyle satarak Emma'yı borca ​​sokan kim?",
-        "explanation": "Tüccar Lheureux, çiftin mali açıdan çöküşüne kadar Emma'yı giderek daha fazla borca ​​girmeye zorlar.",
+        "question": "Mallarını krediyle satarak Emma'yı borca sokan kim?",
+        "explanation": "Tüccar Lheureux, çiftin mali açıdan çöküşüne kadar Emma'yı giderek daha fazla borca girmeye zorlar.",
         "options": [
           "Tüccar Lheureux",
           "Doktor Charles",
@@ -12926,7 +12926,7 @@
         "id": "course_92_madame_bovary_flaubert_q7",
         "type": "mcq",
         "question": "Emma romanın sonunda kendini nasıl öldürüyor?",
-        "explanation": "Borçlarıyla ve hayal kırıklığıyla baş edemeyen Emma, ​​eczacı Homais'ten çaldığı arsenikle intihar eder.",
+        "explanation": "Borçlarıyla ve hayal kırıklığıyla baş edemeyen Emma, eczacı Homais'ten çaldığı arsenikle intihar eder.",
         "options": [
           "Homais eczanesinden çalınan arseniği yutuyor",
           "Seine nehrine akıyor",
@@ -12998,8 +12998,8 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q1",
         "type": "mcq",
-        "question": "Asıl adı Henri Beyle olan Le Rouge et le Noir'ın yazarı kimdir?",
-        "explanation": "Asıl adı Henri Beyle olan Stendhal, 1830'da Le Rouge et le Noir'ı yayımladı.",
+        "question": "Asıl adı Henri Beyle olan Kırmızı ve Siyah'ın yazarı kimdir?",
+        "explanation": "Asıl adı Henri Beyle olan Stendhal, 1830'da Kırmızı ve Siyah'ı yayımladı.",
         "options": [
           "Stendhal",
           "Honoré de Balzac",
@@ -13349,7 +13349,7 @@
         "options": [
           "Kendisi için, Tarihi onun aracılığıyla yüceltmek için değil",
           "Siyasi düşmanlarını kınamak için",
-          "Kiliseden af ​​almak için",
+          "Kiliseden af almak için",
           "Genç soyluları eğitmek"
         ],
         "correctIndex": 0
@@ -13941,7 +13941,7 @@
         "id": "course_99_le_pere_goriot_balzac_q1",
         "type": "mcq",
         "question": "Père Goriot'nun yazarı kimdir?",
-        "explanation": "Honoré de Balzac, 1835'te Le Père Goriot'yu yayınladı.",
+        "explanation": "Honoré de Balzac 1835'te Goriot Baba'yı yayımladı.",
         "options": [
           "Honoré de Balzac",
           "Victor Hugo",
@@ -14139,7 +14139,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q4",
         "type": "mcq",
-        "question": "“Dalak ve İdeal” bölümünde albatros neyi temsil ediyor?",
+        "question": "«Spleen ve İdeal» bölümünde albatros hangi figürdür?",
         "explanation": "Uçarken heybetli ama yere konduğunda gülünç olan albatros, onu anlamayan bir dünyada şairi temsil ediyor.",
         "options": [
           "Şair, uçarken muhteşem ama yerde gülünç",
@@ -14156,7 +14156,7 @@
         "explanation": "“Paris Resimleri” şehri psikolojik bir manzaraya dönüştürüyor. Şair, Haussmann yönetimindeki Paris yaşamının bir gözlemcisi olarak orada bir gezgin olarak dolaşır.",
         "options": [
           "“Paris resimleri”",
-          "“Dalak ve İdeal”",
+          "“Spleen ve İdeal”",
           "“Şarap”",
           "\"Ölüm\""
         ],
@@ -14436,12 +14436,12 @@
         "id": "course_102_la_ferme_des_animaux_george_orwell_q2",
         "type": "mcq",
         "question": "Orwell'in alegorisinde Stalin hangi hayvanı temsil ediyor?",
-        "explanation": "Snowball'u kovaladıktan sonra zorla iktidarı ele geçiren domuz Napolyon, Stalin'in figürünü modelliyor.",
+        "explanation": "Kartopu'nu kovduktan sonra zorla iktidarı alan domuz Napolyon, Stalin figürünü taşır.",
         "options": [
           "Napolyon",
           "Eski Binbaşı",
           "Kartopu",
-          "Malabar"
+          "Boksör"
         ],
         "correctIndex": 0
       },
@@ -14459,8 +14459,8 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q4",
         "type": "mcq",
-        "question": "Napolyon'un köpekleri alegoride neyi temsil ediyor?",
-        "explanation": "Napolyon'un Snowball'u kovalamak ve çiftliği terörize etmek için eğittiği köpekler Sovyet gizli polisini temsil ediyor.",
+        "question": "Alegoride Napolyon'un köpekleri kimdir?",
+        "explanation": "Napolyon'un Kartopu'nu kovalamak ve çiftliği terörize etmek için eğittiği köpekler, Sovyet gizli polisidir.",
         "options": [
           "Gizli polis",
           "Çar'ın düzenli ordusu",
@@ -14473,10 +14473,10 @@
         "id": "course_102_la_ferme_des_animaux_george_orwell_q5",
         "type": "mcq",
         "question": "Hangi hayvan tükenene kadar sömürülen proletaryayı temsil ediyor?",
-        "explanation": "Kendini adamış ve yorulmak bilmez bir beygir olan Malabar, otoriteyi hiçbir zaman sorgulamadan çalışan proletaryayı simgelemektedir.",
+        "explanation": "Kendini adamış, yorulmak bilmez bir beygir olan Boksör, otoriteyi hiç sorgulamadan çalışan proletaryayı simgeler.",
         "options": [
-          "Çalışkan at Malabar",
-          "Propagandacı Brille-Babil",
+          "Çalışkan at Boksör",
+          "Propagandacı Çığırtkan",
           "Eski Binbaşı",
           "Kartopu"
         ],
@@ -14489,7 +14489,7 @@
         "explanation": "Bu sekans, eşitlikçi devrimden domuzların diktatörlüğüne doğru kademeli geçişi gösteriyor.",
         "items": [
           "Hayvanlar Çiftçi Jones'u kovalıyor",
-          "Napolyon Snowball'u köpekleriyle kovalıyor",
+          "Napolyon Kartopu'nu köpekleriyle kovalıyor",
           "Domuzlar Yedi Emir'i gizlice değiştiriyor",
           "Domuzlar iki ayak üzerinde yürümeye başladı"
         ]
@@ -15765,7 +15765,7 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q2",
         "type": "mcq",
-        "question": "Kaybedeceğini bile bile Atticus Finch mahkemede neyi temsil ediyor?",
+        "question": "Kaybedeceğini bile bile Atticus Finch mahkemede hangi duruşu gösterir?",
         "explanation": "Atticus, kaybedeceği kesin olmasına rağmen Tom Robinson'u savunmayı kabul eder, çünkü ayrımcı Güney'de sanığın ten rengi delillerden daha ağır basmaktadır.",
         "options": [
           "Haksız yere suçlanan siyahi Tom Robinson",
@@ -17198,7 +17198,7 @@
       {
         "id": "course_120_l_alchimiste_paulo_coelho_q5",
         "type": "mcq",
-        "question": "Romanda Dünyanın Ruhu kavramı neyi temsil ediyor?",
+        "question": "Romanda Dünya Ruhu ne anlama gelir?",
         "explanation": "Dünyanın Ruhu, romanın felsefesine göre var olan her şeyin paylaştığına inanılan eşsiz enerjiyi ifade eder.",
         "options": [
           "Var olan her şeyin paylaştığı eşsiz bir enerji",
@@ -17238,9 +17238,9 @@
         "id": "course_120_l_alchimiste_paulo_coelho_q8",
         "type": "mcq",
         "question": "Santiago, Piramitlere vardığında nihayet ne keşfeder?",
-        "explanation": "Santiago, Piramitler'de hiçbir şey bulamaz: Hazine aslında başlangıç ​​noktasına yakın bir yerde, İspanya'daki bir çınar ağacının altındaydı.",
+        "explanation": "Santiago, Piramitler'de hiçbir şey bulamaz: Hazine aslında başlangıç noktasına yakın bir yerde, İspanya'daki bir çınar ağacının altındaydı.",
         "options": [
-          "Orada herhangi bir hazine bulamadığını, aslında İspanya'daki başlangıç ​​noktasına yakın olduğunu",
+          "Orada herhangi bir hazine bulamadığını, aslında İspanya'daki başlangıç noktasına yakın olduğunu",
           "Onu ömür boyu zengin yapacak muazzam bir hazine",
           "Arkeologların bilmediği bir kraliyet mezarı",
           "Melchizedek'in bıraktığı şifreli bir mesaj"
@@ -17468,7 +17468,7 @@
         "id": "course_122_la_naissance_de_l_impressionnisme_q2",
         "type": "mcq",
         "question": "1863'te Reddedilenler Salonu'nda hangi Manet tablosu skandal yarattı?",
-        "explanation": "Manet, Le Déjeuner sur l'herbe'de çıplak bir kadın ile modern kostümlü iki erkeği bir araya getirerek şok ediyor.",
+        "explanation": "Manet, Çimenler Üzerinde Öğle Yemeği'nde çıplak bir kadınla modern giyimli iki erkeği bir araya getirerek şok eder.",
         "options": [
           "Çimenlerin üzerinde öğle yemeği",
           "Yazdır, yükselen güneş",
@@ -17546,7 +17546,7 @@
         "question": "Empresyonizmin bu aşamalarını kronolojik sıraya koyun.",
         "explanation": "Bu üç kilometre taşı, ilk skandaldan grubun karma sergilerinin sonuna kadar 1863'ten 1886'ya kadar uzanıyor.",
         "items": [
-          "Manet'nin Déjeuner sur l'herbe skandalı",
+          "Manet'nin Çimenler Üzerinde Öğle Yemeği skandalı",
           "Nadar'daki ilk bağımsız sergi",
           "Grubun sekiz sergisinin sonuncusu"
         ]
@@ -17639,7 +17639,7 @@
         "id": "course_123_le_caravage_et_le_clair_obscur_q4",
         "type": "mcq",
         "question": "1600'lü yıllardan kalma hangi tablo, sokak cephesindeki kutsallığıyla Roma'yı hayrete düşürüyor?",
-        "explanation": "Contarelli şapeli için resmedilen Aziz Matta'nın Mesleği, sıradan insanlar tarafından kişileştirilmiş bir kutsallığı empoze eder.",
+        "explanation": "Contarelli şapeli için resmedilen Aziz Matta'nın Mesleği, sıradan insanlar tarafından kişileştirilmiş bir kutsallığı dayatır.",
         "options": [
           "Aziz Matthew'un Mesleği",
           "Gece Nöbeti",
@@ -17786,7 +17786,7 @@
       {
         "id": "course_124_rembrandt_et_l_ecole_flamande_q4",
         "type": "mcq",
-        "question": "Gece Nöbeti olarak bilinen tablo gerçekte neyi temsil ediyor?",
+        "question": "Gece Nöbeti diye bilinen tablo aslında neyi gösteriyor?",
         "explanation": "Bu, Yüzbaşı Frans Banning Cocq'un Bölüğü, geleneklere göre hizalanmak yerine hareket halinde gösterilen bir milis.",
         "options": [
           "Bir burjuva milis bölüğü hareket halinde",
@@ -18069,8 +18069,8 @@
       {
         "id": "course_126_le_cubisme_picasso_et_braque_q3",
         "type": "mcq",
-        "question": "1907 tarihli hangi tablo Kübizm'in başlangıç ​​noktasını işaret ediyor?",
-        "explanation": "Les Demoiselles d'Avignon, keskin hatlı nüleriyle Picasso'ya yakın olanları bile hayrete düşürdü.",
+        "question": "1907 tarihli hangi tablo Kübizm'in başlangıç noktasını işaret ediyor?",
+        "explanation": "Avignonlu Kızlar, keskin hatlı nüleriyle Picasso'ya yakın olanları bile şaşırttı.",
         "options": [
           "Avignon'un Genç Hanımları",
           "Guernica",
@@ -18143,7 +18143,7 @@
       {
         "id": "course_126_le_cubisme_picasso_et_braque_q9",
         "type": "numericSlider",
-        "question": "Picasso Les Demoiselles d'Avignon'u hangi yılda tamamladı?",
+        "question": "Picasso Avignonlu Kızlar'ı hangi yılda tamamladı?",
         "explanation": "Picasso, Kübizm'in bu kurucu tablosunu 1907'de tamamladı.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -18737,7 +18737,7 @@
         "explanation": "Bu kilometre taşları, hareketin tanımlanmasından sanat piyasasında simgelerinin kutsanmasına kadar 1957'den 2022'ye kadar uzanıyor.",
         "items": [
           "Richard Hamilton Pop Art'ı tanımlıyor",
-          "Warhol ve Lichtenstein Amerika Birleşik Devletleri'nde pop estetiğini empoze ediyor",
+          "Warhol ve Lichtenstein Amerika Birleşik Devletleri'nde pop estetiğini yerleştiriyor",
           "Marilyn'in portresi 195 milyon dolara satıldı"
         ]
       }
@@ -18843,7 +18843,7 @@
       {
         "id": "course_131_la_naissance_de_la_musique_electronique_q6",
         "type": "mcq",
-        "question": "Hangi Alman grup Autobahn ve The Man-Machine gibi albümleriyle soğuk ve tekrarlayan popu empoze ediyor?",
+        "question": "Autobahn ve The Man-Machine gibi albümlerle soğuk, tekrarlayan popu kim yerleştirdi?",
         "explanation": "Ralf Hütter ve Florian Schneider tarafından Düsseldorf'ta kurulan Kraftwerk grubu otoyol, robot ve şehir hakkında şarkı söylüyor.",
         "options": [
           "Kraftwerk",
@@ -19181,7 +19181,7 @@
         "items": [
           "Kool Herc, Bronx'taki bir partide breakbeat'i icat etti",
           "Rapper's Delight uluslararası bir başarıya ulaştı",
-          "Mesaj, rap'in sosyal tarihini empoze ediyor",
+          "Mesaj, rap'in sosyal tarihini yerleştiriyor",
           "Kendrick Lamar Pulitzer Müzik Ödülü'nü aldı"
         ]
       },
@@ -19700,7 +19700,7 @@
         "id": "course_137_la_naissance_du_rock_n_roll_q3",
         "type": "mcq",
         "question": "Chuck Berry rock'n'roll'a hangi müzikal yeniliği getirdi?",
-        "explanation": "Chuck Berry, parçanın omurgasını oluşturan, tekrarlanan bir gitar motifi olan riff'i empoze ediyor.",
+        "explanation": "Chuck Berry, parçanın omurgasını oluşturan tekrarlı gitar motifi riff’i yerleştirir.",
         "options": [
           "Tekrarlanan gitar riffi",
           "kaşıma",
@@ -19764,7 +19764,7 @@
         "explanation": "Elvis'in 1954'teki kayıtlarından 1960'lardaki İngiliz İstilası'na kadar, rock'n'roll inşa edildi ve ardından dünya çapında yayıldı.",
         "items": [
           "Elvis Presley, Sam Phillips'in evinde That's All Right'ı kaydediyor",
-          "Chuck Berry ve Little Richard riff ve ham enerjiyi empoze ediyor",
+          "Chuck Berry ve Little Richard riff ve ham enerjiyi yerleştiriyor",
           "Elvis, Ed Sullivan Show'da Amerika'yı şok etti",
           "Beatles ve Rolling Stones İngiliz İstilası'nı başlatıyor"
         ]
@@ -20056,7 +20056,7 @@
         "explanation": "Kongo Meydanı'ndan Kind of Blue'ya kadar caz, neredeyse bir asırdır birbirini takip eden icatlardan geçiyor.",
         "items": [
           "Caz, New Orleans'ta Kongo Meydanı ve bandoların çevresinde ortaya çıkıyor",
-          "Louis Armstrong, Chicago ve New York'ta virtüöz solisti empoze ediyor",
+          "Louis Armstrong, Chicago ve New York'ta virtüöz solisti yerleştiriyor",
           "Charlie Parker bebop'u icat etti",
           "Miles Davis Kind of Blue ve modal caz yayınladı"
         ]
@@ -20650,11 +20650,11 @@
         "id": "course_143_orson_welles_et_citizen_kane_q9",
         "type": "chronological",
         "question": "Yurttaş Kane öyküsünün bu aşamalarını kronolojik sıraya koyun.",
-        "explanation": "Bu üç dönüm noktası (1938, 1941, 1950'ler), Welles'in radyodaki yükselişinin, filmin ilk başarısızlığının ve ardından Avrupalı ​​eleştirmenler tarafından rehabilitasyonunun izini sürüyor.",
+        "explanation": "Bu üç dönüm noktası (1938, 1941, 1950'ler), Welles'in radyodaki yükselişinin, filmin ilk başarısızlığının ve ardından Avrupalı eleştirmenler tarafından rehabilitasyonunun izini sürüyor.",
         "items": [
           "Dünyalar Savaşı radyo sahtekarlığı",
           "Yurttaş Kane'in serbest bırakılması",
-          "Filmin Avrupalı ​​eleştirmenler tarafından yeniden keşfedilmesi"
+          "Filmin Avrupalı eleştirmenler tarafından yeniden keşfedilmesi"
         ]
       }
     ]
@@ -20893,7 +20893,7 @@
       {
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q5",
         "type": "mcq",
-        "question": "HAL 9000 filmde neyi temsil ediyor?",
+        "question": "HAL 9000 filmde hangi rolü oynuyor?",
         "explanation": "Araç bilgisayarı HAL 9000, görevindeki çelişkiyi çözmek için insanları ortadan kaldırmayı seçiyor.",
         "options": [
           "Nihayetinde mürettebatı ortadan kaldıran araç bilgisayarı",
@@ -21242,7 +21242,7 @@
         "items": [
           "Suger, Saint-Denis korosunu kurdu",
           "Notre-Dame de Paris'te inşaatın başlaması",
-          "Chartres ve Amiens klasik modeli empoze ediyor",
+          "Chartres ve Amiens klasik modeli yerleştiriyor",
           "Avrupa, stili neo-Gotik ile yeniden keşfediyor"
         ]
       }
@@ -21471,10 +21471,10 @@
       {
         "id": "course_149_la_joconde_q4",
         "type": "mcq",
-        "question": "Mona Lisa'nın gülümsemesi neden baktığınız yere göre değişiyor?",
+        "question": "Mona Lisa'nın gülümsemesi neden baktığın yere göre değişiyor?",
         "explanation": "Gözlere baktığımızda retinanın kenarları ağzı yumuşak gölgeler halinde algılar ve bu da gülümsemenin ortaya çıkmasına veya kaybolmasına neden olur.",
         "options": [
-          "İnsan gözünün çevresel görüşüyle ​​oynuyor",
+          "İnsan gözünün çevresel görüşüyle oynuyor",
           "Resim Leonardo tarafından birkaç kez yeniden boyandı.",
           "Resme uygulanan verniğin etkisidir.",
           "Gülümseme odanın parlaklığına göre değişir"
@@ -21860,7 +21860,7 @@
         "explanation": "1830'da Üç Glorieuse, Kral X. Charles'ı kovdu ve Delacroix hemen Halkın Önünde Özgürlük adlı eserini resmetti.",
         "options": [
           "Charles'ı kovalayan Üç Muhteşem Kız",
-          "Bastille'in fırtınası",
+          "Bastille'in basılması",
           "Napolyon'un taç giyme töreni",
           "Paris Komünü"
         ],
@@ -22420,7 +22420,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q1",
         "type": "mcq",
-        "question": "Picasso 1907 yılında Les Demoiselles d'Avignon'u hangi şehirde resmetmiştir?",
+        "question": "Picasso 1907'de Avignonlu Kızlar'ı hangi şehirde yaptı?",
         "explanation": "Picasso Montmartre'deki Bateau-Lavoir'da çalıştı ve tabloyu 1907'de burada tamamladı.",
         "options": [
           "Paris (Montmartre)",
@@ -22433,7 +22433,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q2",
         "type": "mcq",
-        "question": "Demoiselles d'Avignon unvanı nereden geliyor?",
+        "question": "Avignonlu Kızlar adı nereden geliyor?",
         "explanation": "Başlık, Barselona'da fuhuşla bağlantılı bir caddeye atıfta bulunuyor.",
         "options": [
           "Barselona'da fuhuşla bağlantılı bir caddeden",
@@ -22520,7 +22520,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q9",
         "type": "numericSlider",
-        "question": "Picasso Les Demoiselles d'Avignon'u hangi yılda tamamladı?",
+        "question": "Picasso Avignonlu Kızlar'ı hangi yılda tamamladı?",
         "explanation": "Picasso tabloyu 1907'de Montmartre'de tamamladı.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -23329,7 +23329,7 @@
       {
         "id": "course_162_promethee_le_voleur_de_feu_q8",
         "type": "chronological",
-        "question": "Prometheus mitinin bu aşamalarını sıralayınız.",
+        "question": "Prometheus mitinin bu aşamalarını sıraya koy.",
         "explanation": "Kurban hilesinden ateş hırsızlığına, ardından işkence ve özgürlüğe kadar Prometheus efsanesi açık bir ilerleme izler.",
         "items": [
           "Prometheus, Mekone'deki kurban töreni sırasında Zeus'u aldatır",
@@ -23601,7 +23601,7 @@
       {
         "id": "course_164_demeter_et_persephone_les_saisons_q8",
         "type": "chronological",
-        "question": "Demeter ve Persephone mitinin bu aşamalarını sıralayınız.",
+        "question": "Demeter ve Persephone mitinin bu aşamalarını sıraya koy.",
         "explanation": "Bu efsane, kaçırılma olayından yılın bölünmesine kadar mevsimlerin değişimini açıklıyor.",
         "items": [
           "Persephone'nin Hades tarafından kaçırılması",
@@ -23736,7 +23736,7 @@
       {
         "id": "course_165_orphee_et_eurydice_q8",
         "type": "chronological",
-        "question": "Orpheus ve Eurydice mitinin bu aşamalarını sıralayınız.",
+        "question": "Orpheus ve Eurydice mitinin bu aşamalarını sıraya koy.",
         "explanation": "Bu efsane, Eurydice'in evliliğinden kesin kaybına kadar trajik ve kesin bir olay örgüsünü takip eder.",
         "items": [
           "Orpheus perisi Eurydice ile evlenir",
@@ -24009,7 +24009,7 @@
       {
         "id": "course_167_icare_et_dedale_q8",
         "type": "chronological",
-        "question": "İkarus ve Daedalus mitinin bu aşamalarını sıralayınız.",
+        "question": "İkarus ve Daidalos mitinin bu aşamalarını sıraya koy.",
         "explanation": "Labirent'in inşasından Icarus'un düşüşüne kadar hikaye kesin bir ilerleme izliyor.",
         "items": [
           "Daedalus, Kral Minos için Labirent'i inşa eder",
@@ -24157,7 +24157,7 @@
       {
         "id": "course_168_sisyphe_punition_eternelle_q9",
         "type": "chronological",
-        "question": "Sisifos mitinin bu aşamalarını sıralayınız.",
+        "question": "Sisifos mitinin bu aşamalarını sıraya koy.",
         "explanation": "Aegina'nın sırrının açığa çıkmasından ebedi mahkumiyete kadar Sisifos efsanesi açık bir ilerleme izler.",
         "items": [
           "Sisifos, Asopos'a Zeus'un kızını kaçırdığını söyler",
@@ -24445,7 +24445,7 @@
       {
         "id": "course_170_meduse_et_persee_q9",
         "type": "chronological",
-        "question": "Medusa ve Perseus mitinin bu aşamalarını sıralayınız.",
+        "question": "Medusa ve Perseus mitinin bu aşamalarını sıraya koy.",
         "explanation": "Medusa'nın saldırısından Andromeda'nın kurtuluşuna kadar hikaye kesin bir ilerleme izliyor.",
         "items": [
           "Poseidon, Athena tapınağında Medusa'ya saldırır",
@@ -24608,7 +24608,7 @@
       {
         "id": "course_171_hercule_et_ses_12_travaux_q10",
         "type": "chronological",
-        "question": "Herakles mitinin bu aşamalarını sıralayınız.",
+        "question": "Herakles mitinin bu aşamalarını sıraya koy.",
         "explanation": "Hera'nın kışkırttığı çılgınlıktan Yeraltı Dünyası'na inişe kadar Herakles'in çalışmaları açık bir ilerleme izler.",
         "items": [
           "Hera, Herakles'i çılgına çevirir ve ailesini öldürmesine neden olur",
@@ -24758,7 +24758,7 @@
       {
         "id": "course_172_thesee_et_le_minotaure_q9",
         "type": "chronological",
-        "question": "Theseus ve Minotaur mitinin bu aşamalarını sıralayınız.",
+        "question": "Theseus ve Minotauros mitinin bu aşamalarını sıraya koy.",
         "explanation": "Minos'un reddi, Minotaur'un doğuşunu, ardından haraç almayı, Ariadne'nin hilesini ve son olarak Aegeus'un yanlışlıkla ölümünü tetikler.",
         "items": [
           "Minos, Poseidon'a beyaz boğayı kurban etmeyi reddediyor",
@@ -25319,7 +25319,7 @@
       {
         "id": "course_176_achille_le_talon_et_l_invulnerabilite_q6",
         "type": "trueFalse",
-        "question": "Doğru ya da yanlış: Aşil, Hector'u öldürdükten sonra cesedini arabasının arkasına sürükler ve yalnızca Kral Priam onu ​​onu geri vermeye ikna etmeyi başarır.",
+        "question": "Doğru ya da yanlış: Aşil, Hector'u öldürdükten sonra cesedini arabasının arkasına sürükler ve yalnızca Kral Priam onu onu geri vermeye ikna etmeyi başarır.",
         "explanation": "Aşil, Hector'un cesedini öfkeden kurtarır; Onu insanlığa geri getiren ve cesedi geri getirmesini sağlayan şey, yaşlı Kral Priam'ın gece ziyaretidir.",
         "options": [
           "Doğru",
@@ -25532,7 +25532,7 @@
       {
         "id": "course_177_dipe_et_le_sphinx_q10",
         "type": "chronological",
-        "question": "Oedipus mitinin bu aşamalarını sıralayınız.",
+        "question": "Oidipus mitinin bu aşamalarını sıraya koy.",
         "explanation": "Oedipus, Korint'ten kaçışından kimliğinin trajik bir şekilde açığa çıkmasına kadar, Sfenks'e karşı kazanılan zaferin düşüşünden önce geldiği bir yolculuğa çıkar.",
         "items": [
           "Oedipus bir kehanetten kaçmak için Korint'ten kaçar",
@@ -26566,7 +26566,7 @@
         "id": "course_184_romulus_et_remus_la_fondation_de_rome_q6",
         "type": "mcq",
         "question": "Roma geleneği Roma'nın kuruluşu için hangi tarihi korur?",
-        "explanation": "Geleneğe göre Roma, MÖ 21 Nisan 753'te kuruldu. M.Ö., Roma takviminin başlangıç ​​tarihi.",
+        "explanation": "Geleneğe göre Roma, MÖ 21 Nisan 753'te kuruldu. M.Ö., Roma takviminin başlangıç tarihi.",
         "options": [
           "21 Nisan 753 M.Ö.",
           "MÖ 1 Ocak 509 MS",
@@ -27371,7 +27371,7 @@
       {
         "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_q9",
         "type": "chronological",
-        "question": "Dionysos'un ve kültünün hayatındaki bu aşamaları sıralayınız.",
+        "question": "Dionysos'un ve kültünün hayatındaki bu aşamaları sıraya koy.",
         "explanation": "Dionysos miti, doğuşundan tiyatronun doğuşuna kadar yurttaşlık sanatına doğru açık bir ilerleme gösterir.",
         "items": [
           "Semele ölür ve Zeus, Dionysos'un hamileliğini kalçasında tamamlar.",
@@ -27931,7 +27931,7 @@
       {
         "id": "course_194_le_mahabharata_q7",
         "type": "mcq",
-        "question": "Bhagavad-Gita Mahabharata hikayesinde neyi temsil ediyor?",
+        "question": "Mahabharata'da Bhagavad-Gita nedir?",
         "explanation": "Bhagavad-Gita, Arjuna'nın arabacısı Krishna'nın ona görevi ve özverili eylemi öğrettiği yaklaşık 700 ayetten oluşan bir diyalogdur.",
         "options": [
           "Krishna'nın Arjuna ile görev ve eylem üzerine diyalogu",
@@ -28106,7 +28106,7 @@
       {
         "id": "course_195_lancelot_guenievre_et_la_table_ronde_q9",
         "type": "chronological",
-        "question": "Arthur efsanesinin bu aşamalarını sıralayınız.",
+        "question": "Arthur efsanesinin bu aşamalarını sıraya koy.",
         "explanation": "Arthur döngüsü tam bir rotayı takip eder: görkemli temel, manevi arayış, ortaya çıkan ihanet ve ardından krallığın nihai düşüşü.",
         "items": [
           "Arthur, Excalibur'u kayadan çıkarır ve Yuvarlak Masa'yı kurar.",
@@ -28507,9 +28507,9 @@
         "id": "course_198_sindbad_le_marin_q7",
         "type": "mcq",
         "question": "Yedi sayısı neden Sindbad'ın yolculuklarının merkezinde yer alıyor?",
-        "explanation": "İslam kozmolojisinde anlam yüklü olan yedi sayısı, seyahat döngüsüne tedbirsizlikten bilgeliğe uzanan bir başlangıç ​​boyutu kazandırır.",
+        "explanation": "İslam kozmolojisinde anlam yüklü olan yedi sayısı, seyahat döngüsüne tedbirsizlikten bilgeliğe uzanan bir başlangıç boyutu kazandırır.",
         "options": [
-          "İslam kozmolojisinde anlam yüklüdür ve başlangıç ​​yolculuğunu yapılandırır.",
+          "İslam kozmolojisinde anlam yüklüdür ve başlangıç yolculuğunu yapılandırır.",
           "Arapların geçtiği denizlerin tam sayısına karşılık geliyor",
           "Bağdat'ta hüküm süren yedi halifeyi belirtir",
           "Hiçbir dini önemi olmayan tamamen ticari bir gelenekten geliyor"
@@ -28758,7 +28758,7 @@
         "id": "course_200_re_et_la_creation_du_monde_egypte_q4",
         "type": "mcq",
         "question": "Ra, Duat'tan geçerken her gece hangi güce karşı savaşır?",
-        "explanation": "Her gece Re gemisi, yılan Apopis'in empoze etmeye çalıştığı düzensizlik olan İsfet'e karşı savaşta Douât'ı geçer.",
+        "explanation": "Her gece Re’nin gemisi, yılan Apopis’in dayatmaya çalıştığı düzensizlik olan İsftet’e karşı savaşarak Duat’tan geçer.",
         "options": [
           "Yılan Apopis'in vücut bulduğu İsfet, düzensizlik",
           "Tanrı Amon, göksel rakip",
@@ -28820,7 +28820,7 @@
       {
         "id": "course_200_re_et_la_creation_du_monde_egypte_q9",
         "type": "chronological",
-        "question": "Ra mitolojisinin bu aşamalarını sıralayınız.",
+        "question": "Ra mitolojisinin bu aşamalarını sıraya koy.",
         "explanation": "Efsane, dünyanın yaratılışını, ardından tanrıların doğuşunu, insan isyanının krizini ve son olarak Yeni Krallığın teolojik sentezini izler.",
         "items": [
           "Atum, Benben Taşı'ndaki İsimden ortaya çıkıyor",
@@ -30989,7 +30989,7 @@
       {
         "id": "course_215_les_inegalites_nord_sud_q8",
         "type": "mcq",
-        "question": "Kursa göre neden Güney'deki ülkeler iklim değişikliğine karşı özellikle savunmasız?",
+        "question": "neden Güney'deki ülkeler iklim değişikliğine karşı özellikle savunmasız?",
         "explanation": "Tarihsel olarak sera gazı emisyonlarından en az sorumlu olan Güney ülkeleri, yine de kuraklığa, sellere ve artan su seviyelerine en fazla maruz kalan ülkelerdir.",
         "options": [
           "Tarihsel olarak emisyonlardan en az sorumlu olan ancak iklim felaketlerine en çok maruz kalan grup onlar.",
@@ -31586,7 +31586,7 @@
       {
         "id": "course_219_la_fracture_numerique_mondiale_q9",
         "type": "mcq",
-        "question": "Kursa göre yapay zekanın hızlı yükselişi dijital uçurum açısından ne gibi riskler yaratıyor?",
+        "question": "yapay zekanın hızlı yükselişi dijital uçurum açısından ne gibi riskler yaratıyor?",
         "explanation": "Yapay zeka, birkaç ülke ve şirketin elinde yoğunlaşan muazzam bilgi işlem ve veri gücü gerektiriyor ve bu da dijital uçurumu derinleştirme tehdidi oluşturuyor.",
         "options": [
           "Kaynakları birkaç ülke ve şirket arasında yoğunlaştırdığı için durumu daha da kötüleştirebilir",
@@ -31735,7 +31735,7 @@
       {
         "id": "course_220_la_desinformation_et_les_fake_news_q9",
         "type": "mcq",
-        "question": "Kursa göre yanlış bilgiye karşı en sağlam yanıt nedir?",
+        "question": "yanlış bilgiye karşı en sağlam yanıt nedir?",
         "explanation": "En sağlam cevap medya eğitimi olmaya devam ediyor: Bir kaynağı doğrulamayı öğrenmek, birkaç bilgi parçasına çapraz referans vermek ve algoritmaların nasıl çalıştığını anlamak.",
         "options": [
           "Medya eğitimi",
@@ -31856,7 +31856,7 @@
       {
         "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_q7",
         "type": "mcq",
-        "question": "Kursa göre CO₂ emisyonlarını azaltmak neden CFC'leri yasaklamaktan çok daha zor?",
+        "question": "CO₂ emisyonlarını azaltmak neden CFC'leri yasaklamaktan çok daha zor?",
         "explanation": "Ozon deliği, az sayıda fabrika tarafından üretilen ve hedeflenmesi kolay az sayıda gazdan kaynaklanırken, CO₂ modern toplumumuzun yaptığı hemen hemen her şeyden kaynaklanmaktadır.",
         "options": [
           "CO₂ neredeyse tüm modern ekonomik faaliyetlerden kaynaklanırken, CFC'ler az sayıda fabrikadan geldi",
@@ -32686,7 +32686,7 @@
         "id": "course_227_le_populisme_pourquoi_ca_monte_partout_q5",
         "type": "trueFalse",
         "question": "Doğru mu yanlış mı: 2015'teki göç krizi, Avrupa'da kimlik güvensizliği duygusunun güçlenmesine katkıda bulundu.",
-        "explanation": "Toplumsal değişimlerin hızlanması ve 2015'teki göç krizi, birçok Avrupalı ​​seçmen arasında kimlik güvensizliği yarattı.",
+        "explanation": "Toplumsal değişimlerin hızlanması ve 2015'teki göç krizi, birçok Avrupalı seçmen arasında kimlik güvensizliği yarattı.",
         "options": [
           "Doğru",
           "Yanlış"
@@ -34079,7 +34079,7 @@
         "id": "course_237_les_gafam_puissance_et_derives_q1",
         "type": "numericSlider",
         "question": "2024 yılında beş GAFAM şirketinin toplam değeri kaç milyar dolar olacak?",
-        "explanation": "2024 yılında, beş GAFAM şirketinin toplam değeri 10.000 milyar dolardan fazla olacak; bu miktar, birçok büyük Avrupalı ​​gücün toplam GSYİH'sıyla karşılaştırılabilecek bir miktar.",
+        "explanation": "2024 yılında, beş GAFAM şirketinin toplam değeri 10.000 milyar dolardan fazla olacak; bu miktar, birçok büyük Avrupalı gücün toplam GSYİH'sıyla karşılaştırılabilecek bir miktar.",
         "correctValue": 10000.0,
         "sliderMin": 3000.0,
         "sliderMax": 20000.0,

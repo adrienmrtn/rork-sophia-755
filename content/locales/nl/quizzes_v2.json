@@ -42,8 +42,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q4",
         "type": "mcq",
-        "question": "Wat vertegenwoordigt de albatros in de sectie ‘Milt en ideaal’?",
-        "explanation": "De albatros, majestueus tijdens de vlucht maar belachelijk als hij eenmaal op de grond is geplaatst, vertegenwoordigt de dichter in een wereld die hem niet begrijpt.",
+        "question": "Wat is de albatros in de sectie ‘Spleen en Ideaal’?",
+        "explanation": "De albatros, majestueus in de lucht maar belachelijk op de grond, is de dichter in een wereld die hem niet begrijpt.",
         "options": [
           "De dichter, majestueus tijdens de vlucht maar belachelijk op de grond",
           "Totale vrijheid van de kunstenaar",
@@ -56,12 +56,12 @@
         "id": "course_100_les_fleurs_du_mal_baudelaire_q5",
         "type": "mcq",
         "question": "Welk deel van de collectie maakt Parijs tot een psychologisch landschap?",
-        "explanation": "‘Parisian Paintings’ verandert de stad in een psychologisch landschap. De dichter dwaalt daar rond als wandelaar, als waarnemer van het Parijse leven onder Haussmann.",
+        "explanation": "‘Parijse taferelen’ maakt van de stad een psychologisch landschap. De dichter dwaalt er als flaneur, toeschouwer van het Parijs van Haussmann.",
         "options": [
-          "“Parijse schilderijen”",
-          "“Milt en Ideaal”",
+          "“Parijse taferelen”",
+          "“Spleen en Ideaal”",
           "“De wijn”",
-          "\"Dood\""
+          "“De dood”"
         ],
         "correctIndex": 0
       },
@@ -73,7 +73,7 @@
         "options": [
           "“Correspondenties”",
           "“De Albatros”",
-          "\"Milt\"",
+          "\"Spleen\"",
           "\"Verzameling\""
         ],
         "correctIndex": 0
@@ -241,10 +241,10 @@
         "id": "course_101_1984_george_orwell_q9",
         "type": "chronological",
         "question": "Breng deze fasen van Orwells leven en werk op orde.",
-        "explanation": "Deze vier fasen markeren de carrière van Orwell: de Spaanse Burgeroorlog (1936-1937), Animal Farm (1945), 1984 (1949) en vervolgens zijn dood in 1950.",
+        "explanation": "Deze vier fasen markeren de carrière van Orwell: de Spaanse Burgeroorlog (1936-1937), Dierenboerderij (1945), 1984 (1949) en vervolgens zijn dood in 1950.",
         "items": [
           "Orwell vocht in de POUM-milities tijdens de Spaanse Burgeroorlog",
-          "Hij publiceert Animal Farm",
+          "Hij publiceert Dierenboerderij",
           "Hij publiceerde 1984",
           "Hij stierf in Schotland kort na de publicatie van zijn roman."
         ]
@@ -268,7 +268,7 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q1",
         "type": "mcq",
-        "question": "Welke historische gebeurtenis beeldt Animal Farm uit in de vorm van een allegorie?",
+        "question": "Welke historische gebeurtenis beeldt Dierenboerderij uit in de vorm van een allegorie?",
         "explanation": "Orwell zet de belangrijkste fases van de Russische Revolutie en het stalinistische verraad om in een dierenfabel.",
         "options": [
           "De Russische Revolutie",
@@ -331,7 +331,7 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q6",
         "type": "chronological",
-        "question": "Zet deze stappen van Animal Farm op een rij.",
+        "question": "Zet deze stappen van Dierenboerderij op een rij.",
         "explanation": "Deze reeks toont de geleidelijke verschuiving van de egalitaire revolutie naar de dictatuur van de varkens.",
         "items": [
           "De dieren achtervolgen boer Jones",
@@ -367,7 +367,7 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q9",
         "type": "numericSlider",
-        "question": "Hoeveel woorden heeft Animal Farm ongeveer, een bewust heel korte tekst?",
+        "question": "Hoeveel woorden heeft Dierenboerderij ongeveer, een bewust heel korte tekst?",
         "explanation": "Orwell levert zijn allegorie in amper 30.000 woorden, wat de effectiviteit van de fabel versterkt.",
         "correctValue": 30000.0,
         "sliderMin": 15000.0,
@@ -552,7 +552,7 @@
         "id": "course_104_romeo_et_juliette_shakespeare_q5",
         "type": "mcq",
         "question": "Wat verhindert dat de boodschap van broeder Lawrence Romeo op tijd bereikt?",
-        "explanation": "Een pestepidemie vertraagt ​​de boodschapper die verantwoordelijk is voor het waarschuwen van Romeo, wat de uiteindelijke dubbele zelfmoord bespoedigt.",
+        "explanation": "Een pestepidemie vertraagt de boodschapper die verantwoordelijk is voor het waarschuwen van Romeo, wat de uiteindelijke dubbele zelfmoord bespoedigt.",
         "options": [
           "Een pestepidemie die de boodschapper vertraagt",
           "Een storm op zee",
@@ -644,7 +644,7 @@
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q3",
         "type": "trueFalse",
         "question": "Waar of niet waar: de oorspronkelijke titel, Brave New World, citeert ironisch genoeg een toneelstuk van Shakespeare.",
-        "explanation": "De titel citeert The Tempest van Shakespeare, wiens naïeve verwondering hier een ontmenselijkte toekomst maskeert.",
+        "explanation": "De titel citeert De storm van Shakespeare, wiens naïeve verwondering hier een ontmenselijkte toekomst maskeert.",
         "options": [
           "Waar",
           "Onwaar"
@@ -786,8 +786,8 @@
         "question": "Waarom zoekt Victor Frankenstein het geheim van het leven in Ingolstadt?",
         "explanation": "Victor wordt gedreven door de ambitie om de natuurlijke orde uit te dagen en een schepper te worden, een ‘moderne Prometheus’.",
         "options": [
-          "Om een ​​moderne Prometheus te worden, niet om rijk te worden",
-          "Om een ​​familieziekte te genezen",
+          "Om een moderne Prometheus te worden, niet om rijk te worden",
+          "Om een familieziekte te genezen",
           "Om financiële erkenning te verkrijgen",
           "Om de dood van zijn vader te wreken"
         ],
@@ -797,9 +797,9 @@
         "id": "course_106_frankenstein_mary_shelley_q6",
         "type": "mcq",
         "question": "Hoe leert het wezen menselijke taal en gevoelens?",
-        "explanation": "Het wezen leert alleen, in het geheim, door een boerenfamilie te observeren en Paradise Lost te lezen.",
+        "explanation": "Het wezen leert alleen, in het geheim, door een boerenfamilie te observeren en Het verloren paradijs te lezen.",
         "options": [
-          "Door een boerenfamilie te observeren en Milton's Paradise Lost te lezen",
+          "Door een boerenfamilie te observeren en Milton's Het verloren paradijs te lezen",
           "Door cursussen te volgen aan de Universiteit van Ingolstadt",
           "Victor's dagboeken lezen",
           "Luisteren naar reizende priesters"
@@ -809,8 +809,8 @@
       {
         "id": "course_106_frankenstein_mary_shelley_q7",
         "type": "mcq",
-        "question": "Wat vraagt ​​het wezen van Victor, die het weigert?",
-        "explanation": "Het wezen vraagt ​​om een ​​metgezel zodat het niet langer alleen is; Victor's weigering leidt tot zijn vernietigende wraak.",
+        "question": "Wat vraagt het wezen van Victor, die het weigert?",
+        "explanation": "Het wezen vraagt om een metgezel zodat het niet langer alleen is; Victor's weigering leidt tot zijn vernietigende wraak.",
         "options": [
           "Een metgezel van haar toestand",
           "Geld om te reizen",
@@ -823,7 +823,7 @@
         "id": "course_106_frankenstein_mary_shelley_q8",
         "type": "trueFalse",
         "question": "Waar of niet waar: in de roman verwijst de naam \"Frankenstein\" naar de maker, terwijl het wezen zelf geen naam heeft.",
-        "explanation": "Het wezen heeft nooit een eigennaam, een teken van Victor's ontkenning van het vaderschap: het monster \"Frankenstein\" noemen is daarom een ​​verkeerde interpretatie.",
+        "explanation": "Het wezen heeft nooit een eigennaam, een teken van Victor's ontkenning van het vaderschap: het monster \"Frankenstein\" noemen is daarom een verkeerde interpretatie.",
         "options": [
           "Waar",
           "Onwaar"
@@ -932,7 +932,7 @@
         "options": [
           "Hij raadt zijn schuld, maar laat hem zichzelf beschuldigen",
           "Hij arresteert hem onmiddellijk zonder bewijs",
-          "Hij laat hem martelen om een ​​bekentenis te verkrijgen",
+          "Hij laat hem martelen om een bekentenis te verkrijgen",
           "Hij negeert het volledig tot aan het proces"
         ],
         "correctIndex": 0
@@ -996,7 +996,7 @@
         "id": "course_108_le_proces_kafka_q3",
         "type": "trueFalse",
         "question": "Waar of niet waar: Kafka vroeg zijn vriend Max Brod om zijn manuscripten na zijn dood te verbranden.",
-        "explanation": "Kafka had Max Brod gevraagd zijn manuscripten te vernietigen; Brod weigerde en publiceerde The Trial in 1925.",
+        "explanation": "Kafka had Max Brod gevraagd zijn manuscripten te vernietigen; Brod weigerde en publiceerde Het proces in 1925.",
         "options": [
           "Waar",
           "Onwaar"
@@ -1006,8 +1006,8 @@
       {
         "id": "course_108_le_proces_kafka_q4",
         "type": "numericSlider",
-        "question": "In welk jaar werd The Trial postuum gepubliceerd door Max Brod?",
-        "explanation": "The Trial werd in 1925 gepubliceerd, een jaar na de dood van Kafka, dankzij Max Brod die de volgorde van de hoofdstukken raadde.",
+        "question": "In welk jaar werd Het proces postuum gepubliceerd door Max Brod?",
+        "explanation": "Het proces werd in 1925 gepubliceerd, een jaar na de dood van Kafka, dankzij Max Brod die de volgorde van de hoofdstukken raadde.",
         "correctValue": 1925.0,
         "sliderMin": 1900.0,
         "sliderMax": 1950.0,
@@ -1055,7 +1055,7 @@
         "id": "course_108_le_proces_kafka_q8",
         "type": "mcq",
         "question": "Welke filosofische stroming erkent Kafka als een belangrijke voorloper?",
-        "explanation": "Sartre en Camus zien in de absurditeit van The Trial een prefiguratie van het existentialisme van de 20e eeuw.",
+        "explanation": "Sartre en Camus zien in de absurditeit van Het proces een prefiguratie van het existentialisme van de 20e eeuw.",
         "options": [
           "Het existentialisme van Sartre en Camus",
           "Orthodox marxisme",
@@ -1220,7 +1220,7 @@
           "Bereik specerijen en zijde zonder door de Ottomaanse routes te gaan",
           "Bewijs dat de aarde rond is",
           "Koloniseer West-Afrika",
-          "Goud vinden om een ​​kruistocht te financieren"
+          "Goud vinden om een kruistocht te financieren"
         ],
         "correctIndex": 0
       },
@@ -1429,7 +1429,7 @@
       {
         "id": "course_110_les_raisins_de_la_colere_steinbeck_q9",
         "type": "numericSlider",
-        "question": "In welk jaar werd The Grapes of Wrath gepubliceerd, midden in de Grote Depressie?",
+        "question": "In welk jaar werd De druiven der gramschap gepubliceerd, midden in de Grote Depressie?",
         "explanation": "De roman verscheen in 1939 en won het jaar daarop de Pulitzerprijs.",
         "correctValue": 1939.0,
         "sliderMin": 1910.0,
@@ -1587,7 +1587,7 @@
       {
         "id": "course_112_le_grand_gatsby_fitzgerald_q3",
         "type": "trueFalse",
-        "question": "Waar of niet waar: toen The Great Gatsby in 1925 werd uitgebracht, was het een enorm commercieel succes.",
+        "question": "Waar of niet waar: toen De grote Gatsby in 1925 werd uitgebracht, was het een enorm commercieel succes.",
         "explanation": "Bij publicatie werden er slechts ongeveer 20.000 exemplaren van de roman verkocht; pas na de dood van Fitzgerald werd het een klassieker.",
         "options": [
           "Waar",
@@ -1731,7 +1731,7 @@
       {
         "id": "course_113_le_seigneur_des_anneaux_tolkien_q5",
         "type": "trueFalse",
-        "question": "Waar of niet waar: The Fellowship of the Ring brengt negen vertegenwoordigers van de vrije volkeren van Midden-aarde samen.",
+        "question": "Waar of niet waar: Het gezelschap van de ring brengt negen vertegenwoordigers van de vrije volkeren van Midden-aarde samen.",
         "explanation": "De Fellowship of the Ring heeft negen leden die de verschillende vrije volkeren van Midden-aarde vertegenwoordigen.",
         "options": [
           "Waar",
@@ -1768,7 +1768,7 @@
       {
         "id": "course_113_le_seigneur_des_anneaux_tolkien_q8",
         "type": "trueFalse",
-        "question": "Waar of niet waar: Tolkien bedoelde The Lord of the Rings als een expliciete allegorie voor de Tweede Wereldoorlog.",
+        "question": "Waar of niet waar: Tolkien bedoelde In de ban van de ring als een expliciete allegorie voor de Tweede Wereldoorlog.",
         "explanation": "Tolkien weigert expliciete allegorie; zijn werk onderzoekt eerder, in bredere zin, corruptie door macht.",
         "options": [
           "Waar",
@@ -2042,7 +2042,7 @@
       {
         "id": "course_116_la_metamorphose_kafka_q1",
         "type": "mcq",
-        "question": "Hoe begint The Metamorphosis, in een van de beroemdste incipits uit de literatuur?",
+        "question": "Hoe begint De gedaanteverwisseling, in een van de beroemdste incipits uit de literatuur?",
         "explanation": "De roman begint met Gregor Samsa die wakker wordt en verandert in een monsterlijk insect, zonder enige verklaring voor het fenomeen.",
         "options": [
           "Gregor Samsa wordt wakker en verandert in een monsterlijk insect",
@@ -2156,7 +2156,7 @@
         "id": "course_116_la_metamorphose_kafka_q10",
         "type": "numericSlider",
         "question": "In welk jaar schreef Kafka De Metamorfose?",
-        "explanation": "Kafka schreef The Metamorphosis in 1912, in een periode van grote creativiteit, vóór de publicatie ervan in 1915.",
+        "explanation": "Kafka schreef De gedaanteverwisseling in 1912, in een periode van grote creativiteit, vóór de publicatie ervan in 1915.",
         "correctValue": 1912.0,
         "sliderMin": 1880.0,
         "sliderMax": 1940.0,
@@ -2740,8 +2740,8 @@
       {
         "id": "course_120_l_alchimiste_paulo_coelho_q5",
         "type": "mcq",
-        "question": "Wat vertegenwoordigt het concept van de Ziel van de Wereld in de roman?",
-        "explanation": "The Soul of the World verwijst naar de unieke energie die alles wat bestaat zou delen, volgens de filosofie van de roman.",
+        "question": "Wat is het concept van de Ziel van de Wereld in de roman?",
+        "explanation": "De Ziel van de Wereld is de ene energie die volgens de roman alles wat bestaat zou delen.",
         "options": [
           "Een unieke energie die wordt gedeeld door alles wat bestaat",
           "De geest van Andalusische voorouders",
@@ -2948,7 +2948,7 @@
         "id": "course_122_la_naissance_de_l_impressionnisme_q2",
         "type": "mcq",
         "question": "Welk schilderij van Manet bracht de Salon des Refusés in 1863 tot ergernis?",
-        "explanation": "Manet shockeert door in Le Déjeuner sur l'herbe een vrouwelijk naakt en twee mannen in moderne klederdracht te mixen.",
+        "explanation": "Manet shockeert door in Het ontbijt op het gras een vrouwelijk naakt en twee mannen in moderne klederdracht te mixen.",
         "options": [
           "Lunchen op het gras",
           "Afdrukken, opkomende zon",
@@ -3383,7 +3383,7 @@
         "id": "course_125_le_romantisme_en_peinture_delacroix_geri_q9",
         "type": "chronological",
         "question": "Zet deze werken en gebeurtenissen uit de Romantiek in chronologische volgorde.",
-        "explanation": "Deze mijlpalen variëren van 1816 tot 1832, van het feitelijke scheepswrak tot de transformatie van Delacroix' palet door het Oosten.",
+        "explanation": "Deze mijlpalen lopen van 1816 tot 1832, van het feitelijke scheepswrak tot de transformatie van Delacroix' palet door het Oosten.",
         "items": [
           "Het zinken van het fregat Méduse",
           "Het vlot van de Medusa is te zien",
@@ -3426,7 +3426,7 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q3",
         "type": "mcq",
         "question": "Welk schilderij uit 1907 markeert het startpunt van het kubisme?",
-        "explanation": "Les Demoiselles d'Avignon, met zijn scherpgefacetteerde naakten, verbaasde zelfs mensen die dicht bij Picasso stonden.",
+        "explanation": "De jonge dames van Avignon, met zijn scherpgefacetteerde naakten, verbaasde zelfs mensen die dicht bij Picasso stonden.",
         "options": [
           "De jongedames van Avignon",
           "Guernica",
@@ -3489,7 +3489,7 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q8",
         "type": "chronological",
         "question": "Zet deze stadia van het kubisme in chronologische volgorde.",
-        "explanation": "Deze mijlpalen variëren van 1907 tot 1912, van het eerste uiteenvallen tot de uitvinding van collage.",
+        "explanation": "Deze mijlpalen lopen van 1907 tot 1912, van het eerste uiteenvallen tot de uitvinding van collage.",
         "items": [
           "De jongedames van Avignon",
           "Analytisch kubisme ontleedt het object",
@@ -3499,7 +3499,7 @@
       {
         "id": "course_126_le_cubisme_picasso_et_braque_q9",
         "type": "numericSlider",
-        "question": "Rond welk jaar voltooide Picasso Les Demoiselles d'Avignon?",
+        "question": "Rond welk jaar voltooide Picasso De jonge dames van Avignon?",
         "explanation": "Picasso voltooide dit fundamentele schilderij van het kubisme in 1907.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -3553,7 +3553,7 @@
         "id": "course_127_le_surrealisme_dali_et_magritte_q4",
         "type": "mcq",
         "question": "Op welk schilderij van Dalí zijn zachte horloges te zien in een Catalaans landschap?",
-        "explanation": "The Persistence of Memory, geschilderd in 1931, toont zachte horloges in een landschap geïnspireerd op Port Lligat.",
+        "explanation": "De volharding der herinnering, geschilderd in 1931, toont zachte horloges in een landschap geïnspireerd op Port Lligat.",
         "options": [
           "De volharding van het geheugen",
           "Het verraad van beelden",
@@ -3603,7 +3603,7 @@
         "id": "course_127_le_surrealisme_dali_et_magritte_q8",
         "type": "mcq",
         "question": "Welk collectieve spel hebben de surrealisten bedacht om te creëren zonder rationele controle?",
-        "explanation": "The Exquisite Corpse is een spel waarbij iedereen een zin of tekening toevoegt zonder de vorige bijdrage te zien.",
+        "explanation": "het cadavre exquis is een spel waarbij iedereen een zin of tekening toevoegt zonder de vorige bijdrage te zien.",
         "options": [
           "Het voortreffelijke lijk",
           "De collage",
@@ -3616,7 +3616,7 @@
         "id": "course_127_le_surrealisme_dali_et_magritte_q9",
         "type": "chronological",
         "question": "Zet deze mijlpalen van het surrealisme in chronologische volgorde.",
-        "explanation": "Deze mijlpalen variëren van 1924 tot 1939, van de oprichting van de beweging tot de breuk tussen Breton en Dalí.",
+        "explanation": "Deze mijlpalen lopen van 1924 tot 1939, van de oprichting van de beweging tot de breuk tussen Breton en Dalí.",
         "items": [
           "Bretons Manifest van het surrealisme",
           "Dalí sluit zich aan bij de surrealistische groep",
@@ -3669,7 +3669,7 @@
       {
         "id": "course_128_l_expressionnisme_munch_et_le_cri_q4",
         "type": "mcq",
-        "question": "Waar had Munch de visie die The Scream inspireerde?",
+        "question": "Waar had Munch de visie die De Schreeuw inspireerde?",
         "explanation": "De oorsprong van de Cri gaat terug tot een wandeling op de heuvel van Ekeberg, waar de zonsonderganghemel een vuur wordt.",
         "options": [
           "Op de Ekeberg-heuvel in Oslo",
@@ -3706,7 +3706,7 @@
       {
         "id": "course_128_l_expressionnisme_munch_et_le_cri_q7",
         "type": "mcq",
-        "question": "Hoeveel versies van The Scream heeft Munch in totaal geschilderd?",
+        "question": "Hoeveel versies van De Schreeuw heeft Munch in totaal geschilderd?",
         "explanation": "Munch schilderde vier versies van de Schreeuw, in tempera, pastel en olieverf, een bewijs dat dit motief hem lange tijd achtervolgde.",
         "options": [
           "Vier",
@@ -3838,7 +3838,7 @@
         "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_q8",
         "type": "chronological",
         "question": "Zet deze mijlpalen in de abstracte kunst in chronologische volgorde.",
-        "explanation": "Deze mijlpalen variëren van 1910 tot 1919, van het begin van Kandinsky tot de intrede van abstractie in design.",
+        "explanation": "Deze mijlpalen lopen van 1910 tot 1919, van het begin van Kandinsky tot de intrede van abstractie in design.",
         "items": [
           "Kandinsky verschuift naar abstractie",
           "Spiritueel in de kunst verschijnt",
@@ -3914,7 +3914,7 @@
         "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_q5",
         "type": "mcq",
         "question": "Welke rol speelt maarschalk Murat in de omsingelingsmanoeuvre?",
-        "explanation": "Murat bezette Mack vanuit het westen, terwijl andere maarschalken Ulm vanuit het noorden omzeilden om zijn route naar Wenen af ​​te snijden.",
+        "explanation": "Murat bezette Mack vanuit het westen, terwijl andere maarschalken Ulm vanuit het noorden omzeilden om zijn route naar Wenen af te snijden.",
         "options": [
           "Hij richt Mack's aandacht op het westen, terwijl andere korpsen rond Ulm cirkelen",
           "Hij vernietigt de Oostenrijkse vloot",
@@ -4019,7 +4019,7 @@
       {
         "id": "course_130_le_pop_art_warhol_et_lichtenstein_q4",
         "type": "mcq",
-        "question": "Welke techniek gebruikte Warhol om een ​​beeld als Marilyn Monroe tientallen keren te reproduceren?",
+        "question": "Welke techniek gebruikte Warhol om een beeld als Marilyn Monroe tientallen keren te reproduceren?",
         "explanation": "Door zeefdruk kan Warhol een beeld vermenigvuldigen, wat het idee illustreert dat reproductie de uitstraling van een werk transformeert.",
         "options": [
           "Zeefdruk",
@@ -4081,7 +4081,7 @@
         "id": "course_130_le_pop_art_warhol_et_lichtenstein_q9",
         "type": "chronological",
         "question": "Zet deze Pop Art-mijlpalen in chronologische volgorde.",
-        "explanation": "Deze mijlpalen variëren van 1957 tot 2022, van de definitie van de beweging tot de wijding van haar iconen op de kunstmarkt.",
+        "explanation": "Deze mijlpalen lopen van 1957 tot 2022, van de definitie van de beweging tot de wijding van haar iconen op de kunstmarkt.",
         "items": [
           "Richard Hamilton definieert pop-art",
           "Warhol en Lichtenstein leggen pop-esthetiek op in de Verenigde Staten",
@@ -4212,7 +4212,7 @@
         "id": "course_131_la_naissance_de_la_musique_electronique_q10",
         "type": "chronological",
         "question": "Zet deze mijlpalen in de elektronische muziek in chronologische volgorde.",
-        "explanation": "Deze mijlpalen variëren van 1920 tot de jaren tachtig, van baanbrekende laboratoria tot de geboorte van moderne elektronische dans.",
+        "explanation": "Deze mijlpalen lopen van 1920 tot de jaren tachtig, van baanbrekende laboratoria tot de geboorte van moderne elektronische dans.",
         "items": [
           "Uitvinding van de Theremin",
           "Geboorte van musique concrete in Parijs",
@@ -4509,11 +4509,11 @@
         "id": "course_134_l_opera_de_verdi_q5",
         "type": "mcq",
         "question": "Op welke Franse roman is La Traviata gebaseerd?",
-        "explanation": "La Traviata bewerkt The Lady of the Camellias, die shockeert met zijn eigentijdse en tuberculeuze heldin.",
+        "explanation": "La Traviata bewerkt De dame met de camelia's, die shockeert met zijn eigentijdse en tuberculeuze heldin.",
         "options": [
           "De Vrouwe van de Camellia's door Alexandre Dumas fils",
           "Notre Dame de Paris van Victor Hugo",
-          "Les Misérables van Victor Hugo",
+          "De ellendigen van Victor Hugo",
           "Madame Bovary van Gustave Flaubert"
         ],
         "correctIndex": 0
@@ -4602,7 +4602,7 @@
         "question": "Welke prestatie leverde Mozart in 1770 in Italië met Miserere van Gregorio Allegri?",
         "explanation": "Na slechts één keer luisteren in de Sixtijnse Kapel heeft Mozart deze beschermde partituur uit zijn hoofd getranscribeerd.",
         "options": [
-          "Schrijf het na één hoorzitting uit uw hoofd",
+          "Schrijf het na één hoorzitting uit je hoofd",
           "Vertaal het naar het Duits",
           "Leid het voor de paus",
           "Herorkestreer het voor solo piano"
@@ -4612,7 +4612,7 @@
       {
         "id": "course_135_mozart_enfant_prodige_et_vie_tragique_q4",
         "type": "trueFalse",
-        "question": "Waar of niet waar: in 1781 verliet Mozart de dienst van aartsbisschop Colloredo om een ​​onafhankelijke componist in Wenen te worden.",
+        "question": "Waar of niet waar: in 1781 verliet Mozart de dienst van aartsbisschop Colloredo om een onafhankelijke componist in Wenen te worden.",
         "explanation": "Mozart werd een van de eerste freelancecomponisten in de geschiedenis toen hij zich in 1781 in Wenen vestigde.",
         "options": [
           "Waar",
@@ -4624,7 +4624,7 @@
         "id": "course_135_mozart_enfant_prodige_et_vie_tragique_q5",
         "type": "mcq",
         "question": "Welke opera uit 1786 markeert de explosie van Mozarts dramatische genie in Wenen?",
-        "explanation": "The Marriage of Figaro, gecreëerd in 1786, geeft de opera een ongekende moderne psychologie.",
+        "explanation": "De bruiloft van Figaro, gecreëerd in 1786, geeft de opera een ongekende moderne psychologie.",
         "options": [
           "Het huwelijk van Figaro",
           "Don Giovanni",
@@ -4677,7 +4677,7 @@
           "Mozart toert door Europa onder de voogdij van zijn vader",
           "Hij transcribeert uit zijn hoofd Allegri's Miserere in Italië",
           "Hij breekt met aartsbisschop Colloredo en vestigt zich in Wenen",
-          "Hij voltooit The Magic Flute en sterft kort daarna"
+          "Hij voltooit De toverfluit en sterft kort daarna"
         ]
       }
     ]
@@ -4762,7 +4762,7 @@
       {
         "id": "course_136_beethoven_genie_et_surdite_q7",
         "type": "mcq",
-        "question": "Wie zorgt ervoor dat de inmiddels dove Beethoven zich omdraait zodat hij de menigte ziet staan ​​bij de première van de Negende?",
+        "question": "Wie zorgt ervoor dat de inmiddels dove Beethoven zich omdraait zodat hij de menigte ziet staan bij de première van de Negende?",
         "explanation": "Omdat hij de ovaties niet kon horen, werd Beethoven teruggestuurd door alt Caroline Unger om de menigte te zien staan.",
         "options": [
           "De alt Caroline Unger",
@@ -4945,7 +4945,7 @@
         "id": "course_138_bach_et_la_musique_baroque_q3",
         "type": "trueFalse",
         "question": "Waar of niet waar: Bach bracht in 1717 een maand door in de gevangenis in Weimar omdat hij te veel aandrong op zijn ontslag.",
-        "explanation": "De hertog van Weimar weigert Bach naar Köthen te laten vertrekken, wat hem een ​​maand detentie kost.",
+        "explanation": "De hertog van Weimar weigert Bach naar Köthen te laten vertrekken, wat hem een maand detentie kost.",
         "options": [
           "Waar",
           "Onwaar"
@@ -5248,7 +5248,7 @@
         "id": "course_13_la_bataille_de_waterloo_1815_q9",
         "type": "mcq",
         "question": "Wat besloot het Congres van Wenen na de definitieve val van Napoleon?",
-        "explanation": "Het Congres van Wenen legt het principe van legitimiteit op en herstelt de koninklijke dynastieën om een ​​Concert van Europa te kaderen dat de vrede handhaaft tot 1914.",
+        "explanation": "Het Congres van Wenen legt het principe van legitimiteit op en herstelt de koninklijke dynastieën om een Concert van Europa te kaderen dat de vrede handhaaft tot 1914.",
         "options": [
           "De koninklijke dynastieën weer op hun tronen zetten, legitimiteit",
           "Verdeel Frankrijk in vier koninkrijken",
@@ -5522,7 +5522,7 @@
         "id": "course_142_charlie_chaplin_et_le_cinema_muet_q3",
         "type": "trueFalse",
         "question": "Waar of niet waar: Charlot is een arme maar waardige zwerver, herkenbaar aan zijn bolhoed en zijn wandelstok.",
-        "explanation": "Charlot draagt ​​een te kleine bolhoed, een te wijde broek en een wandelstok, en symboliseert een arme man die zijn waardigheid behoudt.",
+        "explanation": "Charlot draagt een te kleine bolhoed, een te wijde broek en een wandelstok, en symboliseert een arme man die zijn waardigheid behoudt.",
         "options": [
           "Waar",
           "Onwaar"
@@ -5533,7 +5533,7 @@
         "id": "course_142_charlie_chaplin_et_le_cinema_muet_q4",
         "type": "mcq",
         "question": "Welke film uit 1940, geregisseerd door Chaplin, is een satire op Adolf Hitler?",
-        "explanation": "In 1940 maakte Chaplin The Great Dictator, een satire op Hitler en zijn eerste allessprekende film.",
+        "explanation": "In 1940 maakte Chaplin De grote dictator, een satire op Hitler en zijn eerste allessprekende film.",
         "options": [
           "De dictator",
           "Stadslichten",
@@ -5611,9 +5611,9 @@
         "id": "course_143_orson_welles_et_citizen_kane_q1",
         "type": "mcq",
         "question": "Welk radio-evenement uit 1938 bracht Orson Welles naar Hollywood?",
-        "explanation": "Op 30 oktober 1938 liet Welles mensen geloven in een buitenaardse invasie met zijn radio-aanpassing van The War of the Worlds, die de aandacht van Hollywood trok.",
+        "explanation": "Op 30 oktober 1938 liet Welles mensen geloven in een buitenaardse invasie met zijn radio-aanpassing van De oorlog der werelden, die de aandacht van Hollywood trok.",
         "options": [
-          "Zijn bewerking van The War of the Worlds",
+          "Zijn bewerking van De oorlog der werelden",
           "Zijn productie van Macbeth in het theater",
           "Zijn eerste film voor RKO",
           "Een lezingentour over cinema"
@@ -5892,7 +5892,7 @@
       {
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q5",
         "type": "mcq",
-        "question": "Wat vertegenwoordigt HAL 9000 in de film?",
+        "question": "Wat is HAL 9000 in de film?",
         "explanation": "HAL 9000, de boordcomputer, kiest ervoor om mensen te elimineren om de tegenstrijdigheid in zijn missie op te lossen.",
         "options": [
           "De boordcomputer die uiteindelijk de bemanning uitschakelt",
@@ -5930,7 +5930,7 @@
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q8",
         "type": "mcq",
         "question": "Welk muziekstuk begeleidt de ruimtestations in een baan om de aarde in 2001?",
-        "explanation": "De wals The Beautiful Blue Danube van Johann Strauss begeleidt de ruimtestations, terwijl Aldus Spake Zarathustra de sprongen van de evolutie markeert.",
+        "explanation": "De wals An der schönen blauen Donau van Johann Strauss begeleidt de ruimtestations, terwijl Also sprach Zarathustra de sprongen van de evolutie markeert.",
         "options": [
           "De prachtige blauwe Donau van Johann Strauss",
           "Aldus sprak Zarathustra van Richard Strauss",
@@ -5986,8 +5986,8 @@
       {
         "id": "course_146_hitchcock_et_le_suspense_q3",
         "type": "mcq",
-        "question": "Welke techniek gebruikt Hitchcock in The Rope (1948) om een ​​filmopname in één beweging te simuleren?",
-        "explanation": "Hitchcock verbergt de insnijdingen achter een rug of een donker meubelstuk om een ​​enkele opnamereeks in The Rope te simuleren.",
+        "question": "Welke techniek gebruikt Hitchcock in Rope (1948) om een filmopname in één beweging te simuleren?",
+        "explanation": "Hitchcock verbergt de insnijdingen achter een rug of een donker meubelstuk om een enkele opnamereeks in Rope te simuleren.",
         "options": [
           "Een scèneopname met verborgen uitsnijdingen achter ruggen of meubels",
           "De klassieke afwisselende montage",
@@ -6470,7 +6470,7 @@
       {
         "id": "course_14_la_commune_de_paris_1871_q5",
         "type": "mcq",
-        "question": "Welke sociale maatregelen heeft de Commune tijdens haar bestaan ​​ingevoerd?",
+        "question": "Welke sociale maatregelen heeft de Commune tijdens haar bestaan ingevoerd?",
         "explanation": "De gemeenteraad maakt dringend wetgeving, met sociale maatregelen zoals huurkwijtschelding.",
         "options": [
           "Kwijtschelding van de huurprijzen en afschaffing van nachtarbeid voor bakkers",
@@ -6562,9 +6562,9 @@
         "id": "course_150_la_nuit_etoilee_van_gogh_q2",
         "type": "mcq",
         "question": "Welke gebeurtenis ging kort vooraf aan Van Goghs internering in Saint-Rémy?",
-        "explanation": "Na het drama in Arles met Gauguin, dat hem een ​​deel van zijn oor kostte, werd Van Gogh geïnterneerd in Saint-Paul-de-Mausole.",
+        "explanation": "Na het drama in Arles met Gauguin, dat hem een deel van zijn oor kostte, werd Van Gogh geïnterneerd in Saint-Paul-de-Mausole.",
         "options": [
-          "Het drama van Arles met Gauguin, dat hem een ​​deel van zijn oor kostte",
+          "Het drama van Arles met Gauguin, dat hem een deel van zijn oor kostte",
           "De dood van zijn broer Théo",
           "Een koetsongeluk",
           "Een schuldenproces"
@@ -6712,7 +6712,7 @@
       {
         "id": "course_151_guernica_picasso_q5",
         "type": "trueFalse",
-        "question": "Waar of niet waar: Picasso weigerde toe te staan ​​dat Guernica naar Spanje werd gestuurd zolang Franco aan de macht bleef.",
+        "question": "Waar of niet waar: Picasso weigerde toe te staan dat Guernica naar Spanje werd gestuurd zolang Franco aan de macht bleef.",
         "explanation": "Picasso weigerde feitelijk het schilderij Spanje te laten bereiken zolang Franco aan de macht bleef.",
         "options": [
           "Waar",
@@ -6998,7 +6998,7 @@
       {
         "id": "course_154_impression_soleil_levant_monet_q1",
         "type": "mcq",
-        "question": "Waar schilderde Monet de scène afgebeeld in Impression, Soleil Levant?",
+        "question": "Waar schilderde Monet de scène afgebeeld in Impressie, zonsopgang?",
         "explanation": "Monet schilderde de haven van Le Havre in de vroege ochtend rond 1872.",
         "options": [
           "De haven van Le Havre",
@@ -7204,7 +7204,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q1",
         "type": "mcq",
-        "question": "In welke stad schilderde Picasso Les Demoiselles d'Avignon in 1907?",
+        "question": "In welke stad schilderde Picasso De jonge dames van Avignon in 1907?",
         "explanation": "Picasso werkte in het Bateau-Lavoir in Montmartre, waar hij het schilderij in 1907 voltooide.",
         "options": [
           "Parijs (Montmartre)",
@@ -7304,7 +7304,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q9",
         "type": "numericSlider",
-        "question": "In welk jaar voltooide Picasso Les Demoiselles d'Avignon?",
+        "question": "In welk jaar voltooide Picasso De jonge dames van Avignon?",
         "explanation": "Picasso voltooide het schilderij in 1907 in Montmartre.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -7407,7 +7407,7 @@
       {
         "id": "course_157_la_persistance_de_la_memoire_dali_q8",
         "type": "numericSlider",
-        "question": "In welk jaar schilderde Dalí The Persistence of Memory?",
+        "question": "In welk jaar schilderde Dalí De volharding der herinnering?",
         "explanation": "Dalí schilderde het schilderij in 1931.",
         "correctValue": 1931.0,
         "sliderMin": 1900.0,
@@ -7870,7 +7870,7 @@
           "Ze laat Kronos een ingebakerde steen inslikken in plaats van de baby",
           "Ze stuurt Zeus rechtstreeks naar Olympus",
           "Ze verandert Zeus in een adelaar",
-          "Ze vraagt ​​Athene om hulp"
+          "Ze vraagt Athene om hulp"
         ],
         "correctIndex": 0
       },
@@ -8136,7 +8136,7 @@
         "id": "course_163_pandore_et_la_boite_q8",
         "type": "chronological",
         "question": "Zet deze stadia van de Pandora-mythe op orde.",
-        "explanation": "Vanaf het ontstaan ​​tot aan de fatale opening van de pot volgt de mythe van Pandora een zeer nauwkeurig verloop.",
+        "explanation": "Vanaf het ontstaan tot aan de fatale opening van de pot volgt de mythe van Pandora een zeer nauwkeurig verloop.",
         "items": [
           "De goden maken Pandora op bevel van Zeus",
           "Epimetheus verwelkomt Pandora ondanks de waarschuwing van Prometheus",
@@ -8169,7 +8169,7 @@
         "explanation": "Demeter is ontroostbaar en verbiedt het ontkiemen van de aarde, wat een hongersnood veroorzaakt die de mens bedreigt.",
         "options": [
           "Het verhindert dat het land produceert, waardoor er hongersnood ontstaat",
-          "Ze vraagt ​​Zeus om haar te vermoorden",
+          "Ze vraagt Zeus om haar te vermoorden",
           "Ze zoekt haar toevlucht op Olympus zonder te reageren",
           "Ze verandert Hades in een monster"
         ],
@@ -8229,7 +8229,7 @@
         "id": "course_164_demeter_et_persephone_les_saisons_q7",
         "type": "mcq",
         "question": "Wat zijn de Eleusinische mysteriën?",
-        "explanation": "Tijdens haar omzwervingen stopt Demeter bij Eleusis, waar geheime riten ontstaan ​​die een beter lot in het hiernamaals beloven.",
+        "explanation": "Tijdens haar omzwervingen stopt Demeter bij Eleusis, waar geheime riten ontstaan die een beter lot in het hiernamaals beloven.",
         "options": [
           "Geheime riten geboren uit Demeters overtocht naar Eleusis, die hoop na de dood beloven",
           "Een tempel gebouwd door Hades voor Persephone",
@@ -8519,7 +8519,7 @@
       {
         "id": "course_167_icare_et_dedale_q5",
         "type": "trueFalse",
-        "question": "Waar of niet waar: de zee waar Icarus viel draagt ​​vandaag de dag nog steeds de naam Ikarische Zee.",
+        "question": "Waar of niet waar: de zee waar Icarus viel draagt vandaag de dag nog steeds de naam Ikarische Zee.",
         "explanation": "De stroming voert het lichaam van Icarus naar een eiland genaamd Ikaria, en de omringende zee wordt de Ikarische Zee.",
         "options": [
           "Waar",
@@ -8587,9 +8587,9 @@
         "id": "course_168_sisyphe_punition_eternelle_q2",
         "type": "mcq",
         "question": "Hoe slaagt Sisyphus erin Thanatos, de gepersonifieerde Dood, gevangen te zetten?",
-        "explanation": "Sisyphus vraagt ​​Thanatos om een ​​demonstratie van zijn kettingen en ketent hem vervolgens daadwerkelijk vast.",
+        "explanation": "Sisyphus vraagt Thanatos om een demonstratie van zijn kettingen en ketent hem vervolgens daadwerkelijk vast.",
         "options": [
-          "Hij veinst bewondering voor haar ketenen en vraagt ​​haar om een ​​demonstratie, waarna hij haar ketent",
+          "Hij veinst bewondering voor haar ketenen en vraagt haar om een demonstratie, waarna hij haar ketent",
           "Hij brengt haar in slaap met een drankje",
           "Hij vangt hem op in het Labyrint",
           "Hij ruilt zijn eigen leven in voor zijn vrijheid"
@@ -8615,7 +8615,7 @@
         "options": [
           "Hij klaagt bij Persephone dat zijn vrouw hem geen begrafenis heeft gegeven.",
           "Hij beweert een schat te zijn vergeten",
-          "Hij vraagt ​​om zijn kinderen weer te zien",
+          "Hij vraagt om zijn kinderen weer te zien",
           "Hij beweert per ongeluk te zijn ontvoerd"
         ],
         "correctIndex": 0
@@ -8637,7 +8637,7 @@
         "id": "course_168_sisyphe_punition_eternelle_q6",
         "type": "mcq",
         "question": "Wat is de eeuwige straf van Sisyphus?",
-        "explanation": "Sisyphus is veroordeeld om een ​​steen naar de top van een heuvel te duwen, maar de steen komt vlak voor het doel weer naar beneden.",
+        "explanation": "Sisyphus is veroordeeld om een steen naar de top van een heuvel te duwen, maar de steen komt vlak voor het doel weer naar beneden.",
         "options": [
           "Een steen duwen die weer naar beneden komt vlak voordat hij de top bereikt",
           "Draag de hemel op je schouders",
@@ -8735,7 +8735,7 @@
           "Hij heeft water en fruit voor zijn ogen, zonder dat hij ze ooit kan bereiken",
           "Hij moet eindeloos tegen een steen duwen",
           "Een adelaar eet elke dag zijn lever",
-          "Hij draagt ​​de hemel op zijn schouders"
+          "Hij draagt de hemel op zijn schouders"
         ],
         "correctIndex": 0
       },
@@ -8796,7 +8796,7 @@
         "id": "course_16_la_bataille_de_verdun_1916_q1",
         "type": "mcq",
         "question": "Wat is de codenaam die de Duitsers gaven aan hun offensief tegen Verdun in 1916?",
-        "explanation": "De operatie draagt ​​de naam Gericht, “het tribunaal”, gekozen door generaal Falkenhayn.",
+        "explanation": "De operatie draagt de naam Gericht, “het tribunaal”, gekozen door generaal Falkenhayn.",
         "options": [
           "gericht",
           "Barbarossa",
@@ -8881,7 +8881,7 @@
         "id": "course_16_la_bataille_de_verdun_1916_q8",
         "type": "chronological",
         "question": "Zet deze fasen van de Slag om Verdun en de herinnering eraan in chronologische volgorde.",
-        "explanation": "Deze mijlpalen variëren van de opening van het Duitse offensief in februari 1916 tot de Frans-Duitse verzoening van 1984.",
+        "explanation": "Deze mijlpalen lopen van de opening van het Duitse offensief in februari 1916 tot de Frans-Duitse verzoening van 1984.",
         "items": [
           "Opening van het Duitse bombardement",
           "Val van fort Douaumont",
@@ -9059,7 +9059,7 @@
         "id": "course_171_hercule_et_ses_12_travaux_q3",
         "type": "mcq",
         "question": "Hoe verslaat Heracles de Nemeïsche leeuw?",
-        "explanation": "Geconfronteerd met de ondoordringbare huid van de leeuw, wurgt Heracles hem met zijn blote handen en draagt ​​hem vervolgens als pantser.",
+        "explanation": "Geconfronteerd met de ondoordringbare huid van de leeuw, wurgt Heracles hem met zijn blote handen en draagt hem vervolgens als pantser.",
         "options": [
           "Hij wurgt hem met zijn blote handen, omdat zijn huid ondoordringbaar is voor wapens",
           "Hij verbrandt hem levend",
@@ -9090,7 +9090,7 @@
           "Via de stallen verlegt hij de loop van twee rivieren",
           "Hij maakt gebruik van een leger slaven",
           "Het verbrandt alle opgehoopte mest",
-          "Hij vraagt ​​Athene om hulp"
+          "Hij vraagt Athene om hulp"
         ],
         "correctIndex": 0
       },
@@ -9204,7 +9204,7 @@
         "id": "course_172_thesee_et_le_minotaure_q4",
         "type": "mcq",
         "question": "Dankzij welk voorwerp slaagt Theseus erin het labyrint te verlaten?",
-        "explanation": "Ariane geeft hem een ​​bolletje wol, dat hij uitrolt terwijl hij naar voren loopt, en dan weer terugrolt om de uitgang te vinden.",
+        "explanation": "Ariane geeft hem een bolletje wol, dat hij uitrolt terwijl hij naar voren loopt, en dan weer terugrolt om de uitgang te vinden.",
         "options": [
           "Een bolletje draad dat Ariane hem gaf",
           "Een kaart getekend door Daedalus",
@@ -9389,7 +9389,7 @@
         "explanation": "Van het betreden van de grot tot het verblind worden en het bekennen van zijn naam op zee: de episode volgt een nauwkeurig verloop dat het lot van Odysseus bezegelt.",
         "items": [
           "Odysseus en zijn mannen gaan de grot van Polyphemus binnen",
-          "Polyphemus wordt dronken en vraagt ​​naar de naam van zijn gast",
+          "Polyphemus wordt dronken en vraagt naar de naam van zijn gast",
           "De Grieken verblinden de Cyclopen met de brandende paal",
           "Odysseus roept zijn echte naam vanaf het schip"
         ]
@@ -9478,7 +9478,7 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q7",
         "type": "trueFalse",
-        "question": "Waar of niet waar: zodra het lied is gehoord, blijft Odysseus volkomen kalm en vraagt ​​hij nooit om afstandelijkheid.",
+        "question": "Waar of niet waar: zodra het lied is gehoord, blijft Odysseus volkomen kalm en vraagt hij nooit om afstandelijkheid.",
         "explanation": "Als het lied opkomt, verliest Odysseus zijn kalmte en roept dat hij losgemaakt moet worden; alleen zijn mannen, doof en trouw aan het plan, weerhouden hem ervan toe te geven.",
         "options": [
           "Waar",
@@ -9572,7 +9572,7 @@
         "id": "course_175_jason_et_la_toison_d_or_q5",
         "type": "mcq",
         "question": "Welke rol speelt Medea bij de verovering van het Gulden Vlies?",
-        "explanation": "Medea is verliefd op Jason en geeft hem een ​​zalf tegen het vuur van stieren, adviseert een list tegen de krijgers geboren uit drakentanden en laat vervolgens de beschermdraak in slaap vallen.",
+        "explanation": "Medea is verliefd op Jason en geeft hem een zalf tegen het vuur van stieren, adviseert een list tegen de krijgers geboren uit drakentanden en laat vervolgens de beschermdraak in slaap vallen.",
         "options": [
           "Ze geeft Jason een beschermende zalf en laat de beschermdraak in slaap vallen",
           "Ze bestrijdt de draak zelf met een zwaard",
@@ -9601,7 +9601,7 @@
           "Ze verleidt haar dochters om hem te vermoorden in de overtuiging dat ze hem jonger zal maken",
           "Ze vergiftigt hem rechtstreeks",
           "Ze levert hem over aan de draak van Colchis",
-          "Ze vraagt ​​Heracles om met hem te vechten"
+          "Ze vraagt Heracles om met hem te vechten"
         ],
         "correctIndex": 0
       },
@@ -9797,7 +9797,7 @@
         "id": "course_177_dipe_et_le_sphinx_q3",
         "type": "mcq",
         "question": "Wat is de vraag die de Sfinx stelt?",
-        "explanation": "De Sfinx vraagt ​​welk wezen 's morgens vier, 's middags twee en 's avonds drie voeten heeft.",
+        "explanation": "De Sfinx vraagt welk wezen 's morgens vier, 's middags twee en 's avonds drie voeten heeft.",
         "options": [
           "Welk wezen heeft 's ochtends vier voeten, 's middags twee en 's avonds drie?",
           "Wat is de naam van de echte koning van Thebe?",
@@ -10241,7 +10241,7 @@
         "id": "course_17_la_revolution_russe_1917_q7",
         "type": "chronological",
         "question": "Zet deze gebeurtenissen van de Russische Revolutie in chronologische volgorde.",
-        "explanation": "Deze mijlpalen variëren van de val van het tsarisme in februari 1917 tot de oprichting van de USSR in 1922.",
+        "explanation": "Deze mijlpalen lopen van de val van het tsarisme in februari 1917 tot de oprichting van de USSR in 1922.",
         "items": [
           "Abdicatie van Nicolaas II",
           "Aprilstellingen van Lenin",
@@ -10678,7 +10678,7 @@
         "question": "Waarom vormt de godin Aruru Enkidoe?",
         "explanation": "Gilgamesj is een ondraaglijke koning voor Uruk: Aruru vormt Enkidu, een wilde man, om hem te kanaliseren.",
         "options": [
-          "Om een ​​rivaal te creëren die in staat is de tirannie van Gilgamesj te kanaliseren",
+          "Om een rivaal te creëren die in staat is de tirannie van Gilgamesj te kanaliseren",
           "Om de dood van een beledigde god te wreken",
           "Om de stad Uruk te bevolken met extra inwoners",
           "Om de godin Ishtar te dienen"
@@ -11021,7 +11021,7 @@
         "question": "Waarom brengt Odin de beste krijgers samen die in Valhalla zijn gestorven?",
         "explanation": "Odin kent de profetie van Ragnarök en verzamelt de Einherjar, een eliteleger, in Valhalla om het onvermijdelijke uit te stellen.",
         "options": [
-          "Om een ​​leger voor Ragnarök op te bouwen",
+          "Om een leger voor Ragnarök op te bouwen",
           "Om hen een vredig pensioen te bieden",
           "Om Asgard opnieuw te bevolken na een hongersnood",
           "Om hen te beoordelen op hun fouten"
@@ -11093,7 +11093,7 @@
         "id": "course_186_les_valkyries_et_le_valhalla_q8",
         "type": "trueFalse",
         "question": "Waar of niet waar: sterven door ouderdom of ziekte, de ‘strodood’, leidt tot Walhalla, net zoals sterven in de strijd.",
-        "explanation": "The Straw Death leidt naar het duistere rijk Hel; alleen een heroïsche dood, met het zwaard in de hand, opent de poorten van Valhalla.",
+        "explanation": "de stroodood leidt naar het duistere rijk Hel; alleen een heroïsche dood, met het zwaard in de hand, opent de poorten van Valhalla.",
         "options": [
           "Waar",
           "Onwaar"
@@ -11213,7 +11213,7 @@
         "options": [
           "Als metafoor voor transmutatie, waarbij je moet vernietigen om te zuiveren",
           "Als een eenvoudig verhaal voor kinderen",
-          "Als bewijs voor het bestaan ​​van draken",
+          "Als bewijs voor het bestaan van draken",
           "Als symbool van materiële rijkdom"
         ],
         "correctIndex": 0
@@ -11431,7 +11431,7 @@
       {
         "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_q6",
         "type": "mcq",
-        "question": "Welke kunst is ontstaan ​​uit de festivals ter ere van Dionysus in Athene, tijdens de Grote Dionysia?",
+        "question": "Welke kunst is ontstaan uit de festivals ter ere van Dionysus in Athene, tijdens de Grote Dionysia?",
         "explanation": "In Athene werd deze god van de excessen de beschermheer van het theater: de Grote Dionysia organiseerde toneelwedstrijden.",
         "options": [
           "Het theater",
@@ -11622,7 +11622,7 @@
         "options": [
           "Om zijn macht na de burgeroorlogen te verbinden met een goddelijke held",
           "Om de bouw van een grote tempel te financieren",
-          "Om een ​​militaire overwinning op Carthago te vieren",
+          "Om een militaire overwinning op Carthago te vieren",
           "Ter vervanging van de Homerische verhalen die te Grieks worden geacht"
         ],
         "correctIndex": 0
@@ -11738,7 +11738,7 @@
         "question": "Waarom offeren de goden hun eigen bloed aan Teotihuacán, volgens de mythe van de Vijf Zonnen?",
         "explanation": "Nadat ze zichzelf in het vuur hebben geworpen om zon en maan te worden, merken de goden dat de zon bewegingloos blijft: ze offeren vervolgens hun bloed om hem in beweging te brengen, een schuld die de mensen zullen erven.",
         "options": [
-          "Om een ​​stille zon in beweging te zetten",
+          "Om een stille zon in beweging te zetten",
           "Om mannen te straffen voor hun trots",
           "Om de eerste Azteekse krijgers te creëren",
           "Om de oorspronkelijke brand te blussen"
@@ -12023,7 +12023,7 @@
       {
         "id": "course_194_le_mahabharata_q7",
         "type": "mcq",
-        "question": "Wat vertegenwoordigt de Bhagavad-Gita in het Mahabharata-verhaal?",
+        "question": "Wat is de Bhagavad-Gita in het Mahabharata-verhaal?",
         "explanation": "De Bhagavad-Gita is de dialoog van ongeveer 700 verzen waarin Krishna, Arjuna's wagenmenner, hem plicht en onzelfzuchtig handelen leert.",
         "options": [
           "Krishna's dialoog met Arjuna over dienst en actie",
@@ -12041,7 +12041,7 @@
         "options": [
           "Handel volgens je plicht zonder je te hechten aan de vruchten van de handeling",
           "Geef volledig afstand van alle actie om te mediteren",
-          "Volg alleen uw persoonlijke verlangens",
+          "Volg alleen je persoonlijke verlangens",
           "Vecht voor wraak in plaats van voor plicht"
         ],
         "correctIndex": 0
@@ -12185,7 +12185,7 @@
         "id": "course_196_merlin_l_enchanteur_q1",
         "type": "mcq",
         "question": "Wat is de paradoxale aard van Merlijn volgens de dichter Robert de Boron?",
-        "explanation": "Volgens Robert de Boron verwekt een incubus-demon Merlijn om een ​​antichrist te creëren, maar de doop van het kind wist deze vloek uit.",
+        "explanation": "Volgens Robert de Boron verwekt een incubus-demon Merlijn om een antichrist te creëren, maar de doop van het kind wist deze vloek uit.",
         "options": [
           "Hij is de zoon van een demon, gered door de doop",
           "Hij is een Keltische god, vermomd als een man",
@@ -12273,7 +12273,7 @@
       {
         "id": "course_196_merlin_l_enchanteur_q8",
         "type": "mcq",
-        "question": "Welke moderne literaire karakters stammen af ​​van het archetype van de wijze oude man van Merlijn?",
+        "question": "Welke moderne literaire karakters stammen af van het archetype van de wijze oude man van Merlijn?",
         "explanation": "Merlijn staarde naar het beeld van de oude wijze man met de baard en de staf: Tolkiens Gandalf en Rowlings Perkamentus zijn directe afstammelingen van hem.",
         "options": [
           "Gandalf in Tolkien en Perkamentus in Rowling",
@@ -12297,7 +12297,7 @@
           "Om zijn eigen executie uit te stellen tot zonsopgang",
           "Om de koning af te leiden van zijn melancholie",
           "Om hem oosterse wijsheid te leren",
-          "Om een ​​vertelwedstrijd aan het hof te winnen"
+          "Om een vertelwedstrijd aan het hof te winnen"
         ],
         "correctIndex": 0
       },
@@ -12739,8 +12739,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "Wat vertegenwoordigt de Hidjra in 622?",
-        "explanation": "De Hijra is het vertrek van Mohammed, die in Mekka met de dood werd bedreigd, richting de oase van Medina. Deze datum wordt jaar 1 van de moslimkalender.",
+        "question": "Wat is de Hidjra in 622?",
+        "explanation": "De Hidjra is het vertrek van Mohammed, die in Mekka met de dood werd bedreigd, naar de oase van Medina. Die datum wordt jaar 1 van de islamitische kalender.",
         "options": [
           "Mohammeds vertrek van Mekka naar Medina",
           "De eerste openbaring die Mohammed ontving",
@@ -12800,7 +12800,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q6",
         "type": "mcq",
         "question": "Wat is de Dhimma die door de islamitische veroveraars is ingesteld?",
-        "explanation": "Dhimma is de beschermde status die “mensen van het Boek” machtigt om hun religie te behouden tegen betaling van jizya.",
+        "explanation": "De dhimma is de beschermde status waarmee ‘mensen van het Boek’ hun geloof mogen houden als ze de jizya betalen.",
         "options": [
           "De status waardoor christenen en joden hun religie kunnen behouden tegen belasting",
           "De naam van de moslimkalender",
@@ -12826,11 +12826,11 @@
         "id": "course_1_la_naissance_de_l_islam_622_q8",
         "type": "mcq",
         "question": "Wat is de Umma, gesticht door Mohammed in Medina?",
-        "explanation": "De Umma vervangt traditionele tribale solidariteit door een gemeenschap gebaseerd op gedeeld geloof.",
+        "explanation": "De umma vervangt de oude stamsolidariteit door een gemeenschap die op hetzelfde geloof rust.",
         "options": [
           "De gemeenschap van gelovigen, die verder gaat dan bloed- en clanbanden",
-          "De naam van de moslimkalender",
-          "Het leger trok op tegen Mekka",
+          "De naam van de islamitische kalender",
+          "Het leger dat optrok tegen Mekka",
           "De raad van de kaliefen"
         ],
         "correctIndex": 0
@@ -12925,7 +12925,7 @@
           "Hij laat Sekhmet bier drinken dat is getint met rode oker, dat ze voor bloed aanziet",
           "Hij sluit Sekhmet op in de onderwereld",
           "Hij verandert Sekhmet in een Khepri-kever",
-          "Hij vraagt ​​Osiris om tegen Sekhmet te vechten"
+          "Hij vraagt Osiris om tegen Sekhmet te vechten"
         ],
         "correctIndex": 0
       },
@@ -13361,7 +13361,7 @@
         "id": "course_204_le_concept_de_monde_multipolaire_q6",
         "type": "mcq",
         "question": "Welk project stelt China in staat een immens netwerk van invloed over de hele wereld te weven?",
-        "explanation": "Via de Nieuwe Zijderoute investeert Peking massaal in het buitenland om een ​​alternatief netwerk van invloed op het Westen op te bouwen.",
+        "explanation": "Via de Nieuwe Zijderoute investeert Peking massaal in het buitenland om een alternatief netwerk van invloed op het Westen op te bouwen.",
         "options": [
           "De nieuwe zijderoutes",
           "BRICS",
@@ -13846,7 +13846,7 @@
         "id": "course_208_l_onu_puissante_ou_impuissante_q8",
         "type": "numericSlider",
         "question": "In welk jaar verscheen het concept van ‘verantwoordelijkheid om te beschermen’ (R2P)?",
-        "explanation": "Het concept van verantwoordelijkheid om te beschermen leek in 2005 de leemte op te vullen die was ontstaan ​​door het beginsel van nationale soevereiniteit.",
+        "explanation": "Het concept van verantwoordelijkheid om te beschermen leek in 2005 de leemte op te vullen die was ontstaan door het beginsel van nationale soevereiniteit.",
         "correctValue": 2005.0,
         "sliderMin": 1990.0,
         "sliderMax": 2020.0,
@@ -14294,7 +14294,7 @@
         "id": "course_211_comment_fonctionne_le_prix_du_petrole_q7",
         "type": "trueFalse",
         "question": "Waar of niet waar: in april 2020 betaalden olieverkopers hun kopers om hun aandelen op te ruimen.",
-        "explanation": "Geconfronteerd met volle opslagtanks betaalden sommige verkopers hun kopers in april 2020 om van hun olievoorraden af ​​te komen.",
+        "explanation": "Geconfronteerd met volle opslagtanks betaalden sommige verkopers hun kopers in april 2020 om van hun olievoorraden af te komen.",
         "options": [
           "Waar",
           "Onwaar"
@@ -14355,7 +14355,7 @@
         "id": "course_212_les_paradis_fiscaux_expliques_q2",
         "type": "mcq",
         "question": "Met welk instrument kan een bedrijf zijn winst laten zien waar de belastingen het laagst zijn?",
-        "explanation": "Verrekenprijzen bestaan ​​voor een bedrijf uit het zelf bepalen van de prijs voor de uitwisseling tussen zijn eigen dochterondernemingen, om zijn winsten te verplaatsen naar het land waar de belasting het laagst is.",
+        "explanation": "Verrekenprijzen bestaan voor een bedrijf uit het zelf bepalen van de prijs voor de uitwisseling tussen zijn eigen dochterondernemingen, om zijn winsten te verplaatsen naar het land waar de belasting het laagst is.",
         "options": [
           "De overdrachtsprijs",
           "Het belastingkrediet",
@@ -14708,7 +14708,7 @@
         "id": "course_215_les_inegalites_nord_sud_q3",
         "type": "numericSlider",
         "question": "Wat is de gemiddelde levensverwachting in Japan, een van de landen met de hoogste levensverwachting ter wereld?",
-        "explanation": "De levensverwachting bedraagt ​​83 jaar in Japan, vergeleken met 55 jaar in de Centraal-Afrikaanse Republiek.",
+        "explanation": "De levensverwachting bedraagt 83 jaar in Japan, vergeleken met 55 jaar in de Centraal-Afrikaanse Republiek.",
         "correctValue": 83.0,
         "sliderMin": 50.0,
         "sliderMax": 95.0,
@@ -14798,7 +14798,7 @@
         "id": "course_216_la_dette_mondiale_q1",
         "type": "numericSlider",
         "question": "Welk percentage van het mondiale bbp overschrijdt de mondiale schuld (staten, bedrijven en huishoudens samen) vandaag de dag?",
-        "explanation": "De mondiale schuldenlast bedraagt ​​momenteel meer dan 300% van het mondiale bbp, een absoluut record in de economische geschiedenis.",
+        "explanation": "De mondiale schuldenlast bedraagt momenteel meer dan 300% van het mondiale bbp, een absoluut record in de economische geschiedenis.",
         "correctValue": 300.0,
         "sliderMin": 100.0,
         "sliderMax": 500.0,
@@ -14808,8 +14808,8 @@
       {
         "id": "course_216_la_dette_mondiale_q2",
         "type": "numericSlider",
-        "question": "Hoeveel bedraagt ​​de Japanse staatsschuld als percentage van het bbp?",
-        "explanation": "De Japanse staatsschuld bedraagt ​​bijna 260% van het bbp.",
+        "question": "Hoeveel bedraagt de Japanse staatsschuld als percentage van het bbp?",
+        "explanation": "De Japanse staatsschuld bedraagt bijna 260% van het bbp.",
         "correctValue": 260.0,
         "sliderMin": 100.0,
         "sliderMax": 400.0,
@@ -14844,7 +14844,7 @@
         "id": "course_216_la_dette_mondiale_q5",
         "type": "mcq",
         "question": "Waar hangt de gevaarlijkheid van een staatsschuld vooral van af, gezien de prijs?",
-        "explanation": "Het werkelijke gevaar van een schuld hangt niet alleen af ​​van de hoogte ervan, maar ook van de valuta waarin deze is geleend.",
+        "explanation": "Het werkelijke gevaar van een schuld hangt niet alleen af van de hoogte ervan, maar ook van de valuta waarin deze is geleend.",
         "options": [
           "De valuta waarin wordt geleend",
           "Het aantal verschillende crediteuren",
@@ -14999,7 +14999,7 @@
         "id": "course_217_l_economie_de_plateforme_uber_airbnb_q8",
         "type": "mcq",
         "question": "Hoe noemen we de situatie waarbij een zelfstandige toch onderworpen blijft aan de regels opgelegd door de aanvraag (tarieven, rating, sancties)?",
-        "explanation": "De werknemer draagt ​​de risico's alleen, maar blijft vaak onderworpen aan de regels van de toepassing: deze situatie wordt algoritmische ondergeschiktheid genoemd.",
+        "explanation": "De werknemer draagt de risico's alleen, maar blijft vaak onderworpen aan de regels van de toepassing: deze situatie wordt algoritmische ondergeschiktheid genoemd.",
         "options": [
           "Algoritmische ondergeschiktheid",
           "Het netwerkeffect",
@@ -15068,7 +15068,7 @@
       {
         "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_q4",
         "type": "mcq",
-        "question": "Wat is het Chinese equivalent van het Amerikaanse GAFAM, aangehaald in de cursus?",
+        "question": "Wat is het Chinese equivalent van het Amerikaanse GAFAM, aangehaald in deze les?",
         "explanation": "GAFAM in de Verenigde Staten heeft zijn equivalent in China met BATX, deze giganten die hun voorsprong op het gebied van data gebruiken om uit te breiden naar vele gebieden.",
         "options": [
           "BATX",
@@ -15258,9 +15258,9 @@
         "id": "course_21_rosa_parks_et_montgomery_1955_q1",
         "type": "mcq",
         "question": "Wat deed Rosa Parks op 1 december 1955 in Montgomery, wat aanleiding gaf tot de busboycot?",
-        "explanation": "Rosa Parks weigert op te staan ​​om haar stoel af te staan ​​aan een blanke passagier, wat leidt tot haar arrestatie en vervolgens een boycot van de bussen.",
+        "explanation": "Rosa Parks weigert op te staan om haar stoel af te staan aan een blanke passagier, wat leidt tot haar arrestatie en vervolgens een boycot van de bussen.",
         "options": [
-          "Ze weigert haar zitplaats af te staan ​​aan een blanke passagier in een bus",
+          "Ze weigert haar zitplaats af te staan aan een blanke passagier in een bus",
           "Ze organiseert een demonstratie voor het Capitool van Alabama",
           "Ze dient een klacht in tegen haar werkgever",
           "Ze weigert haar buskaartje te betalen"
@@ -15821,7 +15821,7 @@
           "Reduceer en vraag uzelf af of de aankoop echt nodig is",
           "Recycle elk object systematisch",
           "Hergebruik een voorwerp zo lang mogelijk",
-          "Repareer een voorwerp voordat u het weggooit"
+          "Repareer een voorwerp voordat je het weggooit"
         ],
         "correctIndex": 0
       }
@@ -15983,7 +15983,7 @@
         "id": "course_225_la_montee_des_eaux_q5",
         "type": "numericSlider",
         "question": "Wat is het huidige tempo van de zeespiegelstijging, in millimeters per jaar?",
-        "explanation": "De snelheid waarmee de zee stijgt bedraagt ​​momenteel ongeveer 3,6 mm per jaar, vergeleken met 1,4 mm per jaar in de 20e eeuw, een versnelling van meer dan 150%.",
+        "explanation": "De snelheid waarmee de zee stijgt bedraagt momenteel ongeveer 3,6 mm per jaar, vergeleken met 1,4 mm per jaar in de 20e eeuw, een versnelling van meer dan 150%.",
         "correctValue": 3.6,
         "sliderMin": 0.0,
         "sliderMax": 10.0,
@@ -16098,7 +16098,7 @@
       {
         "id": "course_226_l_ia_et_l_emploi_q5",
         "type": "mcq",
-        "question": "Welk nieuw beroep is ontstaan ​​door de verspreiding van generatieve AI, bestaande uit het formuleren van nauwkeurige instructies om het beste resultaat te verkrijgen?",
+        "question": "Welk nieuw beroep is ontstaan door de verspreiding van generatieve AI, bestaande uit het formuleren van nauwkeurige instructies om het beste resultaat te verkrijgen?",
         "explanation": "De snelle ingenieur is een nieuw beroep dat bestaat uit het weten hoe je nauwkeurige instructies moet formuleren om het beste uit een AI te halen.",
         "options": [
           "Snelle ingenieur",
@@ -16135,7 +16135,7 @@
       {
         "id": "course_226_l_ia_et_l_emploi_q8",
         "type": "mcq",
-        "question": "Welke meer optimistische kijk op AI wordt in de cursus gepresenteerd?",
+        "question": "Welke meer optimistische kijk op AI wordt in deze les gepresenteerd?",
         "explanation": "Een meer optimistische visie beschouwt AI als een assistent in plaats van een vervanging, waardoor minder interessante taken worden geautomatiseerd en professionals meer tijd overhouden voor het menselijke of strategische aspect van hun werk.",
         "options": [
           "Een assistent die repetitieve taken automatiseert en mensen meer tijd geeft voor het strategische aspect",
@@ -16469,7 +16469,7 @@
         "id": "course_229_l_ue_comment_ca_marche_vraiment_q8",
         "type": "numericSlider",
         "question": "Hoeveel agenten heeft het bestuur van de Europese Unie ongeveer om het hele continent te besturen?",
-        "explanation": "De Europese regering beschikt over ongeveer 60.000 agenten om een ​​heel continent te besturen, minder dan alleen de stad Parijs.",
+        "explanation": "De Europese regering beschikt over ongeveer 60.000 agenten om een heel continent te besturen, minder dan alleen de stad Parijs.",
         "correctValue": 60.0,
         "sliderMin": 0.0,
         "sliderMax": 300.0,
@@ -16483,7 +16483,7 @@
         "explanation": "Voor het eerst kwamen de lidstaten overeen om samen te lenen op de financiële markten met het Next Generation EU-plan, wat een keerpunt markeerde in de richting van een meer verenigde unie.",
         "options": [
           "De lidstaten moeten samen lenen op de financiële markten",
-          "Het is aan de EU om een ​​gemeenschappelijk leger op de been te brengen",
+          "Het is aan de EU om een gemeenschappelijk leger op de been te brengen",
           "Het is aan elk land om vrijelijk de EU te verlaten",
           "Het is aan de Commissie om zelf de nationale belastingen vast te stellen"
         ],
@@ -16516,7 +16516,7 @@
           "Om het evenwicht te herstellen in het licht van de Amerikaanse raketten die al in Italië en Turkije zijn geïnstalleerd",
           "Om Cuba te helpen zichzelf te verdedigen tegen een op handen zijnde invasie door de Verenigde Staten",
           "Om zijn raketten te testen in een tropisch klimaat",
-          "Om een ​​permanente marinebasis in het Caribisch gebied te verkrijgen"
+          "Om een permanente marinebasis in het Caribisch gebied te verkrijgen"
         ],
         "correctIndex": 0
       },
@@ -16550,7 +16550,7 @@
         "id": "course_22_la_crise_des_missiles_de_cuba_1962_q4",
         "type": "trueFalse",
         "question": "Waar of niet waar: 27 oktober 1962, bijgenaamd ‘Zwarte Zaterdag’, was het rustigste moment van de hele crisis.",
-        "explanation": "Zwarte Zaterdag is daarentegen de gevaarlijkste dag: een U-2 wordt neergeschoten en een Sovjetonderzeeër staat bijna klaar om een ​​kerntorpedo te lanceren.",
+        "explanation": "Zwarte Zaterdag is daarentegen de gevaarlijkste dag: een U-2 wordt neergeschoten en een Sovjetonderzeeër staat bijna klaar om een kerntorpedo te lanceren.",
         "options": [
           "Waar",
           "Onwaar"
@@ -16676,12 +16676,12 @@
       {
         "id": "course_230_la_liberte_de_la_presse_dans_le_monde_q5",
         "type": "mcq",
-        "question": "Wat betekent de term SLAPP in de cursus?",
+        "question": "Wat betekent de term SLAPP in deze les?",
         "explanation": "SLAPP's zijn onrechtmatige rechtszaken die steeds vaker voorkomen om kritische stemmen in de journalistiek te intimideren.",
         "options": [
           "Misbruik van juridische procedures bedoeld om kritische stemmen te intimideren",
           "Een vorm van censuur op sociale netwerken",
-          "Een overheidssubsidie ​​voor onafhankelijke media",
+          "Een overheidssubsidie voor onafhankelijke media",
           "Een internationale journalistiekprijs"
         ],
         "correctIndex": 0
@@ -16700,7 +16700,7 @@
       {
         "id": "course_230_la_liberte_de_la_presse_dans_le_monde_q7",
         "type": "mcq",
-        "question": "Wat betekent de uitdrukking ‘informatiewoestijn’, genoemd in de cursus?",
+        "question": "Wat betekent de uitdrukking ‘informatiewoestijn’, genoemd in deze les?",
         "explanation": "Een ‘informatiewoestijn’ duidt een gebied aan waar de sluiting van veel lokale kranten betekent dat er niet langer iemand is die toezicht houdt op de acties van lokale gekozen functionarissen.",
         "options": [
           "Een gebied waar de sluiting van lokale kranten betekent dat er niemand meer is die toezicht houdt op de acties van gekozen functionarissen",
@@ -17012,7 +17012,7 @@
         "id": "course_233_le_droit_d_asile_explique_q5",
         "type": "mcq",
         "question": "Wat is het verschil tussen een vluchteling en een economische migrant?",
-        "explanation": "Een economische migrant verlaat vrijwillig zijn land om een ​​beter leven te zoeken, en de Conventie van Genève, voorbehouden aan vervolgde mensen, is niet op hem van toepassing.",
+        "explanation": "Een economische migrant verlaat vrijwillig zijn land om een beter leven te zoeken, en de Conventie van Genève, voorbehouden aan vervolgde mensen, is niet op hem van toepassing.",
         "options": [
           "De economische migrant verlaat zijn land vrijwillig, zonder dat er sprake is van vervolging",
           "De vluchteling heeft nooit het recht om te werken",
@@ -17025,7 +17025,7 @@
         "id": "course_233_le_droit_d_asile_explique_q6",
         "type": "numericSlider",
         "question": "Hoeveel miljoenen mensen staken in 2015 de Middellandse Zee over om Europa te bereiken?",
-        "explanation": "In 2015 staken ruim een ​​miljoen mensen de Middellandse Zee over, veelal op de vlucht voor de burgeroorlog in Syrië.",
+        "explanation": "In 2015 staken ruim een miljoen mensen de Middellandse Zee over, veelal op de vlucht voor de burgeroorlog in Syrië.",
         "correctValue": 1.0,
         "sliderMin": 0.0,
         "sliderMax": 4.0,
@@ -17262,9 +17262,9 @@
         "id": "course_235_l_eau_prochaine_source_de_conflits_q8",
         "type": "mcq",
         "question": "Wat betekent het concept van ‘virtueel water’?",
-        "explanation": "Virtueel water verwijst naar de hoeveelheid water die nodig is om een ​​product te produceren: het importeren van tarwe betekent ook het importeren van het water dat wordt gebruikt om het te verbouwen.",
+        "explanation": "Virtueel water verwijst naar de hoeveelheid water die nodig is om een product te produceren: het importeren van tarwe betekent ook het importeren van het water dat wordt gebruikt om het te verbouwen.",
         "options": [
-          "De hoeveelheid water die nodig is om een ​​product te maken",
+          "De hoeveelheid water die nodig is om een product te maken",
           "Water gerecycled uit afvalwater",
           "Water dat zich in het grondwater bevindt",
           "Zout water getransformeerd door ontzilting"
@@ -17375,8 +17375,8 @@
       {
         "id": "course_236_le_soft_power_americain_q8",
         "type": "mcq",
-        "question": "Welke macht investeert in culturele instellingen en enorme infrastructuurprojecten om een ​​alternatief ontwikkelingsmodel te bieden?",
-        "explanation": "China investeert in culturele instellingen en enorme infrastructuurprojecten in Azië en Afrika, om een ​​alternatief ontwikkelingsmodel te bieden.",
+        "question": "Welke macht investeert in culturele instellingen en enorme infrastructuurprojecten om een alternatief ontwikkelingsmodel te bieden?",
+        "explanation": "China investeert in culturele instellingen en enorme infrastructuurprojecten in Azië en Afrika, om een alternatief ontwikkelingsmodel te bieden.",
         "options": [
           "China",
           "Japan",
@@ -17691,7 +17691,7 @@
         "id": "course_239_le_futur_du_travail_q6",
         "type": "mcq",
         "question": "Wat biedt het universele basisinkomen?",
-        "explanation": "Het universele basisinkomen stelt voor om elke burger een vast bedrag te betalen, zonder voorwaarden, om een ​​levensloop veilig te stellen in een economie waarin het werk steeds meer intermitterend wordt.",
+        "explanation": "Het universele basisinkomen stelt voor om elke burger een vast bedrag te betalen, zonder voorwaarden, om een levensloop veilig te stellen in een economie waarin het werk steeds meer intermitterend wordt.",
         "options": [
           "Betaal een vast bedrag aan elke burger, zonder voorwaarden",
           "Verminder de werktijd tot 4 dagen per week",
@@ -17716,7 +17716,7 @@
       {
         "id": "course_239_le_futur_du_travail_q8",
         "type": "trueFalse",
-        "question": "Waar of niet waar: volgens het optimistische scenario dat in de cursus wordt genoemd, zou AI mensen kunnen bevrijden van repetitieve taken dankzij een verhoging van de productiviteit.",
+        "question": "Waar of niet waar: volgens het optimistische scenario dat in deze les wordt genoemd, zou AI mensen kunnen bevrijden van repetitieve taken dankzij een verhoging van de productiviteit.",
         "explanation": "Het optimistische scenario veronderstelt een toename van de productiviteit die mensen zou bevrijden van repetitieve taken, in tegenstelling tot het pessimistische scenario dat enorme werkloosheid vreest.",
         "options": [
           "Waar",
@@ -18241,10 +18241,10 @@
         "question": "Wat is het vetorecht in de VN-Veiligheidsraad?",
         "explanation": "Elk van de vijf permanente leden van de Veiligheidsraad kan een resolutie blokkeren met behulp van zijn vetorecht.",
         "options": [
-          "De mogelijkheid van een permanent lid om een ​​resolutie te blokkeren",
+          "De mogelijkheid van een permanent lid om een resolutie te blokkeren",
           "Het stemrecht van alle lidstaten",
           "De macht om de Algemene Vergadering te ontbinden",
-          "Het recht om een ​​staat uit te sluiten van de VN"
+          "Het recht om een staat uit te sluiten van de VN"
         ],
         "correctIndex": 0
       },
@@ -18636,8 +18636,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q2",
         "type": "mcq",
-        "question": "Welke gebeurtenis bracht de Byzantijnse keizer Alexios I Comnenus ertoe de paus om hulp te vragen?",
-        "explanation": "In 1071 verpletterden de Seltsjoekse Turken in Mantzikert het Byzantijnse leger en openden Anatolië, waardoor Alexios I Comnenus ertoe werd aangezet een verzoekschrift in te dienen bij Rome.",
+        "question": "Welke gebeurtenis bracht de Byzantijnse keizer Alexios I Komnenos ertoe de paus om hulp te vragen?",
+        "explanation": "In 1071 verpletteren de Seltsjoeken bij Mantzikert het Byzantijnse leger en openen Anatolië. Daardoor vraagt Alexios I Komnenos Rome om hulp.",
         "options": [
           "De nederlaag van Mantzikert tegen de Seltsjoekse Turken",
           "De verovering van Jeruzalem door de moslims",
@@ -18649,8 +18649,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q3",
         "type": "trueFalse",
-        "question": "Waar of niet waar: de “armenkruistocht” onder leiding van Peter de Kluizenaar was een gedisciplineerd leger dat zonder problemen Jeruzalem bereikte.",
-        "explanation": "Zonder discipline of voorraden plunderde deze groep arme mensen op hun pad en werd gedecimeerd in Anatolië voordat ze Jeruzalem bereikten.",
+        "question": "Waar of niet waar: de “armenkruistocht” onder leiding van Petrus de Kluizenaar was een gedisciplineerd leger dat zonder problemen Jeruzalem bereikte.",
+        "explanation": "Zonder discipline of voorraden plunderde die groep armen onderweg en werd in Anatolië bijna helemaal uitgeroeid, nog voor Jeruzalem.",
         "options": [
           "Waar",
           "Onwaar"
@@ -18660,8 +18660,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q4",
         "type": "mcq",
-        "question": "Wat belooft Urban II aan degenen die op kruistocht gaan?",
-        "explanation": "Urban II belooft een volledige aflaat: totale vergeving van zonden voor degenen die het kruis opnemen.",
+        "question": "Wat belooft Urbanus II aan wie op kruistocht gaat?",
+        "explanation": "Urbanus II belooft een volle aflaat: totale vergeving van de zonden voor wie het kruis opneemt.",
         "options": [
           "Volledige vergeving van de straffen vanwege hun zonden",
           "Land gegarandeerd in het Heilige Land",
@@ -18674,7 +18674,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q5",
         "type": "trueFalse",
         "question": "Waar of niet waar: na de verovering van Jeruzalem riep Godfried van Bouillon zichzelf uit tot koning van de stad.",
-        "explanation": "Godfried van Bouillon weigerde de titel van koning en gaf er de voorkeur aan de naam Bekentenis van het Heilig Graf, beschermer van het graf van Christus, te worden genoemd.",
+        "explanation": "Godfried van Bouillon weigert de titel van koning. Hij laat zich Voogd van het Heilig Graf noemen, beschermer van het graf van Christus.",
         "options": [
           "Waar",
           "Onwaar"
@@ -18685,12 +18685,12 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q6",
         "type": "chronological",
         "question": "Zet deze gebeurtenissen in de geschiedenis van de kruistochten in chronologische volgorde.",
-        "explanation": "Deze mijlpalen variëren van 1071 tot 1187: de Byzantijnse nederlaag gaat vooraf aan de oproep van de paus, die voorafgaat aan de verovering en vervolgens de herovering van Jeruzalem.",
+        "explanation": "Deze mijlpalen lopen van 1071 tot 1187: eerst de Byzantijnse nederlaag, dan de oproep van de paus, dan de inname en later de herovering van Jeruzalem.",
         "items": [
-          "Byzantijnse nederlaag van Mantzikert tegen de Seltsjoekse Turken",
-          "Oproep tot kruistocht tijdens het Concilie van Clermont",
-          "Verovering van Jeruzalem door de kruisvaarders",
-          "Hervatting van Jeruzalem door Saladin"
+          "Byzantijnse nederlaag van Mantzikert tegen de Seltsjoeken",
+          "Oproep tot kruistocht tijdens het concilie van Clermont",
+          "Inname van Jeruzalem door de kruisvaarders",
+          "Herovering van Jeruzalem door Saladin"
         ]
       },
       {
@@ -18708,7 +18708,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q8",
         "type": "mcq",
         "question": "Welke moslimsultan herovert Jeruzalem in 1187?",
-        "explanation": "In 1187 heroverde sultan Saladin Jeruzalem op de kruisvaarders, waarmee de cyclus van de kruistochten opnieuw werd gestart.",
+        "explanation": "In 1187 heroverde sultan Saladin Jeruzalem op de kruisvaarders, en zo begint de cyclus van kruistochten opnieuw.",
         "options": [
           "Saladin",
           "Alp Arslan",
@@ -18750,7 +18750,7 @@
         "id": "course_30_la_blitzkrieg_1940_q2",
         "type": "mcq",
         "question": "Welk Duitse principe bestaat erin alle middelen op een smal punt te concentreren om het vijandelijke front te doorbreken?",
-        "explanation": "Schwerpunkt duidt de concentratie van krachten op een specifiek punt aan, een sleutelprincipe van de Duitse mobiele oorlogsvoering.",
+        "explanation": "Schwerpunkt is het samenballen van alle kracht op één punt. Dat is de kern van de Duitse bewegingsoorlog.",
         "options": [
           "De Schwerpunkt",
           "De Sichelschnitt",
@@ -19040,7 +19040,7 @@
         "id": "course_32_la_guerre_du_vietnam_1955_1975_q8",
         "type": "chronological",
         "question": "Zet deze fasen van de oorlog in Vietnam in chronologische volgorde.",
-        "explanation": "Deze mijlpalen variëren van de opdeling van 1954 tot de val van Saigon in 1975, die de hereniging van het land onder het communisme bezegelde.",
+        "explanation": "Deze mijlpalen lopen van de opdeling van 1954 tot de val van Saigon in 1975, die de hereniging van het land onder het communisme bezegelde.",
         "items": [
           "Verdeling van het land op de 17e breedtegraad",
           "Incident in de Golf van Tonkin",
@@ -19135,9 +19135,9 @@
         "explanation": "De rechtbank bevestigt dat individuele verantwoordelijkheid voorrang heeft: het opvolgen van bevelen vormt geen geldig excuus voor een misdrijf.",
         "options": [
           "Het gehoorzamen van een meerdere ontslaat je niet van een misdaad",
-          "Het gehoorzamen van een meerdere stelt u volledig vrij van verantwoordelijkheid",
+          "Het gehoorzamen van een meerdere stelt je volledig vrij van verantwoordelijkheid",
           "Alleen staatshoofden kunnen worden beoordeeld",
-          "Schriftelijke bestellingen zijn het enige geldige bewijs"
+          "Schriftelijke bevelen zijn het enige geldige bewijs"
         ],
         "correctIndex": 0
       },
@@ -19172,7 +19172,7 @@
         "options": [
           "Het gebrek aan oordeel over het bloedbad van Katyn, gepleegd door de Sovjets",
           "Het ontbreken van enig schriftelijk bewijs",
-          "Weigering om een ​​Amerikaanse rechter te benoemen",
+          "Weigering om een Amerikaanse rechter te benoemen",
           "Britse boycot van het proces"
         ],
         "correctIndex": 0
@@ -19284,7 +19284,7 @@
         "id": "course_34_la_decolonisation_panorama_1945_1975_q9",
         "type": "chronological",
         "question": "Zet deze stadia van dekolonisatie in chronologische volgorde.",
-        "explanation": "Deze mijlpalen variëren van de Indiase onafhankelijkheid in 1947 tot het einde van de Iberische rijken in 1975, waarmee een einde kwam aan de dekolonisatiegolf.",
+        "explanation": "Deze mijlpalen lopen van de Indiase onafhankelijkheid in 1947 tot het einde van de Iberische rijken in 1975, waarmee een einde kwam aan de dekolonisatiegolf.",
         "items": [
           "Onafhankelijkheid van India en Pakistan",
           "Bandung-conferentie",
@@ -19363,7 +19363,7 @@
         "id": "course_35_l_apartheid_et_mandela_1948_1994_q6",
         "type": "mcq",
         "question": "Welke Zuid-Afrikaanse president, die in 1989 aan de macht kwam, heeft het einde van de apartheid ingeleid?",
-        "explanation": "De Klerk begrijpt dat het voortbestaan ​​van het land het einde van de apartheid vereist en begint onderhandelingen met Mandela.",
+        "explanation": "De Klerk begrijpt dat het voortbestaan van het land het einde van de apartheid vereist en begint onderhandelingen met Mandela.",
         "options": [
           "Frederik Willem de Klerk",
           "Desmond Tutu",
@@ -19387,7 +19387,7 @@
         "id": "course_35_l_apartheid_et_mandela_1948_1994_q8",
         "type": "mcq",
         "question": "Welk principe stelt de Waarheids- en Verzoeningscommissie, onder leiding van Desmond Tutu, voor?",
-        "explanation": "Deze overgangsrechtvaardigheid biedt amnestie in ruil voor openbare bekentenissen, om de waarheid vast te stellen zonder het land op te blazen.",
+        "explanation": "Deze overgangsgerechtigheid biedt amnestie in ruil voor openbare bekentenissen, om de waarheid boven te krijgen zonder het land te laten ontploffen.",
         "options": [
           "Amnestie tegen openbare bekentenissen, om het lot van de slachtoffers te kennen",
           "De systematische executie van voormalige apartheidsfunctionarissen",
@@ -19467,7 +19467,7 @@
         "id": "course_36_la_revolution_culturelle_en_chine_1966_1_q5",
         "type": "numericSlider",
         "question": "Hoeveel jonge stadsmensen werden tijdens de Culturele Revolutie naar het platteland gestuurd om zich te ‘heropvoeden’?",
-        "explanation": "Ongeveer 17 miljoen jonge stadsbewoners worden naar het platteland gestuurd om een ​​einde te maken aan de stedelijke chaos veroorzaakt door de Rode Garde.",
+        "explanation": "Ongeveer 17 miljoen jonge stadsbewoners worden naar het platteland gestuurd om een einde te maken aan de stedelijke chaos veroorzaakt door de Rode Garde.",
         "correctValue": 17.0,
         "sliderMin": 5.0,
         "sliderMax": 40.0,
@@ -19552,7 +19552,7 @@
           "Verlies van staatsburgerschap en verbod op gemengde vakbonden",
           "Onmiddellijke uitzetting uit Duitsland",
           "Confiscatie van alle religieuze eigendommen",
-          "De verplichting om een ​​gele ster te dragen"
+          "De verplichting om een gele ster te dragen"
         ],
         "correctIndex": 0
       },
@@ -19881,7 +19881,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q1",
         "type": "mcq",
         "question": "Wie leidde de Visigoten tijdens de verovering van Rome in 410?",
-        "explanation": "Koning Alaric, een voormalig officier in het Romeinse leger, leidde de Visigoten die in augustus 410 de poorten van Rome drongen.",
+        "explanation": "Koning Alarik, een voormalig officier in het Romeinse leger, leidt de Visigoten die in augustus 410 de poorten van Rome openbreken.",
         "options": [
           "Alaric",
           "Odoacer",
@@ -19894,7 +19894,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q2",
         "type": "trueFalse",
         "question": "Waar of niet waar: vóór 410 was er gedurende ongeveer acht eeuwen geen enkel vijandelijk leger Rome binnengetrokken.",
-        "explanation": "De laatste verovering van Rome door een vijand dateert uit de Gallische plundering van 390 voor Christus. BC, bijna 800 jaar vóór de komst van Alaric.",
+        "explanation": "De laatste vijandelijke inname van Rome was de Gallische plundering van 390 v.Chr., bijna 800 jaar voor Alarik.",
         "options": [
           "Waar",
           "Onwaar"
@@ -19917,8 +19917,8 @@
       {
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q4",
         "type": "mcq",
-        "question": "Wat is de Romeinse foedus die in de cursus wordt genoemd?",
-        "explanation": "Om zijn grenzen ondanks het gebrek aan soldaten te behouden, vestigde het rijk Germaanse volkeren op zijn grondgebied in ruil voor hun militaire dienst.",
+        "question": "Wat is de Romeinse foedus die in deze les wordt genoemd?",
+        "explanation": "Om zijn grenzen te houden ondanks te weinig soldaten, vestigt het rijk Germaanse volkeren op zijn grond in ruil voor militaire dienst.",
         "options": [
           "Een verdrag waarbij ‘barbaarse’ volkeren zich op Romeins grondgebied vestigden in ruil voor militaire dienst",
           "Een belasting die door de provincies aan Rome wordt betaald",
@@ -19931,7 +19931,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q5",
         "type": "trueFalse",
         "question": "Waar of niet waar: Alaric was een voormalig officier in het Romeinse leger voordat hij koning van de Visigoten werd.",
-        "explanation": "Alaric diende in het Romeinse leger voordat hij leider van de Visigoten werd, wat zijn kennis van de Romeinse instellingen verklaart.",
+        "explanation": "Alarik diende in het Romeinse leger voordat hij de Visigoten aanvoerde. Daarom kende hij de Romeinse instellingen zo goed.",
         "options": [
           "Waar",
           "Onwaar"
@@ -19955,7 +19955,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q7",
         "type": "chronological",
         "question": "Zet deze gebeurtenissen vanaf de val van het West-Romeinse Rijk in chronologische volgorde.",
-        "explanation": "Deze fasen variëren van 402 tot 476: de terugtrekking naar Ravenna gaat vooraf aan de Visigotische plundering, vervolgens aan de meer destructieve Vandaalse plundering, tot het einde van het Westerse Rijk.",
+        "explanation": "Deze stappen lopen van 402 tot 476: de terugtrekking naar Ravenna gaat vooraf aan de Visigotische plundering, vervolgens aan de meer destructieve Vandaalse plundering, tot het einde van het Westerse Rijk.",
         "items": [
           "Honorius verlaat Rome voor Ravenna",
           "Plundering van Rome door Alaric en de Visigoten",
@@ -20157,7 +20157,7 @@
         "id": "course_41_pourquoi_le_ciel_est_il_bleu_q5",
         "type": "mcq",
         "question": "Waarom is de lucht niet paars, ook al is paars nog meer verspreid dan blauw?",
-        "explanation": "De zon zendt meer blauw licht uit dan violet, en onze oogkegels zijn gevoeliger voor blauw: de hersenen nemen daarom een ​​blauwe lucht waar.",
+        "explanation": "De zon zendt meer blauw licht uit dan violet, en onze oogkegels zijn gevoeliger voor blauw: de hersenen nemen daarom een blauwe lucht waar.",
         "options": [
           "De zon straalt meer blauw uit en onze ogen zijn er gevoeliger voor",
           "Violet wordt volledig geabsorbeerd door ozon",
@@ -20257,7 +20257,7 @@
       {
         "id": "course_42_pourquoi_reve_t_on_q5",
         "type": "mcq",
-        "question": "Wat is de beste manier om een ​​droom te onthouden?",
+        "question": "Wat is de beste manier om een droom te onthouden?",
         "explanation": "De herinnering aan de droom is erg kwetsbaar: zodra we bewegen of onszelf blootstellen aan het licht en de gedachten van de dag, vervaagt deze, dus moet deze onmiddellijk worden opgemerkt.",
         "options": [
           "Schrijf het meteen op als je wakker wordt, voordat je zelfs maar beweegt",
@@ -20495,7 +20495,7 @@
         "explanation": "Bij de evenaar concentreert sterke verdamping het zout, terwijl bij rivieren of smeltend ijs het water zachter is.",
         "options": [
           "Het hangt af van lokale verdamping en zoetwatertoevoer, zoals rivieren of smeltend ijs.",
-          "Het hangt alleen af ​​van de diepte van het water",
+          "Het hangt alleen af van de diepte van het water",
           "Het is overal hetzelfde, alleen de temperatuur verandert",
           "Het hangt af van de kleur van het water daar."
         ],
@@ -20582,7 +20582,7 @@
         "id": "course_45_pourquoi_y_a_t_il_des_saisons_q6",
         "type": "mcq",
         "question": "Wat gebeurt er nabij de evenaar, waar de kanteling van de aarde weinig invloed heeft op de daglengte?",
-        "explanation": "Dichtbij de evenaar verandert de daglengte het hele jaar door weinig, waardoor droge en natte seizoenen ontstaan ​​in plaats van vier echte seizoenen.",
+        "explanation": "Dichtbij de evenaar verandert de daglengte het hele jaar door weinig, waardoor droge en natte seizoenen ontstaan in plaats van vier echte seizoenen.",
         "options": [
           "Er zijn niet echt vier seizoenen, maar drogere en nattere periodes",
           "Er is een eeuwige zomer zonder winter",
@@ -20667,7 +20667,7 @@
         "options": [
           "Je moet voldoende snelheid halen om voldoende lift te creëren",
           "Om passagiers de tijd te geven zich te vestigen",
-          "Om de motoren af ​​te koelen vóór de vlucht",
+          "Om de motoren af te koelen vóór de vlucht",
           "Om bodemturbulentie te voorkomen"
         ],
         "correctIndex": 0
@@ -20904,7 +20904,7 @@
           "Het wordt tijdelijk kneedbaar en kan worden aangepast met details van het heden",
           "Het blijft perfect bevroren en intact, zoals de eerste keer",
           "Het wordt automatisch uit de hersenen verwijderd",
-          "Het wordt onmogelijk om een ​​tweede keer te vinden"
+          "Het wordt onmogelijk om een tweede keer te vinden"
         ],
         "correctIndex": 0
       },
@@ -20966,7 +20966,7 @@
       {
         "id": "course_49_pourquoi_a_t_on_des_frissons_q3",
         "type": "trueFalse",
-        "question": "Waar of niet waar: kippenvel komt voort uit een oude reflex die ervoor zorgde dat de haren omhoog gingen staan ​​om beter te isoleren tegen de kou.",
+        "question": "Waar of niet waar: kippenvel komt voort uit een oude reflex die ervoor zorgde dat de haren omhoog gingen staan om beter te isoleren tegen de kou.",
         "explanation": "Kippenvel is een oude reflex die de haartjes omhoog zet om het lichaam beter te isoleren, zelfs als het niet langer veel nut heeft bij mensen met weinig haar.",
         "options": [
           "Waar",
@@ -21083,7 +21083,7 @@
         "id": "course_4_le_couronnement_de_charlemagne_800_q4",
         "type": "mcq",
         "question": "Wat zijn de missi dominici ingesteld door Karel de Grote?",
-        "explanation": "De missi dominici zijn inspecteurs die in paren naar de provincies worden gestuurd om het optreden van lokale tellingen te verifiëren.",
+        "explanation": "De missi dominici zijn inspecteurs die met z’n tweeën de provincies langsgaan om te controleren wat de lokale graven doen.",
         "options": [
           "Inspecteurs stuurden in paren om de provincies te controleren",
           "Monniken die verantwoordelijk zijn voor het kopiëren van oude teksten",
@@ -21107,7 +21107,7 @@
         "id": "course_4_le_couronnement_de_charlemagne_800_q6",
         "type": "mcq",
         "question": "Welk schrift gebruikte Karel de Grote om de teksten die in het rijk werden gekopieerd te standaardiseren?",
-        "explanation": "De paleisschool van Aix-la-Chapelle verspreidde het Caroline-schrift, leesbaar in het hele rijk.",
+        "explanation": "De paleisschool van Aken verspreidt het Karolingisch schrift, dat overal in het rijk leesbaar is.",
         "options": [
           "Caroline's schrijven",
           "Het Griekse alfabet",
@@ -21394,7 +21394,7 @@
         "question": "Wat is het doel van de bliksemafleider die is uitgevonden na Franklins werk?",
         "explanation": "De bliksemafleider is een metalen staaf die de bliksem zonder schade naar de grond leidt, waardoor elektriciteit in de techniek wordt gebracht.",
         "options": [
-          "Bliksem een ​​veilig pad naar de grond bieden",
+          "Bliksem een veilig pad naar de grond bieden",
           "Voorkom volledig dat bliksem valt",
           "Laad de wolken op met elektriciteit",
           "Koel de lucht tijdens een onweersbui"
@@ -21544,7 +21544,7 @@
       {
         "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_q6",
         "type": "mcq",
-        "question": "Wat was er vóór röntgenfoto’s vaak nodig om een ​​breuk of een kogel in het lichaam te ‘zien’?",
+        "question": "Wat was er vóór röntgenfoto’s vaak nodig om een breuk of een kogel in het lichaam te ‘zien’?",
         "explanation": "Vóór de röntgenfoto's moest je vaak opereren om de binnenkant van het lichaam te kunnen zien; met hen krijg je een afbeelding zonder te knippen.",
         "options": [
           "Meestal moest het operatief geopend worden",
@@ -21683,7 +21683,7 @@
         "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_q9",
         "type": "mcq",
         "question": "Waarom kan een dik gerecht na het koken in de magnetron heet zijn aan de buitenkant en lauw in het midden?",
-        "explanation": "De golven dringen niet oneindig door in het voedsel, wat verklaart waarom een ​​dik gerecht vooral aan de oppervlakte opwarmt.",
+        "explanation": "De golven dringen niet oneindig door in het voedsel, wat verklaart waarom een dik gerecht vooral aan de oppervlakte opwarmt.",
         "options": [
           "De golven dringen niet oneindig diep door in het voedsel",
           "De oven verdeelt de warmte slecht vanwege een fabricagefout",
@@ -21749,11 +21749,11 @@
         "id": "course_55_la_theorie_de_la_gravitation_newton_1687_q5",
         "type": "mcq",
         "question": "Waarom botst de maan niet tegen de aarde, ook al ‘valt’ hij er voortdurend naartoe?",
-        "explanation": "De maan valt voortdurend richting de aarde, maar door zijn hoge laterale snelheid draait hij rond in plaats van te crashen: dit is de baan.",
+        "explanation": "De maan valt steeds naar de aarde, maar door haar hoge zijdelingse snelheid draait ze eromheen in plaats van erop te crashen: dat is een baan.",
         "options": [
           "Ze heeft ook een grote zijwaartse snelheid waardoor ze ronddraait in plaats van crasht.",
           "Tegelijkertijd wordt ze afgestoten door de zon",
-          "Haar atmosfeer vertraagt ​​haar net genoeg",
+          "Haar atmosfeer vertraagt haar net genoeg",
           "De aarde heeft feitelijk geen aantrekkingskracht."
         ],
         "correctIndex": 0
@@ -21924,7 +21924,7 @@
         "options": [
           "Zodat computers blijven communiceren, zelfs als een deel van het netwerk kapot gaat",
           "Om civiele communicatie te bespioneren",
-          "Om een ​​militair videospel te maken",
+          "Om een militair videospel te maken",
           "Ter vervanging van de telefoon in kantoren"
         ],
         "correctIndex": 0
@@ -22086,7 +22086,7 @@
         "question": "Hoe zijn de twee strengen georganiseerd in de structuur van DNA?",
         "explanation": "Twee complementaire strengen kronkelen samen, waarbij hun chemische letters in paren naar elkaar toe wijzen.",
         "options": [
-          "Ze wikkelen zich om elkaar heen en hun letters staan ​​in paren tegenover elkaar",
+          "Ze wikkelen zich om elkaar heen en hun letters staan in paren tegenover elkaar",
           "Ze zijn volledig onafhankelijk en raken elkaar nooit aan",
           "Ze vormen een stijve kubus zonder mogelijkheid tot scheiding",
           "Ze versmelten tot één enkele streng"
@@ -22230,21 +22230,21 @@
       {
         "id": "course_5_la_magna_carta_1215_q1",
         "type": "mcq",
-        "question": "Waarom legden de Engelse baronnen in 1215 de Magna Carta op aan koning John Lackland?",
-        "explanation": "Geconfronteerd met belastingen, gijzelaars en willekeurige boetes die John Lackland heeft opgelegd om zijn land te heroveren, komen de baronnen in opstand en leggen een tekst op die zijn macht beperkt.",
+        "question": "Waarom legden de Engelse baronnen in 1215 de Magna Carta op aan koning Jan zonder Land?",
+        "explanation": "Geconfronteerd met belastingen, gijzelaars en willekeurige boetes die Jan zonder Land heeft opgelegd om zijn land te heroveren, komen de baronnen in opstand en leggen een tekst op die zijn macht beperkt.",
         "options": [
           "Om koninklijke willekeur te beperken: belastingen, gijzelaars en onrechtmatige boetes",
-          "Om een ​​nieuwe kruistocht in het Heilige Land te financieren",
+          "Om een nieuwe kruistocht in het Heilige Land te financieren",
           "Om de Engelse monarchie af te schaffen",
-          "Om een ​​nieuwe koning te kiezen in de plaats van John"
+          "Om een nieuwe koning te kiezen in de plaats van John"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_5_la_magna_carta_1215_q2",
         "type": "trueFalse",
-        "question": "Waar of niet waar: vóór 1215 verloor Jan Lackland Normandië aan de Franse koning Filips II Augustus.",
-        "explanation": "In 1204 verloor Jan Lackland Normandië aan Filips II Augustus, een tegenslag die hem permanent verzwakte.",
+        "question": "Waar of niet waar: vóór 1215 verloor Jan zonder Land Normandië aan de Franse koning Filips II Augustus.",
+        "explanation": "In 1204 verliest Jan zonder Land Normandië aan Filips II Augustus, een klap waar hij niet meer van herstelt.",
         "options": [
           "Waar",
           "Onwaar"
@@ -22255,7 +22255,7 @@
         "id": "course_5_la_magna_carta_1215_q3",
         "type": "mcq",
         "question": "Wat zegt clausule 39 van Magna Carta?",
-        "explanation": "Artikel 39 legt het beginsel vast dat geen enkele vrije man kan worden gearresteerd of gevangengezet zonder een eerlijk proces tegen zijn gelijken.",
+        "explanation": "Artikel 39 zegt dat geen vrije man gearresteerd of gevangengezet mag worden zonder een regelmatig vonnis van zijn gelijken.",
         "options": [
           "Geen enkele vrije man kan gearresteerd worden zonder een oordeel van zijn gelijken",
           "De koning moet worden gekozen door de baronnen",
@@ -22281,18 +22281,18 @@
         "question": "Wat gebeurde er in augustus 1215, kort na de ondertekening van de Magna Carta?",
         "explanation": "Johannes kreeg in augustus 1215 de nietigverklaring van de tekst door de paus, waardoor het conflict met de baronnen opnieuw oplaaide.",
         "options": [
-          "John Lackland laat de tekst door de paus nietig verklaren en de burgeroorlog wordt hervat",
+          "Jan zonder Land laat de tekst door de paus nietig verklaren en de burgeroorlog wordt hervat",
           "De koning wordt afgezet door de baronnen",
           "Het charter wordt onmiddellijk in het hele koninkrijk toegepast",
-          "John Lackland gaat in ballingschap naar Frankrijk"
+          "Jan zonder Land gaat in ballingschap naar Frankrijk"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_5_la_magna_carta_1215_q6",
         "type": "mcq",
-        "question": "Welke militaire nederlaag in 1214 heeft John Lackland definitief geïsoleerd vóór de Magna Carta?",
-        "explanation": "In 1214 isoleerde de nederlaag van Bouvines, waar Philippe Auguste een coalitie met Engeland versloeg, John Lackland.",
+        "question": "Welke militaire nederlaag in 1214 heeft Jan zonder Land definitief geïsoleerd vóór de Magna Carta?",
+        "explanation": "In 1214 isoleerde de nederlaag van Bouvines, waar Philippe Auguste een coalitie met Engeland versloeg, Jan zonder Land.",
         "options": [
           "De nederlaag van Bouvines",
           "Het verlies van de Gascogne",
@@ -22304,7 +22304,7 @@
       {
         "id": "course_5_la_magna_carta_1215_q7",
         "type": "chronological",
-        "question": "Zet deze gebeurtenissen uit de regering van John Lackland in chronologische volgorde.",
+        "question": "Zet deze gebeurtenissen uit de regering van Jan zonder Land in chronologische volgorde.",
         "explanation": "Deze fasen lopen van 1204 tot 1216: het verlies van Normandië gaat vooraf aan de nederlaag van Bouvines, vervolgens de ondertekening van het charter en de heruitgave ervan door Hendrik III.",
         "items": [
           "Verlies van Normandië tegen Philippe Auguste",
@@ -22316,8 +22316,8 @@
       {
         "id": "course_5_la_magna_carta_1215_q8",
         "type": "numericSlider",
-        "question": "In welk jaar werd Magna Carta verzegeld in Runnymede?",
-        "explanation": "Koning John Lackland plaatste zijn zegel op de Magna Carta in juni 1215, in Runnymede Meadow.",
+        "question": "In welk jaar werd de Magna Carta verzegeld in Runnymede?",
+        "explanation": "Koning Jan zonder Land zet in juni 1215 zijn zegel op de Magna Carta, in de weide van Runnymede.",
         "correctValue": 1215.0,
         "sliderMin": 1150.0,
         "sliderMax": 1300.0,
@@ -22327,7 +22327,7 @@
       {
         "id": "course_5_la_magna_carta_1215_q9",
         "type": "numericSlider",
-        "question": "Hoeveel clausules staan ​​er in de tekst van de Magna Carta van 1215?",
+        "question": "Hoeveel clausules staan er in de tekst van de Magna Carta van 1215?",
         "explanation": "Het document, opgesteld onder invloed van aartsbisschop Stephen Langton, bevat 63 clausules.",
         "correctValue": 63.0,
         "sliderMin": 0.0,
@@ -22423,7 +22423,7 @@
           "Ze betwisten het idee dat soorten zijn geschapen zoals ze zijn, en brengen mensen dichter bij andere dieren",
           "Ze bewijzen dat de aarde jonger is dan we dachten",
           "Ze kondigen het einde aan van de traditionele landbouw",
-          "Ze trekken het bestaan ​​van fossielen in twijfel"
+          "Ze trekken het bestaan van fossielen in twijfel"
         ],
         "correctIndex": 0
       },
@@ -22523,7 +22523,7 @@
         "question": "Zet deze belangrijke fasen in de geschiedenis van het universum in chronologische volgorde.",
         "explanation": "Deze tijdlijn loopt van de initiële inflatie tot de vorming van de zon 4,6 miljard jaar geleden, via de eerste kernen ongeveer 3 minuten en de diffuse achtergrond ongeveer 380.000 jaar geleden.",
         "items": [
-          "De inflatiefase, net na het ontstaan ​​van het heelal",
+          "De inflatiefase, net na het ontstaan van het heelal",
           "De vorming van de eerste atoomkernen",
           "Het vrijkomen van licht, aan de oorsprong van de kosmische microgolfachtergrond",
           "Het verschijnen van de eerste sterren",
@@ -22908,9 +22908,9 @@
         "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_q1",
         "type": "mcq",
         "question": "Waarom botst de maan niet op de aarde, ook al trekt de zwaartekracht er voortdurend aan?",
-        "explanation": "De maan valt inderdaad naar de aarde toe, maar door zijn laterale snelheid mist hij voortdurend de aarde: dit noemen we een baan.",
+        "explanation": "De maan valt inderdaad naar de aarde toe, maar door zijn zijdelingse snelheid mist hij voortdurend de aarde: dit noemen we een baan.",
         "options": [
-          "Het heeft een laterale snelheid waardoor het de aarde op elk moment mist: het is een permanente vrije val",
+          "Het heeft een zijdelingse snelheid waardoor het de aarde op elk moment mist: het is een permanente vrije val",
           "Het wordt vastgehouden door een onzichtbaar magnetisch veld",
           "De zwaartekracht van de aarde werkt niet buiten de atmosfeer",
           "De maan ervaart geen enkele zwaartekracht"
@@ -23542,8 +23542,8 @@
       {
         "id": "course_6_la_peste_noire_en_europe_1347_1353_q9",
         "type": "percentageSlider",
-        "question": "Volgens de in de cursus gegeven schattingen, wat is het maximale aandeel van de Europese bevolking dat tussen 1347 en 1353 door de Zwarte Dood werd meegenomen?",
-        "explanation": "De cursus schat dat de Zwarte Dood tussen de 30 en 60% van de Europese bevolking doodt, dat wil zeggen 25 tot 50 miljoen mensen.",
+        "question": "Volgens de in deze les gegeven schattingen, wat is het maximale aandeel van de Europese bevolking dat tussen 1347 en 1353 door de Zwarte Dood werd meegenomen?",
+        "explanation": "Deze les schat dat de Zwarte Dood 30 tot 60% van de Europeanen doodt, zo’n 25 tot 50 miljoen mensen.",
         "correctValue": 60.0,
         "sliderMin": 0.0,
         "sliderMax": 100.0,
@@ -23628,8 +23628,8 @@
       {
         "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_q7",
         "type": "mcq",
-        "question": "Wat is het IPCC, genoemd in de cursus?",
-        "explanation": "Het IPCC synthetiseert het werk van duizenden klimaatwetenschappers en concludeert dat de opwarming sinds 1950 ongekend is en van menselijke oorsprong.",
+        "question": "Wat is het IPCC, genoemd in deze les?",
+        "explanation": "Het IPCC vat het werk van duizenden klimaatwetenschappers samen: de opwarming sinds 1950 is ongekend en komt van de mens.",
         "options": [
           "De groep die het werk van duizenden klimaatwetenschappers samenvat",
           "Een internationaal oliebedrijf",
@@ -23729,8 +23729,8 @@
       {
         "id": "course_72_pourquoi_dort_on_q6",
         "type": "mcq",
-        "question": "Wat is het glymfatische systeem, vermeld in de cursus?",
-        "explanation": "Het glymfatische systeem is een hersendrainagesysteem dat 's nachts tien keer actiever is; het verwijdert afvalstoffen, waaronder eiwitten die verband houden met het risico op Alzheimer.",
+        "question": "Wat is het glymfatische systeem, vermeld in deze les?",
+        "explanation": "Het glymfatische systeem is een afvoer in de hersenen, ’s nachts tien keer actiever. Het voert afval af, waaronder eiwitten die met alzheimer te maken hebben.",
         "options": [
           "Een netwerk van hersendrainage, ongeveer tien keer actiever 's nachts, dat de afvalstoffen uit de hersenen verwijdert",
           "De naam van de 90-minuten slaapcyclus",
@@ -23972,8 +23972,8 @@
       {
         "id": "course_74_pourquoi_certaines_especes_sont_elles_im_q8",
         "type": "mcq",
-        "question": "Wat is het doel van de in de cursus besproken senolytische behandelingen?",
-        "explanation": "Senolytica zijn bedoeld om de zombiecellen die zich ophopen en het weefsel ontsteken, te elimineren; bij dieren heeft dit sommige functies al verjongd.",
+        "question": "Wat is het doel van de in deze les besproken senolytische behandelingen?",
+        "explanation": "Senolytica moeten de zombiecellen opruimen die zich ophopen en weefsel ontsteken. Bij dieren heeft dat sommige functies al verjongd.",
         "options": [
           "Het elimineren van spookcellen die zich met de leeftijd ophopen",
           "Versnel de deling van alle cellen in het lichaam",
@@ -26106,7 +26106,7 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q9",
         "type": "chronological",
-        "question": "Zet deze stappen van het verhaal van Les Misérables in de juiste volgorde.",
+        "question": "Zet deze stappen van het verhaal van De ellendigen in de juiste volgorde.",
         "explanation": "Hugo begint de roman in 1845, neemt het manuscript weer op in ballingschap na de staatsgreep van 1851, voordat het boek in 1862 in Brussel verschijnt.",
         "items": [
           "Hugo begint met het schrijven van de roman onder de titel « Les Misères »",
@@ -26117,8 +26117,8 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q10",
         "type": "numericSlider",
-        "question": "In welk jaar verschijnt uiteindelijk Les Misérables, na zeventien jaar werk?",
-        "explanation": "Les Misérables verschijnt in 1862 in Brussel, na zeventien jaar werk begonnen vanaf 1845.",
+        "question": "In welk jaar verschijnt uiteindelijk De ellendigen, na zeventien jaar werk?",
+        "explanation": "De ellendigen verschijnt in 1862 in Brussel, na zeventien jaar werk begonnen vanaf 1845.",
         "correctValue": 1862.0,
         "sliderMin": 1840.0,
         "sliderMax": 1880.0,
@@ -26252,7 +26252,7 @@
         "id": "course_93_le_rouge_et_le_noir_stendhal_q1",
         "type": "mcq",
         "question": "Wie is de auteur van 'De Rood en de Zwart', met zijn echte naam Henri Beyle?",
-        "explanation": "Stendhal, wiens echte naam Henri Beyle is, publiceert Le Rouge et le Noir in 1830.",
+        "explanation": "Stendhal, wiens echte naam Henri Beyle is, publiceert Rood en zwart in 1830.",
         "options": [
           "Stendhal",
           "Honoré de Balzac",
@@ -26628,7 +26628,7 @@
         "id": "course_96_l_etranger_camus_q1",
         "type": "mcq",
         "question": "Wie is de auteur van De Vreemdeling?",
-        "explanation": "Albert Camus publiceert L'Étranger in 1942, zijn eerste roman.",
+        "explanation": "Albert Camus publiceert De vreemdeling in 1942, zijn eerste roman.",
         "options": [
           "Albert Camus",
           "Jean-Paul Sartre",
@@ -27008,7 +27008,7 @@
         "id": "course_99_le_pere_goriot_balzac_q1",
         "type": "mcq",
         "question": "Wie is de auteur van Vader Goriot?",
-        "explanation": "Honoré de Balzac publiceert Le Père Goriot in 1835.",
+        "explanation": "Honoré de Balzac publiceert Vader Goriot in 1835.",
         "options": [
           "Honoré de Balzac",
           "Victor Hugo",

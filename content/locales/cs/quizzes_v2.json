@@ -42,8 +42,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q4",
         "type": "mcq",
-        "question": "Co představuje albatros v sekci „Slezina a ideál“?",
-        "explanation": "Albatros, majestátní v letu, ale směšný, jakmile byl položen na zem, představuje básníka ve světě, který mu nerozumí.",
+        "question": "Co symbolizuje albatros v sekci „Spleen a ideál“?",
+        "explanation": "Albatros, vznešený v letu, ale směšný na zemi, je básník ve světě, který ho nechápe.",
         "options": [
           "Básník, majestátní v letu, ale směšný na zemi",
           "Naprostá svoboda umělce",
@@ -59,7 +59,7 @@
         "explanation": "„Pařížské obrazy“ proměňují město v psychologickou krajinu. Básník se tam toulá jako kočárek, pozorovatel pařížského života za Haussmanna.",
         "options": [
           "\"Pařížské malby\"",
-          "“Slezina a ideální”",
+          "“Spleen a ideální”",
           "“Víno”",
           "\"Smrt\""
         ],
@@ -71,10 +71,10 @@
         "question": "Která báseň popisuje přírodu jako „chrám“ znaků spojujících vůně, barvy a zvuky?",
         "explanation": "„Korespondence“ popisuje přírodu jako chrám znamení. Smysly se tam mísí: parfémy, barvy a zvuky na sebe reagují.",
         "options": [
-          "\"korespondence\"",
-          "\"Albatros\"",
-          "\"Slezina\"",
-          "\"Sbírka\""
+          "„Korespondence“",
+          "„Albatros“",
+          "„Spleen“",
+          "„Sbírka“"
         ],
         "correctIndex": 0
       },
@@ -643,7 +643,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q3",
         "type": "trueFalse",
-        "question": "Pravda nebo lež: původní název Brave New World ironicky cituje Shakespearovu hru.",
+        "question": "Pravda nebo lež: původní anglický název Konce civilizace ironicky cituje Shakespeara.",
         "explanation": "Název cituje Shakespearovu Bouři, jejíž naivní údiv zde maskuje odlidštěnou budoucnost.",
         "options": [
           "Pravda",
@@ -706,7 +706,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q8",
         "type": "trueFalse",
-        "question": "Pravda nebo lež: na konci románu John souhlasí, že bude žít v pohodlí v Brave New World.",
+        "question": "Pravda nebo lež: na konci románu John souhlasí, že bude žít v pohodlí Konce civilizace.",
         "explanation": "John odmítá somu a umělý ráj navržený Mondem: zabije se bez možného usmíření.",
         "options": [
           "Pravda",
@@ -717,7 +717,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q9",
         "type": "numericSlider",
-        "question": "Ve kterém roce vydal Aldous Huxley Brave New World?",
+        "question": "Ve kterém roce vydal Aldous Huxley Konec civilizace?",
         "explanation": "Huxley vydal tento román v roce 1932 poté, co jej napsal předchozí rok.",
         "correctValue": 1932.0,
         "sliderMin": 1900.0,
@@ -1227,8 +1227,8 @@
       {
         "id": "course_10_la_decouverte_de_l_amerique_1492_q3",
         "type": "trueFalse",
-        "question": "Pravda nebo lež: Kryštof Kolumbus se snažil především dokázat, že Země je kulatá, což byla myšlenka, kterou před ním neznal.",
-        "explanation": "Kulovitost Země vypočítal již řecký učenec Eratosthenes ve 3. století před naším letopočtem. INZERÁT; Kolumbův cíl ​​byl ekonomický.",
+        "question": "Pravda nebo lež: Kryštof Kolumbus chtěl především dokázat, že Země je kulatá, a tuhle myšlenku před ním nikdo neznal.",
+        "explanation": "Kulovitost Země spočítal už řecký učenec Eratosthenés ve 3. století př. n. l. Kolumbův cíl byl ekonomický.",
         "options": [
           "Pravda",
           "Nepravda"
@@ -1263,7 +1263,7 @@
         "id": "course_10_la_decouverte_de_l_amerique_1492_q6",
         "type": "mcq",
         "question": "Jak Kolumbus nazval domorodé obyvatele, se kterými se setkal v přesvědčení, že jsou v Asii?",
-        "explanation": "Columbus je přesvědčen, že dorazil do Indie, a nazývá Tainos, se kterými se setkává, „Indiáni“.",
+        "explanation": "Kolumbus je přesvědčen, že dorazil do Indie, a nazývá Tainos, se kterými se setkává, „Indiáni“.",
         "options": [
           "Indové",
           "Aztékové",
@@ -1275,8 +1275,8 @@
       {
         "id": "course_10_la_decouverte_de_l_amerique_1492_q7",
         "type": "mcq",
-        "question": "Co je kolumbijská burza?",
-        "explanation": "Tento přesun přináší brambory a rajčata do Evropy a pšenici, koně nebo dobytek do Ameriky a oba světy navždy mění.",
+        "question": "Co je kolumbijská výměna?",
+        "explanation": "Kolumbijská výměna je masový přesun rostlin, zvířat, lidí a nemocí mezi Starým a Novým světem po roce 1492.",
         "options": [
           "Masivní přenos rostlin, zvířat a nemocí mezi Evropou a Amerikou",
           "Mírová smlouva mezi Španělskem a Portugalskem",
@@ -1482,7 +1482,7 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q4",
         "type": "mcq",
-        "question": "Co symbolizuje posměváček, kterého vám Atticus zakazuje zabíjet?",
+        "question": "Co symbolizuje posměváček, kterého ti Atticus zakazuje zabíjet?",
         "explanation": "Neškodný posměváček představuje Toma Robinsona a Boo Radleyho: dvě bytosti, které společnost bezdůvodně pronásleduje nebo přeměňuje v monstra.",
         "options": [
           "Nevinné bytosti jako Tom Robinson a Boo Radley",
@@ -2042,7 +2042,7 @@
       {
         "id": "course_116_la_metamorphose_kafka_q1",
         "type": "mcq",
-        "question": "Jak začíná The Metamorphosis v jednom z nejslavnějších incipitů v literatuře?",
+        "question": "Jak začíná Proměna v jednom z nejslavnějších začátků literatury?",
         "explanation": "Román začíná tím, že se Gregor Samsa probouzí proměněný v monstrózní hmyz, aniž by tento jev nějak vysvětlil.",
         "options": [
           "Gregor Samsa se probouzí proměněný v monstrózní hmyz",
@@ -2156,7 +2156,7 @@
         "id": "course_116_la_metamorphose_kafka_q10",
         "type": "numericSlider",
         "question": "Ve kterém roce napsal Kafka Proměnu?",
-        "explanation": "Kafka napsal The Metamorphosis v roce 1912, v období velké kreativity, před jeho vydáním v roce 1915.",
+        "explanation": "Kafka napsal Proměnu v roce 1912, v období velké kreativity, a vyšla v roce 1915.",
         "correctValue": 1912.0,
         "sliderMin": 1880.0,
         "sliderMax": 1940.0,
@@ -2302,7 +2302,7 @@
       {
         "id": "course_118_moby_dick_melville_q1",
         "type": "mcq",
-        "question": "Jakou osobní zkušenost měl Herman Melville před napsáním Moby Dicka?",
+        "question": "Jakou osobní zkušenost měl Herman Melville před napsáním Bílé velryby?",
         "explanation": "Melville se ve 40. letech 19. století plavil na velrybářských lodích v Pacifiku, dokonce žil mezi kmeny na Markézských ostrovech.",
         "options": [
           "Plavil se na velrybářských lodích v Pacifiku a žil mezi kmeny na Markézách",
@@ -2315,7 +2315,7 @@
       {
         "id": "course_118_moby_dick_melville_q2",
         "type": "trueFalse",
-        "question": "Pravda nebo lež: Moby Dick se po svém vydání v roce 1851 těšil obrovskému komerčnímu úspěchu.",
+        "question": "Pravda nebo lež: Bílá velryba měla po vydání v roce 1851 obrovský komerční úspěch.",
         "explanation": "Román byl po svém vydání totální komerční neúspěch; Melville umírá přesvědčen, že jeho jméno zmizí.",
         "options": [
           "Pravda",
@@ -2366,7 +2366,7 @@
         "id": "course_118_moby_dick_melville_q6",
         "type": "mcq",
         "question": "Co je pro kapitána Achaba skutečně bílá velryba Moby Dick?",
-        "explanation": "Pro Achaba není Moby Dick zvíře, ale maska ​​vesmírné zhoubnosti, kterou chce zničit.",
+        "explanation": "Pro Achaba není Moby Dick zvíře, ale maska vesmírné zhoubnosti, kterou chce zničit.",
         "options": [
           "Maska vesmírného zhoubného nádoru, ne jednoduchého zvířete",
           "Jednoduchá hra mimo jiné",
@@ -2575,7 +2575,7 @@
       {
         "id": "course_11_la_prise_de_la_bastille_1789_q2",
         "type": "trueFalse",
-        "question": "Pravda nebo lež: Bastila 14. července 1789 ubytovala tisíce politických vězňů.",
+        "question": "Pravda nebo lež: Bastila 14. července 1789 držela tisíce politických vězňů.",
         "explanation": "Toho dne bylo v Bastille pouze 7 vězňů: 4 padělatelé, 2 muži považovaní za šílence a aristokrat.",
         "options": [
           "Pravda",
@@ -2586,7 +2586,7 @@
       {
         "id": "course_11_la_prise_de_la_bastille_1789_q3",
         "type": "mcq",
-        "question": "Proč Ludvík XVI. svolal na květen 1789 generální stavovský úřad?",
+        "question": "Proč Ludvík XVI. svolal na květen 1789 generální stavy?",
         "explanation": "Království je zničeno, zejména nákladnou podporou poskytnutou americkým koloniím, a král hledá nové daně.",
         "options": [
           "Zvýšit nové daně tváří v tvář bankrotu království",
@@ -2636,8 +2636,8 @@
       {
         "id": "course_11_la_prise_de_la_bastille_1789_q7",
         "type": "mcq",
-        "question": "Co je to lettre de cachet, kvůli kterému je Bastille tak nenáviděná?",
-        "explanation": "Lettre de cachet umožňuje někoho zavřít bez soudu, což v očích Pařížanů ztělesňuje královskou svévoli.",
+        "question": "Co je lettre de cachet, kvůli kterému je Bastila tak nenáviděná?",
+        "explanation": "Lettre de cachet dovoluje zavřít člověka bez soudu. Pro Pařížany ztělesňuje královskou svévoli.",
         "options": [
           "Rozkaz vězení bez soudu",
           "Královská daň z chleba",
@@ -2649,8 +2649,8 @@
       {
         "id": "course_11_la_prise_de_la_bastille_1789_q8",
         "type": "trueFalse",
-        "question": "Pravda nebo lež: když se králi dozvěděli o útoku na Bastilu, odpověděl, že to byla prostá vzpoura.",
-        "explanation": "Naopak mu bylo řečeno „Ne Sire, to je revoluce“, i když si král 14. dne ve svém loveckém deníku poznamenal „Nic“.",
+        "question": "Pravda nebo lež: když králi oznámili útok na Bastilu, odpověděl, že to byla prostá vzpoura.",
+        "explanation": "Naopak mu řekli: „Ne, sire, to je revoluce.“ Král si přitom 14. do loveckého deníku zapsal „Nic“.",
         "options": [
           "Pravda",
           "Nepravda"
@@ -2672,7 +2672,7 @@
       {
         "id": "course_11_la_prise_de_la_bastille_1789_q10",
         "type": "mcq",
-        "question": "Co se stalo na venkově po přepadení Bastily pod vlivem Velkého strachu?",
+        "question": "Co se stalo na venkově po dobytí Bastily pod vlivem Velkého strachu?",
         "explanation": "Ze strachu z pomsty šlechticů spálili rolníci listiny svých panských práv, což urychlilo zrušení privilegií.",
         "options": [
           "Rolníci pálí listiny panských práv",
@@ -2948,7 +2948,7 @@
         "id": "course_122_la_naissance_de_l_impressionnisme_q2",
         "type": "mcq",
         "question": "Který Manetův obraz skandalizoval Salon des Refusés v roce 1863?",
-        "explanation": "Manet šokuje smícháním ženského aktu a dvou mužů v moderních kostýmech v Le Déjeuner sur l'herbe.",
+        "explanation": "Manet šokuje tím, že ve Snídani v trávě smíchá ženský akt a dva muže v moderních kostýmech.",
         "options": [
           "Oběd na trávě",
           "Tisk, vycházející slunce",
@@ -3426,7 +3426,7 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q3",
         "type": "mcq",
         "question": "Který obraz z roku 1907 označuje výchozí bod kubismu?",
-        "explanation": "Les Demoiselles d'Avignon se svými ostrými akty ohromily i ty, kdo jsou Picassovi blízcí.",
+        "explanation": "Avignonské slečny s ostrými akty ohromily i lidi blízko Picassovi.",
         "options": [
           "Mladé dámy z Avignonu",
           "Guernica",
@@ -3499,7 +3499,7 @@
       {
         "id": "course_126_le_cubisme_picasso_et_braque_q9",
         "type": "numericSlider",
-        "question": "Kolem kterého roku Picasso dokončil Les Demoiselles d'Avignon?",
+        "question": "Kolem kterého roku Picasso dokončil Avignonské slečny?",
         "explanation": "Picasso dokončil tento zakládající obraz kubismu v roce 1907.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -3865,7 +3865,7 @@
       {
         "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_q1",
         "type": "numericSlider",
-        "question": "Ve kterém roce se kampaň v Ulmu konala?",
+        "question": "Ve kterém roce se konalo tažení u Ulmu?",
         "explanation": "Ulmské tažení proběhlo v říjnu 1805, několik týdnů před vítězstvím u Slavkova.",
         "correctValue": 1805.0,
         "sliderMin": 1780.0,
@@ -3900,7 +3900,7 @@
       {
         "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_q4",
         "type": "mcq",
-        "question": "Co je napoleonský armádní sbor, klíčový přínos tažení?",
+        "question": "Co je Napoleonův armádní sbor, klíčová výhoda tažení?",
         "explanation": "Každý armádní sbor je autonomní síla schopná manévrovat samostatně, což umožňuje sedmi sborům pochodovat paralelně směrem k Ulmu.",
         "options": [
           "Malá autonomní armáda s pěchotou, jízdou a děly",
@@ -3938,7 +3938,7 @@
         "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_q7",
         "type": "mcq",
         "question": "Co se stalo s francouzskou flotilou ve stejném týdnu jako kapitulace Ulmu?",
-        "explanation": "Tentýž měsíc u Trafalgaru admirál Nelson zničil francouzsko-španělskou flotilu a nechal Anglii pod kontrolou moře.",
+        "explanation": "Tentýž měsíc u Trafalgaru admirál Nelson zničil francouzsko-španělskou flotilu a nechal Anglii kontrolu nad moři.",
         "options": [
           "To je zničeno Nelsonem u Trafalgaru",
           "Zajímá anglickou flotilu",
@@ -3963,7 +3963,7 @@
         "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_q9",
         "type": "mcq",
         "question": "Co řekl generál Mack Napoleonovi během jejich setkání po kapitulaci?",
-        "explanation": "Mack se tak staví před Napoleona, který mu přesto vrací meč při večeři mezi důstojníky.",
+        "explanation": "Mack se tak představuje Napoleonovi, který mu přesto vrací meč při večeři mezi důstojníky.",
         "options": [
           "\"Přichází ten nešťastný Mack\"",
           "„Ať žije císař“",
@@ -4019,7 +4019,7 @@
       {
         "id": "course_130_le_pop_art_warhol_et_lichtenstein_q4",
         "type": "mcq",
-        "question": "Jakou techniku ​​použil Warhol k reprodukování obrazu jako Marilyn Monroe tucetkrát?",
+        "question": "Jakou techniku použil Warhol k reprodukování obrazu jako Marilyn Monroe tucetkrát?",
         "explanation": "Sítotisk umožňuje Warholovi znásobit obraz, což ilustruje myšlenku, že reprodukce transformuje auru díla.",
         "options": [
           "Sítotisk",
@@ -4369,7 +4369,7 @@
       {
         "id": "course_133_le_hip_hop_naissance_d_une_culture_q3",
         "type": "mcq",
-        "question": "Jakou techniku ​​vynalezl Kool Herc tím, že izoloval rytmickou část desky dvěma gramofony?",
+        "question": "Jakou techniku vynalezl Kool Herc tím, že izoloval rytmickou část desky dvěma gramofony?",
         "explanation": "Kool Herc vynalézá breakbeat, který izoluje a prodlužuje nejtanečnější část desky.",
         "options": [
           "Přestávka",
@@ -5172,7 +5172,7 @@
       {
         "id": "course_13_la_bataille_de_waterloo_1815_q3",
         "type": "mcq",
-        "question": "Jaký byl Napoleonův původní plán před bitvou, nazývaný Centrální pozice?",
+        "question": "Jaký byl Napoleonův původní plán před bitvou, zvaný centrální pozice?",
         "explanation": "Napoleon se chce postavit mezi dvě nepřátelské armády a porazit je jednu po druhé, než se spojí.",
         "options": [
           "Umístěte se mezi Wellingtona a Blüchera, abyste je porazili samostatně",
@@ -5186,7 +5186,7 @@
         "id": "course_13_la_bataille_de_waterloo_1815_q4",
         "type": "trueFalse",
         "question": "Pravda nebo lež: Napoleon poslal maršála Grouchyho, aby pronásledoval Prusy za Lignym, protože si myslel, že je vyřadil z akce.",
-        "explanation": "Napoleon věřil, že Prusové byli po Ligny neutralizováni a oddělil Grouchy s 33 000 muži, aby je pronásledoval, což byla chyba, která by byla drahá.",
+        "explanation": "Napoleon si myslel, že Prusové jsou po Ligny vyřazení, a poslal za nimi Grouchyho s 33 000 muži. Tahle chyba ho přijde draho.",
         "options": [
           "Pravda",
           "Nepravda"
@@ -5210,7 +5210,7 @@
         "id": "course_13_la_bataille_de_waterloo_1815_q6",
         "type": "mcq",
         "question": "Jaká událost vyvolala paniku a porážku francouzské armády u Waterloo?",
-        "explanation": "Císařská garda, která byla spuštěna jako poslední možnost, poprvé ustupuje a zazní výkřik „Garda ustupuje!“ » přemění ústup na útěk.",
+        "explanation": "Císařská garda, nasazená jako poslední pokus, poprvé ustoupí. Výkřik „Garda ustupuje!“ změní ústup v útěk.",
         "options": [
           "Ústup císařské gardy",
           "Napoleonova smrt na bojišti",
@@ -5236,7 +5236,7 @@
         "id": "course_13_la_bataille_de_waterloo_1815_q8",
         "type": "chronological",
         "question": "Seřaď tyto události ze sta dní v chronologickém pořadí.",
-        "explanation": "Tyto čtyři etapy probíhají od 1. března do 22. června 1815: návrat z ostrova Elba, částečné vítězství Ligny, porážka Waterloo, poté abdikace.",
+        "explanation": "Tyto čtyři etapy probíhají od 1. března do 22. června 1815: návrat z ostrova Elba, dílčí vítězství u Ligny, porážka Waterloo, poté abdikace.",
         "items": [
           "Napoleonovo vylodění u Antibes",
           "Bitva u Ligny",
@@ -5580,7 +5580,7 @@
       {
         "id": "course_142_charlie_chaplin_et_le_cinema_muet_q8",
         "type": "chronological",
-        "question": "Seřaď tyto fáze Chaplinovy ​​kariéry a filmu v chronologickém pořadí.",
+        "question": "Seřaď tyto fáze Chaplinovy kariéry a filmu v chronologickém pořadí.",
         "explanation": "Tyto čtyři milníky (1895, 1914, 1940, 1952) sledují zrod kinematografie, vynález Charlota, Chaplinův politický závazek a poté jeho nucený exil.",
         "items": [
           "První veřejné promítání bratří Lumièrů",
@@ -5636,7 +5636,7 @@
       {
         "id": "course_143_orson_welles_et_citizen_kane_q3",
         "type": "mcq",
-        "question": "S kterým kameramanem Welles vyvinul techniku ​​hloubky ostrosti ve filmu Občan Kane?",
+        "question": "S kterým kameramanem Welles vyvinul techniku hloubky ostrosti ve filmu Občan Kane?",
         "explanation": "S kameramanem Greggem Tolandem Welles vnucuje hloubku ostrosti, která udržuje vše ostré od popředí až po pozadí obrazu.",
         "options": [
           "Gregg Toland",
@@ -5879,7 +5879,7 @@
       {
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q4",
         "type": "mcq",
-        "question": "Kdo vynalezl techniku ​​štěrbinového skenování k natočení poslední cesty filmu?",
+        "question": "Kdo vynalezl techniku štěrbinového skenování k natočení poslední cesty filmu?",
         "explanation": "Vedoucí efektů Douglas Trumbull vynalezl štěrbinový sken, který vytváří hypnotické tunely světla pro poslední cestu.",
         "options": [
           "Douglas Trumbull",
@@ -5964,7 +5964,7 @@
         "explanation": "Hitchcock vysvětluje Truffautovi, že napětí ukazuje divákům bombu, zatímco postavy ji ignorují, což prodlužuje napětí.",
         "options": [
           "Napětí ukazuje publiku bombu dříve, než exploduje, překvapení nikoli",
-          "Napětí děsí, překvapení vás rozesměje",
+          "Napětí děsí, překvapení tě rozesměje",
           "Překvapení trvá déle než napětí",
           "Není v tom žádný rozdíl, jsou to synonyma"
         ],
@@ -5986,7 +5986,7 @@
       {
         "id": "course_146_hitchcock_et_le_suspense_q3",
         "type": "mcq",
-        "question": "Jakou techniku ​​používá Hitchcock ve filmu The Rope (1948) k simulaci filmu natočeného jediným pohybem?",
+        "question": "Jakou techniku používá Hitchcock ve filmu The Rope (1948) k simulaci filmu natočeného jediným pohybem?",
         "explanation": "Hitchcock skrývá řezy za zády nebo tmavým kusem nábytku, aby simuloval jeden sekvenční záběr v The Rope.",
         "options": [
           "Sekvenční záběr se skrytými řezy za zády nebo nábytkem",
@@ -7204,7 +7204,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q1",
         "type": "mcq",
-        "question": "Ve kterém městě namaloval Picasso v roce 1907 Les Demoiselles d'Avignon?",
+        "question": "Ve kterém městě namaloval Picasso v roce 1907 Avignonské slečny?",
         "explanation": "Picasso pracoval v Bateau-Lavoir na Montmartru, kde dokončil obraz v roce 1907.",
         "options": [
           "Paříž (Montmartre)",
@@ -7304,7 +7304,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q9",
         "type": "numericSlider",
-        "question": "Ve kterém roce Picasso dokončil Les Demoiselles d'Avignon?",
+        "question": "Ve kterém roce Picasso dokončil Avignonské slečny?",
         "explanation": "Picasso dokončil obraz v roce 1907 na Montmartru.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -9376,9 +9376,9 @@
         "explanation": "Polyphemus se modlí ke svému otci Poseidonovi, aby Odysseus dlouho bloudil a ztratil všechny své společníky: tato kletba otevírá deset let zkoušek na moři.",
         "options": [
           "Strukturuje deset let putování po moři pro Odyssea",
-          "Promění Ulyssese v Kyklopa",
+          "Promění Odyssea v Kyklopa",
           "Okamžitě zabije všechny své společníky",
-          "Zabrání Ulyssesovi, aby ještě někdy viděl Ithaku"
+          "Zabrání Odysseovi, aby ještě někdy viděl Ithaku"
         ],
         "correctIndex": 0
       },
@@ -9386,7 +9386,7 @@
         "id": "course_173_ulysse_et_le_cyclope_q9",
         "type": "chronological",
         "question": "Uspořádejte tyto fáze epizody Cyclops.",
-        "explanation": "Od vstupu do jeskyně po oslepení a poté až po přiznání svého jména na moři, epizoda sleduje přesný průběh, který zpečetí Ulyssesův osud.",
+        "explanation": "Od vstupu do jeskyně přes oslepení až po přiznání jména na moři epizoda sleduje přesný sled, který zpečetí Odysseův osud.",
         "items": [
           "Odysseus a jeho muži vstupují do Polyfémovy jeskyně",
           "Polyphemus se opije a ptá se na jméno svého hosta",
@@ -9452,8 +9452,8 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q5",
         "type": "mcq",
-        "question": "Kdo varoval Ulyssese před nebezpečím a strategií, kterou proti Sirénám přijmout?",
-        "explanation": "Byl to kouzelník Circe, kdo varoval Ulyssese a umožnil mu připravit jeho strategii.",
+        "question": "Kdo varoval Odyssea před nebezpečím a strategií proti Sirénám?",
+        "explanation": "Kouzelnice Kirké varovala Odyssea a díky ní si mohl připravit strategii.",
         "options": [
           "Kouzelník Circe",
           "Bohyně Athéna",
@@ -9505,7 +9505,7 @@
         "question": "Seřaď tyto kroky z epizody Mořské panny.",
         "explanation": "Varování Circe předchází materiálové přípravě, poté samotné zkoušce písně, kde Odysseus zachraňuje pouze předchozí aranžmá.",
         "items": [
-          "Circe varuje Ulyssese před nebezpečím Sirén",
+          "Kirké varuje Odyssea před nebezpečím Sirén",
           "Odysseus pokryje uši svých společníků voskem",
           "Odysseus je přivázán ke stěžni lodi",
           "Doznívá píseň Sirén a Odysseus žádá svou svobodu"
@@ -11009,7 +11009,7 @@
         "explanation": "Jméno Valkyrie znamená „ti, kteří volí zabíjení“, v odkazu na jejich roli selekce na bojištích.",
         "options": [
           "Ti, kteří volí zabíjení",
-          "Odinovy ​​služky",
+          "Odinovy služky",
           "Okřídlení poslové",
           "Dcery války"
         ],
@@ -12023,7 +12023,7 @@
       {
         "id": "course_194_le_mahabharata_q7",
         "type": "mcq",
-        "question": "Co představuje Bhagavad-gíta v příběhu Mahábhárata?",
+        "question": "Co je Bhagavadgíta v příběhu Mahábháraty?",
         "explanation": "Bhagavadgíta je dialog o přibližně 700 verších, ve kterých ho Krišna, Arjunův vozataj, učí povinnosti a nesobeckému jednání.",
         "options": [
           "Krišnův dialog s Ardžunou o službě a akci",
@@ -12197,7 +12197,7 @@
       {
         "id": "course_196_merlin_l_enchanteur_q2",
         "type": "mcq",
-        "question": "Jaké Merlinovy ​​schopnosti zůstávají navzdory jeho křtu?",
+        "question": "Jaké Merlinovy schopnosti zůstávají navzdory jeho křtu?",
         "explanation": "Křest vymaže démonické prokletí, ale Merlin si zachovává znalosti minulosti, zděděné po démonech, a dar proroctví.",
         "options": [
           "Poznání minulosti a dar proroctví",
@@ -12739,8 +12739,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "Co představuje hidžra v 622?",
-        "explanation": "Hidžra je odchod Mohameda, kterému hrozí smrtí v Mekce, do oázy Medina. Toto datum se stává rokem 1 muslimského kalendáře.",
+        "question": "Co je hidžra v roce 622?",
+        "explanation": "Hidžra je odchod Mohameda z Mekky do oázy Medina, když mu hrozí smrt. Toto datum se stává rokem 1 muslimského kalendáře.",
         "options": [
           "Mohamedův odjezd z Mekky do Mediny",
           "První zjevení přijaté Mohamedem",
@@ -12753,7 +12753,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q2",
         "type": "mcq",
         "question": "Kdo ovládal obchod kolem Kaaby před islámem?",
-        "explanation": "Kurajšovci, dominantní kmen Mekky, čerpali svou sílu z poutí a obchodu kolem polyteisty Kaaby.",
+        "explanation": "Kurajšovci, dominantní kmen Mekky, čerpali sílu z poutí a obchodu kolem tehdy ještě polyteistické Kaaby.",
         "options": [
           "Kurajský kmen",
           "Byzantinci",
@@ -12766,7 +12766,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q3",
         "type": "trueFalse",
         "question": "Pravda nebo lež: po dobytí Mekky v roce 630 zmasakroval Mohamed své bývalé pronásledovatele.",
-        "explanation": "Mohamed naopak udělil generální pardon, který usnadnil shromáždění arabských kmenů k islámu.",
+        "explanation": "Mohamed naopak udělil generální pardon, a arabské kmeny se tak snáz přidaly k islámu.",
         "options": [
           "Pravda",
           "Nepravda"
@@ -12776,8 +12776,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
-        "question": "Ve kterém roce zemřel Mohamed a zůstala tak Arábie sjednocená pod jednou autoritou?",
-        "explanation": "Muhammad zemřel v roce 632, pouhých deset let po Hegiře, kdy byla téměř celá Arábie sjednocena.",
+        "question": "Ve kterém roce Mohamed zemřel a zanechal Arábii sjednocenou pod jednou mocí?",
+        "explanation": "Mohamed zemřel v roce 632, pouhých deset let po hidžře, kdy už byla skoro celá Arábie sjednocená.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
         "sliderMax": 660.0,
@@ -12799,8 +12799,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q6",
         "type": "mcq",
-        "question": "Jaká je dhimma založená muslimskými dobyvateli?",
-        "explanation": "Dhimma je chráněný stav, který opravňuje „lidi Knihy“ udržovat své náboženství po zaplacení džizji.",
+        "question": "Co je dhimma, kterou zavedli muslimští dobyvatelé?",
+        "explanation": "Dhimma je chráněný status: „lidé Knihy“ si můžou nechat víru, když platí džizju.",
         "options": [
           "Stav, který umožňuje křesťanům a Židům ponechat si své náboženství proti dani",
           "Název muslimského kalendáře",
@@ -12813,7 +12813,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q7",
         "type": "mcq",
         "question": "Které dvě velké říše byly vyčerpány svými válkami kolem Arábie v 7. století?",
-        "explanation": "Nekonečné války mezi Byzancí (Východořímskou říší) a sasánovskými Peršany vytvořily geopolitické vakuum, z něhož využilo Mohamedovo nové poselství.",
+        "explanation": "Nekonečné války mezi Byzancí (Východořímskou říší) a sásánovskými Peršany vytvořily geopolitické vakuum, kterého využilo Mohamedovo nové poselství.",
         "options": [
           "Byzantská a Sasánovská říše",
           "Římská a čínská říše",
@@ -12830,7 +12830,7 @@
         "options": [
           "Společenství věřících, které přesahuje pokrevní a rodové svazky",
           "Název muslimského kalendáře",
-          "Armáda povstala proti Mekce",
+          "Armáda povolaná proti Mekce",
           "Rada chalífů"
         ],
         "correctIndex": 0
@@ -14809,7 +14809,7 @@
         "id": "course_216_la_dette_mondiale_q2",
         "type": "numericSlider",
         "question": "Kolik je japonský veřejný dluh v procentech HDP?",
-        "explanation": "Japonský dluh se blíží 260 % ​​jeho HDP.",
+        "explanation": "Japonský dluh se blíží 260 % jeho HDP.",
         "correctValue": 260.0,
         "sliderMin": 100.0,
         "sliderMax": 400.0,
@@ -15068,7 +15068,7 @@
       {
         "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_q4",
         "type": "mcq",
-        "question": "Jaký je čínský ekvivalent amerického GAFAM, citovaného v kurzu?",
+        "question": "Jaký je čínský ekvivalent amerického GAFAM?",
         "explanation": "GAFAM ve Spojených státech má svůj ekvivalent v Číně s BATX, tito giganti, kteří využívají svůj náskok v datech k expanzi do mnoha oblastí.",
         "options": [
           "BATX",
@@ -16048,8 +16048,8 @@
       {
         "id": "course_226_l_ia_et_l_emploi_q1",
         "type": "mcq",
-        "question": "Kdo byli luddisté ​​na počátku 19. století?",
-        "explanation": "Luddisté ​​byli britští textilní dělníci, kteří v letech 1811 až 1816 zničili elektrické tkalcovské stavy ohrožující jejich řemeslo.",
+        "question": "Kdo byli luddisté na počátku 19. století?",
+        "explanation": "Luddisté byli britští textilní dělníci, kteří v letech 1811 až 1816 zničili elektrické tkalcovské stavy ohrožující jejich řemeslo.",
         "options": [
           "Britští textilní dělníci, kteří zničili elektrické tkalcovské stavy",
           "Vynálezci parního stroje",
@@ -16135,7 +16135,7 @@
       {
         "id": "course_226_l_ia_et_l_emploi_q8",
         "type": "mcq",
-        "question": "Jaký optimističtější pohled na AI je v kurzu prezentován?",
+        "question": "Jaký optimističtější pohled na AI se tu nabízí?",
         "explanation": "Optimističtější pohled vidí AI spíše jako asistenta než náhradu, automatizuje méně zajímavé úkoly a nechává profesionálům více času na lidský nebo strategický aspekt jejich práce.",
         "options": [
           "Asistent, který automatizuje opakující se úkoly a dává lidem více času na strategický aspekt",
@@ -16585,7 +16585,7 @@
         "id": "course_22_la_crise_des_missiles_de_cuba_1962_q7",
         "type": "mcq",
         "question": "Jaká tajná klauzule doprovází oficiální řešení kubánské raketové krize?",
-        "explanation": "Výměnou za stažení sovětských raket z Kuby Američané tajně souhlasili se stažením vlastních raket z Türkiye.",
+        "explanation": "Výměnou za stažení sovětských raket z Kuby Američané tajně souhlasili, že stáhnou vlastní rakety z Turecka.",
         "options": [
           "Pozdější stažení amerických raket instalovaných v Türkiye",
           "Oficiální uznání Castrova režimu Spojenými státy",
@@ -16676,7 +16676,7 @@
       {
         "id": "course_230_la_liberte_de_la_presse_dans_le_monde_q5",
         "type": "mcq",
-        "question": "Co v kurzu znamená pojem SLAPP?",
+        "question": "Co znamená pojem SLAPP?",
         "explanation": "SLAPP jsou urážlivé soudní procesy, které se množí, aby zastrašily kritické hlasy v žurnalistice.",
         "options": [
           "Urážlivé soudní řízení, jehož cílem je zastrašit kritické hlasy",
@@ -16974,7 +16974,7 @@
       {
         "id": "course_233_le_droit_d_asile_explique_q2",
         "type": "mcq",
-        "question": "Jaký důvod vám podle Ženevské úmluvy NEDOVOLUJE získat status uprchlíka?",
+        "question": "Jaký důvod ti podle Ženevské úmluvy NEDOVOLUJE získat status uprchlíka?",
         "explanation": "Definice uprchlíka vylučuje oběti přírodních katastrof nebo hladomoru, které nepředstavují pronásledování ve smyslu Úmluvy.",
         "options": [
           "Přírodní katastrofa nebo hladomor",
@@ -18649,8 +18649,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q3",
         "type": "trueFalse",
-        "question": "Pravda nebo lež: „křížová výprava chudých lidí“ vedená Petrem Poustevníkem byla disciplinovanou armádou, která bez potíží dorazila do Jeruzaléma.",
-        "explanation": "Bez disciplíny a zásob, tato skupina chudých lidí drancovala v jejich cestě a byla zdecimována v Anatolii, než dosáhla Jeruzaléma.",
+        "question": "Pravda nebo lež: „křížová výprava chudých“ vedená Petrem Poustevníkem byla disciplinovaná armáda, která bez potíží došla do Jeruzaléma.",
+        "explanation": "Bez kázně a zásob tahle skupina chudých drancovala cestou a v Anatolii ji zdecimovali dřív, než došla k Jeruzalému.",
         "options": [
           "Pravda",
           "Nepravda"
@@ -18673,8 +18673,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q5",
         "type": "trueFalse",
-        "question": "Pravda nebo lež: po dobytí Jeruzaléma se Godfrey z Bouillonu prohlásil králem města.",
-        "explanation": "Godfrey z Bouillonu odmítl titul krále a raději se nechal nazývat Vyznáním Božího hrobu, ochráncem Kristova hrobu.",
+        "question": "Pravda nebo lež: po dobytí Jeruzaléma se Gottfried z Bouillonu prohlásil králem města.",
+        "explanation": "Gottfried z Bouillonu královský titul odmítl. Radši se nechal nazývat ochráncem Božího hrobu, strážcem Kristova hrobu.",
         "options": [
           "Pravda",
           "Nepravda"
@@ -18685,7 +18685,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q6",
         "type": "chronological",
         "question": "Seřaď tyto události v historii křížových výprav v chronologickém pořadí.",
-        "explanation": "Tyto milníky se pohybují od roku 1071 do roku 1187: byzantská porážka předchází papežově odvolání, které předchází dobytí a následnému znovuzískání Jeruzaléma.",
+        "explanation": "Tyto milníky jdou od roku 1071 do 1187: byzantská porážka předchází papežově výzvě, ta zase dobytí a pozdějšímu znovudobytí Jeruzaléma.",
         "items": [
           "Byzantská porážka Mantzikertu proti seldžuckým Turkům",
           "Výzva ke křížové výpravě na koncilu v Clermontu",
@@ -18720,8 +18720,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q9",
         "type": "numericSlider",
-        "question": "Ve kterém roce padla Saint-Jean-d'Acre, poslední bašta latinských států Východu?",
-        "explanation": "Pád Saint-Jean-d'Acre v roce 1291 znamená konec latinské přítomnosti ve Svaté zemi.",
+        "question": "Ve kterém roce padl Akkon, poslední bašta latinských států na Východě?",
+        "explanation": "Pád Akkonu v roce 1291 znamená konec latinské přítomnosti ve Svaté zemi.",
         "correctValue": 1291.0,
         "sliderMin": 1200.0,
         "sliderMax": 1350.0,
@@ -18992,7 +18992,7 @@
         "id": "course_32_la_guerre_du_vietnam_1955_1975_q4",
         "type": "mcq",
         "question": "Jakou strategii přijali Američané, aniž by se jim podařilo přerušit dodávky ze Severního Vietnamu?",
-        "explanation": "Tato strategie hledání a následného zničení nepřítele nestačí k prolomení Ho Či Minovy ​​stezky, severní zásobovací cesty.",
+        "explanation": "Tato strategie hledání a následného zničení nepřítele nestačí k prolomení Ho Či Minovy stezky, severní zásobovací cesty.",
         "options": [
           "Hledejte a ničte",
           "Totální námořní blokáda",
@@ -19134,8 +19134,8 @@
         "question": "Co říkají Norimberské zásady o uposlechnutí rozkazů?",
         "explanation": "Soud potvrzuje, že individuální odpovědnost má přednost: následující příkazy nepředstavují platnou omluvu pro trestný čin.",
         "options": [
-          "Uposlechnutí nadřízeného vás nezbavuje trestného činu",
-          "Poslouchání nadřízeného vás zcela zbavuje odpovědnosti",
+          "Uposlechnutí nadřízeného tě nezbavuje trestného činu",
+          "Poslouchání nadřízeného tě zcela zbavuje odpovědnosti",
           "Soudit lze pouze hlavy států",
           "Jediným platným důkazem jsou písemné objednávky"
         ],
@@ -19881,7 +19881,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q1",
         "type": "mcq",
         "question": "Kdo vedl Vizigóty během dobytí Říma v roce 410?",
-        "explanation": "Král Alaric, bývalý důstojník římské armády, vedl Vizigóty, kteří v srpnu 410 vnutili brány Říma.",
+        "explanation": "Král Alaric, bývalý důstojník římské armády, vedl Vizigóty, kteří v srpnu 410 prolomi brány Říma.",
         "options": [
           "Alaric",
           "Odoacer",
@@ -19894,7 +19894,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q2",
         "type": "trueFalse",
         "question": "Pravda nebo lež: Před rokem 410 nevstoupila žádná nepřátelská armáda do Říma po dobu asi osmi století.",
-        "explanation": "Poslední dobytí Říma nepřítelem se datuje do galského plenění v roce 390 př.nl. př. n. l., téměř 800 let před příchodem Alaricha.",
+        "explanation": "Naposledy dobyli Řím nepřátelé při galském plenění roku 390 př. n. l., skoro 800 let před Alarichem.",
         "options": [
           "Pravda",
           "Nepravda"
@@ -19917,8 +19917,8 @@
       {
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q4",
         "type": "mcq",
-        "question": "Co je římský foedus zmíněný v kurzu?",
-        "explanation": "Aby říše udržela své hranice navzdory nedostatku vojáků, usadila na své půdě germánské národy výměnou za jejich vojenskou službu.",
+        "question": "Co je římský foedus?",
+        "explanation": "Aby říše udržela hranice i bez dostatku vojáků, usazovala na své půdě germánské národy výměnou za vojenskou službu.",
         "options": [
           "Smlouva, podle které se „barbarské“ národy usadily na římském území výměnou za vojenskou službu",
           "Daň placená provinciemi Římu",
@@ -19942,7 +19942,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q6",
         "type": "mcq",
         "question": "Jaké dílo napsal svatý Augustin, aby reagoval na šok způsobený vypleněním Říma?",
-        "explanation": "Tváří v tvář pohanům, kteří obviňují křesťanství z oslabení Říma, Augustin v The City of God odpovídá, že pozemské říše zanikají, ale církev zůstává.",
+        "explanation": "Pohanům, kteří vinili křesťanství z oslabení Říma, Augustin v O Boží obci odpovídá, že pozemské říše zanikají, ale církev zůstává.",
         "options": [
           "Město Boží",
           "Vyznání",
@@ -19955,7 +19955,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q7",
         "type": "chronological",
         "question": "Seřaď tyto události z pádu Západořímské říše chronologicky.",
-        "explanation": "Tyto fáze se pohybují od 402 do 476: stažení do Ravenny předchází vizigótskému pytli, poté ničivějšímu vandalskému pytli, až do konce Západního impéria.",
+        "explanation": "Tyto fáze jdou od roku 402 do 476: ústup do Ravenny, vizigótské plenění, ničivější vandalské plenění a konec Západořímské říše.",
         "items": [
           "Honorius opouští Řím kvůli Ravenně",
           "Vyhození Říma od Alarica a Vizigótů",
@@ -20990,7 +20990,7 @@
       {
         "id": "course_49_pourquoi_a_t_on_des_frissons_q5",
         "type": "mcq",
-        "question": "Proč vám může naskakovat husí kůže při sledování hororu na gauči?",
+        "question": "Proč ti může naskakovat husí kůže při hororu na gauči?",
         "explanation": "Sympatický nervový systém reaguje na strach pociťovaný při sledování filmu i bez reálného nebezpečí, což vyvolává husí kůži.",
         "options": [
           "Pozorný nervový systém reaguje na strach, jako by existovala skutečná hrozba",
@@ -21082,8 +21082,8 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q4",
         "type": "mcq",
-        "question": "Jaké jsou missi dominici ustanovené Karlem Velikým?",
-        "explanation": "Missi dominici jsou inspektoři vyslaní ve dvojicích do provincií, aby ověřili činnost místních hrabat.",
+        "question": "Co jsou missi dominici, které zavedl Karel Veliký?",
+        "explanation": "Missi dominici jsou inspektoři posílaní ve dvojicích do provincií, aby kontrolovali místní hrabata.",
         "options": [
           "Inspektoři byli vysláni ve dvojicích, aby kontrolovali provincie",
           "Mniši zodpovědní za kopírování starověkých textů",
@@ -21637,7 +21637,7 @@
         "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_q5",
         "type": "numericSlider",
         "question": "Kolem kterého roku byla uvedena na trh první komerční mikrovlnná trouba Radarange?",
-        "explanation": "Radarange byl propuštěn kolem roku 1947, ale byl obrovský a drahý.",
+        "explanation": "Radarange přišel na trh kolem roku 1947, ale byl obrovský a drahý.",
         "correctValue": 1947.0,
         "sliderMin": 1900.0,
         "sliderMax": 2000.0,
@@ -22417,7 +22417,7 @@
       {
         "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_q7",
         "type": "mcq",
-        "question": "Proč Darwinovy ​​myšlenky šokovaly společnost 19. století?",
+        "question": "Proč Darwinovy myšlenky šokovaly společnost 19. století?",
         "explanation": "Tvrzení, že se druhy mění a že lidé sdílejí historii s jinými zvířaty, otřásají tehdejším náboženstvím a společností.",
         "options": [
           "Zpochybňují myšlenku, že druhy byly vytvořeny takové, jaké jsou, a přibližují lidi k jiným zvířatům",
@@ -22660,7 +22660,7 @@
       {
         "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_q8",
         "type": "mcq",
-        "question": "Které starověké město bylo pohřbeno při erupci Vesuvu v roce 79 našeho letopočtu? INZERÁT?",
+        "question": "Které starověké město pohřbila erupce Vesuvu v roce 79 n. l.?",
         "explanation": "V roce 79 n. l. erupce Vesuvu poblíž Neapole pohřbila město Pompeje v popelu.",
         "options": [
           "Pompeje",
@@ -23542,7 +23542,7 @@
       {
         "id": "course_6_la_peste_noire_en_europe_1347_1353_q9",
         "type": "percentageSlider",
-        "question": "Jaký je podle odhadů uvedených v kurzu maximální podíl evropské populace ztracený černou smrtí v letech 1347 až 1353?",
+        "question": "Jaký je podle odhadů maximální podíl evropské populace ztracený černou smrtí v letech 1347 až 1353?",
         "explanation": "Kurz odhaduje, že černá smrt zabila 30 až 60 % evropské populace, tedy 25 až 50 milionů lidí.",
         "correctValue": 60.0,
         "sliderMin": 0.0,
@@ -23628,7 +23628,7 @@
       {
         "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_q7",
         "type": "mcq",
-        "question": "Co je IPCC, zmíněný v kurzu?",
+        "question": "Co je IPCC?",
         "explanation": "IPCC syntetizuje práci tisíců klimatologů a dochází k závěru, že oteplování od roku 1950 je bezprecedentní a má lidský původ.",
         "options": [
           "Skupina, která syntetizuje práci tisíců klimatologů",
@@ -23705,8 +23705,8 @@
       {
         "id": "course_72_pourquoi_dort_on_q4",
         "type": "trueFalse",
-        "question": "Pravda nebo lež: u potkanů ​​může úplný nedostatek spánku zabít za 2 až 3 týdny, jako hladovění.",
-        "explanation": "U potkanů ​​úplný nedostatek spánku zabíjí během 2 až 3 týdnů, což je doba srovnatelná s hladověním.",
+        "question": "Pravda nebo lež: u potkanů může úplný nedostatek spánku zabít za 2 až 3 týdny, jako hladovění.",
+        "explanation": "U potkanů úplný nedostatek spánku zabíjí během 2 až 3 týdnů, což je doba srovnatelná s hladověním.",
         "options": [
           "Pravda",
           "Nepravda"
@@ -23729,7 +23729,7 @@
       {
         "id": "course_72_pourquoi_dort_on_q6",
         "type": "mcq",
-        "question": "Co je to glymfatický systém, zmíněný v kurzu?",
+        "question": "Co je glymfatický systém?",
         "explanation": "Glymfatický systém je mozková drenážní síť desetkrát aktivnější v noci; evakuuje odpad, včetně bílkovin spojených s rizikem Alzheimerovy choroby.",
         "options": [
           "Mozková drenážní síť, přibližně desetkrát aktivnější v noci, která odvádí odpad z mozku",
@@ -23887,7 +23887,7 @@
       {
         "id": "course_74_pourquoi_certaines_especes_sont_elles_im_q1",
         "type": "numericSlider",
-        "question": "Kolika let se přibližně dožila v kurzu zmíněná škeble Ming?",
+        "question": "Kolika let se přibližně dožila škeble Ming?",
         "explanation": "Škeble Ming žila 507 let, což je pozoruhodný příklad extrémní dlouhověkosti mezi zvířaty.",
         "correctValue": 507.0,
         "sliderMin": 200.0,
@@ -23972,7 +23972,7 @@
       {
         "id": "course_74_pourquoi_certaines_especes_sont_elles_im_q8",
         "type": "mcq",
-        "question": "Na co jsou senolytické léčby probírané v kurzu zaměřeny?",
+        "question": "Na co jsou senolytické léčby zaměřené?",
         "explanation": "Senolytika mají za cíl eliminovat zombie buňky, které se hromadí a zanítí tkáně; u zvířat to již některé funkce omladilo.",
         "options": [
           "Odstraňte zombie buňky, které se hromadí s věkem",
@@ -24097,7 +24097,7 @@
       {
         "id": "course_75_la_photosynthese_expliquee_simplement_q9",
         "type": "mcq",
-        "question": "V čem je mořský slimák Elysia chlorotica, zmíněný v kurzu, zvláštního?",
+        "question": "V čem je mořský slimák Elysia chlorotica zvláštní?",
         "explanation": "Mořský slimák Elysia chlorotica jde tak daleko, že ukradne chloroplasty z řas, které požírá, a žije tak trochu ze sluneční energie.",
         "options": [
           "Krade chloroplasty řasám, aby díky sluneční energii trochu žily",
@@ -24509,7 +24509,7 @@
       {
         "id": "course_79_pourquoi_certains_sons_nous_donnent_ils_q6",
         "type": "mcq",
-        "question": "Proč vám z některých písní naskakuje husí kůže?",
+        "question": "Proč ti z některých písní naskakuje husí kůže?",
         "explanation": "Husí kůže neboli piloerekce je starý reflex, který zvedne chlupy, aby vypadaly vyšší nebo udržely teplo; hudba ho překvapí.",
         "options": [
           "Je to starý reflex, který zvedá chloupky, aby vypadaly vyšší nebo aby se udržely v teple",
@@ -24819,7 +24819,7 @@
         "id": "course_81_l_odyssee_homere_q5",
         "type": "mcq",
         "question": "Kdo pozná Odyssea jako první, když se vrátí na Ithaku v přestrojení za žebráka?",
-        "explanation": "Pes Argos, velmi starý, rozpoznává Ulyssea dříve než kdokoli jiný, následovaný jeho ošetřovatelkou Eurycleou.",
+        "explanation": "Pes Argos, už velmi starý, pozná Odyssea dřív než kdokoli jiný. Po něm ošetřovatelka Eurýkleia.",
         "options": [
           "Jeho starý pes Argos",
           "Jeho žena Penelope",
@@ -24842,8 +24842,8 @@
       {
         "id": "course_81_l_odyssee_homere_q7",
         "type": "numericSlider",
-        "question": "Kolik písní (částí) je v Odyssey přibližně?",
-        "explanation": "The Odyssey má 24 písní a přibližně 12 000 veršů.",
+        "question": "Kolik zpěvů (částí) má zhruba Odyssea?",
+        "explanation": "Odyssea má 24 zpěvů a asi 12 000 veršů.",
         "correctValue": 24.0,
         "sliderMin": 10.0,
         "sliderMax": 40.0,
@@ -24853,8 +24853,8 @@
       {
         "id": "course_81_l_odyssee_homere_q8",
         "type": "mcq",
-        "question": "Který spisovatel 20. století převedl Ulyssesovu cestu do jediného dne v Dublinu?",
-        "explanation": "V roce 1922 vydal James Joyce svůj román Ulysses, který transponuje homérské putování do jediného dne v Dublinu.",
+        "question": "Který spisovatel 20. století převedl Odysseovu cestu do jediného dne v Dublinu?",
+        "explanation": "V roce 1922 vydal James Joyce román Ulysses, který přenáší homérské putování do jediného dne v Dublinu.",
         "options": [
           "James Joyce",
           "Marcel Proust",
@@ -24888,7 +24888,7 @@
         "explanation": "Báseň začíná hněvem Achilla, vyprovokovaným ponížením, které způsobil Agamemnon, ještě před otázkou Tróje.",
         "options": [
           "Achilleův hněv",
-          "Ulyssesův trik",
+          "Odysseův trik",
           "Stavba trojského koně",
           "Rozsudek z Paříže"
         ],
@@ -25118,7 +25118,7 @@
         "id": "course_84_antigone_sophocle_q1",
         "type": "mcq",
         "question": "Co Kreón odmítne dát jednomu ze dvou bratrů, kteří zemřeli při vzájemném zabití?",
-        "explanation": "Kreón nařídí jednoho z bratrů vyznamenat a druhého nechat nepohřbeného, ​​což Antigona odmítá.",
+        "explanation": "Kreón nařídí jednoho z bratrů vyznamenat a druhého nechat nepohřbeného, což Antigona odmítá.",
         "options": [
           "Hrob",
           "Posmrtný rozsudek",
@@ -26117,7 +26117,7 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q10",
         "type": "numericSlider",
-        "question": "Ve kterém roce po sedmnácti letech práce konečně vyšly Les Misérables?",
+        "question": "Ve kterém roce po sedmnácti letech práce konečně vyšli Bídníci?",
         "explanation": "Les Miserables se objevili v roce 1862 v Bruselu, po sedmnácti letech práce od roku 1845.",
         "correctValue": 1862.0,
         "sliderMin": 1840.0,
@@ -26147,7 +26147,7 @@
         "id": "course_92_madame_bovary_flaubert_q2",
         "type": "mcq",
         "question": "Koho si Emma vezme na začátku románu?",
-        "explanation": "Emma se provdá za Charlese Bovaryho, čestného, ​​ale nudného provinčního lékaře, se kterým se usadí v Yonville.",
+        "explanation": "Emma se provdá za Charlese Bovaryho, čestného, ale nudného provinčního lékaře, se kterým se usadí v Yonville.",
         "options": [
           "Charles Bovary, provinční lékař",
           "Rodolphe, bohatý majitel",
@@ -26184,7 +26184,7 @@
         "id": "course_92_madame_bovary_flaubert_q5",
         "type": "mcq",
         "question": "Co tlačí Emmu ke snům a cizoložství, podle románu?",
-        "explanation": "Emma, ​​vychovaná v klášteře se sentimentálními romány, si plete skutečný život s fikcí, kterou četla, což podporuje její nespokojenost.",
+        "explanation": "Emma, vychovaná v klášteře se sentimentálními romány, si plete skutečný život s fikcí, kterou četla, což podporuje její nespokojenost.",
         "options": [
           "Sentimentální romány, které četla v klášteře",
           "Rada její matky",
@@ -26251,8 +26251,8 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q1",
         "type": "mcq",
-        "question": "Kdo je autorem Le Rouge et le Noir, jehož skutečné jméno je Henri Beyle?",
-        "explanation": "Stendhal, jehož skutečné jméno bylo Henri Beyle, publikoval Le Rouge et le Noir v roce 1830.",
+        "question": "Kdo je autorem Červeného a černého, jehož skutečné jméno je Henri Beyle?",
+        "explanation": "Stendhal, vlastním jménem Henri Beyle, vydal Červený a černý v roce 1830.",
         "options": [
           "Stendhal",
           "Honoré de Balzac",
@@ -26447,7 +26447,7 @@
         "explanation": "Eldorado, racionální jihoamerická utopie, dokazuje, že optimismus může fungovat, ale Candide to nechá stejně, aby našla Cunégonde.",
         "options": [
           "Ten optimismus může fungovat v racionální společnosti",
-          "Ty peníze vás vždycky potěší",
+          "Ty peníze tě vždycky potěší",
           "Toto náboženství je nezbytné pro štěstí",
           "Tato válka je nezbytná pro pokrok"
         ],
@@ -26522,7 +26522,7 @@
       {
         "id": "course_95_les_confessions_rousseau_q2",
         "type": "mcq",
-        "question": "Jaký literární žánr vymysleli The Confessions?",
+        "question": "Jaký literární žánr vymyslela Vyznání?",
         "explanation": "Vyznání znamenají zrod moderní autobiografie: „já“ se stává předmětem literárního zkoumání.",
         "options": [
           "Moderní autobiografie",
@@ -26573,7 +26573,7 @@
         "id": "course_95_les_confessions_rousseau_q6",
         "type": "mcq",
         "question": "Co přiznává Rousseau o svých pěti dětech?",
-        "explanation": "Rousseau přiznává, že přenechal svých pět dětí Foundlings, což je bolestné přiznání v jádru jeho upřímného podnikání.",
+        "explanation": "Rousseau přiznává, že přenechal svých pět dětí nalezencům. Bolestné přiznání je jádrem jeho upřímnosti.",
         "options": [
           "Přenechal je nalezencům",
           "Poslal je studovat do zahraničí",
@@ -26586,7 +26586,7 @@
         "id": "course_95_les_confessions_rousseau_q7",
         "type": "mcq",
         "question": "Kdo veřejně odhalil v anonymní brožuře opuštění Rousseauových dětí?",
-        "explanation": "Voltaire odhaluje v anonymní brožuře opuštění Rousseauových dětí a nutí ho, aby učinil veřejné přiznání v Confessions.",
+        "explanation": "Voltaire odhaluje v anonymní brožuře opuštění Rousseauových dětí a nutí ho, aby se k tomu veřejně přiznal ve Vyznáních.",
         "options": [
           "Voltaire",
           "Diderot",
@@ -26598,7 +26598,7 @@
       {
         "id": "course_95_les_confessions_rousseau_q8",
         "type": "mcq",
-        "question": "Jakou roli hraje v The Confessions příroda?",
+        "question": "Jakou roli hraje příroda ve Vyznáních?",
         "explanation": "Pro Rousseaua se krajina stává zrcadlem nové citlivosti, která se stane základem romantismu.",
         "options": [
           "Stává se zrcadlem nové citlivosti, u zdroje romantismu",
@@ -26628,7 +26628,7 @@
         "id": "course_96_l_etranger_camus_q1",
         "type": "mcq",
         "question": "Kdo je autorem Cizince?",
-        "explanation": "Albert Camus vydal The Stranger v roce 1942, svůj první román.",
+        "explanation": "Albert Camus vydal Cizince v roce 1942, svůj první román.",
         "options": [
           "Albert Camus",
           "Jean-Paul Sartre",
@@ -26965,7 +26965,7 @@
       {
         "id": "course_98_a_la_recherche_du_temps_perdu_proust_q8",
         "type": "numericSlider",
-        "question": "Kolik svazků má In Search of Lost Time?",
+        "question": "Kolik svazků má Hledání ztraceného času?",
         "explanation": "Román má sedm svazků, vydaných v letech 1913 až 1927.",
         "correctValue": 7.0,
         "sliderMin": 3.0,
@@ -27008,7 +27008,7 @@
         "id": "course_99_le_pere_goriot_balzac_q1",
         "type": "mcq",
         "question": "Kdo je autorem knihy Père Goriot?",
-        "explanation": "Honoré de Balzac publikoval Le Père Goriot v roce 1835.",
+        "explanation": "Honoré de Balzac vydal Goriotova strejčka v roce 1835.",
         "options": [
           "Honoré de Balzac",
           "Viktor Hugo",
@@ -27109,7 +27109,7 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q9",
         "type": "mcq",
-        "question": "Jakou románovou techniku ​​Balzac tímto románem zahajuje?",
+        "question": "Jakou románovou techniku Balzac tímto románem zahajuje?",
         "explanation": "Otec Goriot inauguruje v Comédie humaine návrat postav, které se znovu objevují z jednoho románu do druhého.",
         "options": [
           "Návrat postav z jednoho románu do druhého",

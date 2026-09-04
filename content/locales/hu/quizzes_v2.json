@@ -215,9 +215,9 @@
         "id": "course_101_1984_george_orwell_q7",
         "type": "mcq",
         "question": "Hogyan nevezik 1984-ben azt a képességet, hogy két egymásnak ellentmondó igazságot egyszerre elfogadjunk?",
-        "explanation": "A Doublethink két egymásnak ellentmondó igazság egyszerre történő elfogadásának képességére utal, ami a Párt elmekontrolljának pillére.",
+        "explanation": "A kettősgondol két egymásnak ellentmondó igazság egyidejű elfogadásának képessége, a Párt gondolatirányításának egyik pillére.",
         "options": [
-          "Doublethink",
+          "kettősgondol",
           "Újbeszéd",
           "A teleképernyő",
           "Ingsoc"
@@ -227,8 +227,8 @@
       {
         "id": "course_101_1984_george_orwell_q8",
         "type": "mcq",
-        "question": "Miért csökkenti a Párt a szókincset a Newspeaken keresztül?",
-        "explanation": "A Newspeak csökkenti a rendelkezésre álló szókincset, hogy lehetetlenné tegye a kritikai gondolkodás megfogalmazását.",
+        "question": "Miért csökkenti a Párt a szókincset a Újbeszéden keresztül?",
+        "explanation": "A Újbeszéd csökkenti a rendelkezésre álló szókincset, hogy lehetetlenné tegye a kritikai gondolkodás megfogalmazását.",
         "options": [
           "Lehetetlenné tenni a kritikus gondolkodást",
           "Az adminisztráció egyszerűsítése érdekében",
@@ -285,9 +285,9 @@
         "explanation": "Napóleon, a disznó, aki erőszakkal veszi át a hatalmat Hógolyó üldözése után, Sztálin alakját mintázza meg.",
         "options": [
           "Napóleon",
-          "Az öreg őrnagy",
+          "öreg Őrnagy",
           "Hógolyó",
-          "Malabar"
+          "Bandi"
         ],
         "correctIndex": 0
       },
@@ -319,11 +319,11 @@
         "id": "course_102_la_ferme_des_animaux_george_orwell_q5",
         "type": "mcq",
         "question": "Melyik állat testesíti meg a kimerülésig kizsákmányolt proletariátust?",
-        "explanation": "Malabar, egy odaadó és fáradhatatlan igásló, a proletariátust szimbolizálja, amely anélkül működik, hogy megkérdőjelezné a tekintélyt.",
+        "explanation": "Bandi, a hűséges és fáradhatatlan igásló, azt a proletariátust jelképezi, amely dolgozik anélkül, hogy megkérdőjelezné a hatalmat.",
         "options": [
-          "Malabar, a szorgalmas ló",
-          "Brille-Babil, a propagandista",
-          "Az öreg őrnagy",
+          "Bandi, a szorgalmas ló",
+          "Süvi, a propagandista",
+          "öreg Őrnagy",
           "Hógolyó"
         ],
         "correctIndex": 0
@@ -331,7 +331,7 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q6",
         "type": "chronological",
-        "question": "Tedd rendbe ezeket a lépéseket az Animal Farmból.",
+        "question": "Tedd sorrendbe ezeket a lépéseket az Állatfarmból.",
         "explanation": "Ez a sorozat az egalitárius forradalomról a disznók diktatúrája felé történő fokozatos elmozdulást mutatja.",
         "items": [
           "Az állatok üldözik Jones farmert",
@@ -367,7 +367,7 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q9",
         "type": "numericSlider",
-        "question": "Körülbelül hány szó van az Animal Farm-ban, szándékosan nagyon rövid szöveg?",
+        "question": "Körülbelül hány szóból áll az Állatfarm, ez a szándékosan nagyon rövid szöveg?",
         "explanation": "Orwell alig 30 000 szóban adja elő allegóriáját, ami megerősíti a mese hatásosságát.",
         "correctValue": 30000.0,
         "sliderMin": 15000.0,
@@ -643,7 +643,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q3",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: az eredeti cím, a Brave New World ironikusan egy Shakespeare-darabot idéz.",
+        "question": "Igaz vagy hamis: az eredeti cím, a Szép új világ, ironikusan egy Shakespeare-darabot idéz.",
         "explanation": "A cím Shakespeare A vihar című művét idézi, akinek naiv csodálkozása itt egy dehumanizált jövőt takar.",
         "options": [
           "Igaz",
@@ -706,7 +706,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q8",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: a regény végén John beleegyezik, hogy kényelmesen éljen a Brave New World-ben.",
+        "question": "Igaz vagy hamis: a regény végén John beleegyezik, hogy kényelmesen éljen a Szép új világban.",
         "explanation": "John visszautasítja a Mond által javasolt szómát és a mesterséges paradicsomot: megöli magát, minden megbékélés nélkül.",
         "options": [
           "Igaz",
@@ -717,7 +717,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q9",
         "type": "numericSlider",
-        "question": "Melyik évben adta ki Aldous Huxley a Brave New World című könyvet?",
+        "question": "Melyik évben adta ki Aldous Huxley a Szép új világot?",
         "explanation": "Huxley 1932-ben adta ki ezt a regényt, miután előző évben írta.",
         "correctValue": 1932.0,
         "sliderMin": 1900.0,
@@ -996,7 +996,7 @@
         "id": "course_108_le_proces_kafka_q3",
         "type": "trueFalse",
         "question": "Igaz vagy hamis: Kafka megkérte barátját, Max Brodot, hogy halála után égesse el kéziratait.",
-        "explanation": "Kafka megkérte Max Brodot, hogy semmisítse meg kéziratait; Brod megtagadta, és 1925-ben kiadta a The Trial-t.",
+        "explanation": "Kafka megkérte Max Brodot, hogy semmisítse meg kéziratait; Brod megtagadta, és 1925-ben kiadta A pert.",
         "options": [
           "Igaz",
           "Hamis"
@@ -1006,7 +1006,7 @@
       {
         "id": "course_108_le_proces_kafka_q4",
         "type": "numericSlider",
-        "question": "Melyik évben jelent meg a The Trial posztumusz Max Brodtól?",
+        "question": "Melyik évben jelent meg A per posztumusz, Max Brodnak köszönhetően?",
         "explanation": "A Per 1925-ben jelent meg, egy évvel Kafka halála után, köszönhetően Max Brodnak, aki kitalálta a fejezetek sorrendjét.",
         "correctValue": 1925.0,
         "sliderMin": 1900.0,
@@ -1217,10 +1217,10 @@
         "question": "Mi volt Kolumbusz nyugati expedíciójának valódi gazdasági célja?",
         "explanation": "Kolumbusz nyugati utat keres Ázsiába, hogy megkerülje az oszmánokat, akik irányítják a keleti kereskedelmi útvonalakat.",
         "options": [
-          "Érje el a fűszereket és a selymet anélkül, hogy oszmánok által ellenőrzött útvonalakon haladna át",
-          "Bizonyítsd be, hogy a Föld kerek",
-          "Gyarmatosítsa Nyugat-Afrikát",
-          "Arany keresése egy keresztes hadjárat finanszírozására"
+          "Elérni a fűszereket és a selymet anélkül, hogy oszmán ellenőrzésű utakon kellene menni",
+          "Bizonyítani, hogy a Föld kerek",
+          "Gyarmatosítani Nyugat-Afrikát",
+          "Aranyat találni egy keresztes hadjárat finanszírozására"
         ],
         "correctIndex": 0
       },
@@ -1228,7 +1228,7 @@
         "id": "course_10_la_decouverte_de_l_amerique_1492_q3",
         "type": "trueFalse",
         "question": "Igaz vagy hamis: Kolumbusz Kristóf mindenekelőtt annak bizonyítására törekedett, hogy a Föld kerek, ez előtte ismeretlen gondolat.",
-        "explanation": "A Föld gömbölyűségét már Eratoszthenész görög tudós kiszámította a Kr.e. 3. században. HIRDETÉS; Columbus célja gazdasági volt.",
+        "explanation": "A Föld gömbölyűségét már Eratoszthenész kiszámította a Kr. e. 3. században. Kolumbusz célja gazdasági volt.",
         "options": [
           "Igaz",
           "Hamis"
@@ -1275,8 +1275,8 @@
       {
         "id": "course_10_la_decouverte_de_l_amerique_1492_q7",
         "type": "mcq",
-        "question": "Mi az a kolumbiai tőzsde?",
-        "explanation": "Ez a transzfer burgonyát és paradicsomot hoz Európába, búzát, lovakat vagy szarvasmarhát Amerikába, örökre megváltoztatva mindkét világot.",
+        "question": "Mi a Kolumbusz-csere?",
+        "explanation": "Ez a transzfer burgonyát és paradicsomot hoz Európába, búzát, lovakat és szarvasmarhát Amerikába, és örökre megváltoztatja mindkét világot.",
         "options": [
           "Növények, állatok és betegségek tömeges átvitele Európa és Amerika között",
           "Békeszerződés Spanyolország és Portugália között",
@@ -1429,7 +1429,7 @@
       {
         "id": "course_110_les_raisins_de_la_colere_steinbeck_q9",
         "type": "numericSlider",
-        "question": "Melyik évben jelent meg a The Grapes of Wrath, a nagy gazdasági világválság közepette?",
+        "question": "Melyik évben jelent meg Érik a gyümölcs, a nagy gazdasági világválság közepén?",
         "explanation": "A regény 1939-ben jelent meg, és a következő évben elnyerte a Pulitzer-díjat.",
         "correctValue": 1939.0,
         "sliderMin": 1910.0,
@@ -1574,7 +1574,7 @@
       {
         "id": "course_112_le_grand_gatsby_fitzgerald_q2",
         "type": "mcq",
-        "question": "Mit jelképez az a zöld lámpa, amelyen Gatsby minden este a peron végén elmélkedik?",
+        "question": "Mit jelent az a zöld lámpa, amelyen Gatsby minden este a móló végén elmélkedik?",
         "explanation": "A Buchanans platform végén lévő zöld lámpa azt a jövőt szimbolizálja, amelyet Gatsby úgy űz, hogy valaha is elérhetné.",
         "options": [
           "A jövő, amit keres, mindig elérhetetlen",
@@ -1587,7 +1587,7 @@
       {
         "id": "course_112_le_grand_gatsby_fitzgerald_q3",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: Amikor 1925-ben megjelent, a The Great Gatsby hatalmas kereskedelmi sikert aratott.",
+        "question": "Igaz vagy hamis: amikor 1925-ben megjelent, A nagy Gatsby hatalmas kereskedelmi sikert aratott.",
         "explanation": "A regény csak a megjelenéskor mintegy 20 000 példányban kelt el; csak Fitzgerald halála után vált klasszikussá.",
         "options": [
           "Igaz",
@@ -2391,7 +2391,7 @@
       {
         "id": "course_118_moby_dick_melville_q8",
         "type": "mcq",
-        "question": "Mit jelképez Melville szerint a bálna fehérsége?",
+        "question": "Mit jelent a bálna fehérsége Melville szerint?",
         "explanation": "Melville a bálna fehérjét használja a természet közömbösségének hangsúlyozására, egy félelmetes űrre, amelyre az univerzum nem reagál.",
         "options": [
           "A természet közömbössége, félelmetes űr, amelyre az univerzum nem válaszol",
@@ -2586,7 +2586,7 @@
       {
         "id": "course_11_la_prise_de_la_bastille_1789_q3",
         "type": "mcq",
-        "question": "Miért hívta össze XVI. Lajos az uradalmi tábornokot 1789 májusában?",
+        "question": "Miért hívta össze XVI. Lajos a rendi gyűlést 1789 májusában?",
         "explanation": "A királyság tönkremegy, különösen az amerikai gyarmatoknak nyújtott költséges támogatás miatt, és a király új adókat keres.",
         "options": [
           "Új adókat emelni a királyság csődje mellett",
@@ -2599,13 +2599,13 @@
       {
         "id": "course_11_la_prise_de_la_bastille_1789_q4",
         "type": "mcq",
-        "question": "Mit csinált a Harmadik Birtok 1789. június 17-én, amikor az Estates General blokkolja?",
+        "question": "Mit tett a harmadik rend 1789. június 17-én, amikor a rendi gyűlés beragadt?",
         "explanation": "A három rend rendszere által blokkolt Harmadik Birtok június 17-én nemzetgyűléssé kiáltotta ki magát.",
         "options": [
           "Nemzetgyűlésnek nyilvánítja magát",
           "Versailles-ból indul Párizsba",
           "Csatlakozik a nemességhez",
-          "Feloszlatja az ingatlanvezért"
+          "Feloszlatja a rendi gyűlést"
         ],
         "correctIndex": 0
       },
@@ -2650,7 +2650,7 @@
         "id": "course_11_la_prise_de_la_bastille_1789_q8",
         "type": "trueFalse",
         "question": "Igaz vagy hamis: amikor a királynak hírt adtak a Bastille megrohanásáról, azt válaszolta, hogy ez egy egyszerű lázadás.",
-        "explanation": "Ellenkezőleg, azt mondták neki, hogy „No Sire, ez egy forradalom”, pedig a király 14-én a „Semmit” feljegyezte a vadásznaplójába.",
+        "explanation": "Ellenkezőleg, azt mondták neki: „Nem, sire, ez forradalom”, pedig a király 14-én a „Semmi” szót írta vadásznaplójába.",
         "options": [
           "Igaz",
           "Hamis"
@@ -2663,8 +2663,8 @@
         "question": "Tedd időrendi sorrendbe 1789 nyarának ezeket az eseményeket.",
         "explanation": "Ez a négy szakasz 1789 májusától augusztusig tart: a királyi idézés, a képviselők eskütétele, a Bastille megrohanása, majd a kiváltságok eltörlése.",
         "items": [
-          "A hagyatéki főosztály összehívása",
-          "A Pálmajáték esküje",
+          "A rendi gyűlés összehívása",
+          "A labdaházi eskü",
           "A Bastille megrohanása",
           "A privilégiumok eltörlése"
         ]
@@ -2948,12 +2948,12 @@
         "id": "course_122_la_naissance_de_l_impressionnisme_q2",
         "type": "mcq",
         "question": "Melyik Manet-festmény botrányozta meg a Salon des Refusés-t 1863-ban?",
-        "explanation": "Manet sokkoló egy női akt és két modern jelmezben viselő férfi keverésével a Le Déjeuner sur l'herbe-ben.",
+        "explanation": "Manet azzal sokkol, hogy egy női aktot és két modern ruhás férfit kever a Reggeli a szabadban című képen.",
         "options": [
-          "Ebéd a füvön",
-          "Nyomtatás, felkelő nap",
-          "A tavirózsa",
-          "A Medúza tutaja"
+          "Reggeli a szabadban",
+          "Impresszió, felkelő nap",
+          "Tavirózsák",
+          "Olympia"
         ],
         "correctIndex": 0
       },
@@ -3308,7 +3308,7 @@
       {
         "id": "course_125_le_romantisme_en_peinture_delacroix_geri_q3",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: Delacroix az 1830-as júliusi forradalom ünneplésére festette a Liberty Leading the People-t.",
+        "question": "Igaz vagy hamis: Delacroix az 1830-as júliusi forradalom ünneplésére festette A Szabadság vezeti a népet című képet.",
         "explanation": "A festmény a három dicsőséges évet, 1830 júliusának forradalmi napjait ünnepli.",
         "options": [
           "Igaz",
@@ -3426,12 +3426,12 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q3",
         "type": "mcq",
         "question": "Melyik 1907-es festmény jelenti a kubizmus kiindulópontját?",
-        "explanation": "A Les Demoiselles d'Avignon éles arcú aktjaival még a Picassóhoz közel állókat is lenyűgözte.",
+        "explanation": "Az Avignoni kisasszonyok éles vonalú aktjaival még a Picassóhoz közel állókat is megdöbbentette.",
         "options": [
-          "Az avignoni ifjú hölgyek",
+          "Avignoni kisasszonyok",
           "Guernica",
-          "Szabadság vezeti a népet",
-          "Ebéd a füvön"
+          "A Szabadság vezeti a népet",
+          "Reggeli a szabadban"
         ],
         "correctIndex": 0
       },
@@ -3499,7 +3499,7 @@
       {
         "id": "course_126_le_cubisme_picasso_et_braque_q9",
         "type": "numericSlider",
-        "question": "Melyik évben fejezte be Picasso a Les Demoiselles d'Avignont?",
+        "question": "Melyik évben fejezte be Picasso az Avignoni kisasszonyokat?",
         "explanation": "Picasso 1907-ben fejezte be a kubizmus alapfestményét.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -3837,7 +3837,7 @@
       {
         "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_q8",
         "type": "chronological",
-        "question": "Állítsa ezeket az absztrakt művészeti mérföldköveket időrendi sorrendbe.",
+        "question": "Állítsd ezeket az absztrakt művészeti mérföldköveket időrendi sorrendbe.",
         "explanation": "Ezek a mérföldkövek 1910-től 1919-ig terjednek, Kandinszkij kezdetétől az absztrakció megjelenéséig a tervezésbe.",
         "items": [
           "Kandinsky az absztrakció felé tolódik el",
@@ -3882,7 +3882,7 @@
           "Karl Mack tábornok",
           "I. Sándor cár",
           "Kutuzov tábornok",
-          "Ferenc császár maga II"
+          "II. Ferenc császár maga"
         ],
         "correctIndex": 0
       },
@@ -3940,8 +3940,8 @@
         "question": "Mi történt a francia flottával Ulm kapitulációjával egy héten?",
         "explanation": "Ugyanebben a hónapban Trafalgarnál Nelson admirális megsemmisítette a francia-spanyol flottát, így Anglia kezében volt a tengerek.",
         "options": [
-          "Nelson elpusztítja Trafalgarban",
-          "Elfogja az angol flottát",
+          "Nelson elpusztítja Trafalgarnál",
+          "Elfoglalja az angol flottát",
           "Elzárja Bécs kikötőjét",
           "Diadalmasan tér vissza Toulonba"
         ],
@@ -4080,7 +4080,7 @@
       {
         "id": "course_130_le_pop_art_warhol_et_lichtenstein_q9",
         "type": "chronological",
-        "question": "Állítsa ezeket a pop art mérföldköveket időrendi sorrendbe.",
+        "question": "Állítsd ezeket a pop art mérföldköveket időrendi sorrendbe.",
         "explanation": "Ezek a mérföldkövek 1957-től 2022-ig terjednek, a mozgalom meghatározásától kezdve ikonjainak a művészeti piacon való felszenteléséig.",
         "items": [
           "Richard Hamilton határozza meg a pop-art",
@@ -4543,7 +4543,7 @@
       {
         "id": "course_134_l_opera_de_verdi_q8",
         "type": "chronological",
-        "question": "Állítsa ezeket a Verdi-operákat létrejöttük időrendi sorrendjébe.",
+        "question": "Állítsd ezeket a Verdi-operákat létrejöttük időrendi sorrendjébe.",
         "explanation": "Az 1842-es Nabuccótól az 1893-as Falstaffig a Verdi több mint ötven évnyi lírai alkotást ölel fel.",
         "items": [
           "A Nabucco diadalmaskodik és Va, a pensiero himnusz lesz",
@@ -5175,10 +5175,10 @@
         "question": "Mi volt Napóleon kezdeti terve a csata előtt, az úgynevezett központi állás?",
         "explanation": "Napóleon a két ellenséges sereg közé akarja helyezni magát, és egymás után legyőzni őket, mielőtt egyesülnének.",
         "options": [
-          "Helyezze magát Wellington és Blücher közé, hogy külön győzze le őket",
-          "Közvetlenül támadják Brüsszelt",
-          "Várja meg az osztrák erősítést",
-          "Wellington körül a tengeren"
+          "Wellington és Blücher közé ékelődni, hogy külön-külön győzze le őket",
+          "Közvetlenül támadni Brüsszelt",
+          "Megvárni az osztrák erősítést",
+          "Wellingtont a tengeren körülzárni"
         ],
         "correctIndex": 0
       },
@@ -5942,7 +5942,7 @@
       {
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q9",
         "type": "mcq",
-        "question": "Mit jelképez a fekete monolit 2001-ben?",
+        "question": "Mit jelent a fekete monolit a 2001-ben?",
         "explanation": "A fekete monolit egy néma jelenlét, amely a film több pontján újraindítja az emberi evolúciót.",
         "options": [
           "Egy jelenlét, amely újraindítja az emberi evolúciót",
@@ -6095,7 +6095,7 @@
           "Suger atya",
           "Lajos király IX",
           "Villard de Honnecourt építész",
-          "Innocent pápa III"
+          "III. Ince pápa"
         ],
         "correctIndex": 0
       },
@@ -6765,7 +6765,7 @@
         "id": "course_152_la_liberte_guidant_le_peuple_delacroix_q1",
         "type": "mcq",
         "question": "Milyen 1830-as esemény késztette Delacroix-t ennek a festménynek a megfestésére?",
-        "explanation": "1830-ban a Három Glorieuse elűzte X. Károly királyt, Delacroix pedig azonnal megfestette a Liberty Leading the People-t.",
+        "explanation": "1830-ban a Három dicsőséges nap elűzte X. Károly királyt, Delacroix pedig azonnal megfestette A Szabadság vezeti a népet.",
         "options": [
           "A három dicsőséges lány, akik üldözték Károlyt",
           "A Bastille megrohanása",
@@ -6790,7 +6790,7 @@
       {
         "id": "course_152_la_liberte_guidant_le_peuple_delacroix_q3",
         "type": "mcq",
-        "question": "Mit jelképez a festmény közepén látható fríg sapkás nő?",
+        "question": "Kit ábrázol a festmény közepén a fríg sapkás nő?",
         "explanation": "A fríg sapkás nő Marianne-t, a Francia Köztársaság szimbólumát testesíti meg.",
         "options": [
           "A Marianne, a Köztársaság allegóriája",
@@ -7204,7 +7204,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q1",
         "type": "mcq",
-        "question": "Melyik városban festette Picasso a Les Demoiselles d'Avignon-t 1907-ben?",
+        "question": "Melyik városban festette Picasso 1907-ben az Avignoni kisasszonyokat?",
         "explanation": "Picasso a montmartre-i Bateau-Lavoirban dolgozott, ahol 1907-ben fejezte be a festményt.",
         "options": [
           "Párizs (Montmartre)",
@@ -7304,7 +7304,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q9",
         "type": "numericSlider",
-        "question": "Melyik évben fejezte be Picasso a Les Demoiselles d'Avignont?",
+        "question": "Melyik évben fejezte be Picasso az Avignoni kisasszonyokat?",
         "explanation": "Picasso 1907-ben készítette el a festményt Montmartre-ban.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -7333,7 +7333,7 @@
       {
         "id": "course_157_la_persistance_de_la_memoire_dali_q2",
         "type": "mcq",
-        "question": "Mit jelképeznek a festményen látható puha órák?",
+        "question": "Mit jelentenek a festmény puha órái?",
         "explanation": "Az órák a lassú időt mutatják: az átélt idő nem az óráké.",
         "options": [
           "Belső idő, tapasztalt, különbözik az órák által mért időtől",
@@ -8880,7 +8880,7 @@
       {
         "id": "course_16_la_bataille_de_verdun_1916_q8",
         "type": "chronological",
-        "question": "Tedd időrendi sorrendbe a verduni csata és annak emlékét ezek a szakaszok.",
+        "question": "Tedd időrendi sorrendbe a verduni csata és emlékének ezeket a szakaszait.",
         "explanation": "Ezek a mérföldkövek a német offenzíva 1916 februári megindításától az 1984-es francia-német megbékélésig terjednek.",
         "items": [
           "A német bombázás megnyitása",
@@ -8893,7 +8893,7 @@
       {
         "id": "course_16_la_bataille_de_verdun_1916_q9",
         "type": "mcq",
-        "question": "Mit jelképez a kézfogás François Mitterrand és Helmut Kohl között 1984-ben Verdunban?",
+        "question": "Mit szimbolizál Mitterrand és Kohl 1984-es verduni kézfogása?",
         "explanation": "Ez a gesztus a Douaumont osszárium előtt teszi Verdunt a béke szimbólumává Franciaország és Németország között.",
         "options": [
           "Francia-német megbékélés",
@@ -9283,12 +9283,12 @@
       {
         "id": "course_173_ulysse_et_le_cyclope_q1",
         "type": "mcq",
-        "question": "Ki az a Polyphemus?",
-        "explanation": "Polyphemus egy küklopsz, egy szem óriás, Poszeidón tengeristen fia.",
+        "question": "Ki az a Polüphémosz?",
+        "explanation": "Polüphémosz küklopsz, egyszemű óriás, Poszeidón tengeristen fia.",
         "options": [
           "Küklopsz, Poszeidón isten fia",
-          "Ulyssesszel szövetséges görög király",
-          "Az Olimposz istene",
+          "Odüsszeusszal szövetséges görög király",
+          "Az Olümposz istene",
           "Odüsszeusz testvére"
         ],
         "correctIndex": 0
@@ -9359,7 +9359,7 @@
       {
         "id": "course_173_ulysse_et_le_cyclope_q7",
         "type": "mcq",
-        "question": "Milyen hibát követ el Odüsszeusz, ha biztonságban van a tengeren?",
+        "question": "Milyen hibát követ el Odüsszeusz, amikor már biztonságban van a tengeren?",
         "explanation": "Odüsszeusz a kleos utáni vágyból, a névben fennmaradt dicsőségből kiáltja kilétét Polyphemusnak, aki aztán név szerint átkozhatja Poszeidónnak.",
         "options": [
           "Dicsőségvágyból felfedi valódi nevét és városát Polyphemusnak.",
@@ -9452,8 +9452,8 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q5",
         "type": "mcq",
-        "question": "Ki figyelmeztette Ulyssest a veszélyre és a Szirének elleni stratégiára?",
-        "explanation": "Circe bűvész figyelmeztette Ulyssest, és megengedte neki, hogy elkészítse stratégiáját.",
+        "question": "Ki figyelmeztette Odüsszeuszt a veszélyre és a szirénák elleni stratégiára?",
+        "explanation": "Kirké, a varázslónő figyelmeztette Odüsszeuszt, és így készíthette el a tervét.",
         "options": [
           "A bűvész Circe",
           "Athéné istennő",
@@ -9502,13 +9502,13 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q9",
         "type": "chronological",
-        "question": "Tedd sorrendbe ezeket a lépéseket a Sellők epizódból.",
-        "explanation": "Circe figyelmeztetése megelőzi az anyagi előkészítést, majd magának a dalnak a tesztjét, ahol csak az előzetes rendezés menti meg Ulyssest.",
+        "question": "Tedd sorrendbe ezeket a lépéseket a szirénák epizódjából.",
+        "explanation": "Kirké figyelmeztetése megelőzi az anyagi előkészítést, majd magának a dalnak a próbáját, ahol csak az előre elrendezett terv menti meg Odüsszeuszt.",
         "items": [
-          "Circe figyelmezteti Ulyssest a szirénák veszélyére",
+          "Kirké figyelmezteti Odüsszeuszt a szirénák veszélyére",
           "Odüsszeusz viasszal takarja be társai fülét",
           "Odüsszeuszt a hajó árbocához kötik",
-          "Felcsendül a Szirének dala, és Odüsszeusz szabadságát követeli"
+          "Felcsendül a szirénák dala, és Odüsszeusz a szabadságát követeli"
         ]
       }
     ]
@@ -11842,7 +11842,7 @@
       {
         "id": "course_193_quetzalcoatl_q1",
         "type": "mcq",
-        "question": "Mit jelképez a kígyó és a toll egyesülése a Quetzalcoatl névben?",
+        "question": "Mit jelent a kígyó és a toll egyesülése Quetzalcóatl nevében?",
         "explanation": "A név a kígyót (a földet) és a quetzalt, egy zöld tollú madarat (az égboltot) kapcsolja össze, így Quetzalcoatl híd az emberi és az isteni között.",
         "options": [
           "A föld és az ég kapcsolata",
@@ -12104,7 +12104,7 @@
       {
         "id": "course_195_lancelot_guenievre_et_la_table_ronde_q4",
         "type": "mcq",
-        "question": "Mit jelképez a Kerekasztal kör alakú formája?",
+        "question": "Mit jelent a Kerekasztal kerek formája?",
         "explanation": "A Kerekasztal kör alakú formája felszámolja a hierarchiát: minden lovag egyenlő a szomszédjával, beleértve a királyt is.",
         "options": [
           "Egyenlőség a lovagok között, beleértve a királyt is",
@@ -12739,8 +12739,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "Mit jelképez a hidzsra a 622-ben?",
-        "explanation": "A hidzsra Mohamed távozása, halállal fenyegetve Mekkában, Medina oázisa felé. Ez a dátum a muszlim naptár 1. éve lesz.",
+        "question": "Mi a hidzsra 622-ben?",
+        "explanation": "A hidzsra Mohamed távozása Mekkából Medina oázisába, amikor halállal fenyegették. Ettől a dátumtól számítják a muszlim naptár 1. évét.",
         "options": [
           "Mohamed elutazása Mekkából Medinába",
           "Az első kinyilatkoztatás, amelyet Mohamed kapott",
@@ -12804,16 +12804,16 @@
         "options": [
           "Az a státusz, amely lehetővé teszi a keresztények és a zsidók számára, hogy adó ellenében megtartsák vallásukat",
           "A muszlim naptár neve",
-          "Adó a kereskedői lakókocsikra",
-          "A bíróság hitetlenek megítélésével vádolt"
+          "Adó a kereskedőkaravánokra",
+          "A hitetlenek elítélésére rendelt bíróság"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_1_la_naissance_de_l_islam_622_q7",
         "type": "mcq",
-        "question": "Melyik két nagy birodalom fárasztja ki az Arábia körüli háborúkat a 7. században?",
-        "explanation": "A Bizánc (Keletrómai Birodalom) és a szászánida perzsák közötti végtelen háborúk geopolitikai vákuumot teremtettek, amelyből Mohamed új üzenete kihasználta.",
+        "question": "Melyik két nagy birodalom merült ki az Arábia körüli háborúkban a 7. században?",
+        "explanation": "A Bizánc (Keletrómai Birodalom) és a szászánida perzsák közötti végtelen háborúk geopolitikai űrt hoztak létre, amelyet Mohamed új üzenete kihasznált.",
         "options": [
           "A bizánci és a szászánida birodalom",
           "A római és a kínai birodalom",
@@ -13008,7 +13008,7 @@
       {
         "id": "course_201_la_naissance_du_conflit_israelo_palestin_q5",
         "type": "chronological",
-        "question": "Állítsa ezeket az eseményeket időrendi sorrendbe!",
+        "question": "Állítsd ezeket az eseményeket időrendi sorrendbe!",
         "explanation": "Ez a négy dátum (1897, 1917, 1947, 1948) fél évszázadot jelez, a politikai cionizmus születésétől Izrael Állam létrejöttéig és a palesztinok elvándorlásáig.",
         "items": [
           "Bázeli Kongresszus",
@@ -14326,7 +14326,7 @@
       {
         "id": "course_211_comment_fonctionne_le_prix_du_petrole_q10",
         "type": "chronological",
-        "question": "Állítsa ezeket az olajár-eseményeket időrendi sorrendbe.",
+        "question": "Állítsd ezeket az olajár-eseményeket időrendi sorrendbe.",
         "explanation": "Az OPEC megalapításától a 2022-es áremelkedésig ezek az események az olajpiac krónikus volatilitását mutatják.",
         "items": [
           "OPEC Alapítvány",
@@ -14378,7 +14378,7 @@
       {
         "id": "course_212_les_paradis_fiscaux_expliques_q4",
         "type": "chronological",
-        "question": "Állítsa ezeket az eseményeket időrendi sorrendbe!",
+        "question": "Állítsd ezeket az eseményeket időrendi sorrendbe!",
         "explanation": "A 2008-as pénzügyi válság, majd a 2016-os Panama Papers felháborodási hullámot váltott ki, amely a minimális adókulcsról szóló 2021-es nemzetközi megállapodáshoz vezetett.",
         "items": [
           "A globális pénzügyi válság",
@@ -17967,7 +17967,7 @@
       {
         "id": "course_240_la_chine_et_son_modele_economique_q10",
         "type": "chronological",
-        "question": "Állítsa időrendi sorrendbe a közelmúlt kínai gazdaságtörténetének ezeket a szakaszait.",
+        "question": "Állítsd időrendi sorrendbe a közelmúlt kínai gazdaságtörténetének ezeket a szakaszait.",
         "explanation": "Ezek a mérföldkövek 1978-tól 2022-ig tartanak: reform és nyitás, a Belt and Road kezdeményezés, az Evergrande-válság, majd a demográfiai hanyatlás kezdete.",
         "items": [
           "A reform és nyitási politika elindítása",
@@ -18624,7 +18624,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q1",
         "type": "mcq",
         "question": "Milyen esemény történt a clermonti zsinaton 1095 novemberében?",
-        "explanation": "A clermonti zsinaton 1095. november 27-én II. Urbanus felszólította a nyugati keresztényeket, hogy menjenek el és szabadítsák fel Jeruzsálemet, cserébe bűneik bocsánatáért.",
+        "explanation": "A clermonti zsinaton 1095. november 27-én II. Orbán felszólította a nyugati keresztényeket, hogy induljanak Jeruzsálem felszabadítására, bűneik bocsánatáért cserébe.",
         "options": [
           "II. Urbán pápa keresztes hadjáratra szólít fel Jeruzsálem felszabadítására",
           "A pápa kiközösíti a bizánci császárt",
@@ -18637,7 +18637,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q2",
         "type": "mcq",
         "question": "Milyen esemény késztette I. Aleksziosz bizánci császárt, hogy segítséget kérjen a pápától?",
-        "explanation": "1071-ben Mantzikertben a szeldzsuk törökök szétverték a bizánci sereget, és megnyitották Anatóliát, és I. Alexiosz Komnénusz petíció benyújtására késztették Rómát.",
+        "explanation": "1071-ben Mantzikertnél a szeldzsuk törökök szétverték a bizánci sereget és megnyitották Anatóliát. Ekkor kért I. Alexiosz Komnénosz segítséget Rómától.",
         "options": [
           "Mantzikert veresége a szeldzsuk törökök ellen",
           "Jeruzsálem elfoglalása a muszlimok által",
@@ -18650,7 +18650,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q3",
         "type": "trueFalse",
         "question": "Igaz vagy hamis: a „szegények keresztes hadjárata”, amelyet Remete Péter vezetett, fegyelmezett hadsereg volt, amely nehézség nélkül elérte Jeruzsálemet.",
-        "explanation": "Fegyelem és ellátás nélkül ez a szegény embercsapat kifosztotta útjukat, és megtizedelték Anatóliában, mielőtt elérte volna Jeruzsálemet.",
+        "explanation": "Fegyelem és ellátás nélkül a szegények csapata fosztogatott az úton, és Anatóliában megtizedelték, még Jeruzsálem előtt.",
         "options": [
           "Igaz",
           "Hamis"
@@ -18660,8 +18660,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q4",
         "type": "mcq",
-        "question": "Mit ígér az Urban II azoknak, akik keresztes hadjáratra indulnak?",
-        "explanation": "II. Urbanus teljes búcsút ígér: a bűnök teljes bocsánatát azoknak, akik felveszik a keresztet.",
+        "question": "Mit ígér II. Orbán azoknak, akik keresztes hadjáratra indulnak?",
+        "explanation": "II. Orbán teljes búcsút ígér: a bűnök teljes bocsánatát azoknak, akik felveszik a keresztet.",
         "options": [
           "A bűneik miatti büntetés teljes bocsánatát",
           "Garantált föld a Szentföldön",
@@ -18673,8 +18673,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q5",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: Jeruzsálem elfoglalása után Bouillon Godfrey kiáltotta ki magát a város királyának.",
-        "explanation": "Godfrey of Bouillon megtagadta a királyi címet, és inkább a Szent Sír Elfogadtának, Krisztus sírjának védőjének nevezték.",
+        "question": "Igaz vagy hamis: Jeruzsálem elfoglalása után Bouillon Gottfried királlyá kiáltotta ki magát.",
+        "explanation": "Bouillon Gottfried visszautasította a királyi címet. Inkább a Szent Sír védőjének, Krisztus sírjának oltalmazójának neveztette magát.",
         "options": [
           "Igaz",
           "Hamis"
@@ -18685,12 +18685,12 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q6",
         "type": "chronological",
         "question": "Tedd időrendi sorrendbe ezeket az eseményeket a keresztes hadjáratok történetében.",
-        "explanation": "Ezek a mérföldkövek 1071-től 1187-ig terjednek: a bizánci vereség megelőzi a pápa fellebbezését, amely megelőzi Jeruzsálem elfoglalását, majd visszafoglalását.",
+        "explanation": "Ezek a mérföldkövek 1071-től 1187-ig tartanak: a bizánci vereség megelőzi a pápa felhívását, az pedig Jeruzsálem elfoglalását, majd Szaladin visszafoglalását.",
         "items": [
           "Mantzikert bizánci veresége a szeldzsuk törökök ellen",
           "Felhívás keresztes hadjáratra a clermonti zsinaton",
           "Jeruzsálem elfoglalása a keresztesek által",
-          "Szaladin Jeruzsálem újraindítása"
+          "Szaladin visszafoglalja Jeruzsálemet"
         ]
       },
       {
@@ -18720,8 +18720,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q9",
         "type": "numericSlider",
-        "question": "Melyik évben esett el Saint-Jean-d'Acre, a keleti latin államok utolsó bástyája?",
-        "explanation": "Saint-Jean-d'Acre eleste 1291-ben a latin jelenlét végét jelenti a Szentföldön.",
+        "question": "Melyik évben esett el Akkó, a keleti latin államok utolsó bástyája?",
+        "explanation": "Akkó eleste 1291-ben a latin jelenlét végét jelenti a Szentföldön.",
         "correctValue": 1291.0,
         "sliderMin": 1200.0,
         "sliderMax": 1350.0,
@@ -18822,7 +18822,7 @@
         "id": "course_30_la_blitzkrieg_1940_q8",
         "type": "mcq",
         "question": "Melyik városból nyújtotta be de Gaulle tábornok 1940. június 18-i felhívását?",
-        "explanation": "1940. június 18-án Londonból de Gaulle tábornok fellebbezést nyújtott be a BBC-hez, amelyben kijelentette, hogy Franciaország csatát vesztett, nem háborút.",
+        "explanation": "1940. június 18-án Londonból de Gaulle tábornok a BBC-n intézett felhívást: Franciaország csatát vesztett, nem háborút.",
         "options": [
           "London",
           "Párizs",
@@ -19517,7 +19517,7 @@
         "id": "course_36_la_revolution_culturelle_en_chine_1966_1_q9",
         "type": "chronological",
         "question": "Állítsd időrendi sorrendbe a kulturális forradalom e szakaszait!",
-        "explanation": "Mao 1966-os fellebbezésétől Teng Hsziao-ping 1978-as reformjaiig ezek a mérföldkövek egy évtizedes tisztogatásokat ölelnek fel, majd gazdasági váltás következett.",
+        "explanation": "Mao 1966-os felhívásától Teng Hsziao-ping 1978-as reformjaiig ezek a mérföldkövek egy évtizednyi tisztogatást fognak át, majd gazdasági fordulatot.",
         "items": [
           "Mao felhívása, hogy bombázzák a főhadiszállást",
           "Az erőszak megugrása a Vörös Gárda csoportjai között",
@@ -19863,7 +19863,7 @@
       {
         "id": "course_39_la_democratie_athenienne_q9",
         "type": "chronological",
-        "question": "Állítsa ezeket a reformokat és eseményeket az athéni demokráciában időrendi sorrendbe.",
+        "question": "Állítsd időrendi sorrendbe ezeket a reformokat és eseményeket az athéni demokráciában.",
         "explanation": "Szolóntól Szókratész haláláig ezek a mérföldkövek az athéni demokrácia építésének, majd megkérdőjelezésének közel két évszázadát fedik le.",
         "items": [
           "Solon reformjai",
@@ -19894,7 +19894,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q2",
         "type": "trueFalse",
         "question": "Igaz vagy hamis: 410 előtt körülbelül nyolc évszázadig egyetlen ellenséges sereg sem lépett be Rómába.",
-        "explanation": "Róma utolsó ellenség általi elfoglalása a gall kizsákmányolás idejére nyúlik vissza, ie 390-ben. Kr.e., majdnem 800 évvel Alaric érkezése előtt.",
+        "explanation": "Róma utolsó ellenséges elfoglalása a gallok Kr. e. 390-es fosztogatásáig nyúlik vissza, majdnem 800 évvel Alarik érkezése előtt.",
         "options": [
           "Igaz",
           "Hamis"
@@ -19955,10 +19955,10 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q7",
         "type": "chronological",
         "question": "Tedd időrendi sorrendbe ezeket a Nyugat-Római Birodalom bukásának eseményeit.",
-        "explanation": "Ezek a szakaszok 402-től 476-ig terjednek: a ravennai kivonulás megelőzi a vizigót zsákmányt, majd a pusztítóbb vandál zsákot, egészen a Nyugati Birodalom végéig.",
+        "explanation": "Ezek a szakaszok 402-től 476-ig tartanak: a ravennai visszavonulás megelőzi a vizigót fosztogatást, majd a pusztítóbb vandál fosztogatást, egészen a Nyugatrómai Birodalom végéig.",
         "items": [
           "Honorius elhagyja Rómát Ravennáért",
-          "Róma zsákmánya, Alaric és a vizigótok",
+          "Alarik és a vizigótok kifosztják Rómát",
           "Róma kifosztása a vandálok által",
           "Az utolsó nyugati császár letétele"
         ]
@@ -21048,8 +21048,8 @@
         "question": "Ki koronázta meg Nagy Károlyt „a rómaiak császárává” a 800. karácsony napján?",
         "explanation": "800. december 25-én a római Szent Péter-bazilikában III. Leó pápa a császári koronát helyezte Nagy Károly fejére.",
         "options": [
-          "Leó pápa III",
-          "Innocent pápa III",
+          "III. Leó pápa",
+          "III. Ince pápa",
           "Aleksziosz I. Komnénosz bizánci császár",
           "Alcuin yorki érsek"
         ],
@@ -21058,13 +21058,13 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q2",
         "type": "mcq",
-        "question": "Melyik birodalmat állítja helyre 800 koronázása?",
-        "explanation": "III. Leó gesztusa a Romulus Augustulus 476-os letelepedése óta eltűnt Nyugat-Római Birodalmat kívánja helyreállítani.",
+        "question": "Melyik birodalom helyreállítását állítja a 800-as koronázás?",
+        "explanation": "III. Leó gesztusa a Nyugatrómai Birodalom helyreállítását állítja, amely Romulus Augustulus 476-os trónfosztása óta eltűnt.",
         "options": [
-          "A Nyugatrómai Birodalom 476 óta eltűnt",
+          "A 476 óta eltűnt Nyugatrómai Birodalom",
           "A keleti bizánci birodalom",
-          "A Sasanian Perzsa Birodalom",
-          "A Lombard Olasz Királyság"
+          "A szászánida Perzsa Birodalom",
+          "A longobárd Itáliai Királyság"
         ],
         "correctIndex": 0
       },
@@ -21106,10 +21106,10 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q6",
         "type": "mcq",
-        "question": "Milyen írást fogadott el Nagy Károly, hogy szabványosítsa a birodalomban másolt szövegeket?",
-        "explanation": "Az Aix-la-Chapelle palotaiskola elterjesztette a Caroline-írást, amely az egész birodalomban olvasható volt.",
+        "question": "Milyen írást fogadtatott el Nagy Károly, hogy egységesítse a birodalomban másolt szövegeket?",
+        "explanation": "Az aacheni palotaiskola elterjesztette a karoling minuszkulát, amely az egész birodalomban olvasható volt.",
         "options": [
-          "Caroline írása",
+          "Karoling minuszkula",
           "A görög ábécé",
           "Hieroglifák",
           "Cirill ábécé"
@@ -22230,8 +22230,8 @@
       {
         "id": "course_5_la_magna_carta_1215_q1",
         "type": "mcq",
-        "question": "Miért kényszerítették az angol bárók a Magna Cartát John Lackland királyra 1215-ben?",
-        "explanation": "Szembesülve az adókkal, túszokkal és önkényes pénzbírságokkal, amelyeket John Lackland szabott ki földjei visszahódítása érdekében, a bárók fellázadnak, és hatalmát korlátozó szöveget szabnak ki.",
+        "question": "Miért kényszerítették az angol bárók a Magna Cartát Földnélküli János királyra 1215-ben?",
+        "explanation": "A Földnélküli János által földjei visszahódítására kirótt adók, túszok és önkényes pénzbírságok miatt a bárók fellázadtak, és hatalmát korlátozó szöveget kényszerítettek rá.",
         "options": [
           "A királyi önkény korlátozása: adók, túszok és visszaélésszerű pénzbírságok",
           "Finanszírozni egy új keresztes hadjáratot a Szentföldön",
@@ -22243,8 +22243,8 @@
       {
         "id": "course_5_la_magna_carta_1215_q2",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: 1215 előtt John Lackland elvesztette Normandiát II. Fülöp francia királynak.",
-        "explanation": "1204-ben John Lackland elvesztette Normandiát Fülöp II. Augustusszal szemben, ami végleg meggyengítette őt.",
+        "question": "Igaz vagy hamis: 1215 előtt Földnélküli János elvesztette Normandiát II. Fülöp Ágost francia királlyal szemben.",
+        "explanation": "1204-ben Földnélküli János elvesztette Normandiát II. Fülöp Ágosttal szemben, ami tartósan meggyengítette.",
         "options": [
           "Igaz",
           "Hamis"
@@ -22281,18 +22281,18 @@
         "question": "Mi történt 1215 augusztusában, nem sokkal a Magna Carta aláírása után?",
         "explanation": "János 1215 augusztusában elérte, hogy a pápa megsemmisítse a szöveget, ami újra fellángolta a bárókkal való konfliktust.",
         "options": [
-          "John Lackland megsemmisíti a szöveget a pápa által, és a polgárháború folytatódik",
+          "Földnélküli János a pápával semmisítteti meg a szöveget, és a polgárháború folytatódik",
           "A királyt a bárók leváltják",
           "A chartát azonnal alkalmazzák az egész királyságban",
-          "John Lackland franciaországi száműzetésbe megy"
+          "Földnélküli János franciaországi száműzetésbe megy"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_5_la_magna_carta_1215_q6",
         "type": "mcq",
-        "question": "Milyen katonai vereség 1214-ben választotta el véglegesen John Lacklandet a Magna Carta előtt?",
-        "explanation": "1214-ben Bouvines veresége, ahol Philippe Auguste legyőzte az Angliát is magában foglaló koalíciót, elszigetelte John Lacklandet.",
+        "question": "Milyen katonai vereség szigetelte el végleg Földnélküli Jánost 1214-ben, a Magna Carta előtt?",
+        "explanation": "1214-ben a bouvines-i vereség, ahol Fülöp Ágost legyőzte az Angliát is magában foglaló koalíciót, elszigetelte Földnélküli Jánost.",
         "options": [
           "Bouvines veresége",
           "Gascony elvesztése",
@@ -22304,20 +22304,20 @@
       {
         "id": "course_5_la_magna_carta_1215_q7",
         "type": "chronological",
-        "question": "Tedd időrendi sorrendbe ezeket az eseményeket John Lackland uralkodása óta.",
+        "question": "Tedd időrendi sorrendbe ezeket az eseményeket Földnélküli János uralkodásából.",
         "explanation": "Ezek a szakaszok 1204-től 1216-ig tartanak: Normandia elvesztése megelőzi Bouvines vereségét, majd a charta aláírását és III. Henrik általi újrakiadását.",
         "items": [
-          "Normandia elvesztése Philippe Auguste ellen",
-          "Bouvines veresége",
-          "A Magna Carta aláírása Runnymedesben",
-          "Henrik újrakiadta az oklevelet"
+          "Normandia elvesztése Fülöp Ágosttal szemben",
+          "A bouvines-i vereség",
+          "A Magna Carta aláírása Runnymede-nél",
+          "III. Henrik újrakiadja az oklevelet"
         ]
       },
       {
         "id": "course_5_la_magna_carta_1215_q8",
         "type": "numericSlider",
         "question": "Melyik évben pecsételték le a Magna Cartát Runnymedesben?",
-        "explanation": "John Lackland király 1215 júniusában, Runnymede-réten helyezte el pecsétjét a Magna Cartán.",
+        "explanation": "Földnélküli János király 1215 júniusában, a runnymede-i réten helyezte pecsétjét a Magna Cartára.",
         "correctValue": 1215.0,
         "sliderMin": 1150.0,
         "sliderMax": 1300.0,
@@ -22660,7 +22660,7 @@
       {
         "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_q8",
         "type": "mcq",
-        "question": "Melyik ókori várost temette el a Vezúv i.sz. 79-ben történt kitörése? HIRDETÉS?",
+        "question": "Melyik ókori várost temette el a Vezúv i. sz. 79-es kitörése?",
         "explanation": "Kr.e. 79-ben a Vezúv Nápoly melletti kitörése hamuba temette Pompei városát.",
         "options": [
           "Pompei",
@@ -23486,7 +23486,7 @@
         "explanation": "Az orvosok hisznek a miazma, a károsodott levegő elméletében, amikor is a valódi vektor a patkánybolha, a Xenopsylla cheopis.",
         "options": [
           "A patkánybolha",
-          "Korruptnak tűnik",
+          "A megrontott levegő",
           "Kútvíz",
           "Szúnyogok"
         ],
@@ -23495,8 +23495,8 @@
       {
         "id": "course_6_la_peste_noire_en_europe_1347_1353_q5",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: a pestis tüdőgyulladásos formája, amely emberről emberre terjed, mindössze 24-48 óra alatt elpusztul.",
-        "explanation": "A tüdőgyulladás a legpusztítóbb: közvetlenül az emberek között terjed, és 24-48 órán belül elpusztul.",
+        "question": "Igaz vagy hamis: a pestis tüdőgyulladásos formája, amely emberről emberre terjed, mindössze 24–48 óra alatt öl.",
+        "explanation": "A tüdőpestis a legpusztítóbb: közvetlenül emberek között terjed, és 24–48 órán belül öl.",
         "options": [
           "Igaz",
           "Hamis"
@@ -24551,8 +24551,8 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q1",
         "type": "mcq",
-        "question": "Hány éves volt Jeanne of Arc, amikor 1429-ben csatlakozott a dauphin Charleshoz?",
-        "explanation": "Jeanne 17 éves volt, amikor elhagyta Domrémyt, hogy meggyőzze a dauphint, bízzanak rá egy hadsereget.",
+        "question": "Hány éves volt Jeanne d'Arc, amikor 1429-ben csatlakozott Károly dauphinhoz?",
+        "explanation": "Jeanne 17 éves volt, amikor elhagyta Domrémyt, hogy meggyőzze a dauphint: bízzon rá egy sereget.",
         "options": [
           "17 éves",
           "25 éves",
@@ -24564,7 +24564,7 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q2",
         "type": "mcq",
-        "question": "Honnan jött Joan of Arc?",
+        "question": "Honnan származott Jeanne d'Arc?",
         "explanation": "Jeanne egy parasztlány Domrémyből, Lotharingiából.",
         "options": [
           "Domrémyből, Lotaringiából",
@@ -24588,13 +24588,13 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q4",
         "type": "mcq",
-        "question": "Mit biztosít az 1420-as Troyes-i Szerződés?",
-        "explanation": "A Troyes-i Szerződés megfosztja a Dauphin Károly örökségét az angol király javára, akinek uralkodását Párizsban kikiáltják.",
+        "question": "Mit ír elő az 1420-as troyes-i szerződés?",
+        "explanation": "A troyes-i szerződés megfosztja Károly dauphint az örökségtől az angol király javára, akit Párizsban királlyá kiáltanak ki.",
         "options": [
           "A dauphint megfosztják az örökségtől az angol király javára",
-          "Franciaország annektálja Burgundiát",
-          "Joan of Arc-t lovaggá teszik",
-          "VII. Károly azonnali megkoronázása Reimsben"
+          "Franciaország bekebelezte Burgundiát",
+          "Jeanne d'Arc-ot lovaggá ütik",
+          "VII. Károlyt azonnal megkoronázzák Reimsben"
         ],
         "correctIndex": 0
       },
@@ -24602,12 +24602,12 @@
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q5",
         "type": "mcq",
         "question": "Jeanne szerint milyen küldetést kapott a hangjaitól?",
-        "explanation": "Hangja arra utasítja, hogy szüntesse meg Orléans ostromát, majd vezesse el a dauphint Reims megkoronázására, amely az egyetlen rítus, amelyből igazi király lesz.",
+        "explanation": "Hangjai arra utasítják, hogy oldja fel Orléans ostromát, majd vezesse a dauphint a reimsi koronázásra, az egyetlen rítusra, amely valódi királlyá tesz.",
         "options": [
-          "Oldja fel Orléans ostromát, majd vezesse el a daufint Reims megkoronázására",
-          "A burgundok kiűzése Párizsból",
-          "Feleségül venni a Dauphin Charlest",
-          "Hódítsd vissza Normandiát"
+          "Oldja fel Orléans ostromát, majd vezesse a dauphint a reimsi koronázásra",
+          "Űzze ki a burgundiakat Párizsból",
+          "Menjen feleségül Károly daupinhoz",
+          "Foglalja vissza Normandiát"
         ],
         "correctIndex": 0
       },
@@ -24615,7 +24615,7 @@
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q6",
         "type": "numericSlider",
         "question": "Melyik évben emelte fel Jeanne d'Arc Orléans ostromát?",
-        "explanation": "Joan 1429 májusában, mindössze kilenc nap alatt megtörte Orléans ostromát.",
+        "explanation": "Jeanne 1429 májusában, mindössze kilenc nap alatt törte meg Orléans ostromát.",
         "correctValue": 1429.0,
         "sliderMin": 1400.0,
         "sliderMax": 1450.0,
@@ -24625,7 +24625,7 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q7",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: Jeanne of Arc sok ellenséget ölt meg saját kezével csata közben.",
+        "question": "Igaz vagy hamis: Jeanne d'Arc saját kezűleg sok ellenséget ölt meg a csatában.",
         "explanation": "Jeanne soha nem ölt meg ellenséget saját kezével; szívesebben vitte a zászlóját, hogy vezesse anélkül, hogy maga is vért ontott volna.",
         "options": [
           "Igaz",
@@ -24636,11 +24636,11 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q8",
         "type": "chronological",
-        "question": "Tedd időrendi sorrendbe ezeket az eseményeket Joan of Arc életében.",
-        "explanation": "Ezek a mérföldkövek 1420-tól 1431-ig nyúlnak vissza: Troyes, majd Orléans és Reims egyezmény 1429-ben, elfoglalás 1430-ban és kivégzés 1431-ben.",
+        "question": "Tedd időrendi sorrendbe ezeket az eseményeket Jeanne d'Arc életéből.",
+        "explanation": "Ezek a mérföldkövek 1420-tól 1431-ig tartanak: a troyes-i szerződés, majd Orléans és Reims 1429-ben, a fogság 1430-ban és a kivégzés 1431-ben.",
         "items": [
-          "A Troyes-i Szerződés megfosztja a dauphin örökségét",
-          "Joan feloldja Orléans ostromát",
+          "A troyes-i szerződés megfosztja a dauphint az örökségtől",
+          "Jeanne feloldja Orléans ostromát",
           "VII. Károly megkoronázása Reimsben",
           "Jeanne elfogása Compiègne-ben",
           "A roueni máglya"
@@ -24768,8 +24768,8 @@
       {
         "id": "course_81_l_odyssee_homere_q1",
         "type": "mcq",
-        "question": "Melyik görög hősnek kellett tíz év alatt hazatérnie a trójai háború után?",
-        "explanation": "Odüsszeusznak, Ithaka királyának tíz évbe telik, hogy a trójai háború befejezése után hazatérjen: ez az Odüsszeia témája.",
+        "question": "Melyik görög hősnek tart tíz évig hazatérnie a trójai háború után?",
+        "explanation": "Odüsszeusznak, Ithaka királyának tíz évbe telik hazatérnie a trójai háború után: ez az Odüsszeia tárgya.",
         "options": [
           "Odüsszeusz",
           "Akhilleusz",
@@ -24784,9 +24784,9 @@
         "question": "Hogyan kezdődik az Odüsszeia története narratív értelemben?",
         "explanation": "Homérosz a cselekmény kellős közepén kezdi el történetét: Odüsszeusz, akit Calypso nimfa tart, majd visszaemlékezésben elmeséli múltbeli kalandjait.",
         "options": [
-          "In media res, az akció közepén, míg Odüsszeusz-t Calypso tartja",
+          "In medias res, a cselekmény kellős közepén, míg Kalypso tartja Odüsszeuszt",
           "Odüsszeusz születésének történetével",
-          "A trójai háború kezdetére",
+          "A trójai háború kezdetén",
           "Odüsszeusz Ithakába való visszatérésével"
         ],
         "correctIndex": 0
@@ -24794,8 +24794,8 @@
       {
         "id": "course_81_l_odyssee_homere_q3",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: Odüsszeusz megszökik a Cyclops Polyphemus elől anélkül, hogy felfedné a nevét.",
-        "explanation": "Odüsszeusz büszkén kiáltja valódi nevét, miután megvakította Polyphemust, és lehetővé teszi Küklopsznak, hogy leszólja apja, Poszeidón bosszúját rajta.",
+        "question": "Igaz vagy hamis: Odüsszeusz megszökik Polüphémosz küklopsz elől anélkül, hogy felfedné a nevét.",
+        "explanation": "Odüsszeusz büszkén kiáltja valódi nevét, miután megvakította Polüphémoszt, és ezzel lehetővé teszi, hogy a küklopsz apja, Poszeidón bosszúját hívja rá.",
         "options": [
           "Igaz",
           "Hamis"
@@ -24842,19 +24842,19 @@
       {
         "id": "course_81_l_odyssee_homere_q7",
         "type": "numericSlider",
-        "question": "Körülbelül hány dal (rész) van az Odüsszeában?",
-        "explanation": "Az Odüsszea 24 dalt és körülbelül 12 000 verset tartalmaz.",
+        "question": "Körülbelül hány énekből (részből) áll az Odüsszeia?",
+        "explanation": "Az Odüsszeia 24 énekből és körülbelül 12 000 versből áll.",
         "correctValue": 24.0,
         "sliderMin": 10.0,
         "sliderMax": 40.0,
         "tolerance": 2.0,
-        "unit": "dalokat"
+        "unit": "ének"
       },
       {
         "id": "course_81_l_odyssee_homere_q8",
         "type": "mcq",
-        "question": "Melyik 20. századi író ültette át Ulysses utazását egyetlen napba Dublinban?",
-        "explanation": "1922-ben James Joyce kiadta Ulysses című regényét, amely a homéroszi vándorlást egyetlen Dublinban töltött napba ülteti át.",
+        "question": "Melyik 20. századi író ültette át Odüsszeusz útját egyetlen dublini napba?",
+        "explanation": "1922-ben James Joyce kiadta Ulysses című regényét, amely a homéroszi vándorlást egyetlen dublini napba helyezi.",
         "options": [
           "James Joyce",
           "Marcel Proust",
@@ -25466,7 +25466,7 @@
         "sliderMin": 380.0,
         "sliderMax": 420.0,
         "tolerance": 5.0,
-        "unit": "av. HIRDETÉS"
+        "unit": "av."
       },
       {
         "id": "course_87_l_apologie_de_socrate_platon_q2",
@@ -25800,18 +25800,18 @@
         "question": "Ki vezette Konstantinápoly ostromát és elfoglalását 1453-ban?",
         "explanation": "A fiatal II. Mehmed oszmán szultán vezette a város ostromát és elfoglalását.",
         "options": [
-          "Mehmed oszmán szultán II",
-          "Konstantin bizánci császár XI",
+          "II. Mehmed oszmán szultán",
+          "XI. Konstantin bizánci császár",
           "A 4. keresztes hadjárat keresztesei",
-          "VII Károly francia király"
+          "VII. Károly francia király"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_8_la_chute_de_constantinople_1453_q3",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: 1453 előtt a theodoszi falakat ezer évig soha nem kényszerítette a föld.",
-        "explanation": "Ez az 5. századból származó hármas sánc egy évezredig ellenállt minden szárazföldi támadásnak, egészen az 1453-as oszmán tüzérségig.",
+        "question": "Igaz vagy hamis: 1453 előtt a theodosiusi falakat ezer évig soha nem törték át szárazföldről.",
+        "explanation": "Ez az 5. századi hármas sánc egy évezreden át ellenállt minden szárazföldi ostromnak, egészen az 1453-as oszmán tüzérségig.",
         "options": [
           "Igaz",
           "Hamis"
@@ -25834,8 +25834,8 @@
       {
         "id": "course_8_la_chute_de_constantinople_1453_q5",
         "type": "mcq",
-        "question": "Mi a neve annak az óriási ágyúnak, amelyet az alapító Urban készített II. Mehmed számára?",
-        "explanation": "A városi Mehmed II számára egy 8 méteres, Bazilikának nevezett ágyút kovácsol, amely 600 kg-os ágyúgolyók kilőésére képes.",
+        "question": "Mi volt a neve annak az óriáságyúnak, amelyet Urban öntőmester készített II. Mehmednek?",
+        "explanation": "Urban egy 8 méteres, Bazilikának nevezett ágyút kovácsolt II. Mehmednek, amely 600 kilogrammos golyókat tudott kilőni.",
         "options": [
           "A Bazilika",
           "A Királyi Bombard",
@@ -26251,8 +26251,8 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q1",
         "type": "mcq",
-        "question": "Ki a Le Rouge et le Noir szerzője, akinek igazi neve Henri Beyle?",
-        "explanation": "Stendhal, akinek valódi neve Henri Beyle, 1830-ban adta ki a Le Rouge et le Noir-t.",
+        "question": "Ki a Vörös és fekete szerzője, akinek igazi neve Henri Beyle?",
+        "explanation": "Stendhal, akinek valódi neve Henri Beyle, 1830-ban adta ki a Vörös és feketét.",
         "options": [
           "Stendhal",
           "Honoré de Balzac",
@@ -26277,7 +26277,7 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q3",
         "type": "mcq",
-        "question": "Mit jelképez a piros és a fekete a címben?",
+        "question": "Mit jelent a vörös és a fekete a címben?",
         "explanation": "A katonai egyenruha piros és az egyházi ruha fekete színe volt a restauráció idején a művelt közember egyetlen hatalmi hordozója.",
         "options": [
           "A katonai egyenruha és az egyházi viselet, a közemberek felemelkedésének egyetlen útja",
@@ -26510,7 +26510,7 @@
         "id": "course_95_les_confessions_rousseau_q1",
         "type": "mcq",
         "question": "Ki a Vallomások szerzője?",
-        "explanation": "Jean-Jacques Rousseau írta a Les Confessions-t, amely posztumusz 1782 és 1789 között jelent meg.",
+        "explanation": "Jean-Jacques Rousseau írta a Vallomásokat, amely posztumusz 1782 és 1789 között jelent meg.",
         "options": [
           "Jean-Jacques Rousseau",
           "Voltaire",
@@ -27007,8 +27007,8 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q1",
         "type": "mcq",
-        "question": "Ki a Père Goriot szerzője?",
-        "explanation": "Honoré de Balzac 1835-ben adta ki a Le Père Goriot-t.",
+        "question": "Ki Goriot apó szerzője?",
+        "explanation": "Honoré de Balzac 1835-ben adta ki Goriot apót.",
         "options": [
           "Honoré de Balzac",
           "Victor Hugo",
@@ -27138,8 +27138,8 @@
       {
         "id": "course_9_l_empire_azteque_q1",
         "type": "numericSlider",
-        "question": "Melyik évben találta meg Mexikó Tenochtitlánt?",
-        "explanation": "Mexikó alapította Tenochtitlánt 1325-ben, a Texcoco-tó egyik szigetén.",
+        "question": "Melyik évben alapították a mexicák Tenochtitlánt?",
+        "explanation": "A mexicák 1325-ben alapították Tenochtitlánt, a Texcoco-tó egyik szigetén.",
         "correctValue": 1325.0,
         "sliderMin": 1280.0,
         "sliderMax": 1380.0,
@@ -27149,8 +27149,8 @@
       {
         "id": "course_9_l_empire_azteque_q2",
         "type": "mcq",
-        "question": "Huitzilopochtli istenük szerint milyen jelet keres Mexikó, hogy megalapítsa fővárosát?",
-        "explanation": "A mexikóiak a Texcoco-tó egyik szigetén találták meg ezt a táblát, ahol 1325-ben megalapították a Tenochtitlánt.",
+        "question": "Huitzilopochtli istenük szerint milyen jelet keresnek a mexicák a főváros alapításához?",
+        "explanation": "A mexicák a Texcoco-tó egyik szigetén találták meg a jelet, és ott alapították Tenochtitlánt 1325-ben.",
         "options": [
           "Egy sas felfal egy kígyót egy kaktuszon",
           "Egy üstökös átszeli az eget",
@@ -27212,7 +27212,7 @@
       {
         "id": "course_9_l_empire_azteque_q7",
         "type": "mcq",
-        "question": "Mi volt a fő tényező abban, hogy az Azték Birodalom gyorsan essen a spanyolokra?",
+        "question": "Mi volt a fő oka annak, hogy az Azték Birodalom ilyen gyorsan elesett a spanyolokkal szemben?",
         "explanation": "Az igazi gyilkos a himlő, a helyi lakosság számára ismeretlen európai betegség, amely sokkal jobban megtizedeli az aztékokat, mint a spanyol fegyverek.",
         "options": [
           "Himlő, egy olyan betegség, amely ellen az aztékoknak nem volt immunitásuk",

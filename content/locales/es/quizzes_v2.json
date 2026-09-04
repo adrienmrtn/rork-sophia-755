@@ -6,10 +6,10 @@
         "id": "course_100_les_fleurs_du_mal_baudelaire_q1",
         "type": "mcq",
         "question": "¿Quién es el autor de Las flores del mal?",
-        "explanation": "Charles Baudelaire publicó Las flores del mal en 1857, la partida de nacimiento de la poesía moderna.",
+        "explanation": "Charles Baudelaire publicó Las flores del mal en 1857: así nace la poesía moderna.",
         "options": [
-          "Carlos Baudelaire",
-          "Pablo Verlaine",
+          "Charles Baudelaire",
+          "Paul Verlaine",
           "Stéphane Mallarmé",
           "Arthur Rimbaud"
         ],
@@ -19,7 +19,7 @@
         "id": "course_100_les_fleurs_du_mal_baudelaire_q2",
         "type": "mcq",
         "question": "¿Por qué se condenaron Las flores del mal en 1857?",
-        "explanation": "La colección fue condenada por “atentado a la moral pública”, escándalo que no se levantaría oficialmente hasta 1949.",
+        "explanation": "El libro fue condenado por «ultraje a la moral pública», un escándalo que no se levantó oficialmente hasta 1949.",
         "options": [
           "Por “ultraje a la moral pública”",
           "Por plagio",
@@ -42,8 +42,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q4",
         "type": "mcq",
-        "question": "¿Qué representa el albatros en la sección “Bazo e ideal”?",
-        "explanation": "El albatros, majestuoso en vuelo pero ridículo una vez colocado en el suelo, representa al poeta en un mundo que no lo comprende.",
+        "question": "¿Qué es el albatros en la sección «Spleen e Ideal»?",
+        "explanation": "El albatros, majestuoso en vuelo pero ridículo en tierra, es el poeta en un mundo que no lo comprende.",
         "options": [
           "El poeta, majestuoso en vuelo pero ridículo en tierra",
           "Libertad total del artista.",
@@ -56,12 +56,12 @@
         "id": "course_100_les_fleurs_du_mal_baudelaire_q5",
         "type": "mcq",
         "question": "¿Qué sección de la colección hace de París un paisaje psicológico?",
-        "explanation": "“Pinturas parisinas” convierte la ciudad en un paisaje psicológico. El poeta deambula por allí como un paseante, un observador de la vida parisina bajo Haussmann.",
+        "explanation": "«Cuadros parisinos» convierte la ciudad en un paisaje psicológico. El poeta deambula como flâneur, observando la vida parisina bajo Haussmann.",
         "options": [
-          "“Pinturas parisinas”",
-          "“Bazo e Ideal”",
-          "“El Vino”",
-          "\"Muerte\""
+          "«Cuadros parisinos»",
+          "«Spleen e Ideal»",
+          "«El vino»",
+          "«La muerte»"
         ],
         "correctIndex": 0
       },
@@ -69,12 +69,12 @@
         "id": "course_100_les_fleurs_du_mal_baudelaire_q6",
         "type": "mcq",
         "question": "¿Qué poema describe la naturaleza como un “templo” de signos que vinculan olores, colores y sonidos?",
-        "explanation": "“Correspondencias” describe la naturaleza como un templo de signos. Allí se mezclan los sentidos: perfumes, colores y sonidos se responden entre sí.",
+        "explanation": "«Correspondencias» describe la naturaleza como un templo de signos. Allí se mezclan los sentidos: perfumes, colores y sonidos se responden.",
         "options": [
-          "\"Correspondencia\"",
-          "“El Albatros”",
-          "\"Bazo\"",
-          "\"Recopilación\""
+          "«Correspondencias»",
+          "«El albatros»",
+          "«Spleen»",
+          "«Recogimiento»"
         ],
         "correctIndex": 0
       },
@@ -92,8 +92,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q8",
         "type": "mcq",
-        "question": "¿Qué movimiento poético encontró la poética de la correspondencia de Baudelaire, llevada posteriormente por Verlaine y Mallarmé?",
-        "explanation": "Esta poética de las correspondencias fundó el simbolismo, llevado posteriormente por Verlaine y Mallarmé.",
+        "question": "¿Qué corriente poética funda la poética de las correspondencias de Baudelaire, que luego siguen Verlaine y Mallarmé?",
+        "explanation": "Esa poética de las correspondencias funda el simbolismo, que luego llevan Verlaine y Mallarmé.",
         "options": [
           "El simbolismo",
           "Romanticismo",
@@ -214,13 +214,13 @@
       {
         "id": "course_101_1984_george_orwell_q7",
         "type": "mcq",
-        "question": "¿Cómo llama usted a la capacidad de aceptar dos verdades contradictorias a la vez, en 1984?",
-        "explanation": "El doblepensamiento se refiere a la capacidad de aceptar dos verdades contradictorias a la vez, un pilar del control mental del Partido.",
+        "question": "¿Cómo se llama, en 1984, la capacidad de aceptar dos verdades contradictorias a la vez?",
+        "explanation": "El doblepensar es la capacidad de aceptar dos verdades contradictorias a la vez, un pilar del control mental del Partido.",
         "options": [
-          "Doble pensamiento",
+          "Doblepensar",
           "Neolengua",
-          "la telepantalla",
-          "ingsoc"
+          "La telepantalla",
+          "Ingsoc"
         ],
         "correctIndex": 0
       },
@@ -241,12 +241,12 @@
         "id": "course_101_1984_george_orwell_q9",
         "type": "chronological",
         "question": "Pon en orden estas etapas de la vida y obra de Orwell.",
-        "explanation": "Estas cuatro etapas marcan la carrera de Orwell: la Guerra Civil Española (1936-1937), Animal Farm (1945), 1984 (1949), y luego su muerte en 1950.",
+        "explanation": "Estas cuatro etapas marcan el recorrido de Orwell: la Guerra Civil española (1936-1937), Rebelión en la granja (1945), 1984 (1949) y luego su muerte en 1950.",
         "items": [
-          "Orwell luchó en las milicias del POUM durante la Guerra Civil Española.",
-          "Publica Granja Animal.",
-          "Publicó en 1984.",
-          "Murió en Escocia poco después de la publicación de su novela."
+          "Orwell luchó en las milicias del POUM durante la Guerra Civil española",
+          "Publica Rebelión en la granja",
+          "Publica 1984",
+          "Muere en Escocia poco después de la publicación de su novela"
         ]
       },
       {
@@ -268,8 +268,8 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q1",
         "type": "mcq",
-        "question": "¿Qué acontecimiento histórico representa Animal Farm en forma de alegoría?",
-        "explanation": "Orwell transpone las principales etapas de la Revolución Rusa y la traición estalinista a una fábula animal.",
+        "question": "¿De qué acontecimiento histórico es alegoría Rebelión en la granja?",
+        "explanation": "Orwell transpone las grandes etapas de la Revolución rusa y de la traición estalinista a una fábula de animales.",
         "options": [
           "La revolución rusa",
           "La Revolución Francesa",
@@ -281,20 +281,20 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q2",
         "type": "mcq",
-        "question": "¿Qué animal representa Stalin en la alegoría de Orwell?",
-        "explanation": "Napoleón, el cerdo que toma el poder por la fuerza tras perseguir a Snowball, modela la figura de Stalin.",
+        "question": "¿Qué animal encarna a Stalin en la alegoría de Orwell?",
+        "explanation": "Napoleón, el cerdo que toma el poder por la fuerza tras expulsar a Bola de Nieve, calca la figura de Stalin.",
         "options": [
           "Napoleón",
-          "El viejo mayor",
-          "Bola de nieve",
-          "Malabar"
+          "el Mayor",
+          "Bola de Nieve",
+          "Bóxer"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q3",
         "type": "trueFalse",
-        "question": "Verdadero o falso: Editorial T.S. Eliot se negó a publicar el manuscrito de Orwell por temor a que cerdos inteligentes ofendieran a los estadistas.",
+        "question": "Verdadero o falso: el editor T. S. Eliot rechazó el manuscrito de Orwell por miedo a que unos cerdos inteligentes ofendieran a los estadistas.",
         "explanation": "T.S. Eliot, entonces editor, rechazó el manuscrito por este motivo.",
         "options": [
           "Verdadero",
@@ -305,13 +305,13 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q4",
         "type": "mcq",
-        "question": "¿Qué representan los perros de Napoleón en la alegoría?",
-        "explanation": "Los perros entrenados por Napoleón para perseguir a Snowball y aterrorizar la granja representan a la policía secreta soviética.",
+        "question": "¿Qué son los perros de Napoleón en la alegoría?",
+        "explanation": "Los perros que Napoleón adiestra para expulsar a Bola de Nieve y aterrorizar la granja son la policía secreta soviética.",
         "options": [
-          "la policia secreta",
+          "La policía secreta",
           "El ejército regular del zar",
           "Los campesinos rebeldes",
-          "Periodistas oficiales"
+          "Los periodistas oficiales"
         ],
         "correctIndex": 0
       },
@@ -319,23 +319,23 @@
         "id": "course_102_la_ferme_des_animaux_george_orwell_q5",
         "type": "mcq",
         "question": "¿Qué animal encarna al proletariado explotado hasta el agotamiento?",
-        "explanation": "Malabar, un caballo de batalla devoto e incansable, simboliza un proletariado que trabaja sin cuestionar jamás la autoridad.",
+        "explanation": "Bóxer, un caballo de tiro leal e incansable, encarna a un proletariado que trabaja sin cuestionar nunca la autoridad.",
         "options": [
-          "Malabar, el caballo trabajador",
-          "Brille-Babil, el propagandista",
-          "El viejo mayor",
-          "Bola de nieve"
+          "Bóxer, el caballo trabajador",
+          "Gruñón, el propagandista",
+          "el Mayor",
+          "Bola de Nieve"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q6",
         "type": "chronological",
-        "question": "Pon en orden estos pasos de Animal Farm.",
+        "question": "Ordena estos pasos de Rebelión en la granja.",
         "explanation": "Esta secuencia muestra el paso gradual de la revolución igualitaria a la dictadura de los cerdos.",
         "items": [
-          "Los animales persiguen al granjero Jones.",
-          "Napoleón persigue a Snowball con sus perros",
+          "Los animales echan al granjero Jones",
+          "Napoleón persigue a Bola de Nieve con sus perros",
           "Los cerdos cambian en secreto los Siete Mandamientos",
           "Los cerdos empiezan a caminar sobre dos patas"
         ]
@@ -367,7 +367,7 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q9",
         "type": "numericSlider",
-        "question": "¿Aproximadamente cuántas palabras tiene Animal Farm, un texto deliberadamente muy breve?",
+        "question": "¿Aproximadamente cuántas palabras tiene Rebelión en la granja, un texto deliberadamente muy breve?",
         "explanation": "Orwell presenta su alegoría en apenas 30.000 palabras, lo que refuerza la eficacia de la fábula.",
         "correctValue": 30000.0,
         "sliderMin": 15000.0,
@@ -1445,7 +1445,7 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q1",
         "type": "mcq",
-        "question": "¿Quién cuenta la historia de No dispares al ruiseñor?",
+        "question": "¿Quién cuenta la historia de Matar un ruiseñor?",
         "explanation": "La novela está contada a través de los ojos de Scout, una niña de seis años que vive en Maycomb, Alabama.",
         "options": [
           "Scout, una niña de seis años",
@@ -1458,7 +1458,7 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q2",
         "type": "mcq",
-        "question": "¿Qué representa Atticus Finch ante el tribunal sabiendo que perderá?",
+        "question": "¿A quién defiende Atticus Finch ante el tribunal, sabiendo que va a perder?",
         "explanation": "Atticus acepta defender a Tom Robinson a pesar de la certeza de perder, porque en el sur segregacionista el color de la piel del acusado pesa más que las pruebas.",
         "options": [
           "Tom Robinson, un hombre negro acusado injustamente",
@@ -1482,8 +1482,8 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q4",
         "type": "mcq",
-        "question": "¿Qué simboliza el ruiseñor que Atticus te prohíbe matar?",
-        "explanation": "El inofensivo ruiseñor representa a Tom Robinson y Boo Radley: dos seres a los que la sociedad persigue o transforma en monstruos sin motivo alguno.",
+        "question": "¿Qué es el ruiseñor que Atticus te prohíbe matar?",
+        "explanation": "El ruiseñor inofensivo es Tom Robinson y Boo Radley: dos seres a los que la sociedad persigue o convierte en monstruos sin motivo.",
         "options": [
           "Seres inocentes como Tom Robinson y Boo Radley",
           "La justicia estadounidense en su conjunto.",
@@ -1499,7 +1499,7 @@
         "explanation": "Boo Radley, el ermitaño temido por todo el barrio, salva a los niños y demuestra ser más un hombre tímido que un monstruo.",
         "options": [
           "Boo Radley, el vecino solitario",
-          "pinzón ático",
+          "Atticus Finch",
           "Tom Robinson",
           "El sheriff de Maycomb"
         ],
@@ -1520,9 +1520,9 @@
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q7",
         "type": "mcq",
         "question": "¿Qué novela, publicada en 2015, poco antes de la muerte de Harper Lee, resulta ser una primera versión escrita antes de la de 1960?",
-        "explanation": "Go and Post a Sentinel, publicado en 2015, es en realidad un borrador anterior a la versión final de 1960.",
+        "explanation": "Ve y pon un centinela, publicado en 2015, es en realidad un borrador anterior a la versión definitiva de 1960.",
         "options": [
-          "Ve y envía un centinela",
+          "Ve y pon un centinela",
           "El silencio de Maycomb",
           "Verano en Monroeville",
           "Los cuadernos de Atticus"
@@ -1648,7 +1648,7 @@
       {
         "id": "course_112_le_grand_gatsby_fitzgerald_q8",
         "type": "mcq",
-        "question": "¿Qué dicen los ojos del Doctor T.J. ¿Eckleburg que simboliza la vigilancia sobre el Valle de las Cenizas?",
+        "question": "¿Qué son los ojos del doctor T. J. Eckleburg que vigilan el Valle de las Cenizas?",
         "explanation": "Estos ojos pintados en un cartel simbolizan a un dios ausente, indiferente a la corrupción moral de esta tierra.",
         "options": [
           "Un dios ausente en una tierra corrupta",
@@ -2740,8 +2740,8 @@
       {
         "id": "course_120_l_alchimiste_paulo_coelho_q5",
         "type": "mcq",
-        "question": "¿Qué representa el concepto del Alma del Mundo en la novela?",
-        "explanation": "El Alma del Mundo se refiere a la energía única que se cree que comparte todo lo que existe, según la filosofía de la novela.",
+        "question": "¿Qué es el Alma del Mundo en la novela?",
+        "explanation": "El Alma del Mundo es la energía única que, según la filosofía de la novela, comparte todo lo que existe.",
         "options": [
           "Una energía única compartida por todo lo que existe.",
           "El espíritu de los antepasados ​​andaluces",
@@ -2884,7 +2884,7 @@
         "options": [
           "La escuela de Atenas",
           "La creación de Adán",
-          "La Mona Lisa",
+          "La Gioconda",
           "La última cena"
         ],
         "correctIndex": 0
@@ -2939,7 +2939,7 @@
         "options": [
           "Luis Leroy",
           "Emile Zola",
-          "Carlos Baudelaire",
+          "Charles Baudelaire",
           "Théophile Gautier"
         ],
         "correctIndex": 0
@@ -2948,10 +2948,10 @@
         "id": "course_122_la_naissance_de_l_impressionnisme_q2",
         "type": "mcq",
         "question": "¿Qué cuadro de Manet escandalizó el Salón de los Rechazados en 1863?",
-        "explanation": "Manet sorprende al mezclar un desnudo femenino y dos hombres con trajes modernos en Le Déjeuner sur l'herbe.",
+        "explanation": "Manet escandaliza al mezclar un desnudo femenino y dos hombres con traje moderno en El almuerzo campestre.",
         "options": [
-          "Almuerzo en la hierba",
-          "Imprimir, sol naciente",
+          "El almuerzo campestre",
+          "Impresión, sol naciente",
           "Los nenúfares",
           "La balsa de la Medusa"
         ],
@@ -3204,8 +3204,8 @@
       {
         "id": "course_124_rembrandt_et_l_ecole_flamande_q4",
         "type": "mcq",
-        "question": "¿Qué representa realmente el cuadro conocido como La ronda de noche?",
-        "explanation": "Esta es la Compañía del Capitán Frans Banning Cocq, una milicia que se muestra en movimiento en lugar de alineada como lo requería la convención.",
+        "question": "¿Qué muestra realmente el cuadro conocido como La ronda de noche?",
+        "explanation": "Es la compañía del capitán Frans Banning Cocq, una milicia vista en movimiento y no alineada como pedía la convención.",
         "options": [
           "Una milicia burguesa en marcha",
           "Un autorretrato de Rembrandt",
@@ -3426,12 +3426,12 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q3",
         "type": "mcq",
         "question": "¿Qué cuadro de 1907 marca el punto de partida del cubismo?",
-        "explanation": "Les Demoiselles d'Avignon, con sus desnudos de facetas afiladas, asombraron incluso a aquellos más cercanos a Picasso.",
+        "explanation": "Las señoritas de Aviñón, con sus desnudos de facetas afiladas, dejaron atónitos incluso a los más cercanos a Picasso.",
         "options": [
           "Las señoritas de Aviñón",
           "Guernica",
           "La libertad guiando al pueblo.",
-          "Almuerzo en la hierba"
+          "El almuerzo campestre"
         ],
         "correctIndex": 0
       },
@@ -4513,7 +4513,7 @@
         "options": [
           "La dama de las camelias de Alexandre Dumas hijo",
           "Notre-Dame de París de Victor Hugo",
-          "Los Miserables de Victor Hugo",
+          "Los miserables de Victor Hugo",
           "Madame Bovary de Gustave Flaubert"
         ],
         "correctIndex": 0
@@ -5729,9 +5729,9 @@
         "question": "¿Qué revista crítica, fundada en 1951, se convirtió en el laboratorio de ideas de la Nueva Ola?",
         "explanation": "Los Cahiers du cinéma, fundados en 1951 por André Bazin, reunían a jóvenes críticos que se convertirían en directores de la Nueva Ola.",
         "options": [
-          "Los cuadernos de cine",
-          "Vista y sonido",
-          "Positivo",
+          "Cahiers du cinéma",
+          "Sight & Sound",
+          "Positif",
           "Cine francés"
         ],
         "correctIndex": 0
@@ -5753,20 +5753,20 @@
         "id": "course_144_la_nouvelle_vague_francaise_q3",
         "type": "mcq",
         "question": "¿Qué película de François Truffaut triunfó en Cannes en 1959 y lanzó la Nueva Ola?",
-        "explanation": "En 1959, Les Quatre Cents Coups de François Truffaut triunfó en Cannes y consolidó el cine de autor.",
+        "explanation": "En 1959, Los 400 golpes de François Truffaut triunfó en Cannes y consolidó el cine de autor.",
         "options": [
-          "Los cuatrocientos golpes",
-          "sin aliento",
-          "Ciudadano Kane",
-          "El dictador"
+          "Los 400 golpes",
+          "Al final de la escapada",
+          "Citizen Kane",
+          "El gran dictador"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_144_la_nouvelle_vague_francaise_q4",
         "type": "trueFalse",
-        "question": "Verdadero o falso: Sin aliento de Jean-Luc Godard conmocionó en 1960 con sus cortes abruptos en medio de los gestos.",
-        "explanation": "Godard corta en medio de los gestos de Sin aliento, como si estuviera montando con tijeras la película, lo que resultó impactante en 1960.",
+        "question": "Verdadero o falso: Al final de la escapada, de Jean-Luc Godard, conmocionó en 1960 con sus cortes abruptos en medio de los gestos.",
+        "explanation": "Godard corta en medio de los gestos en Al final de la escapada, como si montara la película con tijeras, y eso escandalizó en 1960.",
         "options": [
           "Verdadero",
           "Falso"
@@ -5792,9 +5792,9 @@
         "question": "¿Qué movimiento cinematográfico brasileño se inspira directamente en la libertad de filmación de la Nueva Ola?",
         "explanation": "La libertad de filmación de la Nueva Ola inspiró luego el Cinema Novo en Brasil y luego Dogma 95 en Dinamarca.",
         "options": [
-          "Cine Novo",
-          "neorrealismo italiano",
-          "expresionismo alemán",
+          "Cinema Novo",
+          "Neorrealismo italiano",
+          "Expresionismo alemán",
           "Dogma 95"
         ],
         "correctIndex": 0
@@ -5826,12 +5826,12 @@
       {
         "id": "course_144_la_nouvelle_vague_francaise_q9",
         "type": "chronological",
-        "question": "Pon estas etapas de la Nueva Ola en orden cronológico.",
-        "explanation": "Estos tres hitos (1951, 1959, 1960) muestran el paso de una revisión crítica a una revolución en el cine de autor.",
+        "question": "Ordena estas etapas de la Nueva Ola.",
+        "explanation": "Estos tres hitos (1951, 1959, 1960) muestran el paso de una revista crítica a una revolución del cine de autor.",
         "items": [
-          "Fundación Cahiers du cinéma",
-          "Triunfo de los cuatrocientos golpes en Cannes",
-          "Liberación de Sin aliento"
+          "Fundación de Cahiers du cinéma",
+          "Triunfo de Los 400 golpes en Cannes",
+          "Estreno de Al final de la escapada"
         ]
       }
     ]
@@ -5866,13 +5866,13 @@
       {
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q3",
         "type": "mcq",
-        "question": "¿Qué novedades utilizaron Kubrick y Clarke para desarrollar 2001?",
-        "explanation": "Kubrick y Clarke parten del cuento The Sentinel para construir la película y la novela en paralelo.",
+        "question": "¿De qué cuento partieron Kubrick y Clarke para desarrollar 2001?",
+        "explanation": "Kubrick y Clarke parten del cuento El centinela para construir a la vez la película y la novela.",
         "options": [
           "El centinela",
-          "Base",
+          "Fundación",
           "Crónicas marcianas",
-          "Encuentro con Rama"
+          "Cita con Rama"
         ],
         "correctIndex": 0
       },
@@ -5892,13 +5892,13 @@
       {
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q5",
         "type": "mcq",
-        "question": "¿Qué representa HAL 9000 en la película?",
-        "explanation": "HAL 9000, el ordenador de a bordo, opta por eliminar humanos para resolver la contradicción de su misión.",
+        "question": "¿Qué es HAL 9000 en la película?",
+        "explanation": "HAL 9000, el ordenador de a bordo, decide eliminar a los humanos para resolver la contradicción de su misión.",
         "options": [
-          "La computadora de a bordo que finalmente elimina a la tripulación",
-          "Un extraterrestre vino a advertir a la humanidad",
+          "El ordenador de a bordo que acaba eliminando a la tripulación",
+          "Un extraterrestre venido a advertir a la humanidad",
           "El clon robótico de un astronauta",
-          "Un sencillo asistente de voz sin conciencia"
+          "Un simple asistente de voz sin conciencia"
         ],
         "correctIndex": 0
       },
@@ -5930,9 +5930,9 @@
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q8",
         "type": "mcq",
         "question": "¿Qué pieza musical acompaña a las estaciones espaciales en órbita en 2001?",
-        "explanation": "El vals El hermoso Danubio azul de Johann Strauss acompaña las estaciones espaciales, mientras que Así habló Zaratustra marca los saltos de la evolución.",
+        "explanation": "El vals El bello Danubio azul de Johann Strauss acompaña las estaciones espaciales, mientras Así habló Zaratustra marca los saltos de la evolución.",
         "options": [
-          "El hermoso Danubio azul de Johann Strauss",
+          "El bello Danubio azul de Johann Strauss",
           "Así habló Zaratustra de Richard Strauss",
           "La Sinfonía del Nuevo Mundo de Dvořák",
           "Las cuatro estaciones de Vivaldi"
@@ -5987,7 +5987,7 @@
         "id": "course_146_hitchcock_et_le_suspense_q3",
         "type": "mcq",
         "question": "¿Qué técnica utiliza Hitchcock en La cuerda (1948) para simular una película rodada en un solo movimiento?",
-        "explanation": "Hitchcock esconde los cortes detrás de un respaldo o de un mueble oscuro para simular un único plano secuencia en The Rope.",
+        "explanation": "Hitchcock esconde los cortes detrás de una espalda o de un mueble oscuro para simular un único plano secuencia en La cuerda.",
         "options": [
           "Un plano secuencia con cortes ocultos detrás de espaldas o muebles.",
           "El clásico montaje alterno",
@@ -6307,7 +6307,7 @@
       {
         "id": "course_149_la_joconde_q1",
         "type": "mcq",
-        "question": "¿Quién pintó la Mona Lisa entre 1503 y 1519?",
+        "question": "¿Quién pintó La Gioconda entre 1503 y 1519?",
         "explanation": "Leonardo da Vinci comenzó el retrato hacia 1503 en Florencia y lo retocó hasta su muerte en 1519.",
         "options": [
           "leonardo da vinci",
@@ -6346,7 +6346,7 @@
       {
         "id": "course_149_la_joconde_q4",
         "type": "mcq",
-        "question": "¿Por qué la sonrisa de la Mona Lisa parece cambiar según hacia dónde se mire?",
+        "question": "¿Por qué la sonrisa de La Gioconda parece cambiar según hacia dónde mires?",
         "explanation": "Cuando miramos fijamente a los ojos, los bordes de la retina perciben la boca en suaves sombras, lo que hace que la sonrisa aparezca o desaparezca.",
         "options": [
           "Juega con la visión periférica del ojo humano.",
@@ -6359,7 +6359,7 @@
       {
         "id": "course_149_la_joconde_q5",
         "type": "trueFalse",
-        "question": "Verdadero o falso: Leonardo da Vinci entregó la Mona Lisa a su patrocinador poco después de completarla.",
+        "question": "Verdadero o falso: Leonardo da Vinci entregó La Gioconda a su mecenas poco después de terminarla.",
         "explanation": "Leonardo nunca entrega el cuadro: lo conserva, lo retoca durante años y se lo lleva a Francia.",
         "options": [
           "Verdadero",
@@ -6370,7 +6370,7 @@
       {
         "id": "course_149_la_joconde_q6",
         "type": "mcq",
-        "question": "¿Quién robó la Mona Lisa el 21 de agosto de 1911?",
+        "question": "¿Quién robó La Gioconda el 21 de agosto de 1911?",
         "explanation": "Vincenzo Peruggia, un vidriero italiano que trabaja en el Louvre, robó el cuadro escondiéndolo debajo de su blusa.",
         "options": [
           "Vincenzo Peruggia, un vidriero de museo",
@@ -6383,8 +6383,8 @@
       {
         "id": "course_149_la_joconde_q7",
         "type": "trueFalse",
-        "question": "Verdadero o falso: antes del robo de 1911, la Mona Lisa ya era considerada la obra número uno del Louvre.",
-        "explanation": "En el siglo XIX, la Mona Lisa era admirada, pero aún no era la obra más famosa del Louvre; es el vuelo lo que lo hace mundialmente famoso.",
+        "question": "Verdadero o falso: antes del robo de 1911, La Gioconda ya se consideraba la obra número uno del Louvre.",
+        "explanation": "En el siglo XIX La Gioconda se admiraba, pero aún no era la obra más famosa del Louvre; el robo es lo que la hace mundialmente famosa.",
         "options": [
           "Verdadero",
           "Falso"
@@ -6394,7 +6394,7 @@
       {
         "id": "course_149_la_joconde_q8",
         "type": "numericSlider",
-        "question": "¿En qué año reapareció la Mona Lisa, robada en 1911?",
+        "question": "¿En qué año reapareció La Gioconda, robada en 1911?",
         "explanation": "El cuadro reaparece en 1913 y regresa al Louvre transformado en una celebridad mundial.",
         "correctValue": 1913.0,
         "sliderMin": 1911.0,
@@ -6405,12 +6405,12 @@
       {
         "id": "course_149_la_joconde_q9",
         "type": "chronological",
-        "question": "Coloca estas etapas de la historia de Mona Lisa en orden cronológico.",
+        "question": "Coloca estas etapas de la historia de La Gioconda en orden cronológico.",
         "explanation": "Estos hitos (1503, 1519, 1911, 1913) recorren la creación del retrato, la muerte de Leonardo y luego el robo que transformó la obra en un mito mundial.",
         "items": [
-          "Leonardo comienza el retrato en Florencia.",
+          "Leonardo comienza el retrato en Florencia",
           "Muerte de Leonardo da Vinci en Francia",
-          "El robo de la Mona Lisa por Peruggia",
+          "El robo de La Gioconda por Peruggia",
           "El regreso del cuadro al Louvre"
         ]
       }
@@ -6598,7 +6598,7 @@
       {
         "id": "course_150_la_nuit_etoilee_van_gogh_q5",
         "type": "mcq",
-        "question": "¿Qué obra japonesa inspiró los grandes remolinos del cielo en Starry Night?",
+        "question": "¿Qué obra japonesa inspiró los grandes remolinos del cielo en La noche estrellada?",
         "explanation": "Los remolinos del cielo recuerdan la dinámica de la Gran Ola frente a Kanagawa, un grabado japonés que admiraba Van Gogh.",
         "options": [
           "La gran ola frente a Kanagawa",
@@ -6998,7 +6998,7 @@
       {
         "id": "course_154_impression_soleil_levant_monet_q1",
         "type": "mcq",
-        "question": "¿Dónde pintó Monet la escena representada en Impression, Soleil Levant?",
+        "question": "¿Dónde pintó Monet la escena de Impresión, sol naciente?",
         "explanation": "Monet pintó el puerto de Le Havre temprano en la mañana alrededor de 1872.",
         "options": [
           "El puerto de El Havre",
@@ -9309,21 +9309,21 @@
       {
         "id": "course_173_ulysse_et_le_cyclope_q3",
         "type": "mcq",
-        "question": "¿Qué astuto nombre le da Odiseo a Polifemo?",
-        "explanation": "Ulises se presenta como “Nadie” (Outis en griego), nombre que también evoca mestizaje, astucia y que siembra confusión tras el ataque.",
+        "question": "¿Qué nombre astuto le da Ulises a Polifemo?",
+        "explanation": "Ulises se presenta como «Nadie» (Outis en griego), un nombre que evoca también la metis, la astucia, y que siembra la confusión después del ataque.",
         "options": [
           "Nadie (Outis)",
           "Nulo",
-          "Odiseo de Ítaca",
-          "El extraño"
+          "Ulises de Ítaca",
+          "El extranjero"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_173_ulysse_et_le_cyclope_q4",
         "type": "mcq",
-        "question": "¿Cómo logran Odiseo y sus hombres herir a Polifemo?",
-        "explanation": "Odiseo corta un palo de olivo que calienta y luego sus hombres lo introducen en el único ojo del cíclope dormido por el vino.",
+        "question": "¿Cómo consiguen Ulises y sus hombres herir a Polifemo?",
+        "explanation": "Ulises talla una estaca de olivo, la calienta, y luego sus hombres se la clavan en el único ojo del cíclope, dormido por el vino.",
         "options": [
           "Le clavan una estaca de olivo encendida en un ojo",
           "Lo envenenan con vino",
@@ -9346,8 +9346,8 @@
       {
         "id": "course_173_ulysse_et_le_cyclope_q6",
         "type": "mcq",
-        "question": "¿Cómo salen Odiseo y sus compañeros de la cueva vigilada por el cíclope ciego?",
-        "explanation": "Odiseo ata a sus compañeros bajo el vientre de la oveja más lanuda y él mismo se cuelga bajo el carnero más grande para engañar al cíclope ciego.",
+        "question": "¿Cómo salen Ulises y sus compañeros de la cueva vigilada por el cíclope ciego?",
+        "explanation": "Ulises ata a sus compañeros bajo el vientre de las ovejas más lanudas y él se cuelga bajo el carnero más grande para engañar al cíclope ciego.",
         "options": [
           "Escondido bajo los vientres de las ovejas del rebaño",
           "Cavando un túnel",
@@ -9359,8 +9359,8 @@
       {
         "id": "course_173_ulysse_et_le_cyclope_q7",
         "type": "mcq",
-        "question": "¿Qué error comete Odiseo una vez que está a salvo en el mar?",
-        "explanation": "Por deseo de kleos, la gloria que sobrevive en el nombre, Odiseo grita su identidad a Polifemo, quien luego puede maldecirlo por su nombre ante Poseidón.",
+        "question": "¿Qué error comete Ulises una vez que está a salvo en el mar?",
+        "explanation": "Por deseo de kleos, la gloria que sobrevive en el nombre, Ulises grita su identidad a Polifemo, quien luego puede maldecirlo por su nombre ante Poseidón.",
         "options": [
           "Revela su verdadero nombre y su ciudad a Polifemo por deseo de gloria.",
           "Abandona a algunos de sus hombres en la isla.",
@@ -9372,13 +9372,13 @@
       {
         "id": "course_173_ulysse_et_le_cyclope_q8",
         "type": "mcq",
-        "question": "¿Cuál es la consecuencia de la maldición de Polifemo sobre Odiseo?",
-        "explanation": "Polifemo reza a su padre Poseidón para que Odiseo deambule durante mucho tiempo y pierda a todos sus compañeros: esta maldición abre diez años de pruebas en el mar.",
+        "question": "¿Cuál es la consecuencia de la maldición de Polifemo sobre Ulises?",
+        "explanation": "Polifemo pide a su padre Poseidón que Ulises erre largo tiempo y pierda a todos sus compañeros: esa maldición abre diez años de pruebas en el mar.",
         "options": [
-          "Estructura diez años de vagabundeo en el mar para Ulises",
-          "Ella transforma a Ulises en cíclope.",
-          "Ella inmediatamente mata a todos sus compañeros.",
-          "Ella impide que Ulises vuelva a ver Ítaca."
+          "Estructura diez años de errancia en el mar para Ulises",
+          "Transforma a Ulises en cíclope",
+          "Mata de inmediato a todos sus compañeros",
+          "Impide que Ulises vuelva a ver Ítaca"
         ],
         "correctIndex": 0
       },
@@ -9388,10 +9388,10 @@
         "question": "Pon en orden estas etapas del episodio de Cyclops.",
         "explanation": "Desde la entrada en la cueva hasta el cegamiento y luego la confesión del nombre en el mar, el episodio sigue una progresión precisa que sella el destino de Ulises.",
         "items": [
-          "Odiseo y sus hombres entran en la cueva de Polifemo.",
+          "Ulises y sus hombres entran en la cueva de Polifemo.",
           "Polifemo se emborracha y pregunta el nombre de su invitado.",
           "Los griegos ciegan al cíclope con la hoguera encendida",
-          "Odiseo grita su verdadero nombre desde el barco"
+          "Ulises grita su verdadero nombre desde el barco"
         ]
       }
     ]
@@ -9403,7 +9403,7 @@
         "id": "course_174_ulysse_et_les_sirenes_q1",
         "type": "mcq",
         "question": "¿Qué prometen las sirenas a quienes las escuchan?",
-        "explanation": "Las sirenas prometen un conocimiento absoluto, incluido todo lo ocurrido en la guerra de Troya, la tentación suprema para Odiseo.",
+        "explanation": "Las sirenas prometen un conocimiento absoluto, incluido todo lo ocurrido en la guerra de Troya, la tentación suprema para Ulises.",
         "options": [
           "Conocimiento absoluto de todo lo que sucede en la tierra.",
           "Riquezas infinitas",
@@ -9426,8 +9426,8 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q3",
         "type": "mcq",
-        "question": "¿Qué hace Odiseo para que sus compañeros no escuchen el canto de las sirenas?",
-        "explanation": "Odiseo tapa los oídos de sus compañeros con cera de abejas para que no escuchen nada de la canción.",
+        "question": "¿Qué hace Ulises para que sus compañeros no escuchen el canto de las sirenas?",
+        "explanation": "Ulises tapa los oídos de sus compañeros con cera de abejas para que no escuchen nada de la canción.",
         "options": [
           "Les tapa los oídos con cera de abejas.",
           "Él los hace quedarse dormidos",
@@ -9439,7 +9439,7 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q4",
         "type": "mcq",
-        "question": "¿Cómo logra Odiseo escuchar la canción sin sucumbir a ella?",
+        "question": "¿Cómo logra Ulises escuchar la canción sin sucumbir a ella?",
         "explanation": "Ulises se deja atar al mástil y ordena a sus hombres que le ajusten las ataduras si exige su libertad, diga lo que diga.",
         "options": [
           "Está atado al mástil con órdenes de reforzar sus ataduras si pide ser liberado.",
@@ -9465,8 +9465,8 @@
       {
         "id": "course_174_ulysse_et_les_sirenes_q6",
         "type": "mcq",
-        "question": "¿Qué concepto de ciencia social ilustra la escena de Odiseo atado al mástil?",
-        "explanation": "Sabiendo que será débil ante la tentación, el propio Ulises limita de antemano sus opciones: éste es el compromiso previo, o precompromiso.",
+        "question": "¿Qué concepto de ciencia social ilustra la escena de Ulises atado al mástil?",
+        "explanation": "Sabiendo que será débil ante la tentación, Ulises limita él mismo sus opciones de antemano: eso es el compromiso previo, o precommitment.",
         "options": [
           "Precompromiso",
           "Sesgo de confirmación",
@@ -9506,8 +9506,8 @@
         "explanation": "La advertencia de Circe precede a la preparación del material, luego a la prueba de la canción misma, donde sólo el arreglo previo salva a Ulises.",
         "items": [
           "Circe advierte a Ulises del peligro de las sirenas",
-          "Odiseo cubre los oídos de sus compañeros con cera",
-          "Odiseo es atado al mástil del barco.",
+          "Ulises cubre los oídos de sus compañeros con cera",
+          "Ulises es atado al mástil del barco.",
           "Resuena el canto de las sirenas y Ulises exige su libertad."
         ]
       }
@@ -10051,7 +10051,7 @@
         "explanation": "Agamenón, hermano de Menelao y rey ​​de Micenas, toma el mando de la flota griega que parte para sitiar Troya.",
         "options": [
           "Agamenón, rey de Micenas y hermano de Menelao",
-          "Odiseo, rey de Ítaca",
+          "Ulises, rey de Ítaca",
           "Aquiles, el guerrero más grande",
           "Príamo, rey de Troya"
         ],
@@ -10074,12 +10074,12 @@
         "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_q4",
         "type": "mcq",
         "question": "¿Quién inventó el truco del caballo de madera?",
-        "explanation": "Es Odiseo, maestro del mestizo, de la astucia inteligente, quien inventa la trampa del caballo de madera para derribar Troya.",
+        "explanation": "Es Ulises, maestro de la metis, la astucia inteligente, quien inventa la trampa del caballo de madera para hacer caer Troya.",
         "options": [
-          "Odiseo, rey de Ítaca y maestro del mestizo",
+          "Ulises, rey de Ítaca y maestro de la metis",
           "Agamenón",
           "Aquiles",
-          "Sacerdote Laocoonte"
+          "El sacerdote Laocoonte"
         ],
         "correctIndex": 0
       },
@@ -12023,8 +12023,8 @@
       {
         "id": "course_194_le_mahabharata_q7",
         "type": "mcq",
-        "question": "¿Qué representa el Bhagavad-Gita en la historia del Mahabharata?",
-        "explanation": "El Bhagavad-Gita es el diálogo de aproximadamente 700 versos en los que Krishna, el auriga de Arjuna, le enseña el deber y la acción desinteresada.",
+        "question": "¿Qué es el Bhagavad-Gita en el Mahabharata?",
+        "explanation": "El Bhagavad-Gita es el diálogo de unos 700 versos en el que Krishna, auriga de Arjuna, le enseña el deber y la acción desinteresada.",
         "options": [
           "El diálogo de Krishna con Arjuna sobre el deber y la acción.",
           "Libro de registro del rey Dhritarashtra",
@@ -12739,12 +12739,12 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "¿Qué representa la Hégira en el año 622?",
-        "explanation": "La Hégira es la partida de Mahoma, amenazado de muerte en La Meca, hacia el oasis de Medina. Esta fecha se convierte en el año 1 del calendario musulmán.",
+        "question": "¿Qué es la Hégira, en el año 622?",
+        "explanation": "La Hégira es la marcha de Mahoma, amenazado de muerte en La Meca, hacia el oasis de Medina. A partir de entonces, ese año es el año 1 del calendario musulmán.",
         "options": [
           "La partida de Mahoma de La Meca a Medina",
           "La primera revelación recibida por Mahoma",
-          "La toma de La Meca por los musulmanes.",
+          "La toma de La Meca por los musulmanes",
           "La muerte de Mahoma en Medina"
         ],
         "correctIndex": 0
@@ -12800,10 +12800,10 @@
         "id": "course_1_la_naissance_de_l_islam_622_q6",
         "type": "mcq",
         "question": "¿Qué es el Dhimma establecido por los conquistadores musulmanes?",
-        "explanation": "Dhimma es el estatus protegido que autoriza a la “gente del Libro” a mantener su religión previo pago de jizya.",
+        "explanation": "La Dhimma es el estatuto de protegido que permite a la «gente del Libro» seguir con su religión si pagan la yizia.",
         "options": [
           "El estatuto que permite a cristianos y judíos conservar su religión a cambio de un impuesto",
-          "El nombre del calendario musulmán.",
+          "El nombre del calendario musulmán",
           "Un impuesto a las caravanas mercantes",
           "El tribunal encargado de juzgar a los infieles"
         ],
@@ -12813,10 +12813,10 @@
         "id": "course_1_la_naissance_de_l_islam_622_q7",
         "type": "mcq",
         "question": "¿Qué dos grandes imperios quedaron agotados por sus guerras alrededor de Arabia en el siglo VII?",
-        "explanation": "Las interminables guerras entre Bizancio (Imperio Romano de Oriente) y los persas sasánidas crearon un vacío geopolítico del que aprovechó el nuevo mensaje de Mahoma.",
+        "explanation": "Las guerras interminables entre Bizancio (el Imperio romano de Oriente) y los persas sasánidas dejaron un vacío geopolítico del que se aprovechó el nuevo mensaje de Mahoma.",
         "options": [
           "Los imperios bizantino y sasánida",
-          "Los imperios romano y chino.",
+          "Los imperios romano y chino",
           "Los imperios otomano y mongol",
           "Los imperios persa e indio"
         ],
@@ -12826,12 +12826,12 @@
         "id": "course_1_la_naissance_de_l_islam_622_q8",
         "type": "mcq",
         "question": "¿Qué es la Umma, fundada por Mahoma en Medina?",
-        "explanation": "La Umma reemplaza las solidaridades tribales tradicionales con una comunidad basada en la fe compartida.",
+        "explanation": "La Umma sustituye las lealtades de clan por una comunidad fundada en la fe compartida.",
         "options": [
-          "La comunidad de creyentes, que va más allá de los lazos de sangre y de clan.",
-          "El nombre del calendario musulmán.",
-          "El ejército se levantó contra La Meca.",
-          "El consejo de los califas."
+          "La comunidad de creyentes, que va más allá de los lazos de sangre y de clan",
+          "El nombre del calendario musulmán",
+          "El ejército reunido contra La Meca",
+          "El consejo de los califas"
         ],
         "correctIndex": 0
       }
@@ -18111,7 +18111,7 @@
         "id": "course_25_le_genocide_armenien_1915_1916_q3",
         "type": "mcq",
         "question": "¿Qué acontecimiento del 24 de abril de 1915, en Constantinopla, marca el comienzo simbólico del genocidio?",
-        "explanation": "Esta fecha, que se ha convertido en conmemoración mundial, marca el arresto y luego la ejecución de las élites armenias de la capital.",
+        "explanation": "Esa fecha, hoy conmemoración mundial, marca el arresto y luego la ejecución de las élites armenias de la capital.",
         "options": [
           "Detención y posterior ejecución de más de 200 intelectuales y personalidades armenios",
           "La destrucción de las iglesias armenias",
@@ -18750,7 +18750,7 @@
         "id": "course_30_la_blitzkrieg_1940_q2",
         "type": "mcq",
         "question": "¿Qué principio alemán consiste en concentrar todos los medios en un punto estrecho para romper el frente enemigo?",
-        "explanation": "Schwerpunkt designa la concentración de fuerzas en un punto específico, un principio clave de la guerra móvil alemana.",
+        "explanation": "El Schwerpunkt es la concentración de fuerzas en un punto concreto, una idea clave de la guerra de movimiento alemana.",
         "options": [
           "El Schwerpunkt",
           "El Sichelschnitt",
@@ -19675,7 +19675,7 @@
         "id": "course_38_le_11_septembre_2001_q3",
         "type": "trueFalse",
         "question": "Verdadero o falso: antes de 2001, no había señales de la amenaza que representaba Al Qaeda para los intereses estadounidenses.",
-        "explanation": "Varios ataques anteriores (World Trade Center en 1993, embajadas en 1998, USS Cole en 2000) ya anunciaban la amenaza, pero la compartimentación entre la CIA y el FBI impidió que los cables estuvieran conectados.",
+        "explanation": "Varios atentados anteriores (el World Trade Center en 1993, las embajadas en 1998, el USS Cole en 2000) ya anunciaban la amenaza, pero el aislamiento entre la CIA y el FBI impidió unir los cabos.",
         "options": [
           "Verdadero",
           "Falso"
@@ -19781,8 +19781,8 @@
         "options": [
           "La Boulé, Consejo de los Quinientos sorteado",
           "La Ecclesia, asamblea general de ciudadanos",
-          "L'Héliée, tribunal popular",
-          "Ostracismo, exilio temporal de los poderosos"
+          "La Heliea, tribunal popular",
+          "El ostracismo, exilio temporal de los poderosos"
         ],
         "correctIndex": 0
       },
@@ -20060,7 +20060,7 @@
           "Robert Lee",
           "jefferson davis",
           "William Tecumseh Sherman",
-          "Beca Ulises"
+          "Ulysses Grant"
         ],
         "correctIndex": 0
       },
@@ -20807,10 +20807,10 @@
         "question": "¿En qué otras situaciones, además del cansancio, bostezamos con frecuencia?",
         "explanation": "También bostezamos justo antes de un examen o cuando estamos aburridos y queremos mantenernos concentrados, lo que podría ayudarnos a mantenernos alerta.",
         "options": [
-          "Justo antes de un examen o mientras estás aburrido mientras intentas mantenerte concentrado",
-          "Sólo mientras duermes profundamente",
-          "Sólo después de comer una comida abundante.",
-          "Sólo durante un esfuerzo físico intenso"
+          "Justo antes de un examen, o cuando te aburres pero intentas seguir concentrado",
+          "Solo mientras duermes profundamente",
+          "Solo después de una comida copiosa",
+          "Solo durante un esfuerzo físico intenso"
         ],
         "correctIndex": 0
       },
@@ -23085,7 +23085,7 @@
         "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_q7",
         "type": "mcq",
         "question": "¿Qué es la hipótesis del “Gran Filtro”?",
-        "explanation": "El Gran Filtro designa un paso casi imposible de dar en la evolución, que ya hemos superado o que aún nos espera.",
+        "explanation": "El Gran Filtro es un paso casi imposible de dar en la evolución: uno que ya habríamos superado, o uno que aún nos espera.",
         "options": [
           "Un paso casi imposible de dar en la evolución hacia una civilización tecnológica avanzada",
           "Un escudo natural que protege a la Tierra de los asteroides",
@@ -24769,7 +24769,7 @@
         "id": "course_81_l_odyssee_homere_q1",
         "type": "mcq",
         "question": "¿Qué héroe griego tardó diez años en regresar a casa después de la guerra de Troya?",
-        "explanation": "Odiseo, rey de Ítaca, tarda diez años en regresar a su casa tras el final de la guerra de Troya: este es el tema de la Odisea.",
+        "explanation": "Ulises, rey de Ítaca, tarda diez años en regresar a su casa tras el final de la guerra de Troya: este es el tema de la Odisea.",
         "options": [
           "Ulises",
           "Aquiles",
@@ -24781,13 +24781,13 @@
       {
         "id": "course_81_l_odyssee_homere_q2",
         "type": "mcq",
-        "question": "¿Cómo comienza, narrativamente hablando, la historia de la Odisea?",
-        "explanation": "Homero comienza su historia en medio de la acción: Odiseo, retenido por la ninfa Calipso, luego relata sus aventuras pasadas en flashback.",
+        "question": "¿Cómo empieza, como relato, la Odisea?",
+        "explanation": "Homero empieza en medio de la acción: Ulises está retenido por la ninfa Calipso y luego cuenta en flashback sus aventuras anteriores.",
         "options": [
-          "In media res, en plena acción, mientras Ulises es retenido por Calipso",
-          "Por la historia del nacimiento de Odiseo.",
-          "Al comienzo de la guerra de Troya.",
-          "Por el regreso de Odiseo a Ítaca"
+          "In media res, en plena acción, mientras Ulises está retenido por Calipso",
+          "Con el relato del nacimiento de Ulises",
+          "Con el comienzo de la guerra de Troya",
+          "Con el regreso de Ulises a Ítaca"
         ],
         "correctIndex": 0
       },
@@ -24795,7 +24795,7 @@
         "id": "course_81_l_odyssee_homere_q3",
         "type": "trueFalse",
         "question": "Verdadero o falso: Ulises escapa del cíclope Polifemo sin revelar nunca su nombre.",
-        "explanation": "Ulises grita con orgullo su verdadero nombre después de cegar a Polifemo, lo que le permite a Cíclope invocar la venganza de su padre Poseidón contra él.",
+        "explanation": "Ulises grita con orgullo su verdadero nombre después de cegar a Polifemo, y así el cíclope puede pedir a su padre Poseidón que se vengue de él.",
         "options": [
           "Verdadero",
           "Falso"
@@ -24818,7 +24818,7 @@
       {
         "id": "course_81_l_odyssee_homere_q5",
         "type": "mcq",
-        "question": "¿Quién reconoce primero a Odiseo cuando regresa a Ítaca, disfrazado de mendigo?",
+        "question": "¿Quién reconoce primero a Ulises cuando regresa a Ítaca, disfrazado de mendigo?",
         "explanation": "El perro Argos, muy anciano, reconoce antes que nadie a Ulises, seguido de su nodriza Euriclea.",
         "options": [
           "Su viejo perro Argos",
@@ -24842,23 +24842,23 @@
       {
         "id": "course_81_l_odyssee_homere_q7",
         "type": "numericSlider",
-        "question": "¿Aproximadamente cuántas canciones (partes) hay en la Odisea?",
-        "explanation": "La Odisea tiene 24 canciones y aproximadamente 12.000 versos.",
+        "question": "¿Aproximadamente cuántos cantos (partes) tiene la Odisea?",
+        "explanation": "La Odisea tiene 24 cantos y unos 12.000 versos.",
         "correctValue": 24.0,
         "sliderMin": 10.0,
         "sliderMax": 40.0,
         "tolerance": 2.0,
-        "unit": "canciones"
+        "unit": "cantos"
       },
       {
         "id": "course_81_l_odyssee_homere_q8",
         "type": "mcq",
-        "question": "¿Qué escritor del siglo XX transfirió el viaje de Ulises a un solo día en Dublín?",
-        "explanation": "En 1922, James Joyce publicó su novela Ulises, que transpone el vagabundeo homérico a un solo día en Dublín.",
+        "question": "¿Qué escritor del siglo XX transpuso el viaje de Ulises a un solo día en Dublín?",
+        "explanation": "En 1922, James Joyce publicó su novela Ulises, que transpone la errancia homérica a un solo día en Dublín.",
         "options": [
           "James Joyce",
-          "marcel proust",
-          "Alberto Camus",
+          "Marcel Proust",
+          "Albert Camus",
           "Víctor Hugo"
         ],
         "correctIndex": 0
@@ -25429,7 +25429,7 @@
       {
         "id": "course_86_la_republique_platon_q8",
         "type": "chronological",
-        "question": "Volver a colocar estos regímenes políticos en el orden de degeneración descrito por Platón.",
+        "question": "Ordena estos regímenes políticos según la degeneración que describe Platón.",
         "explanation": "Platón describe una progresiva degeneración de los regímenes, cada uno nacido de los vicios del anterior, desde la aristocracia hasta la tiranía.",
         "items": [
           "Aristocracia",
@@ -25442,12 +25442,12 @@
       {
         "id": "course_86_la_republique_platon_q9",
         "type": "mcq",
-        "question": "Según la teoría de las Ideas, ¿qué representa el mundo sensible que percibimos?",
-        "explanation": "Para Platón, el mundo sensible es sólo una sombra en comparación con el mundo de las Ideas, que ilustra el mito de la caverna.",
+        "question": "Según la teoría de las Ideas, ¿qué es el mundo sensible que percibimos?",
+        "explanation": "Para Platón, el mundo sensible no es más que una sombra frente al mundo de las Ideas, como ilustra el mito de la caverna.",
         "options": [
-          "Una sombra del mundo real de las Ideas.",
-          "La única realidad que existe.",
-          "Una creación perfecta de los dioses.",
+          "Una sombra del mundo real de las Ideas",
+          "La única realidad que existe",
+          "Una creación perfecta de los dioses",
           "Un sueño colectivo sin importancia"
         ],
         "correctIndex": 0
@@ -26006,7 +26006,7 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q1",
         "type": "mcq",
-        "question": "¿Por qué delito fue condenado Jean Valjean a diecinueve años de prisión?",
+        "question": "¿Por qué delito condenan a Jean Valjean a diecinueve años de presidio?",
         "explanation": "Valjean es declarado culpable de robar un trozo de pan y pasa diecinueve años en prisión antes de ser liberado.",
         "options": [
           "El robo de un trozo de pan",
@@ -26086,8 +26086,8 @@
         "explanation": "Gavroche, un niño de la calle, muere en las barricadas y se convierte en el símbolo de la inocencia sacrificada por la violencia de la Historia.",
         "options": [
           "Gavroche",
-          "Mario",
-          "cosette",
+          "Marius",
+          "Cosette",
           "Javert"
         ],
         "correctIndex": 0
@@ -26106,7 +26106,7 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q9",
         "type": "chronological",
-        "question": "Ordena estas etapas de la historia de Los Miserables.",
+        "question": "Ordena estas etapas de la historia de Los miserables.",
         "explanation": "Hugo comenzó la novela en 1845, retomó el manuscrito en el exilio después del golpe de Estado de 1851, antes de que el libro apareciera en Bruselas en 1862.",
         "items": [
           "Hugo comienza a escribir la novela bajo el título “Les Misères”",
@@ -26117,8 +26117,8 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q10",
         "type": "numericSlider",
-        "question": "¿En qué año se publicó finalmente Los Miserables, después de diecisiete años de trabajo?",
-        "explanation": "Los Miserables apareció en 1862 en Bruselas, tras diecisiete años de trabajo iniciado en 1845.",
+        "question": "¿En qué año se publicó por fin Los miserables, después de diecisiete años de trabajo?",
+        "explanation": "Los miserables aparecieron en 1862 en Bruselas, tras diecisiete años de trabajo empezados en 1845.",
         "correctValue": 1862.0,
         "sliderMin": 1840.0,
         "sliderMax": 1880.0,
@@ -26251,12 +26251,12 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q1",
         "type": "mcq",
-        "question": "¿Quién es el autor de Le Rouge et le Noir, cuyo verdadero nombre es Henri Beyle?",
-        "explanation": "Stendhal, cuyo verdadero nombre era Henri Beyle, publicó Le Rouge et le Noir en 1830.",
+        "question": "¿Quién es el autor de Rojo y negro, cuyo verdadero nombre es Henri Beyle?",
+        "explanation": "Stendhal, cuyo verdadero nombre era Henri Beyle, publicó Rojo y negro en 1830.",
         "options": [
           "Stendhal",
           "Honoré de Balzac",
-          "Gustavo Flaubert",
+          "Gustave Flaubert",
           "Víctor Hugo"
         ],
         "correctIndex": 0
@@ -26278,7 +26278,7 @@
         "id": "course_93_le_rouge_et_le_noir_stendhal_q3",
         "type": "mcq",
         "question": "¿Qué simbolizan el rojo y el negro del título?",
-        "explanation": "El rojo del uniforme militar y el negro de la vestimenta eclesiástica eran, bajo la Restauración, los únicos vectores de poder para un plebeyo educado.",
+        "explanation": "El rojo del uniforme militar y el negro de la sotana eran, bajo la Restauración, los únicos caminos al poder para un plebeyo instruido.",
         "options": [
           "El uniforme militar y la vestimenta eclesiástica, los únicos caminos de ascensión para un plebeyo",
           "Sangre y luto",
@@ -26509,8 +26509,8 @@
       {
         "id": "course_95_les_confessions_rousseau_q1",
         "type": "mcq",
-        "question": "¿Quién es el autor de Confesiones?",
-        "explanation": "Jean-Jacques Rousseau escribió Les Confessions, publicado póstumamente entre 1782 y 1789.",
+        "question": "¿Quién es el autor de Las confesiones?",
+        "explanation": "Jean-Jacques Rousseau escribió Las confesiones, publicadas póstumamente entre 1782 y 1789.",
         "options": [
           "Jean-Jacques Rousseau",
           "Voltaire",
@@ -26703,8 +26703,8 @@
       {
         "id": "course_96_l_etranger_camus_q7",
         "type": "mcq",
-        "question": "¿Qué concepto filosófico pone la novela en la ficción?",
-        "explanation": "The Stranger convierte en ficción lo absurdo de Camus: el divorcio entre nuestra apelación al significado y el silencio del mundo.",
+        "question": "¿Qué idea filosófica pone en escena la novela?",
+        "explanation": "El extranjero convierte en ficción el absurdo de Camus: el divorcio entre nuestra demanda de sentido y el silencio del mundo.",
         "options": [
           "El absurdo en Camus",
           "Existencialismo sartreano",
@@ -27007,8 +27007,8 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q1",
         "type": "mcq",
-        "question": "¿Quién es el autor de Père Goriot?",
-        "explanation": "Honoré de Balzac publicó Le Père Goriot en 1835.",
+        "question": "¿Quién es el autor de Papá Goriot?",
+        "explanation": "Honoré de Balzac publicó Papá Goriot en 1835.",
         "options": [
           "Honoré de Balzac",
           "Víctor Hugo",

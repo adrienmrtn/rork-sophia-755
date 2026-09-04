@@ -36,8 +36,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "Cosa rappresenta l'Egira nel 622?",
-        "explanation": "L'Hijra è la partenza di Maometto, minacciato di morte alla Mecca, verso l'oasi di Medina. Questa data diventa l'anno 1 del calendario musulmano.",
+        "question": "Che evento è l'Egira del 622?",
+        "explanation": "L'Egira è la partenza di Maometto, minacciato di morte alla Mecca, verso l'oasi di Medina. Da quella data parte l'anno 1 del calendario musulmano.",
         "options": [
           "La partenza di Maometto dalla Mecca a Medina",
           "La prima rivelazione ricevuta da Maometto",
@@ -50,7 +50,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q2",
         "type": "mcq",
         "question": "Chi controllava il commercio attorno alla Kaaba prima dell’Islam?",
-        "explanation": "I Quraysh, la tribù dominante della Mecca, traevano il loro potere dal pellegrinaggio e dal commercio attorno alla politeista Kaaba.",
+        "explanation": "I Quraysh, la tribù dominante della Mecca, traevano il potere dal pellegrinaggio e dal commercio intorno alla Kaaba politeista.",
         "options": [
           "La tribù dei Quraysh",
           "I Bizantini",
@@ -63,7 +63,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q3",
         "type": "trueFalse",
         "question": "Vero o falso: dopo aver preso la Mecca nel 630, Maometto massacrò i suoi ex persecutori.",
-        "explanation": "Maometto, al contrario, concede un perdono generale, che facilita l'adesione delle tribù arabe all'Islam.",
+        "explanation": "Al contrario, Maometto concesse un perdono generale. Così molte tribù arabe aderirono all'Islam.",
         "options": [
           "Vero",
           "Falso"
@@ -74,7 +74,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
         "question": "In che anno morì Maometto, lasciando l'Arabia unificata sotto un'unica autorità?",
-        "explanation": "Maometto morì nel 632, appena dieci anni dopo l'Egira, quando quasi tutta l'Arabia fu unificata.",
+        "explanation": "Maometto morì nel 632, appena dieci anni dopo l'Egira, con quasi tutta l'Arabia già unificata.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
         "sliderMax": 660.0,
@@ -85,7 +85,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q5",
         "type": "chronological",
         "question": "Metti questi eventi nella vita di Maometto in ordine cronologico.",
-        "explanation": "Queste quattro date (622, 624, 630, 632) segnano i vent'anni in cui Maometto passò da profeta minacciato a capo di uno stato che unificava l'Arabia.",
+        "explanation": "Queste quattro date — 622, 624, 630, 632 — coprono i vent'anni in cui Maometto passa da profeta in fuga a capo di uno Stato che unifica l'Arabia.",
         "items": [
           "L'Egira: partenza per Medina",
           "La battaglia di Badr",
@@ -96,8 +96,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q6",
         "type": "mcq",
-        "question": "Qual è la Dhimma stabilita dai conquistatori musulmani?",
-        "explanation": "Dhimma è lo status protetto che autorizza le “persone del Libro” a mantenere la propria religione dietro pagamento della jizya.",
+        "question": "Cos'è la dhimma, lo statuto messo in piedi dai conquistatori musulmani?",
+        "explanation": "La dhimma è lo statuto protetto che permette alle «genti del Libro» di tenere la propria religione, pagando la jizya.",
         "options": [
           "Lo status che consente a cristiani ed ebrei di mantenere la propria religione a fronte di una tassa",
           "Il nome del calendario musulmano",
@@ -109,8 +109,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q7",
         "type": "mcq",
-        "question": "Quali due grandi imperi furono stremati dalle guerre contro l'Arabia nel VII secolo?",
-        "explanation": "Le infinite guerre tra Bisanzio (Impero Romano d'Oriente) e i Persiani Sasanidi crearono un vuoto geopolitico da cui trasse vantaggio il nuovo messaggio di Maometto.",
+        "question": "Quali due grandi imperi, nel VII secolo, erano già stremati dalle guerre — e lasciarono campo libero all'Arabia?",
+        "explanation": "Le guerre infinite tra Bisanzio (Impero romano d'Oriente) e i persiani sasanidi aprirono un vuoto geopolitico. Il messaggio di Maometto se ne avvantaggiò.",
         "options": [
           "Gli imperi bizantino e sasanide",
           "Gli imperi romano e cinese",
@@ -123,11 +123,11 @@
         "id": "course_1_la_naissance_de_l_islam_622_q8",
         "type": "mcq",
         "question": "Cos'è la Umma, fondata da Maometto a Medina?",
-        "explanation": "La Umma sostituisce le tradizionali solidarietà tribali con una comunità basata sulla fede condivisa.",
+        "explanation": "L'umma sostituisce le solidarietà di tribù con una comunità fondata sulla fede condivisa.",
         "options": [
           "La comunità dei credenti, che va oltre i legami di sangue e di clan",
           "Il nome del calendario musulmano",
-          "L'esercito si sollevò contro la Mecca",
+          "L'esercito sollevato contro la Mecca",
           "Il concilio dei califfi"
         ],
         "correctIndex": 0
@@ -172,7 +172,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q1",
         "type": "mcq",
         "question": "Quale evento accadde al Concilio di Clermont nel novembre 1095?",
-        "explanation": "Al Concilio di Clermont, il 27 novembre 1095, Urbano II invitò i cristiani occidentali ad andare a liberare Gerusalemme, in cambio del perdono dei loro peccati.",
+        "explanation": "Al concilio di Clermont, il 27 novembre 1095, Urbano II chiama i cristiani d'Occidente a liberare Gerusalemme, in cambio del perdono dei peccati.",
         "options": [
           "Papa Urbano II lancia una crociata per liberare Gerusalemme",
           "Il papa scomunica l'imperatore bizantino",
@@ -185,7 +185,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q2",
         "type": "mcq",
         "question": "Quale evento spinse l'imperatore bizantino Alessio I Comneno a chiedere aiuto al papa?",
-        "explanation": "Nel 1071, a Mantzikert, i turchi selgiuchidi schiacciarono l'esercito bizantino e aprirono l'Anatolia, spingendo Alessio I Comneno a presentare una petizione a Roma.",
+        "explanation": "Nel 1071, a Mantzikert, i turchi selgiuchidi schiacciano l'esercito bizantino e aprono l'Anatolia. Alessio I Comneno chiede allora aiuto a Roma.",
         "options": [
           "La sconfitta di Mantzikert contro i turchi selgiuchidi",
           "La presa di Gerusalemme da parte dei musulmani",
@@ -198,7 +198,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q3",
         "type": "trueFalse",
         "question": "Vero o falso: la “crociata dei poveri” guidata da Pietro l'Eremita fu un esercito disciplinato che raggiunse senza difficoltà Gerusalemme.",
-        "explanation": "Senza disciplina né rifornimenti, questa truppa di poveri saccheggiò sul loro cammino e fu decimata in Anatolia prima di raggiungere Gerusalemme.",
+        "explanation": "Senza disciplina né rifornimenti, quella truppa di poveri saccheggia lungo la strada e viene decimata in Anatolia, prima di arrivare a Gerusalemme.",
         "options": [
           "Vero",
           "Falso"
@@ -209,7 +209,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q4",
         "type": "mcq",
         "question": "Cosa promette Urbano II a coloro che intraprendono la crociata?",
-        "explanation": "Urbano II promette l'indulgenza plenaria: il perdono totale dei peccati per chi prende la croce.",
+        "explanation": "Urbano II promette l'indulgenza plenaria: il perdono totale dei peccati a chi prende la croce.",
         "options": [
           "Perdono totale delle pene dovute ai propri peccati",
           "Terra garantita in Terra Santa",
@@ -222,7 +222,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q5",
         "type": "trueFalse",
         "question": "Vero o falso: dopo la presa di Gerusalemme, Goffredo di Buglione si proclamò re della città.",
-        "explanation": "Goffredo di Buglione rifiutò il titolo di re e preferì essere chiamato Confessato del Santo Sepolcro, protettore della tomba di Cristo.",
+        "explanation": "Goffredo di Buglione rifiuta il titolo di re. Preferisce farsi chiamare Avvocato del Santo Sepolcro, protettore della tomba di Cristo.",
         "options": [
           "Vero",
           "Falso"
@@ -256,10 +256,10 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q8",
         "type": "mcq",
         "question": "Quale sultano musulmano riconquista Gerusalemme nel 1187?",
-        "explanation": "Nel 1187, il sultano Saladino riconquistò Gerusalemme dai crociati, riavviando il ciclo delle crociate.",
+        "explanation": "Nel 1187 il sultano Saladino riprende Gerusalemme ai crociati e riapre il ciclo delle crociate.",
         "options": [
           "Saladino",
-          "Alpe Arslan",
+          "Alp Arslan",
           "Boemondo di Taranto",
           "Alessio I Comneno"
         ],
@@ -268,8 +268,8 @@
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q9",
         "type": "numericSlider",
-        "question": "In quale anno cadde Saint-Jean-d'Acre, ultimo baluardo degli Stati latini d'Oriente?",
-        "explanation": "La caduta di Saint-Jean-d'Acre nel 1291 segna la fine della presenza latina in Terra Santa.",
+        "question": "In quale anno cade San Giovanni d'Acri, ultimo baluardo degli Stati latini d'Oriente?",
+        "explanation": "La caduta di San Giovanni d'Acri nel 1291 chiude la presenza latina in Terra Santa.",
         "correctValue": 1291.0,
         "sliderMin": 1200.0,
         "sliderMax": 1350.0,
@@ -329,7 +329,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q2",
         "type": "trueFalse",
         "question": "Vero o falso: prima del 410, nessun esercito nemico era entrato a Roma per circa otto secoli.",
-        "explanation": "L'ultima presa di Roma da parte di un nemico risale al sacco gallico del 390 a.C. aC, quasi 800 anni prima dell'arrivo di Alarico.",
+        "explanation": "L'ultima presa di Roma da parte di un nemico risale al sacco gallico del 390 a.C., quasi ottocento anni prima di Alarico.",
         "options": [
           "Vero",
           "Falso"
@@ -340,7 +340,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q3",
         "type": "mcq",
         "question": "Perché l'imperatore Onorio lasciò Roma per Ravenna nel 402?",
-        "explanation": "Ravenna è una città italiana protetta dalle sue paludi, che la rendono un rifugio più sicuro per l'imperatore di Roma.",
+        "explanation": "Ravenna, protetta dalle paludi, è un rifugio più sicuro di Roma per l'imperatore.",
         "options": [
           "Ravenna, protetta dalle sue paludi, è più facile da difendere",
           "Roma era appena stata distrutta da un incendio",
@@ -352,7 +352,7 @@
       {
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q4",
         "type": "mcq",
-        "question": "Qual è il foedus romano menzionato nel corso?",
+        "question": "Qual è il foedus romano di cui parla il corso?",
         "explanation": "Per mantenere i suoi confini nonostante la mancanza di soldati, l'Impero stabilì sul suo territorio popoli germanici in cambio del loro servizio militare.",
         "options": [
           "Trattato con il quale popoli “barbari” si stabilirono sul territorio romano in cambio del servizio militare",
@@ -377,7 +377,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q6",
         "type": "mcq",
         "question": "Quale opera scrisse sant'Agostino per rispondere allo shock provocato dal sacco di Roma?",
-        "explanation": "Di fronte ai pagani che accusano il cristianesimo di aver indebolito Roma, Agostino ne La Città di Dio risponde che gli imperi terreni passano, ma che la Chiesa resta.",
+        "explanation": "Ai pagani che incolpano il cristianesimo di aver indebolito Roma, Agostino risponde nella Città di Dio: gli imperi terrestri passano, la Chiesa resta.",
         "options": [
           "La Città di Dio",
           "Le Confessioni",
@@ -497,9 +497,9 @@
         "id": "course_4_le_couronnement_de_charlemagne_800_q4",
         "type": "mcq",
         "question": "Quali sono i missi dominici istituiti da Carlo Magno?",
-        "explanation": "I missi dominici sono ispettori inviati in coppia nelle province per verificare l'operato dei conti locali.",
+        "explanation": "I missi dominici sono ispettori inviati a coppie nelle province, per controllare il lavoro dei conti locali.",
         "options": [
-          "Gli ispettori furono inviati in coppia per controllare le province",
+          "Ispettori inviati a coppie per controllare le province",
           "Monaci responsabili della copiatura di testi antichi",
           "Soldati a guardia dei confini dell'impero",
           "Commercianti responsabili del conio delle monete"
@@ -510,7 +510,7 @@
         "id": "course_4_le_couronnement_de_charlemagne_800_q5",
         "type": "trueFalse",
         "question": "Vero o falso: a Costantinopoli l'incoronazione di Carlo Magno fu salutata come un giusto riconoscimento del suo potere.",
-        "explanation": "Per i bizantini esisteva un solo imperatore romano legittimo: l'incoronazione di Carlo Magno era vista come un'usurpazione.",
+        "explanation": "Per i bizantini esiste un solo imperatore romano legittimo. L'incoronazione di Carlo Magno è vista come un'usurpazione.",
         "options": [
           "Vero",
           "Falso"
@@ -521,9 +521,9 @@
         "id": "course_4_le_couronnement_de_charlemagne_800_q6",
         "type": "mcq",
         "question": "Quale scrittura adottò Carlo Magno per standardizzare i testi copiati nell'impero?",
-        "explanation": "La scuola di palazzo di Aix-la-Chapelle diffuse la scrittura carolina, leggibile in tutto l'impero.",
+        "explanation": "La scuola di palazzo di Aquisgrana diffonde la minuscola carolina, leggibile in tutto l'impero.",
         "options": [
-          "La scrittura di Caroline",
+          "La minuscola carolina",
           "L'alfabeto greco",
           "Geroglifici",
           "Alfabeto cirillico"
@@ -536,7 +536,7 @@
         "question": "Metti questi eventi nella vita di Carlo Magno in ordine cronologico.",
         "explanation": "Queste tappe fondamentali vanno dal 768 all'843: dall'ascesa di Carlo Magno alla conquista longobarda, poi all'incoronazione, fino alla divisione dell'impero tra i suoi nipoti.",
         "items": [
-          "Avvento del regno franco",
+          "Salita al trono del regno franco",
           "Conquista del regno longobardo dell'Italia settentrionale",
           "Incoronazione imperiale a Roma",
           "Trattato di Verdun che divide l'impero"
@@ -604,7 +604,7 @@
         "id": "course_5_la_magna_carta_1215_q1",
         "type": "mcq",
         "question": "Perché i baroni inglesi imposero la Magna Carta al re Giovanni Senzaterra nel 1215?",
-        "explanation": "Di fronte alle tasse, agli ostaggi e alle multe arbitrarie imposte da John Senzaterra per riconquistare le sue terre, i baroni si ribellano e impongono un testo che limita il suo potere.",
+        "explanation": "Di fronte a tasse, ostaggi e multe arbitrarie imposte da Giovanni Senzaterra per riprendersi le terre, i baroni si ribellano e gli impongono un testo che limita il suo potere.",
         "options": [
           "Per limitare l'arbitrarietà reale: tasse, ostaggi e multe abusive",
           "Per finanziare una nuova crociata in Terra Santa",
@@ -617,7 +617,7 @@
         "id": "course_5_la_magna_carta_1215_q2",
         "type": "trueFalse",
         "question": "Vero o falso: prima del 1215, Giovanni Senzaterra perse la Normandia a favore del re francese Filippo II Augusto.",
-        "explanation": "Nel 1204, Giovanni Senzaterra perse la Normandia a favore di Filippo II Augusto, una battuta d'arresto che lo indebolì permanentemente.",
+        "explanation": "Nel 1204, Giovanni Senzaterra perse la Normandia a favore di Filippo II Augusto, una battuta d'arresto che lo lo indebolì per sempre.",
         "options": [
           "Vero",
           "Falso"
@@ -654,10 +654,10 @@
         "question": "Cosa accadde nell'agosto del 1215, poco dopo la firma della Magna Carta?",
         "explanation": "Giovanni ottenne l'annullamento del testo da parte del Papa nell'agosto del 1215, cosa che riaccese il conflitto con i baroni.",
         "options": [
-          "John Senzaterra fa annullare il testo dal Papa e riprende la guerra civile",
+          "Giovanni Senzaterra fa annullare il testo dal Papa e riprende la guerra civile",
           "Il re viene deposto dai baroni",
           "La Carta viene immediatamente applicata in tutto il Regno",
-          "John Senzaterra va in esilio in Francia"
+          "Giovanni Senzaterra va in esilio in Francia"
         ],
         "correctIndex": 0
       },
@@ -680,7 +680,7 @@
         "question": "Metti questi eventi del regno di Giovanni Senzaterra in ordine cronologico.",
         "explanation": "Queste fasi vanno dal 1204 al 1216: la perdita della Normandia precede la sconfitta di Bouvines, poi la firma della carta e la sua ristampa da parte di Enrico III.",
         "items": [
-          "Perdita della Normandia contro Philippe Auguste",
+          "Perdita della Normandia contro Filippo Augusto",
           "Sconfitta di Bouvines",
           "Firma della Magna Carta a Runnymede",
           "Ristampa della carta di Enrico III"
@@ -690,7 +690,7 @@
         "id": "course_5_la_magna_carta_1215_q8",
         "type": "numericSlider",
         "question": "In che anno fu sigillata la Magna Carta a Runnymede?",
-        "explanation": "Il re Giovanni Senzaterra pose il suo sigillo sulla Magna Carta nel giugno 1215, a Runnymede Meadow.",
+        "explanation": "Giovanni Senzaterra appose il sigillo sulla Magna Carta nel giugno 1215, al prato di Runnymede.",
         "correctValue": 1215.0,
         "sliderMin": 1150.0,
         "sliderMax": 1300.0,
@@ -747,8 +747,8 @@
       {
         "id": "course_6_la_peste_noire_en_europe_1347_1353_q1",
         "type": "mcq",
-        "question": "Quali batteri hanno causato la Morte Nera?",
-        "explanation": "La Morte Nera è causata dal batterio Yersinia pestis, trasmesso all'uomo dalle pulci dei ratti.",
+        "question": "Quale batterio causò la peste nera?",
+        "explanation": "La peste nera è causata dal batterio Yersinia pestis, trasmesso all'uomo dalle pulci dei ratti.",
         "options": [
           "Yersinia pestis",
           "Vibrio cholerae",
@@ -785,11 +785,11 @@
         "id": "course_6_la_peste_noire_en_europe_1347_1353_q4",
         "type": "mcq",
         "question": "Qual è il vero vettore della peste, che i medici dell’epoca non riuscirono a identificare?",
-        "explanation": "I medici credono nella teoria del miasma, aria corrotta, quando il vero vettore è la pulce del ratto, Xenopsylla cheopis.",
+        "explanation": "I medici credono nella teoria dei miasmi, l'aria corrotta. Il vero vettore è la pulce del ratto, Xenopsylla cheopis.",
         "options": [
           "La pulce del ratto",
-          "Sembra corrotto",
-          "Bene, acqua",
+          "L'aria corrotta",
+          "L'acqua dei pozzi",
           "Zanzare"
         ],
         "correctIndex": 0
@@ -827,7 +827,7 @@
           "La peste raggiunge la stazione commerciale genovese di Caffa, in Crimea",
           "Le galere genovesi introducono il flagello in Sicilia",
           "L'epidemia si diffonde in Francia, Inghilterra e Impero",
-          "La pandemia sta diminuendo in Europa"
+          "L'epidemia si attenua in Europa"
         ]
       },
       {
@@ -844,8 +844,8 @@
       {
         "id": "course_6_la_peste_noire_en_europe_1347_1353_q9",
         "type": "percentageSlider",
-        "question": "Secondo le stime fornite nel corso, qual è la quota massima della popolazione europea persa a causa della peste nera tra il 1347 e il 1353?",
-        "explanation": "Il corso stima che la peste nera abbia ucciso tra il 30 e il 60% della popolazione europea, ovvero tra 25 e 50 milioni di persone.",
+        "question": "Secondo le stime, qual è la quota massima della popolazione europea persa per la peste nera tra il 1347 e il 1353?",
+        "explanation": "La peste nera uccise tra il 30 e il 60% della popolazione europea: dai 25 ai 50 milioni di persone.",
         "correctValue": 60.0,
         "sliderMin": 0.0,
         "sliderMax": 100.0,
@@ -892,7 +892,7 @@
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q1",
         "type": "mcq",
         "question": "Quanti anni aveva Giovanna d'Arco quando si unì al delfino Carlo nel 1429?",
-        "explanation": "Jeanne aveva 17 anni quando lasciò Domrémy per convincere il delfino ad affidarle un esercito.",
+        "explanation": "Giovanna ha 17 anni quando lascia Domrémy per convincere il delfino ad affidarle un esercito.",
         "options": [
           "17 anni",
           "25 anni",
@@ -905,7 +905,7 @@
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q2",
         "type": "mcq",
         "question": "Da dove viene Giovanna d'Arco?",
-        "explanation": "Jeanne è una contadina di Domrémy, in Lorena.",
+        "explanation": "Giovanna è una contadina di Domrémy, in Lorena.",
         "options": [
           "Da Domrémy, in Lorena",
           "Da Orleans",
@@ -941,8 +941,8 @@
       {
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q5",
         "type": "mcq",
-        "question": "Quale missione Jeanne dice di aver ricevuto dalle sue voci?",
-        "explanation": "Le sue voci gli ordinano di togliere l'assedio di Orléans, poi di condurre il delfino all'incoronazione di Reims, l'unico rito che rende un vero re.",
+        "question": "Quale missione Giovanna dice di aver ricevuto dalle sue voci?",
+        "explanation": "Le voci le ordinano di togliere l'assedio di Orléans, poi di condurre il delfino all'incoronazione di Reims: l'unico rito che fa un vero re.",
         "options": [
           "Togliere l'assedio di Orléans e poi condurre il delfino all'incoronazione di Reims",
           "Cacciare i Burgundi da Parigi",
@@ -966,7 +966,7 @@
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q7",
         "type": "trueFalse",
         "question": "Vero o falso: Giovanna d'Arco uccise molti nemici con le sue stesse mani durante la battaglia.",
-        "explanation": "Jeanne non ha mai ucciso un nemico con le proprie mani; preferiva portare la sua bandiera al comando senza spargere lei stessa sangue.",
+        "explanation": "Giovanna non ha mai ucciso un nemico con le proprie mani. Preferiva portare la bandiera, senza versare lei stessa il sangue.",
         "options": [
           "Vero",
           "Falso"
@@ -980,9 +980,9 @@
         "explanation": "Queste tappe fondamentali vanno dal 1420 al 1431: il trattato di Troyes, poi Orléans e Reims nel 1429, la presa nel 1430 e l'esecuzione nel 1431.",
         "items": [
           "Il Trattato di Troyes disereda il delfino",
-          "Giovanna revoca l'assedio di Orléans",
+          "Giovanna toglie l'assedio di Orléans",
           "L'incoronazione di Carlo VII a Reims",
-          "La cattura di Jeanne a Compiègne",
+          "La cattura di Giovanna a Compiègne",
           "La pira di Rouen"
         ]
       }
@@ -1036,8 +1036,8 @@
       {
         "id": "course_8_la_chute_de_constantinople_1453_q2",
         "type": "mcq",
-        "question": "Chi guidò l'assedio e la cattura di Costantinopoli nel 1453?",
-        "explanation": "Fu il giovane sultano ottomano Mehmed II a guidare l'assedio e la cattura della città.",
+        "question": "Chi guidò l'assedio e la presa di Costantinopoli nel 1453?",
+        "explanation": "È il giovane sultano ottomano Mehmed II a condurre l’assedio e a prendere la città.",
         "options": [
           "Sultano ottomano Mehmed II",
           "L'imperatore bizantino Costantino XI",
@@ -1061,7 +1061,7 @@
         "id": "course_8_la_chute_de_constantinople_1453_q4",
         "type": "mcq",
         "question": "Cosa indebolì durevolmente l’impero bizantino prima del 1453?",
-        "explanation": "I crociati cristiani provenienti dall'Occidente avevano saccheggiato la città nel 1204, lasciando incruento l'impero bizantino.",
+        "explanation": "I crociati cristiani venuti dall'Occidente saccheggiarono la città nel 1204 e lasciarono l'impero bizantino esangue.",
         "options": [
           "Il sacco di Costantinopoli da parte della IV crociata nel 1204",
           "Un'epidemia di vaiolo",
@@ -1073,8 +1073,8 @@
       {
         "id": "course_8_la_chute_de_constantinople_1453_q5",
         "type": "mcq",
-        "question": "Come si chiama il cannone gigante realizzato dal fondatore Urban per Mehmed II?",
-        "explanation": "Urban forgia per Mehmed II un cannone da 8 metri chiamato Basilica, capace di sparare palle da 600 kg.",
+        "question": "Come si chiama il cannone gigante forgiato dal fonditore Urban per Mehmed II?",
+        "explanation": "Urban forgia per Mehmed II un cannone di 8 metri, la Basilica, capace di sparare palle da 600 kg.",
         "options": [
           "La Basilica",
           "Il bombardamento reale",
@@ -1232,10 +1232,10 @@
       {
         "id": "course_9_l_empire_azteque_q6",
         "type": "mcq",
-        "question": "Secondo la Cosmogonia dei Cinque Soli, perché gli Aztechi praticavano sacrifici umani?",
-        "explanation": "Questo mito dice che il sole sopravvive solo nutrito dal sangue umano, compiendo i sacrifici necessari per la continuità del mondo.",
+        "question": "Secondo la cosmogonia dei Cinque Soli, perché gli Aztechi praticavano sacrifici umani?",
+        "explanation": "Secondo il mito, il sole sopravvive solo se è nutrito di sangue umano: i sacrifici servono a far continuare il mondo.",
         "options": [
-          "Per nutrire il sole con il sangue e far andare avanti il ​​mondo",
+          "Per nutrire il sole con il sangue e far continuare il mondo",
           "Per punire i criminali dell'impero",
           "Per spaventare i popoli nemici",
           "Per celebrare il raccolto annuale"
@@ -1246,7 +1246,7 @@
         "id": "course_9_l_empire_azteque_q7",
         "type": "mcq",
         "question": "Qual è stato il fattore principale nella rapida caduta dell'Impero azteco nelle mani degli spagnoli?",
-        "explanation": "Il vero killer è il vaiolo, una malattia europea sconosciuta alle popolazioni locali, che decima gli Aztechi molto più delle armi spagnole.",
+        "explanation": "Il fattore decisivo è il vaiolo, una malattia europea sconosciuta alle popolazioni locali, che decima gli Aztechi molto più delle armi spagnole.",
         "options": [
           "Vaiolo, una malattia contro la quale gli Aztechi non avevano difese immunitarie",
           "La mancanza di guerrieri aztechi",
@@ -1259,7 +1259,7 @@
         "id": "course_9_l_empire_azteque_q8",
         "type": "numericSlider",
         "question": "Quanti giorni durò l'assedio finale di Tenochtitlán nel 1521?",
-        "explanation": "Tenochtitlán cadde nel 1521 dopo 80 giorni di assedio, affamata e devastata dalle malattie.",
+        "explanation": "Tenochtitlán cadde nel 1521 dopo 80 giorni di assedio: affamata e devastata dalle malattie.",
         "correctValue": 80.0,
         "sliderMin": 20.0,
         "sliderMax": 150.0,
@@ -1331,7 +1331,7 @@
         "question": "Qual era il vero scopo economico della spedizione verso ovest di Colombo?",
         "explanation": "Colombo cerca una rotta occidentale verso l'Asia per aggirare gli Ottomani, che controllano le rotte commerciali dell'Oriente.",
         "options": [
-          "Raggiungi spezie e seta senza passare attraverso le rotte controllate dagli ottomani",
+          "Raggiungere spezie e seta senza passare dalle rotte controllate dagli ottomani",
           "Dimostrare che la Terra è rotonda",
           "Colonizzare l'Africa occidentale",
           "Trovare l'oro per finanziare una crociata"
@@ -1342,7 +1342,7 @@
         "id": "course_10_la_decouverte_de_l_amerique_1492_q3",
         "type": "trueFalse",
         "question": "Vero o falso: Cristoforo Colombo cercò soprattutto di dimostrare che la Terra era rotonda, un'idea sconosciuta prima di lui.",
-        "explanation": "La sfericità della Terra era già stata calcolata dallo studioso greco Eratostene nel III secolo a.C. A.D; L'obiettivo di Colombo era economico.",
+        "explanation": "La sfericità della Terra era già stata calcolata da Eratostene nel III secolo a.C. L'obiettivo di Colombo era economico.",
         "options": [
           "Vero",
           "Falso"
@@ -1389,8 +1389,8 @@
       {
         "id": "course_10_la_decouverte_de_l_amerique_1492_q7",
         "type": "mcq",
-        "question": "Cos'è la Borsa Colombiana?",
-        "explanation": "Questo trasferimento porta patate e pomodori in Europa, e grano, cavalli o bovini in America, cambiando entrambi i mondi per sempre.",
+        "question": "Cos'è lo scambio colombiano?",
+        "explanation": "Questo scambio porta patate e pomodori in Europa, e grano, cavalli o bovini in America. I due mondi non saranno più gli stessi.",
         "options": [
           "Un massiccio trasferimento di piante, animali e malattie tra Europa e America",
           "Un trattato di pace tra Spagna e Portogallo",
@@ -1432,7 +1432,7 @@
           "La partenza delle tre navi da Palos",
           "Arrivo su un'isola delle Bahamas",
           "Condividere il mondo tra Spagna e Portogallo",
-          "Il battesimo del continente americano di Waldseemüller"
+          "Il battesimo del continente americano da parte di Waldseemüller"
         ]
       }
     ]
@@ -1501,7 +1501,7 @@
         "question": "Perché Luigi XVI convocò gli Stati Generali nel maggio 1789?",
         "explanation": "Il regno è in rovina, soprattutto a causa del costoso sostegno dato alle colonie americane, e il re chiede nuove tasse.",
         "options": [
-          "Aumentare nuove tasse di fronte alla bancarotta del regno",
+          "Imporre nuove tasse di fronte alla bancarotta del regno",
           "Per dichiarare guerra all'Inghilterra",
           "Per organizzare l'incoronazione di suo figlio",
           "Per riformare l'esercito reale"
@@ -1538,12 +1538,12 @@
         "id": "course_11_la_prise_de_la_bastille_1789_q6",
         "type": "numericSlider",
         "question": "Quanti fucili sequestrarono la folla agli Invalides la mattina del 14 luglio?",
-        "explanation": "La folla sequestrò circa 32.000 fucili a Les Invalides, ma mancava ancora la polvere.",
+        "explanation": "La folla prese circa 32.000 fucili agli Invalides, ma mancava ancora la polvere.",
         "correctValue": 32000.0,
         "sliderMin": 10000.0,
         "sliderMax": 50000.0,
         "tolerance": 3000.0,
-        "unit": "pistole"
+        "unit": "fucili"
       },
       {
         "id": "course_11_la_prise_de_la_bastille_1789_q7",
@@ -1562,7 +1562,7 @@
         "id": "course_11_la_prise_de_la_bastille_1789_q8",
         "type": "trueFalse",
         "question": "Vero o falso: quando il re venne informato della presa della Bastiglia, rispose che si trattava di una semplice rivolta.",
-        "explanation": "Al contrario, gli fu detto “No Sire, è una rivoluzione”, anche se il re aveva annotato “Niente” nel suo diario di caccia il 14.",
+        "explanation": "Al contrario, gli dissero: «No, Sire, è una rivoluzione». Quel 14 luglio, sul diario di caccia, il re aveva scritto «Niente».",
         "options": [
           "Vero",
           "Falso"
@@ -1576,7 +1576,7 @@
         "explanation": "Queste quattro fasi vanno dal maggio all'agosto 1789: la convocazione reale, il giuramento dei deputati, la presa della Bastiglia, poi l'abolizione dei privilegi.",
         "items": [
           "La convocazione degli Stati Generali",
-          "Il Giuramento della Palma",
+          "Il Giuramento della Pallacorda",
           "La presa della Bastiglia",
           "L'abolizione dei privilegi"
         ]
@@ -1660,7 +1660,7 @@
         "question": "Vero o falso: l'Austria attende l'arrivo dei rinforzi russi prima di inviare le sue truppe a Ulm.",
         "explanation": "L'Austria non aspetta i russi: da sola spinge circa 70.000 uomini a Ulm, errore che isola Mack.",
         "options": [
-          "Vero",
+          "Mettersi tra Wellington e Blücher per batterli separatamente",
           "Falso"
         ],
         "correctIndex": 1
@@ -1668,7 +1668,7 @@
       {
         "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_q4",
         "type": "mcq",
-        "question": "Cos'è il Corpo d'Armata Napoleonico, una risorsa chiave della campagna?",
+        "question": "Cos’è il corpo d’armata napoleonico, una carta vincente della campagna?",
         "explanation": "Ogni corpo d'armata è una forza autonoma in grado di manovrare da sola, consentendo a sette corpi di marciare in parallelo verso Ulm.",
         "options": [
           "Un piccolo esercito autonomo con fanteria, cavalleria e cannoni",
@@ -1806,7 +1806,7 @@
         "question": "Qual era il piano iniziale di Napoleone prima della battaglia, chiamata Posizione Centrale?",
         "explanation": "Napoleone vuole frapporsi tra i due eserciti nemici e sconfiggerli uno dopo l'altro, prima che si uniscano.",
         "options": [
-          "Mettiti tra Wellington e Blücher per batterli separatamente",
+          "Mettersi tra Wellington e Blücher per batterli uno alla volta",
           "Attaccare direttamente Bruxelles",
           "Aspetta i rinforzi austriaci",
           "Circondare Wellington via mare"
@@ -1841,7 +1841,7 @@
         "id": "course_13_la_bataille_de_waterloo_1815_q6",
         "type": "mcq",
         "question": "Quale evento scatenò il panico e la disfatta dell'esercito francese a Waterloo?",
-        "explanation": "Lanciata come ultima risorsa, la Guardia Imperiale si ritira per la prima volta e al grido \"La Guardia si ritira!\" » trasforma la ritirata in disfatta.",
+        "explanation": "Lanciata come ultima carta, la Guardia imperiale indietreggia per la prima volta. Il grido «La Guardia si ritira!» trasforma la ritirata in rotta.",
         "options": [
           "La ritirata della Guardia Imperiale",
           "La morte di Napoleone sul campo di battaglia",
@@ -1884,7 +1884,7 @@
           "Rimettere le dinastie reali sui loro troni, Legittimità",
           "Dividere la Francia in quattro regni",
           "Abolire tutte le monarchie europee",
-          "Date la corona di Francia a Wellington"
+          "Dare la corona di Francia a Wellington"
         ],
         "correctIndex": 0
       }
@@ -1965,7 +1965,7 @@
         "question": "Chi guida l'Assemblea di maggioranza monarchica ritirata a Versailles?",
         "explanation": "Adolphe Thiers è a capo di questa Assemblea conservatrice, in aperto conflitto con la Parigi ribelle.",
         "options": [
-          "Adolfo Thiers",
+          "Adolphe Thiers",
           "Luisa Michel",
           "Carlo Marx",
           "Napoleone III"
@@ -2013,7 +2013,7 @@
         "id": "course_14_la_commune_de_paris_1871_q8",
         "type": "mcq",
         "question": "Come si chiama la repressione finale che metterà fine alla Comune?",
-        "explanation": "Dal 21 al 28 maggio 1871, le truppe di Versailles reprimono l'insurrezione durante la Settimana di Sangue.",
+        "explanation": "Dal 21 al 28 maggio 1871, le truppe di Versailles reprimono l'insurrezione durante la Settimana sanguinosa.",
         "options": [
           "Settimana sanguinosa",
           "La notte dei lunghi coltelli",
@@ -2026,24 +2026,24 @@
         "id": "course_14_la_commune_de_paris_1871_q9",
         "type": "chronological",
         "question": "Metti questi eventi della Comune di Parigi in ordine cronologico.",
-        "explanation": "Queste quattro tappe vanno dal marzo al maggio 1871: l'insurrezione, la proclamazione della Comune, poi la sua repressione durante la Settimana Sanguinosa.",
+        "explanation": "Queste quattro tappe vanno dal marzo al maggio 1871: l'insurrezione, la proclamazione della Comune, poi la sua repressione durante la Settimana sanguinosa.",
         "items": [
           "Il tentativo di impossessarsi dei cannoni di Montmartre",
-          "La proclamazione del Comune",
-          "L'inizio della Settimana Sanguinosa",
+          "La proclamazione della Comune",
+          "L'inizio della Settimana sanguinosa",
           "Le ultime battaglie al Père-Lachaise"
         ]
       },
       {
         "id": "course_14_la_commune_de_paris_1871_q10",
         "type": "numericSlider",
-        "question": "Quante persone muoiono approssimativamente durante la Bloody Week?",
-        "explanation": "Secondo le stime, il bilancio delle vittime della Bloody Week è compreso tra 10.000 e 30.000 morti.",
+        "question": "Quante persone muoiono, all'incirca, durante la Settimana sanguinosa?",
+        "explanation": "Secondo le stime, i morti della Settimana sanguinosa sono tra 10.000 e 30.000.",
         "correctValue": 20000.0,
         "sliderMin": 5000.0,
         "sliderMax": 50000.0,
         "tolerance": 10000.0,
-        "unit": "morto"
+        "unit": "morti"
       }
     ]
   },
@@ -2159,7 +2159,7 @@
           "10-12 ore",
           "dalle 4 alle 6 ore",
           "dalle 6 alle 8 ore",
-          "dalle 14:00 alle 16:00"
+          "14-16 ore"
         ],
         "correctIndex": 0
       },
@@ -2262,7 +2262,7 @@
       {
         "id": "course_16_la_bataille_de_verdun_1916_q5",
         "type": "mcq",
-        "question": "Qual è il ruolo della Via Sacra durante la battaglia di Verdun?",
+        "question": "Qual è il ruolo della Voie Sacrée durante la battaglia di Verdun?",
         "explanation": "La Voie Sacrée collega Bar-le-Duc a Verdun: quasi 6.000 camion vi transitano ogni giorno per effettuare i rifornimenti.",
         "options": [
           "Fornire a Verdun uomini ed equipaggiamenti da Bar-le-Duc",
@@ -2276,7 +2276,7 @@
         "id": "course_16_la_bataille_de_verdun_1916_q6",
         "type": "mcq",
         "question": "Cosa consente il sistema di rotazione delle truppe, il Noria, messo in atto da Pétain?",
-        "explanation": "Grazie alla Noria, le divisioni vengono sostituite regolarmente, tanto che circa il 70% dell'esercito francese combatte prima o poi a Verdun.",
+        "explanation": "Grazie alla noria, le divisioni vengono sostituite regolarmente, tanto che circa il 70% dell'esercito francese combatte prima o poi a Verdun.",
         "options": [
           "Ruota rapidamente le divisioni per limitare il tempo trascorso al fronte",
           "Portare urgentemente rinforzi britannici",
@@ -2410,7 +2410,7 @@
         "id": "course_17_la_revolution_russe_1917_q5",
         "type": "mcq",
         "question": "Come riuscì Lenin a ritornare in Russia nel 1917?",
-        "explanation": "La Germania, che vuole indebolire il suo nemico russo, organizza il ritorno di Lenin dall'esilio in un “treno al comando”.",
+        "explanation": "La Germania, che vuole indebolire il suo nemico russo, organizza il ritorno di Lenin dall'esilio in un “treno piombato”.",
         "options": [
           "In un treno sigillato organizzato dalla Germania, che spera di indebolire la Russia",
           "A bordo di una nave britannica",
@@ -2425,7 +2425,7 @@
         "question": "Chi organizzò, insieme a Lenin, l’insurrezione bolscevica dell’ottobre 1917?",
         "explanation": "Leon Trotsky, un eccezionale organizzatore, preparò con Lenin l'insurrezione che rovesciò il governo provvisorio.",
         "options": [
-          "Leone Trockij",
+          "Lev Trockij",
           "Aleksandr Kerenskij",
           "Nicola II",
           "Grigorij Rasputin"
@@ -2448,8 +2448,8 @@
       {
         "id": "course_17_la_revolution_russe_1917_q8",
         "type": "mcq",
-        "question": "Cosa sta mettendo in piedi la Cheka, la polizia politica bolscevica?",
-        "explanation": "La Ceka lanciò il terrore contro gli oppositori del nuovo potere, soprattutto dopo la presa del potere da parte dei bolscevichi.",
+        "question": "Che cosa mette in campo la Ceka, la polizia politica bolscevica?",
+        "explanation": "La Ceka lancia il terrore contro gli oppositori del nuovo potere, soprattutto dopo la presa del potere dei bolscevichi.",
         "options": [
           "Una politica di terrore contro gli oppositori",
           "Un sistema di voto gratuito",
@@ -2524,7 +2524,7 @@
         "id": "course_18_la_grande_depression_1929_q2",
         "type": "percentageSlider",
         "question": "Quale percentuale di americani erano disoccupati al culmine della Grande Depressione?",
-        "explanation": "Circa il 25% degli americani si ritrova disoccupato durante la crisi.",
+        "explanation": "Durante la crisi, circa un americano su quattro resta senza lavoro.",
         "correctValue": 25.0,
         "sliderMin": 0.0,
         "sliderMax": 100.0,
@@ -2535,7 +2535,7 @@
         "id": "course_18_la_grande_depression_1929_q3",
         "type": "mcq",
         "question": "Quale meccanismo alimentò la bolla speculativa dei ruggenti anni Venti prima del crollo?",
-        "explanation": "Ci prendiamo in prestito per comprare azioni scommettendo sul loro rialzo: questo sistema di acquisto a margine moltiplica le perdite quando il mercato crolla.",
+        "explanation": "Si prendeva in prestito per comprare azioni scommettendo sul loro rialzo: questo sistema di acquisto a margine moltiplica le perdite quando il mercato crolla.",
         "options": [
           "Acquistare azioni a margine, prendere in prestito per acquistare titoli",
           "Stampa di massa di denaro da parte dello Stato",
@@ -3444,7 +3444,7 @@
         "id": "course_24_la_bataille_de_dien_bien_phu_1954_q4",
         "type": "trueFalse",
         "question": "Vero o falso: lo stato maggiore francese credeva che i Viet-Minh non sarebbero mai stati in grado di issare l'artiglieria pesante nella giungla che circondava Diên Bien Phu.",
-        "explanation": "Questo era il calcolo francese, ma decine di migliaia di portatori trasportavano cannoni e munizioni sulle spalle fino ai crinali sovrastanti il ​​campo.",
+        "explanation": "Questo era il calcolo francese, ma decine di migliaia di portatori trasportavano cannoni e munizioni sulle spalle fino ai crinali sovrastanti il campo.",
         "options": [
           "Vero",
           "Falso"
@@ -3759,7 +3759,7 @@
       {
         "id": "course_26_la_creation_de_l_onu_1945_q7",
         "type": "numericSlider",
-        "question": "Quanti paesi sono oggi membri dell'ONU, secondo il corso?",
+        "question": "Quanti paesi sono oggi membri dell'ONU?",
         "explanation": "Oggi l’ONU conta 193 membri, rispetto ai 51 firmatari nel 1945.",
         "correctValue": 193.0,
         "sliderMin": 150.0,
@@ -3856,7 +3856,7 @@
       {
         "id": "course_27_la_naissance_de_l_ue_de_la_ceca_a_maastr_q4",
         "type": "mcq",
-        "question": "Cosa creano i Trattati di Roma, firmati il ​​25 marzo 1957?",
+        "question": "Cosa creano i Trattati di Roma, firmati il 25 marzo 1957?",
         "explanation": "I Sei firmano a Roma i trattati che creano la Comunità economica europea (CEE) e l'Euratom, per l'atomo civile.",
         "options": [
           "La CEE e l'Euratom",
@@ -6726,7 +6726,7 @@
       {
         "id": "course_47_pourquoi_baille_t_on_q8",
         "type": "mcq",
-        "question": "Cosa potrebbe aiutare a sviluppare lo sbadiglio nel feto, secondo il corso?",
+        "question": "Cosa potrebbe aiutare a sviluppare lo sbadiglio nel feto?",
         "explanation": "Nel feto, lo sbadiglio potrebbe contribuire allo sviluppo della mascella e dei muscoli facciali.",
         "options": [
           "I muscoli della mascella e del viso",
@@ -7416,7 +7416,7 @@
       {
         "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_q8",
         "type": "mcq",
-        "question": "Qual è oggi, secondo il corso, la sfida principale legata all’elettricità?",
+        "question": "Qual è oggi la sfida principale legata all’elettricità?",
         "explanation": "La sfida non è più solo produrre elettricità, ma farlo in modo pulito e affidabile per un mondo completamente connesso.",
         "options": [
           "Produrlo in modo pulito e affidabile",
@@ -8079,8 +8079,8 @@
         "explanation": "Tim Berners-Lee ha inventato il World Wide Web al CERN all'inizio degli anni '90.",
         "options": [
           "Tim Berners-Lee",
-          "Vin Cerf",
-          "Bob Khan",
+          "Vint Cerf",
+          "Bob Kahn",
           "Percy Spencer"
         ],
         "correctIndex": 0
@@ -8337,8 +8337,8 @@
         "options": [
           "John Warren",
           "Henri Becquerel",
-          "Luigi Pasteur",
-          "Wilhelm Rontgen"
+          "Louis Pasteur",
+          "Wilhelm Röntgen"
         ],
         "correctIndex": 0
       },
@@ -8495,8 +8495,8 @@
         "options": [
           "Alfred Russel Wallace",
           "Gregor Mendel",
-          "Luigi Pasteur",
-          "Antonio Lavoisier"
+          "Louis Pasteur",
+          "Antoine Lavoisier"
         ],
         "correctIndex": 0
       },
@@ -8565,7 +8565,7 @@
       {
         "id": "course_61_le_big_bang_q1",
         "type": "mcq",
-        "question": "Cos'è il Big Bang, secondo il corso?",
+        "question": "Cos'è il Big Bang?",
         "explanation": "Il Big Bang non è un'esplosione in un vuoto preesistente: è lo spazio stesso che comincia a crescere portando con sé la materia.",
         "options": [
           "L'espansione dello spazio stesso, non un'esplosione nel vuoto già esistente",
@@ -8795,20 +8795,20 @@
       {
         "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_q7",
         "type": "mcq",
-        "question": "Cosa sono i “fumatori neri” che si trovano vicino alle creste sottomarine?",
-        "explanation": "I fumatori neri sono camini sottomarini che emettono fluidi caldi ricchi di minerali, attorno ai quali vivono ecosistemi senza luce.",
+        "question": "Cosa sono i “fumaioli neri” che si trovano vicino alle dorsali oceaniche?",
+        "explanation": "I fumaioli neri sono camini sottomarini che sputano fluidi caldi ricchi di minerali. Intorno a loro vivono ecosistemi senza luce.",
         "options": [
           "Camini che emettono fluidi brucianti ricchi di minerali",
           "Geyser di ghiaccio specifici delle regioni polari",
           "Nuvole di cenere vulcanica sulla superficie",
-          "I robot erano soliti esplorare i vulcani"
+          "Robot usati per esplorare i vulcani"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_q8",
         "type": "mcq",
-        "question": "Quale antica città fu sepolta dall'eruzione del Vesuvio nel 79 d.C.? A.D?",
+        "question": "Quale antica città fu sepolta dall'eruzione del Vesuvio nel 79 d.C.?",
         "explanation": "Nel 79 d.C. l'eruzione del Vesuvio, vicino Napoli, seppellì sotto la cenere la città di Pompei.",
         "options": [
           "Pompei",
@@ -9063,7 +9063,7 @@
       {
         "id": "course_64_la_catastrophe_de_tchernobyl_1986_q6",
         "type": "mcq",
-        "question": "Come chiamiamo le centinaia di migliaia di persone mobilitate dall'URSS per contenere il disastro?",
+        "question": "Come si chiamano le centinaia di migliaia di persone mobilitate dall'URSS per contenere il disastro?",
         "explanation": "Per contenere il disastro furono mobilitate quasi 600.000 persone, chiamate liquidatori: piloti, operai, soldati.",
         "options": [
           "I liquidatori",
@@ -9911,7 +9911,7 @@
       {
         "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_q7",
         "type": "mcq",
-        "question": "Cos'è l'IPCC menzionato nel corso?",
+        "question": "Cos'è l'IPCC?",
         "explanation": "L’IPCC sintetizza il lavoro di migliaia di climatologi e conclude che il riscaldamento dal 1950 è senza precedenti e di origine umana.",
         "options": [
           "Il gruppo che sintetizza il lavoro di migliaia di climatologi",
@@ -10043,8 +10043,8 @@
       {
         "id": "course_72_pourquoi_dort_on_q6",
         "type": "mcq",
-        "question": "Cos'è il sistema glinfatico, menzionato nel corso?",
-        "explanation": "Il sistema glinfatico è una rete di drenaggio cerebrale dieci volte più attiva di notte; evacua i rifiuti, comprese le proteine ​​legate al rischio di Alzheimer.",
+        "question": "Cos'è il sistema glinfatico?",
+        "explanation": "Il sistema glinfatico è una rete di drenaggio cerebrale dieci volte più attiva di notte; evacua i rifiuti, comprese le proteine legate al rischio di Alzheimer.",
         "options": [
           "Una rete di drenaggio cerebrale, circa dieci volte più attiva di notte, che evacua i rifiuti dal cervello",
           "Il nome del ciclo di sonno di 90 minuti",
@@ -10263,7 +10263,7 @@
       {
         "id": "course_74_pourquoi_certaines_especes_sont_elles_im_q1",
         "type": "numericSlider",
-        "question": "Quanti anni ha vissuto all'incirca la vongola Ming menzionata nel corso?",
+        "question": "Quanti anni ha vissuto, all’incirca, la vongola Ming?",
         "explanation": "La vongola Ming visse 507 anni, un esempio lampante di estrema longevità tra gli animali.",
         "correctValue": 507.0,
         "sliderMin": 200.0,
@@ -10291,7 +10291,7 @@
         "explanation": "I telomeri agiscono come le punte dei lacci delle scarpe alle estremità dei cromosomi; ad ogni divisione cellulare si accorciano e, se sono troppo corti, la cellula smette di dividersi.",
         "options": [
           "Termina alle estremità dei cromosomi, che si accorciano ad ogni divisione cellulare",
-          "Proteine ​​che riparano il DNA danneggiato",
+          "Proteine che riparano il DNA danneggiato",
           "Cellule staminali presenti solo negli invertebrati",
           "Molecole che scatenano il cancro"
         ],
@@ -10348,7 +10348,7 @@
       {
         "id": "course_74_pourquoi_certaines_especes_sont_elles_im_q8",
         "type": "mcq",
-        "question": "A cosa mirano i trattamenti senolitici discussi nel corso?",
+        "question": "A cosa mirano i trattamenti senolitici?",
         "explanation": "I senolitici mirano ad eliminare le cellule zombie che si accumulano e infiammano i tessuti; negli animali, questo ha già ringiovanito alcune funzioni.",
         "options": [
           "Elimina le cellule zombi che si accumulano con l'età",
@@ -10504,8 +10504,8 @@
       {
         "id": "course_75_la_photosynthese_expliquee_simplement_q9",
         "type": "mcq",
-        "question": "Che cosa ha di speciale la lumaca di mare Elysia chronotica, menzionata nel corso?",
-        "explanation": "La lumaca di mare Elysia chronotica arriva al punto di rubare i cloroplasti dalle alghe di cui si nutre, per vivere in qualche modo grazie all'energia solare.",
+        "question": "Che cosa ha di speciale la lumaca di mare Elysia chlorotica?",
+        "explanation": "La lumaca di mare Elysia chlorotica arriva al punto di rubare i cloroplasti dalle alghe di cui si nutre, per vivere in qualche modo grazie all'energia solare.",
         "options": [
           "Ruba i cloroplasti alle alghe per vivere un po' grazie all'energia solare",
           "Produce la sua clorofilla fin dalla nascita",
@@ -10774,7 +10774,7 @@
       {
         "id": "course_77_qu_est_ce_que_la_matiere_noire_q8",
         "type": "mcq",
-        "question": "Cosa potrebbe causare l’energia oscura in un futuro molto lontano, secondo il corso?",
+        "question": "Cosa potrebbe fare l’energia oscura in un futuro molto lontano?",
         "explanation": "In un futuro molto lontano, l’energia oscura potrebbe allontanare altre galassie al punto da renderle invisibili dalla Via Lattea.",
         "options": [
           "Allontana le altre galassie al punto da renderle invisibili alla Via Lattea",
@@ -11405,7 +11405,7 @@
       {
         "id": "course_82_l_iliade_homere_q2",
         "type": "mcq",
-        "question": "Qual è il vero primo tema della poesia, secondo il corso?",
+        "question": "Qual è il vero primo tema della poesia?",
         "explanation": "Il poema si apre con l'ira di Achille, provocata dall'umiliazione inflitta da Agamennone, ancor prima della questione di Troia.",
         "options": [
           "L'ira di Achille",
@@ -11601,7 +11601,7 @@
       {
         "id": "course_83_dipe_roi_sophocle_q5",
         "type": "mcq",
-        "question": "Secondo Aristotele, quali sono i due effetti chiave che ammira nell'Oedipus Rex?",
+        "question": "Secondo Aristotele, quali sono i due effetti-chiave che ammira in Edipo re?",
         "explanation": "Aristotele ammira la peripeteia, l'improvviso capovolgimento della situazione, e l'anagnorisis, il momento in cui Edipo capisce chi è.",
         "options": [
           "La svolta e il riconoscimento",
@@ -12642,7 +12642,7 @@
       {
         "id": "course_90_medee_euripide_q8",
         "type": "mcq",
-        "question": "Al di là della vendetta personale contro Giasone, cosa distrugge anche Medea uccidendo i suoi figli, secondo il corso?",
+        "question": "Al di là della vendetta personale contro Giasone, cosa distrugge anche Medea uccidendo i suoi figli?",
         "explanation": "Distruggendo la propria stirpe, Medea nuoce anche al futuro della città, un costo politico che il corso sottolinea.",
         "options": [
           "Il futuro della casata, con un costo politico per la città",
@@ -12791,7 +12791,7 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q9",
         "type": "chronological",
-        "question": "Metti in ordine queste fasi della storia di Les Miserables.",
+        "question": "Metti in ordine queste fasi della storia de I Miserabili.",
         "explanation": "Hugo iniziò il romanzo nel 1845, riprese il manoscritto in esilio dopo il colpo di stato del 1851, prima che il libro apparisse a Bruxelles nel 1862.",
         "items": [
           "Hugo inizia a scrivere il romanzo con il titolo “Les Misères”",
@@ -12802,8 +12802,8 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q10",
         "type": "numericSlider",
-        "question": "In che anno fu finalmente pubblicato Les Misérables, dopo diciassette anni di lavoro?",
-        "explanation": "Les Miserables apparve nel 1862 a Bruxelles, dopo diciassette anni di lavoro a partire dal 1845.",
+        "question": "In che anno fu infine pubblicato I Miserabili, dopo diciassette anni di lavoro?",
+        "explanation": "I Miserabili uscirono nel 1862 a Bruxelles, dopo diciassette anni di lavoro a partire dal 1845.",
         "correctValue": 1862.0,
         "sliderMin": 1840.0,
         "sliderMax": 1880.0,
@@ -12876,7 +12876,7 @@
         "id": "course_92_madame_bovary_flaubert_q3",
         "type": "mcq",
         "question": "Quale processo narrativo inventa Flaubert in questo romanzo, mescolando la voce del narratore con quella di un personaggio senza virgolette?",
-        "explanation": "Flaubert inventa lo stile libero indiretto: la voce del narratore si fonde con quella di Emma, ​​pur mantenendo un'ironica distanza.",
+        "explanation": "Flaubert inventa lo stile libero indiretto: la voce del narratore si fonde con quella di Emma, pur mantenendo un'ironica distanza.",
         "options": [
           "Lo stile indiretto libero",
           "Il monologo interiore",
@@ -12998,8 +12998,8 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q1",
         "type": "mcq",
-        "question": "Chi è l'autore di Le Rouge et le Noir, il cui vero nome è Henri Beyle?",
-        "explanation": "Stendhal, il cui vero nome era Henri Beyle, pubblicò Le Rouge et le Noir nel 1830.",
+        "question": "Chi è l'autore de Il rosso e il nero, il cui vero nome è Henri Beyle?",
+        "explanation": "Stendhal, al secolo Henri Beyle, pubblicò Il rosso e il nero nel 1830.",
         "options": [
           "Stendhal",
           "Honoré de Balzac",
@@ -13941,7 +13941,7 @@
         "id": "course_99_le_pere_goriot_balzac_q1",
         "type": "mcq",
         "question": "Chi è l'autore di Père Goriot?",
-        "explanation": "Honoré de Balzac pubblicò Le Père Goriot nel 1835.",
+        "explanation": "Honoré de Balzac pubblicò Papà Goriot nel 1835.",
         "options": [
           "Honoré de Balzac",
           "Vittorio Ugo",
@@ -14139,7 +14139,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q4",
         "type": "mcq",
-        "question": "Cosa rappresenta l'albatro nella sezione “Spleen and Ideal”?",
+        "question": "Nella sezione «Spleen e Ideale», l'albatro che figura è?",
         "explanation": "L'albatro, maestoso in volo ma ridicolo una volta posato a terra, rappresenta il poeta in un mondo che non lo comprende.",
         "options": [
           "Il poeta, maestoso in volo ma ridicolo a terra",
@@ -14441,7 +14441,7 @@
           "Napoleone",
           "Il Vecchio Maggiore",
           "Palla di neve",
-          "Malabar"
+          "Gondrano"
         ],
         "correctIndex": 0
       },
@@ -14459,7 +14459,7 @@
       {
         "id": "course_102_la_ferme_des_animaux_george_orwell_q4",
         "type": "mcq",
-        "question": "Cosa rappresentano i cani di Napoleone nell'allegoria?",
+        "question": "Nell'allegoria, i cani di Napoleone chi sono?",
         "explanation": "I cani addestrati da Napoleone per inseguire Palla di neve e terrorizzare la fattoria rappresentano la polizia segreta sovietica.",
         "options": [
           "La polizia segreta",
@@ -14473,10 +14473,10 @@
         "id": "course_102_la_ferme_des_animaux_george_orwell_q5",
         "type": "mcq",
         "question": "Quale animale incarna il proletariato sfruttato fino allo sfinimento?",
-        "explanation": "Malabar, devoto e instancabile cavallo di battaglia, simboleggia un proletariato che lavora senza mai mettere in discussione l'autorità.",
+        "explanation": "Gondrano, cavallo devoto e instancabile, simboleggia un proletariato che lavora senza mai mettere in discussione l'autorità.",
         "options": [
-          "Malabar, il cavallo laborioso",
-          "Brille-Babil, il propagandista",
+          "Gondrano, il cavallo laborioso",
+          "Clarinetto, il propagandista",
           "Il Vecchio Maggiore",
           "Palla di neve"
         ],
@@ -14890,7 +14890,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q3",
         "type": "trueFalse",
-        "question": "Vero o falso: il titolo originale, Brave New World, cita ironicamente un'opera di Shakespeare.",
+        "question": "Vero o falso: il titolo originale inglese, Brave New World, cita ironicamente un'opera di Shakespeare.",
         "explanation": "Il titolo cita La Tempesta di Shakespeare, la cui ingenua meraviglia maschera qui un futuro disumanizzato.",
         "options": [
           "Vero",
@@ -14953,7 +14953,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q8",
         "type": "trueFalse",
-        "question": "Vero o falso: alla fine del romanzo, John accetta di vivere comodamente nel Brave New World.",
+        "question": "Vero o falso: alla fine del romanzo, John accetta di vivere comodamente nel Mondo nuovo.",
         "explanation": "John rifiuta il soma e il paradiso artificiale proposti da Mond: si uccide, senza alcuna riconciliazione possibile.",
         "options": [
           "Vero",
@@ -14964,7 +14964,7 @@
       {
         "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q9",
         "type": "numericSlider",
-        "question": "In che anno Aldous Huxley pubblicò Brave New World?",
+        "question": "In che anno Aldous Huxley pubblicò Il mondo nuovo?",
         "explanation": "Huxley pubblicò questo romanzo nel 1932, dopo averlo scritto l'anno precedente.",
         "correctValue": 1932.0,
         "sliderMin": 1900.0,
@@ -15336,7 +15336,7 @@
         "id": "course_108_le_proces_kafka_q3",
         "type": "trueFalse",
         "question": "Vero o falso: Kafka chiese al suo amico Max Brod di bruciare i suoi manoscritti dopo la sua morte.",
-        "explanation": "Kafka aveva chiesto a Max Brod di distruggere i suoi manoscritti; Brod rifiutò e pubblicò The Trial nel 1925.",
+        "explanation": "Kafka aveva chiesto a Max Brod di distruggere i manoscritti. Brod rifiutò e pubblicò Il processo nel 1925.",
         "options": [
           "Vero",
           "Falso"
@@ -15705,7 +15705,7 @@
       {
         "id": "course_110_les_raisins_de_la_colere_steinbeck_q9",
         "type": "numericSlider",
-        "question": "In che anno fu pubblicato The Grapes of Wrath, nel pieno della Grande Depressione?",
+        "question": "In che anno fu pubblicato Furore, nel pieno della Grande Depressione?",
         "explanation": "Il romanzo fu pubblicato nel 1939 e vinse il Premio Pulitzer l'anno successivo.",
         "correctValue": 1939.0,
         "sliderMin": 1910.0,
@@ -15765,7 +15765,7 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q2",
         "type": "mcq",
-        "question": "Cosa rappresenta Atticus Finch in tribunale, sapendo che perderà?",
+        "question": "In tribunale, Atticus Finch che cosa fa, sapendo che perderà?",
         "explanation": "Atticus accetta di difendere Tom Robinson nonostante la certezza di perdere, perché nel Sud segregazionista il colore della pelle dell'imputato pesa più delle prove.",
         "options": [
           "Tom Robinson, un uomo di colore ingiustamente accusato",
@@ -17198,7 +17198,7 @@
       {
         "id": "course_120_l_alchimiste_paulo_coelho_q5",
         "type": "mcq",
-        "question": "Cosa rappresenta nel romanzo il concetto di Anima del Mondo?",
+        "question": "Nel romanzo, l'Anima del Mondo che idea è?",
         "explanation": "L'Anima del Mondo si riferisce all'energia unica che si crede condivida tutto ciò che esiste, secondo la filosofia del romanzo.",
         "options": [
           "Un’energia unica condivisa da tutto ciò che esiste",
@@ -17468,7 +17468,7 @@
         "id": "course_122_la_naissance_de_l_impressionnisme_q2",
         "type": "mcq",
         "question": "Quale dipinto di Manet scandalizzò il Salon des Refusés del 1863?",
-        "explanation": "Manet sconvolge mescolando un nudo femminile e due uomini in costume moderno in Le Déjeuner sur l'herbe.",
+        "explanation": "Manet sconvolge mescolando un nudo femminile e due uomini in abito moderno in Colazione sull'erba.",
         "options": [
           "Pranzo sull'erba",
           "Stampa, sole nascente",
@@ -17508,8 +17508,8 @@
         "explanation": "La ricerca di Chevreul sui colori complementari spinse gli impressionisti a bandire il nero dalle ombre.",
         "options": [
           "Michel-Eugène Chevreul",
-          "Luigi Pasteur",
-          "Antonio Lavoisier",
+          "Louis Pasteur",
+          "Antoine Lavoisier",
           "Maria Curie"
         ],
         "correctIndex": 0
@@ -17546,7 +17546,7 @@
         "question": "Metti queste fasi dell'impressionismo in ordine cronologico.",
         "explanation": "Queste tre tappe fondamentali vanno dal 1863 al 1886, dallo scandalo iniziale alla fine delle mostre collettive del gruppo.",
         "items": [
-          "Lo scandalo del Déjeuner sur l'herbe di Manet",
+          "Lo scandalo di Colazione sull'erba di Manet",
           "La prima mostra indipendente a Nadar",
           "L'ultima delle otto mostre del gruppo"
         ]
@@ -17786,7 +17786,7 @@
       {
         "id": "course_124_rembrandt_et_l_ecole_flamande_q4",
         "type": "mcq",
-        "question": "Cosa rappresenta realmente il dipinto noto come La Ronda di Notte?",
+        "question": "Il quadro detto La ronda di notte, che scena è in realtà?",
         "explanation": "Questa è la Compagnia del Capitano Frans Banning Cocq, una milizia mostrata in movimento piuttosto che allineata come richiesto dalla convenzione.",
         "options": [
           "Una compagnia della milizia borghese in movimento",
@@ -18070,7 +18070,7 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q3",
         "type": "mcq",
         "question": "Quale dipinto del 1907 segna il punto di partenza del cubismo?",
-        "explanation": "Les Demoiselles d'Avignon, con i suoi nudi dalle sfaccettature taglienti, stupì anche chi era vicino a Picasso.",
+        "explanation": "Le signorine di Avignone, con i nudi dalle sfaccettature taglienti, stupirono anche chi era vicino a Picasso.",
         "options": [
           "Le giovani dame di Avignone",
           "Guernica",
@@ -18143,7 +18143,7 @@
       {
         "id": "course_126_le_cubisme_picasso_et_braque_q9",
         "type": "numericSlider",
-        "question": "In quale anno Picasso completò Les Demoiselles d'Avignon?",
+        "question": "In quale anno Picasso completò Le signorine di Avignone?",
         "explanation": "Picasso completò questo dipinto fondamentale del cubismo nel 1907.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -19723,7 +19723,7 @@
       {
         "id": "course_137_la_naissance_du_rock_n_roll_q5",
         "type": "mcq",
-        "question": "Cos'è, secondo il corso, una cover nell'industria musicale degli anni '50?",
+        "question": "Cos'è, una cover nell'industria musicale degli anni '50?",
         "explanation": "Le copertine consentono alle versioni bianche, come Tutti Frutti di Pat Boone, di vendere meglio degli originali neri.",
         "options": [
           "Una versione bianca e annacquata di una hit nera, meglio promossa alla radio",
@@ -20696,7 +20696,7 @@
       {
         "id": "course_144_la_nouvelle_vague_francaise_q1",
         "type": "mcq",
-        "question": "Quale rivista critica, fondata nel 1951, divenne il laboratorio di idee della New Wave?",
+        "question": "Quale rivista critica, fondata nel 1951, divenne il laboratorio di idee della Nouvelle Vague?",
         "explanation": "I Cahiers du cinéma, fondati nel 1951 da André Bazin, riunivano i giovani critici che sarebbero diventati i registi della Nouvelle Vague.",
         "options": [
           "I quaderni del cinema",
@@ -20722,7 +20722,7 @@
       {
         "id": "course_144_la_nouvelle_vague_francaise_q3",
         "type": "mcq",
-        "question": "Quale film di François Truffaut trionfò a Cannes nel 1959 e lanciò la New Wave?",
+        "question": "Quale film di François Truffaut trionfò a Cannes nel 1959 e lanciò la Nouvelle Vague?",
         "explanation": "Nel 1959, Les Quatre Cents Coups di François Truffaut trionfò a Cannes e affermò il cinema d'essai.",
         "options": [
           "I Quattrocento Colpi",
@@ -20746,7 +20746,7 @@
       {
         "id": "course_144_la_nouvelle_vague_francaise_q5",
         "type": "mcq",
-        "question": "Quale innovazione tecnica ha permesso ai registi della New Wave di lasciare gli studi cinematografici per girare nelle strade di Parigi?",
+        "question": "Quale innovazione tecnica ha permesso ai registi della Nouvelle Vague di lasciare gli studi cinematografici per girare nelle strade di Parigi?",
         "explanation": "Fotocamere leggere come l'Éclair Caméflex e pellicole più sensibili consentono di scattare in ambienti naturali, al di fuori degli studi.",
         "options": [
           "Fotocamere leggere come la Éclair Caméflex",
@@ -20759,8 +20759,8 @@
       {
         "id": "course_144_la_nouvelle_vague_francaise_q6",
         "type": "mcq",
-        "question": "Quale movimento cinematografico brasiliano si ispira direttamente alla libertà di ripresa della New Wave?",
-        "explanation": "La libertà di filmare della New Wave ha poi ispirato il Cinema Novo in Brasile, poi il Dogme 95 in Danimarca.",
+        "question": "Quale movimento cinematografico brasiliano si ispira direttamente alla libertà di ripresa della Nouvelle Vague?",
+        "explanation": "La libertà di filmare della Nouvelle Vague ha poi ispirato il Cinema Novo in Brasile, poi il Dogme 95 in Danimarca.",
         "options": [
           "Cinema Novo",
           "Neorealismo italiano",
@@ -20772,7 +20772,7 @@
       {
         "id": "course_144_la_nouvelle_vague_francaise_q7",
         "type": "trueFalse",
-        "question": "Vero o falso: i registi della New Wave giravano principalmente in studio, con sofisticate luci artificiali.",
+        "question": "Vero o falso: i registi della Nouvelle Vague giravano principalmente in studio, con sofisticate luci artificiali.",
         "explanation": "Al contrario, filmano nei caffè, negli appartamenti e per le strade di Parigi, spesso alla luce naturale.",
         "options": [
           "Vero",
@@ -20783,7 +20783,7 @@
       {
         "id": "course_144_la_nouvelle_vague_francaise_q8",
         "type": "mcq",
-        "question": "Quali registi americani degli anni '70 si sono ispirati alla libertà della New Wave?",
+        "question": "Quali registi americani degli anni '70 si sono ispirati alla libertà della Nouvelle Vague?",
         "explanation": "Negli anni '70, la New Hollywood, guidata da Scorsese, Coppola e Spielberg, mescolava l'efficienza americana e la libertà francese.",
         "options": [
           "Scorsese, Coppola e Spielberg",
@@ -20796,7 +20796,7 @@
       {
         "id": "course_144_la_nouvelle_vague_francaise_q9",
         "type": "chronological",
-        "question": "Metti queste fasi della New Wave in ordine cronologico.",
+        "question": "Metti queste fasi della Nouvelle Vague in ordine cronologico.",
         "explanation": "Queste tre tappe fondamentali (1951, 1959, 1960) mostrano il passaggio da una revisione critica a una rivoluzione del cinema d'autore.",
         "items": [
           "Fondazione Cahiers du cinéma",
@@ -20893,7 +20893,7 @@
       {
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q5",
         "type": "mcq",
-        "question": "Cosa rappresenta HAL 9000 nel film?",
+        "question": "Nel film, HAL 9000 che ruolo ha?",
         "explanation": "HAL 9000, il computer di bordo, sceglie di eliminare gli esseri umani per risolvere la contraddizione nella sua missione.",
         "options": [
           "Il computer di bordo che alla fine elimina l'equipaggio",
@@ -22336,7 +22336,7 @@
       {
         "id": "course_155_nighthawks_hopper_q5",
         "type": "mcq",
-        "question": "Come compone Hopper le sue scene, secondo il corso?",
+        "question": "Come compone Hopper le sue scene?",
         "explanation": "Hopper costruisce scene come set cinematografici, con angoli acuti e personaggi tagliati fuori gli uni dagli altri.",
         "options": [
           "Come i set cinematografici, con angoli acuti e personaggi tagliati fuori gli uni dagli altri",
@@ -22420,7 +22420,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q1",
         "type": "mcq",
-        "question": "In quale città Picasso dipinse Les Demoiselles d'Avignon nel 1907?",
+        "question": "In quale città Picasso dipinse Le signorine di Avignone nel 1907?",
         "explanation": "Picasso lavorò al Bateau-Lavoir di Montmartre, dove completò il dipinto nel 1907.",
         "options": [
           "Parigi (Montmartre)",
@@ -22520,7 +22520,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q9",
         "type": "numericSlider",
-        "question": "In che anno Picasso completò Les Demoiselles d'Avignon?",
+        "question": "In che anno Picasso completò Le signorine di Avignone?",
         "explanation": "Picasso completò il dipinto nel 1907, a Montmartre.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -23021,7 +23021,7 @@
       {
         "id": "course_160_la_liberte_de_la_presse_et_le_journalism_q5",
         "type": "mcq",
-        "question": "Cosa rivela, secondo il corso, il modo in cui le dittature trattano la fotografia giornalistica?",
+        "question": "Cosa rivela, il modo in cui le dittature trattano la fotografia giornalistica?",
         "explanation": "Le grandi democrazie teoricamente proteggono la stampa, mentre le dittature controllano il mirino.",
         "options": [
           "Controllano il mirino, a differenza delle democrazie che teoricamente proteggono la stampa",
@@ -24133,7 +24133,7 @@
       {
         "id": "course_168_sisyphe_punition_eternelle_q7",
         "type": "mcq",
-        "question": "Secondo Albert Camus ne “Il mito di Sisifo”, ​​cosa fa di lui un “eroe assurdo”?",
+        "question": "Secondo Albert Camus ne “Il mito di Sisifo”, cosa fa di lui un “eroe assurdo”?",
         "explanation": "Per Camus, la lucidità di Sisifo di fronte all'inutilità dei suoi sforzi, e il fatto di andare avanti nonostante tutto, lo fa crescere.",
         "options": [
           "Continua il suo sforzo sapendo perfettamente che è vano",
@@ -27931,7 +27931,7 @@
       {
         "id": "course_194_le_mahabharata_q7",
         "type": "mcq",
-        "question": "Cosa rappresenta la Bhagavad-Gita nella storia del Mahabharata?",
+        "question": "Nella storia del Mahabharata, la Bhagavad-Gita che testo è?",
         "explanation": "La Bhagavad-Gita è il dialogo di circa 700 versi in cui Krishna, l'auriga di Arjuna, gli insegna il dovere e l'azione altruistica.",
         "options": [
           "Il dialogo di Krishna con Arjuna sul dovere e sull'azione",
@@ -30989,7 +30989,7 @@
       {
         "id": "course_215_les_inegalites_nord_sud_q8",
         "type": "mcq",
-        "question": "Perché, secondo il corso, i paesi del Sud sono particolarmente vulnerabili ai cambiamenti climatici?",
+        "question": "Perché, i paesi del Sud sono particolarmente vulnerabili ai cambiamenti climatici?",
         "explanation": "I Paesi del Sud, storicamente i meno responsabili delle emissioni di gas serra, sono tuttavia i più esposti a siccità, inondazioni e innalzamento del livello delle acque.",
         "options": [
           "Storicamente sono i meno responsabili delle emissioni ma i più esposti ai disastri climatici",
@@ -31586,7 +31586,7 @@
       {
         "id": "course_219_la_fracture_numerique_mondiale_q9",
         "type": "mcq",
-        "question": "Quali rischi comporta, secondo il corso, la rapida ascesa dell'intelligenza artificiale per il divario digitale?",
+        "question": "Quali rischi comporta, la rapida ascesa dell'intelligenza artificiale per il divario digitale?",
         "explanation": "L’intelligenza artificiale richiede un’immensa potenza di calcolo e di dati, concentrata nelle mani di pochi paesi e aziende, il che minaccia di approfondire il divario digitale.",
         "options": [
           "Potrebbe peggiorare le cose, poiché concentra le risorse tra pochi paesi e aziende",
@@ -31735,7 +31735,7 @@
       {
         "id": "course_220_la_desinformation_et_les_fake_news_q9",
         "type": "mcq",
-        "question": "Qual è, secondo il corso, la risposta più efficace alla disinformazione?",
+        "question": "Qual è, la risposta più efficace alla disinformazione?",
         "explanation": "La risposta più solida rimane l’educazione ai media: imparare a verificare una fonte, fare riferimenti incrociati a diverse informazioni e capire come funzionano gli algoritmi.",
         "options": [
           "Educazione mediatica",
@@ -31856,7 +31856,7 @@
       {
         "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_q7",
         "type": "mcq",
-        "question": "Perché, secondo il corso, ridurre le emissioni di CO₂ è molto più difficile che vietare i CFC?",
+        "question": "Perché, ridurre le emissioni di CO₂ è molto più difficile che vietare i CFC?",
         "explanation": "Il buco dell’ozono deriva da un numero limitato di gas prodotti da un numero limitato di fabbriche, facili da individuare, mentre la CO₂ proviene da quasi tutto ciò che fa la nostra società moderna.",
         "options": [
           "La CO₂ proviene da quasi tutte le attività economiche moderne, mentre i CFC provengono da un numero limitato di fabbriche",
@@ -32794,7 +32794,7 @@
         "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_q2",
         "type": "percentageSlider",
         "question": "Quale quota dei bilanci sanitari globali è destinata alla salute mentale?",
-        "explanation": "Nonostante rappresenti il ​​20% delle malattie globali, la salute mentale riceve solo il 2% dei budget sanitari.",
+        "explanation": "Nonostante rappresenti il 20% delle malattie globali, la salute mentale riceve solo il 2% dei budget sanitari.",
         "correctValue": 2.0,
         "sliderMin": 0.0,
         "sliderMax": 100.0,
@@ -33155,7 +33155,7 @@
       {
         "id": "course_230_la_liberte_de_la_presse_dans_le_monde_q7",
         "type": "mcq",
-        "question": "Cosa significa l'espressione “deserto informativo”, menzionata nel corso?",
+        "question": "Cosa significa l'espressione “deserto informativo”?",
         "explanation": "Un “deserto dell'informazione” designa un'area in cui la chiusura di molti giornali locali significa che non c'è più nessuno che controlli l'azione degli eletti locali.",
         "options": [
           "Un'area dove la chiusura dei giornali locali fa sì che non ci sia più nessuno che controlli l'operato degli eletti",
@@ -34137,8 +34137,8 @@
       {
         "id": "course_237_les_gafam_puissance_et_derives_q6",
         "type": "percentageSlider",
-        "question": "Quanti cavi in ​​fibra ottica sottomarini nel mondo possiedono Google?",
-        "explanation": "Google da sola possiede circa il 10% di tutti i cavi in ​​fibra ottica sottomarini nel mondo.",
+        "question": "Quanti cavi in fibra ottica sottomarini nel mondo possiedono Google?",
+        "explanation": "Google da sola possiede circa il 10% di tutti i cavi in fibra ottica sottomarini nel mondo.",
         "correctValue": 10.0,
         "sliderMin": 0.0,
         "sliderMax": 100.0,

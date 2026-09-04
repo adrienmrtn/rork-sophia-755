@@ -5,13 +5,13 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q1",
         "type": "mcq",
-        "question": "Kto jest autorem Kwiaty zła?",
-        "explanation": "Charles Baudelaire opublikował w 1857 roku Kwiaty zła, akt urodzenia współczesnej poezji.",
+        "question": "Kto napisał Kwiaty zła?",
+        "explanation": "Charles Baudelaire wydał Kwiaty zła w 1857 — to akt urodzenia nowoczesnej poezji.",
         "options": [
-          "Charlesa Baudelaire’a",
-          "Paula Verlaine’a",
-          "Stephane Mallarmé",
-          "Artur Rimbaud"
+          "Charles Baudelaire",
+          "Paul Verlaine",
+          "Stéphane Mallarmé",
+          "Arthur Rimbaud"
         ],
         "correctIndex": 0
       },
@@ -31,7 +31,7 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q3",
         "type": "numericSlider",
-        "question": "W którym roku oficjalnie zrehabilitowano sześć potępionych wierszy z Kwiaty zła?",
+        "question": "W którym roku oficjalnie zrehabilitowano sześć potępionych wierszy z Kwiatów zła?",
         "explanation": "Sześć wierszy potępionych w 1857 r. zostało oficjalnie zrehabilitowanych dopiero w 1949 r., 92 lata później.",
         "correctValue": 1949.0,
         "sliderMin": 1920.0,
@@ -42,8 +42,8 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q4",
         "type": "mcq",
-        "question": "Co reprezentuje albatros w części „Śledziona i ideał”?",
-        "explanation": "Albatros, majestatyczny w locie, ale śmieszny po umieszczeniu na ziemi, reprezentuje poetę w świecie, który go nie rozumie.",
+        "question": "Czym jest albatros w części „Spleen et Idéal”?",
+        "explanation": "Albatros — wspaniały w locie, śmieszny na ziemi — to poeta w świecie, który go nie rozumie.",
         "options": [
           "Poeta majestatyczny w locie, ale śmieszny na ziemi",
           "Całkowita dowolność artysty",
@@ -55,11 +55,11 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q5",
         "type": "mcq",
-        "question": "Która część kolekcji czyni Paryż krajobrazem psychologicznym?",
-        "explanation": "„Malarstwo paryskie” zamienia miasto w psychologiczny krajobraz. Poeta przechadza się tam jako spacerowicz, obserwator paryskiego życia za czasów Haussmanna.",
+        "question": "Która część tomu robi z Paryża pejzaż psychiczny?",
+        "explanation": "„Tableaux parisiens” robi z Paryża pejzaż psychiczny. Poeta błąka się tam jak flâneur, obserwator życia za Haussmanna.",
         "options": [
-          "„Malarstwo paryskie”",
-          "„Śledziona i ideał”",
+          "„Tableaux parisiens”",
+          "„Spleen et Idéal”",
           "„Wino”",
           "\"Śmierć\""
         ],
@@ -71,7 +71,7 @@
         "question": "Który wiersz opisuje naturę jako „świątynię” znaków łączących zapachy, kolory i dźwięki?",
         "explanation": "„Korespondencje” opisują przyrodę jako świątynię znaków. Mieszają się tam zmysły: zapachy, kolory i dźwięki wzajemnie na siebie oddziałują.",
         "options": [
-          "„Korespondencje”",
+          "„Correspondances”",
           "„Albatros”",
           "\"Śledziona\"",
           "\"Kolekcja\""
@@ -92,10 +92,10 @@
       {
         "id": "course_100_les_fleurs_du_mal_baudelaire_q8",
         "type": "mcq",
-        "question": "Jaki nurt poetycki odnalazła poetyka korespondencji Baudelaire’a, kontynuowanej później przez Verlaine’a i Mallarmégo?",
-        "explanation": "Ta poetyka korespondencji dała początek symbolice, którą później przejęli Verlaine i Mallarmé.",
+        "question": "Jaki nurt poetycki zapoczątkowuje poetyka korespondencji Baudelaire’a, którą potem niosą Verlaine i Mallarmé?",
+        "explanation": "Ta poetyka korespondencji zapoczątkowuje symbolizm, który potem niosą Verlaine i Mallarmé.",
         "options": [
-          "Symbolika",
+          "Symbolizm",
           "Romantyzm",
           "Naturalizm",
           "Klasycyzm"
@@ -108,7 +108,7 @@
         "question": "Którego amerykańskiego pisarza, określanego mianem „brata duszy”, Baudelaire przetłumaczył?",
         "explanation": "Baudelaire przetłumaczył Edgara Poe, którego uważał za „brata duszę”, który podzielał jego upodobanie do makabry.",
         "options": [
-          "Edgara Allana Poe",
+          "Edgar Allan Poe",
           "Hermana Melville’a",
           "Nathaniela Hawthorne’a",
           "Walta Whitmana"
@@ -240,7 +240,7 @@
       {
         "id": "course_101_1984_george_orwell_q9",
         "type": "chronological",
-        "question": "Uporządkuj te etapy życia i twórczości Orwella.",
+        "question": "Ułóż te etapy życia i twórczości Orwella.",
         "explanation": "Te cztery etapy wyznaczają karierę Orwella: hiszpańska wojna domowa (1936–1937), Folwark zwierzęcy (1945), 1984 (1949) i jego śmierć w 1950 r.",
         "items": [
           "Orwell walczył w milicji POUM podczas hiszpańskiej wojny domowej",
@@ -891,7 +891,7 @@
         "id": "course_107_crime_et_chatiment_dostoievski_q4",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: po morderstwie Raskolnikow w pełni wykorzystał pieniądze skradzione lichwiarzowi.",
-        "explanation": "Raskolnikow nie czerpie korzyści ze skradzionych pieniędzy: odkrywa, że ​​jego sumienie nie może znieść przelanej krwi.",
+        "explanation": "Raskolnikow nie czerpie korzyści ze skradzionych pieniędzy: odkrywa, że jego sumienie nie może znieść przelanej krwi.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -940,8 +940,8 @@
       {
         "id": "course_107_crime_et_chatiment_dostoievski_q8",
         "type": "trueFalse",
-        "question": "Prawda czy fałsz: Raskolnikow odkrywa, że ​​z łatwością utrzymuje ciężar przelanej krwi, potwierdzając tym samym swoją teorię o nadczłowieku.",
-        "explanation": "Wręcz przeciwnie, Raskolnikow odkrywa, że ​​jego sumienie nie może znieść zbrodni: nie jest supermanem, za jakiego się uważał.",
+        "question": "Prawda czy fałsz: Raskolnikow odkrywa, że z łatwością utrzymuje ciężar przelanej krwi, potwierdzając tym samym swoją teorię o nadczłowieku.",
+        "explanation": "Wręcz przeciwnie, Raskolnikow odkrywa, że jego sumienie nie może znieść zbrodni: nie jest supermanem, za jakiego się uważał.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -1458,7 +1458,7 @@
       {
         "id": "course_111_to_kill_a_mockingbird_harper_lee_q2",
         "type": "mcq",
-        "question": "Co Atticus Finch reprezentuje w sądzie, wiedząc, że przegra?",
+        "question": "Co Atticus Finch pokazuje w sądzie, skoro wie, że przegra?",
         "explanation": "Atticus zgadza się stanąć w obronie Toma Robinsona mimo pewności przegranej, gdyż na segregacjonistycznym Południu kolor skóry oskarżonego waży więcej niż dowody.",
         "options": [
           "Tom Robinson, czarny mężczyzna niesprawiedliwie oskarżony",
@@ -1847,7 +1847,7 @@
       {
         "id": "course_114_fahrenheit_451_bradbury_q5",
         "type": "mcq",
-        "question": "Kto sprawia, że ​​Guy Montag zastanawia się nad swoją pracą strażaka?",
+        "question": "Kto sprawia, że Guy Montag zastanawia się nad swoją pracą strażaka?",
         "explanation": "Jego młoda sąsiadka Clarisse przypomina mu, że strażacy gasili pożary, co budzi wątpliwości Montaga.",
         "options": [
           "Jego sąsiadka Clarisse",
@@ -1861,7 +1861,7 @@
         "id": "course_114_fahrenheit_451_bradbury_q6",
         "type": "mcq",
         "question": "Dlaczego Kapitan Beatty, znający klasykę, pali ją z zapałem?",
-        "explanation": "Beatty uważa, że ​​książki budzą niepokój, ujawniając nierówności, co jego zdaniem uzasadnia ich palenie.",
+        "explanation": "Beatty uważa, że książki budzą niepokój, ujawniając nierówności, co jego zdaniem uzasadnia ich palenie.",
         "options": [
           "Bo według niego książki budzą niepokój, ujawniając nierówności",
           "Bo sam nigdy nie zdążył ich przeczytać",
@@ -2131,7 +2131,7 @@
       {
         "id": "course_116_la_metamorphose_kafka_q8",
         "type": "mcq",
-        "question": "Jak kończy się życie Gregora, gdy Greta oznajmia, że ​​muszą się go pozbyć?",
+        "question": "Jak kończy się życie Gregora, gdy Greta oznajmia, że muszą się go pozbyć?",
         "explanation": "Zdając sobie sprawę, że nie ma już dla niego miejsca, Gregor zagłodził się w swoim pokoju.",
         "options": [
           "Pozwala sobie umrzeć z głodu",
@@ -2248,7 +2248,7 @@
         "id": "course_117_le_maitre_et_marguerite_boulgakov_q7",
         "type": "mcq",
         "question": "Którą wadę Woland przedstawia jako najstraszniejszą ze wszystkich?",
-        "explanation": "Woland odkrywa, że ​​tchórzostwo jest najstraszniejszą z wad, zarówno Poncjusza Piłata, jak i krytyków sowieckich.",
+        "explanation": "Woland odkrywa, że tchórzostwo jest najstraszniejszą z wad, zarówno Poncjusza Piłata, jak i krytyków sowieckich.",
         "options": [
           "Tchórzostwo",
           "Duma",
@@ -2261,7 +2261,7 @@
         "id": "course_117_le_maitre_et_marguerite_boulgakov_q8",
         "type": "mcq",
         "question": "Co oznacza słynne powiedzenie: „Rękopisy nie palą się”?",
-        "explanation": "Zdanie to potwierdza, że ​​prawda sztuki zawsze kończy się triumfem nad represjami i cenzurą polityczną.",
+        "explanation": "Zdanie to potwierdza, że prawda sztuki zawsze kończy się triumfem nad represjami i cenzurą polityczną.",
         "options": [
           "Oby prawdziwe idee przetrwały cenzurę",
           "Że papier, którego używał Bułhakow, był niepalny",
@@ -2418,7 +2418,7 @@
         "id": "course_118_moby_dick_melville_q10",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: kiedy zmarł w 1891 roku, Herman Melville był już uznawany za wielkiego amerykańskiego pisarza.",
-        "explanation": "Śmierć Melville'a została tak zapomniana, że ​​New York Times opublikował jego nekrolog pod nieprawidłowym nazwiskiem „Henry Melville”.",
+        "explanation": "Śmierć Melville'a została tak zapomniana, że New York Times opublikował jego nekrolog pod nieprawidłowym nazwiskiem „Henry Melville”.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -2486,7 +2486,7 @@
         "id": "course_119_le_petit_prince_saint_exupery_q5",
         "type": "mcq",
         "question": "Czego Lis uczy go o oswajaniu?",
-        "explanation": "Lis uczy Małego Księcia, że ​​oswajanie oznacza tworzenie więzi, które czynią drugiego wyjątkowym wśród wszystkich innych.",
+        "explanation": "Lis uczy Małego Księcia, że oswajanie oznacza tworzenie więzi, które czynią drugiego wyjątkowym wśród wszystkich innych.",
         "options": [
           "Oswajać to tworzyć linki, które czynią drugiego wyjątkowym",
           "Oswajać oznacza dominować nad dzikim zwierzęciem",
@@ -2600,7 +2600,7 @@
         "id": "course_11_la_prise_de_la_bastille_1789_q4",
         "type": "mcq",
         "question": "Co zrobił Stan Trzeci 17 czerwca 1789 r. w obliczu blokady Stanów Generalnych?",
-        "explanation": "Zablokowany przez system trzech porządków, 17 czerwca Stan Trzeci proklamował się Zgromadzeniem Narodowym.",
+        "explanation": "Zablokowany przez system trzech stanów, 17 czerwca stan trzeci ogłasza się Zgromadzeniem Narodowym.",
         "options": [
           "Ogłasza się Zgromadzeniem Narodowym",
           "Opuszcza Wersal i udaje się do Paryża",
@@ -2740,7 +2740,7 @@
       {
         "id": "course_120_l_alchimiste_paulo_coelho_q5",
         "type": "mcq",
-        "question": "Co reprezentuje w powieści koncepcja Duszy Świata?",
+        "question": "Czym w powieści jest Dusza Świata?",
         "explanation": "Dusza Świata odnosi się do wyjątkowej energii, którą, zgodnie z filozofią powieści, podziela wszystko, co istnieje.",
         "options": [
           "Wyjątkowa energia wspólna dla wszystkiego, co istnieje",
@@ -2793,7 +2793,7 @@
         "id": "course_120_l_alchimiste_paulo_coelho_q9",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: według powieści materialny skarb Santiago jest ostatecznie ważniejszy niż doświadczenie samej podróży.",
-        "explanation": "Powieść wręcz przeciwnie potwierdza, że ​​doświadczenie, spotkanie z Fatimą i wsłuchanie się w serce są warte więcej niż złoto.",
+        "explanation": "Powieść wręcz przeciwnie potwierdza, że doświadczenie, spotkanie z Fatimą i wsłuchanie się w serce są warte więcej niż złoto.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -2867,8 +2867,8 @@
       {
         "id": "course_121_la_renaissance_italienne_q5",
         "type": "chronological",
-        "question": "Ułóż te kamienie milowe włoskiego renesansu w porządku chronologicznym.",
-        "explanation": "Te cztery kamienie milowe (1420, 1453, 1504, 1512) obejmują prawie stulecie, od technicznego wynalazku perspektywy do artystycznego szczytu wysokiego renesansu w Rzymie.",
+        "question": "Ułóż te etapy włoskiego renesansu w porządku chronologicznym.",
+        "explanation": "Te cztery etapy (1420, 1453, 1504, 1512) obejmują prawie stulecie, od technicznego wynalazku perspektywy do artystycznego szczytu wysokiego renesansu w Rzymie.",
         "items": [
           "Brunelleschi wymyśla perspektywę linearną",
           "Upadek Konstantynopola",
@@ -2892,7 +2892,7 @@
       {
         "id": "course_121_la_renaissance_italienne_q7",
         "type": "mcq",
-        "question": "Który nurt myślenia potwierdza, że ​​ludzie mogą zrozumieć naturę za pomocą rozumu?",
+        "question": "Który nurt myślenia potwierdza, że ludzie mogą zrozumieć naturę za pomocą rozumu?",
         "explanation": "Myśliciele humanistyczni, tacy jak Pic de la Mirandola, umieszczają ludzki rozum w centrum zrozumienia świata.",
         "options": [
           "Humanizm",
@@ -2939,7 +2939,7 @@
         "options": [
           "Ludwika Leroya",
           "Emil Zola",
-          "Charlesa Baudelaire’a",
+          "Charles Baudelaire",
           "Teofil Gautier"
         ],
         "correctIndex": 0
@@ -2948,10 +2948,10 @@
         "id": "course_122_la_naissance_de_l_impressionnisme_q2",
         "type": "mcq",
         "question": "Który obraz Maneta zgorszył Salon des Refusés w 1863 roku?",
-        "explanation": "Manet szokuje, łącząc akt kobiecy z dwoma mężczyznami w nowoczesnych kostiumach w Le Déjeuner sur l'herbe.",
+        "explanation": "Manet szokuje, mieszając akt kobiecy z dwoma mężczyznami w współczesnych ubraniach — to Śniadanie na trawie.",
         "options": [
-          "Obiad na trawie",
-          "Drukuj, wschodzące słońce",
+          "Śniadanie na trawie",
+          "Impresja, wschód słońca",
           "Lilie wodne",
           "Tratwa Meduzy"
         ],
@@ -3092,7 +3092,7 @@
         "options": [
           "Powołanie Świętego Mateusza",
           "Nocna Straż",
-          "Młode Damy z Awinionu",
+          "Panny z Awinionu",
           "Tratwa Meduzy"
         ],
         "correctIndex": 0
@@ -3194,7 +3194,7 @@
         "id": "course_124_rembrandt_et_l_ecole_flamande_q3",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: Nocna Straż faktycznie przedstawia scenę dzienną.",
-        "explanation": "Tytuł jest błędną interpretacją: scena jest dzienna, ale wieki brudnego lakieru przyciemniły płótno do tego stopnia, że ​​sugeruje noc.",
+        "explanation": "Tytuł jest błędną interpretacją: scena jest dzienna, ale wieki brudnego lakieru przyciemniły płótno do tego stopnia, że sugeruje noc.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -3266,7 +3266,7 @@
         "id": "course_124_rembrandt_et_l_ecole_flamande_q9",
         "type": "chronological",
         "question": "Ułóż te etapy życia Rembrandta w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe obejmują okres od 1631 do 1669 roku, od jego triumfalnej instalacji w Amsterdamie aż do śmierci.",
+        "explanation": "Te etapy obejmują okres od 1631 do 1669 roku, od jego triumfalnej instalacji w Amsterdamie aż do śmierci.",
         "items": [
           "Przyjazd do Amsterdamu",
           "Nocna Straż",
@@ -3383,7 +3383,7 @@
         "id": "course_125_le_romantisme_en_peinture_delacroix_geri_q9",
         "type": "chronological",
         "question": "Ułóż te dzieła i wydarzenia romantyzmu w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe obejmują okres od 1816 do 1832 roku, od faktycznego rozbicia się statku po transformację palety Delacroix przez Orient.",
+        "explanation": "Te etapy obejmują okres od 1816 do 1832 roku, od faktycznego rozbicia się statku po transformację palety Delacroix przez Orient.",
         "items": [
           "Zatonięcie fregaty Méduse",
           "Na wystawie znajduje się Tratwa Meduzy",
@@ -3426,12 +3426,12 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q3",
         "type": "mcq",
         "question": "Który obraz z 1907 roku wyznacza punkt wyjścia kubizmu?",
-        "explanation": "Les Demoiselles d'Avignon ze swoimi ostrymi aktami zadziwiło nawet bliskich Picassa.",
+        "explanation": "Panny z Awinionu, z kanciastymi aktami, oszołomiły nawet bliskich Picassa.",
         "options": [
-          "Młode Damy z Awinionu",
+          "Panny z Awinionu",
           "Guernika",
           "Wolność prowadzi ludzi",
-          "Obiad na trawie"
+          "Śniadanie na trawie"
         ],
         "correctIndex": 0
       },
@@ -3489,9 +3489,9 @@
         "id": "course_126_le_cubisme_picasso_et_braque_q8",
         "type": "chronological",
         "question": "Ułóż te etapy kubizmu w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe obejmują okres od 1907 do 1912 roku, od początkowego rozpadu po wynalezienie kolażu.",
+        "explanation": "Te etapy obejmują okres od 1907 do 1912 roku, od początkowego rozpadu po wynalezienie kolażu.",
         "items": [
-          "Młode Damy z Awinionu",
+          "Panny z Awinionu",
           "Kubizm analityczny analizuje przedmiot",
           "Kolaż i kubizm syntetyczny"
         ]
@@ -3499,7 +3499,7 @@
       {
         "id": "course_126_le_cubisme_picasso_et_braque_q9",
         "type": "numericSlider",
-        "question": "Mniej więcej w którym roku Picasso ukończył Les Demoiselles d'Avignon?",
+        "question": "Około którego roku Picasso skończył Panny z Awinionu?",
         "explanation": "Picasso ukończył ten założycielski obraz kubizmu w 1907 roku.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -3566,7 +3566,7 @@
         "id": "course_127_le_surrealisme_dali_et_magritte_q5",
         "type": "mcq",
         "question": "Jakie zdanie napisał Magritte pod realistycznie pomalowaną fajką?",
-        "explanation": "W Zdradzie obrazów Magritte przypomina, że ​​wizerunek fajki jest jedynie znakiem, a nie samym przedmiotem.",
+        "explanation": "W Zdradzie obrazów Magritte przypomina, że wizerunek fajki jest jedynie znakiem, a nie samym przedmiotem.",
         "options": [
           "To nie jest rura",
           "Zdjęcie jest kłamstwem",
@@ -3615,8 +3615,8 @@
       {
         "id": "course_127_le_surrealisme_dali_et_magritte_q9",
         "type": "chronological",
-        "question": "Ułóż te kamienie milowe surrealizmu w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe obejmują okres od 1924 do 1939 roku, od założenia ruchu do zerwania między Bretonem a Dalim.",
+        "question": "Ułóż te etapy surrealizmu w porządku chronologicznym.",
+        "explanation": "Te etapy obejmują okres od 1924 do 1939 roku, od założenia ruchu do zerwania między Bretonem a Dalim.",
         "items": [
           "Manifest surrealizmu Bretona",
           "Dalí dołącza do grupy surrealistów",
@@ -3780,7 +3780,7 @@
           "Duchowość w sztuce",
           "Manifest surrealizmu",
           "De Stijl",
-          "Młode Damy z Awinionu"
+          "Panny z Awinionu"
         ],
         "correctIndex": 0
       },
@@ -3837,8 +3837,8 @@
       {
         "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_q8",
         "type": "chronological",
-        "question": "Ułóż te kamienie milowe w sztuce abstrakcyjnej w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe obejmują okres od 1910 do 1919 roku, od początków Kandinsky'ego po wejście abstrakcji do projektowania.",
+        "question": "Ułóż te etapy w sztuce abstrakcyjnej w porządku chronologicznym.",
+        "explanation": "Te etapy obejmują okres od 1910 do 1919 roku, od początków Kandinsky'ego po wejście abstrakcji do projektowania.",
         "items": [
           "Kandinsky zwraca się w stronę abstrakcji",
           "Duchowość w sztuce ukazuje się",
@@ -3889,7 +3889,7 @@
       {
         "id": "course_12_la_strategie_de_napoleon_a_ulm_1805_q3",
         "type": "trueFalse",
-        "question": "Prawda czy fałsz: Austria czeka na przybycie rosyjskich posiłków, zanim wyśle ​​swoje wojska do Ulm.",
+        "question": "Prawda czy fałsz: Austria czeka na przybycie rosyjskich posiłków, zanim wyśle swoje wojska do Ulm.",
         "explanation": "Austria nie czeka na Rosjan: sama wypycha do Ulm około 70 000 ludzi, co stanowi błąd, który izoluje Macka.",
         "options": [
           "Prawda",
@@ -4081,7 +4081,7 @@
         "id": "course_130_le_pop_art_warhol_et_lichtenstein_q9",
         "type": "chronological",
         "question": "Ułóż kamienie milowe pop-artu w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe obejmują okres od 1957 do 2022 roku, od zdefiniowania ruchu po poświęcenie jego ikon na rynku sztuki.",
+        "explanation": "Te etapy obejmują okres od 1957 do 2022 roku, od zdefiniowania ruchu po poświęcenie jego ikon na rynku sztuki.",
         "items": [
           "Richard Hamilton definiuje pop-art",
           "Warhol i Lichtenstein narzucają popową estetykę w Stanach Zjednoczonych",
@@ -4146,7 +4146,7 @@
       {
         "id": "course_131_la_naissance_de_la_musique_electronique_q5",
         "type": "mcq",
-        "question": "Który album z 1968 roku udowadnia, że ​​elektronika może udźwignąć złożoność muzyki klasycznej?",
+        "question": "Który album z 1968 roku udowadnia, że elektronika może udźwignąć złożoność muzyki klasycznej?",
         "explanation": "Switched-On Bach Wendy Carlos wykazał w 1968 roku, że syntezator może wykonywać złożone dzieła klasyczne.",
         "options": [
           "Włączony Bach",
@@ -4212,7 +4212,7 @@
         "id": "course_131_la_naissance_de_la_musique_electronique_q10",
         "type": "chronological",
         "question": "Ułóż kamienie milowe muzyki elektronicznej w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe obejmują okres od 1920 do 1980 roku, od pionierskich laboratoriów po narodziny nowoczesnego tańca elektronicznego.",
+        "explanation": "Te etapy obejmują okres od 1920 do 1980 roku, od pionierskich laboratoriów po narodziny nowoczesnego tańca elektronicznego.",
         "items": [
           "Wynalezienie Theremina",
           "Narodziny muzyki konkretnej w Paryżu",
@@ -4420,7 +4420,7 @@
         "id": "course_133_le_hip_hop_naissance_d_une_culture_q7",
         "type": "numericSlider",
         "question": "W którym roku ukazała się płyta Rapper's Delight zespołu Sugarhill Gang, która była pierwszym dużym komercyjnym sukcesem rapu?",
-        "explanation": "Wydana w 1979 roku płyta Rapper's Delight udowodniła, że ​​rap może stać się światowym hitem.",
+        "explanation": "Wydana w 1979 roku płyta Rapper's Delight udowodniła, że rap może stać się światowym hitem.",
         "correctValue": 1979.0,
         "sliderMin": 1970.0,
         "sliderMax": 1990.0,
@@ -4430,7 +4430,7 @@
       {
         "id": "course_133_le_hip_hop_naissance_d_une_culture_q8",
         "type": "chronological",
-        "question": "Ułóż te kamienie milowe w historii hip-hopu w porządku chronologicznym.",
+        "question": "Ułóż te etapy w historii hip-hopu w porządku chronologicznym.",
         "explanation": "Od partii założycielskiej w 1973 r. po nagrodę Pulitzera w 2018 r. hip-hop przechodzi od kultury sąsiedzkiej do sztuki uznanej instytucjonalnie.",
         "items": [
           "Kool Herc wymyśla breakbeat na imprezie w Bronksie",
@@ -4513,7 +4513,7 @@
         "options": [
           "Dama kameliowa – Alexandre Dumas fils",
           "Notre-Dame de Paris – Victor Hugo",
-          "„Les Miserables” Victora Hugo",
+          "„Nędznicy” Victora Hugo",
           "Madame Bovary – Gustave Flaubert"
         ],
         "correctIndex": 0
@@ -4762,7 +4762,7 @@
       {
         "id": "course_136_beethoven_genie_et_surdite_q7",
         "type": "mcq",
-        "question": "Kto sprawia, że ​​niesłyszący już Beethoven odwraca się, żeby zobaczyć tłum stojący na premierze „Dziewiątki”?",
+        "question": "Kto sprawia, że niesłyszący już Beethoven odwraca się, żeby zobaczyć tłum stojący na premierze „Dziewiątki”?",
         "explanation": "Nie mogąc usłyszeć owacji, Beethoven został zwrócony przez kontralt Caroline Unger, aby zobaczyć stojący tłum.",
         "options": [
           "Kontralt Caroline Unger",
@@ -5016,7 +5016,7 @@
       {
         "id": "course_138_bach_et_la_musique_baroque_q9",
         "type": "chronological",
-        "question": "Ułóż te kamienie milowe w życiu i dziedzictwie Bacha w porządku chronologicznym.",
+        "question": "Ułóż te etapy w życiu i dziedzictwie Bacha w porządku chronologicznym.",
         "explanation": "W latach 1723–1977 Bach z mało znanego kantora stał się dźwiękowym ambasadorem ludzkości w kosmosie.",
         "items": [
           "Bach zostaje kantorem kościoła św. Tomasza w Lipsku",
@@ -5478,7 +5478,7 @@
       {
         "id": "course_141_la_naissance_de_la_photographie_q9",
         "type": "chronological",
-        "question": "Ułóż te kamienie milowe w historii fotografii w porządku chronologicznym.",
+        "question": "Ułóż te etapy w historii fotografii w porządku chronologicznym.",
         "explanation": "Od pierwszego zdjęcia Niépce’a po demokratyzację Kodaka, fotografia rozprzestrzeniła się w niecałe sto lat.",
         "items": [
           "Niépce wpatruje się w pierwszy stały obraz ze swojego okna",
@@ -5581,7 +5581,7 @@
         "id": "course_142_charlie_chaplin_et_le_cinema_muet_q8",
         "type": "chronological",
         "question": "Ułóż te etapy kariery i kina Chaplina w porządku chronologicznym.",
-        "explanation": "Te cztery kamienie milowe (1895, 1914, 1940, 1952) wyznaczają narodziny kina, wynalezienie Charlota, zaangażowanie polityczne Chaplina, a następnie jego przymusowe wygnanie.",
+        "explanation": "Te cztery etapy (1895, 1914, 1940, 1952) wyznaczają narodziny kina, wynalezienie Charlota, zaangażowanie polityczne Chaplina, a następnie jego przymusowe wygnanie.",
         "items": [
           "Pierwszy publiczny pokaz braci Lumière",
           "Chaplin wymyśla kostium Trampa",
@@ -5892,7 +5892,7 @@
       {
         "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_q5",
         "type": "mcq",
-        "question": "Co reprezentuje HAL 9000 w filmie?",
+        "question": "Kim w filmie jest HAL 9000?",
         "explanation": "HAL 9000, komputer pokładowy, postanawia wyeliminować ludzi, aby rozwiązać sprzeczność w swojej misji.",
         "options": [
           "Komputer pokładowy, który ostatecznie eliminuje załogę",
@@ -6175,7 +6175,7 @@
         "id": "course_147_l_architecture_gothique_les_cathedrales_q9",
         "type": "chronological",
         "question": "Ułóż te etapy architektury gotyckiej w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe (1140, 1163, XIII wiek, XIX wiek) pokazują narodziny stylu, jego rozpowszechnienie, jego klasyczne apogeum, a następnie jego współczesne odkrycie.",
+        "explanation": "Te etapy (1140, 1163, XIII wiek, XIX wiek) pokazują narodziny stylu, jego rozpowszechnienie, jego klasyczne apogeum, a następnie jego współczesne odkrycie.",
         "items": [
           "Suger zakłada chór Saint-Denis",
           "Rozpoczęcie budowy Notre-Dame de Paris",
@@ -6281,7 +6281,7 @@
         "id": "course_148_le_bauhaus_q8",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: zamknięcie Bauhausu kładzie kres jego wpływom, które znikają wraz ze szkołą.",
-        "explanation": "Wręcz przeciwnie, wygnanie mistrzów Bauhausu do Stanów Zjednoczonych, Wielkiej Brytanii i Palestyny ​​rozprzestrzeniło jego idee na cały świat.",
+        "explanation": "Wręcz przeciwnie, wygnanie mistrzów Bauhausu do Stanów Zjednoczonych, Wielkiej Brytanii i Palestyny rozprzestrzeniło jego idee na cały świat.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -6347,7 +6347,7 @@
         "id": "course_149_la_joconde_q4",
         "type": "mcq",
         "question": "Dlaczego uśmiech Mony Lisy wydaje się zmieniać w zależności od tego, gdzie spojrzysz?",
-        "explanation": "Kiedy patrzymy w oczy, krawędzie siatkówki dostrzegają usta w delikatnych cieniach, co sprawia, że ​​uśmiech pojawia się lub znika.",
+        "explanation": "Kiedy patrzymy w oczy, krawędzie siatkówki dostrzegają usta w delikatnych cieniach, co sprawia, że uśmiech pojawia się lub znika.",
         "options": [
           "Bawi się widzeniem peryferyjnym ludzkiego oka",
           "Obraz był kilkakrotnie przemalowywany przez Leonarda",
@@ -6406,7 +6406,7 @@
         "id": "course_149_la_joconde_q9",
         "type": "chronological",
         "question": "Ułóż te etapy historii Mony Lisy w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe (1503, 1519, 1911, 1913) upamiętniają powstanie portretu, śmierć Leonarda, a następnie kradzież, która przekształciła dzieło w światowy mit.",
+        "explanation": "Te etapy (1503, 1519, 1911, 1913) upamiętniają powstanie portretu, śmierć Leonarda, a następnie kradzież, która przekształciła dzieło w światowy mit.",
         "items": [
           "Leonardo rozpoczyna portret we Florencji",
           "Śmierć Leonarda da Vinci we Francji",
@@ -6647,7 +6647,7 @@
         "id": "course_150_la_nuit_etoilee_van_gogh_q9",
         "type": "chronological",
         "question": "Ułóż te etapy życia Van Gogha w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe (1888, 1889, 1890) śledzą kryzys u Gauguina, powstanie Gwiaździstej Nocy z azylu, a następnie śmierć artysty.",
+        "explanation": "Te etapy (1888, 1889, 1890) śledzą kryzys u Gauguina, powstanie Gwiaździstej Nocy z azylu, a następnie śmierć artysty.",
         "items": [
           "Dramat Arles z Gauguinem",
           "Van Gogh maluje Gwiaździstą noc w Saint-Rémy",
@@ -6783,7 +6783,7 @@
           "Romantyzm",
           "Klasycyzm",
           "Impresjonizm",
-          "Symbolika"
+          "Symbolizm"
         ],
         "correctIndex": 0
       },
@@ -7128,7 +7128,7 @@
         "id": "course_155_nighthawks_hopper_q3",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: jadalnia namalowana przez Hoppera ma dobrze widoczne drzwi wychodzące na ulicę.",
-        "explanation": "Jadalnia nie posiada widocznych drzwi, dzięki czemu przestrzeń jest doświetlona, ​​wyeksponowana i jednocześnie zaciszna.",
+        "explanation": "Jadalnia nie posiada widocznych drzwi, dzięki czemu przestrzeń jest doświetlona, wyeksponowana i jednocześnie zaciszna.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -7204,7 +7204,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q1",
         "type": "mcq",
-        "question": "W jakim mieście Picasso namalował Les Demoiselles d'Avignon w 1907 roku?",
+        "question": "W jakim mieście Picasso malował Panny z Awinionu w 1907?",
         "explanation": "Picasso pracował w Bateau-Lavoir na Montmartre, gdzie ukończył obraz w 1907 roku.",
         "options": [
           "Paryż (Montmartre)",
@@ -7255,7 +7255,7 @@
         "id": "course_156_les_demoiselles_d_avignon_picasso_q5",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: Picasso namalował ten obraz za jednym razem, bez żadnych przygotowań.",
-        "explanation": "Płótno poprzedzają dziesiątki studiów: Picasso waha się, poprawia i utwardza ​​swoją kompozycję.",
+        "explanation": "Płótno poprzedzają dziesiątki studiów: Picasso waha się, poprawia i utwardza swoją kompozycję.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -7304,7 +7304,7 @@
       {
         "id": "course_156_les_demoiselles_d_avignon_picasso_q9",
         "type": "numericSlider",
-        "question": "W którym roku Picasso ukończył Les Demoiselles d'Avignon?",
+        "question": "W którym roku Picasso ukończył Panny z Awinionu?",
         "explanation": "Picasso ukończył obraz w 1907 roku na Montmartre.",
         "correctValue": 1907.0,
         "sliderMin": 1880.0,
@@ -7719,7 +7719,7 @@
         "id": "course_15_la_belle_epoque_1871_1914_q8",
         "type": "chronological",
         "question": "Ułóż wydarzenia Belle Époque w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe obejmują okres od 1871 do 1914 roku i przedstawiają początek, a następnie brutalny koniec Belle Époque.",
+        "explanation": "Te etapy obejmują okres od 1871 do 1914 roku i przedstawiają początek, a następnie brutalny koniec Belle Époque.",
         "items": [
           "Koniec wojny francusko-pruskiej",
           "Budowa Wieży Eiffla",
@@ -7775,7 +7775,7 @@
         "id": "course_160_la_liberte_de_la_presse_et_le_journalism_q4",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: w zależności od przebiegu samo zdjęcie Nicka Uta natychmiast zakończyło wojnę w Wietnamie.",
-        "explanation": "Sam obraz nie kończy wojny, ale sprawia, że ​​nie da się zaprzeczyć kosztom ludzkim.",
+        "explanation": "Sam obraz nie kończy wojny, ale sprawia, że nie da się zaprzeczyć kosztom ludzkim.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -8019,7 +8019,7 @@
         "id": "course_162_promethee_le_voleur_de_feu_q7",
         "type": "mcq",
         "question": "Jaki sekret Prometeusz wyjawia Zeusowi w zamian za wolność?",
-        "explanation": "Prometeusz wyjawia, że ​​nimfa Tetyda mogłaby urodzić syna potężniejszego od Zeusa, unikając w ten sposób własnego upadku.",
+        "explanation": "Prometeusz wyjawia, że nimfa Tetyda mogłaby urodzić syna potężniejszego od Zeusa, unikając w ten sposób własnego upadku.",
         "options": [
           "Imię nimfy, której syn uważany jest za potężniejszego od Zeusa",
           "Lokalizacja ukrytego skarbu",
@@ -8031,7 +8031,7 @@
       {
         "id": "course_162_promethee_le_voleur_de_feu_q8",
         "type": "chronological",
-        "question": "Uporządkuj te etapy mitu o Prometeuszu.",
+        "question": "Ułóż te etapy mitu o Prometeuszu.",
         "explanation": "Od podstępu złożenia ofiary po kradzież ognia, następnie tortury i wyzwolenie, mit o Prometeuszu ma wyraźny postęp.",
         "items": [
           "Prometeusz zwodzi Zeusa podczas składania ofiary w Mekone",
@@ -8135,7 +8135,7 @@
       {
         "id": "course_163_pandore_et_la_boite_q8",
         "type": "chronological",
-        "question": "Uporządkuj te etapy mitu Pandory.",
+        "question": "Ułóż te etapy mitu Pandory.",
         "explanation": "Od powstania aż do fatalnego otwarcia słoika mit Pandory ma bardzo precyzyjny przebieg.",
         "items": [
           "Bogowie stworzyli Pandorę na rozkaz Zeusa",
@@ -8241,7 +8241,7 @@
       {
         "id": "course_164_demeter_et_persephone_les_saisons_q8",
         "type": "chronological",
-        "question": "Uporządkuj te etapy mitu o Demeter i Persefonie.",
+        "question": "Ułóż te etapy mitu o Demeter i Persefonie.",
         "explanation": "Od porwania po podział roku – mit ten wyjaśnia naprzemienność pór roku.",
         "items": [
           "Porwanie Persefony przez Hadesa",
@@ -8345,7 +8345,7 @@
       {
         "id": "course_165_orphee_et_eurydice_q8",
         "type": "chronological",
-        "question": "Uporządkuj te etapy mitu o Orfeuszu i Eurydyce.",
+        "question": "Ułóż te etapy mitu o Orfeuszu i Eurydyce.",
         "explanation": "Od małżeństwa po ostateczną utratę Eurydyki mit ten ma tragiczną i precyzyjną fabułę.",
         "items": [
           "Orfeusz poślubia nimfę Eurydykę",
@@ -8556,7 +8556,7 @@
       {
         "id": "course_167_icare_et_dedale_q8",
         "type": "chronological",
-        "question": "Uporządkuj te etapy mitu o Ikarze i Dedalu.",
+        "question": "Ułóż te etapy mitu o Ikarze i Dedalu.",
         "explanation": "Od budowy Labiryntu po upadek Ikara historia ma precyzyjny przebieg.",
         "items": [
           "Dedal buduje Labirynt dla króla Minosa",
@@ -8579,7 +8579,7 @@
           "Wyjawia bogu rzeki Asoposowi, że Zeus porwał jego córkę Eginę",
           "Ujawnia lokalizację Labiryntu",
           "Ujawnia spisek przeciwko Zeusowi",
-          "Próbuje ukraść tron ​​Olimpu"
+          "Próbuje ukraść tron Olimpu"
         ],
         "correctIndex": 0
       },
@@ -8673,7 +8673,7 @@
       {
         "id": "course_168_sisyphe_punition_eternelle_q9",
         "type": "chronological",
-        "question": "Uporządkuj te etapy mitu o Syzyfie.",
+        "question": "Ułóż te etapy mitu o Syzyfie.",
         "explanation": "Od ujawnienia tajemnicy Eginy po wieczne potępienie, mit o Syzyfie podąża wyraźnym biegiem.",
         "items": [
           "Syzyf wyjawia Asopowi, że Zeus porwał jego córkę",
@@ -8928,7 +8928,7 @@
         "explanation": "Spojrzenie Meduzy zamienia każdego, kto go spotka, w kamień.",
         "options": [
           "Petryfikuje każdego, kto go spotka",
-          "To sprawia, że ​​jesteś niewidzialny",
+          "To sprawia, że jesteś niewidzialny",
           "On leczy wszystkie rany",
           "Natychmiast zasypia"
         ],
@@ -9015,7 +9015,7 @@
       {
         "id": "course_170_meduse_et_persee_q9",
         "type": "chronological",
-        "question": "Uporządkuj te etapy mitu o Meduzie i Perseuszu.",
+        "question": "Ułóż te etapy mitu o Meduzie i Perseuszu.",
         "explanation": "Od ataku Meduzy do wyzwolenia Andromedy, historia ma precyzyjny przebieg.",
         "items": [
           "Posejdon atakuje Meduzę w świątyni Ateny",
@@ -9071,7 +9071,7 @@
       {
         "id": "course_171_hercule_et_ses_12_travaux_q4",
         "type": "mcq",
-        "question": "Jaka cecha sprawia, że ​​Hydra Lernejska jest tak trudna do pokonania?",
+        "question": "Jaka cecha sprawia, że Hydra Lernejska jest tak trudna do pokonania?",
         "explanation": "Z każdej odciętej głowy Hydry wyrastają dwie, aż Herakles wypala szyje ogniem.",
         "options": [
           "Na każdą odciętą głowę odrastają dwie",
@@ -9147,7 +9147,7 @@
       {
         "id": "course_171_hercule_et_ses_12_travaux_q10",
         "type": "chronological",
-        "question": "Uporządkuj te etapy mitu o Heraklesie.",
+        "question": "Ułóż te etapy mitu o Heraklesie.",
         "explanation": "Od szaleństwa sprowokowanego przez Herę po zejście do Zaświatów, trudy Heraklesa mają wyraźny postęp.",
         "items": [
           "Hera doprowadza Heraklesa do szaleństwa i każe mu zabić swoją rodzinę",
@@ -9266,7 +9266,7 @@
       {
         "id": "course_172_thesee_et_le_minotaure_q9",
         "type": "chronological",
-        "question": "Uporządkuj te etapy mitu o Tezeuszu i Minotaurze.",
+        "question": "Ułóż te etapy mitu o Tezeuszu i Minotaurze.",
         "explanation": "Odmowa Minosa powoduje narodziny Minotaura, następnie hołd, podstęp Ariadny i wreszcie przez pomyłkę śmierć Aegeusa.",
         "items": [
           "Minos odmawia złożenia w ofierze białego byka Posejdonowi",
@@ -9385,7 +9385,7 @@
       {
         "id": "course_173_ulysse_et_le_cyclope_q9",
         "type": "chronological",
-        "question": "Uporządkuj te etapy epizodu Cyklopa.",
+        "question": "Ułóż te etapy epizodu Cyklopa.",
         "explanation": "Od wejścia do jaskini, przez oślepienie, aż do wyznania imienia na morzu, epizod ten przebiega według precyzyjnego przebiegu, który przypieczętowuje los Ulissesa.",
         "items": [
           "Odyseusz i jego ludzie wchodzą do jaskini Polifema",
@@ -9430,7 +9430,7 @@
         "explanation": "Odyseusz zatyka uszy swoim towarzyszom woskiem pszczelim, aby nie słyszeli pieśni.",
         "options": [
           "Zatyka im uszy woskiem pszczelim",
-          "Sprawia, że ​​zasypiają",
+          "Sprawia, że zasypiają",
           "Ląduje ich przed wyspą Syren",
           "Daje im przeciwtruciznę"
         ],
@@ -9520,7 +9520,7 @@
         "id": "course_175_jason_et_la_toison_d_or_q1",
         "type": "mcq",
         "question": "Dlaczego Jazon wyrusza na poszukiwanie Złotego Runa?",
-        "explanation": "Pelias, który uzurpował sobie tron ​​​​Iolcos, obiecuje zwrócić go Jazonowi, jeśli przyniesie z powrotem Złote Runo strzeżone przez smoka.",
+        "explanation": "Pelias, który uzurpował sobie tron Iolcos, obiecuje zwrócić go Jazonowi, jeśli przyniesie z powrotem Złote Runo strzeżone przez smoka.",
         "options": [
           "Żąda tego od niego wuj Pelias w zamian za uzurpowany sobie tron.",
           "Chce zaimponować Medei",
@@ -9753,7 +9753,7 @@
       {
         "id": "course_176_achille_le_talon_et_l_invulnerabilite_q10",
         "type": "chronological",
-        "question": "Uporządkuj te etapy życia Achillesa.",
+        "question": "Ułóż te etapy życia Achillesa.",
         "explanation": "Od opieki w dzieciństwie aż do śmierci w bitwie, losy Achillesa podążają trajektorią wyznaczoną przez chwałę i fatalność jego pięty.",
         "items": [
           "Tetyda zanurza małego Achillesa w Styksie, trzymając go za piętę",
@@ -9847,7 +9847,7 @@
         "id": "course_177_dipe_et_le_sphinx_q7",
         "type": "mcq",
         "question": "Co wyjawia Apollo, gdy zaraza uderza w Teby, później, za panowania Edypa?",
-        "explanation": "Apollo wyjawia, że ​​zaraza zakończy się dopiero wtedy, gdy zostanie zidentyfikowany morderca króla Lajosa, co rozpoczyna fatalne w skutkach śledztwo Edypa.",
+        "explanation": "Apollo wyjawia, że zaraza zakończy się dopiero wtedy, gdy zostanie zidentyfikowany morderca króla Lajosa, co rozpoczyna fatalne w skutkach śledztwo Edypa.",
         "options": [
           "Plaga zakończy się, gdy odnajdzie się zabójca Lajosa",
           "Miasto musi poświęcić królewskie dziecko",
@@ -9860,7 +9860,7 @@
         "id": "course_177_dipe_et_le_sphinx_q8",
         "type": "mcq",
         "question": "Jaką tragiczną prawdę ostatecznie odkrywa śledztwo Edypa?",
-        "explanation": "Dochodzenie ujawnia, że ​​Edyp nie wiedząc o tym, zabił własnego ojca Lajosa i poślubił własną matkę Jokastę.",
+        "explanation": "Dochodzenie ujawnia, że Edyp nie wiedząc o tym, zabił własnego ojca Lajosa i poślubił własną matkę Jokastę.",
         "options": [
           "Sam zabił Lajosa, swego ojca, i poślubił Jokastę, swą matkę",
           "Prawdziwym winowajcą jest Kreon",
@@ -9885,13 +9885,13 @@
       {
         "id": "course_177_dipe_et_le_sphinx_q10",
         "type": "chronological",
-        "question": "Uporządkuj te etapy mitu Edypa.",
+        "question": "Ułóż te etapy mitu Edypa.",
         "explanation": "Od ucieczki z Koryntu po tragiczne ujawnienie swojej tożsamości Edyp przechodzi podróż, w której zwycięstwo nad Sfinksem poprzedza jego upadek.",
         "items": [
           "Edyp ucieka z Koryntu, aby uniknąć przepowiedni",
           "Edyp odpowiada „Człowiekowi” na zagadkę Sfinksa",
           "Edyp zostaje królem Teb i poślubia Jokastę",
-          "Dochodzenie w sprawie zarazy ujawnia, że ​​Edyp zabił własnego ojca"
+          "Dochodzenie w sprawie zarazy ujawnia, że Edyp zabił własnego ojca"
         ]
       }
     ]
@@ -9992,7 +9992,7 @@
         "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_q8",
         "type": "mcq",
         "question": "Co wróżbita Tejrezjasz wyjawia Kreonowi?",
-        "explanation": "Teirezjasz ogłasza, że ​​bogowie są wściekli: miasto zostaje skalane przez porzucone zwłoki i niesprawiedliwe uwięzienie Antygony.",
+        "explanation": "Teirezjasz ogłasza, że bogowie są wściekli: miasto zostaje skalane przez porzucone zwłoki i niesprawiedliwe uwięzienie Antygony.",
         "options": [
           "Bogowie są źli na miasto skalane jego decyzjami",
           "Antygona musi zostać natychmiast i bezwarunkowo uwolniona",
@@ -10017,7 +10017,7 @@
       {
         "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_q10",
         "type": "chronological",
-        "question": "Uporządkuj te etapy tragedii Antygony.",
+        "question": "Ułóż te etapy tragedii Antygony.",
         "explanation": "Od śmierci dwóch braci po dekret Kreona, a następnie nieposłuszeństwo Antygony i jej potępienie – tragedia następuje nieubłaganie.",
         "items": [
           "Eteokles i Polinejkes zabijają się nawzajem dla tronu Teb",
@@ -10149,7 +10149,7 @@
       {
         "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_q10",
         "type": "chronological",
-        "question": "Uporządkuj te etapy wojny trojańskiej.",
+        "question": "Ułóż te etapy wojny trojańskiej.",
         "explanation": "Od wyroku Paryża do ostatecznego podstępu drewnianego konia dzieli wybuch wojny od upadku miasta dziesięć lat.",
         "items": [
           "Paryż wybiera Afrodytę i zdobywa miłość Heleny",
@@ -10486,7 +10486,7 @@
           "Wilk Fenrir zrywa łańcuchy",
           "Bitwa na równinie Vígríðr",
           "Gigantyczny Surtr podpala dziewięć światów",
-          "Ziemia znów staje się zielona, ​​a nowe pokolenie bogów przetrwa"
+          "Ziemia znów staje się zielona, a nowe pokolenie bogów przetrwa"
         ]
       },
       {
@@ -10584,7 +10584,7 @@
       {
         "id": "course_182_osiris_et_set_mythologie_egyptienne_q6",
         "type": "chronological",
-        "question": "Uporządkuj te etapy mitu Ozyrysa i Seta.",
+        "question": "Ułóż te etapy mitu Ozyrysa i Seta.",
         "explanation": "Fabuła ma wyraźną sekwencję: morderstwo Ozyrysa, jego odtworzenie przez Izydę, ukryty młodzieniec Horusa, a następnie jego koronacja po konflikcie z Setem.",
         "items": [
           "Zastawia pułapki i rozczłonkowuje ciało Ozyrysa",
@@ -10871,7 +10871,7 @@
       {
         "id": "course_184_romulus_et_remus_la_fondation_de_rome_q10",
         "type": "chronological",
-        "question": "Uporządkuj te etapy założenia Rzymu.",
+        "question": "Ułóż te etapy założenia Rzymu.",
         "explanation": "Od opuszczonej kołyski nad Tybrem po apoteozę Romulusa – mit utrzymuje precyzyjną chronologię narodzin, założenia i połączenia narodów.",
         "items": [
           "Narodziny bliźniaków, synów Marsa i Rhei Silvii",
@@ -11350,7 +11350,7 @@
       {
         "id": "course_188_les_titans_vs_les_dieux_titanomachie_q10",
         "type": "chronological",
-        "question": "Uporządkuj te etapy Tytanomachii.",
+        "question": "Ułóż te etapy Tytanomachii.",
         "explanation": "Od tyranii Kronosa po podział świata pomiędzy trzema braćmi, Titanomachy podąża wyraźnym krokiem w stronę porządku olimpijskiego.",
         "items": [
           "Kronos pożera swoje dzieci w obawie przed detronizacją",
@@ -11421,7 +11421,7 @@
         "question": "Jak według legendy Dionizos zemścił się na piratach, którzy go schwytali, aby go sprzedać?",
         "explanation": "Przerażeni wiosłami, które zamieniły się w węże i pnączami rosnącymi na maszcie, piraci wskakują do morza i zamieniają się w delfiny.",
         "options": [
-          "Zamienia wiosła w węże i sprawia, że ​​na maszcie rosną winorośle",
+          "Zamienia wiosła w węże i sprawia, że na maszcie rosną winorośle",
           "Zamienia statek w kamień",
           "Przywołuje burzę, która zatapia łódź",
           "Czyni piratów nieśmiertelnymi i szalonymi"
@@ -11470,7 +11470,7 @@
       {
         "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_q9",
         "type": "chronological",
-        "question": "Uporządkuj te etapy życia Dionizosa i jego kultu.",
+        "question": "Ułóż te etapy życia Dionizosa i jego kultu.",
         "explanation": "Od narodzin do narodzin teatru mit Dionizosa podąża wyraźnym krokiem w kierunku sztuki obywatelskiej.",
         "items": [
           "Semele umiera, a Zeus kończy ciążę Dionizosa w jego udzie",
@@ -11693,7 +11693,7 @@
       {
         "id": "course_191_enee_et_la_fondation_de_rome_virgile_q8",
         "type": "chronological",
-        "question": "Uporządkuj te etapy podróży Eneasza.",
+        "question": "Ułóż te etapy podróży Eneasza.",
         "explanation": "Podróż Eneasza prowadzi od upadku Troi do tragicznej miłości Kartaginy, przed zwycięstwem Włoch, które rozpoczyna ród Rzymu.",
         "items": [
           "Uciekając z płonącej Troi z ojcem i synem",
@@ -11931,7 +11931,7 @@
       {
         "id": "course_193_quetzalcoatl_q8",
         "type": "chronological",
-        "question": "Uporządkuj te etapy mitu Quetzalcoatla.",
+        "question": "Ułóż te etapy mitu Quetzalcoatla.",
         "explanation": "Mit ma ciągły wątek: stworzenie, następnie wygnanie króla-kapłana i wreszcie odrodzenie legendy podczas podboju hiszpańskiego.",
         "items": [
           "Bóg-stwórca przywraca ludzi do życia i ofiarowuje im kukurydzę",
@@ -11985,7 +11985,7 @@
         "id": "course_194_le_mahabharata_q4",
         "type": "mcq",
         "question": "Co rujnuje Pandawów i wysyła ich na wygnanie na trzynaście lat?",
-        "explanation": "Sfałszowana gra w kości zorganizowana przez Kaurawów spowodowała, że ​​Pandawowie stracili królestwo i zesłali ich na wygnanie na trzynaście lat.",
+        "explanation": "Sfałszowana gra w kości zorganizowana przez Kaurawów spowodowała, że Pandawowie stracili królestwo i zesłali ich na wygnanie na trzynaście lat.",
         "options": [
           "Sfałszowana gra w kości",
           "Klęska militarna nad Kaurawą",
@@ -12023,7 +12023,7 @@
       {
         "id": "course_194_le_mahabharata_q7",
         "type": "mcq",
-        "question": "Co reprezentuje Bhagavad-Gita w historii Mahabharaty?",
+        "question": "Czym jest Bhagavad-Gita w Mahabharacie?",
         "explanation": "Bhagavad-Gita jest dialogiem składającym się z około 700 wersetów, w których Kryszna, woźnica Ardżuny, uczy go obowiązków i bezinteresownego działania.",
         "options": [
           "Dialog Kryszny z Ardżuną na temat służby i działania",
@@ -12049,7 +12049,7 @@
       {
         "id": "course_194_le_mahabharata_q9",
         "type": "chronological",
-        "question": "Uporządkuj te kroki Mahabharaty.",
+        "question": "Ułóż te kroki Mahabharaty.",
         "explanation": "Epos toczy się po logicznej spirali: ruina poprzez hazard, niepowodzenie mediacji, a następnie duchowe nauczanie tuż przed ostateczną konfrontacją.",
         "items": [
           "Pandawowie tracą swoje królestwo w sfałszowanej grze w kości",
@@ -12167,11 +12167,11 @@
       {
         "id": "course_195_lancelot_guenievre_et_la_table_ronde_q9",
         "type": "chronological",
-        "question": "Uporządkuj te etapy legendy arturiańskiej.",
+        "question": "Ułóż te etapy legendy arturiańskiej.",
         "explanation": "Cykl arturiański ma kompletną trajektorię: chwalebne fundamenty, duchowe poszukiwania, ujawnienie zdrady, a następnie ostateczny upadek królestwa.",
         "items": [
           "Artur usuwa Excalibur ze skały i zakłada Okrągły Stół",
-          "Poszukiwanie Graala ujawnia, że ​​Lancelot nie jest wystarczająco czysty",
+          "Poszukiwanie Graala ujawnia, że Lancelot nie jest wystarczająco czysty",
           "Mordred ujawnia romans Lancelota i Ginewry",
           "Bitwa pod Camlann kończy panowanie Artura"
         ]
@@ -12216,7 +12216,7 @@
           "Pomaga królowi Utherpendragonowi przybrać cechy księcia Kornwalii",
           "On sam przemienia Uthera w orła",
           "Porywa księżną Igerne, aby poślubić ją Utherowi",
-          "W magiczny sposób sprawia, że ​​​​Artur pojawia się bez rodziców"
+          "W magiczny sposób sprawia, że Artur pojawia się bez rodziców"
         ],
         "correctIndex": 0
       },
@@ -12238,7 +12238,7 @@
         "explanation": "Merlin projektuje Niebezpieczne Miejsce, wolne miejsce przy Okrągłym Stole zarezerwowane dla najczystszego rycerza, które później zostanie zajęte podczas poszukiwania Graala.",
         "options": [
           "Wolne miejsce zarezerwowane dla najczystszego rycerza",
-          "Osobisty tron ​​Artura",
+          "Osobisty tron Artura",
           "Fotel przypisywany samemu Merlinowi",
           "Pułapka przeznaczona na wrogów królestwa"
         ],
@@ -12331,7 +12331,7 @@
         "id": "course_197_les_mille_et_une_nuits_sheherazade_q4",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: opowieści o Aladynie i Ali Babie pojawiają się w oryginalnych średniowiecznych rękopisach arabskich z Księgi tysiąca nocy.",
-        "explanation": "Aladyn i Ali Baba to opowieści sieroty, których nie ma w średniowiecznych rękopisach arabskich: weszły do ​​korpusu później, przez Europę.",
+        "explanation": "Aladyn i Ali Baba to opowieści sieroty, których nie ma w średniowiecznych rękopisach arabskich: weszły do korpusu później, przez Europę.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -12607,7 +12607,7 @@
       {
         "id": "course_199_les_titans_vs_les_dieux_la_titanomachie_q9",
         "type": "chronological",
-        "question": "Uporządkuj te etapy po Titanomachii.",
+        "question": "Ułóż te etapy po Titanomachii.",
         "explanation": "Porządek olimpijski budowany jest etapami: zwycięstwo militarne, następnie podział kar, przed ostateczną próbą Gigantomachii.",
         "items": [
           "Cyklop i Hekatonchire przechylają wojnę na korzyść Zeusa",
@@ -12739,8 +12739,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "Co reprezentuje Hidżra w roku 622?",
-        "explanation": "Hidżra to wyjazd Mahometa, zagrożonego śmiercią w Mekce, w stronę oazy Medyny. Data ta staje się pierwszym rokiem kalendarza muzułmańskiego.",
+        "question": "Czym była Hidżra w 622 roku?",
+        "explanation": "Hidżra to ucieczka Mahometa z Mekki do oazy Medyny, gdy groziła mu śmierć. Ten rok staje się rokiem 1 kalendarza muzułmańskiego.",
         "options": [
           "Wyjazd Mahometa z Mekki do Medyny",
           "Pierwsze objawienie otrzymane przez Mahometa",
@@ -12753,7 +12753,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q2",
         "type": "mcq",
         "question": "Kto kontrolował handel wokół Kaaby przed islamem?",
-        "explanation": "Kurajszyci, dominujące plemię Mekki, czerpali swoją władzę z pielgrzymek i handlu wokół politeistycznej Kaaby.",
+        "explanation": "Kurajszyci, najważniejsze plemię Mekki, czerpali władzę z pielgrzymek i handlu wokół pogańskiej Kaaby.",
         "options": [
           "Plemię Kurajszytów",
           "Bizantyjczycy",
@@ -12766,7 +12766,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q3",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: po zajęciu Mekki w 630 r. Mahomet dokonał masakry swoich byłych prześladowców.",
-        "explanation": "Przeciwnie, Mahomet udziela powszechnego ułaskawienia, co ułatwia gromadzenie się plemion arabskich na islam.",
+        "explanation": "Wręcz przeciwnie: Mahomet ogłasza powszechną amnestię, dzięki czemu plemiona arabskie łatwiej przechodzą na islam.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -12776,8 +12776,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
-        "question": "W którym roku zmarł Mahomet, pozostawiając Arabię ​​zjednoczoną pod jedną władzą?",
-        "explanation": "Mahomet zmarł w 632 r., zaledwie dziesięć lat po Hegirze, kiedy prawie cała Arabia została zjednoczona.",
+        "question": "W którym roku zmarł Mahomet, zostawiając Arabię zjednoczoną pod jedną władzą?",
+        "explanation": "Mahomet zmarł w 632, zaledwie dziesięć lat po Hidżrze, gdy prawie cała Arabia była już zjednoczona.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
         "sliderMax": 660.0,
@@ -12788,7 +12788,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q5",
         "type": "chronological",
         "question": "Ułóż te wydarzenia z życia Mahometa w porządku chronologicznym.",
-        "explanation": "Te cztery daty (622, 624, 630, 632) wyznaczają dwadzieścia lat, w ciągu których Mahomet przeszedł od zagrożonego proroka do głowy państwa jednoczącego Arabię.",
+        "explanation": "Te cztery daty (622, 624, 630, 632) spinają dwadzieścia lat: Mahomet z zagrożonego proroka staje się głową państwa, które jednoczy Arabię.",
         "items": [
           "Hidżra: wyjazd do Medyny",
           "Bitwa pod Badrem",
@@ -12799,13 +12799,13 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q6",
         "type": "mcq",
-        "question": "Jaka jest Dhimma ustanowiona przez muzułmańskich zdobywców?",
-        "explanation": "Dhimma to status chroniony, który upoważnia „ludzi Księgi” do utrzymywania swojej religii po opłaceniu dżizji.",
+        "question": "Czym jest dhimma, którą wprowadzili muzułmańscy zdobywcy?",
+        "explanation": "Dhimma to status chroniony: „ludzie Księgi” mogą zachować swoją religię, jeśli płacą dżizję.",
         "options": [
-          "Status pozwalający chrześcijanom i Żydom na zachowanie swojej religii bez podatku",
+          "Status pozwalający chrześcijanom i Żydom zachować religię w zamian za podatek",
           "Nazwa kalendarza muzułmańskiego",
           "Podatek od karawan handlowych",
-          "Sąd oskarżył o sądzenie niewiernych"
+          "Sąd do osądzania niewiernych"
         ],
         "correctIndex": 0
       },
@@ -12813,9 +12813,9 @@
         "id": "course_1_la_naissance_de_l_islam_622_q7",
         "type": "mcq",
         "question": "Które dwa wielkie imperia były wyczerpane wojnami wokół Arabii w VII wieku?",
-        "explanation": "Niekończące się wojny między Bizancjum (Wschodnie Cesarstwo Rzymskie) a Persami Sasanidami stworzyły próżnię geopolityczną, z której skorzystało nowe przesłanie Mahometa.",
+        "explanation": "Niekończące się wojny Bizancjum (wschodnie cesarstwo rzymskie) z Persami sasanidzkimi zostawiają pustkę, z której korzysta nowe przesłanie Mahometa.",
         "options": [
-          "Cesarstwo Bizantyjskie i Sasanidów",
+          "Cesarstwo bizantyjskie i sasanidzkie",
           "Cesarstwo rzymskie i chińskie",
           "Imperia Osmańskie i Mongolskie",
           "Imperia perskie i indyjskie"
@@ -12826,11 +12826,11 @@
         "id": "course_1_la_naissance_de_l_islam_622_q8",
         "type": "mcq",
         "question": "Czym jest Umma, założona przez Mahometa w Medynie?",
-        "explanation": "Umma zastępuje tradycyjne solidarności plemienne społecznością opartą na wspólnej wierze.",
+        "explanation": "Umma zastępuje więzy plemienne wspólnotą opartą na wspólnej wierze.",
         "options": [
           "Wspólnota wierzących, która wykracza poza więzy krwi i klanu",
           "Nazwa kalendarza muzułmańskiego",
-          "Armia zebrała się przeciwko Mekce",
+          "Armia zebrana przeciw Mekce",
           "Rada kalifów"
         ],
         "correctIndex": 0
@@ -12945,7 +12945,7 @@
       {
         "id": "course_200_re_et_la_creation_du_monde_egypte_q9",
         "type": "chronological",
-        "question": "Uporządkuj te etapy mitologii Ra.",
+        "question": "Ułóż te etapy mitologii Ra.",
         "explanation": "Mit śledzi stworzenie świata, następnie narodziny bogów, kryzys ludzkiego buntu i wreszcie teologiczną syntezę Nowego Państwa.",
         "items": [
           "Atum wyłania się z rzeczownika na kamieniu Benben",
@@ -12986,7 +12986,7 @@
       {
         "id": "course_201_la_naissance_du_conflit_israelo_palestin_q3",
         "type": "percentageSlider",
-        "question": "Jaką część populacji Palestyny ​​stanowili Żydzi w 1918 r., przed wielką falą imigracji w latach trzydziestych XX wieku?",
+        "question": "Jaką część populacji Palestyny stanowili Żydzi w 1918 r., przed wielką falą imigracji w latach trzydziestych XX wieku?",
         "explanation": "W 1918 r. populacja Żydów w Palestynie stanowiła około 8% ogółu ludności, a pod koniec lat trzydziestych XX wieku przekroczyła 30%.",
         "correctValue": 8.0,
         "sliderMin": 0.0,
@@ -12997,7 +12997,7 @@
       {
         "id": "course_201_la_naissance_du_conflit_israelo_palestin_q4",
         "type": "trueFalse",
-        "question": "Prawda czy fałsz: w 1947 roku przywódcy syjonistyczni i przywódcy arabscy ​​zaakceptowali plan podziału ONZ.",
+        "question": "Prawda czy fałsz: w 1947 roku przywódcy syjonistyczni i przywódcy arabscy zaakceptowali plan podziału ONZ.",
         "explanation": "Przywódcy syjonistyczni akceptują plan podziału ONZ, ale Arabowie go odrzucają: niemal natychmiast wybucha wojna domowa.",
         "options": [
           "Prawda",
@@ -13058,7 +13058,7 @@
         "id": "course_201_la_naissance_du_conflit_israelo_palestin_q9",
         "type": "mcq",
         "question": "Kto, w przeciwieństwie do przywódców arabskich, akceptuje plan podziału ONZ z 1947 r.?",
-        "explanation": "Przywódcy syjonistyczni zaakceptowali plan podziału ONZ w 1947 r., podczas gdy przywódcy arabscy ​​go odrzucili.",
+        "explanation": "Przywódcy syjonistyczni zaakceptowali plan podziału ONZ w 1947 r., podczas gdy przywódcy arabscy go odrzucili.",
         "options": [
           "Przywódcy syjonistyczni",
           "Brytyjczycy",
@@ -13172,7 +13172,7 @@
         "id": "course_202_la_rivalite_chine_etats_unis_q9",
         "type": "chronological",
         "question": "Ułóż te etapy rywalizacji Chin i Stanów Zjednoczonych w porządku chronologicznym.",
-        "explanation": "Od 1978 r. do wojny handlowej za czasów Trumpa te kamienie milowe pokazują stopniową transformację Chin w systemowego rywala Stanów Zjednoczonych.",
+        "explanation": "Od 1978 r. do wojny handlowej za czasów Trumpa te etapy pokazują stopniową transformację Chin w systemowego rywala Stanów Zjednoczonych.",
         "items": [
           "Deng Xiaoping rozpoczyna reformy otwierające",
           "Wejście Chin do Światowej Organizacji Handlu",
@@ -13868,7 +13868,7 @@
         "id": "course_208_l_onu_puissante_ou_impuissante_q10",
         "type": "chronological",
         "question": "Ułóż te wydarzenia w historii ONZ w porządku chronologicznym.",
-        "explanation": "Od nazwy wymyślonej przez Roosevelta po pojawienie się odpowiedzialności za ochronę, te kamienie milowe ukazują sukcesy i ograniczenia instytucji.",
+        "explanation": "Od nazwy wymyślonej przez Roosevelta po pojawienie się odpowiedzialności za ochronę, te etapy ukazują sukcesy i ograniczenia instytucji.",
         "items": [
           "Franklin Roosevelt wymyślił nazwę „Narody Zjednoczone”",
           "Założenie Organizacji Narodów Zjednoczonych",
@@ -14207,7 +14207,7 @@
         "id": "course_210_la_guerre_en_ukraine_expliquee_q9",
         "type": "chronological",
         "question": "Ułóż wydarzenia wojny na Ukrainie w porządku chronologicznym.",
-        "explanation": "Od uzyskania niepodległości w 1991 r. po rozszerzenie NATO, te kamienie milowe wyznaczają trzy dekady napięć między Ukrainą a Rosją.",
+        "explanation": "Od uzyskania niepodległości w 1991 r. po rozszerzenie NATO, te etapy wyznaczają trzy dekady napięć między Ukrainą a Rosją.",
         "items": [
           "Niepodległość Ukrainy",
           "Rewolucja Majdanu i aneksja Krymu",
@@ -14256,7 +14256,7 @@
       {
         "id": "course_211_comment_fonctionne_le_prix_du_petrole_q4",
         "type": "mcq",
-        "question": "Jaka technika pozwala Stanom Zjednoczonym stać się największym producentem ropy na świecie, wyprzedzając Arabię ​​Saudyjską?",
+        "question": "Jaka technika pozwala Stanom Zjednoczonym stać się największym producentem ropy na świecie, wyprzedzając Arabię Saudyjską?",
         "explanation": "Dzięki szczelinowaniu hydraulicznemu Stany Zjednoczone w ciągu dziesięciu lat stały się wiodącym producentem ropy na świecie.",
         "options": [
           "Szczelinowanie hydrauliczne",
@@ -14527,7 +14527,7 @@
       {
         "id": "course_213_l_evasion_fiscale_des_multinationales_q7",
         "type": "trueFalse",
-        "question": "Prawda czy fałsz: Komisja Europejska ustaliła, że ​​Irlandia natychmiast pobiera 13 miliardów euro niezapłaconych przez Apple podatków.",
+        "question": "Prawda czy fałsz: Komisja Europejska ustaliła, że Irlandia natychmiast pobiera 13 miliardów euro niezapłaconych przez Apple podatków.",
         "explanation": "Irlandia od dawna odmawiała przyjęcia tych 13 miliardów euro, obawiając się, że zbyt rygorystyczne zasady odstraszą centrale.",
         "options": [
           "Prawda",
@@ -14883,7 +14883,7 @@
         "id": "course_216_la_dette_mondiale_q8",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: według współczesnej teorii monetarnej rząd zaciągający pożyczki we własnej walucie może zbankrutować jak każde przedsiębiorstwo.",
-        "explanation": "Współczesna teoria monetarna stwierdza, że ​​państwo nie może upaść, dopóki zaciąga pożyczki we własnej walucie; prawdziwym ograniczeniem jest poziom inflacji, a nie dowolna liczba.",
+        "explanation": "Współczesna teoria monetarna stwierdza, że państwo nie może upaść, dopóki zaciąga pożyczki we własnej walucie; prawdziwym ograniczeniem jest poziom inflacji, a nie dowolna liczba.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -14924,8 +14924,8 @@
       {
         "id": "course_217_l_economie_de_plateforme_uber_airbnb_q2",
         "type": "mcq",
-        "question": "Jaki mechanizm wyjaśnia, że ​​im więcej użytkowników ma platforma, tym więcej nowych przyciąga?",
-        "explanation": "Efekt sieciowy oznacza, że ​​im więcej użytkowników ma platforma, tym bardziej staje się użyteczna, co przyciąga jeszcze więcej użytkowników, co prawie zawsze prowadzi do sytuacji bliskich monopolu.",
+        "question": "Jaki mechanizm wyjaśnia, że im więcej użytkowników ma platforma, tym więcej nowych przyciąga?",
+        "explanation": "Efekt sieciowy oznacza, że im więcej użytkowników ma platforma, tym bardziej staje się użyteczna, co przyciąga jeszcze więcej użytkowników, co prawie zawsze prowadzi do sytuacji bliskich monopolu.",
         "options": [
           "Efekt sieciowy",
           "Krzywa słonia",
@@ -15229,7 +15229,7 @@
         "id": "course_219_la_fracture_numerique_mondiale_q8",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: koszt abonamentów Internetu satelitarnego, takiego jak Starlink, pozostaje zgodny z zachodnimi standardami, co utrudnia dostęp do niego najbiedniejszej ludności wiejskiej.",
-        "explanation": "Koszt abonamentu i sprzętu Starlink pozostaje na poziomie zachodnich standardów, co sprawia, że ​​rozwiązania te stają się niedostępne dla najuboższej ludności wiejskiej bez pomocy zewnętrznej.",
+        "explanation": "Koszt abonamentu i sprzętu Starlink pozostaje na poziomie zachodnich standardów, co sprawia, że rozwiązania te stają się niedostępne dla najuboższej ludności wiejskiej bez pomocy zewnętrznej.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -15527,7 +15527,7 @@
       {
         "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_q4",
         "type": "mcq",
-        "question": "Dlaczego satelity NASA nie zauważyły ​​dziury ozonowej przed British Antarctic Survey w 1985 roku?",
+        "question": "Dlaczego satelity NASA nie zauważyły dziury ozonowej przed British Antarctic Survey w 1985 roku?",
         "explanation": "Satelity NASA dysponowały już tymi danymi, ale ich oprogramowanie odrzuciło je jako zbyt ekstremalne, aby mogły być prawdziwe.",
         "options": [
           "Ich oprogramowanie odrzuciło dane jako zbyt ekstremalne, aby mogły być prawdziwe",
@@ -15651,7 +15651,7 @@
       {
         "id": "course_222_la_crise_de_la_biodiversite_q4",
         "type": "trueFalse",
-        "question": "Prawda czy fałsz: spadek populacji zwierząt o 94% zaobserwowany w Ameryce Łacińskiej oznacza, że ​​94% tamtejszych gatunków zniknęło.",
+        "question": "Prawda czy fałsz: spadek populacji zwierząt o 94% zaobserwowany w Ameryce Łacińskiej oznacza, że 94% tamtejszych gatunków zniknęło.",
         "explanation": "Spadek ten mierzy wielkość populacji, a nie liczbę wymarłych gatunków: gatunki przeżywają, ale w bardzo małych ilościach, co czyni je kruchymi w obliczu całkowitego wyginięcia.",
         "options": [
           "Prawda",
@@ -15713,7 +15713,7 @@
         "id": "course_222_la_crise_de_la_biodiversite_q9",
         "type": "mcq",
         "question": "Co raport Dasgupta Review przypomina nam o relacjach gospodarki i przyrody?",
-        "explanation": "Raport Dasgupta Review przypomina, że ​​nasza gospodarka jest zależna od natury, a nie odwrotnie, a usługi, które ona świadczy (zapylanie, regulacja wód, żyzne gleby) są często niewidoczne, bo bezpłatne.",
+        "explanation": "Raport Dasgupta Review przypomina, że nasza gospodarka jest zależna od natury, a nie odwrotnie, a usługi, które ona świadczy (zapylanie, regulacja wód, żyzne gleby) są często niewidoczne, bo bezpłatne.",
         "options": [
           "Nasza gospodarka zależy od natury, a nie odwrotnie",
           "Przyroda nie ma wymiernej wartości ekonomicznej",
@@ -15803,7 +15803,7 @@
         "id": "course_223_l_economie_circulaire_q7",
         "type": "mcq",
         "question": "Co nakłada na producentów rozszerzona odpowiedzialność producenta (EPR)?",
-        "explanation": "Rozszerzona odpowiedzialność producenta sprawia, że ​​producenci płacą za gospodarowanie odpadami powstałymi w wyniku ich produktów, co zachęca ich do projektowania obiektów mniej zanieczyszczających środowisko.",
+        "explanation": "Rozszerzona odpowiedzialność producenta sprawia, że producenci płacą za gospodarowanie odpadami powstałymi w wyniku ich produktów, co zachęca ich do projektowania obiektów mniej zanieczyszczających środowisko.",
         "options": [
           "Płacą za zagospodarowanie odpadów własnych produktów",
           "Odbierz bezpłatnie wszystkie konkurencyjne produkty",
@@ -16611,7 +16611,7 @@
         "id": "course_22_la_crise_des_missiles_de_cuba_1962_q9",
         "type": "chronological",
         "question": "Ułóż wydarzenia związane z kryzysem kubańskim w porządku chronologicznym.",
-        "explanation": "Od katastrofy w Zatoce Świń w 1961 r. do wycofania rakiet w październiku 1962 r. te kamienie milowe wyznaczają początek, a następnie rozwiązanie kryzysu.",
+        "explanation": "Od katastrofy w Zatoce Świń w 1961 r. do wycofania rakiet w październiku 1962 r. te etapy wyznaczają początek, a następnie rozwiązanie kryzysu.",
         "items": [
           "Nieudane lądowanie w Zatoce Świń",
           "Odkrycie sowieckich rakiet na Kubie",
@@ -16701,9 +16701,9 @@
         "id": "course_230_la_liberte_de_la_presse_dans_le_monde_q7",
         "type": "mcq",
         "question": "Co oznacza wspomniane w kursie określenie „pustynia informacyjna”?",
-        "explanation": "„Pustynia informacyjna” to obszar, na którym zamknięcie wielu lokalnych gazet oznacza, że ​​nie ma już nikogo, kto mógłby monitorować działania wybieranych w wyborach samorządowych urzędników.",
+        "explanation": "„Pustynia informacyjna” to obszar, na którym zamknięcie wielu lokalnych gazet oznacza, że nie ma już nikogo, kto mógłby monitorować działania wybieranych w wyborach samorządowych urzędników.",
         "options": [
-          "Obszar, na którym zamknięcie lokalnych gazet oznacza, że ​​nie ma już nikogo, kto mógłby monitorować działania wybieranych urzędników",
+          "Obszar, na którym zamknięcie lokalnych gazet oznacza, że nie ma już nikogo, kto mógłby monitorować działania wybieranych urzędników",
           "Region świata bez dostępu do Internetu",
           "Kraj, w którym prasa jest całkowicie cenzurowana przez państwo",
           "Wieś bez poczty"
@@ -16848,7 +16848,7 @@
         "id": "course_232_la_blockchain_et_les_cryptomonnaies_q1",
         "type": "mcq",
         "question": "Czym jest rozproszona księga będąca sercem działania blockchainu?",
-        "explanation": "Rozproszona księga oznacza, że ​​tysiące komputerów w sieci przechowuje identyczną kopię wszystkich transakcji, bez centralnego serwera.",
+        "explanation": "Rozproszona księga oznacza, że tysiące komputerów w sieci przechowuje identyczną kopię wszystkich transakcji, bez centralnego serwera.",
         "options": [
           "Kopia transakcji przechowywana na tysiącach komputerów",
           "Scentralizowany rachunek bankowy",
@@ -16861,7 +16861,7 @@
         "id": "course_232_la_blockchain_et_les_cryptomonnaies_q2",
         "type": "mcq",
         "question": "Jak nazywa się obliczenie matematyczne, które łączy każdy blok z poprzednim, tworząc niefalsyfikowalny łańcuch?",
-        "explanation": "Każdy blok jest powiązany z poprzednim hashem, czyli unikalnym cyfrowym odciskiem palca, co sprawia, że ​​sfałszowanie łańcucha jest prawie niemożliwe.",
+        "explanation": "Każdy blok jest powiązany z poprzednim hashem, czyli unikalnym cyfrowym odciskiem palca, co sprawia, że sfałszowanie łańcucha jest prawie niemożliwe.",
         "options": [
           "Hash",
           "Górnictwo",
@@ -17431,7 +17431,7 @@
         "id": "course_237_les_gafam_puissance_et_derives_q3",
         "type": "mcq",
         "question": "Na czym polega „efekt sieciowy”, kluczowy mechanizm dominacji GAFAM-u?",
-        "explanation": "Efekt sieciowy oznacza, że ​​im więcej użytkowników ma usługa, tym ważniejsze staje się bycie jej częścią, co zniechęca do pojawienia się konkurencji.",
+        "explanation": "Efekt sieciowy oznacza, że im więcej użytkowników ma usługa, tym ważniejsze staje się bycie jej częścią, co zniechęca do pojawienia się konkurencji.",
         "options": [
           "Im więcej użytkowników ma usługa, tym ważniejsze staje się bycie jej częścią.",
           "Sieć kabli podmorskich należąca do Google",
@@ -17577,7 +17577,7 @@
         "id": "course_238_la_transition_energetique_q5",
         "type": "mcq",
         "question": "Jakie jest główne wyzwanie techniczne związane z energią słoneczną i wiatrową, które nie wytwarzają energii elektrycznej w sposób ciągły?",
-        "explanation": "Energia słoneczna i wiatrowa charakteryzują się nieciągłością, co oznacza, że ​​nie wytwarzają energii elektrycznej w sposób ciągły, stąd znaczenie akumulatorów.",
+        "explanation": "Energia słoneczna i wiatrowa charakteryzują się nieciągłością, co oznacza, że nie wytwarzają energii elektrycznej w sposób ciągły, stąd znaczenie akumulatorów.",
         "options": [
           "Przerywany",
           "Koszt produkcji",
@@ -17704,7 +17704,7 @@
         "id": "course_239_le_futur_du_travail_q7",
         "type": "mcq",
         "question": "Skąd wzięło się słowo „praca”, które pierwotnie oznaczało narzędzie tortur?",
-        "explanation": "Słowo „praca” pochodzi od łacińskiego tripalium, narzędzia tortur z trzema kołkami, którego pochodzenie przypomina, że ​​od dawna było postrzegane jako cierpienie.",
+        "explanation": "Słowo „praca” pochodzi od łacińskiego tripalium, narzędzia tortur z trzema kołkami, którego pochodzenie przypomina, że od dawna było postrzegane jako cierpienie.",
         "options": [
           "Z łacińskiego tripalium",
           "Z greckiego ergon",
@@ -17844,7 +17844,7 @@
         "id": "course_23_la_guerre_d_algerie_1954_1962_q10",
         "type": "chronological",
         "question": "Ułóż wydarzenia wojny algierskiej w porządku chronologicznym.",
-        "explanation": "Od powstania we FLN w 1954 r. po Porozumienia z Evian w 1962 r. te kamienie milowe odzwierciedlają osiem lat wojny algierskiej.",
+        "explanation": "Od powstania we FLN w 1954 r. po Porozumienia z Evian w 1962 r. te etapy odzwierciedlają osiem lat wojny algierskiej.",
         "items": [
           "Dzień Wszystkich Świętych, początek powstania FLN",
           "Bitwa o Algier",
@@ -17968,7 +17968,7 @@
         "id": "course_240_la_chine_et_son_modele_economique_q10",
         "type": "chronological",
         "question": "Ułóż te etapy najnowszej historii gospodarczej Chin w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe obejmują lata 1978–2022: reformy i otwarcie, Inicjatywa Pasa i Szlaku, kryzys w Evergrande, a następnie początek spadku demograficznego.",
+        "explanation": "Te etapy obejmują lata 1978–2022: reformy i otwarcie, Inicjatywa Pasa i Szlaku, kryzys w Evergrande, a następnie początek spadku demograficznego.",
         "items": [
           "Rozpoczęcie polityki reform i otwarcia",
           "Uruchomienie Inicjatywy Pasa i Szlaku",
@@ -18185,7 +18185,7 @@
         "id": "course_25_le_genocide_armenien_1915_1916_q9",
         "type": "chronological",
         "question": "Ułóż kamienie milowe ludobójstwa Ormian i jego uznania w porządku chronologicznym.",
-        "explanation": "Te cztery kamienie milowe obejmują bezkarność pierwszych masakr (1894–1896) aż do późnego uznania ludobójstwa przez niektóre państwa (2001 rok w przypadku Francji).",
+        "explanation": "Te cztery etapy obejmują bezkarność pierwszych masakr (1894–1896) aż do późnego uznania ludobójstwa przez niektóre państwa (2001 rok w przypadku Francji).",
         "items": [
           "Masakry Hamidian pod rządami sułtana Abdülhamida II",
           "Aresztowanie ormiańskich intelektualistów w Konstantynopolu",
@@ -18227,7 +18227,7 @@
       {
         "id": "course_26_la_creation_de_l_onu_1945_q3",
         "type": "trueFalse",
-        "question": "Prawda czy fałsz: Stany Zjednoczone przystąpiły do ​​Ligi Narodów po I wojnie światowej.",
+        "question": "Prawda czy fałsz: Stany Zjednoczone przystąpiły do Ligi Narodów po I wojnie światowej.",
         "explanation": "Przywiązany do izolacjonizmu amerykański Senat odmówił przystąpienia do Ligi Narodów, pomimo jej powołania przez prezydenta Wilsona.",
         "options": [
           "Prawda",
@@ -18265,7 +18265,7 @@
         "id": "course_26_la_creation_de_l_onu_1945_q6",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: działania WHO umożliwiły wykorzenienie ospy w 1980 roku.",
-        "explanation": "Światowa Organizacja Zdrowia, agencja ONZ, koordynowała wysiłki, które doprowadziły do ​​wykorzenienia ospy w 1980 roku.",
+        "explanation": "Światowa Organizacja Zdrowia, agencja ONZ, koordynowała wysiłki, które doprowadziły do wykorzenienia ospy w 1980 roku.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -18378,8 +18378,8 @@
       {
         "id": "course_27_la_naissance_de_l_ue_de_la_ceca_a_maastr_q7",
         "type": "numericSlider",
-        "question": "Kiedy Wielka Brytania, Irlandia i Dania przystąpiły do ​​EWG?",
-        "explanation": "Wielka Brytania, Irlandia i Dania przystąpiły do ​​EWG w 1973 r., rozszerzając początkowy mały krąg przemysłowy.",
+        "question": "Kiedy Wielka Brytania, Irlandia i Dania przystąpiły do EWG?",
+        "explanation": "Wielka Brytania, Irlandia i Dania przystąpiły do EWG w 1973 r., rozszerzając początkowy mały krąg przemysłowy.",
         "correctValue": 1973.0,
         "sliderMin": 1950.0,
         "sliderMax": 2000.0,
@@ -18505,7 +18505,7 @@
         "id": "course_28_le_genocide_rwandais_1994_q9",
         "type": "chronological",
         "question": "Ułóż te etapy ludobójstwa w Rwandzie w porządku chronologicznym.",
-        "explanation": "Od dowodu tożsamości etnicznej z 1933 r. po zdobycie Kigali 4 lipca 1994 r., te kamienie milowe podsumowują mechanizm ludobójstwa i jego koniec.",
+        "explanation": "Od dowodu tożsamości etnicznej z 1933 r. po zdobycie Kigali 4 lipca 1994 r., te etapy podsumowują mechanizm ludobójstwa i jego koniec.",
         "items": [
           "Utrwalanie tożsamości etnicznej przez belgijską administrację kolonialną",
           "Atak na samolot prezydencki",
@@ -18607,7 +18607,7 @@
         "id": "course_29_la_chute_du_mur_de_berlin_1989_q8",
         "type": "chronological",
         "question": "Ułóż te etapy historii Muru Berlińskiego w porządku chronologicznym.",
-        "explanation": "Od budowy muru (1961) do jego upadku (9 listopada 1989), a następnie zjednoczenia (3 października 1990) te kamienie milowe obejmują prawie trzy dekady.",
+        "explanation": "Od budowy muru (1961) do jego upadku (9 listopada 1989), a następnie zjednoczenia (3 października 1990) te etapy obejmują prawie trzy dekady.",
         "items": [
           "Budowa muru pomiędzy Berlinem Wschodnim i Zachodnim",
           "Otwarcie granicy między Węgrami a Austrią",
@@ -18624,9 +18624,9 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q1",
         "type": "mcq",
         "question": "Jakie wydarzenie miało miejsce na soborze w Clermont w listopadzie 1095 r.?",
-        "explanation": "Na soborze w Clermont 27 listopada 1095 r. Urban II wezwał chrześcijan z Zachodu, aby poszli i wyzwolili Jerozolimę w zamian za przebaczenie ich grzechów.",
+        "explanation": "Na soborze w Clermont 27 listopada 1095 Urban II wzywa chrześcijan Zachodu, by szli wyzwolić Jerozolimę — w zamian odpuszcza im grzechy.",
         "options": [
-          "Papież Urban II wzywa do krucjaty w celu wyzwolenia Jerozolimy",
+          "Papież Urban II wzywa do krucjaty, by wyzwolić Jerozolimę",
           "Papież ekskomunikuje cesarza bizantyjskiego",
           "Turcy seldżuccy najeżdżają Włochy",
           "Krzyżowcy założyli Państwa Łacińskie na Wschodzie"
@@ -18637,12 +18637,12 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q2",
         "type": "mcq",
         "question": "Jakie wydarzenie skłoniło cesarza bizantyjskiego Aleksego I Komnena do zwrócenia się o pomoc do papieża?",
-        "explanation": "W 1071 r. w Mantzikert Turcy seldżuccy rozbili armię bizantyjską i otworzyli Anatolię, zmuszając Aleksego I Komnena do zwrócenia się do Rzymu z petycją.",
+        "explanation": "W 1071 pod Manzikertem Turcy seldżuccy rozbili armię bizantyjską i otworzyli Anatolię — Aleksy I Komnen musiał prosić Rzym o pomoc.",
         "options": [
-          "Klęska Mantzikerta nad Turkami seldżuckimi",
+          "Klęska pod Manzikertem z rąk Turków seldżuckich",
           "Zdobycie Jerozolimy przez muzułmanów",
           "Złupienie Konstantynopola",
-          "Śmierć swojego poprzednika"
+          "Śmierć jego poprzednika"
         ],
         "correctIndex": 0
       },
@@ -18650,7 +18650,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q3",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: „krucjata biednych ludzi” prowadzona przez Piotra Pustelnika była zdyscyplinowaną armią, która bez trudu dotarła do Jerozolimy.",
-        "explanation": "Bez dyscypliny i zaopatrzenia ten oddział biednych ludzi plądrował na swojej drodze i został zdziesiątkowany w Anatolii, zanim dotarł do Jerozolimy.",
+        "explanation": "Bez dyscypliny i bez zaopatrzenia ta zgraja biedoty plądruje po drodze i ginie w Anatolii, zanim dojdzie do Jerozolimy.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -18661,9 +18661,9 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q4",
         "type": "mcq",
         "question": "Co Urban II obiecuje tym, którzy wyruszają na krucjatę?",
-        "explanation": "Urban II obiecuje odpust zupełny: całkowite odpuszczenie grzechów tym, którzy biorą krzyż.",
+        "explanation": "Urban II obiecuje odpust zupełny: pełne odpuszczenie grzechów tym, którzy biorą krzyż.",
         "options": [
-          "Pełne przebaczenie kar za swoje grzechy",
+          "Pełne odpuszczenie kar za grzechy",
           "Ziemia gwarantowana w Ziemi Świętej",
           "Pensja wypłacana przez Kościół",
           "Dziedziczny tytuł szlachecki"
@@ -18674,7 +18674,7 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q5",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: po zdobyciu Jerozolimy Gotfryd z Bouillon ogłosił się królem miasta.",
-        "explanation": "Gotfryd z Bouillon odmówił tytułu króla i wolał być nazywany Wyznawcą Grobu Świętego, opiekunem grobu Chrystusa.",
+        "explanation": "Gotfryd z Bouillon odrzucił tytuł króla i wolał nazywać się Obrońcą Grobu Świętego — strażnikiem grobu Chrystusa.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -18685,19 +18685,19 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q6",
         "type": "chronological",
         "question": "Ułóż te wydarzenia w historii wypraw krzyżowych w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe obejmują okres od 1071 do 1187 r.: klęska Bizancjum poprzedza apel papieża, który poprzedza zdobycie, a następnie ponowne zdobycie Jerozolimy.",
+        "explanation": "Kolejność od 1071 do 1187: najpierw klęska Bizancjum, potem apel papieża, zdobycie Jerozolimy i jej ponowna utrata.",
         "items": [
-          "Bizantyjska klęska Mantzikerta przeciwko Turkom seldżuckim",
+          "Klęska Bizancjum pod Manzikertem z rąk Turków seldżuckich",
           "Wezwanie do krucjaty na soborze w Clermont",
           "Zdobycie Jerozolimy przez krzyżowców",
-          "Wznowienie Jerozolimy przez Saladyna"
+          "Odzyskanie Jerozolimy przez Saladyna"
         ]
       },
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q7",
         "type": "numericSlider",
         "question": "W którym roku krzyżowcy zdobyli Jerozolimę?",
-        "explanation": "Jerozolima upadła 15 lipca 1099 r., po wyruszeniu wyprawy w 1096 r. i oblężeniu Antiochii.",
+        "explanation": "Jerozolima pada 15 lipca 1099, po wyprawie z 1096 i oblężeniu Antiochii.",
         "correctValue": 1099.0,
         "sliderMin": 1050.0,
         "sliderMax": 1150.0,
@@ -18708,20 +18708,20 @@
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q8",
         "type": "mcq",
         "question": "Który sułtan muzułmański odzyskał Jerozolimę w 1187 r.?",
-        "explanation": "W 1187 r. sułtan Saladyn odbił Jerozolimę krzyżowcom, rozpoczynając w ten sposób cykl wypraw krzyżowych.",
+        "explanation": "W 1187 sułtan Saladyn odebrał Jerozolimę krzyżowcom i znów rozkręcił cykl wypraw krzyżowych.",
         "options": [
           "Saladyn",
           "Alp Arslan",
           "Boemund z Tarentu",
-          "Aleksego I Komnena"
+          "Aleksy I Komnen"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_q9",
         "type": "numericSlider",
-        "question": "W którym roku upadł Saint-Jean-d'Acre, ostatni bastion Państw Łacińskich Wschodu?",
-        "explanation": "Upadek Saint-Jean-d'Acre w 1291 r. oznacza koniec obecności łacińskiej w Ziemi Świętej.",
+        "question": "W którym roku upadła Akka, ostatni bastion państw łacińskich na Wschodzie?",
+        "explanation": "Upadek Akki w 1291 r. oznacza koniec obecności łacińskiej w Ziemi Świętej.",
         "correctValue": 1291.0,
         "sliderMin": 1200.0,
         "sliderMax": 1350.0,
@@ -18925,7 +18925,7 @@
       {
         "id": "course_31_le_plan_marshall_1947_1952_q7",
         "type": "numericSlider",
-        "question": "Ile miliardów dolarów Stany Zjednoczone wysłały do ​​Europy w latach 1948–1952?",
+        "question": "Ile miliardów dolarów Stany Zjednoczone wysłały do Europy w latach 1948–1952?",
         "explanation": "W latach 1948–1952 Stany Zjednoczone wysłały około 13 miliardów dolarów, czyli obecnie ponad 150 miliardów.",
         "correctValue": 13.0,
         "sliderMin": 1.0,
@@ -19040,7 +19040,7 @@
         "id": "course_32_la_guerre_du_vietnam_1955_1975_q8",
         "type": "chronological",
         "question": "Ułóż te etapy wojny w Wietnamie w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe obejmują okres od podziału w 1954 r. do upadku Sajgonu w 1975 r., który przypieczętował ponowne zjednoczenie kraju pod komunizmem.",
+        "explanation": "Te etapy obejmują okres od podziału w 1954 r. do upadku Sajgonu w 1975 r., który przypieczętował ponowne zjednoczenie kraju pod komunizmem.",
         "items": [
           "Podział kraju na 17 równoleżniku",
           "Incydent w Zatoce Tonkińskiej",
@@ -19132,7 +19132,7 @@
         "id": "course_33_le_proces_de_nuremberg_1945_1946_q6",
         "type": "mcq",
         "question": "Co Zasady Norymberskie mówią o wykonywaniu rozkazów?",
-        "explanation": "Sąd potwierdza, że ​​pierwszeństwo ma odpowiedzialność indywidualna: wykonywanie poleceń nie stanowi ważnego usprawiedliwienia popełnienia przestępstwa.",
+        "explanation": "Sąd potwierdza, że pierwszeństwo ma odpowiedzialność indywidualna: wykonywanie poleceń nie stanowi ważnego usprawiedliwienia popełnienia przestępstwa.",
         "options": [
           "Posłuszeństwo przełożonemu nie zwalnia z przestępstwa",
           "Posłuszeństwo przełożonemu całkowicie zwalnia z odpowiedzialności",
@@ -19168,9 +19168,9 @@
         "id": "course_33_le_proces_de_nuremberg_1945_1946_q9",
         "type": "mcq",
         "question": "Jakie ograniczenia krytykowano w procesach norymberskich, dotyczących zbrodni popełnionych przez samych aliantów?",
-        "explanation": "Do zbrodni katyńskiej, w której w 1940 r. polscy oficerowie zostali zabici przez Sowietów, nigdy nie doszło, co podsyciło ideę sprawiedliwości ze zmienną geometrią.",
+        "explanation": "Zbrodni katyńskiej — sowieckiego mordu na polskich oficerach z 1940 — nigdy nie osądzono. Stąd zarzut sprawiedliwości „na dwa sposoby”.",
         "options": [
-          "Brak oceny zbrodni katyńskiej dokonanej przez Sowietów",
+          "Brak osądzenia zbrodni katyńskiej popełnionej przez Sowietów",
           "Brak jakichkolwiek dokumentów potwierdzających",
           "Odmowa powołania amerykańskiego sędziego",
           "Bojkot procesu w Wielkiej Brytanii"
@@ -19400,7 +19400,7 @@
         "id": "course_35_l_apartheid_et_mandela_1948_1994_q9",
         "type": "chronological",
         "question": "Ułóż te etapy apartheidu i jego upadku w porządku chronologicznym.",
-        "explanation": "Od prawnego wprowadzenia segregacji w 1948 r. po wybór Mandeli w 1994 r. – te kamienie milowe obejmują 46 lat historii Republiki Południowej Afryki.",
+        "explanation": "Od prawnego wprowadzenia segregacji w 1948 r. po wybór Mandeli w 1994 r. – te etapy obejmują 46 lat historii Republiki Południowej Afryki.",
         "items": [
           "Instytucjonalizacja apartheidu przez Partię Narodową",
           "Masakra w Sharpeville",
@@ -19517,7 +19517,7 @@
         "id": "course_36_la_revolution_culturelle_en_chine_1966_1_q9",
         "type": "chronological",
         "question": "Ułóż te etapy rewolucji kulturalnej w porządku chronologicznym.",
-        "explanation": "Od apelu Mao w 1966 r. po reformy Deng Xiaopinga w 1978 r., te kamienie milowe obejmują dekadę czystek, po których nastąpiły zmiany gospodarcze.",
+        "explanation": "Od apelu Mao w 1966 r. po reformy Deng Xiaopinga w 1978 r., te etapy obejmują dekadę czystek, po których nastąpiły zmiany gospodarcze.",
         "items": [
           "Wezwanie Mao do „zbombardowania kwatery głównej”",
           "Gwałtowny wzrost przemocy pomiędzy frakcjami Czerwonej Gwardii",
@@ -19632,7 +19632,7 @@
         "id": "course_37_la_shoah_mecanismes_d_un_genocide_q9",
         "type": "chronological",
         "question": "Ułóż te etapy Holokaustu w porządku chronologicznym.",
-        "explanation": "Od wykluczenia prawnego w 1935 r. do wyzwolenia obozów w 1945 r. te kamienie milowe ukazują proces państwowy, który stopniowo się pogarsza.",
+        "explanation": "Od wykluczenia prawnego w 1935 r. do wyzwolenia obozów w 1945 r. te etapy ukazują proces państwowy, który stopniowo się pogarsza.",
         "items": [
           "Przyjęcie ustaw norymberskich wykluczających Żydów niemieckich",
           "Masowe strzelaniny dokonane przez Einsatzgruppen na Wschodzie",
@@ -19790,7 +19790,7 @@
         "id": "course_39_la_democratie_athenienne_q3",
         "type": "mcq",
         "question": "Co gwarantuje Isegoria w demokracji ateńskiej pod rządami Peryklesa?",
-        "explanation": "Isegoria dba o to, aby każdy obywatel miał takie samo prawo do wypowiadania się przed zgromadzeniem, co jest filarem demokracji bezpośredniej.",
+        "explanation": "Isegoria znaczy, że każdy obywatel ma to samo prawo głosu na zgromadzeniu — to filar demokracji bezpośredniej.",
         "options": [
           "Równość słowa pomiędzy obywatelami",
           "Prawa własności dla wszystkich mieszkańców",
@@ -19864,7 +19864,7 @@
         "id": "course_39_la_democratie_athenienne_q9",
         "type": "chronological",
         "question": "Ułóż te reformy i wydarzenia w demokracji ateńskiej w porządku chronologicznym.",
-        "explanation": "Od Solona do śmierci Sokratesa te kamienie milowe obejmują prawie dwa stulecia budowania, a następnie kwestionowania demokracji ateńskiej.",
+        "explanation": "Od Solona do śmierci Sokratesa te etapy obejmują prawie dwa stulecia budowania, a następnie kwestionowania demokracji ateńskiej.",
         "items": [
           "Reformy Solona",
           "Reformy Klejstenesa",
@@ -19883,10 +19883,10 @@
         "question": "Kto dowodził Wizygotami podczas zdobycia Rzymu w 410 r.?",
         "explanation": "Król Alaryk, były oficer armii rzymskiej, dowodził Wizygotami, którzy w sierpniu 410 r. sforsowali bramy Rzymu.",
         "options": [
-          "Alaric",
+          "Alaryk",
           "Odoaker",
           "Attyla",
-          "Romulusa Augustulusa"
+          "Romulus Augustulus"
         ],
         "correctIndex": 0
       },
@@ -19894,7 +19894,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q2",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: przed rokiem 410 przez około osiem wieków żadna armia wroga nie wkroczyła do Rzymu.",
-        "explanation": "Ostatnie zdobycie Rzymu przez wroga datuje się na splądrowanie galijskie w roku 390 p.n.e. p.n.e., prawie 800 lat przed przybyciem Alaryka.",
+        "explanation": "Ostatni raz wróg wziął Rzym podczas splądrowania przez Gallów w 390 p.n.e., prawie 800 lat przed Alarykiem.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -19917,7 +19917,7 @@
       {
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q4",
         "type": "mcq",
-        "question": "O czym mowa w kursie o rzymskim foedusie?",
+        "question": "Czym jest rzymski foedus, o którym mowa w kursie?",
         "explanation": "Aby utrzymać swoje granice pomimo braku żołnierzy, Cesarstwo osiedliło na swojej ziemi ludy germańskie w zamian za służbę wojskową.",
         "options": [
           "Traktat, na mocy którego ludy „barbarzyńskie” osiedlały się na terytorium Rzymu w zamian za służbę wojskową",
@@ -19942,9 +19942,9 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q6",
         "type": "mcq",
         "question": "Jakie dzieło napisał św. Augustyn, aby odpowiedzieć na szok wywołany splądrowaniem Rzymu?",
-        "explanation": "W obliczu pogan oskarżających chrześcijaństwo o osłabienie Rzymu Augustyn odpowiada w Mieście Bożym, że ziemskie imperia przeminą, ale Kościół pozostanie.",
+        "explanation": "Poganie zarzucają chrześcijaństwu, że osłabiło Rzym. Augustyn w Państwie Bożym odpowiada: ziemskie imperia mijają, Kościół zostaje.",
         "options": [
-          "Miasto Boga",
+          "Państwo Boże",
           "Wyznania",
           "Starożytne miasto",
           "Wojny punickie"
@@ -19955,7 +19955,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q7",
         "type": "chronological",
         "question": "Ułóż wydarzenia z upadku zachodniego imperium rzymskiego w porządku chronologicznym.",
-        "explanation": "Etapy te obejmują okres od 402 do 476: wycofanie się do Rawenny poprzedza splądrowanie Wizygotów, następnie bardziej niszczycielski splądrowanie Wandali, aż do końca Cesarstwa Zachodniego.",
+        "explanation": "Od 402 do 476: najpierw ucieczka do Rawenny, potem splądrowanie przez Wizygotów, potem jeszcze gorsze przez Wandalów, aż do końca cesarstwa zachodniego.",
         "items": [
           "Honoriusz opuszcza Rzym i udaje się do Rawenny",
           "Splądrowanie Rzymu przez Alaryka i Wizygotów",
@@ -19978,7 +19978,7 @@
         "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_q9",
         "type": "numericSlider",
         "question": "W którym roku obalony został ostatni cesarz zachodniorzymski?",
-        "explanation": "W 476 r. przywódca Odoaker obalił Romulusa Augustulusa, kończąc zachodnie imperium rzymskie.",
+        "explanation": "W 476 wódz Odoaker obala Romulusa Augustulusa i kończy zachodnie cesarstwo rzymskie.",
         "correctValue": 476.0,
         "sliderMin": 400.0,
         "sliderMax": 550.0,
@@ -20092,7 +20092,7 @@
         "id": "course_40_la_guerre_de_secession_americaine_1861_1_q9",
         "type": "chronological",
         "question": "Ułóż te etapy wojny domowej w porządku chronologicznym.",
-        "explanation": "Od wyboru Lincolna w 1860 r. do kapitulacji Lee w 1865 r. te kamienie milowe obejmują cały konflikt i jego zwrot w stronę zniesienia kary śmierci.",
+        "explanation": "Od wyboru Lincolna w 1860 do kapitulacji Lee w 1865 te etapy obejmują całą wojnę i zwrot ku zniesieniu niewolnictwa.",
         "items": [
           "Wybór Abrahama Lincolna",
           "Bombardowanie Fortu Sumter",
@@ -20319,7 +20319,7 @@
         "options": [
           "Jest mniej gęsty, ponieważ jego sieć molekularna pozostawia więcej pustki",
           "Jest zimniej, a więc lżej",
-          "Powietrze uwięzione w lodzie sprawia, że ​​jest on lżejszy",
+          "Powietrze uwięzione w lodzie sprawia, że jest on lżejszy",
           "Sól zawarta w wodzie unosi ją do góry"
         ],
         "correctIndex": 0
@@ -20521,7 +20521,7 @@
         "id": "course_45_pourquoi_y_a_t_il_des_saisons_q1",
         "type": "mcq",
         "question": "Jaka jest prawdziwa przyczyna pór roku?",
-        "explanation": "Pory roku wynikają z nachylenia osi Ziemi, co oznacza, że ​​na półkulę dociera światło słoneczne mniej więcej bezpośrednio, w zależności od pory roku.",
+        "explanation": "Pory roku wynikają z nachylenia osi Ziemi, co oznacza, że na półkulę dociera światło słoneczne mniej więcej bezpośrednio, w zależności od pory roku.",
         "options": [
           "Nachylenie osi obrotu Ziemi",
           "Zmieniająca się odległość między Ziemią a Słońcem",
@@ -20715,9 +20715,9 @@
         "id": "course_46_comment_les_avions_volent_ils_q8",
         "type": "mcq",
         "question": "Co się dzieje podczas lotu przelotowego, gdy samolot porusza się ze stałą prędkością?",
-        "explanation": "Podczas jazdy podnośnik dokładnie kompensuje ciężar, a ciąg silników kompensuje opór, dzięki czemu utrzymuje stabilną prędkość.",
+        "explanation": "W locie przelotowym siła nośna równoważy ciężar, a ciąg silników równoważy opór — stąd stała prędkość.",
         "options": [
-          "Podnoszenie równoważy ciężar, a ciąg równoważy opór",
+          "Siła nośna równoważy ciężar, a ciąg równoważy opór",
           "Ciężar samolotu staje się zerowy",
           "Silniki zatrzymują się całkowicie",
           "Smuga znika całkowicie"
@@ -20780,7 +20780,7 @@
       {
         "id": "course_47_pourquoi_baille_t_on_q5",
         "type": "mcq",
-        "question": "Dlaczego ziewanie płodu jest dowodem na to, że nie dzieje się tak z powodu „braku tlenu”?",
+        "question": "Dlaczego ziewanie płodu pokazuje, że nie chodzi o „brak tlenu”?",
         "explanation": "Płód ziewa, mimo że jego płuca nie oddychają jeszcze powietrzem, co pokazuje, że ziewanie nie jest związane z brakiem tlenu.",
         "options": [
           "Ponieważ w tym momencie jego płuca nie oddychają jeszcze powietrzem",
@@ -20862,7 +20862,7 @@
         "id": "course_48_comment_fonctionne_la_memoire_q3",
         "type": "mcq",
         "question": "Która struktura mózgu odgrywa kluczową rolę w tworzeniu nowych wspomnień wydarzeń?",
-        "explanation": "Hipokamp, ​​głęboka struktura w mózgu, pomaga utrwalić nowe wspomnienia wydarzeń.",
+        "explanation": "Hipokamp, głęboka struktura w mózgu, pomaga utrwalić nowe wspomnienia wydarzeń.",
         "options": [
           "Konik morski",
           "Móżdżek",
@@ -20899,7 +20899,7 @@
         "id": "course_48_comment_fonctionne_la_memoire_q6",
         "type": "mcq",
         "question": "Co się dzieje, gdy przywołujemy wspomnienie?",
-        "explanation": "Przywołanie wspomnienia sprawia, że ​​staje się ono tymczasowo plastyczne: szczegóły teraźniejszości mogą się do niego przedostać, zanim zostaną ponownie zapisane.",
+        "explanation": "Przywołanie wspomnienia sprawia, że staje się ono tymczasowo plastyczne: szczegóły teraźniejszości mogą się do niego przedostać, zanim zostaną ponownie zapisane.",
         "options": [
           "Staje się tymczasowo plastyczny i można go modyfikować szczegółami teraźniejszości",
           "Pozostaje doskonale zamrożone i nienaruszone, jak za pierwszym razem",
@@ -20926,7 +20926,7 @@
         "explanation": "Nie zapominając, bylibyśmy nasyceni bezużytecznymi szczegółami: wręcz przeciwnie, zapominanie pomaga uogólniać, decydować i zachowywać to, co najważniejsze.",
         "options": [
           "Pomaga uogólniać, decydować i zachować to, co istotne, zamiast nasycać się niepotrzebnymi szczegółami",
-          "To niezmiennie udowadnia, że ​​mózg jest uszkodzony",
+          "To niezmiennie udowadnia, że mózg jest uszkodzony",
           "Właściwie to nie ma żadnego zastosowania.",
           "Dotyczy to wyłącznie osób starszych"
         ],
@@ -21058,10 +21058,10 @@
       {
         "id": "course_4_le_couronnement_de_charlemagne_800_q2",
         "type": "mcq",
-        "question": "Jakie imperium ma przywrócić koronacja roku 800?",
-        "explanation": "Gest Leona III miał przywrócić zachodnie imperium rzymskie, które zniknęło od czasu obalenia Romulusa Augustulusa w 476 roku.",
+        "question": "Jakie cesarstwo ma przywrócić koronacja z 800 roku?",
+        "explanation": "Leon III chce przywrócić zachodnie cesarstwo rzymskie, którego nie ma od obalenia Romulusa Augustulusa w 476.",
         "options": [
-          "Zachodnie Cesarstwo Rzymskie zniknęło w 476 r",
+          "Zachodnie cesarstwo rzymskie, zniknęło w 476",
           "Wschodnie Cesarstwo Bizantyjskie",
           "Imperium Perskie Sasanian",
           "Królestwo Longobardów we Włoszech"
@@ -21120,7 +21120,7 @@
         "id": "course_4_le_couronnement_de_charlemagne_800_q7",
         "type": "chronological",
         "question": "Ułóż te wydarzenia z życia Karola Wielkiego w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe sięgają lat 768–843: od wstąpienia Karola Wielkiego na podbój Longobardów, następnie koronacji, aż do podziału imperium między jego wnuków.",
+        "explanation": "Te etapy sięgają lat 768–843: od wstąpienia Karola Wielkiego na podbój Longobardów, następnie koronacji, aż do podziału imperium między jego wnuków.",
         "items": [
           "Nadejście królestwa Franków",
           "Podbój królestwa Longobardów w północnych Włoszech",
@@ -21220,7 +21220,7 @@
         "id": "course_50_comment_le_savon_tue_t_il_les_virus_q6",
         "type": "mcq",
         "question": "Dlaczego tarcie jest ważne podczas mycia rąk?",
-        "explanation": "Pocieranie sprawia, że ​​mydło dociera do każdego zakątka dłoni, gdzie mogą ukryć się wirusy.",
+        "explanation": "Pocieranie sprawia, że mydło dociera do każdego zakątka dłoni, gdzie mogą ukryć się wirusy.",
         "options": [
           "Dotarcie mydła do wszystkich załamań, np. między palcami i pod paznokciami, wymaga czasu",
           "Podgrzewa wodę, aby zabić wirusy",
@@ -21323,7 +21323,7 @@
         "id": "course_51_la_decouverte_de_la_penicilline_fleming_q6",
         "type": "mcq",
         "question": "Dlaczego II wojna światowa przyspieszyła rozwój penicyliny?",
-        "explanation": "Wojna sprawiła, że ​​leczenie zakażonych żołnierzy stało się pilną sprawą, co spowodowało, że penicylina z laboratorium stała się kwestią strategiczną.",
+        "explanation": "Wojna sprawiła, że leczenie zakażonych żołnierzy stało się pilną sprawą, co spowodowało, że penicylina z laboratorium stała się kwestią strategiczną.",
         "options": [
           "Zainfekowani żołnierze musieli być pilnie leczeni",
           "Wszystkie laboratoria cywilne zostały zamknięte",
@@ -21348,7 +21348,7 @@
       {
         "id": "course_51_la_decouverte_de_la_penicilline_fleming_q8",
         "type": "chronological",
-        "question": "Uporządkuj te kroki w historii penicyliny.",
+        "question": "Ułóż te kroki w historii penicyliny.",
         "explanation": "Fleming odkrył penicylinę w 1928 r., Florey i Chain opracowali ją na początku lat czterdziestych XX wieku, podczas wojny produkcja została uprzemysłowiona, a następnie w 1945 r. trzej badacze otrzymali Nagrodę Nobla.",
         "items": [
           "Fleming obserwuje na naczyniu hodowlanym pleśń, która zabiła bakterie",
@@ -21495,7 +21495,7 @@
         "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_q2",
         "type": "mcq",
         "question": "Co zauważył Röntgen, co naprowadziło go na ślad rentgenowski?",
-        "explanation": "Röntgen zauważa, że ​​ekran fluorescencyjny świeci z daleka, mimo że światło widzialne nie ma na niego wpływu: niewidzialne promieniowanie przechodzi przez pomieszczenie.",
+        "explanation": "Röntgen zauważa, że ekran fluorescencyjny świeci z daleka, mimo że światło widzialne nie ma na niego wpływu: niewidzialne promieniowanie przechodzi przez pomieszczenie.",
         "options": [
           "Fluorescencyjny ekran, który świeci bez wpływu światła widzialnego",
           "Zapach spalenizny w jego laboratorium",
@@ -21598,7 +21598,7 @@
         "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_q2",
         "type": "mcq",
         "question": "Co zauważył Percy Spencer podczas pracy nad radarem?",
-        "explanation": "Spencer zauważa, że ​​batonik w jego kieszeni stopił się nie od ciepła ciała, ale od fal radarowych.",
+        "explanation": "Spencer zauważa, że batonik w jego kieszeni stopił się nie od ciepła ciała, ale od fal radarowych.",
         "options": [
           "Batonik w jego kieszeni stopił się",
           "Jego termometr nagle eksploduje",
@@ -21683,9 +21683,9 @@
         "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_q9",
         "type": "mcq",
         "question": "Dlaczego grube naczynie po podgrzaniu w kuchence mikrofalowej może być gorące z zewnątrz i letnie w środku?",
-        "explanation": "Fale nie wnikają w żywność w nieskończoność, co wyjaśnia, dlaczego grube naczynie nagrzewa się głównie na powierzchni.",
+        "explanation": "Mikrofale nie wchodzą w jedzenie bez końca, dlatego grube naczynie nagrzewa się głównie przy powierzchni.",
         "options": [
-          "Fale nie wnikają w nieskończoną głębokość w żywność",
+          "Mikrofale nie wchodzą w jedzenie na nieskończoną głębokość",
           "Piekarnik słabo rozprowadza ciepło ze względu na wadę produkcyjną",
           "Środek jest chroniony przez wilgoć",
           "Potrawa obraca się w piekarniku zbyt szybko"
@@ -21749,9 +21749,9 @@
         "id": "course_55_la_theorie_de_la_gravitation_newton_1687_q5",
         "type": "mcq",
         "question": "Dlaczego Księżyc nie uderza w Ziemię, mimo że nieustannie „opada” w jej stronę?",
-        "explanation": "Księżyc stale opada w kierunku Ziemi, ale jego duża prędkość poprzeczna sprawia, że ​​obraca się zamiast się rozbijać: to jest orbita.",
+        "explanation": "Księżyc stale opada w kierunku Ziemi, ale jego duża prędkość poprzeczna sprawia, że obraca się zamiast się rozbijać: to jest orbita.",
         "options": [
-          "Ma także dużą prędkość boczną, co sprawia, że ​​kręci się wokół, zamiast się rozbijać.",
+          "Ma także dużą prędkość boczną, co sprawia, że kręci się wokół, zamiast się rozbijać.",
           "Jednocześnie jest odpychana przez Słońce",
           "Jej atmosfera wystarczająco ją spowalnia",
           "Ziemia tak naprawdę nie ma na sobie żadnego przyciągania."
@@ -21762,7 +21762,7 @@
         "id": "course_55_la_theorie_de_la_gravitation_newton_1687_q6",
         "type": "mcq",
         "question": "Co mówi trzecia zasada dynamiki Newtona?",
-        "explanation": "Trzecie prawo Newtona stwierdza, że ​​każde działanie wywołuje przeciwną reakcję o jednakowej intensywności.",
+        "explanation": "Trzecie prawo Newtona stwierdza, że każde działanie wywołuje przeciwną reakcję o jednakowej intensywności.",
         "options": [
           "Każde działanie wywołuje odwrotną reakcję",
           "Obiekt przyspiesza bez działania na niego żadnej siły",
@@ -21891,7 +21891,7 @@
         "question": "Ułóż te etapy historii radioaktywności w porządku chronologicznym.",
         "explanation": "Ta oś czasu obejmuje lata 1896–1911, okres od pierwszego odkrycia Becquerela do drugiej nagrody Nobla przyznanej przez Marię Curie.",
         "items": [
-          "Henri Becquerel zauważa, że ​​uran zasłania płyty fotograficzne",
+          "Henri Becquerel zauważa, że uran zasłania płyty fotograficzne",
           "Maria i Pierre Curie odkrywają polon i rad",
           "Nagroda Nobla w dziedzinie fizyki przyznawana jest Becquerelowi i Curie",
           "Pierre Curie umiera przypadkowo",
@@ -22101,7 +22101,7 @@
         "options": [
           "Kiedy pasma się rozdzielą, każde z nich może służyć jako model do odbudowania drugiego",
           "Ponieważ zapobiega wszelkim mutacjom genetycznym",
-          "Ponieważ sprawia, że ​​DNA jest niezniszczalne",
+          "Ponieważ sprawia, że DNA jest niezniszczalne",
           "Ponieważ bezpośrednio łączy DNA z mózgiem"
         ],
         "correctIndex": 0
@@ -22556,7 +22556,7 @@
         "id": "course_61_le_big_bang_q10",
         "type": "mcq",
         "question": "Co zaobserwowaliśmy w 1998 roku dzięki odległym supernowym?",
-        "explanation": "W 1998 roku obserwacja odległych supernowych wykazała, że ​​ekspansja Wszechświata przyspiesza, co przypisuje się tajemniczej ciemnej energii.",
+        "explanation": "W 1998 roku obserwacja odległych supernowych wykazała, że ekspansja Wszechświata przyspiesza, co przypisuje się tajemniczej ciemnej energii.",
         "options": [
           "Niech ekspansja wszechświata przyspieszy",
           "Że wszechświat przestał się rozszerzać",
@@ -22635,7 +22635,7 @@
         "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_q6",
         "type": "mcq",
         "question": "Która erupcja wulkanu w Indonezji w 1815 r. ochłodziła globalny klimat i spowodowała „rok bez lata” w 1816 r.?",
-        "explanation": "Erupcja Tambory w 1815 r. była tak potężna, że ​​ochłodziła globalny klimat, powodując katastrofalne zbiory w 1816 r.",
+        "explanation": "Erupcja Tambory w 1815 r. była tak potężna, że ochłodziła globalny klimat, powodując katastrofalne zbiory w 1816 r.",
         "options": [
           "Erupcja Tambory",
           "Erupcja Wezuwiusza",
@@ -22752,7 +22752,7 @@
       {
         "id": "course_63_comment_se_forment_les_tremblements_de_t_q7",
         "type": "chronological",
-        "question": "Uporządkuj kolejność nadejścia różnych typów fal sejsmicznych po pęknięciu uskoku.",
+        "question": "Ułóż w kolejności nadejścia różnych typów fal sejsmicznych po pęknięciu uskoku.",
         "explanation": "Po pęknięciu jako pierwsze docierają fale P, po nich następują fale S, a następnie fale powierzchniowe, które powodują najbardziej widoczne oscylacje w gruncie.",
         "items": [
           "Fale P, które ściskają skałę jak akordeon",
@@ -22910,7 +22910,7 @@
         "question": "Dlaczego Księżyc nie uderza w Ziemię, mimo że grawitacja stale go przyciąga?",
         "explanation": "Księżyc rzeczywiście opada w kierunku Ziemi, ale jego prędkość poprzeczna powoduje, że nieustannie omija Ziemię: nazywamy to orbitą.",
         "options": [
-          "Ma prędkość poprzeczną, która sprawia, że ​​w każdej chwili mija Ziemię: jest to ciągły spadek swobodny",
+          "Ma prędkość poprzeczną, która sprawia, że w każdej chwili mija Ziemię: jest to ciągły spadek swobodny",
           "Utrzymuje go niewidzialne pole magnetyczne",
           "Grawitacja Ziemi nie działa poza atmosferą",
           "Księżyc nie odczuwa żadnego przyciągania grawitacyjnego"
@@ -22980,7 +22980,7 @@
         "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_q7",
         "type": "mcq",
         "question": "Dlaczego całkowite zaćmienia słońca są dziś możliwe?",
-        "explanation": "Geometryczny zbieg okoliczności sprawia, że ​​Słońce jest 400 razy większe i 400 razy dalej od Księżyca, co daje im ten sam pozorny rozmiar na niebie.",
+        "explanation": "Geometryczny zbieg okoliczności sprawia, że Słońce jest 400 razy większe i 400 razy dalej od Księżyca, co daje im ten sam pozorny rozmiar na niebie.",
         "options": [
           "Słońce jest około 400 razy większe od Księżyca, ale także 400 razy dalej: oba mają ten sam pozorny rozmiar",
           "W rzeczywistości Księżyc jest większy od Słońca",
@@ -23125,9 +23125,9 @@
         "id": "course_67_qu_est_ce_qu_un_trou_noir_q1",
         "type": "mcq",
         "question": "Jak definiujesz czarną dziurę?",
-        "explanation": "Czarna dziura to obszar czasoprzestrzeni, w którym grawitacja jest tak intensywna, że ​​prędkość potrzebna do ucieczki przekracza prędkość światła.",
+        "explanation": "Czarna dziura to obszar czasoprzestrzeni, w którym grawitacja jest tak intensywna, że prędkość potrzebna do ucieczki przekracza prędkość światła.",
         "options": [
-          "Region, w którym grawitacja jest tak intensywna, że ​​nawet światło nie może uciec",
+          "Region, w którym grawitacja jest tak intensywna, że nawet światło nie może uciec",
           "Tunel łączący dwa odległe punkty we wszechświecie",
           "Szczególnie zimna i ciemna gwiazda",
           "Całkowita pustka pozbawiona jakiejkolwiek materii"
@@ -23252,7 +23252,7 @@
         "id": "course_68_la_theorie_de_la_relativite_pour_tous_q3",
         "type": "mcq",
         "question": "Co opisuje dylatacja czasu?",
-        "explanation": "Dylatacja czasu oznacza, że ​​im szybciej porusza się obiekt, tym wolniej upływa mu czas w porównaniu do osoby znajdującej się w spoczynku, co jest mierzone przez zegary atomowe.",
+        "explanation": "Dylatacja czasu oznacza, że im szybciej porusza się obiekt, tym wolniej upływa mu czas w porównaniu do osoby znajdującej się w spoczynku, co jest mierzone przez zegary atomowe.",
         "options": [
           "Im szybciej porusza się obiekt, tym wolniej płynie dla niego czas w porównaniu z obserwatorem w spoczynku.",
           "Czas zatrzymuje się całkowicie powyżej określonej prędkości",
@@ -23291,7 +23291,7 @@
         "id": "course_68_la_theorie_de_la_relativite_pour_tous_q6",
         "type": "mcq",
         "question": "Kto w 1919 roku podczas zaćmienia potwierdził, że światło jest odchylane przez grawitację Słońca?",
-        "explanation": "W 1919 roku Arthur Eddington zaobserwował podczas zaćmienia, że ​​pozorna pozycja gwiazd za Słońcem uległa przesunięciu, co potwierdziło teorię Einsteina.",
+        "explanation": "W 1919 roku Arthur Eddington zaobserwował podczas zaćmienia, że pozorna pozycja gwiazd za Słońcem uległa przesunięciu, co potwierdziło teorię Einsteina.",
         "options": [
           "brytyjski astronom Arthur Eddington",
           "Fizyk Enrico Fermi",
@@ -23380,7 +23380,7 @@
       {
         "id": "course_69_comment_se_forment_les_eclairs_q4",
         "type": "chronological",
-        "question": "Uporządkuj te etapy powstawania piorunów.",
+        "question": "Ułóż te etapy powstawania piorunów.",
         "explanation": "Ładunki najpierw rozdzielają się w chmurze, następnie powietrze ulega jonizacji, powracający łuk oświetla niebo, a nagła ekspansja ogrzanego powietrza powoduje w końcu grzmot.",
         "items": [
           "Zderzenia kryształków lodu i śniegu ze śniegiem oddzielają ładunki elektryczne w chmurze",
@@ -23629,7 +23629,7 @@
         "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_q7",
         "type": "mcq",
         "question": "Czym jest IPCC wspomniane w kursie?",
-        "explanation": "IPCC syntetyzuje prace tysięcy klimatologów i stwierdza, że ​​ocieplenie od 1950 r. jest bezprecedensowe i ma pochodzenie ludzkie.",
+        "explanation": "IPCC syntetyzuje prace tysięcy klimatologów i stwierdza, że ocieplenie od 1950 r. jest bezprecedensowe i ma pochodzenie ludzkie.",
         "options": [
           "Grupa syntezująca prace tysięcy klimatologów",
           "Międzynarodowy koncern naftowy",
@@ -23859,7 +23859,7 @@
         "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_q7",
         "type": "mcq",
         "question": "Co pokazała psycholog Elizabeth Loftus?",
-        "explanation": "Elizabeth Loftus pokazała, że ​​za pomocą prostych pytań można zaszczepić fałszywe wspomnienia, co wymaga ostrożności w przypadku zeznań naocznych świadków.",
+        "explanation": "Elizabeth Loftus pokazała, że za pomocą prostych pytań można zaszczepić fałszywe wspomnienia, co wymaga ostrożności w przypadku zeznań naocznych świadków.",
         "options": [
           "Fałszywe wspomnienia można wszczepić za pomocą prostych pytań",
           "Ludzka pamięć jest zawsze całkowicie niezawodna",
@@ -23872,7 +23872,7 @@
         "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_q8",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: pamiętanie wydarzenia jest jak odtworzenie wiernego filmu z przeszłości.",
-        "explanation": "Przywoływanie wspomnienia nie przypomina odtwarzania filmu: każde przywołanie sprawia, że ​​pamięć staje się plastyczna, a mózg może ją zmodyfikować przed ponownym nagraniem.",
+        "explanation": "Przywoływanie wspomnienia nie przypomina odtwarzania filmu: każde przywołanie sprawia, że pamięć staje się plastyczna, a mózg może ją zmodyfikować przed ponownym nagraniem.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -24121,7 +24121,7 @@
           "Chlorofil dominuje i maskuje inne pigmenty obecne w liściu",
           "Karotenoidy nie są jeszcze produkowane",
           "Liście nie zawierają innego pigmentu niż chlorofil",
-          "Letnie światło sprawia, że ​​inne pigmenty są niewidoczne"
+          "Letnie światło sprawia, że inne pigmenty są niewidoczne"
         ],
         "correctIndex": 0
       },
@@ -24179,7 +24179,7 @@
         "id": "course_76_pourquoi_les_feuilles_changent_elles_de_q6",
         "type": "mcq",
         "question": "W jakich warunkach powstają najżywsze jesienne czerwienie?",
-        "explanation": "Najpiękniejsze czerwienie rodzą się ze słonecznych dni i chłodnych, bezmrozowych nocy, które sprzyjają przemianie cukru w ​​antocyjany.",
+        "explanation": "Najpiękniejsze czerwienie rodzą się ze słonecznych dni i chłodnych, bezmrozowych nocy, które sprzyjają przemianie cukru w antocyjany.",
         "options": [
           "Po słonecznych dniach następują chłodne, bezmroźne noce",
           "Od początku do końca szara i deszczowa jesień",
@@ -24232,7 +24232,7 @@
         "id": "course_77_qu_est_ce_que_la_matiere_noire_q2",
         "type": "mcq",
         "question": "Co astronomka Vera Rubin odkryła w latach 70. XX wieku?",
-        "explanation": "Vera Rubin zmierzyła, że ​​gwiazdy na krawędziach galaktyk spiralnych obracają się z taką samą szybkością, jak te w centrum, co jest dowodem na to, że powstrzymuje je niewidzialna masa.",
+        "explanation": "Vera Rubin zmierzyła, że gwiazdy na krawędziach galaktyk spiralnych obracają się z taką samą szybkością, jak te w centrum, co jest dowodem na to, że powstrzymuje je niewidzialna masa.",
         "options": [
           "Gwiazdy na obrzeżach galaktyk obracały się tak szybko, jak gwiazdy w centrum",
           "Galaktyki spiralne nie zawierają żadnych gwiazd na obrzeżach",
@@ -24306,7 +24306,7 @@
         "id": "course_77_qu_est_ce_que_la_matiere_noire_q8",
         "type": "mcq",
         "question": "Według kursu, co może spowodować ciemna energia w bardzo odległej przyszłości?",
-        "explanation": "W bardzo odległej przyszłości ciemna energia może odepchnąć inne galaktyki do tego stopnia, że ​​staną się niewidoczne z Drogi Mlecznej.",
+        "explanation": "W bardzo odległej przyszłości ciemna energia może odepchnąć inne galaktyki do tego stopnia, że staną się niewidoczne z Drogi Mlecznej.",
         "options": [
           "Odsuń inne galaktyki tak, aby stały się niewidoczne z Drogi Mlecznej",
           "Sprowadzenie wszystkich galaktyk do jednego centralnego punktu",
@@ -24637,7 +24637,7 @@
         "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_q8",
         "type": "chronological",
         "question": "Ułóż te wydarzenia z życia Joanny d'Arc w porządku chronologicznym.",
-        "explanation": "Te kamienie milowe sięgają lat 1420–1431: traktat w Troyes, następnie Orlean i Reims w 1429 r., zdobycie w 1430 r. i egzekucja w 1431 r.",
+        "explanation": "Te etapy sięgają lat 1420–1431: traktat w Troyes, następnie Orlean i Reims w 1429 r., zdobycie w 1430 r. i egzekucja w 1431 r.",
         "items": [
           "Traktat z Troyes wydziedzicza delfina",
           "Joanna znosi oblężenie Orleanu",
@@ -24832,7 +24832,7 @@
         "id": "course_81_l_odyssee_homere_q6",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: współcześni uczeni uważają, że Odyseja powstała w wyniku długiej tradycji ustnej, a nie pióra jednego autora.",
-        "explanation": "Z twórczości Milmana Parry’ego wynika, że ​​tekst wywodzi się z tradycji śpiewaków, bardów, którzy komponowali według gotowych receptur.",
+        "explanation": "Z twórczości Milmana Parry’ego wynika, że tekst wywodzi się z tradycji śpiewaków, bardów, którzy komponowali według gotowych receptur.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -24971,8 +24971,8 @@
       {
         "id": "course_82_l_iliade_homere_q9",
         "type": "chronological",
-        "question": "Uporządkuj te etapy Iliady.",
-        "explanation": "Te cztery kamienie milowe budują poemat: początkowa kłótnia, żałoba, która uzbraja Achillesa, decydujący pojedynek, a następnie scena ponownego odkrycia człowieczeństwa.",
+        "question": "Ułóż te etapy Iliady.",
+        "explanation": "Te cztery etapy budują poemat: początkowa kłótnia, żałoba, która uzbraja Achillesa, decydujący pojedynek, a następnie scena ponownego odkrycia człowieczeństwa.",
         "items": [
           "Spór Achillesa z Agamemnonem",
           "Śmierć Patroklosa",
@@ -25262,7 +25262,7 @@
         "id": "course_85_le_banquet_platon_q3",
         "type": "mcq",
         "question": "Co androgyni mówią w mowie Arystofanesa?",
-        "explanation": "Arystofanes opowiada, że ​​ludzie byli kiedyś podwójni i że Zeus przeciął ich na dwie części, aby ich ukarać, a każdy z nich od tego czasu szuka utraconej połowy.",
+        "explanation": "Arystofanes opowiada, że ludzie byli kiedyś podwójni i że Zeus przeciął ich na dwie części, aby ich ukarać, a każdy z nich od tego czasu szuka utraconej połowy.",
         "options": [
           "Ludzie byli kiedyś podwójni, zanim Zeus przeciął ich na pół",
           "Bogowie stworzyli ludzkość z gliny",
@@ -25442,7 +25442,7 @@
       {
         "id": "course_86_la_republique_platon_q9",
         "type": "mcq",
-        "question": "Co według teorii idei reprezentuje świat zmysłowy, który postrzegamy?",
+        "question": "Czym według teorii idei jest świat zmysłowy, który widzimy?",
         "explanation": "Dla Platona świat zmysłowy jest jedynie cieniem w porównaniu ze światem Idei, co ilustruje mit o jaskini.",
         "options": [
           "Cień prawdziwego świata Idei",
@@ -25496,7 +25496,7 @@
         "id": "course_87_l_apologie_de_socrate_platon_q4",
         "type": "mcq",
         "question": "Co według jego własnej relacji wyrocznia delficka objawia Sokratesowi?",
-        "explanation": "Wyrocznia Delficka stwierdza, że ​​nikt nie jest mądrzejszy od Sokratesa, który wówczas rozumie, że jego mądrość polega na wiedzy, że nie wie.",
+        "explanation": "Wyrocznia Delficka stwierdza, że nikt nie jest mądrzejszy od Sokratesa, który wówczas rozumie, że jego mądrość polega na wiedzy, że nie wie.",
         "options": [
           "Że nikt nie jest mądrzejszy od niego",
           "Że musi uciekać z Aten",
@@ -25976,7 +25976,7 @@
         "id": "course_90_medee_euripide_q7",
         "type": "mcq",
         "question": "Dlaczego Eurypidesa uważa się za najbardziej „nowoczesnego” z trzech wielkich greckich tragików?",
-        "explanation": "Wraz z Ajschylosem i Sofoklesem Eurypides bada wnętrze postaci, które wątpią i zaprzeczają sobie, co sprawia, że ​​czyta się go jako geniusza psychologicznego.",
+        "explanation": "Wraz z Ajschylosem i Sofoklesem Eurypides bada wnętrze postaci, które wątpią i zaprzeczają sobie, co sprawia, że czyta się go jako geniusza psychologicznego.",
         "options": [
           "Bada wnętrze postaci, które wątpią i zaprzeczają sobie",
           "Unika dialogu na rzecz czystego działania",
@@ -26019,26 +26019,26 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q2",
         "type": "mcq",
-        "question": "Kto daje Valjeanowi drugą szansę, wmawiając mu, że otrzymał swoje sztućce w prezencie?",
-        "explanation": "Biskup Myriel daje Valjeanowi drugą szansę, pozwalając mu wierzyć, że otrzymał swoje sztućce w prezencie, zamiast zgłaszać go za kradzież.",
+        "question": "Kto daje Valjeanowi drugą szansę, wmawiając mu, że dostał srebra w darze?",
+        "explanation": "Biskup Myriel daje Valjeanowi drugą szansę: zamiast donieść o kradzieży, każe mu uwierzyć, że dostał srebra w darze.",
         "options": [
           "Biskup Myriel",
           "Inspektor Javert",
           "Fantyna",
-          "Cozetta"
+          "Cosette"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_91_les_miserables_victor_hugo_q3",
         "type": "mcq",
-        "question": "Pod jaką tożsamością Valjean zostaje burmistrzem i filantropijnym przemysłowcem?",
-        "explanation": "Pod pseudonimem Monsieur Madeleine Valjean zostaje filantropijnym burmistrzem, zanim Javert go rozpoznaje.",
+        "question": "Pod jaką tożsamością Valjean zostaje burmistrzem i hojnym przemysłowcem?",
+        "explanation": "Jako pan Madeleine Valjean zostaje hojnym burmistrzem — aż Javert go rozpoznaje.",
         "options": [
-          "Panie Madeleine",
-          "Panie Thénardier",
-          "Panie Javert",
-          "Panie Myriel"
+          "pan Madeleine",
+          "pan Thénardier",
+          "pan Javert",
+          "pan Myriel"
         ],
         "correctIndex": 0
       },
@@ -26057,9 +26057,9 @@
         "id": "course_91_les_miserables_victor_hugo_q5",
         "type": "mcq",
         "question": "Dlaczego Fantyna popada w biedę?",
-        "explanation": "Fantyna zubożała i poświęca się, aby zapłacić emeryturę swojej córce Cozetcie, pozostawionej w rękach Thénardierów.",
+        "explanation": "Fantine biednieje i poświęca się, żeby opłacić utrzymanie Cosette zostawionej u Thénardierów.",
         "options": [
-          "Opłacić rentę swojej córki Cozetty, powierzoną Thénardierom",
+          "Żeby opłacić utrzymanie córki Cosette u Thénardierów",
           "Aby sfinansować studia brata",
           "Aby spłacić dług hazardowy",
           "Ucieczka przed policją po kradzieży"
@@ -26087,8 +26087,8 @@
         "options": [
           "Gavroche",
           "Mariusz",
-          "Cozetta",
-          "Javerta"
+          "Cosette",
+          "Javert"
         ],
         "correctIndex": 0
       },
@@ -26106,10 +26106,10 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q9",
         "type": "chronological",
-        "question": "Uporządkuj te etapy historii Les Miserables.",
+        "question": "Ułóż te etapy historii Nędzników.",
         "explanation": "Hugo zaczął pisać powieść w 1845 r., rękopis podjął się na wygnaniu po zamachu stanu w 1851 r., zanim książka ukazała się w Brukseli w 1862 r.",
         "items": [
-          "Hugo rozpoczyna pisanie powieści pod tytułem „Les Misères”",
+          "Hugo zaczyna pisać powieść pod tytułem „Nędze”",
           "Zamach stanu przerywa i ponownie rozpoczyna pisanie na wygnaniu",
           "Powieść wreszcie pojawia się w Brukseli"
         ]
@@ -26117,8 +26117,8 @@
       {
         "id": "course_91_les_miserables_victor_hugo_q10",
         "type": "numericSlider",
-        "question": "W którym roku, po siedemnastu latach pracy, ukazało się ostatecznie Les Misérables?",
-        "explanation": "Les Miserables ukazało się w 1862 roku w Brukseli, po siedemnastu latach pracy rozpoczętej w roku 1845.",
+        "question": "W którym roku, po siedemnastu latach pracy, ukazały się Nędznicy?",
+        "explanation": "Nędznicy ukazały się w 1862 w Brukseli, po siedemnastu latach pracy zaczętej w 1845.",
         "correctValue": 1862.0,
         "sliderMin": 1840.0,
         "sliderMax": 1880.0,
@@ -26133,11 +26133,11 @@
       {
         "id": "course_92_madame_bovary_flaubert_q1",
         "type": "mcq",
-        "question": "Kto jest autorem „Pani Bovary”?",
-        "explanation": "Gustave Flaubert opublikował „Madame Bovary” w 1857 roku, upamiętniając narodziny nowoczesnego realizmu.",
+        "question": "Kto napisał Panią Bovary?",
+        "explanation": "Gustave Flaubert wydał Panią Bovary w 1857 — tak zaczyna się nowoczesny realizm.",
         "options": [
           "Gustaw Flaubert",
-          "Stendhala",
+          "Stendhal",
           "Honoré de Balzac",
           "Emil Zola"
         ],
@@ -26146,7 +26146,7 @@
       {
         "id": "course_92_madame_bovary_flaubert_q2",
         "type": "mcq",
-        "question": "Z kim Emma wychodzi za mąż na początku powieści?",
+        "question": "Za kogo Emma wychodzi na początku powieści?",
         "explanation": "Emma poślubia Charlesa Bovary’ego, uczciwego, choć nudnego, prowincjonalnego lekarza, z którym osiedla się w Yonville.",
         "options": [
           "Charles Bovary, lekarz prowincjonalny",
@@ -26172,7 +26172,7 @@
       {
         "id": "course_92_madame_bovary_flaubert_q4",
         "type": "trueFalse",
-        "question": "Prawda czy fałsz: Flaubert został skazany w 1857 r. podczas procesu przeciwko Madame Bovary.",
+        "question": "Prawda czy fałsz: Flaubert został skazany w 1857 na procesie o Panią Bovary.",
         "explanation": "W 1857 roku Flaubert został uniewinniony z zarzutu „obrazy moralności publicznej”.",
         "options": [
           "Prawda",
@@ -26188,8 +26188,8 @@
         "options": [
           "Sentymentalne powieści, które czytała w klasztorze",
           "Rada jej matki",
-          "Jego ambicje polityczne",
-          "Jego pasja do malarstwa"
+          "Jej ambicje polityczne",
+          "Jej pasja do malarstwa"
         ],
         "correctIndex": 0
       },
@@ -26222,7 +26222,7 @@
       {
         "id": "course_92_madame_bovary_flaubert_q8",
         "type": "numericSlider",
-        "question": "Ile lat Flaubert spędził na pisaniu „Madame Bovary”?",
+        "question": "Ile lat Flaubert spędził na pisaniu Pani Bovary?",
         "explanation": "Flaubert odizolował się w Croisset i poświęcił pięć lat, od 1851 do 1856, na napisanie tej powieści.",
         "correctValue": 5.0,
         "sliderMin": 1.0,
@@ -26251,10 +26251,10 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q1",
         "type": "mcq",
-        "question": "Kto jest autorem Le Rouge et le Noir, a którego prawdziwe nazwisko brzmi Henri Beyle?",
-        "explanation": "Stendhal, którego prawdziwe nazwisko brzmiało Henri Beyle, opublikował Le Rouge et le Noir w 1830 roku.",
+        "question": "Kto napisał Czerwone i czarne? Jego prawdziwe nazwisko to Henri Beyle.",
+        "explanation": "Stendhal, naprawdę Henri Beyle, wydał Czerwone i czarne w 1830.",
         "options": [
-          "Stendhala",
+          "Stendhal",
           "Honoré de Balzac",
           "Gustaw Flaubert",
           "Wiktor Hugo"
@@ -26265,7 +26265,7 @@
         "id": "course_93_le_rouge_et_le_noir_stendhal_q2",
         "type": "mcq",
         "question": "Jakie jest społeczne pochodzenie Juliena Sorela, bohatera powieści?",
-        "explanation": "Julien Sorel, syn znienawidzonego stolarza, odznacza się rzadką inteligencją i marzy o dorastaniu w zamkniętym dla niego społeczeństwie.",
+        "explanation": "Julien Sorel, syn pogardzanego stolarza, ma rzadką inteligencję i marzy o awansie w społeczeństwie, które go nie chce.",
         "options": [
           "Syn stolarza, chce awansować w społeczeństwie",
           "Syn zrujnowanego szlachcica",
@@ -26280,10 +26280,10 @@
         "question": "Co symbolizują kolory czerwony i czarny w tytule?",
         "explanation": "Czerwień munduru wojskowego i czerń stroju kościelnego były w czasach Restauracji jedynymi nośnikami władzy wykształconego plebsu.",
         "options": [
-          "Mundur wojskowy i strój kościelny to jedyne drogi do wniebowstąpienia dla zwykłego człowieka",
+          "Mundur wojskowy i sutanna — jedyne drogi awansu dla mieszczanina",
           "Krew i żałoba",
           "Pasja i śmierć",
-          "Kolory Przywrócenia"
+          "Barwy Restauracji"
         ],
         "correctIndex": 0
       },
@@ -26314,7 +26314,7 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q6",
         "type": "mcq",
-        "question": "Kogo Julien namawia w Paryżu na służbę markiza de La Mole?",
+        "question": "Kogo Julien uwodzi w Paryżu, służąc u markiza de La Mole?",
         "explanation": "Julien zostaje sekretarzem markiza de La Mole i uwodzi jego córkę Mathilde, dumną arystokratkę kochającą niebezpieczeństwo.",
         "options": [
           "Matylda de La Mole",
@@ -26327,10 +26327,10 @@
       {
         "id": "course_93_le_rouge_et_le_noir_stendhal_q7",
         "type": "mcq",
-        "question": "Co jest przyczyną ostatecznego upadku Juliana?",
+        "question": "Co ostatecznie obala Juliena?",
         "explanation": "Gdy Julien przygotowuje się do poślubienia Mathilde, list od Madame de Rênal ujawnia kłamstwa z jego przeszłości i przerywa jego karierę.",
         "options": [
-          "List od Madame de Rênal potępiającej jej kłamstwa",
+          "List pani de Rênal, który demaskuje jego kłamstwa",
           "Odkrywanie jego początków",
           "Niespłacony dług hazardowy",
           "Przegrany pojedynek z rywalem"
@@ -26354,7 +26354,7 @@
         "id": "course_93_le_rouge_et_le_noir_stendhal_q9",
         "type": "numericSlider",
         "question": "W którym roku wydano „Czerwone i czarne”?",
-        "explanation": "Powieść ukazała się w 1830 roku, na krótko przed Trois Glorieuses.",
+        "explanation": "Powieść ukazała się w 1830, tuż przed rewolucją lipcową.",
         "correctValue": 1830.0,
         "sliderMin": 1810.0,
         "sliderMax": 1840.0,
@@ -26420,7 +26420,7 @@
         "id": "course_94_candide_voltaire_q4",
         "type": "trueFalse",
         "question": "Prawda czy fałsz: według Panglossa każde wydarzenie, nawet straszne, ma dobroczynną przyczynę.",
-        "explanation": "Pangloss twierdzi, że każde wydarzenie, niezależnie od tego, jak okrutne, ma jakąś dobroczynną przyczynę, posuwając się nawet do stwierdzenia, że ​​kiła jest niezbędna w przypadku czekolady.",
+        "explanation": "Pangloss twierdzi, że każde wydarzenie, niezależnie od tego, jak okrutne, ma jakąś dobroczynną przyczynę, posuwając się nawet do stwierdzenia, że kiła jest niezbędna w przypadku czekolady.",
         "options": [
           "Prawda",
           "Fałsz"
@@ -26444,7 +26444,7 @@
         "id": "course_94_candide_voltaire_q6",
         "type": "mcq",
         "question": "Co Eldorado ukazuje w tej historii?",
-        "explanation": "Eldorado, racjonalna utopia Ameryki Południowej, udowadnia, że ​​optymizm może działać, ale Kandyd nie zmienia tego i szuka Kunegundy.",
+        "explanation": "Eldorado, racjonalna utopia Ameryki Południowej, udowadnia, że optymizm może działać, ale Kandyd nie zmienia tego i szuka Kunegundy.",
         "options": [
           "Ten optymizm może działać w racjonalnym społeczeństwie",
           "Te pieniądze zawsze cię uszczęśliwiają",
@@ -26457,7 +26457,7 @@
         "id": "course_94_candide_voltaire_q7",
         "type": "mcq",
         "question": "Co popycha losy „Murzyna z Surinamu”, okaleczonego dla europejskiego cukru niewolnika, do zrobienia Kandyda?",
-        "explanation": "W obliczu okaleczonego niewolnika Kandyd ostatecznie definiuje optymizm jako „wściekłość na rzecz utrzymywania, że ​​wszystko jest dobre, podczas gdy ktoś jest zły”.",
+        "explanation": "W obliczu okaleczonego niewolnika Kandyd ostatecznie definiuje optymizm jako „wściekłość na rzecz utrzymywania, że wszystko jest dobre, podczas gdy ktoś jest zły”.",
         "options": [
           "Zdefiniuj optymizm jako „wściekłość, aby utrzymywać, że wszystko jest dobrze, podczas gdy my jesteśmy źli”",
           "Porzuć Kunegundę na stałe",
@@ -26627,7 +26627,7 @@
       {
         "id": "course_96_l_etranger_camus_q1",
         "type": "mcq",
-        "question": "Kto jest autorem „Nieznajomego”?",
+        "question": "Kto napisał Obcego?",
         "explanation": "Albert Camus opublikował swoją pierwszą powieść „Obcy” w 1942 roku.",
         "options": [
           "Alberta Camusa",
@@ -26640,7 +26640,7 @@
       {
         "id": "course_96_l_etranger_camus_q2",
         "type": "mcq",
-        "question": "Jakie jest zadanie Meursaulta, narratora powieści?",
+        "question": "Czym zajmuje się Meursault, narrator powieści?",
         "explanation": "Meursault jest pracownikiem biurowym w Algierze, którego obojętność na konwenanse prowadzi do jego upadku.",
         "options": [
           "Pracownik biurowy w Algierze",
@@ -26657,7 +26657,7 @@
         "explanation": "Meursault nie kłamie na temat swoich uczuć, żyjąc teraźniejszością i doznaniami fizycznymi bardziej niż oczekiwaną moralnością.",
         "options": [
           "Kłamstwo na temat swoich uczuć",
-          "Weź udział w ważnych wydarzeniach",
+          "Brać udział w ważnych wydarzeniach",
           "Porozmawiaj o swojej przeszłości",
           "Opuść Algier"
         ],
@@ -26679,13 +26679,13 @@
       {
         "id": "course_96_l_etranger_camus_q5",
         "type": "mcq",
-        "question": "O co prokurator zarzuca Meursaultowi także podczas procesu?",
+        "question": "O co prokurator oskarża jeszcze Meursaulta na procesie?",
         "explanation": "Prokurator zarzuca Meursaultowi, że wypił cafe au lait przed trumną matki i poszedł do kina dzień po pogrzebie.",
         "options": [
           "Za wypicie kawy z mlekiem przed trumną matki",
           "Za grożenie policjantowi",
           "Za kłamstwo na temat swojej tożsamości",
-          "Aby mieć przeszłość kryminalną"
+          "Że ma kryminalną przeszłość"
         ],
         "correctIndex": 0
       },
@@ -26703,8 +26703,8 @@
       {
         "id": "course_96_l_etranger_camus_q7",
         "type": "mcq",
-        "question": "Jaką koncepcję filozoficzną powieść wprowadza w fikcję?",
-        "explanation": "Nieznajomy urzeczywistnia fikcję absurdu Camusa: rozdźwięku między naszym odwoływaniem się do znaczenia a ciszą świata.",
+        "question": "Jaki pomysł filozoficzny powieść zamienia w fabułę?",
+        "explanation": "Obcy pokazuje absurd u Camusa: rozziew między naszą potrzebą sensu a milczeniem świata.",
         "options": [
           "Absurd w Camusie",
           "Egzystencjalizm Sartre’a",
@@ -26738,10 +26738,10 @@
       {
         "id": "course_96_l_etranger_camus_q10",
         "type": "mcq",
-        "question": "Który współczesny pisarz algierski na nowo odczytuje „Nieznajomego” z punktu widzenia anonimowej ofiary w „Meursault, kontr-śledzenie”?",
-        "explanation": "Kamel Daoud w swojej powieści „Meursault, contre-investigation” odczytuje na nowo Nieznajomego z punktu widzenia anonimowej ofiary.",
+        "question": "Który współczesny pisarz algierski czyta Obcego od strony anonimowej ofiary, w „Meursault, contre-enquête”?",
+        "explanation": "Kamel Daoud w „Meursault, contre-enquête” czyta Obcego od strony anonimowej ofiary.",
         "options": [
-          "Kamela Dauda",
+          "Kamel Daoud",
           "Yasmina Khadra",
           "Asia Djebar",
           "Kateba Yacine’a"
@@ -27007,21 +27007,21 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q1",
         "type": "mcq",
-        "question": "Kto jest autorem Pere Goriot?",
-        "explanation": "Honoré de Balzac opublikował Le Père Goriot w 1835 roku.",
+        "question": "Kto napisał Ojca Goriota?",
+        "explanation": "Honoré de Balzac wydał Ojca Goriota w 1835.",
         "options": [
           "Honoré de Balzac",
           "Wiktor Hugo",
           "Gustaw Flaubert",
-          "Stendhala"
+          "Stendhal"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_99_le_pere_goriot_balzac_q2",
         "type": "mcq",
-        "question": "Do jakiej grupy romantycznej należy ojciec Goriot?",
-        "explanation": "Ojciec Goriot jest osią Comédie humaine, w której Balzac po raz pierwszy przedstawia powrót powracających postaci.",
+        "question": "Do jakiego cyklu powieściowego należy Ojciec Goriot?",
+        "explanation": "Ojciec Goriot jest osią Komedii ludzkiej: tu Balzac po raz pierwszy każe postaciom wracać z powieści do powieści.",
         "options": [
           "Komedia ludzka",
           "Rodzina Rougon-Macquarts",
@@ -27083,11 +27083,11 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q7",
         "type": "mcq",
-        "question": "Co oferuje Vautrin w Rastignac, aby szybko zarobić fortunę?",
+        "question": "Co Vautrin proponuje Rastignacowi, żeby szybko się wzbogacić?",
         "explanation": "Vautrin proponuje Rastignacowi cyniczny pakt: zbić fortunę poprzez zorganizowanie morderstwa, na co Rastignac ostatecznie odmawia.",
         "options": [
-          "Zbij fortunę na morderstwie",
-          "Poślub bogatą dziedziczkę",
+          "Zbić fortunę na morderstwie",
+          "Poślubić bogatą dziedziczkę",
           "Okradzenie funduszu emerytalnego Vauquer",
           "Ustawianie gry karcianej"
         ],
@@ -27096,13 +27096,13 @@
       {
         "id": "course_99_le_pere_goriot_balzac_q8",
         "type": "mcq",
-        "question": "Co mówi Rastignac z cmentarza Père-Lachaise na końcu powieści?",
-        "explanation": "Z Père-Lachaise po śmierci Goriota Rastignac rzucił wyzwanie Paryżowi: „Teraz jesteśmy my oboje!” »",
+        "question": "Co Rastignac rzuca Paryżowi z cmentarza Père-Lachaise na końcu powieści?",
+        "explanation": "Z Père-Lachaise, po śmierci Goriota, Rastignac rzuca Paryżowi wyzwanie: „À nous deux maintenant !”",
         "options": [
-          "„Teraz my oboje!” »",
-          "„Przeklinam cię, Parysie!” »",
-          "„Żegnaj, mój ojcze!»",
-          "„Vautrin miał rację! »"
+          "„À nous deux maintenant !”",
+          "„Przeklinam cię, Paryżu!”",
+          "„Żegnaj, ojcze!”",
+          "„Vautrin miał rację!”"
         ],
         "correctIndex": 0
       },
@@ -27237,7 +27237,7 @@
         "id": "course_9_l_empire_azteque_q9",
         "type": "chronological",
         "question": "Ułóż te etapy historii Azteków w porządku chronologicznym.",
-        "explanation": "Te cztery kamienie milowe obejmują okres od 1325 do 1521 roku: założenie stolicy, ekspansja cesarska, przybycie Hiszpanów, a następnie ostateczny upadek.",
+        "explanation": "Te cztery etapy obejmują okres od 1325 do 1521 roku: założenie stolicy, ekspansja cesarska, przybycie Hiszpanów, a następnie ostateczny upadek.",
         "items": [
           "Założenie Tenochtitlán nad jeziorem Texcoco",
           "Utworzenie Trójprzymierza",
