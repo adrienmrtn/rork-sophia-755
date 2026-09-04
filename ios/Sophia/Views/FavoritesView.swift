@@ -55,6 +55,7 @@ struct FavoritesView: View {
             .navigationBarHidden(true)
             .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
         }
+        .sophiaColorScheme()
     }
 
     private var header: some View {

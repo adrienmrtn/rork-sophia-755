@@ -47,6 +47,7 @@ struct FeedbackView: View {
             }
         }
         .presentationDragIndicator(.visible)
+        .sophiaSheetChrome()
         .onAppear {
             AnalyticsService.trackFeedbackOpened()
         }

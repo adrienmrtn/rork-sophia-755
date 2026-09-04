@@ -51,6 +51,7 @@ struct CourseImageFullscreenView: View {
                 }
             }
         }
+        .sophiaColorScheme()
     }
 
     private var zoomGesture: some Gesture {

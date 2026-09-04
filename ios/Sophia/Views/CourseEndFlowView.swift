@@ -154,6 +154,7 @@ struct CourseCompletedView: View {
                     revealAfterSubjectLevelUp()
                 }
             )
+            .sophiaColorScheme()
         }
         .fullScreenCover(isPresented: $showGlobalRankUp) {
             if let pendingGlobalRankUp {
@@ -167,8 +168,10 @@ struct CourseCompletedView: View {
                         revealActions()
                     }
                 )
+                .sophiaColorScheme()
             }
         }
+        .sophiaColorScheme()
         .onAppear {
             cachedThumb = CourseImageMap.loadImage(for: course.id)
             displayedXP = previousSubjectXP

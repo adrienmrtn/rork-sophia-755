@@ -63,6 +63,7 @@ struct ProfileView: View {
                     onResetOnboarding: onResetOnboarding,
                     onDismiss: { showSettings = false }
                 )
+                .sophiaColorScheme()
             }
             .fullScreenCover(isPresented: $showFavorites) {
                 FavoritesSheet(
@@ -70,6 +71,7 @@ struct ProfileView: View {
                     selectedCourse: $selectedCourse,
                     onDismiss: { showFavorites = false }
                 )
+                .sophiaColorScheme()
             }
             .fullScreenCover(isPresented: $showAllQuizzes) {
                 AllQuizzesView(
@@ -77,6 +79,7 @@ struct ProfileView: View {
                     selectedCourse: $selectedCourse,
                     onDismiss: { showAllQuizzes = false }
                 )
+                .sophiaColorScheme()
             }
             .fullScreenCover(isPresented: $showPendingGlobalRankUp) {
                 if let pending = progressManager.pendingGlobalRankUp() {
@@ -89,6 +92,7 @@ struct ProfileView: View {
                             showPendingGlobalRankUp = false
                         }
                     )
+                    .sophiaColorScheme()
                 }
             }
             .sheet(isPresented: $showEditHandle) {
@@ -97,6 +101,7 @@ struct ProfileView: View {
                         Task { await social.refreshAll() }
                     }
                     .presentationDetents([.medium])
+                    .sophiaSheetChrome()
                 }
             }
         }
@@ -824,6 +829,7 @@ struct AllQuizzesView: View {
             .scrollIndicators(.hidden)
         }
         .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
+        .sophiaColorScheme()
     }
 }
 
@@ -854,5 +860,6 @@ private struct FavoritesSheet: View {
         .onChange(of: selectedCourse) { _, newValue in
             if newValue != nil { onDismiss() }
         }
+        .sophiaColorScheme()
     }
 }

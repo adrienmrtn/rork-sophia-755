@@ -84,6 +84,7 @@ struct CollectionProgressCelebrationView: View {
             }
         }
         .onAppear { runSequence() }
+        .sophiaColorScheme()
     }
 
     private var coverCard: some View {
@@ -229,6 +230,7 @@ struct CollectionCompletedCelebrationView: View {
             }
         }
         .onAppear { runSequence() }
+        .sophiaColorScheme()
     }
 
     private var completedCard: some View {

@@ -77,6 +77,7 @@ struct EditHandleSheet: View {
                 draft = currentHandle
             }
         }
+        .sophiaSheetChrome()
     }
 
     private var sanitizedDraft: String {
@@ -179,6 +180,7 @@ struct AddFriendSheet: View {
                 }
             }
         }
+        .sophiaSheetChrome()
     }
 
     private var sanitized: String {
@@ -466,6 +468,7 @@ struct FriendsLeaderboardSection: View {
                 }
             }
             .presentationDetents([.medium])
+            .sophiaSheetChrome()
         }
         .sheet(isPresented: $showEditHandle) {
             if let handle = social.myHandle {
@@ -473,6 +476,7 @@ struct FriendsLeaderboardSection: View {
                     Task { await social.refreshAll() }
                 }
                 .presentationDetents([.medium])
+                .sophiaSheetChrome()
             }
         }
         .navigationDestination(item: $selectedFriend) { entry in

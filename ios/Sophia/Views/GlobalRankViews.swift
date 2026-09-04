@@ -67,6 +67,7 @@ struct GlobalRankUpCelebrationView: View {
             .scrollIndicators(.hidden)
         }
         .onAppear { runSequence() }
+        .sophiaColorScheme()
     }
 
     private var rankCard: some View {

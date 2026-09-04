@@ -98,6 +98,7 @@ struct AmbassadorView: View {
             }
         }
         .presentationDragIndicator(.visible)
+        .sophiaSheetChrome()
     }
 
     // MARK: - Header
