@@ -8,7 +8,7 @@ Sources (in priority order):
 Writes:
   android/app/src/main/assets/locales/{courses,course_index,collections,glossary}.{lang}.json
   android/app/src/main/assets/courses_v2/{lang}/{courseId}.json
-  android/app/src/main/assets/strings/{lang}.json   (new langs from ui_strings + overrides)
+  android/app/src/main/assets/strings/{lang}.json   (all 15 langs from AppLocalizable)
   android/app/src/main/assets/locales/courses.fr.json (+ collections/glossary) from Swift when present
 
 Course catalogs are slimmed after copy (no lesson bodies; lesson text lives in courses_v2).
@@ -159,43 +159,73 @@ def export_courses_v2(ref: str | None) -> dict[str, int]:
     return counts
 
 
+# Android-only notification channel copy — keep when rewriting from AppLocalizable.
+ANDROID_ONLY_KEYS = (
+    "notification.channel.name",
+    "notification.channel.description",
+)
+
+
 def export_ui_strings(ref: str | None) -> list[str]:
-    """Build strings/{lang}.json for NEW_LANGS from content ui_strings + overrides + EN fallback."""
+    """Write strings/{lang}.json for all 15 langs from AppLocalizable.swift.
+
+    AppLocalizable is the product UI source of truth (including SYS naturalness).
+    Android-only keys (notification channels) are preserved from the existing pack.
+    """
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from i18n_languages import SWIFT_CASE_BY_CODE
+    from translate_ui_strings import extract_dict_entries
+
     ANDROID_STRINGS.mkdir(parents=True, exist_ok=True)
+    localizable_raw = resolve_file(
+        ROOT / "ios" / "Sophia" / "Utilities" / "AppLocalizable.swift",
+        ref,
+        "ios/Sophia/Utilities/AppLocalizable.swift",
+    )
+    if localizable_raw is None:
+        print("  ERROR: AppLocalizable.swift not found")
+        return []
+    source = localizable_raw.decode("utf-8")
     written: list[str] = []
 
-    en_path = ANDROID_STRINGS / "en.json"
-    if not en_path.is_file():
-        print("  WARNING: android en.json missing — skipping UI string export")
-        return written
-    en = json.loads(en_path.read_text(encoding="utf-8"))
-
-    overrides_raw = resolve_file(
-        OVERRIDES_PATH,
-        ref,
-        "scripts/ui_string_overrides.json",
-    )
-    overrides_root = json.loads(overrides_raw.decode("utf-8")) if overrides_raw else {}
-
-    for lang in NEW_LANGS:
-        ui_raw = resolve_file(
-            CONTENT_LOCALES / lang / "ui_strings.json",
-            ref,
-            f"content/locales/{lang}/ui_strings.json",
-        )
-        if ui_raw is None:
-            print(f"  WARNING: no ui_strings for {lang}")
-            continue
-        ui = json.loads(ui_raw.decode("utf-8"))
-        merged = dict(en)
-        merged.update(ui)
-        lang_overrides = overrides_root.get(lang) or {}
-        merged.update(lang_overrides)
+    for lang in ALL_LANGS:
+        name = SWIFT_CASE_BY_CODE[lang]
+        table = dict(extract_dict_entries(source, name))
         out = ANDROID_STRINGS / f"{lang}.json"
-        write_json(out, merged)
+        if out.is_file():
+            existing = json.loads(out.read_text(encoding="utf-8"))
+            for key in ANDROID_ONLY_KEYS:
+                if key in existing and key not in table:
+                    table[key] = existing[key]
+        write_json(out, table)
         written.append(out.name)
-        print(f"  strings/{lang}.json — {len(merged)} keys")
+        print(f"  strings/{lang}.json — {len(table)} keys")
     return written
+
+
+def sync_fr_catalog_quizzes() -> None:
+    """iOS has no courses.fr.json; FR quizzes live in content/locales/fr/quizzes_v2.json."""
+    v2_path = CONTENT_LOCALES / "fr" / "quizzes_v2.json"
+    dest = ANDROID_LOCALES / "courses.fr.json"
+    if not v2_path.is_file() or not dest.is_file():
+        print("  skip FR quiz sync (missing source or dest)")
+        return
+    v2 = json.loads(v2_path.read_text(encoding="utf-8"))
+    by_id = {block["courseId"]: block["quiz"] for block in v2}
+    courses = json.loads(dest.read_text(encoding="utf-8"))
+    updated = 0
+    for course in courses:
+        quiz = by_id.get(course.get("id"))
+        if quiz is None:
+            continue
+        if course.get("quiz") != quiz:
+            course["quiz"] = quiz
+            updated += 1
+    dest.write_text(
+        json.dumps(courses, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    print(f"  FR catalog quizzes synced from quizzes_v2 ({updated} courses)")
 
 
 def main() -> int:
@@ -221,12 +251,15 @@ def main() -> int:
     copied = copy_locale_json(ref)
     print(f"  wrote {len(copied)} locale files")
 
+    print("Syncing French catalog quizzes from quizzes_v2…")
+    sync_fr_catalog_quizzes()
+
     print("Slimming course catalogs (drop lesson bodies, write course_index)…")
     sys.path.insert(0, str(ROOT / "scripts"))
     from slim_android_catalog import slim_locale_catalogs
     slim_locale_catalogs()
 
-    print("Exporting UI strings for new languages…")
+    print("Exporting UI strings from AppLocalizable (all 15 langs)…")
     strings = export_ui_strings(ref)
     print(f"  wrote {len(strings)} string packs")
 
@@ -270,7 +303,7 @@ def main() -> int:
     if missing_locales:
         print(f"ERROR: missing locale files: {missing_locales[:12]}…")
         return 1
-    for lang in NEW_LANGS:
+    for lang in ALL_LANGS:
         if not (ANDROID_STRINGS / f"{lang}.json").is_file():
             print(f"ERROR: missing strings/{lang}.json")
             return 1
