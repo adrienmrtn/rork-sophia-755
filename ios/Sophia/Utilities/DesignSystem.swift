@@ -19,6 +19,14 @@ enum DS {
     /// App background — soft cool off-white / deep navy at night.
     static let uiCanvas = DSAdaptive.color(light: (0.969, 0.973, 0.980), dark: (0.071, 0.090, 0.129))
     static let canvas = Color(uiColor: uiCanvas)
+
+    /// Canvas resolved against an explicit scheme — use on modal chrome so the
+    /// sheet background is not sampled from a still-light presentation trait.
+    static func resolvedCanvas(for scheme: ColorScheme) -> Color {
+        let traits = UITraitCollection(userInterfaceStyle: scheme == .dark ? .dark : .light)
+        return Color(uiColor: uiCanvas.resolvedColor(with: traits))
+    }
+
     /// Primary surface (cards, panels).
     static let uiSurface = DSAdaptive.color(light: (1, 1, 1), dark: (0.118, 0.145, 0.192))
     static let surface = Color(uiColor: uiSurface)

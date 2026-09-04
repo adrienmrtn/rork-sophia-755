@@ -102,11 +102,12 @@ struct SettingsView: View {
                 Text(languageManager.text("settings.onboarding.alert.message"))
             }
             .sheet(isPresented: $showAccount) { AccountView() }
-            .sheet(isPresented: $showTerms) { TermsView() }
-            .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
+            .sheet(isPresented: $showTerms) { TermsView().sophiaSheetChrome() }
+            .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaSheetChrome() }
             .sheet(isPresented: $showFeedback) { FeedbackView(isPremium: store.isPremium) }
             .sheet(isPresented: $showAmbassador) { AmbassadorView() }
         }
+        .sophiaColorScheme()
     }
 
     // MARK: - Title

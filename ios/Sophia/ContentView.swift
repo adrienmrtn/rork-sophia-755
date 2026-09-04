@@ -114,6 +114,7 @@ struct ContentView: View {
                         }
                     }
                 )
+                .sophiaColorScheme()
             }
             .onChange(of: pendingCourse) { _, newValue in
                 if newValue == nil {
@@ -197,6 +198,7 @@ struct ContentView: View {
             ProgressConflictView(conflict: conflict) { keepLocal in
                 Task { await syncService.resolveConflict(keepLocal: keepLocal) }
             }
+            .sophiaSheetChrome()
         }
         .task {
             if auth.isSignedIn {

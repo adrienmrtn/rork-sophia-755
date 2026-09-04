@@ -64,6 +64,7 @@ struct GlossaryTermSheet: View {
         .presentationDragIndicator(.hidden)
         .presentationCornerRadius(28)
         .presentationBackground(cream)
+        .sophiaSheetChrome()
     }
 }
 

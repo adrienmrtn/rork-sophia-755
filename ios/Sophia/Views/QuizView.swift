@@ -136,6 +136,7 @@ struct QuizView: View {
                     revealAfterSubjectLevelUp()
                 }
             )
+            .sophiaColorScheme()
         }
         .fullScreenCover(isPresented: $showGlobalRankUpCelebration) {
             if let pendingGlobalRankUp {
@@ -150,6 +151,7 @@ struct QuizView: View {
                         revealXPContinueButton()
                     }
                 )
+                .sophiaColorScheme()
             }
         }
         .fullScreenCover(isPresented: $showCollectionProgress) {
@@ -170,6 +172,7 @@ struct QuizView: View {
                         }
                     }
                 }
+                .sophiaColorScheme()
             }
         }
         .fullScreenCover(isPresented: $showCollectionCompleted) {
@@ -191,6 +194,7 @@ struct QuizView: View {
                         }
                     }
                 )
+                .sophiaColorScheme()
             }
         }
         .fullScreenCover(isPresented: $showCollectionRankUp) {
@@ -208,6 +212,7 @@ struct QuizView: View {
                         }
                     }
                 )
+                .sophiaColorScheme()
             }
         }
         .onAppear {
@@ -221,6 +226,7 @@ struct QuizView: View {
                 AnalyticsService.trackQuizStarted(course: course)
             }
         }
+        .sophiaColorScheme()
     }
 
     private func shuffleAllQuestions() {

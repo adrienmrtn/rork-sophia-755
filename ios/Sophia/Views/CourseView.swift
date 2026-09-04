@@ -175,6 +175,7 @@ struct CourseView: View {
                     onDismissToHome()
                 }
             )
+            .sophiaColorScheme()
         }
         .onChange(of: currentIndex) { _, _ in
             let g = UIImpactFeedbackGenerator(style: .light)
@@ -230,6 +231,7 @@ struct CourseView: View {
                 appeared = true
             }
         }
+        .sophiaColorScheme()
     }
 
     private var headerBar: some View {

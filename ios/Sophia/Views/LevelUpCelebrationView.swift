@@ -84,6 +84,7 @@ struct LevelUpCelebrationView: View {
             }
         }
         .onAppear { runSequence() }
+        .sophiaColorScheme()
     }
 
     private func runSequence() {

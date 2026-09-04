@@ -14,8 +14,8 @@ struct HomeViewLegacy: View {
     @State private var topCardRotation: Double = 0
     @State private var cardAppeared: Bool = false
 
-    private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
-    private let ink = Color.black
+    private let cream = DS.canvas
+    private let ink = DS.ink
 
     private func performAutoSwipe() {
         let g = UIImpactFeedbackGenerator(style: .light)
@@ -120,7 +120,7 @@ struct HomeViewLegacy: View {
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
         .fixedSize(horizontal: true, vertical: false)
-        .background(Color.white, in: Capsule())
+        .background(DS.surface, in: Capsule())
         .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
     }
 

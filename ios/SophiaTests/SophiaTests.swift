@@ -38,6 +38,16 @@ struct AppearancePreferenceTests {
         #expect(AppearancePreference.system.preferredColorScheme == nil)
     }
 
+    @Test func presentedSchemeAlwaysResolvesAConcreteValue() {
+        #expect(AppearancePreference.dark.resolvedPresentedColorScheme() == .dark)
+        #expect(AppearancePreference.light.resolvedPresentedColorScheme() == .light)
+        let automatic = AppearancePreference.system.resolvedPresentedColorScheme()
+        let screenIsDark = UIScreen.main.traitCollection.userInterfaceStyle == .dark
+        #expect(automatic == (screenIsDark ? .dark : .light))
+        #expect(AppearancePreference.dark.presentedUserInterfaceStyle == .dark)
+        #expect(AppearancePreference.light.presentedUserInterfaceStyle == .light)
+    }
+
     @Test func preferencePersistsAcrossLaunches() {
         let suite = "sophia.appearance.tests.\(UUID().uuidString)"
         guard let defaults = UserDefaults(suiteName: suite) else {

@@ -51,6 +51,7 @@ struct AccountView: View {
                 Text(languageManager.text("account.delete.message"))
             }
         }
+        .sophiaSheetChrome()
     }
 
     // MARK: - Header
