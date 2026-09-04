@@ -592,9 +592,9 @@
         "explanation": "West Side Story ersätter Montagues och Capulets med Sharks and Jets-gängen.",
         "options": [
           "West Side Story",
-          "Fett",
+          "Grease",
           "Gudfadern",
-          "The Fury of Living"
+          "Ung rebell"
         ],
         "correctIndex": 0
       },
@@ -1731,8 +1731,8 @@
       {
         "id": "course_113_le_seigneur_des_anneaux_tolkien_q5",
         "type": "trueFalse",
-        "question": "Sant eller falskt: The Fellowship of the Ring samlar nio representanter för Midgårds fria folk.",
-        "explanation": "The Fellowship of the Ring har nio medlemmar som representerar Midgårds olika fria folk.",
+        "question": "Sant eller falskt: Ringens brödraskap samlar nio representanter för Midgårds fria folk.",
+        "explanation": "Ringens brödraskap har nio medlemmar som står för Midgårds olika fria folk.",
         "options": [
           "Sant",
           "Falskt"
@@ -2477,7 +2477,7 @@
         "options": [
           "Lamptändaren, som lyser upp världen för andra",
           "Kungen, som regerar över allt",
-          "The Conceited One, som gillar att bli beundrad",
+          "Den inbilske, som gillar att bli beundrad",
           "Affärsmannen, som räknar stjärnorna"
         ],
         "correctIndex": 0
@@ -2823,9 +2823,9 @@
         "explanation": "Medici, rika bankirer i Florens, finansierade massivt konstnärer genom beskydd för att etablera sin prestige.",
         "options": [
           "Medici",
-          "Borgias",
-          "Sforzas",
-          "The Estes"
+          "Borgia",
+          "Sforza",
+          "Esteätten"
         ],
         "correctIndex": 0
       },
@@ -3026,8 +3026,8 @@
         "question": "Placera dessa stadier av impressionismen i kronologisk ordning.",
         "explanation": "Dessa tre milstolpar sträcker sig från 1863 till 1886, från den första skandalen till slutet av gruppens kollektiva utställningar.",
         "items": [
-          "Skandalen med Manets Déjeuner sur l'herbe",
-          "Den första fristående utställningen på Nadar",
+          "Skandalen kring Manets Frukost i det gröna",
+          "Den första fristående utställningen hos Nadar",
           "Den sista av gruppens åtta utställningar"
         ]
       },
@@ -3566,9 +3566,9 @@
         "id": "course_127_le_surrealisme_dali_et_magritte_q5",
         "type": "mcq",
         "question": "Vilken mening skrev Magritte under en realistiskt målad pipa?",
-        "explanation": "I The Betrayal of Images påminner Magritte oss om att bilden av en pipa bara är ett tecken, inte själva objektet.",
+        "explanation": "I Bildernas förräderi påminner Magritte om att bilden av en pipa bara är ett tecken, inte själva föremålet.",
         "options": [
-          "Det här är inte ett rör",
+          "Detta är inte en pipa",
           "Bilden är en lögn",
           "Ingenting är verkligt",
           "Drömmen är sanningen"
@@ -3603,7 +3603,7 @@
         "id": "course_127_le_surrealisme_dali_et_magritte_q8",
         "type": "mcq",
         "question": "Vilket kollektivt spel uppfann surrealisterna för att skapa utan rationell kontroll?",
-        "explanation": "The Exquisite Corpse är ett spel där alla lägger till en mening eller en teckning utan att se det tidigare bidraget.",
+        "explanation": "Det utsökta liket är ett lek där var och en lägger till en mening eller en teckning utan att se det föregående bidraget.",
         "options": [
           "Det utsökta liket",
           "Collaget",
@@ -4509,9 +4509,9 @@
         "id": "course_134_l_opera_de_verdi_q5",
         "type": "mcq",
         "question": "Vilken fransk roman är La Traviata baserad på?",
-        "explanation": "La Traviata anpassar The Lady of the Camellias, som chockerar med sin samtida och tuberkulösa hjältinna.",
+        "explanation": "La Traviata bygger på Kameliadamen, som chockerar med sin samtida hjältinna som dör i tuberkulos.",
         "options": [
-          "The Lady of the Camellias av Alexandre Dumas fils",
+          "Kameliadamen av Alexandre Dumas d.y.",
           "Notre-Dame de Paris av Victor Hugo",
           "Samhällets olycksbarn av Victor Hugo",
           "Madame Bovary av Gustave Flaubert"
@@ -4966,7 +4966,7 @@
       {
         "id": "course_138_bach_et_la_musique_baroque_q5",
         "type": "mcq",
-        "question": "Vad bevisar The Well-Tempered Clavier tack vare lika temperament?",
+        "question": "Vad visar Det vältempererade klaveret tack vare den liksvävande temperaturen?",
         "explanation": "Tack vare lika temperament visar Bach att samma klaviatur kan spela på alla tonarter.",
         "options": [
           "Att ett klaviatur kan spela i alla tangenter",
@@ -5163,22 +5163,22 @@
         "explanation": "Napoleon möter både hertigen av Wellington och den preussiske marskalken Blücher.",
         "options": [
           "Wellington (brittisk) och Blücher (preussisk)",
-          "Nelson (brittisk) och Kutuzov (ryska)",
-          "Mack (österrikiska) och Alexander I (ryska)",
-          "Wellington (brittisk) och Francis II (österrikisk)"
+          "Nelson (brittisk) och Kutuzov (rysk)",
+          "Mack (österrikisk) och Alexander I (rysk)",
+          "Wellington (brittisk) och Frans II (österrikisk)"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_13_la_bataille_de_waterloo_1815_q3",
         "type": "mcq",
-        "question": "Vad var Napoleons ursprungliga plan före striden, kallad Centralpositionen?",
-        "explanation": "Napoleon vill placera sig mellan de två fiendearméerna och besegra dem efter varandra, innan de går samman.",
+        "question": "Vad var Napoleons ursprungliga plan före slaget, den så kallade centralställningen?",
+        "explanation": "Napoleon vill lägga sig mellan de två fiendearméerna och slå dem en i taget, innan de hinner förena sig.",
         "options": [
-          "Placera dig mellan Wellington och Blücher för att slå dem separat",
-          "Direkt attackera Bryssel",
+          "Lägg sig mellan Wellington och Blücher och slå dem var för sig",
+          "Anfalla Bryssel direkt",
           "Vänta på österrikiska förstärkningar",
-          "Omger Wellington vid havet"
+          "Innesluta Wellington från havet"
         ],
         "correctIndex": 0
       },
@@ -5186,7 +5186,7 @@
         "id": "course_13_la_bataille_de_waterloo_1815_q4",
         "type": "trueFalse",
         "question": "Sant eller falskt: Napoleon skickade marskalk Grouchy för att förfölja preussarna efter Ligny, och trodde att han hade satt dem ur spel.",
-        "explanation": "Napoleon trodde att preussarna neutraliserade sig efter Ligny och lösgjorde Grouchy med 33 000 man för att förfölja dem, ett misstag som skulle bli kostsamt.",
+        "explanation": "Efter Ligny trodde Napoleon att preussarna var slagna och skickade Grouchy med 33 000 man efter dem — ett dyrt misstag.",
         "options": [
           "Sant",
           "Falskt"
@@ -5209,8 +5209,8 @@
       {
         "id": "course_13_la_bataille_de_waterloo_1815_q6",
         "type": "mcq",
-        "question": "Vilken händelse utlöste den franska arméns panik och förvirring vid Waterloo?",
-        "explanation": "Kejsargardet sätts in som sista utväg, viker för första gången, och ropet ”Gardet retirerar!” förvandlar reträtten till flykt.",
+        "question": "Vad utlöste den franska arméns panik och upplösning vid Waterloo?",
+        "explanation": "Kejsargardet sätts in som sista utväg, viker för första gången, och ropet ”Gardet viker!” förvandlar reträtten till flykt.",
         "options": [
           "Det kejserliga gardets reträtt",
           "Napoleons död på slagfältet",
@@ -5235,8 +5235,8 @@
       {
         "id": "course_13_la_bataille_de_waterloo_1815_q8",
         "type": "chronological",
-        "question": "Placera dessa händelser under de hundra dagarna i kronologisk ordning.",
-        "explanation": "Dessa fyra etapper går från 1 mars till 22 juni 1815: återkomsten från ön Elba, Lignys delseger, Waterloo nederlag, sedan abdikationen.",
+        "question": "Lägg dessa händelser under de hundra dagarna i kronologisk ordning.",
+        "explanation": "De fyra stegen går från 1 mars till 22 juni 1815: återkomsten från Elba, delsegern vid Ligny, nederlaget vid Waterloo, sedan abdikationen.",
         "items": [
           "Napoleons landstigning nära Antibes",
           "Slaget vid Ligny",
@@ -5248,9 +5248,9 @@
         "id": "course_13_la_bataille_de_waterloo_1815_q9",
         "type": "mcq",
         "question": "Vad beslutade Wienkongressen efter Napoleons slutliga fall?",
-        "explanation": "Wienkongressen inför legitimitetsprincipen och återställer de kungliga dynastierna för att skapa en Europakonsert som upprätthåller freden fram till 1914.",
+        "explanation": "Wienkongressen slår fast legitimitetsprincipen och sätter kungahusen tillbaka på tronen, för en europeisk konsert som håller freden fram till 1914.",
         "options": [
-          "Sätter de kungliga dynastierna tillbaka på sina troner, Legitimitet",
+          "Sätta kungahusen tillbaka på tronen — legitimitetsprincipen",
           "Dela Frankrike i fyra kungadömen",
           "Avskaffa alla europeiska monarkier",
           "Ge Frankrikes krona till Wellington"
@@ -5268,10 +5268,10 @@
         "question": "I vilken region föddes bluesen i slutet av 1800-talet?",
         "explanation": "Bluesen föddes i nöden på bomullsfälten i Mississippi, i djupa södern.",
         "options": [
-          "The Deep South, i bomullsfälten i Mississippi",
-          "Endast hamnstäder i Louisiana",
-          "Den industriella norra USA",
-          "Texas Plains"
+          "Den djupa södern, på bomullsfälten i Mississippi",
+          "Enbart hamnstäderna i Louisiana",
+          "Det industriella norra USA",
+          "Slätterna i Texas"
         ],
         "correctIndex": 0
       },
@@ -5496,9 +5496,9 @@
         "id": "course_142_charlie_chaplin_et_le_cinema_muet_q1",
         "type": "mcq",
         "question": "Vilken uppfinning av bröderna Lumière, patenterad 1895, födde filmen som ett kollektivt spektakel?",
-        "explanation": "Bröderna Lumières Cinematograph, patenterad 1895, tillät den första betalda offentliga visningen i Paris.",
+        "explanation": "Bröderna Lumières kinematograf, patenterad 1895, gjorde den första betalda offentliga visningen i Paris möjlig.",
         "options": [
-          "The Cinematograph",
+          "Kinematografen",
           "Kinetoskopet",
           "Vitafonen",
           "Fonografen"
@@ -5611,9 +5611,9 @@
         "id": "course_143_orson_welles_et_citizen_kane_q1",
         "type": "mcq",
         "question": "Vilken radiohändelse 1938 fick Orson Welles till Hollywood?",
-        "explanation": "Den 30 oktober 1938 fick Welles människor att tro på en utomjordisk invasion med sin radioanpassning av The War of the Worlds, som väckte Hollywoods uppmärksamhet.",
+        "explanation": "Den 30 oktober 1938 fick Welles människor att tro på en utomjordisk invasion med sin radioanpassning av Världarnas krig, som väckte Hollywoods uppmärksamhet.",
         "options": [
-          "Hans anpassning av The War of the Worlds",
+          "Hans anpassning av Världarnas krig",
           "Hans produktion av Macbeth på teatern",
           "Hans första film för RKO",
           "En föreläsningsturné om film"
@@ -5698,7 +5698,7 @@
         "id": "course_143_orson_welles_et_citizen_kane_q8",
         "type": "mcq",
         "question": "Vilken fransk filmrörelse på 1950-talet gjorde Citizen Kane till en modell av regissören-författaren?",
-        "explanation": "På 1950-talet rehabiliterade kritiker och sedan franska New Wave filmen och gjorde den till en standard för regissören som kontrollerar allt.",
+        "explanation": "På 1950-talet rehabiliterade kritiker och sedan franska den nya vågen filmen och gjorde den till en standard för regissören som kontrollerar allt.",
         "options": [
           "Den nya vågen",
           "Silent cinema",
@@ -5713,7 +5713,7 @@
         "question": "Placera dessa stadier av Citizen Kane-berättelsen i kronologisk ordning.",
         "explanation": "Dessa tre milstolpar (1938, 1941, 1950-talet) spårar radiouppgången för Welles, filmens första misslyckande, sedan dess rehabilitering av europeiska kritiker.",
         "items": [
-          "The War of the Worlds radiobluff",
+          "Världarnas krig radiobluff",
           "Frisläppandet av Citizen Kane",
           "Återupptäckten av filmen av europeiska kritiker"
         ]
@@ -5726,13 +5726,13 @@
       {
         "id": "course_144_la_nouvelle_vague_francaise_q1",
         "type": "mcq",
-        "question": "Vilken kritisk recension, grundad 1951, blev idélaboratoriet för den nya vågen?",
-        "explanation": "Cahiers du cinéma, som grundades 1951 av André Bazin, samlade unga kritiker som skulle bli regissörer för New Wave.",
+        "question": "Vilken kritikertidskrift, grundad 1951, blev den nya vågens idélaboratorium?",
+        "explanation": "Cahiers du cinéma, grundad 1951 av André Bazin, samlade de unga kritiker som skulle bli den nya vågens regissörer.",
         "options": [
-          "The Cinema Notebooks",
-          "Syn & Ljud",
-          "Positiv",
-          "Fransk film"
+          "Cahiers du cinéma",
+          "Sight & Sound",
+          "Positif",
+          "Le Film français"
         ],
         "correctIndex": 0
       },
@@ -5752,7 +5752,7 @@
       {
         "id": "course_144_la_nouvelle_vague_francaise_q3",
         "type": "mcq",
-        "question": "Vilken François Truffaut-film triumferade i Cannes 1959 och lanserade New Wave?",
+        "question": "Vilken François Truffaut-film triumferade i Cannes 1959 och lanserade den nya vågen?",
         "explanation": "1959 triumferade Les Quatre Cents Coups av François Truffaut i Cannes och etablerade konstbiograf.",
         "options": [
           "De fyra hundra slagen",
@@ -5776,7 +5776,7 @@
       {
         "id": "course_144_la_nouvelle_vague_francaise_q5",
         "type": "mcq",
-        "question": "Vilken teknisk innovation gjorde det möjligt för New Wave-regissörer att lämna studiorna för att filma på gatorna i Paris?",
+        "question": "Vilken teknisk innovation gjorde det möjligt för den nya vågen-regissörer att lämna studiorna för att filma på gatorna i Paris?",
         "explanation": "Lättviktskameror som Éclair Caméflex och känsligare filmer gör det möjligt att fotografera i naturliga miljöer, utanför studior.",
         "options": [
           "Lättviktskameror som Éclair Caméflex",
@@ -5790,7 +5790,7 @@
         "id": "course_144_la_nouvelle_vague_francaise_q6",
         "type": "mcq",
         "question": "Vilken brasiliansk filmrörelse är direkt inspirerad av den nya vågens filmfrihet?",
-        "explanation": "Filmfriheten av New Wave inspirerade sedan Cinema Novo i Brasilien, sedan Dogme 95 i Danmark.",
+        "explanation": "Filmfriheten av den nya vågen inspirerade sedan Cinema Novo i Brasilien, sedan Dogme 95 i Danmark.",
         "options": [
           "Novo Cinema",
           "italiensk neorealism",
@@ -5802,7 +5802,7 @@
       {
         "id": "course_144_la_nouvelle_vague_francaise_q7",
         "type": "trueFalse",
-        "question": "Sant eller falskt: New Wave-regissörer spelade främst i studior, med sofistikerad artificiell belysning.",
+        "question": "Sant eller falskt: den nya vågen-regissörer spelade främst i studior, med sofistikerad artificiell belysning.",
         "explanation": "Tvärtom filmar de på kaféer, lägenheter och Paris gator, ofta i naturligt ljus.",
         "options": [
           "Sant",
@@ -5986,8 +5986,8 @@
       {
         "id": "course_146_hitchcock_et_le_suspense_q3",
         "type": "mcq",
-        "question": "Vilken teknik använder Hitchcock i The Rope (1948) för att simulera en film inspelad i en enda rörelse?",
-        "explanation": "Hitchcock gömmer snitten bakom en rygg eller en mörk möbel för att simulera en enda sekvens tagen i The Rope.",
+        "question": "Vilken teknik använder Hitchcock i Repet (1948) för att simulera en film tagen i ett svep?",
+        "explanation": "Hitchcock gömmer klippen bakom en rygg eller en mörk möbel för att låta Repet se ut som en enda tagning.",
         "options": [
           "En sekvens tagen med dolda snitt bakom ryggar eller möbler",
           "Det klassiska alternerande montaget",
@@ -6447,7 +6447,7 @@
         "id": "course_14_la_commune_de_paris_1871_q3",
         "type": "trueFalse",
         "question": "Sant eller falskt: Pariskommunen föddes direkt efter det franska nederlaget i det fransk-preussiska kriget.",
-        "explanation": "Tillfångatagandet av Napoleon III vid Sedan och den svältande belägringen av Paris skapade ett sammanhang av brott som ledde till kommunen.",
+        "explanation": "Napoleon III:s tillfångatagande vid Sedan och den svältande belägringen av Paris skapade brottet som ledde till kommunen.",
         "options": [
           "Sant",
           "Falskt"
@@ -6483,10 +6483,10 @@
       {
         "id": "course_14_la_commune_de_paris_1871_q6",
         "type": "mcq",
-        "question": "Vilken symbol för imperiet river kommunen ner?",
-        "explanation": "Vendôme-kolonnen, symbol för det första imperiet, revs av kommunen.",
+        "question": "Vilken symbol för kejsardömet lät kommunen riva?",
+        "explanation": "Vendôme-kolonnen, en symbol för det första kejsardömet, revs av kommunen.",
         "options": [
-          "Vendôme-kolumnen",
+          "Vendôme-kolonnen",
           "Triumfbågen",
           "Pantheon",
           "Eiffeltornet"
@@ -6507,33 +6507,33 @@
       {
         "id": "course_14_la_commune_de_paris_1871_q8",
         "type": "mcq",
-        "question": "Vad heter det slutliga förtrycket som sätter stopp för kommunen?",
-        "explanation": "Från 21 till 28 maj 1871 slog trupperna i Versailles ned upproret under Bloody Week.",
+        "question": "Vad kallas det sista slaget som krossade kommunen?",
+        "explanation": "Mellan 21 och 28 maj 1871 krossade Versailles-trupperna upproret under den blodiga veckan.",
         "options": [
-          "Blodig vecka",
+          "Den blodiga veckan",
           "De långa knivarnas natt",
-          "S:t Bartolomeusdagens massaker",
-          "Terrorn"
+          "Bartolomeinatten",
+          "Skräckväldet"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_14_la_commune_de_paris_1871_q9",
         "type": "chronological",
-        "question": "Placera dessa händelser i Pariskommunen i kronologisk ordning.",
-        "explanation": "Dessa fyra etapper sträcker sig från mars till maj 1871: upproret, tillkännagivandet av kommunen, sedan dess krossning under Bloody Week.",
+        "question": "Lägg dessa händelser i Pariskommunen i kronologisk ordning.",
+        "explanation": "De fyra stegen går från mars till maj 1871: upproret, kommunens utropande, sedan krossandet under den blodiga veckan.",
         "items": [
-          "Försöket att beslagta kanonerna vid Montmartre",
-          "Kommunens kungörelse",
-          "Starten på Bloody Week",
+          "Försöket att ta kanonerna vid Montmartre",
+          "Kommunen utropas",
+          "Den blodiga veckan börjar",
           "De sista striderna vid Père-Lachaise"
         ]
       },
       {
         "id": "course_14_la_commune_de_paris_1871_q10",
         "type": "numericSlider",
-        "question": "Ungefär hur många dör under Bloody Week?",
-        "explanation": "Dödssiffran från Bloody Week är mellan 10 000 och 30 000 dödsfall, enligt uppskattningar.",
+        "question": "Ungefär hur många dog under den blodiga veckan?",
+        "explanation": "Den blodiga veckan kostade enligt uppskattningar mellan 10 000 och 30 000 liv.",
         "correctValue": 20000.0,
         "sliderMin": 5000.0,
         "sliderMax": 50000.0,
@@ -6930,12 +6930,12 @@
       {
         "id": "course_153_la_creation_d_adam_michel_ange_q5",
         "type": "mcq",
-        "question": "Vad säger hela det sixtinska taket, av vilket The Creation of Adam bara är en panel?",
-        "explanation": "Hela taket berättar historien om Genesis, och The Creation of Adam är bara den mest fotograferade panelen.",
+        "question": "Vad berättar hela det sixtinska taket, där Adams skapelse bara är en panel?",
+        "explanation": "Hela taket berättar Första Mosebok, och Adams skapelse är bara den mest fotograferade panelen.",
         "options": [
-          "Genesis",
+          "Första Mosebok",
           "Kristi liv",
-          "romersk mytologi",
+          "Romersk mytologi",
           "Det antika Roms historia"
         ],
         "correctIndex": 0
@@ -7631,12 +7631,12 @@
       {
         "id": "course_15_la_belle_epoque_1871_1914_q1",
         "type": "mcq",
-        "question": "Vad betyder Belle Époque mellan 1871 och 1914?",
-        "explanation": "Belle Époque går från slutet av det fransk-preussiska kriget (1871) till utbrottet av första världskriget (1914), en period då människor trodde på vetenskap och framsteg.",
+        "question": "Vad avses med Belle Époque, mellan 1871 och 1914?",
+        "explanation": "Belle Époque sträcker sig från slutet av det fransk-preussiska kriget 1871 till första världskrigets utbrott 1914, en tid då många trodde på vetenskap och framsteg.",
         "options": [
-          "En period av relativ frid präglad av tro på framsteg",
+          "En relativt fredlig tid präglad av tro på framsteg",
           "Återuppbyggnadsåren efter andra världskriget",
-          "Napoleon III:s personliga regeringstid",
+          "Napoleon III:s personliga styre",
           "Franska revolutionens årtionde"
         ],
         "correctIndex": 0
@@ -7644,7 +7644,7 @@
       {
         "id": "course_15_la_belle_epoque_1871_1914_q2",
         "type": "trueFalse",
-        "question": "Sant eller falskt: uttrycket \"Belle Époque\" används av människor som upplevde det, före 1914.",
+        "question": "Sant eller falskt: uttrycket ”Belle Époque” användes av dem som levde då, före 1914.",
         "explanation": "Namnet dök upp först efter 1914: det var de överlevande från skyttegravarna som uppfann detta förlorade paradis, med krigets facit i hand.",
         "options": [
           "Sant",
@@ -7673,7 +7673,7 @@
         "options": [
           "Relativitetsteorin",
           "Evolutionsteorin",
-          "Germ teori",
+          "Bakterieteorin",
           "Kvantmekanik"
         ],
         "correctIndex": 0
@@ -7681,8 +7681,8 @@
       {
         "id": "course_15_la_belle_epoque_1871_1914_q5",
         "type": "numericSlider",
-        "question": "Vilket år öppnar världsutställningen i Paris, som lockar 50 miljoner besökare?",
-        "explanation": "Universella utställningen 1900 lockade 50 miljoner besökare och gjorde Paris till ett globalt uppvisningsfönster för framsteg.",
+        "question": "Vilket år öppnade världsutställningen i Paris som lockade 50 miljoner besökare?",
+        "explanation": "Världsutställningen 1900 lockade 50 miljoner besökare och gjorde Paris till ett skyltfönster för framstegen.",
         "correctValue": 1900.0,
         "sliderMin": 1871.0,
         "sliderMax": 1914.0,
@@ -7711,7 +7711,7 @@
           "10 till 12 timmar",
           "4 till 6 timmar",
           "6 till 8 timmar",
-          "14.00 till 16.00."
+          "14 till 16 timmar"
         ],
         "correctIndex": 0
       },
@@ -8795,12 +8795,12 @@
       {
         "id": "course_16_la_bataille_de_verdun_1916_q1",
         "type": "mcq",
-        "question": "Vad är kodnamnet som tyskarna gav till deras offensiv mot Verdun 1916?",
-        "explanation": "Operationen bär namnet Gericht, \"tribunalen\", vald av general Falkenhayn.",
+        "question": "Vilket kodnamn gav tyskarna offensiven mot Verdun 1916?",
+        "explanation": "Operationen heter Gericht, ”tribunalen”, ett namn som general Falkenhayn valde.",
         "options": [
           "Gericht",
           "Barbarossa",
-          "Fodral Blå",
+          "Fall Blau",
           "Michael"
         ],
         "correctIndex": 0
@@ -8809,12 +8809,12 @@
         "id": "course_16_la_bataille_de_verdun_1916_q2",
         "type": "mcq",
         "question": "Varför valde den tyske generalen Falkenhayn Verdun just för sin offensiv?",
-        "explanation": "Falkenhayn vill \"blöda Frankrike torrt\" genom att dra in det i en utmattningsstrid på en plats som den inte kan ge upp att försvara.",
+        "explanation": "Falkenhayn vill ”blöda Frankrike vitt” genom att locka in det i ett utnötningskrig om en plats som det inte kan släppa.",
         "options": [
-          "Eftersom Frankrike inte kan överge den utan att tappa ansiktet, vilket gör att den kan blöda torr",
-          "Eftersom Verdun är Frankrikes militärhuvudstad",
-          "Eftersom Verdun är den minst försvarade staden på fronten",
-          "För att britterna är stationerade där"
+          "Därför att Frankrike inte kan överge Verdun utan att tappa ansiktet, och då kan man blöda ut det",
+          "Därför att Verdun är Frankrikes militära huvudstad",
+          "Därför att Verdun är den minst försvarade staden vid fronten",
+          "Därför att britterna står där"
         ],
         "correctIndex": 0
       },
@@ -8843,26 +8843,26 @@
       {
         "id": "course_16_la_bataille_de_verdun_1916_q5",
         "type": "mcq",
-        "question": "Vilken roll har den heliga vägen under slaget vid Verdun?",
-        "explanation": "Voie Sacrée förbinder Bar-le-Duc med Verdun: nästan 6 000 lastbilar åker dit varje dag för att underhålla förnödenheter.",
+        "question": "Vilken roll hade den heliga vägen under slaget vid Verdun?",
+        "explanation": "Voie Sacrée, den heliga vägen, förbinder Bar-le-Duc med Verdun: nästan 6 000 lastbilar rullar där varje dag med förnödenheter.",
         "options": [
-          "Förse Verdun med män och utrustning från Bar-le-Duc",
+          "Förse Verdun med folk och materiel från Bar-le-Duc",
           "Evakuera civila till Paris",
-          "Anslut Verdun till Maginot-linjen",
-          "Transporterar tyska fångar bakåt"
+          "Knyta Verdun till Maginotlinjen",
+          "Köra tyska fångar bakåt"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_16_la_bataille_de_verdun_1916_q6",
         "type": "mcq",
-        "question": "Vad tillåter trupprotationssystemet, Noria, som Pétain införde?",
-        "explanation": "Tack vare Noria avlastas divisionerna regelbundet, så att omkring 70 % av den franska armén strider vid Verdun vid ett eller annat tillfälle.",
+        "question": "Vad gör trupprotationen, noria, som Pétain införde, möjlig?",
+        "explanation": "Tack vare norian avlöses divisionerna regelbundet, så att ungefär 70 procent av den franska armén strider vid Verdun någon gång.",
         "options": [
-          "Rotera divisioner snabbt för att begränsa tiden som spenderas längst fram",
-          "Ta brådskande in brittiska förstärkningar",
-          "Ersätt endast franska soldater med kolonialtrupper",
-          "Koncentrera en enda division under hela striden"
+          "Snurra divisionerna snabbt så att tiden vid fronten blir kortare",
+          "Kalla in brittiska förstärkningar i all hast",
+          "Byta ut franska soldater enbart mot kolonialtrupper",
+          "Hålla en enda division vid fronten hela slaget"
         ],
         "correctIndex": 0
       },
@@ -8894,7 +8894,7 @@
         "id": "course_16_la_bataille_de_verdun_1916_q9",
         "type": "mcq",
         "question": "Vad symboliserar handslaget mellan François Mitterrand och Helmut Kohl i Verdun 1984?",
-        "explanation": "Denna gest framför Douaumont ossuary gör Verdun till en symbol för fred mellan Frankrike och Tyskland.",
+        "explanation": "Gesten framför benhuset i Douaumont gör Verdun till en symbol för freden mellan Frankrike och Tyskland.",
         "options": [
           "Fransk-tysk försoning",
           "Undertecknandet av ett nytt militärfördrag",
@@ -10167,12 +10167,12 @@
         "id": "course_17_la_revolution_russe_1917_q1",
         "type": "mcq",
         "question": "Vad utlöste februarirevolutionen 1917 i Ryssland?",
-        "explanation": "Februarirevolutionen började med demonstrationer för bröd i Petrograd; arbetarna går ut på gatorna och garnisonen förbrödrar sig med dem.",
+        "explanation": "Februarirevolutionen börjar med bröddemonstrationer i Petrograd: arbeterskorna går ut på gatan och garnisonen sluter upp med dem.",
         "options": [
-          "Protester kopplade till brödbrist i Petrograd",
+          "Demonstrationer kopplade till brödbristen i Petrograd",
           "En militärkupp organiserad av Lenin",
           "Den ryska arméns totala nederlag mot Tyskland",
-          "En attack mot tsar Nicholas II"
+          "Ett attentat mot tsar Nikolaus II"
         ],
         "correctIndex": 0
       },
@@ -10180,7 +10180,7 @@
         "id": "course_17_la_revolution_russe_1917_q2",
         "type": "numericSlider",
         "question": "Hur många år hade Romanovdynastin regerat när Nikolaus II abdikerade i mars 1917?",
-        "explanation": "Abdikationen av Nicholas II den 2 mars 1917 satte stopp för 300 år av Romanovdynastins regeringstid.",
+        "explanation": "När Nikolaus II abdikerade den 2 mars 1917 tog 300 år av Romanovvälde slut.",
         "correctValue": 300.0,
         "sliderMin": 150.0,
         "sliderMax": 450.0,
@@ -10190,7 +10190,7 @@
       {
         "id": "course_17_la_revolution_russe_1917_q3",
         "type": "trueFalse",
-        "question": "Sant eller falskt: efter Nicholas II:s abdikation styr tydligt en enda makt Ryssland.",
+        "question": "Sant eller falskt: efter Nikolaus II:s abdikation styrdes Ryssland tydligt av en enda makt.",
         "explanation": "En \"dubbelmakt\" etablerades: den provisoriska regeringen på ena sidan, Petrogradsovjeten, ett råd av arbetare och soldater, på den andra.",
         "options": [
           "Sant",
@@ -10215,9 +10215,9 @@
         "id": "course_17_la_revolution_russe_1917_q5",
         "type": "mcq",
         "question": "Hur lyckades Lenin återvända till Ryssland 1917?",
-        "explanation": "Tyskland, som vill försvaga sin ryska fiende, organiserar Lenins återkomst från exil i ett \"ledat tåg\".",
+        "explanation": "Tyskland, som vill försvaga sin ryska fiende, ordnar Lenins hemkomst från exilen i ett plomberat tåg.",
         "options": [
-          "I ett förseglat tåg organiserat av Tyskland, som hoppas kunna försvaga Ryssland",
+          "I ett plomberat tåg som Tyskland ordnade, i hopp om att försvaga Ryssland",
           "Ombord på ett brittiskt fartyg",
           "Genom att korsa Sibirien i hemlighet",
           "Genom ett hemligt avtal med tsaren"
@@ -10240,12 +10240,12 @@
       {
         "id": "course_17_la_revolution_russe_1917_q7",
         "type": "chronological",
-        "question": "Placera dessa händelser under den ryska revolutionen i kronologisk ordning.",
+        "question": "Lägg dessa händelser i den ryska revolutionen i kronologisk ordning.",
         "explanation": "Dessa milstolpar sträcker sig från tsarismens fall i februari 1917 till grundandet av Sovjetunionen 1922.",
         "items": [
-          "Abdikation av Nicholas II",
+          "Nikolaus II abdikerar",
           "Lenins apriluppsatser",
-          "Fångst av Vinterpalatset",
+          "Stormningen av Vinterpalatset",
           "Freden i Brest-Litovsk",
           "Sovjetunionens födelse"
         ]
@@ -10253,7 +10253,7 @@
       {
         "id": "course_17_la_revolution_russe_1917_q8",
         "type": "mcq",
-        "question": "Vad håller Cheka, den bolsjevikiska politiska polisen, på att införa?",
+        "question": "Vad sätter Tjekan, bolsjevikernas politiska polis, i verket?",
         "explanation": "Cheka inledde terror mot motståndare till den nya makten, särskilt efter bolsjevikernas maktövertagande.",
         "options": [
           "En terrorpolitik mot motståndare",
@@ -10266,13 +10266,13 @@
       {
         "id": "course_17_la_revolution_russe_1917_q9",
         "type": "mcq",
-        "question": "Vilken ideologi grundade Sovjetunionen, född 1922?",
+        "question": "Vilken ideologi vilar Sovjetunionen, som föddes 1922, på?",
         "explanation": "Sovjetunionen är den första staten byggd på marxism-leninism, som kombinerar Marx idéer och Lenins metod.",
         "options": [
           "Marxism-leninism",
           "Ekonomisk liberalism",
-          "Tsarisk panslavism",
-          "rysk nationalism"
+          "Tsaristisk panslavism",
+          "Rysk nationalism"
         ],
         "correctIndex": 0
       }
@@ -11473,10 +11473,10 @@
         "question": "Ordna dessa stadier i Dionysos liv och hans kult.",
         "explanation": "Från dess födelse till teaterns födelse följer myten om Dionysos en tydlig utveckling mot medborgerlig konst.",
         "items": [
-          "Semele dör och Zeus fullbordar graviditeten av Dionysos i hans lår",
-          "Maenaderna går in i trans under riter till hans ära i bergen",
-          "Dithyrambens sång sjungs i kör under festivaler till hans ära",
-          "The Great Dionysia föder teater i Aten"
+          "Semele dör och Zeus fullbordar Dionysos havandeskap i sitt lår",
+          "Mainaderna går i trans under riterna till hans ära i bergen",
+          "Dityramben sjungs i kör under festerna till hans ära",
+          "De stora dionysierna ger upphov till teatern i Aten"
         ]
       }
     ]
@@ -11490,10 +11490,10 @@
         "question": "Vilken dag 1929 kraschade New York-börsen och utlöste den stora depressionen?",
         "explanation": "Den 24 oktober 1929, kallad svarta torsdagen, kollapsade New York-börsen och drog med sig världsekonomin.",
         "options": [
-          "24 oktober, \"Black Thursday\"",
+          "24 oktober, ”svarta torsdagen”",
           "1 januari, nyårsdagen",
-          "14 juli, fransk nationaldag",
-          "11 november, vapenstillestånd 1918"
+          "14 juli, Frankrikes nationaldag",
+          "11 november, vapenstilleståndet 1918"
         ],
         "correctIndex": 0
       },
@@ -11501,7 +11501,7 @@
         "id": "course_18_la_grande_depression_1929_q2",
         "type": "percentageSlider",
         "question": "Hur stor del av amerikanerna var arbetslösa på höjden av den stora depressionen?",
-        "explanation": "Omkring 25 % av amerikanerna finner sig själva arbetslösa under krisen.",
+        "explanation": "Omkring 25 procent av amerikanerna är arbetslösa under krisens värsta skede.",
         "correctValue": 25.0,
         "sliderMin": 0.0,
         "sliderMax": 100.0,
@@ -11511,13 +11511,13 @@
       {
         "id": "course_18_la_grande_depression_1929_q3",
         "type": "mcq",
-        "question": "Vilken mekanism underblåste den spekulativa bubblan från det rytande tjugotalet före kraschen?",
-        "explanation": "Vi lånar för att köpa aktier genom att satsa på deras uppgång: detta system med köp på marginal multiplicerar förlusterna när marknaden kollapsar.",
+        "question": "Vad drev den spekulativa bubblan under det glada 1920-talet före kraschen?",
+        "explanation": "Man lånar för att köpa aktier och räknar med att kursen stiger: det här köpet på marginal mångdubblar förlusterna när börsen rasar.",
         "options": [
-          "Köpa aktier med marginal, låna för att köpa värdepapper",
-          "Masstryck av pengar av staten",
-          "Den fortsatta nedgången i jordbrukspriserna",
-          "Förbudet mot konsumentkrediter"
+          "Aktieköp på marginal, där man lånar för att köpa papper",
+          "Att staten trycker pengar i stor skala",
+          "Att jordbrukspriserna sjunker stadigt",
+          "Ett förbud mot konsumentkrediter"
         ],
         "correctIndex": 0
       },
@@ -11535,8 +11535,8 @@
       {
         "id": "course_18_la_grande_depression_1929_q5",
         "type": "mcq",
-        "question": "Vilka är de \"bank runs\" som drabbade amerikanska banker efter kraschen?",
-        "explanation": "Panikslagna kunder skyndar sig att ta ut sina pengar, vilket gör att omkring 9 000 amerikanska banker går i konkurs.",
+        "question": "Vad är de ”bank runs” som slog mot amerikanska banker efter kraschen?",
+        "explanation": "Panikslagna kunder rusar för att ta ut sina pengar, och omkring 9 000 amerikanska banker går omkull.",
         "options": [
           "Vågor av kunder som tar ut sina pengar i panik",
           "Rån organiserade av gäng",
@@ -11551,10 +11551,10 @@
         "question": "Placera dessa händelser under den stora depressionen i kronologisk ordning.",
         "explanation": "Kraschen i oktober 1929 ledde till en kedja av bankkonkurser, sedan banade krisen vägen för Hitler och New Deal-svaret, båda i början av 1933.",
         "items": [
-          "Black Thursday på Wall Street",
+          "Svarta torsdagen på Wall Street",
           "En våg av bankkonkurser i USA",
           "Hitlers maktövertagande i Tyskland",
-          "Roosevelts lansering av New Deal"
+          "Roosevelt lanserar New Deal"
         ]
       },
       {
@@ -11587,7 +11587,7 @@
         "id": "course_18_la_grande_depression_1929_q9",
         "type": "mcq",
         "question": "Vilken politik lanserade Franklin D. Roosevelt för att svara på krisen?",
-        "explanation": "Roosevelt valdes 1932 och lanserade New Deal: stora verk, bankreglering och början av socialt skydd, för att återuppliva ekonomin.",
+        "explanation": "Roosevelt, vald 1932, lanserar New Deal: stora offentliga arbeten, bankreglering och början till socialt skydd, för att sätta fart på ekonomin.",
         "options": [
           "New Deal, som gör slut på laissez-faire och sätter fart på ekonomin via staten",
           "Kollektivisering av jordbruksmark",
@@ -12170,10 +12170,10 @@
         "question": "Ordna dessa stadier av Arthurlegenden.",
         "explanation": "Den Arthurianska cykeln följer en komplett bana: härlig grund, andlig strävan, förräderi avslöjat, sedan rikets slutliga fall.",
         "items": [
-          "Arthur tar bort Excalibur från klippan och grundar det runda bordet",
-          "The Quest for the Graal avslöjar att Lancelot inte är ren nog",
-          "Mordred avslöjar Lancelots och Guineveres affär",
-          "Slaget vid Camlann avslutar Arthurs regeringstid"
+          "Arthur drar Excalibur ur klippan och grundar det runda bordet",
+          "Graalsökandet visar att Lancelot inte är ren nog",
+          "Mordred avslöjar Lancelots och Gueneveres förhållande",
+          "Slaget vid Camlann gör slut på Arthurs styre"
         ]
       }
     ]
@@ -12465,7 +12465,7 @@
         "explanation": "Marco Polo är den västerländska parallellen till Sindbad: han beskriver Asien i fakta, där Sindbad målar upp det i underverk.",
         "options": [
           "Marco Polo",
-          "Christopher Columbus",
+          "Kristoffer Columbus",
           "Vasco da Gama",
           "Jules Verne"
         ],
@@ -12624,10 +12624,10 @@
       {
         "id": "course_19_la_bataille_de_stalingrad_1942_1943_q1",
         "type": "mcq",
-        "question": "Vad var det ursprungliga målet för den tyska \"Case Blue\"-offensiven, som inleddes 1942?",
-        "explanation": "Case Blue riktar sig först mot kaukasisk olja; Stalingrad är till en början bara ett sekundärt mål på vägen.",
+        "question": "Vad var det ursprungliga målet för den tyska offensiven Fall Blau 1942?",
+        "explanation": "Fall Blau siktar först på oljan i Kaukasus; Stalingrad är till en början bara ett sidomål längs vägen.",
         "options": [
-          "Att beslagta olja från Kaukasus",
+          "Ta oljan i Kaukasus",
           "Ta Moskva",
           "Invadera Storbritannien",
           "Erövra Sibirien"
@@ -12653,10 +12653,10 @@
         "question": "Vilken taktik påtvingade den sovjetiske general Chuikov sina trupper i ruinerna av Stalingrad?",
         "explanation": "Genom att förbli i mycket nära kontakt med fienden förhindrade sovjeterna tyskt artilleri och flygplan från att slå till utan att träffa sina egna trupper.",
         "options": [
-          "Håll dig inom 30 meter från fienden för att förhindra att tyskt artilleri slår till utan risk",
-          "Systematiskt dra dig tillbaka till andra sidan Volga",
-          "Attackera bara på natten",
-          "Förhandla lokal vapenvila med tyskarna"
+          "Hålla sig inom 30 meter från fienden så att tyskt artilleri inte kan skjuta utan att träffa egna",
+          "Systematiskt dra sig tillbaka till andra sidan Volga",
+          "Anfalla bara på natten",
+          "Förhandla fram lokala vapenvilor med tyskarna"
         ],
         "correctIndex": 0
       },
@@ -12675,7 +12675,7 @@
         "id": "course_19_la_bataille_de_stalingrad_1942_1943_q5",
         "type": "trueFalse",
         "question": "Sant eller falskt: Stalins order 227 tillåter sovjetiska soldater att fritt dra sig tillbaka inför fienden.",
-        "explanation": "Order 227, tvärtom, ålägger \"Inte ett steg tillbaka\", vilket förbjuder varje uttag utan en order.",
+        "explanation": "Tvärtom: order 227 kräver ”inte ett steg tillbaka” och förbjuder varje reträtt utan order.",
         "options": [
           "Sant",
           "Falskt"
@@ -12689,7 +12689,7 @@
         "explanation": "Den 19 november 1942 slöt Operation Uranus sitt grepp om de dåligt försvarade tyska flankerna och omringade omkring 300 000 man.",
         "options": [
           "Operation Uranus",
-          "Operation Case Blå",
+          "Operation Fall Blau",
           "Operation Barbarossa",
           "Operation Gericht"
         ],
@@ -12725,10 +12725,10 @@
         "question": "Placera dessa stadier av slaget vid Stalingrad i kronologisk ordning.",
         "explanation": "Från sommaren 1942 till 2 februari 1943 gick striden från en triumferande tysk offensiv till den fullständiga förintelsen av 6:e armén.",
         "items": [
-          "Lansering av den tyska Case Blue-offensiven",
+          "Den tyska offensiven Fall Blau inleds",
           "Närkamp i stadsruinerna",
-          "Inringning av 6:e armén under operation Uranus",
-          "General Paulus kapitulation"
+          "6:e armén inringas under operation Uranus",
+          "General Paulus kapitulerar"
         ]
       }
     ]
@@ -14000,8 +14000,8 @@
         "options": [
           "Manhattanprojektet",
           "Operation Overlord",
-          "Treenighetsprojektet",
-          "Operation Case Blå"
+          "Trinityprojektet",
+          "Operation Fall Blau"
         ],
         "correctIndex": 0
       },
@@ -14022,7 +14022,7 @@
         "id": "course_20_hiroshima_et_nagasaki_1945_q3",
         "type": "mcq",
         "question": "Vilken bombplan släppte bomben \"Little Boy\" på Hiroshima den 6 augusti 1945?",
-        "explanation": "Enola Gay släppte Little Boy på Hiroshima den 6 augusti 1945, klockan 8:15.",
+        "explanation": "Enola Gay släpper Little Boy över Hiroshima den 6 augusti 1945 klockan 8.15.",
         "options": [
           "Enola Gay",
           "Bockscaren",
@@ -25993,7 +25993,7 @@
         "options": [
           "Släktens framtid, med en politisk kostnad för staden",
           "Korints rykte utomlands",
-          "The Throne of Colchis",
+          "Kolchis tron",
           "Apollons tempel"
         ],
         "correctIndex": 0
@@ -26522,11 +26522,11 @@
       {
         "id": "course_95_les_confessions_rousseau_q2",
         "type": "mcq",
-        "question": "Vilken litterär genre uppfann The Confessions?",
+        "question": "Vilken litterär genre uppfann Bekännelserna?",
         "explanation": "Bekännelserna markerar födelsen av den moderna självbiografin: \"jag\" blir föremål för litterär undersökning.",
         "options": [
-          "Modern självbiografi",
-          "Epistolaryromanen",
+          "Den moderna självbiografin",
+          "Brevromanen",
           "Den filosofiska berättelsen",
           "Den klassiska tragedin"
         ],
@@ -26598,7 +26598,7 @@
       {
         "id": "course_95_les_confessions_rousseau_q8",
         "type": "mcq",
-        "question": "Vilken roll spelar naturen i The Confessions?",
+        "question": "Vilken roll spelar naturen i Bekännelserna?",
         "explanation": "För Rousseau blir landskapet spegeln av en ny känslighet, som kommer att bli grunden för romantiken.",
         "options": [
           "Det blir spegeln av en ny känslighet, vid romantikens källa",
@@ -27114,7 +27114,7 @@
         "options": [
           "Karaktärernas återkomst från en roman till en annan",
           "Den inre monologen",
-          "Epistolaryromanen",
+          "brevromanen",
           "Berättelse i första person"
         ],
         "correctIndex": 0

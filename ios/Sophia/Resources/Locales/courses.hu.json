@@ -1804,7 +1804,7 @@
         "id": "course_13_la_bataille_de_waterloo_1815_q3",
         "type": "mcq",
         "question": "Mi volt Napóleon kezdeti terve a csata előtt, az úgynevezett központi állás?",
-        "explanation": "Napóleon a két ellenséges sereg közé akarja helyezni magát, és egymás után legyőzni őket, mielőtt egyesülnének.",
+        "explanation": "Napóleon a két ellenséges sereg közé akar kerülni, és egymás után akarja leverni őket, mielőtt egyesülnének.",
         "options": [
           "Wellington és Blücher közé ékelődni, hogy külön-külön győzze le őket",
           "Közvetlenül támadni Brüsszelt",
@@ -1817,7 +1817,7 @@
         "id": "course_13_la_bataille_de_waterloo_1815_q4",
         "type": "trueFalse",
         "question": "Igaz vagy hamis: Napóleon elküldte Grouchy marsallt, hogy üldözze a poroszokat Ligny után, azt gondolva, hogy kiszorította őket a harcból.",
-        "explanation": "Napóleon úgy gondolta, hogy a poroszok semlegesítették Lignyt, és leválasztották Grouchyt 33 000 emberrel, hogy üldözzék őket, ami költséges hiba lenne.",
+        "explanation": "Ligny után Napóleon azt hitte, hogy a poroszok kiestek a harcból, és 33 000 emberrel Grouchyt küldte utánuk — ez drága tévedés volt.",
         "options": [
           "Igaz",
           "Hamis"
@@ -1840,13 +1840,13 @@
       {
         "id": "course_13_la_bataille_de_waterloo_1815_q6",
         "type": "mcq",
-        "question": "Milyen esemény váltotta ki a pánikot és a francia hadsereg kitörését Waterloonál?",
-        "explanation": "Az utolsó lehetőségként elindított Birodalmi Gárda először vonul vissza, és a kiáltás „A gárda visszavonul!” » a visszavonulást rohanássá alakítja.",
+        "question": "Milyen esemény váltotta ki a pánikot és a francia sereg megfutamodását Waterloonál?",
+        "explanation": "Utolsó mentsvárként vetik be a Császári Gárdát; először hátrál, és a kiáltás „A gárda visszavonul!” rohammá változtatja a visszavonulást.",
         "options": [
           "A császári gárda visszavonulása",
           "Napóleon halála a csatatéren",
           "Az osztrák erősítés érkezése",
-          "A Nagy Akkumulátor megsemmisülése"
+          "A Grande Batterie megsemmisülése"
         ],
         "correctIndex": 0
       },
@@ -1870,21 +1870,21 @@
         "explanation": "Ez a négy szakasz 1815. március 1-től június 22-ig tart: a visszatérés Elba szigetéről, Ligny részleges győzelme, Waterloo veresége, majd a trónról való lemondás.",
         "items": [
           "Napóleon partraszállása Antibes közelében",
-          "A Ligny-i csata",
-          "A Waterloo-i csata",
-          "Napóleon végső lemondását"
+          "A lignyi csata",
+          "A waterlooi csata",
+          "Napóleon végső lemondása"
         ]
       },
       {
         "id": "course_13_la_bataille_de_waterloo_1815_q9",
         "type": "mcq",
         "question": "Mit döntött a bécsi kongresszus Napóleon végső bukása után?",
-        "explanation": "A bécsi kongresszus a legitimitás elvét érvényesíti, visszaállítva a királyi dinasztiákat, hogy egy Európa-koncert kerete legyen, amely 1914-ig fenntartja a békét.",
+        "explanation": "A bécsi kongresszus a legitimitás elvét kényszeríti ki, visszaülteti a királyi dinasztiákat, és egy európai koncertet hoz létre, amely 1914-ig tartja a békét.",
         "options": [
-          "A királyi dinasztiák visszahelyezése trónjukra, Legitimitás",
-          "Oszd fel Franciaországot négy királyságra",
+          "A királyi dinasztiák visszahelyezése a trónra, a legitimitás",
+          "Franciaország felosztása négy királyságra",
           "Az összes európai monarchia felszámolása",
-          "Adja át Franciaország koronáját Wellingtonnak"
+          "Add át Franciaország koronáját Wellingtonnak"
         ],
         "correctIndex": 0
       }
@@ -1942,8 +1942,8 @@
         "explanation": "Március 18-án Thiers le akarta foglalni a Montmartre-ban tárolt ágyúkat, de a tömeg összebarátkozott a katonákkal, és Thiersnek ki kellett ürítenie Párizst.",
         "options": [
           "Thiers kísérlete a nemzeti gárda ágyúinak lefoglalására Montmartre-ban",
-          "Napóleon kivégzése III",
-          "A Louvre tűz",
+          "III. Napóleon kivégzése",
+          "A Louvre égése",
           "A porosz csapatok érkezése Párizsba"
         ],
         "correctIndex": 0
@@ -2028,17 +2028,17 @@
         "question": "Tedd időrendi sorrendbe a párizsi kommün eseményeit.",
         "explanation": "Ez a négy szakasz 1871 márciusától májusig tart: a felkelés, a kommün kikiáltása, majd a leverés a Véres Héten.",
         "items": [
-          "A Montmartre-i ágyúk elfoglalására tett kísérlet",
-          "A kommün kiáltványa",
-          "A Bloody Week kezdete",
-          "Az utolsó csaták Père-Lachaise-nál"
+          "Kísérlet a montmartre-i ágyúk lefoglalására",
+          "A kommün kikiáltása",
+          "A Véres hét kezdete",
+          "Az utolsó harcok a Père-Lachaise-nál"
         ]
       },
       {
         "id": "course_14_la_commune_de_paris_1871_q10",
         "type": "numericSlider",
-        "question": "Körülbelül hány ember hal meg a Bloody Week alatt?",
-        "explanation": "Becslések szerint a Bloody Week halálos áldozatainak száma 10 000 és 30 000 között van.",
+        "question": "Körülbelül hányan haltak meg a Véres héten?",
+        "explanation": "A Véres hét áldozatainak számát 10 000 és 30 000 közé teszik.",
         "correctValue": 20000.0,
         "sliderMin": 5000.0,
         "sliderMax": 50000.0,
@@ -2092,7 +2092,7 @@
       {
         "id": "course_15_la_belle_epoque_1871_1914_q2",
         "type": "trueFalse",
-        "question": "Igaz vagy hamis: a „Belle Époque” kifejezést olyan emberek használják, akik 1914 előtt átélték.",
+        "question": "Igaz vagy hamis: a „Belle Époque” kifejezést azok használták, akik 1914 előtt átélték.",
         "explanation": "A név csak 1914 után jelent meg: a lövészárkok túlélői találták ki ezt az elveszett paradicsomot, a háború utólagos visszatekintésével.",
         "options": [
           "Igaz",
@@ -2116,13 +2116,13 @@
       {
         "id": "course_15_la_belle_epoque_1871_1914_q4",
         "type": "mcq",
-        "question": "Albert Einstein 1905-ben publikált tudományos felfedezése forradalmasította a tér és idő fogalmát?",
+        "question": "Albert Einstein melyik, 1905-ben közölt tudományos felfedezése forgatta fel a tér és az idő fogalmát?",
         "explanation": "Einstein 1905-ben publikálta a relativitáselméletet, megkérdőjelezve a tér és idő klasszikus fogalmait.",
         "options": [
           "A relativitáselmélet",
-          "Az evolúció elmélete",
-          "Csíraelmélet",
-          "Kvantummechanika"
+          "Az evolúcióelmélet",
+          "A csíraelmélet",
+          "A kvantummechanika"
         ],
         "correctIndex": 0
       },
@@ -2156,10 +2156,10 @@
         "question": "Naponta hány órát dolgoztak a munkások a Belle Époque idején?",
         "explanation": "A haladás ablakai mögött a dolgozók gyakran napi 10-12 órát dolgoznak, valódi szociális védelem nélkül.",
         "options": [
-          "10-12 óra",
-          "4-6 óra",
-          "6-8 óra",
-          "14-16 óráig."
+          "10–12 óra",
+          "4–6 óra",
+          "6–8 óra",
+          "14–16 óra"
         ],
         "correctIndex": 0
       },
@@ -2219,7 +2219,7 @@
         "options": [
           "Gericht",
           "Barbarossa",
-          "Kék tok",
+          "Fall Blau",
           "Michael"
         ],
         "correctIndex": 0
@@ -2228,11 +2228,11 @@
         "id": "course_16_la_bataille_de_verdun_1916_q2",
         "type": "mcq",
         "question": "Falkenhayn német tábornok miért éppen Verdunt választotta offenzívájára?",
-        "explanation": "Falkenhayn ki akarja vérezni Franciaországot azáltal, hogy a lemorzsolódás csatájába vonja egy olyan helyen, amelynek védelmét nem tudja feladni.",
+        "explanation": "Falkenhayn ki akarja véreztetni Franciaországot: egy olyan helyre csalja, amelyet nem adhat fel, és ott őrli fel.",
         "options": [
-          "Mert Franciaország nem hagyhatja el anélkül, hogy ne veszítse el arcát, ami lehetővé teszi, hogy kiszáradjon",
+          "Mert Franciaország nem adhatja fel anélkül, hogy arcot veszítene, így ki lehet véreztetni",
           "Mert Verdun Franciaország katonai fővárosa",
-          "Mert Verdun a legkevésbé védett város a fronton",
+          "Mert Verdun a front legkevésbé védett városa",
           "Mert ott állomásoznak a britek"
         ],
         "correctIndex": 0
@@ -2263,12 +2263,12 @@
         "id": "course_16_la_bataille_de_verdun_1916_q5",
         "type": "mcq",
         "question": "Mi a Szent Út szerepe a verduni csata során?",
-        "explanation": "A Voie Sacrée összeköti Bar-le-Ducot Verdunnal: naponta közel 6000 teherautó utazik oda, hogy fenntartsák az utánpótlást.",
+        "explanation": "A Voie Sacrée, a Szent Út, Bar-le-Ducot köti össze Verdunnel: naponta közel 6000 teherautó viszi az utánpótlást.",
         "options": [
-          "A Verdunt lássa el Bar-le-Duc férfiakkal és felszerelésekkel",
-          "Civilek evakuálása Párizsba",
-          "Csatlakoztassa a Verdunt a Maginot vonalhoz",
-          "Német foglyok szállítása a hátba"
+          "Verdunt emberekkel és felszereléssel ellátni Bar-le-Ducból",
+          "A civileket Párizsba evakuálni",
+          "Verdunt a Maginot-vonalhoz kapcsolni",
+          "A német foglyokat hátravinni"
         ],
         "correctIndex": 0
       },
@@ -2278,10 +2278,10 @@
         "question": "Mit tesz lehetővé a Pétain által bevezetett csapatrotációs rendszer, a Noria?",
         "explanation": "A Noriának köszönhetően a hadosztályokat rendszeresen felmentik, így a francia hadsereg mintegy 70%-a Verdunnál harcol egy-egy alkalommal.",
         "options": [
-          "Gyorsan forgassa a hadosztályokat, hogy korlátozza az elöl töltött időt",
-          "Sürgősen hozzon brit erősítést",
-          "Cserélje le a francia katonákat csak gyarmati csapatokkal",
-          "Koncentrálj egyetlen hadosztályt az egész csata alatt"
+          "Gyorsan forgatni a hadosztályokat, hogy kevesebb időt töltsenek a fronton",
+          "Sürgősen brit erősítést hozni",
+          "Cseréld le a francia katonákat csak gyarmati csapatokra",
+          "Egyetlen hadosztályt tartani a fronton a csata végéig"
         ],
         "correctIndex": 0
       },
@@ -2364,10 +2364,10 @@
         "question": "Mi robbantotta ki az 1917. februári forradalmat Oroszországban?",
         "explanation": "A februári forradalom a kenyérért tüntetéssel kezdődött Petrográdban; a munkások kivonulnak az utcára, és a helyőrség testvéri viszonyt köt velük.",
         "options": [
-          "A petrolgrádi kenyérhiánnyal kapcsolatos tiltakozások",
+          "A petrográdi kenyérhiányhoz kötődő tüntetések",
           "Lenin által szervezett katonai puccs",
-          "Az orosz hadsereg teljes veresége Németország ellen",
-          "Miklós cár elleni támadás II"
+          "Az orosz hadsereg teljes veresége Németországgal szemben",
+          "Merénylet II. Miklós cár ellen"
         ],
         "correctIndex": 0
       },
@@ -2410,7 +2410,7 @@
         "id": "course_17_la_revolution_russe_1917_q5",
         "type": "mcq",
         "question": "Hogyan sikerült Leninnek 1917-ben visszatérnie Oroszországba?",
-        "explanation": "Az orosz ellenségét meggyengíteni kívánó Németország „ólomvonattal” szervezi meg Lenin visszatérését a száműzetésből.",
+        "explanation": "Németország, hogy meggyengítse orosz ellenfelét, ólomzáras vonaton hozza haza Lenint a száműzetésből.",
         "options": [
           "Az Oroszország meggyengítését remélő Németország által szervezett lezárt vonatban",
           "Egy brit hajó fedélzetén",
@@ -2425,9 +2425,9 @@
         "question": "Ki szervezte Lenin mellett az 1917. októberi bolsevik felkelést?",
         "explanation": "Leon Trockij, a kiváló szervező Leninnel együtt készítette elő az ideiglenes kormányt megdöntő felkelést.",
         "options": [
-          "Leon Trockij",
+          "Lev Trockij",
           "Alekszandr Kerenszkij",
-          "Miklós II",
+          "II. Miklós",
           "Grigorij Raszputyin"
         ],
         "correctIndex": 0
@@ -2438,10 +2438,10 @@
         "question": "Tedd időrendi sorrendbe az orosz forradalom eseményeit.",
         "explanation": "Ezek a mérföldkövek a cárizmus 1917 februári bukásától a Szovjetunió 1922-es megalapításáig terjednek.",
         "items": [
-          "Miklós lemondását II",
+          "II. Miklós lemondása",
           "Lenin áprilisi tézisei",
-          "A Téli Palota elfoglalása",
-          "Breszt-litovszki béke",
+          "A Téli Palota ostroma",
+          "A breszt-litovszki béke",
           "A Szovjetunió születése"
         ]
       },
@@ -2451,8 +2451,8 @@
         "question": "Mit tesz a Cseka, a bolsevik politikai rendőrség?",
         "explanation": "A cseka terrort indított az új hatalom ellenfelei ellen, különösen a bolsevik hatalomátvétel után.",
         "options": [
-          "Az ellenfelekkel szembeni terrorpolitika",
-          "Ingyenes szavazási rendszer",
+          "Terrorpolitika az ellenfelekkel szemben",
+          "Szabad választási rendszer",
           "Békés földreform",
           "Nemzetközi törvényszék"
         ],
@@ -2534,8 +2534,8 @@
       {
         "id": "course_18_la_grande_depression_1929_q3",
         "type": "mcq",
-        "question": "Milyen mechanizmus táplálta a Roaring Twenties spekulatív buborékát a baleset előtt?",
-        "explanation": "Részvények vásárlására úgy veszünk fel kölcsönt, hogy azok emelkedésére tippelünk: ez az árrés vásárlási rendszer a piac összeomlásakor megsokszorozza a veszteségeket.",
+        "question": "Milyen mechanizmus táplálta a vad huszas évek spekulációs buborékát a krach előtt?",
+        "explanation": "Részvényt vesznek kölcsönből, arra téve, hogy az árfolyam emelkedik: ez a fedezeti vásárlás sokszorozza a veszteséget, ha a piac összeomlik.",
         "options": [
           "Részvények vásárlása árrés mellett, hitelfelvétel értékpapírok vásárlására",
           "Az állam tömeges pénznyomtatása",
@@ -2558,13 +2558,13 @@
       {
         "id": "course_18_la_grande_depression_1929_q5",
         "type": "mcq",
-        "question": "Melyek azok a „bankfutások”, amelyek az összeomlás után sújtották az amerikai bankokat?",
+        "question": "Mik azok a bankrohamok, amelyek a krach után az amerikai bankokat sújtották?",
         "explanation": "A pánikba esett ügyfelek rohannak kivenni a pénzüket, aminek következtében körülbelül 9000 amerikai bank csődöt mondott.",
         "options": [
-          "Hullámok az ügyfelek, akik pánikszerűen veszik ki a pénzüket",
+          "Pánikba esett ügyfelek hullámai, akik kiveszik a pénzüket",
           "Bandák által szervezett rablások",
           "Az állam által előírt kötelező ellenőrzések",
-          "Kényszerösszevonások nagy bankok között"
+          "Kényszerösszevonások a nagybankok között"
         ],
         "correctIndex": 0
       },
@@ -2658,13 +2658,13 @@
       {
         "id": "course_19_la_bataille_de_stalingrad_1942_1943_q1",
         "type": "mcq",
-        "question": "Mi volt az 1942-ben indított német „Case Blue” offenzíva kezdeti célja?",
-        "explanation": "A Case Blue először a kaukázusi olajat célozza meg; Sztálingrád kezdetben csak másodlagos cél az úton.",
+        "question": "Mi volt az 1942-es német Fall Blau offenzíva eredeti célja?",
+        "explanation": "A Fall Blau először a kaukázusi olajat célozza; Sztálingrád kezdetben csak másodlagos cél az úton.",
         "options": [
-          "Olaj elfoglalása a Kaukázusból",
-          "Vegyük Moszkvát",
+          "Elfoglalni a kaukázusi olajat",
+          "Elfoglalni Moszkvát",
           "Megtámadni Nagy-Britanniát",
-          "Hódítsd meg Szibériát"
+          "Meghódítani Szibériát"
         ],
         "correctIndex": 0
       },
@@ -2687,18 +2687,18 @@
         "question": "Milyen taktikát alkalmazott Csujkov szovjet tábornok Sztálingrád romjain?",
         "explanation": "Az ellenséggel való nagyon szoros kapcsolatban maradva a szovjetek megakadályozták, hogy a német tüzérséget és repülőgépeket saját csapataik eltalálása nélkül csapjanak le.",
         "options": [
-          "Maradjon 30 méteren belül az ellenségtől, hogy megakadályozza a német tüzérség kockázat nélküli csapását",
-          "Szisztematikusan vonulj vissza a Volga másik oldalára",
-          "Támadás csak éjszaka",
-          "Tárgyaljon a helyi fegyverszünetről a németekkel"
+          "30 méteren belül maradni az ellenségtől, hogy a német tüzérség ne lőhessen a sajátjai nélkül",
+          "Szisztematikusan visszavonulni a Volga túloldalára",
+          "Csak éjjel támadni",
+          "Helyi fegyverszünetet kötni a németekkel"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_19_la_bataille_de_stalingrad_1942_1943_q4",
         "type": "numericSlider",
-        "question": "Hány napig ellenállt a német támadásoknak a Pavlov-ház, amelyet néhány szovjet katona tartott fogva?",
-        "explanation": "A Pavlov-ház 58 napig ellenállt a német támadásoknak, és a szovjet ellenállás szimbólumává vált.",
+        "question": "Hány napig állta a német rohamokat a Pavlov-ház, amelyet egy maroknyi szovjet katona tartott?",
+        "explanation": "A Pavlov-ház 58 napig állta a német rohamokat, és a szovjet ellenállás jelképévé vált.",
         "correctValue": 58.0,
         "sliderMin": 10.0,
         "sliderMax": 120.0,
@@ -2723,7 +2723,7 @@
         "explanation": "1942. november 19-én az Uranus hadművelet lezárta a szorítását a rosszul védett német szárnyakon, és körülbelül 300 000 embert vett körül.",
         "options": [
           "Uránusz hadművelet",
-          "Működési tok kék",
+          "Fall Blau hadművelet",
           "Barbarossa hadművelet",
           "Gericht hadművelet"
         ],
@@ -2759,9 +2759,9 @@
         "question": "Állítsd időrendi sorrendbe a sztálingrádi csata e szakaszait.",
         "explanation": "1942 nyarától 1943. február 2-ig a csata a diadalmas német offenzívától a 6. hadsereg teljes megsemmisítéséig fajult.",
         "items": [
-          "A német Case Blue offenzíva indítása",
+          "A német Fall Blau offenzíva indítása",
           "Közelharc a város romjai között",
-          "A 6. hadsereg bekerítése az Uranus hadművelet során",
+          "A 6. hadsereg bekerítése az Uránusz hadművelet során",
           "Paulus tábornok kapitulációja"
         ]
       }
@@ -2807,10 +2807,10 @@
         "question": "Melyik 1942-ben indított amerikai projekt fejlesztette ki az első atombombát?",
         "explanation": "Az 1942-ben elindított Manhattan Project körülbelül 130 000 embert és 2 milliárd dollárt mozgósított az atombomba kifejlesztésére.",
         "options": [
-          "A Manhattan projekt",
+          "A Manhattan-terv",
           "Overlord hadművelet",
-          "A Szentháromság projekt",
-          "Működési tok kék"
+          "A Trinity-projekt",
+          "Fall Blau hadművelet"
         ],
         "correctIndex": 0
       },
@@ -2820,23 +2820,23 @@
         "question": "Melyik teszt, amelyet 1945. július 16-án hajtottak végre az új-mexikói sivatagban, igazolta először az atombombát?",
         "explanation": "Az 1945. július 16-i Trinity-teszt volt a történelem első nukleáris robbanása, és megerősítette, hogy a bomba működött.",
         "options": [
-          "A Szentháromság teszt",
-          "A kisfiú teszt",
-          "A Fat Man teszt",
-          "A manhattani teszt"
+          "A Trinity-teszt",
+          "A Little Boy-teszt",
+          "A Fat Man-teszt",
+          "A Manhattan-teszt"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_20_hiroshima_et_nagasaki_1945_q3",
         "type": "mcq",
-        "question": "Melyik bombázó dobta le a „kisfiú” bombát Hirosimára 1945. augusztus 6-án?",
-        "explanation": "Az Enola Meleg 1945. augusztus 6-án 8 óra 15 perckor ledobta a Little Boyt Hirosimára.",
+        "question": "Melyik bombázó dobta le a „Little Boy” bombát Hirosimára 1945. augusztus 6-án?",
+        "explanation": "Az Enola Gay 1945. augusztus 6-án 8 óra 15-kor dobta le a Little Boyt Hirosimára.",
         "options": [
-          "Az Enola meleg",
+          "Az Enola Gay",
           "A Bockscar",
           "A Memphis Belle",
-          "Szent Lajos szelleme"
+          "A Spirit of St. Louis"
         ],
         "correctIndex": 0
       },
@@ -7419,10 +7419,10 @@
         "question": "Ma mi a fő kihívás az elektromosság körül a tanfolyam szerint?",
         "explanation": "A kihívás már nem csak az elektromos áram előállítása, hanem az is, hogy ezt tisztán és megbízhatóan tegyük egy teljesen összekapcsolt világ érdekében.",
         "options": [
-          "Készítse elő tisztán és megbízhatóan",
-          "Kitalálni, hogyan kell tárolni a levegőben",
-          "Találjatok ki egy új típusú atomot",
-          "Cserélje ki a villámhárítót"
+          "Tisztán és megbízhatóan előállítani",
+          "Kitalálni, hogyan tárolják a levegőben",
+          "Új atomtípust feltalálni",
+          "Cseréld ki a villámhárítót"
         ],
         "correctIndex": 0
       }
@@ -12647,7 +12647,7 @@
         "options": [
           "A nemzetség jövője, politikai költséggel a város számára",
           "Corinth hírneve külföldön",
-          "Colchis trónja",
+          "Kolkhisz trónja",
           "Apollón temploma"
         ],
         "correctIndex": 0
@@ -14808,9 +14808,9 @@
         "explanation": "A West Side Story a Montague-okat és a Capulet-eket a Sharks és a Jets bandákkal helyettesíti.",
         "options": [
           "West Side Story",
-          "Zsír",
+          "Grease",
           "A keresztapa",
-          "Az élet dühe"
+          "A lázadó"
         ],
         "correctIndex": 0
       },
@@ -18241,9 +18241,9 @@
         "id": "course_127_le_surrealisme_dali_et_magritte_q5",
         "type": "mcq",
         "question": "Milyen mondatot írt Magritte egy valósághűen festett pipa alá?",
-        "explanation": "A képek árulásában Magritte arra emlékeztet bennünket, hogy a pipa képe csak jel, nem maga a tárgy.",
+        "explanation": "A képek árulása című képen Magritte arra emlékeztet, hogy a pipa képe csak jel, nem maga a tárgy.",
         "options": [
-          "Ez nem cső",
+          "Ez nem pipa",
           "A kép hazugság",
           "Semmi sem igazi",
           "Az álom az igazság"
@@ -18278,12 +18278,12 @@
         "id": "course_127_le_surrealisme_dali_et_magritte_q8",
         "type": "mcq",
         "question": "Milyen kollektív játékot találtak ki a szürrealisták, hogy racionális kontroll nélkül alkossanak?",
-        "explanation": "A The Exquisite Corpse egy olyan játék, ahol mindenki hozzáfűz egy mondatot vagy rajzot anélkül, hogy látná az előző hozzájárulást.",
+        "explanation": "A cadavre exquis olyan játék, ahol mindenki hozzáfűz egy mondatot vagy rajzot anélkül, hogy látná az előző hozzájárulást.",
         "options": [
-          "A gyönyörű holttest",
+          "A cadavre exquis",
           "A kollázs",
-          "Szitanyomás",
-          "A történés"
+          "A szitanyomás",
+          "A happening"
         ],
         "correctIndex": 0
       },
@@ -19286,11 +19286,11 @@
         "id": "course_134_l_opera_de_verdi_q5",
         "type": "mcq",
         "question": "Melyik francia regényen alapul a Traviata?",
-        "explanation": "A La Traviata adaptálja a Kaméliák hölgyét, amely kortárs és tuberkulózisos hősnőjével sokkol.",
+        "explanation": "A Traviata A kaméliás hölgyet dolgozza fel, és kortárs, tüdővészes hősnőjével sokkol.",
         "options": [
-          "A kaméliák hölgye – Alexandre Dumas fils",
-          "Victor Hugo párizsi Notre-Dame",
-          "Les Miserables, Victor Hugo",
+          "A kaméliás hölgy, Alexandre Dumas fia",
+          "A párizsi Notre-Dame, Victor Hugo",
+          "A nyomorultak, Victor Hugo",
           "Madame Bovary, Gustave Flaubert"
         ],
         "correctIndex": 0
@@ -20404,7 +20404,7 @@
         "id": "course_142_charlie_chaplin_et_le_cinema_muet_q1",
         "type": "mcq",
         "question": "A Lumière fivérek melyik találmánya, amelyet 1895-ben szabadalmaztattak, hozta létre a mozit, mint kollektív látványt?",
-        "explanation": "Az 1895-ben szabadalmaztatott Lumière fivérek Cinematográfja lehetővé tette az első fizetős nyilvános vetítést Párizsban.",
+        "explanation": "A Lumière fivérek 1895-ben szabadalmaztatott kinematográfja tette lehetővé az első fizetős nyilvános vetítést Párizsban.",
         "options": [
           "A Kinematográf",
           "A kinetoszkóp",
@@ -20699,10 +20699,10 @@
         "question": "Melyik, 1951-ben alapított kritikai szemle lett az Új Hullám ötletek laboratóriuma?",
         "explanation": "Az André Bazin által 1951-ben alapított Cahiers du cinéma fiatal kritikusokat hozott össze, akik az Új Hullám rendezői lettek.",
         "options": [
-          "A mozi jegyzetfüzetek",
-          "Látás és hang",
-          "Pozitív",
-          "Francia Film"
+          "Cahiers du cinéma",
+          "Sight & Sound",
+          "Positif",
+          "Le Film français"
         ],
         "correctIndex": 0
       },
@@ -21018,8 +21018,8 @@
       {
         "id": "course_146_hitchcock_et_le_suspense_q3",
         "type": "mcq",
-        "question": "Milyen technikát alkalmaz Hitchcock A kötélben (1948), hogy szimuláljon egy filmet egyetlen mozdulattal?",
-        "explanation": "Hitchcock elrejti a vágásokat egy hát vagy egy sötét bútor mögé, hogy szimulálja a The Rope egyetlen felvételét.",
+        "question": "Milyen technikát használ Hitchcock A kötélben (1948), hogy egyetlen felvételnek tűnjön a film?",
+        "explanation": "Hitchcock egy hát mögé vagy egy sötét bútor mögé rejti a vágásokat, hogy A kötél egyetlen beállításnak látszódjon.",
         "options": [
           "Egy sorozat rejtett vágásokkal a háta vagy a bútorok mögött",
           "A klasszikus váltakozó montázs",
@@ -34427,10 +34427,10 @@
         "question": "Mit kínál az egyetemes alapjövedelem?",
         "explanation": "Az univerzális alapjövedelem azt javasolja, hogy minden állampolgárnak fix összeget fizessenek, feltételek nélkül, hogy biztosítsák az életet egy olyan gazdaságban, ahol a munka megszakításossá válik.",
         "options": [
-          "Fizessen fix összeget minden állampolgárnak, feltételek nélkül",
-          "Csökkentse a munkaidőt heti 4 napra",
-          "Cserélje le az összes munkát mesterséges intelligenciával",
-          "A tőkeadók megszüntetése"
+          "Feltétel nélkül fix összeget fizetni minden állampolgárnak",
+          "Heti 4 napra csökkenteni a munkaidőt",
+          "Cseréld le az összes munkát mesterséges intelligenciára",
+          "Eltörölni a tőkeadókat"
         ],
         "correctIndex": 0
       },
