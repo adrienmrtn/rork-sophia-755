@@ -273,13 +273,15 @@ fun OnboardingV2Screen(
                         }
                     },
                     onSkip = {
-                        goTo(
-                            if (storeViewModel.shouldShowTrialSteps()) {
-                                OnboardingStep.Trial
-                            } else {
-                                OnboardingStep.Reminder
-                            },
-                        )
+                        if (DeviceCapabilities.allowsLoginBypass()) {
+                            goTo(
+                                if (storeViewModel.shouldShowTrialSteps()) {
+                                    OnboardingStep.Trial
+                                } else {
+                                    OnboardingStep.Reminder
+                                },
+                            )
+                        }
                     },
                 )
                 OnboardingStep.Trial -> TrialStepsStep(language) { goTo(OnboardingStep.Reminder) }

@@ -41,6 +41,14 @@ struct OnboardingV2Login: View {
             VStack(spacing: 16) {
                 AuthProvidersView(onSignedIn: onSignedIn)
                     .padding(.horizontal, 24)
+                #if DEBUG && targetEnvironment(simulator)
+                Button("Skip login · simulator only") {
+                    onSignedIn()
+                }
+                .font(DS.sans(.footnote, .semibold))
+                .foregroundStyle(OV2.inkTertiary)
+                .padding(.top, 4)
+                #endif
                 legalNote.padding(.horizontal, 32)
             }
             .padding(.bottom, 40)

@@ -330,6 +330,7 @@ private fun OnboardingAnnualPaywall(
                 onClick = {
                     purchasePackage(
                         context = context,
+                        language = language,
                         pkg = annual,
                         storeViewModel = storeViewModel,
                         onStart = { purchasing = true },
@@ -437,6 +438,7 @@ private fun ComparisonPaywall(
                     val pkg = if (yearlySelected) annual else monthly
                     purchasePackage(
                         context = context,
+                        language = language,
                         pkg = pkg,
                         storeViewModel = storeViewModel,
                         onStart = { purchasing = true },
@@ -499,6 +501,7 @@ private fun CourseUnlockPaywall(
         onPurchase = {
             purchasePackage(
                 context = context,
+                language = language,
                 pkg = annual,
                 storeViewModel = storeViewModel,
                 onStart = { purchasing = true },
@@ -613,6 +616,7 @@ private fun TrainingPaywall(
         onPurchase = {
             purchasePackage(
                 context = context,
+                language = language,
                 pkg = annual,
                 storeViewModel = storeViewModel,
                 onStart = { purchasing = true },
@@ -727,6 +731,7 @@ private fun QuizPaywall(
         onPurchase = {
             purchasePackage(
                 context = context,
+                language = language,
                 pkg = annual,
                 storeViewModel = storeViewModel,
                 onStart = { purchasing = true },
@@ -983,6 +988,7 @@ private fun DiscountPaywall(
                     onClick = {
                         purchasePackage(
                             context = context,
+                            language = language,
                             pkg = annual,
                             storeViewModel = storeViewModel,
                             onStart = { purchasing = true },
@@ -1104,6 +1110,7 @@ private fun perMonthLabel(
 
 private fun purchasePackage(
     context: android.content.Context,
+    language: AppLanguage,
     pkg: Package?,
     storeViewModel: StoreViewModel,
     onStart: () -> Unit,
@@ -1117,7 +1124,7 @@ private fun purchasePackage(
             storeViewModel.setPremiumDebug(true)
             onPurchased()
         } else {
-            onError("Offre indisponible")
+            onError(StringStore.text(context, "paywall.unavailable.title", language))
         }
         return
     }

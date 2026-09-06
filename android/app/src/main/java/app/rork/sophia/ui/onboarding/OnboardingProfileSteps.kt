@@ -64,6 +64,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
@@ -817,11 +818,13 @@ internal fun LoginStep(language: AppLanguage, onGoogle: () -> Unit, onSkip: () -
             modifier = Modifier.fillMaxWidth().ov2Reveal(240),
         ) {
             OnboardingCta("Continue with Google", onGoogle)
-            Text(
-                text = StringStore.text(context, "home.skip", language),
-                style = OV2.caption.copy(fontSize = 15.sp),
-                modifier = Modifier.clickable(onClick = onSkip).padding(8.dp),
-            )
+            if (DeviceCapabilities.allowsLoginBypass()) {
+                Text(
+                    text = "Skip login · emulator only",
+                    style = OV2.caption.copy(fontSize = 15.sp),
+                    modifier = Modifier.clickable(onClick = onSkip).padding(8.dp),
+                )
+            }
             Spacer(Modifier.height(12.dp))
             Text(
                 text = StringStore.text(context, "auth.legal.prefix", language),

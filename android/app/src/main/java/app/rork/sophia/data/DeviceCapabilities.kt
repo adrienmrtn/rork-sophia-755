@@ -3,6 +3,7 @@ package app.rork.sophia.data
 import android.app.ActivityManager
 import android.content.Context
 import android.os.Build
+import app.rork.sophia.BuildConfig
 
 /**
  * Runtime profile for the phone actually running the app.
@@ -48,6 +49,13 @@ object DeviceCapabilities {
 
     /** Go phones + AVD/ranchu: skip Coil and heavy overlays. */
     fun isConstrained(context: Context): Boolean = isLowRam(context) || isEmulator()
+
+    /**
+     * Login bypass for local QA. `BuildConfig.DEBUG` is compile-time false in release,
+     * so R8 strips the true branch from Play builds; [isEmulator] also keeps it off
+     * a physical phone running a debug APK.
+     */
+    fun allowsLoginBypass(): Boolean = BuildConfig.DEBUG && isEmulator()
 
     fun analyticsProps(context: Context): Map<String, Any?> = mapOf(
         "low_ram" to isLowRam(context),
