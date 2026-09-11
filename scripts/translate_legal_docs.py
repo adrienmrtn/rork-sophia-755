@@ -33,11 +33,40 @@ CASE_NAME = {code: name for code, name in SWIFT_CASE_BY_CODE.items() if code != 
 SWIFT_PROP = {code: name.capitalize() for code, name in CASE_NAME.items()}
 
 
+#: Names the engine must not transcribe. "Sophia" came back as "София" in
+#: Russian and "Sofija" in Serbian before these were hidden behind tokens.
+KEEP_VERBATIM = [
+    "Google Play Store", "Google Play", "Play Console", "App Store", "Apple ID",
+    "UserDefaults", "RevenueCat", "Supabase", "Firebase", "Mixpanel", "TikTok",
+    "Sophia", "Apple", "Google", "iOS", "iPhone", "Android",
+]
+
+
+def _protect_names(text: str) -> tuple[str, list[str]]:
+    kept: list[str] = []
+    for term in KEEP_VERBATIM:
+        pattern = re.compile(rf"\b{re.escape(term)}\b")
+        while True:
+            match = pattern.search(text)
+            if not match:
+                break
+            kept.append(match.group(0))
+            text = f"{text[:match.start()]}ZZK{len(kept) - 1}ZZ{text[match.end():]}"
+    return text, kept
+
+
+def _restore_names(text: str, kept: list[str]) -> str:
+    for index, value in enumerate(kept):
+        text = re.sub(rf"ZZ\s*K\s*{index}\s*ZZ", value.replace("\\", "\\\\"), text, flags=re.I)
+    return re.sub(r"ZZ\s*K?\s*\d*\s*ZZ", "", text, flags=re.I)
+
+
 def _translate_one(target: str, text: str) -> str:
-    out = mt_backend.translate_one(text, target, source="en")
-    if out == text and re.search(r"[A-Za-zÀ-ÿ]", text) and len(text) > 40:
+    protected, kept = _protect_names(text)
+    out = mt_backend.translate_one(protected, target, source="en")
+    if out == protected and re.search(r"[A-Za-zÀ-ÿ]", text) and len(text) > 40:
         raise RuntimeError(f"MT returned the source unchanged: {text[:60]!r}")
-    return out
+    return _restore_names(out, kept)
 
 
 def load_en() -> dict:
