@@ -16,6 +16,7 @@ from pathlib import Path
 
 from i18n_languages import SWIFT_CASE_BY_CODE
 from naturalness_ui_data import LANGS, build_overrides
+from naturalness_ui_v2 import PATCH as V2_PATCH
 from translate_ui_strings import (
     encode_swift_string,
     extract_dict_entries,
@@ -86,6 +87,11 @@ def highlight_ok(overrides: dict[str, dict[str, str]], lang: str) -> list[str]:
 
 def apply(check_only: bool = False) -> int:
     overrides = build_overrides()
+    # Round 2 supersedes round 1 wherever both touch a key, so re-running this
+    # script can never revert scripts/naturalness_ui_v2.py.
+    for lang, patch in V2_PATCH.items():
+        if lang in overrides:
+            overrides[lang].update(patch)
     source = LOCALIZABLE.read_text(encoding="utf-8")
 
     errors: list[str] = []
