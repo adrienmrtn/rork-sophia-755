@@ -4,7 +4,7 @@
 iOS still ships full `courses.{lang}.json`. Android reads lesson text from
 `courses_v2/{lang}/{id}.json` and only needs metadata + quiz in the catalog.
 
-Writes (all 15 languages):
+Writes (every app language):
   locales/course_index.{lang}.json  — id/title/description/subject/subcategory
   locales/courses.{lang}.json       — same + quiz, lessons stripped
 
@@ -17,13 +17,12 @@ import json
 import sys
 from pathlib import Path
 
+from i18n_languages import ALL_CONTENT_LANGS
+
 ROOT = Path(__file__).resolve().parents[1]
 LOCALES = ROOT / "android" / "app" / "src" / "main" / "assets" / "locales"
 
-LANGS = [
-    "fr", "en", "es", "de", "pt", "it",
-    "tr", "pl", "ro", "nl", "el", "sv", "hu", "bg", "cs",
-]
+LANGS = list(ALL_CONTENT_LANGS)
 
 INDEX_KEYS = ("id", "title", "description", "subject", "subcategory")
 

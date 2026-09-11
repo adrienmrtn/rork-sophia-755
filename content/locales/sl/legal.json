@@ -1,0 +1,111 @@
+{
+  "terms": [
+    {
+      "id": "1",
+      "title": "1. Sprejemanje pogojev",
+      "body": "S prenosom, namestitvijo ali uporabo aplikacije Sophia (»aplikacija«) se strinjate, da vas zavezujejo ti pogoji storitve (»pogoji«). Če ne sprejemate teh pogojev, prosimo, ne uporabljajte aplikacije."
+    },
+    {
+      "id": "2",
+      "title": "2. Opis storitve",
+      "body": "Sophia je izobraževalna mobilna aplikacija za splošno znanje, ki ponuja tečaje, kvize in interaktivno vsebino. Aplikacija je na voljo v sistemu iOS in lahko ponuja brezplačno vsebino ter premium naročnine."
+    },
+    {
+      "id": "3",
+      "title": "3. Račun in uporaba",
+      "body": "Ustvarjanje računa (prek Apple ali Google) je na voljo za shranjevanje vašega napredka in sinhronizacijo v vaših napravah. Novi uporabniki se prijavijo med vkrcanjem; obstoječi uporabniki lahko kadar koli ustvarijo račun v nastavitvah. Brez računa so vaši podatki o napredku shranjeni lokalno v vaši napravi in ponovna namestitev aplikacije lahko povzroči izgubo. Svoj račun lahko kadar koli izbrišete v nastavitvah."
+    },
+    {
+      "id": "4",
+      "title": "4. Naročnine in nakupi",
+      "body": "Sophia ponuja premium naročnine (mesečne in letne) prek Applove trgovine App Store. Cene so prikazane v aplikaciji in se lahko razlikujejo glede na državo. Plačilo se zaračuna na vaš Apple ID račun ob potrditvi nakupa. Naročnine se samodejno obnovijo, razen če je samodejno podaljšanje izklopljeno vsaj 24 ur pred koncem trenutnega obdobja. Naročnine lahko upravljate in prekličete v nastavitvah računa App Store."
+    },
+    {
+      "id": "5",
+      "title": "5. Brezplačni preizkus",
+      "body": "Novim uporabnikom bo morda na voljo brezplačna preskusna različica. Ko se preskusno obdobje konča, se naročnina samodejno spremeni v plačljivo naročnino, razen če je prej prekinete. Vsak neizkoriščen del brezplačnega preizkusa se izgubi ob nakupu naročnine."
+    },
+    {
+      "id": "6",
+      "title": "6. Intelektualna lastnina",
+      "body": "Vsa vsebina aplikacije (besedilo, ilustracije, dizajn, logotip, tečaji, kvizi) je zaščitena z avtorskimi pravicami in ostaja izključna last družbe Sophia. Kakršna koli nepooblaščena reprodukcija, distribucija ali uporaba je strogo prepovedana."
+    },
+    {
+      "id": "7",
+      "title": "7. Omejitev odgovornosti",
+      "body": "Vsebina v aplikaciji je na voljo v izobraževalne in informativne namene. Sophia ne jamči za točnost, popolnost ali ažurnost predstavljenih informacij. Aplikacija je na voljo \"takšna, kot je\" brez kakršnega koli jamstva."
+    },
+    {
+      "id": "8",
+      "title": "8. Spremembe pogojev",
+      "body": "Sophia si pridržuje pravico, da kadar koli spremeni te pogoje. O pomembnih spremembah bodo uporabniki obveščeni. Nadaljnja uporaba aplikacije po spremembah pomeni sprejemanje novih pogojev."
+    },
+    {
+      "id": "9",
+      "title": "9. Veljavno pravo",
+      "body": "Te pogoje ureja francoska zakonodaja. Vsi spori v zvezi z razlago ali izvajanjem teh pogojev se predložijo pristojnim sodiščem."
+    },
+    {
+      "id": "10",
+      "title": "10. Kontakt",
+      "body": "Za vsa vprašanja v zvezi s temi pogoji se lahko obrnete na nas prek App Store ali po e-pošti na naslovu, navedenem na naši strani App Store."
+    }
+  ],
+  "privacy": [
+    {
+      "id": "1",
+      "title": "1. Uvod",
+      "body": "Ta pravilnik o zasebnosti opisuje, kako Sophia (»mi«, »naša« ali »aplikacija«) zbira, uporablja in ščiti vaše osebne podatke. Zavezani smo varovanju vaše zasebnosti in transparentnemu ravnanju z vašimi podatki."
+    },
+    {
+      "id": "2",
+      "title": "2. Zbrani podatki",
+      "body": "Sophia je zasnovana z namenom minimiziranja podatkov. App stores v vaši napravi:\n\n- Vaš napredek pri tečajih in kvizih\n- Vaše želje (zanimanja, cilji)\n- Vaš niz (zaporedni dnevi uporabe)\n- Vaši najljubši tečaji\n\nTi lokalni podatki se ne prenašajo na naše strežnike.\n\nAplikacija pošilja tudi anonimne dogodke uporabe v Mixpanel (regija EU), da razume, kako se aplikacija uporablja in jo izboljša. Ti dogodki ne vključujejo vašega imena, e-pošte ali osebne vsebine.\n\nČe pošljete povratne informacije prek obrazca v aplikaciji v nastavitvah, se vaše sporočilo in, če je naveden, vaš e-poštni naslov prenese v Formspree, da lahko odgovorimo. Tehnični podatki (različica aplikacije, jezik, naprava) so priloženi samodejno."
+    },
+    {
+      "id": "3",
+      "title": "3. Naročniški podatki",
+      "body": "Če se naročite na premium paket, transakcijo v celoti opravi Apple prek App Store. Nimamo dostopa do vaših podatkov o plačilu (številka kartice, naslov za izstavitev računa). Prejmemo samo potrditev statusa vaše naročnine prek RevenueCat, našega partnerja za upravljanje naročnin."
+    },
+    {
+      "id": "4",
+      "title": "4. RevenueCat",
+      "body": "Za upravljanje naročnin v aplikaciji uporabljamo RevenueCat. RevenueCat lahko zbira anonimni identifikator naprave za preverjanje stanja vaše naročnine. Ne delimo nobenih osebnih podatkov. Za več informacij si oglejte politiko zasebnosti RevenueCat na njihovi spletni strani."
+    },
+    {
+      "id": "5",
+      "title": "5. Analitični podatki (Mixpanel)",
+      "body": "Uporabljamo Mixpanel, ki gostuje v Evropski uniji, za merjenje uporabe aplikacije (obiskani zasloni, odprti tečaji, interakcije plačljivega zidu itd.). Mixpanel prejme anonimni identifikator naprave, različico aplikacije, jezik in združene dogodke uporabe. Ne zbirajo se osebni podatki. Lahko nas kontaktirate in zahtevate izbris teh analitičnih podatkov."
+    },
+    {
+      "id": "6",
+      "title": "6. Apple Analytics",
+      "body": "Aplikaciji lahko koristi tudi anonimna statistika, ki jo zagotavlja Apple (App Analytics). Ti podatki so združeni in jih ni mogoče uporabiti za vašo osebno identifikacijo. Skupno rabo analitike lahko onemogočite v nastavitvah za iPhone (Nastavitve > Zasebnost > Analitika in izboljšave)."
+    },
+    {
+      "id": "7",
+      "title": "7. Shranjevanje podatkov",
+      "body": "Vaši podatki o napredku so shranjeni lokalno v vaši napravi (UserDefaults). Če ustvarite račun (Apple ali Google), je prav tako varno varnostno kopiran na naše strežnike Supabase (gostujejo v Evropski uniji), da omogočite sinhronizacijo med vašimi napravami. Odstranitev aplikacije izbriše lokalne podatke; izbris vašega računa trajno odstrani povezane podatke na strežniku."
+    },
+    {
+      "id": "8",
+      "title": "8. Izmenjava podatkov",
+      "body": "Osebnih podatkov ne prodajamo, izposojamo ali delimo s tretjimi osebami v komercialne ali oglaševalske namene. Preneseni podatki so omejeni na: Apple in RevenueCat (naročnine), Mixpanel (anonimna analitika, EU), Formspree (povratne informacije uporabnikov, prostovoljno poslane iz nastavitev)."
+    },
+    {
+      "id": "9",
+      "title": "9. Pravice uporabnika",
+      "body": "V skladu s Splošno uredbo o varstvu podatkov (GDPR) in veljavno zakonodajo imate naslednje pravice:\n\n- Pravica dostopa do vaših podatkov\n- Pravica do popravka\n- Pravica do izbrisa (ponastavitev v nastavitvah)\n- Pravica do prenosljivosti podatkov\n- Pravica do ugovora\n\nZa uveljavljanje teh pravic nas kontaktirajte preko naslova, navedenega na naši strani App Store."
+    },
+    {
+      "id": "10",
+      "title": "10. Varstvo mladoletnikov",
+      "body": "Sophia je izobraževalna aplikacija, primerna za vse starosti. Zavestno ne zbiramo osebnih podatkov otrok, mlajših od 16 let. Aplikacija ne vsebuje neprimerne vsebine."
+    },
+    {
+      "id": "11",
+      "title": "11. Spremembe",
+      "body": "Pridržujemo si pravico do spremembe tega pravilnika kadar koli. Vse spremembe bodo sporočene prek posodobitve aplikacije.\n\nZadnja posodobitev: julij 2026"
+    }
+  ]
+}

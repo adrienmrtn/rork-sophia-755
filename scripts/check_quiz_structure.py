@@ -7,13 +7,12 @@ import json
 import sys
 from pathlib import Path
 
+from i18n_languages import NON_FR_LANGS
+
 ROOT = Path(__file__).resolve().parents[1]
 FR = json.loads((ROOT / "content" / "locales" / "fr" / "quizzes_v2.json").read_text())
 IOS = ROOT / "ios" / "Sophia" / "Resources" / "Locales"
-LANGS = [
-    "en", "es", "de", "pt", "it", "tr", "pl", "ro", "nl",
-    "el", "sv", "hu", "bg", "cs",
-]
+LANGS = list(NON_FR_LANGS)
 
 STRUCT = ("id", "type", "correctIndex", "correctValue", "sliderMin", "sliderMax", "tolerance")
 

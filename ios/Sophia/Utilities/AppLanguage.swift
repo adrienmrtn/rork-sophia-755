@@ -103,15 +103,14 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .croatian: "Hrvatski"
         case .slovenian: "Slovenščina"
         case .slovak: "Slovenčina"
-        case .serbian: "Српски"
+        case .serbian: "Srpski"
         }
     }
 
     /// Device language codes that are not our raw values but map onto one.
     /// iOS reports Norwegian as `nb`, `nn` or the `no` macrolanguage depending
-    /// on the device. Bosnian and Montenegrin have no table of their own; their
-    /// speakers read the Croatian one, which is Latin script like their own
-    /// keyboards (Serbian ships in Cyrillic). `sh` is the retired Serbo-Croatian
+    /// on the device. Bosnian and Montenegrin have no table of their own, so
+    /// their speakers read the Croatian one; `sh` is the retired Serbo-Croatian
     /// code and lands there too.
     private static let deviceCodeAliases: [String: String] = [
         "no": "nb",

@@ -19,6 +19,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+import mt_backend
 from i18n_languages import GT_TARGETS, NON_FR_LANGS, SWIFT_CASE_BY_CODE
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,74 +28,16 @@ EN_PACK = ROOT / "content/locales/en/legal.json"
 CACHE_DIR = ROOT / "content/locales/_legal_mt_cache"
 NEW_LANGS = [c for c in NON_FR_LANGS if c not in {"en", "es", "de", "pt", "it"}]
 
-SWIFT_PROP = {
-    "en": "English",
-    "es": "Spanish",
-    "de": "German",
-    "pt": "Portuguese",
-    "it": "Italian",
-    "tr": "Turkish",
-    "pl": "Polish",
-    "ro": "Romanian",
-    "nl": "Dutch",
-    "el": "Greek",
-    "sv": "Swedish",
-    "hu": "Hungarian",
-    "bg": "Bulgarian",
-    "cs": "Czech",
-}
-
-CASE_NAME = {
-    "en": "english",
-    "es": "spanish",
-    "de": "german",
-    "pt": "portuguese",
-    "it": "italian",
-    "tr": "turkish",
-    "pl": "polish",
-    "ro": "romanian",
-    "nl": "dutch",
-    "el": "greek",
-    "sv": "swedish",
-    "hu": "hungarian",
-    "bg": "bulgarian",
-    "cs": "czech",
-}
+# Derived from the canonical case map so a new language is added in one place.
+CASE_NAME = {code: name for code, name in SWIFT_CASE_BY_CODE.items() if code != "fr"}
+SWIFT_PROP = {code: name.capitalize() for code, name in CASE_NAME.items()}
 
 
 def _translate_one(target: str, text: str) -> str:
-    if not text or not text.strip():
-        return text
-    # Keep pure bullets / punctuation
-    if not re.search(r"[A-Za-zÀ-ÿ]", text):
-        return text
-    import translators as ts
-    from deep_translator import GoogleTranslator
-    from deep_translator.exceptions import TooManyRequests
-
-    last: Exception | None = None
-    try:
-        time.sleep(0.15)
-        result = GoogleTranslator(source="en", target=target).translate(text)
-        if result and result.strip():
-            return result
-    except TooManyRequests as error:
-        last = error
-    except Exception as error:  # noqa: BLE001
-        last = error
-
-    for attempt in range(5):
-        try:
-            time.sleep(0.22)
-            result = ts.translate_text(
-                text, translator="bing", from_language="en", to_language=target
-            )
-            if result and str(result).strip():
-                return str(result)
-        except Exception as error:  # noqa: BLE001
-            last = error
-            time.sleep(min(2 * (2**attempt), 30))
-    raise RuntimeError(f"MT failed: {text[:60]!r} ({last})")
+    out = mt_backend.translate_one(text, target, source="en")
+    if out == text and re.search(r"[A-Za-zÀ-ÿ]", text) and len(text) > 40:
+        raise RuntimeError(f"MT returned the source unchanged: {text[:60]!r}")
+    return out
 
 
 def load_en() -> dict:
@@ -270,7 +213,10 @@ def inject() -> None:
         "        case .portuguese: termsPortuguese",
         "        case .italian: termsItalian",
     ]
-    privacy_cases = list(terms_cases)
+    # The privacy switch must point at the privacy arrays. Copying terms_cases
+    # here is what made the Privacy Policy screen render the T&C in the first six
+    # languages; the arrays themselves were always present and correct.
+    privacy_cases = [case.replace(": terms", ": privacy") for case in terms_cases]
     for lang in NEW_LANGS:
         case = CASE_NAME[lang]
         prop = SWIFT_PROP[lang]

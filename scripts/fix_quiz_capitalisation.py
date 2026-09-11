@@ -22,12 +22,14 @@ import json
 import sys
 from pathlib import Path
 
+from i18n_languages import NON_FR_LANGS
+
 ROOT = Path(__file__).resolve().parents[1]
 LOCALES = ROOT / "content" / "locales"
 IOS_LOCALES = ROOT / "ios" / "Sophia" / "Resources" / "Locales"
 ANDROID_LOCALES = ROOT / "android" / "app" / "src" / "main" / "assets" / "locales"
 
-LANGS = ["en", "es", "de", "pt", "it", "tr", "pl", "ro", "nl", "el", "sv", "hu", "bg", "cs"]
+LANGS = list(NON_FR_LANGS)
 
 # Answers that are genuinely lowercase-initial brands or notations.
 KEEP_LOWER = {"iPhone", "iPad", "iMac", "eBay", "iOS", "mRNA", "e=mc²", "pH"}

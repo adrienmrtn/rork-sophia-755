@@ -24,7 +24,7 @@ enum class AppLanguage(val code: String, val displayName: String, val flag: Stri
     CROATIAN("hr", "Hrvatski", "🇭🇷"),
     SLOVENIAN("sl", "Slovenščina", "🇸🇮"),
     SLOVAK("sk", "Slovenčina", "🇸🇰"),
-    SERBIAN("sr", "Српски", "🇷🇸");
+    SERBIAN("sr", "Srpski", "🇷🇸");
 
     /**
      * Locale whose course catalog this language reads. A language whose UI is
@@ -44,8 +44,8 @@ enum class AppLanguage(val code: String, val displayName: String, val flag: Stri
         /**
          * Device language codes that are not our own but map onto one. Android
          * reports Norwegian as `nb`, `nn` or the `no` macrolanguage depending on
-         * the device; Bosnian and Montenegrin speakers read the Croatian table,
-         * which is Latin script like their keyboards (Serbian ships in Cyrillic).
+         * the device. Bosnian and Montenegrin have no table of their own, so
+         * their speakers read the Croatian one.
          */
         private val DEVICE_ALIASES = mapOf(
             "no" to "nb",

@@ -165,6 +165,7 @@ class LanguageRules:
         flag_decimal_comma: bool = True,
         century_hint: str = "should be an English ordinal",
         era_hint: str = "should be BC/AD",
+        allowed_chars: frozenset[str] = frozenset(),
     ) -> None:
         self.stranded_spaced = stranded_spaced
         self.stranded_tight = stranded_tight
@@ -176,6 +177,13 @@ class LanguageRules:
         self.flag_decimal_comma = flag_decimal_comma
         self.century_hint = century_hint
         self.era_hint = era_hint
+        #: Characters in FORBIDDEN_CHARS that this language legitimately uses —
+        #: its quotation marks, and the em dash where it is real punctuation.
+        self.forbidden_chars = {
+            char: label
+            for char, label in FORBIDDEN_CHARS.items()
+            if char not in allowed_chars
+        }
 
 
 ENGLISH_RULES = LanguageRules(
@@ -462,6 +470,141 @@ BULGARIAN_RULES = LanguageRules(
     era_hint="should be пр.н.е. / сл.Хр.",
 )
 
+DANISH_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(af|til|fra|med|om|p\u00e5|ved|for|mod|over|under|efter|som)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "og," / "eller," are ordinary in lists. Only "at" cannot end a clause.
+    stranded_tight=re.compile(r"\b(at|samt)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE),
+    leading_articles=("en ", "et ", "den ", "det ", "de "),
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # Danish decimals are commas
+    century_hint="should be '1400-tallet'",
+    era_hint="should be f.Kr. / e.Kr.",
+    allowed_chars=frozenset("\u00ab\u00bb"),  # Danish quotes are »…«
+)
+
+NORWEGIAN_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(av|til|fra|med|om|p\u00e5|ved|for|mot|over|under|etter|som)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    stranded_tight=re.compile(r"\b(at|samt)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE),
+    leading_articles=("en ", "et ", "ei ", "den ", "det ", "de "),
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=False,  # Norwegian groups thousands with a space
+    thousands_hint="a space is the Norwegian separator",
+    flag_decimal_comma=False,
+    century_hint="should be '1400-tallet'",
+    era_hint="should be f.Kr. / e.Kr.",
+    allowed_chars=frozenset("\u00ab\u00bb"),  # Norwegian quotes are «…»
+)
+
+RUSSIAN_RULES = LanguageRules(
+    # Single-letter prepositions (в, к, с, о, у) are skipped: they are also
+    # ordinary list markers and would fire constantly.
+    stranded_spaced=re.compile(
+        r"\b(\u0438\u0437|\u043e\u0442|\u0434\u043e|\u0434\u043b\u044f|\u043f\u043e|"
+        r"\u043f\u0440\u0438|\u0431\u0435\u0437|\u043e\u0431|\u043d\u0430\u0434|"
+        r"\u043f\u043e\u0434|\u0437\u0430|\u0447\u0435\u0440\u0435\u0437)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    stranded_tight=re.compile(r"\b(\u0447\u0442\u043e)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE),
+    leading_articles=(),  # Russian has no articles
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=False,  # Russian groups thousands with a space
+    thousands_hint="a space is the Russian separator",
+    flag_decimal_comma=False,
+    century_hint="should be 'XV \u0432\u0435\u043a'",
+    era_hint="should be \u0434\u043e \u043d. \u044d. / \u043d. \u044d.",
+    # «…» are the Russian quotes and the em dash is core Russian punctuation
+    # ("Луна не падает — она падает вокруг Земли").
+    allowed_chars=frozenset("\u00ab\u00bb\u2014"),
+)
+
+CROATIAN_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(na|iz|od|do|za|po|pri|bez|sa|prema|kroz|uz|nad|pod)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "da," and "i," are ordinary; only "te" cannot end a clause.
+    stranded_tight=re.compile(r"\b(te)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE),
+    leading_articles=(),  # Croatian has no articles
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,
+    century_hint="should be '15. stolje\u0107e'",
+    era_hint="should be pr. Kr. / po. Kr.",
+    allowed_chars=frozenset(),  # Croatian quotes are „…”, not guillemets
+)
+
+SLOVENIAN_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(na|iz|od|do|za|po|pri|brez|\u010dez|pred|med|nad|pod)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    stranded_tight=re.compile(r"\b(ter)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE),
+    leading_articles=(),  # Slovenian has no articles
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,
+    century_hint="should be '15. stoletje'",
+    era_hint="should be pr. n. \u0161t. / n. \u0161t.",
+    allowed_chars=frozenset("\u00ab\u00bb"),  # Slovenian quotes are »…«
+)
+
+SLOVAK_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(na|do|od|po|za|pre|pri|nad|pod|bez|ku|zo|vo|so)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    stranded_tight=re.compile(r"\b(\u017ee)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE),
+    leading_articles=(),  # Slovak has no articles
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,
+    century_hint="should be '15. storo\u010die'",
+    era_hint="should be pred n. l. / n. l.",
+    allowed_chars=frozenset(),  # Slovak quotes are „…“
+)
+
+SERBIAN_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(na|iz|od|do|za|po|pri|bez|sa|ka|kroz|pred|nad|pod)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "da," and "i," are ordinary; only "te" cannot end a clause.
+    stranded_tight=re.compile(r"\b(te)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE),
+    leading_articles=(),  # Serbian has no articles
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,
+    century_hint="should be '15. vek'",
+    era_hint="should be p. n. e. / n. e.",
+    allowed_chars=frozenset(),  # Serbian quotes are „…“
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
@@ -477,6 +620,13 @@ RULES_BY_LANG: dict[str, LanguageRules] = {
     "hu": HUNGARIAN_RULES,
     "cs": CZECH_RULES,
     "bg": BULGARIAN_RULES,
+    "da": DANISH_RULES,
+    "nb": NORWEGIAN_RULES,
+    "ru": RUSSIAN_RULES,
+    "hr": CROATIAN_RULES,
+    "sl": SLOVENIAN_RULES,
+    "sk": SLOVAK_RULES,
+    "sr": SERBIAN_RULES,
 }
 
 
@@ -689,7 +839,7 @@ def check_segment(
     # Glossary keys are registered strings; they may legally contain a curly
     # apostrophe or a pair of guillemets. Only the surrounding prose is ours.
     prose_for_chars = GLOSSARY_SPAN_RE.sub(" ", english)
-    for char, label in FORBIDDEN_CHARS.items():
+    for char, label in rules.forbidden_chars.items():
         index = prose_for_chars.find(char)
         if index >= 0:
             report("forbidden-char", f"{label}: {snippet(english, index)}")

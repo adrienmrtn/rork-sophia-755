@@ -37,10 +37,13 @@ import argparse
 import json
 import re
 import sys
+import threading
 import time
 import unicodedata
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
+import mt_backend
 from i18n_languages import GT_TARGETS, NON_FR_LANGS
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -50,6 +53,9 @@ CACHE_DIR = ROOT / "content" / "locales" / "_v2_mt_cache"
 GLOSSARY_DIR = ROOT / "ios" / "Sophia" / "Resources" / "Locales"
 
 LANGS = NON_FR_LANGS
+
+# Strings per warmup request; see ``mt_backend`` for the ceiling.
+WARM_BATCH = 60
 
 SKIP_KEYS = {"id", "type", "asset", "ratio", "credit", "free", "subject", "image"}
 
@@ -214,6 +220,13 @@ FIXED = {
         "hu": "Bevezetés",
         "bg": "Въведение",
         "cs": "Úvod",
+        "da": "Introduktion",
+        "nb": "Introduksjon",
+        "ru": "Введение",
+        "hr": "Uvod",
+        "sl": "Uvod",
+        "sk": "Úvod",
+        "sr": "Uvod",
     },
     "Héritage": {
         "en": "Legacy",
@@ -230,6 +243,13 @@ FIXED = {
         "hu": "Örökség",
         "bg": "Наследство",
         "cs": "Dědictví",
+        "da": "Eftermæle",
+        "nb": "Ettermæle",
+        "ru": "Наследие",
+        "hr": "Naslijeđe",
+        "sl": "Zapuščina",
+        "sk": "Odkaz",
+        "sr": "Nasleđe",
     },
     "À retenir": {
         "en": "Key takeaway",
@@ -246,6 +266,13 @@ FIXED = {
         "hu": "Megjegyzendő",
         "bg": "За запомняне",
         "cs": "K zapamatování",
+        "da": "Husk det her",
+        "nb": "Husk dette",
+        "ru": "Запомни",
+        "hr": "Zapamti",
+        "sl": "Zapomni si",
+        "sk": "Zapamätaj si",
+        "sr": "Zapamti",
     },
 }
 
@@ -436,30 +463,18 @@ def best_glossary_term(fr_term: str, translated_term: str, candidates: list[str]
 
 def _translate_one(target: str, text: str) -> str:
     """Stateless single-string translate with retries (thread-safe)."""
-    from deep_translator import GoogleTranslator
-
     if not text or not text.strip():
         return text
     # Punctuation-only / symbol crumbs — never send to MT.
     if not re.search(r"[A-Za-zÀ-ÿ]", text):
         return text
 
-    client = GoogleTranslator(source="fr", target=target)
-    for attempt in range(6):
-        try:
-            result = client.translate(text)
-            if result is None:
-                raise RuntimeError("empty translation")
-            return result
-        except Exception as error:  # noqa: BLE001
-            wait = min(2**attempt, 20)
-            time.sleep(wait)
-            client = GoogleTranslator(source="fr", target=target)
-            if attempt == 5:
-                # Soft-fail: keep source rather than killing a whole language run.
-                print(f"    warn: MT failed, keeping source: {text[:60]!r} ({error})", file=sys.stderr)
-                return text
-    return text
+    return mt_backend.translate_one(text, GT_TARGETS.get(target, target), source="fr")
+
+
+def _translate_many(target: str, texts: list[str]) -> list[str]:
+    """A whole batch in one round trip — see ``mt_backend`` for why that works."""
+    return mt_backend.translate_batch(texts, GT_TARGETS.get(target, target), source="fr")
 
 
 class Translator:
@@ -475,8 +490,32 @@ class Translator:
         self.proper_nouns = load_proper_nouns(lang)
         #: Glossary terms that could not be placed, as (course_id, key, term).
         self.unplaced: list[tuple[str, str, str]] = []
-        self.course_id = ""
-        self.segment_key = ""
+        #: Per-course labels used only for that report. Thread-local so courses
+        #: can be rendered in parallel over one shared cache.
+        self._local = threading.local()
+        #: Serialising the cache walks it, so a concurrent write would raise
+        #: "dictionary changed size during iteration". Snapshot under this lock.
+        self._cache_lock = threading.Lock()
+
+    def remember(self, key: str, value: str) -> None:
+        with self._cache_lock:
+            self.cache[key] = value
+
+    @property
+    def course_id(self) -> str:
+        return getattr(self._local, "course_id", "")
+
+    @course_id.setter
+    def course_id(self, value: str) -> None:
+        self._local.course_id = value
+
+    @property
+    def segment_key(self) -> str:
+        return getattr(self._local, "segment_key", "")
+
+    @segment_key.setter
+    def segment_key(self, value: str) -> None:
+        self._local.segment_key = value
 
     def drop_name_cache(self) -> int:
         """Forget cached translations of any string containing a registered name.
@@ -497,8 +536,10 @@ class Translator:
         return len(stale)
 
     def save(self) -> None:
+        with self._cache_lock:
+            snapshot = dict(self.cache)
         self.cache_path.write_text(
-            json.dumps(self.cache, ensure_ascii=False, indent=0),
+            json.dumps(snapshot, ensure_ascii=False, indent=0),
             encoding="utf-8",
         )
 
@@ -550,12 +591,12 @@ class Translator:
             translated = " ".join(chunks)
         translated = restore_markup(translated, tokens)
         translated = self._restore_names(translated, names)
-        self.cache[text] = translated
+        self.remember(text, translated)
         return translated
 
     def warmup(self, texts: list[str], workers: int = 12) -> None:
         """Parallel-fill the cache for all unique FR strings."""
-        from concurrent.futures import ThreadPoolExecutor, as_completed
+        from concurrent.futures import as_completed
 
         pending = []
         for text in texts:
@@ -568,36 +609,52 @@ class Translator:
         print(f"  warming cache: {len(pending)} new strings (workers={workers})…")
         done = 0
 
-        def job(src: str) -> tuple[str, str]:
+        # Blocks are short, so the whole warmup goes out in batches — one round
+        # trip per ~60 strings instead of one each (see ``mt_backend``).
+        def batch_job(sources: list[str]) -> list[tuple[str, str]]:
+            prepared = []
+            for src in sources:
+                protected, tokens = protect_markup(src)
+                protected, names = self._protect_names(protected)
+                prepared.append((src, protected, tokens, names))
+            outs = _translate_many(self.target, [p for _, p, _, _ in prepared])
+            results = []
+            for (src, _protected, tokens, names), translated in zip(prepared, outs):
+                translated = restore_markup(translated, tokens)
+                results.append((src, self._restore_names(translated, names)))
+            return results
+
+        def long_job(src: str) -> list[tuple[str, str]]:
             protected, tokens = protect_markup(src)
             protected, names = self._protect_names(protected)
-            if len(protected) < 4000:
-                translated = _translate_one(self.target, protected)
-            else:
-                parts = re.split(r"(?<=[.!?…])\s+", protected)
-                chunks: list[str] = []
-                buf = ""
-                for part in parts:
-                    if len(buf) + len(part) + 1 > 3800 and buf:
-                        chunks.append(_translate_one(self.target, buf))
-                        buf = part
-                    else:
-                        buf = f"{buf} {part}".strip() if buf else part
-                if buf:
-                    chunks.append(_translate_one(self.target, buf))
-                translated = " ".join(chunks)
+            parts = re.split(r"(?<=[.!?…])\s+", protected)
+            chunks: list[str] = []
+            buf = ""
+            for part in parts:
+                if len(buf) + len(part) + 1 > 3800 and buf:
+                    chunks.append(buf)
+                    buf = part
+                else:
+                    buf = f"{buf} {part}".strip() if buf else part
+            if buf:
+                chunks.append(buf)
+            translated = " ".join(_translate_many(self.target, chunks))
             translated = restore_markup(translated, tokens)
-            translated = self._restore_names(translated, names)
-            return src, translated
+            return [(src, self._restore_names(translated, names))]
+
+        short = [s for s in pending if len(s) < 4000]
+        long = [s for s in pending if len(s) >= 4000]
+        jobs = [(batch_job, short[i : i + WARM_BATCH]) for i in range(0, len(short), WARM_BATCH)]
+        jobs += [(long_job, src) for src in long]
 
         with ThreadPoolExecutor(max_workers=workers) as pool:
-            futures = [pool.submit(job, src) for src in pending]
+            futures = [pool.submit(fn, arg) for fn, arg in jobs]
             for fut in as_completed(futures):
-                src, translated = fut.result()
-                self.cache[src] = translated
-                done += 1
-                if done % 100 == 0 or done == len(pending):
-                    print(f"    cached {done}/{len(pending)}")
+                for src, translated in fut.result():
+                    self.remember(src, translated)
+                    done += 1
+                if done % 500 < WARM_BATCH or done >= len(pending):
+                    print(f"    cached {done}/{len(pending)}", flush=True)
                     self.save()
         self.save()
 
@@ -878,14 +935,21 @@ def main() -> int:
         done = 0
         skipped = 0
         errors = 0
-        for index, source in enumerate(sources, 1):
+        pending = []
+        for source in sources:
             out_path = out_dir / source.name
             if out_path.exists() and not args.force:
                 skipped += 1
                 continue
+            pending.append((source, out_path))
+
+        # A paragraph carrying a glossary term is rewritten with the target-language
+        # display term *before* translation, so it can never be a warmup cache hit.
+        # Those misses are what dominate this phase — render courses in parallel so
+        # they overlap instead of queueing behind each other.
+        def render(job: tuple[Path, Path]) -> str | None:
+            source, out_path = job
             data = json.loads(source.read_text(encoding="utf-8"))
-            if index % 25 == 1 or index == len(sources):
-                print(f"  [{index}/{len(sources)}] writing {data['id']}…", flush=True)
             try:
                 translated = translate_course(data, translator)
                 validate_light(translated)
@@ -893,12 +957,20 @@ def main() -> int:
                     json.dumps(translated, ensure_ascii=False, indent=2) + "\n",
                     encoding="utf-8",
                 )
-                done += 1
+                return None
             except Exception as error:  # noqa: BLE001
-                errors += 1
-                print(f"  ERROR {data.get('id', source.name)}: {error}", file=sys.stderr, flush=True)
-            if done and done % 20 == 0:
-                translator.save()
+                return f"  ERROR {data.get('id', source.name)}: {error}"
+
+        with ThreadPoolExecutor(max_workers=max(1, args.workers)) as pool:
+            for result in pool.map(render, pending):
+                if result:
+                    errors += 1
+                    print(result, file=sys.stderr, flush=True)
+                else:
+                    done += 1
+                if done and done % 25 == 0:
+                    print(f"  [{done}/{len(pending)}] written", flush=True)
+                    translator.save()
         translator.save()
         print(f"Done {lang}: wrote {done}, skipped existing {skipped}, errors {errors}")
 

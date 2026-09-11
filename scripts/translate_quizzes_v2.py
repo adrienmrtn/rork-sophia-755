@@ -34,6 +34,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+import mt_backend
 from i18n_languages import GT_TARGETS, NON_FR_LANGS
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -59,6 +60,13 @@ TRUE_FALSE = {
     "hu": ["Igaz", "Hamis"],
     "bg": ["Вярно", "Грешно"],
     "cs": ["Pravda", "Nepravda"],
+    "da": ["Sandt", "Falsk"],
+    "nb": ["Sant", "Usant"],
+    "ru": ["Верно", "Неверно"],
+    "hr": ["Točno", "Netočno"],
+    "sl": ["Prav", "Narobe"],
+    "sk": ["Pravda", "Nepravda"],
+    "sr": ["Tačno", "Netačno"],
 }
 
 # Common slider units — keep symbols; translate word units.
@@ -74,41 +82,97 @@ UNIT_FIXED = {
         "en": "years", "es": "años", "de": "Jahre", "pt": "anos", "it": "anni",
         "tr": "yıl", "pl": "lat", "ro": "ani", "nl": "jaar", "el": "έτη",
         "sv": "år", "hu": "év", "bg": "години", "cs": "let",
+        "da": "år",
+        "nb": "år",
+        "ru": "лет",
+        "hr": "godina",
+        "sl": "let",
+        "sk": "rokov",
+        "sr": "godina",
     },
     "jours": {
         "en": "days", "es": "días", "de": "Tage", "pt": "dias", "it": "giorni",
         "tr": "gün", "pl": "dni", "ro": "zile", "nl": "dagen", "el": "ημέρες",
         "sv": "dagar", "hu": "nap", "bg": "дни", "cs": "dny",
+        "da": "dage",
+        "nb": "dager",
+        "ru": "дней",
+        "hr": "dana",
+        "sl": "dni",
+        "sk": "dní",
+        "sr": "dana",
     },
     "heures": {
         "en": "hours", "es": "horas", "de": "Stunden", "pt": "horas", "it": "ore",
         "tr": "saat", "pl": "godzin", "ro": "ore", "nl": "uur", "el": "ώρες",
         "sv": "timmar", "hu": "óra", "bg": "часа", "cs": "hodin",
+        "da": "timer",
+        "nb": "timer",
+        "ru": "часов",
+        "hr": "sati",
+        "sl": "ur",
+        "sk": "hodín",
+        "sr": "sati",
     },
     "semaines": {
         "en": "weeks", "es": "semanas", "de": "Wochen", "pt": "semanas", "it": "settimane",
         "tr": "hafta", "pl": "tygodni", "ro": "săptămâni", "nl": "weken", "el": "εβδομάδες",
         "sv": "veckor", "hu": "hét", "bg": "седмици", "cs": "týdnů",
+        "da": "uger",
+        "nb": "uker",
+        "ru": "недель",
+        "hr": "tjedana",
+        "sl": "tednov",
+        "sk": "týždňov",
+        "sr": "nedelja",
     },
     "fois": {
         "en": "times", "es": "veces", "de": "Mal", "pt": "vezes", "it": "volte",
         "tr": "kez", "pl": "razy", "ro": "ori", "nl": "keer", "el": "φορές",
         "sv": "gånger", "hu": "alkalom", "bg": "пъти", "cs": "krát",
+        "da": "gange",
+        "nb": "ganger",
+        "ru": "раз",
+        "hr": "puta",
+        "sl": "krat",
+        "sk": "krát",
+        "sr": "puta",
     },
     "millions": {
         "en": "million", "es": "millones", "de": "Millionen", "pt": "milhões", "it": "milioni",
         "tr": "milyon", "pl": "milionów", "ro": "milioane", "nl": "miljoen", "el": "εκατομμύρια",
         "sv": "miljoner", "hu": "millió", "bg": "милиони", "cs": "milionů",
+        "da": "millioner",
+        "nb": "millioner",
+        "ru": "млн",
+        "hr": "milijuna",
+        "sl": "milijonov",
+        "sk": "miliónov",
+        "sr": "miliona",
     },
     "milliards": {
         "en": "billion", "es": "miles de millones", "de": "Milliarden", "pt": "bilhões", "it": "miliardi",
         "tr": "milyar", "pl": "miliardów", "ro": "miliarde", "nl": "miljard", "el": "δισεκατομμύρια",
         "sv": "miljarder", "hu": "milliárd", "bg": "милиарди", "cs": "miliard",
+        "da": "milliarder",
+        "nb": "milliarder",
+        "ru": "млрд",
+        "hr": "milijardi",
+        "sl": "milijard",
+        "sk": "miliárd",
+        "sr": "milijardi",
     },
     "milliers": {
         "en": "thousands", "es": "miles", "de": "Tausende", "pt": "milhares", "it": "migliaia",
         "tr": "binler", "pl": "tysiące", "ro": "mii", "nl": "duizenden", "el": "χιλιάδες",
         "sv": "tusentals", "hu": "ezrek", "bg": "хиляди", "cs": "tisíce",
+        "da": "tusinder",
+        "nb": "tusener",
+        "ru": "тысяч",
+        "hr": "tisuća",
+        "sl": "tisoč",
+        "sk": "tisíc",
+        "sr": "hiljada",
     },
 }
 
@@ -484,44 +548,16 @@ def _translate_via_bing(target: str, text: str) -> str:
 
 def _translate_one(target: str, text: str) -> str:
     """Translate one FR string. Raises on persistent failure — do not cache FR."""
-    global _GOOGLE_BLOCKED
-    from deep_translator import GoogleTranslator
-    from deep_translator.exceptions import TooManyRequests
+    out = _translate_many(target, [text])[0]
+    if out == text and _looks_translatable_french(text):
+        # mt_backend soft-fails to the source; here that would cache FR bleed.
+        raise RuntimeError(f"MT returned the source unchanged: {text[:60]!r}")
+    return out
 
-    if not text or not text.strip():
-        return text
-    if not re.search(r"[A-Za-zÀ-ÿ]", text):
-        return text
 
-    last_error: Exception | None = None
-    if not _GOOGLE_BLOCKED:
-        client = GoogleTranslator(source="fr", target=target)
-        for attempt in range(4):
-            try:
-                # Stay under Google's ~5 req/s soft limit when many workers run.
-                time.sleep(0.18)
-                result = client.translate(text)
-                if result is None:
-                    raise RuntimeError("empty translation")
-                return result
-            except TooManyRequests as error:
-                last_error = error
-                _GOOGLE_BLOCKED = True
-                print("  Google rate-limited — switching to Bing fallback", flush=True)
-                break
-            except Exception as error:  # noqa: BLE001
-                last_error = error
-                time.sleep(min(2 * (2**attempt), 30))
-                client = GoogleTranslator(source="fr", target=target)
-
-    # Google daily/burst limit — finish the pack via Bing rather than writing FR.
-    for attempt in range(5):
-        try:
-            return _translate_via_bing(target, text)
-        except Exception as error:  # noqa: BLE001
-            last_error = error
-            time.sleep(min(2 * (2**attempt), 30))
-    raise RuntimeError(f"MT failed after retries: {text[:60]!r} ({last_error})")
+def _translate_many(target: str, texts: list[str]) -> list[str]:
+    """A whole batch in one round trip — see ``mt_backend`` for why that works."""
+    return mt_backend.translate_batch(texts, target, source="fr")
 
 
 class QuizTranslator:

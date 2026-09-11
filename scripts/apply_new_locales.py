@@ -23,9 +23,10 @@ import re
 import sys
 from pathlib import Path
 
-from i18n_languages import SWIFT_CASE_BY_CODE, UI_ONLY_LANGS
+from i18n_languages import SWIFT_CASE_BY_CODE
+from new_locales_ui_data import LANGS as LANGS4
 from new_locales_ui_data import STRINGS as STRINGS4
-from new_locales_ui_data2 import STRINGS3
+from new_locales_ui_data2 import LANGS3, STRINGS3
 from translate_ui_strings import extract_dict_entries, render_dict_body
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -44,7 +45,7 @@ NEW_AUTONYMS = {
     "language.croatian": "Hrvatski",
     "language.slovenian": "Slovenščina",
     "language.slovak": "Slovenčina",
-    "language.serbian": "Српски",
+    "language.serbian": "Srpski",
 }
 
 # Keys the Android string packs carry but the Swift table does not: the
@@ -57,7 +58,7 @@ ANDROID_ONLY = {
         "hr": "Prijedlozi tečajeva",
         "sl": "Predlogi tečajev",
         "sk": "Návrhy kurzov",
-        "sr": "Предлози курсева",
+        "sr": "Predlozi kurseva",
     },
     "notification.channel.description": {
         "da": "Et lille skub i ny og næ til at tage fat på et kursus igen.",
@@ -66,7 +67,7 @@ ANDROID_ONLY = {
         "hr": "Povremeni podsjetnik da se vratiš tečaju.",
         "sl": "Občasen opomnik, da se vrneš k tečaju.",
         "sk": "Občasné pripomenutie, aby si sa vrátil ku kurzu.",
-        "sr": "Повремени подсетник да се вратиш курсу.",
+        "sr": "Povremeni podsetnik da se vratiš kursu.",
     },
 }
 
@@ -107,8 +108,11 @@ HIGHLIGHTS = (
 # (or the reverse) is caught before it ships. Format specifiers are stripped
 # first; brand names and the handful of Latin tokens below are exempt, and the
 # language.* autonyms are exempt wholesale (they are spelled in their own
-# language's script by design).
-CYRILLIC_LANGS = {"ru", "sr"}
+# language's script by design, so the Bulgarian and Russian ones stay Cyrillic
+# inside every Latin table).
+# Russian is the only Cyrillic table: Serbian ships in Latin (see
+# ``scripts/serbian_script.py`` for why).
+CYRILLIC_LANGS = {"ru"}
 LATIN_WORD = re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿ]+")
 CYRILLIC_CHAR = re.compile(r"[\u0400-\u04FF]")
 ALLOWED_LATIN = {
@@ -241,7 +245,7 @@ def main() -> int:
     french = dict(french_entries)
     tables = build_tables()
 
-    order = [c for c in UI_ONLY_LANGS]
+    order = [*LANGS4, *LANGS3]
     missing_langs = [c for c in order if c not in tables]
     if missing_langs:
         raise SystemExit(f"No strings for {missing_langs}")

@@ -19,13 +19,12 @@ import re
 import sys
 from pathlib import Path
 
+from i18n_languages import NON_FR_LANGS
+
 ROOT = Path(__file__).resolve().parents[1]
 COURSES = ROOT / "content" / "courses"
 
-ALL_LANGS = [
-    "en", "es", "de", "pt", "it",
-    "tr", "pl", "ro", "nl", "el", "sv", "hu", "bg", "cs",
-]
+ALL_LANGS = list(NON_FR_LANGS)
 
 # Article/preposition left behind when the glossary token was yanked out.
 ARTICLES = (

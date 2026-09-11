@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export iOS / content packs into Android assets (all 15 languages).
+"""Export iOS / content packs into Android assets (every app language).
 
 Sources (in priority order):
   1. Working tree under ios/Sophia and content/
@@ -8,7 +8,7 @@ Sources (in priority order):
 Writes:
   android/app/src/main/assets/locales/{courses,course_index,collections,glossary}.{lang}.json
   android/app/src/main/assets/courses_v2/{lang}/{courseId}.json
-  android/app/src/main/assets/strings/{lang}.json   (all 15 langs from AppLocalizable)
+  android/app/src/main/assets/strings/{lang}.json   (every app language, from AppLocalizable)
   android/app/src/main/assets/locales/courses.fr.json (+ collections/glossary) from Swift when present
 
 Course catalogs are slimmed after copy (no lesson bodies; lesson text lives in courses_v2).
@@ -26,6 +26,8 @@ import tempfile
 from io import BytesIO
 from pathlib import Path
 
+from i18n_languages import ALL_CONTENT_LANGS
+
 ROOT = Path(__file__).resolve().parents[1]
 IOS_LOCALES = ROOT / "ios" / "Sophia" / "Resources" / "Locales"
 IOS_COURSES_V2 = ROOT / "ios" / "Sophia" / "Resources" / "CoursesV2"
@@ -36,13 +38,10 @@ ANDROID_LOCALES = ANDROID_ASSETS / "locales"
 ANDROID_STRINGS = ANDROID_ASSETS / "strings"
 ANDROID_COURSES_V2 = ANDROID_ASSETS / "courses_v2"
 
-# Full app language set (matches iOS AppLanguage).
-ALL_LANGS = [
-    "fr", "en", "es", "de", "pt", "it",
-    "tr", "pl", "ro", "nl", "el", "sv", "hu", "bg", "cs",
-]
-# New packs that may only exist on main / content/
-NEW_LANGS = ["tr", "pl", "ro", "nl", "el", "sv", "hu", "bg", "cs"]
+# Full app language set — the canonical list, so a new locale is added once.
+ALL_LANGS = list(ALL_CONTENT_LANGS)
+# Packs that may only exist on main / content/ (everything past the original six).
+NEW_LANGS = [c for c in ALL_LANGS if c not in {"fr", "en", "es", "de", "pt", "it"}]
 
 
 # ---------------------------------------------------------------------------
@@ -167,7 +166,7 @@ ANDROID_ONLY_KEYS = (
 
 
 def export_ui_strings(ref: str | None) -> list[str]:
-    """Write strings/{lang}.json for all 15 langs from AppLocalizable.swift.
+    """Write strings/{lang}.json for every app language, from AppLocalizable.swift.
 
     AppLocalizable is the product UI source of truth (including SYS naturalness).
     Android-only keys (notification channels) are preserved from the existing pack.
@@ -259,7 +258,7 @@ def main() -> int:
     from slim_android_catalog import slim_locale_catalogs
     slim_locale_catalogs()
 
-    print("Exporting UI strings from AppLocalizable (all 15 langs)…")
+    print(f"Exporting UI strings from AppLocalizable ({len(ALL_LANGS)} langs)…")
     strings = export_ui_strings(ref)
     print(f"  wrote {len(strings)} string packs")
 
@@ -287,7 +286,7 @@ def main() -> int:
     print(f"new string packs: {len(strings)}")
     if v2_counts:
         missing_v2 = [lang for lang in ALL_LANGS if v2_counts.get(lang, 0) < 200]
-        print(f"courses_v2 langs OK: {sum(1 for n in v2_counts.values() if n >= 200)}/15")
+        print(f"courses_v2 langs OK: {sum(1 for n in v2_counts.values() if n >= 200)}/{len(ALL_LANGS)}")
         if missing_v2:
             print(f"courses_v2 thin/missing: {missing_v2}")
             # Not fatal if only FR missing from archive naming — check fr separately.

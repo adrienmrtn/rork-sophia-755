@@ -18,14 +18,13 @@ import json
 import re
 from pathlib import Path
 
+from i18n_languages import NON_FR_LANGS
+
 ROOT = Path(__file__).resolve().parents[1]
 IOS_LOCALES = ROOT / "ios" / "Sophia" / "Resources" / "Locales"
 CONTENT_LOCALES = ROOT / "content" / "locales"
 
-LANGS = [
-    "en", "es", "de", "pt", "it", "tr", "pl", "ro", "nl",
-    "el", "sv", "hu", "bg", "cs",
-]
+LANGS = list(NON_FR_LANGS)
 
 # Established local form of FR « Hégire ». Romanian keeps Hegira.
 HIJRA = {
@@ -43,6 +42,13 @@ HIJRA = {
     "hu": "hidzsra",
     "bg": "хиджра",
     "cs": "hidžra",
+    "da": "hijra",
+    "nb": "hijra",
+    "ru": "хиджра",
+    "hr": "Hidžra",
+    "sl": "hidžra",
+    "sk": "hidžra",
+    "sr": "hidžra",
 }
 
 # Greek-hero name. Do not apply next to Grant / Joyce / the novel.
@@ -61,6 +67,13 @@ ODYSSEUS = {
     "hu": "Odüsszeusz",
     "bg": "Одисей",
     "cs": "Odysseus",
+    "da": "Odysseus",
+    "nb": "Odyssevs",
+    "ru": "Одиссей",
+    "hr": "Odisej",
+    "sl": "Odisej",
+    "sk": "Odyseus",
+    "sr": "Odisej",
 }
 
 # Formal / shop-order chrono stems → informal sequence CTA (SYS-8 + SYS-12).
@@ -227,7 +240,9 @@ def replace_odysseus(text: str, lang: str) -> str:
         return text
     if GRANT_OR_JOYCE.search(text):
         return text
-    name = ODYSSEUS[lang]
+    name = ODYSSEUS.get(lang)
+    if not name:
+        return text
     # Keep Joyce's novel and the general if they slipped past the regex.
     def repl_ulysses(m: re.Match[str]) -> str:
         after = text[m.end() : m.end() + 12]
@@ -242,8 +257,8 @@ def replace_odysseus(text: str, lang: str) -> str:
 
 
 def replace_hijra(text: str, lang: str) -> str:
-    target = HIJRA[lang]
-    if lang == "ro":
+    target = HIJRA.get(lang)
+    if not target or lang == "ro":
         return text
     text = re.sub(r"\bthe Hegira\b", f"the {target}" if lang == "en" else target, text)
     text = re.sub(r"\bHegira\b", target, text)

@@ -18,17 +18,23 @@ import argparse
 import json
 import re
 import sys
+import threading
 import time
 import unicodedata
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-from i18n_languages import NON_FR_LANGS
+import mt_backend
+from i18n_languages import GT_TARGETS, NON_FR_LANGS
 
 ROOT = Path(__file__).resolve().parents[1]
 LOCALE_DIR = ROOT / "ios" / "Sophia" / "Resources" / "Locales"
 CACHE_DIR = ROOT / "content" / "locales" / "_catalog_mt_cache"
 CONTENT_LOCALES = ROOT / "content" / "locales"
+
+# Strings per warmup request. The endpoint took 100 in testing; 60 leaves
+# headroom for long glossary explanations sharing a batch.
+BATCH = 60
 
 EXISTING = {"fr", "en", "es", "de", "pt", "it"}
 NEW_LANGS = [c for c in NON_FR_LANGS if c not in EXISTING]
@@ -43,6 +49,13 @@ TRUE_FALSE = {
     "hu": ["Igaz", "Hamis"],
     "bg": ["Вярно", "Грешно"],
     "cs": ["Pravda", "Nepravda"],
+    "da": ["Sandt", "Falsk"],
+    "nb": ["Sant", "Usant"],
+    "ru": ["Верно", "Неверно"],
+    "hr": ["Točno", "Netočno"],
+    "sl": ["Prav", "Narobe"],
+    "sk": ["Pravda", "Nepravda"],
+    "sr": ["Tačno", "Netačno"],
 }
 
 # Common short lesson titles — keep imperative/app sense consistent.
@@ -57,6 +70,13 @@ FIXED_TITLES: dict[str, dict[str, str]] = {
         "hu": "Bevezetés",
         "bg": "Въведение",
         "cs": "Úvod",
+        "da": "Introduktion",
+        "nb": "Introduksjon",
+        "ru": "Введение",
+        "hr": "Uvod",
+        "sl": "Uvod",
+        "sk": "Úvod",
+        "sr": "Uvod",
     },
     "Conclusion": {
         "tr": "Sonuç",
@@ -68,6 +88,13 @@ FIXED_TITLES: dict[str, dict[str, str]] = {
         "hu": "Összegzés",
         "bg": "Заключение",
         "cs": "Závěr",
+        "da": "Konklusion",
+        "nb": "Konklusjon",
+        "ru": "Заключение",
+        "hr": "Zaključak",
+        "sl": "Zaključek",
+        "sk": "Záver",
+        "sr": "Zaključak",
     },
 }
 
@@ -142,24 +169,13 @@ def restore_markup(text: str, angles: list[str], term_map: dict[str, str] | None
 
 
 def _translate_one(target: str, text: str) -> str:
-    from deep_translator import GoogleTranslator
+    """One string. Retries and the soft-fail live in ``mt_backend``."""
+    return mt_backend.translate_one(text, GT_TARGETS.get(target, target), source="en")
 
-    if not text or not text.strip():
-        return text
-    client = GoogleTranslator(source="en", target=target)
-    for attempt in range(6):
-        try:
-            result = client.translate(text)
-            if result is None:
-                raise RuntimeError("empty")
-            return result
-        except Exception as error:  # noqa: BLE001
-            time.sleep(min(2**attempt, 20))
-            client = GoogleTranslator(source="en", target=target)
-            if attempt == 5:
-                print(f"    warn MT keep EN: {text[:50]!r} ({error})", file=sys.stderr)
-                return text
-    return text
+
+def _translate_many(target: str, texts: list[str]) -> list[str]:
+    """A whole batch in one round trip — see ``mt_backend`` for why that works."""
+    return mt_backend.translate_batch(texts, GT_TARGETS.get(target, target), source="en")
 
 
 class CatalogTranslator:
@@ -168,12 +184,17 @@ class CatalogTranslator:
         self.cache_path = CACHE_DIR / f"{lang}.json"
         CACHE_DIR.mkdir(parents=True, exist_ok=True)
         self.cache: dict[str, str] = {}
+        self._cache_lock = threading.Lock()
         if self.cache_path.exists():
             self.cache = json.loads(self.cache_path.read_text(encoding="utf-8"))
 
     def save(self) -> None:
+        # save() runs while warmup workers are still writing; serialising the
+        # live dict would raise "dictionary changed size during iteration".
+        with self._cache_lock:
+            snapshot = dict(self.cache)
         self.cache_path.write_text(
-            json.dumps(self.cache, ensure_ascii=False, indent=0) + "\n",
+            json.dumps(snapshot, ensure_ascii=False, indent=0) + "\n",
             encoding="utf-8",
         )
 
@@ -262,37 +283,53 @@ class CatalogTranslator:
             return
         print(f"  [{self.lang}] warming {len(unique)} strings (workers={workers})…")
 
-        def job(src: str) -> tuple[str, str, str]:
+        # Short strings (the overwhelming majority: titles, quiz options,
+        # glossary terms) go out in batches — one round trip for ~80 of them
+        # instead of 80. Only the long lesson bodies still need sentence-level
+        # chunking, so they keep the one-request-per-string path.
+        short = [src for src in unique if len(protect_markup(src)[0]) < 4000]
+        long = [src for src in unique if len(protect_markup(src)[0]) >= 4000]
+
+        def batch_job(sources: list[str]) -> list[tuple[str, str, str]]:
+            prepared = [protect_markup(src) for src in sources]
+            outs = _translate_many(self.lang, [p for p, _ in prepared])
+            results = []
+            for src, (protected, angles), translated in zip(sources, prepared, outs):
+                mt_key = f"rich::{protected}" if angles else src
+                restored = restore_markup(translated, angles, None)
+                results.append((mt_key, translated if angles else restored, restored))
+            return results
+
+        def long_job(src: str) -> list[tuple[str, str, str]]:
             protected, angles = protect_markup(src)
-            if len(protected) < 4000:
-                translated = _translate_one(self.lang, protected)
-            else:
-                parts = re.split(r"(?<=[.!?…])\s+", protected)
-                chunks: list[str] = []
-                buf = ""
-                for part in parts:
-                    if len(buf) + len(part) + 1 > 3800 and buf:
-                        chunks.append(_translate_one(self.lang, buf))
-                        buf = part
-                    else:
-                        buf = f"{buf} {part}".strip() if buf else part
-                if buf:
-                    chunks.append(_translate_one(self.lang, buf))
-                translated = " ".join(chunks)
+            parts = re.split(r"(?<=[.!?…])\s+", protected)
+            chunks: list[str] = []
+            buf = ""
+            for part in parts:
+                if len(buf) + len(part) + 1 > 3800 and buf:
+                    chunks.append(buf)
+                    buf = part
+                else:
+                    buf = f"{buf} {part}".strip() if buf else part
+            if buf:
+                chunks.append(buf)
+            translated = " ".join(_translate_many(self.lang, chunks))
             mt_key = f"rich::{protected}" if angles else src
             restored = restore_markup(translated, angles, None)
-            return mt_key, translated if angles else restored, restored
+            return [(mt_key, translated if angles else restored, restored)]
+
+        groups = [short[i : i + BATCH] for i in range(0, len(short), BATCH)]
+        jobs = [(batch_job, g) for g in groups] + [(long_job, src) for src in long]
 
         done = 0
         with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
-            futs = [pool.submit(job, src) for src in unique]
+            futs = [pool.submit(fn, arg) for fn, arg in jobs]
             for fut in as_completed(futs):
-                mt_key, stored, restored = fut.result()
-                self.cache[mt_key] = stored
-                # Also index by restored plaintext path for plain lookups
-                done += 1
-                if done % 100 == 0 or done == len(unique):
-                    print(f"  [{self.lang}] cached {done}/{len(unique)}")
+                for mt_key, stored, _restored in fut.result():
+                    self.cache[mt_key] = stored
+                    done += 1
+                if done % 500 < BATCH or done >= len(unique):
+                    print(f"  [{self.lang}] cached {done}/{len(unique)}", flush=True)
                     self.save()
         self.save()
 

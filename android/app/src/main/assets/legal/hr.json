@@ -1,0 +1,111 @@
+{
+  "terms": [
+    {
+      "id": "1",
+      "title": "1. Prihvaćanje uvjeta",
+      "body": "Preuzimanjem, instaliranjem ili korištenjem aplikacije Sophia (\"Aplikacija\") pristajete na ove Uvjete pružanja usluge (\"Uvjeti\"). Ako ne prihvaćate ove uvjete, nemojte koristiti aplikaciju."
+    },
+    {
+      "id": "2",
+      "title": "2. Opis usluge",
+      "body": "Sophia je obrazovna mobilna aplikacija općeg znanja koja nudi tečajeve, kvizove i interaktivne sadržaje. Aplikacija je dostupna na Android i može nuditi besplatan sadržaj kao i premium pretplate."
+    },
+    {
+      "id": "3",
+      "title": "3. Račun i korištenje",
+      "body": "Stvaranje računa (putem Google) nudi se za spremanje vašeg napretka i sinkronizaciju na svim vašim uređajima. Novi korisnici se prijavljuju tijekom integracije; postojeći korisnici mogu kreirati račun u bilo kojem trenutku iz postavki. Bez računa, podaci o vašem napretku pohranjuju se lokalno na vašem uređaju i ponovna instalacija aplikacije može rezultirati njihovim gubitkom. Svoj račun možete izbrisati u bilo kojem trenutku u postavkama."
+    },
+    {
+      "id": "4",
+      "title": "4. Pretplate i kupnje",
+      "body": "Sophia nudi premium pretplate (mjesečne i godišnje) putem Google Play Store. Cijene su prikazane u aplikaciji i mogu se razlikovati ovisno o zemlji. Plaćanje se naplaćuje na vaš račun Google nakon potvrde kupnje. Pretplate se automatski obnavljaju osim ako se automatska obnova ne isključi najmanje 24 sata prije kraja tekućeg razdoblja. Pretplatama možete upravljati i otkazati ih u postavkama svog računa Play Store."
+    },
+    {
+      "id": "5",
+      "title": "5. Besplatna proba",
+      "body": "Novim korisnicima može se ponuditi besplatno probno razdoblje. Kada probno razdoblje završi, pretplata će se automatski pretvoriti u pretplatu uz plaćanje osim ako se prethodno ne otkaže. Svaki neiskorišteni dio besplatnog probnog razdoblja gubi se prilikom kupnje pretplate."
+    },
+    {
+      "id": "6",
+      "title": "6. Intelektualno vlasništvo",
+      "body": "Sav sadržaj aplikacije (tekst, ilustracije, dizajn, logotip, tečajevi, kvizovi) zaštićen je autorskim pravima i ostaje isključivo vlasništvo Sophia. Svako neovlašteno umnožavanje, distribucija ili korištenje strogo je zabranjeno."
+    },
+    {
+      "id": "7",
+      "title": "7. Ograničenje odgovornosti",
+      "body": "Sadržaj u aplikaciji pruža se u obrazovne i informativne svrhe. Sophia ne jamči za točnost, cjelovitost ili pravovremenost prikazanih informacija. Aplikacija se daje \"kakva jest\" bez ikakvih jamstava."
+    },
+    {
+      "id": "8",
+      "title": "8. Promjene uvjeta",
+      "body": "Sophia zadržava pravo izmjene ovih Uvjeta u bilo kojem trenutku. Korisnici će biti obaviješteni o značajnim promjenama. Nastavak korištenja aplikacije nakon promjena predstavlja prihvaćanje novih uvjeta."
+    },
+    {
+      "id": "9",
+      "title": "9. Mjerodavno pravo",
+      "body": "Ovi Uvjeti regulirani su francuskim pravom. Svaki spor koji se odnosi na tumačenje ili provedbu ovih Uvjeta bit će predan nadležnim sudovima."
+    },
+    {
+      "id": "10",
+      "title": "10. Kontakt",
+      "body": "Za sva pitanja u vezi s ovim Uvjetima, možete nas kontaktirati putem Play Store ili e-poštom na adresu navedenu na našoj stranici Play Store."
+    }
+  ],
+  "privacy": [
+    {
+      "id": "1",
+      "title": "1. Uvod",
+      "body": "Ova Pravila o privatnosti opisuju kako Sophia (\"mi\", \"naša\" ili \"Aplikacija\") prikuplja, koristi i štiti vaše osobne podatke. Predani smo zaštiti vaše privatnosti i transparentnom rukovanju vašim podacima."
+    },
+    {
+      "id": "2",
+      "title": "2. Prikupljeni podaci",
+      "body": "Sophia je dizajniran imajući na umu minimiziranje podataka. App pohranjuje na vašem uređaju:\n\n- Vaš napredak u tečajevima i kvizovima\n- Vaše preferencije (interesi, ciljevi)\n- Vaš niz (uzastopni dani korištenja)\n- Vaši omiljeni tečajevi\n\nOvi lokalni podaci ne prenose se na naše poslužitelje.\n\nAplikacija također šalje anonimne događaje korištenja u Mixpanel (regija EU) kako bi razumjela kako se aplikacija koristi i poboljšala je. Ovi događaji ne uključuju vaše ime, e-poštu ili osobni sadržaj.\n\nAko pošaljete povratnu informaciju putem obrasca unutar aplikacije u postavkama, vaša poruka i, ako je navedena, vaša adresa e-pošte šalju se Formspreeu kako bismo mogli odgovoriti. Tehnički podaci (verzija aplikacije, jezik, uređaj) prilažu se automatski."
+    },
+    {
+      "id": "3",
+      "title": "3. Podaci o pretplati",
+      "body": "Ako se pretplatite na premium plan, transakcijom u potpunosti upravlja Google putem Play Store. Nemamo pristup vašim podacima o plaćanju (broj kartice, adresa za naplatu). Potvrdu statusa vaše pretplate primamo samo putem RevenueCat, našeg partnera za upravljanje pretplatama."
+    },
+    {
+      "id": "4",
+      "title": "4. RevenueCat",
+      "body": "Koristimo RevenueCat za upravljanje pretplatama u aplikaciji. RevenueCat može prikupiti anonimni identifikator uređaja kako bi potvrdio status vaše pretplate. Ne dijele se nikakvi osobni podaci. Za više informacija pogledajte politiku privatnosti RevenueCat-a na njihovoj web stranici."
+    },
+    {
+      "id": "5",
+      "title": "5. Analitički podaci (Mixpanel)",
+      "body": "Koristimo Mixpanel, hostiran u Europskoj uniji, za mjerenje korištenja aplikacije (posjećeni zasloni, otvoreni tečajevi, interakcije s paywallom itd.). Mixpanel prima anonimni identifikator uređaja, verziju aplikacije, jezik i skupne događaje upotrebe. Ne prikupljaju se osobni podaci. Možete nas kontaktirati kako biste zatražili brisanje ovih analitičkih podataka."
+    },
+    {
+      "id": "6",
+      "title": "6. Google Play / Android analitika",
+      "body": "Aplikacija također može imati koristi od anonimne statistike koju pruža Google (Play Console analitika). Ovi podaci su agregirani i ne mogu se koristiti za vašu osobnu identifikaciju. Dijeljenje analitike možete onemogućiti u postavkama svog Android uređaja (Google > Upravljajte svojim Google Account > Podaci i privatnost)."
+    },
+    {
+      "id": "7",
+      "title": "7. Pohrana podataka",
+      "body": "Podaci o vašem napretku pohranjuju se lokalno na vašem uređaju (lokalna pohrana aplikacije). Ako kreirate račun (Google), on se također sigurno sigurnosno kopira na naše Supabase poslužitelje (koji se nalaze u Europskoj uniji) kako bi se omogućila sinkronizacija na vašim uređajima. Deinstaliranjem aplikacije brišu se lokalni podaci; brisanje vašeg računa trajno uklanja povezane podatke na poslužitelju."
+    },
+    {
+      "id": "8",
+      "title": "8. Dijeljenje podataka",
+      "body": "Ne prodajemo, iznajmljujemo niti dijelimo osobne podatke s trećim stranama u komercijalne ili reklamne svrhe. Podaci koji se prenose ograničeni su na: Google i RevenueCat (pretplate), Mixpanel (anonimna analitika, EU), Formspree (povratne informacije korisnika dobrovoljno poslane iz postavki)."
+    },
+    {
+      "id": "9",
+      "title": "9. Prava korisnika",
+      "body": "Prema Općoj uredbi o zaštiti podataka (GDPR) i primjenjivim zakonima imate sljedeća prava:\n\n- Pravo pristupa vašim podacima\n- Pravo na ispravak\n- Pravo na brisanje (poništavanje u postavkama)\n- Pravo na prenosivost podataka\n- Pravo na prigovor\n\nZa ostvarivanje ovih prava kontaktirajte nas putem adrese navedene na našoj stranici Play Store."
+    },
+    {
+      "id": "10",
+      "title": "10. Zaštita maloljetnika",
+      "body": "Sophia je obrazovna aplikacija prikladna za sve uzraste. Ne prikupljamo svjesno osobne podatke od djece mlađe od 16 godina. Aplikacija ne sadrži neprikladan sadržaj."
+    },
+    {
+      "id": "11",
+      "title": "11. Promjene",
+      "body": "Zadržavamo pravo izmjene ove politike u bilo kojem trenutku. Sve promjene bit će priopćene putem ažuriranja aplikacije.\n\nZadnje ažuriranje: srpanj 2026"
+    }
+  ]
+}
