@@ -176,12 +176,17 @@ BC_FRENCH_RE = re.compile(r"av\.?\s*J\.?-?C|apr\.?\s*J\.?-?C")
 LEAKED_TOKEN_RE = re.compile(
     r"\bZZ[A-Z0-9]*|ZZ(?:END)?(?:BOLD|ITAL|GLOSS|NAME)[A-Z0-9]*"
     r"|(?:END)?(?:BOLD|ITAL|GLOSS|NAME)ZZ"
+    # A glossary slot whose ZZ pairs the engine ate: ZZXG0ZZ comes back as
+    # ZXG0, or as a bare G0 when both sides went. An X or a Z in front of the G
+    # settles it; G7, G8 and G20 are political groupings, so the bare form is
+    # only read as debris up to G5.
+    r"|(?<![A-Za-z0-9])(?:Z?XG\d+|ZG\d+|G[0-5])(?![0-9A-Za-z])"
     r"|__[A-Z]+__|\{\{\s*\w+\s*\}\}"
 )
 #: Locales whose prose carries no Latin of its own, so a stray Latin letter
 #: stands out as wreckage rather than as a name.
 NON_LATIN_LANGS = frozenset({"ar", "he"})
-LONE_SENTINEL_LETTER = re.compile(r"(?<![\w'À-ɏ-])Z(?![\w'À-ɏ-])")
+LONE_SENTINEL_LETTER = re.compile(r"(?<![\w'À-ɏ-])Z(?![\w'À-ɏ-])|(?<![\w'À-ɏ-])Z(?=\d)")
 
 #: Closing punctuation that may legally follow a comma or colon with no space:
 #: American style puts the comma inside the quotation marks.
@@ -669,11 +674,10 @@ ARABIC_RULES = LanguageRules(
         r"بعد|قبل|حتى|ضد)"
         rf"\s+({AR_PUNCT})(?=\s|$)",
     ),
-    stranded_tight=re.compile(
-        r"(?:^|(?<=\s))(من|إلى|في|على|"
-        r"عن|مع|بين)"
-        r"\s*([.!?؟])(?=\s|$)",
-    ),
+    # Arabic strands a preposition at the end of a question the way English
+    # does — "ما هو مصنوع من؟" — so a word against the mark says nothing. Only
+    # the gap a deleted term leaves, caught above, counts.
+    stranded_tight=re.compile(r"(?!x)x"),
     leading_articles=(),  # The Arabic article ال is written onto its noun
     leftover_extra_skip=frozenset(),
     check_a_an=False,
@@ -693,10 +697,10 @@ HEBREW_RULES = LanguageRules(
         r"נגד|לפי|מתוך)"
         r"\s+([,;:.!?])(?=\s|$)",
     ),
-    stranded_tight=re.compile(
-        r"(?:^|(?<=\s))(של|על|אל|עם|בין)"
-        r"\s*([.!?])(?=\s|$)",
-    ),
+    # "עם" is both the preposition "with" and the noun "people", and the noun is
+    # what ends "רצח עם" — genocide. The homograph makes this rule unusable, so
+    # only the spaced form above is kept.
+    stranded_tight=re.compile(r"(?!x)x"),
     leading_articles=(),  # The Hebrew article ה is written onto its noun
     leftover_extra_skip=frozenset(),
     check_a_an=False,
@@ -744,7 +748,7 @@ ESTONIAN_RULES = LanguageRules(
     # vastu." — so the same reasoning as Finnish applies and this stays inert.
     stranded_tight=re.compile(r"(?!x)x"),
     leading_articles=(),  # Estonian has no articles
-    leftover_extra_skip=frozenset(),
+    leftover_extra_skip=frozenset({"une"}),  # genitive of "uni", sleep
     check_a_an=False,
     flag_space_thousands=False,  # Estonian groups thousands with a space
     thousands_hint="a space is the Estonian separator",
