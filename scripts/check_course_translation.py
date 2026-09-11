@@ -170,9 +170,14 @@ FRENCH_DECIMAL_RE = re.compile(r"\b\d+,\d{1,2}(?!\d)\s*(?:[%\u00b0]|(?:km|kg|cm|
 ROMAN_CENTURY_RE = re.compile(r"\b[IVXL]{2,}(?:e|\u00e8me|er)\b")
 ROMAN_CENTURY_SPELLED_RE = re.compile(r"\b[IVXL]+(?:e|\u00e8me)\s+(?:si\u00e8cle|century)\b")
 BC_FRENCH_RE = re.compile(r"av\.?\s*J\.?-?C|apr\.?\s*J\.?-?C")
-#: \b keeps the pipeline's sentinels apart from the ZZ inside a real word —
-#: "QUIZZES" and "SENESTE QUIZZER" are not leaked tokens.
-LEAKED_TOKEN_RE = re.compile(r"\bZZ[A-Z0-9]*|__[A-Z]+__|\{\{\s*\w+\s*\}\}")
+#: A sentinel either stands on its own, or is named — which is what keeps the ZZ
+#: inside "QUIZZES" and "SENESTE QUIZZER" from reading as a leaked token while
+#: still catching one glued to the word before it ("22 juin 1940ZZENDBOLDZZ,").
+LEAKED_TOKEN_RE = re.compile(
+    r"\bZZ[A-Z0-9]*|ZZ(?:END)?(?:BOLD|ITAL|GLOSS|NAME)[A-Z0-9]*"
+    r"|(?:END)?(?:BOLD|ITAL|GLOSS|NAME)ZZ"
+    r"|__[A-Z]+__|\{\{\s*\w+\s*\}\}"
+)
 
 #: Closing punctuation that may legally follow a comma or colon with no space:
 #: American style puts the comma inside the quotation marks.
