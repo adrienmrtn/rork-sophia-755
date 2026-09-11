@@ -1,0 +1,108 @@
+{
+  "id": "course_212_les_paradis_fiscaux_expliques",
+  "title": "Razlaga davčnih oaz",
+  "subtitle": "10.000 milijard spravljenih stran",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Približno 10 % svetovnega bogastva se izogne davkom na nepreglednih ozemljih. Kako ta sistem deluje in zakaj je tako odporen?",
+  "hero": {
+    "image": "les_paradis_fiscaux_expliques",
+    "ratio": "16:9",
+    "hook": "Kajmanski otoki imajo 65.000 prebivalcev in več kot 100.000 podjetij. Dobrodošli v svetu davčnih oaz."
+  },
+  "sections": [
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nekatera ozemlja, pogosto majhna, omogočajo podjetjem in velikim bogastvom, da se skoraj v celoti izognejo davku države izvora. Tem pravimo **davène oaze**. Ocenjuje se, da je tam shranjenih približno 10 bilijonov dolarjev ali 8 do 10 % svetovnega bogastva."
+        },
+        {
+          "type": "paragraph",
+          "text": "To ni le problem računovodij: države prikrajšajo za 600 milijard dolarjev na leto, denar, s katerim bi lahko financirali bolnišnice ali šole. Evo, kako deluje ta diskreten sistem in zakaj se tako dobro upira poskusom regulacije."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p1",
+      "title": "Kako se skriva denar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Davčna oaza temelji na treh stebrih: davki blizu nič, velika nepreglednost in malo sodelovanja z drugimi državami. Ta ozemlja tako privabljajo kapital z vsega sveta, kar imenujemo [[na morju]] ekonomija."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na mnogih od teh ozemelj je mogoče ustvariti navidezno podjetje: podjetje brez pisarne ali zaposlenih, ki obstaja le na papirju. Njegov edini namen je pogosto prikriti identiteto pravega lastnika denarja, imenovanega dejanski lastnik."
+        },
+        {
+          "type": "image",
+          "asset": "cayman_islands_offshore_banking_paradise",
+          "ratio": "4:3",
+          "caption": "Kajmanski otoki, eno največjih finančnih središč na svetu kljub svoji majhnosti."
+        },
+        {
+          "type": "funFact",
+          "text": "Kajmanski otoki imajo le 65.000 prebivalcev, a je tam registriranih več kot 100.000 podjetij: je peto finančno središče na svetu za bančne depozite, po površini manjše od Pariza."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p2",
+      "title": "Umetnost ustvarjanja dobička izgine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za velika podjetja cilj ni nujno nezakonit: govorimo o **optimizacija**, to je spretni uporabi pravil posamezne države za plačilo nižjih davkov. Glavno orodje se imenuje [[prenosna cena]]: podjetje samo določi ceno menjav med lastnimi hčerinskimi podjetji, da prikaže svoj dobiček tam, kjer je davek najnižji."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pogosta metoda je prenos blagovne znamke ali patenta na hčerinsko podjetje v davčni oazi. Druge hčerinske družbe, ki se nahajajo na primer v Franciji, morajo nato plačati ogromne vsote za pravico do uporabe te blagovne znamke. Ta plačila zmanjšajo njihov obdavčljivi dobiček lokalno, medtem ko ga povečajo v davčni oazi."
+        },
+        {
+          "type": "funFact",
+          "text": "Francoska beseda »davčna oaza« izvira iz prevodne napake: angleščina pravi »davčna oaza«, varen pristan za denar (haven), ne raj (nebesa). Zmeda zvokov je spremenila pomen besede."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p3",
+      "title": "Svet (malo) reagira",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Finančna kriza leta 2008, nato objava [[Panamski dokumenti]] leta 2016, je sprožila val ogorčenja. Pod pritiskom OECD in G20 morajo banke zdaj samodejno posredovati podatke o svojih tujih strankah davčnim upravam."
+        },
+        {
+          "type": "paragraph",
+          "text": "Največji napredek je bil dosežen leta 2021, ko je mednarodni sporazum določil najnižjo 15-odstotno davčno stopnjo za multinacionalke. Ideja: preprečiti medsebojno tekmovanje držav z neskončnim zniževanjem davkov, da bi pritegnili podjetja. Če podjetje v davčni oazi plača le 5 %, lahko njegova matična država zahteva preostalih 10 %."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p4",
+      "title": "Davčna pravičnost je še vedno krhka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ko se največja bogastva izognejo davkom, srednji sloj in mala lokalna podjetja nosijo večji delež davčnega bremena. To tudi slabi javne storitve, kot sta zdravstvo ali izobraževanje, zaradi pomanjkanja sredstev."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bitka se zdaj premika proti digitalu: spletne platforme ne potrebujejo več pisarn, da bi služile denar v državi, zaradi česar so davčne meje vse bolj luknjaste. Uprave zdaj uporabljajo velike podatke za odkrivanje anomalij in zahtevajo javne registre, ki razkrivajo identiteto resničnih lastnikov podjetij."
+        },
+        {
+          "type": "takeaway",
+          "text": "Davčne oaze zaradi bančne tajnosti in skoraj ničelne obdavčitve skrivajo približno 10 % svetovnega bogastva. Od leta 2021 je globalna minimalna davčna stopnja 15 % poskušala omejiti to utajo, vendar bitka še zdaleč ni dobljena."
+        }
+      ]
+    }
+  ]
+}

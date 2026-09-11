@@ -1,0 +1,104 @@
+{
+  "id": "course_215_les_inegalites_nord_sud",
+  "title": "Neenakosti sever-jug",
+  "subtitle": "Svet dveh hitrosti",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Najbogatejših 10 % na planetu zajema več kot polovico svetovnega dohodka. Skrajna revščina pa se je v tridesetih letih razdelila na štiri.",
+  "hero": {
+    "image": "les_inegalites_nord_sud",
+    "ratio": "16:9",
+    "hook": "Američan v eni uri zasluži toliko, kolikor prebivalec Nigra zasluži v celem dnevu dela."
+  },
+  "sections": [
+    {
+      "id": "course_215_les_inegalites_nord_sud_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vrzel med bogatimi in revnimi državami ostaja eno najbolj osupljivih dejstev v današnjem svetu. Globalizacija je obljubljala zbliževanje življenjskega standarda, vendar razlike v bogastvu med narodi ostajajo ogromne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vendar nedavna zgodovina ni samo mračna: skrajna revščina se je v tridesetih letih zmanjšala hitreje kot kadar koli prej. Ta tečaj raziskuje korenine teh neenakosti in razloge za ta čudni paradoks."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p1",
+      "title": "Svet dveh hitrosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**** najbogatejših 10 % svetovnega prebivalstva ima več kot 52 % svetovnega dohodka. Najrevnejših 50 % si mora deliti le 8 % pogače. Ta koncentracija bogastva še nikoli v človeški zgodovini ni bila večja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta razkorak je viden tudi pri pričakovani življenjski dobi: na Japonskem doseže 83 let, v Srednjeafriški republiki pade na 55 let. Te vrzeli niso posledica naključja: izvirajo iz zelo neenakega dostopa do pitne vode, hrane in zdravstvene oskrbe."
+        },
+        {
+          "type": "funFact",
+          "text": "Prebivalec ZDA v povprečju v eni uri dela zasluži toliko kot prebivalec Nigra v celem dnevu."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p2",
+      "title": "Zgodovinske korenine še žive",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Da bi razumeli te razlike, se moramo vrniti k kolonizaciji. Evropske sile so organizirale številna južna ozemlja kot dobavitelje surovin (kave, kakava, bombaža) in zajezile lastno industrializacijo, da bi zaščitile lastne tovarne."
+        },
+        {
+          "type": "image",
+          "asset": "global_inequality_rich_poor_contrast_photograph",
+          "ratio": "16:9",
+          "caption": "Vrzeli v bogastvu med severom in jugom ostajajo med največjimi na planetu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta logika se nadaljuje še danes skozi [[trgovinski pogoji]]: države na jugu pogosto prodajajo surovine, katerih cena se zelo spreminja, medtem ko kupujejo industrijske izdelke, katerih cena le raste. K temu je dodana teža dolga: odplačilo obresti včasih zavzame več prostora v državnem proračunu kot šolstvo ali zdravstvo."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p3",
+      "title": "Pravi napredek, a neenakomeren",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vendar pa smo v zadnjih tridesetih letih opazili spektakularen upad absolutne revščine, ki je leta 1990 prizadela 36 % svetovnega prebivalstva v primerjavi z manj kot 10 % pred letom 2020. Ta napredek izhaja predvsem iz meteorske rasti Kitajske in Indije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta napredek ima skrito plat: to kaže [[\"slonja krivulja\"]] ekonomista Branka Milanovića. Azijskemu srednjemu razredu so dohodki eksplodirali, vendar je delavski razred v bogatih državah stagniral, soočen z globalno konkurenco. Zmanjševanje neenakosti med državami torej ni preprečilo novih napetosti niti znotraj bogatih držav."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p4",
+      "title": "Podnebje, nova ločnica",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prihodnost neenakosti med severom in jugom je zdaj odvisna od podnebja. Države na jugu, zgodovinsko najmanj odgovorne za izpuste toplogrednih plinov, pa so kljub temu najbolj izpostavljene sušam, poplavam in naraščajočim vodostajem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da bi te vrzeli vzdržno zmanjšala, mednarodna skupnost raziskuje nove poti: [[uradna razvojna pomoč]], usmerjeno v energetski prehod ali odpis dolga najbolj ranljivih držav. Dokler bo bogastvo najbogatejših raslo hitreje kot bogastvo najrevnejših, bodo napetosti ostale visoke."
+        },
+        {
+          "type": "takeaway",
+          "text": "Najbogatejših 10 % na svetu ima več kot polovico svetovnega dohodka, vendar se je skrajna revščina zaradi vzpona Kitajske in Indije v tridesetih letih zmanjšala hitreje kot kadar koli prej. Naslednji velik izziv v tem razkolu med severom in jugom bo podnebje."
+        }
+      ]
+    }
+  ]
+}

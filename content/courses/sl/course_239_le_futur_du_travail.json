@@ -1,0 +1,112 @@
+{
+  "id": "course_239_le_futur_du_travail",
+  "title": "Prihodnost dela",
+  "subtitle": "Avtomatizacija in umetna inteligenca",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Umetna inteligenca in nove oblike zaposlovanja pretresajo model dela, podedovan iz industrijske dobe.",
+  "hero": {
+    "image": "le_futur_du_travail",
+    "ratio": "16:9",
+    "hook": "Stroji delujejo hitreje kot kdaj koli prej. Videti je treba, kaj bo še storiti ljudem."
+  },
+  "sections": [
+    {
+      "id": "course_239_le_futur_du_travail_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Delo ne opredeljuje samo našega dohodka: oblikuje tudi našo družbeno identiteto in pomen, ki ga dajemo našim dnem. Vendar pa umetna inteligenca, robotika in novi načini dela danes pretresajo ta model, podedovan iz industrijske dobe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta tečaj raziskuje, kako delo spreminja obliko, in velika vprašanja, ki jih odpira ta preobrazba: manj ur, več strojev in nova delitev bogastva."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p1",
+      "title": "Konec modela, ki se je rodil s Henryjem Fordom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sodobno delo je že dolgo organizirano okoli ideje, ki jo je populariziral **[[Henry Ford]]**, ki je leta 1926 uvedel 40-urni delovni teden. Ta izbira ni bila gesta velikodušnosti: delavci s prostim časom postanejo tudi kupci, sposobni kupiti izdelke, ki jih proizvedejo sami."
+        },
+        {
+          "type": "funFact",
+          "text": "Leta 1930 je ekonomist John Maynard Keynes napovedal, da bodo njegovi vnuki zaradi tehnološkega napredka delali le 15 ur na teden. Skoraj stoletje kasneje imamo to tehnologijo, vendar še vedno enako trdo delamo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta model se danes ruši v korist **gig gospodarstva**, »gig« gospodarstva: več kot 57 milijonov delavcev v Združenih državah zdaj prodaja svoje storitve prek digitalnih platform, zunaj tradicionalne zaposlitve. Avtomatizacija prevzema tudi vse bolj zapletene naloge, medtem ko delo na daljavo, ki ga je pospešila pandemija 2020, preoblikuje samo geografijo dela."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p2",
+      "title": "AI in izziv ustvarjalnega uničenja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Razprava o prihodnosti dela pogosto temelji na ideji filozofa in ekonomista **[[Joseph Schumpeter]]**: **[[Kreativno uničenje (Schumpeter)]]**. Po njegovih besedah vsaka tehnološka revolucija uniči stare poklice, na koncu pa ustvari nove, pogosto bolj kvalificirane. Generativna umetna inteligenca pa prinaša nekaj novega: prvič ogroža pisarniška dela in poklice, ki veljajo za intelektualne."
+        },
+        {
+          "type": "funFact",
+          "text": "Leta 2023 je študija pokazala, da se je umetna inteligenca na preizkusu ustvarjalnosti odrezala bolje kot 99 % ljudi, kar je izpodbijalo idejo, da je ustvarjalnost naša zadnja prednost pred stroji."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pojavljajo se trije scenariji. Optimist si predstavlja povečanje produktivnosti, ki bi ljudi osvobodilo ponavljajočih se nalog. Pesimist se boji, da bo umetna inteligenca napredovala hitreje kot naša sposobnost prekvalificiranja, kar bo povzročilo množično brezposelnost. Hibrid se končno zanaša na sodelovanje med ljudmi in stroji, kjer bi ključna veščina postala zmožnost usmerjanja orodij namesto obvladovanja fiksnega znanja in izkušenj."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p3",
+      "title": "Prerazporedite čas in denar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ob soočenju s tveganjem družbe dveh hitrosti se preučujejo nova orodja. **univerzalni temeljni dohodek** predlaga plačilo fiksnega zneska vsakemu državljanu brez pogojev za zagotovitev življenjskih poti v gospodarstvu, kjer delo postaja vse bolj občasno."
+        },
+        {
+          "type": "image",
+          "asset": "ai_generative_writing_artificial_intelligence",
+          "ratio": "16:9",
+          "caption": "Avtomatizacija, umetna inteligenca in nove oblike zaposlovanja preoblikujejo svet dela."
+        },
+        {
+          "type": "paragraph",
+          "text": "Poleg tega se vse bolj uveljavlja ideja o 4-dnevnem tednu: če stroji proizvedejo več v krajšem času, se zdi logično, da se človeški delovni čas v zameno skrajša, da se ohrani zaposlitev in ohrani zdravje delavcev. Ostaja vprašanje financiranja: če vrednost vedno bolj ustvarja programska oprema, se bodo davki nedvomno morali preusmeriti z dohodka od dela na dohodek od kapitala."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p4",
+      "title": "Kakšen pomen dati jutrišnjemu delu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ko je ekonomska enačba razrešena, ostaja globlje vprašanje: kaj postane s pomenom naših dni v svetu, kjer delo ni tako pomembno? V zgodovini je delo strukturiralo vsakdanje življenje in samospoštovanje. Njegovo delno izginotje bi lahko vodilo bodisi v dolgčas bodisi v oživitev prostovoljnih, umetniških ali državljanskih dejavnosti."
+        },
+        {
+          "type": "funFact",
+          "text": "Beseda »delo« izhaja iz latinskega tripaliuma, trikrakega mučilnega instrumenta. Izvor, ki nas spominja, da je bil dolgo dojeman kot trpljenje, preden je postal identiteta."
+        },
+        {
+          "type": "paragraph",
+          "text": "V tem kontekstu postane učenje učenja bistvena veščina. Resnično vprašanje ni samo tehnološko, ampak politično: ali bomo umetno inteligenco uporabili za povečanje naših zmogljivosti ali samo za zmanjšanje poslovnih stroškov? Odgovor bo odločil, ali bo jutrišnje delo osvoboditev ali nova omejitev."
+        },
+        {
+          "type": "takeaway",
+          "text": "Prihodnost dela je zaznamovana s koncem samskih zaposlenih v korist gig ekonomije in z izzivom umetne inteligence, ki prvič ogroža intelektualna delovna mesta. Naš socialni model bo nedvomno moral prerazporediti povečanje produktivnosti prek univerzalnega dohodka ali krajšega delovnega tedna."
+        }
+      ]
+    }
+  ]
+}

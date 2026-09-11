@@ -1,0 +1,104 @@
+{
+  "id": "course_76_pourquoi_les_feuilles_changent_elles_de",
+  "title": "Zakaj listi spreminjajo barvo?",
+  "subtitle": "Jesen in pigmenti",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Jesen ne izumlja barv: odstrani zeleno, ki jih je zakrila. V ozadju predstave je strategija preživetja za preživetje zime.",
+  "hero": {
+    "image": "pourquoi_les_feuilles_changent_de_couleur",
+    "ratio": "16:9",
+    "hook": "Jesensko listje se ne liči: sname zeleno."
+  },
+  "sections": [
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vsako jesen se gozdovi spremenijo iz zelene v zlato, v bakreno, v vijolično. To ni estetska kaprica. To je strategija: drevo si opomore, kar lahko, preden odvrže listje za zimo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tople barve se ne pojavijo od nikoder. Pogosto so bili že tam, skriti pod zelenico. Razumeti jesen pomeni razumeti veliko biokemično čiščenje."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
+      "title": "Zelena, ki skrije vse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od pomladi do poznega poletja so listi polni **klorofila**, pigmenta, ki spodbuja fotosintezo. Pod svetlobo se razgradi, vendar ga drevo nenehno nadomešča. Dokler prevladuje, ostane list zelen."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_color_change_autumn_chlorophyll",
+          "ratio": "auto",
+          "caption": "Jeseni klorofil izgine in razkrije barve listov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vseeno pa list vsebuje tudi **karotenoid**, rumene in oranžne pigmente (kot pri korenju). Poleti so tam, a nevidni pod zelenico. Jeseni se proizvodnja klorofila ustavi. Zelena zbledi, razkrijeta se rumena in oranžna."
+        },
+        {
+          "type": "funFact",
+          "text": "\"Klorofil\" izhaja iz grščine *kloros* (zelen) in *phyllon* (list). \"Karotenoid\" je podoben korenu ... korenju, kjer je bil ta pigment prvič identificiran."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
+      "title": "Pravi sprožilec: noči, ki postajajo daljše",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jeseni ne začne predvsem mraz, ampak dolžina noči. Drevesa ga merijo s svetlobnimi senzorji, [[fitokromi]]. Ko so noči daljše, pride do vsakega lista hormonski signal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na dnu peclja se oblikuje [[Ločevalno območje]], nekakšen čep. Sok manj naraste, sladkorji se slabo znižajo. V izolaciji list hitreje razgradi svoj klorofil. Bolj stabilne rumene barve ostanejo nekaj tednov, nato listi odpadejo."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
+      "title": "Od kod prihajajo svetlo rdeče barve?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rumena je že bila tam. Rdeča in vijolična sta pogosto **narejeno** ob koncu sezone. To so [[Antocianini]], ki nastanejo, ko sladkorji ostanejo ujeti v listih."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zakaj bi vlagali energijo tik preden papir zavržemo? Verjetno zaradi zaščite **** med recikliranjem. Drevo obnovi **azine** in druga dragocena hranila. Brez klorofila lahko sonce poškoduje še aktivna tkiva. Antocianini med velikim premikanjem proti koreninam delujejo kot sončni filter."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
+      "title": "Zakaj nekatere jeseni bolj kurijo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Najlepše rdeče se pogosto rodijo iz sončnih dni in hladnih noči brez zmrzali. Veliko sladkorja, pretvorba v antociane. Siva in deževna jesen daje bolj dolgočasne odtenke. Zgodnja zmrzal uniči liste pred razstavo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na koncu ostanejo le [[tanini]], rjave snovi iz gozdnih tal. Nekatere študije tudi menijo, da svetle barve opozarjajo na [[listne uši]]: drevesna oblika, močna obramba, bolje iti drugam."
+        },
+        {
+          "type": "takeaway",
+          "text": "Jesen razkrije rumeno, ki je že prisotno, ko klorofil izgine, in včasih naredi rdeče, da zaščiti recikliranje hranil pred padcem listov."
+        }
+      ]
+    }
+  ]
+}

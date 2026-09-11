@@ -1,0 +1,120 @@
+{
+  "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur",
+  "title": "Zakaj Luna ne pade na Zemljo?",
+  "subtitle": "Orbita in gravitacija",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Luna nenehno pada proti Zemlji. Vsakič jo preprosto pogreša. Točno to je orbita.",
+  "hero": {
+    "image": "pourquoi_la_lune_ne_tombe_pas",
+    "ratio": "16:9",
+    "hook": "Luna pada proti nam. Na vsakem koraku pogreša Zemljo."
+  },
+  "sections": [
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Če Zemljina gravitacija vleče Luno, zakaj se ne zaleti v nas? Odgovor se zdi nenavaden: Luna **res pada** proti Zemlji. Samo pogreša vsak trenutek."
+        },
+        {
+          "type": "paragraph",
+          "text": "To ravnotežje med padcem in stransko hitrostjo je **orbitalno**, ukrivljena trajektorija okoli zvezde. Angleški fizik **Isaac Newton** je prvi z isto idejo poenotil padec jabolka in gibanje zvezd."
+        },
+        {
+          "type": "funFact",
+          "text": "Če bi na Zemlji tehtali **60 kg**, bi na Luni tehtali le približno **10**: njena gravitacija je šestkrat šibkejša."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
+      "title": "Newtonov imaginarni kanon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Newton si predstavlja top na vrhu tako visoke gore, da bi se pojavil iz ozračja. Žogo streljamo vodoravno. Z malo moči hitro pade. Z večjo močjo gre še dlje."
+        },
+        {
+          "type": "image",
+          "asset": "newton_cannonball_orbit_thought_experiment",
+          "ratio": "auto",
+          "caption": "Newtonov miselni eksperiment s topovsko kroglo: ključ do razumevanja orbite."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pri določeni hitrosti, imenovani [[Ravnotežna hitrost]], se zgodi nekaj izjemnega. Ko žoga pade, se Zemlja, ki je okrogla, pod njo ukrivi z enako hitrostjo. Projektil pade ... ne da bi se sploh dotaknil tal. Je v **stalnem prostem padu**, ki ga vleče gravitacija, ne da bi strmoglavil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Luna naredi isto. Ima dovolj bočne hitrosti, da padec spremeni v zanko. Brez te hitrosti bi se potopil naravnost proti nam."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p2",
+      "title": "Dve sili, eno ravnotežje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Luna kroži na približno **384.000 km**. Njegova bočna hitrost je približno **1 km/s**. Če bi se nenadoma ustavil, bi se zrušil v nekaj dneh. Če bi gravitacija nenadoma izginila, bi šlo v vesolju premočrtno, po principu [[vztrajnost]]: telo obdrži svojo hitrost, če ga ne upočasnimo."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Newtonov zakon univerzalne gravitacije]] pravi, da vsaka masa privlači vsako drugo maso in da se privlačnost zmanjšuje z razdaljo, natančneje s kvadratom razdalje. Bližje kot je satelit, hitreje mora iti, da ne pade."
+        },
+        {
+          "type": "funFact",
+          "text": "Mednarodna vesoljska postaja na višini le **400 km** potuje s hitrostjo okoli **28.000 km/h**. Zemljo obkroži v **90 minut**. Luna, bolj oddaljena, potrebuje **27,3 dni**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Torej orbita ni čarovnija. Gre za stalen kompromis med \"padam\" in \"prehitro se premikam, da bi udaril.\""
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p3",
+      "title": "Plimovanje odriva Luno stran",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Orbita ni fiksna. V poštev pridejo [[Plimne sile]]. Lunina gravitacija vleče močneje na stran Zemlje, ki je obrnjena proti njej, kot na sredino. Deformira oceane in ustvarja vodno izboklino."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ker se Zemlja vrti okoli svoje osi hitreje kot se Luna vrti okoli nje, se ta greben premakne malo pred Luno. Trenje zelo rahlo upočasni vrtenje Zemlje: naši dnevi se podaljšajo za približno **1,4 mililitra** na stoletje. V zameno se Luna oddalji za približno **3,8 cm** na leto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pred milijardami let je bila Luna veliko bližje. Plimovanje je bilo ogromno. To mešanje vode in kemije je morda pomagalo zgodnjim oblikam življenja. In dinozavri so živeli na Zemlji, kjer so dnevi trajali le **22 ali 23 ur**."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
+      "title": "Mrki…za zdaj",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Danes je po geometrijskem naključju Sonce približno **400-krat** večje od Lune, a tudi **400-krat** dlje. Oba imata torej enako **anavidezno velikost**, kot, pod katerim ju vidimo na nebu. Možni so popolni sončni mrki."
+        },
+        {
+          "type": "paragraph",
+          "text": "Čez približno **600 milijonov let** bo Luna predaleč, da bi popolnoma zakrila Sonce. Vse, kar bo ostalo, so obročasti mrki: svetlobni obroč okoli luninega diska. Zelo dolgoročno bi se lahko Zemlja in Luna sinhronizirali: vsako telo bi drugemu vedno kazalo isti obraz. Toda Sonce bo s tem, ko bo postalo **rdeči velikan**, zadnja faza zvezde, kot je naša, spremenilo sistem veliko prej."
+        },
+        {
+          "type": "takeaway",
+          "text": "Luna ne trči, ker njena bočna hitrost uravnava privlačnost Zemlje: je v stalnem prostem padu. In še vedno se oddaljuje za približno **3,8 cm** na leto."
+        }
+      ]
+    }
+  ]
+}

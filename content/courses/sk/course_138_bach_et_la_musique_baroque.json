@@ -1,0 +1,145 @@
+{
+  "id": "course_138_bach_et_la_musique_baroque",
+  "title": "Bach a baroková hudba",
+  "subtitle": "1685-1750",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Johann Sebastian Bach, kantor v Lipsku, vzal fúgu a kontrapunkt k ich vrcholu a stal sa architektom baroka.",
+  "hero": {
+    "image": "bach_et_la_musique_baroque",
+    "ratio": "16:9",
+    "hook": "Lipský kantor stavia zvukovú katedrálu Západu."
+  },
+  "sections": [
+    {
+      "id": "course_138_bach_et_la_musique_baroque_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Johann Sebastian Bach** (**1685**-**1750**) je často považovaný za vrchol západnej hudby. Architekt zvukov privádza k dokonalosti umenie **fúga** a [[kontrapunkt]]: niekoľko nezávislých melodických línií, ktoré sa prelínajú."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho život nie je životom dvornej hviezdy. Je to dielo geniálneho remeselníka v službách Cirkvi a kniežat, ktorého dielo bude úplne znovuobjavené až v 19. storočí."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p1",
+      "title": "Barok: kostol, nádvorie a javisko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Éra **baroka** trvá približne **1600** po Bachovu smrť. Má rada kontrast, pohyb, ornament. Krajine dominujú **Vivaldi** v Taliansku, **Handel** v Nemecku a potom v Anglicku. Hudba slúži trom misiám: kostolu (organ a posvätná pieseň), kniežacej spálni a javisku (opera)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bach nenapísal operu, ale do svojich pašií a oratórií vložil lyrickú drámu. Syntetizuje francúzsku mieru, taliansku lyriku a nemeckú prísnosť. Hudba pre neho odráža božský poriadok, nielen potešenie."
+        },
+        {
+          "type": "funFact",
+          "text": "V roku 1717 vo Weimare strávil Bach mesiac vo väzení za to, že príliš dôrazne trval na rezignácii: vojvoda ho odmietol nechať odísť do Köthenu."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p2",
+      "title": "Lipsko: kantor a jeho kantáty",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bach sa narodil v **Eisenach** v **1685** do dynastie hudobníkov a usadil sa v **1723** v **Lipsko** ako [[kantor]] kostola sv. Tomáša. Ohromná záťaž: takmer každý týždeň nový [[kantáta]] plus výučba na [[Thomasschule]]."
+        },
+        {
+          "type": "image",
+          "asset": "bach_eisenach_birthplace_portrait",
+          "ratio": "4:3",
+          "caption": "Bach, dedič línie nemeckých hudobníkov."
+        },
+        {
+          "type": "image",
+          "asset": "leipzig_st_thomas_church_bach_cantor",
+          "ratio": "4:3",
+          "caption": "Svätý Tomáš z Lipska: každodenný život kantora Bacha."
+        },
+        {
+          "type": "paragraph",
+          "text": "Odhaduje sa, že bolo zložených približne **300** kantát, z ktorých sa k nám dostalo niekoľko **200**. Má **20** deti z dvoch manželstiev; **Carl Philipp Emanuel** a **Johann Christian** sa sami stali významnými skladateľmi. Večer vedie súbor [[Collegium Musicum]], pre ktorý píše koncerty a svetské suity."
+        },
+        {
+          "type": "funFact",
+          "text": "Na konci svojho života, keď Bach podstúpil operáciu očí u cestujúceho chirurga Johna Taylora, krátko pred smrťou oslepol."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p3",
+      "title": "Dobre temperovaný klavír a znovuobjavenie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "S [[Rovnaký temperament]], systémom ladenia, ktorý zjednocuje intervaly, Bach dokazuje, že klávesnica môže hrať vo všetkých klávesoch. *Dvojitá temperovaná klávesnica* (48 prelúdií a fúg) otvára cestu k modernej hudbe. Jeho fúga prekrýva tému, ktorú prevzalo niekoľko hlasov: matematickú architektúru."
+        },
+        {
+          "type": "image",
+          "asset": "bach_well_tempered_clavier_manuscript_fugue",
+          "ratio": "4:3",
+          "caption": "Dobre temperovaná klávesnica: všetky tóny na jedinej klávesnici."
+        },
+        {
+          "type": "paragraph",
+          "text": "Keď zomrel, móda uprednostnila svetlejší [[štýl galantný]]. Bach pôsobí „goticky“. V **1829** mladý **Felix Mendelssohn** dirigoval *Matúšove pašie* v Berlíne: začiatok „Bachovej renesancie“. Bez neho by stovky skóre mohli zmiznúť."
+        },
+        {
+          "type": "funFact",
+          "text": "Mendelssohn žartoval: bolo nevyhnutné, aby konvertovaný Žid a herec (jeho priateľ Devrient) vrátili svetu najväčšie majstrovské dielo kresťanskej hudby."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p4",
+      "title": "SDG, cestovanie a univerzálne dedičstvo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Horlivý luterán Bach často podpisoval **SDG** (*Soli Deo Gloria*: sláva len Bohu). Hrá sa so [[numerológia]] a do nôt si zakóduje svoje meno (B-A-C-H). V **1977** NASA umiestnila niekoľko jeho diel na [[Zlatá nahrávka]] sond Voyager: zvuková ambasáda ľudstva do vesmíru."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1685",
+              "title": "Narodenie v Eisenachu",
+              "detail": "Dynastia hudobníkov dáva Bacha svetu."
+            },
+            {
+              "date": "1723",
+              "title": "Cantor v Lipsku",
+              "detail": "Týždenné kantáty a nesmierne sakrálne dielo."
+            },
+            {
+              "date": "1722-1742",
+              "title": "Dobre temperovaná klávesnica",
+              "detail": "Všetky tóny, fúga ako katedrála."
+            },
+            {
+              "date": "1829",
+              "title": "Mendelssohn",
+              "detail": "Matúšove pašie sa vracajú na svetlo."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Lipský kantor Bach dosiahol vrchol kontrapunktu a fúgy; zabudnutý, potom vzkriesený Mendelssohnom, zostáva architektom baroka."
+        }
+      ]
+    }
+  ]
+}

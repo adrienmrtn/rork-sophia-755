@@ -1,0 +1,104 @@
+{
+  "id": "course_76_pourquoi_les_feuilles_changent_elles_de",
+  "title": "Prečo listy menia farbu?",
+  "subtitle": "Jeseň a pigmenty",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Jeseň farby nevymýšľa: odstraňuje zelenú, ktorá ich maskovala. Za predstavením stratégia prežitia, ako sa dostať cez zimu.",
+  "hero": {
+    "image": "pourquoi_les_feuilles_changent_de_couleur",
+    "ratio": "16:9",
+    "hook": "Jesenné lístie sa nelíči: sťahuje zelenú."
+  },
+  "sections": [
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Každú jeseň sa lesy menia zo zelenej na zlatú, na medenú, na fialovú. Nejde o estetický rozmar. Je to stratégia: strom obnoví, čo sa dá, kým zhodí listy na zimu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Teplé farby sa neobjavia z ničoho nič. Často tam už boli ukryté pod zeleňou. Pochopiť jeseň znamená pochopiť veľké biochemické čistenie."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
+      "title": "Zelená, ktorá všetko skrýva",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od jari do konca leta sú listy plné **chlorofylu**, pigmentu, ktorý poháňa fotosyntézu. Pod svetlom degraduje, ale strom ho neustále nahrádza. Pokiaľ dominuje, list zostáva zelený."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_color_change_autumn_chlorophyll",
+          "ratio": "auto",
+          "caption": "Na jeseň chlorofyl mizne a odhaľuje farby listov."
+        },
+        {
+          "type": "paragraph",
+          "text": "List však obsahuje aj **karotenoidy**, žlté a oranžové pigmenty (ako v mrkve). V lete sú tam, ale pod zeleňou ich nevidno. Na jeseň sa produkcia chlorofylu zastaví. Zelená bledne, odhaľuje sa žltá a oranžová."
+        },
+        {
+          "type": "funFact",
+          "text": "„Chlorofyl“ pochádza z gréckeho *chlór* (zelený) a *fylon* (list). „Karotenoid“ zdieľa koreň... mrkvy, kde bol tento pigment prvýkrát identifikovaný."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
+      "title": "Skutočný spúšťač: noci, ktoré sa predlžujú",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nie je to hlavne chlad, ktorý odštartuje jeseň, ale dĺžka nocí. Stromy to merajú pomocou svetelných senzorov [[fytochrómy]]. Keď sa noci predĺžia, do každého listu ide hormonálny signál."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na báze stopky sa vytvára [[Separačná zóna]], akási čiapočka. Miazga stúpa menej, cukry zle klesajú. Izolovaný list rýchlejšie degraduje svoj chlorofyl. Stabilnejšie žlté zostávajú niekoľko týždňov, potom list opadne."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
+      "title": "Odkiaľ pochádzajú jasne červené?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Žltá tam už bola. Červená a fialová sú často **vyrobené** na konci sezóny. Sú to [[Antokyány]], ktoré sa vyrábajú, keď cukry zostávajú zachytené v liste."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prečo investovať energiu tesne pred vyhodením papiera? Pravdepodobne na ochranu **** počas recyklácie. Strom obnovuje **azine** a ďalšie cenné živiny. Bez chlorofylu môže slnko poškodiť stále aktívne tkanivá. Antokyány pôsobia ako solárny filter počas veľkého pohybu ku koreňom."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
+      "title": "Prečo niektoré jesene horia viac",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Najkrajšie červené sa často rodia zo slnečných dní a chladných nocí bez mrazu. Veľa cukru, premena na antokyány. Sivá a daždivá jeseň dáva matnejšie odtiene. Skorý mráz zabíja listy pred výstavou."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nakoniec ostane len [[triesloviny]], hnedé látky z lesnej podlahy. Niektoré štúdie si tiež myslia, že svetlé farby varujú [[vošky]]: fit strom, silné kly, lepšie ísť inam."
+        },
+        {
+          "type": "takeaway",
+          "text": "Jeseň odhaľuje už prítomné žlté, keď chlorofyl zmizne, a niekedy robí červenú, aby sa chránila recyklácia živín pred opadaním listov."
+        }
+      ]
+    }
+  ]
+}

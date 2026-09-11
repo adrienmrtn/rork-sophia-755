@@ -1,0 +1,135 @@
+{
+  "id": "course_38_le_11_septembre_2001",
+  "title": "11. september 2001",
+  "subtitle": "2001",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "**11. september 2001** devetnajst teroristov Al-Kaide ugrabi štiri letala. Najsmrtonosnejši napad v ameriški zgodovini je začetek dobe vojne proti terorizmu.",
+  "hero": {
+    "image": "le_11_septembre_2001",
+    "ratio": "16:9",
+    "hook": "Septembrsko jutro, ki zaključi obdobje po hladni vojni in odpre stoletje vojn."
+  },
+  "sections": [
+    {
+      "id": "course_38_le_11_septembre_2001_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V torek **, 11. september 2001**, je devetnajst članov **[[Al-Kaida]]**, teroristične organizacije, ki jo je ustanovil **Osama Bin Laden**, ugrabilo štiri letala. Dva sta zadela **Svetovni trgovinski center** v New Yorku, tretji **Pentagon**, sedež ameriške obrambe. Četrti je strmoglavil v Pensilvaniji po uporu potnikov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rezultati: **2 977** mrtev. Poleg drame napad uniči upanje na miroljuben svetovni red in sproži vrsto konfliktov, ki še vedno oblikujejo 21. stoletje."
+        }
+      ]
+    },
+    {
+      "id": "course_38_le_11_septembre_2001_p1",
+      "title": "Od kod prihaja Al-Kaida?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Osama Bin Laden**, savdski milijarder, ki je postal vodja džihadista, je ustanovil **[[Al-Kaida]]** ob koncu let **1980**, po **[[Sovjetsko-afganistanska vojna (1979-1989)]]**. Po sovjetskem umiku je obsodil ameriško prisotnost v **[[Savdska Arabija]]** in se odločil udariti na Zahod."
+        },
+        {
+          "type": "image",
+          "asset": "osama_bin_laden_portrait",
+          "ratio": "1:1",
+          "caption": "Osama bin Laden, ustanovitelj Al Kaide."
+        },
+        {
+          "type": "paragraph",
+          "text": "Znaki se kopičijo: napad na Svetovni trgovinski center v **1993**, vzhodnoafriška veleposlaništva v **1998**, rušilec USS Cole v **2000**. Vendar razdeljenost med Cio in FBI, ameriškima obveščevalnima službama, preprečuje, da bi se žice pravočasno povezale."
+        },
+        {
+          "type": "funFact",
+          "text": "19 ugrabiteljev je porabilo približno **400.000** dolarjev za napad, katerega skupni ekonomski stroški bodo presegli **2 žolč**."
+        }
+      ]
+    },
+    {
+      "id": "course_38_le_11_septembre_2001_p2",
+      "title": "Časovnica 11. septembra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ob **8:46** ameriški let 11 zadene severni stolp. Ob **9:03** United 175 udari v Južni stolp v živo na TV. Ob **9:37** American 77 zadene Pentagon. Ob **10:03** je United 93 strmoglavil v Pensilvaniji."
+        },
+        {
+          "type": "image",
+          "asset": "world_trade_center_twin_towers_september_11_2001",
+          "ratio": "16:9",
+          "caption": "Stolpa dvojčka Svetovnega trgovinskega centra, osrednje tarče napadov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Stolpi se zrušijo: južno ob **9:59**, severno ob **10:28**. Ameriški zračni prostor je prvič zaprt. Te slike postanejo temeljna travma generacije."
+        }
+      ]
+    },
+    {
+      "id": "course_38_le_11_septembre_2001_p3",
+      "title": "Vojna proti terorizmu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oktobra **2001** je bila operacija **[[Trajna svoboda]]** namenjena Afganistanu: uničenje Al-Kaide in strmoglavljenje **[[Talibani]]**, islamističnega gibanja, ki je zavetje Bin Ladna. Kabul hitro pade. Vojna traja dvajset let."
+        },
+        {
+          "type": "paragraph",
+          "text": "Marca **2003**, brez mandata ZN, so Združene države sprožile [[Vojna v Iraku (2003)]] in obtožile diktatorja **[[Sadam Husein]]** orožja za množično uničevanje. Obtožba je lažna; država pade v kaos. V **[[Guantanamo]]**, ameriški bazi na Kubi, zaporniki ostajajo zunaj tradicionalnega prava. Bin Laden je bil ubit 1. maja 2011 v Pakistanu."
+        }
+      ]
+    },
+    {
+      "id": "course_38_le_11_septembre_2001_p4",
+      "title": "Svet pod nadzorom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V Združenih državah **PATRIOT akt**, zakon o izrednih razmerah, močno širi nadzor. Evropa sledi. Letališča se nenehno spreminjajo. Ground Zero, kraj porušenih stolpov, postane spomenik in simbol odpornosti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vojne, ki so sledile, so povzročile na stotisoče smrti in milijone razseljenih ljudi. Globalni terorizem, bolj decentraliziran, uporablja orodja globalizacije za boj proti njemu."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "11. september 2001",
+              "title": "Napadi",
+              "detail": "2.977 smrti v ZDA."
+            },
+            {
+              "date": "oktober 2001",
+              "title": "Afganistan",
+              "detail": "Operacija Trajna svoboda."
+            },
+            {
+              "date": "2003",
+              "title": "Irak",
+              "detail": "Invazija brez mandata ZN."
+            },
+            {
+              "date": "2011",
+              "title": "Smrt Bin Ladna",
+              "detail": "Ameriški napad na Pakistan."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**11. september 2001** spremeni grožnjo v globalno vojno: intervencije v Afganistanu in Iraku ter trajen varnostni premik v demokracijah."
+        }
+      ]
+    }
+  ]
+}

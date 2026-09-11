@@ -1,0 +1,139 @@
+{
+  "id": "course_39_la_democratie_athenienne",
+  "title": "atenska demokracija",
+  "subtitle": "5. stoletje pr. Kr",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "V 5. stoletju pr. n. št. so Atene izumile sistem, kjer so državljani upravljali neposredno. Žrebanje na loteriji, enakopravnost ... in množična izključitev.",
+  "hero": {
+    "image": "la_democratie_athenienne",
+    "ratio": "16:9",
+    "hook": "Kako je grško mesto izumilo oblast ljudstva in njene meje."
+  },
+  "sections": [
+    {
+      "id": "course_39_la_democratie_athenienne_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 5. stoletju pr. n. št. so Atene izumile nekaj radikalnega: **[[Politika]]** v smislu, da državljani niso bili več podložniki kralja, ampak akterji svoje usode. Oblast (*kratos*) pripada ljudem (*predstavitve*). Od tod tudi beseda demokracija."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta neposredna demokracija, rojena iz kriz in reform, ostaja referenca zahodne politične misli s svojimi prednostmi in slepimi pegami."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p1",
+      "title": "Reforme, ki odpirajo mesto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 7. stoletju pred našim štetjem so bile Atene razpete med aristokrate in zadolžene kmete. **[[Solon]]**, državnik, izvoljen leta **594 pr.**, odpravlja dolžniško suženjstvo in odpira magistrate glede na bogastvo, ne le po krvi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prava prelomnica je **[[Kleisten]]** (**508-507**). Ta reformator ustvari **10 mesecev**, da razbije klane, in ustanovi **[[Boule]]**, Svet petstotih, ki ga izžreba žreb. Vsak meščan lahko služi mestu."
+        },
+        {
+          "type": "image",
+          "asset": "athens_agora_ancient_ruins",
+          "ratio": "4:3",
+          "caption": "Atenska Agora, srce državljanskega življenja."
+        },
+        {
+          "type": "funFact",
+          "text": "Da bi odstranili človeka, ki je bil premočen, so Atenci izglasovali **[[Ostracizem]]** na keramični drobci: izgnanstvo za deset let, s kvorumom **6.000** volivcev."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p2",
+      "title": "Kako deluje pod Periclesom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sredi 5. stoletja, pod **Periklejem**, petnajstkrat ponovno izvoljenim strategom in osebnostjo atenske zlate dobe, je sistem postal bolj odprt. **Ecclesia**, zbor državljanov, se sestane približno **40-krat** na leto na hribu Pnyx. Glasuje o zakonih, vojni, miru, proračunu."
+        },
+        {
+          "type": "image",
+          "asset": "pericles_bust_sculpture",
+          "ratio": "1:1",
+          "caption": "Periklej, petnajstkrat ponovno izvoljen strateg, osebnost atenske zlate dobe."
+        },
+        {
+          "type": "paragraph",
+          "text": "**[[Isegoria]]** zagotavlja enakost govora. **[[Misthos]]**, dnevnica, najrevnejšim omogoča sedenje. Pravica gre skozi **[[Heliaia]]**: **6 000** porotniki, izžrebani z žrebom. Žreb omejuje monopolizacijo oblasti, razen za vojaške stratege."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p3",
+      "title": "Demokracija, ki mnoge izključuje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od približno **300.000** prebivalcev voli le **30.000 do 50.000** moških državljanov. Ženske, sužnji in metiki (tujci s stalnim prebivališčem) so izključeni. V **451** Pericles celo poostri pravilo: zahtevata se dva starša državljana."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ustanovni paradoks: enakost med vrstniki temelji na suženjstvu in izključenosti. Demokracija iz oči v oči, intenzivna, a zaprta."
+        },
+        {
+          "type": "funFact",
+          "text": "Vsakdo, ki ni bil zainteresiran za javno življenje, je bil imenovan *idioti* (»posameznik«). Beseda je dala \"idiot\": odrezati se od skupnega dobrega so razumeli kot pomanjkanje razuma."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p4",
+      "title": "Krhkosti in dedovanje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Demagog]], govornik, ki laska strastem, zna zbor voditi s čustvi. **Platon**, filozof, zaznamovan s smrtjo svojega učitelja **Sokrata** (**399 pr. n. št**), vidi v demokraciji vladavino mnenja proti resnici in tipičen primer tiranije večine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kljub pomanjkljivostim Atene zapuščajo trajne ideje: odgovornost vladajočih, enakost pred zakonom, protislovno razpravo. Danes se žreb in neposredna demokracija pojavljata celo v sodobnih razpravah."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "594 pr. Kr",
+              "title": "Solón",
+              "detail": "Konec dolžniškega suženjstva."
+            },
+            {
+              "date": "508 pr. Kr",
+              "title": "Kleisten",
+              "detail": "Mešana plemena in Boulé."
+            },
+            {
+              "date": "5. stoletje",
+              "title": "Periklej",
+              "detail": "Misthos in radikalna demokracija."
+            },
+            {
+              "date": "399 pr. n. št",
+              "title": "Smrt Sokrata",
+              "detail": "Temna stran ljudske suverenosti."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Atenska demokracija je bila neposredna vladavina svobodnih moških državljanov, ki je temeljila na žrebu in enakosti govora. Izključil je približno **85%** prebivalstva, vendar je izumil zahodno javno razpravo."
+        }
+      ]
+    }
+  ]
+}

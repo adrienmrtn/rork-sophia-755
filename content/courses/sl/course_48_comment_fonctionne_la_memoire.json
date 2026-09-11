@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Kako deluje spomin?",
+  "subtitle": "možgani",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Pomnilnik ni kamera. Vsak spomin je rekonstruiran. Tako možgani kodirajo, shranjujejo … in včasih izumljajo.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "Spominjanje ni ponovno branje datoteke. Rekonstruira sceno."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pogosto si pomnilnik predstavljamo kot trdi disk: snemamo, shranjujemo, ponovno beremo. Možgani ne delujejo tako. Vsakič, ko se spomnite, **obnoviti** prizor iz fragmentov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Je močan ... in zmotljiv. Razumeti to pomeni razumeti, zakaj pozabljamo, zakaj delamo napake in zakaj se učimo."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Več spominov, ne samo en",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Različna področja možganov skrbijo za različne oblike spomina."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najprej je tu [[Delovni spomin]]: tisto, kar imate nekaj sekund »v mislih«, na primer telefonsko številko. Omejeno je, v povprečju okrog **7 elementov**. Nato **dolgoročni spomin**: dejstva, spomini na dogodke, spretnosti, kot je vožnja s kolesom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vsi ti sistemi ne živijo na istem mestu v možganih. **prefrontalni korteks**, sprednji del možganov za čelom, zelo pomaga pri delovnem spominu. Druge regije, kot je **neokorteks**, zunanja plast možganov, dolgoročno shranjujejo."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Kako se popravi spomin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "Hipokampus, globoka struktura, pomaga oblikovati nove spomine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da bi informacije iz krhkih postale trajne, morajo možgani okrepiti povezave med **nevroni**, živčnimi celicami. Govorimo o **konsolidaciji**, preobrazbi nedavnega spomina v trajno sled. Majhna struktura, imenovana **morski konjiček**, oblikovana kot morski konjiček v temporalnem režnju, ima ključno vlogo pri spominih na dogodke."
+        },
+        {
+          "type": "funFact",
+          "text": "Spanje, zlasti določene faze, pomaga utrjevati tisto, kar smo se čez dan naučili. Popravljanje in nato spanje pogosto deluje bolje kot ponavljanje do 3. ure zjutraj."
+        },
+        {
+          "type": "paragraph",
+          "text": "Znano pravilo, povezano z raziskovalcem **Donaldom Hebbom**: nevroni, ki se sprožijo skupaj, se ponavadi povezujejo močneje. Če povzamemo: »kar luči skupaj povezuje«. To je načelo **nevroplastičnosti**, sposobnosti možganov, da spreminjajo svoje povezave."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "Zapomniti si pomeni spremeniti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ko prikličete spomin, začasno postane **upogljiva** in ga je mogoče urejati. Podrobnosti iz sedanjosti lahko zdrsnejo. Potem jih možgani znova shranijo. Zato lahko dve priči iste nesreče povesta različne različice."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ustvarimo lahko celo **lažne spamine**: prizore, za katere verjamemo, da so resnični, vendar se nikoli niso zgodili ali niso takšni. Možgani zapolnijo vrzeli s tem, kar že vedo."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "Pozabljanje ni vedno neuspeh",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Če bi si zapomnili vse nepotrebne podrobnosti, bi bili nasičeni. Pozabljanje nam pomaga posploševati, se odločati, ohranjati bistveno. Dober spomin razvrsti toliko, kolikor ohrani."
+        },
+        {
+          "type": "takeaway",
+          "text": "Spomin je aktivna rekonstrukcija, ne popoln zapis. Zanaša se na več sistemov, utrjuje se predvsem med spanjem in se lahko z vsakim opominom popači."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "course_147_l_architecture_gothique_les_cathedrales",
+  "title": "Gotska arhitektura: katedrale",
+  "subtitle": "12.-16. stoletje",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Od 12. do 16. stoletja so gotske katedrale dvigale kamen proti nebu. Koničasti lok, rebrasti loki, vitraži: tehnična revolucija v službi svetlobe.",
+  "hero": {
+    "image": "l_architecture_gothique_les_cathedrales",
+    "ratio": "16:9",
+    "hook": "Kako je srednji vek poletel kamen, da je Bog spustil v svetlobo."
+  },
+  "sections": [
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Med 12. in 16. stoletjem je bila Evropa prekrita z **gotskimi katedralami**. Ne gre samo za cerkve. To so inženirski izzivi: kamnite posode, za katere se zdi, da kljubujejo gravitaciji, da prepuščajo svetlobo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Beseda »gotika« se bo pozneje pojavila kot žaljivka »umetnost Gotov«. Vendar ta slog združuje vero, urbano blaginjo in tehnično drznost. Še vedno prevladuje v naših mestnih središčih."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p1",
+      "title": "Saint-Denis: kamen se nauči postajati lažji",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gotika se je rodila v **Île-de-France** okrog **1140**. Ustanovni šok je zbor [[Bazilika Saint-Denis]], ki ga izvaja [[Opat Suger]]. Soočen s temnimi romanskimi cerkvami z debelimi zidovi je Suger želel bolj enoten, lažji, višji prostor."
+        },
+        {
+          "type": "image",
+          "asset": "saint_denis_basilica_gothic_abbot_suger",
+          "ratio": "4:3",
+          "caption": "Saint-Denis: laboratorij, kjer se gotika uči jahati."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trije izumi delujejo skupaj: koničast lok ****, višji in ožji; **rebrasti obok**, ki koncentrira težo na določene točke; in [[leteča opora]], zunanji lok, ki nasprotuje sunkom. Skupaj [[Leteča opora in rebrasti obok]] osvobodita stene: velika okna je mogoče odpreti."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p2",
+      "title": "Svetloba kot božanski jezik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za Sugerja svetloba ni okrasni detajl. Po [[Teologija svetlobe (opat Suger)]] barvni žarki pomagajo duši, da se dvigne proti Bogu. Stene postanejo **vitraž**. V družbi, kjer mnogi ne znajo brati, te slike pripovedujejo zgodbo o Svetem pismu in življenju mesta."
+        },
+        {
+          "type": "funFact",
+          "text": "V **Chartres** so nekateri vitraži iz 13. stoletja ohranili tako intenzivno modro barvo, da še vedno govorimo o \"modri Chartres\": barva, ki je postala značilna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Katedrala ni več kamnita trdnjava. Postane kletka svetlobe."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p3",
+      "title": "Projekt, ki traja stoletja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gradnja katedrale pogosto traja več kot **dve stoletji**. Vojne, epidemije, pomanjkanje denarja: projekt napreduje v sunkih. **Notre-Dame v Parizu** se začne v **1163** in najde svojo obliko okoli **1345**, po približno 180 letih."
+        },
+        {
+          "type": "image",
+          "asset": "notre_dame_de_paris_cathedral_facade",
+          "ratio": "4:3",
+          "caption": "Notre-Dame de Paris: srednjeveško gradbišče, ki je postalo nacionalni simbol."
+        },
+        {
+          "type": "paragraph",
+          "text": "Celo mesto dela: kamnoseki, mizarji, steklarji. Pridobivanje kamna, prevoz lesa, hranjenje ekip: katedrala je tudi gospodarski stroj."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p4",
+      "title": "Od razkošne gotike do neogotike",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Slog se je razvijal: klasična gotika (Chartres, Amiens), nato sijoča (Sainte-Chapelle), nato razkošna, bolj dekorativna. V 19. stoletju jo je Evropa ponovno odkrila z **neogotsko**. Nedokončani projekti se nadaljujejo, kot je **Köln**, dokončan leta **1880**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1140",
+              "title": "Saint-Denis",
+              "detail": "Suger sproži refren, ki odpre gotsko dobo."
+            },
+            {
+              "date": "1163",
+              "title": "Notre-Dame v Parizu",
+              "detail": "Začetek skoraj dve stoletji trajajočega projekta."
+            },
+            {
+              "date": "13. stoletje.",
+              "title": "Vrhunec",
+              "detail": "Chartres, Amiens, Reims vsiljujejo klasični model."
+            },
+            {
+              "date": "19. stoletje.",
+              "title": "Neogotika",
+              "detail": "Evropa obnavlja in na novo odkriva srednjeveški slog."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Gotika je katedralo spremenila v posodo svetlobe. Z osvoboditvijo obzidja zahvaljujoč koničastemu loku in letečemu oporniku je srednji vek izumil arhitekturo, ki še vedno govori našim mestom."
+        }
+      ]
+    }
+  ]
+}

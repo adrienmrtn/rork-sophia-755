@@ -1,0 +1,146 @@
+{
+  "id": "course_164_demeter_et_persephone_les_saisons",
+  "title": "Demeter a Persephone",
+  "subtitle": "Prečo existujú ročné obdobia?",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Hádes unesie Persefonu. Jeho matka Demeter, bohyňa úrody, necháva zem hladovať. Mýtus na vysvetlenie ročných období.",
+  "hero": {
+    "image": "demeter_et_persephone",
+    "ratio": "16:9",
+    "hook": "Keď dievča zmizne pod zemou, jej matka zastaví úrodu. Svet objavuje zimu."
+  },
+  "sections": [
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Demeter** je grécka bohyňa úrody a plodnosti. Jej dcéra **Perséphone** stelesňuje jar. Ich príbeh vysvetľuje [[Poľnohospodársky cyklus v gréckom náboženstve]]: prečo zem v zime zomiera a v lete sa znovu rodí."
+        },
+        {
+          "type": "paragraph",
+          "text": "Je to tiež dráma matky a dcéry, medzi svetom živých a svetom mŕtvych. Z tohto príbehu sa zrodilo [[Tajomstvá Eleusis]], tajné obrady, ktoré sľubovali zasvätencom nádej tvárou v tvár smrti."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p1",
+      "title": "Hades unesie dievča",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Perséphone najprv nazývame **Korah**, „mladé dievča“. Jedného dňa na lúke zbiera narcis. Zem sa otvára. **Hades**, kráľ podsvetia, sa objaví na svojom voze. S tajnou dohodou **Zeus**, otca mladého dievčaťa, ju vezme do podsvetia, aby z nej urobil svoju kráľovnú."
+        },
+        {
+          "type": "image",
+          "asset": "hades_abduction_persephone_bernini_sculpture",
+          "ratio": "4:3",
+          "caption": "Únos Persefony: jar zmizne pod zemou."
+        },
+        {
+          "type": "funFact",
+          "text": "Podľa mýtu **Gaïa**, Zem, vytvorila tento narcis na príkaz Dia. Jeho vôňa musela uväzniť Persefonu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Demeter, bez útechy, opúšťa Olymp. Zabraňuje klíčeniu zeme. Polia zostávajú neplodné. **Famín** ohrozuje ľudí, a teda aj obete ponúkané bohom. Zeus musí reagovať."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p2",
+      "title": "Semená granátového jablka rozhodujú o osude",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zeus posiela **Hermes**, posla bohov, aby požadoval návrat Persefony. Hádes predstiera, že poslúchne. Skôr ako odíde, dá jej niekoľko semienok **granátového jablka**. Kto je v ríši mŕtvych, patrí jemu. Pasca je nastavená."
+        },
+        {
+          "type": "paragraph",
+          "text": "Je potrebný kompromis. Persephone strávi časť roka s Hádom, zvyšok so svojou matkou. Keď sa vráti hore, Demeter opäť zazelená prírodu: je jar a leto. Keď zostúpi, bohyňa úrody odoberie svoju milosť: je jeseň a zima."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1",
+              "title": "Únos",
+              "detail": "Hádes vezme Persefonu do podzemia."
+            },
+            {
+              "date": "2",
+              "title": "Hladomor",
+              "detail": "Demeter zastavuje rast rastlín."
+            },
+            {
+              "date": "3",
+              "title": "Granátové jablko",
+              "detail": "Persefona konzumuje semená v podsvetí."
+            },
+            {
+              "date": "4",
+              "title": "Zdieľanie",
+              "detail": "Delí rok medzi mamou a manželom."
+            },
+            {
+              "date": "5",
+              "title": "Ročné obdobia",
+              "detail": "Jeho tam a späť rytmizuje cyklus plodenia."
+            }
+          ]
+        },
+        {
+          "type": "funFact",
+          "text": "Niektoré verzie hovoria, že Persephone tieto semená neje náhodou. Zvedavosť alebo začínajúca pripútanosť: príbeh sa stáva aj vstupom do dospelosti."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p3",
+      "title": "V Eleusis, nádej po noci",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Počas svojich potuliek sa Demeter zastaví v **Eleusis** neďaleko Atén, preoblečená za starenku. Privítaná kráľovskou rodinou nakoniec odhalí svoju božskú povahu a nariadi stavbu chrámu. Narodili sa [[Tajomstvá Eleusis]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zasvätenci chodia deväť dní, postia sa, pijú **kykeon**, nápoj z jačmeňa a mäty. V [[Telesterion]], obrovskej iniciačnej miestnosti, po zotmení svieti svetlo. Tam sa v najväčšom utajení odhaľujú posvätné predmety."
+        },
+        {
+          "type": "funFact",
+          "text": "Niektorí moderní vedci sa domnievajú, že kykeon obsahoval námeľ, halucinogénnu hubu. To by vysvetľovalo vízie hlásené zasvätencami."
+        },
+        {
+          "type": "paragraph",
+          "text": "Obrad napodobňuje cestu bohyne. Prechádzanie smrťou prírody s Demeter, potom znovuzrodenie s Persefonou: účastníci verili, že v posmrtnom živote získajú lepší osud."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p4",
+      "title": "Zrno, ktoré zomrie, aby sa znovuzrodilo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pre Grékov postihol pšeničné zrno zakopané v zemi rovnaký osud ako Persefonu. Zmizne pod zemou, aby sa vrátila ako stonka. Mýtus spája poľnohospodárstvo, smrť a znovuzrodenie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hovorí aj o starodávnom manželstve, často prežívanom ako bolestný odchod: mladé dievča odíde od matky do iného domova. Medzi Hádom a Demeterom drží konečná dohoda protiklady pohromade: tieň a svetlo, smrť a život."
+        },
+        {
+          "type": "takeaway",
+          "text": "Pobyt **Persephone** v podsvetí prerušuje ročné obdobia: jej neprítomnosť spôsobuje smútok **Démeter** (jeseň-zima), jej návrat spôsobuje znovuzrodenie rastlín (jar-leto)."
+        }
+      ]
+    }
+  ]
+}

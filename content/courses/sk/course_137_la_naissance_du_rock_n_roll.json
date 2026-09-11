@@ -1,0 +1,145 @@
+{
+  "id": "course_137_la_naissance_du_rock_n_roll",
+  "title": "Zrod rock'n'rollu",
+  "subtitle": "1954-1960",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "V polovici 50. rokov sa spojili čierne blues a biele country: Elvis, Chuck Berry a Little Richard vynašli rock'n'roll.",
+  "hero": {
+    "image": "la_naissance_du_rock_n_roll",
+    "ratio": "16:9",
+    "hook": "Krik, elektrická gitara a tínedžerská Amerika má svoju hudbu."
+  },
+  "sections": [
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rock'n'roll sa neobjavil z ničoho nič uprostred rokov **1950**. V Spojených štátoch spojil hudbu dlho oddelenú rasovými bariérami: blues, country a [[evanjelium]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prestávku nesú tri postavy: **Elvis Presley**, **Chuck Berry** a **Malý Richard**. Viac ako štýl je to mládežnícka kultúra a zrkadlo napätia [[Segregácia]]."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p1",
+      "title": "Blues, country a rhythm and blues",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dovtedy na juhu koexistovali dva svety: čierna kultúra (elektrické blues, gospel) a biela kultúra (country). Most sa volá [[rhythm and blues]]: mestská a elektrifikovaná verzia blues, ktorá od konca 40. rokov 20. storočia priťahovala bielu mládež hľadajúcu rytmus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zrodil sa **rockabilly**, kríženec country a blues. **Elvis Presley** z Tupela vyrastal medzi letničnými kostolmi a blues na Beale Street. V **1954** u producenta [[Sam Phillips]] v Memphise nahral *To je v poriadku*. Ale [[Segregácia v americkom hudobnom priemysle]] zostáva pravidlom: čierni umelci často zostávajú obmedzení na okrajové okruhy, zatiaľ čo biely umelec môže prekročiť národný trh."
+        },
+        {
+          "type": "funFact",
+          "text": "Pojem „rock'n'roll“ sa najskôr odvolával na stavanie lode, potom, v blues 20. rokov, na sexuálny akt, než ho spopularizoval DJ [[Alan Freed]]."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p2",
+      "title": "Elvis, Chuck Berry, Malý Richard",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V [[Sun Records]] sa Elvis stáva ikonou. Jeho pohybujúce sa telo šokovalo puritánsku Ameriku a spečatilo spojenectvo medzi rockom a dospievaním."
+        },
+        {
+          "type": "image",
+          "asset": "elvis_presley_sun_records_memphis_1954",
+          "ratio": "4:3",
+          "caption": "Elvis v Sun Records: rock nachádza svoju tvár."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Chuck Berry** poskytuje štruktúru: gitara **riff**, opakovaný motív, ktorý sa stáva chrbticou skladby. Spieva o autách, strednej škole, slobode. **Malý Richard** kričí a udiera do klavíra v stoji: surová energia zdedená po gospelovom zápale."
+        },
+        {
+          "type": "image",
+          "asset": "chuck_berry_guitar_rock_and_roll",
+          "ratio": "4:3",
+          "caption": "Chuck Berry: gitarový riff ako gramatika rocku."
+        },
+        {
+          "type": "image",
+          "asset": "little_richard_piano_1950s_rock",
+          "ratio": "4:3",
+          "caption": "Malý Richard: krik a klavír ako výbuch."
+        },
+        {
+          "type": "funFact",
+          "text": "V roku 1956 na *Show Eda Sullivana* kamery snímali Elvisa iba nad pásom: jeho pohyby bokmi boli považované za príliš škandalózne."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p3",
+      "title": "Rock, rasa a občianske práva",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Čiernobieli tínedžeri po prvýkrát zdieľajú rovnaké idoly, a to aj napriek [[Zákony Jima Crowa]]. Integrácia však zostáva asymetrická. Priemysel sa množí [[Kryty]]: zriedené biele verzie čiernych hitov, lepšie propagované v rádiách. Pat Boone's *Tutti Frutti* dlho predčil originál Little Richarda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Napriek týmto lúpežiam rock živí ducha [[Hnutie za občianske práva]]. Porušením rodičovských kódexov začala mládež 50. rokov minulého storočia morálne a rasové spochybňovanie Ameriky."
+        },
+        {
+          "type": "funFact",
+          "text": "Chuck Berry nezobral svoju kapelu na turné: najal miestnych hudobníkov v každom meste, aby ušetril peniaze a predišiel rasovému napätiu v hoteli."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p4",
+      "title": "Od britskej invázie k dedičstvu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Okolo **1960** dochádza k prvému vetru (Elvis do armády, Malý Richard do náboženstva). Žáner si už ale podmanil Spojené kráľovstvo. **Beatles** a **Rolling Stones** reinterpretujú americké štandardy: „British Invasion“ premieňa rock na obal albumu a protest. Bez porušenia **1954** by kontrakultúry 60. rokov nemali rovnaký zvukový motor."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1954",
+              "title": "To je v poriadku",
+              "detail": "Elvis u Sama Phillipsa: fúzia sa stáva hitom."
+            },
+            {
+              "date": "1955-1956",
+              "title": "Berry a Richard",
+              "detail": "Riff, výkrik a energia definujú žáner."
+            },
+            {
+              "date": "1956",
+              "title": "Ed Sullivan",
+              "detail": "Elvisovo telo škandalizuje televíziu."
+            },
+            {
+              "date": "60. roky 20. storočia",
+              "title": "Britská invázia",
+              "detail": "Americký rockový návrat z Európy umocnený."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Rock'n'roll Elvisa, Berryho a Little Richarda, ktorý sa zrodil v roku 1954 z fúzie medzi rhythm and blues a country, dal mladým ľuďom prvý spoločný jazyk proti segregácii."
+        }
+      ]
+    }
+  ]
+}

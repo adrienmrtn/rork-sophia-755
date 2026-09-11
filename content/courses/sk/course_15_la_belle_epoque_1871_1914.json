@@ -1,0 +1,129 @@
+{
+  "id": "course_15_la_belle_epoque_1871_1914",
+  "title": "Belle Époque",
+  "subtitle": "1871-1914",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Od konca vojny v roku 1870 do augusta 1914 Európa verila v pokrok. Elektrina, výstavy, nové umenie... a zlomy, ktoré vedú ku katastrofe.",
+  "hero": {
+    "image": "la_belle_epoque",
+    "ratio": "16:9",
+    "hook": "Štyridsať rokov viery v pokrok... predtým, ako sa všetko zmenilo v roku 1914."
+  },
+  "sections": [
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The **Belle Époque** designates the period of relative peace between the end of the [[Francúzsko-pruská vojna]] (**1871**) and the outbreak of the [[Prvá svetová vojna]] (**1914**). Veríme vo vedu, v pokrok, v rozum."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pre bohaté vrstvy západnej Európy to boli štyri desaťročia pohodlia a vynálezov. Ale pod dyhou už svietia sociálne zlomy a rivalita, ktorá všetko vyhodí do vzduchu."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p1",
+      "title": "Keď technológia mení každodenný život",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Druhá priemyselná revolúcia prináša **elektrina**, **oleja**, chémia. Električka a metro (Paríž, **1900**) menia mesto. Zrodil sa automobil a lietadlo. Telefón skracuje vzdialenosti."
+        },
+        {
+          "type": "image",
+          "asset": "paris_universal_exhibition_1900",
+          "ratio": "4:3",
+          "caption": "Všeobecná výstava v Paríži v roku 1900, ukážka pokroku."
+        },
+        {
+          "type": "funFact",
+          "text": "Názov „Belle Époque“ sa objaví až po **1914**. Súčasníci nežili v „Belle Époque“: tento stratený raj vymysleli tí, ktorí prežili zákopy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svetová výstava **1900** priťahuje návštevníkov **50 miliónov**. Kino bratov Lumière a Moulin Rouge robia z Paríža hlavné mesto zábavy. [[Pozitivizmus Augusta Comta]], vysoko vplyvná filozofia, zhŕňa optimizmus: veda všetko vyrieši."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p2",
+      "title": "V zákulisí",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za bulvármi pracujú robotníci často **10 až 12 hodín** denne bez skutočnej ochrany. Mestská chudoba podnecuje napätie medzi triedami."
+        },
+        {
+          "type": "image",
+          "asset": "eiffel_tower_1889",
+          "ratio": "4:3",
+          "caption": "Eiffelova veža (1889), ikona modernosti, ktorá neprospieva každému."
+        },
+        {
+          "type": "paragraph",
+          "text": "V celosvetovom meradle má Európa spoločnú Afriku. [[Berlínska konferencia]] (**1884-1885**) stanovuje hranice bez konzultácie s dotknutými národmi. Vo Francúzsku [[Dreyfusova aféra]] roztrhá republiku: židovský dôstojník Alfred Dreyfus je neprávom odsúdený za špionáž a vyjde najavo antisemitizmus."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p3",
+      "title": "Nové umenie, potom jeseň",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Umenie exploduje. [[secesia]] zakrivuje fasády. [[fauvizmus]] a [[kubizmus]] pretrepávajú farbu. Lekár [[Sigmund Freud]] skúma bezvedomie. Albert Einstein publikuje [[Relativita]] v **1905**: priestor a čas už nie sú to, čo sme si mysleli."
+        },
+        {
+          "type": "funFact",
+          "text": "V **1913** vyvolal balet *Svätenie jari* Igora Stravinského v Paríži taký škandál, že diváci prišli na rad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Potom sa všetko zmení. 28. júna 1914 bol v Sarajeve zavraždený arcivojvoda **Franz Ferdinand**, dedič Rakúsko-Uhorska. Ozubené kolesá aliancií sa dávajú do pohybu. Dňa **4. august** Spojené kráľovstvo vstupuje do vojny. Viera v pokrok zomiera v zákopoch."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1871",
+              "title": "Koniec prusko-francúzskej vojny",
+              "detail": "Zrod zjednoteného Nemecka, francúzska zášť."
+            },
+            {
+              "date": "1889",
+              "title": "Eiffelova veža",
+              "detail": "Symbol technickej modernosti."
+            },
+            {
+              "date": "1894-1906",
+              "title": "Dreyfusova aféra",
+              "detail": "Republika sa rozpadá."
+            },
+            {
+              "date": "1900",
+              "title": "Univerzálna výstava",
+              "detail": "Paríž, výkladná skriňa sveta."
+            },
+            {
+              "date": "augusta 1914",
+              "title": "Veľká vojna",
+              "detail": "Belle Époque sa náhle končí."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Belle Époque (**1871-1914**) kombinuje technický pokrok a hlboké zlomy predtým, ako sa ponorí do chaosu Veľkej vojny."
+        }
+      ]
+    }
+  ]
+}

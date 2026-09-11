@@ -1,0 +1,122 @@
+{
+  "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales",
+  "title": "Zakaj so čebele vitalne?",
+  "subtitle": "Mali delavci naše hrane",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Brez čebel bi bilo ogroženih **75 % svetovnega pridelka hrane**. Ti majhni, neopazni delavci podpirajo našo oskrbo s hrano, njihova populacija pa propada.",
+  "hero": {
+    "image": "pourquoi_les_abeilles_sont_vitales",
+    "ratio": "16:9",
+    "hook": "Ne delajo le medu: brez njih bi izginil velik del naše hrane."
+  },
+  "sections": [
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pogosto pomislimo na čebele samo zaradi njihovega medu. V resnici zagotavljajo veliko večjo storitev: večini cvetočih rastlin omogočajo razmnoževanje. Ta storitev je vsako leto vredna več sto milijard dolarjev."
+        },
+        {
+          "type": "paragraph",
+          "text": "V zadnjih desetletjih te bistvene žuželke izginjajo z zaskrbljujočo hitrostjo. Razumevanje njihove vloge in vzrokov za njihov upad nam omogoča, da bolje razumemo neposredno vprašanje naše prihodnje oskrbe s hrano."
+        }
+      ]
+    },
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p1",
+      "title": "Opraševanje, diskretno, a bistveno delo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[opraševanje]] je transport cvetnega prahu, moških celic cveta, do ženskega organa drugega cveta iste vrste. Včasih lahko to povzroči veter ali voda, vendar večina cvetočih rastlin raje prenaša živali. Z iskanjem nektarja in cvetnega prahu za svojo družino čebele zagotovijo ta transport, ne da bi se tega sploh zavedale."
+        },
+        {
+          "type": "image",
+          "asset": "honey_bee_pollinating_flower_closeup",
+          "ratio": "4:3",
+          "caption": "Med iskanjem paše čebela prenaša cvetni prah s cveta na cvet."
+        },
+        {
+          "type": "funFact",
+          "text": "Čebela lahko obišče do 700 cvetov na dan. Da pridela le 500 gramov medu, mora celotna kolonija trikrat preleteti okoli Zemlje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Približno **75 % svetovnega prehranskega pridelka** je vsaj nekoliko odvisnih od opraševalcev, kot so čebele. To vključuje kavo, kakav, jabolka, mandlje ali avokado. Prispevek opraševanja k svetovnemu gospodarstvu je ocenjen med 235 in 577 milijardami dolarjev na leto."
+        }
+      ]
+    },
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p2",
+      "title": "Zakaj kolonije propadajo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Propad čebel nima enega samega vzroka: več nevarnosti deluje hkrati. Od devetdesetih let prejšnjega stoletja so nekateri čebelarji vsako zimo izgubili od 30 do 50 % svojih družin, medtem ko naj bi naravna izguba znašala okoli 10 %. Ta pojav nenadnega izginotja včasih imenujemo [[Motnja propada kolonije]]."
+        },
+        {
+          "type": "image",
+          "asset": "neonicotinoid_pesticide_spraying_field",
+          "ratio": "4:3",
+          "caption": "Neonikotinoidi prodrejo v celotno rastlino, vključno z nektarjem in cvetnim prahom."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Neonikotinoidi]], družina insekticidov, so še posebej odgovorni. Prežemajo celotno rastlino, vključno z njenim nektarjem in cvetnim prahom. Že pri majhnih odmerkih dezorientirajo čebele, ki ne najdejo več svojega panja, in oslabijo njihov imunski sistem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Temu so dodane še zajedavske pršice, ki prenašajo smrtonosne viruse, izginjanje divjih rož zaradi monokultur in podnebne spremembe, ki prestavljajo obdobja cvetenja glede na prebujanje žuželk."
+        }
+      ]
+    },
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p3",
+      "title": "Ne obstaja le ena čebela",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ko rečemo čebela, skoraj vedno pomislimo na domačo čebelo, tisto, ki živi v panjih in proizvaja med. Vendar je le ena vrsta med več kot **20.000** na svetu, vključno s čmrlji in osmijo. Večina jih je samotnikov in ne medijo, imajo pa enako pomembno ekološko vlogo."
+        },
+        {
+          "type": "funFact",
+          "text": "Določene rože, kot so cvetovi paradižnika, sproščajo svoj cvetni prah le pod posebnimi vibracijami. Čebele tega ne vedo, čmrlji pa vedo, zahvaljujoč tehniki, imenovani sonikacija."
+        },
+        {
+          "type": "paragraph",
+          "text": "Te divje vrste so pogosto specializirane za določeno rastlino, ki jo včasih edine lahko učinkovito oprašijo. Prav tako so bolj ranljive kot domače čebele, saj nimajo koristi od človekovega nadzora ali nege. Njihovo izginotje oslabi celotno [[prehranjevalna veriga]], saj so številne ptice odvisne od plodov in semen, ki nastanejo pri tem opraševanju."
+        }
+      ]
+    },
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p4",
+      "title": "Kaj še lahko spremenimo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zmanjšanje uporabe pesticidov ostaja najučinkovitejši vzvod. Evropska unija je leta 2018 prepovedala tri glavne neonikotinoide na odprtih poljih. Hkrati se s ponovnim vzpostavljanjem [[agroekološke infrastrukture]], kot so žive meje ali cvetlični pasovi, ponovno ustvarijo zatočišča za žuželke."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vsakdo lahko ravna tudi preprosto: posadi lokalno cvetje na svojem vrtu ali pusti trato malo dlje pred košnjo, čebelam ponuja pravo zatočišče, ko je cvetje redko."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zaščita opraševalcev ni samo stvar ohranjanja narave: je dolgoročna strategija preživetja, saj njihovo delo neposredno podpira sposobnost rastlin, da nas hranijo."
+        },
+        {
+          "type": "takeaway",
+          "text": "Čebele in 20.000 vrst divjih opraševalcev zagotavljajo razmnoževanje 75 % svetovnih pridelkov za prehrano. Njihov upad, ki ga povzročajo pesticidi, paraziti in izguba habitata, neposredno ogroža našo oskrbo s hrano."
+        }
+      ]
+    }
+  ]
+}

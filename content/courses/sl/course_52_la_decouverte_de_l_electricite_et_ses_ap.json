@@ -1,0 +1,108 @@
+{
+  "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
+  "title": "Odkritje elektrike",
+  "subtitle": "Od Franklina do Tesle",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Elektrika ni bila izumljena nenadoma. Najprej so ga opazili, nato razumeli, nato udomačili. Tukaj so ključni koraki.",
+  "hero": {
+    "image": "la_decouverte_de_l_electricite",
+    "ratio": "16:9",
+    "hook": "Od strele do pametnega telefona: dve stoletji za ukrotitev nevidnega."
+  },
+  "sections": [
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elektrika obstaja v naravi: strela, električna riba, trenje. Kar je spremenilo svet, je bilo učenje **proizvodnje**, **prevoza** in njegove uporabe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta zgodba zajema več kot dve stoletji, z tveganimi poskusi in velikim rivalstvom."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
+      "title": "Razumevanje strele",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 18. stoletju je **Benjamin Franklin** pokazal, da je strela električni pojav. Njegov poskus spuščanja zmaja (pogosto pripovedovan na izmišljen način) želi dokazati, da se nebo in torni stroj igrata z isto silo."
+        },
+        {
+          "type": "image",
+          "asset": "benjamin_franklin_kite_lightning_experiment",
+          "ratio": "4:3",
+          "caption": "Franklin povezuje strelo in elektriko: nevarna, a temeljna ideja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Izumili smo tudi **grmeti**, kovinsko palico, ki streli nudi varno pot do tal. Elektrika zapusti skrivnost in vstopi v inženirstvo."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
+      "title": "Faraday: proizvaja tok",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 19. stoletju je **Michael Faraday** pokazal, da lahko magnet, ki se premika blizu žice, ustvari električni tok. To je **indukcija**. Brez te ideje ni dinama, ne alternatorja, ne sodobne elektrarne."
+        },
+        {
+          "type": "image",
+          "asset": "faraday_electromagnetic_induction_experiment",
+          "ratio": "4:3",
+          "caption": "Faraday pretvori gibanje in magnetizem v tok."
+        },
+        {
+          "type": "funFact",
+          "text": "Faraday je bil iz skromnega okolja in je začel kot knjigovez. Naučil se je znanosti tako, da je bral, kar je verjel."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
+      "title": "Edison proti Tesli",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Konec 19. stoletja sta se spopadla dva tabora. **Thomas Edison** potiska enosmerni tok. **Nikola Tesla** (in podjetje Westinghouse) zagovarjata izmenični tok, ki ga je lažje prenašati na velike razdalje."
+        },
+        {
+          "type": "image",
+          "asset": "tesla_edison_electric_power_station",
+          "ratio": "4:3",
+          "caption": "Izmenični tok pridobiva moč v mestih."
+        },
+        {
+          "type": "paragraph",
+          "text": "Izmenični tok zmaga za mestna omrežja. Mesta zasvetijo. Tovarne spreminjajo tempo."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
+      "title": "Povezan svet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Danes elektrika poganja bolnišnice, vlake, internet, hladilnike. Izziv ni več le izdelati, ampak to storiti čisto in zanesljivo."
+        },
+        {
+          "type": "takeaway",
+          "text": "Elektrika je bila razumljena in nato udomačena: Franklin za strelo, Faraday za proizvodnjo toka, Tesla in izmenični tok za prenos v domove. Naše vsakdanje življenje je še vedno odvisno od tega."
+        }
+      ]
+    }
+  ]
+}

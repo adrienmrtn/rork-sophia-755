@@ -1,0 +1,96 @@
+{
+  "id": "course_47_pourquoi_baille_t_on",
+  "title": "Zakaj zehamo?",
+  "subtitle": "Telo in možgani",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Zehajo vsi: ljudje, psi, včasih tudi zarodki. Verjetno ne zaradi \"pomanjkanja kisika\". Tukaj so najmočnejše sledi.",
+  "hero": {
+    "image": "pourquoi_baille_t_on",
+    "ratio": "16:9",
+    "hook": "Ti zehaš. Tvoj sosed zeha. In (skoraj) ni slučajno nalezljivo."
+  },
+  "sections": [
+    {
+      "id": "course_47_pourquoi_baille_t_on_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zehanje se zdi običajno. Gre pa za kompleksen refleks: sodelujejo čeljust, prsni koš, diafragma, vse telo. Levi, psi, ljudje: veliko živali zeha."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dolgo časa smo govorili: \"to je, da bi imeli več kisika\". Ta ideja je zdaj večinoma opuščena. Sodobne razlage so bolj zanimive."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p1",
+      "title": "Ne (zlasti) za kisik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Poskusi so pokazali, da povečanje kisika v zraku ne prepreči zehanja. Tudi ogljikov dioksid nekoliko znižajte. Zehanje torej ni preprosto \"lovljenje zraka\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "Močna prednost danes: zehanje pomaga **uravnavati temperaturo možganov**. S širokim vdihom in raztezanjem obraza bomo nekoliko »prezračili« in ohladili glavo, še posebej, ko smo utrujeni."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p2",
+      "title": "Zakaj je nalezljivo?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "contagious_yawning_people_group",
+          "ratio": "4:3",
+          "caption": "Pogosto je dovolj, da nekdo zazeha, da sproži refleks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pri ljudeh lahko besedo \"zehanje\" vidimo, slišimo ali celo preberemo. Ne gre samo za neumno posnemanje: vpliva tudi na **empatijo** in možganska vezja, povezana z [[Zrcalni nevroni in nalezljivost]], nevroni, ki se aktivirajo, ko delujemo ... ali ko vidimo, da nekdo deluje."
+        },
+        {
+          "type": "funFact",
+          "text": "Majhni otroci zaradi okužbe malo zehajo. Ta občutljivost pride kasneje, skupaj z določenimi socialnimi veščinami."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p3",
+      "title": "Zehamo že, preden se rodimo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fetusi zehajo približno od **11. tedna** nosečnosti. Pri tej starosti njihova pljuča še ne dihajo zraka. Torej, spet ne gre za to, da bi »zmanjkalo kisika«."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pri plodu lahko zehanje pomaga pri razvoju čeljustnih in obraznih mišic."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p4",
+      "title": "Zehati, da ostanete pozorni?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pogosto zazehamo, ko smo utrujeni ... pa tudi tik pred testom ali ko nam je dolgčas, medtem ko poskušamo ostati zbrani. Raztezanje lahko spodbudi živčni sistem in pomaga **ostat previden**."
+        },
+        {
+          "type": "takeaway",
+          "text": "Zehanje verjetno ni pomanjkanje kisika. Raje bi ga uporabljali za uravnavanje možganov (temperatura, budnost), pri ljudeh pa se širi tudi s socialno okužbo."
+        }
+      ]
+    }
+  ]
+}

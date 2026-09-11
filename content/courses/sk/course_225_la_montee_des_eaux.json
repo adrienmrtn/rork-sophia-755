@@ -1,0 +1,128 @@
+{
+  "id": "course_225_la_montee_des_eaux",
+  "title": "Stúpajúce vody",
+  "subtitle": "Hladiny morí stúpajú",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Do roku 2100 by hladina oceánov mohla stúpnuť o **ónový meter**. Pre celé krajiny a pobrežné megamestá to už nie je vzdialená hypotéza, ale otázka plánovania.",
+  "hero": {
+    "image": "la_montee_des_eaux",
+    "ratio": "16:9",
+    "hook": "More je každým rokom o niečo vyššie a niektoré krajiny už plánujú svoj presun."
+  },
+  "sections": [
+    {
+      "id": "course_225_la_montee_des_eaux_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po tisíce rokov zostali hladiny oceánov zhruba stabilné. Od priemyselnej éry stúpa a rýchlosť tohto vzostupu sa z roka na rok zrýchľuje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Do roku 2100 by sa hladina oceánov mohla zvýšiť o 30 centimetrov až jeden meter v závislosti od našich rozhodnutí o emisiách. Pre mnohé pobrežia to už nie je vzdialená hrozba, ale veľmi konkrétny problém plánovania."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p1",
+      "title": "Dva mechanizmy, jeden smer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hladiny morí stúpajú z dvoch rôznych fyzikálnych dôvodov. Prvou je [[Tepelná rozťažnosť]]: keď sa voda zohreje, jej molekuly sa viac pohybujú a jej objem sa trochu zväčšuje, ako pri každej kvapaline. Oceány od roku 1970 absorbovali viac ako 90 % prebytočného tepla vytvoreného ľudskou činnosťou a toto teplo zväčšuje ich objem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Druhým dôvodom je topenie ľadu umiestneného na suchu. Pozor, nepomýliť si s arktickou ľadovou kryhou, ktorá už pláva na vode a ktorej topenie nespôsobuje stúpanie morskej hladiny. Toto sú [[Ľadový štít]], tieto obrovské ľadové čiapky umiestnené na zemi Grónska a Antarktídy, ktoré skutočne rozlievajú oceány pridaním sladkej vody."
+        },
+        {
+          "type": "image",
+          "asset": "greenland_ice_sheet_melting_glacier",
+          "ratio": "16:9",
+          "caption": "Roztopenie Grónska, ak by bolo úplné, by zdvihlo oceány o 7 metrov."
+        },
+        {
+          "type": "funFact",
+          "text": "Grónsko stráca každý rok okolo 280 miliárd ton ľadu, čiže toľko vody, aby pokrylo celé Francúzsko vrstvou 50 centimetrov."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p2",
+      "title": "Rýchlosť, ktorá vedcov znepokojuje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od roku 1880 stúpla svetová hladina morí asi o 20 centimetrov. Výskumníkov znepokojuje predovšetkým súčasná rýchlosť: v 20. storočí to bolo okolo 1,4 mm za rok, v porovnaní so **3,6 mm za rok** dnes, čo je zrýchlenie o viac ako 150 %."
+        },
+        {
+          "type": "paragraph",
+          "text": "Odborníci [[IPCC]] odhadujú, že tento trend bude pokračovať ešte desaťročia, aj keď teraz drasticky znížime emisie, pretože oceánom trvá určitý čas, kým reagujú na zmeny teploty."
+        },
+        {
+          "type": "image",
+          "asset": "coastal_flooding_sea_level_rise_city",
+          "ratio": "4:3",
+          "caption": "Nárast o 50 cm môže zmeniť 100-ročnú povodeň na každoročnú udalosť."
+        },
+        {
+          "type": "paragraph",
+          "text": "Skutočným nebezpečenstvom nie je len priemerne mierne vyššie more, ale znásobenie [[Prudké vlny a 100-ročné povodne]]: prevýšenie o 50 centimetrov môže stačiť na to, aby sa očakávaná katastrofa raz za storočie zmenila na takmer každoročnú udalosť."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p3",
+      "title": "Geografická nespravodlivosť",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stúpajúca hladina vody postihuje najmä regióny, ktoré najmenej prispeli ku globálnemu otepľovaniu. Veľké riečne delty, ako sú delty Nílu, Mekongu alebo Gangy, sú v prvej línii. V Bangladéši, kde žije 170 miliónov obyvateľov, by nárast o jeden meter mohol spôsobiť stratu 17 % územia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pre malé ostrovné štáty ako Maledivy alebo Kiribati už nie je úplné zmiznutie pod vodou sci-fi hypotézou, ale skutočným predmetom politického plánovania. Naopak, bohaté megamestá ako Miami alebo New York investujú miliardy do hrádzí a púmp."
+        },
+        {
+          "type": "image",
+          "asset": "jakarta_indonesia_sinking_flooding_maldives",
+          "ratio": "16:9",
+          "caption": "Jakarta kombinuje stúpajúcu vodu a pokles pôdy, čo je dvojitá hrozba."
+        },
+        {
+          "type": "funFact",
+          "text": "V roku 2009 maldivská vláda usporiadala podvodné zasadnutie kabinetu v neoprénových oblekoch, aby varovala svet pred veľkou klimatickou konferenciou."
+        },
+        {
+          "type": "paragraph",
+          "text": "V **Jakarta** v Indonézii sa mesto v dôsledku nadmerného čerpania podzemnej vody prepadáva hlbšie do zeme. Tvárou v tvár tejto dvojitej hrozbe krajina prijala radikálne rozhodnutie postaviť úplne nové hlavné mesto Nusantara na ostrove Borneo."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p4",
+      "title": "Prispôsobte sa alebo ustúpte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tvárou v tvár tejto výzve sa navzájom dopĺňajú dve stratégie. Prvým je obmedziť otepľovanie, aby sa spomalil nárast po roku 2100. Druhým je prispôsobiť sa tomu, čo je už nevyhnutné, posilnením prirodzenej obrany, ako sú [[Mangrove]] alebo duny, alebo ťažšími riešeniami, ako sú hlavné diela v Holandsku."
+        },
+        {
+          "type": "paragraph",
+          "text": "V niektorých prípadoch bude jediným riešením posunúť sa späť: presunúť ľudí a činnosti do vnútrozemia, kým sa katastrofy neopakujú príliš často. Toto je skutočná zmena zvykov spoločností, ktoré boli po stáročia spojené s pobrežím."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hladiny morí stúpajú o 3,6 mm za rok v dôsledku kombinovaného účinku tepelnej rozťažnosti a topenia pevninského ľadu. Do roku 2100 by tento nárast mohol dosiahnuť jeden meter a vynútiť si vysídlenie stoviek miliónov ľudí."
+        }
+      ]
+    }
+  ]
+}

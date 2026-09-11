@@ -1,0 +1,100 @@
+{
+  "id": "course_56_la_decouverte_de_la_radioactivite_marie",
+  "title": "Odkritje radioaktivnosti",
+  "subtitle": "Marie Curie",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Marie Curie s Pierrom Curiejem in Henrijem Becquerelom odpira poglavje radioaktivnosti. Dve Nobelovi nagradi, ogromno dela in ogromna zapuščina.",
+  "hero": {
+    "image": "la_decouverte_de_la_radioactivite_marie_curie",
+    "ratio": "16:9",
+    "hook": "Stehtala je tone rude, da bi izolirala nekaj gramov nevidnega elementa."
+  },
+  "sections": [
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Marie Curie** (rojena kot Maria Skłodowska) je prva ženska, ki je prejela Nobelovo nagrado. Ostaja edina oseba, ki je prejela **dva** iz dveh različnih ved: fizike in nato kemije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njen predmet: **radioaktivnost**, to je dejstvo, da nekateri atomi spontano pošiljajo energijo in delce."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
+      "title": "Ozka vrata v znanost",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rojena na Poljskem je odšla študirat v Pariz, ker so lokalne univerze ženskam zaprle mnoga vrata. Trdo dela, pogosto v negotovih razmerah."
+        },
+        {
+          "type": "paragraph",
+          "text": "Poročila se je z **Pierrom Curie**, fizikom. Skupaj sta sestavljala za tisti čas redek laboratorijski duo."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
+      "title": "Poimenujte nevidno",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1896** je **Henri Becquerel** opazil, da uranove tančice fotografske plošče brez svetlobe. Marie Curie se odloči podrobno preučiti ta pojav. Izumila je besedo **radioaktivnost**."
+        },
+        {
+          "type": "image",
+          "asset": "marie_curie_pitchblende_radioactivity",
+          "ratio": "4:3",
+          "caption": "Na tone smole za izolacijo radija in polonija."
+        },
+        {
+          "type": "paragraph",
+          "text": "S Pierrom odkrije dva nova elementa: **polonij** (poimenovan po Poljski) in **radij**. Za njihovo izolacijo je treba predelati ogromne količine rude, smole."
+        },
+        {
+          "type": "funFact",
+          "text": "Radij se v temi rahlo sveti. Sprva smo bili presenečeni ... preden smo razumeli, kako nevarno je."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
+      "title": "Slava in cena",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leta **1903** so Marie, Pierre in Becquerel prejeli Nobelovo nagrado za fiziko. Leta **1911** je samo Marie prejela Nobelovo nagrado za kemijo. Pierre je nesrečno umrl leta 1906. Nadaljuje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Med prvo svetovno vojno je organizirala mobilne rentgenske enote za zdravljenje ranjencev. Svoje telo izpostavlja odmerkom, za katere danes vemo, da so nesprejemljivi."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
+      "title": "Dvostranska zapuščina",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Radioaktivnost je omogočila radioterapijo proti nekaterim vrstam raka … in tudi jedrsko orožje. Znanje je nevtralno; njegove uporabe niso."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marie Curie je nenavadno opazovanje spremenila v novo znanost: radioaktivnost. Njegovo delo je odprlo sodobno fiziko ... za ceno tveganj, ki so bila takrat slabo razumljena."
+        }
+      ]
+    }
+  ]
+}

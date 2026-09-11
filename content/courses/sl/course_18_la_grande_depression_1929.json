@@ -1,0 +1,135 @@
+{
+  "id": "course_18_la_grande_depression_1929",
+  "title": "Velika depresija",
+  "subtitle": "1929",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "**O24. oktober 1929**, Wall Street propade. V treh letih je brezposelnost prizadela **25%** Američanov in kriza odpira pot do skrajnosti v Evropi.",
+  "hero": {
+    "image": "la_grande_depression_1929",
+    "ratio": "16:9",
+    "hook": "Četrtek na Wall Streetu in svet pade v desetletje bede."
+  },
+  "sections": [
+    {
+      "id": "course_18_la_grande_depression_1929_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**O24. oktober 1929**, **Črni četrtek**, Newyorška borza se je zrušila. Ne gre samo za finančno nesrečo. To je začetek **velika depresija**, svetovne gospodarske paralize."
+        },
+        {
+          "type": "paragraph",
+          "text": "V treh letih pridelano bogastvo na svetu pade za približno **15%**. Brezposelnost prizadene **25 %** Američanov. Evropske demokracije se šetajo. Tako je mehurček odnesel vse."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p1",
+      "title": "Burna dvajseta in mehurček",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **burnih dvajsetih** (1920) je Amerika trošila na kredit: avtomobile, radie, gospodinjske aparate. Med letoma 1920 in 1929 se je **Dow Jones**, indeks, ki meri cene večjih ameriških delnic, pomnožil s šest. Motor balona: [[Nakup delnic z maržo]]. Zadolžujemo se za nakup vrednostnih papirjev in stavimo na njihov porast."
+        },
+        {
+          "type": "image",
+          "asset": "roaring_twenties_jazz_1920s",
+          "ratio": "4:3",
+          "caption": "Burna dvajseta: evforija, krediti in špekulacije."
+        },
+        {
+          "type": "funFact",
+          "text": "Na dan zloma so posredniki na Chicaški borzi obesili virtualno štorkljo... obtoženo, da je prinesla nesrečo namesto blaginje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Od leta 1928 je proizvodnja stagnirala in kmetijske cene so padle. Tovarne naredijo več, kot lahko ljudje kupijo: to je [[prekomerna proizvodnja]]. Trg je [[precenjen]], predrag v primerjavi z realnostjo. Ko dvom prevlada, prodajajo vsi hkrati."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p2",
+      "title": "Od zloma do bankrota bank",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**O 24. oktobra** enajst milijonov prodajnih naročil. Na **29**, »črni torek«, se padec pospeši. Med letoma 1929 in 1932 je trg izgubil **89%** svoje vrednosti. Nato pridejo [[bančni teki]]: valovi strank, ki v paniki dvigujejo svoj denar. Približno **9.000** Ameriške banke gredo v stečaj."
+        },
+        {
+          "type": "image",
+          "asset": "unemployed_queue_great_depression",
+          "ratio": "4:3",
+          "caption": "Čakalne vrste brezposelnih: socialni obraz krize."
+        },
+        {
+          "type": "funFact",
+          "text": "Brez denarja so Američani v svoje avtomobile vpeli konje, da so prihranili bencin. Imenovali so jih »Hooverjevi avtomobili« po imenu predsednika [[Herbert Hoover]], ki je v času krize veljal za preveč pasivnega."
+        },
+        {
+          "type": "paragraph",
+          "text": "Brez kreditov se tovarne zaprejo. Proizvodnja pade za približno **46%**. Brez socialne zaščite, vredne tega imena, je na milijone ljudi odvisnih od ljudskih kuhinj."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p3",
+      "title": "Kriza je dosegla Evropo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Združene države vračajo svoja posojila. Evropa se duši. [[Zlati standard]], sistem, kjer so valute vezane na zlato, širi krizo: centralne banke, da zadržijo zlato, dvignejo obrestne mere, kar dodatno upočasni gospodarstvo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Politike [[deflacija]] (nižanje cen in plač za “čiščenje”) so neuspešne. V Nemčiji brezposelnost doseže **30%**. Adolf Hitler izkorišča obup nad [[Weimar]], krhko nemško republiko. **januarja 1933** je prišel na oblast. Gospodarska kriza odpira vrata politični katastrofi."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p4",
+      "title": "Roosevelt in New Deal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Franklin D. Roosevelt**, izvoljen leta **1932**, začne [[Rooseveltov New Deal (1933)]]. Konec čiste [[laissez-faire]], ideje, da se država ne sme dotikati trga. Država računa na [[PONOVNI ZAGON]]: velika dela, ureditev bank, začetek socialnega varstva. Okrevanje je ostalo krhko ... do mobilizacije leta 1941."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "24. oktober 1929",
+              "title": "Črni četrtek",
+              "detail": "Zlom Wall Streeta."
+            },
+            {
+              "date": "1929-1933",
+              "title": "Propadi bank",
+              "detail": "Približno 9000 ameriških bank izginja."
+            },
+            {
+              "date": "1933",
+              "title": "New Deal",
+              "detail": "Roosevelt uvede državno posredovanje."
+            },
+            {
+              "date": "januarja 1933",
+              "title": "Hitler na oblasti",
+              "detail": "Nemška kriza podžiga nacizem."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Po zlomu **1929** je Dow Jones izgubil **89%** vrednosti, **25%** Američanov je bilo brezposelnih, kriza pa je bila naklonjena prihodu Hitlerja na oblast v **1933**."
+        }
+      ]
+    }
+  ]
+}

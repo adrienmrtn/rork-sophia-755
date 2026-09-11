@@ -1,0 +1,112 @@
+{
+  "id": "course_69_comment_se_forment_les_eclairs",
+  "title": "Ako vznikajú blesky?",
+  "subtitle": "Búrky",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Blesk nie je mágia: je to obrovský elektrický výboj v búrkovom oblaku. Tu je návod, ako sa pripravuje, potom ako udrie.",
+  "hero": {
+    "image": "comment_se_forment_les_eclairs",
+    "ratio": "16:9",
+    "hook": "V zlomku sekundy vzduch stúpne na 30 000 °C. Päťkrát teplejšie ako povrch Slnka."
+  },
+  "sections": [
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blesk uvoľní kolosálnu energiu v mihnutí oka. Vzduch v kanáli bleskov stúpne na približne **30 000 °C**. Hrom je len zvuk tohto brutálneho tepla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aby ste pochopili blesk, musíte postupovať v troch krokoch: ako sa cloud nabíja, ako si elektrina hľadá cestu a prečo potom počujete hrom."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p1",
+      "title": "V cloude sú poplatky oddelené",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blesky sa vyskytujú hlavne v [[cumulonimbus]]: veľmi veľké búrkové oblaky, ktoré môžu stúpať až okolo **15 km**. Vnútri vzduch stúpa a klesá veľmi silno."
+        },
+        {
+          "type": "image",
+          "asset": "cumulonimbus_thunderstorm_cloud",
+          "ratio": "4:3",
+          "caption": "Cumulonimbus: továreň na búrky."
+        },
+        {
+          "type": "paragraph",
+          "text": "V tomto chaose malé kryštály **ľad** stúpajú a ťažšie zrnká ľadu ([[fujavica]]) klesajú. Pri ich zrážke dochádza k výmene elektrických nábojov. Postupne sa horná časť oblaku stáva skôr pozitívnou, základňa skôr negatívnou."
+        },
+        {
+          "type": "funFact",
+          "text": "Jazero Maracaibo vo Venezuele je jedným z najviac zasiahnutých bleskov na planéte: takmer každý deň sa tu pozorujú búrky počas veľkej časti roka."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p2",
+      "title": "Keď vzduch pustí: výtok",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vzduch je zlý vodič. Ak sa však rozdiel v náboji stane príliš veľkým (často **stovky miliónov voltov**), vzduch nakoniec ustúpi. Molekuly strácajú elektróny: stávajú sa vodivými. Toto je [[Ionizácia vzduchu]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neviditeľný kanál opúšťa oblak malými skokmi. Zo zeme sa elektrické siete dvíhajú najmä z bodov (stromy, bleskozvody, budovy). Keď sa títo dvaja spoja, okruh sa uzavrie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Veľké svetlo, ktoré vidíme, **oblúk späť**, stúpa hlavne zo zeme smerom k oblaku. Prúd môže dosiahnuť desiatky tisíc ampérov. V tom istom kanáli môže nasledovať niekoľko výbojov: preto efekt blikania."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p3",
+      "title": "Prečo hrom prichádza neskôr?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blesk ohrieva vzduch tak rýchlo, že sa náhle roztiahne. Táto rázová vlna sa zmení na **hrom**. Svetlo prichádza takmer okamžite; zvuk sa posúva rýchlosťou približne **340 m/s**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jednoduchý tip: počítajte sekundy medzi bleskom a hromom a potom ich vydeľte **3**. Získate odhad vzdialenosti v kilometroch."
+        },
+        {
+          "type": "funFact",
+          "text": "Zem zasiahne v priemere približne **100 bleskov za sekundu**. Vo Francúzsku dochádza k približne ZZBOLDZ1 miliónu  dopadov na zem ročne."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p4",
+      "title": "Nebezpečenstvo, plodnosť a kuriozity",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blesk zostáva nebezpečný, najmä vonku, v blízkosti izolovaných stromov alebo vody. Zakladá aj požiare. Má však menej známy účinok: pomáha produkovať zlúčeniny dusíka, ktoré zúrodňujú pôdu dažďom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nad búrkami zachytili kamery aj bizarné javy, ako napríklad [[škriatok]]: krátke žiary vo vyšších vrstvách atmosféry, zo zeme neviditeľné voľným okom."
+        },
+        {
+          "type": "takeaway",
+          "text": "V cumulonimbuse kolízie ľadu a dažďa oddeľujú náboje. Keď je napätie príliš vysoké, vzduch sa ionizuje: blesk sa zahreje na ~30 000 °C a toto náhle roztiahnutie vyvolá hrom."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "course_140_le_blues_racines_de_toute_la_musique_mod",
+  "title": "Blues: korene všetkej modernej hudby",
+  "subtitle": "1870-1960",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Blues, ktorý sa narodil na bavlníkových poliach v Mississippi, vynašiel mriežku 12 taktov a živil jazz, rock, soul a hip-hop.",
+  "hero": {
+    "image": "le_blues_racines_de_toute_la_musique_moderne",
+    "ratio": "16:9",
+    "hook": "Výkrik na bavlnených poliach a každá moderná hudba má korene."
+  },
+  "sections": [
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blues nie je len žáner. Je základom veľkej časti západnej populárnej hudby 20. storočia. Zrodilo sa v chudobe bavlníkových polí **Mississippi** na konci 19. storočia ako odpor a prejav Afroameričanov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Od jazzu po rock'n'roll, od soulu po hip-hop, jeho štruktúry a emócie stále zavlažujú naše uši. Pochopiť blues znamená vrátiť sa k zdroju kriku premeneného na umenie."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p1",
+      "title": "Bavlnené polia, holky a 12 mier",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Medzi **1870** a **1890**, v [[Hlboký juh]] poznačenej segregáciou a biedou grobianov, blues syntetizuje africké ústne tradície. [[poľní holci]] (samotárske dielo plače) a [[Pracovné piesne]] (piesne načasované na synchronizáciu úsilia) sa stretávajú so [[duchovných]], náboženské piesne niekedy nesúce posolstvá slobody."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hlavná inovácia: [[štruktúra v 12 opatreniach]], mriežka troch akordov, ktorá slúži ako plátno na improvizáciu. [[Modré poznámky]], skloňované noty, napodobňujú bolesť hlasu. Gitara, často so [[hrdlo fľaše]] (sklenená alebo kovová trubica navlečená cez struny), dialógy so spevákom."
+        },
+        {
+          "type": "funFact",
+          "text": "Slovo „jazdec“ v textoch často kódovalo milenca, aby sa venoval tabuizovaným témam pred neinformovaným publikom."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p2",
+      "title": "Robert Johnson a mýtus Delta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Delta proti Mississippi** medzi Memphisom a Vicksburgom je kolískou **Delta blues**, surovej formy tohto žánru. **Robert Johnson** (**1911**-**1938**) hrá na potulného hudobníka: iba nahrávky **29**, obrovský vplyv. Jeho [[prstoklad]] zaobchádza s gitarou ako s miniatúrnym orchestrom."
+        },
+        {
+          "type": "image",
+          "asset": "mississippi_delta_blues_cotton_fields",
+          "ratio": "4:3",
+          "caption": "Delta Mississippi: kolíska vidieckeho blues."
+        },
+        {
+          "type": "image",
+          "asset": "robert_johnson_blues_guitarist_crossroads",
+          "ratio": "4:3",
+          "caption": "Robert Johnson: 29 titulov, večná legenda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Legenda hovorí, že predal svoju dušu diablovi na križovatke [[Križovatka]] výmenou za svoje majstrovstvo. Blues sa vtedy často nazýval „diablova hudba“, v porovnaní s kostolnými piesňami. Johnson zomrel na otravu v mladom veku. *Cross Road Blues* a *Sweet Home Chicago* sa stávajú štandardmi."
+        },
+        {
+          "type": "funFact",
+          "text": "Nahrával tvárou k stene v hotelovej izbe v San Antoniu nie z plachosti, ale aby využil akustiku izby."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p3",
+      "title": "Chicago: blues je elektrický",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V rokoch **1940** zaviedla veľká migrácia milióny Afroameričanov na priemyselný sever. V **Chicago** sa blues stáva elektrifikovaným, aby prehlušilo hluk tovární. **Muddy Waters** a **Howlin' Wolf** vnucujú elektrickú gitaru, basgitaru, bicie."
+        },
+        {
+          "type": "image",
+          "asset": "muddy_waters_chicago_electric_blues",
+          "ratio": "4:3",
+          "caption": "Muddy Waters v Chicagu: blues spojený s prúdom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Táto elektrifikácia vedie k rock'n'rollu. **Chuck Berry** a **Bo Diddley** zrýchľujú tempo. V 60. rokoch **Rolling Stones** (názov prevzatý z piesne Muddy Waters) a **Led Zeppelin** reexportovali tieto korene bielemu publiku, často bez toho, aby pôvodní tvorcovia zarobili veľa peňazí."
+        },
+        {
+          "type": "funFact",
+          "text": "Muddyho Watersa „objavil“ muzikológ Alan Lomax, keď ešte šoféroval traktor na bavlníkovej plantáži."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p4",
+      "title": "Od B.B. Kinga po samplovanie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jazz si z neho požičiava štruktúry a improvizáciu. Soul a R&B si zachovávajú svoj hlas viscerálny. Hip-hop recykluje svoje dedičstvo prostredníctvom [[Odber vzoriek]] starých vinylov. **B.B. King** spopularizoval melodické gitarové sólo. Viac ako historický štýl zostáva blues jazykom o stratenej láske, nespravodlivosti a nádeji."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1870-1890",
+              "title": "Narodenie na hlbokom juhu",
+              "detail": "Hollery, spirituály a mriežka v 12 mierach."
+            },
+            {
+              "date": "30. roky 20. storočia",
+              "title": "Robert Johnson",
+              "detail": "Mýtus o delte a križovatke."
+            },
+            {
+              "date": "40. – 50. roky 20. storočia",
+              "title": "Elektrické Chicago",
+              "detail": "Muddy Waters otvára cestu rocku."
+            },
+            {
+              "date": "60. roky 20. storočia",
+              "title": "Britská renesancia",
+              "detail": "Stones a Zeppelin globalizujú blues."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Blues, ktorý sa zrodil z utrpenia černošských komunít v Mississippi, dal svetu 12-taktový rebríček a cez Chicago aj rock a oveľa viac."
+        }
+      ]
+    }
+  ]
+}

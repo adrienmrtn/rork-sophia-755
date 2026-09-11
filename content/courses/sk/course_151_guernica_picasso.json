@@ -1,0 +1,130 @@
+{
+  "id": "course_151_guernica_picasso",
+  "title": "Guernica, Picasso",
+  "subtitle": "1937",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "Po bombardovaní Guernice Picasso namaľoval čiernobiely výkrik proti vojne. Práca cestuje, potom sa vracia do Španielska za Francom.",
+  "hero": {
+    "image": "guernica_picasso",
+    "ratio": "16:9",
+    "hook": "Vypálená baskická dedina, plátno, ktoré odmieta zabudnúť."
+  },
+  "sections": [
+    {
+      "id": "course_151_guernica_picasso_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "26. apríla 1937 bolo počas [[Španielska občianska vojna]] bombardované baskické mesto Guernica. Picasso v Paríži odpovedal obrovským čiernobielym plátnom."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Guernica* sa stal jedným z najsilnejších protivojnových obrazov 20. storočia."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p1",
+      "title": "Španielska vojna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od **1936** je Španielsko rozpoltené medzi [[Druhá španielska republika]] a Francovými nacionalistami, ktorých podporuje nemecká [[Légia Condor]]. Cieľom [[saturačné bombardovanie]] z Guernice je terorizovať."
+        },
+        {
+          "type": "paragraph",
+          "text": "Picasso pracuje rýchlo, na veľkých štúdiách. Opúšťa farbu, aby sa držal naliehavosti svedectva. Monumentálny formát znemožňuje pohodlné rozjímanie."
+        },
+        {
+          "type": "image",
+          "asset": "guernica_bombing_aftermath_1937",
+          "ratio": "4:3",
+          "caption": "Guernica v troskách: správa sa stáva symbolom."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p2",
+      "title": "Obraz výkriku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Picasso skladá chaos tiel, koňa, býka, žiarovky. Žiadna farba: ako titulná strana novín. Monumentálnosť núti diváka ku konfrontácii."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rozkopaný kôň, matka s dieťaťom, zdvihnuté ruky: každý motív je čitateľný bez popisku. Toto je gramatika občianskeho teroru, nie hrdinskej bitky."
+        },
+        {
+          "type": "funFact",
+          "text": "Odmietol dovoliť, aby sa obraz dostal do Španielska, kým bude Franco pri moci."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p3",
+      "title": "Exil v MoMA",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "After the Universal Exhibition in Paris, *Guernica* traveled and then stayed for a long time at the [[MoMA]] in New York, protected during Franco's [[studená vojna]]. Do Madridu sa vrátil v roku **1981**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Počas diktatúry sa obraz stal politickým exulantom. Jeho návrat do Španielska po Francovi je rovnako národná ako estetická udalosť."
+        },
+        {
+          "type": "image",
+          "asset": "guernica_picasso_painting_detail",
+          "ratio": "4:3",
+          "caption": "Čierna, biela, šedá: vojna bez hrdinstva."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p4",
+      "title": "Odkaz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dielo, reprodukované pred [[OSN]] ako varovanie, zostáva univerzálnym jazykom proti masakru civilistov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ak chcete úplne pochopiť Guernicu, Picassa, musíte mať na pamäti jednu vec: každý technický detail slúži emócii alebo nápadu. Dielo nikdy nie je len dekoratívne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontext je dôležitý rovnako ako štýl. Dátumy, miesta, sponzori, verejnosť: to všetko vysvetľuje, prečo sa formulár objaví v konkrétnom okamihu a nie skôr."
+        },
+        {
+          "type": "paragraph",
+          "text": "Napokon, dedičstvo sa meria z dlhodobého hľadiska. To, čo dnes vidíme v múzeách, filmoch či populárnej hudbe, stále nesie stopy týchto vynálezov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Každá nová vojna prináša do *Guernica* smutné správy. Dielo funguje ako varovanie, že nikdy nemôžeme dostatočne počúvať."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ak chcete úplne pochopiť Guernicu, Picassa, musíte mať na pamäti jednu vec: každý technický detail slúži emócii alebo nápadu. Dielo nikdy nie je len dekoratívne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontext je dôležitý rovnako ako štýl. Dátumy, miesta, sponzori, verejnosť: to všetko vysvetľuje, prečo sa formulár objaví v konkrétnom okamihu a nie skôr."
+        },
+        {
+          "type": "takeaway",
+          "text": "S Guernicou Picasso premenil bombardovanie z roku 1937 na globálnu vizuálnu spomienku na totálnu vojnu."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "id": "course_91_les_miserables_victor_hugo",
+  "title": "Les Miserables, Victor Hugo",
+  "subtitle": "1862",
+  "subject": "litterature",
+  "subcategory": "French & European Classics",
+  "description": "Jean Valjean išče odrešitev v Franciji, ki mu noče odpustiti. Hugo združuje romantični roman, zgodovinsko kroniko in zagovorništvo izključenih.",
+  "hero": {
+    "image": "les_miserables_victor_hugo",
+    "ratio": "16:9",
+    "hook": "Kos ukradenega kruha, devetnajst let zapora, potem celo življenje, da dokažeš, da lahko spet postaneš moški."
+  },
+  "sections": [
+    {
+      "id": "course_91_les_miserables_victor_hugo_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Les Misérables**, objavljen v **1862**, je eden najbolj branih romanov na svetu. **Victor Hugo**, predani pesnik in romanopisec, pripoveduje zgodbo o Franciji v **19. stoletju**Z** prek **Jeana** Valjeana**, nekdanjega kaznjenca, ki ga je lovil **[[Inšpektor Javert]]**. Javert je nepodkupljiv policist. On uteleša neusmiljeni zakon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Knjiga združuje detektivske spletke, ljubezensko zgodbo, zgodovinsko kroniko in družbeno obtožbo. Hugo želi »svetovno delo«, roman, ki zajame celotno obdobje. Upa, da bo govoril z vsemi, onkraj meja. Je tudi odlično besedilo o bedi, milosti in možnosti odrešitve."
+        }
+      ]
+    },
+    {
+      "id": "course_91_les_miserables_victor_hugo_p1",
+      "title": "Hugo in delo, rojeno v izgnanstvu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Victor Hugo** začne roman v **1845** z naslovom \"Les Misères\". Po državnem udaru **1851** **Napoleon III**, nečaka Napoleona Bonaparteja, je Hugo odšel v izgnanstvo na Kanalske otoke, Guernsey. Z novim žarom se loti svojega rokopisa. Izgnanstvo hrani svojo jezo proti nepravičnosti."
+        },
+        {
+          "type": "image",
+          "asset": "victor_hugo_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "Victor Hugo: pesnik, romanopisec in glas družbene revščine."
+        },
+        {
+          "type": "funFact",
+          "text": "Za pisanje prizora v kanalizaciji je Hugo pridobil informacije od pariških cestnih služb in sam raziskal podzemne galerije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Roman je po sedemnajstih letih dela izšel v **1862** v Bruslju. Hugo vstavi dolge **[[Digresije]]**, strani, kjer avtor prekine zgodbo, da bi spregovoril o zgodovini ali filozofiji. Posebej se posveča **Waterloo**, bitki iz leta 1815, ki pomeni konec Napoleonovega imperija, samostanom oziroma **[[Pariške kanalizacije]]**, kleti prestolnice in metafori družbenega nezavednega. Te strani junake zasidrajo v materialno resničnost in knjigo naredijo za razpravo o družbeni filozofiji."
+        }
+      ]
+    },
+    {
+      "id": "course_91_les_miserables_victor_hugo_p2",
+      "title": "Jean Valjean: od zapora do milosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Obsojen zaradi kraje kosa kruha, Valjean preživi **19 let** v **[[Zaporni in kazenski sistem v 19. stoletju]]**, zaporu s prisilnim delom, zlasti v Toulonu. Ko je bil izpuščen, je bil v **rumenem potnem listu** označen kot bivši kaznjenec. Postane izobčenec. Škof **Myriel** z vzdevkom »Monseigneur Bienvenu« mu ponudi drugo priložnost. Prepriča jo, da je svojo srebrnino prejel v dar, ko jo je Valjean pravkar ukradel."
+        },
+        {
+          "type": "image",
+          "asset": "french_convict_galley_19th_century",
+          "ratio": "4:3",
+          "caption": "Zapor: izkušnja, ki zlomi Valjeana pred njegovo moralno preobrazbo."
+        },
+        {
+          "type": "quote",
+          "text": "Jean Valjean, brat moj, ne pripadaš več zlu, pripadaš dobremu.",
+          "attribution": "Victor Hugo, Les Misérables — Monseigneur Bienvenu"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pod identiteto **Gospod Madeleine** postane Valjean človekoljubni župan industrijskega mesta. Za Huga lahko dobrodelnost premaga družbeno neizogibnost. Toda **Javert**, utelešenje neusmiljene pravičnosti, ga še naprej lovi. Ne more si predstavljati, da bi kriminalec lahko postal dober človek."
+        }
+      ]
+    },
+    {
+      "id": "course_91_les_miserables_victor_hugo_p3",
+      "title": "Fantine, Cosette in barikade",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Fantine**, delavka, ki jo je zapustil ljubimec, ki jo je zapeljal, se pogrezne v revščino, da bi svoji hčerki plačala pokojnino **Cosette**. Otrok je zaupan **Thénardier**, pohlepnim gostilničarjem. Valjean jo reši in postane otrokov zaščitnik. Zgodba se premakne v Pariz, kjer vstaja **junija 1832**, republikanska vstaja, ki jo je zadušila vojska, združi mlade v tajno družbo **[[ABC]]**. To ime spominja na \"nižke\", ljudi."
+        },
+        {
+          "type": "image",
+          "asset": "paris_barricades_1832_painting",
+          "ratio": "4:3",
+          "caption": "Barikade leta 1832: Zgodovina vstopi v roman."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na teh barikadah umre **Gavroche**, otrok ulice, ki je postal simbol žrtvovane nedolžnosti. **Enjolras**, vodja upornikov, pooseblja idealistično mladost. Valjean reši **Mariusa**, mladega meščana, zaljubljenega v Cosette, v dejanju popolnega požrtvovanja. Strinja se, da bo tvegal svojo svobodo za srečo tiste, ki jo ima za svojo hčer."
+        }
+      ]
+    },
+    {
+      "id": "course_91_les_miserables_victor_hugo_p4",
+      "title": "Roman, ki spreminja zavest",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Javert**, ki ga je v času upora rešil Valjean, ne more uskladiti zakona in milosti: naredi samomor in se vrže v Seno. Valjean umre v miru, saj je držal obljubo Myriel. Roman je steber **[[Angažirana literatura]]**, literature v službi družbenega ali političnega cilja. Hugo obsoja odsotnost obveznega šolanja, zatiranje žensk in nehumanost zaporov."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1845",
+              "title": "Začetek projekta",
+              "detail": "Hugo začne \"Les Misères\"."
+            },
+            {
+              "date": "1851",
+              "title": "Izgnanstvo",
+              "detail": "Državni udar prekine in nato znova začne pisanje."
+            },
+            {
+              "date": "1862",
+              "title": "Objava",
+              "detail": "Roman je izšel v Bruslju."
+            },
+            {
+              "date": "1832",
+              "title": "Barikade",
+              "detail": "Vstaja strukturira pariški vrhunec."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Les Misérables**, objavljen v **1862**, pripoveduje o odrešitvi **Jeana Valjeana** med dobrodelnostjo in neizprosnim zakonom. Hugo naredi barikade **1832** za simbol boja za človeško dostojanstvo."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "course_123_le_caravage_et_le_clair_obscur",
+  "title": "Caravaggio a šerosvit",
+  "subtitle": "1571-1610",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "**Michelangelo Merisi**, známy ako Caravaggio, spôsobil revolúciu v maľbe s brutálnym realizmom a extrémnym kontrastom svetla a tieňa: šerosvit.",
+  "hero": {
+    "image": "le_caravage_et_le_clair_obscur",
+    "ratio": "16:9",
+    "hook": "Svätí so špinavými nohami, reflektor: umenie už nikdy nebude ako predtým."
+  },
+  "sections": [
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Michelangelo Merisi**, známy ako **Caravaggio** (1571-1610), láme kódy ideálnej krásy zdedené z renesancie. Konfrontuje posvätné a každodenné: žobrákov, krčmy, unavené telá."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho zbraň: radikálny šerosvit. Telá sa vynárajú z tmy ako pod svetlom reflektorov. Táto roztržka ohlasuje ducha [[Barok v maľbe]] a premieňa diváka na svedka drámy."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_self_portrait",
+          "ratio": "4:3",
+          "caption": "Caravaggio, maliar génia a postava búrlivého rímskeho života."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p1",
+      "title": "Genialita, násilie a exil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Caravaggio sa narodil neďaleko Milána a prišiel do Ríma okolo **1593**. Jeho kariéra sa zmenila v **1600** s maľbami kaplnky Contarelli v kostole Saint-Louis-des-Français. *Povolanie svätého Matúša* udivuje Rím: posvätno má tvár ulice."
+        },
+        {
+          "type": "funFact",
+          "text": "Na Malte z neho urobili rytiera rádu, potom ho uvrhli do väzenia za napadnutie nadriadeného. Utečie z pevnosti, ktorá je považovaná za nedobytnú, pomocou konopného lana."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho život je rovnako násilný ako jeho obrazy. V **1606** počas bitky zabil **Ranuccio Tomassoni**. Odsúdený na smrť utiekol do Neapola, na Maltu a potom na Sicíliu. Ulovený a zranený zomrel o **38 rokov** v [[Porto Ercole]], niekoľko dní pred pápežskou milosťou."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p2",
+      "title": "Tenebrizmus: svetlo, ktoré zasiahne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Caravaggio vynašiel **tenebrizmus**, extrémnu formu šerosvitu. Už žiadne jemné svetlo, ktoré hladí formy: nepriehľadná temnota a telá, ktoré sa z nej vynárajú so sochárskou silou. Svetlo je umelé, ako javiskový reflektor."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_tenebrism_chiaroscuro_painting",
+          "ratio": "4:3",
+          "caption": "V tenebrizme čierna zameriava pohľad na drámu."
+        },
+        {
+          "type": "funFact",
+          "text": "Aby získal toto osvetlenie, pracoval v dielni s čiernymi stenami, prerazenými jediným malým svetlíkom vysoko hore."
+        },
+        {
+          "type": "paragraph",
+          "text": "Odstránením dekorácií a krajiniek núti pohľad k tváram a gestám. Toto svetlo slúži aj [[Protireformácia]]: Katolícka cirkev chce pohnúť veriacimi. U neho sa svetlo stáva milosťou, ktorá bez varovania zasiahne dušu."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p3",
+      "title": "Svätí, ktorí vyzerajú ako ulica",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Najviac škandalizuje jeho odmietnutie idealizovať. Svoje modely si vyberá na ulici: robotníci, žobráci, kurtizány. Panna a apoštoli majú vrásky, špinavé nohy, unavené telá."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_madonna_dei_pellegrini_painting",
+          "ratio": "4:3",
+          "caption": "Pútnikova Madona: bosé, špinavé nohy v popredí."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Smrť Panna* je odmietnutá: hovorí sa, že si vzal za vzor utopenú ženu. *Madonna Putnikovová* šokuje špinavými nohami kľačiacich nebohých. Odmieta umeliny [[Manierizmus]], tento pôvabný a skreslený štýl, ktorý mu predchádzal. Pre neho je spása určená predovšetkým pokorným."
+        },
+        {
+          "type": "funFact",
+          "text": "Jeho prvá verzia *Svätý Matúš a anjel* zobrazovala evanjelistu so špinavými nohami, ktorý vyzeral nevzdelane. Sponzori žiadali, aby ho premaľoval."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p4",
+      "title": "Caravaggio: Európa pod vplyvom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Školu nezaložil, ale jeho štýl sa šíri: **karavagizmus**. [[Artemisia Gentileschi]] v Taliansku, Georges de La Tour vo Francúzsku, Zurbarán v Španielsku, Rubens vo Flámsku. Neskôr **Rembrandt** zdedí jeho tieňovú poéziu, **Velazquez** jeho ľudskú dôstojnosť."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1600",
+              "title": "kaplnka Contarelli",
+              "detail": "Rím objavuje Povolanie svätého Matúša."
+            },
+            {
+              "date": "1606",
+              "title": "Vražda a vyhnanstvo",
+              "detail": "Caravaggio utiekol z Ríma, odsúdený na smrť."
+            },
+            {
+              "date": "1610",
+              "title": "Smrť v Porto Ercole",
+              "detail": "Zomrel vo veku 38 rokov, tesne pred milosťou."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Dve storočia zabudnutý, znovuobjavený bol v 20. storočí. Jeho tesné zarámovanie a osvetlenie stále ovplyvňujú kino a fotografiu."
+        },
+        {
+          "type": "takeaway",
+          "text": "Caravaggio (1571-1610) zaviedol tenebrizmus a radikálny sociálny realizmus. Maľovaním posvätného pouličnými modelmi sa stal duchovným otcom barokového maliarstva."
+        }
+      ]
+    }
+  ]
+}

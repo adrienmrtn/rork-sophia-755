@@ -1,0 +1,100 @@
+{
+  "id": "course_50_comment_le_savon_tue_t_il_les_virus",
+  "title": "Ako mydlo zabíja vírusy?",
+  "subtitle": "Hygiena",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Mydlo nie je „čaro“. Napáda tukovú schránku určitých vírusov a vyťahuje ich z pokožky. Tu je dôvod, prečo záleží na 20 sekundách.",
+  "hero": {
+    "image": "comment_le_savon_tue_les_virus",
+    "ratio": "16:9",
+    "hook": "Jednoduchá zbraň proti vírusom: molekuly, ktoré majú radi vodu... a tuk."
+  },
+  "sections": [
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Počas pandémie COVID-19 sa veľmi jednoduché gesto opäť stalo ústredným bodom: umývanie rúk mydlom. Nie je potrebné laboratórium. Len voda, mydlo a trochu času."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prečo to tak dobre funguje? Pretože mnohé nebezpečné vírusy nesú obal vyrobený z tuku. A mydlo je vynikajúce na ničenie mastnoty."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p1",
+      "title": "Slabosť niektorých vírusov",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Niektoré vírusy, ako napríklad **koronavírus** alebo vírus chrípky, majú vonkajší obal vyrobený z lipidov (tukov). Táto obálka ich chráni... kým nenarazí na mydlo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iné vírusy, nazývané „nahé“, túto obálku nemajú. Sú odolnejšie voči mydlu a alkoholu. Našťastie veľa vírusov, ktoré prechádzajú rukami a kvapôčkami, je obalených."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
+      "title": "Mydlo, obojstranná molekula",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "handwashing_soap_water_hands",
+          "ratio": "4:3",
+          "caption": "Vďaka treniu sa mydlo dostane do každého kútika rúk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Molekuly mydla sú [[povrchovo aktívne látky]]. Majú hlavu, ktorá má rada vodu a chvost, ktorý má rád tuk. Chvost sa ponorí do tukového obalu vírusu. Hlava zostáva otočená smerom k vode."
+        },
+        {
+          "type": "paragraph",
+          "text": "Výsledok: obálka sa roztrhne. Vírus je zakázaný. Potom voda odnáša trosky. Mydlo „nepáli“ vírus ako kyselina: **rozpúšťa** a odstraňuje ho."
+        },
+        {
+          "type": "funFact",
+          "text": "Je to rovnaký princíp, ktorý odstraňuje mastnotu z panvice: mydlo chytí mastnotu a pustí ju s vodou."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p3",
+      "title": "Prečo 20 sekúnd",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Čas trvá, kým sa mydlo dostane do všetkých záhybov: medzi prsty, pod nechty, okolo zápästia. Okolo **20 sekúnd** trenia je toto minimum, ktoré sa často odporúča."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez trenia funguje mydlo horšie. Aj samotná voda: účinne nenapáda tukový obal."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p4",
+      "title": "Mydlo alebo hydroalkoholický gél?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gél s aspoň **60%** alkoholu môže tiež zničiť veľa obalených vírusov. Ak je však viditeľná nečistota alebo mastnota, gél je menej účinný: špina pôsobí ako clona. V tomto prípade zostáva mydlo a voda najlepšou voľbou."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mydlo zabíja mnohé vírusy tým, že odtrhne ich tukové obaly a potom ich zmyje vodou. Čas + trenie = účinnosť."
+        }
+      ]
+    }
+  ]
+}

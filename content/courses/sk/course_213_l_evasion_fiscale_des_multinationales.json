@@ -1,0 +1,104 @@
+{
+  "id": "course_213_l_evasion_fiscale_des_multinationales",
+  "title": "Daňové úniky nadnárodných spoločností",
+  "subtitle": "Ako GAFAM platí tak nízke dane?",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Digitálni giganti často platia mizerné dane v porovnaní so svojimi ziskami. Nie je to vždy nezákonné: je to výsledkom medzier v medzinárodnom práve.",
+  "hero": {
+    "image": "l_evasion_fiscale_des_multinationales",
+    "ratio": "16:9",
+    "hook": "V roku 2014 zaplatil Apple v Írsku efektívnu daňovú sadzbu takmer 0,005 %. Ako je to možné?"
+  },
+  "sections": [
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GAFAM, teda Google, Apple, Facebook (Meta), Amazon a Microsoft, patria medzi najbohatšie spoločnosti na svete. V pomere k svojim ziskom však často platia oveľa nižšie dane ako klasický MSP."
+        },
+        {
+          "type": "paragraph",
+          "text": "Toto nie je podvod v pravom slova zmysle: je to **daňová optimalizácia**, teda šikovné využívanie medzier v medzinárodnom práve. Tento mechanizmus pripravuje štáty o stovky miliárd dolárov ročne. Tu je návod, ako to funguje a ako sa na to svet snaží reagovať."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p1",
+      "title": "Daň určená pre továrne, nie pre digitál",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Medzinárodný daňový systém bol navrhnutý na začiatku 20. storočia pre priemyselnú ekonomiku: spoločnosť musela mať továrne alebo kancelárie v krajine, ktorá sa nazýva [[stála prevádzkareň]], aby tam mohla byť zdanená."
+        },
+        {
+          "type": "paragraph",
+          "text": "Digitálna technológia prerušila toto spojenie s územím. Spoločnosť dnes môže ovládnuť trh, zachytiť údaje miliónov používateľov a zarobiť veľa peňazí v krajine bez toho, aby tam vlastnila jedinú budovu. Potom môže oddeliť miesto, kde zarába peniaze, od miesta, kde to deklaruje."
+        },
+        {
+          "type": "funFact",
+          "text": "V roku 2014 americký IRS zistil, že Microsoft presunul zisky 39 miliárd dolárov do Portorika prostredníctvom práv duševného vlastníctva, čím ušetril na daniach viac ako 6,5 miliardy dolárov."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p2",
+      "title": "Výpadok stoviek miliárd",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Podľa OECD tieto praktiky stoja verejné rozpočty na celom svete 100 až 240 miliárd dolárov ročne, čiže 4 až 10 % všetkých daní z príjmov právnických osôb vybraných na planéte."
+        },
+        {
+          "type": "image",
+          "asset": "multinational_corporate_tax_avoidance_structure",
+          "ratio": "16:9",
+          "caption": "Európske sídla digitálnych gigantov sa často nachádzajú v krajinách, kde sú najnižšie dane."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento nedostatok núti štáty, aby si vybrali medzi zvýšením daní pre domácnosti a MSP alebo znížením verejných výdavkov, ako sú zdravotníctvo alebo školstvo. Miestny podnik v priemere platí oveľa vyššiu daňovú sadzbu ako nadnárodný podnik, čo vytvára nekalú konkurenciu."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p3",
+      "title": "Odpoveď: globálna minimálna daň",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V roku 2021 bola pod záštitou OECD a G20 historickou dohodou stanovená minimálna [[Celosvetová minimálna daň vo výške 15 %.]]. Zameriava sa na spoločnosti, ktorých obrat presahuje 750 miliónov eur: ak v krajine platia len 5 % dane, ich krajina pôvodu si teraz môže nárokovať chýbajúcich 10 %."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niektoré krajiny, ako napríklad Francúzsko, tiež vytvorili vnútroštátnu daň priamo zameranú na obrat digitálnych gigantov. Nadnárodné spoločnosti musia teraz zároveň zverejňovať v jednotlivých krajinách umiestnenie svojich zamestnancov, ich zisky a dane: transparentnosť, ktorá umožňuje identifikovať tie najzjavnejšie nezrovnalosti."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p4",
+      "title": "Írsko, európske hlavné mesto optimalizácie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Írsko s oficiálnou daňovou sadzbou 12,5 % a tajnými dohodami s názvom [[daňové rozhodnutia]] sa stalo európskym ťažiskom daňovej optimalizácie. Vďaka zložitej štruktúre zaplatil Apple v roku 2014 efektívnu daňovú sadzbu blízkou 0,005 %."
+        },
+        {
+          "type": "paragraph",
+          "text": "Európska komisia žiadala od Írska 13 miliárd eur na nezaplatených daniach od Applu, no krajina ich dlho odmietala vyberať: obáva sa, že príliš prísne pravidlá spôsobia útek centrál do iných oblastí sveta. Obhajcovia daňovej spravodlivosti tiež poukazujú na to, že táto sadzba 15 % zostáva nižšia ako priemer rozvinutých krajín a že najchudobnejšie krajiny, často tie, ktoré sú najviac postihnuté daňovými únikmi, získajú späť len nepatrný podiel."
+        },
+        {
+          "type": "takeaway",
+          "text": "GAFAM už dlho využívajú medzery v medzinárodnom práve na platenie smiešnych daní, ktoré stoja verejné rozpočty až 240 miliárd dolárov ročne. Od roku 2021 sa snaží túto nerovnováhu napraviť celosvetová minimálna daň vo výške 15 %, ale boj za spravodlivejšie zdanenie pokračuje."
+        }
+      ]
+    }
+  ]
+}

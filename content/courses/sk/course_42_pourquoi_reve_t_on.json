@@ -1,0 +1,114 @@
+{
+  "id": "course_42_pourquoi_reve_t_on",
+  "title": "Prečo snívame?",
+  "subtitle": "Mozog a spánok",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Každú noc sa vám sníva asi dve hodiny. Väčšina snov sa rozplynie, keď sa zobudíte. Tu je to, čo dnes veda o tejto záhade chápe.",
+  "hero": {
+    "image": "pourquoi_reve_t_on",
+    "ratio": "16:9",
+    "hook": "Snívate o šiestich rokoch svojho života. A zabudnete takmer na všetko."
+  },
+  "sections": [
+    {
+      "id": "course_42_pourquoi_reve_t_on_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Každú noc strávite približne **dve hodiny** snívaním. Za celý život je to takmer **šesť rokov**. Keď sa však zobudíte, väčšina týchto príbehov zmizne v priebehu niekoľkých sekúnd."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nie všetci vedci sa zhodujú na „prečo“. Ale vedia stále lepšie **keď** snívame a čo mozog počas tohto obdobia robí: reorganizuje spomienky, testuje scenáre a trávi emócie."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p1",
+      "title": "Spánok nie je „vypnutý“",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spánok nie je úplné vypnutie. Postupuje o **cyklov** približne **90 minút** niekoľkokrát za noc. V každom cykle mozog prechádza rôznymi fázami: ľahkým spánkom, hlbokým spánkom užitočným na zotavenie tela, potom veľmi konkrétnou fázou."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_rem_dream",
+          "ratio": "4:3",
+          "caption": "Počas REM spánku sa oči pohybujú pod viečkami."
+        },
+        {
+          "type": "paragraph",
+          "text": "Táto fáza sa nazýva [[REM spánok]]. Mozog je takmer rovnako aktívny ako bdelý, no telo je paralyzované [[Svalová atónia]]. Tu sa rodia najmä dlhé, naratívne sny. Táto paralýza nám bráni fyzicky „hrať“ to, čo snívame."
+        },
+        {
+          "type": "funFact",
+          "text": "Snívame **4 až 6-krát** za noc. Zabudneme na **95%** do desiatich minút po prebudení. Ak si pamätáte sen, je to často preto, že ste sa zobudili priamo počas neho alebo hneď po ňom."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p2",
+      "title": "Aký má zmysel snívať?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Freud** si myslel, že sny odhaľujú hlavne skryté túžby. Dnes výskumníci uprednostňujú konkrétnejšie vysvetlenia, založené na zobrazovaní mozgu, technikách, ktoré vizualizujú mozgovú aktivitu. Snívanie aktivuje najmä **limbický systém**, súbor hlbokých štruktúr spojených s emóciami."
+        },
+        {
+          "type": "image",
+          "asset": "brain_activity_dreaming_scan",
+          "ratio": "4:3",
+          "caption": "Počas snov funguje mozog: emócie, obrazy, spomienky."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dominujú tri hlavné trate. Po prvé: **roztrieďte pamäť**, ponechajte si užitočné, zvyšok pustite. Po druhé: **Tréning na nebezpečenstvo** vo svete bez skutočného rizika. Po tretie: **trávenie emócií**: počas snov sa mozog vracia k silným momentom s menším množstvom **norepinefrín**, neurotransmiteru spojeného so stresom a bdelosťou."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p3",
+      "title": "Prečo zabúdame na svoje sny",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na trvalé uloženie pamäte potrebuje mozog určité chemikálie. Počas paradoxného spánku však hladina noradrenalínu klesá. Výsledok: sen zostáva vo veľmi krehkej pamäti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Len čo otvoríte oči, svetlo, zvuky a myšlienky dňa rozdrvia túto krehkú spomienku. Najlepší spôsob, ako si to udržať? Okamžite si zapíšte sen **** ešte predtým, ako sa pohnete."
+        },
+        {
+          "type": "funFact",
+          "text": "Pred farebnou televíziou málokto povedal, že sníval farebne. Dnes to robí väčšina. Naše vizuálne prostredie dokonca ovplyvňuje štruktúru našich snov."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p4",
+      "title": "A čo lucidné snívanie?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Niekedy si uvedomíme **, že sa nám sníva**, zatiaľ čo zostávame v spánku: toto je **lucidné snívanie**. Oblasť mozgu spojená s logikou a sebareflexiou, **prefrontálna kôra**, sa potom trochu rozsvieti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niektorí potom môžu ovplyvniť prostredie alebo premeniť nočnú moru. Výskumníci dokonca študujú tento fenomén, aby pomohli športovcom mentálne opakovať gestá alebo aby liečili opakujúce sa nočné mory."
+        },
+        {
+          "type": "takeaway",
+          "text": "Snívame najmä počas [[REM spánok]], fázy, kedy je mozog aktívny a telo paralyzované. Snívanie pravdepodobne pomáha zvládať pamäť a emócie, aj keď po prebudení zabudneme takmer na všetko."
+        }
+      ]
+    }
+  ]
+}

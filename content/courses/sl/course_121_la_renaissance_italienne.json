@@ -1,0 +1,154 @@
+{
+  "id": "course_121_la_renaissance_italienne",
+  "title": "Italijanska renesansa",
+  "subtitle": "14.-16. stoletje",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "V dveh stoletjih je Italija na novo odkrila slikarstvo, kiparstvo in arhitekturo ter spremenila naš pogled na svet.",
+  "hero": {
+    "image": "la_renaissance_italienne",
+    "ratio": "16:9",
+    "hook": "V dveh stoletjih je Italija na novo odkrila umetnost in naš način gledanja na svet."
+  },
+  "sections": [
+    {
+      "id": "course_121_la_renaissance_italienne_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Italijanska renesansa (14.–16. stoletje) ni le sprememba sloga. To je nov način gledanja na svet. Italija je v dveh stoletjih v središče vsega postavila opazovanje, razum in posameznika."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta revolucija, rojena v bogatih mestih polotoka, na novo odkriva slikarstvo, kiparstvo in arhitekturo. Poganjata ga dve gonilni sili: ponovno odkritje grške in rimske antike ter drzni tehnični izumi."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p1",
+      "title": "Firence, mesto, ki prižge varovalko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vse se začne v **Firencah**, ki so v 14. stoletju zaradi tekstila in bančništva obvladovale evropsko gospodarstvo. Tam je oblast prevzela družina **Medici**. Ti bankirji uporabljajo [[mecenstvo]], financiranje umetnikov, kot orodje za prestiž."
+        },
+        {
+          "type": "funFact",
+          "text": "Da bi se izognili prepovedi posojanja z obrestmi, so si Medičejci izmislili bančne trike. Cerkev si zatiska oči, dokler financira kapele."
+        },
+        {
+          "type": "image",
+          "asset": "lorenzo_de_medici_portrait_florence",
+          "ratio": "4:3",
+          "caption": "Laurent de Medici, znan kot »veličastni«, veliki zaščitnik umetnikov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hkrati **humanizem** spreminja mesto človeka. Misleci, kot je [[Pico della Mirandola]], trdijo, da so ljudje sposobni razumeti naravo z razumom. V **1453** padec Konstantinopla potisne učenjake v Italijo s pozabljenimi grškimi rokopisi."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p2",
+      "title": "Slikanje realnega: perspektiva in telo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 15. stoletju je arhitekt **Brunelleschi** okoli **1420** izumil [[linearna perspektiva]]. Minil je srednji vek, ko je bilo tisto, kar je bilo pomembnejše, naslikano večje: prostor zdaj sledi matematičnim pravilom, kot okno, odprto v resničnost."
+        },
+        {
+          "type": "image",
+          "asset": "brunelleschi_linear_perspective_florence",
+          "ratio": "4:3",
+          "caption": "Perspektiva daje iluzijo globine na ravni površini."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Leonardo da Vinci** gre še dlje: secira telesa, da bi razumel mišice in živce, ter slika čustva. Oljna barva, ki prihaja iz Flandrije, postopoma nadomešča [[Tempera]] in omogoča [[Chiaroscuro]]: te kontraste sence in svetlobe, ki dajejo relief."
+        },
+        {
+          "type": "funFact",
+          "text": "Leonardo je najbolj preučeval telo stoletnega človeka. Ko ga je pregledal, je opisal enega prvih znanih primerov arterije, zamašene zaradi starosti."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p3",
+      "title": "Leonardo, Michelangelo, Rafael",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V začetku 16. stoletja je mesto Firenc prevzel Rim, ki so ga nosili stavbni papeži, kot je **Julij II**. To je doba »popolnega človeka«. **Leonardo iz Vinci** je model: slikar, inženir, anatom."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Michelangelo** pooseblja moč. Njegov **David** postane simbol Firenc. Med **1508** in **1512** je poslikal strop **Sikstinske kapele**: 500 kvadratnih metrov na Genezi."
+        },
+        {
+          "type": "image",
+          "asset": "michelangelo_david_sistine_chapel_ceiling",
+          "ratio": "4:3",
+          "caption": "Michelangelo, iz Davida na stropu Sikstinske kapele."
+        },
+        {
+          "type": "funFact",
+          "text": "V *Poslednji sodbi* je Michelangelo naslikal svoj obraz na odrti koži: tako je želel izraziti, kako zelo ga je to delo izčrpalo."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Rafael** uteleša milost. Njegova freska *Atenska šola* združuje velike mislece antike v harmonijo, ki bo služila kot vzor stoletja."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p4",
+      "title": "Dediščina, ki prečka Evropo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po smrti Raphaëla v **1520** je ravnotežje porušeno. Umetniki podaljšujejo telesa in vsiljujejo barve: to je [[manira]], bolj nemirna umetnost. Francoski kralj **Frančišek I** povabi Leonarda in začne **francosko renesanso** z gradovi Loire."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1420",
+              "title": "Linearna perspektiva",
+              "detail": "Brunelleschi postavi prostor v enačbe v Firencah."
+            },
+            {
+              "date": "1453",
+              "title": "Padec Konstantinopla",
+              "detail": "Učenjaki bežijo v Italijo s svojimi grškimi rokopisi."
+            },
+            {
+              "date": "1504",
+              "title": "Michelangelov David",
+              "detail": "Firence izberejo simbol državljanskega ponosa."
+            },
+            {
+              "date": "1508-1512",
+              "title": "Sikstinska kapela",
+              "detail": "Michelangelo je poslikal strop Geneze."
+            },
+            {
+              "date": "1520",
+              "title": "Rafaelova smrt",
+              "detail": "Konča se visoka renesansa, začne se manierizem."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Italijanska renesansa, rojena v Firencah po zaslugi Medičejcev, je revolucionirala umetnost s perspektivo (okoli leta 1420) in študijem telesa, preden je dosegla vrhunec v Rimu z Leonardom, Michelangelom in Rafaelom."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "course_222_la_crise_de_la_biodiversite",
+  "title": "Kríza biodiverzity",
+  "subtitle": "6. zánik",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Populácie voľne žijúcich živočíchov klesli od roku 1970 o **69 %**. Zažívame šieste hromadné vymieranie v histórii Zeme, prvé spôsobené jediným druhom: nami.",
+  "hero": {
+    "image": "la_crise_de_la_biodiversite",
+    "ratio": "16:9",
+    "hook": "Žiadny asteroid, žiadna sopka: tentoraz má masové vymieranie ľudskú tvár."
+  },
+  "sections": [
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zem už zažila päť veľkých masových vymieraní, ktoré spôsobili asteroidy alebo obrovské sopečné erupcie. Dnes prebieha šiesty, ktorý však po prvýkrát nemá prirodzenú príčinu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Druhy dnes miznú **100 až 1000-krát rýchlejšie** ako je prirodzená rýchlosť a vinníkom je jediný druh: náš. Tento kurz vysvetľuje rozsah problému, jeho príčiny a prečo sa nás priamo týka."
+        }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p1",
+      "title": "Odmeraný kolaps, obrázok po obrázku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na sledovanie stavu prírody vedci používajú **Index živej planéty**, ktorý každoročne vydáva organizácia [[WWF]]. Pozorovanie pre rok 2022 je strohé: medzi rokmi 1970 a 2018 sa populácie voľne žijúcich zvierat (cicavce, vtáky, ryby, plazy, obojživelníky) celosvetovo znížili v priemere o **69 %**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento pokles sa týka najmä tropických oblastí, kde žije najviac druhov. V Latinskej Amerike dosahuje 94 %. To neznamená, že 94 % druhov zmizlo, ale že sa ich populácie znížili, čo ich robí veľmi krehkými zoči-voči úplnému vyhynutiu."
+        },
+        {
+          "type": "image",
+          "asset": "amazon_deforestation_rainforest_aerial",
+          "ratio": "16:9",
+          "caption": "Odlesňovanie v Amazónii ničí jednu z najbohatších zásobární života na planéte."
+        },
+        {
+          "type": "funFact",
+          "text": "Ak by história Zeme trvala 24 hodín, ľudia by sa objavili o 23:58. Trvalo im len dve sekundy, kým spustili masové vymieranie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Podľa [[IPBES]] v súčasnosti hrozí vyhynutie približne miliónu živočíšnych a rastlinných druhov, niekedy v najbližších desaťročiach."
+        }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p2",
+      "title": "Päť príčin, jeden pôvod",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Táto katastrofa nie je náhoda: pochádza priamo z nášho spôsobu výroby a spotreby. Vedci identifikujú päť hlavných príčin. Prvou a najničivejšou je zmena vo využívaní pôdy: odlesňovanie pre chov dobytka, urbanizácia, intenzívne poľnohospodárstvo, ktoré rozdeľuje prirodzené biotopy na malé kúsky, ktoré sú príliš izolované na to, aby prežili."
+        },
+        {
+          "type": "paragraph",
+          "text": "Potom príde nadmerné využívanie (nadmerný rybolov, nelegálny lov) a znečistenie: pesticídy, hnojivá, ktoré vytvárajú mŕtve zóny v oceánoch, mikroplasty, ktoré sa nachádzajú v celom potravinovom reťazci."
+        },
+        {
+          "type": "image",
+          "asset": "plastic_pollution_ocean_wildlife",
+          "ratio": "4:3",
+          "caption": "Mikroplasty teraz kontaminujú každú úroveň morského potravinového reťazca."
+        },
+        {
+          "type": "paragraph",
+          "text": "Poslednými dvoma hnacími silami sú druhy pochádzajúce odinakiaľ, často mylne prepravované globálnym obchodom, ktoré nahradia miestne druhy, a klimatické zmeny, ktoré menia teploty rýchlejšie, ako sa druhy dokážu prispôsobiť."
+        }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p3",
+      "title": "Prečo príroda nie je zadarmo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Biodiverzita nie je len otázkou estetiky. Príroda nám dáva nevyhnutné [[Ekosystémové služby]], často neviditeľné, pretože sú zadarmo. Správa [[Recenzia Dasgupta]] nám pripomína niečo, na čo sa príliš často zabúda: naša ekonomika závisí od prírody, nie naopak."
+        },
+        {
+          "type": "image",
+          "asset": "bee_flower_pollination_agriculture",
+          "ratio": "4:3",
+          "caption": "Asi 75 % celosvetovej produkcie potravín závisí od opeľujúceho hmyzu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konkrétny príklad: približne 75 % celosvetovej produkcie potravín závisí od opeľovania hmyzom. Príroda je aj našou najväčšou lekárňou, keďže 25 % moderných liekov pochádza z molekúl nachádzajúcich sa v rastlinách. Reguluje tiež vodu, vytvára úrodnú pôdu a absorbuje časť prebytočného CO₂."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ničením biodiverzity teda ničíme prírodný kapitál, ktorý podporuje náš vlastný ekonomický a potravinový život, a to tým, že spotrebúvame zdroje planéty oveľa rýchlejšie, ako sa obnovujú."
+        }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p4",
+      "title": "Hranice, ktoré sa neprekročia, šanca odraziť sa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Biodiverzita je jednou z deviatich [[planetárne hranice]], ktoré sa nesmú prekročiť, aby bola Zem obývateľná, a táto hranica už bola prekročená. Skutočným nebezpečenstvom je [[Ekologické body zlomu]]: prahy, kde sa ekosystém zrúti náhle a takmer nevratným spôsobom ako amazonský prales premenený na savanu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Riešenia však existujú. Na [[COP15]] v Montreale v roku 2022 si krajiny sveta stanovili cieľ chrániť 30 % pôdy a morí do roku 2030. To zahŕňa transformáciu poľnohospodárstva, obnovu mokradí a ponechanie koridorov pre obeh druhov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Príroda má veľkú schopnosť [[odolnosť]], ak jej dáme priestor a čas. Chrániť les znamená chrániť milióny druhov a zároveň zachovať základnú zásobáreň uhlíka proti globálnemu otepľovaniu."
+        },
+        {
+          "type": "takeaway",
+          "text": "Populácie voľne žijúcich zvierat medzi rokmi 1970 a 2018 klesli o 69 %: ide o 6. hromadné vyhynutie, prvé spôsobené jediným druhom, ktoré spochybňuje životne dôležité služby, ktoré nám príroda poskytuje bezplatne."
+        }
+      ]
+    }
+  ]
+}

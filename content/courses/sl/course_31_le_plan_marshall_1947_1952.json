@@ -1,0 +1,129 @@
+{
+  "id": "course_31_le_plan_marshall_1947_1952",
+  "title": "Marshallov načrt",
+  "subtitle": "1947-1952",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "V **1947** je Evropa v ruševinah. Združene države ponujajo ogromno pomoč za njegovo ponovno izgradnjo... in za zajezitev komunizma.",
+  "hero": {
+    "image": "le_plan_marshall",
+    "ratio": "16:9",
+    "hook": "Trinajst milijard dolarjev za rešitev Evrope. In v zakulisju zmagati v hladni vojni."
+  },
+  "sections": [
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Junija **1947** je Evropa prišla iz vojne izčrpana. Mesta uničena, tovarne ustavljene, povsod lakota. V Washingtonu je ameriški državni sekretar **George Marshall** nato napovedal načrt pomoči brez primere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uradno gre za obnovo. V resnici je to tudi strategija: preprečiti, da bi revščina potisnila Zahod proti komunizmu, ki se sooča z **Jožefom Stalinom**."
+        }
+      ]
+    },
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_p1",
+      "title": "Evropa brez sape",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po **1945** so električna omrežja in transport pokvarjeni. Zima **1946-1947**, zelo huda, je vse poslabšala: malo premoga, obroki, jeza na ulicah."
+        },
+        {
+          "type": "paragraph",
+          "text": "V Franciji industrijska proizvodnja pade na približno **38%** z ravni **1938**. Komunistične stranke napredujejo na volitvah. Za Združene države lakota postane politična nevarnost: če Evropa izgubi svoj glas, Moskva zmaga brez izstreljenega naboja."
+        },
+        {
+          "type": "image",
+          "asset": "marshall_plan_poster_american_aid",
+          "ratio": "4:3",
+          "caption": "Plakat Marshallovega načrta: Ameriška pomoč predstavljena kot skupni evropski projekt."
+        },
+        {
+          "type": "funFact",
+          "text": "Da bi načrt postal priljubljen, so Američani v Evropi organizirali natečaj za plakate: poslanih je bilo več kot **10.000** risb."
+        }
+      ]
+    },
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_p2",
+      "title": "Ameriška ponudba in sovjetska zavrnitev",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**5. junija 1947**, na univerzi Harvard, Marshall postavi jasen pogoj. Evropejci se morajo dogovoriti o skupnem načrtu. Nobena pomoč ni bila razpršena po državah."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ponudba je najprej odprta za ZSSR. Toda Stalin to zavrača in Poljski in Češkoslovaški prepoveduje sprejetje. Samo **16 držav** v zahodni Evropi se združujejo v **[[OEEC]]**, organizaciji, odgovorni za razdeljevanje sredstev. Celina je razdeljena na dva dela."
+        }
+      ]
+    },
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_p3",
+      "title": "Kako deluje pomoč",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Med **1948** in **1952** Združene države pošljejo približno **13 milijard dolarjev** (več kot današnjih **150 milijard**). Ne gre predvsem za vstopnice: stroji, premog, traktorji, hrana."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sistem je preprost. Evropa to blago preprodaja v lokalni valuti. Izterjan denar financira ceste, tovarne, modernizacijo. Od **1952** je industrijska proizvodnja presegla predvojno raven za **35%**. Zahodna Nemčija začne svoj [[Wirtschaftswunder]], »gospodarski čudež«."
+        },
+        {
+          "type": "funFact",
+          "text": "Pomoč je približno pokrila evropski trgovinski primanjkljaj: dovolj, da je Evropa še naprej kupovala ameriško, ne da bi bankrotirala."
+        }
+      ]
+    },
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_p4",
+      "title": "Politična in gospodarska zmaga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Načrt velja **[[Trumanova doktrina]]**: zajeziti Moskvo z blaginjo, ne samo z orožjem. Slabi revolucionarne stranke, zbližuje ZDA in Evropo ter sili nekdanja sovražnika, Francijo in Nemčijo, k sodelovanju. Ta navada sodelovanja pripravlja prihodnost **[[EGS]]**, prednika Evropske unije."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1947",
+              "title": "Harvardski govor",
+              "detail": "Marshall napoveduje načelo usklajene pomoči."
+            },
+            {
+              "date": "1948",
+              "title": "Začetek prenosov",
+              "detail": "Pomoč prihaja v zahodno Evropo."
+            },
+            {
+              "date": "1952",
+              "title": "Industrijska ocena",
+              "detail": "Proizvodnja očitno presega predvojno raven."
+            },
+            {
+              "date": "1953",
+              "title": "Nobelova nagrada",
+              "detail": "Marshall je za mir nagrajen z obnovo."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Med **1948** in **1952** je Marshallov načrt vložil **13 milijard** za ponovno izgradnjo Zahodne Evrope, zajezitev komunizma in postavitev temeljev za evropsko sodelovanje."
+        }
+      ]
+    }
+  ]
+}

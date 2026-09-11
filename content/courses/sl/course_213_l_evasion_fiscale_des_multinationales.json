@@ -1,0 +1,104 @@
+{
+  "id": "course_213_l_evasion_fiscale_des_multinationales",
+  "title": "Davčne utaje multinacionalk",
+  "subtitle": "Kako GAFAM plača tako malo davkov?",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Digitalni velikani pogosto plačujejo nizke davke v primerjavi s svojimi dobički. To ni vedno nezakonito: je posledica vrzeli v mednarodnem pravu.",
+  "hero": {
+    "image": "l_evasion_fiscale_des_multinationales",
+    "ratio": "16:9",
+    "hook": "Leta 2014 je Apple na Irskem plačal efektivno davčno stopnjo blizu 0,005 %. Kako je to mogoče?"
+  },
+  "sections": [
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GAFAM, torej Google, Apple, Facebook (Meta), Amazon in Microsoft, so med najbogatejšimi podjetji na svetu. Vendar sorazmerno s svojimi dobički pogosto plačajo veliko manj davka kot tradicionalno MSP."
+        },
+        {
+          "type": "paragraph",
+          "text": "To ni goljufija v strogem pomenu: gre za **optimizacija davkov**, to je spretno izkoriščanje vrzeli v mednarodnem pravu. Ta mehanizem države vsako leto prikrajša za stotine milijard dolarjev. Evo, kako deluje in kako se svet poskuša na to odzvati."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p1",
+      "title": "Davek, namenjen tovarnam, ne digitalnim",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mednarodni davčni sistem je bil zasnovan v začetku 20. stoletja za industrijsko gospodarstvo: podjetje je moralo imeti tovarne ali pisarne v državi, kar se imenuje [[stalna poslovna enota]], da je bilo tam obdavčeno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Digitalna tehnologija je prekinila to povezavo z ozemljem. Podjetje lahko danes obvladuje trg, zajame podatke milijonov uporabnikov in zasluži veliko denarja v državi, ne da bi imelo tam v lasti eno samo stavbo. Nato lahko loči kraj, kjer zasluži denar, od kraja, kjer ga prijavi."
+        },
+        {
+          "type": "funFact",
+          "text": "Leta 2014 je ameriška davčna uprava ugotovila, da je Microsoft prek pravic intelektualne lastnine v Portoriko prenesel 39 milijard dolarjev dobička in s tem prihranil več kot 6,5 milijarde dolarjev davkov."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p2",
+      "title": "Primanjkljaj stotin milijard",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po podatkih OECD te prakse javne proračune po vsem svetu stanejo med 100 in 240 milijardami dolarjev na leto ali 4 do 10 % vseh davkov na podjetja, pobranih na planetu."
+        },
+        {
+          "type": "image",
+          "asset": "multinational_corporate_tax_avoidance_structure",
+          "ratio": "16:9",
+          "caption": "Evropski sedeži digitalnih velikanov so pogosto v državah, kjer so davki najnižji."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta primanjkljaj sili države, da izbirajo med povečanjem davkov za gospodinjstva in MSP ali zmanjšanjem javne porabe, kot sta zdravstvo ali izobraževanje. Lokalno podjetje v povprečju plača veliko višjo davčno stopnjo kot multinacionalka, kar ustvarja nelojalno konkurenco."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p3",
+      "title": "Odgovor: svetovni minimalni davek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leta 2021 je bil pod okriljem OECD in G20 z zgodovinskim sporazumom vzpostavljen [[15-odstotni svetovni minimalni davek]]. Cilja na podjetja, katerih promet presega 750 milijonov evrov: če v državi plačajo le 5 % davkov, lahko njihova matična država zahteva manjkajočih 10 %."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nekatere države, kot je Francija, so uvedle tudi nacionalni davek, ki je neposredno usmerjen na promet digitalnih velikanov. Hkrati morajo multinacionalke zdaj od države do države objaviti lokacijo svojih zaposlenih, svoje dobičke in davke: preglednost, ki omogoča odkrivanje najbolj očitnih neskladij."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p4",
+      "title": "Irska, evropska prestolnica optimizacije",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Irska je z uradno 12,5-odstotno davčno stopnjo in tajnimi sporazumi, imenovanimi [[davčna stališča]], postala evropski steber davčne optimizacije. Zahvaljujoč kompleksni strukturi je Apple leta 2014 plačal efektivno davčno stopnjo blizu 0,005 %."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evropska komisija je od Appla z Irske zahtevala 13 milijard evrov neplačanih davkov, a jih država dolgo noče izterjati: boji se, da bodo zaradi prestrogih pravil sedeži pobegnili v druge regije sveta. Zagovorniki davčne pravičnosti tudi poudarjajo, da ta 15-odstotna stopnja ostaja nižja od povprečja razvitih držav in da si bodo najrevnejše države, pogosto tiste, ki jih davčne utaje najbolj prizadenejo, povrnile le majhen delež."
+        },
+        {
+          "type": "takeaway",
+          "text": "GAFAM že dolgo izkorišča vrzeli v mednarodnem pravu za plačilo smešnih davkov, kar javne proračune stane do 240 milijard dolarjev na leto. Od leta 2021 je svetovni najnižji davek v višini 15 % poskušal popraviti to neravnovesje, vendar se boj za pravičnejšo obdavčitev nadaljuje."
+        }
+      ]
+    }
+  ]
+}

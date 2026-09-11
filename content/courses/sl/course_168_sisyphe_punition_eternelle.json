@@ -1,0 +1,112 @@
+{
+  "id": "course_168_sisyphe_punition_eternelle",
+  "title": "Sizif: večna kazen",
+  "subtitle": "Kamen, ki vedno pade",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Sizif prevara smrt, nato še bogove. Njegova kazen: kotaljenje skale, ki pada v nedogled. Camus ga naredi za simbol lucidnosti v soočenju z absurdom.",
+  "hero": {
+    "image": "sisyphe_punition_eternelle",
+    "ratio": "16:9",
+    "hook": "Prevaral je smrt. Bogovi mu dajo skalo. In večnost, da ga potiska."
+  },
+  "sections": [
+    {
+      "id": "course_168_sisyphe_punition_eternelle_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Sizif**, legendarni ustanovitelj Korinta, je najbolj zvit smrtnik v grških mitih. Njegova inteligenca mu omogoča, da izzove bogove. Prisluži mu tudi najhujšo kazen: trud, ki nikoli ne uspe."
+        },
+        {
+          "type": "paragraph",
+          "text": "V 20. stoletju je **Albert Camus** tega obsojenca spremenil v figuro človeškega stanja. Od starodavne zvijače do sodobnega upora Sizif postavlja preprosto vprašanje: kaj storiti, ko se cilj zdi nemogoč?"
+        }
+      ]
+    },
+    {
+      "id": "course_168_sisyphe_punition_eternelle_p1",
+      "title": "Kralj, ki priklene smrt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Homer]] pravi, da je najbolj zvit moški. Sizif vidi **Zevsa**, kralja bogov, kako ugrabi nimfo **Aegino**. Namesto da bi molčal, proda skrivnost dekličinemu očetu, rečnemu bogu [[Asopus]], v zameno za vodni vir za svojo citadelo."
+        },
+        {
+          "type": "image",
+          "asset": "sisyphus_king_corinth_greek_myth",
+          "ratio": "4:3",
+          "caption": "Sizif, zvit korintski kralj."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zevs pošlje **Tanatosa**, poosebljeno smrt. Sizif hlinja občudovanje njegovih verig, ga prosi za demonstracijo ... in ga priklene. Medtem na Zemlji nihče več ne umre. Tudi vojaki **Arès**, boga vojne, ne morejo več pasti. Ares mora s silo osvoboditi Thanatosa."
+        },
+        {
+          "type": "funFact",
+          "text": "Nekateri jezikoslovci primerjajo »Sizif« z grško *sophos*, »modri«. Njegovo ime bi reklo \"zelo moder\": kruta ironija v soočenju z njegovo usodo."
+        }
+      ]
+    },
+    {
+      "id": "course_168_sisyphe_punition_eternelle_p2",
+      "title": "Dva puščanja, en kamen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pred smrtjo Sizif svoji ženi **Meropa** ukaže, naj zanj ne organizira pogreba. V Podzemlju se pritoži **Perzefoni**, kraljici sveta mrtvih: žena ga je osramotila. Za popravilo ima tri dni na Zemlji. Ko je enkrat na soncu, se noče vrniti."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Hermes**, glasnik bogov in dirigent duš, ga na silo pripelje nazaj v [[Had]]. Kazen je prilagojena: suvanje ogromne skale na vrh hriba. Vsakič se tik pred ciljem kamen vrne navzdol."
+        },
+        {
+          "type": "funFact",
+          "text": "V nekaterih starodavnih tradicijah je Sizifova skala razložila cikel plimovanja ali dnevno gibanje sonca."
+        }
+      ]
+    },
+    {
+      "id": "course_168_sisyphe_punition_eternelle_p3",
+      "title": "Camus: predstavljajte si Sizifa srečnega",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za razliko od [[Prometej]], katerega jetra požrejo, Sizif ni poškodovan v svojem mesu. Njegovo mučenje je nekoristno. V **1942** je Camus objavil *Mit o Sizifu*. Zanj je Sizif [[absurdni junak]]: ve, da bo skala padla, in prav ta lucidnost ga spodbuja k rasti."
+        },
+        {
+          "type": "funFact",
+          "text": "V psihiatriji smo včasih govorili o \"sizifizmu\", da bi opisali ponavljanje izčrpavajočih in nekoristnih dejanj."
+        },
+        {
+          "type": "paragraph",
+          "text": "Camus definira [[Camusov Absurd in Sizif]] kot spopad med našo potrebo po smislu in tišino sveta. Vsakič, ko se spusti z gore, Sizif nadaljuje svojo nalogo. Njegov upor se zavestno nadaljuje. \"Sizifa si morate predstavljati srečnega.\""
+        }
+      ]
+    },
+    {
+      "id": "course_168_sisyphe_punition_eternelle_p4",
+      "title": "Sizifovo delo danes",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Izraz »Sizifovo delo« se nanaša na težko, ponavljajočo se in nesmiselno nalogo. V sodobnem svetu mit govori o delavcih na tekočem traku in zaposlenih, ujetih v neskončne postopke. [[Sizifova nadutost]], ki želi pretentati bogove, postane tudi lekcija o mejah zvijače."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vendar ima zgodba eno moč: kljub napovedanemu neuspehu se prizadevanja nadaljujejo. Skala se spet podira, a vzpona ne izbriše. Sizif preživi, ker je utelešenje odpornosti pred usodo brez zagotovila za zmago."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Sizif** prevara smrt in bogove, nato pa večno potiska kamen. Zaradi **Camus** je simbol lucidnosti: poznati absurd in vseeno nadaljevati."
+        }
+      ]
+    }
+  ]
+}

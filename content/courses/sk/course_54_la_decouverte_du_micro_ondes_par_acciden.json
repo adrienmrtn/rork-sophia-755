@@ -1,0 +1,102 @@
+{
+  "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
+  "title": "Objav mikrovlnky",
+  "subtitle": "Náhodou",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "V roku 1945 si inžinier všimol, že jeho tyčinka sa roztopila blízko radaru. Z tohto pozorovania sa zrodila mikrovlnná rúra.",
+  "hero": {
+    "image": "la_decouverte_du_micro_ondes",
+    "ratio": "16:9",
+    "hook": "Roztopená čokoláda... a moderná kuchyňa sa mení."
+  },
+  "sections": [
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1945** v Spojených štátoch inžinier **Percy Spencer** pracuje na radaroch. Jedného dňa si všimne, že sa mu tyčinka vo vrecku roztopila. Nie kvôli telesnému teplu: kvôli radarovým vlnám."
+        },
+        {
+          "type": "paragraph",
+          "text": "Testuje s kukuricou: pukance pukajú. Zrodila sa myšlienka rúry, ktorá kúri inak."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
+      "title": "Od radaru po kuchyňu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "percy_spencer_microwave_discovery_radar",
+          "ratio": "4:3",
+          "caption": "Už radary z druhej svetovej vojny používali mikrovlny."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Mikrovlny** sú elektromagnetické vlny, ako rádiové svetlo, ale sú „energetickejšie“ ako mnohé konvenčné rádiové vlny. Počas vojny sa používali najmä ako radar na detekciu lietadiel a člnov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spencer chápe, že môžu rozhýbať aj vodu a tuky v jedle... a teda ho zohrievať."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
+      "title": "Prvá rúra je obrovská",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "first_microwave_oven_radarange_1947",
+          "ratio": "4:3",
+          "caption": "Prvá komerčná mikrovlnná rúra mala veľkosť skrinky."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prvý komerčný model, **Radarange**, bol vydaný okolo **1947**. Je obrovský, drahý a hlavne určený do reštaurácií alebo na lode. Jeho miniaturizácia a sprístupnenie pre domácnosti potrvá desaťročia."
+        },
+        {
+          "type": "funFact",
+          "text": "Niektorí sa spočiatku báli, že rúra „zrobí jedlo rádioaktívne“. Nepravda: mikrovlny sa zahrievajú, nerobia vás rádioaktívnymi."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
+      "title": "Ako sa naozaj zahrieva?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mikrovlny rozvibrujú hlavne molekuly vody (a trochu tukov a cukrov). Toto miešanie vytvára **teplo vo vnútri** jedla, nielen na povrchu ako panvica."
+        },
+        {
+          "type": "paragraph",
+          "text": "To je dôvod, prečo môže byť pokrm zvonka horúci a vlažný v strede, ak je hrubý: vlny nepreniknú nekonečne hlboko."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
+      "title": "Každodenný predmet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od 70. do 80. rokov sa mikrovlnná rúra dostala do miliónov kuchýň. Mení návyky: rýchlo prihrievať, hotové jedlá, rýchlejší život."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mikrovlnka sa zrodila z náhody, ktorú pozoroval Percy Spencer blízko radaru. Vlny rozvíria hlavne vodu v jedle a ohrievajú ju zvnútra."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "course_3_la_prise_de_rome_par_les_wisigoths_410",
+  "title": "Zavzetje Rima s strani Vizigotov",
+  "subtitle": "410",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Avgusta 410 so Alarikovi Vizigoti tri dni plenili Rim. Prvič po osmih stoletjih sovražna vojska vstopi v Večno mesto.",
+  "hero": {
+    "image": "la_prise_de_rome_par_les_wisigoths",
+    "ratio": "16:9",
+    "hook": "Leta 410 je padel Rim. In z njo ideja o nepremagljivem imperiju."
+  },
+  "sections": [
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Avgusta **410** se zgodi nepredstavljivo. Pod vodstvom svojega kralja **Alaric** so **Vizigoti**, germansko ljudstvo, izsilili vrata Rima. Prvič po galskem plenjenju **390 pr.**, skoraj **800 let**, sovražna vojska je plenila Večno mesto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rim ni več politična prestolnica imperija, ostaja pa njegovo simbolno srce. Ta šok razkrije resnico, ki je nihče ni hotel videti: rimski zahod je umiral."
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p1",
+      "title": "Imperij, ki se prazni",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V začetku 5. stoletja je Zahodnemu rimskemu cesarstvu primanjkovalo denarja in vojakov. Za držanje meja je pomnožil pogodbe tipa [[Rimski foedus]]: na ozemlje so se v zameno za vojaško službo naselila tako imenovana »barbarska« ljudstva. Rimski stroj še vedno drži, vendar je odvisen od tistih, ki jih je nekoč težko obdržal."
+        },
+        {
+          "type": "paragraph",
+          "text": "V **402** zahodni cesar [[Honorij]] zapusti Rim za [[Ravenna]], mesto v Italiji, zaščiteno s svojimi močvirji. Medtem ko gre dvor v ilegalo, rimska aristokracija še naprej živi, kot da se ni nič spremenilo. Dejanska moč se je premaknila k generalom germanskega porekla."
+        },
+        {
+          "type": "funFact",
+          "text": "Ko so objavili padec »Rima«, je Honorija zagrabila panika: mislil je, da govorijo o njegovem najljubšem piščancu, imenovanem tako. Pravijo, da jim je odleglo, ko so izvedeli, da gre »samo« za mesto."
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p2",
+      "title": "Alarik, razočarani Rimljan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Alarik I]] ni divjak od nikoder. Nekdanji častnik v rimski vojski, ki ga je proti zahodu potisnilo [[Huni]], nomadsko ljudstvo iz Azije, hoče zemljo in uradni naziv za svoje ljudstvo. Soočen s prezirom Ravenne uporabi Rim kot talca. Dva obleganja, odkupnine, nato napad."
+        },
+        {
+          "type": "image",
+          "asset": "alaric_king_visigoths",
+          "ratio": "4:3",
+          "caption": "Alarik I., kralj Vizigotov in nekdanji rimski častnik."
+        },
+        {
+          "type": "paragraph",
+          "text": "**24. avgusta 410** se odprejo vrata Salaria. Plenjenje traja **vrsta dni**. Kristjan veroizpovedi [[Arian]] (struja, ki Kristusa ni videla kot enakega Bogu Očetu), Alarik zapoveduje spoštovanje azila cerkvam. Resnično nasilje, a ne popolno uničenje: hoče biti dedič Rima, ne grobar."
+        },
+        {
+          "type": "funFact",
+          "text": "Po legendi so njegovi možje, ko je umrl, preusmerili reko Busento, da bi pokopali Alarica in njegov zaklad, nato pa vodo vrnili v njeno strugo."
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p3",
+      "title": "Šok in božje mesto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iz Palestine [[Sveti Hieronim]], oče Cerkve, vzklikne: »V enem samem mestu je propadlo vse vesolje. » Pogani obtožujejo krščanstvo, da je oslabilo Rim. V odgovor **Sveti Avguštin** piše [[Božje mesto]]: zemeljski imperiji minevajo; Cerkev ostaja."
+        },
+        {
+          "type": "image",
+          "asset": "sack_of_rome_410_alaric",
+          "ratio": "4:3",
+          "caption": "Plenitev Rima leta 410, šok za ves stari svet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za druga germanska ljudstva, kot sta [[Vandali]] in [[Franki]], je signal jasen: Zahod je plen. V **455** Vandali plenijo Rim veliko močneje. Leta **476** je voditelj [[Heruli]] [[Odoacer]] odstavil zadnjega zahodnega cesarja [[Romul Avgustul]]. Insignije oblasti gredo v Carigrad. Zahodni imperij izgine."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "402",
+              "title": "Ravenna, nova prestolnica",
+              "detail": "Honorij zapusti Rim zaradi boljšega branjenega mesta."
+            },
+            {
+              "date": "410",
+              "title": "Torba Rima",
+              "detail": "Alarik in Vizigoti plenijo mesto tri dni."
+            },
+            {
+              "date": "455",
+              "title": "Vandal torba",
+              "detail": "Rim je plenjen na veliko bolj uničujoč način."
+            },
+            {
+              "date": "476",
+              "title": "Konec zahodnega imperija",
+              "detail": "Odoaker odstavi Romula Avgustula."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p4",
+      "title": "Premik proti srednjemu veku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vizigoti so se na koncu naselili v Akvitaniji, nato v Hispaniji (današnja Španija). Niso uničili vse klasične kulture: postali so njeni tihotapci, ki so mešali rimsko pravo, krščansko vero in germansko tradicijo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Torbica **410** ostaja prelomnica v spominih. To še ni administrativni konec imperija, je pa konec iluzije. Srednjeveška Evropa se začne v ruševinah mita."
+        },
+        {
+          "type": "takeaway",
+          "text": "Leta **410** je Rim padel prvič po **800 let**. Vizigoti, izurjeni v rimskem slogu, so tam ropali tri dni. Spopad pripravlja temelje za **476** in srednjeveško Evropo."
+        }
+      ]
+    }
+  ]
+}

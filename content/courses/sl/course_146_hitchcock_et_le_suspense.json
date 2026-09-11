@@ -1,0 +1,106 @@
+{
+  "id": "course_146_hitchcock_et_le_suspense",
+  "title": "Hitchcock in napetost",
+  "subtitle": "1899-1980",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**Alfred Hitchcock** izumlja sodobno napetost: občinstvu daje informacije, ki jih liki nimajo. Z *Psihologija*, *vrtoglavica* ali *Zadnje okno* manipulira z našim pogledom.",
+  "hero": {
+    "image": "hitchcock_et_le_suspense",
+    "ratio": "16:9",
+    "hook": "Pravi suspenz ne preseneča: omogoča vam, da vidite bombo pod mizo."
+  },
+  "sections": [
+    {
+      "id": "course_146_hitchcock_et_le_suspense_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Alfred Hitchcock** (1899-1980) nosi vzdevek \"mojster napetosti\". V več kot petdesetih filmih je triler spremenil v umetnost manipulacije. *Psiho*, *Vrtoglavica*, *Zadnje okno*: vsakič kamera ne pripoveduje samo zgodbe. Igra se z našimi živci."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njegova najljubša tema ni kriminal. To je videz: krivda, obsedenost, voajerstvo. Hitchcock snema tako gledalca kot like."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p1",
+      "title": "Presenečenje proti suspenzu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1966** Hitchcock razloži svojo metodo [[François Truffaut]], francoskemu kritiku in nato filmskemu ustvarjalcu. **presenečenje**, pravi, je bomba, ki eksplodira brez opozorila: kratek šok. **napetost** gledalcem pokaže bombo, medtem ko jo liki ignorirajo. Napetost traja. Postanemo sokrivci in nemočni."
+        },
+        {
+          "type": "image",
+          "asset": "alfred_hitchcock_portrait_director",
+          "ratio": "4:3",
+          "caption": "Hitchcock: obraz, silhueta, svetovna znamka vznemirjenja."
+        },
+        {
+          "type": "funFact",
+          "text": "Za napredek zapleta pogosto uporablja [[MacGuffin]]: predmet ali skrivnost, ki motivira like, vendar njegova natančna narava ni pomembna. Pomemben je lov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta informacijska asimetrija je njegova slovnica. Takoj, ko vemo več kot junak, se bojimo zanj."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p2",
+      "title": "Tehnični izumi za snemanje tesnobe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1948** z *Vrv* Hitchcock simulira edinstven [[zaporedni posnetek]]: zdi se, da je film posnet naenkrat. Koluti trajajo le deset minut, zato ureznine skrije za hrbet ali temen kos pohištva. Učinek je zadušljiv: ostajamo zaklenjeni z morilci."
+        },
+        {
+          "type": "image",
+          "asset": "hitchcock_vertigo_james_stewart_kim_novak_film",
+          "ratio": "4:3",
+          "caption": "Vrtoglavica: vrtoglavica, posneta kot popačenje prostora."
+        },
+        {
+          "type": "paragraph",
+          "text": "V **1958** je za *vrtoglavica* izumil [[Dolly Zoom]]: kamera se premika nazaj, medtem ko se povečava premika naprej (ali obratno). Prostor je popačen. Ne vidimo več vrtoglavice. Čutimo to."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p3",
+      "title": "Vsi smo voajerji",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V *Zadnje okno* (**1954**) fotograf z zlomljeno nogo vohuni za svojimi sosedi. Je gledalčev dvojnik v temi. Hitchcock uporablja [[Subjektivna kamera]]: vidimo točno to, kar vidi junak, nič več."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta identifikacija je tako moralna kot vizualna. Iščemo namige, delimo pa tudi krivdo, da gledamo tisto, kar nas ne zadeva. Hitchcock meša triler in [[psihoanaliza]]: zakopane strahove, prepovedane želje, dvojne identitete."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p4",
+      "title": "Znamka, glasba, dediščina",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hitchcock je svoje ime spremenil v blagovno znamko, dokler njegova televizijska serija *Alfred Hitchcock ne predstavlja*. Za *Psihologija* prepove vstop po začetku seanse: skrivnost postane dogodek. Njegovo sodelovanje s skladateljem [[Bernard Herrmann]] povezuje glasbo in [[montaža]], da pospeši utrip občinstva."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hitchcock je kodiral sodoben suspenz: informiranje gledalca, usmerjanje njegovega pogleda in spreminjanje strahu v nadzorovan užitek. Desetletja kasneje triler svojo slovnico še vedno dolguje njemu."
+        }
+      ]
+    }
+  ]
+}

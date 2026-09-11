@@ -1,0 +1,112 @@
+{
+  "id": "course_232_la_blockchain_et_les_cryptomonnaies",
+  "title": "Blockchain a kryptomeny",
+  "subtitle": "Od roku 2009",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "**blockchain** vynašiel účtovnú knihu, do ktorej nikto nemôže sám zasahovať, čím pripravil pôdu pre novú digitálnu ekonomiku.",
+  "hero": {
+    "image": "la_blockchain_et_les_cryptomonnaies",
+    "ratio": "16:9",
+    "hook": "Kniha účtov, ktorú nikto nevlastní, no spolu monitorujú tisíce počítačov."
+  },
+  "sections": [
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Predstavte si knihu účtov, ktorú nevlastní nikto, ale ktorá sa súčasne aktualizuje na tisíckach počítačov po celom svete a ktorú je takmer nemožné sfalšovať. Toto je prvotná myšlienka **blockchainu**, technológie často redukovanej na svoju prvú aplikáciu, **Bitcoin**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Umožnením výmeny hodnoty bez prechodu cez banku tento vynález dal vzniknúť celej paralelnej ekonomike medzi prísľubmi finančnej slobody a tvrdou kritikou jej nákladov na energiu."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p1",
+      "title": "Register, ktorý nikto neovláda sám",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V srdci blockchainu je jednoduchá myšlienka: **distribuovaná účtovná kniha**. Na rozdiel od banky, ktorá vedie svoje účty na vlastných serveroch, blockchain sa spolieha na sieť [[rovesníci]], teda tisíce počítačov, z ktorých každý uchováva identickú kópiu všetkých transakcií."
+        },
+        {
+          "type": "funFact",
+          "text": "Úplne prvý blok bitcoinového blockchainu, nazývaný „blok genézy“, obsahoval skrytú správu: titulnú stranu britských novín z 3. januára 2009, ktoré hovorili o štátnej záchrane bánk. Politický súhlas jeho tvorcu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Každá transakcia je najprv overená sieťou a potom zoskupená s ostatnými do **blokovať**. Tento blok je potom prepojený s predchádzajúcim vďaka matematickému výpočtu s názvom [[hash]]: akýsi unikátny digitálny odtlačok prsta. Výsledkom je neprerušený reťazec blokov, odtiaľ názov blockchain. Na úpravu jedinej starej transakcie by ste museli prepočítať celý reťazec a presvedčiť viac ako polovicu siete, čo je vo veľkom meradle takmer nemožné."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p2",
+      "title": "Bitcoin a Ethereum: od platby k programu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Bitcoin**, ktorý v roku **2009** spustila anonymná osoba (alebo skupina) pod menom [[Satoshi Nakamoto]], dokázal, že menový systém môže fungovať aj bez centrálnej banky. Aby bol zaručený jeho nedostatok, jeho tvorca stanovil prísny strop: nikdy nemôže existovať viac ako **21 miliónov bitcoinov**, trochu ako zlato je na Zemi obmedzené."
+        },
+        {
+          "type": "image",
+          "asset": "blockchain_technology_distributed_ledger_visualization",
+          "ratio": "4:3",
+          "caption": "Každá transakcia je pred pridaním do reťazca overená sieťou počítačov."
+        },
+        {
+          "type": "paragraph",
+          "text": "V roku 2015 sa objavila druhá generácia blockchainu so **Ethereum**. Jeho skvelá inovácia: **smart kontrakt**. Ide o programy, ktoré sa spustia automaticky hneď, ako je splnená podmienka, napríklad automatické preplatenie v prípade meškania vlaku, bez potreby ísť cez sprostredkovateľa."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
+      "title": "Kritici: energia a nestabilita",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Úspech kryptomien nie je bez problémov. Najviac diskutované sa týka **Z** siete bitcoinov: jej ročné výdavky na elektrinu sú dnes porovnateľné s výdavkami celej krajiny ako Argentína."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trh tiež trpí extrémnou **volatilita**: cena bitcoinu sa môže v priebehu niekoľkých hodín líšiť o 10 alebo 20 %. Táto nestabilita mu v súčasnosti bráni stať sa skutočným každodenným platidlom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Napokon, relatívna anonymita transakcií sa niekedy využívala na nezákonné aktivity. Blockchain však v skutočnosti zostáva úplne transparentný: úrady môžu sledovať tok peňazí, čo sťažuje pranie ako v klasickom hotovostnom systéme."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p4",
+      "title": "Smerom k inštitucionálnej integrácii",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dnes kryptomeny opúšťajú okraje, aby mohli vstúpiť do tradičných financií. Veľké banky teraz ponúkajú svojim zákazníkom držbu digitálnych aktív a niekoľko štátov zvažuje vytvorenie vlastnej oficiálnej digitálnej meny **[[MNBC]]** (digitálna mena centrálnej banky)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ako most medzi týmito dvoma svetmi slúžia **stablecoiny**, kryptomeny, ktorých cena je stabilizovaná vďaka rezerve dolárov alebo eur. Okrem financií si blockchain pre svoju spoľahlivosť osvojujú aj sektory ako luxus (boj proti falšovaniu), logistika (sledovanie kontajnerov) alebo zdravotníctvo (zabezpečenie lekárskych záznamov)."
+        },
+        {
+          "type": "funFact",
+          "text": "V roku 2021 sa Salvádor stal prvou krajinou na svete, ktorá prijala Bitcoin ako zákonné platidlo spolu s americkým dolárom, čo od každého obchodníka vyžaduje, aby ho akceptoval, ak má technické prostriedky."
+        },
+        {
+          "type": "takeaway",
+          "text": "Blockchain, ktorý vznikol v roku 2009, je zdieľaná a takmer nemožná sfalšovateľná účtovná kniha, ktorej maximálna zásoba bitcoinov je stanovená na 21 miliónov jednotiek. Položil základy novej digitálnej ekonomiky dnes v plnej inštitucionálnej integrácii."
+        }
+      ]
+    }
+  ]
+}

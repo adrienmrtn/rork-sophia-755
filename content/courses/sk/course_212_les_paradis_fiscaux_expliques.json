@@ -1,0 +1,108 @@
+{
+  "id": "course_212_les_paradis_fiscaux_expliques",
+  "title": "Vysvetlili daňové raje",
+  "subtitle": "10 000 miliárd ukrytých",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Približne 10 % svetového bohatstva unikne daniam na neprehľadných územiach. Ako tento systém funguje a prečo je taký odolný?",
+  "hero": {
+    "image": "les_paradis_fiscaux_expliques",
+    "ratio": "16:9",
+    "hook": "Kajmanské ostrovy majú 65 000 obyvateľov a viac ako 100 000 podnikov. Vitajte vo svete daňových rajov."
+  },
+  "sections": [
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Niektoré územia, často maličké, umožňujú spoločnostiam a veľkým majetkom takmer úplne uniknúť dani svojej krajiny pôvodu. Nazývame ich **daňový raj**. Odhaduje sa, že sa tam nachádza okolo 10 biliónov dolárov, čiže 8 až 10 % svetového bohatstva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nie je to problém len pre účtovníkov: štáty to pripravuje o 600 miliárd dolárov ročne, teda o peniaze, z ktorých mohli financovať nemocnice alebo školy. Tu je návod, ako tento diskrétny systém funguje a prečo tak dobre odoláva pokusom o reguláciu."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p1",
+      "title": "Ako sa skrývajú peniaze",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Daňový raj je založený na troch pilieroch: dane blízke nule, veľká neprehľadnosť a malá spolupráca s inými krajinami. Tieto územia tak priťahujú kapitál z celého sveta, čomu hovoríme ekonomika [[Offshore]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na mnohých z týchto území je možné vytvoriť fiktívnu spoločnosť: podnik bez kancelárie alebo zamestnancov, ktorý existuje len na papieri. Jeho jediným účelom je často skryť identitu skutočného vlastníka peňazí, nazývaného skutočný vlastník."
+        },
+        {
+          "type": "image",
+          "asset": "cayman_islands_offshore_banking_paradise",
+          "ratio": "4:3",
+          "caption": "Kajmanské ostrovy, jedno z najväčších finančných centier na svete napriek svojej malej rozlohe."
+        },
+        {
+          "type": "funFact",
+          "text": "Kajmanské ostrovy majú len 65 000 obyvateľov, no je tam registrovaných viac ako 100 000 spoločností: ide o piate finančné centrum na svete pre bankové vklady, na ploche menšej ako Paríž."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p2",
+      "title": "Umenie dosahovať zisk zmizne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pre veľké spoločnosti nie je tento cieľ nevyhnutne nezákonný: hovoríme o **optimálne ovládanie**, teda o šikovnom využívaní pravidiel každej krajiny na platenie nižších daní. Hlavný nástroj sa nazýva [[Transferové oceňovanie]]: spoločnosť sama stanovuje cenu výmen medzi svojimi vlastnými dcérskymi spoločnosťami, aby ukázala svoje zisky tam, kde je najnižšia daň."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bežnou metódou je prevod značky alebo patentu na dcérsku spoločnosť so sídlom v daňovom raji. Ostatné dcérske spoločnosti, ktoré sa nachádzajú napríklad vo Francúzsku, potom musia platiť obrovské sumy za právo používať túto značku. Tieto platby znižujú ich zdaniteľný zisk na miestnej úrovni a zároveň ho zvyšujú v daňovom raji."
+        },
+        {
+          "type": "funFact",
+          "text": "Francúzske slovo „daňový raj“ pochádza z chyby prekladu: Angličtina hovorí „daňový raj“, bezpečný prístav pre peniaze (prístav), nie raj (nebo). Zmätok zvukov zmenil význam slova."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p3",
+      "title": "Svet reaguje (trochu)",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Finančná kríza v roku 2008, potom vydanie [[Panama Papers]] v roku 2016 vyvolalo vlnu rozhorčenia. Pod tlakom OECD a G20 musia teraz banky automaticky prenášať informácie o svojich zahraničných klientoch daňovým správam."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najvýraznejší pokrok nastal v roku 2021, keď medzinárodná dohoda stanovila minimálnu daňovú sadzbu pre nadnárodné spoločnosti vo výške 15 %. Myšlienka: zabrániť krajinám vo vzájomnej konkurencii nekonečným znižovaním daní, aby prilákali podniky. Ak firma platí v daňovom raji len 5 %, jej domovská krajina si teraz môže nárokovať zvyšných 10 %."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p4",
+      "title": "Daňová spravodlivosť je stále krehká",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Keď najväčšie bohatstvo unikne daniam, sú to práve stredné vrstvy a malé miestne podniky, ktoré nesú väčší podiel na daňovom zaťažení. To tiež oslabuje verejné služby, ako je zdravotníctvo alebo školstvo, kvôli nedostatku zdrojov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bitka sa teraz posúva smerom k digitálu: online platformy už nepotrebujú kancelárie, aby zarobili peniaze v krajine, čím sú daňové hranice čoraz priepustnejšie. Administratívy teraz používajú veľké dáta na zistenie anomálií a požadujú verejné registre, ktoré by odhalili identitu skutočných vlastníkov spoločností."
+        },
+        {
+          "type": "takeaway",
+          "text": "Daňové raje ukrývajú okolo 10 % svetového bohatstva vďaka bankovému tajomstvu a takmer nulovému zdaneniu. Od roku 2021 sa celosvetová minimálna daňová sadzba vo výške 15 % pokúša obmedziť tento únik, ale boj ešte zďaleka nie je vyhratý."
+        }
+      ]
+    }
+  ]
+}

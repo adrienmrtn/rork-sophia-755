@@ -1,0 +1,126 @@
+{
+  "id": "course_144_la_nouvelle_vague_francaise",
+  "title": "Francúzska nová vlna",
+  "subtitle": "1959-1968",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Za kamerou stoja mladí kritici zo *Kino notebooky*. Medzi **1959** a **1968** Nová vlna oslobodila film od štúdia a vynašla moderné autorské kino.",
+  "hero": {
+    "image": "la_nouvelle_vague_francaise",
+    "ratio": "16:9",
+    "hook": "Filmoví kritici kradnú fotoaparáty a znovu objavujú siedme umenie."
+  },
+  "sections": [
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Nová vlna** (1959-1968) nie je jednoduchý štýl. Je to uchopenie moci. Mladí francúzski filmoví fanúšikovia posudzujú štúdiovú kinematografiu ako príliš fixovanú, príliš uhladenú, príliš vopred napísanú. Chcú nakrúcať tak, ako píšete román: slobodne, v prvej osobe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prechodom od kritiky k produkcii robia z režiséra skutočného autora filmu. A menia svetovú kinematografiu."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p1",
+      "title": "Najprv ideová revolúcia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pred súbormi je časopis: **Kino notebooky**, ktorý v roku **1951** založil [[André Bazin]]. Okolo neho sú mladí kritici: **Jean-Luc Godard**, **François Truffaut**, **Claude Chabrol**, **Jacques Rivette**, **Éric** RohmerZZENDENDBOLDZZ. Ich ústredná myšlienka sa nazýva [[Autorské zásady]]."
+        },
+        {
+          "type": "image",
+          "asset": "cahiers_du_cinema_magazine_1950s",
+          "ratio": "4:3",
+          "caption": "Les Cahiers du cinéma: škola, kde sa nová vlna naučila myslieť na film."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pre nich nie je skutočným tvorcom scenárista, ale ten, kto režíruje. Rámovanie, rytmus, strihy: to sú podpisy autora, ako štýl spisovateľa."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p2",
+      "title": "1959: Truffaut a Godard vstupujú na scénu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1959** triumfoval v Cannes *Štyristo rán* od **Françoisa Truffaut**. Film sleduje **Antoine Doinel**, rozchod tínedžerov, ktorého hrá [[Jean-Pierre Léaud]]. Kamera sleduje život skôr ako striktný scenár. Posledný pohľad smerom k nám pretína [[štvrtá stena]]: hrdina sa pozerá na publikum bez šťastného konca."
+        },
+        {
+          "type": "image",
+          "asset": "truffaut_400_coups_antoine_doinel_film",
+          "ratio": "4:3",
+          "caption": "Antoine Doinel tvárou k moru: mladík, ktorý odmieta jasný osud."
+        },
+        {
+          "type": "funFact",
+          "text": "Nasledujúci rok *Bez dychu* od Godard so [[Jean-Paul Belmondo]] šokovali svojimi náhlymi strihmi. Godard strihá uprostred gest, akoby písal nožnicami."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tieto dva filmy dokazujú, že príbehy môžeme rozprávať inak: rýchlejšie, slobodnejšie, bližšie k ulici."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p3",
+      "title": "Odíďte zo štúdia, nafilmujte Paríž",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prestávka je tiež technická. Kamery [[Éclair Caméflex]] a citlivejšie filmy umožňujú [[Filmovanie v prirodzenom prostredí a svetelná kamera]]. Už žiadne ťažké štúdiá: natáčame v kaviarňach, apartmánoch a uliciach Paríža, často pri prirodzenom svetle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Herci improvizujú. Reč sa stáva povedomou, niekedy koktavou. Kino dýcha ako o život. Táto sloboda potom inšpiruje [[Kino Novo]] v Brazílii, potom ultra prísne pravidlá ako [[Dogme 95]] v Dánsku, vzdialených dedičov rovnakého smädu po autentickosti."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p4",
+      "title": "Globálne dedičstvo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V rokoch **1970** sa ním inšpiroval **Nový Hollywood**: **Martin Scorsese**, **Francis Ford Coppola**, **Steven Spielberg** miešajú americkú efektivitu a francúzsku slobodu. Nová vlna vnútila trvalú myšlienku: film môže niesť hlas jedinej osoby."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1951",
+              "title": "Kino notebooky",
+              "detail": "Časopis sa stáva laboratóriom nápadov."
+            },
+            {
+              "date": "1959",
+              "title": "Štyristo rán",
+              "detail": "Truffaut zavádza autorské kino v Cannes."
+            },
+            {
+              "date": "1960",
+              "title": "Bez dychu",
+              "detail": "Godard porušuje klasickú montáž."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Nová vlna vytiahla kino zo štúdia do ulíc. Z režiséra sa stal autor a táto myšlienka naďalej formuje nezávislú kinematografiu po celom svete."
+        }
+      ]
+    }
+  ]
+}

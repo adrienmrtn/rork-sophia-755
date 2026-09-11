@@ -1,0 +1,104 @@
+{
+  "id": "course_220_la_desinformation_et_les_fake_news",
+  "title": "Dezinformácie a falošné správy",
+  "subtitle": "Lež vo vírusovom veku",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Nepravdivé informácie sa na sociálnych sieťach šíria 6-krát rýchlejšie ako pravda. Prečo a ako sa chrániť?",
+  "hero": {
+    "image": "la_desinformation_et_les_fake_news",
+    "ratio": "16:9",
+    "hook": "Štúdia MIT ukázala, že falošné správy sa šíria na Twitteri 6-krát rýchlejšie ako pravda. Tu je dôvod."
+  },
+  "sections": [
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Klamstvo na politické účely nie je ničím novým: jeho stopy sa našli už od antiky. Internet a sociálne siete však zmenili situáciu: nepravdivé informácie už necirkulujú len zo štátu k jeho obyvateľom, ale teraz sa šíria horizontálne, medzi občanmi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento posun vytvoril svet, v ktorom sa pravda niekedy javí ako voliteľná tvárou v tvár viralite. Pochopenie toho, ako sa šíria **dezinformácie** a kto z nich má úžitok, sa stalo nevyhnutným pre zachovanie dôvery medzi občanmi."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p1",
+      "title": "Prečo klamstvo cestuje rýchlejšie ako pravda",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Musíme rozlišovať dezinformácie, zámerne šírené s cieľom manipulovať, od jednoduchých čestných omylov. Úspech týchto falošných správ závisí od toho, čo výskumníci nazývajú ekonomikou pozornosti: algoritmy sociálnych médií sú navrhnuté tak, aby maximalizovali čas strávený pred obrazovkou a naše mozgy reagujú silnejšie na emócie a šok než na nuansy."
+        },
+        {
+          "type": "funFact",
+          "text": "Štúdia [[MIT]] zverejnená v roku 2018 ukázala, že falošné správy sa šíria asi 6-krát rýchlejšie ako overené správy na Twitteri, pretože sa javia novšie a emocionálne intenzívnejšie."
+        },
+        {
+          "type": "paragraph",
+          "text": "The algorithms also lock Internet users into [[filtrovať bubliny]]: they only show them content confirming their already existing opinions. Človek presvedčený o konšpiračnej teórii potom každú novú nepravdivú informáciu vníma ako dodatočný dôkaz, čo veľmi sťažuje akúkoľvek následnú opravu."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p2",
+      "title": "Priemysel klamstiev medzi štátmi a ziskom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dezinformácie sa stali skutočným priemyslom. Štáty ako Rusko prostredníctvom Internet Research Agency vytvorili tisíce falošných automatizovaných účtov, aby vyvolali napätie v západných demokraciách, bez toho, aby sa čo i len pokúsili brániť konkrétny tábor: cieľom je často vytvoriť chaos a presvedčiť ľudí, že „každý klame“."
+        },
+        {
+          "type": "image",
+          "asset": "fake_news_social_media_manipulation_phone",
+          "ratio": "4:3",
+          "caption": "Nepravdivé informácie sa na sociálnych sieťach šíria v priebehu niekoľkých sekúnd."
+        },
+        {
+          "type": "paragraph",
+          "text": "Je tu aj čisto lukratívny rozmer: v meste Veles v Severnom Macedónsku mladí podnikatelia v roku 2016 vytvorili senzačné stránky bez akéhokoľvek politického presvedčenia, len aby zarobili peniaze návštevnosťou generovanou na sociálnych sieťach. Lož sa potom stáva jednoduchou výnosnou komoditou."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p3",
+      "title": "Ako oddeliť skutočnosť od fikcie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tvárou v tvár tejto záplave sa svet informácií organizuje sám. **overovanie faktov**, teda overovanie faktov, sa stalo samo o sebe novinárskou disciplínou. Agentúry ako [[AFP]] alebo špecializované redakcie používajú nástroje na vyhľadávanie obrázkov na odhalenie falzifikátov a analýzu podozrivého obsahu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ale preteky medzi útokom a obranou zostávajú nerovné. Vzhľad [[Deepfakes]], videí sfalšovaných umelou inteligenciou, v ktorých je človek nútený povedať čokoľvek so znepokojujúcim realizmom, sťažuje pre netrénované oko rozlíšenie medzi pravdou a nepravdou."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p4",
+      "title": "Nájsť dôveru vo svete obrázkov",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dlhodobý účinok dezinformácií je hlboký: teraz hovoríme o ére **post-pravdy**, kde objektívne fakty majú niekedy menšiu váhu ako emócie a osobné presvedčenia. Táto všeobecná relativizácia oslabuje dôveru potrebnú na spoločné riešenie globálnych výziev, akými sú klíma alebo verejné zdravie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najspoľahlivejšou odpoveďou zostáva mediálna výchova: naučiť sa overovať zdroj, krížovo odkazovať na niekoľko informácií a pochopiť, ako fungujú algoritmy. Niektorí sa spoliehajú aj na technológie certifikácie obsahu, aby zaručili pôvod videa od jeho vytvorenia. Medzitým zostáva ostražitosť všetkých prvou obrannou líniou."
+        },
+        {
+          "type": "takeaway",
+          "text": "Falošné informácie sa na sociálnych sieťach šíria v priemere 6-krát rýchlejšie ako pravda, pretože zneužívajú naše emócie a náš smäd po novosti. Zoči-voči deepfake a trolím farmám zostáva mediálne vzdelávanie najlepšou zbraňou na zachovanie kolektívnej dôvery."
+        }
+      ]
+    }
+  ]
+}

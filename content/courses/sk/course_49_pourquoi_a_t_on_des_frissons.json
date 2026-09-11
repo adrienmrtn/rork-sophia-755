@@ -1,0 +1,102 @@
+{
+  "id": "course_49_pourquoi_a_t_on_des_frissons",
+  "title": "Prečo máme zimomriavky?",
+  "subtitle": "Telo a emócie",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Chlad, strach, hudba: triaška má viacero príčin. Všetky prechádzajú nervovým systémom, ale nie z rovnakých dôvodov.",
+  "hero": {
+    "image": "pourquoi_a_t_on_des_frissons",
+    "ratio": "16:9",
+    "hook": "Chvenie zimy a chvenie hudby nerozprávajú ten istý príbeh."
+  },
+  "sections": [
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Keď ideš von do dažďa, chveješ sa. Chveješ sa aj pri pesničke, ktorá ťa rozčuľuje. Rovnaké slovo, iné mechanizmy."
+        },
+        {
+          "type": "paragraph",
+          "text": "V oboch prípadoch telo reaguje rýchlo. Jedna ale slúži najmä na zahriatie, druhá je skôr o rozkoši a emóciách."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
+      "title": "Vzrušenie z chladu: mini-kotol",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Telo chce zostať okolo **37 °C**. Keď pokožka zaznamená chlad, upozorní oblasť mozgu, **hypotalamus**, ktorý funguje ako termostat."
+        },
+        {
+          "type": "image",
+          "asset": "goosebumps_cold_skin",
+          "ratio": "4:3",
+          "caption": "Husia koža: starý reflex na zdvíhanie chĺpkov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svaly sa sťahujú veľmi rýchlo a opakovane: toto je triaška. Tieto kontrakcie produkujú teplo. „Husia koža“ pochádza zo starého reflexu: dvíhanie chĺpkov, aby lepšie izolovali. Doma, s malou srsťou, slúži hlavne ako pozostatok."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
+      "title": "Vzrušenie zo strachu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Keď čelíte hrozbe, aktivuje sa [[Sympatický nervový systém]] („pohotovostná“ vetva nervového systému). Vydáva **adrenalín**. Svaly sa napínajú, srdce búši, koža sa môže triasť."
+        },
+        {
+          "type": "image",
+          "asset": "adrenaline_stress_response_body",
+          "ratio": "4:3",
+          "caption": "Adrenalín pripraví telo na rýchlu reakciu."
+        },
+        {
+          "type": "funFact",
+          "text": "Tento istý systém vysvetľuje, prečo vám môže naskakovať husia koža pri sledovaní hororového filmu... keď ste pohodlne na gauči."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
+      "title": "Vzrušenie z hudby",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Určité vzrušenie, niekedy nazývané „zimomriavky“, prichádza so silnou emóciou: hudba, reč, film. Aktivujú mozgový okruh **odmeny** so **dopamín**, látkou spojenou s potešením."
+        },
+        {
+          "type": "paragraph",
+          "text": "To nie je užitočné pre okamžité prežitie. Skôr je to telo, ktoré reaguje na intenzívnu emóciu, ako prechádzajúca vlna."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
+      "title": "Kedy sa obávať?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zimnica s vysokou horúčkou môže signalizovať infekciu. Neustále zimnica bez jasného dôvodu si zaslúži lekársku starostlivosť. Ale väčšinu času, triaška z chladu, stresu alebo hudby je jednoducho telo, ktoré robí svoju prácu."
+        },
+        {
+          "type": "takeaway",
+          "text": "Zimomriavky produkujú teplo. Tí, ktorí majú strach, sa pripravujú na reakciu. Tie hudobné sa dotýkajú emocionálneho potešenia. Rovnaký pocit, rôzne príčiny."
+        }
+      ]
+    }
+  ]
+}

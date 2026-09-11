@@ -1,0 +1,145 @@
+{
+  "id": "course_140_le_blues_racines_de_toute_la_musique_mod",
+  "title": "Blues: korenine vse sodobne glasbe",
+  "subtitle": "1870-1960",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Blues, rojen na bombažnih poljih Mississippija, je izumil 12-taktno mrežo in negoval jazz, rock, soul in hip-hop.",
+  "hero": {
+    "image": "le_blues_racines_de_toute_la_musique_moderne",
+    "ratio": "16:9",
+    "hook": "Krik na bombažnih poljih in vsa sodobna glasba ima korenine."
+  },
+  "sections": [
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blues ni samo žanr. Je matrica večine zahodne popularne glasbe 20. stoletja. Rodil se je v revščini bombažnih polj **Misisipija** ob koncu 19. stoletja kot odpor in izraz Afroameričanov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Od jazza do rock'n'rolla, od soula do hip-hopa, njegove strukture in čustva še vedno namakajo ušesa. Razumeti blues pomeni vrniti se k izviru joka, spremenjenega v umetnost."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p1",
+      "title": "Bombažna polja, žvižgarji in 12 mernikov",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Med **1870** in **1890**, v [[Globoki jug]], ki ga zaznamujeta segregacija in beda deliteljev, blues sintetizira afriška ustna izročila. [[terenski vrtalniki]] in [[Delovne pesmi]] se srečujejo z [[spirituali]], verskimi pesmimi, ki včasih nosijo sporočila svobode."
+        },
+        {
+          "type": "paragraph",
+          "text": "Glavna novost: [[Struktura 12 palic]], mreža treh akordov, ki služi kot platno za improvizacijo. [[Modre note]], upognjene note, posnemajo bolečino glasu. Kitara, pogosto z [[grlo steklenice]] (steklena ali kovinska cev zdrsne čez strune), dialog s pevcem."
+        },
+        {
+          "type": "funFact",
+          "text": "Beseda »jezdec« je v besedilih pogosto kodirala ljubimca, da bi pred nepoučeno publiko obravnavala tabu teme."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p2",
+      "title": "Robert Johnson in mit o Delti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Delta Mississippija**, med Memphisom in Vicksburgom, je zibelka **Delta bluesa**, surove oblike žanra. **Robert Johnson** (**1911**-**1938**) igra tavajočega glasbenika: samo posnetki **29**, ogromen vpliv. Njegov [[Obiranje prstov]] obravnava kitaro kot miniaturni orkester."
+        },
+        {
+          "type": "image",
+          "asset": "mississippi_delta_blues_cotton_fields",
+          "ratio": "4:3",
+          "caption": "Delta Mississippija: zibelka podeželskega bluesa."
+        },
+        {
+          "type": "image",
+          "asset": "robert_johnson_blues_guitarist_crossroads",
+          "ratio": "4:3",
+          "caption": "Robert Johnson: 29 naslovov, večna legenda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Legenda pravi, da je prodal svojo dušo hudiču na [[razpotje]] (križišču) v zameno za svoje mojstrstvo. Blues so takrat pogosto imenovali \"hudičeva glasba\" v primerjavi s cerkvenimi pesmimi. Johnson je umrl zaradi zastrupitve v mladosti. *Cross Road Blues* in *Sweet Home Chicago* postajata standarda."
+        },
+        {
+          "type": "funFact",
+          "text": "Snemal je obrnjen proti steni v hotelski sobi v San Antoniu, ne zaradi sramežljivosti, ampak da bi izkoristil akustiko sobe."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p3",
+      "title": "Chicago: blues postane električen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V letih **1940** je veliko preseljevanje popeljalo na milijone Afroameričanov na industrijski sever. V **Chicago** blues postane naelektren, da preglasi hrup tovarn. **Muddy Waters** in **Howlin' Wolf** uveljavljata električno kitaro, bas, bobne."
+        },
+        {
+          "type": "image",
+          "asset": "muddy_waters_chicago_electric_blues",
+          "ratio": "4:3",
+          "caption": "Muddy Waters v Chicagu: blues povezan s tokom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta elektrifikacija vodi v rock'n'roll. **Chuck Berry** in **Bo Diddley** pospešita tempo. V šestdesetih letih 20. stoletja sta **Rolling Stones** (ime je vzeto iz pesmi Muddy Waters) in **Led Zeppelin** ponovno izvozila te korenine belopoltemu občinstvu, pogosto ne da bi prvotni ustvarjalci zaslužili bogastvo."
+        },
+        {
+          "type": "funFact",
+          "text": "Muddyja Watersa je \"odkril\" muzikolog Alan Lomax, ko se je še vozil s traktorjem na plantaži bombaža."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p4",
+      "title": "Od B. B. Kinga do vzorčenja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jazz si od njega sposoja strukture in improvizacijo. Soul in R&B ohranjata njegov glas visceralen. Hip-hop reciklira svojo dediščino skozi [[Vzorčenje]] starih vinilnih plošč. **B.B. King** je populariziral melodični kitarski solo. Bolj kot zgodovinski slog blues ostaja jezik o izgubljeni ljubezni, krivici in upanju."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1870-1890",
+              "title": "Rojstvo na globokem jugu",
+              "detail": "Pevke, spirituali in grid v 12 taktih."
+            },
+            {
+              "date": "1930",
+              "title": "Robert Johnson",
+              "detail": "Mit o Delti in razpotju."
+            },
+            {
+              "date": "1940-1950",
+              "title": "Električni Chicago",
+              "detail": "Muddy Waters utira pot rocku."
+            },
+            {
+              "date": "1960",
+              "title": "Britanska renesansa",
+              "detail": "Stones in Zeppelin globalizirata blues."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Blues, rojen v trpljenju črnskih skupnosti Mississippija, je svetu dal 12-taktno lestvico in preko Chicaga rock in še veliko več."
+        }
+      ]
+    }
+  ]
+}

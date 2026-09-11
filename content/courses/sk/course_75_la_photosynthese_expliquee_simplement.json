@@ -1,0 +1,112 @@
+{
+  "id": "course_75_la_photosynthese_expliquee_simplement",
+  "title": "Fotosyntéza vysvetlená jednoducho",
+  "subtitle": "Rastliny a energia",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Rastliny robia niečo výnimočné: varia cukor svetlom, vodou a vzduchom. A dávajú nám kyslík ako dar.",
+  "hero": {
+    "image": "la_photosynthese_expliquee_simplement",
+    "ratio": "16:9",
+    "hook": "List je solárna kuchyňa: svetlo, voda, vzduch... a tu je cukor."
+  },
+  "sections": [
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Predstavte si miniatúrnu továreň v každom liste. Vyžaduje tri svetské ingrediencie: **svetlo zo Slnka**, **voda** z koreňov a **CO₂** zo vzduchu. Vychádza so **cukor** na rast a vydáva **kyslík**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento výkon sa nazýva **fotosyntéza**. Bez nej žiadne lesy, dýchateľný kyslík, takmer žiadny zložitý život na Zemi."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p1",
+      "title": "Kde sa to deje v liste?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V rastlinnej bunke sa v zelených organelách, **chloroplastoch**, nachádza [[Chlorofyl]]. Tento pigment zachytáva hlavne modré a červené svetlo. Zelená sa vracia: preto sa nám listy zdajú zelené."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_photosynthesis_sunlight_chloroplasts",
+          "ratio": "auto",
+          "caption": "Listy zachytávajú slnečné svetlo pre fotosyntézu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jednoduchá rovnica: CO₂ + voda + svetlo → cukor + kyslík. Plyn vstupuje cez malé póry, [[stomata]]. Voda stúpa z koreňov. Cukor sa stáva drevom, ovocím, koreňmi; kyslík ide do vzduchu."
+        },
+        {
+          "type": "funFact",
+          "text": "Chlorofyl „odmieta“ zelenú. Uprednostňuje modrú a červenú, ktoré sú účinnejšie na vzrušenie jej elektrónov a spustenie energetického stroja."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p2",
+      "title": "Dva kroky: zajatie, potom výroba",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Najprv fáza **svetlo**. Svetlo rozbíja molekuly vody. Kyslík uniká. Energia je uložená v dvoch chemických „batériách“, **ATP** a **NADPH**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ďalej **výrobná fáza**, [[Calvinov cyklus]], pomenovaný po chemikovi **Melvin Calvin**. Energiou z batérií rastlina spája uhlík z CO₂ na glukózu. V tejto fáze nie je potrebné priame slnečné svetlo, ale úplne závisí od toho, čo svetlo predtým produkovalo."
+        },
+        {
+          "type": "funFact",
+          "text": "Na sledovanie dráhy uhlíka v liste použil Calvin rádioaktívne izotopy z výskumu atómovej bomby. Nobelova cena v **1961**."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p3",
+      "title": "Keď kyslík zmenil planétu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Približne pred **2,4 miliardy rokov** začali fotosyntetické baktérie **cyanobaktérie** masívne uvoľňovať kyslík. Toto je **Rýchlosť oxidácie**. Pre mnohé organizácie tej doby to bola otrava."
+        },
+        {
+          "type": "paragraph",
+          "text": "Potom kyslík umožnil ozónovej vrstve a oveľa efektívnejšie dýchanie. Vzduch, ktorý dýchame, je v podstate „odpadový produkt“ miliárd rokov fotosyntézy."
+        },
+        {
+          "type": "funFact",
+          "text": "Približne **polovicu** zemského kyslíka pochádza z fytoplanktónu v oceánoch, nielen z lesov."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p4",
+      "title": "Skromný výstup, nesmierna rola",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "List premení iba **1 až 3 %** prijatej slnečnej energie na biomasu. V celosvetovom meradle to stačí na nakŕmenie potravinových reťazcov a absorbovanie enormných množstiev CO₂."
+        },
+        {
+          "type": "paragraph",
+          "text": "Preto záujem o lesy, oceány... a dokonca aj umelú fotosyntézu pre klímu. Morský slimák, *Elysia chlorotica*, ide tak ďaleko, že „kradne“ chloroplasty z rias, aby žil trochu zo slnečnej energie."
+        },
+        {
+          "type": "takeaway",
+          "text": "Fotosyntéza premieňa svetlo, vodu a CO₂ na cukor a regeneruje kyslík. Základom takmer všetkého života je solárne varenie."
+        }
+      ]
+    }
+  ]
+}

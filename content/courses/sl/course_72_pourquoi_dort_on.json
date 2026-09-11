@@ -1,0 +1,108 @@
+{
+  "id": "course_72_pourquoi_dort_on",
+  "title": "Zakaj spimo?",
+  "subtitle": "Telo in možgani",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Tretjino svojega življenja prespimo. To ni izgubljen čas: spanje čisti možgane, popravlja telo in vtisne spomine.",
+  "hero": {
+    "image": "pourquoi_dort_on",
+    "ratio": "16:9",
+    "hook": "Pri spanju ne gre za izklop: to je veliko nočno delo telesa."
+  },
+  "sections": [
+    {
+      "id": "course_72_pourquoi_dort_on_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V življenju 75 let spimo blizu **25 let**. Dolgo časa smo verjeli, da je spanje le odmor. V resnici je to aktivno delo, ki je enako pomembno kot pitje ali prehranjevanje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Znanost še nima vseh odgovorov na vprašanje, zakaj spimo. Dobro pa ve, kaj se zgodi, ko ne spimo in kaj tiho popravi noč."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p1",
+      "title": "Kaj razkriva pomanjkanje spanja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leta **1964** je ameriški študent **Randy Gardner** ostal **11 dni** brez spanja. Halucinacije, paranoja, kolaps uma: dokaz, da možgani ne morejo preživeti brez počitka."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_bedroom_night",
+          "ratio": "auto",
+          "caption": "Spanje, nujno za okrevanje možganov in telesa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pri podganah popolna odsotnost spanja ubije **2 pri 3 tednih**, kot stradanje. Pri ljudeh redka genetska bolezen, **Fatalna družinska nespečnost**, vodi tudi v smrt. Dnevno je 17 ur budnosti enakovredni ravni alkohola v krvi **0,5 g/l**. Možgani nato prisilijo [[Mikrospanje]], kratke nehotene prekinitve zavesti."
+        },
+        {
+          "type": "funFact",
+          "text": "Po svojem rekordu je Randy Gardner spal **14 ur** naravnost. Zbudil se je sposoben delovati, vendar je spanje trajalo tedne, da se je vrnil v normalen vzorec."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p2",
+      "title": "Ponoči se možgani čistijo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Med spanjem se možgani ne ustavijo: spreminjajo načine. **morski konjiček**, ključna spominska struktura v obliki morskega konjička, »ponovno predvaja« dan in pošlje informacije v [[Neokorteks]], zunanjo plast možganov, v trajno shranjevanje. Rezultat: po dobrem spancu se pogosto bolje naučimo **20 do 40%**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Globok spanec sproži tudi **rastni hormon**, ki obnavlja mišice in tkiva, ter stimulira [[Citokini]], signalne molekule imunskega sistema. Še eno veliko odkritje: [[Glimfatični sistem]], cerebralna drenažna mreža **desetkrat**, ki je ponoči bolj aktivna. Odstranjuje odpadke, vključno z beljakovinami, povezanimi s tveganjem za Alzheimerjevo bolezen."
+        },
+        {
+          "type": "funFact",
+          "text": "Med globokim spanjem se možganske celice skrčijo za približno **60%**. Tako ustvarjen prostor omogoča boljše kroženje čistilne tekočine."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p3",
+      "title": "Kdo koliko spi in kako",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mačke spijo **12 do 16.00.**: plenilci varni. Žirafe so včasih zadovoljne z **30 minut za 2 minuti**, v kratkih dremežih, pripravljenih na beg. Delfini spijo z **ena hemisfero**, eno polovico možganov, naenkrat, da se nenehno dvigujejo in dihajo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dojenčki spijo do **6 oseb**, z veliko [[paradoksalno spanje]], faza sanj s hitrimi gibi oči. Ta faza pomaga [[Sinaptogeneza]], ustvarjanju povezav med nevroni."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p4",
+      "title": "Notranja ura in modra luč",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V posteljo nas potiskata dve sili: utrujenost, ki se kopiči čez dan, in [[Cirkadiani ritmi in melatonin]], notranja ura nastavljena na **24 ur**. Ko se svetloba zmanjša, možgani sprostijo **melatonin**, hormon, ki telo pripravi na spanje, ne da bi ga vsiljeval."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zasloni zvečer preslepijo to uro in odložijo zaspanje. Ob koncu tedna res ne »nadoknadimo« spanca: utrujenost se zmanjša, vendar ne vsa škoda. Redne ure, temen hladen prostor ostajajo najboljši zavezniki."
+        },
+        {
+          "type": "takeaway",
+          "text": "Spanje čisti možgane, popravlja telo in krepi spomin. Popolno pomanjkanje ubije v nekaj tednih: spanje ni razkošje, je nujno vzdrževanje."
+        }
+      ]
+    }
+  ]
+}

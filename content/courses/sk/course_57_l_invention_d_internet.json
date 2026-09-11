@@ -1,0 +1,102 @@
+{
+  "id": "course_57_l_invention_d_internet",
+  "title": "Vynález internetu",
+  "subtitle": "siete",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Internet nemá jediného vynálezcu. Je to dlhý reťazec: vojenská sieť, spoločný jazyk a potom web pre ľudí.",
+  "hero": {
+    "image": "l_invention_d_internet",
+    "ratio": "16:9",
+    "hook": "Najprv sieť na odpor proti vojne. Potom sa naladí celý svet."
+  },
+  "sections": [
+    {
+      "id": "course_57_l_invention_d_internet_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Internet sa nezrodil od jediného génia v garáži. Ide o kolektívnu stavbu v priebehu niekoľkých desaťročí."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tri jednoduché kroky na zapamätanie: prvá sieť (ARPANET), spoločný jazyk (TCP/IP), potom jednoduché rozhranie (web)."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p1",
+      "title": "ARPANET, prvá sieť",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na konci rokov **1960**, uprostred studenej vojny, financovala americká armáda projekt: prepojenie počítačov tak, aby pokračovali v komunikácii, aj keď bola časť siete zničená."
+        },
+        {
+          "type": "image",
+          "asset": "arpanet_1969_computer_ucla",
+          "ratio": "4:3",
+          "caption": "ARPANET najprv spája niekoľko amerických univerzít."
+        },
+        {
+          "type": "paragraph",
+          "text": "Táto sieť sa nazýva **ARPANET**. Správy sú rozdelené do malých paketov, ktoré majú rôzne cesty. Ak jedna cesta padne, prevezme ju iná."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p2",
+      "title": "TCP/IP: hovorí rovnakým jazykom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aby si rôzne siete navzájom rozumeli, sú potrebné spoločné pravidlá. **Vint Cerf** a **Bob Kahn** vyvíjajú protokol **TCP/IP**: jazyk, ktorý hovorí, ako strihať, adresovať a prekladať údaje."
+        },
+        {
+          "type": "image",
+          "asset": "vint_cerf_bob_kahn_internet",
+          "ratio": "4:3",
+          "caption": "Cerf a Kahn: architekti jazyka internetu."
+        },
+        {
+          "type": "funFact",
+          "text": "1. januára **1983** ARPANET oficiálne prešiel na TCP/IP. Mnohí považujú tento dátum za technický „zrod“ internetu."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p3",
+      "title": "Web robí sieť ľudskou",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Internet je sieť. **World Wide Web**, ktorú vynašiel **Tim Berners-Lee** v CERN na začiatku rokov **1990**, je jednoduchá vrstva: stránky, odkazy, prehliadače."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez webu by internet zostal predovšetkým nástrojom pre odborníkov. S ním môže kliknúť každý."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p4",
+      "title": "Nervový systém sveta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Internet dnes prenáša e-maily, videá, banky, nemocnice, GPS. Spôsobilo to aj nové problémy: dezinformácie, sledovanie, digitálna priepasť."
+        },
+        {
+          "type": "takeaway",
+          "text": "Internet sa zrodil z ARPANETu, stal sa univerzálnym vďaka TCP/IP a dostupný vďaka webu. Toto nie je jedinečný vynález, je to zdieľaná architektúra."
+        }
+      ]
+    }
+  ]
+}

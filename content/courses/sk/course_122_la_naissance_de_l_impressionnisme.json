@@ -1,0 +1,144 @@
+{
+  "id": "course_122_la_naissance_de_l_impressionnisme",
+  "title": "Zrod impresionizmu",
+  "subtitle": "1874",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "V roku 1874 maliari odmietnutí Salónom usporiadali vlastnú výstavu. Kritik sa vysmieva Monet a nevedomky to nazýva **impresionizmus**.",
+  "hero": {
+    "image": "la_naissance_de_l_impressionnisme",
+    "ratio": "16:9",
+    "hook": "Kritická urážka a prvé veľké hnutie v modernom umení má svoje meno."
+  },
+  "sections": [
+    {
+      "id": "course_122_la_naissance_de_l_impressionnisme_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V apríli **1874** okolo tridsať umelcov unavených [[Oficiálny salón v Paríži]] otvorilo súkromnú výstavu v bývalom ateliéri fotografa Nadara. Medzi maľbami zahmlená morská krajina od **Clauda Moneta** priťahuje výsmech kritika Louisa Leroya."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zosmiešňovaním názvu *Tlač, vychádzajúce slnko* Leroy nechtiac pokrstil prvé veľké avantgardné hnutie v modernom umení. Takto **impresionizmus** zmenil spôsob, akým sa pozeráme na realitu."
+        }
+      ]
+    },
+    {
+      "id": "course_122_la_naissance_de_l_impressionnisme_p1",
+      "title": "Proti akadémii: škandál z roku 1863",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 19. storočí sa umenie vo Francúzsku riadilo **Akadémia výtvarných umení**. Navrchu: historická maľba. Krajina a každodenný život sa považujú za nepodstatné. Aby maliar existoval, musí vystavovať na Salóne. Požadujeme presnú kresbu a hladký povrch, bez stôp po štetcoch."
+        },
+        {
+          "type": "paragraph",
+          "text": "V **1863** porota odmietla viac ako **3 000** obrazov. Cisár **Napoleon III** potom povolil **Salon des Refusés**. Verejnosť objavuje *Obed v tráve* od **Édouarda Maneta**: nahá žena obeduje s dvoma mužmi v modernom kostýme. Škandál je okamžitý."
+        },
+        {
+          "type": "image",
+          "asset": "manet_le_dejeuner_sur_l_herbe_painting",
+          "ratio": "4:3",
+          "caption": "Manet šokuje Salón zmiešaním aktov a súčasného života."
+        },
+        {
+          "type": "funFact",
+          "text": "Členovia poroty Salónu dostali prezývku „hasiči“: ich starí bojovníci nosili prilby pripomínajúce prilby parížskych hasičov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Manet odmieta mäkké modelovanie akademikov. Maľuje v úprimných kontrastoch. Bez toho, aby sa označoval za impresionistu, sa stáva postavou tejto [[avantgarda]], ktorá kladie farbu pred dokonalú kresbu."
+        }
+      ]
+    },
+    {
+      "id": "course_122_la_naissance_de_l_impressionnisme_p2",
+      "title": "Maľovanie vonku: svetlo a farba",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Revolúcia zahŕňa aj technológiu. Predtým maliar svoje pigmenty mlel v dielni. So [[farby trubíc a vonku]] môže konečne sedieť vonku pred motívom. Tvárou v tvár vetru a slnku zisťuje, že farba objektu sa neustále mení v závislosti od času a svetla."
+        },
+        {
+          "type": "image",
+          "asset": "monet_painting_plein_air_outdoors",
+          "ratio": "4:3",
+          "caption": "Monet a jeho priatelia maľujú vonku, aby zachytili okamih."
+        },
+        {
+          "type": "funFact",
+          "text": "Monet si niekedy prenajal malý čln prerobený na dielňu na maľovanie zo stredu Seiny, čo najbližšie k odrazom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na zachytenie týchto momentov umiestňujú dotyky čistej farby vedľa seba. Z diaľky sa v oku diváka miešajú tieto dotyky. Inšpirovaní chemikom [[Michel-Eugène Chevreul]] vyháňajú čiernu z tieňov a uprednostňujú [[doplnkové farby]]: modrú v tieni objektu nasvieteného na oranžovo."
+        }
+      ]
+    },
+    {
+      "id": "course_122_la_naissance_de_l_impressionnisme_p3",
+      "title": "1874: od urážky k hnutiu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Unavení odmietnutiami zo Salónu sa maliari mestskej časti Batignolles stretli na [[Kaviareň Guerbois]]. V **1874** organizujú vlastnú výstavu. Skupina združuje **Monet**, **Renoir**, **Pissarro**, **Degas** a **Berthe Morisot**, ktorých talent napriek dobovým predsudkom vyniká."
+        },
+        {
+          "type": "image",
+          "asset": "nadar_studio_photography_paris_1874",
+          "ratio": "4:3",
+          "caption": "V dielni fotografa Nadara sa koná prvá impresionistická výstava."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tlač je divoká. Leroy hovorí o „impresionistoch“, aby povedal: toto sú len náčrty. Skupina však experimentuje aj vďaka [[Japonské výtlačky]]: asymetrické orámovanie, pohľady zhora. Obchodník [[Paul Durand-Ruel]] ich podporuje a dobýva americký trh. V rokoch 1874 až 1886 osem výstav vnieslo novú myšlienku: maľovať svoj pocit, nie zamrznutú kópiu prírody."
+        }
+      ]
+    },
+    {
+      "id": "course_122_la_naissance_de_l_impressionnisme_p4",
+      "title": "Čo zmenil impresionizmus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tvrdením, že na spôsobe videnia záleží viac ako na predmete, impresionisti vydláždili cestu modernému umeniu. Monet posunie túto logiku do *Vodných ľalií*, kde sa kontúry rozpustia a ohlásia abstrakciu. Seuratov [[Neoimpresionizmus]] potom systematizuje dotyk do bodov."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1863",
+              "title": "Salón des Refusés",
+              "detail": "Manet škandalizuje s Le Déjeuner sur l'herbe."
+            },
+            {
+              "date": "1874",
+              "title": "Prvá samostatná výstava",
+              "detail": "V Nadare vynašiel Leroy slovo „impresionisti“."
+            },
+            {
+              "date": "1886",
+              "title": "Ôsma a posledná výstava",
+              "detail": "Skupina zaviedla novú slobodu maľovania."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Dnes tieto kedysi zosmiešňované obrazy patria medzi najnavštevovanejšie v [[Musée d'Orsay]]. Z urážky sa stal triumf."
+        },
+        {
+          "type": "takeaway",
+          "text": "Impresionizmus, ktorý sa zrodil zo vzbury proti Salónu v **1874**, urobil zo svetla, voľného dotyku a osobného pocitu srdce moderného maliarstva."
+        }
+      ]
+    }
+  ]
+}

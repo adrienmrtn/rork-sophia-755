@@ -1,0 +1,134 @@
+{
+  "id": "course_32_la_guerre_du_vietnam_1955_1975",
+  "title": "Vietnamska vojna",
+  "subtitle": "1955-1975",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "Dvajset let so Združene države Vietnamu namenjale neizmerne sile, da bi zajezile komunizem. Zataknejo se, razdelijo in odidejo, ne da bi zmagali.",
+  "hero": {
+    "image": "la_guerre_du_vietnam",
+    "ratio": "16:9",
+    "hook": "Vodilna svetovna sila pred vojno, ki je ne more dobiti."
+  },
+  "sections": [
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V središču hladne vojne je bil Vietnam razdeljen na dva dela. Na severu komunistični režim. Na jugu država, ki jo podpira Zahod. ZDA tja pošiljajo ogromna sredstva. Vendar se zataknejo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta konflikt ni samo vojaški. Razdružuje Ameriko, prikazuje meje surove sile in pušča trajne travme na obeh straneh."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p1",
+      "title": "Razdeljena država, nato naraščajoča vojna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po francoskem porazu v **[[Indokitajska vojna]]** je Ženevski sporazum (**1954**) razdelil Vietnam na **17. vzporednik**. Na severu vodi **[[Ho Chi Minh]]**, nacionalistični in komunistični voditelj. Na jugu avtoritarni režim, ki ga podpira Washington."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ameriški predsedniki **John F. Kennedy** nato **Lyndon B. Johnson** se bojijo **[[domino teorija]]**: če ena država pade v komunizem, ji bodo sledile sosede. V **Avgusta 1964** pomorski incident v Tonkinškem zalivu služi kot pretveza za razširitev vojne. Od **1965** operacija **[[Rolling Thunder]]** bombardira sever in marinci se izkrcajo v Da Nangu."
+        },
+        {
+          "type": "image",
+          "asset": "vietnam_war_american_soldiers",
+          "ratio": "4:3",
+          "caption": "Ameriški vojaki v Vietnamu: izčrpavajoča vojna v džungli."
+        },
+        {
+          "type": "funFact",
+          "text": "Johnson naj bi po Tonkinu zasebno rekel: \"Kolikor vem, je naša mornarica tistega večera streljala kite.\""
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p2",
+      "title": "Zakaj moč ni dovolj",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leta **1969** je bilo na kraju približno **543.000** ameriških vojakov. Strategija **[[išči in uniči]]** (iskati sovražnika, da ga uniči) in premoč v zraku nista motili severnovietnamske oskrbe po Ho Ši Minhovi poti. General **Vo Nguyen Giap**, vojaški vodja severa, računa na nadlegovanje in podporo dela prebivalstva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Američani za čiščenje džungle uporabljajo tudi defoliante, kot je Agent Orange. Človeška in politična cena eksplodira. Krste pridejo noter. **[[Pentagon]]**, sedež ameriške obrambe, odkrije, da lahko lokalna politična volja zdrži pred tehnologijo."
+        },
+        {
+          "type": "funFact",
+          "text": "Izpuščenih je bilo več kot **80 milijonov** litrov herbicidov, ki so uničili približno **20%** gozdov v Južnem Vietnamu."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p3",
+      "title": "Šok ofenzive Tet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**30. januar 1968**, med vietnamskim novim letom, **[[Tet ofenziva]]** doseže več kot **100** mest. Na terenu je to za sever neuspeh. Na ameriški televiziji je bil to šok: »skorajšnja zmaga«, ki jo je napovedal Washington, se je zdela lažna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Predsednik **Richard Nixon** je nato sprožil \"vietnamizacijo\": umik ameriških enot in oboroževanje juga. Pariški sporazumi (**1973**) so zaznamovali ameriški odhod. Brez zaščitnika je Saigon, glavno mesto Juga, propadel v dveh letih."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p4",
+      "title": "Konec vojne in kaj zapusti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**A30. april 1975**, Saigon pade. Približno **58.000** Američanov je umrlo. Vietnamske izgube so se štele v milijonih. Prva resnično televizijska vojna, konflikt je razkril tudi zločine, kot je pokol **[[Moj Lai]]**, kjer so ameriški vojaki leta **1968** pobili civiliste. Amerika postane bolj sumničava do oddaljenih posredovanj."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1954",
+              "title": "Ženevski sporazumi",
+              "detail": "Začasna pregrada na 17. vzporedniku."
+            },
+            {
+              "date": "1965",
+              "title": "Ameriško plezanje",
+              "detail": "Bombardiranje in izkrcanje marincev."
+            },
+            {
+              "date": "1968",
+              "title": "Tet ofenziva",
+              "detail": "Televizijski šok in sprememba mnenja."
+            },
+            {
+              "date": "1973",
+              "title": "Pariški sporazumi",
+              "detail": "Umik ameriških sil."
+            },
+            {
+              "date": "1975",
+              "title": "Padec Saigona",
+              "detail": "Združitev pod komunizmom."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Po **20 lets** konflikta so Združene države pustile Vietnam brez zmage: vojaška moč je bila politično poražena, država ponovno združena pod komunizmom, ameriška družba trajno razdeljena."
+        }
+      ]
+    }
+  ]
+}

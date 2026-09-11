@@ -1,0 +1,126 @@
+{
+  "id": "course_148_le_bauhaus",
+  "title": "Bauhaus",
+  "subtitle": "1919-1933",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Med **1919** in **1933** šola **Bauhaus** združuje umetnost, rokodelstvo in industrijo v Nemčiji. Nacisti so ga zaprli, vendar je sodoben dizajn razširil po vsem svetu.",
+  "hero": {
+    "image": "le_bauhaus",
+    "ratio": "16:9",
+    "hook": "14 let stara nemška šola je oblikovala sodobni svet, od stolov do pametnih telefonov."
+  },
+  "sections": [
+    {
+      "id": "course_148_le_bauhaus_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Bauhaus** (1919-1933) je najvplivnejša umetnostna in oblikovalska šola 20. stoletja. Ustanovljen je bil v Nemčiji takoj po prvi svetovni vojni in zavrača nepotreben dekor iz 19. stoletja. Njegov cilj: izumiti preprost jezik, prilagojen industrijski dobi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Z združitvijo umetnosti, obrti in tehnike postavlja temelje sodobne [[Funkcionalnost v oblikovanju]]. Njegovo življenje je kratko. Njegova zapuščina je povsod."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p1",
+      "title": "Weimar 1919: odprava hierarhije umetnosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leta **1919** je arhitekt **Walter Gropius** ustanovil Bauhaus v **Weimarju**. Njegov manifest je jasen: končni cilj vsega ustvarjanja je arhitektura. Nič več meja med plemenito »likovno umetnostjo« in sekundarno »uporabno umetnostjo«. Obrt postane osnova vsega."
+        },
+        {
+          "type": "image",
+          "asset": "bauhaus_weimar_1919_walter_gropius_building",
+          "ratio": "4:3",
+          "caption": "Bauhaus: šola, kjer se učiš z ustvarjanjem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vsaka delavnica ima dva mojstra: umetnika in rokodelca. Tam poučujejo osebnosti, kot je [[Vasilij Kandinski]], ruski abstraktni slikar. Šola se pogovarja tudi z [[De Stijl]], nizozemskim gibanjem, obsedenim s pravokotnikom in čistimi barvami."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p2",
+      "title": "Oblika sledi funkciji",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nato so ga postavili v **Dessau**, šola pa se je preusmerila v množično proizvodnjo. Znan slogan: **»forma sledi funkciji«**. Okras se šteje za nepotrebnega. Iščemo preproste, lepe predmete, ki jih je mogoče izdelati v tovarni."
+        },
+        {
+          "type": "funFact",
+          "text": "**Marcel Breuer**, učitelj na Bauhausu, reciklira jeklene cevi iz koles, da bi izumil lahke stole. Tovarniški material postane pohištvo za dnevno sobo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na delavnicah preizkušajo kovino, steklo, tekstil in tipografijo. Cilj ni več en sam luksuzni objekt. Je tipičen objekt, dostopen največjemu številu ljudi."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p3",
+      "title": "Zaprli nacisti, rešil izgnanstvo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šola je moteča. Očitajo mu, da je preveč moderen, preveč internacionalen, preveč levičarski. Po delu v Berlinu pod **Mies van der Rohe** je prišel [[Zaprtje s strani nacistov (1933)]]. Režim to vidi kot »kulturni boljševizem«."
+        },
+        {
+          "type": "image",
+          "asset": "mies_van_der_rohe_modernist_architecture",
+          "ratio": "4:3",
+          "caption": "Mies van der Rohe: zadnje vodstvo Bauhausa, nato ameriški izgnanec."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zaprtje postane difuzija. Mojstri gredo v ZDA, Veliko Britanijo, Palestino. V Tel Avivu njihove ideje hranijo [[Belo mesto Tel Aviv]], obsežen ansambel bele moderne arhitekture."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p4",
+      "title": "Dizajn, ki je zaradi očitnosti postal neviden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Danes je dediščina Bauhausa povsod: plosko pohištvo, preproste zgradbe, jasni vmesniki, brezserifne tipografije [[sans-serif]]. IKEA, letališča, naši telefoni: geometrijska jasnost Bauhausa je postala običajna dekoracija sveta."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1919",
+              "title": "Fundacija v Weimarju",
+              "detail": "Gropius ustanovi umetniško-obrtno-industrijsko šolo."
+            },
+            {
+              "date": "1925",
+              "title": "Dessau",
+              "detail": "Premik k masovni proizvodnji."
+            },
+            {
+              "date": "1933",
+              "title": "Nacistično zaprtje",
+              "detail": "Izgnanstvo širi Bauhaus po vsem svetu."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "V samo 14 letih je Bauhaus izumil sodobno idejo oblikovanja: manj okraskov, več funkcije, predmeti, ki so lepi, ker so uporabni. Njena politična zaprtost je samo pospešila njeno osvajanje vsakdanjega življenja."
+        }
+      ]
+    }
+  ]
+}

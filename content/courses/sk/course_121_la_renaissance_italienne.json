@@ -1,0 +1,154 @@
+{
+  "id": "course_121_la_renaissance_italienne",
+  "title": "Talianska renesancia",
+  "subtitle": "14.-16. storočie",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "Počas dvoch storočí Taliansko znovu objavilo maľbu, sochárstvo a architektúru a zmenilo spôsob, akým vidíme svet.",
+  "hero": {
+    "image": "la_renaissance_italienne",
+    "ratio": "16:9",
+    "hook": "Za dve storočia Taliansko znovu objavilo umenie a náš spôsob nazerania na svet."
+  },
+  "sections": [
+    {
+      "id": "course_121_la_renaissance_italienne_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Talianska renesancia (14.-16. storočie) nie je len zmenou štýlu. Je to nový spôsob videnia sveta. Počas dvoch storočí Taliansko postavilo do centra všetkého pozorovanie, rozum a jednotlivca."
+        },
+        {
+          "type": "paragraph",
+          "text": "Táto revolúcia, ktorá sa zrodila v bohatých mestách polostrova, znovu objavuje maliarstvo, sochárstvo a architektúru. Poháňajú ho dve hnacie sily: znovuobjavenie gréckej a rímskej antiky a odvážne technické vynálezy."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p1",
+      "title": "Florencia, mesto, ktoré zapálilo poistku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Všetko to začína v **Florencia**, ktorá ovládla európske hospodárstvo v 14. storočí vďaka textilu a bankovníctvu. Moc tam prevzala rodina **Medici**. Títo bankári používajú [[patronát]], financovanie umelcov, ako nástroj prestíže."
+        },
+        {
+          "type": "funFact",
+          "text": "Aby Mediciovci obišli zákaz požičiavania s úrokmi, vymysleli bankové triky. Cirkev zatvára oči, pokiaľ financujú kaplnky."
+        },
+        {
+          "type": "image",
+          "asset": "lorenzo_de_medici_portrait_florence",
+          "ratio": "4:3",
+          "caption": "Laurent de Medici, známy ako „Veľkolepý“, veľký ochranca umelcov."
+        },
+        {
+          "type": "paragraph",
+          "text": "**humanizmus** zároveň mení miesto človeka. Myslitelia ako [[Pico della Mirandola]] tvrdia, že ľudské bytosti sú schopné porozumieť prírode rozumom. V **1453** pád Konštantínopolu tlačí učencov do Talianska so zabudnutými gréckymi rukopismi."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p2",
+      "title": "Maľovanie skutočnosti: perspektíva a telo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 15. storočí vynašiel architekt **Brunelleschi** okolo **1420** [[lineárna perspektíva]]. Preč je stredovek, kde to, čo bolo dôležitejšie, bolo namaľované vo väčšej miere: priestor sa teraz riadi matematickými pravidlami, ako okno otvorené do reality."
+        },
+        {
+          "type": "image",
+          "asset": "brunelleschi_linear_perspective_florence",
+          "ratio": "4:3",
+          "caption": "Perspektíva dáva ilúziu hĺbky na rovnom povrchu."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Leonardo da Vinci** ide ešte ďalej: pitvá telá, aby pochopil svaly a nervy, a tiež maľuje emócie. Olejová farba pochádzajúca z Flámska postupne nahrádza [[Tempera]] a umožňuje [[šerosvit]]: tieto kontrasty tieňa a svetla, ktoré poskytujú úľavu."
+        },
+        {
+          "type": "funFact",
+          "text": "Telo, ktoré Leonardo najviac študoval, bolo telo storočného muža. Pri jej skúmaní opísal jeden z prvých známych prípadov vekom upchatej tepny."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p3",
+      "title": "Leonardo, Michelangelo, Raphael",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Začiatkom 16. storočia Rím nahradil Florenciu, ktorú niesli budovateľskí pápeži ako **Július II**. Toto je éra „úplného človeka“. **Leonardo zo Vinci** je model: maliar, inžinier, anatóm."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Michelangelo** stelesňuje silu. Jeho **David** sa stáva symbolom Florencie. Medzi **1508** a **1512** namaľoval strop **Sistinej kaplnky**: 500 metrov štvorcových na Genesis."
+        },
+        {
+          "type": "image",
+          "asset": "michelangelo_david_sistine_chapel_ceiling",
+          "ratio": "4:3",
+          "caption": "Michelangelo, od Dávida na strope Sixtínskej kaplnky."
+        },
+        {
+          "type": "funFact",
+          "text": "V knihe *Posledný súd* Michelangelo namaľoval svoju vlastnú tvár na stiahnutú kožu: spôsob, ako vyjadriť, ako veľmi ho táto práca vyčerpala."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Raphaël** stelesňuje milosť. Jeho freska *Aténska škola* spája veľkých mysliteľov staroveku v harmónii, ktorá bude slúžiť ako vzor po stáročia."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p4",
+      "title": "Dedičstvo, ktoré prechádza Európou",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po smrti Raphaëla v **1520** je rovnováha narušená. Umelci predlžujú telá a nútia farby: toto je [[Manierizmus]], nepokojnejšie umenie. Francúzsky kráľ **František I** pozýva Leonarda a spúšťa **Francúzsku renesanciu** so zámkami na Loire."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1420",
+              "title": "Lineárna perspektíva",
+              "detail": "Brunelleschi dáva priestor do rovníc vo Florencii."
+            },
+            {
+              "date": "1453",
+              "title": "Pád Konštantínopolu",
+              "detail": "Učenci utekajú do Talianska so svojimi gréckymi rukopismi."
+            },
+            {
+              "date": "1504",
+              "title": "Michelangelov Dávid",
+              "detail": "Florence si vyberá symbol občianskej hrdosti."
+            },
+            {
+              "date": "1508-1512",
+              "title": "Sixtínska kaplnka",
+              "detail": "Michelangelo namaľoval strop Genesis."
+            },
+            {
+              "date": "1520",
+              "title": "Smrť Raphaela",
+              "detail": "Končí vrcholná renesancia, začína manierizmus."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Talianska renesancia, ktorá sa narodila vo Florencii vďaka Mediciovcom, spôsobila revolúciu v umení s perspektívou (okolo roku 1420) a štúdiom tela, kým svoj vrchol dosiahla v Ríme s Leonardom, Michelangelom a Raphaelom."
+        }
+      ]
+    }
+  ]
+}

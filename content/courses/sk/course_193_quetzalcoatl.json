@@ -1,0 +1,140 @@
+{
+  "id": "course_193_quetzalcoatl",
+  "title": "Quetzalcoatl",
+  "subtitle": "Operený had",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Quetzalcoatl, operený had, je bohom mezoamerickej civilizácie. Jeho mýtus spája stvorenie, exil a osudové stretnutie s Cortésom.",
+  "hero": {
+    "image": "quetzalcoatl",
+    "ratio": "16:9",
+    "hook": "Boh, kráľ a proroctvo: Operený had pokrýva dvetisíc rokov mexickej histórie."
+  },
+  "sections": [
+    {
+      "id": "course_193_quetzalcoatl_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Quetzalcoatl**, „operený had“, je jednou z najbohatších postáv v predkolumbovskom Mexiku. Bol uctievaný viac ako dve tisícročia, od [[Teotihuacán]], veľkého mesta na centrálnej plošine, po Aztékov a medzi Maymi pod menom [[Kukulkán]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spája zem (had) a nebo (pierko). Boh civilizácie, vedomostí a morálneho poriadku, jeho mýtus sa nakoniec pretne so skutočnou históriou: španielske dobytie **1519**."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p1",
+      "title": "Boh, ktorý vynašiel kukuricu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V [[Nahuatl]], **Quetzalcoatl** pochádza od [[quetzal]], vtáka so zeleným perím, a od *kabát*, hada. Toto spojenie z neho robí most medzi ľudským a božským."
+        },
+        {
+          "type": "image",
+          "asset": "quetzalcoatl_feathered_serpent_aztec_sculpture",
+          "ratio": "4:3",
+          "caption": "Quetzalcoatl, operený had: Zem a nebo sa prelínajú."
+        },
+        {
+          "type": "paragraph",
+          "text": "V [[Kozmogónia piatich sĺnk]] zostupuje do [[Mictlán]], sveta mŕtvych, aby pozbieral kosti minulých ľudí. Privádza ich späť k životu svojou krvou. Potom mravcom ukradne **kukurica**: zakladajúce jedlo Mexika. Ako boh vetra tiež otvára cestu dažďom [[Tlaloc]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Chvostové perá quetzala môžu merať **60 cm**. Medzi Maymi a Aztékmi bolo zabitie vtáka trestané smrťou: odobrali mu niekoľko pierok a potom ich vypustili."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p2",
+      "title": "Kráľ-kňaz Tuly",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mýtus má aj historickú tvár: **Topiltzin Quetzalcoatl**, kráľ-kňaz **Tula** v 10. storočí. Chcel by reformovať kult a nahradiť ľudské obete ponukami kvetov a motýľov."
+        },
+        {
+          "type": "image",
+          "asset": "tula_toltec_pyramid_warriors_sculpture_mexico",
+          "ratio": "4:3",
+          "caption": "Tula, toltécke mesto spojené s vládou a pádom Quetzalcoatla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho rival **Tezcatlipoca** ho núti piť pulque, fermentovaný nápoj. Ponížený kráľ vyhnaný na východ. Podľa legendy sľubuje, že sa o rok vráti „Un Reed“. Tento sľub bude mať váhu."
+        },
+        {
+          "type": "funFact",
+          "text": "Po jeho odchode sa Quetzalcoatl niekedy stáva Rannou hviezdou: planétou Venuša. Boh nezomiera, mení podobu."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p3",
+      "title": "1519: keď sa mýtus stretne s Cortésom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1519** prichádza **Hernán Cortés** na východ, v roku „jednej trstiny“ v aztéckom kalendári, v roku, v ktorom sa očakával návrat boha. Cisár **Moctezuma II** váha: máme bojovať s útočníkom alebo privítať božstvo?"
+        },
+        {
+          "type": "image",
+          "asset": "herna_u0301n_corte_u0301s_arrival_mexico_1519_moctezuma_painting",
+          "ratio": "4:3",
+          "caption": "1519: Príchod Cortésa spĺňa prísľub božského návratu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Posiela dary zo zlata a peria. [[Conquistadors]] to vnímajú ako pozvánku. Mýtus, pravdivý alebo rozšírený neskôr, sa stáva psychologickou zbraňou pri páde [[Tenochtitlán]], hlavného mesta Aztékov."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mýtus",
+              "title": "Tvorca",
+              "detail": "Kosti mŕtvych, božská krv, dar obilia."
+            },
+            {
+              "date": "10. storočia",
+              "title": "Vyhnanstvo z Tuly",
+              "detail": "Kňaz-kráľ ide na východ."
+            },
+            {
+              "date": "1519",
+              "title": "Cortes",
+              "detail": "Očakávaný návrat sa stáva dobytím."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p4",
+      "title": "Symbol, ktorý nikdy neumiera",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po dobytí Quetzalcoatl nezmizol. Niektorí mnísi veria, že tam vidia apoštola. Neskôr z neho nezávislé Mexiko urobilo znak predkolumbovskej veľkosti. Nástenní maliari 20. storočia, ako napríklad Diego Rivera, ho vykresľujú ako dušu krajiny."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aj dnes Operený had vyjadruje identitu: korene v zemi, ambície obrátené k nebu."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Quetzalcoatl**, operený had, je bohom mezoamerickej civilizácie. Stvoriteľ, kráľ vo vyhnanstve, potom smrteľné proroctvo v **1519**, zostáva ústredným symbolom Mexika."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
+  "title": "Objav röntgenových lúčov",
+  "subtitle": "Röntgen, 1895",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "V roku 1895 Wilhelm Röntgen objavil neviditeľné žiarenie schopné prechádzať hmotou. Za pár mesiacov zaznamenala medicína revolúciu.",
+  "hero": {
+    "image": "la_decouverte_des_rayons_x_rontgen",
+    "ratio": "16:9",
+    "hook": "Ruka, kosti, fotka. Medicína už nikdy nebude slepá."
+  },
+  "sections": [
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**8. novembra 1895** vo Würzburgu (Nemecko) si fyzik **Wilhelm Röntgen** všimne obrazovku, ktorá svieti... aj keď nie je ovplyvnená viditeľným svetlom. Niečo neviditeľné prejde miestnosťou."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nazýva to lúče **X**, pričom „X“ znamená „neznáme“. V priebehu niekoľkých týždňov odfotografoval kosti manželkinej ruky. Zrodila sa rádiológia."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
+      "title": "Laboratórna nehoda",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Röntgen pracuje s trubicou, kde elektróny zasiahnu cieľ. Rúru prikryl čiernym kartónom. Z diaľky však svieti fluorescenčná obrazovka. Chápe, že z trubice vychádza neviditeľné žiarenie."
+        },
+        {
+          "type": "image",
+          "asset": "wilhelm_rontgen_x_ray_hand_1895",
+          "ratio": "4:3",
+          "caption": "Slávny obraz: kosti rúk a snubný prsteň."
+        },
+        {
+          "type": "funFact",
+          "text": "Röntgen nikdy nepodal patent na röntgenové lúče. Chcel, aby ich mohla voľne používať celá veda."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
+      "title": "Medicína sa zmocňuje nástroja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "early_x_ray_medical_radiograph",
+          "ratio": "4:3",
+          "caption": "Veľmi rýchlo lekári a armády použili röntgenové lúče."
+        },
+        {
+          "type": "paragraph",
+          "text": "Predtým, aby ste „uvideli“ zlomeninu alebo guľku, museli ste ju často otvárať. Röntgenom získame obraz interiéru bez rezania. Nemocnice a armády prijímajú túto techniku závratnou rýchlosťou."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
+      "title": "Dlho ignorované nebezpečenstvo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Najprv ignorujeme riziká. Operátori robia röntgenové snímky celé hodiny. Popáleniny, potom sa objavia rakoviny. Chvíľu potrvá, kým pochopíme, že röntgenové lúče sú silné... a nebezpečné."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dnes chránime pacientov a opatrovateľov: obmedzené dávky, olovené zástery, prísne kontroly."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p4",
+      "title": "Dedičstvo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Röntgenové lúče vydláždili cestu pre všetky moderné zobrazovacie zariadenia: skenery, priemyselné ovládacie prvky a dokonca aj štúdium štruktúry kryštálov (neskôr užitočné pre DNA)."
+        },
+        {
+          "type": "takeaway",
+          "text": "V **1895** objavil Röntgen röntgenové žiarenie, neviditeľné žiarenie, ktoré prechádza hmotou. Medicína získava nový pohľad... za predpokladu, že riziká sú pod kontrolou."
+        }
+      ]
+    }
+  ]
+}

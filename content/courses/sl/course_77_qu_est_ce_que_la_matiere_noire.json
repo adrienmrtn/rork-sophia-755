@@ -1,0 +1,108 @@
+{
+  "id": "course_77_qu_est_ce_que_la_matiere_noire",
+  "title": "Kaj je temna snov?",
+  "subtitle": "Nevidni kozmos",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Nikoli je nismo videli. Toda brez tega bi galaksije razpadle. Temna snov je nevidno lepilo vesolja.",
+  "hero": {
+    "image": "qu_est_ce_que_la_matiere_noire",
+    "ratio": "16:9",
+    "hook": "Predstavljajte si nevidno lepilo, ki drži galaksije skupaj. Ne vidimo je, vidimo pa, kaj zadržuje."
+  },
+  "sections": [
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Veter čutiš, ne da bi ga videl: veje se premikajo, lasje letijo. **temna snov** je nekoliko podobna tej v merilu vesolja. Ne sveti, ne odbija svetlobe, ne blokira nobenih žarkov. \"Vidimo\" ga le po tem, kar premika."
+        },
+        {
+          "type": "paragraph",
+          "text": "Predstavljal bi približno **27%** vesolja, petkrat več kot vsa običajna snov: zvezde, planeti, plin. Brez tega bi se galaksije vrtele prehitro, da bi ostale skupaj."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p1",
+      "title": "Zvezde prehitre na obrobju",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V letih **1970** je ameriška astronomka **Vera Rubin** merila hitrost zvezd v spiralnih galaksijah. V Osončju se dlje ko oddaljujemo od Sonca, počasneje se vrtimo. Pričakovala je enak vzorec."
+        },
+        {
+          "type": "image",
+          "asset": "dark_matter_galaxy_cluster",
+          "ratio": "auto",
+          "caption": "Temna snov izda svojo prisotnost s svojim gravitacijskim učinkom na jate galaksij."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zdaj so se zvezde na robu obračale **as hitro** kot tiste v središču. Že z vidno maso bi morali odleteti. Zato je bilo potrebno imeti nevidno maso, **halo**, nevidno sferično ovojnico okoli galaksije, da jih zadrži. [[Rotacijska krivulja galaksije]] je postala vodilni dokaz temne snovi."
+        },
+        {
+          "type": "funFact",
+          "text": "Vera Rubin se je morala dolgo boriti, da so jo jemali resno. Princeton ji je dolgo zavračal doktorat iz astronomije ... ker je bila ženska, vse do leta 1975."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p2",
+      "title": "Iz česa je narejena? Še vedno iščemo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To ni navadna snov, imenovana **barionski**, sestavljena iz protonov in nevtronov: ne interagira s svetlobo. Prečka Zemljo in nas, ne da bi pustil vidno sled."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dolgo priljubljeni svinec, **WIMP**, masivni delec s šibko interakcijo, bi bil težak delec zunaj [[Standardni model fizike]], teorije, ki opisuje znane osnovne delce. Detektorji **liquidxeon**, zakopani pod zemljo, upajo na redek šok. Trenutno brez jasnega uspeha. Drugi se zanašajo na **aksion**, ultralahke delce, ali na gravitacijo, ki jo je treba pregledati. Temna snov medtem upogiba prostor in ustvarja [[gravitacijske leče]], ki izkrivljajo svetlobo masivnega predmeta."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p3",
+      "title": "In temna energija, druga skrivnost",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Temna snov privlači. [[Temna energija]], odkrita v **1998**, deluje ravno nasprotno: pospešuje **širjenje vesolja**, naraščajočo oddaljenost galaksij. Galaksije se vse hitreje oddaljujejo, medtem ko bi morala gravitacija gibanje upočasniti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tehtal bi približno **68%** vesolja. S temno snovjo je to **95%** nevidnega vesolja. Vse, kar vidimo, atomi in svetloba, je le pena **5 %**."
+        },
+        {
+          "type": "funFact",
+          "text": "V zelo oddaljeni prihodnosti bi lahko temna energija odrinila druge galaksije do te mere, da bi bile nevidne z Mlečne ceste: skoraj prazno nebo."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p4",
+      "title": "Ogromni dokazi, delca niso našli",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na eni strani se kopičijo posredni dokazi: galaktične rotacije, **kozmično mikrovalovno ozadje**, fosilno sevanje iz mladega vesolja, filamentna struktura vesolja. Po drugi strani pa ni neposrednega zaznavanja delcev."
+        },
+        {
+          "type": "paragraph",
+          "text": "21. stoletje se bo moralo odločiti: nova družina delcev ali nov način razmišljanja o gravitaciji. Temna snov ni le detajl neba. To je laboratorij, v katerem se izumlja fizika jutrišnjega dne."
+        },
+        {
+          "type": "takeaway",
+          "text": "Temna snov tvori **27 %** vesolja. To dokazuje njegova gravitacija na zvezdah in svetlobi, čeprav je nikoli nismo neposredno videli."
+        }
+      ]
+    }
+  ]
+}

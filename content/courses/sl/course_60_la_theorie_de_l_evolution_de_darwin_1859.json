@@ -1,0 +1,102 @@
+{
+  "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
+  "title": "Darwinova teorija evolucije",
+  "subtitle": "1859",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Leta 1859 je Darwin objavil Izvor vrst. Osrednja ideja: živa bitja se skozi čas spreminjajo z naravno selekcijo.",
+  "hero": {
+    "image": "la_theorie_de_l_evolution_de_darwin",
+    "ratio": "16:9",
+    "hook": "Vrste niso določene. Spreminjajo se. počasi. Ampak zagotovo."
+  },
+  "sections": [
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1859** je **Charles Darwin** objavil *Oo izvoru vrst*. Knjiga šokira, fascinira, razdvaja. Njegovo osrednjo idejo pa je preprosto oblikovati."
+        },
+        {
+          "type": "paragraph",
+          "text": "Živa bitja se razlikujejo. Nekatere različice pomagajo preživeti in se razmnoževati. Te variacije se prenašajo. Skozi generacije se populacije spreminjajo."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
+      "title": "Potovanje, ki odpre oči",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "charles_darwin_portrait",
+          "ratio": "4:3",
+          "caption": "Darwin, britanski naravoslovec iz 19. stoletja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kot mlad deček Darwin odide z ladjo **Beagle**. Dolga leta je opazoval rastline, fosile, ptice. Na otočju Galapagos je opazil, da imajo bližnje ptice različne kljune glede na hrano."
+        },
+        {
+          "type": "image",
+          "asset": "darwin_finches_galapagos_beaks",
+          "ratio": "4:3",
+          "caption": "Šobe, prilagojene različnim dietam: močan pokazatelj."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
+      "title": "Naravna selekcija, v navadni angleščini",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Predstavljajte si populacijo živali. Nekateri tečejo malo hitreje, malo bolje prebavljajo, malo bolj se upirajo mrazu. Če jim pomaga preživeti in imeti mlade, postanejo te lastnosti pogostejše."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ne gre za to, da se posamezniki \"želijo\" razvijati. Je filter: okolje ohranja tisto, kar deluje. Darwin temu pravi **naravni izbor**."
+        },
+        {
+          "type": "funFact",
+          "text": "Darwin je dolgo čakal, preden je objavil. Bal se je škandala. Drug naravoslovec, **Alfred Russell Wallace**, je prišel do podobnih zamisli: to je spodbudilo Darwina, da je izdal svojo knjigo."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
+      "title": "Spopad idej",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 19. stoletju so mnogi verjeli, da so vrste ustvarjene takšne, kot so. Reči, da se spreminjajo in da si ljudje delijo zgodovino z drugimi živalmi, pretresajo vero in družbo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Znanost napreduje: fosili, geografija vrst, kasneje genetika potrjujejo splošno idejo."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
+      "title": "In danes?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zdaj vemo, da DNK nosi variacije. Opazujemo razvoj v laboratoriju (bakterije, virusi) in v naravi. Borimo se tudi proti bakterijam, odpornim na antibiotike: to je živa evolucija."
+        },
+        {
+          "type": "takeaway",
+          "text": "Darwin je pokazal, da se živa bitja razvijajo z naravno selekcijo: lastnosti, koristne za preživetje in razmnoževanje, se širijo. Sodobna genetika je ta okvir potrdila in razjasnila."
+        }
+      ]
+    }
+  ]
+}

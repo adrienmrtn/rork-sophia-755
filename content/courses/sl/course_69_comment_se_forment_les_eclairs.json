@@ -1,0 +1,112 @@
+{
+  "id": "course_69_comment_se_forment_les_eclairs",
+  "title": "Kako nastanejo strele?",
+  "subtitle": "Nevihte",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Strela ni čarovnija: je ogromna električna razelektritev v nevihtnem oblaku. Evo, kako se pripravi, nato pa kako zadene.",
+  "hero": {
+    "image": "comment_se_forment_les_eclairs",
+    "ratio": "16:9",
+    "hook": "V delčku sekunde se zrak dvigne na 30.000°C. Petkrat bolj vroče od površine Sonca."
+  },
+  "sections": [
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Strela sprosti gromozansko energijo v trenutku. Zrak v kanalu strele se dvigne do približno **30.000 °C**. Grmenje je samo zvok te hude vročine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da bi razumeli strelo, morate slediti trem korakom: kako se oblak naelektri, kako električna energija najde pot in zakaj zatem slišite grmenje."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p1",
+      "title": "V oblaku se naboji ločijo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Strele se pojavljajo predvsem v [[kumulonimbus]]: zelo veliki nevihtni oblaki, ki se lahko dvignejo do približno **15 km**. V notranjosti se zrak zelo močno dviga in spušča."
+        },
+        {
+          "type": "image",
+          "asset": "cumulonimbus_thunderstorm_cloud",
+          "ratio": "4:3",
+          "caption": "Kumulonimbus: tovarna neviht."
+        },
+        {
+          "type": "paragraph",
+          "text": "V tem kaosu se majhni **ledeni kristali** dvigajo, težja ledena zrna ([[žled]]) pa spuščajo. Ko trčita, se električni naboji izmenjajo. Postopoma vrh oblaka postane precej pozitiven, spodnji del pa negativen."
+        },
+        {
+          "type": "funFact",
+          "text": "Jezero Maracaibo v Venezueli je eno izmed najbolj prizadetih območij na planetu: skoraj vsakodnevne nevihte so tam opazne večji del leta."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p2",
+      "title": "Ko zrak izpusti: izpust",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zrak je slab prevodnik. Če pa razlika v naboju postane prevelika (pogosto **sto milijonov voltov**), zrak na koncu popusti. Molekule izgubijo elektrone: postanejo prevodni. To je [[Ionizacija zraka]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nevidni kanal zapušča oblak v majhnih skokih. Od tal se električna omrežja dvigajo zlasti iz točk (drevesa, strelovodi, zgradbe). Ko se to dvoje združi, se tokokrog sklene."
+        },
+        {
+          "type": "paragraph",
+          "text": "Velika svetloba, ki jo vidimo, **lok nazaj**, se dviga predvsem od tal proti oblaku. Tok lahko doseže več deset tisoč amperov. V istem kanalu si lahko sledi več razelektritev: od tod učinek utripanja."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p3",
+      "title": "Zakaj grmi pozneje?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Strela tako hitro segreje zrak, da se nenadoma razširi. Ta udarni val postane **grom**. Svetloba pride skoraj takoj; zvok napreduje s približno **340 m/s**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Preprost nasvet: preštejte sekunde med bliskom in gromom, nato delite z **3**. Dobite oceno razdalje v kilometrih."
+        },
+        {
+          "type": "funFact",
+          "text": "Zemljo v povprečju udari približno **100 strel na sekundo**. V Franciji je okoli **enega milijona** udarcev na tla na leto."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p4",
+      "title": "Nevarnost, plodnost in zanimivosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Strela je še vedno nevarna, zlasti na prostem, v bližini posameznih dreves ali vode. Zaneti tudi požare. Ima pa manj znan učinek: pomaga proizvajati dušikove spojine, ki z dežjem pognojijo zemljo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nad nevihtami so kamere posnele tudi nenavadne pojave, kot je [[Škrati]]: kratke žare v zgornji atmosferi, s tal nevidne s prostim očesom."
+        },
+        {
+          "type": "takeaway",
+          "text": "V kumulonimbusu trki ledu in žledu ločijo naboje. Ko napetost postane previsoka, se zrak ionizira: strela se segreje do ~30.000 °C in ta nenadna širitev povzroči grom."
+        }
+      ]
+    }
+  ]
+}

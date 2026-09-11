@@ -1,0 +1,112 @@
+{
+  "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr",
+  "title": "Prečo existujú ročné obdobia na iných planétach?",
+  "subtitle": "Planéty a obežné dráhy",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Na Zemi ročné obdobia pochádzajú zo sklonu osi. Inde rovnaký princíp dáva zimy 42 rokov... alebo takmer žiadnu sezónu.",
+  "hero": {
+    "image": "pourquoi_les_saisons_existent_sur_d_autres_planetes",
+    "ratio": "16:9",
+    "hook": "Naše štyri ročné obdobia sú miernym prípadom. Inde môže leto trvať desaťročia."
+  },
+  "sections": [
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na Zemi vzniká leto a zima hlavne zo sklonu **** osi: približne **23,5°**. Slnko dopadá silnejšie na jednu pologuľu, potom na druhú. Zdá sa, že tento model je jasný. V Slnečnej sústave je to skôr umiernená verzia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Každá planéta kombinuje svoj sklon a tvar svojej obežnej dráhy. Výsledok: svety bez ročných období, iné s extrémnymi kontrastmi a zimy, ktoré trvajú desaťročia."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p1",
+      "title": "Náklon, motor kontrastov",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Obliquita]] je uhol medzi osou rotácie planéty a kolmicou na jej obežnú dráhu. Čím je väčšia, tým výraznejšie sú ročné obdobia."
+        },
+        {
+          "type": "image",
+          "asset": "uranus_planet_nasa",
+          "ratio": "auto",
+          "caption": "Urán, naklonený asi o 98°, zažíva extrémne ročné obdobia trvajúce 42 rokov."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Urán** je extrémny prípad: sklon približne **98°**, takmer v ľahu. Obeh okolo Slnka trvá **84 rokov**. Každý pól potom dostane takmer **42 rokov** nepretržitého dňa a potom **42 rokov** celkovej noci. **marca** na **25,2°** sa podobá Zemi, ale jej rok trvá **687 pozemských dní**: jar a jeseň šesť mesiacov. **Jupiter** a **Merkúr**, takmer rovné, nemajú takmer žiadne ročné obdobia."
+        },
+        {
+          "type": "funFact",
+          "text": "Na Uráne a Neptúne by extrémne tlaky mohli „pršať“ diamantmi vytvorenými z atmosférického uhlíka."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p2",
+      "title": "Keď záleží aj na vzdialenosti od Slnka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na Zemi je obežná dráha takmer kruhová: vzdialenosť od Slnka sa mení len málo. Nie je to teda to, čo robí leto alebo zimu, ale uhol lúčov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na **marca** je obežná dráha oveľa oválnejšia, viac **excentrická**: od **207 až 249 miliónov km**. Na južnej pologuli leto padá blízko [[perihélium]], najbližšieho bodu k Slnku. Kratšie, ale teplejšie letá. Tento tepelný šok niekedy spúšťa **planetárne prachové búrky**, ktoré zatemňujú oblohu."
+        },
+        {
+          "type": "funFact",
+          "text": "V **2018** sezónna marťanská búrka natrvalo zastavila rover Opportunity tým, že zablokovala Slnko."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p3",
+      "title": "Venuša, Merkúr, Saturn: iné pravidlá",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Merkúr**, bez skutočnej atmosféry alebo sklonu, žije najmä v denných **** extrémy:**430 °C** na Slnku, **-180 °C** v noci. **Venus** rotates in reverse, [[Retrográdna rotácia]] from east to west, with extreme tilt, but its monstrous greenhouse effect traps heat in the atmosphere and equalizes the temperature to **460 °C** everywhere, all the time."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Saturn**, naklonený ako Zem, má ročné obdobia približne **7 rokov**. Uhol [[prstencov Saturna]] mení svetlo prijímané každou hemisférou a dokonca upravuje farbu oblakov."
+        },
+        {
+          "type": "funFact",
+          "text": "Na Venuši jeden deň, jej rotácia trvá dlhšie ako rok, jej revolúcia: **243** pozemských dní proti **225**."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p4",
+      "title": "Prečo má Zem stabilné ročné obdobia?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bez **Mesiac** by sklon Zeme počas miliónov rokov chaoticky osciloval medzi 0° a viac ako 80°. Ročné obdobia uránového typu by spôsobili, že klíma je takmer neobývateľná. Mesiac funguje ako **gravitačný stabilizátor**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pri hľadaní obývateľných [[exoplanéty]] astronómovia pozerajú aj na stabilitu osi. Mierne a pravidelné ročné obdobia nie sú detail: sú súčasťou podmienok trvalo udržateľného života."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ročné obdobia vznikajú najmä zo sklonu osi. Na Uráne trvajú desaťročia; na Marse ich oválna dráha robí asymetrickými. Mesiac chráni ľudí na Zemi."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "course_47_pourquoi_baille_t_on",
+  "title": "Prečo zívame?",
+  "subtitle": "Telo a mozog",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Každý zíva: ľudia, psy, niekedy aj plody. Pre \"nedostatok kyslíka\" to asi nie je. Tu sú najsilnejšie vodítka.",
+  "hero": {
+    "image": "pourquoi_baille_t_on",
+    "ratio": "16:9",
+    "hook": "Zívaš. Váš sused zíva. A nie je (takmer) nákazlivý náhodou."
+  },
+  "sections": [
+    {
+      "id": "course_47_pourquoi_baille_t_on_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zívanie sa zdá byť bežné. Ide však o komplexný reflex: zapája sa čeľusť, hrudník, bránica, celé telo. Levy, psy, ľudia: veľa zvierat zíva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dlho sme hovorili: „Je potrebné mať viac kyslíka“. Táto myšlienka je v súčasnosti z veľkej časti opustená. Moderné vysvetlenia sú zaujímavejšie."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p1",
+      "title": "Nie (najmä) pre kyslík",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Experimenty ukázali, že zvýšenie kyslíka vo vzduchu nezabráni zívaniu. Tiež trochu znížte oxid uhličitý. Takže zívanie nie je jednoduché „doháňanie vzduchu“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dnes silný náskok: zívanie pomáha **regulovať teplotu mozgu**. Širokým nádychom a natiahnutím tváre trochu „vyvetráme“ a schladíme hlavu, najmä keď sme unavení."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p2",
+      "title": "Prečo je to nákazlivé?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "contagious_yawning_people_group",
+          "ratio": "4:3",
+          "caption": "Vidieť niekoho zívať často stačí na spustenie reflexu."
+        },
+        {
+          "type": "paragraph",
+          "text": "U ľudí videnie, počutie alebo dokonca čítanie slova „zívanie“ môže spustiť zívanie. Nie je to len hlúpa imitácia: ovplyvňuje aj **empatia** a mozgové okruhy spojené so [[Zrkadlové neuróny a nákazlivosť]], neuróny, ktoré sa aktivujú, keď konáme... alebo keď vidíme niekoho konať."
+        },
+        {
+          "type": "funFact",
+          "text": "Malé deti zívajú málo kvôli nákaze. Táto citlivosť prichádza neskôr spolu s určitými sociálnymi zručnosťami."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p3",
+      "title": "Už pred narodením zívame",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Plody zívajú približne od **11. týždeň** tehotenstva. V tomto veku ich pľúca ešte nedýchajú vzduch. Opäť to teda nie je o „dôjdení kyslíka“."
+        },
+        {
+          "type": "paragraph",
+          "text": "U plodu by zívanie mohlo pomôcť rozvoju čeľustných a tvárových svalov."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p4",
+      "title": "Zívať, aby ste zostali v strehu?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Často zívame, keď sme unavení... ale aj tesne pred testom, alebo keď sa nudíme a snažíme sa udržať koncentráciu. Strečing môže stimulovať nervový systém a pomôcť **byť v strehu**."
+        },
+        {
+          "type": "takeaway",
+          "text": "Zívanie pravdepodobne nie je nedostatok kyslíka. Skôr by sa používal na reguláciu mozgu (teplota, bdelosť) a u ľudí sa šíri aj sociálnou nákazou."
+        }
+      ]
+    }
+  ]
+}

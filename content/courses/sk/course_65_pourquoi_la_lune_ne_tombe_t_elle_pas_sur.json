@@ -1,0 +1,120 @@
+{
+  "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur",
+  "title": "Prečo Mesiac nespadne na Zem?",
+  "subtitle": "Orbita a gravitácia",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Mesiac neustále klesá k Zemi. Len jej to zakaždým chýba. Presne taká je orbita.",
+  "hero": {
+    "image": "pourquoi_la_lune_ne_tombe_pas",
+    "ratio": "16:9",
+    "hook": "Mesiac k nám klesá. Zem jej chýba na každom kroku."
+  },
+  "sections": [
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ak zemská gravitácia pritiahne Mesiac, prečo do nás nenarazí? Odpoveď sa zdá byť bizarná: Mesiac **skutočne padá** smerom k Zemi. Len jej to chýba každú chvíľu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Táto rovnováha medzi pádom a bočnou rýchlosťou je **orbitálny**, zakrivená trajektória okolo hviezdy. Anglický fyzik **Isaac Newton** ako prvý zjednotil pád jablka a pohyb hviezd s rovnakou myšlienkou."
+        },
+        {
+          "type": "funFact",
+          "text": "Ak by ste na Zemi vážili **60 kg**, na Mesiaci by ste vážili len asi **10**: jeho gravitácia je šesťkrát slabšia."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
+      "title": "Newtonov pomyselný kánon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Newton si predstavuje delo na vrchole hory tak vysokej, že by sa vynorilo z atmosféry. Vystrelíme loptičku vodorovne. S malým výkonom rýchlo padá. S väčšou silou ide ďalej."
+        },
+        {
+          "type": "image",
+          "asset": "newton_cannonball_orbit_thought_experiment",
+          "ratio": "auto",
+          "caption": "Newtonov myšlienkový experiment s delovou guľou: kľúč k pochopeniu obežnej dráhy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pri špecifickej rýchlosti, nazývanej [[Rýchlosť satelitu]], sa deje niečo pozoruhodné. Keď loptička padá, Zem, ktorá je guľatá, sa pod ňou zakrivuje rovnakou rýchlosťou. Projektil padá... bez toho, aby sa vôbec dotkol zeme. Je v **trvalom voľnom páde**, ťahaný gravitáciou bez zrútenia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mesiac robí to isté. Má dostatočnú bočnú rýchlosť, aby premenila pád na slučku. Bez tejto rýchlosti by sa ponoril priamo k nám."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p2",
+      "title": "Dve sily, jedna rovnováha",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mesiac obieha pri približne **384 000 km**. Jeho bočná rýchlosť je približne **1 km/s**. Ak by sa náhle zastavil, do niekoľkých dní by sa zrútil. Ak by gravitácia náhle zmizla, išlo by v priestore po priamke, podľa princípu [[Zotrvačnosť]]: teleso si zachováva svoju rýchlosť, ak nie je spomalené."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Newtonov zákon univerzálnej gravitácie]] hovorí, že každá hmota priťahuje každú inú hmotu a táto príťažlivosť klesá so vzdialenosťou, presnejšie s druhou mocninou vzdialenosti. Čím bližšie je satelit, tým rýchlejšie musí ísť, aby nespadol."
+        },
+        {
+          "type": "funFact",
+          "text": "Medzinárodná vesmírna stanica vo výške iba **400 km** sa pohybuje rýchlosťou približne **28 000 km/h**. Obehne okolo Zeme za **90 minút**. Mesiac, ktorý je ďalej, trvá **27,3 dňa**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Takže orbita nie je mágia. Je to neustály kompromis medzi „padám“ a „pohybujem sa príliš rýchlo na to, aby som trafil“."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p3",
+      "title": "Príliv a odliv odtláča Mesiac",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Obežná dráha nie je pevná. Do hry vstupujú [[Slapové sily]]. Gravitácia Mesiaca ťahá silnejšie na stranu Zeme, ktorá je k nemu privrátená, ako na stred. Deformuje oceány a vytvára vydutie vody."
+        },
+        {
+          "type": "paragraph",
+          "text": "Keďže sa Zem otáča okolo svojej osi rýchlejšie ako Mesiac okolo nej, tento hrebeň sa trochu posúva pred Mesiac. Trenie veľmi mierne spomaľuje rotáciu Zeme: naše dni sa predlžujú približne o **1,4 milisekúnd** za storočie. Výmenou za to sa Mesiac vzdiali o približne **3,8 cm** za rok."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pred miliardami rokov bol Mesiac oveľa bližšie. Príliv bol obrovský. Toto zmiešanie vody a chémie mohlo pomôcť skorým formám života. A dinosaury žili na Zemi, kde dni trvali iba **22 alebo 23 hodín**."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
+      "title": "Zatmenia...zatiaľ",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dnes je Slnko geometrickou zhodou približne **400-krát** väčšie ako Mesiac, ale tiež **400-krát** ďalej. Dvaja teda majú rovnakú **javnú veľkosť**, uhol, v ktorom ich vidíme na oblohe. Úplné zatmenie Slnka je možné."
+        },
+        {
+          "type": "paragraph",
+          "text": "Približne o **600 miliónov rokov** bude Mesiac príliš ďaleko na to, aby úplne zakryl Slnko. Zostanú len prstencové zatmenia: svetelný prstenec okolo mesačného disku. Z dlhodobého hľadiska by sa Zem a Mesiac mohli synchronizovať: každé teleso by tomu druhému vždy ukazovalo rovnakú tvár. Ale Slnko tým, že sa stane **červeným obrom**, záverečnou fázou hviezdy, ako je tá naša, premení systém oveľa skôr."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mesiac sa nezrúti, pretože jeho bočná rýchlosť vyvažuje príťažlivosť Zeme: je v permanentnom voľnom páde. A stále sa vzďaľuje približne o **3,8 cm** ročne."
+        }
+      ]
+    }
+  ]
+}

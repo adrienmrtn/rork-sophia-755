@@ -1,0 +1,112 @@
+{
+  "id": "course_234_la_securite_alimentaire_mondiale",
+  "title": "Globálna potravinová bezpečnosť",
+  "subtitle": "800 miliónov ľudí",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Zem produkuje dostatok jedla pre každého. Prečo teda **800 miliónov dolárov** stále hladuje?",
+  "hero": {
+    "image": "la_securite_alimentaire_mondiale",
+    "ratio": "16:9",
+    "hook": "Hlad 800 miliónov ľudí nie je problémom jedla, ale zdieľania."
+  },
+  "sections": [
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V súčasnosti trpí hladom na svete približne **800 miliónov dolárov**, teda jeden z desiatich ľudí. Tento údaj je o to zvláštnejší, že ľudstvo nikdy nevyprodukovalo toľko potravín: štatisticky je toho na jedenie viac než dosť pre každého."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hlad teda nie je problémom kvantity, ale distribúcie. Pochopiť globálnu potravinovú bezpečnosť znamená pochopiť, prečo môže hojnosť a hladomor koexistovať na tej istej planéte."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p1",
+      "title": "Geografia hladu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Podľa **[[FAO]]**, potravinovej agentúry OSN, chronická podvýživa v roku 2024 stále postihovala približne 800 miliónov ľudí. Tento globálny údaj skrýva veľmi odlišné skutočnosti. Najviac postihnuté sú oblasti v subsaharskej Afrike, kde viac ako štvrtine obyvateľstva pravidelne chýba jedlo, a v južnej Ázii."
+        },
+        {
+          "type": "image",
+          "asset": "famine_sub_saharan_africa_malnutrition_child",
+          "ratio": "auto",
+          "caption": "Hlad stále postihuje stovky miliónov ľudí, najmä v subsaharskej Afrike."
+        },
+        {
+          "type": "paragraph",
+          "text": "Existuje niekoľko foriem potravinovej núdze. **Podvýživa** zodpovedá nedostatku kalórií. **Nedostatky mikroživín**, často nazývané „skrytý hlad“, postihujú 2 miliardy ľudí, ktorým chýbajú základné vitamíny alebo minerály, čo má dôsledky na rast alebo zdravie. Napokon, **podvýživa** prekvapivo zahŕňa aj obezitu: v mnohých rozvojových krajinách ľudia postupne nahrádzajú čerstvé produkty spracovanými potravinami, ktoré majú vysoký obsah kalórií, ale chudobné na živiny."
+        },
+        {
+          "type": "funFact",
+          "text": "Ak by sme znížili celosvetové plytvanie potravinami len o 25 %, teoreticky by sme mohli nasýtiť všetkých 800 miliónov ľudí, ktorí dnes trpia hladom."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p2",
+      "title": "Paradox hojnosti a plytvania",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svet v súčasnosti produkuje ekvivalent 2 800 kilokalórií na osobu a deň, čo je viac ako dosť na odstránenie hladu. Skutočným problémom teda nie je nedostatok, ale prístup: najchudobnejšie obyvateľstvo jednoducho nemá prostriedky na nákup potravín, ktorých cena sa na svetových trhoch neustále mení."
+        },
+        {
+          "type": "paragraph",
+          "text": "Druhou stranou tohto paradoxu je **odpad**. Každý rok sa stratí asi tretina svetovej produkcie, čiže 1,3 miliardy ton potravín. V chudobných krajinách sa straty vyskytujú skoro: nedostatok skladovacích miest, absencia chladiacich miestností, cesty v zlom stave. V bohatých krajinách k odpadu dochádza až neskôr, pri distribúcii a spotrebe."
+        },
+        {
+          "type": "funFact",
+          "text": "Od roku 2010 zabila obezita a choroby súvisiace s obezitou na celom svete každý rok viac ľudí ako podvýživa, čo je historický zlom pre globálne verejné zdravie."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p3",
+      "title": "Keď sa jedlo stane geopolitickou zbraňou",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Potravinová bezpečnosť je tiež otázkou geopolitiky. Mnohé krajiny sú závislé od vývozu niekoľkých veľkých poľnohospodárskych mocností, čo ich robí veľmi zraniteľnými voči najmenšej blokáde. Ukrajina a Rusko spolu tvoria takmer 30 % svetového exportu pšenice. Keď sa tento tok zastaví, ceny stúpajú na chicagskom **[[termínovaný trh]]**, kde sa rokuje o budúcej úrode, a krajiny ako Egypt alebo Libanon upadajú do vážnej sociálnej krízy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Táto krehkosť pochádza aj z výberu zo 60. rokov 20. storočia: **[[Zelená revolúcia]]**. Táto vlna nových poľnohospodárskych techník výrazne zvýšila výnosy, ale tiež znížila rozmanitosť plodín a urobila farmárov závislými od chemických hnojív. Výsledkom je, že každé zvýšenie ceny ropy má priamy dopad na cenu chleba."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pojem **potravinová sila** sa vzťahuje práve na dobrovoľné využívanie vývozu potravín ako prostriedku diplomatického nátlaku, či dokonca ako sankcie voči opozičnej krajine."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p4",
+      "title": "Nakŕmte 10 miliárd ľudí bez vyčerpania planéty",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Očakáva sa, že do roku 2050 dosiahne svetová populácia 10 miliárd. Klimatické zmeny už teraz ohrozujú výnosy rastúcimi obdobiami sucha a záplav, ktoré vytláčajú ornú pôdu. Intenzívne poľnohospodárstvo tiež vyčerpáva pôdu a podzemnú vodu, ktorá niekedy rýchlejšie odteká, ako sa napĺňa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jedna z ciest do budúcnosti sa nazýva **[[agroekológie]]**: výroba spoliehaním sa na prírodné cykly, ako je kompost alebo striedanie plodín, a nie boj proti nim chemikáliami. Výzvou je zaručiť každému človeku trvalý prístup k zdravým potravinám bez ďalšieho vyčerpania planéty."
+        },
+        {
+          "type": "takeaway",
+          "text": "Zem produkuje dostatok kalórií, aby nasýtila každého. Hlad 800 miliónov ľudí preto pochádza z problému prístupu, odpadu a geopolitických kríz, ktoré ešte zhoršila zmena klímy."
+        }
+      ]
+    }
+  ]
+}

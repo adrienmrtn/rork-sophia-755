@@ -1,0 +1,100 @@
+{
+  "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
+  "title": "Zakaj je morska voda slana?",
+  "subtitle": "Oceani",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "En liter morske vode vsebuje približno 35 gramov soli. Ta sol se je kopičila milijarde let. Tukaj prihaja.",
+  "hero": {
+    "image": "pourquoi_l_eau_de_mer_est_salee",
+    "ratio": "16:9",
+    "hook": "Reke so nežne. Oceani so slani. Skrivnost je čas in izhlapevanje."
+  },
+  "sections": [
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oceani pokrivajo več kot **70%** planeta. V povprečju en liter morske vode vsebuje približno **35 gramov soli**. To ni naključje: to je rezultat zelo dolgega procesa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sol ne »pade« z neba že pripravljena. Potuje s celin, nato pa ostane ujet v oceanu."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
+      "title": "Sol prihaja najprej iz zemlje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dež, ki prehaja skozi zrak, pobere malo ogljikovega dioksida. Postane rahlo kislo. Ko pade na skale, jih nežno napade: to je **kemična erozija**."
+        },
+        {
+          "type": "image",
+          "asset": "ocean_sea_salt_evaporation",
+          "ratio": "auto",
+          "caption": "Slana močvirja: izhlapevanje koncentrira sol, raztopljeno v morski vodi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reke nato prenašajo raztopljene minerale, zlasti **natrij** in **klor**, dve sestavini kuhinjske soli. Odvržejo jih v morje."
+        },
+        {
+          "type": "funFact",
+          "text": "Podvodni vulkani in vroči vrelci na oceanskem dnu prav tako dodajajo sol. Toda glavnina še vedno prihaja s celin."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
+      "title": "Zakaj reke niso slane?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dobro vprašanje: če reke prinašajo sol, zakaj voda Rone ali Sene ni slana? Ker je sol tam zelo razredčena in ker se voda v rekah nenehno obnavlja."
+        },
+        {
+          "type": "paragraph",
+          "text": "V oceanu je drugače. Pod soncem voda **izhlapi** in se vrne na nebo. Sol **ostane**. Iz leta v leto, iz stoletja v stoletje se kopiči. Temu pravimo [[Hidrološki cikel in kopičenje soli]]."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
+      "title": "Sol kroži tudi po oceanih",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Slana voda je bolj **gosta** (\"težja\" za enako prostornino) kot sladka voda. Na polih, ko površinska voda zamrzne, se sol delno sprosti v okoliško tekočo vodo. Ta voda postane še gostejša in pade na dno."
+        },
+        {
+          "type": "paragraph",
+          "text": "To gibanje pomaga poganjati velike oceanske tokove. Ti tokovi prenašajo toploto in hranila po vsem svetu. Sol ni le stvar okusa: je del podnebnega motorja planeta."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
+      "title": "Ni povsod enaka sol",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Slanost ni povsod enaka. V bližini ekvatorja lahko močno izhlapevanje koncentrira sol. V bližini velikih rek ali talečih se ledenih plošč je voda mehkejša. Mrtvo morje je skrajni primer: odteče zelo malo vode, ostane veliko soli."
+        },
+        {
+          "type": "takeaway",
+          "text": "Morska voda je slana, ker reke prinašajo minerale s celin, izhlapevanje pa pusti sol v oceanu. To kopičenje je trajalo milijarde let."
+        }
+      ]
+    }
+  ]
+}

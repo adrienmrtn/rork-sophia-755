@@ -1,0 +1,116 @@
+{
+  "id": "course_173_ulysse_et_le_cyclope",
+  "title": "Odisej in Kiklop",
+  "subtitle": "Zvijačnost proti sili",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "V Odiseji se Odisej sooči s Kiklopom Polifemom. Njegov [[metis]] ga reši, vendar njegov ponos pritegne Pozejdonovo jezo.",
+  "hero": {
+    "image": "ulysse_et_le_cyclope",
+    "ratio": "16:9",
+    "hook": "Enooki velikan požira svoje ljudi. Odiseja ne more premagati s silo. Zato si izmisli ime: Nihče."
+  },
+  "sections": [
+    {
+      "id": "course_173_ulysse_et_le_cyclope_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po trojanski vojni se **Ulikses**, kralj otoka Itaka, poskuša vrniti domov. Homer pripoveduje o svojem potovanju v **Odiseji**. V pesmi IX se približa rodovitnemu otoku, kjer živijo [[Kiklopi]], samotni velikani z enim očesom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tam sreča **Polifema**, sina boga morja **Pozejdona**. Epizoda ni samo zgodba o pošastih. To je lekcija: [[metis]], zvita inteligenca, lahko premaga surovo silo. Toda [[hubris]], pretiran ponos, lahko vse pokvari."
+        }
+      ]
+    },
+    {
+      "id": "course_173_ulysse_et_le_cyclope_p1",
+      "title": "Upanje na gostoljubje, najdeno barbarstvo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Odisej pride z dvanajstimi tovariši. Kiklopi nimajo skupščin, zakonov, pravega poljedelstva. Živijo v jamah. Grki verjamejo v [[ksenija]]: sveto dolžnost sprejemanja tujcev pod Zevsovo zaščito."
+        },
+        {
+          "type": "image",
+          "asset": "cyclops_polyphemus_one_eye_greek_myth",
+          "ratio": "4:3",
+          "caption": "Polifem, Kiklop, lik brezpravne sile."
+        },
+        {
+          "type": "paragraph",
+          "text": "V jami moški vidijo sire in govedo. Spremljevalci hočejo oditi. Odisej vztraja pri čakanju na gospodarja v upanju na gostiteljsko darilo. Napaka. Polifem se vrne, blokira vhod z ogromno skalo in požre dva Grka. Moč ne bo dovolj. Moraš biti zvit."
+        }
+      ]
+    },
+    {
+      "id": "course_173_ulysse_et_le_cyclope_p2",
+      "title": "Vino, vložek in \"Nihče\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Odisej poseka oljčni kol, les, ki je drag Ateni, boginji modrosti. On to skriva. Nato ponudi Polifemu zelo močno, skoraj čisto vino. Velikan se napije. Preden zaspi, vpraša gosta za ime."
+        },
+        {
+          "type": "funFact",
+          "text": "V grščini Ulikses pravi, da mu je ime **Outis**, »nihče«. Ta beseda spominja tudi na **métis**, zvit. Homer igra dvojni pomen: res je zvijača tista, ki premaga velikana."
+        },
+        {
+          "type": "image",
+          "asset": "ulysses_cyclops_blinding_stake_ancient_vase",
+          "ratio": "4:3",
+          "caption": "Odisej in njegovi možje oslepijo Polifema, znan prizor iz grških vaz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ulikses odgovori: \"Ime mi je **Oseba**. » Nato njegovi možje zabijejo goreči kol v eno oko. Pritečejo drugi Kiklopi. \"Kdo te ubija? « vprašajo. »Oseba!« odvrne Polifem. Odideta, misleč na božansko zlo."
+        }
+      ]
+    },
+    {
+      "id": "course_173_ulysse_et_le_cyclope_p3",
+      "title": "Pojdi ven pod ovce",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Naslednji dan slepi Polifem straži izhod. Vsaki ovci otipa hrbet. Ulikses priveže svoje tovariše pod trebuhe najbolj volnatih živali. Sam visi pod največjim ovnom. Velikan boža žival, ne da bi čutil sovražnika tik pod njim."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ko je enkrat na morju, se Ulikses ne more upreti. Kriči svoje pravo ime, svoj rod, svoje mesto. Želi [[kleos]], slavo, ki živi v imenu. Polifem lahko končno preklinja določeno tarčo s svojim očetom Pozejdonom."
+        }
+      ]
+    },
+    {
+      "id": "course_173_ulysse_et_le_cyclope_p4",
+      "title": "Prekletstvo, ki odpre Odisejo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Polifem moli k Pozejdonu: da Ulikses nikoli ne pride domov, ali pa pozno, sam, potem ko je izgubil vse svoje spremljevalce. To prekletstvo strukturira deset let potepanja, ki sledijo. Morje postane kazen."
+        },
+        {
+          "type": "image",
+          "asset": "poseidon_god_sea_trident_greek",
+          "ratio": "4:3",
+          "caption": "Pozejdon, bog morja, maščuje svojega sina Polifema."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mit nasprotuje dvema junaštvoma. V Iliadi se zmaga z močjo in slavo. V Odiseji preživimo z omejitvami. Odisej je zmagal z duhovitostjo. Izgubil je zaradi ponosa, ker si je želel biti priznan."
+        },
+        {
+          "type": "takeaway",
+          "text": "Soočen s Polifemom Ulikses zmaga zahvaljujoč [[metis]] in imenu »Oseba«. Z razkritjem svoje identitete za [[kleos]] sproži Pozejdonovo jezo in podaljša njegovo izgnanstvo."
+        }
+      ]
+    }
+  ]
+}

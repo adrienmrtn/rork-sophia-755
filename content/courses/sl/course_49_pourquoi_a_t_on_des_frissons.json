@@ -1,0 +1,102 @@
+{
+  "id": "course_49_pourquoi_a_t_on_des_frissons",
+  "title": "Zakaj nas zebe?",
+  "subtitle": "Telo & čustva",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Mraz, strah, glasba: drgetanje ima več vzrokov. Vsi prehajajo skozi živčni sistem, vendar ne iz istih razlogov.",
+  "hero": {
+    "image": "pourquoi_a_t_on_des_frissons",
+    "ratio": "16:9",
+    "hook": "Drhtenje mraza in drhtenje glasbe ne pripovedujeta iste zgodbe."
+  },
+  "sections": [
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Treseš se, ko greš ven na dež. Treseš se tudi, ko slišiš pesem, ki te vznemiri. Ista beseda, različni mehanizmi."
+        },
+        {
+          "type": "paragraph",
+          "text": "V obeh primerih se telo hitro odzove. Toda eden se uporablja predvsem za ogrevanje, drugi pa bolj za užitek in čustva."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
+      "title": "Vznemirjenje mraza: mini kotel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Telo želi ostati okoli **37 °C**. Ko koža zazna mraz, opozori predel možganov, **hipotalamus**, ki deluje kot termostat."
+        },
+        {
+          "type": "image",
+          "asset": "goosebumps_cold_skin",
+          "ratio": "4:3",
+          "caption": "Kurja polt: stari refleks dvigovanja dlak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mišice se krčijo zelo hitro in večkrat: to je drgetanje. Te kontrakcije proizvajajo toploto. \"Goosebumps\" izhaja iz starega refleksa: dvigovanje dlak za boljšo izolacijo. Doma, z malo dlake, služi predvsem kot preostanek."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
+      "title": "Vznemirjenje strahu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ob soočenju z grožnjo se aktivira [[Simpatični živčni sistem]] (“alarmna” veja živčnega sistema). Sprošča **adrenalin**. Mišice so napete, srce utripa, koža se lahko naježi."
+        },
+        {
+          "type": "image",
+          "asset": "adrenaline_stress_response_body",
+          "ratio": "4:3",
+          "caption": "Adrenalin pripravi telo na hitro reakcijo."
+        },
+        {
+          "type": "funFact",
+          "text": "Ta isti sistem pojasnjuje, zakaj lahko dobite kurjo polt med gledanjem grozljivke ... medtem ko ste udobno na kavču."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
+      "title": "Vznemirjenje glasbe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Določena vznemirjenja, včasih imenovana \"mrazenje\", pridejo z močnimi čustvi: glasba, govor, film. Aktivirajo možgansko vezje **nagrade** z **dopamin**, snovjo, povezano z užitkom."
+        },
+        {
+          "type": "paragraph",
+          "text": "To ni uporabno za takojšnje preživetje. Namesto tega je telo tisto, ki se odzove na močno čustvo, kot mimoidoči val."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
+      "title": "Kdaj skrbeti?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mrzlica z visoko vročino lahko signalizira okužbo. Nenehna mrzlica brez jasnega razloga zahteva zdravniško pomoč. Toda večino časa je tresenje zaradi mraza, stresa ali glasbe preprosto telo, ki opravlja svoje delo."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hladno drhtenje proizvaja toploto. Tisti, ki jih je strah, se pripravijo na odziv. Tista glasbe se dotikajo čustvenega užitka. Isti občutek, različni vzroki."
+        }
+      ]
+    }
+  ]
+}

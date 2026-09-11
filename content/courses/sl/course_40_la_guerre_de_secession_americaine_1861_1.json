@@ -1,0 +1,145 @@
+{
+  "id": "course_40_la_guerre_de_secession_americaine_1861_1",
+  "title": "Ameriška državljanska vojna",
+  "subtitle": "1861-1865",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "Od **1861** do **1865** so Združene države raztrgane: več kot **620.000** mrtvih. V središču konflikta je suženjstvo, narodna enotnost in rojstvo močnejše zvezne države.",
+  "hero": {
+    "image": "la_guerre_de_secession_americaine",
+    "ratio": "16:9",
+    "hook": "Najbolj smrtonosna vojna v ameriški zgodovini, za Unijo in proti suženjstvu."
+  },
+  "sections": [
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od **1861** do **1865** ZDA doživljajo najhujšo krizo: državljansko vojno. Sever (Unija) proti jugu (Konfederacija). Nič več **620.000** mrtvih."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konflikt spremeni mlado republiko v industrijsko silo, za ceno trajne travme nacionalne enotnosti in suženjstva."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p1",
+      "title": "Dve Ameriki iz oči v oči",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**sever** se industrializira s plačami in protekcionizmom. **jug** ostaja podeželsko, bogato z bombažem, ki ga proizvajajo **4 milijone** sužnjev."
+        },
+        {
+          "type": "image",
+          "asset": "slaves_american_southern_plantation",
+          "ratio": "4:3",
+          "caption": "Južna plantaža: suženjstvo v središču konfederacijskega gospodarstva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Razprava se nanaša tudi na **[[Pravice držav proti zvezni vladi]]**: kdo odloča o suženjstvu, lokalna država ali Washington? Izvolitev **Abraham Lincolna** (**november 1860**), republikanca, ki je nasprotoval razširitvi suženjstva, brez enega samega glasu z juga, sproži odcepitev. Sedem zveznih držav je ustanovilo Konfederacijo s predsednikom **[[Jefferson Davis]]** in v svojih ustavah zagotovilo suženjstvo."
+        },
+        {
+          "type": "funFact",
+          "text": "Pred vojno se je pogosto govorilo »Združene države *je*« v množini. Nato je nujna raba ednine (»*vzhod*«): nedeljiv narod."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p2",
+      "title": "Totalna vojna, nato emancipacija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**12. aprila 1861**, Južni topovi obstreljujejo Fort Sumter v Južni Karolini. Vojna, ki je veljala za kratko, je postala industrijska. V **Antietam** (**, 17. september 1862**), **23.000** žrtev v dvanajstih urah: najbolj krvav dan v ameriški vojaški zgodovini."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neuspeh **[[Robert E. Lee]]**, vodilnega generala Konfederacije, je Lincolnu omogočil podpis **[[Razglasitev emancipacije]]** (**1. januarja 1863**), ki je osvobodila sužnje v uporniških državah. Vojna za Unijo je postala tudi vojna za svobodo, ki je zaprla vrata evropski podpori jugu. **Gettysburg** (julij **1863**) prekine zagon Konfederacije."
+        },
+        {
+          "type": "image",
+          "asset": "american_civil_war_battle",
+          "ratio": "4:3",
+          "caption": "Bitka med državljansko vojno: industrijsko nasilje brez primere."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p3",
+      "title": "Severna zmaga, Lincolnova smrt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**[[Ulysses Grant]]**, poveljnik Unije, bije vojno izčrpavanja. Njegov poročnik **William Tecumseh Sherman** je pustošil po Gruziji med svojim »pohodom do morja«. Lee se je predal pri **Appomattox** dne **9. aprila 1865**."
+        },
+        {
+          "type": "image",
+          "asset": "abraham_lincoln_portrait",
+          "ratio": "1:1",
+          "caption": "Abraham Lincoln, predsednik Unije, umorjen pet dni po Appomattoxu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pet dni pozneje je Lincolna umoril **John Wilkes Booth**, južnjaški igralec. **[[Rekonstrukcija]]**, obdobje rekonstrukcije juga, se začne brez njega. Decembra **1865**, [[13. amandma]] odpravlja suženjstvo po vsej državi."
+        },
+        {
+          "type": "funFact",
+          "text": "Vojna je pospešila tudi kirurgijo: zdravniki, kot je **Gurdon Buck**, so izvedli prve rekonstrukcije obraza na vojakih, ki so jih iznakazile krogle Minié."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p4",
+      "title": "Brazgotine in zapuščina",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V skladu z **[[Rekonstrukcija]]** (**1865-1877**) so Afroameričani volili in bili izvoljeni. Nato pride reakcija: **[[Ku Klux Klan]]** (**1865**), bela teroristična organizacija, umik zveznih enot (**1877**), zakoni o ločevanju Jima Crowa. Pravna segregacija bi trajala skoraj stoletje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na zemljevidu združen narod brez zakonitega suženjstva. Pravzaprav globok rasni razkorak. In orodja bodoče svetovne velesile: težka industrija, železnice, močna zvezna država."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1860",
+              "title": "Lincolnove volitve",
+              "detail": "Začetek secesij."
+            },
+            {
+              "date": "1861",
+              "title": "Fort Sumter",
+              "detail": "Začetek vojne."
+            },
+            {
+              "date": "1863",
+              "title": "Emancipacija",
+              "detail": "Gettysburška razglasitev in prelomnica."
+            },
+            {
+              "date": "1865",
+              "title": "Appomattox in 13. amandma",
+              "detail": "Konec bojev in ustavna odprava."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Državljanska vojna (**1861-1865**) je združila Združene države in odpravila suženjstvo, za ceno **620.000** smrti, medtem ko je pustila rasno ločnico, ki bi jo zakoni Jima Crowa podaljšali."
+        }
+      ]
+    }
+  ]
+}

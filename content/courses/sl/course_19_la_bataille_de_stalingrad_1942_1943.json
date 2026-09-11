@@ -1,0 +1,124 @@
+{
+  "id": "course_19_la_bataille_de_stalingrad_1942_1943",
+  "title": "Bitka za Stalingrad",
+  "subtitle": "1942-1943",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Od poletja 1942 do februarja 1943 so se Nemci in Sovjeti med seboj pobijali v ruševinah mesta ob Volgi. Stalingrad postane prelomnica druge svetovne vojne.",
+  "hero": {
+    "image": "la_bataille_de_stalingrad",
+    "ratio": "16:9",
+    "hook": "V ruševinah mesta se vojska, ki velja za nepremagljivo, za vedno zlomi."
+  },
+  "sections": [
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od poletja **1942** do **2.februarja 1943** svet opazuje pas ruševin na **Volgi**, veliki ruski reki. Pri **Stalingradu** (danes Volgograd) je nemška vojska naletela na sovjetski odpor, pripravljen na vse žrtve."
+        },
+        {
+          "type": "paragraph",
+          "text": "Z več kot **onom milijona** mrtvih je bila to najbolj smrtonosna bitka v zgodovini ... in prelomnica druge svetovne vojne."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p1",
+      "title": "Hitler cilja na južno nafto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po neuspehu pred Moskvo leta 1941 je Hitler sprožil [[Etui modra]], poletno ofenzivo proti jugu. Cilj: nafta iz **Kavkaza**. **Stalingrad**, železniško in rečno križišče na Volgi, je sprva le sekundarni cilj. Nato zmaga simbol: zavzetje mesta, ki nosi ime **Stalin**, postane obsedenost."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_stalingrad_ruins",
+          "ratio": "4:3",
+          "caption": "Stalingrad v ruševinah: neusmiljeno urbano bojišče."
+        },
+        {
+          "type": "funFact",
+          "text": "Hitler je bil tako prepričan v zmago, da je menda dal natisniti vabila za zmagovalni banket v hotelu Lux v Stalingradu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nemška **6. armada**, ki ji poveljuje general [[Friedrich Paulus]], je preusmerjena v mesto. Bombardiranje [[Luftwaffe]], nemških zračnih sil, avgusta 1942 je pustilo pokrajino kraterjev... popolno za sovjetsko obrambo."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p2",
+      "title": "Borite se hiša za hišo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sovjetski general **Vasilij Čujkov** je uvedel preprosto taktiko: ostati znotraj **30 metrov** sovražnika. Tako nemška artilerija in letala ne morejo napasti, ne da bi ubili svoje ljudi. Nemci temu pravijo **Rattenkrieg**, »podganja vojna«: borimo se v kleteh, kanalizaciji, porušenih zgradbah."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Pavlova hiša**, stavba, ki jo je vodila peščica vojakov, se je upirala **58 dni**. V tovarni **Dzeržinskega** izdelujejo tanke pod bombami in jih odpeljejo naravnost na fronto. Stalinov **O ukazu 227** povzema ukaz: **»Niti koraka nazaj«**."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p3",
+      "title": "Klešče, ki zapirajo past",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Medtem ko se Paulus obrablja v ruševinah, sovjetski maršal **Georgi Žukov** pripravlja [[Operacija Uran]]. Nemški boki, ki so jih varovali slabo opremljeni zavezniki (Romuni, Italijani, Madžari), so popustili. **9. november 1942** so se klešče zaprle: približno **300.000** mož je bilo obkoljenih."
+        },
+        {
+          "type": "funFact",
+          "text": "Sovjeti so po zvočnikih predvajali tiktakanje ure in nato sporočilo: vsakih **7 sekund** v ZSSR je umrl nemški vojak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hitler prepoveduje izhod. [[Hermanna Göringa]], vodja Luftwaffe, obljublja zračni most. Ne uspe mu. Lakota, tifus, **-30 °C**: »kotel« postane smrtonosna past."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p4",
+      "title": "Predaja, ki spremeni vojno",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dne **30. januarja 1943** je Hitler imenoval Paulusa **feldmaršala**, najvišji čin, da bi ga spodbudil k smrti in ne predaji. Paulus je kapituliral 2. februarja **ZENDBOLDZZ. Od 300.000 obkoljenih jih **Z91**.000** odide kot ujetniki. Prvič mora nacistična propaganda priznati popoln poraz. Vojska, ki je veljala za nepremagljivo, je bila zlomljena."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "poletje 1942",
+              "title": "Etui modra",
+              "detail": "Nemška ofenziva proti Kavkazu in Stalingradu."
+            },
+            {
+              "date": "19. november 1942",
+              "title": "Operacija Uran",
+              "detail": "Obkolitev 6. armade."
+            },
+            {
+              "date": "2. februar 1943",
+              "title": "Kapitulacija",
+              "detail": "Paulus se preda; prelomnico vojne."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Stalingrad** (**1942-1943**) uniči nemško 6. armado in razbije mit o nepremagljivosti nacistov v najbolj smrtonosni bitki v zgodovini."
+        }
+      ]
+    }
+  ]
+}

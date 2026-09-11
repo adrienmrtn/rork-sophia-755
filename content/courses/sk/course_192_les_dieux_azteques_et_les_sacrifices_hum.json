@@ -1,0 +1,140 @@
+{
+  "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
+  "title": "Aztécki bohovia a ľudské obete",
+  "subtitle": "Krv pre slnko",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "U Aztékov slnko vychádza len vtedy, ak bohovia dostanú krv. Drsná, ale koherentná kozmológia v srdci ich impéria.",
+  "hero": {
+    "image": "les_dieux_azteques_et_les_sacrifices_humains",
+    "ratio": "16:9",
+    "hook": "Bez krvi by sa slnko zastavilo: taký je vesmírny dlh Aztékov."
+  },
+  "sections": [
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Aztékovia** alebo Mexiko veria, že vesmír je krehký. Bohovia potrebujú krv, aby slnko pokračovalo vo svojom kurze. Bez ponúk by sa vrátil chaos."
+        },
+        {
+          "type": "paragraph",
+          "text": "To, čo Španielov zdesilo, je založené na jasnej myšlienke: životy bohov a ľudí sú prepojené. Tu je návod, ako táto kozmológia funguje."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
+      "title": "Päť sĺnk: svet už štyrikrát mŕtvy",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Podľa mýtu [[Päť sĺnk]] už štyri éry zanikli v katastrofách. Zažívame piate slnko, [[Nahui Ollin]] (“4-pohyb”), sľúbené, že skončí zemetrasením."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
+          "ratio": "4:3",
+          "caption": "Kameň slnka: Aztécky čas sa mení na postupné éry."
+        },
+        {
+          "type": "paragraph",
+          "text": "V **Teotihuacán**, posvätnom meste na centrálnej plošine, sa bohovia vrhajú do ohňa, aby sa stali slnkom a mesiacom. Ale slnko zostáva stále. Ostatní bohovia potom ponúkajú svoju vlastnú krv, aby to dali do pohybu. Muži dedia tento dlh."
+        },
+        {
+          "type": "funFact",
+          "text": "Pre Aztékov nie je obeť bezdôvodnou krutosťou: je to splatenie božského dlhu, [[Kozmológia piatich sĺnk a kozmický dlh]]."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p2",
+      "title": "Panteón dualít",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ústredným bohom je [[Huitzilopochtli]], boh vojny a poludňajšieho slnka. Každú noc bojuje s temnotou, aby sa ráno znovuzrodil. Po jeho boku [[Tlaloc]] dáva dážď, teda úrodu, alebo hlad."
+        },
+        {
+          "type": "image",
+          "asset": "huitzilopochtli_aztec_sun_god_codex",
+          "ratio": "4:3",
+          "caption": "Huitzilopochtli, bojovné slnko, ktoré si vyžaduje výživu."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Quetzalcoatl]], operený had, stelesňuje poznanie a civilizáciu. Jeho rival [[Tezcatlipoca]], Smoking Mirror, vládne noci, osudu a mágii. Samotná Zem má hroznú tvár: [[Coatlicue]], požierajúca bohyňa matky."
+        },
+        {
+          "type": "funFact",
+          "text": "Vzácna krv obetovaná bohom sa nazýva [[chalchihuatl]], „vzácna voda“. Extrahované srdce sa považuje za slnečnú iskru vrátenú na oblohu."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p3",
+      "title": "Kvetinové vojny",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aby Aztékovia získali obete, organizujú [[Xochiyaoyotl]], „kvetinové vojny“: rituálne boje, ktorých cieľom nie je zabíjať, ale zajať žijúcich bojovníkov hodných ponuky."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
+          "ratio": "4:3",
+          "caption": "Obeta na vrchole chrámu: srdce predložené slnku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na vrchole **Starosta mesta Templo** v Tenochtitláne, hlavnom meste pri jazere, kňaz vytiahne srdce nožom zo **Obsidian**, ostrého sopečného kameňa. Toto gesto je verejné, slávnostné, myslené ako služba slnku."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mýtus",
+              "title": "Obetovanie bohov",
+              "detail": "Slnko dostáva božskú krv, aby sa pohlo vpred."
+            },
+            {
+              "date": "impéria",
+              "title": "Kvetinové vojny",
+              "detail": "Chytanie bojovníkov za ponuky."
+            },
+            {
+              "date": "1519",
+              "title": "Španielsky šok",
+              "detail": "Cortés prichádza; systém skolabuje."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
+      "title": "Koniec sveta, trvalé stopy",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Španielske kroniky niekedy nafúknu postavy, aby ospravedlnili dobytie. Ale obetný systém je veľmi reálny. V **1519** príchod **Hernána Cortés** urýchli koniec tohto rituálneho vesmíru."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aztécke postavy však prežívajú v synkretizme: Panna Guadalupská sa objavuje na mieste, ktoré bolo kedysi spojené s bohyňou matky. Pochopiť tieto obete znamená pochopiť kultúru, ktorá kladie prežitie vesmíru nad jednotlivca."
+        },
+        {
+          "type": "takeaway",
+          "text": "U Aztékov ľudská krv živila slnko. Bohovia už zaplatili svojimi životmi: ľudia splácajú tento dlh obeťou, najmä prostredníctvom **kvetinových vojen**."
+        }
+      ]
+    }
+  ]
+}

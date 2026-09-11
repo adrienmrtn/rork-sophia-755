@@ -1,0 +1,140 @@
+{
+  "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces",
+  "title": "Dionýz: boh vína a prebytku",
+  "subtitle": "Víno, divadlo, prehrešok",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Boh vína a extázy, Dionýz je tiež patrónom gréckeho divadla. Dvakrát narodený ruší hranice medzi poriadkom a chaosom.",
+  "hero": {
+    "image": "dionysos_le_dieu_du_vin",
+    "ratio": "16:9",
+    "hook": "Boh vína neprináša len opojenie: vymýšľa aj divadlo."
+  },
+  "sections": [
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Dionýza** je najparadoxnejší grécky boh. Boh vína, viniča a opojenia, je predovšetkým bohom metamorfózy. Na rozdiel od olympionikov zamrznutých na ich vrchole blúdi a za ním ide hlučný sprievod."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ruší hranice medzi božským a ľudským, poriadkom a chaosom, životom a smrťou. Z jeho festivalov sa zrodí [[Divadlo]], jedno z najväčších dedičstiev Grécka."
+        }
+      ]
+    },
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p1",
+      "title": "Narodený dvakrát: od Semele po stehno Zeusa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dionýz sa narodil z tragédie. **Zeus**, kráľ bohov, miluje smrteľnú [[Semele]], princeznú z Théb. **Hera**, Diova žiarlivá manželka, ju núti žiadať, aby sa jej milenec ukázal vo svojej skutočnej božskej podobe."
+        },
+        {
+          "type": "image",
+          "asset": "dionysus_greek_god_wine_grapes_painting",
+          "ratio": "4:3",
+          "caption": "Dionýz, boh vína, extázy a metamorfózy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zeus vyhovie. Semele zabije blesk. Aby Zeus zachránil dieťa, umiestni ho do vlastného stehna až do narodenia. Dionýz bol teda „dvakrát narodený“, preto jemu venovaná pieseň: [[Dithyramb]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Tento mýtus vysvetľuje, prečo je Dionýz smrteľný aj božský: má ľudskú matku a olympského otca, ktorí ho „nosili“."
+        }
+      ]
+    },
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p2",
+      "title": "Extáza Maenadov",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ako dospelý Dionýz cestuje po svete, aby šíril svoj kult. Jeho nasledovníci, najmä ženy nazývané **Maenades** alebo Bacchantes, odchádzajú z mesta do hôr. Tam tanec, hudba a víno vyvolávajú tranz: byť „posadnutý bohom“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tieto obrady, nazývané [[záhad]], prevracajú spoločenský poriadok. Na jednu noc ustupuje rozum. Boh sľubuje oslobodenie, ale aj šialenstvo pre tých, ktorí ho odmietajú."
+        },
+        {
+          "type": "image",
+          "asset": "maenads_bacchantes_frenzy_dance_ancient_vase",
+          "ratio": "4:3",
+          "caption": "Bacchantes v tranze: kult, ktorý zvrhne poriadok v meste."
+        },
+        {
+          "type": "funFact",
+          "text": "Jedného dňa piráti zajmú Dionýza, aby ho predali. Mení veslá na hady a necháva rásť vinič na stožiari. Vystrašení muži skočia do mora a stanú sa z nich delfíny."
+        }
+      ]
+    },
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p3",
+      "title": "Z chaosu vzniká divadlo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V Aténach sa tento boh nadmieru stáva patrónom občianskeho umenia: divadla. V 6. storočí pred Kristom **Veľká Dionýzia** organizovala dramatické súťaže. Všetko začína od dithyrambu, zborovej piesne na počesť boha."
+        },
+        {
+          "type": "image",
+          "asset": "dionysus_greek_god_wine_theater",
+          "ratio": "4:3",
+          "caption": "Veľká Dionýzia: uctievanie sa stáva mestskou podívanou."
+        },
+        {
+          "type": "paragraph",
+          "text": "Keď sa spevák odtrhne od refrénu, aby zareagoval, zrodil sa herec. Tragédia sa stáva miestom, kde sa mesto pozerá na svoje obavy a konflikty bez toho, aby sa ponorilo do skutočného chaosu. Je to [[Katarzia]]: očistiť sa od emócií pohľadom na ne."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Narodenie",
+              "title": "Dvojitý pôrod",
+              "detail": "Semele zomrie; Zeus dokončí tehotenstvo."
+            },
+            {
+              "date": "Uctievanie",
+              "title": "Obrady Maenadov",
+              "detail": "Extáza, víno, obrátenie poradia."
+            },
+            {
+              "date": "žije. priem. AD",
+              "title": "Veľká Dionýzia",
+              "detail": "Zrodenie divadla v Aténach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p4",
+      "title": "Dionýz oproti Apolónovi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 19. storočí sa filozof **Nietzsche** postavil proti dvom silám: [[Apollo]], bohu miery a jasnosti, a Dionýzovi, sile opojenia a tvorivého chaosu. Toto napätie, [[Apolónsky a dionýzovský (Nietzsche)]], mu vysvetľuje veľkosť gréckej tragédie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dionýzos tak zostáva bohom, ktorý pripomína jednoduchú pravdu: bez trochy neporiadku nie je umenie, oslava, ani vynález."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Dionýza**, dvakrát narodený, boh vína a extázy, inšpiruje obrady, z ktorých sa zrodilo grécke divadlo **BOLDZZ**. Stelesňuje plodné napätie medzi striedmosťou a nadmierou."
+        }
+      ]
+    }
+  ]
+}

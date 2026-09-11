@@ -1,0 +1,133 @@
+{
+  "id": "course_9_l_empire_azteque",
+  "title": "Aztécka ríša",
+  "subtitle": "1325-1521",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Za necelé dve storočia vybudovali Aztékovia na jazere hlavné mesto s 200 000 obyvateľmi. Ich impérium založené na poctách a obetiach sa za dva roky zrútilo proti Španielom.",
+  "hero": {
+    "image": "l_empire_azteque",
+    "ratio": "16:9",
+    "hook": "Mesto na vode, viac obývané ako Londýn. Potom o dva roky nič."
+  },
+  "sections": [
+    {
+      "id": "course_9_l_empire_azteque_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V srdci dnešného Mexika si Aztékovia za necelé dve storočia vybudovali hlavné mesto na jazere, ktoré obývalo **200 000 dolárov**. Väčšie ako Londýn či Rím zároveň. Ich sila spája hydraulické inžinierstvo, náročné náboženstvo a permanentnú vojnu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Medzi **1519** a **1521** sa toto impérium zrútilo. Nielen pod delami Cortésa, španielskeho conquistadora, ale aj pod nenávisťou jeho poddaných a pod neviditeľnou zbraňou: chorobou."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p1",
+      "title": "Od močiarov po hlavné mesto na vode",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Mexiko**, ľudia, ktorých budeme volať Aztékovia, pochádzajú z mýtického [[Aztlán]], miesta pôvodu na severe. Dorazili v 13. storočí do údolia Mexika. Opovrhovaní hľadajú znamenie od svojho boha [[Huitzilopochtli]], boha slnka a vojny: orla požierajúceho hada na kaktuse. V **1325** ho nájdu na ostrovčeku v jazere **Texcoco**. Zrodil sa [[Tenochtitlán]], ich budúce hlavné mesto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aby nakŕmili mesto, zdokonalili [[Činampy]], ultraúrodné umelé ostrovy z bahna a rastlín. Tri hrádze, hrádze, kanály: mesto sa stáva jazernou pevnosťou a obrovským trhom."
+        },
+        {
+          "type": "funFact",
+          "text": "Aztékovia nepoužívali koleso na prepravu a nemali žiadne bremená. Napriek tomu premiestnili milióny ton kameňa pre svoje pyramídy."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p2",
+      "title": "Trojitá aliancia a pocta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1428** sa Tenochtitlán spojil s dvoma susednými mestami, Texcoco a Tlacopan: **Trojitá aliancia**. Čoskoro bude Mexiko dominovať samo. Ich impérium sa neasimiluje: vyžaduje si pravidelný **hold**, kukuricu, kakao, perie, kovy. Bohatstvo hlavného mesta podnecuje nenávisť podrobených národov, ako sú [[Tlaxcaltecs]], krutí nepriatelia Aztékov."
+        },
+        {
+          "type": "image",
+          "asset": "tenochtitlan_aztec_city_illustration",
+          "ratio": "4:3",
+          "caption": "Tenochtitlán, jazerná metropola v srdci Aztéckej ríše."
+        },
+        {
+          "type": "paragraph",
+          "text": "Je to vojnová mašinéria, ktorá potrebuje večné výdobytky. Keď dorazia Španieli, budú musieť tieto nevôle spojiť."
+        },
+        {
+          "type": "funFact",
+          "text": "Ako platidlo sa používali kakaové bôby. V Tenochtitláne mal králik hodnotu desať fazúľ; otrok dobrej konštitúcie, asi sto."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p3",
+      "title": "Bohovia, Cortés a kiahne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Podľa [[Kozmogónia piatich sĺnk]], aztéckeho mýtu, slnko prežije len vtedy, ak je živené ľudskou krvou. At [[Starosta mesta Templo]], the great pyramid in the center, sacrifices are not gratuitous cruelty: they are, for the Aztecs, a necessity for the world to continue."
+        },
+        {
+          "type": "paragraph",
+          "text": "V **1519** prišiel **Hernán Cortés** s niekoľkými stovkami Španielov. [[Moctezuma II]], aztécky cisár, váha. Oceľ, zbrane a kone sú strašidelné. Ale hlavným zabijakom je [[Kiahne]], európska choroba, proti ktorej populácie nemajú imunitu. Cortés oblieha hlavné mesto s tisíckami domorodých spojencov."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1325",
+              "title": "Založenie Tenochtitlánu",
+              "detail": "Mexičania sa usadzujú na jazere Texcoco."
+            },
+            {
+              "date": "1428",
+              "title": "Trojitá aliancia",
+              "detail": "Začiatok aztéckej imperiálnej expanzie."
+            },
+            {
+              "date": "1519",
+              "title": "Príchod Cortésa",
+              "detail": "Španieli prichádzajú do Mexika."
+            },
+            {
+              "date": "1521",
+              "title": "Pád Tenochtitlánu",
+              "detail": "Koniec impéria po 80 dňoch obliehania."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p4",
+      "title": "Na ruinách, Mexiko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1521**, po **80 dní** obliehania padol Tenochtitlán. Hladný, bez vody, sužovaný chorobami. Jeho kamene boli použité na stavbu Mexico City, hlavného mesta [[Nové Španielsko]], španielskej kolónie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nie všetko zmizne. [[chinampas]] stále existujú. [[Nahuatl]], jazykom Aztékov, hovorí viac ako milión ľudí. Orol a had zostávajú znakom Mexika. Brilantná civilizácia prežíva v pamäti a krajine."
+        },
+        {
+          "type": "takeaway",
+          "text": "Aztékovia postavili na jazere metropolu **200 000** obyvateľov. Ich systém pocty a [[Kiahne]] umožnili niekoľkým stovkám Španielov s pomocou miestnych spojencov zničiť impérium za dva roky."
+        }
+      ]
+    }
+  ]
+}

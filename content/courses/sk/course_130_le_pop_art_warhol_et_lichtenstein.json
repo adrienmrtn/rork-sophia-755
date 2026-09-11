@@ -1,0 +1,138 @@
+{
+  "id": "course_130_le_pop_art_warhol_et_lichtenstein",
+  "title": "Pop Art: Warhol a Lichtenstein",
+  "subtitle": "50. – 70. roky 20. storočia",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "Pop Art reaguje na konzumnú spoločnosť. **Warhol** a **Lichtenštajnsko** robia z reklamy, komiksov a hviezd skvelé umenie.",
+  "hero": {
+    "image": "le_pop_art_warhol_et_lichtenstein",
+    "ratio": "16:9",
+    "hook": "Plechovka polievky, škatuľka komiksov: čo ak banálny bol ikonou storočia?"
+  },
+  "sections": [
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Pop Art**, od polovice rokov **1950** do rokov **1970**, reaguje na [[Americká konzumná spoločnosť 50. – 60. rokov 20. storočia]] a kultúru omše. Reklama, komiksy, hollywoodske hviezdy: všetko sa stáva materiálom pre umenie."
+        },
+        {
+          "type": "paragraph",
+          "text": "S **Andy Warhol** a **Roy Lichtenstein** sa hranica medzi múzeom a supermarketom stiera. Každodenný predmet sa stáva ikonou. Narúša sa hodnota diela a rola umelca."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p1",
+      "title": "Od každodenného života až po múzeum",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pop Art sa zrodil v **Veľkej Británii** so [[Nezávislá skupina]], ale explodoval v **Spojených štátov** v rokoch **1960**. Po vojne, prosperita, supermarkety, logá všade: vizuálna krajina Američanov sa zmenila."
+        },
+        {
+          "type": "funFact",
+          "text": "V roku 1957 Richard Hamilton definoval pop art prídavnými menami: „pominuteľný“, „lacný“, „sexy“. Umenie spotrebovať rýchlo ako časopis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pop umelci sa postavili proti [[Abstraktný expresionizmus]], tieto introspektívne plátna vtedy dominovali. Keď Warhol maľuje polievky, ukazuje, že jednotlivca definuje to, čo kupuje. Opakovanie vyčerpáva imidž jeho emócií a zostáva len jeho komerčná účinnosť."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p2",
+      "title": "Warhol: dielňa ako továreň",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Andy Warhol** (1928-1987), bývalý reklamný grafik, aplikuje priemyselné metódy na umenie. Jeho **Fabrika** v New Yorku už nie je osamelým útočiskom: asistenti a priatelia vyrábajú spoločne."
+        },
+        {
+          "type": "image",
+          "asset": "andy_warhol_factory_silkscreen_marilyn",
+          "ratio": "4:3",
+          "caption": "Marilyn v sérii: hviezda ako reprodukovateľný produkt."
+        },
+        {
+          "type": "funFact",
+          "text": "Warhol nazhromaždil viac ako 600 „časových kapsúl“: škatúľ, do ktorých hádzal listy, účty a dokonca aj zvyšky jedla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho kráľovná technika: [[Sieťotlač]], ktorá umožňuje obraz reprodukovať desiatky krát. Vynásobením Marilyn Monroe ilustruje myšlienku [[Aura a mechanizovaná reprodukcia (Walter Benjamin)]]: čím viac obraz koluje, tým menej je „posvätný“, tým viac sa stáva ikonou. Sláva sama o sebe je produkt."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p3",
+      "title": "Lichtenštajnsko: zväčšený komiks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Roy Lichtenstein** (1923-1997) útočí na jazyk **komiksov**. Izoluje krabicu nabitú emocionálnym klišé a maľuje ju v monumentálnom formáte."
+        },
+        {
+          "type": "image",
+          "asset": "roy_lichtenstein_comic_ben_day_dots_painting",
+          "ratio": "4:3",
+          "caption": "Ručne maľované bodky Ben-Day: továreň imitovaná gestom."
+        },
+        {
+          "type": "funFact",
+          "text": "Pri posudzovaní kompozície sa Lichtenstein pozrel na svoje obrazy v zrkadle hore nohami, aby zistil, či držia čisto abstraktne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho podpis: bod [[Ben-Day]], tieto malé priemyselné tlačové bodky, ktoré vytvárajú nuansy. Maľuje ich ručne pomocou šablón: hodiny, aby napodobnil to, čo robí stroj za pár sekúnd. *Whaam!* premieňa škatuľu na rozptýlenie na obraz modernej histórie."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p4",
+      "title": "Dedičstvo: od trhu k sieťam",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pop Art mení trh a inštitúcie. Na umelcovom znaku záleží rovnako ako na geste. V **2022** portrét Marilyn od Warhola dosiahol **195 miliónov** dolárov: masový obraz, sakralizovaný, sa stáva najvzácnejšou komoditou."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1957",
+              "title": "Definícia Pop",
+              "detail": "Hamilton zhŕňa pohyb: efemérny, lacný, sexi."
+            },
+            {
+              "date": "60. roky 20. storočia",
+              "title": "Továreň a komiksy",
+              "detail": "Warhol a Lichtenstein vnucujú v USA popovú estetiku."
+            },
+            {
+              "date": "2022",
+              "title": "Marilyn za 195 miliónov dolárov",
+              "detail": "Masová ikona sa stáva absolútnou trofejou trhu."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Warholova predpoveď „15 minút slávy“ sa stala naším digitálnym každodenným životom. Mémy a recyklácia obrázkov sú priamym výsledkom tejto revolúcie."
+        },
+        {
+          "type": "takeaway",
+          "text": "Pop Art prelomil bariéru medzi vysokým umením a masovou kultúrou. Prostredníctvom sieťotlače a Ben-Day bodiek premenili Warhol a Lichtenstein každodenné predmety a hviezdy na trvalé ikony."
+        }
+      ]
+    }
+  ]
+}

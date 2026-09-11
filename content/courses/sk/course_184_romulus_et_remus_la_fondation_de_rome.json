@@ -1,0 +1,145 @@
+{
+  "id": "course_184_romulus_et_remus_la_fondation_de_rome",
+  "title": "Romulus a Remus: založenie Ríma",
+  "subtitle": "Rímska mytológia",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Dojčená vlčicou, zakladateľmi Ríma... a bratovraždami. Mýtus, ktorý kladie právo a hranice pred krv.",
+  "hero": {
+    "image": "romulus_et_remus_la_fondation_de_rome",
+    "ratio": "16:9",
+    "hook": "Rím sa nezrodil z mäkkého paktu. Narodila sa z vlčice, posvätnej brázdy... a zabitého brata."
+  },
+  "sections": [
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Príbeh **Romulus** a **Rémus** je zakladajúcim mýtom Ríma. Toto nie je rozprávka pre deti. Je to príbeh dvojitej roztržky: [[vestálka panna]], ktorý poruší svoj sľub čistoty, potom **fravražda**, ktorý kladie zákon pred krv."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rímska tradícia tento zločin neskrýva. Robí z neho základ mesta postaveného na posvätnej hranici a na prežití štátu, viac ako na rodine."
+        }
+      ]
+    },
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_p1",
+      "title": "Vlčica z Tiberu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V Albe Dlhej, meste potomkov Aeneasa, prenasleduje uzurpátor **Amulius** svojho brata Numitora. Aby zlikvidoval rodovú líniu, prinúti svoju neter **Rhéu Silviu**, aby sa stala vestálkou. Ale **marca**, boh vojny, sa s ňou spája. Narodia sa dvojčatá."
+        },
+        {
+          "type": "image",
+          "asset": "mars_rhea_silvia_roman_mythology_painting",
+          "ratio": "4:3",
+          "caption": "Mars a Rhea Silvia: božské narodenie dvojčiat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amulius ich prikáže utopiť v Tibere. Rozvodnená rieka ukladá kolísku pri **Palatin** pod figovník [[Ficus Ruminalis]]. A **vlčica** ich dojčí; kŕmi ich ďateľ, vták z Marsu. Vychováva ich pastier Faustulus a jeho manželka Acca Larentia."
+        },
+        {
+          "type": "image",
+          "asset": "capitoline_wolf_romulus_remus_bronze_sculpture",
+          "ratio": "1:1",
+          "caption": "Kapitolská vlčica, obraz osirelého a dravého Ríma."
+        },
+        {
+          "type": "funFact",
+          "text": "V latinčine „lupa“ znamená vlčica... a prostitútka. Už starovekí autori naznačili, že Acca Larentia, tak prezývaná, bola skutočným „vlkom“ legendy."
+        }
+      ]
+    },
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_p2",
+      "title": "Brázda a vražda",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ako dospelí dvojčatá zvrhnú Amulia a obnovia Numitor. Potom chcú založiť vlastné mesto. Romulus si vyberie **Palatin**; Remus, Aventín. Aby sa rozhodli, vezmú [[znamenia]]: Remus najprv vidí šesť supov; Romulus ďalej vidí dvanásť."
+        },
+        {
+          "type": "image",
+          "asset": "palatine_hill_rome_founding_myth",
+          "ratio": "4:3",
+          "caption": "Palatín: kopec, na ktorom Romulus sleduje Rím."
+        },
+        {
+          "type": "paragraph",
+          "text": "Romulus sleduje [[pomoerium]], posvätnú brázdu ohrady, a sľubuje smrť každému, kto ju prekročí. Remus vzdorom preskočí. Romulus (alebo jeho poručík Celer) ho zabije. Rím bol založený 21. apríla 753 pred Kristom. , I. rok kalendára [[Ab Urbe Condita (753 pred Kr.)]]."
+        },
+        {
+          "type": "funFact",
+          "text": "21. apríl zostáva „Natale di Roma“. Na poludnie slnko zasiahne vchod do Panteónu: efekt, ktorý starovekí architekti navrhli na zvýšenie sily."
+        }
+      ]
+    },
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_p3",
+      "title": "Únos Sabinov",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prvý problém: mestu chýbajú ženy. Romulus organizuje hry a pozýva susedov. Uprostred večierku Rimania unesú mladé dievčatá: **Rapt zo Sabiniek**. **Sabins** na čele s Titusom Tatiusom vyhlasujú vojnu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na bojisku medzi otcov a manželov zasahovali sabinské ženy, už matky rímskych detí. Vojna sa zastaví. Oba národy sa spájajú. Romulus a Titus Tatius vládnu spolu. Rimania prijali názov [[Quirites]]. Rím sa stáva spoločnosťou, ktorá integruje nepriateľa."
+        }
+      ]
+    },
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_p4",
+      "title": "Z Romula sa stáva Quirinus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po tridsiatich siedmich rokoch vlády a vytvorení senátu so stovkou „otcov“ Romulus zmizol počas búrky na Champ de Mars. Oficiálna verzia hovorí, že Mars ho vezme do neba: stane sa bohom **Quirinus**. Iná verzia šepká, že ho zavraždili senátori."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zostáva obraz [[Kapitolský vlk]]: sirotského mesta, živeného divokosťou, schopného premeniť marginalizovaných ľudí na majstrov sveta."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mýtus",
+              "title": "Narodenie dvojčiat",
+              "detail": "Mars a Rhea Silvia; vlčica z Tiberu."
+            },
+            {
+              "date": "753 pred Kristom",
+              "title": "Založenie Ríma",
+              "detail": "Romulus zabije Rema a vystopuje pomoerium."
+            },
+            {
+              "date": "Sledovanie",
+              "title": "Znásilnenie Sabinov",
+              "detail": "Vojna, potom splynutie národov."
+            },
+            {
+              "date": "+37 rokov",
+              "title": "Apoteóza",
+              "detail": "Romulus zmizne a stane sa Quirinom."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Rím, založený na bratovražde a únose, čerpá zo svojho mýtu jasnú myšlienku: prežitie štátu a rešpekt k posvätnej hranici majú prednosť pred pokrvnými zväzkami."
+        }
+      ]
+    }
+  ]
+}

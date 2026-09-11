@@ -1,0 +1,104 @@
+{
+  "id": "course_215_les_inegalites_nord_sud",
+  "title": "Nerovnosti sever-juh",
+  "subtitle": "Dvojrýchlostný svet",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "10 % najbohatších na planéte zaberá viac ako polovicu celosvetového príjmu. Extrémnu chudobu však za tridsať rokov delili štyri.",
+  "hero": {
+    "image": "les_inegalites_nord_sud",
+    "ratio": "16:9",
+    "hook": "Američan zarobí za hodinu to, čo obyvateľ Nigeru za celý deň práce."
+  },
+  "sections": [
+    {
+      "id": "course_215_les_inegalites_nord_sud_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rozdiel medzi bohatými a chudobnými krajinami zostáva jedným z najvýraznejších faktov v dnešnom svete. Globalizácia sľubovala zblíženie životnej úrovne, ale rozdiely v bohatstve medzi národmi zostávajú obrovské."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nedávna história však nie je len pochmúrna: extrémna chudoba sa za tridsať rokov znižovala rýchlejšie ako kedykoľvek predtým. Tento kurz skúma korene týchto nerovností a dôvody tohto zvláštneho paradoxu."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p1",
+      "title": "Dvojrýchlostný svet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**** najbohatších 10 % svetovej populácie získava viac ako 52 % celosvetového príjmu. Najchudobnejších 50 % si musí rozdeliť len 8 % koláča. Táto koncentrácia bohatstva nebola nikdy v histórii ľudstva väčšia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento rozdiel sa prejavuje aj v očakávanej dĺžke života: v Japonsku dosahuje 83 rokov, ale v Stredoafrickej republike klesá na 55 rokov. Tieto medzery nie sú spôsobené náhodou: pochádzajú z veľmi nerovnakého prístupu k pitnej vode, potravinám a zdravotnej starostlivosti."
+        },
+        {
+          "type": "funFact",
+          "text": "Obyvateľ Spojených štátov zarobí v priemere za hodinu práce toľko ako obyvateľ Nigeru za celý deň."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p2",
+      "title": "Historické korene stále živé",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aby sme pochopili tieto rozdiely, musíme sa vrátiť ku kolonizácii. Európske mocnosti zorganizovali mnohé južné územia ako dodávateľov surovín (káva, kakao, bavlna), čím obmedzili vlastnú industrializáciu, aby ochránili svoje vlastné továrne."
+        },
+        {
+          "type": "image",
+          "asset": "global_inequality_rich_poor_contrast_photograph",
+          "ratio": "16:9",
+          "caption": "Rozdiely v bohatstve medzi severom a juhom zostávajú jedny z najväčších na planéte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Táto logika pokračuje aj dnes prostredníctvom [[obchodné podmienky]]: krajiny juhu často predávajú suroviny, ktorých cena sa veľmi líši, zatiaľ čo kupujú vyrobené výrobky, ktorých cena len stúpa. K tomu sa pridáva váha dlhu: splácanie úrokov niekedy zaberá v štátnom rozpočte viac miesta ako školstvo alebo zdravotníctvo."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p3",
+      "title": "Skutočný pokrok, ale nerovnomerný",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za posledných tridsať rokov však došlo k veľkolepému poklesu absolútnej chudoby, ktorá v roku 1990 postihla 36 % svetovej populácie, v porovnaní s menej ako 10 % pred rokom 2020. Tento pokrok pochádza najmä z prudkého rastu Číny a Indie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento pokrok má skrytú stránku: toto ukazuje [[\"slonia krivka\"]] ekonóma Branka Milanoviča. Ázijské stredné triedy zaznamenali prudký nárast príjmov, no robotnícka trieda v bohatých krajinách stagnovala a čelila globálnej konkurencii. Znižovanie nerovností medzi krajinami preto nezabránilo novému napätiu ani v rámci bohatých krajín."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p4",
+      "title": "Klíma, nová deliaca čiara",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Budúcnosť nerovností medzi severom a juhom teraz závisí od klímy. Krajiny Juhu, ktoré sú historicky najmenej zodpovedné za emisie skleníkových plynov, sú napriek tomu najviac vystavené suchám, záplavám a stúpajúcej hladine vôd."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na udržateľné zníženie týchto rozdielov medzinárodné spoločenstvo hľadá nové cesty: [[oficiálna rozvojová pomoc]] zameraná na energetickú transformáciu alebo zrušenie dlhu najcitlivejších krajín. Pokiaľ bude bohatstvo najbohatších rásť rýchlejšie ako bohatstvo najchudobnejších, napätie zostane vysoké."
+        },
+        {
+          "type": "takeaway",
+          "text": "Najbohatších 10 % sveta získava viac ako polovicu celosvetového príjmu, no extrémna chudoba sa za tridsať rokov znižovala rýchlejšie ako kedykoľvek predtým vďaka vzostupu Číny a Indie. Ďalšou veľkou výzvou v tomto rozdelení medzi severom a juhom bude klíma."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "id": "course_14_la_commune_de_paris_1871",
+  "title": "Pariška komuna",
+  "subtitle": "1871",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Od 18. marca do 28. maja 1871 je Pariz vladal sam sebi **72 dni**. Izkušnja se konča v Krvavem tednu, represiji, ki pusti trajen pečat v francoskem spominu.",
+  "hero": {
+    "image": "la_commune_de_paris_1871",
+    "ratio": "16:9",
+    "hook": "72 dni, ko Pariz vlada sam sebi ... preden ga strte v krvi."
+  },
+  "sections": [
+    {
+      "id": "course_14_la_commune_de_paris_1871_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od **18.marca** do **28.maja 1871** Pariz doživlja redko izkušnjo: **Občina**. **72 dni** glavno mesto vlada samo sebi. Noče ubogati vlade, nameščene v **Versailles**, in poskuša bolj socialno demokracijo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta upor se je rodil iz nacionalnega poraza, lačnega obleganja in razkola med radikalnim Parizom in bolj konservativno provinco. Konča se z **Krvavi teden**."
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p1",
+      "title": "Po porazu in obleganju",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vse se začne pri [[Francosko-pruska vojna]] (**1870-1871**). Francoski cesar **Napoleon III** je ujet pri **Limuzina**. Pariz je nato prestal štirimesečno obleganje. Jemo konje, živali iz živalskih vrtov, nato podgane. Kapitulacija se zdi ponižujoča."
+        },
+        {
+          "type": "image",
+          "asset": "paris_commune_barricades_1871",
+          "ratio": "4:3",
+          "caption": "Pariške barikade med komuno leta 1871."
+        },
+        {
+          "type": "funFact",
+          "text": "Za božič **1870** so nekatere luksuzne restavracije stregle slonji parfe ali kengurujevo enolončnico iz menažerije Jardin des Plantes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Februarja je [[Adolphe Thiers]] vodil večinoma monarhistično skupščino, umaknjeno v Versailles. 18. marca **** je hotel zaseči topove [[Nacionalna garda]], milice oboroženih Parižanov, shranjene v **Montmartre**. Množica se brati z vojaki. Thiers evakuira Pariz. Centralni komite prevzame nadzor nad mestom."
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p2",
+      "title": "Kar je poskušala Komuna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**28. blagovna znamka** je bila razglašena Komuna. Delavci, obrtniki, novinarji, blizu [[Mednarodno združenje delavcev (Prva internacionala)]] (mreža sindikatov in delavskih strank): svet zakonodaja po hitrem postopku. Odpust najemnin. Ukinitev nočnega dela za peke. Zapuščene delavnice izročene zadrugam."
+        },
+        {
+          "type": "image",
+          "asset": "paris_city_hall_commune_1871",
+          "ratio": "4:3",
+          "caption": "Mestna hiša, politično srce komune."
+        },
+        {
+          "type": "paragraph",
+          "text": "Razglasila je tudi ločitev Cerkve od države, posvetnih in svobodnih šol ter dala podreti stolpec **Vendôme**, simbol imperija. [[Louise Michel]], učiteljica in aktivistka, uteleša osrednjo vlogo žensk v klubih in na barikadah."
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p3",
+      "title": "Krvavi teden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "21. maja  so čete Versaillesa vstopile v Pariz. To je **krvavi teden**. Soseska za sosesko, barikada za barikado, represija je huda. Talci so ustreljeni. Gorijo Tuileries in Hôtel de Ville."
+        },
+        {
+          "type": "image",
+          "asset": "bloody_week_1871_paris",
+          "ratio": "4:3",
+          "caption": "Krvavi teden: Pariz ponovno zavzet ulico za ulico."
+        },
+        {
+          "type": "funFact",
+          "text": "V času komune je rdeča zastava postala uradni simbol Pariza in nadomestila trobojnico, ki je bila preveč povezana s silami, ki so kapitulirale."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Fédérés]], ime za privržence komune, so se umaknili na pokopališče **Père-Lachaise**. Zadnji borci **147** so bili tam ustreljeni pri **Zid federatov**. Rezultati: med **10.000 do 30.000** smrti v enem tednu, nato deportacije v Novo Kaledonijo."
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p4",
+      "title": "Mit, ki traja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za filozofa **Karla Marx** in Internacionalo je bila komuna prva izkušnja delavske oblasti. Vendar pa njeno zatiranje utrjuje »red« **III Republika**. Komunistične ideje (sekularizem, socialne pravice) se bodo pozneje vrnile v republiško pravo."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "18. marec 1871",
+              "title": "Montmartre",
+              "detail": "Thiersu ne uspe zavzeti topov; Pariz se ziba."
+            },
+            {
+              "date": "28. marec 1871",
+              "title": "Razglasitev",
+              "detail": "Komuna je uradno ustanovljena."
+            },
+            {
+              "date": "21.-28. maj 1871",
+              "title": "Krvav teden",
+              "detail": "Versailles zatre vstajo."
+            },
+            {
+              "date": "28. maj 1871",
+              "title": "Zid federatov",
+              "detail": "Konec bojev pri Père-Lachaise."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "V **72 dneh** je pariška komuna poskušala uvesti radikalno socialno demokracijo, preden je bila uničena med Krvavim tednom, za ceno več deset tisoč smrti."
+        }
+      ]
+    }
+  ]
+}

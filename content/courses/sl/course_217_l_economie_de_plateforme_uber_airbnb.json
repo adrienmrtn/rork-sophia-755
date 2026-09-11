@@ -1,0 +1,108 @@
+{
+  "id": "course_217_l_economie_de_plateforme_uber_airbnb",
+  "title": "Platformsko gospodarstvo (Uber, Airbnb itd.)",
+  "subtitle": "Kapitalizem brez tovarn",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Uber, Airbnb, Deliveroo nimajo skoraj ničesar: ne avtomobilov, ne stanovanj, ne zaposlenih. Kako so te platforme postale svetovni velikani?",
+  "hero": {
+    "image": "l_economie_de_plateforme",
+    "ratio": "16:9",
+    "hook": "Uber nikoli ni imel v lasti niti enega avtomobila, vendar je motil prevoz po vsem svetu."
+  },
+  "sections": [
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uber, Airbnb, Amazon ali Deliveroo spadajo v novo kategorijo podjetij: **digitalna platforma**. Ne digitalizirajo samo storitev, ki so že obstajale: spremenijo sam način lastništva, delovanja in zaščite."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta model je izumil novo obliko kapitalizma, ki postavlja pod vprašaj našo družbeno pogodbo. Razumejmo, kako deluje in zakaj se o njem toliko razpravlja."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p1",
+      "title": "Kapitalizem brez tovarn in zaposlenih",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tradicionalno podjetje ima v lasti tovarne, vozila, zaloge in zaposluje zaposlene. Platforma poruši ta model: postane preprosta digitalna infrastruktura, ki povezuje ponudbo in povpraševanje, ne da bi sama karkoli proizvedla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta sistem temelji na [[Mrežni učinek]]: več kot ima platforma uporabnikov, bolj uporabna postaja, kar pritegne še več uporabnikov. Pri prevozni storitvi velja, da je več voznikov na voljo, krajše je čakanje, kar pritegne več strank, te pa več voznikov. Ta krog skoraj vedno vodi v kvazimonopolne situacije."
+        },
+        {
+          "type": "funFact",
+          "text": "Uber je porabil milijarde dolarjev za raziskovanje samovozečih avtomobilov, s čimer se je končno želel znebiti svojega zadnjega velikega stroška: človeškega voznika."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p2",
+      "title": "Delo brez zaščite zaposlitve",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To tehnično novost spremlja bolj sporna pravna novost. V [[gig gospodarstvo in uberizacija]] platforma zavrača status delodajalca, da bi se predstavila kot preprost tehnološki posrednik, ki se izogiba plačilu socialnih prispevkov, minimalne plače ali plačanega dopusta."
+        },
+        {
+          "type": "image",
+          "asset": "gig_economy_workers_strike_protest",
+          "ratio": "16:9",
+          "caption": "Vozniki in dostavljavci so pogosto razvrščeni kot samozaposleni, ne kot zaposleni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Delavec postane samostojni delavec, ki sam nosi vsa tveganja: bolezen, nesreča, padec povpraševanja. Vendar pogosto ostaja podvržen pravilom aplikacije (uvedene cene, ocena, sankcije), kar imenujemo **algoritemska podrejenost**. Soočena s tem so sodišča v več državah začela vsiljevati [[prekvalifikacija]] teh pogodb v realno zaposlitev."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p3",
+      "title": "Mesta obrnjena na glavo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vpliv teh platform presega svet dela: spreminja tudi mesta. Airbnb z omogočanjem kratkoročnih turističnih najemov tekmuje s tradicionalnimi hoteli, hkrati pa zmanjšuje število nastanitev, ki so na voljo prebivalcem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rezultat: najemnine v mestnih središčih rastejo, metropole, kot sta Pariz ali Barcelona, pa so morale uvesti stroga pravila, kot so kvote za najemnine. Države si prav tako prizadevajo vzpostaviti **digitalno obdavčitev**, tako da te platforme plačajo svoj delež davkov tam, kjer dejansko zaslužijo svoj denar."
+        },
+        {
+          "type": "funFact",
+          "text": "V New Yorku je stroga ureditev proti Airbnbju leta 2023 povzročila, da se je število zakonitih oglasov v nekaj mesecih zmanjšalo za 80 %."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p4",
+      "title": "Novemu statusu delavcev naproti?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ekonomija platform je prinesla hitre in pogosto cenejše storitve ter nekaterim ljudem olajšala iskanje zaslužka. Toda ta učinkovitost temelji na oslabitvi zaščite, zgrajene v 20. stoletju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trenutna razprava se nanaša na oblikovanje vmesnega statusa med zaposlenim in samozaposlenim s prenosljivostjo pravic: vsak delavec bi pridobil socialno zaščito, ne glede na število platform, za katere dela. Prihodnost tega modela bo odvisna od sposobnosti regulatorjev, da ga regulirajo, ne da bi zavirali inovacije."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ekonomija platforme temelji na kapitalizmu brez tovarn, ki izkorišča mrežni učinek, svoje delavce pa spreminja v pogosto prekarne svobodnjake. Bitka za boljšo socialno zaščito, ne da bi razbili ta model, se je šele začela."
+        }
+      ]
+    }
+  ]
+}

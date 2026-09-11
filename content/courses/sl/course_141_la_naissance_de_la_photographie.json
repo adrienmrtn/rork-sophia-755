@@ -1,0 +1,131 @@
+{
+  "id": "course_141_la_naissance_de_la_photographie",
+  "title": "Rojstvo fotografije",
+  "subtitle": "1839",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "V **1839** je več izumiteljev končno našlo, kako na krožnik pritrditi sliko. V manj kot stoletju je fotografija spremenila način, kako vidimo, se spominjamo in verjamemo.",
+  "hero": {
+    "image": "la_naissance_de_la_photographie",
+    "ratio": "16:9",
+    "hook": "Kako je kemični izum slikarstvu ukradel monopol nad realnostjo."
+  },
+  "sections": [
+    {
+      "id": "course_141_la_naissance_de_la_photographie_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Umetniki že stoletja uporabljajo [[temnica]]: temno škatlo, ki projicira zunanji svet na steno. Težava ostaja enaka: slika izgine takoj, ko ugasnete luč. Leta **1839** se je fotografija uradno rodila. Ne gre za delo enega samega genija, temveč za tekmo med francoskimi in britanskimi izumitelji."
+        },
+        {
+          "type": "paragraph",
+          "text": "V manj kot stoletju je ta proces slikarstvo osvobodil vloge dokumenta in postal prvi množični medij. Spreminja naš odnos do časa, spomina in vizualne resnice."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p1",
+      "title": "Od Niépcea do dagerotipije",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vse se začne z **Nicéphore Niépce**, francoskim izumiteljem. Okrog leta **1826-1827** popravi prvo trajno sliko: *Pogled z okna Gras*. Kositrno ploščo premaže z [[Bitumen iz Judeje]], katranom, ki se na svetlobi strdi. Osvetlitev traja približno **8 ur**: sonce ima čas, da osvetli obe strani stavb."
+        },
+        {
+          "type": "image",
+          "asset": "niepce_first_photograph_view_from_window_gras",
+          "ratio": "4:3",
+          "caption": "Najstarejša znana fotografija, ki jo je Niépce posnel s svojega okna."
+        },
+        {
+          "type": "funFact",
+          "text": "Na tej sliki sta vidni senci obeh fasad hkrati: snemanje je trajalo tako dolgo, da je sonce obkrožilo nebo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Po Niépcejevi smrti je njegov sodelavec **Louis Daguerre** odkril učinek joda in živosrebrovih hlapov na srebro. Razvil je **dagerotip**, predstavljen Akademiji znanosti leta **1839**. V Angliji **William Fox Talbot** razvija tudi [[Kalotip Williama Foxa Talbota]], ki omogoča izdelavo več kopij iz negativa."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p2",
+      "title": "Portret za vse, dokaz za vse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od let **1840** je fotografija zapustila laboratorije. Do takrat je bilo imeti svoj portret razkošje, rezervirano za tiste, ki so lahko plačali slikarja. S studii in [[Carte-de-visite]], majhnim, poceni formatom, imajo buržoazija in nato delavski razredi dostop do podobe o sebi."
+        },
+        {
+          "type": "image",
+          "asset": "louis_daguerre_daguerreotype_silver_plate",
+          "ratio": "4:3",
+          "caption": "Dagerotipija: edinstvena podoba z osupljivimi podrobnostmi na srebrni plošči."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fotografija postane tudi dokaz. Med krimsko vojno (**1855**) **Roger Fenton** poroča o slikah s fronte. Med ameriško državljansko vojno je **Matthew Brady** fotografiral vojake in bojišča. Dogodek ni več samo povedan: prikazan je."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p3",
+      "title": "Ko se mora slikanje znova odkriti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Če stroj kopira obraz bolje od slikarja, čemu služi barva? Je [[Vpliv fotografije na figurativno slikarstvo]]: figurativna umetnost izgubi monopol nad realnostjo. Osvobojeni te dolžnosti, umetniki raziskujejo nekaj drugega: občutenje svetlobe z [[Impresionizem]], nato deformacijo oblik z [[kubizem]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fotografija postopoma zahteva svoj jezik: kadriranje, svetloba, trenutek. Ni več preprosta kopija sveta. Postane umetnost sama po sebi."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p4",
+      "title": "Kodak in slikovna kultura",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Konec 19. stoletja je George Eastman, ustanovitelj Kodaka, zamenjal težke steklene plošče z upogljivo folijo. Naprava postane prenosna. Slogan »Vi pritisnete gumb, mi naredimo ostalo« označuje rojstvo amaterja. Družinski album in globalno poročilo sta rojena skupaj."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1826",
+              "title": "Prva fotografija Niépceja",
+              "detail": "Pogled z okna Gras, po urah izpostavljenosti."
+            },
+            {
+              "date": "1839",
+              "title": "Dagerotipija",
+              "detail": "Daguerre predstavi svoj postopek v Parizu."
+            },
+            {
+              "date": "1841",
+              "title": "Kalotip",
+              "detail": "Talbot omogoča tisk več kopij."
+            },
+            {
+              "date": "1888",
+              "title": "Kodak za vsakogar",
+              "detail": "Eastman demokratizira amatersko kamero."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Fotografija, rojena v **1839**, je najprej bolje fiksirala realnost kot slika, nato pa je izumila našo moderno [[Vizualna kultura]]: tisto, kjer najprej verjamemo, kar vidimo."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "course_147_l_architecture_gothique_les_cathedrales",
+  "title": "Gotická architektúra: katedrály",
+  "subtitle": "12.-16. storočie",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Od 12. do 16. storočia gotické katedrály dvíhali kameň k oblohe. Špicatý oblúk, rebrované oblúky, vitráže: technická revolúcia v službách svetla.",
+  "hero": {
+    "image": "l_architecture_gothique_les_cathedrales",
+    "ratio": "16:9",
+    "hook": "Ako stredovek prinútil kameň letieť, aby vpustil Boha na svetlo."
+  },
+  "sections": [
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Medzi 12. a 16. storočím bola Európa pokrytá **gotickými katedrálami**. Nejde len o kostoly. Toto sú inžinierske výzvy: kamenné nádoby, ktoré akoby vzdorovali gravitácii, aby prepustili svetlo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Slovo „gotický“ sa neskôr objavilo ako urážka, „umenie Gótov“. Tento štýl však spája vieru, mestský blahobyt a technickú drzosť. Stále dominuje centrám našich miest."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p1",
+      "title": "Saint-Denis: kameň sa učí byť ľahším",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gothic sa zrodil v **Île-de-France** okolo **1140**. Zakladajúcim šokom je refrén [[Bazilika Saint-Denis]], ktorý nesie [[Opát Suger]]. Tvárou v tvár tmavým románskym kostolom s hrubými stenami chcel Suger jednotnejší, ľahší a vyšší priestor."
+        },
+        {
+          "type": "image",
+          "asset": "saint_denis_basilica_gothic_abbot_suger",
+          "ratio": "4:3",
+          "caption": "Saint-Denis: laboratórium, kde sa gotika učí jazdiť."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tri vynálezy spolupracujú: **** špicatý oblúk, vyšší a užší; **rebrovaná klenba**, ktorá sústreďuje váhu na konkrétne body; a [[lietajúca opora]], vonkajší oblúk, ktorý pôsobí proti ťahom. Spoločne [[Lietajúca opora a rebrová klenba]] uvoľňujú steny: veľké okná sa dajú otvárať."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p2",
+      "title": "Svetlo ako božský jazyk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pre Sugera nie je svetlo dekoratívny detail. Podľa [[Teológia svetla (opát Suger)]] farebné lúče pomáhajú duši povzniesť sa k Bohu. Steny sa stávajú **farebné sklo**. V spoločnosti, kde mnohí nevedia čítať, tieto obrázky rozprávajú príbeh Biblie a života mesta."
+        },
+        {
+          "type": "funFact",
+          "text": "V **Chartres** si niektoré farebné sklenené okná z 13. storočia zachovali takú intenzívnu modrú, že stále hovoríme o „Chartres modrej“: farbe, ktorá sa stala podpisom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Katedrála už nie je kamennou pevnosťou. Stane sa klietkou svetla."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p3",
+      "title": "Projekt, ktorý trvá stáročia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stavba katedrály často trvá viac ako **dve storočia**. Vojny, epidémie, nedostatok peňazí: projekt rýchlo napreduje. **Notre-Dame v Paríži** sa začína v **1163** a nachádza svoju podobu okolo **1345** po približne 180 rokoch."
+        },
+        {
+          "type": "image",
+          "asset": "notre_dame_de_paris_cathedral_facade",
+          "ratio": "4:3",
+          "caption": "Notre-Dame de Paris: stredoveké stavenisko, ktoré sa stalo národným symbolom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Celé mesto pracuje: kamenári, tesári, sklári. Ťažba kameňa, preprava dreva, kŕmenie tímov: katedrála je tiež ekonomický stroj."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p4",
+      "title": "Od okázalej gotiky po neogotiku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Štýl sa vyvinul: klasický gotický (Chartres, Amiens), potom žiarivý (Sainte-Chapelle), potom okázalý, dekoratívnejší. V 19. storočí ho Európa znovu objavila so **neogotickým**. Obnovujú sa nedokončené projekty, ako napríklad **Kolín nad Rýnom**, dokončené o **1880**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1140",
+              "title": "Saint-Denis",
+              "detail": "Suger spúšťa refrén, ktorý otvára éru gotiky."
+            },
+            {
+              "date": "1163",
+              "title": "Notre-Dame v Paríži",
+              "detail": "Začiatok projektu trvajúceho takmer dve storočia."
+            },
+            {
+              "date": "13. storočia.",
+              "title": "Apogee",
+              "detail": "Chartres, Amiens, Reims zavádzajú klasický model."
+            },
+            {
+              "date": "19. storočia.",
+              "title": "Neogotický",
+              "detail": "Európa obnovuje a znovuobjavuje stredoveký štýl."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Gotika premenila katedrálu na nádobu svetla. Uvoľnením hradieb vďaka špicatému oblúku a lietajúcej opore vynašiel stredovek architektúru, ktorá dodnes hovorí k našim mestám."
+        }
+      ]
+    }
+  ]
+}

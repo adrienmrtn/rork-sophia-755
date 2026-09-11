@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Ako funguje pamäť?",
+  "subtitle": "Mozog",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Pamäť nie je fotoaparát. Každá spomienka je zrekonštruovaná. Takto mozog kóduje, ukladá… a niekedy aj vymýšľa.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "Zapamätanie nie je opätovné čítanie súboru. Rekonštruuje scénu."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pamäť si často predstavujeme ako pevný disk: zaznamenávame, ukladáme, znovu čítame. Mozog takto nefunguje. Zakaždým, keď si spomeniete, **zrekonštruovaný** scénu z fragmentov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Je to silné... a omylné. Pochopiť to znamená pochopiť, prečo zabúdame, prečo robíme chyby a prečo sa učíme."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Niekoľko spomienok, nielen jedna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Rôzne oblasti mozgu zvládajú rôzne formy pamäte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prvá je [[Pracovná pamäť]]: to, čo máte na pár sekúnd „v pamäti“, napríklad telefónne číslo. Je obmedzený, v priemere okolo **7 prvkov**. Ďalej **dlhodobá pamäť**: fakty, spomienky na udalosti, zručnosti ako jazda na bicykli."
+        },
+        {
+          "type": "paragraph",
+          "text": "Všetky tieto systémy nežijú na rovnakom mieste v mozgu. **prefrontálna kôra**, predná časť mozgu za čelom, veľmi pomáha s pracovnou pamäťou. Iné oblasti, ako napríklad **neokortex**, vonkajšia vrstva mozgu, uchovávajú dlhodobé zásoby."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Ako sa opravuje pamäť",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "Hipocampus, hlboká štruktúra, pomáha vytvárať nové spomienky."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aby sa informácie zmenili z krehkých na trvanlivé, mozog musí posilniť spojenia medzi **neurónmi**, nervovými bunkami. Hovoríme o **konsolidácii**, premene nedávnej spomienky na trvalú stopu. Malá štruktúra s názvom **morský koník**, tvarovaná ako morský koník v spánkovom laloku, hrá kľúčovú úlohu v spomienkach na udalosti."
+        },
+        {
+          "type": "funFact",
+          "text": "Spánok, najmä určité fázy, pomáha upevniť si to, čo sme sa počas dňa naučili. Revízia potom spánku často funguje lepšie ako revízia do 3:00."
+        },
+        {
+          "type": "paragraph",
+          "text": "Slávne pravidlo, spojené s výskumníkom **Donaldom Hebbom**: neuróny, ktoré spolu pália, majú tendenciu sa silnejšie spájať. Stručne povedané: „čo svetlá spolu spája“. Toto je princíp **neuroplasticita**, schopnosti mozgu modifikovať svoje spojenia."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "Zapamätať si znamená upraviť",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Keď vyvoláte spomienku, dočasne sa zmení na **mužný**, upraviteľnú. Detaily zo súčasnosti môžu vkĺznuť dovnútra. Potom ich mozog znova uloží. To je dôvod, prečo dvaja svedkovia tej istej nehody môžu povedať rôzne verzie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Môžeme dokonca vytvárať **falošné spomienky**: scény, o ktorých sme presvedčení, že sú pravdivé, ale ktoré sa nikdy nestali, alebo nie. Mozog vypĺňa medzery tým, čo už vie."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "Zabudnutie nie je vždy zlyhanie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ak by ste si pamätali každý nepotrebný detail, boli by ste nasýtení. Zabúdanie nám pomáha zovšeobecňovať, rozhodovať sa, zachovávať to podstatné. Dobrá pamäť triedi toľko, koľko si uchováva."
+        },
+        {
+          "type": "takeaway",
+          "text": "Pamäť je aktívna rekonštrukcia, nie dokonalý záznam. Spolieha sa na niekoľko systémov, konsoliduje sa najmä počas spánku a pri každej pripomienke sa môže skresliť."
+        }
+      ]
+    }
+  ]
+}

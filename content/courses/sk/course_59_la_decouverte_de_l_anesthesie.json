@@ -1,0 +1,98 @@
+{
+  "id": "course_59_la_decouverte_de_l_anesthesie",
+  "title": "Objav anestézie",
+  "subtitle": "Liek",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Pred rokom 1846 sa operácia často vykonávala vedome a v extrémnych bolestiach. Anestézia premieňa operáciu na starostlivosť, nie na mučenie.",
+  "hero": {
+    "image": "la_decouverte_de_l_anesthesie",
+    "ratio": "16:9",
+    "hook": "Jedného dňa v roku 1846 v Bostone chirurgia prestala byť pretekom proti bolesti."
+  },
+  "sections": [
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Predstavte si amputáciu bez toho, aby ste zaspali. Pred polovicou 19. storočia to bola norma. Pacienta pripútame, rýchlo sa pohybujeme, modlíme sa."
+        },
+        {
+          "type": "paragraph",
+          "text": "**anestézia** mení všetko: umožňuje vám operovať bez uvedomenia si bolesti. Moderná chirurgia si dá konečne načas."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p1",
+      "title": "Predtým: rýchlosť verzus utrpenie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "surgery_without_anesthesia_19th_century",
+          "ratio": "4:3",
+          "caption": "Bez anestézie musel byť chirurg extrémne rýchly."
+        },
+        {
+          "type": "paragraph",
+          "text": "Chirurgovia boli hodnotení podľa rýchlosti. Na znehybnenie ľudí sa používal alkohol, ópium alebo hrubá sila. Mnoho pacientov zomrelo na šok, infekciu alebo krvácanie."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p2",
+      "title": "1846: deň éteru",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "ether_anesthesia_first_demonstration_1846",
+          "ratio": "4:3",
+          "caption": "Verejná demonštrácia v Bostone presvedčila lekársky svet."
+        },
+        {
+          "type": "paragraph",
+          "text": "**O 16. októbra 1846** v Bostone zubný lekár **William Morton** prinútil pacienta vdýchnuť **éter**. Chirurg **John Warren** operuje nádor na krku. Pacient nekričí. Izba je ohromená."
+        },
+        {
+          "type": "funFact",
+          "text": "Warren údajne povedal: \"Páni, toto nie je humbug.\" Fráza zostala slávna."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p3",
+      "title": "Ďalej: chloroform a debaty",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nasledovali ďalšie produkty, ako napríklad **chloroform**, popularizovaný najmä vo Veľkej Británii. Vznikajú rivality o to, kto čo „vynašiel“. Na patente nezáleží: myšlienka sa šíri po celom svete."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zostáva jeden problém: uspať bez zabíjania. Musíte si to dávkovať, sledovať dýchanie a srdce. Zrodila sa nová špecialita."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p4",
+      "title": "Anestézia dnes",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Anesteziológ dnes používa presné plyny a lieky, prístroje, ktoré všetko zmerajú. Môžete uspať celé telo alebo len oblasť (lokálna alebo lokoregionálna anestézia)."
+        },
+        {
+          "type": "takeaway",
+          "text": "Od demonštrácie éteru v **1846** anestézia zmenila chirurgiu: menej bolesti, viac času, viac presnosti... a bezpečnosť sa stala vedou sama osebe."
+        }
+      ]
+    }
+  ]
+}

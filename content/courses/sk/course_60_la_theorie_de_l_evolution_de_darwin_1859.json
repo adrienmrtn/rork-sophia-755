@@ -1,0 +1,102 @@
+{
+  "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
+  "title": "Darwinova evolučná teória",
+  "subtitle": "1859",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "V roku 1859 vydal Darwin knihu Pôvod druhov. Ústredná myšlienka: živé veci sa časom menia prirodzeným výberom.",
+  "hero": {
+    "image": "la_theorie_de_l_evolution_de_darwin",
+    "ratio": "16:9",
+    "hook": "Druhy nie sú pevne stanovené. Menia sa. pomaly. Ale určite."
+  },
+  "sections": [
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1859** **Charles Darwin** publikoval *Oo pôvode druhov*. Kniha šokuje, fascinuje, rozdeľuje. Jeho ústredná myšlienka je však jednoduchá na formulovanie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Živé veci sa líšia. Niektoré variácie pomáhajú prežiť a rozmnožovať sa. Tieto variácie sa prenášajú. V priebehu generácií sa populácie menia."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
+      "title": "Cesta, ktorá otvára oči",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "charles_darwin_portrait",
+          "ratio": "4:3",
+          "caption": "Darwin, britský prírodovedec 19. storočia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ako malý chlapec odchádza Darwin na loď **Beagle**. Roky pozoroval rastliny, fosílie, vtáky. Na Galapágoch si všimol, že blízke vtáky majú rôzne zobáky v závislosti od potravy."
+        },
+        {
+          "type": "image",
+          "asset": "darwin_finches_galapagos_beaks",
+          "ratio": "4:3",
+          "caption": "Trysky prispôsobené rôznym diétam: silný indikátor."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
+      "title": "Prirodzený výber v jednoduchej angličtine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Predstavte si populáciu zvierat. Niektorí bežia o niečo rýchlejšie, trávia o niečo lepšie, odolávajú chladu o niečo viac. Ak im to pomôže prežiť a mať mláďatá, tieto vlastnosti sa stanú bežnejšími."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nie je to tak, že jednotlivci sa „chcú“ vyvíjať. Je to filter: prostredie uchováva to, čo funguje. Darwin to nazýva **prirodzený výber**."
+        },
+        {
+          "type": "funFact",
+          "text": "Darwin dlho čakal na zverejnenie. Bál sa škandálu. Ďalší prírodovedec, **Alfred Russell Wallace**, prišiel na podobné myšlienky: to prinútilo Darwina vydať svoju knihu."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
+      "title": "Stret myšlienok",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 19. storočí mnohí verili, že druhy boli stvorené také, aké boli. Povedať, že sa menia a že ľudia zdieľajú históriu s inými zvieratami, otriasa náboženstvom a spoločnosťou."
+        },
+        {
+          "type": "paragraph",
+          "text": "Veda napreduje: fosílie, geografia druhov, neskôr genetika, potvrdzujú všeobecnú myšlienku."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
+      "title": "A dnes?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Teraz vieme, že DNA nesie variácie. Evolúciu pozorujeme v laboratóriu (baktérie, vírusy) a v prírode. Bojujeme aj proti baktériám odolným voči antibiotikám: toto je živá evolúcia."
+        },
+        {
+          "type": "takeaway",
+          "text": "Darwin ukázal, že živé veci sa vyvíjajú prirodzeným výberom: šíria sa vlastnosti užitočné na prežitie a reprodukciu. Moderná genetika tento rámec potvrdila a objasnila."
+        }
+      ]
+    }
+  ]
+}

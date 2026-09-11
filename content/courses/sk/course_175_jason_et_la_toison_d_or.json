@@ -1,0 +1,116 @@
+{
+  "id": "course_175_jason_et_la_toison_d_or",
+  "title": "Jason a zlaté rúno",
+  "subtitle": "The Quest of the Argonauts",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Jason a Argonauti idú do Kolchidy hľadať Zlaté rúno. Za dobrodružstvom sa skrýva príbeh lásky a zrady s kúzelníkom Medeou.",
+  "hero": {
+    "image": "jason_et_la_toison_d_or",
+    "ratio": "16:9",
+    "hook": "Päťdesiat hrdinov, magická loď, rúno, ktoré stráži drak. A kúzelník, bez ktorého by sa nič nepodarilo."
+  },
+  "sections": [
+    {
+      "id": "course_175_jason_et_la_toison_d_or_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Jason** zhromažďuje **[[Argonauti]]**, elitu gréckych hrdinov, aby priniesol **Zlaté rúno**: rúno božského barana zaveseného v [[Colchis]], ktorý zhruba zodpovedá dnešnému regiónu Georgia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Táto plavba je jedným z najstarších navigačných príbehov na Západe. Hovorí o kráľovskej legitimite, božskej pomoci... a predovšetkým o deštruktívnej vášni medzi Jasonom a **Medea**, mágom, ktorý umožní víťazstvo, vtedy hrozné."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p1",
+      "title": "Sandále, trón, pasca",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jason je synom Aesona, kráľa Iolcos v Tesálii. Jeho strýko [[Pelias]] si uzurpoval trón. Jason, ktorého vychoval kentaur [[Chiron]], sa vracia, aby získal svoje dedičstvo. Cestou pomáha starenke prejsť cez potok. Je to [[Hera]] v prestrojení. V blate stráca sandále."
+        },
+        {
+          "type": "funFact",
+          "text": "V Kolchide sa ovčie kože niekedy ukladali na dno riek, aby zachytili zlaté vločky. „Zlaté rúno“ môže mať skutočný banský koreň."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pelias sa bojí: veštec ho varoval pred mužom v jednoduchých sandáloch. Sľubuje trón, ak Jason prinesie späť Fleece, strážené drakom. Jason postavil [[Argo]], loď s hovoriacou provou, pomocou posvätného dreva zo [[Dodona]]. Na palube: **Herakles**, **Orfeus**, **Castor a Pollux** a mnoho ďalších."
+        },
+        {
+          "type": "image",
+          "asset": "argonauts_ship_argo_jason_greek_myth",
+          "ratio": "4:3",
+          "caption": "Argo, prvá veľká loď v gréckej legende."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p2",
+      "title": "Narážajúce skaly",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na ceste Argonauti zachránia kráľa Phineusa pred **Harpyje**, monštrami, ktoré mu kradli jedlo. Na oplátku Phinée prezradí, ako prekonať skaly **Symplegades Rocks**, útesy, ktoré narážajú na akúkoľvek loď pri vstupe do Čierneho mora."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jason vypúšťa holubicu. Skaly sa zatvárajú na jeho perách a potom sa otvárajú. Argo sotva prejde. V Kolchide ukladá kráľ **Aeétès** nemožné úlohy: zapriahať ohnivých býkov, orať pole [[Ares]], zasievať dračie zuby, z ktorých sa rodia bojovníci. Bez pomoci by Jason zomrel."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p3",
+      "title": "Medea, architektka víťazstva",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Afrodita]], bohyňa lásky, spôsobila, že sa **Medea**, dcéra Aeetes a kňažka [[Hecate]], zaľúbila do Jasona. Ona mu dáva masť proti ohňu býkov. Pre bojovníkov zrodených zo zubov mu radí, aby medzi nich hodil kameň: zabijú sa navzájom."
+        },
+        {
+          "type": "image",
+          "asset": "medea_jason_greek_myth_waterhouse_painting",
+          "ratio": "4:3",
+          "caption": "Medea a Jason: mágia v službách questu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nakoniec uspí draka. Jason zloží Fleece. Na útek Medea zabije svojho brata **Absyrtos** a jeho pozostatky rozptýli na mori. Aeetes sa zastaví, aby pozbieral telo. Pár je zjednotený... a už prekliaty."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p4",
+      "title": "Zrada a pád",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V Iolcose sa Pelias odmieta vzdať. Medea podvádza svoje dcéry: „omladzujú“ svojho otca tým, že ho rozrežú. Dvojica zahnaná preč sa uchýlila do Korintu. Po rokoch sa chce Jason oženiť s dcérou kráľa Kreóna. Medea sa pomstí: otrávené šaty pre rivala, potom vražda vlastných detí."
+        },
+        {
+          "type": "image",
+          "asset": "medea_vengeance_delacroix_painting",
+          "ratio": "4:3",
+          "caption": "Medeina pomsta po Jasonovej zrade."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jason starne sám. Umiera biedne, rozdrvený zhnitým kusom Arga, pod ktorým odpočíval. Hrdina, ktorý všetko vyhral s pomocou iných, skončí zničený za to, že zaprel toho, kto ho zachránil."
+        },
+        {
+          "type": "takeaway",
+          "text": "Jason dobyje Fleece vďaka Medei a [[Argo]]. Jeho zrada poruší ich pakt a vedie k záhube: mýtus ukazuje, že hrdina, ktorý popiera svojich spojencov, stratí všetko."
+        }
+      ]
+    }
+  ]
+}

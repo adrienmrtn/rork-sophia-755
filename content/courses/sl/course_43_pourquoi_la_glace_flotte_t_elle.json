@@ -1,0 +1,106 @@
+{
+  "id": "course_43_pourquoi_la_glace_flotte_t_elle",
+  "title": "Zakaj led plava?",
+  "subtitle": "Voda in molekule",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Led plava na vodi. To se zdi normalno, vendar je v resnici zelo redko. In na srečo življenja na Zemlji.",
+  "hero": {
+    "image": "pourquoi_la_glace_flotte",
+    "ratio": "16:9",
+    "hook": "Če bi led tekel, bi jezera zmrznila do dna. In življenje v vodi bi težko preživelo."
+  },
+  "sections": [
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kocka ledu v kozarcu, ledena gora v oceanu: led **lebdi**. Zdi se nam banalno. Vendar pa je pri večini snovi trdna snov bolj **gosta**, torej težja pri enaki prostornini: potone."
+        },
+        {
+          "type": "paragraph",
+          "text": "Voda naredi nasprotno. Ta izjema izhaja iz oblike njegove molekule. In pozimi je rešil številna jezera."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p1",
+      "title": "Molekula v obliki črke V",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Molekula vode je atom **oksigena**, ki je povezan z dvema atomoma **vodika**. Ni ravno: tvori **V**. Zaradi te oblike električni naboji niso enakomerno porazdeljeni: molekula je **polarna**, z enim koncem rahlo negativnim in drugim rahlo pozitivnim."
+        },
+        {
+          "type": "image",
+          "asset": "water_molecule_model_crystal",
+          "ratio": "4:3",
+          "caption": "Molekula vode: V, ki privlači in odbija svoje sosede."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rezultat: molekule vode se privlačijo z [[Vodikove vezi]], kot majhni magneti. V tekočini ostanejo blizu, vendar se še vedno premikajo. V ledu zmrznejo drugače."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
+      "title": "Ko voda zmrzne, zavzame prostor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Okoli **0 °C** se voda strdi. Za tvorbo ledu se molekule organizirajo v mrežo **heksagonalno**, nekakšno šeststrano satovje. Nato med seboj pustijo več **prazno** kot v tekočem stanju."
+        },
+        {
+          "type": "funFact",
+          "text": "Zato lahko polna steklenica vode **poči** v zamrzovalniku: led zavzame več volumna kot tekoča voda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Manj materiala v isti prostornini pomeni: **manj gosto**. Vendar se objekt, ki je manj gost kot tekočina okoli njega, dvigne. Led torej plava na vodi. To se imenuje **anomalija raztezanja vode**: za razliko od skoraj vseh snovi se voda razteza, ko se ohlaja pod **4 °C**."
+        },
+        {
+          "type": "image",
+          "asset": "iceberg_floating_arctic_ocean",
+          "ratio": "16:9",
+          "caption": "Ledena gora plava, ker je led manj gost kot tekoča voda."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
+      "title": "Zakaj je ključnega pomena za jezera",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Predstavljajte si, če bi sladoled tekel. Nastala bi na površini, nato pa potonila na dno. Jezero bi zamrznilo plast za plastjo, vse do dna. Poletje pogosto ne bi bilo dovolj, da bi se vse stopilo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na srečo led ostaja na vrhu. Tvori **izolacijski pokrov**. Pod zmrznjeno površino lahko tekoča voda ostane okoli **4 °C**, temperature, kjer je tekoča voda najgostejša, dovolj za preživetje rib in vodnih rastlin."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p4",
+      "title": "In tudi za podnebje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bela ledena plošča odbija velik del Sončeve svetlobe nazaj v vesolje zahvaljujoč visoki **albedo**, svoji odbojni moči. Če izgine, temni ocean absorbira več toplote. To pospešuje segrevanje: začaran krog."
+        },
+        {
+          "type": "takeaway",
+          "text": "Led plava, ker voda, ko se strdi, tvori bolj \"prezračeno\" mrežo: postane manj gosta kot tekoča voda. Ta izjema ščiti vodno življenje pozimi."
+        }
+      ]
+    }
+  ]
+}

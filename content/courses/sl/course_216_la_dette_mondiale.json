@@ -1,0 +1,104 @@
+{
+  "id": "course_216_la_dette_mondiale",
+  "title": "Globalni dolg",
+  "subtitle": "Več kot 300 % svetovnega BDP",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Svetovni dolg še nikoli ni bil višji. Ali naj nas to skrbi ali je to običajno orodje za financiranje rasti in soočanje s krizami?",
+  "hero": {
+    "image": "la_dette_mondiale",
+    "ratio": "16:9",
+    "hook": "Japonska dolguje kar 260 % svojega BDP... in nikogar ne skrbi. Evo zakaj."
+  },
+  "sections": [
+    {
+      "id": "course_216_la_dette_mondiale_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Globalni dolg, dolg držav, podjetij in gospodinjstev skupaj, danes presega **300% svetovnega BDP**, kar je absolutni rekord v gospodarski zgodovini."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta impresivna številka skriva bolj niansirano resničnost: dolg omogoča financiranje rasti, odziv na zdravstvene krize ali pripravo na ekološki prehod. Vendar s seboj nosi tudi tveganje zloma zaupanja."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p1",
+      "title": "Kako se država zadolži",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Država se zadolži, ko njeni odhodki strukturno presežejo davčne prihodke. Ta proračunski primanjkljaj se polni z zadolževanjem na finančnih trgih. Po [[Keynesianska teorija]] je zadolževanje za spodbujanje gospodarstva v času krize legitimno, pod pogojem, da se odplača, ko se rast ponovno vzpostavi."
+        },
+        {
+          "type": "paragraph",
+          "text": "V praksi se države z lahkoto zadolžijo v slabih časih, vendar redko odplačajo v dobrih časih. Dolg se nato dolgoročno kopiči. Primer Japonske je fascinanten: država z dolgom blizu 260 % njenega BDP bi morala biti logično v krizi. Vendar ni, saj imajo večino dolga lastne banke in varčevalci, zaščiteni pred tujimi trgi."
+        },
+        {
+          "type": "funFact",
+          "text": "Združeno kraljestvo je šele leta 2015 končalo odplačilo dolgov iz napoleonskih vojn in finančnega balona leta 1720."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p2",
+      "title": "Vsi dolgovi niso enaki",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Resnična nevarnost dolga ni odvisna le od njegove višine, ampak tudi od valute, v kateri je izposojen. Bogate države se zadolžujejo v svojih valutah, kar pomirja vlagatelje."
+        },
+        {
+          "type": "image",
+          "asset": "japan_government_debt_statistics_chart",
+          "ratio": "16:9",
+          "caption": "Svetovni javni dolg danes presega 300 % BDP planeta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Države v razvoju se morajo pogosto zadolževati v dolarjih, ker nimajo dovolj stabilne valute. Če njihova nacionalna valuta izgubi vrednost v primerjavi z dolarjem, znesek, ki ga je treba vrniti, eksplodira čez noč. V teh krizah [[IMF]] pogosto posreduje, vendar na splošno vsiljuje stroge varčevalne politike, ki močno obremenjujejo prebivalstvo."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p3",
+      "title": "Ali je dolg lahko neskončen?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Razprava nasprotuje dvema vizijama gospodarstva. [[Sodobna monetarna teorija]] trdi, da država ne more bankrotirati, dokler se zadolžuje v lastni valuti: realna meja ni poljubna številka, kot je 60 %, ki jih v Evropi nalaga Maastrichtska pogodba, ampak raven inflacije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Drugi, bolj previdni ekonomisti se bojijo, da bo prevelika zadolženost prestrašila zaupanje trga, kar bo povzročilo strm dvig obrestnih mer. Kriza v evroobmočju med letoma 2010 in 2012 je ponazorila to tveganje: državam, kot je Grčija, ki so bile prikrajšane za lastno centralno banko, so se njihove posojilne obrestne mere dvignile do te mere, da so ogrozile sam obstoj evropske valute."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p4",
+      "title": "Novi obrazi dolga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svetovni dolg ne zadeva samo držav: vse večji delež nosijo tudi podjetja in gospodinjstva, včasih prek slabo reguliranih finančnih akterjev. Nova razprava se pojavlja tudi okoli podnebnega dolga: ali bi morali dolg, ki financira energetski prehod, obravnavati drugače kot tisti, ki financira preprosto porabo?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Vprašanje pravičnosti med generacijami ostaja osrednje: zadolževanje danes pomeni jemanje davkov jutri. Toda če se s tem denarjem financira trajnostna infrastruktura ali dobro izobraževanje, je nanj mogoče gledati tudi kot na darilo, ki se prenaša na prihodnje generacije in ne kot breme."
+        },
+        {
+          "type": "takeaway",
+          "text": "Svetovni dolg presega 300 % BDP planeta, kar je zgodovinski rekord. Njegova nevarnost je manj odvisna od njegovega zneska kot od valute, v kateri je izposojen: Japonska dokazuje, da lahko 260-odstotni dolg ostane stabilen, če ga hranimo lokalno."
+        }
+      ]
+    }
+  ]
+}

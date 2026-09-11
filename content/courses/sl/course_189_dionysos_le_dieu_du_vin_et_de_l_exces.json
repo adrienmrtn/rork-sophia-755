@@ -1,0 +1,140 @@
+{
+  "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces",
+  "title": "Dioniz: bog vina in presežkov",
+  "subtitle": "Vino, gledališče, transgresija",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Bog vina in ekstaze Dioniz je tudi pokrovitelj grškega gledališča. Dvakrat rojen, odpravlja meje med redom in kaosom.",
+  "hero": {
+    "image": "dionysos_le_dieu_du_vin",
+    "ratio": "16:9",
+    "hook": "Bog vina ne prinaša samo opojnosti: izumi tudi gledališče."
+  },
+  "sections": [
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Dioniz** je najbolj paradoksalen grški bog. Bog vina, trte in omame je predvsem bog preobrazbe. Za razliko od olimpijcev, ki zmrznejo na svojem vrhu, tava, sledi mu hrupna procesija."
+        },
+        {
+          "type": "paragraph",
+          "text": "Odpravlja meje med božanskim in človeškim, redom in kaosom, življenjem in smrtjo. Iz njegovih festivalov se bo rodilo [[Gledališče]], ena največjih dediščin Grčije."
+        }
+      ]
+    },
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p1",
+      "title": "Dvakrat rojen: od Semele do Zevsovega stegna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dioniz se rodi iz tragedije. **Zeus**, kralj bogov, ljubi smrtnico [[Semele]], princeso iz Teb. **Hera**, Zeusova ljubosumna žena, jo prisili, da zahteva, da se njen ljubimec pokaže v svoji resnični božanski podobi."
+        },
+        {
+          "type": "image",
+          "asset": "dionysus_greek_god_wine_grapes_painting",
+          "ratio": "4:3",
+          "caption": "Dioniz, bog vina, ekstaze in metamorfoze."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zeus ugodi. Strela ubije Semele. Da bi rešil otroka, ga Zevs položi v svoje stegno do rojstva. Dioniz je bil torej »dvakrat rojen«, zato mu je posvečena pesem: [[Ditiramb]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Ta mit pojasnjuje, zakaj je Dioniz hkrati smrten in božanski: ima človeško mater in očeta Olimpijca, ki ga je »nosil«."
+        }
+      ]
+    },
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p2",
+      "title": "Ekstaza Menad",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kot odrasel Dioniz potuje po svetu, da bi širil svoj kult. Njegove privrženke, zlasti ženske, imenovane **Menade** ali Bacchantes, zapustijo mesto in se odpravijo v gore. Tam ples, glasba in vino izzovejo trans: biti »obseden od boga«."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ti obredi, imenovani [[Skrivnosti]], prevračajo družbeni red. Za eno noč popusti razum. Bog obljublja osvoboditev, a tudi norost za tiste, ki to zavrnejo."
+        },
+        {
+          "type": "image",
+          "asset": "maenads_bacchantes_frenzy_dance_ancient_vase",
+          "ratio": "4:3",
+          "caption": "Bakante v transu: kult, ki ruši mestni red."
+        },
+        {
+          "type": "funFact",
+          "text": "Nekega dne pirati ujamejo Dioniza, da bi ga prodali. Vesla spremeni v kače in poskrbi, da na jamboru rastejo trte. Prestrašeni moški skočijo v morje in postanejo delfini."
+        }
+      ]
+    },
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p3",
+      "title": "Iz kaosa nastane gledališče",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V Atenah ta bog presežka postane pokrovitelj državljanske umetnosti: gledališča. V 6. stoletju pred našim štetjem je **Velika Dionizija** organizirala dramska tekmovanja. Vse se začne z ditirambom, zborovsko pesmijo v čast bogu."
+        },
+        {
+          "type": "image",
+          "asset": "dionysus_greek_god_wine_theater",
+          "ratio": "4:3",
+          "caption": "Velika dionizija: bogoslužje postane mestni spektakel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ko se pevec odmakne od refrena in odgovori, se igralec rodi. Tragedija postane kraj, kjer mesto pogleda svoje strahove in konflikte, ne da bi potonilo v pravi kaos. To je [[Katarza]]: očistiti se čustev s pogledom nanje."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Rojstvo",
+              "title": "Dvojno rojstvo",
+              "detail": "Semele umre; Zevs zaključi nosečnost."
+            },
+            {
+              "date": "čaščenje",
+              "title": "Obredi Menad",
+              "detail": "Ekstazi, vino, obrat vrstnega reda."
+            },
+            {
+              "date": "Življenja. av. AD",
+              "title": "Velika dionizija",
+              "detail": "Rojstvo gledališča v Atenah."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p4",
+      "title": "Dioniz se sooča z Apolonom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 19. stoletju je filozof **Nietzsche** zoperstavil dve sili: [[Apollo]], boga mere in jasnosti, ter Dioniza, silo omame in ustvarjalnega kaosa. Ta napetost, [[Apolonsko in dionizijsko (Nietzsche)]], mu pojasnjuje veličino grške tragedije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dioniz tako ostaja bog, ki opozarja na preprosto resnico: brez malo nereda ni umetnosti, ni praznovanja, ni izuma."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Dioniz**, dvakrat rojen, bog vina in ekstaze, navdihuje obrede, ki so rodili grško **gledališče**. Uteleša plodno napetost med zmernostjo in presežkom."
+        }
+      ]
+    }
+  ]
+}
