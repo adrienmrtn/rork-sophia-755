@@ -651,6 +651,110 @@ SERBIAN_RULES = LanguageRules(
     allowed_chars=frozenset(),  # Serbian quotes are „…“
 )
 
+#: Arabic writes its own comma, semicolon and question mark. A term deleted
+#: before one of those leaves exactly the gap the ASCII rules look for, so the
+#: patterns below accept both sets.
+AR_PUNCT = r"[,;:.!?،؛؟]"
+
+ARABIC_RULES = LanguageRules(
+    # Only the prepositions that stand as their own word: ب، ل، ك، و، ف are
+    # clitics written onto the following word and can never be stranded.
+    stranded_spaced=re.compile(
+        r"(?:^|(?<=\s))(من|إلى|في|على|"
+        r"عن|مع|بين|خلال|"
+        r"بعد|قبل|حتى|ضد)"
+        rf"\s+({AR_PUNCT})(?=\s|$)",
+    ),
+    stranded_tight=re.compile(
+        r"(?:^|(?<=\s))(من|إلى|في|على|"
+        r"عن|مع|بين)"
+        r"\s*([.!?؟])(?=\s|$)",
+    ),
+    leading_articles=(),  # The Arabic article ال is written onto its noun
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a comma (30,000)",
+    flag_decimal_comma=True,
+    century_hint="should be 'القرن الخامس عشر'",
+    era_hint="should be ق.م / م",
+    allowed_chars=frozenset("«»"),  # Arabic quotes are «…»
+)
+
+HEBREW_RULES = LanguageRules(
+    # ב, ל, כ, ו, ש are clitics; only the standalone prepositions can strand.
+    stranded_spaced=re.compile(
+        r"(?:^|(?<=\s))(של|על|אל|עם|"
+        r"בין|לפני|אחרי|"
+        r"נגד|לפי|מתוך)"
+        r"\s+([,;:.!?])(?=\s|$)",
+    ),
+    stranded_tight=re.compile(
+        r"(?:^|(?<=\s))(של|על|אל|עם|בין)"
+        r"\s*([.!?])(?=\s|$)",
+    ),
+    leading_articles=(),  # The Hebrew article ה is written onto its noun
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a comma (30,000)",
+    flag_decimal_comma=True,
+    century_hint="should be 'המאה ה-15'",
+    era_hint="should be לפנה\"ס / לספירה",
+    allowed_chars=frozenset(),  # Hebrew quotes are "…", not guillemets
+)
+
+FINNISH_RULES = LanguageRules(
+    # Finnish marks relations with cases, so the few adpositions it has are the
+    # ones worth watching.
+    stranded_spaced=re.compile(
+        r"\b(ilman|ennen|jälkeen|kanssa|aikana|välillä|vastaan|"
+        r"kohti|lähellä|yli|alle|asti|saakka)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "että," is ordinary before a parenthetical, the way Russian "что," is, so
+    # only an adposition ending the sentence counts.
+    stranded_tight=re.compile(
+        r"\b(ilman|ennen|jälkeen|kanssa|aikana|välillä|vastaan|kohti)"
+        r"\s*([.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=(),  # Finnish has no articles
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=False,  # Finnish groups thousands with a space
+    thousands_hint="a space is the Finnish separator",
+    flag_decimal_comma=False,  # Finnish decimals are commas
+    century_hint="should be '1400-luku'",
+    era_hint="should be eKr. / jKr.",
+    allowed_chars=frozenset(),  # Finnish quotes are ”…”
+)
+
+ESTONIAN_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(ilma|enne|pärast|koos|ajal|vahel|vastu|kohta|järgi|"
+        r"üle|alla|kuni|läbi)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "et," takes a parenthetical the same way, so it is left out here too.
+    stranded_tight=re.compile(
+        r"\b(ilma|enne|pärast|koos|ajal|vahel|vastu|kohta|järgi)"
+        r"\s*([.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=(),  # Estonian has no articles
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=False,  # Estonian groups thousands with a space
+    thousands_hint="a space is the Estonian separator",
+    flag_decimal_comma=False,  # Estonian decimals are commas
+    century_hint="should be '15. sajand'",
+    era_hint="should be eKr / pKr",
+    allowed_chars=frozenset("„“"),  # Estonian quotes are „…“
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
@@ -673,6 +777,10 @@ RULES_BY_LANG: dict[str, LanguageRules] = {
     "sl": SLOVENIAN_RULES,
     "sk": SLOVAK_RULES,
     "sr": SERBIAN_RULES,
+    "ar": ARABIC_RULES,
+    "he": HEBREW_RULES,
+    "fi": FINNISH_RULES,
+    "et": ESTONIAN_RULES,
 }
 
 

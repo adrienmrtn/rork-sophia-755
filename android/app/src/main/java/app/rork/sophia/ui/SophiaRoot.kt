@@ -28,7 +28,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
@@ -78,121 +80,131 @@ fun SophiaRoot(
         app.analytics.track("home_tabs_ready", DeviceCapabilities.analyticsProps(context))
     }
 
-    Surface(modifier = Modifier.fillMaxSize(), color = DS.canvas) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .then(fullBleed?.let { Modifier.background(it) } ?: Modifier),
-        ) {
-            // The activity is edge-to-edge and almost every screen is laid out by hand
-            // rather than in a Scaffold, so headers ran under the status bar and bottom
-            // CTAs under the gesture bar. Consume the insets once, here: the Scaffold in
-            // MainTabs then sees zero and cannot pad twice.
+    // The app picks its own language instead of following the device, so
+    // `LocalLayoutDirection` still resolves from the system configuration: an
+    // Arabic or Hebrew reader on an English phone would get a left-to-right
+    // screen. Provide it from the chosen language, above everything else, so
+    // insets, alignment and the tab bar all mirror together.
+    CompositionLocalProvider(
+        LocalLayoutDirection provides
+            if (language.isRtl) LayoutDirection.Rtl else LayoutDirection.Ltr,
+    ) {
+        Surface(modifier = Modifier.fillMaxSize(), color = DS.canvas) {
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .windowInsetsPadding(
-                        WindowInsets.systemBars.union(WindowInsets.displayCutout),
-                    ),
+                    .then(fullBleed?.let { Modifier.background(it) } ?: Modifier),
             ) {
-                CompositionLocalProvider(
-                    LocalFullBleedBackground provides { brush -> fullBleed = brush },
+                // The activity is edge-to-edge and almost every screen is laid out by hand
+                // rather than in a Scaffold, so headers ran under the status bar and bottom
+                // CTAs under the gesture bar. Consume the insets once, here: the Scaffold in
+                // MainTabs then sees zero and cannot pad twice.
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .windowInsetsPadding(
+                            WindowInsets.systemBars.union(WindowInsets.displayCutout),
+                        ),
                 ) {
-                    if (showOnboarding) {
-                        OnboardingV2Screen(
-                            language = language,
-                            storeViewModel = storeViewModel,
-                            onLanguageSelected = { app.languageManager.setLanguage(it) },
-                            onComplete = {
-                                app.onboardingStore.markCompleted()
-                                showOnboarding = false
-                            },
-                        )
-                    } else if (!tabsReady) {
-                        Box(
-                            modifier = Modifier.fillMaxSize().background(DS.canvas),
-                            contentAlignment = Alignment.Center,
-                        ) {
-                            Text(
-                                text = "Sophia",
-                                fontSize = 28.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = DS.ink,
+                    CompositionLocalProvider(
+                        LocalFullBleedBackground provides { brush -> fullBleed = brush },
+                    ) {
+                        if (showOnboarding) {
+                            OnboardingV2Screen(
+                                language = language,
+                                storeViewModel = storeViewModel,
+                                onLanguageSelected = { app.languageManager.setLanguage(it) },
+                                onComplete = {
+                                    app.onboardingStore.markCompleted()
+                                    showOnboarding = false
+                                },
+                            )
+                        } else if (!tabsReady) {
+                            Box(
+                                modifier = Modifier.fillMaxSize().background(DS.canvas),
+                                contentAlignment = Alignment.Center,
+                            ) {
+                                Text(
+                                    text = "Sophia",
+                                    fontSize = 28.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = DS.ink,
+                                )
+                            }
+                        } else {
+                            MainTabs(
+                                language = language,
+                                storeViewModel = storeViewModel,
+                                deepLinkCourseId = deepLinkCourseId,
+                                onDeepLinkConsumed = onDeepLinkConsumed,
                             )
                         }
-                    } else {
-                        MainTabs(
-                            language = language,
-                            storeViewModel = storeViewModel,
-                            deepLinkCourseId = deepLinkCourseId,
-                            onDeepLinkConsumed = onDeepLinkConsumed,
-                        )
                     }
                 }
             }
-        }
 
-        conflict?.let { c ->
-            val localDone = c.local.courseProgress.values.count { it.isCompleted }
-            val remoteDone = c.remote.courseProgress.values.count { it.isCompleted }
-            val localLevel = ProgressManager.globalLevelProgress(c.local.globalXP).level
-            val remoteLevel = ProgressManager.globalLevelProgress(c.remote.globalXP).level
-            AlertDialog(
-                onDismissRequest = { },
-                title = {
-                    Text(StringStore.text(context, "sync.conflict.title", language))
-                },
-                text = {
-                    Column {
-                        Text(
-                            StringStore.text(context, "sync.conflict.body", language),
-                            style = SophiaTypography.bodyMedium,
-                        )
-                        Spacer(Modifier.height(12.dp))
-                        Text(
-                            StringStore.text(context, "sync.conflict.local", language),
-                            style = SophiaTypography.labelLarge,
-                        )
-                        Text(
-                            StringStore.text(
-                                context,
-                                "sync.conflict.summary",
-                                language,
-                                localDone,
-                                localLevel,
-                                c.local.streak,
-                            ),
-                            style = SophiaTypography.bodyMedium,
-                        )
-                        Spacer(Modifier.height(8.dp))
-                        Text(
-                            StringStore.text(context, "sync.conflict.remote", language),
-                            style = SophiaTypography.labelLarge,
-                        )
-                        Text(
-                            StringStore.text(
-                                context,
-                                "sync.conflict.summary",
-                                language,
-                                remoteDone,
-                                remoteLevel,
-                                c.remote.streak,
-                            ),
-                            style = SophiaTypography.bodyMedium,
-                        )
-                    }
-                },
-                confirmButton = {
-                    TextButton(onClick = { app.progressSyncService.resolveKeepLocal() }) {
-                        Text(StringStore.text(context, "sync.conflict.local", language))
-                    }
-                },
-                dismissButton = {
-                    TextButton(onClick = { app.progressSyncService.resolveKeepRemote() }) {
-                        Text(StringStore.text(context, "sync.conflict.remote", language))
-                    }
-                },
-            )
+            conflict?.let { c ->
+                val localDone = c.local.courseProgress.values.count { it.isCompleted }
+                val remoteDone = c.remote.courseProgress.values.count { it.isCompleted }
+                val localLevel = ProgressManager.globalLevelProgress(c.local.globalXP).level
+                val remoteLevel = ProgressManager.globalLevelProgress(c.remote.globalXP).level
+                AlertDialog(
+                    onDismissRequest = { },
+                    title = {
+                        Text(StringStore.text(context, "sync.conflict.title", language))
+                    },
+                    text = {
+                        Column {
+                            Text(
+                                StringStore.text(context, "sync.conflict.body", language),
+                                style = SophiaTypography.bodyMedium,
+                            )
+                            Spacer(Modifier.height(12.dp))
+                            Text(
+                                StringStore.text(context, "sync.conflict.local", language),
+                                style = SophiaTypography.labelLarge,
+                            )
+                            Text(
+                                StringStore.text(
+                                    context,
+                                    "sync.conflict.summary",
+                                    language,
+                                    localDone,
+                                    localLevel,
+                                    c.local.streak,
+                                ),
+                                style = SophiaTypography.bodyMedium,
+                            )
+                            Spacer(Modifier.height(8.dp))
+                            Text(
+                                StringStore.text(context, "sync.conflict.remote", language),
+                                style = SophiaTypography.labelLarge,
+                            )
+                            Text(
+                                StringStore.text(
+                                    context,
+                                    "sync.conflict.summary",
+                                    language,
+                                    remoteDone,
+                                    remoteLevel,
+                                    c.remote.streak,
+                                ),
+                                style = SophiaTypography.bodyMedium,
+                            )
+                        }
+                    },
+                    confirmButton = {
+                        TextButton(onClick = { app.progressSyncService.resolveKeepLocal() }) {
+                            Text(StringStore.text(context, "sync.conflict.local", language))
+                        }
+                    },
+                    dismissButton = {
+                        TextButton(onClick = { app.progressSyncService.resolveKeepRemote() }) {
+                            Text(StringStore.text(context, "sync.conflict.remote", language))
+                        }
+                    },
+                )
+            }
         }
     }
 }

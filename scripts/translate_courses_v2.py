@@ -227,6 +227,10 @@ FIXED = {
         "sl": "Uvod",
         "sk": "Úvod",
         "sr": "Uvod",
+        "ar": "مقدمة",
+        "he": "מבוא",
+        "fi": "Johdanto",
+        "et": "Sissejuhatus",
     },
     "Héritage": {
         "en": "Legacy",
@@ -250,6 +254,10 @@ FIXED = {
         "sl": "Zapuščina",
         "sk": "Odkaz",
         "sr": "Nasleđe",
+        "ar": "الإرث",
+        "he": "מורשת",
+        "fi": "Perintö",
+        "et": "Pärand",
     },
     "À retenir": {
         "en": "Key takeaway",
@@ -273,6 +281,10 @@ FIXED = {
         "sl": "Zapomni si",
         "sk": "Zapamätaj si",
         "sr": "Zapamti",
+        "ar": "خلاصة",
+        "he": "לזכור",
+        "fi": "Muista tämä",
+        "et": "Pea meeles",
     },
 }
 

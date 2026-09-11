@@ -59,6 +59,17 @@ NATIVE_LANGUAGE_NAMES: dict[str, str] = {
     "hungarian": "Magyar",
     "bulgarian": "Български",
     "czech": "Čeština",
+    "danish": "Dansk",
+    "norwegian": "Norsk",
+    "russian": "Русский",
+    "croatian": "Hrvatski",
+    "slovenian": "Slovenščina",
+    "slovak": "Slovenčina",
+    "serbian": "Srpski",
+    "arabic": "العربية",
+    "hebrew": "עברית",
+    "finnish": "Suomi",
+    "estonian": "Eesti",
 }
 
 SECTION_TITLES = {
@@ -77,6 +88,17 @@ SECTION_TITLES = {
     "hungarian": "Hungarian",
     "bulgarian": "Bulgarian",
     "czech": "Czech",
+    "danish": "Danish",
+    "norwegian": "Norwegian",
+    "russian": "Russian",
+    "croatian": "Croatian",
+    "slovenian": "Slovenian",
+    "slovak": "Slovak",
+    "serbian": "Serbian",
+    "arabic": "Arabic",
+    "hebrew": "Hebrew",
+    "finnish": "Finnish",
+    "estonian": "Estonian",
 }
 
 
@@ -200,7 +222,9 @@ def pinned_value(key: str, english: str) -> str | None:
 
 
 def translate_one(target: str, text: str) -> str:
-    from deep_translator import GoogleTranslator
+    # ``mt_backend`` reaches the endpoint that answers from a data-centre IP;
+    # deep_translator's client is refused there. Same interface.
+    from mt_backend import GoogleTranslator
 
     if not text:
         return text

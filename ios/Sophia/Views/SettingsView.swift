@@ -218,7 +218,7 @@ struct SettingsView: View {
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     Spacer(minLength: 8)
-                    Image(systemName: "arrow.right")
+                    Image(systemName: "arrow.forward")
                         .font(.jakarta(size: 14, weight: .semibold))
                         .foregroundStyle(.white.opacity(0.9))
                 }
@@ -358,7 +358,7 @@ struct SettingsView: View {
 
                 Spacer(minLength: 0)
 
-                Image(systemName: "chevron.right")
+                Image(systemName: "chevron.forward")
                     .font(.jakarta(size: 13, weight: .semibold))
                     .foregroundStyle(DS.inkTertiary)
             }
@@ -449,7 +449,7 @@ struct SettingsView: View {
                     }
                 }
                 Spacer()
-                Image(systemName: "chevron.right")
+                Image(systemName: "chevron.forward")
                     .font(.jakarta(size: 12, weight: .semibold))
                     .foregroundStyle(DS.inkTertiary)
             }

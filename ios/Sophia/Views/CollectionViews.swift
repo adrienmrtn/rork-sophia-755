@@ -224,7 +224,7 @@ private struct CollectionFeaturedCard: View {
                         Text(isComplete
                             ? languageManager.text("collections.pathComplete")
                             : (started ? languageManager.text("library.section.continue") : languageManager.text("home.start")))
-                        Image(systemName: "arrow.right").font(.jakarta(size: 11, weight: .semibold))
+                        Image(systemName: "arrow.forward").font(.jakarta(size: 11, weight: .semibold))
                     }
                     .font(DS.sans(.caption, .semibold))
                     .foregroundStyle(DS.accent)
@@ -291,7 +291,7 @@ private struct CollectionRowCard: View {
                 }
             }
 
-            Image(systemName: "chevron.right")
+            Image(systemName: "chevron.forward")
                 .font(.jakarta(size: 13, weight: .semibold))
                 .foregroundStyle(DS.inkTertiary)
         }
@@ -358,7 +358,7 @@ struct CollectionDetailView: View {
                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 dismiss()
             } label: {
-                Image(systemName: "chevron.left")
+                Image(systemName: "chevron.backward")
                     .font(.jakarta(size: 15, weight: .semibold))
                     .foregroundStyle(DS.inkSecondary)
                     .frame(width: 40, height: 40)
@@ -513,7 +513,7 @@ private struct CollectionCourseRow: View {
 
                 Spacer(minLength: 8)
 
-                Image(systemName: "chevron.right")
+                Image(systemName: "chevron.forward")
                     .font(.jakarta(size: 12, weight: .semibold))
                     .foregroundStyle(DS.inkTertiary)
                     .padding(.top, 10)

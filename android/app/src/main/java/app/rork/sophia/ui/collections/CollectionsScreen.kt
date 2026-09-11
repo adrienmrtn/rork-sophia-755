@@ -20,7 +20,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.ChevronRight
+import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
@@ -262,6 +262,6 @@ private fun CollectionRowCard(
                 )
             }
         }
-        Icon(Icons.Filled.ChevronRight, contentDescription = null, tint = DS.inkTertiary)
+        Icon(Icons.AutoMirrored.Filled.ArrowForwardIos, contentDescription = null, tint = DS.inkTertiary)
     }
 }

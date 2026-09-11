@@ -370,7 +370,7 @@ struct ProfileView: View {
                         .foregroundStyle(DS.inkSecondary)
                 }
                 Spacer()
-                Image(systemName: "chevron.right")
+                Image(systemName: "chevron.forward")
                     .font(.jakarta(size: 13, weight: .semibold))
                     .foregroundStyle(DS.inkTertiary)
             }

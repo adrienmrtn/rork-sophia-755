@@ -49,7 +49,7 @@ struct LevelUpCelebrationView: View {
                                     .foregroundStyle(DS.inkTertiary.opacity(showNewLevel ? 0.6 : 1))
                                     .scaleEffect(showNewLevel ? 0.9 : 1)
 
-                                Image(systemName: "arrow.right")
+                                Image(systemName: "arrow.forward")
                                     .font(.jakarta(size: 18, weight: .medium))
                                     .foregroundStyle(DS.accentSoft)
                                     .opacity(showNewLevel ? 1 : 0.3)

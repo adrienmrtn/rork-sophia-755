@@ -438,6 +438,9 @@ private struct SwipeActionButton: View {
                     Circle().strokeBorder(kind == .accept ? Color.clear : DS.hairline, lineWidth: 1)
                 }
                 .overlay {
+                    // Absolute, not `arrow.forward`: accepting a card is a swipe
+                    // to the physical right, and the deck reads a raw
+                    // translation.width that does not mirror in Arabic or Hebrew.
                     Image(systemName: kind == .accept ? "arrow.right" : "xmark")
                         .font(.jakarta(size: 20, weight: .semibold))
                         .foregroundStyle(kind == .accept ? Color.white : DS.inkSecondary)

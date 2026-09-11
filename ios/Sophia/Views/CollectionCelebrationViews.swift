@@ -73,7 +73,7 @@ struct CollectionProgressCelebrationView: View {
                 } label: {
                     HStack(spacing: 8) {
                         Text(languageManager.text("common.continue"))
-                        Image(systemName: "arrow.right")
+                        Image(systemName: "arrow.forward")
                     }
                 }
                 .buttonStyle(DSPrimaryButtonStyle())

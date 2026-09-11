@@ -16,7 +16,7 @@ struct OnboardingButton: View {
             HStack(spacing: 10) {
                 Text(title)
                     .font(.jakarta(.headline, design: .rounded, weight: .bold))
-                Image(systemName: "arrow.right")
+                Image(systemName: "arrow.forward")
                     .font(.subheadline.weight(.semibold))
             }
             .foregroundStyle(.white)

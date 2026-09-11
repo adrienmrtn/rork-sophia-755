@@ -203,7 +203,7 @@ struct AmbassadorView: View {
                 } label: {
                     HStack(spacing: 8) {
                         Text(languageManager.text("ambassador.discover.cta"))
-                        Image(systemName: "arrow.right")
+                        Image(systemName: "arrow.forward")
                             .font(.jakarta(size: 15, weight: .semibold))
                     }
                 }
@@ -414,7 +414,7 @@ struct AmbassadorView: View {
                                 stage = .program
                             }
                         } label: {
-                            Image(systemName: "chevron.left")
+                            Image(systemName: "chevron.backward")
                                 .font(.jakarta(size: 16, weight: .medium))
                                 .foregroundStyle(DS.inkSecondary)
                                 .frame(width: 54, height: 54)

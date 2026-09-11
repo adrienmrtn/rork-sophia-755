@@ -384,7 +384,7 @@ struct CourseCompletedView: View {
                             .font(.jakarta(size: 13, weight: .medium))
                     }
                     Text(languageManager.text("common.miniQuiz"))
-                    Image(systemName: "arrow.right")
+                    Image(systemName: "arrow.forward")
                         .font(.jakarta(size: 13, weight: .medium))
                 }
             }

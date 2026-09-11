@@ -16,7 +16,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Login
 import androidx.compose.material.icons.automirrored.filled.Logout
-import androidx.compose.material.icons.filled.ChevronRight
+import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Info
@@ -355,7 +355,7 @@ private fun SettingsRow(
         }
         if (showChevron) {
             Icon(
-                Icons.Filled.ChevronRight,
+                Icons.AutoMirrored.Filled.ArrowForwardIos,
                 contentDescription = null,
                 tint = DS.inkTertiary,
                 modifier = Modifier.size(18.dp),

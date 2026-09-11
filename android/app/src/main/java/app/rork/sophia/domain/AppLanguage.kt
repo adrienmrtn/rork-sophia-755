@@ -24,7 +24,19 @@ enum class AppLanguage(val code: String, val displayName: String, val flag: Stri
     CROATIAN("hr", "Hrvatski", "🇭🇷"),
     SLOVENIAN("sl", "Slovenščina", "🇸🇮"),
     SLOVAK("sk", "Slovenčina", "🇸🇰"),
-    SERBIAN("sr", "Srpski", "🇷🇸");
+    SERBIAN("sr", "Srpski", "🇷🇸"),
+    ARABIC("ar", "العربية", "🇸🇦"),
+    HEBREW("he", "עברית", "🇮🇱"),
+    FINNISH("fi", "Suomi", "🇫🇮"),
+    ESTONIAN("et", "Eesti", "🇪🇪");
+
+    /**
+     * Writing direction of the language. The app reads its language from its own
+     * preferences rather than the device configuration, so `LocalLayoutDirection`
+     * still follows the phone and would leave an Arabic or Hebrew reader with a
+     * left-to-right screen. `SophiaRoot` puts this into the composition instead.
+     */
+    val isRtl: Boolean get() = this == ARABIC || this == HEBREW
 
     companion object {
         val DEFAULT = ENGLISH
@@ -34,7 +46,8 @@ enum class AppLanguage(val code: String, val displayName: String, val flag: Stri
          * Device language codes that are not our own but map onto one. Android
          * reports Norwegian as `nb`, `nn` or the `no` macrolanguage depending on
          * the device. Bosnian and Montenegrin have no table of their own, so
-         * their speakers read the Croatian one.
+         * their speakers read the Croatian one. `iw` matters more here than on
+         * iOS: `Locale.getLanguage()` still returns the retired code for Hebrew.
          */
         private val DEVICE_ALIASES = mapOf(
             "no" to "nb",
@@ -42,6 +55,8 @@ enum class AppLanguage(val code: String, val displayName: String, val flag: Stri
             "bs" to "hr",
             "sh" to "hr",
             "cnr" to "hr",
+            "iw" to "he",
+            "arb" to "ar",
         )
 
         fun fromCode(code: String?): AppLanguage =

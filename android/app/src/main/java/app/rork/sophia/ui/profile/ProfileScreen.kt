@@ -17,7 +17,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Bolt
-import androidx.compose.material.icons.filled.ChevronRight
+import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.LocalFireDepartment
 import androidx.compose.material.icons.filled.Settings
@@ -286,7 +286,7 @@ fun ProfileScreen(
                                 modifier = Modifier.weight(1f),
                             )
                             Icon(
-                                Icons.Filled.ChevronRight,
+                                Icons.AutoMirrored.Filled.ArrowForwardIos,
                                 contentDescription = null,
                                 tint = DS.inkTertiary,
                                 modifier = Modifier.size(18.dp),
@@ -342,7 +342,7 @@ private fun ProfileShortcutRow(
             )
         }
         Icon(
-            Icons.Filled.ChevronRight,
+            Icons.AutoMirrored.Filled.ArrowForwardIos,
             contentDescription = null,
             tint = DS.inkTertiary,
             modifier = Modifier.size(18.dp),

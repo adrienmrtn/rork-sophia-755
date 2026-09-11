@@ -442,7 +442,7 @@ struct CourseView: View {
                 Text(isLastLesson && !isCourseLocked
                       ? languageManager.text("course.finish")
                       : languageManager.text("common.continue"))
-                Image(systemName: isLastLesson && !isCourseLocked ? "checkmark" : "arrow.right")
+                Image(systemName: isLastLesson && !isCourseLocked ? "checkmark" : "arrow.forward")
                     .font(.subheadline.weight(.semibold))
             }
         }

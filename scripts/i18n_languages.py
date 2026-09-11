@@ -30,7 +30,16 @@ NON_FR_LANGS: list[str] = [
     "sl",
     "sk",
     "sr",
+    "ar",
+    "he",
+    "fi",
+    "et",
 ]
+
+# Languages written right to left. The apps pick their language themselves
+# rather than following the device locale, so neither SwiftUI nor Compose can
+# infer the writing direction — see AppLanguage on both sides.
+RTL_LANGS: frozenset[str] = frozenset({"ar", "he"})
 
 # Google Translate target codes. Norwegian Bokmal is "no" upstream and Serbian
 # must be requested in Cyrillic ("sr" already is); every other app code is 1:1.
@@ -64,4 +73,8 @@ SWIFT_CASE_BY_CODE: dict[str, str] = {
     "sl": "slovenian",
     "sk": "slovak",
     "sr": "serbian",
+    "ar": "arabic",
+    "he": "hebrew",
+    "fi": "finnish",
+    "et": "estonian",
 }

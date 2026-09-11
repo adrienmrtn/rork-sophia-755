@@ -56,6 +56,10 @@ TRUE_FALSE = {
     "sl": ["Prav", "Narobe"],
     "sk": ["Pravda", "Nepravda"],
     "sr": ["Tačno", "Netačno"],
+    "ar": ["صحيح", "خطأ"],
+    "he": ["נכון", "לא נכון"],
+    "fi": ["Tosi", "Epätosi"],
+    "et": ["Tõene", "Väär"],
 }
 
 # Common short lesson titles — keep imperative/app sense consistent.
@@ -77,6 +81,10 @@ FIXED_TITLES: dict[str, dict[str, str]] = {
         "sl": "Uvod",
         "sk": "Úvod",
         "sr": "Uvod",
+        "ar": "مقدمة",
+        "he": "מבוא",
+        "fi": "Johdanto",
+        "et": "Sissejuhatus",
     },
     "Conclusion": {
         "tr": "Sonuç",
@@ -95,6 +103,10 @@ FIXED_TITLES: dict[str, dict[str, str]] = {
         "sl": "Zaključek",
         "sk": "Záver",
         "sr": "Zaključak",
+        "ar": "خاتمة",
+        "he": "סיכום",
+        "fi": "Yhteenveto",
+        "et": "Kokkuvõte",
     },
 }
 

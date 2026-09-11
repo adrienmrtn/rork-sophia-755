@@ -116,7 +116,7 @@ struct SubjectCoursesView: View {
                 hapticTrigger += 1
                 dismiss()
             } label: {
-                Image(systemName: "chevron.left")
+                Image(systemName: "chevron.backward")
                     .font(.jakarta(size: 15, weight: .semibold))
                     .foregroundStyle(DS.inkSecondary)
                     .frame(width: 40, height: 40)
@@ -235,7 +235,7 @@ struct SubjectCoursesView: View {
 
                     Spacer(minLength: 8)
 
-                    Image(systemName: progressManager.courseStatus(for: course.id) == .inProgress ? "arrow.right" : "play.fill")
+                    Image(systemName: progressManager.courseStatus(for: course.id) == .inProgress ? "arrow.forward" : "play.fill")
                         .font(.jakarta(size: 14, weight: .semibold))
                         .foregroundStyle(.white)
                         .frame(width: 38, height: 38)

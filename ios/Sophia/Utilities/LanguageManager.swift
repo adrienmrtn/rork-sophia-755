@@ -14,6 +14,13 @@ final class LanguageManager {
         Locale(identifier: current.localeIdentifier)
     }
 
+    /// Writing direction of the chosen language. `\.locale` does not imply it:
+    /// SwiftUI resolves `\.layoutDirection` from the device, so an Arabic reader
+    /// on an English phone would otherwise get a left-to-right screen.
+    var layoutDirection: LayoutDirection {
+        current.layoutDirection
+    }
+
     func setLanguage(_ language: AppLanguage) {
         guard current != language else { return }
         current = language

@@ -18,7 +18,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.ChevronRight
+import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
@@ -155,7 +155,7 @@ fun CollectionDetailScreen(
                 if (completed) {
                     Icon(Icons.Filled.CheckCircle, contentDescription = null, tint = DS.accentSoft)
                 } else {
-                    Icon(Icons.Filled.ChevronRight, contentDescription = null, tint = DS.inkTertiary)
+                    Icon(Icons.AutoMirrored.Filled.ArrowForwardIos, contentDescription = null, tint = DS.inkTertiary)
                 }
             }
             if (index != collection.courseIds.lastIndex) {

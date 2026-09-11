@@ -1,4 +1,4 @@
-import Foundation
+import SwiftUI
 
 enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
     case french = "fr"
@@ -23,6 +23,10 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
     case slovenian = "sl"
     case slovak = "sk"
     case serbian = "sr"
+    case arabic = "ar"
+    case hebrew = "he"
+    case finnish = "fi"
+    case estonian = "et"
 
     var id: String { rawValue }
 
@@ -50,6 +54,23 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .slovenian: "sl_SI"
         case .slovak: "sk_SK"
         case .serbian: "sr_RS"
+        case .arabic: "ar_SA"
+        case .hebrew: "he_IL"
+        case .finnish: "fi_FI"
+        case .estonian: "et_EE"
+        }
+    }
+
+    /// Writing direction of the language.
+    ///
+    /// The app reads its language from `UserDefaults`, not from the device, so
+    /// SwiftUI's `\.layoutDirection` still follows the phone and would leave an
+    /// Arabic or Hebrew reader with a left-to-right screen. `SophiaApp` puts
+    /// this into the environment instead.
+    var layoutDirection: LayoutDirection {
+        switch self {
+        case .arabic, .hebrew: .rightToLeft
+        default: .leftToRight
         }
     }
 
@@ -77,6 +98,10 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .slovenian: "🇸🇮"
         case .slovak: "🇸🇰"
         case .serbian: "🇷🇸"
+        case .arabic: "🇸🇦"
+        case .hebrew: "🇮🇱"
+        case .finnish: "🇫🇮"
+        case .estonian: "🇪🇪"
         }
     }
 
@@ -104,6 +129,10 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .slovenian: "Slovenščina"
         case .slovak: "Slovenčina"
         case .serbian: "Srpski"
+        case .arabic: "العربية"
+        case .hebrew: "עברית"
+        case .finnish: "Suomi"
+        case .estonian: "Eesti"
         }
     }
 
@@ -111,13 +140,16 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
     /// iOS reports Norwegian as `nb`, `nn` or the `no` macrolanguage depending
     /// on the device. Bosnian and Montenegrin have no table of their own, so
     /// their speakers read the Croatian one; `sh` is the retired Serbo-Croatian
-    /// code and lands there too.
+    /// code and lands there too. `iw` is the retired code for Hebrew and `arb`
+    /// the one for Standard Arabic.
     private static let deviceCodeAliases: [String: String] = [
         "no": "nb",
         "nn": "nb",
         "bs": "hr",
         "sh": "hr",
         "cnr": "hr",
+        "iw": "he",
+        "arb": "ar",
     ]
 
     /// Fallback when the device language is not one of the supported app languages.

@@ -85,6 +85,10 @@ struct SwipeTutorialOverlay: View {
                 .foregroundStyle(handOffset > 8 ? DS.accent : DS.hairline)
         }
         .frame(height: 72)
+        // This demonstrates the physical swipe, and the deck reads a raw
+        // translation.width that does not mirror. Flipping the row in Arabic or
+        // Hebrew would light the chevron opposite the one the hand moves to.
+        .environment(\.layoutDirection, .leftToRight)
     }
 
     private func dismiss() {

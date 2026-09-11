@@ -241,7 +241,7 @@ struct FriendProfileView: View {
                         Button {
                             dismiss()
                         } label: {
-                            Image(systemName: "chevron.left")
+                            Image(systemName: "chevron.backward")
                                 .font(.jakarta(size: 15, weight: .semibold))
                                 .foregroundStyle(DS.inkSecondary)
                                 .frame(width: 40, height: 40)
@@ -677,7 +677,7 @@ struct FriendsLeaderboardSection: View {
                     .monospacedDigit()
 
                 if !entry.isMe {
-                    Image(systemName: "chevron.right")
+                    Image(systemName: "chevron.forward")
                         .font(.jakarta(size: 12, weight: .semibold))
                         .foregroundStyle(DS.inkTertiary)
                 }

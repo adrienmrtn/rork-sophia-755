@@ -70,6 +70,10 @@ TRUE_FALSE = {
     "sl": ["Prav", "Narobe"],
     "sk": ["Pravda", "Nepravda"],
     "sr": ["Tačno", "Netačno"],
+    "ar": ["صحيح", "خطأ"],
+    "he": ["נכון", "לא נכון"],
+    "fi": ["Tosi", "Epätosi"],
+    "et": ["Tõene", "Väär"],
 }
 
 # Common slider units — keep symbols; translate word units.
@@ -92,6 +96,10 @@ UNIT_FIXED = {
         "sl": "let",
         "sk": "rokov",
         "sr": "godina",
+        "ar": "سنة",
+        "he": "שנים",
+        "fi": "vuotta",
+        "et": "aastat",
     },
     "jours": {
         "en": "days", "es": "días", "de": "Tage", "pt": "dias", "it": "giorni",
@@ -104,6 +112,10 @@ UNIT_FIXED = {
         "sl": "dni",
         "sk": "dní",
         "sr": "dana",
+        "ar": "يوم",
+        "he": "ימים",
+        "fi": "päivää",
+        "et": "päeva",
     },
     "heures": {
         "en": "hours", "es": "horas", "de": "Stunden", "pt": "horas", "it": "ore",
@@ -116,6 +128,10 @@ UNIT_FIXED = {
         "sl": "ur",
         "sk": "hodín",
         "sr": "sati",
+        "ar": "ساعة",
+        "he": "שעות",
+        "fi": "tuntia",
+        "et": "tundi",
     },
     "semaines": {
         "en": "weeks", "es": "semanas", "de": "Wochen", "pt": "semanas", "it": "settimane",
@@ -128,6 +144,10 @@ UNIT_FIXED = {
         "sl": "tednov",
         "sk": "týždňov",
         "sr": "nedelja",
+        "ar": "أسبوع",
+        "he": "שבועות",
+        "fi": "viikkoa",
+        "et": "nädalat",
     },
     "fois": {
         "en": "times", "es": "veces", "de": "Mal", "pt": "vezes", "it": "volte",
@@ -140,6 +160,10 @@ UNIT_FIXED = {
         "sl": "krat",
         "sk": "krát",
         "sr": "puta",
+        "ar": "مرة",
+        "he": "פעמים",
+        "fi": "kertaa",
+        "et": "korda",
     },
     "millions": {
         "en": "million", "es": "millones", "de": "Millionen", "pt": "milhões", "it": "milioni",
@@ -152,6 +176,10 @@ UNIT_FIXED = {
         "sl": "milijonov",
         "sk": "miliónov",
         "sr": "miliona",
+        "ar": "مليون",
+        "he": "מיליון",
+        "fi": "miljoonaa",
+        "et": "miljonit",
     },
     "milliards": {
         "en": "billion", "es": "miles de millones", "de": "Milliarden", "pt": "bilhões", "it": "miliardi",
@@ -164,6 +192,10 @@ UNIT_FIXED = {
         "sl": "milijard",
         "sk": "miliárd",
         "sr": "milijardi",
+        "ar": "مليار",
+        "he": "מיליארד",
+        "fi": "miljardia",
+        "et": "miljardit",
     },
     "milliers": {
         "en": "thousands", "es": "miles", "de": "Tausende", "pt": "milhares", "it": "migliaia",
@@ -176,6 +208,10 @@ UNIT_FIXED = {
         "sl": "tisoč",
         "sk": "tisíc",
         "sr": "hiljada",
+        "ar": "ألف",
+        "he": "אלפים",
+        "fi": "tuhatta",
+        "et": "tuhat",
     },
 }
 

@@ -60,6 +60,7 @@ struct SophiaApp: App {
             .environment(appearanceManager)
             .environment(AuthService.shared)
             .environment(\.locale, languageManager.locale)
+            .environment(\.layoutDirection, languageManager.layoutDirection)
             .preferredColorScheme(appearanceManager.preference.preferredColorScheme)
             .animation(.easeInOut(duration: 0.25), value: appearanceManager.preference)
             .onAppear {

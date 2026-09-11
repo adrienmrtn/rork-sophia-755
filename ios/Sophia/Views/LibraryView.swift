@@ -325,7 +325,7 @@ struct LibraryView: View {
                 Text(languageManager.text("library.seeMore"))
                     .font(DS.sans(.subheadline, .medium))
                     .foregroundStyle(DS.accentSoft)
-                Image(systemName: "chevron.right")
+                Image(systemName: "chevron.forward")
                     .font(.jakarta(size: 12, weight: .semibold))
                     .foregroundStyle(DS.accentSoft)
             }
@@ -455,7 +455,7 @@ struct LibraryFeaturedCard: View {
 
                 Spacer(minLength: 0)
 
-                Image(systemName: status == .completed ? "checkmark" : "arrow.right")
+                Image(systemName: status == .completed ? "checkmark" : "arrow.forward")
                     .font(.jakarta(size: 14, weight: .semibold))
                     .foregroundStyle(status == .completed ? DS.accentSoft : Color.white)
                     .frame(width: 34, height: 34)

@@ -915,7 +915,7 @@ struct TrainingView: View {
                 } label: {
                     HStack(spacing: 8) {
                         Text(currentIndex < sessionQuestions.count - 1 ? languageManager.text("common.continue") : languageManager.text("training.finish"))
-                        Image(systemName: "arrow.right")
+                        Image(systemName: "arrow.forward")
                             .font(.subheadline.weight(.semibold))
                     }
                 }

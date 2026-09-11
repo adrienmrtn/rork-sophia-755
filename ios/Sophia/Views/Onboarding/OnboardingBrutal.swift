@@ -87,7 +87,7 @@ struct OnboardingPrimaryButton: View {
             HStack(spacing: 10) {
                 Text(title)
                     .font(.jakarta(.headline, design: .rounded, weight: .heavy))
-                Image(systemName: "arrow.right")
+                Image(systemName: "arrow.forward")
                     .font(.subheadline.weight(.heavy))
             }
             .foregroundStyle(isEnabled ? BrutalPalette.ink : BrutalPalette.ink.opacity(0.4))

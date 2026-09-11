@@ -42,7 +42,7 @@ struct GlobalRankUpCelebrationView: View {
 
                     HStack(spacing: 10) {
                         rankChip(previousRank, faded: true)
-                        Image(systemName: "arrow.right")
+                        Image(systemName: "arrow.forward")
                             .font(.jakarta(size: 15, weight: .medium))
                             .foregroundStyle(DS.inkTertiary)
                         rankChip(newRank, faded: false)
