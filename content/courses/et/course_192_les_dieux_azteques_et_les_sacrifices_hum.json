@@ -1,0 +1,140 @@
+{
+  "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
+  "title": "Asteekide jumalad ja inimohvrid",
+  "subtitle": "Veri päikese eest",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Asteekide seas tõuseb päike ainult siis, kui jumalad saavad verd. Karm, kuid ühtne kosmoloogia nende impeeriumi keskmes.",
+  "hero": {
+    "image": "les_dieux_azteques_et_les_sacrifices_humains",
+    "ratio": "16:9",
+    "hook": "Ilma vereta jääks päike seisma: selline on asteekide kosmiline võlg."
+  },
+  "sections": [
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Asteegid** ehk Mehhika usuvad, et universum on habras. Jumalad vajavad verd, et päike jätkaks oma kursi. Ilma pakkumisteta tuleks kaos tagasi."
+        },
+        {
+          "type": "paragraph",
+          "text": "See, mis hispaanlasi kohutas, põhineb selgel ideel: jumalate ja inimeste elud on omavahel seotud. Siin on, kuidas see kosmoloogia töötab."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
+      "title": "Viis päikest: maailm juba neli korda surnud",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Viis päikest]] müüdi järgi on juba neli ajastut katastroofides kadunud. Kogeme viiendat päikest, [[Nahui Ollin]] (“4-liikumine”), mis tõotas lõppeda maavärinatega."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
+          "ratio": "4:3",
+          "caption": "Päikesekivi: Asteekide aeg muutub järjestikusteks ajastuteks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Keskplatool asuvas pühas linnas **Teotihuacán** viskavad jumalad end tulle, et saada päikeseks ja kuuks. Aga päike jääb paigale. Teised jumalad ohverdavad seejärel oma verd, et see käima lükata. Mehed pärivad selle võla."
+        },
+        {
+          "type": "funFact",
+          "text": "Asteekide jaoks ei ole ohverdamine tasuta julmus: see on jumaliku võla tagasimaksmine, [[Viie Päikese kosmoloogia ja kosmiline võlg]]."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p2",
+      "title": "Duaalsuste panteon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Keskne jumal on [[Huitzilopochtli]], sõja ja keskpäevase päikese jumal. Igal õhtul võitleb ta pimedusega, et hommikul uuesti sündida. Tema kõrval annab [[Tlaloc]] vihma, seega vilja või nälga."
+        },
+        {
+          "type": "image",
+          "asset": "huitzilopochtli_aztec_sun_god_codex",
+          "ratio": "4:3",
+          "caption": "Huitzilopochtli, sõdalane päike, kes nõuab toitmist."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Quetzalcoatl]], suleline madu, kehastab teadmisi ja tsivilisatsiooni. Tema rivaal [[Tezcatlipoca]], Suitsetav peegel, valitseb ööd, saatust ja maagiat. Maa ise on kohutava näoga: [[Coatlicue]], õgiv emajumalanna."
+        },
+        {
+          "type": "funFact",
+          "text": "Jumalatele ohverdatud hinnalist verd nimetatakse [[chalchihuatl]], “väärtvesi”. Ekstraheeritud südant peetakse taevasse naasnud päikesesädemeks."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p3",
+      "title": "Lillesõjad",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ohvrite hankimiseks korraldavad asteegid [[Xochiyaoyotl]] ehk “lillesõjad”: rituaalsed võitlused, mille eesmärk ei ole tappa, vaid pakkumist väärivate elavate sõdalaste tabamine."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
+          "ratio": "4:3",
+          "caption": "Ohver templi tipus: päikesele kingitud süda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Järveäärses pealinnas Tenochtitlánis asuva **Tempel Linnapea** tipus võtab preester noaga välja südame teravast vulkaanilisest kivist **Obsidiaan**. Žest on avalik, pidulik, seda peetakse päikesele osutatavaks teenistuseks."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Müüt",
+              "title": "Jumalate ohverdamine",
+              "detail": "Päike saab edasiliikumiseks jumalikku verd."
+            },
+            {
+              "date": "impeerium",
+              "title": "Lillesõjad",
+              "detail": "Sõdalaste püüdmine annetuste eest."
+            },
+            {
+              "date": "1519",
+              "title": "Hispaania šokk",
+              "detail": "Cortés saabub; süsteem kukub kokku."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
+      "title": "Maailma lõpp, püsivad jäljed",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hispaania kroonikad paisutavad mõnikord numbreid vallutuse õigustamiseks. Kuid ohverdamissüsteem on väga reaalne. Filmis **1519** toob **Hernán Cortés** saabumine selle rituaalse universumi lõpu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Asteekide kujud jäävad aga ellu sünkretismis: Guadalupe'i neitsi ilmub saidile, mis oli kunagi seotud emajumalannaga. Nende ohvrite mõistmine tähendab kultuuri mõistmist, mis asetab kosmose ellujäämise üksikisikust kõrgemale."
+        },
+        {
+          "type": "takeaway",
+          "text": "Asteekide seas toitis päikest inimveri. Jumalad on juba oma eluga maksnud: mehed maksavad selle võla tagasi ohverdades, eriti **lillesõdade** kaudu."
+        }
+      ]
+    }
+  ]
+}

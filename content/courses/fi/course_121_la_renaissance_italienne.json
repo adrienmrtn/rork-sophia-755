@@ -1,0 +1,154 @@
+{
+  "id": "course_121_la_renaissance_italienne",
+  "title": "Italian renessanssi",
+  "subtitle": "14-16-luvulla",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "Kahdessa vuosisadassa Italia keksi maalauksen, kuvanveiston ja arkkitehtuurin uudelleen ja muutti tapaamme nähdä maailman.",
+  "hero": {
+    "image": "la_renaissance_italienne",
+    "ratio": "16:9",
+    "hook": "Kahdessa vuosisadassa Italia on keksinyt taiteen ja tapamme katsoa maailmaa uudelleen."
+  },
+  "sections": [
+    {
+      "id": "course_121_la_renaissance_italienne_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Italian renessanssi (1300-1500-luku) ei ole vain tyylin muutos. Se on uusi tapa nähdä maailma. Kahden vuosisadan aikana Italia asetti havainnon, järjen ja yksilön kaiken keskipisteeseen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä niemimaan rikkaissa kaupungeissa syntynyt vallankumous keksii uudelleen maalauksen, kuvanveiston ja arkkitehtuurin. Kaksi liikkeellepanevaa voimaa ajaa sitä: kreikkalaisen ja roomalaisen antiikin uudelleen löytäminen ja rohkeat tekniset keksinnöt."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p1",
+      "title": "Firenze, kaupunki, joka sytyttää sulakkeen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kaikki alkaa **Firenzesta**, joka hallitsi Euroopan taloutta 1300-luvulla tekstiilien ja pankkitoiminnan ansiosta. **Medici**-perhe otti vallan siellä. Nämä pankkiirit käyttävät [[Asiakassuhde]], taiteilijarahoitusta arvostustyökaluna."
+        },
+        {
+          "type": "funFact",
+          "text": "Medicit keksivät pankkitemppuja kiertääkseen korolla lainaamista koskevan kiellon. Kirkko sulkee silmänsä niin kauan kuin se rahoittaa kappeleita."
+        },
+        {
+          "type": "image",
+          "asset": "lorenzo_de_medici_portrait_florence",
+          "ratio": "4:3",
+          "caption": "Laurent de Medici, joka tunnetaan nimellä \"Mahtava\", suuri taiteilijoiden suojelija."
+        },
+        {
+          "type": "paragraph",
+          "text": "Samaan aikaan **humanismi** muuttaa ihmisen paikkaa. Ajattelijat, kuten [[Pico della Mirandola]], väittävät, että ihminen pystyy ymmärtämään luontoa järjen kautta. Kirjassa **1453** Konstantinopolin kukistuminen työntää tutkijat Italiaan unohdettujen kreikkalaisten käsikirjoitusten kanssa."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p2",
+      "title": "Todellisuuden maalaus: perspektiivi ja keho",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1400-luvulla arkkitehti **Brunelleschi** keksi **1420**:n ympärille [[lineaarinen perspektiivi]]. Takana on keskiaika, jolloin tärkeämpi maalattiin suuremmaksi: avaruus noudattaa nyt matemaattisia sääntöjä, kuin ikkuna, joka on avoin todellisuudelle."
+        },
+        {
+          "type": "image",
+          "asset": "brunelleschi_linear_perspective_florence",
+          "ratio": "4:3",
+          "caption": "Perspektiivi antaa illuusion syvyydestä tasaisella pinnalla."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Leonardo da Vinci** menee pidemmälle: hän leikkaa kehoa ymmärtääkseen lihaksia ja hermoja sekä maalaa tunteita. Flanderista tuleva öljymaali korvaa vähitellen [[Tempera]] ja mahdollistaa [[Chiaroscuro]]: nämä varjon ja valon kontrastit, jotka tuovat helpotusta."
+        },
+        {
+          "type": "funFact",
+          "text": "Leonardo tutki eniten satavuotiaan miehen ruumista. Tutkiessaan sitä hän kuvaili yhtä ensimmäisistä tunnetuista tapauksista, joissa valtimo oli tukkeutunut iän takia."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p3",
+      "title": "Leonardo, Michelangelo, Rafael",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1500-luvun alussa Rooma otti Firenzen paikan, jota kantoivat rakennuspaavit, kuten **Julius II**. Tämä on \"täydellisen ihmisen\" aikakautta. **Leonardo alkaen Vinci** on malli: maalari, insinööri, anatomi."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Michelangelo** ilmentää voimaa. Hänen **David**staan tulee Firenzen symboli. Hän maalasi **1508**:n ja **1512**:n väliin **Sistinuksen kappelin** katon: 500 neliömetriä Genesisissä."
+        },
+        {
+          "type": "image",
+          "asset": "michelangelo_david_sistine_chapel_ceiling",
+          "ratio": "4:3",
+          "caption": "Michelangelo, Daavidilta Sikstuksen kappelin katossa."
+        },
+        {
+          "type": "funFact",
+          "text": "Elokuvassa *Viimeinen tuomio* Michelangelo maalasi omat kasvonsa naarmuuntuneelle iholle: tapa ilmaista, kuinka paljon tämä työ oli uuvuttanut häntä."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Rafael** ilmentää armoa. Hänen freskonsa *Ateenan koulu* kokoaa yhteen antiikin suuret ajattelijat harmoniassa, joka toimii mallina vuosisatojen ajan."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p4",
+      "title": "Perintö, joka kattaa Euroopan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Raphaëlin kuoleman jälkeen **1520**:ssä tasapaino on häiriintynyt. Taiteilijat pidentävät vartaloa ja pakottavat värejä: se on [[manierisuus]], levollisempaa taidetta. Ranskan kuningas **Francis I** kutsuu Leonardon ja käynnistää **Ranskan renessanssin** Loiren linnoilla."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1420",
+              "title": "Lineaarinen perspektiivi",
+              "detail": "Brunelleschi laittaa tilaa yhtälöihin Firenzessä."
+            },
+            {
+              "date": "1453",
+              "title": "Konstantinopolin kukistuminen",
+              "detail": "Tutkijat pakenevat Italiaan kreikkalaisten käsikirjoitustensa kanssa."
+            },
+            {
+              "date": "1504",
+              "title": "Michelangelon David",
+              "detail": "Firenze valitsee kansalaisylpeyden symbolin."
+            },
+            {
+              "date": "1508-1512",
+              "title": "Sikstuksen kappeli",
+              "detail": "Michelangelo maalasi Genesiksen katon."
+            },
+            {
+              "date": "1520",
+              "title": "Rafaelin kuolema",
+              "detail": "Korkea renessanssi päättyy, manierismi alkaa."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Medicien ansiosta Firenzessä syntynyt italialainen renessanssi mullisti taiteen perspektiivillä (noin 1420) ja ruumiintutkimuksella, ennen kuin saavutti huippunsa Roomassa Leonardon, Michelangelon ja Rafaelin kanssa."
+        }
+      ]
+    }
+  ]
+}

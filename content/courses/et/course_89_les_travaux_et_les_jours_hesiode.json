@@ -1,0 +1,106 @@
+{
+  "id": "course_89_les_travaux_et_les_jours_hesiode",
+  "title": "Tööd ja päevad, Hesiod",
+  "subtitle": "8. sajand eKr",
+  "subject": "litterature",
+  "subcategory": "Ancient Greeks & Philosophers",
+  "description": "Hesiodos räägib oma vennale Persesele: tööta, ole õiglane, hoidu liialdamisest. Pandora müüdi ja põllumajandusliku kalendri vahele sünnib tööeetika.",
+  "hero": {
+    "image": "les_travaux_et_les_jours_hesiode",
+    "ratio": "16:9",
+    "hook": "Enne tarkusekäsiraamatuid peab talupoeet oma vennale loenguid."
+  },
+  "sections": [
+    {
+      "id": "course_89_les_travaux_et_les_jours_hesiode_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Umbes **8. sajandil eKr**, [[Boiootia]], Kesk-Kreeka piirkonnas Atikast põhja pool, kirjutas luuletaja **Hesiodos** raamatud **Tööd ja evad**. See ei ole sõdalastest kangelaste eepos. See on luuletus, mis on adresseeritud tema vennale **Persès**, keda süüdistatakse korrumpeerunud kohtunike abiga perekonna pärandi väljapetmises."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hesiodos segab müüti, moraali ja põllumajanduslikke nõuandeid. Maatöö, õigluse austamine, uhkuse vältimine: igapäevaelust saab poeetiline materjal. Homerosega panid tema tekstid aluse suurele osale kreeka mütoloogiast ja refleksioonist."
+        }
+      ]
+    },
+    {
+      "id": "course_89_les_travaux_et_les_jours_hesiode_p1",
+      "title": "Luuletaja, kes räägib oma põllult",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Erinevalt **Homeros**-st, eepilise poeemi poollegendaarsest kujust, seab Hesiod end lavale. Ta räägib oma külast **Ashra**, Boiootia paikkonnast, oma isast, kes oli pärit Väike-Aasiast, praeguse Türkiye piirkonnast, oma kohtuprotsessist Persese vastu. Ta ütles, et **Muusa**, inspireeriv kunstijumalanna, valis ta. Aga toon jääb konkreetseks: külva, lõika, navigeeri õigel ajal."
+        },
+        {
+          "type": "image",
+          "asset": "hesiod_ancient_greek_poet_illustration",
+          "ratio": "4:3",
+          "caption": "Hesiodos: ka kreeka luule laskub põldudele."
+        },
+        {
+          "type": "paragraph",
+          "text": "See isiklik hääl kuulutab midagi kaasaegset: autor, kes kaasa lööb, mitte ainult anonüümne bard. Hesiodos räägib maa pealt, mitte paleest ega lahinguväljalt. Ta mõtleb välja didaktilist luulet, luulet, mis õpetab."
+        }
+      ]
+    },
+    {
+      "id": "course_89_les_travaux_et_les_jours_hesiode_p2",
+      "title": "Prometheus, Pandora ja allakäik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elu karmuse selgitamiseks räägib Hesiod **Prometheus**-le viis inimkonna ajastut, titaanile, kes varastab meeste eest tuld, ja **Pandora**-le viis inimkonna ajastut, esimesele naisele, kelle purk maailma kurja vabastab. Ta lisab [[viis inimkonna ajastut]]: kuld, hõbe, pronks, kangelane, raud. Me elame **Rauajastul**, kõige hullemal, kus õiglus kõigub ja töö on raske."
+        },
+        {
+          "type": "funFact",
+          "text": "[[Hesiodose teogoonia]], sama autori teine suurepärane luuletus, jutustab jumalate sünnist **Kaos**, algsest tühjusest. Teosed tulevad taevast alla adra poole."
+        },
+        {
+          "type": "image",
+          "asset": "prometheus_fire_myth_painting",
+          "ratio": "4:3",
+          "caption": "Prometheus ja tuli: tehnilisel progressil on Hesiodose hind."
+        }
+      ]
+    },
+    {
+      "id": "course_89_les_travaux_et_les_jours_hesiode_p3",
+      "title": "Dikè hubrise vastu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Luuletuse moraalne süda vastandub *Dikè*, õiglus, õiglane kord, [[Hübriid]]-le, liialdusele, mis sunnib inimest uskuma, et ta on jumalatega võrdne. Ebaõiglasi kuningaid ähvardab jumalate kuningas **Zeus**. Ausal talupojal on võimalus. Hesiodos ei luba paradiisi. Ta lubab, et pingutus on parem kui pettus."
+        },
+        {
+          "type": "paragraph",
+          "text": "**töökalender** annab tekstile rütmi: millal künda, millal koristada, millal olla mere suhtes ettevaatlik. Tarkus on hooajaline. Loodusrütmide tundmine tähendab ka hetkeisust suurema korra austamist. Perses on loenguid pidamas nagu laisk vend, mitte nagu kuningas."
+        }
+      ]
+    },
+    {
+      "id": "course_89_les_travaux_et_les_jours_hesiode_p4",
+      "title": "Maaluuletuste esivanem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Virgilius**, ladina luuletaja 1. sajandil eKr. eKr, mäletatakse põllumajandust käsitlevas didaktilises luuletuses [[Georgics]]. Moralistid, alates [[Erasmus]]-st, renessansiajastu humanistist kuni tänapäevani, lugesid seal tööeetikat. Hesiodos ei ole leebe. Selge: ilma töö ja õigluseta kogukond mädaneb."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hesiodos räägib ka **heast Erisist**, kasuliku rivaalitsemise jumalannast, kes sunnib naabrit paremini tööle, ning **halb Erisist**, vihkamise ja katsumuste jumalannast. Karmis maailmas on see erinevus oluline: jäljendamine ei ole sõda. Luuletusest saab seega koos elamise kunst, mis on ankurdatud aastaaegadesse ja mõõtu."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Tööd ja Päevad** mõtlevad välja luule igapäevasest põllumajanduslikust elust. Hesiodos ütles oma vennale ja meile: harige oma põldu, vältige liialdust, sest rauaaeg ei andesta laiskust ega ülekohut."
+        }
+      ]
+    }
+  ]
+}

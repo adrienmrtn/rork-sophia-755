@@ -1,0 +1,133 @@
+{
+  "id": "course_5_la_magna_carta_1215",
+  "title": "Magna Carta",
+  "subtitle": "1215",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Kesäkuussa 1215 John Lackland kiinnitti sinettinsä paroniensa määräämään peruskirjaan. Feodaalisesta tekstistä tulee vuosisatojen kuluessa kuninkaan yläpuolella olevan lain symboli.",
+  "hero": {
+    "image": "la_magna_carta_1215",
+    "ratio": "16:9",
+    "hook": "Nurkassa oleva kuningas kyltti. Kahdeksan vuosisataa myöhemmin koko maailma puhuu siitä edelleen."
+  },
+  "sections": [
+    {
+      "id": "course_5_la_magna_carta_1215_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kesäkuussa **1215** **Runnymede**-niityllä Lontoon lähellä Englannin kuningas **John Lackland** kiinnitti sinettinsä **Magna Carta**, \"suuri peruskirja\". Tämä ei ole anteliaisuuden ele. Se on vastakohta: paronit, valtakunnan suuret herrat, haluavat murtaa kuninkaallisen mielivaltaisuuden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Teksti syntyi sisällissodan välttämiseksi. Sen välitön soveltaminen epäonnistuu. Hänestä tulee kuitenkin vähitellen räjähtävän idean symboli: jopa kuningas on lain alainen."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p1",
+      "title": "John Lackland kuilun partaalla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuninkaana **1199**:stä lähtien Jean kärsii katastrofeista toisensa jälkeen. Hän kohtasi Ranskan kuninkaan Philip [[II Augustuksen]] ja menetti Normandian (1204). Valloittaakseen maansa hän painostaa feodaalijärjestelmää: kuningas antaa maata vastineeksi uskollisuudesta ja asepalveluksesta, mutta Johannes moninkertaistaa verot, panttivangit ja mielivaltaiset sakot. Tapa, joka yhdisti hänet vasalleihinsa, murtui."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konflikti paavi [[Innocent III]] kanssa eristää hänet entisestään. [[Bouvines]] (**1214**) tappion jälkeen, jossa Philip Augustus voitti liittouman, johon kuului Englanti, paronit kapinoivat ja valloittivat Lontoon. Jeanilla ei ole enää vaihtoehtoa: neuvotella tai menettää kruunu."
+        },
+        {
+          "type": "funFact",
+          "text": "Lempinimi \"Sans Terre\" ei tule hänen ranskalaisista tappioistaan. Henrik II:n viimeinen poika, hän ei yksinkertaisesti ollut saanut syntyessään etuoikeutta."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p2",
+      "title": "Runnymede, 63 lausetta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**15. kesäkuuta 1215** osapuolet tapasivat Runnymedessa. Canterburyn arkkipiispa [[Stephen Langton]] vaikuttanut asiakirja sisältää **63 lausekkeita**. Kaksi niistä muuttaa kaiken. **lauseke 39**: ketään vapaata ihmistä ei voida pidättää ilman ikätovereidensa tuomiota. **lauseke 40**: kuningas ei voi myydä eikä viivyttää oikeutta."
+        },
+        {
+          "type": "image",
+          "asset": "magna_carta_1215_manuscript",
+          "ratio": "4:3",
+          "caption": "Magna Carta vuodelta 1215, pergamentti, josta tuli poliittinen myytti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se ei ole vielä demokratiaa. Peruskirja puhuu pääasiassa \"vapaille miehille\", ei maaorjille, maahan sidottuille talonpojille. Se on ennen kaikkea rauhansopimus kuninkaan ja hänen paroniensa välillä. Mutta ajatus on todettu: vallalla on kirjoitetut rajat."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p3",
+      "title": "Epäonnistumisesta myyttiksi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jo elokuussa Johannes kumosi tekstin paavin toimesta. Sisällissota jatkuu. Peruskirja säilyy **1216**:n kuninkaan kuoleman ansiosta: nuori **Henrik III** julkaisee sen uudelleen rauhoitellakseen valtakuntaa. Se vahvistetaan uudestaan ja uudestaan, ja se tulee osaksi Englannin lakia."
+        },
+        {
+          "type": "funFact",
+          "text": "Vuodelta 1215 ei ole yhtä alkuperäiskappaletta, mutta maakuntiin on lähetetty useita kopioita. Vain neljä selvisi."
+        },
+        {
+          "type": "paragraph",
+          "text": "1600-luvulla juristit, kuten [[Edward Coke]], nostivat sen Stuarttien, näiden kuninkaiden, jotka halusivat hallita rajoituksetta, absolutismia vastaan. Keskiaikaisesta pergamentista tulee parlamentaaristen vapauksien väitetty esi-isä."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1204",
+              "title": "Normandian menetys",
+              "detail": "John Lackland menettää mannertulonsa."
+            },
+            {
+              "date": "1214",
+              "title": "Bouvines",
+              "detail": "Tappio eristää kuninkaan lopullisesti."
+            },
+            {
+              "date": "1215",
+              "title": "Magna Carta",
+              "detail": "Sinetti kiinnitetty Runnymedeen paronien painostuksen alaisena."
+            },
+            {
+              "date": "1216",
+              "title": "Uudelleenjulkaisu",
+              "detail": "Henrik III tallentaa tekstin vakauttaakseen valtaistuimen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p4",
+      "title": "Maailmanlaajuinen perintö",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Brittiläiset siirtolaiset vievät peruskirjan Amerikkaan. Perustajaisät saivat siitä inspiraation [[Bill of Rights]]:lle, ensimmäisille muutoksille Yhdysvaltain perustuslakiin. [[Habeas corpus]], mielivaltaiset pidätykset kieltävä periaate, laajentaa lauseketta 39. Teoksessa **1948** [[Eleanor Roosevelt]] näkee sen \"suurena peruskirjana\" koko ihmiskunnalle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Englannissa on tällä hetkellä voimassa vain kolme lauseketta. Älä välitä. Magna Carta ei ole niinkään elävä laki kuin symboli: kukaan ei ole lain yläpuolella."
+        },
+        {
+          "type": "takeaway",
+          "text": "John Lacklandin kirjasta **1215** peräisin oleva Magna Carta vahvistaa, että myös kuningas on lain alainen. Paronien ja kuninkaan välisestä sopimuksesta syntyi yksi nykyaikaisten vapauksien perustavanlaatuisista myyteistä."
+        }
+      ]
+    }
+  ]
+}

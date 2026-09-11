@@ -1,0 +1,108 @@
+{
+  "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve",
+  "title": "Miten aivot tallentavat muistoja?",
+  "subtitle": "Muisti ja neuronit",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Muisti ei ole laatikoiden kirjasto. Se on elävä verkosto hermosoluja, jotka vahvistavat toisiaan, rakentavat itsensä uudelleen ja tekevät joskus virheitä.",
+  "hero": {
+    "image": "comment_le_cerveau_stocke_les_souvenirs",
+    "ratio": "16:9",
+    "hook": "Muisti ei ole tiedosto: se on polku, jonka aivot ovat oppineet tekemään uudelleen."
+  },
+  "sections": [
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Usein kuvittelemme muistin kiintolevynä. Todellisuudessa se on elävä verkosto. Miljardit **neuroniitti**, hermosolut, yhdistyvät uudelleen, vahvistuvat tai heikkenevät sen mukaan, mitä koemme."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mitään ei tallenneta yhteen paikkaan. Muisto on hajallaan oleva jälki, hauras alussa, kiinteämpi unen jälkeen ja aina hieman rekonstruoitu, kun muistamme sen."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
+      "title": "Yhteydet, jotka vahvistavat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kahden hermosolun välistä kosketuspistettä kutsutaan **synapsi**, risteyksestä, jossa hermosignaali kulkee. Ihmisaivoissa on noin **86 miljardia** neuronia ja yli **100 000 miljardia** synapsia."
+        },
+        {
+          "type": "image",
+          "asset": "hippocampus_memory_brain",
+          "ratio": "auto",
+          "caption": "Hippokampuksella on keskeinen rooli muistojen muodostumisessa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kun tietoa toistetaan tai yhdistetään vahvaan tunteeseen, samat hermosolut aktivoituvat yhdessä. Niiden linkki on helpompi laukaista: se on [[pitkäaikainen tehostuminen]], synapsien kestävä vahvistuminen. Mitä enemmän piiriä käytetään, sitä \"leveämmäksi\" polku tulee. Muisti ei siis ole tallennettu objekti, vaan **jäljittää** verkossa."
+        },
+        {
+          "type": "funFact",
+          "text": "Aivojen tallennuskapasiteetiksi arvioidaan noin **2,5 petabyyttiä**, mikä vastaa miljoonia videotunteja. Mutta se ei ole levy: se on elävä kudos, joka järjestyy uudelleen."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
+      "title": "Merihevonen, muistojen asemapäällikkö",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**merihevonen**, pieni rakenne [[ajallinen lohko]], temppelien takana, ei säilytä muistoja ikuisesti. Se vastaanottaa ne, **koodata**, muuntaa ne muistijäljiksi ja jakaa ne sitten uudelleen **aivokuori**, aivojen ulkokerrokseen. Tätä siirtoa kutsutaan nimellä **konsolidointi**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se tehdään pääasiassa **nukkua** aikana. Ilman toimivaa hippokampusta voimme elää nykyhetkessä, mutta meillä ei enää ole uusia tietoisia muistoja. Pysymme jumissa nykyisyydessä ilman lähimenneisyyttä."
+        },
+        {
+          "type": "funFact",
+          "text": "Vuonna 1953 leikattu potilas **H.M.** ei enää muodostanut uusia muistoja. Hän kuitenkin eteni joka päivä peiliin piirtämisessä muistamatta jo yrittäneensä: hänen muistinsa eleistä oli ehjä."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p3",
+      "title": "Muistaminen on rakentamista uudelleen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Muistin palauttaminen ei ole videon toistamista. Joka kerta kun otat sen pois, siitä tulee **muovautuva**, muokattavissa. Nykyiset tunteemme, uusi tietomme tai ehdotuksemme voivat muuttaa sitä ennen kuin se \"tallennetaan uudelleen\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "Psykologi **Elizabeth Loftus** osoitti, että voit istuttaa **musiikin variaatiota** yksinkertaisilla kysymyksillä. Tästä johtuu tänään varovaisuus silminnäkijöiden todistusten edessä: hyvässä uskossa aivot täyttävät aukot."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p4",
+      "title": "Useita muistoja yhdessä aivoissa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tosiasioiden ja elämänjaksojen muisti, mitä voimme kertoa, kulkee pääasiassa hippokampuksen kautta. [[prosessimuisti]], pyöräilyn tai uinnin, riippuu sen sijaan **pikkuaivot**, aivojen takaosassa olevasta rakenteesta ja muista vanhemmista rakenteista."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tästä syystä jotkut amnesiapotilaat unohtavat oman nimensä, mutta soittavat silti pianoa. Muisti ei ole yksittäinen laatikko: se on järjestelmien mosaiikki."
+        },
+        {
+          "type": "takeaway",
+          "text": "Muisto on dynaaminen jälki: synapsit vahvistetaan, lujitetaan erityisesti yöllä ja rakennetaan uudelleen jokaisen muistutuksen yhteydessä. Se ei ole koskaan kiinteä tiedosto."
+        }
+      ]
+    }
+  ]
+}

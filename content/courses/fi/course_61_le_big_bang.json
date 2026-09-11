@@ -1,0 +1,116 @@
+{
+  "id": "course_61_le_big_bang",
+  "title": "Alkuräjähdys",
+  "subtitle": "13,8 miljardia vuotta",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "13,8 miljardia vuotta sitten maailmankaikkeus alkoi laajentua. Se ei ole pommi tyhjiössä: se on itse avaruus, joka kasvaa.",
+  "hero": {
+    "image": "le_big_bang",
+    "ratio": "16:9",
+    "hook": "Alkuräjähdys ei ole räjähdys avaruudessa. Se on tila, joka alkaa kasvaa."
+  },
+  "sections": [
+    {
+      "id": "course_61_le_big_bang_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**13,8 miljardia vuotta sitten** kaikki nykyinen oli keskittynyt erittäin tiheään ja kuumaan tilaan. Tiedemiehet kutsuvat joskus tätä alkua [[singulariteetiksi]]: pisteeksi, jossa tiheys ja lämpötila ovat niin äärimmäisiä, että tavalliset lakimme eivät enää riitä kuvaamaan tilannetta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sitten maailmankaikkeus alkaa laajentua. Se ei ole pommi, joka heittää aineen jo olemassa olevaan tyhjyyteen. Se on **aika-avaruus**, tilan ja ajan yhdistävä kangas, joka kasvaa ja vie aineen mukanaan. Tämä tarina jatkuu tänään."
+        }
+      ]
+    },
+    {
+      "id": "course_61_le_big_bang_p1",
+      "title": "Ei räjähdys tyhjiössä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nimi **\"Big Bang\"** on hämmentävä. Usein kuvittelemme ilotulituksen keskellä tyhjää huonetta. Mutta ennen tätä tapahtumaa ei ole tilaa eikä ulkona. Avaruus ja aika sellaisina kuin me ne tunnemme alkavat hänestä. Kysy \"mitä siellä oli ennen?\" muuttuu siksi hyvin herkäksi: sanalla \"ennen\" ei ole enää samaa merkitystä."
+        },
+        {
+          "type": "image",
+          "asset": "big_bang_universe_expansion_galaxies",
+          "ratio": "auto",
+          "caption": "Universumin laajeneminen alkuräjähdyksen jälkeen."
+        },
+        {
+          "type": "funFact",
+          "text": "Termi \"Big Bang\" keksi kirjassa **1949** brittiläinen astrofyysikko **Fred Hoyle**, joka ei uskonut siihen. Hän halusi nauraa ajatukselle. Lempinimi jäi kiinni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kuvittele laajentuminen kuvittelemalla ilmapalloon piirrettyjä pisteitä. Kun täytät ilmapallon, jokainen piste siirtyy poispäin muista. Mikään piste pinnalla ei ole \"keskus\". Universumissa ajatus on vähän sama: **galaksit**, valtavat tähtiryhmät, ovat siirtymässä pois toisistaan, koska niiden välinen tila venyy."
+        }
+      ]
+    },
+    {
+      "id": "course_61_le_big_bang_p2",
+      "title": "Kolme mahtavaa todistetta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Teoksessa **1929** amerikkalainen tähtitieteilijä **Edwin Hubble** havaitsi, että mitä kauempana galaksi on, sitä nopeammin se liikkuu pois. Universumi ei siis ole kiinteä: se kasvaa. Tämä on **Hubblen laki**, galaksien etäisyyden ja pakonopeuden välinen suhde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kohteessa **1965** kaksi insinööriä, **Arno Penzias** ja **Robert Wilson**, havaitsivat kaikkialta tulevan radion rätinän. Tämä on [[kosminen mikroaaltouuni tausta]]: eräänlainen lämpökaiku nuoresta universumista, joka säteilee, kun valo pääsi kiertämään vapaasti ensimmäistä kertaa, noin **380 000 vuotta** alun jälkeen."
+        },
+        {
+          "type": "funFact",
+          "text": "Pieni osa vanhojen, huonosti viritettyjen analogisten televisioiden \"lumesta\" tuli tästä kosmisesta taustasta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kolmas pilari: valoelementtien suhteet. Laskelmat ennustavat noin **75 %** vetyä ja **25 %** heliumia, joka muodostuu muutaman ensimmäisen minuutin aikana. Havainnot vahvistavat nämä luvut. Se on [[primordiaalinen nukleosynteesi]], ensimmäisten atomiytimien tehdas alkuräjähdyksen jälkeisinä minuuteina."
+        }
+      ]
+    },
+    {
+      "id": "course_61_le_big_bang_p3",
+      "title": "Nopeutettu aikajana",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Heti alun jälkeen universumi käy läpi **inflaatio** -vaiheen, joka on erittäin nopea laajeneminen sekunnin murto-osassa. Sitten noin **3 minuuttia**, **protonitti** ja **neutroniitti**, atomiytimiä muodostavat hiukkaset, kokoontuvat ensimmäisiksi ytimiksi. Universumi pysyy pitkään kuin läpinäkymätön sumu: valo ei kulje vapaasti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Noin **380 000 vuotta**, **elektroneja**, ytimien ympäri kiertävät kevyet hiukkaset, liittyvät ytimiin muodostaen neutraaleja atomeja. Valo vapautuu: se on hajataustan emissio. Ensimmäiset tähdet syntyivät paljon myöhemmin, noin **200 vuotta** myöhemmin. Aurinkomme ilmestyi vasta **4,6 miljardia vuotta sitten** muinaisten tähtien kierrättämästä materiaalista."
+        },
+        {
+          "type": "funFact",
+          "text": "Jos maailmankaikkeuden historia tapahtuisi yhdessä vuodessa, alkuräjähdys tapahtuisi 1. tammikuuta keskiyöllä, ja ihmiskunta ilmestyisi vasta 31. joulukuuta klo 23.52. ."
+        }
+      ]
+    },
+    {
+      "id": "course_61_le_big_bang_p4",
+      "title": "Ja huomenna?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pitkään ihmiset ihmettelivät, hidastaako painovoima lopulta laajentumista. **1998**:ssä kaukaisten [[supernovat]], etäisyysmerkkinä käytettyjen tähtien räjähdysten havainto osoittaa päinvastaista: [[universumin kiihtynyt laajeneminen]]. Salaperäinen **pimeä energia**, hylkivä voima, joka työntää galakseja poispäin, näyttäisi työntävän tämän etäisyyden pois ja edustaisi noin **68 %** maailmankaikkeuden sisällöstä. Tavallinen aine, josta meidät on tehty, tekisi vain noin **5 %**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jos tämä kiihtyvyys jatkuu, maailmankaikkeus voi suuntautua kohti äärimmäistä jäähtymistä, toisinaan lempinimeltään **Big Freeze**, jonka loppuu kylmä. Yksi asia on varma: se, mitä näemme, on vain osa kokonaisuudesta. Kun valo kulkee meitä kohti, avaruus venyy edelleen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Alkuräjähdys, **13,8 miljardia vuotta sitten**, ei ole räjähdys tyhjässä avaruudessa: se on itse avaruuden laajenemista, jonka vahvistavat galaksien lento, kosminen mikroaaltotausta sekä vedyn ja heliumin suhteet."
+        }
+      ]
+    }
+  ]
+}

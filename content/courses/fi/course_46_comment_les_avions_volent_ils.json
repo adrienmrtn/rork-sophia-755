@@ -1,0 +1,100 @@
+{
+  "id": "course_46_comment_les_avions_volent_ils",
+  "title": "Miten lentokoneet lentävät?",
+  "subtitle": "Lentofysiikka",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Useita satoja tonneja painava lentokone lentää. Se ei ole taikuutta: kyse on siipien muodosta, nopeudesta ja toisiaan tasapainottavista voimista.",
+  "hero": {
+    "image": "comment_les_avions_volent",
+    "ratio": "16:9",
+    "hook": "Raskaampi kuin kuorma-auto, mutta silti se pysyy ilmassa. Toimi näin."
+  },
+  "sections": [
+    {
+      "id": "course_46_comment_les_avions_volent_ils_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suuri matkustajakone voi painaa **satoja tonja**. Miten jotain niin raskasta voi pysyä ilmassa? Vastaus löytyy siipien muodosta ja koneen nopeudesta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pelissä on neljä päävoimaa: **työntövoima** (eteenpäin), **vetää** (ilmajarrutus), **paino** (alaspäin) ja **hissi** (ylös)."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p1",
+      "title": "Siipi, älykäs muoto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sivulta katsottuna lentokoneen siipi ei ole tasainen. Yläosa on pyöreämpi kuin alaosa. Kun kone liikkuu nopeasti, ilman täytyy kiertää tätä muotoa."
+        },
+        {
+          "type": "image",
+          "asset": "airplane_wing_cross_section_flight",
+          "ratio": "auto",
+          "caption": "Siiven profiili luo noston, joka nostaa konetta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ylhäältä kulkeva ilma kiihtyy hieman. Hänen paineensa laskee. Siiven alla paine pysyy voimakkaampana. Tämä ero työntää siipeä ylöspäin: tämä on **hissi**. Se selitetään usein **Bernoulli**-periaatteella, joka on nimetty 1700-luvun tutkijan mukaan, ja sillä, että siipi myös ohjaa ilmaa alaspäin."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p2",
+      "title": "Tarvitset nopeutta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ilman nopeutta, ei tarpeeksi ilmaa siiven yli, ei tarpeeksi nostovoimaa. Tästä syystä lentokone tarvitsee pitkän kiitotien nousua varten: moottoreiden on kiihdytettävä sitä tarpeeksi voimakkaasti."
+        },
+        {
+          "type": "funFact",
+          "text": "Linnut käyttävät samaa yleisideaa: niiden siivet luovat nostovoimaa. Mutta he räpyttelevät siipiään mennäkseen eteenpäin. Kone liikkuu eteenpäin moottoreidensa ansiosta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Risteilylennolla nosto tasapainottaa painoa. Moottoreiden työntövoima tasapainottaa ilmanvastusta. Tämän jälkeen kone liikkuu eteenpäin suunnilleen tasaisella nopeudella."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p3",
+      "title": "Mene ylös, alas, käänny",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Noustakseen ohjaaja (tai ajotietokone) kallistaa nokkaa hieman ylöspäin ja säätää työntövoimaa. Laskeutuaksemme vähennämme usein työntövoimaa. Kääntymistä varten konetta kallistetaan sivulle käyttämällä siipien liikkuvia osia, siivekkeitä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Laskeutuessamme hidastamme. Läpät ulottuvat siivestä lisäämään nostoa alhaisilla nopeuksilla. Sitten pyörät koskettavat maata ja jarrut (joskus myös työntövoiman suunnanvaihtolaitteet) pysäyttävät koneen."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p4",
+      "title": "Se ei ole \"ilmaa kevyempi\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Heliumpallo kelluu, koska se on vähemmän tiheä kuin ilma. Lentokone, ei: se on paljon tiheämpi. Se lentää, koska se **vahvuus** näyttää kantavansa sitä nopeuden ja siipien muodon ansiosta."
+        },
+        {
+          "type": "takeaway",
+          "text": "Lentokone lentää ilmassa liikkuvien siipien luoman **hissi**:n ansiosta. Nopeus on välttämätöntä: ilman sitä siipi ei enää \"työnnä\" tarpeeksi ylöspäin kompensoidakseen painoa."
+        }
+      ]
+    }
+  ]
+}

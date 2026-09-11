@@ -1,0 +1,106 @@
+{
+  "id": "course_146_hitchcock_et_le_suspense",
+  "title": "Hitchcock ja jännitys",
+  "subtitle": "1899-1980",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**Alfred Hitchcock** keksii modernin jännityksen: antaa yleisölle tietoa, jota hahmoilla ei ole. *Psykologia*:n, *Huimaus*:n tai *Takaikkunan* avulla hän manipuloi katsettamme.",
+  "hero": {
+    "image": "hitchcock_et_le_suspense",
+    "ratio": "16:9",
+    "hook": "Todellinen jännitys ei yllätä: sen avulla näet pommin pöydän alla."
+  },
+  "sections": [
+    {
+      "id": "course_146_hitchcock_et_le_suspense_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Alfred Hitchcock** (1899-1980) on lempinimi \"jännitteen mestari\". Yli viidessäkymmenessä elokuvassa hän muutti trillerin manipuloinnin taiteeksi. *Psykologia*, *Huimaus*, *Takaikkuna*: kamera ei aina kerro vain tarinaa. Hän leikkii hermoillamme."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hänen suosikkiaiheensa ei ole rikollisuus. Se on ulkonäkö: syyllisyys, pakkomielle, tirkistely. Hitchcock kuvaa katsojaa yhtä paljon kuin hahmoja."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p1",
+      "title": "Yllätys vastaan jännitys",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kirjassa **1966** Hitchcock selittää menetelmänsä [[François Truffaut]], ranskalaiselle kriitikolle ja sitten elokuvantekijälle. Hän sanoo, että **yllätys** on pommi, joka räjähtää ilman varoitusta: lyhyt shokki. **jännitystä** näyttää yleisölle pommin, kun hahmot jättävät sen huomiotta. Jännitys kestää. Meistä tulee osallisia ja voimattomia."
+        },
+        {
+          "type": "image",
+          "asset": "alfred_hitchcock_portrait_director",
+          "ratio": "4:3",
+          "caption": "Hitchcock: kasvot, siluetti, maailmanlaajuinen jännityksen merkki."
+        },
+        {
+          "type": "funFact",
+          "text": "Juonen edistämiseksi hän käyttää usein [[MacGuffin]]: esinettä tai salaisuutta, joka motivoi hahmoja, mutta jonka tarkalla luonteella ei ole juurikaan merkitystä. Tärkeintä on metsästys."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä tiedon epäsymmetria on sen kielioppi. Heti kun tiedämme enemmän kuin sankari, pelkäämme hänen puolestaan."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p2",
+      "title": "Tekniset keksinnöt ahdistuksen kuvaamiseen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elokuvassa **1948** ja *Köysi* Hitchcock simuloi ainutlaatuista [[sarjakuvaus]]: elokuva näyttää kuvattavan yhdellä kertaa. Kelat kestävät vain kymmenen minuuttia, joten hän piilottaa leikkaukset selän tai tumman huonekalun taakse. Vaikutus on tukahduttava: pysymme kiinni murhaajien kanssa."
+        },
+        {
+          "type": "image",
+          "asset": "hitchcock_vertigo_james_stewart_kim_novak_film",
+          "ratio": "4:3",
+          "caption": "Huimaus: huimaus kuvattuna tilan vääristymänä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hän keksi elokuvassa **1958** *Huimaus*:lle [[Dolly Zoom]]: kamera liikkuu taaksepäin zoomin edetessä (tai päinvastoin). Avaruus on vääristynyt. Emme enää näe huimausta. Me tunnemme sen."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p3",
+      "title": "Olemme kaikki matkailijoita",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*Takaikkuna* (**1954**), valokuvaaja, jolla on murtunut jalka, vakoilee naapureitaan. Hän on katsojan tupla pimeässä. Hitchcock käyttää [[Subjektiivinen kamera]]: näemme tarkalleen mitä sankari näkee, ei sen enempää."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä tunnistaminen on sekä moraalista että visuaalista. Etsimme johtolankoja, mutta jaamme myös syyllisyyden siitä, että katsomme sitä, mikä ei koske meitä. Hitchcock sekoittaa trillerin ja [[psykoanalyysi]]: haudatut pelot, kielletyt halut, kaksois-identiteetit."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p4",
+      "title": "Brändi, musiikki, perintö",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hitchcock muutti nimensä brändiksi, kunnes hänen tv-sarjansa *Aalfred Hitchcock esittele*. *Psykologia*:lle hän kieltää pääsyn istunnon alkamisen jälkeen: salaisuudesta tulee tapahtuma. Hänen yhteistyönsä säveltäjä [[Bernard Herrmann]] kanssa yhdistää musiikin ja [[editointi]] yleisön pulssin nopeuttamiseen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hitchcock koodasi modernin jännityksen: informoi katsojaa, ohjaa hänen katseensa ja muutti pelon kontrolloiduksi nautinnoksi. Vuosikymmeniä myöhemmin trilleri on edelleen kielioppinsa velkaa hänelle."
+        }
+      ]
+    }
+  ]
+}

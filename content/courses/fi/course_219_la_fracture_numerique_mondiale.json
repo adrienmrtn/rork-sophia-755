@@ -1,0 +1,104 @@
+{
+  "id": "course_219_la_fracture_numerique_mondiale",
+  "title": "Globaali digitaalinen kahtiajako",
+  "subtitle": "Kolmannes ihmiskunnasta offline-tilassa",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "2,7 miljardilla ihmisellä ei edelleenkään ole pääsyä Internetiin. Yhä digitalisoituvassa maailmassa tästä yhteyden puutteesta tulee uusi syrjäytymisen muoto.",
+  "hero": {
+    "image": "la_fracture_numerique_mondiale",
+    "ratio": "16:9",
+    "hook": "Kenia keksi puhelimitse maksamisen kymmenen vuotta ennen Eurooppaa pankkikonttoreiden puutteen vuoksi."
+  },
+  "sections": [
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vaikka kehittyneet yhteiskunnat kokevat tekoälyn ohjaamaa vallankumousta, brutaali todellisuus jatkuu: **2,7 miljardia pelaajaa** eli noin kolmannes ihmiskunnasta ei vieläkään pääse Internetiin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä **digitaalinen kahtiajako** ei ole vain tekninen viive: siitä on tullut todellinen este, joka pitää miljoonat ihmiset poissa koulutuksesta, terveydestä ja maailmantaloudesta. Tässä on miksi se jatkuu ja kuinka jotkut maat yrittävät täyttää sen."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p1",
+      "title": "Kahden nopeuden maailmankartta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vuoteen 2024 mennessä noin 5,4 miljardia ihmistä on yhteydessä Internetiin maailmanlaajuisesti, mutta kehitys on pysähtynyt köyhimmillä alueilla. Eurooppa ja Pohjois-Amerikka ylittävät 90 prosentin yhteyden, kun taas Saharan eteläpuolinen Afrikka on vain 37 prosenttia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä poissulkeminen johtuu useista syistä. Ensinnäkin infrastruktuurin puute: operaattorit pitävät optisen kuidun asentamista tietyille syrjäisille alueille liian kalliina. Sitten hinta: joissain maissa yksinkertainen lähtötason [[älypuhelin]] edustaa usean kuukauden palkkaa. Lopuksi kielimuuri (noin 70 % verkkosisällöstä on englanniksi) ja digitaalisen koulutuksen puute rajoittavat käyttöä, vaikka yhteys olisi olemassa."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p2",
+      "title": "Kun infrastruktuurin puute pakottaa innovaatioihin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tämä jako toimii epätasa-arvon kertojana. Maailmassa, jossa etätyöstä, sähköisestä kaupankäynnistä ja verkkokoulutuksesta ([[MOOC]]) on tulossa normi, yhteyden puuttuminen tarkoittaa muuttumista näkymättömiksi globaalille taloudelle."
+        },
+        {
+          "type": "image",
+          "asset": "digital_divide_africa_rural_village_smartphone",
+          "ratio": "16:9",
+          "caption": "Monilla maaseutualueilla matkapuhelin on edelleen ainoa Internet-yhteyspiste."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kenia havainnollistaa toista polkua: riittävien pankkikonttoreiden puutteen vuoksi maa otti vuonna 2007 massiivisesti käyttöön yksinkertaisen tekstiviestimaksujärjestelmän, [[Kenialainen M-Pesa]], päihittäen Euroopan kymmenellä vuodella. Tämän järjestelmän ansiosta miljoonat ihmiset, joilla ei ole pankkitiliä, voivat tehdä turvallisia tapahtumia yksinkertaisella puhelimella."
+        },
+        {
+          "type": "funFact",
+          "text": "Kenia on kutsunut tätä strategiaa teknologiseksi harppaukseksi: kalliin ja vanhentuneen infrastruktuurin asentamisen sijaan maa siirtyi suoraan nykyaikaisempaan ja halvempaan ratkaisuun."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p3",
+      "title": "Satelliitti-Internet: ratkaisu ehdoin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yhdistääkseen syrjäisimpien kylien uudet pelaajat panostavat avaruuteen. [[Starlink]]-projekti lähettää tuhansia satelliitteja matalalle kiertoradalle, mikä mahdollistaa nopean yhteyden jopa autiomaassa tai korkeilla vuorilla ilman, että tarvitsee vetää yhtä kaapelia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tilauksen ja laitteiden kustannukset ovat kuitenkin edelleen länsimaisten standardien mukaiset, minkä vuoksi köyhimmät maaseutuväestö eivät pääse näihin ratkaisuihin ilman ulkopuolista apua. Digitaalisen kuilun purkaminen ei siis ole mahdollista pelkällä tekniikalla: se vaatii myös poliittista tahtoa tehdä Internetistä kaikkien ulottuvilla."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p4",
+      "title": "Tekoäly, uusi aukko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tekoälyn nopea nousu uhkaa laajentaa tätä kuilua entisestään. Se vaatii valtavaa laskenta- ja datatehoa, resursseja, jotka on keskitetty muutaman maan ja yrityksen käsiin. Irrallaan olevat populaatiot ovat tällöin vaarassa joutua riippuvaisiksi työkaluista, jotka on suunniteltu ottamatta huomioon heidän kulttuuriaan tai kieltään."
+        },
+        {
+          "type": "paragraph",
+          "text": "Taitojen kuilu sidoksissa olevien ja yhteyksien ulkopuolella olevien opiskelijoiden välillä voi myös kasvaa hyvin nopeasti. Tulevien vuosien haasteena ei siis ole enää vain yhteyden tarjoaminen, vaan oikeudenmukaisen pääsyn takaaminen digitaalisen arvon luomiseen yhdistämällä edullisemmat kustannukset, paikalliset sisällöt ja koulutus."
+        },
+        {
+          "type": "takeaway",
+          "text": "2,7 miljardia ihmistä on edelleen syrjässä Internetin käytöstä, ja kuilu uhkaa pahentua tekoälyn myötä. Tämän eron kaventaminen edellyttää yhteyksien muuttamista todelliseksi hyödykkeeksi, joka on kaikkien saatavilla, eikä vain myytäväksi tuotteeksi."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "course_86_la_republique_platon",
+  "title": "Vabariik, Platon",
+  "subtitle": "4. sajand eKr",
+  "subject": "litterature",
+  "subcategory": "Ancient Greeks & Philosophers",
+  "description": "Õigluse määratlemiseks kujutab Platon ette ideaalset linna ja koopasemüüti. Vabariik ei ole valimisprogramm: see on hinge ja võimu uurimine.",
+  "hero": {
+    "image": "la_republique_platon",
+    "ratio": "16:9",
+    "hook": "Mis siis, kui õiglusest saaks paremini aru, kui joonistada terve linn?"
+  },
+  "sections": [
+    {
+      "id": "course_86_la_republique_platon_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Umbes **380 eKr**, **Platon**, kreeka filosoof ja Ateena akadeemia asutaja, kirjutas **vabariik**. Kreeka keeles ütleme *Politeia*. Dialoog algab lihtsa küsimusega: mis on **õiglus**? Sellele vastamiseks pakub Platoni dialoogide keskne tegelane **Sokrates** välja hämmastava kõrvalepõike: konstrueerida sõnadega ideaalne linn, [[Kallipolis]], “ilus linn”."
+        },
+        {
+          "type": "paragraph",
+          "text": "See ei ole fantaasiaromaan. See on **analoogia**: linna mõistmine hinge mõistmiseks ja hinge mõistmine võimu üle otsustamiseks. [[Alfred North Whitehead]], Briti filosoof ja matemaatik, ütles hiljem, et kogu lääne filosoofia on vaid rida joonealuseid märkusi Platonile. See raamat selgitab, miks."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p1",
+      "title": "Hing ja linn, sama plaan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Platon jagab hinge kolmeks osaks. Soov, [[Epituumia]], on seotud materiaalse isuga. Julgus, [[Thumos]], on ülla viha ja iseloomu tugevuse asukoht. Põhjus, [[Logod]], on võimeline tõele ligi pääsema. Ideaalsel linnal on kolm klassi: produtsendid, **kaitstud** sõdurid, juhid. Õiglus seisneb selles, et kumbki osapool teeb oma tööd teisi riivamata."
+        },
+        {
+          "type": "image",
+          "asset": "plato_academy_athens_painting",
+          "ratio": "4:3",
+          "caption": "Platoni Akadeemia Ateenas: linnale mõtlemine hinge harimiseks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Idee on endiselt šokeeriv: see seob eramoraali ja poliitilise organisatsiooni. Platoni jaoks toodab ebaõiglane linn keerdunud hingi. Ja korratu hing toodab korrumpeerunud linna. Õiglus ei ole lihtsalt dekreet. See on sisemine ja kollektiivne tasakaal."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p2",
+      "title": "Kes peaks valitsema?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ideaalsed juhid on [[filosoofid-kuningad]], need, kes armastavad tõde rohkem kui jõudu. Nad elavad ilma liigse eraomandita. Neid on pikka aega koolitatud matemaatika ja **dialektiline** alal, dialoogikunstis, mis otsib tõde. Platon umbusaldab Ateena demokraatiat, mis mõistis Sokratese 399. aastal hemlocki jooma."
+        },
+        {
+          "type": "funFact",
+          "text": "[[Karl Popper]], 20. sajandi filosoof, süüdistab Vabariiki totalitarismi väljakuulutamises. Teised peavad seda haridusutoopiaks, mitte politsei käsiraamatuks. Arutelu on olnud avatud kakskümmend viis sajandit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Poliitilise skeemi taga on [[Platoni ideede teooria]]. Mõistlik maailm, see, mida me näeme ja puudutame, on vaid vari. Hästi juhtimine tähendab **Tere**, Ülima Idee nägemist, mitte ainult põgusate arvamuste haldamist."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p3",
+      "title": "Koobas: illusioonist väljumine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**koopa müüt** on raamatu kuulsaim lõik. Aheldatud vangid näevad seinal ainult varje, mida heidab enda taha tuli. Üks lastakse lahti, läheb päikese kätte, naaseb teisi hoiatama. Nad kutsuvad teda hulluks. Platon ütleb, et haridus ei ole vaasi täitmine. See pöörab meie pilgu valguse poole."
+        },
+        {
+          "type": "image",
+          "asset": "plato_portrait_bust_sculpture",
+          "ratio": "1:1",
+          "caption": "Platon: mõelda tähendab nõustuda lahkuma tuttavatest varjudest."
+        },
+        {
+          "type": "paragraph",
+          "text": "See pilt on läbinud sajandeid: meedia, ideoloogiad, intellektuaalne mugavus. Koopast välja saamine maksab. Sissejäämine on rahustav. Platon soovitab, et filosoof peab naasma teisi valgustama, isegi kui teda mõnitatakse. Teadmised ei ole privaatne luksus. See on vastutus."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p4",
+      "title": "Režiimid, mis mädanevad, töö, mis jääb",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Platon kirjeldab ka režiimide allakäiku: aristokraatia, timokraatia, oligarhia, demokraatia, türannia. Iga režiim sünnib eelmise režiimi pahedest. Õppetund ei ole fatalism. See on valvsus: institutsioonid järgivad kodanike iseloomu."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Vabariik** seob isikliku õigluse ja poliitilise õigluse. Ideaalse linna ja koopa kaudu küsib Platon: mis väärtus on võimul, mis ei otsi tõde?"
+        }
+      ]
+    }
+  ]
+}

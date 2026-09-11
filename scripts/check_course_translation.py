@@ -178,6 +178,10 @@ LEAKED_TOKEN_RE = re.compile(
     r"|(?:END)?(?:BOLD|ITAL|GLOSS|NAME)ZZ"
     r"|__[A-Z]+__|\{\{\s*\w+\s*\}\}"
 )
+#: Locales whose prose carries no Latin of its own, so a stray Latin letter
+#: stands out as wreckage rather than as a name.
+NON_LATIN_LANGS = frozenset({"ar", "he"})
+LONE_SENTINEL_LETTER = re.compile(r"(?<![\w'À-ɏ-])Z(?![\w'À-ɏ-])")
 
 #: Closing punctuation that may legally follow a comma or colon with no space:
 #: American style puts the comma inside the quotation marks.
@@ -713,13 +717,11 @@ FINNISH_RULES = LanguageRules(
         r"\s+([,;:.!?])(?=\s|$)",
         re.IGNORECASE,
     ),
-    # "että," is ordinary before a parenthetical, the way Russian "что," is, so
-    # only an adposition ending the sentence counts.
-    stranded_tight=re.compile(
-        r"\b(ilman|ennen|jälkeen|kanssa|aikana|välillä|vastaan|kohti)"
-        r"\s*([.!?])(?=\s|$)",
-        re.IGNORECASE,
-    ),
+    # Finnish is postpositional: "julkaisun jälkeen." and "sortoa vastaan." put
+    # the adposition last on purpose, so a word sitting against the full stop
+    # says nothing. Only the gap the deletion leaves — a space before the mark,
+    # caught above — is a tell, and this pattern is deliberately inert.
+    stranded_tight=re.compile(r"(?!x)x"),
     leading_articles=(),  # Finnish has no articles
     leftover_extra_skip=frozenset(),
     check_a_an=False,
@@ -738,12 +740,9 @@ ESTONIAN_RULES = LanguageRules(
         r"\s+([,;:.!?])(?=\s|$)",
         re.IGNORECASE,
     ),
-    # "et," takes a parenthetical the same way, so it is left out here too.
-    stranded_tight=re.compile(
-        r"\b(ilma|enne|pärast|koos|ajal|vahel|vastu|kohta|järgi)"
-        r"\s*([.!?])(?=\s|$)",
-        re.IGNORECASE,
-    ),
+    # Estonian is postpositional too — "ebamoraalsuse pärast.", "rõhumise
+    # vastu." — so the same reasoning as Finnish applies and this stays inert.
+    stranded_tight=re.compile(r"(?!x)x"),
     leading_articles=(),  # Estonian has no articles
     leftover_extra_skip=frozenset(),
     check_a_an=False,
@@ -1036,11 +1035,15 @@ def check_segment(
     if "  " in english:
         report("double-space", snippet(english, english.find("  ")))
     # Glossary keys may contain a colon (Swedish EU:s, 13:e). Only prose
-    # is checked. Swedish genitive :s and ordinals :e / :a are legal.
+    # is checked. Swedish genitive :s and ordinals :e / :a are legal, and so is
+    # the Finnish colon that carries a case ending onto a name or a numeral —
+    # "Huone 101:ssä", "[[Rouva Bovary]]:n", "EU:ssa".
     for match in MISSING_SPACE_RE.finditer(prose_for_chars):
-        if lang == "sv" and match.group(0) == ":" and match.end() < len(prose_for_chars):
-            nxt = prose_for_chars[match.end()]
-            if nxt in "seaSEA":
+        if match.group(0) == ":" and match.end() < len(prose_for_chars):
+            tail = prose_for_chars[match.end() :]
+            if lang == "sv" and tail[0] in "seaSEA":
+                continue
+            if lang == "fi" and re.match(r"[a-zäöå]{1,4}\b", tail):
                 continue
         report("missing-space-after-punctuation", snippet(english, match.start()))
         break
@@ -1050,6 +1053,13 @@ def check_segment(
     leaked = LEAKED_TOKEN_RE.search(english)
     if leaked:
         report("leaked-token", f"{leaked.group(0)!r}: {snippet(english, leaked.start())}")
+    # In Arabic and Hebrew a lone Latin Z is never content: it is the last
+    # letter of a sentinel whose siblings the engine consumed along with the
+    # term they were hiding ("النظام القديم والعقارات Z، تنقسم").
+    if lang in NON_LATIN_LANGS:
+        stray = LONE_SENTINEL_LETTER.search(english)
+        if stray:
+            report("leaked-token", f"lone sentinel letter: {snippet(english, stray.start())}")
 
     # --- localisation of numbers and eras ---------------------------------
     if rules.flag_space_thousands:

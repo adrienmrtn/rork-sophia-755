@@ -1,0 +1,116 @@
+{
+  "id": "course_163_pandore_et_la_boite",
+  "title": "Pandora ja laatikko",
+  "subtitle": "Pahuuden purkki",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Ensimmäinen jumalten luoma nainen, Pandora avaa purkin, joka on täynnä vitsauksia. Syvällä sisimmässä on toivoa. Myytti uteliaisuudesta ja onnettomuudesta.",
+  "hero": {
+    "image": "pandore_et_la_boite",
+    "ratio": "16:9",
+    "hook": "Se ei ollut laatikko. Se oli purkki. Ja se, mitä se sisälsi, muutti ihmisten kohtalon."
+  },
+  "sections": [
+    {
+      "id": "course_163_pandore_et_la_boite_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kreikkalaisessa mytologiassa **Pandora** ei ole vain hahmo. Hän on ensimmäinen nainen, jonka jumalat ovat luoneet ansaksi. **Zeus** haluaa rangaista miehiä, jotka [[Prometheus]] ampui."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pandora saapuu purkin kanssa. Avaamalla sen hän vapauttaa pahuudet, jotka tekevät lopun ihmisten huolimattomuudesta. Syvällä siellä on edelleen arvoituksellinen asia: **toivoa**. Näin syntyy ilmaus \"Pandoran lippaan avaaminen\"."
+        }
+      ]
+    },
+    {
+      "id": "course_163_pandore_et_la_boite_p1",
+      "title": "Jumalat luovat \"kauniin pahan\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tulivarkauden jälkeen Zeus käskee **Hephaestuksen**, takomisen jumalan, mallintamaan savesta ja vedestä olevaa naista, joka on kaunis kuin jumalatar. Jokainen olympialainen lisää lahjoituksen. **Athena** opettaa hänelle kudontaa. **Aphrodite** antaa sille viehätyksen. **Hermes**, jumalien sanansaattaja, temppuilee ja valehtelee häneen."
+        },
+        {
+          "type": "image",
+          "asset": "pandora_opening_jar_pithos_painting",
+          "ratio": "4:3",
+          "caption": "Pandora, \"hän, joka sai kaikki lahjat\", luotiin pettääkseen miehiä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Häntä kutsutaan **Pandora**: \"se, joka sai kaikki lahjat\". Prometheus oli varoittanut veljeään **Epimetheusta** olemaan vastaanottamatta lahjoja Zeukselta. Liian myöhäistä. Epimetheus, joka ajattelee jälkikäteen, joutuu loitsun alle ja toivottaa hänet tervetulleeksi."
+        },
+        {
+          "type": "funFact",
+          "text": "Kreikkalaisten keskuudessa Pandoraa ei luotu kumppaniksi. Se on suunniteltu rangaistukseksi, \"kauniiksi pahaksi\", joka on tarkoitettu iskemään ihmiskuntaan."
+        }
+      ]
+    },
+    {
+      "id": "course_163_pandore_et_la_boite_p2",
+      "title": "Purkki avautuu, rutto lentää pois",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pandorassa on \"pithos\", suuri säilytyspurkki. Latinalaiset tekstit ja modernit käännökset tekevät siitä \"laatikon\". Sisälle jumalat lukitsivat vanhuuden, sairauden, nälänhädän, hulluuden, sodan."
+        },
+        {
+          "type": "funFact",
+          "text": "Laatikkovirhe tulee [[Erasmus Rotterdamilainen]], 1500-luvulla. Hesiodosta kääntäessään hän sekoittaa sanat \"pithos\" (purkki) ja \"pyxis\" (pieni laatikko)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pandora nostaa kannen uteliaisuudesta, jonka jumalat ovat asettaneet häneen. Vitsaukset pakenevat kerralla. Panikoitunut hän sulkee purkin. Liian myöhäistä. Jäljelle jää vain [[Elpis]], Hope, joka takertuu pohjaan."
+        }
+      ]
+    },
+    {
+      "id": "course_163_pandore_et_la_boite_p3",
+      "title": "Toivo: parannuskeino vai ansa?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Miksi toivo jää purkkiin? Keskustelua on käyty antiikista lähtien. Jos säiliö sisälsi vain pahuutta, pitäisikö meidän uskoa, että toivo on yksi?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Joillekin, kuten filosofille **Nietzsche**, toivo pidentää piinaa: se estää meitä hyväksymästä todellisuutta. Toisille Zeus jätti sen tarkoituksella ainoaksi lääkkeeksi epätoivoon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kreikaksi [[Elpis]] ei ole pelkästään positiivinen. Sana viittaa odotukseen siitä, mitä on tulossa, hyvää tai pahaa. Neutraali voima, joka pystyy pelastamaan tai piinaamaan."
+        }
+      ]
+    },
+    {
+      "id": "course_163_pandore_et_la_boite_p4",
+      "title": "Mitä myytti jätti jälkeensä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Teogonian kirjoittajassa **Hesiod** Pandoran tarina sisältää vahvan [[Misogyynia]]: nainen esiintyy siellä taakana miehelle. Tätä myyttiä on usein verrattu Eevaan ja raamatulliseen lankeemukseen."
+        },
+        {
+          "type": "funFact",
+          "text": "Muissa versioissa purkki sisälsi etuja. Lentämällä kohti Olympusta he olisivat tulleet kuolevaisten saavuttamattomiksi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Myöhemmin Pandorasta tulee myös uteliaisuuden hahmo. Hänen tottelemattomuutensa tuo epäonnea, mutta myös työntää ihmiskunnan työskentelemään, keksimään, selviytymään. Nykyään \"Pandoran lippaan avaaminen\" tarkoittaa toimintaa, jolla on hallitsemattomat seuraukset."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Pandora**-purkki tekee lopun ihmisten huolimattomuudesta. Pahat leviävät, ja **toivoa** pysyy pohjassa: ainoa, epäselvä vastakohta onnettomuuden edessä."
+        }
+      ]
+    }
+  ]
+}

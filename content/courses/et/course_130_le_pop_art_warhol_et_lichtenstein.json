@@ -1,0 +1,138 @@
+{
+  "id": "course_130_le_pop_art_warhol_et_lichtenstein",
+  "title": "Popkunst: Warhol ja Lichtenstein",
+  "subtitle": "1950.-1970. aastad",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "Popkunst vastab tarbimisühiskonnale. **Warhol** ja **Lichtenstein** teevad reklaamist, koomiksitest ja staaridest suurepärase kunsti.",
+  "hero": {
+    "image": "le_pop_art_warhol_et_lichtenstein",
+    "ratio": "16:9",
+    "hook": "Purk suppi, karp koomiksiraamatuid: mis siis, kui banaal oleks sajandi ikoon?"
+  },
+  "sections": [
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Popkunst** aastate keskpaigast **1950** kuni aastateni **1970** vastab [[Ameerika tarbimisühiskond 1950.-60. aastatel]] ja massikultuur. Reklaam, koomiksid, Hollywoodi staarid: kõik muutub kunsti jaoks materjaliks."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Andy Warhol** ja **Roy Lichtenstein** hägustab piir muuseumi ja supermarketi vahel. Igapäevasest objektist saab ikoon. Teose väärtus ja kunstniku roll on häiritud."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p1",
+      "title": "Igapäevaelust muuseumini",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Popkunst sündis **Suurbritannias** koos [[Sõltumatu rühm]], kuid see plahvatas **Ameerika Ühendriikides** aastatel **1960**. Sõjajärgne õitseng, supermarketid, logod kõikjal: ameeriklaste visuaalne maastik on muutunud."
+        },
+        {
+          "type": "funFact",
+          "text": "1957. aastal määratles Richard Hamilton popkunsti omadussõnadega: \"efemeerne\", \"odav\", \"seksikas\". Kunst, mida tarbida sama kiiresti kui ajakiri."
+        },
+        {
+          "type": "paragraph",
+          "text": "Popkunstnikud olid vastu [[Abstraktne ekspressionism]], need sisekaemuslikud maalid olid siis domineerivad. Kui Warhol suppe maalib, näitab ta, et indiviidi määrab see, mida ta ostab. Kordamine kurnab selle emotsiooni kuvandit, jättes alles ainult selle kaubandusliku tõhususe."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p2",
+      "title": "Warhol: töökoda kui tehas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Andy Warhol** (1928-1987), endine reklaamigraafik, rakendab kunstis tööstuslikke meetodeid. Tema New Yorgis asuv **Tehas** pole enam üksildane pühakoda: abilised ja sõbrad toodavad koos."
+        },
+        {
+          "type": "image",
+          "asset": "andy_warhol_factory_silkscreen_marilyn",
+          "ratio": "4:3",
+          "caption": "Marilyn sarjas: staar kui reprodutseeritav toode."
+        },
+        {
+          "type": "funFact",
+          "text": "Warhol kogus rohkem kui 600 \"ajakapslit\": kaste, kuhu ta viskas kirju, arveid ja isegi toidujääke."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tema kuninganna tehnika: [[Siiditrükk]], mis võimaldab pilti reprodutseerida kümneid kordi. Marilyn Monroe korrutamisega illustreerib ta [[Aura ja mehhaniseeritud paljunemine (Walter Benjamin)]] ideed: mida rohkem pilt ringleb, seda vähem “püha” see on, seda rohkem muutub see ikooniks. Kuulsus ise on toode."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p3",
+      "title": "Lichtenstein: suurendatud koomiks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Roy Lichtenstein** (1923-1997) ründab **koomiksid** keelt. Ta isoleerib emotsionaalset klišeed täis kasti ja maalib selle monumentaalsesse vormingusse."
+        },
+        {
+          "type": "image",
+          "asset": "roy_lichtenstein_comic_ben_day_dots_painting",
+          "ratio": "4:3",
+          "caption": "Käsitsi maalitud Ben-Day täpid: tehast jäljendatakse žestiga."
+        },
+        {
+          "type": "funFact",
+          "text": "Kompositsiooni hindamiseks vaatas Lichtenstein oma maale peeglist tagurpidi, et näha, kas need püsivad puhtalt abstraktsel viisil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selle signatuur: punkt [[Ben-Day]], need väikesed tööstuslikud trükitäpid, mis loovad nüansse. Ta värvib need käsitsi šabloonidega: tunde, et imiteerida, mida masin teeb sekunditega. *Whaam!* muudab ümbersuunamiskasti kaasaegseks ajaloomaaliks."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p4",
+      "title": "Pärand: turult võrkudesse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Popkunst muudab turgu ja institutsioone. Kunstniku märk loeb sama palju kui žest. Filmis **2022** jõudis Warholi Marilyni portree **195 tuhat** dollarini: sakraliseeritud massipildist saab kõige hinnalisem kaup."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1957",
+              "title": "Popi definitsioon",
+              "detail": "Hamilton võtab liikumise kokku: efemeerne, odav, seksikas."
+            },
+            {
+              "date": "1960. aastad",
+              "title": "Tehas ja koomiksid",
+              "detail": "Warhol ja Lichtenstein suruvad USA-s peale pop-esteetikat."
+            },
+            {
+              "date": "2022",
+              "title": "Marilyn 195 miljonit dollarit",
+              "detail": "Massiikoonist saab turu absoluutne trofee."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Warholi ennustusest \"15 minutit kuulsust\" on saanud meie digitaalne igapäevaelu. Meemid ja piltide taaskasutamine on selle revolutsiooni otsene tulemus."
+        },
+        {
+          "type": "takeaway",
+          "text": "Popkunst murdis barjääri kõrgkunsti ja massikultuuri vahel. Siiditrüki ja Ben-Day täppide abil muutsid Warhol ja Lichtenstein igapäevased esemed ja tähed püsivateks ikoonideks."
+        }
+      ]
+    }
+  ]
+}

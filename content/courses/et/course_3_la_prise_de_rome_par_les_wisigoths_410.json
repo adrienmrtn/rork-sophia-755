@@ -1,0 +1,139 @@
+{
+  "id": "course_3_la_prise_de_rome_par_les_wisigoths_410",
+  "title": "Rooma vallutamine visigootide poolt",
+  "subtitle": "410",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Augustis 410 rüüstasid Alarici visigootid Roomat kolm päeva. Esimest korda kaheksa sajandi jooksul siseneb igavesse linna vaenlase armee.",
+  "hero": {
+    "image": "la_prise_de_rome_par_les_wisigoths",
+    "ratio": "16:9",
+    "hook": "Aastal 410 langes Rooma. Ja koos sellega idee võitmatust impeeriumist."
+  },
+  "sections": [
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Augustis **410** juhtub kujuteldamatu. Germaani rahvas **laric**, mida juhtis oma kuningas **Alaric**, surusid Rooma väravad sisse. Esimest korda pärast gallia kotti **390 eKr**., peaaegu **800 aastat**, vaenlase armee rüüstas igavese linna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rooma ei ole enam impeeriumi poliitiline pealinn, kuid see jääb selle sümboolseks südameks. See šokk paljastab tõe, mida keegi näha ei tahtnud: Rooma Lääs oli suremas."
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p1",
+      "title": "Tühjenev impeerium",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "5. sajandi alguses puudus Lääne-Rooma impeeriumil raha ja sõdurid. Piiride säilitamiseks korrutas ta [[Rooma foedus]] tüüpi lepinguid: nn barbarid asusid territooriumile sõjaväeteenistuse eest. Rooma masin hoiab endiselt, kuid see sõltub neist, mida ta kunagi püüdis ohjeldada."
+        },
+        {
+          "type": "paragraph",
+          "text": "Piirkonnas **402** hülgab läänekeiser [[Honorius]] Rooma [[Ravenna]] jaoks, mis on linn Itaalias, mida kaitsevad selle sood. Samal ajal kui õukond läheb maa alla, elab Rooma aristokraatia edasi, nagu poleks midagi muutunud. Tegelik võim nihkus germaani päritolu kindralite poole."
+        },
+        {
+          "type": "funFact",
+          "text": "Kui \"Rooma\" langemine välja kuulutati, sattus Honorius paanikasse: ta arvas, et räägitakse tema lemmikkanast, mida nii nimetati. Nad ütlevad kergendust, kui said teada, et see puudutas \"ainult\" linna."
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p2",
+      "title": "Alaric, pettunud roomlane",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Alaric I]] ei ole metslane tühjalt kohalt. Rooma armee endine ohvitser, keda tõrjus läände [[Hunnid]], Aasiast pärit rändrahvas, tahab oma rahvale maad ja ametlikku tiitlit. Seistes silmitsi Ravenna põlgusega, kasutab ta Roomat pantvangina. Kaks piiramist, lunaraha, siis rünnak."
+        },
+        {
+          "type": "image",
+          "asset": "alaric_king_visigoths",
+          "ratio": "4:3",
+          "caption": "Alaric I, visigootide kuningas ja endine Rooma ohvitser."
+        },
+        {
+          "type": "paragraph",
+          "text": "**24. augustil 410** avaneb Salaria värav. Rüüstamine kestab **kolm päeva**. Usukristlane [[Arian]] (vool, mis ei pidanud Kristust võrdseks Jumal-Isaga), Alaric nõuab kirikute varjupaiga austamist. Tõeline vägivald, kuid mitte täielik häving: ta tahab olla Rooma pärija, mitte hauakaevaja."
+        },
+        {
+          "type": "funFact",
+          "text": "Legendi järgi suunasid tema mehed Busento jõe Alarici ja tema aarde matmiseks, kui ta suri, ning andsid seejärel vee oma sängi tagasi."
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p3",
+      "title": "Šokk ja Jumala linn",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Palestiinast pärit kirikuisa [[Püha Jerome]] hüüatab: \"Ühes linnas on kogu universum hukkunud.\" Paganad süüdistavad kristlust Rooma nõrgestamises. Vastuseks **Püha Augustinus** kirjutab ZreslyX. kirik jääb alles."
+        },
+        {
+          "type": "image",
+          "asset": "sack_of_rome_410_alaric",
+          "ratio": "4:3",
+          "caption": "Rooma röövimine aastal 410, šokk kogu antiikmaailmale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Teistele germaani rahvastele, nagu [[Vandaalid]] ja [[Franks]], on signaal selge: lääs on saak. Mängus **455** rüüstavad vandaalid Roomat palju raskemini. **476**-s kukutas juht [[Heruli]] [[Odoacer]] viimase Lääne keisri [[Romulus Augustulus]]. Võimu sümboolika läheb Konstantinoopolile. Lääneimpeerium hääbub."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "402",
+              "title": "Ravenna, uus pealinn",
+              "detail": "Honorius hülgab Rooma paremini kaitstud linna nimel."
+            },
+            {
+              "date": "410",
+              "title": "Rooma kott",
+              "detail": "Alaric ja visigootid rüüstavad linna kolm päeva."
+            },
+            {
+              "date": "455",
+              "title": "Vandaalikott",
+              "detail": "Roomat rüüstatakse palju hävitavamal viisil."
+            },
+            {
+              "date": "476",
+              "title": "Lääneimpeeriumi lõpp",
+              "detail": "Odoacer kukutab Romulus Augustuluse."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p4",
+      "title": "Nihe keskaega",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Visigootid asusid elama Akvitaaniasse, seejärel Hispaaniasse (praegune Hispaania). Nad ei hävitanud kogu klassikalist kultuuri: neist said selle salakaubavedajad, segades Rooma õigust, kristlikku usku ja germaani traditsioone."
+        },
+        {
+          "type": "paragraph",
+          "text": "**410** kott jääb mälestuste vahepalaks. See ei ole veel impeeriumi administratiivne lõpp, kuid see on illusiooni lõpp. Keskaegne Euroopa saab alguse müüdirusudest."
+        },
+        {
+          "type": "takeaway",
+          "text": "Aastal **410** langes Rooma esimest korda **800 aastat** pärast. Rooma stiilis väljaõppe saanud visigootid rüüstasid seal kolm päeva. Kokkupõrge paneb aluse **476**-le ja keskaegsele Euroopale."
+        }
+      ]
+    }
+  ]
+}

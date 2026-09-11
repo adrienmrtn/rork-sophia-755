@@ -1,0 +1,120 @@
+{
+  "id": "course_180_thor_et_loki_mythologie_nordique",
+  "title": "Thor ja Loki (Norra mütoloogia)",
+  "subtitle": "Norra mütoloogia",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Välgujumal ja trikijumal: seiklusduo, seejärel vaenlased Ragnarökis. Skandinaavia panteoni kaks palet.",
+  "hero": {
+    "image": "thor_et_loki_mythologie_nordique",
+    "ratio": "16:9",
+    "hook": "Üks lööb haamriga. Teine valetab, et võita. Koos päästavad nad Asgardi kuni päevani, mil Loki ta reedab."
+  },
+  "sections": [
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Thor** ja **Loki** on skandinaavia mütoloogia kaks kõige populaarsemat tegelast. Thor kaitseb mehi välguga. Loki külvab korrarikkumist trikiga. Sageli kohtame neid koos reisilugudes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nende side ei ole lihtne koomiline sõprus. See näitab pinget jumalate korra ja kaose vahel. Jantlikust seltskonnast kuni viimase sõjani - see liit ehitatakse järgmiselt... ja siis puruneb."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p1",
+      "title": "Asgard, Midgard ja allikad",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Need müüdid pärinevad Skandinaavia rahvastelt 5.-12. sajandil. Teame neid peamiselt tänu hiliskeelsetele Islandi tekstidele, mis on kirjutatud ajal, mil piirkond oli juba ristiusustunud. Peamine allikas on [[Proosa Edda]], mille **1220** ümber kirjutas **Snorri Sturluson**, millele on lisatud [[Poeetiline Edda]]."
+        },
+        {
+          "type": "image",
+          "asset": "asgard_midgard_bifrost_bridge_norse_mythology",
+          "ratio": "4:3",
+          "caption": "Asgardi ja Midgardi ühendab Bifröst ehk vikerkaaresild."
+        },
+        {
+          "type": "paragraph",
+          "text": "Maailm on korraldatud kosmilise puu [[Yggdrasil]] ümber. Üleval: **Asgard**, jumalate kodu. Alumine: **Midgard**, meeste maailm, mida ühendab **Bifröst**. Jumalad jagunevad kaheks klanniks: **Aesir**, mida juhib **Odin** (sõda ja suveräänsus), ja **Labid**, nagu Freyr ja Freyja (viljakus)."
+        },
+        {
+          "type": "funFact",
+          "text": "Iidsetes tekstides on Bifröst habras sild: Ragnaröki juures väriseb ja variseb see hiiglaste raskuse all kokku."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p2",
+      "title": "Thor, haamri kaitsja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Thor** on Odini ja Maa poeg. Ta on inimeste auväärseim jumal: ta kaitseb inimkonda valla päästetud loodusjõudude **hiiglast** eest. Habe ja punased juuksed, ta kehastab selget ja sirget jõudu."
+        },
+        {
+          "type": "image",
+          "asset": "thor_hammer_mjolnir_norse_god_painting",
+          "ratio": "4:3",
+          "caption": "Mjöllnir, Thori vasar: see lööb ja naaseb kätte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tema päkapikkude sepistatud relv **Mjöllnir** purustab mägesid ja naaseb alati tema kätte. Jõuvöö ja raudkindad aitavad tal seda kasutada. Tema nimi andis germaani keeltes **neljapäeval** (Thori päev). Erinevalt aristokraatlikumast Odinist on Thor vabade talupoegade jumal: vihm, saak, turvaline kodu."
+        },
+        {
+          "type": "funFact",
+          "text": "Thori vankrit veavad kaks kitse. Kui tal on kõht tühi, võib ta neid õhtul süüa ja järgmisel päeval oma haamriga elustada... nii kaua, kuni ta ei murra ühtegi konti."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p3",
+      "title": "Loki, pettus, mis lõpeb halvasti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Loki** elab Aesirite seas, kuid ta on hiiglaslikku verd. Ta liitus panteoniga Odiniga sõlmitud verelepingu kaudu. Ta on **trikster**: tema naljad ja valed on häirivad, kuid need viivad ka lugu edasi ja pakuvad mõnikord jumalatele oma suurimaid aardeid."
+        },
+        {
+          "type": "image",
+          "asset": "loki_norse_trickster_god_mythology",
+          "ratio": "4:3",
+          "caption": "Loki, trikijumal: kasulik liitlane, kuulutatud reetur."
+        },
+        {
+          "type": "paragraph",
+          "text": "See muudab kuju ja isegi sugu. Mära kujul saab temast Odini kaheksajalgse hobuse [[Sleipnir]] emaks. Koos hiiglase Angrbodaga genereerib ta kolm koletist: hundi **Fenrir**, mao **Jörmungandr** ja **Hel**, surnute eestkostja. Tasapisi muutub jant riigireetmiseks: ta korraldab valgusjumala **Baldr** surma. Sellest ajast peale oli tema saatus pitseeritud."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p4",
+      "title": "Koomiksiduost Ragnarökini",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pikka aega täiendasid Thor ja Loki üksteist. Kui hiiglane Thrym varastab Mjöllniri, maskeerib Thor end pruudiks ja Loki teenijaks, et see kätte saada. Kus haamer ebaõnnestub, õnnestub vale ja vastupidi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Siis läheb liit laiali. **Ragnarök**, jumalate hämaruses, juhib Loki Asgardi vaenlasi. Thor seisab silmitsi Loki poja Jörmungandriga: ta tapab mao ja sureb seejärel üheksa sammu järel selle mürgi kätte. Jõud ja kavalus hävitatakse koos."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Thor** ja **Loki** kehastavad pinget kaitsva jõu ja häiriva kavaluse vahel. Nende side koomilisest sõprusest Ragnaröki vihkamiseni näitab, kui habras on jumalate kord kaose ees."
+        }
+      ]
+    }
+  ]
+}

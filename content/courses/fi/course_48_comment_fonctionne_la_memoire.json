@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Miten muisti toimii?",
+  "subtitle": "Aivot",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Muisti ei ole kamera. Jokainen muisto rekonstruoidaan. Näin aivot koodaavat, varastoivat… ja joskus keksivät.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "Muistaminen ei ole tiedoston uudelleenlukemista. Se rekonstruoi kohtauksen."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuvittelemme usein muistin kiintolevynä: tallennamme, tallennamme, luemme uudelleen. Aivot eivät toimi niin. Joka kerta kun muistat, **rakentat** kohtauksen fragmenteista."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se on voimakas… ja erehtyvä. Tämän ymmärtäminen tarkoittaa ymmärtämistä, miksi unohdamme, miksi teemme virheitä ja miksi opimme."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Useita muistoja, ei vain yksi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Aivojen eri alueet käsittelevät erilaisia muistin muotoja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ensin on [[työmuisti]]: se mitä pidät \"mielessä\" muutaman sekunnin, kuten puhelinnumeron. Se on rajoitettu, keskimäärin noin **7 elementtiä**. Seuraavaksi **pitkäaikainen muisti**: faktoja, muistoja tapahtumista, taitoja, kuten pyöräilyä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nämä järjestelmät eivät kaikki asu samassa paikassa aivoissa. **prefrontaalinen aivokuori**, otsan takana oleva aivojen etuosa, auttaa paljon työmuistissa. Muut alueet, kuten **neokortex**, aivojen ulkokerros, varastoivat pitkäaikaisesti."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Kuinka muisti korjataan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "Hippokampus, syvä rakenne, auttaa muodostamaan uusia muistoja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jotta tieto muuttuisi hauraasta kestäväksi, aivojen on vahvistettava yhteyksiä **neuroni**, hermosolujen välillä. Puhumme **konsolidaatiosta**, viimeaikaisen muiston muuttamisesta pysyväksi jäljeksi. Pienellä rakenteella nimeltä **merihevonen**, joka on merihevosen muotoinen ohimolohkossa, on keskeinen rooli tapahtumien muistoissa."
+        },
+        {
+          "type": "funFact",
+          "text": "Uni, erityisesti tietyt vaiheet, auttaa lujittamaan päivän aikana opittuja asioita. Tarkistaminen ja nukkuminen toimii usein paremmin kuin tarkistaminen klo 3 asti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kuuluisa sääntö, joka liittyy **-tutkijaan Donald Hebbiin**: yhteen syttyvät neuronit yhdistävät yleensä vahvemmin. Yhteenvetona: \"mikä valot yhdessä sitoo yhteen\". Tämä on **neuroplastisuuden** periaate, aivojen kyky muokata yhteyksiään."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "Muistaminen on muokkaamista",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kun muistat muiston, siitä tulee tilapäisesti muokattava **muokattava**. Yksityiskohdat nykyhetkestä voivat pudota sisään. Sitten aivot tallentavat sen uudelleen. Tästä syystä saman onnettomuuden kaksi todistajaa voivat kertoa eri versioita."
+        },
+        {
+          "type": "paragraph",
+          "text": "Voimme jopa luoda **musiikin variaatiota**: kohtauksia, joiden uskomme olevan totta, mutta joita ei koskaan tapahtunut tai ei niin. Aivot täyttävät aukot sillä, mitä ne jo tietävät."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "Unohtaminen ei aina ole epäonnistuminen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jos muistaisit jokaisen tarpeettoman yksityiskohdan, olisit kylläinen. Unohtaminen auttaa meitä yleistämään, päättämään, säilyttämään olennaisen. Hyvä muisti lajittelee niin paljon kuin se säilyttää."
+        },
+        {
+          "type": "takeaway",
+          "text": "Muisti on aktiivinen rekonstruktio, ei täydellinen tallennus. Se perustuu useisiin järjestelmiin, se on konsolidoitu erityisesti unen aikana ja voi vääristyä jokaisen muistutuksen yhteydessä."
+        }
+      ]
+    }
+  ]
+}

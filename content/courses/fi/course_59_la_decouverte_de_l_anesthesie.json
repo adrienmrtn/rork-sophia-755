@@ -1,0 +1,98 @@
+{
+  "id": "course_59_la_decouverte_de_l_anesthesie",
+  "title": "Anestesian löytö",
+  "subtitle": "Lääke",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Ennen vuotta 1846 leikkaus tehtiin usein tietoisesti ja äärimmäisen kipein. Anestesia muuttaa leikkauksen hoidoksi, ei kidutukseksi.",
+  "hero": {
+    "image": "la_decouverte_de_l_anesthesie",
+    "ratio": "16:9",
+    "hook": "Eräänä päivänä vuonna 1846 Bostonissa leikkaus lakkasi olemasta kilpajuoksu kipua vastaan."
+  },
+  "sections": [
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuvittele amputaatio nukahtamatta. Ennen 1800-luvun puoliväliä tämä oli normi. Sidomme potilaan kiinni, liikumme nopeasti, rukoilemme."
+        },
+        {
+          "type": "paragraph",
+          "text": "**anestesia** muuttaa kaiken: sen avulla voit leikata tuntematta kipua. Nykyaikainen kirurgia voi vihdoinkin viedä aikansa."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p1",
+      "title": "Ennen: nopeus vastaan kärsimys",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "surgery_without_anesthesia_19th_century",
+          "ratio": "4:3",
+          "caption": "Ilman anestesiaa kirurgin täytyi olla erittäin nopea."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kirurgit arvioitiin heidän nopeudensa perusteella. Alkoholia, oopiumia tai raakaa voimaa käytettiin ihmisten liikkumattomuuteen. Monet potilaat kuolivat sokkiin, infektioon tai verenvuotoon."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p2",
+      "title": "1846: eetterin päivä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "ether_anesthesia_first_demonstration_1846",
+          "ratio": "4:3",
+          "caption": "Bostonissa julkinen mielenosoitus vakuutti lääketieteen maailman."
+        },
+        {
+          "type": "paragraph",
+          "text": "**16.10.1846** Bostonissa hammaslääkäri **William Morton** saa potilaan hengittämään **eetteri**. Kirurgi **John Warren** leikkaa niskakasvainta. Potilas ei huuda. Huone on hämmästynyt."
+        },
+        {
+          "type": "funFact",
+          "text": "Warren kuulemma sanoi: \"Herrat, tämä ei ole humbugi.\" Lause on pysynyt kuuluisana."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p3",
+      "title": "Seuraavaksi: kloroformi ja keskustelut",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seurauksena oli muita tuotteita, kuten **kloroformi**, jotka ovat yleistyneet erityisesti Isossa-Britanniassa. Kilpailijoita syntyy siitä, kuka \"keksi\" mitä. Patentilla ei ole väliä: idea leviää ympäri maailmaa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jäljellä on yksi ongelma: nukuttaa tappamatta. Sinun täytyy annostella se, seurata hengitystäsi ja sydäntäsi. Uusi erikoisuus syntyy."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p4",
+      "title": "Anestesia tänään",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nykyään anestesiologi käyttää tarkkoja kaasuja ja lääkkeitä, koneita, jotka mittaavat kaiken. Voit nukkua koko kehon tai vain alueen (paikallinen tai paikallispuudutus)."
+        },
+        {
+          "type": "takeaway",
+          "text": "Eetterin esittelyn jälkeen **1846**:ssä anestesia on muuttanut leikkausta: vähemmän kipua, enemmän aikaa, enemmän tarkkuutta... ja turvallisuudesta on tullut oma tiede."
+        }
+      ]
+    }
+  ]
+}

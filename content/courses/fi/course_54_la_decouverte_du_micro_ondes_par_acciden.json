@@ -1,0 +1,102 @@
+{
+  "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
+  "title": "Mikroaaltouunin löytö",
+  "subtitle": "Vahingossa",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Vuonna 1945 insinööri huomasi, että hänen karkkipatukansa oli sulanut tutkan lähellä. Tästä havainnosta syntyi mikroaaltouuni.",
+  "hero": {
+    "image": "la_decouverte_du_micro_ondes",
+    "ratio": "16:9",
+    "hook": "Sulatettu suklaapatukka… ja moderni keittiö vaihtuu."
+  },
+  "sections": [
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yhdysvalloissa **1945**:ssä insinööri **Percy Spencer** työskentelee tutkalla. Eräänä päivänä hän huomaa, että hänen taskussaan oleva karkkipatukka on sulanut. Ei ruumiinlämmön takia: tutka-aaltojen takia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hän testaa maissilla: popcorn poksahtaa. Syntyi idea eri tavalla lämmittävästä uunista."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
+      "title": "Tutkasta keittiöön",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "percy_spencer_microwave_discovery_radar",
+          "ratio": "4:3",
+          "caption": "Toisen maailmansodan tutkat käyttivät jo mikroaaltoja."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Mikroaallot** ovat sähkömagneettisia aaltoja, kuten radiovalo, mutta \"energiaisempia\" kuin monet perinteiset radioaallot. Sodan aikana niitä käytettiin pääasiassa tutkassa lentokoneiden ja veneiden havaitsemiseen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spencer ymmärtää, että he voivat myös sekoittaa vettä ja rasvoja ruoassa... ja siksi lämmittää sitä."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
+      "title": "Ensimmäinen uuni on valtava",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "first_microwave_oven_radarange_1947",
+          "ratio": "4:3",
+          "caption": "Ensimmäinen kaupallinen mikroaaltouuni oli kaapin kokoinen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ensimmäinen kaupallinen malli, **Radarange**, julkaistiin **1947**:n tienoilla. Se on valtava, kallis ja tarkoitettu pääasiassa ravintoloihin tai veneisiin. Kestää vuosikymmeniä pienentää se ja tehdä siitä kohtuuhintainen koteihin."
+        },
+        {
+          "type": "funFact",
+          "text": "Aluksi jotkut pelkäsivät, että uuni \"tekee ruuasta radioaktiivisen\". Väärin: mikroaallot kuumenevat, ne eivät tee sinusta radioaktiivista."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
+      "title": "Miten se todella lämpenee?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mikroaallot värähtelevät pääasiassa vesimolekyylejä (ja vähän rasvoja ja sokereita). Tämä sekoitus luo **lamppu** ruoan sisälle, ei vain pannun pinnalle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tästä syystä astia voi olla ulkopuolelta kuuma ja keskeltä haalea, jos se on paksu: aallot eivät tunkeudu äärettömän syvälle."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
+      "title": "Jokapäiväinen esine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1970-1980-luvuilla mikroaaltouuni levisi miljooniin keittiöihin. Se muuttaa tottumuksia: lämmitä nopeasti, valmiit ateriat, nopeuttaa elämää."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mikroaaltouuni syntyi sattumasta, jonka Percy Spencer havaitsi lähellä tutkaa. Aallot ravistelevat pääasiassa ruoan sisältämää vettä ja lämmittävät sitä sisältä käsin."
+        }
+      ]
+    }
+  ]
+}

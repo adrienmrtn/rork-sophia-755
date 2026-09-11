@@ -1,0 +1,140 @@
+{
+  "id": "course_193_quetzalcoatl",
+  "title": "Quetzalcoatl",
+  "subtitle": "Sulkainen käärme",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Quetzalcoatl, höyhenkäärme, on mesoamerikkalaisen sivilisaation jumala. Sen myytti yhdistää luomisen, maanpaon ja kohtalokkaan tapaamisen Cortésin kanssa.",
+  "hero": {
+    "image": "quetzalcoatl",
+    "ratio": "16:9",
+    "hook": "Jumala, kuningas ja profetia: höyhenkäärme kattaa kaksituhatta vuotta Meksikon historiaa."
+  },
+  "sections": [
+    {
+      "id": "course_193_quetzalcoatl_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Quetzalcoatl**, \"höyhenkääme\", on yksi esikolumbiaanisen Meksikon rikkaimmista hahmoista. Häntä on kunnioitettu yli kahden vuosituhannen ajan [[Teotihuacán]]:stä, suuresta kaupungista keskitasangolla, atsteekkeihin ja mayojen keskuudessa nimellä [[Kukulkán]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hän yhdistää maan (käärme) ja taivaan (höyhenen). Sivilisaation, tiedon ja moraalisen järjestyksen jumala, hänen myyttinsä päätyy leikkaamaan todellista historiaa: espanjalaisten **1519**:n valloitus."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p1",
+      "title": "Jumala, joka keksi maissin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kirjassa [[Nahuatl]] **Quetzalcoatl** tulee [[quetzal]]-linnusta, jolla on vihreä höyheniä, ja *coatl*-käärmeestä. Tämä liitto tekee siitä sillan ihmisen ja jumalallisen välillä."
+        },
+        {
+          "type": "image",
+          "asset": "quetzalcoatl_feathered_serpent_aztec_sculpture",
+          "ratio": "4:3",
+          "caption": "Quetzalcoatl, höyhenkäärme: maa ja taivas kietoutuvat yhteen."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Viiden auringon kosmogonia]] -tapahtumassa hän laskeutuu [[Mictlán]]:iin, kuolleiden maailmaan, keräämään menneiden ihmisten luut. Hän herättää heidät henkiin verellään. Sitten hän varastaa muurahaisilta **maissi**:n: Meksikon perusruoan. Tuulen jumalana hän avaa myös tien [[Tlaloc]] sateisiin."
+        },
+        {
+          "type": "funFact",
+          "text": "Quetzalin hännän höyhenet voivat olla **60 cm**. Mayojen ja atsteekkien keskuudessa linnun tappamisesta rangaistiin kuolemalla: siitä otettiin muutama höyhen ja vapautettiin sitten."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p2",
+      "title": "Tulan kuningas-pappi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Myytillä on myös historialliset kasvot: **Topiltzin Quetzalcoatl**, **Tula**:n kuningas-pappi 1000-luvulla. Hän olisi halunnut uudistaa kultin ja korvata ihmisuhrit kukkien ja perhosten uhreilla."
+        },
+        {
+          "type": "image",
+          "asset": "tula_toltec_pyramid_warriors_sculpture_mexico",
+          "ratio": "4:3",
+          "caption": "Tula, Toltec-kaupunki, joka liittyy Quetzalcoatlin hallituskauteen ja kukistumiseen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hänen kilpailijansa **Tezcatlipoca** pakottaa hänet juomaan pulquea, fermentoitua juomaa. Kuningas nöyryytettynä karkotettiin itään. Legendan mukaan hän lupaa palata vuodeksi \"Un Reed\". Tällä lupauksella on painoarvoa."
+        },
+        {
+          "type": "funFact",
+          "text": "Lähdön jälkeen Quetzalcoatlista tulee joskus Aamutähti: Venus-planeetta. Jumala ei kuole, hän muuttaa muotoaan."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p3",
+      "title": "1519: kun myytti kohtaa Cortésin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1519**:ssa **Hernán Cortés** saapuu itään, atsteekkien kalenterin \"yksi ruoko\" -vuodeksi, jolloin jumalan paluuta odotettiin. Keisari **Moctezuma II** epäröi: pitäisikö meidän taistella hyökkääjää vastaan vai toivottaa jumaluus tervetulleeksi?"
+        },
+        {
+          "type": "image",
+          "asset": "herna_u0301n_corte_u0301s_arrival_mexico_1519_moctezuma_painting",
+          "ratio": "4:3",
+          "caption": "1519: Cortésin saapuminen täyttää lupauksen jumalallisesta paluusta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hän lähettää lahjoja kultaa ja höyheniä. [[Konkistadorit]] näkee tämän kutsuna. Totta tai jälkikäteen vahvistuneesta myytistä tulee psykologinen ase atsteekkien pääkaupungin [[Tenochtitlán]]:n syksyllä."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Myytti",
+              "title": "Luoja",
+              "detail": "Kuolleiden luut, jumalallinen veri, lahja maissia."
+            },
+            {
+              "date": "10. vuosisadalla",
+              "title": "Karkotus Tulasta",
+              "detail": "Pappi-kuningas menee itään."
+            },
+            {
+              "date": "1519",
+              "title": "Cortes",
+              "detail": "Odotetusta tuotosta tulee valloitus."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p4",
+      "title": "Symboli, joka ei koskaan kuole",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valloituksen jälkeen Quetzalcoatl ei kadonnut. Jotkut munkit uskovat näkevänsä siellä apostolin. Myöhemmin itsenäinen Meksiko teki siitä esikolumbiaanisen suuruuden tunnuksen. 1900-luvun seinämaalaajat, kuten Diego Rivera, maalaavat sen maan sieluksi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vielä nykyäänkin höyhenkäärme ilmaisee identiteettiä: juuret maassa, kunnianhimo käännettynä taivasta kohti."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Quetzalcoatl**, höyhenkäärme, on mesoamerikkalaisen sivilisaation jumala. Luoja, maanpaossa oleva kuningas, sitten kohtalokas profetia kirjassa **1519**, hän on edelleen Meksikon keskeinen symboli."
+        }
+      ]
+    }
+  ]
+}

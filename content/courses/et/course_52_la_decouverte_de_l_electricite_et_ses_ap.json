@@ -1,0 +1,108 @@
+{
+  "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
+  "title": "Elektri avastamine",
+  "subtitle": "Franklinist Teslani",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Elektrit ei leiutatud ootamatult. Esmalt vaadeldi, siis mõisteti, seejärel kodustati. Siin on peamised sammud.",
+  "hero": {
+    "image": "la_decouverte_de_l_electricite",
+    "ratio": "16:9",
+    "hook": "Välgust nutitelefonini: kaks sajandit nähtamatu taltsutamiseks."
+  },
+  "sections": [
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elekter on looduses olemas: välk, elektrikala, hõõrdumine. Maailma muutis **tootmine**, **transport** ja selle kasutamine."
+        },
+        {
+          "type": "paragraph",
+          "text": "See lugu hõlmab riskantsete katsete ja suurte rivaalitsemistega rohkem kui kahte sajandit."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
+      "title": "Välgu mõistmine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "18. sajandil näitas **Benjamin Franklin**, et välk on elektriline nähtus. Tema tuulelohe lennutamise katse (mida sageli räägitakse väljamõeldud viisil) eesmärk on tõestada, et taevas ja hõõrdemasin mängivad sama jõuga."
+        },
+        {
+          "type": "image",
+          "asset": "benjamin_franklin_kite_lightning_experiment",
+          "ratio": "4:3",
+          "caption": "Franklin ühendab välku ja elektrit: ohtlik, kuid alusmõte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Samuti leiutasime **äike** - metallvarda, mis pakub välgule ohutut teed maapinnale. Elekter jätab tehnikasse sisenemiseks saladuse."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
+      "title": "Faraday: voolu tootmine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "19. sajandil näitas **Michael Faraday**, et juhtme lähedal liikuv magnet võib tekitada elektrivoolu. See on **induktsioon**. Ilma selle ideeta pole dünamo, generaatorit ega kaasaegset elektrijaama."
+        },
+        {
+          "type": "image",
+          "asset": "faraday_electromagnetic_induction_experiment",
+          "ratio": "4:3",
+          "caption": "Faraday muudab liikumise ja magnetismi vooluks."
+        },
+        {
+          "type": "funFact",
+          "text": "Faraday oli pärit tagasihoidlikust taustast ja alustas raamatuköitjana. Ta õppis teadust, lugedes seda, mida ta reliaba."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
+      "title": "Edison versus Tesla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "19. sajandi lõpus põrkasid kaks leeri kokku. **Thomas Edison** surub alalisvoolu. **Nikola Tesla** (ja ettevõte Westinghouse) kaitsevad vahelduvvoolu, mida on lihtsam pikki vahemaid transportida."
+        },
+        {
+          "type": "image",
+          "asset": "tesla_edison_electric_power_station",
+          "ratio": "4:3",
+          "caption": "Linnades kogub võimu vahelduvvool."
+        },
+        {
+          "type": "paragraph",
+          "text": "Linnavõrkude vahelduvvool võidab. Linnad süttivad. Tehased muudavad tempot."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
+      "title": "Ühendatud maailm",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tänapäeval toidab elekter haiglaid, ronge, internetti ja külmikuid. Väljakutse pole enam lihtsalt seda toota, vaid teha seda puhtalt ja usaldusväärselt."
+        },
+        {
+          "type": "takeaway",
+          "text": "Elekter mõisteti ja seejärel kodustati: Franklin välgu jaoks, Faraday voolu tootmiseks, Tesla ja vahelduvvool selle kodudesse toomiseks. Sellest sõltub ikka meie igapäevaelu."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
+  "title": "Röntgenikiirguse avastamine",
+  "subtitle": "Röntgen, 1895",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "1895. aastal avastas Wilhelm Röntgen nähtamatu kiirguse, mis on võimeline ainet läbima. Mõne kuu pärast nägi meditsiin revolutsiooni.",
+  "hero": {
+    "image": "la_decouverte_des_rayons_x_rontgen",
+    "ratio": "16:9",
+    "hook": "Käsi, luud, foto. Meditsiin ei ole enam kunagi pime."
+  },
+  "sections": [
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**8. november 1895** Würzburgis (Saksamaa) märkab füüsik **Wilhelm Röntgen** ekraani, mis särab... kuigi nähtav valgus seda ei mõjuta. Midagi nähtamatut läbib ruumi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta nimetab seda **X** kiirteks, \"X\" tähendab \"tundmatut\". Mõne nädala jooksul pildistas ta oma naise käe luid. Sündis radioloogia."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
+      "title": "Laboriõnnetus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Röntgen töötab toruga, kus elektronid tabavad sihtmärki. Ta kattis toru musta papiga. Fluorestseeruv ekraan aga helendab eemalt. Ta saab aru, et torust väljub nähtamatu kiirgus."
+        },
+        {
+          "type": "image",
+          "asset": "wilhelm_rontgen_x_ray_hand_1895",
+          "ratio": "4:3",
+          "caption": "Kuulus pilt: käeluud ja abielusõrmus."
+        },
+        {
+          "type": "funFact",
+          "text": "Röntgen ei esitanud kunagi röntgenkiirte patenti. Ta tahtis, et kogu teadus saaks neid vabalt kasutada."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
+      "title": "Meditsiin haarab tööriista enda kätte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "early_x_ray_medical_radiograph",
+          "ratio": "4:3",
+          "caption": "Väga kiiresti kasutasid arstid ja sõjaväed röntgenikiirgust."
+        },
+        {
+          "type": "paragraph",
+          "text": "Varem tuli luumurru või kuuli “nägemiseks” see sageli avada. Röntgenikiirgusega saame kujutise sisemusest lõikamata. Haiglad ja armeed võtavad selle tehnika kasutusele meeletu kiirusega."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
+      "title": "Kaua tähelepanuta jäetud oht",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alguses ignoreerime riske. Operaatorid teevad röntgenikiirte tundide kaupa. Põletused, siis tekivad vähid. Läheb aega, enne kui aru saada, et röntgenikiirgus on võimas… ja ohtlik."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tänapäeval kaitseme patsiente ja hooldajaid: piiratud annused, pliipõlled, range kontroll."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p4",
+      "title": "Pärand",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Röntgenikiirgus sillutas teed kogu kaasaegsele pildistamisele: skannerid, tööstuslikud juhtseadmed ja isegi kristallide struktuuri uurimine (hiljem kasulik DNA jaoks)."
+        },
+        {
+          "type": "takeaway",
+          "text": "Filmis **1895** avastas Röntgen röntgenikiirguse, nähtamatu kiirguse, mis läbib ainet. Meditsiin saab uue vaatenurga... eeldusel, et riskid on kontrolli all."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": "course_149_la_joconde",
+  "title": "Mona Lisa",
+  "subtitle": "1503-1519",
+  "subject": "art",
+  "subcategory": "Iconic works",
+  "description": "Maalinud **Leonardo da Vinci** **1503** ja **1519** vahel. *Mona Lisa* on muutunud Louvre'i absoluutseks ikooniks. Tehnika, salapärane naeratus… ja lend lennuga **1911**, mis muutis kõike.",
+  "hero": {
+    "image": "la_joconde",
+    "ratio": "16:9",
+    "hook": "Naeratus, vargus, müüt: kuidas portreest sai maailma kuulsaim teos."
+  },
+  "sections": [
+    {
+      "id": "course_149_la_joconde_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "***Leonardo da Vinci** **1503** ja **1519** vahel maalitud Mona Lisa* on maailma enimkülastatud maal. Näitusel **Louvre** võlub see nii oma tehnika kui ka ajaloo poolest. See pole lihtsalt ilus portree. See on müüt, mille loovad kunst, teadus ja uudis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Miks see nägu pigem kui teine? Sellepärast, et Leonardo koondas sinna uuendused ja selle maailma mastaabis kuulsaks tegi suurejooneline lend."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p1",
+      "title": "Leonardo ja sfumato",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Portree algab Firenzest **1503** paiku. Sponsor on kaupmees **Francesco del Giocondo**. Modelliks oleks tema naine [[Lisa Gherardini]]. Kuid Leonard ei anna kunagi maali kohale. Ta hoidis seda, retušeeris seda aastaid ja viis selle Prantsusmaale, kus ta suri linnas **1519**."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_leonardo_da_vinci_louvre_painting",
+          "ratio": "4:3",
+          "caption": "Mona Lisa Louvre'is: väike pappelpaneel, millest on saanud ülemaailmne ikoon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tema tunnustehnika on [[Leonardi sfumato]]: glasuurid, väga õhukesed kihid, mis kustutavad kontuurid. Pole enam karmi joont. Nägu sulab õhus. Leonardo lisab ka [[Õhuperspektiiv]]: kauge maastik muutub siniseks ja pehmemaks, nagu päris nägemuses."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p2",
+      "title": "Naeratus, mis mängib silmaga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuulus naeratus pole lihtsalt maalitud emotsioon. Ta mängib meie [[Perifeerne nägemine]]-ga. Kui vaatame modelli silmi, näevad võrkkesta servad suud pehmetes varjudes: naeratus tundub olevat. Otse suhu vaadates see väheneb."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_smile_detail_close_up",
+          "ratio": "1:1",
+          "caption": "Mida rohkem sa seda vaatad, seda enam näib naeratus kaduvat."
+        },
+        {
+          "type": "funFact",
+          "text": "Leonardo, nii maalikunstnik kui õpetlane, õppis optikat. Naeratuse mõistatus põhineb osaliselt täpsel teadmisel selle kohta, kuidas inimsilm varje töötleb."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tulemus: nägu näib olevat elav, muutuv, peaaegu teadlik meie pilgust."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p3",
+      "title": "1911: lend, mis leiutas kuulsuse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "19. sajandil imetleti *Mona Lisa*, kuid mitte veel Louvre'i teos number üks. Kõik muutus **21. augustil 1911. a**. [[Vincenzo Peruggia]], muuseumi itaalia klaasija, varastab selle: see on [[Mona Lisa vargus (1911)]]. Peidab selle pluusi alla ja läheb vaikselt välja."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_stolen_1911_newspaper_headline",
+          "ratio": "4:3",
+          "caption": "1911: maali puudumine lööb pealkirjades ja loob tähe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uurimine muutub skandaaliks. Luuletaja [[Guillaume Apollinaire]] pandi mõneks ajaks vangi. Intervjueeritakse [[Pablo Picasso]]-d. Kui maal **1913**-s uuesti ilmub, pole see enam lihtsalt maal. Ta on kuulsus."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p4",
+      "title": "Ikoon klaasi all",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tänaseks paplipuule värvituna elab see [[Kuulikindel klaas]] taga, konditsioneeriga vitriinis. Happerünnak, esemete loopimine: kaitse on muutunud vajalikuks. Ja paroodiad alates Duchampist kuni Internetini tõestavad, et sellest on saanud universaalne keel."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1503",
+              "title": "Portree algus",
+              "detail": "Leonardo alustab Firenzes \"Mona Lisat\"."
+            },
+            {
+              "date": "1519",
+              "title": "Leonardo surm",
+              "detail": "Maal jääb Prantsusmaale."
+            },
+            {
+              "date": "1911",
+              "title": "Lend",
+              "detail": "Peruggia muudab teose meediamüüdiks."
+            },
+            {
+              "date": "1913",
+              "title": "Tagasi",
+              "detail": "Maal naaseb Louvre'i maailmastaarina."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*Mona Lisa* võlgneb oma hiilguse nii Leonardo geeniusele (sfumato, optiline naeratus) kui ka ajaloole: 1911. aastal toimunud vargus muutis imetletud meistriteose ülemaailmseks ikooniks."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
+  "title": "Miks on merevesi soolane?",
+  "subtitle": "Ookeanid",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Üks liiter merevett sisaldab ligikaudu 35 grammi soola. See sool on kogunenud miljardite aastate jooksul. Siit see tuleb.",
+  "hero": {
+    "image": "pourquoi_l_eau_de_mer_est_salee",
+    "ratio": "16:9",
+    "hook": "Jõed on õrnad. Ookeanid on soolased. Saladus on aeg ja aurustumine."
+  },
+  "sections": [
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ookeanid katavad enam kui **70%** planeedist. Keskmiselt sisaldab üks liiter merevett umbes **35 grammi soola**. See ei ole juhus: see on väga pika protsessi tulemus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sool ei “kuku” taevast valmis kujul. Ta liigub mandritelt ja jääb seejärel ookeani lõksu."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
+      "title": "Sool tuleb kõigepealt maast",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Õhku läbiv vihm tõmbab endasse veidi süsihappegaasi. See muutub kergelt happeliseks. Kividele kukkudes ründab see neid õrnalt: see on **keemiline erosioon**."
+        },
+        {
+          "type": "image",
+          "asset": "ocean_sea_salt_evaporation",
+          "ratio": "auto",
+          "caption": "Soolaalad: aurustamine kontsentreerib merevees lahustunud soola."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seejärel kannavad jõed lahustunud mineraale, eriti lauasoola kahte koostisosa **naatrium** ja **kloor**. Nad heidavad need merre."
+        },
+        {
+          "type": "funFact",
+          "text": "Soola lisavad ka veealused vulkaanid ja kuumaveeallikad ookeani põhjas. Aga põhiosa tuleb ikkagi kontinentidelt."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
+      "title": "Miks ei ole jõed soolased?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hea küsimus: kui jõed toovad soola, siis miks ei ole Rhône'i või Seine'i vesi soolane? Sest sealne sool on väga lahjendatud ja jõgede vesi uueneb pidevalt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ookeanis on see teisiti. Päikese all vesi aurustub ja naaseb taevasse. Sool, **jääb**. Aastast aastasse, sajandisse sajandisse koguneb. Me kutsume seda [[Hüdroloogiline tsükkel ja soolade kogunemine]]."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
+      "title": "Sool ringleb ka ookeanides",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Soolane vesi on **tihedam** (sama mahu puhul \"raskem\") kui mage vesi. Poolustel eraldub pinnavee külmumisel sool osaliselt ümbritsevasse vedelasse vette. See vesi muutub veelgi tihedamaks ja sukeldub põhja."
+        },
+        {
+          "type": "paragraph",
+          "text": "See liikumine aitab juhtida suuri ookeanihoovusi. Need hoovused transpordivad soojust ja toitaineid üle maakera. Sool ei ole ainult maitse küsimus: see on osa planeedi kliimamootorist."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
+      "title": "Mitte igal pool sama sool",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Soolsus ei ole igal pool ühesugune. Ekvaatori lähedal võib tugev aurustumine soola kontsentreerida. Suurte jõgede või sulavate jäätükkide läheduses on vesi pehmem. Surnumeri on äärmuslik juhtum: vett lahkub väga vähe, soola jääb palju."
+        },
+        {
+          "type": "takeaway",
+          "text": "Merevesi on soolane, sest jõed toovad kontinentidelt mineraale ja aurustumine jätab soola ookeani. See kogunemine on kestnud miljardeid aastaid."
+        }
+      ]
+    }
+  ]
+}

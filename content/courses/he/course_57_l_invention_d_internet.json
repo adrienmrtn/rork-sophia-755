@@ -1,0 +1,102 @@
+{
+  "id": "course_57_l_invention_d_internet",
+  "title": "המצאת האינטרנט",
+  "subtitle": "רשתות",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "לאינטרנט אין ממציא אחד. זו שרשרת ארוכה: רשת צבאית, שפה משותפת, ואז הרשת לבני אדם.",
+  "hero": {
+    "image": "l_invention_d_internet",
+    "ratio": "16:9",
+    "hook": "ראשית רשת להתנגד למלחמה. ואז כל העולם מכוון."
+  },
+  "sections": [
+    {
+      "id": "course_57_l_invention_d_internet_intro",
+      "title": "מבוא",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "האינטרנט לא נולד מגאון אחד במוסך. זוהי בנייה קולקטיבית לאורך כמה עשורים."
+        },
+        {
+          "type": "paragraph",
+          "text": "שלושה שלבים פשוטים לזכור: רשת ראשונה (ARPANET), שפה משותפת (TCP/IP), ולאחר מכן ממשק קל (האינטרנט)."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p1",
+      "title": "ARPANET, הרשת הראשונה",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "בתום שנות **1960**, בעיצומה של המלחמה הקרה, מימן הצבא האמריקאי פרויקט: חיבור מחשבים כך שימשיכו לתקשר גם אם חלק מהרשת נהרס."
+        },
+        {
+          "type": "image",
+          "asset": "arpanet_1969_computer_ucla",
+          "ratio": "4:3",
+          "caption": "ARPANET מחברת לראשונה כמה אוניברסיטאות אמריקאיות."
+        },
+        {
+          "type": "paragraph",
+          "text": "רשת זו נקראת **ARPANET**. הודעות מפוצלות למנות קטנות אשר לוקחות נתיבים שונים. אם כביש אחד נופל, אחר משתלט."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p2",
+      "title": "TCP/IP: דובר באותה שפה",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "כדי שרשתות שונות יבינו זו את זו, דרושים כללים משותפים. **Vint Cerf** ו-**בוב קאן** מפתחים את פרוטוקול **TCP/IP**: שפה שאומרת כיצד לחתוך, לטפל ולחבר מחדש נתונים."
+        },
+        {
+          "type": "image",
+          "asset": "vint_cerf_bob_kahn_internet",
+          "ratio": "4:3",
+          "caption": "Cerf and Kahn: האדריכלים של שפת האינטרנט."
+        },
+        {
+          "type": "funFact",
+          "text": "ב-1 בינואר **1983**, ARPANET עברה רשמית ל-TCP/IP. רבים מחשיבים את התאריך הזה כ\"לידה\" הטכנית של האינטרנט."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p3",
+      "title": "הרשת הופכת את הרשת לאנושית",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "האינטרנט הוא הרשת. **World Wide Web**, שהומצא על ידי **טים ברנרס-לי** ב-CERN בתחילת השנים **1990**, הוא השכבה הקלה: דפים, קישורים, דפדפנים."
+        },
+        {
+          "type": "paragraph",
+          "text": "ללא האינטרנט, האינטרנט יישאר בעיקר כלי למומחים. עם זה, כולם יכולים ללחוץ."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p4",
+      "title": "מערכת העצבים של העולם",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "כיום, האינטרנט נושא אימיילים, סרטונים, בנקים, בתי חולים, GPS. זה גם יצר בעיות חדשות: דיסאינפורמציה, מעקב, פער דיגיטלי."
+        },
+        {
+          "type": "takeaway",
+          "text": "האינטרנט נולד מ-ARPANET, הפך לאוניברסלי בזכות TCP/IP, ונגיש בזכות האינטרנט. זו לא המצאה ייחודית, זו ארכיטקטורה משותפת."
+        }
+      ]
+    }
+  ]
+}

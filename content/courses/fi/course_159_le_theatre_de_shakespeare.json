@@ -1,0 +1,122 @@
+{
+  "id": "course_159_le_theatre_de_shakespeare",
+  "title": "Shakespearen teatteri",
+  "subtitle": "1564-1616",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "Lontoossa Shakespeare kirjoitti Globeen. Hamlet, Macbeth, Romeo: suosittu teatteri, josta on tullut englannin kielen huippu.",
+  "hero": {
+    "image": "le_theatre_de_shakespeare",
+    "ratio": "16:9",
+    "hook": "Näyttelijän näytelmäkirjailija, teatteri ilman lavasteita... ja ikuisia linjoja."
+  },
+  "sections": [
+    {
+      "id": "course_159_le_theatre_de_shakespeare_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**William Shakespeare** (1564-1616) kirjoitti Lontoon näyttämölle, ei koululle. Hänen näytelmänsä sekoittavat kuninkaita, klovneja, rakastajia ja salamurhaajia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neljä vuosisataa myöhemmin sitä pelataan edelleen kaikkialla."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p1",
+      "title": "Maapallo ja maaperät",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Lordi Chamberlainin miehet]] -ryhmän kanssa hän soittaa [[Globe-teatteri]]-ulkoilmapiirissä. [[maadoittajia]] maksaa vähän ja pysyy seisomassa lavan lähellä. Teatteri on suosittu, meluisa, vilkas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elizabethan London rakastaa spektaakkeleita. Teatterit kilpailevat saarnoilla ja karhutaisteluilla. Shakespeare kirjoittaa näillä meluisilla markkinoilla, ei norsunluutornissa."
+        },
+        {
+          "type": "image",
+          "asset": "globe_theatre_london_reconstruction",
+          "ratio": "4:3",
+          "caption": "The Globe: kohtaus työntyi väkijoukkoon."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p2",
+      "title": "Uusi kieli",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hän kirjoittaa usein Shakespearen tyhjässä säkeessä: jambinen pentametri ilman riimiä. Loukkauksia, runoja, monologeja: hän keksii sanoja ja vahvistaa hahmoja (Hamlet, Lady Macbeth), joista on tullut myyttejä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hän kierrättää kronikoita, italialaisia uutisia, vanhoja teoksia. Omaperäisyys on kielessä ja hahmoissa, ei juonen puhtaassa keksinnössä."
+        },
+        {
+          "type": "funFact",
+          "text": "Useat hänen teoksistaan ovat tulleet meille vasta hänen kuolemansa jälkeen ilmestyneen vuodelta 1623 ilmestyneen [[Ensimmäinen folio]] ansiosta."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p3",
+      "title": "Tragedioita, komediaa, tarinoita",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hän siirtyy naurusta vereen. *Romeo ja Julia*, *Othello*, *Kuningas Lear*: perheet, valta, mustasukkaisuus. \"Historianäytelmät\" esittävät Englannin uudelleen yleisölle, joka haluaa nähdä itsensä eeppisessä muodossa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Komediat ja tragediat vastaavat toisilleen. Hullu puhuu totuutta; kuningas tulee hulluksi. Tämä sävyjen huokoisuus selittää, miksi se voidaan silti asentaa tuhannella tavalla."
+        },
+        {
+          "type": "image",
+          "asset": "shakespeare_first_folio_1623",
+          "ratio": "4:3",
+          "caption": "Ensimmäinen folio: tekstien pelastaminen unohduksesta."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p4",
+      "title": "Perintö",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elokuvan ja rapin käännetty, muokattu, näytekappaleena omaksuttu Shakespeare on edelleen työkalupakki kunnianhimon ja halun ilmaisemiseen. Hänen salaisuutensa: kirjoittaminen näyttelijöille, yleisön edessä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ymmärtääksesi täysin Shakespearen teatteria, sinun on pidettävä mielessä yksi asia: jokainen tekninen yksityiskohta palvelee tunnetta tai ideaa. Teos ei ole koskaan vain koristeellista."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konteksti on yhtä tärkeä kuin tyyli. Päivämäärät, paikat, sponsorit, yleisö: kaikki tämä selittää, miksi lomake ilmestyy tietyllä hetkellä, eikä sitä ennen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lopuksi perintöä mitataan pitkällä aikavälillä. Se, mitä näemme nykyään museoissa, elokuvissa tai populaarimusiikissa, kantaa edelleen näiden keksintöjen jälkiä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se käännettiin 1700-luvulla Ranskassa ja muualla, ja siitä tuli maailman klassikko. Jokainen aikakausi löytää peilinsä hänestä: romanttinen, poliittinen, postkolonialistinen, feministinen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Globessa Shakespeare keksi suositun teatterin, jonka hahmot ja kieli valloittivat maailman."
+        }
+      ]
+    }
+  ]
+}

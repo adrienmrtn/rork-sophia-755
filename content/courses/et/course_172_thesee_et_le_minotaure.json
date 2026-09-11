@@ -1,0 +1,120 @@
+{
+  "id": "course_172_thesee_et_le_minotaure",
+  "title": "Theseus ja Minotauros",
+  "subtitle": "Niit, koletis, purjed",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Theseus tapab Minotauruse, kasutades Ariadne niiti. Kuid ta unustab purjed vahetada: tema isa Aegeus viskab merre, mis kannab siiani tema nime.",
+  "hero": {
+    "image": "thesee_et_le_minotaure",
+    "ratio": "16:9",
+    "hook": "Koletis labürindis. Lõng välja pääsemiseks. Unustatud purjed, mis ristivad merd."
+  },
+  "sections": [
+    {
+      "id": "course_172_thesee_et_le_minotaure_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ateena asutajakangelane **Theseus** astub vastamisi Kreeta [[Labürint]] pooleldi mehest ja härjast olendiga **Minotaurus**. Loos on ühendatud julgus, romantiline kavalus ja perekondlik traagika."
+        },
+        {
+          "type": "paragraph",
+          "text": "Koletise tapmisega vabastab Theseus Ateena verisest austusavaldusest. Kuid unustatud detail, valgete asemel mustad purjed, maksab isale elu ja annab tema nime Egeuse merele."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p1",
+      "title": "Minotauros ja Ateena austusavaldus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kreeta kuningas **Minos** keeldub ohverdamast valget härga merejumalale **Poseidon**. Kättemaksuks inspireerib Poseidon kuningannas **Pasiphaé** kirge looma vastu. Minotaurus on sündinud. Minos annab leiutajale [[Labürint]] ülesandeks ehitada vangla, millelt pole põgenemist: labürint."
+        },
+        {
+          "type": "image",
+          "asset": "theseus_minotaur_cretan_labyrinth_painting",
+          "ratio": "4:3",
+          "caption": "Minotauros, lukustatud Kreeta labürinti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kreeta domineerib siis mere üle: [[Talassokraatia]]. Pärast kaotatud sõda peab Ateena iga üheksa aasta järel **seitse noormeest ja seitse noort tüdrukut** koletisele toiduks üle andma. Kolmandal sünnitusel on **Theseus**, kuninga **Egeuse** poeg, vabatahtlik."
+        },
+        {
+          "type": "funFact",
+          "text": "Aegeus ja Theseus lepivad kokku signaalis: **org** purjetab, kui kangelane naaseb elusana, **peab purjetab**, kui ta on surnud. See detail otsustab draama."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p2",
+      "title": "Riivsai",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kreetal armub Minose tütar **Ariane** Theseusesse. Ta teab, et labürindis jõud ei piisa. Daedaluse abiga kingib ta talle villakera: [[Ariadne niit]]. Ta kinnitab selle sissepääsu külge ja kerib edasi liikudes niidi lahti."
+        },
+        {
+          "type": "image",
+          "asset": "ariadne_thread_theseus_labyrinth_painting",
+          "ratio": "4:3",
+          "caption": "Ariadne annab Theseusele niidi, mis päästab tema elu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Theseus tapab Minotauruse ja kerib seejärel niidi tagasi, et välja pääseda. Ta põgeneb koos noorte ateenlaste ja Ariadnega. Kuid **Naksoos** saarele jätab ta naise magama. Mõned ütlevad, et jumal **Dionysos** tahtis teda oma naiseks. Meeleheitel ja seejärel jumalikuks saanud Ariadne saab kuldse krooni, millest on saanud tähtkuju."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p3",
+      "title": "Cape Sounioni mustad purjed",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tagasitulek peaks olema pidu. Võidujoovastuses või Ariadne hülgamisest muretuna unustab Theseus valged purjed heisata. Laev läheneb mustade purjede all Ateenale."
+        },
+        {
+          "type": "image",
+          "asset": "cape_sounion_aegean_sea_cliff_sunset",
+          "ratio": "4:3",
+          "caption": "Sounioni neem, kust Aegeus jälgis oma poja naasmist."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Sounioni neem**-s uurib vana kuningas Aegeus horisonti. Ta näeb ainult leina mustust. Olles veendunud, et poeg on surnud, viskab ta kaljult alla. Sellest ajast alates on meri kandnud nime: **Egeuse meri**. Theseus saabub kuningaks... ja jääb oma hooletuse tõttu orvuks."
+        },
+        {
+          "type": "funFact",
+          "text": "“Teseuse laevast” on saanud filosoofiline paradoks: kui kõik plangud ükshaaval välja vahetada, kas see on ikka sama paat?"
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p4",
+      "title": "Theseus, Ateena kuningas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kroonitud Theseusest saab organiseeriv kuningas. [[Sünoetsism]] omistatakse talle: Ateena ümber asuvate Atika linnade ühendamine. Ta asutas suuremad linnafestivalid [[Panathenaia]]. Võib kombineerida õigega."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tema valitsemisaeg hõlmab muid seiklusi, näiteks võitlust [[Amazonid]] vastu. Kuid Labürint jääb selle märgiks: teadmine, kuidas lahti harutada lahutamatut, jäädes samas haavatavaks unustuse suhtes. Theseus sepistab perekondliku tragöödia tuhast Ateena suuruse."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Theseus** tapab **Minotaurus** tänu **Ariane** lõimele. Unustades purjed vahetada, põhjustab ta oma isa **Egeuse** enesetapu, kes annab oma nime Egeuse merele."
+        }
+      ]
+    }
+  ]
+}

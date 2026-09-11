@@ -1,0 +1,134 @@
+{
+  "id": "course_13_la_bataille_de_waterloo_1815",
+  "title": "Waterloo lahing",
+  "subtitle": "1815",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "**18. juuli 1815. a** varises Belgias ühel vihmasel päeval Napoleoni impeerium kokku. Waterloo lõpetab Sada päeva ja avab Euroopas monarhilise korra sajandi.",
+  "hero": {
+    "image": "la_bataille_de_waterloo_1815",
+    "ratio": "16:9",
+    "hook": "Üks päev muda Belgias ja impeerium kukub lõplikult kokku."
+  },
+  "sections": [
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**18. juuni 1815** Belgias **Waterloo** küla lähedal mängitakse Euroopa saatust vihma käes. **Napoleon** seisab silmitsi kahe vaenlasega korraga: Briti **Arthur Wellesley**, **Wellingtoni** hertsog ja Preisi **Gebhard von Blücher**."
+        },
+        {
+          "type": "paragraph",
+          "text": "See pole lihtsalt lüüasaamine. See on Esimese Impeeriumi lõpp. Ühe päevaga purustasid Euroopat valitsenud mehe muda, vead ja liit, mis lõpuks kokku hoidis."
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p1",
+      "title": "Tagasitulek Elba saarelt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pärast **aprill 1814** troonist loobumist pagendati Napoleon Itaalia ranniku lähedal asuvale **Elbe** saarele. Võitjad kujundavad Euroopa ümber [[Viini kongress]]. **1. märtsil 1815** maandus ta Antibesi lähedal. See on **sada päeva** algus: teda peatama saadetud väed kogunevad. Ta vallutab Pariisi tagasi ilma verevalamiseta."
+        },
+        {
+          "type": "image",
+          "asset": "napoleon_return_from_elba_1815",
+          "ratio": "4:3",
+          "caption": "Elba saare tagasitulek: Napoleon saab tagasi võimu."
+        },
+        {
+          "type": "funFact",
+          "text": "Napoleon ja Wellington polnud enne Waterlood kunagi kohtunud. Belgia lahinguväli oli nende ainus näost näkku kohtumine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Euroopa kuulutas ta \"seadusvastaseks\". Tema plaan: kasutage [[Keskne asend]]. Idee on lihtne. Asetage end Wellingtoni ja Blücheri vahele, lööge neid üksteise järel, enne kui nad kokku saavad."
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p2",
+      "title": "Kaks päeva enne: Ligny ja Quatre-Bras",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**16. juunil** võitis Napoleon preislasi Belgia külas **Ligny**. Samal päeval pidas [[Marssal Ney]], üks tema julgemaid kindraleid, britte kinni **Quatre-rinnahoidjad**, mis on strateegiline ristteel. Kuid Napoleon usub, et preislased ei tööta. Ta eraldab marssal **Murelik** koos **33 000 mehega**, et neid jälitada."
+        },
+        {
+          "type": "funFact",
+          "text": "Mõned ajaloolased peavad 18. juuni hommikuse hilinemise põhjuseks hemorroidide rünnakut, mis oleks takistanud Napoleoni tavapärasel luureretkel ratsutamast."
+        },
+        {
+          "type": "paragraph",
+          "text": "**18** ootab pärast öist vihmasadu **11:30**, kuni maapind kuivab. Ta tahab teisaldada oma [[Suur aku]], tohutu suurtükkide kontsentratsioon. See viivitus annab Blücherile aega kahurihelina poole kõndida."
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p3",
+      "title": "Päev, mis purustas impeeriumi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lahing algab kindlustatud talude ümber: **Hougoumont** ja **Püha Hedge**. Laengud Ney põrkuvad Briti [[Ruut]] jalaväekoosseisudesse ristkülikuna, täägid väljapoole. Umbes **16.30** paiku ilmuvad prusslased Prantsusmaa paremale tiivale. Grouchy jääb liiga kaugele."
+        },
+        {
+          "type": "paragraph",
+          "text": "Viimase abinõuna käivitas Napoleon oma eliitüksuse **Keiserlik kaardivägi**. Esimest korda astub ta tagasi. Hüüd: \"Valvur taandub!\" tekitab paanikat. Pensionile jäämisest saab rutiinne. Wellington ja Blücher ühinevad **Belle-Alliance**-ga."
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p4",
+      "title": "Lõplik pagulus ja kuningate Euroopa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Napoleon loobus troonist **22. juuli 1815. a**. Pagulusse **Püha Helena**, eraldatud saarele Atlandi ookeani lõunaosas, suri ta **1821**-s. Viini kongress kehtestab [[Legitiimsus]]: kuninglikud dünastiad tagasi nende troonidele. Venemaa, Austria ja Preisimaa piirnevad mandriga. See \"Euroopa kontsert\" säilitab suhtelise rahu kuni **1914**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1. märts 1815",
+              "title": "Elbalt tagasi",
+              "detail": "Saja päeva algus."
+            },
+            {
+              "date": "16. juunil 1815. aastal",
+              "title": "Ligny ja Quatre-Bras",
+              "detail": "Osaline võit, kuid preislased pole muserdatud."
+            },
+            {
+              "date": "18. juunil 1815. aastal",
+              "title": "Waterloo",
+              "detail": "Otsustav kaotus Wellingtoni ja Blücheri vastu."
+            },
+            {
+              "date": "22. juunil 1815. aastal",
+              "title": "Teine troonist loobumine",
+              "detail": "Impeeriumi viimane lõpp."
+            },
+            {
+              "date": "1821",
+              "title": "Surm Püha Helena peal",
+              "detail": "Napoleon sureb paguluses."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Waterloo** (**18. juuni 1815**) lõpetab Napoleoni. Rünnaku viibimine, Grouchy puudumine ja Wellingtoni ristmik Blücheriga põhjustasid impeeriumi langemise ja juhatas sisse monarhilise korra sajandi."
+        }
+      ]
+    }
+  ]
+}

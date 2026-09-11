@@ -1,0 +1,100 @@
+{
+  "id": "course_56_la_decouverte_de_la_radioactivite_marie",
+  "title": "Radioaktiivsuse avastamine",
+  "subtitle": "Marie Curie",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Marie Curie koos Pierre Curie ja Henri Becquereliga avab radioaktiivsuse peatüki. Kaks Nobeli preemiat, tohutu töö ja tohutu pärand.",
+  "hero": {
+    "image": "la_decouverte_de_la_radioactivite_marie_curie",
+    "ratio": "16:9",
+    "hook": "Ta kaalus tonni maaki, et eraldada paar grammi nähtamatut elementi."
+  },
+  "sections": [
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Marie Curie** (sünninimega Maria Skłodowska) on esimene naine, kes on saanud Nobeli preemia. Ta on ainus inimene, kes on saanud **kaks** kahes erinevas teaduses: füüsika, seejärel keemia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selle teema: **radioaktiivsus**, see tähendab asjaolu, et teatud aatomid saadavad spontaanselt energiat ja osakesi."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
+      "title": "Kitsas uks teadusesse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Poolas sündinud ta läks õppima Pariisi, sest sealsed ülikoolid sulgesid naistele palju uksi. Ta töötab kõvasti, sageli ebakindlates tingimustes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta abiellus füüsiku **Pierre Curie**-ga. Koos moodustasid nad selleks ajaks haruldase laboriduo."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
+      "title": "Nimeta nähtamatu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1896** märkas **Henri Becquerel**, et uraan katab fotoplaate ilma valguseta. Marie Curie otsustab seda nähtust üksikasjalikult uurida. Ta leiutas sõna **radioaktiivsus**."
+        },
+        {
+          "type": "image",
+          "asset": "marie_curie_pitchblende_radioactivity",
+          "ratio": "4:3",
+          "caption": "Tonni pigisegu raadiumi ja polooniumi eraldamiseks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Koos Pierre'iga avastab ta kaks uut elementi: **poloonium** (nimetatud Poola järgi) ja **raadium**. Nende isoleerimiseks tuleb töödelda tohututes kogustes maaki, pigisegu."
+        },
+        {
+          "type": "funFact",
+          "text": "Raadium helendab pimedas nõrgalt. Me olime alguses üllatunud… enne kui mõistsime, kui ohtlik see oli."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
+      "title": "Au ja hind, mida maksta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aastal **1903** said Marie, Pierre ja Becquerel Nobeli füüsikaauhinna. Filmis **1911** sai Marie üksi Nobeli keemiaauhinna. Pierre suri kogemata aastal 1906. Ta jätkab."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esimese maailmasõja ajal organiseeris ta mobiilsed röntgeniüksused haavatute raviks. Ta avaldab oma keha annustele, mida me tänapäeval teame, et need on vastuvõetamatud."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
+      "title": "Kahepoolne pärand",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Radioaktiivsus on võimaldanud kiiritusravi teatud vähivormide vastu ja ka tuumarelvi. Teadmised on neutraalsed; selle kasutusalad ei ole."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marie Curie muutis kummalise vaatluse uueks teaduseks: radioaktiivsuseks. Tema töö avas kaasaegse füüsika… toona halvasti mõistetud riskide hinnaga."
+        }
+      ]
+    }
+  ]
+}

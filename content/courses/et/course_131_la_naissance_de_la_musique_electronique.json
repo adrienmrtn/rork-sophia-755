@@ -1,0 +1,145 @@
+{
+  "id": "course_131_la_naissance_de_la_musique_electronique",
+  "title": "Elektroonilise muusika sünd",
+  "subtitle": "1920-1990",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Thereminist Chicago ja Detroidi klubideni leiutab elektrooniline muusika helisid ilma orkestrita ja muudab maailmatantsu.",
+  "hero": {
+    "image": "la_naissance_de_la_musique_electronique",
+    "ratio": "16:9",
+    "hook": "Laboritest tantsupõrandateni: kuidas masinad leiutasid uut muusikat."
+  },
+  "sections": [
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elektrooniline muusika ei alga ööklubides. See sünnib laborites, kui leiutajad otsivad helisid, mida viiulilt või klaverilt pole võimalik saada."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alates 1920. aastate [[Theremin]]-st kuni [[Chicago maja]] ja [[Detroidi tehno]]-ni ulatub üks idee üle sajandi: masin suudab luua, mitte ainult salvestada. Tänapäeval struktureerib see suure osa maailmapopist ja [[diagrammid]]."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p1",
+      "title": "Teerajajad: Thereminist musique betoonini",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1920** kujundas vene leiutaja **Leon Theremin** (Lev Termen) [[Theremin]]: seadme, mida mängitakse ilma kontaktita. Käed liiguvad antennide läheduses elektromagnetväljas. Heli libiseb, peaaegu vokaalne ja hakkab peagi ulmefilme kummitama."
+        },
+        {
+          "type": "image",
+          "asset": "theremin_instrument_leon_theremin_1920",
+          "ratio": "4:3",
+          "caption": "Theremin: instrument, mida mängitakse õhus, keeli puudutamata."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pärast 1945. aastat muutsid uuringud maastikku. Pariisis leiutasid avalik-õiguslikus raadios **Pierre Schaeffer** ja **Peeter Henry** muusikalise betooni: igapäevaste mürade salvestamine, seejärel nende lõikamine, ümberpööramine, magnetlindile loopimine. Kölnis eelistavad teised stuudiod puhast sünteesi: helid, mis sünnivad ostsillaatoritest, ilma akustilise allikata. Need kaks teed toetavad endiselt praegust tootmist: ühelt poolt [[proovide võtmine]], teiselt poolt süntees."
+        },
+        {
+          "type": "funFact",
+          "text": "Theremin kinkis oma pilli Leninile. Lummustatud Nõukogude juht nõudis väidetavalt sadu koopiaid, et levitada NSV Liidus tehnilist modernsust."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p2",
+      "title": "The Moog, Wendy Carlos ja Kraftwerk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1960. aastatel tegi Ameerika insener **Robert Moog** süntesaatori miniatuurseks transistoridega. **1968** tõestab **Wendy Carlos** album *Sisselülitatud Bach*, et elektroonika suudab kanda klassikalist keerukust. Vidinast saab instrument."
+        },
+        {
+          "type": "image",
+          "asset": "moog_synthesizer_robert_moog_1960s",
+          "ratio": "4:3",
+          "caption": "Moogi süntesaator: masin lahkub laborist stuudiosse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Düsseldorfis esitab Saksa rühmitus **Kraftwerk**, mille asutasid **Ralf Hütter** ja **Florian Schneider**, külma ja korduvat poppi. Saates *Autobahn* (**1974**) ja *Meesmasin* (**1978**) laulavad nad kiirteest, robotist ja linnast. Nende rütm toidab hiljem Ameerika hip-hopi ja Euroopa tantsumuusikat."
+        },
+        {
+          "type": "image",
+          "asset": "kraftwerk_band_dusseldorf_1970s",
+          "ratio": "4:3",
+          "caption": "Kraftwerk: inimene-masin kui kunstiline isiksus."
+        },
+        {
+          "type": "funFact",
+          "text": "Teatud ringreisidel saatis Kraftwerk pressikonverentsidele nende sarnaseid mannekeene, viies inimese-masina kontseptsiooni piirini."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p3",
+      "title": "Chicago ja Detroit: elektrooniline tants",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1980. aastatel muutsid mängu sellised taskukohased masinad nagu **Roland TR-808** trummimasin. Chicagos, mustanahaliste ja geikogukondade külastatavates klubides täiustab DJ **Frankie Knuckles** [[Chicago maja]]: tavaline 4/4 rütm, diskotelt päritud soojus."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Detroidis**, linnas, mida iseloomustab autotehaste allakäik, mõtlevad kolm ülikooli sõpra (**Juan Atkins**, **Derrick May**, **Kevin Saunderson**) välja tumedama esteetika: [[Detroidi tehno]]. Euroopasse ekspordituna leidis see pärast müüri langemist Berliinis tugevat vastukaja."
+        },
+        {
+          "type": "funFact",
+          "text": "TR-808 oli kaubanduslik läbikukkumine: professionaalid pidasid seda \"ebareaalseks\". Kasutatuna müüdud, saab sellest Chicago katki läinud DJ-de relv."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p4",
+      "title": "Arvuti, igaühe stuudio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alates 1990. aastatest muutis [[DAW tarkvara]] (arvutiga toetatud muusika) lihtsa arvuti stuudioks. Elektroonika lahkub klubist reklaami, kino ja peaaegu kogu popi jaoks. [[Chicago house ja Detroit techno]] jäävad globaalse keele juurteks."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1920",
+              "title": "Theremin",
+              "detail": "Leon Theremin leiutab pilli, mida mängitakse ilma kontaktita."
+            },
+            {
+              "date": "1948-1950",
+              "title": "Konkreetne muusika",
+              "detail": "Schaeffer ja Henry manipuleerivad Pariisis salvestatud helidega."
+            },
+            {
+              "date": "1968-1978",
+              "title": "Moog ja Kraftwerk",
+              "detail": "Süntesaator siseneb massikultuuri."
+            },
+            {
+              "date": "1980. aastad",
+              "title": "House ja techno",
+              "detail": "Chicago ja Detroit leiutavad kaasaegse elektroonilise tantsu."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "1950. aastatel laborites sündinud elektrooniline muusika moodustab tänapäeval suure osa maailma toodangust klubist kuni hitiparaadini."
+        }
+      ]
+    }
+  ]
+}

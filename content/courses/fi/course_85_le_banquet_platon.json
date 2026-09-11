@@ -1,0 +1,106 @@
+{
+  "id": "course_85_le_banquet_platon",
+  "title": "Symposium, Platon",
+  "subtitle": "4. vuosisadalla eKr",
+  "subject": "litterature",
+  "subcategory": "Ancient Greeks & Philosophers",
+  "description": "Ateenalaisen aterian ympärillä vieraat määrittelevät rakkauden. Aristophanes kertoo androgyyneistä, Sokrates nostaa halun kauneutta kohtaan. Platon muuttaa juhlan filosofiaksi.",
+  "hero": {
+    "image": "le_banquet_platon",
+    "ratio": "16:9",
+    "hook": "Hyvin humalainen ilta. Ja yhtäkkiä rakkauden kaunein määritelmä."
+  },
+  "sections": [
+    {
+      "id": "course_85_le_banquet_platon_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ateenassa **4. vuosisadalla BC**, **Platon**, kreikkalainen filosofi ja Sokrateen opetuslapsi, kirjoitti **Juhlatilaisuus**. Kreikaksi sanomme *Symposium*. Tapahtumapaikkana on [[Ateenalainen symposium]], illallisen jälkeinen miesten ateria, jossa laimennettua viiniä ja älyllistä keskustelua sekoittuvat. Sinä iltana määrätty teema on **[[Eros]]**, voima, joka työntää sielua kohti kauneutta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jokainen vieras tarjoaa teorian rakkaudesta. Dialogista tulee nousu: kehosta kauniiseen, kauniista **Ideoihin**, Platonin mukaan täydellisiä ja ikuisia muotoja. Ja **Sokrates**, Platonin mestari, joka tuomittiin kuolemaan vuonna 399, kuten usein platonisissa dialogeissa, sanoo viimeisen sanan."
+        }
+      ]
+    },
+    {
+      "id": "course_85_le_banquet_platon_p1",
+      "title": "Juo, puhu, kilpaile",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Juhla juhlii runoilijan **Agathon**, traagisen kirjailijan ja illan juontajan voittoa. Krapula on edelleen olemassa, mutta päätämme kehua Erosta sen sijaan, että juomme liikaa. Puheet seuraavat toisiaan: lääkärit, runoilijat, poliitikot. Jokainen projisoi näkemyksensä halusta. **Phaedra** puhuu rakkaudesta rohkeuden liikkeellepanevana voimana. **Pausanias** erottaa jalon rakkauden ja karkean rakkauden."
+        },
+        {
+          "type": "image",
+          "asset": "ancient_greek_symposium_banquet_painting",
+          "ratio": "4:3",
+          "caption": "Kreikan symposion: viini, kruunut ja puhe sosiaalisena urheiluna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Platon käyttää festivaalin filosofiaa ilman luentoja. Nauramme, provosoimme, oikaisemme toisiamme. Ajatus etenee viinin mukana, mutta myös pelisääntöjen ansiosta: kaikkien on puolustettava Erosta muiden edessä. Kaunopuheisuuskilpailusta, kreikkalaisesta *agon*, tulee ajatuskoulu."
+        }
+      ]
+    },
+    {
+      "id": "course_85_le_banquet_platon_p2",
+      "title": "Myytti androgyyneistä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuuluisin puhe on **Aristophanes**, ateenalainen sarjakuvakirjailija, joka tunnetaan satiireistaan. Hän sanoi, että aiemmin ihmiset olivat kaksimielisiä. [[androgyynit]] sekoitti maskuliinisia ja naisellisia hahmoja. Muut parit yhdistyivät. **Zeus**, jumalten kuningas, leikkaa ne kahtia rankaisemaan heitä. Siitä lähtien jokainen on etsinyt kadonnutta puoliskoaan."
+        },
+        {
+          "type": "funFact",
+          "text": "Tämä tarina antoi ranskalaisen ilmaisun \"sielunkumppani\". Platon laittaa sen koomikon suuhun ja menee sitten sen pidemmälle: rakkaus ei pysähdy kadonneen ruumiin löytämiseen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Myytti on kaunis, hellä, hieman surullinen. Se selittää **puute**, tämän epätäydellisyyden tunteen, joka pakottaa meidät etsimään toista. Mutta Sokrates menee muualle: rakastaminen ei ole vain kahden puolikkaan yhdistämistä. Kyse on noususta kohti jotain itseäsi suurempaa."
+        }
+      ]
+    },
+    {
+      "id": "course_85_le_banquet_platon_p3",
+      "title": "Diotima ja rakkauden mittakaava",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sokrates raportoi **Diotima**:n, ulkomaalaisen papin ja viisauden hahmon opetuksen dialogissa. Eros ei ole täysi jumala eikä köyhä kuolevainen: hän on [[daimon]], välittäjäolento jumalien ja ihmisten välillä. Hän haluaa sen, mitä häneltä puuttuu. Rakastaja aloittaa kauniista kehosta, siirtyy kauniisiin sieluihin, sitten kauniisiin tekoihin, kunnes **Kaunis itsessään**, täydellinen Idea kauneudesta."
+        },
+        {
+          "type": "image",
+          "asset": "socrates_alcibiades_banquet_painting",
+          "ratio": "4:3",
+          "caption": "Sokrates ja Alkibiades: halu voi olla myös sielun koulu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se on [[Platoninen Eros]], halu, joka kouluttaa. Myöhemmin [[Alcibiades]], nuori ateenalainen poliitikko, komea ja epävakaa, humalassa, tunkeutuu sisään ja ylistää Sokratesta häiritsevänä satyyrina. Filosofinen rakkaus ei poista lihallista epäjärjestystä. Hän muuttaa sen totuuden etsimiseksi."
+        }
+      ]
+    },
+    {
+      "id": "course_85_le_banquet_platon_p4",
+      "title": "Mitä \"platoninen\" tarkoitti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yleisessä kielenkäytössä \"platoninen\" rakkaus tarkoittaa ilman lihallisia suhteita. Platonissa se on rikkaampi: ruumis on lähtökohta, ei häpeä. Juhla jätti jälkensä kristilliseen teologiaan, Petrarchin tai Ronsardin rakkausrunouteen ja halun psykologiaan. Se osoittaa, että rakastaminen on myös oppimista näkemään."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Banketissa** Platon muuttaa ateenalaisen illan mittakaavaksi: aloitamme herkästä halusta tavoitella laajempaa kauneutta. Rakastaminen tässä tarkoittaa sitä, että opit näkemään itsensä pidemmälle."
+        }
+      ]
+    }
+  ]
+}

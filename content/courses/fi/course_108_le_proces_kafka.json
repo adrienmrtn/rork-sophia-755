@@ -1,0 +1,115 @@
+{
+  "id": "course_108_le_proces_kafka",
+  "title": "Oikeudenkäynti, Kafka",
+  "subtitle": "1925",
+  "subject": "litterature",
+  "subcategory": "Anglo-Saxons & world literature",
+  "description": "Josef K. pidätetään eräänä aamuna tietämättä miksi. Kafka kuvaa loputonta prosessia, läpinäkymätöntä byrokratiaa: sana \"kafkamainen\" syntyi tästä painajaisesta.",
+  "hero": {
+    "image": "le_proces_kafka",
+    "ratio": "16:9",
+    "hook": "Pidätetty ilman rikosta, tuomittu ymmärtämättä: romaani, joka keksi sanan \"kafkamainen\"."
+  },
+  "sections": [
+    {
+      "id": "course_108_le_proces_kafka_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kirjoitettu välillä **1914** ja **1915**, julkaistu postuumisti julkaisussa **1925**, **Franzin Kafka**:n oikeudenkäynti on yksi 20. vuosisadan vakavammistä teoksista.**Josef K.**, Prahan pankin työntekijä, pidätetään eräänä aamuna selittämättä miksi. Hän kamppailee läpinäkymättömässä oikeusjärjestelmässä, jolla ei ole näkyviä sääntöjä tai mahdollista loppua."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nykyään adjektiivi **[[Kafkamainen]]** tarkoittaa byrokraattista järjettömyyttä, joka murskaa yksilön ilman turvaa. Kafka vangitsee nykyajan ahdistuksen sellaisten nimettömien rakenteiden edessä, joista olemme riippuvaisia ymmärtämättä niitä koskaan. Hänen romaaninsa on oudon ajankohtainen algoritmien ja käsittämättömien hallintojen aikakaudella."
+        }
+      ]
+    },
+    {
+      "id": "course_108_le_proces_kafka_p1",
+      "title": "Kafka: mies keskeneräisten palveluksessa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kafka elää kaksoiselämää: vakuutusvirkailija **Praha** päivällä, kirjailija yöllä. Kulttuurijuutalainen **saksaa puhuva** **[[Itävalta-Unkarin valtakunta]]**, hän tuntee syrjäytyneensä ensimmäisen maailmansodan jälkeen romahtaneen imperiumin sydämessä."
+        },
+        {
+          "type": "image",
+          "asset": "franz_kafka_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "Franz Kafka päiväbyrokratian ja yön kirjoittamisen välillä."
+        },
+        {
+          "type": "funFact",
+          "text": "Kafka pyysi ystäväänsä Max Brodia polttamaan käsikirjoituksensa. Brod kieltäytyi ja julkaisi Oikeudenkäynnin vuonna 1925, joskus arvaten lukujen järjestystä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Keskeneräinen romaani vahvistaa paradoksaalisesti voimaaan: lukija, kuten Josef K., ei voi sulkea tapausta tai käsittää kokonaislogiikkaa. Epätäydellisestä tulee osa merkitystä. Kafka tuntee tarkasti tuomitsemansa byrokratian, koska hän oli mallityöntekijä."
+        }
+      ]
+    },
+    {
+      "id": "course_108_le_proces_kafka_p2",
+      "title": "Josef K. ja näkymättömän syytöksen kierre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "\"Jonkun on täytynyt herjata Josef K.:tä, koska, tekemättä mitään väärää, hänet pidätettiin eräänä aamuna.\" K. pysyy vapaana liikkeestään, mutta tämä näennäinen vapaus muuttuu pysyväksi piinaksi. Hän juoksee asianajajien, maalareiden, välittäjien perässä ymmärtämättä koskaan syytöstä tai tuomioistuimen hierarkiaa."
+        },
+        {
+          "type": "image",
+          "asset": "prague_castle_early_20th_century",
+          "ratio": "16:9",
+          "caption": "Praha 1900-luvun alussa: imperiumin perustaminen ja läpinäkymätön byrokratia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tuomioistuimet sijaitsevat suosittujen rakennusten ullakoilla, kaukana virallisista palatseista. Järjestelmä ei pyri todistamaan syyllisyyttä todisteilla: se odottaa, että syytetty uuputtaa itsensä loputtomiin menettelyihin. Mitä enemmän K. puolustaa itseään, sitä enemmän hän vahvistaa auktoriteetin, joka ei todella kuuntele häntä."
+        }
+      ]
+    },
+    {
+      "id": "course_108_le_proces_kafka_p3",
+      "title": "Byrokratia ja eksistentiaalinen ulottuvuus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kafka arvostelee **modernia byrokratiaa**, joka on niin monimutkainen kone, ettei kukaan näe sen koko toimintaa. Historian ironia: Kafka oli mallityöntekijä, vakuutushallinnossaan työntekijöiden turvakypärän edistäjä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oikeudenkäyntiä voidaan lukea myös **[[Eksistentiaalinen syyllisyys]]**: K. ei olisi syyllistynyt mihinkään tiettyyn rikokseen, vaan itse ihmisen, epätäydellisen ja haavoittuvan tilaan. Tuomiokirkossa pappi kertoo **[[Lain edessä]]**, jossa mies odottaa koko elämänsä suljetun oven edessä uskaltamatta mennä siitä läpi."
+        },
+        {
+          "type": "quote",
+          "text": "Jonkun on täytynyt panetella Josef K.:tä, koska ilman, että hän oli tehnyt mitään väärää, hänet pidätettiin eräänä aamuna.",
+          "attribution": "Franz Kafka, Oikeudenkäynti"
+        }
+      ]
+    },
+    {
+      "id": "course_108_le_proces_kafka_p4",
+      "title": "Kafkalaisen konseptin perintö",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sana **[[Kafkamainen]]** ylittää kirjallisuuden. Hän kuvaa läpinäkymättömästä järjestelmästä syntyvää ahdistusta: hallintoa, algoritmeja, yrityshierarkiaa, menettelyjä ilman tunnistettavaa keskustelukumppania. Yksilö on riippuvainen koneesta, jota hän ei ymmärrä eikä voi haastaa tehokkaasti."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Sartre**, **Camus** ja **eksistentialismi** tunnistavat Kafkan edeltäjäkseen. Josef K. teloitettiin, kun hän kuiskasi \"kuin koira!\" \". Romaani kieltäytyy tekemästä rauhoittavia johtopäätöksiä: se pakottaa lukijan elämään epävarmuudessa."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Oikeudenkäynti** osoittaa, että joku voidaan tuomita ilman rikosta tai oikeudenmukaista oikeudenkäyntiä. Kafka keksii kielen nimeämään nykyajan pelkoa kasvottoman vallan edessä."
+        }
+      ]
+    }
+  ]
+}

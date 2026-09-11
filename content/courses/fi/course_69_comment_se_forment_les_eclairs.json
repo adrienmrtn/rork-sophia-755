@@ -1,0 +1,112 @@
+{
+  "id": "course_69_comment_se_forment_les_eclairs",
+  "title": "Miten salama muodostuu?",
+  "subtitle": "Ukkosmyrskyjä",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Salama ei ole taikuutta: se on valtava sähköpurkaus myrskypilvessä. Näin hän valmistautuu ja sitten kuinka hän lyö.",
+  "hero": {
+    "image": "comment_se_forment_les_eclairs",
+    "ratio": "16:9",
+    "hook": "Sekunnin murto-osassa ilma kohoaa 30 000 asteeseen. Viisi kertaa lämpimämpi kuin Auringon pinta."
+  },
+  "sections": [
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Salama vapauttaa valtavaa energiaa silmänräpäyksessä. Salamakanavan ilma nousee noin **30 000 °C**. Ukkonen on vain tämän julman kuumuuden ääni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ymmärtääksesi salaman, sinun on noudatettava kolmea vaihetta: kuinka pilvi latautuu, kuinka sähkö löytää polun ja miksi kuulet ukkonen jälkeenpäin."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p1",
+      "title": "Pilvessä lataukset erillään",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Salamaa esiintyy pääasiassa [[cumulonimbus]]: erittäin suurissa myrskypilvissä, jotka voivat nousta noin **15 km**:iin. Sisällä ilma nousee ja laskee erittäin voimakkaasti."
+        },
+        {
+          "type": "image",
+          "asset": "cumulonimbus_thunderstorm_cloud",
+          "ratio": "4:3",
+          "caption": "Cumulonimbus: myrskytehdas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tässä kaaoksessa pienet **jääkiteet** nousevat ja painavat jääjyvät ([[räntää]]) laskeutuvat alas. Kun ne törmäävät, sähkövaraukset vaihtuvat. Pikkuhiljaa pilven yläosa muuttuu melko positiiviseksi, pohja melko negatiiviseksi."
+        },
+        {
+          "type": "funFact",
+          "text": "Venezuelassa sijaitseva Maracaibo-järvi on yksi planeetan salaman iskeimmistä paikoista: siellä havaitaan lähes päivittäin myrskyjä suuren osan vuodesta."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p2",
+      "title": "Kun ilma päästää irti: purkaus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ilma on huono johdin. Mutta jos varausero tulee liian suureksi (usein **satoja miljoonia voltteja**), ilma antaa periksi. Molekyylit menettävät elektroneja: niistä tulee johtavia. Tämä on [[Ilman ionisaatio]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Näkymätön kanava jättää pilven pienin harppauksin. Maasta sähköverkot kohoavat erityisesti pisteistä (puista, ukkosenjohtimista, rakennuksista). Kun nämä kaksi kohtaavat, piiri sulkeutuu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Näkemämme suuri valo, **kaari takaisin**, nousee pääasiassa maasta pilveen. Virta voi nousta kymmeniin tuhansiin ampeeriin. Useat purkaukset voivat seurata toisiaan samassa kanavassa: tästä johtuu välkyntävaikutus."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p3",
+      "title": "Miksi ukkonen tulee myöhemmin?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Salama lämmittää ilman niin nopeasti, että se yhtäkkiä laajenee. Tästä shokkiaallosta tulee **ukkonen**. Valo tulee melkein välittömästi; ääni etenee noin **340 m/s**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yksinkertainen vinkki: laske sekunnit salaman ja ukkosen välillä ja jaa sitten **3**:llä. Saat arvion etäisyydestä kilometreissä."
+        },
+        {
+          "type": "funFact",
+          "text": "Maahan iskee keskimäärin noin **100 salamaa sekunnissa**. Ranskassa tapahtuu noin **yksi muoto** vaikutuksia maahan vuodessa."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p4",
+      "title": "Vaara, hedelmällisyys ja uteliaisuudet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Salama on edelleen vaarallinen, etenkin ulkona, eristyneiden puiden tai veden lähellä. Se myös sytyttää tulipalot. Mutta sillä on vähemmän tunnettu vaikutus: se auttaa tuottamaan typpiyhdisteitä, jotka lannoittaa maata sateella."
+        },
+        {
+          "type": "paragraph",
+          "text": "Myrskyjen yläpuolella kamerat tallensivat myös outoja ilmiöitä, kuten [[Leprechaunit]]: lyhyitä hehkuja yläilmakehässä, paljaalla silmällä näkymättömiä maasta."
+        },
+        {
+          "type": "takeaway",
+          "text": "Cumulonimbusissa varaukset erottavat jään/sateen törmäykset. Kun jännite nousee liian korkeaksi, ilma ionisoituu: salama lämpenee ~30 000°C:een ja tämä äkillinen laajeneminen aiheuttaa ukkonen."
+        }
+      ]
+    }
+  ]
+}

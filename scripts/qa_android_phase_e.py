@@ -58,8 +58,10 @@ CRITICAL_KEYS = [
 
 CODE_MARKERS = [
     (JAVA / "domain" / "AppLanguage.kt", "TURKISH"),
-    (JAVA / "ui" / "onboarding" / "OnboardingSteps.kt", "scrollHint"),
-    (JAVA / "ui" / "onboarding" / "OnboardingSteps.kt", "ProfileMetrics"),
+    # OnboardingSteps.kt was split up when the onboarding was rebuilt on the iOS
+    # motion language; the two markers moved with their screens.
+    (JAVA / "ui" / "onboarding" / "OnboardingIntroSteps.kt", "scrollHint"),
+    (JAVA / "ui" / "onboarding" / "OnboardingProfileSteps.kt", "ProfileMetrics"),
     (JAVA / "ui" / "course" / "CourseLessonLockOverlay.kt", "CourseLessonLockOverlay"),
     (JAVA / "ui" / "course" / "CourseScreen.kt", "courseLocked"),
     (JAVA / "billing" / "StoreViewModel.kt", "shouldShowTrialSteps"),

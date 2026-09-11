@@ -1,0 +1,120 @@
+{
+  "id": "course_67_qu_est_ce_qu_un_trou_noir",
+  "title": "Mis on must auk?",
+  "subtitle": "Äärmuslik tõsidus",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Must auk ei ole kosmiline tolmuimeja. See on piirkond, kus gravitatsioon on nii tugev, et isegi valgus ei pääse välja.",
+  "hero": {
+    "image": "qu_est_ce_qu_un_trou_noir",
+    "ratio": "16:9",
+    "hook": "Välja ei tule midagi, isegi valgust mitte. Siiski sattusime pildistama selle varju."
+  },
+  "sections": [
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Must auk on **ruumi-aja** piirkond, ruumi ja aega ühendav kangas, kus gravitatsioon on nii intensiivne, et põgenemiseks vajalik kiirus ületab valguse kiiruse. Midagi ei tule välja: ükskõik, valgussignaali pole."
+        },
+        {
+          "type": "paragraph",
+          "text": "See ei ole \"auk\" tunneli mõttes. See on äärmiselt kontsentreeritud materjal, mis painutab seda kangast väga tugevalt. Pikka aega puhas teooria, mis tuleneb Einsteini võrranditest, vaadeldakse tänapäeval musti auke mitmel viisil."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p1",
+      "title": "Kui täht kokku variseb",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tähe must auk sünnib sageli väga massiivse tähe surmast, mille mass on vähemalt **20 kuni 25 korda suurem kui Päike. Täht püsib oma elu jooksul tänu tasakaalule: gravitatsioon tõmbab tsentri poole**, Tuumasünteesi rõhk surub väljapoole. Tähe südames muutub vesinik heeliumiks."
+        },
+        {
+          "type": "image",
+          "asset": "black_hole_accretion_disk_galaxy",
+          "ratio": "auto",
+          "caption": "Must auk, mida ümbritseb hõõguv akretsiooniketas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kui kütus saab otsa, siis rõhk langeb. Tähe süda on muserdatud. **supernoova** plahvatus võib seejärel galaktika valgustada. Kui ülejäänud tuum on piisavalt massiivne, ei peata tihendamist miski."
+        },
+        {
+          "type": "paragraph",
+          "text": "Teooria keskmes kirjeldab [[Gravitatsiooniline singulaarsus]]: punkti, kus tihedus ja kumerus muutuvad äärmuslikuks ning kus meie praegused võrrandid lakkavad hästi töötamast. Selle ümbert leiame [[Sündmuste horisont]]: nähtamatu piiri. Pärast ületamist pole ülejäänud universumisse tagasipöördumine võimalik."
+        },
+        {
+          "type": "funFact",
+          "text": "Kui sa langeksid musta augu poole, tõmbaks gravitatsioon sinu jalgu palju tugevamini kui pead. Seda venitamist nimetatakse \"spagettimiseks\"."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p2",
+      "title": "Pole kosmiline tolmuimeja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vastupidiselt levinud arvamusele ei ime must auk endasse kõike, mis kaugusest möödub. Selle gravitatsioon sõltub selle massist ja kaugusest, nagu iga objekti puhul. Kui Päike asendataks sama massiga musta auguga, jätkaks Maa tiirlemist. Aga ilma valguse ja soojuseta jääksime ära."
+        },
+        {
+          "type": "paragraph",
+          "text": "Peaaegu kõigi galaktikate keskmes on ka **ülimassiivsed mustad augud**, mille päikesemassid on miljoneid kuni miljardeid. Linnuteel on see **Ambur A***, umbes **4 miljonit** päikesemassi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neid märgatakse sageli tänu [[Akretsiooni ketas]]: gaasi- ja tolmurõngale, mis pöörleb nende ümber väga kiiresti. Hõõrdumine soojendab seda materjali, kuni see muutub röntgenikiirguse või raadiolainete mõjul äärmiselt heledaks. Seejärel näeme sellel helendaval taustal musta augu varju."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p3",
+      "title": "2019: esimene pilt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**aprill 2019** avaldab Event Horizon Telescope projekt esimese musta augu kujutise. Ühendades kaheksa raadioteleskoopi [[Interferomeetria]] abil loovad teadlased Maa suuruse virtuaalse teleskoobi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sihtmärk on **M87***, ülimassiivne must auk galaktikas Messier 87, **55 tuhat** valgusaasta kaugusel. Näeme tumeda ala ümber heledat rõngast: sündmuste horisondi siluetti. Jaotises **2022** järgneb pilt meie naabrist Amburist A*."
+        },
+        {
+          "type": "funFact",
+          "text": "Alates **2015**-st on LIGO ja Virgo observatooriumid tuvastanud ka **gravitatsiooniaineid**: kahe musta augu ühinemisel tekkivad väikesed aegruumi vibratsioonid."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p4",
+      "title": "Hawking ja aeglane aurumine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Raamatus **1974** näitas Briti füüsik **Stephen Hawking**, et must auk ei oleks täiesti must. Horisondi lähedal esinevate kvantefektide tõttu kiirgaks see väga nõrka kiirgust: [[Hawkingi kiirgus]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tulemus: isoleeritud must auk kaotaks aeglaselt massi ja lõpuks aurustuks. Tähe musta augu puhul kuluks selleks fantastiliselt kauem aega kui universumi praegune vanus. See idee tõstatab ka teabe paradoksi: mis saab sisse kukkunu teabest, kui must auk kaob?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Musta augu lähedal möödub aeg ka kaugema vaatleja jaoks aeglasemalt, see on **aja laienemised** relativistlik efekt. Need objektid jäävad füüsika piiride testimiseks parimate laborite hulka."
+        },
+        {
+          "type": "takeaway",
+          "text": "Must auk tekib sageli massiivse tähe kokkuvarisemisel. Seda piirab sündmuste horisont, mis on esimest korda pildistatud **2019** ümber maantee M87*."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "course_211_comment_fonctionne_le_prix_du_petrole",
+  "title": "Kuidas töötab nafta hind?",
+  "subtitle": "Maailmamajanduse närv",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Nafta hinda ei määra üks müüja. See on sündinud **sõjalõksust** tootvate riikide, finantsturgude ja äkiliste kriiside vahel, mis mõnikord ulatuvad absurdini.",
+  "hero": {
+    "image": "comment_fonctionne_le_prix_du_petrole",
+    "ratio": "16:9",
+    "hook": "2020. aastal maksid naftamüüjad oma ostjatele nende vabanemise eest. Siin on põhjus."
+  },
+  "sections": [
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nafta nimetatakse mõnikord \"majanduse vereks\". Selle hind mõjutab inflatsiooni, bensiini hinda ja isegi teatud riikide stabiilsust. Seda hinda aga keegi templiga ei määra."
+        },
+        {
+          "type": "paragraph",
+          "text": "See tuleneb kolme jõu kohtumisest: naftat ammutavad riigid, sellega kaubeldavad finantsturud, enne kui see maapinnast üldse maha läheb, ja kriisid, mis panevad kõik paanikasse. Suunduge Araabia kõrbetesse, Texase tasandikele ja Chicago ekraanidele."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p1",
+      "title": "OPEC versus Ameerika kiltkivi: tarnelahing",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Naftaturul on eripära: lühiajaliselt nõudlus hindade tõustes peaaegu ei lange. Autod, tehased ja lennukid ei saa energiat üleöö muuta. Majandusteadlased nimetavad seda nõudluse **mitteelastsuseks**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alates 1960. aastast on selle turu mõjutamiseks organiseerunud tootjariikide rühm: [[OPEC]]. Tootmiskvootides kokku leppides püüavad selle liikmed hoida kõrgeid hindu. Alates 2016. aastast on Venemaa liitunud alliansiga, moodustades OPEC+. Üheskoos kontrollivad need riigid umbes 40% maailma naftast."
+        },
+        {
+          "type": "funFact",
+          "text": "Üks barrel naftat, 159 liitrit, sisaldab sama palju energiat kui ühe inimese käsitsitöö umbes aastaks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kuid see jõud on raputatud. Tänu tehnikale, mida nimetatakse hüdrauliliseks purustamiseks, sai USA kümne aastaga maailma suurimaks naftatootjaks, edestades Saudi Araabiat. See uus, kiiremini kohandatav pakkumine on muutnud turu konkurentsivõimelisemaks ja OPEC+ jaoks raskemini kontrollitavaks."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p2",
+      "title": "\"Paber\" õli: kui rahandus sekkub",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lisaks tegelikele laeva või torujuhtme kaudu tarnitavatele barrelitele kaubeldakse naftaga ka finantsturgudel. Enamik tehinguid toimub futuurituru kaudu: me ostame täna barreli, mis tarnitakse alles ühe, kolme või kuue kuu pärast."
+        },
+        {
+          "type": "image",
+          "asset": "oil_futures_trading_floor_markets",
+          "ratio": "16:9",
+          "caption": "Nafta kaubeldakse finantsturgudel ammu enne selle tarnimist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pangad ja riskifondid ostavad ja müüvad neid lepinguid, tahtmata kunagi puudutada ühtegi barrelit: nad panustavad lihtsalt sellele, kas hinnad tõusevad või langevad. See toob raha turule, aga muudab hinnad ka närvilisemaks. Maailmas on võrdlusaluseks kaks hinda: Põhjamere nafta [[Brent]] ja Texase nafta WTI. Nende kahe erinevus peegeldab kvaliteedi ja transpordi erinevusi."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p3",
+      "title": "Hinnad kukuvad... või plahvatuslikult",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Naftaturg toimib jõhkrates tsüklites. Kui hinnad tõusevad pikka aega, investeerivad tootjad kallitesse hoiustesse, mis lõpuks tekitab ülepakkumise. Kui hinnad jäävad madalaks, juhtub vastupidine: uurime vähem, mis valmistab ette järgmist defitsiiti."
+        },
+        {
+          "type": "paragraph",
+          "text": "COVID-19 kriis on seda suurejooneliselt näidanud. 2020. aasta aprillis peatus maailmamajandus ootamatult: keegi ei lennanud ega sõitnud, kuid kaevud jätkasid tootmist. Säilituspaagid olid ääreni täis. Seejärel langes WTI hind miinus 37 dollarile: müüjad maksid oma ostjatele aktsiate tühjendamise eest."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seevastu 2022. aastal tekitas Venemaa sissetung Ukrainasse kartusi puuduse ees: olles maailma suuruselt teine eksportija, ületas Brent mõne nädalaga 130 dollari piiri. Seetõttu jääb nafta maailma pingete närvibaromeetriks."
+        },
+        {
+          "type": "funFact",
+          "text": "Ühe nutitelefoni valmistamiseks kulub materjalide, plastosade ja transpordi vahel umbes 7 liitrit õli."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p4",
+      "title": "Kas naftal on tulevikku?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pikemas perspektiivis seisab nafta silmitsi uue väljakutsega: üleminek puhtale energiale. Kui elektriautod vähendavad ülemaailmset nõudlust, võivad tootvad riigid alustada hinnasõda, et müüa oma varusid enne, kui need oma väärtuse kaotavad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Turgu ähvardab aga paradoks: kuna investorid loobuvad kliimapõhjustel uutest naftaprojektidest, võib pakkumine langeda kiiremini kui nõudlus, põhjustades uusi hinnatõusid. Nafta ei kao ootamatult: see on endiselt hädavajalik plastide, väetiste ja raskete transpordivahendite (nt lennunduse) jaoks."
+        },
+        {
+          "type": "takeaway",
+          "text": "Nafta hind tuleneb vastasseisust OPEC+, Ameerika põlevkivitootmise ja spekulatiivsete finantsturgude vahel. Tulemus: hinnad, mis võivad vähimagi geopoliitilise šoki korral kokku kukkuda või plahvatada."
+        }
+      ]
+    }
+  ]
+}

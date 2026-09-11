@@ -1,0 +1,121 @@
+{
+  "id": "course_112_le_grand_gatsby_fitzgerald",
+  "title": "Suuri Gatsby, Fitzgerald",
+  "subtitle": "1925",
+  "subject": "litterature",
+  "subcategory": "Anglo-Saxons & world literature",
+  "description": "Jay Gatsby järjestää ylellisiä juhlia voittaakseen Daisyn takaisin. Fitzgerald kuvaa Roaring Twentiesiä ja amerikkalaisen unelman korruptiota.",
+  "hero": {
+    "image": "le_grand_gatsby_fitzgerald",
+    "ratio": "16:9",
+    "hook": "Vihreä valo tasanteen päässä: menneisyyden symboli, jota ei voi lunastaa."
+  },
+  "sections": [
+    {
+      "id": "course_112_le_grand_gatsby_fitzgerald_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Julkaisussa **1925**, **Suuri Gatsby** on **F:n mestariteos. Scott Fitzgerald**, syntynyt **1896** ja kuollut **1940**. **Jay Gatsby**, salaperäinen mies upeilla juhlilla, hän tutkii sosiaalista ylösnousemusta, onnen illuusiota ja menneisyyden lunastamisen mahdottomuutta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Romaani on requiem [[amerikkalainen unelma]]. Tämä ajatus on, että Yhdysvalloissa jokainen voi menestyä ansioiden ja yksin työskentelyn kautta. Jazz-ajan kullan takana Fitzgerald osoittaa syvää moraalista korruptiota. Raha ostaa esityksen, mutta ei lunastus."
+        }
+      ]
+    },
+    {
+      "id": "course_112_le_grand_gatsby_fitzgerald_p1",
+      "title": "Fitzgerald ja Roaring Twentiesin ambivalenssi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fitzgerald eli **Roaring Twenties**, jota kutsutaan myös \"Roaring Twentiesiksi\". Se oli euforian vuosikymmen ensimmäisen maailmansodan jälkeen. Vaimonsa **Zelda** kanssa hän ilmentää tämän kadonneen sukupolven glamouria ja ylilyöntejä, mutta myös sen henkistä ja taloudellista haurautta."
+        },
+        {
+          "type": "image",
+          "asset": "f_scott_fitzgerald_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "F. Scott Fitzgerald, Roaring Twenties -kolumnisti ja näyttelijä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Romaani sijoittuu ajanjaksoon [[Kielto]] alkaen **1920** **1933**. Alkoholi on silloin kielletty perustuslaissa. Tämä kielto suosii paradoksaalisesti laitonta kauppaa ja laitonta omaisuutta. Gatsby on itse vaurautensa velkaa tälle harmaalle taloudelle. Kun kirja julkaistiin, se myi huonosti. Fitzgerald kuoli vuonna **1940** uskoen epäonnistuneensa."
+        },
+        {
+          "type": "image",
+          "asset": "jazz_age_1920s_party_america",
+          "ratio": "16:9",
+          "caption": "Amerikka 1920-luvulla: bileet, jazz ja vaurauden illuusio."
+        },
+        {
+          "type": "funFact",
+          "text": "The Great Gatsby myi vain noin 20 000 kappaletta ilmestyessään. Vasta Fitzgeraldin kuoleman jälkeen se jaettiin sotilaille toisen maailmansodan aikana, ja siitä tuli klassikko."
+        }
+      ]
+    },
+    {
+      "id": "course_112_le_grand_gatsby_fitzgerald_p2",
+      "title": "Gatsby tai omakeksintö",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Jay Gatsby**, syntynyt **James Gatz**, köyhien Dakotan maanviljelijöiden poika, hylkää alkuperänsä keksiäkseen itsensä uudelleen. Hänen omaisuutensa, joka liittyy alkoholikauppaan kiellon aikana, palvelee yhtä pakkomiellettä: voittaa takaisin **Daisy Buchanan**, jota hän rakasti ennen sotaa."
+        },
+        {
+          "type": "image",
+          "asset": "long_island_mansion_1920s",
+          "ratio": "16:9",
+          "caption": "West Egg ja East Egg: Gatsbyn koti Daisyä vastapäätä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gatsby, joka on asennettu **West Egg**:hen, \"nouveau richen\" naapurustossa, pohtii joka ilta **vihreää valoa** Buchananin laiturin päässä **East Egg**:ssä. East Egg on perinnöllisen aristokratian koti. Valo symboloi tulevaisuutta, jota hän tavoittelee, aina ulottumattomissa. Gatsby uskoo, että aika voidaan pyyhkiä pois vain tahdolla, mutta menneisyys vastustaa."
+        }
+      ]
+    },
+    {
+      "id": "course_112_le_grand_gatsby_fitzgerald_p3",
+      "title": "Nick Carraway ja todistajan silmä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kertoja **Nick Carraway**, Daisyn serkku ja Gatsbyn naapuri, tarkkailee tätä maailmaa kiehtoneena ja inhottavasti. Hän näkee Gatsbyn jalouden virheistään huolimatta Buchananien julmuuden, rahan ja välinpitämättömyyden suojeleman perinnön rikkauden edessä."
+        },
+        {
+          "type": "quote",
+          "text": "Gatsby uskoi vihreään valoon, orgiastiseen tulevaisuuteen, joka vuosi vuodelta väistyy edessämme.",
+          "attribution": "F. Scott Fitzgerald, Suuri Gatsby"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kun Daisy vahingossa tappaa **Myrtle Wilson** ajaessaan Gatsbyn autoa, hän antaa tämän ottaa syytteen. Gatsby kuolee Myrtlen miehen surmaamana. Kukaan ei tule hänen hautajaisiinsa. Nick tajuaa, että se kaikki oli harhaa: ylelliset juhlat peittivät täydellisen yksinäisyyden."
+        }
+      ]
+    },
+    {
+      "id": "course_112_le_grand_gatsby_fitzgerald_p4",
+      "title": "Jälkipolvien muistomerkki ja unelmien rappeutuminen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Romaani päättyy vertauskuvaan veneistä, jotka taistelevat virtaa vastaan: toiveemme työntävät meitä eteenpäin, mutta ankkuroitumme menneisyyteen. Fitzgerald maalaa myös muotokuvan **Tuhkalaaksosta**, tuhoutuneesta teollisuusalueesta. Lääkäri T.J. Eckleburgin silmät mainostaululla symboloivat [[Piilotettu Jumala]]. Henkisyys on väistänyt kaupankäynnin."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1945**:n jälkeen uudelleen löydetystä kirjasta on tullut amerikkalaisten ristiriitojen peili: uusi onni vastaan vanha sukulinja, unelma vastaan todellisuus, spektaakkeli vastaan totuus. Se on edelleen yksi kuuluisimmista kritiikistä [[amerikkalainen unelma]] ja sen petetty lupaukset."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Suuri Gatsby** näyttää miehen traagisen kaatumisen, joka halusi lunastaa menneisyytensä omaisuudellaan, ja arvostelee rahan suojaaman eliitin vastuuttomuutta."
+        }
+      ]
+    }
+  ]
+}

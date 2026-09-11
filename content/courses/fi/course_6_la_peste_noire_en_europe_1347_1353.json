@@ -1,0 +1,139 @@
+{
+  "id": "course_6_la_peste_noire_en_europe_1347_1353",
+  "title": "Musta kuolema Euroopassa",
+  "subtitle": "1347-1353",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Vuosina 1347-1353 bubonirutto tappoi 30-60 % eurooppalaisista. Terveyskatastrofi, joka ravistelee keskiaikaista yhteiskuntaa ja nopeuttaa siirtymistä kohti uutta maailmaa.",
+  "hero": {
+    "image": "la_peste_noire_en_europe",
+    "ratio": "16:9",
+    "hook": "Kuudessa vuodessa Eurooppa menettää jopa puolet väestöstään."
+  },
+  "sections": [
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1347** ja **1353** välillä Eurooppaa iski **Musta kuolema**. **Yersinia pestis** -bakteerin aiheuttama se tappaa **30-60 %** väestöstä tai **25-50 millimetriä** ihmistä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eurooppalaisia ovat jo heikentäneet [[Pikku jääkausi]] nälänhätä, ilmaston viilentyminen, joka on pilannut sadon. Vitsaus ei ole vain terveyskriisi. Se on historiallinen kiihdytin: se horjuttaa hallitusjärjestystä ja pakottaa yhteiskunnan rakentamaan itsensä uudelleen eri tavalla."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p1",
+      "title": "Aasiasta Italiaan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bakteerit kiertävät ensin jyrsijöiden keskuudessa Keski-Aasiassa. [[Pax Mongolica]], suhteellisen rauhan aika Mongolien valtakunnan alaisuudessa, ja [[Silkkitie]], Aasian Eurooppaan yhdistävä kauppaverkosto, tarjosivat hänelle turvallisia reittejä. [[Caffa]] genovalaisen tiskillä Krimillä [[Kultainen lauma]]:n (arojen mongolien valtakunta) piirittämässä tauti siirtyy Välimerelle. Galleyt pakenevat Italiaan."
+        },
+        {
+          "type": "image",
+          "asset": "black_death_burial_medieval_plague",
+          "ratio": "4:3",
+          "caption": "Ruttohautaukset: Eurooppa havaitsee joukkokuoleman."
+        },
+        {
+          "type": "paragraph",
+          "text": "**lokakuussa 1347** he telakoituivat Sisilian **Messinaan**:iin. Laivojen karkottamisesta huolimatta paha on jo laiturilla. **1348**:ssä hän saavutti Marseillen ja sitten koko Euroopan italialaisten kauppiaiden verkkojen kautta."
+        },
+        {
+          "type": "funFact",
+          "text": "Caffan piiritys mainitaan usein yhtenä ensimmäisistä esimerkeistä biologisesta sodankäynnistä: mongolien sanotaan katapultoivan tartunnan saaneita ruumiita seinien yli."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p2",
+      "title": "Voimaton lääke",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lääkärit luottavat [[Galen]], antiikin kreikkalainen lääkäri, ja [[Miasma teoria]]: ajatukseen, että sairaudet tulevat turmeltuneesta ilmasta. He eivät näe todellista vektoria, rotan kirppua ([[Xenopsylla cheopis]]). Kun rotat kuolevat, kirput siirtyvät ihmisiin."
+        },
+        {
+          "type": "image",
+          "asset": "plague_doctor_mask_beak",
+          "ratio": "4:3",
+          "caption": "Ruttolääkäri nokkanaamion kanssa: suoja enemmän symbolinen kuin tehokas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Buboninen muoto turvottaa imusolmukkeita. Sepsis tekee ihon mustaksi. Keuhkokuume tarttuu ihmisestä ihmiseen ja tappaa **24-48 tunneli**. Ruuhkaisissa ja likaisissa kaupungeissa leviäminen on erittäin nopeaa."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p3",
+      "title": "Pelko, flagellantit, pogromit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yhteiskunta horjuu. [[Flagellantit]] piiskaa itseään julkisesti rauhoitellakseen Jumalaa. Taide keksii Danses Macabres. Selityksen puuttuessa etsitään syyllisiä: [[Juutalaisten pogromit (1348-1349)]] veristäsi Rhônen laakson ja germaanisen valtakunnan. Kaivojen myrkyttämisestä syytettyinä tuhansia juutalaisia teurastettiin. Paavi [[Klemens VI]] silloin Avignonissa yritti suojella heitä. Liian vähän, liian myöhään."
+        },
+        {
+          "type": "funFact",
+          "text": "Avignonissa Clement VI jäi kahden suuren tulen väliin \"puhdistamaan ilmaa\". Kuumuus piti kirput loitolla: hän selvisi."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Boccaccio]], firenzeläinen kirjailija, kuvailee isiä, jotka hylkäävät poikansa. Hyväntekeväisyys, naapuruus, perhe: kaikki murenee tartunnan pelossa."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1346",
+              "title": "Caffa",
+              "detail": "Rutto saavuttaa genovalaisen kauppapaikan Krimillä."
+            },
+            {
+              "date": "1347",
+              "title": "Messina",
+              "detail": "Genovan keittiöt tuovat vitsauksen Eurooppaan."
+            },
+            {
+              "date": "1348",
+              "title": "eurooppalainen aalto",
+              "detail": "Ranska, Englanti, Imperiumi: kuolema leviää."
+            },
+            {
+              "date": "1353",
+              "title": "Refluksi",
+              "detail": "Epidemia on rauhoittunut, Eurooppa on muuttumassa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p4",
+      "title": "Kuoleman jälkeen vaihto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kohti **1353**:tä pandemia hiipuu. Työvoimasta on tullut pulaa. Palkat nousevat, corvées putoavat, maaorjuus vähenee lännessä. Lordien on neuvoteltava. Katastrofi on paradoksaalisesti vahvistanut selviytyjiä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Viranomaisten epäonnistuminen vitsauksen edessä ruokkii myös kriittistä ajattelua. Tarkkailemme enemmän, epäilemme vanhoja dogmeja. Tyhjentämällä kyliä ja jakamalla perintöjä uudelleen Black Death valmisteli itsestään huolimatta maaperää renessanssille."
+        },
+        {
+          "type": "takeaway",
+          "text": "**1347** ja **1353** välillä Black Death tappoi jopa puolet Euroopasta. Tämä demografinen shokki heikentää hallitusjärjestystä, nostaa työvoiman hintaa ja nopeuttaa pääsyä uuteen maailmaan."
+        }
+      ]
+    }
+  ]
+}

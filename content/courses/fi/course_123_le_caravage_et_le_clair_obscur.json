@@ -1,0 +1,144 @@
+{
+  "id": "course_123_le_caravage_et_le_clair_obscur",
+  "title": "Caravaggio ja chiaroscuro",
+  "subtitle": "1571-1610",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "**Michelangelo Merisi**, joka tunnetaan nimellä Caravaggio, mullisti maalauksen brutaalilla realismilla ja äärimmäisellä valon ja varjon kontrastilla: chiaroscuro.",
+  "hero": {
+    "image": "le_caravage_et_le_clair_obscur",
+    "ratio": "16:9",
+    "hook": "Pyhät, joilla on likaiset jalat, valokeila: taide ei ole enää koskaan entisellään."
+  },
+  "sections": [
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Michelangelo Merisi**, joka tunnetaan nimellä **Caravaggio** (1571-1610), rikkoo renessanssista perityt ihanteellisen kauneuden koodit. Hän kohtaa pyhän ja arjen: kerjäläiset, tavernat, väsyneet ruumiit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hänen aseensa: radikaali chiaroscuro. Ruumiit nousevat esiin pimeydestä kuin valokeilassa. Tämä murto paljastaa [[Barokki maalauksessa]] hengen ja muuttaa katsojan draaman todistajaksi."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_self_portrait",
+          "ratio": "4:3",
+          "caption": "Caravaggio, nerokas maalari ja myrskyisän roomalaisen elämän hahmo."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p1",
+      "title": "Nero, väkivalta ja maanpako",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lähellä Milanoa syntynyt Caravaggio saapui Roomaan **1593**:n tienoilla. Hänen uransa muuttui **1600**:ssa Saint-Louis-des-Français'n kirkon Contarellin kappelin maalausten myötä. *Pyhän Matteuksen kutsumus* hämmästyttää Roomaa: pyhällä on kadun kasvot."
+        },
+        {
+          "type": "funFact",
+          "text": "Maltalla hänestä tehtiin ritarikunnan ritari, minkä jälkeen hänet heitettiin vankilaan esimiehensä pahoinpitelystä. Hän pakenee vallitsemattomaksi pidetystä linnoituksesta hamppuköydellä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hänen elämänsä on yhtä väkivaltaista kuin hänen maalauksensa. **1606**:ssä hän tappoi tappelun aikana **Ranuccio Tomassonin**. Kuolemaan tuomittu hän pakeni Napoliin, Maltalle ja sitten Sisiliaan. Metsästettynä ja haavoittuneena hän kuoli **38 katselukertaa** [[Porto Ercole]] muutama päivä ennen paavin armahdusta."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p2",
+      "title": "Tenebrismi: valo, joka iskee",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Caravaggio keksi **tenebrismiini**, chiaroscuron äärimmäisen muodon. Ei enää pehmeää valoa, joka hyväilee muotoja: läpinäkymätön pimeys ja siitä veistoksellisella voimalla esiin tulevat ruumiit. Valo on keinotekoista, kuin näyttämövalo."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_tenebrism_chiaroscuro_painting",
+          "ratio": "4:3",
+          "caption": "Tenebrismissa musta keskittää katseen draamaan."
+        },
+        {
+          "type": "funFact",
+          "text": "Saadakseen tämän valaistuksen hän työskenteli työpajassa, jossa oli mustat seinät ja jonka lävisti yksi pieni kattoikkuna korkealla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Poistamalla koristeita ja maisemia hän pakottaa katseensa kohti kasvoja ja eleitä. Tämä valo palvelee myös [[Vastareformaatio]]: katolinen kirkko haluaa liikuttaa uskovia. Hänen kanssaan valosta tulee armo, joka iskee sieluun varoittamatta."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p3",
+      "title": "Pyhät, jotka näyttävät kadulta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eniten skandaalistaa hänen kieltäytymisensä idealisoida. Hän valitsee mallinsa kadulla: työläisiä, kerjäläisiä, kurtisaaneja. Neitsytellä ja apostoleilla on ryppyjä, likaiset jalat, väsynyt ruumis."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_madonna_dei_pellegrini_painting",
+          "ratio": "4:3",
+          "caption": "Pilgrim's Madonna: paljaat, likaiset jalat etualalla."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Neitsyt*:n kuolema hylätään: kerrotaan, että hän otti malliksi hukkuneen naisen. *Pyhiinvaeltajien Madonna* iskee polvistuvien köyhien likaisilla jaloilla. Hän kieltäytyy [[Manerismi]]:n kekseliäisyydestä, tästä sitä edeltäneestä siroista ja vääristyneestä tyylistä. Hänelle pelastus osoitetaan ensin nöyrille."
+        },
+        {
+          "type": "funFact",
+          "text": "Hänen ensimmäinen versionsa teoksesta *Pyhä Matteus ja enkeli* esitti evankelistan, jolla oli likaiset jalat ja näytti kouluttamattomalta. Sponsorit vaativat häntä maalaamaan sen uudelleen."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p4",
+      "title": "Caravaggio: Eurooppa vaikutuksen alaisena",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hän ei löytänyt koulua, mutta hänen tyylinsä leviää: **karavagismi**. [[Artemisia Gentileschi]] Italiassa, Georges de La Tour Ranskassa, Zurbarán Espanjassa, Rubens Flanderissa. Myöhemmin **Rembrandt** perii varjorunoutensa, **Velazquez** kansanarvonsa."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1600",
+              "title": "Contarellin kappeli",
+              "detail": "Rooma löytää Pyhän Matteuksen kutsumuksen."
+            },
+            {
+              "date": "1606",
+              "title": "Murha ja maanpako",
+              "detail": "Caravaggio pakeni Roomasta, tuomittiin kuolemaan."
+            },
+            {
+              "date": "1610",
+              "title": "Kuolema Porto Ercolessa",
+              "detail": "Hän kuoli 38-vuotiaana juuri ennen armoa."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Se oli unohdettu kahdeksi vuosisadaksi, ja se löydettiin uudelleen 1900-luvulla. Sen tiukka kehystys ja valaistus vaikuttavat edelleen elokuvaan ja valokuvaukseen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Caravaggio (1571-1610) määräsi tenebrismin ja radikaalin sosialidismin. Maalaamalla pyhää katumalleilla hänestä tuli barokkimaalauksen henkinen isä."
+        }
+      ]
+    }
+  ]
+}

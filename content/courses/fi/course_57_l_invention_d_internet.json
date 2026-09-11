@@ -1,0 +1,102 @@
+{
+  "id": "course_57_l_invention_d_internet",
+  "title": "Internetin keksintö",
+  "subtitle": "Verkot",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Internetillä ei ole yhtä keksijää. Se on pitkä ketju: sotilaallinen verkosto, yhteinen kieli, sitten verkko ihmisille.",
+  "hero": {
+    "image": "l_invention_d_internet",
+    "ratio": "16:9",
+    "hook": "Ensin verkosto, joka vastustaa sotaa. Sitten koko maailma virittyy."
+  },
+  "sections": [
+    {
+      "id": "course_57_l_invention_d_internet_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Internet ei syntynyt yhdestä nerosta autotallissa. Se on useiden vuosikymmenten aikana tehty kollektiivinen rakennus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kolme yksinkertaista muistettavaa vaihetta: ensimmäinen verkko (ARPANET), yhteinen kieli (TCP/IP) ja sitten helppo käyttöliittymä (Web)."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p1",
+      "title": "ARPANET, ensimmäinen verkko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1960**-vuosien lopussa, keskellä kylmää sotaa, Yhdysvaltain armeija rahoitti projektia: tietokoneiden yhdistäminen niin, että ne jatkoivat viestintää, vaikka osa verkosta tuhoutuisi."
+        },
+        {
+          "type": "image",
+          "asset": "arpanet_1969_computer_ucla",
+          "ratio": "4:3",
+          "caption": "ARPANET yhdistää ensin muutamia amerikkalaisia yliopistoja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämän verkon nimi on **ARPANET**. Viestit jaetaan pieniin paketteihin, jotka kulkevat eri polkuja. Jos yksi tie kaatuu, toinen ottaa vallan."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p2",
+      "title": "TCP/IP: puhuvat samaa kieltä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jotta eri verkostot ymmärtäisivät toisiaan, tarvitaan yhteisiä sääntöjä. **Vint Cerf** ja **Bob Kahn** kehittävät **TCP/IP**-protokollaa: kieltä, joka kertoo kuinka tietoja leikataan, osoitetaan ja rakennetaan uudelleen."
+        },
+        {
+          "type": "image",
+          "asset": "vint_cerf_bob_kahn_internet",
+          "ratio": "4:3",
+          "caption": "Cerf ja Kahn: Internetin kielen arkkitehdit."
+        },
+        {
+          "type": "funFact",
+          "text": "ARPANET siirtyi virallisesti TCP/IP:hen 1. tammikuuta **1983**. Monet pitävät tätä päivämäärää Internetin teknisenä \"syntymänä\"."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p3",
+      "title": "Web tekee verkosta ihmisen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Internet on verkko. **World Wide Web**, jonka **Tim Berners-Lee** keksi CERNissä vuosien alussa **1990**, on helppo kerros: sivut, linkit, selaimet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ilman Internetiä Internet pysyisi ensisijaisesti asiantuntijoiden työkaluna. Sen avulla jokainen voi napsauttaa."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p4",
+      "title": "Maailman hermosto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nykyään Internet kuljettaa sähköposteja, videoita, pankkeja, sairaaloita ja GPS:ää. Se on myös luonut uusia ongelmia: disinformaatiota, valvontaa, digitaalista kahtiajakoa."
+        },
+        {
+          "type": "takeaway",
+          "text": "Internet syntyi ARPANETista, siitä tuli universaali TCP/IP:n ansiosta ja se on saavutettavissa Webin ansiosta. Tämä ei ole ainutlaatuinen keksintö, se on yhteinen arkkitehtuuri."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "id": "course_103_hamlet_shakespeare",
+  "title": "Hamlet, Shakespeare",
+  "subtitle": "noin 1601",
+  "subject": "litterature",
+  "subcategory": "Anglo-Saxons & world literature",
+  "description": "Noin 1601 Shakespeare kirjoitti Hamletin, prinssin, joka epäröi isänsä murhan edessä. Koston, simuloidun hulluuden ja \"Olla tai ei olla\" väliin syntyy moderni tietoisuuden sankari.",
+  "hero": {
+    "image": "hamlet_shakespeare",
+    "ratio": "16:9",
+    "hook": "Aave, epäröivä prinssi ja teatterin kuuluisin eksistentiaalinen kysymys."
+  },
+  "sections": [
+    {
+      "id": "course_103_hamlet_shakespeare_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kohti **1601**, **William Shakespeare** kirjoittaa **[[Hamlet, Tanskan prinssi]]**. Se ei ole vain koston tragedia: se on muotokuva nykyaikaisesta omastatunnosta, joka on jaettu toimintaan ja epäilyyn. Monologista \"**Olla vai ei olla**\" on tullut länsimaisen teatterin olennainen eksistentiaalinen kysymys."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kummitus, simuloitu hulluus, viimeinen kaksintaistelu: näytelmässä sekoittuu yliluonnollinen ja psykologia ennen aikansa. Hamlet ei ole kuin klassiset impulsiiviset sankarit, jotka ryhtyvät välittömästi toimiin. Hän ajattelee liikaa toimiakseen nopeasti, ja juuri se tekee hänestä kuolemattoman. Tässä Shakespeare keksii hahmon, joka epäilee kaikkea, myös itseään."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p1",
+      "title": "Elisabetin konteksti: maailman teatteri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Shakespeare kirjoitti englantilaisen teatterin huipulla **Elizabeth Iren**:n johdolla. Näytelmät esitetään **Globe teatteri**:ssä, taivaalle avautuvassa pyöreässä puisessa teatterissa, jossa rikkaat ja köyhät hierovat olkapäitään seisoen tai istuen budjettinsa mukaan. Näyttelijät ovat kaikki miehiä: naisrooleja näyttelevät teini-ikäiset ajan lakien mukaisesti."
+        },
+        {
+          "type": "image",
+          "asset": "william_shakespeare_portrait",
+          "ratio": "4:3",
+          "caption": "William Shakespeare, maailman puhutuimman tragedian kirjoittaja."
+        },
+        {
+          "type": "funFact",
+          "text": "Ophélien roolin loi teini-ikäinen, jonka ääni ei ollut vielä muuttunut ajan tapojen mukaisesti."
+        },
+        {
+          "type": "image",
+          "asset": "globe_theatre_london_elizabethan",
+          "ratio": "16:9",
+          "caption": "The Globe Theatre: Elisabetin teatterilava, jossa Hamlet voitti yleisön."
+        },
+        {
+          "type": "paragraph",
+          "text": "Shakespeare etsii sydämen totuutta enemmän kuin tasaista realismia. Hamlet palaa opinnoistaan **[[Wittenberg]]**, Saksan **protestanttisen uskonpuhdistuksen**:n yliopistokaupungissa. Näytelmässä Shakespeare esittää näytelmässä näytelmän, \"Hiirenloukun\", vangitakseen **Claudius** ja vahvistaakseen kuninkaan syyllisyyden. Teatterista tulee maailman peili ja totuuden väline."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p2",
+      "title": "Koston kierre ja epäröinnin paino",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tanskan kuninkaan murhaa hänen veljensä **Claudius**, joka menee naimisiin kuningatar **Gertrude** ja ottaa valtaistuimen. Kuolleen kuninkaan haamu paljastaa rikoksen **Hamlet**:lle. Velvollisuus näyttää selvältä: kosta isälle. Mutta Hamlet epäilee: onko tämä haamu todella hänen isänsä vai petollinen demoni? Onko kosto vain kristillisen moraalin silmissä?"
+        },
+        {
+          "type": "paragraph",
+          "text": "**[[lex talionis]]** ja murhan tuomitsevan kristillisen omantunnon välissä hän teeskentelee hulluutta tutkiakseen herättämättä epäilyksiä. Tämä strategia epäonnistuu: hän rikkoo neuvonantajan **Ophelia**:n, neuvonantajan **Poloniuksen**:n tyttären sydämen ja tappaa vahingossa Poloniuksen itsensä piiloutuen maton taakse. Kierre johtaa viimeiseen verilöylyyn Tanskan hovissa, jossa lähes kaikki päähenkilöt menehtyvät."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p3",
+      "title": "Tanskan melankolia ja korruptio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "\"Tanskan kuningaskunnassa on jotain mätä.\" Näytelmä hengittää moraalista hajoamista. Hamletin kieli on kyllästynyt kuviin sairaudesta, rappeutumisesta ja ruumiista. Hänen **[[Melankoliaa 1500-luvulla]]** tekee hänestä loistavan mutta halvaantunut: Shakespearen aikaan sen katsottiin myös lääketieteelliseen luovuuteen."
+        },
+        {
+          "type": "image",
+          "asset": "hamlet_skull_yorick_delacroix_painting",
+          "ratio": "4:3",
+          "caption": "Hamlet ja Yorickin kallo: kuolema muistuttaa meitä kaiken kunnianhimon turhuudesta."
+        },
+        {
+          "type": "quote",
+          "text": "Olla vai ei olla, se on kysymys.",
+          "attribution": "William Shakespeare, Hamlet, näytös III, kohtaus 1"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä kuuluisa monologi kyseenalaistaa itse olemassaolon: onko parempi kestää elämän kärsimykset vai kuolla paeta niitä? Toimiminen on likaantumista korruptoituneessa maailmassa; olla toimimatta on antaa pahan voittaa. Hamletista tulee ensimmäinen moderni sankari, joka ei pysty sovittamaan yhteen ajatuksia ja tekoja. **[[Elisabetin kosto ja kunnia]]** selittää osittain tukoksensa: kunniamiehen täytyi kostaa perheelleen tehdystä loukkauksesta, mutta tämä velvollisuus joutui jännitteeseen lain ja moraalin kanssa."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p4",
+      "title": "Universaalin myytin perintö ja jälkipolvet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Neljän vuosisadan ajan Hamletia on tulkittu loputtomasti uudelleen. 1800-luvun **Romantiikka** näki siellä kiusatun taiteilijan; **Freud** lue **[[oidipuskompleksi]]**. Näytelmä kertoo vanhemman menetyksestä, maailman pimeydestä ja tuskallisesta siirtymisestä aikuisuuteen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sen vaikutus ulottuu teatterin ulkopuolelle: elokuva, ooppera, sarjakuvat, suosittu psykologia. Shakespeare muuttaa keskiaikaisen aavetarinan metafyysiseksi ihmistietoisuuden tutkimukseksi. Hamlet on edelleen päättämättömyyden tragedia, jossa ajattelusta tulee jo kärsimyksen muoto."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Hamlet** osoittaa, että sankari voi olla kuolematon, ei siksi, että hän toimii nopeasti, vaan koska hän epäilee syvästi. Tässä Shakespeare keksii teatterin nykyaikaisuuden: ajatella on jo kärsimistä."
+        }
+      ]
+    }
+  ]
+}

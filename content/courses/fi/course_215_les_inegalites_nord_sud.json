@@ -1,0 +1,104 @@
+{
+  "id": "course_215_les_inegalites_nord_sud",
+  "title": "Pohjois-etelä epätasa-arvo",
+  "subtitle": "Kahden nopeuden maailma",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Maapallon rikkaimmat 10 % saavat yli puolet maailman tuloista. Äärimmäinen köyhyys on kuitenkin jaettu neljällä kolmessakymmenessä vuodessa.",
+  "hero": {
+    "image": "les_inegalites_nord_sud",
+    "ratio": "16:9",
+    "hook": "Amerikkalainen ansaitsee tunnissa sen, mitä Nigerin asukas ansaitsee koko työpäivän aikana."
+  },
+  "sections": [
+    {
+      "id": "course_215_les_inegalites_nord_sud_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuilu rikkaiden ja köyhien maiden välillä on edelleen yksi silmiinpistävimmistä tosiasioista maailmassa. Globalisaatio lupasi lähentyvän elintasoa, mutta varallisuuserot kansojen välillä ovat edelleen valtavat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lähihistoria ei kuitenkaan ole vain synkkä: äärimmäinen köyhyys on vähentynyt nopeammin kuin koskaan 30 vuoden aikana. Tämä kurssi tutkii näiden eriarvoisuuksien juuria ja syitä tähän outoon paradoksiin."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p1",
+      "title": "Kahden nopeuden maailma",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "rikkain 10 % maailman väestöstä saa yli 52 % maailman tuloista. Köyhimmän 50 % saa jakaa vain 8 % piirakasta. Tämä vaurauden keskittyminen ei ole koskaan ollut suurempaa ihmiskunnan historiassa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä ero näkyy myös eliniän odotteessa: Japanissa se on 83 vuotta, mutta Keski-Afrikan tasavallassa se laskee 55 vuoteen. Nämä aukot eivät johdu sattumasta: ne johtuvat erittäin epätasa-arvoisesta juomaveden, ruoan ja terveydenhuollon saatavuudesta."
+        },
+        {
+          "type": "funFact",
+          "text": "Yhdysvaltalainen ansaitsee keskimäärin yhdellä työtunnilla yhtä paljon kuin Nigerin asukas kokonaisessa päivässä."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p2",
+      "title": "Historialliset juuret elävät edelleen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ymmärtääksemme nämä erot meidän on palattava kolonisaatioon. Eurooppalaiset suurvallat organisoivat monia eteläisiä alueita raaka-aineiden (kahvi, kaakao, puuvilla) toimittajiksi hillitseen omaa teollistumistaan suojellakseen omia tehtaitaan."
+        },
+        {
+          "type": "image",
+          "asset": "global_inequality_rich_poor_contrast_photograph",
+          "ratio": "16:9",
+          "caption": "Varallisuuserot pohjoisen ja etelän välillä ovat edelleen planeetan laajimpia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä logiikka jatkuu tänään [[kauppaehdot]]: Etelän maat myyvät usein raaka-aineita, joiden hinta vaihtelee suuresti, kun taas ne ostavat valmistettuja tuotteita, joiden hinta vain nousee. Tähän lisätään vielä velan paino: korkojen takaisinmaksu vie joskus enemmän tilaa kansallisessa budjetissa kuin koulutus tai terveydenhuolto."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p3",
+      "title": "Todellista edistystä, mutta epätasaista",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Viimeisten 30 vuoden aikana absoluuttinen köyhyys on kuitenkin vähentynyt dramaattisesti, ja se vaikutti 36 prosenttiin maailman väestöstä vuonna 1990, kun se oli alle 10 prosenttia ennen vuotta 2020. Tämä edistys johtuu pääasiassa Kiinan ja Intian voimakkaasta kasvusta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tällä edistyksellä on piilotettu puoli: tämän osoittaa taloustieteilijä Branko Milanovicin teos [[\"norsukäyrä\"]]. Aasian keskiluokkien tulot ovat kasvaneet räjähdysmäisesti, mutta rikkaiden maiden työväenluokka on pysähtynyt maailmanlaajuisen kilpailun edessä. Maiden välisten eriarvoisuuksien vähentäminen ei siis ole estänyt uusia jännitteitä edes rikkaiden maiden sisällä."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p4",
+      "title": "Ilmasto, uusi jakoviiva",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pohjoisen ja etelän välisen eriarvoisuuden tulevaisuus riippuu nyt ilmastosta. Etelän maat, jotka ovat historiallisesti vähiten vastuussa kasvihuonekaasupäästöistä, ovat kuitenkin kaikkein alttiina kuivuudelle, tulville ja vedenpinnan nousulle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Näiden kuilujen vähentämiseksi kestävästi kansainvälinen yhteisö etsii uusia keinoja: [[virallinen kehitysapu]], jonka kohteena on energiasiirtymä tai hauraimpien maiden velkojen anteeksianto. Niin kauan kuin rikkaimpien varallisuus kasvaa nopeammin kuin köyhimpien, jännitteet pysyvät korkeina."
+        },
+        {
+          "type": "takeaway",
+          "text": "Maailman rikkaimmat 10 prosenttia saavat yli puolet maailman tuloista, mutta äärimmäinen köyhyys on vähentynyt nopeammin kuin koskaan 30 vuoden aikana Kiinan ja Intian nousun ansiosta. Seuraava suuri haaste tässä pohjois-etelä-jaossa on ilmasto."
+        }
+      ]
+    }
+  ]
+}

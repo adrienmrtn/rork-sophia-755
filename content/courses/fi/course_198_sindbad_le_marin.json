@@ -1,0 +1,116 @@
+{
+  "id": "course_198_sindbad_le_marin",
+  "title": "Sindbad merimies",
+  "subtitle": "Seitsemän matkaa",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Sindbad merimies: seitsemän matkaa, hirviöitä ja aarteita. Ihmeellisen takana muotokuva islamilaisen kulta-ajan kauppias-seikkailijasta.",
+  "hero": {
+    "image": "sindbad_le_marin",
+    "ratio": "16:9",
+    "hook": "Seitsemän kertaa hän lähtee rikkaana tai uteliaana. Seitsemän kertaa meri rikkoo sen. Seitsemän kertaa hän palaa vielä rikkaampana."
+  },
+  "sections": [
+    {
+      "id": "course_198_sindbad_le_marin_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Sindbad merimies** kuuluu **Arabian yöt**:hen, mutta ei kokoelman vanhaan persialaiseen ytimeen. Hänen seitsemän matkan sykli tapahtui myöhemmin, Egyptissä, noin 1400-luvulla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hän ilmentää **Islamilaisen kulta-ajan matkustaja-kauppiasta**: hurskaus, ahneus, rohkeus ja kyvyttömyys istua paikallaan kerran rikkaana. Hirviöiden takaa luemme allegorian nousevasta ja putoavasta omaisuudesta."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p1",
+      "title": "Seikkailun syklinen rakenne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tarina alkaa Bagdadissa. **Sindbad merimies**, nyt vanha ja varakas, kertoo koettelemuksistaan portterille, jonka nimi on myös Sindbad (joskus Hindbad). Luokkakontrasti on välitön."
+        },
+        {
+          "type": "image",
+          "asset": "baghdad_medieval_islamic_golden_age_trade",
+          "ratio": "4:3",
+          "caption": "Bagdad, Sindbadin matkojen lähtö- ja paluupaikka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jokainen matka noudattaa samaa mekaniikkaa: istuvan elämän väsymys, lähtö [[Basra]] satamasta, haaksirikko, selviytyminen tuntemattomassa maassa, paluu aarteita täynnä. [[Islamilainen kosmologia]] merkityksellä ladattu numero seitsemän antaa sarjalle aloitusulottuvuuden: huolimattomuudesta viisauteen."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p2",
+      "title": "Fantastinen bestiaari myytin ja todellisuuden välillä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Rock** (tai Rokh), lintu, jonka siipien kärkiväli peittää auringon, on leimannut maailman mielikuvitusta. Näemme arabimatkailijoiden tarinoiden kaiun Itä-Afrikan rannikolla."
+        },
+        {
+          "type": "image",
+          "asset": "sinbad_roc_giant_bird_illustration",
+          "ratio": "4:3",
+          "caption": "Roc, Sindbadin matkojen jättiläinen lintu."
+        },
+        {
+          "type": "funFact",
+          "text": "Roc on todennäköisesti saanut inspiraationsa **Aepyornis**:stä, Madagaskarin norsulinnusta, joka katosi noin vuonna 1000. Sen munat olivat jopa 150 kertaa kananmunan tilavuuksia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sindbad kohtaa myös **Meren vanha mies**, joka takertuu selkään, ja **Kilpikonna saari**, petollinen maa. **timanttien laakso**, johon heitetään lihaa jalokivien kiinnittämiseksi, kiertää jo Muinaisten keskuudessa. Vuosisatojen upeat sedimentit [[Keskiaikaiset arabien kauppareitit]]."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p3",
+      "title": "Arabikaupan kulta-ajan peili",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tapahtumapaikka on historiallinen. 8. ja 9. vuosisadalla Basran ja Sirafin merimiehet hallitsivat Intian valtamerta. Sindbadin pysäkit tuovat mieleen oikeita paikkoja: [[Serendib]] (Ceylon) mausteille, Kaakkois-Aasia kamferille, rannikot helmille."
+        },
+        {
+          "type": "image",
+          "asset": "arab_indian_ocean_trade_routes_medieval_ship",
+          "ratio": "4:3",
+          "caption": "Arabialukset Intian valtameren reiteillä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sindbad ei ole soturi: hän on kauppias-seikkailija, arvostettu asema kauppaa arvostavassa yhteiskunnassa. Sieltä löydämme monsuunin, laivoja, jotka on ommeltu kookoskuiduista naulojen sijaan. Läntinen rinnakkain: [[Marco Polo (läntinen rinnakkain)]], joka kuvaa Aasiaa tosiasioissa, missä Sindbad maalaa sen ihmeissään."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p4",
+      "title": "Universaali perintö: idästä länteen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kääntäjä **Antoine Galland** 1700-luvulla, matkailu ruokkii [[Seikkailu romaani]] Eurooppaa Defoesta Jules Verneen. Elokuva tekee hänestä usein yksityismiehen prinsessien palveluksessa. Virhe: Sindbad on alun perin kaupunkilainen Bagdadista, joka selviytyy uskon ja kekseliäisyyden kautta."
+        },
+        {
+          "type": "funFact",
+          "text": "Nimi Sindbad tuo mieleen \"Sindh-joen prinssin\", Induksen, arabien ja intialaisten maailmojen risteyksessä."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Sinbad** ilmentää islamilaista merenkulun kulta-aikaa **seitsemän** syklisillä matkoilla: Kallio ja timantit peittävät todellisuuden, Intian valtameren arabikauppiaiden mestarin."
+        }
+      ]
+    }
+  ]
+}

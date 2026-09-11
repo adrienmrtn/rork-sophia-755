@@ -1,0 +1,100 @@
+{
+  "id": "course_56_la_decouverte_de_la_radioactivite_marie",
+  "title": "Radioaktiivisuuden löytö",
+  "subtitle": "Marie Curie",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Marie Curie yhdessä Pierre Curien ja Henri Becquerelin kanssa avaa radioaktiivisuuden luvun. Kaksi Nobel-palkintoa, valtava työ ja valtava perintö.",
+  "hero": {
+    "image": "la_decouverte_de_la_radioactivite_marie_curie",
+    "ratio": "16:9",
+    "hook": "Hän painoi tonnia malmia eristääkseen muutaman gramman näkymätöntä elementtiä."
+  },
+  "sections": [
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Marie Curie** (syntynyt Maria Skłodowska) on ensimmäinen nainen, joka on saanut Nobel-palkinnon. Hän on edelleen ainoa henkilö, joka on saanut **kaksi** kahdessa eri tieteessä: fysiikassa ja sitten kemiassa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sen aihe: **radioaktiivisuus**, eli se tosiasia, että tietyt atomit lähettävät spontaanisti energiaa ja hiukkasia."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
+      "title": "Kapea ovi tieteeseen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hän syntyi Puolassa ja meni opiskelemaan Pariisiin, koska paikalliset yliopistot sulkivat monet ovet naisilta. Hän työskentelee kovasti, usein epävarmoissa olosuhteissa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hän meni naimisiin fyysikon **Pierre Curie**:n kanssa. Yhdessä he muodostivat harvinaisen laboratoriokakson siihen aikaan."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
+      "title": "Nimeä näkymätön",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1896**:ssä **Henri Becquerel** huomasi, että uraani peittää valokuvalevyt ilman valoa. Marie Curie päättää tutkia tätä ilmiötä yksityiskohtaisesti. Hän keksi sanan **radioaktiivisuus**."
+        },
+        {
+          "type": "image",
+          "asset": "marie_curie_pitchblende_radioactivity",
+          "ratio": "4:3",
+          "caption": "Tonnia pikseosta radiumin ja poloniumin eristämiseen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pierren kanssa hän löytää kaksi uutta elementtiä: **polonium** (nimetty Puolan mukaan) ja **radium**. Niiden eristämiseksi on käsiteltävä valtavia määriä malmia, pikeä."
+        },
+        {
+          "type": "funFact",
+          "text": "Radium hehkuu heikosti pimeässä. Olimme hämmästyneitä aluksi… ennen kuin ymmärsimme kuinka vaarallista se oli."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
+      "title": "Kunnia ja hinta maksettavaksi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vuonna **1903** Marie, Pierre ja Becquerel saivat fysiikan Nobel-palkinnon. Vuonna **1911** Marie yksin sai kemian Nobelin. Pierre kuoli vahingossa vuonna 1906. Hän jatkaa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ensimmäisen maailmansodan aikana hän järjesti liikkuvia röntgenyksiköitä haavoittuneiden hoitoon. Hän altistaa kehonsa annoksille, joita ei nykyään voi hyväksyä."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
+      "title": "Kaksipuolinen perintö",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Radioaktiivisuus on mahdollistanut sädehoidon tiettyjä syöpiä vastaan… ja myös ydinaseet. Tieto on neutraalia; sen käyttötarkoitukset eivät ole."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marie Curie muutti oudon havainnon uudeksi tieteeksi: radioaktiiviseksi. Hänen työnsä avasi modernin fysiikan… silloin huonosti ymmärrettyjen riskien kustannuksella."
+        }
+      ]
+    }
+  ]
+}

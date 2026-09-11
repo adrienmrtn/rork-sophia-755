@@ -1,0 +1,135 @@
+{
+  "id": "course_30_la_blitzkrieg_1940",
+  "title": "Blitzkrieg",
+  "subtitle": "1940",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "Saksan armeija valloitti Ranskan ja Benelux-maiden **kuudessa avoin** **10. toukokuuta** - **22. kesäkuuta 1940**. \"Blitzkrieg\" mullistaa sodan taiteen nopeudella.",
+  "hero": {
+    "image": "la_blitzkrieg_1940",
+    "ratio": "16:9",
+    "hook": "Kuusi viikkoa tuhota Euroopan ensimmäinen armeija."
+  },
+  "sections": [
+    {
+      "id": "course_30_la_blitzkrieg_1940_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**10. toukokuuta** - **22. kesäkuuta 1940** Saksan armeija valloitti vain kuudessa viikossa Ranskan, Alankomaiden, Belgian ja Luxemburgin. Euroopan johtava sotilaallinen voima on romahtamassa maailman silmien edessä."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Blitzkrieg** (Blitzkrieg) ei ole vain sarja voittoja. Se on vallankumous: vihollisen nopeus ja epäjärjestyminen merkitsevät enemmän kuin sen välitön fyysinen tuho."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p1",
+      "title": "Lyö kovaa, lyö nopeasti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sana Blitzkrieg ei ole virallinen [[Wehrmacht]], Saksan armeija vuosina 1935-1945. Anglosaksinen lehdistö keksi sen. Saksalaiset puhuvat liikesodasta. [[Schwerpunkt]]:n periaate: keskitä kaikki keinot kapeaan kohtaan etuosan rikkomiseksi."
+        },
+        {
+          "type": "funFact",
+          "text": "Stukasin sireeneillä, näillä \"Jerikon trumpetit\" kutsutuilla sukelluspommittajilla ei ole todellista sotilaallista käyttöä. Niillä vain terrorisoidaan sotilaita ja siviilejä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Siellä missä ranskalaiset hajottivat panssarivaunut jalkaväen tueksi, saksalaiset ryhmittelivät ne autonomisiin panssaroituihin divisioonoihin, jotka yhdistettiin radion välityksellä. Stukat toimivat kuin lentävä tykistö. Samaan aikaan Ranska uskoo edelleen [[Maginot-linja]], tähän Saksan rajalla sijaitsevaan linnoitusketjuun."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p2",
+      "title": "Sirppihalvaus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kenraali **Erich von Manstein** neuvosta Hitler hyväksyi [[Sichelschnitt]], \"sirppiliikkeen\": liittoutuneiden houkutteleminen Belgiaan, kun taas suurin osa panssarivaunuista, saksalaiset panssarit, ylitti **Ardennesas, jota harkittiin**. Z13**. toukokuuta** kenraali **Heinz Guderian** ylitti Maasin paikassa **Sedan**. Kanavan reitti on auki."
+        },
+        {
+          "type": "image",
+          "asset": "german_tanks_blitzkrieg_1940",
+          "ratio": "4:3",
+          "caption": "Saksalaiset tankit vuoden 1940 kampanjan aikana."
+        },
+        {
+          "type": "paragraph",
+          "text": "Viikon aikana liittoutuneiden armeijat piiritettiin selkä mereen päin. Dunkerquessa [[Operaatio Dynamo (Dunkirk)]] evakuoi **338 000** ranskalais-brittiläisiä sotilaita. Iso-Britannia pelastaa armeijansa. Ranska jää yksin."
+        },
+        {
+          "type": "image",
+          "asset": "dunkirk_evacuation_beach_1940",
+          "ratio": "4:3",
+          "caption": "Dunkerquen evakuointi touko-kesäkuussa 1940."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p3",
+      "title": "Aselepo ja vetoomus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ranska romahti, kun sen parhaat osastot riistettiin. Pariisi julistetaan avoimeksi kaupungiksi 14. kesäkuuta. Marsalkka **Philippe Pétain** pyytää aselepoa, joka allekirjoitettiin **kesäkuun 22. päivänä** Compiègnessa, samassa vaunussa kuin **1918**: Hitler kostaa."
+        },
+        {
+          "type": "funFact",
+          "text": "Seremoniaa varten Hitler vei vaunun ulos Compiègnen museosta ja asetti sen täsmälleen sinne, missä Saksa oli antautunut 22 vuotta aiemmin."
+        },
+        {
+          "type": "paragraph",
+          "text": "**6.18**. Lontoosta, **Kenraali de Gaulle** esittää vetoomuksensa BBC:lle: Ranska on hävinnyt taistelun, ei sotaa. Välitön vaikutus on vähäinen. Vapaan Ranskan perusta on luotu."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p4",
+      "title": "Kaksinkertainen voitto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1940 vahvisti Saksan Euroopan mestariksi. Mutta Blitzkrieg on lyhyt sotastrategia: rajallinen polttoaine, hauras logistiikka. **1941**:ssa se juuttui Neuvostoliiton suunnattomuuden kohtaamiseen. Historioitsija **Marc Bloch** puhuu \"Strange Defeatista\": ranskalaisesta älyllisestä ja aineellisesta epäonnistumisesta."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "10. toukokuuta 1940",
+              "title": "Hyökkäys lännessä",
+              "detail": "Samanaikainen hyökkäys Benelux-maihin ja läpimurto Ardenneissa."
+            },
+            {
+              "date": "13. toukokuuta 1940",
+              "title": "Sedanin läpimurto",
+              "detail": "Panssarit ylittävät Maasin."
+            },
+            {
+              "date": "Touko-kesäkuu 1940",
+              "title": "Dunkerque",
+              "detail": "338 000 sotilasta evakuoitiin Englantiin."
+            },
+            {
+              "date": "22. kesäkuuta 1940",
+              "title": "Aselepo",
+              "detail": "Ranska lopettaa taistelun Compiègnessa."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Kuudessa viikossa Blitzkrieg yhdistää panssarin, ilmailun ja radion murskatakseen puolustavan opin. Nopeus ja voimien keskittyminen vallitsi Maginot-linjalla."
+        }
+      ]
+    }
+  ]
+}

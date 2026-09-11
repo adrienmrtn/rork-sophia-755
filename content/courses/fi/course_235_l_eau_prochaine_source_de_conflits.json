@@ -1,0 +1,112 @@
+{
+  "id": "course_235_l_eau_prochaine_source_de_conflits",
+  "title": "Vesi: seuraava konfliktin lähde?",
+  "subtitle": "2000-luvun sinistä kultaa",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Alle 1 % maapallon vedestä on raikasta ja helposti saatavilla. Jotkut asiantuntijat pitävät tätä jo seuraavana suurena konfliktin lähteenä.",
+  "hero": {
+    "image": "l_eau_prochaine_source_de_conflits",
+    "ratio": "16:9",
+    "hook": "Alle 1 % maapallon vedestä on tuoretta ja saatavilla. Loput riitelevät."
+  },
+  "sections": [
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Makea vesi on ihmiselämän tärkein resurssi. Se on myös nykyään yhä harvinaisempaa: väestörakenne kasvaa, ilmasto muuttuu, ja jotkut asiantuntijat ennustavat jo 2000-luvun ensimmäisiä \"vesisotaa\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä kurssi tutkii, miksi tällaisesta tärkeästä resurssista tulee tärkeä strateginen kysymys, joka pystyy lähentämään naapurimaita tai vastustamaan niitä."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p1",
+      "title": "Harvinainen resurssi, huonosti jakautunut",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Maapallo on 70 % veden peitossa, mikä ansaitsee sille lempinimen \"sininen planeetta\". Mutta tämä vesi on melkein kaikki suolaista. Makean veden osuus on vain noin 3 % kokonaismäärästä, ja kaksi kolmasosaa makeasta vedestä jää loukkuun napajääpeitteissä ja jäätiköissä. Lopulta nestemäisen ja helposti saatavilla olevan makean veden (järvet, joet, matalat pohjavesimuodot) osuus planeetan vedestä on alle 1 %."
+        },
+        {
+          "type": "image",
+          "asset": "dried_riverbed_water_scarcity_drought",
+          "ratio": "16:9",
+          "caption": "Saatavilla olevan makean veden osuus on alle 1 % kaikesta maapallon vedestä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä niukkuus ei ole jakautunut tasaisesti. Joillakin mailla, kuten Brasilialla, Kanadalla tai Venäjällä, on valtavia varantoja. Toiset, kuten Lähi-idässä tai Pohjois-Afrikassa, kokevat kestävän **[[Vesistressi]]**:n veden kysyntä ylittää sen, mitä alue pystyy tarjoamaan. Vuonna 2024 noin 4 miljardia ihmistä elää vähintään kuukauden vuodessa tässä tilanteessa."
+        },
+        {
+          "type": "funFact",
+          "text": "1900-luvulla maailman väkiluku kolminkertaistui, mutta veden kulutus kuusinkertaistui osittain teollistumisen ja liharikkaamman ruokavalion vuoksi."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p2",
+      "title": "Yhteisten jokien geopolitiikka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jännitteitä syntyy erityisesti silloin, kun resurssit jaetaan. Yli 260 jokea maailmassa ovat **rajat ylittäviä**: ne ylittävät useita maita luoden pakotetun riippuvuuden ylävirran lähdettä hallitsevien ja alajuoksussa sijaitsevien, jotka vastaanottavat sen, mikä jää jäljelle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niili kuvaa tätä jännitystä hyvin. Etiopia rakensi **[[GERD]]**, valtavan padon Siniselle Niilille tuottaakseen sähköä ja tullakseen omavaraisemmaksi. Mutta Egypti, jonka vedestä 95 prosenttia on riippuvainen Niilistä, näkee jokaisen ylävirtaan pidetyn kuutiometrin suorana uhkana turvallisuudelleen."
+        },
+        {
+          "type": "funFact",
+          "text": "Intian ja Pakistanin välillä vuonna 1960 allekirjoitettu Indus-joen sopimus on selvinnyt kolmesta maiden välisestä sodasta rikkomatta koskaan: todiste siitä, että vesi voi olla myös voimakas rauhanväline."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p3",
+      "title": "Tekniikka pulaa vastaan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Veden niukkuuden vuoksi jotkut maat luottavat teknologiaan. **suolanpoisto**, joka muuttaa meriveden juomavedeksi, on vakiinnuttanut asemansa Persianlahden maissa ja Lähi-idässä. Israel tuottaa yli 80 % juomavedestään suolanpoistolaitoksilla. Prosessi on kuitenkin edelleen kallis ja energiaintensiivinen, ja se vapauttaa **suolavettä**, erittäin suolaista vettä, joka voi vahingoittaa meren ekosysteemejä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Muut ratkaisut ovat raittiuden varassa. Tiputuskastelu, joka toimittaa vettä suoraan kasvien juurille, vähentää maatalouden kulutusta 30-70 prosenttia."
+        },
+        {
+          "type": "funFact",
+          "text": "**[[Singapore]]**, pienellä alueella, jolla ei ole suuria vesivarantoja, jätevesi käsitellään niin kehittyneillä tekniikoilla, että siitä tulee puhtaampaa kuin lähdevesi, ennen kuin se kierrätetään nimellä \"NEWater\"."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p4",
+      "title": "Kohti sinisen kullan jaettua hallintoa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Huolimatta \"vesisodan\" ennustuksista historia osoittaa, että tätä resurssia on käytetty useammin yhteistyöhön kuin avoimeen konfliktiin. Altaan välitystoimikuntien ja sopimusten luominen naapurimaiden välille on edelleen paras tapa välttää kriisejä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konsepti auttaa ymmärtämään ongelman laajuuden: **[[virtuaalista vettä]]**, eli tuotteen valmistamiseen tarvittava vesimäärä. Vehnää tuomalla vesipulassa oleva maa itse asiassa tuo sen kasvattamiseen käytettyä vettä muualle. Esimerkiksi yhden kilon naudanlihan tuottamiseen kuluu noin 15 000 litraa vettä, kun vehnäkiloa kohden tarvitaan 1 500 litraa vettä."
+        },
+        {
+          "type": "takeaway",
+          "text": "Saavutettavan makean veden osuus maapallon vedestä on alle 1 %, ja sadat miljoonat ihmiset asuvat vesistöissä, jotka jaetaan vastakkaisten intressien omaavien maiden kesken. Teknologia ja kansainvälinen yhteistyö ovat edelleen paras ase tulevia vesikriisejä vastaan."
+        }
+      ]
+    }
+  ]
+}

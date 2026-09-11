@@ -1,0 +1,98 @@
+{
+  "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
+  "title": "Röntgensäteiden löytö",
+  "subtitle": "Röntgen, 1895",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Vuonna 1895 Wilhelm Röntgen löysi näkymättömän säteilyn, joka pystyy kulkemaan aineen läpi. Muutamassa kuukaudessa lääketiede näki vallankumouksen.",
+  "hero": {
+    "image": "la_decouverte_des_rayons_x_rontgen",
+    "ratio": "16:9",
+    "hook": "Käsi, luut, valokuva. Lääketiede ei ole koskaan enää sokea."
+  },
+  "sections": [
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**8. marraskuuta 1895** Würzburgissa (Saksa) fyysikko **Wilhelm Röntgen** huomaa näytön, joka loistaa... vaikka näkyvä valo ei vaikuta siihen. Jotain näkymätöntä ylittää huoneen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hän kutsuu tätä **X**-säteiksi, \"X\" tarkoittaa \"tuntematonta\". Muutaman viikon sisällä hän valokuvasi vaimonsa käden luut. Radiologia syntyi."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
+      "title": "Laboratorioonnettomuus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Röntgen työskentelee putkella, jossa elektronit osuvat kohteeseen. Hän peitti putken mustalla pahvilla. Fluoresoiva näyttö kuitenkin hehkuu kaukaa. Hän ymmärtää, että putkesta tulee näkymätöntä säteilyä."
+        },
+        {
+          "type": "image",
+          "asset": "wilhelm_rontgen_x_ray_hand_1895",
+          "ratio": "4:3",
+          "caption": "Kuuluisa kuva: käden luut ja vihkisormus."
+        },
+        {
+          "type": "funFact",
+          "text": "Röntgen ei koskaan hakenut patenttia röntgensäteille. Hän halusi, että kaikki tiede voisi käyttää niitä vapaasti."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
+      "title": "Lääketiede tarttuu työkaluun",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "early_x_ray_medical_radiograph",
+          "ratio": "4:3",
+          "caption": "Hyvin nopeasti lääkärit ja armeijat käyttivät röntgensäteitä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ennen murtuman tai luodin \"näkemistä\" piti usein avata. Röntgenkuvauksella saamme kuvan sisätiloista leikkaamatta. Sairaalat ja armeijat ottavat tekniikkaa käyttöön huimaa vauhtia."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
+      "title": "Pitkään huomioimaton vaara",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aluksi jätämme riskit huomiotta. Operaattorit ottavat röntgensäteitä tuntikausia. Palovammoja ja sitten syöpiä. Kestää aikaa ymmärtää, että röntgensäteet ovat voimakkaita… ja vaarallisia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nykyään suojelemme potilaita ja hoitajia: rajoitetut annokset, lyijyesiliinat, tiukka valvonta."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p4",
+      "title": "Perintö",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Röntgensäteet tasoittivat tietä kaikelle nykyaikaiselle kuvantamiselle: skannereille, teollisille ohjauksille ja jopa kiteiden rakenteen tutkimukselle (myöhemmin hyödyllinen DNA:lle)."
+        },
+        {
+          "type": "takeaway",
+          "text": "Röntgen löysi teoksessa **1895** röntgensäteet, näkymätön säteily, joka kulkee aineen läpi. Lääketiede saa uuden näkökulman... edellyttäen, että riskit ovat hallinnassa."
+        }
+      ]
+    }
+  ]
+}

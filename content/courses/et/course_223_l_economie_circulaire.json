@@ -1,0 +1,132 @@
+{
+  "id": "course_223_l_economie_circulaire",
+  "title": "Ringmajandus",
+  "subtitle": "Eemale kõigest ühekordselt kasutatavast",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "**Etm., valmista, viska minema**: see mudel kurnab planeeti. Ringmajandus pakub vastupidist: hoida esemeid ja materjale ringluses nii kaua kui võimalik.",
+  "hero": {
+    "image": "l_economie_circulaire",
+    "ratio": "16:9",
+    "hook": "Mis siis, kui jäätmeid poleks olemas? See on loodusest inspireeritud majandusmudeli panus."
+  },
+  "sections": [
+    {
+      "id": "course_223_l_economie_circulaire_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alates tööstusrevolutsioonist on meie majandus töötanud ühes suunas: ammutame ressursse, valmistame esemeid ja siis viskame need minema. See mudel eeldab, et ressursid on lõpmatud. Nad ei ole."
+        },
+        {
+          "type": "paragraph",
+          "text": "**ringmajandus** pakub veel üht loodusest inspireeritud loogikat, kus tegelikult ei lähe midagi kaduma. Selle eesmärk on hoida toodete ja materjalide väärtust ringluses nii kaua kui võimalik, selle asemel et neid jäätmeteks muuta."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p1",
+      "title": "Lineaarne mudel saavutab oma piirid",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kaasaegne majandus ehitati mudelile nimega **lineaarne**: ekstraheerige, valmistage, visake minema. Toorainet võtame loodusest, teeme neist tooteid ja kord kulunud või moest väljunud tooted muutuvad jäätmeteks."
+        },
+        {
+          "type": "image",
+          "asset": "landfill_waste_garbage_linear_economy",
+          "ratio": "16:9",
+          "caption": "„Võta, tee, viska ära” mudel eeldab lõpmatuid ressursse."
+        },
+        {
+          "type": "paragraph",
+          "text": "See süsteem põhineb ideel, et ressursid on piiramatud ja loodus suudab kogu reostuse absorbeerida. Kuid tänapäeval tarbib maailmamajandus igal aastal ressursse 1,7 planeedi ekvivalenti. Teatavaid digitehnoloogiate jaoks olulisi metalle, nagu [[Liitium]], võib juba 2040. aastal raske leida."
+        },
+        {
+          "type": "funFact",
+          "text": "Ainult 9% kogu inimkonna toodetud plastist on taaskasutatud. Ülejäänu satub loodusesse või prügilasse, kuhu see võib jääda 450 aastaks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Koristus- ja jäätmekäitluskulud ei sisaldu peaaegu kunagi toote müügihinnas. See on varjatud kulu, mille maksavad hiljem kõik."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p2",
+      "title": "Parandage enne ringlussevõttu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ringmajandus pakub mitut ahelat ja alati samas prioriteetsuse järjekorras: kõige lühem ring on parem, kuna see raiskab vähem energiat ja materjali. Kõik saab alguse **ökodisain**-st ehk siis mõtlemisest toote loomisest alates keskkonnamõjule, valides vastupidavad ja kergesti demonteeritavad materjalid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seejärel tuleb **taaskasutamine** (objekt vahetab omanikku ilma ümberkujundamata, nagu kasutatud turul), seejärel **remont**, mis pikendab toote eluiga. Need sammud võitlevad otseselt [[Planeeritud vananemine]], selle praktikaga, mis vabatahtlikult vähendab objekti eluiga."
+        },
+        {
+          "type": "image",
+          "asset": "recycling_sorting_waste_materials",
+          "ratio": "4:3",
+          "caption": "Ringlussevõtt on viimane abinõu, pärast korduskasutamist ja parandamist."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Taaskasutus** toimub ainult viimase abinõuna. See jääb kasulikuks: alumiiniumi taaskasutamine kulutab 95% vähem energiat kui selle kaevandamine toormaagist, [[Boksiit]]. Kuid see on siiski vähem tõhus kui lihtsalt objekti taaskasutamine."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p3",
+      "title": "Miks see täna veel raske on",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vaatamata kogu oma huvile seisab ringmajandus silmitsi lihtsa probleemiga: lineaarne mudel jääb sageli **lühiajaliselt odavaks**. Uue materjali kaevandamine maksab mõnikord vähem kui keeruliste jäätmete sorteerimine ja taaskasutamine, eriti kui tooraine on odav."
+        },
+        {
+          "type": "image",
+          "asset": "repair_right_electronics_reuse",
+          "ratio": "4:3",
+          "caption": "Remondiõigus nõuab tootjatelt varuosi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sellega silmitsi seistes sekkuvad riigiasutused üha enam. Euroopa Liit käivitas 2020. aastal kava, mis kehtestab rangemad jätkusuutlikkuse reeglid. Üks suuremaid telge on “parandusõigus”, mis kohustab elektroonikaseadmete tootjaid pakkuma varuosi mitmeks aastaks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Teine hoob: [[Laiendatud tootjavastutus]], mis paneb tootjad oma toodete jäätmekäitluse eest maksma. See annab neile rahalise stiimuli projekteerida vähem saastavaid ja lihtsamini remonditavaid objekte."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p4",
+      "title": "Ressursiühiskonna poole",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ringmajandus ei ole ainult taaskasutuse küsimus: see on projekt kainema ja vastupidavama ühiskonna nimel. Imporditud toorainest vähem sõltudes saavutab riik turvalisuse ka ebastabiilsemas maailmas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selle ümberkujundamise edukus sõltub ka meist kui tarbijatest. 3R reegel, vähenda, taaskasuta, taaskasuta, algab esimesest sammust: vähenda, st küsi endalt, kas ost on tõesti vajalik. See on esimene tegevus, millel on kliimale suurim mõju."
+        },
+        {
+          "type": "funFact",
+          "text": "Tänapäeval on tonnis vanades nutitelefoni elektroonilistes tahvlites rohkem kulda kui ühes tonnis traditsioonilisest kullakaevandusest kaevandatud maagis."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ringmajanduse eesmärk on katkestada „väljavõte, valmista, viska ära” tsükkel, hoides ressursse ökodisaini, remondi ja ringlussevõtu kaudu ringluses, et austada meie planeedi füüsilisi piire."
+        }
+      ]
+    }
+  ]
+}

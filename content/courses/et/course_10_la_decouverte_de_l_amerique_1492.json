@@ -1,0 +1,139 @@
+{
+  "id": "course_10_la_decouverte_de_l_amerique_1492",
+  "title": "Ameerika avastamine",
+  "subtitle": "1492",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "12. oktoobril 1492 jõudis Christopher Columbus Bahama saarele, mida ta arvas olevat Jaapan. Navigeerimisviga avab globaliseerumise.",
+  "hero": {
+    "image": "la_decouverte_de_l_amerique_1492",
+    "ratio": "16:9",
+    "hook": "Ta otsis Aasiat. See tabas mandrit, mille Euroopa oli unustanud."
+  },
+  "sections": [
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**12. oktoober 1492** pärast enam kui kaht kuud Atlandil veedetud meremees hüüab Pinta meremees: \"Maa!\". **Christopher Columbus**, genovalane Hispaania teenistuses, maandub Bahama saarel, mille ta nimetab San Salvadoriks. Ta usub, et jõuab Aasiasse."
+        },
+        {
+          "type": "paragraph",
+          "text": "See viga ühendab kaks poolkera. Tänu [[Hispaania reconquista (1492)]] (1492), Granada moslemite käest tagasivallutamise hoog, tähistas ekspeditsioon Euroopa jaoks üleminekut keskajalt tänapäeva."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p1",
+      "title": "Tee läände, suur viga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kolumbus ei püüa tõestada, et Maa on ümmargune. [[Eratosthenes]], kreeka õpetlane 3. sajandil eKr. eKr, oli selle juba välja arvutanud. Tegelik eesmärk on majanduslik: jõuda vürtside ja siidini läänest, läbimata idamarsruute kontrollivaid Osmaneid."
+        },
+        {
+          "type": "image",
+          "asset": "christopher_columbus_portrait",
+          "ratio": "4:3",
+          "caption": "Christopher Columbus, Genova meresõitja katoliku monarhide teenistuses."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tema viga: maa ümbermõõdu alahindamine. See asetab Jaapani **4500 km** Kanaari saartelt, võrreldes tegelikkuses peaaegu **20 000**. Portugal keeldub. Kastiilia Isabella, Hispaania kuninganna, võtab vastu. [[Santa Fe kapitulatsioonid]] lepingu alusel saab Columbusest admiral, asekuningas ja ta saab **10 %** kasumist."
+        },
+        {
+          "type": "funFact",
+          "text": "Columbus kirjutas merineitside nägemisest Kariibi mere piirkonnas. Need olid lamantiinid. Ta märkis pettunult, et need olid palju vähem ilusad kui legendides."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p2",
+      "title": "70 päeva San Salvadori",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**3. augustil 1492. a** lahkus Hispaaniast Palosest kolm laeva: **Pinta**, **Niña** ja **Santa María**. Tänu [[Pinzón]] perekonnale, jõukatele kohalikele reederitele, on **90 mehe** meeskond kogenud. Ületamine kestab **70 päeva**. Kolumbus peab oma meremeeste rahustamiseks kahte päevikut: üks on tõeline, teine võltsitud."
+        },
+        {
+          "type": "image",
+          "asset": "santa_maria_caravel_ship",
+          "ratio": "4:3",
+          "caption": "Santa María, 1492. aasta ekspeditsiooni lipulaev."
+        },
+        {
+          "type": "paragraph",
+          "text": "**12. oktoobril** kohtus ta Suurte Antillide põliselanikega [[Taínos]]. Olles veendunud Indias viibimises, nimetab ta neid indiaanlasteks. Ta märgib nende kulda ja nende näilist kuulekust. Koloniaalpilk on juba kohal."
+        },
+        {
+          "type": "funFact",
+          "text": "La Niñat kutsuti tegelikult *Santa Clara*. Santa María sai hüüdnimeks *La Gallega*, kuna see ehitati Galicias."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p3",
+      "title": "Colombia börs",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eurooplaste saabumine käivitas **Kolumbia vahetus**, taimede, loomade ja haiguste massilise ülekandumise kahe maailma vahel. Euroopa poole: kartul, mais, tomatid, kakao, tubakas. Ameerika poole: nisu, suhkur, kohv, hobused, veised. Mõlemal pool olevad taldrikud ja maastikud muutuvad igaveseks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hind on kohutav. Rõuged, leetrid, gripp tapavad sajandi jooksul **50-90%** põliselanikest. Diplomaatiliselt jagavad Hispaania ja Portugal maakera [[Tordesillase leping (1494)]] poolt ilma kellegagi nõu pidamata."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "3. august 1492",
+              "title": "Väljasõit Palosest",
+              "detail": "Kolm laeva läksid läände."
+            },
+            {
+              "date": "12. oktoober 1492",
+              "title": "San Salvador",
+              "detail": "Columbus maandub Bahama saartel."
+            },
+            {
+              "date": "1494",
+              "title": "Tordesillas",
+              "detail": "Hispaania ja Portugal jagavad maailma."
+            },
+            {
+              "date": "1507",
+              "title": "Ameerika",
+              "detail": "Waldseemüller ristib Uue Maailma."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p4",
+      "title": "Mandril ilma avastajata",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Columbus suri **1506**-s oma avastust tunnistamata. See on Firenze navigaator [[Amerigo Vespucci]], kes mõistab, et see on \"Mundus Novus\", uus maailm. **1507** andis kartograaf Waldseemüller mandrile nimeks **Ameerika**. Firenze eesnimi kantakse maailmakaardile."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hispaniola (praegune Haiti ja Dominikaani Vabariik) jõhker administraator saadeti Columbus isegi ahelates tagasi. Lisaks inimesele avab **1492** globaliseerumise: Ameerika raha voolab sisse, kaubanduse keskus nihkub Vahemerelt Atlandi ookeanile. Euroopast saab nelja kontinendi süsteemi pöördepunkt."
+        },
+        {
+          "type": "takeaway",
+          "text": "Columbus sureb veendunud, et on jõudnud Aasiasse. Tema viga ühendas kaks poolkera ja vallandas pöördumatu bioloogilise, majandusliku ja inimliku murrangu."
+        }
+      ]
+    }
+  ]
+}

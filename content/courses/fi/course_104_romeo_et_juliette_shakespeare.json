@@ -1,0 +1,111 @@
+{
+  "id": "course_104_romeo_et_juliette_shakespeare",
+  "title": "Romeo ja Julia, Shakespeare",
+  "subtitle": "noin 1595",
+  "subject": "litterature",
+  "subcategory": "Anglo-Saxons & world literature",
+  "description": "Noin 1595 kaksi veronalaista rakastajaa kuoli alle viidessä päivässä. Shakespeare tiivistää romanssin sosiaaliseksi tragediaksi: klaaniviha tuhoaa nuoruuden.",
+  "hero": {
+    "image": "romeo_et_juliette_shakespeare",
+    "ratio": "16:9",
+    "hook": "Viisi päivää rakkauden ensisilmäyksellä ja kuoleman välillä: maailman kuuluisin rakkaustragedia."
+  },
+  "sections": [
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1595**, **William Shakespeare** kirjoittaa **[[Romeo ja Julia]]**. Se tunnetaan teatterin suurimpana rakkaustarinana. Todellisuudessa se on myös väkivaltaista kritiikkiä kilpailevien perheiden välistä vihaa kohtaan. Kaksi rakastajaa eivät kuole vain huonoon tuuriin: he maksavat epäonnistumisen kaupungissa, joka ei pysty suojelemaan nuoriaan klaanien väkivallalta."
+        },
+        {
+          "type": "image",
+          "asset": "romeo_juliet_balcony_painting",
+          "ratio": "4:3",
+          "caption": "Parvekekohtaus: täydellinen rakkaus Veronan klaanien edessä."
+        }
+      ]
+    },
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_p1",
+      "title": "Shakespearen alkemia: novellista draamaan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Shakespeare ei keksi historiaa. Hän on saanut inspiraationsa pääasiassa **Matteo Bandellosta**, italialainen tarinankertoja 1500-luvulta, itse vanhojen tarinoiden perillinen. Sen nerokkuus piilee **tiivistymissä**: missä lähteet levittävät toimintaa kuukausille, Shakespeare kaventaa sen vain **viiteen päivää**. Jokainen minuutti on tärkeä, katastrofista tulee väistämätön."
+        },
+        {
+          "type": "funFact",
+          "text": "Bandellossa Julia herää ennen kuin Romeo kuolee. Shakespeare poistaa tämän jäähyväiset tehdäkseen lopusta julmemman."
+        },
+        {
+          "type": "paragraph",
+          "text": "Näytelmä alkaa miltei komediana sanapeliin ja eloisiin katukohtauksiin. Sitten **Mercutio**, loistava mieli ja **[[Kyynisyys]]**:n kantaja, kuolee keskellä tarinaa. Sen myötä huolimattomuus katoaa: sävy vaihtuu lopullisesti tragediaan. Romeo pelasi ensin **[[Keskiaikainen hovirakkaus]]**, rakastuen Rosalindiin ennen kuin löysi paljon syvemmän ja vaarallisemman rakkauden."
+        }
+      ]
+    },
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_p2",
+      "title": "Traaginen mekanismi: sattuman ja välttämättömyyden välillä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Romeo Montague** ja **Juliet Capulet** rakastuvat naamiojuhlissa jättäen ensin huomiotta toistensa nimet. Parvekekohtaus juhlii rakkautta, mutta myös sukunimen kieltäytymistä: ”Lupa isästäsi ja luovu nimestäsi.” **Veli Laurent**:n salainen avioliitto oli rauhoitella **[[Vendetta]]** kahden klaanin välillä."
+        },
+        {
+          "type": "image",
+          "asset": "romeo_juliet_frank_dicksee_painting",
+          "ratio": "4:3",
+          "caption": "Romeo ja Julia: nuorten intohimo jää kiinni klaanin väkivallasta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Muutamassa tunnissa **Tybalt** tappaa Mercution, Romeo tappaa Tybaltin kostoksi ja karkotetaan Veronasta. **rutto**-epidemia viivyttää lähettilää, joka on vastuussa varoittamisesta Romeolle, että Julia ei ole kuollut, vaan se on vain nukahtanut juomalla. Tämä ei ole yksin jumalallinen kohtalo: nämä ovat triviaaleja yhteensattumia, jotka on lisätty jo myrkylliseen yhteiskuntaan. Viimeiset itsemurhat vahvistavat absoluuttista vapautta siellä, missä maailma ei jätä heille enää tilaa."
+        },
+        {
+          "type": "quote",
+          "text": "Luovu nimesi ja ota minut tämän nimen tilalle, joka et enää ole sinä.",
+          "attribution": "William Shakespeare, Romeo ja Julia, näytös II, kohtaus 2"
+        }
+      ]
+    },
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_p3",
+      "title": "Yhteiskunnallinen vastuu ja nuorten uhraus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Näytelmä analysoi kostoa tuhon moottorina. Montague ja Capulet vihaavat toisiaan edes muistamatta miksi. Prologi puhuu \"vanhasta vihasta\", joka tuottaa \"uutta verta\". Juliette, tuskin **13-vuotias**, täytyy mennä naimisiin kreivi **Pariisi**:n kanssa; Romeo vaeltelee melankoliassa, jonka hänen ystävänsä ymmärtävät väärin."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Veronan prinssi** edustaa lakia, joka on voimaton kahden perheen yksityisiä miliisejä vastaan. Lopussa nuorten ruumiiden edessä hän syyttää vanhempia: \"Kaikki saavat rangaistuksen.\" Rakastajat ovat sellaisen järjestelmän uhreja, jossa klaanin kunnia on enemmän kuin yksilöllinen onnellisuus. Dante mainitsi jo **Montecchi** ja **Cappelletti**, kaksi 1300-lukua ennen Shakesia."
+        }
+      ]
+    },
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_p4",
+      "title": "Universaali jälkipolvi: lyyrisyydestä moderneihin jengeihin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Näytelmän vaikutus on valtava. Shakespeare sekoittaa uskonnollista omistautumista ja fyysistä intohimoa ja keksii uuden romanttisen sanaston englanninkieliseen teatteriin. Shakespearen **[[Peripatismi]]** on edelleen dramaturginen malli, jota tutkitaan konservatorioissa ympäri maailmaa."
+        },
+        {
+          "type": "paragraph",
+          "text": "1900-luvulla **[[West Siden tarina]]** siirtää konfliktin New Yorkiin: **Hait** ja **Suihkukoneet** korvaavat Veronan klaanit. Kaava pätee edelleen: toisten rakkaus törmää ryhmän vihaan. Uskonnolliset, rodulliset tai sosiaaliset konfliktit omaksuvat jatkuvasti Shakespearen matriisin."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Romeo ja Julia** tiivistää viiteen päivään nuorten idyllin ja periytyneen väkivallan tuomitsemisen. Shakespeare osoittaa, että absoluuttinen rakkaus ei säily siellä, missä yhteiskunta pitää kaunaa elämän sijaan."
+        }
+      ]
+    }
+  ]
+}

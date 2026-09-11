@@ -1,0 +1,112 @@
+{
+  "id": "course_75_la_photosynthese_expliquee_simplement",
+  "title": "Fotosynteesi selitettiin yksinkertaisesti",
+  "subtitle": "Kasvit & energia",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Kasvit tekevät jotain poikkeuksellista: ne keittävät sokeria valolla, vedellä ja ilmalla. Ja he antavat meille happea lahjaksi.",
+  "hero": {
+    "image": "la_photosynthese_expliquee_simplement",
+    "ratio": "16:9",
+    "hook": "Lehti on aurinkokeittiö: valoa, vettä, ilmaa... ja tässä on sokeria."
+  },
+  "sections": [
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuvittele miniatyyri tehdas jokaisessa lehdessä. Se vaatii kolme arkipäiväistä ainesosaa: **kevyt Auringosta**, **vettä** juurista ja **CO₂** ilmasta. Se julkaistaan **sokeria**:n kanssa kasvaakseen ja julkaisee **happea**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tätä saavutusta kutsutaan nimellä **fotosynteesi**. Ilman sitä ei metsiä, ei hengittävää happea, melkein ei monimutkaista elämää maan päällä."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p1",
+      "title": "Missä arkissa se tapahtuu?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kasvisolussa vihreissä organelleissa, **kloroplasteissa**, on [[Klorofylli]]. Tämä pigmentti vangitsee pääasiassa valon sinistä ja punaista. Vihreä palautetaan: siksi lehdet näyttävät meille vihreiltä."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_photosynthesis_sunlight_chloroplasts",
+          "ratio": "auto",
+          "caption": "Lehdet vangitsevat auringonvaloa fotosynteesiä varten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yksinkertainen yhtälö: CO₂ + vesi + valo → sokeri + happi. Kaasu pääsee sisään pienistä huokosista, [[stomata]]. Vesi nousee juurista. Sokerista tulee puuta, hedelmiä, juuria; happi menee ilmaan."
+        },
+        {
+          "type": "funFact",
+          "text": "Klorofylli \"kieltäytyy\" vihreästä. Hän pitää parempana sinistä ja punaista, tehokkaampaa elektronien jännittämiseen ja energiakoneen käynnistämiseen."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p2",
+      "title": "Kaksi vaihetta: vangita, sitten askartele",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ensinnäkin **valo-vaihe**. Valo hajottaa vesimolekyylejä. Happi karkaa. Energiaa varastoidaan kahteen kemialliseen \"paristoon\", **ATP** ja **NADPH**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seuraavaksi **valmistusvaihe**, [[Calvinin sykli]], joka on nimetty kemistin **Melvin Calvin** mukaan. Akkujen energian avulla tehdas kokoaa hiiltä CO₂:sta glukoosiksi. Suoraa auringonvaloa ei tässä vaiheessa tarvita, mutta se riippuu täysin siitä, mitä valo on tuottanut aiemmin."
+        },
+        {
+          "type": "funFact",
+          "text": "Seuratakseen hiilen polkua lehdissä Calvin käytti radioaktiivisia isotooppeja atomipommin tutkimuksesta. Nobel-palkinto vuonna **1961**."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p3",
+      "title": "Kun happi muutti planeetan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Noin **2,4 miljardia vuotta sitten** fotosynteettiset bakteerit, **syanobakteerit**, alkoivat vapauttaa massiivisesti happea. Tämä on **Suuri hapettuminen**. Monille sen ajan järjestöille se oli myrkkyä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sitten happi mahdollisti otsonikerroksen ja paljon tehokkaamman hengityksen. Hengittämämme ilma on pohjimmiltaan miljardeja vuosia kestäneen fotosynteesin \"jätetuote\"."
+        },
+        {
+          "type": "funFact",
+          "text": "Tietoja **puoli** maapallon hapesta tulee valtamerten kasviplanktonista, ei vain metsistä."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p4",
+      "title": "Vaatimaton tulos, valtava rooli",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lehti muuntaa vain **1 - 3 %** vastaanotetusta aurinkoenergiasta biomassaksi. Maailmanlaajuisesti tämä riittää ruokkimaan ravintoketjuja ja imemään valtavia määriä CO₂:ta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tästä syystä kiinnostus metsiin, valtameriin… ja jopa ilmaston keinotekoiseen fotosynteesiin. Merietana, *Elysia chlorotica*, menee niin pitkälle, että se \"varastaa\" kloroplasteja levistä elääkseen vähän aurinkoenergialla."
+        },
+        {
+          "type": "takeaway",
+          "text": "Fotosynteesi muuttaa valon, veden ja CO₂ sokeriksi ja regeneroi happea. Se on lähes kaiken elämän perusta aurinkoenergialla."
+        }
+      ]
+    }
+  ]
+}

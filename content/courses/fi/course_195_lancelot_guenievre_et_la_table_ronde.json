@@ -1,0 +1,120 @@
+{
+  "id": "course_195_lancelot_guenievre_et_la_table_ronde",
+  "title": "Lancelot, Guinevere ja pyöreä pöytä",
+  "subtitle": "Camelot ja sen pudotus",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Arthur, Lancelot, Guinevere: läntisen keskiajan suurin legenda. Kielletyn rakkauden tuhoama ritarillisuuden ihanne.",
+  "hero": {
+    "image": "lancelot_guenievre_et_la_table_ronde",
+    "ratio": "16:9",
+    "hook": "Maailman paras ritari rakastaa kuninkaan vaimoa. Camelot ei parane."
+  },
+  "sections": [
+    {
+      "id": "course_195_lancelot_guenievre_et_la_table_ronde_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Legenda kuningas **Arthur** ja hänen **Pyöreän pöydän ritarit** on läntisen keskiajan suuri mytologinen kiertokulku. Kutsumme sitä **Materiaali Bretagnen**:ksi: sekoitus epämääräistä historiaa, kelttiläistä kansanperinnettä ja kristillistä moraalia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tarinan ytimessä on hyvin inhimillinen tragedia: kielletty rakkaus **Lancelot**, parhaan ritari, ja kuningatar **Guinevere**, Arthurin vaimo. Tästä täydellisyydeksi juhlitusta rakkaudesta tulee myrkkyä, joka kaataa **Camelot**."
+        }
+      ]
+    },
+    {
+      "id": "course_195_lancelot_guenievre_et_la_table_ronde_p1",
+      "title": "Myytin lähteillä: historian ja kelttiläisen kansanperinteen välillä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ei yhtä kirjailijaa. 6. ja 1500-luvun välillä tarinoita kertyy. Arthurin takana näemme bretonilaisen sotapäällikön, kenties nimeltä **Arturus**, joka olisi vastustanut sakseja roomalaisten lähdön jälkeen. Hänen ympärillään kasvavat **Merlin**, keijut, taikamiekat."
+        },
+        {
+          "type": "image",
+          "asset": "king_arthur_excalibur_sword_stone_medieval",
+          "ratio": "4:3",
+          "caption": "Arthur vetää miekan kalliosta: laillisen kuninkaan merkki."
+        },
+        {
+          "type": "funFact",
+          "text": "Winchesterin linnassa Englannissa roikkuu edelleen 1200-luvun \"Pyöreä pöytä\". Henrik VIII maalasi sen yhdistääkseen itsensä Arthuriin."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[miekan koettelemus]] aikana vain todellinen kuningas voi vetää **Excalibur** kalliolta tai alasimelta. Camelotissa kruunattu Arthur perusti **Pyöreän pöydän**. Sen pyöreä muoto kumoaa hierarkian: sen ympärillä jokainen ritari on naapurinsa tasavertainen, kuningas mukaan lukien."
+        }
+      ]
+    },
+    {
+      "id": "course_195_lancelot_guenievre_et_la_table_ronde_p2",
+      "title": "Graalin etsintä ja henkinen mutaatio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vähitellen taistelu vaihtuu henkiselle etsinnölle: **Pyhä Grail**. Maaginen ruokalaji vanhoissa kelttiläisissä teksteissä, siitä tuli Kristuksen malja 1100-luvulla. Sisäinen puhtaus ratkaisee yhtä paljon kuin voima."
+        },
+        {
+          "type": "image",
+          "asset": "holy_grail_knights_round_table_medieval_painting",
+          "ratio": "4:3",
+          "caption": "Graalin etsintä muuttaa pyöreän pöydän henkiseksi seikkailuksi."
+        },
+        {
+          "type": "funFact",
+          "text": "Sana \"graal\" tuli muinaisesta ranskasta ja tarkoitti alun perin suurta lihaa, ei arvokasta leikkaa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pöydässä [[Siege Perilous]] odottaa ennalta määrättyä ritaria. Vain **Gilead**, **Perceval** ja **Bohort** saavuttavat Graalin. **Järven Lancelot**, \"maailman paras ritari\", epäonnistuu: hänen rakkautensa Guineverea kohtaan tekee hänestä kelvottoman jumalalliseen näkemykseen."
+        }
+      ]
+    },
+    {
+      "id": "course_195_lancelot_guenievre_et_la_table_ronde_p3",
+      "title": "Guineveren petos ja järjestyksen repiminen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lancelotin ja Guineveren rakkaus ilmentää [[Keskiaikainen hovirakkaus (fin'amor)]]: ritari asettuu rouvansa palvelukseen. Mutta Guinevere on yliherran vaimo. Pettäminen ei ole vain avioliittoa: se on feodaalista."
+        },
+        {
+          "type": "image",
+          "asset": "lancelot_guinevere_medieval_romance_painting",
+          "ratio": "4:3",
+          "caption": "Lancelot ja Guinevere: rakkaus, joka murtaa Camelotin."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Mordred**, Arthurin veljenpoika tai poika versiosta riippuen, paljastaa suhteen. Arthur tuomitsee Guineveren rovioon. Lancelot pelastaa hänet, mutta tappaa **Gawain**:n veljet lähitaistelussa. Pyöreä pöytä on repeytynyt: sisällissota, utopian loppu."
+        }
+      ]
+    },
+    {
+      "id": "course_195_lancelot_guenievre_et_la_table_ronde_p4",
+      "title": "Maailmanloppu ja myytti nukkuvasta kuninkaasta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Camlann**:ssä Arthur tappaa Mordredin ja saa kuolettavan haavan. Excalibur palautetaan Lady of the Lakelle. Guinevere päätyy luostariin, Lancelot erakko. Arthur, sanotaan, lähtee **Avalon**:n saarelle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hänestä tulee [[Rex Quondam Rexque Futurus]], \"entinen kuningas, tuleva kuningas\": nukkuva kuningas, joka palaa pahimpaan aikaan. Camelot kuolee legendassa, ja näin se selviää."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Lancelot**:n rakkaus **Guinevereen** tuhoaa Camelotin. **Graal**:n etsintä onnistuu vain puhtaille: Lancelot, paras ritari, jää pyhän kynnyksen ulkopuolelle."
+        }
+      ]
+    }
+  ]
+}

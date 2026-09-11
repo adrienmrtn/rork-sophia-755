@@ -1,0 +1,119 @@
+{
+  "id": "course_114_fahrenheit_451_bradbury",
+  "title": "Fahrenheit 451, Bradbury",
+  "subtitle": "1953",
+  "subject": "litterature",
+  "subcategory": "Anglo-Saxons & world literature",
+  "description": "Tulevaisuudessa palomiehet polttavat kirjoja. Guy Montag huomaa, että kulttuuri katoaa niin välinpitämättömyyden kuin sensuurin kautta.",
+  "hero": {
+    "image": "fahrenheit_451_bradbury",
+    "ratio": "16:9",
+    "hook": "451°F: lämpötila, jossa paperi syttyy tuleen ja yhteiskunta lakkaa ajattelemasta."
+  },
+  "sections": [
+    {
+      "id": "course_114_fahrenheit_451_bradbury_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Julkaistu julkaisussa **1953**, **Fahrenheit 451** on **dystopia**:n tukipilari. Tämä genre kuvaa tulevaisuuden yhteiskuntaa, jossa yksilöä sorretaan. **Ray Bradbury**, syntynyt **1920** ja kuollut **2012**, kuvittelee tulevaisuuden, jossa palomiehet polttavat yhteiskunnan vakaudelle vaarallisiksi katsottuja kirjoja. Otsikko viittaa lämpötilaan, jossa paperi syttyy, noin 233 °C."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enemmän kuin valtionsensuurin kritiikkiä, teos osoittaa väestön, joka vapaaehtoisesti hylkää lukemisen ja suosii tyhjää viihdettä ja teknistä välittömyyttä. Bradbury varoittaa: ajatuksenvapaus menetetään yhtä paljon unohtamalla kuin väkisinkin."
+        }
+      ]
+    },
+    {
+      "id": "course_114_fahrenheit_451_bradbury_p1",
+      "title": "Jännitteen alla olevan visionäärisen teoksen synty",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Romaani syntyi [[McCarthyismi]] kontekstissa, välillä **1950** ja **1954**. Se on antikommunistisen noitavahdin aikaa Yhdysvalloissa. Taiteilijat ja kirjailijat joutuivat mustalle listalle. Bradburyn vivahde kuitenkin: uhka tulee myös televisiosta ja [[massakulutus]]. Tuotteet standardisoituvat ja ostohalu kasvaa jatkuvasti."
+        },
+        {
+          "type": "image",
+          "asset": "ray_bradbury_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "Ray Bradbury, kirjailija, joka kirjoitti romaaninsa sensuurista kirjastossa."
+        },
+        {
+          "type": "funFact",
+          "text": "Bradbury kirjoitti Fahrenheit 451 9 päivässä yliopiston kirjastosta vuokratulla kirjoituskoneella 10 sentillä 30 minuutilta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Toisin kuin [[1984]], Orwellin romaani, jossa sorto tulee jokaista liikettä valvovalta diktaattorilta, tässä kansalaiset itse ovat luopuneet kirjoista. He tekevät sen mukavuudesta ja keskustelun pelosta. Sensuurista on tullut kollektiivinen valinta, ei vain pakottaminen."
+        }
+      ]
+    },
+    {
+      "id": "course_114_fahrenheit_451_bradbury_p2",
+      "title": "Montag-järjestelmä: tiedon tuli",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Guy Montag** on palomies: hänen tehtävänsä on polttaa maanalaisia kirjastoja. Hänen vaimonsa **Mildred** viettää päivänsä **salit** -seinälle asennettavien näyttöjen edessä, jotka peittävät koko seinät. Se imeytyy tyhjiin päästöihin. Hänen naapurinsa **Clarisse** muistuttaa häntä, että palomiehillä oli tapana sammuttaa tulipaloja."
+        },
+        {
+          "type": "image",
+          "asset": "book_burning_nazi_germany_1933",
+          "ratio": "16:9",
+          "caption": "Kirjojen polttaminen: historiallinen kuva, jonka Bradbury muuttaa tulevaisuuden dystopiaksi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Montag varastaa kirjoja. Hänen vastustajansa, kapteeni **Beatty**, tuntee klassikot, mutta polttaa niitä kiihkeästi. Hänelle kirjat aiheuttavat ahdistusta paljastamalla eriarvoisuudet ja ristiriidat. Clarisse katoaa, luultavasti automatisoidun ajoneuvon seurauksena. Maailmassa ei ole enää tilaa ihmisille, jotka esittävät kysymyksiä."
+        }
+      ]
+    },
+    {
+      "id": "course_114_fahrenheit_451_bradbury_p3",
+      "title": "Vastarinta muistin kautta: kirjamiehet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Poliisirobotin **Mekaaninen verikoira**:n metsästämä Montag liittyy maanpaossa olevien intellektuellien yhteisöön. Jokainen opettelee ulkoa kokonaisen kirjan välittääkseen sen suullisesti: Platonin *Tasavalta*, Shakespeare, Raamattu. Kulttuuri säilyy päässä, ei paperilla."
+        },
+        {
+          "type": "quote",
+          "text": "Olemme kirjoja. Meihin osui tulipalo, mutta selvisimme hengissä.",
+          "attribution": "Ray Bradbury, Fahrenheit 451"
+        },
+        {
+          "type": "paragraph",
+          "text": "Montagista tulee **Ecclesiastes**:n huoltaja. Romaani päättyy ydinsotaan, joka tuhoaa kaupungin, mutta vastarintataistelijat palaavat raunioille. Kulttuuri voi nousta tuhkasta, jos ihmiskunta suostuu ajattelemaan uudelleen."
+        }
+      ]
+    },
+    {
+      "id": "course_114_fahrenheit_451_bradbury_p4",
+      "title": "Jälkikävijät ja varoitus välittömyydestä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bradbury odotti litteitä näyttöjä, langattomia kuulokkeita ja [[Viihdeyhteiskunta ja hajanainen huomio]]. Jotkut ihmiset ovat niin kyllästyneitä nopeaan mediaan, että he eivät enää halua lukea. Romaanissa tekstejä lyhennetään, kunnes ne katoavat nopeiden kuvien hyväksi."
+        },
+        {
+          "type": "funFact",
+          "text": "Bradbury kuvailee korvassa olevia radion simpukankuoria, jotka eristävät yksilön ympäristöstään viisikymmentä vuotta ennen nykyaikaisia langattomia kuulokkeita."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ironia: tämä sensuurin vastainen syyte on itse amputoitu tietyissä koulujulkaisuissa. Taistelu työn eheydestä jatkuu. **Fahrenheit 451** muistuttaa, että ajatuksenvapaus menetetään paitsi väkisin, myös unohtamisen ja älyllisen laiskuuden vuoksi."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Fahrenheit 451** osoittaa, että ajatuksenvapaus menetetään paitsi väkisin, myös unohtamisen, viihteen ja älyllisen laiskuuden vuoksi."
+        }
+      ]
+    }
+  ]
+}

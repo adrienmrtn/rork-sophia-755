@@ -1,0 +1,116 @@
+{
+  "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup",
+  "title": "Miksi tulivuoret purkautuvat?",
+  "subtitle": "Magma & levyt",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Tulivuori on aukko maankuoressa. Paineen alainen magma nousee siellä ja muuttuu laavaksi. Tästä syystä maa \"sylkee\".",
+  "hero": {
+    "image": "pourquoi_les_volcans_entrent_en_eruption",
+    "ratio": "16:9",
+    "hook": "Jalkojemme alla maa ei ole jäässä. Joskus hän avaa tuliikkunan."
+  },
+  "sections": [
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tulivuori ei ole vain tulta hengittävä vuori. Se on aukko maan ulkoverhossa. Näin **magma** nousee: sulan kiven ja kaasun seos korkeassa paineessa. Kun tämä magma on ulkoilmassa, siitä tulee **pesty**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Purkauksen ymmärtämiseksi sinun on katsottava pinnan alle: lämpöä planeetan sisällä, levyjen liikettä ja tapaa, jolla kaasut nostavat painetta, vähän kuin juomapulloa ravistelisi."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p1",
+      "title": "Jalkojemme alla mikään ei ole paikallaan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Maapallo koostuu kerroksista. Pinnalla **kuori** on jäykkä kuori, **5-70 km paksu. Mennään**mantle, ei**2 900 km** syvyyteen. Karvapeite on pääosin kiinteää, mutta hyvin pitkiä aikoja se voi virrata hyvin hitaasti, kuten ultrapaksu hunaja."
+        },
+        {
+          "type": "image",
+          "asset": "volcano_eruption_lava",
+          "ratio": "auto",
+          "caption": "Purkaus: magman nousu pintaan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä sisäinen lämpö saa aineen nousemaan ja laskemaan: nämä ovat **konvektiovirtoja**. Ne työntävät ulos suuria kuoren paloja, joita kutsutaan plakeiksi. Tämä on [[Levytektoniikka]]: maan pinta leikataan levyiksi, jotka liikkuvat toisistaan, törmäävät tai liukuvat toisiaan vasten."
+        },
+        {
+          "type": "funFact",
+          "text": "Tietyt erittäin nopeat nousut tuovat takaisin yli **150 km** syvyydessä muodostuneita timantteja. Heillä ei ole aikaa muuttua matkalla."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[harjanteita]]:ssä levyt irtoavat toisistaan ja magma nousee helposti. Alueella [[Subduktio]] yksi levy sukeltaa toisen alle ja kuljettaa vettä mukanaan. Tämä vesi alentaa kivien sulamispistettä: magma muodostuu, sitten nousee."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p2",
+      "title": "Magmasta purkaukseen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rock ei vain sula \"koska se on kuumaa\". Laukaisijoita on kolme: lämpötilan nousu, paineen lasku tai veden lisääminen. Kun magma on muodostunut, se on vähemmän tiheää kuin sitä ympäröivä kivi. Siksi se yrittää nousta, vähän kuin ilmakupla vedessä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Usein se pysähtyy ensin **magma-kammioon**, joka on säiliö muutaman kilometrin pinnan alapuolella. Siellä liuenneet kaasut muodostavat kuplia paineen laskiessa. Jos yläpuolella oleva kiven \"tulppa\" ei enää kestä, purkaus alkaa."
+        },
+        {
+          "type": "funFact",
+          "text": "**Tambora**:n purkautuminen **1815**:ssä Indonesiassa oli niin voimakas, että se jäähdytti maapallon ilmastoa. **1816** sai lempinimen \"vuosi ilman kesää\", ja Euroopassa ja Pohjois-Amerikassa oli tuhoisia satoja."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p3",
+      "title": "Neste vai räjähdysaine?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kaikki purkaukset eivät ole samanlaisia. Kaikki riippuu magman **viskositeetista**, eli onko se melko nestemäinen vai tahmea. Nestemäinen magma, kuten **Havaiji** tai Piton de la Fournaise (Reunion Island), päästää kaasut poistumaan. Laavavirtaukset: purkaus **ylitsevuotava**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tahmea magma vangitsee kaasut. Paine kasvaa, sitten kaikki räjähtää. Tuhka, lohkot ja [[pyroklastiset virtaukset]] (palavat kaasu- ja tuhkapilvet, jotka vierivät alas rinteitä) voivat sitten tuhota ympäröivän alueen. Tämä on tyyliin tulivuoria, kuten Mount **Pyhä Helens** (Yhdysvallat) tai **Pinatubo** (Filippiinit)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tulivuori voi myös pysyä rauhallisena vuosisatoja. **79** jälkeen. eKr., **Vesuvius**, Napolin lähellä, hautasi Pompejin tuhkan alle. Noin **80 %** maailman vulkaanisesta toiminnasta tapahtuu valtamerten alla, kaukana silmistämme."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p4",
+      "title": "Vaara, hedelmällisyys, syvä elämä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tulivuoret muovasivat maapallon varhaista ilmakehää lähettämällä kaasuja. Niiden tuhkat myös rikastavat maaperää: monet hedelmälliset maatalousalueet asuvat aktiivisten tulivuorten juurella. Mutta erittäin suuri purkaus voi lähettää rikkihiukkasia korkealle ilmakehään ja viilentää ilmastoa kuukausiksi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Joitakin sivustoja, kuten Yellowstonen [[supertulivuori]] Yhdysvalloissa, seurataan tarkasti. Meren alla, lähellä harjuja, [[mustia tupakoitsijoita]] sylkee mineraalipitoisia palavia nesteitä. Ekosysteemit elävät siellä ilman auringonvaloa kuumien lähteiden kemian ravinnoksi."
+        },
+        {
+          "type": "takeaway",
+          "text": "Tulivuoret karkottavat magmaa paineen alaisena, erityisesti tektonisten levyjen rajoilla. Magman viskositeetti ratkaisee, virtaako purkaus hiljaa vai räjähtääkö se."
+        }
+      ]
+    }
+  ]
+}

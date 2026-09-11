@@ -164,6 +164,30 @@ ANDROID_ONLY_KEYS = (
     "notification.channel.description",
 )
 
+#: Where an Android reader is actually asked to leave a rating. AppLocalizable
+#: is the iOS table and says App Store in every language, which is the wrong
+#: shop on this platform; there is no per-platform override in the table itself,
+#: so the substitution happens here, on the way out. The phrasing carries the
+#: case or preposition each language puts on a store name, which is why this is
+#: a table rather than a search and replace — French elides before a vowel
+#: ("sur l'App Store") and Google Play does not take it.
+STORE_KEYS = (
+    "onboardingV2.review.appStore",
+    "paywall.rating",
+    "paywall.quiz.rating",
+)
+PLAY_STORE_PHRASE = {
+    "fr": "sur Google Play", "en": "on Google Play", "es": "en Google Play",
+    "de": "bei Google Play", "pt": "no Google Play", "it": "su Google Play",
+    "tr": "Google Play'de", "pl": "w Google Play", "ro": "pe Google Play",
+    "nl": "in Google Play", "el": "στο Google Play", "sv": "på Google Play",
+    "hu": "a Google Play-en", "bg": "в Google Play", "cs": "na Google Play",
+    "da": "på Google Play", "nb": "på Google Play", "ru": "в Google Play",
+    "hr": "na Google Playu", "sl": "v Googlu Play", "sk": "na Google Play",
+    "sr": "na Google Play-u", "ar": "على Google Play", "he": "ב-Google Play",
+    "fi": "Google Playssä", "et": "Google Play'is",
+}
+
 
 def export_ui_strings(ref: str | None) -> list[str]:
     """Write strings/{lang}.json for every app language, from AppLocalizable.swift.
@@ -196,6 +220,11 @@ def export_ui_strings(ref: str | None) -> list[str]:
             for key in ANDROID_ONLY_KEYS:
                 if key in existing and key not in table:
                     table[key] = existing[key]
+        phrase = PLAY_STORE_PHRASE.get(lang)
+        if phrase:
+            for key in STORE_KEYS:
+                if key in table:
+                    table[key] = phrase
         write_json(out, table)
         written.append(out.name)
         print(f"  strings/{lang}.json — {len(table)} keys")

@@ -1,0 +1,104 @@
+{
+  "id": "course_76_pourquoi_les_feuilles_changent_elles_de",
+  "title": "Miks lehed värvi muudavad?",
+  "subtitle": "Sügis ja pigmendid",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Sügis ei leiuta värve: see eemaldab neid varjanud rohelise. Saate taga ellujäämisstrateegia, et talv üle elada.",
+  "hero": {
+    "image": "pourquoi_les_feuilles_changent_de_couleur",
+    "ratio": "16:9",
+    "hook": "Sügislehed ei tee meiki: nad võtavad roheluse maha."
+  },
+  "sections": [
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Igal sügisel muutuvad metsad rohelisest kuldseks, vaseks, lillaks. See ei ole esteetiline kapriis. See on strateegia: puu taastub enne, kui ta talveks lehed maha kukub."
+        },
+        {
+          "type": "paragraph",
+          "text": "Soojad värvid ei ilmu tühjast kohast. Tihti olid nad seal juba roheluse all peidus. Sügise mõistmine tähendab biokeemilise suurpuhastuse mõistmist."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
+      "title": "Roheline, mis peidab kõike",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kevadest hilissuveni on lehed täis **klorofülli** - pigmenti, mis soodustab fotosünteesi. See laguneb valguse käes, kuid puu asendab seda pidevalt. Kuni see domineerib, jääb leht roheliseks."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_color_change_autumn_chlorophyll",
+          "ratio": "auto",
+          "caption": "Sügisel kaob klorofüll ja toob esile lehtede värvid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kuid leht sisaldab ka **karotinoid**, kollaseid ja oranže pigmente (nagu porgandites). Suvel on nad küll olemas, aga rohelise all nähtamatud. Sügisel klorofülli tootmine peatub. Roheline tuhmub, kollane ja oranž tulevad esile."
+        },
+        {
+          "type": "funFact",
+          "text": "“Klorofüll” pärineb kreeka sõnadest *kloor* (roheline) ja *phyllon* (leht). \"Karotenoid\" jagab ... porgandi juurt, kus see pigment esmakordselt tuvastati."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
+      "title": "Tõeline päästik: ööd, mis lähevad pikemaks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sügise ei käivita peamiselt külm, vaid ööde pikkus. Puud mõõdavad seda valgusandurite [[fütokroomid]] abil. Kui ööd lähevad pikemaks, läheb igale lehele hormonaalne signaal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Leherootse põhjale moodustub [[Eraldustsoon]], omamoodi kübar. Mahl tõuseb vähem, suhkrud langevad halvasti. Isoleerituna lagundab leht oma klorofülli kiiremini. Püsivamad kollased püsivad paar nädalat, siis leht langeb."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
+      "title": "Kust tulevad eredad punased?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kollane oli juba kohal. Punane ja lilla on sageli hooaja lõpus **tehtud**. Need on [[Antotsüaniinid]], mis tekivad siis, kui suhkrud jäävad lehtedesse kinni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Miks investeerida energiat vahetult enne paberi äraviskamist? Tõenäoliselt selleks, et kaitsta ringlussevõtu ajal. Puu taastab **azine** ja muud väärtuslikud toitained. Ilma klorofüllita võib päike kahjustada veel aktiivseid kudesid. Antotsüaniinid toimivad päikesefiltrina suurel liikumisel juurte poole."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
+      "title": "Miks mõni sügis põleb rohkem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kõige ilusamad punased on sageli sündinud päikesepaistelistel päevadel ja jahedatel, külmavabadel öödel. Palju suhkrut, muundumine antotsüaniinideks. Hall ja vihmane sügis annab tuhmimaid toone. Varane külm tapab lehed enne näitust."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lõppu jääb alles vaid [[tanniinid]], pruunid ained metsaalusest. Mõned uuringud arvavad ka, et erksad värvid hoiatavad [[lehetäid]]: kujuga puu, kaitsevõime tugev, parem minna mujale."
+        },
+        {
+          "type": "takeaway",
+          "text": "Sügisel ilmnevad klorofülli kadumisel juba olemas olevad kollased ja mõnikord punased, et kaitsta toitainete ringlussevõttu enne lehtede langemist."
+        }
+      ]
+    }
+  ]
+}

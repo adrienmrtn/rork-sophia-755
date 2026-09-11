@@ -1,0 +1,110 @@
+{
+  "id": "course_87_l_apologie_de_socrate_platon",
+  "title": "Sokrateen anteeksipyyntö, Platon",
+  "subtitle": "399 eaa",
+  "subject": "litterature",
+  "subcategory": "Ancient Greeks & Philosophers",
+  "description": "Vuonna 399 eKr. Ateena kokeili Sokratesta. Nuorten turmeltamisesta syytettynä hän kieltäytyy anomasta armoa. Platon asettaa länsimaisen filosofian perustan.",
+  "hero": {
+    "image": "l_apologie_de_socrate_platon",
+    "ratio": "16:9",
+    "hook": "Julkinen oikeudenkäynti. Mies, joka mieluummin kuolee kuin vaikenee."
+  },
+  "sections": [
+    {
+      "id": "course_87_l_apologie_de_socrate_platon_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**399 eaa**, Ateenassa, **Sokrates**, kuvanveistäjän ja kätilön poika, asetettiin oikeuden eteen. Häntä syytetään siitä, ettei hän kunnioittanut kaupungin jumalia ja **nuorin corruptoinnista**, toisin sanoen yllyttämisestä kyselemään viranomaisia. Hänen opetuslapsensa **Platon** kirjoittama **Anteeksipyyntö** ei ole anteeksipyyntö. Kreikaksi [[anteeksi]] tarkoittaa \"puolustusta\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sokrates ei näytä katuvaa syytettyä. Hän muuttaa tuomioistuimen kaupungin tutkimiseksi. Tuomio on myrkyllisen kasvin **katko** kuolema. Kohtauksesta tulee länsimaisen ajattelun perustava myytti."
+        }
+      ]
+    },
+    {
+      "id": "course_87_l_apologie_de_socrate_platon_p1",
+      "title": "Miksi Ateena on vihainen?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ateena on toipumassa sodista ja poliittisista kriiseistä. Tappio Spartaa vastaan vuonna 404 painaa edelleen raskaasti. Sokrates kyseenalaistaa voimakkaita julkisella aukiolla. Hän paljastaa ne, jotka luulevat tietävänsä ilman todentamista. Joillekin se on hurskausta. Toisille se on kumouksellista. Myös palkatut retoriikan professorit [[sofistit]] ovat maisemassa. Sokrates erottuu heistä, mutta yleinen mielipide sekoittaa heidät toisinaan."
+        },
+        {
+          "type": "image",
+          "asset": "socrates_trial_athens_painting",
+          "ratio": "4:3",
+          "caption": "Sokrateen oikeudenkäynti: Ateenalainen demokratia tuomitsee saaliinsa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oikeudenkäynnissä sekoittuvat uskonto ja politiikka. Emme tuomitse vain abstrakteja ideoita. Tuomitsemme elämäntavan, joka on häiritsevää: miestä, joka viettää päivänsä kysyen, ilman virallista tehtävää, vaikenematta voimakkaiden edessä."
+        }
+      ]
+    },
+    {
+      "id": "course_87_l_apologie_de_socrate_platon_p2",
+      "title": "\"Tiedän, etten tiedä mitään\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Socrates recounts the **Oracle of Delphi, a sanctuary where the priestess of** Apollo jumalallinen antoi vastauksia. Oraakkeli sanoo: kukaan ei ole häntä viisaampi. Sitten hän ymmärtää, että hänen viisautensa on**negatiivinen**. Muut luulevat tietävänsä. Hän tietää, ettei tiedä. Siitä se kuuluisa kaava: [[\"Tiedän, etten tiedä mitään\"]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Hänen menetelmänsä, [[Sokraattinen maieutiikka]], vertaa dialogia synnytykseen: selkeämmän ajattelun luominen toisessa peräkkäisten kysymysten kautta ilman valmiita oppitunteja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oikeudessa tämä asento ärsyttää. Kerjäämisen sijaan Sokrates selittää, miksi tutkimaton **elämää** ei ole puolustamisen arvoinen. Hän pitää parempana kuolemasta kuin tehtävänsä pettämisestä."
+        }
+      ]
+    },
+    {
+      "id": "course_87_l_apologie_de_socrate_platon_p3",
+      "title": "Tuomio ja sitten provokaatio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Syylliseksi todetun Sokrateen on ehdotettava vaihtoehtoista kuolemanrangaistusta. Varovaisen maanpaon sijaan hän ehdottaa, että hänet ruokittaisiin [[Prytaneum]]:ssä, julkisessa rakennuksessa Ateenassa, jossa kaupunki kunnioitti hyväntekijöitään. Tämä on harkittua provokaatiota. Tuomarit äänestävät kuoleman puolesta."
+        },
+        {
+          "type": "image",
+          "asset": "death_of_socrates_jacques_louis_david_painting",
+          "ratio": "4:3",
+          "caption": "David: Sokrateen kuolema: filosofin tyyneys hemlockin edessä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hän kieltäytyy pakenemasta myöhemmin dialogissa **Crito**, toinen Platonin teksti. Lakien noudattaminen muodollisesti, mutta kritisoi niitä sisällöltään: Sokraattinen paradoksi alkaa tästä. Sokrates hyväksyy tuomion pysyäkseen johdonmukaisena koko elämänsä ajan."
+        }
+      ]
+    },
+    {
+      "id": "course_87_l_apologie_de_socrate_platon_p4",
+      "title": "Filosofisen myytin synty",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Platon tekee tästä kuolemasta filosofian kasteen. Ajatteleminen voi olla kallista. Anteeksipyyntö inspiroi stoalaisia, kristittyjä, 1700-luvun **Valot**, moderneja vastarintataistelijoita. Se korjaa kuvan: viisas mies, joka pitää totuudesta mieluummin kuin mukavaa selviytymistä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä tili ei ole neutraali tili. Platon valitsee, mitä muistaa: asenteen, ei vain väitteitä. Sokrateen jälkeen filosofointi tarkoittaa myös sen hyväksymistä, että totuus voi olla kallista kaupungissa. Anteeksipyyntö on edelleen ensimmäinen suuri teksti, jossa ajatus puolustaa itseään valtaa vastaan."
+        },
+        {
+          "type": "takeaway",
+          "text": "Sokrateksen **Apologia** näyttää miehen, joka kieltäytyy kerjäämästä henkensä edestä. Elokuvassa **399** Ateena tappaa ongelmallisen kansalaisen ja keksii itsestään huolimatta vapaan ajattelun marttyyrin."
+        }
+      ]
+    }
+  ]
+}

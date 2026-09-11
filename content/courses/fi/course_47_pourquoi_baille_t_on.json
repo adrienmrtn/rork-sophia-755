@@ -1,0 +1,96 @@
+{
+  "id": "course_47_pourquoi_baille_t_on",
+  "title": "Miksi haukottelemme?",
+  "subtitle": "Keho & aivot",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Kaikki haukottelevat: ihmiset, koirat, joskus jopa sikiöt. Se ei välttämättä johdu \"hapen puutteesta\". Tässä ovat vahvimmat johdot.",
+  "hero": {
+    "image": "pourquoi_baille_t_on",
+    "ratio": "16:9",
+    "hook": "Sinä haukot. Naapuri haukottelee. Eikä se (melkein) ole tarttuvaa sattumalta."
+  },
+  "sections": [
+    {
+      "id": "course_47_pourquoi_baille_t_on_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Haukottelu tuntuu arkipäiväiseltä. Se on kuitenkin monimutkainen refleksi: leuka, rintakehä, pallea, koko keho osallistuu. Leijonat, koirat, ihmiset: monet eläimet haukottelevat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sanoimme pitkään: \"Se on enemmän happea\". Tämä ajatus on nyt suurelta osin hylätty. Nykyaikaiset selitykset ovat mielenkiintoisempia."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p1",
+      "title": "Ei (etenkään) hapelle",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kokeet ovat osoittaneet, että hapen lisääminen ilmassa ei estä haukottelua. Vähennä myös hiilidioksidia hieman. Haukottelu ei siis ole yksinkertaista \"ilman tavoittelua\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vahva johtoasema tänään: haukottelu auttaa **hehkulamput**. Hengittämällä leveästi ja venyttämällä kasvoja \"tuuletamme\" ja jäähdytämme hieman päätä, varsinkin kun olemme väsyneitä."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p2",
+      "title": "Miksi se on tarttuvaa?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "contagious_yawning_people_group",
+          "ratio": "4:3",
+          "caption": "Se, että joku näkee haukottelevan, riittää usein laukaisemaan refleksin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihmisillä sanan \"haukotteleminen\" näkeminen, kuuleminen tai jopa lukeminen voi laukaista haukottelun. Se ei ole vain typerä jäljitelmä: se vaikuttaa myös **empatiaa** ja [[Peilihermosolut ja tarttuvuus]] aivopiireihin, hermosoluihin, jotka aktivoituvat kun toimimme... tai kun näemme jonkun toimivan."
+        },
+        {
+          "type": "funFact",
+          "text": "Pienet lapset haukottelevat vähän tartunnan vuoksi. Tämä herkkyys tulee myöhemmin, yhdessä tiettyjen sosiaalisten taitojen kanssa."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p3",
+      "title": "Haukotamme jo ennen syntymäämme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sikiöt haukottelevat noin **11. raskausviikolta**. Tässä iässä heidän keuhkot eivät vielä hengitä ilmaa. Joten jälleen kerran, kyse ei ole \"hapen loppumisesta\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sikiöllä haukottelu voi auttaa leuan ja kasvolihasten kehittymistä."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p4",
+      "title": "Haukotella pysyäksesi hereillä?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Haukottelemme usein, kun olemme väsyneitä... mutta myös juuri ennen koetta tai kun olemme kyllästyneitä yrittäessämme pysyä keskittyneenä. Venyttely voi stimuloida hermostoa ja auttaa **pysymään valppaana**."
+        },
+        {
+          "type": "takeaway",
+          "text": "Haukottelu ei todennäköisesti ole hapenpuutetta. Sitä käytetään mieluummin aivojen säätelyyn (lämpötila, valppaus) ja ihmisillä se leviää myös sosiaalisen tartunnan kautta."
+        }
+      ]
+    }
+  ]
+}

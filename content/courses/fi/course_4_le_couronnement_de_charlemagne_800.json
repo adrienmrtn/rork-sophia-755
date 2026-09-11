@@ -1,0 +1,132 @@
+{
+  "id": "course_4_le_couronnement_de_charlemagne_800",
+  "title": "Kaarle Suuren kruunajaiset",
+  "subtitle": "800",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Joulupäivänä 800 Roomassa paavi Leo III asettaa kruunun Kaarle Suuren päähän. Länsi löytää keisarin ja Eurooppa kestävän mallin.",
+  "hero": {
+    "image": "le_couronnement_de_charlemagne",
+    "ratio": "16:9",
+    "hook": "Joulu 800: Frankin kuninkaasta tulee keisari, ja Eurooppa muuttaa vuosisataa."
+  },
+  "sections": [
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**joulukuu 25. päivänä 800** Pietarinkirkossa Roomassa paavi **Leo III** asettaa kruunun frankkien kuninkaan **Charles**:n päähän. Tämä ele väittää palauttavansa Rooman valtakunnan, joka oli kadonnut lännestä **476**:n jälkeen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se ei ole vain seremonia. Se on kunnianhimon synty: latinalainen kristillinen valtakunta, joka eroaa Bysantista (Itä-Rooman valtakunta), joka luo Manner-Euroopan hallinnollisen ja kulttuurisen perustan."
+        }
+      ]
+    },
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_p1",
+      "title": "Neljäkymmentä vuotta valloitusta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Charlemagne** perii Frankin valtakunnan **768**:ssä. Veljensä kuoleman jälkeen hän valloittaa armottomasti. Kolmekymmentä vuotta sotia **saksia**, nykyisen Saksan germaanisia kansoja vastaan, mukaan lukien pakkokäännyttäminen. **774**:ssä hän kukisti Pohjois-Italian [[Lombard]]-valtakunnan. Hän valtasi Baijerin, murskasi [[avarit]], Tonavan nomadiratsastajat, ja houkutteli Espanjan: Roncesvallesin (**778**), Pyreneiden solan väijytys, tuli legendaan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Huipussaan imperiumin pinta-ala oli noin **1,1 km²**. Liian leveä kestämään yksin miekalla. Charlesin on keksittävä toinen tapa hallita."
+        },
+        {
+          "type": "funFact",
+          "text": "Charlemagne oli noin **1,84 m**, poikkeuksellinen pituus aikana, jolloin miesten keskiarvo oli noin **1,65 m**."
+        }
+      ]
+    },
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_p2",
+      "title": "Hallitse ja lue",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Imperiumin ylläpitämiseksi Charlemagne luottaa paikallisten kuvernöörien [[Laskee]] ja [[Missi Dominici]], tarkastajat, jotka on lähetetty pareittain valvomaan provinsseja. Sen pääkaupungissa Aachenissa palatsikoulua johti englantilainen tutkija [[Alcuin Yorkista]]. Palautamme latinaa, koulutamme pappeja, keksimme **Caroline-kirjoituksen**, joka on luettavissa kaikkialla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Luostarit kopioivat muinaisia tekstejä. Taloudellisesti [[Hopea denaari]] korvaa liian harvinaisen kullan: vakaa valuutta päivittäiseen kaupankäyntiin. Se on **Karolingian Renessanssi**: vähemmän taiteellista loistoa kuin järjestystä ja hyödyllistä tietoa."
+        },
+        {
+          "type": "funFact",
+          "text": "Jotta hänen lakejaan ymmärrettäisiin, Kaarle Suuri vaati, että ne luetaan ääneen kansalle markkinapäivinä tai messun jälkeen."
+        }
+      ]
+    },
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_p3",
+      "title": "Joulu 800: epäselvä kruunaus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**799**:ssa Roomassa hyökätty Leo III pakeni Charlesin luo. Kuningas kunnosti sen. Joulupäivänä paavi kruunasi hänet **\"roomalaisten keisariksi\"**. Hänen elämäkerransa Eginhardin mukaan Charles olisi hämmentynyt: asettaessaan kruunun itse paavi vihjaa, että valta tulee kirkosta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bysantin pääkaupungissa Konstantinopolissa kuuluu anastushuutoja. Heille on olemassa vain yksi Rooman keisari. Kaarle Suuri luo toisen navan. Latinalainen länsi puolustaa itsenäisyyttään. Syntyi idea [[Pyhä Rooman valtakunta]], joka kestäisi vuosisatoja."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "768",
+              "title": "Adventti",
+              "detail": "Kaarle Suuri perii Frankin valtakunnan."
+            },
+            {
+              "date": "774",
+              "title": "Lombardien valloitus",
+              "detail": "Hän ottaa Pohjois-Italian kruunun."
+            },
+            {
+              "date": "800",
+              "title": "Kruunaus Roomassa",
+              "detail": "Leo III teki hänestä keisarin joulupäivänä."
+            },
+            {
+              "date": "814",
+              "title": "Kaarle Suuren kuolema",
+              "detail": "Louis hurskas seuraa häntä."
+            },
+            {
+              "date": "843",
+              "title": "Verdunin sopimus",
+              "detail": "Imperiumi on jaettu hänen pojanpoikiensa kesken."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_p4",
+      "title": "Rikkoutunut valtakunta, elävä idea",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**814** jälkeen yksikkö ei kestä. Kirjassa **843** Verdunin sopimus jakaa valtakunnan Kaarle Suuren pojanpoikien kesken: Ranska lännessä, Saksa idässä ja kiistanalainen alue keskellä. Lordien paikallinen valta saa jalansijaa. Mutta maakunnat, kirjoittaminen, valuutta ja keisarillinen unelma säilyvät."
+        },
+        {
+          "type": "paragraph",
+          "text": "Keisarillinen arvonimi on voimassa **1806** asti. Kaarle Suuresta tuli \"Euroopan isä\": ei siksi, että hänen valtakuntansa piti, vaan koska hän antoi lännelle ensimmäisen suuren yhteisen kehyksen."
+        },
+        {
+          "type": "takeaway",
+          "text": "**25. joulukuuta 800** Kaarle Suuri palauttaa imperiumin lännessä. Projektista **843** erotettu projekti jätti kuitenkin Euroopan ensimmäiset yhtenäisyyden työkalut: hallinto, kirjoittaminen, valuutta ja keisarillinen idea."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "course_58_la_structure_de_l_adn_watson_crick_1953",
+  "title": "DNA:n rakenne",
+  "subtitle": "1953",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Vuonna 1953 Watson ja Crick kuvasivat DNA:n kaksoiskierrettä. Tämän loiston takana on Rosalind Franklinin tärkeä työ.",
+  "hero": {
+    "image": "la_structure_de_l_adn",
+    "ratio": "16:9",
+    "hook": "Molekyylin muoto… ja perinnöllisyyden salaisuus."
+  },
+  "sections": [
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tiesimme, että piirteet siirtyvät vanhemmilta lapsille. Mutta mikä kemiallinen esine kantaa tätä tietoa? 1900-luvun puolivälissä vastaus selkiytyi: **DNA**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Julkaisussa **1953**, **James Watson** ja **Francis Crick** julkaisivat kuuluisan mallin: **kaksoispotkurin**. Tämä lomake selittää, kuinka DNA voi kopioida itseään."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
+      "title": "Tuen löytäminen perinnöllisyydelle",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DNA (deoksiribonukleiinihappo) on pitkä molekyyli, joka löytyy soluistamme. Se sisältää kemiallisia \"kirjaimia\", jotka muodostavat koodin. Mutta 1940- ja 1950-luvuilla emme vielä tienneet sen 3D-muotoa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ilman lomaketta on vaikea ymmärtää, kuinka tämä koodi voidaan monistaa jokaisessa solujaossa."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p2",
+      "title": "Valokuva, joka muuttaa kaiken",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "rosalind_franklin_photo_51_x_ray",
+          "ratio": "4:3",
+          "caption": "Rosalind Franklinin valokuva 51 paljastaa kierteisen rakenteen."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Rosalind Franklin**, fyysikko ja kemisti, saa röntgenkuvia DNA:sta. Hänen kuuluisassa **Kuva 51** -kuvassa on selviä todisteita kierteestä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Watson ja Crick näkevät nämä tiedot (olosuhteissa, joita pidetään nyt epäreiluina Franklinille) ja rakentavat mallinsa. Franklin kuoli vuonna 1958; Vuoden 1962 Nobel menee Watsonille, Crickille ja Wilkinsille, ei hänelle."
+        },
+        {
+          "type": "funFact",
+          "text": "Franklin teki myös suurta työtä virusten parissa. Sen roolia DNA:ssa on pitkään aliarvioitu suosituissa tileissä."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
+      "title": "Miksi kaksoiskierteellä on väliä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "dna_double_helix_model_watson_crick",
+          "ratio": "4:3",
+          "caption": "Kaksi toisiaan täydentävää säiettä: kopiosta tulee kuviteltavissa oleva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kaksi säiettä kietoutuu toistensa ympärille. Kirjaimet ovat vastakkain pareittain. Kun säikeet eroavat toisistaan, kukin voi toimia mallina toistensa rekonstruoinnissa. Perinnöllisyydestä tulee ymmärrettävä kemiallinen mekanismi."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
+      "title": "Moderni biologia alkaa tästä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tästä löydöstä syntyy moderni genetiikka, sekvensointi, DNA-testit, geeniterapiat. Ja myös eettiset keskustelut: mitä tehdä tällä vallalla?"
+        },
+        {
+          "type": "takeaway",
+          "text": "Teoksen **1953** kaksoiskierremalli selittää, kuinka DNA tallentaa ja kopioi tietoa elävistä olennoista. Franklin esitti ratkaisevia todisteita liian kauan pyyhittynä kertomuksesta."
+        }
+      ]
+    }
+  ]
+}

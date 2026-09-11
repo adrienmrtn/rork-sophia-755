@@ -1,0 +1,106 @@
+{
+  "id": "course_146_hitchcock_et_le_suspense",
+  "title": "Hitchcock ja põnevus",
+  "subtitle": "1899-1980",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**Alfred Hitchcock** leiutab kaasaegse põnevuse: annab publikule teavet, mida tegelastel pole. *Psühholoogia*, *Vertiigo* või *Tagaakna* abil manipuleerib ta meie pilku.",
+  "hero": {
+    "image": "hitchcock_et_le_suspense",
+    "ratio": "16:9",
+    "hook": "Tõeline põnevus ei üllata: see võimaldab näha pommi laua all."
+  },
+  "sections": [
+    {
+      "id": "course_146_hitchcock_et_le_suspense_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Alfred Hitchcock** (1899-1980) on hüüdnimega \"põnevuse meister\". Rohkem kui viiekümnes filmis muutis ta põneviku manipuleerimise kunstiks. *Psühholoogia*, *Vertiigo*, *Tagaaken*: kaamera ei jutusta iga kord ainult lugu. Ta mängib meie närvidega."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tema lemmikteema pole kuritegevus. See on välimus: süütunne, kinnisidee, vuajerism. Hitchcock filmib vaatajat sama palju kui tegelasi."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p1",
+      "title": "Üllatus versus põnevus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Raamatus **1966** selgitab Hitchcock oma meetodit prantsuse kriitikule ja seejärel filmitegijale [[François Truffaut]]. Tema sõnul on **üllatus** pomm, mis plahvatab ilma hoiatuseta: lühike šokk. **põnevus** näitab publikule pommi, samal ajal kui tegelased seda ignoreerivad. Pinge kestab. Me muutume kaasosalisteks ja jõuetuks."
+        },
+        {
+          "type": "image",
+          "asset": "alfred_hitchcock_portrait_director",
+          "ratio": "4:3",
+          "caption": "Hitchcock: nägu, siluett, ülemaailmne põnevuse bränd."
+        },
+        {
+          "type": "funFact",
+          "text": "Süžee edasiviimiseks kasutab ta sageli [[MacGuffin]]: objekti või saladust, mis motiveerib tegelasi, kuid mille täpne olemus ei oma suurt tähtsust. Tähtis on jaht."
+        },
+        {
+          "type": "paragraph",
+          "text": "See teabe asümmeetria on selle grammatika. Niipea, kui me teame rohkem kui kangelane, kardame tema pärast."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p2",
+      "title": "Tehnilised leiutised ärevuse filmimiseks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Filmis **1948** koos *Köis*iga simuleerib Hitchcock ainulaadset [[jadavõte]]: näib, et film on üles võetud ühe hooga. Rullid peavad vastu vaid kümme minutit, nii et lõiked peidab ta selja või tumeda mööblieseme taha. Mõju on lämmatav: me jääme mõrvaritega luku taha."
+        },
+        {
+          "type": "image",
+          "asset": "hitchcock_vertigo_james_stewart_kim_novak_film",
+          "ratio": "4:3",
+          "caption": "Vertiigo: peapööritus, mis on filmitud ruumi moonutamisena."
+        },
+        {
+          "type": "paragraph",
+          "text": "Filmis **1958** leiutas ta *Vertiigo* jaoks [[Dolly Zoom]]: kaamera liigub suumi edasiliikumise ajal tagasi (või vastupidi). Ruum on moonutatud. Me ei näe enam peapööritust. Me tunneme seda."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p3",
+      "title": "Me kõik oleme piilujad",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Filmis *Tagaaken* (**1954**), murtud jalaga fotograaf luurab oma naabreid. Ta on pimedas pealtvaataja duubel. Hitchcock kasutab [[Subjektiivne kaamera]]: me näeme täpselt seda, mida näeb kangelane, ei midagi enamat."
+        },
+        {
+          "type": "paragraph",
+          "text": "See samastumine on nii moraalne kui ka visuaalne. Otsime vihjeid, kuid jagame ka süütunnet, et vaatame seda, mis meid ei puuduta. Hitchcock segab põnevust ja [[psühhoanalüüs]]: maetud hirmud, keelatud soovid, topeltidentiteedid."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p4",
+      "title": "Bränd, muusika, pärand",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hitchcock muutis oma nime kaubamärgiks, kuni tema telesari *AAlfred Hitchcock esitleb*. *Psühholoogia* jaoks keelab ta sisenemise pärast seansi algust: saladusest saab sündmus. Tema koostöö helilooja [[Bernard Herrmann]] ühendab muusika ja [[toimetamine]], et kiirendada publiku pulssi."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hitchcock kodifitseeris kaasaegse põnevuse: vaataja teavitamine, tema pilgu suunamine ja hirmu muutmine kontrollitud naudinguks. Aastakümneid hiljem võlgneb põnevik ikka veel oma grammatika talle."
+        }
+      ]
+    }
+  ]
+}

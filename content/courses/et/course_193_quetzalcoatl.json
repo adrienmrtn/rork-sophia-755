@@ -1,0 +1,140 @@
+{
+  "id": "course_193_quetzalcoatl",
+  "title": "Quetzalcoatl",
+  "subtitle": "Suleline madu",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Quetzalcoatl, suleline madu, on Mesoameerika tsivilisatsiooni jumal. Selle müüt ühendab endas loomise, paguluse ja saatusliku kohtumise Cortésiga.",
+  "hero": {
+    "image": "quetzalcoatl",
+    "ratio": "16:9",
+    "hook": "Jumal, kuningas ja ennustus: suleline madu hõlmab Mehhiko ajalugu kaks tuhat aastat."
+  },
+  "sections": [
+    {
+      "id": "course_193_quetzalcoatl_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Quetzalcoatl**, \"Suleline madu\", on üks Kolumbuse-eelse Mehhiko rikkamaid tegelasi. Teda on austatud rohkem kui kaks aastatuhandet alates [[Teotihuacán]]-st, keskplatool asuvast suurest linnast kuni asteekideni ja maiade seas nimega [[Kukulkán]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta ühendab maa (madu) ja taeva (sulgi). Tsivilisatsiooni, teadmiste ja moraalse korra jumal, tema müüt ristub tõelise ajalooga: Hispaania vallutus **1519**."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p1",
+      "title": "Jumal, kes leiutas maisi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Nahuatl]] pärineb **Quetzalcoatl** roheliste sulgedega linnult [[quetzal]] ja madult *coatl*. See liit muudab selle sillaks inimliku ja jumaliku vahel."
+        },
+        {
+          "type": "image",
+          "asset": "quetzalcoatl_feathered_serpent_aztec_sculpture",
+          "ratio": "4:3",
+          "caption": "Quetzalcoatl, suleline madu: maa ja taevas põimuvad."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Viie päikese kosmogoonia]] laskub ta surnute maailma [[Mictlán]], et koguda endiste inimeste luid. Ta äratab nad oma verega ellu. Seejärel varastab ta sipelgatelt **mais**: Mehhiko põhitoidu. Tuulejumalana avab ta tee ka [[Tlaloc]] vihmadele."
+        },
+        {
+          "type": "funFact",
+          "text": "Ketsa sabasulgede mõõtmed võivad olla **60 cm**. Maiade ja asteekide seas oli linnu tapmise eest karistatav surmanuhtlus: sellelt võeti paar sulge, seejärel lasti lahti."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p2",
+      "title": "Tula kuningas-preester",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Müüdil on ka ajalooline pale: **Topiltzin Quetzalcoatl**, **Tula** kuningas-preester 10. sajandil. Ta oleks tahtnud reformida kultust ja asendada inimohvrid lillede ja liblikate ohverdamisega."
+        },
+        {
+          "type": "image",
+          "asset": "tula_toltec_pyramid_warriors_sculpture_mexico",
+          "ratio": "4:3",
+          "caption": "Tula, tolteekide linn, mis on seotud Quetzalcoatli valitsemise ja langemisega."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tema rivaal **Tezcatlipoca** sunnib teda jooma pulquet ehk kääritatud jooki. Kuningas alandatuna pagendati itta. Legendi järgi lubab ta “Un Reed” aasta pärast tagasi tulla. Sellel lubadusel on kaalu."
+        },
+        {
+          "type": "funFact",
+          "text": "Pärast lahkumist saab Quetzalcoatlist mõnikord Hommikutäht: planeet Veenus. Jumal ei sure, ta muudab kuju."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p3",
+      "title": "1519: kui müüt kohtub Cortésiga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1519** saabub **Hernán Cortés** itta, asteekide kalendri „Ühe pilliroo” aastasse, mil oodati jumala tagasitulekut. Keiser **Moctezuma II** kõhkleb: kas võidelda sissetungijaga või tervitada jumalikkust?"
+        },
+        {
+          "type": "image",
+          "asset": "herna_u0301n_corte_u0301s_arrival_mexico_1519_moctezuma_painting",
+          "ratio": "4:3",
+          "caption": "1519: Cortés'i saabumine vastab jumaliku tagasituleku lubadusele."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta saadab kingitusi kulda ja sulgi. [[Konkistadoorid]] näevad seda kui kutset. Tõene või tagantjärele võimendatud müüt muutub asteekide pealinna [[Tenochtitlán]] sügisel psühholoogiliseks relvaks."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Müüt",
+              "title": "Looja",
+              "detail": "Surnute luud, jumalik veri, maisi kingitus."
+            },
+            {
+              "date": "10. sajand",
+              "title": "Tula pagendus",
+              "detail": "Preester-kuningas läheb itta."
+            },
+            {
+              "date": "1519",
+              "title": "Cortes",
+              "detail": "Oodatud tootlusest saab vallutus."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p4",
+      "title": "Sümbol, mis ei sure kunagi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pärast vallutamist Quetzalcoatl ei kadunud. Mõned mungad usuvad, et näevad seal apostlit. Hiljem tegi iseseisev Mehhiko sellest Kolumbuse-eelse suuruse embleemi. 20. sajandi muralistid, nagu Diego Rivera, maalivad seda kui riigi hinge."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ka tänapäeval väljendab suleline madu identiteeti: juured maa sees, ambitsioonid on pööratud taeva poole."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Quetzalcoatl**, suleline madu, on Mesoameerika tsivilisatsiooni jumal. Looja, pagendatud kuningas, seejärel saatuslik ennustus **1519**, ta jääb Mehhiko keskseks sümboliks."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "course_17_la_revolution_russe_1917",
+  "title": "Venäjän vallankumous",
+  "subtitle": "1917",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Alle kahdeksassa kuukaudessa Venäjä siirtyi tsaarien vallasta bolshevikkien valtaan. 1917 keksii mallin, joka jakaa maailman vuosikymmeniksi.",
+  "hero": {
+    "image": "la_revolution_russe_1917",
+    "ratio": "16:9",
+    "hook": "Kahdeksassa kuukaudessa kaadetaan tuhat vuotta vanha valtakunta... ja 1900-luku jaetaan kahtia."
+  },
+  "sections": [
+    {
+      "id": "course_17_la_revolution_russe_1917_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vuonna **1917** Venäjä muuttui alle kahdeksassa kuukaudessa absoluuttisesta monarkiasta **bolshevikit**, **Vladimir Lenin**:n johtaman vallankumouksellisen puolueen johtamaan hallintoon. Tämä ei ole yksinkertainen kapina. Se on imperiumin romahtaminen sodan painon alla, sitten romahdus tyhjyyteen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä muutos keksii mallin, joka jakaa maailman suuren osan 1900-luvulta."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p1",
+      "title": "Venäjä hengästynyt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vuodesta 1914 lähtien mukana [[Ensimmäinen maailmansota]], Venäjä ei enää seuraa. Jo **1,7 millimetriä** kuollutta sotilasta. Kapinat. Pula jauhoista ja hiilestä **Petrogradissa**, pääkaupungissa (nykyinen Pietari). Tsaari **Nikolai II** kieltää Venäjän parlamentin [[Duma]] pyytämät uudistukset."
+        },
+        {
+          "type": "image",
+          "asset": "tsar_nicholas_ii_portrait",
+          "ratio": "4:3",
+          "caption": "Nikolai II, viimeinen tsaari monarkiassa, joka on loppumassa."
+        },
+        {
+          "type": "funFact",
+          "text": "Myrkky, jonka oli tarkoitus tappaa [[Rasputin]], vaikutusvaltainen hovin munkki, olisi neutraloitunut kakkujen sokerilla, jonne se oli liukastettu: legenda hänen salamurhastaan kertoo paljon valtaistuimen häpäisystä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ottamalla komennon **1915**:n edessä tsaari tulee yksin vastuuseen tappioista. Rasputinin vaikutus tsaarina **Alexandra** tuhosi lopulta keisarillisen perheen arvovallan."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p2",
+      "title": "Helmikuu: Romanovien loppu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Helmikuussa 1917** (Venäjällä silloin käytössä olleen [[Julian kalenteri]] mukaan, lännessä viivästyi useita päiviä) vallankumous alkoi leivästä. Työntekijät lähtevät kaduille. Varuskunta veljeytyy. Nikolai II luopui kruunusta **Maaliskuun 2. päivänä**: **Z** Romanovien dynastian 300 vuotta kestänyt hallituskausi päättyy."
+        },
+        {
+          "type": "image",
+          "asset": "russian_revolution_1917_petrograd",
+          "ratio": "4:3",
+          "caption": "Petrograd 1917: katu on valtaistuimen edelle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sitten tulee \"kaksoisvoima\". Toisaalta laillinen **Väliaikainen hallitus**. Toisaalta [[Petrogradin Neuvostoliitto]], työläisten ja sotilaiden neuvosto, joka valvoo tehtaita ja kasarmeja. **Aleksanteri Kerensky**, väliaikainen henkilö, pitää Venäjän sodassa. Ihmiset haluavat rauhaa, leipää ja maata."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p3",
+      "title": "Lokakuu: Lenin ottaa vallan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lenin palaa maanpaosta Saksan järjestämässä \"johtojunassa\", joka toivoo heikentävän Venäjää. Huhtikuusta lähtien hänen [[Huhtikuun opinnäytetyöt]] huusivat: **”Rauha, leipä, maa”**. [[Leon Trotski]], erinomainen järjestäjä, bolshevikit valmistelivat kapinan."
+        },
+        {
+          "type": "image",
+          "asset": "lenin_portrait",
+          "ratio": "4:3",
+          "caption": "Lenin, järjestäytyneen vallankaappauksen strategi."
+        },
+        {
+          "type": "funFact",
+          "text": "Kun Talvipalatsi valloitettiin, tsaarien viinikellarit olivat niin suuria, että vartijoita oli asetettava estämään vallankumouksen vajoaminen humalaan."
+        },
+        {
+          "type": "paragraph",
+          "text": "**marraskuun 7. päivän yönä 1917** (Venäjän kalenterin mukaan 25. lokakuuta) sillat, asemat ja lennättimet putosivat melkein ilman laukausta. Seuraavana on Talvipalatsi, väliaikaisen hallituksen kotipaikka. Sitten alkaa verinen sisällissota **1922** asti."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p4",
+      "title": "Neuvostoliiton syntymä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Cheka**, bolshevikkien poliittinen poliisi, käynnistää terrorin. Heinäkuussa **1918** keisarillinen perhe teloitettiin Jekaterinburgissa. [[Brest-Litovsk]] poistaa Venäjän sodasta raskaiden alueellisten menetysten kustannuksella. Vuonna **1922** syntyi **Neuvostoliitto**, ensimmäinen valtio, joka rakennettiin [[Marxismi-leninismi]]:lle, ideologialle, joka yhdistää Marxin ideat ja Leninin menetelmän."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "helmikuuta 1917",
+              "title": "Helmikuun vallankumous",
+              "detail": "Nikolai II:n luopuminen."
+            },
+            {
+              "date": "huhtikuuta 1917",
+              "title": "Huhtikuun opinnäytetyöt",
+              "detail": "Lenin kieltäytyy tekemästä kompromissia väliaikaisen kanssa."
+            },
+            {
+              "date": "loka/marraskuu 1917",
+              "title": "Valvonta",
+              "detail": "Bolshevikkivallankaappaus Petrogradissa."
+            },
+            {
+              "date": "maaliskuuta 1918",
+              "title": "Brest-Litovsk",
+              "detail": "Sodan loppu, alueelliset menetykset."
+            },
+            {
+              "date": "1922",
+              "title": "Neuvostoliiton syntymä",
+              "detail": "Uusi valtio perustetaan pysyvästi."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Vuonna **1917** tsarismin romahtaminen ja bolshevikkivallan valtaus muuttivat leipäkapinasta maailman ensimmäisen kommunistisen valtion syntymisen."
+        }
+      ]
+    }
+  ]
+}

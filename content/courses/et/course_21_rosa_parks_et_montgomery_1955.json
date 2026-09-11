@@ -1,0 +1,135 @@
+{
+  "id": "course_21_rosa_parks_et_montgomery_1955",
+  "title": "Rosa Parks ja Montgomery",
+  "subtitle": "1955",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "**1. detsember 1955**, õmbleja keeldub Montgomery bussis oma kohast loobumast. Tema vahistamine käivitas **381 päeva** boikoti ja muutis kodanikuõiguste liikumist.",
+  "hero": {
+    "image": "rosa_parks_et_montgomery_1955",
+    "ratio": "16:9",
+    "hook": "Ühest istmest keelduti, 381 päeva boikoteeriti ja segregatsioonist lähtuv lõuna hakkab vankuma."
+  },
+  "sections": [
+    {
+      "id": "course_21_rosa_parks_et_montgomery_1955_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1. detsember 1955** Alabama pealinnas Montgomerys keeldub 42-aastane õmbleja püsti tõusmast. Tema nimi: **Rosa pargid**. Valge reisija tahab oma kohta. Ta ütleb ei."
+        },
+        {
+          "type": "paragraph",
+          "text": "See pole kapriis. Ameerika lõunaosas eraldab seadus endiselt kõikjal mustad ja valged. Tema vahistamine kutsus esile bussiboikoti, mis kestis **381 päeva**. Noor, veel vähetuntud pastor **Martin Luther King Jr.** leidis seal oma hääle."
+        }
+      ]
+    },
+    {
+      "id": "course_21_rosa_parks_et_montgomery_1955_p1",
+      "title": "Lõuna pool lõigatud",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1950. aastate keskel elas lõuna [[Jim Crow]] seaduste alusel. Need reeglid kehtestavad rassilise lahususe: koolid, haiglad, purskkaevud, transport. Ülemkohtu otsuses **1896** kinnitas ülemkohtu otsus [[Plessy vs. Ferguson]] isegi ideed „eraldi, kuid võrdne”."
+        },
+        {
+          "type": "paragraph",
+          "text": "Montgomery bussides istuvad mustanahalised taga. Kui valge ala on täis, peavad keskel olevad püsti tõusma. Rosa Parks ei ole juhuslik reisija. Kodanikuõiguste ühenduse [[NAACP]] aktivist sai ta koolituse [[Highlanderi rahvakool]], kus õpetatakse vägivallatut vastupanu. Tema rahulikkus ja lugupidamine teevad temast ideaalse näo avalikuks võitluseks."
+        }
+      ]
+    },
+    {
+      "id": "course_21_rosa_parks_et_montgomery_1955_p2",
+      "title": "1. detsembri keeldumine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sel õhtul käsib autojuht James Blake neljal mustanahalisel reisijal ühe valge inimese eest välja astuda. Ainult Parks keeldub. Ta on vahistatud. Järgmisel päeval kutsuti lendlehtedel tema kohtuprotsessi päeval, detsembris **5**, busse boikoteerima."
+        },
+        {
+          "type": "funFact",
+          "text": "Üheksa kuud varem oli 15-aastane keskkooliõpilane **Claudette Colvin** juba keeldunud oma kohalt loobumast. Aktivistid ei olnud teda esile tõstnud: rasedana ja vallalisena peeti teda avaliku arvamuse veenmiseks liiga \"hapraks\"."
+        },
+        {
+          "type": "image",
+          "asset": "rosa_parks_arrest_montgomery_bus",
+          "ratio": "4:3",
+          "caption": "Rosa Parksi vahistamine, boikoti alguspunkt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Püsimiseks lõi kogukond Montgomery Improvement Associationi. Selle eesotsas: Martin Luther King Jr, 26-aastane pastor. 5. detsembril sõitsid bussid peaaegu tühjaks. See, mis pidi kestma ühe päeva, muutub üle aasta kestvaks seisakuks."
+        }
+      ]
+    },
+    {
+      "id": "course_21_rosa_parks_et_montgomery_1955_p3",
+      "title": "381 päeva ilma bussita",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mustanahalised moodustavad ligikaudu **75%** kasutajatest. Korraldame ühiselamut. Taksod langetavad hinnad piletihinnale. Järgnevad repressioonid: ahistamine, tühistatud kindlustus, ähvardused. 1956. aasta jaanuaris pandi Kingi maja dünamiidi alla. Killustikku silmitsi seistes kutsub ta rahunema. See hetk kehtestab oma moraalse autoriteedi."
+        },
+        {
+          "type": "image",
+          "asset": "montgomery_bus_boycott_1955",
+          "ratio": "4:3",
+          "caption": "Boikoti ajal sõitsid Montgomery bussid peaaegu tühjaks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bussiettevõte kaotab ligikaudu **65%** oma tuludest. Kesklinna ettevõtted kannatavad. Sellest, mis oli kohalik konflikt, saab üleriigiline asi: kaamerad üle kogu riigi jälgivad Montgomeryt."
+        }
+      ]
+    },
+    {
+      "id": "course_21_rosa_parks_et_montgomery_1955_p4",
+      "title": "Riigikohus otsustab",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Samal ajal tuginevad advokaadid kohtuotsusele [[Brown v. Haridusamet (1954)]], mis keelas koolides segregatsiooni. **13. november 1956**, Riigikohus kinnitab: Alabama busside eraldamine on põhiseadusega vastuolus. **21. detsembril** astuvad Parks and King sümboolselt bussi ette."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1. detsember 1955",
+              "title": "Rosa Parksi vahistamine",
+              "detail": "Ta keeldub oma kohta Montgomeryle loovutamast."
+            },
+            {
+              "date": "5. detsember 1955",
+              "title": "Boikoti algus",
+              "detail": "Bussid sõidavad tühjaks; King võtab liikumise juhtpositsiooni."
+            },
+            {
+              "date": "13. november 1956",
+              "title": "Riigikohtu otsus",
+              "detail": "Busside eraldamist peetakse põhiseadusega vastuolus olevaks."
+            },
+            {
+              "date": "21. detsember 1956",
+              "title": "Boikoti lõpp",
+              "detail": "381 päeva hiljem saavutati võit."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Hind on raske: Parks kaotab töö ja lahkub ähvarduste all Montgomeryst. Kuid mudel on käivitatud. See viib tulemuseni [[1964. aasta kodanikuõiguste seadus]], suur seadus, mis keelab eraldamise avalikes kohtades."
+        },
+        {
+          "type": "takeaway",
+          "text": "**381 päeva** jooksul tõestab Montgomery boikott, et organiseeritud kodanikuallumatus võib murda kohaliku segregatsiooni ja paljastada juhi: Martin Luther Kingi."
+        }
+      ]
+    }
+  ]
+}

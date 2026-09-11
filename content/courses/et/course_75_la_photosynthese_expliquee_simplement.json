@@ -1,0 +1,112 @@
+{
+  "id": "course_75_la_photosynthese_expliquee_simplement",
+  "title": "Fotosünteesi selgitatakse lihtsalt",
+  "subtitle": "Taimed ja energia",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Taimed teevad midagi erakordset: nad keedavad suhkrut valguse, vee ja õhuga. Ja nad annavad meile kingituseks hapnikku.",
+  "hero": {
+    "image": "la_photosynthese_expliquee_simplement",
+    "ratio": "16:9",
+    "hook": "Leht on päikeseköök: valgus, vesi, õhk... ja siin on suhkur."
+  },
+  "sections": [
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kujutage ette miniatuurset tehast igas lehes. Selleks on vaja kolme igapäevast koostisosa: **kerge päikesest**, **vesi** juurtest ja **CO₂** õhust. See tuleb välja koos **suhkur**-ga, et kasvada, ja väljastab **hapnikku**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seda saavutust nimetatakse **fotosünteesiks**. Ilma selleta pole metsi, hingavat hapnikku ega peaaegu mingit keerulist elu Maal."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p1",
+      "title": "Kus lehel see juhtub?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Taimerakus asuvad rohelised organellid **kloroplastid** [[Klorofüll]]. See pigment hõivab peamiselt valguse sinist ja punast tooni. Roheline naaseb: seepärast paistavad lehed meile rohelised."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_photosynthesis_sunlight_chloroplasts",
+          "ratio": "auto",
+          "caption": "Lehed püüavad fotosünteesiks päikesevalgust."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lihtne võrrand: CO₂ + vesi + valgus → suhkur + hapnik. Gaas siseneb väikeste pooride kaudu, [[stomata]]. Vesi tõuseb juurtest üles. Suhkur muutub puiduks, puuviljaks, juurteks; hapnik läheb õhku."
+        },
+        {
+          "type": "funFact",
+          "text": "Klorofüll \"keeldub\" rohelisest. Ta eelistab sinist ja punast, mis on efektiivsem elektronide ergutamiseks ja energiamasina käivitamiseks."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p2",
+      "title": "Kaks sammu: jäädvustage, seejärel meisterdage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Esiteks **kerge faas**. Valgus lõhub veemolekule. Hapnik pääseb välja. Energiat salvestatakse kahes keemilises „patareis”, **ATP** ja **NADPH**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Järgmiseks **tootmisfaas**, [[Calvini tsükkel]], mis sai nime keemiku **Melvin Calvin** järgi. Patareidest saadava energia abil koondab tehas süsinikdioksiidist süsiniku glükoosiks. Otsest päikesevalgust pole selles etapis vaja, kuid see sõltub täielikult sellest, mida valgus on varem tekitanud."
+        },
+        {
+          "type": "funFact",
+          "text": "Lehes leiduva süsiniku tee jälgimiseks kasutas Calvin aatomipommi uurimisel saadud radioaktiivseid isotoope. Nobeli preemia **1961**."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p3",
+      "title": "Kui hapnik muutis planeeti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Umbes **2,4 miljardit aastat tagasi** hakkasid fotosünteetilised bakterid **tsüanobakterid** massiliselt hapnikku eraldama. See on **Suur oksüdatsion**. Paljude tolleaegsete organisatsioonide jaoks oli see mürk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Siis võimaldas hapnik osoonikihti ja palju tõhusamat hingamist. Õhk, mida me hingame, on põhimõtteliselt miljardite aastate fotosünteesi \"jääkprodukt\"."
+        },
+        {
+          "type": "funFact",
+          "text": "Umbes **pool** Maa hapnikust pärineb ookeanide fütoplankton, mitte ainult metsad."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p4",
+      "title": "Tagasihoidlik väljund, tohutu roll",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leht muudab biomassiks ainult **1 kuni 3%** saadud päikeseenergiast. Maailma mastaabis piisab sellest toiduahelate toitmiseks ja tohutute CO₂ koguste neelamiseks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sellest ka huvi metsade, ookeanide... ja isegi kunstliku fotosünteesi vastu kliima jaoks. Merenälkjas *Elysia chlorotica* läheb nii kaugele, et \"varastab\" vetikatelt kloroplaste, et elada natuke päikeseenergial."
+        },
+        {
+          "type": "takeaway",
+          "text": "Fotosüntees muudab valguse, vee ja CO₂ suhkruks ning regenereerib hapnikku. See on päikeseenergia toiduvalmistamine, mis on peaaegu kogu elu aluseks."
+        }
+      ]
+    }
+  ]
+}

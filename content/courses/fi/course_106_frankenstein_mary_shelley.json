@@ -1,0 +1,121 @@
+{
+  "id": "course_106_frankenstein_mary_shelley",
+  "title": "Frankenstein, Mary Shelley",
+  "subtitle": "1818",
+  "subject": "litterature",
+  "subcategory": "Anglo-Saxons & world literature",
+  "description": "Vuonna 1818 18-vuotias Mary Shelley kirjoitti ensimmäisen suuren tieteisromaanin. Victor Frankenstein luo elämää ja pakenee sitten luotuaan: satu tieteestä ilman etiikkaa.",
+  "hero": {
+    "image": "frankenstein_mary_shelley",
+    "ratio": "16:9",
+    "hook": "Myrskyinen yö, runoilijoiden välinen veto ja myytti modernista Prometheuksesta."
+  },
+  "sections": [
+    {
+      "id": "course_106_frankenstein_mary_shelley_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Julkaistu **1818**, **Frankenstein tai moderni Prometheus** pidetään ensimmäisenä suurena **tieteiskirjallisuutta**-romaanina. **Mary Shelley** oli sen kirjoittaessaan vasta **18-vuotias** **[[Romantiikka]]** noirin ja aikansa tieteellisten keskustelujen risteyksessä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Victor Frankenstein ja hänen nimetön olemuksensa eivät ole vain goottilaisia kauhuhahmoja. He esittävät pysyvän kysymyksen: mitä tapahtuu tietoisuudelle, jonka luomme ja sitten hylkäämme? Romaani kyseenalaistaa **[[luojan vastuu (Modern Prometheus)]]**: emme voi luoda elämää ottamatta vastuuta sen seurauksista."
+        }
+      ]
+    },
+    {
+      "id": "course_106_frankenstein_mary_shelley_p1",
+      "title": "Genevejärven laboratorio: apokalyptinen synty",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1816**:ssa **Tambora**-tulivuoren purkaus Indonesiassa syöksyi Euroopan **[[\"Vuosi ilman kesää\" (1816)]]**: harmaa taivas, kadonneet sadot, maailmanloppu ilmapiiri. Mary Shelley oleskelee paikassa **Villa Diodati** Genevejärvellä **Percy Shelley**:n ja **Lordi Byron**:n kanssa. Tylsyyden lievittämiseksi Byron tarjoaa pelottavan tarinakilpailun."
+        },
+        {
+          "type": "image",
+          "asset": "mary_shelley_portrait_painting",
+          "ratio": "4:3",
+          "caption": "Mary Shelley, myytin kirjoittaja, joka menee paljon goottilaisen kauhun ulkopuolelle."
+        },
+        {
+          "type": "image",
+          "asset": "lake_geneva_villa_diodati_storm",
+          "ratio": "16:9",
+          "caption": "Villa Diodati: Frankensteinin syntymä vuoden 1816 myrskyssä."
+        },
+        {
+          "type": "funFact",
+          "text": "John Polidori, Byronin lääkäri, kirjoitti myös modernin vampyyrin perustamistekstin Diodatissa ennen Draculaa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mary Shelley on saanut inspiraationsa **[[Galvanismi]]**:stä, näistä kokeista, jotka näyttivät herättävän ruumiiden lihaksia. Päiväunelmassa hän näkee opiskelijan olennon edessä, joka herää eloon hänen silmiensä edessä. Yksin osallistujien joukossa hän näkee vedon loppuun asti ja tuottaa mestariteoksen."
+        }
+      ]
+    },
+    {
+      "id": "course_106_frankenstein_mary_shelley_p2",
+      "title": "Victor Frankenstein tai tieteellinen kauhu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Victor Frankenstein** ilmentää **[[Hubris]]**: kunnianhimoa, joka uhmaa luonnollista järjestystä. **Ingolstadt** hän etsii \"elämän salaisuutta\", ei rikastua, vaan tullakseen **Moderniksi Prometheukseksi**, kuten kreikkalainen titaani, joka varasti tulen jumalilta. Kun hänen olentonsa herää, unelma muuttuu välittömästi painajaiseksi."
+        },
+        {
+          "type": "image",
+          "asset": "frankenstein_monster_illustration_1831",
+          "ratio": "4:3",
+          "caption": "Shelleyn olento: pelottava, mutta ennen kaikkea kaunopuheinen ja tietoinen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Victor pakenee inhotessaan luomansa rumuutta. Hän hylkää keinotekoisen \"poikansa\": tämä pelkuruus, enemmän kuin itse luomistoimi, laukaisee tragedian. Shelley osoittaa, että tiede ilman omaatuntoa tuomitsee luojan yhtä paljon kuin hylätyn olennon."
+        }
+      ]
+    },
+    {
+      "id": "course_106_frankenstein_mary_shelley_p3",
+      "title": "Olennon herääminen: Nimetön tietoisuus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Romaanin omaperäisyys piilee olennon äänessä. Älykäs ja kaunopuheinen hän oppi tarkkailemalla maanviljelijöiden perhettä ja lukemalla **Milton**:n **[[Kadonnut paratiisi]]**. **[[Tabula rasa]]**:n mukaan \"hyväksi\" syntynyt hän näkee itsensä turmeltuneena miesten väkivaltaisesta hylkäämisestä."
+        },
+        {
+          "type": "quote",
+          "text": "Olen huono, koska olen onneton.",
+          "attribution": "Mary Shelley, Frankenstein"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hän pyytää kumppania, jotta hän ei enää kärsi yksin; Victor kieltäytyy pelosta. Joten hän tuhoaa kaiken, mitä hän rakastaa supistaakseen hänet omaan yksinäisyyteen. Romaanista tulee pohdiskelu **[[Sosiaalinen determinismi]]**: yhteiskunta luo toisinaan hirviöitä sulkemalla pois erilaiset."
+        }
+      ]
+    },
+    {
+      "id": "course_106_frankenstein_mary_shelley_p4",
+      "title": "Moderni myytti ja sen universaali jälkipolvet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Romaani päättyy **Arktinen**, Victor on kuollut, olento katoaa sumuun ja lupaa tuhota itsensä. Nykyään \"Frankenstein\" tarkoittaa mitä tahansa teknologiaa, joka vältetään keksijältä: GMO:t, tekoäly, geenitekniikka. Shelley odottaa **[[Posthumanismi]]**."
+        },
+        {
+          "type": "funFact",
+          "text": "Populaarikulttuurissa hirviöstä käytetään usein nimitystä \"Frankenstein\". Todellisuudessa Frankenstein on luoja: olennolla ei ole nimeä, merkki Victorin isyyskiellosta."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Frankenstein** muistuttaa meitä siitä, että emme voi luoda elämää ottamatta vastuuta sen seurauksista. Todellinen hirviö ei ole rumuus, vaan synnyttämämme luopuminen."
+        }
+      ]
+    }
+  ]
+}

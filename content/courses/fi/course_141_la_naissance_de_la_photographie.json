@@ -1,0 +1,131 @@
+{
+  "id": "course_141_la_naissance_de_la_photographie",
+  "title": "Valokuvauksen synty",
+  "subtitle": "1839",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**1839**:ssä useat keksijät löysivät vihdoin, kuinka kuva liitetään lautaselle. Alle vuosisadassa valokuvaus on muuttanut tapaamme nähdä, muistaa ja uskoa.",
+  "hero": {
+    "image": "la_naissance_de_la_photographie",
+    "ratio": "16:9",
+    "hook": "Kuinka kemiallinen keksintö varasti maalauksen monopolin todellisuuteen."
+  },
+  "sections": [
+    {
+      "id": "course_141_la_naissance_de_la_photographie_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Taiteilijat ovat vuosisatojen ajan käyttäneet [[camera obscura]]:tä: tummaa laatikkoa, joka heijastaa ulkomaailman seinälle. Ongelma pysyy samana: kuva katoaa heti, kun sammutat valon. Vuonna **1839** valokuvaus syntyi virallisesti. Se ei ole yhden neron työ, vaan kilpailu ranskalaisten ja brittiläisten keksijöiden välillä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alle vuosisadassa tämä prosessi vapautti maalauksen dokumentin roolistaan ja siitä tuli ensimmäinen joukkoviestintä. Se muuttaa suhdettamme aikaan, muistiin ja visuaaliseen totuuteen."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p1",
+      "title": "Niépcestä dagerrotypiaan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kaikki alkaa **Nicéphore Niépce**:stä, ranskalaisesta keksijästä. **1826-1827**:n ympärille hän korjaa ensimmäisen pysyvän kuvan: *Näytä Lihavoitu*:n ikkunasta. Hän päällystää tinalevyn [[Juudean bitumi]], valossa kovettuvalla tervalla. Valotus kestää noin **8 tuntia**: aurinko ehtii valaista rakennusten molemmin puolin."
+        },
+        {
+          "type": "image",
+          "asset": "niepce_first_photograph_view_from_window_gras",
+          "ratio": "4:3",
+          "caption": "Vanhin tunnettu valokuva, jonka Niépce on ottanut ikkunastaan."
+        },
+        {
+          "type": "funFact",
+          "text": "Tässä kuvassa kahden julkisivun varjot näkyvät yhtä aikaa: kuvaus kesti niin kauan, että aurinko kiersi taivaalla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niépcen kuoleman jälkeen hänen työtoverinsa **Louis Daguerre** havaitsi jodin ja elohopeahöyryjen vaikutuksen hopeaan. Hän kehitti **daguerreotyyppi**, joka esiteltiin tiedeakatemiassa **1839**. Englannissa **William Fox Talbot** kehitti samanaikaisesti [[William Fox Talbotin kalotyyppi]], jonka avulla negatiivista voidaan tehdä useita kopioita."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p2",
+      "title": "Muotokuva kaikille, todiste kaikille",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vuodesta **1840** valokuvaus lähti laboratorioista. Siihen asti muotokuvasi oli luksusta varattu niille, jotka pystyivät maksamaan maalarille. Studioiden ja [[Carte-de-visite]]:n, pienen, edullisen muodon, ansiosta porvaristo ja sitten työväenluokat pääsevät käsiksi omakuvaan."
+        },
+        {
+          "type": "image",
+          "asset": "louis_daguerre_daguerreotype_silver_plate",
+          "ratio": "4:3",
+          "caption": "Daguerrotypia: ainutlaatuinen kuva, silmiinpistävällä yksityiskohdalla, hopealevyllä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Valokuvasta tulee myös todiste. Krimin sodan aikana (**1855**) **Roger Fenton** raportoi kuvia edestä. Yhdysvaltain sisällissodan aikana **Matthew Brady** kuvasi sotilaita ja taistelukenttiä. Tapahtumaa ei enää vain kerrota: se näytetään."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p3",
+      "title": "Kun maalaus on keksittävä uudelleen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jos kone kopioi kasvot paremmin kuin maalari, mitä hyötyä maalista enää on? Se on [[Valokuvauksen vaikutus figuratiiviseen maalaukseen]]: figuratiivinen taide menettää monopolinsa todellisuuden suhteen. Tästä velvollisuudesta vapautuneet taiteilijat tutkivat jotain muuta: [[Impressionismi]]:n valotunnelmaa, sitten [[Kubismi]]:n avulla muotojen muodonmuutoksia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Valokuvaus vaatii vähitellen oman kielensä: kehystys, valo, hetki. Se ei ole enää pelkkä kopio maailmasta. Siitä tulee oma taideteos."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p4",
+      "title": "Kodak ja kuvakulttuuri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1800-luvun lopulla Kodakin perustaja George Eastman korvasi raskaat lasilevyt joustavalla kalvolla. Laitteesta tulee kannettava. Slogan \"Sinä painat nappia, me teemme loput\" merkitsee amatöörin syntymää. Perhealbumi ja globaali raportti syntyvät yhdessä."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1826",
+              "title": "Ensimmäinen kuva Niépcestä",
+              "detail": "Näkymä Grasin ikkunasta tunnin valotuksen jälkeen."
+            },
+            {
+              "date": "1839",
+              "title": "Dagerrotypia",
+              "detail": "Daguerre esittelee prosessiaan Pariisissa."
+            },
+            {
+              "date": "1841",
+              "title": "Kalotyyppi",
+              "detail": "Talbot mahdollistaa useiden kopioiden tulostamisen."
+            },
+            {
+              "date": "1888",
+              "title": "Kodak kaikille",
+              "detail": "Eastman demokratisoi amatöörikameran."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**1839**:ssä syntynyt valokuvaus kiinnitti ensin todellisuuden paremmin kuin maalaus, sitten keksi moderni [[Visuaalinen kulttuuri]]: siellä uskomme ensin näkemäänsä."
+        }
+      ]
+    }
+  ]
+}

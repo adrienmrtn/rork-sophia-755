@@ -1,0 +1,114 @@
+{
+  "id": "course_42_pourquoi_reve_t_on",
+  "title": "Miksi näemme unta?",
+  "subtitle": "Aivot ja uni",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Joka yö näet unta noin kaksi tuntia. Useimmat unet katoavat herääessäsi. Tässä on mitä tiede ymmärtää tänään tästä mysteeristä.",
+  "hero": {
+    "image": "pourquoi_reve_t_on",
+    "ratio": "16:9",
+    "hook": "Haaveilet kuudesta vuodesta elämästäsi. Ja unohdat melkein kaiken."
+  },
+  "sections": [
+    {
+      "id": "course_42_pourquoi_reve_t_on_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Joka yö vietät noin **kaksi tuntia** unissa. Koko eliniän aikana se on melkein **kuusi vuotta**. Kuitenkin, kun heräät, useimmat näistä tarinoista katoavat muutamassa sekunnissa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kaikki tiedemiehet eivät ole yhtä mieltä siitä, miksi. Mutta he tietävät yhä paremmin **kun**, joista me haaveilemme, ja mitä aivot tekevät tänä aikana: ne järjestävät muistoja uudelleen, testaavat skenaarioita ja sulattavat tunteita."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p1",
+      "title": "Uni ei ole \"pois päältä\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uni ei ole täydellinen sammutus. Se etenee **syklit** noin **90 minuuttia** useita kertoja yössä. Jokaisessa syklissä aivot käyvät läpi eri vaiheita: kevyt uni, syvä uni, joka on hyödyllinen kehon palautumiselle, sitten hyvin erityinen vaihe."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_rem_dream",
+          "ratio": "4:3",
+          "caption": "REM-unen aikana silmät liikkuvat silmäluomien alla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tätä vaihetta kutsutaan [[REM-uni]]. Aivot ovat melkein yhtä aktiiviset kuin hereillä, mutta [[Lihasatonia]] halvaannuttaa kehon. Tämä on varsinkin siellä, missä syntyvät pitkät, kerronnalliset unet. Tämä halvaus estää meitä fyysisesti \"pelaamasta\" sitä, mitä unelmoimme."
+        },
+        {
+          "type": "funFact",
+          "text": "Näemme unta **4-6 kertaa** yössä. Unohdamme **95%**:n kymmenen minuutin kuluessa heräämisestä. Jos muistat unen, se johtuu usein siitä, että heräsit heti sen aikana tai heti sen jälkeen."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p2",
+      "title": "Mitä järkeä on unelmoida?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Freud** ajatteli, että unet paljastivat pääasiassa piilotettuja haluja. Nykyään tutkijat pitävät parempana konkreettisempia selityksiä, jotka perustuvat aivojen kuvantamiseen, tekniikoihin, jotka visualisoivat aivojen toimintaa. Unennäkeminen aktivoi erityisesti **limbinen-jarjestelmää**, tunteisiin liittyvien syvien rakenteiden sarjaa."
+        },
+        {
+          "type": "image",
+          "asset": "brain_activity_dreaming_scan",
+          "ratio": "4:3",
+          "caption": "Unen aikana aivot toimivat: tunteita, kuvia, muistoja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kolme päärataa hallitsee. Ensin: **lajittele muisti**, säilytä hyödyllinen, päästä irti muusta. Toinen: **Vaarakoulutusta** maailmassa, jossa ei ole todellista riskiä. Kolmanneksi: **Tunteiden sulattaminen**: Unen aikana aivot palaavat voimakkaisiin hetkiin vähemmällä **norepinefriinillä**, stressiin ja valveillaoloon liittyvällä välittäjäaineella."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p3",
+      "title": "Miksi unohdamme unelmamme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aivot tarvitsevat tiettyjä kemikaaleja säilyttääkseen muistin pysyvästi. Paradoksaalisen unen aikana noradrenaliinitaso kuitenkin laskee. Tulos: unelma säilyy hyvin hauraassa muistissa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Heti kun avaat silmäsi, päivän valo, äänet ja ajatukset murskaavat tämän hauraan muiston. Paras tapa säilyttää se? Kirjoita unelmasi **heti** ylös, ennen kuin edes muutat."
+        },
+        {
+          "type": "funFact",
+          "text": "Ennen väritelevisiota harvat ihmiset sanoivat haaveilevansa värillistä. Nykyään useimmat tekevät. Visuaalinen ympäristömme vaikuttaa jopa unelmiemme tekstuuriin."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p4",
+      "title": "Entä selkeät unet?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Joskus ymmärrämme, **, että näemme unta** nukkuessamme: tämä on **Selkeää unta**. Aivojen alue, joka liittyy logiikkaan ja itseheijastukseen, **prefrontaalinen aivokuori**, syttyy sitten hieman."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jotkut voivat sitten vaikuttaa asetuksiin tai muuttaa painajaisen. Tutkijat jopa tutkivat tätä ilmiötä auttaakseen urheilijoita toistamaan henkisesti eleitä tai hoitamaan toistuvia painajaisia."
+        },
+        {
+          "type": "takeaway",
+          "text": "Unelmoimme erityisesti [[REM-uni]] aikana, jolloin aivot ovat aktiiviset ja keho halvaantunut. Unen näkeminen auttaa todennäköisesti hallitsemaan muistia ja tunteita, vaikka unohdammekin melkein kaiken herätessämme."
+        }
+      ]
+    }
+  ]
+}

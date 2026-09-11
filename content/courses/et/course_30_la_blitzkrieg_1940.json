@@ -1,0 +1,135 @@
+{
+  "id": "course_30_la_blitzkrieg_1940",
+  "title": "Blitzkrieg",
+  "subtitle": "1940",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "**kuue nädala jooksul**, **10.tagumik** kuni **22. juunini 1940. a**, vallutas Saksa armee Prantsusmaa ja Beneluxi riigid. “Blitzkrieg” muudab sõjakunsti kiiruse kaudu revolutsiooniliseks.",
+  "hero": {
+    "image": "la_blitzkrieg_1940",
+    "ratio": "16:9",
+    "hook": "Kuus nädalat Euroopa esimese armee kukutamiseks."
+  },
+  "sections": [
+    {
+      "id": "course_30_la_blitzkrieg_1940_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**10.tagumik** kuni **22. juunini 1940. a** vallutas Saksa armee vaid kuue nädalaga Prantsusmaa, Hollandi, Belgia ja Luksemburgi. Euroopa juhtiv sõjaline jõud on maailma silme all kokku varisemas."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Blitzkrieg** (Blitzkrieg) ei ole lihtsalt võitude jada. See on revolutsioon: vaenlase kiirus ja organiseerimatus loevad rohkem kui selle vahetu füüsiline hävitamine."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p1",
+      "title": "Löö kõvasti, löö kiiresti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sõna Blitzkrieg ei ole ametlik [[Wehrmacht]], Saksa armees aastatel 1935-1945. Selle leiutas anglosaksi ajakirjandus. Sakslased räägivad liikumissõjast. [[Schwerpunkt]] põhimõte: koondage kõik vahendid kitsasse kohta, et esiosa murda."
+        },
+        {
+          "type": "funFact",
+          "text": "Stukase sireenidel, nendel \"Jeeriko trompetid\" hüüdnime kandvatel sukeldumispommitajatel pole tegelikku sõjalist kasutust. Need on mõeldud ainult sõdurite ja tsiviilisikute terroriseerimiseks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seal, kus prantslased tankid jalaväe toetuseks laiali ajasid, rühmitasid sakslased need autonoomseteks soomusdiviisideks, mida ühendas raadio. Stukas käitub nagu lendav suurtükivägi. Samal ajal usub Prantsusmaa endiselt [[Maginot' liin]], seda Saksamaa piiri äärde jäävat kindluste ketti."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p2",
+      "title": "Sirbi löök",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kindral **Erich von Manstein** nõuandel võttis Hitler kasutusele [[Sichelschnitt]] ehk sirbikäigu: liitlaste meelitamine Belgiasse, samal ajal kui suurem osa tankidest, Saksa tankidest, ületas **Ardennesas-i.** Z13**. meili** ületas kindral **Heinz Guderian** Maast **Sedaan** juures. Kanali marsruut on avatud."
+        },
+        {
+          "type": "image",
+          "asset": "german_tanks_blitzkrieg_1940",
+          "ratio": "4:3",
+          "caption": "Saksa tankid 1940. aasta kampaania ajal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ühe nädalaga piirati liitlaste armeed ümber, seljaga mere poole. Dunkerque'is evakueeris [[Operatsioon Dünamo (Dunkirk)]] **338 000** Prantsuse-Briti sõdurid. Suurbritannia päästab oma armee. Prantsusmaa jääb üksi."
+        },
+        {
+          "type": "image",
+          "asset": "dunkirk_evacuation_beach_1940",
+          "ratio": "4:3",
+          "caption": "Dunkerque'i evakueerimine, mai-juuni 1940."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p3",
+      "title": "Vaherahu ja üleskutse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oma parimatest diviisidest ilma jäetud Prantsusmaa kukkus kokku. Pariis kuulutatakse avatud linnaks 14. juunil. Marssal **Philippe Pétain** taotleb vaherahu, mis allkirjastati **22. juunil** Compiègne'is, samas vagunis nagu **1918**: Hitler maksab kätte."
+        },
+        {
+          "type": "funFact",
+          "text": "Hitler võttis tseremoonia jaoks vaguni Compiègne'i muuseumist välja ja asetas selle täpselt sinna, kus Saksamaa 22 aastat varem kapituleerus."
+        },
+        {
+          "type": "paragraph",
+          "text": "**18. juuni** Londonist, **Kindral de Gaulle** esitab BBC-le üleskutse: Prantsusmaa on kaotanud lahingu, mitte sõja. Vahetu mõju on väike. Vaba Prantsusmaa alused on pandud."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p4",
+      "title": "Kahe otsaga võit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1940 kehtestas Saksamaa Euroopa meistriks. Kuid Blitzkrieg on lühike sõjastrateegia: piiratud kütus, habras logistika. Filmis **1941**, seistes silmitsi nõukogude mõõdutundega, takerdus see. Ajaloolane **Marc Bloch** räägib \"Kummalisest lüüasaamisest\": nii prantsuse intellektuaalsest kui ka materiaalsest ebaõnnestumisest."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "10. mai 1940. aastal",
+              "title": "Ründav läänes",
+              "detail": "Samaaegne rünnak Beneluxi vastu ja läbimurre Ardennides."
+            },
+            {
+              "date": "13. mai 1940. aastal",
+              "title": "Sedaani läbimurre",
+              "detail": "Panzerid ületavad Meuse."
+            },
+            {
+              "date": "1940. aasta mai-juuni",
+              "title": "Dunkerque",
+              "detail": "338 000 sõdurit evakueeriti Inglismaale."
+            },
+            {
+              "date": "22. juunil 1940. aastal",
+              "title": "Vaherahu",
+              "detail": "Prantsusmaa peatab lahingu Compiègne'is."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Kuue nädalaga ühendab Blitzkrieg kaitseõpetuse pulbriks soomuki, lennunduse ja raadio. Maginot' liinil valitses kiirus ja jõudude koondumine."
+        }
+      ]
+    }
+  ]
+}

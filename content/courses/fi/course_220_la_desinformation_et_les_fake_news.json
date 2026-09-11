@@ -1,0 +1,104 @@
+{
+  "id": "course_220_la_desinformation_et_les_fake_news",
+  "title": "Disinformaatiota ja valeuutisia",
+  "subtitle": "Makaa virusiässä",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Väärä tieto leviää sosiaalisessa mediassa kuusi kertaa nopeammin kuin totuus. Miksi ja miten suojella itseäsi?",
+  "hero": {
+    "image": "la_desinformation_et_les_fake_news",
+    "ratio": "16:9",
+    "hook": "MIT:n tutkimus osoitti, että valeuutiset etenevät Twitterissä kuusi kertaa nopeammin kuin totuus. Tässä on syy."
+  },
+  "sections": [
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Poliittista tarkoitusta palveleva valehteleminen ei ole mitään uutta: siitä on löydetty jälkiä antiikista lähtien. Internet ja sosiaaliset verkostot ovat kuitenkin muuttaneet tilannetta: väärä tieto ei enää kierrä vain valtiosta sen väestölle, vaan se leviää nyt horisontaalisesti, kansalaisten välillä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä muutos on luonut maailman, jossa totuus näyttää joskus valinnaiselta viraalisuuden edessä. Ymmärtäminen, kuinka **disinformaatiota** leviää ja kuka siitä hyötyy, on tullut olennaiseksi kansalaisten välisen luottamuksen säilyttämiseksi."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p1",
+      "title": "Miksi valhe kulkee nopeammin kuin totuus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Meidän on erotettava disinformaatio, joka on tarkoituksella levitetty manipuloidaksemme, yksinkertaisista rehellisistä virheistä. Tämän valeuutisen menestys riippuu siitä, mitä tutkijat kutsuvat huomiotaloudeksi: sosiaalisen median algoritmit on suunniteltu maksimoimaan näyttöaika, ja aivomme reagoivat voimakkaammin tunteisiin ja sokkiin kuin vivahteisiin."
+        },
+        {
+          "type": "funFact",
+          "text": "[[MIT]]:n vuonna 2018 julkaisema tutkimus osoitti, että valeuutiset leviävät noin 6 kertaa nopeammin kuin vahvistetut uutiset Twitterissä, koska ne näyttävät uudemmilta ja emotionaalisesti voimakkaammilta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Algoritmit lukitsevat myös Internetin käyttäjät [[suodatinkuplia]]:lle: ne näyttävät heille vain sisältöä, joka vahvistaa heidän jo olemassa olevia mielipiteitään. Salaliittoteoriasta vakuuttunut henkilö näkee jokaisen uuden väärän tiedon lisätodisteena, mikä tekee mahdollisesta myöhemmästä korjauksesta erittäin vaikeaa."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p2",
+      "title": "Valheiden toimiala valtioiden ja voiton välillä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Disinformaatiosta on tullut todellinen toimiala. Venäjän kaltaiset valtiot ovat Internet Research Agencyn kautta luoneet tuhansia väärennettyjä automatisoituja tilejä herättääkseen jännitteitä länsimaisissa demokratioissa, yrittämättä edes puolustaa tiettyä leiriä: tavoitteena on usein luoda kaaos ja saada ihmiset uskomaan, että \"kaikki valehtelevat\"."
+        },
+        {
+          "type": "image",
+          "asset": "fake_news_social_media_manipulation_phone",
+          "ratio": "4:3",
+          "caption": "Väärä tieto leviää sekunneissa sosiaalisessa mediassa."
+        },
+        {
+          "type": "paragraph",
+          "text": "On myös puhtaasti tuottoisa ulottuvuus: Pohjois-Makedoniassa sijaitsevassa Velesin kaupungissa nuoret yrittäjät loivat sensaatiomaisia sivustoja vuonna 2016 ilman poliittista vakaumusta vain ansaitakseen rahaa sosiaalisten verkostojen liikenteellä. Valheesta tulee sitten yksinkertainen kannattava hyödyke."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p3",
+      "title": "Kuinka erottaa fakta fiktiosta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tämän tulvan edessä tiedon maailma järjestyy. **faktien tarkastamisesta**:stä, eli tosiasioiden todentamisesta, on tullut oma journalistinen tieteenala. Toimistot, kuten [[AFP]] tai erikoistuneet toimitukset, käyttävät kuvahakutyökaluja väärennösten havaitsemiseen ja epäilyttävän sisällön analysoimiseen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mutta kilpailu hyökkäyksen ja puolustuksen välillä on edelleen epätasainen. [[syvät väärennökset]], tekoälyn väärentämät videot, joissa ihminen pakotetaan sanomaan mitä tahansa häiritsevällä realismilla, tekee oikean ja valheen erottamisesta yhä vaikeampaa kouluttautumattomalle silmälle."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p4",
+      "title": "Luottamuksen löytäminen kuvien maailmaan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Väärininformaation pitkän aikavälin vaikutus on syvä: puhumme nyt **post-totuuden** aikakaudesta, jossa objektiivisilla tosiasioilla on joskus vähemmän painoarvoa kuin tunteilla ja henkilökohtaisilla uskomuksilla. Tämä yleinen suhteellisuus heikentää luottamusta, jota tarvitaan maailmanlaajuisten haasteiden, kuten ilmaston tai kansanterveyden, yhdessä käsittelemiseksi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vakavin vastaus on mediakasvatus: lähteen todentamisen oppiminen, useiden tietojen ristiinviittaus ja algoritmien toiminnan ymmärtäminen. Jotkut luottavat myös sisällön sertifiointitekniikoihin varmistaakseen videon alkuperän sen luomisesta lähtien. Sillä välin kaikkien valppaus on ensimmäinen puolustuslinja."
+        },
+        {
+          "type": "takeaway",
+          "text": "Väärä tieto leviää sosiaalisissa verkostoissa keskimäärin 6 kertaa nopeammin kuin totuus, koska se hyödyntää tunteitamme ja uutuudenhimoamme. Deepfakejen ja peikkofarmien edessä mediakasvatus on edelleen paras ase kollektiivisen luottamuksen säilyttämiseksi."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "course_160_la_liberte_de_la_presse_et_le_journalism",
+  "title": "Pressivabadus ja fotograafiline ajakirjandus",
+  "subtitle": "20. sajandil",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "Alates Cartier-Bressonist kuni Nick Utini - pressifoto jäädvustab ajalugu ühele pildile. Meedia vabadus, eetika ja võim ühes pildiotsijas.",
+  "hero": {
+    "image": "la_liberte_de_la_presse_et_le_journalisme_photographique",
+    "ratio": "16:9",
+    "hook": "Foto võib peatada sõja… või valetada. Peame ikka suutma selle avaldada."
+  },
+  "sections": [
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fotoajakirjandus sünnib siis, kui pilt fikseerib uudise sama tugevalt kui artikkel. Üksainus vaade võib kokku võtta sõja, näljahäda, võidu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aga ilma ajakirjandusvabaduseta jäävad need pildid sahtlisse."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p1",
+      "title": "Otsustav hetk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Henri Cartier-Bresson]] teoretiseerib \"otsustava hetke\": olla õiges kohas, õigel ajal ja õige raamiga. [[Gerda Taro]] suri koos Capaga Hispaania kodusõja ajal. Fotoajakirjandusel on oma märtrid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Illustreeritud ajakirjade ja fotoagentuuride ilmumine muutis eriala professionaalsemaks. Reporter lahkub seadmega nagu teised märkmikuga. Oht on füüsiline."
+        },
+        {
+          "type": "image",
+          "asset": "cartier_bresson_decisive_moment",
+          "ratio": "4:3",
+          "caption": "Leica õlal: tänav kui maastik."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p2",
+      "title": "Pildid, mis muudavad arutelu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vietnamis raputab avalikku arvamust [[Nick Ut]] foto, millel on napalmist põlenud väike tüdruk. Pilt ei \"lõpeta\" sõda üksi, vaid muudab inimliku kulu eitamise võimatuks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suured demokraatiad kaitsevad teoreetiliselt ajakirjandust. Diktatuurid kontrollivad pildiotsijat. Pildi avaldamise vabadusest saab poliitiline baromeeter."
+        },
+        {
+          "type": "funFact",
+          "text": "Paljud kuulsad fotod tsenseeriti või arutati enne ajalooliseks tõendiks saamist."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p3",
+      "title": "Eetika ja keskendumine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Fotoajakirjanduse eetika]] esitab küsimusi: kas saame kannatust raamida? Retušeerida? Vaba pilku ohustab ka [[Meedia koondumine ja toimetuse sõltumatus]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Digiajastul on kontrollimine hädavajalik: metaandmed, pöördkujutise otsing, kontekst. Fotograafia on endiselt võimas, kuid sellega saab manipuleerida kiiremini kui kunagi varem."
+        },
+        {
+          "type": "image",
+          "asset": "photojournalism_war_correspondent_camera",
+          "ratio": "4:3",
+          "caption": "Reporter: objektiiviga relvastatud tunnistaja."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p4",
+      "title": "Pärand",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Võrkude ajastul pildistavad kõik. Vajadus usaldusväärsete, kontekstuaalsete piltide järele, mida kaitseb teabeõigus, pole kunagi olnud nii suur."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pressivabaduse ja fotograafilise ajakirjanduse täielikuks mõistmiseks peate meeles pidama üht: iga tehniline detail teenib emotsiooni või ideed. Töö pole kunagi lihtsalt dekoratiivne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontekst on sama oluline kui stiil. Kuupäevad, kohad, sponsorid, avalikkus: see kõik selgitab, miks vorm ilmub konkreetsel hetkel, mitte varem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lõpuks mõõdetakse pärandit pikas perspektiivis. See, mida me täna muuseumides, filmides või levimuusikas näeme, kannab endiselt nende leiutiste jälgi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Treenige silma, kaitske vilepuhujaid, makske väliajakirjanduse eest: ilma selleta jääb üle vaid vool. 20. sajandi pärand on nõue, mitte nostalgia."
+        },
+        {
+          "type": "takeaway",
+          "text": "Alates Cartier-Bressoni Leicast kuni sõjafotodeni on fotoajakirjandus tõestanud, et tasuta pildil võib olla sama suur kaal kui toimetusel."
+        }
+      ]
+    }
+  ]
+}

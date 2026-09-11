@@ -1,0 +1,102 @@
+{
+  "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
+  "title": "Darwinin evoluutioteoria",
+  "subtitle": "1859",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Vuonna 1859 Darwin julkaisi The Origin of Species. Keskeinen ajatus: elävät olennot muuttuvat ajan myötä luonnonvalinnan avulla.",
+  "hero": {
+    "image": "la_theorie_de_l_evolution_de_darwin",
+    "ratio": "16:9",
+    "hook": "Lajeja ei ole vahvistettu. Ne muuttuvat. Hitaasti. Mutta varmasti."
+  },
+  "sections": [
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Charles Darwin** julkaisi julkaisussa **1859** *Lajien alkuperästä*. Kirja järkyttää, kiehtoo, jakaa. Sen keskeinen idea on kuitenkin helppo muotoilla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elävät asiat vaihtelevat. Jotkut muunnelmat auttavat selviytymään ja lisääntymään. Nämä vaihtelut välitetään. Sukupolvien aikana väestö muuttuu."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
+      "title": "Silmiä avaava matka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "charles_darwin_portrait",
+          "ratio": "4:3",
+          "caption": "Darwin, 1800-luvun brittiläinen luonnontieteilijä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nuorena poikana Darwin lähtee laivalla **Beagle**. Hän tarkkaili vuosia kasveja, fossiileja ja lintuja. Galapagossaarilla hän huomasi, että lähistöllä olevilla linnuilla oli erilainen nokka ruuasta riippuen."
+        },
+        {
+          "type": "image",
+          "asset": "darwin_finches_galapagos_beaks",
+          "ratio": "4:3",
+          "caption": "Eri ruokavalioihin mukautetut suuttimet: vahva indikaattori."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
+      "title": "Luonnonvalinta, selkeästi englanniksi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuvittele eläinpopulaatio. Jotkut juoksevat hieman nopeammin, sulavat hieman paremmin, vastustavat kylmää hieman enemmän. Jos se auttaa heitä selviytymään ja saamaan nuoria, nämä piirteet yleistyvät."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kyse ei ole siitä, että yksilöt \"haluavat\" kehittyä. Se on suodatin: ympäristö pitää sen, mikä toimii. Darwin kutsuu tätä **luonnolliseksi valinnaksi**."
+        },
+        {
+          "type": "funFact",
+          "text": "Darwin odotti kauan ennen julkaisua. Hän pelkäsi skandaalia. Toinen luonnontieteilijä, **Alfred Russell Wallace**, tuli samanlaisiin ajatuksiin: tämä sai Darwinin julkaisemaan kirjansa."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
+      "title": "Ideoiden yhteentörmäys",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1800-luvulla monet uskoivat, että lajit luotiin sellaisina kuin ne olivat. Sanominen, että ne muuttuvat ja että ihmisillä on yhteinen historia muiden eläinten kanssa, ravistelee uskontoa ja yhteiskuntaa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tiede edistyy: fossiilit, lajien maantiede ja myöhemmin genetiikka vahvistavat yleiskäsityksen."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
+      "title": "Ja tänään?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tiedämme nyt, että DNA:ssa on muunnelmia. Tarkkailemme evoluutiota laboratoriossa (bakteerit, virukset) ja luonnossa. Taistelemme myös antibiooteille vastustuskykyisiä bakteereja vastaan: tämä on elävää evoluutiota."
+        },
+        {
+          "type": "takeaway",
+          "text": "Darwin osoitti, että elävät olennot kehittyvät luonnollisen valinnan avulla: selviytymisen ja lisääntymisen kannalta hyödylliset piirteet leviävät. Nykyaikainen genetiikka on vahvistanut ja selventänyt tätä viitekehystä."
+        }
+      ]
+    }
+  ]
+}

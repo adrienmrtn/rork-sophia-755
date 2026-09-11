@@ -1,0 +1,116 @@
+{
+  "id": "course_238_la_transition_energetique",
+  "title": "Energian siirtyminen",
+  "subtitle": "Kohti hiilineutraaliutta",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Maailma yrittää korvata fossiiliset polttoaineet puhtaammilla lähteillä. Muutos niin tarpeellinen kuin vaikeaakin.",
+  "hero": {
+    "image": "la_transition_energetique",
+    "ratio": "16:9",
+    "hook": "Aurinkovoimasta on tullut historian halvin energia. Jäljelle jää vain varastointi."
+  },
+  "sections": [
+    {
+      "id": "course_238_la_transition_energetique_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ihmiskunta vaihtoi pitkään energialähteitä tehokkuuden valinnalla: puusta hiileksi, sitten hiilestä öljyyn. Nykyinen **energian siirtymä** on erilainen: ensimmäistä kertaa sen määrää selviytymisrajoitus, ilmastonmuutos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä kurssi tutkii, kuinka maailma yrittää korvata fossiilisia polttoaineita puhtaammilla lähteillä ja miksi tämä muutos on niin vaikea kuin se on tarpeen."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p1",
+      "title": "1,5°C: tavoite, joka ohjaa kaikkea",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kaikkea nykyistä energiapolitiikkaa ohjaava viitekehys on nimeltään **[[Pariisin sopimus (2015)]]**, joka allekirjoitettiin vuonna 2015. Tämä sopimus sitoo maailman maat rajoittamaan ilmaston lämpenemistä erityistavoitteella: pysyä mahdollisuuksien mukaan alle 1,5 astetta teollisuusaikaa edeltäneestä tasosta. Jokainen ylimääräinen asteen kymmenesosa pahentaa äärimmäisiä sääilmiöitä."
+        },
+        {
+          "type": "image",
+          "asset": "solar_panel_farm_photovoltaic_field",
+          "ratio": "16:9",
+          "caption": "Aurinkopaneelit ja tuuliturbiinit symboloivat maailman siirtymistä kohti vähähiilisiä energialähteitä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämän tavoitteen saavuttamiseksi valtiot pyrkivät **[[hiilineutraalius]]**: tasapaino ihmisen toiminnan aiheuttamien kasvihuonekaasujen ja metsien, maaperän, valtamerten tai talteenottotekniikoiden imeytymisen välillä. Tämä olettaa, että globaalit päästöt lakkaavat kasvamasta ennen vuotta 2025 ja laskevat jyrkästi seuraavina vuosina."
+        },
+        {
+          "type": "funFact",
+          "text": "Aurinkosähkön hinta laski 90 % vuosina 2010-2020, mikä on nopeampi lasku kuin lähes mikään muu teknologia taloushistoriassa. Vuonna 2023 aurinkovoimasta tulee jopa halvin koskaan tuotettu sähkönlähde monissa osissa maailmaa."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p2",
+      "title": "Näyttävä hintojen lasku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Muutoksen päätekijä on taloudellinen. Aiemmin satelliiteille varatun aurinkosähkön:n hinta on jaettu kymmenellä viidessätoista kehittämisen kehityksen jakaavaetujen muodossa.**Z**, joka on asennettu erityisesti merelle, jossa tuulet ovat voimakkaampia ja säännöllisempiä, on myös saavuttanut todellisen teollisen kypsyyden. Vuonna 2023 lähes 90 % maailmanlaajuisesti asennetusta uudesta sähkökapasiteetista tulee jo uusiutuvalla energialla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suuri haaste on edelleen edessä: aurinko- ja tuulivoima kärsii **katkoisuudesta**, eli ne eivät tuota sähköä jatkuvasti. Tästä syystä suuren kapasiteetin akkujen merkitys, joiden hinta on seurannut samaa huikeaa laskua kuin aurinkoenergian, teki sähköautoista entistä kilpailukykyisempiä."
+        },
+        {
+          "type": "funFact",
+          "text": "Kiina valmistaa nyt yli 80 prosenttia maailman aurinkopaneeleista ja yli 70 prosenttia sähköajoneuvojen litiumioniakuista. Lännen energiasiirtymä riippuu siis pitkälti kiinalaisesta valmistusketjusta."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p3",
+      "title": "Uusia esteitä: varastointi ja harvinaiset metallit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tästä innostuksesta huolimatta siirtyminen kohtaa hyvin todellisia rajoja. Toisin kuin kaasu tai hiili, joita voidaan polttaa mielensä mukaan, uusiutuvat energiat vaativat joustavampia sähköverkkoja, joissa on varastointi- tai varalähteitä, kuten vety- tai ydinvoima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Toinen este on siirtyminen öljyriippuvuudesta riippuvuuteen **[[harvinaisten maametallien alkuaineita]]** ja muista metalleista, kuten litiumista tai koboltista, joita tarvitaan akkujen ja tuuliturbiinien valmistuksessa. Kiina hallitsee valtavaa osaa näiden materiaalien maailmanlaajuisesta jalostuksesta, mikä luo uusia haavoittuvuuksia Eurooppaan ja Yhdysvaltoihin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lopuksi muutos kohtaa yhteiskunnallista vastustusta: fossiilisten polttoaineiden teollisuus työllistää edelleen miljoonia ihmisiä, ja näiden työpaikkojen muuttaminen tuhoamatta on olennainen edellytys sille, että kaikki hyväksyvät siirtymän."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p4",
+      "title": "Kohti uutta energiayhdistelmää",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Energian tulevaisuus ei epäilemättä perustu yhteen ratkaisuun, vaan useiden yhdistelmään. **[[Vihreä vety]]** näyttää olevan keskeinen osa vaikeimpien alojen, kuten teräksentuotannon tai lentoliikenteen, hiilidioksidin vähentämisessä, joissa pelkkä sähkö ei riitä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Siirtyminen edellyttää myös **raittiutta**: kuluttaminen vähemmän ja paremmin, eristämällä rakennuksia tai vähentämällä teollisuusjätteitä, on usein tehokkain ja halvin keino."
+        },
+        {
+          "type": "funFact",
+          "text": "Jotkut kokeelliset akut toimivat painovoimalla: ne nostavat raskaita betonilohkoja päivän ylimääräisellä aurinkosähköllä ja antavat niiden laskeutua illalla tuottamaan sähköä turbiinin kautta."
+        },
+        {
+          "type": "takeaway",
+          "text": "Aurinkosähkön hinta on laskenut 90 % viidessätoista vuodessa, ja siitä on tullut historian halvin sähkönlähde. Mutta energian varastointi ja harvinaisten metallien hankinta ovat edelleen energiasiirtymän suuria haasteita."
+        }
+      ]
+    }
+  ]
+}

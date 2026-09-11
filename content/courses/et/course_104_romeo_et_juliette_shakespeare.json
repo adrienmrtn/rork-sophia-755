@@ -1,0 +1,111 @@
+{
+  "id": "course_104_romeo_et_juliette_shakespeare",
+  "title": "Romeo ja Julia, Shakespeare",
+  "subtitle": "umbes 1595. aastal",
+  "subject": "litterature",
+  "subcategory": "Anglo-Saxons & world literature",
+  "description": "1595. aasta paiku surid kaks Veronast pärit armukest vähem kui viie päevaga. Shakespeare tihendab romantika sotsiaalseks tragöödiaks: klanniviha hävitab nooruse.",
+  "hero": {
+    "image": "romeo_et_juliette_shakespeare",
+    "ratio": "16:9",
+    "hook": "Viis päeva armastuse esimesest silmapilgust ja surma vahel: maailma kuulsaim armastustragöödia."
+  },
+  "sections": [
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1595**, **William Shakespeare** kirjutab **[[Romeo ja Julia]]**. Seda teatakse kui teatri suurimat armastuslugu. Tegelikkuses on see ka vägivaldne kriitika rivaalitsevate perekondade vahel päritud vihkamise vastu. Kaks armukest ei sure ainult halva õnne tõttu: nad maksavad linna läbikukkumise eest, mis ei suuda kaitsta oma noori klannivägivalla eest."
+        },
+        {
+          "type": "image",
+          "asset": "romeo_juliet_balcony_painting",
+          "ratio": "4:3",
+          "caption": "Rõdustseen: absoluutne armastus silmitsi Verona klannidega."
+        }
+      ]
+    },
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_p1",
+      "title": "Shakespeare'i alkeemia: novellist draamani",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Shakespeare ei mõtle ajalugu välja. Peamiselt on teda inspireerinud **Matteo Bandello**, 16. sajandi itaalia jutuvestja, kes ise on vanemate lugude pärija. Selle geniaalsus peitub **kondensatsioon**: kui allikad levitavad tegevust kuude kaupa, kitsendab Shakespeare seda ainult **viie päevani**. Iga minut loeb, katastroof muutub vältimatuks."
+        },
+        {
+          "type": "funFact",
+          "text": "Bandello juures ärkab Julia enne Romeo surma. Shakespeare kustutab selle hüvastijätu, et muuta lõpp julmemaks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lavastus algab peaaegu komöödiana, sõnamängu ja elavate tänavastseenidega. Siis sureb keset lugu **Mercutio**, geniaalne mõistus ja **[[Küünilisus]]** kandja. Sellega kaob hoolimatus: toon nihkub lõplikult traagikaks. Romeo mängis esmalt **[[Keskaegne õukonnaarmastus]]**, armus Rosalindisse, enne kui avastas palju sügavama ja ohtlikuma armastuse."
+        }
+      ]
+    },
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_p2",
+      "title": "Traagiline mehhanism: juhuse ja vajaduse vahel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Romeo Montague** ja **Julia Capulet** armuvad maskiballil, ignoreerides alguses teineteise nimesid. Rõdustseen tähistab armastust, aga ka perekonnanimest keeldumist: \"Loobuge oma isast ja loobuge oma nimest.\" **Müü Laurent** salaabielu eesmärk oli rahustada kahe klanni vahelist **[[Vendetta]]**."
+        },
+        {
+          "type": "image",
+          "asset": "romeo_juliet_frank_dicksee_painting",
+          "ratio": "4:3",
+          "caption": "Romeo ja Julia: klannivägivallast haaratud noorukiea kirg."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mõne tunni jooksul tapab **Tybalt** Mercutio, Romeo tapab kättemaksuks Tybalti ja saadetakse Veronast välja. **katk** epideemia lükkab edasi sõnumitooja, kes vastutab Romeo hoiatamise eest, et Julia ei ole surnud, vaid ainult joogiga magama pandud. See ei ole üksi jumalik saatus: need on tühised kokkusattumused, mis on lisatud niigi mürgisele ühiskonnale. Viimased enesetapud kinnitavad absoluutset vabadust seal, kus maailm ei jäta neile enam ruumi."
+        },
+        {
+          "type": "quote",
+          "text": "Loobu oma nimest ja selle nime asemel, mis pole enam sina, võta mind.",
+          "attribution": "William Shakespeare, Romeo ja Julia, II vaatus, 2. stseen"
+        }
+      ]
+    },
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_p3",
+      "title": "Sotsiaalne vastutus ja nooruse ohverdus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lavastus analüüsib vendettat kui hävingumootorit. Montague ja Capulet vihkavad teineteist, isegi ei mäleta, miks. Proloog räägib \"vanast vihkamisest\", mis toodab \"uut verd\". Juliette, vaevalt **13-aastane**, peab abielluma krahv **Pariis**; Romeo eksleb melanhoolsuses, millest tema sõbrad valesti aru saavad."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Verona trükised** esindab seadust, mis on jõuetu kahe perekonna erasõjaväe vastu. Lõpus süüdistab ta noorte kehade ees vanemaid: \"Kõiki karistatakse.\" Armastajad on süsteemi ohvrid, kus klanni au on ülimuslik individuaalse õnne üle. Dante mainis juba kaks 14. sajandit enne Shakes'i **Montecchi** ja **Cappelletti**."
+        }
+      ]
+    },
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_p4",
+      "title": "Universaalne järglane: lüürikast tänapäevaste jõukudeni",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Näidendi mõju on tohutu. Shakespeare segab religioosset andumust ja füüsilist kirge, leiutades inglise teatri jaoks uue romantilise sõnavara. Shakespeare'i **[[Peripateetsus]]** jääb dramaturgiliseks mudeliks, mida uuritakse konservatooriumides üle kogu maailma."
+        },
+        {
+          "type": "paragraph",
+          "text": "20. sajandil kannab **[[West Side'i lugu]]** konflikti üle New Yorki: **Haid** ja **Reaktiivlennukid** asendavad Verona klanne. Muster kehtib endiselt: teiste armastus põrkub rühma vihkamisega. Religioossed, rassilised või sotsiaalsed konfliktid võtavad pidevalt Shakespeare'i maatriksi."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Romeo ja Julia** koondab viieks päevaks noorukite idülli ja päritud vägivalla hukkamõistmise. Shakespeare näitab, et absoluutne armastus ei püsi seal, kus ühiskond eelistab elule pahameelt."
+        }
+      ]
+    }
+  ]
+}

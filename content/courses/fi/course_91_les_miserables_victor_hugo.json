@@ -1,0 +1,142 @@
+{
+  "id": "course_91_les_miserables_victor_hugo",
+  "title": "Les Miserables, Victor Hugo",
+  "subtitle": "1862",
+  "subject": "litterature",
+  "subcategory": "French & European Classics",
+  "description": "Jean Valjean etsii lunastusta Ranskassa, joka kieltäytyy antamasta hänelle anteeksi. Hugo yhdistää romanttisen romaanin, historiallisen kronikan ja syrjäytyneiden puolustamisen.",
+  "hero": {
+    "image": "les_miserables_victor_hugo",
+    "ratio": "16:9",
+    "hook": "Pala varastettua leipää, 19 vuotta vankeutta, sitten koko elämä todistaaksesi, että sinusta voi tulla taas mies."
+  },
+  "sections": [
+    {
+      "id": "course_91_les_miserables_victor_hugo_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1862**:ssä julkaistu **Les Misérables** on yksi maailman luetuimmista romaaneista. **Victor Hugo**, sitoutunut runoilija ja kirjailija, kertoo tarinan Ranskasta **1800-luvulla** **Jean Valjean**, **[[Tarkastaja Javert]]** metsästämän entisen vangin kautta. Javert on lahjomaton poliisi. Hän ilmentää armotonta lakia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kirjassa yhdistyvät salapoliittinen juonittelu, rakkaustarina, historiallinen kronikka ja sosiaalinen tuomitseminen. Hugo haluaa ”maailmanteoksen”, romaanin, joka kattaa kokonaisen aikakauden. Hän toivoo voivansa puhua kaikille rajojen ulkopuolella. Se on myös loistava teksti kurjuudesta, armosta ja lunastuksen mahdollisuudesta."
+        }
+      ]
+    },
+    {
+      "id": "course_91_les_miserables_victor_hugo_p1",
+      "title": "Hugo ja maanpaossa syntynyt teos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Victor Hugo** aloittaa romaanin kirjalla **1845**, otsikolla \"Les Misères\". Napoleon Bonaparten veljenpojan **1851**:n **Napoléon III**:n vallankaappauksen jälkeen Hugo lähti maanpakoon Kanaalisaarille Guernseylle. Hän ottaa käsikirjoituksensa vastaan uudella innolla. Maanpako ruokkii hänen vihaansa epäoikeudenmukaisuutta vastaan."
+        },
+        {
+          "type": "image",
+          "asset": "victor_hugo_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "Victor Hugo: runoilija, kirjailija ja sosiaalisen köyhyyden ääni."
+        },
+        {
+          "type": "funFact",
+          "text": "Kirjoittaakseen kohtauksen viemäreihin Hugo hankki tietoa Pariisin tiepalveluista ja tutki maanalaisia gallerioita itse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Romaani ilmestyi **1862** Brysselissä seitsemäntoista vuoden työn jälkeen. Hugo lisää pitkiä **[[Poikkeamat]]**, sivuja, joille kirjoittaja keskeyttää tarinan puhuakseen historiasta tai filosofiasta. Hän omistaa erityisesti **Waterloo**:n, vuoden 1815 taistelun, joka merkitsee Napoleonin valtakunnan loppua, luostarit tai **[[Pariisin viemärit]]**, pääkaupungin kellari ja sosiaalisen alitajunnan metafora. Nämä sivut ankkuroivat hahmot aineelliseen todellisuuteen ja tekevät kirjasta tutkielman yhteiskuntafilosofiasta."
+        }
+      ]
+    },
+    {
+      "id": "course_91_les_miserables_victor_hugo_p2",
+      "title": "Jean Valjean: vankilasta armoon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leivänpalan varastamisesta tuomittu Valjean vietti **19 katselukertaa** **[[Vankila ja rangaistusjärjestelmä 1800-luvulla]]**, pakkotyövankilassa, erityisesti Toulonissa. Kun hänet vapautettiin, **Keltainen passi** merkitsi hänet entiseksi vangiksi. Hänestä tulee hylkiö. Piispa **Myriel**, lempinimeltään \"Monseigneur Bienvenu\", tarjoaa hänelle toisen mahdollisuuden. Hän saa naisen uskomaan saaneensa hopeaesineen lahjaksi, kun Valjean oli juuri varastanut sen."
+        },
+        {
+          "type": "image",
+          "asset": "french_convict_galley_19th_century",
+          "ratio": "4:3",
+          "caption": "Vankila: kokemus, joka murtaa Valjeanin ennen hänen moraalista muutostaan."
+        },
+        {
+          "type": "quote",
+          "text": "Jean Valjean, veljeni, sinä et enää kuulu pahalle, sinä kuulut hyvään.",
+          "attribution": "Victor Hugo, Les Misérables - Monseigneur Bienvenu"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Herra Madeleine**:n identiteetin alla Valjeanista tulee teollisuuskaupungin hyväntekeväisyyspormestari. Hugolle hyväntekeväisyys voi voittaa sosiaalisen väistämättömyyden. Mutta **Javert**, armottoman oikeuden inkarnaatio, jatkaa hänen metsästämistään. Hän ei voi kuvitella, että rikollisesta voisi tulla hyvä mies."
+        }
+      ]
+    },
+    {
+      "id": "course_91_les_miserables_victor_hugo_p3",
+      "title": "Fantine, Cosette ja barrikadit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Fantine**, hänet vietteleneen rakastajan hylkäämä työntekijä, vajoaa köyhyyteen maksaakseen tyttärensä eläkkeen **Cosette**. Lapsi on uskottu **Thénardier**, ahneille majatalon pitäjille. Valjean pelastaa hänet ja hänestä tulee lapsen suojelija. Tarina siirtyy Pariisiin, jossa **Kesäkuu 1832**:n kapina, armeijan murskaama tasavaltalainen kapina, kokoaa nuoret yhteen **[[ABC]]**:n salaseurassa. Tämä nimi tuo mieleen \"alhaiset\", ihmiset."
+        },
+        {
+          "type": "image",
+          "asset": "paris_barricades_1832_painting",
+          "ratio": "4:3",
+          "caption": "Vuoden 1832 barrikadit: Historia astuu romaaniin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Näillä barrikadeilla kuolee **Gavroche**, katulapsi, josta on tullut uhratun viattomuuden symboli. **Enjolras**, kapinallisten johtaja, ilmentää idealistista nuorisoa. Valjean pelastaa **Marius**:n, Cosetteen rakastuneen nuoren porvarillisen, täydellisen itsensä uhrautumisesta. Hän suostuu vaarantamaan vapautensa tyttärekseen katsomansa onnen vuoksi."
+        }
+      ]
+    },
+    {
+      "id": "course_91_les_miserables_victor_hugo_p4",
+      "title": "Romaani, joka muuttaa tietoisuutta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Javert**, jonka Valjean pelasti kapinan aikaan, ei pysty sovittamaan yhteen lakia ja armoa: hän tekee itsemurhan heittäytymällä Seine-jokeen. Valjean kuolee rauhassa pitäessään Myrielille antamansa lupauksen. Romaani on tukijalka **[[Kiinnostunut kirjallisuus]]**, yhteiskunnallisen tai poliittisen asian palveluksessa oleva kirjallisuus. Hugo tuomitsee oppivelvollisuuden puuttumisen, naisten sorron ja vankiloiden epäinhimillisyyden."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1845",
+              "title": "Projektin aloitus",
+              "detail": "Hugo aloittaa \"Les Misèresin\"."
+            },
+            {
+              "date": "1851",
+              "title": "Maanpako",
+              "detail": "Vallankaappaus keskeyttää ja aloittaa sitten uudelleen kirjoittamisen."
+            },
+            {
+              "date": "1862",
+              "title": "Julkaisu",
+              "detail": "Romaani julkaistaan Brysselissä."
+            },
+            {
+              "date": "1832",
+              "title": "Barrikadit",
+              "detail": "Kapina rakentuu Pariisin huipentumalle."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Les Misérables**, julkaistu julkaisussa **1862**, kertoo **Jean Valjean**:n lunastuksen hyväntekeväisyyden ja säälimättömän lain välillä. Hugo tekee **1832**-barrikadeista ihmisarvon puolesta käytävän taistelun symbolin."
+        }
+      ]
+    }
+  ]
+}

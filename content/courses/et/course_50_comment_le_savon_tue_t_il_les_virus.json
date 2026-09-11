@@ -1,0 +1,100 @@
+{
+  "id": "course_50_comment_le_savon_tue_t_il_les_virus",
+  "title": "Kuidas seep viiruseid tapab?",
+  "subtitle": "Hügieen",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Seep ei ole \"maagia\". See ründab teatud viiruste rasvakihti ja tõmbab need nahast välja. Siin on põhjus, miks 20 sekundit on oluline.",
+  "hero": {
+    "image": "comment_le_savon_tue_les_virus",
+    "ratio": "16:9",
+    "hook": "Lihtne relv viiruste vastu: molekulid, millele meeldib vesi… ja rasv."
+  },
+  "sections": [
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "COVID-19 pandeemia ajal on taas keskseks saanud väga lihtne žest: käte pesemine seebiga. Laborit pole vaja. Ainult vesi, seep ja natuke aega."
+        },
+        {
+          "type": "paragraph",
+          "text": "Miks see nii hästi töötab? Sest paljud ohtlikud viirused kannavad endas rasvast ümbrist. Ja seep sobib suurepäraselt rasva hävitamiseks."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p1",
+      "title": "Teatud viiruste nõrkus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mõnel viirusel, nagu **koroona viirus** või gripiviirusel, on lipiididest (rasvadest) valmistatud väliskate. See ümbrik kaitseb neid… kuni seebi sattumiseni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Teistel viirustel, mida nimetatakse \"alastiteks\", seda ümbrikut pole. Need on seebi ja alkoholi suhtes vastupidavamad. Õnneks on paljud käte ja piiskade kaudu levivad viirused ümbritsetud."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
+      "title": "Seep, kahepoolne molekul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "handwashing_soap_water_hands",
+          "ratio": "4:3",
+          "caption": "Hõõrumine aitab seebil jõuda igasse kätenurka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seebi molekulid on [[pindaktiivsed ained]]. Neil on pea, millele meeldib vesi, ja saba, millele meeldib rasv. Saba vajub viiruse rasvasesse ümbrikusse. Pea jääb vee poole pööratud."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tulemus: ümbrik rebeneb. Viirus on keelatud. Siis kannab vesi prahi minema. Seep ei \"põleta\" viirust nagu hape: see **lahustab** ja eemaldab selle."
+        },
+        {
+          "type": "funFact",
+          "text": "See on sama põhimõte, mis eemaldab rasva pannilt: seep haarab rasva ja laseb sellel koos veega minna."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p3",
+      "title": "Miks 20 sekundit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seebil kulub aega, et see jõuaks kõikidesse voltidesse: sõrmede vahele, küünte alla, randmete ümber. Umbes **20 sekundit** hõõrdumist on see minimaalne sageli soovitatav."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ilma hõõrdumiseta töötab seep halvemini. Vesi üksi: see ei ründa tõhusalt rasvast ümbrist."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p4",
+      "title": "Seep või hüdroalkohoolne geel?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Geel, mis sisaldab vähemalt **60%** alkoholi, võib hävitada ka paljud ümbrisega viirused. Aga kui seal on nähtav mustus või rasv, on geel vähem efektiivne: mustus toimib ekraanina. Sel juhul jääb parimaks valikuks seep ja vesi."
+        },
+        {
+          "type": "takeaway",
+          "text": "Seep tapab paljusid viirusi, rebides ära nende rasvase katte ja seejärel veega maha pestes. Aeg + hõõrdumine = efektiivsus."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "course_32_la_guerre_du_vietnam_1955_1975",
+  "title": "Vietnami sõda",
+  "subtitle": "1955-1975",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "USA andis kahekümne aasta jooksul Vietnamile tohutu jõu kommunismi ohjeldamiseks. Nad takerduvad, jagunevad ja lahkuvad võitmata.",
+  "hero": {
+    "image": "la_guerre_du_vietnam",
+    "ratio": "16:9",
+    "hook": "Juhtiv maailmariik seisab silmitsi sõjaga, mida ta ei suuda võita."
+  },
+  "sections": [
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Külma sõja keskmes oli Vietnam kaheks jagatud. Põhjas kommunistlik režiim. Lõunas lääne poolt toetatud riik. USA saadab sinna tohutult ressursse. Ometi jäävad nad kinni."
+        },
+        {
+          "type": "paragraph",
+          "text": "See konflikt ei ole ainult sõjaline. See lõhestab Ameerikat, näitab toore jõu piire ja jätab mõlemale poole püsiva trauma."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p1",
+      "title": "Jagatud riik, seejärel kasvav sõda",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pärast prantslaste lüüasaamist **[[Indohiina sõda]]** jagasid Genfi kokkulepped (**1954**) Vietnami **17. rööpliit**. Põhjas juhib **[[Ho Chi Minh]]**, natsionalistide ja kommunistide juht. Lõunas autoritaarne režiim, mida toetab Washington."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ameerika presidendid **John F. Kennedy** ja **Lyndon B. Johnson** kardavad **[[Doomino teooria]]**: kui üks riik langeb kommunismi alla, järgneksid naabrid. 1964. aasta **Aaugustis** oli Tonkini lahes toimunud mereväe intsident ettekäändena sõja laiendamiseks. Alates **1965** pommitab operatsioon **[[Veerev äike]]** põhjaosa ja merejalaväelased maanduvad Da Nangis."
+        },
+        {
+          "type": "image",
+          "asset": "vietnam_war_american_soldiers",
+          "ratio": "4:3",
+          "caption": "Ameerika sõdurid Vietnamis: kurnamissõda džunglis."
+        },
+        {
+          "type": "funFact",
+          "text": "Väidetavalt ütles Johnson pärast Tonkinit eraviisiliselt: \"Nii palju kui mina tean, tulistas meie merevägi sel õhtul vaalu.\""
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p2",
+      "title": "Miks jõust ei piisa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Piirkonnas **1969** viibis kohapeal umbes **543 000** Ameerika sõdurit. **[[otsida ja hävitada]]** strateegia (otsida vaenlast, et ta hävitaks) ja õhuülekaal ei seganud Põhja-Vietnami tarneid Ho Chi Minhi raja kaudu. Põhja sõjaväeline juht kindral **Vo Nguyen Giap** panustab osa elanikkonna ahistamise ja toetamisse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ameeriklased kasutavad džungli puhastamiseks ka defoliante, nagu Agent Orange. Inimlik ja poliitiline hind kasvab plahvatuslikult. Kirstud tulevad sisse. Ameerika kaitsejõudude peakorter **[[Viisnurk]]** avastab, et kohalik poliitiline tahe peab tehnoloogiaga silmitsi seisma."
+        },
+        {
+          "type": "funFact",
+          "text": "Vabastati üle **80 tuhat** liitri herbitsiide, mis hävitasid ligikaudu **20%** Lõuna-Vietnami metsadest."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p3",
+      "title": "Teti pealetungi šokk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**30. jaanuaril 1968**, Vietnami uusaasta ajal, tabab **[[Tet ründav]]** rohkem kui **100** linnades. Kohapeal on see põhja jaoks läbikukkumine. Ameerika televisioonis oli see šokk: Washingtoni väljakuulutatud \"peaaegu võit\" tundus vale."
+        },
+        {
+          "type": "paragraph",
+          "text": "President **Richard Nixon** käivitas seejärel \"vietnamiseerimise\": Ameerika vägede väljatõmbamise ja Lõuna relvastamise. Pariisi kokkulepped (**1973**) tähistasid Ameerika lahkumist. Ilma kaitsjata varises kahe aastaga kokku lõunaosa pealinn Saigon."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p4",
+      "title": "Sõja lõpp ja see, mida see jätab",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**30. aprillil 1975**, Saigoni langeb. Umbes **58 000** ameeriklasi suri. Vietnami kahjud ulatusid miljonites. Esimene tõeliselt televisioonisõda, konflikt paljastas ka kuriteod, nagu **[[Minu Lai]]** veresaun, kus Ameerika sõdurid tapsid **1968** tsiviilisikuid. Ameerika on kaugete sekkumiste suhtes kahtlustav."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1954",
+              "title": "Genfi kokkulepped",
+              "detail": "Ajutine vahesein 17. paralleelil."
+            },
+            {
+              "date": "1965",
+              "title": "Ameerika ronimine",
+              "detail": "Pommirünnakud ja merejalaväelaste maandumine."
+            },
+            {
+              "date": "1968",
+              "title": "Tet ründav",
+              "detail": "Telešokk ja arvamusmuutus."
+            },
+            {
+              "date": "1973",
+              "title": "Pariisi kokkulepped",
+              "detail": "Ameerika vägede väljaviimine."
+            },
+            {
+              "date": "1975",
+              "title": "Saigoni langemine",
+              "detail": "Taasühendamine kommunismi ajal."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Pärast **20 aastat** kestnud konflikti lahkusid USA Vietnamist võiduta: sõjaline võim sai poliitiliselt lüüa, riik taasühendati kommunismi all, Ameerika ühiskond lõhestati püsivalt."
+        }
+      ]
+    }
+  ]
+}

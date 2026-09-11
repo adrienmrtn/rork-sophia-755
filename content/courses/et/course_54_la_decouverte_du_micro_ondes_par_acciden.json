@@ -1,0 +1,102 @@
+{
+  "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
+  "title": "Mikrolaineahju avastamine",
+  "subtitle": "Kogemata",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "1945. aastal märkas insener, et tema kompvek oli radari lähedal üles sulanud. Sellest tähelepanekust sündis mikrolaineahi.",
+  "hero": {
+    "image": "la_decouverte_du_micro_ondes",
+    "ratio": "16:9",
+    "hook": "Sulatatud šokolaaditahvel… ja moodne köök muutub."
+  },
+  "sections": [
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ameerika Ühendriikides linnas **1945** töötab radaritel insener **Percy Spencer**. Ühel päeval märkab ta, et tema taskus olev komm on sulanud. Mitte kehasoojuse tõttu: radarilainete tõttu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta katsetab maisiga: popkorn hüppab. Sündis idee erinevalt kütvast ahjust."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
+      "title": "Radarist kööki",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "percy_spencer_microwave_discovery_radar",
+          "ratio": "4:3",
+          "caption": "Teise maailmasõja aegsetes radarites kasutati juba mikrolaineid."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Mikrolained** on elektromagnetlained, nagu raadiovalgus, kuid \"energilisemad\" kui paljud tavalised raadiolained. Sõja ajal kasutati neid peamiselt radaritena lennukite ja paatide tuvastamiseks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spencer mõistab, et nad võivad ka toidus vett ja rasvu segada... ja seetõttu seda soojendada."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
+      "title": "Esimene ahi on tohutu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "first_microwave_oven_radarange_1947",
+          "ratio": "4:3",
+          "caption": "Esimene kaubanduslik mikrolaineahi oli kapi suurune."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esimene kommertsmudel **Radarange** ilmus **1947** paiku. See on tohutu, kallis ja mõeldud peamiselt restoranidele või paatidele. Selle miniatuurseks muutmiseks ja kodude jaoks taskukohaseks muutmiseks kulub aastakümneid."
+        },
+        {
+          "type": "funFact",
+          "text": "Alguses kartsid mõned, et ahi \"muutb toidu radioaktiivseks\". Vale: mikrolained kuumenevad, need ei muuda sind radioaktiivseks."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
+      "title": "Kuidas see tegelikult kuumeneb?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mikrolained vibreerivad peamiselt veemolekule (ja veidi ka rasvu ja suhkruid). See segamine tekitab **kuumuse** toidu sees, mitte ainult pinnal nagu pann."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seetõttu võib roog olla väljast kuum ja keskelt leige, kui see on paks: lained ei tungi lõpmatult sügavale."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
+      "title": "Igapäevane objekt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1970.-1980. aastatest jõudis mikrolaineahi miljonitesse köökidesse. See muudab harjumusi: kiiresti soojendada, valmistoidud, kiirem elu."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mikrolaineahi sündis juhuslikult, mida Percy Spencer jälgis radari lähedal. Lained segavad peamiselt toidus olevat vett ja soojendavad seda seestpoolt."
+        }
+      ]
+    }
+  ]
+}

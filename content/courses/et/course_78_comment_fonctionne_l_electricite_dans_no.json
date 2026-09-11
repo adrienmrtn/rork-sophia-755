@@ -1,0 +1,112 @@
+{
+  "id": "course_78_comment_fonctionne_l_electricite_dans_no",
+  "title": "Kuidas elekter meie kehas töötab?",
+  "subtitle": "Närvid ja ioonid",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Mõtlemine, südame löömine, käe tõstmine: see kõik ringleb esmalt nagu elav elekter, mida kannavad mitte elektronid, vaid ioonid.",
+  "hero": {
+    "image": "comment_fonctionne_l_electricite_dans_notre_corps",
+    "ratio": "16:9",
+    "hook": "Teie keha on elektrivõrk. Kuid siin on vool ioonid, mitte elektronid."
+  },
+  "sections": [
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seinakontaktis on vool **elektronid**, mis ringlevad. Teie kehas on see teisiti: need on **ioonid**, laetud aatomid, mis sisenevad rakkudesse ja lahkuvad neist. See vool loob signaale, mis panevad südame mõtlema, südame lööma ja lihaseid kokku tõmbuma."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ilma selle elava elektrita pole mõtet, žesti ega pulssi. Keha mõistmine tähendab ka selle laengute keele mõistmist."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p1",
+      "title": "Neuronite elektriline klõps",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Puhkeseisundis olev **neuron** ei saada sõnumit, vaid „laadib”. Selle membraan eraldab raku seest ja väljast. Tänu [[naatrium-kaaliumpumbad]]-le hoiab see [[puhkepotentsiaal]]XG1Z umbes **-70 millivolti**: sisemus on negatiivsem kui välimine."
+        },
+        {
+          "type": "image",
+          "asset": "neuron_electrical_signal_brain",
+          "ratio": "auto",
+          "caption": "Neuronid suhtlevad lühikeste elektriimpulsside kaudu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kui stiimul saabub, avanevad kanalid. Naatrium tuleb korraga sisse. Polaarsus on vastupidine: see on [[tegevuspotentsiaal]], kõik või mitte midagi signaal, mis jookseb mööda aksonit, mõnikord üle meetri. Nagu elektrilaine."
+        },
+        {
+          "type": "funFact",
+          "text": "Ärkvel olev aju toodab umbes **20 vatti**, millest piisab väikese LED-i jaoks. Siiski kulutab see peaaegu **20%** keha kaloritest."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p2",
+      "title": "Sünapsis muutub elekter keemiaks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Neuronid ei puuduta üksteist tegelikult. Nende vahel väike vahe: **sünaps**. Elektriline signaal ei saa seda vahele jätta. Seejärel vabastab aksoni ots [[Neurotransmitterid]], sõnumitooja molekulid nagu atsetüülkoliin või [[glutamaat]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Need sõnumitoojad kinnituvad järgmise neuroni külge nagu võti lukus. Olenevalt sõnumist erutavad või pärsivad. Tuhanded need samaaegsed otsused moodustavad mõtte."
+        },
+        {
+          "type": "funFact",
+          "text": "Mõned närvisignaalid liiguvad kiirusega **120 m/s** (rohkem kui **430 km/h**). Piisavalt, et reageerida varba põletusele sekundi murdosa jooksul."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
+      "title": "Südamel on oma südamestimulaator",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Süda ei oota iga löögi kohta ajust käsku. Parempoolses aatriumis genereerib **sinus sõlm** oma impulsse, umbes **60 kuni 100** korda minutis puhkeolekus. Signaal levib, tõmbub kõigepealt kokku kodad, seejärel vatsakesed."
+        },
+        {
+          "type": "paragraph",
+          "text": "See tegevus on piisavalt tugev, et seda nahalt lugeda: see on **Elektrokardiogramm (EKG)**. Kui rütm muutub häirituks, räägime **arütmiast**. Süda lööb siis segamatult ja pumpab halvasti."
+        },
+        {
+          "type": "funFact",
+          "text": "Elektriangerjas kasutab sama ergastavate rakkude põhimõtet, kuid järjestikku: kuni **600 volti**, millest piisab saagi halvamiseks."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
+      "title": "Vabatahtlikust žestist defibrillaatorini",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Käe tõstmiseks liigub aktsioonipotentsiaal alla lihasesse. Atsetüülkoliin käivitab kohaliku elektrilaine, seejärel kaltsiumi vabanemise. Lihasvalgud libisevad üksteisest üle: kontraktsioon."
+        },
+        {
+          "type": "paragraph",
+          "text": "**defibrillatsioon** kasutab sama põhimõtet vastupidiselt: väline löök lähtestab kõik rakud nulli, nii et siinussõlm jätkab tempot. Bioonilised proteesid püüavad ka need nõrgad signaalid kunstliku käe juhtimiseks."
+        },
+        {
+          "type": "takeaway",
+          "text": "Elusolendid räägivad ioonivoogudes ja tegevuspotentsiaalides. Mõte, süda ja lihased jagavad sama elektrikeelt."
+        }
+      ]
+    }
+  ]
+}

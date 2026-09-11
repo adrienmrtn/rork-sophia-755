@@ -1,0 +1,112 @@
+{
+  "id": "course_239_le_futur_du_travail",
+  "title": "Töö tulevik",
+  "subtitle": "Automatiseerimine ja tehisintellekt",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Tehisintellekt ja uued tööhõivevormid raputavad industriaalajastust päritud töömudelit.",
+  "hero": {
+    "image": "le_futur_du_travail",
+    "ratio": "16:9",
+    "hook": "Masinad töötavad kiiremini kui kunagi varem. Jääb näha, mis jääb inimestega tegema."
+  },
+  "sections": [
+    {
+      "id": "course_239_le_futur_du_travail_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Töö ei määra mitte ainult meie sissetulekut, vaid kujundab ka meie sotsiaalset identiteeti ja tähendust, mille me oma päevadele anname. Tehisintellekt, robootika ja uued tööviisid raputavad aga täna seda tööstusajast pärit mudelit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sellel kursusel uuritakse, kuidas töö vormi muudab, ja suuri küsimusi, mida see ümberkujundamine tõstatab: vähem tunde, rohkem masinaid ja uus rikkuse jagamine."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p1",
+      "title": "Henry Fordiga sündinud mudeli lõpp",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kaasaegne töö on pikka aega korraldatud idee ümber, mida populariseeris **[[Henry Ford]]**, kes kehtestas 1926. aastal 40-tunnise nädala. See valik ei olnud suuremeelsuse žest: ka vaba aega omavatest töötajatest saavad kliendid, kes suudavad oma toodetud tooteid ise osta."
+        },
+        {
+          "type": "funFact",
+          "text": "Aastal 1930 ennustas majandusteadlane John Maynard Keynes, et tema lapselapsed töötavad tänu tehnoloogia arengule vaid 15 tundi nädalas. Peaaegu sajand hiljem on see tehnoloogia meil olemas, kuid töötame endiselt sama palju."
+        },
+        {
+          "type": "paragraph",
+          "text": "See mudel on täna lagunemas **gigi majanduse**, „keeramise” majanduse kasuks: enam kui 57 miljonit töötajat Ameerika Ühendriikides müüvad praegu oma teenuseid digitaalsete platvormide kaudu, väljaspool traditsioonilist töökohta. Automatiseerimine võtab üle ka üha keerukamaid ülesandeid, samas kui kaugtöö, mida 2020. aasta pandeemia kiirendas, kujundab ümber töö geograafiat."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p2",
+      "title": "AI ja loomingulise hävitamise väljakutse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Arutelu töö tuleviku üle põhineb sageli filosoofi ja majandusteadlase **[[Joseph Schumpeter]]** ideel: **[[Loominguline hävitamine]]**. Tema sõnul hävitab iga tehnoloogiline revolutsioon vanu ameteid, kuid lõpuks tekib uusi, sageli kvalifitseeritumaid. Generatiivne tehisintellekt toob aga sisse midagi uut: see ohustab esimest korda kontori- ja intellektuaalseks peetavaid ameteid."
+        },
+        {
+          "type": "funFact",
+          "text": "2023. aastal näitas uuring, et tehisintellekt sooritas loovustestis paremini kui 99% inimestest, mis seab kahtluse alla idee, et loovus on meie viimane eelis masinate ees."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tekkimas on kolm stsenaariumi. Optimist kujutab ette tootlikkuse kasvu, mis vabastaks inimesed korduvatest ülesannetest. Pessimist kardab, et tehisintellekt edeneb kiiremini kui meie võime ümberõppida, tekitades tohutut tööpuudust. Lõpuks toetub hübriid inimeste ja masinate koostööle, kus põhioskus oleks pigem võime juhtida tööriistu, mitte omandada fikseeritud oskusteavet."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p3",
+      "title": "Jagage aega ja raha ümber",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seistes silmitsi kahe kiirusega ühiskonna ohuga, uuritakse uusi tööriistu. **Universaalne põhisissetulek** teeb ettepaneku maksta igale kodanikule tingimusteta fikseeritud summa, et kindlustada elutee majanduses, kus töö muutub katkendlikumaks."
+        },
+        {
+          "type": "image",
+          "asset": "ai_generative_writing_artificial_intelligence",
+          "ratio": "16:9",
+          "caption": "Automatiseerimine, tehisintellekt ja uued tööhõivevormid kujundavad töömaailma ümber."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lisaks on levimas **[[4-päevane nädal]]**: kui masinad toodavad lühema ajaga rohkem, tundub loogiline, et inimeste tööaeg peaks vastutasuks vähenema, et säilitada tööhõivet ja hoida töötajate tervist. Jääb küsimus rahastamises: kui väärtust loob järjest enam tarkvara, peavad maksud kahtlemata liikuma töötulult kapitalitulule."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p4",
+      "title": "Mis tähenduse anda homsele tööle",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kui majanduslik võrrand on lahendatud, jääb sügavam küsimus: mis saab meie päevade tähendusest maailmas, kus töö on vähem kesksel kohal? Ajalooliselt on töö igapäevaelu ja enesehinnangut struktureerinud. Selle osaline kadumine võib kaasa tuua kas igavuse või vabatahtliku, kunstilise või kodanikutegevuse elavnemise."
+        },
+        {
+          "type": "funFact",
+          "text": "Sõna \"töö\" pärineb ladinakeelsest sõnast tripalium, kolmeosaline piinamisvahend. Päritolu, mis tuletab meile meelde, et seda peeti pikka aega kannatuseks enne identiteediks saamist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selles kontekstis muutub õppimise õppimine oluliseks oskuseks. Tegelik probleem pole mitte ainult tehnoloogiline, vaid poliitiline: kas kasutame tehisintellekti oma võimekuse suurendamiseks või ainult ärikulude vähendamiseks? Vastus määrab, kas homne töö on vabanemine või uus piirang."
+        },
+        {
+          "type": "takeaway",
+          "text": "Töö tulevikku iseloomustavad üksikute töötajate kadumine gigamajanduse kasuks ning tehisintellekti väljakutse, mis esimest korda ohustab intellektuaalseid töökohti. Meie sotsiaalmudel peab kahtlemata tootlikkuse kasvu ümber jaotama universaalse sissetuleku või lühema töönädala kaudu."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "course_57_l_invention_d_internet",
+  "title": "Interneti leiutis",
+  "subtitle": "Võrgud",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Internetil pole üht leiutajat. See on pikk ahel: sõjaline võrgustik, ühine keel, seejärel veeb inimestele.",
+  "hero": {
+    "image": "l_invention_d_internet",
+    "ratio": "16:9",
+    "hook": "Kõigepealt võrgustik sõjale vastupanu osutamiseks. Siis häälestub kogu maailm."
+  },
+  "sections": [
+    {
+      "id": "course_57_l_invention_d_internet_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Internet ei sündinud ühest geeniusest garaažis. Tegemist on mitme aastakümne jooksul valminud kollektiivse ehitusega."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kolm lihtsat sammu, mida meeles pidada: esimene võrk (ARPANET), ühine keel (TCP/IP), seejärel lihtne liides (veeb)."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p1",
+      "title": "ARPANET, esimene võrk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aastate **1960** lõpus, keset külma sõda, rahastas Ameerika armee projekti: arvutite ühendamine nii, et need jätkaksid suhtlemist isegi siis, kui osa võrgust hävis."
+        },
+        {
+          "type": "image",
+          "asset": "arpanet_1969_computer_ucla",
+          "ratio": "4:3",
+          "caption": "ARPANET ühendab kõigepealt mõned Ameerika ülikoolid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selle võrgu nimi on **ARPANET**. Sõnumid jagatakse väikesteks pakettideks, mis kulgevad erineval viisil. Kui üks tee kukub, võtab teine üle."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p2",
+      "title": "TCP/IP: räägivad samas keeles",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Et erinevad võrgud üksteist mõistaksid, on vaja ühiseid reegleid. **Vint Cerf** ja **Bob Kahn** arendavad **TCP/IP** protokolli: keelt, mis ütleb, kuidas andmeid lõigata, adresseerida ja ümber koostada."
+        },
+        {
+          "type": "image",
+          "asset": "vint_cerf_bob_kahn_internet",
+          "ratio": "4:3",
+          "caption": "Cerf ja Kahn: Interneti keele arhitektid."
+        },
+        {
+          "type": "funFact",
+          "text": "1. jaanuaril **1983** lülitus ARPANET ametlikult üle TCP/IP-le. Paljud peavad seda kuupäeva Interneti tehniliseks \"sünniks\"."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p3",
+      "title": "Veeb muudab võrgu inimeseks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Internet on võrk. **World Wide Web**, mille leiutas **Tim Berners-Lee** CERNis aastate alguses **1990**, on lihtne kiht: lehed, lingid, brauserid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ilma veebita jääks Internet eelkõige ekspertide töövahendiks. Selle abil saavad kõik klõpsata."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p4",
+      "title": "Maailma närvisüsteem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tänapäeval kannab Internet e-kirju, videoid, panku, haiglaid, GPS-i. See on tekitanud ka uusi probleeme: desinformatsioon, jälgimine, digitaalne lõhe."
+        },
+        {
+          "type": "takeaway",
+          "text": "Internet sündis ARPANETist, sai universaalseks tänu TCP/IP-le ja juurdepääsetavaks tänu veebile. See ei ole ainulaadne leiutis, see on jagatud arhitektuur."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
+  "title": "Miksi merivesi on suolaista?",
+  "subtitle": "Valtameret",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Yksi litra merivettä sisältää noin 35 grammaa suolaa. Tämä suola on kertynyt miljardeja vuosia. Täältä se tulee.",
+  "hero": {
+    "image": "pourquoi_l_eau_de_mer_est_salee",
+    "ratio": "16:9",
+    "hook": "Joet ovat pehmeitä. Valtameret ovat suolaisia. Salaisuus on aika ja haihtuminen."
+  },
+  "sections": [
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valtameret peittävät yli **70 %** planeetan pinta-alasta. Keskimäärin yksi litra merivettä sisältää noin **35 grammaa suolaa**. Tämä ei ole sattumaa: se on erittäin pitkän prosessin tulos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suola ei \"pudota\" taivaalta valmiina. Se kulkee mantereilta ja jää loukkuun valtamereen."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
+      "title": "Suola tulee ensin maasta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ilman läpi kulkeva sade kerää itseensä hieman hiilidioksidia. Se muuttuu lievästi happamaksi. Pudotessaan kiville se hyökkää niiden kimppuun: tämä on **kemiallinen eroosio**."
+        },
+        {
+          "type": "image",
+          "asset": "ocean_sea_salt_evaporation",
+          "ratio": "auto",
+          "caption": "Suolamaat: haihdutus tiivistää meriveteen liuenneen suolan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Joet kuljettavat sitten liuenneita mineraaleja, erityisesti **natrium** ja **kloori**, kaksi ruokasuolan ainesosaa. He heittävät ne mereen."
+        },
+        {
+          "type": "funFact",
+          "text": "Myös merenpohjan vedenalaiset tulivuoret ja kuumat lähteet lisäävät suoloja. Mutta suurin osa tulee silti mantereilta."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
+      "title": "Miksi joet eivät ole suolaisia?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hyvä kysymys: jos joet tuovat suolaa, miksi Rhônen tai Seinen vesi ei ole suolaista? Koska siellä oleva suola on hyvin laimennettua ja koska jokien vesi uusiutuu jatkuvasti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Meressä se on erilaista. Auringon alla vesi **Zehaihtuu** ja palaa taivaalle. Suola, **Jää**. Vuodesta vuodesta, vuosisadasta vuosisadan jälkeen se kertyy. Kutsumme tätä [[hydrologinen kierto ja suolan kertyminen]]:n lähde."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
+      "title": "Suola kiertää myös valtamerissä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suolavesi on **tihempää** (\"raskaampaa\" samalla tilavuudella) kuin makea vesi. Napoilla pintaveden jäätyessä suolaa vapautuu osittain ympäröivään nestemäiseen veteen. Tämä vesi tihenee entisestään ja uppoaa pohjaan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä liike auttaa ajamaan suuria merivirtoja. Nämä virtaukset kuljettavat lämpöä ja ravinteita ympäri maailmaa. Suola ei ole vain makuasia: se on osa planeetan ilmastomoottoria."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
+      "title": "Ei kaikkialla samaa suolaa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suolapitoisuus ei ole sama kaikkialla. Päiväntasaajan lähellä voimakas haihtuminen voi väkevöidä suolaa. Suurten jokien tai sulavien jäälauttojen lähellä vesi on pehmeämpää. Kuollutmeri on ääritapaus: vettä lähtee hyvin vähän, suolaa jää paljon."
+        },
+        {
+          "type": "takeaway",
+          "text": "Merivesi on suolaista, koska joet tuovat mineraaleja mantereilta ja haihtuminen jättää suolan valtamereen. Tämä kasautuminen on jatkunut miljardeja vuosia."
+        }
+      ]
+    }
+  ]
+}

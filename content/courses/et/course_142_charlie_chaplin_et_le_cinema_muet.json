@@ -1,0 +1,131 @@
+{
+  "id": "course_142_charlie_chaplin_et_le_cinema_muet",
+  "title": "Charlie Chaplin ja tummkino",
+  "subtitle": "1889-1977",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**Charlie Chaplin** leiutab pallikübaras hulkuri Charloti ja temast saab esimene maailma kinotäht. Vaiksest rääkimiseni muudab ta naeru kunstiks.",
+  "hero": {
+    "image": "charlie_chaplin_et_le_cinema_muet",
+    "ratio": "16:9",
+    "hook": "Enne raadiot ja televisiooni ajas tumm rändur terve planeedi naerma."
+  },
+  "sections": [
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Charlie Chaplin** (1889-1977) on esimene tõeline ülemaailmne kuulsus. Tööstusliku vaesuse ajastul pakub tema tegelane **Charlotte**, väärikas ja kohmakas hulkur, inimlikku nägu. Rääkimata ajab ta inimesi naerma ja nutma Tokyos, Pariisis või New Yorgis."
+        },
+        {
+          "type": "paragraph",
+          "text": "See kursus järgib tema trajektoori: kino tekkest vaikivate meistriteosteni, seejärel sunnitud paguluseni. Chaplin pole lihtsalt kloun. Ta on täielik autor."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p1",
+      "title": "Kinematograafist Hollywoodini",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kino sündis prantsuse leiutisest: vendade Lumière [[kinematograaf]] ja originaalkino, mis on patenteeritud dokumendis **1895**. **28. detsembril 1895** toimus Grand Café de Paris esimene tasuline avalik linastus. Esimesed filmid on lühidokumendid: tehase väljapääs, rong jaamas."
+        },
+        {
+          "type": "image",
+          "asset": "lumiere_brothers_first_cinema_projection_paris_1895",
+          "ratio": "4:3",
+          "caption": "1895: kinost saab Pariisis kollektiivne vaatemäng."
+        },
+        {
+          "type": "paragraph",
+          "text": "Väga kiiresti leiutas prantsuse illusionist [[Georges Méliès]] väljamõeldisi ja trikke. Seejärel on tööstus struktureeritud Ameerika Ühendriikides. **Hollywood**-st on saamas unistuste pealinn, mille stuudiod toodavad filme koosteliinil. Just selles tehases hakkab Chaplin end sisse seadma."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p2",
+      "title": "Charlot, universaalne autsaider",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Londonis **1889** vaesuses sündinud Charles Spencer Chaplin kasvas üles kabareede ja vaestekodude vahel. Koolituse saanud [[muusikasaal]] jõudis ta Hollywoodi. Filmis **1914** leiutas ta peaaegu juhuslikult **Charlotte** kostüümi: palluri müts liiga väike, püksid liiga laiad, kepp ja vuntsid."
+        },
+        {
+          "type": "image",
+          "asset": "charlie_chaplin_tramp_bowler_hat_cane",
+          "ratio": "4:3",
+          "caption": "Charlot: rahatu härrasmees, silueti järgi äratuntav."
+        },
+        {
+          "type": "funFact",
+          "text": "Chaplin pani kostüümi kokku mõne minutiga stuudio riietusruumis, laenates teistelt näitlejatelt liiga suuri ja väikseid riideid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Charlot pole mitte ainult naljakas. Ta sümboliseerib meest, kes hoiab vaesusest hoolimata oma väärikust kinni. Chaplin kasutab [[Slapstick]], kukkumiste ja löökide koomikat, kuid ta lisab haruldase emotsiooni: õrnuse."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p3",
+      "title": "Vältige rääkimist, astuge vastu diktaatoritele",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Filmis **1927** saabub helikino koos *Jazzlaulja*. Chaplin, [[Ühendatud kunstnikud]] kaasasutaja, seisab vastu. Charlotile hääle andmine tähendab tema universaalsuse murdmist. Seetõttu jätkab ta vaikimist saates *Linnatuled* (**1931**)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Siis jõuab ajalugu talle järele. Filmis **1940** lavastas ta *Diktaator*, **Adolf Hitleri** satiiri. See on tema esimene täielikult kõnelev film, mis filmiti ajal, mil USA oli natsismi suhtes endiselt ettevaatlik. Klounist saab pühendunud kunstnik."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p4",
+      "title": "Autori pagulus ja pärand",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pärast 1945. aastat said maad [[Külm sõda]] ja [[McCarthyism]]. Vasakpoolsetes ideedes kahtlustatuna jälgitakse Chaplinit. Aastal **1952**, kui ta Euroopasse lahkus, keelas USA tal tagasipöördumise. Ta asus oma ülejäänud eluks elama Šveitsis [[Vevey]]."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1895",
+              "title": "Kino sünd",
+              "detail": "Vendade Lumière esimene avalik linastus."
+            },
+            {
+              "date": "1914",
+              "title": "Charloti sünd",
+              "detail": "Chaplin mõtleb välja oma legendaarse kostüümi."
+            },
+            {
+              "date": "1940",
+              "title": "Diktaator",
+              "detail": "Chaplini esimene kõnekas film, satiir Hitlerist."
+            },
+            {
+              "date": "1952",
+              "title": "Sunniviisiline pagendus",
+              "detail": "Kui ta sai USA-s viibimise keelu, lahkus ta Šveitsi."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Chaplin leiutas universaalse vaikiva keele. Täieliku autorina (näitleja, lavastaja, helilooja) tõestas ta, et populaarne kino võib olla ka poliitiline ja emotsionaalne kunst."
+        }
+      ]
+    }
+  ]
+}

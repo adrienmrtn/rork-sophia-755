@@ -1,0 +1,151 @@
+{
+  "id": "course_124_rembrandt_et_l_ecole_flamande",
+  "title": "Rembrandt ja flaamilainen koulu",
+  "subtitle": "1606-1669",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "**Rembrandt van Rijn** on Hollannin kultakauden suuri taidemaalari. Omakuvia, raamatullisia kohtauksia ja *Yövuoro*: hän maalaa ihmisen sielun.",
+  "hero": {
+    "image": "rembrandt_et_l_ecole_flamande",
+    "ratio": "16:9",
+    "hook": "Amsterdamin loistosta raunioille: taidemaalari, joka teki varjosta sielun kielen."
+  },
+  "sections": [
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Rembrandt van Rijn** (1606-1669) on 1600-luvun hollantilaisen koulukunnan mestari. [[Hollannin kulta-aika]]:ssa Hollannista tulee kaupallinen voima ja ajatuksenvapauden pesä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hänen omakuvansa, raamatulliset kohtauksensa ja kuuluisa *Yökello* tekevät chiaroscurosta tunteellisen kielen. Se asettaa ihmiset, upeat tai väsyneet, kaiken keskipisteeseen."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p1",
+      "title": "Amsterdam: porvarilliset markkinat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1600-luvulla **Yhdistyneet maakunnat** hallitsivat maailmankauppaa. Toisin kuin muualla Euroopassa, jossa kirkko ja kuninkaat hallitsevat taidetta, Hollannin markkinoita ohjaa protestanttinen porvaristo. Hän haluaa maalauksia taloon, ei kirkon freskoja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä konteksti suosii genrejä: maisema, asetelma, arkikohtaukset. **Vermeer** ja [[Hals]] erottuvat joukosta. Rembrandt muutti Amsterdamiin **1631**:ssa ja hänestä tuli halutuin muotokuvamaalari."
+        },
+        {
+          "type": "funFact",
+          "text": "Hänen konkurssinsa jälkeen hänen poikansa Titus ja hänen kumppaninsa Hendrickje perustivat taideyrityksen, jonka työntekijänä Rembrandt virallisesti toimi, suojellakseen uusia maalauksiaan velkojien taholta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mutta hänen elämäntapansa on liian suuri. Elokuvassa **1656** [[henkilökohtainen konkurssi]] osuu häneen. Talo, huonekalut ja kokoelmat huutokaupataan. Hän kieltäytyy kuitenkin pehmentämästä tyyliään miellyttääkseen muotia."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p2",
+      "title": "Lumière sisätilat ja paksu maali",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rembrandt keksii uudelleen [[Caravaggio]]:ltä perityn [[chiaroscuro]]. Hänen työssään valo ei ole vain esittelyä varten: se näyttää suodattuvan hahmojen sisältä. Katse keskittyy kasvoihin ja käsiin."
+        },
+        {
+          "type": "image",
+          "asset": "rembrandt_night_watch_painting",
+          "ratio": "4:3",
+          "caption": "Yövartio: Miliisi liikkeessä, ei kiinteä linjaus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hänen toinen allekirjoituksensa: **impasto**, tämä maali on levitetty niin paksuksi, että se luo helpotuksen. Aikakaudella, joka haluaa sileitä pintoja, hän uskaltaa käyttää materiaaleja. Sanottiin, että tiettyjä muotokuvia olisi voitu nostaa nenästä. Hän etsii todellista, ei kaunista ihannetta."
+        },
+        {
+          "type": "funFact",
+          "text": "Kemiallinen analyysi paljasti plumbonakriitin sen impastossa: harvinainen lyijyyhdiste, joka auttoi sen paksuja kerroksia kuivumaan nopeammin."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p3",
+      "title": "Yövartio: muotokuva, joka liikkuu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alueella **1642** Rembrandt toimittaa *Kapteeni Frans Banning Cocq*-yhtiön, joka tunnetaan nimellä **Yökello**. Tilaus [[Kloveniersdoelen]]:lle, porvarillisen miliisin päämajalle Amsterdamissa. Yleensä miliisit poseeraavat jonossa, jokainen selvästi näkyvissä, koska he ovat maksaneet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rembrandt näyttää heidät liikkeessä poistuessaan päämajasta. Chiaroscuro hierarkisoi hahmot: jotkut siirtyvät varjoon. Legendan mukaan raivokkaat miliisit aiheuttivat sen kaatumisen. Todellisuudessa työtä ihailtiin, vaikka se oli hämmentävää."
+        },
+        {
+          "type": "funFact",
+          "text": "Otsikko *Yövuoro* on väärintulkinta: kohtaus on päivällinen. Vuosisatoja kestänyt likainen lakka on tummentanut kangasta niin paljon, että se näytti yöpartiolta."
+        },
+        {
+          "type": "paragraph",
+          "text": "1700-luvulla sen neljä sivua leikattiin, jotta se asennettiin kaupungintaloon. Hahmot katoavat. Alkuperäinen kokoonpano oli paljon tilavampi."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p4",
+      "title": "Itsesi maalaaminen, koko elämä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rembrandt maalasi noin **80-90 omakuvaa** lähes neljänkymmenen vuoden aikana. Nuorelta hän näyttää ylimieliseltä, turkisten ja korujen peittämältä. Raunioiden ja surujen jälkeen sävy muuttuu: lisää viettelyä, raakaa rehellisyyttä ikääntymisen edessä."
+        },
+        {
+          "type": "image",
+          "asset": "rembrandt_self_portrait_old_age",
+          "ratio": "4:3",
+          "caption": "Myöhäiset omakuvat: katse ilman maskia."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1631",
+              "title": "Saapuminen Amsterdamiin",
+              "detail": "Hänestä tulee kaupungin tähtimuotokuvaaja."
+            },
+            {
+              "date": "1642",
+              "title": "Yövartio",
+              "detail": "Muotokuva miliisistä liikkeellä, vallankumouksellinen."
+            },
+            {
+              "date": "1656",
+              "title": "Konkurssi",
+              "detail": "Talo ja kokoelmat myydään huutokaupassa."
+            },
+            {
+              "date": "1669",
+              "title": "Kuollut",
+              "detail": "Hän kuoli suhteellisen nimettömänä."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Kuollut **1669**, haudattu ilman loistoa, hän tulee vaikuttamaan Goyaan kuten [[Francis Bacon]]. Hän on edelleen maalari, joka muutti pigmentin sisäiseksi valoksi."
+        },
+        {
+          "type": "takeaway",
+          "text": "Rembrandt suurennoi ihmisen sisällisyyttä chiaroscuron ja paksun maalin avulla. Amsterdamin loistosta raunioille hänen omakuvansa pysyvät ainutlaatuisena elämänpäiväkirjana."
+        }
+      ]
+    }
+  ]
+}

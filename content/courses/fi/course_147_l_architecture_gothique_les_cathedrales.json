@@ -1,0 +1,131 @@
+{
+  "id": "course_147_l_architecture_gothique_les_cathedrales",
+  "title": "Goottilainen arkkitehtuuri: katedraalit",
+  "subtitle": "12-16-luvulla",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "1100-1500-luvulla goottilaiset katedraalit nostivat kiven taivasta kohti. Terävä kaari, uritetut kaaret, lasimaalaukset: tekninen vallankumous valon palveluksessa.",
+  "hero": {
+    "image": "l_architecture_gothique_les_cathedrales",
+    "ratio": "16:9",
+    "hook": "Kuinka keskiaika sai kiven lentämään päästämään Jumalan valoon."
+  },
+  "sections": [
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1100- ja 1500-luvuilla Eurooppaa peittivät **goottilaiset katedraalit**. Se ei ole vain kirkkoja. Nämä ovat teknisiä haasteita: kivialukset, jotka näyttävät uhmaavan painovoimaa päästääkseen valoa sisään."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sana \"gootti\" nousi myöhemmin esiin loukkauksena, \"goottien taiteena\". Tässä tyylissä yhdistyvät kuitenkin usko, urbaani vauraus ja tekninen rohkeus. Se hallitsee edelleen kaupunkimme keskuksia."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p1",
+      "title": "Saint-Denis: kivi oppii tulemaan kevyemmäksi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gothic syntyi **Île-de-France**:ssä **1140**:n ympärillä. Perussokki on [[Saint-Denis'n basilika]], jota kantaa [[Apotti Suger]]. Tummat romaaniset kirkot, joissa on paksut seinät, Suger halusi yhtenäisemmän, kevyemmän ja korkeamman tilan."
+        },
+        {
+          "type": "image",
+          "asset": "saint_denis_basilica_gothic_abbot_suger",
+          "ratio": "4:3",
+          "caption": "Saint-Denis: laboratorio, jossa gootti oppii ratsastamaan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kolme keksintöä toimivat yhdessä: terävä kaari, korkeampi ja kapeampi; **ribbed vault**, joka keskittää painon tiettyihin pisteisiin; ja [[tukikaari]], ulkoinen kaari, joka vastustaa työntövoimaa. Yhdessä [[lentävä tukituki ja kylkiluuholvi]] vapauttaa seinät: suuret ikkunat avautuvat."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p2",
+      "title": "Valo kuin jumalallinen kieli",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sugerille valo ei ole koristeellinen yksityiskohta. [[Valon teologia (apotti Suger)]] mukaan värilliset säteet auttavat sielua nousemaan kohti Jumalaa. Seinistä tulee **Lasimaalauksia**. Yhteiskunnassa, jossa monet eivät osaa lukea, nämä kuvat kertovat tarinan Raamatusta ja kaupungin elämästä."
+        },
+        {
+          "type": "funFact",
+          "text": "**Chartres**:ssa tietyt 1200-luvun lasimaalaukset ovat säilyttäneet niin voimakkaan sinisen, että puhumme edelleen \"Chartresin sinisestä\": väristä, josta on tullut tunnusmerkki."
+        },
+        {
+          "type": "paragraph",
+          "text": "Katedraali ei ole enää kivilinnoitus. Siitä tulee valohäkki."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p3",
+      "title": "Vuosisatoja kestävä projekti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Katedraalin rakentaminen kestää usein enemmän kuin **kaksi vuosisataa**. Sodat, epidemiat, rahan puute: projekti etenee ja lähtee käyntiin. **Pariisin Notre-Dame** alkaa paikasta **1163** ja löytää muotonsa **1345**:n ympäriltä noin 180 vuoden jälkeen."
+        },
+        {
+          "type": "image",
+          "asset": "notre_dame_de_paris_cathedral_facade",
+          "ratio": "4:3",
+          "caption": "Notre-Dame de Paris: keskiaikainen rakennustyömaa, josta on tullut kansallinen symboli."
+        },
+        {
+          "type": "paragraph",
+          "text": "Koko kaupunki työskentelee: kivenhakkaajat, kirvesmiehet, lasisepät. Kiven louhinta, puun kuljettaminen, joukkueiden ruokinta: katedraali on myös taloudellinen kone."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p4",
+      "title": "Loistavasta gootista uusgoottiiseen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tyyli kehittyi: klassinen gootti (Chartres, Amiens), sitten säteilevä (Sainte-Chapelle), sitten loistokas, koristeellisempi. 1800-luvulla Eurooppa löysi sen uudelleen **neogoottilaisen**:n avulla. Keskeneräisiä projekteja jatketaan, kuten **Köln**, valmistui **1880**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1140",
+              "title": "Saint-Denis",
+              "detail": "Suger käynnistää kuoron, joka avaa goottilaisen aikakauden."
+            },
+            {
+              "date": "1163",
+              "title": "Pariisin Notre-Dame",
+              "detail": "Lähes kaksi vuosisataa kestävän projektin alku."
+            },
+            {
+              "date": "13. vuosisadalla.",
+              "title": "Apogee",
+              "detail": "Chartres, Amiens, Reims pakottavat klassisen mallin."
+            },
+            {
+              "date": "1800-luvulla.",
+              "title": "Uusgootti",
+              "detail": "Eurooppa palauttaa ja keksii uudelleen keskiaikaisen tyylin."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Goottilainen muutti katedraalin valoastiaksi. Vapauttamalla seinät terävän kaaren ja lentävän tuen ansiosta keskiaika keksi arkkitehtuurin, joka edelleen puhuttelee kaupunkejamme."
+        }
+      ]
+    }
+  ]
+}

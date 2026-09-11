@@ -1,0 +1,108 @@
+{
+  "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment",
+  "title": "Mikä on kasvihuoneilmiö (todella)?",
+  "subtitle": "Ilmasto & tunnelma",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Kasvihuoneilmiö ei ole ensisijaisesti ongelma: se on näkymätön vaippa, joka estää maapalloa jäätymästä. Todellinen ongelma on se, että paksuutat sen liian nopeasti.",
+  "hero": {
+    "image": "qu_est_ce_que_l_effet_de_serre",
+    "ratio": "16:9",
+    "hook": "Ilman kasvihuoneilmiötä maapallo olisi jäinen aavikko. Liian paljon se ylikuumenee."
+  },
+  "sections": [
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuvittele suljettu auto auringossa: ikkunat päästävät valoa sisään, mutta lämmön on vaikea päästä ulos. Matkustamo lämpenee. Maan [[kasvihuoneilmiö]] toimii vähän näin, lasin sijaan ilma."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä ilmiö on **luonnollinen** ja elintärkeä. Ilman sitä maapallon keskilämpötila laskee kohti **-18 °C**. Hänen kanssaan olemme noin **+15 °C**. Nykyinen ongelma ei ole sen olemassaolo: se on sen nopea **vahvistusta** toimintamme kautta."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p1",
+      "title": "Kuinka planeetta säilyttää lämpönsä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aurinko lähettää pääasiassa näkyvää valoa. Tunnelma antaa sen mennä ohi. Maa ja valtameret lämpenevät ja säteilevät sitten tätä energiaa takaisin **infrapunalämmönä**, aaltoina, jotka ovat näkyvää valoa \"pidempiä\"."
+        },
+        {
+          "type": "image",
+          "asset": "factory_chimneys_greenhouse_gas_emissions",
+          "ratio": "auto",
+          "caption": "Teollisuuden päästöt vahvistavat kasvihuoneilmiötä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tietyt kaasut, [[kasvihuonekaasu]], imevät tätä lämpöä ja säteilevät sitä kaikkiin suuntiin, myös maahan. Typpi ja happi, joista suurin osa on ilmassa, tuskin tekevät tätä työtä. Vesihöyry, **CO₂** ja **metaani** tekevät tämän erittäin hyvin."
+        },
+        {
+          "type": "funFact",
+          "text": "Nimi \"kasvihuoneilmiö\" on hieman harhaanjohtava. Todellinen kasvihuone lämmittää pääasiassa estämällä nousevan kuuman ilman. Ilmakehä vangitsee lämpöä absorboimalla infrapunasäteitä."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p2",
+      "title": "Kun ihmiset paksuntaa peittoa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Teollisen vallankumouksen jälkeen hiiltä, öljyä ja kaasua on poltettu. Tämä miljoonia vuosia maan alle haudattu hiili palaa ilmaan. Metsien hävittäminen vähentää myös CO₂:ta absorboivien metsien määrää. Karjan ja riisin viljely lisää metaania, noin **80 kertaa** enemmän \"lämmitystä\" kuin CO₂ 20 vuoden aikana."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tulos: CO₂-pitoisuus nousi noin **280**:stä yli **420** miljoonasosaan. Tällaista tasoa ei ollut nähty sitten [[plioseeni]], noin **3 vuotta sitten**, jolloin meret olivat korkeammalla."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p3",
+      "title": "Mikä energisempi ilmastonmuutos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tuhansien ilmastotieteilijöiden työtä syntetisoiva [[IPCC]] on selvä: vuodesta 1950 lähtien lämpeneminen on ollut ennennäkemätöntä vuosituhansien aikana, ja sen inhimillinen alkuperä on vahvistettu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enemmän energiaa ilmassa ja valtamerissä tarkoittaa enemmän äärimmäisyyksiä: kuivempaa kuivuutta, rajumpia sateita, jäätiköiden ja jääpeitteiden sulamista, merenpinnan nousua. Ja kiihdytin: kun valkoinen jää katoaa, tumma maaperä ja vesi imevät enemmän auringonvaloa. Juuri [[Maanpäällinen albedo]] putoaa ja planeetta lämpenee entistä nopeammin."
+        },
+        {
+          "type": "funFact",
+          "text": "Venus näyttää \"pakatun\" kasvihuoneilmiön: ilmakehän hiilidioksidipitoisuus on 96 % ja noin **460 °C** maassa, mikä riittää sulattamaan lyijyä."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
+      "title": "Rajoita kasvua, mukaudu muuhun",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kansainvälisenä tavoitteena on pysyä alle **+1,5 °C** tai **+2 °C** esiteolliseen aikaan verrattuna, jotta vältetään vaaralliset kynnykset, kuten [[ikirouta]]:n sulaminen, joka vapauttaisi vielä enemmän metaania."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kaksi vipua: **äänestää**-päästöjä (puhdas energia, raittius, metsät) ja **Sopeudu** siihen, mikä on jo sitoutunut. CO₂ pysyy ilmassa vuosisatoja: nykyiset päästöt kestävät pitkään."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ilman luonnollista kasvihuoneilmiötä maapallo jäätyisi noin **-18 °C**. Sen vahvistuminen fossiilisilla polttoaineilla nostaa CO₂:n tasolle, jota ei ole nähty **3 min ajan**."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "id": "course_162_promethee_le_voleur_de_feu",
+  "title": "Prometheus: tulivaras",
+  "subtitle": "Titaani, joka uhmaa Zeusta",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Prometheus varastaa tulta jumalilta ihmisten puolesta ja kestää sitten loputonta piinaa. Myytti edistyksestä, oveluudesta ja vapauden hinnasta.",
+  "hero": {
+    "image": "promethee_le_voleur_de_feu",
+    "ratio": "16:9",
+    "hook": "Titaani varastaa tulen Olympuksesta. Miehet saavat sivistyksen. Hän saa kotkan ja ketjun."
+  },
+  "sections": [
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Prometheus** on titaani, edellisen sukupolven jumala. Sen nimi herättää ennakoivan. Kreikkalaisissa myyteissä hän muotoilee ensimmäiset miehet, suojelee heitä **Zeukselta**:ltä, Olympoksen kuninkaalta, ja maksaa valinnasta hirvittävän rangaistuksen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Varastamalla tulta kuolevaisille hän antaa ihmisille tekniikkaa ja tietoa. Hänen kidutuksestaan Kaukasuksella tulee sen neron symboli, joka uskaltaa haastaa vallan."
+        }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p1",
+      "title": "Ihminen syntyy alasti, Prometheus-temppu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sanotaan, että Prometheus mallinsi ensimmäiset ihmiset savella ja vedellä. Hänen veljensä [[Epimetheus]] toimii liian nopeasti. Hän vastaa eläinten varustamisesta ja antaa kaiken: kynnet, siivet, turkin, nopeuden. Kun miehen vuoro tulee, ei jää mitään. Ihminen syntyy hauraana ja puolustuskyvyttömänä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prometheus päättää kompensoida. Uhriessaan [[Mecone]]:lle hän leikkaa härän kahteen osaan. Ruman ihon alle se kätkee hyvän lihan. Ruokahaluisen rasvan alla se piilottaa luut. **Zeus** valitsee hyvän ulkonäön. Siitä lähtien ihmiset ovat syöneet lihaa ja tarjonneet luita jumalille."
+        },
+        {
+          "type": "funFact",
+          "text": "Palon piilottamiseen Prometheus käyttää [[Ferule]] sauvaa. Sen luuydin palaa hyvin hitaasti: Välimeren paimenet käyttivät sitä todella kannettavana sytyttimenä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Raivoissaan petetyksi tulemisesta Zeus ottaa ihmisiltä tulen pois. Ilman lämpöä tai valoa ne putoavat takaisin melkein eläinelämään."
+        }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p2",
+      "title": "Tulen varastaminen ja kidutus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prometheus astuu Olympukseen. Hän varastaa kipinän Auringon vaunuista tai seppien jumalan **Hephaestuksen**:n takomosta versiosta riippuen. Hän piilottaa sen onttoon varreensa ja tuo sen takaisin kuolevaisille."
+        },
+        {
+          "type": "image",
+          "asset": "prometheus_steal_fire_ancient_greek_painting",
+          "ratio": "4:3",
+          "caption": "Prometheus tuo tulen ihmisiin, tekniikan perustan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kreikkalaisille tuli ei ole vain liekki. Hän ilmentää **tekninen**- ja **syy**-elementtejä, joiden avulla ihminen voi muuttaa maailmaa. Zeus kostaa. Ihmisyyttä vastaan hän lähettää myöhemmin Pandoran. Prometheusta vastaan rangaistus on suora."
+        },
+        {
+          "type": "funFact",
+          "text": "Muinaisessa lääketieteessä **maksa** pidettiin tunteiden ja elinvoiman paikkana. Zeus valitsi tämän urut murtaakseen titaanin tahdon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Titan on ketjutettu **Kaukasuksen**:n seinään. Joka päivä kotka syö hänen maksansa. Joka ilta urut syntyvät uudelleen. Kidutus alkaa taas aamunkoitteessa, ilman loppua."
+        }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p3",
+      "title": "Herakles katkaisee kahleet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prometheus kieltäytyi vuosisatojen ajan antamasta periksi. Hän tietää vaarallisen salaisuuden: mikä nainen synnyttää Zeusta vahvemman pojan. Kidutuksesta huolimatta hän on hiljaa. Siitä tulee vastarinnan symboli tyrannian edessä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sankari **Herakles**, Zeuksen poika, saapuu Kaukasiaan. Hän tappaa kotkan nuolella ja vapauttaa vangin. Zeus ottaa vastaan armon: Prometheus paljastaa vihdoin salaisuuden nymfistä **Thétis**. Näin jumalten kuningas välttää oman lankeemuksensa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kunnioittaakseen valan, joka sitoi hänet kallioon, Prometheus käyttää sormusta, joka on tehty hänen ketjujensa raudasta ja kivenpalasta. Hän pysyy \"sidottuina\" vuoreen, mutta vapaana."
+        }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p4",
+      "title": "Myytti, joka ei koskaan sammu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "500-luvulla eaa. tragedia [[Aischylus]] esitti \"Prometheuksen ketjuissa\". Myöhemmin myytti inspiroi tiedettä ja edistystä. Mary Shelley tekstittää \"Frankenstein\" \"The Modern Prometheus\": Elämän luominen ilman viisautta voi myös tuhota."
+        },
+        {
+          "type": "paragraph",
+          "text": "Filosofi [[Gaston Bachelard]] puhuu jopa \"Prometheus-kompleksista\": halusta tietää enemmän kuin mestarinsa. Nykyään verrataan usein tekoälyä tai genetiikkaa uuteen tuleen: valtava voima, joka on edelleen huonosti hallinnassa."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Prometheus** tarjoaa miehille sivilisaation tulen varastamisen kautta, kestää tuhat vuotta vanhaa piinaa ja sitten **Herakles** toimittaa sen. Edistyksellä on hintansa, samoin kuin jumalallisella voimalla."
+        }
+      ]
+    }
+  ]
+}

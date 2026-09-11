@@ -1,0 +1,100 @@
+{
+  "id": "course_46_comment_les_avions_volent_ils",
+  "title": "Kuidas lennukid lendavad?",
+  "subtitle": "Lennufüüsika",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Lendab mitusada tonni kaaluv lennuk. See pole maagia: küsimus on tiivakujus, kiiruses ja üksteist tasakaalustavates jõududes.",
+  "hero": {
+    "image": "comment_les_avions_volent",
+    "ratio": "16:9",
+    "hook": "Raskem kui veoauto ja ometi püsib see õhus. Siin on, kuidas."
+  },
+  "sections": [
+    {
+      "id": "course_46_comment_les_avions_volent_ils_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suur reisilennuk võib kaaluda **sadu ton**. Kuidas saab midagi nii rasket õhku jääda? Vastus peitub tiibade kujus ja lennuki kiiruses."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mängus on neli peamist jõudu: **tõukejõud** (edasi), **lohistada** (õhkpidurdus), **kaal** (allapoole) ja **tõstke** (üles)."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p1",
+      "title": "Tiib, intelligentne kuju",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Küljelt vaadatuna ei ole lennukitiib tasane. Ülemine osa on ümaram kui alumine. Kui lennuk liigub kiiresti, peab õhk selle kuju ümber käima."
+        },
+        {
+          "type": "image",
+          "asset": "airplane_wing_cross_section_flight",
+          "ratio": "auto",
+          "caption": "Tiiva profiil loob lifti, mis tõstab lennukit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ülevalt liikuv õhk kiireneb veidi. Tema rõhk langeb. Tiiva all püsib surve tugevam. See erinevus lükkab tiiva üles: see on **tõstke**. Seda seletatakse sageli 18. sajandi õpetlase järgi nime saanud **Bernoulli** põhimõttega ja sellega, et tiib suunab ka õhku allapoole."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p2",
+      "title": "Vaja on kiirust",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ilma kiiruseta ei liigu piisavalt õhku üle tiiva, pole piisavalt tõstuki. Seetõttu vajab lennuk õhkutõusmiseks pikka raja: mootorid peavad seda piisavalt tugevalt kiirendama."
+        },
+        {
+          "type": "funFact",
+          "text": "Linnud kasutavad sama üldist ideed: nende tiivad loovad tõstejõu. Kuid nad lehvitavad tiibu, et edasi liikuda. Lennuk liigub edasi tänu oma mootoritele."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kruiisilennul tasakaalustab tõstuk kaalu. Mootorite tõukejõud tasakaalustab õhutakistust. Seejärel liigub lennuk edasi ligikaudu ühtlase kiirusega."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p3",
+      "title": "Mine üles, alla, pööra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ronimiseks kallutab piloot (või pardaarvuti) nina veidi üles ja reguleerib tõukejõudu. Laskumiseks vähendame sageli tõukejõudu. Pööramiseks kallutatakse lennuk küljele, kasutades tiibade liikuvaid osi, ailerone."
+        },
+        {
+          "type": "paragraph",
+          "text": "Maandumisel võtame hoogu maha. Klapid ulatuvad tiivast välja, et tõsta tõstejõudu madalatel kiirustel. Siis puudutavad rattad maad ja pidurid (vahel ka tõukejõu reversid) peatavad lennuki."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p4",
+      "title": "See pole \"õhust kergem\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Heeliumi õhupall hõljub, kuna see on õhust vähem tihe. Lennuk, ei: see on palju tihedam. See lendab, sest see **tugevus** näeb tänu oma kiirusele ja tiibade kujule välja nagu ta kannab seda."
+        },
+        {
+          "type": "takeaway",
+          "text": "Lennuk lendab tänu **tõstke**-le, mille loovad selle õhus liikuvad tiivad. Kiirus on hädavajalik: ilma selleta ei \"suruta\" tiib enam piisavalt üles, et raskust kompenseerida."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "course_237_les_gafam_puissance_et_derives",
+  "title": "GAFAM: teho ja driftit",
+  "subtitle": "Google, Apple, Meta, Amazon, Microsoft",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Viisi yritystä painaa enemmän kuin useiden eurooppalaisten suurvaltojen BKT yhteensä: tervetuloa **GAFAM**:n aikakauteen.",
+  "hero": {
+    "image": "les_gafam_puissance_et_derives",
+    "ratio": "16:9",
+    "hook": "Viisi yritystä, kourallinen merenalaisia kaapeleita ja hyvä osa digitaalista maailmaa."
+  },
+  "sections": [
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Google, Apple, Meta (entinen Facebook), Amazon ja Microsoft: viisi yritystä, jotka on ryhmitelty lyhenteen **GAFAM** alle, syntyneet **[[Piilaakso]]**. Alle kolmessakymmenessä vuodessa ne ovat muuttaneet tapaamme kommunikoida, kuluttaa ja tiedottaa itsellemme niin, että ne ovat kilpailleet tiettyjen valtioiden kanssa. Heidän ylivallan mekanismien ymmärtäminen ja niiden hallitsemisyritykset auttavat meitä ymmärtämään paremmin nykypäivän digitaalisen maailman voimatasapainoa."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p1",
+      "title": "Talousvalta suurempi kuin kokonaisia maita",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GAFAMin silmiinpistävin ominaisuus on niiden osakemarkkina-arvo. Vuonna 2024 näiden viiden yrityksen yhteisarvo on yli 10 biljoonaa dollaria, mikä on verrattavissa Saksan, Ranskan, Yhdistyneen kuningaskunnan ja Italian yhteenlaskettuun BKT:hen. Applesta tuli jopa ensimmäinen yritys, jonka arvo ylittää 3 000 miljardia dollaria."
+        },
+        {
+          "type": "image",
+          "asset": "gafam_big_tech_companies_logos_apple_google",
+          "ratio": "4:3",
+          "caption": "Google, Apple, Meta, Amazon ja Microsoft painavat yhdessä enemmän kuin useiden eurooppalaisten suurvaltojen BKT yhteensä."
+        },
+        {
+          "type": "funFact",
+          "text": "Vuonna 2021 GAFAM:in keräämät käteisvarat olisivat teoriassa riittäneet ostamaan takaisin kaikki ranskalaiset CAC 40 -yritykset säilyttäen samalla taloudellisen turvan marginaalin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä taloudellinen valta ei jää abstraktiksi: GAFAMit käyttävät huomattavia summia joka vuosi vaikuttaakseen lakeihin Washingtonissa ja Brysselissä, ja niistä on tullut valtioiden strategisia kumppaneita, Amazonin pilvihaara esimerkiksi isännöinyt arkaluonteisia tietoja Yhdysvaltain valtion virastoille."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p2",
+      "title": "Monopolien kanssa on lähes mahdotonta kilpailla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GAFAMin dominointi perustuu täsmälliseen mekanismiin: **[[Verkkovaikutukset ja luonnolliset monopolit]]**. Mitä enemmän palvelulla on käyttäjiä, sitä tärkeämpää on olla osa sitä, mikä vähentää kilpailijoiden tuloa ja luo näennäisiä monopoleja, joissa ensimmäisenä saapuva säilyttää lähes aina etunsa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lukitakseen tämän aseman digitaaliset jättiläiset ostivat järjestelmällisesti uusia uhkia: Facebook osti Instagramin miljardilla dollarilla vuonna 2012, jolloin sovelluksella oli vain tusina työntekijää, sitten WhatsAppin vuonna 2014 22 miljardilla dollarilla."
+        },
+        {
+          "type": "funFact",
+          "text": "Google yksin omistaa noin 10 % kaikista maailman merenalaisista valokuitukaapeleista, mikä antaa sille fyysisen hallinnan joihinkin Internetin reitteihin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sosiaalisella tasolla algoritmit, jotka on suunniteltu maksimoimaan **[[keskittymiskyky]]**, korostavat yleensä sensaatiomaista sisältöä, toisinaan lukitsevat ihmiset tietokupoihin, jotka vahvistavat heidän mielipiteitään ja helpottavat valeuutisten leviämistä."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p3",
+      "title": "Eurooppa, globaali digitaalinen poliisi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jättiläisten edessä, joita jopa amerikkalaiset tuomioistuimet kamppailevat kurissa, Euroopan unioni on vakiinnuttanut asemansa tärkeimpänä maailmanlaajuisena digitaalisena sääntelijänä: sen säännöistä tulee usein standardeja kaikkialla muualla, koska monikansallisen yrityksen on yksinkertaisempaa soveltaa tiukinta sääntöä kaikkialla kuin luoda erilainen versio jokaiselle maalle."
+        },
+        {
+          "type": "image",
+          "asset": "digital_services_tax_gafam_europe",
+          "ratio": "16:9",
+          "caption": "Euroopan unioni asettaa digitaalisille jättiläisille sääntöjä, joita sovelletaan usein maailmanlaajuisesti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vuonna 2022 Euroopassa otettiin käyttöön **[[Digimarkkinalaki]]**, joka edellyttää suurimpien alustojen avoimuutta, esimerkiksi mahdollistamalla eri viestipalvelujen kommunikointi keskenään. Googlelle tai Metalle on jo määrätty useiden miljardien eurojen sakkoja määräävän aseman väärinkäytöstä. Vuonna 2024 EU:sta tulee myös ensimmäinen järjestö maailmassa, joka säätelee laillisesti tekoälyä."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p4",
+      "title": "Kyseessä on digitaalinen itsemääräämisoikeus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Viimeinen ongelma on **digitaalinen suvereniteetti**. Hallitsemalla palvelimia, puhelimien ja tietokoneiden käyttöjärjestelmiä ja jopa osaa merenalaisista kaapeleista GAFAM pitää sisällään yhteiskuntiemme kannalta välttämättömän infrastruktuurin. Eurooppalaiselle maalle riippuvuus amerikkalaisen yrityksen julkisista tiedoista on todellinen riippumattomuuskysymys."
+        },
+        {
+          "type": "funFact",
+          "text": "Google käsittelee yli 90 000 hakukyselyä joka sekunti: kun luet tämän kappaleen, sen palvelimilla on jo tehty yli 3 miljoonaa hakua."
+        },
+        {
+          "type": "paragraph",
+          "text": "Henkilötietojen keräämiseen perustuva talousmalli, jossa käyttäjä \"maksaa\" tiedoillaan, saa yhä enemmän kritiikkiä, mutta GAFAM on myös edelleen ensimmäinen sijoittaja tulevaisuuden teknologioihin, kuten kvanttilaskentaan."
+        },
+        {
+          "type": "takeaway",
+          "text": "GAFAM-maiden taloudellinen voima on suurempi kuin Euroopan suurvaltojen BKT, mikä antaa niille huomattavan poliittisen ja teknologisen roolin. Tämän edessä Euroopan unioni on vakiinnuttanut asemansa tärkeimpänä maailmanlaajuisena sääntelijänä digitaalimarkkinoita koskevan lain kaltaisten tekstien ansiosta."
+        }
+      ]
+    }
+  ]
+}

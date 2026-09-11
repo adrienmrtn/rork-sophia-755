@@ -1,0 +1,129 @@
+{
+  "id": "course_15_la_belle_epoque_1871_1914",
+  "title": "Belle Époque",
+  "subtitle": "1871-1914",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "1870. aasta sõja lõpust 1914. aasta augustini uskus Euroopa progressi. Elekter, näitused, uued kunstid… ja luumurrud, mis viivad katastroofini.",
+  "hero": {
+    "image": "la_belle_epoque",
+    "ratio": "16:9",
+    "hook": "Nelikümmend aastat usku progressi… enne kui 1914. aastal kõik muutus."
+  },
+  "sections": [
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Belle Époque** tähistab suhtelise rahu perioodi [[Prantsuse-Preisi sõda]] (**1871**) lõpu ja [[Esimene maailmasõda]]19 (**Z**) (Z1) puhkemise vahel. Me usume teadusesse, progressi, mõistusesse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lääne-Euroopa jõukate klasside jaoks oli see neli aastakümmet mugavust ja leiutist. Kuid spooni all paistavad juba sotsiaalsed luumurrud ja rivaalitsemised, mis löövad kõik õhku."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p1",
+      "title": "Kui tehnoloogia muudab igapäevaelu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Teine tööstusrevolutsioon toob kaasa **elektrit**, **õli**, keemia. Tramm ja metroo (Pariis, **1900**) muudavad linna. Sünnivad auto ja lennuk. Telefon lühendab vahemaid."
+        },
+        {
+          "type": "image",
+          "asset": "paris_universal_exhibition_1900",
+          "ratio": "4:3",
+          "caption": "1900. aasta universaalnäitus Pariisis, edusammude esitlus."
+        },
+        {
+          "type": "funFact",
+          "text": "Nimi „Belle Époque” ilmub ainult pärast **1914**. Kaasaegsed ei elanud \"Belle Époque'is\": selle kadunud paradiisi leiutasid kaevikutest ellujääjad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Maailmanäitus **1900** meelitab **50 miljonit** külastajat. Vendade kino Lumière ja Moulin Rouge teevad Pariisist meelelahutuse pealinna. [[Auguste Comte'i positivism]], väga mõjukas filosoofia, võtab optimismi kokku: teadus lahendab kõik."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p2",
+      "title": "Kulisside taga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Puiesteede taga töötavad töötajad sageli **10-12 tundi** päevas ilma tegeliku kaitseta. Linnade vaesus õhutab klassidevahelisi pingeid."
+        },
+        {
+          "type": "image",
+          "asset": "eiffel_tower_1889",
+          "ratio": "4:3",
+          "caption": "Eiffeli torn (1889), modernsuse ikoon, mis ei too kasu kõigile."
+        },
+        {
+          "type": "paragraph",
+          "text": "Maailma mastaabis jagab Euroopa Aafrikat. [[Berliini konverents]] (**1884-1885**) määrab piirid asjaosalistega konsulteerimata. Prantsusmaal rebib [[Dreyfuse afäär]] vabariigi lõhki: juudi ohvitser Alfred Dreyfus mõistetakse ekslikult süüdi spionaažis ja päevavalgele tuleb antisemitism."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p3",
+      "title": "Uued kunstid, siis sügis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kunst plahvatuslikult. [[juugend]] kõverdab fassaade. [[Fovism]] ja [[Kubism]] raputavad värvi üles. Arst [[Sigmund Freud]] uurib teadvuseta olekut. Albert Einstein avaldab [[Relatiivsus]] ajakirjas **1905**: ruum ja aeg pole enam need, mida me arvasime."
+        },
+        {
+          "type": "funFact",
+          "text": "Filmis **1913** tekitas Igor Stravinski ballett *Kevadriitus* Pariisis sellise skandaali, et pealtvaatajad tulid pahviks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Siis kõik muutub. **28. juuli 1914. a** mõrvati Sarajevos Austria-Ungari pärija ertshertsog **Franz Ferdinand**. Alliansside käigud on käima pandud. **4. august** astub Ühendkuningriik sõtta. Usk progressi sureb kaevikus."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1871",
+              "title": "Prantsuse-Preisi sõja lõpp",
+              "detail": "Ühtse Saksamaa sünd, prantslaste pahameel."
+            },
+            {
+              "date": "1889",
+              "title": "Eiffeli torn",
+              "detail": "Tehnilise modernsuse sümbol."
+            },
+            {
+              "date": "1894-1906",
+              "title": "Dreyfuse afäär",
+              "detail": "Vabariik rebib end lõhki."
+            },
+            {
+              "date": "1900",
+              "title": "Universaalne näitus",
+              "detail": "Pariis, maailma näitus."
+            },
+            {
+              "date": "august 1914",
+              "title": "Suur sõda",
+              "detail": "Belle Époque lõpeb järsult."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Belle Époque (**1871-1914**) ühendab tehnika arengu ja sügavad murrud, enne kui vajub Suure sõja kaosesse."
+        }
+      ]
+    }
+  ]
+}

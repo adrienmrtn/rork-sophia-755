@@ -1,0 +1,122 @@
+{
+  "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
+  "title": "Pressivabadus kogu maailmas",
+  "subtitle": "Seadus surve all",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Vähem kui **10% maailmast** elab riigis, kus ajakirjandus on tõeliselt vaba. Riikliku tsensuuri ja majandusliku surve vahel on see oluline õigus peaaegu kõikjal taganemas.",
+  "hero": {
+    "image": "la_liberte_de_la_presse_dans_le_monde",
+    "ratio": "16:9",
+    "hook": "Teavitamine maksab mõnikord vabadust või isegi elu: teekond hapra õiguse südamesse."
+  },
+  "sections": [
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Ajakirjandusvabadus** on üks parimaid riigi demokraatliku tervise näitajaid. See ei piirdu avaldamisõigusega: see hõlmab kodanike võimalust pääseda juurde kontrollitud teabele, sõltumata kehtivatest volitustest. Kogu maailmas on see õigus kahekordse surve all: otsesed repressioonid autoritaarsetes režiimides ja diskreetsem nõrgenemine demokraatiates endis."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p1",
+      "title": "Üha ohtlikum elukutse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Organisatsioon [[Piirideta Reporterid (RSF)]] avaldab igal aastal teatmeteose ajakirjanduse elukutse takistustest maailmas."
+        },
+        {
+          "type": "image",
+          "asset": "press_freedom_world_map_RSF_index",
+          "ratio": "16:9",
+          "caption": "Vähem kui 10% maailma elanikkonnast elab riigis, kus ajakirjandus on tõeliselt vaba."
+        },
+        {
+          "type": "paragraph",
+          "text": "2024. aasta andmed on murettekitavad: vähem kui **10%** maailma elanikkonnast elab piirkonnas, kus ajakirjandus töötab takistamatult. Kuigi sellised riigid nagu Norra järgivad kõrgeid standardeid, peavad sellised suured piirkonnad nagu Hiina, Venemaa ja Iraan uurivat ajakirjandust reetmise vormiks."
+        },
+        {
+          "type": "funFact",
+          "text": "Türkmenistanis kontrollib riik teavet nii rangelt, et keelustas 2020. aasta pandeemia alguses sõna \"koroonaviirus\" meedias."
+        },
+        {
+          "type": "paragraph",
+          "text": "2023. aastal kaotas vähemalt 79 ajakirjanikku oma elukutset täites, mille eesmärk on sageli vaigistada piinlikke uurimisi. Igal aastal pannakse üle maailma vangi ligi 600 ajakirjanikku."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p2",
+      "title": "Demokraatiad pole immuunsed",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vastupidiselt levinud arvamusele pole ajakirjandusvabadus lääneriikides igavesti tagatud. See läbis seal diskreetsemaid ümberkujundamisi, mis olid seotud [[meedia kontsentratsioon]] ja mõne suure grupi finantsmõjuga."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ungaris rakendas [[Viktor Orbán]] tõhusat strateegiat: opositsioonilise meedia keelamise asemel eelistas ta nende ülevõtmist valitsuse lähedastele, muutes meediamaastiku järk-järgult ametlikuks kajakambriks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prantsusmaal puudutab debatt peamiselt meedia koondumist mõne suure grupi kätte, mis tekitab kartusi toimetuse enesetsensuuri ees. Mujal sagenevad kuritahtlikud kohtumenetlused nimega [[LÄKS]], et hirmutada kriitilisi hääli."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p3",
+      "title": "Raha, ajakirjanduse uus vastane",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lisaks poliitilistele ohtudele seisab ajakirjandus silmitsi sügava majanduskriisiga. Individuaalsel müügil ja reklaamil põhinev ajalooline mudel on digitehnoloogiaga kokku varisenud ning nüüd hõivavad suurema osa veebireklaamidest suured platvormid."
+        },
+        {
+          "type": "image",
+          "asset": "newspaper_crisis_digital_transformation_journalism",
+          "ratio": "4:3",
+          "caption": "Ajakirjanduse ajalooline majandusmudel on digitaaltehnoloogiaga kokku varisenud."
+        },
+        {
+          "type": "paragraph",
+          "text": "See ressursside vähenemine paneb paljud kohalikud ajalehed sulgema, tekitades \"infokõrbeid\", kus keegi ei jälgi kohalike valitud ametnike tegevust. Sellega silmitsi seistes kerkivad esile uued mudelid, mida rahastatakse annetuste või otsetellimuste kaudu, nagu Mediapart Prantsusmaal või ProPublica Ameerika Ühendriikides, mis tõestavad, et ka sõltumatu ajakirjandus võib olla kasumlik."
+        },
+        {
+          "type": "funFact",
+          "text": "Ajaloo esimese trükitud ajalehe \"Suhe\" andis Strasbourgis 1605. aastal välja Johann Carolus, palju enne ajakirjandusvabaduse seaduslikku leiutamist."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
+      "title": "Reaalsuse kontrollimine piltidest küllastunud maailmas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Digiajastu on muutnud info kiiremaks, kuid avanud ka ukse [[desinformatsioon]]. Sotsiaalmeedia algoritmid eelistavad emotsionaalset sisu faktilisele analüüsile, killustades meie ühist maailmapilti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ajakirjaniku roll on seega muutumas reaalsuse “kontrollija” rolliks pidevas piltide ja andmete voos. Eetilised küsimused muutuvad keerulisemaks, nagu fotoajakirjanduses konfliktipiirkondades, kus inimväärikuse austamine põrkub mõnikord näitamisvajadusega."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ajakirjandusvabaduse kaitsmine nõuab seetõttu suuremate digiplatvormide paremat reguleerimist ja tugevdatud meediaharidust. Ilma fakte kontrolliva vaba ajakirjanduseta ähvardab demokraatlik debatt maailmas, kus kõik arvamused on võrdsed, sõltumata nende tõest."
+        },
+        {
+          "type": "takeaway",
+          "text": "Vähem kui 10% maailma elanikkonnast elab riigis, kus ajakirjandus on tõeliselt vaba. Otsese repressiooni, majandusliku surve ja digitaalse desinformatsiooni vahel väheneb see oluline õigus demokraatiale peaaegu kõikjal."
+        }
+      ]
+    }
+  ]
+}

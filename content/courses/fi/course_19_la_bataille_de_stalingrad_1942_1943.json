@@ -1,0 +1,124 @@
+{
+  "id": "course_19_la_bataille_de_stalingrad_1942_1943",
+  "title": "Stalingradin taistelu",
+  "subtitle": "1942-1943",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Kesästä 1942 helmikuuhun 1943 saksalaiset ja neuvostoliittolaiset tappoivat toisiaan Volgan kaupungin raunioissa. Stalingradista tulee toisen maailmansodan käännekohta.",
+  "hero": {
+    "image": "la_bataille_de_stalingrad",
+    "ratio": "16:9",
+    "hook": "Kaupungin raunioissa armeija piti voittamattomia taukoja lopullisesti."
+  },
+  "sections": [
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kesästä **1942** **2.2. helmikuuta 1943** maailma seuraa rauniot **Volga**, Venäjän suurella joella. **Stalingradissa**:ssä (nykyinen Volgograd) Saksan armeija kohtasi Neuvostoliiton vastarintaa, joka oli valmis tekemään mitä tahansa uhrauksia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yli **Yhden** miljoona kuoli, se oli historian tappavin taistelu... ja toisen maailmansodan käännekohta."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p1",
+      "title": "Hitler tähtää etelän öljyyn",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Moskovan epäonnistumisen jälkeen vuonna 1941 Hitler käynnisti [[Kotelo Sininen]], kesähyökkäyksen etelään. Tavoite: öljy **Kaukasuksesta**. **Stalingrad**, Volgan rautatien ja jokien risteys, on aluksi vain toissijainen tavoite. Sitten symboli voittaa: **Stalin**-nimeä kantavan kaupungin ottamisesta tulee pakkomielle."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_stalingrad_ruins",
+          "ratio": "4:3",
+          "caption": "Stalingrad raunioina: armoton kaupunkitaistelukenttä."
+        },
+        {
+          "type": "funFact",
+          "text": "Hitler oli niin varma voitosta, että hänen kerrotaan tulostaneen kutsut voittojuhlaan Lux-hotellissa Stalingradissa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Saksan **6. armeija**, jota komentaa kenraali [[Friedrich Paulus]], ohjataan kaupunkiin. Saksan ilmavoimien [[Luftwaffe]]:n pommitukset elokuussa 1942 jättivät kraatterimaiseman... täydellisen Neuvostoliiton puolustukseen."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p2",
+      "title": "Taistele talo talolta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Neuvostoliiton kenraali **Wassily Chuikov** määräsi yksinkertaisen taktiikan: pysy **30 metriä** sisällä vihollisesta. Näin ollen saksalainen tykistö ja lentokoneet eivät voi iskeä tappamatta omia miehiään. Saksalaiset kutsuvat sitä **Rattenkrieg**, \"rottasodaksi\": taistelemme kellareissa, viemärissä, raunioissa rakennuksissa."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Pavlovin talo**, kourallisen sotilaiden johtama rakennus, vastusti **58 päivää**. **Dzeržinski**-tehtaalla tankit valmistetaan pommien alla ja viedään suoraan rintamalle. Stalinin **Tilaa 227** tiivistää järjestyksen: **“Ei askelta eteenpäin”**."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p3",
+      "title": "Pihdit, jotka sulkevat ansan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kun Paulus kuluu raunioina, Neuvostoliiton marsalkka **Georgiy Zhukov** valmistelee [[Operaatio Uranus]]. Saksalaiset kyljet, joita vartioivat huonosti varustetut liittolaiset (romanialaiset, italialaiset, unkarilaiset), antoivat periksi. **19.11.1942** pihdit sulkeutuivat: noin **300 000** miestä ympäröitiin."
+        },
+        {
+          "type": "funFact",
+          "text": "Neuvostoliitto lähetti kaiuttimien kautta kellon tikitystä ja sitten viestin: Saksalainen sotilas kuoli joka **7 sekunti** Neuvostoliitossa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hitler kieltää poistumisen. [[Hermann Göring]], Luftwaffen päällikkö, lupaa lentokuljetuksen. Hän epäonnistuu. Nälkä, lavantauti, **-30 °C**: \"kattilasta\" tulee kuolemanloukku."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p4",
+      "title": "Antautuminen, joka muuttaa sodan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Tammikuu 30. päivänä 1943** Hitler nimitti Paulus **pelto marsalkka**, korkeimman arvon, rohkaisemaan häntä kuolemaan antautumisen sijaan. Paulus antautui **helmikuun 2. päivänä**. 300 000 ympäröidystä **91 000** lähtee vankeina. Ensimmäistä kertaa natsien propagandan on myönnettävä täydellinen tappio. Voittamattomaksi pidetty armeija murtui."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "kesä 1942",
+              "title": "Kotelo Sininen",
+              "detail": "Saksan hyökkäys Kaukasiaan ja Stalingradiin."
+            },
+            {
+              "date": "19. marraskuuta 1942",
+              "title": "Operaatio Uranus",
+              "detail": "6. armeijan piiritys."
+            },
+            {
+              "date": "2. helmikuuta 1943",
+              "title": "Antautuminen",
+              "detail": "Paulus antautuu; sodan käännekohta."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Stalingrad** (**1942-1943**) tuhoaa Saksan 6. armeijan ja murskaa myytin natsien voittamattomuudesta historian tappavimmassa taistelussa."
+        }
+      ]
+    }
+  ]
+}

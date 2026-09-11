@@ -1,0 +1,121 @@
+{
+  "id": "course_103_hamlet_shakespeare",
+  "title": "Hamlet, Shakespeare",
+  "subtitle": "umbes 1601",
+  "subject": "litterature",
+  "subcategory": "Anglo-Saxons & world literature",
+  "description": "Umbes 1601. aasta paiku kirjutas Shakespeare Hamleti, printsi, kes kõhkles oma isa mõrva ees. Kättemaksu, simuleeritud hulluse ja “Olla või mitte olla” vahele sünnib kaasaegne teadvuse kangelane.",
+  "hero": {
+    "image": "hamlet_shakespeare",
+    "ratio": "16:9",
+    "hook": "Kummitus, kõhklev prints ja teatri kuulsaim eksistentsiaalne küsimus."
+  },
+  "sections": [
+    {
+      "id": "course_103_hamlet_shakespeare_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1601**, **William Shakespeare** kirjutab **[[Hamlet, Taani prints]]**. See pole lihtsalt kättemaksutragöödia: see on kaasaegse südametunnistuse portree, mis on jagatud tegevuse ja kahtluse vahel. Monotükist “**Olla see mitte olla**” on saanud lääne teatri olemuslik eksistentsiaalne küsimus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kummitus, simuleeritud hullus, lõpuduell: lavastuses segatakse üleloomulikkust ja psühholoogiat enne oma aega. Hamlet pole nagu klassikalised impulsiivsed kangelased, kes kohe tegutsema hakkavad. Ta mõtleb liiga palju, et kiiresti tegutseda, ja just see teebki ta surematuks. Siin mõtleb Shakespeare välja tegelase, kes kahtleb kõiges, ka iseendas."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p1",
+      "title": "Elizabethi ajastu kontekst: maailma teater",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Shakespeare kirjutas inglise teatri kõrgajal, **Elizabeth I** käe all. Näidendeid mängitakse **Globe teater**, taeva poole avatud ringikujulises puidust teatris, kus rikkad ja vaesed hõõruvad õlgu, seistes või istudes vastavalt oma eelarvele. Näitlejad on kõik mehed: naiserolle mängivad tolleaegsete seaduste kohaselt noorukid."
+        },
+        {
+          "type": "image",
+          "asset": "william_shakespeare_portrait",
+          "ratio": "4:3",
+          "caption": "William Shakespeare, maailma enim räägitud tragöödia autor."
+        },
+        {
+          "type": "funFact",
+          "text": "Ophélie rolli lõi tolleaegsete kommete kohaselt teismeline, kelle hääl ei olnud veel muutunud."
+        },
+        {
+          "type": "image",
+          "asset": "globe_theatre_london_elizabethan",
+          "ratio": "16:9",
+          "caption": "The Globe Theatre: Elizabethi ajastu teatrilava, kus Hamlet võitis publikut."
+        },
+        {
+          "type": "paragraph",
+          "text": "Shakespeare otsib südametõde rohkem kui tasast realismi. Hamlet naaseb õpingutelt **[[Wittenberg]]**, **Protestantlik liku reformatsiooni** Saksa ülikoolilinnast. Näidendis lavastab Shakespeare näidendis näidendi \"Hiirelõks\", et püüda **Claudius** lõksu ja kontrollida kuninga süüd. Teatrist saab maailma peegel ja tõe instrument."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p2",
+      "title": "Kättemaksuspiraal ja kõhkluste raskus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Taani kuninga mõrvab tema vend **Claudius**, kes abiellub kuninganna **Gertrud** ja võtab trooni. Surnud kuninga vaim paljastab kuriteo **Hamlet**-le. Kohustus näib olevat selge: maksta isale kätte. Kuid Hamlet kahtleb: kas see tont on tõesti tema isa või petteemon? Kas kättemaks on ainult kristliku moraali silmis?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mõrvatud **[[lex talionis]]** ja mõrva hukka mõistva kristliku südametunnistuse vahel, teeskleb ta hullumeelsust uurida ilma kahtlust äratamata. See strateegia ebaõnnestub: ta murrab nõustaja **Polonius** tütre **Ophelia** südame ja tapab kogemata vaiba taha peituva Poloniuse enda. Spiraal viib viimase veresaunani Taani õukonnas, kus hukkuvad peaaegu kõik peategelased."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p3",
+      "title": "Taani melanhoolia ja korruptsioon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "\"Taani kuningriigis on midagi mäda.\" Lavastus hingab moraalset lagunemist. Hamleti keel on küllastunud haiguste, lagunemise ja laipade kujunditest. Tema **[[Melanhoolia 16. sajandil]]** teeb ta säravaks, kuid halvatuks: Shakespeare'i ajal peeti seda ka aktiivsuse seoseks meditsiinilise loominguga."
+        },
+        {
+          "type": "image",
+          "asset": "hamlet_skull_yorick_delacroix_painting",
+          "ratio": "4:3",
+          "caption": "Hamlet ja Yoricku kolju: surm tuletab meile meelde kõigi ambitsioonide edevust."
+        },
+        {
+          "type": "quote",
+          "text": "Olla või mitte olla, selles on küsimus.",
+          "attribution": "William Shakespeare, Hamlet, III vaatus, 1. stseen"
+        },
+        {
+          "type": "paragraph",
+          "text": "See kuulus monoloog seab kahtluse alla eksistentsi enda: kas parem on taluda elu kannatusi või surra, et neist pääseda? Tegutseda tähendab määrduda korrumpeerunud maailmas; mitte tegutseda tähendab lasta kurjal võidutseda. Hamletist saab esimene kaasaegne kangelane, kes ei suuda mõtteid ja tegevusi ühitada. **[[Eliisabeti kättemaks ja au]]** seletab osaliselt oma ummistust: aumees pidi maksma kätte oma perekonnale tehtud solvumise eest, kuid see kohustus sattus seaduse ja moraaliga pingesse."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p4",
+      "title": "Universaalse müüdi pärand ja järeltulijad",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Neli sajandit on Hamletit lõputult ümber tõlgendatud. 19. sajandi **Romantika** nägi seal piinatud kunstnikku; **Freud** luges **[[Oidipuse kompleks]]**. Lavastus räägib vanema kaotusest, maailma pimedusest ja valusast üleminekust täiskasvanuikka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selle mõju ulatub teatrist kaugemale: kino, ooper, koomiksid, populaarne psühholoogia. Shakespeare muudab keskaegse kummitusloo metafüüsiliseks inimteadvuse uurimiseks. Hamlet jääb otsustamatuse tragöödiaks, kus mõtlemisest saab juba kannatuse vorm."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Hamlet** näitab, et kangelane võib olla surematu mitte sellepärast, et ta tegutseb kiiresti, vaid sellepärast, et ta kahtleb sügavalt. Siin mõtleb Shakespeare välja teatri modernsuse: mõelda tähendab juba kannatada."
+        }
+      ]
+    }
+  ]
+}

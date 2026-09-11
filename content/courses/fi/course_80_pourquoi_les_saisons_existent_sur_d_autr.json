@@ -1,0 +1,112 @@
+{
+  "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr",
+  "title": "Miksi muilla planeetoilla on vuodenaikoja?",
+  "subtitle": "Planeetat & kiertoradat",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Maapallolla vuodenajat tulevat akselin kallistuksesta. Muualla tämä sama periaate antaa talvet 42 vuotta… tai melkein ei ollenkaan vuodenaikaa.",
+  "hero": {
+    "image": "pourquoi_les_saisons_existent_sur_d_autres_planetes",
+    "ratio": "16:9",
+    "hook": "Neljä vuodenaikaamme ovat kohtalainen tapaus. Muualla kesä voi kestää vuosikymmeniä."
+  },
+  "sections": [
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Maapallolla kesä ja talvi johtuvat pääasiassa akselin **-kalteisuudesta**: noin **23,5°**. Aurinko iskee kovemmin yhteen pallonpuoliskoon, sitten toiseen. Tämä malli näyttää ilmeiseltä. Aurinkokunnassa se on melko maltillinen versio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jokainen planeetta yhdistää kaltevuuden ja kiertoradansa muodon. Tuloksena: maailmat ilman vuodenaikoja, toiset äärimmäisin kontrastein ja talvet, jotka kestävät vuosikymmeniä."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p1",
+      "title": "Kallistus, kontrastien moottori",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Vino]] on planeetan pyörimisakselin ja sen kiertorataan nähden kohtisuoran välinen kulma. Mitä suurempi se on, sitä selvemmät vuodenajat."
+        },
+        {
+          "type": "image",
+          "asset": "uranus_planet_nasa",
+          "ratio": "auto",
+          "caption": "Uranus, joka on kallistettu noin 98°, kokee äärimmäisiä vuodenaikoja, jotka kestävät 42 vuotta."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Uranus** on ääritapaus: kaltevuus noin **98°**, melkein makuulla. Auringon kiertäminen kestää **84 katselukertaa**. Jokainen napa saa sitten lähes **42 katselukertaa** yhtäjaksoisen päivän ja sitten **42 katselukertaa** yön kokonaismäärän. **maaliskuuta**, **25,2°**, muistuttaa Maata, mutta sen vuosi kestää **687 maanpäällistä päivää**: kuuden kuukauden kevät ja syksy. **Jupiter** ja **Merkurius**, melkein suorat, ei juuri ole vuodenaikoja."
+        },
+        {
+          "type": "funFact",
+          "text": "Uranuksella ja Neptunuksella äärimmäiset paineet voivat \"sataa\" ilmakehän hiilestä muodostuneita timantteja."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p2",
+      "title": "Kun myös etäisyydellä Auringosta on väliä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Maapallolla kiertorata on melkein pyöreä: etäisyys Auringosta vaihtelee vähän. Se ei siis tee kesää tai talvea, vaan säteiden kulma."
+        },
+        {
+          "type": "paragraph",
+          "text": "**maaliskuuta**:lla kiertorata on paljon soikeampi, **eksentrinen**: **207:stä 249 matkan km**. Eteläisellä pallonpuoliskolla kesä osuu Aurinkoa lähimpään pisteeseen [[<perihelion>]]. Lyhyemmät, mutta lämpimät kesät. Tämä lämpöshokki laukaisee toisinaan **planetaarisia pölymyrskyjä**, jotka peittävät taivaan."
+        },
+        {
+          "type": "funFact",
+          "text": "**2018**:ssa kausiluonteinen marsilainen myrsky pysäytti Opportunity-mönkijän pysyvästi estämällä auringon."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p3",
+      "title": "Venus, Merkurius, Saturnus: muut säännöt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Merkurius**, ilman todellista ilmapiiriä tai taipumusta, elää pääasiassa päivittäisissä äärimmäisissä olosuhteissa: **430 °C** auringossa, **-180 °C** yöllä. **Venus** pyörii taaksepäin, [[Retrogradinen kierto]] idästä länteen, äärimmäisen kallistuneena, mutta sen hirvittävä kasvihuone vangitsee lämpöä ilmakehään ja tasoittaa lämpötilan **Z460** °C**Z460** C koko ajan."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Saturnus**, kallistettu kuin maapallo, vuodenajat ovat noin **7 katselukertaa**. [[Saturnuksen renkaat]]:n kulma muuttaa kunkin pallonpuoliskon vastaanottamaa valoa ja jopa pilvien väriä."
+        },
+        {
+          "type": "funFact",
+          "text": "Venuksella yksi päivä sen kierto kestää yli vuoden, sen vallankumous: **243** maanpäällisiä päiviä **225**:ää vastaan."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p4",
+      "title": "Miksi maapallolla on vakaat vuodenajat?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ilman **Kuuta** Maan kaltevuus heilahtaisi kaoottisesti 0° ja yli 80° välillä miljoonien vuosien aikana. Uranustyyppiset vuodenajat tekisivät ilmastosta lähes asumiskelvottoman. Kuu toimii **gravitaatiovakaajana**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kun etsit asumiskelpoisia [[eksoplaneetat]], tähtitieteilijät tarkastelevat myös akselin vakautta. Leudot ja säännölliset vuodenajat eivät ole yksityiskohta: ne ovat osa kestävän elämän edellytyksiä."
+        },
+        {
+          "type": "takeaway",
+          "text": "Vuodenajat syntyvät pääasiassa akselin kaltevuuden vuoksi. Uranuksella ne kestävät vuosikymmeniä; Marsissa soikea kiertorata tekee niistä epäsymmetrisiä. Kuu suojelee maan päällä olevia."
+        }
+      ]
+    }
+  ]
+}

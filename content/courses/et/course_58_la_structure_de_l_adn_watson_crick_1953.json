@@ -1,0 +1,102 @@
+{
+  "id": "course_58_la_structure_de_l_adn_watson_crick_1953",
+  "title": "DNA struktuur",
+  "subtitle": "1953",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "1953. aastal kirjeldasid Watson ja Crick DNA kaksikheeliksit. Selle hiilguse taga on Rosalind Franklini ülioluline töö.",
+  "hero": {
+    "image": "la_structure_de_l_adn",
+    "ratio": "16:9",
+    "hook": "Molekuli kuju… ja pärilikkuse saladus."
+  },
+  "sections": [
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Teadsime, et omadused kanduvad vanematelt lastele. Kuid milline keemiline objekt seda teavet kannab? 20. sajandi keskel sai vastus selgemaks: **DNA**."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1953** avaldasid **James Watson** ja **Francis Crick** kuulsa mudeli: **topeltpropeller**. See vorm selgitab, kuidas DNA saab end kopeerida."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
+      "title": "Pärilikkusele toe leidmine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DNA (desoksüribonukleiinhape) on meie rakkudes leiduv pikk molekul. See sisaldab keemilisi \"tähti\", mis moodustavad koodi. Kuid 1940ndatel ja 1950ndatel me veel ei teadnud selle 3D-vormingut."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ilma vormita on raske mõista, kuidas saab seda koodi igas rakujaotuses dubleerida."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p2",
+      "title": "Foto, mis muudab kõike",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "rosalind_franklin_photo_51_x_ray",
+          "ratio": "4:3",
+          "caption": "Rosalind Franklini fotol 51 on näha spiraalne struktuur."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Rosalind Franklin**, füüsik ja keemik, saab DNA röntgenipilte. Tema kuulus **Pilt 51** näitab selgeid tõendeid spiraali olemasolust."
+        },
+        {
+          "type": "paragraph",
+          "text": "Watson ja Crick näevad neid andmeid (tingimustel, mida praegu peetakse Franklini suhtes ebaõiglasteks) ja loovad oma mudeli. Franklin suri 1958. aastal; 1962. aasta Nobel läheb Watsonile, Crickile ja Wilkinsile, mitte temale."
+        },
+        {
+          "type": "funFact",
+          "text": "Franklin tegi suurt tööd ka viiruste kallal. Selle rolli DNA-s on populaarsetes kontodes pikka aega alahinnatud."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
+      "title": "Miks topeltheeliks on oluline?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "dna_double_helix_model_watson_crick",
+          "ratio": "4:3",
+          "caption": "Kaks teineteist täiendavat suunda: koopia muutub kujuteldavaks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kaks kiudu keerduvad üksteise ümber. Tähed on paarikaupa vastamisi. Kui kiud eralduvad, võib igaüks olla eeskujuks teise rekonstrueerimiseks. Pärilikkus muutub arusaadavaks keemiliseks mehhanismiks."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
+      "title": "Kaasaegne bioloogia algab siit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sellest avastusest sünnivad kaasaegne geneetika, sekveneerimine, DNA testid, geeniteraapiad. Ja ka eetilised debatid: mida selle võimuga peale hakata?"
+        },
+        {
+          "type": "takeaway",
+          "text": "Artiklis **1953** selgitab topeltheeliksi mudel, kuidas DNA elusolendite teavet salvestab ja kopeerib. Franklin esitas otsustavaid tõendeid, mis olid narratiivist liiga kaua kustutatud."
+        }
+      ]
+    }
+  ]
+}

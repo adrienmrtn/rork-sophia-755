@@ -1,0 +1,124 @@
+{
+  "id": "course_185_vishnou_et_shiva_mythologie_hindoue",
+  "title": "Vishnu ja Shiva (hindulainen mytologia)",
+  "subtitle": "Hindulainen mytologia",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Luo, säilytä, tuhoa syntyäksesi uudelleen: Vishnu ja Shiva, Trimurtin pilarit, kääntävät hindulaisuuden syklistä aikaa.",
+  "hero": {
+    "image": "vishnou_et_shiva_mythologie_hindoue",
+    "ratio": "16:9",
+    "hook": "Yksi laskeutuu maan päälle pelastamaan järjestyksen. Toinen tanssii polttaakseen kaiken ja aloittaakseen alusta. Yhdessä ne tekevät maailmankaikkeudesta kestävän."
+  },
+  "sections": [
+    {
+      "id": "course_185_vishnou_et_shiva_mythologie_hindoue_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hindumytologiassa aika ei ole suora viiva. Se on syklien sarja. Yläosassa on [[Trimurti]]: kolme toimintoa samalla periaatteella. **Brahma** luo. **Vishnu** säilykkeet. **Shiva** tuhottu uusimisen mahdollistamiseksi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä kurssi seuraa Vishnua ja Shivaa, tämän kolminaisuuden kahta elävintä pilaria. Niiden ominaisuudet, inkarnaatiot ja symboliikka osoittavat, kuinka hindulaisuus sovittaa yhteen elämän ja kuoleman, järjestyksen ja muutoksen."
+        }
+      ]
+    },
+    {
+      "id": "course_185_vishnou_et_shiva_mythologie_hindoue_p1",
+      "title": "Trimurti, saman periaatteen kolme kasvoa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Monet jumalat ovat äärimmäisen todellisuuden kasvoja nimeltä [[Brahman]]. Trimurti antaa kolme hyödyllistä muotoa. **Brahma** luo maailmankaikkeuden jokaisen syklin alussa; hänen roolinsa sitten päättyy, mikä selittää sen, miksi häntä nykyään vähän kunnioitetaan Intiassa."
+        },
+        {
+          "type": "image",
+          "asset": "brahma_vishnu_shiva_trimurti_hindu_gods",
+          "ratio": "4:3",
+          "caption": "Brahma, Vishnu, Shiva: luo, säilytä, muunna."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Vishnu** varmistaa, että tilaus pysyy voimassa. **Shiva** tuhoaa sen, mikä on kulunut tai vioittunut. Tämä tuho ei ole absoluuttinen paha: se avaa tietä uudelle syklille. \"Brahman päivä\" kestää miljardeja vuosia. Mikään ei todellakaan ole menetetty; kaikki alkaa alusta."
+        },
+        {
+          "type": "funFact",
+          "text": "Yksi \"Brahman päivä\" (kalpa) kestää **4,32 miljardia** vuotta, mikä on aavemaisen lähellä nykytieteen arvioimaa Maan ikää."
+        }
+      ]
+    },
+    {
+      "id": "course_185_vishnou_et_shiva_mythologie_hindoue_p2",
+      "title": "Vishnu ja hänen avatarinsa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Vishnu** suojaa [[Dharma]], moraalista ja kosmista lakia. Kun paha uhkaa ottaa vallan, hän laskeutuu maan päälle **avatar**:n muodossa. [[Dashavatar]]:n perinteessä on kymmenen, ensin eläin, sitten ihminen."
+        },
+        {
+          "type": "image",
+          "asset": "krishna_avatar_vishnu_hindu_god_painting",
+          "ratio": "4:3",
+          "caption": "Krishna, Vishnun avatar: viisaus, rakkaus ja oikeudenmukainen sota."
+        },
+        {
+          "type": "paragraph",
+          "text": "Heistä kuningas **Rama** ilmentää hyvettä; **Krishna**, jumalallinen viisaus ja rakkaus. Hindulaisuus on jopa integroinut **Buddha**:n yhdeksänneksi avatariksi. Kymmenes, **Kalki**, saapuu valkoisen hevosen selässä lopettamaan [[Kali Yuga]]:n pimeän aikakauden."
+        },
+        {
+          "type": "funFact",
+          "text": "Digitaaliset pioneerit ovat lainanneet 1980-luvulta lähtien sanaa \"avatar\" kuvaamaan käyttäjän esitystä virtuaalimaailmassa."
+        }
+      ]
+    },
+    {
+      "id": "course_185_vishnou_et_shiva_mythologie_hindoue_p3",
+      "title": "Shiva, kosminen tanssija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Shiva** on paradoksien jumala: askeettinen tuhkan peitossa vuorella [[Kailash]], mutta kuitenkin **Parvati**:n aviomies, **Ganesha**:n isä. Hän ilmentää energiaa, joka muuntuu erityisesti tanssin kautta."
+        },
+        {
+          "type": "image",
+          "asset": "shiva_nataraja_dancing_cosmic_bronze_sculpture",
+          "ratio": "4:3",
+          "caption": "Nataraja: Shiva tanssii luomisen ja tuhon välillä."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Nataraja**, \"tanssin kuningas\", hän esittää **Tandava**. Yhdessä kädessä [[Damaru]] merkitsee luomisen rytmiä; toisessa tuhon tuli. Yksi jalka murskaa tietämättömyyden; toinen, nostettu, tarjoaa vapautumisen. Muutos on ainoa pysyvä."
+        },
+        {
+          "type": "funFact",
+          "text": "CERNissä Genevessä Intian tarjoama Natarajan patsas muistuttaa hiukkasfyysikot tästä tanssista: universumin ikuisesta luomisesta ja tuhoamisesta."
+        }
+      ]
+    },
+    {
+      "id": "course_185_vishnou_et_shiva_mythologie_hindoue_p4",
+      "title": "Kaksi polkua, sama kierto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vishnu rakentaa ja ohjaa inkarnaatioidensa läpi. Shiva vapauttaa rikkomalla illuusioita ja kiintymyksiä. Yhdessä he tekevät [[Samsara ja karma]] ei vankilan, vaan polun: syntyä uudelleen, toimia, edistyä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tästä kaksinaisuudesta syntyy **vishnuismi** ja **shiivismi**, virtauksia, jotka rikastavat toisiaan pikemminkin kuin ristiriidassa, erityisesti [[Bhagavad Gita]]:n ympärillä. Tässä visiossa jokainen pää valmistelee lähtöä."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Trimurti** harmonisoi maailmankaikkeutta: Brahma luo, Vishnu säilyttää avatariensa kautta, Shiva tuhoaa syntyäkseen uudelleen. Syklinen visio, jossa karma ja samsara tekevät jokaisesta tuhosta alkusoittoa uudelle syklille."
+        }
+      ]
+    }
+  ]
+}

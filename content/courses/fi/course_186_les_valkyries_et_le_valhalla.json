@@ -1,0 +1,120 @@
+{
+  "id": "course_186_les_valkyries_et_le_valhalla",
+  "title": "Valkyries ja Valhalla",
+  "subtitle": "Norjalainen mytologia",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Pohjoisella taivaalla soturit valitsevat kuolleet asuttamaan Valhallan. Heidän armeijansa on kohdattava jumalien hämärä.",
+  "hero": {
+    "image": "les_valkyries_et_le_valhalla",
+    "ratio": "16:9",
+    "hook": "Kuolema miekka kädessä ei ole loppu: se on valinta maailman viimeiseen sotaan."
+  },
+  "sections": [
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Norjalaisessa mytologiassa kuolema taistelussa ei ole loppu. Tämä on **valinta**. **Valkyyria**, jonka nimi tarkoittaa \"ne, jotka valitsevat tappamisen\", vaeltelevat Odinin, suvereenin jumalan, taistelukentillä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Heidän tehtävänsä: viedä rohkeimmat **Valhalla**, \"tappamishuoneeseen\". Tämä palatsi ei ole levon paratiisi. Se on taivaallinen kasarmi. Koska Odin valmistelee armeijaa [[Ragnarök]]:lle, viimeiselle taistelulle, jonka on tuhottava maailma ja tapettava jumalat."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p1",
+      "title": "Odin värvää Ragnarökiin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Odin** tietää profetian. [[Ragnarök]]:ssä jättiläiset ja hirviöt laskeutuvat [[Asgard]]:lle, jumalien kotiin. Viivyttääkseen väistämätöntä hän tarvitsee eliittisotilaita: **Einherjar**, \"niitä, jotka taistelevat yksin\"."
+        },
+        {
+          "type": "image",
+          "asset": "odin_norse_god_ravens_throne_painting",
+          "ratio": "4:3",
+          "caption": "Odin, jumalten mestari, jota maailmanloppu kummittelee."
+        },
+        {
+          "type": "funFact",
+          "text": "Valhalla hallitsi vain **puoli** taistelussa kuolleista sotureista. Toinen puolikas liittyi Fólkvangriin, jumalattaren **Freyja** alueeseen. Jopa sankarillisen kuoleman jälkeen sankarit jakautuivat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Valhalla Asgardissa on **540 portit**. Jokainen on riittävän suuri kahdeksansataa taistelijaa ohittamaan peräkkäin. Vain rohkeasti kaatuneilla, miekka kädessä, on oikeus siihen. Valkyriat selvittävät asioita taivaalta."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p2",
+      "title": "Warriors tummempi kuin luulemme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valkyriesin moderni kuva tulee usein 1800-luvun romantismista: lempeitä neitsyitä hevosen selässä. Muinaiset tekstit, kuten [[Runollinen Edda]], maalaavat paljon ankarampia hahmoja. Ne liittyvät variksiin, ruumiinlintuihin. Jotkut runot näyttävät heidät makaaberina kehrääjinä: niiden langat ovat suolia, painot ovat päitä."
+        },
+        {
+          "type": "image",
+          "asset": "valkyrie_riding_winged_horse_norse_art",
+          "ratio": "4:3",
+          "caption": "Valkyrie lennossa: Odinin sanansaattaja ja sankarien tarjoaja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Figuurit, kuten **Brynhildr** tai [[Sigrun]], ovat myös ihmiskasvot: he epäröivät Odinin käskyjen ja kuolevaisia kohtaan tuntemansa välillä. Valhallassa heidän roolinsa vaihtuu. He jättävät panssarin palvelemaan simaa sankareille. Ele puhuu tunnustamisesta: rohkeista kuolleista on tullut Asgardin eliitti."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p3",
+      "title": "Joka päivä taistella, joka ilta juhlia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valhallassa ei ole rauhallista perääntyä. Kukon laulaessa [[Gullinkambi]] Einherjarit aseistautuvat ja tappavat toisensa [[Idavoll]] tasangolla. Illalla haavat sulkeutuvat. Kuolleet nousevat jälleen. Sitten tulee juhla."
+        },
+        {
+          "type": "image",
+          "asset": "valhalla_feast_norse_warriors_einherjar_painting",
+          "ratio": "4:3",
+          "caption": "Einherjar-juhla: taistelu päivällä, juhlat yöllä."
+        },
+        {
+          "type": "funFact",
+          "text": "Kokki [[Andhrímnir]] keittää villisikaa **Sæhrímnir** joka päivä, minkä jälkeen se syntyy uudelleen. Sima virtaa vuohen utareista [[Heidrun]]. Viking Paradise on pysyvä harjoitushuone."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä väkivallan ja nautinnon kierre yhdistää Odinin armeijan. Vuosisatoja ystävyystaisteluja ennen todellista vihollista."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p4",
+      "title": "Arvokas kuolema ennemmin kuin \"olkikuolema\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tämä näkemys kuolemanjälkeisestä elämästä merkitsi Viking Scandinaviaa. Fyysistä rohkeutta arvostettiin. Kuolema vanhuuteen tai sairauteen, \"olkikuolema\", johti **Hel**, tylsään valtakuntaan. Oli parempi kaatua aseet kädessä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Valkyrie on kestänyt vuosisatoja. Richard Wagner korjasi sen eurooppalaiseen muistiin [[Valkyrien ratsastus]]:lla. Nykyään hänestä on tullut voimakkaan naisen arkkityyppi, joka on usein kaukana ensisijaisesta tehtävästään: ruumiiden tarjoaja jumalalle, joka suunnittelee omaa päämääräänsä."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Valkyyria** rekrytoi parhaita kuolleita **Valhalla**:hen. Siellä Einherjar taistelee ja juhlii loputtomasti valmistautuessaan [[Ragnarök]]. Pohjoismainen paratiisi on kasarmi, ei turvapaikka."
+        }
+      ]
+    }
+  ]
+}

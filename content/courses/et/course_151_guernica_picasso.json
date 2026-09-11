@@ -1,0 +1,130 @@
+{
+  "id": "course_151_guernica_picasso",
+  "title": "Guernica, Picasso",
+  "subtitle": "1937",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "Pärast Guernica pommitamist maalis Picasso mustvalge hüüde sõja vastu. Töö rändab, seejärel naaseb pärast Francot Hispaaniasse.",
+  "hero": {
+    "image": "guernica_picasso",
+    "ratio": "16:9",
+    "hook": "Põlenud baski küla, lõuend, mis keeldub unustamast."
+  },
+  "sections": [
+    {
+      "id": "course_151_guernica_picasso_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**26. aprillil 1937. a** pommitati baski linna Guernica [[Hispaania kodusõda]] ajal. Picasso Pariisis vastas tohutu mustvalge lõuendiga."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Guernica*ist sai 20. sajandi üks võimsamaid sõjavastaseid pilte."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p1",
+      "title": "Hispaania sõda",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alates **1936** on Hispaania lõhenenud [[Teine Hispaania Vabariik]] ja Franco natsionalistide vahel, keda toetab Saksa [[Kondori leegion]]. Guernica [[küllastuspommitamine]] eesmärk on terroriseerida."
+        },
+        {
+          "type": "paragraph",
+          "text": "Picasso töötab kiiresti, suurte uuringutega. Ta loobub värvist, et jääda tunnistuse kiireloomulisuse juurde. Monumentaalne formaat keelab mugava mõtisklemise."
+        },
+        {
+          "type": "image",
+          "asset": "guernica_bombing_aftermath_1937",
+          "ratio": "4:3",
+          "caption": "Guernica varemetes: uudisest saab sümbol."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p2",
+      "title": "Karjuv maal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Picasso loob kaose kehadest, hobusest, härjast, lambipirnist. Pole värvi: nagu ajalehe esileht. Monumentaalsus sunnib vaatajat vastanduma."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sooltest lahti võetud hobune, ema lapsega, käed üles tõstetud: iga motiiv on loetav ilma pealkirjata. See on tsiviilterrori grammatika, mitte kangelaslik lahing."
+        },
+        {
+          "type": "funFact",
+          "text": "Ta keeldus lubamast maalil Hispaaniasse minna seni, kuni Franco on võimul."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p3",
+      "title": "Pagulus MoMA-s",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pärast universaalnäitust Pariisis reisis *Guernica* ja viibis seejärel pikka aega New Yorgis [[MoMA]], mida kaitsti Franco [[Külm sõda]] ajal. Ta naasis Madridi **1981**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diktatuuri ajal sai maalist poliitiline pagulus. Tema naasmine Hispaaniasse pärast Francot on nii rahvuslik kui esteetiline sündmus."
+        },
+        {
+          "type": "image",
+          "asset": "guernica_picasso_painting_detail",
+          "ratio": "4:3",
+          "caption": "Must, valge, hall: sõda ilma kangelaslikkuseta."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p4",
+      "title": "Pärand",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hoiatuseks [[ÜRO]] ees reprodutseeritud teos jääb universaalseks keeleks tsiviilisikute tapatalgute vastu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Guernica, Picasso täielikuks mõistmiseks peate meeles pidama üht: iga tehniline detail teenib emotsiooni või ideed. Töö pole kunagi ainult dekoratiivne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontekst on sama oluline kui stiil. Kuupäevad, kohad, sponsorid, avalikkus: see kõik selgitab, miks vorm ilmub konkreetsel hetkel, mitte varem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lõpuks mõõdetakse pärandit pikas perspektiivis. See, mida me täna muuseumides, filmides või levimuusikas näeme, kannab endiselt nende leiutiste jälgi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iga uus sõda toob *Guernica*ile kurvad uudised. Teos toimib hoiatusena, et me ei saa kunagi piisavalt kuulata."
+        },
+        {
+          "type": "paragraph",
+          "text": "Guernica, Picasso täielikuks mõistmiseks peate meeles pidama üht: iga tehniline detail teenib emotsiooni või ideed. Töö pole kunagi ainult dekoratiivne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontekst on sama oluline kui stiil. Kuupäevad, kohad, sponsorid, avalikkus: see kõik selgitab, miks vorm ilmub konkreetsel hetkel, mitte varem."
+        },
+        {
+          "type": "takeaway",
+          "text": "Guernicaga muutis Picasso 1937. aasta pommirünnaku ülemaailmseks visuaalseks mälestuseks totaalsest sõjast."
+        }
+      ]
+    }
+  ]
+}

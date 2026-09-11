@@ -1,0 +1,120 @@
+{
+  "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire",
+  "title": "Gilgamesh: historian ensimmäinen sankari",
+  "subtitle": "Mesopotamia",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Urukin kuningas, Enkidun ystävä, kuolemattomuuden etsijä: 4000 vuotta sitten kirjoitettu Gilgamesh-eepos on ihmiskunnan vanhin suuri tarina.",
+  "hero": {
+    "image": "gilgamesh_le_premier_heros",
+    "ratio": "16:9",
+    "hook": "Ennen Homerosta, ennen Raamattua: kuolemaa peloissaan oleva kuningas lähtee maan ääriin... ja tuo takaisin oppitunnin, ei ikuisuutta."
+  },
+  "sections": [
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Gilgamesh**, Mesopotamian **Uruk**:n kaupungin kuningas, on **E Gilgamesh -kuvan** sankari. Tämä savitauluihin kaiverrettu yli **4000 katselukertaa**, tämä teos on ennen Homerosta ja Raamatun tarinoita."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se ei ole vain seikkailu. Se on tarina tyrannista, joka löytää ystävyyden, sitten kuoleman pelon ja sitten ankaran viisauden: kuolemattomuus ei ole ruumiissa, vaan siinä, mitä jätämme taaksemme."
+        }
+      ]
+    },
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_p1",
+      "title": "Eepos hiekasta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Teksti kokoaa yhteen muinaisia sumerilaisia tarinoita. Sen klassinen versio, akkadinaksi, johtuu kirjuri [[Sîn-lēqi-unninni]] (noin 1100-luvulla eKr.). Hiekkojen alle unohdettu se nousi uudelleen esiin 1800-luvulla kuninkaan [[Ashurbanipal]] kirjastossa **Ninive**:ssä."
+        },
+        {
+          "type": "image",
+          "asset": "gilgamesh_tablet_cuneiform_nineveh_british_museum",
+          "ratio": "4:3",
+          "caption": "Nuolenkirjoitustaulu eeposesta, British Museum."
+        },
+        {
+          "type": "paragraph",
+          "text": "Teoksessa **1872** assyriologi **George Smith** tulkitsi British Museumissa tarinan tulvasta, arkista ja selviytymisestä, joka oli noin vuosituhatta edeltänyt Genesiksen kirjaa. Saveen puristettu **nuolenpääkirjoitus**-kirjoitus tallensi tekstin sinne, missä papyrus olisi kadonnut."
+        },
+        {
+          "type": "funFact",
+          "text": "Flood Tabletia lukiessaan George Smithin sanottiin olleen niin innoissaan, että hän alkoi riisuutua hämmästyneiden kollegoidensa edessä British Museumissa."
+        }
+      ]
+    },
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_p2",
+      "title": "Gilgamesh ja Enkidu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alussa **Gilgamesh** on sietämätön kuningas: kaksi kolmasosaa jumalallista, yksi kolmasosa inhimillistä, mutta tyranni Urukille. Häntä kanavoidakseen jumalatar [[Aruru]] muotoilee **Enkidu**:n, villimiehen, joka asuu gasellien keskellä."
+        },
+        {
+          "type": "image",
+          "asset": "gilgamesh_enkidu_ancient_sumerian_art",
+          "ratio": "4:3",
+          "caption": "Gilgamesh ja Enkidu: taistelusta veljelliseen ystävyyteen."
+        },
+        {
+          "type": "paragraph",
+          "text": "He taistelevat, kukaan ei voita, ja kilpailusta tulee ystävyys. Yhdessä he tappavat hirviön **Humbaba** Setrimetsässä ja sitten jumalatar **Ishtar** lähettämän **Taivaallinen härkä**. Ärstyneenä jumalat tuomitsevat Enkidun kuolemaan sairauteen. Ystävän kuolema muuttaa kaiken."
+        }
+      ]
+    },
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_p3",
+      "title": "Kuolemattomuuden etsintä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Enkidun ruumiin edessä Gilgamesh ymmärtää, että hänkin kuolee. Hän hylkää kruununsa, peittyy eläimennahoilla ja lähtee etsimään **Ut-napishti**, ainoaa miestä, josta tuli kuolematon [[Vedenpaisumustarina eeppisessä]]. Matka vie hänet [[Mashu]]-vuorten ja Kuoleman vesien ohi."
+        },
+        {
+          "type": "image",
+          "asset": "gilgamesh_flood_tablet_utnapishtim_myth",
+          "ratio": "4:3",
+          "caption": "Tarina vedenpaisumuksesta: tuhat vuotta ennen Nooaa, jo savella."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ut-napishti asettaa hänelle koetuksen: pysyä hereillä kuusi päivää ja seitsemän yötä. Gilgamesh nukahtaa välittömästi. Joka ei voita unta, ei voita kuolemaa. Hänelle näytetään nuoruuden kasvi; käärme varastaa sen häneltä hänen kylpeessään. Käärme sulaa. Kuningas lähtee tyhjin käsin."
+        },
+        {
+          "type": "funFact",
+          "text": "Tämä [[Vedenpaisumustarina eeppisessä]] edeltää Raamatun Nooan tarinaa noin **1 000 vuotta**: sama Mesopotamian kulttuuritausta, vanhempi versio."
+        }
+      ]
+    },
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_p4",
+      "title": "Urukin muurien ikuisuus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Uruk**:ssa Gilgamesh katselee kaupunkinsa valleita. Oppitunti on selvä: biologinen kuolemattomuus kuuluu jumalille. Ihminen kestää tekojensa ja elävien muistin kautta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neljä vuosituhatta myöhemmin tarina ruokkii edelleen maailmankulttuuria raamatullisesta Nooasta [[Joseph Campbell]] monomyyttiteorioihin. Gilgameshia lukeminen tarkoittaa, että kuulet ensimmäiset suuret inhimilliset kysymykset kuoleman edessä."
+        },
+        {
+          "type": "takeaway",
+          "text": "**E-kuva Gilgameshista**, **4 000 vuotta vanha**, sisältää jo tulvan ennen Raamattua. Hänen sankarinsa oppii, että kuolemattomuus ei ole biologista: se on rakentamissamme seinissä ja muistoissa, joita jätämme."
+        }
+      ]
+    }
+  ]
+}

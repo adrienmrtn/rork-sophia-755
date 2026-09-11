@@ -1,0 +1,139 @@
+{
+  "id": "course_10_la_decouverte_de_l_amerique_1492",
+  "title": "Amerikan löytö",
+  "subtitle": "1492",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "12. lokakuuta 1492 Christopher Columbus saavutti Bahaman saaren, jonka hän uskoi olevan Japani. Navigointivirhe avaa globalisaation.",
+  "hero": {
+    "image": "la_decouverte_de_l_amerique_1492",
+    "ratio": "16:9",
+    "hook": "Hän etsi Aasiaa. Se osui mantereelle, jonka Eurooppa oli unohtanut."
+  },
+  "sections": [
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**12.10.1492**, yli kahden kuukauden Atlantilla olon jälkeen Pintan merimies huutaa \"Maa!\". **Kristoffer Kolumbus**, Espanjan palveluksessa oleva genovalainen, laskeutuu Bahamalla sijaitsevalle saarelle, jonka hän antaa nimekseen San Salvador. Hän uskoo saavuttavansa Aasian."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä virhe yhdistää kaksi pallonpuoliskoa. [[Espanjan reconquista (1492)]], Granadan takaisinvalloittaminen muslimeista samana vuonna, vauhdittamana retkikunta merkitsi Euroopalle siirtymistä keskiajalta moderniin aikaan."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p1",
+      "title": "Tie länteen, suuri virhe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kolumbus ei yritä todistaa, että maapallo on pyöreä. [[Eratosthenes]], kreikkalainen tutkija 3. vuosisadalla eKr. BC, oli jo laskenut sen. Todellinen tavoite on taloudellinen: saavuttaa mausteet ja silkki lännestä ilman, että mennään itäisiä reittejä hallitsevien ottomaanien läpi."
+        },
+        {
+          "type": "image",
+          "asset": "christopher_columbus_portrait",
+          "ratio": "4:3",
+          "caption": "Christopher Columbus, genovalainen navigaattori katolisten hallitsijoiden palveluksessa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hänen virheensä: aliarvioi maan kehän. Se sijoittaa Japanin **4 500 km** Kanariansaarilta verrattuna lähes **20 000** todellisuuteen. Portugali kieltäytyy. Isabella Kastilialainen, Espanjan kuningatar, hyväksyy. [[Santa Fen antaumukset]], sopimuksella, Columbuksesta tulee amiraali, varakuningas, ja hän saa **10 %** voitosta."
+        },
+        {
+          "type": "funFact",
+          "text": "Kolumbus kirjoitti merenneitojen näkemisestä Karibialla. Ne olivat manaatteja. Hän huomautti pettyneenä, että ne olivat paljon vähemmän kauniita kuin legendoissa."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p2",
+      "title": "70 päivää San Salvadoriin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**A elokuun 3. päivänä 1492** kolme alusta lähti Palosista Espanjasta: **Pinta**, **Niña** ja **Santa María**. [[Pinzón]]-perheen, varakkaiden paikallisten laivanvarustajien ansiosta **90-miehen**:n miehistö on kokenut. Ylitys kestää **70 päivää**. Kolumbus pitää kahta päiväkirjaa: yksi todellinen, toinen väärennetty rauhoittaakseen merimiehiä."
+        },
+        {
+          "type": "image",
+          "asset": "santa_maria_caravel_ship",
+          "ratio": "4:3",
+          "caption": "Santa María, vuoden 1492 tutkimusmatkan lippulaiva."
+        },
+        {
+          "type": "paragraph",
+          "text": "**12. lokakuuta** hän tapasi [[Taínos]], Suur-Antillien alkuperäisasukkaat. Hän vakuuttaa olevansa Intiassa ja kutsuu heitä \"intiaaniksi\". Hän panee merkille heidän kultansa ja heidän näennäisen oppivansa. Siirtomaalainen katse on jo siellä."
+        },
+        {
+          "type": "funFact",
+          "text": "La Niñaa kutsuttiin itse asiassa *Santa Clara*. Santa María sai lempinimen *La Gallega*, koska se rakennettiin Galiciassa."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p3",
+      "title": "Kolumbian pörssi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eurooppalaisten saapuminen laukaisi **Kolumbian vaihdon**, kasvien, eläinten ja tautien massasiirron kahden maailman välillä. Kohti Eurooppaa: perunat, maissi, tomaatit, kaakao, tupakka. Kohti Amerikkaa: vehnää, sokeria, kahvia, hevosia, karjaa. Lautaset ja maisemat molemmin puolin muuttuvat ikuisesti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hinta on kauhea. Isorokko, tuhkarokko ja flunssa tappavat **50-90 %** alkuperäiskansoista vuosisadassa. Diplomaattisesti Espanja ja Portugali jakavat maapallon [[Tordesillasin sopimus (1494)]] neuvottelematta ketään."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "3. elokuuta 1492",
+              "title": "Lähtö Paloksesta",
+              "detail": "Kolme alusta lähti länteen."
+            },
+            {
+              "date": "12. lokakuuta 1492",
+              "title": "San Salvador",
+              "detail": "Kolumbus laskeutuu Bahamalle."
+            },
+            {
+              "date": "1494",
+              "title": "Tordesillas",
+              "detail": "Espanja ja Portugali jakavat maailman."
+            },
+            {
+              "date": "1507",
+              "title": "Amerikka",
+              "detail": "Waldseemüller kastaa uuden maailman."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p4",
+      "title": "Manner ilman sen löytäjää",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kolumbus kuoli **1506**:ssä tunnustamatta löytöään. Se on [[Amerigo Vespucci]], firenzeläinen navigaattori, joka ymmärtää, että se on \"Mundus Novus\", uusi maailma. Teoksessa **1507** kartografi Waldseemüller antoi mantereen nimeksi **Amerikka**. Firenzeläisen etunimi tulee maailmankartalle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Brutaali ylläpitäjä Hispaniolassa (nykyinen Haiti ja Dominikaaninen tasavalta), Columbus jopa päätyi takaisin kahleisiin. Ihmisen ulkopuolella **1492** avaa globalisaation: amerikkalainen raha virtaa sisään, kaupan keskus siirtyy Välimereltä Atlantille. Euroopasta tulee neljän mantereen järjestelmän keskus."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kolumbus kuolee vakuuttuneena siitä, että hän on saavuttanut Aasian. Hänen virheensä yhdisti kaksi pallonpuoliskoa ja laukaisi peruuttamattoman biologisen, taloudellisen ja inhimillisen mullistuksen."
+        }
+      ]
+    }
+  ]
+}

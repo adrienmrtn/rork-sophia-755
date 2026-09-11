@@ -1,0 +1,120 @@
+{
+  "id": "course_182_osiris_et_set_mythologie_egyptienne",
+  "title": "Osiris ja setti (egyptin mytologia)",
+  "subtitle": "Egyptin mytologia",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Murha, pilkkominen, muumio ja kosto: Osiriksen ja Setin kiertokulku perusti Egyptin kuninkaallisen ja toivon kuolemanjälkeisestä elämästä.",
+  "hero": {
+    "image": "osiris_et_set_mythologie_egyptienne",
+    "ratio": "16:9",
+    "hook": "Veli tappaa kuninkaan, leikkaa hänen ruumiinsa neljääntoista osaan. Sisar tuo hänet yhteen. Poika kostaa. Koko Egypti on toipumassa tästä rikoksesta."
+  },
+  "sections": [
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sykli **Osiris** ja **Sarja** on suuri tarina muinaisesta Egyptistä. Tämä ei ole vain perhetragedia. Se on taistelu järjestyksen ([[Ma'at]], harmonia) ja steriilin kaaoksen välillä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Osirisin murhan, paloittelun ja ylösnousemuksen kautta egyptiläiset ajattelevat kuninkautta, Niilin hedelmällisyyttä ja elämää kuoleman jälkeen. Jokainen elävä faarao on **Horus**. Jokaisesta kuolleesta kuninaasta tulee **Osiris**."
+        }
+      ]
+    },
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_p1",
+      "title": "Sarja tappaa Osirisin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Osiris** on sivistynyt kuningas. Sisar-vaimonsa **Isis** kanssa hän opettaa maataloutta ja lakeja. Hänen veljensä **Sarja**, erämaan ja väkivallan jumala, vihaa häntä. Set esittelee juhlissa upean arkun: hän tarjoaa sen sille, joka sopii siihen täydellisesti."
+        },
+        {
+          "type": "image",
+          "asset": "osiris_egyptian_god_green_skin_painting",
+          "ratio": "4:3",
+          "caption": "Osiris, jolla on vihreä iho: ei kuolema, vaan kasvillisuus uudestisyntynyt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Osiriksen mittauksia salaa otettuaan Set laittaa hänet makuulle, lukitsee arkun, sulkee sen lyijyllä ja heittää hänet Niiliin. Myöhemmin, kun Isis löytää ruumiin, Set leikkaa sen **14 kappaleeksi** ja levittää ne laaksoon. Ilman ehjää ruumista ei ole rauhaa tuonpuoleisessa elämässä."
+        },
+        {
+          "type": "funFact",
+          "text": "Osiris on usein maalattu vihreäksi. Tämä väri ei kerro mätänemistä: se kertoo uudestisyntymisestä, kuten peltoja Niilin tulvien jälkeen."
+        }
+      ]
+    },
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_p2",
+      "title": "Isis keksii muumion",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Isis**, suuri taikuri, lähtee etsimään palasia. Sisarensa Nephthysin ja jumalan [[Anubis]] avustuksella hän pystyttää pyhäkön jokaiseen paikkaan, josta hän löytää palan. Yksi ongelma on edelleen: kala [[Oxyrhynchus]] söi falloksen. Isis suunnittelee korvaavan."
+        },
+        {
+          "type": "image",
+          "asset": "isis_egyptian_goddess_winged_resurrection_painting",
+          "ratio": "4:3",
+          "caption": "Isis ojennetuilla siipillä: hengitys, joka elvyttää Osiriksen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kokoamalla palaset ja käärimällä ne suikaleiksi Isis ja Anubis luovat ensimmäisen **-muumion**. Isis puhalsi siipien lyönnillä lyhyen elämän Osirikseen. Silloin hän sikisi **Horus**, perillisen, jonka oli määrä palauttaa järjestys."
+        },
+        {
+          "type": "funFact",
+          "text": "Joidenkin tekstien mukaan Isisin kyyneleet hänen matkansa aikana olivat niin runsaita, että egyptiläiset näkivät niissä Niilin vuotuisen tulvan myyttisen alkuperän."
+        }
+      ]
+    },
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_p3",
+      "title": "Horus kostaa isänsä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Khemmis]]:n suoissa salassa kasvatettu **Horus** kasvaa haukan muotoon. Aikuisena hän vaatii valtaistuinta jumalten tuomioistuimen edessä, jota johtaa [[Ra]]. Konflikti Setin kanssa kestää vuosikymmeniä: kaksintaisteluja, temppuja, loukkaantumisia. Horus menettää silmänsä; Setti menettää hedelmällisyytensä."
+        },
+        {
+          "type": "image",
+          "asset": "eye_of_horus_egyptian_symbol_protection",
+          "ratio": "4:3",
+          "caption": "Horuksen silmä (Oudjat): eheys palautettu kaaoksesta."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Thoth]]:n uudelleen muodostamasta silmästä tulee paranemisen ja suojan symboli. Jumalat päättävät: Set on tuomittu palvelemaan, erityisesti taistelemalla käärmettä [[Apophis]] vastaan aurinkoveneessä. Horus kruunataan. Jokainen faarao on tästä lähtien \"elävä Horus\"."
+        }
+      ]
+    },
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_p4",
+      "title": "Osiris, kuolleiden tuomari",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Muumioitunut Osiris ei voi enää hallita maan päällä. Hänestä tulee **Amenti**:n, kuolleiden valtakunnan, hallitsija. Hänen katseensa alla tapahtuu **sydämen punnitus**, joka on kuvattu [[Kuolleiden kirja]]. Vainajan sydän on asetettu vaa'alle Ma'atin höyheniä päin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jos sydän on kevyt, vainaja on \"oikealla äänellä\" ja astuu Osirisin ikuisuuteen. Jos se on täynnä virheitä, hirviö [[Ammit]] syö sen: lopullinen unohdutus. Kuningas ja talonpoika tuomitaan samojen kriteerien mukaan. Horus hallitsee nykyhetkeä; Osiris hoitaa loput."
+        },
+        {
+          "type": "takeaway",
+          "text": "Myytti **Osiris** ja **Sarja** muodostaa Egyptin kolme pilaria: kuninkaallinen (elävä Horus), muumioituminen (koskematon ruumis kuoleman jälkeiseen elämään) ja toivo oikeudenmukaisuudesta kuoleman jälkeen Osirisin katseessa."
+        }
+      ]
+    }
+  ]
+}

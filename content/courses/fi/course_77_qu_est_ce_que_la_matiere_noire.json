@@ -1,0 +1,108 @@
+{
+  "id": "course_77_qu_est_ce_que_la_matiere_noire",
+  "title": "Mikä on pimeä aine?",
+  "subtitle": "Näkymätön kosmos",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Emme koskaan nähneet häntä. Silti ilman sitä galaksit hajoaisivat. Pimeä aine on maailmankaikkeuden näkymätöntä liimaa.",
+  "hero": {
+    "image": "qu_est_ce_que_la_matiere_noire",
+    "ratio": "16:9",
+    "hook": "Kuvittele näkymätön liima, joka pitää galakseja yhdessä. Emme näe häntä, mutta näemme, mitä hän pidättelee."
+  },
+  "sections": [
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tunnet tuulen näkemättä sitä: oksat liikkuvat, hiukset lentää. **Pimeä aine** on vähän samanlainen kosmoksen mittakaavassa. Se ei kiiltoa, ei heijasta valoa, ei estä mitään säteitä. Me \"näemme\" sen vain siitä, mitä se saa liikkumaan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se edustaisi noin **27 %** maailmankaikkeudesta, viisi kertaa enemmän kuin kaikki tavallinen aine: tähdet, planeetat, kaasu. Ilman sitä galaksit pyöriisivät liian nopeasti pysyäkseen yhdessä."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p1",
+      "title": "Tähtää liian nopeasti laitamilla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vuosina **1970** amerikkalainen tähtitieteilijä **Vera Rubin** mittasi tähtien nopeutta spiraaligalakseissa. Aurinkokunnassa, mitä kauemmaksi menemme Auringosta, sitä hitaammin pyörimme. Hän odotti samaa kaavaa."
+        },
+        {
+          "type": "image",
+          "asset": "dark_matter_galaxy_cluster",
+          "ratio": "auto",
+          "caption": "Pimeä aine paljastaa läsnäolonsa galaksijoukkoihin kohdistuvan gravitaatiovaikutuksen kautta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nyt reunalla olevat tähdet kääntyivät **kuten nopeasti** kuin keskellä. Pelkästään näkyvällä massalla niiden olisi pitänyt lentää pois. Siksi galaksin ympärillä oli oltava näkymätön massa, **halo**, näkymätön pallomainen verho, joka pidätteli niitä. [[Galaxyn pyörimiskäyrä]]:stä on tullut pimeän aineen lippulaivatodiste."
+        },
+        {
+          "type": "funFact",
+          "text": "Vera Rubin on jo pitkään joutunut taistelemaan, jotta hänet otettaisiin vakavasti. Princeton kielsi häneltä pitkään tähtitieteen tohtorin tutkinnon… koska hän oli nainen, vuoteen 1975 asti."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p2",
+      "title": "Mistä se on tehty? Etsimme edelleen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se ei ole tavallinen aine, jota kutsutaan **baryoninen**, joka koostuu protoneista ja neutroneista: se ei ole vuorovaikutuksessa valon kanssa. Se ylittää Maan ja meidät jättämättä näkyvää jälkeä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pitkään suosittu lyijy, **NYNNY**, heikosti vuorovaikutuksessa oleva massiivinen hiukkanen, olisi raskas hiukkanen [[Fysiikan vakiomalli]], tunnettuja alkuainehiukkasia kuvaavan teorian ulkopuolella. **Liquidxeon**-ilmaisimet, jotka on haudattu maan alle, toivovat harvinaista shokkia. Ilman selkeää menestystä tällä hetkellä. Toiset luottavat **aksioni**:ään, ultrakevyisiin hiukkasiin tai painovoimaan, joka on tarkistettava. Sillä välin pimeä aine taivuttaa tilaa ja muodostaa [[gravitaatiolinssit]], joka vääristää massiivisen esineen valoa."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p3",
+      "title": "Ja pimeä energia, toinen mysteeri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pimeä aine houkuttelee. [[Pimeää energiaa]], joka löydettiin **1998**:stä, toimii päinvastoin: se kiihdyttää **universumi** laajenemista, galaksien etäisyyden kasvamista. Galaksit poistuvat yhä nopeammin, kun taas painovoiman pitäisi hidastaa liikettä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se painaisi noin **68 %** kosmoksesta. Pimeän aineen kanssa tämä tekee **95 %** näkymätöntä maailmankaikkeutta. Kaikki mitä näemme, atomit ja valo, on vain **5 %**:n vaahtoa."
+        },
+        {
+          "type": "funFact",
+          "text": "Hyvin kaukaisessa tulevaisuudessa tumma energia voi työntää muita galakseja poispäin niin, että ne tekevät niistä näkymättömiä Linnunradalta: melkein tyhjä taivas."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p4",
+      "title": "Massiivinen todiste, hiukkasta ei löytynyt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Toisaalta epäsuorat todisteet kerääntyvät: galaktiset kierrokset, **Kosminen mikroaaltotausta**, fossiilinen säteily nuoresta universumista, universumin filamenttirakenne. Toisaalta ei suoraa hiukkasten havaitsemista."
+        },
+        {
+          "type": "paragraph",
+          "text": "2000-luvun on päätettävä: uusi hiukkasperhe vai uusi tapa ajatella painovoimasta. Pimeä aine ei ole vain taivaan yksityiskohta. Se on laboratorio, jossa huomisen fysiikka keksitään."
+        },
+        {
+          "type": "takeaway",
+          "text": "Pimeä aine muodostaa **27 %** maailmankaikkeudesta. Sen todistaa sen painovoima tähtiin ja valoon, vaikka emme ole koskaan nähneet sitä suoraan."
+        }
+      ]
+    }
+  ]
+}

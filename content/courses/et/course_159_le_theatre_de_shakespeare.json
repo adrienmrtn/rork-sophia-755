@@ -1,0 +1,122 @@
+{
+  "id": "course_159_le_theatre_de_shakespeare",
+  "title": "Shakespeare'i teater",
+  "subtitle": "1564-1616",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "Londonis kirjutas Shakespeare ajakirjale Globe. Hamlet, Macbeth, Romeo: populaarne teater, millest on saanud inglise keele tipp.",
+  "hero": {
+    "image": "le_theatre_de_shakespeare",
+    "ratio": "16:9",
+    "hook": "Näitlejast dramaturg, ilma lavadeta teater... ja igavesed liinid."
+  },
+  "sections": [
+    {
+      "id": "course_159_le_theatre_de_shakespeare_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**William Shakespeare** (1564-1616) kirjutas Londoni lavale, mitte koolile. Tema näidendites segunevad kuningad, klounid, armastajad ja palgamõrvarid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neli sajandit hiljemgi mängitakse seda igal pool."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p1",
+      "title": "Maakera ja maapealsed",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Lord Chamberlaini mehed]] trupiga mängib ta vabaõhuringis [[Globe teater]]. [[maapealsed]] maksavad vähe ja jäävad lava lähedale seisma. Teater on populaarne, lärmakas, elav."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elizabethan London armastab vaatemängu. Teatrid võistlevad jutluste ja karuvõitlusega. Shakespeare kirjutab sellel mürarikkal turul, mitte elevandiluust tornis."
+        },
+        {
+          "type": "image",
+          "asset": "globe_theatre_london_reconstruction",
+          "ratio": "4:3",
+          "caption": "Globe: stseen surus rahva sekka."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p2",
+      "title": "Uus keel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ta kirjutab sageli Shakespeare'i tühjas värsis: jambiline pentameeter ilma riimita. Solvangud, luuletused, monoloogid: ta mõtleb välja sõnu ja kehtestab müütideks muutunud tegelasi (Hamlet, Lady Macbeth)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta taaskasutab kroonikaid, Itaalia uudiseid, vanu palasid. Originaalsus peitub keeles ja tegelaskujudes, mitte süžee puhtas väljamõeldises."
+        },
+        {
+          "type": "funFact",
+          "text": "Mitmed tema teosed on meieni jõudnud alles tänu 1623. aasta [[Esimene Folio]]-le, mis ilmus pärast tema surma."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p3",
+      "title": "Tragöödiad, komöödiad, lood",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ta läheb naerust vereks. *Romeo ja Julia*, *Othello*, *Kuningas Lear*: perekonnad, võim, armukadedus. \"Ajaloolavastused\" taasestavad Inglismaad publikule, kellele meeldib end eepilises vormis näha."
+        },
+        {
+          "type": "paragraph",
+          "text": "Komöödiad ja tragöödiad reageerivad üksteisele. Hull räägib tõtt; kuningas läheb hulluks. See toonide poorsus selgitab, miks seda saab ikkagi tuhandel viisil paigaldada."
+        },
+        {
+          "type": "image",
+          "asset": "shakespeare_first_folio_1623",
+          "ratio": "4:3",
+          "caption": "Esimene folio: tekstide päästmine unustuse eest."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p4",
+      "title": "Pärand",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kino ja räpi poolt tõlgitud, kohandatud, sämplitud Shakespeare jääb ambitsioonide ja soovide väljendamise tööriistakastiks. Tema saladus: kirjutamine näitlejatele, rahva ees."
+        },
+        {
+          "type": "paragraph",
+          "text": "Shakespeare'i teatri täielikuks mõistmiseks tuleb meeles pidada üht: iga tehniline detail teenib emotsiooni või ideed. Töö pole kunagi lihtsalt dekoratiivne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontekst on sama oluline kui stiil. Kuupäevad, kohad, sponsorid, avalikkus: see kõik selgitab, miks vorm ilmub konkreetsel hetkel, mitte varem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lõpuks mõõdetakse pärandit pikas perspektiivis. See, mida me täna muuseumides, filmides või levimuusikas näeme, kannab endiselt nende leiutiste jälgi."
+        },
+        {
+          "type": "paragraph",
+          "text": "18. sajandil Prantsusmaal ja mujal tõlgituna sai sellest maailmaklassika. Iga ajastu leiab temas oma peegli: romantiline, poliitiline, postkolonialistlik, feministlik."
+        },
+        {
+          "type": "takeaway",
+          "text": "Globe'il leiutas Shakespeare populaarse teatri, mille tegelased ja keel vallutasid maailma."
+        }
+      ]
+    }
+  ]
+}

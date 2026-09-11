@@ -1,0 +1,129 @@
+{
+  "id": "course_15_la_belle_epoque_1871_1914",
+  "title": "Belle Époque",
+  "subtitle": "1871-1914",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Vuoden 1870 sodan lopun ja elokuun 1914 välisenä aikana Eurooppa uskoi edistymiseen. Sähkö, näyttelyt, uusi taide… ja murtumia, jotka johtavat katastrofiin.",
+  "hero": {
+    "image": "la_belle_epoque",
+    "ratio": "16:9",
+    "hook": "Neljäkymmentä vuotta uskoa edistymiseen… ennen kuin kaikki muuttui vuonna 1914."
+  },
+  "sections": [
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Belle Époque** tarkoittaa suhteellisen rauhan ajanjaksoa [[Ranskan ja Preussin sota]] (**1871**) päättymisen ja [[Ensimmäinen maailmansota]]END1 (BOLDEND1) välisen ajan. Uskomme tieteeseen, kehitykseen, järkeen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Länsi-Euroopan varakkaille luokille se oli neljä vuosikymmentä mukavuutta ja keksintöä. Mutta viilun alla paistaa jo sosiaalisia murtumia ja kilpailuja, jotka räjäyttävät kaiken."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p1",
+      "title": "Kun tekniikka muuttaa jokapäiväistä elämää",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Toinen teollinen vallankumous tuo **sähköä**, **öljy**, kemian. Raitiovaunu ja metro (Pariisi, **1900**) muuttavat kaupunkia. Auto ja lentokone syntyvät. Puhelin lyhentää etäisyyksiä."
+        },
+        {
+          "type": "image",
+          "asset": "paris_universal_exhibition_1900",
+          "ratio": "4:3",
+          "caption": "Vuoden 1900 yleisnäyttely Pariisissa, edistyksen esittely."
+        },
+        {
+          "type": "funFact",
+          "text": "Nimi \"Belle Époque\" esiintyy vain **1914**:n jälkeen. Aikalaiset eivät eläneet \"Belle Époquessa\": haudoista selviytyneet keksivät tämän kadonneen paratiisin."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1900:n mailmannäyttely** houkuttelee **50 mm** kävijää. Lumière-veljesten elokuvateatteri ja Moulin Rouge tekevät Pariisista viihteen pääkaupungin. [[Auguste Comten positivismi]], erittäin vaikutusvaltainen filosofia, tiivistää optimismin: tiede ratkaisee kaiken."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p2",
+      "title": "Kulissien takana",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bulevardien takana työntekijät työskentelevät usein **10-12 tuntia** päivässä ilman todellista suojaa. Kaupunkien köyhyys ruokkii luokkien välisiä jännitteitä."
+        },
+        {
+          "type": "image",
+          "asset": "eiffel_tower_1889",
+          "ratio": "4:3",
+          "caption": "Eiffel-torni (1889), ikoni modernista, joka ei hyödytä kaikkia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Maailmanlaajuisesti Eurooppa jakaa Afrikan. [[Berliinin konferenssi]] (**1884-1885**) asettaa rajat kuulematta asianomaisia ihmisiä. Ranskassa [[Dreyfusin tapaus]] repii tasavallan: juutalainen upseeri Alfred Dreyfus tuomitaan väärin vakoilusta, ja antisemitismi tulee ilmi."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p3",
+      "title": "Uusi taide, sitten syksy",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Taiteet räjähtävät. [[art nouveau]] kaareuttaa julkisivut. [[fauvismi]] ja [[Kubismi]] ravistavat maalia. Lääkäri [[Sigmund Freud]] tutkii tajutonta. Albert Einstein julkaisee [[Suhteellisuusteoria]] julkaisussa **1905**: tila ja aika eivät ole enää sitä mitä luulimme."
+        },
+        {
+          "type": "funFact",
+          "text": "Elokuvassa **1913** Igor Stravinskyn baletti *Kevään rituaali* aiheutti Pariisissa niin skandaalin, että katsojat iski."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sitten kaikki muuttuu. **28. kesäkuuta 1914** arkkiherttua **Franz Ferdinand**, Itävalta-Unkarin perillinen, murhattiin Sarajevossa. Allianssien vaihteet ovat liikkeellä. Yhdistynyt kuningaskunta astuu sotaan **Aelokuun 4. päivänä**. Usko edistymiseen kuolee juoksuhaudoissa."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1871",
+              "title": "Ranskan ja Preussin sodan loppu",
+              "detail": "Yhtenäisen Saksan synty, ranskalainen kauna."
+            },
+            {
+              "date": "1889",
+              "title": "Eiffel-torni",
+              "detail": "Teknisen nykyaikaisuuden symboli."
+            },
+            {
+              "date": "1894-1906",
+              "title": "Dreyfusin tapaus",
+              "detail": "Tasavalta hajoaa itseään."
+            },
+            {
+              "date": "1900",
+              "title": "Universaali näyttely",
+              "detail": "Pariisi, maailman näyteikkuna."
+            },
+            {
+              "date": "elokuuta 1914",
+              "title": "Suuri sota",
+              "detail": "Belle Époque päättyy äkillisesti."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Belle Époque (**1871-1914**) yhdistää teknisen kehityksen ja syvät murtumat ennen kuin se uppoaa suuren sodan kaaokseen."
+        }
+      ]
+    }
+  ]
+}

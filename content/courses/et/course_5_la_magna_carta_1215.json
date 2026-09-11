@@ -1,0 +1,133 @@
+{
+  "id": "course_5_la_magna_carta_1215",
+  "title": "Magna Carta",
+  "subtitle": "1215",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Juunis 1215 kinnitas John Lackland oma pitseri oma parunite kehtestatud hartale. Feodaaltekstist saab sajandite jooksul kuninga kohal oleva seaduse sümbol.",
+  "hero": {
+    "image": "la_magna_carta_1215",
+    "ratio": "16:9",
+    "hook": "Nurka surutud kuningas märgib. Kaheksa sajandit hiljem räägib kogu maailm sellest endiselt."
+  },
+  "sections": [
+    {
+      "id": "course_5_la_magna_carta_1215_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Juunis **1215** **Runnymede** heinamaal Londoni lähedal kinnitas Inglismaa kuningas **John Lackland** oma pitseri **Magna Carta**, \"Suure harta\". See ei ole suuremeelsuse žest. See on vastasseis: parunid, kuningriigi suured isandad, tahavad murda kuningliku meelevaldsuse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tekst sündis kodusõja vältimiseks. Selle kohene rakendamine ebaõnnestub. Tasapisi saab temast aga plahvatusohtliku idee sümbol: isegi kuningas on seaduse all."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p1",
+      "title": "John Lackland kuristiku äärel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuningas alates **1199** Jeanil on üks katastroof teise järel. Seistes silmitsi Prantsusmaa kuninga [[Filippus II Augustus]], kannatas ta [[Normandia kaotus (1204)]]. Oma maade tagasivallutamiseks vajutab ta [[Feodaalsüsteem]]: kuningas annab maad vastutasuks lojaalsuse ja sõjaväeteenistuse eest, Johannes aga korrutab makse, pantvange ja meelevaldseid trahve. Kombed, mis teda oma vasallidega sidusid, purunesid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konflikt paavst [[Innocentius III]] eraldas teda veelgi. Pärast [[Bouvines]] (**1214**) lüüasaamist, kus Philip Augustus alistas koalitsiooni, sealhulgas Inglismaa, mässasid parunid ja vallutasid Londoni. Jeanil pole enam valikut: pidada läbirääkimisi või kaotada kroon."
+        },
+        {
+          "type": "funFact",
+          "text": "Hüüdnimi \"Sans Terre\" ei tulene tema Prantsusmaa lüüasaamisest. Henry II viimane poeg ei olnud tema sündides lihtsalt saanud mingeid eelisõigusi."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p2",
+      "title": "Runnymede, 63 klauslit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**15. juuli 1215** kohtusid osapooled Runnymedes. Canterbury peapiiskop [[Stephen Langton]] mõjutatud dokumendis on **63 klauslid**. Kaks neist muudavad kõike. **klausel 39**: ühtegi vaba meest ei saa arreteerida ilma tema kaaslaste hinnanguta. **klausel 40**: kuningas ei saa õiglust müüa ega edasi lükata."
+        },
+        {
+          "type": "image",
+          "asset": "magna_carta_1215_manuscript",
+          "ratio": "4:3",
+          "caption": "1215. aasta Magna Carta, pärgament, millest sai poliitiline müüt."
+        },
+        {
+          "type": "paragraph",
+          "text": "See pole veel demokraatia. Põhikiri kõneleb peamiselt “vabadest meestest”, mitte pärisorjadest, maaga seotud talupoegadest. See on ennekõike rahuleping kuninga ja tema parunite vahel. Kuid mõte on välja öeldud: võimul on piirid kirja pandud."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p3",
+      "title": "Ebaõnnestumisest müüdiks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Juba augustis lasi Johannes paavstil teksti tühistada. Kodusõda jätkub. Harta säilib tänu **1216** kuninga surmale: noor **Henry III** annab selle kuningriigi rahustamiseks uuesti välja. Ikka ja jälle kinnitatuna läheb see Inglise seadustesse."
+        },
+        {
+          "type": "funFact",
+          "text": "1215. aastast pole ainsatki originaali, küll aga mitu maakondadesse saadetud koopiat. Ainult neli jäid ellu."
+        },
+        {
+          "type": "paragraph",
+          "text": "17. sajandil tõid õigusteadlased nagu [[Edward Koks]] välja Stuartide absolutismi, nende kuningate, kes tahtsid valitseda piiranguteta. Keskaegsest pärgamendist saab parlamentaarsete vabaduste väidetav esivanem."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1204",
+              "title": "Normandia kaotus",
+              "detail": "John Lackland kaotab oma kontinentaalse sissetuleku."
+            },
+            {
+              "date": "1214",
+              "title": "Bouvines",
+              "detail": "Lüüasaamine isoleerib kuninga lõplikult."
+            },
+            {
+              "date": "1215",
+              "title": "Magna Carta",
+              "detail": "Parunite survel Runnymede külge kinnitatud pitser."
+            },
+            {
+              "date": "1216",
+              "title": "Uuesti välja anda",
+              "detail": "Henry III salvestab teksti trooni stabiliseerimiseks."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p4",
+      "title": "Ülemaailmne pärand",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Briti kolonistid viivad harta Ameerikasse. Asutajad said sellest inspiratsiooni [[Õiguste Bill]], Ameerika põhiseaduse esimeste muudatuste jaoks. [[Habeas korpus]], põhimõte, mis keelab meelevaldsed vahistamised, laiendab klauslit 39. Dokumendis **1948** näeb [[Eleanor Roosevelt]] seda kui \"suurt hartat\" kogu inimkonna jaoks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tänaseks on Inglismaal kehtima jäänud vaid kolm klauslit. Pole vahet. Magna Carta loeb vähem elava seaduse kui sümbolina: keegi pole seadusest kõrgemal."
+        },
+        {
+          "type": "takeaway",
+          "text": "Magna Carta, mis pärineb John Lacklandilt filmis **1215**, kinnitab, et ka kuningas on seaduse all. Parunite ja kuninga vahelisest lepingust sündis üks kaasaegsete vabaduste alusmüüte."
+        }
+      ]
+    }
+  ]
+}

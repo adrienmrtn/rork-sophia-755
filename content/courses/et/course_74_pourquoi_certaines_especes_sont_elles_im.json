@@ -1,0 +1,108 @@
+{
+  "id": "course_74_pourquoi_certaines_especes_sont_elles_im",
+  "title": "Miks on mõned liigid surematud?",
+  "subtitle": "Bioloogia ja pikaealisus",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Mõned liigid näivad surma trotsivat. Noorendavad meduusid, vananemata hüdrad: saladus peitub rakkude paranemises.",
+  "hero": {
+    "image": "pourquoi_certaines_especes_sont_immortelles",
+    "ratio": "16:9",
+    "hook": "Vananemine ei ole elu absoluutne seadus. Mõned liigid on vea leidnud."
+  },
+  "sections": [
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Me jääme vanaks ja siis sureme. Meduusid [[Turritopsis dohrnii]] võivad aga naasta noorukieas ja alustada uuesti. Karp **Ming** elas **507 aastat**. Vananemine ei ole seega universaalne reegel: see on protsess, millest teatud liigid mööda hiilivad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neid erandeid uurides otsivad teadlased vähem ulmekirjanduse surematust kui elu nippe rakkude paremaks parandamiseks."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p1",
+      "title": "Miks meie rakud kuluvad",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vananemine ei tähenda ainult masina „kulumist”. See on tasakaalustamatus: kahjustused kogunevad kiiremini kui parandused."
+        },
+        {
+          "type": "image",
+          "asset": "chromosome_dna_telomere_aging_cell",
+          "ratio": "auto",
+          "caption": "Telomeerid kromosoomide otstes lühenevad iga raku jagunemisega."
+        },
+        {
+          "type": "paragraph",
+          "text": "Meie kromosoomide otstes toimivad [[Telomeerid]] nagu kingapaela otsad. Iga raku jagunemisega need lühenevad. Liiga lühike, lõpetab rakk jagunemise. Samal ajal toodab ainevahetus agressiivseid molekule, mis kahjustavad valke ja DNA-d. Seejärel akumuleeruvad \"zombi\" rakud ja sütitavad neid ümbritsevaid kudesid."
+        },
+        {
+          "type": "funFact",
+          "text": "Tardigraad, tilluke \"veekaru\", võib kuivades peaaegu elu lõpetada. Tema ainevahetus langeb **99,99%**-ni ja ta elab üle ruumivaakumi või äärmusliku kiirguse ilma tõeliselt vananemata."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
+      "title": "Tšempionid, kes väldivad surma",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vigastatud või nälginud [[Turritopsis dohrnii]] muudab oma täiskasvanud rakud \"tühjadeks\" rakkudeks ja muutub seejärel taas polüüpiks, mis on algstaadium. See samm tagasi, mida nimetatakse transdiferentseerumiseks, annab sellele **bioloogilise surmatuse** vormi."
+        },
+        {
+          "type": "paragraph",
+          "text": "**hüdra**, väike mageveepolüüp, uuendab kogu oma keha tänu peaaegu piiramatule [[tüvirakud]] kogusele. Tal pole mõõdetavaid vananemise märke. Tänu ülitõhusale DNA parandamisele ja tugevale resistentsusele vähi vastu võib vöörvaal ületada **200 aastat**."
+        },
+        {
+          "type": "funFact",
+          "text": "Homaarid toodavad telomeraasi kõikjal oma kehas: nende telomeerid ei lühene. Nad kasvavad kogu elu ja surevad eriti siis, kui sulatamine muutub liiga kulukaks."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
+      "title": "Mida meditsiin sellest õpib",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Idee pole enam ainult Alzheimeri tõve või osteoartriidi ükshaaval ravimine, vaid vananemise enda ründamine. **senolüütikumid** eesmärk on hävitada zombirakud. Loomadel on see teatud funktsioone juba noorendanud."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kalorite piiramine ilma alatoitumiseta aktiveerib ka paranemisradasid, eelkõige aeglustades [[mTOR]] - valku, mis kiirendab kasvu... ja mõnikord ka langust. Teised laborid üritavad rakke, nagu meduusid, \"keerata\", muutmata neid kasvajateks."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p4",
+      "title": "Surematu, kuid mitte võitmatu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Isegi bioloogiliselt surematu liik sureb röövloomade, haiguste või katastroofi tõttu. Surm jääb evolutsiooni edasiviivaks jõuks: see annab teed uutele, paremini kohanenud põlvkondadele."
+        },
+        {
+          "type": "paragraph",
+          "text": "Inimeste jaoks ei ole realistlik väljakutse elada igavesti, vaid pikendada aastaid **hea tervise vannub**. Pikaealisuse pööratud tehnoloogia tõstataks ka suuri küsimusi võrdsuse ja ressursside kohta."
+        },
+        {
+          "type": "takeaway",
+          "text": "Bioloogiline surematus sõltub rakkude parandamisest või lähtestamisest. Turritopsis dohrnii meduus muutub nooremaks; hüdra uueneb pidevalt. Vananemine ei ole universaalne surmajuhtum."
+        }
+      ]
+    }
+  ]
+}

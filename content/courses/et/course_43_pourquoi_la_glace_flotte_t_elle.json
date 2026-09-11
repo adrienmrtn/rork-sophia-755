@@ -1,0 +1,106 @@
+{
+  "id": "course_43_pourquoi_la_glace_flotte_t_elle",
+  "title": "Miks jää hõljub?",
+  "subtitle": "Vesi ja molekulid",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Jää hõljub vee peal. See tundub normaalne, kuid tegelikult on see väga haruldane. Ja õnneks elu Maal.",
+  "hero": {
+    "image": "pourquoi_la_glace_flotte",
+    "ratio": "16:9",
+    "hook": "Kui jää voolaks, jääksid järved põhjani. Ja elul vees oleks raskusi ellujäämisega."
+  },
+  "sections": [
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jääkuubik klaasis, jäämägi ookeanis: jää **ujuvad**. Meie arvates on see banaalne. Enamiku ainete puhul on tahke aine aga **tihedam**, seega sama mahu puhul raskem: see vajub."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vesi teeb vastupidist. See erand tuleneb selle molekuli kujust. Ja see päästis talvel palju järvi."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p1",
+      "title": "V-kujuline molekul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Veemolekul on **hapniku** aatom, mis on ühendatud kahe **vesiniku** aatomiga. See ei ole sirge: see moodustab **V**. Selle kuju tõttu ei jaotu elektrilaengud võrdselt: molekul on **polaarne**, mille üks ots on kergelt negatiivne ja teine kergelt positiivne."
+        },
+        {
+          "type": "image",
+          "asset": "water_molecule_model_crystal",
+          "ratio": "4:3",
+          "caption": "Veemolekul: V, mis tõmbab ligi ja tõrjub oma naabreid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tulemus: veemolekulid tõmbavad üksteist [[Vesiniksidemed]] abil nagu väikesed magnetid. Vedelikus jäävad nad lähedale, kuid liiguvad siiski. Jääs külmuvad nad erinevalt."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
+      "title": "Kui vesi külmub, võtab see ruumi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Umbes **0 °C** vesi tahkub. Jää moodustamiseks organiseeruvad molekulid **kuusnurkne** võrgustikuks, omamoodi kuuepoolseks kärgstruktuuriks. Seejärel jätavad nad nende vahele rohkem **tühi** kui vedelas olekus."
+        },
+        {
+          "type": "funFact",
+          "text": "Seetõttu on sügavkülmikus pudelitäis vett **lõhkeda**: jää võtab rohkem mahtu kui vedel vesi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vähem materjali samas mahus tähendab: **vähem tihe**. Kuid objekt, mis on vähem tihe kui seda ümbritsev vedelik, tõuseb üles. Seetõttu hõljub jää vee peal. Seda nimetatakse **vee paisumise anomaaliaks**: erinevalt peaaegu kõigist ainetest paisub vesi jahtudes **4 °C** all."
+        },
+        {
+          "type": "image",
+          "asset": "iceberg_floating_arctic_ocean",
+          "ratio": "16:9",
+          "caption": "Jäämägi hõljub, sest jää on vähem tihe kui vedel vesi."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
+      "title": "Miks see on järvede jaoks eluliselt tähtis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kujutage ette, kui jäätis voolab. See moodustuks pinnale ja vajuks seejärel põhja. Järv jäätuks kiht-kihilt, kuni põhjani. Sageli ei piisa suvest, et kõike ära sulatada."
+        },
+        {
+          "type": "paragraph",
+          "text": "Õnneks jääb jää üleval. See moodustab **Isolatsioon**. Külmunud pinna alla võib vedel vesi jääda umbes **4 °C**, temperatuur, kus vedel vesi on kõige tihedam, piisav kalade ja veetaimede ellujäämiseks."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p4",
+      "title": "Ja ka kliima pärast",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valge jäätükk peegeldab suure osa Päikese valgusest tagasi kosmosesse tänu oma kõrgele **albeedo** peegeldusjõule. Kui see kaob, neelab tume ookean rohkem soojust. See kiirendab soojenemist: nõiaring."
+        },
+        {
+          "type": "takeaway",
+          "text": "Jää hõljub, sest tahkumisel moodustab vesi rohkem \"aereeritud\" võrgustikku: see muutub vähem tihedaks kui vedel vesi. See erand kaitseb talvel vee-elustikku."
+        }
+      ]
+    }
+  ]
+}

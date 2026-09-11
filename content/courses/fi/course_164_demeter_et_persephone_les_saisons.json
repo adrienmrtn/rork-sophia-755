@@ -1,0 +1,146 @@
+{
+  "id": "course_164_demeter_et_persephone_les_saisons",
+  "title": "Demeter ja Persephone",
+  "subtitle": "Miksi vuodenajat ovat olemassa?",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Hades sieppaa Persefonen. Hänen äitinsä Demeter, sadonkorjuun jumalatar, jättää maan nälkään. Myytti vuodenaikojen selittämiseen.",
+  "hero": {
+    "image": "demeter_et_persephone",
+    "ratio": "16:9",
+    "hook": "Kun tyttö katoaa maan alle, hänen äitinsä lopettaa sadonkorjuun. Maailma löytää talven."
+  },
+  "sections": [
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Demeter** on kreikkalainen sadonkorjuun ja hedelmällisyyden jumalatar. Hänen tyttärensä **Perséphone** ilmentää kevättä. Heidän tarinansa selittää [[maataloussykli kreikan uskonnossa]]: miksi maa kuolee talvella ja syntyy uudelleen kesällä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se on myös draama äidistä ja tyttärestä elävien ja kuolleiden maailman välillä. Tästä tarinasta syntyi [[Eleusinin mysteerit]], salaiset riitit, jotka lupasivat vihityille toivoa kuoleman edessä."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p1",
+      "title": "Hades sieppaa tytön",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kutsumme ensin Perséphonea **Korah**:ksi \"nuori tyttö\". Eräänä päivänä hän poimii niityltä narsissin. Maa avautuu. **Hades**, alamaailman kuningas, ilmestyy vaunuihinsa. Nuoren tytön isän **Zeus**:n salaisella sopimuksella hän vie hänet alamaailmaan tekemään hänestä kuningattarensa."
+        },
+        {
+          "type": "image",
+          "asset": "hades_abduction_persephone_bernini_sculpture",
+          "ratio": "4:3",
+          "caption": "Persefonen sieppaus: kevät katoaa maan alle."
+        },
+        {
+          "type": "funFact",
+          "text": "Myytin mukaan **Gaïa**, maapallo, oli luonut tämän narsissin Zeuksen käskystä. Sen tuoksun on täytynyt saada Persephone vangiksi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Demeter, lohduton, lähtee Olympuksesta. Se estää maata itämästä. Pellot pysyvät karuina. **Nälänhätä** uhkaa ihmisiä ja siksi jumalille uhrattuja uhreja. Zeuksen on reagoitava."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p2",
+      "title": "Granaattiomenan siemenet ratkaisevat kohtalon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zeus lähettää **Hermesin**:n, jumalien lähettilään, vaatimaan Persefonen palauttamista. Hades teeskentelee tottelevansa. Ennen kuin hän lähtee, hän antaa hänelle **granaattiomenan siemeniä**. Joka syö kuolleiden valtakunnassa, kuuluu hänelle. Loukku on asetettu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kompromissi on välttämätön. Persephone viettää osan vuodesta Hadesin kanssa, loput äitinsä kanssa. Palatessaan ylös Demeter tekee luonnon taas vihreäksi: on kevät ja kesä. Kun hän tulee alas, sadonkorjuun jumalatar vetää armonsa: on syksy ja talvi."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1",
+              "title": "Kidnappaus",
+              "detail": "Hades vie Persefonen maan alle."
+            },
+            {
+              "date": "2",
+              "title": "Nälänhätä",
+              "detail": "Demeter pysäyttää kasvien kasvun."
+            },
+            {
+              "date": "3",
+              "title": "Granaattiomena",
+              "detail": "Persephone syö siemeniä alamaailmassa."
+            },
+            {
+              "date": "4",
+              "title": "Jakaminen",
+              "detail": "Hän jakaa vuoden äidin ja miehen kesken."
+            },
+            {
+              "date": "5",
+              "title": "Vuodenajat",
+              "detail": "Sen edestakaiset rytmit satojakson."
+            }
+          ]
+        },
+        {
+          "type": "funFact",
+          "text": "Jotkut versiot sanovat, että Persephone ei syö näitä siemeniä vahingossa. Uteliaisuus tai orastava kiintymys: tarinasta tulee myös sisääntulo aikuisuuteen."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p3",
+      "title": "Eleusiksessa toivo yön jälkeen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vaelluksensa aikana Demeter pysähtyy vanhaksi naiseksi naamioituneena **Eleusis**:ssä lähellä Ateenaa. Kuninkaallinen perhe toivottaa hänet tervetulleeksi, hän paljastaa jumalallisen luonteensa ja määrää temppelin rakentamisen. [[Eleusinin mysteerit]] ovat syntyneet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Initiaatit kävelevät yhdeksän päivää, paastoavat, juovat **kykeon**, ohraa ja minttua. [[Telesterion]], valtava vihkimishuone, valo loistaa pimeyden jälkeen. Siellä paljastetaan pyhät esineet suurimmassa salassa."
+        },
+        {
+          "type": "funFact",
+          "text": "Jotkut nykyajan tutkijat uskovat, että kykeon sisälsi torajyvää, hallusinogeenistä sientä. Tämä selittäisi vihittyjen ilmoittamat visiot."
+        },
+        {
+          "type": "paragraph",
+          "text": "Riitti jäljittelee jumalattaren matkaa. Luonnonkuoleman läpikäyminen Demeterin kanssa, sitten uudelleensyntyminen Persefonen kanssa: osallistujat uskoivat saavansa paremman kohtalon tuonpuoleisessa elämässä."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p4",
+      "title": "Jyvä, joka kuolee syntyäkseen uudelleen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kreikkalaisten mielestä maahan haudattu vehnänjyvä kärsi saman kohtalon kuin Persephone. Se katoaa maan alle palatakseen varrena. Myytti yhdistää maatalouden, kuoleman ja uudestisyntymisen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hän puhuu myös muinaisesta avioliitosta, joka koetaan usein tuskallisena erona: nuori tyttö jättää äitinsä toiseen kotiin. Hadesin ja Demeterin välinen lopullinen sopimus pitää vastakohdat yhdessä: varjon ja valon, kuoleman ja elämän."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Persephone**:n oleskelu alamaailmassa pilkkoo vuodenaikoja: hänen poissaolonsa aiheuttaa **Démeter**:n surun (syksy-talvi), hänen paluunsa saa kasvit syntymään uudelleen (kevät-kesä)."
+        }
+      ]
+    }
+  ]
+}

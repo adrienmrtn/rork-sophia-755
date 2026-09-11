@@ -1,0 +1,108 @@
+{
+  "id": "course_72_pourquoi_dort_on",
+  "title": "Miksi me nukumme?",
+  "subtitle": "Keho & aivot",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Vietämme kolmanneksen elämästämme nukkuen. Se ei ole hukattua aikaa: uni puhdistaa aivot, korjaa kehon ja kaivertaa muistoja.",
+  "hero": {
+    "image": "pourquoi_dort_on",
+    "ratio": "16:9",
+    "hook": "Nukkuminen ei tarkoita sammuttamista: se on kehon suurta yötyötä."
+  },
+  "sections": [
+    {
+      "id": "course_72_pourquoi_dort_on_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yli 75 vuoden elämämme nukumme lähellä **25 katselukertaa**. Pitkään uskoimme, että uni oli vain taukoa. Todellisuudessa se on aktiivista työtä, yhtä tärkeää kuin juominen tai syöminen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tieteellä ei vielä ole kaikkia vastauksia siihen, miksi nukumme. Mutta hän tietää erittäin hyvin, mitä tapahtuu, kun emme nuku, ja mitä yö hiljaa korjaa."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p1",
+      "title": "Mitä unettomuus paljastaa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vuonna **1964** amerikkalainen opiskelija **Randy Gardner** pysyi **11 päivää** nukkumatta. Hallusinaatiot, vainoharhaisuus, mielen romahdus: todiste siitä, että aivot eivät voi selviytyä ilman lepoa."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_bedroom_night",
+          "ratio": "auto",
+          "caption": "Uni on välttämätöntä aivojen ja kehon palautumiselle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rotilla täydellinen unettomuus tappaa **2:ssa 3 viikon** kohdalla, kuten nälkä. Ihmisillä myös harvinainen geneettinen sairaus, **Kuolemaan johtava perhealinen unettomuus**, johtaa kuolemaan. Päivittäin 17 tuntia valveillaoloa vastaa veren alkoholipitoisuutta **0,5 g/l**. Sitten aivot pakottavat [[mikrounet]], lyhyitä tahattomia taukoja tajunnassa."
+        },
+        {
+          "type": "funFact",
+          "text": "Ennätyksensä jälkeen Randy Gardner nukkui **14 tuntia** suorassa. Hän heräsi toimintakykyisenä, mutta hänen unensa palautuminen normaaliin kuvioon kesti viikkoja."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p2",
+      "title": "Yöllä aivot puhdistuvat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Unen aikana aivot eivät pysähdy: se vaihtaa tilaa. **merihevonen**, merihevosen muotoinen avainmuistirakenne, \"toistaa\" päivän ja lähettää tiedot [[Neocortex]], aivojen ulkokerrokseen, pysyvää säilytystä varten. Tulos: opimme usein **20 - 40 %** paremmin nukuttuamme hyvät yöunet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Syvä uni laukaisee myös **kasvuhormoniini**, joka korjaa lihaksia ja kudoksia sekä stimuloi immuunijärjestelmän signaalimolekyylejä [[Sytokiinit]]. Toinen suuri löytö: [[Glymfaattinen järjestelmä]], aivovedenpoistoverkosto **kymmenen kertaa** aktiivisempi yöllä. Se poistaa jätteet, mukaan lukien proteiinit, jotka liittyvät Alzheimerin taudin riskiin."
+        },
+        {
+          "type": "funFact",
+          "text": "Syvän unen aikana aivosolut pienenevät noin **60 %**. Näin luotu tila mahdollistaa puhdistusnesteen paremman kierron."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p3",
+      "title": "Kuka nukkuu kuinka paljon ja miten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kissat nukkuvat **12 klo 16.00**.: saalistajat turvassa. Kirahvit ovat toisinaan tyytyväisiä **30 minuuttia 2 minuuttia**, lyhyillä päiväunilla valmiina pakenemaan. Delfiinit nukkuvat **a yhdellä aivopuoliskolla**, puolet aivoista, kerrallaan noustakseen ylös hengittämään."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vauvat nukkuvat **18 tuntiin**, jossa on paljon [[paradoksaalista unta]], unelmien vaihe nopeilla silmäliikkeillä. Tämä vaihe auttaa [[Synaptogeneesi]], yhteyksien muodostamisessa hermosolujen välillä."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p4",
+      "title": "Sisäinen kello ja sininen valo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kaksi voimaa työntää meidät nukkumaan: päivän aikana kertyvä väsymys ja [[Vuorokausirytmit ja melatoniini]], sisäinen kello **24 tuntia**. Kun valo himmenee, aivot vapauttavat **melatonininia**, hormonia, joka valmistaa kehon nukkumaan pakottamatta sitä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iltanäytöt huijaavat tätä kelloa ja viivästyttävät nukahtamista. Emme todellakaan \"korvaa\" univelkaa viikonloppuna: väsymys vähenee, mutta ei kaikkia vahinkoja. Säännölliset työajat, pimeä ja viileä huone ovat parhaita liittolaisia."
+        },
+        {
+          "type": "takeaway",
+          "text": "Uni puhdistaa aivot, korjaa kehoa ja vahvistaa muistia. Täydellinen puute tappaa muutamassa viikossa: nukkuminen ei ole luksusta, se on elintärkeää ylläpitoa."
+        }
+      ]
+    }
+  ]
+}

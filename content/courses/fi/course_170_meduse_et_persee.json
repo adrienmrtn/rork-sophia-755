@@ -1,0 +1,124 @@
+{
+  "id": "course_170_meduse_et_persee",
+  "title": "Medusa ja Perseus",
+  "subtitle": "Kivettynyt ilme",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Medusa kivettyy katseessaan. Perseus voittaa hänet peilikilven avulla ja pelastaa sitten Andromedan. Gorgonin päästä tulee suojaava symboli.",
+  "hero": {
+    "image": "meduse_et_persee",
+    "ratio": "16:9",
+    "hook": "Katse, joka muuttaa elämän kiveksi. Sankari, joka uskaltaa vain katsoa heijastusta."
+  },
+  "sections": [
+    {
+      "id": "course_170_meduse_et_persee_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Myytti **Perseus**:sta ja **Medusa**:stä on yksi Kreikan suurista seikkailuista. Se ei ole vain taistelua hirviötä vastaan. Se on myös tarina kauhuksi muuttuneesta kauneudesta ja sankarista, joka voittaa ovelalla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Medusa, [[Gorgon]], kivettää jokaisen, joka kohtaa hänen katseensa. Selviytyäkseen Perseus suostuu näkemään vaaran vain peilin läpi."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p1",
+      "title": "Papittaresta hirviöksi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ovidin [[Metamorfoosit]] mukaan Medusa ei ole ensinnäkään hirviö. Hän on nuori nainen, jolla on vaaleat hiukset, pappitar **Athena**:n, viisauden jumalattaren, temppelissä. Hänen kauneutensa houkuttelee **Poseidonia**, merten jumalaa, joka raiskaa hänet pyhäkössä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Muinaisen traagisen logiikan mukaan Athena rankaisee uhria. Medusan hiuksista tulee käärmeitä. Hänen ilmeensä **kivettyy**. Karkotettu maailman ääriin sisarustensa Stheno ja Euryale kanssa, hän asuu luolassa, jota ympäröivät patsaat: onnettomat ihmiset, jotka näkivät hänet."
+        },
+        {
+          "type": "image",
+          "asset": "medusa_gorgon_snakes_hair_caravaggio_painting",
+          "ratio": "4:3",
+          "caption": "Medusa, Gorgon tappavalla katseella."
+        },
+        {
+          "type": "funFact",
+          "text": "Medusan vasemman puolen veri oli tappavaa myrkkyä. Oikealla oleva pystyi herättämään kuolleet henkiin: salaisuuden, jonka Athena uskoi myöhemmin **Asclepiukselle**:lle, lääketieteen jumalalle."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p2",
+      "title": "Perseus aseistautuu mahdotonta vastaan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuningas **Polydectès** haluaa viedä Perseuksen pois vietelläkseen hänen äitinsä **Danaé**. Hän asettaa hänelle itsemurhahaasteen: tuo takaisin Medusan pää. Perseus on **Zeus**:n poika. Jumalat auttavat häntä."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Hermes** antaa hänelle siivekkäät sandaalit ja [[harppu]], erittäin terävän kaarevan miekan. **Hades** lainaa hänelle [[Kynee]], näkymättömyyskypärää. Athena tarjoaa ratkaisevan neuvon: hänen kiillotettu pronssinen kilpensä käytettäväksi **peilinä**."
+        },
+        {
+          "type": "image",
+          "asset": "perseus_mirror_shield_medusa_painting",
+          "ratio": "4:3",
+          "caption": "Perseus lähestyy Medusaa katsoen vain heijastustaan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Perseus yllättää Medusan nukkumassa. Heijastuksen ohjaamana hän leikkaa päänsä irti. Kaulajousesta [[Pegasus, syntynyt Medusan verestä]] ja jättiläinen [[Chrysaor]]. Medusa oli edelleen raskaana Poseidonin kanssa."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p3",
+      "title": "Andromeda ja paluu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pää säilyttää voimansa. Perseus laittaa sen [[Kibisis]], taikalaukkuun. Lentäessään Etiopian yli hän näkee prinsessa **Andromedan** kiveen ketjutettuna. Sitä tarjotaan **Ketos**:lle, merihirviölle, jonka Poseidon on lähettänyt rankaisemaan äitinsä Cassiopeian ylpeyttä."
+        },
+        {
+          "type": "image",
+          "asset": "perseus_rescue_andromeda_sea_monster_painting",
+          "ratio": "4:3",
+          "caption": "Perseus vapauttaa Andromedan Medusan pään avulla."
+        },
+        {
+          "type": "funFact",
+          "text": "Jotkut legendat sanovat, että Perseus loi punaisen korallin asettamalla Medusan pään merilevälle: veri olisi kovettanut kasvit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Perseus kivettää hirviön, menee naimisiin Andromedan kanssa ja palaa sitten Seriphokseen. Polydectes ja hänen hovinsa kohtaavat hän päänsä esiin. Hänen vihollisistaan tulee patsaita. Tyrania pysähtyy."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p4",
+      "title": "Gorgoneion, suojaavat kasvot",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Perseus ojentaa päänsä Athenalle. Hän kiinnittää sen **egid**, jumalalliseen kilpeensä. Medusa muuttuu teurastettavasta hirviöstä suojaavaksi voimaksi. Tämä kuva, [[Gorgoneion]], koristaa kreikkalaisia temppeleitä, kolikoita ja kilpiä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sen tehtävä on [[Apotrooppinen]]: ohjata pahaa kasvojen kauhun kautta. Vuosisatojen kuluessa Medusasta tuli myös traaginen hahmo, sitten moderni ikoni: trauma, voima, kiehtovuus. Jopa Versacen talo valitsi päänsä \"kiventääkseen\" ilmettä."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Perseus** voittaa **Medusa**:n kilven heijastuksen ansiosta. **Athena**:lle annetusta päästä tulee **Gorgoneion**, muinaisen Kreikan suojaava symboli."
+        }
+      ]
+    }
+  ]
+}

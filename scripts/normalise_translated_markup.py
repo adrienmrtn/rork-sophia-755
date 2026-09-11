@@ -92,6 +92,11 @@ CLOSING_QUOTE = {
     "hr": {'"': '"', "\u201e": "\u201d", "\u201c": "\u201d", "\u201d": "\u201d"},
     "sk": {'"': '"', "\u201e": "\u201c", "\u201c": "\u201d", "\u201d": "\u201d"},
     "sr": {'"': '"', "\u201e": "\u201c", "\u201c": "\u201d", "\u201d": "\u201d"},
+    # Finnish closes with the same mark it opens with; Estonian closes \u201e\u2026\u201c with
+    # a left double quote; Hebrew writes plain double quotes.
+    "fi": {'"': '"', "\u201d": "\u201d", "\u201c": "\u201d", "\u201e": "\u201d"},
+    "et": {'"': '"', "\u201e": "\u201c", "\u201c": "\u201c", "\u201d": "\u201c"},
+    "he": {'"': '"', "\u201e": '"', "\u201c": '"', "\u201d": '"'},
 }
 QUOTE_MARKS = '"\u201e\u201c\u201d'
 ORPHAN_CLOSE = re.compile(r"\s*\u00bb")

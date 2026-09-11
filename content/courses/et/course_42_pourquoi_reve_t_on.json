@@ -1,0 +1,114 @@
+{
+  "id": "course_42_pourquoi_reve_t_on",
+  "title": "Miks me unistame?",
+  "subtitle": "Aju ja uni",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Igal ööl näed und umbes kaks tundi. Enamik unenägusid kaob ärgates. Siin on see, mida teadus selle saladuse kohta tänapäeval mõistab.",
+  "hero": {
+    "image": "pourquoi_reve_t_on",
+    "ratio": "16:9",
+    "hook": "Unistad kuuest aastast oma elust. Ja unustate peaaegu kõik."
+  },
+  "sections": [
+    {
+      "id": "course_42_pourquoi_reve_t_on_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Igal ööl veedate unes umbes **kaks tundi**. Elu jooksul on see peaaegu **kuus aastat**. Kuid ärgates kaob enamik neist lugudest mõne sekundi jooksul."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mitte kõik teadlased pole ühel meelel, miks. Kuid nad teavad üha paremini **kui**, mida me unistame, ja seda, mida aju selle aja jooksul teeb: korraldab mälestusi ümber, testib stsenaariume ja seedib emotsioone."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p1",
+      "title": "Uni ei ole välja lülitatud",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uni ei ole täielik väljalülitamine. See liigub **tsüklite** võrra umbes **90 minutit**, mitu korda öö jooksul. Igas tsüklis läbib aju erinevaid faase: kerge uni, keha taastamiseks kasulik sügav uni, seejärel väga spetsiifiline faas."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_rem_dream",
+          "ratio": "4:3",
+          "caption": "REM-une ajal liiguvad silmad silmalaugude all."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seda faasi nimetatakse [[REM uni]]. Aju on peaaegu sama aktiivne kui ärkvel, kuid keha on [[Lihase atoonia]] poolt halvatud. See on eriti koht, kus sünnivad pikad, jutustavad unenäod. See halvatus takistab meid füüsiliselt \"mängimast\", mida me unistame."
+        },
+        {
+          "type": "funFact",
+          "text": "Näeme unes **4 kuni 6 korda** öö kohta. Unustame **95%** kümne minuti jooksul pärast ärkamist. Kui mäletate unenägu, on see sageli tingitud sellest, et ärkasite selle ajal või kohe pärast seda."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p2",
+      "title": "Mis mõte on unistada?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Freud** arvas, et unenäod paljastavad peamiselt varjatud soove. Tänapäeval eelistavad teadlased konkreetsemaid selgitusi, mis põhinevad ajupildil, ajutegevust visualiseerivatel tehnikatel. Unenägude nägemine aktiveerib eriti **limbiline süsteem**, emotsioonidega seotud süvastruktuuride kogumit."
+        },
+        {
+          "type": "image",
+          "asset": "brain_activity_dreaming_scan",
+          "ratio": "4:3",
+          "caption": "Unenägude ajal töötab aju: emotsioonid, pildid, mälestused."
+        },
+        {
+          "type": "paragraph",
+          "text": "Domineerivad kolm põhirada. Esiteks: **sorteerige mälu**, hoidke kasulik, jätke ülejäänu lahti. Teiseks: **ohtude väljaõpe** maailmas ilma tõelise riskita. Kolmandaks: **emotsioonide seedimiin**: unenägude ajal vaatab aju uuesti tugevaid hetki, kasutades vähem **norepinefriini**, stressi ja ärkvelolekuga seotud neurotransmitterit."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p3",
+      "title": "Miks me unustame oma unistused",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mälu püsivaks säilitamiseks vajab aju teatud kemikaale. Paradoksaalse une ajal aga noradrenaliini tase langeb. Tulemus: unistus jääb väga haprasse mällu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niipea kui avad silmad, purustavad päevavalgus, helid ja mõtted selle hapra mälestuse. Parim viis selle hoidmiseks? Kirjutage unistus **kohe**, enne kui kolite."
+        },
+        {
+          "type": "funFact",
+          "text": "Enne värvitelevisiooni ütlesid vähesed, et unistavad värvilisest. Tänapäeval teeb seda enamik. Meie visuaalne keskkond mõjutab isegi meie unistuste tekstuuri."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p4",
+      "title": "Aga selge unenägu?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mõnikord mõistame **, ja näeme und**, jäädes magama: see on **Selged unenäod**. Loogika ja enesepeegeldusega seotud ajupiirkond, **prefrontaalne ajukoor**, süttib seejärel veidi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mõned võivad seejärel keskkonda mõjutada või õudusunenägu muuta. Teadlased isegi uurivad seda nähtust, et aidata sportlastel vaimselt žeste korrata või ravida korduvaid õudusunenägusid."
+        },
+        {
+          "type": "takeaway",
+          "text": "Eriti unistame [[REM uni]] ajal, faasis, mil aju on aktiivne ja keha halvatud. Unenägude nägemine aitab tõenäoliselt hallata mälu ja emotsioone, isegi kui unustame ärgates peaaegu kõik."
+        }
+      ]
+    }
+  ]
+}

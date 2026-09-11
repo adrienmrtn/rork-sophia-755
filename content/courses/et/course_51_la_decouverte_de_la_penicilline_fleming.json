@@ -1,0 +1,106 @@
+{
+  "id": "course_51_la_decouverte_de_la_penicilline_fleming",
+  "title": "Penitsilliini avastamine",
+  "subtitle": "Fleming, 1928",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "1928. aastal märkas Alexander Fleming, et hallitus on tapnud kultiveerimisnõul olevad bakterid. Sellest võimalusest sündis esimene suurepärane antibiootikum.",
+  "hero": {
+    "image": "la_decouverte_de_la_penicilline",
+    "ratio": "16:9",
+    "hook": "Unustatud karp, vorm ja ravim läheb tagurpidi."
+  },
+  "sections": [
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Enne antibiootikume võib lihtne infektsioon tappa. Lõige, kopsupõletik, sõjahaav: keha võitles sageli üksi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Punktis **1928** avastas Šoti arst **Aleksander Fleming** kogemata aine, mis on võimeline tapma baktereid. Seda nimetatakse **penitsilliiniks**. Kuid selle tõeliseks ravimiks muutmine võtab veel aastaid."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
+      "title": "Unustatud kast",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fleming uurib Londonis baktereid. Puhkuselt tulles vaatab ta vanu kultuurikaste. Ühel neist kasvas **hallitus**. Tema ümber on bakterid surnud."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Fleming ja põhiidee: miski hallituses peatab bakterid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hallitusseen kuulub perekonda **Penicillium**. Fleming mõistab, et see toodab antibakteriaalset ainet. Ta nimetab seda penitsilliiniks. Kuid ta ei suuda seda piisavalt puhastada, et haigeid ravida."
+        },
+        {
+          "type": "funFact",
+          "text": "Fleming ütles hiljem, et kui ta oleks olnud korralikum, oleks ta kasti minema visanud. Avastust aitas kaasa segadus laboris."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p2",
+      "title": "Oxford muudab idee raviks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1940** aastate alguses naasid Oxfordis **Howard Florey** ja **Ernst kett** tööle. Oma meeskonnaga eraldasid nad, kontsentreerisid ja testisid penitsilliini loomadel ja seejärel inimestel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Teine maailmasõda muutis asjad kiireks: nakatunud sõdureid tuli ravida. Penitsilliin liigub laborist strateegilise teema juurde."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p3",
+      "title": "Masstoodang",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "penicillin_antibiotic_production_laboratory",
+          "ratio": "4:3",
+          "caption": "Oli vaja leiutada tööstuslikke viise hallituse kasvatamiseks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Miljonite inimeste ravimiseks on vaja tohutuid koguseid. USA tööstustas tootmist sõja ajal. Hiiglaslikud vaadid ajavad hallituse puudust nagu õlut."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aastal **1945** said Fleming, Florey ja Chain Nobeli preemia. Meditsiin on jõudmas antibiootikumide ajastusse."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p4",
+      "title": "Vastupanu vari",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tänapäeval on liiga palju väärkasutatud antibiootikume võimaldanud teatud bakteritel muutuda **resistentseks**: ravimid ei tapa neid enam. Fleming oli selle ohu eest juba hoiatanud."
+        },
+        {
+          "type": "takeaway",
+          "text": "Penitsilliin sündis Flemingi raamatus **1928** täheldatud kokkusattumusest, millest sai seejärel ravim tänu Floreyle, Chainile ja sõjatööstusele. See on päästnud miljoneid elusid... seni, kuni sa seda ei kuluta."
+        }
+      ]
+    }
+  ]
+}

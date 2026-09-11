@@ -1,0 +1,104 @@
+{
+  "id": "course_216_la_dette_mondiale",
+  "title": "Globaali velka",
+  "subtitle": "Yli 300 % maailman bruttokansantuotteesta",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Maailmanlaajuinen velka ei ole koskaan ollut suurempi. Pitäisikö meidän olla siitä huolissaan, vai onko se normaali väline kasvun rahoittamiseen ja kriisien selvittämiseen?",
+  "hero": {
+    "image": "la_dette_mondiale",
+    "ratio": "16:9",
+    "hook": "Japani on velkaa 260 % bruttokansantuotteestaan... eikä kukaan ole huolissasi. Tässä on syy."
+  },
+  "sections": [
+    {
+      "id": "course_216_la_dette_mondiale_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Maailmanlaajuinen velka, valtioiden, yritysten ja kotitalouksien yhteensä, ylittää nykyään **300 % maailman bruttokansantuotteesta**, mikä on ehdoton ennätys taloushistoriassa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä vaikuttava luku kätkee sisäänsä vivahteikkaamman todellisuuden: velalla voidaan rahoittaa kasvua, vastata terveyskriiseihin tai valmistautua ekologiseen murrokseen. Mutta se sisältää myös riskin luottamuksen romahtamisesta."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p1",
+      "title": "Miten valtio velkaantuu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valtio velkaantuu, kun sen menot ylittävät rakenteellisesti verotulot. Tämä budjettivaje täytetään lainaamalla rahoitusmarkkinoilta. [[Keynesiläinen teoria]]:n mukaan lainanotto talouden elvyttämiseksi kriisiaikoina on laillista, jos se maksetaan takaisin, kun kasvu palaa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Käytännössä valtiot lainaavat helposti huonoina aikoina, mutta maksavat harvoin takaisin hyvinä aikoina. Velkaa kertyy sitten pitkällä aikavälillä. Japanin tapaus on kiehtova: maan velka on lähes 260 prosenttia sen BKT:sta, joten maan pitäisi loogisesti olla kriisissä. Se ei kuitenkaan ole, koska suurin osa sen velasta on sen omien pankkien ja säästäjien hallussa, suojassa ulkomaisilta markkinoilta."
+        },
+        {
+          "type": "funFact",
+          "text": "Yhdistynyt kuningaskunta lopetti Napoleonin sotien ja vuoden 1720 rahoituskuplan velkojen maksun vasta vuonna 2015."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p2",
+      "title": "Kaikki velat eivät ole samanarvoisia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Velan todellinen vaara ei riipu vain sen määrästä, vaan myös valuutasta, jolla se on lainattu. Rikkaat maat lainaavat omissa valuutoissaan, mikä rauhoittaa sijoittajia."
+        },
+        {
+          "type": "image",
+          "asset": "japan_government_debt_statistics_chart",
+          "ratio": "16:9",
+          "caption": "Maailman julkinen velka ylittää nykyään 300 prosenttia planeetan BKT:sta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kehitysmaat joutuvat usein lainaamaan dollareissa riittävän vakaana pidetyn valuutan puutteen vuoksi. Jos niiden kansallinen valuutta menettää arvoaan dollaria vastaan, takaisin maksettava summa räjähtää yhdessä yössä. Näissä kriiseissä [[IMF]] puuttuu usein, mutta yleensä asettaa tiukkoja säästämispolitiikkaa, joka painaa voimakkaasti väestöä."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p3",
+      "title": "Voiko velkaa olla loputon?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Keskustelu vastustaa kahta talouden visiota. [[Moderni rahateoria]] väittää, että valtio ei voi mennä konkurssiin niin kauan kuin se lainaa omassa valuutassaan: todellinen raja ei ole mielivaltainen luku, kuten Maastrichtin sopimuksessa Euroopassa määrätty 60 %, vaan inflaatiotaso."
+        },
+        {
+          "type": "paragraph",
+          "text": "Muut varovaisemmat taloustieteilijät pelkäävät, että liiallinen velka karkottaa markkinoiden luottamuksen, mikä johtaa jyrkäseen korkojen nousuun. Euroalueen kriisi vuosina 2010-2012 osoitti tätä riskiä: Kreikan kaltaiset maat, jotka jäivät ilman omaa keskuspankkiaan, näkivät lainakorkojensa nousevan niin, että ne uhkasivat koko Euroopan valuutan olemassaoloa."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p4",
+      "title": "Velan uudet kasvot",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Globaali velka ei koske vain valtioita: myös yritykset ja kotitaloudet kantavat kasvavan osuuden siitä, joskus huonosti säänneltyjen finanssialan toimijoiden kautta. Ilmastovelan ympärillä on myös syntymässä uusi keskustelu: pitäisikö energiasiirtymän rahoittaa velkaa kohdella eri tavalla kuin yksinkertaista kulutusta?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kysymys sukupolvien välisestä oikeudenmukaisuudesta on edelleen keskeinen: velkaantuminen tänään tarkoittaa verojen ottamista huomisesta. Mutta jos tällä rahalla rahoitetaan kestävää infrastruktuuria tai hyvää koulutusta, se voidaan nähdä myös lahjana tuleville sukupolville eikä taakana."
+        },
+        {
+          "type": "takeaway",
+          "text": "Maailmanlaajuinen velka ylittää 300 % planeetan BKT:sta, mikä on historiallinen ennätys. Sen vaarallisuus riippuu vähemmän sen määrästä kuin valuutasta, jolla se on lainattu: Japani osoittaa, että 260 prosentin velka voi pysyä vakaana, jos se pidetään paikallisesti."
+        }
+      ]
+    }
+  ]
+}

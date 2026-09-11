@@ -1,0 +1,108 @@
+{
+  "id": "course_214_la_crise_de_l_etat_providence",
+  "title": "Hyvinvointivaltion kriisi",
+  "subtitle": "Yhteiskunnallinen sopimus paineen alla",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Hyvinvointivaltio on syntynyt vuoden 1945 jälkeen suojelemaan jokaista kansalaista sairauksilta, työttömyydeltä ja vanhuudelta. Nykyään ikääntyminen ja globalisaatio ravistelevat hyvinvointivaltiota.",
+  "hero": {
+    "image": "la_crise_de_l_etat_providence",
+    "ratio": "16:9",
+    "hook": "Vuonna 1960 Ranskassa oli 4 työntekijää rahoittamaan yhden eläkeläisen eläkkeelle siirtymisen. Tänään on enää 2 jäljellä."
+  },
+  "sections": [
+    {
+      "id": "course_214_la_crise_de_l_etat_providence_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Hyvinvointivaltio** määrittelee kaiken avun, jota valtio tarjoaa kansalaisille suojellakseen heitä sairauksilta, työttömiltä tai vanhuudelta. Tämä järjestelmä syntyi nykyisessä muodossaan juuri toisen maailmansodan jälkeen, lupauksena kollektiivisesta solidaarisuudesta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä kehittyneiden yhteiskuntien pilari on 1900-luvun lopusta lähtien käynyt läpi rahoituskriisin. Väestön ikääntyminen, globalisaatio, uudet työmuodot: sosiaaliturvan ja talouden välinen tasapaino kyseenalaistetaan nyt kaikkialla maailmassa."
+        }
+      ]
+    },
+    {
+      "id": "course_214_la_crise_de_l_etat_providence_p1",
+      "title": "1945: yhteiskuntasopimuksen synty",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vuonna 1942 brittiläinen taloustieteilijä William Beveridge julkaisi raportin, josta tuli uraauurtava: [[Beveridgen raportti]]. Sen tavoitteena on suojella jokaista kansalaista viideltä suurelta riskiltä: taudeilta, tietämättömyydestä, epähygieenisistä olosuhteista, joutilaisuudesta ja köyhyydestä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ranska seurasi tätä liikettä perustamalla vuonna 1945 sosiaaliturvan. Tämä järjestelmä syntyi sodan aikana vastarintaliikkeet yhdistäneen järjestön [[Vastarintaliikkeen kansallinen neuvosto]] poliittisesta kompromissista. Valtio ei enää tyydy poliisitoimintaan tai oikeuteen: siitä tulee kaikkien hyvinvoinnin takaaja."
+        },
+        {
+          "type": "funFact",
+          "text": "Hyvinvointivaltiota eivät keksineet sosialistit, vaan konservatiivinen Saksan liittokansleri Otto von Bismarck vuonna 1883. Sen tavoite oli strateginen: rauhoittaa työläisiä vallankumouksen välttämiseksi."
+        }
+      ]
+    },
+    {
+      "id": "course_214_la_crise_de_l_etat_providence_p2",
+      "title": "Demografinen shokki",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sodan jälkeisten vuosien tasapaino murtui kaksi merkittävää kehitystä. Ensimmäinen on demografinen: ihmiset elävät pidempään ja perheet saavat vähemmän lapsia. Tämä lisää terveydenhuollon kustannuksia ja pidentää eläkkeen saamisaikaa."
+        },
+        {
+          "type": "image",
+          "asset": "elderly_retirees_demographic_aging_population",
+          "ratio": "16:9",
+          "caption": "Väestön ikääntyminen painaa joka vuosi enemmän sosiaalisia tilejä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ranskassa oli 1960-luvulla neljä työntekijää rahoittamaan yhden eläkeläisen eläkkeelle jäämisen. Nykyään tämä luku on laskenut alle 2:een. Toinen kehityssuunta: työttömyyden nousu vuoden 1973 öljykriisin jälkeen ja [[keikkataloutta]], nämä itsenäiset ja epävarmat työt, jotka vaikuttavat vähemmän järjestelmään ja ovat alttiimpia riskeille."
+        }
+      ]
+    },
+    {
+      "id": "course_214_la_crise_de_l_etat_providence_p3",
+      "title": "Globalisaatio asettaa mallin painetta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Globalisoituneessa taloudessa yritykset ja pääoma voivat helposti siirtyä maasta toiseen. Sosiaaliturvan rahoittamiseen tarvittavat verot ja maksut nähdään sitten haittana verrattuna maihin, joissa työ maksaa vähemmän."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mielenkiintoinen vastaesimerkki on Skandinavian maat. Ruotsi ja Tanska ylläpitävät korkeaa sosiaaliturvan tasoa ja ovat samalla erittäin kilpailukykyisiä. Heidän salaisuutensa on nimeltään [[joustoturva]]: yritykset voivat lomauttaa työntekijät helposti, mutta vastineeksi työntekijät saavat runsasta työttömyysetuutta ja vahvaa tukea uuteen työpaikkaan."
+        },
+        {
+          "type": "funFact",
+          "text": "Tanska käyttää noin 32 prosenttia bruttokansantuotteestaan sosiaaliturvaan, mikä on yksi maailman korkeimmista, samalla kun Tanska on jatkuvasti helpoimpien maiden joukossa perustaa yritys."
+        }
+      ]
+    },
+    {
+      "id": "course_214_la_crise_de_l_etat_providence_p4",
+      "title": "Sosiaaliturvan uudistaminen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Huomisen järjestelmän on suojattava uusilta riskeiltä: työn uberisoitumiselta, ekologisesta murroksesta, vanhuuteen liittyvästä riippuvuudesta. Ranskan vuoden 2023 uudistus, joka nosti lakisääteisen eläkeiän 64 vuoteen, osoittaa, kuinka vaikeaa nämä muutokset ovat hyväksyä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Keskustelu koskee myös rahoitusta: pitäisikö meidän edelleen sijoittaa suurin osa järjestelmästä työhön, työllisyyden rankaisemisen uhalla vai siirtyä laajempaan verorahoitukseen, kuten Ranskan [[CSG]], joka vaikuttaa kaikkiin tuloihin eikä vain palkkoihin?"
+        },
+        {
+          "type": "takeaway",
+          "text": "Hyvinvointivaltio, joka syntyi vuonna 1945 suojelemaan kaikkia sairauksia, työttömyyttä ja vanhuutta vastaan, on heikentynyt ennennäkemättömän väestön ikääntymisen ja globalisaation vuoksi. Sen selviytyminen riippuu sen kyvystä keksiä itseään uudelleen menettämättä lupaustaan solidaarisuudesta."
+        }
+      ]
+    }
+  ]
+}

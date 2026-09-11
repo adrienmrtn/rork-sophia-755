@@ -1,0 +1,139 @@
+{
+  "id": "course_3_la_prise_de_rome_par_les_wisigoths_410",
+  "title": "Visigootit valtasivat Rooman",
+  "subtitle": "410",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Elokuussa 410 Alaricin visigootit ryöstivät Roomaa kolme päivää. Ensimmäistä kertaa kahdeksaan vuosisataan vihollisen armeija saapuu ikuiseen kaupunkiin.",
+  "hero": {
+    "image": "la_prise_de_rome_par_les_wisigoths",
+    "ratio": "16:9",
+    "hook": "Vuonna 410 Rooma kaatui. Ja sen mukana ajatus voittamattomasta imperiumista."
+  },
+  "sections": [
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elokuussa **410** tapahtuu käsittämätöntä. Kuninkaan **Alaric** johdolla **Visigotit**, germaaninen kansa, pakottivat Rooman portit. Ensimmäistä kertaa sitten gallialaisen säkin **390 eKr**., melkein **800 katselukertaa**, vihollisen armeija ryösti ikuisen kaupungin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rooma ei ole enää imperiumin poliittinen pääkaupunki, mutta se on edelleen sen symbolinen sydän. Tämä shokki paljastaa totuuden, jota kukaan ei halunnut nähdä: Rooman länsi oli kuolemassa."
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p1",
+      "title": "Tyhjentyvä imperiumi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "500-luvun alussa Länsi-Rooman valtakunnasta puuttui rahaa ja sotilaita. Rajojen säilyttämiseksi hän moninkertaisti [[Roomalainen foedus]]-tyyppiset sopimukset: ns. \"barbaari\"-kansat asettuivat alueelle vastineeksi asepalveluksesta. Roomalainen koneisto kestää edelleen, mutta se riippuu niistä, joita se aikoinaan yritti hillitä."
+        },
+        {
+          "type": "paragraph",
+          "text": "**402**:ssa läntinen keisari [[Honorius]] hylkää Rooman [[Ravenna]]:ksi, Italian soiden suojelemaan kaupunkiin. Kun tuomioistuin menee maan alle, roomalainen aristokratia jatkaa elämäänsä ikään kuin mikään ei olisi muuttunut. Todellinen valta siirtyi germaanista alkuperää olevien kenraalien puolelle."
+        },
+        {
+          "type": "funFact",
+          "text": "Kun \"Rooman\" kaatuminen ilmoitettiin, Honorius panikoi: hän luuli, että he puhuivat hänen suosikkikanastaan, joka on nimetty sellaiseksi. He sanovat helpottuneena kuullessaan, että kyse oli \"vain\" kaupungista."
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p2",
+      "title": "Alaric, pettynyt roomalainen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Alarik I]] ei ole villi tyhjästä. Rooman armeijan entinen upseeri, Aasian paimentolaiskansa [[Hunnit]] työntämänä länteen, hän haluaa maata ja virallisen arvonimen kansalleen. Ravennan halveksunnan edessä hän käyttää Roomaa panttivankina. Kaksi piiritystä, lunnaat, sitten hyökkäys."
+        },
+        {
+          "type": "image",
+          "asset": "alaric_king_visigoths",
+          "ratio": "4:3",
+          "caption": "Alarik I, visigoottien kuningas ja entinen roomalainen upseeri."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Aelokuu 24, 410**, Salarian portti avautuu. Ryöstely kestää **ihanaa päivää**. Tunnustuksen kristitty [[Arian]] (virtaus, joka ei nähnyt Kristusta Isän Jumalan kanssa), Alaric käskee kunnioittamaan kirkkojen turvapaikkaa. Todellinen väkivalta, mutta ei täydellinen tuho: hän haluaa olla Rooman perillinen, ei haudankaivaja."
+        },
+        {
+          "type": "funFact",
+          "text": "Legendan mukaan hänen kuollessaan hänen miehensä ohjasivat Busento-joen hautaamaan Alaricin ja hänen aarteensa, minkä jälkeen palauttivat veden uomaansa."
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p3",
+      "title": "Shokki ja Jumalan kaupunki",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Palestiinasta kotoisin oleva [[Pyhä Jerome]], kirkon isä, huudahtaa: \"Yhdessä [[kaupungissa]] koko maailmankaikkeus on tuhoutunut.\" Pakanat syyttävät kristinuskoa Rooman heikentämisestä. Vastatakseen **Pyhä Augustinus** kaupunki kirjoittaa Jumass pois; Kirkko jää."
+        },
+        {
+          "type": "image",
+          "asset": "sack_of_rome_410_alaric",
+          "ratio": "4:3",
+          "caption": "Rooman ryöstö vuonna 410, shokki koko muinaiselle maailmalle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Signaali on selvä muille germaanisille kansoille, kuten [[Vandaalit]] ja [[Frankit]]: länsi on saalis. **455**:ssa vandaalit ryöstävät Roomaa paljon kovemmin. **476**:ssa johtaja [[Heruli]] [[Odoacer]] syrjäytti viimeisen lännen keisarin, [[Romulus Augustulus]]. Vallan arvomerkit menevät Konstantinopoliin. Länsi-imperiumi haihtuu."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "402",
+              "title": "Ravenna, uusi pääkaupunki",
+              "detail": "Honorius hylkää Rooman saadakseen paremmin puolustetun kaupungin."
+            },
+            {
+              "date": "410",
+              "title": "Rooman laukku",
+              "detail": "Alaric ja visigootit ryöstävät kaupunkia kolmen päivän ajan."
+            },
+            {
+              "date": "455",
+              "title": "Vandaalilaukku",
+              "detail": "Roomaa ryöstetään paljon tuhoisemmalla tavalla."
+            },
+            {
+              "date": "476",
+              "title": "Länsivaltakunnan loppu",
+              "detail": "Odoacer syrjäyttää Romulus Augustuluksen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p4",
+      "title": "Siirtyminen kohti keskiaikaa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Visigootit päätyivät asettumaan Aquitaniaan, sitten Hispaniaan (nykyinen Espanja). He eivät tuhonneet kaikkea klassista kulttuuria: heistä tuli sen salakuljettajia, jotka sekoittivat roomalaisen oikeuden, kristinuskon ja germaaniset perinteet."
+        },
+        {
+          "type": "paragraph",
+          "text": "**410**-laukku on edelleen muistojen katkos. Se ei ole vielä imperiumin hallinnollinen loppu, mutta se on illuusion loppu. Keskiaikainen Eurooppa alkaa myytin raunioista."
+        },
+        {
+          "type": "takeaway",
+          "text": "Vuonna **410** Rooma putosi ensimmäistä kertaa **800 katselukertaa** sisällä. Roomalaiseen tyyliin koulutetut visigootit ryöstivät siellä kolme päivää. Ottelu luo alustan **476**:lle ja keskiaikaiselle Euroopalle."
+        }
+      ]
+    }
+  ]
+}

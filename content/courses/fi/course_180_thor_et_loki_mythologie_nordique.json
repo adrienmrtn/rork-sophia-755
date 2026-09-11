@@ -1,0 +1,120 @@
+{
+  "id": "course_180_thor_et_loki_mythologie_nordique",
+  "title": "Thor ja Loki (norjalainen mytologia)",
+  "subtitle": "Norjalainen mytologia",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Salaman ja huijauksen jumala: seikkailukaksikko, sitten viholliset Ragnarökissä. Skandinavian panteonin kaksi kasvoa.",
+  "hero": {
+    "image": "thor_et_loki_mythologie_nordique",
+    "ratio": "16:9",
+    "hook": "Yksi lyö vasaralla. Toinen valehtelee voittaakseen. Yhdessä he pelastavat Asgardin… kunnes Loki pettää hänet."
+  },
+  "sections": [
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Thor** ja **Loki** ovat skandinaavisen mytologian kaksi suosituinta hahmoa. Thor suojelee miehiä salamalla. Loki kylvää epäjärjestystä huijauksella. Tapaamme ne usein yhdessä matkatarinoissa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Heidän sidensä ei ole pelkkä koominen ystävyys. Se osoittaa jännitteen jumalien järjestyksen ja kaaoksen välillä. Pilkkovasta kumppanuudesta lopulliseen sotaan, näin tämä liitto rakennetaan... sitten hajoaa."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p1",
+      "title": "Asgard, Midgard ja jouset",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nämä myytit ovat peräisin Skandinavian kansoilta 400- ja 1100-luvuilta. Tunnemme ne pääasiassa myöhäisistä islantilaisista teksteistä, jotka kirjoitettiin, kun alue oli jo kristinuskossa. Tärkein lähde on [[Proosa Edda]], jonka **1220** ympärille on kirjoittanut **Snorri Sturluson**, jota täydentää [[Runollinen Edda]]."
+        },
+        {
+          "type": "image",
+          "asset": "asgard_midgard_bifrost_bridge_norse_mythology",
+          "ratio": "4:3",
+          "caption": "Asgardin ja Midgardin yhdistää Bifröst, sateenkaarisilta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Maailma on järjestetty kosmisen puun [[Yggdrasil]] ympärille. Yläosa: **Asgard**, jumalien koti. Alempi: **Midgard**, miesten maailma, jota yhdistää **Bifröst**. Jumalat on jaettu kahteen klaaniin: **Aesir**, jota johtaa **Odin** (sota ja suvereniteetti) ja **Siivet**, kuten Freyr ja Freyja (hedelmällisyys)."
+        },
+        {
+          "type": "funFact",
+          "text": "Muinaisissa teksteissä Bifröst on hauras silta: Ragnarökissä se vapisee ja kaatuu jättiläisten painon alla."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p2",
+      "title": "Thor, vasaransuoja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Thor** on Odinin ja Maan poika. Hän on ihmisten arvostetuin jumala: hän puolustaa ihmiskuntaa **jättiläisiä**, valloilleen luonnonvoimia vastaan. Partaiset ja punaiset hiukset ilmentävät selkeää ja suoraa voimaa."
+        },
+        {
+          "type": "image",
+          "asset": "thor_hammer_mjolnir_norse_god_painting",
+          "ratio": "4:3",
+          "caption": "Mjöllnir, Thorin vasara: se iskee ja palaa käteen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hänen aseensa, **Mjöllnir**, kääpiöiden takoma, murskaa vuoria ja palaa aina hänen käteensä. Voimavyö ja rautaiset käsineet auttavat häntä hallitsemaan sitä. Hänen nimensä antoi **torstai** (Thorin päivä) germaanisilla kielillä. Toisin kuin aristokraattinen Odin, Thor on vapaiden talonpoikien jumala: sade, sato, turvallinen koti."
+        },
+        {
+          "type": "funFact",
+          "text": "Thorin vaunuja vetää kaksi vuohia. Jos hänellä on nälkä, hän voi syödä ne illalla ja herättää ne henkiin seuraavana päivänä vasarallaan... kunhan hän ei riko luita."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p3",
+      "title": "Loki, huijaus, joka päättyy huonosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Loki** asuu Aesirien keskuudessa, mutta hän on jättiläisveristä. Hän liittyi panteoniin Odinin kanssa tehdyn verisopimuksen kautta. Hän on **petkuttaja**: hänen kepposensa ja valheensa ovat häiritseviä, mutta ne myös vievät tarinaa eteenpäin ja tarjoavat joskus jumalille heidän suurimpia aarteitaan."
+        },
+        {
+          "type": "image",
+          "asset": "loki_norse_trickster_god_mythology",
+          "ratio": "4:3",
+          "caption": "Loki, huijauksen jumala: hyödyllinen liittolainen, julistettu petturi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se muuttaa muotoa ja jopa sukupuolta. Tammamuodossa hänestä tulee Odinin kahdeksanjalkaisen hevosen [[Sleipnir]] äiti. Jättiläinen Angrbodan kanssa hän synnyttää kolme hirviötä: suden **Fenrir**, käärmeen **Jörmungandr** ja **Hel**, kuolleiden suojelijan. Pikkuhiljaa kepponen muuttuu maanpetokseksi: hän järjestää valojumalan **Baldr** kuoleman. Siitä lähtien hänen kohtalonsa oli sinetöity."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p4",
+      "title": "Sarjakuvasta Ragnarökiin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pitkän aikaa Thor ja Loki täydensivät toisiaan. Kun jättiläinen Thrym varastaa Mjöllnirin, Thor naamioituu morsiameksi ja Loki palvelijaksi saadakseen sen takaisin. Missä vasara pettää, valhe onnistuu ja päinvastoin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sitten liitto hajoaa. **Ragnarök**:ssä, jumalien hämärässä, Loki johtaa Asgardin vihollisia. Thor kohtaa Jörmungandrin, Lokin pojan: hän tappaa käärmeen ja kuolee sen myrkkyyn yhdeksän askeleen jälkeen. Voima ja viekkaus tuhoutuvat yhdessä."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Thor** ja **Loki** ilmentävät jännitystä suojaavan voiman ja häiritsevän oveluuden välillä. Heidän siteensä koomista ystävyydestä Ragnarökin vihaan osoittaa, kuinka hauras jumalien järjestys pysyy kaaoksen edessä."
+        }
+      ]
+    }
+  ]
+}

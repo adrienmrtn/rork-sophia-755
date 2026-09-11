@@ -1,0 +1,124 @@
+{
+  "id": "course_68_la_theorie_de_la_relativite_pour_tous",
+  "title": "Suhteellisuusteoria kaikille",
+  "subtitle": "Einstein 1905 ja 1915",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Vuosina 1905 ja 1915 Einstein muutti käsitystämme tilasta, ajasta ja painovoimasta. Ja ilman sen laskelmia GPS olisi useita kilometrejä väärässä.",
+  "hero": {
+    "image": "la_theorie_de_la_relativite_pour_tous",
+    "ratio": "16:9",
+    "hook": "Aika ei ole universaali kello. Ja painovoima ei ole näkymätön merkkijono."
+  },
+  "sections": [
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Julkaisuissa **1905** ja **1915** **Albert Einstein** julkaisi kaksi teoriaa, jotka järkyttivät fysiikkaa. Siihen asti seurasimme enimmäkseen [[Newton]]: aika kului samalla tavalla kaikille, kaikkialla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einstein osoittaa, että tila ja aika liittyvät toisiinsa ja että painovoima voidaan ymmärtää tämän kudoksen kaarevuudeksi. Nämä ideat selittävät [[mustia aukkoja]] ja [[Big Bang]]. He myös korjaavat puhelimesi GPS:n joka päivä."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p1",
+      "title": "1905: Erikoissuhteellisuusteoria",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**erityinen suhteellisuusteoria** perustuu kahteen yksinkertaiseen ajatukseen. Luonnonlait ovat samat kaikille, jotka liikkuvat tasaisella nopeudella. Ja valon nopeus tyhjiössä, **ei 300 000 km/s**, on sama kaikille, olimmepa sitä lähestymässä tai poistumassa siitä."
+        },
+        {
+          "type": "image",
+          "asset": "albert_einstein_portrait_princeton",
+          "ratio": "auto",
+          "caption": "Albert Einstein, suhteellisuusteorian kirjoittaja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jotta valo pysyisi aina samana, ajan on säädettävä. Tämä on [[Ajan laajeneminen]]: mitä nopeammin esine kulkee, sitä hitaammin aika kuluu sille verrattuna levossa olevaan. Tämä ei ole illuusio. **atomiset kellot**, laitteet, jotka mittaavat aikaa äärimmäisen tarkasti, mittasivat sen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einstein piirtää myös [[E = mc²]]: massa on hyvin keskittynyt energiamuoto. Koska **c**, valon nopeus, on valtava, hyvin pieni massa voi vapauttaa valtavaa energiaa. Se on atomiytimiä ja niiden reaktioita tutkivan [[ydinfysiikka]]:n pilari."
+        },
+        {
+          "type": "funFact",
+          "text": "Vuonna 1905 Einstein ei ollut yliopistoprofessori. Hän työskentelee tutkijana patenttitoimistossa Bernissä, Sveitsissä."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p2",
+      "title": "1915: painovoima kaarevuutena",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kymmenen vuotta myöhemmin Einstein julkaisi **yleisen suhteellisuusteorian**. Newton näki painovoiman näkymättömänä voimana, joka vetää massoja toisiaan kohti. Einstein tarjoaa toisen kuvan: **aika-avaruus**, tila ja aika yhdistyvät yhdeksi kankaaksi, muodostaa joustavan kankaan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Raskas massa, kuten aurinko, ontto tämän kudoksen. Kuvittele keilapallo trampoliinilla. Sen viereen heitetty pallo ei mene suoraan: se seuraa onttoa. Samoin Maa kiertää, koska se seuraa Auringon luomaa kaarevuutta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jopa valo seuraa näitä käyriä. Brittiläinen tähtitieteilijä **1919** vahvisti julkaisussa **1919** sen pimennyksen aikana: tähtien näennäinen sijainti Auringon takana on hieman siirtynyt. Einsteinistä tulee kuuluisa yhdessä yössä."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p3",
+      "title": "GPS, taskutiivis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GPS-satelliitit pyörivät noin **14 000 km/h** **20 000 km** korkeudessa. Jotta sinut voidaan paikantaa lähimpään metriin, niiden kellojen on pysyttävä synkronoituna maassa olevien kellojen kanssa. Kuitenkin kaksi relativistista vaikutusta toimii samanaikaisesti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niiden nopeuden vuoksi aika kuluu hieman hitaammin, mikä johtuu erityisestä suhteellisuusteoriasta: noin **7 mikrosekuntia** viivettä päivässä. Korkeuden heikomman painovoiman vuoksi aika kuluu siellä hieman nopeammin, yleisen suhteellisuusteorian vaikutus: noin **45 mikrosekuntia** etukäteen."
+        },
+        {
+          "type": "funFact",
+          "text": "Ilman relativistisia korjauksia GPS-sijaintivirhe voi olla noin **11 km** päivässä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tuloksena on nettoennakko noin **38 mikrosekuntia** päivässä. Vaikuttaa pieneltä. Valonnopeudella tämä on jo valtavasti navigoinnin kannalta."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p4",
+      "title": "Aallot, mustat aukot, laajeneva maailmankaikkeus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yleinen suhteellisuusteoria ennustaa mustia aukkoja: alueita, joissa kaarevuus on niin voimakas, ettei edes valoa enää tule ulos. Einstein epäili heidän todellista olemassaoloaan. [[radioastronomia]], taivaan havainto radioaaltoina ja viimeaikaiset kuvat ovat vahvistaneet ne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Teoksessa **1916** hän ennusti myös **gravitaatioaaltoja**: kosmisten katastrofien, kuten kahden mustan aukon yhdistymisen, aiheuttamia avaruus-ajan aaltoja. Meidän on odotettava, että **2015** ja **LIGO**-observatorio, avaruusvärähtelyille herkkä maailmaisin, havaitsevat ne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lopuksi nämä yhtälöt avaavat tien laajenevaan universumiin, joka on alkuräjähdyksen mallin perusta. Einstein oli ensin lisännyt kosmologisen vakion, matemaattisen termin kiinteän universumin pakottamiseksi. Hubblen havainnot vakuuttivat hänet myöhemmin toisin."
+        },
+        {
+          "type": "takeaway",
+          "text": "**E=mc²** yhdistää massan ja energian. Yleinen suhteellisuusteoria sanoo, että painovoima taivuttaa aika-avaruutta. Ilman näitä korjauksia GPS olisi useita kilometrejä väärässä joka päivä."
+        }
+      ]
+    }
+  ]
+}

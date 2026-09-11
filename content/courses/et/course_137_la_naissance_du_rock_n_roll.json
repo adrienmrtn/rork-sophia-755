@@ -1,0 +1,145 @@
+{
+  "id": "course_137_la_naissance_du_rock_n_roll",
+  "title": "Rock'n'rolli sünd",
+  "subtitle": "1954-1960",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "1950. aastate keskel ühinesid must bluus ja valge kantri: Elvis, Chuck Berry ja Little Richard leiutasid rock'n'rolli.",
+  "hero": {
+    "image": "la_naissance_du_rock_n_roll",
+    "ratio": "16:9",
+    "hook": "Karje, elektrikitarr ja teismeliste Ameerikas on oma muusika."
+  },
+  "sections": [
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rock'n'roll ei tekkinud **1950** aastate keskel tühjalt kohalt. Ameerika Ühendriikides ühendas ta muusika, mida lahutasid kaua rassibarjäärid: bluusi, kantri ja [[evangeelium]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kolm figuuri kannavad edasi: **Elvis Presley**, **Chuck Berry** ja **Väike Richard**. See on rohkem kui stiil, see on noortekultuur ja [[eraldamine]] pingete peegel."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p1",
+      "title": "Blues, kantri ja rütm ja bluus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuni selle ajani eksisteeris lõunas kõrvuti kaks maailma: mustade kultuur (elektribluus, gospel) ja valge kultuur (maa). Silla nimi on [[Rütm ja bluus]]: bluusi linnalik ja elektrifitseeritud versioon, mis meelitas 1940. aastate lõpust rütmi otsima valgeid noori."
+        },
+        {
+          "type": "paragraph",
+          "text": "**rockabilly** on sündinud, kantri ja bluusi hübriid. Tupelost pärit **Elvis Presley** kasvas üles nelipühi kirikute ja Beale Streeti bluusi vahel. Filmis **1954** salvestas ta produtsendi [[Sam Phillips]] juures Memphises *See on kõik korras*. Kuid [[Segregatsioon Ameerika muusikatööstuses]] jääb reegliks: mustanahalised artistid jäävad sageli marginaalsetesse vooluringidesse, samas kui valge esineja võib läbida riigi turu."
+        },
+        {
+          "type": "funFact",
+          "text": "Mõiste \"rock'n'roll\" viitas esmalt laeva püstitamisele, seejärel 1920. aastate bluusis seksuaalaktile, enne kui selle populariseeris DJ [[Alan Freed]]."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p2",
+      "title": "Elvis, Chuck Berry, Little Richard",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ettevõttes [[Sun Records]] saab Elvist ikoon. Tema liikuv keha šokeeris puritaanset Ameerikat ning sulges roki ja noorukiea liidu."
+        },
+        {
+          "type": "image",
+          "asset": "elvis_presley_sun_records_memphis_1954",
+          "ratio": "4:3",
+          "caption": "Elvis Sun Recordsis: rokk leiab oma näo."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Chuck Berry** annab struktuuri: kitarr **riff**, korduv motiiv, millest saab teose selgroog. Ta laulab autodest, keskkoolist, vabadusest. **Väike Richard** karjub ja lööb püsti seistes klaverit: toores energia, mis on päritud evangeeliumi kirglikkusest."
+        },
+        {
+          "type": "image",
+          "asset": "chuck_berry_guitar_rock_and_roll",
+          "ratio": "4:3",
+          "caption": "Chuck Berry: kitarri riff kui roki grammatika."
+        },
+        {
+          "type": "image",
+          "asset": "little_richard_piano_1950s_rock",
+          "ratio": "4:3",
+          "caption": "Little Richard: nutt ja klaver kui plahvatus."
+        },
+        {
+          "type": "funFact",
+          "text": "1956. aastal filmisid kaamerad saates *Ed Sullivani näitus* Elvist ainult üle vöökoha: tema puusaliigutusi peeti liiga skandaalseteks."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p3",
+      "title": "Rokk, rass ja kodanikuõigused",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vaatamata [[Jim Crow seadused]] jagavad mustad ja valged teismelised esimest korda samu iidoleid. Kuid integratsioon jääb asümmeetriliseks. Tööstus paljuneb [[Kaaned]]: mustade hittide vedeldatud valged versioonid, mida raadios paremini reklaamitakse. Pat Boone'i *Tutti Frutti* müüs pikka aega Little Richardi originaali."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vaatamata nendele rikkumistele toidab rokk [[Kodanikuõiguste liikumine]] vaimu. Vanemlikke koode rikkudes alustasid 1950. aastate noored Ameerika moraalset ja rassilist kahtluse alla seadmist."
+        },
+        {
+          "type": "funFact",
+          "text": "Chuck Berry ei võtnud oma bändi tuurile: ta palkas igasse linna kohalikke muusikuid, et säästa raha ja vältida rassilisi pingeid hotellis."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p4",
+      "title": "Briti invasioonist pärandini",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1960** paiku saab esimene tuul otsa (Elvis sõjaväkke, Little Richard usule). Kuid žanr on Ühendkuningriigi juba vallutanud. **Biitlid** ja **Rolling Stones** tõlgendavad Ameerika standardeid ümber: „Briti invasioon” muudab roki albumipildiks ja protestiks. Ilma **1954** rikkumiseta poleks 1960. aastate kontrakultuuridel olnud sama helimootorit."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1954",
+              "title": "See on kõik korras",
+              "detail": "Elvis Sam Phillipsis: fusion muutub hitiks."
+            },
+            {
+              "date": "1955-1956",
+              "title": "Berry ja Richard",
+              "detail": "Riff, karje ja energia määravad žanri."
+            },
+            {
+              "date": "1956",
+              "title": "Ed Sullivan",
+              "detail": "Elvise keha tekitab televisiooni skandaali."
+            },
+            {
+              "date": "1960. aastad",
+              "title": "Briti invasioon",
+              "detail": "Ameerika rokk naaseb Euroopast võimendatult."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Elvise, Berry ja Little Richardi rock'n'roll, mis sündis 1954. aastal rütmi ja bluusi ning kantri sulandumisest, andis noortele esimese ühise keele segregatsiooni vastu."
+        }
+      ]
+    }
+  ]
+}

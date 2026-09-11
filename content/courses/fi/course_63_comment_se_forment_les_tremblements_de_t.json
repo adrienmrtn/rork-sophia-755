@@ -1,0 +1,116 @@
+{
+  "id": "course_63_comment_se_forment_les_tremblements_de_t",
+  "title": "Miten maanjäristykset syntyvät?",
+  "subtitle": "Viat & aallot",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Maapallolla tapahtuu vuosittain satoja tuhansia maanjäristyksiä. Suurin osa on näkymättömiä. Muutama muuttaa kokonaisia kaupunkeja.",
+  "hero": {
+    "image": "comment_se_forment_les_tremblements_de_terre",
+    "ratio": "16:9",
+    "hook": "Maanjäristys ei ole maan päähänpisto. Tämä on energiaa, joka on odottanut liian kauan."
+  },
+  "sections": [
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Maapallo rekisteröi vuosittain noin **500 000 hadtavissa olevaa maanjäristystä**. Vain pieni osa aiheuttaa suuria vahinkoja. Maanjäristys ei ole sattuma: se on äkillinen loppu kiviin pitkän energian kertymiselle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämän ymmärtämiseksi meidän on nähtävä planeetan pinta liikkuvien levyjen palapelinä. Kun nämä levyt hankaavat yhteen, jännitys kasvaa… kunnes se katkeaa."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p1",
+      "title": "Levyt, jotka liikkuvat jatkuvasti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Maan pinta on jaettu noin kymmeneen suureen **tektoniseen levyyn**. Ne liukuvat pehmeämmällä turkin kerroksella, [[Astenosfääri]]. Niiden nopeus? Noin **1-10 cm**, suunnilleen sama kuin kynnen kasvu."
+        },
+        {
+          "type": "image",
+          "asset": "earthquake_collapsed_buildings_urban",
+          "ratio": "auto",
+          "caption": "Maanjäristykset vapauttavat yhtäkkiä vikojen varrella kertyneen energian."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rajoilla hallitsee kolme skenaariota. Levyt liikkuvat erilleen (valtameren harjanteet). Ne törmäävät: joskus toinen sukeltaa toisen alle, se on [[Subduktio]]. Tai ne liukuvat vierekkäin, kuten [[San Andreasin vika]] Kaliforniassa, noin **1 300 km** pitkä."
+        },
+        {
+          "type": "funFact",
+          "text": "San Andreasin varrella Los Angeles lähestyy San Franciscoa noin **6 cm** vuodessa. **15 miljoonalla hinnalla** nämä kaksi kaupunkia olisivat naapureita."
+        },
+        {
+          "type": "paragraph",
+          "text": "Erityisesti näillä rajoilla tapahtuu maanjäristyksiä. Levyjen liikkumista haittaa kivien kitka. Energia kerääntyy hiljaa."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p2",
+      "title": "Kun vika antaa mennä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Maanjäristys tapahtuu pitkin **vika**: rako kahden kivilohkon välillä. Teoriassa levyjen pitäisi liukua jatkuvasti. Käytännössä kitka usein estää tämän liukumisen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tänä aikana plakit jatkavat kasvuaan. Kivi vääntyy hieman, kuin jousi vedetään. Puhumme elastisista rajoituksista. Tämä voi kestää vuosikymmeniä, joskus vuosisatoja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kun vastusraja ylittyy, lohkot liukuvat yhtäkkiä. Energia lähtee **eismist aaltojen** muodossa. Syvyysmurtokohtaa kutsutaan nimellä **keskittyä**. Pinnalla piste juuri yläpuolella on **episentrumi**, jossa vaikutukset ovat usein voimakkaimmat."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p3",
+      "title": "Mittaa voimaa, pelkää tsunamia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Maanjäristyksen energian mittaamiseen seismologit käyttävät pääasiassa momenttia [[Suuruusasteikko]]. Se on logaritminen asteikko: jokainen aste kertoo energian suunnilleen **32**:llä. Maanjäristys, jonka suuruus on **8**, vapauttaa näin ollen noin **1 000 kertaa** enemmän energiaa kuin **6** suuruinen maanjäristys."
+        },
+        {
+          "type": "funFact",
+          "text": "On myös **0** tai negatiivisen suuruisia maanjäristyksiä. Nämä ovat hyvin pieniä tapahtumia, jotka näkyvät vain erittäin herkillä antureilla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vahvin nykyaikaisilla laitteilla mitattu on **Valdivia**, Chile, **1960**: magnitudi **9,5**. Jos painopiste on meren alla ja nostaa merenpohjaa, siirtynyt vesipatsas voi luoda **tsunami**. **2004**:ssa **9,1**:n suuruinen maanjäristys Sumatran lähellä laukaisi tsunamin, joka iski 14 maahan ja vaati noin **227 000** ihmishenkeä."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p4",
+      "title": "Aallot, hälytys ja rakennukset, jotka vastustavat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eron jälkeen lähtee monen tyyppisiä aaltoja. **P aallot** (ensisijainen) saapuu ensin: ne puristavat kiven kuin haitari. Sitten tulevat (toissijaiset) aallot, hitaampia ja usein tuhoisempia. Pinta-aallot saavat sitten maan värähtelemään hyvin näkyvästi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Emme vielä tiedä kuinka ennustaa suuren maanjäristyksen tarkkaa päivää. Toisaalta kartoitamme riskialueet. [[Maanjäristystekniikka]] suunnittelee iskuja kestäviä rakennuksia: liikkuvia perustuksia, jättimäisiä iskunvaimentimia, energiaa absorboivia rakenteita. Japanissa varhaiset varoitukset havaitsevat P-aallot ja voivat katkaista kaasun tai hidastaa junia ennen kuin vaarallisimmat aallot saapuvat."
+        },
+        {
+          "type": "takeaway",
+          "text": "Maanjäristys tapahtuu, kun vaurioon juuttuneet kivet vapauttavat yhtäkkiä vuosikymmeniä kestäneen jännityksen. Energia kulkee aaltoina, ja jokainen suuruusaste kertoo tämän energian noin **32**:llä."
+        }
+      ]
+    }
+  ]
+}

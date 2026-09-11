@@ -1,0 +1,126 @@
+{
+  "id": "course_150_la_nuit_etoilee_van_gogh",
+  "title": "Tähtiyö, Van Gogh",
+  "subtitle": "1889",
+  "subject": "art",
+  "subcategory": "Iconic works",
+  "description": "**1889**:ssa Saint-Rémy-de-Provencen turvapaikasta **Vincent Van Gogh** maalasi *Tähtimäisen yön*. Taivas pyörii: taide lakkaa kopioimasta todellisuutta ilmaistakseen tunteita.",
+  "hero": {
+    "image": "la_nuit_etoilee_van_gogh",
+    "ratio": "16:9",
+    "hook": "Van Gogh maalaa turvapaikkahuoneesta taivaan, joka kieltäytyy pysymästä viisaana."
+  },
+  "sections": [
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*Tähtimäinen yö* (**1889**) on **Vincent Van Goghin**, [[Alankomaat]]:ssä syntyneen taidemaalarin, kuuluisin maalaus. Se on maalattu Saint-Rémy-de-Provencen turvakeskuksessa, ja se merkitsee käännekohtaa: emme enää maalaa vain sitä, mitä näemme. Maalaamme mitä tunnemme."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pyörivä taivas, sypressi kuin musta liekki, keksitty kylä: teos avaa tien 1900-luvun ilmeikkääseen taiteeseen."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p1",
+      "title": "Saint-Rémy: luominen turvapaikasta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Toukokuussa 1889** [[Arles-draama Gauguinin kanssa]] (kriisi, joka maksoi hänelle osan hänen korvastaan) jälkeen Van Gogh internoitiin **Saint-Paul-de-Mausole**:iin lähellä Saint-Rémyä. Hän saa huoneen maalattavaksi. Yönäkymä syntyy ensin hänen huoneensa kalterien takana."
+        },
+        {
+          "type": "image",
+          "asset": "van_gogh_saint_paul_asylum_saint_remy_provence",
+          "ratio": "4:3",
+          "caption": "Saint-Rémyn turvapaikka: rajoitusten ja intensiivisen luomisen puitteet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kanvas sekoittaa havaintoa ja keksintöä. Tunnistamme Alpillesin kukkulat ja suuren **sypressi**. Mutta kylä ei ole tarkka kopio. Van Gogh rekonstruoi maisemaa palvellakseen tunteita."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p2",
+      "title": "Taivaan kuvanveisto siveltimellä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Teknisesti Van Gogh käyttää **Impasto**: maali on paksua, melkein muotoiltua. Yksitoista tähteä pyörivät kuin sumut. Oranssi kuu säteilee. Taivaasta tulee todellinen hahmo."
+        },
+        {
+          "type": "image",
+          "asset": "starry_night_cypress_tree_van_gogh_painting",
+          "ratio": "4:3",
+          "caption": "Sypressi yhdistää maan taivaaseen kuin tumma liekki."
+        },
+        {
+          "type": "funFact",
+          "text": "Taivaan suuret kääröt tuovat mieleen [[Suuri aalto Kanagawan varrella]], japanilaisen printin, jota Van Gogh ihaili. Se muuttaa tämän energian kosmokseksi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tämä ele ilmoittaa [[Taide sisäisenä ilmaisuna]]: kankaalla lukee mielentila, ei sääraportti."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p3",
+      "title": "Nero, jota kukaan ei ostanut",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Van Gogh maalasi lähes **900 malausta** kymmenessä vuodessa, mutta kuoli **heinäkuuta 1890** Auvers-sur-Oisessa, **37 katselukertaa**, lähes tuntematon. Hänen kälynsä **Johanna van Gogh-Bonger** pelasti teoksen: näyttelyt, myynnit, kirjeiden julkaiseminen veljelleen Théolle."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Tähtinen yö* vaihtoi omistajaa useita kertoja pienellä rahalla ennen kuin astui **MoMA**:iin New Yorkissa. Halvetusta maalauksesta tulee ikoni. [[Fauves]], 1900-luvun alun voimakkaiden värien maalarit, tunnistavat hänessä esi-isän."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p4",
+      "title": "Sypressi kohti ääretöntä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sypressi yhdistää maan taivaaseen: linkki maallisen elämän ja muualle. Van Gogh kirjoitti, että tähtien katseleminen sai hänet unelmoimaan kuolemasta kuin matkasta. Nykyaikaiset tutkimukset jopa ehdottavat, että kirkas tähti sypressipuun lähellä voisi olla Venus, joka havaittiin aamunkoitteessa."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1888",
+              "title": "Arlesin kriisi",
+              "detail": "Tauko Gauguinin kanssa edeltää internointia."
+            },
+            {
+              "date": "1889",
+              "title": "Tähtikirkas yö",
+              "detail": "Van Gogh maalaa taivaan Saint-Rémystä."
+            },
+            {
+              "date": "1890",
+              "title": "Kuolema Auversissa",
+              "detail": "Taiteilija kuoli 37-vuotiaana, vielä vähän tunnettu."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*Tähtikirkas yö* muuttaa kärsimyksen visuaaliseksi kieleksi. Van Gogh ei kopioi yötä: hän keksii sisätaivaan ja avaa oven moderniin ekspressiiviseen taiteeseen."
+        }
+      ]
+    }
+  ]
+}
