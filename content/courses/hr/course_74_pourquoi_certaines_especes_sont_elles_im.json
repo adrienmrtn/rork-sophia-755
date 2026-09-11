@@ -1,0 +1,108 @@
+{
+  "id": "course_74_pourquoi_certaines_especes_sont_elles_im",
+  "title": "Zašto su neke vrste besmrtne?",
+  "subtitle": "Biologija i dugovječnost",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Čini se da neke vrste prkose smrti. Meduze koje se pomlađuju, hidre bez starenja: tajna je u popravljanju stanica.",
+  "hero": {
+    "image": "pourquoi_certaines_especes_sont_immortelles",
+    "ratio": "16:9",
+    "hook": "Starenje nije apsolutni zakon života. Neke su vrste otkrile grešku."
+  },
+  "sections": [
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Starimo, pa umiremo. Međutim, meduza [[Turritopsis dohrnii]] može se vratiti u juvenilni stadij i početi ispočetka. Školjka **Ming** živjela je **507 godina**. Starenje stoga nije univerzalno pravilo: to je proces koji određene vrste zaobilaze."
+        },
+        {
+          "type": "paragraph",
+          "text": "Proučavajući ove iznimke, istraživači manje traže znanstvenofantastičnu besmrtnost nego životne trikove za bolje popravljanje stanica."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p1",
+      "title": "Zašto se naše stanice troše",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Starenje nije samo \"trošenje\" poput stroja. To je neravnoteža: šteta se gomila brže nego popravak."
+        },
+        {
+          "type": "image",
+          "asset": "chromosome_dna_telomere_aging_cell",
+          "ratio": "auto",
+          "caption": "Telomeri, na krajevima kromosoma, skraćuju se sa svakom diobom stanice."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na krajevima naših kromosoma, [[Telomeri]] djeluju poput vrhova vezica. Sa svakom staničnom diobom one se skraćuju. Prekratko, stanica se prestaje dijeliti. Istodobno, metabolizam proizvodi agresivne molekule koje oštećuju proteine i DNK. “Zombi” stanice se tada nakupljaju i upale tkiva oko sebe."
+        },
+        {
+          "type": "funFact",
+          "text": "Tardigrad, maleni \"vodeni medvjed\", može gotovo prestati živjeti kada se osuši. Njegov metabolizam pada na **99,99%** i on preživljava vakuum svemira ili ekstremno zračenje bez stvarnog starenja."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
+      "title": "Prvaci koji izbjegavaju smrt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ozlijeđeni ili izgladnjeli [[Turritopsis dohrnii]] transformira svoje odrasle stanice u \"prazne\" stanice, zatim ponovno postaje polip, početna faza. Ovaj korak unatrag, nazvan transdiferencijacija, daje oblik **biološke besmrtnosti**."
+        },
+        {
+          "type": "paragraph",
+          "text": "**hidra**, mali slatkovodni polip, obnavlja cijelo svoje tijelo zahvaljujući gotovo neograničenoj opskrbi [[matične stanice]]. Ne pokazuje mjerljive znakove starenja. Grenlandski kit može premašiti **200 godina** zahvaljujući ultra-učinkovitom popravku DNK i snažnoj otpornosti na rak."
+        },
+        {
+          "type": "funFact",
+          "text": "Jastozi proizvode telomerazu posvuda u svojim tijelima: njihove telomere se ne skraćuju. Rastu cijeli život i umiru osobito kada linjanje postane preskupo."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
+      "title": "Što medicina iz toga uči",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ideja više nije samo liječiti Alzheimerovu bolest ili osteoartritis jednog po jednog, već napadati samo starenje. **senolitici** imaju za cilj eliminirati zombi stanice. Kod životinja je to već pomladilo određene funkcije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ograničenje kalorija bez pothranjenosti također aktivira puteve popravka, posebice usporavanjem [[mTOR]], proteina koji ubrzava rast... a ponekad i pad. Drugi laboratoriji pokušavaju \"naviti sat\" stanica, poput meduza, a da ih ne transformiraju u tumore."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p4",
+      "title": "Besmrtan, ali ne i nepobjediv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Čak i biološki besmrtna vrsta umire od predatora, bolesti ili katastrofe. Smrt ostaje pokretačka snaga evolucije: ona ustupa mjesto novim, bolje prilagođenim generacijama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za ljude, realan izazov nije živjeti vječno, već produžiti godine **u dobrom zdravlju**. Tehnologija koja se pretvorila u dugovječnost također bi pokrenula velika pitanja pravednosti i resursa."
+        },
+        {
+          "type": "takeaway",
+          "text": "Biološka besmrtnost oslanja se na popravak ili resetiranje stanica. Meduza Turritopsis dohrnii sve je mlađa; hidra se stalno obnavlja. Starenje nije univerzalna smrtnost."
+        }
+      ]
+    }
+  ]
+}

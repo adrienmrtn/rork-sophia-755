@@ -1,0 +1,145 @@
+{
+  "id": "course_138_bach_et_la_musique_baroque",
+  "title": "Bach i barokna glazba",
+  "subtitle": "1685-1750",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Johann Sebastian Bach, kantor u Leipzigu, doveo je fugu i kontrapunkt do vrhunca i postao arhitektom baroka.",
+  "hero": {
+    "image": "bach_et_la_musique_baroque",
+    "ratio": "16:9",
+    "hook": "Kantor iz Leipziga gradi zvučnu katedralu Zapada."
+  },
+  "sections": [
+    {
+      "id": "course_138_bach_et_la_musique_baroque_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Johann Sebastian Bach** (**1685**-**1750**) često se smatra vrhuncem zapadne glazbe. Arhitekt zvukova, on dovodi do savršenstva umjetnost **Sklonište** i [[Kontrapunkt]]: nekoliko neovisnih melodijskih linija koje se isprepliću."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njegov život nije život dvorske zvijezde. Posao je to genijalnog majstora, u službi Crkve i knezova, čiji će rad biti potpuno ponovno otkriven tek u 19. stoljeću."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p1",
+      "title": "Barok: crkva, dvorište i pozornica",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Razdoblje **baroka** traje od otprilike **1600** do Bachove smrti. Voli kontrast, pokret, ornament. **Vivaldi** u Italiji, **Handel** u Njemačkoj, zatim u Engleskoj, dominiraju krajolikom. Glazba služi tri misije: crkva (orgulje i sveta pjesma), prinčeva spavaća soba i pozornica (opera)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bach nije napisao operu, ali je u svoje Pasije i oratorije unio lirsku dramu. Sintetizira francusku mjeru, talijanski lirizam i njemačku strogost. Za njega glazba odražava božanski red, a ne samo užitak."
+        },
+        {
+          "type": "funFact",
+          "text": "Godine 1717. u Weimaru Bach je proveo mjesec dana u zatvoru jer je pretjerano inzistirao na podnošenju ostavke: vojvoda ga je odbio pustiti da ode u Köthen."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p2",
+      "title": "Leipzig: kantor i njegove kantate",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rođen u **Eisenachu** u **1685** u dinastiji glazbenika, Bach se nastanio u **1723** u **Leipzig** kao [[kantor]] crkve sv. Tome. Ogroman teret: novi [[kantata]] gotovo svaki tjedan, plus predavanje na [[Thomasschule]]."
+        },
+        {
+          "type": "image",
+          "asset": "bach_eisenach_birthplace_portrait",
+          "ratio": "4:3",
+          "caption": "Bacha, nasljednika loze njemačkih glazbenika."
+        },
+        {
+          "type": "image",
+          "asset": "leipzig_st_thomas_church_bach_cantor",
+          "ratio": "4:3",
+          "caption": "Sveti Toma iz Leipziga: svakodnevni život kantora Bacha."
+        },
+        {
+          "type": "paragraph",
+          "text": "Procjenjuje se da je nastalo oko **300** kantata, od kojih su do nas došle neke **200**. Iz dva braka ima **20** djece; **Carl Philipp Emanuel** i **Johann Christian** i sami su postali glavni skladatelji. Navečer vodi [[Collegium Musicum]], ansambl za koji piše koncerte i svjetovne suite."
+        },
+        {
+          "type": "funFact",
+          "text": "Na kraju života, podvrgavši se operaciji oka kod putujućeg kirurga Johna Taylora, Bach je nedugo prije smrti oslijepio."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p3",
+      "title": "Dobro temperirani klavir i ponovno otkriće",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sa [[Jednakog temperamenta]], sustavom ugađanja koji objedinjuje intervale, Bach dokazuje da klavijatura može svirati u svim tipkama. *Dobro temperirana tipkovnica* (48 preludija i fuga) otvara put modernoj glazbi. Njegova fuga nadovezuje se na temu koju je preuzelo nekoliko glasova: matematičku arhitekturu."
+        },
+        {
+          "type": "image",
+          "asset": "bach_well_tempered_clavier_manuscript_fugue",
+          "ratio": "4:3",
+          "caption": "Dobro temperirana tipkovnica: svi tonovi na jednoj tipkovnici."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kad je umro, moda je preferirala upaljač [[stil galantan]]. Bach djeluje \"gotički\". Godine **1829**, mladi **Felix Mendelssohn** vodio je *Muka po Mateju* u Berlinu: početak “Bachove renesanse”. Bez njega bi stotine partitura mogle nestati."
+        },
+        {
+          "type": "funFact",
+          "text": "Mendelssohn se našalio: bilo je potrebno da obraćeni Židov i glumac (njegov prijatelj Devrient) vrate svijetu najveće remek-djelo kršćanske glazbe."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p4",
+      "title": "SDG, Putovanja i univerzalna baština",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kao vatreni luteran, Bach se često potpisivao **SDG** (*Soli Deo Gloria*: samo Bogu slava). Igra se sa [[numerologija]] i šifrira svoje ime (B-A-C-H) u notama. U **1977**, NASA je postavila nekoliko njegovih radova na [[Zlatna ploča]] sondi Voyager: zvučna ambasada čovječanstva u svemiru."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1685",
+              "title": "Rođen u Eisenachu",
+              "detail": "Dinastija glazbenika svijetu daje Bacha."
+            },
+            {
+              "date": "1723",
+              "title": "Cantor u Leipzigu",
+              "detail": "Tjedne kantate i neizmjerno sveto djelo."
+            },
+            {
+              "date": "1722-1742",
+              "title": "Dobro temperirana tipkovnica",
+              "detail": "Svi tonovi, fuga kao u katedrali."
+            },
+            {
+              "date": "1829",
+              "title": "Mendelssohn",
+              "detail": "Muka po Mateju vraća se na svjetlo."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Kantor iz Leipziga, Bach je doveo kontrapunkt i fugu do vrhunca; zaboravljen pa uskrsnut od strane Mendelssohna, on ostaje arhitekt baroka."
+        }
+      ]
+    }
+  ]
+}

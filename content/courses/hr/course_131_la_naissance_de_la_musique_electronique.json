@@ -1,0 +1,145 @@
+{
+  "id": "course_131_la_naissance_de_la_musique_electronique",
+  "title": "Rođenje elektronske glazbe",
+  "subtitle": "1920-1990",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Od Theremina do klubova u Chicagu i Detroitu, elektronska glazba izmišlja zvukove bez orkestra i transformira svjetski ples.",
+  "hero": {
+    "image": "la_naissance_de_la_musique_electronique",
+    "ratio": "16:9",
+    "hook": "Od laboratorija do plesnih podija: kako su strojevi izmislili novu glazbu."
+  },
+  "sections": [
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elektronička glazba ne počinje u noćnim klubovima. Rađa se u laboratorijima, kada izumitelji traže zvukove koje je nemoguće dobiti od violine ili klavira."
+        },
+        {
+          "type": "paragraph",
+          "text": "Od [[Teremin]] iz 1920-ih do [[Kuća Chicago]] i [[Detroitski tehno]], jedna ideja proteže se kroz stoljeće: stroj može stvarati, a ne samo snimati. Danas strukturira veliki dio svjetskog popa i [[karte]]."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p1",
+      "title": "Pioniri: od Theremina do musique concrete",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1920**, ruski izumitelj **Leon Theremin** (Lev Termen) dizajnirao je [[Teremin]]: uređaj za sviranje bez kontakta. Ruke se pomiču blizu antena u elektromagnetskom polju. Zvuk klizi, gotovo vokalno, i ubrzo proganja znanstvenofantastične filmove."
+        },
+        {
+          "type": "image",
+          "asset": "theremin_instrument_leon_theremin_1920",
+          "ratio": "4:3",
+          "caption": "Theremin: instrument koji se svira u zraku, bez dodirivanja žica."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nakon 1945. istraživanja su promijenila teren. U Parizu, na javnom radiju, **Pierre Schaeffer** i **Peter Henry** izumili su musique concrete: snimanje svakodnevne buke, zatim rezanje, preokretanje, petljanje na magnetsku vrpcu. U Kölnu, drugi studiji preferiraju čistu sintezu: zvukove rođene iz oscilatora, bez akustičnog izvora. Ta dva puta još uvijek podupiru sadašnju proizvodnju: s jedne strane [[uzorkovanje]], s druge strane sinteza."
+        },
+        {
+          "type": "funFact",
+          "text": "Theremin je Lenjinu poklonio svoj instrument. Fasciniran, sovjetski vođa navodno je zatražio stotine primjeraka za širenje tehničke modernosti u SSSR-u."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p2",
+      "title": "The Moog, Wendy Carlos i Kraftwerk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šezdesetih godina prošlog stoljeća američki inženjer **Robert Moog** minijaturizirao je sintesajzer s tranzistorima. U **1968**, album **Wendy Carlos** *Uključeni Bach* dokazuje da elektronika može nositi klasičnu složenost. Gadget postaje instrument."
+        },
+        {
+          "type": "image",
+          "asset": "moog_synthesizer_robert_moog_1960s",
+          "ratio": "4:3",
+          "caption": "Moog sintesajzer: stroj odlazi iz laboratorija u studio."
+        },
+        {
+          "type": "paragraph",
+          "text": "U Düsseldorfu njemačka grupa **Kraftwerk**, čiji su osnivači **Ralf Hütter** i **Florian Schneider**, nameće hladan i repetitivan pop. Uz *Autocesta* (**1974**) i *Čovjek stroj* (**1978**), pjevaju o autocesti, robotu, gradu. Njihov će ritam kasnije hraniti američki hip-hop i europsku dance glazbu."
+        },
+        {
+          "type": "image",
+          "asset": "kraftwerk_band_dusseldorf_1970s",
+          "ratio": "4:3",
+          "caption": "Kraftwerk: čovjek-stroj kao umjetnička persona."
+        },
+        {
+          "type": "funFact",
+          "text": "Na određenim turnejama, Kraftwerk je slao lutke u svom liku na press konferencije, gurajući koncept čovjeka-stroja do krajnjih granica."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p3",
+      "title": "Chicago i Detroit: elektronski ples",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U 1980-ima pristupačni strojevi poput **Roland TR-808** bubnjar stroja promijenili su igru. U Chicagu, u klubovima koje posjećuju crnačke i gay zajednice, DJ **Frankie Knuckles** oplemenjuje [[Kuća Chicago]]: pravilan 4/4 ritam, toplina naslijeđena iz diska."
+        },
+        {
+          "type": "paragraph",
+          "text": "U **Detroitu**, gradu obilježenom propadanjem tvornica automobila, tri prijatelja sa sveučilišta (**Juan Atkins**, **Derrick May**, **Kevin Saunderson**) izmišljaju mračniju estetiku: [[Detroitski tehno]]. Izvezen u Europu, naišao je na snažan odjek u Berlinu nakon pada Zida."
+        },
+        {
+          "type": "funFact",
+          "text": "TR-808 bio je komercijalni neuspjeh: profesionalci su ga smatrali \"nerealnim\". Prodano rabljeno, postaje oružje propalih DJ-eva u Chicagu."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p4",
+      "title": "Računalo, svačiji studio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od 1990-ih [[računalni glazbeni softver]] (kompjuterski potpomognuta glazba) pretvorio je jednostavno računalo u studio. Elektronika odlazi iz kluba u reklame, kino i gotovo sav pop. [[Chicago house i detroitski techno]] ostaju korijeni globalnog jezika."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1920",
+              "title": "teremin",
+              "detail": "Leon Theremin izumio je instrument koji se svira bez kontakta."
+            },
+            {
+              "date": "1948-1950",
+              "title": "Konkretna glazba",
+              "detail": "Schaeffer i Henry manipuliraju zvukovima snimljenim u Parizu."
+            },
+            {
+              "date": "1968-1978",
+              "title": "Moog i Kraftwerk",
+              "detail": "Sintisajzer ulazi u masovnu kulturu."
+            },
+            {
+              "date": "1980-ih",
+              "title": "House i techno",
+              "detail": "Chicago i Detroit izmišljaju moderni elektronski ples."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Rođena u laboratorijima 1950-ih, elektronička glazba danas čini veliki dio svjetske produkcije, od klupske do hit parade."
+        }
+      ]
+    }
+  ]
+}

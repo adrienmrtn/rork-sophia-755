@@ -1,0 +1,100 @@
+{
+  "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
+  "title": "Zašto je morska voda slana?",
+  "subtitle": "oceani",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Jedna litra morske vode sadrži približno 35 grama soli. Ta se sol nakupljala milijardama godina. Evo odakle dolazi.",
+  "hero": {
+    "image": "pourquoi_l_eau_de_mer_est_salee",
+    "ratio": "16:9",
+    "hook": "Rijeke su pitome. Oceani su slani. Tajna je u vremenu i isparavanju."
+  },
+  "sections": [
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oceani pokrivaju više od **70%** planeta. U prosjeku jedna litra morske vode sadrži približno **35 grama krutog**. To nije slučajnost: to je rezultat vrlo dugog procesa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sol ne “pada” s neba gotova. Putuje s kontinenata, a zatim ostaje zarobljen u oceanu."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
+      "title": "Sol prvo dolazi iz zemlje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kiša, prolazeći kroz zrak, pokupi malo ugljičnog dioksida. Postaje blago kiselo. Dok pada na stijene, nježno ih napada: to je **kemijska erozija**."
+        },
+        {
+          "type": "image",
+          "asset": "ocean_sea_salt_evaporation",
+          "ratio": "auto",
+          "caption": "Slane močvare: isparavanjem se koncentrira sol otopljena u morskoj vodi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rijeke zatim nose otopljene minerale, posebno **natrij** i **klor**, dva sastojka kuhinjske soli. Bacaju ih u more."
+        },
+        {
+          "type": "funFact",
+          "text": "Podvodni vulkani i topli izvori na dnu oceana također dodaju soli. Ali glavnina ipak dolazi s kontinenata."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
+      "title": "Zašto rijeke nisu slane?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dobro pitanje: ako rijeke donose sol, zašto voda Rhône ili Seine nije slana? Zato što je sol tamo jako razrijeđena i zato što se voda u rijekama neprestano obnavlja."
+        },
+        {
+          "type": "paragraph",
+          "text": "U oceanu je drugačije. Pod Suncem voda **ispari** i vrati se na nebo. Sol, **ostaje**. Godinu za godinom, stoljeće za stoljećem, gomila se. To zovemo [[hidrološki ciklus i nakupljanje soli]]."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
+      "title": "Sol također kruži oceanima",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Slana voda je **gušća** (\"teža\" za isti volumen) od slatke vode. Na polovima, kada se površinska voda smrzava, sol se djelomično oslobađa u okolnu tekuću vodu. Ova voda postaje još gušća i pada na dno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo kretanje pomaže pokretanju velikih oceanskih struja. Ove struje prenose toplinu i hranjive tvari diljem svijeta. Sol nije samo stvar okusa: ona je dio klimatskog motora planeta."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
+      "title": "Nije svugdje ista sol",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Salinitet nije svugdje isti. U blizini ekvatora, snažno isparavanje može koncentrirati sol. U blizini velikih rijeka ili leda koji se tope voda je mekša. Mrtvo more je ekstremni slučaj: vrlo malo vode odlazi, ostaje puno soli."
+        },
+        {
+          "type": "takeaway",
+          "text": "Morska voda je slana jer rijeke donose minerale s kontinenata, a isparavanje ostavlja sol u oceanu. Ova akumulacija traje milijardama godina."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
+  "title": "Otkriće X-zraka",
+  "subtitle": "Roentgen, 1895",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Godine 1895. Wilhelm Röntgen otkrio je nevidljivo zračenje koje može proći kroz materiju. Za nekoliko mjeseci medicina je doživjela revoluciju.",
+  "hero": {
+    "image": "la_decouverte_des_rayons_x_rontgen",
+    "ratio": "16:9",
+    "hook": "Ruka, kosti, fotografija. Medicina nikada više neće biti slijepa."
+  },
+  "sections": [
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**8. studenog 1895.**, u Würzburgu (Njemačka), fizičar **Wilhelm Röntgen** primjećuje ekran koji svijetli... iako na njega ne utječe vidljivo svjetlo. Nešto nevidljivo prelazi kroz sobu."
+        },
+        {
+          "type": "paragraph",
+          "text": "On to naziva **X** zrakama, a \"X\" znači \"nepoznato\". Unutar nekoliko tjedana fotografirao je kosti ruke svoje supruge. Radiologija je rođena."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
+      "title": "Laboratorijska nesreća",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Röntgen radi s cijevi u kojoj elektroni pogađaju metu. Obložio je tubu crnim kartonom. Međutim, fluorescentni zaslon svijetli iz daljine. On razumije da iz cijevi izlazi nevidljivo zračenje."
+        },
+        {
+          "type": "image",
+          "asset": "wilhelm_rontgen_x_ray_hand_1895",
+          "ratio": "4:3",
+          "caption": "Poznata slika: kosti ruke i vjenčani prsten."
+        },
+        {
+          "type": "funFact",
+          "text": "Röntgen nikada nije prijavio patent za X-zrake. Želio je da ih sva znanost može slobodno koristiti."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
+      "title": "Medicina zgrabi alat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "early_x_ray_medical_radiograph",
+          "ratio": "4:3",
+          "caption": "Vrlo brzo su liječnici i vojska upotrijebili X-zrake."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prije, da biste \"vidjeli\" prijelom ili metak, često ste ga morali otvoriti. X-zrakama dobivamo sliku unutrašnjosti bez rezanja. Bolnice i vojske usvajaju tehniku vrtoglavom brzinom."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
+      "title": "Dugo ignorirana opasnost",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U početku ignoriramo rizike. Operateri snimaju rendgenske snimke satima. Opekline, zatim se pojavljuju karcinomi. Trebat će vremena da shvatimo da su X-zrake moćne... i opasne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Danas štitimo pacijente i njegovatelje: ograničene doze, olovne pregače, stroge kontrole."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p4",
+      "title": "Nasljeđe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "X-zrake su utrle put svim modernim slikama: skenerima, industrijskim kontrolama, pa čak i proučavanju strukture kristala (kasnije korisnih za DNK)."
+        },
+        {
+          "type": "takeaway",
+          "text": "U **1895**, Röntgen je otkrio X-zrake, nevidljivo zračenje koje prolazi kroz materiju. Medicina dobiva novu perspektivu... pod uvjetom da su rizici kontrolirani."
+        }
+      ]
+    }
+  ]
+}

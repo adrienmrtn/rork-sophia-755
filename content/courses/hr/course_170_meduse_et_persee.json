@@ -1,0 +1,124 @@
+{
+  "id": "course_170_meduse_et_persee",
+  "title": "Meduza i Perzej",
+  "subtitle": "Pogled koji skameni",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Meduza pogledom skameni. Perzej ju pobjeđuje pomoću zrcalnog štita, a zatim spašava Andromedu. Glava Gorgone postaje zaštitni simbol.",
+  "hero": {
+    "image": "meduse_et_persee",
+    "ratio": "16:9",
+    "hook": "Pogled koji mijenja život u kamen. Heroj koji se usudi samo pogledati odraz."
+  },
+  "sections": [
+    {
+      "id": "course_170_meduse_et_persee_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mit o **Perzej** i **Meduza** jedna je od velikih grčkih avantura. To nije samo borba protiv čudovišta. To je također priča o ljepoti pretočenoj u užas i o heroju koji pobjeđuje lukavstvom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Meduza, [[Gorgon]], okameni svakoga tko sretne njezin pogled. Perzej, da bi preživio, pristaje vidjeti opasnost samo kroz ogledalo."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p1",
+      "title": "Od svećenice do čudovišta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prema Ovidijevom [[Metamorfoze]], Meduza prije svega nije čudovište. Ona je mlada žena svijetle kose, svećenica u hramu **Atena**, božice mudrosti. Njezina ljepota privlači **Posejdona**, boga mora, koji je siluje u svetištu."
+        },
+        {
+          "type": "paragraph",
+          "text": "U antičkoj tragičkoj logici, Atena kažnjava žrtvu. Meduzina kosa postaje zmija. Njegov pogled **skamenjuje**. Protjerana na kraj svijeta sa svojim sestrama Stheno i Euryale, živi u špilji okružena kipovima: nesretnicima koji su je vidjeli."
+        },
+        {
+          "type": "image",
+          "asset": "medusa_gorgon_snakes_hair_caravaggio_painting",
+          "ratio": "4:3",
+          "caption": "Meduza, Gorgona smrtonosnog pogleda."
+        },
+        {
+          "type": "funFact",
+          "text": "Krv s Meduzine lijeve strane bila je smrtonosni otrov. Onaj s desne strane mogao je uskrsnuti mrtve: tajna koju je Atena kasnije povjerila **Asklepiju**, bogu medicine."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p2",
+      "title": "Perzej se naoružava protiv nemogućeg",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kralj **Polidekt** želi odvesti Perzeja kako bi zaveo njegovu majku **Danaja**. Nameće joj samoubilački izazov: vratiti Meduzinu glavu. Perzej je sin **Zeusa**-a. Bogovi mu pomogli."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Hermes** daje mu sandale s krilima i [[Harpe]], izuzetno oštar zakrivljeni mač. **Had** mu posuđuje [[Kynee]], nevidljivu kacigu. Atena nudi odlučujući savjet: svoj uglačani brončani štit koji će se koristiti kao **ogledalo**."
+        },
+        {
+          "type": "image",
+          "asset": "perseus_mirror_shield_medusa_painting",
+          "ratio": "4:3",
+          "caption": "Perzej prilazi Meduzi gledajući samo svoj odraz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Perzej iznenađuje Meduzu dok spava. Vođen odrazom, odsijeca mu glavu. Iz dekoltea izviru [[Pegaz, rođen iz Meduzine krvi]] i div [[Chrysaor]]. Meduza je još uvijek bila trudna s Posejdonom."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p3",
+      "title": "Andromeda i povratak",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Glava zadržava svoju moć. Perzej ga stavlja u [[Kibisis]], čarobnu torbu. Dok je letio iznad Etiopije, vidio je princezu **Andromedu** prikovanu za stijenu. Nudi se **Ketosi**, morskoj nemani koju je poslao Posejdon da kazni ponos svoje majke Kasiopeje."
+        },
+        {
+          "type": "image",
+          "asset": "perseus_rescue_andromeda_sea_monster_painting",
+          "ratio": "4:3",
+          "caption": "Perzej oslobađa Andromedu koristeći Meduzinu glavu."
+        },
+        {
+          "type": "funFact",
+          "text": "Neke legende kažu da je Perzej stvorio crveni koralj tako što je Meduzinu glavu stavio na morsku travu: krv bi očvrsnula biljke."
+        },
+        {
+          "type": "paragraph",
+          "text": "Perzej okameni čudovište, oženi se Andromedom, a zatim se vrati na Serifos. Suočen s Polidektom i njegovim dvorom, ispruži glavu. Njegovi neprijatelji postaju kipovi. Tiranija prestaje."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p4",
+      "title": "Gorgoneion, zaštitno lice",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Perzej predaje glavu Ateni. Popravlja ga na svoj **egid**, svoj božanski štit. Meduza od čudovišta koje treba ubiti postaje zaštitnička moć. Ovaj lik, [[Gorgoneion]], ukrašava grčke hramove, novčiće i štitove."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njegova funkcija je [[Apotropej]]: odvratiti zlo kroz sam užas lica. Tijekom stoljeća i Meduza je postala tragična figura, potom i moderna ikona: trauma, moć, fascinacija. Čak je i kuća Versace odabrala svoju glavu da \"okameni\" izgled."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Perzej** pobjeđuje **Meduzu** zahvaljujući odrazu štita. Glava, dana **Ateni**, postaje **Gorgoneion**, zaštitni simbol antičke Grčke."
+        }
+      ]
+    }
+  ]
+}

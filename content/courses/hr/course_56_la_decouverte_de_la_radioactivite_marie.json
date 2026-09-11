@@ -1,0 +1,100 @@
+{
+  "id": "course_56_la_decouverte_de_la_radioactivite_marie",
+  "title": "Otkriće radioaktivnosti",
+  "subtitle": "Marie Curie",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Marie Curie, s Pierreom Curiejem i Henrijem Becquerelom, otvara poglavlje radioaktivnosti. Dvije Nobelove nagrade, ogroman rad i golemo nasljeđe.",
+  "hero": {
+    "image": "la_decouverte_de_la_radioactivite_marie_curie",
+    "ratio": "16:9",
+    "hook": "Izvagala je tone rude kako bi izolirala nekoliko grama nevidljivog elementa."
+  },
+  "sections": [
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Marie Curie** (rođena kao Maria Skłodowska) je prva žena koja je dobila Nobelovu nagradu. Ona ostaje jedina osoba koja je dobila **dva** iz dvije različite znanosti: fizike, zatim kemije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njegov predmet: **radioaktivnost**, odnosno činjenica da određeni atomi spontano šalju energiju i čestice."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
+      "title": "Uska vrata znanosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rođena u Poljskoj, otišla je studirati u Pariz jer su tamošnja sveučilišta ženama zatvorila mnoga vrata. Naporno radi, često u nesigurnim uvjetima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Udala se za **Pierrea Curie**, fizičara. Zajedno su činili rijedak laboratorijski duo za to vrijeme."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
+      "title": "Imenuj nevidljivo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1896**, **Henri Becquerel** primijetio je da uran prekriva fotografske ploče bez svjetla. Marie Curie odlučuje detaljno proučiti ovaj fenomen. Izmislila je riječ **radioaktivnost**."
+        },
+        {
+          "type": "image",
+          "asset": "marie_curie_pitchblende_radioactivity",
+          "ratio": "4:3",
+          "caption": "Tone smole za izolaciju radija i polonija."
+        },
+        {
+          "type": "paragraph",
+          "text": "S Pierreom otkriva dva nova elementa: **polonij** (nazvan po Poljskoj) i **radij**. Za njihovu izolaciju potrebno je preraditi ogromne količine rude, smole."
+        },
+        {
+          "type": "funFact",
+          "text": "Radij slabo svijetli u mraku. Prvo smo bili začuđeni... prije nego što smo shvatili koliko je opasno."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
+      "title": "Slava i cijena koju treba platiti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1903**, Marie, Pierre i Becquerel dobili su Nobelovu nagradu za fiziku. U **1911** samo je Marie dobila Nobelovu nagradu za kemiju. Pierre je slučajno umro 1906. Nastavlja ona."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tijekom Prvog svjetskog rata organizirala je mobilne rendgenske jedinice za liječenje ranjenika. Ona svoje tijelo izlaže dozama za koje danas znamo da su neprihvatljive."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
+      "title": "Dvostrano nasljeđe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Radioaktivnost je omogućila radioterapiju protiv određenih vrsta raka... ali i nuklearnog oružja. Znanje je neutralno; njegove upotrebe nisu."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marie Curie transformirala je neobično opažanje u novu znanost: radioaktivnost. Njegov je rad otvorio modernu fiziku... po cijenu rizika koji su tada bili slabo shvaćeni."
+        }
+      ]
+    }
+  ]
+}

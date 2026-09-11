@@ -1,0 +1,96 @@
+{
+  "id": "course_47_pourquoi_baille_t_on",
+  "title": "Zašto zijevamo?",
+  "subtitle": "Tijelo i mozak",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Svi zijevaju: ljudi, psi, ponekad čak i fetusi. Vjerojatno nije zbog \"nedostatka kisika\". Ovdje su najjači tragovi.",
+  "hero": {
+    "image": "pourquoi_baille_t_on",
+    "ratio": "16:9",
+    "hook": "Ti zijevaš. Tvoj susjed zijeva. I slučajno (skoro) nije zarazno."
+  },
+  "sections": [
+    {
+      "id": "course_47_pourquoi_baille_t_on_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zijevanje se čini uobičajenim. Međutim, to je kompleksan refleks: uključena je čeljust, prsni koš, dijafragma, cijelo tijelo. Lavovi, psi, ljudi: mnoge životinje zijevaju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dugo smo govorili: \"to je da imamo više kisika\". Ova ideja je sada uglavnom napuštena. Moderna objašnjenja su zanimljivija."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p1",
+      "title": "Ne (posebno) za kisik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eksperimenti su pokazali da povećanje kisika u zraku ne sprječava zijevanje. Smanjite malo i ugljični dioksid. Dakle, zijevanje nije jednostavno \"hvatanje zraka\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "Snažno vodstvo danas: zijevanje pomaže **regulacija temperature**. Širokim udisajem i istezanjem lica malo ćemo “provjetriti” i ohladiti glavu, pogotovo kada smo umorni."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p2",
+      "title": "Zašto je zarazno?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "contagious_yawning_people_group",
+          "ratio": "4:3",
+          "caption": "Često je dovoljno vidjeti da netko zijeva da se aktivira refleks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kod ljudi, gledanje, slušanje ili čak čitanje riječi \"zijevanje\" može izazvati zijevanje. To nije samo glupa imitacija: također utječe na **empatiju** i moždane krugove povezane sa [[Zrcalni neuroni i zaraznost]], neuronima koji se aktiviraju kada djelujemo... ili kada vidimo da netko djeluje."
+        },
+        {
+          "type": "funFact",
+          "text": "Mala djeca malo zijevaju zbog zaraze. Ta osjetljivost dolazi kasnije, zajedno s određenim društvenim vještinama."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p3",
+      "title": "Mi već zijevamo prije nego što se rodimo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fetusi zijevaju otprilike od **11. tjedna** trudnoće. U ovoj dobi njihova pluća još ne udišu zrak. Dakle, opet, ne radi se o \"nestanku kisika\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kod fetusa bi zijevanje moglo pomoći razvoju čeljusti i mišića lica."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p4",
+      "title": "Zijevnuti da biste ostali budni?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Često zijevamo kada smo umorni... ali i neposredno prije testa ili kada nam je dosadno dok pokušavamo ostati fokusirani. Istezanje može stimulirati živčani sustav i pomoći **ostati budan**."
+        },
+        {
+          "type": "takeaway",
+          "text": "Zijevanje vjerojatno nije nedostatak kisika. Radije bi se koristio za regulaciju mozga (temperatura, budnost), a kod ljudi se također širi društvenom zarazom."
+        }
+      ]
+    }
+  ]
+}

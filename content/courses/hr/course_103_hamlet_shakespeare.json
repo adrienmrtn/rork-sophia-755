@@ -1,0 +1,121 @@
+{
+  "id": "course_103_hamlet_shakespeare",
+  "title": "Hamlet, Shakespeare",
+  "subtitle": "oko 1601",
+  "subject": "litterature",
+  "subcategory": "Anglo-Saxons & world literature",
+  "description": "Oko 1601. Shakespeare je napisao Hamleta, princa koji oklijeva pred očevim ubojstvom. Između osvete, simuliranog ludila i “Biti ili ne biti” rađa se moderni heroj svijesti.",
+  "hero": {
+    "image": "hamlet_shakespeare",
+    "ratio": "16:9",
+    "hook": "Duh, neodlučni princ i najpoznatije egzistencijalno pitanje u kazalištu."
+  },
+  "sections": [
+    {
+      "id": "course_103_hamlet_shakespeare_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za **1601**, **William Shakespeare** piše **[[Hamlet, princ od Danske]]**. To nije samo tragedija osvete: to je portret moderne savjesti, podijeljene između akcije i sumnje. Monolog “**Biti ili ne biti**” postao je suštinsko egzistencijalno pitanje zapadnog teatra."
+        },
+        {
+          "type": "paragraph",
+          "text": "Duhovi, simulirano ludilo, posljednji dvoboj: predstava prije vremena miješa nadnaravno i psihologiju. Hamlet nije poput klasičnih impulzivnih junaka koji odmah kreću u akciju. Previše razmišlja da bi brzo djelovao, a upravo to ga čini besmrtnim. Ovdje Shakespeare izmišlja lik koji sumnja u sve, uključujući i sebe."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p1",
+      "title": "Elizabetanski kontekst: kazalište svijeta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Shakespeare je pisao na vrhuncu engleskog kazališta, pod **Elizabeta I**. Predstave se izvode u **Kazalište Globe**, kružnom drvenom kazalištu otvorenom prema nebu, gdje se bogati i siromašni trljaju, stojeći ili sjedeći prema svom budžetu. Glumci su svi muškarci: ženske uloge igraju adolescenti, u skladu sa zakonima vremena."
+        },
+        {
+          "type": "image",
+          "asset": "william_shakespeare_portrait",
+          "ratio": "4:3",
+          "caption": "William Shakespeare, autor tragedije o kojoj se najviše govorilo na svijetu."
+        },
+        {
+          "type": "funFact",
+          "text": "Ulogu Ophélie kreirala je tinejdžerica čiji se glas još nije promijenio, u skladu s običajima tog vremena."
+        },
+        {
+          "type": "image",
+          "asset": "globe_theatre_london_elizabethan",
+          "ratio": "16:9",
+          "caption": "The Globe Theatre: Elizabetanska kazališna pozornica na kojoj je Hamlet osvojio publiku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Shakespeare više traži istinu srca nego ravni realizam. Hamlet se vraća sa studija u **[[Wittenberg]]**, njemačkom sveučilišnom gradu kolijevci **Protestantska reformacija**. U drami Shakespeare postavlja dramu unutar drame, \"Mišolovku\", kako bi uhvatio **Klaudije**-a u zamku i potvrdio kraljevu krivnju. Kazalište postaje ogledalo svijeta i instrument istine."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p2",
+      "title": "Spirala osvete i težina oklijevanja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kralja Danske ubio je njegov brat **Klaudije**, koji se oženio kraljicom **Gertruda** i preuzeo prijestolje. Duh preminulog kralja otkriva zločin **Hamletu**. Čini se da je dužnost jasna: osvetiti oca. Ali Hamlet sumnja: je li mu ta sablast doista otac ili prijevarni demon? Je li osveta pravedna u očima kršćanskog morala?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Rastrgan između **[[Zakon odmazde]]** i kršćanske savjesti koja osuđuje ubojstvo, glumi ludost da istražuje bez izazivanja sumnje. Ova strategija ne uspijeva: on lomi srce **Ofelija**, kćeri savjetnika **Polonija**, i greškom ubija samog Polonija, skrivajući se iza tepiha. Spirala vodi do konačnog masakra na danskom dvoru, gdje stradaju gotovo svi glavni likovi."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p3",
+      "title": "Melankolija i korupcija Danske",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "\"Ima nešto pokvareno u Kraljevini Danskoj. » Predstava odiše moralnom dekompozicijom. Hamletov je jezik zasićen slikama bolesti, raspadanja i leševa. Njegova **[[Melankolija u 16. stoljeću]]** čini ga briljantnim, ali paraliziranim: u Shakespeareovo doba to se smatralo medicinskim raspoloženjem, vezanim uz kreativnost, ali i nedjelovanje."
+        },
+        {
+          "type": "image",
+          "asset": "hamlet_skull_yorick_delacroix_painting",
+          "ratio": "4:3",
+          "caption": "Hamlet i Yorickova lubanja: smrt nas podsjeća na taštinu svih ambicija."
+        },
+        {
+          "type": "quote",
+          "text": "Biti ili ne biti, to je pitanje.",
+          "attribution": "William Shakespeare, Hamlet, čin III, scena 1"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj slavni monolog propituje samo postojanje: je li bolje podnijeti patnje života ili umrijeti kako bi ih izbjegao? Djelovati znači uprljati se u pokvarenom svijetu; ne djelovati znači dopustiti zlu da pobijedi. Hamlet postaje prvi moderni junak, nesposoban pomiriti misao i djelovanje. **[[Elizabetinska osveta i čast]]** djelomično objašnjava svoju blokadu: čovjek od časti morao je osvetiti uvredu učinjenu svojoj obitelji, ali je ta dužnost došla u sukob sa zakonom i moralom."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p4",
+      "title": "Nasljeđe i potomstvo univerzalnog mita",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Četiri stoljeća Hamlet je beskrajno reinterpretiran. **Romantičari** 19. stoljeća tamo su vidjeli izmučenog umjetnika; **Freud** pročitajte **[[Edipov kompleks]]**. Predstava govori o gubitku roditelja, tami svijeta i bolnom prijelazu u odraslu dob."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njegov utjecaj nadilazi kazalište: kino, opera, stripovi, popularna psihologija. Shakespeare pretvara srednjovjekovnu priču o duhovima u metafizičko istraživanje ljudske svijesti. Hamlet ostaje tragedija neodlučnosti, gdje razmišljanje već postaje oblik patnje."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Hamlet** pokazuje da heroj može biti besmrtan ne zato što brzo djeluje, već zato što duboko sumnja. Ovdje Shakespeare izmišlja modernost kazališta: misliti već znači patiti."
+        }
+      ]
+    }
+  ]
+}

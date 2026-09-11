@@ -1,0 +1,124 @@
+{
+  "id": "course_68_la_theorie_de_la_relativite_pour_tous",
+  "title": "Teorija relativnosti za svakoga",
+  "subtitle": "Einstein 1905. i 1915",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Godine 1905. i 1915. Einstein je promijenio našu ideju o prostoru, vremenu i gravitaciji. A bez njegovih izračuna vaš bi GPS bio pogrešan za nekoliko kilometara.",
+  "hero": {
+    "image": "la_theorie_de_la_relativite_pour_tous",
+    "ratio": "16:9",
+    "hook": "Vrijeme nije univerzalni sat. A gravitacija nije nevidljiva struna."
+  },
+  "sections": [
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1905** i **1915**, **Albert Einstein** objavio je dvije teorije koje su uzdrmale fiziku. Do tada smo uglavnom pratili [[Newton]]: vrijeme je svima i posvuda teklo isto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einstein pokazuje da su prostor i vrijeme povezani i da se gravitacija može shvatiti kao zakrivljenost tog tkiva. Ove ideje objašnjavaju [[crne rupe]] i [[Veliki prasak]]. Oni također ispravljaju GPS vašeg telefona svaki dan."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p1",
+      "title": "1905: posebna teorija relativnosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**specijalna teorija relativnosti** temelji se na dvije jednostavne ideje. Zakoni prirode su isti za sve koji se kreću konstantnom brzinom. A brzina svjetlosti u vakuumu, **oko 300 000 km/s**, jednaka je za sve, približavamo li joj se ili udaljavamo od nje."
+        },
+        {
+          "type": "image",
+          "asset": "albert_einstein_portrait_princeton",
+          "ratio": "auto",
+          "caption": "Albert Einstein, autor teorije relativnosti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kako bi svjetlost uvijek imala istu brzinu, vrijeme se mora prilagoditi. Ovo je [[Dilatacija vremena]]: što objekt brže ide, vrijeme mu sporije prolazi u usporedbi s nekim tko miruje. Ovo nije iluzija. **atomski satovi**, instrumenti koji mjere vrijeme s iznimnom preciznošću, izmjerili su ga."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einstein također crta [[E=mc²]]: masa je vrlo koncentriran oblik energije. Kako je **c**, brzina svjetlosti, ogromna, vrlo mala masa može osloboditi kolosalnu energiju. To je stup [[nuklearna fizika]], proučavanja atomskih jezgri i njihovih reakcija."
+        },
+        {
+          "type": "funFact",
+          "text": "Godine 1905. Einstein nije bio sveučilišni profesor. Radi kao ispitivač u patentnom uredu u Bernu, Švicarska."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p2",
+      "title": "1915: gravitacija kao zakrivljenost",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Deset godina kasnije, Einstein je objavio **opću teoriju relativnosti**. Newton je vidio gravitaciju kao nevidljivu silu koja vuče mase jedne prema drugima. Einstein nudi drugu sliku: **prostor-vrijeme**, prostor i vrijeme ujedinjeni u jednu tkaninu, tvore fleksibilnu tkaninu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Teška masa, poput Sunca, izdubljuje ovo tkivo. Zamislite kuglu za kuglanje na trampolinu. Lopta bačena pored nje ne ide ravno: ona slijedi udubinu. Isto tako, Zemlja kruži jer slijedi zakrivljenost koju stvara Sunce."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ravnomjerna svjetlost slijedi ove krivulje. U **1919**, britanski astronom **Arthur Eddington** to je potvrdio tijekom pomrčine: prividni položaj zvijezda iza Sunca malo je pomaknut. Einstein postaje slavan preko noći."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p3",
+      "title": "GPS, otporan na džep",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GPS sateliti rotiraju približno **14 000 km/h**, na **20 000 km** visine. Kako bi vas locirali do najbližeg metra, njihovi satovi moraju ostati sinkronizirani s onima na zemlji. Međutim, dva relativistička učinka djeluju istovremeno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zbog njihove brzine, vrijeme prolazi malo sporije, što je učinak posebne relativnosti: približno **7 mikrosekundi** kašnjenja po danu. Zbog slabije gravitacije na visini, vrijeme tamo prolazi malo brže, što je učinak opće relativnosti: otprilike **45 mikrosekundi** unaprijed."
+        },
+        {
+          "type": "funFact",
+          "text": "Bez relativističkih korekcija, pogreška GPS položaja mogla bi doseći približno **11 km** dnevno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rezultat je neto napredak od približno **38 mikrosekundi** po danu. Čini se malenim. Brzinom svjetlosti, ovo je već ogromno za navigaciju."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p4",
+      "title": "Valovi, crne rupe, svemir koji se širi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Opća teorija relativnosti predviđa crne rupe: područja u kojima je zakrivljenost toliko jaka da čak ni svjetlost više ne izlazi. Einstein je sumnjao u njihovo stvarno postojanje. [[radioastronomija]], promatranje neba u radio valovima, a najnovije slike su to potvrdile."
+        },
+        {
+          "type": "paragraph",
+          "text": "U **1916** također je predvidio **gravitacijski ventil**: valove u prostor-vremenu koje proizvode kozmičke katastrofe, kao što je spajanje dviju crnih rupa. Moramo čekati da ih otkriju **2015** i **LIGO** opservatorij, zemaljski detektor osjetljiv na svemirske vibracije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konačno, ove jednadžbe otvaraju put svemiru koji se širi, osnovici modela Velikog praska. Einstein je prvi dodao kozmološku konstantu****, matematički izraz za forsiranje fiksnog svemira. Hubbleova zapažanja kasnije su ga uvjerila u suprotno."
+        },
+        {
+          "type": "takeaway",
+          "text": "**E=mc²** povezuje masu i energiju. Opća relativnost kaže da gravitacija savija prostor-vrijeme. Bez ovih ispravaka, vaš GPS bi bio pogrešan nekoliko kilometara svaki dan."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "id": "course_197_les_mille_et_une_nuits_sheherazade",
+  "title": "Arapske noći (Šeherezada)",
+  "subtitle": "Reci da preživi",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Šeherezada preživljava 1001 noć pričajući priče. Kolekcija rođena između Perzije, Bagdada i Egipta, koja je postala svjetski mit.",
+  "hero": {
+    "image": "les_mille_et_une_nuits_sheherazade",
+    "ratio": "16:9",
+    "hook": "Svake večeri žena priča priču da ne umre u zoru."
+  },
+  "sections": [
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Arapske noći** (*Alf Layla wa-Layla*) nije knjiga jednog autora. To je palimpsest: stoljeća usmenih i pisanih priča, indijskih, perzijskih, arapskih, egipatskih."
+        },
+        {
+          "type": "paragraph",
+          "text": "U središtu, vrtoglava ideja: žena, **Šeherezada**, pretvara priču u štit. Sve dok ona govori, kralj koji ju je htio ubiti mora čekati. Tako govor postaje oružje preživljavanja."
+        }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p1",
+      "title": "Arhitektura papira: geneza teksta svijeta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jezgra dolazi iz perzijskog izvora, [[Hazār Afsāna]] (\"Tisuću priča\"), koje su same hranjene indijskom tradicijom. U Bagdadu, pod kalifima [[Abasidi]] (8.-13. st.), zbirka se arabizirala: urbane legende, dvorske anegdote, ponekad satirični ton."
+        },
+        {
+          "type": "image",
+          "asset": "one_thousand_and_one_nights_arabic_manuscript",
+          "ratio": "4:3",
+          "caption": "Rukopis Tisuću i jedne noći: svjetski tekst u nastajanju."
+        },
+        {
+          "type": "funFact",
+          "text": "\"Tisuću i jedan\" ne znači točan broj. Na arapskom ovaj broj sugerira obilje, gotovo beskonačnost. Neki su ga pisari čak vidjeli i kao talisman protiv urokljivog oka."
+        },
+        {
+          "type": "paragraph",
+          "text": "U Egiptu, u vrijeme [[Mameluci]], dodani su novi ciklusi. Iznenađenje za Zapad: **Aladin** i **Ali Baba** nedostaju u srednjovjekovnim arapskim rukopisima. To su “priče siročadi”, koje su kasnije ušle preko Europe."
+        }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p2",
+      "title": "Šeherezadina hegemonija: pripovijedanje kao štit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kralj **Shahryar**, kojeg je izdala njegova prva žena, svake večeri ženi mladu ženu i daje je ubiti u zoru. **Šeherezada**, kći vezira, nudi se. Ona priča... i staje u najnapetijem trenutku."
+        },
+        {
+          "type": "image",
+          "asset": "scheherazade_shahryar_king_storyteller_painting",
+          "ratio": "4:3",
+          "caption": "Šeherezada okrenuta Šahrijaru: pripovijedanje kao štit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ona gomila [[ugniježđene priče (okvirna priča)]]: jedan lik drugome, tko trećemu. Kralj, zarobljen željom da čuje što će se sljedeće dogoditi, odgađa pogubljenje. Nakon **A Tisuću i jedne noći**, slušanje je promijenilo Shahryara: ponovno je pronašao empatiju. Šeherezada nije samo zabavljala. Popravila je tiranina."
+        }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p3",
+      "title": "Pomak prema Zapadu i izmišljanje mita",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Između **1704** i **1717**, francuski orijentalist **Antoine Galland** objavio je svoj prijevod. On prilagođava tekst ukusu dvora **Luja XIV**-a i dodaje priče koje je čuo od [[Hanna Diyab]], Sirijke u prolazu. Aladin tako ulazi u korpus."
+        },
+        {
+          "type": "image",
+          "asset": "antoine_galland_thousand_nights_french_translation",
+          "ratio": "4:3",
+          "caption": "Galland otvara Noći prema Europi 18. stoljeća."
+        },
+        {
+          "type": "funFact",
+          "text": "Mladi su ponekad Gallanda noću budili vičući mu ispod prozora: “Gospodine Galland, ako ne možete spavati, ispričajte nam jednu svoju priču!” »"
+        },
+        {
+          "type": "paragraph",
+          "text": "Uspjeh izmišlja [[Europski orijentalizam]]: leteće sagove, džine, prerušene kalife. Fantastična vizija, često reduktivna, ali golemog utjecaja, od **Proust** do **Borges**, koji je u tim narativnim petljama vidio samu sliku književne beskonačnosti."
+        }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p4",
+      "title": "Suvremenost i filozofski domet priče",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zašto reći? Noći odgovaraju: da zadrže smrt podalje. Sve dok odzvanja Šeherezadin glas, kobna zora je prekinuta. Fikcija daje oblik kaosu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj mehanizam još uvijek hrani našu seriju: [[alpinista]], ovaj rez na rubu provalije, izravni je nasljednik pripovjedača. Knjiga otvorena do beskonačnosti, koja se ne želi zatvoriti."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Šeherezada** preživljava **1001** noći zahvaljujući ugrađenim pričama: ona izmišlja neizvjesnost kao alat za preživljavanje i pretvara govor u političku moć."
+        }
+      ]
+    }
+  ]
+}

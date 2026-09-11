@@ -1,0 +1,130 @@
+{
+  "id": "course_151_guernica_picasso",
+  "title": "Guernica, Picasso",
+  "subtitle": "1937",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "Nakon bombardiranja Guernice Picasso je naslikao crno-bijeli krik protiv rata. Rad putuje, a zatim se nakon Franca vraća u Španjolsku.",
+  "hero": {
+    "image": "guernica_picasso",
+    "ratio": "16:9",
+    "hook": "Spaljeno baskijsko selo, platno koje odbija zaboraviti."
+  },
+  "sections": [
+    {
+      "id": "course_151_guernica_picasso_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dana **A 26. travnja 1937. godine.**, baskijski grad Guernica bombardiran je tijekom [[Španjolski građanski rat]]. Picasso je u Parizu odgovorio golemim crno-bijelim platnom."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Guernica* postala je jedna od najsnažnijih antiratnih slika 20. stoljeća."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p1",
+      "title": "Španjolski rat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od **1936**, Španjolska je bila razapeta između [[Druga španjolska republika]] i Francovih nacionalista, koje je podržavala njemačka [[Legija Kondor]]. Guernicino [[bombardiranje zasićenjem]] ima za cilj terorizirati."
+        },
+        {
+          "type": "paragraph",
+          "text": "Picasso radi brzo, na velikim studijama. On napušta boju kako bi se držao hitnosti svjedočanstva. Monumentalni format zabranjuje ugodnu kontemplaciju."
+        },
+        {
+          "type": "image",
+          "asset": "guernica_bombing_aftermath_1937",
+          "ratio": "4:3",
+          "caption": "Guernica u ruševinama: vijest postaje simbol."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p2",
+      "title": "Slika vriska",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Picasso komponira kaos tijela, konja, bika, žarulje. Bez boje: kao naslovnica novina. Monumentalnost tjera gledatelja na suočavanje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konj s utrobom, majka s djetetom, podignute ruke: svaki motiv čitljiv je bez natpisa. Ovo je gramatika građanskog terora, a ne herojske bitke."
+        },
+        {
+          "type": "funFact",
+          "text": "Odbijao je dopustiti da slika ode u Španjolsku sve dok je Franco na vlasti."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p3",
+      "title": "Egzil u MoMA-i",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nakon Univerzalne izložbe u Parizu, *Guernica* je otputovala, a zatim dugo boravila u [[MoMA]] u New Yorku, zaštićena tijekom Francovog [[hladnog rata]]. Vratio se u Madrid u **1981**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za vrijeme diktature slika je postala politički egzil. Njegov povratak u Španjolsku nakon Franca jednako je nacionalni koliko i estetski događaj."
+        },
+        {
+          "type": "image",
+          "asset": "guernica_picasso_painting_detail",
+          "ratio": "4:3",
+          "caption": "Crno, bijelo, sivo: rat bez herojstva."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p4",
+      "title": "Naslijeđe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Reproducirano ispred [[UN]] kao upozorenje, djelo ostaje univerzalni jezik protiv masakra nad civilima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da biste u potpunosti razumjeli Guernicu, Picassa, morate imati na umu jednu stvar: svaki tehnički detalj služi emociji ili ideji. Rad nikada nije samo dekorativan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontekst je važan koliko i stil. Datumi, mjesta, sponzori, javnost: sve to objašnjava zašto se obrazac pojavljuje u određenom trenutku, a ne prije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konačno, naslijeđe se mjeri dugoročno. Ono što danas vidimo u muzejima, filmovima ili popularnoj glazbi još uvijek nosi tragove tih izuma."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svaki novi rat donosi tužne vijesti *Guernici*. Djelo djeluje kao upozorenje da nikada ne možemo dovoljno slušati."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da biste u potpunosti razumjeli Guernicu, Picassa, morate imati na umu jednu stvar: svaki tehnički detalj služi emociji ili ideji. Rad nikada nije samo dekorativan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontekst je važan koliko i stil. Datumi, mjesta, sponzori, javnost: sve to objašnjava zašto se obrazac pojavljuje u određenom trenutku, a ne prije."
+        },
+        {
+          "type": "takeaway",
+          "text": "S Guernicom, Picasso je transformirao bombaški napad iz 1937. u globalno vizualno sjećanje na totalni rat."
+        }
+      ]
+    }
+  ]
+}

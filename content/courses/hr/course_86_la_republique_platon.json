@@ -1,0 +1,106 @@
+{
+  "id": "course_86_la_republique_platon",
+  "title": "Republika, Platon",
+  "subtitle": "4. stoljeće prije Krista",
+  "subject": "litterature",
+  "subcategory": "Ancient Greeks & Philosophers",
+  "description": "Kako bi definirao pravdu, Platon zamišlja idealan grad i mit o pećini. Republika nije izborni program: ona je ispitivanje duše i moći.",
+  "hero": {
+    "image": "la_republique_platon",
+    "ratio": "16:9",
+    "hook": "Što ako se pravda bolje razumije crtanjem cijelog grada?"
+  },
+  "sections": [
+    {
+      "id": "course_86_la_republique_platon_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oko **380. pr. Kr**, **Platon**, grčki filozof i osnivač Akademije u Ateni, napisao je **Republika**. Na grčkom kažemo *Politeia*. Dijalog počinje jednostavnim pitanjem: što je **pravda**? To answer this, **Sokrate**, central character in Plato's dialogues, proposes an astonishing detour: constructing in words an ideal city, the [[Kallipolis]], the “beautiful city”."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo nije fantastični roman. To je **analogija**: razumijevanje grada za razumijevanje duše, a duša za prosuđivanje moći. [[Alfred North Whitehead]], britanski filozof i matematičar, kasnije će reći da je sva zapadnjačka filozofija samo niz bilješki uz Platona. Ova knjiga objašnjava zašto."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p1",
+      "title": "Duša i grad, isti plan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Platon dijeli dušu na tri dijela. Želja, [[Epitumija]], povezana je s materijalnim apetitima. Hrabrost, [[Thumos]], sjedište je plemenitog gnjeva i snage karaktera. Razum, [[Logotipi]], sposoban je pristupiti istini. Idealan grad ima tri klase: proizvođače, **čuvare** vojnike, vođe. Pravda je da svaka strana radi svoj posao ne zadirući u druge."
+        },
+        {
+          "type": "image",
+          "asset": "plato_academy_athens_painting",
+          "ratio": "4:3",
+          "caption": "Platonova akademija u Ateni: razmišljanje o gradu za obrazovanje duše."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ideja je još uvijek šokantna: ona povezuje privatni moral i političku organizaciju. Za Platona, nepravedan grad proizvodi izopačene duše. A poremećena duša stvara pokvaren grad. Pravda nije samo dekret. To je unutarnja i kolektivna ravnoteža."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p2",
+      "title": "Tko bi trebao vladati?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Idealni lideri su [[kraljevi-filozofi]], oni koji vole istinu više od moći. Žive bez pretjeranog privatnog vlasništva. Dugo su obučavani u matematici i **dijalektici**, umijeću dijaloga koji traži istinu. Platon ne vjeruje atenskoj demokraciji, koja je osudila Sokrata da pije kukutu 399. godine."
+        },
+        {
+          "type": "funFact",
+          "text": "[[Karl Popper]], filozof 20. stoljeća, optužit će Republiku za najavu totalitarizma. Drugi to vide kao obrazovnu utopiju, a ne policijski priručnik. Rasprava je ostala otvorena dvadeset i pet stoljeća."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iza političke sheme stoji [[Platonova teorija ideja]]. Osjetilni svijet, onaj koji vidimo i dodirujemo, samo je sjena. Dobro vladati znači vidjeti **Dobro**, Vrhovnu ideju, a ne samo upravljati prolaznim mišljenjima."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p3",
+      "title": "Špilja: izranjanje iz iluzije",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**mit o špilji** najpoznatiji je odlomak u knjizi. Okovani zatvorenici vide samo sjene na zidu koje iza njih baca vatra. Jedan je pušten, izlazi na sunce, vraća se da upozori ostale. Nazivaju ga ludim. Obrazovanje, kaže Platon, nije punjenje vaze. To je okretanje našeg pogleda prema svjetlu."
+        },
+        {
+          "type": "image",
+          "asset": "plato_portrait_bust_sculpture",
+          "ratio": "1:1",
+          "caption": "Platon: misliti znači pristati napustiti poznate sjene."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova slika proteže se kroz stoljeća: mediji, ideologije, intelektualna udobnost. Izlazak iz špilje košta. Boravak u kući je ohrabrujući. Platon sugerira da se filozof mora vratiti kako bi prosvijetlio druge, čak i ako mu se rugaju. Znanje nije privatni luksuz. To je odgovornost."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p4",
+      "title": "Režimi koji trunu, djelo koje ostaje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Platon također opisuje pad režima: aristokracije, timokracije, oligarhije, demokracije, tiranije. Svaki režim se rađa iz poroka prethodnog. Lekcija nije fatalizam. To je budnost: institucije slijede karakter građana."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Republika** povezuje osobnu pravdu i političku pravdu. Kroz idealni grad i pećinu Platon se pita: što vrijedi moć koja ne traži istinu?"
+        }
+      ]
+    }
+  ]
+}

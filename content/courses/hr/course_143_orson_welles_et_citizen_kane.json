@@ -1,0 +1,126 @@
+{
+  "id": "course_143_orson_welles_et_citizen_kane",
+  "title": "Orson Welles i građanin Kane",
+  "subtitle": "1941",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "U **25 godina**, **Orson Welles** režira *Građanin Kane* (**1941**). Film izmišlja novi jezik: dubinsku oštrinu, flashbackove i istraživanje tajanstvene riječi, Pupoljak ruže.",
+  "hero": {
+    "image": "orson_welles_et_citizen_kane",
+    "ratio": "16:9",
+    "hook": "25-godišnje čudo od dečka snima novinskog mogula i izmišlja modernu kinematografiju."
+  },
+  "sections": [
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Desetljećima su kritičari *Građanin Kane* (**1941**) svrstavali među najveće filmove u povijesti. Njegov direktor, **Orson Welles**, ima samo **25 godina**. Film prati život novinskog mogula Charlesa Fostera Kanea i postavlja jednostavno pitanje: možete li doista poznavati čovjeka?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvan zapleta, Welles izmišlja novi jezik. On miješa tehnike šutnje i govora kako bi govorio o moći, samoći i sjećanju."
+        }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p1",
+      "title": "Čudo od djeteta koje dobiva sva prava",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**George Orson Welles** najprije se afirmirao u kazalištu, zatim na radiju. **O30. listopada 1938.**, on adaptira *Rat svjetova*. Imitirajući lažne vijesti, on navodi ljude da povjeruju u invaziju izvanzemaljaca. Dio Amerike je u panici. Odjednom, Hollywood to želi."
+        },
+        {
+          "type": "image",
+          "asset": "orson_welles_war_of_worlds_radio_1938",
+          "ratio": "4:3",
+          "caption": "1938: Welles terorizira Ameriku lažnim radijskim izvješćima."
+        },
+        {
+          "type": "funFact",
+          "text": "[[RKO Slike]], veliki studio u poteškoćama, nudi Wellesu rijedak ugovor: potpunu slobodu subjekta i [[Final Cut]], to jest pravo da sam odlučuje o konačnom rezu."
+        },
+        {
+          "type": "paragraph",
+          "text": "U Hollywoodu je takva moć za početnika gotovo nečuvena. Welles je to iskoristio kako bi kontrolirao sve: scenarij, glumce, slike, zvuk."
+        }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p2",
+      "title": "Dubina polja mijenja izgled",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sa **snimateljem Greggom Tolandom**, Welles odbija klasične zamućene pozadine. Nameću [[Dubina polja (duboki fokus)]]: sve ostaje oštro, od prednjeg do drugog plana. Nekoliko akcija se može igrati u isto vrijeme u istom okviru, bez rezanja."
+        },
+        {
+          "type": "image",
+          "asset": "citizen_kane_deep_focus_cinematography",
+          "ratio": "4:3",
+          "caption": "U Citizen Kaneu svaki kadar govori nekoliko stvari odjednom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Welles također često snima iz niskog kuta, s nisko postavljenom kamerom, kako bi povećao likove i naglasio njihovu moć. Stropovi postaju vidljivi. Prostor govori koliko i dijalozi."
+        }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p3",
+      "title": "Ružin pupoljak ili nemoguća istraga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Film počinje s krajem: Kane umire sam u svojoj palači, [[Xanadu]]. Njegova posljednja riječ je **\"Pupoljak ruže\"**. Novinar istražuje. Kroz flashbackove, prijatelji i neprijatelji pričaju oprečne verzije istog čovjeka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Welles odbija jednostavnu biografiju. Za neke je Kane idealist. Za druge, tiranin. Gledatelj slaže dijelove, a da nikada ne dobije niti jednu istinu. Misterij Rosebud ostaje elegantan mamac: ključ premalen da bi se otključao cijeli život."
+        }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p4",
+      "title": "Prokleti film, pa model",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[William Randolph Hearst]], pravi novinarski mogul, prepoznaje se u Kaneu. Pokušao je ugušiti film: bojkot u svojim novinama, pritisak na kina. *Građanin Kane* bio je komercijalni neuspjeh nakon objavljivanja. Kasnije su ga francuski [[francuski novi val]] postavili kao standard: redatelja-autora koji sve kontrolira."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1938",
+              "title": "Rat svjetova",
+              "detail": "Radio prijevara pokreće Wellesa."
+            },
+            {
+              "date": "1941",
+              "title": "Građanin Kane",
+              "detail": "Objavljivanje filma, trenutni komercijalni neuspjeh."
+            },
+            {
+              "date": "1950-ih",
+              "title": "Ponovno otkriće",
+              "detail": "Europska kritika rehabilitirala je film."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*Građanin Kane* dokazao je da film može biti istraživanje moći i sjećanja. Njegove jasne slike, njegovi bljeskovi i sloboda uređivanja stvorili su modernost koju kinematografija još uvijek istražuje."
+        }
+      ]
+    }
+  ]
+}

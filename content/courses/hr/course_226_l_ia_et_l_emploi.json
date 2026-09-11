@@ -1,0 +1,122 @@
+{
+  "id": "course_226_l_ia_et_l_emploi",
+  "title": "AI i zapošljavanje",
+  "subtitle": "Prijetnja ili novi val?",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Svaka tehnološka revolucija stvorila je strahove za zapošljavanje. Ali generativna umjetna inteligencija po prvi put utječe na **intelektualac** profesije, ne samo na fizičku snagu.",
+  "hero": {
+    "image": "l_ia_et_l_emploi",
+    "ratio": "16:9",
+    "hook": "Strojevi su već zamijenili ruke. Hoće li sada zamijeniti mozak?"
+  },
+  "sections": [
+    {
+      "id": "course_226_l_ia_et_l_emploi_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hoće li umjetna inteligencija uništiti milijune radnih mjesta ili stvoriti nova? Ovo se pitanje pojavilo sa svakim većim tehnološkim napretkom u posljednja dva stoljeća."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovoga puta novost je drugdje: AI više ne zamjenjuje samo fizičku silu, već zadatke za koje smo mislili da su rezervirani za ljudski um, poput pisanja teksta ili analize datoteke. Ovaj tečaj prati ovaj drevni strah i istražuje što se danas stvarno mijenja."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p1",
+      "title": "Strah star koliko i stroj",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Strah da će strojevi zamijeniti ljude nije nov. Početkom 19. stoljeća [[Luditi (1811.-1816.)]], britanski tekstilni radnici, uništili su mehaničke tkalačke stanove koji su ugrozili njihov know-how."
+        },
+        {
+          "type": "image",
+          "asset": "luddites_industrial_revolution_machine_breaking",
+          "ratio": "4:3",
+          "caption": "U 19. stoljeću Ludditi su napadali strojeve koji su ugrožavali njihovu profesiju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svaki veći tehnološki val slijedio je istu logiku: uništava određena radna mjesta, ali stvara druga negdje drugdje. Prelazak s poljoprivrede na industriju smanjio je udio poljoprivrednika sa 40% na 2% radno sposobnog stanovništva u jednom stoljeću, bez uzroka trajne nezaposlenosti, jer su se ti radnici selili u nove sektore."
+        },
+        {
+          "type": "funFact",
+          "text": "Rečeno je da riječ \"sabotaža\" dolazi od francuskih radnika koji su bacali svoje drvene cipele, sabote, u zupčanike strojeva kako bi ih blokirali, iako se o točnom podrijetlu riječi još uvijek raspravlja."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p2",
+      "title": "Proboj: AI napada profesije znanja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Generativna umjetna inteligencija (AI)]] označava pravu promjenu, jer više ne slijedi samo unaprijed određena pravila: stvara originalni sadržaj. Klasično računalstvo zamijenilo je zadatke koji se ponavljaju poput unosa podataka. Moderna umjetna inteligencija može napisati, analizirati ugovor, skladati glazbu ili čak pomoći u postavljanju medicinske dijagnoze."
+        },
+        {
+          "type": "image",
+          "asset": "AI_generative_writing_artificial_intelligence",
+          "ratio": "4:3",
+          "caption": "Generativna umjetna inteligencija bavi se zadacima za koje se mislilo da su rezervirani za ljudski um."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova svestranost posebno ističe [[bijelih ovratnika]], profesije u uslužnom sektoru čiji je glavni radni alat analiza. Prema posljednjim izvješćima, odvjetnici, urednici i financijski analitičari su među profesijama koje su najviše izložene ovoj promjeni."
+        },
+        {
+          "type": "funFact",
+          "text": "Godine 1950. Alan Turing je predvidio da bi stroj jednog dana mogao prevariti čovjeka simulirajući njegovo razmišljanje. Neki AI-ji su od tada smatrani koautorima stvarnih znanstvenih patenata."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p3",
+      "title": "Kopilot radije nego zamjena?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Optimističniji pogled vidi AI kao pomoćnika, a ne kao zamjenu. Automatiziranjem manje zanimljivih zadataka, poput dokumentarnog istraživanja ili sažetaka, profesionalcima bi ostalo više vremena za ljudski, etički ili strateški aspekt njihova rada."
+        },
+        {
+          "type": "paragraph",
+          "text": "Već se pojavljuju nova zanimanja, poput [[Brzi inženjer]], koji zna formulirati precizne upute za dobivanje najboljeg od umjetne inteligencije. Liječnik uz pomoć umjetne inteligencije ne nestaje: može preciznije pratiti više pacijenata."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ono što zabrinjava ostaje brzina promjena. Prethodne industrijske revolucije trajale su desetljećima, ostavljajući vrijeme za prilagodbu. Transformacija umjetne inteligencije odvija se tijekom nekoliko godina, što može stvoriti jaz u vještinama koji je teško zatvoriti za mnoge radnike."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p4",
+      "title": "Ponovno promišljanje rada i njegove vrijednosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ishod ove promjene ovisit će prije svega o političkim izborima koji je prate. Kontinuirana obuka postaje neophodna kako bi se radnicima pomoglo da razviju nove vještine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rasprava o preraspodjeli bogatstva koju su stvorili strojevi također ponovno izbija na površinu. Ako AI omogućuje proizvodnju više s manje radnika, kako možemo financirati naše društvene sustave? Upravo u tom kontekstu sve više se proteže ideja o [[Univerzalni temeljni dohodak (UBI)]], ali ne kao utopija, već kao prava sigurnosna mreža."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neki također predlažu porez na korištenje umjetne inteligencije kao kompenzaciju za smanjenje doprinosa za zapošljavanje. AI nas u konačnici tjera da preispitamo samo mjesto rada u našim životima."
+        },
+        {
+          "type": "takeaway",
+          "text": "Prethodne industrijske revolucije uništile su radna mjesta, dok su druga stvarala drugdje. Generativna umjetna inteligencija prva je koja prijeti kognitivnim i kreativnim zadacima u isto vrijeme, čineći prilagodbu hitnijom nego ikada."
+        }
+      ]
+    }
+  ]
+}

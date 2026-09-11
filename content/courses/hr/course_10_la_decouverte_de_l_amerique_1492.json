@@ -1,0 +1,139 @@
+{
+  "id": "course_10_la_decouverte_de_l_amerique_1492",
+  "title": "Otkriće Amerike",
+  "subtitle": "1492",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Dana 12. listopada 1492. Kristofor Kolumbo stigao je do otoka na Bahamima za koji je vjerovao da je Japan. Pogreška u navigaciji otvara globalizaciju.",
+  "hero": {
+    "image": "la_decouverte_de_l_amerique_1492",
+    "ratio": "16:9",
+    "hook": "Tražio je Aziju. Pogodio je kontinent koji je Europa zaboravila."
+  },
+  "sections": [
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**O12. listopada 1492.**, nakon više od dva mjeseca na Atlantiku, mornar s Pinte viče \"Zemlja!\". **Kristofor Kolumbo**, Genovežanin u službi Španjolske, iskrcava se na otok na Bahamima koji naziva San Salvador. Vjeruje da stiže u Aziju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova greška će ujediniti dvije hemisfere. Potaknuta zamahom [[Španjolska rekonkvista (1492.)]], ponovnog osvajanja Granade od muslimana iste godine, ekspedicija je za Europu označila prijelaz iz srednjeg vijeka u modernu eru."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p1",
+      "title": "Put prema zapadu, velika greška",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kolumbo ne nastoji dokazati da je Zemlja okrugla. [[Eratosten]], grčki učenjak iz 3. st. pr. Kr., već je to izračunao. Pravi cilj je ekonomski: doći do začina i svile sa zapada, bez prolaska kroz Osmanlije koji kontroliraju istočne rute."
+        },
+        {
+          "type": "image",
+          "asset": "christopher_columbus_portrait",
+          "ratio": "4:3",
+          "caption": "Kristofor Kolumbo, đenovljanski moreplovac u službi katoličkih monarha."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njegova pogreška: podcjenjivanje zemljinog opsega. Smješta Japan na **4500 km** od Kanara, u usporedbi s gotovo **20000** u stvarnosti. Portugal odbija. Izabela od Kastilje, španjolska kraljica, prihvaća. [[Antisepsa]], ugovorom, Kolumbo postaje admiral, potkralj i prima **10%** od dobiti."
+        },
+        {
+          "type": "funFact",
+          "text": "Kolumbo je pisao o viđenju sirena na Karibima. Bili su to morske krave. Razočarano je primijetio da su mnogo manje lijepe nego u legendama."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p2",
+      "title": "70 dana do San Salvadora",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**A 3. kolovoza 1492. god.** tri su broda napustila Palos u Španjolskoj: **Pinta**, **Niña** i **Santa María**. Zahvaljujući obitelji [[Pinzón]], bogatim lokalnim brodovlasnicima, posada od **90 muškaraca** je iskusna. Prijelaz traje **70 dana**. Kolumbo vodi dva dnevnika: jedan pravi, drugi falsificirani, kako bi umirio svoje mornare."
+        },
+        {
+          "type": "image",
+          "asset": "santa_maria_caravel_ship",
+          "ratio": "4:3",
+          "caption": "Santa María, vodeći brod ekspedicije 1492."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dana **O 12. listopada** susreo je [[Taínos]], autohtone stanovnike Velikih Antila. Uvjeren da je u Indiji, on ih naziva \"Indijancima\". Primjećuje njihovo zlato i njihovu prividnu poslušnost. Kolonijalni pogled je već tu."
+        },
+        {
+          "type": "funFact",
+          "text": "La Niña se zapravo zvala *Santa Clara*. Santa María je dobila nadimak *La Gallega*, jer je izgrađena u Galiciji."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p3",
+      "title": "Kolumbijska burza",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dolazak Europljana pokrenuo je **kolumbijsku razmjenu**, masovni prijenos biljaka, životinja i bolesti između dva svijeta. Prema Europi: krumpir, kukuruz, rajčica, kakao, duhan. Prema Americi: pšenica, šećer, kava, konji, goveda. Ploče i krajolici s obje strane zauvijek se mijenjaju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cijena je užasna. Velike boginje, ospice, gripa ubijaju **50 do 90%** autohtonog stanovništva u jednom stoljeću. Diplomatski, Španjolska i Portugal podijelili su globus [[Ugovor u Tordesillasu (1494.)]], bez konzultacija s bilo kim."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "3. kolovoza 1492. godine",
+              "title": "Polazak iz Palosa",
+              "detail": "Tri su broda isplovila prema zapadu."
+            },
+            {
+              "date": "12. listopada 1492. godine",
+              "title": "San Salvador",
+              "detail": "Kolumbo se iskrcava na Bahame."
+            },
+            {
+              "date": "1494",
+              "title": "Tordesillas",
+              "detail": "Španjolska i Portugal dijele svijet."
+            },
+            {
+              "date": "1507",
+              "title": "Amerika",
+              "detail": "Waldseemüller pokrštava Novi svijet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p4",
+      "title": "Kontinent bez svog otkrivača",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kolumbo je umro u **1506** ne priznavši svoje otkriće. To je [[Amerigo Vespucci]], firentinski moreplovac, koji razumije da je to “Mundus Novus”, Novi svijet. U **1507**, kartograf Waldseemüller nazvao je kontinent **Amerika**. Firentinčevo ime ulazi na kartu svijeta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Brutalni upravitelj u Hispanioli (današnji Haiti i Dominikanska Republika), Kolumbo je čak završio vraćen natrag u lancima. Izvan čovjeka, **1492** otvara globalizaciju: američki novac pritječe, središte trgovine seli se s Mediterana na Atlantik. Europa postaje okosnica sustava četiriju kontinenata."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kolumbo umire uvjeren da je stigao do Azije. Njegova pogreška ujedinila je dvije hemisfere i pokrenula nepovratan biološki, ekonomski i ljudski preokret."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "course_75_la_photosynthese_expliquee_simplement",
+  "title": "Fotosinteza je jednostavno objašnjena",
+  "subtitle": "Biljke i energija",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Biljke čine nešto nevjerojatno: kuhaju šećer pomoću svjetla, vode i zraka. I daju nam kisik na dar.",
+  "hero": {
+    "image": "la_photosynthese_expliquee_simplement",
+    "ratio": "16:9",
+    "hook": "List je solarna kuhinja: svjetlo, voda, zrak... i evo šećera."
+  },
+  "sections": [
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zamislite minijaturnu tvornicu u svakom listu. Potrebna su tri svjetovna sastojka: **svjetlost od Sunca**, **voda** iz korijena i **CO₂** iz zraka. Izlazi sa **šećer** za rast i izdaje **kisik**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Taj se podvig zove **fotosinteza**. Bez njega nema šuma, nema kisika za disanje, gotovo da nema složenog života na Zemlji."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p1",
+      "title": "Gdje se to događa u listu?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U biljnoj stanici, zelene organele, **kloroplasti**, sadrže [[Klorofil]]. Ovaj pigment uglavnom hvata plavu i crvenu svjetlost. Zeleno se vraća: zato nam lišće izgleda zeleno."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_photosynthesis_sunlight_chloroplasts",
+          "ratio": "auto",
+          "caption": "Lišće hvata sunčevu svjetlost za fotosintezu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jednostavna jednadžba: CO₂ + voda + svjetlost → šećer + kisik. Plin ulazi kroz sitne pore, [[puči]]. Voda izvire iz korijena. Šećer postaje drvo, voće, korijenje; kisik odlazi u zrak."
+        },
+        {
+          "type": "funFact",
+          "text": "Klorofil \"odbija\" zeleno. Više voli plavu i crvenu, učinkovitije za pobuđivanje svojih elektrona i pokretanje energetskog stroja."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p2",
+      "title": "Dva koraka: snimanje, zatim izrada",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prvo, **svjetlosna faza**. Svjetlost razbija molekule vode. Kisik izlazi. Energija se skladišti u dvije kemijske \"baterije\", **ATP** i **NADPH**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sljedeća je **faza proizvodnje**, [[Calvinov ciklus]], nazvan po kemičaru **Melvin Calvin**. Energijom iz baterija biljka spaja ugljik iz CO₂ u glukozu. Nema potrebe za izravnom sunčevom svjetlošću u ovoj fazi, ali to u potpunosti ovisi o tome što je svjetlost proizvela prije."
+        },
+        {
+          "type": "funFact",
+          "text": "Kako bi pratio putanju ugljika u listu, Calvin je koristio radioaktivne izotope iz istraživanja atomske bombe. Nobelova nagrada u **1961**."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p3",
+      "title": "Kad je kisik promijenio planet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Otprilike prije **2,4 mililitara Godine**, fotosintetske bakterije, **cijanobakterije**, počele su masovno oslobađati kisik. Ovo je **Velika oksidacija**. Za mnoge organizacije tog vremena to je bio otrov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zatim je kisik omogućio ozonski omotač i mnogo učinkovitije disanje. Zrak koji udišemo zapravo je \"otpadni proizvod\" milijardi godina fotosinteze."
+        },
+        {
+          "type": "funFact",
+          "text": "Otprilike **polovica** kisika na Zemlji dolazi iz fitoplanktona u oceanima, a ne samo iz šuma."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p4",
+      "title": "Skroman učinak, golema uloga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "List pretvara samo **1 do 3%** primljene solarne energije u biomasu. Na globalnoj razini, to je dovoljno za napajanje prehrambenih lanaca i apsorbiranje enormnih količina CO₂."
+        },
+        {
+          "type": "paragraph",
+          "text": "Otuda interes za šume, oceane... pa čak i umjetnu fotosintezu za klimu. Morski puž, *Elysia chlorotica*, ide toliko daleko da \"krade\" kloroplaste od algi kako bi malo živio od sunčeve energije."
+        },
+        {
+          "type": "takeaway",
+          "text": "Fotosinteza pretvara svjetlost, vodu i CO₂ u šećer i regenerira kisik. To je solarno kuhanje u osnovi gotovo cijelog života."
+        }
+      ]
+    }
+  ]
+}

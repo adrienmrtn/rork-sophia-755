@@ -1,0 +1,139 @@
+{
+  "id": "course_6_la_peste_noire_en_europe_1347_1353",
+  "title": "Crna smrt u Europi",
+  "subtitle": "1347-1353",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Između 1347. i 1353. bubonska kuga ubila je 30 do 60% Europljana. Zdravstvena katastrofa koja potresa srednjovjekovno društvo i ubrzava pomak prema novom svijetu.",
+  "hero": {
+    "image": "la_peste_noire_en_europe",
+    "ratio": "16:9",
+    "hook": "U šest godina Europa gubi do polovice stanovništva."
+  },
+  "sections": [
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Između **1347** i **1353** Europu je zahvatila **Crna smrt**. Uzrokovana bakterijom **Yersinia pestis**, ubija između **30 i 60%** populacije, ili **25 do 50 tisuća kuna** ljudi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Europljani su već oslabljeni glađu [[Malo ledeno doba]], zahlađenjem klime koje je pokvarilo žetvu. Pošast nije samo zdravstvena kriza. To je povijesni akcelerator: uzdrmava vlasteoski poredak i prisiljava društvo da se ponovno izgradi drugačije."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p1",
+      "title": "Od Azije do Italije",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bakterija prvo cirkulira među glodavcima u srednjoj Aziji. [[Pax Mongolica]], razdoblje relativnog mira pod Mongolskim Carstvom, i [[Put svile]], trgovačka mreža koja povezuje Aziju s Europom, ponudili su mu sigurne rute. Na đenovskom pultu [[Caffa]], na Krimu, opsjednutom od strane [[Zlatna Horda]] (mongolsko carstvo stepa), bolest se pomiče prema Mediteranu. Galije bježe u Italiju."
+        },
+        {
+          "type": "image",
+          "asset": "black_death_burial_medieval_plague",
+          "ratio": "4:3",
+          "caption": "Ukopi kuge: Europa otkriva masovnu smrt."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Olistopada 1347**, pristali su u **Messini**, na Siciliji. Unatoč protjerivanju brodova, zlo je već na pristaništu. Godine **1348** stigao je do Marseillea, a potom i cijele Europe preko mreže talijanskih trgovaca."
+        },
+        {
+          "type": "funFact",
+          "text": "Opsada Caffe često se navodi kao jedan od prvih primjera biološkog ratovanja: Mongoli su navodno katapultirali zaražene leševe preko zidina."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p2",
+      "title": "Nemoćna medicina",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Liječnici se oslanjaju na [[Galen]], starogrčkog liječnika, i [[Teorija mijazme]]: ideju da bolesti dolaze iz pokvarenog zraka. Oni ne vide pravog vektora, štakorsku buhu ([[Xenopsylla cheopis]]). Kad štakori uginu, buhe prelaze na ljude."
+        },
+        {
+          "type": "image",
+          "asset": "plague_doctor_mask_beak",
+          "ratio": "4:3",
+          "caption": "Doktor kuge s maskom s kljunom: zaštita više simbolična nego učinkovita."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bubonski oblik otiče u limfnim čvorovima. Sepsa pocrni kožu. Pneumonija se prenosi s čovjeka na čovjeka i ubija u **24 do 48 sat**. U prepunim i prljavim gradovima širenje je vrlo brzo."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p3",
+      "title": "Strah, flagelanti, pogromi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Društvo posrće. [[Flagelanti]] bičuju se u javnosti kako bi umilostivili Boga. Umjetnost izmišlja Danses Macabres. U nedostatku objašnjenja, tražimo krivce: [[Pogromi Židova (1348.-1349.)]] okrvavili su dolinu Rhône i Germansko Carstvo. Optuženi za trovanje bunara, tisuće Židova su masakrirani. Papa [[Klement VI]], tada u Avignonu, pokušao ih je zaštititi. Premalo, prekasno."
+        },
+        {
+          "type": "funFact",
+          "text": "U Avignonu je Klement VI ostao između dvije velike vatre kako bi “pročistio zrak”. Vrućina je držala buhe na odstojanju: preživio je."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Boccaccio]], firentinski pisac, opisuje kako očevi napuštaju svoje sinove. Dobročinstvo, susjedstvo, obitelj: sve se ruši pod strahom od zaraze."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1346",
+              "title": "Caffa",
+              "detail": "Kuga stiže do genoveške trgovačke postaje na Krimu."
+            },
+            {
+              "date": "1347",
+              "title": "Messina",
+              "detail": "Genoveške galije uvoze pošast u Europu."
+            },
+            {
+              "date": "1348",
+              "title": "Europski val",
+              "detail": "Francuska, Engleska, Carstvo: smrt se širi."
+            },
+            {
+              "date": "1353",
+              "title": "Refluks",
+              "detail": "Epidemija se smiruje, Europa se transformira."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p4",
+      "title": "Nakon smrti, smjena",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prema **1353**, pandemija jenjava. Radne snage je postalo malo. Plaće rastu, corvée padaju, kmetstvo se smanjuje na zapadu. Gospodari moraju pregovarati. Katastrofa je, paradoksalno, osnažila preživjele."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neuspjeh vlasti u suočavanju s ovom pošasti također potiče kritičko razmišljanje. Više promatramo, sumnjamo u stare dogme. Pražnjenjem sela i preraspodjelom nasljedstva, crna kuga je, unatoč sebi, pripremila teren za renesansu."
+        },
+        {
+          "type": "takeaway",
+          "text": "Između **1347** i **1353**, crna smrt ubila je pola Europe. Ovaj demografski šok slabi vlastelinski poredak, podiže cijenu rada i ubrzava ulazak u novi svijet."
+        }
+      ]
+    }
+  ]
+}

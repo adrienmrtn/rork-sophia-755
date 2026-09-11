@@ -1,0 +1,108 @@
+{
+  "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment",
+  "title": "Što je (stvarno) efekt staklenika?",
+  "subtitle": "Klima i atmosfera",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Efekt staklenika nije primarno problem: nevidljivi omotač sprječava Zemlju da se smrzne. Pravi problem je kada ga prebrzo zgusnete.",
+  "hero": {
+    "image": "qu_est_ce_que_l_effet_de_serre",
+    "ratio": "16:9",
+    "hook": "Bez efekta staklenika Zemlja bi bila ledena pustinja. Uz previše, pregrijava se."
+  },
+  "sections": [
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zamislite zatvoreni automobil na suncu: prozori propuštaju svjetlost, ali toplina teško izlazi van. Putnički prostor se zagrijava. Zemljin [[efekt staklenika]] radi pomalo ovako, sa zrakom umjesto stakla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj fenomen je **prirodan** i vitalan. Bez njega bi prosječna temperatura na Zemlji pala prema **-18 °C**. S njim smo oko **+15 °C**. Sadašnji problem nije njegovo postojanje: to je njegovo brzo **Pojačavanje** našim aktivnostima."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p1",
+      "title": "Kako planet čuva svoju toplinu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sunce uglavnom šalje vidljivu svjetlost. Atmosfera to propušta. Tlo i oceani se zagrijavaju, a zatim zrače tu energiju natrag u obliku **infracrvene topline**, valova koji su \"duži\" od vidljive svjetlosti."
+        },
+        {
+          "type": "image",
+          "asset": "factory_chimneys_greenhouse_gas_emissions",
+          "ratio": "auto",
+          "caption": "Industrijske emisije pojačavaju učinak staklenika."
+        },
+        {
+          "type": "paragraph",
+          "text": "Određeni plinovi, [[Staklenički plinovi]], apsorbiraju tu toplinu i zrače je u svim smjerovima, pa tako i prema tlu. Dušik i kisik, većina u zraku, jedva obavljaju ovaj posao. Vodena para, **CO₂** i **metan** to rade vrlo dobro."
+        },
+        {
+          "type": "funFact",
+          "text": "Naziv \"efekt staklenika\" pomalo dovodi u zabludu. Pravi staklenik grije se uglavnom blokiranjem vrućeg zraka koji se diže. Atmosfera zadržava toplinu apsorbirajući infracrvene zrake."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p2",
+      "title": "Kad ljudi podebljaju pokrivač",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od industrijske revolucije izgaraju se ugljen, nafta i plin. Ovaj ugljik, zakopan pod zemljom milijunima godina, vraća se u zrak. Krčenjem šuma također se smanjuju šume koje su apsorbirale CO₂. Uzgoj stoke i riže dodaje metan, oko **80 puta** više \"grijanja\" od CO₂ tijekom 20 godina."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rezultat: koncentracija CO₂ porasla je s približno **280** na više od **420** dijelova na milijun. Takva razina nije viđena od [[pliocen]], prije otprilike **3 milijuna godina**, kada su mora bila viša."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p3",
+      "title": "Što energičnije klimatske promjene",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[IPCC]], koji sintetizira rad tisuća klimatologa, jasan je: zatopljenje od 1950. godine je bez presedana tijekom tisućljeća, a njegovo ljudsko podrijetlo je utvrđeno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Više energije u zraku i oceanima znači više ekstrema: sušnije suše, jače kiše, topljenje ledenjaka i ledenih kapa, podizanje razine mora. I akcelerator: kada bijeli led nestane, tamno tlo i voda apsorbiraju više sunčeve svjetlosti. [[Zemaljski albedo]] pada, a planet se zagrijava još brže."
+        },
+        {
+          "type": "funFact",
+          "text": "Venera pokazuje \"upakirani\" efekt staklenika: atmosfera od 96% CO₂, i oko **460 °C** na tlu, dovoljno da se otopi olovo."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
+      "title": "Ograničite povećanje, prilagodite se ostatku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Međunarodni cilj ima za cilj ostati ispod **+1,5°C** ili **+2°C** u usporedbi s predindustrijskom erom, kako bi se izbjegli opasni pragovi kao što je otapanje [[permafrost]], koje bi oslobodilo još više metana."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dvije poluge: **smanjenje** emisija (čista energija, trijeznost, šume) i **Prilagodi** onome što je već predano. CO₂ ostaje u zraku stoljećima: ono što emitiramo danas traje dugo."
+        },
+        {
+          "type": "takeaway",
+          "text": "Bez prirodnog efekta staklenika, Zemlja bi se smrzavala oko **-18 °C**. Njegovo pojačanje fosilnim gorivima gura CO₂ do razina koje nisu viđene **3 milijuna godina**."
+        }
+      ]
+    }
+  ]
+}

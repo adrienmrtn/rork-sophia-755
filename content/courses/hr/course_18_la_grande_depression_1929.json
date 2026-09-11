@@ -1,0 +1,135 @@
+{
+  "id": "course_18_la_grande_depression_1929",
+  "title": "Velika depresija",
+  "subtitle": "1929",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "**O24. listopada 1929.**, Wall Street kolapsira. U tri godine nezaposlenost je pogodila **25%** Amerikanaca, a kriza otvara put ekstremima u Europi.",
+  "hero": {
+    "image": "la_grande_depression_1929",
+    "ratio": "16:9",
+    "hook": "Četvrtak na Wall Streetu i svijet pada u desetljeće bijede."
+  },
+  "sections": [
+    {
+      "id": "course_18_la_grande_depression_1929_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**O24. listopada 1929.**, **Crni četvrtak**, njujorška burza propada. Nije to samo financijska nesreća. To je početak **Nizak tlak**, globalne ekonomske paralize."
+        },
+        {
+          "type": "paragraph",
+          "text": "U tri godine, bogatstvo proizvedeno u svijetu padne za otprilike **15%**. Nezaposlenost pogađa **25%** Amerikanaca. Europske demokracije posrću. Ovako je balon odnio sve."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p1",
+      "title": "Burne dvadesete i mjehurić",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **Ručnim dvadesetima** (1920-ih), Amerika je trošila na kredit: automobile, radio, kućanske aparate. Između 1920. i 1929. **Dow Jones**, indeks koji mjeri cijene glavnih američkih dionica, pomnožen sa šest. Motor mjehurića: [[Kupnja dionica uz maržu]]. Posuđujemo kako bismo kupili vrijednosne papire, kladeći se na njihov porast."
+        },
+        {
+          "type": "image",
+          "asset": "roaring_twenties_jazz_1920s",
+          "ratio": "4:3",
+          "caption": "Burne dvadesete: euforija, krediti i špekulacije."
+        },
+        {
+          "type": "funFact",
+          "text": "Na dan pada, na burzi u Chicagu, brokeri su objesili virtualnu rodu... optuženu da je donijela nesreću umjesto blagostanja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Od 1928. proizvodnja je stagnirala, a cijene poljoprivrednih proizvoda pale. Tvornice proizvode više nego što ljudi mogu kupiti: ovo je [[hiperprodukcija]]. Tržište je [[precijenjen]], preskupo u odnosu na stvarnost. Kad sumnja prevlada, svi prodaju u isto vrijeme."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p2",
+      "title": "Od kraha do bankrota banaka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**O24. listopada**, jedanaest milijuna prodajnih naloga. Na **29**, \"crni utorak\", pad se ubrzava. Između 1929. i 1932. tržište je izgubilo **89%** svoje vrijednosti. Zatim dolaze [[bankovne trke]]: valovi kupaca koji u panici podižu svoj novac. Oko **9,000** Američke banke će bankrotirati."
+        },
+        {
+          "type": "image",
+          "asset": "unemployed_queue_great_depression",
+          "ratio": "4:3",
+          "caption": "Redovi nezaposlenih: socijalno lice krize."
+        },
+        {
+          "type": "funFact",
+          "text": "Švorc Amerikanci upregli su konje u svoje automobile kako bi uštedjeli gorivo. Zvali su ih \"Hoover automobili\", prema imenu predsjednika [[Herbert Hoover]]-a, koji se smatrao previše pasivnim pred krizom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez kredita tvornice se zatvaraju. Proizvodnja pada za otprilike **46%**. Bez socijalne zaštite dostojne toga imena, milijuni ljudi ovise o pučkim kuhinjama."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p3",
+      "title": "Kriza stiže u Europu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sjedinjene Države vraćaju svoje zajmove. Europa se guši. The [[Zlatni standard]], a system where currencies are linked to gold, propagates the crisis: to keep gold, central banks raise interest rates, which further slows down the economy."
+        },
+        {
+          "type": "paragraph",
+          "text": "The policies of [[deflacija]] (lowering prices and wages to “clean up”) are failing. U Njemačkoj nezaposlenost doseže **30%**. Adolf Hitler exploits desperation against [[Weimar]], the fragile German republic. U **siječnju 1933** došao je na vlast. Ekonomska kriza otvara vrata političkoj katastrofi."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p4",
+      "title": "Roosevelt i New Deal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Izabran u **1932**, **Franklin D. Roosevelt** pokreće [[Rooseveltov New Deal (1933.)]]. Kraj čiste [[laissez-faire]], ideje da država ne smije dirati tržište. Država računa na [[PONOVNO POKRENI]]: veliki radovi, regulacija banaka, početak socijalne zaštite. Oporavak je ostao krhak... sve do mobilizacije 1941."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "24. listopada 1929",
+              "title": "Crni četvrtak",
+              "detail": "Kolaps Wall Streeta."
+            },
+            {
+              "date": "1929-1933",
+              "title": "Propasti banaka",
+              "detail": "Oko 9000 američkih banaka nestaje."
+            },
+            {
+              "date": "1933",
+              "title": "New Deal",
+              "detail": "Roosevelt nameće državnu intervenciju."
+            },
+            {
+              "date": "siječnja 1933",
+              "title": "Hitler na vlasti",
+              "detail": "Njemačka kriza raspiruje nacizam."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Nakon pada **1929**, Dow Jones je izgubio **89%** svoje vrijednosti, **25%** Amerikanaca ostalo je bez posla, a kriza je pogodovala dolasku Hitlera na vlast u **1933**."
+        }
+      ]
+    }
+  ]
+}

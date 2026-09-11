@@ -1,0 +1,104 @@
+{
+  "id": "course_213_l_evasion_fiscale_des_multinationales",
+  "title": "Utaja poreza od strane multinacionalnih kompanija",
+  "subtitle": "Kako GAFAM plaća tako male poreze?",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Digitalni divovi često plaćaju mizerne poreze u usporedbi sa svojim profitom. To nije uvijek protuzakonito: to je rezultat rupa u međunarodnom pravu.",
+  "hero": {
+    "image": "l_evasion_fiscale_des_multinationales",
+    "ratio": "16:9",
+    "hook": "U 2014. Apple je u Irskoj platio efektivnu poreznu stopu od blizu 0,005%. Kako je to moguće?"
+  },
+  "sections": [
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GAFAM, odnosno Google, Apple, Facebook (Meta), Amazon i Microsoft su među najbogatijim kompanijama na svijetu. Međutim, razmjerno svojoj dobiti, oni često plaćaju mnogo manje poreza od tradicionalnih malih i srednjih poduzeća."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo nije prijevara u strogom smislu: to je **optimizacija pora**, odnosno vješto iskorištavanje rupa u međunarodnom pravu. Ovaj mehanizam uskraćuje državama stotine milijardi dolara svake godine. Evo kako to funkcionira i kako svijet pokušava na to odgovoriti."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p1",
+      "title": "Porez osmišljen za tvornice, a ne za digital",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Međunarodni porezni sustav osmišljen je početkom 20. stoljeća za industrijsku ekonomiju: tvrtka je morala posjedovati tvornice ili urede u zemlji, što se naziva [[stalna poslovna jedinica]], da bi tamo bila oporezovana."
+        },
+        {
+          "type": "paragraph",
+          "text": "Digitalna tehnologija je prekinula ovu vezu s teritorijem. Tvrtka danas može dominirati tržištem, uhvatiti podatke milijuna korisnika i zaraditi mnogo novca u nekoj zemlji, a da tamo ne posjeduje niti jednu zgradu. Tada može odvojiti mjesto gdje zarađuje svoj novac od mjesta gdje ga prijavljuje."
+        },
+        {
+          "type": "funFact",
+          "text": "Porezna uprava SAD-a je 2014. godine otkrila da je Microsoft prebacio 39 milijardi dolara dobiti u Portoriko kroz prava intelektualnog vlasništva, čime je uštedio više od 6,5 milijardi dolara poreza."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p2",
+      "title": "Manjak od stotine milijardi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prema OECD-u, ove prakse koštaju javne proračune diljem svijeta između 100 i 240 milijardi dolara godišnje, ili 4 do 10% svih korporativnih poreza prikupljenih na planetu."
+        },
+        {
+          "type": "image",
+          "asset": "multinational_corporate_tax_avoidance_structure",
+          "ratio": "16:9",
+          "caption": "Europska sjedišta digitalnih divova često se nalaze u zemljama gdje su porezi najniži."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj manjak prisiljava države da biraju između povećanja poreza na kućanstva i mala i srednja poduzeća ili smanjenja javne potrošnje kao što je zdravstvo ili obrazovanje. Lokalna tvrtka u prosjeku plaća puno višu poreznu stopu od multinacionalne, što stvara nelojalnu konkurenciju."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p3",
+      "title": "Odgovor: globalni minimalni porez",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Godine 2021., pod okriljem OECD-a i G20, povijesnim sporazumom uspostavljen je [[Globalni minimalni porez od 15%.]]. Usmjerena je na tvrtke čiji promet premašuje 750 milijuna eura: ako plaćaju samo 5% poreza u zemlji, njihova zemlja podrijetla sada može zatražiti nedostajućih 10%."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neke zemlje, poput Francuske, također su stvorile nacionalni porez usmjeren izravno na promet digitalnih divova. U isto vrijeme, multinacionalne kompanije sada moraju objavljivati, zemlju po zemlju, lokaciju svojih zaposlenika, njihovu dobit i poreze: transparentnost koja omogućuje prepoznavanje najočitijih odstupanja."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p4",
+      "title": "Irska, europska prijestolnica optimizacije",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Irska je sa svojom službenom poreznom stopom od 12,5% i svojim tajnim ugovorima [[porezna rješenja]] postala europski stožer porezne optimizacije. Zahvaljujući složenoj strukturi, Apple je 2014. godine platio efektivnu poreznu stopu od blizu 0,005%."
+        },
+        {
+          "type": "paragraph",
+          "text": "Europska komisija je od Applea iz Irske tražila 13 milijardi eura neplaćenih poreza, no ta ih zemlja dugo odbija naplatiti: strahuje da će prestroga pravila uzrokovati bijeg sjedišta u druge regije svijeta. Branitelji porezne pravde također ističu da je ova stopa od 15% i dalje niža od prosjeka za razvijene zemlje, te da će najsiromašnije zemlje, često one koje su najviše pogođene utajom poreza, povratiti samo mali dio."
+        },
+        {
+          "type": "takeaway",
+          "text": "GAFAM je dugo iskorištavao rupe u međunarodnom pravu za plaćanje smiješnih poreza, što je javne proračune koštalo do 240 milijardi dolara godišnje. Od 2021. globalni minimalni porez od 15% pokušao je ispraviti ovu neravnotežu, ali bitka za pravednije oporezivanje se nastavlja."
+        }
+      ]
+    }
+  ]
+}

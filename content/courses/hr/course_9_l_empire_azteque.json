@@ -1,0 +1,133 @@
+{
+  "id": "course_9_l_empire_azteque",
+  "title": "Astečko carstvo",
+  "subtitle": "1325-1521",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "U manje od dva stoljeća Asteci su na jezeru sagradili prijestolnicu od 200.000 stanovnika. Njihovo carstvo, utemeljeno na danaku i žrtvama, srušilo se u dvije godine protiv Španjolaca.",
+  "hero": {
+    "image": "l_empire_azteque",
+    "ratio": "16:9",
+    "hook": "Grad na vodi, naseljeniji od Londona. Onda, u dvije godine, ništa."
+  },
+  "sections": [
+    {
+      "id": "course_9_l_empire_azteque_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U srcu današnjeg Meksika, Asteci su u manje od dva stoljeća izgradili glavni grad na jezeru, naseljen sa **200 000 stanovnika**. Veći od Londona ili Rima u isto vrijeme. Njihova moć kombinira hidrotehniku, zahtjevnu religiju i stalni rat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Između **1519** i **1521** ovo se carstvo srušilo. Ne samo pod topovima Cortésa, španjolskog konkvistadora, nego i pod mržnjom svojih podanika i pod nevidljivim oružjem: bolešću."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p1",
+      "title": "Od močvara do glavnog grada na vodi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Meksiko**, ljudi koje ćemo zvati Asteci, dolaze iz mitskog [[Aztlán]], mjesta porijekla na sjeveru. Stigli su u 13. stoljeću u Dolinu Meksika. Prezreni, traže znak od svog boga [[Huitzilopochtli]], boga sunca i rata: orao koji proždire zmiju na kaktusu. U **1325**, nalaze ga na otočiću u jezeru **Texcoco**. Rođen je [[Tenochtitlán]], njihov budući glavni grad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kako bi prehranili grad, usavršavaju [[chinampas]], ultra-plodne umjetne otoke napravljene od blata i biljaka. Tri nasipa, nasipi, kanali: grad postaje tvrđava na jezeru i ogromna tržnica."
+        },
+        {
+          "type": "funFact",
+          "text": "Asteci nisu koristili kotač za prijevoz i nisu imali tovarne životinje. Ipak, premjestili su milijune tona kamena za svoje piramide."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p2",
+      "title": "Trojni savez i danak",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1428**, Tenochtitlán se udružio s dva susjedna grada, Texcoco i Tlacopan: **Trojni znati**. Ubrzo, Mexica dominira sama. Njihovo se carstvo ne asimilira: zahtijeva redoviti **prinos**, kukuruz, kakao, perje, metale. Bogatstvo prijestolnice raspiruje mržnju pokorenih naroda, kao što su [[Tlaxcaltecs]], žestoki neprijatelji Asteka."
+        },
+        {
+          "type": "image",
+          "asset": "tenochtitlan_aztec_city_illustration",
+          "ratio": "4:3",
+          "caption": "Tenochtitlán, jezerska metropola u srcu Astečkog carstva."
+        },
+        {
+          "type": "paragraph",
+          "text": "To je ratni stroj koji treba neprestana osvajanja. Kad stignu Španjolci, morat će samo ujediniti ove zamjerke."
+        },
+        {
+          "type": "funFact",
+          "text": "Zrna kakaovca korištena su kao valuta. U Tenochtitlánu je zec vrijedio deset zrna graha; rob dobrog ustrojstva, oko stotinu."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p3",
+      "title": "Bogovi, Cortés i boginje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prema [[Kozmogonija pet sunaca]], astečkom mitu, sunce preživljava samo ako se hrani ljudskom krvlju. U [[Gradonačelnik Templa]], velikoj piramidi u središtu, žrtve nisu bespotrebna okrutnost: one su, za Asteke, nužnost za opstanak svijeta."
+        },
+        {
+          "type": "paragraph",
+          "text": "U **1519** stigao je **Hernán Cortés** s nekoliko stotina Španjolaca. [[Moctezuma II]], astečki car, oklijeva. Čelik, oružje i konji su strašni. Ali glavni ubojica je [[Velike boginje]], europska bolest protiv koje stanovništvo nema imunitet. Cortés opsjeda glavni grad s tisućama domorodačkih saveznika."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1325",
+              "title": "Osnutak Tenochtitlána",
+              "detail": "Mexica se naseljavaju na jezeru Texcoco."
+            },
+            {
+              "date": "1428",
+              "title": "Trojni savez",
+              "detail": "Početak astečke imperijalne ekspanzije."
+            },
+            {
+              "date": "1519",
+              "title": "Cortésov dolazak",
+              "detail": "Španjolci stižu u Meksiko."
+            },
+            {
+              "date": "1521",
+              "title": "Pad Tenochtitlána",
+              "detail": "Kraj carstva nakon 80 dana opsade."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p4",
+      "title": "Na ruševinama, Meksiko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1521**, nakon **80 dana** opsade, Tenochtitlán je pao. Gladni, bez vode, razoreni bolešću. Njegovo je kamenje korišteno za izgradnju Mexico Cityja, glavnog grada [[Nova Španjolska]], španjolske kolonije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ne nestaje sve. [[chinampas]] još uvijek postoje. [[nahuatl]], jezikom Asteka, govori više od milijun ljudi. Orao i zmija i dalje su simbol Meksika. Briljantna civilizacija preživjela je u sjećanju i krajoliku."
+        },
+        {
+          "type": "takeaway",
+          "text": "Asteci su na jezeru izgradili metropolu od **200.000** stanovnika. Njihov sustav danka i [[Velike boginje]] omogućili su nekoliko stotina Španjolaca, uz pomoć lokalnih saveznika, da unište carstvo u dvije godine."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "course_49_pourquoi_a_t_on_des_frissons",
+  "title": "Zašto se naježimo?",
+  "subtitle": "Tijelo i emocije",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Hladnoća, strah, glazba: drhtavica ima nekoliko uzroka. Svi prolaze kroz živčani sustav, ali ne iz istih razloga.",
+  "hero": {
+    "image": "pourquoi_a_t_on_des_frissons",
+    "ratio": "16:9",
+    "hook": "Drhtaj hladnoće i drhtaj glazbe ne govore istu priču."
+  },
+  "sections": [
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Drhtiš dok izlaziš na kišu. Također se naježite kada čujete pjesmu koja vas uznemiri. Ista riječ, različiti mehanizmi."
+        },
+        {
+          "type": "paragraph",
+          "text": "U oba slučaja tijelo brzo reagira. Ali jedan se uglavnom koristi za zagrijavanje, drugi je više za zadovoljstvo i emocije."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
+      "title": "Uzbuđenje hladnoće: mini bojler",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tijelo želi ostati oko **37 °C**. Kada koža otkrije hladnoću, ona upozorava područje mozga, **hipotalamus**, koji djeluje poput termostata."
+        },
+        {
+          "type": "image",
+          "asset": "goosebumps_cold_skin",
+          "ratio": "4:3",
+          "caption": "Goosebumps: stari refleks za podizanje dlačica."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mišići se kontrahiraju vrlo brzo i opetovano: to je drhtavica. Ove kontrakcije proizvode toplinu. Naježivanje dolazi od starog refleksa: podizanja dlačica radi bolje izolacije. Kod kuće, s malo krzna, uglavnom služi kao ostatak."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
+      "title": "Uzbuđenje straha",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suočen s prijetnjom, aktivira se [[Simpatički živčani sustav]] (“uzbuna” grana živčanog sustava). Oslobađa **adrenalin**. Mišići su napeti, srce ubrzano lupa, koža može drhtati."
+        },
+        {
+          "type": "image",
+          "asset": "adrenaline_stress_response_body",
+          "ratio": "4:3",
+          "caption": "Adrenalin priprema tijelo na brzu reakciju."
+        },
+        {
+          "type": "funFact",
+          "text": "Isti ovaj sustav objašnjava zašto se možete naježiti dok gledate horor film... dok se udobno smjestite na kauču."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
+      "title": "Uzbuđenje glazbe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Određena uzbuđenja, ponekad nazvana \"jeza\", dolaze s jakim emocijama: glazba, govor, film. Oni aktiviraju moždani krug **nagrade**, sa **dopamin**, supstancom povezanom sa zadovoljstvom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo nije korisno za trenutno preživljavanje. Umjesto toga, tijelo je to koje reagira na intenzivnu emociju, poput prolaznog vala."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
+      "title": "Kada se brinuti?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Groznica s visokom temperaturom može signalizirati infekciju. Stalna zimica bez jasnog razloga zaslužuje liječničku pomoć. Ali većinu vremena, drhtavica od hladnoće, stresa ili glazbe je jednostavno tijelo koje radi svoj posao."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hladni drhtaji proizvode toplinu. Oni od straha pripremaju se reagirati. One glazbe dotiču se emocionalnog užitka. Isti osjećaj, različiti uzroci."
+        }
+      ]
+    }
+  ]
+}

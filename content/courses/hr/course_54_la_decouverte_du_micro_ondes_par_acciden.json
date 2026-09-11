@@ -1,0 +1,102 @@
+{
+  "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
+  "title": "Otkriće mikrovalne pećnice",
+  "subtitle": "Slučajno",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Godine 1945. jedan je inženjer primijetio da se njegova bombonjera rastopila u blizini radara. Iz ovog zapažanja rođena je mikrovalna pećnica.",
+  "hero": {
+    "image": "la_decouverte_du_micro_ondes",
+    "ratio": "16:9",
+    "hook": "Otopljena čokoladica… i moderna kuhinja se mijenja."
+  },
+  "sections": [
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1945**, u Sjedinjenim Državama, inženjer **Percy Spencer** radi na radarima. Jednog dana primijeti da mu se čokoladica u džepu otopila. Ne zbog topline tijela: zbog radarskih valova."
+        },
+        {
+          "type": "paragraph",
+          "text": "Testira s kukuruzom: kokice pucaju. Rodila se ideja o pećnici koja drugačije grije."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
+      "title": "Od radara do kuhinje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "percy_spencer_microwave_discovery_radar",
+          "ratio": "4:3",
+          "caption": "Radari iz Drugog svjetskog rata već su koristili mikrovalove."
+        },
+        {
+          "type": "paragraph",
+          "text": "**mikrovalovi** su elektromagnetski valovi, poput radijske svjetlosti, ali \"energičniji\" od mnogih konvencionalnih radiovalova. Tijekom rata uglavnom su korišteni za radar za otkrivanje aviona i brodova."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spencer razumije da oni također mogu miješati vodu i masnoće u hrani... i stoga je zagrijavati."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
+      "title": "Prva pećnica je ogromna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "first_microwave_oven_radarange_1947",
+          "ratio": "4:3",
+          "caption": "Prva komercijalna mikrovalna pećnica bila je veličine ormarića."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prvi komercijalni model, **Radarange**, objavljen je oko **1947**. Ogroman je, skup i uglavnom namijenjen restoranima ili brodovima. Trebat će desetljeća da se minijaturizira i učini pristupačnim za domove."
+        },
+        {
+          "type": "funFact",
+          "text": "U početku su se neki bojali da će pećnica “hranu učiniti radioaktivnom”. Netočno: mikrovalne pećnice zagrijavaju, ne čine vas radioaktivnim."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
+      "title": "Kako se zapravo zagrijava?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mikrovalovi uglavnom vibriraju molekule vode (i nešto malo masti i šećera). Ovo miješanje stvara **toplinu unutar** hrane, a ne samo na površini poput tave."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zato jelo može biti vruće izvana, a mlako u sredini ako je debelo: valovi ne prodiru beskrajno duboko."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
+      "title": "Svakodnevni predmet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od 1970-ih do 1980-ih mikrovalna pećnica je ušla u milijune kuhinja. Mijenja navike: brzo podgrijavanje, gotova jela, brži život."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mikrovalna pećnica nastala je iz slučajnosti koju je Percy Spencer primijetio u blizini radara. Valovi uglavnom uzburkavaju vodu u hrani i zagrijavaju je iznutra."
+        }
+      ]
+    }
+  ]
+}

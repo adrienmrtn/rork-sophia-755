@@ -1,0 +1,128 @@
+{
+  "id": "course_225_la_montee_des_eaux",
+  "title": "Nadolazeće vode",
+  "subtitle": "Razina mora raste",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Do 2100. razina oceana mogla bi porasti za **onski metar**. Za cijele zemlje i obalne megapolise to više nije daleka hipoteza, već pitanje planiranja.",
+  "hero": {
+    "image": "la_montee_des_eaux",
+    "ratio": "16:9",
+    "hook": "More je svake godine sve više, a neke zemlje već planiraju svoj potez."
+  },
+  "sections": [
+    {
+      "id": "course_225_la_montee_des_eaux_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tisućama godina razine oceana ostale su približno stabilne. Od industrijske ere ona se penje, a brzina tog uspona se iz godine u godinu ubrzava."
+        },
+        {
+          "type": "paragraph",
+          "text": "Do 2100. oceani bi mogli narasti za 30 centimetara do jednog metra, ovisno o našim izborima emisija. Za mnoge obale to više nije daleka prijetnja, već vrlo konkretan problem planiranja."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p1",
+      "title": "Dva mehanizma, jedan smjer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Razina mora raste iz dva različita fizička razloga. Prva je [[Toplinska ekspanzija]]: kada se voda zagrijava, njezine se molekule više pomiču i malo joj se povećava volumen, kao i svakoj tekućini. Oceani su apsorbirali više od 90% viška topline generirane ljudskom aktivnošću od 1970. godine, a ta toplina povećava njihov volumen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Drugi razlog je topljenje leda postavljenog na suhom. Pazite da ga ne zamijenite s arktičkom ledenom santom koja već pluta na vodi i čije otapanje ne uzrokuje podizanje razine mora. To su [[Ledena ploča]], ove goleme ledene kape postavljene na tlo Grenlanda i Antarktika, koje doista čine da se oceani prelijevaju dodavanjem svježe vode."
+        },
+        {
+          "type": "image",
+          "asset": "greenland_ice_sheet_melting_glacier",
+          "ratio": "16:9",
+          "caption": "Otapanje Grenlanda, da je potpuno, podiglo bi oceane za 7 metara."
+        },
+        {
+          "type": "funFact",
+          "text": "Grenland gubi oko 280 milijardi tona leda svake godine, ili dovoljno vode da pokrije cijelu Francusku slojem od 50 centimetara."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p2",
+      "title": "Brzina koja zabrinjava znanstvenike",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od 1880. globalna razina mora porasla je za oko 20 centimetara. Istraživače uzbunjuje prije svega trenutna brzina: ona je u 20. stoljeću bila oko 1,4 mm godišnje, u usporedbi s **3,6 mm godišnje** danas, što je ubrzanje od više od 150%."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[IPCC]] stručnjaci procjenjuju da će se ovaj trend nastaviti desetljećima, čak i ako sada drastično smanjimo emisije, jer oceanima treba vremena da odgovore na temperaturne promjene."
+        },
+        {
+          "type": "image",
+          "asset": "coastal_flooding_sea_level_rise_city",
+          "ratio": "4:3",
+          "caption": "Porast od 50 cm može 100-godišnju poplavu pretvoriti u godišnji događaj."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prava opasnost nije samo nešto više prosječno more, već višestruko povećanje mora: porast od 50 centimetara može biti dovoljan da se očekivana katastrofa koja se dogodi jednom u stoljeću pretvori u gotovo godišnji događaj."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p3",
+      "title": "Geografska nepravda",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rastuće razine vode uglavnom pogađaju regije koje su najmanje pridonijele globalnom zatopljenju. Delte velikih rijeka, poput onih Nila, Mekonga ili Gangesa, nalaze se na prvoj crti. U Bangladešu, gdje živi 170 milijuna stanovnika, povećanje od jednog metra moglo bi uzrokovati gubitak 17% teritorija."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za male otočne države poput Maldiva ili Kiribatija, potpuno podvodni nestanak više nije hipoteza znanstvene fantastike, već stvarni predmet političkog planiranja. Suprotno tome, bogati velegradovi poput Miamija ili New Yorka ulažu milijarde u nasipe i pumpe."
+        },
+        {
+          "type": "image",
+          "asset": "jakarta_indonesia_sinking_flooding_maldives",
+          "ratio": "16:9",
+          "caption": "Jakarta kombinira porast vode i slijeganje tla, dvostruku prijetnju."
+        },
+        {
+          "type": "funFact",
+          "text": "Godine 2009. vlada Maldiva održala je podvodni sastanak kabineta u ronilačkim odijelima kako bi upozorila svijet uoči velike klimatske konferencije."
+        },
+        {
+          "type": "paragraph",
+          "text": "U **Jakarti**, u Indoneziji, grad sve više tone u zemlju zbog pretjeranog pumpanja podzemne vode. Suočena s ovom dvostrukom prijetnjom, zemlja je donijela radikalnu odluku da sagradi potpuno novi glavni grad, Nusantara, na otoku Borneo."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p4",
+      "title": "Prilagodite se ili se odmaknite",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dvije se strategije nadopunjuju pred ovim izazovom. Prvi je ograničiti zagrijavanje kako bi se usporio porast iznad 2100. Drugi je prilagoditi se onome što je već neizbježno, jačanjem prirodne obrane kao što su [[Mangrov]] ili dine, ili s težim rješenjima poput velikih radova u Nizozemskoj."
+        },
+        {
+          "type": "paragraph",
+          "text": "U nekim će slučajevima jedino rješenje biti pomaknuti se unatrag: preseliti ljude i aktivnosti u unutrašnjost prije nego što se katastrofe ponove prečesto. Ovo je prava promjena navika za društva koja su stoljećima bila vezana za obalu."
+        },
+        {
+          "type": "takeaway",
+          "text": "Razina mora raste za 3,6 mm godišnje, pod kombiniranim učinkom toplinskog širenja i otapanja kopnenog leda. Do 2100. taj bi porast mogao doseći jedan metar i prisiliti na raseljavanje stotina milijuna ljudi."
+        }
+      ]
+    }
+  ]
+}

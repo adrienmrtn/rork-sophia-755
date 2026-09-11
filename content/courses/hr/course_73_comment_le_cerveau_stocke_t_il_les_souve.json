@@ -1,0 +1,108 @@
+{
+  "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve",
+  "title": "Kako mozak pohranjuje sjećanja?",
+  "subtitle": "Pamćenje i neuroni",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Memorija nije biblioteka ladica. To je živa mreža neurona koji se međusobno jačaju, obnavljaju i ponekad griješe.",
+  "hero": {
+    "image": "comment_le_cerveau_stocke_les_souvenirs",
+    "ratio": "16:9",
+    "hook": "Uspomena nije datoteka: to je put koji je mozak naučio ponavljati."
+  },
+  "sections": [
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Memoriju često zamišljamo kao tvrdi disk. U stvarnosti, to je živa mreža. Milijarde **neuron**, živčanih stanica, ponovno se povezuju, jačaju ili slabe ovisno o tome što doživljavamo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ništa nije pohranjeno na jednom mjestu. Sjećanje je raspodijeljeni trag, krhak na početku, čvršći nakon sna, i uvijek malo rekonstruiran kada ga se prisjetimo."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
+      "title": "Veze koje jačaju",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Između dva neurona, točka kontakta naziva se **sinapsa**, spoj kroz koji prolazi živčani signal. Ljudski mozak ima otprilike **86 tisuća kuna** neurona i više od **100.000 tisuća** sinapsi."
+        },
+        {
+          "type": "image",
+          "asset": "hippocampus_memory_brain",
+          "ratio": "auto",
+          "caption": "Hipokampus ima središnju ulogu u formiranju sjećanja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada se informacija ponavlja ili povezuje s jakom emocijom, isti se neuroni aktiviraju zajedno. Njihova poveznica postaje lakša za pokretanje: to je [[Dugoročno potenciranje]], trajno jačanje sinapsi. Što se krug više koristi, put postaje \"širi\". Memorija stoga nije pohranjeni objekt, već **trag** u mreži."
+        },
+        {
+          "type": "funFact",
+          "text": "Kapacitet pohrane u mozgu procjenjuje se na približno **2,5 petabajta**, što je ekvivalent milijunima sati videa. Ali to nije disk: to je živo tkivo koje se reorganizira."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
+      "title": "Morski konjić, šef uspomena",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**morski konjic**, mala struktura u [[temporalni režanj]], regiji iza hramova, ne čuva uspomene zauvijek. Prima ih, **kodirati**, transformira ih u tragove pamćenja, zatim ih redistribuira u **korteks**, vanjski sloj mozga. Ovaj prijenos se zove **konsolidacija**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uglavnom se radi tijekom **lječilište**. Bez funkcionalnog hipokampusa možemo živjeti u sadašnjem trenutku, ali više ne čuvamo nova svjesna sjećanja. Ostajemo zaglavljeni u sadašnjosti bez nedavne prošlosti."
+        },
+        {
+          "type": "funFact",
+          "text": "Bolesnik **H.M.**, operiran 1953. godine, nije više stvarao nova sjećanja. Međutim, svakim je danom napredovao u crtanju u zrcalu, a da se nije sjećao da je već pokušao: njegovo sjećanje na geste bilo je netaknuto."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p3",
+      "title": "Zapamtiti znači obnoviti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prizivanje uspomene nije ponovna reprodukcija videa. Svaki put kad ga izvadite, postaje **kovit**, mijenja se. Naše trenutne emocije, naše novo znanje ili sugestija mogu ga modificirati prije nego što se “ponovno zabilježi”."
+        },
+        {
+          "type": "paragraph",
+          "text": "Psihologinja **Elizabeth Loftus** pokazala je da jednostavnim pitanjima možete usaditi **lažna sjećanja**. Otuda danas oprez pred svjedočenjem očevidaca: u dobroj vjeri mozak popunjava praznine."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p4",
+      "title": "Višestruka sjećanja u jednom mozgu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pamćenje činjenica i životnih epizoda, ono što možemo reći, prolazi uglavnom kroz hipokampus. [[proceduralno pamćenje]], ono kod vožnje bicikla ili plivanja, umjesto toga ovisi o **cerebelum**, strukturi u stražnjem dijelu mozga, i drugim starijim strukturama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zbog toga neki pacijenti s amnezijom zaborave vlastito ime, ali i dalje sviraju klavir. Memorija nije jedna ladica: ona je mozaik sustava."
+        },
+        {
+          "type": "takeaway",
+          "text": "Sjećanje je dinamičan trag: sinapse su ojačane, konsolidirane posebno noću i ponovno izgrađene sa svakim podsjetnikom. To nikada nije fiksna datoteka."
+        }
+      ]
+    }
+  ]
+}

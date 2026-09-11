@@ -1,0 +1,145 @@
+{
+  "id": "course_139_la_naissance_du_jazz_americain",
+  "title": "Rođenje američkog jazza",
+  "subtitle": "1890-1960",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Rođen u New Orleansu, jazz je miješao afričke ritmove, blues i europsku harmoniju, a zatim je izumio swing, bebop i modalni jazz.",
+  "hero": {
+    "image": "la_naissance_du_jazz_americain",
+    "ratio": "16:9",
+    "hook": "U lučkom gradu, Amerika izmišlja svoju klasičnu glazbu: jazz."
+  },
+  "sections": [
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jazz je rođen u [[New Orleans]] krajem 19. stoljeća. Luka Louisiane, francusko, španjolsko, afričko i karipsko raskrižje, grad je zvučni laboratorij."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rođena u nasilju ropstva i segregacije, ova je glazba postala \"klasična glazba Amerike\". Tijekom jednog stoljeća utjecao je na rock, funk i hip-hop. Razumjeti jazz znači razumjeti slobodu izmišljenu pod ograničenjima."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p1",
+      "title": "New Orleans i Trg Kongo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Krajem 19. stoljeća u New Orleansu su se miješali obojeni Kreoli, potomci porobljenih Afrikanaca i europski imigranti. Tu se križaju europska opera i karipski ritmovi. Na [[Trg Kongo]], jedinom mjestu na sjeveru gdje se crnačka populacija imala pravo sastajati nedjeljom, opstaju bubnjevi i afrička poliritmija."
+        },
+        {
+          "type": "image",
+          "asset": "congo_square_new_orleans_slaves_music",
+          "ratio": "4:3",
+          "caption": "Kongo trg: Afričko ritmičko pamćenje u srcu Louisiane."
+        },
+        {
+          "type": "paragraph",
+          "text": "**limena glazba** (limena glazba) predvodi parade i sprovode: lagani marš prema groblju, eksplozija veselja na povratku. Ova promjena između žalovanja i slavlja emocionalna je duša jazza u nastajanju."
+        },
+        {
+          "type": "funFact",
+          "text": "Pionir **Buddy Bolden**, brijač po zanimanju, nikada nije zabilježen: njegova legenda počiva kod onih koji su čuli njegov kornet s druge strane Mississippija."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p2",
+      "title": "Plave note, improvizacija i Jim Crow",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jazz od bluesa nasljeđuje [[plave note]], \"inflektivne\" note koje stvaraju izražajnu napetost. Iz gospela i radnih pjesama izvlači poziv i odgovor. Ti su elementi postavljeni na europsku harmoniju limenih orkestara."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pauza je [[Improvizacija u jazzu]]: partitura više nije zakon, nego mreža. Glazbenik sklada u stvarnom vremenu. U Americi [[Zakoni Jima Crowa]] ova je sloboda također politička: potvrđivanje vlastite posebnosti kada je sustav želi izbrisati."
+        },
+        {
+          "type": "funFact",
+          "text": "Godine 1917. prvu jazz ploču snimili su bijeli glazbenici (Original Dixieland Jass Band): diskografske kuće još se nisu usuđivale kladiti na crne izumitelje žanra."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p3",
+      "title": "Armstrong, swing, bebop, Kind of Blue",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "S [[Velika seoba]] koja se uputila u Chicago i New York, jazz napušta jug. **Louis Armstrong** stavlja virtuoznog solistu u središte. U Harlemu, tijekom [[Harlemska renesansa]], jazz se slavi kao crnačka modernost. Tridesetih godina prošlog stoljeća [[zamahnuti]] **Dukea Ellingtona** rasplesao je Ameriku."
+        },
+        {
+          "type": "image",
+          "asset": "louis_armstrong_trumpet_1920s_jazz",
+          "ratio": "4:3",
+          "caption": "Louis Armstrong: solist postaje srce jazza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nakon 1945. **Charlie Parker** izumio je [[bebop]]: brza tempa, složene harmonije, slušanje glazbe. U **1959**, **Miles Davis** objavio je *Vrsta plave*: [[modalni jazz]] usporava promjene akorda kako bi istražio boju. Još uvijek je najprodavanija jazz ploča na svijetu."
+        },
+        {
+          "type": "image",
+          "asset": "miles_davis_kind_of_blue_album_cool_jazz",
+          "ratio": "4:3",
+          "caption": "Kind of Blue (1959): modalni, smireni i revolucionarni jazz."
+        },
+        {
+          "type": "funFact",
+          "text": "Njujorški klub Birdland dobio je ime po Parkerovom nadimku \"Bird\". Sam Parker izbačen je jedne noći nakon svađe."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p4",
+      "title": "Free jazz, fusion i baština",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šezdesetih godina prošlog stoljeća [[slobodni jazz]] razbio je okvire vezane uz građanska prava. Zatim [[jazz fusion]] križa električni rock i funk. Swing, ovo elastično pulsiranje, još uvijek natapa rock i hip-hop. Institucionaliziran u konzervatorijima, jazz ostaje jezik trenutka: svaki koncert je jedinstven."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "krajem 19. stoljeća",
+              "title": "New Orleans",
+              "detail": "Trg Kongo, limena glazba, rođenje jazza."
+            },
+            {
+              "date": "1920-ih godina",
+              "title": "Armstrong",
+              "detail": "Virtuozni solist osvaja Chicago i New York."
+            },
+            {
+              "date": "1930-ih-1940-ih godina",
+              "title": "Swing pa bebop",
+              "detail": "Od plesa do moderne komorne glazbe."
+            },
+            {
+              "date": "1959",
+              "title": "Vrsta plave",
+              "detail": "Miles Davis izmišlja univerzalni modalni jazz."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Rođen u New Orleansu iz spoja afričkih ritmova, bluesa i europske harmonije, jazz je umjetnost improvizacije i simbol slobode."
+        }
+      ]
+    }
+  ]
+}

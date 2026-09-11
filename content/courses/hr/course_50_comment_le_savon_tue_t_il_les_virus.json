@@ -1,0 +1,100 @@
+{
+  "id": "course_50_comment_le_savon_tue_t_il_les_virus",
+  "title": "Kako sapun ubija viruse?",
+  "subtitle": "Higijena",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Sapun nije \"čarolija\". Napada masnu ljusku određenih virusa i izvlači ih iz vaše kože. Evo zašto je 20 sekundi važno.",
+  "hero": {
+    "image": "comment_le_savon_tue_les_virus",
+    "ratio": "16:9",
+    "hook": "Jednostavno oružje protiv virusa: molekule koje vole vodu... i mast."
+  },
+  "sections": [
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tijekom pandemije COVID-19, vrlo jednostavna gesta ponovno je postala središnja: pranje ruku sapunom. Nema potrebe za laboratorijem. Samo voda, sapun i malo vremena."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zašto radi tako dobro? Jer mnogi opasni virusi nose omotač od masnoće. A sapun je odličan za uništavanje masnoće."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p1",
+      "title": "Slabost određenih virusa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Neki virusi, poput **korona virus** ili virusa gripe, imaju vanjsku ovojnicu sačinjenu od lipida (masti). Ova omotnica ih štiti... dok ne naiđe na sapun."
+        },
+        {
+          "type": "paragraph",
+          "text": "Drugi virusi, koji se nazivaju \"goli\", nemaju ovu ovojnicu. Otpornije su na sapun i alkohol. Srećom, mnogi virusi koji putuju kroz ruke i kapljice su omotani."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
+      "title": "Sapun, dvostrana molekula",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "handwashing_soap_water_hands",
+          "ratio": "4:3",
+          "caption": "Trljanje pomaže da sapun dopre do svakog kuta ruku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Molekule sapuna su [[surfaktanti]]. Imaju glavu koja voli vodu i rep koji voli mast. Rep tone u masnu ovojnicu virusa. Glava ostaje okrenuta prema vodi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rezultat: omotnica se pokida. Virus je onemogućen. Zatim voda odnosi ostatke. Sapun ne “spaljuje” virus kao kiselina: on **otapa** i uklanja ga."
+        },
+        {
+          "type": "funFact",
+          "text": "Isti je princip koji uklanja masnoću s posude: sapun hvata masnoću i pušta je da ode s vodom."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p3",
+      "title": "Zašto 20 sekundi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Potrebno je vrijeme da sapun dođe do svih pregiba: između prstiju, ispod noktiju, oko zapešća. Otprilike **20 sekundi** trenja, ovo je minimum koji se često preporučuje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez trenja sapun slabije djeluje. Sama voda također: ne napada učinkovito masnu ovojnicu."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p4",
+      "title": "Sapun ili hidroalkoholni gel?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gel s najmanje **60%** alkohola također može uništiti mnoge viruse s ovojnicom. Ali ako postoji vidljiva prljavština ili masnoća, gel je manje učinkovit: prljavština djeluje kao zaslon. U ovom slučaju, sapun i voda ostaju najbolji izbor."
+        },
+        {
+          "type": "takeaway",
+          "text": "Sapun ubija mnoge viruse tako što im otkida masne omotače i zatim ih ispire vodom. Vrijeme + trenje = učinkovitost."
+        }
+      ]
+    }
+  ]
+}

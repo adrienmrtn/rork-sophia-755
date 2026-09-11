@@ -1,0 +1,140 @@
+{
+  "id": "course_193_quetzalcoatl",
+  "title": "Quetzalcoatl",
+  "subtitle": "Pernata zmija",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Quetzalcoatl, Pernata zmija, bog je srednjoameričke civilizacije. Njegov mit spaja stvaranje, egzil i kobni susret s Cortésom.",
+  "hero": {
+    "image": "quetzalcoatl",
+    "ratio": "16:9",
+    "hook": "Bog, kralj i proročanstvo: Pernata zmija obuhvaća dvije tisuće godina meksičke povijesti."
+  },
+  "sections": [
+    {
+      "id": "course_193_quetzalcoatl_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Quetzalcoatl**, \"Pernata zmija\", jedna je od najbogatijih figura u pretkolumbovskom Meksiku. Štovan je više od dva tisućljeća, od [[Teotihuacán]], velikog grada na središnjoj visoravni, do Asteka i među Majama pod imenom [[Kukulkán]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "On sjedinjuje zemlju (zmija) i nebo (pero). Bog civilizacije, znanja i moralnog reda, njegov mit na kraju se presijeca sa stvarnom poviješću: španjolsko osvajanje **1519**."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p1",
+      "title": "Bog koji je izmislio kukuruz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U [[nahuatl]], **Quetzalcoatl** dolazi od [[kvecal]], ptice sa zelenim perjem, i od *kaput*, zmije. Ovo sjedinjenje čini ga mostom između ljudskog i božanskog."
+        },
+        {
+          "type": "image",
+          "asset": "quetzalcoatl_feathered_serpent_aztec_sculpture",
+          "ratio": "4:3",
+          "caption": "Quetzalcoatl, Pernata zmija: zemlja i nebo isprepleteni."
+        },
+        {
+          "type": "paragraph",
+          "text": "U [[Kozmogonija pet sunaca]], on se spušta u [[Mictlán]], svijet mrtvih, da pokupi kosti prošlih ljudi. On ih svojom krvlju vraća u život. Zatim krade **kukuruz** od mrava: temeljnu hranu Meksika. Kao bog vjetra, on također otvara put kišama [[Tlaloc]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Repno perje quetzala može mjeriti **60 cm**. Kod Maja i Asteka ubijanje ptice bilo je kažnjivo smrću: uzeto joj je nekoliko pera, a zatim pušteno."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p2",
+      "title": "Kralj-svećenik iz Tule",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mit ima i povijesno lice: **Topiltzin Quetzalcoatl**, kralj-svećenik **Tula** u 10. stoljeću. Želio bi reformirati kult i zamijeniti ljudske žrtve prinošenjem cvijeća i leptira."
+        },
+        {
+          "type": "image",
+          "asset": "tula_toltec_pyramid_warriors_sculpture_mexico",
+          "ratio": "4:3",
+          "caption": "Tula, toltečki grad povezan s vladavinom i padom Quetzalcoatla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njegov suparnik **Tezcatlipoca** tjera ga da pije pulque, fermentirano piće. Ponižen, kralj je prognan na istok. Prema legendi, obećava da će se vratiti jedne godine “Un Reed”. Ovo obećanje će imati težinu."
+        },
+        {
+          "type": "funFact",
+          "text": "Nakon svog odlaska, Quetzalcoatl ponekad postaje Jutarnja zvijezda: planet Venera. Bog ne umire, on mijenja oblik."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p3",
+      "title": "1519: kada mit susreće Cortésa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1519**, **Hernán Cortés** stiže na istok, godina “One Reed” astečkog kalendara, ona u kojoj se očekivao povratak boga. Car **Moctezuma II** oklijeva: trebamo li se boriti protiv osvajača ili pozdraviti božanstvo?"
+        },
+        {
+          "type": "image",
+          "asset": "herna_u0301n_corte_u0301s_arrival_mexico_1519_moctezuma_painting",
+          "ratio": "4:3",
+          "caption": "1519: Cortéov dolazak ispunjava obećanje božanskog povratka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šalje darove od zlata i perja. [[konkvistadori]] ovo vide kao pozivnicu. Mit, istinit ili pojačan naknadno, postaje psihološko oružje u padu [[Tenochtitlán]], astečke prijestolnice."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mit",
+              "title": "Stvoritelj",
+              "detail": "Kosti mrtvih, božanska krv, dar žita."
+            },
+            {
+              "date": "10. stoljeće",
+              "title": "Izgnanstvo iz Tule",
+              "detail": "Svećenik-kralj ide na istok."
+            },
+            {
+              "date": "1519",
+              "title": "Cortes",
+              "detail": "Očekivani povratak postaje osvajanje."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p4",
+      "title": "Simbol koji nikad ne umire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nakon osvajanja Quetzalcoatl nije nestao. Neki redovnici vjeruju da tamo vide apostola. Kasnije ga je neovisni Meksiko učinio simbolom pretkolumbovske veličine. Muralisti 20. stoljeća, poput Diega Rivere, slikaju ga kao dušu zemlje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Čak i danas, Pernata zmija izražava identitet: korijenje u zemlji, ambicija okrenuta nebu."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Quetzalcoatl**, Pernata zmija, bog je srednjoameričke civilizacije. Stvoritelj, prognani kralj, zatim kobno proročanstvo u **1519**, on ostaje središnji simbol Meksika."
+        }
+      ]
+    }
+  ]
+}

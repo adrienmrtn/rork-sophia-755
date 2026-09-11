@@ -1,0 +1,126 @@
+{
+  "id": "course_144_la_nouvelle_vague_francaise",
+  "title": "Francuski novi val",
+  "subtitle": "1959-1968",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Mladi kritičari iz *Kino bilježnice* idu iza kamere. Između **1959** i **1968**, novi val oslobodio je film studija i izumio modernu autorsku kinematografiju.",
+  "hero": {
+    "image": "la_nouvelle_vague_francaise",
+    "ratio": "16:9",
+    "hook": "Filmski kritičari kradu kamere i ponovno izmišljaju sedmu umjetnost."
+  },
+  "sections": [
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Novi val** (1959-1968) nije jednostavan stil. To je grabljenje moći. Mladi francuski filmofili ocjenjuju da je studijska kinematografija previše fiksirana, previše uglađena, previše unaprijed napisana. Žele snimati onako kako pišete roman: slobodno, u prvom licu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prelaskom s kritike na produkciju, redatelja čine pravim autorom filma. I oni mijenjaju svjetsku kinematografiju."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p1",
+      "title": "Prvo revolucija ideja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prije setova nalazi se časopis: **Kino bilježnice**, koji je **1951** osnovao [[André Bazin]]. Oko njega mladi kritičari: **Jean-Luc Godard**, **François Truffaut**, **Claude Chabrol**, **Jacques Rivette**, **Éric Rohmer**. Njihova središnja ideja zove se [[Politika autora]]."
+        },
+        {
+          "type": "image",
+          "asset": "cahiers_du_cinema_magazine_1950s",
+          "ratio": "4:3",
+          "caption": "Les Cahiers du cinéma: škola u kojoj je novi val naučio razmišljati o filmu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za njih pravi kreator nije scenarist, nego onaj koji režira. Kadriranje, ritam, rezovi: to je potpis autora, poput stila romanopisca."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p2",
+      "title": "1959: Truffaut i Godard stupaju na scenu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1959**, *Četiri stotine udaraca* **Françoisa Truffauta** trijumfirao je u Cannesu. Film prati **Antoinea Doinela**-a, tinejdžerski raskid, kojeg glumi [[Jean-Pierre Léaud]]. Kamera prati život, a ne strogi scenarij. Završni pogled prema nama prelazi [[četvrti zid]]: junak gleda u publiku, bez sretnog završetka."
+        },
+        {
+          "type": "image",
+          "asset": "truffaut_400_coups_antoine_doinel_film",
+          "ratio": "4:3",
+          "caption": "Antoine Doinel okrenut prema moru: mladić koji odbija jasnu sudbinu."
+        },
+        {
+          "type": "funFact",
+          "text": "Sljedeće godine, *Bez daha* Godard-a, sa [[Jean-Paul Belmondo]], šokirao je svojim naglim rezovima. Godard reže usred gesta, kao da piše škarama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova dva filma dokazuju da priče možemo pričati drugačije: brže, slobodnije, bliže ulici."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p3",
+      "title": "Napusti studio, snimi Pariz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pauza je također tehnička. [[Eclair Caméflex]] fotoaparati i osjetljiviji filmovi omogućuju [[Snimanje u prirodnim uvjetima i svjetlosnom kamerom]]. Nema više teških studija: snimamo u kafićima, stanovima i na ulicama Pariza, često pri prirodnom svjetlu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Glumci improviziraju. Govor postaje poznat, ponekad mucanje. Kino diše poput života. Ta je sloboda potom nadahnula [[Novo kino]] u Brazilu, zatim ultrastroga pravila poput [[Dogma 95]] u Danskoj, daleke nasljednike iste žeđi za autentičnošću."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p4",
+      "title": "Globalna baština",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U godinama **1970**, **Novi Hollywood** bio je inspiriran njime: **Martin Scorsese**, **Francis Ford Coppola**, **Steven Spielberg** miješaju američku učinkovitost i francusku slobodu. Novi val je nametnuo trajnu ideju: film može nositi glas jedne osobe."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1951",
+              "title": "Kino bilježnice",
+              "detail": "Časopis postaje laboratorij ideja."
+            },
+            {
+              "date": "1959",
+              "title": "Četiri stotine udaraca",
+              "detail": "Truffaut nameće autorsku kinematografiju u Cannesu."
+            },
+            {
+              "date": "1960",
+              "title": "Bez daha",
+              "detail": "Godard razbija klasičnu montažu."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Novi val izbacio je kino iz studija na ulice. Time je redatelj postao autor, a ta ideja nastavlja oblikovati nezavisnu kinematografiju diljem svijeta."
+        }
+      ]
+    }
+  ]
+}

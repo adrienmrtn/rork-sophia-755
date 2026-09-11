@@ -1,0 +1,146 @@
+{
+  "id": "course_17_la_revolution_russe_1917",
+  "title": "Ruska revolucija",
+  "subtitle": "1917",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Za manje od osam mjeseci Rusija je prešla s vlasti careva na vlast boljševika. 1917. izmišlja model koji će desetljećima dijeliti svijet.",
+  "hero": {
+    "image": "la_revolution_russe_1917",
+    "ratio": "16:9",
+    "hook": "U osam mjeseci, tisuću godina staro carstvo je srušeno... a 20. stoljeće podijeljeno na dva dijela."
+  },
+  "sections": [
+    {
+      "id": "course_17_la_revolution_russe_1917_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1917**, u manje od osam mjeseci, Rusija je prešla put od apsolutne monarhije do režima koji su vodili **boljševici**, revolucionarna partija koju je vodio **Vladimir Lenjin**. Ovo nije jednostavan ustanak. To je raspad carstva pod teretom rata, zatim pad u prazninu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova promjena izmišlja model koji će dijeliti svijet većim dijelom 20. stoljeća."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p1",
+      "title": "Rusija bez daha",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Predan [[Prvi svjetski rat]] od 1914., Rusija ga više ne slijedi. Već **1,7 milijuna kuna** mrtvih vojnika. Pobune. Nestašice brašna i ugljena u **Petrogradu**, glavnom gradu (danas St. Petersburg). Car **Nikola II** odbija reforme koje je tražila [[Duma]], ruski parlament."
+        },
+        {
+          "type": "image",
+          "asset": "tsar_nicholas_ii_portrait",
+          "ratio": "4:3",
+          "caption": "Nikola II, posljednji car monarhije na izdisaju."
+        },
+        {
+          "type": "funFact",
+          "text": "Otrov koji je trebao ubiti [[Rasputin]], utjecajnog redovnika na dvoru, bio bi neutraliziran šećerom u kolačima u koje je ubačen: legenda o njegovom ubojstvu govori mnogo o diskreditaciji prijestolja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Preuzimanjem zapovjedništva na frontu u **1915**, car postaje jedini odgovoran za poraze. Rasputinov utjecaj na caricu **Alexandru** naposljetku je uništio prestiž carske obitelji."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p2",
+      "title": "Veljača: kraj Romanovih",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **veljače 1917.** (prema [[Julijanski kalendar]] koji se tada koristio u Rusiji, s odgodom od nekoliko dana na Zapadu), revolucija je počela od kruha. Radnici izlaze na ulice. Garnizon se bratimi. Nikola II abdicira **2. ožujka**: **Z300** godina vladavine dinastije Romanov dolazi kraju."
+        },
+        {
+          "type": "image",
+          "asset": "russian_revolution_1917_petrograd",
+          "ratio": "4:3",
+          "caption": "Petrograd 1917.: ulica ima prednost pred prijestoljem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tada nastupa “dvostruka moć”. S jedne strane, legalna **Privremena vlada**. S druge strane, [[Petrogradski sovjet]], vijeće radnika i vojnika koje kontrolira tvornice i vojarne. **Aleksandar Kerenski**, privremena figura, drži Rusiju u ratu. Narod želi mir, kruh i zemlju."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p3",
+      "title": "Listopad: Lenjin preuzima vlast",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lenjin se vraća iz egzila u \"glavnom vlaku\" koji organizira Njemačka, koja se nada oslabiti Rusiju. Od travnja njegov [[Travanjske teze]] slam: **“Mir, kruh, zemlja”**. S [[Lav Trocki]], izvanrednim organizatorom, boljševici su pripremali ustanak."
+        },
+        {
+          "type": "image",
+          "asset": "lenin_portrait",
+          "ratio": "4:3",
+          "caption": "Lenjin, strateg organiziranog preuzimanja vlasti."
+        },
+        {
+          "type": "funFact",
+          "text": "Kad je zauzeta Zimska palača, carevi su vinski podrumi bili toliko golemi da su morali biti postavljeni stražari kako bi se spriječilo da revolucija preraste u pijanstvo."
+        },
+        {
+          "type": "paragraph",
+          "text": "U noći **7. studenog 1917.** (25. listopada prema ruskom kalendaru), mostovi, postaje i telegrafi pali su gotovo bez ispaljenog metka. Slijedi Zimski dvorac, sjedište privremene vlade. Zatim počinje krvavi građanski rat do **1922**."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p4",
+      "title": "Rođenje SSSR-a",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Čeka**, politička policija boljševika, pokreće teror. U srpnju **1918**, carska je obitelj pogubljena u Jekaterinburgu. Mir u [[Brest-Litovsk]] izvlači Rusiju iz rata po cijenu velikih teritorijalnih gubitaka. In **1922**, the **SSSR** was born, the first state built on the [[marksizam-lenjinizam]], the ideology which combines the ideas of Marx and the method of Lenin."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "veljača 1917",
+              "title": "Veljačka revolucija",
+              "detail": "Abdikacija Nikole II."
+            },
+            {
+              "date": "travnja 1917",
+              "title": "Travanjske teze",
+              "detail": "Lenjin odbija kompromis s provizornim."
+            },
+            {
+              "date": "lis./stu. 1917",
+              "title": "Preuzimanje",
+              "detail": "Boljševički udar u Petrogradu."
+            },
+            {
+              "date": "ožujka 1918",
+              "title": "Brest-Litovsk",
+              "detail": "Kraj rata, teritorijalni gubici."
+            },
+            {
+              "date": "1922",
+              "title": "Rođenje SSSR-a",
+              "detail": "Novo stanje se uspostavlja trajno."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "U **1917**, kolaps carizma i boljševičko preuzimanje vlasti transformirali su pobunu protiv kruha u rađanje prve komunističke države na svijetu."
+        }
+      ]
+    }
+  ]
+}

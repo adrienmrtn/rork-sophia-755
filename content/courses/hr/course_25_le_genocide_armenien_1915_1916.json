@@ -1,0 +1,125 @@
+{
+  "id": "course_25_le_genocide_armenien_1915_1916",
+  "title": "Armenski genocid",
+  "subtitle": "1915-1916",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "Između **1915** i **1916**, osmanska vlada organizirala je deportaciju i sustavno istrebljenje velikog dijela armenskog stanovništva Carstva.",
+  "hero": {
+    "image": "le_genocide_armenien",
+    "ratio": "16:9",
+    "hook": "Prvi genocid 20. stoljeća, dugo neimenovan, još uvijek u srcu bitke za istinu."
+  },
+  "sections": [
+    {
+      "id": "course_25_le_genocide_armenien_1915_1916_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Između **1915** i **1916**, usred Prvog svjetskog rata, vlada Osmanskog Carstva orkestrirala je istrebljenje velikog dijela svog armenskog stanovništva. Oko **dvije trećine** Armenaca carstva je nestalo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj zločin, procijenjen na između **600.000** i **1,5 milijuna kuna** smrtnih slučajeva, kasnije će potaknuti pravnike da skovaju novu riječ: [[genocid]]. Tako je pradjedovska manjina označena kao neprijatelj iznutra, a zatim uništena."
+        }
+      ]
+    },
+    {
+      "id": "course_25_le_genocide_armenien_1915_1916_p1",
+      "title": "Manjina pod tenzijom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Armenci su jedna od najstarijih kršćanskih populacija u Anatoliji, srcu današnje Turske. U Osmanskom Carstvu, sustav [[proso]] ostavio im je vjersku autonomiju, ali inferioran status. U 19. stoljeću carstvo je u opadanju. Nacionalizam je u porastu. Na Armence se postupno gleda kao na unutarnju prijetnju, blisku Rusiji."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Hamidijski masakri]] (**1894-1896**), pod sultanom Abdülhamidom II, već su **100,000** do **300,000** mrtvi. Ostaju nekažnjeni. U **1908**, [[Mladoturci]], nacionalistički pokret, prvi je probudio nadu. Tada su tri čovjeka, **Poslati**, **Talaat** i **Cemal**, nametnula radikalni nacionalizam: etnički homogenu Tursku, u kojoj nema mjesta za nemuslimanske manjine."
+        }
+      ]
+    },
+    {
+      "id": "course_25_le_genocide_armenien_1915_1916_p2",
+      "title": "1915: mehanika istrebljenja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svjetski rat sve ubrzava. Nakon osmanskog poraza kod Sarikamisa (siječanj 1915.), Enver-paša je optužio armenske vojnike za izdaju. Dana **A 24. travnja 1915.**, u Carigradu, glavnom gradu, više od **200** intelektualaca i uglednika uhićeno je, zatim pogubljeno. Ovaj datum postao je datum globalne komemoracije."
+        },
+        {
+          "type": "image",
+          "asset": "armenian_genocide_deportation_1915",
+          "ratio": "4:3",
+          "caption": "Armenske deportacije, 1915."
+        },
+        {
+          "type": "funFact",
+          "text": "Poljski pravnik **Raphael Lemkin**, kada je kasnije skovao riječ \"genocid\", izričito je mislio na Armence. Iz toga proizlazi UN-ova [[Pravna definicija genocida]] (1948)."
+        },
+        {
+          "type": "paragraph",
+          "text": "U svibnju je zakon o deportaciji dao pravni okvir za protjerivanje u pustinje Mezopotamije. Muškarci su često masakrirani čim napuste sela. Žene, djeca i starci tjerani su u prisilne marševe, bez hrane i zaštite."
+        }
+      ]
+    },
+    {
+      "id": "course_25_le_genocide_armenien_1915_1916_p3",
+      "title": "Deir ez-Zor i kraj svijeta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Preživjeli završavaju u rudimentarnim kampovima u sirijskoj pustinji, posebno u **Deir ez-Zor**. Godine 1916. posljednji preživjeli još su tamo eliminirani, ili su umrli od iscrpljenosti i epidemija. Neutralni diplomati, kao što je američki **Henry Morgenthau**, opisuju \"rasno ubojstvo\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "U Anadoliji se crkve i imovina uništavaju ili konfisciraju. Tri tisućljeća kontinuirane armenske prisutnosti na ovim prostorima bliži se kraju. Nakon rata glavni su vođe pobjegli. Republika Turska u nastajanju prakticira politiku službenog zaborava. Preživjeli čine ogromnu [[dijaspora]], zajednicu raštrkanu diljem svijeta."
+        }
+      ]
+    },
+    {
+      "id": "course_25_le_genocide_armenien_1915_1916_p4",
+      "title": "Pamćenje i prepoznavanje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I danas Turska prepoznaje patnje i masakre u ratnom kaosu, ali odbacuje termin genocid. Suočena s ovim uskraćivanjem države, dijaspora vodi kampanju za priznanje. Francuska (2001.) i Sjedinjene Države (2021.), između ostalih, službeno su priznale genocidnu prirodu činjenica."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1894-1896",
+              "title": "Hamidijski masakri",
+              "detail": "Prvi val masovnog nasilja, koji je ostao nekažnjen."
+            },
+            {
+              "date": "24. travnja 1915. godine",
+              "title": "Uhićenje elita",
+              "detail": "Simboličan početak genocida u Carigradu."
+            },
+            {
+              "date": "1915-1916",
+              "title": "Deportacije i masakri",
+              "detail": "Prema procjenama 600 000 do 1,5 milijuna smrti."
+            },
+            {
+              "date": "1944-1948",
+              "title": "Riječ \"genocid\"",
+              "detail": "Lemkin kuje koncept; UN to upisuje u zakon."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Između **1915** i **1916**, Osmansko Carstvo organiziralo je metodično istrebljenje stotina tisuća Armenaca. Ovaj zločin tjera svijet da izmisli riječ [[genocid]], čije prepoznavanje ostaje političko pitanje."
+        }
+      ]
+    }
+  ]
+}

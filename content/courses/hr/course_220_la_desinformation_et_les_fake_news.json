@@ -1,0 +1,104 @@
+{
+  "id": "course_220_la_desinformation_et_les_fake_news",
+  "title": "Dezinformacije i lažne vijesti",
+  "subtitle": "Laganje u virsko doba",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Lažne informacije se društvenim mrežama šire 6 puta brže od istine. Zašto i kako se zaštititi?",
+  "hero": {
+    "image": "la_desinformation_et_les_fake_news",
+    "ratio": "16:9",
+    "hook": "Studija MIT-a pokazala je da lažne vijesti putuju 6 puta brže od istine na Twitteru. Evo zašto."
+  },
+  "sections": [
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Laganje u političke svrhe nije ništa novo: tragovi toga pronađeni su još od antike. No internet i društvene mreže promijenile su situaciju: lažne informacije više ne kruže samo od države do njezinog stanovništva, već se šire horizontalno, između građana."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova promjena stvorila je svijet u kojem se istina ponekad čini izbornom u odnosu na viralnost. Razumijevanje načina na koji se **dezinformacije** šire i tko ima koristi od toga postalo je ključno za očuvanje povjerenja među građanima."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p1",
+      "title": "Zašto laž putuje brže od istine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Moramo razlikovati dezinformacije, namjerno širene radi manipulacije, od jednostavnih iskrenih pogrešaka. Uspjeh ovih lažnih vijesti oslanja se na ono što istraživači nazivaju ekonomijom pozornosti: algoritmi društvenih medija dizajnirani su da maksimiziraju vrijeme ispred ekrana, a naši mozgovi snažnije reagiraju na emocije i šok nego na nijanse."
+        },
+        {
+          "type": "funFact",
+          "text": "Studija [[MIT]] objavljena 2018. godine pokazala je da se lažne vijesti šire oko 6 puta brže od provjerenih vijesti na Twitteru jer izgledaju novije i emocionalno intenzivnije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Algoritmi također zaključavaju korisnike interneta u [[filterski mjehurići]]: prikazuju im samo sadržaj koji potvrđuje njihova već postojeća mišljenja. Osoba uvjerena u teoriju zavjere tada svaku novu lažnu informaciju vidi kao dodatni dokaz, što otežava naknadnu ispravku."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p2",
+      "title": "Industrija laži, između države i profita",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dezinformacije su postale prava industrija. Države poput Rusije, preko Agencije za istraživanje interneta, stvorile su tisuće lažnih automatiziranih računa kako bi potaknule napetosti unutar zapadnih demokracija, čak i ne pokušavajući braniti određeni tabor: cilj je često stvoriti kaos i natjerati ljude da vjeruju da \"svi lažu\"."
+        },
+        {
+          "type": "image",
+          "asset": "fake_news_social_media_manipulation_phone",
+          "ratio": "4:3",
+          "caption": "Lažne informacije se u sekundi prošire društvenim mrežama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Postoji i čisto lukrativna dimenzija: u gradu Velesu, u Sjevernoj Makedoniji, mladi poduzetnici su 2016. bez ikakvog političkog uvjerenja napravili senzacionalističke stranice, isključivo kako bi zaradili kroz promet generiran na društvenim mrežama. Laž tada postaje jednostavna profitabilna roba."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p3",
+      "title": "Kako odvojiti činjenice od fikcije",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suočen s ovom poplavom, svijet informacija se organizira. **provjeravanje činjenica**, odnosno provjera činjenica, postala je zasebna novinarska disciplina. Agencije poput [[AFP]] ili specijalizirana uredništva koriste alate za pretraživanje slika za otkrivanje lažiranja i analizu sumnjivog sadržaja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ali utrka između napada i obrane ostaje neravnopravna. Pojava [[Deepfakes]], videozapisa lažiranih od strane umjetne inteligencije u kojima se osoba tjera da kaže bilo što s uznemirujućim realizmom, čini razliku između istinitog i lažnog sve težom za neuvježbano oko."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p4",
+      "title": "Pronalaženje povjerenja u svijetu slika",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dugoročni učinak dezinformacija je dubok: sada govorimo o **post-istina** eri, gdje objektivne činjenice ponekad imaju manju težinu od emocija i osobnih uvjerenja. Ova generalizirana relativizacija slabi samopouzdanje potrebno za zajedničko rješavanje globalnih izazova poput klime ili javnog zdravlja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najpouzdaniji odgovor ostaje medijsko obrazovanje: naučiti kako provjeriti izvor, unakrsno referencirati nekoliko informacija i razumjeti kako algoritmi rade. Neki se također oslanjaju na tehnologije certificiranja sadržaja kako bi zajamčili porijeklo videozapisa od njegovog stvaranja. U međuvremenu, svačija budnost ostaje prva linija obrane."
+        },
+        {
+          "type": "takeaway",
+          "text": "Lažne informacije šire se u prosjeku 6 puta brže od istine na društvenim mrežama jer iskorištavaju naše emocije i našu žeđ za novim. Suočeno s deepfakeovima i farmama trolova, medijsko obrazovanje ostaje najbolje oružje za očuvanje kolektivnog povjerenja."
+        }
+      ]
+    }
+  ]
+}

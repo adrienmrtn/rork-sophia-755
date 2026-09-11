@@ -1,0 +1,120 @@
+{
+  "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur",
+  "title": "Zašto Mjesec ne padne na Zemlju?",
+  "subtitle": "Orbita i gravitacija",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Mjesec neprestano pada prema Zemlji. Jednostavno joj nedostaje svaki put. Upravo to je orbita.",
+  "hero": {
+    "image": "pourquoi_la_lune_ne_tombe_pas",
+    "ratio": "16:9",
+    "hook": "Mjesec pada prema nama. Jednostavno joj nedostaje Zemlja na svakom koraku."
+  },
+  "sections": [
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ako Zemljina gravitacija vuče Mjesec, zašto se ne sudari s nama? Odgovor se čini bizarnim: Mjesec **doista pada** prema Zemlji. Samo joj nedostaje svaki trenutak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova ravnoteža između pada i bočne brzine je **orbitalni**, zakrivljena putanja oko zvijezde. Engleski fizičar **Isaac Newton** prvi je istom idejom objedinio pad jabuke i kretanje zvijezda."
+        },
+        {
+          "type": "funFact",
+          "text": "Ako biste na Zemlji težili **60 kg**, na Mjesecu biste težili samo **10**: njegova je gravitacija šest puta slabija."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
+      "title": "Newtonov imaginarni kanon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Newton zamišlja top na vrhu tako visoke planine da bi izronio iz atmosfere. Loptu šutiramo vodoravno. Uz malu snagu, brzo pada. S više snage ide dalje."
+        },
+        {
+          "type": "image",
+          "asset": "newton_cannonball_orbit_thought_experiment",
+          "ratio": "auto",
+          "caption": "Newtonov misaoni eksperiment topovske kugle: ključ za razumijevanje orbite."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pri određenoj brzini, nazvanoj [[Brzina satelita]], događa se nešto izvanredno. Dok lopta pada, Zemlja, koja je okrugla, zakrivljuje se pod njom istom brzinom. Projektil pada... a da uopće ne dodirne tlo. On je u **trajnom slobodnom padu**, vuče ga gravitacija bez sudara."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mjesec radi istu stvar. Ima dovoljnu bočnu brzinu da pad pretvori u petlju. Bez ove brzine, zaronio bi ravno prema nama."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p2",
+      "title": "Dvije sile, jedna ravnoteža",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mjesec kruži na otprilike **384 000 km**. Njegova bočna brzina je približno **1 km/s**. Kad bi se odjednom zaustavio, srušio bi se za nekoliko dana. Kad bi odjednom nestalo gravitacije, išlo bi pravocrtno u prostoru, po principu [[Inercija]]: tijelo zadržava svoju brzinu ako ga se ne usporava."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Newtonov zakon univerzalne gravitacije]] kaže da svaka masa privlači svaku drugu masu, a da privlačnost opada s udaljenošću, točnije s kvadratom udaljenosti. Što je satelit bliže, to brže mora ići kako bi izbjegao pad."
+        },
+        {
+          "type": "funFact",
+          "text": "Međunarodna svemirska postaja, na samo **400 km** visine, putuje brzinom od oko **28 000 km/h**. Oko Zemlje obiđe za **90 minuta**. Daljem Mjesecu treba **27,3 dana**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dakle, orbita nije magija. To je stalni kompromis između \"padam\" i \"krećem se prebrzo da bih udario\"."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p3",
+      "title": "Plima i oseka guraju Mjesec",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Orbita nije fiksna. U igru dolaze [[Plimne sile]]. Mjesečeva gravitacija jače privlači onu stranu Zemlje koja je okrenuta prema njoj nego onu središnju. Deformira oceane i stvara vodenu izbočinu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kako se Zemlja okreće oko svoje osi brže nego što se Mjesec okreće oko nje, ovaj greben napreduje malo ispred Mjeseca. Trenje vrlo malo usporava Zemljinu rotaciju: naši se dani produžuju za otprilike **1,4 mililitara** po stoljeću. Zauzvrat, Mjesec se udaljava za oko **3,8 cm** godišnje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prije nekoliko milijardi godina, Mjesec je bio puno bliže. Plime su bile ogromne. Ovo miješanje vode i kemije možda je pomoglo ranim oblicima života. A dinosauri su živjeli na Zemlji gdje su dani trajali samo **22 ili 23 sata**."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
+      "title": "Pomrčine…za sada",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Danas je, geometrijskom slučajnošću, Sunce oko **400 puta** veće od Mjeseca, ali i **400 puta** dalje. Njih dvoje stoga imaju istu **aprividnu veličinu**, kut pod kojim ih vidimo na nebu. Moguće su potpune pomrčine Sunca."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za otprilike **600 milijuna godina**, Mjesec će biti predaleko da potpuno zakloni Sunce. Ostat će samo prstenaste pomrčine: svjetlosni prsten oko Mjesečevog diska. Dugoročno gledano, Zemlja i Mjesec bi se mogli sinkronizirati: svako bi tijelo uvijek pokazivalo isto lice drugome. Ali Sunce će, postavši **crveni div**, posljednja faza zvijezde poput naše, transformirati sustav mnogo ranije."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mjesec se ne sudara jer njegova bočna brzina uravnotežuje Zemljinu privlačnost: on je u stalnom slobodnom padu. I dalje se udaljava za oko **3,8 cm** godišnje."
+        }
+      ]
+    }
+  ]
+}

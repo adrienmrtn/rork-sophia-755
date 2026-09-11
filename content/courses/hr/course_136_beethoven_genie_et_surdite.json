@@ -1,0 +1,145 @@
+{
+  "id": "course_136_beethoven_genie_et_surdite",
+  "title": "Beethoven: genij i gluhoća",
+  "subtitle": "1770-1827",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Ludwig van Beethoven, od Bonna do Beča, skladao je svoja najveća djela dok je ostao gluh i izumio je romantičnog genija.",
+  "hero": {
+    "image": "beethoven_genie_et_surdite",
+    "ratio": "16:9",
+    "hook": "Gluh, on sklada himnu radosti za cijelo čovječanstvo."
+  },
+  "sections": [
+    {
+      "id": "course_136_beethoven_genie_et_surdite_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Ludwig van Beethoven** (**1770**-**1827**) je arhetip modernog genija: divlja kosa, željezna volja, borba protiv sudbine. Izvan mita, njegov život označava raskid: skladatelj više nije dvorski sluga, već suvereni kreator."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zabavnu glazbu pretvara u filozofski jezik. Svoju najopsežniju zvučnu arhitekturu, uključujući Devetu simfoniju, dizajnirao je u gotovo potpunoj zvučnoj izolaciji."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p1",
+      "title": "Od Bonna do Beča: ravnopravni prinčevi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rođen u [[Bonn]] u **1770**, Ludwig odrasta pod okrutnim ocem, **Zahod**, koji od njega želi napraviti novog [[Mozart]]. Noćne probe kuju ranu tehniku... i željezni karakter."
+        },
+        {
+          "type": "image",
+          "asset": "beethoven_bonn_birthplace_portrait_young",
+          "ratio": "4:3",
+          "caption": "Mladi Beethoven u Bonnu: djetinjstvo pod pritiskom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Godine **1792** preselio se u [[Beč]], glazbenu prijestolnicu. Kratko je studirao kod **Josipa Haydna**-a. Klavirski virtuoz, zadivljujući improvizator, odbija poniznost prema pokroviteljima: želi biti ravan prinčevima. Njegov mladenački stil, još uvijek klasičan, već najavljuje silovite kontraste i veće forme."
+        },
+        {
+          "type": "funFact",
+          "text": "Tako zapušten u bečkoj mladosti, prijatelji su mu ponekad dok je spavao mijenjali nošenu odjeću novom, a da on to nije primijetio."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p2",
+      "title": "Gluhoća i Heiligenstadtski testament",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Između **1798** i **1801** pojavljuju se tinitus i gubitak sluha. Za pijanistu zvijezdu, to je katastrofa. U **1802**, u selu **Heiligenstadt**, napisao je **Testament Heiligenstadt**: pismo svojoj braći, nikad poslano, u kojem je priznao suicidalne misli... a zatim je odlučio živjeti da sastavi sve što je nosio u sebi."
+        },
+        {
+          "type": "image",
+          "asset": "beethoven_heiligenstadt_testament_manuscript",
+          "ratio": "4:3",
+          "caption": "Testament iz Heiligenstadta: očaj koji postaje odluka o stvaranju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Počinje [[herojsko razdoblje]]. Simfonija br. 3, nazvana *Herojski*, prva je posvećena [[Napoleon Bonaparte]]. Kad postane car, Beethoven bjesni i povlači posvetu. Djelo revolucionira žanr svojom duljinom i intenzitetom."
+        },
+        {
+          "type": "funFact",
+          "text": "Kako bi bolje osjetio vibracije, zapilio je noge svojih klavira tako da su bile ravno na podu."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p3",
+      "title": "Deveta: Oda radosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U sutonu života Beethoven je bio gotovo potpuno gluh. Godine **1824** dovršio je **Haljina simfoniju**: po prvi put solisti i zbor ulaze u simfoniju. Finale se temelji na [[Oda radosti]] **Friedricha von Schillera**-a, transformiranom u poruku bratstva."
+        },
+        {
+          "type": "image",
+          "asset": "beethoven_ninth_symphony_ode_joy_manuscript",
+          "ratio": "4:3",
+          "caption": "Deveti: ljudski glas ulazi u simfoniju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na kreaciji, ne mogavši čuti ovacije, nastavlja otkucavati vrijeme. Kontralt **Caroline Unger** tjera ga da se okrene i vidi kako gomila stoji. [[Oda radosti]] kasnije je postala europska himna mira. Njegove posljednje kvartete, oštre i moderne, razumjet će tek desetljećima kasnije."
+        },
+        {
+          "type": "funFact",
+          "text": "Ponekad bi stisnuo drvenu šipku među zubima, drugi kraj na klaviru: koštana konduktivnost tjerala ga je da \"čuje\" note."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p4",
+      "title": "Od klasicizma do romantizma",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Beethoven čini prijelaz iz klasicizma u [[Romantizam]]: subjektivnost, strast, eksces. Simfonija postaje metafizička drama. [[Brahms]] i [[Mahler]] živjet će u njegovoj sjeni. Također utire put [[apsolutna glazba]], gdje je zvuk dovoljan sam po sebi. Na njegovom sprovodu u **1827** više od **20 000** ljudi pratilo je procesiju do Beča."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1792",
+              "title": "Dolazak u Beč",
+              "detail": "Beethoven se afirmirao kao virtuoz i slobodan stvaralac."
+            },
+            {
+              "date": "1802",
+              "title": "Heiligenstadt",
+              "detail": "Oporuka: odabir stvaranja umjesto očaja."
+            },
+            {
+              "date": "1804",
+              "title": "Herojska simfonija",
+              "detail": "Raskid s Napoleonom, novi razmjeri žanra."
+            },
+            {
+              "date": "1824",
+              "title": "Deveta simfonija",
+              "detail": "Oda radosti za čovječanstvo."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Gluh, Beethoven je izumio romantični genij: od herojskog razdoblja do Ode radosti, stvaralačka volja protiv tišine."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "course_184_romulus_et_remus_la_fondation_de_rome",
+  "title": "Romul i Rem: osnivanje Rima",
+  "subtitle": "rimska mitologija",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Dojila vučica, utemeljitelji Rima... i bratoubojice. Mit koji stavlja zakon i granice ispred krvi.",
+  "hero": {
+    "image": "romulus_et_remus_la_fondation_de_rome",
+    "ratio": "16:9",
+    "hook": "Rim nije rođen iz mekog pakta. Rodila se od vučice, svete brazde... i ubijenog brata."
+  },
+  "sections": [
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Priča o **Romulus** i **Rémus** je mit o osnivanju Rima. Ovo nije priča za djecu. To je priča o dvostrukom raskidu: [[vestalska djevica]] koja krši svoj zavjet čistoće, zatim **bratoubojica** koja stavlja zakon ispred krvi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rimska tradicija ne taji ovaj zločin. To ga čini osnovom grada izgrađenog na svetoj granici i opstanku države, više nego na obitelji."
+        }
+      ]
+    },
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_p1",
+      "title": "Vukica s Tibera",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U Albi Dugoj, gradu Enejinih potomaka, uzurpator **Amulije** lovi svog brata Numitora. Kako bi ugasio lozu, prisiljava svoju nećakinju **Rhéu Silviju** da postane vestalka. Ali **ožujak**, bog rata, ujedinjuje se s njom. Rođeni su blizanci."
+        },
+        {
+          "type": "image",
+          "asset": "mars_rhea_silvia_roman_mythology_painting",
+          "ratio": "4:3",
+          "caption": "Mars i Rhea Silvia: božansko rođenje blizanaca."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amulije naređuje da ih utope u Tiberu. Poplavljena rijeka odlaže kolijevku u blizini **Palatin**, ispod smokve [[Ficus Ruminalis]]. A **vučica** ih doji; hrani ih djetlić, marsova ptica. Uzgajaju ih pastir Faustulus i njegova žena Acca Larentia."
+        },
+        {
+          "type": "image",
+          "asset": "capitoline_wolf_romulus_remus_bronze_sculpture",
+          "ratio": "1:1",
+          "caption": "Kapitolijska vučica, slika siročeta i grabežljivog Rima."
+        },
+        {
+          "type": "funFact",
+          "text": "Na latinskom \"lupa\" znači vučica... i prostitutka. Već su stari autori sugerirali da je Acca Larentia, tako prozvana, pravi \"vuk\" iz legende."
+        }
+      ]
+    },
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_p2",
+      "title": "Brazda i ubojstvo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kao odrasli, blizanci svrgavaju Amulija i vraćaju Numitora. Zatim žele osnovati vlastiti grad. Romulus bira **Palatin**; Rem, Aventin. Kako bi odlučili, uzimaju [[predznaci]]: Remus prvi vidi šest lešinara; Romul zatim vidi dvanaest."
+        },
+        {
+          "type": "image",
+          "asset": "palatine_hill_rome_founding_myth",
+          "ratio": "4:3",
+          "caption": "Palatin: brdo na kojem Romul ocrtava Rim."
+        },
+        {
+          "type": "paragraph",
+          "text": "Romul ocrtava [[pomoerij]], svetu brazdu ograđenog prostora, i obećava smrt svakome tko je prijeđe. Remus preskače, u znak prkosa. Romul (ili njegov poručnik Celer) ga ubija. Rim je osnovan 21. travnja 753. pr. , godina I. kalendara [[Ab Urbe Condita (753. pr. Kr.)]]."
+        },
+        {
+          "type": "funFact",
+          "text": "21. travnja ostaje “Natale di Roma”. U podne sunce udara u ulaz u Panteon: učinak koji su drevni arhitekti osmislili da povećaju moć."
+        }
+      ]
+    },
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_p3",
+      "title": "Otmica Sabinjana",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prvi problem: gradu nedostaje žena. Romul organizira igre i poziva susjede. Usred zabave, Rimljani otimaju mlade djevojke: **Rapt Sabinjana**. **Sabini**, predvođeni Titusom Tacijem, objavljuju rat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na bojnom polju Sabinjanke, već majke rimske djece, intervenirale su između očeva i muževa. Rat prestaje. Spajaju se dva naroda. Romul i Tit Tacije vladaju zajedno. Rimljani su uzeli naziv [[Quirites]]. Rim postaje društvo koje integrira neprijatelja."
+        }
+      ]
+    },
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_p4",
+      "title": "Romul postaje Kvirin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nakon trideset i sedam godina vladavine i stvaranja Senata od sto \"očeva\", Romul je nestao tijekom oluje na Champ de Mars. Službena verzija kaže da ga Mars odvodi u nebo: on postaje bog **Kvirin**. Druga verzija šapuće da su ga senatori ubili."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ostala je slika [[Kapitolijski vuk]]: grada siročeta, hranjenog divljaštvom, sposobnog marginalizirane ljude pretvoriti u gospodare svijeta."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mit",
+              "title": "Rođenje blizanaca",
+              "detail": "Mars i Rhea Silvia; vučica s Tibera."
+            },
+            {
+              "date": "753. pr. Kr",
+              "title": "Osnutak Rima",
+              "detail": "Romul ubija Rema i ulazi u trag pomoeriumu."
+            },
+            {
+              "date": "Praćenje",
+              "title": "Silovanje Sabinjana",
+              "detail": "Rat, pa spajanje naroda."
+            },
+            {
+              "date": "+37 godina",
+              "title": "Apoteoza",
+              "detail": "Romul nestaje i postaje Kvirin."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Utemeljen na bratoubojstvu i otmici, Rim iz svog mita izvlači jasnu ideju: opstanak države i poštivanje svete granice dolaze prije krvnih veza."
+        }
+      ]
+    }
+  ]
+}

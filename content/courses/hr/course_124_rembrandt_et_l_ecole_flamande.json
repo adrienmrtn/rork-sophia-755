@@ -1,0 +1,151 @@
+{
+  "id": "course_124_rembrandt_et_l_ecole_flamande",
+  "title": "Rembrandt i flamanska škola",
+  "subtitle": "1606-1669",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "**Rembrandta van Rijna** veliki je slikar nizozemskog zlatnog doba. Autoportreti, biblijski prizori i *Noćna smjena*: slika ljudsku dušu.",
+  "hero": {
+    "image": "rembrandt_et_l_ecole_flamande",
+    "ratio": "16:9",
+    "hook": "Od slave Amsterdama do propasti: slikar koji je sjenu učinio jezikom duše."
+  },
+  "sections": [
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Rembrandta van Rijna** (1606-1669) majstor je nizozemske škole 17. stoljeća. U [[Nizozemsko zlatno doba]] Nizozemska postaje trgovačka sila i leglo slobode mišljenja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njegovi autoportreti, njegove biblijske scene i njegova poznata *Noćna straža* čine chiaroscuro emocionalnim jezikom. Smješta ljude, sjajne ili umorne, u središte svega."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p1",
+      "title": "Amsterdam: buržoasko tržište",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U 17. stoljeću **Ujedinjene pokrajine** dominirale su svjetskom trgovinom. Za razliku od ostatka Europe, gdje Crkva i kraljevi kontroliraju umjetnost, nizozemsko tržište pokreće protestantska buržoazija. Ona želi slike za kuću, a ne crkvene freske."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj kontekst favorizira žanrove: pejzaž, mrtvu prirodu, svakodnevne scene. Ističu se **Vermeer** i [[Hals]]. Rembrandt se preselio u Amsterdam u **1631** i postao najtraženiji slikar portreta."
+        },
+        {
+          "type": "funFact",
+          "text": "Nakon njegova bankrota, njegov sin Titus i njegov partner Hendrickje osnovali su umjetničku tvrtku u kojoj je Rembrandt službeno bio zaposlenik, kako bi zaštitili svoje nove slike od vjerovnika."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ali njegov životni stil je prevelik. U **1656**, [[osobni bankrot]] ga pogađa. Kuća, namještaj i zbirke idu na aukciju. Međutim, on odbija ublažiti svoj stil kako bi zadovoljio modu."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p2",
+      "title": "Lumière unutrašnjost i gusta boja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rembrandt ponovno osmišljava [[chiaroscuro]] naslijeđen od [[Caravaggio]]. U njegovom radu svjetlo nije samo za pokazivanje: čini se da se filtrira iz likova. Pogled se fokusira na lica i ruke."
+        },
+        {
+          "type": "image",
+          "asset": "rembrandt_night_watch_painting",
+          "ratio": "4:3",
+          "caption": "Noćna straža: milicija u pokretu, a ne fiksni poredak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njegov drugi potpis: **impasto**, ova boja nanesena tako gusto da stvara reljef. U eri koja želi glatke površine, on se usuđuje koristiti materijale. Rečeno je da su pojedini portreti mogli biti podignuti za nos. On traži pravi, a ne lijepi ideal."
+        },
+        {
+          "type": "funFact",
+          "text": "Kemijska analiza otkrila je plumbonakrit u njegovom impastu: rijedak spoj olova koji je pomogao njegovim debelim slojevima da se brže osuše."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p3",
+      "title": "Noćna straža: portret koji se kreće",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1642** Rembrandt donosi *Četnu kapetana Fransa Banninga Cocqa*, poznatu kao **Noćna straža**. Narudžba za [[Kloveniersdoelen]], sjedište buržoaske milicije u Amsterdamu. Milicajci obično poziraju u špaliru, svaki se dobro vidi jer su platili."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rembrandt ih prikazuje u pokretu kako napuštaju sjedište. Kjaroskuro hijerarhizira figure: neke prelaze u sjenu. Legenda kaže da su bijesni policajci uzrokovali njegovu propast. U stvarnosti, radu su se divili, iako je bio zbunjujući."
+        },
+        {
+          "type": "funFact",
+          "text": "Naslov *Noćna smjena* pogrešna je interpretacija: scena je dnevna. Stoljeća prljavog laka toliko su potamnila platno da je izgledalo kao noćna patrola."
+        },
+        {
+          "type": "paragraph",
+          "text": "U 18. stoljeću, da bi se ugradio u Gradsku vijećnicu, izrezane su mu četiri strane. Likovi nestaju. Izvorna kompozicija bila je mnogo prostranija."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p4",
+      "title": "Slikanje sebe, cijeli život",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rembrandt je naslikao otprilike **80 do 90 autoportret** tijekom gotovo četrdeset godina. Mlad, djeluje arogantno, prekriven krznom i nakitom. Nakon propasti i žalosti, ton se mijenja: više zavodljivosti, sirova iskrenost u suočavanju sa starenjem."
+        },
+        {
+          "type": "image",
+          "asset": "rembrandt_self_portrait_old_age",
+          "ratio": "4:3",
+          "caption": "Kasni autoportreti: pogled bez maske."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1631",
+              "title": "Dolazak u Amsterdam",
+              "detail": "Postaje gradska zvijezda portretist."
+            },
+            {
+              "date": "1642",
+              "title": "Noćna straža",
+              "detail": "Portret milicije u pokretu, revolucionar."
+            },
+            {
+              "date": "1656",
+              "title": "Stečaj",
+              "detail": "Kuća i zbirke prodane na aukciji."
+            },
+            {
+              "date": "1669",
+              "title": "Mrtav",
+              "detail": "Umro je u relativnoj anonimnosti."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Umro u **1669**, pokopan bez pompe, utjecat će na Goyu kao [[Francis Bacon]]. On ostaje slikar koji je pigment transformirao u unutarnje svjetlo."
+        },
+        {
+          "type": "takeaway",
+          "text": "Rembrandt je uvećao ljudsku unutrašnjost kroz chiaroscuro i gustu boju. Od amsterdamske slave do propasti, njegovi autoportreti ostaju jedinstveni dnevnik života."
+        }
+      ]
+    }
+  ]
+}

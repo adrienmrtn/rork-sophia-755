@@ -1,0 +1,116 @@
+{
+  "id": "course_63_comment_se_forment_les_tremblements_de_t",
+  "title": "Kako nastaju potresi?",
+  "subtitle": "Rasjedi i valovi",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Svake godine Zemlja doživi stotine tisuća potresa. Većina je nevidljiva. Nekolicina mijenja cijele gradove.",
+  "hero": {
+    "image": "comment_se_forment_les_tremblements_de_terre",
+    "ratio": "16:9",
+    "hook": "Potres nije hir zemlje. Ovo je energija koja je predugo čekala."
+  },
+  "sections": [
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svake godine Zemlja zabilježi približno **500 000 vidljivih potresa**. Samo mali dio uzrokuje veliku štetu. Potres nije slučajnost: on je iznenadni završetak duge akumulacije energije u stijenama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da bismo ovo razumjeli, moramo vidjeti površinu planeta kao slagalicu pokretnih ploča. Tamo gdje se te ploče trljaju jedna uz drugu, raste napetost...sve dok ne pukne."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p1",
+      "title": "Ploče koje se stalno kreću",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zemljina površina podijeljena je na oko deset velikih **tektonskih ploča**. Klize po mekšem sloju dlake, [[Astenosfera]]. Njihova brzina? Otprilike **1 do 10 cm godišnje**, otprilike isto kao i rast nokta."
+        },
+        {
+          "type": "image",
+          "asset": "earthquake_collapsed_buildings_urban",
+          "ratio": "auto",
+          "caption": "Potresi iznenada oslobađaju energiju nakupljenu duž rasjeda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na granicama dominiraju tri scenarija. Ploče se razmiču (oceanski grebeni). Oni se sudaraju: ponekad jedno zaroni pod drugo, to je [[Subdukcija]]. Ili klize jedno uz drugo, kao duž [[Rasjed San Andreas]] u Kaliforniji, dugog oko **1 300 km**."
+        },
+        {
+          "type": "funFact",
+          "text": "Duž San Andreasa, Los Angeles se približava San Franciscu za oko **6 cm** godišnje. Za **15 milijuna godina** ta će dva grada biti susjedi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Posebno se na tim granicama događaju potresi. Kretanje ploča ometa trenje stijena. Energija se tiho akumulira."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p2",
+      "title": "Kad greška otpusti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Potres se događa duž **rassjeda**: pukotina između dva bloka stijene. U teoriji, ploče bi trebale neprekidno kliziti. U praksi, trenje često blokira ovo klizanje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za to vrijeme plakovi nastavljaju rasti. Stijena se malo deformira, kao nategnut luk. Govorimo o elastičnim ograničenjima. To može trajati desetljećima, ponekad i stoljećima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada se prekorači granica otpora, blokovi iznenada klize. Energija odlazi u obliku **eizmičkih valova**. Prelomna točka dubine naziva se **fokus**. Na površini, točka iznad je **epicentar**, gdje su učinci često najjači."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p3",
+      "title": "Mjerenje snage, strah od tsunamija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za mjerenje energije potresa seizmolozi uglavnom koriste moment veličine [[Skala veličine]]. To je logaritamska ljestvica: svaki stupanj množi energiju s otprilike **32**. Potres magnitude **8** stoga oslobađa približno **1000 puta** više energije od potresa magnitude **6**."
+        },
+        {
+          "type": "funFact",
+          "text": "Postoje i potresi **0** ili negativne magnitude. To su vrlo mali događaji, vidljivi samo vrlo osjetljivim senzorima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najjači ikad izmjeren modernim instrumentima je onaj **Valdivija**, u Čileu, u **1960**: magnituda **9,5**. Ako je žarište ispod oceana i podiže morsko dno, istisnuti vodeni stup može stvoriti **tsunami**. Godine **2004**, potres magnitude **9,1** blizu Sumatre izazvao je tsunami koji je pogodio 14 zemalja i odnio približno **227 000** života."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p4",
+      "title": "Valovi, uzbuna i zgrade koje odolijevaju",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nakon prekida odlazi nekoliko vrsta valova. **P valovi** (primarni) stižu prvi: stisnu stijenu poput harmonike. Zatim dolaze **ZZ** (sekundarni) valovi, sporiji i često razorniji. Površinski valovi uzrokuju vrlo vidljivo osciliranje tla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Još ne znamo kako predvidjeti točan dan velikog potresa. S druge strane, mapiramo rizična područja. [[Potresno inženjerstvo]] projektira zgrade sposobne izdržati udare: mobilne temelje, divovske amortizere, strukture koje apsorbiraju energiju. U Japanu rana upozorenja otkrivaju P valove i mogu prekinuti plin ili usporiti vlakove prije nego što stignu najopasniji valovi."
+        },
+        {
+          "type": "takeaway",
+          "text": "Potres se događa kada stijene zaglavljene duž rasjeda iznenada oslobode desetljeća napetosti. Energija putuje u valovima, a svaki stupanj veličine množi tu energiju s otprilike **32**."
+        }
+      ]
+    }
+  ]
+}

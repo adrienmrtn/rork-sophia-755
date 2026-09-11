@@ -1,0 +1,98 @@
+{
+  "id": "course_59_la_decouverte_de_l_anesthesie",
+  "title": "Otkriće anestezije",
+  "subtitle": "Lijek",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Prije 1846. operacija se često izvodila svjesno i uz jaku bol. Anestezija operaciju pretvara u njegu, a ne u mučenje.",
+  "hero": {
+    "image": "la_decouverte_de_l_anesthesie",
+    "ratio": "16:9",
+    "hook": "Jednog dana 1846. godine, u Bostonu, kirurgija je prestala biti utrka protiv boli."
+  },
+  "sections": [
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zamislite amputaciju bez da ste zaspali. Prije sredine 19. stoljeća to je bila norma. Vežemo bolesnika, brzo se krećemo, molimo."
+        },
+        {
+          "type": "paragraph",
+          "text": "**anestezija** mijenja sve: omogućuje vam da operirate bez svijesti o boli. Moderna kirurgija konačno može uzeti svoje vrijeme."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p1",
+      "title": "Prije: brzina nasuprot patnji",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "surgery_without_anesthesia_19th_century",
+          "ratio": "4:3",
+          "caption": "Bez anestezije, kirurg je morao biti izuzetno brz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kirurzi su ocjenjivani po njihovoj brzini. Za imobilizaciju ljudi korišteni su alkohol, opijum ili gruba sila. Mnogi su pacijenti umrli od šoka, infekcije ili krvarenja."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p2",
+      "title": "1846: dan etera",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "ether_anesthesia_first_demonstration_1846",
+          "ratio": "4:3",
+          "caption": "U Bostonu je javna demonstracija uvjerila medicinski svijet."
+        },
+        {
+          "type": "paragraph",
+          "text": "**O16. listopada 1846.**, u Bostonu, zubar **William Morton** tjera pacijenta da udahne **eter**. Kirurg **John Warren** operira tumor na vratu. Pacijent ne vrišti. Soba je zaprepaštena."
+        },
+        {
+          "type": "funFact",
+          "text": "Warren je navodno rekao: \"Gospodo, ovo nije laž.\" Fraza je ostala poznata."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p3",
+      "title": "Dalje: kloroform i rasprave",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Slijedili su drugi proizvodi, poput **kloroforma**, populariziranog osobito u Velikoj Britaniji. Rivalstva nastaju oko toga tko je što \"izumio\". Patent nije bitan: ideja se širi po cijelom svijetu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ostaje jedan problem: uspavati bez ubijanja. Morate ga dozirati, pratiti disanje i srce. Rađa se nova specijalnost."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p4",
+      "title": "Danas anestezija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Danas anesteziolog koristi precizne plinove i lijekove, strojeve koji mjere sve. Možete uspavati cijelo tijelo ili samo dio (lokalna ili lokoregionalna anestezija)."
+        },
+        {
+          "type": "takeaway",
+          "text": "Od demonstracije etera u **1846**, anestezija je transformirala kirurgiju: manje boli, više vremena, više preciznosti... a sigurnost je postala znanost sama po sebi."
+        }
+      ]
+    }
+  ]
+}

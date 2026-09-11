@@ -1,0 +1,130 @@
+{
+  "id": "course_191_enee_et_la_fondation_de_rome_virgile",
+  "title": "Eneja i osnivanje Rima (Vergilije)",
+  "subtitle": "Eneida",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "U Eneidi Vergilije govori kako je Eneja, princ koji je pobjegao iz Troje, prešao Sredozemno more kako bi osnovao granicu Rima.",
+  "hero": {
+    "image": "enee_et_la_fondation_de_rome",
+    "ratio": "16:9",
+    "hook": "Trojanac koji bježi nosi oca na ramenima: Rim je rođen iz ovog progonstva."
+  },
+  "sections": [
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Eneida** je velika pjesma **Vergila**-a. Govori o odiseji **Eneja**-a, trojanskog princa koji je preživio pad Troje. Vođen bogovima, prešao je Sredozemlje kako bi utemeljio, u Italiji, lozu koja će dovesti do Rima."
+        },
+        {
+          "type": "paragraph",
+          "text": "To nije samo avantura. To je mit o rađanju rimske moći, napisan kako bi Rim dobio prošlost dostojnu Homera."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p1",
+      "title": "Vergilije piše za Augusta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Krajem 1. stoljeća prije Krista, nakon građanskih ratova, car **AAuguste** želi stabilizirati svoju vlast. On naručuje Vergiliju da napiše ep dostojan Homera. Djelo također služi [[Augustova propaganda]]: povezujući princa s božanskim herojem."
+        },
+        {
+          "type": "image",
+          "asset": "dido_aeneas_carthage_painting",
+          "ratio": "4:3",
+          "caption": "Vergilije, pjesnik Eneide, pobornik Rima po volji sudbine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vergilije je ondje radio jedanaest godina (29.-19. pr. Kr.). Prvih šest pjesama prati lutanje po moru. Sljedećih šest govori o ratu u Italiji. Piše u [[Daktilski heksametri]], stihu velikih antičkih epova."
+        },
+        {
+          "type": "funFact",
+          "text": "Vergilije je umro **19** prije Krista i zatražio je da se rukopis spali, smatrajući nedovršenim. August zabranjuje poslušnost. Nacionalni ep Rima pojavljuje se protiv volje svog autora."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p2",
+      "title": "Bijeg iz Troje i ljubav u Kartagi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dok Troja gori, na kraju [[Trojanski rat]], Eneji, sinu božice **dođi** i smrtnika Anhiza, naređeno je da pobjegne. Odlazi, noseći oca na ramenima, sina Askanija u ruci, a sa sobom nosi [[domaći bogovi]], bogove ognjišta. Ova gesta definira [[Rimske piete]]: dužnost prema obitelji, bogovima i sudbini."
+        },
+        {
+          "type": "image",
+          "asset": "aeneas_fleeing_burning_troy_anchises_painting",
+          "ratio": "4:3",
+          "caption": "Eneja bježi iz zapaljene Troje, otac i sin s njim."
+        },
+        {
+          "type": "paragraph",
+          "text": "U Kartagi voli kraljicu **Nestašluk**. Ali [[Jupiter]], kralj rimskih bogova, poziva ga natrag na njegovu misiju. Eneja odlazi. Didona počini samoubojstvo i proklinje svoju lozu: mit tako objašnjava buduću mržnju između Rima i Kartage, prije [[Punski ratovi]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Enejin sin, Ascanius, također se zove Iule. Obitelj [[Juliji]], uključujući Julija Cezara i Augusta, tvrdi da je ovo božansko podrijetlo preko Venere."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p3",
+      "title": "Rat u Laciju",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nakon silaska u pakao, Eneja stiže u **Lacij**, u središnjoj Italiji. Kralj **Latinus** obećava mu svoju kćer **Laviniju**. But prince **Turnus**, supported by [[Juno]], a goddess hostile to the Trojans, starts the war."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eneja pobjeđuje Turna i osniva **Lavinium**. Kasnije će njegov sin osnovati [[Alba Longa]], iz koje će se roditi Romul i Rem. Mit tako povezuje Troju i Rim u jednom lancu."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Troja",
+              "title": "Let Eneje",
+              "detail": "Spašava oca, sina i kućne bogove."
+            },
+            {
+              "date": "Kartaga",
+              "title": "Nestašluk",
+              "detail": "Slomljena ljubav, prokletstvo protiv Rima."
+            },
+            {
+              "date": "Lazio",
+              "title": "Pobjeda nad Turnom",
+              "detail": "Osnivanje Lavinija, početak Rima."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p4",
+      "title": "Heroj dužnosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U srednjem vijeku Vergilije je postao gotovo proročki mudrac. Dante ga čini svojim vodičem u [[Božanstvena komedija]]. Ali Eneja nije sretan junak: on nosi težinu sudbine. Rim je rođen iz progonstva, iz žrtvovane ljubavi i iz rata."
+        },
+        {
+          "type": "takeaway",
+          "text": "U **Eneidi**, Vergilije čini **Eneja**, osobu koja je preživjela Troju, mitskog pretka Rima. Junak utjelovljuje **pietas**: dužnost ispred želje, sudbina ispred osobne sreće."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "course_123_le_caravage_et_le_clair_obscur",
+  "title": "Caravaggio i chiaroscuro",
+  "subtitle": "1571-1610",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "**Michelangelo Merisi**, poznat kao Caravaggio, revolucionirao je slikarstvo brutalnim realizmom i ekstremnim kontrastom svjetlosti i sjene: chiaroscuro.",
+  "hero": {
+    "image": "le_caravage_et_le_clair_obscur",
+    "ratio": "16:9",
+    "hook": "Sveci s prljavim nogama, svjetla reflektora: umjetnost više nikada neće biti ista."
+  },
+  "sections": [
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Michelangelo Merisi**, poznat kao **Caravaggio** (1571.-1610.), ruši kodove idealne ljepote naslijeđene iz renesanse. Sučeljava se sa svetim i svakodnevnim: prosjacima, krčmama, umornim tijelima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njegovo oružje: radikalni chiaroscuro. Tijela izranjaju iz tame kao pod svjetlom reflektora. Taj raskid najavljuje duh [[Barok u slikarstvu]] i pretvara gledatelja u svjedoka drame."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_self_portrait",
+          "ratio": "4:3",
+          "caption": "Caravaggio, genijalni slikar i lik burnog rimskog života."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p1",
+      "title": "Genije, nasilje i egzil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rođen blizu Milana, Caravaggio je stigao u Rim oko **1593**. Njegova se karijera promijenila u **1600** sa slikama kapele Contarelli u crkvi Saint-Louis-des-Français. *Poziv svetog Mateja* zadivljuje Rim: sveto ima lice ulice."
+        },
+        {
+          "type": "funFact",
+          "text": "Na Malti je proglašen vitezom Reda, a zatim je bačen u zatvor zbog napada na nadređenog. On bježi iz utvrde za koju se smatralo da je neosvojiva pomoću užeta od konoplje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njegov život je nasilan kao i njegove slike. U **1606**, tijekom tučnjave, ubio je **Ranuccio Tomassoni**. Osuđen na smrt, pobjegao je u Napulj, Maltu, zatim Siciliju. Progonjen i ranjen, umro je **38 godina** u [[Porto Ercole]], nekoliko dana prije papinog oprosta."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p2",
+      "title": "Tenebrizam: svjetlo koje udara",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Caravaggio je izumio **tenebrizam**, ekstremni oblik chiaroscura. Nema više blagog svjetla koje miluje oblike: neprozirna tama i tijela koja izranjaju iz nje sa skulpturalnom snagom. Svjetlo je umjetno, poput scenskih reflektora."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_tenebrism_chiaroscuro_painting",
+          "ratio": "4:3",
+          "caption": "U tenebrizmu crna usredotočuje pogled na dramu."
+        },
+        {
+          "type": "funFact",
+          "text": "Da bi dobio ovo osvjetljenje, radio je u radionici s crnim zidovima, probušenim jednim malim krovnim prozorom visoko gore."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uklanjanjem ukrasa i pejzaža tjera pogled prema licima i gestama. Ovo svjetlo također služi [[Protureformacija]]: Katolička crkva želi pokrenuti vjernike. S njim svjetlo postaje milost koja pogađa dušu bez upozorenja."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p3",
+      "title": "Sveci koji izgledaju kao ulica",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ono što najviše skandalizira je njegovo odbijanje idealiziranja. Modele bira na ulici: radnici, prosjaci, kurtizane. Djevica i apostoli imaju bore, prljave noge, umorna tijela."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_madonna_dei_pellegrini_painting",
+          "ratio": "4:3",
+          "caption": "Hodočasnička Madona: u prvom planu bose, prljave noge."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Smrt Djevice* je odbijen: kaže se da je uzeo utopljenicu za model. *Madona hodočasnika* šokira prljavim nogama klečećih siromaha. On odbija umjeće [[Manirizam]], ovog gracioznog i iskrivljenog stila koji mu je prethodio. Za njega je spasenje upućeno najprije poniznima."
+        },
+        {
+          "type": "funFact",
+          "text": "Njegova prva verzija *Sveti Matej i anđeo* prikazivala je evanđelista prljavih nogu, koji je izgledao neobrazovano. Sponzori su tražili da ga prefarba."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p4",
+      "title": "Caravaggio: Europa pod utjecajem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nije osnovao školu, ali se njegov stil širi: **karavagizam**. [[Artemisia Gentileschi]] u Italiji, Georges de La Tour u Francuskoj, Zurbarán u Španjolskoj, Rubens u Flandriji. Kasnije će **Rembrandta** naslijediti njegovu poeziju sjena, **Velazquez** njegovo dostojanstvo naroda."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1600",
+              "title": "kapela Contarelli",
+              "detail": "Rim otkriva Poziv svetog Mateja."
+            },
+            {
+              "date": "1606",
+              "title": "Ubojstvo i progonstvo",
+              "detail": "Caravaggio je pobjegao iz Rima, osuđen na smrt."
+            },
+            {
+              "date": "1610",
+              "title": "Smrt u Porto Ercoleu",
+              "detail": "Umro je u 38. godini, neposredno prije milosti."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Zaboravljena dva stoljeća, ponovno je otkrivena u 20. stoljeću. Njegovo čvrsto kadriranje i osvjetljenje još uvijek utječu na kino i fotografiju."
+        },
+        {
+          "type": "takeaway",
+          "text": "Caravaggio (1571-1610) nametnuo je tenebrizam i radikalni socrealizam. Slikajući sakralno po uličnim modelima, postao je duhovni otac baroknog slikarstva."
+        }
+      ]
+    }
+  ]
+}

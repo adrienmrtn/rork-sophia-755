@@ -1,0 +1,135 @@
+{
+  "id": "course_30_la_blitzkrieg_1940",
+  "title": "Blitzkrieg",
+  "subtitle": "1940",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "U **šest tjedana**, od **10.svibnja** do **22.lipnja 1940. god**, njemačka vojska je osvojila Francusku i Beneluks. \"Blitzkrieg\" revolucionira umijeće ratovanja brzinom.",
+  "hero": {
+    "image": "la_blitzkrieg_1940",
+    "ratio": "16:9",
+    "hook": "Šest tjedana da se sruši ono za što se vjerovalo da je prva vojska u Europi."
+  },
+  "sections": [
+    {
+      "id": "course_30_la_blitzkrieg_1940_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od **10.svibnja** do **22.lipnja 1940. god**, u samo šest tjedana, njemačka vojska je osvojila Francusku, Nizozemsku, Belgiju i Luksemburg. Vodeća europska vojna sila propada pred očima svijeta."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Blitzkrieg** (blitzkrieg) nije samo niz pobjeda. To je revolucija: brzina i neorganiziranost neprijatelja važniji su od njegovog trenutnog fizičkog uništenja."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p1",
+      "title": "Udari jako, udari brzo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Riječ Blitzkrieg nije službena u [[Wehrmacht]], njemačkoj vojsci od 1935. do 1945. Izmislio ju je anglosaksonski tisak. Nijemci govore o ratu kretanja. Načelo [[Schwerpunkt]]: koncentrirajte sva sredstva na usku točku kako biste razbili prednju stranu."
+        },
+        {
+          "type": "funFact",
+          "text": "Sirene Stuka, ovih ronilačkih bombardera nazvanih \"Jerihonske trube\", nemaju pravu vojnu upotrebu. Služe samo za terorisanje vojnika i civila."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tamo gdje su Francuzi raspršili tenkove kao podršku pješaštvu, Nijemci su ih grupirali u autonomne oklopne divizije, povezane radio vezom. Štuke djeluju poput letećeg topništva. U međuvremenu, Francuska i dalje vjeruje u [[Maginotova linija]], ovaj lanac utvrda duž njemačke granice."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p2",
+      "title": "Srpasti potez",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po savjetu generala **Erica von Manstein**-a, Hitler je usvojio [[Sichelschnitt]], \"pokret srpom\": privukao je saveznike u Belgiju, dok je glavnina oklopnih jedinica, njemačkih tenkova, prešla **Ardene**, smatrane neprohodnima. **13. svibnja**, general **Heinz Guderian** prešao je Meuse kod **Sedana**. Ruta kanala je otvorena."
+        },
+        {
+          "type": "image",
+          "asset": "german_tanks_blitzkrieg_1940",
+          "ratio": "4:3",
+          "caption": "Njemački tenkovi tijekom kampanje 1940."
+        },
+        {
+          "type": "paragraph",
+          "text": "U tjedan dana savezničke su vojske bile okružene, leđima okrenute moru. U Dunkirk, [[Operacija Dinamo (Dunkerque)]] evakuirao **338,000** francusko-britanskih vojnika. Velika Britanija spašava svoju vojsku. Francuska ostaje sama."
+        },
+        {
+          "type": "image",
+          "asset": "dunkirk_evacuation_beach_1940",
+          "ratio": "4:3",
+          "caption": "Evakuacija Dunkerquea, svibanj-lipanj 1940."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p3",
+      "title": "Primirje i žalba",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lišena svojih najboljih podjela, Francuska je propala. Pariz je 14. lipnja proglašen otvorenim gradom. Maršal **Philippe Pétain** traži primirje, potpisano **22.lipnja** u Compiègneu, u istom vagonu kao u **1918**: Hitler izvodi osvetu."
+        },
+        {
+          "type": "funFact",
+          "text": "Hitler je za ceremoniju iznio vagon iz muzeja u Compiègneu i postavio ga točno na mjesto gdje je Njemačka kapitulirala prije 22 godine."
+        },
+        {
+          "type": "paragraph",
+          "text": "**18. lipnja**, iz Londona, **general de Gaulle** upućuje svoj apel BBC-ju: Francuska je izgubila bitku, a ne rat. Neposredni učinak je nizak. Položeni su temelji Slobodne Francuske."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p4",
+      "title": "Pobjeda s dvije oštrice",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1940. Njemačku je uspostavio kao gospodara Europe. Ali Blitzkrieg je kratka ratna strategija: ograničeno gorivo, krhka logistika. U **1941**, suočen sa sovjetskom neizmjernošću, zaglibio je. Povjesničar **Marc Bloch** govorit će o “čudnom porazu”: francuskom intelektualnom, ali i materijalnom neuspjehu."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "10. svibnja 1940. godine",
+              "title": "Ofenziva na Zapadu",
+              "detail": "Istodobni napad na Beneluks i proboj u Ardene."
+            },
+            {
+              "date": "13. svibnja 1940. godine",
+              "title": "Proboj limuzine",
+              "detail": "Panzeri prelaze Meuse."
+            },
+            {
+              "date": "Svibanj-lipanj 1940",
+              "title": "Dunkerque",
+              "detail": "338 000 vojnika evakuirano u Englesku."
+            },
+            {
+              "date": "22. lipnja 1940. godine",
+              "title": "Primirje",
+              "detail": "Francuska prekida bitku kod Compiègnea."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "U šest tjedana, Blitzkrieg kombinira oklop, avijaciju i radio kako bi usitnio obrambenu doktrinu. Na Maginotovoj liniji prevladavala je brzina i koncentracija snaga."
+        }
+      ]
+    }
+  ]
+}

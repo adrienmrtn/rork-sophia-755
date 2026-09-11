@@ -1,0 +1,120 @@
+{
+  "id": "course_64_la_catastrophe_de_tchernobyl_1986",
+  "title": "Katastrofa u Černobilu (1986.)",
+  "subtitle": "26. travnja 1986. godine",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "26. travnja 1986. eksplodirao je reaktor br. 4 u Černobilu. Riječ je o najtežoj civilnoj nuklearnoj nesreći u povijesti. Evo što se dogodilo, bez senzacionalizma.",
+  "hero": {
+    "image": "la_catastrophe_de_tchernobyl_1986",
+    "ratio": "16:9",
+    "hook": "Jedne noći u travnju 1986. sigurnosni se test pretvorio u katastrofu. Cijela će Europa patiti od posljedica."
+  },
+  "sections": [
+    {
+      "id": "course_64_la_catastrophe_de_tchernobyl_1986_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**26. travnja 1986.**, u 1:23 ujutro, reaktor br. 4 **Černobilske elektrane**, tada u sovjetskoj Ukrajini, bila je poprište najozbiljnije poznate civilne nuklearne nesreće. Na ljestvici [[INES]], koja nuklearne događaje rangira od 1 do 7, doseže maksimalnu razinu, poput Fukushime 2011. godine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Radioaktivni materijali ispuštaju se u atmosferu. Oblak prelazi veliki dio Europe. Osim ljudske drame, Černobil trajno mijenja način na koji gledamo na nuklearnu energiju i otkriva nedostatke u sovjetskom sustavu."
+        }
+      ]
+    },
+    {
+      "id": "course_64_la_catastrophe_de_tchernobyl_1986_p1",
+      "title": "Test koji pođe po zlu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sve počinje sigurnosnim testom. Inženjeri žele provjeriti mogu li, u slučaju nestanka struje, još uvijek rotirajuće turbine napajati rashladne pumpe dok se pokreću dizel generatori. Ideja je dobra. Uvjeti testa nisu."
+        },
+        {
+          "type": "image",
+          "asset": "pripyat_abandoned_city_chernobyl",
+          "ratio": "auto",
+          "caption": "Zaštitna kupola reaktora br. 4, okružena napuštenim zgradama Pripjata."
+        },
+        {
+          "type": "paragraph",
+          "text": "Noćna smjena radi na niskoj snazi. Međutim, [[Sovjetski reaktor RBMK]], model hlađen vodom i umjeren grafitom, tada postaje vrlo nestabilan. U ovoj vrsti reaktora, stvaranje mjehurića pare može ubrzati reakciju umjesto da je uspori."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada operater aktivira zaustavljanje u nuždi, kontrolne šipke, namijenjene zaustavljanju reakcije, prvo uzrokuju kratki val zbog svojeg dizajna. Snaga se utrkuje. Od pare srce eksplodira. Predviđena je zaštitna ploča, teška približno **1000 tona**. Reaktor je na otvorenom."
+        },
+        {
+          "type": "funFact",
+          "text": "U podrumu je nastala nuklearna magma nazvana \"Slonova noga\". 1986. predugo prilaženje tome bilo je kobno za nekoliko dana."
+        }
+      ]
+    },
+    {
+      "id": "course_64_la_catastrophe_de_tchernobyl_1986_p2",
+      "title": "Poricanje, evakuacija, likvidatori",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U prvim satima mnogi su vjerovali da se radi o običnom požaru na krovu. Vatrogasci interveniraju bez odgovarajuće zaštite. Neki ljudi rukuju radioaktivnim grafitom, a da toga nisu ni svjesni. Brzo se javljaju simptomi akutnog sindroma zračenja: mučnina, peckanje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Susjedni grad **Pripjat**, izgrađen za zaposlenike elektrane, nastavlja normalan život otprilike **36 puta**. Djeca se igraju vani. Tek **A27.travnja** njegovih **50,000** stanovnika evakuirano je u roku od nekoliko sati, često a da nisu mogli ništa ponijeti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kako bi obuzdao katastrofu, SSSR je mobilizirao gotovo **600 000** ljudi: [[likvidatori]]. Piloti helikoptera, radnici, vojnici. Neki imaju samo nekoliko desetaka sekundi na krovu da očiste krhotine: elektronički se roboti pokvare pod zračenjem."
+        },
+        {
+          "type": "funFact",
+          "text": "Neki likvidatori dobili su medalju na kojoj je prikazana kap krvi precrtana zrakama. Rijedak ukras, stvoren za nevidljivu opasnost."
+        }
+      ]
+    },
+    {
+      "id": "course_64_la_catastrophe_de_tchernobyl_1986_p3",
+      "title": "Ljudske i ekološke posljedice",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oblak posebno taloži radioaktivni jod i cezij na ogromnim područjima. WHO prepoznaje otprilike **4000** slučajeva raka štitnjače, posebno kod djece izložene kontaminiranim mlijekom. O ukupnom broju dugotrajno povezanih smrti i dalje se raspravlja ovisno o studijama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oko mjesta je evakuirana [[Zona isključenja od 30 km]]. Četrdeset godina kasnije, bez poljoprivrede i gradova, divljač je tamo često bogata: vukovi, losovi, Przewalskijevi konji. Radioaktivnost i dalje predstavlja opasnost, ali odsutnost čovjeka je paradoksalno ostavila mjesta prirodi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Godine 1986. prvi betonski sarkofag izolirao je reaktor. Oslabljena, prekrivena je **2016** golemim čeličnim lukom, Novim sigurnosnim zaštitnim omotačem, dizajniranim da traje otprilike **100 godina** i sastavljenim zatim kliznim kako bi se ograničila izloženost radnika."
+        }
+      ]
+    },
+    {
+      "id": "course_64_la_catastrophe_de_tchernobyl_1986_p4",
+      "title": "Političko i tehničko nasljeđe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za [[Mihail Gorbačov]]-a, tadašnjeg čelnika SSSR-a, Černobil je razotkrio birokratsku tajnu i industrijski nemar. Nesreća potiče veću transparentnost (Glasnost) i ubrzava krizu sovjetskog režima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diljem svijeta uzdrmana je ideja o nuklearnoj energiji bez ozbiljnog rizika. U **1989** [[WANO]], Svjetska udruga nuklearnih operatera, rođena je za razmjenu dobre sigurnosne prakse između zemalja. Nekoliko država usporava ili revidira svoje programe."
+        },
+        {
+          "type": "takeaway",
+          "text": "Černobil (1986.) ostaje simbol velike nuklearne nesreće: tehnički kvar, ljudske pogreške i neprozirnost. Zona isključenja ostaje nenaseljena, dok se globalna nuklearna sigurnost morala iznova osmisliti."
+        }
+      ]
+    }
+  ]
+}

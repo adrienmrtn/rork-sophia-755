@@ -1,0 +1,106 @@
+{
+  "id": "course_43_pourquoi_la_glace_flotte_t_elle",
+  "title": "Zašto led pluta?",
+  "subtitle": "Voda i molekule",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Led pluta na vodi. To se čini normalnim, ali je zapravo vrlo rijetko. I to na sreću života na Zemlji.",
+  "hero": {
+    "image": "pourquoi_la_glace_flotte",
+    "ratio": "16:9",
+    "hook": "Kad bi led tekao, jezera bi se zaledila do dna. I život u vodi bi teško preživio."
+  },
+  "sections": [
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kocka leda u čaši, santa leda u oceanu: led **pluta**. Smatramo to banalnim. Međutim, za većinu tvari, krutina je više **gušća**, stoga teža za isti volumen: tone."
+        },
+        {
+          "type": "paragraph",
+          "text": "Voda čini suprotno. Ova iznimka dolazi iz oblika njegove molekule. I spasio je mnoga jezera zimi."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p1",
+      "title": "Molekula u obliku slova V",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Molekula vode je atom **oksigena** povezan s dva atoma **vodika**. Nije ravno: tvori **V**. Zbog ovog oblika, električni naboji nisu jednako raspoređeni: molekula je **polarna**, s jednim krajem blago negativnim, a drugim blago pozitivnim."
+        },
+        {
+          "type": "image",
+          "asset": "water_molecule_model_crystal",
+          "ratio": "4:3",
+          "caption": "Molekula vode: V koja privlači i odbija svoje susjede."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rezultat: molekule vode privlače jedna drugu pomoću [[Vodikove veze]], poput malih magneta. U tekućini ostaju blizu, ali se i dalje kreću. U ledu se drugačije smrzavaju."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
+      "title": "Kada se voda smrzne, zauzima prostor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oko **0 °C**, voda se skrućuje. Kako bi formirale led, molekule se organiziraju u **heksagonalnu** mrežu, neku vrstu šesterostranog saća. Zatim ostavljaju više **prazan** između sebe nego u tekućem stanju."
+        },
+        {
+          "type": "funFact",
+          "text": "Zbog toga puna boca vode može **prsnuti** u zamrzivaču: led zauzima više volumena od tekuće vode."
+        },
+        {
+          "type": "paragraph",
+          "text": "Manje materijala u istom volumenu znači: **manje gusto**. Međutim, objekt manje gustoće od tekućine oko njega se diže. Led dakle pluta na vodi. To se naziva **anomalija širenja vode**: za razliku od gotovo svih tvari, voda se širi dok se hladi pod **4 °C**."
+        },
+        {
+          "type": "image",
+          "asset": "iceberg_floating_arctic_ocean",
+          "ratio": "16:9",
+          "caption": "Santa leda pluta jer je led manje gustoće od tekuće vode."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
+      "title": "Zašto je vitalan za jezera",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zamislite da sladoled teče. Stvorila bi se na površini, a zatim potonula na dno. Jezero bi se ledilo sloj po sloj, sve do dna. Ljeto često ne bi bilo dovoljno da se sve otopi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Srećom, led je ostao na vrhu. Formira **izolacijski pokrov**. Ispod smrznute površine, tekuća voda može ostati oko **4 °C**, temperature na kojoj je tekuća voda najgušća, dovoljna za preživljavanje riba i vodenih biljaka."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p4",
+      "title": "I za klimu također",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bijela santa leda reflektira velik dio Sunčeve svjetlosti natrag u svemir zahvaljujući svojoj visokoj **albedo**, svojoj moći refleksije. Ako nestane, tamni ocean apsorbira više topline. To ubrzava zagrijavanje: začarani krug."
+        },
+        {
+          "type": "takeaway",
+          "text": "Led pluta jer, dok se skrućuje, voda stvara \"prozračniju\" mrežu: postaje manje gusta od tekuće vode. Ova iznimka štiti vodeni život zimi."
+        }
+      ]
+    }
+  ]
+}

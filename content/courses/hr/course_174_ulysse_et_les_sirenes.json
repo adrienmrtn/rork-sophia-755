@@ -1,0 +1,114 @@
+{
+  "id": "course_174_ulysse_et_les_sirenes",
+  "title": "Uliks i sirene",
+  "subtitle": "Slušajte bez umiranja",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Sirene obećavaju apsolutno znanje. Odisej je jedini smrtnik koji je čuo njihovu pjesmu i preživio, zahvaljujući prijevari koja je postala uzor samokontrole.",
+  "hero": {
+    "image": "ulysse_et_les_sirenes",
+    "ratio": "16:9",
+    "hook": "Njihova pjesma obećava da će znati sve. Svi koji to slušaju umiru. Ulysses želi čuti... i ostati živ."
+  },
+  "sections": [
+    {
+      "id": "course_174_ulysse_et_les_sirenes_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U dvanaestom pjevanju **Odiseje**, Odisej mora proći pored **[[Sirene]]**. Glas im je tako lijep da nadjačava volju. Mornari koji se približe nasukaju se i umru."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nije to samo avantura na moru. To je dvoboj između žeđi za znanjem i opasnosti od popuštanja. Zahvaljujući svom [[Melez]], svojoj lukavoj inteligenciji, Uliks postaje jedini smrtnik koji je okusio ovo zabranjeno zadovoljstvo, a da nije izgubio život."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p1",
+      "title": "Žene ptice, a ne sirene s repom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **Homer**, Sirene nisu žene ribe. One su polu-žene, polu-ptice. Njihov je otok zatrpan kostima mornara. Ljepota pjesme u kontrastu je s užasom obale."
+        },
+        {
+          "type": "image",
+          "asset": "sirens_island_greek_mythology_bones_shore",
+          "ratio": "4:3",
+          "caption": "Otok sirena: neodoljiva melodija, smrtonosna obala."
+        },
+        {
+          "type": "funFact",
+          "text": "U grčkim gradovima sirene su često bile urezane na grobnicama. Na njih se gledalo kao na muze iz zagrobnog života koje su pratile duše mrtvih."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njihova zamka nije samo senzualna. Obećavaju **aapsolutno znanje**: sve što se dogodilo u [[Trojanski rat]], sve što se događa na zemlji. Za Uliksa, iznad svega znatiželjnog, to je najveće iskušenje, opasnije od čudovišta za poraz."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p2",
+      "title": "Vosak, jarbol i plan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Čarobnjak **Kirka** ga je upozorio. Ulysses priprema preciznu strategiju. Svojim drugovima začepi uši **pčelinjim voskom**. Ne bi trebali ništa čuti. On želi slušati."
+        },
+        {
+          "type": "image",
+          "asset": "ulysses_tied_mast_sirens_waterhouse_painting",
+          "ratio": "4:3",
+          "caption": "Uliks vezan za jarbol, jedini koji čuje pjesmu sirena."
+        },
+        {
+          "type": "paragraph",
+          "text": "Postaje **Pričvršćen** na jarbol. Jasna zapovijed: ako traži da bude pušten, naprotiv, moramo zategnuti veze. Kad se začuje pjesma, Uliks gubi mir i viče da ga se odveže. Njegovi ljudi, gluhi i vjerni planu, slušaju samo racionalnog Odiseja od prije, a ne začaranog Odiseja trenutka. Brod prolazi."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p3",
+      "title": "Pričvrstite se unaprijed kako ne biste popustili",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ova scena ilustrira ono što društvene znanosti nazivaju [[Predobveza]]. Znamo da ćemo biti slabi pred iskušenjem. Stoga sami ograničavamo svoje mogućnosti prije nego što stignemo tamo."
+        },
+        {
+          "type": "funFact",
+          "text": "Godine 1990. NASA i ESA su sondu nazvale **Uliks**. Poput heroja, ona napušta poznate puteve kako bi istražila polove Sunca."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dobitnik Nobelove nagrade za ekonomiju **Richard Thaler** oslanja se na ovu sliku. Ljudi nisu uvijek racionalni. Treba mu [[Gurkati]], “ruka pomoći”, odnosno pravila koja ga štite od njega samog: automatski prijenos na štednju, aplikacije koje blokiraju mreže. Poput Uliksa, držimo se jarbola pred modernim sirenama."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p4",
+      "title": "Od znanja do grijeha",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **srednjem vijeku** slika se mijenja. Žena ptica postaje žena riba. Crkva čita sirene kao simbole požude. Odisejev jarbol ponekad se uspoređuje s križem: štitom protiv iskušenja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kod Homera, međutim, problem nije bila tjelesna želja, već znanje. Odisej nije ni svetac ni obični pustolov. On je čovjek koji koristi inteligenciju kako bi se kretao između želje za apsolutima i potrebe za preživljavanjem."
+        },
+        {
+          "type": "takeaway",
+          "text": "Uliks preživljava pjesmu [[Sirene]] od [[Predobveza]]: pričvršćen za jarbol, sluša; njegovi ljudi, ušiju začepljenih voskom, drže se kursa."
+        }
+      ]
+    }
+  ]
+}

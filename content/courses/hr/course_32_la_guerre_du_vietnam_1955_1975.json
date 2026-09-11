@@ -1,0 +1,134 @@
+{
+  "id": "course_32_la_guerre_du_vietnam_1955_1975",
+  "title": "Vijetnamski rat",
+  "subtitle": "1955-1975",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "Dvadeset godina su Sjedinjene Države upućivale golemu silu u Vijetnam kako bi obuzdale komunizam. Zaglave, podijele se i odu bez pobjede.",
+  "hero": {
+    "image": "la_guerre_du_vietnam",
+    "ratio": "16:9",
+    "hook": "Vodeća svjetska sila suočava se s ratom koji ne može dobiti."
+  },
+  "sections": [
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U srcu Hladnog rata, Vijetnam je bio podijeljen na dva dijela. Na sjeveru komunistički režim. Na jugu država koju podržava Zapad. Sjedinjene Države tamo šalju goleme resurse. Ipak se zaglave."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj sukob nije samo vojni. Dijeli Ameriku, pokazuje granice grube sile i ostavlja trajne traume na obje strane."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p1",
+      "title": "Podijeljena zemlja, zatim sve veći rat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nakon francuskog poraza u **[[Indokineski rat]]**, Ženevskim sporazumom (**1954**) Vijetnam je podijeljen na **17. paralelu**. Na sjeveru vodi **[[Ho Chi Minh]]**, nacionalistički i komunistički vođa. Na jugu, autoritarni režim koji podržava Washington."
+        },
+        {
+          "type": "paragraph",
+          "text": "Američki predsjednici **John F. Kennedy** zatim **Lyndon B. Johnson** boje se **[[domino teorija]]**: ako jedna zemlja padne u komunizam, susjedi će je slijediti. U **U kolovozu 1964.**, pomorski incident u Tonkinškom zaljevu služi kao izgovor za širenje rata. Od **1965**, operacija **[[Rolling Thunder]]** bombardira sjever, a marinci se iskrcavaju u Da Nang."
+        },
+        {
+          "type": "image",
+          "asset": "vietnam_war_american_soldiers",
+          "ratio": "4:3",
+          "caption": "Američki vojnici u Vijetnamu: rat iscrpljivanja u džungli."
+        },
+        {
+          "type": "funFact",
+          "text": "Johnson je navodno rekao privatno nakon Tonkina: \"Koliko ja znam, naša je mornarica te večeri gađala kitove.\""
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p2",
+      "title": "Zašto snaga nije dovoljna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1969**, oko **543,000** američkih vojnika bilo je na licu mjesta. Strategija **[[tražiti i uništavati]]** (tražiti neprijatelja da ga uništi) i zračna nadmoć nisu poremetile opskrbu Sjevernog Vijetnama putem Ho Chi Minh Trail-a. General **Vo Nguyen Giap**, vojni vođa Sjevera, oslanja se na uznemiravanje i podršku dijela stanovništva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amerikanci također koriste defolijante poput Agent Orangea za čišćenje džungle. Ljudska i politička cijena eksplodira. Lijesovi dolaze. **[[Peterokut]]**, Stožer obrane SAD-a, otkriva da lokalna politička volja može izdržati pred tehnologijom."
+        },
+        {
+          "type": "funFact",
+          "text": "Oslobođeno je više od **80 tisuća** litara herbicida, uništivši otprilike **20%** šuma Južnog Vijetnama."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p3",
+      "title": "Šok ofenzive Tet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**30. siječnja 1968.**, tijekom vijetnamske Nove godine, **[[Tet ofenziva]]** pogađa više od **100** gradova. Na terenu, to je neuspjeh za Sjever. Na američkoj televiziji to je bio šok: \"skora pobjeda\" koju je objavio Washington činila se lažnom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Predsjednik **Richard Nixon** tada je pokrenuo \"vijetnamizaciju\": povlačenje američkih trupa uz istovremeno naoružavanje Juga. Pariški sporazumi (**1973**) označili su američki odlazak. Bez zaštitnika, Saigon, glavni grad Juga, propao je u dvije godine."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p4",
+      "title": "Kraj rata i ono što on ostavlja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**A30. travnja 1975.**, Saigon pada. Oko **58,000** Amerikanaca je umrlo. Vijetnamski gubici broje se u milijunima. Prvi istinski televizijski rat, sukob je također otkrio zločine poput masakra **[[moj Lai]]**, gdje su američki vojnici ubili civile u **1968**. Amerika postaje sumnjičavija prema intervencijama na daljinu."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1954",
+              "title": "Ženevski sporazumi",
+              "detail": "Privremena pregrada na 17. paraleli."
+            },
+            {
+              "date": "1965",
+              "title": "američko penjanje",
+              "detail": "Bombardiranja i desant marinaca."
+            },
+            {
+              "date": "1968",
+              "title": "Tet ofenziva",
+              "detail": "Televizijski šok i promjena mišljenja."
+            },
+            {
+              "date": "1973",
+              "title": "Pariški sporazumi",
+              "detail": "Povlačenje američkih snaga."
+            },
+            {
+              "date": "1975",
+              "title": "Pad Saigona",
+              "detail": "Ponovno ujedinjenje pod komunizmom."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Nakon **20 godina** sukoba, Sjedinjene Države ostavile su Vijetnam bez pobjede: vojna moć politički poražena, zemlja ponovno ujedinjena pod komunizmom, američko društvo trajno podijeljeno."
+        }
+      ]
+    }
+  ]
+}

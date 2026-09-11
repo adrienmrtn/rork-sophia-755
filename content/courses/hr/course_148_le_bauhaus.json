@@ -1,0 +1,126 @@
+{
+  "id": "course_148_le_bauhaus",
+  "title": "Bauhaus",
+  "subtitle": "1919-1933",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Između **1919** i **1933**, škola **Bauhaus** spaja umjetnost, zanatstvo i industriju u Njemačkoj. Zatvoren od strane nacista, ipak je proširio moderan dizajn po cijelom svijetu.",
+  "hero": {
+    "image": "le_bauhaus",
+    "ratio": "16:9",
+    "hook": "Njemačka škola stara 14 godina osmislila je moderan svijet, od stolica do pametnih telefona."
+  },
+  "sections": [
+    {
+      "id": "course_148_le_bauhaus_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Bauhaus** (1919.-1933.) najutjecajnija je škola umjetnosti i dizajna 20. stoljeća. Osnovan u Njemačkoj neposredno nakon Prvog svjetskog rata, odbacuje nepotreban dekor iz 19. stoljeća. Njegov cilj: izmisliti jednostavan jezik, prilagođen industrijskom dobu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spajanjem umjetnosti, zanata i tehnike postavlja temelje modernog [[Funkcionalizam u dizajnu]]. Njegov život je kratak. Njegovo nasljeđe je posvuda."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p1",
+      "title": "Weimar 1919: ukidanje hijerarhije umjetnosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Godine **1919**, arhitekt **Walter Gropius** osnovao je Bauhaus u **Weimaru**. Njegov manifest je jasan: konačni cilj svega stvaranja je arhitektura. Nema više granica između plemenite “lijepe umjetnosti” i sekundarne “primijenjene umjetnosti”. Zanat postaje osnova svega."
+        },
+        {
+          "type": "image",
+          "asset": "bauhaus_weimar_1919_walter_gropius_building",
+          "ratio": "4:3",
+          "caption": "Bauhaus: škola u kojoj se uči stvarajući."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svaka radionica ima dva majstora: umjetnika i majstora. Likovi poput [[Vasilija Kandinskog]], ruskog apstraktnog slikara, tamo predaju. Škola također vodi dijalog sa [[De Stijl]], nizozemskim pokretom opsjednutim pravokutnikom i čistim bojama."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p2",
+      "title": "Forma slijedi funkciju",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zatim postavljen u **Dessau**, škola se okrenula masovnoj proizvodnji. Poznati slogan: **“forma slijedi funkciju”**. Ornament se smatra nepotrebnim. Tražimo jednostavne, lijepe predmete koji se mogu proizvesti u tvornici."
+        },
+        {
+          "type": "funFact",
+          "text": "**Marcel Breuer**, profesor na Bauhausu, reciklira čelične cijevi od bicikala kako bi izumio lagane stolice. Tvornički materijal postaje namještaj za dnevni boravak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na radionicama se testira metal, staklo, tekstil i tipografija. Cilj više nije samo jedan luksuzni objekt. To je tipičan objekt, dostupan najvećem broju ljudi."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p3",
+      "title": "Zatvoren od strane nacista, spašen progonstvom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Škola je dosadna. Optužuju ga da je previše moderan, previše internacionalan, previše ljevičarski. Nakon boravka u Berlinu pod vodstvom **Mies van der Rohe**, dolazi [[Gašenje od strane nacista (1933.)]]. Režim to vidi kao \"kulturni boljševizam\"."
+        },
+        {
+          "type": "image",
+          "asset": "mies_van_der_rohe_modernist_architecture",
+          "ratio": "4:3",
+          "caption": "Mies van der Rohe: posljednje vodstvo Bauhausa, zatim američki egzil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zatvaranje postaje difuzija. Majstori odlaze u SAD, Veliku Britaniju, Palestinu. U Tel Avivu njihove ideje njeguju [[Bijeli grad Tel Aviv]], golemu cjelinu bijele moderne arhitekture."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p4",
+      "title": "Dizajn koji je zbog očitosti postao nevidljiv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Danas je baština Bauhausa posvuda: ravni namještaj, jednostavne zgrade, jasna sučelja, [[sans-serif]] sans-serif tipografije. IKEA, zračne luke, naši telefoni: geometrijska jasnoća Bauhausa postala je uobičajeni ukras svijeta."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1919",
+              "title": "Zaklada u Weimaru",
+              "detail": "Gropius pokreće umjetničko-zanatsko-industrijsku školu."
+            },
+            {
+              "date": "1925",
+              "title": "Dessau",
+              "detail": "Prelazak na masovnu proizvodnju."
+            },
+            {
+              "date": "1933",
+              "title": "Nacističko zatvaranje",
+              "detail": "Egzil širi Bauhaus cijelim svijetom."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "U samo 14 godina, Bauhaus je izumio modernu ideju dizajna: manje ukrasa, više funkcije, predmeti koji su lijepi jer su korisni. Njegova politička zatvorenost samo je ubrzala njegovo osvajanje svakodnevnog života."
+        }
+      ]
+    }
+  ]
+}

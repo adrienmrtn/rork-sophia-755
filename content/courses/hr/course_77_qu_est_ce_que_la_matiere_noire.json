@@ -1,0 +1,108 @@
+{
+  "id": "course_77_qu_est_ce_que_la_matiere_noire",
+  "title": "Što je tamna tvar?",
+  "subtitle": "Nevidljivi kozmos",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Nikada je nismo vidjeli. Ipak, bez toga bi se galaksije raspale. Tamna materija je nevidljivo ljepilo svemira.",
+  "hero": {
+    "image": "qu_est_ce_que_la_matiere_noire",
+    "ratio": "16:9",
+    "hook": "Zamislite nevidljivo ljepilo koje drži galaksije zajedno. Ne vidimo je, ali vidimo što ona skriva."
+  },
+  "sections": [
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Osjećaš vjetar, a da ga ne vidiš: grane se pomiču, kosa leti. **tamna materija** je pomalo slična na ljestvici kozmosa. Ne sjaji, ne odbija svjetlost, ne blokira nikakve zrake. \"Vidimo\" ga samo po onome što pokreće."
+        },
+        {
+          "type": "paragraph",
+          "text": "Predstavljao bi otprilike **27%** Svemira, pet puta više od sve obične materije: zvijezda, planeta, plina. Bez toga, galaksije bi se vrtjele prebrzo da bi se držale zajedno."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p1",
+      "title": "Zvijezde prebrze na periferiji",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U godinama **1970**, američki astronom **Vera Rubin** mjerio je brzinu zvijezda u spiralnim galaksijama. U Sunčevom sustavu, što smo dalje od Sunca, to sporije rotiramo. Očekivala je isti obrazac."
+        },
+        {
+          "type": "image",
+          "asset": "dark_matter_galaxy_cluster",
+          "ratio": "auto",
+          "caption": "Tamna tvar odaje svoju prisutnost svojim gravitacijskim učinkom na klastere galaksija."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sada su se zvijezde na rubu okretale **kao brzo** kao one u središtu. Sa samo vidljivom masom, trebali su odletjeti. Stoga je bilo potrebno imati nevidljivu masu, **halo**, nevidljivi sferični omotač oko galaksije, da ih zadrži. [[Krivulja rotacije galaksije]] postala je glavni dokaz tamne tvari."
+        },
+        {
+          "type": "funFact",
+          "text": "Vera Rubin se dugo morala boriti da je shvate ozbiljno. Princeton joj je dugo odbijao doktorat iz astronomije... jer je bila žena, sve do 1975. godine."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p2",
+      "title": "Od čega je napravljen? Još uvijek tražimo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To nije obična materija, nazvana **barionska**, sastavljena od protona i neutrona: ona ne stupa u interakciju sa svjetlom. Prelazi Zemlju i nas ne ostavljajući vidljiv trag."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dugo omiljeno olovo, **WIMP**, masivna čestica sa slabom interakcijom, bila bi teška čestica izvan [[Standardni model fizike]], teorije koja opisuje poznate elementarne čestice. **tekućixeon** detektori, zakopani pod zemljom, nadaju se rijetkom šoku. Trenutno bez jasnog uspjeha. Drugi se oslanjaju na **aksion**, ultra-laku česticu, ili na gravitaciju koju treba pregledati. U međuvremenu tamna tvar savija prostor i stvara [[gravitacijske leće]], koje iskrivljuju svjetlost masivnog objekta."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p3",
+      "title": "I tamna energija, druga misterija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tamna materija privlači. [[Tamna energija]], otkrivena u **1998**, čini suprotno: ona ubrzava **širenje Svemira**, povećanje udaljenosti galaksija. Galaksije se sve brže udaljavaju, a gravitacija bi trebala usporiti kretanje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Težio bi otprilike **68%** kozmosa. S tamnom tvari, to čini **95%** nevidljivog svemira. Sve što vidimo, atomi i svjetlost, samo je pjena od **5 %**."
+        },
+        {
+          "type": "funFact",
+          "text": "U vrlo dalekoj budućnosti, tamna energija mogla bi odgurnuti druge galaksije do te mjere da ih učini nevidljivima s Mliječne staze: gotovo prazno nebo."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p4",
+      "title": "Masivni dokazi, čestica nije pronađena",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "S jedne strane gomilaju se neizravni dokazi: galaktičke rotacije, **kozmička mikrovalna pozadina**, fosilno zračenje iz mladog svemira, filamentna struktura Svemira. S druge strane, nema izravne detekcije čestica."
+        },
+        {
+          "type": "paragraph",
+          "text": "21. stoljeće morat će odlučiti: nova obitelj čestica ili novi način razmišljanja o gravitaciji. Tamna tvar nije samo detalj neba. To je laboratorij u kojem se izmišlja fizika sutrašnjice."
+        },
+        {
+          "type": "takeaway",
+          "text": "Tamna tvar tvori **27 %** svemira. To dokazuje njegova gravitacija na zvijezdama i svjetlosti, iako je nikada nismo izravno vidjeli."
+        }
+      ]
+    }
+  ]
+}

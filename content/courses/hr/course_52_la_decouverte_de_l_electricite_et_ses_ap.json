@@ -1,0 +1,108 @@
+{
+  "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
+  "title": "Otkriće elektriciteta",
+  "subtitle": "Od Franklina do Tesle",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Električna energija nije izumljena odjednom. Prvo je uočeno, zatim shvaćeno, a zatim pripitomljeno. Evo ključnih koraka.",
+  "hero": {
+    "image": "la_decouverte_de_l_electricite",
+    "ratio": "16:9",
+    "hook": "Od munje do pametnog telefona: dva stoljeća da ukrotimo nevidljivo."
+  },
+  "sections": [
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elektricitet postoji u prirodi: munje, električne ribe, trenje. Ono što je promijenilo svijet bilo je učenje **proizvodnje**, **transportiran** i njegove upotrebe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova priča proteže se više od dva stoljeća, s riskantnim eksperimentima i velikim rivalstvima."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
+      "title": "Razumijevanje munje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U 18. stoljeću **Benjamin Franklin** pokazao je da je munja električni fenomen. Njegov eksperiment s puštanjem zmaja (često ispričan na izmišljen način) ima za cilj dokazati da nebo i stroj za trenje djeluju istom snagom."
+        },
+        {
+          "type": "image",
+          "asset": "benjamin_franklin_kite_lightning_experiment",
+          "ratio": "4:3",
+          "caption": "Franklin povezuje munju i elektricitet: opasna, ali temeljna ideja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Također smo izumili **grmljavina**, metalnu šipku koja munji nudi siguran put do tla. Elektricitet napušta misteriju da bi ušao u inženjerstvo."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
+      "title": "Faraday: stvaranje struje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U 19. stoljeću **Michael Faraday** pokazao je da magnet koji se kreće u blizini žice može stvoriti električnu struju. Ovo je **indukcija**. Bez ove ideje nema dinama, nema alternatora, nema moderne elektrane."
+        },
+        {
+          "type": "image",
+          "asset": "faraday_electromagnetic_induction_experiment",
+          "ratio": "4:3",
+          "caption": "Faraday pretvara kretanje i magnetizam u struju."
+        },
+        {
+          "type": "funFact",
+          "text": "Faraday je došao iz skromne sredine i počeo je kao knjigoveža. Naučio je znanost čitajući ono što je vjerovao."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
+      "title": "Edison protiv Tesle",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Krajem 19. stoljeća sukobila su se dva tabora. **Thomas Edison** gura istosmjernu struju. **Nikola Tesla** (i tvrtka Westinghouse) brane izmjeničnu struju koja se lakše prenosi na velike udaljenosti."
+        },
+        {
+          "type": "image",
+          "asset": "tesla_edison_electric_power_station",
+          "ratio": "4:3",
+          "caption": "Izmjenična struja dobiva na snazi u gradovima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Izmjenična struja pobjeđuje u urbanim mrežama. Gradovi svijetle. Tvornice mijenjaju tempo."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
+      "title": "Povezani svijet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Danas struja pokreće bolnice, vlakove, internet, hladnjake. Izazov više nije samo proizvesti ga, već to učiniti čisto i pouzdano."
+        },
+        {
+          "type": "takeaway",
+          "text": "Električna energija je shvaćena, a zatim udomaćena: Franklin za munju, Faraday za proizvodnju struje, Tesla i izmjenična struja za unos u domove. Naš svakodnevni život još uvijek ovisi o tome."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "course_211_comment_fonctionne_le_prix_du_petrole",
+  "title": "Kako funkcionira cijena nafte?",
+  "subtitle": "Nerv svjetske ekonomije",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Cijenu ulja ne određuje jedan prodavač. Rađa se iz **rata** između zemalja proizvođača, financijskih tržišta i iznenadnih kriza, ponekad do točke apsurda.",
+  "hero": {
+    "image": "comment_fonctionne_le_prix_du_petrole",
+    "ratio": "16:9",
+    "hook": "U 2020. prodavači nafte platili su svojim kupcima da ih se riješe. Evo zašto."
+  },
+  "sections": [
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nafta se ponekad naziva \"krvlju gospodarstva\". Njegova cijena utječe na inflaciju, cijenu benzina, pa čak i na stabilnost pojedinih zemalja. Međutim, tu cijenu nitko ne određuje markicom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Proizlazi iz susreta između triju sila: zemalja koje vade naftu, financijskih tržišta koja njome trguju prije nego što uopće napusti tlo i kriza koje tjeraju sve u paniku. Zaputite se u pustinje Arabije, ravnice Teksasa i ekrane Chicaga."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p1",
+      "title": "OPEC protiv američkog škriljevca: bitka ponude",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tržište nafte ima posebnost: kratkoročno gledano, potražnja gotovo ne pada kad cijene rastu. Automobili, tvornice i avioni ne mogu promijeniti energiju preko noći. Ekonomisti to nazivaju **neelastičnost** potražnje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Od 1960. skupina zemalja proizvođača organizirala se kako bi utjecala na ovo tržište: [[OPEC]]. Dogovaranjem proizvodnih kvota njezine članice nastoje održati visoke cijene. Od 2016. Rusija se pridružila savezu, formirajući OPEC+. Ove zemlje zajedno kontroliraju oko 40% svjetske nafte."
+        },
+        {
+          "type": "funFact",
+          "text": "Jedna bačva nafte, 159 litara, sadrži energije koliko i ručni rad jedne osobe za otprilike godinu dana."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ali ova moć je uzdrmana. Zahvaljujući tehnici zvanoj hidrauličko frakturiranje, SAD je u deset godina postao najveći svjetski proizvođač nafte, pretekavši Saudijsku Arabiju. Ova nova ponuda, koja se brže prilagođava, učinila je tržište konkurentnijim i OPEC+ ga je teže kontrolirati."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p2",
+      "title": "“Papirnato” ulje: kad se umiješaju financije",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Osim stvarnih barela isporučenih brodovima ili cjevovodima, naftom se također trguje na financijskim tržištima. Većina transakcija ide kroz terminsko tržište: danas kupujemo barel koji će biti isporučen tek za jedan, tri ili šest mjeseci."
+        },
+        {
+          "type": "image",
+          "asset": "oil_futures_trading_floor_markets",
+          "ratio": "16:9",
+          "caption": "Naftom se trguje na financijskim tržištima puno prije isporuke."
+        },
+        {
+          "type": "paragraph",
+          "text": "Banke i hedge fondovi kupuju i prodaju te ugovore ne želeći ni dotaknuti niti jednu bačvu: jednostavno se klade hoće li cijene rasti ili padati. To donosi novac na tržište, ali i čini cijene nervoznijima. Kao referentne u svijetu služe dvije cijene: [[Brent]], nafta iz Sjevernog mora, i WTI, nafta iz Teksasa. Jaz između to dvoje odražava razlike u kvaliteti i prijevozu."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p3",
+      "title": "Cijene padaju... ili eksplodiraju",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tržište nafte funkcionira u brutalnim ciklusima. Kada cijene rastu duže vrijeme, proizvođači ulažu u skupa nalazišta, što u konačnici stvara višak ponude. Kad cijene ostanu niske, događa se suprotno: istražujemo manje, što je priprema za sljedeću nestašicu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kriza COVID-19 je to spektakularno pokazala. U travnju 2020. globalna se ekonomija naglo zaustavila: nitko nije letio niti se vozio, ali su bušotine nastavile proizvoditi. Spremnici su bili napunjeni do vrha. Cijena WTI-ja tada je pala na minus 37 dolara: prodavači su plaćali svojim kupcima da očiste svoje zalihe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nasuprot tome, 2022. godine ruska invazija na Ukrajinu izazvala je strahove od nestašice: Rusija je drugi najveći izvoznik u svijetu, Brent je premašio 130 dolara u nekoliko tjedana. Nafta stoga ostaje nervozan barometar svjetskih napetosti."
+        },
+        {
+          "type": "funFact",
+          "text": "Za izradu jednog pametnog telefona, između vađenja materijala, plastičnih dijelova i transporta, potrebno je oko 7 litara nafte."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p4",
+      "title": "Ima li nafta budućnost?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dugoročno, nafta se suočava s novim izazovom: prijelazom na čistu energiju. Ako električni automobili smanje globalnu potražnju, zemlje proizvođači mogle bi se upustiti u rat cijenama kako bi prodale svoje rezerve prije nego što izgube svoju vrijednost."
+        },
+        {
+          "type": "paragraph",
+          "text": "Međutim, tržištu prijeti paradoks: budući da investitori napuštaju nove naftne projekte zbog klimatskih razloga, ponuda bi mogla pasti brže od potražnje, uzrokujući nove skokove cijena. Nafta neće iznenada nestati: i dalje je bitna za plastiku, gnojiva i teški transport kao što je zrakoplovstvo."
+        },
+        {
+          "type": "takeaway",
+          "text": "Cijena nafte rezultat je sukoba između OPEC+, američke proizvodnje škriljevca i spekulativnih financijskih tržišta. Rezultat: cijene koje se mogu srušiti ili eksplodirati pri najmanjem geopolitičkom šoku."
+        }
+      ]
+    }
+  ]
+}

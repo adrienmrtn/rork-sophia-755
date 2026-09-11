@@ -1,0 +1,145 @@
+{
+  "id": "course_137_la_naissance_du_rock_n_roll",
+  "title": "Rođenje rock'n'rolla",
+  "subtitle": "1954-1960",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Sredinom 1950-ih crni blues i bijeli country su se spojili: Elvis, Chuck Berry i Little Richard izmislili su rock'n'roll.",
+  "hero": {
+    "image": "la_naissance_du_rock_n_roll",
+    "ratio": "16:9",
+    "hook": "Vrisak, električna gitara, a tinejdžerska Amerika ima svoju glazbu."
+  },
+  "sections": [
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rock'n'roll se nije pojavio niotkuda sredinom **1950** godina. U Sjedinjenim Američkim Državama spojio je glazbu dugo razdvojenu rasnim barijerama: blues, country i [[Evanđelje]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tri figure nose prijelom: **Elvis Presley**, **Chuck Berry** i **Little Richard**. Više od stila, to je kultura mladih, i ogledalo napetosti [[Segregacija]]."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p1",
+      "title": "Blues, country i rhythm and blues",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Do tada su na jugu koegzistirala dva svijeta: crnačka kultura (električni blues, gospel) i bijelačka kultura (country). Most se zove [[Ritam i blues]]: urbana i elektrificirana verzija bluesa koja je od kraja 1940-ih privlačila bijelu mladež u potrazi za ritmom."
+        },
+        {
+          "type": "paragraph",
+          "text": "**rockabilly** je rođen, hibrid countryja i bluesa. **Elvis Presley**, iz Tupela, odrastao je između pentekostnih crkava i bluesa s ulice Beale. Godine **1954**, kod producenta [[Sam Phillips]] u Memphisu, snimio je *To je sve u redu*. Ali [[Segregacija u američkoj glazbenoj industriji]] ostaje pravilo: crni umjetnici često ostaju ograničeni na marginalne krugove, dok bijeli izvođač može prijeći nacionalno tržište."
+        },
+        {
+          "type": "funFact",
+          "text": "Pojam \"rock'n'roll\" prvo se odnosio na bockanje broda, zatim, u bluesu 1920-ih, na seksualni čin, prije nego što ga je popularizirao DJ [[Alan Freed]]."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p2",
+      "title": "Elvis, Chuck Berry, Little Richard",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U [[Sun Records]], Elvis postaje ikona. Njegovo pokretno tijelo šokiralo je puritansku Ameriku i zapečatilo savez između rocka i adolescencije."
+        },
+        {
+          "type": "image",
+          "asset": "elvis_presley_sun_records_memphis_1954",
+          "ratio": "4:3",
+          "caption": "Elvis u Sun Recordsu: rock pronalazi svoje lice."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Chuck Berry** daje strukturu: gitara **rif**, ponovljeni motiv koji postaje okosnica djela. Pjeva o autima, srednjoj školi, slobodi. **Little Richard** vrišti i udara po klaviru stojeći: sirova energija naslijeđena iz žara gospela."
+        },
+        {
+          "type": "image",
+          "asset": "chuck_berry_guitar_rock_and_roll",
+          "ratio": "4:3",
+          "caption": "Chuck Berry: gitarski riff kao gramatika rocka."
+        },
+        {
+          "type": "image",
+          "asset": "little_richard_piano_1950s_rock",
+          "ratio": "4:3",
+          "caption": "Little Richard: krik i klavir kao eksplozija."
+        },
+        {
+          "type": "funFact",
+          "text": "Godine 1956., na *Show Eda Sullivana*, kamere su snimile samo Elvisa iznad struka: njegovi pokreti bokovima smatrani su previše skandaloznim."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p3",
+      "title": "Rock, rasa i građanska prava",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po prvi put, crno-bijeli tinejdžeri dijele iste idole, unatoč [[Zakoni Jima Crowa]]. Ali integracija ostaje asimetrična. Industrija se umnožava [[pokriva]]: razvodnjene bijele verzije crnih hitova, bolje promovirane na radiju. *Tutti Frutti* Pata Boonea je dugo nadmašio original Little Richarda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Unatoč tim opljačkanjima, rock hrani duh [[Pokret za građanska prava]]. Kršeći roditeljske kodekse, mladi 1950-ih su započeli moralno i rasno propitivanje Amerike."
+        },
+        {
+          "type": "funFact",
+          "text": "Chuck Berry nije poveo svoj bend na turneju: angažirao je lokalne glazbenike u svakom gradu, kako bi uštedio novac i izbjegao rasne napetosti u hotelu."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p4",
+      "title": "Od britanske invazije do naslijeđa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oko **1960**, prvi vjetar nestaje (Elvis vojsci, Little Richard vjeri). Ali taj je žanr već osvojio Ujedinjeno Kraljevstvo. **Beatlesi** i **Rolling Stonesi** reinterpretiraju američke standarde: \"Britanska invazija\" pretvara rock u omot albuma i protest. Bez kršenja **1954**, kontrakulture 1960-ih ne bi imale isti zvučni motor."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1954",
+              "title": "To je sve u redu",
+              "detail": "Elvis kod Sama Phillipsa: fuzija postaje hit."
+            },
+            {
+              "date": "1955-1956",
+              "title": "Berry i Richard",
+              "detail": "Riff, vrisak i energija definiraju žanr."
+            },
+            {
+              "date": "1956",
+              "title": "Ed Sullivan",
+              "detail": "Elvisovo tijelo skandalizira televiziju."
+            },
+            {
+              "date": "1960-ih godina",
+              "title": "Britanska invazija",
+              "detail": "Američki rock vraća se iz Europe pojačano."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Rođen 1954. iz spoja rhythm and bluesa i countryja, rock'n'roll Elvisa, Berryja i Little Richarda dao je mladim ljudima prvi zajednički jezik protiv segregacije."
+        }
+      ]
+    }
+  ]
+}

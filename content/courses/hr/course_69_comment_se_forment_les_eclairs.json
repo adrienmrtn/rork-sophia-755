@@ -1,0 +1,112 @@
+{
+  "id": "course_69_comment_se_forment_les_eclairs",
+  "title": "Kako nastaju munje?",
+  "subtitle": "grmljavina",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Munja nije magija: ona je veliko električno pražnjenje u olujnom oblaku. Evo kako se priprema, pa kako pogađa.",
+  "hero": {
+    "image": "comment_se_forment_les_eclairs",
+    "ratio": "16:9",
+    "hook": "U djeliću sekunde zrak se podigne do 30 000°C. Pet puta toplije od površine Sunca."
+  },
+  "sections": [
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Munja oslobađa kolosalnu energiju u tren oka. Zrak u kanalu munje penje se do približno **30 000 °C**. Grmljavina je samo zvuk ove surove vrućine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da biste razumjeli munju, morate slijediti tri koraka: kako se oblak nabije, kako elektricitet pronalazi put i zašto nakon toga čujete grmljavinu."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p1",
+      "title": "U oblaku se naboji razdvajaju",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Munje se javljaju uglavnom u [[kumulonimbus]]: vrlo velikim olujnim oblacima, koji se mogu popeti do oko **15 km**. Unutra se zrak vrlo snažno diže i spušta."
+        },
+        {
+          "type": "image",
+          "asset": "cumulonimbus_thunderstorm_cloud",
+          "ratio": "4:3",
+          "caption": "Kumulonimbus: tvornica oluja."
+        },
+        {
+          "type": "paragraph",
+          "text": "U tom kaosu mali **ledeni kristali** se dižu, a teža zrnca leda ([[susnježica]]) spuštaju. Kada se sudare, dolazi do izmjene električnih naboja. Malo po malo, vrh oblaka postaje prilično pozitivan, donji dio prilično negativan."
+        },
+        {
+          "type": "funFact",
+          "text": "Jezero Maracaibo, u Venezueli, jedno je od mjesta na planetu koje najviše pogađa munja: tamo se gotovo svakodnevne oluje promatraju veći dio godine."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p2",
+      "title": "Kad zrak pusti: pražnjenje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zrak je loš vodič. Ali ako razlika u napunjenosti postane prevelika (često **stotine milijuna volti**), zrak na kraju popusti. Molekule gube elektrone: postaju vodljive. Ovo je [[Ionizacija zraka]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nevidljivi kanal napušta oblak u malim skokovima. Iz zemlje se električne mreže uzdižu osobito iz točaka (drveće, gromobrani, zgrade). Kada se to dvoje spoji, krug se zatvara."
+        },
+        {
+          "type": "paragraph",
+          "text": "Velika svjetlost koju vidimo, **luk natrag**, diže se uglavnom od tla prema oblaku. Struja može doseći desetke tisuća ampera. Nekoliko pražnjenja mogu slijediti jedno za drugim u istom kanalu: otuda efekt treperenja."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p3",
+      "title": "Zašto grmljavina dolazi kasnije?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Munja zagrijava zrak tako brzo da se on odjednom širi. Ovaj udarni val postaje **grom**. Svjetlo dolazi gotovo odmah; zvuk napreduje približno **340 m/s**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jednostavan savjet: brojite sekunde između munje i groma, a zatim podijelite sa **3**. Dobivate procjenu udaljenosti u kilometrima."
+        },
+        {
+          "type": "funFact",
+          "text": "Zemlju u prosjeku pogodi **100 munja u sekundi**. U Francuskoj ima oko **mi milijuna** udara na tlo godišnje."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p4",
+      "title": "Opasnost, plodnost i zanimljivosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Munje su i dalje opasne, osobito na otvorenom, u blizini izoliranih stabala ili vode. Također izaziva požare. Ali ima manje poznat učinak: pomaže u proizvodnji dušikovih spojeva koji gnoje tlo kišom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iznad oluja kamere su snimile i bizarne fenomene, kao što je [[leprekoni]]: kratka sjaja u gornjim slojevima atmosfere, nevidljiva golim okom s tla."
+        },
+        {
+          "type": "takeaway",
+          "text": "U kumulonimbusu sudari leda i susnježice razdvajaju naboje. Kada napon postane previsok, zrak se ionizira: munja se zagrije do ~30 000°C, a ovo naglo širenje proizvodi grmljavinu."
+        }
+      ]
+    }
+  ]
+}

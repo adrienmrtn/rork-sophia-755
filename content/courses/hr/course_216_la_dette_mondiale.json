@@ -1,0 +1,104 @@
+{
+  "id": "course_216_la_dette_mondiale",
+  "title": "Globalni dug",
+  "subtitle": "Više od 300% svjetskog BDP-a",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Globalni dug nikada nije bio veći. Treba li nas to brinuti ili je to normalan alat za financiranje rasta i suočavanje s krizama?",
+  "hero": {
+    "image": "la_dette_mondiale",
+    "ratio": "16:9",
+    "hook": "Japan duguje ekvivalent od 260% svog BDP-a... i nitko se ne brine. Evo zašto."
+  },
+  "sections": [
+    {
+      "id": "course_216_la_dette_mondiale_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Globalni dug, onaj država, poduzeća i kućanstava zajedno, danas premašuje **300% globalnog BDP-a**, što je apsolutni rekord u ekonomskoj povijesti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova impresivna brojka skriva nijansiraniju stvarnost: dug omogućuje financiranje rasta, odgovor na zdravstvene krize ili pripremu za ekološku tranziciju. Ali to također nosi sa sobom rizik od pada povjerenja."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p1",
+      "title": "Kako se država zadužuje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Država se zadužuje kada njeni rashodi strukturno premašuju porezne prihode. Taj proračunski manjak popunjava se zaduživanjem na financijskim tržištima. Prema [[kejnezijanska teorija]], zaduživanje za poticanje gospodarstva u kriznim vremenima je legitimno, pod uvjetom da se otplaćuje nakon povratka rasta."
+        },
+        {
+          "type": "paragraph",
+          "text": "U praksi se države lako zadužuju u lošim vremenima, ali rijetko vraćaju u dobrim vremenima. Dug se zatim dugoročno akumulira. Fascinantan je slučaj Japana: s dugom blizu 260% BDP-a, zemlja bi logično trebala biti u krizi. No nije, jer najveći dio duga drže vlastite banke i štediše, zaklonjene od stranih tržišta."
+        },
+        {
+          "type": "funFact",
+          "text": "Ujedinjeno Kraljevstvo tek je 2015. završilo otplatu dugova iz Napoleonovih ratova i financijskog balona iz 1720."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p2",
+      "title": "Nisu svi dugovi jednaki",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stvarna opasnost duga ne ovisi samo o njegovom iznosu, već io valuti u kojoj je posuđen. Bogate zemlje posuđuju se u vlastitim valutama, što umiruje investitore."
+        },
+        {
+          "type": "image",
+          "asset": "japan_government_debt_statistics_chart",
+          "ratio": "16:9",
+          "caption": "Globalni javni dug danas premašuje 300% BDP-a planeta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zemlje u razvoju često se moraju zaduživati u dolarima zbog nedostatka valute koja se smatra dovoljno stabilnom. Ako njihova nacionalna valuta izgubi vrijednost u odnosu na dolar, iznos koji treba vratiti eksplodira preko noći. U tim krizama [[MMF]] često intervenira, ali općenito nameće strogu politiku štednje koja snažno opterećuje stanovništvo."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p3",
+      "title": "Može li dug biti beskonačan?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rasprava suprotstavlja dvije vizije gospodarstva. [[Moderna monetarna teorija]] tvrdi da država ne može bankrotirati sve dok se zadužuje u vlastitoj valuti: stvarna granica nije proizvoljna brojka, poput 60% nametnutih Ugovorom iz Maastrichta u Europi, već razina inflacije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Drugi, oprezniji ekonomisti strahuju da će preveliki dug uplašiti povjerenje tržišta, što će dovesti do oštrog rasta kamatnih stopa. Kriza u eurozoni, između 2010. i 2012., ilustrirala je ovaj rizik: zemlje poput Grčke, lišene vlastite središnje banke, vidjele su da su im stope zaduživanja skočile do te mjere da su ugrozile samo postojanje europske valute."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p4",
+      "title": "Nova lica duga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Globalni dug ne tiče se samo država: poduzeća i kućanstva također snose sve veći udio u njemu, ponekad preko slabo reguliranih financijskih igrača. Nova rasprava također se pojavljuje oko klimatskog duga: trebamo li tretirati dug koji financira energetsku tranziciju drugačije od onog koji financira prostu potrošnju?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pitanje pravde među generacijama ostaje središnje: zaduživanje danas znači uzimanje poreza od sutra. Ali ako se tim novcem financira održiva infrastruktura ili dobro obrazovanje, može se na njega gledati i kao na dar koji se prenosi budućim generacijama, a ne kao teret."
+        },
+        {
+          "type": "takeaway",
+          "text": "Globalni dug premašuje 300% BDP-a planeta, što je povijesni rekord. Njegova opasnost ovisi manje o iznosu nego o valuti u kojoj je posuđen: Japan dokazuje da dug od 260% može ostati stabilan ako se drži lokalno."
+        }
+      ]
+    }
+  ]
+}

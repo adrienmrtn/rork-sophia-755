@@ -1,0 +1,131 @@
+{
+  "id": "course_142_charlie_chaplin_et_le_cinema_muet",
+  "title": "Charlie Chaplin i nijemo kino",
+  "subtitle": "1889-1977",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**Charlie Chaplin** izmišlja Charlota, skitnicu u kugli šeširu, i postaje prva svjetska kinematografska zvijezda. Od šutnje do govora, smijeh pretvara u umjetnost.",
+  "hero": {
+    "image": "charlie_chaplin_et_le_cinema_muet",
+    "ratio": "16:9",
+    "hook": "Prije radija i TV-a, nijemi lutalica nasmijavao je cijelu planetu."
+  },
+  "sections": [
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Charlie Chaplin** (1889.-1977.) prva je prava svjetska slavna osoba. U eri industrijskog siromaštva, njegov lik **Charlotte**, dostojanstveni i nespretni skitnica, nudi lice ljudskosti. Bez riječi nasmijava i plače ljude u Tokiju, Parizu ili New Yorku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj tečaj slijedi njegovu putanju: od početaka kinematografije do nijemih remek-djela, zatim do prisilnog egzila. Chaplin nije samo klaun. On je totalni autor."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p1",
+      "title": "Od Kinematografa do Hollywooda",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kino je rođeno iz francuskog izuma: [[Sinematograf]] des [[Braća Lumière i rani film]], patentiran u **1895**. **28. prosinca 1895. godine.**, u Grand Café de Paris, održana je prva plaćena javna projekcija. Prvi filmovi su kratki dokumenti: izlaz iz tvornice, vlak na stanici."
+        },
+        {
+          "type": "image",
+          "asset": "lumiere_brothers_first_cinema_projection_paris_1895",
+          "ratio": "4:3",
+          "caption": "1895.: kino postaje kolektivni spektakl u Parizu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vrlo brzo je [[Georges Méliès]], francuski iluzionist, izmislio fikciju i trikove. Zatim je industrija strukturirana u Sjedinjenim Državama. **Hollywood** postaje prijestolnica snova, sa svojim studijima koji proizvode filmove na tekućoj traci. Upravo u ovoj tvornici Chaplin će se osnovati."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p2",
+      "title": "Charlot, univerzalni autsajder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rođen u siromaštvu u Londonu u **1889**, Charles Spencer Chaplin odrastao je između kabarea i domova za siromašne. Obučavajući se u [[glazbena dvorana]], stigao je u Hollywood. U **1914**, izumio je kostim **Charlotte** gotovo slučajno: kuglaš premalen, hlače preširoke, štap i brkovi."
+        },
+        {
+          "type": "image",
+          "asset": "charlie_chaplin_tramp_bowler_hat_cane",
+          "ratio": "4:3",
+          "caption": "Charlot: gospodin bez novca, prepoznatljiv u silueti."
+        },
+        {
+          "type": "funFact",
+          "text": "Chaplin je složio kostim u nekoliko minuta u studijskoj garderobi, posuđujući preveliku i premalu odjeću od drugih glumaca."
+        },
+        {
+          "type": "paragraph",
+          "text": "Charlot nije samo smiješan. On simbolizira čovjeka koji drži do svog dostojanstva unatoč siromaštvu. Chaplin koristi [[Šamar]], komediju padova i udaraca, ali dodaje rijetku emociju: nježnost."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p3",
+      "title": "Oduprite se razgovoru, suočite se s diktatorima",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1927**, zvučno kino stiže sa *Pjevačica jazza*. Chaplin, suosnivač [[Ujedinjeni umjetnici]], opire se. Dati Charlotu glas znači razbiti njegovu univerzalnost. Stoga nastavlja s tihim albumom *Svjetla grada* (**1931**)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tada ga sustiže povijest. U **1940** režirao je *Diktator*, satiru **Adolfa Hitlera**. To je njegov prvi potpuno govoreći film, snimljen dok su Sjedinjene Države još bile oprezne prema nacizmu. Klaun postaje predani umjetnik."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p4",
+      "title": "Egzil i ostavština jednog autora",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nakon 1945. osnovani su [[hladnog rata]] i [[makartizam]]. Osumnjičen za ljevičarske ideje, Chaplin je praćen. U **1952**, kada je otišao u Europu, Sjedinjene Države su mu zabranile povratak. Nastanio se u [[Vevey]], Švicarska, do kraja života."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1895",
+              "title": "Rođenje kinematografije",
+              "detail": "Prvo javno prikazivanje braće Lumière."
+            },
+            {
+              "date": "1914",
+              "title": "Rođenje Charlota",
+              "detail": "Chaplin izmišlja svoj legendarni kostim."
+            },
+            {
+              "date": "1940",
+              "title": "Diktator",
+              "detail": "Chaplinov prvi film koji govori, satira o Hitleru."
+            },
+            {
+              "date": "1952",
+              "title": "Prisilno progonstvo",
+              "detail": "Zbog zabrane boravka u SAD-u otišao je u Švicarsku."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Chaplin je izumio univerzalni tihi jezik. Kompletan autor (glumac, redatelj, skladatelj), dokazao je da popularna kinematografija može biti i politička i emotivna umjetnost."
+        }
+      ]
+    }
+  ]
+}

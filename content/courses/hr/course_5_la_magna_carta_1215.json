@@ -1,0 +1,133 @@
+{
+  "id": "course_5_la_magna_carta_1215",
+  "title": "Magna Carta",
+  "subtitle": "1215",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "U lipnju 1215. John Lackland stavio je svoj pečat na povelju koju su nametnuli njegovi baruni. Feudalni tekst postaje, kroz stoljeća, simbol zakona iznad kralja.",
+  "hero": {
+    "image": "la_magna_carta_1215",
+    "ratio": "16:9",
+    "hook": "Kralj stjeran u kut potpisuje. Osam stoljeća kasnije cijeli svijet još uvijek priča o tome."
+  },
+  "sections": [
+    {
+      "id": "course_5_la_magna_carta_1215_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U lipnju **1215**, na livadi **Runnymede**, u blizini Londona, engleski kralj **John Lackland** stavio je svoj pečat na **Magna Carta**, \"Veliku povelju\". Ovo nije gesta velikodušnosti. To je sukob: baruni, veliki gospodari kraljevstva, žele slomiti kraljevsku samovolju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tekst je rođen da se izbjegne građanski rat. Njegova neposredna primjena ne uspijeva. No, on postupno postaje simbol eksplozivne ideje: čak je i kralj pod zakonom."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p1",
+      "title": "John Lackland na rubu ponora",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kralj od **1199**, Jean ima jednu katastrofu za drugom. Suočivši se s francuskim kraljem [[Filip II August]], pretrpio je [[Gubitak Normandije (1204.)]]. Kako bi ponovno osvojio svoje zemlje, on pritišće [[Feudalni sustav]]: kralj daje zemlju u zamjenu za lojalnost i vojnu službu, ali Ivan umnožava poreze, taoce i proizvoljne kazne. Razbijeni su običaji koji su ga povezivali s njegovim vazalima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sukob s papom [[Inocent III]] dodatno ga izolira. Nakon poraza [[Bouvines]] (**1214**), gdje je Filip August porazio koaliciju uključujući Englesku, baroni su se pobunili i zauzeli London. Jean više nema izbora: pregovarati ili izgubiti krunu."
+        },
+        {
+          "type": "funFact",
+          "text": "Nadimak \"Sans Terre\" ne dolazi od njegovih francuskih poraza. Posljednji sin Henrika II., on jednostavno nije dobio nikakvu povlasticu pri rođenju."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p2",
+      "title": "Runnymede, 63 klauzule",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dana **, 15. lipnja 1215. godine**, strane su se sastale u Runnymedeu. Pod utjecajem canterburyjskog nadbiskupa [[Stephen Langton]], dokument ima **63 riječi**. Njih dvoje mijenjaju sve. **klauzula 39**: nijedan slobodan čovjek ne može biti uhićen bez presude svojih kolega. **klauzula 40**: kralj ne može ni prodati ni odgoditi pravdu."
+        },
+        {
+          "type": "image",
+          "asset": "magna_carta_1215_manuscript",
+          "ratio": "4:3",
+          "caption": "Magna Carta iz 1215., pergament koji je postao politički mit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Još uvijek nije demokracija. Povelja govori uglavnom o “slobodnjacima”, a ne o kmetovima, seljacima vezanim uz zemlju. To je prije svega mirovni ugovor između kralja i njegovih baruna. Ali ideja je izrečena: moć ima zapisane granice."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p3",
+      "title": "Od neuspjeha do mita",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Još u kolovozu Ivan je dao papi poništiti tekst. Građanski rat se nastavlja. Povelja je preživjela zahvaljujući kraljevoj smrti u **1216**: mladi **Henrik III** je ponovno izdaje kako bi umirio kraljevstvo. Uvijek iznova potvrđena, ulazi u englesko pravo."
+        },
+        {
+          "type": "funFact",
+          "text": "Ne postoji niti jedan izvornik iz 1215., već nekoliko primjeraka poslanih županijama. Samo četvero je preživjelo."
+        },
+        {
+          "type": "paragraph",
+          "text": "U 17. stoljeću, pravnici poput [[Edward Coke]]-a iznijeli su ga protiv apsolutizma Stuarta, ovih kraljeva koji su htjeli vladati bez ograničenja. Srednjovjekovni pergament postaje navodni predak parlamentarnih sloboda."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1204",
+              "title": "Gubitak Normandije",
+              "detail": "John Lackland gubi svoj kontinentalni prihod."
+            },
+            {
+              "date": "1214",
+              "title": "Bouvines",
+              "detail": "Poraz definitivno izolira kralja."
+            },
+            {
+              "date": "1215",
+              "title": "Magna Carta",
+              "detail": "Pečat pričvršćen na Runnymede pod pritiskom baruna."
+            },
+            {
+              "date": "1216",
+              "title": "Ponovno izdavanje",
+              "detail": "Henry III sprema tekst kako bi stabilizirao prijestolje."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p4",
+      "title": "Globalna baština",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Britanski kolonisti odnose povelju u Ameriku. Očevi utemeljitelji iz njega su crpili inspiraciju za [[Povelja o pravima]], prve amandmane na američki ustav. [[Habeas corpus]], načelo koje zabranjuje proizvoljna uhićenja, proširuje klauzulu 39. U **1948**, [[Eleanor Roosevelt]] to vidi kao \"Veliku povelju\" za cijelo čovječanstvo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Danas su u Engleskoj na snazi samo tri klauzule. Nema veze. Magna Carta vrijedi manje kao živi zakon nego kao simbol: nitko nije iznad zakona."
+        },
+        {
+          "type": "takeaway",
+          "text": "Preuzeta od Johna Lacklanda u **1215**, Magna Carta potvrđuje da je i kralj podložan zakonu. Iz ugovora između baruna i kralja rođen je jedan od temeljnih mitova modernih sloboda."
+        }
+      ]
+    }
+  ]
+}

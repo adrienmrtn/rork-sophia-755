@@ -1,0 +1,102 @@
+{
+  "id": "course_58_la_structure_de_l_adn_watson_crick_1953",
+  "title": "Struktura DNA",
+  "subtitle": "1953",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Godine 1953. Watson i Crick opisali su dvostruku spiralu DNK. Iza ove slave krije se ključno djelo Rosalind Franklin.",
+  "hero": {
+    "image": "la_structure_de_l_adn",
+    "ratio": "16:9",
+    "hook": "Oblik molekule… i tajna nasljeđa."
+  },
+  "sections": [
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Znali smo da se osobine prenose s roditelja na djecu. Ali koji kemijski objekt nosi ovu informaciju? Sredinom 20. stoljeća odgovor je postao jasniji: **DNK**."
+        },
+        {
+          "type": "paragraph",
+          "text": "U **1953**, **James Watson** i **Franjo Crick** objavili su poznati model: **dvostruki propeler**. Ovaj obrazac objašnjava kako se DNK može kopirati."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
+      "title": "Pronalaženje podrške za nasljeđe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DNK (dezoksiribonukleinska kiselina) duga je molekula koja se nalazi u našim stanicama. Sadrži kemijska \"slova\" koja tvore kod. Ali 1940-ih i 1950-ih još nismo poznavali njegov 3D oblik."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez obrasca, teško je razumjeti kako se taj kod može duplicirati pri svakoj diobi stanice."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p2",
+      "title": "Fotografija koja mijenja sve",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "rosalind_franklin_photo_51_x_ray",
+          "ratio": "4:3",
+          "caption": "Fotografija 51 Rosalind Franklin otkriva spiralnu strukturu."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Rosalind Franklin**, fizičar i kemičar, dobiva rendgenske slike DNK. Njezina poznata **Slika 51** pokazuje jasne dokaze spirale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Watson i Crick vide te podatke (pod uvjetima koji se sada smatraju nepravednima prema Franklinu) i izrađuju svoj model. Franklin je umro 1958.; Nobel iz 1962. dobit će Watson, Crick i Wilkins, a ne ona."
+        },
+        {
+          "type": "funFact",
+          "text": "Franklin je također napravio velik rad na virusima. Njegova uloga u DNK dugo je bila podcjenjivana u popularnim izvještajima."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
+      "title": "Zašto je dvostruka spirala važna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "dna_double_helix_model_watson_crick",
+          "ratio": "4:3",
+          "caption": "Dvije komplementarne niti: kopija postaje zamisliva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dvije niti omotane jedna oko druge. Slova su okrenuta jedno prema drugom u paru. Kada se niti razdvoje, svaka može poslužiti kao model za rekonstrukciju druge. Nasljedstvo postaje razumljiv kemijski mehanizam."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
+      "title": "Moderna biologija počinje ovdje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iz ovog otkrića rođena je moderna genetika, sekvenciranje, DNK testovi, genske terapije. I također etičke rasprave: što učiniti s tom moći?"
+        },
+        {
+          "type": "takeaway",
+          "text": "U **1953**, model dvostruke spirale objašnjava kako DNK pohranjuje i kopira informacije iz živih bića. Franklin je pružio odlučujuće dokaze koji su predugo izbrisani iz pripovijesti."
+        }
+      ]
+    }
+  ]
+}
