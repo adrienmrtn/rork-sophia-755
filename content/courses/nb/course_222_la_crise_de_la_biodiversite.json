@@ -1,0 +1,132 @@
+{
+  "id": "course_222_la_crise_de_la_biodiversite",
+  "title": "Biodiversitetskrisen",
+  "subtitle": "Den 6. utryddelsen",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Viltbestanden har falt med **69 % siden 1970**. Vi opplever den sjette masseutryddelsen i jordens historie, den første forårsaket av en enkelt art: oss.",
+  "hero": {
+    "image": "la_crise_de_la_biodiversite",
+    "ratio": "16:9",
+    "hook": "Ingen asteroide, ingen vulkan: denne gangen har masseutryddelsen et menneskelig ansikt."
+  },
+  "sections": [
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jorden har allerede opplevd fem store masseutryddelser, forårsaket av asteroider eller gigantiske vulkanutbrudd. I dag er en sjette på gang, men for første gang har den ingen naturlig årsak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Arter forsvinner i dag **100 til 1000 ganger raskere** enn den naturlige hastigheten, og synderen er en enkelt art: vår. Dette kurset forklarer omfanget av problemet, dets årsaker og hvorfor det direkte angår oss."
+        }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p1",
+      "title": "En målt kollaps, figur for figur",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For å spore naturens tilstand bruker forskere **Living Planet Index**, utgitt årlig av organisasjonen [[WWF]]. Observasjonen for 2022 er sterk: mellom 1970 og 2018 falt bestandene av ville dyr (pattedyr, fugler, fisk, krypdyr, amfibier) i gjennomsnitt med **69%** over hele verden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne nedgangen påvirker hovedsakelig tropiske områder, der de fleste artene lever. I Latin-Amerika når den 94 %. Dette betyr ikke at 94 % av artene har forsvunnet, men at bestandene deres har gått ned, noe som gjør dem svært skjøre i møte med total utryddelse."
+        },
+        {
+          "type": "image",
+          "asset": "amazon_deforestation_rainforest_aerial",
+          "ratio": "16:9",
+          "caption": "Avskoging i Amazonas ødelegger et av de rikeste reservoarene av liv på planeten."
+        },
+        {
+          "type": "funFact",
+          "text": "Hvis jordens historie varte i 24 timer, ville mennesker ha dukket opp klokken 23:58. Det tok dem bare to sekunder å utløse en masseutryddelse."
+        },
+        {
+          "type": "paragraph",
+          "text": "I følge [[IPBES]] er rundt en million dyre- og plantearter nå truet av utryddelse, noen ganger i de kommende tiårene."
+        }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p2",
+      "title": "Fem årsaker, en opprinnelse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Denne katastrofen er ikke en tilfeldighet: den kommer direkte fra vår måte å produsere og konsumere på. Forskere identifiserer fem hovedårsaker. Den første og mest ødeleggende er endringen i arealbruken: avskoging for husdyrhold, urbanisering, intensivt jordbruk som kutter opp naturlige habitater i små biter som er for isolerte til å overleve."
+        },
+        {
+          "type": "paragraph",
+          "text": "Så kommer overutnyttelse (overfiske, ulovlig jakt) og forurensning: sprøytemidler, gjødsel som skaper døde soner i havene, mikroplast som finnes i hele næringskjeden."
+        },
+        {
+          "type": "image",
+          "asset": "plastic_pollution_ocean_wildlife",
+          "ratio": "4:3",
+          "caption": "Mikroplast forurenser nå alle nivåer i den marine næringskjeden."
+        },
+        {
+          "type": "paragraph",
+          "text": "De to siste driverne er arter fra andre steder, ofte feilaktig transportert av global handel, som tar plassen til lokale arter, og klimaendringer, som endrer temperaturen raskere enn arter kan tilpasse seg."
+        }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p3",
+      "title": "Hvorfor naturen ikke er fri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Biologisk mangfold er ikke bare et spørsmål om estetikk. Naturen gir oss essensielle [[Økosystemtjenester]], ofte usynlige fordi de er gratis. [[Dasgupta anmeldelse]]-rapporten minner oss om noe som ofte glemmes: økonomien vår er avhengig av naturen, ikke omvendt."
+        },
+        {
+          "type": "image",
+          "asset": "bee_flower_pollination_agriculture",
+          "ratio": "4:3",
+          "caption": "Omtrent 75 % av verdens matavlinger er avhengig av pollinerende insekter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Et konkret eksempel: rundt 75 % av verdens matavlinger er avhengig av insekter som skal bestøves. Naturen er også vårt største apotek, siden 25 % av moderne medisiner kommer fra molekyler som finnes i planter. Den regulerer også vann, danner fruktbar jord og absorberer deler av overflødig CO₂."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ved å ødelegge det biologiske mangfoldet ødelegger vi derfor naturkapitalen som støtter vårt eget økonomiske liv og matliv, ved å konsumere planetens ressurser mye raskere enn de fornyes."
+        }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p4",
+      "title": "Grenser som ikke skal overskrides, en sjanse til å sprette tilbake",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Biologisk mangfold er en av de ni [[planetariske grenser]] som ikke må overskrides for å holde jorden beboelig, og denne terskelen er allerede passert. Den virkelige faren er [[Økologiske vippepunkter]]: terskler der et økosystem kollapser plutselig og på en måte som er nesten umulig å reversere, som en Amazonasskog som forvandles til en savanne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det finnes imidlertid løsninger. På [[COP15]] i Montreal i 2022 satte verdens land seg som mål å beskytte 30 % av land og hav innen 2030. Dette innebærer å transformere landbruket, gjenopprette våtmarker og etterlate korridorer for arter å sirkulere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Naturen har stor kapasitet for [[motstandskraft]] hvis vi gir den plass og tid. Å beskytte en skog betyr å beskytte millioner av arter og samtidig opprettholde en essensiell karbonvask mot global oppvarming."
+        },
+        {
+          "type": "takeaway",
+          "text": "Villdyrpopulasjonene falt med 69 % mellom 1970 og 2018: Dette er den sjette masseutryddelsen, den første forårsaket av en enkelt art, som setter spørsmålstegn ved de viktige tjenestene som naturen gir oss gratis."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
+  "title": "Oppdagelsen av elektrisitet",
+  "subtitle": "Fra Franklin til Tesla",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Elektrisitet ble ikke oppfunnet plutselig. Den ble først observert, så forstått, deretter domestisert. Her er de viktigste trinnene.",
+  "hero": {
+    "image": "la_decouverte_de_l_electricite",
+    "ratio": "16:9",
+    "hook": "Fra lyn til smarttelefonen: to århundrer for å temme det usynlige."
+  },
+  "sections": [
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elektrisitet finnes i naturen: lyn, elektrisk fisk, friksjon. Det som forandret verden var å lære å **produsent**, **transport** og bruke det."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne historien strekker seg over mer enn to århundrer, med risikable eksperimenter og stor rivalisering."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
+      "title": "Forstå lynet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På 1700-tallet viste **Benjamin Franklin** at lyn er et elektrisk fenomen. Drageflygingseksperimentet hans (ofte fortalt på en fiksjonalisert måte) har som mål å bevise at himmelen og friksjonsmaskinen spiller med samme kraft."
+        },
+        {
+          "type": "image",
+          "asset": "benjamin_franklin_kite_lightning_experiment",
+          "ratio": "4:3",
+          "caption": "Franklin forbinder lyn og elektrisitet: en farlig, men grunnleggende idé."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vi oppfant også **torden**, en metallstang som gir lynet en trygg vei til bakken. Elektrisitet etterlater mystikk for å komme inn i ingeniørkunst."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
+      "title": "Faraday: produserer strøm",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På 1800-tallet viste **Michael Faraday** at en magnet som beveger seg nær en ledning kunne skape en elektrisk strøm. Dette er **induksjon**. Uten denne ideen, ingen dynamo, ingen dynamo, ingen moderne kraftverk."
+        },
+        {
+          "type": "image",
+          "asset": "faraday_electromagnetic_induction_experiment",
+          "ratio": "4:3",
+          "caption": "Faraday forvandler bevegelse og magnetisme til strøm."
+        },
+        {
+          "type": "funFact",
+          "text": "Faraday kom fra en ydmyk bakgrunn og begynte som bokbinder. Han lærte vitenskap ved å lese det han reliaba."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
+      "title": "Edison mot Tesla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På slutten av 1800-tallet kolliderte to leire. **Thomas Edison** skyver likestrøm. **Nikola Tesla** (og Westinghouse-selskapet) forsvarer vekselstrøm, som er lettere å transportere over lange avstander."
+        },
+        {
+          "type": "image",
+          "asset": "tesla_edison_electric_power_station",
+          "ratio": "4:3",
+          "caption": "Vekselstrøm får kraft i byer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vekselstrøm vinner for urbane nettverk. Byene lyser opp. Fabrikkene endrer tempo."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
+      "title": "En tilkoblet verden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I dag driver elektrisitet sykehus, tog, internett, kjøleskap. Utfordringen er ikke lenger bare å produsere det, men å gjøre det rent og pålitelig."
+        },
+        {
+          "type": "takeaway",
+          "text": "Elektrisitet ble forstått og deretter domestisert: Franklin for lyn, Faraday for å produsere strøm, Tesla og vekselstrøm for å bringe den inn i hjemmene. Dagliglivet vårt er fortsatt avhengig av det."
+        }
+      ]
+    }
+  ]
+}

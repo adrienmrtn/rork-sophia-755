@@ -1,0 +1,100 @@
+{
+  "id": "course_46_comment_les_avions_volent_ils",
+  "title": "Hvordan flyr fly?",
+  "subtitle": "Flyfysikk",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Et fly som veier flere hundre tonn flyr. Det er ikke magi: det er et spørsmål om vingeform, hastighet og krefter som balanserer hverandre.",
+  "hero": {
+    "image": "comment_les_avions_volent",
+    "ratio": "16:9",
+    "hook": "Tyngre enn en lastebil, og likevel holder den seg i luften. Her er hvordan."
+  },
+  "sections": [
+    {
+      "id": "course_46_comment_les_avions_volent_ils_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Et stort passasjerfly kan veie **hundrevis av tonn**. Hvordan kan noe så tungt holde seg i luften? Svaret ligger i formen på vingene og hastigheten til flyet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det er fire hovedkrefter i spill: **skyvekraft** (forover), **dra** (luftbremsing), **vekt** (nedover) og **løfte** (oppover)."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p1",
+      "title": "Vingen, en intelligent form",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sett fra siden er ikke en flyvinge flat. Toppen er mer avrundet enn bunnen. Når flyet beveger seg raskt, må luften gå rundt denne formen."
+        },
+        {
+          "type": "image",
+          "asset": "airplane_wing_cross_section_flight",
+          "ratio": "auto",
+          "caption": "Profilen til vingen skaper løftet som løfter flyet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Luften som passerer over akselererer litt. Trykket hans synker. Under vingen forblir trykket sterkere. Denne forskjellen skyver vingen oppover: dette er **løfte**. Det forklares ofte med prinsippet til **Bernoulli**, oppkalt etter en lærd fra 1700-tallet, og med det faktum at vingen også avleder luften nedover."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p2",
+      "title": "Du trenger fart",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uten fart, ikke nok luft som passerer over vingen, ikke nok løft. Dette er grunnen til at et fly trenger en lang rullebane for å ta av: motorene må akselerere det hardt nok."
+        },
+        {
+          "type": "funFact",
+          "text": "Fugler bruker den samme generelle ideen: vingene deres skaper løft. Men de slår med vingene for å komme videre. Flyet beveger seg fremover takket være motorene."
+        },
+        {
+          "type": "paragraph",
+          "text": "I cruiseflyging balanserer løft vekten. Skyvkraften til motorene balanserer luftmotstanden. Flyet beveger seg deretter fremover med en tilnærmet konstant hastighet."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p3",
+      "title": "Gå opp, ned, snu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For å klatre, vipper piloten (eller datamaskinen ombord) nesen litt opp og justerer skyvekraften. For å gå ned reduserer vi ofte skyvekraften. For å snu, vippes flyet til siden ved hjelp av bevegelige deler av vingene, ailerons."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ved landing senker vi farten. Klaffer strekker seg fra vingen for å øke løftet ved lave hastigheter. Da berører hjulene bakken, og bremsene (noen ganger også skyvevendere) stopper flyet."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p4",
+      "title": "Det er ikke \"lettere enn luft\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En heliumballong flyter fordi den er mindre tett enn luft. Et fly, nei: det er mye tettere. Den flyr fordi den **styrke** ser ut som den bærer den, takket være hastigheten og formen på vingene."
+        },
+        {
+          "type": "takeaway",
+          "text": "Et fly flyr takket være **løfte** skapt av vingene som beveger seg gjennom luften. Hastighet er avgjørende: uten den \"skyver\" ikke vingen lenger oppover nok til å kompensere for vekten."
+        }
+      ]
+    }
+  ]
+}

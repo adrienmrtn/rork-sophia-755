@@ -1,0 +1,124 @@
+{
+  "id": "course_19_la_bataille_de_stalingrad_1942_1943",
+  "title": "Slaget ved Stalingrad",
+  "subtitle": "1942-1943",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Fra sommeren 1942 til februar 1943 dræbte tyskere og sovjetter hinanden i ruinerne af en by ved Volga. Stalingrad bliver Anden Verdenskrigs vendepunkt.",
+  "hero": {
+    "image": "la_bataille_de_stalingrad",
+    "ratio": "16:9",
+    "hook": "I ruinerne af en by anså hæren for uovervindelige pauser for altid."
+  },
+  "sections": [
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fra sommeren **1942** til **2. februar 1943** ser verden en stribe ruiner på **Volga**, en stor flod i Rusland. Ved **Stalingrad** (i dag Volgograd) stødte den tyske hær på sovjetisk modstand klar til at bringe ethvert offer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Med mere end **en million** døde, var det det mest dødbringende slag i historien...og vendepunktet for Anden Verdenskrig."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p1",
+      "title": "Hitler sigter mod sydlig olie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Efter fiaskoen før Moskva i 1941 lancerede Hitler [[Etui blåt]], en sommeroffensiv mod syd. Målet: olie fra **Kaukasus**. **Stalingrad**, et jernbane- og flodkryds ved Volga, er i første omgang kun et sekundært mål. Så vinder symbolet: at tage byen, der bærer navnet **Stalin**, bliver en besættelse."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_stalingrad_ruins",
+          "ratio": "4:3",
+          "caption": "Stalingrad i ruiner: en nådesløs by-slagmark."
+        },
+        {
+          "type": "funFact",
+          "text": "Hitler var så sikker på sejren, at han efter sigende fik printet invitationer til en sejrsbanket på Lux Hotel i Stalingrad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den tyske **6. armé**, kommanderet af general [[Friedrich Paulus]], bliver omdirigeret til byen. Bombningerne af [[Luftwaffe]], det tyske luftvåben, i august 1942 efterlod et landskab af kratere... perfekt til sovjetisk forsvar."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p2",
+      "title": "Kæmp hus for hus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den sovjetiske general **Wassily Chuikov** pålagde en simpel taktik: hold dig inden for **30 meter** fra fjenden. Tysk artilleri og fly kan således ikke angribe uden at dræbe deres egne mænd. Tyskerne kalder det **Rattenkrieg**, \"rottekrigen\": vi kæmper i kældre, kloakker, ødelagte bygninger."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Pavlovs hus**, en bygning drevet af en håndfuld soldater, modstod **58 dage**. På fabrikken **Dzerzhinsky** fremstilles kampvogne under bomber og føres direkte til fronten. Stalins **Ordre 227** opsummerer rækkefølgen: **\"Ikke og skridt tilbage\"**."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p3",
+      "title": "Tangen, der lukker fælden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mens Paulus slider op i murbrokkerne, forbereder den sovjetiske marskal **Georgiy Zhukov** [[Operation Uranus]]. De tyske flanker, bevogtet af dårligt udstyrede allierede (rumænere, italienere, ungarere), gav efter. Den **19. november 1942** lukkede tangen: cirka **300.000** mænd blev omringet."
+        },
+        {
+          "type": "funFact",
+          "text": "Sovjeterne udsendte over højttalere et tikkende ur, derefter en besked: en tysk soldat døde hvert **7 sekunder** i USSR."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hitler forbyder udrejsen. [[Hermann Göring]], chef for Luftwaffe, lover en luftbro. Han fejler. Sult, tyfus, **-30 °C**: \"kedlen\" bliver en dødsfælde."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p4",
+      "title": "Overgivelsen, der ændrer krigen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den **30. januar 1943** udnævnte Hitler Paulus **markmarskal**, den højeste rang, for at opmuntre ham til at dø i stedet for at overgive sig. Paulus kapitulerede den **2. februar**. Ud af 300.000 omringede forlader **91.000** som fanger. For første gang må nazistisk propaganda indrømme totalt nederlag. Den hær, der blev anset for uovervindelig, var brudt."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "sommeren 1942",
+              "title": "Etui blåt",
+              "detail": "Tysk offensiv mod Kaukasus og Stalingrad."
+            },
+            {
+              "date": "19. november 1942",
+              "title": "Operation Uranus",
+              "detail": "Omringning af 6. armé."
+            },
+            {
+              "date": "2. februar 1943",
+              "title": "Kapitulation",
+              "detail": "Paulus overgiver sig; krigens vendepunkt."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Stalingrad** (**1942-1943**) tilintetgør den tyske 6. armé og knuser myten om nazistisk uovervindelighed i det mest dødbringende slag i historien."
+        }
+      ]
+    }
+  ]
+}

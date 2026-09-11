@@ -1,0 +1,104 @@
+{
+  "id": "course_213_l_evasion_fiscale_des_multinationales",
+  "title": "Multinationale virksomheders skatteunddragelse",
+  "subtitle": "Hvordan betaler GAFAM så lidt skat?",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Digitale giganter betaler ofte sølle skat sammenlignet med deres overskud. Dette er ikke altid ulovligt: det er resultatet af smuthuller i international lov.",
+  "hero": {
+    "image": "l_evasion_fiscale_des_multinationales",
+    "ratio": "16:9",
+    "hook": "I 2014 betalte Apple en effektiv skattesats på tæt på 0,005 % i Irland. Hvordan er dette muligt?"
+  },
+  "sections": [
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GAFAM, det vil sige Google, Apple, Facebook (Meta), Amazon og Microsoft, er blandt de rigeste virksomheder i verden. Men i forhold til deres overskud betaler de ofte meget mindre skat end en traditionel SMV."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette er ikke svindel i streng forstand: det er **skatteoptimering**, det vil sige dygtig udnyttelse af smuthuller i international lov. Denne mekanisme fratager stater hundredvis af milliarder af dollars hvert år. Her er, hvordan det fungerer, og hvordan verden forsøger at reagere på det."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p1",
+      "title": "En skat designet til fabrikker, ikke til digital",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det internationale skattesystem blev designet i begyndelsen af det 20. århundrede til en industriel økonomi: en virksomhed skulle eje fabrikker eller kontorer i et land, det der kaldes en [[fast driftssted]], for at blive beskattet der."
+        },
+        {
+          "type": "paragraph",
+          "text": "Digital teknologi har brudt denne forbindelse med territoriet. En virksomhed kan i dag dominere et marked, fange data fra millioner af brugere og tjene mange penge i et land uden at eje en eneste bygning der. Hun kan så adskille det sted, hvor hun tjener sine penge, fra det sted, hvor hun angiver dem."
+        },
+        {
+          "type": "funFact",
+          "text": "I 2014 fandt den amerikanske skattemyndighed, at Microsoft havde flyttet 39 milliarder dollars i overskud til Puerto Rico gennem intellektuelle ejendomsrettigheder, hvilket sparede mere end 6,5 milliarder dollars i skat."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p2",
+      "title": "Mangel på flere hundrede milliarder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ifølge OECD koster denne praksis offentlige budgetter rundt om i verden mellem $100 og $240 milliarder om året, eller 4 til 10% af alle selskabsskatter, der opkræves på planeten."
+        },
+        {
+          "type": "image",
+          "asset": "multinational_corporate_tax_avoidance_structure",
+          "ratio": "16:9",
+          "caption": "Det europæiske hovedkvarter for digitale giganter er ofte placeret i lande, hvor skatterne er lavest."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne mangel tvinger stater til at vælge mellem at øge skatterne på husholdninger og SMV'er eller at reducere offentlige udgifter såsom sundhed eller uddannelse. En lokal virksomhed betaler i gennemsnit en meget højere skattesats end en multinational, hvilket skaber unfair konkurrence."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p3",
+      "title": "Svaret: en global minimumsskat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I 2021, i regi af OECD og G20, etablerede en historisk aftale et globalt minimum [[Den globale minimumsskat på 15 %]]. Den er rettet mod virksomheder, hvis omsætning overstiger 750 millioner euro: Hvis de kun betaler 5 % skat i et land, kan deres oprindelsesland nu gøre krav på de manglende 10 %."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nogle lande, såsom Frankrig, har også oprettet en national skat, der er direkte rettet mod digitale giganters omsætning. Samtidig skal multinationale nu offentliggøre, land for land, hvor deres ansatte befinder sig, deres overskud og deres skatter: gennemsigtighed, der gør det muligt at identificere de mest åbenlyse uoverensstemmelser."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p4",
+      "title": "Irland, europæisk optimeringshovedstad",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Irland er med sin officielle skattesats på 12,5 % og sine hemmelige aftaler kaldet [[skatteafgørelser]] blevet det europæiske omdrejningspunkt for skatteoptimering. Takket være en kompleks struktur betalte Apple en effektiv skattesats tæt på 0,005 % i 2014."
+        },
+        {
+          "type": "paragraph",
+          "text": "EU-Kommissionen har krævet 13 milliarder euro i ubetalte skat af Apple fra Irland, men landet har længe nægtet at opkræve dem: Man frygter, at for strenge regler vil få hovedkontorer til at flygte til andre regioner i verden. Forsvarere af skatteretfærdighed påpeger også, at denne sats på 15 % forbliver lavere end gennemsnittet for udviklede lande, og at de fattigste lande, ofte dem, der er hårdest ramt af skatteunddragelse, kun vil inddrive en lille del."
+        },
+        {
+          "type": "takeaway",
+          "text": "GAFAM har længe udnyttet smuthuller i international lov til at betale latterlige skatter, hvilket koster offentlige budgetter op til 240 milliarder dollars om året. Siden 2021 har en global minimumsskat på 15 % forsøgt at rette op på denne ubalance, men kampen for mere retfærdig beskatning fortsætter."
+        }
+      ]
+    }
+  ]
+}

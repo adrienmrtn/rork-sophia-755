@@ -1,0 +1,108 @@
+{
+  "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s",
+  "title": "Dataens rolle (\"det 21. århundredes olie\")",
+  "subtitle": "Den mest værdifulde digitale ressource",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "De siger, at data er den nye olie. Men i modsætning til olie løber de aldrig tør, og bliver mere værdifulde, jo mere de stødes på.",
+  "hero": {
+    "image": "le_role_des_donnees",
+    "ratio": "16:9",
+    "hook": "Facebook kan gætte, at nogen skal giftes eller flytte, før de overhovedet ved af det."
+  },
+  "sections": [
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En sætning er blevet etableret siden 2010'erne: **data** ville være \"det 21. århundredes olie\". Ideen er enkel: Når de først er blevet forfinet af algoritmer, bliver de motoren for vækst og global magt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Men i modsætning til olie, en ressource der løber tør, forbruges data aldrig: de kan kopieres i det uendelige og bliver mere værdifulde, når de kombineres med anden information. Her er hvorfor det omformede den globale økonomi."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p1",
+      "title": "Forudsige vores adfærd før os selv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den sande værdi af data ligger ikke i en simpel liste over navne eller adresser, men i deres evne til at forudsige vores fremtidige adfærd. Hver søgning, hver bevægelse, hvert klik efterlader et spor, som teknologivirksomheder samler for at skabe et meget præcist portræt af hver person."
+        },
+        {
+          "type": "funFact",
+          "text": "Facebook kan opdage en større livsændring, såsom et kommende ægteskab eller flytning, før den involverede person overhovedet er helt klar over det, ved at opdage små variationer i deres online-vaner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne systematiske udnyttelse af vores adfærd har givet anledning til det, forsker Shoshana Zuboff kalder **overvågningskapitalisme**: mennesker er ikke længere kun en kunde, de bliver råmaterialet i et system, der sælger forudsigelser til højestbydende."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p2",
+      "title": "Hvorfor disse giganter er næsten umulige at konkurrere med",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dataøkonomien fungerer i en god cyklus: Jo mere data en virksomhed har, jo bedre er dens service, hvilket tiltrækker flere brugere, som genererer endnu mere data. Kunstig intelligens har fremskyndet dette fænomen: en [[maskinlæring]] algoritme trænet på milliarder af eksempler bliver mere præcis og hurtigere at forbedre end en konkurrent med begrænsede ressourcer."
+        },
+        {
+          "type": "image",
+          "asset": "artificial_intelligence_machine_learning_datacenter",
+          "ratio": "16:9",
+          "caption": "Datacentre bruger lige så meget elektricitet som hele byer til at behandle disse massive informationsstrømme."
+        },
+        {
+          "type": "paragraph",
+          "text": "Disse giganter, [[GAFAM]] i USA og BATX i Kina, er ikke længere tilfredse med at dominere deres oprindelige sektor: de bruger deres forspring i data til at udvide til sundheds-, finans- eller forbundne biler, hvilket blokerer adgangen til innovation på mange områder."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p3",
+      "title": "Europa slår tilbage med GDPR",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stillet over for denne magt etablerede Den Europæiske Union [[GDPR]] i 2018, en forordning, som i teorien giver magten tilbage til borgerne over deres egne personlige oplysninger: gennemsigtighed, ret til at blive glemt, obligatorisk samtykke."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dets styrke kommer fra dets ekstraterritorialitet: enhver virksomhed, der håndterer data fra europæiske borgere, skal overholde, med bøder på op til 4 % af sin globale omsætning. Dette tvang giganter som Meta eller Amazon til at gennemgå deres praksis rundt om i verden, hvilket gjorde Europa til en uvillig global regulator."
+        },
+        {
+          "type": "funFact",
+          "text": "Før GDPRs krav om klarhed ville det have taget en gennemsnitlig person omkring 76 arbejdsdage at læse alle servicevilkårene for de digitale tjenester, de bruger på et enkelt år."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p4",
+      "title": "Data, et suverænitetsspørgsmål",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ud over økonomien er data blevet et magtværktøj for staterne selv, som kan bruge dem til at overvåge deres befolkning eller vejlede den offentlige mening. Lande, der ikke er i stand til at beskytte deres borgeres data, risikerer en form for teknologisk afhængighed, det såkaldte brud på [[digital suverænitet]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "De kommende årtiers store udfordring bliver at finde en balance mellem de fremskridt, der er muliggjort af storstilet dataanalyse og respekt for privatlivets fred, en væsentlig betingelse for individuel frihed i et stadigt mere forbundet samfund."
+        },
+        {
+          "type": "takeaway",
+          "text": "Data er blevet et strategisk aktiv, hvis værdi kommer fra dets evne til at forudsige vores adfærd. Denne økonomi favoriserer teknologiske giganter, der er næsten umulige at konkurrere med, hvilket Europa reagerer på med streng regulering: GDPR."
+        }
+      ]
+    }
+  ]
+}

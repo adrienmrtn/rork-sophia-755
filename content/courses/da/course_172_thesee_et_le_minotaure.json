@@ -1,0 +1,120 @@
+{
+  "id": "course_172_thesee_et_le_minotaure",
+  "title": "Theseus og Minotaurus",
+  "subtitle": "Tråden, monsteret, sejlene",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Theseus dræber Minotaurus ved hjælp af Ariadnes tråd. Men han glemmer at skifte sejl: hans far Aegeus kaster sig i havet, som stadig bærer hans navn.",
+  "hero": {
+    "image": "thesee_et_le_minotaure",
+    "ratio": "16:9",
+    "hook": "Et monster i en labyrint. En tråd at komme ud af. Glemte sejl, der døber et hav."
+  },
+  "sections": [
+    {
+      "id": "course_172_thesee_et_le_minotaure_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Theseus**, founding hero of Athens, confronts the **Minotaurus**, a half-man, half-bull creature hidden in the [[Labyrint]] of Crete. Historien kombinerer mod, romantisk list og familietragedie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ved at dræbe monsteret befrier Theseus Athen fra en blodig hyldest. Men en glemt detalje, sorte sejl i stedet for hvide, vil koste hans far livet og give hans navn til Det Ægæiske Hav."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p1",
+      "title": "Minotaurus og Athens hyldest",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kong **Minos** af Kreta nægter at ofre en hvid tyr til **Poseidon**, havets gud. For at tage hævn, inspirerer Poseidon i Dronning **Pasiphaé** en passion for dyret. Minotaurus er født. Minos beordrer opfinderen [[Labyrint]] til at bygge et fængsel uden udgang: Labyrinten."
+        },
+        {
+          "type": "image",
+          "asset": "theseus_minotaur_cretan_labyrinth_painting",
+          "ratio": "4:3",
+          "caption": "Minotaurus, låst inde i den kretensiske labyrint."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kreta dominerer derefter havet: en [[Thalassokrati]]. Efter en tabt krig skal Athen hvert niende år aflevere **syv unge mænd og syv unge draw** som mad til monsteret. Ved den tredje levering melder **Theseus**, søn af kong **Ægæiske Hav**, sig frivilligt."
+        },
+        {
+          "type": "funFact",
+          "text": "Aegeus og Theseus er enige om et signal: **hvid** sejler, hvis helten vender tilbage i live, **sort sejler**, hvis han er død. Denne detalje vil afgøre et drama."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p2",
+      "title": "Brødkrummer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På Kreta bliver **Ariane**, datter af Minos, forelsket i Theseus. Hun ved, at styrke ikke er nok i labyrinten. Med hjælp fra Daedalus giver hun ham en kugle uld: [[Brødkrummer]]. Han fastgør den til indgangen og vikler tråden ud, mens han bevæger sig fremad."
+        },
+        {
+          "type": "image",
+          "asset": "ariadne_thread_theseus_labyrinth_painting",
+          "ratio": "4:3",
+          "caption": "Ariadne giver Theseus tråden, der vil redde hans liv."
+        },
+        {
+          "type": "paragraph",
+          "text": "Theseus dræber Minotaurus og spoler derefter tråden tilbage for at komme ud. Han flygter med de unge athenere og Ariadne. Men på øen **Naxos** lader han hende sove. Nogle siger, at guden **Dionysos** ville have hende som sin kone. Ariadne, desperat og derefter guddommeliggjort, modtager en gylden krone, der er blevet til et stjernebillede."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p3",
+      "title": "Kap Sounions sorte sejl",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tilbagekomsten skal være en fest. Beruset af sejren eller bekymret over Ariadnes forladelse glemmer Theseus at hejse de hvide sejl. Skibet nærmer sig Athen under sorte sejl."
+        },
+        {
+          "type": "image",
+          "asset": "cape_sounion_aegean_sea_cliff_sunset",
+          "ratio": "4:3",
+          "caption": "Kap Sounion, hvorfra Aegeus så til sin søns tilbagevenden."
+        },
+        {
+          "type": "paragraph",
+          "text": "På **Kap Sounion** scanner den gamle konge Aegeus horisonten. Han ser kun sorgens mørke. Overbevist om, at hans søn er død, kaster han sig fra klippen. Havet har siden fået navnet: **Ægæiske Hav**. Theseus ankommer til konge... og forældreløs af sin egen uagtsomhed."
+        },
+        {
+          "type": "funFact",
+          "text": "\"Theseus skib\" er blevet et filosofisk paradoks: Hvis vi udskifter alle plankerne én efter én, er det så stadig den samme båd?"
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p4",
+      "title": "Theseus, Athens konge",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kronet bliver Theseus en organiserende konge. [[Synøcisme]] tilskrives ham: foreningen af byerne Attika omkring Athen. Han etablerede [[Panathenaia]], store byfestivaler. Kan kombineres med højre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hans regeringstid omfatter andre eventyr, såsom kampen mod [[Amazoner]]. Men labyrinten forbliver sit præg: at vide, hvordan man optrævler det uløselige, mens den forbliver sårbar over for glemsel. Theseus skaber Athens storhed fra asken af en familietragedie."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Theseus** dræber **Minotaurus** takket være **Ariane**'s tråd. Ved at glemme at skifte sejl forårsager han selvmordet på sin far **Ægæiske Hav**, som giver sit navn til Det Ægæiske Hav."
+        }
+      ]
+    }
+  ]
+}

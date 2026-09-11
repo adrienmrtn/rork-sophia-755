@@ -1,0 +1,120 @@
+{
+  "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive",
+  "title": "Finnes det liv andre steder i universet?",
+  "subtitle": "Eksobiologi",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Tusenvis av milliarder av planeter, og likevel radiostillhet. Vitenskapen leter etter liv andre steder uten å love små grønne menn.",
+  "hero": {
+    "image": "y_a_t_il_de_la_vie_ailleurs_dans_l_univers",
+    "ratio": "16:9",
+    "hook": "Universet er enormt. Så hvorfor svarer ingen?"
+  },
+  "sections": [
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det observerbare universet inneholder omtrent **2 billioner** galakser, enorme samlinger av stjerner, hver med hundrevis av milliarder stjerner. Ved hjelp av statistikk skulle de potensielt beboelige planetene være utallige. Men siden begynnelsen av moderne astronomi har vi ikke hatt noen bekreftede kontakter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne motsetningen har et navn: **Fermi**-paradokset, etter fysikeren **Enrico Fermi**. Spørsmålet er ikke lenger bare science fiction. Den kommer inn under [[Eksobiologi]]: vitenskapen som studerer betingelsene for livets utseende andre steder, og måtene å oppdage det på."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p1",
+      "title": "Hva livet ser ut til å spørre om",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For å se andre steder, tar vi utgangspunkt i det eneste kjente eksemplet: terrestrisk liv. Den er hovedsakelig basert på kjemien til **karbon**, et atom som danner komplekse molekyler, og på **flytende vann**, som gjør at kjemiske reaksjoner kan finne sted godt."
+        },
+        {
+          "type": "image",
+          "asset": "radio_telescope_seti",
+          "ratio": "auto",
+          "caption": "Radioteleskoper skanner himmelen og lytter etter et mulig signal."
+        },
+        {
+          "type": "paragraph",
+          "text": "En kandidatplanet må ofte være i [[beboelig område]] til stjernen sin: verken for nær, ellers fordamper vannet, eller for langt, ellers fryser vannet. Siden 1990-tallet har mer enn **5 500 eksoplaneter**, planeter rundt andre stjerner enn Solen, blitt oppdaget. Nesten hver stjerne i vår galakse ville ha minst én."
+        },
+        {
+          "type": "funFact",
+          "text": "Det er flere stjerner i det observerbare universet enn det er sandkorn på alle jordens strender."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1961** foreslo astronomen **Frank Drake** [[Drake ligning]]: en formel som multipliserer faktorer - stjerner, beboelige planeter, varighet av sivilisasjoner - for å estimere antall sivilisasjoner som er i stand til å kommunisere i Melkeveien. Tallene er fortsatt svært usikre. Formelen brukes hovedsakelig for å strukturere debatten."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p2",
+      "title": "Oaser i solsystemet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Du trenger ikke å gå til andre stjerner med en gang. I vårt solsystem er flere verdener spennende. **Europa**, en måne av Jupiter, har sannsynligvis et hav av flytende vann under en isskorpe. Dette havet ville forbli flytende takket være [[Tidevannskrefter]]: Jupiters enorme tiltrekning deformerer Europa og varmer dets indre ved friksjon."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Enceladus**, en liten måne av Saturn, sender ut **geysirer**, dampstråler og materie. **Cassini**-sonden fant tegn på **hydrotermisk**-aktivitet, oppvarming ved kjemiske reaksjoner på bunnen av havet, som i prinsippet er i stand til å mate mikrober uten sollys."
+        },
+        {
+          "type": "paragraph",
+          "text": "På **Mars** strømmet flytende vann en gang på overflaten. Robotene leter etter [[Biosignaturer]]: fossile eller kjemiske spor fra tidligere liv, før planeten mistet en stor del av atmosfæren og vannet."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p3",
+      "title": "Den store stillheten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1950** spør Fermi: Hvis avanserte sivilisasjoner eksisterer i tusenvis, hvorfor ser vi ingen spor av dem? Universet er gammelt. En sivilisasjon bare en million år fremover ville ha hatt tid til å skille seg ut, selv uten å reise med lysets hastighet."
+        },
+        {
+          "type": "paragraph",
+          "text": "En hypotese er den om [[Stort filter]]: et nesten umulig skritt å ta i evolusjon, for eksempel overgangen til komplekst liv, eller teknologisk selvdestruksjon. Enten har vi allerede passert den, eller så ligger den foran oss."
+        },
+        {
+          "type": "paragraph",
+          "text": "Andre ideer: Vi lytter kanskje ikke til de riktige signalene. **SETI**-programmet, Search for Extraterrestrial Intelligence, skanner hovedsakelig radiobølger. Eller sivilisasjonene er for korte og for langt unna til å krysse stier. Eller [[Zoo hypotese]]: Jorden ville bli stående frivillig, som en reserve."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p4",
+      "title": "Hvordan vi søker i dag",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Romteleskopet **James Webb** analyserer lys som passerer gjennom atmosfæren til fjerne planeter ved å bruke [[Spektroskopi]], skjæring av lys for å identifisere gassene som er tilstede. Vi ser etter gasser som oksygen eller metan i merkelige mengder, mulige tegn på liv."
+        },
+        {
+          "type": "funFact",
+          "text": "Hvis noen i Andromeda-galaksen så på oss «akkurat nå», ville de sett Jorden slik den var for **2,5 millioner dollar på siden**: det tar så lang tid før lyset reiser."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selv mikrobielt liv ville forandre alt: det ville bevise at levende ting ikke er en unik ulykke. I mellomtiden har **Å reise**-probene båret gyldne plater med lyder og bilder av jorden siden **1977**. Sannsynlighet for avskjæring: nesten null. Trenger ikke å føle seg alene: intakt."
+        },
+        {
+          "type": "takeaway",
+          "text": "Planetene er utallige og livet virker statistisk plausibelt. Men fraværet av kontakt, Fermi-paradokset, minner oss om at teknologisk intelligens kan være svært sjelden, eller veldig kort."
+        }
+      ]
+    }
+  ]
+}

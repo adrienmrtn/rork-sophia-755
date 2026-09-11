@@ -1,0 +1,112 @@
+{
+  "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr",
+  "title": "Hvorfor finnes årstider på andre planeter?",
+  "subtitle": "Planeter og baner",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "På jorden kommer årstidene fra aksenes tilt. Andre steder gir dette samme prinsippet vintre på 42 år ... eller nesten ingen årstid i det hele tatt.",
+  "hero": {
+    "image": "pourquoi_les_saisons_existent_sur_d_autres_planetes",
+    "ratio": "16:9",
+    "hook": "Våre fire sesonger er et moderat tilfelle. Andre steder kan en sommer vare i flere tiår."
+  },
+  "sections": [
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På jorden kommer sommer og vinter hovedsakelig fra **-hellingen** på aksen: omtrent **23.5°**. Solen treffer hardere på den ene halvkulen, så den andre. Denne modellen virker åpenbar. I solsystemet er det heller en moderat versjon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hver planet kombinerer sin helning og formen på sin bane. Resultat: Verdener uten årstider, andre med ekstreme kontraster, og vintre som varer i flere tiår."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p1",
+      "title": "Tilt, motor av kontraster",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Skjevhet]] er vinkelen mellom rotasjonsaksen til en planet og vinkelrett på dens bane. Jo større den er, jo mer markerte årstidene."
+        },
+        {
+          "type": "image",
+          "asset": "uranus_planet_nasa",
+          "ratio": "auto",
+          "caption": "Uranus, vippet i ca. 98°, opplever ekstreme årstider som varer i 42 år."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Uranus** er ekstremtilfellet: helling på omtrent **98°**, nesten liggende. Det tar **84 år** å gå rundt solen. Hver pol mottar deretter nesten **42 år** kontinuerlig dag, deretter **42 år** av total natt. **Mars**, ved **25.2°**, ligner jorden, men året varer **687 terrestriske dager**: vår og høst i seks måneder. **Jupiter** og **Merkur**, nesten rett, har nesten ingen sesonger."
+        },
+        {
+          "type": "funFact",
+          "text": "På Uranus og Neptun kan ekstremt trykk \"regne\" diamanter dannet av atmosfærisk karbon."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p2",
+      "title": "Når avstanden fra solen også betyr noe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På jorden er banen nesten sirkulær: avstanden fra solen varierer lite. Det er derfor ikke det som gjør sommer eller vinter, men vinkelen på strålene."
+        },
+        {
+          "type": "paragraph",
+          "text": "På **Mars** er banen mye mer oval, mer **eksentrisk**: fra **207 til 249 millioner km**. På den sørlige halvkule faller sommeren nær [[perihelium]], det nærmeste punktet til solen. Kortere, men varmere somre. Dette termiske sjokket utløser noen ganger **planetarisk støvstormer** som skjuler himmelen."
+        },
+        {
+          "type": "funFact",
+          "text": "I **2018** stoppet en sesongmessig marsstorm Opportunity-roveren permanent ved å blokkere solen."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p3",
+      "title": "Venus, Merkur, Saturn: andre regler",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Merkur**, uten ekte atmosfære eller tilbøyelighet, lever hovedsakelig i daglige ****ekstrem:**430 °C**jeg solen,**-180 °C** om natten. **Venus** roterer i revers, [[Retrograd rotasjon]] fra øst til vest, med ekstrem tilt, men dens monstrøse **drivhuseffekt fanger varme i atmosfæren og utjevner temperaturen til **Z460** °C** overalt, overalt."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Saturn**, skråstilt som jorden, har sesonger på omtrent **7 år**. Vinkelen til [[ringer av Saturn]] endrer lyset som mottas av hver halvkule og endrer til og med fargen på skyene."
+        },
+        {
+          "type": "funFact",
+          "text": "På Venus, én dag, varer rotasjonen lenger enn et år, dens revolusjon: **243** terrestriske dager mot **225**."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p4",
+      "title": "Hvorfor har jorden stabile årstider?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uten **Måne** ville jordens helning svingt kaotisk mellom 0° og mer enn 80° over millioner av år. Årstider av typen Uranus ville gjøre klimaet nesten ubeboelig. Månen fungerer som en **gravitasjonsstabilisator**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Når de leter etter beboelige [[eksoplaneter]], ser astronomer også på stabiliteten til aksen. Milde og regelmessige årstider er ikke en detalj: de er en del av betingelsene for bærekraftig liv."
+        },
+        {
+          "type": "takeaway",
+          "text": "Årstidene oppstår hovedsakelig fra helningen til aksen. På Uranus varer de i flere tiår; på Mars gjør den ovale banen dem asymmetriske. Månen beskytter de på jorden."
+        }
+      ]
+    }
+  ]
+}

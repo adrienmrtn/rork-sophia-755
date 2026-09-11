@@ -1,0 +1,104 @@
+{
+  "id": "course_220_la_desinformation_et_les_fake_news",
+  "title": "Desinformasjon og falske nyheter",
+  "subtitle": "Ligger i viralalderen",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Falsk informasjon spres 6 ganger raskere enn sannheten på sosiale medier. Hvorfor og hvordan beskytte deg selv?",
+  "hero": {
+    "image": "la_desinformation_et_les_fake_news",
+    "ratio": "16:9",
+    "hook": "En MIT-studie viste at falske nyheter reiser 6 ganger raskere enn sannheten på Twitter. Her er hvorfor."
+  },
+  "sections": [
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Å lyve for å tjene et politisk formål er ikke noe nytt: spor av det har blitt funnet siden antikken. Men Internett og sosiale nettverk har endret situasjonen: falsk informasjon sirkulerer ikke lenger bare fra en stat til befolkningen, den sprer seg nå horisontalt, mellom innbyggerne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette skiftet har skapt en verden der sannheten noen ganger virker valgfri i møte med viralitet. Å forstå hvordan **desinformasjon** sprer seg, og hvem som drar nytte av det, har blitt avgjørende for å bevare tilliten mellom innbyggerne."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p1",
+      "title": "Hvorfor løgner reiser raskere enn sannheten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vi må skille desinformasjon, bevisst spredt for å manipulere, fra enkle ærlige feil. Suksessen til denne falske nyheten er avhengig av det forskerne kaller oppmerksomhetsøkonomien: sosiale mediers algoritmer er designet for å maksimere skjermtiden, og hjernen vår reagerer sterkere på følelser og sjokk enn på nyansering."
+        },
+        {
+          "type": "funFact",
+          "text": "En studie av [[MIT]] publisert i 2018 viste at falske nyheter spres omtrent 6 ganger raskere enn bekreftede nyheter på Twitter fordi de virker nyere og mer følelsesmessig intense."
+        },
+        {
+          "type": "paragraph",
+          "text": "Algoritmene låser også Internett-brukere inn i [[filterbobler]]: de viser dem bare innhold som bekrefter deres allerede eksisterende meninger. En person som er overbevist om en konspirasjonsteori, ser da hver ny falsk informasjon som et ekstra bevis, noe som gjør enhver etterfølgende korreksjon svært vanskelig."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p2",
+      "title": "En industri av løgner, mellom stater og profitt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Desinformasjon har blitt en ekte bransje. Stater som Russland, gjennom Internet Research Agency, har opprettet tusenvis av falske automatiserte kontoer for å vekke spenninger i vestlige demokratier, uten engang å prøve å forsvare en bestemt leir: Målet er ofte å skape kaos og få folk til å tro at «alle lyver»."
+        },
+        {
+          "type": "image",
+          "asset": "fake_news_social_media_manipulation_phone",
+          "ratio": "4:3",
+          "caption": "Falsk informasjon spres i løpet av sekunder på sosiale nettverk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det er også en rent lukrativ dimensjon: i byen Veles, i Nord-Makedonia, opprettet unge gründere sensasjonelle nettsteder i 2016 uten noen politisk overbevisning, utelukkende for å tjene penger gjennom trafikk generert på sosiale nettverk. Løgnen blir da en enkel lønnsom vare."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p3",
+      "title": "Hvordan skille fakta fra fiksjon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Overfor denne syndfloden organiserer informasjonsverdenen seg selv. **faktasjekking**, det vil si verifisering av fakta, har blitt en journalistisk disiplin i seg selv. Byråer som [[AFP]] eller spesialiserte redaksjoner bruker bildesøkeverktøy for å oppdage forfalskning og analysere mistenkelig innhold."
+        },
+        {
+          "type": "paragraph",
+          "text": "Men kappløpet mellom angrep og forsvar er fortsatt ulikt. Utseendet til [[Deepfakes]], videoer forfalsket av kunstig intelligens der en person blir tvunget til å si noe med forstyrrende realisme, gjør skillet mellom sant og usant vanskeligere og vanskeligere for et utrent øye."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p4",
+      "title": "Finne tillit til en verden av bilder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den langsiktige effekten av feilinformasjon er dyp: vi snakker nå om en **post-sannhet**-æra, der objektive fakta noen ganger har mindre vekt enn følelser og personlig tro. Denne generaliserte relativiseringen svekker den tilliten som er nødvendig for å takle globale utfordringer som klima eller folkehelse sammen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det mest solide svaret er fortsatt medieundervisning: lære å bekrefte en kilde, kryssreferanser flere opplysninger og forstå hvordan algoritmer fungerer. Noen er også avhengige av innholdssertifiseringsteknologier for å garantere opprinnelsen til en video fra den ble opprettet. I mellomtiden forblir alles årvåkenhet den første forsvarslinjen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Falsk informasjon sprer seg i gjennomsnitt 6 ganger raskere enn sannheten på sosiale nettverk, fordi den utnytter våre følelser og vår tørst etter nyhet. Stilt overfor dype forfalskninger og trollfarmer er medieopplæring fortsatt det beste våpenet for å bevare kollektiv tillit."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "course_55_la_theorie_de_la_gravitation_newton_1687",
+  "title": "Teorien om gravitasjon",
+  "subtitle": "Newton, 1687",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "I 1687 publiserte Newton en enkel og enorm idé: den samme kraften får et eple til å falle og månen til å rotere. Her er hva det endrer.",
+  "hero": {
+    "image": "la_theorie_de_la_gravitation_newton",
+    "ratio": "16:9",
+    "hook": "Et eple, månen, planetene: en enkelt kraft for å forklare alt."
+  },
+  "sections": [
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Før Newton visste vi allerede mye om planetene takket være **Galileo**, en italiensk fysiker fra 1600-tallet, og **[[Johannes Kepler]]**, en astronom som beskrev elliptiske baner. Men en klar sammenheng mellom det som faller på jorden og det som snurrer på himmelen manglet."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1687** publiserte **Isaac Newton** *Z[[Philosophiae Naturalis Principia Mathematica]]*, *Principia*-arbeidet til det klassiske fysikkarbeidet. Han hevder at gravitasjon er **universell**: den virker overalt, på samme måte."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p1",
+      "title": "Verden før syntese",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kepler hadde beskrevet banene til planetene med presise lover: baner i **ellipse**, like feide områder i lik tid. Galileo hadde studert kroppens fall. Men hvorfor holder planetene seg på sin bane? Hva \"trekker\" dem?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Newton svarer: en **gravitasjonsaksjon**, en kraft som trekker to masser mot hverandre. Jorden tiltrekker seg månen. Solen tiltrekker seg jorden. Og du tiltrekker deg også litt av jorden... selv om den er liten."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p2",
+      "title": "Loven i én setning",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "isaac_newton_apple_tree_woolsthorpe",
+          "ratio": "4:3",
+          "caption": "Historien om eplet er fremfor alt en historie. Ideen er ekte."
+        },
+        {
+          "type": "paragraph",
+          "text": "To kropper tiltrekker hverandre med en kraft som øker med deres **masse**, mengden materie, og avtar når de beveger seg bort. Mer presist: kraften svekkes med **-kvadret avstanden**. Dobling av avstanden deler attraksjonen med fire. Jo lenger unna du er, jo raskere svekkes tiltrekningen."
+        },
+        {
+          "type": "image",
+          "asset": "planets_orbit_solar_system_gravity",
+          "ratio": "16:9",
+          "caption": "Planetene \"faller\" hele tiden mot solen ... og savner den: dette er banen."
+        },
+        {
+          "type": "funFact",
+          "text": "Månen \"faller\" hele tiden mot jorden. Siden den også har høy sidehastighet, snurrer den rundt i stedet for å krasje."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p3",
+      "title": "Bevegelseslovene",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Newton gir også tre **bevegelseslover**. Oppsummert: et objekt holder hastigheten hvis det ikke er kraft, prinsippet til **treghet**; en kraft endrer hastigheten; hver handling har en motsatt reaksjon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Med dette kan vi beregne baner, **tidevann**, stigninger og nedstigninger av havene under påvirkning av Månen og Solen, og banene. Fysikk blir et prediksjonsverktøy."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p4",
+      "title": "Kraftig ... men ikke siste ordet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To århundrer senere ville **[[Albert Einstein]]** korrigere Newton for ekstreme tilfeller, svært høye hastigheter og veldig sterke gravitasjoner, med [[Relativistisk gravitasjon (Einstein)]]. Tyngdekraften blir da en krumning av rom-tid, og ikke lenger en usynlig kraft. Men for å skyte opp en rakett eller forstå tidevannet, forblir Newton utmerket."
+        },
+        {
+          "type": "takeaway",
+          "text": "Newton forener himmel og jord: gravitasjon tiltrekker seg masser overalt. Det er en av de største vitenskapelige syntesene i historien."
+        }
+      ]
+    }
+  ]
+}

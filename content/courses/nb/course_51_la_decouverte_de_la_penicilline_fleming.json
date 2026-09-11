@@ -1,0 +1,106 @@
+{
+  "id": "course_51_la_decouverte_de_la_penicilline_fleming",
+  "title": "Oppdagelsen av penicillin",
+  "subtitle": "Fleming, 1928",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "I 1928 la Alexander Fleming merke til at en muggsopp hadde drept bakterier på en kulturskål. Fra denne sjansen ble det første store antibiotikumet født.",
+  "hero": {
+    "image": "la_decouverte_de_la_penicilline",
+    "ratio": "16:9",
+    "hook": "En glemt boks, en form og medisinen snus opp ned."
+  },
+  "sections": [
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Før antibiotika kunne en enkel infeksjon drepe. Et kutt, lungebetennelse, et krigssår: kroppen kjempet ofte alene."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1928** oppdaget den skotske legen **Alexander Fleming** ved et uhell et stoff som er i stand til å drepe bakterier. Den vil hete **penicillin**. Men det vil fortsatt ta år å gjøre det til en ekte medisin."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
+      "title": "En glemt boks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fleming studerer bakterier i London. Når han kommer tilbake fra ferie, ser han på gamle kulturbokser. På en av dem vokste det en **mugg**. Rundt henne er bakteriene døde."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Fleming og nøkkelideen: noe i formen stopper bakteriene."
+        },
+        {
+          "type": "paragraph",
+          "text": "Muggsoppen tilhører slekten **Penicillium**. Fleming forstår at det produserer et antibakterielt stoff. Han kaller det penicillin. Men han kan ikke rense det nok til å behandle de syke."
+        },
+        {
+          "type": "funFact",
+          "text": "Fleming sa senere at hvis han hadde vært mer ryddig, ville han ha kastet boksen. Rotet i laboratoriet hjalp på oppdagelsen."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p2",
+      "title": "Oxford gjør idé til kur",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I begynnelsen av **1940**-årene, i Oxford, vendte **Howard Florey** og **Ernst kjede** tilbake til jobb. Sammen med teamet deres isolerte, konsentrerte og testet de penicillin på dyr, deretter på mennesker."
+        },
+        {
+          "type": "paragraph",
+          "text": "Andre verdenskrig gjorde at ting hastet: infiserte soldater måtte behandles. Penicillin flyttes fra laboratoriet til en strategisk sak."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p3",
+      "title": "Masseprodukter",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "penicillin_antibiotic_production_laboratory",
+          "ratio": "4:3",
+          "caption": "Det var nødvendig å finne opp industrielle måter å dyrke mugg på."
+        },
+        {
+          "type": "paragraph",
+          "text": "For å behandle millioner av mennesker trengs enorme mengder. USA industrialiserte produksjonen under krigen. Gigantiske kar får mugg til å savne som øl."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1945** mottok Fleming, Florey og Chain Nobelprisen. Medisinen går inn i antibiotikaalderen."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p4",
+      "title": "Skyggen av motstand",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I dag har for mange misbrukte antibiotika tillatt visse bakterier å bli **motstandsdyktig**: stoffene dreper dem ikke lenger. Fleming hadde allerede advart om denne risikoen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Penicillin ble født fra en tilfeldighet observert av Fleming i **1928**, og ble deretter en medisin takket være Florey, Chain og krigsindustrien. Det har reddet millioner av liv... så lenge du ikke sliter det ut."
+        }
+      ]
+    }
+  ]
+}

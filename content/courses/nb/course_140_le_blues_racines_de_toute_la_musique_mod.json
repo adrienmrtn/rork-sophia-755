@@ -1,0 +1,145 @@
+{
+  "id": "course_140_le_blues_racines_de_toute_la_musique_mod",
+  "title": "Blues: røttene til all moderne musikk",
+  "subtitle": "1870-1960",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Blues ble født i bomullsmarkene i Mississippi, og oppfant det 12-måls rutenettet og næret jazz, rock, soul og hip-hop.",
+  "hero": {
+    "image": "le_blues_racines_de_toute_la_musique_moderne",
+    "ratio": "16:9",
+    "hook": "Et skrik i bomullsmarkene, og all moderne musikk har en rot."
+  },
+  "sections": [
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blues er ikke bare en sjanger. Det er matrisen for mye vestlig populærmusikk på 1900-tallet. Den ble født i utmattelsen av bomullsmarkene i **Mississippi**, på slutten av 1800-tallet, som motstand og uttrykk for afroamerikanere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fra jazz til rock'n'roll, fra soul til hiphop, dens strukturer og følelser vanner fortsatt ørene våre. Å forstå bluesen betyr å gå tilbake til kilden til et rop forvandlet til kunst."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p1",
+      "title": "Bomullsfelt, hyl og 12 mål",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mellom **1870** og **1890**, i [[dypt sør]] preget av segregering og elendighet til sharecroppers, syntetiserer bluesen afrikanske muntlige tradisjoner. [[Felt roper]] (ensomt arbeid rop) og [[Arbeidssanger]] (sanger timet for å synkronisere innsatsen) møter [[spirituals]], religiøse sanger som noen ganger bærer budskap om frihet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den største nyvinningen: [[Strukturen med 12 takter]], et rutenett med tre akkorder som fungerer som et lerret for improvisasjon. [[blå sedler]], bøyde toner, imiterer stemmens smerte. Gitaren, ofte med en [[Flaskehals]] (glass- eller metallrør gled over strengene), går i dialog med sangeren."
+        },
+        {
+          "type": "funFact",
+          "text": "I tekstene kodet ordet \"rytter\" ofte en elsker, for å ta opp tabubelagte temaer foran et uinformert publikum."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p2",
+      "title": "Robert Johnson og Delta-myten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Delta of MississippiEdit**, mellom Memphis og Vicksburg, er vuggen til **Delta blues**, en rå form av sjangeren. **Robert Johnson** (**1911**-**1938**) spiller den vandrende musikeren: bare **29**-innspillinger, en enorm innflytelse. Hans [[Fingerplukking]] behandler gitaren som et miniatyrorkester."
+        },
+        {
+          "type": "image",
+          "asset": "mississippi_delta_blues_cotton_fields",
+          "ratio": "4:3",
+          "caption": "Mississippi-deltaet: vugge av landlig blues."
+        },
+        {
+          "type": "image",
+          "asset": "robert_johnson_blues_guitarist_crossroads",
+          "ratio": "4:3",
+          "caption": "Robert Johnson: 29 titler, en evig legende."
+        },
+        {
+          "type": "paragraph",
+          "text": "Legenden sier at han solgte sjelen sin til djevelen på et [[veikryss]] (kryss) i bytte for sin mestring. Bluesen ble da ofte kalt «djevelens musikk», sammenlignet med kirkesanger. Johnson døde av forgiftning i ung alder. *Cross Road Blues* og *Sweet Home Chicago* er i ferd med å bli standarder."
+        },
+        {
+          "type": "funFact",
+          "text": "Han spilte inn vendt mot veggen på et hotellrom i San Antonio, ikke av sjenanse, men for å utnytte akustikken i rommet."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p3",
+      "title": "Chicago: bluesen blir elektrisk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I årene **1940** tok den store migrasjonen millioner av afroamerikanere til det industrielle nord. I **Chicago** blir bluesen elektrifisert for å overdøve støyen fra fabrikkene. **Muddy Waters** og **Hyler ulv** imponerer elektrisk gitar, bass, trommer."
+        },
+        {
+          "type": "image",
+          "asset": "muddy_waters_chicago_electric_blues",
+          "ratio": "4:3",
+          "caption": "Muddy Waters i Chicago: blues koblet til strømmen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne elektrifiseringen fører til rock'n'roll. **Chuck Berry** og **Bo Diddley** øker tempoet. På 1960-tallet re-eksporterte **Rolling Stones** (navn hentet fra en Muddy Waters-sang) og **Led Zeppelin** disse røttene til hvitt publikum, ofte uten at de originale skaperne tjente en formue."
+        },
+        {
+          "type": "funFact",
+          "text": "Muddy Waters ble \"oppdaget\" av musikologen Alan Lomax mens han fortsatt kjørte traktor på en bomullsplantasje."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p4",
+      "title": "Fra B.B. King til prøvetaking",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jazz låner strukturer og improvisasjon fra den. Soul og R&B holder stemmen hans visceral. Hip-hop resirkulerer arven sin gjennom [[Prøvetaking]] av gammel vinyl. **B.B. King** populariserte den melodiske gitarsoloen. Mer enn en historisk stil, forblir bluesen et språk om tapt kjærlighet, urettferdighet og håp."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1870-1890",
+              "title": "Fødsel i det dype sør",
+              "detail": "Hollers, spirituals og grid i 12 mål."
+            },
+            {
+              "date": "1930-tallet",
+              "title": "Robert Johnson",
+              "detail": "Myten om deltaet og veiskillet."
+            },
+            {
+              "date": "1940-1950-tallet",
+              "title": "Elektrisk Chicago",
+              "detail": "Muddy Waters baner vei for rock."
+            },
+            {
+              "date": "1960-tallet",
+              "title": "Britisk renessanse",
+              "detail": "Stones og Zeppelin globaliserer bluesen."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Blues ble født fra lidelsene til Mississippis svarte samfunn, og ga verden 12-taktsdiagrammet og, via Chicago, rock og mye mer."
+        }
+      ]
+    }
+  ]
+}

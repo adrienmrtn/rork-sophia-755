@@ -1,0 +1,102 @@
+{
+  "id": "course_58_la_structure_de_l_adn_watson_crick_1953",
+  "title": "Strukturen af DNA",
+  "subtitle": "1953",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "I 1953 beskrev Watson og Crick DNA-dobbelthelixen. Bag denne herlighed, Rosalind Franklins afgørende arbejde.",
+  "hero": {
+    "image": "la_structure_de_l_adn",
+    "ratio": "16:9",
+    "hook": "Formen af et molekyle ... og hemmeligheden bag arvelighed."
+  },
+  "sections": [
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vi vidste, at egenskaber går fra forældre til børn. Men hvilken kemisk genstand bærer denne information? I midten af det 20. århundrede blev svaret tydeligere: **DNA**."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1953** udgav **James Watson** og **Francis Crick** en berømt model: **dobbelt propel**. Denne formular forklarer, hvordan DNA kan kopiere sig selv."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
+      "title": "At finde støtte til arv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DNA (deoxyribonukleinsyre) er et langt molekyle, der findes i vores celler. Den indeholder kemiske \"bogstaver\", der danner en kode. Men i 1940'erne og 1950'erne kendte vi endnu ikke dens 3D-form."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uden formularen er det svært at forstå, hvordan denne kode kan duplikeres ved hver celledeling."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p2",
+      "title": "Billedet der ændrer alt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "rosalind_franklin_photo_51_x_ray",
+          "ratio": "4:3",
+          "caption": "Foto 51 af Rosalind Franklin afslører en spiralformet struktur."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Rosalind Franklin**, fysiker og kemiker, får røntgenbilleder af DNA. Hendes berømte **Billede 51** viser tydelige tegn på en helix."
+        },
+        {
+          "type": "paragraph",
+          "text": "Watson og Crick ser disse data (under forhold, der nu anses for at være urimelige for Franklin) og bygger deres model. Franklin døde i 1958; Nobelprisen fra 1962 går til Watson, Crick og Wilkins, ikke hende."
+        },
+        {
+          "type": "funFact",
+          "text": "Franklin lavede også et stort arbejde med virus. Dens rolle i DNA er længe blevet undervurderet i populære beretninger."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
+      "title": "Hvorfor den dobbelte helix betyder noget",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "dna_double_helix_model_watson_crick",
+          "ratio": "4:3",
+          "caption": "To komplementære tråde: kopien bliver tænkelig."
+        },
+        {
+          "type": "paragraph",
+          "text": "To tråde vikler sig om hinanden. Bogstaverne står over for hinanden i par. Når strengene adskilles, kan hver af dem tjene som en model til at rekonstruere den anden. Arvelighed bliver en forståelig kemisk mekanisme."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
+      "title": "Moderne biologi starter her",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fra denne opdagelse er født moderne genetik, sekventering, DNA-tests, genterapier. Og også etiske debatter: hvad skal man gøre med denne magt?"
+        },
+        {
+          "type": "takeaway",
+          "text": "I **1953** forklarer dobbelthelix-modellen, hvordan DNA lagrer og kopierer information fra levende ting. Franklin leverede afgørende beviser for længe slettet fra fortællingen."
+        }
+      ]
+    }
+  ]
+}

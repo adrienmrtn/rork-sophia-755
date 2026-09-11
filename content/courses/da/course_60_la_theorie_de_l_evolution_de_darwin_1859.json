@@ -1,0 +1,102 @@
+{
+  "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
+  "title": "Darwins evolutionsteori",
+  "subtitle": "1859",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "I 1859 udgav Darwin The Origin of Species. Den centrale idé: levende ting ændrer sig over tid ved naturlig udvælgelse.",
+  "hero": {
+    "image": "la_theorie_de_l_evolution_de_darwin",
+    "ratio": "16:9",
+    "hook": "Arter er ikke faste. De ændrer sig. Langsomt. Men sikkert."
+  },
+  "sections": [
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1859** udgav **Charles Darwin** *Om arternes oprindelse*. Bogen chokerer, fascinerer, splitter. Dens centrale idé er dog enkel at formulere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Levende ting varierer. Nogle variationer hjælper med at overleve og reproducere. Disse variationer overføres. Over generationer ændrer befolkninger sig."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
+      "title": "Den øjenåbnende rejse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "charles_darwin_portrait",
+          "ratio": "4:3",
+          "caption": "Darwin, britisk naturforsker fra det 19. århundrede."
+        },
+        {
+          "type": "paragraph",
+          "text": "Som en ung dreng forlader Darwin skibet **Beagle**. I årevis observerede han planter, fossiler, fugle. På Galapagos-øerne bemærkede han, at nærliggende fugle havde forskellige næb afhængigt af deres føde."
+        },
+        {
+          "type": "image",
+          "asset": "darwin_finches_galapagos_beaks",
+          "ratio": "4:3",
+          "caption": "Dyser tilpasset forskellige diæter: en stærk indikator."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
+      "title": "Naturlig udvælgelse, på almindeligt engelsk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Forestil dig en bestand af dyr. Nogle løber lidt hurtigere, fordøjer lidt bedre, modstår kulden lidt mere. Hvis det hjælper dem med at overleve og få unger, bliver disse træk mere almindelige."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det er ikke, at individer \"ønsker\" at udvikle sig. Det er et filter: miljøet bevarer det, der virker. Darwin kalder dette **naturligt udvalg**."
+        },
+        {
+          "type": "funFact",
+          "text": "Darwin ventede længe før han udgav. Han frygtede skandale. En anden naturforsker, **Alfred Russell Wallace**, kom til lignende ideer: Dette skubbede Darwin til at udgive sin bog."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
+      "title": "Idésammenstødet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I det 19. århundrede troede mange, at arter blev skabt, som de var. At sige, at de ændrer sig, og at mennesker deler en historie med andre dyr, ryster op i religion og samfund."
+        },
+        {
+          "type": "paragraph",
+          "text": "Videnskaben udvikler sig: fossiler, arternes geografi og senere genetik bekræfter den generelle idé."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
+      "title": "Og i dag?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vi ved nu, at DNA bærer variationer. Vi observerer evolution i laboratoriet (bakterier, vira) og i naturen. Vi bekæmper også bakterier, der er resistente over for antibiotika: dette er levende evolution."
+        },
+        {
+          "type": "takeaway",
+          "text": "Darwin viste, at levende ting udvikler sig ved naturlig udvælgelse: egenskaber, der er nyttige til overlevelse og reproduktion spredes. Moderne genetik har bekræftet og tydeliggjort denne ramme."
+        }
+      ]
+    }
+  ]
+}

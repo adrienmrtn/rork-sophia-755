@@ -1,0 +1,122 @@
+{
+  "id": "course_226_l_ia_et_l_emploi",
+  "title": "AI og beskæftigelse",
+  "subtitle": "Trussel eller ny bølge?",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Hver teknologisk revolution har skabt frygt for beskæftigelse. Men generativ kunstig intelligens påvirker **intellektuelle** professioner for første gang, ikke kun fysisk styrke.",
+  "hero": {
+    "image": "l_ia_et_l_emploi",
+    "ratio": "16:9",
+    "hook": "Maskinerne har allerede udskiftet arme. Vil de nu erstatte hjerner?"
+  },
+  "sections": [
+    {
+      "id": "course_226_l_ia_et_l_emploi_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vil kunstig intelligens ødelægge millioner af job eller skabe nye? Dette spørgsmål er kommet op med alle større teknologiske fremskridt i løbet af de sidste to århundreder."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne gang er nyheden et andet sted: AI erstatter ikke længere kun fysisk kraft, men opgaver, som vi troede var forbeholdt det menneskelige sind, såsom at skrive en tekst eller analysere en fil. Dette kursus sporer denne gamle frygt og udforsker, hvad der virkelig ændrer sig i dag."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p1",
+      "title": "En frygt lige så gammel som maskinen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Frygten for, at maskiner vil erstatte mennesker, er ikke ny. I begyndelsen af det 19. århundrede ødelagde [[Ludditerne (1811-1816)]], britiske tekstilarbejdere, mekaniske væve, der truede deres knowhow."
+        },
+        {
+          "type": "image",
+          "asset": "luddites_industrial_revolution_machine_breaking",
+          "ratio": "4:3",
+          "caption": "I det 19. århundrede angreb ludditerne maskiner, der truede deres erhverv."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hver større teknologiske bølge har fulgt den samme logik: den ødelægger visse job, men skaber andre andre steder. Skiftet fra landbrug til industri reducerede andelen af landmænd fra 40 % til 2 % af den arbejdende befolkning på et århundrede uden at forårsage permanent arbejdsløshed, da disse arbejdere flyttede til nye sektorer."
+        },
+        {
+          "type": "funFact",
+          "text": "Ordet \"sabotage\" siges at komme fra franske arbejdere, der smed deres træsko, saboter, ind i gearene på maskiner for at blokere dem, selv om den nøjagtige oprindelse af ordet stadig er omdiskuteret."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p2",
+      "title": "Et gennembrud: AI angriber vidensprofessioner",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Generativ kunstig intelligens (AI)]] markerer en reel ændring, fordi den ikke længere kun følger regler, der er fastsat på forhånd: den skaber originalt indhold. Klassisk databehandling erstattede gentagne opgaver som dataindtastning. Moderne kunstig intelligens kan skrive, analysere en kontrakt, komponere musik eller endda hjælpe med at stille en medicinsk diagnose."
+        },
+        {
+          "type": "image",
+          "asset": "AI_generative_writing_artificial_intelligence",
+          "ratio": "4:3",
+          "caption": "Generativ AI tackler opgaver, som man troede var forbeholdt det menneskelige sind."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne alsidighed afslører især [[funktionærer]], professioner i servicesektoren, hvis vigtigste arbejdsredskab er analyse. Ifølge de seneste rapporter er advokater, redaktører og finansanalytikere blandt de erhverv, der er mest udsat for denne ændring."
+        },
+        {
+          "type": "funFact",
+          "text": "I 1950 forudsagde Alan Turing, at en maskine en dag kunne narre et menneske ved at simulere deres tænkning. Nogle AI'er er siden blevet krediteret som medforfattere af egentlige videnskabelige patenter."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p3",
+      "title": "En andenpilot frem for en afløser?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En mere optimistisk opfattelse ser AI som en assistent snarere end en erstatning. Ved at automatisere de mindre interessante opgaver, såsom dokumentarforskning eller resuméer, ville det give fagfolk mere tid til det menneskelige, etiske eller strategiske aspekt af deres arbejde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nye erhverv dukker allerede op, såsom [[Hurtig ingeniør]], der ved, hvordan man formulerer præcise instruktioner for at få det bedste ud af en AI. En læge hjulpet af AI forsvinder ikke: han kan følge flere patienter med mere præcision."
+        },
+        {
+          "type": "paragraph",
+          "text": "Punktet til bekymring er fortsat forandringens hastighed. Tidligere industrielle revolutioner strakte sig over årtier, hvilket gav tid til at tilpasse sig. AI-transformationen foregår over et par år, hvilket kan skabe et kvalifikationskløft, som er svært at lukke for mange arbejdere."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p4",
+      "title": "Gentænke arbejde og dets værdi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Resultatet af denne ændring vil frem for alt afhænge af de politiske valg, der ledsager den. Efteruddannelse bliver afgørende for at hjælpe medarbejderne med at udvikle nye færdigheder."
+        },
+        {
+          "type": "paragraph",
+          "text": "Debatten om omfordeling af velstand skabt af maskiner dukker også op igen. Hvis AI gør det muligt at producere mere med færre arbejdere, hvordan kan vi så finansiere vores sociale systemer? Det er i denne sammenhæng, at ideen om en [[Universal Basic Income (UBI)]] vinder frem, ikke som en utopi, men som et reelt sikkerhedsnet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nogle foreslår også en afgift på brugen af kunstig intelligens til at kompensere for nedsættelsen af de beskæftigelsesrelaterede bidrag. AI skubber os i sidste ende til at gentænke selve arbejdspladsen i vores liv."
+        },
+        {
+          "type": "takeaway",
+          "text": "Tidligere industrielle revolutioner ødelagde arbejdspladser, mens de skabte andre andre steder. Generativ AI er den første, der truer kognitive og kreative opgaver på samme tid, hvilket gør tilpasning mere presserende end nogensinde."
+        }
+      ]
+    }
+  ]
+}

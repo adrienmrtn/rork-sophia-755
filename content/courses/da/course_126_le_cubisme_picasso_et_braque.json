@@ -1,0 +1,144 @@
+{
+  "id": "course_126_le_cubisme_picasso_et_braque",
+  "title": "Kubisme: Picasso og Braque",
+  "subtitle": "1907-1920",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "Mellem 1907 og 1920 brød **Picasso** og **Braque** objektet op i facetter set fra flere vinkler på samme tid. Den mest radikale revolution siden renæssancen.",
+  "hero": {
+    "image": "le_cubisme_picasso_et_braque",
+    "ratio": "16:9",
+    "hook": "Hvad hvis et maleri ikke længere var et vindue, men et objekt rekonstrueret fra alle vinkler?"
+  },
+  "sections": [
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kubismen blev født mellem **1907** og **1908**. Det er måske den mest radikale revolution siden perspektivet fra [[Quattrocento]], det italienske 15. århundrede. **Pablo Picasso** og **Georges Braque** opdeler objektet i geometriske fragmenter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ikke mere vinduesmaleri på verden. Maleren kopierer ikke længere naturen: han rekonstruerer den. Denne dekonstruktion åbner vejen til abstrakt kunst."
+        }
+      ]
+    },
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_p1",
+      "title": "Cézanne og maskernes sammenstød",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Før kubismen søgte **Paul Cézanne** formernes soliditet bag skiftende lys. Han råder til \"at behandle naturen gennem cylinderen, kuglen, keglen\". I sin udsigt over Sainte-Victoire-bjerget flader han rummet ud og multiplicerer synspunkterne takket være [[passager]], disse zoner, hvor flyene smelter sammen."
+        },
+        {
+          "type": "image",
+          "asset": "cezanne_mont_sainte_victoire_painting",
+          "ratio": "4:3",
+          "caption": "Cézanne: naturen set som en samling af bind."
+        },
+        {
+          "type": "funFact",
+          "text": "I 1907 beskrev Picasso sit besøg på Trocadéro-museet ikke som en lektion i skønhed, men som en eksorcisme over for maskernes magt."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1907** opdagede Picasso [[Afrikansk og oceanisk kunst]] på [[Trocadéro]] etnografisk museum. Masker kopierer ikke ansigtet: de konceptualiserer det. Objektet er ikke længere malet, som vi ser det, men som vi kender det."
+        }
+      ]
+    },
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_p2",
+      "title": "Analytisk kubisme: dissekere objektet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1907** gennemførte Picasso *De unge damer i Avignon*. Fem nøgenbilleder med skarpe facetter; nogle ansigter bliver til masker. Selv [[Apollinaire]], hans digterven, er forbløffet."
+        },
+        {
+          "type": "image",
+          "asset": "picasso_les_demoiselles_d_avignon_painting",
+          "ratio": "4:3",
+          "caption": "Les Demoiselles d'Avignon: point of no return."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fra **1908** til **1912** opfinder Picasso og Braque **analyse kubisme**. De observerer et volumen fra alle vinkler og stiller disse synspunkter på samme tid på lærredet. Farven forsvinder næsten: grå og okker, for at tvinge øjet ud i rummet. Små ledetråde (en nøgle, en guitarstreng) forhindrer os i at falde i total abstraktion."
+        },
+        {
+          "type": "funFact",
+          "text": "De pressede samarbejdet så langt, at de nogle gange klædte sig ud som arbejdere, for at understrege den håndværksmæssige side af deres forskning."
+        }
+      ]
+    },
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_p3",
+      "title": "Syntetisk kubisme og collage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Omkring **1912**, konfronteret med risikoen for ulæselighed, opfandt de **syntetisk kubisme**. Vi skærer ikke længere objektet i tusinde fragmenter: vi opsummerer det ved dets klareste tegn. Derefter vises [[collage]]: aviser, tapet limet til lærredet."
+        },
+        {
+          "type": "image",
+          "asset": "picasso_cubist_collage_newspaper",
+          "ratio": "4:3",
+          "caption": "Collagen: virkeligheden kommer ind i maleriet."
+        },
+        {
+          "type": "funFact",
+          "text": "Braque, en tidligere maler-dekoratør, malede falsk træ med en stålkam så perfekt, at det virkede mere ægte end det faktisk limede træ."
+        },
+        {
+          "type": "paragraph",
+          "text": "Farven vender tilbage. Formerne udvides. En guitar kan bare være en kurve. Maleriet er ikke længere et spejl: det er et selvstændigt objekt, konstrueret efter sine egne love."
+        }
+      ]
+    },
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_p4",
+      "title": "En arv, der rækker ud over maleriet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kubismen spredte sig hurtigt. **Juan Gray** bringer matematisk stringens til det; [[Puteaux Gruppen]] tilpasser den til maskinens æstetik. Bevægelsen nærer italiensk futurisme, abstraktionen af Mondrian, og påvirker [[grafisk design]]-lignende arkitektur."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1907",
+              "title": "De unge damer i Avignon",
+              "detail": "Picasso bryder kanonerne for den klassiske nøgen."
+            },
+            {
+              "date": "1908-1912",
+              "title": "Analytisk kubisme",
+              "detail": "Picasso og Braque dissekerer objektet."
+            },
+            {
+              "date": "1912",
+              "title": "Collage og syntetisk kubisme",
+              "detail": "Virkeligheden kommer ind i værket i fragmenter."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Frem for alt bliver beskueren aktiv: det er op til ham at omkomponere billedet. Kunsten adskiller sig endelig fra simpel efterligning."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ved at bryde renæssancens perspektiv og opfinde collage forvandlede Picasso og Braque maleriet til mental arkitektur, mere et spejl af virkeligheden."
+        }
+      ]
+    }
+  ]
+}

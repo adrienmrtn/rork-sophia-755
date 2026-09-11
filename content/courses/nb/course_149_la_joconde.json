@@ -1,0 +1,137 @@
+{
+  "id": "course_149_la_joconde",
+  "title": "Mona Lisa",
+  "subtitle": "1503-1519",
+  "subject": "art",
+  "subcategory": "Iconic works",
+  "description": "Malt av **Leonardo da Vinci** mellom **1503** og **1519**, *Mona Lisa* har blitt Louvres absolutte ikon. Teknikk, mystisk smil ... og en flytur i **1911** som forandret alt.",
+  "hero": {
+    "image": "la_joconde",
+    "ratio": "16:9",
+    "hook": "Et smil, et tyveri, en myte: hvordan et portrett ble det mest kjente verket i verden."
+  },
+  "sections": [
+    {
+      "id": "course_149_la_joconde_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*Mona Lisa*, malt mellom **1503** og **1519** av **Leonardo da Vinci**, er det mest besøkte maleriet i verden. Den er utstilt på **Louvre**, og fascinerer like mye av sin teknikk som av sin historie. Det er ikke bare et vakkert portrett. Det er en myte laget av kunst, vitenskap og en nyhet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hvorfor dette ansiktet i stedet for et annet? Fordi Leonardo konsentrerte innovasjoner der, og fordi en spektakulær flytur gjorde det berømt i global skala."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p1",
+      "title": "Leonardo og sfumatoen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Portrettet begynner i Firenze rundt **1503**. Sponsoren er selgeren **Francesco del Giocondo**. Modellen ville være hans kone, [[Lisa Gherardini]]. Men Leonard leverer aldri maleriet. Han beholdt den, retusjerte den i årevis og tok den med til Frankrike, hvor han døde i **1519**."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_leonardo_da_vinci_louvre_painting",
+          "ratio": "4:3",
+          "caption": "Mona Lisa ved Louvre: et lite poppelpanel som har blitt et globalt ikon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hans signaturteknikk er [[Leonardisk sfumato]]: glasurer, veldig tynne lag, som sletter konturene. Ikke mer hard linje. Ansiktet smelter i luften. Leonardo legger også til [[Luftperspektiv]]: det fjerne landskapet blir blått og mykner, som i den virkelige visjonen."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p2",
+      "title": "Smilet som leker med øyet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det berømte smilet er ikke bare en malt følelse. Han spiller med vår [[Perifert syn]]. Når vi stirrer på modellens øyne, ser kantene på netthinnen munnen i myke skygger: smilet virker tilstede. Når du ser direkte på munnen, avtar den."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_smile_detail_close_up",
+          "ratio": "1:1",
+          "caption": "Jo mer du stirrer på det, jo mer ser det ut til at smilet forsvinner."
+        },
+        {
+          "type": "funFact",
+          "text": "Leonardo, både maler og lærd, studerte optikk. Smilets mysterium hviler delvis på en presis kunnskap om hvordan det menneskelige øyet behandler skygger."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultat: ansiktet virker levende, i endring, nesten bevisst blikket vårt."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p3",
+      "title": "1911: flyturen som oppfant berømmelse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På 1800-tallet ble *Mona Lisa* beundret, men ennå ikke nummer én i Louvre. Alt endret seg 21. august 1911. [[Vincenzo Peruggia]], en italiensk glassmester fra museet, stjeler den: det er [[tyveri av Mona Lisa (1911)]]. Han gjemmer den under blusen og går stille ut."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_stolen_1911_newspaper_headline",
+          "ratio": "4:3",
+          "caption": "1911: fraværet av maleriet skaper overskrifter og skaper en stjerne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Etterforskningen blir til en skandale. Poeten [[Guillaume Apollinaire]] ble fengslet en tid. [[Pablo Picasso]] er intervjuet. Når maleriet dukker opp igjen i **1913**, er det ikke lenger bare et maleri. Han er en kjendis."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p4",
+      "title": "Et ikon under glass",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I dag, malt på poppeltre, lever den bak et [[Skuddsikkert glass]], i en klimatisert montre. Syreangrep, gjenstandskast: beskyttelse har blitt nødvendig. Og parodiene, fra Duchamp til Internett, beviser at det har blitt et universelt språk."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1503",
+              "title": "Begynnelsen av portrettet",
+              "detail": "Leonardo begynner The Mona Lisa i Firenze."
+            },
+            {
+              "date": "1519",
+              "title": "Leonardos død",
+              "detail": "Maleriet forblir i Frankrike."
+            },
+            {
+              "date": "1911",
+              "title": "Flyturen",
+              "detail": "Peruggia forvandler verket til en mediemyte."
+            },
+            {
+              "date": "1913",
+              "title": "Tilbake",
+              "detail": "Maleriet vender tilbake til Louvre som en verdensstjerne."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*Mona Lisa* skylder sin ære like mye til genialiteten til Leonardo (sfumato, optisk smil) som til historien: et tyveri i 1911 forvandlet et beundret mesterverk til et globalt ikon."
+        }
+      ]
+    }
+  ]
+}

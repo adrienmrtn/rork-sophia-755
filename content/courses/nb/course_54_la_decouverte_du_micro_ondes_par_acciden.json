@@ -1,0 +1,102 @@
+{
+  "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
+  "title": "Oppdagelsen av mikrobølgeovnen",
+  "subtitle": "Ved et uhell",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "I 1945 la en ingeniør merke til at godteriet hans hadde smeltet nær en radar. Fra denne observasjonen ble mikrobølgeovnen født.",
+  "hero": {
+    "image": "la_decouverte_du_micro_ondes",
+    "ratio": "16:9",
+    "hook": "En smeltet sjokoladebar... og moderne mat endres."
+  },
+  "sections": [
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1945**, i USA, jobber ingeniør **Percy Spencer** på radarer. En dag legger han merke til at godteriet i lommen har smeltet. Ikke på grunn av kroppsvarme: på grunn av radarbølger."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han tester med mais: popcornet popper. Ideen om en ovn som varmer annerledes ble født."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
+      "title": "Fra radar til kjøkken",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "percy_spencer_microwave_discovery_radar",
+          "ratio": "4:3",
+          "caption": "Andre verdenskrigs radarer brukte allerede mikrobølger."
+        },
+        {
+          "type": "paragraph",
+          "text": "**mikrobølger** er elektromagnetiske bølger, som radiolys, men mer \"energiske\" enn mange konvensjonelle radiobølger. Under krigen ble de hovedsakelig brukt til radar for å oppdage fly og båter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spencer forstår at de også kan agitere vann og fett i maten... og derfor varme den opp."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
+      "title": "Den første ovnen er enorm",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "first_microwave_oven_radarange_1947",
+          "ratio": "4:3",
+          "caption": "Den første kommersielle mikrobølgeovnen var på størrelse med et skap."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den første kommersielle modellen, **Radarrange**, ble utgitt rundt **1947**. Den er enorm, dyr og hovedsakelig beregnet på restauranter eller båter. Det vil ta flere tiår å miniatyrisere det og gjøre det rimelig for hjem."
+        },
+        {
+          "type": "funFact",
+          "text": "Til å begynne med var noen redde for at ovnen skulle «gjøre maten radioaktiv». Falsk: mikrobølger varmes opp, de gjør deg ikke radioaktiv."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
+      "title": "Hvordan varmes det egentlig opp?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mikrobølger vibrerer hovedsakelig vannmolekyler (og litt fett og sukker). Denne omrøringen skaper **inni varm** maten, ikke bare på overflaten som en panne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette er grunnen til at en rett kan være varm på utsiden og lunken i midten hvis den er tykk: bølgene trenger ikke uendelig dypt."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
+      "title": "Et hverdagsobjekt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fra 1970-1980-tallet kom mikrobølgeovnen inn i millioner av kjøkken. Det endrer vaner: oppvarming raskt, ferdigmat, raskere liv."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mikrobølgeovnen ble født fra en tilfeldighet observert av Percy Spencer nær en radar. Bølgene agiterer hovedsakelig vannet i maten og varmer det opp fra innsiden."
+        }
+      ]
+    }
+  ]
+}

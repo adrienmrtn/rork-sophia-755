@@ -1,0 +1,108 @@
+{
+  "id": "course_77_qu_est_ce_que_la_matiere_noire",
+  "title": "Hvad er mørkt stof?",
+  "subtitle": "Usynligt kosmos",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Vi så hende aldrig. Men uden det ville galakser falde fra hinanden. Mørkt stof er universets usynlige lim.",
+  "hero": {
+    "image": "qu_est_ce_que_la_matiere_noire",
+    "ratio": "16:9",
+    "hook": "Forestil dig en usynlig lim, der holder galakser sammen. Vi ser hende ikke, men vi ser, hvad hun holder tilbage."
+  },
+  "sections": [
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Du mærker vinden uden at se den: grenene bevæger sig, håret flyver. **mørkt stof** er lidt sådan på skalaen af kosmos. Det skinner ikke, reflekterer ikke lys, blokerer ikke for nogen stråler. Vi \"ser\" det kun ved, hvad det får til at bevæge sig."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det ville repræsentere cirka **27%** af universet, fem gange mere end alt almindeligt stof: stjerner, planeter, gas. Uden den ville galakser spinde for hurtigt til at holde sammen."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p1",
+      "title": "Stjerner for hurtigt i udkanten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I årene **1970** målte den amerikanske astronom **Vera Rubin** hastigheden af stjerner i spiralgalakser. I solsystemet, jo længere vi går fra Solen, jo langsommere roterer vi. Hun forventede det samme mønster."
+        },
+        {
+          "type": "image",
+          "asset": "dark_matter_galaxy_cluster",
+          "ratio": "auto",
+          "caption": "Mørkt stof forråder sin tilstedeværelse gennem sin gravitationseffekt på galaksehobe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nu drejede stjernerne på kanten **er hurtigt** som dem i midten. Med bare den synlige masse burde de være fløjet væk. Det var derfor nødvendigt at have en usynlig masse, en **halo**, en usynlig sfærisk konvolut rundt om galaksen, for at holde dem tilbage. [[Galaxy rotationskurve]] er blevet flagskibsbeviset for mørkt stof."
+        },
+        {
+          "type": "funFact",
+          "text": "Vera Rubin har længe måtte kæmpe for at blive taget seriøst. Princeton nægtede hende en doktorgrad i astronomi i lang tid ... fordi hun var kvinde, indtil 1975."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p2",
+      "title": "Hvad er det lavet af? Vi leder stadig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det er ikke almindeligt stof, kaldet **baryonisk**, sammensat af protoner og neutroner: det interagerer ikke med lys. Den krydser Jorden og os uden at efterlade et synligt spor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den længe favoriserede bly, **WIMP**, en svagt interagerende massiv partikel, ville være en tung partikel uden for [[Standardmodel for fysik]], teorien, der beskriver kendte elementarpartikler. **liquidxeon**-detektorer, begravet under jorden, håber på et sjældent chok. Uden klar succes for øjeblikket. Andre stoler på **axion**, en ultralet partikel, eller på en tyngdekraft, der skal gennemgås. I mellemtiden bøjer mørkt stof rummet og skaber [[Gravitationslinser]], som forvrænger lyset fra en massiv genstand."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p3",
+      "title": "Og mørk energi, det andet mysterium",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mørkt stof tiltrækker. [[Mørk energi]], opdaget i **1998**, gør det modsatte: den accelererer **-udvidelsen af universet**, den stigende afstand af galakserne. Galakser bevæger sig hurtigere og hurtigere væk, mens tyngdekraften bør bremse bevægelsen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den ville veje cirka **68%** af kosmos. Med mørkt stof gør dette **95%** af det usynlige univers. Alt, hvad vi ser, atomer og lys, er kun et skum af **5 %**."
+        },
+        {
+          "type": "funFact",
+          "text": "I en meget fjern fremtid kan mørk energi skubbe andre galakser væk, så de bliver usynlige fra Mælkevejen: en næsten tom himmel."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p4",
+      "title": "Massive beviser, partikel ikke fundet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På den ene side akkumuleres indirekte beviser: galaktiske rotationer, **kosmisk mikrobølgebaggrund**, fossil stråling fra det unge univers, universets filamentstruktur. På den anden side ingen direkte partikeldetektion."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det 21. århundrede bliver nødt til at beslutte: en ny familie af partikler eller en ny måde at tænke tyngdekraft på. Mørkt stof er ikke kun en detalje på himlen. Det er laboratoriet, hvor morgendagens fysik er opfundet."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mørkt stof danner **27 %** af universet. Det er bevist ved sin tyngdekraft på stjerner og lys, selvom vi aldrig har set det direkte."
+        }
+      ]
+    }
+  ]
+}

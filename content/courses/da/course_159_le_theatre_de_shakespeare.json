@@ -1,0 +1,122 @@
+{
+  "id": "course_159_le_theatre_de_shakespeare",
+  "title": "Shakespeares teater",
+  "subtitle": "1564-1616",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "I London skrev Shakespeare for Globe. Hamlet, Macbeth, Romeo: populært teater, der er blevet toppen af det engelske sprog.",
+  "hero": {
+    "image": "le_theatre_de_shakespeare",
+    "ratio": "16:9",
+    "hook": "En skuespillers dramatiker, et teater uden kulisser... og evige replikker."
+  },
+  "sections": [
+    {
+      "id": "course_159_le_theatre_de_shakespeare_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**William Shakespeare** (1564-1616) skrev til London-scenen, ikke til skolen. Hans skuespil blander konger, klovne, elskere og snigmordere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fire århundreder senere spilles den stadig overalt."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p1",
+      "title": "The Globe og jordforbindelserne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Med [[Lord Chamberlains mænd]]-truppen spiller han på [[Globe Teater]], en friluftskreds. [[Jordforbindelser]] betaler lidt og bliver stående i nærheden af scenen. Teatret er populært, larmende, livligt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elizabethanske London elsker skuespil. Teatre konkurrerer med prædikener og bjørnekampe. Shakespeare skriver på dette larmende marked, ikke i et elfenbenstårn."
+        },
+        {
+          "type": "image",
+          "asset": "globe_theatre_london_reconstruction",
+          "ratio": "4:3",
+          "caption": "The Globe: Scenen trængte ind i mængden."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p2",
+      "title": "Et nyt sprog",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Han skriver ofte på Shakespeares blanke vers: jambisk pentameter uden rim. Fornærmelser, digte, monologer: han opfinder ord og etablerer karakterer (Hamlet, Lady Macbeth), der er blevet til myter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han genbruger kronikker, italienske nyheder, gamle stykker. Originaliteten ligger i sproget og karaktererne, ikke i plottets rene opfindelse."
+        },
+        {
+          "type": "funFact",
+          "text": "Flere af hans stykker er kun kommet ned til os takket være [[Første Folio]] fra 1623, udgivet efter hans død."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p3",
+      "title": "Tragedier, komedier, historier",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Han går fra latter til blod. *Romeo og Julie*, *Othello*, *Kong Lear*: familier, magt, jalousi. \"Historiestykkerne\" genopfører England for et publikum, der kan lide at se sig selv i episk form."
+        },
+        {
+          "type": "paragraph",
+          "text": "Komedier og tragedier reagerer på hinanden. Den gale taler sandt; kongen bliver gal. Denne porøsitet af toner forklarer, hvorfor den stadig kan monteres på tusindvis af måder."
+        },
+        {
+          "type": "image",
+          "asset": "shakespeare_first_folio_1623",
+          "ratio": "4:3",
+          "caption": "Den første folio: at redde tekster fra glemslen."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p4",
+      "title": "Eftermæle",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oversat, tilpasset, samplet af biograf og rap forbliver Shakespeare en værktøjskasse til at udtrykke ambitioner og lyst. Hans hemmelighed: at skrive for skuespillere foran en menneskemængde."
+        },
+        {
+          "type": "paragraph",
+          "text": "For fuldt ud at forstå Shakespeares teater skal du huske én ting: hver teknisk detalje tjener en følelse eller en idé. Værket er aldrig kun dekorativt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontekst betyder lige så meget som stil. Datoer, steder, sponsorer, offentligt: alt dette forklarer, hvorfor en formular vises på et bestemt tidspunkt og ikke før."
+        },
+        {
+          "type": "paragraph",
+          "text": "Endelig måles arv på lang sigt. Det, vi i dag ser på museer, film eller populærmusik, bærer stadig spor af disse opfindelser."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oversat i det 18. århundrede i Frankrig og andre steder blev det en verdensklassiker. Hver æra finder sit spejl i ham: romantisk, politisk, postkolonial, feministisk."
+        },
+        {
+          "type": "takeaway",
+          "text": "På Globen opfandt Shakespeare et populært teater, hvis karakterer og sprog erobrede verden."
+        }
+      ]
+    }
+  ]
+}

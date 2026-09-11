@@ -1,0 +1,102 @@
+{
+  "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
+  "title": "Opdagelsen af mikroovnen",
+  "subtitle": "Ved et uheld",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "I 1945 bemærkede en ingeniør, at hans slikbar var smeltet nær en radar. Fra denne observation blev mikrobølgeovnen født.",
+  "hero": {
+    "image": "la_decouverte_du_micro_ondes",
+    "ratio": "16:9",
+    "hook": "En smeltet chokoladebar... og moderne køkken ændrer sig."
+  },
+  "sections": [
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1945**, i USA, arbejder ingeniør **Percy Spencer** på radarer. En dag bemærker han, at slikbaren i lommen er smeltet. Ikke på grund af kropsvarme: på grund af radarbølger."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han tester med majs: popcornene springer. Ideen om en ovn, der varmer anderledes, blev født."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
+      "title": "Fra radar til køkkenet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "percy_spencer_microwave_discovery_radar",
+          "ratio": "4:3",
+          "caption": "Anden Verdenskrigs radarer brugte allerede mikrobølger."
+        },
+        {
+          "type": "paragraph",
+          "text": "**mikrobølger** er elektromagnetiske bølger, ligesom radiolys, men mere \"energiske\" end mange konventionelle radiobølger. Under krigen blev de hovedsageligt brugt til radar til at opdage fly og både."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spencer forstår, at de også kan agitere vand og fedtstoffer i mad... og derfor opvarme det."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
+      "title": "Den første ovn er kæmpestor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "first_microwave_oven_radarange_1947",
+          "ratio": "4:3",
+          "caption": "Den første kommercielle mikrobølgeovn var på størrelse med et skab."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den første kommercielle model, **Radarområde**, blev udgivet omkring **1947**. Den er enorm, dyr og primært beregnet til restauranter eller både. Det vil tage årtier at miniaturisere det og gøre det overkommeligt for hjem."
+        },
+        {
+          "type": "funFact",
+          "text": "I begyndelsen var nogle bange for, at ovnen ville \"gøre maden radioaktiv\". Falsk: Mikrobølger opvarmes, de gør dig ikke radioaktiv."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
+      "title": "Hvordan varmer den egentlig op?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mikrobølger vibrerer hovedsageligt vandmolekyler (og lidt fedt og sukker). Denne omrøring skaber **varme indeni** maden, ikke kun på overfladen som en pande."
+        },
+        {
+          "type": "paragraph",
+          "text": "Derfor kan en ret være varm udenpå og lunken i midten, hvis den er tyk: Bølgerne trænger ikke uendeligt dybt ind."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
+      "title": "En hverdagsgenstand",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fra 1970'erne-1980'erne kom mikrobølgeovnen ind i millioner af køkkener. Det ændrer vaner: genopvarm hurtigt, færdigretter, hurtigere liv."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mikrobølgeovnen blev født af en tilfældighed observeret af Percy Spencer nær en radar. Bølgerne agiterer hovedsageligt vandet i maden og opvarmer det indefra."
+        }
+      ]
+    }
+  ]
+}

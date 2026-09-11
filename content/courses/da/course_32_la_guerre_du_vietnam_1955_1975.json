@@ -1,0 +1,134 @@
+{
+  "id": "course_32_la_guerre_du_vietnam_1955_1975",
+  "title": "Vietnamkrigen",
+  "subtitle": "1955-1975",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "I tyve år forpligtede USA en enorm styrke til Vietnam for at bremse kommunismen. De hænger fast, deler sig og går uden at have vundet.",
+  "hero": {
+    "image": "la_guerre_du_vietnam",
+    "ratio": "16:9",
+    "hook": "Den førende verdensmagt står over for en krig, som den ikke kan vinde."
+  },
+  "sections": [
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I hjertet af den kolde krig blev Vietnam delt i to. I nord et kommunistisk regime. I syd en stat støttet af Vesten. USA sender enorme ressourcer dertil. Alligevel hænger de fast."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne konflikt er ikke kun militær. Det deler Amerika, viser grænserne for brute force og efterlader varige traumer på begge sider."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p1",
+      "title": "Et splittet land, så en voksende krig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Efter det franske nederlag i **[[Indokina krig]]** opdeler Geneve-aftalerne (**1954**) Vietnam ved **17. breddegrad**. I nord leder **[[Ho Chi Minh]]**, nationalistisk og kommunistisk leder. I syd et autoritært regime støttet af Washington."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amerikanske præsidenter **John F. Kennedy** derefter **Lyndon B. Johnson** frygter **[[domino teori]]**: Hvis et land falder for kommunismen, ville naboerne følge efter. I **august 1964** tjener en flådehændelse i Tonkinbugten som påskud for at udvide krigen. Fra **1965** bomber operation **[[Rullende Torden]]** Norden, og marinesoldaterne lander i Da Nang."
+        },
+        {
+          "type": "image",
+          "asset": "vietnam_war_american_soldiers",
+          "ratio": "4:3",
+          "caption": "Amerikanske soldater i Vietnam: en udmattelseskrig i junglen."
+        },
+        {
+          "type": "funFact",
+          "text": "Johnson sagde angiveligt privat efter Tonkin: \"Så vidt jeg ved, skød vores flåde hvaler den aften.\""
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p2",
+      "title": "Hvorfor styrke ikke er nok",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1969** var cirka **543.000** amerikanske soldater på stedet. Strategien med **[[søge og ødelægge]]** (søg fjenden for at ødelægge den) og luftoverlegenhed forstyrrede ikke nordvietnamesiske forsyninger via Ho Chi Minh-stien. General **Vo Nguyen Giap**, militærleder i Norden, satser på chikane og støtte fra en del af befolkningen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amerikanerne bruger også afløvningsmidler som Agent Orange til at rydde junglen. De menneskelige og politiske omkostninger eksploderer. Kisterne kommer ind. **[[Pentagon]]**, hovedkvarteret for amerikansk forsvar, opdager, at lokal politisk vilje kan holde stand over for teknologien."
+        },
+        {
+          "type": "funFact",
+          "text": "Mere end **80 mio** liter herbicider blev frigivet, hvilket ødelagde cirka **20%** af Sydvietnams skove."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p3",
+      "title": "Tet-offensivens chok",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den **30. januar 1968**, under det vietnamesiske nytår, ramte **[[Tet offensiv]]** mere end **100** byer. På jorden er det en fiasko for Norden. På amerikansk tv var det et chok: \"nærmest sejren\" annonceret af Washington virkede falsk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Præsident **Richard Nixon** lancerede derefter \"Vietnamisering\": tilbagetrækning af amerikanske tropper, mens de bevæbnede Syden. Paris-aftalen (**1973**) markerede den amerikanske afgang. Uden en beskytter kollapsede Saigon, Sydens hovedstad, på to år."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p4",
+      "title": "Afslutningen på krigen, og hvad den efterlader",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Den 30. april 1975**, Saigon-faldene. Omkring **58.000** amerikanere døde. Vietnamesiske tab talte i millioner. Den første virkelige tv-transmitterede krig, konflikten afslørede også forbrydelser som **[[Min Lai]]** massakren, hvor amerikanske soldater dræbte civile i **1968**. Amerika bliver mere mistænksom over for fjerne interventioner."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1954",
+              "title": "Genève-aftalen",
+              "detail": "Foreløbig skillevæg ved 17. breddegrad."
+            },
+            {
+              "date": "1965",
+              "title": "Amerikansk klatring",
+              "detail": "Bombninger og landing af marinesoldaterne."
+            },
+            {
+              "date": "1968",
+              "title": "Tet offensiv",
+              "detail": "Tv-chok og meningsskifte."
+            },
+            {
+              "date": "1973",
+              "title": "Paris-aftaler",
+              "detail": "Tilbagetrækning af amerikanske styrker."
+            },
+            {
+              "date": "1975",
+              "title": "Saigons fald",
+              "detail": "Genforening under kommunismen."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Efter **20 år** med konflikt forlod USA Vietnam uden sejr: militær magt politisk besejret, land genforenet under kommunismen, det amerikanske samfund varigt splittet."
+        }
+      ]
+    }
+  ]
+}

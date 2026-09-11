@@ -1,0 +1,126 @@
+{
+  "id": "course_150_la_nuit_etoilee_van_gogh",
+  "title": "Stjerneklar nat, Van Gogh",
+  "subtitle": "1889",
+  "subject": "art",
+  "subcategory": "Iconic works",
+  "description": "I **1889**, fra asylet Saint-Rémy-de-Provence, malede **Vincent Van Gogh** *Den stjerneklare nat*. Himlen hvirvler: kunst holder op med at kopiere virkeligheden for at udtrykke en følelse.",
+  "hero": {
+    "image": "la_nuit_etoilee_van_gogh",
+    "ratio": "16:9",
+    "hook": "Fra et asylrum maler Van Gogh en himmel, der nægter at forblive klog."
+  },
+  "sections": [
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*Stjernenat* (**1889**) er det mest berømte maleri af **Vincent Van Gogh**, maler født i [[Holland]]. Malet på Saint-Rémy-de-Provence asyl, markerer det et vendepunkt: vi maler ikke længere kun, hvad vi ser. Vi maler, hvad vi føler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hvirvlende himmel, cypres som en sort flamme, opfundet landsby: Værket åbner vejen for det 20. århundredes ekspressive kunst."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p1",
+      "title": "Saint-Rémy: skabe fra asylet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **opdatering 1889**, efter [[Arles-dramaet med Gauguin]] (krisen, der kostede ham en del af hans øre), blev Van Gogh interneret i **Saint-Paul-de-Mausole**, nær Saint-Rémy. Han får et værelse til at male. Den natlige udsigt er først født bag tremmerne på hans værelse."
+        },
+        {
+          "type": "image",
+          "asset": "van_gogh_saint_paul_asylum_saint_remy_provence",
+          "ratio": "4:3",
+          "caption": "Saint-Rémy-asylet: ramme af tvang og intens skabelse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lærredet blander iagttagelse og opfindelse. Vi genkender bakkerne i Alpilles og en stor **cypres**. Men landsbyen er ikke en nøjagtig kopi. Van Gogh rekonstruerer landskabet for at tjene følelser."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p2",
+      "title": "Skulpturer himlen med en pensel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Teknisk set bruger Van Gogh **Impasto**: malingen er tyk, næsten skulptureret. Elleve stjerner roterer som tåger. Den orange måne stråler. Himlen bliver den rigtige karakter."
+        },
+        {
+          "type": "image",
+          "asset": "starry_night_cypress_tree_van_gogh_painting",
+          "ratio": "4:3",
+          "caption": "Cypressen forbinder jorden med himlen som en mørk flamme."
+        },
+        {
+          "type": "funFact",
+          "text": "Himlens store ruller minder om dynamikken i [[Stor bølge ud for Kanagawa]], et japansk tryk, som Van Gogh beundrede. Det omdanner denne energi til kosmos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne gestus annoncerer [[Kunst som indre udtryk]]: lærredet siger en sindstilstand, ikke en vejrrapport."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p3",
+      "title": "Det geniale, som ingen købte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Van Gogh malede næsten **900 kufferter** på ti år, men døde i **juli 1890** i Auvers-sur-Oise, ved **37 år**, næsten ukendt. Det var hans svigerinde, **Johanna van Gogh-Bonger**, der reddede værket: udstillinger, salg, udgivelse af breve til sin bror Théo."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Stjernenat* skiftede hænder flere gange for små penge, før de gik ind i **MoMA** i New York. Det forsmåede maleri bliver et ikon. [[Fauves]], malere med voldsomme farver fra begyndelsen af det 20. århundrede, vil genkende en forfader i ham."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p4",
+      "title": "En cypres mod det uendelige",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cypressen forbinder jorden med himlen: en forbindelse mellem jordelivet og andre steder. Van Gogh skrev, at det at se på stjernerne fik ham til at drømme om døden som en rejse. Moderne undersøgelser tyder endda på, at den klare stjerne nær cyprestræet kunne være Venus, observeret ved daggry."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1888",
+              "title": "Arles krise",
+              "detail": "Bruddet med Gauguin går forud for interneringen."
+            },
+            {
+              "date": "1889",
+              "title": "Stjerneklar nat",
+              "detail": "Van Gogh maler himlen fra Saint-Rémy."
+            },
+            {
+              "date": "1890",
+              "title": "Død i Auvers",
+              "detail": "Kunstneren døde som 37-årig, stadig lidt kendt."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*Stjerneklar nat* forvandler lidelse til visuelt sprog. Van Gogh kopierer ikke natten: han opfinder en indre himmel og åbner døren til moderne ekspressiv kunst."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "course_237_les_gafam_puissance_et_derives",
+  "title": "GAFAM: kraft og drift",
+  "subtitle": "Google, Apple, Meta, Amazon, Microsoft",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Fem virksomheder vejer mere end BNP for flere europæiske stormagter tilsammen: velkommen til **GAFAM**'s æra.",
+  "hero": {
+    "image": "les_gafam_puissance_et_derives",
+    "ratio": "16:9",
+    "hook": "Fem virksomheder, en håndfuld søkabler og en god del af den digitale verden."
+  },
+  "sections": [
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Google, Apple, Meta (det tidligere Facebook), Amazon og Microsoft: fem virksomheder grupperet under akronymet **GAFAM**, født i **[[Silicon Valley]]**. På mindre end tredive år har de ændret den måde, vi kommunikerer, forbruger og informerer os selv på, så de konkurrerer med visse staters magt. At forstå mekanismerne bag deres dominans, og forsøgene på at kontrollere dem, giver os mulighed for bedre at forstå magtbalancen i nutidens digitale verden."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p1",
+      "title": "En finansiel magt større end hele lande",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det mest slående kendetegn ved GAFAM er deres aktiemarkedsværdi. I 2024 vil disse fem virksomheder tilsammen være mere end 10 billioner dollars værd, et beløb, der kan sammenlignes med Tysklands, Frankrigs, Storbritanniens og Italiens samlede BNP. Apple blev endda det første selskab, der oversteg 3.000 milliarder dollars i værdiansættelse."
+        },
+        {
+          "type": "image",
+          "asset": "gafam_big_tech_companies_logos_apple_google",
+          "ratio": "4:3",
+          "caption": "Google, Apple, Meta, Amazon og Microsoft vejer tilsammen mere end flere europæiske stormagters BNP tilsammen."
+        },
+        {
+          "type": "funFact",
+          "text": "I 2021 ville de kontanter, som GAFAM havde akkumuleret, i teorien have været tilstrækkelige til at tilbagekøbe alle de franske CAC 40-virksomheder og samtidig bevare en margen for finansiel sikkerhed."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne økonomiske magt forbliver ikke abstrakt: GAFAM'erne bruger betydelige summer hvert år på at påvirke lovene i Washington og Bruxelles og er blevet strategiske partnere for stater, Amazons cloud-afdeling, der for eksempel hoster følsomme data for amerikanske regeringsorganer."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p2",
+      "title": "Monopoler næsten umulige at konkurrere med",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GAFAMs dominans er baseret på en præcis mekanisme: **[[Netværkseffekter og naturlige monopoler]]**. Jo flere brugere en tjeneste har, jo mere essentiel bliver det at være en del af den, hvilket afskrækker konkurrenternes ankomst og skaber kvasi-monopoler, hvor den første, der ankommer, næsten altid bevarer fordelen."
+        },
+        {
+          "type": "paragraph",
+          "text": "For at fastholde denne position opkøber digitale giganter systematisk deres nye trusler: Facebook købte Instagram for 1 milliard dollars i 2012, da applikationen kun havde et dusin ansatte, derefter WhatsApp i 2014 for 22 milliarder dollars."
+        },
+        {
+          "type": "funFact",
+          "text": "Google alene ejer omkring 10 % af alle verdens undersøiske fiberoptiske kabler, hvilket giver den fysisk kontrol over nogle af internettets ruter."
+        },
+        {
+          "type": "paragraph",
+          "text": "På det sociale plan har algoritmer designet til at maksimere **[[opmærksomhedsspændvidde]]** en tendens til at fremhæve det mest opsigtsvækkende indhold, nogle gange låser folk fast i informationsbobler, der styrker deres meninger, og letter spredningen af falske nyheder."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p3",
+      "title": "Europa, global digital politimand",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stillet over for giganter, som selv amerikanske domstole kæmper for at dæmme op for, har EU etableret sig som den vigtigste globale digitale regulator: dens regler bliver ofte standarder alle andre steder, fordi det er lettere for en multinational at anvende den strengeste regel overalt end at skabe en anden version for hvert land."
+        },
+        {
+          "type": "image",
+          "asset": "digital_services_tax_gafam_europe",
+          "ratio": "16:9",
+          "caption": "Den Europæiske Union pålægger digitale giganter regler, der ofte ender med at gælde i hele verden."
+        },
+        {
+          "type": "paragraph",
+          "text": "I 2022 adopterede Europa **[[Lov om digitale markeder]]**, som kræver, at de største platforme er mere åbne, for eksempel ved at tillade forskellige meddelelsestjenester at kommunikere med hinanden. Google eller Meta er allerede blevet pålagt bøder på flere milliarder euro for misbrug af en dominerende stilling. I 2024 bliver EU også den første organisation i verden, der lovligt regulerer kunstig intelligens."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p4",
+      "title": "Digital suverænitet på tale",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det sidste spørgsmål er **digital overvågning**. Ved at kontrollere servere, operativsystemerne på telefoner og computere, og endda en del af undersøiske kabler, har GAFAM infrastruktur, der er afgørende for vores samfund. For et europæisk land er det et reelt spørgsmål om uafhængighed at være afhængig af en amerikansk virksomhed for sine offentlige data."
+        },
+        {
+          "type": "funFact",
+          "text": "Google behandler mere end 90.000 søgeforespørgsler hvert sekund: Da du læser dette afsnit, er der allerede udført mere end 3 millioner søgninger på dets servere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den økonomiske model baseret på indsamling af personlige data, hvor brugeren \"betaler\" med deres informationer, kritiseres i stigende grad, men GAFAM er også fortsat de første investorer i fremtidens teknologier, såsom kvantecomputere."
+        },
+        {
+          "type": "takeaway",
+          "text": "GAFAM'erne har en finansiel magt, der er større end de europæiske stormagters BNP, hvilket giver dem en betydelig politisk og teknologisk rolle. Stillet over for dette har EU etableret sig som den vigtigste globale regulator takket være tekster som Digital Markets Act."
+        }
+      ]
+    }
+  ]
+}

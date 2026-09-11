@@ -1,0 +1,108 @@
+{
+  "id": "course_212_les_paradis_fiscaux_expliques",
+  "title": "Skatteparadis forklart",
+  "subtitle": "10.000 milliarder gjemt bort",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Rundt 10 % av den globale formuen slipper unna skatt i ugjennomsiktige territorier. Hvordan fungerer dette systemet, og hvorfor er det så motstandsdyktig?",
+  "hero": {
+    "image": "les_paradis_fiscaux_expliques",
+    "ratio": "16:9",
+    "hook": "Caymanøyene har en befolkning på 65 000 og over 100 000 bedrifter. Velkommen til en verden av skatteparadiser."
+  },
+  "sections": [
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Enkelte territorier, ofte bittesmå, lar selskaper og store formuer nesten helt unnslippe skatten i opprinnelseslandet. Vi kaller disse **skatteparadis**. Det er anslått at rundt 10 billioner dollar, eller 8 til 10 % av verdens rikdom, er plassert der."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette er ikke bare et problem for regnskapsførere: det fratar statene 600 milliarder dollar per år, penger som kunne ha finansiert sykehus eller skoler. Her er hvordan dette diskrete systemet fungerer, og hvorfor det motstår forsøk på regulering så godt."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p1",
+      "title": "Hvordan er penger skjult",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Et skatteparadis er basert på tre pilarer: skatter nær null, stor ugjennomsiktighet og lite samarbeid med andre land. Disse territoriene tiltrekker seg dermed kapital fra hele verden, det vi kaller [[Offshore]]-økonomien."
+        },
+        {
+          "type": "paragraph",
+          "text": "I mange av disse territoriene er det mulig å opprette et skallselskap: en virksomhet uten kontor eller ansatte, som bare eksisterer på papir. Dens eneste formål er ofte å skjule identiteten til den sanne eieren av pengene, kalt den reelle eieren."
+        },
+        {
+          "type": "image",
+          "asset": "cayman_islands_offshore_banking_paradise",
+          "ratio": "4:3",
+          "caption": "Caymanøyene, et av de største finanssentrene i verden til tross for deres lille størrelse."
+        },
+        {
+          "type": "funFact",
+          "text": "Caymanøyene har bare 65 000 innbyggere, men mer enn 100 000 selskaper er registrert der: det er det femte finanssenteret i verden for bankinnskudd, på et område mindre enn Paris."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p2",
+      "title": "Kunsten å tjene penger forsvinner",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For store selskaper er ikke formålet nødvendigvis ulovlig: vi snakker om **skatteoptimalisering**, det vil si dyktig bruk av reglene i hvert land for å betale mindre skatt. Hovedverktøyet kalles [[overføringspris]]: et selskap setter selv prisen på bytte mellom sine egne datterselskaper, for å vise overskuddet der skatten er lavest."
+        },
+        {
+          "type": "paragraph",
+          "text": "En vanlig metode er å overføre et merke eller patent til et datterselskap som ligger i et skatteparadis. De andre datterselskapene, lokalisert for eksempel i Frankrike, må da betale enorme summer for retten til å bruke dette merket. Disse utbetalingene reduserer deres skattepliktige overskudd lokalt, samtidig som den øker i skatteparadiset."
+        },
+        {
+          "type": "funFact",
+          "text": "Det franske ordet «skatteparadis» kommer fra en oversettelsesfeil: det engelske ordet sier «skatteparadis», en trygg havn for penger (paradis), ikke et paradis (himmel). En forvirring av lyder har endret betydningen av ordet."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p3",
+      "title": "Verden reagerer (litt)",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Finanskrisen i 2008, deretter utgivelsen av [[Panama Papers]] i 2016, forårsaket en bølge av indignasjon. Etter press fra OECD og G20 må bankene nå automatisk overføre informasjon om sine utenlandske kunder til skatteetatene."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den viktigste fremgangen fant sted i 2021, med en internasjonal avtale som fastsetter en minimumsskattesats på 15 % for multinasjonale selskaper. Ideen: å hindre land i å konkurrere med hverandre ved å senke skattene i det uendelige for å tiltrekke seg bedrifter. Hvis et selskap bare betaler 5 % i et skatteparadis, kan hjemlandet nå kreve de resterende 10 %."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p4",
+      "title": "Skatterettferdighet fortsatt skjør",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Når de største formuene slipper unna skatt, er det middelklassen og små lokale bedrifter som bærer en større del av skattetrykket. Dette svekker også offentlige tjenester som helse eller utdanning, på grunn av mangel på ressurser."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kampen beveger seg nå mot digitalt: Internett-plattformer trenger ikke lenger kontorer for å tjene penger i et land, noe som gjør skattegrensene stadig mer porøse. Administrasjoner bruker nå stordata for å oppdage uregelmessigheter, og krever offentlige registre som avslører identiteten til de reelle eierne av selskaper."
+        },
+        {
+          "type": "takeaway",
+          "text": "Skatteparadiser beskytter rundt 10 % av verdens rikdom takket være bankhemmeligheter og nesten null beskatning. Siden 2021 har en global minimumsskattesats på 15 % forsøkt å begrense denne unndragelsen, men kampen er fortsatt langt fra vunnet."
+        }
+      ]
+    }
+  ]
+}

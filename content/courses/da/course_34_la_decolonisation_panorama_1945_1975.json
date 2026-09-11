@@ -1,0 +1,128 @@
+{
+  "id": "course_34_la_decolonisation_panorama_1945_1975",
+  "title": "Afkolonisering: panorama",
+  "subtitle": "1945-1975",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "Mellem **1945** og **1975** opnåede mere end **80** lande uafhængighed. Europæiske imperier er ved at kollapse, og verdenskortet er under forandring.",
+  "hero": {
+    "image": "la_decolonisation_panorama",
+    "ratio": "16:9",
+    "hook": "På tredive år kollapsede koloniimperierne, og verden ændrede sit kort."
+  },
+  "sections": [
+    {
+      "id": "course_34_la_decolonisation_panorama_1945_1975_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mellem **1945** og **1975** bliver mere end **80 hede** uafhængige. Europæiske imperier, udmattede af krig, gav efter for nationalistiske bevægelser og en verden mindre tolerant over for kolonisering."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette er ikke en simpel ændring af flag. Det er en global omvæltning, i hjertet af den kolde krig. Det efterlader også nedarvede grænser og økonomiske afhængigheder."
+        }
+      ]
+    },
+    {
+      "id": "course_34_la_decolonisation_panorama_1945_1975_p1",
+      "title": "Hvorfor alt ændrede sig efter 1945",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Krigen knuste billedet af metropolernes uovervindelighed. I **1941** lovede **[[Atlantic Charter]]**, underskrevet af den amerikanske præsident **Franklin D. Roosevelt** og den britiske premierminister **Winston Churchill**, folks ret til at vælge deres regering. Churchill ønsker at begrænse dette princip til Europa. Afrikanske og asiatiske ledere greb det for deres kolonier."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kolonisoldater kæmpede for andres frihed. Eliter trænet i Vesten vender tilbage med ideer om uafhængighed. USA og USSR afviste af modsatte grunde klassisk kolonialisme. Presset bliver uudholdeligt."
+        },
+        {
+          "type": "funFact",
+          "text": "Roosevelt måtte skubbe Churchill, en tilhænger af det britiske imperium, så Atlanterhavscharteret talte om folks rettigheder."
+        }
+      ]
+    },
+    {
+      "id": "course_34_la_decolonisation_panorama_1945_1975_p2",
+      "title": "Forhandling her, krige der",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det Forenede Kongerige forhandler ofte om at bevare indflydelse via **[[Commonwealth]]**, en klub af tidligere kolonier. Indien og Pakistan bliver uafhængige i **1947**. I Ghana opnår **[[Kwame Nkrumah]]**, uafhængighedsleder, suverænitet i **1957**: første britiske uafhængighed i Afrika syd for Sahara."
+        },
+        {
+          "type": "paragraph",
+          "text": "Frankrig gjorde mere modstand: Indokina indtil Diên Bien Phu (**1954**), derefter den algeriske krig (**1954-1962**), som væltede **[[Fjerde Republik]]** (det franske regime fra **ZEND946ZZZZENDBOLD46ZZZZ1BOLD46ZZZZ1. **Z1958****). jeg**1960**, \"Afrikas år\", blev **14** franske kolonier suveræne. I Belgisk Congo førte den forhastede afrejse til kaos og mordet på **[[Patrice Lumumba]]**, den første uafhængige premierminister. Portugal holdt ud indtil **1975**."
+        }
+      ]
+    },
+    {
+      "id": "course_34_la_decolonisation_panorama_1945_1975_p3",
+      "title": "Bandung og Sydens stemme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1955** samler **[[Bandung konference]]** i Indonesien **29** lande fra Asien og Afrika. For første gang taler tidligere kolonier med én stemme imod kolonialisme og racisme. De går ind for alliancefrihed: ikke automatisk at vælge den amerikanske eller sovjetiske lejr."
+        },
+        {
+          "type": "paragraph",
+          "text": "Momentum svinder hurtigt. Mange stater falder ind i en form for **[[Neokolonialisme]]**: dominans af penge, gæld eller teknologi snarere end af flag. I De Forenede Nationer bliver Syden imidlertid flertallet og påtvinger nye emner: udvikling, apartheid, suverænitet."
+        },
+        {
+          "type": "funFact",
+          "text": "Udtrykket \"tredje verden\" blev opfundet i **1952** af den franske demograf **Alfred Sauvy**, analogt med den tredje ejendom af **1789**."
+        }
+      ]
+    },
+    {
+      "id": "course_34_la_decolonisation_panorama_1945_1975_p4",
+      "title": "En ny verden, men ufærdig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alliancefriheden blev struktureret i Beograd i **1961**, omkring den jugoslaviske **Josip Broz Tito**, den indiske **Jawaharlal Nehru** og den egyptiske **Gamal Abdel Nasser**. Men den kolde krig trækker mange stater ind i en lejrs kredsløb. Politisk uafhængighed garanterer ikke økonomisk uafhængighed."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1947",
+              "title": "Indien og Pakistan",
+              "detail": "Uafhængighed og opdeling af subkontinentet."
+            },
+            {
+              "date": "1955",
+              "title": "Bandung",
+              "detail": "Diplomatisk fødsel af den tredje verden."
+            },
+            {
+              "date": "1960",
+              "title": "Afrikas år",
+              "detail": "Bølge af fransktalende uafhængighed."
+            },
+            {
+              "date": "1962",
+              "title": "Algeriet",
+              "detail": "Afslutning på krigen og uafhængighed."
+            },
+            {
+              "date": "1975",
+              "title": "Slutningen af de iberiske imperier",
+              "detail": "Angola og Mozambique bliver suveræne."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Mellem **1945** og **1975** opnåede mere end **80 hede** uafhængighed. Imperier er ved at kollapse, men nedarvede grænser og økonomiske afhængigheder hæmmer stadig fuld suverænitet."
+        }
+      ]
+    }
+  ]
+}

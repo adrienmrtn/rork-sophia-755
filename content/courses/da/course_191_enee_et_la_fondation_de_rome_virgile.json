@@ -1,0 +1,130 @@
+{
+  "id": "course_191_enee_et_la_fondation_de_rome_virgile",
+  "title": "Æneas og grundlæggelsen af Rom (Virgil)",
+  "subtitle": "Æneiden",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "I Æneiden fortæller Vergil, hvordan Æneas, en prins, der flygtede fra Troja, krydsede Middelhavet for at grundlægge Roms linje.",
+  "hero": {
+    "image": "enee_et_la_fondation_de_rome",
+    "ratio": "16:9",
+    "hook": "En flygtende trojaner bærer sin far på sine skuldre: Rom er født fra dette eksil."
+  },
+  "sections": [
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Aeneid** er det store digt af **Virgil**. Den fortæller odysséen af **Æneas**, den trojanske prins, der overlevede Trojas fald. Guidet af guderne krydsede han Middelhavet for i Italien at finde den slægt, der ville føre til Rom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det er ikke bare et eventyr. Det er myten om fødslen af romersk magt, skrevet for at give Rom en fortid, der er værdig til Homer."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p1",
+      "title": "Virgil skriver for Augustus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I slutningen af det 1. århundrede f.Kr., efter borgerkrige, ønskede kejser **august** at stabilisere sin magt. Han beordrer Virgil til at skrive et epos, der er Homer værdig. Værket tjener også [[Augustansk propaganda]]: forbinder prinsen med en guddommelig helt."
+        },
+        {
+          "type": "image",
+          "asset": "dido_aeneas_carthage_painting",
+          "ratio": "4:3",
+          "caption": "Vergil, Æneidens digter, forkæmper for et Rom, som skæbnen ville."
+        },
+        {
+          "type": "paragraph",
+          "text": "Virgil arbejdede der i elleve år (29-19 f.Kr.). De første seks sange følger vandringen på havet. De næste seks fortæller om krigen i Italien. Han skriver i [[Daktyliske hexametre]], verset fra de store antikke epos."
+        },
+        {
+          "type": "funFact",
+          "text": "Virgil døde i **19** f.Kr. og bad om, at manuskriptet blev brændt, betragtet som ufærdigt. Augustus forbyder at adlyde. Det nationale epos om Rom dukker op mod dets forfatters vilje."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p2",
+      "title": "Flyvning fra Troja og kærlighed i Kartago",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Da Troja brænder, i slutningen af [[Trojansk krig]], bliver Aeneas, søn af gudinden **Venus** og den dødelige Anchises, beordret til at flygte. Han går, bærende sin far på sine skuldre, sin søn Ascanius i sin hånd, og tager med sig [[Penates]], ildstedets guder. Denne gestus definerer [[romerske pietas]]: pligt til familie, guder og skæbne."
+        },
+        {
+          "type": "image",
+          "asset": "aeneas_fleeing_burning_troy_anchises_painting",
+          "ratio": "4:3",
+          "caption": "Aeneas flygter brændende Troja, far og søn med ham."
+        },
+        {
+          "type": "paragraph",
+          "text": "I Kartago elsker han dronningen **Dido**. Men [[Jupiter]], kongen af de romerske guder, kalder ham tilbage til sin mission. Aeneas blade. Dido begår selvmord og forbander sin slægt: Myten forklarer således det fremtidige had mellem Rom og Kartago, før [[Puniske krige]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Aeneas' søn, Ascanius, kaldes også Iule. Familien til [[Julii]], inklusive Julius Cæsar og Augustus, hævder denne guddommelige oprindelse via Venus."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p3",
+      "title": "Krigen i Lazio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Efter en nedstigning til helvede ankommer Aeneas til **Lazio** i det centrale Italien. Kong **Latinus** lover ham sin datter **Lavinia**. Men prins **Turnus**, støttet af [[Juno]], en gudinde, der er fjendtlig over for trojanske heste, starter krigen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aeneas besejrer Turnus og grundlægger **Lavinium**. Senere ville hans søn finde [[Alba Longa]], hvorfra Romulus og Remus ville blive født. Myten forbinder således Troja med Rom i en enkelt kæde."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Troy",
+              "title": "Æneas' flyvning",
+              "detail": "Han frelser far, søn og husguder."
+            },
+            {
+              "date": "Kartago",
+              "title": "Dido",
+              "detail": "Brudt kærlighed, forbandelse mod Rom."
+            },
+            {
+              "date": "Lazio",
+              "title": "Sejr over Turnus",
+              "detail": "Grundlæggelse af Lavinium, begyndelsen af Rom."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p4",
+      "title": "En pligthelt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I middelalderen blev Vergil en nærmest profetisk vismand. Dante gør ham til sin guide i [[guddommelig komedie]]. Men Aeneas er ikke en glad helt: han bærer skæbnens vægt. Rom blev født fra eksil, af ofret kærlighed og af krig."
+        },
+        {
+          "type": "takeaway",
+          "text": "I **Aeneid** gør Virgil **Æneas** til en overlevende fra Troja, den mytiske forfader til Rom. Helten legemliggør **pietas**: Pligt før begær, skæbne før personlig lykke."
+        }
+      ]
+    }
+  ]
+}

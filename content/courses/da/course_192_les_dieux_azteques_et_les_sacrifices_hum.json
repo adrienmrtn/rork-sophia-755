@@ -1,0 +1,140 @@
+{
+  "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
+  "title": "Aztekiske guder og menneskeofre",
+  "subtitle": "Blod for solen",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Blandt aztekerne står solen kun op, hvis guderne modtager blod. En barsk, men sammenhængende, kosmologi i hjertet af deres imperium.",
+  "hero": {
+    "image": "les_dieux_azteques_et_les_sacrifices_humains",
+    "ratio": "16:9",
+    "hook": "Uden blod ville solen stoppe: sådan er aztekernes kosmiske gæld."
+  },
+  "sections": [
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Aztekerne**, eller Mexica, mener, at universet er skrøbeligt. Guderne har brug for blod for at solen kan fortsætte sin gang. Uden tilbud ville kaos vende tilbage."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det, der forfærdede spanierne, er baseret på en klar idé: gudernes liv og menneskers liv hænger sammen. Her er hvordan denne kosmologi fungerer."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
+      "title": "De fem sole: en verden, der allerede er død fire gange",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ifølge [[Fem Sole]]-myten er fire epoker allerede forsvundet i katastrofer. Vi oplever den femte sol, [[Nahui Ollin]] (\"4-Bevægelse\"), der lovede at ende med jordskælv."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
+          "ratio": "4:3",
+          "caption": "Solens sten: Aztekernes tid bliver til successive epoker."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **Teotihuacán**, en hellig by på det centrale plateau, kaster guderne sig ind i en ild for at blive til sol og måne. Men solen står stille. De andre guder tilbyder så deres eget blod for at sætte det i gang. Mænd arver denne gæld."
+        },
+        {
+          "type": "funFact",
+          "text": "For aztekerne er ofring ikke vederlagsfri grusomhed: det er tilbagebetalingen af en guddommelig gæld, [[Kosmologi af de fem sole og kosmisk gæld]]."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p2",
+      "title": "Et pantheon af dualiteter",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den centrale gud er [[Huitzilopochtli]], krigsguden og middagssolen. Hver nat kæmper han mod mørket for at blive genfødt om morgenen. Ved hans side giver [[Tlaloc]] regn, derfor afgrøder eller hungersnød."
+        },
+        {
+          "type": "image",
+          "asset": "huitzilopochtli_aztec_sun_god_codex",
+          "ratio": "4:3",
+          "caption": "Huitzilopochtli, krigersol, der kræver at blive næret."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Quetzalcoatl]], den fjerklædte slange, legemliggør viden og civilisation. Hans rival [[Tezcatlipoca]], Rygespejlet, styrer natten, skæbnen og magien. Jorden selv har et frygteligt ansigt: [[Coatlicue]], fortærende modergudinde."
+        },
+        {
+          "type": "funFact",
+          "text": "Det dyrebare blod, der tilbydes til guderne, kaldes [[chalchihuatl]], \"dyreligt vand\". Det udtrukne hjerte opfattes som en solgnist, der vender tilbage til himlen."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p3",
+      "title": "Blomsterkrigene",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For at skaffe ofre organiserer aztekerne [[Xochiyaoyotl]], \"blomsterkrigene\": rituelle kampe, hvis mål ikke er at dræbe, men at fange levende krigere, der er værdige til at blive tilbudt."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
+          "ratio": "4:3",
+          "caption": "Offer på toppen af templet: hjertet præsenteret for solen."
+        },
+        {
+          "type": "paragraph",
+          "text": "På toppen af **Templo borgmester** i Tenochtitlán, hovedstaden ved søen, udvinder en præst hjertet med en kniv fra **Obsidian**, en skarp vulkansk sten. Gesten er offentlig, højtidelig, tænkt som en tjeneste, der ydes til solen."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Myte",
+              "title": "Gudernes ofring",
+              "detail": "Solen modtager guddommeligt blod for at bevæge sig fremad."
+            },
+            {
+              "date": "Imperium",
+              "title": "Blomsterkrige",
+              "detail": "Fange krigere for tilbud."
+            },
+            {
+              "date": "1519",
+              "title": "Spansk chok",
+              "detail": "Cortés ankommer; systemet kollapser."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
+      "title": "En verdens ende, varige spor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spanske krøniker puster nogle gange figurerne op for at retfærdiggøre erobringen. Men offersystemet er meget reelt. I **1519** udløser ankomsten af **Hernán Cortés** afslutningen på dette rituelle univers."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aztekiske figurer overlever dog i synkretisme: Jomfruen fra Guadalupe dukker op på et websted, der engang var knyttet til en modergudinde. At forstå disse ofre er at forstå en kultur, der sætter kosmos' overlevelse over individet."
+        },
+        {
+          "type": "takeaway",
+          "text": "Blandt aztekerne gav menneskeblod næring til solen. Guderne har allerede betalt med deres liv: mænd tilbagebetaler denne gæld gennem ofre, især via **blomsterkrige**."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "course_40_la_guerre_de_secession_americaine_1861_1",
+  "title": "Den amerikanske borgerkrigen",
+  "subtitle": "1861-1865",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "Fra **1861** til **1865** er USA revet fra hverandre: mer enn **620 000** døde. I hjertet av konflikten, slaveri, nasjonal enhet og fødselen av en sterkere føderal stat.",
+  "hero": {
+    "image": "la_guerre_de_secession_americaine",
+    "ratio": "16:9",
+    "hook": "Den dødeligste krigen i amerikansk historie, for unionen og mot slaveri."
+  },
+  "sections": [
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fra **1861** til **1865** opplever USA sin mest alvorlige krise: borgerkrigen. Nord (unionen) versus sør (konføderasjonen). Ikke flere **620,000** døde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konflikten forvandler en ung republikk til en industrimakt, på bekostning av varige traumer mot nasjonal enhet og slaveri."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p1",
+      "title": "To Amerika ansikt til ansikt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Nord** industrialiserer seg, med lønn og proteksjonisme. **Sør** forblir landlig, rik på bomull produsert av **4 millioner**-slaver."
+        },
+        {
+          "type": "image",
+          "asset": "slaves_american_southern_plantation",
+          "ratio": "4:3",
+          "caption": "Southern Plantation: Slaveri i hjertet av den konfødererte økonomien."
+        },
+        {
+          "type": "paragraph",
+          "text": "Debatten gjelder også **[[Statens rettigheter kontra den føderale regjeringen]]**: hvem bestemmer over slaveri, den lokale staten eller Washington? Valget av **Abraham Lincoln** (**November 1860**), republikaner som var motstander av utvidelsen av slaveriet, uten en eneste stemme fra sør, utløser løsrivelse. Syv stater fant konføderasjonen, med **[[Jefferson Davis]]** som president, og garanterte slaveri i deres grunnlover."
+        },
+        {
+          "type": "funFact",
+          "text": "Før krigen ble det ofte sagt \"USA *er*\" i flertall. Etterpå er bruken av entall (\"*Øst*\") avgjørende: en udelelig nasjon."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p2",
+      "title": "En total krig, så frigjøring",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Den 12. april 1861**, sørlige kanoner bombarderer Fort Sumter, South Carolina. Krigen, som ble antatt å være kort, ble industriell. I **Antietam** (**17. september 1862**), **23.000Z** ofre på tolv timer: den blodigste dagen i amerikansk militærhistorie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svikten til **[[Robert E. Lee]]**, den ledende konfødererte generalen, tillot Lincoln å signere **[[Frigjøringserklæring]]** (**1. januar 1863**), som frigjorde slaver i opprørsstatene. Krigen for unionen ble også en krig for frihet, som stengte døren for europeisk støtte til sør. **Gettysburg** (juli **1863**) bryter konføderasjonens momentum."
+        },
+        {
+          "type": "image",
+          "asset": "american_civil_war_battle",
+          "ratio": "4:3",
+          "caption": "Slaget ved borgerkrigen: enestående industriell vold."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p3",
+      "title": "Nordlig seier, Lincolns død",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**[[Ulysses Grant]]**, forbundssjef, fører en utmattelseskrig. Hans løytnant **William Tecumseh Sherman** herjet Georgia under sin «marsj til sjøen». Lee overga seg ved **Appomattox** den **9. april 1865**."
+        },
+        {
+          "type": "image",
+          "asset": "abraham_lincoln_portrait",
+          "ratio": "1:1",
+          "caption": "Abraham Lincoln, unionspresident, myrdet fem dager etter Appomattox."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fem dager senere ble Lincoln myrdet av **John Wilkes Booth**, en sørstatsskuespiller. **[[Gjenoppbygging]]**, perioden med gjenoppbygging av Sør, begynner uten ham. I desember avskaffet **1865**, [[Det 13. endringsforslaget]] slaveriet i hele landet."
+        },
+        {
+          "type": "funFact",
+          "text": "Krigen fremskyndet også operasjonen: leger som **Gurdon Buck** utførte de første ansiktsrekonstruksjonene på soldater vansiret av Minié-kuler."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p4",
+      "title": "Arr og arv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Under **[[Gjenoppbygging]]** (**1865-1877**) stemte og ble afroamerikanere valgt. Så kommer reaksjonen: **[[Ku Klux Klan]]** (**1865**), hvit terrororganisasjon, tilbaketrekking av føderale tropper (**1877**), Jim Crow segregeringslover. Juridisk segregering ville vare nesten et århundre."
+        },
+        {
+          "type": "paragraph",
+          "text": "På kartet, en samlet nasjon uten lovlig slaveri. Faktisk et dypt raseskille. Og verktøyene til en fremtidig verdensmakt: tung industri, jernbaner, en sterk føderal stat."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1860",
+              "title": "Lincoln valg",
+              "detail": "Start av løsrivelser."
+            },
+            {
+              "date": "1861",
+              "title": "Fort Sumter",
+              "detail": "Starten på krigen."
+            },
+            {
+              "date": "1863",
+              "title": "Frigjøring",
+              "detail": "Gettysburg proklamasjon og vendepunkt."
+            },
+            {
+              "date": "1865",
+              "title": "Appomattox og 13. tillegg",
+              "detail": "Slutt på kamp og konstitusjonell avskaffelse."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Borgerkrigen (**1861-1865**) forente USA og avskaffet slaveri, på bekostning av **620 000** dødsfall, samtidig som den etterlot et raseskille som Jim Crow-lovene ville forlenge."
+        }
+      ]
+    }
+  ]
+}

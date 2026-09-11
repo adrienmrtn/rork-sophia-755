@@ -1,0 +1,112 @@
+{
+  "id": "course_168_sisyphe_punition_eternelle",
+  "title": "Sisyfos: evig straf",
+  "subtitle": "Stenen der altid falder",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Sisyfos bedrager Døden, derefter guderne. Hans straf: at rulle en sten, der falder uendeligt. Camus gør det til symbolet på klarhed over for det absurde.",
+  "hero": {
+    "image": "sisyphe_punition_eternelle",
+    "ratio": "16:9",
+    "hook": "Han snød Døden. Guderne giver ham en sten. Og evigheden til at skubbe det."
+  },
+  "sections": [
+    {
+      "id": "course_168_sisyphe_punition_eternelle_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Sisyfos**, den legendariske grundlægger af Korinth, er den mest snedige dødelige i græske myter. Hans intelligens giver ham mulighed for at udfordre guderne. Det giver ham også den værste straf: en indsats, der aldrig lykkes."
+        },
+        {
+          "type": "paragraph",
+          "text": "I det 20. århundrede forvandlede **Albert Camus** denne dømte til en figur af den menneskelige tilstand. Fra gammel list til moderne oprør stiller Sisyfos et simpelt spørgsmål: hvad skal man gøre, når målet synes umuligt?"
+        }
+      ]
+    },
+    {
+      "id": "course_168_sisyphe_punition_eternelle_p1",
+      "title": "Kongen, der lænker Døden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Homer]] siger, at han er den mest snedige af mænd. Sisyfos ser **Zeus**, gudernes konge, kidnappe nymfen **Aegina**. I stedet for at forblive tavs, sælger han hemmeligheden til pigens far, flodguden [[Asopus]], i bytte for en vandkilde til hans citadel."
+        },
+        {
+          "type": "image",
+          "asset": "sisyphus_king_corinth_greek_myth",
+          "ratio": "4:3",
+          "caption": "Sisyfos, snedig konge af Korinth."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zeus sender **Thanatos**, Døden personificeret. Sisyfos falsker beundring for sine lænker, beder ham om en demonstration... og lænker ham. I mellemtiden dør ingen længere på Jorden. Selv soldaterne fra **Arès**, krigsguden, kan ikke længere falde. Ares skal befri Thanatos med magt."
+        },
+        {
+          "type": "funFact",
+          "text": "Nogle sprogforskere sammenligner \"Sisyphus\" med det græske *sophos*, \"klog\". Hans navn ville sige \"de meget kloge\": en grusom ironi i lyset af hans skæbne."
+        }
+      ]
+    },
+    {
+      "id": "course_168_sisyphe_punition_eternelle_p2",
+      "title": "To utætheder, en sten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Før han dør, beordrer Sisyphus sin kone **Merope** til ikke at holde en begravelse for ham. I Underverdenen klager han til **Persephone**, dronningen af de dødes verden: hans kone har vanæret ham. Han får tre dage på Jorden til at reparere. Når den først er i solen, nægter den at komme tilbage."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det er **Hermes**, gudernes budbringer og sjæles leder, der bringer ham tilbage med magt til [[Hades]]. Straffen er skræddersyet: at skubbe en kæmpe sten til toppen af en bakke. Hver gang, lige før målet, falder stenen ned igen."
+        },
+        {
+          "type": "funFact",
+          "text": "I nogle gamle traditioner forklarede Sisyfosklippen tidevandscyklussen eller solens daglige bevægelse."
+        }
+      ]
+    },
+    {
+      "id": "course_168_sisyphe_punition_eternelle_p3",
+      "title": "Camus: forestil dig Sisyfos glad",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I modsætning til [[Prometheus]], hvis lever er fortæret, er Sisyphus ikke skadet i sit kød. Dens tortur er ubrugelig. I **1942** udgav Camus *Myten om Sisyfos*. For ham er Sisyfos [[absurd helt]]: han ved, at klippen vil falde, og det er netop denne klarhed, der får ham til at vokse."
+        },
+        {
+          "type": "funFact",
+          "text": "I psykiatrien har vi nogle gange talt om \"sisyfisme\" for at beskrive gentagelsen af udmattende og ubrugelige handlinger."
+        },
+        {
+          "type": "paragraph",
+          "text": "Camus definerer [[absurd hos Camus og Sisyfos]] som sammenstødet mellem vores behov for mening og verdens stilhed. Hver nedstigning af bjerget genoptager Sisyfos sin opgave. Hans oprør er at fortsætte bevidst. \"Du skal forestille dig Sisyfos lykkelig.\""
+        }
+      ]
+    },
+    {
+      "id": "course_168_sisyphe_punition_eternelle_p4",
+      "title": "Sisyfos' værk i dag",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Udtrykket \"Sisyfisk arbejde\" refererer til en vanskelig, gentagne og meningsløs opgave. I den moderne verden taler myten til samlebåndsarbejdere og ansatte fanget i endeløse procedurer. [[hybris af Sisyfos]], der ønsker at bedrage guderne, bliver også en lektion om grænserne for trickeri."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alligevel bevarer historien én styrke: På trods af den annoncerede fiasko fortsætter indsatsen. Klippen falder igen, men den sletter ikke stigningen. Sisyfos overlever, fordi han legemliggør modstandskraft over for en skæbne uden garanti for sejr."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Sisyfos** bedrager Døden og guderne og skubber derefter en sten for evigt. **Camus** gør det til symbolet på klarhed: at kende det absurde og fortsætte alligevel."
+        }
+      ]
+    }
+  ]
+}

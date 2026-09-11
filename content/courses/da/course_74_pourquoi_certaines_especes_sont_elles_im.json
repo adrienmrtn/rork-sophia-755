@@ -1,0 +1,108 @@
+{
+  "id": "course_74_pourquoi_certaines_especes_sont_elles_im",
+  "title": "Hvorfor er nogle arter udødelige?",
+  "subtitle": "Biologi og lang levetid",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Nogle arter ser ud til at trodse døden. Vandmænd, der forynger, hydrar uden ældning: Hemmeligheden er cellulær reparation.",
+  "hero": {
+    "image": "pourquoi_certaines_especes_sont_immortelles",
+    "ratio": "16:9",
+    "hook": "Aldring er ikke en absolut livslov. Nogle arter har fundet fejlen."
+  },
+  "sections": [
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vi bliver gamle, så dør vi. Vandmænden [[Turritopsis dohrnii]] kan dog vende tilbage til et ungdomsstadie og starte igen. Muslingen **Ming** levede **507 år**. Aldring er derfor ikke en universel regel: Det er en proces, som visse arter omgår."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ved at studere disse undtagelser leder forskerne mindre efter science fiction-udødelighed end efter livets tricks til bedre at reparere celler."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p1",
+      "title": "Hvorfor vores celler slides op",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aldring handler ikke kun om at \"slides\" som en maskine. Det er en ubalance: Skader akkumuleres hurtigere end reparationer."
+        },
+        {
+          "type": "image",
+          "asset": "chromosome_dna_telomere_aging_cell",
+          "ratio": "auto",
+          "caption": "Telomerer, i enderne af kromosomerne, forkortes med hver celledeling."
+        },
+        {
+          "type": "paragraph",
+          "text": "I enderne af vores kromosomer fungerer [[Telomerer]] som snørebåndsspidser. Med hver celledeling forkortes de. For kort holder cellen op med at dele sig. Samtidig producerer stofskiftet aggressive molekyler, som skader proteiner og DNA. \"Zombie\"-celler akkumuleres derefter og antænder vævene omkring dem."
+        },
+        {
+          "type": "funFact",
+          "text": "Tardigraden, en lille \"vandbjørn\", kan næsten holde op med at leve ved at tørre ud. Hans stofskifte falder til **99,99%**, og han overlever rummets vakuum eller ekstrem stråling uden virkelig at blive ældre."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
+      "title": "Mestre, der undgår døden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den sårede eller udsultede [[Turritopsis dohrnii]] forvandler sine voksne celler til \"blanke\" celler, og bliver derefter til en polyp igen, startstadiet. Dette skridt tilbage, kaldet transdifferentiering, giver det en form for **biologisk udødelighed**."
+        },
+        {
+          "type": "paragraph",
+          "text": "**hydra**, en lille ferskvandspolyp, fornyer hele sin krop takket være et næsten ubegrænset udbud af [[stamceller]]. Hun viser ingen målbare tegn på aldring. Grønlandshvalen kan overstige **200 år** takket være ultraeffektiv DNA-reparation og stærk modstandsdygtighed over for kræft."
+        },
+        {
+          "type": "funFact",
+          "text": "Hummere laver telomerase overalt i deres kroppe: deres telomerer forkortes ikke. De vokser gennem hele deres liv og dør, især når smeltningen bliver for dyr."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
+      "title": "Hvad medicin lærer af det",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tanken er ikke længere kun at behandle Alzheimers eller slidgigt én efter én, men at angribe selve ældningen. **senolytika** sigter mod at eliminere zombieceller. Hos dyr har dette allerede forynget visse funktioner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Begrænsning af kalorier uden underernæring aktiverer også reparationsveje, især ved at bremse [[mTOR]], et protein, der accelererer vækst... og nogle gange falder. Andre laboratorier forsøger at \"vinde uret\" af celler, som vandmænd, uden at omdanne dem til tumorer."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p4",
+      "title": "Udødelig, men ikke uovervindelig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Selv en biologisk udødelig art dør af rovdyr, sygdom eller katastrofe. Døden forbliver en drivkraft i evolutionen: den giver plads til nye, bedre tilpassede generationer."
+        },
+        {
+          "type": "paragraph",
+          "text": "For mennesker er den realistiske udfordring ikke at leve evigt, men at forlænge årene **i godt helbred**. Lang levetid, der er blevet omdannet til teknologi, vil også rejse store spørgsmål om retfærdighed og ressourcer."
+        },
+        {
+          "type": "takeaway",
+          "text": "Biologisk udødelighed er afhængig af at reparere eller nulstille celler. Turritopsis dohrnii vandmændene bliver yngre; hydraen fornyer sig konstant. Aldring er ikke en universel dødsfald."
+        }
+      ]
+    }
+  ]
+}

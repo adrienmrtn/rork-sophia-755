@@ -1,0 +1,108 @@
+{
+  "id": "course_72_pourquoi_dort_on",
+  "title": "Hvorfor sover vi?",
+  "subtitle": "Krop & hjerne",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Vi bruger en tredjedel af vores liv på at sove. Det er ikke spildtid: søvn renser hjernen, reparerer kroppen og indgraverer minder.",
+  "hero": {
+    "image": "pourquoi_dort_on",
+    "ratio": "16:9",
+    "hook": "At sove handler ikke om at slukke: det er kroppens store natlige arbejde."
+  },
+  "sections": [
+    {
+      "id": "course_72_pourquoi_dort_on_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Over et liv på 75 år sover vi tæt på **25 år**. I lang tid troede vi, at søvn kun var en pause. I virkeligheden er det aktivt arbejde, lige så vigtigt som at drikke eller spise."
+        },
+        {
+          "type": "paragraph",
+          "text": "Videnskaben har endnu ikke alle svarene på \"hvorfor\" vi sover. Men hun ved godt, hvad der sker, når vi ikke sover, og hvad natten stille reparerer."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p1",
+      "title": "Hvad mangel på søvn afslører",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1964** forblev den amerikanske studerende **Randy Gardner** **11 dage** uden at sove. Hallucinationer, paranoia, hjernesammenbrud: bevis på, at hjernen ikke kan overleve uden hvile."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_bedroom_night",
+          "ratio": "auto",
+          "caption": "Søvn, afgørende for genopretning af hjernen og kroppen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hos rotter dræber totalt fravær af søvn i **2 dage 3 uger**, ligesom sult. Hos mennesker fører en sjælden genetisk sygdom, **Fatal familiær søvnløshed**, også til døden. På daglig basis svarer 17 timers vågenhed til en promille på **0,5 g/l**. Hjernen tvinger derefter [[Mikrosøvn]], korte ufrivillige pauser i bevidstheden."
+        },
+        {
+          "type": "funFact",
+          "text": "Efter sin rekord sov Randy Gardner **14 timere** lige. Han vågnede i stand til at fungere, men hans søvn tog uger for at vende tilbage til et normalt mønster."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p2",
+      "title": "Om natten rydder hjernen op",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Under søvn stopper hjernen ikke: den skifter tilstand. **søhest**, en nøglehukommelsesstruktur formet som en havhest, \"gentager\" dagen og sender informationen til [[Neocortex]], det ydre lag af hjernen, for varig opbevaring. Resultat: vi lærer ofte **20 til 40%** bedre efter en god nats søvn."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dyb søvn udløser også **væksthormon**, som reparerer muskler og væv og stimulerer [[Cytokiner]], immunsystemets signalmolekyler. En anden stor opdagelse: [[Glymfatisk system]], et cerebralt dræningsnetværk **ti gange** mere aktivt om natten. Det fjerner affald, herunder proteiner forbundet med risikoen for Alzheimers."
+        },
+        {
+          "type": "funFact",
+          "text": "Under dyb søvn skrumper hjernecellerne med ca. **60%**. Den således skabte plads gør, at rensevæsken kan cirkulere bedre."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p3",
+      "title": "Hvem sover hvor meget, og hvordan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Katte sover **12 kl. 16.00**: rovdyr sikre. Giraffer er nogle gange tilfredse med **30 minutter til 2 timer**, i korte lur, klar til at flygte. Delfiner sover med **enkelt halvkugle**, den ene halvdel af hjernen ad gangen, for at blive ved med at komme op for at trække vejret."
+        },
+        {
+          "type": "paragraph",
+          "text": "Babyer sover til **18.00**, med masser af [[paradoksal søvn]], drømmefasen med hurtige øjenbevægelser. Denne fase hjælper [[Synaptogenese]], oprettelsen af forbindelser mellem neuroner."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p4",
+      "title": "Det interne ur og blåt lys",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To kræfter presser os i seng: træthed, der akkumuleres i løbet af dagen, og [[Døgnrytme og melatonin]], det indre ur indstillet til **24 timer**. Når lyset dæmpes, frigiver hjernen **melatonin**, et hormon, der forbereder kroppen på søvn uden at påtvinge det."
+        },
+        {
+          "type": "paragraph",
+          "text": "Skærme om aftenen narrer dette ur og forsinker at falde i søvn. Vi \"indhenter\" ikke rigtig en søvngæld i weekenden: trætheden aftager, men ikke alle skaderne. Regelmæssige timer, et mørkt og køligt rum forbliver de bedste allierede."
+        },
+        {
+          "type": "takeaway",
+          "text": "Søvn renser hjernen, reparerer kroppen og styrker hukommelsen. Total afsavn dræber på få uger: at sove er ikke en luksus, det er livsvigtig vedligeholdelse."
+        }
+      ]
+    }
+  ]
+}

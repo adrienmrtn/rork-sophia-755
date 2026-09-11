@@ -1,0 +1,116 @@
+{
+  "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup",
+  "title": "Hvorfor går vulkaner i udbrud?",
+  "subtitle": "Magma & tallerkener",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "En vulkan er en åbning i jordskorpen. Magma under tryk stiger der og bliver til lava. Det er derfor, Jorden \"spytter\".",
+  "hero": {
+    "image": "pourquoi_les_volcans_entrent_en_eruption",
+    "ratio": "16:9",
+    "hook": "Under vores fødder er Jorden ikke frosset. Nogle gange åbner hun et ildvindue."
+  },
+  "sections": [
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En vulkan er ikke bare et bjerg, der ånder ild. Det er en åbning i Jordens ydre hylster. På denne måde stiger **magma**: en blanding af smeltet sten og gas under højt tryk. Når denne magma først er i fri luft, bliver den til **vasket**."
+        },
+        {
+          "type": "paragraph",
+          "text": "For at forstå et udbrud skal du se under overfladen: varmen inde i planeten, pladernes bevægelse og den måde, gasserne opbygger tryk på, lidt som at ryste en flaske sodavand."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p1",
+      "title": "Under vores fødder er intet stille",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jorden er lavet af lag. Ved overfladen er **skorpe** en stiv konvolut, **5 til 70 km tyk. Nedenfor ligger **mantle****, til omkring **2 900 km** dybde. Pelsen er for det meste fast, men over meget lange perioder kan den flyde meget langsomt, som ultratyk honning."
+        },
+        {
+          "type": "image",
+          "asset": "volcano_eruption_lava",
+          "ratio": "auto",
+          "caption": "Et udbrud: magmaets stigning til overfladen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne indre varme får stof til at stige og falde: disse er **konvektionsstrømme**. De skubber store stykker skorpe ud, kaldet plaques. Dette er [[Pladetektonik]]: Jordens overflade er skåret i plader, som bevæger sig fra hinanden, kolliderer eller glider mod hinanden."
+        },
+        {
+          "type": "funFact",
+          "text": "Visse meget hurtige opstigninger bringer diamanter tilbage, der er dannet på mere end **150 km** dybde. De har ikke tid til at ændre sig på vejen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ved [[ryg]] bevæger pladerne sig fra hinanden, og magmaen rejser sig let. I et område af [[Subduktion]] dykker en plade under en anden og fører vand med sig. Dette vand sænker stenens smeltepunkt: magma dannes og stiger derefter."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p2",
+      "title": "Fra magma til udbrud",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sten smelter ikke bare \"fordi det er varmt\". Der er tre udløsere: en temperaturstigning, et trykfald eller tilsætning af vand. Når først det er dannet, er magma mindre tæt end klippen omkring den. Den forsøger derfor at stige, lidt som en luftboble i vand."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ofte stopper den først i et **magma-kammer**, et reservoir et par kilometer under overfladen. Der danner de opløste gasser bobler, når trykket falder. Hvis \"proppen\" af sten ovenfor ikke længere holder, begynder udbruddet."
+        },
+        {
+          "type": "funFact",
+          "text": "Udbruddet af **Tambora** i **1815**, Indonesien, var så kraftigt, at det afkølede det globale klima. **1816** fik tilnavnet \"året uden sommer\", med katastrofale høst i Europa og Nordamerika."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p3",
+      "title": "Væske eller eksplosivt?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ikke alle udbrud er ens. Det hele afhænger af magmaens **viskositet**, det vil sige om den er ret flydende eller klæbrig. En flydende magma, som ved **Hawaii** eller ved Piton de la Fournaise (Reunion Island), lader gasserne undslippe. Lavastrømme: udbrud **overstrømmende**."
+        },
+        {
+          "type": "paragraph",
+          "text": "En klæbrig magma fanger gasserne. Presset stiger, så eksploderer alt. Aske, blokke og [[brændende skyer]] (brændende skyer af gas og aske, der ruller ned ad skråningerne) kan derefter ødelægge det omkringliggende område. Dette er stilen med vulkaner som Mount **Saint Helens** (USA) eller **Pinatubo** (Filippinerne)."
+        },
+        {
+          "type": "paragraph",
+          "text": "En vulkan kan også forblive rolig i århundreder. I **79** efter. BC, **Vesuv**, nær Napoli, begravet Pompeji under aske. Om **80%** af verdens vulkanske aktivitet sker under havene, langt fra vores øjne."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p4",
+      "title": "Fare, frugtbarhed, afgrundsliv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vulkaner formede Jordens tidlige atmosfære ved at udsende gasser. Deres aske beriger også jorden: mange frugtbare landbrugsregioner lever ved foden af aktive vulkaner. Men et meget stort udbrud kan sende svovlpartikler højt op i atmosfæren og afkøle klimaet i flere måneder."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nogle websteder, såsom Yellowstones [[supervulkan]] i USA, overvåges nøje. Under havet, nær højdedragene, spytter [[sorte rygere]] brændende væsker rige på mineraler. Økosystemer lever der uden sollys, næret af de varme kilders kemi."
+        },
+        {
+          "type": "takeaway",
+          "text": "Vulkaner uddriver magma under tryk, især ved tektoniske pladegrænser. Magmaens viskositet afgør, om udbruddet flyder stille og roligt eller eksploderer."
+        }
+      ]
+    }
+  ]
+}

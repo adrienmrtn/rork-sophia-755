@@ -1,0 +1,96 @@
+{
+  "id": "course_47_pourquoi_baille_t_on",
+  "title": "Hvorfor gaber vi?",
+  "subtitle": "Krop & hjerne",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Alle gaber: mennesker, hunde, nogle gange endda fostre. Det er nok ikke for \"iltmangel\". Her er de stærkeste leads.",
+  "hero": {
+    "image": "pourquoi_baille_t_on",
+    "ratio": "16:9",
+    "hook": "Du gaber. Din nabo gaber. Og det smitter (næsten) ikke tilfældigt."
+  },
+  "sections": [
+    {
+      "id": "course_47_pourquoi_baille_t_on_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "At gabe virker almindeligt. Det er dog en kompleks refleks: kæbe, thorax, mellemgulv, hele kroppen bliver involveret. Løver, hunde, mennesker: mange dyr gaber."
+        },
+        {
+          "type": "paragraph",
+          "text": "I lang tid sagde vi: \"det er for at have mere ilt\". Denne idé er nu stort set opgivet. Moderne forklaringer er mere interessante."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p1",
+      "title": "Ikke (især) for ilt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eksperimenter har vist, at øget ilt i luften ikke forhindrer gaben. Sænk også kulsyren lidt. Så at gabe er ikke en simpel \"at indhente luften\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "Et stærkt forspring i dag: gaben hjælper **med ved reguleret temperatur**. Ved at trække vejret bredt og strække ansigtet vil vi \"ventilere\" og køle hovedet lidt, især når vi er trætte."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p2",
+      "title": "Hvorfor smitter det?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "contagious_yawning_people_group",
+          "ratio": "4:3",
+          "caption": "At se nogen gabe er ofte nok til at udløse refleksen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hos mennesker kan det at se, høre eller endda læse ordet \"gabe\" udløse et gab. Det er ikke bare en dum efterligning: det påvirker også **empati** og hjernekredsløb knyttet til [[Spejlneuroner og smitsomhed]], neuroner, der aktiveres, når vi handler... eller når vi ser nogen handle."
+        },
+        {
+          "type": "funFact",
+          "text": "Små børn gaber lidt på grund af smitte. Denne følsomhed kommer senere sammen med visse sociale færdigheder."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p3",
+      "title": "Vi gaber allerede inden vi bliver født",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fostre gaber fra omkring **11. uge** af graviditeten. I denne alder indånder deres lunger endnu ikke luft. Så igen handler det ikke om at \"løbe tør for ilt\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hos fosteret kunne gaben hjælpe udviklingen af kæbe- og ansigtsmuskler."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p4",
+      "title": "Gabe for at være opmærksom?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vi gaber ofte, når vi er trætte... men også lige før en test, eller når vi keder os, mens vi forsøger at holde fokus. Udstrækning kan stimulere nervesystemet og hjælpe **med at forblive opmærksom**."
+        },
+        {
+          "type": "takeaway",
+          "text": "At gabe er nok ikke mangel på ilt. Det vil hellere bruges til at regulere hjernen (temperatur, årvågenhed), og hos mennesker spredes det også ved social smitte."
+        }
+      ]
+    }
+  ]
+}

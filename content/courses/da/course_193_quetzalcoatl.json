@@ -1,0 +1,140 @@
+{
+  "id": "course_193_quetzalcoatl",
+  "title": "Quetzalcoatl",
+  "subtitle": "Den fjerklædte slange",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Quetzalcoatl, den fjerklædte slange, er guden for den mesoamerikanske civilisation. Dens myte kombinerer skabelse, eksil og det fatale møde med Cortés.",
+  "hero": {
+    "image": "quetzalcoatl",
+    "ratio": "16:9",
+    "hook": "Gud, konge og profeti: Den fjerklædte slange strækker sig over to tusinde års mexicansk historie."
+  },
+  "sections": [
+    {
+      "id": "course_193_quetzalcoatl_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Quetzalcoatl**, den \"fjerklædte slange\", er en af de rigeste skikkelser i det præcolumbianske Mexico. Han er blevet æret i mere end to årtusinder, fra [[Teotihuacán]], en stor by på det centrale plateau, til aztekerne og blandt mayaerne under navnet [[Kukulkán]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han forener jorden (slangen) og himlen (fjeren). Gud for civilisation, viden og moralsk orden, hans myte ender med at krydse den virkelige historie: den spanske erobring af **1519**."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p1",
+      "title": "Guden, der opfandt majs",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I [[Nahuatl]] kommer **Quetzalcoatl** fra [[quetzal]], fuglen med grønne fjer, og fra *coatl*, slangen. Denne forening gør den til broen mellem det menneskelige og det guddommelige."
+        },
+        {
+          "type": "image",
+          "asset": "quetzalcoatl_feathered_serpent_aztec_sculpture",
+          "ratio": "4:3",
+          "caption": "Quetzalcoatl, den fjerklædte slange: jord og himmel flettet sammen."
+        },
+        {
+          "type": "paragraph",
+          "text": "I [[Kosmogoni af de fem sole]] stiger han ned til [[Mictlán]], de dødes verden, for at samle tidligere menneskers knogler. Han vækker dem tilbage til livet med sit blod. Så stjæler han **majs** fra myrerne: Mexicos grundføde. Som vindens gud åbner han også vejen til regnen fra [[Tlaloc]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Quetzalens halefjer kan måle **60 cm**. Blandt mayaerne og aztekerne blev dræbt af fuglen straffet med døden: nogle få fjer blev taget fra den og derefter frigivet."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p2",
+      "title": "Kongepræsten af Tula",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Myten har også et historisk ansigt: **Topiltzin Quetzalcoatl**, konge-præst for **Tula** i det 10. århundrede. Han ville have ønsket at reformere kulten og erstatte menneskeofringer med ofringer af blomster og sommerfugle."
+        },
+        {
+          "type": "image",
+          "asset": "tula_toltec_pyramid_warriors_sculpture_mexico",
+          "ratio": "4:3",
+          "caption": "Tula, Toltec by knyttet til Quetzalcoatls regeringstid og fald."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hans rival **Tezcatlipoca** presser ham til at drikke pulque, en fermenteret drik. Ydmyget forviste kongen mod øst. Ifølge legenden lover han at vende tilbage et år \"Un Reed\". Dette løfte vil veje tungt."
+        },
+        {
+          "type": "funFact",
+          "text": "Efter hans afgang bliver Quetzalcoatl nogle gange Morgenstjernen: planeten Venus. Guden dør ikke, han ændrer form."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p3",
+      "title": "1519: når myten møder Cortés",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1519** ankommer **Hernán Cortés** mod øst, \"One Reed\"-året i den aztekiske kalender, det år, hvor gudens genkomst forventedes. Kejser **Moctezuma II** tøver: Skal vi bekæmpe en angriber eller byde en guddommelighed velkommen?"
+        },
+        {
+          "type": "image",
+          "asset": "herna_u0301n_corte_u0301s_arrival_mexico_1519_moctezuma_painting",
+          "ratio": "4:3",
+          "caption": "1519: Cortés' ankomst opfylder løftet om guddommelig tilbagevenden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han sender gaver af guld og fjer. [[Conquistadors]] ser dette som en invitation. Myten, sand eller forstærket efter kendsgerningen, bliver et psykologisk våben i efteråret for [[Tenochtitlán]], den aztekiske hovedstad."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Myte",
+              "title": "Skaber",
+              "detail": "De dødes knogler, guddommeligt blod, majsgave."
+            },
+            {
+              "date": "10. århundrede",
+              "title": "Eksil fra Tula",
+              "detail": "Præstekongen går østpå."
+            },
+            {
+              "date": "1519",
+              "title": "Cortes",
+              "detail": "Det forventede afkast bliver til erobring."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p4",
+      "title": "Et symbol, der aldrig dør",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Efter erobringen forsvandt Quetzalcoatl ikke. Nogle munke tror, de ser en apostel der. Senere gjorde det uafhængige Mexico det til et emblem på præcolumbiansk storhed. Muralister fra det 20. århundrede, som Diego Rivera, maler det som landets sjæl."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selv i dag udtrykker den fjerklædte slange en identitet: rødder i jorden, ambition vendt mod himlen."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Quetzalcoatl**, Feathered Serpent, er guden for den mesoamerikanske civilisation. Skaber, landsforvist konge, dengang fatal profeti i **1519**, han er fortsat et centralt symbol på Mexico."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Hvordan fungerer hukommelsen?",
+  "subtitle": "Hjerne",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Hukommelse er ikke et kamera. Hver hukommelse er rekonstrueret. Det er sådan hjernen koder, lagrer... og nogle gange opfinder.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "At huske er ikke at genlæse en fil. Det er at rekonstruere en scene."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vi forestiller os ofte hukommelsen som en harddisk: vi optager, vi gemmer, vi genlæser. Sådan fungerer hjernen ikke. Hver gang du husker det, **genopbygge** en scene fra fragmenter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det er kraftfuldt ... og fejlbarligt. At forstå dette betyder at forstå, hvorfor vi glemmer, hvorfor vi laver fejl, og hvorfor vi lærer."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Flere minder, ikke kun én",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Forskellige områder af hjernen håndterer forskellige former for hukommelse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Først er der [[Arbejdshukommelse]]: hvad du har \"i tankerne\" i et par sekunder, som et telefonnummer. Det er begrænset, omkring **7 elementer** i gennemsnit. Dernæst **langtidshukommelse**: fakta, minder om begivenheder, færdigheder som at køre på cykel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Disse systemer lever ikke alle samme sted i hjernen. **præfrontal cortex**, den forreste del af hjernen bag panden, hjælper meget på arbejdshukommelsen. Andre regioner, såsom **neocortex**, det ydre lag af hjernen, gemmer på lang sigt."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Hvordan en hukommelse er fikset",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "Hippocampus, en dyb struktur, hjælper med at danne nye minder."
+        },
+        {
+          "type": "paragraph",
+          "text": "For at information kan gå fra skrøbelig til holdbar, skal hjernen styrke forbindelserne mellem **neuroner**, nervecellerne. Vi taler om **konsolidering**, transformationen af et nyligt minde til et varigt spor. En lille struktur kaldet **søhest**, formet som en søhest i tindingelappen, spiller en nøglerolle i minder om begivenheder."
+        },
+        {
+          "type": "funFact",
+          "text": "Søvn, især visse faser, er med til at konsolidere det, vi har lært i løbet af dagen. At revidere og derefter sove fungerer ofte bedre end at revidere indtil kl. 03.00."
+        },
+        {
+          "type": "paragraph",
+          "text": "En berømt regel, knyttet til **-forskeren Donald Hebb**: neuroner, der fyrer sammen, har en tendens til at forbinde stærkere. Sammenfattende: \"det, der lyser sammen, binder sammen\". Dette er princippet om **neuroplasticitet**, hjernens evne til at ændre sine forbindelser."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "At huske er at ændre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Når du genkalder en hukommelse, bliver den midlertidigt **formbar**, der kan redigeres. Detaljer fra nutiden kan glide ind. Så gemmer hjernen det igen. Det er derfor, to vidner til den samme ulykke kan fortælle forskellige versioner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vi kan endda skabe **falsk opsynsmand**: scener, som vi mener er sande, men som aldrig fandt sted, eller ikke sådan. Hjernen udfylder hullerne med det, den allerede ved."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "At glemme er ikke altid en fiasko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hvis du huskede alle unødvendige detaljer, ville du være mættet. At glemme hjælper os til at generalisere, beslutte, holde det væsentlige. En god hukommelse sorterer lige så meget, som den beholder."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hukommelse er en aktiv rekonstruktion, ikke en perfekt optagelse. Den er afhængig af flere systemer, konsolideres især under søvn og kan blive forvrænget med hver påmindelse."
+        }
+      ]
+    }
+  ]
+}

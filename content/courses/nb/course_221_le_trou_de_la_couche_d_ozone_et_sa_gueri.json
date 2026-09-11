@@ -1,0 +1,138 @@
+{
+  "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri",
+  "title": "Ozonhullet (og dets utvinning)",
+  "subtitle": "1985-2065",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Et gigantisk hull over Antarktis, en traktat signert av 197 land, og en planet som helbreder. Her er **den eneste store økologiske krisen** som menneskeheten allerede har løst.",
+  "hero": {
+    "image": "le_trou_de_la_couche_d_ozone",
+    "ratio": "16:9",
+    "hook": "Et hull i himmelen, oppdaget ved en tilfeldighet, og lukket av en traktat signert av hele verden."
+  },
+  "sections": [
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I 1985 kunne britiske forskere stasjonert i Antarktis ikke tro på målingene deres: en del av himmelen så ut til å ha mistet beskyttelsen mot solen. Det var ikke en enhetsfeil, men et reelt hull i ozonlaget, dette usynlige skjoldet som beskytter oss alle. Dette kurset forteller historien om hvordan verden oppdaget denne faren og, uvanlig, hvordan den klarte å fikse den."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p1",
+      "title": "Et skjørt skjold, en hendig gift",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**ozonlaget** ligger mellom 15 og 35 kilometer over havet, i [[Stratosfæren]], og absorberer det meste av **UV-B**, disse strålene fra solen som er kraftige nok til å skade huden vår og DNA fra levende celler. På 1930-tallet oppfant industrien **klorfluorkarboner**, eller [[Klorfluorkarboner (KFK)]]: gasser ansett som perfekte, rimelige, som ble plassert overalt, i kjøleskap, klimaanlegg og aerosolbokser."
+        },
+        {
+          "type": "paragraph",
+          "text": "Problemet er at disse gassene er for stabile: i stedet for å brytes ned nær bakken, stiger de til stratosfæren. I 1974 advarte kjemikerne Mario Molina og Frank Sherwood Rowland: under påvirkning av solen frigjør KFK klor, som ødelegger ozon. De fikk Nobelprisen i 1995, men nesten ingen hørte på dem da."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p2",
+      "title": "1985: sjokket, deretter den globale avtalen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I 1985 bekreftet British Antarctic Survey nyheten: hver vår åpner det seg et spektakulært hull i ozonlaget over [[Antarktis]]. NASA-satellitter hadde allerede disse dataene, men programvaren deres hadde avvist det som for ekstremt til å være sant."
+        },
+        {
+          "type": "image",
+          "asset": "ozone_hole_antarctica_satellite_image_nasa",
+          "ratio": "16:9",
+          "caption": "Ozonhullet over Antarktis, sett av satellitt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trusselen mot menneskers helse tas svært alvorlig, og verden reagerer raskt. I 1987 signerte landene [[Montreal-protokollen (1987)]], en traktat som organiserte den gradvise utfasingen av KFK. Den har bare 24 land ved starten; i dag samler den **197**, alle medlemmene av FN."
+        },
+        {
+          "type": "funFact",
+          "text": "Montreal-protokollen er den eneste traktaten i FNs historie som er ratifisert av alle land i verden, uten unntak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne suksessen skyldes en klar regel for alle og et felles fond som hjelper fattige land med å endre maskinene sine. Selv produsenter, som i utgangspunktet var imot det, endte opp med å følge etter ved å finne lønnsomme erstatningsprodukter."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p3",
+      "title": "Hvorfor er klimaet vanskeligere?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Denne suksessen blir ofte sitert for å si at vi kunne løse klimaendringene på samme måte. Men de to problemene er forskjellige: ozonhullet kom fra et lite antall gasser produsert av et lite antall fabrikker, som var enkle å målrette mot. [[Karbondioksid (CO₂)]] kommer ut av nesten alt vårt moderne samfunn gjør, flytting, oppvarming, dyrking, bygging: å redusere CO₂ krever å endre hele den globale økonomien, ikke bare en håndfull kjemiske fabrikker."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gode nyheter forresten: KFK var også kraftige klimagasser. Ved å forby dem bremset Montreal-protokollen også den globale oppvarmingen, uten at det var hovedmålet."
+        },
+        {
+          "type": "funFact",
+          "text": "Uten denne traktaten kunne KFK ha tilført om lag 1 °C ekstra oppvarming til jorden innen 2050, bare på grunn av deres drivhuseffekt."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p4",
+      "title": "En langsom, men veldig reell bedring",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Klor som allerede stiger i atmosfæren tar tid å forsvinne: det var ikke før på midten av 1990-tallet at nivåene av skadelige gasser stabiliserte seg. Siden tidlig på 2000-tallet har helbredelsen vært tydelig og målbar."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1974",
+              "title": "Det vitenskapelige varselet",
+              "detail": "Molina og Rowland oppdager sammenhengen mellom KFK og ozon."
+            },
+            {
+              "date": "1985",
+              "title": "Hullet er bekreftet",
+              "detail": "British Antarctic Survey publiserer sine data."
+            },
+            {
+              "date": "1987",
+              "title": "Montreal-protokollen",
+              "detail": "Undertegnelse av traktaten, nå ratifisert av 197 land."
+            },
+            {
+              "date": "2000",
+              "title": "Start av healing",
+              "detail": "Nivåene av skadelige gasser stabiliserer seg endelig."
+            },
+            {
+              "date": "2065",
+              "title": "Gå tilbake til det normale (planlagt)",
+              "detail": "Ozonlaget bør gå tilbake til 1980-nivået."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Hvis traktaten fortsetter å bli respektert, bør ozonlaget gå tilbake til 1980-tilstanden innen **2065-2070**, og forhindre millioner av hudkreft og grå stær. Vi må være årvåkne: Hemmelige utslipp av KFK ble oppdaget i Øst-Asia for noen år siden, et bevis på at en global avtale bare fungerer hvis den overvåkes konstant."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ozonhullet er fortsatt den eneste store miljøkrisen som er fullstendig løst ved globalt samarbeid: en traktat signert i 1987 av 197 land, med vitenskapelig målbare resultater."
+        }
+      ]
+    }
+  ]
+}

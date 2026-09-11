@@ -1,0 +1,135 @@
+{
+  "id": "course_18_la_grande_depression_1929",
+  "title": "Den store depresjonen",
+  "subtitle": "1929",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "**24. oktober 1929** kollapser Wall Street. På tre år har arbeidsledigheten påvirket **25%** av amerikanerne, og krisen åpner veien for ekstremer i Europa.",
+  "hero": {
+    "image": "la_grande_depression_1929",
+    "ratio": "16:9",
+    "hook": "En torsdag på Wall Street, og verden faller inn i et tiår med elendighet."
+  },
+  "sections": [
+    {
+      "id": "course_18_la_grande_depression_1929_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**24. oktober 1929**, **Svart torsdag**, New York Stock Exchange kollapser. Det er ikke bare en økonomisk ulykke. Det er begynnelsen på **Stor depresjon**, en global økonomisk lammelse."
+        },
+        {
+          "type": "paragraph",
+          "text": "På tre år faller formuen som produseres i verden med omtrent **15%**. Arbeidsledighet påvirker **25%** av amerikanerne. Europeiske demokratier vakler. Slik tok en boble alt bort."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p1",
+      "title": "The Roaring Twenties og boblen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **Brølende tjueårene** (1920-tallet) konsumerte Amerika på kreditt: biler, radioer, husholdningsapparater. Mellom 1920 og 1929 ble **Dow Jones**, indeksen som måler prisen på store amerikanske aksjer, multiplisert med seks. Boblens motor: [[Kjøpe aksjer på margin]]. Vi låner for å kjøpe verdipapirer og satser på at de stiger."
+        },
+        {
+          "type": "image",
+          "asset": "roaring_twenties_jazz_1920s",
+          "ratio": "4:3",
+          "caption": "The Roaring Twenties: eufori, kreditt og spekulasjoner."
+        },
+        {
+          "type": "funFact",
+          "text": "På dagen for krasjet, på Chicago Stock Exchange, hengte meglere en virtuell stork ... anklaget for å ha brakt ulykke i stedet for velstand."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fra 1928 stagnerte produksjonen og jordbruksprisene falt. Fabrikker lager mer enn folk kan kjøpe: dette er [[overproduksjon]]. Markedet er [[overvurdert]], for dyrt i forhold til virkeligheten. Når tvil råder, selger alle samtidig."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p2",
+      "title": "Fra krakket til bankenes konkurs",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den **24. oktober.**, elleve millioner salgsordrer. På **29**, \"Black Tuesday\", akselererer fallet. Mellom 1929 og 1932 mistet markedet **89%** av verdien. Så kommer [[bankløp]]: bølger av kunder som tar ut pengene sine i panikk. Omtrent **9,000** Amerikanske banker går konkurs."
+        },
+        {
+          "type": "image",
+          "asset": "unemployed_queue_great_depression",
+          "ratio": "4:3",
+          "caption": "Køer til arbeidsledige: krisens sosiale ansikt."
+        },
+        {
+          "type": "funFact",
+          "text": "Ødelagte amerikanere festet hester til bilene sine for å spare bensin. De ble kalt \"Hoover Cars\", etter navnet til president [[Herbert Hoover]], ansett som for passive i møte med krisen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uten kreditt stenger fabrikkene. Produksjonen faller med omtrent **46%**. Uten sosial beskyttelse verdig navnet er millioner av mennesker avhengig av suppekjøkken."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p3",
+      "title": "Krisen når Europa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "USA repatrierer sine lån. Europa er kvelende. [[Gullstandard]], et system der valutaer er knyttet til gull, forplanter krisen: For å beholde gull hever sentralbankene renten, noe som bremser økonomien ytterligere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Politikken til [[deflasjon]] (senke priser og lønninger for å \"rydde opp\") svikter. I Tyskland når arbeidsledigheten **30%**. Adolf Hitler utnytter desperasjonen mot [[Weimar]], den skjøre tyske republikken. I **januar 1933** kom han til makten. Den økonomiske krisen åpner døren for politisk katastrofe."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p4",
+      "title": "Roosevelt og New Deal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valgt i **1932**, **Franklin D. Roosevelt** lanserer [[Roosevelts nye avtale (1933)]]. Slutten av ren [[laissez-faire]], ideen om at staten ikke skal berøre markedet. Staten banker på [[bedring]]: store arbeider, regulering av banker, start av sosial beskyttelse. Utvinningen forble skjør ... frem til mobiliseringen i 1941."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "24. oktober 1929",
+              "title": "Svart torsdag",
+              "detail": "Wall Street kollaps."
+            },
+            {
+              "date": "1929-1933",
+              "title": "Bankfeil",
+              "detail": "Rundt 9000 amerikanske banker forsvinner."
+            },
+            {
+              "date": "1933",
+              "title": "Ny avtale",
+              "detail": "Roosevelt pålegger statlig intervensjon."
+            },
+            {
+              "date": "januar 1933",
+              "title": "Hitler ved makten",
+              "detail": "Den tyske krisen gir næring til nazismen."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Etter krasjet til **1929** mistet Dow Jones **89%** av sin verdi, **25%** av amerikanerne var arbeidsløse, og krisen favoriserte Hitlers ankomst til makten i **1933**."
+        }
+      ]
+    }
+  ]
+}

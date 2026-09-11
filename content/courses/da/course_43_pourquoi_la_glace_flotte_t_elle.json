@@ -1,0 +1,106 @@
+{
+  "id": "course_43_pourquoi_la_glace_flotte_t_elle",
+  "title": "Hvorfor flyder isen?",
+  "subtitle": "Vand og molekyler",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Is flyder på vandet. Dette virker normalt, men det er faktisk meget sjældent. Og heldigvis for livet på Jorden.",
+  "hero": {
+    "image": "pourquoi_la_glace_flotte",
+    "ratio": "16:9",
+    "hook": "Hvis isen flød, ville søerne fryse til bunden. Og livet i vandet ville have svært ved at overleve."
+  },
+  "sections": [
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En isterning i et glas, et isbjerg i havet: isen **flyder**. Vi finder det banalt. Men for de fleste stoffer er det faste stof mere **tæt**, derfor tungere for samme volumen: det synker."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vand gør det modsatte. Denne undtagelse kommer fra formen af dets molekyle. Og det reddede mange søer om vinteren."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p1",
+      "title": "Et V-formet molekyle",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Et vandmolekyle er et atom af **ilt** forbundet med to atomer af **brint**. Den er ikke lige: den danner en **V**. På grund af denne form er de elektriske ladninger ikke fordelt ligeligt: Molekylet er **polar**, med den ene ende svagt negativ og den anden let positiv."
+        },
+        {
+          "type": "image",
+          "asset": "water_molecule_model_crystal",
+          "ratio": "4:3",
+          "caption": "Vandmolekylet: et V, der tiltrækker og frastøder sine naboer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultat: vandmolekyler tiltrækker hinanden gennem [[Hydrogenbindinger]], som små magneter. I væsken forbliver de tæt, men bevæger sig stadig. I is fryser de forskelligt."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
+      "title": "Når vandet fryser, fylder det",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Omkring **0 °C** størkner vandet. For at danne is organiserer molekylerne sig i et **sekskantet** netværk, en slags sekssidet bikage. De efterlader derefter mere **tom** mellem sig end i flydende tilstand."
+        },
+        {
+          "type": "funFact",
+          "text": "Dette er grunden til, at en fuld flaske vand kan **briste** i fryseren: is fylder mere end flydende vand."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mindre materiale i samme volumen betyder: **mindre tæt**. Men et objekt, der er mindre tæt end væsken omkring det, stiger. Is flyder derfor på vandet. Dette kaldes **vandekspansionsanomali**: I modsætning til næsten alle stoffer udvider vand sig, når det afkøles under **4 °C**."
+        },
+        {
+          "type": "image",
+          "asset": "iceberg_floating_arctic_ocean",
+          "ratio": "16:9",
+          "caption": "Et isbjerg flyder, fordi is er mindre tæt end flydende vand."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
+      "title": "Hvorfor det er vigtigt for søer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tænk hvis isen flød. Det ville dannes på overfladen og derefter synke til bunden. Søen ville fryse lag for lag, helt ned til bunden. Sommeren ville ofte ikke være nok til at smelte alt væk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Heldigvis forbliver isen på toppen. Den danner et **isolere dæksel**. Under den frosne overflade kan flydende vand forblive omkring **4 °C**, den temperatur, hvor flydende vand er tættest, nok til at fisk og vandplanter kan overleve."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p4",
+      "title": "Og også for klimaet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den hvide isflage reflekterer en stor del af Solens lys tilbage i rummet takket være dens høje **albedo**, dens reflekterende kraft. Hvis det forsvinder, optager det mørke hav mere varme. Dette fremskynder opvarmningen: en ond cirkel."
+        },
+        {
+          "type": "takeaway",
+          "text": "Is flyder, fordi vandet, efterhånden som det størkner, danner et mere \"luftet\" netværk: det bliver mindre tæt end flydende vand. Denne undtagelse beskytter livet i vand om vinteren."
+        }
+      ]
+    }
+  ]
+}

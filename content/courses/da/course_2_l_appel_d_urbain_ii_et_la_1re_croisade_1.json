@@ -1,0 +1,144 @@
+{
+  "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1",
+  "title": "Opkaldet fra Urban II og det 1. korstog",
+  "subtitle": "1095",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "I november 1095, i Clermont, lancerede pave Urban II en appel, som sendte titusindvis af europæere til Jerusalem. Korstogenes fødsel.",
+  "hero": {
+    "image": "l_appel_d_urbain_ii_et_la_1re_croisade",
+    "ratio": "16:9",
+    "hook": "En tyve minutters tale, og Vesten sætter afsted mod Jerusalem."
+  },
+  "sections": [
+    {
+      "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I november **1095** i Auvergne taler pave **Urban II** til en folkemængde. Hans opfordring er enkel: gå hen og befri Jerusalem og hjælp de kristne i Østen. Til gengæld, syndsforladelse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ingen forestiller sig endnu, hvad denne tale vil udløse. Titusindvis af mænd vil skynde sig mod øst. Pavedømmet opfinder en hellig krig. Det vil i lang tid ændre forholdet mellem de kristne i Vesten (ofte kaldet latinere), Østens Byzantinske Rige og den muslimske verden."
+        }
+      ]
+    },
+    {
+      "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p1",
+      "title": "Byzans ringer efter hjælp",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Siden det 7. århundrede har Jerusalem været under muslimsk herredømme. Der passerer stadig kristne pilgrimme. Alt ændrer sig med **Seljuk-tyrkere**, et krigerisk folk fra Asien. I **1071**, på [[Slaget ved Manzikert]], i Lilleasien, knuste de det byzantinske imperiums hær, det østromerske imperium. De åbnede således Anatolien, hjertet af det, der i dag er Tyrkiet."
+        },
+        {
+          "type": "image",
+          "asset": "seljuk_turks_battle_of_manzikert",
+          "ratio": "4:3",
+          "caption": "Mantzikert, 1071: Byzans mister Anatolien til Seljukkerne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cornered, kejseren af Byzans, [[Alexios I Komnenos]], beder Rom om hjælp. Siden [[Skisma af 1054]] er den vestlige katolske kirke og den østlige ortodokse kirke dog blevet adskilt. For Urban II var muligheden perfekt: at hævde pavens magt og at aflede riddernes vold mod en ydre sag. Kirken havde allerede forsøgt at begrænse disse private kampe med [[Guds fred]], en bevægelse for at beskytte ikke-kombattanter."
+        },
+        {
+          "type": "funFact",
+          "text": "I Mantzikert fangede sultanen Alp Arslan den byzantinske kejser. I stedet for at dræbe ham, behandlede han ham med ære, før han løslod ham."
+        }
+      ]
+    },
+    {
+      "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p2",
+      "title": "Clermont: \"Gud vil det!\" »",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den **27. november 1095**, ved [[Council of Clermont]], en stor kirkeforsamling, lover Urban II en [[Plenum forkælelse]] til dem, der vil forlade: total forladelse af bøder på grund af synder. Ekspeditionen bliver en bevæbnet pilgrimsrejse. **-råbet \"Gud vil have det!\" »** breder sig. De frivillige syr et rødt kors på skulderen: vi \"krydser stier\"."
+        },
+        {
+          "type": "image",
+          "asset": "council_of_clermont_1095",
+          "ratio": "4:3",
+          "caption": "The Council of Clermont, 1095: opfordringen, der lancerede det første korstog."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gløden undslap hurtigt paven. Før herrerne leder [[Eremitten Peter]], en populær prædikant, en skare fattige mennesker mod øst. Uden disciplin eller forsyninger plyndrede dette \"de fattiges korstog\" undervejs og blev decimeret i Anatolien. Iver alene laver ikke en hær."
+        }
+      ]
+    },
+    {
+      "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p3",
+      "title": "Fra Antiokia til Jerusalem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1096** forlod baronernes korstog: **Godfrey af Bouillon**, en herre af Lorraine, [[Bohemond af Taranto]], en normannisk prins af Syditalien, og andre ledere. Alexis kræver eder af dem. Efter den lange belejring af **Antiokia** (1097-1098), en stor by i Syrien, nåede de overlevende Jerusalem. Den **15. juli 1099** faldt byen. Massakren sætter et varigt præg på muslimsk hukommelse."
+        },
+        {
+          "type": "funFact",
+          "text": "Godfrey af Bouillon afviser titlen som konge. Han kalder sig [[Fortaler for Den Hellige Grav]], Kristi gravs beskytter: for ydmyg, siger han, til at bære en gylden krone, hvor Kristus bar torne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Korsfarerne grundlagde den [[østlige latinske stater]], fire små kristne stater i Mellemøsten. Senere beskyttede [[Tempelherrer]], munke-soldater, pilgrimmene. I **1187** generobrer [[Saladin]], en muslimsk sultan, Jerusalem. Andre korstog vil følge, indtil Saint-Jean-d'Acre, den sidste latinske bastion, falder i **1291**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1071",
+              "title": "Mantzikert",
+              "detail": "Byzans mister Anatolien til Seljukkerne."
+            },
+            {
+              "date": "1095",
+              "title": "Council of Clermont",
+              "detail": "Urban II lancerer opfordringen til korstoget."
+            },
+            {
+              "date": "1099",
+              "title": "Erobringen af Jerusalem",
+              "detail": "Korsfarerne grundlagde østens latinske stater."
+            },
+            {
+              "date": "1187",
+              "title": "Saladin generobrer Jerusalem",
+              "detail": "Den muslimske generobring genopliver korstogene."
+            },
+            {
+              "date": "1291",
+              "title": "Saint-Jean-d'Acres fald",
+              "detail": "Slut på den latinske tilstedeværelse i det hellige land."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p4",
+      "title": "Et varigt hul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På militært plan ender eventyret galt. På et kulturelt plan bringer det imidlertid øst og vest sammen: græsk videnskab overført af araberne, teknikker, produkter, finansiering af militære ordrer. Europa lærer at mobilisere under samme banner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Arven forbliver tvetydig. Urban II's kald skabte en fælles vestlig kristen identitet. Men det skabte også varig mistillid mellem religionerne. En tale, der varede et par minutter, åbnede to århundreder med krige og handel."
+        },
+        {
+          "type": "takeaway",
+          "text": "I **1095** forvandlede Urban II en byzantinsk anmodning om hjælp til en væbnet pilgrimsrejse. I **1099** falder Jerusalem; i **1291** kollapser den latinske tilstedeværelse. Korstogene forenede Vesten og delte varigt minderne."
+        }
+      ]
+    }
+  ]
+}

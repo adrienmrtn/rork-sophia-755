@@ -1,0 +1,154 @@
+{
+  "id": "course_121_la_renaissance_italienne",
+  "title": "Den italienske renæssance",
+  "subtitle": "14.-16. århundrede",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "I løbet af to århundreder genopfandt Italien maleri, skulptur og arkitektur og ændrede den måde, vi ser verden på.",
+  "hero": {
+    "image": "la_renaissance_italienne",
+    "ratio": "16:9",
+    "hook": "På to århundreder har Italien genopfundet kunsten og vores måde at se verden på."
+  },
+  "sections": [
+    {
+      "id": "course_121_la_renaissance_italienne_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den italienske renæssance (14.-16. århundrede) er ikke kun en ændring i stil. Det er en ny måde at se verden på. I løbet af to århundreder satte Italien observation, fornuft og individet i centrum for alting."
+        },
+        {
+          "type": "paragraph",
+          "text": "Født i de rige byer på halvøen, genopfinder denne revolution maleri, skulptur og arkitektur. To drivkræfter driver det: Genopdagelsen af den græske og romerske oldtid og dristige tekniske opfindelser."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p1",
+      "title": "Firenze, byen, der tænder lunten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det hele starter i **Firenze**, som dominerede den europæiske økonomi i det 14. århundrede takket være tekstiler og bankvirksomhed. Familien **Medici** tog magten der. Disse bankfolk bruger [[Protektion]], kunstnerfinansiering, som et prestigeværktøj."
+        },
+        {
+          "type": "funFact",
+          "text": "For at komme uden om forbuddet mod udlån med renter opfandt Medici banktricks. Kirken vender det blinde øje til, så længe de finansierer kapeller."
+        },
+        {
+          "type": "image",
+          "asset": "lorenzo_de_medici_portrait_florence",
+          "ratio": "4:3",
+          "caption": "Laurent de Medici, kendt som \"den storslåede\", stor kunstners beskytter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Samtidig ændrer **humanisme** menneskets plads. Tænkere som [[Pico della Mirandola]] hævder, at mennesker er i stand til at forstå naturen gennem fornuft. I **1453** skubber Konstantinopels fald lærde til Italien med glemte græske manuskripter."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p2",
+      "title": "At male det virkelige: perspektiv og krop",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I det 15. århundrede opfandt arkitekten **Brunelleschi** omkring **1420** [[lineært perspektiv]]. Væk er middelalderen, hvor det vigtigere blev malet større: rummet følger nu matematiske regler, som et vindue åbent til virkeligheden."
+        },
+        {
+          "type": "image",
+          "asset": "brunelleschi_linear_perspective_florence",
+          "ratio": "4:3",
+          "caption": "Perspektiv giver en illusion af dybde på en flad overflade."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Leonardo da Vinci** går videre: han dissekerer kroppe for at forstå muskler og nerver og maler også følelser. Oliemaling, der kommer fra Flandern, erstatter gradvist [[Tempera]] og giver mulighed for [[Chiaroscuro]]: disse kontraster af skygge og lys, som giver lindring."
+        },
+        {
+          "type": "funFact",
+          "text": "Den krop, som Leonardo studerede mest, var den af en hundrede år gammel mand. Da han undersøgte det, beskrev han et af de første kendte tilfælde af en arterie blokeret af alder."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p3",
+      "title": "Leonardo, Michelangelo, Raphael",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I begyndelsen af det 16. århundrede indtog Rom Firenzes plads, båret af byggepaver som **Julius II**. Dette er den \"fuldstændige mands\" æra. **Leonardo fra Vinci** er modellen: maler, ingeniør, anatom."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Michelangelo** legemliggør styrke. Hans **David** bliver symbolet på Firenze. Mellem **1508** og **1512** malede han loftet på **Det sixtinske kapel**: 500 kvadratmeter på Genesis."
+        },
+        {
+          "type": "image",
+          "asset": "michelangelo_david_sistine_chapel_ceiling",
+          "ratio": "4:3",
+          "caption": "Michelangelo, fra David på loftet i Det Sixtinske Kapel."
+        },
+        {
+          "type": "funFact",
+          "text": "I *Den sidste dom* malede Michelangelo sit eget ansigt på flået hud: en måde at udtrykke, hvor meget dette arbejde havde udmattet ham."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Raphaël** legemliggør ynde. Hans freske *Skolen i Athen* samler antikkens store tænkere i en harmoni, der vil tjene som model i århundreder."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p4",
+      "title": "En arv, der krydser Europa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Efter Raphaëls død i **1520** er balancen forstyrret. Kunstnerne forlænger kroppene og tvinger farverne: dette er [[manérisme]], en mere rastløs kunst. Kongen af Frankrig **Frans I** inviterer Leonardo og lancerer **fransk renæssance** med slottene i Loire."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1420",
+              "title": "Lineært perspektiv",
+              "detail": "Brunelleschi sætter plads i ligninger i Firenze."
+            },
+            {
+              "date": "1453",
+              "title": "Konstantinopels fald",
+              "detail": "Forskere flygter til Italien med deres græske manuskripter."
+            },
+            {
+              "date": "1504",
+              "title": "Michelangelos David",
+              "detail": "Firenze vælger et symbol på borgerlig stolthed."
+            },
+            {
+              "date": "1508-1512",
+              "title": "Det sixtinske kapel",
+              "detail": "Michelangelo malede Genesis loftet."
+            },
+            {
+              "date": "1520",
+              "title": "Rafaels død",
+              "detail": "Højrenæssancen slutter, manerismen begynder."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Født i Firenze takket være Medici, revolutionerede den italienske renæssance kunst med perspektiv (omkring 1420) og studiet af kroppen, før den nåede sit højdepunkt i Rom med Leonardo, Michelangelo og Raphael."
+        }
+      ]
+    }
+  ]
+}

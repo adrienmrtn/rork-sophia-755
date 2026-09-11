@@ -1,0 +1,139 @@
+{
+  "id": "course_10_la_decouverte_de_l_amerique_1492",
+  "title": "Opdagelsen af Amerika",
+  "subtitle": "1492",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Den 12. oktober 1492 nåede Christopher Columbus en ø på Bahamas, som han troede var Japan. En navigationsfejl åbner op for globalisering.",
+  "hero": {
+    "image": "la_decouverte_de_l_amerique_1492",
+    "ratio": "16:9",
+    "hook": "Han ledte efter Asien. Det ramte et kontinent, som Europa havde glemt."
+  },
+  "sections": [
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**12. oktober 1492**, efter mere end to måneder i Atlanten, råber en sømand fra Pinta \"Jorden!\". **Christopher Columbus**, genuesisk i Spaniens tjeneste, lander på en ø i Bahamas, som han kalder San Salvador. Han tror på, at han når Asien."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne fejl vil forene to halvkugler. Bæret af momentum fra [[Spansk Reconquista (1492)]], generobringen af Granada fra muslimerne samme år, markerede ekspeditionen for Europa overgangen fra middelalderen til den moderne æra."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p1",
+      "title": "En vej mod vest, en stor fejltagelse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Columbus søger ikke at bevise, at Jorden er rund. [[Eratosthenes]], græsk lærd fra det 3. århundrede f.Kr. BC, havde allerede beregnet det. Det egentlige mål er økonomisk: at nå krydderier og silke fra vest, uden at gå gennem osmannerne, der kontrollerer de østlige ruter."
+        },
+        {
+          "type": "image",
+          "asset": "christopher_columbus_portrait",
+          "ratio": "4:3",
+          "caption": "Christopher Columbus, genuesisk navigatør i de katolske monarkers tjeneste."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hans fejl: at undervurdere jordens omkreds. Det placerer Japan **4.500 km** fra De Kanariske Øer, sammenlignet med næsten **20.000** i virkeligheden. Portugal nægter. Isabella af Castilla, dronning af Spanien, accepterer. Ved [[Santa Fe overgiver sig]], en kontrakt, Columbus bliver admiral, vicekonge og modtager **10%** af overskuddet."
+        },
+        {
+          "type": "funFact",
+          "text": "Columbus skrev om at se havfruer i Caribien. De var søkøer. Han bemærkede skuffet, at de var meget mindre smukke end i legenderne."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p2",
+      "title": "70 dage til San Salvador",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den 3. **August 1492** forlod tre skibe Palos, Spanien: **Pinta**, **Niña** og **Santa María**. Takket være [[Pinzón]]-familien, velhavende lokale skibsejere, er besætningen på **90 mand** erfarne. Overfarten varer **70 år gammel**. Columbus fører to dagbøger: den ene ægte, den anden forfalsket, for at berolige sine sømænd."
+        },
+        {
+          "type": "image",
+          "asset": "santa_maria_caravel_ship",
+          "ratio": "4:3",
+          "caption": "Santa María, flagskibet i 1492 ekspeditionen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den **12. oktober** mødte han [[Taínos]], indfødte indbyggere i De Store Antiller. Han er overbevist om at være i Indien og kalder dem \"indianere\". Han noterer sig deres guld og deres tilsyneladende føjelighed. Det koloniale blik er der allerede."
+        },
+        {
+          "type": "funFact",
+          "text": "La Niña hed faktisk *Santa Clara*. Santa María fik tilnavnet *La Gallega*, fordi den blev bygget i Galicien."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p3",
+      "title": "Den colombianske børs",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Europæernes ankomst udløste **Columbian-udvekslingen**, en masseoverførsel af planter, dyr og sygdomme mellem de to verdener. Mod Europa: kartofler, majs, tomater, kakao, tobak. Mod Amerika: hvede, sukker, kaffe, heste, kvæg. Pladerne og landskaberne på begge sider ændrer sig for altid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prisen er forfærdelig. Kopper, mæslinger, influenza dræber **50 til 90 %** af de oprindelige befolkninger på et århundrede. Diplomatisk deler Spanien og Portugal kloden af [[Tordesillas-traktaten (1494)]] uden at konsultere nogen."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "3. august 1492",
+              "title": "Afgang fra Palos",
+              "detail": "Tre skibe sejlede mod vest."
+            },
+            {
+              "date": "12. oktober 1492",
+              "title": "San Salvador",
+              "detail": "Columbus lander på Bahamas."
+            },
+            {
+              "date": "1494",
+              "title": "Tordesillas",
+              "detail": "Spanien og Portugal deler verden."
+            },
+            {
+              "date": "1507",
+              "title": "Amerika",
+              "detail": "Waldseemüller døber den nye verden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p4",
+      "title": "Et kontinent uden sin opdager",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Columbus døde i **1506** uden at indrømme sin opdagelse. Det er [[Amerigo Vespucci]], en florentinsk navigatør, der forstår, at det er en \"Mundus Novus\", en ny verden. I **1507** navngav kartografen Waldseemüller kontinentet **Amerika**. Florentinerens fornavn kommer ind på verdenskortet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Brutal administrator i Hispaniola (det nuværende Haiti og Den Dominikanske Republik), Columbus endte endda med at blive sendt tilbage i lænker. Ud over mennesket åbner **1492** op for globalisering: Amerikanske penge strømmer ind, handelens centrum flytter sig fra Middelhavet til Atlanterhavet. Europa bliver omdrejningspunktet i et fire-kontinentsystem."
+        },
+        {
+          "type": "takeaway",
+          "text": "Columbus dør overbevist om, at han er nået til Asien. Hans fejl forenede to halvkugler og udløste en irreversibel biologisk, økonomisk og menneskelig omvæltning."
+        }
+      ]
+    }
+  ]
+}

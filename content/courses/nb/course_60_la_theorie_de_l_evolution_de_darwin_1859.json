@@ -1,0 +1,102 @@
+{
+  "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
+  "title": "Darwins evolusjonsteori",
+  "subtitle": "1859",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "I 1859 publiserte Darwin The Origin of Species. Den sentrale ideen: levende ting endres over tid ved naturlig utvalg.",
+  "hero": {
+    "image": "la_theorie_de_l_evolution_de_darwin",
+    "ratio": "16:9",
+    "hook": "Arter er ikke faste. De forandrer seg. Sakte. Men sikkert."
+  },
+  "sections": [
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1859** publiserte **Charles Darwin** *Om opprinnelsen til arter*. Boken sjokkerer, fascinerer, splitter. Den sentrale ideen er imidlertid enkel å formulere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Levende ting varierer. Noen varianter hjelper til med å overleve og reprodusere. Disse variasjonene overføres. Over generasjoner endrer befolkningen seg."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
+      "title": "Den øyeåpnende reisen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "charles_darwin_portrait",
+          "ratio": "4:3",
+          "caption": "Darwin, britisk naturforsker fra 1800-tallet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Som ung gutt drar Darwin på skipet **Beagle**. I årevis observerte han planter, fossiler, fugler. På Galapagosøyene la han merke til at nærliggende fugler hadde forskjellige nebb avhengig av maten."
+        },
+        {
+          "type": "image",
+          "asset": "darwin_finches_galapagos_beaks",
+          "ratio": "4:3",
+          "caption": "Dyser tilpasset ulike dietter: en sterk indikator."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
+      "title": "Naturlig utvalg, på vanlig engelsk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se for deg en bestand av dyr. Noen løper litt fortere, fordøyer litt bedre, motstår kulden litt mer. Hvis det hjelper dem å overleve og få unger, blir disse egenskapene mer vanlige."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det er ikke slik at individer \"ønsker\" å utvikle seg. Det er et filter: miljøet beholder det som fungerer. Darwin kaller dette **naturlig utvalg**."
+        },
+        {
+          "type": "funFact",
+          "text": "Darwin ventet lenge før han publiserte. Han fryktet skandale. En annen naturforsker, **Alfred Russell Wallace**, kom til lignende ideer: dette presset Darwin til å gi ut boken sin."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
+      "title": "Idesammenstøtet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På 1800-tallet trodde mange at arter ble skapt som de var. Å si at de forandrer seg, og at mennesker deler en historie med andre dyr, ryster religion og samfunn."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vitenskapen går fremover: fossiler, arters geografi, så senere genetikk, bekrefter den generelle ideen."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
+      "title": "Og i dag?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vi vet nå at DNA har variasjoner. Vi observerer evolusjon i laboratoriet (bakterier, virus) og i naturen. Vi bekjemper også bakterier som er resistente mot antibiotika: dette er levende evolusjon."
+        },
+        {
+          "type": "takeaway",
+          "text": "Darwin viste at levende ting utvikler seg ved naturlig utvalg: egenskaper som er nyttige for overlevelse og reproduksjon spres. Moderne genetikk har bekreftet og tydeliggjort dette rammeverket."
+        }
+      ]
+    }
+  ]
+}

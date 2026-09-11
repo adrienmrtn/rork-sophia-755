@@ -1,0 +1,100 @@
+{
+  "id": "course_56_la_decouverte_de_la_radioactivite_marie",
+  "title": "Oppdagelsen av radioaktivitet",
+  "subtitle": "Marie Curie",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Marie Curie, med Pierre Curie og Henri Becquerel, åpner kapittelet om radioaktivitet. To nobelpriser, overveldende arbeid og en enorm arv.",
+  "hero": {
+    "image": "la_decouverte_de_la_radioactivite_marie_curie",
+    "ratio": "16:9",
+    "hook": "Hun veide tonnevis med malm for å isolere noen få gram av et usynlig grunnstoff."
+  },
+  "sections": [
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Marie Curie** (født Maria Skłodowska) er den første kvinnen som mottar en Nobelpris. Hun er fortsatt den eneste personen som har mottatt **to** i to forskjellige vitenskaper: fysikk, deretter kjemi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dens emne: **radioaktivitet**, det vil si det faktum at visse atomer spontant sender energi og partikler."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
+      "title": "En smal dør til vitenskap",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hun ble født i Polen og dro for å studere i Paris fordi lokale universiteter stengte mange dører for kvinner. Hun jobber hardt, ofte under prekære forhold."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hun giftet seg med **Pierre Curie**, fysiker. Sammen utgjorde de en sjelden laboratorieduo for tiden."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
+      "title": "Gi navn til den usynlige",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1896** la **Henri Becquerel** merke til at uran skjuler fotografiske plater uten lys. Marie Curie bestemmer seg for å studere dette fenomenet i detalj. Hun oppfant ordet **radioaktivitet**."
+        },
+        {
+          "type": "image",
+          "asset": "marie_curie_pitchblende_radioactivity",
+          "ratio": "4:3",
+          "caption": "Tonnevis med pitchblende for å isolere radium og polonium."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sammen med Pierre oppdager hun to nye elementer: **polonium** (oppkalt etter Polen) og **radium**. For å isolere dem må enorme mengder malm, bekblende, bearbeides."
+        },
+        {
+          "type": "funFact",
+          "text": "Radium lyser svakt i mørket. Vi ble først overrasket... før vi forsto hvor farlig det var."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
+      "title": "Herlighet og pris å betale",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1903** mottok Marie, Pierre og Becquerel Nobelprisen i fysikk. I **1911** mottok Marie alene Nobelprisen i kjemi. Pierre døde ved et uhell i 1906. Hun fortsetter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Under første verdenskrig organiserte hun mobile røntgenenheter for å behandle sårede. Hun utsetter kroppen sin for doser som vi i dag vet er uakseptable."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
+      "title": "En dobbeltsidig arv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Radioaktivitet har muliggjort strålebehandling mot visse kreftformer ... og også atomvåpen. Kunnskap er nøytral; dens bruk er det ikke."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marie Curie forvandlet en merkelig observasjon til en ny vitenskap: radioaktivitet. Arbeidet hans åpnet opp moderne fysikk ... på bekostning av risikoer som da var dårlig forstått."
+        }
+      ]
+    }
+  ]
+}

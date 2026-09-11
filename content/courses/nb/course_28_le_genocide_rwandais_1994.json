@@ -1,0 +1,131 @@
+{
+  "id": "course_28_le_genocide_rwandais_1994",
+  "title": "Folkemordet i Rwanda",
+  "subtitle": "1994",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "I **100 dager**, mellom april og juli **1994**, ble hundretusener av tutsier og moderate hutuer massakrert i Rwanda. Det raskeste folkemordet i århundret finner sted foran verdens øyne.",
+  "hero": {
+    "image": "le_genocide_rwandais_1994",
+    "ratio": "16:9",
+    "hook": "Hundre dager. Hundretusenvis av dødsfall. Og en verden som valgte å ikke gripe inn."
+  },
+  "sections": [
+    {
+      "id": "course_28_le_genocide_rwandais_1994_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mellom april og juli **1994**, på bare **100 dager**, opplevde Rwanda en tragedie med sjelden tetthet i historien. Mellom **500.000** og **800.000** blir tutsier, så vel som moderate hutuer, systematisk myrdet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette folkemordet er kjent for sin hastighet og passivitet fra det internasjonale samfunnet. Å forstå 1994 betyr å forstå koloniale røtter, politisk planlegging og diplomatisk stillhet."
+        }
+      ]
+    },
+    {
+      "id": "course_28_le_genocide_rwandais_1994_p1",
+      "title": "Når identitet blir et kart",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I Rwanda dannet ikke hutuer (omtrent **85%**) og tutsier (omtrent **14%**) før koloniseringen faste \"raser\". Skillet var fremfor alt sosialt og økonomisk: en hutu beriket med husdyr kunne bli en tutsi, og omvendt."
+        },
+        {
+          "type": "funFact",
+          "text": "I **1933** fastsatte den belgiske administrasjonen medlemskap på **etnisk identitetskort**. Noen ganger klassifiserer vi etter formen på nesen ... eller antall kyr: over ti er vi tutsier."
+        },
+        {
+          "type": "paragraph",
+          "text": "De belgiske nybyggerne, påvirket av raseteorier, stolte først på tutsiene, og henvendte seg deretter til hutu-flertallet etter hvert som uavhengigheten nærmet seg (**1962**). Pogromer skyver tusenvis av tutsier i eksil. Hat blir til arv."
+        }
+      ]
+    },
+    {
+      "id": "course_28_le_genocide_rwandais_1994_p2",
+      "title": "En planlagt utryddelse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På 1990-tallet ledet president **Juvénal Habyarimana** landet. Regimet hans er i krig mot den [[Rwandisk patriotisk front]], som består av eksil-tutsi. [[Hutu Power]]-ekstremistene utgjør Interahamwe-militsene. [[Radio Télévision Libre des Mille Collines]] kringkaster hat og dehumaniserer tutsier hver dag."
+        },
+        {
+          "type": "image",
+          "asset": "rwandan_genocide_1994",
+          "ratio": "4:3",
+          "caption": "Rwanda i 1994, scene for et planlagt folkemord."
+        },
+        {
+          "type": "paragraph",
+          "text": "**6. april 1994** ble presidentflyet skutt ned. I løpet av en time stenger demningene. Rundt **8 000** mennesker blir drept hver dag. Massakren er lokal: naboer, kolleger, lokale myndigheter. Dette er ikke en spontan eksplosjon. Det er en organisert operasjon."
+        }
+      ]
+    },
+    {
+      "id": "course_28_le_genocide_rwandais_1994_p3",
+      "title": "Verdens stillhet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På stedet har [[UNAMIR og general Dallaire]], FN-oppdraget ledet av kanadieren Roméo Dallaire, kun observasjonsmandat. Traumatisert av feilen i [[Somalia]], bremser USA ned enhver intervensjon. Vi unngår til og med ordet «folkemord», som vil kreve handling i samsvar med 1948-konvensjonen."
+        },
+        {
+          "type": "image",
+          "asset": "paul_kagame_rpf_rwanda",
+          "ratio": "4:3",
+          "caption": "Paul Kagame og FPR, hvis offensiv setter en stopper for massakrene."
+        },
+        {
+          "type": "paragraph",
+          "text": "Frankrike startet for sent operasjon [[Turkis]], offisielt humanitær, men kontroversiell for å ha tilrettelagt for folkemorders flukt mot [[Zaire]], den nåværende demokratiske republikken Kongo. Det er ikke FN som stopper drapene: det er RPF-offensiven, ledet av **Paul Kagame**, som tar Kigali, hovedstaden, **4. juli 1994**."
+        }
+      ]
+    },
+    {
+      "id": "course_28_le_genocide_rwandais_1994_p4",
+      "title": "Rettferdighet og minne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Etter juli 1994 må landet dømme det uforsvarlige. [[Gacaca]]-domstolene, distriktsdomstolene, behandler nesten to millioner saker. [[Den internasjonale straffedomstolen for Rwanda]] dømmer de store planleggerne. Kigali-minnesmerket huser mer enn **250 000**-ofre."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1933",
+              "title": "Etniske kort",
+              "detail": "Belgisk kolonisering fryser hutuer og tutsi."
+            },
+            {
+              "date": "6. april 1994",
+              "title": "Angrep og skift",
+              "detail": "Presidentflyet blir skutt ned; folkemordet begynner."
+            },
+            {
+              "date": "april-juli 1994",
+              "title": "100 dager",
+              "detail": "500 000 til 800 000 dødsfall; internasjonal passivitet."
+            },
+            {
+              "date": "4. juli 1994",
+              "title": "Fangst av Kigali",
+              "detail": "RPF setter en stopper for massakrene."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "I **100 dager** (1994) ble hundretusenvis av tutsier myrdet i Rwanda. Til tross for advarslene griper ikke verden inn; bare RPF-offensiven stoppet folkemordet."
+        }
+      ]
+    }
+  ]
+}

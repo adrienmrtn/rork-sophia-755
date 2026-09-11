@@ -1,0 +1,124 @@
+{
+  "id": "course_68_la_theorie_de_la_relativite_pour_tous",
+  "title": "Relativitetsteorien for alle",
+  "subtitle": "Einstein 1905 og 1915",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "I 1905 og 1915 endret Einstein vår idé om rom, tid og tyngdekraft. Og uten beregningene ville GPS-en din tatt feil med flere kilometer.",
+  "hero": {
+    "image": "la_theorie_de_la_relativite_pour_tous",
+    "ratio": "16:9",
+    "hook": "Tid er ikke en universell klokke. Og tyngdekraften er ikke en usynlig streng."
+  },
+  "sections": [
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1905** og **1915** publiserte **Albert Einstein** to teorier som rystet fysikken. Inntil da fulgte vi stort sett [[Newton]]: tiden fløt likt for alle, overalt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einstein viser at rom og tid henger sammen, og at tyngdekraften kan forstås som en krumning av dette vevet. Disse ideene forklarer [[sorte hull]] og [[Big Bang]]. De korrigerer også telefonens GPS hver dag."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p1",
+      "title": "1905: spesiell relativitet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**spesiell relativitet** er basert på to enkle ideer. Naturlovene er de samme for alle som beveger seg i konstant hastighet. Og lyshastigheten i et vakuum, **At. 300 000 km/s**, er den samme for alle, enten vi nærmer oss den eller beveger oss bort fra den."
+        },
+        {
+          "type": "image",
+          "asset": "albert_einstein_portrait_princeton",
+          "ratio": "auto",
+          "caption": "Albert Einstein, forfatter av relativitetsteorien."
+        },
+        {
+          "type": "paragraph",
+          "text": "For at lys alltid skal holde samme hastighet, må tiden justeres. Dette er [[Tidsutvidelse]]: jo raskere et objekt går, desto langsommere går tiden for det sammenlignet med noen i hvile. Dette er ikke en illusjon. **atomklokker**, instrumenter som måler tid med ekstrem presisjon, målte den."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einstein tegner også [[E=mc²]]: masse er en veldig konsentrert form for energi. Siden **c**, lysets hastighet, er enorm, kan en veldig liten masse frigjøre kolossal energi. Det er en pilar i [[kjernefysikk]], studiet av atomkjerner og deres reaksjoner."
+        },
+        {
+          "type": "funFact",
+          "text": "I 1905 var Einstein ikke universitetsprofessor. Han jobber som undersøker ved patentkontoret i Bern, Sveits."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p2",
+      "title": "1915: gravitasjon som krumning",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ti år senere publiserte Einstein **generell relativitet**. Newton så på tyngdekraften som en usynlig kraft som trekker masser mot hverandre. Einstein tilbyr et annet bilde: **rom-tid**, rom og tid forent i et enkelt stoff, danner et fleksibelt stoff."
+        },
+        {
+          "type": "paragraph",
+          "text": "En tung masse, som solen, huler ut dette vevet. Se for deg en bowlingkule på en trampoline. En ball som kastes ved siden av går ikke rett: den følger hulen. På samme måte går jorden i bane fordi den følger krumningen skapt av solen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selv lys følger disse kurvene. I **1919** bekreftet den britiske astronomen **Arthur Eddington** det under en formørkelse: den tilsynelatende posisjonen til stjernene bak solen er litt forskjøvet. Einstein blir berømt over natten."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p3",
+      "title": "GPS, lommesikker",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GPS-satellitter roterer i omtrent **14.000 km/t**, ved **20.000 km** høyde. For å finne deg til nærmeste meter, må klokkene deres forbli synkroniserte med de på bakken. Imidlertid virker to relativistiske effekter samtidig."
+        },
+        {
+          "type": "paragraph",
+          "text": "På grunn av hastigheten deres, går tiden litt saktere, en effekt av spesiell relativitet: omtrent **7 mikrobølger** forsinkelse per dag. På grunn av den svakere tyngdekraften i høyden, går tiden litt raskere der, en effekt av generell relativitet: omtrent **45 mikrosekunder** på forhånd."
+        },
+        {
+          "type": "funFact",
+          "text": "Uten relativistiske korreksjoner kan GPS-posisjonsfeilen nå omtrent **11 km** per dag."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultatet er en netto fremgang på omtrent **38 mikrosekunder** per dag. Den virker bitteliten. Med lysets hastighet er dette allerede enormt for navigasjon."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p4",
+      "title": "Bølger, sorte hull, ekspanderende univers",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Generell relativitet forutsier svarte hull: områder der krumningen er så sterk at selv lys ikke lenger kommer ut. Einstein tvilte på deres virkelige eksistens. [[radioastronomi]], observasjon av himmelen i radiobølger, og nyere bilder har bekreftet dem."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1916** forutså han også **gravitasjonsbølger**: krusninger i rom-tid produsert av kosmiske katastrofer, for eksempel sammenslåingen av to sorte hull. Vi må vente til **2015** og **LIGO**-observatoriet, en bakkedetektor som er følsom for romvibrasjoner, for å oppdage dem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Til slutt åpner disse ligningene veien til et ekspanderende univers, grunnlaget for Big Bang-modellen. Einstein hadde først lagt til en kosmologisk konstant****, et matematisk begrep for å tvinge frem et fast univers. Hubbles observasjoner overbeviste ham senere om noe annet."
+        },
+        {
+          "type": "takeaway",
+          "text": "**E=mc²** kobler sammen masse og energi. Generell relativitetsteori sier at tyngdekraften bøyer rom-tid. Uten disse korreksjonene ville GPS-en din vært flere kilometer feil hver dag."
+        }
+      ]
+    }
+  ]
+}

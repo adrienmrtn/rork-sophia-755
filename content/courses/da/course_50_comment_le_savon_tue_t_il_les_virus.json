@@ -1,0 +1,100 @@
+{
+  "id": "course_50_comment_le_savon_tue_t_il_les_virus",
+  "title": "Hvordan dræber sæbe vira?",
+  "subtitle": "Hygiejne",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Sæbe er ikke \"magi\". Det angriber den fede skal af visse vira og trækker dem ud af din hud. Her er grunden til, at 20 sekunder betyder noget.",
+  "hero": {
+    "image": "comment_le_savon_tue_les_virus",
+    "ratio": "16:9",
+    "hook": "Et simpelt våben mod vira: molekyler, der kan lide vand ... og fedt."
+  },
+  "sections": [
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Under COVID-19-pandemien er en meget enkel gestus igen blevet central: at vaske dine hænder med sæbe. Intet behov for et laboratorium. Bare vand, sæbe og lidt tid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hvorfor fungerer det så godt? Fordi mange farlige vira bærer en konvolut lavet af fedt. Og sæbe er fremragende til at ødelægge fedt."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p1",
+      "title": "Svagheden af visse vira",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nogle vira, såsom **coronavirus** eller influenzavirus, har en ydre belægning lavet af lipider (fedtstoffer). Denne kuvert beskytter dem ... indtil den støder på sæbe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Andre vira, kaldet \"nøgne\", har ikke denne konvolut. De er mere modstandsdygtige over for sæbe og alkohol. Heldigvis er mange af de vira, der rejser gennem hænder og dråber, indhyllet."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
+      "title": "Sæbe, et tosidet molekyle",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "handwashing_soap_water_hands",
+          "ratio": "4:3",
+          "caption": "Gnidning hjælper sæben med at nå hvert hjørne af hænderne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sæbemolekyler er [[overfladeaktive stoffer]]. De har et hoved der kan lide vand og en hale der kan lide fedt. Halen synker ned i virussens fede hylster. Hovedet forbliver vendt mod vandet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultat: konvolutten rives. Virussen er deaktiveret. Så fører vandet affaldet væk. Sæbe \"brænder\" ikke virussen som en syre: den **opløser** og fjerner den."
+        },
+        {
+          "type": "funFact",
+          "text": "Det er det samme princip, der fjerner fedt fra en pande: Sæben griber fedtet og lader det gå med vandet."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p3",
+      "title": "Hvorfor 20 sekunder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det tager tid for sæben at nå alle folderne: mellem fingrene, under neglene, omkring håndleddene. Omkring **20 sekunder** friktion, dette er det minimum, der ofte anbefales."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uden friktion virker sæbe mindre godt. Vand alene enten: det angriber ikke effektivt den fede kuvert."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p4",
+      "title": "Sæbe eller hydroalkoholisk gel?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En gel med mindst **60%** alkohol kan også ødelægge mange indkapslede vira. Men hvis der er synligt snavs eller fedt, er gelen mindre effektiv: snavset fungerer som en skærm. I dette tilfælde forbliver sæbe og vand det bedste valg."
+        },
+        {
+          "type": "takeaway",
+          "text": "Sæbe dræber mange vira ved at rive deres fede belægninger væk og derefter vaske dem væk med vandet. Tid + friktion = effektivitet."
+        }
+      ]
+    }
+  ]
+}

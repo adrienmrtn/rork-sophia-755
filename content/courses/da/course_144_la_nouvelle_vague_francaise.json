@@ -1,0 +1,126 @@
+{
+  "id": "course_144_la_nouvelle_vague_francaise",
+  "title": "Den franske nye bølge",
+  "subtitle": "1959-1968",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Unge kritikere fra *Biograf notesbøger* går bag kameraet. Mellem **1959** og **1968** frigjorde New Wave filmen fra studiet og opfandt moderne auteur-biograf.",
+  "hero": {
+    "image": "la_nouvelle_vague_francaise",
+    "ratio": "16:9",
+    "hook": "Filmkritikere stjæler kameraer og genopfinder den syvende kunst."
+  },
+  "sections": [
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Ny bølge** (1959-1968) er ikke en simpel stil. Det er et magtgreb. Unge franske filmelskere vurderer studiebiografen for at være for fast, for poleret, for skrevet på forhånd. De vil filme den måde, du skriver en roman på: frit, i første person."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ved at gå fra kritik til produktion gør de instruktøren til filmens egentlige forfatter. Og de ændrer verdensbiografen."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p1",
+      "title": "Først en revolution af ideer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Før kulisserne er der et magasin: **Biograf notesbøger**, grundlagt i **1951** af [[André Bazin]]. Omkring ham, unge kritikere: **Jean-Luc Godard**, **François Truffaut**, **Claude Chabrol**, **Jacques Rivette**, **Éric Rohmer**. Deres centrale idé kaldes [[Forfatter teori]]."
+        },
+        {
+          "type": "image",
+          "asset": "cahiers_du_cinema_magazine_1950s",
+          "ratio": "4:3",
+          "caption": "Les Cahiers du cinéma: skolen, hvor New Wave lærte at tænke på film."
+        },
+        {
+          "type": "paragraph",
+          "text": "For dem er den rigtige skaber ikke manuskriptforfatteren, men den, der instruerer. Indramningen, rytmen, nedskæringerne: det er en forfatters signatur, ligesom en romanforfatters stil."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p2",
+      "title": "1959: Truffaut og Godard kommer ind på scenen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1959** sejrede *De fire hundrede slag* af **François Truffaut** i Cannes. Filmen følger **Antoine Doinel**, et teenagebrud, spillet af [[Jean-Pierre Leaud]]. Kameraet følger livet i stedet for et strengt scenarie. Det sidste blik mod os krydser [[fjerde væg]]: helten ser på publikum uden en lykkelig slutning."
+        },
+        {
+          "type": "image",
+          "asset": "truffaut_400_coups_antoine_doinel_film",
+          "ratio": "4:3",
+          "caption": "Antoine Doinel vendt mod havet: en ung, der nægter en klar skæbne."
+        },
+        {
+          "type": "funFact",
+          "text": "Året efter chokerede *Åndeløs* af Godard med [[Jean-Paul Belmondo]] med sine bratte snit. Godard skærer i midten af bevægelserne, som om du skriver med en saks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Disse to film beviser, at vi kan fortælle historier forskelligt: hurtigere, friere, tættere på gaden."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p3",
+      "title": "Forlad studiet, film Paris",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pausen er også teknisk. [[Éclair Caméflex]]-kameraer og mere følsomme film tillader [[Optagelse på stedet og letvægtskameraet]]. Ikke flere tunge studier: Vi filmer på caféer, lejligheder og i Paris' gader, ofte i naturligt lys."
+        },
+        {
+          "type": "paragraph",
+          "text": "Skuespillerne improviserer. Tale bliver velkendt, nogle gange stammende. Biografen ånder som liv. Denne frihed inspirerede derefter [[Novo Cinema]] i Brasilien, dengang ultra-strenge regler som [[Dogme 95]] i Danmark, fjerne arvinger af den samme tørst efter autenticitet."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p4",
+      "title": "En global arv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I årene **1970** blev **Nyt Hollywood** inspireret af det: **Martin Scorsese**, **Francis Ford Coppola**, **Steven Spielberg**-mix amerikansk effektivitet og fransk frihed. The New Wave påtvingede en varig idé: en film kan bære en enkelt persons stemme."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1951",
+              "title": "Biograf notesbøger",
+              "detail": "Tidsskriftet bliver idéernes laboratorium."
+            },
+            {
+              "date": "1959",
+              "title": "De fire hundrede slag",
+              "detail": "Truffaut påtvinger auteur-biograf i Cannes."
+            },
+            {
+              "date": "1960",
+              "title": "Forpustet",
+              "detail": "Godard bryder den klassiske montage."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "The New Wave tog biografen ud af studiet og ud på gaden. Det gjorde instruktøren til en auteur, og denne idé fortsætter med at forme uafhængig biograf rundt om i verden."
+        }
+      ]
+    }
+  ]
+}

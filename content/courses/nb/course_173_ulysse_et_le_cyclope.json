@@ -1,0 +1,116 @@
+{
+  "id": "course_173_ulysse_et_le_cyclope",
+  "title": "Odyssevs og kyklopene",
+  "subtitle": "Utspekulert mot kraft",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "I Odysseen konfronterer Odysseus Kyklopen Polyphemus. Hans [[metis]] redder ham, men stoltheten hans tiltrekker seg Poseidons vrede.",
+  "hero": {
+    "image": "ulysse_et_le_cyclope",
+    "ratio": "16:9",
+    "hook": "En enøyd kjempe sluker mennene sine. Odyssevs kan ikke beseire med makt. Så han finner på et navn: Ingen."
+  },
+  "sections": [
+    {
+      "id": "course_173_ulysse_et_le_cyclope_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Etter den trojanske krigen prøver **Ulysses**, kongen av øya Ithaca, å reise hjem. Homer forteller om reisen sin i **Odyssey**. I sang IX nærmer han seg en fruktbar øy der [[Kykloper]], ensomme kjemper med ett øye, bor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der møter han **Polyfem**, sønn av havguden **Poseidon**. Episoden er ikke bare en monsterfortelling. Det er en leksjon: [[metis]], utspekulert intelligens, kan slå brute force. Men [[hybris]], overdreven stolthet, kan ødelegge alt."
+        }
+      ]
+    },
+    {
+      "id": "course_173_ulysse_et_le_cyclope_p1",
+      "title": "Gjestfrihet håpet på, barbari funnet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ulysses kommer med tolv følgesvenner. Kyklopene har ingen forsamlinger, ingen lover, ikke noe ekte jordbruk. De bor i huler. Grekerne tror på [[xenia]]: den hellige plikten til å ta imot fremmede, under beskyttelse av Zevs."
+        },
+        {
+          "type": "image",
+          "asset": "cyclops_polyphemus_one_eye_greek_myth",
+          "ratio": "4:3",
+          "caption": "Polyphemus, kyklopen, figur av lovløs kraft."
+        },
+        {
+          "type": "paragraph",
+          "text": "I hulen ser mennene oster og storfe. Kompisene ønsker å dra. Odysseus insisterer på å vente på mesteren, i håp om en vertsgave. Feil. Polyphemus kommer tilbake, blokkerer inngangen med en enorm stein og sluker to grekere. Styrke vil ikke være nok. Du må være utspekulert."
+        }
+      ]
+    },
+    {
+      "id": "course_173_ulysse_et_le_cyclope_p2",
+      "title": "Vin, staven og «Ingen»",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Odyssevs kutter en olivenstokk, et tre som er kjært for Athena, visdommens gudinne. Han skjuler det. Så tilbyr han Polyphemus en veldig sterk, nesten ren vin. Kjempen blir full. Før han sovner spør han navnet på gjesten."
+        },
+        {
+          "type": "funFact",
+          "text": "På gresk sier Ulysses at han heter **Outis**, \"Ingen\". Dette ordet fremkaller også **métis**, utspekulert. Homer spiller på den doble betydningen: det er faktisk listen som beseirer kjempen."
+        },
+        {
+          "type": "image",
+          "asset": "ulysses_cyclops_blinding_stake_ancient_vase",
+          "ratio": "4:3",
+          "caption": "Odysseus og hans menn blinder Polyphemus, en berømt scene fra greske vaser."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ulysses svarer: «Mitt navn er **Person**.» Så slår mennene hans den brennende pælen inn i det ene øyet. De andre kyklopene kommer løpende. «Hvem dreper deg? » spør de. «Person!» svarer Polyfemus. De går bort og tenker på guddommelig ondskap."
+        }
+      ]
+    },
+    {
+      "id": "course_173_ulysse_et_le_cyclope_p3",
+      "title": "Gå ut under sauene",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dagen etter vokter blind Polyphemus utgangen. Han kjenner på ryggen til hver sau. Ulysses binder følgesvennene sine under magen til de ulleste dyrene. Selv henger han under den største væren. Kjempen kjærtegner dyret uten å føle fienden like nedenfor."
+        },
+        {
+          "type": "paragraph",
+          "text": "En gang på havet kan ikke Ulysses motstå. Han roper sitt sanne navn, sin avstamning, sin by. Han vil ha [[kleos]], herligheten som lever videre i navnet. Polyfemus kan endelig forbanne et spesifikt mål med sin far Poseidon."
+        }
+      ]
+    },
+    {
+      "id": "course_173_ulysse_et_le_cyclope_p4",
+      "title": "Forbannelsen som åpner Odysseen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Polyphemus ber til Poseidon: at Ulysses aldri kommer hjem, eller forsinket, alene, etter å ha mistet alle sine følgesvenner. Denne forbannelsen strukturerer de ti årene med vandring som følger. Havet blir en straff."
+        },
+        {
+          "type": "image",
+          "asset": "poseidon_god_sea_trident_greek",
+          "ratio": "4:3",
+          "caption": "Poseidon, havets gud, hevner sin sønn Polyphemus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Myten motsetter seg to heltemot. I Iliaden vinner man gjennom styrke og berømmelse. I Odyssey overlever vi gjennom tilbakeholdenhet. Odyssevs vant gjennom vidd. Han tapte på grunn av stoltheten over å ville bli anerkjent."
+        },
+        {
+          "type": "takeaway",
+          "text": "Overfor Polyphemus triumferer Ulysses takket være [[metis]] og navnet \"Person\". Ved å avsløre identiteten sin for [[kleos]] utløser han Poseidons sinne og forlenger hans eksil."
+        }
+      ]
+    }
+  ]
+}

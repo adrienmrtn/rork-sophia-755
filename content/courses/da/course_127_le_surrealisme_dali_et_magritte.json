@@ -1,0 +1,144 @@
+{
+  "id": "course_127_le_surrealisme_dali_et_magritte",
+  "title": "Surrealisme: Dalí og Magritte",
+  "subtitle": "1924-1969",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "Født i 1924 ønsker surrealismen at befri det ubevidste: drømme, ønsker, skøre associationer. **Dalí** delirium, **Magritte** gådefuldt.",
+  "hero": {
+    "image": "le_surrealisme_dali_et_magritte",
+    "ratio": "16:9",
+    "hook": "Hvad hvis fornuften var et fængsel, og drømme var den eneste udvej?"
+  },
+  "sections": [
+    {
+      "id": "course_127_le_surrealisme_dali_et_magritte_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**surrealisme** (1924-1969) er ikke kun en stil: det er en revolution i tankerne. Efter Første Verdenskrig ønskede han at fusionere drøm og bevidsthed, hvor virkelighed og fantasi holdt op med at modsætte sig hinanden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Med **Salvador Dalí** og **René Magritte** opfinder bevægelsen en global visuel grammatik. Man kaster sig ud i personlig delirium; den anden i den kolde og filosofiske gåde."
+        }
+      ]
+    },
+    {
+      "id": "course_127_le_surrealisme_dali_et_magritte_p1",
+      "title": "1924: manifestet og Freud",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Digteren **André Breton** grundlagde bevægelsen med *Surrealismemanifest* i **1924**. Efter [[Dadaisme]], som ødelagde mening, ønsker Breton at genopbygge sindet ved at frigøre tanken. Han taler om \"ren psykisk automatisme\": at skrive eller male uden kontrol over fornuften."
+        },
+        {
+          "type": "image",
+          "asset": "andre_breton_surrealist_manifesto_1924",
+          "ratio": "4:3",
+          "caption": "Manifestet fra 1924: Surrealisme bliver et program."
+        },
+        {
+          "type": "funFact",
+          "text": "Breton indsamlede \"primitive\" kunstgenstande og kuriositeter. Da han døde, indeholdt hans værksted mere end 5.000 stykker, der skulle stimulere fantasien."
+        },
+        {
+          "type": "paragraph",
+          "text": "Inspirationen kommer fra [[Freudiansk psykoanalyse som kilde]]: Sigmund Freud viser, at det ubevidste dominerer psyken. For at omgå intern censur opfandt surrealisterne [[Automatisk skrivning]] og [[Udsøgt lig]], dette spil hvor hver person tilføjer en sætning eller en tegning uden at se den forrige. Målet: at male det uvirkelige med en foruroligende realisme, at få folk til at tvivle på den stabile verden."
+        }
+      ]
+    },
+    {
+      "id": "course_127_le_surrealisme_dali_et_magritte_p2",
+      "title": "Dalí: delirium som metode",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den catalanske **Salvador Dalí** (1904-1989) sluttede sig til gruppen i **1929**. Han opfandt den \"paranoid-kritiske\" metode: et frivilligt delirium, hvor han kombinerer heterogene elementer. Hans fobier bliver universelle symboler."
+        },
+        {
+          "type": "image",
+          "asset": "dali_persistence_of_memory_melting_clocks",
+          "ratio": "4:3",
+          "caption": "Hukommelsens vedholdenhed: Tid der smelter."
+        },
+        {
+          "type": "funFact",
+          "text": "Dalí var bange for græshopper siden barndommen. Han forbinder dem i sine malerier med frygten for, at tiden går og døden."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Hukommelsens vedholdenhed* (**1931**) viser bløde ure i et landskab inspireret af [[Port Lligat]] på den catalanske kyst. Breton gav det tilnavnet \"Avida Dollars\" og udelukkede det i **1939**. Men Dalí havde allerede forvandlet surrealismen til et globalt fænomen, tjent med en teknik, der var renæssancen værdig."
+        }
+      ]
+    },
+    {
+      "id": "course_127_le_surrealisme_dali_et_magritte_p3",
+      "title": "Magritte: hverdagens mysterium",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Belgieren **René Magritte** (1898-1967) førte et almindeligt liv og malede ofte i sin spisestue. Hans surrealisme er ikke drømmeagtig: den er intellektuel. Den afslører mysteriet gemt i hverdagen gennem visuelle paradokser."
+        },
+        {
+          "type": "image",
+          "asset": "magritte_treachery_of_images_pipe_painting",
+          "ratio": "4:3",
+          "caption": "\"Dette er ikke et rør\": billedet er ikke sagen."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Billedernes forræderi* (**1929**) skriver under et perfekt rør: \"Dette er ikke et rør\". Billedet er et tegn, ikke objektet. Bowlerhat, æble, skyer: Magritte skaber gåder. Vi taler nogle gange om [[Magisk realisme]]: det mærkelige er født fra en lidt forvrænget velkendt verden."
+        },
+        {
+          "type": "funFact",
+          "text": "Inden han levede af sit maleri, designede Magritte tapet og reklamer for belgiske modehuse: deraf hans smag for gentagelse og orden."
+        }
+      ]
+    },
+    {
+      "id": "course_127_le_surrealisme_dali_et_magritte_p4",
+      "title": "Hvilken surrealisme forlod os",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Surrealisme gennemsyrer biograf, mode og vores visuelle kultur. Efter **1924** har kunsten ikke længere forpligtelsen til at kopiere omverdenen: den kan dykke ned i den mest obskure intimitet."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1924",
+              "title": "Manifest af surrealisme",
+              "detail": "Breton definerer psykisk automatisme."
+            },
+            {
+              "date": "1929",
+              "title": "Dalí og Magritte",
+              "detail": "To veje: kontrolleret delirium og filosofisk gåde."
+            },
+            {
+              "date": "1931",
+              "title": "Hukommelsens vedholdenhed",
+              "detail": "Bløde ure bliver et globalt ikon."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Dalí skubber selvudfoldelse til et punkt af ekstravagance; Magritte sætter spørgsmålstegn ved billedernes sandhed og annoncerer konceptuel kunst. Bevægelsen døde formelt ud med Breton i **1966**, men dens arv består."
+        },
+        {
+          "type": "takeaway",
+          "text": "Surrealismen frigør det ubevidste fra fornuftens kontrol. Dalí opfinder paranoia-kritik; Magritte forvandler hverdagsbilledet til en filosofisk gåde."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "course_58_la_structure_de_l_adn_watson_crick_1953",
+  "title": "Strukturen til DNA",
+  "subtitle": "1953",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "I 1953 beskrev Watson og Crick DNA-dobbelthelixen. Bak denne herligheten, det avgjørende arbeidet til Rosalind Franklin.",
+  "hero": {
+    "image": "la_structure_de_l_adn",
+    "ratio": "16:9",
+    "hook": "Formen til et molekyl ... og hemmeligheten bak arv."
+  },
+  "sections": [
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vi visste at egenskaper går fra foreldre til barn. Men hvilken kjemisk gjenstand bærer denne informasjonen? På midten av 1900-tallet ble svaret klarere: **DNA**."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1953** publiserte **James Watson** og **Francis Crick** en kjent modell: **dobbelpropellen**. Dette skjemaet forklarer hvordan DNA kan kopiere seg selv."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
+      "title": "Finne støtte for arv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DNA (deoksyribonukleinsyre) er et langt molekyl som finnes i cellene våre. Den inneholder kjemiske \"bokstaver\" som danner en kode. Men på 1940- og 1950-tallet kjente vi ennå ikke dens 3D-form."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uten skjemaet er det vanskelig å forstå hvordan denne koden kan dupliseres ved hver celledeling."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p2",
+      "title": "Bildet som forandrer alt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "rosalind_franklin_photo_51_x_ray",
+          "ratio": "4:3",
+          "caption": "Foto 51 av Rosalind Franklin avslører en spiralformet struktur."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Rosalind Franklin**, fysiker og kjemiker, skaffer røntgenbilder av DNA. Hennes berømte **Bilde 51** viser klare bevis på en helix."
+        },
+        {
+          "type": "paragraph",
+          "text": "Watson og Crick ser disse dataene (under forhold som nå anses som urettferdige for Franklin) og bygger sin modell. Franklin døde i 1958; Nobelen fra 1962 vil gå til Watson, Crick og Wilkins, ikke henne."
+        },
+        {
+          "type": "funFact",
+          "text": "Franklin gjorde også stort arbeid med virus. Dens rolle i DNA har lenge vært undervurdert i populære beretninger."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
+      "title": "Hvorfor den doble helixen er viktig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "dna_double_helix_model_watson_crick",
+          "ratio": "4:3",
+          "caption": "To komplementære tråder: kopien blir tenkelig."
+        },
+        {
+          "type": "paragraph",
+          "text": "To tråder vikler seg rundt hverandre. Bokstavene står mot hverandre i par. Når trådene skilles, kan hver av dem tjene som en modell for å rekonstruere den andre. Arvelighet blir en forståelig kjemisk mekanisme."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
+      "title": "Moderne biologi starter her",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fra denne oppdagelsen er født moderne genetikk, sekvensering, DNA-tester, genterapi. Og også etiske debatter: hva skal man gjøre med denne makten?"
+        },
+        {
+          "type": "takeaway",
+          "text": "I **1953** forklarer dobbelhelix-modellen hvordan DNA lagrer og kopierer informasjon fra levende ting. Franklin ga avgjørende bevis for lenge slettet fra fortellingen."
+        }
+      ]
+    }
+  ]
+}

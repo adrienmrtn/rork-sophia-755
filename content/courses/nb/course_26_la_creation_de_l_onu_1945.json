@@ -1,0 +1,116 @@
+{
+  "id": "course_26_la_creation_de_l_onu_1945",
+  "title": "Opprettelsen av FN",
+  "subtitle": "1945",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "Landene **26. juni 1945**, **51** signerer FNs charter i San Francisco. Født fra asken etter andre verdenskrig, ønsker FN å skåne folk for krigens svøpe.",
+  "hero": {
+    "image": "la_creation_de_l_onu_1945",
+    "ratio": "16:9",
+    "hook": "Etter to verdenskriger, en dristig idé: tving nasjoner til å snakke før de skyter."
+  },
+  "sections": [
+    {
+      "id": "course_26_la_creation_de_l_onu_1945_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Landene **26. juni 1945**, **51** signerer FNs **Leie** i San Francisco. Målet er klart: å skåne fremtidige generasjoner for krigens svøpe. FN er ikke en enkel allianse. Det ønsker å være et felles rammeverk for hele verden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prosjektet forsøker å forene to ofte motstridende ideer: nasjonenes likhet... og den virkelige vekten til de store seiersmaktene."
+        }
+      ]
+    },
+    {
+      "id": "course_26_la_creation_de_l_onu_1945_p1",
+      "title": "Folkeforbundets fiasko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ideen om en [[Global styring]], regler delt mellom stater, kommer langveis fra. Etter 1918 lanserte den amerikanske presidenten **Woodrow Wilson** **Folkeforbundet**. Med base i Genève ønsker hun å løse konflikter gjennom loven. Men det amerikanske senatet, knyttet til [[Isolasjonisme]], nekter å komme inn. Uten USA mangler ligaen vekt."
+        },
+        {
+          "type": "image",
+          "asset": "league_of_nations_geneva",
+          "ratio": "4:3",
+          "caption": "Folkeforbundet i Genève, skjør stamfar til FN."
+        },
+        {
+          "type": "funFact",
+          "text": "Folkeforbundet overlevde offisielt gjennom andre verdenskrig. Det ble ikke oppløst før **1946**, for å overføre sine eiendeler til det nye FN."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uten reell kraft, uten [[Fredsbevarere]], kan det ikke stoppe Japan i Manchuria eller Italia i Etiopia. Dens konkurs lærte grunnleggerne av FN en regel: Vi trenger stormaktene innenfor, og konkrete pressmidler."
+        }
+      ]
+    },
+    {
+      "id": "course_26_la_creation_de_l_onu_1945_p2",
+      "title": "Sikkerhetsrådet og vetoretten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Charteret skaper en to-hodet struktur. **Generalforsamlingen** gir én stemme til hver stat. **Sikkerhetsrådet** fungerer som utøvende organ: sanksjoner, bruk av makt. For å holde de sterkeste ved bordet, oppfant vi [[Vetorett i Sikkerhetsrådet]]."
+        },
+        {
+          "type": "image",
+          "asset": "un_security_council_chamber",
+          "ratio": "4:3",
+          "caption": "Sikkerhetsrådskammeret, FNs politiske hjerte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fem vinnere fra 1945 blir faste medlemmer: USA, USSR, Storbritannia, Frankrike, Kina. Hvem som helst kan blokkere en løsning. Siden den kalde krigen har vetoretten ofte lammet rådet så snart en konflikt påvirker interessene til en blokk."
+        }
+      ]
+    },
+    {
+      "id": "course_26_la_creation_de_l_onu_1945_p3",
+      "title": "Hva FN oppnår i skyggen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hvis diplomati blokkerer, forandrer spesialiserte byråer liv. **WHO**, Verdens helseorganisasjon, koordinerer global helse og muliggjorde utryddelsen av **kopper** i 1980. **UNICEF** (barn), **UNHCR** (flyktninger), UNZESZcultureZBOLDZ. **FAO** (mat): et teknisk nettverk som går utover grensene."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Folkeforbundet hadde mislyktes, ble FN avgjørende for hvordan den moderne verden kunne fungere: sivil luftfart, telekommunikasjon, matvarehjelp, flyktninger. Dette arbeidet er mindre spektakulært enn rådet, og er hans virkelige daglige suksess."
+        }
+      ]
+    },
+    {
+      "id": "course_26_la_creation_de_l_onu_1945_p4",
+      "title": "En omstridt institusjon, fortsatt unik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I dag har FN **193**-medlemmer. Dens struktur fra 1945, spesielt et resultat av [[Yalta-konferansen (februar 1945)]] mellom Roosevelt, Churchill og Stalin, gjenspeiler ikke lenger verden. India, Brasil, Afrika krever vetoreform. Det årlige budsjettet, rundt **3 milliarder** dollar, er fortsatt ubetydelig sammenlignet med ambisjonene."
+        },
+        {
+          "type": "funFact",
+          "text": "FN-hovedkvarteret i New York er en internasjonal sone: ren sikkerhet, rene brannmenn, og til og med frimerker som kun kan brukes fra bygningen."
+        },
+        {
+          "type": "image",
+          "asset": "un_charter_signing_san_francisco_1945",
+          "ratio": "4:3",
+          "caption": "Signering av FN-pakten, San Francisco, 1945."
+        },
+        {
+          "type": "takeaway",
+          "text": "FN ble opprettet i **1945** for å rette opp feilen til Folkeforbundet, og kombinerer et mektig, men ofte lammet sikkerhetsråd og byråer hvis humanitære handling endret det 20. århundre."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Hvordan fungerer hukommelsen?",
+  "subtitle": "Hjerne",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Minne er ikke et kamera. Hvert minne blir rekonstruert. Dette er hvordan hjernen koder, lagrer ... og noen ganger oppfinner.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "Å huske er ikke å lese en fil på nytt. Det er å rekonstruere en scene."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vi ser ofte for oss minne som en harddisk: vi tar opp, vi lagrer, vi leser på nytt. Hjernen fungerer ikke slik. Hver gang du husker det, **gjenoppbygge** en scene fra fragmenter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den er kraftig ... og feilbar. Å forstå dette betyr å forstå hvorfor vi glemmer, hvorfor vi gjør feil og hvorfor vi lærer."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Flere minner, ikke bare ett",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Ulike områder av hjernen håndterer ulike former for hukommelse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Først er det [[Arbeidsminne]]: det du har \"i tankene\" i noen sekunder, som et telefonnummer. Det er begrenset, rundt **7 elementer** i gjennomsnitt. Deretter **langtidsminne**: fakta, minner om hendelser, ferdigheter som å sykle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Disse systemene lever ikke alle på samme sted i hjernen. **prefrontal cortex**, den fremre delen av hjernen bak pannen, hjelper mye på arbeidsminnet. Andre regioner, for eksempel **neocortex**, det ytre laget av hjernen, lagrer langsiktig."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Hvordan et minne fikses",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "Hippocampus, en dyp struktur, bidrar til å danne nye minner."
+        },
+        {
+          "type": "paragraph",
+          "text": "For at informasjon skal gå fra skjør til holdbar, må hjernen styrke forbindelsene mellom **nevroner**, nervecellene. Vi snakker om **konsolidering**, transformasjonen av et nylig minne til et varig spor. En liten struktur kalt **sjøhest**, formet som en sjøhest i tinninglappen, spiller en nøkkelrolle i minner om hendelser."
+        },
+        {
+          "type": "funFact",
+          "text": "Søvn, spesielt visse faser, bidrar til å konsolidere det vi har lært i løpet av dagen. Å revidere og deretter sove fungerer ofte bedre enn å revidere til kl. 03.00."
+        },
+        {
+          "type": "paragraph",
+          "text": "En kjent regel, knyttet til **-forsker Donald Hebb**: nevroner som skyter sammen, har en tendens til å koble seg sterkere. Oppsummert: \"det som lyser sammen binder sammen\". Dette er prinsippet for **nevroplastisitet**, hjernens evne til å endre forbindelsene."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "Å huske er å modifisere",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Når du henter frem et minne, blir det midlertidig **formbar**, redigerbart. Detaljer fra nåtiden kan skli inn. Da lagrer hjernen det igjen. Dette er grunnen til at to vitner til samme ulykke kan fortelle ulike versjoner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vi kan til og med lage **falske minner**: scener som vi tror er sanne, men som aldri fant sted, eller ikke var sånn. Hjernen fyller hullene med det den allerede vet."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "Å glemme er ikke alltid en fiasko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hvis du husket alle unødvendige detaljer, ville du blitt mettet. Å glemme hjelper oss til å generalisere, bestemme, beholde det vesentlige. Et godt minne sorterer like mye som det beholder."
+        },
+        {
+          "type": "takeaway",
+          "text": "Minne er en aktiv rekonstruksjon, ikke et perfekt opptak. Den er avhengig av flere systemer, konsolideres spesielt under søvn, og kan bli forvrengt med hver påminnelse."
+        }
+      ]
+    }
+  ]
+}

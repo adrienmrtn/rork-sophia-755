@@ -1,0 +1,131 @@
+{
+  "id": "course_147_l_architecture_gothique_les_cathedrales",
+  "title": "Gotisk arkitektur: katedraler",
+  "subtitle": "12.-16. århundrede",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Fra det 12. til det 16. århundrede rejste gotiske katedraler stenen mod himlen. Spidsbue, ribbede buer, farvede glasvinduer: en teknisk revolution i lysets tjeneste.",
+  "hero": {
+    "image": "l_architecture_gothique_les_cathedrales",
+    "ratio": "16:9",
+    "hook": "Hvordan middelalderen fik stenen til at flyve for at slippe Gud ind i lyset."
+  },
+  "sections": [
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mellem det 12. og 16. århundrede var Europa dækket af **gotiske katedraler**. Det er ikke kun kirker. Disse er tekniske udfordringer: stenfartøjer, der ser ud til at trodse tyngdekraften for at lukke lys ind."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ordet \"gotisk\" ville senere dukke op som en fornærmelse, \"goternes kunst\". Men denne stil kombinerer tro, bymæssig velstand og teknisk frækhed. Det dominerer stadig vores bycentre."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p1",
+      "title": "Saint-Denis: Stenen lærer at blive lettere",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gothic blev født i **Île-de-France** omkring **1140**. Det grundlæggende chok er koret fra [[Basilikaen Saint-Denis]], båret af [[Abbed Suger]]. Stillet over for mørke romanske kirker med tykke mure ønskede Suger et mere samlet, lettere, højere rum."
+        },
+        {
+          "type": "image",
+          "asset": "saint_denis_basilica_gothic_abbot_suger",
+          "ratio": "4:3",
+          "caption": "Saint-Denis: laboratoriet, hvor gotikeren lærer at ride."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tre opfindelser arbejder sammen: **** spidsbuen, højere og smallere; **ribbed vault**, som koncentrerer vægten på specifikke punkter; og [[flyvende støtteben]], en ydre bue, der modvirker stødene. Tilsammen frigør [[Den flyvende støtteben og ribbenhvælvingen]] væggene: store vinduer kan åbnes."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p2",
+      "title": "Lys som guddommeligt sprog",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For Suger er lys ikke en dekorativ detalje. Ifølge [[Lysets teologi (abbed Suger)]] hjælper de farvede stråler sjælen med at rejse sig mod Gud. Væggene bliver til **farvet glas**. I et samfund, hvor mange ikke kan læse, fortæller disse billeder historien om Bibelen og byens liv."
+        },
+        {
+          "type": "funFact",
+          "text": "I **Chartres** har visse farvede glasvinduer fra det 13. århundrede bevaret en så intens blå, at vi stadig taler om \"Chartres blå\": en farve, der er blevet en signatur."
+        },
+        {
+          "type": "paragraph",
+          "text": "Katedralen er ikke længere en stenfæstning. Det bliver et bur af lys."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p3",
+      "title": "Et projekt, der varer århundreder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "At bygge en katedral tager ofte mere end **til århundreder**. Krige, epidemier, mangel på penge: Projektet skrider frem med anfald og starter. **Notre-Dame i Paris** begynder i **1163** og finder sin form omkring **1345** efter omkring 180 år."
+        },
+        {
+          "type": "image",
+          "asset": "notre_dame_de_paris_cathedral_facade",
+          "ratio": "4:3",
+          "caption": "Notre-Dame de Paris: en middelalderlig byggeplads, der er blevet et nationalt symbol."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hele byen arbejder: stenhuggere, tømrere, glasmagere. Udvinding af sten, transport af træ, fodring af holdene: katedralen er også en økonomisk maskine."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p4",
+      "title": "Fra flamboyant gotik til nygotisk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stilen udviklede sig: klassisk gotisk (Chartres, Amiens), derefter strålende (Sainte-Chapelle), derefter flamboyant, mere dekorativ. I det 19. århundrede genopdagede Europa det med **nygotisk**. Ufærdige projekter genoptages, såsom **Köln**, afsluttet i **1880**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1140",
+              "title": "Saint-Denis",
+              "detail": "Suger lancerer omkvædet, der åbner den gotiske æra."
+            },
+            {
+              "date": "1163",
+              "title": "Notre-Dame i Paris",
+              "detail": "Start på et projekt, der varer næsten to århundreder."
+            },
+            {
+              "date": "13. århundrede.",
+              "title": "Apogee",
+              "detail": "Chartres, Amiens, Reims påtvinger den klassiske model."
+            },
+            {
+              "date": "1800-tallet.",
+              "title": "Nygotisk",
+              "detail": "Europa genopretter og genopfinder middelalderstil."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Det gotiske forvandlede katedralen til et lyskar. Ved at frigøre murene takket være den spidse bue og den flyvende støttepille opfandt middelalderen en arkitektur, der stadig taler til vores byer."
+        }
+      ]
+    }
+  ]
+}

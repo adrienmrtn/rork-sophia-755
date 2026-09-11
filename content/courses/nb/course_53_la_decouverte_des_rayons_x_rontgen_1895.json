@@ -1,0 +1,98 @@
+{
+  "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
+  "title": "Oppdagelsen av røntgenstråler",
+  "subtitle": "Röntgen, 1895",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "I 1895 oppdaget Wilhelm Röntgen usynlig stråling som var i stand til å passere gjennom materie. I løpet av noen måneder så medisinen en revolusjon.",
+  "hero": {
+    "image": "la_decouverte_des_rayons_x_rontgen",
+    "ratio": "16:9",
+    "hook": "En hånd, bein, et bilde. Medisin vil aldri igjen være blind."
+  },
+  "sections": [
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**8. november 1895**, i Würzburg (Tyskland), legger fysikeren **Wilhelm Röntgen** merke til en skjerm som skinner... selv om den ikke påvirkes av synlig lys. Noe usynlig krysser rommet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han kaller dette **X**-strålene, \"X\" som betyr \"ukjent\". I løpet av få uker fotograferte han beinene i sin kones hånd. Radiologi ble født."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
+      "title": "En laboratorieulykke",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Röntgen jobber med et rør hvor elektroner treffer et mål. Han dekket røret med svart papp. Imidlertid lyser en fluorescerende skjerm på avstand. Han forstår at det kommer usynlig stråling ut av røret."
+        },
+        {
+          "type": "image",
+          "asset": "wilhelm_rontgen_x_ray_hand_1895",
+          "ratio": "4:3",
+          "caption": "Det berømte bildet: håndbeinene og gifteringen."
+        },
+        {
+          "type": "funFact",
+          "text": "Röntgen tok aldri patent på røntgen. Han ønsket at all vitenskap skulle kunne bruke dem fritt."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
+      "title": "Medisinen griper verktøyet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "early_x_ray_medical_radiograph",
+          "ratio": "4:3",
+          "caption": "Veldig raskt brukte leger og hærer røntgenstråler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Før, for å \"se\" et brudd eller en kule, måtte du ofte åpne den. Med røntgenbilder får vi et bilde av interiøret uten å kutte. Sykehus og hærer tar i bruk teknikken i rasende fart."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
+      "title": "En fare som lenge har blitt ignorert",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Først ignorerer vi risikoen. Operatører tar røntgenbilder i timevis. Brenner, så dukker det opp kreft. Det vil ta tid å forstå at røntgenstråler er kraftige ... og farlige."
+        },
+        {
+          "type": "paragraph",
+          "text": "I dag beskytter vi pasienter og omsorgspersoner: begrensede doser, blyforkle, strenge kontroller."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p4",
+      "title": "Arven",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Røntgenbilder banet vei for all moderne bildebehandling: skannere, industrielle kontroller og til og med studiet av strukturen til krystaller (senere nyttig for DNA)."
+        },
+        {
+          "type": "takeaway",
+          "text": "I **1895** oppdaget Röntgen røntgenstråler, en usynlig stråling som passerer gjennom materie. Medisin får et nytt perspektiv... forutsatt at risikoen er kontrollert."
+        }
+      ]
+    }
+  ]
+}

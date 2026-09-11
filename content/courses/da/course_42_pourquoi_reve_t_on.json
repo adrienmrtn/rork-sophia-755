@@ -1,0 +1,114 @@
+{
+  "id": "course_42_pourquoi_reve_t_on",
+  "title": "Hvorfor drømmer vi?",
+  "subtitle": "Hjerne & søvn",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Hver nat drømmer du i omkring to timer. De fleste drømme forsvinder, når du vågner. Her er, hvad videnskaben i dag forstår om dette mysterium.",
+  "hero": {
+    "image": "pourquoi_reve_t_on",
+    "ratio": "16:9",
+    "hook": "Du drømmer om seks år af dit liv. Og du glemmer næsten alt."
+  },
+  "sections": [
+    {
+      "id": "course_42_pourquoi_reve_t_on_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hver nat bruger du omkring **til timer** på at drømme. I løbet af et helt liv er det næsten **seks år**. Men når du vågner, forsvinder de fleste af disse historier inden for få sekunder."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ikke alle videnskabsmænd er enige om \"hvorfor\". Men de ved bedre og bedre **når** vi drømmer, og hvad hjernen gør i løbet af denne tid: den omorganiserer minder, tester scenarier og fordøjer følelser."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p1",
+      "title": "Søvn er ikke \"slukket\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Søvn er ikke en fuldstændig afbrydelse. Den går frem med **cyklusser** på cirka **90 minutter** flere gange pr. nat. I hver cyklus gennemgår hjernen forskellige faser: let søvn, dyb søvn nyttig til at restituere kroppen, derefter en meget bestemt fase."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_rem_dream",
+          "ratio": "4:3",
+          "caption": "Under REM-søvn bevæger øjnene sig under øjenlågene."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne fase kaldes [[paradoksal søvn]]. Hjernen er næsten lige så aktiv, som den er vågen, men kroppen er lammet af [[Muskelatoni]]. Det er især her lange, fortællende drømme fødes. Denne lammelse forhindrer os i fysisk at \"lege\" det, vi drømmer."
+        },
+        {
+          "type": "funFact",
+          "text": "Vi drømmer **4 til 6 gange** per nat. Vi glemmer **95%** inden for ti minutter efter at være vågnet. Hvis du husker en drøm, er det ofte fordi du vågnede lige under den eller lige efter den."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p2",
+      "title": "Hvad er meningen med at drømme?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Freud** mente, at drømme hovedsageligt afslørede skjulte ønsker. I dag foretrækker forskere mere konkrete forklaringer, baseret på hjernebilleddannelse, teknikker, der visualiserer hjerneaktivitet. Drømme aktiverer især det **limbiske system**, sættet af dybe strukturer knyttet til følelser."
+        },
+        {
+          "type": "image",
+          "asset": "brain_activity_dreaming_scan",
+          "ratio": "4:3",
+          "caption": "Under drømme arbejder hjernen: følelser, billeder, minder."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tre hovedspor dominerer. Først: **sortere hukommelsen**, behold det nyttige, slip resten. For det andet: **træning til billetpris** i en verden uden reel risiko. For det tredje: **fordøjer følelser**: under drømme genbesøger hjernen stærke øjeblikke med mindre **noradrenalin**, en neurotransmitter forbundet med stress og vågenhed."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p3",
+      "title": "Hvorfor glemmer vi vores drømme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For at lagre en hukommelse permanent har hjernen brug for visse kemikalier. Men under paradoksal søvn falder niveauet af noradrenalin. Resultat: drømmen forbliver i en meget skrøbelig hukommelse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Så snart du åbner dine øjne, knuser dagens lys, lyde og tanker dette skrøbelige minde. Den bedste måde at beholde den på? Skriv drømmen **ned med det samme**, før du overhovedet flytter."
+        },
+        {
+          "type": "funFact",
+          "text": "Før farvefjernsyn var der få mennesker, der sagde, at de drømte i farver. I dag gør de fleste. Vores visuelle miljø påvirker endda teksturen af vores drømme."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p4",
+      "title": "Hvad med klar drøm?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nogle gange indser vi **, at vi drømmer**, mens vi forbliver i søvn: dette er **klar drøm**. Et område af hjernen, der er forbundet med logik og selvrefleksion, **præfrontal cortex**, lyser derefter lidt op."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nogle kan så påvirke omgivelserne eller forvandle et mareridt. Forskere studerer endda dette fænomen for at hjælpe atleter med at gentage gestus mentalt eller for at behandle gentagne mareridt."
+        },
+        {
+          "type": "takeaway",
+          "text": "Vi drømmer især under [[paradoksal søvn]], en fase hvor hjernen er aktiv og kroppen lammet. At drømme hjælper sandsynligvis med at håndtere hukommelse og følelser, selvom vi glemmer næsten alt, når vi vågner."
+        }
+      ]
+    }
+  ]
+}

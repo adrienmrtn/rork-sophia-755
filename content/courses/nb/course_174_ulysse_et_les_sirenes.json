@@ -1,0 +1,114 @@
+{
+  "id": "course_174_ulysse_et_les_sirenes",
+  "title": "Ulysses og sirenene",
+  "subtitle": "Lytt uten å dø",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Sirenene lover absolutt kunnskap. Odyssevs er den eneste dødelige som hører sangen deres og overlever, takket være en list som har blitt en modell for selvkontroll.",
+  "hero": {
+    "image": "ulysse_et_les_sirenes",
+    "ratio": "16:9",
+    "hook": "Sangen deres lover å vite alt. Alle som hører på den dør. Ulysses vil høre ... og holde seg i live."
+  },
+  "sections": [
+    {
+      "id": "course_174_ulysse_et_les_sirenes_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I den tolvte kantoen til **Odyssey** må Ulysses passere i nærheten av **[[Havfruer]]**. Stemmen deres er så vakker at den overstyrer viljen. Sjømenn som nærmer seg går på grunn og dør."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det er ikke bare et eventyr på havet. Det er duellen mellom tørsten etter kunnskap og faren for å gi etter. Takket være hans [[Metis]], hans utspekulerte intelligens, blir Ulysses den eneste dødelige som smaker denne forbudte nytelsen uten å miste livet."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p1",
+      "title": "Fuglekvinner, ikke havfruer med hale",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **Homer** er ikke havfruene fiskekvinner. De er halvt kvinne, halvt fugleskapninger. Øya deres er strødd med sjømannsbein. Skjønnheten i sangen står i kontrast til gruen ved kysten."
+        },
+        {
+          "type": "image",
+          "asset": "sirens_island_greek_mythology_bones_shore",
+          "ratio": "4:3",
+          "caption": "Sirenernes øy: uimotståelig melodi, dødelig strand."
+        },
+        {
+          "type": "funFact",
+          "text": "I greske byer ble sirener ofte skåret ut på graver. De ble sett på som muser fra livet etter døden, som fulgte med de dødes sjeler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fellen deres er ikke bare sensuell. De lover **absolutt kunnskap**: alt som skjedde i [[Trojansk krig]], alt som skjer på jorden. For Ulysses, nysgjerrig fremfor alt, er det den høyeste fristelsen, farligere enn et monster å beseire."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p2",
+      "title": "Voksen, masten og planen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Magikeren **Circé** advarte ham. Ulysses utarbeider en presis strategi. Han plugger kameratenes ører med **bivoks**. De skal ikke høre noe. Han vil lytte."
+        },
+        {
+          "type": "image",
+          "asset": "ulysses_tied_mast_sirens_waterhouse_painting",
+          "ratio": "4:3",
+          "caption": "Ulysses bundet til masten, den eneste som hørte sangen til sirenene."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den blir **festet til masten**. Klar rekkefølge: hvis han ber om å bli løslatt, må vi tvert imot stramme båndene. Når sangen stiger, mister Ulysses roen og roper om å bli løsnet. Hans menn, døve og trofaste mot planen, adlyder bare den rasjonelle Odysseus fra før, ikke øyeblikkets fengslede Odysseus. Skipet passerer."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p3",
+      "title": "Fest deg på forhånd for ikke å gi deg",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Denne scenen illustrerer det samfunnsvitenskapene kaller [[Forpliktelse]]. Vi vet at vi vil være svake i møte med fristelser. Så vi begrenser mulighetene våre selv før vi kommer dit."
+        },
+        {
+          "type": "funFact",
+          "text": "I 1990 kalte NASA og ESA en sonde **Ulysses**. Som helten forlater hun de kjente veiene for å utforske solens poler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nobelprisvinnende økonom **Richard Thaler** trekker på dette bildet. Mennesker er ikke alltid rasjonelle. Han trenger en [[Nudge]], en \"hjelpende hånd\", eller regler som beskytter ham mot seg selv: automatisk overføring til sparing, applikasjoner som blokkerer nettverk. I likhet med Ulysses klamrer vi oss til masten i møte med moderne sirener."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p4",
+      "title": "Fra kunnskap til synd",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **middelalder** endres bildet. Fuglekvinnen blir en fiskekvinne. Kirken leser sirener som symboler på begjær. Ulysses mast blir noen ganger sammenlignet med korset: et skjold mot fristelser."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hos Homer dreide det seg imidlertid ikke om kjødelig begjær, men kunnskap. Odyssevs er verken en helgen eller en enkel eventyrer. Han er en mann som bruker intelligens til å navigere mellom ønsket om absolutter og behovet for å overleve."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ulysses overlever sangen til [[Havfruer]] av [[Forpliktelse]]: festet til masten lytter han; hans menn, ørene tette med voks, holder kursen."
+        }
+      ]
+    }
+  ]
+}

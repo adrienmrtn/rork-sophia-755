@@ -1,0 +1,102 @@
+{
+  "id": "course_57_l_invention_d_internet",
+  "title": "Oppfinnelsen av Internett",
+  "subtitle": "Nettverk",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Internett har ikke en eneste oppfinner. Det er en lang kjede: et militært nettverk, et felles språk, deretter nettet for mennesker.",
+  "hero": {
+    "image": "l_invention_d_internet",
+    "ratio": "16:9",
+    "hook": "Først et nettverk for å motstå krigen. Da stiller hele verden inn."
+  },
+  "sections": [
+    {
+      "id": "course_57_l_invention_d_internet_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Internett ble ikke født fra et eneste geni i en garasje. Det er en kollektiv konstruksjon over flere tiår."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tre enkle trinn å huske: et første nettverk (ARPANET), et felles språk (TCP/IP), deretter et enkelt grensesnitt (nettet)."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p1",
+      "title": "ARPANET, det første nettverket",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På slutten av **1960**-årene, midt i den kalde krigen, finansierte den amerikanske hæren et prosjekt: å koble sammen datamaskiner slik at de fortsatte å kommunisere selv om en del av nettverket ble ødelagt."
+        },
+        {
+          "type": "image",
+          "asset": "arpanet_1969_computer_ucla",
+          "ratio": "4:3",
+          "caption": "ARPANET kobler først sammen noen få amerikanske universiteter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette nettverket kalles **ARPANET**. Meldinger deles opp i små pakker som tar forskjellige veier. Hvis en vei faller, tar en annen over."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p2",
+      "title": "TCP/IP: snakker samme språk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For at ulike nettverk skal forstå hverandre, trengs felles regler. **Vint Cerf** og **Bob Kahn** utvikler **TCP/IP**-protokollen: et språk som forteller hvordan man klipper, adresserer og komponerer data på nytt."
+        },
+        {
+          "type": "image",
+          "asset": "vint_cerf_bob_kahn_internet",
+          "ratio": "4:3",
+          "caption": "Cerf og Kahn: arkitektene bak språket på Internett."
+        },
+        {
+          "type": "funFact",
+          "text": "1. januar **1983** byttet ARPANET offisielt til TCP/IP. Mange anser denne datoen for å være den tekniske \"fødselen\" til Internett."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p3",
+      "title": "Nettet gjør nettverket menneskelig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Internett er nettverket. **World Wide Web**, oppfunnet av **Tim Berners-Lee** ved CERN ved begynnelsen av årene **1990**, er det enkle laget: sider, lenker, nettlesere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uten nettet ville Internett forbli primært et verktøy for eksperter. Med den kan alle klikke."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p4",
+      "title": "Verdens nervesystem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I dag bærer Internett e-poster, videoer, banker, sykehus, GPS. Det har også skapt nye problemer: desinformasjon, overvåking, digital kløft."
+        },
+        {
+          "type": "takeaway",
+          "text": "Internett ble født fra ARPANET, ble universelt takket være TCP/IP, og tilgjengelig takket være nettet. Dette er ikke en unik oppfinnelse, det er en delt arkitektur."
+        }
+      ]
+    }
+  ]
+}

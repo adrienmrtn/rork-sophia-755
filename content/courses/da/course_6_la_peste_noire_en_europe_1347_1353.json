@@ -1,0 +1,139 @@
+{
+  "id": "course_6_la_peste_noire_en_europe_1347_1353",
+  "title": "Den sorte død i Europa",
+  "subtitle": "1347-1353",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Mellem 1347 og 1353 dræbte byllepesten 30 til 60 % af europæerne. En sundhedskatastrofe, der ryster middelaldersamfundet og fremskynder skiftet mod en ny verden.",
+  "hero": {
+    "image": "la_peste_noire_en_europe",
+    "ratio": "16:9",
+    "hook": "På seks år mister Europa op mod halvdelen af sin befolkning."
+  },
+  "sections": [
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mellem **1347** og **1353** er Europa ramt af **Den sorte død**. Forårsaget af bakterien **Yersinia pestis** dræber den mellem **30 eller 60 %** af befolkningen, eller **25 til 50 mio** mennesker."
+        },
+        {
+          "type": "paragraph",
+          "text": "Europæerne er allerede svækket af hungersnøden i [[Lille istid]], en afkøling af klimaet, som har spoleret høsten. Svøben er ikke kun en sundhedskrise. Det er en historisk accelerator: den ryster den segnioriale orden og tvinger samfundet til at genopbygge sig selv anderledes."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p1",
+      "title": "Fra Asien til Italien",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bakterierne cirkulerer først blandt gnavere i Centralasien. [[Pax Mongolica]], en periode med relativ fred under det mongolske imperium, og [[Silkevejen]], et handelsnetværk, der forbinder Asien med Europa, tilbød ham sikre ruter. Ved den genovesiske disk i [[Caffa]] på Krim, belejret af [[Gyldne Horde]] (et mongolsk imperium af stepperne), skifter sygdommen mod Middelhavet. Galejer flygter til Italien."
+        },
+        {
+          "type": "image",
+          "asset": "black_death_burial_medieval_plague",
+          "ratio": "4:3",
+          "caption": "Pestbegravelser: Europa opdager massedød."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **oktober 1347** lagde de til ved **Messina** på Sicilien. På trods af udvisningen af skibene er ondskaben allerede ved kajen. I **1348** nåede han Marseille, dengang hele Europa, via netværk af italienske købmænd."
+        },
+        {
+          "type": "funFact",
+          "text": "Belejringen af Caffa nævnes ofte som et af de første eksempler på biologisk krigsførelse: Mongolerne siges at have slynget inficerede lig over murene."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p2",
+      "title": "Magteløs medicin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Læger stoler på [[Galen]], en gammel græsk læge, og [[Miasma teori]]: ideen om, at sygdomme kommer fra ødelagt luft. De ser ikke den rigtige vektor, rotteloppen ([[Xenopsylla cheopis]]). Når rotterne dør, går lopperne videre til mennesker."
+        },
+        {
+          "type": "image",
+          "asset": "plague_doctor_mask_beak",
+          "ratio": "4:3",
+          "caption": "Pestlægen med næbmasken: en beskyttelse mere symbolsk end effektiv."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den buboniske form svulmer lymfeknuderne. Sepsis gør huden sort. Lungebetændelse overføres fra mand til mand og dræber i **24 til 48 timer**. I overfyldte og beskidte byer er spredningen meget hurtig."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p3",
+      "title": "Frygt, flagellanter, pogromer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Samfundet vakler. [[Flagellanter]] pisker sig selv offentligt for at formilde Gud. Kunsten opfinder Danses Macabres. I mangel af en forklaring leder vi efter syndere: [[Pogromer af jøder (1348-1349)]] blodede Rhône-dalen og det germanske rige. Anklaget for at forgifte brøndene, blev tusinder af jøder massakreret. Pave [[Klemens VI]], dengang i Avignon, forsøgte at beskytte dem. For lidt, for sent."
+        },
+        {
+          "type": "funFact",
+          "text": "I Avignon forblev Clement VI mellem to store bål for at \"rense luften\". Varmen holdt lopperne på afstand: han overlevede."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Boccaccio]], en florentinsk forfatter, beskriver fædre, der forlader deres sønner. Velgørenhed, naboskab, familie: alt smuldrer under frygten for smitte."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1346",
+              "title": "Caffa",
+              "detail": "Pesten når den genovesiske handelsstation på Krim."
+            },
+            {
+              "date": "1347",
+              "title": "Messina",
+              "detail": "De genovesiske kabysser importerer plagen til Europa."
+            },
+            {
+              "date": "1348",
+              "title": "europæisk bølge",
+              "detail": "Frankrig, England, Imperiet: døden breder sig."
+            },
+            {
+              "date": "1353",
+              "title": "Tilbageløb",
+              "detail": "Epidemien er ved at falde til ro, Europa er forvandlet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p4",
+      "title": "Efter døden skiftet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mod **1353** er pandemien ved at ebbe ud. Arbejdskraft er blevet knap. Lønningerne stiger, korvéer falder, livegenskaben falder i Vesten. Herrerne skal forhandle. Katastrofen har paradoksalt nok styrket de overlevende."
+        },
+        {
+          "type": "paragraph",
+          "text": "Myndighedernes svigt over for plagen nærer også kritisk tænkning. Vi observerer mere, vi tvivler på de gamle dogmer. Ved at tømme landsbyer og omfordele arv, forberedte Den Sorte Død på trods af sig selv grunden til renæssancen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mellem **1347** og **1353** dræbte Den Sorte Død op til halvdelen af Europa. Dette demografiske chok svækker den segnioriale orden, hæver prisen på arbejdskraft og fremskynder adgangen til en ny verden."
+        }
+      ]
+    }
+  ]
+}

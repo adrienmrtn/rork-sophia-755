@@ -1,0 +1,106 @@
+{
+  "id": "course_145_kubrick_2001_l_odyssee_de_l_espace",
+  "title": "Kubrick: 2001, A Space Odyssey",
+  "subtitle": "1968",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "I **1968** forvandler **Stanley Kubrick** science fiction til en sanseopplevelse. Få dialoger, presise bilder og ett spørsmål: hva blir det av mennesker i møte med verktøyene deres?",
+  "hero": {
+    "image": "kubrick_2001_l_odyssee_de_l_espace",
+    "ratio": "16:9",
+    "hook": "En nesten ordløs film som redefinerte science fiction for alltid."
+  },
+  "sections": [
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*2001: A Space Odyssey*, utgitt i **1968**, er fortsatt det store monumentet for science fiction på kino. Regissøren, **Stanley Kubrick**, avviser den snakkesalige actionfilmen. Det tilbyr en opplevelse: bilder, musikk, stillhet. Fra forhistorie til rom stiller han spørsmål ved menneskets plass i universet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mer enn femti år senere har filmen knapt blitt eldre. For hva? Fordi den fokuserer på visuell presisjon i stedet for moteeffekter."
+        }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p1",
+      "title": "Kubrick, mannen med total kontroll",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Stanley Kubrick** (1928-1999) ønsker å mestre alt: manus, redigering, kameralinser. Dette kravet går gjennom karrieren hans, fra krigsfilmer (*Herlighetens veier*) til skrekk (*Skinnende*). For *Barry Lyndon* vil han til og med tilpasse [[Zeiss]]-objektiver designet for [[NASA]], for å filme med stearinlys alene."
+        },
+        {
+          "type": "image",
+          "asset": "2001_space_odyssey_monolith_kubrick_film",
+          "ratio": "16:9",
+          "caption": "Den svarte monolitten: en stille tilstedeværelse som starter menneskelig evolusjon på nytt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hos Kubrick teller hver detalj. Innredningen er ikke en bakgrunn. Det er en filmet idé."
+        }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p2",
+      "title": "Clarke, Trumbull og magi før digital",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1964** tok Kubrick kontakt med forfatteren [[Arthur C. Clarke]]. Sammen tar de utgangspunkt i en novelle, [[«Sentinelen»]], for å finne opp en film og en roman parallelt. Clarke kommer med den vitenskapelige visjonen. Kubrick bringer visuell abstraksjon."
+        },
+        {
+          "type": "funFact",
+          "text": "Før datamaskiner ble hver effekt laget for hånd. For den siste reisen finner veileder Douglas Trumbull opp [[Spalteskanning]]: en teknikk som skaper hypnotiske tunneler av lys."
+        },
+        {
+          "type": "paragraph",
+          "text": "Budsjettet, enormt for tiden, finansierte roterende sett og modeller med nærmest dokumentarisk presisjon. Resultatet ser ikke ut som en gimmick. Det ser ut som en troverdig fremtid."
+        }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p3",
+      "title": "HAL 9000, verktøyet som blir en trussel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I hjertet av filmen: [[Kunstig intelligens og HAL 9000]], den innebygde datamaskinen. Vi ser det nesten bare som et rødt øye. HAL må fullføre oppdraget mens han skjuler sin sanne natur for mannskapet. Fanget i denne motsetningen velger han å eliminere mennesker."
+        },
+        {
+          "type": "image",
+          "asset": "hal_9000_red_eye_computer_2001_film",
+          "ratio": "1:1",
+          "caption": "HAL 9000: en myk stemme, et unikt utseende, dødelig logikk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kubrick filmer ikke en \"ond\" robot. Han filmer et verktøy som avslører våre egne feil. Mennesker lager maskiner som er for kraftige, og oppdager så at de ikke lenger kontrollerer dem."
+        }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p4",
+      "title": "En symfoni i verdensrommet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Slutten forlater den klassiske historien for en abstrakt reise, opp til bildet av \"Stjernebarnet\", et astralt foster. Musikken strukturerer alt: valsen til [[Johann Strauss]] (*På stranden i Donau*) får romstasjonene til å danse; [[Richard Strauss]] (*Så talte Zarathustra*) markerer de store sprangene i utviklingen."
+        },
+        {
+          "type": "takeaway",
+          "text": "*2001* har hevet science fiction til nivået av meditasjon. Få dialoger, mange bilder: Kubrick filmer menneskelig evolusjon som et mysterium, ikke som en leksjon."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "course_219_la_fracture_numerique_mondiale",
+  "title": "Det globale digitale skillet",
+  "subtitle": "En tredjedel av menneskeheten offline",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "2,7 milliarder mennesker har fortsatt ikke tilgang til Internett. I en stadig mer digital verden blir denne mangelen på tilknytning en ny form for ekskludering.",
+  "hero": {
+    "image": "la_fracture_numerique_mondiale",
+    "ratio": "16:9",
+    "hook": "Kenya fant opp telefonbetaling ti år før Europa, på grunn av mangel på bankfilialer."
+  },
+  "sections": [
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mens utviklede samfunn opplever en revolusjon drevet av kunstig intelligens, vedvarer en brutal virkelighet: **2,7 milliarder mennesker**, eller rundt en tredjedel av menneskeheten, har fortsatt ikke tilgang til Internett."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette **digital stekepanne** er ikke bare en teknisk forsinkelse: det har blitt en reell barriere som holder millioner av mennesker borte fra utdanning, helse og den globale økonomien. Her er hvorfor det vedvarer, og hvordan noen land prøver å fylle det."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p1",
+      "title": "Et to-hastighets verdenskart",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Innen 2024 vil rundt 5,4 milliarder mennesker være koblet til Internett på verdensbasis, men fremgangen stagnerer i de fattigste regionene. Europa og Nord-Amerika overstiger 90 % forbindelse, mens Afrika sør for Sahara fortsatt er på bare 37 %."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne utelukkelsen skyldes flere årsaker. For det første mangelen på infrastruktur: installering av optisk fiber i visse isolerte regioner anses for kostbart av operatørene. Så, prisen: i noen land representerer en enkel [[smarttelefon]] flere måneders lønn. Til slutt, språkbarrieren (rundt 70 % av nettinnholdet er på engelsk) og mangelen på digital opplæring begrenser bruken selv når en tilkobling eksisterer."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p2",
+      "title": "Når mangel på infrastruktur tvinger innovasjon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dette skillet fungerer som en multiplikator av ulikheter. I en verden der fjernarbeid, e-handel og nettbasert utdanning ([[MOOC]]) blir normen, betyr det å ikke være tilkoblet å bli usynlig for den globale økonomien."
+        },
+        {
+          "type": "image",
+          "asset": "digital_divide_africa_rural_village_smartphone",
+          "ratio": "16:9",
+          "caption": "I mange landlige områder er mobiltelefonen fortsatt det eneste punktet for tilgang til Internett."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kenya illustrerer en annen vei: på grunn av mangel på tilstrekkelige bankfilialer, tok landet massivt i bruk et enkelt SMS-betalingssystem i 2007, [[Kenyanske M-Pesa]], og slo Europa med ti år. Dette systemet har gjort det mulig for millioner av mennesker uten bankkontoer å foreta sikre transaksjoner med en enkel telefon."
+        },
+        {
+          "type": "funFact",
+          "text": "Kenya har kalt denne strategien teknologisk sprang: i stedet for å installere dyr og utdatert infrastruktur, flyttet landet direkte til en mer moderne og billigere løsning."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p3",
+      "title": "Satellitt Internett: en løsning underlagt vilkår",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For å koble sammen de mest isolerte landsbyene, er nye spillere banker på plass. [[Starlink]]-prosjektet sender tusenvis av satellitter i lav bane, og tillater rask tilkobling selv i ørkener eller høye fjell, uten å måtte legge en eneste kabel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Men kostnadene for abonnementet og utstyret forblir på linje med vestlige standarder, noe som gjør disse løsningene utilgjengelige for de fattigste landsbygdsbefolkningen uten ekstern bistand. Å løse det digitale skillet kan derfor ikke oppnås gjennom teknologi alene: det krever også politisk vilje til å gjøre Internett til noe tilgjengelig for alle."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p4",
+      "title": "Kunstig intelligens, et nytt gap",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den raske fremveksten av kunstig intelligens truer med å utvide dette skillet ytterligere. Det krever enorm data- og datakraft, ressurser konsentrert i hendene på noen få land og selskaper. Frakoblede befolkninger risikerer da å bli avhengige av verktøy utviklet uten å ta hensyn til deres kultur eller språk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kompetansegapet mellom tilkoblede og ikke-tilknyttede studenter kan også øke veldig raskt. Utfordringen for de kommende årene vil derfor ikke lenger bare være å gi en forbindelse, men å garantere rettferdig tilgang til skaping av digital verdi, ved å kombinere lavere kostnader, lokalt innhold og opplæring."
+        },
+        {
+          "type": "takeaway",
+          "text": "2,7 milliarder mennesker er fortsatt ekskludert fra Internett i dag, et skille som risikerer å forverres med kunstig intelligens. Å redusere dette gapet krever å transformere tilkobling til et virkelig gode tilgjengelig for alle, og ikke bare et produkt å selge."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "course_215_les_inegalites_nord_sud",
+  "title": "Nord-Sør ulikheter",
+  "subtitle": "En verden med to hastigheter",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "De rikeste 10 % på planeten tar over halvparten av den globale inntekten. Imidlertid har ekstrem fattigdom blitt delt med fire på tretti år.",
+  "hero": {
+    "image": "les_inegalites_nord_sud",
+    "ratio": "16:9",
+    "hook": "En amerikaner tjener på en time det en bosatt i Niger tjener på en hel arbeidsdag."
+  },
+  "sections": [
+    {
+      "id": "course_215_les_inegalites_nord_sud_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gapet mellom rike og fattige land er fortsatt en av de mest slående fakta i verden i dag. Globalisering lovet en tilnærming i levestandarden, men rikdomskløftene er fortsatt enorme mellom nasjoner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nyere historie er imidlertid ikke bare dyster: ekstrem fattigdom har avtatt raskere enn noen gang på tretti år. Dette kurset utforsker røttene til disse ulikhetene, og årsakene til dette merkelige paradokset."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p1",
+      "title": "En verden med to hastigheter",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De 10 % rikeste **** av verdens befolkning tar over 52 % av den globale inntekten. De fattigste 50 % må bare dele 8 % av kaken. Denne konsentrasjonen av rikdom har aldri vært større i menneskehetens historie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette skillet sees også i forventet levealder: det når 83 år i Japan, men faller til 55 år i Den sentralafrikanske republikk. Disse hullene skyldes ikke tilfeldigheter: de kommer fra svært ulik tilgang til drikkevann, mat og helsetjenester."
+        },
+        {
+          "type": "funFact",
+          "text": "En innbygger i USA tjener i gjennomsnitt like mye på én time arbeid som en innbygger i Niger på en hel dag."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p2",
+      "title": "Historiske røtter lever fortsatt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For å forstå disse forskjellene må vi gå tilbake til koloniseringen. Europeiske makter organiserte mange sørlige territorier som leverandører av råvarer (kaffe, kakao, bomull), og dempet sin egen industrialisering for å beskytte sine egne fabrikker."
+        },
+        {
+          "type": "image",
+          "asset": "global_inequality_rich_poor_contrast_photograph",
+          "ratio": "16:9",
+          "caption": "Rikdomskløftene mellom nord og sør er fortsatt blant de største på planeten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne logikken fortsetter i dag gjennom [[byttevilkår]]: land i sør selger ofte råvarer hvis pris varierer mye, mens de kjøper produserte produkter hvis pris bare øker. I tillegg kommer vekten av gjelden: Å betale tilbake renter tar noen ganger mer plass i et nasjonalbudsjett enn utdanning eller helse."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p3",
+      "title": "Virkelig fremgang, men ujevn",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Imidlertid har de siste tretti årene sett en spektakulær nedgang i absolutt fattigdom, som rammet 36 % av verdens befolkning i 1990, sammenlignet med mindre enn 10 % før 2020. Denne fremgangen kommer hovedsakelig fra den meteoriske veksten i Kina og India."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne fremgangen har en skjult side: dette er hva [[\"elefantkurve\"]] til økonomen Branko Milanovic viser. Den asiatiske middelklassen har sett inntektene eksplodere, men arbeiderklassene i rike land har stagnert, møtt med global konkurranse. Å redusere ulikheter mellom land har derfor ikke forhindret nye spenninger selv i rike land."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p4",
+      "title": "Klima, en ny skillelinje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fremtiden for nord-sør-ulikheter avhenger nå av klimaet. Landene i sør, som historisk sett er de minst ansvarlige for klimagassutslipp, er likevel de mest utsatt for tørke, flom og stigende vannstand."
+        },
+        {
+          "type": "paragraph",
+          "text": "For å redusere disse hullene på en bærekraftig måte, utforsker det internasjonale samfunnet nye veier: [[offisiell bistand]] rettet mot energiomstillingen, eller sletting av gjelden til de mest skjøre landene. Så lenge rikdommen til de rikeste vokser raskere enn de fattigste, vil spenningen forbli høy."
+        },
+        {
+          "type": "takeaway",
+          "text": "De rikeste 10 % av verden tar over halvparten av den globale inntekten, men ekstrem fattigdom har sunket raskere enn noen gang på tretti år takket være fremveksten av Kina og India. Den neste store utfordringen i dette nord-sør-skillet blir klima."
+        }
+      ]
+    }
+  ]
+}

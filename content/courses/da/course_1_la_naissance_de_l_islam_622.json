@@ -1,0 +1,146 @@
+{
+  "id": "course_1_la_naissance_de_l_islam_622",
+  "title": "Islams fødsel",
+  "subtitle": "622",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "I 622 flygtede en købmand fra Mekka ved navn Muhammed fra sin by til Medina. Denne afgang, Hegira, markerer år 1 af islam og begyndelsen på en verdenscivilisation.",
+  "hero": {
+    "image": "la_naissance_de_l_islam_622",
+    "ratio": "16:9",
+    "hook": "Hvordan en landsforvist købmand på tyve år fødte en verdenscivilisation."
+  },
+  "sections": [
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **622** må en købmand fra Mekka, i det nuværende Saudi-Arabien, flygte fra sin by. Vi vil slå ham ihjel. Denne mands navn er **Muhammed**. Hans afgang mod oasen Medina har et navn: **Hegira**. Senere blev denne dato år 1 i den muslimske kalender."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ingen har set det endnu. Men om mindre end et århundrede ville budskabet, der blev født i denne ørken, vælte store imperier og føde en stat, der strækker sig fra Spanien til Indiens porte. Her er hvordan det hele startede."
+        }
+      ]
+    },
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_p1",
+      "title": "Et Arabien glemt af verden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I det 7. århundrede interesserede Arabien næsten ingen. Vi bor der i stammer. [[beduiner]], ørkennomader, bor sammen med et par handelsbyer som Mekka. Religionen der er polyteistisk: mange idoler bliver bedt til. Kultens hjerte er et kubisk fristed, **Kaaba**. Pilgrimme strømmer dertil, og med dem pengene. Den kraftfulde [[Quraysh]] stamme styrer denne handel."
+        },
+        {
+          "type": "funFact",
+          "text": "Kabaen husede ca. **360 idolisere**, eller omtrent en for hver dag i den arabiske månekalender. Muhammed fik dem alle fjernet på en enkelt dag."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rundt omkring er to giganter ved at udmatte sig selv i endeløse krige: [[De byzantinske og sassaniderige imperier]], det vil sige det østromerske imperium og det persiske imperium. Det er i dette tomrum, at **Muhammed**, født omkring **570**, siges at modtage åbenbaringer fra **610**, i en hule på Hira-bjerget. Hans idé om en **Én Gud** truer handelen i Mekka, som lever af idoler."
+        }
+      ]
+    },
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_p2",
+      "title": "622: Hegiraen, alt ændrer sig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Muhammed er truet på livet og tager imod invitationen til en oase kaldet Yathrib. Dens indbyggere leder efter en dommer til at berolige deres konflikter. Denne afgang er **Hegira**. Der er han ikke længere kun en profet: han bliver en leder. Han udarbejdede [[Medinas forfatning]], en pagt mellem klanerne, og grundlagde [[Ummah]], fællesskabet af troende, som går ud over blodsbånd."
+        },
+        {
+          "type": "funFact",
+          "text": "Før Hegira blev Medina kaldt **Yathrib**. Omdøbt til \"profetens by\" (Madinat al-Nabi), har den beholdt navnet indtil i dag."
+        },
+        {
+          "type": "image",
+          "asset": "medina_prophet_s_mosque",
+          "ratio": "4:3",
+          "caption": "Medina, \"profetens by\", islams første hovedstad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Krigen med Mekka begynder. Muhammad lancerer [[razziaer]], hurtige raids, for at afskære fjendens karavaner. Alligevel i undertal vandt hans trofaste ved **Badr** i **624**. Denne sejr opleves som et mirakel. På trods af en fiasko ved Uhud modstod de **-belejringen af Medina** i **627**. Hans autoritet hævdes."
+        }
+      ]
+    },
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_p3",
+      "title": "630: den triumferende tilbagevenden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **630** er situationen omvendt. Muhammed marcherer mod Mekka med **10.000 mænd**. Byen overgiver sig uden kamp. I stedet for at tage hævn, giver han en **general benådning**. Denne gestus skubber stammerne til at slutte sig til ham."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han går ind i **Kaaba**, bryder dens afguder og indvier den til den ene Gud. Efter hans død i **632** blev næsten hele Arabien forenet for første gang. Magten går derefter over til [[Kalif]]'erne, hans efterfølgere. Abu Bakr, dengang Umar, lancerede en hurtig ekspansion mod Syrien, Irak og Egypten."
+        },
+        {
+          "type": "funFact",
+          "text": "Islams første **muezzin**, den der kalder til bøn, var Bilal, en tidligere slave fra Etiopien: et symbol på ligheden mellem troende forsvaret af budskabet."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "622",
+              "title": "Hegiraen",
+              "detail": "Afgang til Medina, begyndelsen af den muslimske æra."
+            },
+            {
+              "date": "624",
+              "title": "Slaget ved Badr",
+              "detail": "Første store sejr, i undertal."
+            },
+            {
+              "date": "627",
+              "title": "Belejring af Medina",
+              "detail": "Samfundet gør modstand og påtvinger sin autoritet."
+            },
+            {
+              "date": "630",
+              "title": "Erobringen af Mekka",
+              "detail": "Overgivelse uden kamp og generel benådning."
+            },
+            {
+              "date": "632",
+              "title": "Muhammeds død",
+              "detail": "Arabien er samlet under en enkelt myndighed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_p4",
+      "title": "En civilisations rødder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Udvidelsen er ikke kun militær. Hun er også organiseret. Erobrerne oprettede [[Dhimma]]: Kristne og jøder beholdt deres religion i bytte for en skat, [[jizya]]. Denne kontrollerede tolerance letter installationen af den nye strøm i trætte områder i Byzans."
+        },
+        {
+          "type": "funFact",
+          "text": "Forbløffet over Alexandria under erobringen af Egypten foretrak araberne at grundlægge en ny hovedstad, **Fostat** (det fremtidige Kairo), frem for at skade den antikke by."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det arabiske sprog bliver imperiets cement: administrationssprog og helligt sprog. Også drevet af idealet om [[Jihad]], både selvindsats og forsvar af samfundet, bliver den islamiske civilisation et krydsfelt mellem græsk, persisk og indisk viden. Lidt efter lidt lukker Antikken sig ind."
+        },
+        {
+          "type": "takeaway",
+          "text": "På blot **22 år** (610-632) forvandlede Muhammed et åndeligt budskab til reel politisk magt. Han lagde grundlaget for et imperium, der ville dominere en del af verden i århundreder."
+        }
+      ]
+    }
+  ]
+}

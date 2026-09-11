@@ -1,0 +1,145 @@
+{
+  "id": "course_184_romulus_et_remus_la_fondation_de_rome",
+  "title": "Romulus og Remus: grundlæggelsen af Rom",
+  "subtitle": "romersk mytologi",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Ammet af en hun-ulv, grundlæggerne af Rom... og brodermordere. En myte, der sætter lov og grænser før blod.",
+  "hero": {
+    "image": "romulus_et_remus_la_fondation_de_rome",
+    "ratio": "16:9",
+    "hook": "Rom blev ikke født ud fra en blød pagt. Hun blev født af en hun-ulv, en hellig fure... og en dræbt bror."
+  },
+  "sections": [
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Historien om **Romulus** og **Rémus** er den grundlæggende myte om Rom. Dette er ikke en børnehistorie. Det er historien om et dobbeltbrud: en [[vestal jomfru]], der bryder sit kyskhedsløfte, derefter en **brodermorder**, der sætter loven foran blodet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Romersk tradition skjuler ikke denne forbrydelse. Det gør den til grundlaget for en by bygget på den hellige grænse og statens overlevelse, mere end på familien."
+        }
+      ]
+    },
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_p1",
+      "title": "Hun-ulven fra Tiberen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I Alba den lange, by for Æneas' efterkommere, jager usurpatoren **Amulius** sin bror Numitor. For at udrydde slægten tvinger han sin niece **Rhéa Silvia** til at blive vestal. Men **marts**, krigsguden, forener sig med hende. Tvillinger bliver født."
+        },
+        {
+          "type": "image",
+          "asset": "mars_rhea_silvia_roman_mythology_painting",
+          "ratio": "4:3",
+          "caption": "Mars og Rhea Silvia: tvillingers guddommelige fødsel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amulius beordrer dem til at blive druknet i Tiberen. Den oversvømmede flod aflejrer vuggen nær **Palatine** under figentræet [[Ficus Ruminalis]]. En **hun-ulv** ammer dem; en spætte, fugl fra Mars, fodrer dem. Hyrden Faustulus og hans kone Acca Larentia opdrager dem."
+        },
+        {
+          "type": "image",
+          "asset": "capitoline_wolf_romulus_remus_bronze_sculpture",
+          "ratio": "1:1",
+          "caption": "Den kapitolinske hun-ulv, billede af forældreløse og rovdyr Rom."
+        },
+        {
+          "type": "funFact",
+          "text": "På latin betyder \"lupa\" hun-ulv ... og prostitueret. Gamle forfattere antydede allerede, at Acca Larentia, med tilnavnet som sådan, var legendens sande \"ulv\"."
+        }
+      ]
+    },
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_p2",
+      "title": "Furen og mordet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Som voksne vælter tvillingerne Amulius og genopretter Numitor. Så vil de gerne finde deres egen by. Romulus vælger **Palatine**; Remus, Aventineren. For at beslutte tager de [[varsler]]: Remus ser seks gribbe først; Romulus ser derefter tolv."
+        },
+        {
+          "type": "image",
+          "asset": "palatine_hill_rome_founding_myth",
+          "ratio": "4:3",
+          "caption": "Palatinen: bakken, hvor Romulus sporer Rom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Romulus sporer [[pomoerium]], den hellige fure i indhegningen, og lover døden til enhver, der krydser den. Remus hopper over, i trods. Romulus (eller hans løjtnant Celer) dræber ham. Rom blev grundlagt den 21. april 753 f.Kr. , år I af kalenderen [[Ab Urbe Condita (753 f.Kr.)]]."
+        },
+        {
+          "type": "funFact",
+          "text": "21. april forbliver \"Natale di Roma\". Ved middagstid rammer solen indgangen til Pantheon: en effekt, som gamle arkitekter ville have designet for at forstørre magten."
+        }
+      ]
+    },
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_p3",
+      "title": "Kidnapningen af sabinerne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Første problem: byen mangler kvinder. Romulus arrangerer spil og inviterer naboerne. Midt under festen kidnapper romerne de unge piger: Sabinernes **Bortførelse**. **Sabins**, ledet af Titus Tatius, erklærer krig."
+        },
+        {
+          "type": "paragraph",
+          "text": "På slagmarken greb sabinske kvinder, allerede mødre til romerske børn, ind mellem fædre og ægtemænd. Krigen stopper. De to folkeslag smelter sammen. Romulus og Titus Tatius regerer sammen. Romerne tog navnet [[Quirites]]. Rom bliver et samfund, der integrerer fjenden."
+        }
+      ]
+    },
+    {
+      "id": "course_184_romulus_et_remus_la_fondation_de_rome_p4",
+      "title": "Romulus bliver til Quirinus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Efter syvogtredive års regeringstid og oprettelsen af et senat med hundrede \"fædre\", forsvandt Romulus under en storm på Champ de Mars. Den officielle version siger, at Mars tager ham til himlen: han bliver guden **Quirinus**. En anden version hvisker, at senatorerne myrdede ham."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tilbage er billedet af [[Den kapitolinske ulv]]: en forældreløs by, næret af vildskab, i stand til at forvandle marginaliserede mennesker til verdens herre."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Myte",
+              "title": "Fødsel af tvillinger",
+              "detail": "Mars og Rhea Silvia; hun-ulven af Tiberen."
+            },
+            {
+              "date": "753 f.Kr",
+              "title": "Grundlæggelsen af Rom",
+              "detail": "Romulus dræber Remus og sporer pomoerium."
+            },
+            {
+              "date": "Følge",
+              "title": "Voldtægt af sabinerne",
+              "detail": "Krig, derefter sammensmeltning af folk."
+            },
+            {
+              "date": "+37 år gammel",
+              "title": "Apoteose",
+              "detail": "Romulus forsvinder og bliver til Quirinus."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Grundlagt på broderdrab og kidnapning, henter Rom fra sin myte en klar idé: Statens overlevelse og respekten for den hellige grænse kommer før blodsbånd."
+        }
+      ]
+    }
+  ]
+}

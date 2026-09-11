@@ -1,0 +1,112 @@
+{
+  "id": "course_235_l_eau_prochaine_source_de_conflits",
+  "title": "Vand: næste kilde til konflikt?",
+  "subtitle": "Blåguld fra det 21. århundrede",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Mindre end 1 % af Jordens vand er frisk og let tilgængelig. Nogle eksperter ser allerede dette som den næste store kilde til konflikt.",
+  "hero": {
+    "image": "l_eau_prochaine_source_de_conflits",
+    "ratio": "16:9",
+    "hook": "Mindre end 1 % af Jordens vand er frisk og tilgængeligt. Resten skændes."
+  },
+  "sections": [
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ferskvand er den mest essentielle ressource for menneskers liv. Det er også i dag mere og mere sjældent: Demografien stiger, klimaet ændrer sig, og nogle eksperter forudser allerede de første \"vandkrige\" i det 21. århundrede."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette kursus udforsker, hvorfor en så vital ressource bliver et stort strategisk spørgsmål, der er i stand til at bringe nabolande tættere på hinanden eller modarbejde dem."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p1",
+      "title": "En sjælden ressource, dårligt fordelt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jorden er 70% dækket af vand, hvilket giver den tilnavnet \"blå planet\". Men dette vand er næsten alt salt. Ferskvand udgør kun omkring 3% af det samlede vand, og to tredjedele af det ferskvand er fanget som is, i polære iskapper og gletsjere. I sidste ende repræsenterer flydende og tilgængeligt ferskvand (søer, floder, lavvandede grundvandsmagasiner) mindre end 1% af alt vand på planeten."
+        },
+        {
+          "type": "image",
+          "asset": "dried_riverbed_water_scarcity_drought",
+          "ratio": "16:9",
+          "caption": "Tilgængeligt ferskvand udgør mindre end 1 % af alt vand på Jorden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne knaphed er ikke ligeligt fordelt. Nogle lande, såsom Brasilien, Canada eller Rusland, har enorme reserver. Andre, som Mellemøsten eller Nordafrika, oplever varig **[[Vandstress]]**: deres efterspørgsel efter vand overstiger, hvad territoriet kan levere. I 2024 lever omkring 4 milliarder mennesker mindst en måned om året i denne situation."
+        },
+        {
+          "type": "funFact",
+          "text": "I det 20. århundrede blev verdens befolkning tredoblet, men vandforbruget seksdobledes, til dels på grund af industrialisering og diæter, der var rigere på kød."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p2",
+      "title": "Geopolitik af delte floder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spændinger opstår især, når en ressource deles. Mere end 260 floder i verden er **grænseoverskridende**: de krydser flere lande, hvilket skaber en tvungen afhængighed mellem dem, der er placeret opstrøms, som kontrollerer kilden, og dem, der ligger nedstrøms, som modtager det, der er tilbage af den."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nilen illustrerer denne spænding godt. Etiopien byggede **[[GERD]]**, en enorm dæmning ved Den Blå Nil, for at producere elektricitet og blive mere selvforsynende. Men Egypten, som er afhængig af Nilen for 95 % af sit vand, opfatter hver kubikmeter, der holdes opstrøms, som en direkte trussel mod dets sikkerhed."
+        },
+        {
+          "type": "funFact",
+          "text": "Indus-flodtraktaten, der blev underskrevet i 1960 mellem Indien og Pakistan, har overlevet tre krige mellem de to lande uden nogensinde at blive brudt: et bevis på, at vand også kan være et stærkt redskab til fred."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p3",
+      "title": "Teknologi mod mangel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stillet over for knapheden på vand er nogle lande afhængige af teknologi. **afsaltning**, der omdanner havvand til drikkevand, har etableret sig i Golflandene og Mellemøsten. Israel producerer mere end 80 % af sit drikkevand ved hjælp af afsaltningsanlæg. Processen forbliver dog dyr og energikrævende, og den frigiver **saltlage**, meget salt vand, som kan skade marine økosystemer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Andre løsninger er afhængige af ædruelighed. Drypvanding, som leverer vand direkte til planterødderne, reducerer landbrugets forbrug med 30 til 70 procent."
+        },
+        {
+          "type": "funFact",
+          "text": "I **[[Singapore]]**, et lillebitte område uden store vandreserver, renses spildevand ved hjælp af så avancerede teknikker, at det bliver renere end kildevand, før det genanvendes under navnet \"NEWater\"."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p4",
+      "title": "Mod delt styring af blåt guld",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På trods af forudsigelser om \"vandkrige\" viser historien, at denne ressource oftere er blevet brugt til samarbejde end åben konflikt. Oprettelse af bassinkommissioner og traktater mellem nabolande er fortsat den bedste måde at undgå kriser på."
+        },
+        {
+          "type": "paragraph",
+          "text": "Et koncept hjælper med at forstå problemets omfang: den virtuelle **[[virtuelt vand]]**, det vil sige den mængde vand, der er nødvendig for at producere et produkt. Ved at importere hvede importerer et vandstresset land faktisk det vand, der bruges til at dyrke det andre steder. For eksempel kræver det omkring 15.000 liter vand at producere et enkelt kilogram oksekød, sammenlignet med 1.500 liter for et kilogram hvede."
+        },
+        {
+          "type": "takeaway",
+          "text": "Tilgængeligt ferskvand udgør mindre end 1 % af Jordens vand, og hundredvis af millioner mennesker bor i bassiner, der deles mellem lande med modsatrettede interesser. Teknologi og internationalt samarbejde er fortsat de bedste våben mod fremtidige vandkriser."
+        }
+      ]
+    }
+  ]
+}

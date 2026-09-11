@@ -1,0 +1,108 @@
+{
+  "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment",
+  "title": "Hvad er drivhuseffekten (egentlig)?",
+  "subtitle": "Klima og atmosfære",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Drivhuseffekten er ikke primært et problem: Det er den usynlige kappe, der forhindrer Jorden i at fryse. Det virkelige problem er, når du tykner det for hurtigt.",
+  "hero": {
+    "image": "qu_est_ce_que_l_effet_de_serre",
+    "ratio": "16:9",
+    "hook": "Uden drivhuseffekten ville Jorden være en iskold ørken. Med for meget bliver den overophedet."
+  },
+  "sections": [
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Forestil dig en lukket bil i solen: Ruderne slipper lyset ind, men varmen har svært ved at komme ud. Kabinen varmer op. Jordens [[drivhuseffekt]] fungerer lidt sådan her, med luft i stedet for glas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette fænomen er **naturligt** og livsvigtigt. Uden den ville klodens gennemsnitlige temperatur falde mod **-18 °C**. Med ham er vi omkring **+15 °C**. Det aktuelle problem er ikke dets eksistens: det er dets hurtige **forstærkning** af vores aktiviteter."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p1",
+      "title": "Hvordan planeten holder sin varme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Solen sender hovedsageligt synligt lys. Atmosfæren lader det passere. Landet og oceanerne varmes op og udstråler derefter denne energi tilbage i form af **infrarødt lys**, bølger, der er \"længere\" end synligt lys."
+        },
+        {
+          "type": "image",
+          "asset": "factory_chimneys_greenhouse_gas_emissions",
+          "ratio": "auto",
+          "caption": "Industrielle emissioner forstærker drivhuseffekten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Visse gasser, [[Drivhusgasser]], absorberer denne varme og udstråler den i alle retninger, også mod jorden. Nitrogen og ilt, størstedelen i luften, udfører næppe dette job. Vanddamp, **CO₂** og **metan** gør dette meget godt."
+        },
+        {
+          "type": "funFact",
+          "text": "Navnet \"drivhuseffekt\" er lidt misvisende. Et rigtigt drivhus opvarmes hovedsageligt ved at blokere for den opstigende varme luft. Atmosfæren fanger varme ved at absorbere infrarøde stråler."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p2",
+      "title": "Når mennesker gør tæppet tykkere",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Siden den industrielle revolution er kul, olie og gas blevet brændt af. Dette kulstof, der er begravet under jorden i millioner af år, vender tilbage til luften. Skovrydning reducerer også skove, der absorberede CO₂. Husdyr og risdyrkning tilføjer metan, omkring **80 gange** mere \"opvarmning\" end CO₂ over 20 år."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultat: CO₂-koncentrationen steg fra ca. **280** til mere end **420** ppm. Et sådant niveau var ikke set siden [[Pliocæn]], for omkring **3 millioner på siden**, da havene var højere."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p3",
+      "title": "Hvilken mere energisk klimaændring",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[IPCC]], som syntetiserer arbejdet fra tusindvis af klimatologer, er tydelig: Opvarmningen siden 1950 er uden fortilfælde gennem årtusinder, og dens menneskelige oprindelse er etableret."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mere energi i luften og havene betyder flere ekstremer: Tørre tørke, mere voldsom regn, smeltende gletsjere og iskapper, stigende havniveauer. Og en accelerator: Når den hvide is forsvinder, absorberer den mørke jord og vand mere sollys. [[Terrestrisk albedo]] falder, og planeten opvarmes endnu hurtigere."
+        },
+        {
+          "type": "funFact",
+          "text": "Venus viser den \"pakkede\" drivhuseffekt: en atmosfære på 96 % CO₂ og omkring **460 °C** på jorden, nok til at smelte bly."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
+      "title": "Begræns stigningen, tilpas til resten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det internationale mål sigter mod at forblive under **+1,5°C** eller **+2°C** sammenlignet med den førindustrielle æra for at undgå farlige tærskler såsom optøning af [[permafrost]], som ville frigive endnu mere metan."
+        },
+        {
+          "type": "paragraph",
+          "text": "To håndtag: **reducering**-emissioner (ren energi, ædruelighed, skove) og **tilpasset** til det, der allerede er forpligtet. CO₂ forbliver i luften i århundreder: det, vi udleder i dag, holder længe."
+        },
+        {
+          "type": "takeaway",
+          "text": "Uden en naturlig drivhuseffekt ville Jorden fryse omkring **-18 °C**. Dens forstærkning med fossile brændstoffer skubber CO₂ til niveauer, der ikke er set i **3 millioner dollars**."
+        }
+      ]
+    }
+  ]
+}

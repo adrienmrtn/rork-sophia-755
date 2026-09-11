@@ -1,0 +1,135 @@
+{
+  "id": "course_22_la_crise_des_missiles_de_cuba_1962",
+  "title": "Cubakrisen",
+  "subtitle": "1962",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "I oktober **1962** kom verden **13 dage** på randen af atomkrig. Missiler i Cuba, flåder i alarmberedskab: Den Kolde Krig når sit højdepunkt.",
+  "hero": {
+    "image": "la_crise_des_missiles_de_cuba_1962",
+    "ratio": "16:9",
+    "hook": "Tretten dage, hvor et enkelt \"ja\" kunne have udløst atomapokalypsen."
+  },
+  "sections": [
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I oktober **1962** kommer menneskeheden tæt på det værste. I løbet af **13 dage** støder USA og USSR sammen om nukleare missiler installeret i Cuba, en ø mindre end 150 km fra Florida. Bomberne er klar. En fejl, og alt kan ændre sig."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne krise er toppen af den kolde krig. Det foregår på kontorerne i Washington og Moskva... og også i en isoleret ubåd, hvor en officer nægter et skud, der kunne have ødelagt alt."
+        }
+      ]
+    },
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_p1",
+      "title": "Cuba, for tæt på USA",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1959** overtog **Fidel Castro** magten i Cuba. For Washington er en Moskva-allieret så tæt på det amerikanske kontinent uacceptabel. I april **1961** organiserede CIA, den amerikanske efterretningstjeneste, en landgang ved [[Svinebugten]]. Det er en katastrofe. USA's præsident **John F. Kennedy** er ydmyget. Castro rykker endnu tættere på USSR."
+        },
+        {
+          "type": "funFact",
+          "text": "For at skjule operation [[Anadyr]], den hemmelige opstilling af missiler, tog sovjetterne også landbrugsudstyr om bord... og russisk vintertøj, som om destinationen var et andet sted."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Nikita Khrusjtjov**, den sovjetiske leder, ønsker at genoprette balancen. Amerikanerne har allerede placeret [[Jupiter]]-missiler i Italien og i [[Türkiye]], meget tæt på USSR. Han beslutter sig for i al hemmelighed at installere mellemdistancemissiler på cubansk jord."
+        }
+      ]
+    },
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_p2",
+      "title": "14. oktober: hemmeligheden kommer frem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**14. oktober**, et amerikansk U-2 spionfly fotograferer missilramper [[SS-4]], der er i stand til at nå en stor del af USA. Kennedy samler en lille krisekomité. I seks dage vejede vi alle mulighederne: bombninger, invasion, diplomati."
+        },
+        {
+          "type": "image",
+          "asset": "u_2_spy_plane_aerial_photography",
+          "ratio": "4:3",
+          "caption": "U-2-billeder afslører sovjetiske missiler i Cuba."
+        },
+        {
+          "type": "paragraph",
+          "text": "Generaler, som Curtis LeMay, ønsker at slå til med det samme. Kennedy valgte en mellemvej: en flådeblokade. Han kaldte det \"karantæne\" for at undgå ordet \"blokade\", som betyder krig i international lov. Den **22. oktober** på tv afslører han missilerne for verden og kræver, at de bliver fjernet."
+        }
+      ]
+    },
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_p3",
+      "title": "Sort lørdag",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den **27. oktober.**, med tilnavnet \"Sort Lørdag\", bliver en U-2 skudt ned over Cuba. På havet forbereder den sovjetiske ubåd **B-59**, chikaneret og afskåret fra Moskva, sig til at affyre en atomtorpedo. Protokollen kræver samtykke fra tre betjente. To siger ja. **Vasily Arkhipov**, den politiske officer om bord, siger nej."
+        },
+        {
+          "type": "image",
+          "asset": "cuban_missile_crisis_1962_kennedy",
+          "ratio": "4:3",
+          "caption": "Kennedy står over for krisen, oktober 1962."
+        },
+        {
+          "type": "funFact",
+          "text": "Den berømte \"røde telefon\", der blev installeret efter krisen, er i virkeligheden en **fjernskrivemaskine**. Den røde telefon findes kun i film."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bag kulisserne bliver der lavet en aftale. USSR trækker sine missiler tilbage fra Cuba. USA accepterer ikke at invadere øen. Hemmelig klausul: Amerikanske missiler fra Türkiye vil blive trukket tilbage senere."
+        }
+      ]
+    },
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_p4",
+      "title": "Efter frygten, lidt dialog",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Krisen åbner en fase af [[Détente]], en relativ forsoning mellem de to blokke. En direkte linje vil snart forbinde Kreml og Det Hvide Hus. Doktrinen om [[Mutually Assured Destruction (MAD)]] er essentiel: da ingen kan vinde en atomkrig, bør ingen indlede en."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "14. oktober 1962",
+              "title": "Opdagelse af missiler",
+              "detail": "En U-2 fotograferer ramperne i Cuba."
+            },
+            {
+              "date": "22. oktober 1962",
+              "title": "Kennedys tale",
+              "detail": "Søkarantæne og offentligt ultimatum."
+            },
+            {
+              "date": "27. oktober 1962",
+              "title": "Sort lørdag",
+              "detail": "U-2 skudt ned; Arkhipov afviser atomskuddet."
+            },
+            {
+              "date": "28. oktober 1962",
+              "title": "Aftale",
+              "detail": "Khrusjtjov bebuder tilbagetrækning af missiler."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "I **13 dage** viser den cubanske krise, at den kolde krig kunne ødelægge verden... og at det nogle gange kom ned til et enkelt afslag, Arkhipovs."
+        }
+      ]
+    }
+  ]
+}

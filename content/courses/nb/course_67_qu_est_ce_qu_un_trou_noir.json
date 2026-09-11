@@ -1,0 +1,120 @@
+{
+  "id": "course_67_qu_est_ce_qu_un_trou_noir",
+  "title": "Hva er et sort hull?",
+  "subtitle": "Ekstrem alvorlighetsgrad",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Et sort hull er ikke en kosmisk støvsuger. Det er et område hvor tyngdekraften er så sterk at selv lys ikke kan unnslippe.",
+  "hero": {
+    "image": "qu_est_ce_qu_un_trou_noir",
+    "ratio": "16:9",
+    "hook": "Ingenting kommer ut, ikke engang lys. Imidlertid endte vi opp med å fotografere skyggen."
+  },
+  "sections": [
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Et svart hull er et område av **rom-tid**, stoffet som forener rom og tid, der tyngdekraften er så intens at hastigheten som trengs for å unnslippe, overstiger lysets hastighet. Ingenting kommer ut: uansett, intet lyssignal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det er ikke et \"hull\" i betydningen en tunnel. Det er en ekstrem konsentrasjon av materiale som bøyer dette stoffet veldig sterkt. Lenge som en ren teori som er et resultat av Einsteins ligninger, blir sorte hull i dag observert på flere måter."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p1",
+      "title": "Når en stjerne kollapser",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Et stjernesort hull blir ofte født fra døden til en veldig massiv stjerne, minst **20 til 25 ganger solens masse. I løpet av livet holder stjernen på takket være en balanse: tyngdekraften trekker mot midten, trykket fra **nukleær** fusjon** presser seg utover. I hjertet av stjernen forvandles hydrogen til helium."
+        },
+        {
+          "type": "image",
+          "asset": "black_hole_accretion_disk_galaxy",
+          "ratio": "auto",
+          "caption": "Et svart hull omgitt av sin glødende akkresjonsskive."
+        },
+        {
+          "type": "paragraph",
+          "text": "Når drivstoffet går tom, synker trykket. Stjernens hjerte er knust. En eksplosjon av **supernova** kan da lyse opp galaksen. Hvis den gjenværende kjernen er massiv nok, er det ingenting som stopper kompresjonen."
+        },
+        {
+          "type": "paragraph",
+          "text": "I sentrum beskriver teorien en [[Gravitasjonssingulariteten]]: et punkt hvor tetthet og krumning blir ekstrem, og hvor våre nåværende ligninger slutter å fungere godt. Rundt den finner vi [[Hendelseshorisont]]: en usynlig kant. Når du har krysset, er ingen retur mulig til resten av universet."
+        },
+        {
+          "type": "funFact",
+          "text": "Hvis du falt mot et svart hull, ville tyngdekraften trekke mye hardere på føttene enn på hodet. Denne strekkingen kalles \"spaghettifisering\"."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p2",
+      "title": "Ikke en kosmisk støvsuger",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I motsetning til hva mange tror, suger ikke et svart hull inn alt som passerer i det fjerne. Tyngdekraften avhenger av massen og avstanden, som med alle gjenstander. Hvis solen ble erstattet av et sort hull med samme masse, ville jorden fortsette å gå i bane. Men uten lys og varme ville vi fryse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det er også **supermassiv skrogtype**, på millioner til milliarder av solmasser, i hjertet av nesten alle galakser. I Melkeveien er det **Skytten A***, omtrent **4 millioner** solmasser."
+        },
+        {
+          "type": "paragraph",
+          "text": "De blir ofte oppdaget takket være [[Akkresjonsdisk]]: en ring av gass og støv som roterer veldig raskt rundt dem. Friksjon varmer dette materialet til det blir ekstremt lyst i røntgenstråler eller radiobølger. Vi ser da skyggen av det sorte hullet på denne lysende bakgrunnen."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p3",
+      "title": "2019: det første bildet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **April 2019** lanserer Event Horizon Telescope-prosjektet det første bildet av et svart hull. Ved å kombinere åtte radioteleskoper ved å bruke [[Interferometri]], skaper forskere et virtuelt teleskop på størrelse med jorden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Målet er **M87***, det supermassive sorte hullet i galaksen Messier 87, **55 millioner** lysår unna. Vi ser en lys ring rundt et mørkt område: silhuetten av hendelseshorisonten. I **2022** følger et bilde av vår nabo Skytten A*."
+        },
+        {
+          "type": "funFact",
+          "text": "Siden **2015** har LIGO- og Virgo-observatoriene også oppdaget **gravitasjonsbølger**: små vibrasjoner av rom-tid som produseres når to sorte hull smelter sammen."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p4",
+      "title": "Hawking og langsom fordampning",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1974** viste den britiske fysikeren **Stephen Hawking** at et svart hull ikke ville være helt svart. På grunn av kvanteeffekter nær horisonten, ville den sende ut svært svak stråling: [[Hawking-stråling]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultat: et isolert sort hull ville sakte miste masse og til slutt fordampe. For et stjernesort hull vil dette ta tider fantastisk lenger enn universets nåværende alder. Denne ideen reiser også informasjonsparadokset: hva skjer med informasjonen om det som falt inni hvis det sorte hullet forsvinner?"
+        },
+        {
+          "type": "paragraph",
+          "text": "I nærheten av et svart hull går tiden også langsommere for en fjern observatør, en relativistisk effekt av **tidsutvidelse**. Disse objektene er fortsatt blant de beste laboratoriene for å teste fysikkens grenser."
+        },
+        {
+          "type": "takeaway",
+          "text": "Et svart hull dannes ofte ved kollaps av en massiv stjerne. Den er avgrenset av hendelseshorisonten, en grense som ble fotografert for første gang i **2019** rundt M87*."
+        }
+      ]
+    }
+  ]
+}

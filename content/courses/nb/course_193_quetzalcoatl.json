@@ -1,0 +1,140 @@
+{
+  "id": "course_193_quetzalcoatl",
+  "title": "Quetzalcoatl",
+  "subtitle": "Den fjærkledde slangen",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Quetzalcoatl, den fjærkledde slangen, er guden for den mesoamerikanske sivilisasjonen. Myten kombinerer skapelse, eksil og det fatale møtet med Cortés.",
+  "hero": {
+    "image": "quetzalcoatl",
+    "ratio": "16:9",
+    "hook": "Gud, konge og profeti: Den fjærkledde slangen spenner over to tusen år med meksikansk historie."
+  },
+  "sections": [
+    {
+      "id": "course_193_quetzalcoatl_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Quetzalcoatl**, den \"fjærkledde slangen\", er en av de rikeste skikkelsene i pre-columbiansk Mexico. Han har blitt æret i mer enn to årtusener, fra [[Teotihuacán]], en stor by på sentralplatået, til aztekerne, og blant mayaene under navnet [[Kukulkán]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han forener jorden (slangen) og himmelen (fjæren). Gud av sivilisasjon, kunnskap og moralsk orden, myten hans ender opp med å krysse ekte historie: den spanske erobringen av **1519**."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p1",
+      "title": "Guden som oppfant mais",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I [[Nahuatl]] kommer **Quetzalcoatl** fra [[quetzal]], fuglen med grønne fjær, og fra *coatl*, slangen. Denne foreningen gjør den til broen mellom det menneskelige og det guddommelige."
+        },
+        {
+          "type": "image",
+          "asset": "quetzalcoatl_feathered_serpent_aztec_sculpture",
+          "ratio": "4:3",
+          "caption": "Quetzalcoatl, den fjærkledde slangen: jord og himmel flettet sammen."
+        },
+        {
+          "type": "paragraph",
+          "text": "I [[Kosmogoni av de fem solene]] stiger han ned til [[Mictlán]], de dødes verden, for å samle beinene til tidligere mennesker. Han vekker dem til live med sitt blod. Så stjeler han **korn** fra maurene: grunnleggeren av Mexico. Som vindens gud åpner han også veien til regnet til [[Tlaloc]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Quetzalens halefjær kan måle **60 cm**. Blant mayaene og aztekerne var det dødsstraff for å drepe fuglen: noen få fjær ble tatt fra den og deretter løslatt."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p2",
+      "title": "Kongepresten i Tula",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Myten har også et historisk ansikt: **Topiltzin Quetzalcoatl**, konge-prest av **Tula** på 1000-tallet. Han ville ha ønsket å reformere kulten og erstatte menneskeofringer med ofringer av blomster og sommerfugler."
+        },
+        {
+          "type": "image",
+          "asset": "tula_toltec_pyramid_warriors_sculpture_mexico",
+          "ratio": "4:3",
+          "caption": "Tula, Toltec-byen knyttet til regjeringen og fallet til Quetzalcoatl."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hans rival **Tezcatlipoca** presser ham til å drikke pulque, en gjæret drink. Ydmyket ble kongen eksilert mot øst. Ifølge legenden lover han å returnere ett år \"Un Reed\". Dette løftet vil bære vekt."
+        },
+        {
+          "type": "funFact",
+          "text": "Etter hans avgang blir Quetzalcoatl noen ganger Morgenstjernen: planeten Venus. Guden dør ikke, han endrer form."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p3",
+      "title": "1519: når myten møter Cortés",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1519** ankommer **Hernán Cortés** i øst, «One Reed»-året i den aztekiske kalenderen, det året der gudens gjenkomst var forventet. Keiser **Moctezuma II** nøler: skal vi kjempe mot en inntrenger eller ønske en guddommelighet velkommen?"
+        },
+        {
+          "type": "image",
+          "asset": "herna_u0301n_corte_u0301s_arrival_mexico_1519_moctezuma_painting",
+          "ratio": "4:3",
+          "caption": "1519: ankomsten av Cortés møter løftet om guddommelig retur."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han sender gaver av gull og fjær. [[Conquistadors]] ser på dette som en invitasjon. Myten, sann eller forsterket i ettertid, blir et psykologisk våpen høsten [[Tenochtitlán]], den aztekiske hovedstaden."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Myte",
+              "title": "Skaper",
+              "detail": "De dødes bein, guddommelig blod, korngave."
+            },
+            {
+              "date": "900-tallet",
+              "title": "Eksil fra Tula",
+              "detail": "Prestekongen går østover."
+            },
+            {
+              "date": "1519",
+              "title": "Cortes",
+              "detail": "Den forventede avkastningen blir erobring."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p4",
+      "title": "Et symbol som aldri dør",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Etter erobringen forsvant ikke Quetzalcoatl. Noen munker tror de ser en apostel der. Senere gjorde det uavhengige Mexico det til et emblem for førkolumbiansk storhet. Muralister fra 1900-tallet, som Diego Rivera, maler det som landets sjel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selv i dag uttrykker den fjærkledde slangen en identitet: røtter i jorden, ambisjon vendt mot himmelen."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Quetzalcoatl**, Feathered Serpent, er guden for den mesoamerikanske sivilisasjonen. Skaper, eksilkonge, deretter fatal profeti i **1519**, han er fortsatt et sentralt symbol på Mexico."
+        }
+      ]
+    }
+  ]
+}

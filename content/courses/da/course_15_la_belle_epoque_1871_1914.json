@@ -1,0 +1,129 @@
+{
+  "id": "course_15_la_belle_epoque_1871_1914",
+  "title": "Belle Époque",
+  "subtitle": "1871-1914",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Mellem slutningen af krigen i 1870 og august 1914 troede Europa på fremskridt. Elektricitet, udstillinger, ny kunst... og brud, der fører til katastrofe.",
+  "hero": {
+    "image": "la_belle_epoque",
+    "ratio": "16:9",
+    "hook": "Fyrre års tro på fremskridt... før alt ændrede sig i 1914."
+  },
+  "sections": [
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The **Belle Époque** designates the period of relative peace between the end of the [[Fransk-preussisk krig]] (**1871**) and the outbreak of the [[Første Verdenskrig]] (**1914**). Vi tror på videnskab, på fremskridt, på fornuft."
+        },
+        {
+          "type": "paragraph",
+          "text": "For de velhavende klasser i Vesteuropa var det fire årtiers komfort og opfindelse. Men under fineren skinner der allerede sociale brud og rivalisering, der vil sprænge alt i luften."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p1",
+      "title": "Når teknologien transformerer hverdagen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En anden industriel revolution bringer **elektricitet**, **olie**, kemi. Sporvognen og metroen (Paris, **1900**) ændrer byen. Bilen og flyet er født. Telefonen forkorter afstande."
+        },
+        {
+          "type": "image",
+          "asset": "paris_universal_exhibition_1900",
+          "ratio": "4:3",
+          "caption": "Verdensudstillingen 1900 i Paris, et udstillingsvindue for fremskridt."
+        },
+        {
+          "type": "funFact",
+          "text": "Navnet \"Belle Époque\" optræder kun efter **1914**. Samtidige levede ikke i \"Belle Époque\": det var de overlevende fra skyttegravene, der opfandt dette tabte paradis."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Verdensudstillingen 1900** tiltrækker **50 mio** besøgende. Lumière-brødrenes biograf og Moulin Rouge gør Paris til en underholdningshovedstad. [[Auguste Comtes positivisme]], en meget indflydelsesrig filosofi, opsummerer optimismen: videnskaben vil løse alt."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p2",
+      "title": "Bag kulisserne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bag boulevarderne arbejder arbejdere ofte **10 til 12 timer** om dagen uden reel beskyttelse. Fattigdom i byer giver næring til spændinger mellem klasser."
+        },
+        {
+          "type": "image",
+          "asset": "eiffel_tower_1889",
+          "ratio": "4:3",
+          "caption": "Eiffeltårnet (1889), ikon for en modernitet, der ikke kommer alle til gode."
+        },
+        {
+          "type": "paragraph",
+          "text": "På globalt plan deler Europa Afrika. [[Berlin-konferencen]] (**1884-1885**) sætter grænser uden at konsultere de berørte folk. I Frankrig river [[Dreyfus affære]] republikken fra hinanden: En jødisk officer, Alfred Dreyfus, bliver fejlagtigt dømt for spionage, og antisemitisme kommer frem i lyset."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p3",
+      "title": "Nye kunstarter, så efteråret",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kunsten eksploderer. [[Art Nouveau]] kurver facaderne. [[Fauvisme]] og [[Kubisme]] ryster maleriet. Lægen [[Sigmund Freud]] udforsker det ubevidste. Albert Einstein udgiver [[Relativitet]] i **1905**: Rum og tid er ikke længere, hvad vi troede."
+        },
+        {
+          "type": "funFact",
+          "text": "I **1913** forårsagede balletten *Forårets Rite* af Igor Stravinsky en sådan skandale i Paris, at tilskuerne kom på tværs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Så ændrer alt sig. Den **28. juni 1914** blev ærkehertug **Franz Ferdinand**, arving fra Østrig-Ungarn, myrdet i Sarajevo. Alliancernes gear er sat i gang. Den **4. august** går Storbritannien ind i krigen. Troen på fremskridt dør i skyttegravene."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1871",
+              "title": "Afslutningen på den fransk-preussiske krig",
+              "detail": "Fødsel af et forenet Tyskland, fransk vrede."
+            },
+            {
+              "date": "1889",
+              "title": "Eiffeltårnet",
+              "detail": "Symbol på teknisk modernitet."
+            },
+            {
+              "date": "1894-1906",
+              "title": "Dreyfus affære",
+              "detail": "Republikken er ved at rive sig selv i stykker."
+            },
+            {
+              "date": "1900",
+              "title": "Verdensudstilling",
+              "detail": "Paris, verdens udstillingsvindue."
+            },
+            {
+              "date": "august 1914",
+              "title": "Store Krig",
+              "detail": "Belle Époque slutter brat."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Belle Époque (**1871-1914**) kombinerer tekniske fremskridt og dybe brud, før den synker ned i kaoset under Den Store Krig."
+        }
+      ]
+    }
+  ]
+}

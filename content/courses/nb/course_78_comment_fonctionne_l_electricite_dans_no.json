@@ -1,0 +1,112 @@
+{
+  "id": "course_78_comment_fonctionne_l_electricite_dans_no",
+  "title": "Hvordan fungerer elektrisitet i kroppen vår?",
+  "subtitle": "Nerver og ioner",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Tenker, slår av hjertet, løfter en arm: alt dette sirkulerer først som levende elektrisitet, båret ikke av elektroner, men av ioner.",
+  "hero": {
+    "image": "comment_fonctionne_l_electricite_dans_notre_corps",
+    "ratio": "16:9",
+    "hook": "Kroppen din er et elektrisk nettverk. Men her er strømmen ioner, ikke elektroner."
+  },
+  "sections": [
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I en veggkontakt er strømmen **elektroner** som sirkulerer. I kroppen din er det annerledes: de er **ioner**, ladede atomer, som går inn og ut av cellene. Denne flyten skaper signalene som får hjertet til å tenke, hjertet slå og muskelen trekke seg sammen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uten denne levende elektrisiteten, ingen tanke, ingen gest, ingen puls. Å forstå kroppen betyr også å forstå dette språket av ladninger."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p1",
+      "title": "Nevronets elektriske klikk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **nevron** i hvile sender ikke en melding, men den \"lader\". Membranen skiller innsiden og utsiden av cellen. Takket være [[natrium-kalium pumper]] opprettholder den et [[hvilepotensial]] på omtrent **-70 millivolt**: innsiden er mer negativ enn utsiden."
+        },
+        {
+          "type": "image",
+          "asset": "neuron_electrical_signal_brain",
+          "ratio": "auto",
+          "caption": "Nevroner kommuniserer gjennom korte elektriske impulser."
+        },
+        {
+          "type": "paragraph",
+          "text": "Når en stimulans kommer, åpnes kanaler. Natriumet kommer inn på en gang. Polariteten er reversert: det er [[handlingspotensial]], et alt-eller-ingenting-signal som går langs aksonet, noen ganger over en meter. Som en elektrisk bølge."
+        },
+        {
+          "type": "funFact",
+          "text": "Den våkne hjernen produserer omtrent **20 watt**, nok til en liten LED. Den bruker imidlertid nesten **20%** av kroppens kalorier."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p2",
+      "title": "Ved synapsen blir elektrisitet til kjemi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nevronene berører egentlig ikke hverandre. Mellom dem, et lite gap: **synapse**. Det elektriske signalet kan ikke hoppe over det. Deretter frigjør enden av aksonet [[Nevrotransmittere]], messenger-molekyler som acetylkolin eller [[glutamat]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Disse budbringerne fester seg til neste nevron som en nøkkel i en lås. Avhengig av budskapet begeistrer eller hemmer de. Tusenvis av disse samtidige beslutningene danner tanke."
+        },
+        {
+          "type": "funFact",
+          "text": "Noen nervesignaler går med **120 m/s** (mer enn **430 km/t**). Nok til å reagere på et brannsår på tåen på et brøkdel av et sekund."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
+      "title": "Hjertet har sin egen pacemaker",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hjertet venter ikke på en kommando fra hjernen for hvert slag. I høyre atrium genererer **sinus-noden** sine egne impulser, omtrent **60 til 100** ganger per minutt i hvile. Signalet forplanter seg, trekker først sammen atriene, deretter ventriklene."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne aktiviteten er sterk nok til å leses på huden: det er **elektrokardiogram (EKG)**. Hvis rytmen blir forstyrret, snakker vi om **arytmi**. Hjertet slår da uorden og pumper dårlig."
+        },
+        {
+          "type": "funFact",
+          "text": "Den elektriske ålen bruker det samme prinsippet om eksiterbare celler, men i serie: opptil **600 volt**, nok til å lamme byttedyr."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
+      "title": "Fra frivillig gest til hjertestarter",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For å heve armen går et aksjonspotensial ned til muskelen. Acetylkolin utløser en lokal elektrisk bølge, deretter frigjøring av kalsium. Muskelproteinene glir over hverandre: sammentrekning."
+        },
+        {
+          "type": "paragraph",
+          "text": "**defibrillering** bruker samme prinsipp i revers: et eksternt sjokk tilbakestiller alle cellene \"til null\" slik at sinusknuten gjenopptar tempoet. Bioniske proteser fanger også opp disse svake signalene for å kontrollere en kunstig hånd."
+        },
+        {
+          "type": "takeaway",
+          "text": "Levende ting snakker i ionestrømmer og handlingspotensialer. Tanke, hjerte og muskler deler det samme elektriske språket."
+        }
+      ]
+    }
+  ]
+}

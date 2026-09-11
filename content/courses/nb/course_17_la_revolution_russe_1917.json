@@ -1,0 +1,146 @@
+{
+  "id": "course_17_la_revolution_russe_1917",
+  "title": "Den russiske revolusjonen",
+  "subtitle": "1917",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "På mindre enn åtte måneder gikk Russland fra tsarens makt til bolsjevikenes makt. 1917 finner opp en modell som vil dele verden i flere tiår.",
+  "hero": {
+    "image": "la_revolution_russe_1917",
+    "ratio": "16:9",
+    "hook": "På åtte måneder er et tusen år gammelt imperium styrtet... og det 20. århundre deles i to."
+  },
+  "sections": [
+    {
+      "id": "course_17_la_revolution_russe_1917_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1917**, på mindre enn åtte måneder, gikk Russland fra et absolutt monarki til et regime ledet av **bolsjevikene**, et revolusjonært parti ledet av **Vladimir Lenin**. Dette er ikke et enkelt opprør. Det er sammenbruddet av et imperium under vekten av krigen, deretter fall i tomhet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette skiftet finner opp en modell som vil dele verden i en stor del av det 20. århundre."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p1",
+      "title": "Et Russland andpusten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Forpliktet til [[Første verdenskrig]] siden 1914, Russland følger ikke lenger. Allerede **1,7 millioner** døde soldater. Mytterier. Mangel på mel og kull i **Petrograd**, hovedstaden (nå St. Petersburg). Tsar **Nicholas II** avslår reformene som er bedt om av [[Duma]], det russiske parlamentet."
+        },
+        {
+          "type": "image",
+          "asset": "tsar_nicholas_ii_portrait",
+          "ratio": "4:3",
+          "caption": "Nicholas II, siste tsar i et monarki som går tom for damp."
+        },
+        {
+          "type": "funFact",
+          "text": "Giften som hadde til hensikt å drepe [[Rasputin]], en innflytelsesrik munk ved hoffet, ville blitt nøytralisert av sukkeret i kakene der den hadde blitt skled: legenden om attentatet hans sier mye om miskrediteringen av tronen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ved å ta kommandoen ved fronten i **1915**, blir tsaren alene ansvarlig for nederlagene. Rasputins innflytelse på tsarina **Alexandra** ødela til slutt prestisjen til den keiserlige familien."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p2",
+      "title": "Februar: slutten av Romanovs",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **februar 1917** (ifølge [[Juliansk kalender]] som da var i bruk i Russland, forsinket med flere dager i Vesten), startet revolusjonen fra brød. Arbeiderne går ut i gatene. Garnisonen forbrødrer seg. Nicholas II abdiserer **2. mars**: **Z** 300 år med Romanov-dynastiets regjeringstid går mot slutten."
+        },
+        {
+          "type": "image",
+          "asset": "russian_revolution_1917_petrograd",
+          "ratio": "4:3",
+          "caption": "Petrograd 1917: gaten har forrang over tronen."
+        },
+        {
+          "type": "paragraph",
+          "text": "En \"dobbel makt\" trer så inn. På den ene siden, en lovlig **provisorisk regjering**. På den andre, [[Petrograd Sovjet]], et råd av arbeidere og soldater som kontrollerer fabrikker og brakker. **Alexander Kerensky**, foreløpig figur, holder Russland i krigen. Folket vil ha fred, brød og land."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p3",
+      "title": "Oktober: Lenin tar makten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lenin vender tilbake fra eksil i et «ledertog» organisert av Tyskland, som håper å svekke Russland. Fra april brølte [[apriloppgaver]]: **\"Fred, brød, jord\"**. Med [[Leon Trotskij]], fremragende arrangør, forberedte bolsjevikene opprøret."
+        },
+        {
+          "type": "image",
+          "asset": "lenin_portrait",
+          "ratio": "4:3",
+          "caption": "Lenin, strateg for en organisert overtakelse."
+        },
+        {
+          "type": "funFact",
+          "text": "Da Vinterpalasset ble inntatt, var tsarenes vinkjellere så store at det måtte settes ut vakter for å hindre revolusjonen i å gå ned i fylla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Natt til **7. november 1917** (25. oktober ifølge den russiske kalenderen) falt broer, stasjoner og telegrafer nesten uten at et skudd ble avfyrt. Vinterpalasset, sete for den provisoriske regjeringen, følger. Så begynner en blodig borgerkrig frem til **1922**."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p4",
+      "title": "USSRs fødsel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Cheka**, bolsjevikenes politiske politi, lanserer terror. I juli **1918** ble den keiserlige familien henrettet i Jekaterinburg. Freden i [[Brest-Litovsk]] fjerner Russland fra krigen på bekostning av store territorielle tap. I **1922** ble **USSR** født, den første staten bygget på [[Marxisme-leninisme]], ideologien som kombinerer ideene til Marx og Lenins metode."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "feb. 1917",
+              "title": "februarrevolusjonen",
+              "detail": "Abdikasjon av Nicholas II."
+            },
+            {
+              "date": "april 1917",
+              "title": "apriloppgaver",
+              "detail": "Lenin nekter å inngå kompromiss med det provisoriske."
+            },
+            {
+              "date": "okt./nov. 1917",
+              "title": "Overtakelse",
+              "detail": "Bolsjevikkupp i Petrograd."
+            },
+            {
+              "date": "mars 1918",
+              "title": "Brest-Litovsk",
+              "detail": "Slutt på krigen, territorielle tap."
+            },
+            {
+              "date": "1922",
+              "title": "USSRs fødsel",
+              "detail": "En ny stat opprettes permanent."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "I **1917** forvandlet sammenbruddet av tsarismen og den bolsjevikiske maktovertakelsen et brødopprør til fødselen av verdens første kommunistiske stat."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "course_234_la_securite_alimentaire_mondiale",
+  "title": "Global matsikkerhet",
+  "subtitle": "800 millioner mennesker",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Jorden produserer nok mat til alle. Så hvorfor sulter fortsatt **800 millioner mennesker**?",
+  "hero": {
+    "image": "la_securite_alimentaire_mondiale",
+    "ratio": "16:9",
+    "hook": "Hungeren til 800 millioner mennesker er ikke et problem med mat, men om å dele."
+  },
+  "sections": [
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I dag lider rundt **800 millioner mennesker** av sult i verden, eller én av ti mennesker. Dette tallet er desto mer merkelig fordi menneskeheten aldri har produsert så mye mat: statistisk sett er det mer enn nok å spise for alle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sult er derfor ikke et problem med kvantitet, men av distribusjon. Å forstå global matsikkerhet betyr å forstå hvorfor overflod og hungersnød kan eksistere side om side på samme planet."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p1",
+      "title": "Sultens geografi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ifølge **[[FAO]]**, FNs matvarebyrå, påvirket kronisk underernæring fortsatt rundt 800 millioner mennesker i 2024. Denne globale figuren skjuler svært forskjellige realiteter. De mest berørte områdene er i Afrika sør for Sahara, hvor mer enn en fjerdedel av befolkningen regelmessig mangler mat, og i Sør-Asia."
+        },
+        {
+          "type": "image",
+          "asset": "famine_sub_saharan_africa_malnutrition_child",
+          "ratio": "auto",
+          "caption": "Sult påvirker fortsatt hundrevis av millioner mennesker, spesielt i Afrika sør for Sahara."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det finnes flere former for matnød. **underernæring** tilsvarer mangel på kalorier. **Mikronæringsmangler**, ofte kalt \"skjult sult\", påvirker 2 milliarder mennesker som mangler essensielle vitaminer eller mineraler, med konsekvenser for vekst eller helse. Til slutt inkluderer **underernæring** overraskende også fedme: I mange utviklingsland erstatter folk gradvis ferske råvarer med bearbeidet mat, høy i kalorier, men fattig på næringsstoffer."
+        },
+        {
+          "type": "funFact",
+          "text": "Hvis vi reduserte det globale matsvinnet med bare 25 %, kan vi teoretisk mate alle de 800 millioner menneskene som lider av sult i dag."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p2",
+      "title": "Paradokset med overflod og avfall",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Verden produserer for tiden tilsvarende 2800 kilokalorier per person per dag, mer enn nok til å eliminere sult. Det virkelige problemet er derfor ikke mangel, men tilgang: de fattigste befolkningen har rett og slett ikke midler til å kjøpe mat hvis pris konstant varierer på verdensmarkedene."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den andre siden av dette paradokset er **sløseri**. Omtrent en tredjedel av den globale produksjonen, eller 1,3 milliarder tonn mat, går tapt hvert år. I fattige land oppstår tap tidlig: mangel på lagringsplasser, fravær av kjølerom, veier i dårlig stand. I rike land oppstår avfall senere, under distribusjon og forbruk."
+        },
+        {
+          "type": "funFact",
+          "text": "Siden 2010-tallet har fedme og fedme-relaterte sykdommer drept flere mennesker over hele verden hvert år enn underernæring, et historisk vendepunkt for global folkehelse."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p3",
+      "title": "Når mat blir et geopolitisk våpen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Matsikkerhet er også et spørsmål om geopolitikk. Mange land er avhengige av eksport fra noen få store landbruksmakter, noe som gjør dem svært sårbare for den minste blokkering. Ukraina og Russland står til sammen for nesten 30 % av verdens hveteeksport. Når denne strømmen stopper, stiger prisene på **[[futuresmarkedet]]** i Chicago, hvor fremtidige avlinger handles, og land som Egypt eller Libanon havner i en alvorlig sosial krise."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne skjørheten kommer også fra et valg som ble tatt på 1960-tallet: **[[Grønn revolusjon]]**. Denne bølgen av nye landbruksteknikker har økt avlingene betraktelig, men den har også redusert avlingsmangfoldet og gjort bønder avhengige av kunstgjødsel. Som et resultat har hver økning i oljeprisen direkte konsekvenser for brødprisen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konseptet **matkraft** refererer nettopp til frivillig bruk av mateksport som et middel for diplomatisk press, eller til og med som en sanksjon mot et motstanderland."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p4",
+      "title": "Mat 10 milliarder mennesker uten å ødelegge planeten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Innen 2050 forventes verdens befolkning å nå 10 milliarder. Klimaendringene truer allerede avlingene ved økende tørke og flom, og fortrenger dyrkbar jord. Intensivt landbruk tømmer også jord og grunnvann, som noen ganger dreneres raskere enn det fylles."
+        },
+        {
+          "type": "paragraph",
+          "text": "En av veiene for fremtiden kalles **[[agroøkologi]]**: å produsere ved å stole på naturlige sykluser, som kompost eller vekstskifte, i stedet for å bekjempe dem med kjemikalier. Utfordringen er å garantere, for ethvert menneske, permanent tilgang til sunn mat, uten å utarme planeten ytterligere."
+        },
+        {
+          "type": "takeaway",
+          "text": "Jorden produserer nok kalorier til å mate alle. Sulten til 800 millioner mennesker kommer derfor fra et problem med tilgang, avfall og geopolitiske kriser, forverret av klimaendringer."
+        }
+      ]
+    }
+  ]
+}

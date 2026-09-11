@@ -1,0 +1,104 @@
+{
+  "id": "course_216_la_dette_mondiale",
+  "title": "Global gjeld",
+  "subtitle": "Mer enn 300 % av verdens BNP",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Global gjeld har aldri vært høyere. Bør vi være bekymret for det, eller er det et normalt verktøy for å finansiere vekst og møte kriser?",
+  "hero": {
+    "image": "la_dette_mondiale",
+    "ratio": "16:9",
+    "hook": "Japan skylder tilsvarende 260% av sitt BNP... og ingen bekymrer seg. Her er hvorfor."
+  },
+  "sections": [
+    {
+      "id": "course_216_la_dette_mondiale_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Global gjeld, statens, bedrifter og husholdninger til sammen, overstiger i dag **300 % med samlet BNP**, en absolutt rekord i økonomisk historie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne imponerende figuren skjuler en mer nyansert virkelighet: Gjeld gjør det mulig å finansiere vekst, reagere på helsekriser eller forberede seg på den økologiske omstillingen. Men det fører også med seg risikoen for en kollaps i tilliten."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p1",
+      "title": "Hvordan en stat kommer i gjeld",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En stat setter seg i gjeld når dens utgifter strukturelt overstiger skatteinntektene. Dette budsjettunderskuddet dekkes ved lån på finansmarkedene. I følge [[Keynesiansk teori]] er det legitimt å låne for å stimulere økonomien i krisetider, forutsatt at det betales tilbake når veksten kommer tilbake."
+        },
+        {
+          "type": "paragraph",
+          "text": "I praksis låner statene lett i dårlige tider, men betaler sjelden tilbake i gode tider. Gjelden akkumuleres så over lang sikt. Saken med Japan er fascinerende: med en gjeld nær 260 % av BNP, burde landet logisk sett være i krise. Det er det imidlertid ikke, fordi det meste av gjelden holdes av egne banker og sparere, skjermet fra utenlandske markeder."
+        },
+        {
+          "type": "funFact",
+          "text": "Storbritannia fullførte først nedbetaling av gjeld fra Napoleonskrigene og en finansboble i 1720 i 2015."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p2",
+      "title": "Ikke all gjeld er like",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den reelle faren for en gjeld avhenger ikke bare av beløpet, men av valutaen den er lånt i. Rike land låner i sin egen valuta, noe som beroliger investorene."
+        },
+        {
+          "type": "image",
+          "asset": "japan_government_debt_statistics_chart",
+          "ratio": "16:9",
+          "caption": "Global offentlig gjeld overstiger i dag 300 % av klodens BNP."
+        },
+        {
+          "type": "paragraph",
+          "text": "Utviklingsland må ofte låne i dollar, på grunn av mangel på en valuta som anses som stabil nok. Hvis deres nasjonale valuta taper verdi mot dollar, eksploderer beløpet som skal tilbakebetales over natten. I disse krisene griper [[IMF]] ofte inn, men pålegger generelt strenge sparepolitikker som veier tungt for befolkningen."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p3",
+      "title": "Kan gjelden være uendelig?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En debatt motsetter seg to visjoner om økonomien. [[Moderne monetær teori]] bekrefter at en stat ikke kan gå konkurs så lenge den låner i sin egen valuta: den reelle grensen er ikke et vilkårlig tall, som de 60 % som er pålagt av Maastricht-traktaten i Europa, men inflasjonsnivået."
+        },
+        {
+          "type": "paragraph",
+          "text": "Andre, mer forsiktige økonomer frykter at for mye gjeld vil skremme vekk markedstilliten, og føre til en kraftig renteoppgang. Krisen i eurosonen, mellom 2010 og 2012, illustrerte denne risikoen: land som Hellas, fratatt sin egen sentralbank, så sine lånerenter øke til det punktet at de truet selve eksistensen av den europeiske valutaen."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p4",
+      "title": "Gjeldens nye ansikter",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Global gjeld angår ikke bare stater: bedrifter og husholdninger bærer også en økende andel av den, noen ganger via dårlig regulerte finansielle aktører. En ny debatt dukker også opp rundt klimagjeld: skal vi behandle gjelden som finansierer energiomstillingen annerledes enn den som finansierer enkelt forbruk?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Spørsmålet om rettferdighet mellom generasjoner er fortsatt sentralt: Å sette seg i gjeld i dag betyr å ta skatt fra i morgen. Men hvis disse pengene finansierer bærekraftig infrastruktur eller god utdanning, kan de også ses på som en gave gitt videre til fremtidige generasjoner i stedet for en byrde."
+        },
+        {
+          "type": "takeaway",
+          "text": "Global gjeld overstiger 300% av planetens BNP, en historisk rekord. Farligheten avhenger mindre av beløpet enn av valutaen den er lånt i: Japan beviser at en gjeld på 260 % kan forbli stabil hvis den holdes lokalt."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "course_136_beethoven_genie_et_surdite",
+  "title": "Beethoven: geni og døvhet",
+  "subtitle": "1770-1827",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Ludwig van Beethoven, fra Bonn til Wien, komponerte sine største verk mens han ble døv og oppfant det romantiske geniet.",
+  "hero": {
+    "image": "beethoven_genie_et_surdite",
+    "ratio": "16:9",
+    "hook": "Døv, han komponerer gledens hymne for hele menneskeheten."
+  },
+  "sections": [
+    {
+      "id": "course_136_beethoven_genie_et_surdite_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Ludwig van Beethoven** (**1770**-**1827**) er arketypen på det moderne geniet: vilt hår, jernvilje, kamp mot skjebnen. Utover myten markerer livet hans et brudd: komponisten er ikke lenger en hofftjener, men en suveren skaper."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han forvandler underholdningsmusikk til filosofisk språk. Og han designet sine mest omfattende lydarkitekturer, inkludert den niende symfonien, i nesten total auditiv isolasjon."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p1",
+      "title": "Fra Bonn til Wien: prinsenes like",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ludwig er født i [[Bonn]] i **1770**, og vokser opp under en brutal far, **John**, som ønsker å gjøre ham til den nye [[Mozart]]. Nattlige øvinger skaper en tidlig teknikk ... og en jernkarakter."
+        },
+        {
+          "type": "image",
+          "asset": "beethoven_bonn_birthplace_portrait_young",
+          "ratio": "4:3",
+          "caption": "Unge Beethoven i Bonn: en barndom under press."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1792** flyttet han til [[Wien]], den musikalske hovedstaden. Han studerte kort med **Joseph Haydn**. Pianovirtuos, forbløffende improvisator, han nekter å være tvangstanker mot lånetakerne: han ønsker å være prinser lik. Hans ungdommelige stil, fortsatt klassisk, varsler allerede voldsomme kontraster og større former."
+        },
+        {
+          "type": "funFact",
+          "text": "Så forsømt i sin wienerungdom byttet vennene hans noen ganger ut de slitte klærne hans med nye mens han sov, uten at han la merke til det."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p2",
+      "title": "Døvhet og Heiligenstadt-testamentet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mellom **1798** og **1801** oppstår tinnitus og hørselstap. For en stjernepianist er det en katastrofe. I **1802**, i landsbyen **Heiligenstadt**, skrev han **Testamentet fra Heiligenstadt**: brev til brødrene sine, aldri sendt, hvor han tilsto selvmordstanker... så valgte han å leve for å komponere alt han bar i seg."
+        },
+        {
+          "type": "image",
+          "asset": "beethoven_heiligenstadt_testament_manuscript",
+          "ratio": "4:3",
+          "caption": "Testamentet fra Heiligenstadt: fortvilelse som blir en beslutning om å skape."
+        },
+        {
+          "type": "paragraph",
+          "text": "Starter [[heroisk periode]]. Symfoni nr. 3, kalt *Heroisk*, er først dedikert til [[Napoleon Bonaparte]]. Når han blir keiser, raser Beethoven og trekker dedikasjonen tilbake. Verket revolusjonerer sjangeren med sin lengde og intensitet."
+        },
+        {
+          "type": "funFact",
+          "text": "For bedre å kjenne vibrasjonene saget han bena på pianoene slik at de hvilte rett på gulvet."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p3",
+      "title": "Den niende: Ode til gleden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I sitt livs skumring var Beethoven nesten helt døv. I **1824** fullførte han **niende symfoni**: for første gang deltar solister og kor i en symfoni. Finalen er basert på [[Ode til gleden]] av **Friedrich von Schiller**, forvandlet til et brorskapsbudskap."
+        },
+        {
+          "type": "image",
+          "asset": "beethoven_ninth_symphony_ode_joy_manuscript",
+          "ratio": "4:3",
+          "caption": "Den niende: den menneskelige stemmen kommer inn i symfonien."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ved opprettelsen, ute av stand til å høre applausene, fortsetter han å slå tiden. Kontrasten **Caroline Unger** får ham til å snu seg rundt for å se publikum stå. [[Ode til gleden]] ble senere en europeisk fredssang. Hans siste kvartetter, harde og moderne, ville først bli forstått tiår senere."
+        },
+        {
+          "type": "funFact",
+          "text": "Noen ganger klemte han en trestang mellom tennene, den andre enden på pianoet: beinledning fikk ham til å \"høre\" tonene."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p4",
+      "title": "Fra klassisisme til romantikk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Beethoven gjør overgangen fra klassisisme til [[Romantikk]]: subjektivitet, lidenskap, overskudd. Symfonien blir metafysisk drama. [[Brahms]] og [[Mahler]] vil leve i hans skygge. Det baner også vei for [[absolutt musikk]], hvor lyden er tilstrekkelig i seg selv. Ved begravelsen hans i **1827** fulgte mer enn **20 000** mennesker prosesjonen til Wien."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1792",
+              "title": "Ankomst til Wien",
+              "detail": "Beethoven etablerte seg som en virtuos og fri skaper."
+            },
+            {
+              "date": "1802",
+              "title": "Heiligenstadt",
+              "detail": "Testamentet: å velge skaperverket fremfor fortvilelse."
+            },
+            {
+              "date": "1804",
+              "title": "Heroisk symfoni",
+              "detail": "Bryt med Napoleon, ny skala av sjangeren."
+            },
+            {
+              "date": "1824",
+              "title": "niende symfoni",
+              "detail": "Ode til glede for menneskeheten."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Døv, Beethoven oppfant det romantiske geniet: fra den heroiske perioden til Ode to Joy, den kreative viljen mot stillheten."
+        }
+      ]
+    }
+  ]
+}

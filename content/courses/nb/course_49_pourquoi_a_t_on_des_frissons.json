@@ -1,0 +1,102 @@
+{
+  "id": "course_49_pourquoi_a_t_on_des_frissons",
+  "title": "Hvorfor får vi frysninger?",
+  "subtitle": "Kropp og følelser",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Kulde, frykt, musikk: skjelvinger har flere årsaker. De passerer alle gjennom nervesystemet, men ikke av de samme grunnene.",
+  "hero": {
+    "image": "pourquoi_a_t_on_des_frissons",
+    "ratio": "16:9",
+    "hook": "Et gys av kulde og et gys av musikk forteller ikke den samme historien."
+  },
+  "sections": [
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Du skjelver når du går ut i regnet. Du grøsser også når du hører en sang som gjør deg opprørt. Samme ord, forskjellige mekanismer."
+        },
+        {
+          "type": "paragraph",
+          "text": "I begge tilfeller reagerer kroppen raskt. Men den ene brukes hovedsakelig til å varme opp, den andre handler mer om nytelse og følelser."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
+      "title": "Kuldens spenning: en minikjele",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kroppen ønsker å holde seg rundt **37 °C**. Når huden oppdager kulde, varsler den et område av hjernen, **hypothalamus**, som fungerer som en termostat."
+        },
+        {
+          "type": "image",
+          "asset": "goosebumps_cold_skin",
+          "ratio": "4:3",
+          "caption": "Gåsehud: en gammel refleks for å heve hår."
+        },
+        {
+          "type": "paragraph",
+          "text": "Musklene trekker seg sammen veldig raskt og gjentatte ganger: dette er skjelvingen. Disse sammentrekningene produserer varme. \"Gåsehud\" kommer fra en gammel refleks: å heve hårene for å isolere bedre. Hjemme, med lite pels, fungerer den hovedsakelig som en rest."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
+      "title": "Spenningen av frykt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stilt overfor en trussel aktiveres det [[sympatisk nervesystem]] (den \"varslende\" grenen av nervesystemet). Den gir ut **adrenalin**. Musklene spenner seg, hjertet raser, huden kan skjelve."
+        },
+        {
+          "type": "image",
+          "asset": "adrenaline_stress_response_body",
+          "ratio": "4:3",
+          "caption": "Adrenalin forbereder kroppen til å reagere raskt."
+        },
+        {
+          "type": "funFact",
+          "text": "Det samme systemet forklarer hvorfor du kan få gåsehud mens du ser på en skrekkfilm... mens du er koselig på sofaen."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
+      "title": "Spenningen ved musikk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Visse spenninger, noen ganger kalt \"frysninger\", kommer med sterke følelser: musikk, tale, film. De aktiverer hjernens **belønninger**-krets, med **dopamin**, et stoff knyttet til nytelse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette er ikke nyttig for umiddelbar overlevelse. Snarere er det kroppen som reagerer på en intens følelse, som en forbigående bølge."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
+      "title": "Når skal du bekymre deg?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Frysninger med høy feber kan signalisere en infeksjon. Konstante frysninger uten klar grunn fortjener legehjelp. Men mesteparten av tiden er en skjelving fra kulde, stress eller musikk ganske enkelt at kroppen gjør jobben sin."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kaldt skjelv produserer varme. De med frykt forbereder seg på å reagere. De av musikk berører følelsesmessig nytelse. Samme følelse, forskjellige årsaker."
+        }
+      ]
+    }
+  ]
+}

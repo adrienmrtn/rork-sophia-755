@@ -1,0 +1,98 @@
+{
+  "id": "course_59_la_decouverte_de_l_anesthesie",
+  "title": "Opdagelsen af anæstesi",
+  "subtitle": "Medicin",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Før 1846 blev en operation ofte udført bevidst og med ekstrem smerte. Anæstesi forvandler kirurgi til pleje, ikke tortur.",
+  "hero": {
+    "image": "la_decouverte_de_l_anesthesie",
+    "ratio": "16:9",
+    "hook": "En dag i 1846, i Boston, ophørte operation med at være et kapløb mod smerte."
+  },
+  "sections": [
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Forestil dig en amputation uden at falde i søvn. Før midten af 1800-tallet var dette normen. Vi spænder patienten fast, vi bevæger os hurtigt, vi beder."
+        },
+        {
+          "type": "paragraph",
+          "text": "**anæstesi** ændrer alt: det giver dig mulighed for at operere uden bevidsthed om smerte. Moderne kirurgi kan endelig tage sin tid."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p1",
+      "title": "Før: fart versus lidelse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "surgery_without_anesthesia_19th_century",
+          "ratio": "4:3",
+          "caption": "Uden bedøvelse skulle kirurgen være ekstremt hurtig."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kirurger blev bedømt på deres hastighed. Alkohol, opium eller rå magt blev brugt til at immobilisere folk. Mange patienter døde af chok, infektion eller blødning."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p2",
+      "title": "1846: Æterens dag",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "ether_anesthesia_first_demonstration_1846",
+          "ratio": "4:3",
+          "caption": "I Boston overbeviste en offentlig demonstration lægeverdenen."
+        },
+        {
+          "type": "paragraph",
+          "text": "**16. oktober 1846** i Boston får tandlægen **William Morton** en patient til at inhalere **ether**. Kirurg **John Warren** opererer på en halstumor. Patienten skriger ikke. Værelset er lamslået."
+        },
+        {
+          "type": "funFact",
+          "text": "Warren sagde efter sigende: \"Mine herrer, dette er ikke en humbug.\" Udtrykket er forblevet berømt."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p3",
+      "title": "Næste: chloroform og debatter",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Andre produkter fulgte efter, såsom **chloroform**, som især blev populært i Storbritannien. Der opstår rivalisering om, hvem der \"opfandt\" hvad. Patentet er ligegyldigt: Ideen breder sig over hele verden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der er et problem tilbage: at falde i søvn uden at slå ihjel. Du skal dosere det, overvåge din vejrtrækning og dit hjerte. Et nyt speciale er født."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p4",
+      "title": "Anæstesi i dag",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I dag bruger anæstesilægen præcise gasser og lægemidler, maskiner, der måler alt. Du kan lægge hele kroppen til at sove eller bare et område (lokal eller lokalbedøvelse)."
+        },
+        {
+          "type": "takeaway",
+          "text": "Siden demonstrationen af ether i **1846** har anæstesi forvandlet kirurgi: mindre smerte, mere tid, mere præcision... og sikkerhed er blevet en videnskab i sig selv."
+        }
+      ]
+    }
+  ]
+}

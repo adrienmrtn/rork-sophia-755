@@ -1,0 +1,106 @@
+{
+  "id": "course_146_hitchcock_et_le_suspense",
+  "title": "Hitchcock og spenning",
+  "subtitle": "1899-1980",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**Alfred Hitchcock** finner opp moderne spenning: gir publikum informasjon som karakterene ikke har. Med *Psykologi*, *Vertigo* eller *Bakvinduet* manipulerer han blikket vårt.",
+  "hero": {
+    "image": "hitchcock_et_le_suspense",
+    "ratio": "16:9",
+    "hook": "Den virkelige spenningen overrasker ikke: den lar deg se bomben under bordet."
+  },
+  "sections": [
+    {
+      "id": "course_146_hitchcock_et_le_suspense_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Alfred Hitchcock** (1899-1980) har kallenavnet \"spenningens mester\". I mer enn femti filmer forvandlet han thrilleren til kunsten å manipulere. *Psykologi*, *Vertigo*, *Bakvinduet*: Hver gang forteller kameraet ikke bare en historie. Hun leker med nervene våre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Favorittfaget hans er ikke krim. Det er utseendet: skyldfølelse, besettelse, voyeurisme. Hitchcock filmer seeren like mye som karakterene."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p1",
+      "title": "Overraskelse versus spenning",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1966** forklarer Hitchcock metoden sin til [[François Truffaut]], fransk kritiker og deretter filmskaper. **overraskelse**, sier han, er en bombe som eksploderer uten forvarsel: et kort sjokk. **spenning** viser publikum bomben mens karakterene ignorerer den. Spenningen varer. Vi blir medskyldige, og maktesløse."
+        },
+        {
+          "type": "image",
+          "asset": "alfred_hitchcock_portrait_director",
+          "ratio": "4:3",
+          "caption": "Hitchcock: et ansikt, en silhuett, en global spenningsmerke."
+        },
+        {
+          "type": "funFact",
+          "text": "For å fremme handlingen bruker han ofte en [[MacGuffin]]: et objekt eller en hemmelighet som motiverer karakterene, men hvis eksakte natur betyr lite. Det viktigste er jakten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne informasjonsasymmetrien er dens grammatikk. Så snart vi vet mer enn helten, frykter vi for ham."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p2",
+      "title": "Tekniske oppfinnelser for å filme angst",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1948**, med *Tauet*, simulerer Hitchcock en unik [[sekvensbilde]]: filmen ser ut til å være tatt på én gang. Hjulene varer bare i ti minutter, så han gjemmer kuttene bak en rygg eller et mørkt møbel. Effekten er kvelende: vi forblir innelåst med morderne."
+        },
+        {
+          "type": "image",
+          "asset": "hitchcock_vertigo_james_stewart_kim_novak_film",
+          "ratio": "4:3",
+          "caption": "Vertigo: vertigo filmet som en forvrengning av rommet."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1958**, for *Vertigo*, oppfant han [[Dolly Zoom]]: kameraet beveger seg tilbake mens zoomen går frem (eller omvendt). Plassen er forvrengt. Vi ser ikke lenger svimmelheten. Vi føler det."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p3",
+      "title": "Vi er alle voyører",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I *Bakvinduet* (**1954**), spionerer en fotograf med brukket bein på naboene sine. Han er tilskuerens dobbeltgjenger i mørket. Hitchcock bruker [[Subjektivt kamera]]: vi ser nøyaktig hva helten ser, ikke noe mer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne identifikasjonen er moralsk så vel som visuell. Vi ser etter ledetråder, men vi deler også skyldfølelsen av å se på det som ikke angår oss. Hitchcock blander thriller og [[psykoanalyse]]: begravd frykt, forbudte ønsker, doble identiteter."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p4",
+      "title": "Et merke, en musikk, en arv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hitchcock forvandlet navnet sitt til et merke, inntil TV-serien hans *Aalfred Hitchcock-programleder*. For *Psykologi* forbyr han adgang etter starten av økten: hemmeligheten blir en begivenhet. Samarbeidet hans med komponisten [[Bernard Herrmann]] kobler musikk og [[forsamling]] for å få opp publikumspulsen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hitchcock kodifiserte moderne spenning: informere betrakteren, rette blikket deres og forvandle frykt til kontrollert nytelse. Tiår senere skylder thrilleren fortsatt sin grammatikk til ham."
+        }
+      ]
+    }
+  ]
+}

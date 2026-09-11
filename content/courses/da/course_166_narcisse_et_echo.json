@@ -1,0 +1,116 @@
+{
+  "id": "course_166_narcisse_et_echo",
+  "title": "Narcissus og ekko",
+  "subtitle": "Kærligheden, der ikke kan mødes",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Ekko kan kun gentages. Narcissus elsker kun sit spejlbillede. To skæbner, som aldrig formår at komme sammen, og som føder ordet narcissisme.",
+  "hero": {
+    "image": "narcisse_et_echo",
+    "ratio": "16:9",
+    "hook": "Hun har ikke længere sin egen stemme. Han har kun øjne for sig selv. Deres møde er umuligt."
+  },
+  "sections": [
+    {
+      "id": "course_166_narcisse_et_echo_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den romerske digter [[Ovid]] fortæller i sin [[Metamorfoser]] den krydsede skæbne for **Narcissus** og **Ekko**. Hun er en nymfe, der er frataget sine egne ord. Ham, en ung mand betaget af sit billede."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne myte er den direkte kilde til ordet **narcissisme**. Den taler om umulig kærlighed, ligegyldighed og fælden med kun at ville sig selv."
+        }
+      ]
+    },
+    {
+      "id": "course_166_narcisse_et_echo_p1",
+      "title": "Echo mister stemmen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Før det bliver et simpelt lydfænomen, er **Ekko** en [[Oread]], bjergnymfe, berømt for sin rigelige tale. Hun hjælper **Zeus**, gudernes konge, med at skjule sine utroskaber. Mens han slutter sig til andre nymfer, beholder hun **Hera**, den jaloux kone, med endeløse samtaler."
+        },
+        {
+          "type": "image",
+          "asset": "echo_nymph_mountain_greek_mythology_painting",
+          "ratio": "4:3",
+          "caption": "Ekko, dømt til ikke at være andet end en gentagende stemme."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da Hera opdager listen, straffer hun Echo. Nymfen kan ikke længere begynde en sætning. Hun kan kun **gentage de sidste ord** fra andre. Hans egne ønsker har ikke længere et sprog."
+        },
+        {
+          "type": "funFact",
+          "text": "I en anden version har guden **Bang**, rasende over at blive afvist, fået Echo revet i stykker. Ovids version, hvor hun fortæres af kærlighed, er forblevet den mest berømte."
+        }
+      ]
+    },
+    {
+      "id": "course_166_narcisse_et_echo_p2",
+      "title": "Narcissus nægter al kærlighed",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Narcissus** er søn af flodguden Cephisus og nymfen Liriope. Hendes skønhed tiltrækker alle. Hans stolthed skubber alle væk. Spåmanden **Tirésias** havde advaret sin mor: \"Han vil leve for at blive gammel, hvis han ikke kender sig selv.\""
+        },
+        {
+          "type": "paragraph",
+          "text": "I skoven ser Echo ham og forelsker sig i ham. Ude af stand til at tale først, venter hun. Narcisse ringer: \"Er der nogen?\" Hun svarer: \"Nogen!\" »Da hun nærmer sig for at kramme ham, afviser han hende med foragt."
+        },
+        {
+          "type": "funFact",
+          "text": "Ydmyget trækker Echo sig tilbage i hulerne. Hun holder op med at spise. Hans krop visner, hans knogler bliver til sten. Kun en vandrende stemme er tilbage i bjergene."
+        }
+      ]
+    },
+    {
+      "id": "course_166_narcisse_et_echo_p3",
+      "title": "Refleksionen i kilden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Narcissus' grusomhed trætter guderne. Une de ses victimes prie [[Nemesis]], déesse de la juste vengeance : qu'il aime ainsi lui-même et ne puisse jamais posséder l'objet de son amour. Ønsket imødekommes."
+        },
+        {
+          "type": "paragraph",
+          "text": "En varm dag læner Narcisse sig ind i en klar kilde. Han afdækker sit ansigt. Han tror, han ser en vandånd. Han forelsker sig i hende. Teiresias' profeti går i opfyldelse: ved at kende sig selv mister han sig selv."
+        },
+        {
+          "type": "funFact",
+          "text": "Han forsøger at kysse spejlet. Vandet bliver grumset. Fange af denne sterile lidenskab glemmer han at spise og drikke."
+        },
+        {
+          "type": "paragraph",
+          "text": "Så kommer den tragiske klarhed: \"Jeg er den, jeg ser. » Umuligt at forene sig med sig selv. Narcissus er fortæret. Ekko, trofast trods alt, gentager sit sidste farvel."
+        }
+      ]
+    },
+    {
+      "id": "course_166_narcisse_et_echo_p4",
+      "title": "Fra blomsten til ordet narcissisme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Da [[Naiads]], vandnymfer og [[Dryads]], trænymfer, kommer til begravelsen, er liget forsvundet. I stedet vokser en blomst med et gult hjerte og hvide kronblade: **påskelilje**, der læner sig mod vandet som den unge mand mod sit billede."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1914** udgav **Freud** \"To introduce narcissism\". Han beskriver kærlighed vendt mod en selv frem for mod den anden. Myten bliver en nøgle til moderne psykologi og en advarsel: Uden et sandt møde er der kun tilbage en stemme uden krop og en blomst uden sjæl."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Ekko** dør af ikke at kunne udtrykke sit ønske. **Narcissus** går til grunde for kun at have ønsket sig selv. To måder at savne den anden på, en tragedie."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "course_35_l_apartheid_et_mandela_1948_1994",
+  "title": "Apartheid og Mandela",
+  "subtitle": "1948-1994",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "I **46** år har Sør-Afrika lovlig organisert rasesegregering. **Nelson Mandela**, etter **27** år i fengsel, hjelper landet å komme frem uten borgerkrig.",
+  "hero": {
+    "image": "l_apartheid_et_mandela",
+    "ratio": "16:9",
+    "hook": "Et system med total segregering, deretter en slutt på krisen uten borgerkrig."
+  },
+  "sections": [
+    {
+      "id": "course_35_l_apartheid_et_mandela_1948_1994_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1948**, da verden begynte å fordømme statlig rasisme, tok Sør-Afrika den motsatte veien. I **46 år** organiserte den fullstendig segregering: **[[apartheid]]**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette regimet kollapset i begynnelsen av **1990**-årene uten å falle i borgerkrig. I sentrum av dette skiftet: **Nelson Mandela**, advokat som ble leder av motstanden, løslatt etter **27 år** i fangenskap."
+        }
+      ]
+    },
+    {
+      "id": "course_35_l_apartheid_et_mandela_1948_1994_p1",
+      "title": "Hvordan segregering blir loven",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**[[apartheid]]** (\"separasjon\" på afrikaans) ble implementert av National Party etter mai **1948**. Hver borger er klassifisert: hvit, svart, farget, indisk. Denne etiketten bestemmer stemmegivning, arbeid, bosted."
+        },
+        {
+          "type": "image",
+          "asset": "apartheid_segregation_signs_south_africa",
+          "ratio": "4:3",
+          "caption": "Segregeringsskilt: offentlig rom delt ved lov."
+        },
+        {
+          "type": "paragraph",
+          "text": "**[[bantustans]]**, reservater som skal være \"nasjonale hjem\" for svarte, dekker bare **13%** av territoriet. I virkeligheten tjener de til å frata dem sørafrikansk statsborgerskap. Uten pass, ingen bevegelse i hvite soner: fengsel venter."
+        },
+        {
+          "type": "funFact",
+          "text": "Av kommersielle årsaker ble japanerne offisielt klassifisert som \"æreshvite\". Rasismen visste å bøye seg for markedene."
+        }
+      ]
+    },
+    {
+      "id": "course_35_l_apartheid_et_mandela_1948_1994_p2",
+      "title": "Fra ikke-vold til væpnet motstand",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**[[ANC]]**, den afrikanske nasjonalkongressen, organiserte motstanden. Mandela, født i **1918**, trodde først på ikke-vold. Så kommer **[[Sharpeville-massakren]]** (mars **1960**): politiet skyter mot en ubevæpnet folkemengde som protesterer mot pasningene. Resultater: **69** døde."
+        },
+        {
+          "type": "image",
+          "asset": "sharpeville_massacre_1960",
+          "ratio": "4:3",
+          "caption": "Sharpeville, 1960: vending mot væpnet kamp."
+        },
+        {
+          "type": "paragraph",
+          "text": "ANC er forbudt. Mandela var med å grunnlegge Umkhonto we Sizwe («Nasjonens spyd») for å sabotere regimeapparatet. Han ble arrestert i **1962**, dømt til livstid ved Rivonia-rettssaken (**1964**), og ble den mest kjente politiske fangen i verden på Robben Island."
+        }
+      ]
+    },
+    {
+      "id": "course_35_l_apartheid_et_mandela_1948_1994_p3",
+      "title": "Forhandler om slutten på apartheid",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I årene **1980** kvelte sanksjoner, embargo og opprør regimet. **Frederik Willem de Klerk**, hvit president som kom til makten i **1989**, forstår at overlevelse krever slutten på apartheid."
+        },
+        {
+          "type": "paragraph",
+          "text": "**11. februar 1990**, Mandela løslatt fra fengsel. Fire år med forhandlinger fulgte. I april **1994**, det første valget åpnet for alle: ANC vant og Mandela ble president med **62,6%** av stemmene, i en nasjonal enhetsregjering."
+        },
+        {
+          "type": "funFact",
+          "text": "I **1995** tar Mandela på seg den grønne trøya til Springboks, rugbylandslaget som lenge har vært et Afrikaner-symbol, under verdensmesterskapet: en forsoningsgest sett over hele verden."
+        }
+      ]
+    },
+    {
+      "id": "course_35_l_apartheid_et_mandela_1948_1994_p4",
+      "title": "Forson deg uten å glemme alt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Med erkebiskop **Desmond Tutu** satser Mandela på forsoning. **[[Sannhets- og forsoningskommisjonen]]** foreslår amnesti i bytte mot offentlige tilståelser: en **[[overgangsrettferdighet]]** for å få vite skjebnen til ofrene uten å sprenge landet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mandela forlater makten i **1999** etter bare én periode. Juridisk rasisme er død. Økonomiske ulikheter er fortsatt Sør-Afrikas store utfordring."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1948",
+              "title": "Institusjonalisert apartheid",
+              "detail": "Seier for Nasjonalpartiet."
+            },
+            {
+              "date": "1960",
+              "title": "Sharpeville",
+              "detail": "Massakre og skifte mot væpnet kamp."
+            },
+            {
+              "date": "1990",
+              "title": "Mandelas løslatelse",
+              "detail": "Start av overgang."
+            },
+            {
+              "date": "1994",
+              "title": "Flerrasiale valg",
+              "detail": "Mandela valgt til president."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**[[apartheid]]** (**1948-1994**) var et system med statlig raseskillelse. Dens fall, forhandlet av Mandela og de Klerk, åpnet et multirasedemokrati basert på forsoning."
+        }
+      ]
+    }
+  ]
+}

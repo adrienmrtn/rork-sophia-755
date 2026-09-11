@@ -1,0 +1,116 @@
+{
+  "id": "course_61_le_big_bang",
+  "title": "Big Bang",
+  "subtitle": "13,8 milliarder år",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "For 13,8 milliarder år siden begyndte universet at udvide sig. Det er ikke en bombe i et vakuum: det er selve rummet, der vokser.",
+  "hero": {
+    "image": "le_big_bang",
+    "ratio": "16:9",
+    "hook": "Big Bang er ikke en eksplosion i rummet. Det er rummet, der begynder at vokse."
+  },
+  "sections": [
+    {
+      "id": "course_61_le_big_bang_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**13,8 milliarder dollars på siden** var alt, hvad der eksisterer i dag, koncentreret i en ekstrem tæt og varm tilstand. Forskere kalder nogle gange denne begyndelse for en [[singularitet]]: et punkt, hvor tæthed og temperatur er så ekstreme, at vores sædvanlige love ikke længere er tilstrækkelige til at beskrive situationen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Så begynder universet at udvide sig. Det er ikke en bombe, der kaster stof i et tomrum, der allerede er der. Det er **rum-tid**, stoffet, der forener rum og tid, som vokser og tager stoffet med sig. Denne historie fortsætter i dag."
+        }
+      ]
+    },
+    {
+      "id": "course_61_le_big_bang_p1",
+      "title": "Ikke en eksplosion i tomrummet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Navnet **\"Big Bang\"** er forvirrende. Vi forestiller os ofte fyrværkeri midt i et tomt rum. Men før dette arrangement er der hverken plads eller udenfor. Rum og tid, som vi kender dem, begynder med ham. Spørg \"hvad var der før?\" » bliver derfor meget sart: \"før\" har ikke længere samme betydning."
+        },
+        {
+          "type": "image",
+          "asset": "big_bang_universe_expansion_galaxies",
+          "ratio": "auto",
+          "caption": "Universets udvidelse siden Big Bang."
+        },
+        {
+          "type": "funFact",
+          "text": "Udtrykket \"Big Bang\" blev opfundet i **1949** af den britiske astrofysiker **Fred Hoyle**, som ikke troede på det. Han ville grine af ideen. Kælenavnet hang fast."
+        },
+        {
+          "type": "paragraph",
+          "text": "For at forestille dig ekspansion, forestil dig prikker tegnet på en ballon. Når du puster ballonen op, bevæger hvert punkt sig væk fra de andre. Intet punkt på overfladen er \"centret\". I universet er det lidt den samme idé: **galakser**, enorme grupper af stjerner, bevæger sig væk fra hinanden, fordi rummet mellem dem strækker sig."
+        }
+      ]
+    },
+    {
+      "id": "course_61_le_big_bang_p2",
+      "title": "Tre gode beviser",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1929** observerede den amerikanske astronom **Edwin Hubble**, at jo længere væk en galakse er, jo hurtigere bevæger den sig væk. Universet er derfor ikke fast: det vokser. Dette er **Hubbles elsker**, forholdet mellem galaksers afstand og flugthastighed."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1965** opfangede to ingeniører, **Arno Penzias** og **Robert Wilson**, et radioknald fra alle vegne. Dette er den [[kosmisk mikrobølge baggrund]]: en slags termisk ekko fra det unge univers, der udsendes, da lyset kunne cirkulere frit for første gang, cirka **380.000 år** efter begyndelsen."
+        },
+        {
+          "type": "funFact",
+          "text": "En lille del af \"sneen\" fra gamle, dårligt indstillede analoge fjernsyn kom fra denne kosmiske baggrund."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tredje søjle: proportionerne af lette elementer. Beregninger forudsiger ca. **75%** brint og **25%** helium dannet i løbet af de første par minutter. Observationer bekræfter disse tal. Det er [[primordial nukleosyntese]], fabrikken for de første atomkerner i minutterne efter Big Bang."
+        }
+      ]
+    },
+    {
+      "id": "course_61_le_big_bang_p3",
+      "title": "En hurtig tidslinje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lige efter begyndelsen gennemgår universet en fase af **inflation**, en ekstrem hurtig udvidelse på en brøkdel af et sekund. Derefter, omkring **3 minutter**, **protoner** og **neutroner**, samles partikler, der udgør atomkerner, til de første kerner. I lang tid forbliver universet som en uigennemsigtig tåge: lys bevæger sig ikke frit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Omkring **380.000 år**, **elektroner**, lette partikler, der kredser om kernerne, slutter sig til kernerne for at danne neutrale atomer. Lyset frigives: det er emissionen af den diffuse baggrund. De første stjerner blev født meget senere, omkring **200 millioner dollars** senere. Vores sol dukkede kun op for **for 4,6 milliarder år siden**, fra materiale genbrugt af gamle stjerner."
+        },
+        {
+          "type": "funFact",
+          "text": "Hvis universets historie fandt sted på et år, ville Big Bang finde sted den 1. januar ved midnat, og menneskeheden ville først dukke op den 31. december kl. 23.52. ."
+        }
+      ]
+    },
+    {
+      "id": "course_61_le_big_bang_p4",
+      "title": "Og i morgen?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I lang tid spekulerede folk på, om tyngdekraften i sidste ende ville bremse udvidelsen. I **1998** viser observationen af fjerne [[supernovaer]], eksplosioner af stjerner brugt som afstandsmarkører, det modsatte: [[accelereret udvidelse af universet]]. En mystisk **mørk energi**, en frastødende kraft, der skubber galakser væk, ser ud til at skubbe denne afstand væk og vil repræsentere cirka **68%** af universets indhold. Almindelig materie, som vi er lavet af, ville kun tjene omkring **5 %**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hvis denne acceleration fortsætter, kan universet udvikle sig i retning af ekstrem afkøling, nogle gange kaldet **Stor fryse**, ende med kulde. En ting er sikker: Det, vi ser, er kun en del af helheden. Mens lyset bevæger sig mod os, fortsætter rummet med at strække sig."
+        },
+        {
+          "type": "takeaway",
+          "text": "Big Bang, **13,8 milliarder dollars på siden**, er ikke en eksplosion i det tomme rum: det er selve rummets udvidelse, bekræftet af galaksernes flyvning, den kosmiske mikrobølgebaggrund og proportionerne af brint og helium."
+        }
+      ]
+    }
+  ]
+}

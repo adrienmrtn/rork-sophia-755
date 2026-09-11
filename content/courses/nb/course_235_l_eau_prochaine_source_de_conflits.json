@@ -1,0 +1,112 @@
+{
+  "id": "course_235_l_eau_prochaine_source_de_conflits",
+  "title": "Vann: neste kilde til konflikt?",
+  "subtitle": "Blått gull fra det 21. århundre",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Mindre enn 1 % av jordens vann er friskt og lett tilgjengelig. Noen eksperter ser allerede på dette som den neste store kilden til konflikt.",
+  "hero": {
+    "image": "l_eau_prochaine_source_de_conflits",
+    "ratio": "16:9",
+    "hook": "Mindre enn 1 % av jordens vann er friskt og tilgjengelig. Resten krangler."
+  },
+  "sections": [
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ferskvann er den viktigste ressursen for menneskers liv. Det er også, i dag, stadig mer sjeldent: demografien øker, klimaet endrer seg, og noen eksperter spår allerede de første \"vannkrigene\" i det 21. århundre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette kurset utforsker hvorfor en så viktig ressurs blir et viktig strategisk spørsmål, som kan bringe nabolandene nærmere hverandre, eller motarbeide dem."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p1",
+      "title": "En sjelden ressurs, dårlig distribuert",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jorden er 70% dekket av vann, noe som gir den kallenavnet \"blå planet\". Men dette vannet er nesten helt salt. Ferskvann utgjør bare rundt 3% av det totale, og to tredjedeler av det ferskvannet er fanget som is, i polare iskapper og isbreer. Til syvende og sist representerer flytende og tilgjengelig ferskvann (innsjøer, elver, grunne akviferer) mindre enn 1 % av alt vann på planeten."
+        },
+        {
+          "type": "image",
+          "asset": "dried_riverbed_water_scarcity_drought",
+          "ratio": "16:9",
+          "caption": "Tilgjengelig ferskvann utgjør mindre enn 1 % av alt vann på jorden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denne knappheten er ikke likt fordelt. Noen land, som Brasil, Canada eller Russland, har enorme reserver. Andre, som Midtøsten eller Nord-Afrika, opplever varig **[[Vannstress]]**: etterspørselen deres etter vann overstiger det territoriet kan gi. I 2024 lever rundt 4 milliarder mennesker minst én måned per år i denne situasjonen."
+        },
+        {
+          "type": "funFact",
+          "text": "På 1900-tallet tredoblet verdens befolkning, men vannforbruket ble seksdoblet, blant annet på grunn av industrialisering og kosthold rikere på kjøtt."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p2",
+      "title": "Geopolitikk av delte elver",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spenninger oppstår spesielt når en ressurs deles. Mer enn 260 elver i verden er **grenseoverskridende**: de krysser flere land, og skaper en tvungen avhengighet mellom de som ligger oppstrøms, som kontrollerer kilden, og de som ligger nedstrøms, som mottar det som er igjen av den."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nilen illustrerer denne spenningen godt. Etiopia bygde **[[GERD]]**, en enorm demning ved Den blå Nilen, for å produsere strøm og bli mer selvforsynt. Men Egypt, som er avhengig av Nilen for 95 % av vannet sitt, oppfatter hver kubikkmeter som holdes oppstrøms som en direkte trussel mot sikkerheten."
+        },
+        {
+          "type": "funFact",
+          "text": "Indus-elvetraktaten, undertegnet i 1960 mellom India og Pakistan, har overlevd tre kriger mellom de to landene uten noen gang å bli brutt: et bevis på at vann også kan være et kraftig verktøy for fred."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p3",
+      "title": "Teknologi mot mangel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stilt overfor mangel på vann, er noen land avhengige av teknologi. **avsalting**, som forvandler sjøvann til drikkevann, har etablert seg i Gulf-landene og Midtøsten. Israel produserer mer enn 80 % av drikkevannet sitt ved å bruke avsaltingsanlegg. Imidlertid forblir prosessen dyr og energikrevende, og den frigjør **saltlake**, svært salt vann som kan skade marine økosystemer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Andre løsninger er avhengige av nøkternhet. Dryppvanning, som leverer vann direkte til planterøttene, reduserer landbruksforbruket med 30 til 70 prosent."
+        },
+        {
+          "type": "funFact",
+          "text": "I **[[Singapore]]**, et lite territorium uten store vannreserver, blir avløpsvann behandlet med så avanserte teknikker at det blir renere enn kildevann, før det resirkuleres under navnet \"NEWater\"."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p4",
+      "title": "Mot delt styring av blått gull",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Til tross for spådommer om «vannkrig», viser historien at denne ressursen oftere har blitt brukt til samarbeid enn åpen konflikt. Å opprette bassengkommisjoner og traktater mellom naboland er fortsatt den beste måten å unngå kriser på."
+        },
+        {
+          "type": "paragraph",
+          "text": "Et konsept hjelper til med å forstå omfanget av problemet: den virtuelle **[[virtuelt vann]]**, det vil si mengden vann som er nødvendig for å produsere et produkt. Ved å importere hvete, importerer et vann-stresset land faktisk vannet som brukes til å dyrke den andre steder. For eksempel kreves det rundt 15 000 liter vann for å produsere en enkelt kilo storfekjøtt, sammenlignet med 1500 liter for én kilo hvete."
+        },
+        {
+          "type": "takeaway",
+          "text": "Tilgjengelig ferskvann utgjør mindre enn 1 % av jordens vann, og hundrevis av millioner mennesker bor i bassenger som deles mellom land med motstridende interesser. Teknologi og internasjonalt samarbeid er fortsatt de beste våpnene mot fremtidige vannkriser."
+        }
+      ]
+    }
+  ]
+}

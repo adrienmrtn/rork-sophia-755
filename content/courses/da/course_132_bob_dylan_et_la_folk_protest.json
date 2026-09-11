@@ -1,0 +1,149 @@
+{
+  "id": "course_132_bob_dylan_et_la_folk_protest",
+  "title": "Bob Dylan og folkeprotesten",
+  "subtitle": "1961-2016",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Fra Greenwich Village til Nobelprisen forvandlede Bob Dylan folkesang til politisk poesi og derefter til elektrisk rock.",
+  "hero": {
+    "image": "bob_dylan_et_la_folk_protest",
+    "ratio": "16:9",
+    "hook": "En guitar, en mundharmonika og amerikansk sang bliver til litteratur."
+  },
+  "sections": [
+    {
+      "id": "course_132_bob_dylan_et_la_folk_protest_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Bob Dylan**, født Robert Zimmerman i **1941** i Minnesota, er en af de mest indflydelsesrige skikkelser i det 20. århundredes sang. Protestens profet, dengang elektrisk digter, han nægter at blive i en enkelt boks."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **2016** tildelte Det Svenske Akademi ham **Nobelpriser og litteratur**. For første gang er en rocksangskriver anerkendt som en stor forfatter på det engelske sprog."
+        }
+      ]
+    },
+    {
+      "id": "course_132_bob_dylan_et_la_folk_protest_p1",
+      "title": "Greenwich Village og arven fra Woody Guthrie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I januar **1961**, 19 år gammel, forlod Zimmerman det kolde Midtvesten for **New York**. Han har allerede valgt navnet Bob Dylan. Hans idol: folkesangeren **Woody Guthrie**, arbejdernes og de undertryktes stemme, og derefter indlagt. Dylan ønsker at møde denne amerikanske autenticitet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han slog sig ned i **Greenwich Village**, et boheme-kvarter på Manhattan. Dette er hjertet i [[folkelige genoplivning]], denne bevægelse, der genopdager traditionelle sange for at gøre dem til en løftestang for samfundskritik. Dylan gennemsøger cafeer, absorberer blues, country og gospel, opdager også poesi og [[Beat Generation]]."
+        },
+        {
+          "type": "image",
+          "asset": "greenwich_village_folk_scene_1960s",
+          "ratio": "4:3",
+          "caption": "Greenwich Village i 1960'erne: caféer, guitarer og protester."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spot for sin frasering og rå mundharmonika skrev han under med [[Columbia Records]] sent **1961**. Legenden begynder."
+        },
+        {
+          "type": "funFact",
+          "text": "I sine tidlige dage opfandt Dylan sin biografi: han hævdede at være flygtet fra et cirkus eller rejst med karnevaler for at skabe en aura af outsider."
+        }
+      ]
+    },
+    {
+      "id": "course_132_bob_dylan_et_la_folk_protest_p2",
+      "title": "Protestsangen og March on Washington",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1963** ændrede albummet *The Freewheelin' Bob Dylan* alt. *Blæser i vinden* bliver en hymne. Dylan bruger [[Musik som politisk redskab]]: simple melodier, budskaber om racisme, krig og nuklear frygt."
+        },
+        {
+          "type": "paragraph",
+          "text": "I august **1963** sang han ved **marts til Washington** for borgerrettigheder foran **250.000**-folk, lige før **Martin Luther King**'s tale. Han er dog allerede begyndt at afvise rollen som \"talsmand for en generation\". Hans tekster bliver mere surrealistiske, mere personlige."
+        },
+        {
+          "type": "image",
+          "asset": "march_on_washington_1963_civil_rights",
+          "ratio": "4:3",
+          "caption": "August 1963: Marchen mod Washington, et nøgleøjeblik i borgerrettigheder."
+        },
+        {
+          "type": "funFact",
+          "text": "Samme år svigtede tv-producenter ham ved en audition: de fandt ud af, at han sang for ustemt."
+        }
+      ]
+    },
+    {
+      "id": "course_132_bob_dylan_et_la_folk_protest_p3",
+      "title": "Newport 1965: den elektriske guitar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I juli **1965** på Newport Folk Festival indtog Dylan scenen med en elektrisk [[Fender Stratocaster]]. En del af den puristiske offentlighed booster ham: elektricitet ville være et kommercielt forræderi. I virkeligheden var det folk-rockens fødsel."
+        },
+        {
+          "type": "image",
+          "asset": "bob_dylan_electric_newport_folk_festival_1965",
+          "ratio": "4:3",
+          "caption": "Newport 1965: Dylan tænder for strømmen, og en æra ændrer sig."
+        },
+        {
+          "type": "paragraph",
+          "text": "En grundlæggende trilogi følger: *Bringe det hele hjem igen*, *Highway 61 Revisited*, *Blonde fra Blonde*. *Som en Rolling Stone knuser* radioformater. Dylan anklager ikke længere kun samfundet: han udforsker desillusion og psyken med en verbal verve uden fortilfælde øverst på hitlisterne."
+        },
+        {
+          "type": "funFact",
+          "text": "Newports Stratocaster var tabt i 47 år, glemt på et fly, og derefter solgt på auktion for næsten 1 million dollars i 2013."
+        }
+      ]
+    },
+    {
+      "id": "course_132_bob_dylan_et_la_folk_protest_p4",
+      "title": "Fra Never Ending Tour til Nobel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Efter en motorcykelulykke i **1966** genopfandt Dylan konstant sig selv: land, gospel, standarder. Hans indflydelse berører **John Lennon**, **Jimi Hendrix** og generationer af forfattere. Nobelprisen for **2016** forsegler debatten: sangtekster kan være fantastisk litteratur."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1961",
+              "title": "Ankomst til New York",
+              "detail": "Dylan opdager Greenwich Village og skriver under med Columbia."
+            },
+            {
+              "date": "1963",
+              "title": "marts i Washington",
+              "detail": "Protestsangen bliver en generations stemme."
+            },
+            {
+              "date": "1965",
+              "title": "Newport Electric",
+              "detail": "Stratocasteren opfinder folk-rock."
+            },
+            {
+              "date": "2016",
+              "title": "Nobelprisen",
+              "detail": "Populær sang kommer ind i det litterære pantheon."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Forbundet til Newport i 1965, fløjtet af purister, blev Dylan den mest indflydelsesrige figur i amerikansk sang lige op til Nobelprisen."
+        }
+      ]
+    }
+  ]
+}

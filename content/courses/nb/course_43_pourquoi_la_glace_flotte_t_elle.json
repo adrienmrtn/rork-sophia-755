@@ -1,0 +1,106 @@
+{
+  "id": "course_43_pourquoi_la_glace_flotte_t_elle",
+  "title": "Hvorfor flyter isen?",
+  "subtitle": "Vann og molekyler",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Isen flyter på vannet. Dette virker normalt, men det er faktisk veldig sjeldent. Og heldigvis for livet på jorden.",
+  "hero": {
+    "image": "pourquoi_la_glace_flotte",
+    "ratio": "16:9",
+    "hook": "Hvis isen rant, ville innsjøene fryse til bunnen. Og livet i vannet ville ha problemer med å overleve."
+  },
+  "sections": [
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En isbit i et glass, et isfjell i havet: isen **flyter**. Vi finner det banalt. Men for de fleste stoffer er faststoffet mer **tett**, derfor tyngre for samme volum: det synker."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vann gjør det motsatte. Dette unntaket kommer fra formen på molekylet. Og det reddet mange innsjøer om vinteren."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p1",
+      "title": "Et V-formet molekyl",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Et vannmolekyl er et atom av **oksygen** koblet til to atomer av **hydrogen**. Den er ikke rett: den danner en **V**. På grunn av denne formen er ikke de elektriske ladningene likt fordelt: molekylet er **polar**, med den ene enden litt negativ og den andre litt positiv."
+        },
+        {
+          "type": "image",
+          "asset": "water_molecule_model_crystal",
+          "ratio": "4:3",
+          "caption": "Vannmolekylet: en V som tiltrekker og frastøter sine naboer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultat: vannmolekyler tiltrekker hverandre gjennom [[Hydrogenbindinger]], som små magneter. I væsken forblir de tett, men beveger seg fortsatt. I is fryser de annerledes."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
+      "title": "Når vann fryser, tar det plass",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rundt **0 °C** størkner vannet. For å danne is organiserer molekylene seg i et **sekskantet**-nettverk, en slags sekssidig honningkake. De etterlater da mer **tømme** mellom seg enn i flytende tilstand."
+        },
+        {
+          "type": "funFact",
+          "text": "Dette er grunnen til at en full flaske vann kan **sprekke** i fryseren: is tar opp mer volum enn flytende vann."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mindre materiale i samme volum betyr: **mindre tett**. Imidlertid stiger en gjenstand mindre tett enn væsken rundt den. Is flyter derfor på vannet. Dette kalles **vankspansjonsanomali**: i motsetning til nesten alle stoffer, utvider vann seg når det avkjøles under **4 °C**."
+        },
+        {
+          "type": "image",
+          "asset": "iceberg_floating_arctic_ocean",
+          "ratio": "16:9",
+          "caption": "Et isfjell flyter fordi is er mindre tett enn flytende vann."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
+      "title": "Hvorfor det er viktig for innsjøer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tenk om isen rant. Det ville dannes på overflaten, og deretter synke til bunnen. Innsjøen ville fryse lag på lag, helt til bunnen. Sommeren ville ofte ikke være nok til å smelte alt bort."
+        },
+        {
+          "type": "paragraph",
+          "text": "Heldigvis forblir isen på toppen. Den danner et **isolere deksel**. Under den frosne overflaten kan flytende vann forbli rundt **4 °C**, temperaturen der flytende vann er tettest, nok til at fisk og vannplanter kan overleve."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p4",
+      "title": "Og for klimaet også",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det hvite isflaket reflekterer en stor del av solens lys tilbake til verdensrommet takket være dens høye **albedo**, dens reflekterende kraft. Hvis det forsvinner, absorberer det mørke havet mer varme. Dette akselererer oppvarmingen: en ond sirkel."
+        },
+        {
+          "type": "takeaway",
+          "text": "Is flyter fordi vann danner et mer \"luftet\" nettverk når den stivner: den blir mindre tett enn flytende vann. Dette unntaket beskytter vannlevende om vinteren."
+        }
+      ]
+    }
+  ]
+}

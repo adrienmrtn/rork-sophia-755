@@ -1,0 +1,145 @@
+{
+  "id": "course_131_la_naissance_de_la_musique_electronique",
+  "title": "Fødslen af elektronisk musik",
+  "subtitle": "1920-1990",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Fra Theremin til klubberne i Chicago og Detroit opfinder elektronisk musik lyde uden et orkester og forvandler verdensdans.",
+  "hero": {
+    "image": "la_naissance_de_la_musique_electronique",
+    "ratio": "16:9",
+    "hook": "Fra laboratorier til dansegulve: hvordan maskiner opfandt ny musik."
+  },
+  "sections": [
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elektronisk musik starter ikke i natklubber. Det er født i laboratorier, når opfindere leder efter lyde, der er umulige at få fra en violin eller et klaver."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fra [[Theremin]] fra 1920'erne til [[Chicago hus]] og [[Detroit techno]], en idé strækker sig over århundredet: Maskinen kan skabe, ikke bare optage. I dag strukturerer det en stor del af verdens pop og [[diagrammer]]."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p1",
+      "title": "Pionererne: fra Theremin til musique beton",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1920** designede den russiske opfinder **Leon Theremin** (Lev Termen) [[Theremin]]: en enhed, der spilles uden kontakt. Hænder bevæger sig i nærheden af antenner i et elektromagnetisk felt. Lyden glider, næsten vokal, og hjemsøger snart science fiction-film."
+        },
+        {
+          "type": "image",
+          "asset": "theremin_instrument_leon_theremin_1920",
+          "ratio": "4:3",
+          "caption": "Theremin: et instrument, der spilles i luften, uden at røre strengene."
+        },
+        {
+          "type": "paragraph",
+          "text": "Efter 1945 ændrede forskningen terræn. I Paris opfandt **Pierre Schaeffer** og **Peter Henrik** i offentlig radio musikbeton: optager hverdagsstøj, klipper dem derefter, vender dem om, sætter dem i sløjfer på magnetbånd. I Köln foretrækker andre studier ren syntese: lyde født fra oscillatorer uden en akustisk kilde. Disse to veje understøtter stadig den nuværende produktion: på den ene side [[prøveudtagning]], på den anden side syntese."
+        },
+        {
+          "type": "funFact",
+          "text": "Theremin præsenterede sit instrument for Lenin. Fascineret anmodede den sovjetiske leder efter sigende om hundredvis af eksemplarer for at sprede teknisk modernitet i USSR."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p2",
+      "title": "The Moog, Wendy Carlos og Kraftwerk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I 1960'erne miniaturiserede den amerikanske ingeniør **Robert Moog** synthesizeren med transistorer. I **1968** beviser **Wendy Carlos**s album *Tændt Bach*, at elektronik kan bære klassisk kompleksitet. Gadgetten bliver et instrument."
+        },
+        {
+          "type": "image",
+          "asset": "moog_synthesizer_robert_moog_1960s",
+          "ratio": "4:3",
+          "caption": "Moog-synthesizeren: maskinen forlader laboratoriet til studiet."
+        },
+        {
+          "type": "paragraph",
+          "text": "I Düsseldorf påtvinger den tyske gruppe **Kraftwerk**, grundlagt af **Ralf Hütter** og **Florian Schneider**, kold og gentagende pop. Med *Autobahn* (**1974**) og *Manden Maskinen* (**1978**) synger de om motorvejen, robotten, byen. Deres rytme skulle senere give næring til amerikansk hiphop og europæisk dansemusik."
+        },
+        {
+          "type": "image",
+          "asset": "kraftwerk_band_dusseldorf_1970s",
+          "ratio": "4:3",
+          "caption": "Kraftwerk: mennesket-maskinen som kunstnerisk person."
+        },
+        {
+          "type": "funFact",
+          "text": "På visse ture sendte Kraftwerk mannequiner i deres lighed til pressekonferencer, og skubbede begrebet menneske-maskine til det yderste."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p3",
+      "title": "Chicago og Detroit: elektronisk dans",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I 1980'erne ændrede overkommelige maskiner som **Roland TR-808** trommemaskinen spillet. I Chicago, i klubber, der frekventeres af sorte og homoseksuelle samfund, forfiner DJ **Frankie Knuckles** [[Chicago hus]]: regelmæssig 4/4-rytme, varme arvet fra disco."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **Detroit**, en by præget af bilfabrikkernes tilbagegang, opfinder tre universitetsvenner (**Juan Atkins**, **Derrick May**, **Kevin Saunderson**) en Z the Darker ZG0Z:Z the darker aesthetic techno. Eksporteret til Europa fandt den et stærkt ekko i Berlin efter Murens fald."
+        },
+        {
+          "type": "funFact",
+          "text": "TR-808 var en kommerciel fiasko: de professionelle fandt den \"urealistisk\". Sælges brugt, bliver det våbenet for Chicagos brokkede DJs."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p4",
+      "title": "Computeren, alles studie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fra 1990'erne forvandlede [[computer musik software]] (computerstøttet musik) en simpel pc til et studie. Elektronik forlader klubben for reklame, biograf og næsten al pop. [[Chicago house og Detroit techno]] forbliver rødderne til et globalt sprog."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1920",
+              "title": "Theremin",
+              "detail": "Leon Theremin opfinder et instrument, der spilles uden kontakt."
+            },
+            {
+              "date": "1948-1950",
+              "title": "Konkret musik",
+              "detail": "Schaeffer og Henry manipulerer lydene optaget i Paris."
+            },
+            {
+              "date": "1968-1978",
+              "title": "Moog og Kraftwerk",
+              "detail": "Synthesizeren går ind i massekulturen."
+            },
+            {
+              "date": "1980'erne",
+              "title": "House og techno",
+              "detail": "Chicago og Detroit opfinder moderne elektronisk dans."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Født i laboratorier i 1950'erne, strukturerer elektronisk musik i dag en stor del af verdensproduktionen, fra klubben til hitparaden."
+        }
+      ]
+    }
+  ]
+}

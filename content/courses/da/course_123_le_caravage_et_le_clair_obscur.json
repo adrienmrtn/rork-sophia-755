@@ -1,0 +1,144 @@
+{
+  "id": "course_123_le_caravage_et_le_clair_obscur",
+  "title": "Caravaggio og chiaroscuro",
+  "subtitle": "1571-1610",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "**Michelangelo Merisi**, kendt som Caravaggio, revolutionerede maleriet med brutal realisme og ekstrem lys-skyggekontrast: chiaroscuro.",
+  "hero": {
+    "image": "le_caravage_et_le_clair_obscur",
+    "ratio": "16:9",
+    "hook": "Hellige med beskidte fødder, et søgelys: kunst bliver aldrig den samme igen."
+  },
+  "sections": [
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Michelangelo Merisi**, kendt som **Caravaggio** (1571-1610), bryder koderne for ideel skønhed, der er arvet fra renæssancen. Han konfronterer det hellige og det daglige: tiggere, værtshuse, trætte kroppe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hans våben: radikal chiaroscuro. Kropper dukker op af mørket som under et rampelys. Dette brud annoncerer ånden i [[Barok i maleri]] og forvandler tilskueren til et vidne til et drama."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_self_portrait",
+          "ratio": "4:3",
+          "caption": "Caravaggio, genimaler og skikkelse af det turbulente romerske liv."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p1",
+      "title": "Geni, vold og eksil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Født nær Milano, Caravaggio ankom til Rom omkring **1593**. Hans karriere ændrede sig i **1600** med malerierne af Contarelli-kapellet ved Saint-Louis-des-Français kirken. *Om Matthews Kald* forbløffer Rom: det hellige har gadens ansigt."
+        },
+        {
+          "type": "funFact",
+          "text": "På Malta blev han udnævnt til ridder af ordenen, og derefter smidt i fængsel for at have overfaldet en overordnet. Han flygter fra et fort, der anses for uindtageligt med et hamperov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hans liv er lige så voldsomt som hans malerier. I **1606** dræbte han under et slagsmål **Ranuccio Tomassoni**. Dømt til døden flygtede han til Napoli, Malta og derefter Sicilien. Jaget og såret døde han ved **38 år** i [[Porto Ercole]], få dage før en pavelig benådning."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p2",
+      "title": "Tenebrisme: et lys der rammer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Caravaggio opfandt **tenebrisme**, en ekstrem form for chiaroscuro. Ikke mere blødt lys, der kærtegner formerne: et uigennemsigtigt mørke, og kroppe, der kommer ud af det med skulpturel kraft. Lyset er kunstigt, som et scenelys."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_tenebrism_chiaroscuro_painting",
+          "ratio": "4:3",
+          "caption": "I tenebrisme fokuserer sort blikket på dramaet."
+        },
+        {
+          "type": "funFact",
+          "text": "For at opnå denne belysning arbejdede han på et værksted med sorte vægge, gennemboret af et enkelt lille ovenlys højt oppe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ved at fjerne dekorationer og landskaber tvinger han blikket mod ansigter og fagter. Dette lys tjener også [[Modreformation]]: Den katolske kirke ønsker at bevæge de troende. Hos ham bliver lyset den nåde, der rammer sjælen uden varsel."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p3",
+      "title": "Hellige, der ligner gaden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det, der skandaliserer mest, er hans afvisning af at idealisere. Han vælger sine modeller på gaden: arbejdere, tiggere, kurtisaner. Jomfruen og apostlene har rynker, snavsede fødder, trætte kroppe."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_madonna_dei_pellegrini_painting",
+          "ratio": "4:3",
+          "caption": "Pilgrimsmadonnaen: nøgne, beskidte fødder i forgrunden."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Jomfruens død* bliver afvist: det siges, at han tog en druknet kvinde som model. *Pilgrimmenes Madonna* chokerer med de knælende fattiges beskidte fødder. Han afviser kunstgrebene fra [[Manierisme]], denne yndefulde og forvrængede stil, der gik forud. For ham er frelsen først henvendt til de ydmyge."
+        },
+        {
+          "type": "funFact",
+          "text": "Hans første version af *Sankt Matthæus og englen* viste en evangelist med beskidte fødder, der så uopdragen ud. Sponsorerne krævede, at han malede det om."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p4",
+      "title": "Caravaggio: et Europa under indflydelse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Han fandt ikke en skole, men hans stil breder sig: **karavagisme**. [[Artemisia Gentileschi]] i Italien, Georges de La Tour i Frankrig, Zurbarán i Spanien, Rubens i Flandern. Senere vil **Rembrandt** arve hans skyggepoesi, **Velazquez** hans værdighed af folket."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1600",
+              "title": "Contarelli Kapel",
+              "detail": "Rom opdager Matthæuskaldelsen."
+            },
+            {
+              "date": "1606",
+              "title": "Mord og eksil",
+              "detail": "Caravaggio flygtede fra Rom, dømt til døden."
+            },
+            {
+              "date": "1610",
+              "title": "Død i Porto Ercole",
+              "detail": "Han døde i en alder af 38, lige før nåde."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Glemt i to århundreder, blev det genopdaget i det 20. århundrede. Dens stramme indramning og belysning påvirker stadig biograf og fotografi."
+        },
+        {
+          "type": "takeaway",
+          "text": "Caravaggio (1571-1610) påtvang tenebrisme og radikal socialrealisme. Ved at male det hellige med gademodeller blev han barokmaleriets åndelige fader."
+        }
+      ]
+    }
+  ]
+}

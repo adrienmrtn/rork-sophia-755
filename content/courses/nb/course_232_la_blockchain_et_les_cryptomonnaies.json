@@ -1,0 +1,112 @@
+{
+  "id": "course_232_la_blockchain_et_les_cryptomonnaies",
+  "title": "Blokkjede og kryptovalutaer",
+  "subtitle": "Siden 2009",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "**blokkjede** oppfant en hovedbok som ingen kan tukle med alene, og banet vei for en ny digital økonomi.",
+  "hero": {
+    "image": "la_blockchain_et_les_cryptomonnaies",
+    "ratio": "16:9",
+    "hook": "En bok med kontoer som ingen eier, men som tusenvis av datamaskiner overvåker sammen."
+  },
+  "sections": [
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_intro",
+      "title": "Introduksjon",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se for deg en bok med kontoer som ingen eier, men som tusenvis av datamaskiner oppdateres samtidig, over hele verden, og som det er nesten umulig å forfalske. Dette er den første ideen til **blokkjede**, en teknologi som ofte er redusert til sin første applikasjon, **Bitcoin**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ved å gjøre det mulig å bytte verdi uten å gå gjennom en bank, ga denne oppfinnelsen opphav til en hel parallell økonomi, mellom løfter om økonomisk frihet og alvorlig kritikk av energikostnadene."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p1",
+      "title": "Et register som ingen kontrollerer alene",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I hjertet av blockchain er en enkel idé: **distribuert hovedbok**. I motsetning til en bank, som holder sine kontoer på sine egne servere, er blokkjeden avhengig av et nettverk av [[jevnaldrende]], det vil si tusenvis av datamaskiner som hver holder en identisk kopi av alle transaksjoner."
+        },
+        {
+          "type": "funFact",
+          "text": "Den aller første blokken av Bitcoin-blokkjeden, kalt \"genesis-blokken\", inneholdt en skjult melding: forsiden til en britisk avis 3. januar 2009, som snakket om statens redningsaksjon for bankene. Et politisk nikk fra skaperen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hver transaksjon blir først verifisert av nettverket og deretter gruppert med andre i en **blokkere**. Denne blokken blir så knyttet til den forrige takket være en matematisk beregning kalt [[hasj]]: et slags unikt digitalt fingeravtrykk. Resultatet er en uavbrutt kjede av blokker, derav navnet blokkjede. For å endre en enkelt gammel transaksjon, må du beregne hele kjeden på nytt og overbevise mer enn halvparten av nettverket, noe som er nesten umulig i stor skala."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p2",
+      "title": "Bitcoin og Ethereum: fra betaling til program",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Bitcoin**, lansert i **2009** av en anonym person (eller gruppe) under navnet [[Satoshi Nakamoto]], beviste at et pengesystem kunne fungere uten en sentralbank. For å garantere dens knapphet, har skaperen satt et strengt tak: aldri mer enn **21 millioner bitcoins** kan eksistere, litt som gull er begrenset på jorden."
+        },
+        {
+          "type": "image",
+          "asset": "blockchain_technology_distributed_ledger_visualization",
+          "ratio": "4:3",
+          "caption": "Hver transaksjon verifiseres av et nettverk av datamaskiner før den legges til i kjeden."
+        },
+        {
+          "type": "paragraph",
+          "text": "I 2015 dukket en andre generasjon blokkjede opp med **Ethereum**. Dens store innovasjon: **smart kontakt**. Dette er programmer som kjører automatisk så snart et vilkår er oppfylt, for eksempel automatisk refusjon ved togforsinkelse, uten at man trenger å gå gjennom en mellommann."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
+      "title": "Kritikere: energi og ustabilitet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suksessen til kryptovalutaer er ikke uten problemer. Det mest diskuterte gjelder **energi-forbruket** til Bitcoin-nettverket: dets årlige strømutgifter er i dag sammenlignbare med et helt land som Argentina."
+        },
+        {
+          "type": "paragraph",
+          "text": "Markedet lider også av ekstrem **volatilitet**: prisen på Bitcoin kan variere med 10 eller 20 % på noen få timer. Denne ustabiliteten hindrer den i å bli en ekte hverdagsvaluta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Endelig har den relative anonymiteten til transaksjoner noen ganger blitt brukt til ulovlige aktiviteter. Men blokkjeden forblir faktisk helt gjennomsiktig: myndighetene kan følge pengestrømmen, noe som gjør hvitvasking vanskeligere enn i det klassiske kontantsystemet."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p4",
+      "title": "Mot institusjonell integrering",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I dag forlater kryptovaluta marginene for å gå inn i tradisjonell finans. Store banker tilbyr nå å holde digitale eiendeler for kundene sine, og flere stater vurderer å lage sin egen offisielle digitale valuta, en **[[MNBC]]** (digital valuta fra sentralbanken)."
+        },
+        {
+          "type": "paragraph",
+          "text": "**stabile mynter**, kryptovalutaer hvis pris er stabilisert takket være en reserve på dollar eller euro, fungerer som en bro mellom de to verdenene. Utover finans, tar sektorer som luksus (for å bekjempe forfalskning), logistikk (for å spore containere) eller helse (for å sikre medisinske journaler) også blokkjede for sin pålitelighet."
+        },
+        {
+          "type": "funFact",
+          "text": "I 2021 ble El Salvador det første landet i verden som tok i bruk Bitcoin som lovlig betalingsmiddel, sammen med amerikanske dollar, og krever at alle selgere godtar det hvis de har de tekniske midlene."
+        },
+        {
+          "type": "takeaway",
+          "text": "Blokkkjeden ble opprettet i 2009, og er en delt og nesten umulig å forfalske hovedbok, den maksimale tilgangen på bitcoins er satt til 21 millioner enheter. Det la grunnlaget for en ny digital økonomi i dag i full institusjonell integrering."
+        }
+      ]
+    }
+  ]
+}

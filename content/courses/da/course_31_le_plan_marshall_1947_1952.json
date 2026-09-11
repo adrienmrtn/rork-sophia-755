@@ -1,0 +1,129 @@
+{
+  "id": "course_31_le_plan_marshall_1947_1952",
+  "title": "Marshall-planen",
+  "subtitle": "1947-1952",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "I **1947** er Europa i ruiner. USA tilbyder massiv hjælp for at genopbygge det... og for at bremse kommunismen.",
+  "hero": {
+    "image": "le_plan_marshall",
+    "ratio": "16:9",
+    "hook": "Tretten milliarder dollars for at redde Europa. Og bag kulisserne at vinde den kolde krig."
+  },
+  "sections": [
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I juni **1947** kom Europa udmattet ud af krigen. Byer ødelagt, fabrikker stoppet, sult overalt. I Washington annoncerede den amerikanske udenrigsminister **George Marshall** derefter en hidtil uset bistandsplan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Officielt handler det om at bygge om. I virkeligheden er det også en strategi: at forhindre fattigdom i at skubbe Vesten mod kommunisme, over for USSR af **Josef Stalin**."
+        }
+      ]
+    },
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_p1",
+      "title": "Et Europa forpustet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Efter **1945** er elnet og transport i stykker. Vinteren **1946-1947**, meget hård, gjorde alt værre: lidt kul, rationering, vrede i gaderne."
+        },
+        {
+          "type": "paragraph",
+          "text": "I Frankrig falder industriproduktionen til omkring **38%** fra niveauet **1938**. Kommunistiske partier gør fremskridt ved valg. For USA bliver sult en politisk fare: Hvis Europa taber sin stemme, vinder Moskva uden at affyre et skud."
+        },
+        {
+          "type": "image",
+          "asset": "marshall_plan_poster_american_aid",
+          "ratio": "4:3",
+          "caption": "Plakat af Marshall-planen: Amerikansk bistand præsenteret som et fælles europæisk projekt."
+        },
+        {
+          "type": "funFact",
+          "text": "For at gøre planen populær organiserede amerikanerne en plakatkonkurrence i Europa: Der blev sendt mere end **10.000** tegninger."
+        }
+      ]
+    },
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_p2",
+      "title": "Det amerikanske tilbud og det sovjetiske afslag",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**5. juni 1947** ved Harvard University, Marshall sætter en klar betingelse. Europæerne skal blive enige om en fælles plan. Ingen bistand spredt land for land."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tilbuddet er først åbent for USSR. Men Stalin nægter, og forbyder Polen og Tjekkoslovakiet at acceptere. Kun **16 hede** i Vesteuropa samles i **[[OEEC]]**, den organisation, der er ansvarlig for at fordele midlerne. Kontinentet er delt i to."
+        }
+      ]
+    },
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_p3",
+      "title": "Sådan fungerer hjælpen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mellem **1948** og **1952** sender USA ca. **13 milliarder dollars** (mere end nutidens **150 mia**). Det er ikke primært billetter: maskiner, kul, traktorer, mad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Systemet er enkelt. Europa videresælger disse varer i lokal valuta. De inddrevne penge finansierer veje, fabrikker, modernisering. Fra **1952** oversteg industriproduktionen førkrigsniveauet med **35%**. West Germany begins its [[Wirtschaftswunder]], the “economic miracle”."
+        },
+        {
+          "type": "funFact",
+          "text": "Støtten dækkede groft sagt det europæiske handelsunderskud: nok til, at Europa kunne fortsætte med at købe amerikansk uden at gå konkurs."
+        }
+      ]
+    },
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_p4",
+      "title": "En politisk såvel som økonomisk sejr",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Planen anvender **[[Truman-doktrinen]]**: bremse Moskva med velstand, ikke kun med våben. Det svækker revolutionære partier, bringer USA og Europa tættere sammen og presser tidligere fjender, Frankrig og Tyskland, til at samarbejde. Denne vane med at arbejde sammen forbereder fremtiden **[[EØF]]**, forfader til Den Europæiske Union."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1947",
+              "title": "Harvard tale",
+              "detail": "Marshall bebuder princippet om koordineret bistand."
+            },
+            {
+              "date": "1948",
+              "title": "Start af overførsler",
+              "detail": "Hjælpen ankommer til Vesteuropa."
+            },
+            {
+              "date": "1952",
+              "title": "Industriel vurdering",
+              "detail": "Produktionen overstiger klart niveauet før krigen."
+            },
+            {
+              "date": "1953",
+              "title": "Nobelprisen",
+              "detail": "Marshall belønnes for fred gennem genopbygning."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Mellem **1948** og **1952** tilførte Marshall-planen **13 mia** for at genopbygge Vesteuropa, bremse kommunismen og lægge grundlaget for europæisk samarbejde."
+        }
+      ]
+    }
+  ]
+}

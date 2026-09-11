@@ -1,0 +1,102 @@
+{
+  "id": "course_49_pourquoi_a_t_on_des_frissons",
+  "title": "Hvorfor får vi kuldegysninger?",
+  "subtitle": "Krop & følelser",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Kulde, frygt, musik: gys har flere årsager. De passerer alle gennem nervesystemet, men ikke af de samme årsager.",
+  "hero": {
+    "image": "pourquoi_a_t_on_des_frissons",
+    "ratio": "16:9",
+    "hook": "Et gys af kulde og et gys af musik fortæller ikke den samme historie."
+  },
+  "sections": [
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Du ryster, når du går ud i regnen. Du ryster også, når du hører en sang, der gør dig ked af det. Samme ord, forskellige mekanismer."
+        },
+        {
+          "type": "paragraph",
+          "text": "I begge tilfælde reagerer kroppen hurtigt. Men den ene bruges primært til at varme op, den anden handler mere om nydelse og følelser."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
+      "title": "Kuldens spænding: en minikedel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kroppen ønsker at blive omkring **37 °C**. Når huden registrerer kulde, advarer den et område af hjernen, **hypothalamus**, der fungerer som en termostat."
+        },
+        {
+          "type": "image",
+          "asset": "goosebumps_cold_skin",
+          "ratio": "4:3",
+          "caption": "Gåsehud: en gammel refleks til at rejse hår."
+        },
+        {
+          "type": "paragraph",
+          "text": "Musklerne trækker sig meget hurtigt og gentagne gange sammen: dette er kulden. Disse sammentrækninger producerer varme. \"Gåsehud\" kommer fra en gammel refleks: at hæve hårene for bedre at isolere. Hjemme, med lidt pels, tjener det hovedsageligt som et levn."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
+      "title": "Frygtens spænding",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stillet over for en trussel aktiveres det [[sympatiske nervesystem]] (den \"alarme\" gren af nervesystemet). Den frigiver **adrenalin**. Musklerne spændes, hjertet ræser, huden kan ryste."
+        },
+        {
+          "type": "image",
+          "asset": "adrenaline_stress_response_body",
+          "ratio": "4:3",
+          "caption": "Adrenalin forbereder kroppen til at reagere hurtigt."
+        },
+        {
+          "type": "funFact",
+          "text": "Det samme system forklarer, hvorfor du kan få gåsehud, mens du ser en gyserfilm... mens du er hyggelig på din sofa."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
+      "title": "Spændingen ved musikken",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Visse spændinger, nogle gange kaldet \"kulderystelser\", kommer med en stærk følelse: musik, tale, film. De aktiverer hjernens **belønninger**-kredsløb med **dopamin**, et stof forbundet med fornøjelse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette er ikke nyttigt for øjeblikkelig overlevelse. Det er snarere kroppen, der reagerer på en intens følelse, som en forbigående bølge."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
+      "title": "Hvornår skal man bekymre sig?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kulderystelser med høj feber kan signalere en infektion. Konstante kuldegysninger uden klar grund fortjener lægehjælp. Men det meste af tiden er et gys fra kulde, stress eller musik simpelthen, at kroppen gør sit arbejde."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kolde kuldegysninger producerer varme. De frygtsomme forbereder sig på at reagere. De af musikken berører følelsesmæssig nydelse. Samme følelse, forskellige årsager."
+        }
+      ]
+    }
+  ]
+}

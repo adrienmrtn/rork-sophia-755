@@ -1,0 +1,112 @@
+{
+  "id": "course_69_comment_se_forment_les_eclairs",
+  "title": "Hvordan dannes lyn?",
+  "subtitle": "Tordenvejr",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Lyn er ikke magi: det er en enorm elektrisk udladning i en stormsky. Her er, hvordan hun forbereder sig, og derefter hvordan hun slår.",
+  "hero": {
+    "image": "comment_se_forment_les_eclairs",
+    "ratio": "16:9",
+    "hook": "På en brøkdel af et sekund stiger luften til 30.000°C. Fem gange varmere end Solens overflade."
+  },
+  "sections": [
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Et lyn frigiver kolossal energi på et øjeblik. Luften i lynkanalen stiger til cirka **30.000 °C**. Torden er bare lyden af denne brutale varme."
+        },
+        {
+          "type": "paragraph",
+          "text": "For at forstå lynet skal du følge tre trin: hvordan skyen bliver opladet, hvordan elektriciteten finder en vej, og hvorfor du hører torden bagefter."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p1",
+      "title": "I skyen adskilles afgifter",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lightning occurs mainly in [[cumulonimbus]]: very large storm clouds, which can rise to around **15 km**. Indenfor stiger og falder luften meget kraftigt."
+        },
+        {
+          "type": "image",
+          "asset": "cumulonimbus_thunderstorm_cloud",
+          "ratio": "4:3",
+          "caption": "Cumulonimbus: stormfabrikken."
+        },
+        {
+          "type": "paragraph",
+          "text": "I dette kaos stiger små **is-krystaller**, og tungere iskorn ([[slud]]) falder ned. Når de støder sammen, udveksles elektriske ladninger. Lidt efter lidt bliver toppen af skyen ret positiv, bunden ret negativ."
+        },
+        {
+          "type": "funFact",
+          "text": "Maracaibo-søen i Venezuela er et af de mest lynramte steder på planeten: næsten daglige storme observeres der i en stor del af året."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p2",
+      "title": "Når luften slipper: udledningen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Luft er en dårlig leder. Men hvis forskellen i ladningen bliver for stor (ofte **hundredevis af millioner volt**), ender luften med at give efter. Molekyler mister elektroner: de bliver ledende. Dette er [[Luftionisering]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "En usynlig kanal forlader skyen i små spring. Fra jorden stiger elektriske net især fra punkter (træer, lynafledere, bygninger). Når de to kommer sammen, lukkes kredsløbet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det store lys, som vi ser, **bue tilbage**, stiger hovedsageligt fra jorden mod skyen. Strømmen kan nå titusindvis af ampere. Flere udledninger kan følge efter hinanden i samme kanal: deraf flimrende effekt."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p3",
+      "title": "Hvorfor kommer tordenen senere?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lynet opvarmer luften så hurtigt, at den pludselig udvider sig. Denne chokbølge bliver **torden**. Lyset kommer næsten med det samme; lyden går frem med cirka **340 m/s**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Simpelt tip: tæl sekunderne mellem lyn og torden, og divider derefter med **3**. Du får et skøn over afstanden i kilometer."
+        },
+        {
+          "type": "funFact",
+          "text": "Jorden rammes i gennemsnit af cirka **100 lyn i sekundet**. I Frankrig er der omkring **en million** påvirkninger på jorden om året."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p4",
+      "title": "Fare, frugtbarhed og nysgerrighed",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lyn forbliver farligt, især udendørs, nær isolerede træer eller vand. Det starter også brande. Men det har en mindre kendt effekt: det hjælper med at producere nitrogenforbindelser, der gøder jorden med regn."
+        },
+        {
+          "type": "paragraph",
+          "text": "Over stormene fangede kameraer også bizarre fænomener, såsom [[Leprechauns]]: korte gløder i den øvre atmosfære, usynlige for det blotte øje fra jorden."
+        },
+        {
+          "type": "takeaway",
+          "text": "I en cumulonimbus adskiller is/dud-kollisioner ladningerne. Når spændingen bliver for høj, ioniseres luften: lynet varmes op til ~30.000°C, og denne pludselige udvidelse producerer torden."
+        }
+      ]
+    }
+  ]
+}
