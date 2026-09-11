@@ -24,17 +24,27 @@ enum LegalDocumentContent {
         case .hungarian: termsHungarian
         case .bulgarian: termsBulgarian
         case .czech: termsCzech
+        // Locales whose legal documents have not been translated yet read the
+        // English ones. Shipping the French text to a Danish or Serbian reader
+        // would be worse than shipping the English original.
+        case .danish: termsEnglish
+        case .norwegian: termsEnglish
+        case .russian: termsEnglish
+        case .croatian: termsEnglish
+        case .slovenian: termsEnglish
+        case .slovak: termsEnglish
+        case .serbian: termsEnglish
         }
     }
 
     static func privacy(language: AppLanguage) -> [LegalSection] {
         switch language {
-        case .french: termsFrench
-        case .english: termsEnglish
-        case .spanish: termsSpanish
-        case .german: termsGerman
-        case .portuguese: termsPortuguese
-        case .italian: termsItalian
+        case .french: privacyFrench
+        case .english: privacyEnglish
+        case .spanish: privacySpanish
+        case .german: privacyGerman
+        case .portuguese: privacyPortuguese
+        case .italian: privacyItalian
         case .turkish: privacyTurkish
         case .polish: privacyPolish
         case .romanian: privacyRomanian
@@ -44,6 +54,16 @@ enum LegalDocumentContent {
         case .hungarian: privacyHungarian
         case .bulgarian: privacyBulgarian
         case .czech: privacyCzech
+        // Locales whose legal documents have not been translated yet read the
+        // English ones. Shipping the French text to a Danish or Serbian reader
+        // would be worse than shipping the English original.
+        case .danish: privacyEnglish
+        case .norwegian: privacyEnglish
+        case .russian: privacyEnglish
+        case .croatian: privacyEnglish
+        case .slovenian: privacyEnglish
+        case .slovak: privacyEnglish
+        case .serbian: privacyEnglish
         }
     }
 

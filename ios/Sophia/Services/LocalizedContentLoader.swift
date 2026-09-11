@@ -104,10 +104,29 @@ enum LocalizedContentLoader {
         return mapped
     }
 
+    /// True when this language has no catalog of its own and reads the English one.
+    ///
+    /// The UI is fully translated for these; only the course content is still in
+    /// the pipeline. Showing the English catalog beats showing an empty library.
+    static func usesEnglishCatalog(_ language: AppLanguage) -> Bool {
+        guard language != .french, language != .english else { return false }
+        return jsonURL(named: "courses", code: language.rawValue) == nil
+    }
+
     private static func jsonURL(named name: String, language: AppLanguage) -> URL? {
         guard language != .french else { return nil }
 
-        let code = language.rawValue
+        if let url = jsonURL(named: name, code: language.rawValue) {
+            return url
+        }
+        // A language whose catalog has not shipped yet (UI translated, content
+        // still in the pipeline) reads the English catalog rather than showing
+        // an empty library.
+        guard language != .english else { return nil }
+        return jsonURL(named: name, code: AppLanguage.english.rawValue)
+    }
+
+    private static func jsonURL(named name: String, code: String) -> URL? {
         let localizedName = "\(name).\(code)"
         let bundleSubdirectories = [
             "Resources/Locales",

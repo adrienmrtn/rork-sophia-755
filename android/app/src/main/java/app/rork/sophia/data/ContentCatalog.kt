@@ -17,6 +17,8 @@ object ContentCatalog {
         isLenient = true
     }
 
+    // Keyed by AppLanguage.contentCode, not code: languages whose catalog has not
+    // shipped yet all read the English one and share a single cache entry.
     private val summaryCache = ConcurrentHashMap<String, List<CourseSummary>>()
     private val summaryById = ConcurrentHashMap<String, Map<String, CourseSummary>>()
     private val collectionCache = ConcurrentHashMap<String, List<LearningCollection>>()
@@ -26,38 +28,38 @@ object ContentCatalog {
     fun cachedCourses(language: AppLanguage): List<Course>? = null
 
     fun cachedCollections(language: AppLanguage): List<LearningCollection>? =
-        collectionCache[language.code]
+        collectionCache[language.contentCode]
 
     fun cachedSummaries(language: AppLanguage): List<CourseSummary>? =
-        summaryCache[language.code]
+        summaryCache[language.contentCode]
 
     fun cachedCourse(language: AppLanguage, id: String): Course? =
-        singleCourseCache["${language.code}:$id"]
+        singleCourseCache["${language.contentCode}:$id"]
 
     /** In-memory stub from the ~80KB index. Never opens `courses.{lang}.json`. */
     fun cachedStub(language: AppLanguage, id: String): Course? {
         cachedCourse(language, id)?.let { return it }
-        val byId = summaryById[language.code]
-            ?: summaryCache[language.code]?.associateBy { it.id }?.also {
-                summaryById[language.code] = it
+        val byId = summaryById[language.contentCode]
+            ?: summaryCache[language.contentCode]?.associateBy { it.id }?.also {
+                summaryById[language.contentCode] = it
             }
         return byId?.get(id)?.toStub()
     }
 
     fun summaries(context: Context, language: AppLanguage): List<CourseSummary> {
-        summaryCache[language.code]?.let { cached ->
-            summaryById.putIfAbsent(language.code, cached.associateBy { it.id })
+        summaryCache[language.contentCode]?.let { cached ->
+            summaryById.putIfAbsent(language.contentCode, cached.associateBy { it.id })
             return cached
         }
         val loaded = readSummaries(context, language)
-        summaryCache[language.code] = loaded
-        summaryById[language.code] = loaded.associateBy { it.id }
+        summaryCache[language.contentCode] = loaded
+        summaryById[language.contentCode] = loaded.associateBy { it.id }
         return loaded
     }
 
     private fun readSummaries(context: Context, language: AppLanguage): List<CourseSummary> {
-        val indexPath = "locales/course_index.${language.code}.json"
-        val catalogPath = "locales/courses.${language.code}.json"
+        val indexPath = "locales/course_index.${language.contentCode}.json"
+        val catalogPath = "locales/courses.${language.contentCode}.json"
         return try {
             context.assets.open(indexPath).use { CatalogStream.readSummaries(it) }
         } catch (_: Exception) {
@@ -89,8 +91,8 @@ object ContentCatalog {
         withContext(Dispatchers.IO) { course(context, language, id) }
 
     fun collections(context: Context, language: AppLanguage): List<LearningCollection> {
-        return collectionCache.getOrPut(language.code) {
-            val loaded = loadList<LearningCollection>(context, "locales/collections.${language.code}.json")
+        return collectionCache.getOrPut(language.contentCode) {
+            val loaded = loadList<LearningCollection>(context, "locales/collections.${language.contentCode}.json")
             if (language == AppLanguage.FRENCH || loaded.all { it.coverAssetName.isNotBlank() }) {
                 loaded
             } else {
@@ -115,7 +117,7 @@ object ContentCatalog {
      * Reader metadata only. Quiz JSON (~1MB catalog) is loaded later via [quizQuestions].
      */
     fun course(context: Context, language: AppLanguage, id: String): Course? {
-        val key = "${language.code}:$id"
+        val key = "${language.contentCode}:$id"
         singleCourseCache[key]?.let { return it }
         val loaded = summaries(context, language).firstOrNull { it.id == id }?.toStub()
         if (loaded != null) singleCourseCache[key] = loaded
@@ -123,10 +125,10 @@ object ContentCatalog {
     }
 
     fun quizQuestions(context: Context, language: AppLanguage, id: String): List<QuizQuestion> {
-        val key = "${language.code}:$id"
+        val key = "${language.contentCode}:$id"
         quizCache[key]?.let { return it }
         val loaded = try {
-            context.assets.open("locales/courses.${language.code}.json").use { stream ->
+            context.assets.open("locales/courses.${language.contentCode}.json").use { stream ->
                 CatalogStream.readQuizForCourse(stream, id)
             }
         } catch (_: Exception) {
@@ -144,7 +146,7 @@ object ContentCatalog {
 
     fun hasStructuredContent(context: Context, language: AppLanguage, courseId: String): Boolean {
         return try {
-            context.assets.open("courses_v2/${language.code}/$courseId.json").close()
+            context.assets.open("courses_v2/${language.contentCode}/$courseId.json").close()
             true
         } catch (_: Exception) {
             false
@@ -153,7 +155,7 @@ object ContentCatalog {
 
     fun structuredContentJson(context: Context, language: AppLanguage, courseId: String): String? {
         return try {
-            context.assets.open("courses_v2/${language.code}/$courseId.json")
+            context.assets.open("courses_v2/${language.contentCode}/$courseId.json")
                 .bufferedReader()
                 .use { it.readText() }
         } catch (_: Exception) {

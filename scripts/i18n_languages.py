@@ -23,10 +23,31 @@ NON_FR_LANGS: list[str] = [
     "hu",
     "bg",
     "cs",
+    "da",
+    "nb",
+    "ru",
+    "hr",
+    "sl",
+    "sk",
+    "sr",
 ]
 
-# Google Translate target codes (1:1 with app codes for current set).
+# Locales whose UI is translated but whose course catalog has not shipped yet.
+# They read the English catalog at runtime (see LocalizedContentLoader).
+UI_ONLY_LANGS: list[str] = [
+    "da",
+    "nb",
+    "ru",
+    "hr",
+    "sl",
+    "sk",
+    "sr",
+]
+
+# Google Translate target codes. Norwegian Bokmal is "no" upstream and Serbian
+# must be requested in Cyrillic ("sr" already is); every other app code is 1:1.
 GT_TARGETS: dict[str, str] = {code: code for code in NON_FR_LANGS}
+GT_TARGETS["nb"] = "no"
 
 # All content language folders including French sources.
 ALL_CONTENT_LANGS: list[str] = ["fr", *NON_FR_LANGS]
@@ -48,4 +69,11 @@ SWIFT_CASE_BY_CODE: dict[str, str] = {
     "hu": "hungarian",
     "bg": "bulgarian",
     "cs": "czech",
+    "da": "danish",
+    "nb": "norwegian",
+    "ru": "russian",
+    "hr": "croatian",
+    "sl": "slovenian",
+    "sk": "slovak",
+    "sr": "serbian",
 }

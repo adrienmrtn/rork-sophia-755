@@ -43,14 +43,20 @@ object LegalDocumentStore {
 
     private fun document(context: Context, language: AppLanguage): LegalDocumentFile {
         return cache.getOrPut(language.code) {
-            try {
-                val text = context.assets.open("legal/${language.code}.json")
-                    .bufferedReader()
-                    .use { it.readText() }
-                json.decodeFromString<LegalDocumentFile>(text)
-            } catch (_: Exception) {
-                LegalDocumentFile()
-            }
+            // A locale whose legal documents have not been translated yet reads the
+            // English ones, same as iOS — an empty Terms screen would be worse.
+            read(context, language.code) ?: read(context, AppLanguage.ENGLISH.code) ?: LegalDocumentFile()
+        }
+    }
+
+    private fun read(context: Context, code: String): LegalDocumentFile? {
+        return try {
+            val text = context.assets.open("legal/$code.json")
+                .bufferedReader()
+                .use { it.readText() }
+            json.decodeFromString<LegalDocumentFile>(text)
+        } catch (_: Exception) {
+            null
         }
     }
 

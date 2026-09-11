@@ -2,7 +2,7 @@
 """Phase E QA gate for the Android Sophia port (no APK / no Gradle).
 
 Checks:
-  1. AppLanguage enum == 15 codes
+  1. AppLanguage enum == the catalog + UI-only language list
   2. Assets: strings / locales / legal / courses_v2 counts
   3. String key parity (FR ⊆ every language) + critical Phase B–D keys
   4. Catalog / quiz / courses_v2 id parity vs FR
@@ -25,10 +25,15 @@ ASSETS = ROOT / "android" / "app" / "src" / "main" / "assets"
 JAVA = ROOT / "android" / "app" / "src" / "main" / "java" / "app" / "rork" / "sophia"
 STORE = ROOT / "content" / "store"
 
-LANGS = [
+# Languages whose course catalog ships in the APK.
+CATALOG_LANGS = [
     "fr", "en", "es", "de", "pt", "it",
     "tr", "pl", "ro", "nl", "el", "sv", "hu", "bg", "cs",
 ]
+# UI translated, catalog still in the pipeline: these read the English catalog at
+# runtime (AppLanguage.contentCode), so they ship strings/<lang>.json only.
+UI_ONLY_LANGS = ["da", "nb", "ru", "hr", "sl", "sk", "sr"]
+LANGS = CATALOG_LANGS + UI_ONLY_LANGS
 STORE_LANGS = ["en", "tr", "pl", "ro", "nl", "el", "sv", "hu", "bg", "cs"]
 
 CRITICAL_KEYS = [
@@ -99,7 +104,7 @@ def check_app_language(c: Checker) -> None:
 
 
 def check_assets(c: Checker) -> None:
-    for lang in LANGS:
+    for lang in CATALOG_LANGS:
         for kind in ("courses", "course_index", "collections", "glossary"):
             p = ASSETS / "locales" / f"{kind}.{lang}.json"
             if not p.is_file():
@@ -109,14 +114,6 @@ def check_assets(c: Checker) -> None:
                 json.loads(p.read_text(encoding="utf-8"))
             except Exception as e:
                 c.fail(f"invalid JSON {p.name}: {e}")
-        sp = ASSETS / "strings" / f"{lang}.json"
-        if not sp.is_file():
-            c.fail(f"missing strings/{lang}.json")
-        else:
-            try:
-                json.loads(sp.read_text(encoding="utf-8"))
-            except Exception as e:
-                c.fail(f"invalid strings/{lang}.json: {e}")
         lp = ASSETS / "legal" / f"{lang}.json"
         if not lp.is_file():
             c.fail(f"missing legal/{lang}.json")
@@ -130,8 +127,20 @@ def check_assets(c: Checker) -> None:
         n = len(list((ASSETS / "courses_v2" / lang).glob("*.json")))
         if n != 238:
             c.fail(f"courses_v2/{lang} count={n} (expected 238)")
+    for lang in LANGS:
+        sp = ASSETS / "strings" / f"{lang}.json"
+        if not sp.is_file():
+            c.fail(f"missing strings/{lang}.json")
+        else:
+            try:
+                json.loads(sp.read_text(encoding="utf-8"))
+            except Exception as e:
+                c.fail(f"invalid strings/{lang}.json: {e}")
     if not c.errors or all("courses_v2" not in e and "missing" not in e for e in c.errors[-20:]):
-        c.ok("assets present for 15 langs (locales/strings/legal/courses_v2)")
+        c.ok(
+            f"assets present — {len(CATALOG_LANGS)} catalog langs "
+            f"(locales/legal/courses_v2) + {len(LANGS)} string packs"
+        )
 
 
 def check_string_keys(c: Checker) -> None:
@@ -162,7 +171,7 @@ def check_catalog(c: Checker) -> None:
     fr_ids = {course["id"] for course in fr_courses}
     fr_v2 = {p.name for p in (ASSETS / "courses_v2" / "fr").glob("*.json")}
     quiz_total = sum(len(course.get("quiz") or []) for course in fr_courses)
-    for lang in LANGS:
+    for lang in CATALOG_LANGS:
         courses = json.loads((ASSETS / "locales" / f"courses.{lang}.json").read_text(encoding="utf-8"))
         ids = {course["id"] for course in courses}
         if ids != fr_ids:
@@ -201,7 +210,7 @@ def check_legal_play(c: Checker) -> None:
         (r"\bApple\b", "Apple"),
         (r"\bATT\b", "ATT"),
     ]
-    for lang in LANGS:
+    for lang in CATALOG_LANGS:
         path = ASSETS / "legal" / f"{lang}.json"
         text = path.read_text(encoding="utf-8")
         data = json.loads(text)
@@ -214,7 +223,7 @@ def check_legal_play(c: Checker) -> None:
         # Privacy must not be a copy of terms
         if "Accept" in data["privacy"][0]["title"] or "Acceptation" in data["privacy"][0]["title"]:
             c.fail(f"legal/{lang}.json privacy looks like terms")
-    c.ok("legal Play wording lint OK (15 langs)")
+    c.ok(f"legal Play wording lint OK ({len(CATALOG_LANGS)} langs; UI-only locales fall back to en)")
 
 
 def check_store_packs(c: Checker) -> None:

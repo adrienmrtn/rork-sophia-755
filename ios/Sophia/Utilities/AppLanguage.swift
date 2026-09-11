@@ -16,6 +16,13 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
     case hungarian = "hu"
     case bulgarian = "bg"
     case czech = "cs"
+    case danish = "da"
+    case norwegian = "nb"
+    case russian = "ru"
+    case croatian = "hr"
+    case slovenian = "sl"
+    case slovak = "sk"
+    case serbian = "sr"
 
     var id: String { rawValue }
 
@@ -36,6 +43,13 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .hungarian: "hu_HU"
         case .bulgarian: "bg_BG"
         case .czech: "cs_CZ"
+        case .danish: "da_DK"
+        case .norwegian: "nb_NO"
+        case .russian: "ru_RU"
+        case .croatian: "hr_HR"
+        case .slovenian: "sl_SI"
+        case .slovak: "sk_SK"
+        case .serbian: "sr_RS"
         }
     }
 
@@ -56,6 +70,13 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .hungarian: "🇭🇺"
         case .bulgarian: "🇧🇬"
         case .czech: "🇨🇿"
+        case .danish: "🇩🇰"
+        case .norwegian: "🇳🇴"
+        case .russian: "🇷🇺"
+        case .croatian: "🇭🇷"
+        case .slovenian: "🇸🇮"
+        case .slovak: "🇸🇰"
+        case .serbian: "🇷🇸"
         }
     }
 
@@ -76,8 +97,29 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .hungarian: "Magyar"
         case .bulgarian: "Български"
         case .czech: "Čeština"
+        case .danish: "Dansk"
+        case .norwegian: "Norsk"
+        case .russian: "Русский"
+        case .croatian: "Hrvatski"
+        case .slovenian: "Slovenščina"
+        case .slovak: "Slovenčina"
+        case .serbian: "Српски"
         }
     }
+
+    /// Device language codes that are not our raw values but map onto one.
+    /// iOS reports Norwegian as `nb`, `nn` or the `no` macrolanguage depending
+    /// on the device. Bosnian and Montenegrin have no table of their own; their
+    /// speakers read the Croatian one, which is Latin script like their own
+    /// keyboards (Serbian ships in Cyrillic). `sh` is the retired Serbo-Croatian
+    /// code and lands there too.
+    private static let deviceCodeAliases: [String: String] = [
+        "no": "nb",
+        "nn": "nb",
+        "bs": "hr",
+        "sh": "hr",
+        "cnr": "hr",
+    ]
 
     /// Fallback when the device language is not one of the supported app languages.
     static let defaultLanguage: AppLanguage = .english
@@ -91,7 +133,7 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
                 .replacingOccurrences(of: "_", with: "-")
                 .lowercased()
             let primary = String(normalized.split(separator: "-").first ?? Substring(normalized))
-            if let match = AppLanguage(rawValue: primary) {
+            if let match = AppLanguage(rawValue: deviceCodeAliases[primary] ?? primary) {
                 return match
             }
         }

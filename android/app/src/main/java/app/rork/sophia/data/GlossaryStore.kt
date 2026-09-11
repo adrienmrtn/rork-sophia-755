@@ -41,7 +41,7 @@ object GlossaryStore {
         language: AppLanguage,
         courseId: String,
         displayTerm: String,
-    ): GlossaryEntry? = cache[language.code]?.let { lookup(it, courseId, displayTerm) }
+    ): GlossaryEntry? = cache[language.contentCode]?.let { lookup(it, courseId, displayTerm) }
 
     /**
      * Whether a term is worth rendering as a link. About 8% of the `[[terms]]` in the
@@ -49,7 +49,7 @@ object GlossaryStore {
      * nothing. Unknown when the table is not loaded yet, so links are kept.
      */
     fun hasEntry(language: AppLanguage, courseId: String, displayTerm: String): Boolean {
-        val table = cache[language.code] ?: return true
+        val table = cache[language.contentCode] ?: return true
         return lookup(table, courseId, displayTerm) != null
     }
 
@@ -61,9 +61,9 @@ object GlossaryStore {
     }
 
     private fun table(context: Context, language: AppLanguage): GlossaryTable {
-        return cache.getOrPut(language.code) {
+        return cache.getOrPut(language.contentCode) {
             try {
-                val path = "locales/glossary.${language.code}.json"
+                val path = "locales/glossary.${language.contentCode}.json"
                 val text = context.assets.open(path).bufferedReader().use { it.readText() }
                 val exact = json.decodeFromString<Map<String, GlossaryEntry>>(text)
                 val normalized = HashMap<String, GlossaryEntry>(exact.size)
