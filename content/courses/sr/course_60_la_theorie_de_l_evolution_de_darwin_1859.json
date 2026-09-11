@@ -1,0 +1,102 @@
+{
+  "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
+  "title": "Darvinova teorija evolucije",
+  "subtitle": "1859",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Darvin je 1859. objavio Poreklo vrsta. Centralna ideja: živa bića se vremenom menjaju prirodnom selekcijom.",
+  "hero": {
+    "image": "la_theorie_de_l_evolution_de_darwin",
+    "ratio": "16:9",
+    "hook": "Vrste nisu fiksne. Oni se menjaju. Polako. Ali sigurno."
+  },
+  "sections": [
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1859**, **Čarls Darvin** je objavio *O o poreklu vrsta*. Knjiga šokira, fascinira, deli. Njegova centralna ideja je, međutim, jednostavna za formulisanje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Živa bića se razlikuju. Neke varijacije pomažu u preživljavanju i reprodukciji. Ove varijacije se prenose. Tokom generacija, populacije se menjaju."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
+      "title": "Putovanje koje otvara oči",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "charles_darwin_portrait",
+          "ratio": "4:3",
+          "caption": "Darvin, britanski prirodnjak iz 19. veka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kao dečak, Darvin odlazi na brodu **Bigl**. Godinama je posmatrao biljke, fosile, ptice. Na ostrvima Galapagos je primetio da obližnje ptice imaju različite kljunove u zavisnosti od hrane."
+        },
+        {
+          "type": "image",
+          "asset": "darwin_finches_galapagos_beaks",
+          "ratio": "4:3",
+          "caption": "Mlaznice prilagođene različitim dijetama: jak pokazatelj."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
+      "title": "Prirodna selekcija, na čistom engleskom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zamislite populaciju životinja. Neki trče malo brže, malo bolje vare, malo više odolevaju hladnoći. Ako im to pomaže da prežive i imaju mlade, ove osobine postaju sve češće."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nije da pojedinci „žele“ da evoluiraju. To je filter: okruženje čuva ono što funkcioniše. Darvin ovo naziva **prirodna selekcija**."
+        },
+        {
+          "type": "funFact",
+          "text": "Darvin je dugo čekao pre objavljivanja. Plašio se skandala. Drugi prirodnjak, **Alfred Russell Vallace**, došao je na slične ideje: ovo je podstaklo Darvina da objavi svoju knjigu."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
+      "title": "Sukob ideja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U 19. veku mnogi su verovali da su vrste stvorene takve kakve jesu. Reći da se menjaju i da ljudi dele istoriju sa drugim životinjama, potresa religiju i društvo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nauka napreduje: fosili, geografija vrsta, pa kasnije genetika, potvrđuju opštu ideju."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
+      "title": "A danas?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sada znamo da DNK nosi varijacije. Mi posmatramo evoluciju u laboratoriji (bakterije, virusi) iu prirodi. Takođe se borimo protiv bakterija otpornih na antibiotike: ovo je živa evolucija."
+        },
+        {
+          "type": "takeaway",
+          "text": "Darvin je pokazao da se živa bića razvijaju prirodnom selekcijom: osobine korisne za opstanak i reprodukciju se šire. Savremena genetika je potvrdila i razjasnila ovaj okvir."
+        }
+      ]
+    }
+  ]
+}

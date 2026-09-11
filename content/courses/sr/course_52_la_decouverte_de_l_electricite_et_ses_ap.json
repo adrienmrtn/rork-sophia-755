@@ -1,0 +1,108 @@
+{
+  "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
+  "title": "Otkriće elektriciteta",
+  "subtitle": "Od Frenklina do Tesle",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Struja nije izmišljena iznenada. Prvo je posmatrano, zatim shvaćeno, pa odomaćeno. Evo ključnih koraka.",
+  "hero": {
+    "image": "la_decouverte_de_l_electricite",
+    "ratio": "16:9",
+    "hook": "Od munje do pametnog telefona: dva veka da se ukroti nevidljivo."
+  },
+  "sections": [
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elektricitet postoji u prirodi: munja, električna riba, trenje. Ono što je promenilo svet je učenje da **proizvodi**, **transport** i da ih koristi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova priča se proteže više od dva veka, uz rizične eksperimente i velika rivalstva."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
+      "title": "Razumevanje munje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U 18. veku, **Benjamin Franklin** je pokazao da je munja električna pojava. Njegov eksperiment letenja zmajem (često ispričan na izmišljen način) ima za cilj da dokaže da se nebo i mašina za trenje igraju istom silom."
+        },
+        {
+          "type": "image",
+          "asset": "benjamin_franklin_kite_lightning_experiment",
+          "ratio": "4:3",
+          "caption": "Frenklin povezuje munju i struju: opasna, ali temeljna ideja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Takođe smo izmislili **grom**, metalnu šipku koja nudi munji siguran put do zemlje. Električna energija ostavlja misteriju da uđe u inženjering."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
+      "title": "Faradej: proizvodnja struje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U 19. veku, **Michael Faradai** je pokazao da magnet koji se kreće u blizini žice može da stvori električnu struju. Ovo je **indukcija**. Bez ove ideje, nema dinamo, nema alternatora, nema moderne elektrane."
+        },
+        {
+          "type": "image",
+          "asset": "faraday_electromagnetic_induction_experiment",
+          "ratio": "4:3",
+          "caption": "Faradej pretvara kretanje i magnetizam u struju."
+        },
+        {
+          "type": "funFact",
+          "text": "Faradej je došao iz skromnog porekla i počeo je kao knjigovezac. Naučio je nauku čitajući ono što je verovao."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
+      "title": "Edison protiv Tesle",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Krajem 19. veka sukobila su se dva logora. **Thomas Edison** gura jednosmernu struju. **Nikola Tesla** (i kompanija Vestinghouse) brani naizmeničnu struju, koja je lakša za transport na velike udaljenosti."
+        },
+        {
+          "type": "image",
+          "asset": "tesla_edison_electric_power_station",
+          "ratio": "4:3",
+          "caption": "Naizmenična struja dobija snagu u gradovima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pobede naizmenične struje za urbane mreže. Gradovi svetle. Fabrike se menjaju."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
+      "title": "Povezani svet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Danas struja napaja bolnice, vozove, internet, frižidere. Izazov više nije samo proizvesti, već to učiniti čisto i pouzdano."
+        },
+        {
+          "type": "takeaway",
+          "text": "Struja je shvaćena i potom pripitomljena: Frenklin za munje, Faradej za proizvodnju struje, Tesla i naizmenična struja da bi je doveli u domove. Naš svakodnevni život i dalje zavisi od toga."
+        }
+      ]
+    }
+  ]
+}

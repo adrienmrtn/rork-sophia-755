@@ -1,0 +1,108 @@
+{
+  "id": "course_72_pourquoi_dort_on",
+  "title": "Zašto spavamo?",
+  "subtitle": "Telo i mozak",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Provodimo trećinu svog života spavajući. Nije izgubljeno vreme: san čisti mozak, popravlja telo i urezuje uspomene.",
+  "hero": {
+    "image": "pourquoi_dort_on",
+    "ratio": "16:9",
+    "hook": "Spavanje nije isključivanje: to je veliki noćni rad tela."
+  },
+  "sections": [
+    {
+      "id": "course_72_pourquoi_dort_on_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tokom života od 75 godina, spavamo blizu **25 godina**. Dugo smo verovali da je san samo pauza. U stvarnosti, to je aktivan rad, od vitalnog značaja kao i piće ili jelo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nauka još nema sve odgovore na pitanje „zašto“ spavamo. Ali ona dobro zna šta se dešava kada ne spavamo, a šta noć tiho popravlja."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p1",
+      "title": "Šta otkriva nedostatak sna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1964**, američki student **Randi Gardner** ostao je **11 dana** bez spavanja. Halucinacije, paranoja, kolaps uma: dokaz da mozak ne može da preživi bez odmora."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_bedroom_night",
+          "ratio": "auto",
+          "caption": "Spavanje, neophodno za oporavak mozga i tela."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kod pacova, potpuno odsustvo sna ubija **2 nakon 3 nedelje**, poput gladovanja. Kod ljudi, retka genetska bolest, **Fatalna porodična nesanica**, takođe dovodi do smrti. Na dnevnoj bazi, 17 sati budnosti je ekvivalentno nivou alkohola u krvi od **0,5 g/l**. Mozak tada forsira [[mikrospava]]ZZKSG0ZZ, kratke nevoljne pauze u svesti."
+        },
+        {
+          "type": "funFact",
+          "text": "Nakon svog rekorda, Rendi Gardner je spavao **14 sati** ravno. Probudio se u stanju da funkcioniše, ali su mu trebale nedelje da se vrati na normalan san."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p2",
+      "title": "Noću se mozak čisti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tokom sna, mozak se ne zaustavlja: menja modove. **morski konjic**, ključna memorijska struktura u obliku morskog konjića, „ponavlja“ dan i šalje informacije u [[Neocortek]]ZZKSG0ZZ, spoljašnji sloj mozga, radi trajnog skladištenja. Rezultat: često naučimo **20 do 40%** bolje nakon dobrog sna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dubok san takođe pokreće **rasta hormona**, koji popravlja mišiće i tkiva, i stimuliše [[Citokini]]ZZKSG0ZZ, signalne molekule imunog sistema. Još jedno veliko otkriće: [[Glimfni sistem]]ZZKSG1ZZ, cerebralna drenažna mreža **deset puta** aktivnija noću. Uklanja otpad, uključujući proteine povezane sa rizikom od Alchajmerove bolesti."
+        },
+        {
+          "type": "funFact",
+          "text": "Tokom dubokog sna, moždane ćelije se smanjuju za približno **60%**. Tako stvoreni prostor omogućava da tečnost za čišćenje bolje cirkuliše."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p3",
+      "title": "Ko koliko i kako spava",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mačke spavaju **12 do 16.00 časova**: bezbedni predatori. Žirafe su ponekad zadovoljne **30 minuta 2 sata**, u kratkim dremkama, spremne da pobegnu. Delfini spavaju sa **a jednom hemisferom**, jednom polovinom mozga, da bi nastavili da dišu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bebe spavaju do **6 pops**, sa puno [[paradoksalan san]]ZZKSG0ZZ, faza snova sa brzim pokretima očiju. Ova faza pomaže [[sinaptogeneza]]ZZKSG1ZZ, proizvodnji veza između neurona."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p4",
+      "title": "Unutrašnji sat i plavo svetlo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dve sile nas guraju u krevet: umor koji se nakuplja tokom dana, i [[Cirkadijalni ritmovi i melatonin]]ZZKSG0ZZ, unutrašnji sat podešen na **24 sata**. Kada se svetlo priguši, mozak oslobađa **melatonin**, hormon koji priprema telo za san, a da ga ne nameće."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ekrani uveče zavaravaju ovaj sat i odlažu uspavljivanje. Ne „nadoknađujemo“ dug za spavanje vikendom: umor se smanjuje, ali ne i sva šteta. Redovno radno vreme, mračna i hladna soba ostaju najbolji saveznici."
+        },
+        {
+          "type": "takeaway",
+          "text": "San čisti mozak, popravlja telo i jača pamćenje. Potpuna deprivacija ubija za nekoliko nedelja: spavanje nije luksuz, to je vitalno održavanje."
+        }
+      ]
+    }
+  ]
+}

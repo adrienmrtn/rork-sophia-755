@@ -1,0 +1,154 @@
+{
+  "id": "course_121_la_renaissance_italienne",
+  "title": "Italijanska renesansa",
+  "subtitle": "14-16 vek",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "Za dva veka, Italija je ponovo izmislila slikarstvo, skulpturu i arhitekturu i promenila način na koji vidimo svet.",
+  "hero": {
+    "image": "la_renaissance_italienne",
+    "ratio": "16:9",
+    "hook": "Za dva veka, Italija je iznova izmislila umetnost i naš način gledanja na svet."
+  },
+  "sections": [
+    {
+      "id": "course_121_la_renaissance_italienne_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Italijanska renesansa (14.-16. vek) nije samo promena stila. To je novi način sagledavanja sveta. Italija je za dva veka u centar svega stavila posmatranje, razum i pojedinca."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rođena u bogatim gradovima poluostrva, ova revolucija iznova otkriva slikarstvo, skulpturu i arhitekturu. Dve pokretačke sile ga pokreću: ponovno otkrivanje grčke i rimske antike i smeli tehnički izumi."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p1",
+      "title": "Firenca, grad koji pali fitilj",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sve počinje u **Firenca**, koja je dominirala evropskom ekonomijom u 14. veku zahvaljujući tekstilu i bankarstvu. Tamo je vlast preuzela porodica **Medicis**. Ovi bankari koriste [[pokroviteljstvo]]ZZKSG0ZZ, finansiranje umetnika, kao sredstvo prestiža."
+        },
+        {
+          "type": "funFact",
+          "text": "Da bi zaobišli zabranu davanja kredita uz kamatu, Mediči su izmislili bankarske trikove. Crkva zatvara oči sve dok finansiraju kapele."
+        },
+        {
+          "type": "image",
+          "asset": "lorenzo_de_medici_portrait_florence",
+          "ratio": "4:3",
+          "caption": "Loran de Mediči, poznat kao „Veličanstveni“, veliki zaštitnik umetnika."
+        },
+        {
+          "type": "paragraph",
+          "text": "U isto vreme ZZBOLDZŽumanizam menja mesto čoveka. Mislioci poput [[Pico della Mirandola]]ZZKSG0ZZ tvrde da su ljudska bića sposobna da razumeju prirodu putem razuma. U **1453**, pad Carigrada gura naučnike u Italiju sa zaboravljenim grčkim rukopisima."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p2",
+      "title": "Slikanje stvarnog: perspektiva i telo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U 15. veku, arhitekta **Brunelleschi** izmislio je oko **1420** [[linearna perspektiva]]ZZKSG0ZZ. Prošao je srednji vek, gde je ono što je bilo važnije slikano veće: prostor sada prati matematička pravila, kao prozor otvoren u stvarnost."
+        },
+        {
+          "type": "image",
+          "asset": "brunelleschi_linear_perspective_florence",
+          "ratio": "4:3",
+          "caption": "Perspektiva daje iluziju dubine na ravnoj površini."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Leonardo da Vinci** ide dalje: on secira tela da bi razumeo mišiće i nerve, a takođe i slikao emocije. Uljana boja, koja dolazi iz Flandrije, postepeno zamenjuje [[Tempera]]ZZKSG0ZZ i dozvoljava [[Chiaroscuro]]ZZKSG1ZZ: ove kontraste senke i svetlosti koji daju olakšanje."
+        },
+        {
+          "type": "funFact",
+          "text": "Telo koje je Leonardo najviše proučavao bilo je stogodišnjeg čoveka. Ispitujući ga, opisao je jedan od prvih poznatih slučajeva arterije blokirane godinama."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p3",
+      "title": "Leonardo, Mikelanđelo, Rafael",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Početkom 16. veka Rim je zauzeo mesto Firence, nošeni graditeljskim papama poput **Julesa II**. Ovo je era „potpunog čoveka“. **Leonardo iz Vinci** je model: slikar, inženjer, anatom."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Michelangelo** oličava snagu. Njegov **Davide** postaje simbol Firence. Između **1508** i **1512**, oslikao je plafon **Sistinske kapele**: 500 kvadratnih metara na Postanku."
+        },
+        {
+          "type": "image",
+          "asset": "michelangelo_david_sistine_chapel_ceiling",
+          "ratio": "4:3",
+          "caption": "Mikelanđelo, iz Davida na plafonu Sikstinske kapele."
+        },
+        {
+          "type": "funFact",
+          "text": "U *Poslednji jug*, Mikelanđelo je naslikao svoje lice na oguljenoj koži: način da izrazi koliko ga je ovaj rad iscrpio."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Raphael** oličava milost. Njegova freska *Atinska škola* okuplja velike mislioce antike u harmoniji koja će služiti kao uzor vekovima."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p4",
+      "title": "Nasleđe koje prelazi Evropu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nakon Rafaelove smrti u **1520**, ravnoteža je poremećena. Umetnici izdužuju tela i forsiraju boje: ovo je [[Manirizam]]ZZKSG0ZZ, nemirnija umetnost. Kralj Francuske **Fransoa I** poziva Leonarda i pokreće **Francuska renesansa**, sa zamkovima Loare."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1420",
+              "title": "Linearna perspektiva",
+              "detail": "Bruneleski stavlja prostor u jednačine, u Firenci."
+            },
+            {
+              "date": "1453",
+              "title": "Pad Carigrada",
+              "detail": "Naučnici beže u Italiju sa svojim grčkim rukopisima."
+            },
+            {
+              "date": "1504",
+              "title": "Mikelanđelov David",
+              "detail": "Firenca bira simbol građanskog ponosa."
+            },
+            {
+              "date": "1508-1512",
+              "title": "Sikstinska kapela",
+              "detail": "Mikelanđelo je naslikao plafon Geneze."
+            },
+            {
+              "date": "1520",
+              "title": "Smrt Rafaela",
+              "detail": "Završava se visoka renesansa, počinje manirizam."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Rođena u Firenci zahvaljujući Medičijima, italijanska renesansa je revolucionirala umetnost sa perspektivom (oko 1420) i proučavanjem tela, pre nego što je dostigla vrhunac u Rimu sa Leonardom, Mikelanđelom i Rafaelom."
+        }
+      ]
+    }
+  ]
+}

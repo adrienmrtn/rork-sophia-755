@@ -1,0 +1,140 @@
+{
+  "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
+  "title": "Astečki bogovi i ljudske žrtve",
+  "subtitle": "Krv za sunce",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Kod Asteka sunce izlazi samo ako bogovi primaju krv. Oštra, ali koherentna kosmologija u srcu njihovog carstva.",
+  "hero": {
+    "image": "les_dieux_azteques_et_les_sacrifices_humains",
+    "ratio": "16:9",
+    "hook": "Bez krvi bi sunce stalo: takav je kosmički dug Asteka."
+  },
+  "sections": [
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Asteci**, ili Meksiko, veruju da je univerzum krhak. Bogovima je potrebna krv da bi sunce nastavilo svojim tokom. Bez ponuda, haos bi se vratio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ono što je užasnulo Špance zasniva se na jasnoj ideji: životi bogova i životi ljudi su povezani. Evo kako ova kosmologija funkcioniše."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
+      "title": "Pet sunaca: svet je već četiri puta mrtav",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prema mitu o [[Pet Sunaca]]ZZKSG0ZZ, četiri ere su već nestale u katastrofama. Doživljavamo peto sunce, [[Nahui Ollin]]ZZKSG1ZZ („4-pokret“), obećano da će se završiti zemljotresima."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
+          "ratio": "4:3",
+          "caption": "Kamen sunca: Astečko vreme se pretvara u uzastopne ere."
+        },
+        {
+          "type": "paragraph",
+          "text": "U **Teotihuacan**, svetom gradu na centralnoj visoravni, bogovi se bacaju u vatru da bi postali sunce i mesec. Ali sunce ostaje mirno. Drugi bogovi tada nude sopstvenu krv da je pokrenu. Muškarci nasleđuju ovaj dug."
+        },
+        {
+          "type": "funFact",
+          "text": "Za Asteke žrtvovanje nije besplatna surovost: to je vraćanje božanskog duga, Kosmologija pet sunca i kosmički dugZZKSG0ZZ."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p2",
+      "title": "Panteon dualnosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Centralni bog je [[Huitzilopochtli]]ZZKSG0ZZ, bog rata i podnevnog sunca. Svake noći on se bori protiv mraka da bi se ujutru ponovo rodio. Na njegovoj strani, [[Tlaloc]]ZZKSG1ZZ daje kišu, dakle useve, ili glad."
+        },
+        {
+          "type": "image",
+          "asset": "huitzilopochtli_aztec_sun_god_codex",
+          "ratio": "4:3",
+          "caption": "Huitzilopochtli, sunce ratnik koje zahteva da se hrani."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Kuetzalcoatl]]ZZKSG0ZZ, Pernata zmija, oličava znanje i civilizaciju. Njegov rival [[Tezcatlipoca]]ZZKSG1ZZ, Ogledalo koje se puši, vlada noći, sudbinom i magijom. Sama zemlja ima strašno lice: [[Coatlicue]]ZZKSG2ZZ, proždire boginju majku."
+        },
+        {
+          "type": "funFact",
+          "text": "Dragocena krv koja se nudi bogovima naziva se [[chalchihuatl]]ZZKSG0ZZ, „dragocena voda“. Izvađeno srce se smatra solarnom iskrom vraćenom na nebo."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p3",
+      "title": "Ratovi cveća",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Da bi dobili žrtve, Asteci organizuju [[Ksochiiaoiotl]]ZZKSG0ZZ, „ratove cveća“: ritualne borbe čiji cilj nije ubijanje, već hvatanje živih ratnika dostojnih da budu ponuđeni."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
+          "ratio": "4:3",
+          "caption": "Žrtva na vrhu hrama: srce predstavljeno suncu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na vrhu **Templo Maior** u Tenočtitlanu, prestonici pored jezera, sveštenik nožem vadi srce iz **Obsidian**, oštrog vulkanskog kamena. Gest je javan, svečan, zamišljen kao usluga suncu."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "mit",
+              "title": "Žrtvovanje bogova",
+              "detail": "Sunce prima božansku krv da krene napred."
+            },
+            {
+              "date": "Empire",
+              "title": "Ratovi cveća",
+              "detail": "Hvatanje ratnika za prinose."
+            },
+            {
+              "date": "1519",
+              "title": "Španski šok",
+              "detail": "Kortes stiže; sistem se urušava."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
+      "title": "Kraj sveta, trajni tragovi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Španske hronike ponekad naduvavaju brojke da bi opravdale osvajanje. Ali sistem žrtvovanja je veoma stvaran. U **1519**, dolazak **Hernan Cortes** ubrzava kraj ovog ritualnog univerzuma."
+        },
+        {
+          "type": "paragraph",
+          "text": "Međutim, astečke figure opstaju u sinkretizmu: Bogorodica od Gvadalupe se pojavljuje na mestu koje je nekada bilo povezano sa boginjom majkom. Razumeti ove žrtve znači razumeti kulturu koja opstanak kosmosa stavlja iznad pojedinca."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kod Asteka ljudska krv je hranila sunce. Bogovi su već platili svojim životima: ljudi otplaćuju ovaj dug žrtvovanjem, posebno putem **Ratova cveća**."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "course_232_la_blockchain_et_les_cryptomonnaies",
+  "title": "Blokčejn i kriptovalute",
+  "subtitle": "Od 2009. godine",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "**blockchain** je izmislio knjigu u koju niko ne može sam da menja, otvarajući put novoj digitalnoj ekonomiji.",
+  "hero": {
+    "image": "la_blockchain_et_les_cryptomonnaies",
+    "ratio": "16:9",
+    "hook": "Knjiga računa koju niko ne poseduje, ali koju hiljade računara prate zajedno."
+  },
+  "sections": [
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zamislite knjigu računa koju niko ne poseduje, ali da se hiljade računara ažurira u isto vreme, širom sveta, i koju je skoro nemoguće falsifikovati. Ovo je početna ideja **blockchain**, tehnologije koja se često svodi na svoju prvu primenu, **Bitcoin**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Omogućavajući razmenu vrednosti bez prolaska kroz banku, ovaj pronalazak je pokrenuo čitavu paralelnu ekonomiju, između obećanja finansijske slobode i oštrih kritika njene cene energije."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p1",
+      "title": "Registar koji niko ne kontroliše sam",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U srcu blokčejna je jednostavna ideja: **distribuirana knjiga**. Za razliku od banke koja svoje račune drži na sopstvenim serverima, blokčejn se oslanja na mrežu [[vršnjaci]]ZZKSG0ZZ, odnosno na hiljade računara od kojih svaki čuva identičnu kopiju svih transakcija."
+        },
+        {
+          "type": "funFact",
+          "text": "Prvi blok bitkoin blok lanca, nazvan „blok geneze“, sadržao je skrivenu poruku: naslovnu stranu britanskih novina 3. januara 2009, koja je govorila o državnoj pomoći bankama. Politička klima od njenog tvorca."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svaku transakciju prvo verifikuje mreža, a zatim se grupiše sa drugima u **blok**. Ovaj blok se zatim povezuje sa prethodnim zahvaljujući matematičkom proračunu pod nazivom [[hash]]ZZKSG0ZZ: neka vrsta jedinstvenog digitalnog otiska prsta. Rezultat je neprekinuti lanac blokova, pa otuda i naziv blockchain. Da biste izmenili jednu staru transakciju, morali biste ponovo da izračunate ceo lanac i ubedite više od polovine mreže, što je skoro nemoguće u velikim razmerama."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p2",
+      "title": "Bitcoin i Ethereum: od plaćanja do programa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Bitcoin**, koji je u **2009** pokrenula anonimna osoba (ili grupa) pod imenom [[Satoshi Nakamoto]]ZZKSG0ZZ, dokazao je da monetarni sistem može da funkcioniše bez centralne banke. Da bi garantovao njegovu oskudicu, njen tvorac je postavio strogu granicu: nikada više od **21 milion bitkoina** ne može postojati, kao da je zlato ograničeno na Zemlji."
+        },
+        {
+          "type": "image",
+          "asset": "blockchain_technology_distributed_ledger_visualization",
+          "ratio": "4:3",
+          "caption": "Svaku transakciju verifikuje mreža računara pre nego što se doda u lanac."
+        },
+        {
+          "type": "paragraph",
+          "text": "Godine 2015. pojavila se druga generacija blokčejna sa **Ethereum**. Njegova sjajna inovacija: **pametni ugovori**. To su programi koji se pokreću automatski čim se ispuni neki uslov, na primer automatska nadoknada u slučaju kašnjenja voza, bez potrebe za prolaskom preko posrednika."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
+      "title": "Kritičari: energija i nestabilnost",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uspeh kriptovaluta nije bez problema. Najviše se raspravlja o **energetska potrošnja** Bitcoin mreže: njena godišnja potrošnja električne energije danas je uporediva sa potrošnjom cele zemlje poput Argentine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tržište takođe pati od ekstremne **volatilnost**: cena bitkoina može da varira za 10 ili 20% za nekoliko sati. Ova nestabilnost trenutno sprečava da postane prava svakodnevna valuta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konačno, relativna anonimnost transakcija se ponekad koristila za nezakonite aktivnosti. Ali blokčejn zapravo ostaje potpuno transparentan: vlasti mogu da prate tok novca, što otežava pranje nego u klasičnom gotovinskom sistemu."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p4",
+      "title": "Ka institucionalnoj integraciji",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Danas kriptovalute napuštaju margine kako bi ušle u tradicionalne finansije. Velike banke sada nude da drže digitalna sredstva za svoje klijente, a nekoliko država razmatra stvaranje sopstvene zvanične digitalne valute, **[[MNBC]]**ZZKSG0ZZ (digitalna valuta centralne banke)."
+        },
+        {
+          "type": "paragraph",
+          "text": "**stablecoins**, kriptovalute čija je cena stabilizovana zahvaljujući rezervi dolara ili evra, služe kao most između dva sveta. Pored finansija, sektori kao što su luksuz (za borbu protiv falsifikovanja), logistika (za praćenje kontejnera) ili zdravstvo (za obezbeđenje medicinske dokumentacije) takođe usvajaju blokčejn zbog njegove pouzdanosti."
+        },
+        {
+          "type": "funFact",
+          "text": "El Salvador je 2021. godine postao prva zemlja na svetu koja je usvojila Bitcoin kao zakonsko sredstvo plaćanja, pored američkog dolara, zahtevajući od svakog trgovca da ga prihvati ako ima tehnička sredstva."
+        },
+        {
+          "type": "takeaway",
+          "text": "Stvoren 2009. godine, blokčejn je zajednička knjiga koja se skoro nemoguće falsifikuje, čija je maksimalna ponuda bitkoina postavljena na 21 milion jedinica. Postavio je temelje nove digitalne ekonomije danas u punoj institucionalnoj integraciji."
+        }
+      ]
+    }
+  ]
+}

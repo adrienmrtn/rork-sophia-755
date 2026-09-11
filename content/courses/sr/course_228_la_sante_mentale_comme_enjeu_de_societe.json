@@ -1,0 +1,128 @@
+{
+  "id": "course_228_la_sante_mentale_comme_enjeu_de_societe",
+  "title": "Mentalno zdravlje kao društveno pitanje",
+  "subtitle": "Tiha epidemija",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Mentalno zdravlje predstavlja **20% bolesti u svetu**, ali prima samo 2% zdravstvenih budžeta. Evo zašto ovaj davno zaboravljeni uzrok postaje veliki društveni problem.",
+  "hero": {
+    "image": "la_sante_mentale_comme_enjeu_de_societe",
+    "ratio": "16:9",
+    "hook": "Jedna od pet bolesti u svetu utiče na um, ali prima jedva 2% zdravstvenih budžeta."
+  },
+  "sections": [
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dugo zanemareno od strane medicine, mentalno zdravlje postaje jedan od velikih izazova 21. veka. Nije ograničeno na odsustvo psihijatrijskih poremećaja: to je stanje blagostanja koje omogućava svakome da ostvari svoj potencijal i da se nosi sa životnim poteškoćama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Međutim, i dalje postoji upečatljiv paradoks: ovi poremećaji predstavljaju oko 20% bolesti širom sveta, ali dobijaju samo 2% zdravstvenih budžeta. Ovaj kurs istražuje korene ove tihe krize."
+        }
+      ]
+    },
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p1",
+      "title": "Potcenjena zdravstvena kriza",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**depresija** je danas vodeći globalni uzrok invaliditeta, ispred srčanih bolesti i dijabetesa. Ova bolest, obeležena trajnom tugom i gubitkom interesovanja za sve, pogađa sve kategorije stanovništva, ali ostaje nedovoljno dijagnostikovana u mnogim regionima sveta."
+        },
+        {
+          "type": "image",
+          "asset": "depression_mental_health_person_dark",
+          "ratio": "4:3",
+          "caption": "Depresija je danas vodeći globalni uzrok invaliditeta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Generalizovana anksioznost pogađa oko 300 miliona ljudi širom sveta. Ova patnja ponekad vodi do samoubistva, odgovornog za 700.000 smrtnih slučajeva godišnje, što je brojka veća od broja žrtava ratova i prirodnih katastrofa zajedno."
+        },
+        {
+          "type": "funFact",
+          "text": "Reč „melanholija“ potiče iz starogrčkog i doslovno znači „crna žuč“. U drevnim vremenima se smatralo da je depresija uzrokovana viškom ove tečnosti u telu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svetska zdravstvena organizacija je 2019. godine učinila simboličan korak u prepoznavanju profesionalne iscrpljenostiZZKSG0ZZ kao fenomena koji se odnosi na posao. Ovo priznanje prebacuje odgovornost sa pojedinca na njegovo radno okruženje."
+        }
+      ]
+    },
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p2",
+      "title": "Posebno su pogođeni mladi ljudi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dok je čitava populacija pogođena, adolescenti i mladi odrasli su od posebne zabrinutosti. U Sjedinjenim Državama, anksioznost i depresija među 12-25 godina starosti skoro su se udvostručili za jednu deceniju, sa jasnom prekretnicom oko 2012."
+        },
+        {
+          "type": "image",
+          "asset": "teenagers_smartphones_social_media_anxiety",
+          "ratio": "16:9",
+          "caption": "Eksplozija društvenih medija poklapa se sa izrazitim porastom anksioznosti među mladima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj datum odgovara generalizaciji pametnog telefona i društvenih mreža. Psiholog Žan Tvenge smatra da je ova promena poremetila društvenost mladih: [[Društveno poređenje naviše]]ZZKSG0ZZ, gde se poredimo sa nerealnim životnim standardima, stvara dubok osećaj neadekvatnosti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovome se dodaju [[Sajber-viktimizacija]]ZZKSG0ZZ i nedostatak sna uzrokovan svetlošću ekrana. Društvene mreže rade na [[Dopaminergičko pojačanje]]ZZKSG1ZZ petljama koje mogu izazvati zavisnost i odvratiti mlade od sporta ili mirnog sna."
+        }
+      ]
+    },
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p3",
+      "title": "Veoma konkretan ekonomski trošak",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mentalno zdravlje nije samo privatnost: ono takođe direktno utiče na produktivnost. Godišnji trošak sagorevanja i patnje na poslu procenjuje se na 300 milijardi dolara godišnje samo u Sjedinjenim Državama, između odsustva, ponovljenih odlazaka i zaposlenih koji su prisutni, ali ne mogu efikasno da rade."
+        },
+        {
+          "type": "image",
+          "asset": "workplace_burnout_stress_mental_health",
+          "ratio": "4:3",
+          "caption": "Troškovi sagorevanja su stotine milijardi dolara svake godine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suočene sa ovim troškom, kompanije razvijaju programe prevencije, ali izazov ostaje u siromašnim zemljama, gde je konsultovanje psihijatra gotovo nemoguće. Jedna od najmoćnijih poluga ostaje destigmatizacija: kada javna ličnost poput atletičarke Simon Bajls otvoreno govori o svojim poteškoćama, ona pomaže da se izvor srama pretvori u pravi zdravstveni problem."
+        }
+      ]
+    },
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p4",
+      "title": "Ka preventivnom pristupu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Budućnost mentalnog zdravlja zavisi od naše sposobnosti da pređemo sa medicine koja leči krizu kada ona stigne, na preventivni pristup. Ovo zahteva preispitivanje gradskog planiranja, školovanja i tempa rada kako bi se smanjili izvori stresa pre nego što imaju uticaja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pojavljuju se novi putevi, kao što su digitalne terapije ili veštačka inteligencija, kako bi se nadoknadio nedostatak praktičara, iako ovi alati takođe postavljaju pitanja o poverljivosti podataka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mentalno zdravlje je takođe povezano sa aktuelnim velikim krizama: koncept eko-anksioznosti jasno pokazuje kako globalne pretnje, kao što je klima, direktno utiču na našu psihološku ravnotežu. Prepoznavanje mentalnog zdravlja kao suštinskog stuba naših društava postaje uslov za suočavanje sa budućim krizama."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mentalno zdravlje predstavlja 20% bolesti širom sveta, ali samo 2% zdravstvenih budžeta. Između depresije, sagorevanja i uticaja digitalne tehnologije na mlade, to postaje društveno pitanje koliko hitno, toliko i ekonomsko."
+        }
+      ]
+    }
+  ]
+}

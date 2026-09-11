@@ -1,0 +1,116 @@
+{
+  "id": "course_198_sindbad_le_marin",
+  "title": "Sindbad mornar",
+  "subtitle": "Sedam putovanja",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Sindbad mornar: sedam putovanja, čudovišta i blaga. Iza čudesnog, portret trgovca-avanturista islamskog zlatnog doba.",
+  "hero": {
+    "image": "sindbad_le_marin",
+    "ratio": "16:9",
+    "hook": "Sedam puta odlazi bogat ili radoznao. Sedam puta ga more lomi. Sedam puta se vraća još bogatiji."
+  },
+  "sections": [
+    {
+      "id": "course_198_sindbad_le_marin_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Sindbad Mornar** pripada **Arabijskim noćima**, ali ne i starom persijskom jezgru kolekcije. Njegov ciklus od sedam putovanja dogodio se kasnije, u Egiptu, oko 15. veka."
+        },
+        {
+          "type": "paragraph",
+          "text": "On oličava putnika-trgovca **Islamskog zlatnog doba**: pobožnost, pohlepu, hrabrost i nemogućnost da se mirno sedi nekada bogat. Iza čudovišta čitamo alegoriju sreće koja se diže i pada."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p1",
+      "title": "Ciklična struktura avanture",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Priča počinje u Bagdadu. Mornar **Sinbad**, sada star i bogat, prepričava svoja mučenja portiru koji se takođe zove Sindbad (ponekad Hindbad). Klasni kontrast je neposredan."
+        },
+        {
+          "type": "image",
+          "asset": "baghdad_medieval_islamic_golden_age_trade",
+          "ratio": "4:3",
+          "caption": "Bagdad, polazna i povratna tačka na Sindbadova putovanja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svako putovanje prati istu mehaniku: umor od sedelačkog života, odlazak iz luke [[Basra]]ZZKSG0ZZ, brodolom, opstanak u nepoznatoj zemlji, povratak natovaren blagom. Broj sedam, nabijen značenjem u Islamskoj kosmologijiZZKSG1ZZ, daje seriji inicijalnu dimenziju: od nepromišljenosti do mudrosti."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p2",
+      "title": "Fantastičan bestijarij između mita i stvarnosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Rock** (ili Rokh), ptica čiji raspon krila zaklanja sunce, obeležila je svetsku maštu. Vidimo eho priča arapskih putnika na obalama istočne Afrike."
+        },
+        {
+          "type": "image",
+          "asset": "sinbad_roc_giant_bird_illustration",
+          "ratio": "4:3",
+          "caption": "Roc, džinovska ptica sa Sindbadovog putovanja."
+        },
+        {
+          "type": "funFact",
+          "text": "Roc je verovatno inspirisan **Aepiornis**, pticom slonom sa Madagaskara koja je nestala oko 1000. godine. Njena jaja su bila do 150 puta veća od zapremine kokošijeg jajeta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sindbad se takođe suočava sa **O starče od mora**, koji mu se drži za leđa, i **ostrvo kornjača**, varljivo tlo. **Dolina dijamanata**, gde se meso baca da bi se lepili dragulji, već kruži među Drevnim. Divni sedimenti vekova [[Srednjovekovni arapski trgovački putevi]]ZZKSG0ZZ."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p3",
+      "title": "Ogledalo zlatnog doba arapske trgovine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Postavka je istorijska. U 8. i 9. veku, moreplovci iz Basre i Sirafa dominirali su Indijskim okeanom. Sindbadova stajališta evociraju stvarna mesta: [[Serendib]]ZZKSG0ZZ (Cejlon) za začine, Jugoistočna Azija za kamfor, obale za bisere."
+        },
+        {
+          "type": "image",
+          "asset": "arab_indian_ocean_trade_routes_medieval_ship",
+          "ratio": "4:3",
+          "caption": "Arapski brodovi na putevima Indijskog okeana."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sindbad nije ratnik: on je trgovac-avanturist, prestižan status u društvu koje ceni trgovinu. Tamo nalazimo monsun, brodove sašivene kokosovim vlaknima, a ne prikovane. Zapadna paralela: [[Marko Polo (zapadna paralela)]]ZZKSG0ZZ, koji opisuje Aziju u činjenicama, gde je Sindbad slika u čudima."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p4",
+      "title": "Univerzalno nasleđe: od istoka do zapada",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U 18. veku preveo **Antoine Galland**, putovanje hrani [[Avanturistički roman]]ZZKSG0ZZ Evropljanin, od Defoa do Žila Verna. Bioskop ga često čini privatnikom u službi princeza. Greška: Sindbad je u početku stanovnik grada iz Bagdada, koji je opstao kroz veru i domišljatost."
+        },
+        {
+          "type": "funFact",
+          "text": "Ime Sindbad bi evociralo „princa reke Sind“, Inda, na raskršću arapskog i indijskog sveta."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Sinbad** otelotvoruje islamsko pomorsko zlatno doba u **sedam** cikličnim putovanjima: Stena i dijamanti maskiraju stvarnost, stvarnost arapskih trgovaca gospodara Indijskog okeana."
+        }
+      ]
+    }
+  ]
+}

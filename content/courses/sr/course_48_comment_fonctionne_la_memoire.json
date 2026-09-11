@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Kako funkcioniše pamćenje?",
+  "subtitle": "Brain",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Memorija nije kamera. Svako sećanje se rekonstruiše. Ovako mozak kodira, skladišti... a ponekad i izmišlja.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "Sećanje nije ponovno čitanje datoteke. To je rekonstrukcija scene."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Memoriju često zamišljamo kao čvrsti disk: snimamo, čuvamo, ponovo čitamo. Mozak ne radi tako. Svaki put kada se setite, **obnoviti** scenu iz fragmenata."
+        },
+        {
+          "type": "paragraph",
+          "text": "Moćan je ... i pogrešiv. Razumeti ovo znači razumeti zašto zaboravljamo, zašto pravimo greške i zašto učimo."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Nekoliko uspomena, ne samo jedno",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Različite oblasti mozga upravljaju različitim oblicima pamćenja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prvo je [[Radna memorija]]ZZKSG0ZZ: ono što držite „na umu” nekoliko sekundi, poput telefonskog broja. Ograničen je, u proseku oko **7 elemenata**. Sledeće, **Dugoročna memorija**: činjenice, sećanja na događaje, veštine poput vožnje bicikla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovi sistemi ne žive svi na istom mestu u mozgu. **prefrontalni korteks**, prednji deo mozga iza čela, mnogo pomaže u radnoj memoriji. Drugi regioni, kao što je **neocortek**, spoljašnji sloj mozga, čuvaju se dugoročno."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Kako je memorija fiksirana",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "Hipokampus, duboka struktura, pomaže u formiranju novih uspomena."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da bi informacije postale lomljive u trajne, mozak mora da ojača veze između **neuron**, nervnih ćelija. Govorimo o **konsolidaciji**, transformaciji nedavnog sećanja u trajni trag. Mala struktura pod nazivom **morski konjic**, u obliku morskog konja u temporalnom režnju, igra ključnu ulogu u sećanjima na događaje."
+        },
+        {
+          "type": "funFact",
+          "text": "Spavanje, posebno određene faze, pomaže da konsolidujemo ono što smo naučili tokom dana. Revizija zatim spavanje često funkcioniše bolje nego revizija do 3 sata ujutru."
+        },
+        {
+          "type": "paragraph",
+          "text": "Čuveno pravilo, povezano sa **istraživačem Donaldom Hebb**: neuroni koji se aktiviraju zajedno teže da se jače povezuju. Ukratko: „ono što svetla zajedno povezuje se”. Ovo je princip **neuroplastičnosti**, sposobnosti mozga da modifikuje svoje veze."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "Zapamtiti znači modifikovati",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kada se sećate, ono privremeno postaje **savitljiv**, može se uređivati. Detalji iz sadašnjosti mogu da uđu. Onda ih mozak ponovo skladišti. Zbog toga dva svedoka iste nesreće mogu reći različite verzije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Možemo čak i da stvorimo **lažna sećanja**: scene za koje verujemo da su istinite, ali koje se nikada nisu odigrale ili nisu takve. Mozak popunjava praznine onim što već zna."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "Zaboravljanje nije uvek neuspeh",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kada biste zapamtili svaki nepotreban detalj, bili biste zasićeni. Zaboravljanje nam pomaže da generalizujemo, da odlučimo, da zadržimo ono bitno. Dobra memorija sortira onoliko koliko zadrži."
+        },
+        {
+          "type": "takeaway",
+          "text": "Sećanje je aktivna rekonstrukcija, a ne savršen snimak. Oslanja se na nekoliko sistema, konsoliduje se posebno tokom spavanja i može se izobličiti sa svakim podsetnikom."
+        }
+      ]
+    }
+  ]
+}

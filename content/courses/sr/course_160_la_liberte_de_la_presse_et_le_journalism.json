@@ -1,0 +1,122 @@
+{
+  "id": "course_160_la_liberte_de_la_presse_et_le_journalism",
+  "title": "Sloboda štampe i fotografsko novinarstvo",
+  "subtitle": "20. vek",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "Od Kartije-Bresona do Nika Uta, štampana fotografija beleži istoriju na jednoj slici. Sloboda, etika i moć medija u istom tražilu.",
+  "hero": {
+    "image": "la_liberte_de_la_presse_et_le_journalisme_photographique",
+    "ratio": "16:9",
+    "hook": "Fotografija može zaustaviti rat... ili lagati. Još uvek moramo da budemo u mogućnosti da to objavimo."
+  },
+  "sections": [
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fotografsko novinarstvo se rađa kada slika fiksira vest snažno kao članak. Jedan pogled može sumirati rat, glad, pobedu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ali bez slobode štampe, ove slike ostaju u fioci."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p1",
+      "title": "Odlučujući trenutak",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Henri Cartier-Bresson]]ZZKSG0ZZ teoretizira „odlučujući trenutak“: biti na pravom mestu, u pravo vreme, sa pravim okvirom. [[Gerda Taro]]ZZKSG1ZZ, zajedno sa Kapom, poginuo je pokrivajući Španski građanski rat. Fotoreporterstvo ima svoje mučenike."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pojava ilustrovanih časopisa i foto agencija profesionalizovala je profesiju. Reporter odlazi sa uređajem kao i drugi sa sveskom. Rizik je fizički."
+        },
+        {
+          "type": "image",
+          "asset": "cartier_bresson_decisive_moment",
+          "ratio": "4:3",
+          "caption": "Leica na ramenu: ulica kao teren."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p2",
+      "title": "Slike koje menjaju debatu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U Vijetnamu, fotografija Nicka UtZZKSG0ZZ na kojoj se vidi devojčica spaljena napalmom potresa javno mnjenje. Slika ne „završava“ rat sama, ali čini nemogućim poricanje ljudske cene."
+        },
+        {
+          "type": "paragraph",
+          "text": "Velike demokratije teoretski štite štampu. Diktature kontrolišu tražilo. Sloboda objavljivanja slike postaje politički barometar."
+        },
+        {
+          "type": "funFact",
+          "text": "Mnoge poznate fotografije su prvo bile cenzurisane ili o njima raspravljalo pre nego što su postale istorijski dokazi."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p3",
+      "title": "Etika i koncentracija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Etika foto-novinarstva]]ZZKSG0ZZ postavlja pitanja: možemo li uokviriti patnju? Retuširati? Slobodnom pogledu preti i Koncentracija medija i uređivačka neufavisnostZZKSG1ZZ."
+        },
+        {
+          "type": "paragraph",
+          "text": "U digitalnom dobu, verifikacija je neophodna: metapodaci, pretraga obrnutih slika, kontekst. Fotografija je i dalje moćna, ali njome se može manipulisati brže nego ikad."
+        },
+        {
+          "type": "image",
+          "asset": "photojournalism_war_correspondent_camera",
+          "ratio": "4:3",
+          "caption": "Izveštač: svedok naoružan ciljem."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p4",
+      "title": "Nasleđe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U doba mreža, svi fotografišu. Potreba za pouzdanim, kontekstualizovanim slikama, zaštićenim pravom na informacije, nikada nije bila tako jaka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da biste u potpunosti razumeli slobodu štampe i fotografsko novinarstvo, morate imati na umu jednu stvar: svaki tehnički detalj služi emociji ili ideji. Rad nikada nije samo dekorativni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontekst je važan koliko i stil. Datumi, mesta, sponzori, javnost: sve ovo objašnjava zašto se obrazac pojavljuje u određenom trenutku, a ne ranije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konačno, nasleđe se meri na duži rok. Ono što danas vidimo u muzejima, filmovima ili popularnoj muzici i dalje nosi tragove ovih izuma."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uvežbajte oko, branite uzbunjivače, platite terensko novinarstvo: bez ovoga ostaje samo protok. Nasleđe 20. veka je zahtev, a ne nostalgija."
+        },
+        {
+          "type": "takeaway",
+          "text": "Od Cartier-Bressonove Leice do ratnih fotografija, foto novinarstvo je dokazalo da besplatna slika može imati istu težinu kao i editorijal."
+        }
+      ]
+    }
+  ]
+}

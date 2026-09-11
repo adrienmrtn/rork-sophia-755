@@ -1,0 +1,112 @@
+{
+  "id": "course_239_le_futur_du_travail",
+  "title": "Budućnost rada",
+  "subtitle": "Automatizacija i veštačka inteligencija",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Veštačka inteligencija i novi oblici zapošljavanja uzdrmaju model rada nasleđen iz industrijske ere.",
+  "hero": {
+    "image": "le_futur_du_travail",
+    "ratio": "16:9",
+    "hook": "Mašine rade brže nego ikad. Ostaje da se vidi šta će preostati da se uradi ljudima."
+  },
+  "sections": [
+    {
+      "id": "course_239_le_futur_du_travail_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Posao ne samo da definiše naš prihod: on takođe oblikuje naš društveni identitet i značenje koje dajemo našim danima. Međutim, veštačka inteligencija, robotika i novi načini rada danas potresaju ovaj model nasleđen iz industrijske ere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj kurs istražuje kako rad menja formu i velika pitanja koja ova transformacija postavlja: manje sati, više mašina i nova podela bogatstva."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p1",
+      "title": "Kraj modela rođenog sa Henrijem Fordom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Savremeni rad je dugo bio organizovan oko ideje koju je popularisao **[[Henri Ford]]**ZZKSG0ZZ, koji je uspostavio 40-časovnu nedelju 1926. Ovaj izbor nije bio gest velikodušnosti: radnici sa slobodnim vremenom takođe postaju kupci, sposobni da sami kupuju proizvode koje proizvode."
+        },
+        {
+          "type": "funFact",
+          "text": "Ekonomista Džon Mejnard Kejns je 1930. godine predvideo da će njegovi unuci raditi samo 15 sati nedeljno, zahvaljujući tehnološkom napretku. Skoro vek kasnije, imamo ovu tehnologiju, ali i dalje radimo jednako naporno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj model se danas raspada u korist **svirka ekonomije**, ekonomije „gog“: više od 57 miliona radnika u Sjedinjenim Državama sada prodaje svoje usluge putem digitalnih platformi, van tradicionalnog zapošljavanja. Automatizacija takođe preuzima sve složenije zadatke, dok rad na daljinu, ubrzan pandemijom 2020. godine, preoblikuje samu geografiju posla."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p2",
+      "title": "AI i izazov kreativnog uništenja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Debata o budućnosti rada često se zasniva na ideji filozofa i ekonomiste Josepha SchumpeterZZKSG0ZZ: **[[Kreativna destrukcija]]**ZZKSG1ZZ. Prema njegovim rečima, svaka tehnološka revolucija uništava stare profesije, ali na kraju stvara nove, često kvalifikovanije. Generativna veštačka inteligencija, međutim, uvodi nešto novo: ona po prvi put ugrožava kancelarijske poslove i profesije koje se smatraju intelektualnim."
+        },
+        {
+          "type": "funFact",
+          "text": "U 2023. godini, studija je pokazala da je veštačka inteligencija imala bolji učinak od 99% ljudi na testu kreativnosti, dovodeći u pitanje ideju da je kreativnost naša poslednja prednost u odnosu na mašine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pojavljuju se tri scenarija. Optimista zamišlja povećanje produktivnosti koje bi ljude oslobodilo zadataka koji se ponavljaju. Pesimista se plaši da će AI napredovati brže od naše sposobnosti da se prekvalifikujemo, stvarajući ogromnu nezaposlenost. Hibrid se, konačno, oslanja na saradnju između ljudi i mašina, gde bi ključna veština postala sposobnost usmeravanja alata, a ne savladavanje fiksnog znanja."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p3",
+      "title": "Preraspodeliti vreme i novac",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suočeni sa rizikom društva dve brzine, proučavaju se novi alati. **Univerzalni osnovni dohodak** predlaže da se svakom građaninu, bez uslova, isplati fiksna suma kako bi se obezbedio životni tok u privredi u kojoj rad postaje sve povremeniji."
+        },
+        {
+          "type": "image",
+          "asset": "ai_generative_writing_artificial_intelligence",
+          "ratio": "16:9",
+          "caption": "Automatizacija, veštačka inteligencija i novi oblici zapošljavanja preoblikuju svet rada."
+        },
+        {
+          "type": "paragraph",
+          "text": "Osim toga, sve više raste ideja o 4-dnevnoj nedeljiZZKSG0ZZ: ako mašine proizvode više za manje vremena, čini se logičnim da se radno vreme ljudi smanji zauzvrat, kako bi se održala zaposlenost i sačuvalo zdravlje radnika. Ostaje pitanje finansiranja: ako se vrednost sve više stvara softverom, porezi će nesumnjivo morati da se prebace sa prihoda od rada na prihod od kapitala."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p4",
+      "title": "Kakav smisao dati sutrašnjem radu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jednom kada je ekonomska jednačina rešena, ostaje dublje pitanje: šta postaje sa značenjem naših dana u svetu gde je posao manje centralni? Istorijski gledano, posao je strukturirao svakodnevni život i samopoštovanje. Njegov delimični nestanak mogao bi dovesti ili do dosade ili do oživljavanja dobrovoljnih, umetničkih ili građanskih aktivnosti."
+        },
+        {
+          "type": "funFact",
+          "text": "Reč „rad“ potiče od latinskog tripalium, instrumenta za mučenje sa tri stuba. Poreklo koje nas podseća da se dugo doživljavalo kao patnja pre nego što je postalo identitet."
+        },
+        {
+          "type": "paragraph",
+          "text": "U ovom kontekstu, učenje učenja postaje suštinska veština. Pravo pitanje nije samo tehnološko, već i političko: da li ćemo koristiti veštačku inteligenciju da povećamo svoje sposobnosti ili samo da smanjimo poslovne troškove? Odgovor će odrediti da li će sutrašnji rad biti oslobođenje ili nova stega."
+        },
+        {
+          "type": "takeaway",
+          "text": "Budućnost rada obeležena je nestankom samaca, u korist gig ekonomije, i izazovom veštačke inteligencije, koja prvi put preti intelektualnim poslovima. Naš društveni model će nesumnjivo morati da preraspodeli povećanje produktivnosti, kroz univerzalni prihod ili kraću radnu nedelju."
+        }
+      ]
+    }
+  ]
+}

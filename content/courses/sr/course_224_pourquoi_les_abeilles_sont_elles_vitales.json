@@ -1,0 +1,122 @@
+{
+  "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales",
+  "title": "Zašto su pčele vitalne?",
+  "subtitle": "Mali radnici naše hrane",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Bez pčela, **75% svetskih useva hrane** bi bilo u opasnosti. Ovi mali, neupadljivi radnici podržavaju naše snabdevanje hranom, a njihova populacija se urušava.",
+  "hero": {
+    "image": "pourquoi_les_abeilles_sont_vitales",
+    "ratio": "16:9",
+    "hook": "Oni ne prave samo med: bez njih bi nestao veliki deo naše hrane."
+  },
+  "sections": [
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Često razmišljamo o pčelama samo zbog njihovog meda. U stvarnosti, oni pružaju mnogo veću uslugu: omogućavaju reprodukciju većine cvetnih biljaka. Ova usluga vredi stotine milijardi dolara svake godine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Poslednjih decenija, ovi esencijalni insekti nestaju zabrinjavajućom brzinom. Razumevanje njihove uloge i uzroka njihovog opadanja omogućava nam da bolje razumemo direktno pitanje za naše buduće snabdevanje hranom."
+        }
+      ]
+    },
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p1",
+      "title": "Oprašivanje, diskretan, ali neophodan posao",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[oprašivanje]]ZZKSG0ZZ je transport polena, muških ćelija jednog cveta, do ženskog organa drugog cveta iste vrste. Vetar ili voda ponekad to mogu učiniti, ali većina cvetnih biljaka preferira transport životinja. Tragajući za nektarom i polenom za svoju koloniju, pčele obezbeđuju ovaj transport, a da to i ne znaju."
+        },
+        {
+          "type": "image",
+          "asset": "honey_bee_pollinating_flower_closeup",
+          "ratio": "4:3",
+          "caption": "Dok se hrani, pčela prenosi polen sa cveta na cvet."
+        },
+        {
+          "type": "funFact",
+          "text": "Pčela može posetiti do 700 cvetova dnevno. Da bi proizvela samo 500 grama meda, cela kolonija mora da obleti oko Zemlje otprilike tri puta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oko **75% svetskih prehrambenih useva** zavisi, bar donekle, od oprašivača kao što su pčele. Ovo uključuje kafu, kakao, jabuke, bademe ili avokado. Doprinos oprašivanja globalnoj ekonomiji procenjuje se između 235 i 577 milijardi dolara godišnje."
+        }
+      ]
+    },
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p2",
+      "title": "Zašto kolonije propadaju",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Propadanje pčela nema jedan uzrok: istovremeno deluje više pretnji. Od 1990-ih, neki pčelari su svake zime izgubili i do 30 do 50% svojih zajednica, dok bi prirodni gubitak trebalo da bude oko 10%. Ovaj fenomen iznenadnog nestanka ponekad se naziva [[Poremećaj kolapsa kolonije]]ZZKSG0ZZ."
+        },
+        {
+          "type": "image",
+          "asset": "neonicotinoid_pesticide_spraying_field",
+          "ratio": "4:3",
+          "caption": "Neonikotinoidi prodiru u celu biljku, uključujući nektar i polen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Posebno su odgovorni NeonikotinoidZZKSG0ZZ, porodica insekticida. Oni prožimaju celu biljku, uključujući njen nektar i polen. Čak i pri malim dozama one dezorijentišu pčele, koje više ne mogu da pronađu svoju košnicu, i slabe njihov imuni sistem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovome se dodaju i parazitska grinja koja prenosi smrtonosne viruse, nestanak divljeg cveća usled monokultura i klimatske promene koje pomeraju periode cvetanja u odnosu na buđenje insekata."
+        }
+      ]
+    },
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p3",
+      "title": "Ne postoji samo jedna pčela",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kada kažemo „pčela”, gotovo uvek pomislimo na domaću pčelu, onu koja živi u košnicama i proizvodi med. Međutim, to je samo jedna vrsta među više od **20,000** u svetu, uključujući bumbare i osmiju. Većina je usamljena i ne pravi med, ali igra jednako važnu ekološku ulogu."
+        },
+        {
+          "type": "funFact",
+          "text": "Određeni cvetovi, poput cvetova paradajza, oslobađaju polen samo pod određenim vibracijama. Pčele ne znaju kako to da urade, ali bumbari znaju, zahvaljujući tehnici koja se zove sonikacija."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ove divlje vrste su često specijalizovane za određenu biljku, koju su ponekad jedine u stanju da efikasno oprašuju. Oni su takođe ranjiviji od domaćih pčela, jer nemaju nikakvog ljudskog praćenja ili nege. Njihov nestanak slabi ceo [[lanac ishrane]]ZZKSG0ZZ, pošto mnoge ptice zavise od plodova i semena koji su rezultat ovog oprašivanja."
+        }
+      ]
+    },
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p4",
+      "title": "Šta još možemo da promenimo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Smanjenje upotrebe pesticida ostaje najefikasnija poluga. Evropska unija je 2018. zabranila tri glavna neonikotinoida na otvorenim poljima. Istovremeno, vraćanjem [[agroekološke infrastrukture]]ZZKSG0ZZ, poput živih ograda ili cvetnih traka, ponovo se stvaraju utočišta za insekte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svako može da se ponaša i jednostavno: posaditi lokalno cveće u svojoj bašti ili ostaviti travnjak malo duže pre košenja, on predstavlja pravo utočište pčelama kada je cveće retko."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zaštita oprašivača nije samo pitanje očuvanja prirode: to je dugoročna strategija preživljavanja, jer njihov rad direktno podržava sposobnost biljaka da nas hrane."
+        },
+        {
+          "type": "takeaway",
+          "text": "Pčele i 20.000 vrsta divljih oprašivača obezbeđuju reprodukciju 75% svetskih useva za hranu. Njihov pad, uzrokovan pesticidima, parazitima i gubitkom staništa, direktno ugrožava naše snabdevanje hranom."
+        }
+      ]
+    }
+  ]
+}

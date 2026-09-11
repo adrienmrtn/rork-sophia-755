@@ -1,0 +1,96 @@
+{
+  "id": "course_47_pourquoi_baille_t_on",
+  "title": "Zašto zevamo?",
+  "subtitle": "Telo i mozak",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Svi zevaju: ljudi, psi, ponekad čak i fetusi. Verovatno nije za „nedostatak kiseonika“. Evo najjačih tragova.",
+  "hero": {
+    "image": "pourquoi_baille_t_on",
+    "ratio": "16:9",
+    "hook": "Ti zevaš. Tvoj komšija zeva. I (skoro) nije slučajno zarazno."
+  },
+  "sections": [
+    {
+      "id": "course_47_pourquoi_baille_t_on_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zevanje izgleda uobičajeno. Međutim, to je složen refleks: vilica, grudni koš, dijafragma, celo telo se uključuje. Lavovi, psi, ljudi: mnoge životinje zevaju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dugo smo govorili: „To je da imamo više kiseonika“. Ova ideja je sada uglavnom napuštena. Savremena objašnjenja su zanimljivija."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p1",
+      "title": "Ne (posebno) za kiseonik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eksperimenti su pokazali da povećanje kiseonika u vazduhu ne sprečava zevanje. Takođe, smanjite malo ugljen-dioksida. Dakle, zevanje nije jednostavno „hvatanje vazduha“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Snažna prednost danas: zevanje pomaže **režim regulacije temperature**. Širokim udahom i istezanjem lica „provetrićemo” i malo ohladiti glavu, posebno kada smo umorni."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p2",
+      "title": "Zašto je zarazno?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "contagious_yawning_people_group",
+          "ratio": "4:3",
+          "caption": "Videti nekoga kako zeva često je dovoljno da pokrene refleks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kod ljudi, gledanje, slušanje ili čak čitanje reči „zevanje“ može izazvati zevanje. To nije samo glupa imitacija: ona utiče i na **empathi** i moždana kola povezana sa [[neurona ogledala i zaraznosti]]ZZKSG0ZZ, neurone koji se aktiviraju kada mi delujemo... ili kada vidimo da neko deluje."
+        },
+        {
+          "type": "funFact",
+          "text": "Mala deca malo zevaju zbog zaraze. Ova osetljivost dolazi kasnije, zajedno sa određenim društvenim veštinama."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p3",
+      "title": "Već zevamo pre nego što se rodimo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fetusi zevaju oko **11. nedelje** trudnoće. U ovom dobu njihova pluća još ne udišu vazduh. Dakle, opet, ne radi se o „nestanku kiseonika“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kod fetusa, zevanje može pomoći razvoju mišića vilice i lica."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p4",
+      "title": "Zevate da ostanete na oprezu?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Često zevamo kada smo umorni... ali i neposredno pre testa, ili kada nam je dosadno dok pokušavamo da ostanemo fokusirani. Istezanje može stimulisati nervni sistem i pomoći **da ostanete budni**."
+        },
+        {
+          "type": "takeaway",
+          "text": "Zevanje verovatno nije nedostatak kiseonika. Radije bi se koristio za regulisanje mozga (temperatura, budnost), a kod ljudi se takođe širi društvenom zarazom."
+        }
+      ]
+    }
+  ]
+}

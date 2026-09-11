@@ -1,0 +1,112 @@
+{
+  "id": "course_78_comment_fonctionne_l_electricite_dans_no",
+  "title": "Kako struja funkcioniše u našem telu?",
+  "subtitle": "Nervi i joni",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Razmišljanje, kucanje srca, podizanje ruke: sve ovo prvo kruži kao živi elektricitet, nošen ne elektronima, već jonima.",
+  "hero": {
+    "image": "comment_fonctionne_l_electricite_dans_notre_corps",
+    "ratio": "16:9",
+    "hook": "Vaše telo je električna mreža. Ali ovde je struja joni, a ne elektroni."
+  },
+  "sections": [
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U zidnoj utičnici struja je **elektronika** koji cirkulišu. U vašem telu je drugačije: to su **joni**, naelektrisani atomi, koji ulaze i izlaze iz ćelija. Ovaj tok stvara signale koji teraju srce na razmišljanje, otkucaje srca i kontrakciju mišića."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez ovog živog elektriciteta, nema misli, nema gesta, nema pulsa. Razumevanje tela takođe znači razumevanje ovog jezika optužbi."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p1",
+      "title": "Električni klik neurona",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**neuron** u mirovanju ne šalje poruku, ali se „naplaćuje“. Njegova membrana odvaja unutrašnjost i spoljašnjost ćelije. Zahvaljujući [[natrijum-kalijum pumpe]]ZZKSG0ZZ, održava potencijalni odmoraZZKSG1ZZ od približno **-70 milivolta**: unutrašnjost je negativnija od spoljašnjosti."
+        },
+        {
+          "type": "image",
+          "asset": "neuron_electrical_signal_brain",
+          "ratio": "auto",
+          "caption": "Neuroni komuniciraju kratkim električnim impulsima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada stigne stimulans, kanali se otvaraju. Natrijum dolazi odjednom. Polaritet je obrnut: to je [[akcioni potencijal]]ZZKSG0ZZ, signal sve ili ništa koji ide duž aksona, ponekad preko metra. Kao električni talas."
+        },
+        {
+          "type": "funFact",
+          "text": "Mozak u budnom stanju proizvodi oko **20 vati**, dovoljno za malu LED diodu. Međutim, on troši skoro **20%** kalorija u telu."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p2",
+      "title": "U sinapsi elektricitet postaje hemija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Neuroni se zapravo ne dodiruju. Između njih, mali jaz: **sinapsis**. Električni signal ga ne može preskočiti. Zatim kraj aksona oslobađa [[Neurotransmiteri]]ZZKSG0ZZ, molekule glasnika kao što su acetilholin ili [[glutamat]]ZZKSG1ZZ."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovi glasnici se vezuju za sledeći neuron kao ključ u bravi. U zavisnosti od poruke, oni uzbuđuju ili koče. Hiljade ovih istovremenih odluka formiraju misao."
+        },
+        {
+          "type": "funFact",
+          "text": "Neki nervni signali putuju brzinom **120 m/s** (više od **430 km/h**). Dovoljno da reagujete na opekotinu na nožnom prstu u deliću sekunde."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
+      "title": "Srce ima svoj pejsmejker",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Srce ne čeka komandu mozga za svaki otkucaj. U desnoj pretkomori, **sinni čvor** generiše sopstvene impulse, otprilike **60 do 100** puta u minuti u mirovanju. Signal se širi, prvo kontrahuje atrijum, zatim komore."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova aktivnost je dovoljno jaka da se očita na koži: to je **elektrokardiogram (EKG)**. Ako se ritam poremeti, govorimo o **aritmiji**. Srce tada neredovito kuca i slabo pumpa."
+        },
+        {
+          "type": "funFact",
+          "text": "Električna jegulja koristi isti princip ekscitabilnih ćelija, ali u seriji: do **600 volti**, dovoljno da parališe plen."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
+      "title": "Od voljnog gesta do defibrilatora",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Da biste podigli ruku, akcioni potencijal se spušta do mišića. Acetilholin pokreće lokalni električni talas, a zatim oslobađanje kalcijuma. Proteini mišića klize jedan preko drugog: kontrakcija."
+        },
+        {
+          "type": "paragraph",
+          "text": "**defibrilacija** koristi isti princip u obrnutom smeru: spoljašnji šok resetuje sve ćelije „na nulu“ tako da sinusni čvor nastavlja tempo. Bionička protetika takođe hvata ove slabe signale za kontrolu veštačke ruke."
+        },
+        {
+          "type": "takeaway",
+          "text": "Živa bića govore u tokovima jona i akcionim potencijalima. Misao, srce i mišići dele isti električni jezik."
+        }
+      ]
+    }
+  ]
+}

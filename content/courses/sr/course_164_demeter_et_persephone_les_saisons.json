@@ -1,0 +1,146 @@
+{
+  "id": "course_164_demeter_et_persephone_les_saisons",
+  "title": "Demetra i Persefona",
+  "subtitle": "Zašto postoje godišnja doba?",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Had kidnapuje Persefonu. Njegova majka Demetra, boginja žetve, napušta zemlju da gladuje. Mit koji objašnjava godišnja doba.",
+  "hero": {
+    "image": "demeter_et_persephone",
+    "ratio": "16:9",
+    "hook": "Kada devojka nestane pod zemljom, njena majka zaustavlja žetvu. Svet otkriva zimu."
+  },
+  "sections": [
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Demeter** je grčka boginja žetve i plodnosti. Njena ćerka **Persefona** oličava proleće. Njihova priča objašnjava [[Poljoprivredni ciklus u grčkoj religiji]]ZZKSG0ZZ: zašto zemlja umire zimi, a ponovo se rađa leti."
+        },
+        {
+          "type": "paragraph",
+          "text": "To je takođe drama majke i ćerke, između sveta živih i sveta mrtvih. Iz ove priče su rođeni [[Misterije Eleusine]]ZZKSG0ZZ, tajni obredi koji su iniciranima obećavali nadu pred smrću."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p1",
+      "title": "Had kidnapuje devojku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prvo zovemo Persefonu **Kore**, „mlada devojka“. Jednog dana, na livadi, ubere narcis. Zemlja se otvara. **Had**, kralj podzemnog sveta, pojavljuje se na svojoj kočiji. Uz tajni dogovor **Zevs**, oca mlade devojke, on je vodi u Podzemlje da bi je učinio svojom kraljicom."
+        },
+        {
+          "type": "image",
+          "asset": "hades_abduction_persephone_bernini_sculpture",
+          "ratio": "4:3",
+          "caption": "Otmica Persefone: proleće nestaje pod zemljom."
+        },
+        {
+          "type": "funFact",
+          "text": "Prema mitu, **Gaia**, Zemlja, stvorila je ovog narcisa po Zevsovom naređenju. Mora da je njegov miris zarobio Persefonu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Demetra, neutešna, napušta Olimp. Sprečava klijanje zemlje. Polja ostaju neplodna. **drago** preti ljudima, a samim tim i žrtvama koje se prinose bogovima. Zevs mora da reaguje."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p2",
+      "title": "Semenke nara odlučuju o sudbini",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zevs šalje **Hermes**, glasnika bogova, da zahteva povratak Persefone. Had se pretvara da se pokorava. Pre nego što ode, on joj daje **semenke nara**. Ko jede u carstvu mrtvih, pripada njemu. Zamka je postavljena."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neophodan je kompromis. Persefona će deo godine provesti sa Hadom, a ostatak sa majkom. Kada se vrati, Demetra ponovo čini prirodu zelenom: proleće je i leto. Kada siđe, boginja žetve povlači svoju milost: jesen je i zima."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1",
+              "title": "Kidnapovanje",
+              "detail": "Had uzima Persefonu u podzemlje."
+            },
+            {
+              "date": "2",
+              "title": "Glad",
+              "detail": "Demetra zaustavlja rast biljaka."
+            },
+            {
+              "date": "3",
+              "title": "Nar",
+              "detail": "Persefona jede seme u podzemnom svetu."
+            },
+            {
+              "date": "4",
+              "title": "Deljenje",
+              "detail": "Ona deli godinu između majke i muža."
+            },
+            {
+              "date": "5",
+              "title": "Godišnja doba",
+              "detail": "Njegovi napred-nazad ritam ciklus useva."
+            }
+          ]
+        },
+        {
+          "type": "funFact",
+          "text": "Neke verzije kažu da Persefona ne jede ovo seme slučajno. Radoznalost ili privrženost: priča takođe postaje ulazak u odraslo doba."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p3",
+      "title": "U Eleusini nada posle noći",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tokom svojih lutanja, Demetra se prerušena u staricu zaustavlja u **Eleusis**, blizu Atine. Dočekana od kraljevske porodice, ona na kraju otkriva svoju božansku prirodu i naređuje izgradnju hrama. Rođeni su [[Misterije Eleusine]]ZZKSG0ZZ."
+        },
+        {
+          "type": "paragraph",
+          "text": "Posvećenici hodaju devet dana, poste, piju **kikeon**, piće od ječma i nane. U [[Telesterion]]ZZKSG0ZZ, ogromnoj sobi za inicijaciju, svetlost sija posle mraka. Tu se otkrivaju svetinja, u najvećoj tajnosti."
+        },
+        {
+          "type": "funFact",
+          "text": "Neki savremeni istraživači veruju da je kikeon sadržavao ergot, halucinogenu pečurku. Ovo bi objasnilo vizije koje su prijavili inicirani."
+        },
+        {
+          "type": "paragraph",
+          "text": "Obred imitira putovanje boginje. Prolazak kroz smrt prirode sa Demetrom, zatim ponovno rođenje sa Persefonom: učesnici su verovali da će steći bolju sudbinu u zagrobnom životu."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p4",
+      "title": "Zrno koje umire da bi se ponovo rodilo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za Grke, zrno pšenice zakopano u zemlju doživelo je istu sudbinu kao Persefona. Nestaje pod zemljom da bi se vratio kao stablo. Mit povezuje poljoprivredu, smrt i ponovno rođenje."
+        },
+        {
+          "type": "paragraph",
+          "text": "On takođe govori o drevnom braku, koji se često doživljava kao bolan odlazak: mlada devojka napušta majku da bi se pridružila drugom domu. Između Hada i Demeter, konačni sporazum drži suprotnosti zajedno: senku i svetlost, smrt i život."
+        },
+        {
+          "type": "takeaway",
+          "text": "Boravak **Persefona** u Podzemlju ističe godišnja doba: njeno odsustvo izaziva tugovanje **Demeter** (jesen-zima), njen povratak izaziva ponovno rođenje biljaka (proleće-leto)."
+        }
+      ]
+    }
+  ]
+}

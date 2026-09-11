@@ -1,0 +1,116 @@
+{
+  "id": "course_63_comment_se_forment_les_tremblements_de_t",
+  "title": "Kako nastaju zemljotresi?",
+  "subtitle": "Greške i talasi",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Svake godine Zemlja doživi stotine hiljada zemljotresa. Većina je nevidljiva. Nekoliko menja čitave gradove.",
+  "hero": {
+    "image": "comment_se_forment_les_tremblements_de_terre",
+    "ratio": "16:9",
+    "hook": "Zemljotres nije hir zemlje. Ovo je energija koja je predugo čekala."
+  },
+  "sections": [
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svake godine, Zemlja zabeleži približno **500.000 zemljotresa koji se mogu otkriti**. Samo mali deo izaziva veliku štetu. Zemljotres nije slučajnost: to je iznenadni kraj dugog nakupljanja energije u stenama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da bismo ovo razumeli, moramo da vidimo površinu planete kao slagalicu pokretnih ploča. Tamo gde se ove ploče trljaju jedna uz drugu, raste napetost... sve dok se ne slomi."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p1",
+      "title": "Ploče koje se stalno kreću",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zemljina površina je podeljena na desetak velikih **tektonskih ploča**. Klize na mekši sloj kaputa, [[Astenosfera]]ZZKSG0ZZ. Njihova brzina? Otprilike **1 do 10 cm godišnje**, otprilike isto koliko i rast nokta."
+        },
+        {
+          "type": "image",
+          "asset": "earthquake_collapsed_buildings_urban",
+          "ratio": "auto",
+          "caption": "Zemljotresi iznenada oslobađaju energiju akumuliranu duž raseda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na granicama dominiraju tri scenarija. Ploče se razmiču (okeanski grebeni). Oni se sudaraju: ponekad jedan zaroni ispod drugog, to je [[Subdukcija]]ZZKSG0ZZ. Ili klize jedan pored drugog, kao duž [[Rased San Andreas]]ZZKSG1ZZ u Kaliforniji, dužine oko **1 300 km**."
+        },
+        {
+          "type": "funFact",
+          "text": "Uz San Andreas, Los Anđeles se približava San Francisku za oko **6 cm** godišnje. Za **15 miliona godina**, dva grada bi bila susedi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Posebno se na ovim granicama dešavaju zemljotresi. Kretanje ploča ometa trenje stena. Energija se tiho akumulira."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p2",
+      "title": "Kada se greška oslobodi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zemljotres se dešava duž **greška**: pukotina između dva bloka stena. U teoriji, ploče bi trebalo da klize neprekidno. U praksi, trenje često blokira ovo klizanje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tokom ovog vremena, plakovi nastavljaju da rastu. Stena se malo deformiše, kao da se navlači luk. Govorimo o elastičnim ograničenjima. Ovo može trajati decenijama, ponekad i vekovima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada je granica otpora prekoračena, blokovi iznenada klize. Energija odlazi u obliku **eizmičkih talasa**. Tačka prekida dubine naziva se **fokus**. Na površini, tačka iznad je **epcenter**, gde su efekti često najjači."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p3",
+      "title": "Merenje snage, strah od cunamija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za merenje energije zemljotresa, seizmolozi uglavnom koriste moment [[skala veličine]]ZZKSG0ZZ. To je logaritamska skala: svaki stepen množi energiju sa približno **32**. Zbog toga zemljotres magnitude **8** oslobađa približno **1000 puta** više energije od zemljotresa magnitude **6**."
+        },
+        {
+          "type": "funFact",
+          "text": "Postoje i zemljotresi **0** ili negativne magnitude. To su veoma mali događaji, vidljivi samo sa veoma osetljivim senzorima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najjači ikada izmeren savremenim instrumentima je onaj **Valdivije**, u Čileu, u **1960**: magnituda **9,5**. Ako je fokus ispod okeana i podiže morsko dno, izmešteni vodeni stub može da stvori **tsunami**. U **2004**, zemljotres magnitude **9.1** u blizini Sumatre izazvao je cunami koji je pogodio 14 zemalja i odneo približno **227,000** života."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p4",
+      "title": "Talasi, uzbuna i zgrade koje se odupiru",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nakon raspada odlazi nekoliko vrsta talasa. **P talasi** (primarni) stižu prvi: sabijaju stenu kao harmonika. Zatim dolaze **ZZ** (sekundarni) talasi, sporiji i često destruktivniji. Površinski talasi tada uzrokuju da tlo oscilira veoma vidljivo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Još ne znamo kako da predvidimo tačan dan velikog zemljotresa. S druge strane, mapiramo rizična područja. [[Seizmičko inženjerstvo]]ZZKSG0ZZ projektuje zgrade sposobne da izdrže udarce: pokretne temelje, džinovske amortizere, strukture koje apsorbuju energiju. U Japanu, rana upozorenja otkrivaju P talase i mogu prekinuti gas ili usporiti vozove pre nego što stignu najopasniji talasi."
+        },
+        {
+          "type": "takeaway",
+          "text": "Zemljotres se dešava kada stene zaglavljene duž raseda iznenada oslobode decenije napetosti. Energija putuje u talasima, a svaki stepen magnitude množi tu energiju sa približno **32**."
+        }
+      ]
+    }
+  ]
+}

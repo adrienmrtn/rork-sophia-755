@@ -1,0 +1,108 @@
+{
+  "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s",
+  "title": "Uloga podataka („nafta 21. veka“)",
+  "subtitle": "Najvredniji digitalni resurs",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Kažu da su podaci nova nafta. Ali za razliku od nafte, oni nikada ne ponestaju i postaju vredniji što se više susreću.",
+  "hero": {
+    "image": "le_role_des_donnees",
+    "ratio": "16:9",
+    "hook": "Facebook može pretpostaviti da se neko ženi ili seli pre nego što to i sazna."
+  },
+  "sections": [
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od 2010-ih ustalila se fraza: **podataka** bi bilo „ulje 21. veka“. Ideja je jednostavna: jednom prefinjeni algoritmima, oni postaju motor rasta i globalne moći."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ali za razliku od nafte, resursa koji ponestaje, podaci se nikada ne troše: mogu se beskonačno kopirati i postaju vredniji kako se kombinuju sa drugim informacijama. Evo zašto je to preoblikovalo globalnu ekonomiju."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p1",
+      "title": "Predviđanje našeg ponašanja pred samim sobom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prava vrednost podataka ne leži u jednostavnoj listi imena ili adresa, već u njihovoj sposobnosti da predvidi naše buduće ponašanje. Svaka pretraga, svaki pokret, svaki klik ostavlja trag koji tehnološke kompanije prikupljaju da bi napravile veoma precizan portret svake osobe."
+        },
+        {
+          "type": "funFact",
+          "text": "Facebook može uočiti veliku životnu promenu, kao što je predstojeći brak ili selidba, pre nego što je uključena osoba toga u potpunosti svesna, otkrivajući male varijacije u njihovim onlajn navikama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova sistematska eksploatacija našeg ponašanja dovela je do onoga što istraživač Šošana Zubof naziva **kapitalizam nadzora**: ljudi više nisu samo mušterija, oni postaju sirovina sistema koji prodaje predviđanja onome ko daje najveću ponudu."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p2",
+      "title": "Zašto je ovim gigantima gotovo nemoguće konkurisati",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ekonomija podataka funkcioniše u dobrom ciklusu: što više podataka kompanija ima, to je bolja njena usluga, što privlači više korisnika, koji generišu još više podataka. Veštačka inteligencija je ubrzala ovaj fenomen: [[mašinsko učenje]]ZZKSG0ZZ algoritam obučen na milijardama primera postaje precizniji i brži za poboljšanje od konkurenta sa ograničenim resursima."
+        },
+        {
+          "type": "image",
+          "asset": "artificial_intelligence_machine_learning_datacenter",
+          "ratio": "16:9",
+          "caption": "Centri podataka troše toliko električne energije koliko i čitavi gradovi za obradu ovih ogromnih tokova informacija."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovi giganti, [[GAFAM]]ZZKSG0ZZ u Sjedinjenim Državama i BATKS u Kini, više nisu zadovoljni dominacijom u svom originalnom sektoru: oni koriste svoje vodeće mesto u podacima da bi se proširili na zdravstvo, finansije ili povezane automobile, blokirajući pristup inovacijama u mnogim oblastima."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p3",
+      "title": "Evropa uzvraća udarac GDPR-om",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suočena sa ovom moći, Evropska unija je 2018. godine uspostavila [[GDPR]]ZZKSG0ZZ, propis koji u teoriji vraća moć građanima nad njihovim ličnim podacima: transparentnost, pravo na zaborav, obavezna saglasnost."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njegova snaga proizilazi iz njegove eksteritorijalnosti: svaka kompanija koja rukuje podacima evropskih građana mora da se pridržava, pod kaznom do 4% svog globalnog prometa. Ovo je primoralo gigante kao što su Meta ili Amazon da preispitaju svoju praksu širom sveta, što je Evropu učinilo nevoljnim globalnim regulatorom."
+        },
+        {
+          "type": "funFact",
+          "text": "Pre zahteva za jasnoću GDPR-a, prosečnoj osobi bi trebalo oko 76 radnih dana da pročita sve uslove korišćenja usluge za digitalne usluge koje koriste u jednoj godini."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p4",
+      "title": "Podaci, pitanje suvereniteta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Osim ekonomije, podaci su postali oruđe moći za same države, koje mogu da ih koriste za praćenje svoje populacije ili usmeravanje javnog mnjenja. Zemlje koje nisu u stanju da zaštite podatke svojih građana rizikuju oblik tehnološke zavisnosti, poznat kao kršenje digitalnog suverenitetaZZKSG0ZZ."
+        },
+        {
+          "type": "paragraph",
+          "text": "Veliki izazov narednih decenija biće pronalaženje ravnoteže između napretka koji omogućava analiza podataka velikih razmera i poštovanja privatnosti, suštinskog uslova individualne slobode u sve povezanijem društvu."
+        },
+        {
+          "type": "takeaway",
+          "text": "Podaci su postali strateško bogatstvo čija vrednost proizilazi iz njihove sposobnosti da predvidi naše ponašanje. Ova ekonomija favorizuje tehnološke gigante sa kojima je gotovo nemoguće konkurisati, na šta Evropa odgovara strogom regulativom: GDPR."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "course_55_la_theorie_de_la_gravitation_newton_1687",
+  "title": "Teorija gravitacije",
+  "subtitle": "Njutn, 1687",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Godine 1687, Njutn je objavio jednostavnu i ogromnu ideju: ista sila uzrokuje da jabuka padne i Mesec da se okreće. Evo šta se to menja.",
+  "hero": {
+    "image": "la_theorie_de_la_gravitation_newton",
+    "ratio": "16:9",
+    "hook": "Jabuka, Mesec, planete: jedna sila koja objašnjava sve."
+  },
+  "sections": [
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pre Njutna smo već znali mnogo o planetama zahvaljujući **Galileo**, italijanskom fizičaru iz 17. veka, i Johanesu KepleruZZKSG0ZZ, astronomu koji je opisao eliptične orbite. Ali jasna veza između onoga što pada na Zemlju i onoga što se vrti na nebu je nedostajala."
+        },
+        {
+          "type": "paragraph",
+          "text": "U **1687**, **Isaac Nevton** je objavio *[[Philosophiae Naturalis Principia Mathematica]]ZZKSG0ZZ*, *Principia* je osnovao klasično delo fizike. On tvrdi da je gravitacija **univerzalni**: deluje svuda, na isti način."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p1",
+      "title": "Svet pre sinteze",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kepler je opisao orbite planeta preciznim zakonima: orbite u **elipsa**, jednake površine za jednako vreme. Galileo je proučavao padanje tela. Ali zašto planete ostaju na svojoj putanji? Šta ih \"vuče\"?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Njutn odgovara: **privatna gravitacija**, sila koja vuče dve mase jedna prema drugoj. Zemlja privlači Mesec. Sunce privlači Zemlju. I takođe privlačite malo Zemlje... čak i ako je sićušna."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p2",
+      "title": "Zakon u jednoj rečenici",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "isaac_newton_apple_tree_woolsthorpe",
+          "ratio": "4:3",
+          "caption": "Priča o jabuci je pre svega priča. Ideja je stvarna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dva tela privlače jedno drugo silom koja raste sa njihovom **masa**, količinom materije, a opada kako se udaljavaju. Tačnije: sila slabi sa **kvadratom udaljenosti**. Udvostručenje udaljenosti deli privlačnost sa četiri. Što ste dalje, privlačnost brže slabi."
+        },
+        {
+          "type": "image",
+          "asset": "planets_orbit_solar_system_gravity",
+          "ratio": "16:9",
+          "caption": "Planete neprestano „padaju“ prema Suncu... i propuštaju ga: ovo je orbita."
+        },
+        {
+          "type": "funFact",
+          "text": "Mesec neprestano \"pada\" prema Zemlji. Pošto takođe ima veliku bočnu brzinu, okreće se umesto da se sruši."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p3",
+      "title": "Zakoni kretanja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Njutn takođe daje tri **zakona kretanja**. Ukratko: objekat zadržava svoju brzinu ako nema sile, princip **inercija**; sila menja brzinu; svaka akcija ima suprotnu reakciju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pomoću ovoga možemo izračunati putanje, **plime i oseke**, izdizanje i spuštanje okeana pod dejstvom Meseca i Sunca i orbite. Fizika postaje alat za predviđanje."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p4",
+      "title": "Moćan… ali ne i poslednja reč",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dva veka kasnije, **[[Albert Ajnštajn]]**ZZKSG0ZZ će korigovati Njutna za ekstremne slučajeve, veoma velike brzine i veoma jaku gravitaciju, sa Relativističkom gravitacijom (Ajnštajn)ZZKSG1ZZ. Gravitacija tada postaje zakrivljenost prostor-vremena, a ne više nevidljiva sila. Ali za lansiranje rakete ili razumevanje plime, Njutn ostaje odličan."
+        },
+        {
+          "type": "takeaway",
+          "text": "Njutn ujedinjuje nebo i Zemlju: gravitacija svuda privlači mase. To je jedna od najvećih naučnih sinteza u istoriji."
+        }
+      ]
+    }
+  ]
+}

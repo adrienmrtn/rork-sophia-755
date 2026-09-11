@@ -1,0 +1,120 @@
+{
+  "id": "course_196_merlin_l_enchanteur",
+  "title": "Merlin Čarobnjak",
+  "subtitle": "Arturov mag",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Merlin, Arturov savetnik, prorok i mag: figura rođena od demona i krštenja, arhitekta Kamelota, zatočenik sopstvene ljubavi.",
+  "hero": {
+    "image": "merlin_l_enchanteur",
+    "ratio": "16:9",
+    "hook": "Sin demona, kršten od kolevke: Merlin služi dobru sa silama rođenim od zla."
+  },
+  "sections": [
+    {
+      "id": "course_196_merlin_l_enchanteur_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Merlin** je najpoznatiji mag zapadnog srednjeg veka. Bard, prorok, savetnik kralja **Arthur**: on stoji na granici između drevnog keltskog sveta i hrišćanskog viteštva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njegova priroda je paradoksalna. Deo njega dolazi od demona, drugi sa neba. Njegova priča nije priča o magičnoj predstavi: to je borba hibridnog bića koje bira da služi dobru, sve dok ga ljubav ne ukloni iz sveta."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p1",
+      "title": "Hibridno poreklo demona i krštenja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U pesniku **Robert de Boron** (12. vek), demoni žele da stvore antihrista. [[inkubus demon]]ZZKSG0ZZ, duh koji se sjedinjuje sa ženom koja spava, zavodi mladu pobožnu hrišćanku. Plan ne uspeva: majka se ispovedi i krsti dete."
+        },
+        {
+          "type": "image",
+          "asset": "merlin_wizard_medieval_manuscript_illumination",
+          "ratio": "4:3",
+          "caption": "Merlin, lik srednjovekovnog maga između šume i dvorišta."
+        },
+        {
+          "type": "funFact",
+          "text": "Ime „Merlin“ dolazi od velškog **Mirdin**. Džefri od Monmuta je promenio „d“ u „l“ da bi izbegao igru reči koja je previše bliska latinskom *sranje*."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Krštenje]]ZZKSG0ZZ briše kletvu, ali ostavlja moći: znanje o prošlosti (demonsko nasleđe) i dar [[Proročanstvo u srednjovekovnoj kulturi]]ZZKSG1ZZ. Merlin može da menja oblik. Iza njega nalazimo **Mirddina Villt**, velškog barda iz 6. veka koji je, lud nakon bitke, pobegao u šumu [[Celiddon]]ZZKSG2ZZ."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p2",
+      "title": "Arhitekta Arturijeve sudbine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlin nije iluzionista. On je garant carstva. On pomaže kralju [[Utherpendragon]]ZZKSG0ZZ da preuzme crte vojvode od Kornvola da bi se pridružio vojvotkinji **Igerne**. Od ove noći rođen je **Arthur**."
+        },
+        {
+          "type": "image",
+          "asset": "merlin_arthur_camelot_medieval_illustration",
+          "ratio": "4:3",
+          "caption": "Merlin vodi Artura do prestola i Kamelota."
+        },
+        {
+          "type": "paragraph",
+          "text": "On tajno podiže dete, orkestrira mač u nakovnju, a zatim vodi Artura do Gospe od jezera da dobije [[Ekcalibur]]ZZKSG0ZZ, čiji omotač štiti od smrtnih rana. U **Camelot**, on dizajnira **Okrugli sto** i postavlja Perilous SeatZZKSG1ZZ, slobodno mesto rezervisano za najčistijeg viteza. On vidi opasnosti koje dolaze. On takođe zna da sudbina na kraju uvek prođe."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p3",
+      "title": "Pad čarobnjaka: ljubav i zaborav",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlin dočeka svoj kraj. Međutim, on se zaljubljuje u **Viviane**, Gospu od jezera, u blizini fontane Barenton. On je uči svojim najtajnijim čarolijama, iako zna da će to izgubiti."
+        },
+        {
+          "type": "image",
+          "asset": "viviane_lady_of_the_lake_merlin_medieval_art",
+          "ratio": "4:3",
+          "caption": "Vivijan zaključava Merlina: kraj vremena magova."
+        },
+        {
+          "type": "funFact",
+          "text": "U zavisnosti od verzije, Vivijan ga zaključava u žbun gloga, staklenu kulu ili **Broceliande** šupljinu. Besmrtan, Merlin nije mrtav: on spava van sveta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada vitezovi odu prema Gralu, Merlinovoj magiji više nema mesta. Njegovo povlačenje označava prelazak iz vremena mitova u vreme vere."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p4",
+      "title": "Književno nasleđe i lik arhimaga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlin se zagledao u sliku starog mudraca: brada, štap, zagonetke. Od njega potiču **Gandalfe** za Tolkina i **Dambldore** za Rouling. On je pomoćnik koji zna, ali ne može da deluje umesto heroja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Most između divlje šume i dvora, on čuva otisak [[Druidic]]ZZKSG0ZZ dok savetuje kraljeve. I danas šapuće da su imperije krhke, a da mudrost ne štiti uvek sebe."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Merlin**, rođen od demona i spašen krštenjem, gradi sudbinu **Arthur**, a zatim nestaje, zatočenik **Viviane**: trajni model zapadnog čarobnjaka."
+        }
+      ]
+    }
+  ]
+}

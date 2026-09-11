@@ -1,0 +1,106 @@
+{
+  "id": "course_51_la_decouverte_de_la_penicilline_fleming",
+  "title": "Otkriće penicilina",
+  "subtitle": "Fleming, 1928",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Aleksandar Fleming je 1928. primetio da je plesan ubio bakterije na posudi za kulturu. Iz ove šanse rođen je prvi veliki antibiotik.",
+  "hero": {
+    "image": "la_decouverte_de_la_penicilline",
+    "ratio": "16:9",
+    "hook": "Zaboravljena kutija, kalup, a lek se okreće naopačke."
+  },
+  "sections": [
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pre antibiotika, jednostavna infekcija je mogla da ubije. Posekotina, upala pluća, ratna rana: telo se često borilo samo."
+        },
+        {
+          "type": "paragraph",
+          "text": "U **1928**, škotski lekar **Aleksandar Fleming** slučajno je otkrio supstancu sposobnu da ubije bakterije. Zvaće se **penicilin**. Ali i dalje će biti potrebne godine da od njega postane pravi lek."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
+      "title": "Zaboravljena kutija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fleming proučava bakterije u Londonu. Vraćajući se sa odmora, gleda stare kutije kulture. Na jednom od njih je izrastao **kalup**. Oko nje su bakterije mrtve."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Fleming i ključna ideja: nešto u kalupu zaustavlja bakterije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kalup pripada rodu **Penicillium**. Fleming shvata da proizvodi antibakterijsku supstancu. On to zove penicilin. Ali ne može ga dovoljno očistiti da leči bolesne."
+        },
+        {
+          "type": "funFact",
+          "text": "Fleming je kasnije rekao da bi, da je bio uredniji, bacio kutiju. Nered u laboratoriji pomogao je otkriću."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p2",
+      "title": "Oksford pretvara ideju u lek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na početku **1940** godina, u Oksfordu, **Hovard Florei** i **Ernst Chain** vratili su se na posao. Sa svojim timom su izolovali, koncentrisali i testirali penicilin na životinjama, zatim na ljudima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Drugi svetski rat je učinio stvari hitnim: zaraženi vojnici su morali da se leče. Penicilin prelazi iz laboratorije u strateško pitanje."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p3",
+      "title": "Masovna proizvodnja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "penicillin_antibiotic_production_laboratory",
+          "ratio": "4:3",
+          "caption": "Bilo je neophodno izmisliti industrijske načine uzgoja buđi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za lečenje miliona ljudi potrebne su ogromne količine. Sjedinjene Države su industrijalizovale proizvodnju tokom rata. Ogromne bačve čine da buđ nestaje kao pivo."
+        },
+        {
+          "type": "paragraph",
+          "text": "U **1945**, Fleming, Florei i Chain su dobili Nobelovu nagradu. Medicina ulazi u doba antibiotika."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p4",
+      "title": "Senka otpora",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Danas je previše zloupotrebljenih antibiotika omogućilo određenim bakterijama da postanu **otpor**: lekovi ih više ne ubijaju. Fleming je već upozorio na ovaj rizik."
+        },
+        {
+          "type": "takeaway",
+          "text": "Penicilin je nastao iz slučajnosti koju je primetio Fleming u **1928**, a zatim je postao lek zahvaljujući Floriju, Čejnu i ratnoj industriji. Spasio je milione života... sve dok ga ne istrošite."
+        }
+      ]
+    }
+  ]
+}

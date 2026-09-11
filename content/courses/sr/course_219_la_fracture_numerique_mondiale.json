@@ -1,0 +1,104 @@
+{
+  "id": "course_219_la_fracture_numerique_mondiale",
+  "title": "Globalni digitalni jaz",
+  "subtitle": "Trećina čovečanstva van mreže",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "2,7 milijardi ljudi još uvek nema pristup internetu. U sve digitalnijem svetu, ovaj nedostatak veze postaje novi oblik isključenosti.",
+  "hero": {
+    "image": "la_fracture_numerique_mondiale",
+    "ratio": "16:9",
+    "hook": "Kenija je izmislila plaćanje telefonom deset godina pre Evrope, zbog nedostatka filijala banaka."
+  },
+  "sections": [
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dok razvijena društva doživljavaju revoluciju koju pokreće veštačka inteligencija, brutalna realnost i dalje postoji: **2,7 milijardi ljudi**, ili oko trećine čovečanstva, još uvek nema pristup internetu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova **digitalna podela** nije samo tehničko kašnjenje: ona je postala prava barijera koja drži milione ljudi dalje od obrazovanja, zdravstva i globalne ekonomije. Evo zašto to postoji i kako neke zemlje pokušavaju da ga popune."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p1",
+      "title": "Karta sveta sa dve brzine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Do 2024. godine oko 5,4 milijarde ljudi biće povezano na internet širom sveta, ali napredak stagnira u najsiromašnijim regionima. Evropa i Severna Amerika prelaze 90% povezanosti, dok podsaharska Afrika ostaje na samo 37%."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo isključenje je zbog nekoliko razloga. Prvo, nedostatak infrastrukture: operateri smatraju da je instaliranje optičkih vlakana u određenim izolovanim regionima preskupo. Zatim, cena: u nekim zemljama, jednostavan početni nivo [[smartfon]]ZZKSG0ZZ predstavlja nekoliko meseci plate. Konačno, jezička barijera (oko 70% veb sadržaja je na engleskom) i nedostatak digitalne obuke ograničavaju upotrebu čak i kada postoji veza."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p2",
+      "title": "Kada nedostatak infrastrukture tera inovacije",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ova podela deluje kao množilac nejednakosti. U svetu u kome rad na daljinu, e-trgovina i onlajn obrazovanje ([[MOOC]]ZZKSG0ZZ) postaju norma, nepovezanost znači postati nevidljiv za globalnu ekonomiju."
+        },
+        {
+          "type": "image",
+          "asset": "digital_divide_africa_rural_village_smartphone",
+          "ratio": "16:9",
+          "caption": "U mnogim ruralnim oblastima mobilni telefon ostaje jedina tačka pristupa Internetu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kenija ilustruje još jedan put: zbog nedostatka filijala banaka, zemlja je masovno usvojila jednostavan sistem plaćanja putem SMS-a 2007. [[Kenijski M-Pesa]]ZZKSG0ZZ, pobedivši Evropu za deset godina. Ovaj sistem je omogućio milionima ljudi bez bankovnih računa da obavljaju bezbedne transakcije pomoću jednostavnog telefona."
+        },
+        {
+          "type": "funFact",
+          "text": "Kenija je ovu strategiju nazvala tehnološkim skokom: umesto da instalira skupu i zastarelu infrastrukturu, zemlja je prešla direktno na modernije i jeftinije rešenje."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p3",
+      "title": "Satelitski Internet: rešenje podložno uslovima",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Da bi povezali najizolovanija sela, novi igrači računaju na prostor. Projekat [[Starlink]]ZZKSG0ZZ šalje hiljade satelita u nisku orbitu, omogućavajući brzu vezu čak i u pustinjama ili visokim planinama, bez potrebe za polaganjem jednog kabla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ali cena pretplate i opreme ostaje usklađena sa zapadnim standardima, što ova rešenja čini nedostupnim najsiromašnijem ruralnom stanovništvu bez spoljne pomoći. Otklanjanje digitalnog jaza se stoga ne može postići samo tehnologijom: takođe je potrebna politička volja da se internet učini nečim dostupnim svima."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p4",
+      "title": "Veštačka inteligencija, novi jaz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Brzi uspon veštačke inteligencije preti da dodatno proširi ovu podelu. To zahteva ogromnu moć računara i podataka, resurse koncentrisane u rukama nekoliko zemalja i kompanija. Nepovezane populacije tada rizikuju da postanu zavisne od alata dizajniranih bez uzimanja u obzir njihove kulture ili jezika."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jaz u veštinama između povezanih i nepovezanih učenika takođe bi se mogao veoma brzo proširiti. Izazov za naredne godine stoga više neće biti samo da se obezbedi veza, već da se garantuje pravičan pristup stvaranju digitalne vrednosti, kombinovanjem nižih troškova, lokalnog sadržaja i obuke."
+        },
+        {
+          "type": "takeaway",
+          "text": "2,7 milijardi ljudi i dalje je isključeno sa interneta danas, što je podela koja rizikuje da se pogorša sa veštačkom inteligencijom. Smanjenje ovog jaza zahteva transformaciju povezivanja u stvarno dobro dostupno svima, a ne samo u proizvod za prodaju."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "course_56_la_decouverte_de_la_radioactivite_marie",
+  "title": "Otkriće radioaktivnosti",
+  "subtitle": "Marie Curie",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Marija Kiri, sa Pjerom Kirijem i Anrijem Bekerelom, otvara poglavlje o radioaktivnosti. Dve Nobelove nagrade, ogroman rad i ogromno nasleđe.",
+  "hero": {
+    "image": "la_decouverte_de_la_radioactivite_marie_curie",
+    "ratio": "16:9",
+    "hook": "Izmerila je tone rude da bi izolovala nekoliko grama nevidljivog elementa."
+  },
+  "sections": [
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Marie Curie** (rođena Marija Sklodovska) je prva žena koja je dobila Nobelovu nagradu. Ona je i dalje jedina osoba koja je dobila **TV** u dve različite nauke: fizici, zatim hemiji."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njen predmet: **radioaktivnost**, odnosno činjenica da određeni atomi spontano šalju energiju i čestice."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
+      "title": "Uska vrata nauke",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rođena u Poljskoj, otišla je da studira u Parizu jer su lokalni univerziteti zatvorili mnoga vrata ženama. Ona naporno radi, često u nesigurnim uslovima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Udala se za **Pierre Curie**, fizičara. Zajedno su formirali retki laboratorijski duo za to vreme."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
+      "title": "Imenujte nevidljivo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1896**, **Henri Beckuerel** je primetio da uranijum pokriva fotografske ploče bez svetlosti. Marie Curie odlučuje da detaljno prouči ovaj fenomen. Ona je izmislila reč **radioaktivnost**."
+        },
+        {
+          "type": "image",
+          "asset": "marie_curie_pitchblende_radioactivity",
+          "ratio": "4:3",
+          "caption": "Tone smole za izolovanje radijuma i polonijuma."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sa Pjerom, ona otkriva dva nova elementa: **polonijum** (nazvan po Poljskoj) i **radijuma**. Da bi se izolovali, moraju se preraditi ogromne količine rude, smole."
+        },
+        {
+          "type": "funFact",
+          "text": "Radijum slabo svetli u mraku. Prvo smo bili zapanjeni… pre nego što smo shvatili koliko je to opasno."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
+      "title": "Slava i cena koju treba platiti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **1903**, Mari, Pierre i Beckuerel dobili su Nobelovu nagradu za fiziku. U **1911**, samo Mari je dobila Nobelovu nagradu za hemiju. Pjer je slučajno umro 1906. Ona nastavlja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tokom Prvog svetskog rata organizovala je mobilne rendgen jedinice za lečenje ranjenika. Ona izlaže svoje telo dozama za koje danas znamo da su neprihvatljive."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
+      "title": "Dvostrano nasleđe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Radioaktivnost je omogućila radioterapiju protiv određenih karcinoma... a takođe i nuklearno oružje. Znanje je neutralno; njegove upotrebe nisu."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marija Kiri je transformisala čudno zapažanje u novu nauku: radioaktivnost. Njegov rad je otvorio modernu fiziku... po cenu rizika koji je tada bio slabo shvaćen."
+        }
+      ]
+    }
+  ]
+}

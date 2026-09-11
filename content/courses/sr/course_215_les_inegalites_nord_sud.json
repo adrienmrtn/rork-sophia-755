@@ -1,0 +1,104 @@
+{
+  "id": "course_215_les_inegalites_nord_sud",
+  "title": "Nejednakosti sever-jug",
+  "subtitle": "Svet sa dve brzine",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Najbogatijih 10% na planeti zauzimaju više od polovine globalnog prihoda. Međutim, ekstremno siromaštvo je podeljeno na četiri za trideset godina.",
+  "hero": {
+    "image": "les_inegalites_nord_sud",
+    "ratio": "16:9",
+    "hook": "Amerikanac zaradi za sat vremena ono što stanovnik Nigera zaradi za ceo dan rada."
+  },
+  "sections": [
+    {
+      "id": "course_215_les_inegalites_nord_sud_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jaz između bogatih i siromašnih zemalja i dalje je jedna od najupadljivijih činjenica u današnjem svetu. Globalizacija je obećavala približavanje životnog standarda, ali jaz u bogatstvu i dalje je ogroman među nacijama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Međutim, nedavna istorija nije samo sumorna: ekstremno siromaštvo je opadalo brže nego ikada u poslednjih trideset godina. Ovaj kurs istražuje korene ovih nejednakosti i razloge za ovaj čudan paradoks."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p1",
+      "title": "Svet sa dve brzine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**** najbogatijih 10% svetske populacije ostvaruje više od 52% globalnog prihoda. Najsiromašnijih 50% mora da deli samo 8% kolača. Ova koncentracija bogatstva nikada nije bila veća u ljudskoj istoriji."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova podela se takođe vidi u očekivanom životnom veku: dostiže 83 godine u Japanu, ali pada na 55 godina u Centralnoafričkoj Republici. Ove praznine nisu slučajne: one potiču iz veoma nejednakog pristupa vodi za piće, hrani i zdravstvenoj zaštiti."
+        },
+        {
+          "type": "funFact",
+          "text": "Stanovnik Sjedinjenih Država u proseku zaradi, za jedan sat rada, koliko i stanovnik Nigera za ceo dan."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p2",
+      "title": "Istorijski koreni su još uvek živi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Da bismo razumeli ove razlike, moramo se vratiti kolonizaciji. Evropske sile su organizovale mnoge južne teritorije kao dobavljače sirovina (kafa, kakao, pamuk), obuzdavajući sopstvenu industrijalizaciju da bi zaštitile sopstvene fabrike."
+        },
+        {
+          "type": "image",
+          "asset": "global_inequality_rich_poor_contrast_photograph",
+          "ratio": "16:9",
+          "caption": "Jaz u bogatstvu između severa i juga ostaje među najvećim na planeti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ova logika se nastavlja i danas kroz [[uslovi trgovine]]ZZKSG0ZZ: zemlje juga često prodaju sirovine čija cena uveliko varira, dok kupuju proizvedene proizvode čija cena samo raste. Ovome se dodaje i težina duga: otplata kamata ponekad zauzima više prostora u nacionalnom budžetu nego obrazovanje ili zdravstvo."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p3",
+      "title": "Pravi napredak, ali neujednačen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Međutim, u poslednjih trideset godina došlo je do spektakularnog pada apsolutnog siromaštva, koje je pogodilo 36% svetske populacije 1990. godine, u poređenju sa manje od 10% pre 2020. godine. Ovaj napredak potiče uglavnom od meteorskog rasta Kine i Indije."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj napredak ima skrivenu stranu: to pokazuje  „Slonova kriva“ (Milanović)ZZKSG0ZZ ekonomiste Branka Milanovića. Azijska srednja klasa doživela je eksploziju svojih prihoda, ali radnička klasa u bogatim zemljama stagnirala je, suočena sa globalnom konkurencijom. Smanjenje nejednakosti među zemljama stoga nije sprečilo nove tenzije čak ni unutar bogatih zemalja."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p4",
+      "title": "Klima, nova linija podele",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Budućnost nejednakosti između severa i juga sada zavisi od klime. Zemlje juga, koje su istorijski najmanje odgovorne za emisije gasova staklene bašte, ipak su najizloženije sušama, poplavama i porastu nivoa vode."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da bi se ove praznine na održiv način smanjile, međunarodna zajednica istražuje nove puteve:  [[zvanična razvojna pomoć]]ZZKSG0ZZ usmerena na energetsku tranziciju, ili otkazivanje duga najkrhkijih zemalja. Sve dok bogatstvo najbogatijih raste brže od bogatstva najsiromašnijih, tenzije će ostati visoke."
+        },
+        {
+          "type": "takeaway",
+          "text": "Najbogatijih 10% sveta ostvaruje više od polovine globalnog prihoda, ali ekstremno siromaštvo se smanjilo brže nego ikada u poslednjih trideset godina zahvaljujući usponu Kine i Indije. Sledeći veliki izazov u ovoj podeli sever-jug biće klima."
+        }
+      ]
+    }
+  ]
+}

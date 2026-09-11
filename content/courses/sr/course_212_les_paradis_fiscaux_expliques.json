@@ -1,0 +1,108 @@
+{
+  "id": "course_212_les_paradis_fiscaux_expliques",
+  "title": "Objašnjeni poreski rajevi",
+  "subtitle": "Sakriveno 10.000 milijardi",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Oko 10% globalnog bogatstva izbegava poreze na neprozirnim teritorijama. Kako ovaj sistem funkcioniše i zašto je tako otporan?",
+  "hero": {
+    "image": "les_paradis_fiscaux_expliques",
+    "ratio": "16:9",
+    "hook": "Kajmanska ostrva imaju 65.000 stanovnika i preko 100.000 preduzeća. Dobrodošli u svet poreskih rajeva."
+  },
+  "sections": [
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Određene teritorije, često male, omogućavaju kompanijama i velikim bogatstvima da skoro u potpunosti izbegnu porez u zemlji porekla. Ove **zovemo poreskim rajevima**. Procenjuje se da je tamo smešteno oko 10 biliona dolara, ili 8 do 10% svetskog bogatstva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovo nije problem samo za računovođe: uskraćuje državama 600 milijardi dolara godišnje, novca koji je mogao da finansira bolnice ili škole. Evo kako ovaj diskretni sistem funkcioniše i zašto se tako dobro opire pokušajima regulacije."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p1",
+      "title": "Kako se krije novac",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Poreski raj se zasniva na tri stuba: porezi blizu nule, velika neprozirnost i mala saradnja sa drugim zemljama. Ove teritorije tako privlače kapital iz celog sveta, ono što zovemo [[Offshore]]ZZKSG0ZZ ekonomija."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na mnogim od ovih teritorija moguće je stvoriti fiktivnu kompaniju: posao bez kancelarije ili zaposlenih, koji postoji samo na papiru. Njegova jedina svrha je često da sakrije identitet pravog vlasnika novca, koji se naziva stvarni vlasnik."
+        },
+        {
+          "type": "image",
+          "asset": "cayman_islands_offshore_banking_paradise",
+          "ratio": "4:3",
+          "caption": "Kajmanska ostrva, jedan od najvećih finansijskih centara na svetu uprkos svojoj maloj veličini."
+        },
+        {
+          "type": "funFact",
+          "text": "Kajmanska ostrva imaju samo 65.000 stanovnika, ali je tamo registrovano više od 100.000 kompanija: to je peti finansijski centar u svetu za bankarske depozite, na površini manjoj od Pariza."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p2",
+      "title": "Umetnost sticanja profita nestaje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za velike kompanije cilj nije nužno ilegalan: govorimo o **optimizaciji poreza**, odnosno veštom korišćenju pravila svake zemlje za plaćanje manjeg poreza. Glavni alat se zove [[Transferne cene]]ZZKSG0ZZ: kompanija sama postavlja cenu razmene između svojih filijala, kako bi pokazala svoj profit tamo gde je porez najniži."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uobičajeni metod je prenos brenda ili patenta na podružnicu koja se nalazi u poreskom raju. Ostale podružnice, koje se nalaze na primer u Francuskoj, tada moraju da plate ogromne sume za pravo korišćenja ovog brenda. Ova plaćanja smanjuju njihov oporezivi profit na lokalnom nivou, dok ga povećavaju u poreskom raju."
+        },
+        {
+          "type": "funFact",
+          "text": "Francuska reč „poreski raj” dolazi od greške u prevodu: Englezi kažu „poreski raj”, sigurna luka za novac (haven), a ne raj (raj). Zbrka zvukova promenila je značenje reči."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p3",
+      "title": "Svet reaguje (malo)",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Finansijska kriza 2008. godine, zatim objavljivanje [[Panama Papers]]ZZKSG0ZZ 2016. godine, izazvala je talas negodovanja. Pod pritiskom OECD-a i G20, banke sada moraju automatski da prenose informacije o svojim stranim klijentima poreskim upravama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najznačajniji napredak dogodio se 2021. godine, sa međunarodnim sporazumom koji je odredio minimalnu poresku stopu od 15% za multinacionalne kompanije. Ideja: sprečiti zemlje da se takmiče jedna sa drugom beskonačnim snižavanjem svojih poreza da bi privukla preduzeća. Ako kompanija plaća samo 5% u poreskom raju, njena matična zemlja sada može tražiti preostalih 10%."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p4",
+      "title": "Poreska pravda i dalje krhka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kada najveća bogatstva izbegnu poreze, srednja klasa i mala lokalna preduzeća snose veći deo poreskog opterećenja. Ovo takođe slabi javne usluge kao što su zdravstvo ili obrazovanje, zbog nedostatka resursa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bitka se sada kreće ka digitalnom: onlajn platformama više nisu potrebne kancelarije da bi zaradile novac u zemlji, što poreske granice čini sve poroznijim. Administracije sada koriste velike podatke da bi uočile anomalije i zahtevaju javne registre koji otkrivaju identitet stvarnih vlasnika kompanija."
+        },
+        {
+          "type": "takeaway",
+          "text": "Poreski rajevi skrivaju oko 10% svetskog bogatstva zahvaljujući bankarskoj tajni i skoro nultom oporezivanju. Od 2021. globalna minimalna poreska stopa od 15% pokušava da ograniči ovu utaju, ali bitka je i dalje daleko od dobijene."
+        }
+      ]
+    }
+  ]
+}

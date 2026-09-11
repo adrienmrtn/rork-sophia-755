@@ -1,0 +1,129 @@
+{
+  "id": "course_15_la_belle_epoque_1871_1914",
+  "title": "Belle Epokue",
+  "subtitle": "1871-1914",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Između kraja rata 1870. i avgusta 1914. Evropa je verovala u napredak. Struja, izložbe, nove umetnosti... i lomovi koji vode u katastrofu.",
+  "hero": {
+    "image": "la_belle_epoque",
+    "ratio": "16:9",
+    "hook": "Četrdeset godina vere u napredak... pre nego što se sve promenilo 1914."
+  },
+  "sections": [
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Belle Epokue** označava period relativnog mira između kraja [[Francusko-pruski rat]]ZZKSG0ZZ (**1871**) i izbijanja [[Prvi svetski rat]]ZZZZ4ZZZZZBOLD19. Verujemo u nauku, u napredak, u razum."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za bogate klase zapadne Evrope bile su to četiri decenije udobnosti i pronalaska. Ali ispod furnira već sijaju društveni lomovi i rivalstva koja će sve razneti."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p1",
+      "title": "Kada tehnologija transformiše svakodnevni život",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Druga industrijska revolucija donosi **struja**, **ulje**, hemiju. Tramvaj i metro (Pariz, **1900**) menjaju grad. Rađaju se automobil i avion. Telefon skraćuje razdaljine."
+        },
+        {
+          "type": "image",
+          "asset": "paris_universal_exhibition_1900",
+          "ratio": "4:3",
+          "caption": "Univerzalna izložba 1900. u Parizu, prikaz napretka."
+        },
+        {
+          "type": "funFact",
+          "text": "Ime „Belle Epokue“ se pojavljuje samo posle **1914**. Savremenici nisu živeli u „bele epoki“: preživeli iz rovova su izmislili ovaj izgubljeni raj."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1900 Svetski sajam** privlači **50 miliona** posetilaca. Bioskop braće Lumière i Mulen Ruž čine Pariz prestonicom zabave. [[Pozitivizam Ogista Konta]]ZZKSG0ZZ, veoma uticajna filozofija, sumira optimizam: nauka će sve rešiti."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p2",
+      "title": "Iza kulisa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iza bulevara radnici često rade **10 do 12 sub** dnevno, bez prave zaštite. Gradsko siromaštvo podstiče tenzije između klasa."
+        },
+        {
+          "type": "image",
+          "asset": "eiffel_tower_1889",
+          "ratio": "4:3",
+          "caption": "Ajfelova kula (1889), ikona modernosti koja ne koristi svima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na globalnom nivou, Evropa deli Afriku. [[Berlinska konferencija]]ZZKSG0ZZ (**1884-1885**) postavlja granice bez konsultacija sa zainteresovanim narodima. U Francuskoj, [[Drajfusova afera]]ZZKSG1ZZ razbija Republiku: jevrejski oficir Alfred Drajfus je pogrešno osuđen za špijunažu, a antisemitizam izlazi na videlo."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p3",
+      "title": "Nove umetnosti, pa jesen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Umetnost eksplodira. A [[Art Nouveau]]ZZKSG0ZZ zakrivljuje fasade. [[fovizam]]ZZKSG1ZZ i [[kubizam]]ZZKSG2ZZ protresaju boju. Doktor [[Sigmund Frojd]]ZZKSG3ZZ istražuje nesvesno. Albert Ajnštajn objavljuje [[Relativnost]]ZZKSG4ZZ u **1905**: prostor i vreme više nisu ono što smo mislili."
+        },
+        {
+          "type": "funFact",
+          "text": "U **1913**, balet *Obred proleća* Igora Stravinskog izazvao je toliki skandal u Parizu da su se gledaoci sukobili."
+        },
+        {
+          "type": "paragraph",
+          "text": "Onda se sve menja. **28. juna 1914. godine.**, u Sarajevu je ubijen nadvojvoda **Fransoa-Ferdinand**, naslednik Austrougarske. Zupčanici saveza su pokrenuti. **U 4.**, Ujedinjeno Kraljevstvo ulazi u rat. Vera u napredak umire u rovovima."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1871",
+              "title": "Kraj francusko-pruskog rata",
+              "detail": "Rođenje ujedinjene Nemačke, francuska ogorčenost."
+            },
+            {
+              "date": "1889",
+              "title": "Ajfelov toranj",
+              "detail": "Simbol tehničke modernosti."
+            },
+            {
+              "date": "1894-1906",
+              "title": "Drajfusova afera",
+              "detail": "Republika sama sebe kida."
+            },
+            {
+              "date": "1900",
+              "title": "Univerzalna izložba",
+              "detail": "Pariz, izlog sveta."
+            },
+            {
+              "date": "avgusta 1914. godine",
+              "title": "Veliki rat",
+              "detail": "Belle Epokue se naglo završava."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Belle Epokue (**1871-1914**) kombinuje tehnički napredak i duboke lomove, pre nego što je potonuo u haos Velikog rata."
+        }
+      ]
+    }
+  ]
+}

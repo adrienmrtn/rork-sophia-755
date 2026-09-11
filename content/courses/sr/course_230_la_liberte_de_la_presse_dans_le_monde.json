@@ -1,0 +1,122 @@
+{
+  "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
+  "title": "Sloboda štampe širom sveta",
+  "subtitle": "Zakon pod pritiskom",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Manje od **10% stanovništva** živi u zemlji u kojoj je štampa zaista slobodna. Između državne cenzure i ekonomskog pritiska, ovo suštinsko pravo je u povlačenju skoro svuda.",
+  "hero": {
+    "image": "la_liberte_de_la_presse_dans_le_monde",
+    "ratio": "16:9",
+    "hook": "Informisanje ponekad košta slobodu, pa čak i život: putovanje do srca krhke desnice."
+  },
+  "sections": [
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Sloboda štampe** jedan je od najboljih pokazatelja demokratskog zdravlja jedne zemlje. Ono nije ograničeno na pravo na objavljivanje: ono uključuje mogućnost građana da pristupe proverenim informacijama nezavisno od postojećih ovlašćenja. Širom sveta, ovo pravo je pod dvostrukim pritiskom: direktnom represijom u autoritarnim režimima i diskretnijim slabljenjem u samim demokratijama."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p1",
+      "title": "Sve opasnija profesija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Organizacija [[Reporteri bez granica (RSF)]]ZZKSG0ZZ svake godine objavljuje referentni izveštaj o preprekama novinarskoj profesiji širom sveta."
+        },
+        {
+          "type": "image",
+          "asset": "press_freedom_world_map_RSF_index",
+          "ratio": "16:9",
+          "caption": "Manje od 10% svetske populacije živi u zemlji u kojoj je štampa zaista slobodna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Podaci iz 2024. su alarmantni: manje od **10%** svetske populacije živi u oblasti u kojoj štampa radi nesmetano. Dok zemlje poput Norveške održavaju visoke standarde, veliki regioni poput Kine, Rusije i Irana smatraju da je istraživačko novinarstvo oblik izdaje."
+        },
+        {
+          "type": "funFact",
+          "text": "U Turkmenistanu država tako strogo kontroliše informacije da je zabranila reč „koronavirus“ u medijima na početku pandemije 2020."
+        },
+        {
+          "type": "paragraph",
+          "text": "U 2023. godini najmanje 79 novinara je izgubilo život u obavljanju svoje profesije, često na meti da ućutkaju sramotne istrage. Skoro 600 novinara biva zatvoreno svake godine širom sveta."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p2",
+      "title": "Demokratije nisu imune",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suprotno popularnom verovanju, sloboda štampe nije zauvek zagarantovana u zapadnim zemljama. Tamo je doživeo diskretnije transformacije, povezane sa medijskom koncentracijomZZKSG0ZZ i finansijskim uticajem nekoliko velikih grupa."
+        },
+        {
+          "type": "paragraph",
+          "text": "U Mađarskoj je [[Viktor Orban]]ZZKSG0ZZ primenio efikasnu strategiju: umesto da zabrani opozicione medije, on je favorizovao njihovo preuzimanje od strane onih bliskih vlasti, postepeno pretvarajući medijski pejzaž u zvaničnu eho komoru."
+        },
+        {
+          "type": "paragraph",
+          "text": "U Francuskoj se debata uglavnom odnosi na koncentraciju medija u rukama nekoliko velikih grupa, što izaziva strah od samocenzure redakcije. Na drugim mestima, uvredljivi pravni postupci, nazvani [[SLAPP]]ZZKSG0ZZ, sve su prisutniji kako bi se zastrašili kritičari."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p3",
+      "title": "Novac, novi protivnik novinarstva",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Osim političkih pretnji, novinarstvo se suočava sa dubokom ekonomskom krizom. Istorijski model, zasnovan na individualnoj prodaji i oglašavanju, propao je sa digitalnom tehnologijom, sa velikim platformama koje sada preuzimaju većinu onlajn oglašavanja."
+        },
+        {
+          "type": "image",
+          "asset": "newspaper_crisis_digital_transformation_journalism",
+          "ratio": "4:3",
+          "caption": "Istorijski ekonomski model štampe je urušen sa digitalnom tehnologijom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovaj pad resursa dovodi do zatvaranja mnogih lokalnih novina, stvarajući „informacione pustinje“ u kojima niko ne prati radnje lokalnih izabranih zvaničnika. Suočeni sa ovim, pojavljuju se novi modeli finansirani donacijama ili direktnim pretplatama, kao što su Mediapart u Francuskoj ili ProPublica u Sjedinjenim Državama, koji dokazuju da nezavisno novinarstvo može biti i profitabilno."
+        },
+        {
+          "type": "funFact",
+          "text": "Prve štampane novine u istoriji, „Relation”, pokrenuo je u Strazburu 1605. Johan Karolus, mnogo pre legalnog pronalaska slobode štampe."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
+      "title": "Proveravanje stvarnosti u svetu zasićenom slikama",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Digitalno doba je ubrzalo informacije, ali je otvorilo i vrata [[dezinformacije]]ZZKSG0ZZ. Algoritmi društvenih medija favorizuju emocionalni sadržaj u odnosu na analizu činjenica, fragmentirajući naš zajednički pogled na svet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uloga novinara se stoga razvija ka ulozi „proverivača” stvarnosti, u stalnom toku slika i podataka. Etička pitanja postaju složenija, kao u fotoreporterstvu u zonama sukoba, gde se poštovanje ljudskog dostojanstva ponekad sukobljava sa potrebom da se pokaže."
+        },
+        {
+          "type": "paragraph",
+          "text": "Odbrana slobode štampe stoga zahteva bolju regulaciju glavnih digitalnih platformi i pojačano medijsko obrazovanje. Bez slobodne štampe sposobne da potvrdi činjenice, demokratska debata rizikuje da se raspadne u svetu u kome su sva mišljenja jednaka, bez obzira na njihovu istinitost."
+        },
+        {
+          "type": "takeaway",
+          "text": "Manje od 10% svetske populacije živi u zemlji u kojoj je štampa zaista slobodna. Između direktne represije, ekonomskih pritisaka i digitalnih dezinformacija, ovo suštinsko pravo na demokratiju je u opadanju skoro svuda."
+        }
+      ]
+    }
+  ]
+}

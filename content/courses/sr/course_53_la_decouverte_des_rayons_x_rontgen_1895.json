@@ -1,0 +1,98 @@
+{
+  "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
+  "title": "Otkriće rendgenskih zraka",
+  "subtitle": "Rendgen, 1895",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Godine 1895. Vilhelm Rentgen je otkrio nevidljivo zračenje sposobno da prođe kroz materiju. Za nekoliko meseci medicina je doživela revoluciju.",
+  "hero": {
+    "image": "la_decouverte_des_rayons_x_rontgen",
+    "ratio": "16:9",
+    "hook": "Ruka, kosti, fotografija. Medicina nikada više neće biti slepa."
+  },
+  "sections": [
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**8. novembra 1895. godine.**, u Vircburgu (Nemačka), fizičar **Vilhelm Rontgen** primećuje ekran koji sija... iako na njega ne utiče vidljiva svetlost. Nešto nevidljivo prelazi sobu."
+        },
+        {
+          "type": "paragraph",
+          "text": "On to naziva **KS** zracima, a „Ks“ znači „nepoznato“. U roku od nekoliko nedelja fotografisao je kosti ruke svoje žene. Radiologija je rođena."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
+      "title": "Nesreća u laboratoriji",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rentgen radi sa cevi gde elektroni pogađaju metu. Obložio je cev crnim kartonom. Međutim, fluorescentni ekran sija iz daljine. On razume da nevidljivo zračenje izlazi iz cevi."
+        },
+        {
+          "type": "image",
+          "asset": "wilhelm_rontgen_x_ray_hand_1895",
+          "ratio": "4:3",
+          "caption": "Čuvena slika: kosti ruke i burma."
+        },
+        {
+          "type": "funFact",
+          "text": "Rentgen nikada nije prijavio patent za rendgenske snimke. Želeo je da cela nauka može slobodno da ih koristi."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
+      "title": "Medicina zapleni alat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "early_x_ray_medical_radiograph",
+          "ratio": "4:3",
+          "caption": "Vrlo brzo su lekari i vojske koristili rendgenske zrake."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ranije, da biste „videli“ prelom ili metak, često ste morali da ga otvorite. Rendgenskim zracima dobijamo sliku unutrašnjosti bez rezanja. Bolnice i vojske usvajaju tehniku vrtoglavom brzinom."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
+      "title": "Dugo zanemarena opasnost",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U početku ignorišemo rizike. Operateri satima snimaju rendgenske snimke. Opekotine, zatim se pojavljuju kanceri. Biće potrebno vreme da shvatimo da su rendgenski zraci moćni... i opasni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Danas štitimo pacijente i negovatelje: ograničene doze, olovne kecelje, stroge kontrole."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p4",
+      "title": "Nasleđe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rendgenski zraci su utrli put za sve moderne slike: skenere, industrijske kontrole, pa čak i proučavanje strukture kristala (kasnije korisno za DNK)."
+        },
+        {
+          "type": "takeaway",
+          "text": "U **1895**, Rentgen je otkrio rendgenske zrake, nevidljivo zračenje koje prolazi kroz materiju. Medicina dobija novu perspektivu... pod uslovom da se kontrolišu rizici."
+        }
+      ]
+    }
+  ]
+}

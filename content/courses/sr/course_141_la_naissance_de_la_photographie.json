@@ -1,0 +1,131 @@
+{
+  "id": "course_141_la_naissance_de_la_photographie",
+  "title": "Rođenje fotografije",
+  "subtitle": "1839",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "U **1839**, nekoliko pronalazača je konačno pronašlo kako da prikači sliku na ploču. Za manje od jednog veka, fotografija je promenila način na koji vidimo, pamtimo i verujemo.",
+  "hero": {
+    "image": "la_naissance_de_la_photographie",
+    "ratio": "16:9",
+    "hook": "Kako je hemijski izum ukrao monopol slikarstva na stvarnost."
+  },
+  "sections": [
+    {
+      "id": "course_141_la_naissance_de_la_photographie_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For centuries, artists have used the [[mračna komora]]: a dark box that projects the outside world onto a wall. Problem ostaje isti: slika nestaje čim ugasite svetlo. U **1839**, fotografija je zvanično rođena. To nije delo jednog genija, već trka između francuskih i britanskih pronalazača."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za manje od jednog veka, ovaj proces je oslobodio slikarstvo uloge dokumenta i postao prvi masovni medij. To menja naš odnos prema vremenu, pamćenju i vizuelnoj istini."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p1",
+      "title": "Od Niepcea do dagerotipije",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sve počinje sa **Nikifor Njeps**, francuskim pronalazačem. Oko **1826-1827** popravlja prvu trajnu sliku: *Pogled iz prozora Bold*. Limenu ploču premaže bitumenom JudejeZZKSG0ZZ, katranom koji se stvrdne na svetlosti. Ekspozicija traje približno **8 satis**: sunce ima vremena da osvetli obe strane zgrada."
+        },
+        {
+          "type": "image",
+          "asset": "niepce_first_photograph_view_from_window_gras",
+          "ratio": "4:3",
+          "caption": "Najstarija poznata fotografija koju je Niepce snimio sa svog prozora."
+        },
+        {
+          "type": "funFact",
+          "text": "Na ovoj slici istovremeno su vidljive senke dveju fasada: pucnjava je trajala toliko dugo da je sunce kružilo nebom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nakon Niepceove smrti, njegov saradnik **Louis Daguerre** otkrio je efekat joda i živinih para na srebro. Razvio je **dagerotip**, predstavljen Akademiji nauka u **1839**. U Engleskoj, **Vilijam Fok Talbot** je istovremeno razvio [[Kalotip Vilijama Foksa Talbota]]ZZKSG0ZZ, koji omogućava da se napravi nekoliko kopija od negativa."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p2",
+      "title": "Portret za sve, dokaz za sve",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iz godina **1840**, fotografija je napustila laboratorije. Do tada je imati svoj portret bio luksuz rezervisan za one koji su mogli da plate slikara. Sa studijima i Carte-de-siteZZKSG0ZZ, malim, jeftinim formatom, buržoazija, a zatim i radnička klasa, imaju pristup slici o sebi."
+        },
+        {
+          "type": "image",
+          "asset": "louis_daguerre_daguerreotype_silver_plate",
+          "ratio": "4:3",
+          "caption": "Dagerotipija: jedinstvena slika, upečatljivih detalja, na srebrnoj ploči."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fotografija takođe postaje dokaz. Tokom Krimskog rata (**1855**), **Roger Fenton** izveštava o slikama sa fronta. Tokom Američkog građanskog rata, **Mathev Bradi** je fotografisao vojnike i bojišta. Događaj više nije samo ispričan: on je prikazan."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p3",
+      "title": "Kada slikanje mora da se ponovo osmisli",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ako mašina kopira lice bolje od slikara, čemu je više boja? To je Uticaj fotografije na figurativnom slikarstvuZZKSG0ZZ: figurativna umetnost gubi monopol na stvarnost. Oslobođeni ove dužnosti, umetnici istražuju nešto drugo: senzaciju svetlosti sa ImpresionizmomZZKSG1ZZ, zatim deformaciju oblika sa [[kubizam]]ZZKSG2ZZ."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fotografija postepeno dobija svoj jezik: kadriranje, svetlost, trenutak. To više nije obična kopija sveta. To postaje umetnost za sebe."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p4",
+      "title": "Kodak i kultura slike",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Krajem 19. veka, Džordž Istman, osnivač Kodaka, zamenio je teške staklene ploče savitljivim filmom. Uređaj postaje prenosiv. Slogan „Vi pritisnete dugme, mi radimo ostalo“ obeležava rođenje amatera. Porodični album i globalni izveštaj su rođeni zajedno."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1826",
+              "title": "Prva fotografija Niepcea",
+              "detail": "Pogled sa prozora Gras, posle sati ekspozicije."
+            },
+            {
+              "date": "1839",
+              "title": "Dagerotipija",
+              "detail": "Dager predstavlja svoj proces u Parizu."
+            },
+            {
+              "date": "1841",
+              "title": "Kalotip",
+              "detail": "Talbot omogućava štampanje nekoliko kopija."
+            },
+            {
+              "date": "1888",
+              "title": "Kodak za svakoga",
+              "detail": "Eastman demokratizuje amatersku kameru."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Rođena u **1839**, fotografija je prvo fiksirala stvarnost bolje od slikanja, a zatim je izmislila našu modernu Vizuelnu kulturuZZKSG0ZZ: tamo gde prvo verujemo u ono što vidimo."
+        }
+      ]
+    }
+  ]
+}
