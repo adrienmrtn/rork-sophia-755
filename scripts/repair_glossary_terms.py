@@ -19,9 +19,12 @@ the same term, and ``_catalog_mt_cache/<lang>.json`` — the map the glossary
 catalogue itself was built from — gives that term's registered rendering.
 
 A span is only rewritten when the replacement is a registered key for that course,
-so this can never introduce a term the app cannot resolve. Blocks whose span
-counts differ are left alone: a term was dropped there, which is the separate
-``glossary-count`` finding.
+so this can never introduce a term the app cannot resolve. A block that links a
+term more often than the French does keeps the occurrence standing where the
+French one stands and loses the rest — the pipeline's last-resort re-insertion
+sometimes drops a term into a slot it does not belong in ("stjæler den [[tyveri
+af Mona Lisa (1911)]]"). Blocks missing a term are left to
+``relink_dropped_terms``.
 
 Usage:
     python scripts/repair_glossary_terms.py --check
@@ -100,6 +103,39 @@ def paired_strings(pivot, target, out: list) -> None:
                 paired_strings(left, right, out)
 
 
+def drop_surplus_spans(pivot_text: str, target_text: str) -> str:
+    """Unwrap the glossary links a block carries beyond what the French has.
+
+    The course pipeline re-inserts a term whose slot did not survive by looking
+    for an empty article slot, and that occasionally lands a second copy where
+    the sentence does not want one. The genuine occurrence is the one sitting
+    where the pivot's is, measured as a share of the paragraph, so surplus
+    copies are unwrapped farthest-first.
+    """
+    pivot_spans = list(GLOSS.finditer(pivot_text))
+    target_spans = list(GLOSS.finditer(target_text))
+    surplus = len(target_spans) - len(pivot_spans)
+    if surplus <= 0:
+        return target_text
+
+    pivot_at = [m.start() / max(len(pivot_text), 1) for m in pivot_spans]
+    scored = []
+    for index, match in enumerate(target_spans):
+        here = match.start() / max(len(target_text), 1)
+        distance = min((abs(here - at) for at in pivot_at), default=1.0)
+        scored.append((distance, index))
+    drop = {index for _, index in sorted(scored, reverse=True)[:surplus]}
+
+    out = []
+    cursor = 0
+    for index, match in enumerate(target_spans):
+        out.append(target_text[cursor : match.start()])
+        out.append(match.group(1) if index in drop else match.group(0))
+        cursor = match.end()
+    out.append(target_text[cursor:])
+    return "".join(out)
+
+
 def repair_course(
     pivot_doc,
     target_doc,
@@ -116,6 +152,12 @@ def repair_course(
 
     for pivot_text, container, key in slots:
         target_text = container[key]
+        trimmed = drop_surplus_spans(pivot_text, target_text)
+        if trimmed != target_text:
+            for extra in set(GLOSS.findall(target_text)):
+                changes.append((f"[[{extra}]]", "(surplus link dropped)"))
+            container[key] = target_text = trimmed
+
         pivot_spans = GLOSS.findall(pivot_text)
         target_spans = GLOSS.findall(target_text)
         if not target_spans or len(pivot_spans) != len(target_spans):

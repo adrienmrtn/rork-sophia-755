@@ -88,6 +88,35 @@ FRENCH_LEFTOVERS = re.compile(
     r"apr\u00e8s|depuis|jusqu|chez|sous|autour|contre|pendant|selon|"
     r"est-\u00e0-dire|c'est|n'est|d'un|d'une|l'un|aux|du)\b"
 )
+#: English function words that no target language shares. The English catalogue
+#: is built from the same French source, and the engine sometimes answers with
+#: it instead of the language asked for ("After 1945, [[Kold Krig]] and
+#: [[McCarthyisme]] took hold."). Words that are ordinary in a Germanic or
+#: Slavic language — "of", "is", "was", "over", "under", "for", "man", "den" —
+#: are deliberately absent.
+ENGLISH_LEFTOVERS = re.compile(
+    r"\b(the|and|which|with|their|they|them|were|being|"
+    r"between|during|through|without|within|against|among|"
+    r"after|before|because|however|while|where|when|what|whose|"
+    r"would|could|should|about|into|than|such|these|those|"
+    r"another|towards|toward|around|although|though)\b",
+    re.IGNORECASE,
+)
+#: English fragments every language keeps: genre and technique names that are
+#: borrowed whole. "from" is absent from the word list above for the same
+#: reason — it is Swedish and Danish for "pious".
+ENGLISH_SET_PHRASES = (
+    "call-and-response",
+    "call and response",
+    "rhythm-and-blues",
+    "rock-and-roll",
+    "rock and roll",
+    "rock'n'roll",
+    "rock 'n' roll",
+    "rhythm and blues",
+    "and roll",
+    "and blues",
+)
 #: French fragments that are ordinary English usage or fixed names, and so are
 #: removed from a segment before the leftover heuristic runs.
 FRENCH_SET_PHRASES = (
@@ -517,7 +546,17 @@ RUSSIAN_RULES = LanguageRules(
         r"\s+([,;:.!?])(?=\s|$)",
         re.IGNORECASE,
     ),
-    stranded_tight=re.compile(r"\b(\u0447\u0442\u043e)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE),
+    # Russian has no counterpart to the Czech "že": "что" before a comma is
+    # ordinary and required ("Что, если…", "потому что, не сделав ничего
+    # плохого, он был арестован"). Only a preposition ending a sentence is a
+    # reliable tell that something was deleted after it.
+    stranded_tight=re.compile(
+        r"\b(\u0438\u0437|\u043e\u0442|\u0434\u043e|\u0434\u043b\u044f|\u043f\u043e|"
+        r"\u043f\u0440\u0438|\u0431\u0435\u0437|\u043e\u0431|\u043d\u0430\u0434|"
+        r"\u043f\u043e\u0434|\u0437\u0430|\u0447\u0435\u0440\u0435\u0437)"
+        r"\s*([.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
     leading_articles=(),  # Russian has no articles
     leftover_extra_skip=frozenset(),
     check_a_an=False,
@@ -656,6 +695,35 @@ def bold_spans(text: str) -> list[str]:
     """The contents of each ``**...**`` pair, ignoring an unpaired trailing marker."""
     parts = text.split("**")
     return parts[1:-1:2] if len(parts) % 2 else []
+
+
+def residual_english(text: str) -> tuple[str, str] | None:
+    """First untranslated English function word, or None.
+
+    Same exemptions as ``residual_french``: glossary keys and anything inside
+    emphasis markers are original-language material on purpose, and a word next
+    to a capitalised one belongs to a name (*The Red and the Black*).
+    """
+    candidate = GLOSSARY_SPAN_RE.sub(" ", text)
+    candidate = re.sub(r"\*\*.+?\*\*|\*.+?\*", " ", candidate)
+    lowered = candidate.lower()
+    for phrase in ENGLISH_SET_PHRASES:
+        start = 0
+        while (index := lowered.find(phrase, start)) >= 0:
+            candidate = candidate[:index] + " " * len(phrase) + candidate[index + len(phrase) :]
+            lowered = candidate.lower()
+            start = index + len(phrase)
+    for match in ENGLISH_LEFTOVERS.finditer(candidate):
+        before = candidate[: match.start()].rstrip()
+        after = candidate[match.end() :].lstrip()
+        previous_word = re.search(r"([\w'\u00c0-\u024f-]+)$", before)
+        next_word = re.match(r"([\w'\u00c0-\u024f-]+)", after)
+        neighbours = [w.group(1) for w in (previous_word, next_word) if w]
+        if any(word[:1].isupper() for word in neighbours):
+            continue
+        context = candidate[max(0, match.start() - 45) : match.end() + 45].strip()
+        return match.group(0), context
+    return None
 
 
 def residual_french(text: str, extra_skip: frozenset[str] = frozenset()) -> tuple[str, str] | None:
@@ -832,6 +900,11 @@ def check_segment(
     # --- stranded function words (the empty slot left behind) --------------
     for pattern in (rules.stranded_spaced, rules.stranded_tight):
         for match in pattern.finditer(english):
+            # A word boundary also opens after an apostrophe or a hyphen, which
+            # turns the tail of a name or an ordinal into a function word:
+            # "la plume de Ma'at." ends in "at.", "na 1930-te." ends in "te.".
+            if match.start() and english[match.start() - 1] in "'’-‑":
+                continue
             report("stranded-function-word", snippet(english, match.start()))
             break
 
@@ -884,6 +957,13 @@ def check_segment(
     if match:
         word, context = match
         report("french-leftover", f"{word!r}: {context}")
+
+    # --- residual English -------------------------------------------------
+    if lang != "en":
+        match = residual_english(english)
+        if match:
+            word, context = match
+            report("english-leftover", f"{word!r}: {context}")
 
 
 def check_course(course_id: str, lang: str, allowed_by_course: dict[str, list[str]]) -> list[Finding]:

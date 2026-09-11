@@ -16,6 +16,13 @@ that needs judgement about meaning:
                         languages that do not use guillemets at all.
   thousands separator   the French "30 000" takes the locale's separator.
   space-before-punctuation / double-space / edge-whitespace.
+  doubled punctuation  ",," / ",:" / ",." collapse to the mark that belongs,
+                       and a mark glued to the next word or to **bold** gains
+                       the space it is missing.
+  glossary-unregistered
+                       a glossary entry's key half gets the same treatment as
+                       its displayTerm, so a body term that lost an en dash
+                       still resolves to it exactly.
 
 Usage:
     python scripts/normalise_translated_markup.py --check
@@ -142,6 +149,10 @@ def normalise(text: str, lang: str, separator: str | None, allowed: set[str]) ->
         )
     out = re.sub(r"[ \t]{2,}", " ", out)
     out = re.sub(r"\s+([,;:!?])(?!\))", r"\1", out)
+    # A comma the engine left in front of the real mark ("kirkefar,:", "let**,.")
+    out = re.sub(r",\s*([,;:.!?])", r"\1", out)
+    # A mark glued to what follows it ("ekstremno:**430 °C**").
+    out = re.sub(r"([,;:])(?=\*\*|\[\[)", r"\1 ", out)
     return out.strip()
 
 
@@ -159,8 +170,16 @@ def walk(node, lang: str, separator: str | None, allowed: set[str]):
     if isinstance(node, dict):
         total, result = 0, {}
         for key, item in node.items():
-            # Glossary keys are "courseId|term" lookups — never rewrite them.
             value, n = walk(item, lang, separator, allowed)
+            # A glossary key is "courseId|term" and the term half is matched
+            # against the body, so it has to be spelled the same way the body is
+            # — the displayTerm beside it is already normalised.
+            course_id, sep, term = key.partition("|")
+            if sep and term:
+                fixed = normalise(term, lang, separator, allowed)
+                if fixed != term and f"{course_id}|{fixed}" not in node:
+                    key = f"{course_id}|{fixed}"
+                    total += 1
             result[key] = value
             total += n
         return result, total
