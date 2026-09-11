@@ -26,20 +26,9 @@ enum class AppLanguage(val code: String, val displayName: String, val flag: Stri
     SLOVAK("sk", "Slovenčina", "🇸🇰"),
     SERBIAN("sr", "Srpski", "🇷🇸");
 
-    /**
-     * Locale whose course catalog this language reads. A language whose UI is
-     * translated but whose catalog has not shipped yet falls back to English,
-     * so the library is populated instead of empty.
-     */
-    val contentCode: String
-        get() = if (this in UI_ONLY) ENGLISH.code else code
-
     companion object {
         val DEFAULT = ENGLISH
         const val PREFS_KEY = "sophia_app_language"
-
-        /** UI translated, course catalog still in the pipeline. */
-        private val UI_ONLY = setOf(DANISH, NORWEGIAN, RUSSIAN, CROATIAN, SLOVENIAN, SLOVAK, SERBIAN)
 
         /**
          * Device language codes that are not our own but map onto one. Android

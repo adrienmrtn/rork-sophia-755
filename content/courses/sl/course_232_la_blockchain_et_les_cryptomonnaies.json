@@ -41,7 +41,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Vsako transakcijo najprej preveri omrežje in nato združi z drugimi v **blok**. Ta blok je nato povezan s prejšnjim po zaslugi matematičnega izračuna, imenovanega [[hash]]: nekakšen edinstven digitalni prstni odtis. Rezultat je neprekinjena veriga blokov, od tod tudi ime blockchain. Če želite spremeniti eno samo staro transakcijo, bi morali preračunati celotno verigo in prepričati več kot polovico omrežja, kar je v velikem obsegu skoraj nemogoče."
+          "text": "Vsako transakcijo najprej preveri omrežje in nato združi z drugimi v **blok**. Ta blok je nato povezan s prejšnjim po zaslugi matematičnega izračuna, imenovanega [[zgoščevanje]]: nekakšen edinstven digitalni prstni odtis. Rezultat je neprekinjena veriga blokov, od tod tudi ime blockchain. Če želite spremeniti eno samo staro transakcijo, bi morali preračunati celotno verigo in prepričati več kot polovico omrežja, kar je v velikem obsegu skoraj nemogoče."
         }
       ]
     },
@@ -92,7 +92,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Danes kriptovalute zapuščajo marže in vstopijo v tradicionalne finance. Velike banke zdaj ponujajo hrambo digitalnih sredstev za svoje stranke, več držav pa razmišlja o ustvarjanju lastne uradne digitalne valute, **[[MNBC]]** (digitalna valuta centralne banke)."
+          "text": "Danes kriptovalute zapuščajo marže in vstopijo v tradicionalne finance. Velike banke zdaj ponujajo hrambo digitalnih sredstev za svoje stranke, več držav pa razmišlja o ustvarjanju lastne uradne digitalne valute, **[[CBDC]]** (digitalna valuta centralne banke)."
         },
         {
           "type": "paragraph",

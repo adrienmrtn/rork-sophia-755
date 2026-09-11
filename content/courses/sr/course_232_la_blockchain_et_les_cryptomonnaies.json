@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U srcu blokčejna je jednostavna ideja: **distribuirana knjiga**. Za razliku od banke koja svoje račune drži na sopstvenim serverima, blokčejn se oslanja na mrežu [[vršnjaci]]KSG0, odnosno na hiljade računara od kojih svaki čuva identičnu kopiju svih transakcija."
+          "text": "U srcu blokčejna je jednostavna ideja: **distribuirana knjiga**. Za razliku od banke koja svoje račune drži na sopstvenim serverima, blokčejn se oslanja na mrežu [[vršnjaci]], odnosno na hiljade računara od kojih svaki čuva identičnu kopiju svih transakcija."
         },
         {
           "type": "funFact",
@@ -41,7 +41,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Svaku transakciju prvo verifikuje mreža, a zatim se grupiše sa drugima u **blok**. Ovaj blok se zatim povezuje sa prethodnim zahvaljujući matematičkom proračunu pod nazivom [[hash]]KSG0: neka vrsta jedinstvenog digitalnog otiska prsta. Rezultat je neprekinuti lanac blokova, pa otuda i naziv blockchain. Da biste izmenili jednu staru transakciju, morali biste ponovo da izračunate ceo lanac i ubedite više od polovine mreže, što je skoro nemoguće u velikim razmerama."
+          "text": "Svaku transakciju prvo verifikuje mreža, a zatim se grupiše sa drugima u **blok**. Ovaj blok se zatim povezuje sa prethodnim zahvaljujući matematičkom proračunu pod nazivom [[heširanje]]: neka vrsta jedinstvenog digitalnog otiska prsta. Rezultat je neprekinuti lanac blokova, pa otuda i naziv blockchain. Da biste izmenili jednu staru transakciju, morali biste ponovo da izračunate ceo lanac i ubedite više od polovine mreže, što je skoro nemoguće u velikim razmerama."
         }
       ]
     },
@@ -52,7 +52,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Bitcoin**, koji je u **2009** pokrenula anonimna osoba (ili grupa) pod imenom [[Satoshi Nakamoto]]KSG0, dokazao je da monetarni sistem može da funkcioniše bez centralne banke. Da bi garantovao njegovu oskudicu, njen tvorac je postavio strogu granicu: nikada više od **21 milion bitkoina** ne može postojati, kao da je zlato ograničeno na Zemlji."
+          "text": "**Bitcoin**, koji je u **2009** pokrenula anonimna osoba (ili grupa) pod imenom [[Satoshi Nakamoto]], dokazao je da monetarni sistem može da funkcioniše bez centralne banke. Da bi garantovao njegovu oskudicu, njen tvorac je postavio strogu granicu: nikada više od **21 milion bitkoina** ne može postojati, kao da je zlato ograničeno na Zemlji."
         },
         {
           "type": "image",
@@ -92,7 +92,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Danas kriptovalute napuštaju margine kako bi ušle u tradicionalne finansije. Velike banke sada nude da drže digitalna sredstva za svoje klijente, a nekoliko država razmatra stvaranje sopstvene zvanične digitalne valute, **[[MNBC]]**KSG0 (digitalna valuta centralne banke)."
+          "text": "Danas kriptovalute napuštaju margine kako bi ušle u tradicionalne finansije. Velike banke sada nude da drže digitalna sredstva za svoje klijente, a nekoliko država razmatra stvaranje sopstvene zvanične digitalne valute, **[[CBDC]]** (digitalna valuta centralne banke)."
         },
         {
           "type": "paragraph",

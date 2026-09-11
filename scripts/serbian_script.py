@@ -68,6 +68,37 @@ def to_latin(text: str) -> str:
     return "".join(out)
 
 
+# The pipelines hide markup behind ASCII sentinels (ZZG0ZZ…ZZXG0ZZ for a
+# glossary slot, ZZBOLDZZ/ZZENDBOLDZZ, ZZNAMEZZ…). Google renders those into
+# Cyrillic along with the prose, and the round trip is not always the identity:
+# X has no single Cyrillic letter, so ZZXG0ZZ comes back ЗЗКСГ0ЗЗ → ZZKSG0ZZ
+# and the closing marker no longer matches. The restorer then loses the link
+# and leaves the debris in the text ("Pod Baronom OsmanomKSG0"). Normalising
+# the sentinels right after transliteration puts them back in the exact shape
+# the restorers expect.
+_SENTINEL_SLOT_CLOSE = re.compile(r"Z{2,}\s*(?:KS|X)\s*G\s*(\d+)\s*Z{2,}", re.IGNORECASE)
+_SENTINEL_SLOT_OPEN = re.compile(r"Z{2,}\s*G\s*(\d+)\s*Z{2,}", re.IGNORECASE)
+_SENTINEL_NAMED = re.compile(
+    r"Z{2,}\s*(END)?\s*(BOLD|ITAL|GLOS|NAME)S*\s*Z{2,}", re.IGNORECASE
+)
+
+
+def repair_sentinels(text: str) -> str:
+    """Restore pipeline sentinels mangled by the Cyrillic round trip."""
+    if "Z" not in text and "z" not in text:
+        return text
+    text = _SENTINEL_SLOT_CLOSE.sub(lambda m: f"ZZXG{m.group(1)}ZZ", text)
+    text = _SENTINEL_SLOT_OPEN.sub(lambda m: f"ZZG{m.group(1)}ZZ", text)
+
+    def named(match: re.Match[str]) -> str:
+        end = "END" if match.group(1) else ""
+        tag = match.group(2).upper()
+        tag = "GLOSS" if tag == "GLOS" else tag
+        return f"ZZ{end}{tag}ZZ"
+
+    return _SENTINEL_NAMED.sub(named, text)
+
+
 def walk(node):
     if isinstance(node, str):
         converted = to_latin(node)

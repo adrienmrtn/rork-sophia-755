@@ -20,20 +20,16 @@ import re
 import sys
 from pathlib import Path
 
+from i18n_languages import ALL_CONTENT_LANGS
+
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "android" / "app" / "src" / "main" / "assets"
 JAVA = ROOT / "android" / "app" / "src" / "main" / "java" / "app" / "rork" / "sophia"
 STORE = ROOT / "content" / "store"
 
-# Languages whose course catalog ships in the APK.
-CATALOG_LANGS = [
-    "fr", "en", "es", "de", "pt", "it",
-    "tr", "pl", "ro", "nl", "el", "sv", "hu", "bg", "cs",
-]
-# UI translated, catalog still in the pipeline: these read the English catalog at
-# runtime (AppLanguage.contentCode), so they ship strings/<lang>.json only.
-UI_ONLY_LANGS = ["da", "nb", "ru", "hr", "sl", "sk", "sr"]
-LANGS = CATALOG_LANGS + UI_ONLY_LANGS
+# Every app language ships a full catalog.
+CATALOG_LANGS = list(ALL_CONTENT_LANGS)
+LANGS = CATALOG_LANGS
 STORE_LANGS = ["en", "tr", "pl", "ro", "nl", "el", "sv", "hu", "bg", "cs"]
 
 CRITICAL_KEYS = [

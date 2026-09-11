@@ -261,7 +261,15 @@ def replace_hijra(text: str, lang: str) -> str:
     if not target or lang == "ro":
         return text
     text = re.sub(r"\bthe Hegira\b", f"the {target}" if lang == "en" else target, text)
-    text = re.sub(r"\bHegira\b", target, text)
+    # Danish and Norwegian attach the definite article ("Hegiraen"), so the
+    # suffix has to ride along or the bare-stem rule never fires.
+    def swap(match: re.Match[str]) -> str:
+        # Keep the case that was there: the catalogs carry both "Hegira" at the
+        # start of a sentence and "hegiraen" inside one.
+        word = target.capitalize() if match.group(0)[0].isupper() else target
+        return word + (match.group(1) or "")
+
+    text = re.sub(r"\bHegira(en|ene|n|s)?\b", swap, text, flags=re.I)
     return text
 
 

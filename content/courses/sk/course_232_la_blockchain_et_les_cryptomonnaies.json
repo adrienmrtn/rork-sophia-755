@@ -41,7 +41,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Každá transakcia je najprv overená sieťou a potom zoskupená s ostatnými do **blokovať**. Tento blok je potom prepojený s predchádzajúcim vďaka matematickému výpočtu s názvom [[hash]]: akýsi unikátny digitálny odtlačok prsta. Výsledkom je neprerušený reťazec blokov, odtiaľ názov blockchain. Na úpravu jedinej starej transakcie by ste museli prepočítať celý reťazec a presvedčiť viac ako polovicu siete, čo je vo veľkom meradle takmer nemožné."
+          "text": "Každá transakcia je najprv overená sieťou a potom zoskupená s ostatnými do **blokovať**. Tento blok je potom prepojený s predchádzajúcim vďaka matematickému výpočtu s názvom [[hašovanie]]: akýsi unikátny digitálny odtlačok prsta. Výsledkom je neprerušený reťazec blokov, odtiaľ názov blockchain. Na úpravu jedinej starej transakcie by ste museli prepočítať celý reťazec a presvedčiť viac ako polovicu siete, čo je vo veľkom meradle takmer nemožné."
         }
       ]
     },
@@ -92,7 +92,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dnes kryptomeny opúšťajú okraje, aby mohli vstúpiť do tradičných financií. Veľké banky teraz ponúkajú svojim zákazníkom držbu digitálnych aktív a niekoľko štátov zvažuje vytvorenie vlastnej oficiálnej digitálnej meny **[[MNBC]]** (digitálna mena centrálnej banky)."
+          "text": "Dnes kryptomeny opúšťajú okraje, aby mohli vstúpiť do tradičných financií. Veľké banky teraz ponúkajú svojim zákazníkom držbu digitálnych aktív a niekoľko štátov zvažuje vytvorenie vlastnej oficiálnej digitálnej meny **[[CBDC]]** (digitálna mena centrálnej banky)."
         },
         {
           "type": "paragraph",

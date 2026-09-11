@@ -41,7 +41,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Hver transaksjon blir først verifisert av nettverket og deretter gruppert med andre i en **blokkere**. Denne blokken blir så knyttet til den forrige takket være en matematisk beregning kalt [[hasj]]: et slags unikt digitalt fingeravtrykk. Resultatet er en uavbrutt kjede av blokker, derav navnet blokkjede. For å endre en enkelt gammel transaksjon, må du beregne hele kjeden på nytt og overbevise mer enn halvparten av nettverket, noe som er nesten umulig i stor skala."
+          "text": "Hver transaksjon blir først verifisert av nettverket og deretter gruppert med andre i en **blokkere**. Denne blokken blir så knyttet til den forrige takket være en matematisk beregning kalt [[hashing]]: et slags unikt digitalt fingeravtrykk. Resultatet er en uavbrutt kjede av blokker, derav navnet blokkjede. For å endre en enkelt gammel transaksjon, må du beregne hele kjeden på nytt og overbevise mer enn halvparten av nettverket, noe som er nesten umulig i stor skala."
         }
       ]
     },
@@ -92,7 +92,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I dag forlater kryptovaluta marginene for å gå inn i tradisjonell finans. Store banker tilbyr nå å holde digitale eiendeler for kundene sine, og flere stater vurderer å lage sin egen offisielle digitale valuta, en **[[MNBC]]** (digital valuta fra sentralbanken)."
+          "text": "I dag forlater kryptovaluta marginene for å gå inn i tradisjonell finans. Store banker tilbyr nå å holde digitale eiendeler for kundene sine, og flere stater vurderer å lage sin egen offisielle digitale valuta, en **[[CBDC]]** (digital valuta fra sentralbanken)."
         },
         {
           "type": "paragraph",

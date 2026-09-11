@@ -32,18 +32,6 @@ NON_FR_LANGS: list[str] = [
     "sr",
 ]
 
-# Locales whose UI is translated but whose course catalog has not shipped yet.
-# They read the English catalog at runtime (see LocalizedContentLoader).
-UI_ONLY_LANGS: list[str] = [
-    "da",
-    "nb",
-    "ru",
-    "hr",
-    "sl",
-    "sk",
-    "sr",
-]
-
 # Google Translate target codes. Norwegian Bokmal is "no" upstream and Serbian
 # must be requested in Cyrillic ("sr" already is); every other app code is 1:1.
 GT_TARGETS: dict[str, str] = {code: code for code in NON_FR_LANGS}

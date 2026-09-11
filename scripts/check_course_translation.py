@@ -479,7 +479,7 @@ DANISH_RULES = LanguageRules(
     # "og," / "eller," are ordinary in lists. Only "at" cannot end a clause.
     stranded_tight=re.compile(r"\b(at|samt)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE),
     leading_articles=("en ", "et ", "den ", "det ", "de "),
-    leftover_extra_skip=frozenset(),
+    leftover_extra_skip=frozenset({"du", "dans"}),  # Danish "you" / "dance"
     check_a_an=False,
     flag_space_thousands=True,
     thousands_hint="should use a period (30.000)",
@@ -497,7 +497,7 @@ NORWEGIAN_RULES = LanguageRules(
     ),
     stranded_tight=re.compile(r"\b(at|samt)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE),
     leading_articles=("en ", "et ", "ei ", "den ", "det ", "de "),
-    leftover_extra_skip=frozenset(),
+    leftover_extra_skip=frozenset({"du", "dans"}),  # Norwegian "you" / "dance"
     check_a_an=False,
     flag_space_thousands=False,  # Norwegian groups thousands with a space
     thousands_hint="a space is the Norwegian separator",
@@ -526,9 +526,9 @@ RUSSIAN_RULES = LanguageRules(
     flag_decimal_comma=False,
     century_hint="should be 'XV \u0432\u0435\u043a'",
     era_hint="should be \u0434\u043e \u043d. \u044d. / \u043d. \u044d.",
-    # «…» are the Russian quotes and the em dash is core Russian punctuation
-    # ("Луна не падает — она падает вокруг Земли").
-    allowed_chars=frozenset("\u00ab\u00bb\u2014"),
+    # «…» are the Russian quotes; both dashes are core Russian punctuation
+    # ("Луна не падает — она падает вокруг Земли", "1941–1945").
+    allowed_chars=frozenset("\u00ab\u00bb\u2014\u2013"),
 )
 
 CROATIAN_RULES = LanguageRules(
@@ -558,7 +558,7 @@ SLOVENIAN_RULES = LanguageRules(
     ),
     stranded_tight=re.compile(r"\b(ter)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE),
     leading_articles=(),  # Slovenian has no articles
-    leftover_extra_skip=frozenset(),
+    leftover_extra_skip=frozenset({"les"}),  # Slovenian "wood"
     check_a_an=False,
     flag_space_thousands=True,
     thousands_hint="should use a period (30.000)",
@@ -576,7 +576,7 @@ SLOVAK_RULES = LanguageRules(
     ),
     stranded_tight=re.compile(r"\b(\u017ee)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE),
     leading_articles=(),  # Slovak has no articles
-    leftover_extra_skip=frozenset(),
+    leftover_extra_skip=frozenset({"les"}),  # Slovak "forest"
     check_a_an=False,
     flag_space_thousands=True,
     thousands_hint="should use a period (30.000)",

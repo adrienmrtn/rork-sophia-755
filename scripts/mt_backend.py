@@ -30,7 +30,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-from serbian_script import to_latin
+from serbian_script import repair_sentinels, to_latin
 
 GOOGLE = "https://clients5.google.com/translate_a/t?client=dict-chrome-ex"
 LINGVA = "https://lingva.ml/api/v1"
@@ -206,8 +206,13 @@ def translate_batch(
 
     if target.split("-")[0] == "sr":
         # Serbian ships in Latin script; see ``serbian_script`` for why the
-        # engine's Cyrillic output is converted rather than kept.
-        result = [to_latin(v) if isinstance(v, str) else v for v in result]
+        # engine's Cyrillic output is converted rather than kept. The same
+        # round trip mangles the callers' ASCII sentinels (ZZXG0ZZ comes back
+        # as ZZKSG0ZZ because X has no single Cyrillic letter), so put those
+        # back into the shape the restorers match on.
+        result = [
+            repair_sentinels(to_latin(v)) if isinstance(v, str) else v for v in result
+        ]
 
     return [texts[i] if v is None else v for i, v in enumerate(result)]
 

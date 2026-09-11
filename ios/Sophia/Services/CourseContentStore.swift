@@ -61,20 +61,11 @@ enum CourseContentStore {
         "\(language.rawValue)|\(courseId)"
     }
 
-    /// Resolves the resource for the exact language, then for English.
-    ///
-    /// A language whose catalog has not shipped yet already reads the English
-    /// courses (see `LocalizedContentLoader`), so reading the English v2 resource
-    /// shows that same English text through the richer block renderer instead of
-    /// the legacy one. We never fall back to French: a non-French reader must not
-    /// be shown French content.
+    /// Resolves the resource for the exact language only. A language without a v2
+    /// resource intentionally falls back (in the caller) to the legacy localized
+    /// renderer, so we never show French content to a non-French user.
     private static func resourceURL(courseId: String, language: AppLanguage) -> URL? {
-        if let url = resourceURL(courseId: courseId, code: language.rawValue) {
-            return url
-        }
-        guard language != .french, language != .english else { return nil }
-        guard LocalizedContentLoader.usesEnglishCatalog(language) else { return nil }
-        return resourceURL(courseId: courseId, code: AppLanguage.english.rawValue)
+        resourceURL(courseId: courseId, code: language.rawValue)
     }
 
     private static func resourceURL(courseId: String, code: String) -> URL? {

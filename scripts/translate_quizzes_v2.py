@@ -45,6 +45,9 @@ CACHE_DIR = CONTENT_LOCALES / "_quiz_v2_mt_cache"
 
 LANGS = NON_FR_LANGS
 
+#: Strings per warmup request; see ``mt_backend`` for the ceiling.
+WARM_BATCH = 60
+
 TRUE_FALSE = {
     "en": ["True", "False"],
     "es": ["Verdadero", "Falso"],
@@ -607,22 +610,30 @@ class QuizTranslator:
         print(f"  warming cache: {len(pending)} new strings (workers={workers})…")
         done = 0
         failures = 0
+        # Questions and answers are short, so the warmup goes out in batches —
+        # one round trip per ~60 strings instead of 60 (see ``mt_backend``).
+        groups = [pending[i : i + WARM_BATCH] for i in range(0, len(pending), WARM_BATCH)]
+
+        def batch_job(sources: list[str]) -> list[tuple[str, str | None, str | None]]:
+            try:
+                outs = _translate_many(self.target, sources)
+            except Exception as error:  # noqa: BLE001
+                return [(src, None, str(error)) for src in sources]
+            return [(src, out, None) for src, out in zip(sources, outs)]
+
         with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
-            futs = {pool.submit(_translate_one, self.target, t): t for t in pending}
-            for fut in as_completed(futs):
-                src = futs[fut]
-                try:
-                    translated = fut.result()
-                    if translated == src and _looks_translatable_french(src):
+            for results in pool.map(batch_job, groups):
+                for src, translated, error in results:
+                    if error is not None:
+                        failures += 1
+                        print(f"    warn: {error}", flush=True)
+                    elif translated == src and _looks_translatable_french(src):
                         failures += 1
                         print(f"    warn: unchanged FR, not cached: {src[:50]!r}", flush=True)
                     else:
                         self.cache[src] = translated
-                except Exception as error:  # noqa: BLE001
-                    failures += 1
-                    print(f"    warn: {error}", flush=True)
-                done += 1
-                if done % 100 == 0 or done == len(pending):
+                    done += 1
+                if done % 500 < WARM_BATCH or done == len(pending):
                     print(
                         f"    cached {done}/{len(pending)} (failures={failures})",
                         flush=True,
