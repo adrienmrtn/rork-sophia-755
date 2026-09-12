@@ -1,0 +1,1302 @@
+{
+  "_comment": [
+    "Bold spans the engine handed back as the English it was given.",
+    "Each language's list is applied in order, longest match first, to every",
+    "lesson body: the catalogue, CoursesV2 and content/courses.",
+    "Most entries swap the span alone. The ones that carry words around it",
+    "are fixing the sentence too -- the engine read the 'execution' of the",
+    "Mona Lisa as a death sentence in thirteen languages, and left a stray O",
+    "in front of 'Tisic a jedne noci' where it moved 'One' out of the title.",
+    "English is in here as well: it is the pack every other language is",
+    "translated from, and it is where the doubled article in",
+    "'the **the Mona Lisa**' and the two links naming no glossary entry",
+    "('<The energy transition>', '<The future of work>') come from."
+  ],
+  "keep": {
+    "Blowin' in the Wind": "a Bob Dylan song, named in the original everywhere",
+    "Grandmaster Flash and the Furious Five": "the group's name",
+    "<rhythm and blues>": "the genre, and the link resolves against a glossary entry registered under that name",
+    "[[search and destroy]]": "the doctrine's name, which the French source keeps in the original too, glossed in the sentence that follows it",
+    "checks and balances": "a loan phrase Danish, Swedish, Norwegian and Dutch political writing uses as it stands; Hebrew takes איזונים ובלמים below"
+  },
+  "replacements": {
+    "ar": [
+      [
+        "يبدأ تنفيذ لوحة الموناليزا **Z** في فلورنسا",
+        "يبدأ تنفيذ لوحة الموناليزا في فلورنسا"
+      ],
+      [
+        "**Sinbad the Sailor**",
+        "**السندباد البحري**"
+      ],
+      [
+        "**Liberty Leading the People**",
+        "**الحرية تقود الشعب**"
+      ],
+      [
+        "**John the Savage**",
+        "**جون المتوحش**"
+      ],
+      [
+        "**Cartel of the Seven Sisters**",
+        "**كارتل الأخوات السبع**"
+      ],
+      [
+        "**Lancelot of the Lake**",
+        "**لانسلوت البحيرة**"
+      ],
+      [
+        "**Pieter Bruegel the Elder**",
+        "**بيتر بروغل الأكبر**"
+      ],
+      [
+        "**Pliny the Elder**",
+        "**بليني الأكبر**"
+      ]
+    ],
+    "bg": [
+      [
+        "Екзекуцията на **Мона Лиза** започва",
+        "Създаването на **Мона Лиза** започва"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Червено и черно**"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Енергийният преход**"
+      ],
+      [
+        "**<The future of work>**",
+        "**Бъдещето на труда**"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**Един пояс, един път**"
+      ],
+      [
+        "**Seven Voyages of Sinbad the Sailor**",
+        "**Седемте пътешествия на Синдбад Мореплавателя**"
+      ],
+      [
+        "**John the Savage**",
+        "**Джон Дивака**"
+      ],
+      [
+        "**Fellowship of the Ring**",
+        "**Задругата на пръстена**"
+      ],
+      [
+        "**Cartel of the Seven Sisters**",
+        "**картела на седемте сестри**"
+      ],
+      [
+        "**Lancelot of the Lake**",
+        "**Ланселот от Езерото**"
+      ],
+      [
+        "**Pieter Bruegel the Elder**",
+        "**Питер Брьогел Стари**"
+      ],
+      [
+        "**« <War of the currents (Edison vs Tesla)> »**",
+        "**войната на токовете (Едисон срещу Тесла)**"
+      ]
+    ],
+    "cs": [
+      [
+        "začátek **« <War of the currents (Edison vs Tesla)> »**",
+        "začátek **války proudů (Edison vs. Tesla)**"
+      ],
+      [
+        "Poprava **the Mona Lisa** začíná",
+        "Vznik **Mony Lisy** začíná"
+      ],
+      [
+        "Ve hře **The Red and the Black**",
+        "V románu **Červený a černý**"
+      ],
+      [
+        "**OTisíc a jedné noci**",
+        "**Tisíce a jedné noci**"
+      ],
+      [
+        "popsaný v **Book of the Dead**",
+        "popsaný v **Knize mrtvých**"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Červený a černý**"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Energetická transformace**"
+      ],
+      [
+        "**<The future of work>**",
+        "**Budoucnost práce**"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**Pás a stezka**"
+      ],
+      [
+        "**Sinbad the Sailor**",
+        "**Sindibád Námořník**"
+      ],
+      [
+        "**Liberty Leading the People**",
+        "**Svoboda vede lid**"
+      ],
+      [
+        "**Concerning the Spiritual in Art**",
+        "**O duchovnosti v umění**"
+      ],
+      [
+        "**« <War of the currents (Edison vs Tesla)> »**",
+        "**válka proudů (Edison vs. Tesla)**"
+      ]
+    ],
+    "da": [
+      [
+        "Henrettelsen af **the Mona Lisa** begynder",
+        "Arbejdet med **Mona Lisa** begynder"
+      ],
+      [
+        "konfronterer Sinbad den **Old Man of the Sea**",
+        "konfronterer Sinbad **Havets gamle mand**"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Rødt og sort**"
+      ],
+      [
+        "**One Thousand and One Nights**",
+        "**Tusind og en nat**"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Energiomstillingen**"
+      ],
+      [
+        "**<The future of work>**",
+        "**Arbejdets fremtid**"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**Bælte- og vejinitiativet**"
+      ],
+      [
+        "**Sinbad the Sailor**",
+        "**Sindbad Søfareren**"
+      ],
+      [
+        "**Seven Voyages of Sinbad the Sailor**",
+        "**Sindbad Søfarerens syv rejser**"
+      ],
+      [
+        "**Liberty Leading the People**",
+        "**Friheden fører folket**"
+      ],
+      [
+        "**John the Savage**",
+        "**John Vilden**"
+      ],
+      [
+        "**Concerning the Spiritual in Art**",
+        "**Om det åndelige i kunsten**"
+      ],
+      [
+        "**Fellowship of the Ring**",
+        "**Ringens broderskab**"
+      ],
+      [
+        "**Book of the Dead**",
+        "**Dødebogen**"
+      ],
+      [
+        "**Cartel of the Seven Sisters**",
+        "**De syv søstres kartel**"
+      ],
+      [
+        "**\"The Raft of the Medusa\"**",
+        "**Medusas flåde**"
+      ],
+      [
+        "**\"On the Origin of Species\"**",
+        "**Arternes oprindelse**"
+      ],
+      [
+        "**Rape of the Sabine Women**",
+        "**Sabinerindernes rov**"
+      ],
+      [
+        "**Admiral of the Ocean Sea**",
+        "**Admiral over Oceanhavet**"
+      ],
+      [
+        "**year without a summer**",
+        "**året uden sommer**"
+      ],
+      [
+        "**the albatros**",
+        "**albatrossen**"
+      ],
+      [
+        "**Court of Justice of the European Union**",
+        "**EU-Domstolen**"
+      ],
+      [
+        "**the hippocampus**",
+        "**hippocampus**"
+      ],
+      [
+        "**less than five weeks**",
+        "**mindre end fem uger**"
+      ],
+      [
+        "**Apples of the Hesperides**",
+        "**Hesperidernes æbler**"
+      ],
+      [
+        "**the general de Gaulle**",
+        "**general de Gaulle**"
+      ],
+      [
+        "**repair and refurbishment**",
+        "**reparation og renovering**"
+      ],
+      [
+        "**assault on the Capitol**",
+        "**stormen på Kapitol**"
+      ],
+      [
+        "**the Mona Lisa**",
+        "**Mona Lisa**"
+      ],
+      [
+        "**\"Liberty Leading the People\"**",
+        "**\"Friheden fører folket\"**"
+      ],
+      [
+        "**« <War of the currents (Edison vs Tesla)> »**",
+        "**strømkrigen (Edison mod Tesla)**"
+      ]
+    ],
+    "de": [
+      [
+        "**Belt and Road Initiative**",
+        "**Neue Seidenstraße**"
+      ]
+    ],
+    "el": [
+      [
+        "η αρχή του **« <War of the currents (Edison vs Tesla)> »**",
+        "η αρχή του **Πολέμου των ρευμάτων (Έντισον εναντίον Τέσλα)**"
+      ],
+      [
+        "Ιουλίου, το **The Red and the Black** είναι",
+        "Ιουλίου, **Το Κόκκινο και το Μαύρο** είναι"
+      ],
+      [
+        "Στο **The Red and the Black**, κάθε",
+        "Στο **Κόκκινο και το Μαύρο**, κάθε"
+      ],
+      [
+        "η δημοσίευση του **\"On the Origin of Species\"** από",
+        "η δημοσίευση της **Καταγωγής των Ειδών** από"
+      ],
+      [
+        "με την άφιξη του **John the Savage**",
+        "με την άφιξη του **Τζον του Άγριου**"
+      ],
+      [
+        "στον σχηματισμό της **Fellowship of the Ring**",
+        "στον σχηματισμό της **Αδελφότητας του Δαχτυλιδιού**"
+      ],
+      [
+        "περιγράφεται στο **Book of the Dead**",
+        "περιγράφεται στη **Βίβλο των Νεκρών**"
+      ],
+      [
+        "Το « **Liberty Leading the People**» (1830)",
+        "**Η Ελευθερία οδηγεί τον λαό** (1830)"
+      ],
+      [
+        "Η δομή των **Seven Voyages of Sinbad the Sailor**",
+        "Η δομή των **Επτά Ταξιδιών του Σεβάχ του Θαλασσινού**"
+      ],
+      [
+        "Το **Belt and Road Initiative** (BRI)",
+        "Η **Πρωτοβουλία Ζώνη και Δρόμος** (BRI)"
+      ],
+      [
+        "Η συλλογή των **One Thousand and One Nights** (Alf Layla wa-Layla)",
+        "Η συλλογή **Χίλιες και Μία Νύχτες** (Alf Layla wa-Layla)"
+      ],
+      [
+        "Η εκτέλεση της **the Mona Lisa** ξεκινά",
+        "Η δημιουργία της **Μόνα Λίζα** ξεκινά"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Το Κόκκινο και το Μαύρο**"
+      ],
+      [
+        "**One Thousand and One Nights**",
+        "**Χίλιες και Μία Νύχτες**"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**Πρωτοβουλία Ζώνη και Δρόμος**"
+      ],
+      [
+        "**Sinbad the Sailor**",
+        "**Σεβάχ ο Θαλασσινός**"
+      ],
+      [
+        "**Seven Voyages of Sinbad the Sailor**",
+        "**Επτά Ταξίδια του Σεβάχ του Θαλασσινού**"
+      ],
+      [
+        "**Liberty Leading the People**",
+        "**Η Ελευθερία οδηγεί τον λαό**"
+      ],
+      [
+        "**John the Savage**",
+        "**Τζον ο Άγριος**"
+      ],
+      [
+        "**Fellowship of the Ring**",
+        "**Αδελφότητα του Δαχτυλιδιού**"
+      ],
+      [
+        "**Book of the Dead**",
+        "**Βίβλο των Νεκρών**"
+      ],
+      [
+        "**Old Man of the Sea**",
+        "**Γέρο της Θάλασσας**"
+      ],
+      [
+        "**Cartel of the Seven Sisters**",
+        "**Καρτέλ των Επτά Αδελφών**"
+      ],
+      [
+        "**\"The Raft of the Medusa\"**",
+        "**Η σχεδία της Μέδουσας**"
+      ],
+      [
+        "**\"On the Origin of Species\"**",
+        "**Η Καταγωγή των Ειδών**"
+      ],
+      [
+        "**Rape of the Sabine Women**",
+        "**Αρπαγή των Σαβίνων**"
+      ],
+      [
+        "**the Mona Lisa**",
+        "**Μόνα Λίζα**"
+      ],
+      [
+        "**\"Liberty Leading the People\"**",
+        "**\"Η Ελευθερία οδηγεί τον λαό\"**"
+      ],
+      [
+        "**« <War of the currents (Edison vs Tesla)> »**",
+        "**Πόλεμος των ρευμάτων (Έντισον εναντίον Τέσλα)**"
+      ]
+    ],
+    "en": [
+      [
+        "The execution of the **the Mona Lisa** begins",
+        "The painting of the **Mona Lisa** begins"
+      ],
+      [
+        "the beginning of the **« <War of the currents (Edison vs Tesla)> »**",
+        "the beginning of the **war of the currents (Edison vs Tesla)**"
+      ],
+      [
+        "**<The energy transition>**",
+        "**energy transition**"
+      ],
+      [
+        "**<The future of work>**",
+        "**future of work**"
+      ]
+    ],
+    "es": [
+      [
+        "La ejecución de La Gioconda comienza",
+        "La realización de La Gioconda comienza"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**Iniciativa de la Franja y la Ruta**"
+      ]
+    ],
+    "et": [
+      [
+        "**the Mona Lisa** hukkamine algab",
+        "**Mona Lisa** maalimine algab"
+      ],
+      [
+        "**Tuhat ja üks ööst** lahutamatu üksus",
+        "**Tuhande ja ühe öö** lahutamatu osa"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Punane ja must**"
+      ],
+      [
+        "**One Thousand and One Nights**",
+        "**Tuhat ja üks ööd**"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Energiapööre**"
+      ],
+      [
+        "**<The future of work>**",
+        "**Töö tulevik**"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**Vöö ja tee algatus**"
+      ],
+      [
+        "**Sinbad the Sailor**",
+        "**Meremees Sindbad**"
+      ],
+      [
+        "**Liberty Leading the People**",
+        "**Vabadus juhib rahvast**"
+      ],
+      [
+        "**the Mona Lisa**",
+        "**Mona Lisa**"
+      ],
+      [
+        "**\"Liberty Leading the People\"**",
+        "**\"Vabadus juhib rahvast\"**"
+      ]
+    ],
+    "fi": [
+      [
+        "**the Mona Lisa**:n toteuttaminen alkaa",
+        "**Mona Lisan** maalaaminen alkaa"
+      ],
+      [
+        "**Tuhat ja yksi yö**:stä erottamaton kokonaisuus",
+        "**Tuhannen ja yhden yön** erottamaton hahmo"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Punainen ja musta**"
+      ],
+      [
+        "**One Thousand and One Nights**",
+        "**Tuhat ja yksi yötä**"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Energiamurros**"
+      ],
+      [
+        "**<The future of work>**",
+        "**Työn tulevaisuus**"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**Uusi silkkitie**"
+      ],
+      [
+        "**Sinbad the Sailor**",
+        "**Merenkulkija Sindbad**"
+      ],
+      [
+        "**Seven Voyages of Sinbad the Sailor**",
+        "**Merenkulkija Sindbadin seitsemän matkaa**"
+      ],
+      [
+        "**Liberty Leading the People**",
+        "**Vapaus johtaa kansaa**"
+      ],
+      [
+        "**John the Savage**",
+        "**John Villi**"
+      ],
+      [
+        "**Concerning the Spiritual in Art**",
+        "**Taiteen henkisestä sisällöstä**"
+      ],
+      [
+        "**\"The Raft of the Medusa\"**",
+        "**Medusan lautta**"
+      ],
+      [
+        "**Soul of the World**",
+        "**Maailmansielu**"
+      ],
+      [
+        "**the Mona Lisa**",
+        "**Mona Lisa**"
+      ],
+      [
+        "**\"Liberty Leading the People\"**",
+        "**\"Vapaus johtaa kansaa\"**"
+      ]
+    ],
+    "he": [
+      [
+        "ההוצאה להורג של **the Mona Lisa** מתחילה",
+        "העבודה על **המונה ליזה** מתחילה"
+      ],
+      [
+        "**The Red and the Black**",
+        "**האדום והשחור**"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**יוזמת החגורה והדרך**"
+      ],
+      [
+        "**Seven Voyages of Sinbad the Sailor**",
+        "**שבעת מסעות סינבאד הימאי**"
+      ],
+      [
+        "**Liberty Leading the People**",
+        "**החירות מובילה את העם**"
+      ],
+      [
+        "**John the Savage**",
+        "**ג'ון הפרא**"
+      ],
+      [
+        "**Concerning the Spiritual in Art**",
+        "**על הרוחני באמנות**"
+      ],
+      [
+        "**Old Man of the Sea**",
+        "**זקן הים**"
+      ],
+      [
+        "**Cartel of the Seven Sisters**",
+        "**קרטל שבע האחיות**"
+      ],
+      [
+        "**Rape of the Sabine Women**",
+        "**חטיפת הנשים הסביניות**"
+      ],
+      [
+        "**Admiral of the Ocean Sea**",
+        "**אדמירל הים האוקייני**"
+      ],
+      [
+        "**the albatros**",
+        "**האלבטרוס**"
+      ],
+      [
+        "**Court of Justice of the European Union**",
+        "**בית הדין של האיחוד האירופי**"
+      ],
+      [
+        "**crime against humanity**",
+        "**פשע נגד האנושות**"
+      ],
+      [
+        "**Pliny the Elder**",
+        "**פליניוס הזקן**"
+      ],
+      [
+        "**descent with modification**",
+        "**מוצא עם שינוי**"
+      ],
+      [
+        "**the Mona Lisa**",
+        "**המונה ליזה**"
+      ],
+      [
+        "**\"Liberty Leading the People\"**",
+        "**\"החירות מובילה את העם\"**"
+      ],
+      [
+        "**checks and balances**",
+        "**איזונים ובלמים**"
+      ]
+    ],
+    "hr": [
+      [
+        "U **The Red and the Black** svakoj",
+        "U **Crvenom i crnom** svakoj"
+      ],
+      [
+        "**OTisuću i jedne noći**",
+        "**Tisuću i jedne noći**"
+      ],
+      [
+        "dolaskom **John the Savage**",
+        "dolaskom **Johna Divljaka**"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Crveno i crno**"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Energetska tranzicija**"
+      ],
+      [
+        "**<The future of work>**",
+        "**Budućnost rada**"
+      ],
+      [
+        "**Sinbad the Sailor**",
+        "**Sinbad Moreplovac**"
+      ],
+      [
+        "**Liberty Leading the People**",
+        "**Sloboda vodi narod**"
+      ]
+    ],
+    "hu": [
+      [
+        "Ez volt a **« <War of the currents (Edison vs Tesla)> »** kezdete",
+        "Ez volt **az áramok háborújának (Edison kontra Tesla)** kezdete"
+      ],
+      [
+        "hozta létre a „**year without a summer**”",
+        "hozta létre a „**nyár nélküli évet**”"
+      ],
+      [
+        "fő kiáltványát, a **Concerning the Spiritual in Art** címet, amelyben",
+        "fő kiáltványát, **A szellemiség a művészetben** címmel, amelyben"
+      ],
+      [
+        "entitás, a **Sinbad the Sailor** azonban",
+        "entitás, **Szindbád, a tengerész** azonban"
+      ],
+      [
+        "körútja után **the Mona Lisa** 1914",
+        "körútja után **a Mona Lisa** 1914"
+      ],
+      [
+        "A **the Mona Lisa** végrehajtása Firenzében kezdődik",
+        "A **Mona Lisa** megfestése Firenzében kezdődik"
+      ],
+      [
+        "A **Ezeregyéjszaka**-től elválaszthatatlan",
+        "Az **Ezeregyéjszakától** elválaszthatatlan"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Vörös és fekete**"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**Övezet és Út kezdeményezés**"
+      ],
+      [
+        "**Sinbad the Sailor**",
+        "**Szindbád, a tengerész**"
+      ],
+      [
+        "**Seven Voyages of Sinbad the Sailor**",
+        "**Szindbád hét utazása**"
+      ],
+      [
+        "**Liberty Leading the People**",
+        "**A Szabadság vezeti a népet**"
+      ],
+      [
+        "**Concerning the Spiritual in Art**",
+        "**A szellemiség a művészetben**"
+      ],
+      [
+        "**year without a summer**",
+        "**nyár nélküli év**"
+      ],
+      [
+        "**the Mona Lisa**",
+        "**Mona Lisa**"
+      ],
+      [
+        "**\"Liberty Leading the People\"**",
+        "**\"A Szabadság vezeti a népet\"**"
+      ],
+      [
+        "**« <War of the currents (Edison vs Tesla)> »**",
+        "**az áramok háborúja (Edison kontra Tesla)**"
+      ]
+    ],
+    "it": [
+      [
+        "**Belt and Road Initiative**",
+        "**Nuova via della seta**"
+      ]
+    ],
+    "nb": [
+      [
+        "Henrettelsen av **the Mona Lisa** begynner",
+        "Arbeidet med **Mona Lisa** begynner"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Rødt og svart**"
+      ],
+      [
+        "**One Thousand and One Nights**",
+        "**Tusen og én natt**"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Energiomstillingen**"
+      ],
+      [
+        "**<The future of work>**",
+        "**Arbeidets fremtid**"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**Belte- og vei-initiativet**"
+      ],
+      [
+        "**Sinbad the Sailor**",
+        "**Sindbad Sjøfareren**"
+      ],
+      [
+        "**Seven Voyages of Sinbad the Sailor**",
+        "**Sindbad Sjøfarerens syv reiser**"
+      ],
+      [
+        "**Liberty Leading the People**",
+        "**Friheten leder folket**"
+      ],
+      [
+        "**John the Savage**",
+        "**John Villmannen**"
+      ],
+      [
+        "**Concerning the Spiritual in Art**",
+        "**Om det åndelige i kunsten**"
+      ],
+      [
+        "**Fellowship of the Ring**",
+        "**Ringens brorskap**"
+      ],
+      [
+        "**Book of the Dead**",
+        "**Dødeboken**"
+      ],
+      [
+        "**Old Man of the Sea**",
+        "**Havets gamle mann**"
+      ],
+      [
+        "**Cartel of the Seven Sisters**",
+        "**De syv søstres kartell**"
+      ],
+      [
+        "**Lancelot of the Lake**",
+        "**Lancelot av Sjøen**"
+      ],
+      [
+        "**\"The Raft of the Medusa\"**",
+        "**Medusas flåte**"
+      ],
+      [
+        "**\"On the Origin of Species\"**",
+        "**Artenes opprinnelse**"
+      ],
+      [
+        "**Rape of the Sabine Women**",
+        "**Sabinerinnenes rov**"
+      ],
+      [
+        "**Admiral of the Ocean Sea**",
+        "**Admiral over Oseanhavet**"
+      ],
+      [
+        "**year without a summer**",
+        "**året uten sommer**"
+      ],
+      [
+        "**the albatros**",
+        "**albatrossen**"
+      ],
+      [
+        "**Court of Justice of the European Union**",
+        "**EU-domstolen**"
+      ],
+      [
+        "**the hippocampus**",
+        "**hippocampus**"
+      ],
+      [
+        "**less than five weeks**",
+        "**mindre enn fem uker**"
+      ],
+      [
+        "**Apples of the Hesperides**",
+        "**Hesperidenes epler**"
+      ],
+      [
+        "**Pact on Migration and Asylum**",
+        "**migrasjons- og asylpakt**"
+      ],
+      [
+        "**crime against humanity**",
+        "**forbrytelse mot menneskeheten**"
+      ],
+      [
+        "**Soul of the World**",
+        "**Verdenssjelen**"
+      ],
+      [
+        "**riddle of the Sphinx**",
+        "**Sfinxens gåte**"
+      ],
+      [
+        "**Tensions with the West**",
+        "**Spenningene med Vesten**"
+      ],
+      [
+        "**the Mona Lisa**",
+        "**Mona Lisa**"
+      ],
+      [
+        "**\"Liberty Leading the People\"**",
+        "**\"Friheten leder folket\"**"
+      ],
+      [
+        "**« <War of the currents (Edison vs Tesla)> »**",
+        "**strømkrigen (Edison mot Tesla)**"
+      ]
+    ],
+    "nl": [
+      [
+        "De uitvoering van de **de Mona Lisa** begint",
+        "De uitvoering van de **Mona Lisa** begint"
+      ],
+      [
+        "van de **Fellowship of the Ring**",
+        "van het **Reisgenootschap van de Ring**"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Het rood en het zwart**"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**Belt and Road-initiatief**"
+      ],
+      [
+        "**Seven Voyages of Sinbad the Sailor**",
+        "**Zeven reizen van Sindbad de Zeeman**"
+      ],
+      [
+        "**Liberty Leading the People**",
+        "**De Vrijheid leidt het volk**"
+      ],
+      [
+        "**Concerning the Spiritual in Art**",
+        "**Over het geestelijke in de kunst**"
+      ],
+      [
+        "**Book of the Dead**",
+        "**Dodenboek**"
+      ],
+      [
+        "**Old Man of the Sea**",
+        "**Oude Man van de Zee**"
+      ],
+      [
+        "**Lancelot of the Lake**",
+        "**Lancelot van het Meer**"
+      ],
+      [
+        "**\"The Raft of the Medusa\"**",
+        "**Het vlot van de Medusa**"
+      ],
+      [
+        "**\"On the Origin of Species\"**",
+        "**Over het ontstaan van soorten**"
+      ],
+      [
+        "**\"Liberty Leading the People\"**",
+        "**\"De Vrijheid leidt het volk\"**"
+      ]
+    ],
+    "pl": [
+      [
+        "Egzekucja **Mony Lisy** rozpoczyna się",
+        "Powstawanie **Mony Lisy** rozpoczyna się"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Transformacja energetyczna**"
+      ],
+      [
+        "**<The future of work>**",
+        "**Przyszłość pracy**"
+      ],
+      [
+        "**« <War of the currents (Edison vs Tesla)> »**",
+        "**wojny prądów (Edison kontra Tesla)**"
+      ]
+    ],
+    "pt": [
+      [
+        "**Belt and Road Initiative**",
+        "**Iniciativa do Cinturão e Rota**"
+      ]
+    ],
+    "ro": [
+      [
+        "începutul **« <War of the currents (Edison vs Tesla)> »**",
+        "începutul **Războiului curenților (Edison vs Tesla)**"
+      ],
+      [
+        "Execuția **Mona Lisa** începe",
+        "Realizarea **Mona Lisei** începe"
+      ],
+      [
+        "formarea **Fellowship of the Ring**",
+        "formarea **Frăției Inelului**"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Roșu și negru**"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Tranziția energetică**"
+      ],
+      [
+        "**<The future of work>**",
+        "**Viitorul muncii**"
+      ],
+      [
+        "**Sinbad the Sailor**",
+        "**Sinbad Marinarul**"
+      ],
+      [
+        "**Liberty Leading the People**",
+        "**Libertatea conducând poporul**"
+      ],
+      [
+        "**John the Savage**",
+        "**John Sălbaticul**"
+      ],
+      [
+        "**Concerning the Spiritual in Art**",
+        "**Despre spiritual în artă**"
+      ],
+      [
+        "**Book of the Dead**",
+        "**Cartea Morților**"
+      ],
+      [
+        "**Old Man of the Sea**",
+        "**Bătrânul Mării**"
+      ],
+      [
+        "**Lancelot of the Lake**",
+        "**Lancelot al Lacului**"
+      ],
+      [
+        "**« <War of the currents (Edison vs Tesla)> »**",
+        "**Războiul curenților (Edison vs Tesla)**"
+      ]
+    ],
+    "ru": [
+      [
+        "начало **« <War of the currents (Edison vs Tesla)> »**",
+        "начало **войны токов (Эдисон против Теслы)**"
+      ],
+      [
+        "В **The Red and the Black** каждому",
+        "В **Красном и чёрном** каждому"
+      ],
+      [
+        "Казнь **Моны Лизы** начинается",
+        "Создание **Моны Лизы** начинается"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Красное и чёрное**"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Энергетический переход**"
+      ],
+      [
+        "**<The future of work>**",
+        "**Будущее труда**"
+      ],
+      [
+        "**« <War of the currents (Edison vs Tesla)> »**",
+        "**война токов (Эдисон против Теслы)**"
+      ]
+    ],
+    "sk": [
+      [
+        "Poprava **the Mona Lisa** sa začína",
+        "Vznik **Mony Lisy** sa začína"
+      ],
+      [
+        "Vo filme **The Red and the Black**",
+        "V románe **Červený a čierny**"
+      ],
+      [
+        "**OTisíc a jednej noci**",
+        "**Tisíc a jednej noci**"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Červený a čierny**"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Energetická transformácia**"
+      ],
+      [
+        "**<The future of work>**",
+        "**Budúcnosť práce**"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**Pás a cesta**"
+      ],
+      [
+        "**Sinbad the Sailor**",
+        "**Sindibád Moreplavec**"
+      ],
+      [
+        "**Liberty Leading the People**",
+        "**Sloboda vedie ľud**"
+      ]
+    ],
+    "sl": [
+      [
+        "začetek **« <War of the currents (Edison vs Tesla)> »**",
+        "začetek **vojne tokov (Edison proti Tesli)**"
+      ],
+      [
+        "Usmrtitev **Mone Lise** se začne",
+        "Nastajanje **Mone Lise** se začne"
+      ],
+      [
+        "**OTisoč in ene noči**",
+        "**Tisoč in ene noči**"
+      ],
+      [
+        "prihod **John the Savage**",
+        "prihod **Johna Divjaka**"
+      ],
+      [
+        "**Lancelot of the Lake**",
+        "**Lancelota Jezerskega**"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Energetski prehod**"
+      ],
+      [
+        "**<The future of work>**",
+        "**Prihodnost dela**"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**Pas in cesta**"
+      ],
+      [
+        "**Sinbad the Sailor**",
+        "**Sinbad Pomorščak**"
+      ],
+      [
+        "**Seven Voyages of Sinbad the Sailor**",
+        "**sedmih potovanj Sinbada Pomorščaka**"
+      ],
+      [
+        "**« <War of the currents (Edison vs Tesla)> »**",
+        "**vojna tokov (Edison proti Tesli)**"
+      ]
+    ],
+    "sr": [
+      [
+        "U **The Red and the Black**, svakoj",
+        "U **Crvenom i crnom**, svakoj"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Crveno i crno**"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Energetska tranzicija**"
+      ],
+      [
+        "**<The future of work>**",
+        "**Budućnost rada**"
+      ]
+    ],
+    "sv": [
+      [
+        "Avrättningen av **the Mona Lisa** börjar",
+        "Arbetet med **Mona Lisa** inleds"
+      ],
+      [
+        "**The Red and the Black**",
+        "**Rött och svart**"
+      ],
+      [
+        "**One Thousand and One Nights**",
+        "**Tusen och en natt**"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Energiomställningen**"
+      ],
+      [
+        "**<The future of work>**",
+        "**Arbetets framtid**"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**Bälte- och väginitiativet**"
+      ],
+      [
+        "**Sinbad the Sailor**",
+        "**Sindbad Sjöfararen**"
+      ],
+      [
+        "**Seven Voyages of Sinbad the Sailor**",
+        "**Sindbad Sjöfararens sju resor**"
+      ],
+      [
+        "**Liberty Leading the People**",
+        "**Friheten leder folket**"
+      ],
+      [
+        "**John the Savage**",
+        "**John Vilden**"
+      ],
+      [
+        "**Concerning the Spiritual in Art**",
+        "**Om det andliga i konsten**"
+      ],
+      [
+        "**Fellowship of the Ring**",
+        "**Ringens brödraskap**"
+      ],
+      [
+        "**Book of the Dead**",
+        "**Dödboken**"
+      ],
+      [
+        "**Old Man of the Sea**",
+        "**Havets gamle man**"
+      ],
+      [
+        "**Cartel of the Seven Sisters**",
+        "**De sju systrarnas kartell**"
+      ],
+      [
+        "**\"The Raft of the Medusa\"**",
+        "**Medusas flotte**"
+      ],
+      [
+        "**\"On the Origin of Species\"**",
+        "**Om arternas uppkomst**"
+      ],
+      [
+        "**Rape of the Sabine Women**",
+        "**Sabinskornas bortrövande**"
+      ],
+      [
+        "**Admiral of the Ocean Sea**",
+        "**Amiral över Oceanhavet**"
+      ],
+      [
+        "**year without a summer**",
+        "**året utan sommar**"
+      ],
+      [
+        "**the albatros**",
+        "**albatrossen**"
+      ],
+      [
+        "**Court of Justice of the European Union**",
+        "**EU-domstolen**"
+      ],
+      [
+        "**the hippocampus**",
+        "**hippocampus**"
+      ],
+      [
+        "**less than five weeks**",
+        "**mindre än fem veckor**"
+      ],
+      [
+        "**Apples of the Hesperides**",
+        "**Hesperidernas äpplen**"
+      ],
+      [
+        "**the general de Gaulle**",
+        "**general de Gaulle**"
+      ],
+      [
+        "**repair and refurbishment**",
+        "**reparation och renovering**"
+      ],
+      [
+        "**Pact on Migration and Asylum**",
+        "**migrations- och asylpakt**"
+      ],
+      [
+        "**Declaration of the Rights of Man and of the Citizen**",
+        "**deklarationen om människans och medborgarens rättigheter**"
+      ],
+      [
+        "**the Mona Lisa**",
+        "**Mona Lisa**"
+      ],
+      [
+        "**\"Liberty Leading the People\"**",
+        "**\"Friheten leder folket\"**"
+      ],
+      [
+        "**« <War of the currents (Edison vs Tesla)> »**",
+        "**strömkriget (Edison mot Tesla)**"
+      ]
+    ],
+    "tr": [
+      [
+        "**Mona Lisa**'nin infazı Floransa'da",
+        "**Mona Lisa**'nın yapımı Floransa'da"
+      ],
+      [
+        "**<The energy transition>**",
+        "**Enerji dönüşümü**"
+      ],
+      [
+        "**<The future of work>**",
+        "**İşin geleceği**"
+      ],
+      [
+        "**Belt and Road Initiative**",
+        "**Kuşak ve Yol Girişimi**"
+      ],
+      [
+        "**Lancelot of the Lake**",
+        "**Göl Şövalyesi Lancelot**"
+      ],
+      [
+        "**« <War of the currents (Edison vs Tesla)> »**",
+        "**Akım Savaşları (Edison'a karşı Tesla)**"
+      ]
+    ]
+  }
+}
