@@ -385,6 +385,70 @@ def french_source(course_id: str, lesson_index: int, english: str) -> str | None
     return english if looks_french(english) else None
 
 
+COURSES_V2 = ROOT / "ios" / "Sophia" / "Resources" / "CoursesV2"
+
+
+def paired_strings(target, source, out: list) -> list:
+    """Walk two JSON trees of the same shape, pairing their strings."""
+    if isinstance(target, str) and isinstance(source, str):
+        out.append((target, source))
+    elif isinstance(target, list) and isinstance(source, list):
+        for a, b in zip(target, source):
+            paired_strings(a, b, out)
+    elif isinstance(target, dict) and isinstance(source, dict):
+        for key, value in target.items():
+            if key in source:
+                paired_strings(value, source[key], out)
+    return out
+
+
+def sweep_courses_v2(lang: str, check: bool) -> int:
+    """The same date repair over the course files, which is what both apps read.
+
+    The catalogue lesson bodies are a legacy fallback that neither app reaches
+    while CoursesV2 covers every lesson, so a stranded "A6. kolovoza 1945" there
+    is one a reader actually sees.
+    """
+    changed = 0
+    for target_path in sorted(COURSES_V2.glob(f"*.{lang}.json")):
+        source_path = COURSES_V2 / f"{target_path.name[: -len(lang) - 6]}.en.json"
+        if not source_path.is_file():
+            continue
+        raw = target_path.read_text(encoding="utf-8")
+        target = json.loads(raw)
+        source = json.loads(source_path.read_text(encoding="utf-8"))
+        swaps = {}
+        for got, english in paired_strings(target, source, []):
+            fixed = strip_month_initial(got, english)
+            if fixed != got:
+                swaps[got] = fixed
+        if not swaps:
+            continue
+        changed += len(swaps)
+        if check:
+            continue
+
+        def swap(node):
+            if isinstance(node, str):
+                return swaps.get(node, node)
+            if isinstance(node, list):
+                return [swap(item) for item in node]
+            if isinstance(node, dict):
+                return {key: swap(value) for key, value in node.items()}
+            return node
+
+        minified = "\n" not in raw.strip()[:4000]
+        target_path.write_text(
+            json.dumps(
+                swap(target), ensure_ascii=False,
+                separators=(",", ":") if minified else None,
+                indent=None if minified else 2,
+            ) + ("" if minified else "\n"),
+            encoding="utf-8",
+        )
+    return changed
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Report only, write nothing")
@@ -483,9 +547,11 @@ def main() -> int:
                     lessons[lesson_index]["content"] = relinked_text
         if changed or boxes or relinked or slots:
             save(lang, data)
+        in_v2 = sweep_courses_v2(lang, args.check)
         print(
             f"{lang}: translated {changed} lesson(s), {boxes} sidebar(s), "
-            f"{relinked} link(s) remapped, {slots} link slot(s) restored"
+            f"{relinked} link(s) remapped, {slots} link slot(s) restored, "
+            f"{in_v2} date(s) in CoursesV2"
         )
     return 0
 
