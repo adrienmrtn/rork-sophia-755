@@ -76,7 +76,8 @@ def ensure_bucket(base: str, key: str) -> None:
         "name": BUCKET,
         "public": True,
         "file_size_limit": MAX_BYTES,
-        "allowed_mime_types": ["audio/mpeg"],
+        # manifest.json goes in the same bucket, so JSON must be allowed
+        "allowed_mime_types": ["audio/mpeg", "application/json"],
     }).encode()
     code, body = request("POST", f"{base}/storage/v1/bucket", key, payload, "application/json")
     if code not in (200, 201):
@@ -167,6 +168,8 @@ def main() -> int:
     ap.add_argument("folder", help="directory holding <course_id>.mp3 files")
     ap.add_argument("--language", default="fr", help="language code (default: fr)")
     ap.add_argument("--dry-run", action="store_true", help="validate names and sizes, upload nothing")
+    ap.add_argument("--manifest-only", action="store_true",
+                    help="rewrite manifest.json from the bucket, re-upload nothing")
     args = ap.parse_args()
 
     folder = Path(args.folder)
@@ -200,6 +203,10 @@ def main() -> int:
     base = os.environ.get("SUPABASE_URL", DEFAULT_URL).rstrip("/")
     key = env_key()
     ensure_bucket(base, key)
+
+    if args.manifest_only:
+        write_manifest(base, key, sorted(bucket_languages(base, key) | {args.language}))
+        return 0
 
     ok = 0
     failed: list[str] = []

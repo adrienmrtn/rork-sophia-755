@@ -14,7 +14,10 @@ values (
   'course-audio',
   true,
   52428800,
-  array['audio/mpeg']::text[]
+  -- `manifest.json` lives in this bucket too, so its type has to be
+  -- allowed: restricting to audio/mpeg alone makes the manifest upload
+  -- fail with a 415 after the MP3s have already gone up.
+  array['audio/mpeg', 'application/json']::text[]
 )
 on conflict (id) do update
 set
