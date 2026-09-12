@@ -8,8 +8,15 @@ CSV button exports the result as a table.
 | --- | --- |
 | `all_courses.sql` | course — subject, subcategory, title, and every metric. The master export. |
 | `top_courses.sql` | the ten most-read |
+| `worst_completion.sql` | the ten fewest readers reach the end of |
 | `by_subject.sql` | subject (6) |
 | `by_subcategory.sql` | subcategory (18) |
+
+`worst_completion.sql` carries a `min_readers` floor, set to 5 near the end of
+the file. A course two people opened and neither finished is 0%, which says
+nothing; raise the floor until the list stops being made of courses nobody has
+read. It also shows `avg_progress_pct`, because a course abandoned on lesson 2
+of 5 is a different problem from one abandoned on lesson 4.
 
 `all_courses.sql` is the one to start from if you want to slice the data
 yourself: export it once and pivot it in a spreadsheet by subject, by

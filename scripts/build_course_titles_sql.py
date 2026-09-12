@@ -12,6 +12,7 @@ Writes, all self-contained and all exportable as CSV from the editor:
     all_courses.sql        one row per course, every dimension and metric. The
                            master export -- pivot it in a spreadsheet.
     top_courses.sql        the ten most-read.
+    worst_completion.sql   the ten fewest readers reach the end of.
     by_subject.sql         aggregated per subject.
     by_subcategory.sql     aggregated per subcategory.
 
@@ -124,6 +125,33 @@ order by r.readers desc, r.finishers desc
 limit 10;
 """
 
+WORST = """\
+-- A course two people opened and neither finished is 0%, which says nothing.
+-- min_readers is the floor a course has to clear to be ranked; raise it until
+-- the list stops being made of courses nobody has read. Run the coverage query
+-- in README.md first if you do not know your order of magnitude.
+, min_readers as (select 5 as n)
+select
+  c.subject,
+  c.title                                              as course,
+  r.readers,
+  r.finishers,
+  round(100.0 * r.finishers / nullif(r.readers, 0), 1) as completion_pct,
+  -- Where they stop. A course abandoned on lesson 2 of 5 is a different
+  -- problem from one abandoned on lesson 4.
+  round((r.avg_index + 1)::numeric, 2)                 as avg_lessons_read,
+  c.lesson_count,
+  round(100.0 * (r.avg_index + 1) / nullif(c.lesson_count, 0), 1) as avg_progress_pct,
+  coalesce(s.saves, 0)                                 as saves
+from catalogue c
+join read r on r.course_id = c.course_id
+left join saved s on s.course_id = c.course_id
+cross join min_readers m
+where r.readers >= m.n
+order by completion_pct asc, r.readers desc
+limit 10;
+"""
+
 BY_GROUP = """\
 select
   c.{group_by},
@@ -184,6 +212,8 @@ def main() -> int:
          "Every course, one row each, with its subject and every metric.",
          ALL_COURSES),
         ("top_courses.sql", "The ten most-read courses.", TOP),
+        ("worst_completion.sql",
+         "The ten courses the fewest readers reach the end of.", WORST),
         ("by_subject.sql", "Every metric aggregated per subject.",
          BY_GROUP.format(group_by="subject")),
         ("by_subcategory.sql", "Every metric aggregated per subcategory.",
