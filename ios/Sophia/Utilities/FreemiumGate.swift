@@ -25,4 +25,17 @@ enum FreemiumGate {
     static func canCompleteCourse(isPremium: Bool, isDailyFreeCourse: Bool) -> Bool {
         isPremium || isDailyFreeCourse
     }
+
+    /// Whether the narration may be played.
+    ///
+    /// Audio follows the same daily rule as reading: a free user hears the one
+    /// course they claimed today, and nothing else. A course not yet claimed is
+    /// listenable because listening *is* opening it — the claim happens then,
+    /// exactly as it would if they had started reading.
+    ///
+    /// Note this is a client-side rule only. The `course-audio` bucket is
+    /// public, so the MP3 itself is reachable by anyone who reads the URL.
+    static func canListen(isPremium: Bool, isDailyFreeCourse: Bool, hasClaimedDailyFreeCourse: Bool) -> Bool {
+        isPremium || isDailyFreeCourse || !hasClaimedDailyFreeCourse
+    }
 }
