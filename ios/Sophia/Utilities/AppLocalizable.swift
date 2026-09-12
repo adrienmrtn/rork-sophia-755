@@ -880,6 +880,19 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+
+        // MARK: Mode audio
+        "audio.listen": "Écouter",
+        "audio.mode": "Mode audio",
+        "audio.queue": "À suivre",
+        "audio.queue_empty": "Rien dans la file",
+        "audio.download": "Télécharger",
+        "audio.downloaded": "Disponible hors connexion",
+        "audio.remove_download": "Supprimer le téléchargement",
+        "audio.close": "Fermer",
+        "audio.play": "Lecture",
+        "audio.pause": "Pause",
+        "audio.only_french": "Seul le français est disponible pour l\u{2019}instant.",
     ]
     // MARK: - English
 
@@ -1719,6 +1732,19 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+
+        // MARK: Mode audio
+        "audio.listen": "Listen",
+        "audio.mode": "Audio mode",
+        "audio.queue": "Up next",
+        "audio.queue_empty": "Nothing queued",
+        "audio.download": "Download",
+        "audio.downloaded": "Available offline",
+        "audio.remove_download": "Remove download",
+        "audio.close": "Close",
+        "audio.play": "Play",
+        "audio.pause": "Pause",
+        "audio.only_french": "French is the only language available for now.",
     ]
     // MARK: - Spanish
 

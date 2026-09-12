@@ -251,6 +251,13 @@ struct CourseView: View {
 
             progressBar
 
+            CourseListenButton(
+                course: course,
+                progressManager: progressManager,
+                isPremium: isPremium,
+                onLocked: { showDebloquerPaywall = true }
+            )
+
             Text("\(currentIndex + 1) / \(course.lessons.count)")
                 .font(DS.sans(.subheadline, .medium))
                 .foregroundStyle(DS.inkSecondary)
