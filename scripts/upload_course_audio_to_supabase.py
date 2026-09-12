@@ -7,9 +7,11 @@ Requires a secret key (service_role), not the publishable/anon key:
   export SUPABASE_SERVICE_ROLE_KEY=eyJ...   # Project Settings → API → service_role
   python3 scripts/upload_course_audio_to_supabase.py audio_fr/ --language fr
 
-Expects one MP3 per course, named after the course id:
+Expects one MP3 per course, named after the course id, with or without a
+trailing language suffix:
 
-  audio_fr/course_100_les_fleurs_du_mal_baudelaire.mp3
+  audio_fr/course_5_la_magna_carta_1215.mp3
+  audio_fr/course_5_la_magna_carta_1215_fr.mp3
 
 Objects land at `<language>/<course_id>.mp3`, which is the path
 `CourseAudioCatalog.swift` builds on the client. Course ids are checked against
@@ -20,6 +22,7 @@ in the app as a silent 404 on a course that looks perfectly normal.
 from __future__ import annotations
 
 import argparse
+import functools
 import json
 import os
 import sys
@@ -81,15 +84,30 @@ def ensure_bucket(base: str, key: str) -> None:
     print(f"created public bucket `{BUCKET}`")
 
 
-def known_course_ids(language: str) -> set[str]:
+def course_id_for(path: Path, language: str) -> str:
+    """Course id a file is meant for.
+
+    Narrations come named `<course_id>_<language>.mp3`. The suffix is stripped
+    only when the bare stem is not itself a course id: ids end in a number, but
+    nothing guarantees one will never end in `_fr`.
+    """
+    stem = path.stem
+    suffix = f"_{language}"
+    if stem.endswith(suffix) and stem not in known_course_ids(language):
+        return stem[: -len(suffix)]
+    return stem
+
+
+@functools.lru_cache(maxsize=None)
+def known_course_ids(language: str) -> frozenset[str]:
     folder = ROOT / "content" / "courses" / language
     if not folder.is_dir():
         sys.exit(f"no course content for language `{language}` ({folder})")
-    return {json.loads(p.read_text(encoding="utf-8"))["id"] for p in folder.glob("*.json")}
+    return frozenset(json.loads(p.read_text(encoding="utf-8"))["id"] for p in folder.glob("*.json"))
 
 
 def upload_one(base: str, key: str, path: Path, language: str) -> int:
-    url = f"{base}/storage/v1/object/{BUCKET}/{language}/{path.stem}.mp3?upsert=true"
+    url = f"{base}/storage/v1/object/{BUCKET}/{language}/{course_id_for(path, language)}.mp3?upsert=true"
     return request("POST", url, key, path.read_bytes(), "audio/mpeg")[0]
 
 
@@ -157,7 +175,7 @@ def main() -> int:
         sys.exit(f"no MP3s in {folder}")
 
     known = known_course_ids(args.language)
-    unknown = [p.name for p in files if p.stem not in known]
+    unknown = [p.name for p in files if course_id_for(p, args.language) not in known]
     if unknown:
         print(f"{len(unknown)} file(s) do not match a course id in content/courses/{args.language}:")
         for name in unknown[:10]:
@@ -174,7 +192,7 @@ def main() -> int:
     total = sum(p.stat().st_size for p in files)
     print(f"=== {len(files)} MP3s, {total / 1024 / 1024:.1f} MB → {BUCKET}/{args.language}/ ===")
     for p in files:
-        print(f"  {p.stem}  ({p.stat().st_size / 1024 / 1024:.1f} MB)")
+        print(f"  {course_id_for(p, args.language)}  ({p.stat().st_size / 1024 / 1024:.1f} MB)")
     if args.dry_run:
         print("dry run: nothing uploaded")
         return 0
@@ -202,7 +220,7 @@ def main() -> int:
 
     write_manifest(base, key, sorted(bucket_languages(base, key) | {args.language}))
     print("errors: none")
-    print(f"sample: {base}/storage/v1/object/public/{BUCKET}/{args.language}/{files[0].stem}.mp3")
+    print(f"sample: {base}/storage/v1/object/public/{BUCKET}/{args.language}/{course_id_for(files[0], args.language)}.mp3")
     return 0
 
 
