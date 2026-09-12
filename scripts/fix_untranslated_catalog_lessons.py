@@ -41,7 +41,11 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import mt_backend  # noqa: E402
-from check_course_translation import FRENCH_LEFTOVERS, GLOSSARY_SPAN_RE  # noqa: E402
+from check_course_translation import (  # noqa: E402
+    ENGLISH_LEFTOVERS,
+    FRENCH_LEFTOVERS,
+    GLOSSARY_SPAN_RE,
+)
 from i18n_languages import GT_TARGETS, NON_FR_LANGS  # noqa: E402
 from translate_courses_v2 import best_glossary_term  # noqa: E402
 from translate_locale_catalog import ANGLE_RE, protect_markup, restore_markup  # noqa: E402
@@ -53,6 +57,8 @@ FRENCH_COURSES = ROOT / "content" / "courses" / "fr"
 FRENCH_THRESHOLD = 3
 #: Below this share of the source's length the paragraph lost its content.
 LENGTH_FLOOR = 0.6
+#: Shorter than this and the lesson is a heading, not a paragraph.
+HEADING_LENGTH = 120
 LEAK_RE = re.compile(
     r"\bZZ[A-Z0-9]*|ZZ(?:END)?(?:BOLD|ITAL|GLOSS|NAME)[A-Z0-9]*"
     r"|(?:END)?(?:BOLD|ITAL|GLOSS|NAME)ZZ"
@@ -65,6 +71,19 @@ def looks_french(text: str) -> bool:
     bare = GLOSSARY_SPAN_RE.sub(" ", text)
     bare = re.sub(r"\*\*.+?\*\*|\*.+?\*|<[^<>]+>", " ", bare)
     return len({word.lower() for word in FRENCH_LEFTOVERS.findall(bare)}) >= FRENCH_THRESHOLD
+
+
+def looks_english(text: str) -> bool:
+    """The other half of the same defect: the source language left standing.
+
+    Every locale is translated out of the English catalogue, so a lesson that
+    still carries English sentences is one the engine answered with its input —
+    "**Charlemagne** (742-814) inherited the Frankish kingdom in **768**."
+    followed by perfectly good Swedish.
+    """
+    bare = GLOSSARY_SPAN_RE.sub(" ", text)
+    bare = re.sub(r"\*\*.+?\*\*|\*.+?\*|<[^<>]+>", " ", bare)
+    return len({word.lower() for word in ENGLISH_LEFTOVERS.findall(bare)}) >= FRENCH_THRESHOLD
 
 
 def catalog_path(lang: str) -> Path:
@@ -159,12 +178,61 @@ def translate(text: str, target: str, source: str, term_map: dict[str, str] | No
     return re.sub(r"\s+([,.;:!?])", r"\1", cleaned).strip()
 
 
-def needs_translation(current: object, source: str) -> bool:
+def needs_translation(current: object, source: str, lang: str = "") -> bool:
     if not isinstance(current, str) or not current.strip():
         return True
-    if looks_french(BRACE_RE.sub(" ", current)) or LEAK_RE.search(current):
+    body = BRACE_RE.sub(" ", current)
+    if looks_french(body) or LEAK_RE.search(current):
         return True
+    if lang != "en" and looks_english(body):
+        return True
+    if len(source) < HEADING_LENGTH:
+        # A lesson this short is a heading, and Arabic, Hebrew and Czech all
+        # write one in fewer characters than English does. The floor has nothing
+        # to say about it and would send it back through the engine every run.
+        return False
     return len(current) < LENGTH_FLOOR * len(source)
+
+
+#: A sentence boundary that does not fire inside "1948." or "St. Louis".
+SENTENCE_RE = re.compile(r"(?<=[.!?])\s+(?=[A-Z\u00c0-\u024f**\[<])")
+
+
+def english_words(text: str) -> set[str]:
+    bare = GLOSSARY_SPAN_RE.sub(" ", BRACE_RE.sub(" ", text))
+    bare = re.sub(r"\*\*.+?\*\*|\*.+?\*|<[^<>]+>", " ", bare)
+    return {word.lower() for word in ENGLISH_LEFTOVERS.findall(bare)}
+
+
+def translate_english_sentences(
+    text: str, target: str, term_map: dict[str, str] | None = None
+) -> str:
+    """Translate only the sentences of ``text`` that are still English.
+
+    When a lesson comes back half-done — "Between **1948 and 1952**, the United
+    States transferred…" followed by four sound Swedish paragraphs — rewriting
+    the whole body throws away the good half and gives the engine the same input
+    that already defeated it. Handing it one stranded sentence at a time does
+    not.
+    """
+    out: list[str] = []
+    for block in text.split("\n"):
+        pieces = SENTENCE_RE.split(block)
+        for index, piece in enumerate(pieces):
+            # Two function words in a single sentence is already the source
+            # language; three is the threshold for a whole lesson.
+            if len(english_words(piece)) >= 2:
+                pieces[index] = translate(piece, target, "en", term_map)
+        out.append(" ".join(part.strip() for part in pieces if part.strip()))
+    return "\n".join(out)
+
+
+def best_rendering(candidates: list[str], source: str) -> str:
+    """The candidate that left the least English standing, then the longest."""
+    scored = [c for c in candidates if c and c.strip()]
+    if not scored:
+        return source
+    return min(scored, key=lambda c: (len(english_words(c)), -len(c)))
 
 
 def remap_links(text: str, term_map: dict[str, str]) -> str:
@@ -184,6 +252,97 @@ def remap_links(text: str, term_map: dict[str, str]) -> str:
         return f"<{wanted}>"
 
     return ANGLE_RE.sub(swap, text)
+
+
+#: An ``<angle link>`` slot that lost the ``ZZ`` around it: ZZA0ZZ -> A0.
+SLOT_RE = re.compile(r"(?<![A-Za-z0-9])A(\d)Z{0,2}(?![0-9A-Za-z])")
+
+
+def restore_link_slots(current: str, source: str, term_map: dict[str, str]) -> str:
+    """Put the ``<angle link>`` back where only its slot number survived.
+
+    ``protect_markup`` hands the engine ZZA0ZZ, ZZA1ZZ… in place of each link and
+    ``restore_markup`` swaps them back. When the engine eats the ZZ wrapper the
+    bare number is all that is left, and the Serbian lesson reads "**27. novembra
+    1095**., tokom **A0**" where English writes "**<Council of Clermont>**". The
+    number is still the link's position in the English lesson, so which link it
+    was is not in doubt.
+    """
+    angles = ANGLE_RE.findall(source)
+    if not angles or not SLOT_RE.search(current):
+        return current
+
+    def swap(match: re.Match[str]) -> str:
+        token = match.group(0)
+        # "A4" is a paper size in the lesson on the Mona Lisa's dimensions, and
+        # the English lesson says it in the same breath. A slot never survives
+        # into English.
+        if re.search(rf"(?<![A-Za-z0-9]){token}(?![0-9A-Za-z])", source):
+            return token
+        index = int(match.group(1))
+        if index >= len(angles):
+            return token
+        term = angles[index]
+        return f"<{term_map.get(term, term)}>"
+
+    return SLOT_RE.sub(swap, current)
+
+
+#: The initial of a month the engine left behind when it moved the month after
+#: the day: "**August 6, 1945**" comes back as "**A6 Agustos 1945**", "**April
+#: 4, 1949**" as "**A4 Nisan 1949**".
+MONTH_INITIAL = re.compile(r"(?<![0-9A-Za-z])A(\d{1,2})(?![0-9A-Za-z])")
+A_MONTHS = ("April", "August")
+
+
+def stranded_month(text: str, source: str) -> bool:
+    """Is an A in front of a day number the remains of April or August?
+
+    Only where the English lesson has such a date to lose the letter from, and
+    only for a token the English does not itself write -- "A4" is also a paper
+    size, and the lesson on the Mona Lisa's dimensions says so in both.
+    """
+    if not any(month in source for month in A_MONTHS):
+        return False
+    for match in MONTH_INITIAL.finditer(text):
+        token = match.group(0)
+        if not re.search(rf"(?<![0-9A-Za-z]){token}(?![0-9A-Za-z])", source):
+            return True
+    return False
+
+
+#: "April 26, 1986" in the English lesson: the date the letter fell off. The
+#: separator between the day and the year is required so that "August 1096", a
+#: year with no day in front of it, is not read as a day followed by a year. A
+#: range ("April 27-29, 1994", "April 27 to 29, 1994") dates by its first day.
+A_MONTH_DATE = re.compile(
+    r"\b(?:April|August)\s+(\d{1,2})(?:\s*(?:[-\u2013]|to)\s*\d{1,2})?(?:,\s*|\s+)(\d{3,4})\b"
+)
+
+
+def strip_month_initial(current: str, source: str) -> str:
+    """Drop the month's initial from in front of the day it was moved behind.
+
+    Translating the sentence again does not help -- the engine answers
+    "**A6 Agustos 1945**" to "**August 6, 1945**" every time -- and the day
+    itself is not in doubt, so the letter is simply removed. Only where the
+    English lesson dates something to that very day: "A0" and "A1" are link
+    slots, "A4" in the lesson on the Mona Lisa's dimensions is a paper size, and
+    a day the English does not write is a day this cannot vouch for.
+    """
+    if not stranded_month(current, source):
+        return current
+    days = {int(day) for day, _ in A_MONTH_DATE.findall(source)}
+    if not days:
+        return current
+
+    def swap(match: re.Match[str]) -> str:
+        token = match.group(0)
+        if re.search(rf"(?<![0-9A-Za-z]){token}(?![0-9A-Za-z])", source):
+            return token
+        return match.group(1) if int(match.group(1)) in days else token
+
+    return MONTH_INITIAL.sub(swap, current)
 
 
 def repair_sidebars(current: str, source: str, lang: str) -> str:
@@ -276,7 +435,7 @@ def main() -> int:
             continue
         data = load(lang)
         maps = term_maps(lang, unresolved_links(lang, data))
-        changed = boxes = relinked = 0
+        changed = boxes = relinked = slots = 0
         for course_index, course in enumerate(english):
             lessons = (data[course_index].get("lessons") or [])
             for lesson_index, lesson in enumerate(course.get("lessons") or []):
@@ -288,12 +447,31 @@ def main() -> int:
                     not args.only_course or course.get("id") == args.only_course
                 )
                 course_map = maps.get(course.get("id") or "", {})
-                if forced_here or needs_translation(current, source):
-                    lessons[lesson_index]["content"] = translate(
-                        source, lang, "en", course_map
-                    )
+                if forced_here or needs_translation(current, source, lang):
+                    fresh = translate(source, lang, "en", course_map)
+                    if looks_english(BRACE_RE.sub(" ", fresh)):
+                        # The engine answered with its input. Repair the text
+                        # that is already there instead, sentence by sentence.
+                        fresh = best_rendering(
+                            [
+                                fresh,
+                                translate_english_sentences(fresh, lang, course_map),
+                                translate_english_sentences(
+                                    current if isinstance(current, str) else "",
+                                    lang,
+                                    course_map,
+                                ),
+                            ],
+                            source,
+                        )
+                    lessons[lesson_index]["content"] = remap_links(fresh, course_map)
                     changed += 1
                     continue
+                restored = restore_link_slots(current, source, course_map)
+                restored = strip_month_initial(restored, source)
+                if restored != current:
+                    current = restored
+                    slots += 1
                 repaired = repair_sidebars(current, source, lang)
                 if repaired != current:
                     current = repaired
@@ -303,9 +481,12 @@ def main() -> int:
                     relinked += 1
                 if relinked_text != lessons[lesson_index].get("content"):
                     lessons[lesson_index]["content"] = relinked_text
-        if changed or boxes or relinked:
+        if changed or boxes or relinked or slots:
             save(lang, data)
-        print(f"{lang}: translated {changed} lesson(s), {boxes} sidebar(s), {relinked} link(s) remapped")
+        print(
+            f"{lang}: translated {changed} lesson(s), {boxes} sidebar(s), "
+            f"{relinked} link(s) remapped, {slots} link slot(s) restored"
+        )
     return 0
 
 

@@ -95,7 +95,12 @@ def main() -> int:
         files += 1
         print(f"  {path.relative_to(ROOT)}: {changed} string(s)")
         if not args.check:
-            indent = 2 if path.read_text(encoding="utf-8").startswith("{\n  ") else None
+            # Most of these files are a JSON array, which this used to test for
+            # an object and so rewrite on one line -- minifying the Hebrew pack
+            # alone out of twenty-six. Ask whether the file is already on one
+            # line instead, the way the other passes do.
+            raw = path.read_text(encoding="utf-8")
+            indent = None if "\n" not in raw.strip()[:4000] else 2
             path.write_text(
                 json.dumps(updated, ensure_ascii=False, indent=indent) + "\n",
                 encoding="utf-8",

@@ -1,0 +1,163 @@
+{
+  "_comment": [
+    "Quiz options the engine returned unchanged: the English string is still",
+    "standing where French carries a translated one ('Le Cri' -> 'The Scream').",
+    "Keyed by language, then by the option exactly as the pack spells it today.",
+    "Each rendering follows the wording the question's own explanation already",
+    "uses, so the option and the sentence that justifies it agree.",
+    "Names that stay in the original everywhere - the ship Ever Given, the group",
+    "Furious Five, the Nation of Islam, the Old Vic, the Soft Power 30 index -",
+    "keep their name and only lose the English article the target language does",
+    "not write.",
+    "\"_shared\" applies to every language that does not list the option itself: French names that arrived with their accents stripped, which no Latin-script locale spells that way. Napoléon and Hô Chi Minh are deliberately not here - outside French those are written Napoleon and Ho Chi Minh.",
+    "The languages that write no Latin at all keep a longer tail: a single Latin word needs no article to give it away, so Hubris, Bebop and Odoacer are left standing there where an article would have been translated away."
+  ],
+  "_shared": {
+    "Emile Zola": "Émile Zola",
+    "Paul Cezanne": "Paul Cézanne",
+    "Eugene Delacroix": "Eugène Delacroix",
+    "Rene Magritte": "René Magritte"
+  },
+  "cs": {
+    "The Ever Given": "Ever Given"
+  },
+  "da": {
+    "The Fury of Living": "Vildt blod",
+    "The Silence of Maycomb": "Maycombs tavshed",
+    "The Estes": "Este-slægten",
+    "The Furious Five": "Furious Five",
+    "The Spirit of St. Louis": "Spirit of St. Louis",
+    "The Living Planet Index": "Living Planet Index",
+    "The Making of Hollywood": "Hollywoods tilblivelse"
+  },
+  "et": {
+    "The Theremin": "Teremin"
+  },
+  "fi": {
+    "The Fury of Living": "Nuori kapinallinen",
+    "The Scream": "Huuto",
+    "The Theremin": "Theremin",
+    "The Furious Five": "Furious Five",
+    "The Lady of the Camellias by Alexandre Dumas fils": "Alexandre Dumas nuoremman Kamelianainen"
+  },
+  "nb": {
+    "The Fury of Living": "Rotløs ungdom",
+    "The Silence of Maycomb": "Maycombs stillhet",
+    "The Estes": "Este-slekten",
+    "The Furious Five": "Furious Five",
+    "The Nation of Islam": "Nation of Islam",
+    "The Hundred Views of Edo": "Hundre utsikter over Edo",
+    "The Old Vic": "Old Vic",
+    "The Vestal Virgins": "Vestalinnene",
+    "The Boyars": "Bojarene",
+    "The Living Planet Index": "Living Planet Index",
+    "The Making of Hollywood": "Hollywoods tilblivelse",
+    "The Soft Power 30": "Soft Power 30",
+    "The Royal Bombard": "Den kongelige bombarden",
+    "The Throne of Colchis": "Tronen i Kolkhis"
+  },
+  "ro": {
+    "The Simorgh": "Simurg",
+    "The Julii": "Gens Iulia",
+    "The Ever Given": "Ever Given"
+  },
+  "sk": {
+    "The Scream": "Výkrik",
+    "The Man Machine": "The Man-Machine",
+    "The Theremin": "Theremin",
+    "The Furious Five": "Furious Five",
+    "The Old Vic": "Old Vic",
+    "The Ever Given": "Ever Given"
+  },
+  "sl": {
+    "The Furious Five": "Furious Five",
+    "The Brigands": "Razbojniki",
+    "The Confessions": "Izpovedi"
+  },
+  "sr": {
+    "Bes života": "Buntovnik bez razloga",
+    "Martian Chronicles": "Marsovske hronike",
+    "Mast": "Briljantin",
+    "The Apparatchiks": "Aparatčici",
+    "The Beagle": "Bigl",
+    "The Beagle II": "Bigl II",
+    "The Cinematographi": "Kinematograf",
+    "The Confessions": "Ispovesti",
+    "The Einherjar": "Einherjari",
+    "The Einsatzgruppen": "Ajnzacgrupe",
+    "The Elephant's Curve": "Kriva slona",
+    "The Endeavor": "Indevor",
+    "The Ever Given": "Ever Given",
+    "The FAANGs": "FAANG",
+    "The Frogs": "Žabe",
+    "The Furious Five": "Furious Five",
+    "The Godfather": "Kum",
+    "The Jazz Singer": "Pevač džeza",
+    "The Julii": "Julijevci",
+    "The Man Machine": "The Man-Machine",
+    "The Mechanical Hound": "Mehanički pas",
+    "The Metamorphoses": "Metamorfoze",
+    "The MoMA": "MoMA",
+    "The Nakba": "Nakba",
+    "The Negative": "Negativ X",
+    "The Phonograph": "Fonograf",
+    "The Risorgimento": "Risorđimento",
+    "The Scream": "Krik",
+    "The Sentinel": "Stražar",
+    "The Sichelschnitt": "Sikelšnit",
+    "The Siloviki": "Siloviki",
+    "The Terror": "Teror",
+    "The Theremin": "Teremin",
+    "The Vosges": "Vogezi"
+  },
+  "sv": {
+    "The Silence of Maycomb": "Maycombs tystnad",
+    "The Man Machine": "The Man-Machine",
+    "The Theremin": "Theremin",
+    "The Furious Five": "Furious Five",
+    "The Nation of Islam": "Nation of Islam",
+    "The Old Vic": "Old Vic",
+    "Guardian of the Throne of Horus": "Väktaren av Horus tron",
+    "The Light Texan": "Den lätta texasoljan",
+    "The Living Planet Index": "Living Planet Index",
+    "The Making of Hollywood": "Hollywoods tillkomst"
+  },
+  "el": {
+    "Anchises": "Αγχίσης",
+    "Art Nouveau": "Αρ νουβό",
+    "Beatboxing": "Μπίτμποξινγκ",
+    "Bebop": "Μπίμποπ",
+    "Cumae": "Κύμη",
+    "Drury Lane": "Ντρούρι Λέιν",
+    "Gawain": "Γκαουέιν",
+    "Hallyu": "Χαλιού",
+    "Hubris": "Ύβρις",
+    "Impasto": "Ιμπάστο",
+    "Ingsoc": "Ινγκσόκ",
+    "King Numitor": "Ο βασιλιάς Νουμίτωρ",
+    "Newspeak": "Νέα Ομιλία",
+    "Odoacer": "Οδόακρος",
+    "Smartphones": "Έξυπνα κινητά",
+    "Sonya Marmeladova": "Σόνια Μαρμελάντοβα",
+    "The Beagle II": "Το Beagle II",
+    "The Dolly Zoom": "Το ντόλι ζουμ",
+    "The Ever Given": "Το Ever Given",
+    "The Furious Five": "Οι Furious Five",
+    "The Theremin": "Το θέρεμιν",
+    "Viral marketing": "Ιογενές μάρκετινγκ"
+  },
+  "bg": {
+    "Cumae": "Куме",
+    "Ingsoc": "Ингсоц"
+  },
+  "ar": {
+    "Anchises": "أنخيسيس"
+  },
+  "he": {
+    "Anchises": "אנכיסס",
+    "Ingsoc": "אינגסוץ",
+    "Newspeak": "ניוספיק",
+    "Odoacer": "אודואקר",
+    "Ragtime": "רגטיים"
+  }
+}
