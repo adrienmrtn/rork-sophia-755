@@ -25,7 +25,9 @@ select
     100.0 * count(*) filter (where (value ->> 'isCompleted')::boolean)
     / nullif(count(*), 0)
   , 1)                                                             as completion_pct,
-  round(avg((value ->> 'lastLessonIndex')::int)::numeric, 2)       as avg_last_lesson
+  -- lastLessonIndex is a 0-based high-water mark, so +1 reads as "lessons
+  -- reached": 5 on a five-lesson course means the average reader got to the end.
+  round(avg((value ->> 'lastLessonIndex')::int)::numeric + 1, 2)   as avg_lessons_read
 from user_progress up
 cross join lateral jsonb_each(up.progress::jsonb -> 'courseProgress')
 group by key
@@ -44,11 +46,13 @@ group by course_id
 order by saves desc
 limit 10;
 
--- 3. Both at once, with titles ------------------------------------------------
--- Lives in top_courses_with_titles.sql, which carries the 238 titles inline.
--- It cannot be done from here: Supabase has no titles of its own, and the SQL
--- editor opens a new connection per run, so a temporary table lookup is gone
--- before the query that needs it.
+-- 3. With titles ---------------------------------------------------------------
+-- Lives in its own file, carrying the 238 titles and lesson counts inline:
+--   top_courses_with_titles.sql   the ten most-read
+--   all_courses_with_titles.sql   every course, the untouched ones included
+-- It cannot be done from here: Supabase has neither titles nor lesson counts,
+-- and the SQL editor opens a new connection per run, so a temporary lookup
+-- table is gone before the query that needs it.
 
 -- 4. How much of the audience this actually covers ----------------------------
 -- Signed-in users only; compare with your total installs before reading
