@@ -111,7 +111,27 @@ ASC_LOCALE: dict[str, str | None] = {
     "et": None,
 }
 
+#: Regional variants that take a copy of their base locale, not a translation.
+#:
+#: The account already carries en-AU, en-CA, en-GB, es-MX and pt-BR on its
+#: subscriptions, each spelling its text exactly like the base locale -- all four
+#: English rows read "Unlocks all of Sophia's premium features". Handling only
+#: en-US would leave those rows on the previous release's copy while en-US moved
+#: on, which is worse than not touching them at all.
+#:
+#: fr-CA is deliberately absent: the account does not use it, and inventing a
+#: Canadian French page nobody asked for is not this script's business.
+VARIANTS: dict[str, tuple[str, ...]] = {
+    "en-US": ("en-GB", "en-AU", "en-CA"),
+    "es-ES": ("es-MX",),
+    "pt-PT": ("pt-BR",),
+}
+VARIANT_OF = {variant: base for base, group in VARIANTS.items() for variant in group}
+
 LANG_FOR_LOCALE = {locale: lang for lang, locale in ASC_LOCALE.items() if locale}
+LANG_FOR_LOCALE.update(
+    {variant: LANG_FOR_LOCALE[base] for base, group in VARIANTS.items() for variant in group}
+)
 
 #: Version-level fields, file name -> API attribute.
 VERSION_FIELDS = {
@@ -140,8 +160,20 @@ LIMITS = {
     "description": 4000,
     "whats_new": 4000,
     "subscription_name": 30,
-    "subscription_description": 45,
 }
+
+#: The subscription description's real ceiling is not 45.
+#:
+#: Every reference repeats 45, inherited from the old in-app purchase field, and
+#: the account disproves it: five of its six live descriptions are longer, up to
+#: "Desbloqueia todas as funcionalidades premium da Sophia" at 54 characters,
+#: published and serving. Enforcing 45 would have thrown away five translations
+#: Apple accepts.
+#:
+#: So this is advisory. Nothing is dropped for length; `check` says when a
+#: description runs long and `push` reports whatever Apple actually refuses,
+#: which is the only authority that has been right so far.
+SUBSCRIPTION_DESCRIPTION_ADVISORY = 60
 
 #: Fields worth translating.
 TRANSLATABLE = ("subtitle", "description", "keywords", "promotional_text", "whats_new")
@@ -406,12 +438,26 @@ def check() -> int:
             if field == "keywords":
                 problems += [f"{locale}/{p}" for p in keyword_problems(value)]
 
+    notes: list[str] = []
+    english = {"en-US", *VARIANTS.get("en-US", ())}
     for path in sorted(SUBSCRIPTIONS.glob("*.json")) if SUBSCRIPTIONS.is_dir() else []:
-        for locale, entry in load_json(path).items():
-            for key, field in (("name", "subscription_name"), ("description", "subscription_description")):
-                value = (entry or {}).get(key) or ""
-                if problem := too_long(field, value):
-                    problems.append(f"{path.name} [{locale}] {problem}")
+        entries = load_json(path)
+        source_name = ((entries.get("en-US") or {}).get("name") or "").strip()
+        for locale, entry in entries.items():
+            name = (entry or {}).get("name") or ""
+            if problem := too_long("subscription_name", name):
+                problems.append(f"{path.name} [{locale}] {problem}")
+            # An engine hands short strings back unchanged, and a display name is
+            # about as short as they get. Worth a look rather than a veto: plenty
+            # of markets keep a product name in English on purpose.
+            if locale not in english and source_name and name.strip() == source_name:
+                notes.append(f"{path.name} [{locale}] name: still the English one")
+            description = (entry or {}).get("description") or ""
+            if len(description) > SUBSCRIPTION_DESCRIPTION_ADVISORY:
+                notes.append(
+                    f"{path.name} [{locale}] description: {len(description)} characters "
+                    f"-- long, but Apple decides, not this script"
+                )
 
     unsupported = [lang for lang, locale in ASC_LOCALE.items() if locale is None]
     missing_map = [lang for lang in ALL_CONTENT_LANGS if lang not in ASC_LOCALE]
@@ -422,6 +468,11 @@ def check() -> int:
     if missing_map:
         print(f"app language with no entry in ASC_LOCALE: {', '.join(missing_map)}")
         problems.append("ASC_LOCALE does not cover every app language")
+
+    if notes:
+        print(f"\n{len(notes)} note(s), not blocking:")
+        for note in notes:
+            print(f"  {note}")
 
     if problems:
         print(f"\n{len(problems)} problem(s):")
@@ -608,8 +659,9 @@ def join_field(pieces: list[str], separators: list[str], kept: dict[str, str]) -
 
 
 #: The subscription files and the fields in each, with the limit each answers to.
+#: `None` means no length Apple has proven -- write it and let the server rule.
 SUBSCRIPTION_FILES = (
-    ("subscriptions", (("name", 30), ("description", 45))),
+    ("subscriptions", (("name", 30), ("description", None))),
     ("subscription_groups", (("name", 30), ("custom_app_name", 30))),
 )
 
@@ -669,7 +721,7 @@ def build_subscriptions(
                     if value is None:
                         skipped.append(f"{path.stem} [{locale}] {key}: the app name did not survive")
                         continue
-                    if len(value) > limit:
+                    if limit and len(value) > limit:
                         skipped.append(
                             f"{path.stem} [{locale}] {key}: {len(value)} characters, limit {limit}"
                         )
@@ -680,6 +732,24 @@ def build_subscriptions(
 
                 if entry:
                     entries[locale] = entry
+
+            # Regional variants take the base entry as it stands. The account's
+            # own rows already read this way: all four English localizations of
+            # Sophia_monthly carry the identical sentence.
+            for base, group in VARIANTS.items():
+                origin_entry = entries.get(base)
+                if not origin_entry:
+                    continue
+                for variant in group:
+                    entry = dict(entries.get(variant) or {})
+                    for key, _ in fields:
+                        value = (origin_entry.get(key) or "").strip()
+                        if value and (redo or not (entry.get(key) or "").strip()):
+                            entry[key] = value
+                            changed = True
+                            written += 1
+                    if entry:
+                        entries[variant] = entry
 
             if changed:
                 save_json(path, entries)
@@ -697,7 +767,7 @@ def build(source: str, redo: bool, only: list[str] | None, translate_name: bool)
     targets = [
         locale
         for locale in sorted(LANG_FOR_LOCALE)
-        if locale != source and (not only or locale in only)
+        if locale != source and locale not in VARIANT_OF and (not only or locale in only)
     ]
     if not targets:
         sys.exit("Nothing to build.")
@@ -772,6 +842,22 @@ def build(source: str, redo: bool, only: list[str] | None, translate_name: bool)
                 written += 1
 
         print(f"  {locale}: {len(pending)} field(s)")
+
+    # Regional variants carry the base locale's text verbatim. Translating en-US
+    # into en-GB is a round trip that can only introduce a difference.
+    for base, group in VARIANTS.items():
+        for variant in group:
+            if only and variant not in only:
+                continue
+            copied_here = 0
+            for field in (*VERSION_FIELDS, *INFO_FIELDS):
+                value = read_field(base, field)
+                if value and (redo or read_field(variant, field) is None):
+                    write_field(variant, field, value)
+                    copied_here += 1
+            if copied_here:
+                written += copied_here
+                print(f"  {variant}: {copied_here} field(s) copied from {base}")
 
     sub_written, sub_skipped = build_subscriptions(
         source, redo, targets, mt_backend.translate_batch, source_gt

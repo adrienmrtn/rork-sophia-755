@@ -21,12 +21,25 @@ subscription_groups/<reference>.json     {"<locale>": {name, custom_app_name}}
 Those numbers are hard limits. Apple truncates nothing: one character over and
 the whole request is rejected, so `check` refuses before anything is sent.
 
-The **45 characters** for a subscription description is the tightest budget in
-the folder, and most languages run longer than English. Expect to write a few by
-hand: `build` reports the ones that overflow with their length and leaves the
-field empty rather than filling it with something Apple will refuse. In testing,
-"Unlimited access to every course and quiz" fitted in French, German, Greek and
-Arabic and came to 59 characters in Finnish.
+The subscription description is the exception. Every reference repeats 45
+characters, inherited from the old in-app purchase field, and the account
+disproves it: five of the six descriptions live on `Sophia_monthly` are longer,
+up to "Desbloqueia todas as funcionalidades premium da Sophia" at 54, published
+and serving. Enforcing 45 threw away five translations Apple accepts, so that
+field is now advisory — `check` notes a long one, nothing is dropped, and the
+server rules.
+
+## Regional variants
+
+`en-GB`, `en-AU`, `en-CA`, `es-MX` and `pt-BR` take a **copy** of their base
+locale rather than a translation of it. The account already works this way: all
+four English rows on `Sophia_monthly` carry the identical sentence. Translating
+en-US into en-GB is a round trip that can only introduce a difference, and
+handling only en-US would strand those rows on the previous release's copy.
+
+`fr-CA` is deliberately absent. The account does not use it, and inventing a
+Canadian French page nobody asked for is not this tool's business — add it to
+`VARIANTS` if that changes.
 
 ## The four steps
 
