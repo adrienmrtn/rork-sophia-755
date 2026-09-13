@@ -2,6 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<!-- Deep links app Sophia + callback URL scheme Meta (fb + App ID). -->
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -18,6 +19,7 @@
 				<string>fb2056318204963651</string>
 			</array>
 		</dict>
+		<!-- Callback Google Sign-In : reversed iOS client ID (REVERSED_CLIENT_ID). -->
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
@@ -25,18 +27,25 @@
 			</array>
 		</dict>
 	</array>
-	<key>FacebookAdvertiserIDCollectionEnabled</key>
-	<true/>
-	<key>FacebookAppID</key>
-	<string>2056318204963651</string>
-	<key>FacebookAutoLogAppEventsEnabled</key>
-	<true/>
-	<key>FacebookClientToken</key>
-	<string>d5806d3f17a5fcabc6a31ea59bd08d99</string>
-	<key>FacebookDisplayName</key>
-	<string>Sophia</string>
+	<!-- Client ID iOS Google (lu automatiquement par GoogleSignIn au lancement). -->
 	<key>GIDClientID</key>
 	<string>716867958674-pkkmuij2frvfv1313k1jgp3p5ldqor2o.apps.googleusercontent.com</string>
+	<!-- Identifiant numérique de l'app Meta (lu automatiquement par FacebookCore). -->
+	<key>FacebookAppID</key>
+	<string>2056318204963651</string>
+	<!-- Client token Meta — secret d'app, uniquement ici (pas dans le code Swift). -->
+	<key>FacebookClientToken</key>
+	<string>d5806d3f17a5fcabc6a31ea59bd08d99</string>
+	<!-- Nom affiché côté Meta / Facebook. -->
+	<key>FacebookDisplayName</key>
+	<string>Sophia</string>
+	<!-- Active l'envoi automatique d'App Events (install, lancement) — requis par Meta App Manager. -->
+	<key>FacebookAutoLogAppEventsEnabled</key>
+	<true/>
+	<!-- Autorise la collecte IDFA quand l'utilisateur consent via ATT. -->
+	<key>FacebookAdvertiserIDCollectionEnabled</key>
+	<true/>
+	<!-- Schémas requis pour que le SDK détecte / interagisse avec l'écosystème Facebook. -->
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -44,11 +53,8 @@
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
 	</array>
+	<!-- Texte ATT affiché par iOS avant la demande de tracking publicitaire. -->
 	<key>NSUserTrackingUsageDescription</key>
 	<string>Sophia utilise cet identifiant pour mesurer l'efficacité de ses campagnes publicitaires et améliorer la pertinence des annonces.</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>audio</string>
-	</array>
 </dict>
 </plist>

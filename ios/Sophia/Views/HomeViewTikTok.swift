@@ -84,9 +84,7 @@ struct HomeViewTikTok: View {
                                         },
                                         onStart: {
                                             startCourse(course)
-                                        },
-                                        progressManager: progressManager,
-                                        isPremium: isPremium
+                                        }
                                     )
                                     // Chaque rangée fait presque un plein écran (moins
                                     // `peekHeight`) : `.viewAligned` snappe toujours une carte
@@ -278,8 +276,6 @@ private struct TikTokCourseCard: View {
     var isFavorite: Bool = false
     var onToggleFavorite: (() -> Void)? = nil
     let onStart: () -> Void
-    var progressManager: ProgressManager? = nil
-    var isPremium: Bool = false
 
     @State private var cachedImage: UIImage?
     @State private var startTrigger: Int = 0
@@ -320,22 +316,7 @@ private struct TikTokCourseCard: View {
                     RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
                         .strokeBorder(DS.hairline, lineWidth: 1)
                 }
-                .overlay(alignment: .topTrailing) {
-                    HStack(spacing: 8) {
-                        if let progressManager {
-                            CourseListenButton(
-                                course: course,
-                                progressManager: progressManager,
-                                isPremium: isPremium,
-                                // Locked: send them into the course, where the
-                                // existing paywall explains itself. No second
-                                // paywall entry point to keep in sync.
-                                onLocked: onStart
-                            )
-                        }
-                        favoriteButton
-                    }
-                }
+                .overlay(alignment: .topTrailing) { favoriteButton }
 
             HStack(spacing: 8) {
                 subjectPill

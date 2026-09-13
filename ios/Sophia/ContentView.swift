@@ -121,10 +121,6 @@ struct ContentView: View {
                     selectedCourse = nil
                 }
             }
-            .task {
-                AudioPlayerService.shared.attach(progressManager: progressManager)
-                await CourseAudioCatalog.shared.refresh()
-            }
 
             if showSwipeTutorial, HomeCardPresentation.style == .legacy {
                 SwipeTutorialOverlay(onDismiss: {
