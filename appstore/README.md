@@ -21,6 +21,13 @@ subscription_groups/<reference>.json     {"<locale>": {name, custom_app_name}}
 Those numbers are hard limits. Apple truncates nothing: one character over and
 the whole request is rejected, so `check` refuses before anything is sent.
 
+The **45 characters** for a subscription description is the tightest budget in
+the folder, and most languages run longer than English. Expect to write a few by
+hand: `build` reports the ones that overflow with their length and leaves the
+field empty rather than filling it with something Apple will refuse. In testing,
+"Unlimited access to every course and quiz" fitted in French, German, Greek and
+Arabic and came to 59 characters in Finnish.
+
 ## The four steps
 
 ```bash
@@ -31,9 +38,15 @@ python3 scripts/appstore_metadata.py push --dry-run
 python3 scripts/appstore_metadata.py push
 ```
 
-`pull` first, always. `build` never overwrites a field that already has text
-unless you pass `--redo`, so pulling first is what protects copy you wrote by
-hand from being replaced by a machine translation of itself.
+`build` never overwrites a field that already has text unless you pass `--redo`.
+So `pull` first when you are adding languages to copy you want to keep, and skip
+it when you are deliberately replacing the copy — it writes the store's text over
+what is here.
+
+**Subscriptions only exist after a `pull`.** Their product ids and group
+reference names live on the account, not in this repo, so `subscriptions/` and
+`subscription_groups/` stay empty until `pull` creates them. Then `build`
+translates them and `push` writes them back, same as everything else.
 
 ## Or from the Actions tab, with no terminal
 

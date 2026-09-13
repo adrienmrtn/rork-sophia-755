@@ -539,6 +539,18 @@ PROTECTED = re.compile("|".join([r"https?://[^\s<>\"]+", *(re.escape(k) for k in
 #: three of them and the letter one in all seven. Identical runs share a
 #: sentinel, so the app name costs one letter however often it appears.
 LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+SENTINEL = re.compile(r"ZZ[A-Z]ZZ")
+
+
+def nothing_to_translate(guarded: str) -> bool:
+    """True when a protected text holds no word of its own.
+
+    A subscription group's custom app name is often the app's name and nothing
+    else. Protected, it becomes a lone sentinel, and asking an engine to render
+    ``ZZAZZ`` in Arabic gets back whatever it makes of that -- a field lost to a
+    round trip that had no work in it. Copy those instead.
+    """
+    return not re.search(r"[^\W\d_]", SENTINEL.sub("", guarded), re.UNICODE)
 
 
 def protect(text: str) -> tuple[str, dict[str, str]]:
@@ -593,6 +605,87 @@ def join_field(pieces: list[str], separators: list[str], kept: dict[str, str]) -
         if index < len(separators):
             out.append(separators[index])
     return restore("".join(out), kept)
+
+
+#: The subscription files and the fields in each, with the limit each answers to.
+SUBSCRIPTION_FILES = (
+    ("subscriptions", (("name", 30), ("description", 45))),
+    ("subscription_groups", (("name", 30), ("custom_app_name", 30))),
+)
+
+
+def build_subscriptions(
+    source: str, redo: bool, targets: list[str], translate, source_gt: str
+) -> tuple[int, list[str]]:
+    """Translate the subscription and group names `pull` brought back.
+
+    Forty-five characters for a description is the tightest budget anywhere in
+    this folder, and most languages are longer than English. Expect to write a
+    few of these by hand: a rejected one is reported with its length, and the
+    field is left empty rather than filled with something Apple refuses.
+    """
+    written = 0
+    skipped: list[str] = []
+
+    for folder_name, fields in SUBSCRIPTION_FILES:
+        folder = ROOT / "appstore" / folder_name
+        if not folder.is_dir():
+            continue
+
+        for path in sorted(folder.glob("*.json")):
+            entries = load_json(path)
+            origin = entries.get(source)
+            if not origin:
+                skipped.append(f"{folder_name}/{path.name}: nothing in {source} to translate from")
+                continue
+
+            changed = False
+            for locale in targets:
+                lang = LANG_FOR_LOCALE[locale]
+                entry = dict(entries.get(locale) or {})
+                pending = [
+                    (key, limit)
+                    for key, limit in fields
+                    if (origin.get(key) or "").strip()
+                    and (redo or not (entry.get(key) or "").strip())
+                ]
+                if not pending:
+                    continue
+
+                guarded = [protect((origin[key] or "").strip()) for key, _ in pending]
+                # A value that is nothing but the app's name is copied, not sent.
+                payload = [text if not nothing_to_translate(text) else "" for text, _ in guarded]
+                try:
+                    out = translate(payload, GT_TARGETS.get(lang, lang), source_gt)
+                except Exception as error:  # noqa: BLE001
+                    skipped.append(f"{path.stem} [{locale}]: translation failed ({error})")
+                    continue
+
+                for (key, limit), (text, kept), raw in zip(pending, guarded, out):
+                    if nothing_to_translate(text):
+                        value = (origin[key] or "").strip()
+                    else:
+                        value = restore(raw.strip(), kept)
+                    if value is None:
+                        skipped.append(f"{path.stem} [{locale}] {key}: the app name did not survive")
+                        continue
+                    if len(value) > limit:
+                        skipped.append(
+                            f"{path.stem} [{locale}] {key}: {len(value)} characters, limit {limit}"
+                        )
+                        continue
+                    entry[key] = value
+                    changed = True
+                    written += 1
+
+                if entry:
+                    entries[locale] = entry
+
+            if changed:
+                save_json(path, entries)
+                print(f"  {folder_name}/{path.stem}")
+
+    return written, skipped
 
 
 def build(source: str, redo: bool, only: list[str] | None, translate_name: bool) -> int:
@@ -679,6 +772,12 @@ def build(source: str, redo: bool, only: list[str] | None, translate_name: bool)
                 written += 1
 
         print(f"  {locale}: {len(pending)} field(s)")
+
+    sub_written, sub_skipped = build_subscriptions(
+        source, redo, targets, mt_backend.translate_batch, source_gt
+    )
+    written += sub_written
+    skipped += sub_skipped
 
     print(f"\n{written} field(s) written")
     if skipped:
