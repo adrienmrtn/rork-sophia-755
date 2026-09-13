@@ -350,6 +350,27 @@ def too_long(field: str, value: str) -> str | None:
     return None
 
 
+def keyword_problems(value: str) -> list[str]:
+    """What is wrong with a keyword list, beyond its length.
+
+    The field is 100 characters and Apple counts every one of them, so a space
+    after a comma is a keyword's worth of budget spent on nothing. Apple also
+    recombines single keywords into phrases by itself, which is why these are
+    single words: spelling out "culture generale" buys a match that "culture" and
+    "generale" already cover.
+    """
+    problems: list[str] = []
+    if " " in value:
+        problems.append("keywords: contains a space -- Apple counts it, and gains nothing")
+    terms = [t.strip().lower() for t in value.split(",")]
+    duplicates = sorted({t for t in terms if terms.count(t) > 1 and t})
+    if duplicates:
+        problems.append(f"keywords: repeated term(s) {', '.join(duplicates)}")
+    if empty := sum(1 for t in terms if not t):
+        problems.append(f"keywords: {empty} empty slot(s) from a stray comma")
+    return problems
+
+
 def check() -> int:
     problems: list[str] = []
     known = set(LANG_FOR_LOCALE)
@@ -366,6 +387,8 @@ def check() -> int:
                 continue
             if problem := too_long(field, value):
                 problems.append(f"{locale}/{problem}")
+            if field == "keywords":
+                problems += [f"{locale}/{p}" for p in keyword_problems(value)]
 
     for path in sorted(SUBSCRIPTIONS.glob("*.json")) if SUBSCRIPTIONS.is_dir() else []:
         for locale, entry in load_json(path).items():

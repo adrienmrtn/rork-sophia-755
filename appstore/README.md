@@ -55,6 +55,36 @@ the app picks its language itself rather than following the device locale.
 
 23 locales are pushable. There is nothing to do about the other three.
 
+## Keywords are written by hand, not translated
+
+`keywords.txt` is the one field a translation engine actively damages, so these
+23 lists are composed per market rather than rendered from English. `build`
+leaves a field that already has text alone, so they survive a rebuild.
+
+Four rules shaped them, and `check` enforces the first three:
+
+**No spaces.** The field is 100 characters and Apple counts every one. A space
+after a comma is a keyword's worth of budget spent on nothing.
+
+**Single words, never phrases.** Apple recombines keywords into phrases by
+itself, so `culture,générale` already matches "culture générale" — spelling the
+phrase out buys a match you had for free, and both words stay free to combine
+with everything else in the list.
+
+**No duplicates, no stray commas.** Both silently cost characters.
+
+**Never repeat a word from the app's name or subtitle.** Apple indexes those
+already. This is the one rule `check` cannot enforce, because the name lives on
+the account and not in this folder — run `pull` and compare. It is why the
+English list carries neither *general* nor *knowledge*.
+
+Beyond the rules, each list ends on the local high-intent term for the exam
+people are cramming for: *bac*, *Abitur*, *matura*, *maturita*, *érettségi*,
+*bacalaureat*, *πανελλήνιες*. Those convert; a translated "examination" does
+not. The lists average 82 of the 100 characters — the remaining room is there
+deliberately, for terms you find in App Store Connect's own search data once
+there is some.
+
 ## What is deliberately not here
 
 **Screenshots.** A locale with no screenshots of its own shows the primary
