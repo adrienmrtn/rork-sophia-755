@@ -399,7 +399,14 @@ def too_long(field: str, value: str) -> str | None:
 
 
 def keyword_problems(value: str) -> list[str]:
-    """What is wrong with a keyword list, beyond its length.
+    """What is wasteful in a keyword list, beyond its length.
+
+    All of it is waste rather than error: Apple takes a list with spaces and
+    duplicates in it and indexes what is left after they have eaten the budget.
+    Only the 100-character ceiling is a rejection, so these are reported as notes
+    -- a list typed by hand in App Store Connect routinely has ", " between its
+    terms, and refusing to push over that would hold a release hostage to a
+    formatting preference.
 
     The field is 100 characters and Apple counts every one of them, so a space
     after a comma is a keyword's worth of budget spent on nothing. Apple also
@@ -421,6 +428,7 @@ def keyword_problems(value: str) -> list[str]:
 
 def check() -> int:
     problems: list[str] = []
+    notes: list[str] = []
     known = set(LANG_FOR_LOCALE)
 
     for locale in locales_on_disk():
@@ -436,9 +444,8 @@ def check() -> int:
             if problem := too_long(field, value):
                 problems.append(f"{locale}/{problem}")
             if field == "keywords":
-                problems += [f"{locale}/{p}" for p in keyword_problems(value)]
+                notes += [f"{locale}/{p}" for p in keyword_problems(value)]
 
-    notes: list[str] = []
     english = {"en-US", *VARIANTS.get("en-US", ())}
     for path in sorted(SUBSCRIPTIONS.glob("*.json")) if SUBSCRIPTIONS.is_dir() else []:
         entries = load_json(path)
@@ -686,13 +693,34 @@ def build_subscriptions(
 
         for path in sorted(folder.glob("*.json")):
             entries = load_json(path)
-            origin = entries.get(source)
-            if not origin:
-                skipped.append(f"{folder_name}/{path.name}: nothing in {source} to translate from")
-                continue
+            # The source locale is the obvious origin, but a subscription group
+            # is often localized in one language and no other -- this account's
+            # is French only. One populated locale is an unambiguous origin, so
+            # use it rather than refusing to translate anything.
+            origin_locale = source
+            if not entries.get(origin_locale):
+                populated = [
+                    locale
+                    for locale, entry in entries.items()
+                    if any(((entry or {}).get(key) or "").strip() for key, _ in fields)
+                ]
+                if len(populated) != 1:
+                    skipped.append(
+                        f"{folder_name}/{path.name}: no {source} entry, and "
+                        f"{len(populated)} others to choose between"
+                    )
+                    continue
+                origin_locale = populated[0]
+                print(f"  {folder_name}/{path.stem}: translating from {origin_locale}")
+
+            origin = entries[origin_locale]
+            origin_lang = LANG_FOR_LOCALE.get(origin_locale, "en")
+            origin_gt = GT_TARGETS.get(origin_lang, origin_lang)
 
             changed = False
             for locale in targets:
+                if locale == origin_locale:
+                    continue
                 lang = LANG_FOR_LOCALE[locale]
                 entry = dict(entries.get(locale) or {})
                 pending = [
@@ -708,7 +736,7 @@ def build_subscriptions(
                 # A value that is nothing but the app's name is copied, not sent.
                 payload = [text if not nothing_to_translate(text) else "" for text, _ in guarded]
                 try:
-                    out = translate(payload, GT_TARGETS.get(lang, lang), source_gt)
+                    out = translate(payload, GT_TARGETS.get(lang, lang), origin_gt)
                 except Exception as error:  # noqa: BLE001
                     skipped.append(f"{path.stem} [{locale}]: translation failed ({error})")
                     continue
@@ -737,7 +765,7 @@ def build_subscriptions(
             # own rows already read this way: all four English localizations of
             # Sophia_monthly carry the identical sentence.
             for base, group in VARIANTS.items():
-                origin_entry = entries.get(base)
+                origin_entry = entries.get(base) or (entries.get(origin_locale) if base == source else None)
                 if not origin_entry:
                     continue
                 for variant in group:
@@ -769,7 +797,15 @@ def build(source: str, redo: bool, only: list[str] | None, translate_name: bool)
         for locale in sorted(LANG_FOR_LOCALE)
         if locale != source and locale not in VARIANT_OF and (not only or locale in only)
     ]
-    if not targets:
+    # A variant is filled by copying, never by translating, so it is not in
+    # `targets` -- but `--locale en-GB` has to still do something.
+    variant_targets = [
+        variant
+        for group in VARIANTS.values()
+        for variant in group
+        if not only or variant in only
+    ]
+    if not targets and not variant_targets:
         sys.exit("Nothing to build.")
 
     source_lang = LANG_FOR_LOCALE.get(source)
@@ -847,7 +883,7 @@ def build(source: str, redo: bool, only: list[str] | None, translate_name: bool)
     # into en-GB is a round trip that can only introduce a difference.
     for base, group in VARIANTS.items():
         for variant in group:
-            if only and variant not in only:
+            if variant not in variant_targets:
                 continue
             copied_here = 0
             for field in (*VERSION_FIELDS, *INFO_FIELDS):
@@ -867,10 +903,10 @@ def build(source: str, redo: bool, only: list[str] | None, translate_name: bool)
 
     print(f"\n{written} field(s) written")
     if skipped:
-        print(f"\n{len(skipped)} field(s) left empty because the translation overflows:")
+        print(f"\n{len(skipped)} field(s) not written:")
         for line in skipped:
             print(f"  {line}")
-        print("Shorten these by hand -- Apple rejects the whole request, it does not truncate.")
+        print("An overflow has to be shortened by hand -- Apple rejects the request, it does not truncate.")
     return 0
 
 
