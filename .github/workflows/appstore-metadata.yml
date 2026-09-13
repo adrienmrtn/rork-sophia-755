@@ -1,0 +1,150 @@
+# Drive the App Store product page from the Actions tab, with no terminal and no
+# key on anyone's laptop. The .p8 lives in this repo's Secrets and is read only
+# by this workflow.
+#
+# Trigger: "Run workflow", which asks what to do. It defaults to dry-run, so the
+# careless click reports and writes nothing.
+#
+#   check     lengths and locales. Needs no secrets at all.
+#   pull      read the live page into appstore/metadata/ and commit it.
+#   build     translate the locales still missing text, and commit them.
+#   dry-run   what a push would create or change. Writes nothing to Apple.
+#   push      write it to App Store Connect.
+#
+# See appstore/README.md for what the folder holds and why keywords are written
+# by hand.
+name: App Store metadata
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "What to do"
+        type: choice
+        default: dry-run
+        options:
+          - check
+          - pull
+          - build
+          - dry-run
+          - push
+      locale:
+        description: "One locale only, e.g. de-DE (blank = all)"
+        type: string
+        default: ""
+
+# Never let two runs write to the account at once, and never cancel one that is
+# halfway through writing.
+concurrency:
+  group: appstore-metadata
+  cancel-in-progress: false
+
+jobs:
+  run:
+    name: ${{ inputs.action }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install the JWT signer
+        run: pip install --quiet pyjwt cryptography
+
+      # Fail here rather than three minutes later with an opaque 401.
+      - name: Check the secrets are set
+        if: inputs.action != 'check'
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+        run: |
+          missing=""
+          for name in ASC_KEY_ID ASC_ISSUER_ID ASC_PRIVATE_KEY; do
+            [ -n "${!name}" ] || missing="$missing $name"
+          done
+          if [ -n "$missing" ]; then
+            echo "Missing repository secret(s):$missing" >&2
+            echo "Settings -> Secrets and variables -> Actions -> New repository secret" >&2
+            exit 1
+          fi
+
+      # Inputs go through the environment, never spliced into the script: a
+      # locale is free text, and free text inside a shell line is an injection.
+      - name: Run
+        env:
+          ACTION: ${{ inputs.action }}
+          LOCALE: ${{ inputs.locale }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+        run: |
+          # These steps run under `bash -e`, where a bare `[ ... ] && ...` that
+          # tests false ends the step. Hence the explicit `if`.
+          only=()
+          if [ -n "$LOCALE" ]; then
+            only=(--locale "$LOCALE")
+          fi
+
+          case "$ACTION" in
+            check)   set -- check ;;
+            pull)    set -- pull ;;
+            # The translation engine answers 429 to some data-centre ranges. If
+            # this step fails on the network rather than on the content, run
+            # build on a laptop and push from here.
+            build)   set -- build --from en-US "${only[@]}" ;;
+            dry-run) set -- push --dry-run "${only[@]}" ;;
+            push)    set -- push "${only[@]}" ;;
+            *)       echo "unknown action: $ACTION" >&2; exit 1 ;;
+          esac
+
+          {
+            echo "### \`$ACTION\`"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          # Without the `set +e`, a failing run ends the step here and the fence
+          # above is never closed, which mangles the summary.
+          set +e
+          python3 scripts/appstore_metadata.py "$@" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          status=${PIPESTATUS[0]}
+          set -e
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"
+
+      # Advisory, never fatal. A pull brings back whatever the store holds, and
+      # keywords typed into App Store Connect by hand often carry ", " between
+      # them -- worth reporting, not worth throwing the pull away over.
+      - name: Validate what came back
+        if: inputs.action == 'pull' || inputs.action == 'build'
+        continue-on-error: true
+        run: python3 scripts/appstore_metadata.py check
+
+      - name: Commit what changed
+        if: inputs.action == 'pull' || inputs.action == 'build'
+        env:
+          ACTION: ${{ inputs.action }}
+        run: |
+          if git diff --quiet -- appstore; then
+            echo "Nothing changed." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add appstore
+          git commit -m "App Store metadata: $ACTION"
+          git push
+          {
+            echo ""
+            echo "Committed to \`${GITHUB_REF_NAME}\`:"
+            echo '```'
+            git show --stat --format="" HEAD
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

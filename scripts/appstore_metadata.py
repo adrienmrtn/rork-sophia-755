@@ -186,10 +186,19 @@ def token() -> str:
             "ASC_PRIVATE_KEY is the path to the .p8 file, which belongs outside this repo."
         )
 
-    key_path = Path(os.environ["ASC_PRIVATE_KEY"]).expanduser()
-    if not key_path.is_file():
-        sys.exit(f"No .p8 at {key_path}")
-    secret = key_path.read_text(encoding="utf-8")
+    # On a laptop this names a .p8 file; in CI the key itself is the secret and
+    # there is no file to name. Telling them apart beats a second variable.
+    raw = os.environ["ASC_PRIVATE_KEY"]
+    if "BEGIN PRIVATE KEY" in raw:
+        secret = raw.replace("\\n", "\n")
+    else:
+        key_path = Path(raw).expanduser()
+        if not key_path.is_file():
+            sys.exit(
+                f"ASC_PRIVATE_KEY is neither a key nor a file: {key_path}\n"
+                "Give it the path to the .p8, or the contents of one."
+            )
+        secret = key_path.read_text(encoding="utf-8")
 
     now = int(time.time())
     return jwt.encode(

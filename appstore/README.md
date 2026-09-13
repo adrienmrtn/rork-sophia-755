@@ -35,6 +35,24 @@ python3 scripts/appstore_metadata.py push
 unless you pass `--redo`, so pulling first is what protects copy you wrote by
 hand from being replaced by a machine translation of itself.
 
+## Or from the Actions tab, with no terminal
+
+`.github/workflows/appstore-metadata.yml` runs the same four steps from a button.
+Actions → **App Store metadata** → **Run workflow**, pick what to do. It defaults
+to `dry-run`, so a careless click reports and changes nothing. `pull` and `build`
+commit what they changed back to the branch you ran them on.
+
+This needs three repository secrets — Settings → Secrets and variables → Actions:
+`ASC_KEY_ID`, `ASC_ISSUER_ID`, and `ASC_PRIVATE_KEY` holding the whole contents of
+the `.p8`, `-----BEGIN PRIVATE KEY-----` line included. `check` needs none of
+them.
+
+`build` is the one step that may fail here rather than on a laptop: the
+translation engine answers 429 to some data-centre ranges. Build locally and push
+from Actions if it does.
+
+## Or from a terminal
+
 Credentials come from the environment and never from this repository:
 
 ```bash
