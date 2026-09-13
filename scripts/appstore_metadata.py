@@ -91,7 +91,14 @@ ASC_LOCALE: dict[str, str | None] = {
     "fi": "fi",
     "cs": "cs",
     "sk": "sk",
-    "sl": "sl",
+    # Apple rejected plain "sl" with "The language specified is not listed for
+    # localization". fastlane spells Slovenian "sl-SI", so that is what this
+    # tries -- but the same error hits a known group of languages Apple
+    # announced in March 2026 and has not finished wiring up (Bengali, Marathi,
+    # Slovenian, Punjabi, Tamil, Telugu, Urdu), so the shortcode may not be the
+    # problem at all. If "sl-SI" is refused too, set this to None: the store has
+    # no Slovenian page to offer yet, whatever the documentation lists.
+    "sl": "sl-SI",
     "hr": "hr",
     "hu": "hu",
     "ro": "ro",
