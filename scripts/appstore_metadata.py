@@ -732,6 +732,13 @@ def build_subscriptions(
             for locale in targets:
                 if locale == origin_locale:
                     continue
+                # A subscription file's locale set belongs to the account, not
+                # to metadata/. `pull` writes one key per localization the
+                # product actually has, and translating into every locale this
+                # folder happens to hold is how 124 localizations nobody asked
+                # for reached App Store Connect. Add the key to widen a product.
+                if locale not in entries:
+                    continue
                 lang = LANG_FOR_LOCALE[locale]
                 entry = dict(entries.get(locale) or {})
                 pending = [
