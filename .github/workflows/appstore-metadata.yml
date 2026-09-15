@@ -11,6 +11,15 @@
 #   dry-run   what a push would create or change. Writes nothing to Apple.
 #   push      write it to App Store Connect.
 #
+# Two more go the other way, and delete from the account rather than write to it:
+#
+#   prune-dry-run  the subscription and group text that was never submitted to
+#                  review, and would therefore be deleted. Writes nothing.
+#   prune          delete it. Text App Review has already seen is left alone, and a
+#                  product with no reviewed text at all keeps one localization so it
+#                  stays submittable. Neither touches this repo, so a later push
+#                  puts back whatever appstore/subscriptions/ still holds.
+#
 # See appstore/README.md for what the folder holds and why keywords are written
 # by hand.
 name: App Store metadata
@@ -28,6 +37,8 @@ on:
           - build
           - dry-run
           - push
+          - prune-dry-run
+          - prune
       locale:
         description: "One locale only, e.g. de-DE (blank = all)"
         type: string
@@ -103,6 +114,8 @@ jobs:
             build)   set -- build --from en-US "${only[@]}" ;;
             dry-run) set -- push --dry-run "${only[@]}" ;;
             push)    set -- push "${only[@]}" ;;
+            prune-dry-run) set -- prune --dry-run "${only[@]}" ;;
+            prune)   set -- prune "${only[@]}" ;;
             *)       echo "unknown action: $ACTION" >&2; exit 1 ;;
           esac
 

@@ -14,6 +14,11 @@ Four steps, each its own subcommand, in the order you run them:
     check   validate lengths and locales -- no network, no account needed
     push    write the tree back to App Store Connect
 
+A fifth subcommand, ``prune``, runs outside that cycle and only deletes: it
+drops the subscription and subscription-group text that was typed into App
+Store Connect and never submitted, and leaves whatever review has already seen
+exactly where it is.
+
 Only ``build`` calls the translation engine and only ``push`` writes to Apple, so
 whatever is about to be published can always be read on disk in between. Nothing
 is ever translated twice: ``build`` skips a field that already has text unless
@@ -38,6 +43,8 @@ Usage:
     python3 scripts/appstore_metadata.py build --from fr-FR
     python3 scripts/appstore_metadata.py push --dry-run
     python3 scripts/appstore_metadata.py push
+    python3 scripts/appstore_metadata.py prune --dry-run
+    python3 scripts/appstore_metadata.py prune
 """
 
 from __future__ import annotations
@@ -1160,6 +1167,133 @@ def write_subscription_locales(
     return failures
 
 
+# --- prune ----------------------------------------------------------------
+
+#: What Apple calls text that was typed into a localization and never sent to
+#: review. The other three states -- WAITING_FOR_REVIEW, APPROVED and REJECTED
+#: -- all mean the row has left the developer's hands, and prune leaves them be.
+DRAFT_STATE = "PREPARE_FOR_SUBMISSION"
+
+
+def primary_locale(client: Client, app_id: str) -> str | None:
+    """The app's own language: the row to keep when every row is a draft."""
+    record = client.call("GET", f"/apps/{app_id}")
+    return ((record.get("data") or {}).get("attributes") or {}).get("primaryLocale")
+
+
+def prune_locales(
+    client: Client,
+    list_path: str,
+    delete_path: str,
+    keeper: str | None,
+    only: list[str] | None,
+    label: str,
+) -> tuple[int, list[str]]:
+    """Delete every never-submitted localization under `list_path`.
+
+    A product needs one localization to stay submittable: stripped bare it reads
+    as Missing Metadata, and Apple refuses the last delete anyway. So where
+    nothing here has been through review -- a product created and never
+    submitted, whose rows are therefore all drafts -- one row survives: the
+    app's primary language if it is present, else en-US, else the first by
+    locale. Where something has been reviewed, that something is the survivor
+    and every draft goes.
+
+    A row whose state the account did not report is never deleted. Guessing
+    would be guessing about something that cannot be undone.
+    """
+    records = client.get_all(list_path)
+    drafts = [record for record in records if (record["attributes"] or {}).get("state") == DRAFT_STATE]
+    if not drafts:
+        print(f"  . {label}: nothing never-submitted")
+        return 0, []
+
+    # Chosen over the whole draft set, never over what --locale narrowed it to,
+    # so no filter can talk this into deleting the row it is meant to keep.
+    spared = None
+    if len(drafts) == len(records):
+        by_locale = {record["attributes"]["locale"]: record for record in drafts}
+        spared = (
+            by_locale.get(keeper or "")
+            or by_locale.get("en-US")
+            or min(drafts, key=lambda record: record["attributes"]["locale"])
+        )
+        print(f"  = {label} [{spared['attributes']['locale']}] kept: no row here has been reviewed")
+
+    doomed = [
+        record
+        for record in drafts
+        if record is not spared and (not only or record["attributes"]["locale"] in only)
+    ]
+
+    deleted = 0
+    failures: list[str] = []
+    for record in doomed:
+        locale = record["attributes"]["locale"]
+        if not client.dry_run:
+            try:
+                client.call("DELETE", f"{delete_path}/{record['id']}")
+            except ApiError as error:
+                failures.append(f"{label} [{locale}]: {error.detail}")
+                print(f"  ! {label} [{locale}]: {error.detail}", file=sys.stderr)
+                continue
+        print(f"  - {label} [{locale}]")
+        deleted += 1
+    return deleted, failures
+
+
+def prune(client: Client, only: list[str] | None) -> int:
+    app_id = find_app(client, BUNDLE_ID)
+    keeper = primary_locale(client, app_id)
+    print(f"app {app_id}, primary locale {keeper or 'unknown'}")
+    if only:
+        print(f"limited to: {', '.join(only)}")
+    if client.dry_run:
+        print("dry run: nothing is deleted")
+    print()
+
+    total = 0
+    failures: list[str] = []
+    for group in client.get_all(f"/apps/{app_id}/subscriptionGroups"):
+        group_id = group["id"]
+        reference = (group["attributes"] or {}).get("referenceName") or group_id
+        deleted, failed = prune_locales(
+            client,
+            f"/subscriptionGroups/{group_id}/subscriptionGroupLocalizations",
+            "/subscriptionGroupLocalizations",
+            keeper,
+            only,
+            reference,
+        )
+        total += deleted
+        failures += failed
+
+        for subscription in client.get_all(f"/subscriptionGroups/{group_id}/subscriptions"):
+            product_id = (subscription["attributes"] or {}).get("productId") or subscription["id"]
+            deleted, failed = prune_locales(
+                client,
+                f"/subscriptions/{subscription['id']}/subscriptionLocalizations",
+                "/subscriptionLocalizations",
+                keeper,
+                only,
+                product_id,
+            )
+            total += deleted
+            failures += failed
+
+    print(f"\n{'would delete' if client.dry_run else 'deleted'} {total}, {len(failures)} failed")
+    if failures:
+        print("\nRefused by Apple:")
+        for line in failures:
+            print(f"  {line}")
+    print(
+        "\nThis deleted nothing from the repository. appstore/subscriptions/ and\n"
+        "appstore/subscription_groups/ still hold every line of it, and a later `push`\n"
+        "puts it all back. Empty those files too if the text is meant to stay gone."
+    )
+    return 1 if failures else 0
+
+
 # --- entry point ----------------------------------------------------------
 
 
@@ -1186,6 +1320,14 @@ def main() -> int:
     pusher.add_argument("--dry-run", action="store_true", help="report what would change, write nothing")
     pusher.add_argument("--locale", action="append", help="only this locale (repeatable)")
 
+    pruner = sub.add_parser(
+        "prune", help="delete the subscription text that was never submitted to review"
+    )
+    pruner.add_argument(
+        "--dry-run", action="store_true", help="report what would be deleted, delete nothing"
+    )
+    pruner.add_argument("--locale", action="append", help="only this locale (repeatable)")
+
     args = parser.parse_args()
 
     if args.command == "check":
@@ -1197,6 +1339,8 @@ def main() -> int:
     try:
         if args.command == "pull":
             return pull(client)
+        if args.command == "prune":
+            return prune(client, args.locale)
         return push(client, args.locale)
     except ApiError as error:
         sys.exit(f"App Store Connect refused the request: {error}")

@@ -61,12 +61,49 @@ reference names live on the account, not in this repo, so `subscriptions/` and
 `subscription_groups/` stay empty until `pull` creates them. Then `build`
 translates them and `push` writes them back, same as everything else.
 
+## Deleting subscription text that was never submitted
+
+The four steps only ever add and overwrite. `prune` is the one that removes,
+and it removes from App Store Connect, never from this folder:
+
+```bash
+python3 scripts/appstore_metadata.py prune --dry-run
+python3 scripts/appstore_metadata.py prune
+```
+
+Every subscription and group localization carries one of four states —
+**Prepare for Submission**, Waiting for Review, Approved, Rejected. The first
+means the text was typed and never sent to review; the other three mean it has
+left your hands. `prune` deletes the first and touches none of the others, so on
+a product that is already selling it removes the unsubmitted edits and leaves
+what customers see exactly as it is.
+
+Two guards, because this cannot be undone:
+
+**A product keeps one localization.** On something created and never submitted,
+every row is Prepare for Submission, and deleting them all leaves it reading as
+Missing Metadata and no longer submittable — Apple refuses the last delete in any
+case. So where no row has been reviewed, one survives: the app's primary language
+if it is there, else `en-US`, else the first by locale. The run says which.
+
+**A row whose state the account did not report is left alone.** Guessing would be
+guessing about something irreversible.
+
+`--locale de-DE` narrows what is deleted, and cannot narrow the protection: the
+row to keep is chosen before the filter is applied.
+
+**This folder is not touched, so `push` undoes it.** `subscriptions/` and
+`subscription_groups/` still hold all 28 locales after a prune, and the next
+`push` writes every deleted row straight back. Empty those files too if the text
+is meant to stay gone.
+
 ## Or from the Actions tab, with no terminal
 
-`.github/workflows/appstore-metadata.yml` runs the same four steps from a button.
+`.github/workflows/appstore-metadata.yml` runs all of this from a button.
 Actions → **App Store metadata** → **Run workflow**, pick what to do. It defaults
 to `dry-run`, so a careless click reports and changes nothing. `pull` and `build`
-commit what they changed back to the branch you ran them on.
+commit what they changed back to the branch you ran them on. `prune` is there as
+`prune-dry-run` and `prune`, and has to be chosen deliberately.
 
 This needs three repository secrets — Settings → Secrets and variables → Actions:
 `ASC_KEY_ID`, `ASC_ISSUER_ID`, and `ASC_PRIVATE_KEY` holding the whole contents of
