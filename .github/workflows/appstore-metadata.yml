@@ -13,12 +13,16 @@
 #
 # Two more go the other way, and delete from the account rather than write to it:
 #
-#   prune-dry-run  the subscription and group text that was never submitted to
-#                  review, and would therefore be deleted. Writes nothing.
-#   prune          delete it. Text App Review has already seen is left alone, and a
-#                  product with no reviewed text at all keeps one localization so it
-#                  stays submittable. Neither touches this repo, so a later push
-#                  puts back whatever appstore/subscriptions/ still holds.
+#   prune-dry-run  what prune would delete. Writes nothing. Always run this first.
+#   prune          delete it.
+#
+# Prune only touches products that have NEVER been through review. On a product
+# that is live, a localization reading Prepare for Submission is an edit to text
+# customers are already served, and deleting the row takes the whole localization
+# with it -- the row is the localization, there is no pending edit to peel off. So
+# those are listed and skipped, and the tick box below is what overrides that.
+# Neither action touches this repo, so a later push puts back whatever
+# appstore/subscriptions/ still holds.
 #
 # See appstore/README.md for what the folder holds and why keywords are written
 # by hand.
@@ -43,6 +47,10 @@ on:
         description: "One locale only, e.g. de-DE (blank = all)"
         type: string
         default: ""
+      include_live:
+        description: "prune: also delete from products already through review (loses approved text)"
+        type: boolean
+        default: false
 
 # Never let two runs write to the account at once, and never cancel one that is
 # halfway through writing.
@@ -94,6 +102,7 @@ jobs:
         env:
           ACTION: ${{ inputs.action }}
           LOCALE: ${{ inputs.locale }}
+          INCLUDE_LIVE: ${{ inputs.include_live }}
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
           ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
@@ -105,6 +114,13 @@ jobs:
             only=(--locale "$LOCALE")
           fi
 
+          # Read only by the two prune actions. A tick left over from a previous
+          # run cannot reach push, which has no such notion.
+          live=()
+          if [ "$INCLUDE_LIVE" = "true" ]; then
+            live=(--include-live)
+          fi
+
           case "$ACTION" in
             check)   set -- check ;;
             pull)    set -- pull ;;
@@ -114,8 +130,8 @@ jobs:
             build)   set -- build --from en-US "${only[@]}" ;;
             dry-run) set -- push --dry-run "${only[@]}" ;;
             push)    set -- push "${only[@]}" ;;
-            prune-dry-run) set -- prune --dry-run "${only[@]}" ;;
-            prune)   set -- prune "${only[@]}" ;;
+            prune-dry-run) set -- prune --dry-run "${only[@]}" "${live[@]}" ;;
+            prune)   set -- prune "${only[@]}" "${live[@]}" ;;
             *)       echo "unknown action: $ACTION" >&2; exit 1 ;;
           esac
 
