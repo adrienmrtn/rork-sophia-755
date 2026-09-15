@@ -57,6 +57,7 @@ import json
 import os
 import re
 import sys
+import textwrap
 import time
 import urllib.error
 import urllib.parse
@@ -1202,6 +1203,15 @@ def sort_rows(records: list[dict]) -> tuple[list[dict], list[dict], list[dict]]:
     return drafts, reviewed, unknown
 
 
+def show_locales(heading: str, records: list[dict]) -> None:
+    """The locales themselves, wrapped, so the report can be read line by line."""
+    locales = sorted(record["attributes"]["locale"] for record in records)
+    body = textwrap.fill(
+        ", ".join(locales), width=88, initial_indent="", subsequent_indent=" " * 10
+    )
+    print(f"      {heading} ({len(locales)}): {body}")
+
+
 def prune_locales(
     client: Client,
     list_path: str,
@@ -1249,22 +1259,37 @@ def prune_locales(
         return 0, [], 0
 
     if reviewed and not include_live:
-        print(
-            f"  ! {head}: {len(drafts)} never-submitted row(s) left alone, "
-            f"{len(reviewed)} row(s) here have been through review"
-        )
+        print(f"  ! {head}: {len(drafts)} never-submitted row(s) left alone")
+        # Both locale lists, because the counts alone cannot answer the only
+        # question that matters here. App Store Connect allows one row per
+        # locale, so these two sets are disjoint by construction -- and seeing
+        # that is what tells you whether the never-submitted rows are locales
+        # the account never had (safe to delete) or ones you recognise as
+        # having been live once (not safe, and the reason for the default).
+        show_locales("reviewed", reviewed)
+        show_locales("never submitted", drafts)
         return 0, [], len(drafts)
 
     # Chosen over the whole draft set, never over what --locale narrowed it to,
     # so no filter can talk this into deleting the row it is meant to keep.
+    by_locale = {record["attributes"]["locale"]: record for record in drafts}
     spared = None
+    reason = ""
     if not reviewed:
-        by_locale = {record["attributes"]["locale"]: record for record in drafts}
         spared = (
             by_locale.get(keeper or "")
             or by_locale.get("en-US")
             or min(drafts, key=lambda record: record["attributes"]["locale"])
         )
+        reason = "kept so the product stays submittable"
+    elif keeper and keeper in by_locale:
+        # --include-live got us here, and the app's own language happens to be a
+        # draft. Apple wants a localization in the primary language, and no
+        # reviewed row can be covering it: one row per locale means the reviewed
+        # set does not contain this locale at all. Delete it by hand in App Store
+        # Connect if it really has to go.
+        spared = by_locale[keeper]
+        reason = "kept: the app's primary language"
 
     doomed = [
         record
@@ -1277,7 +1302,7 @@ def prune_locales(
 
     print(f"  {head}: {len(doomed)} to delete" + (", 1 kept" if spared else ""))
     if spared:
-        print(f"      = {spared['attributes']['locale']:<8} kept so the product stays submittable")
+        print(f"      = {spared['attributes']['locale']:<8} {reason}")
 
     deleted = 0
     failures: list[str] = []
@@ -1357,12 +1382,16 @@ def prune(client: Client, only: list[str] | None, include_live: bool) -> int:
             print(f"  {line}")
     if skipped and not include_live:
         print(
-            f"\n{skipped} never-submitted row(s) were left alone, on products that have rows past\n"
-            "review. Such a product is live or in flight, and a never-submitted row on it is\n"
-            "usually an edit to a localization customers are already being served. Deleting the\n"
-            "row would take that localization away entirely -- the row IS the localization, and\n"
-            "there is no pending edit to peel off it. Read the lines above against App Store\n"
-            'Connect, and if you want them gone anyway, tick "include live" and run again.'
+            f"\n{skipped} never-submitted row(s) were left alone, on products that also have rows\n"
+            "past review. App Store Connect allows one row per locale, so the two lists printed\n"
+            "above never overlap, and a never-submitted row is one of two things: a locale the\n"
+            "account never had live, pushed from this repo and not submitted -- or a locale that\n"
+            "was approved once and has been edited since, still serving its approved text while\n"
+            "the row reads never-submitted. Deleting the first loses a draft. Deleting the second\n"
+            "loses the localization, approved text included, because the row IS the localization\n"
+            "and there is no pending edit to peel off it. Nothing in the API tells them apart --\n"
+            "the locale lists do, read against what you know was live. If they are locales that\n"
+            'were never live, tick "include live" and run again.'
         )
     print(
         "\nThis deleted nothing from the repository. appstore/subscriptions/ and\n"

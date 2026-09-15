@@ -83,9 +83,13 @@ that subscription entirely.
 So the row's own state is not enough to act on, and `prune` reads the company it
 keeps instead:
 
-**A product with any row past review is live or in flight, and is skipped.** Its
-never-submitted rows are listed with a count and left exactly where they are.
-This is the default and it is the whole point.
+**A product with any row past review is skipped**, and both its locale lists are
+printed: the ones past review, and the never-submitted ones left alone. Only one
+row per locale exists, so those two sets never overlap, which makes the second
+list the thing to read. A locale on it is either one the account never had live —
+pushed from this repo and not submitted, and a genuine draft — or one that was
+approved once and has been edited since. Nothing in the API tells those apart,
+which is why the decision is yours and the default is to touch neither.
 
 **A product where every row is a draft has never been through review**, and
 there the drafts really are drafts. All but one go — a product stripped bare
@@ -98,7 +102,10 @@ counted as evidence either way, so a product carrying one is treated as never
 reviewed and keeps one row more than it strictly needs.
 
 `--include-live` lifts the first rule, and nothing else: reviewed rows are still
-never deleted, but the drafts sitting beside them are. That is the flag that
+never deleted, and neither is the app's primary language — Apple wants a
+localization in it, and one row per locale means no reviewed row can be covering
+that locale. Delete it by hand in App Store Connect if it really has to go. The
+other drafts sitting beside the reviewed rows do go. That is the flag that
 loses approved localizations, so read the dry run against App Store Connect
 first. `--locale de-DE` narrows what goes, and cannot narrow any of the
 protections — the row to keep is chosen before the filter is applied, and the
