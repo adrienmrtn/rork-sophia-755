@@ -61,6 +61,15 @@ reference names live on the account, not in this repo, so `subscriptions/` and
 `subscription_groups/` stay empty until `pull` creates them. Then `build`
 translates them and `push` writes them back, same as everything else.
 
+**And their locale set belongs to the account, not to `metadata/`.** A
+subscription file holds one key per localization the product actually has —
+eleven, here, where the product page has twenty-eight. `build` fills in the keys
+that are there and adds none, because translating every subscription into every
+locale this folder happens to hold is what put 124 localizations nobody asked
+for on the account, each one a draft that then blocked the app's own submission.
+Widen a product by adding the key by hand, or by localizing it in App Store
+Connect and running `pull`.
+
 ## Deleting subscription text that was never submitted
 
 The four steps only ever add and overwrite. `prune` is the one that removes, and
