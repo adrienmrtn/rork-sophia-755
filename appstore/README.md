@@ -71,45 +71,36 @@ python3 scripts/appstore_metadata.py prune --dry-run
 python3 scripts/appstore_metadata.py prune
 ```
 
-Every subscription and group localization carries one of four states —
-**Prepare for Submission**, Waiting for Review, Approved, Rejected. Reading the
-first as "a draft nobody wants" is the trap this tool exists to avoid, and got
-past a first version of it: an approved localization that has since been edited
-reads Prepare for Submission too, while its approved text goes on serving.
-Deleting that row does not undo the edit. **The row is the localization** —
-there is no pending edit to peel off it — so the delete takes Italian away from
-that subscription entirely.
+Every localization carries one of four states — **Prepare for Submission**,
+Waiting for Review, Approved, Rejected — and the first covers two unrelated
+things. Reading it as "a draft nobody wants" cost this tool two wrong versions
+before the account settled it. What tells them apart is not the row but **its
+locale**, and specifically whether that locale carries an approved row as well:
 
-So the row's own state is not enough to act on, and `prune` reads the company it
-keeps instead:
+**A locale carrying only the draft has never been live.** No customer has been
+served it. Deleting it takes the locale off the product, which is what this
+command is for, and it goes by default.
 
-**A product with any row past review is skipped**, and both its locale lists are
-printed: the ones past review, and the never-submitted ones left alone. Only one
-row per locale exists, so those two sets never overlap, which makes the second
-list the thing to read. A locale on it is either one the account never had live —
-pushed from this repo and not submitted, and a genuine draft — or one that was
-approved once and has been edited since. Nothing in the API tells those apart,
-which is why the decision is yours and the default is to touch neither.
+**A locale carrying an approved row too has a pending edit.** The account keeps
+the two as separate resources with separate ids — the same locale appears in
+both lists — and the approved text goes on serving while the draft waits.
+Deleting the draft *should* discard the edit and leave the approved row alone.
+Should: nothing here has watched Apple do it, which is why these are counted,
+listed and held back unless `--include-edits` says otherwise. In the run they
+are marked `~` rather than `-`.
 
-**A product where every row is a draft has never been through review**, and
-there the drafts really are drafts. All but one go — a product stripped bare
-reads as Missing Metadata and stops being submittable, and Apple refuses the
-last delete in any case. The survivor is the app's primary language if it is
-there, else `en-US`, else the first by locale. The run says which.
+Two things are kept whatever the flags say. **The app's primary language keeps a
+localization** — when its row is the only one in that locale, deleting it would
+leave the product without text in the language Apple asks for. A pending edit in
+that locale is not spared, because the approved row survives either way.
+**A product keeps at least one row**: stripped bare it reads as Missing
+Metadata, and Apple refuses the last delete regardless.
 
 **A row whose state the account did not report is never deleted**, and is never
-counted as evidence either way, so a product carrying one is treated as never
-reviewed and keeps one row more than it strictly needs.
+read as an approved row either.
 
-`--include-live` lifts the first rule, and nothing else: reviewed rows are still
-never deleted, and neither is the app's primary language — Apple wants a
-localization in it, and one row per locale means no reviewed row can be covering
-that locale. Delete it by hand in App Store Connect if it really has to go. The
-other drafts sitting beside the reviewed rows do go. That is the flag that
-loses approved localizations, so read the dry run against App Store Connect
-first. `--locale de-DE` narrows what goes, and cannot narrow any of the
-protections — the row to keep is chosen before the filter is applied, and the
-filter cannot make a live product eligible.
+`--locale de-DE` narrows what goes and cannot narrow any of that: the rows to
+keep are decided before the filter is applied.
 
 **This folder is not touched, so `push` undoes it.** `subscriptions/` and
 `subscription_groups/` still hold all 28 locales after a prune, and the next
@@ -123,7 +114,7 @@ Actions → **App Store metadata** → **Run workflow**, pick what to do. It def
 to `dry-run`, so a careless click reports and changes nothing. `pull` and `build`
 commit what they changed back to the branch you ran them on. `prune` is there as
 `prune-dry-run` and `prune`, and has to be chosen deliberately; the **include
-live** tick box is `--include-live`, and is read by those two actions only.
+edits** tick box is `--include-edits`, and is read by those two actions only.
 
 This needs three repository secrets — Settings → Secrets and variables → Actions:
 `ASC_KEY_ID`, `ASC_ISSUER_ID`, and `ASC_PRIVATE_KEY` holding the whole contents of

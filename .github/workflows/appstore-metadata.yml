@@ -16,13 +16,12 @@
 #   prune-dry-run  what prune would delete. Writes nothing. Always run this first.
 #   prune          delete it.
 #
-# Prune only touches products that have NEVER been through review. On a product
-# that is live, a localization reading Prepare for Submission is an edit to text
-# customers are already served, and deleting the row takes the whole localization
-# with it -- the row is the localization, there is no pending edit to peel off. So
-# those are listed and skipped, and the tick box below is what overrides that.
-# Neither action touches this repo, so a later push puts back whatever
-# appstore/subscriptions/ still holds.
+# Prepare for Submission covers two unrelated things, and the locale says which.
+# A locale carrying only that draft has never been live: no customer has seen it,
+# and prune deletes it. A locale that also carries an approved row has a pending
+# edit over text that is still serving; those are counted, listed and held back
+# unless the tick box below says otherwise. Neither action touches this repo, so
+# a later push puts back whatever appstore/subscriptions/ still holds.
 #
 # See appstore/README.md for what the folder holds and why keywords are written
 # by hand.
@@ -47,8 +46,8 @@ on:
         description: "One locale only, e.g. de-DE (blank = all)"
         type: string
         default: ""
-      include_live:
-        description: "prune: also delete from products already through review (loses approved text)"
+      include_edits:
+        description: "prune: also delete drafts on locales that already carry an approved row"
         type: boolean
         default: false
 
@@ -102,7 +101,7 @@ jobs:
         env:
           ACTION: ${{ inputs.action }}
           LOCALE: ${{ inputs.locale }}
-          INCLUDE_LIVE: ${{ inputs.include_live }}
+          INCLUDE_EDITS: ${{ inputs.include_edits }}
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
           ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
@@ -116,9 +115,9 @@ jobs:
 
           # Read only by the two prune actions. A tick left over from a previous
           # run cannot reach push, which has no such notion.
-          live=()
-          if [ "$INCLUDE_LIVE" = "true" ]; then
-            live=(--include-live)
+          edits=()
+          if [ "$INCLUDE_EDITS" = "true" ]; then
+            edits=(--include-edits)
           fi
 
           case "$ACTION" in
@@ -130,8 +129,8 @@ jobs:
             build)   set -- build --from en-US "${only[@]}" ;;
             dry-run) set -- push --dry-run "${only[@]}" ;;
             push)    set -- push "${only[@]}" ;;
-            prune-dry-run) set -- prune --dry-run "${only[@]}" "${live[@]}" ;;
-            prune)   set -- prune "${only[@]}" "${live[@]}" ;;
+            prune-dry-run) set -- prune --dry-run "${only[@]}" "${edits[@]}" ;;
+            prune)   set -- prune "${only[@]}" "${edits[@]}" ;;
             *)       echo "unknown action: $ACTION" >&2; exit 1 ;;
           esac
 
