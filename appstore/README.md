@@ -63,8 +63,8 @@ translates them and `push` writes them back, same as everything else.
 
 ## Deleting subscription text that was never submitted
 
-The four steps only ever add and overwrite. `prune` is the one that removes,
-and it removes from App Store Connect, never from this folder:
+The four steps only ever add and overwrite. `prune` is the one that removes, and
+it removes from App Store Connect, never from this folder:
 
 ```bash
 python3 scripts/appstore_metadata.py prune --dry-run
@@ -72,25 +72,37 @@ python3 scripts/appstore_metadata.py prune
 ```
 
 Every subscription and group localization carries one of four states —
-**Prepare for Submission**, Waiting for Review, Approved, Rejected. The first
-means the text was typed and never sent to review; the other three mean it has
-left your hands. `prune` deletes the first and touches none of the others, so on
-a product that is already selling it removes the unsubmitted edits and leaves
-what customers see exactly as it is.
+**Prepare for Submission**, Waiting for Review, Approved, Rejected. Reading the
+first as "a draft nobody wants" is the trap this tool exists to avoid, and got
+past a first version of it: an approved localization that has since been edited
+reads Prepare for Submission too, while its approved text goes on serving.
+Deleting that row does not undo the edit. **The row is the localization** —
+there is no pending edit to peel off it — so the delete takes Italian away from
+that subscription entirely.
 
-Two guards, because this cannot be undone:
+So the row's own state is not enough to act on, and `prune` reads the company it
+keeps instead:
 
-**A product keeps one localization.** On something created and never submitted,
-every row is Prepare for Submission, and deleting them all leaves it reading as
-Missing Metadata and no longer submittable — Apple refuses the last delete in any
-case. So where no row has been reviewed, one survives: the app's primary language
-if it is there, else `en-US`, else the first by locale. The run says which.
+**A product with any row past review is live or in flight, and is skipped.** Its
+never-submitted rows are listed with a count and left exactly where they are.
+This is the default and it is the whole point.
 
-**A row whose state the account did not report is left alone.** Guessing would be
-guessing about something irreversible.
+**A product where every row is a draft has never been through review**, and
+there the drafts really are drafts. All but one go — a product stripped bare
+reads as Missing Metadata and stops being submittable, and Apple refuses the
+last delete in any case. The survivor is the app's primary language if it is
+there, else `en-US`, else the first by locale. The run says which.
 
-`--locale de-DE` narrows what is deleted, and cannot narrow the protection: the
-row to keep is chosen before the filter is applied.
+**A row whose state the account did not report is never deleted**, and is never
+counted as evidence either way, so a product carrying one is treated as never
+reviewed and keeps one row more than it strictly needs.
+
+`--include-live` lifts the first rule, and nothing else: reviewed rows are still
+never deleted, but the drafts sitting beside them are. That is the flag that
+loses approved localizations, so read the dry run against App Store Connect
+first. `--locale de-DE` narrows what goes, and cannot narrow any of the
+protections — the row to keep is chosen before the filter is applied, and the
+filter cannot make a live product eligible.
 
 **This folder is not touched, so `push` undoes it.** `subscriptions/` and
 `subscription_groups/` still hold all 28 locales after a prune, and the next
@@ -103,7 +115,8 @@ is meant to stay gone.
 Actions → **App Store metadata** → **Run workflow**, pick what to do. It defaults
 to `dry-run`, so a careless click reports and changes nothing. `pull` and `build`
 commit what they changed back to the branch you ran them on. `prune` is there as
-`prune-dry-run` and `prune`, and has to be chosen deliberately.
+`prune-dry-run` and `prune`, and has to be chosen deliberately; the **include
+live** tick box is `--include-live`, and is read by those two actions only.
 
 This needs three repository secrets — Settings → Secrets and variables → Actions:
 `ASC_KEY_ID`, `ASC_ISSUER_ID`, and `ASC_PRIVATE_KEY` holding the whole contents of

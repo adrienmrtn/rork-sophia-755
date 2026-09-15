@@ -15,9 +15,12 @@ Four steps, each its own subcommand, in the order you run them:
     push    write the tree back to App Store Connect
 
 A fifth subcommand, ``prune``, runs outside that cycle and only deletes: it
-drops the subscription and subscription-group text that was typed into App
-Store Connect and never submitted, and leaves whatever review has already seen
-exactly where it is.
+drops subscription and subscription-group text that was typed into App Store
+Connect and never submitted. Only on products that have never been through
+review, though, because on a live one that same never-submitted state means an
+edit to a localization customers are being served, and the delete would take
+the whole localization rather than the edit. Those are reported and skipped
+unless ``--include-live`` says otherwise.
 
 Only ``build`` calls the translation engine and only ``push`` writes to Apple, so
 whatever is about to be published can always be read on disk in between. Nothing
@@ -1169,9 +1172,11 @@ def write_subscription_locales(
 
 # --- prune ----------------------------------------------------------------
 
-#: What Apple calls text that was typed into a localization and never sent to
-#: review. The other three states -- WAITING_FOR_REVIEW, APPROVED and REJECTED
-#: -- all mean the row has left the developer's hands, and prune leaves them be.
+#: Apple's name for a localization that has been typed and never sent to review.
+#: It is NOT a synonym for "unwanted draft": an approved localization that has
+#: since been edited sits here too, serving its approved text to customers while
+#: the edit waits. Deleting that row does not undo the edit -- it removes the
+#: whole localization, approved text included. Hence `live` below.
 DRAFT_STATE = "PREPARE_FOR_SUBMISSION"
 
 
@@ -1181,6 +1186,22 @@ def primary_locale(client: Client, app_id: str) -> str | None:
     return ((record.get("data") or {}).get("attributes") or {}).get("primaryLocale")
 
 
+def sort_rows(records: list[dict]) -> tuple[list[dict], list[dict], list[dict]]:
+    """Split localizations into never-submitted, past-review, and unreadable."""
+    drafts: list[dict] = []
+    reviewed: list[dict] = []
+    unknown: list[dict] = []
+    for record in records:
+        state = (record["attributes"] or {}).get("state")
+        if state == DRAFT_STATE:
+            drafts.append(record)
+        elif state:
+            reviewed.append(record)
+        else:
+            unknown.append(record)
+    return drafts, reviewed, unknown
+
+
 def prune_locales(
     client: Client,
     list_path: str,
@@ -1188,97 +1209,145 @@ def prune_locales(
     keeper: str | None,
     only: list[str] | None,
     label: str,
-) -> tuple[int, list[str]]:
-    """Delete every never-submitted localization under `list_path`.
+    parent_state: str | None,
+    include_live: bool,
+) -> tuple[int, list[str], int]:
+    """Delete never-submitted localizations under `list_path`, cautiously.
 
-    A product needs one localization to stay submittable: stripped bare it reads
-    as Missing Metadata, and Apple refuses the last delete anyway. So where
-    nothing here has been through review -- a product created and never
-    submitted, whose rows are therefore all drafts -- one row survives: the
-    app's primary language if it is present, else en-US, else the first by
-    locale. Where something has been reviewed, that something is the survivor
-    and every draft goes.
+    Returns what was deleted, what Apple refused, and how many never-submitted
+    rows were held back for being on a live product -- that last one only, so
+    the closing summary names the rule that actually applied.
 
-    A row whose state the account did not report is never deleted. Guessing
-    would be guessing about something that cannot be undone.
+    The localization's own state does not say what deleting it costs. A row
+    reading Prepare for Submission is text never submitted on a product never
+    submitted -- or an edit to a localization that is live and serving, whose
+    row went back to Prepare for Submission the moment it was touched. Deleting
+    the first loses a draft. Deleting the second takes the approved localization
+    with it, because the row is the localization; there is no pending edit to
+    peel off.
+
+    What tells the two apart is the company the row keeps. A product with any
+    row past review is live or in flight, so its drafts are left alone unless
+    `include_live` says otherwise. A product where every row is a draft has
+    never been through review, and there the drafts really are just drafts --
+    all but one go, since a product stripped bare reads as Missing Metadata and
+    Apple refuses the last delete anyway. The survivor is the app's primary
+    language if present, else en-US, else the first by locale.
+
+    A row whose state the account did not report is never deleted, and never
+    counted as evidence either way.
     """
     records = client.get_all(list_path)
-    drafts = [record for record in records if (record["attributes"] or {}).get("state") == DRAFT_STATE]
+    head = f"{label} ({parent_state})" if parent_state else label
+    if not records:
+        print(f"  . {head}: no localizations")
+        return 0, [], 0
+
+    drafts, reviewed, unknown = sort_rows(records)
     if not drafts:
-        print(f"  . {label}: nothing never-submitted")
-        return 0, []
+        print(f"  . {head}: nothing never-submitted")
+        return 0, [], 0
+
+    if reviewed and not include_live:
+        print(
+            f"  ! {head}: {len(drafts)} never-submitted row(s) left alone, "
+            f"{len(reviewed)} row(s) here have been through review"
+        )
+        return 0, [], len(drafts)
 
     # Chosen over the whole draft set, never over what --locale narrowed it to,
     # so no filter can talk this into deleting the row it is meant to keep.
     spared = None
-    if len(drafts) == len(records):
+    if not reviewed:
         by_locale = {record["attributes"]["locale"]: record for record in drafts}
         spared = (
             by_locale.get(keeper or "")
             or by_locale.get("en-US")
             or min(drafts, key=lambda record: record["attributes"]["locale"])
         )
-        print(f"  = {label} [{spared['attributes']['locale']}] kept: no row here has been reviewed")
 
     doomed = [
         record
         for record in drafts
         if record is not spared and (not only or record["attributes"]["locale"] in only)
     ]
+    if not doomed:
+        print(f"  . {head}: nothing left to delete")
+        return 0, [], 0
+
+    print(f"  {head}: {len(doomed)} to delete" + (", 1 kept" if spared else ""))
+    if spared:
+        print(f"      = {spared['attributes']['locale']:<8} kept so the product stays submittable")
 
     deleted = 0
     failures: list[str] = []
     for record in doomed:
         locale = record["attributes"]["locale"]
+        # The text itself, so the report can be read against the account rather
+        # than taken on trust. This is the line that should have been here from
+        # the start.
+        name = (record["attributes"].get("name") or "").strip()
         if not client.dry_run:
             try:
                 client.call("DELETE", f"{delete_path}/{record['id']}")
             except ApiError as error:
                 failures.append(f"{label} [{locale}]: {error.detail}")
-                print(f"  ! {label} [{locale}]: {error.detail}", file=sys.stderr)
+                print(f"      ! {locale:<8} {error.detail}", file=sys.stderr)
                 continue
-        print(f"  - {label} [{locale}]")
+        print(f"      - {locale:<8} {name[:48]}")
         deleted += 1
-    return deleted, failures
+    if unknown:
+        print(f"      . {len(unknown)} row(s) left alone: the account reported no state")
+    return deleted, failures, 0
 
 
-def prune(client: Client, only: list[str] | None) -> int:
+def prune(client: Client, only: list[str] | None, include_live: bool) -> int:
     app_id = find_app(client, BUNDLE_ID)
     keeper = primary_locale(client, app_id)
     print(f"app {app_id}, primary locale {keeper or 'unknown'}")
     if only:
         print(f"limited to: {', '.join(only)}")
+    if include_live:
+        print("INCLUDE LIVE: products already through review are in scope too")
     if client.dry_run:
         print("dry run: nothing is deleted")
     print()
 
     total = 0
+    skipped = 0
     failures: list[str] = []
     for group in client.get_all(f"/apps/{app_id}/subscriptionGroups"):
         group_id = group["id"]
         reference = (group["attributes"] or {}).get("referenceName") or group_id
-        deleted, failed = prune_locales(
+        deleted, failed, left = prune_locales(
             client,
             f"/subscriptionGroups/{group_id}/subscriptionGroupLocalizations",
             "/subscriptionGroupLocalizations",
             keeper,
             only,
             reference,
+            None,
+            include_live,
         )
         total += deleted
+        skipped += left
         failures += failed
 
         for subscription in client.get_all(f"/subscriptionGroups/{group_id}/subscriptions"):
-            product_id = (subscription["attributes"] or {}).get("productId") or subscription["id"]
-            deleted, failed = prune_locales(
+            attributes = subscription["attributes"] or {}
+            product_id = attributes.get("productId") or subscription["id"]
+            deleted, failed, left = prune_locales(
                 client,
                 f"/subscriptions/{subscription['id']}/subscriptionLocalizations",
                 "/subscriptionLocalizations",
                 keeper,
                 only,
                 product_id,
+                attributes.get("state") or "state unknown",
+                include_live,
             )
             total += deleted
+            skipped += left
             failures += failed
 
     print(f"\n{'would delete' if client.dry_run else 'deleted'} {total}, {len(failures)} failed")
@@ -1286,6 +1355,15 @@ def prune(client: Client, only: list[str] | None) -> int:
         print("\nRefused by Apple:")
         for line in failures:
             print(f"  {line}")
+    if skipped and not include_live:
+        print(
+            f"\n{skipped} never-submitted row(s) were left alone, on products that have rows past\n"
+            "review. Such a product is live or in flight, and a never-submitted row on it is\n"
+            "usually an edit to a localization customers are already being served. Deleting the\n"
+            "row would take that localization away entirely -- the row IS the localization, and\n"
+            "there is no pending edit to peel off it. Read the lines above against App Store\n"
+            'Connect, and if you want them gone anyway, tick "include live" and run again.'
+        )
     print(
         "\nThis deleted nothing from the repository. appstore/subscriptions/ and\n"
         "appstore/subscription_groups/ still hold every line of it, and a later `push`\n"
@@ -1327,6 +1405,11 @@ def main() -> int:
         "--dry-run", action="store_true", help="report what would be deleted, delete nothing"
     )
     pruner.add_argument("--locale", action="append", help="only this locale (repeatable)")
+    pruner.add_argument(
+        "--include-live",
+        action="store_true",
+        help="also delete from products already through review, losing the approved text",
+    )
 
     args = parser.parse_args()
 
@@ -1340,7 +1423,7 @@ def main() -> int:
         if args.command == "pull":
             return pull(client)
         if args.command == "prune":
-            return prune(client, args.locale)
+            return prune(client, args.locale, args.include_live)
         return push(client, args.locale)
     except ApiError as error:
         sys.exit(f"App Store Connect refused the request: {error}")
