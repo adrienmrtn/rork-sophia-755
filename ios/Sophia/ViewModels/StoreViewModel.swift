@@ -280,8 +280,7 @@ class StoreViewModel {
            let text = formatter.string(from: amount as NSDecimalNumber) {
             return text
         }
-        let locale = pricingLocale(annualCurrencyCode: product.currencyCode, language: language)
-        return formatCurrency(amount, currencyCode: product.currencyCode, locale: locale)
+        return formatCurrency(amount, currencyCode: product.currencyCode, language: language)
     }
 
     /// « facturé 39,99 € par an » — ce que la boutique prélèvera réellement.
@@ -292,22 +291,24 @@ class StoreViewModel {
         )
     }
 
-    private func pricingLocale(annualCurrencyCode: String?, language: AppLanguage) -> Locale {
-        if let code = annualCurrencyCode {
-            switch code {
-            case "EUR": return Locale(identifier: "fr_FR")
-            case "GBP": return Locale(identifier: "en_GB")
-            case "USD": return Locale(identifier: "en_US")
-            default: break
-            }
-        }
-        return Locale(identifier: language.localeIdentifier)
-    }
-
-    private func formatCurrency(_ amount: Decimal, currencyCode: String?, locale: Locale) -> String {
+    /// Filet quand StoreKit ne fournit pas de formateur : on écrit le montant dans la langue
+    /// que l'utilisateur lit, avec la devise du produit.
+    ///
+    /// Il y avait ici une table devise → pays — EUR vers `fr_FR`, GBP vers `en_GB`, USD vers
+    /// `en_US` — et elle faisait plus de mal que de bien. Une devise ne désigne pas un pays :
+    /// un Allemand et un Irlandais paient tous les deux en euros, un Canadien et un Américain
+    /// tous les deux en dollars, et ils ne les écrivent pas pareil. La table imposait donc
+    /// l'écriture française à toute la zone euro, quelle que soit la langue de l'app. Et les
+    /// devises absentes de la liste — la livre turque, le zloty, la couronne, le shekel,
+    /// c'est-à-dire la majorité des 26 langues — tombaient de toute façon dans le cas par
+    /// défaut, qui est celui-ci : le bon.
+    ///
+    /// La devise reste celle du produit, donc elle est toujours juste ; seule la façon de
+    /// l'écrire suit la langue. C'est exactement ce que fait déjà l'app Android.
+    private func formatCurrency(_ amount: Decimal, currencyCode: String?, language: AppLanguage) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
-        formatter.locale = locale
+        formatter.locale = Locale(identifier: language.localeIdentifier)
         formatter.currencyCode = currencyCode
         return formatter.string(from: amount as NSDecimalNumber) ?? "\(amount)"
     }
