@@ -4,7 +4,7 @@ nonisolated enum CourseData {
     static let allCourses: [Course] = [
         Course(
             id: "course_1_la_naissance_de_l_islam_622",
-            title: "La naissance de l'islam (622)",
+            title: "Comment est né l'islam ?",
             description: "En 622 après J.-C., un marchand de La Mecque nommé Muhammad quitte sa ville natale pour Médine. Ce départ, l'Hégire, marque l'an 1 du calendrier islamique et...",
             subject: .histoire,
             subcategory: "Antiquité & Moyen Âge",
@@ -28,7 +28,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1",
-            title: "L'appel d'Urbain II et la 1re Croisade (1095)",
+            title: "Qu'est-ce qui a causé la Première Croisade ? (1095)",
             description: "En novembre 1095, le pape Urbain II prononce à Clermont un discours qui va mobiliser des dizaines de milliers d'Européens à marcher vers Jérusalem. C'est l'a...",
             subject: .histoire,
             subcategory: "Antiquité & Moyen Âge",
@@ -53,7 +53,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_3_la_prise_de_rome_par_les_wisigoths_410",
-            title: "La prise de Rome par les Wisigoths (410)",
+            title: "Comment Rome a-t-elle pu être pillée et conquise ? (410)",
             description: "En août 410, les Wisigoths d'Alaric pillent Rome pendant trois jours. C'est la première fois en 800 ans qu'une armée ennemie entre dans la Ville Éternelle. L...",
             subject: .histoire,
             subcategory: "Antiquité & Moyen Âge",
@@ -78,7 +78,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_4_le_couronnement_de_charlemagne_800",
-            title: "Le couronnement de Charlemagne (800)",
+            title: "Qu'a changé le couronnement de Charlemagne à Noël 800 ?",
             description: "Le jour de Noël 800, dans la basilique Saint-Pierre de Rome, le pape Léon III pose une couronne sur la tête de Charles, roi des Francs. Ce geste, que Charlem...",
             subject: .histoire,
             subcategory: "Antiquité & Moyen Âge",
@@ -103,7 +103,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_5_la_magna_carta_1215",
-            title: "La Magna Carta (1215)",
+            title: "Qu'est-ce que la Magna Carta, la charte la plus importante de l'Histoire ?",
             description: "En juin 1215, le roi d'Angleterre Jean sans Terre appose son sceau sur un document que ses barons lui imposent. La Grande Charte est considérée comme le prem...",
             subject: .histoire,
             subcategory: "Antiquité & Moyen Âge",
@@ -128,7 +128,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_6_la_peste_noire_en_europe_1347_1353",
-            title: "La Peste noire en Europe (1347-1353)",
+            title: "Comment la Peste noire a-t-elle bouleversé l'Europe ?",
             description: "Entre 1347 et 1353, une épidémie de peste bubonique balaie l'Europe et tue entre 30 et 60% de sa population, soit 25 à 50 millions de personnes. Aucun autre...",
             subject: .histoire,
             subcategory: "Antiquité & Moyen Âge",
@@ -153,7 +153,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14",
-            title: "Jeanne d'Arc et la Guerre de Cent Ans (1429)",
+            title: "Qui était Jeanne d'Arc, paysanne devenue chef de guerre ?",
             description: "En 1429, une jeune paysanne de 17 ans de Domrémy convainc le prince héritier de France de lui confier une armée. En quelques mois, Jeanne d'Arc renverse le c...",
             subject: .histoire,
             subcategory: "Antiquité & Moyen Âge",
@@ -177,7 +177,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_8_la_chute_de_constantinople_1453",
-            title: "La chute de Constantinople (1453)",
+            title: "Comment a chuté Constantinople en 1453 ?",
             description: "Le 29 mai 1453, après 53 jours de siège, les soldats ottomans entrent dans Constantinople par une brèche dans les murailles . La ville qui avait résisté à to...",
             subject: .histoire,
             subcategory: "Antiquité & Moyen Âge",
@@ -202,7 +202,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_9_l_empire_azteque",
-            title: "L'empire aztèque",
+            title: "Qu'est-ce qui a fait tomber l'Empire aztèque en deux ans ?",
             description: "Au cœur du Mexique actuel, les Aztèques ont bâti en moins de deux siècles l'un des empires les plus puissants du continent américain : une ville de 200 000 h...",
             subject: .histoire,
             subcategory: "Antiquité & Moyen Âge",
@@ -227,7 +227,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_10_la_decouverte_de_l_amerique_1492",
-            title: "La découverte de l'Amérique (1492)",
+            title: "Comment Christophe Colomb a-t-il découvert l'Amérique ?",
             description: "Le 12 octobre 1492, un marin de vigie à bord de la Pinta crie «Terre !». Christophe Colomb vient d'atteindre une île des Bahamas qu'il croit être le Japon. C...",
             subject: .histoire,
             subcategory: "Antiquité & Moyen Âge",
@@ -253,7 +253,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_11_la_prise_de_la_bastille_1789",
-            title: "La prise de la Bastille (1789)",
+            title: "Que cherchaient les Parisiens en prenant la Bastille ?",
             description: "Le 14 juillet 1789, une poignée de Parisiens prend d'assaut une forteresse royale qui ne contenait que 7 prisonniers. Symboliquement, c'est l'acte fondateur...",
             subject: .histoire,
             subcategory: "Révolutions & conflits modernes",
@@ -279,7 +279,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_12_la_strategie_de_napoleon_a_ulm_1805",
-            title: "La stratégie de Napoléon à Ulm (1805)",
+            title: "Comment Napoléon a-t-il capturé une armée entière à Ulm ?",
             description: "En octobre 1805, Napoléon réalise en deux semaines ce que beaucoup considèrent comme le chef-d'œuvre absolu de la stratégie militaire : il encercle et captur...",
             subject: .histoire,
             subcategory: "Révolutions & conflits modernes",
@@ -304,7 +304,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_13_la_bataille_de_waterloo_1815",
-            title: "La bataille de Waterloo (1815)",
+            title: "Pourquoi Napoléon a-t-il perdu à Waterloo ?",
             description: "Le 18 juin 1815, par une journée de pluie en Belgique, l'empire de Napoléon s'effondre en quelques heures. Waterloo n'est pas simplement une défaite militair...",
             subject: .histoire,
             subcategory: "Révolutions & conflits modernes",
@@ -355,7 +355,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_15_la_belle_epoque_1871_1914",
-            title: "La Belle Époque (1871-1914)",
+            title: "Qu'est-ce que la Belle Époque ?",
             description: "La Belle Époque désigne les décennies entre la fin de la guerre franco-prussienne et le début de la Première Guerre mondiale. Pour les classes aisées d'Europ...",
             subject: .histoire,
             subcategory: "Révolutions & conflits modernes",
@@ -378,7 +378,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_16_la_bataille_de_verdun_1916",
-            title: "La bataille de Verdun (1916)",
+            title: "Qu'est-ce qui fait de Verdun le symbole de la Grande Guerre ?",
             description: "En 1916, deux armées s'affrontent pendant 299 jours dans un périmètre de quelques dizaines de kilomètres carrés autour de Verdun. Le bilan : 700 000 morts ou...",
             subject: .histoire,
             subcategory: "Révolutions & conflits modernes",
@@ -403,7 +403,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_17_la_revolution_russe_1917",
-            title: "La Révolution russe (1917)",
+            title: "La Révolution russe expliquée (1917)",
             description: "En 1917, la Russie connaît deux révolutions en huit mois. La première, en février, renverse le tsar. La seconde, en octobre, porte les bolcheviks au pouvoir....",
             subject: .histoire,
             subcategory: "Révolutions & conflits modernes",
@@ -478,7 +478,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_20_hiroshima_et_nagasaki_1945",
-            title: "Hiroshima et Nagasaki (1945)",
+            title: "Pourquoi les États-Unis ont-ils bombardé Hiroshima et Nagasaki ?",
             description: "Le 6 août 1945 à 8h15, une bombe atomique explose à 600 mètres au-dessus d'Hiroshima. En un instant, entre 70 000 et 80 000 personnes meurent. Trois jours pl...",
             subject: .histoire,
             subcategory: "Révolutions & conflits modernes",
@@ -579,7 +579,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_24_la_bataille_de_dien_bien_phu_1954",
-            title: "La bataille de Dien Bien Phu (1954)",
+            title: "Comment le Viet-Minh a-t-il vaincu la France à Diên Biên Phu ?",
             description: "Du 13 mars au 7 mai 1954, une armée coloniale française assiégée dans une cuvette montagneuse du nord du Vietnam est écrasée par le Viet-Minh du général Giap...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -628,7 +628,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_26_la_creation_de_l_onu_1945",
-            title: "La création de l'ONU (1945)",
+            title: "À quoi sert vraiment l'ONU, créée en 1945 ?",
             description: "Le 26 juin 1945, 51 pays signent à San Francisco la Charte des Nations Unies . Née des cendres de la Seconde Guerre mondiale, l'ONU est la plus grande expéri...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -652,7 +652,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_27_la_naissance_de_l_ue_de_la_ceca_a_maastr",
-            title: "La naissance de l'UE : de la CECA à Maastricht",
+            title: "Comment est née l'Union européenne ?",
             description: "L'Union européenne est née d'une idée pragmatique simple : rendre la guerre entre la France et l'Allemagne matériellement impossible en liant leurs économies...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -676,7 +676,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_28_le_genocide_rwandais_1994",
-            title: "Le génocide rwandais (1994)",
+            title: "Comment le génocide des Tutsis au Rwanda a-t-il été possible ?",
             description: "En 100 jours, entre avril et juillet 1994, entre 500 000 et 800 000 Tutsis et Hutus modérés sont massacrés au Rwanda . C'est le génocide le plus rapide de l'...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -701,7 +701,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_29_la_chute_du_mur_de_berlin_1989",
-            title: "La chute du mur de Berlin (1989)",
+            title: "Qu'est-ce qui a causé la chute du mur de Berlin ? (1989)",
             description: "Dans la nuit du 9 au 10 novembre 1989, des Berlinois de l'Est et de l'Ouest démolissent à mains nues le mur qui séparait leur ville depuis 28 ans. La chute d...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -750,7 +750,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_31_le_plan_marshall_1947_1952",
-            title: "Le plan Marshall (1947-1952)",
+            title: "Que visait vraiment le plan Marshall ?",
             description: "En juin 1947, le secrétaire d'État américain George Marshall propose un plan d'aide économique massif à l'Europe dévastée. Ce qui suit est la plus grande opé...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -774,7 +774,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_32_la_guerre_du_vietnam_1955_1975",
-            title: "La guerre du Vietnam (1955-1975)",
+            title: "Pourquoi les États-Unis n'ont-ils pas gagné au Vietnam ?",
             description: "La guerre du Vietnam est le plus grand traumatisme militaire et moral de l'histoire américaine moderne. Pendant vingt ans, la première puissance militaire du...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -799,7 +799,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_33_le_proces_de_nuremberg_1945_1946",
-            title: "Le procès de Nuremberg (1945-1946)",
+            title: "Comment les nazis ont-ils été jugés à Nuremberg ?",
             description: "Entre novembre 1945 et octobre 1946, 24 dirigeants nazis comparaissent devant un tribunal militaire international à Nuremberg. C'est la première fois dans l'...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -824,7 +824,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_34_la_decolonisation_panorama_1945_1975",
-            title: "La décolonisation : panorama (1945-1975)",
+            title: "Comment la décolonisation a-t-elle redessiné la carte du monde ?",
             description: "Entre 1945 et 1975, plus de 80 pays accèdent à l'indépendance. Ce processus historique sans précédent transforme la carte du monde et les relations internati...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -849,7 +849,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_35_l_apartheid_et_mandela_1948_1994",
-            title: "L'apartheid et Mandela (1948-1994)",
+            title: "Comment Mandela et de Klerk ont-ils mis fin à l'apartheid ?",
             description: "Pendant 46 ans , l'Afrique du Sud organise légalement la ségrégation raciale totale de sa population. Le régime d'apartheid est finalement renversé sans guer...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -874,7 +874,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_36_la_revolution_culturelle_en_chine_1966_1",
-            title: "La Révolution culturelle en Chine (1966-1976)",
+            title: "Pourquoi Mao a-t-il lancé la Révolution culturelle ?",
             description: "Entre 1966 et 1976, Mao Zedong déclenche la Révolution culturelle, une purge politique et sociale d'une violence extrême qui touche des dizaines de millions...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -899,7 +899,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_37_la_shoah_mecanismes_d_un_genocide",
-            title: "La Shoah : mécanismes d'un génocide",
+            title: "Comment l'État nazi a-t-il organisé la Shoah ?",
             description: "Entre 1941 et 1945, le régime nazi organise méthodiquement l'extermination de 6 millions de Juifs , les deux tiers des Juifs d'Europe. La Shoah n'est pas le...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -924,7 +924,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_38_le_11_septembre_2001",
-            title: "Le 11 septembre 2001",
+            title: "Qu'est-ce que le 11 septembre 2001 a changé dans le monde ?",
             description: "Le mardi 11 septembre 2001, dix-neuf terroristes d'Al-Qaïda détournent quatre avions de ligne. Deux s'écrasent sur les tours du World Trade Center à New York...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -949,7 +949,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_39_la_democratie_athenienne",
-            title: "La démocratie athénienne",
+            title: "Qui avait vraiment le pouvoir dans la démocratie athénienne ?",
             description: "Au Ve siècle avant J.-C., Athènes invente quelque chose de radicalement nouveau : un système politique où les citoyens gouvernent eux-mêmes , directement, sa...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -974,7 +974,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_40_la_guerre_de_secession_americaine_1861_1",
-            title: "La guerre de Sécession américaine (1861-1865)",
+            title: "La guerre de Sécession, une guerre contre l'esclavage ?",
             description: "De 1861 à 1865, les États-Unis se déchirent dans la guerre civile la plus meurtrière de leur histoire. Plus de 620 000 soldats meurent. Au cœur du conflit :...",
             subject: .histoire,
             subcategory: "Guerre froide & monde contemporain",
@@ -1264,7 +1264,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_52_la_decouverte_de_l_electricite_et_ses_ap",
-            title: "La découverte de l'électricité et ses applications",
+            title: "Comment a-t-on découvert l'électricité ?",
             description: "L'électricité n'a pas été «inventée» : elle a été progressivement comprise, capturée, puis domestiquée sur deux siècles. De Franklin à Tesla en passant par F...",
             subject: .sciences,
             subcategory: "Découvertes qui ont changé le monde",
@@ -1288,7 +1288,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_53_la_decouverte_des_rayons_x_rontgen_1895",
-            title: "La découverte des rayons X (Röntgen, 1895)",
+            title: "Comment a-t-on découvert les rayons X ?",
             description: "Le 8 novembre 1895, le physicien allemand Wilhelm Röntgen découvre par accident un rayonnement invisible capable de traverser la matière solide. En quelques...",
             subject: .sciences,
             subcategory: "Découvertes qui ont changé le monde",
@@ -1482,7 +1482,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_61_le_big_bang",
-            title: "Le Big Bang",
+            title: "Qu'est-ce que le Big Bang ?",
             description: "Il y a 13,8 milliards d'années, l'univers entier, toute la matière, toute l'énergie, tout l'espace, était concentré en un point infiniment dense et chaud. En...",
             subject: .sciences,
             subcategory: "La Terre et l'Univers",
@@ -1557,7 +1557,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_64_la_catastrophe_de_tchernobyl_1986",
-            title: "La catastrophe de Tchernobyl (1986)",
+            title: "Que s'est-il passé à Tchernobyl le 26 avril 1986 ?",
             description: "Le 26 avril 1986 à 1h23 du matin, le réacteur n°4 de la centrale nucléaire de Tchernobyl explose. C'est le plus grave accident nucléaire de l'histoire. Il li...",
             subject: .sciences,
             subcategory: "La Terre et l'Univers",
@@ -1606,7 +1606,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive",
-            title: "Y a-t-il de la vie ailleurs dans l'Univers ?",
+            title: "Sommes-nous seuls dans l'Univers ?",
             description: "L'univers contient environ 2 000 milliards de galaxies, chacune avec des centaines de milliards d'étoiles. Si seulement une infime fraction de ces étoiles po...",
             subject: .sciences,
             subcategory: "La Terre et l'Univers",
@@ -1951,7 +1951,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_81_l_odyssee_homere",
-            title: "L'Odyssée, Homère",
+            title: "« L'Odyssée » : pourquoi Ulysse met-il dix ans à rentrer ?",
             description: "L'Odyssée raconte le voyage de retour d'Ulysse après la guerre de Troie : dix ans d'errance, de monstres, de dieux et de tentation avant de retrouver Ithaque...",
             subject: .litterature,
             subcategory: "Grecs & Philosophes antiques",
@@ -2026,7 +2026,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_84_antigone_sophocle",
-            title: "Antigone, Sophocle",
+            title: "Antigone : faut-il obéir à la loi ou à sa conscience ?",
             description: "Antigone est peut-être la pièce la plus «moderne» de l'Antiquité grecque. Son conflit central, la loi morale individuelle contre la loi de l'État, est exacte...",
             subject: .litterature,
             subcategory: "Grecs & Philosophes antiques",
@@ -2051,7 +2051,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_85_le_banquet_platon",
-            title: "Le Banquet, Platon",
+            title: "« Le Banquet » de Platon : d'où vient l'idée d'âme sœur ?",
             description: "Le Banquet est peut-être le texte philosophique le plus beau jamais écrit. Sous la forme d'une soirée où des Athéniens font tour à tour l'éloge de l'Amour, P...",
             subject: .litterature,
             subcategory: "Grecs & Philosophes antiques",
@@ -2075,7 +2075,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_86_la_republique_platon",
-            title: "La République, Platon",
+            title: "« La République » de Platon : qui doit gouverner ?",
             description: "La République est l'œuvre politique et philosophique la plus influente de l'Antiquité. En cherchant à définir la justice, Platon décrit une cité idéale, une...",
             subject: .litterature,
             subcategory: "Grecs & Philosophes antiques",
@@ -2100,7 +2100,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_87_l_apologie_de_socrate_platon",
-            title: "L'Apologie de Socrate, Platon",
+            title: "Pourquoi Socrate a-t-il préféré mourir plutôt que se taire ?",
             description: "L'Apologie de Socrate est le récit du procès de Socrate en 399 av. J.-C. : le philosophe le plus célèbre de l'Antiquité défendant sa vie devant un jury de 50...",
             subject: .litterature,
             subcategory: "Grecs & Philosophes antiques",
@@ -2124,7 +2124,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_88_la_poetique_aristote",
-            title: "La Poétique, Aristote",
+            title: "« La Poétique » d'Aristote : à quoi sert la tragédie ?",
             description: "La Poétique d'Aristote est le premier traité d'analyse littéraire de l'histoire occidentale. En analysant la tragédie grecque, Aristote pose des concepts, mi...",
             subject: .litterature,
             subcategory: "Grecs & Philosophes antiques",
@@ -2197,7 +2197,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_91_les_miserables_victor_hugo",
-            title: "Les Misérables, Victor Hugo",
+            title: "« Les Misérables » : comment Jean Valjean se rachète-t-il ?",
             description: "Les Misérables (1862) est le roman le plus lu de Victor Hugo et l'un des plus grands romans de la littérature mondiale. À travers le destin de Jean Valjean,...",
             subject: .litterature,
             subcategory: "Classiques français & européens",
@@ -2223,7 +2223,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_92_madame_bovary_flaubert",
-            title: "Madame Bovary, Flaubert",
+            title: "Qu'est-ce que le bovarysme, le mal d'Emma Bovary ?",
             description: "Madame Bovary (1857) est le roman du désir impossible : d'une femme qui confond la vie réelle avec les romans sentimentaux qu'elle a lus. Flaubert révolution...",
             subject: .litterature,
             subcategory: "Classiques français & européens",
@@ -2248,7 +2248,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_93_le_rouge_et_le_noir_stendhal",
-            title: "Le Rouge et le Noir, Stendhal",
+            title: "« Le Rouge et le Noir » : jusqu'où ira Julien Sorel ?",
             description: "Le Rouge et le Noir (1830) est le roman de l'ambition et de l'hypocrisie. Julien Sorel, fils de charpentier intelligent et ambitieux dans une société fermée,...",
             subject: .litterature,
             subcategory: "Classiques français & européens",
@@ -2274,7 +2274,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_94_candide_voltaire",
-            title: "Candide, Voltaire",
+            title: "« Candide » : pourquoi faut-il cultiver notre jardin ?",
             description: "Candide ou l'Optimisme (1759) est le conte philosophique le plus célèbre de la littérature française. En 30 chapitres d'une ironie corrosive, Voltaire démoli...",
             subject: .litterature,
             subcategory: "Classiques français & européens",
@@ -2300,7 +2300,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_95_les_confessions_rousseau",
-            title: "Les Confessions, Rousseau",
+            title: "Qu'ose avouer Rousseau dans « Les Confessions » ?",
             description: "Les Confessions de Jean-Jacques Rousseau (publiées posthumément en 1782-1789) sont la première grande autobiographie moderne : une œuvre qui inaugure le genr...",
             subject: .litterature,
             subcategory: "Classiques français & européens",
@@ -2325,7 +2325,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_96_l_etranger_camus",
-            title: "L'Étranger, Camus",
+            title: "« L'Étranger » : Meursault est-il jugé pour son crime ?",
             description: "L'Étranger (1942) est le premier roman d'Albert Camus et l'un des textes fondateurs de la littérature française du XXe siècle. En 123 pages d'une sécheresse...",
             subject: .litterature,
             subcategory: "Classiques français & européens",
@@ -2351,7 +2351,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_97_le_mythe_de_sisyphe_camus",
-            title: "Le Mythe de Sisyphe, Camus",
+            title: "Pourquoi faut-il imaginer Sisyphe heureux, selon Camus ?",
             description: "Le Mythe de Sisyphe (1942) est l'essai philosophique le plus célèbre de Camus. En partant du personnage mythologique condamné à rouler éternellement son roch...",
             subject: .litterature,
             subcategory: "Classiques français & européens",
@@ -2376,7 +2376,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_98_a_la_recherche_du_temps_perdu_proust",
-            title: "À la recherche du temps perdu, Proust",
+            title: "Comment la madeleine de Proust fait-elle revivre le passé ?",
             description: "À la recherche du temps perdu (1913-1927) est le plus long roman de la littérature française : 7 volumes, 3 200 pages, 1,5 million de mots. C'est aussi l'une...",
             subject: .litterature,
             subcategory: "Classiques français & européens",
@@ -2454,7 +2454,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_101_1984_george_orwell",
-            title: "1984, George Orwell",
+            title: "« 1984 » : comment Winston finit-il par aimer Big Brother ?",
             description: "1984 (1949) est le roman dystopique le plus influent du XXe siècle. Big Brother, la Novlangue, le Ministère de la Vérité : Orwell a créé un vocabulaire polit...",
             subject: .litterature,
             subcategory: "Anglo-saxons & littérature mondiale",
@@ -2479,7 +2479,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_102_la_ferme_des_animaux_george_orwell",
-            title: "La Ferme des animaux, George Orwell",
+            title: "Qui sont les cochons de « La Ferme des animaux » ?",
             description: "La Ferme des animaux (1945) est l'une des allégories politiques les plus parfaites jamais écrites. En 30 000 mots et le style d'un conte pour enfants, Orwell...",
             subject: .litterature,
             subcategory: "Anglo-saxons & littérature mondiale",
@@ -2529,7 +2529,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_104_romeo_et_juliette_shakespeare",
-            title: "Roméo et Juliette, Shakespeare",
+            title: "Qui est responsable de la mort de Roméo et Juliette ?",
             description: "Roméo et Juliette (vers 1595) est la tragédie amoureuse la plus célèbre de l'histoire du théâtre. La mort des deux amants n'est pas le fruit du destin ou de...",
             subject: .litterature,
             subcategory: "Anglo-saxons & littérature mondiale",
@@ -2554,7 +2554,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_105_le_meilleur_des_mondes_aldous_huxley",
-            title: "Le Meilleur des Mondes, Aldous Huxley",
+            title: "« Le Meilleur des mondes » : peut-on être heureux sans liberté ?",
             description: "Le Meilleur des Mondes (1932) est l'autre grande dystopie du XXe siècle avec 1984. Là où Orwell imagine une oppression par la terreur, Huxley imagine une opp...",
             subject: .litterature,
             subcategory: "Anglo-saxons & littérature mondiale",
@@ -2579,7 +2579,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_106_frankenstein_mary_shelley",
-            title: "Frankenstein, Mary Shelley",
+            title: "Qui est le vrai monstre de « Frankenstein » ?",
             description: "Frankenstein ou le Prométhée moderne (1818) est le premier roman de science-fiction de l'histoire, écrit par une jeune femme de 18 ans lors d'une nuit orageu...",
             subject: .litterature,
             subcategory: "Anglo-saxons & littérature mondiale",
@@ -2604,7 +2604,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_107_crime_et_chatiment_dostoievski",
-            title: "Crime et Châtiment, Dostoïevski",
+            title: "« Crime et Châtiment » : peut-on tuer au nom d'une idée ?",
             description: "Crime et Châtiment (1866) est le roman le plus célèbre de Dostoïevski : l'histoire d'un étudiant désargenté de Saint-Pétersbourg qui tue une vieille usurière...",
             subject: .litterature,
             subcategory: "Anglo-saxons & littérature mondiale",
@@ -2629,7 +2629,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_108_le_proces_kafka",
-            title: "Le Procès, Kafka",
+            title: "« Le Procès » de Kafka : peut-on être condamné sans crime ?",
             description: "Le Procès (écrit en 1914-1915, publié posthumément en 1925) est l'œuvre la plus célèbre de Franz Kafka. Josef K. est arrêté un matin sans qu'on lui explique...",
             subject: .litterature,
             subcategory: "Anglo-saxons & littérature mondiale",
@@ -2960,7 +2960,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_121_la_renaissance_italienne",
-            title: "La Renaissance italienne",
+            title: "Pourquoi la Renaissance est-elle née en Italie ?",
             description: "La Renaissance italienne (XIVe-XVIe siècle) est l'une des plus grandes révolutions artistiques de l'histoire humaine. En deux siècles, des artistes florentin...",
             subject: .art,
             subcategory: "Peinture & mouvements",
@@ -2985,7 +2985,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_122_la_naissance_de_l_impressionnisme",
-            title: "La naissance de l'impressionnisme",
+            title: "Comment l'impressionnisme est-il né contre le Salon ?",
             description: "En 1874, un groupe de peintres refusés par le Salon officiel organise leur propre exposition. Un critique les raille en se moquant du tableau de Monet intitu...",
             subject: .art,
             subcategory: "Peinture & mouvements",
@@ -3035,7 +3035,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_124_rembrandt_et_l_ecole_flamande",
-            title: "Rembrandt et l'école flamande",
+            title: "Comment Rembrandt a-t-il fait de l'ombre un langage de l'âme ?",
             description: "Rembrandt van Rijn (1606-1669) est le plus grand peintre de l'école hollandaise du Siècle d'Or - peut-être le plus grand portraitiste de l'histoire. Ses auto...",
             subject: .art,
             subcategory: "Peinture & mouvements",
@@ -3060,7 +3060,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_125_le_romantisme_en_peinture_delacroix_geri",
-            title: "Le romantisme en peinture (Delacroix, Géricault)",
+            title: "Romantisme : qu'ont changé Géricault et Delacroix en peinture ?",
             description: "Le romantisme en peinture (1810-1850) est la grande révolte contre la froideur académique du néoclassicisme. Couleur contre dessin, passion contre raison, mo...",
             subject: .art,
             subcategory: "Peinture & mouvements",
@@ -3085,7 +3085,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_126_le_cubisme_picasso_et_braque",
-            title: "Le cubisme : Picasso et Braque",
+            title: "Comment Picasso et Braque ont-ils inventé le cubisme ?",
             description: "Le cubisme (1907-1920) est peut-être la révolution artistique la plus radicale depuis la Renaissance. En brisant l'objet en fragments géométriques vus simult...",
             subject: .art,
             subcategory: "Peinture & mouvements",
@@ -3110,7 +3110,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_127_le_surrealisme_dali_et_magritte",
-            title: "Le surréalisme : Dalí et Magritte",
+            title: "Que voulaient libérer les surréalistes, de Dalí à Magritte ?",
             description: "Le surréalisme (1924-1950) est un mouvement artistique et littéraire qui cherche à libérer l'inconscient - le rêve, les désirs refoulés, les associations irr...",
             subject: .art,
             subcategory: "Peinture & mouvements",
@@ -3135,7 +3135,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_128_l_expressionnisme_munch_et_le_cri",
-            title: "L'expressionnisme : Munch et Le Cri",
+            title: "Quelle angoisse se cache derrière « Le Cri » de Munch ?",
             description: "L'expressionnisme (1880-1930) est le mouvement artistique qui fait primer l'émotion intérieure sur la représentation du monde extérieur - déformant la réalit...",
             subject: .art,
             subcategory: "Peinture & mouvements",
@@ -3185,7 +3185,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_130_le_pop_art_warhol_et_lichtenstein",
-            title: "Le Pop Art : Warhol et Lichtenstein",
+            title: "Comment Warhol et Lichtenstein ont-ils fait du banal un art ?",
             description: "Le Pop Art (années 1950-1970) est la réponse de l'art à la société de consommation et à la culture de masse. En utilisant les images de la publicité, des com...",
             subject: .art,
             subcategory: "Peinture & mouvements",
@@ -3210,7 +3210,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_131_la_naissance_de_la_musique_electronique",
-            title: "La naissance de la musique électronique",
+            title: "D'où vient la musique électronique, bien avant les clubs ?",
             description: "La musique électronique, née dans des laboratoires de recherche dans les années 1950, est aujourd'hui la forme de musique la plus écoutée dans le monde. Du s...",
             subject: .art,
             subcategory: "Musique",
@@ -3236,7 +3236,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_132_bob_dylan_et_la_folk_protest",
-            title: "Bob Dylan et la folk protest",
+            title: "Comment Bob Dylan est-il passé de la folk au prix Nobel ?",
             description: "Bob Dylan (né Robert Zimmerman en 1941) est la figure la plus influente de la chanson américaine du XXe siècle : poète, prophète, caméléon. De la folk protes...",
             subject: .art,
             subcategory: "Musique",
@@ -3261,7 +3261,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_133_le_hip_hop_naissance_d_une_culture",
-            title: "Le hip-hop : naissance d'une culture",
+            title: "Hip-hop : que s'est-il passé dans le Bronx en 1973 ?",
             description: "Le hip-hop est né dans le Bronx à New York en 1973, dans l'une des zones les plus défavorisées d'Amérique. En cinquante ans, il est devenu la forme culturell...",
             subject: .art,
             subcategory: "Musique",
@@ -3286,7 +3286,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_134_l_opera_de_verdi",
-            title: "L'opéra de Verdi",
+            title: "Comment Verdi est-il devenu la voix de l'unité italienne ?",
             description: "Giuseppe Verdi (1813-1901) est le plus grand compositeur d'opéra italien du XIXe siècle. «Rigoletto», «La Traviata», «Aida», «Otello» : ses opéras sont les p...",
             subject: .art,
             subcategory: "Musique",
@@ -3311,7 +3311,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_135_mozart_enfant_prodige_et_vie_tragique",
-            title: "Mozart : enfant prodige et vie tragique",
+            title: "Qui était Mozart, au-delà de l'enfant prodige ?",
             description: "Wolfgang Amadeus Mozart (1756-1791) est peut-être le génie musical le plus extraordinaire de l'histoire humaine. Il composa sa première symphonie à 8 ans, so...",
             subject: .art,
             subcategory: "Musique",
@@ -3336,7 +3336,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_136_beethoven_genie_et_surdite",
-            title: "Beethoven : génie et surdité",
+            title: "Comment Beethoven a-t-il pu composer en devenant sourd ?",
             description: "Ludwig van Beethoven (1770-1827) est peut-être le compositeur le plus célèbre de l'histoire occidentale. Sa trajectoire est l'une des plus extraordinaires de...",
             subject: .art,
             subcategory: "Musique",
@@ -3411,7 +3411,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_139_la_naissance_du_jazz_americain",
-            title: "La naissance du jazz américain",
+            title: "Pourquoi le jazz est-il né à La Nouvelle-Orléans ?",
             description: "Le jazz naît à la Nouvelle-Orléans à la fin du XIXe siècle, carrefour de la musique africaine, des spirituals noirs, du blues et de l'harmonie européenne. C'...",
             subject: .art,
             subcategory: "Musique",
@@ -3436,7 +3436,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_140_le_blues_racines_de_toute_la_musique_mod",
-            title: "Le blues : racines de toute la musique moderne",
+            title: "Le blues est-il la racine de la musique moderne ?",
             description: "Le blues est né dans les champs de coton du Mississippi à la fin du XIXe siècle : musique de la souffrance et de la résistance des Africains-Américains. Tout...",
             subject: .art,
             subcategory: "Musique",
@@ -3461,7 +3461,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_141_la_naissance_de_la_photographie",
-            title: "La naissance de la photographie",
+            title: "Qui a inventé la photographie ?",
             description: "La photographie naît en 1839 : une invention quasi simultanée de plusieurs pionniers. En moins d'un siècle, elle révolutionne la représentation du monde, lib...",
             subject: .art,
             subcategory: "Cinéma, photo & architecture + œuvres iconiques",
@@ -3586,7 +3586,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_146_hitchcock_et_le_suspense",
-            title: "Hitchcock et le suspense",
+            title: "Surprise ou suspense : quelle différence pour Hitchcock ?",
             description: "Alfred Hitchcock (1899-1980) est le «maître du suspense» - le réalisateur qui a défini les codes du thriller cinématographique et dont l'influence sur le cin...",
             subject: .art,
             subcategory: "Cinéma, photo & architecture + œuvres iconiques",
@@ -3611,7 +3611,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_147_l_architecture_gothique_les_cathedrales",
-            title: "L'architecture gothique : les cathédrales",
+            title: "Comment les cathédrales gothiques font-elles entrer la lumière ?",
             description: "Les cathédrales gothiques du XIIe au XVIe siècle sont l'expression architecturale la plus audacieuse du Moyen Âge : des constructions qui semblent défier les...",
             subject: .art,
             subcategory: "Cinéma, photo & architecture + œuvres iconiques",
@@ -3636,7 +3636,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_148_le_bauhaus",
-            title: "Le Bauhaus",
+            title: "Pourquoi le Bauhaus est-il partout autour de nous ?",
             description: "Le Bauhaus (1919-1933) est l'école d'art et de design la plus influente de l'histoire, fondée en Allemagne par Walter Gropius. Elle invente le design industr...",
             subject: .art,
             subcategory: "Cinéma, photo & architecture + œuvres iconiques",
@@ -3661,7 +3661,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_149_la_joconde",
-            title: "La Joconde",
+            title: "Qu'est-ce qui a rendu « La Joconde » si célèbre ?",
             description: "La Joconde (1503-1519) de Léonard de Vinci est le tableau le plus célèbre du monde : le plus visité, le plus photographié et le plus reproduit de l'histoire...",
             subject: .art,
             subcategory: "Cinéma, photo & architecture + œuvres iconiques",
@@ -3686,7 +3686,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_150_la_nuit_etoilee_van_gogh",
-            title: "La Nuit étoilée, Van Gogh",
+            title: "Pourquoi le ciel de « La Nuit étoilée » tourbillonne-t-il ?",
             description: "La Nuit étoilée (1889) est le tableau de Vincent Van Gogh le plus célèbre et l'un des tableaux les plus reconnaissables au monde. Peint à l'asile de Saint-Ré...",
             subject: .art,
             subcategory: "Cinéma, photo & architecture + œuvres iconiques",
@@ -3711,7 +3711,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_151_guernica_picasso",
-            title: "Guernica, Picasso",
+            title: "Que dit « Guernica » de Picasso sur la guerre ?",
             description: "Guernica (1937) est le tableau de protestation politique le plus célèbre de l'histoire de l'art. Peint par Picasso en réponse au bombardement de la ville bas...",
             subject: .art,
             subcategory: "Cinéma, photo & architecture + œuvres iconiques",
@@ -3735,7 +3735,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_152_la_liberte_guidant_le_peuple_delacroix",
-            title: "La liberté guidant le peuple, Delacroix",
+            title: "Que célèbre « La Liberté guidant le peuple » de Delacroix ?",
             description: "«La Liberté guidant le peuple» (1830) d'Eugène Delacroix est l'image politique française la plus connue et la plus reproduite. Femme allégorique brandissant...",
             subject: .art,
             subcategory: "Cinéma, photo & architecture + œuvres iconiques",
@@ -3809,7 +3809,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_155_nighthawks_hopper",
-            title: "Nighthawks, Hopper",
+            title: "Que dit « Nighthawks » de Hopper sur la solitude urbaine ?",
             description: "«Nighthawks» (1942) d'Edward Hopper est le tableau américain le plus reproduit du XXe siècle : un comptoir de diner new-yorkais la nuit, quatre personnages i...",
             subject: .art,
             subcategory: "Cinéma, photo & architecture + œuvres iconiques",
@@ -3882,7 +3882,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_158_la_tragedie_grecque_et_le_theatre_antiqu",
-            title: "La tragédie grecque et le théâtre antique",
+            title: "À quoi servait la tragédie grecque ?",
             description: "Le théâtre grec antique (Ve siècle av. J.-C.) est l'ancêtre direct de tout le théâtre occidental - cinéma inclus. Ses formes (tragédie, comédie), ses convent...",
             subject: .art,
             subcategory: "Cinéma, photo & architecture + œuvres iconiques",
@@ -3906,7 +3906,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_159_le_theatre_de_shakespeare",
-            title: "Le théâtre de Shakespeare",
+            title: "Pourquoi joue-t-on encore Shakespeare partout ?",
             description: "William Shakespeare (1564-1616) est le plus grand dramaturge de la littérature mondiale : ses 37 pièces forment le corpus littéraire le plus étudié, le plus...",
             subject: .art,
             subcategory: "Cinéma, photo & architecture + œuvres iconiques",
@@ -3930,7 +3930,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_160_la_liberte_de_la_presse_et_le_journalism",
-            title: "La liberté de la presse et le journalisme photographique",
+            title: "Le photojournalisme peut-il changer le regard sur une guerre ?",
             description: "Le photojournalisme est né avec la guerre. Des images comme «La Petite Fille au napalm» ou le «Tank Man» de Tiananmen ont changé le cours de l'histoire. La p...",
             subject: .art,
             subcategory: "Cinéma, photo & architecture + œuvres iconiques",
@@ -3954,7 +3954,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_161_la_naissance_des_dieux_grecs_cronos_zeus",
-            title: "La naissance des dieux grecs (Cronos, Zeus, l'Olympe)",
+            title: "Du Chaos à Zeus : comment sont nés les dieux grecs ?",
             description: "Avant les dieux de l'Olympe, il y avait le Chaos. Et avant Zeus, son propre père dévorait ses enfants. La cosmogonie grecque est une histoire de violence, de...",
             subject: .mythologie,
             subcategory: "Grèce : les dieux",
@@ -3978,7 +3978,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_162_promethee_le_voleur_de_feu",
-            title: "Prométhée : le voleur de feu",
+            title: "Pourquoi Prométhée a-t-il volé le feu aux dieux ?",
             description: "Prométhée est le Titan qui vola le feu aux dieux pour le donner aux hommes, et qui fut condamné à une torture éternelle pour ce geste. C'est l'un des mythes...",
             subject: .mythologie,
             subcategory: "Grèce : les dieux",
@@ -4002,7 +4002,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_163_pandore_et_la_boite",
-            title: "Pandore et la boîte",
+            title: "Que contenait vraiment la boîte de Pandore ?",
             description: "Pandore est la première femme de la mythologie grecque, créée par les dieux comme instrument de punition pour les hommes qui avaient reçu le feu de Prométhée...",
             subject: .mythologie,
             subcategory: "Grèce : les dieux",
@@ -4026,7 +4026,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_164_demeter_et_persephone_les_saisons",
-            title: "Déméter et Perséphone (les saisons)",
+            title: "Déméter et Perséphone : d'où viennent les saisons ?",
             description: "Le mythe de Déméter et Perséphone est l'explication mythologique des saisons, et l'une des histoires d'amour maternel les plus touchantes de la mythologie gr...",
             subject: .mythologie,
             subcategory: "Grèce : les dieux",
@@ -4074,7 +4074,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_166_narcisse_et_echo",
-            title: "Narcisse et Écho",
+            title: "D'où vient le mythe de Narcisse ?",
             description: "Le mythe de Narcisse et Écho est l'une des plus belles histoires de la mythologie grecque sur l'amour impossible. C'est la source directe du mot «narcissisme...",
             subject: .mythologie,
             subcategory: "Grèce : les dieux",
@@ -4098,7 +4098,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_167_icare_et_dedale",
-            title: "Icare et Dédale",
+            title: "Que nous apprend la chute d'Icare, fils de Dédale ?",
             description: "Le mythe d'Icare est le symbole universel de la démesure : celui qui vole trop près du soleil et se brûle les ailes. Mais c'est aussi un mythe sur la relatio...",
             subject: .mythologie,
             subcategory: "Grèce : les dieux",
@@ -4122,7 +4122,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_168_sisyphe_punition_eternelle",
-            title: "Sisyphe : punition éternelle",
+            title: "Qu'a fait Sisyphe pour mériter son rocher éternel ?",
             description: "Sisyphe est condamné à rouler éternellement un rocher jusqu'au sommet d'une montagne d'où il retombe à chaque fois. Ce mythe est devenu, deux millénaires plu...",
             subject: .mythologie,
             subcategory: "Grèce : les dieux",
@@ -4147,7 +4147,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_169_tantale_et_son_supplice",
-            title: "Tantale et son supplice",
+            title: "Qu'est-ce que le supplice de Tantale ?",
             description: "Tantale est condamné à rester pour l'éternité dans un lac dont l'eau fuit quand il veut boire, sous des fruits qui se dérobent quand il veut manger. Son nom...",
             subject: .mythologie,
             subcategory: "Grèce : les dieux",
@@ -4171,7 +4171,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_170_meduse_et_persee",
-            title: "Méduse et Persée",
+            title: "Comment Persée a-t-il vaincu le regard de Méduse ?",
             description: "Le mythe de Persée et Méduse est l'une des grandes aventures héroïques de la mythologie grecque. C'est l'histoire d'une créature dont le regard pétrifie quic...",
             subject: .mythologie,
             subcategory: "Grèce : les dieux",
@@ -4222,7 +4222,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_172_thesee_et_le_minotaure",
-            title: "Thésée et le Minotaure",
+            title: "Comment Thésée a-t-il vaincu le Minotaure ?",
             description: "Thésée est le héros fondateur d'Athènes, vainqueur du Minotaure et roi légendaire. Son histoire mêle aventure, amour trahi et politique. C'est aussi l'histoi...",
             subject: .mythologie,
             subcategory: "Grèce : les héros",
@@ -4272,7 +4272,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_174_ulysse_et_les_sirenes",
-            title: "Ulysse et les Sirènes",
+            title: "Comment Ulysse a-t-il pu écouter les Sirènes sans mourir ?",
             description: "Les Sirènes sont les créatures dont le chant est si beau qu'il attire irrésistiblement les marins vers la mort. Ulysse est le seul mortel à avoir entendu leu...",
             subject: .mythologie,
             subcategory: "Grèce : les héros",
@@ -4297,7 +4297,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_175_jason_et_la_toison_d_or",
-            title: "Jason et la Toison d'Or",
+            title: "Jason aurait-il conquis la Toison d'or sans Médée ?",
             description: "Jason et les Argonautes partent à la conquête de la Toison d'Or, la toison d'un bélier doré suspendue en Colchide (Géorgie actuelle). C'est l'une des plus gr...",
             subject: .mythologie,
             subcategory: "Grèce : les héros",
@@ -4322,7 +4322,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_176_achille_le_talon_et_l_invulnerabilite",
-            title: "Achille : le talon et l'invulnérabilité",
+            title: "D'où vient l'expression « talon d'Achille » ?",
             description: "Achille est le plus grand guerrier de la mythologie grecque et le héros central de l'Iliade. Son histoire est celle d'une invulnérabilité presque totale, d'u...",
             subject: .mythologie,
             subcategory: "Grèce : les héros",
@@ -4348,7 +4348,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_177_dipe_et_le_sphinx",
-            title: "Œdipe et le Sphinx",
+            title: "Quelle énigme Œdipe a-t-il résolue devant le Sphinx ?",
             description: "Avant de devenir le héros tragique qui tua son père et épousa sa mère, Œdipe accomplit un exploit remarquable : il résolut l'énigme du Sphinx, monstresse qui...",
             subject: .mythologie,
             subcategory: "Grèce : les héros",
@@ -4400,7 +4400,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_179_la_guerre_de_troie_et_le_cheval_de_bois",
-            title: "La guerre de Troie et le cheval de bois",
+            title: "Comment un cheval de bois a-t-il fait tomber Troie ?",
             description: "La guerre de Troie est le plus grand récit épique de la mythologie grecque. Dix ans de siège, des dieux impliqués des deux côtés, des héros légendaires. Sa c...",
             subject: .mythologie,
             subcategory: "Grèce : les héros",
@@ -4452,7 +4452,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_181_ragnarok_la_fin_du_monde_nordique",
-            title: "Ragnarök : la fin du monde nordique",
+            title: "Ragnarök : et si la fin du monde n'était pas la fin ?",
             description: "Ragnarök est la «Destinée des dieux» : la fin du monde dans la mythologie nordique. C'est une vision apocalyptique d'une bataille finale entre les dieux et l...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4476,7 +4476,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_182_osiris_et_set_mythologie_egyptienne",
-            title: "Osiris et Set (mythologie égyptienne)",
+            title: "Osiris et Set : comment un meurtre a-t-il façonné l'Égypte ?",
             description: "Le mythe d'Osiris et Set est le cycle mythologique central de l'Égypte ancienne : la lutte entre la vie et la mort, l'ordre et le chaos, représentée par le c...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4501,7 +4501,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_183_gilgamesh_le_premier_heros_de_l_histoire",
-            title: "Gilgamesh : le premier héros de l'histoire",
+            title: "Gilgamesh a-t-il trouvé le secret de l'immortalité ?",
             description: "Gilgamesh, roi d'Uruk en Mésopotamie, est le personnage central de l'Épopée de Gilgamesh, le plus ancien texte littéraire de l'histoire humaine, écrit en cun...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4526,7 +4526,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_184_romulus_et_remus_la_fondation_de_rome",
-            title: "Romulus et Rémus : la fondation de Rome",
+            title: "Pourquoi Romulus a-t-il tué son frère Rémus ?",
             description: "Romulus et Rémus sont les jumeaux légendaires qui fondent Rome. Mais leur histoire est avant tout celle d'un fratricide fondateur : Rome est bâtie sur le meu...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4552,7 +4552,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_185_vishnou_et_shiva_mythologie_hindoue",
-            title: "Vishnou et Shiva (mythologie hindoue)",
+            title: "Vishnou et Shiva : qui préserve et qui détruit l'univers ?",
             description: "La mythologie hindoue est l'une des plus riches et des plus complexes du monde. Elle s'organise autour d'une trinité suprême : Brahma (le créateur), Vishnou...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4577,7 +4577,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_186_les_valkyries_et_le_valhalla",
-            title: "Les Valkyries et le Valhalla",
+            title: "Valkyries : que faisaient les guerriers morts au Valhalla ?",
             description: "Les Valkyries sont les guerrières divines d'Odin qui parcourent les champs de bataille pour choisir les guerriers morts dignes de rejoindre le Valhalla, le p...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4602,7 +4602,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_187_le_phenix_a_travers_les_cultures",
-            title: "Le Phénix à travers les cultures",
+            title: "Pourquoi tant de cultures rêvent-elles d'un Phénix ?",
             description: "Le Phénix est l'oiseau mythique qui renaît de ses propres cendres : symbole universel de résurrection, de renouveau et d'immortalité. Présent en Égypte, en G...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4627,7 +4627,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_188_les_titans_vs_les_dieux_titanomachie",
-            title: "Les Titans vs les Dieux (Titanomachie)",
+            title: "Titanomachie : comment Zeus a-t-il vaincu les Titans ?",
             description: "La Titanomachie est la guerre cosmique qui opposa pendant dix ans les Titans (l'ancienne génération de dieux) aux Olympiens conduits par Zeus. Sa victoire ét...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4653,7 +4653,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_189_dionysos_le_dieu_du_vin_et_de_l_exces",
-            title: "Dionysos : le dieu du vin et de l'excès",
+            title: "Quel rapport entre Dionysos, dieu du vin, et le théâtre ?",
             description: "Dionysos est le dieu grec le plus paradoxal : dieu du vin, de l'extase, du théâtre et de la transgression. Il est né deux fois, est à la fois le dieu le plus...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4703,7 +4703,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_192_les_dieux_azteques_et_les_sacrifices_hum",
-            title: "Les dieux aztèques et les sacrifices humains",
+            title: "Pourquoi les Aztèques offraient-ils des sacrifices humains ?",
             description: "Les dieux aztèques exigeaient du sang humain pour continuer à exister. Sans sacrifices, le soleil ne se lèverait plus. Cette cosmologie qui semblait monstrue...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4728,7 +4728,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_193_quetzalcoatl",
-            title: "Quetzalcoatl",
+            title: "Qui est Quetzalcoatl, le Serpent à plumes ?",
             description: "Quetzalcoatl, le «Serpent à Plumes», est la divinité la plus complexe du Mexique précolombien. Vénéré depuis les Olmèques jusqu'aux Aztèques, il incarne la c...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4752,7 +4752,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_194_le_mahabharata",
-            title: "Le Mahabharata",
+            title: "Que raconte le Mahabharata, épopée de 1,8 million de mots ?",
             description: "Le Mahabharata est le plus long poème épique de l'histoire humaine, avec 1,8 million de mots (10 fois l'Iliade et l'Odyssée réunies). Récit d'une guerre frat...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4777,7 +4777,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_195_lancelot_guenievre_et_la_table_ronde",
-            title: "Lancelot, Guenièvre et la Table Ronde",
+            title: "Lancelot et Guenièvre ont-ils causé la chute de Camelot ?",
             description: "La légende du roi Arthur et de ses chevaliers de la Table Ronde est le plus grand cycle mythologique du Moyen Âge occidental. Et l'amour entre le chevalier L...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4802,7 +4802,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_196_merlin_l_enchanteur",
-            title: "Merlin l'Enchanteur",
+            title: "Qui était vraiment Merlin l'Enchanteur ?",
             description: "Merlin est le plus célèbre enchanteur de la littérature médiévale : conseiller du roi Arthur, prophète et mage, figure ambiguë à mi-chemin entre le bien et l...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4826,7 +4826,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_197_les_mille_et_une_nuits_sheherazade",
-            title: "Les Mille et Une Nuits (Shéhérazade)",
+            title: "« Les Mille et Une Nuits » : comment Shéhérazade survit-elle ?",
             description: "Les Mille et Une Nuits est le plus grand recueil de contes du monde arabe et l'une des œuvres les plus influentes de la littérature mondiale. Sa structure na...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4850,7 +4850,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_198_sindbad_le_marin",
-            title: "Sindbad le marin",
+            title: "Que cachent les sept voyages de Sindbad le marin ?",
             description: "Sindbad le marin est le personnage des Mille et Une Nuits qui incarne l'esprit d'aventure et de voyage. En sept voyages extraordinaires, il affronte des mons...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4874,7 +4874,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_199_les_titans_vs_les_dieux_la_titanomachie",
-            title: "Les Titans vs les Dieux : la Titanomachie complète",
+            title: "Titanomachie : que se passe-t-il après la victoire de Zeus ?",
             description: "La Titanomachie est la guerre cosmique qui opposa pendant dix ans les Titans (ancienne génération de dieux) aux Olympiens conduits par Zeus. Sa victoire étab...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4899,7 +4899,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_200_re_et_la_creation_du_monde_egypte",
-            title: "Rê et la création du monde (Égypte)",
+            title: "Que fait Rê chaque nuit pour sauver le monde ?",
             description: "Rê (ou Râ) est le dieu solaire suprême de l'Égypte ancienne : le créateur du monde qui traverse chaque jour le ciel dans sa barque solaire et affronte chaque...",
             subject: .mythologie,
             subcategory: "Autres mythologies",
@@ -4924,7 +4924,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_201_la_naissance_du_conflit_israelo_palestin",
-            title: "La naissance du conflit israélo-palestinien",
+            title: "Comment est né le conflit israélo-palestinien ?",
             description: "Le conflit israélo-palestinien est l'un des conflits les plus longs et les plus médiatisés de l'histoire contemporaine. Ses racines remontent à la fin du XIX...",
             subject: .comprendreLeMonde,
             subcategory: "Conflits & géopolitique",
@@ -4949,7 +4949,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_202_la_rivalite_chine_etats_unis",
-            title: "La rivalité Chine–États-Unis",
+            title: "Qu'est-ce qui oppose la Chine et les États-Unis ?",
             description: "La rivalité entre la Chine et les États-Unis est la relation géopolitique la plus importante du XXIe siècle : deux puissances mondiales aux modèles politique...",
             subject: .comprendreLeMonde,
             subcategory: "Conflits & géopolitique",
@@ -4974,7 +4974,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_203_les_tensions_autour_de_taiwan",
-            title: "Les tensions autour de Taïwan",
+            title: "Pourquoi Taïwan est-elle au cœur des tensions mondiales ?",
             description: "Taïwan est l'une des zones de friction les plus dangereuses du monde : une démocratie prospère de 23 millions d'habitants que la Chine considère comme une pr...",
             subject: .comprendreLeMonde,
             subcategory: "Conflits & géopolitique",
@@ -4999,7 +4999,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_204_le_concept_de_monde_multipolaire",
-            title: "Le concept de monde «multipolaire»",
+            title: "Qu'est-ce qu'un monde multipolaire ?",
             description: "Le monde «unipolaire» d'après la Guerre froide - dominé par une seule superpuissance américaine - laisse place à un monde de plus en plus multipolaire, où pl...",
             subject: .comprendreLeMonde,
             subcategory: "Conflits & géopolitique",
@@ -5024,7 +5024,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_205_le_petrole_comme_source_de_conflits",
-            title: "Le pétrole comme source de conflits",
+            title: "Pourquoi le pétrole alimente-t-il tant de conflits ?",
             description: "Le pétrole est la ressource naturelle qui a le plus façonné la géopolitique du XXe siècle - et continue de structurer les relations internationales au XXIe s...",
             subject: .comprendreLeMonde,
             subcategory: "Conflits & géopolitique",
@@ -5049,7 +5049,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_206_le_canal_de_suez_pourquoi_il_est_strateg",
-            title: "Le Canal de Suez : pourquoi il est stratégique",
+            title: "Pourquoi le canal de Suez est-il si stratégique ?",
             description: "Le Canal de Suez relie la mer Méditerranée à la mer Rouge et raccourcit de 7 000 km le trajet entre l'Europe et l'Asie. Sa nationalisation par Nasser en 1956...",
             subject: .comprendreLeMonde,
             subcategory: "Conflits & géopolitique",
@@ -5075,7 +5075,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_207_l_otan_a_quoi_ca_sert_encore",
-            title: "L'OTAN : à quoi ça sert encore ?",
+            title: "À quoi sert encore l'OTAN après la Guerre froide ?",
             description: "L'OTAN (Organisation du Traité de l'Atlantique Nord) a été fondée en 1949 contre la menace soviétique. Trente ans après la fin de la Guerre froide, elle exis...",
             subject: .comprendreLeMonde,
             subcategory: "Conflits & géopolitique",
@@ -5100,7 +5100,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_208_l_onu_puissante_ou_impuissante",
-            title: "L'ONU : puissante ou impuissante ?",
+            title: "L'ONU est-elle vraiment impuissante ?",
             description: "L'ONU (Organisation des Nations Unies) a été fondée en 1945 pour «maintenir la paix et la sécurité internationales». Depuis lors, des dizaines de guerres ont...",
             subject: .comprendreLeMonde,
             subcategory: "Conflits & géopolitique",
@@ -5126,7 +5126,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_209_la_russie_de_poutine",
-            title: "La Russie de Poutine",
+            title: "Comment Poutine a-t-il transformé la Russie ?",
             description: "Vladimir Poutine dirige la Russie depuis 1999. Son règne a transformé la Russie d'un pays en transition démocratique en un régime autoritaire qui défie l'ord...",
             subject: .comprendreLeMonde,
             subcategory: "Conflits & géopolitique",
@@ -5151,7 +5151,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_210_la_guerre_en_ukraine_expliquee",
-            title: "La guerre en Ukraine expliquée",
+            title: "Pourquoi la Russie a-t-elle envahi l'Ukraine ?",
             description: "Le 24 février 2022, la Russie lance l'invasion à grande échelle de l'Ukraine - la plus grande guerre en Europe depuis 1945. Ses causes profondes et immédiate...",
             subject: .comprendreLeMonde,
             subcategory: "Conflits & géopolitique",
@@ -5176,7 +5176,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_211_comment_fonctionne_le_prix_du_petrole",
-            title: "Comment fonctionne le prix du pétrole ?",
+            title: "Qui fixe le prix du pétrole ?",
             description: "Le prix du pétrole est l'un des signaux économiques les plus importants du monde - il affecte l'inflation, la croissance, les guerres et les décisions politi...",
             subject: .comprendreLeMonde,
             subcategory: "Économie & société",
@@ -5202,7 +5202,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_212_les_paradis_fiscaux_expliques",
-            title: "Les paradis fiscaux expliqués",
+            title: "Paradis fiscaux : où se cachent 10 000 milliards de dollars ?",
             description: "Les paradis fiscaux permettent à des entreprises et des individus de placer leur argent dans des juridictions à faible imposition. On estime que 8 à 10% de l...",
             subject: .comprendreLeMonde,
             subcategory: "Économie & société",
@@ -5227,7 +5227,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_213_l_evasion_fiscale_des_multinationales",
-            title: "L'évasion fiscale des multinationales",
+            title: "Comment les GAFAM paient-ils si peu d'impôts ?",
             description: "Les GAFAM (Google, Apple, Facebook/Meta, Amazon, Microsoft) et d'autres multinationales paient en proportion des impôts bien inférieurs à ceux des PME - grâc...",
             subject: .comprendreLeMonde,
             subcategory: "Économie & société",
@@ -5252,7 +5252,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_214_la_crise_de_l_etat_providence",
-            title: "La crise de l'État-Providence",
+            title: "L'État-providence peut-il survivre au vieillissement ?",
             description: "L'État-Providence - ce système de protection sociale collective né après la Seconde Guerre mondiale - est sous pression dans tous les pays développés. Vieill...",
             subject: .comprendreLeMonde,
             subcategory: "Économie & société",
@@ -5277,7 +5277,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_215_les_inegalites_nord_sud",
-            title: "Les inégalités Nord-Sud",
+            title: "D'où viennent les inégalités entre le Nord et le Sud ?",
             description: "Les inégalités entre pays riches et pays pauvres sont l'une des réalités les plus frappantes du monde contemporain - malgré des décennies de développement. Q...",
             subject: .comprendreLeMonde,
             subcategory: "Économie & société",
@@ -5302,7 +5302,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_216_la_dette_mondiale",
-            title: "La dette mondiale",
+            title: "Faut-il avoir peur de la dette mondiale ?",
             description: "La dette mondiale - publique et privée - n'a jamais été aussi élevée dans l'histoire humaine. Elle représente aujourd'hui plus de 300% du PIB mondial. Est-ce...",
             subject: .comprendreLeMonde,
             subcategory: "Économie & société",
@@ -5327,7 +5327,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_217_l_economie_de_plateforme_uber_airbnb",
-            title: "L'économie de plateforme (Uber, Airbnb...)",
+            title: "Comment Uber et Airbnb ont-ils changé le travail et les villes ?",
             description: "Les plateformes numériques comme Uber, Airbnb, Amazon, Deliveroo ont créé un nouveau modèle économique qui transforme le travail, la consommation et la propr...",
             subject: .comprendreLeMonde,
             subcategory: "Économie & société",
@@ -5352,7 +5352,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_218_le_role_des_donnees_le_petrole_du_xxie_s",
-            title: "Le rôle des données (le «pétrole du XXIe siècle»)",
+            title: "Pourquoi dit-on que les données sont le nouveau pétrole ?",
             description: "On dit souvent que les données sont «le pétrole du XXIe siècle» - la ressource stratégique qui détermine qui sera puissant dans l'économie numérique. Mais ce...",
             subject: .comprendreLeMonde,
             subcategory: "Économie & société",
@@ -5377,7 +5377,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_219_la_fracture_numerique_mondiale",
-            title: "La fracture numérique mondiale",
+            title: "Pourquoi un tiers de l'humanité vit-il encore sans Internet ?",
             description: "Alors que le monde développé vit une révolution numérique, 2,7 milliards de personnes - soit un tiers de l'humanité - n'ont toujours pas accès à Internet. Ce...",
             subject: .comprendreLeMonde,
             subcategory: "Économie & société",
@@ -5402,7 +5402,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_220_la_desinformation_et_les_fake_news",
-            title: "La désinformation et les fake news",
+            title: "Pourquoi les fake news vont-elles plus vite que la vérité ?",
             description: "La désinformation - la diffusion délibérée de fausses informations - est aussi vieille que la communication humaine. Mais Internet et les réseaux sociaux ont...",
             subject: .comprendreLeMonde,
             subcategory: "Économie & société",
@@ -5427,7 +5427,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri",
-            title: "Le trou de la couche d'ozone (et sa guérison)",
+            title: "Comment le monde s'est-il uni pour guérir la couche d'ozone ?",
             description: "Le trou de la couche d'ozone est l'une des rares réussites de la coopération internationale environnementale : un problème détecté dans les années 1980, une...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5453,7 +5453,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_222_la_crise_de_la_biodiversite",
-            title: "La crise de la biodiversité",
+            title: "Vivons-nous la sixième extinction de masse ?",
             description: "Nous vivons la sixième extinction massive de l'histoire de la Terre - provoquée non par un astéroïde ou une éruption volcanique, mais par les activités humai...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5478,7 +5478,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_223_l_economie_circulaire",
-            title: "L'économie circulaire",
+            title: "Économie circulaire : et si le déchet n'existait plus ?",
             description: "L'économie circulaire est un modèle économique alternatif au modèle linéaire «extraire-fabriquer-jeter» - qui cherche à maintenir les ressources en circulati...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5502,7 +5502,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_224_pourquoi_les_abeilles_sont_elles_vitales",
-            title: "Pourquoi les abeilles sont-elles vitales ?",
+            title: "Que deviendrait notre assiette sans les abeilles ?",
             description: "Les abeilles sont parmi les espèces les plus importantes de la planète pour la survie humaine - et pourtant leurs populations déclinent dangereusement. Compr...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5526,7 +5526,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_225_la_montee_des_eaux",
-            title: "La montée des eaux",
+            title: "Jusqu'où le niveau des mers va-t-il monter ?",
             description: "La montée du niveau des mers est l'une des conséquences les plus certaines et les plus menaçantes du changement climatique. D'ici 2100, le niveau mondial des...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5551,7 +5551,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_226_l_ia_et_l_emploi",
-            title: "L'IA et l'emploi",
+            title: "L'IA va-t-elle remplacer les métiers du savoir ?",
             description: "L'intelligence artificielle va-t-elle détruire des millions d'emplois ou en créer de nouveaux ? Ce débat, qui accompagne chaque révolution technologique depu...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5575,7 +5575,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_227_le_populisme_pourquoi_ca_monte_partout",
-            title: "Le populisme : pourquoi ça monte partout ?",
+            title: "Pourquoi le populisme monte-t-il dans tant de démocraties ?",
             description: "Le populisme est en progression dans presque toutes les démocraties depuis les années 2010 - des États-Unis à l'Europe, de l'Amérique latine à l'Inde. Qu'est...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5600,7 +5600,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_228_la_sante_mentale_comme_enjeu_de_societe",
-            title: "La santé mentale comme enjeu de société",
+            title: "Comment la santé mentale est-elle devenue un enjeu de société ?",
             description: "La santé mentale est la grande cause oubliée de la santé publique - représentant 20% de la charge mondiale de morbidité mais recevant seulement 2% des budget...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5625,7 +5625,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_229_l_ue_comment_ca_marche_vraiment",
-            title: "L'UE : comment ça marche vraiment ?",
+            title: "Qui décide vraiment dans l'Union européenne ?",
             description: "L'Union européenne est la plus ambitieuse expérience d'intégration politique supranationale de l'histoire. Mais son fonctionnement est souvent perçu comme op...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5651,7 +5651,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_230_la_liberte_de_la_presse_dans_le_monde",
-            title: "La liberté de la presse dans le monde",
+            title: "La liberté de la presse recule-t-elle partout ?",
             description: "La liberté de la presse est l'un des indicateurs les plus fiables de la qualité démocratique d'un pays. Dans le monde entier, le nombre de journalistes empri...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5676,7 +5676,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_231_les_migrations_climatiques",
-            title: "Les migrations climatiques",
+            title: "Migrations climatiques : qui protège ceux qui doivent partir ?",
             description: "Le changement climatique va déplacer des centaines de millions de personnes dans les décennies à venir - chassées par la montée des eaux, les sécheresses, le...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5700,7 +5700,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_232_la_blockchain_et_les_cryptomonnaies",
-            title: "La blockchain et les cryptomonnaies",
+            title: "Comment fonctionnent la blockchain et les cryptomonnaies ?",
             description: "La blockchain est une technologie qui permet de stocker et de transmettre des informations de façon transparente, sécurisée et décentralisée. Le Bitcoin en e...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5725,7 +5725,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_233_le_droit_d_asile_explique",
-            title: "Le droit d'asile expliqué",
+            title: "Qui peut obtenir le droit d'asile ?",
             description: "Le droit d'asile est l'une des valeurs fondamentales du droit international - l'obligation pour les États d'accueillir les personnes persécutées dans leur pa...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5750,7 +5750,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_234_la_securite_alimentaire_mondiale",
-            title: "La sécurité alimentaire mondiale",
+            title: "Pourquoi 800 millions de personnes ont-elles encore faim ?",
             description: "800 millions de personnes souffrent de la faim dans le monde - soit une personne sur dix. Paradoxalement, nous produisons assez de nourriture pour nourrir to...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5774,7 +5774,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_235_l_eau_prochaine_source_de_conflits",
-            title: "L'eau : prochaine source de conflits ?",
+            title: "Va-t-on se faire la guerre pour l'eau ?",
             description: "L'eau douce est la ressource naturelle la plus fondamentale pour la vie humaine - et elle se raréfie. Certains experts prédisent que les «guerres de l'eau» s...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5799,7 +5799,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_236_le_soft_power_americain",
-            title: "Le soft power américain",
+            title: "Soft power : comment les États-Unis ont-ils séduit le monde ?",
             description: "Le soft power est le concept inventé par le politologue Joseph Nye pour désigner la capacité à influencer les autres pays et peuples non par la force ou l'ar...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5824,7 +5824,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_237_les_gafam_puissance_et_derives",
-            title: "Les GAFAM : puissance et dérives",
+            title: "Les GAFAM sont-ils devenus trop puissants ?",
             description: "Google, Apple, Facebook/Meta, Amazon, Microsoft - les cinq géants américains du numérique - ont une puissance économique, technologique et sociale sans précé...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5850,7 +5850,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_238_la_transition_energetique",
-            title: "La transition énergétique",
+            title: "Transition énergétique : qu'est-ce qui bloque encore ?",
             description: "La transition énergétique - le passage des énergies fossiles (charbon, pétrole, gaz) aux énergies renouvelables (solaire, éolien, hydrogène) - est la transfo...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5874,7 +5874,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_239_le_futur_du_travail",
-            title: "Le futur du travail",
+            title: "À quoi ressemblera le travail de demain ?",
             description: "L'avenir du travail est l'une des questions les plus débattues de notre époque : l'automatisation, l'intelligence artificielle et la mondialisation transform...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
@@ -5898,7 +5898,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_240_la_chine_et_son_modele_economique",
-            title: "La Chine et son modèle économique",
+            title: "Quel modèle a fait de la Chine la deuxième économie mondiale ?",
             description: "La Chine est passée en 40 ans d'une économie paysanne à la deuxième puissance mondiale - un miracle de croissance sans précédent dans l'histoire humaine. Mai...",
             subject: .comprendreLeMonde,
             subcategory: "Environnement & avenir",
