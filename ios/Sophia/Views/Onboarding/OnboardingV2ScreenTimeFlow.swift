@@ -187,6 +187,14 @@ struct OnboardingV2YearsGrid: View {
             .padding(.horizontal, 36)
             .opacity(showCaption ? 1 : 0)
             .offset(y: showCaption ? 0 : 12)
+
+            // Le pendant du `Spacer(minLength: 72)` du haut. Le bouton est passé dans le
+            // pied de page du conteneur scrollable, mais ce ressort-là faisait aussi partie
+            // de la mise en page : sans lui, tout le mou allait en haut et la page se
+            // retrouvait tassée en bas, la légende collée au bouton. Les deux ensemble
+            // recentrent le contenu quand il tient, et se réduisent à 72 pt dès qu'il
+            // déborde et que ça défile.
+            Spacer(minLength: 72)
         }
     }
 
