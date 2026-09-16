@@ -114,6 +114,9 @@ struct OnboardingV2YearsGrid: View {
     @State private var showTitle = false
     @State private var showCaption = false
     @State private var showButton = false
+    /// `true` une fois la séquence jouée jusqu'au bout : inutile de la rejouer si la page
+    /// réapparaît (rotation, retour d'arrière-plan).
+    @State private var sequenceDone = false
     @State private var animTask: Task<Void, Never>?
 
     private let totalYears = 80
@@ -140,7 +143,7 @@ struct OnboardingV2YearsGrid: View {
                 .allowsHitTesting(showButton)
         }
         .ov2Background()
-        .onAppear { runSequence() }
+        .onAppear { startSequence() }
         .onDisappear { animTask?.cancel() }
     }
 
@@ -187,44 +190,73 @@ struct OnboardingV2YearsGrid: View {
         }
     }
 
+    /// Démarre (ou reprend) l'enchaînement, et garantit que le CTA finit toujours par
+    /// apparaître.
+    ///
+    /// La séquence dure ~7 s et le bouton n'existait qu'à la toute fin. Elle était annulée
+    /// par `onDisappear`, et `guard animTask == nil` empêchait ensuite tout redémarrage :
+    /// une seule interruption pendant ces 7 s (rotation, redimensionnement de fenêtre sur
+    /// iPad, retour depuis l'arrière-plan) laissait la grille figée **sans bouton**, donc
+    /// un onboarding sans issue. C'est le blocage signalé par l'App Store (Guideline
+    /// 2.1(a), « indefinite loading during onboarding », iPad Air M3 / iPadOS 26.6.2).
+    ///
+    /// Désormais : la séquence reprend là où elle s'était arrêtée, et qu'elle aille au bout
+    /// ou qu'elle soit interrompue, le bouton est révélé dans tous les cas.
+    private func startSequence() {
+        guard !sequenceDone else { return }
+        animTask?.cancel()
+        animTask = Task { @MainActor in
+            let finished = await playSequence()
+            if finished { sequenceDone = true }
+            // Terminée ou interrompue, la page offre toujours une sortie.
+            withAnimation(.easeOut(duration: 0.5)) { showButton = true }
+        }
+    }
+
     /// Enchaînement scénarisé : (1) ouverture des 80 carrés gris, (2) apparition douce du
     /// titre, (3) remplissage progressif des carrés rouges + texte rouge, (4) bouton.
-    private func runSequence() {
-        guard animTask == nil else { return }
-        animTask = Task { @MainActor in
-            // Phase 1 — ouverture lente et douce des carrés gris.
+    /// Reprend à l'état courant (`revealed` / `filled`), donc rejouable sans repartir de zéro.
+    /// Retourne `false` si elle a été annulée en cours de route.
+    private func playSequence() async -> Bool {
+        // Phase 1 — ouverture lente et douce des carrés gris.
+        if revealed < totalYears {
             try? await Task.sleep(nanoseconds: 350_000_000)
-            for i in 1...totalYears {
-                if Task.isCancelled { return }
+            for i in (revealed + 1)...totalYears {
+                if Task.isCancelled { return false }
                 withAnimation(.spring(response: 0.45, dampingFraction: 0.72)) { revealed = i }
                 if i % 8 == 0 { OnboardingHaptics.selection() }
                 try? await Task.sleep(nanoseconds: 24_000_000)
             }
+        }
 
-            // Phase 2 — « Voici ta vie en années » apparaît doucement.
+        // Phase 2 — « Voici ta vie en années » apparaît doucement.
+        if !showTitle {
             try? await Task.sleep(nanoseconds: 550_000_000)
-            if Task.isCancelled { return }
+            if Task.isCancelled { return false }
             withAnimation(.easeOut(duration: 0.9)) { showTitle = true }
+        }
 
-            // Phase 3 — remplissage lent des années perdues (rouge).
+        // Phase 3 — remplissage lent des années perdues (rouge).
+        let target = redYears
+        if filled < target {
             try? await Task.sleep(nanoseconds: 1_100_000_000)
-            let target = redYears
-            for i in 1...target {
-                if Task.isCancelled { return }
+            for i in (filled + 1)...target {
+                if Task.isCancelled { return false }
                 withAnimation(.easeInOut(duration: 0.4)) { filled = i }
                 OnboardingHaptics.counterTick(progress: Double(i) / Double(target))
                 try? await Task.sleep(nanoseconds: 150_000_000)
             }
             OnboardingHaptics.counterComplete()
-
-            // Phase 4 — texte rouge puis bouton.
-            try? await Task.sleep(nanoseconds: 350_000_000)
-            if Task.isCancelled { return }
-            withAnimation(.easeOut(duration: 0.7)) { showCaption = true }
-            try? await Task.sleep(nanoseconds: 600_000_000)
-            if Task.isCancelled { return }
-            withAnimation(.easeOut(duration: 0.5)) { showButton = true }
         }
+
+        // Phase 4 — texte rouge puis bouton (révélé par l'appelant).
+        if !showCaption {
+            try? await Task.sleep(nanoseconds: 350_000_000)
+            if Task.isCancelled { return false }
+            withAnimation(.easeOut(duration: 0.7)) { showCaption = true }
+        }
+        try? await Task.sleep(nanoseconds: 600_000_000)
+        return !Task.isCancelled
     }
 }
 
@@ -344,36 +376,51 @@ struct OnboardingV2Transform: View {
 
     // MARK: - Animation
 
+    /// Cette page n'a pas de bouton : la seule indication qu'il faut taper est `showHint`,
+    /// révélée à la fin de l'animation. Annulée en cours (rotation / redimensionnement de
+    /// fenêtre sur iPad, retour d'arrière-plan), l'ancienne version laissait une phrase à
+    /// moitié en gras, sans indice et sans issue visible — et `guard animTask == nil`
+    /// interdisait tout redémarrage. L'animation reprend maintenant où elle en était, et
+    /// l'indice s'affiche quoi qu'il arrive.
     private func animate() {
-        guard animTask == nil else { return }
+        animTask?.cancel()
         animTask = Task { @MainActor in
-            let count = words.count
-            guard count > 0 else { showHint = true; return }
-
-            // Gras progressif, mot par mot.
-            try? await Task.sleep(nanoseconds: 500_000_000)
-            for i in 1...count {
-                if Task.isCancelled { return }
-                withAnimation(.easeOut(duration: 0.3)) { boldCount = i }
-                OnboardingHaptics.selection()
-                try? await Task.sleep(nanoseconds: 320_000_000)
-            }
-
-            if Task.isCancelled { return }
+            await playAnimation()
+            // Terminée ou interrompue, l'utilisateur sait toujours qu'il peut avancer.
             withAnimation(.easeIn(duration: 0.5)) { showHint = true }
+            await playWordSwap()
+        }
+    }
 
-            // Bascule du dernier mot : culture → art → philosophie…
-            guard swapWords.count > 1 else { return }
-            try? await Task.sleep(nanoseconds: 750_000_000)
+    private func playAnimation() async {
+        let count = words.count
+        guard count > 0 else { return }
+
+        // Gras progressif, mot par mot, repris à l'état courant.
+        guard boldCount < count else { return }
+        if boldCount == 0 {
+            try? await Task.sleep(nanoseconds: 500_000_000)
+        }
+        for i in (boldCount + 1)...count {
             if Task.isCancelled { return }
-            swapping = true
-            while !Task.isCancelled {
-                withAnimation(.spring(response: 0.32, dampingFraction: 0.74)) {
-                    swapIndex += 1
-                }
-                OnboardingHaptics.selection()
-                try? await Task.sleep(nanoseconds: 1_150_000_000)
+            withAnimation(.easeOut(duration: 0.3)) { boldCount = i }
+            OnboardingHaptics.selection()
+            try? await Task.sleep(nanoseconds: 320_000_000)
+        }
+    }
+
+    /// Bascule du dernier mot : culture → art → philosophie…
+    private func playWordSwap() async {
+        guard swapWords.count > 1 else { return }
+        try? await Task.sleep(nanoseconds: 750_000_000)
+        if Task.isCancelled { return }
+        swapping = true
+        while !Task.isCancelled {
+            withAnimation(.spring(response: 0.32, dampingFraction: 0.74)) {
+                swapIndex += 1
             }
+            OnboardingHaptics.selection()
+            try? await Task.sleep(nanoseconds: 1_150_000_000)
         }
     }
 

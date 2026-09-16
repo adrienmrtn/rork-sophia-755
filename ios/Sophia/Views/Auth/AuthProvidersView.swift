@@ -15,6 +15,9 @@ struct AuthProvidersView: View {
     @State private var currentNonce: String?
     @State private var errorMessage: String?
     @State private var applePresenter = AppleSignInPresenter()
+    /// Numéro de la tentative en cours : un garde-temps d'une tentative abandonnée ne doit
+    /// pas couper la suivante.
+    @State private var attempt = 0
 
     var body: some View {
         VStack(spacing: 12) {
@@ -117,19 +120,41 @@ struct AuthProvidersView: View {
         guard !isWorking else { return }
         errorMessage = nil
         isWorking = true
-        Task {
+        attempt += 1
+        let token = attempt
+
+        Task { @MainActor in
             do {
                 try await operation()
+                guard token == attempt else { return }
                 isWorking = false
+                // Un message posé par le garde-temps n'a plus lieu d'être si la connexion
+                // finit par aboutir.
+                errorMessage = nil
                 onSignedIn()
             } catch let error as AuthError {
+                guard token == attempt else { return }
                 isWorking = false
                 if case .cancelled = error { return }
                 errorMessage = resolvedMessage(for: error)
             } catch {
+                guard token == attempt else { return }
                 isWorking = false
                 errorMessage = languageManager.text("auth.error.generic")
             }
+        }
+
+        // Garde-temps. La connexion est **obligatoire** pour finir l'onboarding : un
+        // fournisseur qui ne rappelle jamais (feuille système qui ne s'ouvre pas, requête
+        // qui ne rend pas la main) laissait le spinner tourner avec les deux boutons grisés,
+        // donc un onboarding sans issue — exactement ce que l'App Store a rejeté
+        // (Guideline 2.1(a), « indefinite loading during onboarding »). Les boutons
+        // reviennent toujours, avec un message et la possibilité de réessayer.
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 30_000_000_000)
+            guard token == attempt, isWorking else { return }
+            isWorking = false
+            errorMessage = languageManager.text("auth.error.generic")
         }
     }
 

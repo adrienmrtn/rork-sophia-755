@@ -16,7 +16,7 @@ class StoreViewModel {
 
     init() {
         Task { await listenForUpdates() }
-        Task { await fetchOfferings() }
+        Task { await loadOfferingsWithRetry() }
     }
 
     private func listenForUpdates() async {
@@ -53,6 +53,23 @@ class StoreViewModel {
             self.error = error.localizedDescription
         }
         isLoading = false
+    }
+
+    /// Charge les offres en réessayant quelques fois.
+    ///
+    /// Une seule tentative au lancement suffisait à condamner les paywalls de tout
+    /// l'onboarding : sans `offerings`, le bouton d'achat ne trouvait aucun `Package` et ne
+    /// faisait **rien** (bouton mort, sans message). Un réseau lent au démarrage — cas
+    /// courant sur un appareil de test — suffisait à déclencher ça.
+    func loadOfferingsWithRetry() async {
+        for attempt in 0..<4 {
+            if attempt > 0 {
+                let seconds = UInt64(1 << attempt) // 2 s, 4 s, 8 s
+                try? await Task.sleep(nanoseconds: seconds * 1_000_000_000)
+            }
+            await fetchOfferings()
+            if offerings?.current != nil { return }
+        }
     }
 
     func purchase(package: Package) async -> Bool {

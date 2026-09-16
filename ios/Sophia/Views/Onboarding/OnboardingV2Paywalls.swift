@@ -22,6 +22,7 @@ struct OnboardingV2PaywallAnnual: View {
     let onClose: () -> Void
 
     @State private var purchasing = false
+    @State private var didReloadOfferings = false
     @State private var appeared = false
 
     private var prices: StoreViewModel.PaywallPriceDisplay {
@@ -125,7 +126,10 @@ struct OnboardingV2PaywallAnnual: View {
     }
 
     private func purchase() {
-        guard let package = store.annualPackage, !purchasing else { return }
+        guard !purchasing else { return }
+        // Offres pas encore chargées (réseau lent au lancement) : on les recharge au lieu de
+        // laisser un bouton qui ne fait rien, puis on relance l'achat.
+        guard let package = store.annualPackage else { reloadOfferingsThenPurchase(); return }
         purchasing = true
         Task {
             let ok = await store.purchase(package: package)
@@ -138,6 +142,21 @@ struct OnboardingV2PaywallAnnual: View {
                 )
                 onSubscribed()
             }
+        }
+    }
+
+    /// Recharge les offres puis relance l'achat. Une seule fois : sans cette garde, un
+    /// rechargement qui n'aboutit pas relancerait `purchase()`, qui rappellerait ce
+    /// rechargement, en boucle. Le bouton retrouve donc toujours son état normal — et le X
+    /// de fermeture, lui, reste actif en permanence.
+    private func reloadOfferingsThenPurchase() {
+        guard !didReloadOfferings else { return }
+        didReloadOfferings = true
+        purchasing = true
+        Task {
+            await store.loadOfferingsWithRetry()
+            purchasing = false
+            purchase()
         }
     }
 }
@@ -154,6 +173,7 @@ struct OnboardingV2PaywallComparison: View {
     enum Plan { case yearly, monthly }
     @State private var selected: Plan = .yearly
     @State private var purchasing = false
+    @State private var didReloadOfferings = false
 
     private var prices: StoreViewModel.PaywallPriceDisplay {
         store.paywallPriceDisplay(language: languageManager.current)
@@ -327,8 +347,11 @@ struct OnboardingV2PaywallComparison: View {
     }
 
     private func purchase() {
-        let package = selected == .yearly ? store.annualPackage : store.monthlyPackage
-        guard let package, !purchasing else { return }
+        guard !purchasing else { return }
+        let selectedPackage = selected == .yearly ? store.annualPackage : store.monthlyPackage
+        // Offres pas encore chargées (réseau lent au lancement) : on les recharge au lieu de
+        // laisser un bouton qui ne fait rien, puis on relance l'achat.
+        guard let package = selectedPackage else { reloadOfferingsThenPurchase(); return }
         purchasing = true
         Task {
             let ok = await store.purchase(package: package)
@@ -341,6 +364,21 @@ struct OnboardingV2PaywallComparison: View {
                 )
                 onSubscribed()
             }
+        }
+    }
+
+    /// Recharge les offres puis relance l'achat. Une seule fois : sans cette garde, un
+    /// rechargement qui n'aboutit pas relancerait `purchase()`, qui rappellerait ce
+    /// rechargement, en boucle. Le bouton retrouve donc toujours son état normal — et le X
+    /// de fermeture, lui, reste actif en permanence.
+    private func reloadOfferingsThenPurchase() {
+        guard !didReloadOfferings else { return }
+        didReloadOfferings = true
+        purchasing = true
+        Task {
+            await store.loadOfferingsWithRetry()
+            purchasing = false
+            purchase()
         }
     }
 }

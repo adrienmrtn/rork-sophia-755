@@ -8,6 +8,7 @@ struct OnboardingV2Loading: View {
     @State private var progress: [Double] = [0, 0, 0]
     @State private var completed: [Bool] = [false, false, false]
     @State private var allDone = false
+    @State private var animTask: Task<Void, Never>?
 
     private var stepKeys: [String] {
         ["onboardingV2.loading.step1", "onboardingV2.loading.step2", "onboardingV2.loading.step3"]
@@ -61,7 +62,8 @@ struct OnboardingV2Loading: View {
             )
         }
         .ov2Background()
-        .onAppear { runLoading() }
+        .onAppear { startLoading() }
+        .onDisappear { animTask?.cancel() }
     }
 
     private func stepRow(_ i: Int) -> some View {
@@ -85,19 +87,26 @@ struct OnboardingV2Loading: View {
         }
     }
 
-    private func runLoading() {
-        for i in 0..<3 {
-            let start = Double(i) * 1.1
-            withAnimation(.easeInOut(duration: 1.0).delay(start)) {
-                progress[i] = 1.0
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + start + 1.05) {
-                withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) { completed[i] = true }
-                OnboardingHaptics.loadingStepComplete(step: i)
-                if i == 2 {
-                    withAnimation(.easeInOut(duration: 0.3)) { allDone = true }
-                }
-            }
+    /// Les trois étapes sont une mise en scène (aucun réseau, aucune dépendance) : le CTA
+    /// doit donc **toujours** finir par s'activer. C'est la page que l'App Store décrirait
+    /// comme « indefinite loading » si elle restait bloquée, alors elle reprend là où elle
+    /// s'était arrêtée quand la page réapparaît, et l'interruption elle-même débloque le CTA.
+    private func startLoading() {
+        guard !allDone else { return }
+        animTask?.cancel()
+        animTask = Task { @MainActor in
+            await playSteps()
+            withAnimation(.easeInOut(duration: 0.3)) { allDone = true }
+        }
+    }
+
+    private func playSteps() async {
+        for i in 0..<3 where !completed[i] {
+            withAnimation(.easeInOut(duration: 1.0)) { progress[i] = 1.0 }
+            try? await Task.sleep(nanoseconds: 1_050_000_000)
+            if Task.isCancelled { return }
+            withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) { completed[i] = true }
+            OnboardingHaptics.loadingStepComplete(step: i)
         }
     }
 }

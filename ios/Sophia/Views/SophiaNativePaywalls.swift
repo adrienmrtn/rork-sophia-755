@@ -147,7 +147,7 @@ struct SophiaStandardPaywall: View {
             }
         }
         .task {
-            if store.offerings == nil { await store.fetchOfferings() }
+            if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
         .onDisappear { trackDismissIfNeeded() }
     }
@@ -334,7 +334,7 @@ struct SophiaStandardPaywall: View {
     private func purchase() {
         guard !purchasing else { return }
         guard let package = store.annualPackage(forOfferingIdentifier: context.rawValue) else {
-            Task { await store.fetchOfferings() }
+            Task { await store.loadOfferingsWithRetry() }
             return
         }
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
@@ -447,7 +447,7 @@ struct SophiaTrainingPaywall: View {
             }
         }
         .task {
-            if store.offerings == nil { await store.fetchOfferings() }
+            if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
         .onDisappear { trackDismissIfNeeded() }
     }
@@ -632,7 +632,7 @@ struct SophiaTrainingPaywall: View {
     private func purchase() {
         guard !purchasing else { return }
         guard let package = store.annualPackage(forOfferingIdentifier: context.offeringIdentifier) else {
-            Task { await store.fetchOfferings() }
+            Task { await store.loadOfferingsWithRetry() }
             return
         }
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
@@ -771,7 +771,7 @@ struct SophiaQuizPaywall: View {
             }
         }
         .task {
-            if store.offerings == nil { await store.fetchOfferings() }
+            if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
         .onDisappear { trackDismissIfNeeded() }
     }
@@ -915,7 +915,7 @@ struct SophiaQuizPaywall: View {
     private func purchase() {
         guard !purchasing else { return }
         guard let package = store.annualPackage(forOfferingIdentifier: context.rawValue) else {
-            Task { await store.fetchOfferings() }
+            Task { await store.loadOfferingsWithRetry() }
             return
         }
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
@@ -1432,7 +1432,7 @@ struct SophiaCourseUnlockPaywall: View {
             }
         }
         .task {
-            if store.offerings == nil { await store.fetchOfferings() }
+            if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
         .onDisappear { trackDismissIfNeeded() }
     }
@@ -1624,7 +1624,7 @@ struct SophiaCourseUnlockPaywall: View {
     private func purchase() {
         guard !purchasing else { return }
         guard let package = store.annualPackage(forOfferingIdentifier: context.rawValue) else {
-            Task { await store.fetchOfferings() }
+            Task { await store.loadOfferingsWithRetry() }
             return
         }
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
@@ -1740,7 +1740,7 @@ struct SophiaDiscountPaywall: View {
             }
         }
         .task {
-            if store.offerings == nil { await store.fetchOfferings() }
+            if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
         .onDisappear { trackDismissIfNeeded() }
     }
@@ -1895,7 +1895,7 @@ struct SophiaDiscountPaywall: View {
         // configurée (paquet nil), on retombe sur le plan annuel standard pour que le bouton
         // « J'en profite maintenant » déclenche toujours l'achat au lieu de ne rien faire.
         guard let package = store.promoPackage ?? store.annualPackage else {
-            Task { await store.fetchOfferings() }
+            Task { await store.loadOfferingsWithRetry() }
             return
         }
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
