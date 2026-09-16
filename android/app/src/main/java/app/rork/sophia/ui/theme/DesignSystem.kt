@@ -2,20 +2,14 @@ package app.rork.sophia.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Typography
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import app.rork.sophia.R
-
-val PlusJakartaSans = FontFamily(
-    Font(R.font.plus_jakarta_sans, FontWeight.Normal),
-)
-
 @Immutable
 object DS {
     val canvas = Color(0xFFF7F8FA)
@@ -56,47 +50,57 @@ object DS {
     val controlShape = RoundedCornerShape(Radius.control)
 }
 
-val SophiaTypography = Typography(
+/**
+ * Reads the font family from the composition rather than naming it, so a language whose
+ * script Plus Jakarta Sans cannot render gets one consistent typeface instead of a mixture.
+ * Cheap to re-read: `Typography` is a value type and the family is a static local.
+ */
+val SophiaTypography: Typography
+    @Composable
+    @ReadOnlyComposable
+    get() = typographyFor(LocalSophiaFontFamily.current)
+
+private fun typographyFor(family: androidx.compose.ui.text.font.FontFamily) = Typography(
     displayLarge = TextStyle(
-        fontFamily = PlusJakartaSans,
+        fontFamily = family,
         fontWeight = FontWeight.ExtraBold,
         fontSize = 34.sp,
         color = DS.ink,
     ),
     titleLarge = TextStyle(
-        fontFamily = PlusJakartaSans,
+        fontFamily = family,
         fontWeight = FontWeight.ExtraBold,
         fontSize = 22.sp,
         color = DS.ink,
     ),
     titleMedium = TextStyle(
-        fontFamily = PlusJakartaSans,
+        fontFamily = family,
         fontWeight = FontWeight.Bold,
         fontSize = 18.sp,
         color = DS.ink,
     ),
     bodyLarge = TextStyle(
-        fontFamily = PlusJakartaSans,
+        fontFamily = family,
         fontWeight = FontWeight.Normal,
         fontSize = 17.sp,
         color = DS.ink,
         lineHeight = 24.sp,
     ),
     bodyMedium = TextStyle(
-        fontFamily = PlusJakartaSans,
+        fontFamily = family,
         fontWeight = FontWeight.Normal,
         fontSize = 15.sp,
         color = DS.inkSecondary,
         lineHeight = 22.sp,
     ),
     labelLarge = TextStyle(
-        fontFamily = PlusJakartaSans,
+        fontFamily = family,
         fontWeight = FontWeight.SemiBold,
         fontSize = 16.sp,
         color = DS.ink,
     ),
     labelMedium = TextStyle(
-        fontFamily = PlusJakartaSans,
+        fontFamily = family,
         fontWeight = FontWeight.Medium,
         fontSize = 13.sp,
         color = DS.inkSecondary,

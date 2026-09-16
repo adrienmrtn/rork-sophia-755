@@ -9,9 +9,12 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.ui.SophiaRoot
 import app.rork.sophia.ui.theme.SophiaTheme
@@ -30,8 +33,13 @@ class MainActivity : ComponentActivity() {
             navigationBarStyle = SystemBarStyle.light(TRANSPARENT, TRANSPARENT),
         )
         deepLinkCourseId = courseIdFromIntent(intent)
+        observeForeground()
         setContent {
-            SophiaTheme {
+            // The theme needs the language to pick a font family whose script the user can
+            // actually read, so it is resolved above the tree rather than inside it.
+            val language by (application as SophiaApplication).languageManager.current
+                .collectAsState()
+            SophiaTheme(language = language) {
                 SophiaRoot(
                     storeViewModel = storeViewModel,
                     deepLinkCourseId = deepLinkCourseId,
@@ -45,6 +53,29 @@ class MainActivity : ComponentActivity() {
         super.onNewIntent(intent)
         setIntent(intent)
         deepLinkCourseId = courseIdFromIntent(intent)
+    }
+
+    /**
+     * Two things have to happen every time the app comes back to the foreground, not only on
+     * a cold start:
+     *
+     *  - the streak has to be re-checked, because the calendar day can turn while the
+     *    process is alive, and a broken streak otherwise kept showing until the next course
+     *    was completed;
+     *  - the Mixpanel session has to be counted, because a warm return after half a day is a
+     *    session by any useful definition. It is also the only place the real subscription
+     *    state is known: `Application.onCreate` runs before RevenueCat answers, so every
+     *    session was reported as `is_premium: false`, including the subscribers'.
+     */
+    private fun observeForeground() {
+        lifecycle.addObserver(
+            LifecycleEventObserver { _, event ->
+                if (event != Lifecycle.Event.ON_START) return@LifecycleEventObserver
+                val app = application as SophiaApplication
+                app.progressManager.refreshStreak()
+                app.analytics.trackSessionIfNeeded(isPremium = storeViewModel.isPremium.value)
+            },
+        )
     }
 
     /**

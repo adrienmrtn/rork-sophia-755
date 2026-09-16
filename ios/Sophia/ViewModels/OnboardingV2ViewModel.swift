@@ -11,15 +11,33 @@ import Observation
 @MainActor
 final class OnboardingV2ViewModel {
     /// Objectifs sélectionnés (multi-sélection), dans l'ordre de sélection.
-    var objectiveKeys: [String] = []
+    var objectiveKeys: [String] = [] {
+        didSet { OnboardingResumeStore.objectiveKeys = objectiveKeys }
+    }
     /// Cours « aimés » lors du swipe — utilisés pour préremplir les favoris.
-    var likedCourseIds: [String] = []
+    var likedCourseIds: [String] = [] {
+        didSet { OnboardingResumeStore.likedCourseIds = likedCourseIds }
+    }
     /// Cours présentés dans le swipe — exclus des recommandations de l'écran profil pour ne
     /// pas remontrer les mêmes cours.
-    var swipedCourseIds: [String] = []
+    var swipedCourseIds: [String] = [] {
+        didSet { OnboardingResumeStore.swipedCourseIds = swipedCourseIds }
+    }
     /// Temps d'écran quotidien déclaré (en minutes, par blocs de 30) — écran « temps téléphone ».
     /// Sert à l'écran « ta vie en années » (remplissage rouge).
-    var phoneDailyMinutes: Int = 180
+    var phoneDailyMinutes: Int = 180 {
+        didSet { OnboardingResumeStore.phoneDailyMinutes = phoneDailyMinutes }
+    }
+
+    /// Restaure les réponses déjà données : fermer l'app au milieu de l'onboarding ne doit
+    /// pas effacer ce que la personne a rempli avant.
+    init() {
+        objectiveKeys = OnboardingResumeStore.objectiveKeys
+        likedCourseIds = OnboardingResumeStore.likedCourseIds
+        swipedCourseIds = OnboardingResumeStore.swipedCourseIds
+        let storedMinutes = OnboardingResumeStore.phoneDailyMinutes
+        if storedMinutes > 0 { phoneDailyMinutes = storedMinutes }
+    }
 
     /// Nombre d'années (sur une vie de 80 ans) équivalent au temps passé sur le téléphone.
     var phoneYearsOverLife: Double {

@@ -87,6 +87,16 @@ struct OnboardingV2View: View {
         return list.indices.contains(stepIndex) ? list[stepIndex] : .paywallComparison
     }
 
+    /// Where a resumed session picks up. Stored by name, so a sequence that gained or lost
+    /// the trial page since cannot resume onto the wrong screen; an unknown name, or a page
+    /// no longer in the sequence, simply starts from the beginning.
+    private func restoreStepIndex() {
+        guard let name = OnboardingResumeStore.step,
+              let index = screens.firstIndex(where: { $0.analyticsName == name })
+        else { return }
+        stepIndex = index
+    }
+
     var body: some View {
         ZStack {
             OV2.bg.ignoresSafeArea()
@@ -108,8 +118,12 @@ struct OnboardingV2View: View {
             if signedIn, current == .login { advance() }
         }
         .onAppear {
+            restoreStepIndex()
             AnalyticsService.trackOnboardingStarted()
-            AnalyticsService.trackOnboardingStepViewed(stepIndex: 0, stepName: Screen.welcome.analyticsName)
+            AnalyticsService.trackOnboardingStepViewed(
+                stepIndex: stepIndex,
+                stepName: current.analyticsName
+            )
         }
         .task {
             notificationsSettled = await NotificationPermission.isSettled()
@@ -190,12 +204,17 @@ struct OnboardingV2View: View {
         lastAdvanceAt = now
         OnboardingHaptics.selection()
         stepIndex = next
+        // Remembered on every step, so the app being killed here resumes here.
+        OnboardingResumeStore.step = list[next].analyticsName
         AnalyticsService.trackOnboardingStepViewed(stepIndex: next, stepName: list[next].analyticsName)
     }
 
     private func finish() {
         guard !didFinish else { return }
         didFinish = true
+        // The flow is over: a later reset should start from the welcome page, not resume
+        // into a paywall.
+        OnboardingResumeStore.clear()
         vm.persistAndComplete(progressManager: progressManager)
         AnalyticsService.trackOnboardingCompleted(
             sawPaywall: current == .paywallAnnual || current == .paywallComparison,

@@ -271,7 +271,7 @@ struct TrainingView: View {
             let q = sessionQuestions[currentIndex].question
             chronoSlots = Array(repeating: nil, count: q.items.count)
             chronoPool = Array(q.items.indices)
-            sliderValue = ((q.sliderMin + q.sliderMax) / 2).rounded()
+            sliderValue = q.snapToStep((q.sliderMin + q.sliderMax) / 2)
         } else {
             chronoSlots = []
             chronoPool = []
@@ -803,7 +803,9 @@ struct TrainingView: View {
                 .frame(maxWidth: .infinity)
 
             VStack(spacing: 6) {
-                Slider(value: $sliderValue, in: sliderBounds, step: 1)
+                // The step comes from the question: a whole-number slider made an answer
+                // like 2.4 impossible to select, and impossible to score.
+                Slider(value: $sliderValue, in: sliderBounds, step: currentQuestion.sliderStep)
                     .tint(DS.accent)
                     .disabled(hasAnswered)
 
@@ -873,9 +875,17 @@ struct TrainingView: View {
     }
 
     private func sliderValueLabel(_ value: Double) -> String {
-        let rounded = Int(value.rounded())
+        // Truncating to an Int showed "23" for an answer of 23.5, telling the learner they
+        // were wrong when they were not. The precision follows the question's own step.
+        let formatter = NumberFormatter()
+        formatter.locale = languageManager.locale
+        formatter.numberStyle = .decimal
+        formatter.minimumFractionDigits = currentQuestion.sliderDecimals
+        formatter.maximumFractionDigits = currentQuestion.sliderDecimals
+        formatter.usesGroupingSeparator = currentQuestion.sliderDecimals == 0
+        let text = formatter.string(from: NSNumber(value: value)) ?? "\(value)"
         let unit = currentQuestion.unit
-        return unit.isEmpty ? "\(rounded)" : "\(rounded) \(unit)"
+        return unit.isEmpty ? text : "\(text) \(unit)"
     }
 
     // MARK: - Feedback bar (simplified — no XP/combo)

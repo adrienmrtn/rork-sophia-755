@@ -6,11 +6,37 @@ nonisolated struct CourseProgress: Codable, Sendable {
     var bestQuizScore: Int
     var lastQuizDate: String?
 
-    init(lastLessonIndex: Int, isCompleted: Bool, bestQuizScore: Int, lastQuizDate: String? = nil) {
+    /// When the course was first opened and when it was finished, ISO-8601.
+    ///
+    /// Both are optional so progress written by an older build still decodes: those courses
+    /// simply sort last in "My courses", which is the honest place for a date nobody
+    /// recorded. `quizTotalPoints` is stored alongside the score so it can be shown as a
+    /// ratio rather than a bare number.
+    var startedAt: String?
+    var completedAt: String?
+    var quizTotalPoints: Int?
+    /// Pages the course had when it was last read, so "3 of 5" can be shown without loading
+    /// every course body. 0 means "not recorded yet" and the ratio is simply omitted.
+    var lessonCount: Int?
+
+    init(
+        lastLessonIndex: Int,
+        isCompleted: Bool,
+        bestQuizScore: Int,
+        lastQuizDate: String? = nil,
+        startedAt: String? = nil,
+        completedAt: String? = nil,
+        quizTotalPoints: Int? = nil,
+        lessonCount: Int? = nil
+    ) {
         self.lastLessonIndex = lastLessonIndex
         self.isCompleted = isCompleted
         self.bestQuizScore = bestQuizScore
         self.lastQuizDate = lastQuizDate
+        self.startedAt = startedAt
+        self.completedAt = completedAt
+        self.quizTotalPoints = quizTotalPoints
+        self.lessonCount = lessonCount
     }
 }
 
@@ -43,6 +69,47 @@ nonisolated struct ShuffledQuestion: Sendable, Identifiable {
     let correctValue: Double
     let tolerance: Double
     let unit: String
+}
+
+extension ShuffledQuestion {
+    /// Smallest increment the slider has to be able to land on.
+    ///
+    /// Content authors write the answer, not the step, and the slider was hard-coded to whole
+    /// numbers. "La photosynthèse expliquée simplement" expects 2.4 on a 1–4 slider with a
+    /// ±0.3 tolerance: the nearest selectable value was 2, outside the tolerance, so the
+    /// question could not be answered correctly by anyone. The step therefore comes from the
+    /// answer's own precision — the coarsest that still lands exactly on it — with the range
+    /// as a floor, because 0.01 steps across 0–100000 would be a slider nobody can aim.
+    var sliderStep: Double {
+        let span = sliderMax - sliderMin
+        guard span > 0 else { return 1 }
+        // Coarse to fine: the first that lands on the answer is the one to use.
+        let candidates: [Double] = [1, 0.5, 0.1, 0.01]
+        let offset = correctValue - sliderMin
+        let needed = candidates.first { isMultiple(offset, of: $0) } ?? 0.01
+        // Never finer than the range can carry: at most ~2000 positions end to end.
+        let finest = candidates.last { span / $0 <= 2000 } ?? 1
+        return max(needed, finest)
+    }
+
+    /// Fraction digits implied by `sliderStep`: 1 → 0, 0.5 and 0.1 → 1, 0.01 → 2.
+    var sliderDecimals: Int {
+        if sliderStep >= 1 { return 0 }
+        if sliderStep >= 0.1 { return 1 }
+        return 2
+    }
+
+    /// Snaps a raw slider position onto `sliderStep`, so the exact answer is reachable.
+    func snapToStep(_ value: Double) -> Double {
+        guard sliderStep > 0 else { return value }
+        let snapped = (value / sliderStep).rounded() * sliderStep
+        return min(max(snapped, sliderMin), sliderMax)
+    }
+
+    private func isMultiple(_ value: Double, of step: Double) -> Bool {
+        let ratio = value / step
+        return abs(ratio - ratio.rounded()) < 1e-6
+    }
 }
 
 /// The learner's answer to a single question, shaped to match its `QuizQuestionType`.

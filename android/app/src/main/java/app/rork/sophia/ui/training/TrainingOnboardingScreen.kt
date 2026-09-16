@@ -56,6 +56,7 @@ fun TrainingOnboardingScreen(
     startAtPaywall: Boolean,
     onCompletedOnboarding: () -> Unit,
     onPurchased: () -> Unit,
+    onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit = { _, _ -> },
     onClose: () -> Unit,
 ) {
     var step by remember {
@@ -74,7 +75,10 @@ fun TrainingOnboardingScreen(
                 language = language,
                 storeViewModel = storeViewModel,
                 onDismiss = onClose,
-                onPurchased = onPurchased,
+                // The package is only needed where a trial reminder is armed; Training just
+                // unlocks. The meta callback is what carries the sale to Mixpanel.
+                onPurchased = { onPurchased() },
+                onPurchaseMeta = onPurchaseMeta,
             )
         }
         if (step != TrainingObStep.Paywall) {

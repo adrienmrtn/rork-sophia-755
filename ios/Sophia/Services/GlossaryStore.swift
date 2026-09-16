@@ -29,37 +29,224 @@ enum GlossaryClassification: String, CaseIterable, Sendable {
         }
     }
 
+    /// Short label of the term's kind, in the language the reader chose.
+    ///
+    /// Only six languages were listed; the other twenty fell through to `shortLabel`
+    /// and printed "PERSONNAGE" or "LIEU" in French above an otherwise translated
+    /// glossary card. The table is now exhaustive over `AppLanguage`, so a language
+    /// added later fails to compile here rather than silently reverting to French.
     func localizedShortLabel(language: AppLanguage) -> String {
-        switch (self, language) {
-        case (.referenceHistorique, .english): "Reference"
-        case (.concept, .english): "Concept"
-        case (.evenementConnexe, .english): "Event"
-        case (.personnage, .english): "Figure"
-        case (.lieuInstitution, .english): "Place"
-        case (.referenceHistorique, .spanish): "Referencia"
-        case (.concept, .spanish): "Concepto"
-        case (.evenementConnexe, .spanish): "Evento"
-        case (.personnage, .spanish): "Figura"
-        case (.lieuInstitution, .spanish): "Lugar"
-        case (.referenceHistorique, .german): "Bezug"
-        case (.concept, .german): "Konzept"
-        case (.evenementConnexe, .german): "Ereignis"
-        case (.personnage, .german): "Person"
-        case (.lieuInstitution, .german): "Ort"
-        case (.referenceHistorique, .portuguese): "Referência"
-        case (.concept, .portuguese): "Conceito"
-        case (.evenementConnexe, .portuguese): "Evento"
-        case (.personnage, .portuguese): "Figura"
-        case (.lieuInstitution, .portuguese): "Lugar"
-        case (.referenceHistorique, .italian): "Riferimento"
-        case (.concept, .italian): "Concetto"
-        case (.evenementConnexe, .italian): "Evento"
-        case (.personnage, .italian): "Personaggio"
-        case (.lieuInstitution, .italian): "Luogo"
-        default: shortLabel
+        switch language {
+        case .french:
+            switch self {
+            case .referenceHistorique: "Référence"
+            case .concept: "Concept"
+            case .evenementConnexe: "Événement"
+            case .personnage: "Personnage"
+            case .lieuInstitution: "Lieu"
+            }
+        case .english:
+            switch self {
+            case .referenceHistorique: "Reference"
+            case .concept: "Concept"
+            case .evenementConnexe: "Event"
+            case .personnage: "Figure"
+            case .lieuInstitution: "Place"
+            }
+        case .spanish:
+            switch self {
+            case .referenceHistorique: "Referencia"
+            case .concept: "Concepto"
+            case .evenementConnexe: "Evento"
+            case .personnage: "Figura"
+            case .lieuInstitution: "Lugar"
+            }
+        case .german:
+            switch self {
+            case .referenceHistorique: "Bezug"
+            case .concept: "Konzept"
+            case .evenementConnexe: "Ereignis"
+            case .personnage: "Person"
+            case .lieuInstitution: "Ort"
+            }
+        case .portuguese:
+            switch self {
+            case .referenceHistorique: "Referência"
+            case .concept: "Conceito"
+            case .evenementConnexe: "Evento"
+            case .personnage: "Figura"
+            case .lieuInstitution: "Lugar"
+            }
+        case .italian:
+            switch self {
+            case .referenceHistorique: "Riferimento"
+            case .concept: "Concetto"
+            case .evenementConnexe: "Evento"
+            case .personnage: "Personaggio"
+            case .lieuInstitution: "Luogo"
+            }
+        case .turkish:
+            switch self {
+            case .referenceHistorique: "Referans"
+            case .concept: "Kavram"
+            case .evenementConnexe: "Olay"
+            case .personnage: "Kişi"
+            case .lieuInstitution: "Yer"
+            }
+        case .polish:
+            switch self {
+            case .referenceHistorique: "Odniesienie"
+            case .concept: "Pojęcie"
+            case .evenementConnexe: "Wydarzenie"
+            case .personnage: "Postać"
+            case .lieuInstitution: "Miejsce"
+            }
+        case .romanian:
+            switch self {
+            case .referenceHistorique: "Referință"
+            case .concept: "Concept"
+            case .evenementConnexe: "Eveniment"
+            case .personnage: "Personaj"
+            case .lieuInstitution: "Loc"
+            }
+        case .dutch:
+            switch self {
+            case .referenceHistorique: "Verwijzing"
+            case .concept: "Begrip"
+            case .evenementConnexe: "Gebeurtenis"
+            case .personnage: "Figuur"
+            case .lieuInstitution: "Plaats"
+            }
+        case .greek:
+            switch self {
+            case .referenceHistorique: "Αναφορά"
+            case .concept: "Έννοια"
+            case .evenementConnexe: "Γεγονός"
+            case .personnage: "Πρόσωπο"
+            case .lieuInstitution: "Τόπος"
+            }
+        case .swedish:
+            switch self {
+            case .referenceHistorique: "Referens"
+            case .concept: "Begrepp"
+            case .evenementConnexe: "Händelse"
+            case .personnage: "Person"
+            case .lieuInstitution: "Plats"
+            }
+        case .hungarian:
+            switch self {
+            case .referenceHistorique: "Hivatkozás"
+            case .concept: "Fogalom"
+            case .evenementConnexe: "Esemény"
+            case .personnage: "Személy"
+            case .lieuInstitution: "Hely"
+            }
+        case .bulgarian:
+            switch self {
+            case .referenceHistorique: "Препратка"
+            case .concept: "Понятие"
+            case .evenementConnexe: "Събитие"
+            case .personnage: "Личност"
+            case .lieuInstitution: "Място"
+            }
+        case .czech:
+            switch self {
+            case .referenceHistorique: "Odkaz"
+            case .concept: "Pojem"
+            case .evenementConnexe: "Událost"
+            case .personnage: "Osobnost"
+            case .lieuInstitution: "Místo"
+            }
+        case .danish:
+            switch self {
+            case .referenceHistorique: "Reference"
+            case .concept: "Begreb"
+            case .evenementConnexe: "Begivenhed"
+            case .personnage: "Person"
+            case .lieuInstitution: "Sted"
+            }
+        case .norwegian:
+            switch self {
+            case .referenceHistorique: "Referanse"
+            case .concept: "Begrep"
+            case .evenementConnexe: "Hendelse"
+            case .personnage: "Person"
+            case .lieuInstitution: "Sted"
+            }
+        case .russian:
+            switch self {
+            case .referenceHistorique: "Отсылка"
+            case .concept: "Понятие"
+            case .evenementConnexe: "Событие"
+            case .personnage: "Личность"
+            case .lieuInstitution: "Место"
+            }
+        case .croatian:
+            switch self {
+            case .referenceHistorique: "Referenca"
+            case .concept: "Pojam"
+            case .evenementConnexe: "Događaj"
+            case .personnage: "Osoba"
+            case .lieuInstitution: "Mjesto"
+            }
+        case .slovenian:
+            switch self {
+            case .referenceHistorique: "Sklic"
+            case .concept: "Pojem"
+            case .evenementConnexe: "Dogodek"
+            case .personnage: "Oseba"
+            case .lieuInstitution: "Kraj"
+            }
+        case .slovak:
+            switch self {
+            case .referenceHistorique: "Odkaz"
+            case .concept: "Pojem"
+            case .evenementConnexe: "Udalosť"
+            case .personnage: "Osobnosť"
+            case .lieuInstitution: "Miesto"
+            }
+        case .serbian:
+            switch self {
+            case .referenceHistorique: "Referenca"
+            case .concept: "Pojam"
+            case .evenementConnexe: "Događaj"
+            case .personnage: "Ličnost"
+            case .lieuInstitution: "Mesto"
+            }
+        case .arabic:
+            switch self {
+            case .referenceHistorique: "مرجع"
+            case .concept: "مفهوم"
+            case .evenementConnexe: "حدث"
+            case .personnage: "شخصية"
+            case .lieuInstitution: "مكان"
+            }
+        case .hebrew:
+            switch self {
+            case .referenceHistorique: "הפניה"
+            case .concept: "מושג"
+            case .evenementConnexe: "אירוע"
+            case .personnage: "דמות"
+            case .lieuInstitution: "מקום"
+            }
+        case .finnish:
+            switch self {
+            case .referenceHistorique: "Viittaus"
+            case .concept: "Käsite"
+            case .evenementConnexe: "Tapahtuma"
+            case .personnage: "Henkilö"
+            case .lieuInstitution: "Paikka"
+            }
+        case .estonian:
+            switch self {
+            case .referenceHistorique: "Viide"
+            case .concept: "Mõiste"
+            case .evenementConnexe: "Sündmus"
+            case .personnage: "Isik"
+            case .lieuInstitution: "Koht"
+            }
         }
     }
-
     var pastel: Color {
         switch self {
         case .referenceHistorique:

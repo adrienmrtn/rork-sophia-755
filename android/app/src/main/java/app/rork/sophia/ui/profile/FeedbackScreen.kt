@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -113,6 +114,7 @@ fun FeedbackScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .imePadding()
             .background(DS.canvas)
             .verticalScroll(rememberScrollState())
             .padding(horizontal = DS.Space.l)
@@ -220,7 +222,15 @@ fun FeedbackScreen(
                         sent = true
                     } else {
                         app.analytics.trackFeedbackFailed(category)
-                        error = StringStore.text(context, "feedback.error.generic", language)
+                        // The message stays in the field either way: a rejected email is a
+                        // reason to fix one line, not to retype the whole report.
+                        val badEmail = (result.exceptionOrNull() as? IllegalArgumentException)
+                            ?.message == "email"
+                        error = StringStore.text(
+                            context,
+                            if (badEmail) "feedback.error.email" else "feedback.error.generic",
+                            language,
+                        )
                     }
                 }
             },

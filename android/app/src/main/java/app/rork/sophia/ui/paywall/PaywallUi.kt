@@ -66,6 +66,7 @@ import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.uppercaseInApp
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.delay
@@ -631,7 +632,7 @@ fun DiscountCountdownChip(label: String, time: String) {
     ) {
         Text("🔥", fontSize = 14.sp)
         Text(
-            text = label.uppercase(),
+            text = label.uppercaseInApp(),
             fontFamily = PlusJakartaSans,
             fontWeight = FontWeight.Bold,
             fontSize = 11.sp,
@@ -700,6 +701,25 @@ fun CheckedFeatureRow(text: String) {
         Icon(Icons.Filled.Check, contentDescription = null, tint = DS.success, modifier = Modifier.size(15.dp))
         Text(text = text, style = SophiaTypography.bodyMedium)
     }
+}
+
+/**
+ * Neutral counterpart to [PaywallErrorNote]: a pending Play payment is not a failure, so it
+ * must not be painted in the red that means "something went wrong".
+ */
+@Composable
+fun PaywallNotice(message: String, light: Boolean = false) {
+    Text(
+        text = message,
+        style = SophiaTypography.labelMedium.copy(fontSize = 12.sp),
+        color = if (light) Color.White else DS.accentSoft,
+        textAlign = TextAlign.Center,
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .background(if (light) Color.White.copy(alpha = 0.18f) else DS.accentTint)
+            .padding(horizontal = 12.dp, vertical = 10.dp),
+    )
 }
 
 @Composable

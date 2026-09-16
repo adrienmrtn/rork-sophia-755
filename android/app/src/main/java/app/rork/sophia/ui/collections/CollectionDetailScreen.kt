@@ -43,6 +43,7 @@ import app.rork.sophia.ui.components.inlineRichText
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.uppercaseInApp
 import app.rork.sophia.ui.theme.SophiaTypography
 
 @Composable
@@ -106,7 +107,7 @@ fun CollectionDetailScreen(
             )
             Spacer(Modifier.height(22.dp))
             Text(
-                text = StringStore.text(context, "collections.path", language).uppercase(),
+                text = StringStore.text(context, "collections.path", language).uppercaseInApp(),
                 style = SophiaTypography.labelMedium,
             )
             Spacer(Modifier.height(12.dp))
@@ -141,7 +142,7 @@ fun CollectionDetailScreen(
                 Column(modifier = Modifier.weight(1f)) {
                     if (summary != null) {
                         Text(
-                            text = summary.subjectEnum.name.lowercase().replaceFirstChar { it.titlecase() },
+                            text = summary.subjectEnum.name.lowercase(java.util.Locale.ROOT).replaceFirstChar { it.titlecase(java.util.Locale.ROOT) },
                             style = SophiaTypography.labelMedium,
                             color = DS.accentSoft,
                         )

@@ -16,7 +16,29 @@ data class ShuffledQuestion(
     val correctValue: Double = 0.0,
     val tolerance: Double = 0.0,
     val unit: String = "",
-)
+    /**
+     * Smallest increment the slider has to be able to land on, and the precision its value is
+     * shown with. Derived from the expected answer: a question whose answer is 2.4 on a
+     * whole-number slider can never be answered correctly, and one whose answer is 23.5
+     * displayed as "23" tells the user they were wrong when they were not.
+     */
+    val sliderStep: Double = 1.0,
+) {
+    /** Fraction digits implied by [sliderStep]: 1.0 -> 0, 0.1 -> 1, 0.01 -> 2. */
+    val sliderDecimals: Int
+        get() = when {
+            sliderStep >= 1.0 -> 0
+            sliderStep >= 0.1 -> 1
+            else -> 2
+        }
+
+    /** Snaps a raw slider position onto [sliderStep], so the exact answer is reachable. */
+    fun snapToStep(value: Double): Double {
+        if (sliderStep <= 0.0) return value
+        val snapped = kotlin.math.round(value / sliderStep) * sliderStep
+        return snapped.coerceIn(sliderMin, sliderMax)
+    }
+}
 
 sealed class QuizAnswer {
     data class SingleChoice(val index: Int) : QuizAnswer()
@@ -77,18 +99,51 @@ object QuizShuffler {
 
     private fun shuffleSlider(question: QuizQuestion): ShuffledQuestion {
         val isPct = question.type == QuizQuestionType.PERCENTAGE_SLIDER
+        val min = question.sliderMin ?: 0.0
+        val max = question.sliderMax ?: 100.0
+        val correct = question.correctValue ?: 0.0
+        val tolerance = question.tolerance ?: if (isPct) 5.0 else 1.0
         return ShuffledQuestion(
             id = question.id,
             type = question.type,
             question = question.question,
             explanation = question.explanation,
             maxPoints = question.maxPoints,
-            sliderMin = question.sliderMin ?: 0.0,
-            sliderMax = question.sliderMax ?: if (isPct) 100.0 else 100.0,
-            correctValue = question.correctValue ?: 0.0,
-            tolerance = question.tolerance ?: if (isPct) 5.0 else 1.0,
+            sliderMin = min,
+            sliderMax = max,
+            correctValue = correct,
+            tolerance = tolerance,
             unit = question.unit ?: if (isPct) "%" else "",
+            sliderStep = sliderStep(min, max, correct),
         )
+    }
+
+    /**
+     * The step a slider needs so its expected answer is actually selectable.
+     *
+     * Content authors write the answer, not the step. "La photosynthèse expliquée
+     * simplement" expects 2.4 on a 1–4 slider: with a whole-number step the closest a user
+     * could reach was 2, outside the ±0.3 tolerance, so nobody could score the question.
+     * The step therefore comes from the answer's own precision — the coarsest one that still
+     * lands exactly on it — with the range as a floor, because 0.01 steps across 0–100000
+     * would be a slider nobody can aim.
+     */
+    private fun sliderStep(min: Double, max: Double, correct: Double): Double {
+        val span = max - min
+        if (span <= 0.0) return 1.0
+        // Coarse to fine: the first that lands on the answer is the one to use.
+        val candidates = listOf(1.0, 0.5, 0.1, 0.01)
+        val needed = candidates.firstOrNull { isMultipleOf(correct - min, it) } ?: candidates.last()
+        // Never finer than the range can carry: at most ~2000 positions end to end.
+        val finest = candidates.lastOrNull { span / it <= MAX_SLIDER_POSITIONS } ?: candidates.first()
+        return maxOf(needed, finest)
+    }
+
+    private const val MAX_SLIDER_POSITIONS = 2000
+
+    private fun isMultipleOf(value: Double, step: Double): Boolean {
+        val ratio = value / step
+        return kotlin.math.abs(ratio - kotlin.math.round(ratio)) < 1e-6
     }
 }
 

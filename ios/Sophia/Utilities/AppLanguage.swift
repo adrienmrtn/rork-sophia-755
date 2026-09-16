@@ -61,6 +61,15 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         }
     }
 
+    /// Foundation locale for the chosen language.
+    ///
+    /// Used wherever the app formats text itself — uppercasing, numbers, dates. The default
+    /// locale is the *phone's*, which is why a section label read "HİSTORY" on a Turkish
+    /// phone (Turkish uppercases `i` to a dotted `İ`) whatever language Sophia was in.
+    var foundationLocale: Locale {
+        Locale(identifier: localeIdentifier)
+    }
+
     /// Writing direction of the language.
     ///
     /// The app reads its language from `UserDefaults`, not from the device, so

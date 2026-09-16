@@ -18,6 +18,13 @@ enum OV2 {
     static let warm = Color(red: 0.90, green: 0.70, blue: 0.20)
     static let danger = Color(red: 0.86, green: 0.35, blue: 0.36)
     static let success = DS.success
+
+    /// Largeur maximale du contenu d'un écran d'onboarding ou d'un paywall.
+    ///
+    /// Les mises en page sont une colonne unique, dessinée pour un iPhone. Étirées sur un
+    /// iPad en paysage, elles cessent de ressembler au design et le bouton finit hors écran.
+    /// Sur iPhone, la borne est plus large que l'écran et ne change donc rien.
+    static let readableWidth: CGFloat = 440
 }
 
 // MARK: - Transition douce (fondu + léger glissement vertical)
@@ -172,9 +179,21 @@ extension View {
         modifier(OnboardingV2Reveal(delay: delay, yOffset: yOffset))
     }
 
-    /// Fond plein cadre V2.
+    /// Fond plein cadre V2, avec une largeur de contenu bornée sur grand écran.
+    ///
+    /// L'app est publiée pour iPad et Apple teste sur iPad pendant la validation. En paysage,
+    /// la grille des années s'étirait sur toute la largeur jusqu'à pousser le bouton à ~450pt
+    /// sous l'écran : l'onboarding devenait infinissable. Le contenu est borné et centré, le
+    /// fond reste plein cadre.
     func ov2Background() -> some View {
-        frame(maxWidth: .infinity, maxHeight: .infinity)
+        frame(maxWidth: OV2.readableWidth)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(OV2.bg.ignoresSafeArea())
+    }
+
+    /// Même bornage, pour les écrans qui peignent leur propre fond (paywalls en dégradé).
+    func ov2ReadableWidth() -> some View {
+        frame(maxWidth: OV2.readableWidth)
+            .frame(maxWidth: .infinity)
     }
 }

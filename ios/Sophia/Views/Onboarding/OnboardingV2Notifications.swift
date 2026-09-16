@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 private let notificationBullets: [(emoji: String, key: String)] = [
     ("📚", "onboardingV2.notifications.bullet1"),
@@ -19,6 +20,9 @@ struct OnboardingV2Notifications: View {
     let onNext: () -> Void
 
     @State private var asked = false
+    /// Garde-fou contre un double `onNext()` : le garde-temps ci-dessous et la réponse du
+    /// système peuvent arriver tous les deux.
+    @State private var moved = false
     @State private var revealed = 0
     @State private var previewCourseTitle: String?
 
@@ -70,6 +74,10 @@ struct OnboardingV2Notifications: View {
                     action: ask
                 )
 
+                // Jamais désactivé : c'est la sortie de secours si l'alerte système
+                // n'apparaît jamais (iOS la met en file d'attente derrière une autre alerte
+                // — celle d'ATT au lancement — et une alerte jamais montrée ne rappelle
+                // jamais). Les deux boutons grisés faisaient de cette page un cul-de-sac.
                 Button(action: skip) {
                     Text(languageManager.text("onboardingV2.notifications.skip"))
                         .font(DS.sans(.footnote, .semibold))
@@ -77,7 +85,6 @@ struct OnboardingV2Notifications: View {
                         .padding(.horizontal, 20)
                         .padding(.vertical, 8)
                 }
-                .disabled(asked)
                 .padding(.bottom, 14)
             }
         }
@@ -143,17 +150,41 @@ struct OnboardingV2Notifications: View {
     // MARK: - Actions
 
     private func ask() {
-        guard !asked else { return }
+        guard !asked, !moved else { return }
         asked = true
         Task { @MainActor in
             await NotificationPermission.request()
-            onNext()
+            leave()
+        }
+        // Garde-temps : iOS met son alerte en file d'attente derrière une autre alerte
+        // système (celle d'ATT est demandée au lancement), et une alerte jamais présentée ne
+        // rappelle jamais — l'attente serait éternelle. L'autorisation n'est qu'un bonus :
+        // la suite de l'onboarding ne doit pas en dépendre.
+        //
+        // On ne débloque que si la scène est **active** : une alerte système à l'écran rend
+        // l'app inactive, donc « active » signifie qu'aucune alerte n'est affichée et qu'il
+        // n'y a donc plus rien à attendre. Les 8 s initiales laissent largement le temps à
+        // l'alerte d'arriver avant d'en conclure qu'elle ne viendra pas.
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 8_000_000_000)
+            for _ in 0..<20 {
+                guard asked, !moved else { return }
+                if UIApplication.shared.applicationState == .active { break }
+                try? await Task.sleep(nanoseconds: 1_500_000_000)
+            }
+            leave()
         }
     }
 
     private func skip() {
-        guard !asked else { return }
+        guard !moved else { return }
         asked = true
+        leave()
+    }
+
+    private func leave() {
+        guard !moved else { return }
+        moved = true
         onNext()
     }
 

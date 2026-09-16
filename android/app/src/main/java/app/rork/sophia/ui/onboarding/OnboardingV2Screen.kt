@@ -1,5 +1,6 @@
 package app.rork.sophia.ui.onboarding
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
@@ -15,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -22,6 +24,9 @@ import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.Saver
+import androidx.compose.runtime.saveable.listSaver
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -34,11 +39,15 @@ import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.InAppReviewHelper
 import app.rork.sophia.data.NotificationPermission
+import app.rork.sophia.data.SignInOutcome
+import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.ui.paywall.OnboardingPaywallFlow
 import app.rork.sophia.ui.theme.DS
+import com.revenuecat.purchases.Package
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -75,6 +84,27 @@ private val DOT_STEPS = listOf(
     OnboardingStep.Loading,
 )
 
+/** Saves the step by name, so a reordering of the enum cannot restore a different page. */
+private val OnboardingStepSaver: Saver<OnboardingStep, String> = Saver(
+    save = { it.name },
+    restore = { name -> runCatching { OnboardingStep.valueOf(name) }.getOrNull() },
+)
+
+/**
+ * The page back should land on. Mostly the declaration order, with the two branches the
+ * forward flow can skip: the notifications page is not shown once the permission is settled,
+ * and the trial explanation is skipped when the served product has no trial. Going back
+ * through a page that was never shown would strand the user on a dead end.
+ */
+private fun previousStep(step: OnboardingStep, showsTrialSteps: Boolean): OnboardingStep? = when (step) {
+    OnboardingStep.Welcome -> null
+    // The paywall is the end of the flow; its own close button decides what "leaving" means.
+    OnboardingStep.Paywall -> null
+    OnboardingStep.Reminder -> if (showsTrialSteps) OnboardingStep.Trial else OnboardingStep.Login
+    OnboardingStep.Trial -> OnboardingStep.Login
+    else -> OnboardingStep.entries.getOrNull(step.ordinal - 1)
+}
+
 @Composable
 fun OnboardingV2Screen(
     language: AppLanguage,
@@ -87,12 +117,37 @@ fun OnboardingV2Screen(
     val isPremium by storeViewModel.isPremium.collectAsState()
     // Blur and long infinite animations are dropped on Go phones and emulators.
     val richMotion = remember { !DeviceCapabilities.isConstrained(context) }
-    var step by remember { mutableStateOf(OnboardingStep.Welcome) }
-    var selectedObjectives by remember { mutableStateOf(setOf<String>()) }
-    var phoneMinutes by remember { mutableIntStateOf(180) }
-    var likedCourseIds by remember { mutableStateOf(listOf<String>()) }
-    var sawPaywall by remember { mutableStateOf(false) }
+    // rememberSaveable, not remember: rotating the phone, switching theme or changing the
+    // font size recreates the activity, and plain `remember` sent the user back to the
+    // welcome page having lost every answer. The enum is saved by name so reordering the
+    // steps later cannot resurrect the wrong one.
+    var step by rememberSaveable(stateSaver = OnboardingStepSaver) {
+        mutableStateOf(
+            app.onboardingStore.lastStep()
+                ?.let { name -> runCatching { OnboardingStep.valueOf(name) }.getOrNull() }
+                ?: OnboardingStep.Welcome,
+        )
+    }
+    var selectedObjectives by rememberSaveable(
+        saver = listSaver<MutableState<Set<String>>, String>(
+            save = { it.value.toList() },
+            restore = { mutableStateOf(it.toSet()) },
+        ),
+    ) { mutableStateOf(setOf()) }
+    var phoneMinutes by rememberSaveable { mutableIntStateOf(180) }
+    var likedCourseIds by rememberSaveable(
+        saver = listSaver<MutableState<List<String>>, String>(
+            save = { it.value },
+            restore = { mutableStateOf(it) },
+        ),
+    ) { mutableStateOf(listOf()) }
+    var sawPaywall by rememberSaveable { mutableStateOf(false) }
     var lastAdvanceAt by remember { mutableLongStateOf(0L) }
+    var signingIn by remember { mutableStateOf(false) }
+    var signInError by remember { mutableStateOf<String?>(null) }
+    var googleAvailable by remember {
+        mutableStateOf(DeviceCapabilities.hasGooglePlayServices(context))
+    }
     val scope = rememberCoroutineScope()
 
     // A racing timer (last swipe card, word animation) must not skip a whole screen.
@@ -106,6 +161,8 @@ fun OnboardingV2Screen(
     LaunchedEffect(Unit) { app.analytics.trackOnboardingStarted() }
     LaunchedEffect(step) {
         app.analytics.trackOnboardingStep(step.ordinal, step.analyticsName)
+        // Killing the app mid-onboarding used to restart the whole flow, answers and all.
+        app.onboardingStore.rememberStep(step.name)
     }
     // Warm the home feed + glossary during paywall so arriving on TikTok home is instant.
     LaunchedEffect(step, language) {
@@ -129,17 +186,18 @@ fun OnboardingV2Screen(
         onComplete()
     }
 
-    fun scheduleTrialReminderIfEligible() {
-        // Only schedule when the served annual product actually has a free trial.
-        // Reminder step runs even on no-trial paths; must not notify "trial ending".
-        if (storeViewModel.annualHasFreeTrial()) {
-            // RevenueCat rarely knows the expiry this early, so this arms an assumed 3-day
-            // trial; StoreViewModel re-aims it once the real expiration date arrives.
-            TrialReminderScheduler.scheduleTrialEndingReminder(
-                context,
-                storeViewModel.trialExpirationDate.value,
-            )
-        }
+    fun scheduleTrialReminderIfEligible(purchased: Package?) {
+        // Only schedule when the product the user actually bought has a free trial. Asking
+        // the annual plan instead armed a "your trial ends tomorrow" reminder for someone
+        // who had just bought a monthly plan with no trial at all.
+        if (!storeViewModel.hasFreeTrial(purchased)) return
+        // RevenueCat rarely knows the expiry this early, so this arms an assumed 3-day
+        // trial; StoreViewModel re-aims it once the real expiration date arrives — and
+        // cancels it if the entitlement turns out not to be in a trial.
+        TrialReminderScheduler.scheduleTrialEndingReminder(
+            context,
+            storeViewModel.trialExpirationDate.value,
+        )
     }
 
     /** The notifications page has nothing to add once the permission is already settled. */
@@ -149,6 +207,18 @@ fun OnboardingV2Screen(
         } else {
             OnboardingStep.Login
         }
+
+    /** Login, skipped or done, lands on the same next page. */
+    fun advanceFromLogin() {
+        // Skip trial explanation when the served annual product has no free trial.
+        goTo(
+            if (storeViewModel.shouldShowTrialSteps()) {
+                OnboardingStep.Trial
+            } else {
+                OnboardingStep.Reminder
+            },
+        )
+    }
 
     fun advanceFromReminder() {
         if (isPremium) finish(true)
@@ -166,7 +236,24 @@ fun OnboardingV2Screen(
         swipeReady = true
     }
 
-    Box(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
+    // Back walks the flow backwards. The welcome page is the one place with nothing behind
+    // it, so there the system default (leave the app) is the right answer.
+    BackHandler(enabled = step != OnboardingStep.Welcome) {
+        val previous = previousStep(step, storeViewModel.shouldShowTrialSteps())
+        if (previous != null) {
+            lastAdvanceAt = System.currentTimeMillis()
+            step = previous
+        }
+    }
+
+    Box(
+        modifier = Modifier.fillMaxSize().background(DS.canvas),
+        contentAlignment = Alignment.TopCenter,
+    ) {
+        // Bounded and centred on a tablet. Stretched across a landscape tablet these
+        // one-column pages stop resembling the design, and the tallest of them pushes its
+        // button below the fold. On a phone the cap is wider than the screen.
+        Box(modifier = Modifier.fillMaxSize().readableWidth()) {
         AnimatedContent(
             targetState = step,
             transitionSpec = {
@@ -249,39 +336,63 @@ fun OnboardingV2Screen(
                 }
                 OnboardingStep.Login -> LoginStep(
                     language = language,
+                    signingIn = signingIn,
+                    errorMessage = signInError,
+                    googleAvailable = googleAvailable,
                     onGoogle = {
+                        // Guard, not just a disabled button: a fast double tap can land two
+                        // clicks before recomposition shows the disabled state, and the
+                        // second Credential Manager request cancels the first.
+                        if (signingIn) return@LoginStep
+                        signingIn = true
+                        signInError = null
                         scope.launch {
-                            val signedIn = runCatching {
+                            val outcome = try {
                                 app.authService.signInWithGoogle(context)
-                            }.getOrDefault(false)
-                            if (!signedIn) return@launch
-                            // A returning user signing in here gets their cloud progress
-                            // back, same as signing in from settings.
-                            runCatching {
-                                app.progressSyncService.pullOnLogin(
-                                    app.progressManager.progress.value,
+                            } catch (e: CancellationException) {
+                                // The user left the step while the sheet was up. Nothing to
+                                // report, and nothing left to update — this scope is gone.
+                                throw e
+                            } catch (e: Exception) {
+                                SignInOutcome.Failure(
+                                    StringStore.text(context, "auth.error.generic", language),
                                 )
                             }
-                            // Skip trial explanation when the served annual product has no free trial.
-                            goTo(
-                                if (storeViewModel.shouldShowTrialSteps()) {
-                                    OnboardingStep.Trial
-                                } else {
-                                    OnboardingStep.Reminder
-                                },
-                            )
+                            signingIn = false
+                            when (outcome) {
+                                is SignInOutcome.Success -> {
+                                    // A returning user signing in here gets their cloud
+                                    // progress back, same as signing in from settings.
+                                    runCatching {
+                                        app.progressSyncService.pullOnLogin(
+                                            app.progressManager.progress.value,
+                                        )
+                                    }
+                                    app.onboardingStore.markAccountOffered()
+                                    advanceFromLogin()
+                                }
+                                // Dismissed on purpose: leave the page exactly as it was.
+                                is SignInOutcome.Cancelled -> Unit
+                                is SignInOutcome.Unavailable -> {
+                                    googleAvailable = false
+                                    signInError = StringStore.text(
+                                        context,
+                                        "auth.unavailable.body",
+                                        language,
+                                    )
+                                }
+                                is SignInOutcome.Failure -> signInError = outcome.message
+                            }
                         }
                     },
+                    onContinueWithoutAccount = {
+                        // Progress lives on the device from here on. The app asks again in
+                        // the profile tab and after the third course.
+                        app.onboardingStore.markSkippedAccount()
+                        advanceFromLogin()
+                    },
                     onSkip = {
-                        if (DeviceCapabilities.allowsLoginBypass()) {
-                            goTo(
-                                if (storeViewModel.shouldShowTrialSteps()) {
-                                    OnboardingStep.Trial
-                                } else {
-                                    OnboardingStep.Reminder
-                                },
-                            )
-                        }
+                        if (DeviceCapabilities.allowsLoginBypass()) advanceFromLogin()
                     },
                 )
                 OnboardingStep.Trial -> TrialStepsStep(language) { goTo(OnboardingStep.Reminder) }
@@ -292,8 +403,8 @@ fun OnboardingV2Screen(
                         language = language,
                         storeViewModel = storeViewModel,
                         onDismiss = { finish(false) },
-                        onPurchased = {
-                            scheduleTrialReminderIfEligible()
+                        onPurchased = { purchased ->
+                            scheduleTrialReminderIfEligible(purchased)
                             finish(true)
                         },
                         onPurchaseMeta = { offeringId, packageId ->
@@ -312,6 +423,8 @@ fun OnboardingV2Screen(
                     )
                 }
             }
+        }
+
         }
 
         val dotIndex = DOT_STEPS.indexOf(step)

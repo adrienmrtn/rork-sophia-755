@@ -19,7 +19,8 @@ struct GlossaryTermSheet: View {
 
             VStack(alignment: .leading, spacing: 16) {
                 HStack(spacing: 8) {
-                    Text(entry.classification.localizedShortLabel(language: AppLanguage.currentPersisted()).uppercased())
+                    Text(entry.classification.localizedShortLabel(language: AppLanguage.currentPersisted())
+                        .uppercased(with: AppLanguage.currentPersisted().foundationLocale))
                         .font(DS.sans(.caption2, .semibold))
                         .foregroundStyle(DS.accentSoft)
                         .tracking(1.0)
@@ -144,7 +145,8 @@ struct GlossaryTermOverlay: View {
 
             VStack(alignment: .leading, spacing: 16) {
                 HStack(spacing: 8) {
-                    Text(entry.classification.localizedShortLabel(language: AppLanguage.currentPersisted()).uppercased())
+                    Text(entry.classification.localizedShortLabel(language: AppLanguage.currentPersisted())
+                        .uppercased(with: AppLanguage.currentPersisted().foundationLocale))
                         .font(DS.sans(.caption2, .semibold))
                         .foregroundStyle(DS.accentSoft)
                         .tracking(1.0)

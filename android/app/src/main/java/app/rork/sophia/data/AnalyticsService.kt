@@ -45,6 +45,15 @@ class AnalyticsService(context: Context) {
         }
     }
 
+    /**
+     * Cuts the Mixpanel identity loose after an account deletion: the distinct id that was
+     * tied to the deleted Supabase user must not follow whoever uses the phone next.
+     */
+    fun reset() {
+        runCatching { mixpanel?.reset() }
+        prefs.edit().remove(KEY_LAST_SESSION).remove(KEY_FIRST_OPEN).apply()
+    }
+
     fun track(event: String, props: Map<String, Any?> = emptyMap()) {
         val json = JSONObject()
         props.forEach { (k, v) ->

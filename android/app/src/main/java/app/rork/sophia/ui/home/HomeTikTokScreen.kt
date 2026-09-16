@@ -4,21 +4,29 @@ import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.focusable
+import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.detectVerticalDragGestures
+import androidx.compose.foundation.gestures.rememberScrollableState
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.LocalFireDepartment
@@ -44,8 +52,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.key.Key
+import androidx.compose.ui.input.key.KeyEventType
+import androidx.compose.ui.input.key.key
+import androidx.compose.ui.input.key.onKeyEvent
+import androidx.compose.ui.input.key.type
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onSizeChanged
@@ -65,14 +80,16 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.CourseImage
+import app.rork.sophia.ui.components.FirstOpenExplanation
 import app.rork.sophia.ui.components.Pill
 import app.rork.sophia.ui.components.SophiaPrimaryButton
 import app.rork.sophia.ui.components.inlineRichText
+import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
-import app.rork.sophia.ui.components.FirstOpenExplanation
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
+import kotlin.math.abs
 import kotlin.math.roundToInt
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -87,7 +104,9 @@ fun HomeTikTokScreen(
     onToggleFavorite: (String) -> Unit,
     onStartCourse: (String) -> Unit,
     onUserSwipe: () -> Unit = {},
+    onOpenMyCourses: () -> Unit = {},
     streak: Int = 0,
+    completedCourses: Int = 0,
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -155,6 +174,35 @@ fun HomeTikTokScreen(
                     color = DS.ink,
                 )
                 Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                // Same badge shape as the streak, next to it: the two things you want at a
+                // glance from home are how many days in a row and what you have read.
+                Row(
+                    modifier = Modifier
+                        .clip(CircleShape)
+                        .background(DS.surface)
+                        .softPress(onClick = onOpenMyCourses)
+                        .padding(horizontal = 14.dp, vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                ) {
+                    Icon(
+                        Icons.AutoMirrored.Filled.MenuBook,
+                        contentDescription = StringStore.text(context, "myCourses.title", language),
+                        tint = DS.accentSoft,
+                        modifier = Modifier.size(18.dp),
+                    )
+                    Text(
+                        text = "$completedCourses",
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 15.sp,
+                        color = DS.ink,
+                    )
+                }
+                Row(
                     modifier = Modifier
                         .clip(CircleShape)
                         .background(DS.surface)
@@ -188,6 +236,7 @@ fun HomeTikTokScreen(
                         maxLines = 1,
                     )
                 }
+                }
             }
 
             if (!catalogReady) {
@@ -197,9 +246,7 @@ fun HomeTikTokScreen(
             } else if (cards.isEmpty()) {
                 Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
                     Text(
-                        text = StringStore.text(context, "home.allCaughtUp", language)
-                            .takeIf { it != "home.allCaughtUp" }
-                            ?: "Tous les cours sont faits — bravo !",
+                        text = StringStore.text(context, "home.allCaughtUp", language),
                         fontFamily = PlusJakartaSans,
                         color = DS.ink,
                     )
@@ -265,10 +312,57 @@ private fun VerticalSnapFeed(
     var settling by remember { mutableStateOf(false) }
     var heightPx by remember { mutableFloatStateOf(0f) }
     val y = if (settling) anim.value else drag
+    val focusRequester = remember { FocusRequester() }
+
+    /** One card in [delta] direction, for input that has no drag distance to speak of. */
+    fun step(delta: Int) {
+        val i = indexState.value
+        val count = countState.value
+        val target = (i + delta).coerceIn(0, (count - 1).coerceAtLeast(0))
+        if (target == i || settling) return
+        scope.launch {
+            settling = true
+            anim.snapTo(if (delta > 0) heightPx else -heightPx)
+            changeState.value(target)
+            drag = 0f
+            anim.animateTo(0f, spring())
+            settling = false
+        }
+    }
+
+    // The feed only ever listened for a finger. On a tablet with a keyboard, a Chromebook or
+    // a desktop-mode window, the wheel, the trackpad and the arrow keys all did nothing, so
+    // the home screen simply could not be scrolled by the only input those users have.
+    LaunchedEffect(Unit) { runCatching { focusRequester.requestFocus() } }
 
     Box(
         modifier = modifier
             .onSizeChanged { heightPx = it.height.toFloat() }
+            .focusRequester(focusRequester)
+            .focusable()
+            .onKeyEvent { event ->
+                if (event.type != KeyEventType.KeyDown) return@onKeyEvent false
+                when (event.key) {
+                    Key.DirectionDown, Key.PageDown, Key.SystemNavigationDown -> {
+                        step(1)
+                        true
+                    }
+                    Key.DirectionUp, Key.PageUp, Key.SystemNavigationUp -> {
+                        step(-1)
+                        true
+                    }
+                    else -> false
+                }
+            }
+            .scrollable(
+                orientation = Orientation.Vertical,
+                state = rememberScrollableState { delta ->
+                    // A wheel notch arrives as one large delta rather than a drag, so it is
+                    // consumed whole and turned into a single card change.
+                    if (abs(delta) > 1f) step(if (delta < 0) 1 else -1)
+                    delta
+                },
+            )
             .pointerInput(heightPx) {
                 if (heightPx <= 0f) return@pointerInput
                 detectVerticalDragGestures(
@@ -362,18 +456,35 @@ private fun TikTokCourseCard(
     onStart: () -> Unit,
 ) {
     val context = LocalContext.current
-    Column(
+    BoxWithConstraints(
         modifier = Modifier
             .fillMaxSize()
-            .padding(horizontal = DS.Space.m, vertical = DS.Space.s)
-            .sophiaCard(elevation = 10.dp)
-            .padding(DS.Space.l),
-        verticalArrangement = Arrangement.spacedBy(14.dp),
+            .padding(horizontal = DS.Space.m, vertical = DS.Space.s),
+        contentAlignment = Alignment.Center,
     ) {
+        // "Commencer" is the only way into a course, so it wins every competition for space.
+        // In landscape, in split screen, or at a large font scale, the cover plus a two-line
+        // title plus a four-line description no longer fit and the button was pushed off the
+        // bottom of the card — the home screen became a dead end. The picture and the blurb
+        // give way instead.
+        val available = maxHeight
+        val compact = available < 560.dp
+        val veryCompact = available < 420.dp
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                // Stretched across a tablet the card became a letterbox; capped, it keeps
+                // the proportions the design was drawn at.
+                .widthIn(max = 520.dp)
+                .sophiaCard(elevation = 10.dp)
+                .padding(if (compact) DS.Space.m else DS.Space.l),
+            verticalArrangement = Arrangement.spacedBy(if (compact) 8.dp else 14.dp),
+        ) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(1f)
+                .weight(1f, fill = false)
+                .heightIn(min = 72.dp, max = available * if (veryCompact) 0.3f else 0.55f)
                 .clip(DS.controlShape)
                 .background(DS.surfaceMuted)
                 .border(1.dp, DS.hairline, DS.controlShape),
@@ -429,22 +540,28 @@ private fun TikTokCourseCard(
 
         Text(
             text = course.title,
-            style = SophiaTypography.titleMedium.copy(fontSize = 21.sp, lineHeight = 27.sp),
-            maxLines = 2,
+            style = if (compact) {
+                SophiaTypography.titleMedium.copy(fontSize = 18.sp, lineHeight = 23.sp)
+            } else {
+                SophiaTypography.titleMedium.copy(fontSize = 21.sp, lineHeight = 27.sp)
+            },
+            maxLines = if (veryCompact) 1 else 2,
             overflow = TextOverflow.Ellipsis,
         )
-        Text(
-            text = remember(course.description) { inlineRichText(course.description) },
-            style = SophiaTypography.bodyMedium.copy(lineHeight = 21.sp),
-            maxLines = 4,
-            overflow = TextOverflow.Ellipsis,
-        )
+        if (!veryCompact) {
+            Text(
+                text = remember(course.description) { inlineRichText(course.description) },
+                style = SophiaTypography.bodyMedium.copy(lineHeight = 21.sp),
+                maxLines = if (compact) 2 else 4,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
         SophiaPrimaryButton(
-            text = StringStore.text(context, "home.start", language)
-                .takeIf { it != "home.start" } ?: "Commencer",
+            text = StringStore.text(context, "home.start", language),
             onClick = onStart,
             leadingIcon = Icons.Filled.PlayArrow,
         )
+        }
     }
 }
 

@@ -130,6 +130,11 @@ struct SophiaStandardPaywall: View {
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 20)
             }
+            // One column of copy, drawn for an iPhone. Stretched across an iPad in
+            // landscape it stops looking like the design and pushes the CTA below the
+            // fold — and Apple reviews on iPad. The background layer above stays
+            // full-bleed, so gradient paywalls still reach the edges.
+            .frame(maxWidth: OV2.readableWidth)
         }
         .onAppear {
             presentedAt = Date()
@@ -142,7 +147,7 @@ struct SophiaStandardPaywall: View {
             }
         }
         .task {
-            if store.offerings == nil { await store.fetchOfferings() }
+            if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
         .onDisappear { trackDismissIfNeeded() }
     }
@@ -329,7 +334,7 @@ struct SophiaStandardPaywall: View {
     private func purchase() {
         guard !purchasing else { return }
         guard let package = store.annualPackage(forOfferingIdentifier: context.rawValue) else {
-            Task { await store.fetchOfferings() }
+            Task { await store.loadOfferingsWithRetry() }
             return
         }
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
@@ -426,6 +431,11 @@ struct SophiaTrainingPaywall: View {
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 20)
             }
+            // One column of copy, drawn for an iPhone. Stretched across an iPad in
+            // landscape it stops looking like the design and pushes the CTA below the
+            // fold — and Apple reviews on iPad. The background layer above stays
+            // full-bleed, so gradient paywalls still reach the edges.
+            .frame(maxWidth: OV2.readableWidth)
         }
         .onAppear {
             presentedAt = Date()
@@ -437,7 +447,7 @@ struct SophiaTrainingPaywall: View {
             }
         }
         .task {
-            if store.offerings == nil { await store.fetchOfferings() }
+            if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
         .onDisappear { trackDismissIfNeeded() }
     }
@@ -622,7 +632,7 @@ struct SophiaTrainingPaywall: View {
     private func purchase() {
         guard !purchasing else { return }
         guard let package = store.annualPackage(forOfferingIdentifier: context.offeringIdentifier) else {
-            Task { await store.fetchOfferings() }
+            Task { await store.loadOfferingsWithRetry() }
             return
         }
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
@@ -741,6 +751,11 @@ struct SophiaQuizPaywall: View {
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 20)
             }
+            // One column of copy, drawn for an iPhone. Stretched across an iPad in
+            // landscape it stops looking like the design and pushes the CTA below the
+            // fold — and Apple reviews on iPad. The background layer above stays
+            // full-bleed, so gradient paywalls still reach the edges.
+            .frame(maxWidth: OV2.readableWidth)
         }
         .onAppear {
             presentedAt = Date()
@@ -756,7 +771,7 @@ struct SophiaQuizPaywall: View {
             }
         }
         .task {
-            if store.offerings == nil { await store.fetchOfferings() }
+            if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
         .onDisappear { trackDismissIfNeeded() }
     }
@@ -900,7 +915,7 @@ struct SophiaQuizPaywall: View {
     private func purchase() {
         guard !purchasing else { return }
         guard let package = store.annualPackage(forOfferingIdentifier: context.rawValue) else {
-            Task { await store.fetchOfferings() }
+            Task { await store.loadOfferingsWithRetry() }
             return
         }
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
@@ -1231,6 +1246,12 @@ private struct PaywallReviewsCarousel: View {
 
     @State private var index = 0
     @State private var task: Task<Void, Never>?
+    /// Height of the tallest review, measured. A paged `TabView` cannot size itself to its
+    /// content, so the 150pt it was pinned at cut long quotes — and every quote at a large
+    /// Dynamic Type size — off mid-sentence.
+    @State private var cardHeight: CGFloat = Self.minCardHeight
+
+    private static let minCardHeight: CGFloat = 150
 
     var body: some View {
         VStack(spacing: 10) {
@@ -1243,7 +1264,23 @@ private struct PaywallReviewsCarousel: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             .animation(.spring(response: 0.5, dampingFraction: 0.9), value: index)
-            .frame(height: 150)
+            .frame(height: cardHeight)
+            .background {
+                // Measured off screen: the tallest card decides the carousel's height.
+                VStack(spacing: 0) {
+                    ForEach(Array(reviews.enumerated()), id: \.offset) { _, review in
+                        reviewCard(review)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .onGeometryChange(for: CGFloat.self) { proxy in
+                                proxy.size.height
+                            } action: { height in
+                                if height > cardHeight { cardHeight = height }
+                            }
+                    }
+                }
+                .hidden()
+                .accessibilityHidden(true)
+            }
 
             HStack(spacing: 6) {
                 ForEach(0..<reviews.count, id: \.self) { i in
@@ -1277,6 +1314,7 @@ private struct PaywallReviewsCarousel: View {
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(minHeight: Self.minCardHeight, alignment: .topLeading)
         .background(DS.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         .overlay {
             RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
@@ -1373,6 +1411,11 @@ struct SophiaCourseUnlockPaywall: View {
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 20)
             }
+            // One column of copy, drawn for an iPhone. Stretched across an iPad in
+            // landscape it stops looking like the design and pushes the CTA below the
+            // fold — and Apple reviews on iPad. The background layer above stays
+            // full-bleed, so gradient paywalls still reach the edges.
+            .frame(maxWidth: OV2.readableWidth)
         }
         .onAppear {
             presentedAt = Date()
@@ -1389,7 +1432,7 @@ struct SophiaCourseUnlockPaywall: View {
             }
         }
         .task {
-            if store.offerings == nil { await store.fetchOfferings() }
+            if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
         .onDisappear { trackDismissIfNeeded() }
     }
@@ -1581,7 +1624,7 @@ struct SophiaCourseUnlockPaywall: View {
     private func purchase() {
         guard !purchasing else { return }
         guard let package = store.annualPackage(forOfferingIdentifier: context.rawValue) else {
-            Task { await store.fetchOfferings() }
+            Task { await store.loadOfferingsWithRetry() }
             return
         }
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
@@ -1678,6 +1721,11 @@ struct SophiaDiscountPaywall: View {
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 20)
             }
+            // One column of copy, drawn for an iPhone. Stretched across an iPad in
+            // landscape it stops looking like the design and pushes the CTA below the
+            // fold — and Apple reviews on iPad. The background layer above stays
+            // full-bleed, so gradient paywalls still reach the edges.
+            .frame(maxWidth: OV2.readableWidth)
         }
         .onAppear {
             presentedAt = Date()
@@ -1692,7 +1740,7 @@ struct SophiaDiscountPaywall: View {
             }
         }
         .task {
-            if store.offerings == nil { await store.fetchOfferings() }
+            if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
         .onDisappear { trackDismissIfNeeded() }
     }
@@ -1847,7 +1895,7 @@ struct SophiaDiscountPaywall: View {
         // configurée (paquet nil), on retombe sur le plan annuel standard pour que le bouton
         // « J'en profite maintenant » déclenche toujours l'achat au lieu de ne rien faire.
         guard let package = store.promoPackage ?? store.annualPackage else {
-            Task { await store.fetchOfferings() }
+            Task { await store.loadOfferingsWithRetry() }
             return
         }
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()

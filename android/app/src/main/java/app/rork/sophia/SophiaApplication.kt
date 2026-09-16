@@ -63,7 +63,8 @@ class SophiaApplication : Application(), ImageLoaderFactory {
         authService.start()
 
         analytics.trackAppOpened()
-        analytics.trackSessionIfNeeded(isPremium = false)
+        // The session itself is counted from MainActivity's ON_START, which is both the warm
+        // return path and the first point where the subscription state is actually known.
 
         // Warm the slim course index (~70KB) + collections off the main thread.
         val lang = languageManager.current.value

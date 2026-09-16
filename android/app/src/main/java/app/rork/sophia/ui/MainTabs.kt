@@ -1,5 +1,7 @@
 package app.rork.sophia.ui
 
+import android.widget.Toast
+import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -9,6 +11,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
@@ -37,6 +40,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
@@ -48,6 +52,9 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.PostCompletionRewardStep
 import app.rork.sophia.ui.collections.CollectionsScreen
+import app.rork.sophia.ui.components.ConfirmDialog
+import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.ConfirmDialog
 import app.rork.sophia.ui.components.PostCompletionRewardFlow
 import app.rork.sophia.ui.components.TrialEndingMiniBanner
 import app.rork.sophia.ui.course.CourseScreen
@@ -55,6 +62,7 @@ import app.rork.sophia.ui.home.DiscountGiftOverlay
 import app.rork.sophia.ui.home.DiscountSideTab
 import app.rork.sophia.ui.home.HomeTikTokScreen
 import app.rork.sophia.ui.library.LibraryScreen
+import app.rork.sophia.ui.library.MyCoursesScreen
 import app.rork.sophia.ui.paywall.PaywallContext
 import app.rork.sophia.ui.paywall.PaywallScreen
 import app.rork.sophia.ui.legal.LegalDocKind
@@ -75,7 +83,13 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-private enum class OverlayScreen { Settings, Friends, Feedback, Ambassador, Terms, Privacy }
+private enum class OverlayScreen { Settings, Friends, Feedback, Ambassador, Terms, Privacy, MyCourses }
+
+/**
+ * Widest the tab content is allowed to get. Sophia's screens are a single column; past this
+ * they stop reading like the design and start reading like a stretched phone app.
+ */
+private val TABLET_CONTENT_WIDTH = 640.dp
 
 @Composable
 fun MainTabs(
@@ -106,6 +120,7 @@ fun MainTabs(
     var paywallPresentedAtMs by remember { mutableStateOf<Long?>(null) }
     var showTrialEndingBanner by remember { mutableStateOf(false) }
     var readerReady by remember { mutableStateOf(false) }
+    var showCreateAccountPrompt by remember { mutableStateOf(false) }
 
     LaunchedEffect(language, isPremium, progress.subjectXP) {
         if (constrained) delay(800)
@@ -130,17 +145,6 @@ fun MainTabs(
         showTrialEndingBanner = false
     }
 
-    LaunchedEffect(deepLinkCourseId, language) {
-        val id = deepLinkCourseId ?: return@LaunchedEffect
-        val stub = ContentCatalog.cachedStub(language, id)
-            ?: ContentCatalog.courseStubAsync(context.applicationContext, language, id)
-        stub?.let {
-            readerReady = false
-            selectedCourse = it
-            app.analytics.trackDeepLinkOpened(id)
-        }
-        onDeepLinkConsumed()
-    }
 
     fun openFromSettings(screen: OverlayScreen) {
         overlayParent = OverlayScreen.Settings
@@ -152,7 +156,7 @@ fun MainTabs(
         overlayParent = null
     }
 
-    fun openCourse(course: Course) {
+    fun openCourse(course: Course, source: String = "home_tiktok") {
         if (!isPremium) {
             app.progressManager.incrementFreeCoursesOpened()
             app.progressManager.claimDailyFreeCourseIfNeeded(course.id)
@@ -160,7 +164,7 @@ fun MainTabs(
         app.analytics.trackCourseOpened(
             courseId = course.id,
             subject = course.subjectEnum.storageKey,
-            source = "home_tiktok",
+            source = source,
             isFreeUser = !isPremium,
         )
         pendingCompletionCourseId = null
@@ -180,6 +184,20 @@ fun MainTabs(
                 openCourse(it)
             }
         }
+    }
+
+    LaunchedEffect(deepLinkCourseId, language) {
+        val id = deepLinkCourseId ?: return@LaunchedEffect
+        val stub = ContentCatalog.cachedStub(language, id)
+            ?: ContentCatalog.courseStubAsync(context.applicationContext, language, id)
+        stub?.let {
+            // Through the same door as a tap on home: setting `selectedCourse` directly
+            // skipped claiming the daily free course, so a free user who arrived from a link
+            // read a course and still had their free one taken by the next one they opened.
+            openCourse(it, source = "deep_link")
+            app.analytics.trackDeepLinkOpened(id)
+        }
+        onDeepLinkConsumed()
     }
 
     fun buildRewardSteps(courseId: String): List<PostCompletionRewardStep> {
@@ -220,289 +238,433 @@ fun MainTabs(
         }
     }
 
-    when {
-        rewardSteps != null -> {
-            PostCompletionRewardFlow(
-                steps = rewardSteps!!,
-                language = language,
-                onFinished = {
-                    app.progressManager.markStreakShownToday()
-                    app.progressManager.clearPendingRankUp()
-                    rewardSteps = null
-                },
-            )
-            return
-        }
-        paywall != null -> {
-            val ctx = paywall!!
-            LaunchedEffect(ctx) {
-                paywallPresentedAtMs = System.currentTimeMillis()
-                app.analytics.trackPaywallViewed(ctx.analyticsContext)
-            }
-            PaywallScreen(
-                context = ctx,
-                language = language,
-                storeViewModel = storeViewModel,
-                onDismiss = {
-                    val duration = paywallPresentedAtMs?.let {
-                        ((System.currentTimeMillis() - it) / 1000).toInt().coerceAtLeast(0)
-                    } ?: 0
-                    app.analytics.trackPaywallDismissed(ctx.analyticsContext, duration)
-                    paywallPresentedAtMs = null
-                    paywall = null
-                },
-                onPurchased = {
-                    // Meta filled via onPurchaseMeta below; keep dismiss path clean.
-                    if (ctx == PaywallContext.OFFRE_DISCOUNT) {
-                        app.discountManager.markExpired()
-                    }
-                    paywallPresentedAtMs = null
-                    paywall = null
-                },
-                onPurchaseMeta = { offeringId, packageId ->
-                    app.analytics.trackPurchaseCompleted(
-                        context = ctx.analyticsContext,
-                        offeringId = offeringId ?: ctx.offeringId,
-                        packageId = packageId,
-                    )
-                },
-            )
-            return
-        }
-        overlay == OverlayScreen.Settings -> {
-            SettingsScreen(
-                language = language,
-                progress = progress,
-                isPremium = isPremium,
-                onBack = { closeOverlay() },
-                onLanguageChange = { app.languageManager.setLanguage(it) },
-                onShowPaywall = {
-                    overlay = null
-                    paywall = PaywallContext.DEBLOQUER_COURS
-                },
-                onOpenFeedback = { openFromSettings(OverlayScreen.Feedback) },
-                onOpenAmbassador = { openFromSettings(OverlayScreen.Ambassador) },
-                onOpenTerms = { openFromSettings(OverlayScreen.Terms) },
-                onOpenPrivacy = { openFromSettings(OverlayScreen.Privacy) },
-                onRestorePurchases = { storeViewModel.restore() },
-            )
-            return
-        }
-        overlay == OverlayScreen.Friends -> {
-            FriendsScreen(
-                language = language,
-                initialFriendUserId = pendingFriendUserId,
-                onBack = {
-                    pendingFriendUserId = null
-                    closeOverlay()
-                },
-            )
-            return
-        }
-        overlay == OverlayScreen.Feedback -> {
-            FeedbackScreen(
-                language = language,
-                isPremium = isPremium,
-                onBack = { closeOverlay() },
-            )
-            return
-        }
-        overlay == OverlayScreen.Ambassador -> {
-            AmbassadorScreen(
-                language = language,
-                onBack = { closeOverlay() },
-            )
-            return
-        }
-        overlay == OverlayScreen.Terms -> {
-            LegalDocumentScreen(
-                kind = LegalDocKind.Terms,
-                language = language,
-                onBack = { closeOverlay() },
-            )
-            return
-        }
-        overlay == OverlayScreen.Privacy -> {
-            LegalDocumentScreen(
-                kind = LegalDocKind.Privacy,
-                language = language,
-                onBack = { closeOverlay() },
-            )
-            return
-        }
-        selectedCourse != null -> {
-            if (!readerReady) {
-                LaunchedEffect(selectedCourse!!.id) {
-                    // Let the home tree finish disposing and acknowledge the tap
-                    // before loading CourseScreen classes (dex2oat on first open).
-                    delay(if (constrained) 80L else 24L)
-                    readerReady = true
-                }
-                Box(
-                    modifier = Modifier.fillMaxSize().background(DS.canvas),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    CircularProgressIndicator(color = DS.accent)
-                }
-                return
-            }
-            CourseScreen(
-                course = selectedCourse!!,
-                language = language,
-                isPremium = isPremium,
-                isDailyFreeCourse = app.progressManager.isDailyFreeCourse(selectedCourse!!.id),
-                progressManager = app.progressManager,
-                onCourseCompleted = {
-                    pendingCompletionCourseId = selectedCourse?.id
-                },
-                onDismiss = {
-                    val id = selectedCourse!!.id
-                    val completedId = pendingCompletionCourseId
-                    pendingCompletionCourseId = null
-                    selectedCourse = null
-                    autoSwipeCourseId = id
-                    presentRewardsIfNeeded(completedId)
-                },
-                onRequestPaywall = { key ->
-                    if (key == "debloquer_cours" || key == "quizz") {
-                        app.analytics.trackFreemiumGateHit(key, courseId = selectedCourse?.id)
-                    }
-                    paywall = when (key) {
-                        "quizz" -> PaywallContext.QUIZZ
-                        "offre_discount" -> PaywallContext.OFFRE_DISCOUNT
-                        "fin_onboarding" -> PaywallContext.FIN_ONBOARDING
-                        else -> PaywallContext.DEBLOQUER_COURS
-                    }
-                },
-            )
-            return
+    fun dismissCourse() {
+        val id = selectedCourse!!.id
+        val completedId = pendingCompletionCourseId
+        pendingCompletionCourseId = null
+        selectedCourse = null
+        autoSwipeCourseId = id
+        presentRewardsIfNeeded(completedId)
+        // Someone who skipped sign-in and has read three courses has something
+        // worth losing now. Ask once, on the way out of a course, never during.
+        if (completedId != null &&
+            signedInUserId == null &&
+            app.onboardingStore.skippedAccount &&
+            !app.onboardingStore.accountPrompted &&
+            app.progressManager.progress.value.courseProgress
+                .count { it.value.isCompleted } >= 3
+        ) {
+            app.onboardingStore.markAccountPrompted()
+            showCreateAccountPrompt = true
         }
     }
 
-    // Autorenew is the Material twin of the iOS `arrow.triangle.2.circlepath`; RestartAlt
-    // read as "reset", and it is also the icon of the reset rows in settings.
-    val tabs = listOf(
-        Triple("tab.home", Icons.Filled.Home, 0),
-        Triple("tab.library", Icons.Filled.AutoStories, 1),
-        Triple("tab.collections", Icons.Filled.ViewModule, 2),
-        Triple("tab.training", Icons.Filled.Autorenew, 3),
-        Triple("tab.profile", Icons.Filled.Person, 4),
-    )
+    // Layers, not pages. Each of these used to `return` before the layer beneath it was
+    // composed, which tore that layer down: opening a paywall from a course disposed the
+    // reader, so buying from it landed the user back on page 1 instead of the quiz they were
+    // reaching for. Drawn on top, the reader keeps its page and its scroll position.
+    //
+    // Back unwinds the same stack, innermost first. Without these handlers the system back
+    // button left the app outright from a course, a quiz, a paywall or settings.
+    BackHandler(enabled = rewardSteps != null) {
+        // A celebration is a reward, not a screen: dismissing it settles the same state the
+        // CTA would, so the streak and rank-up are not replayed on the next course.
+        app.progressManager.markStreakShownToday()
+        app.progressManager.clearPendingRankUp()
+        rewardSteps = null
+    }
+    BackHandler(enabled = rewardSteps == null && paywall != null) {
+        val ctx = paywall
+        val duration = paywallPresentedAtMs?.let {
+            ((System.currentTimeMillis() - it) / 1000).toInt().coerceAtLeast(0)
+        } ?: 0
+        if (ctx != null) app.analytics.trackPaywallDismissed(ctx.analyticsContext, duration)
+        paywallPresentedAtMs = null
+        paywall = null
+    }
+    BackHandler(enabled = rewardSteps == null && paywall == null && overlay != null) {
+        pendingFriendUserId = null
+        closeOverlay()
+    }
+    BackHandler(
+        enabled = rewardSteps == null && paywall == null && overlay == null &&
+            selectedCourse != null,
+    ) {
+        dismissCourse()
+    }
+    // On a tab other than home, back goes home before it leaves the app — the behaviour
+    // Android users expect from a bottom bar.
+    BackHandler(
+        enabled = rewardSteps == null && paywall == null && overlay == null &&
+            selectedCourse == null && selectedTab != 0,
+    ) {
+        selectedTab = 0
+    }
 
     Box(modifier = Modifier.fillMaxSize()) {
-        Scaffold(
-            containerColor = DS.canvas,
-            bottomBar = {
-                NavigationBar(containerColor = DS.canvas, contentColor = DS.accent) {
-                    tabs.forEach { (key, icon, index) ->
-                        NavigationBarItem(
-                            selected = selectedTab == index,
-                            onClick = { selectedTab = index },
-                            icon = { Icon(icon, contentDescription = null) },
-                            label = {
-                                // Five tabs and labels as long as "Entraînement": without
-                                // this the label wrapped to two lines and pushed the icon
-                                // out of the item.
-                                Text(
-                                    text = StringStore.text(context, key, language),
-                                    fontFamily = PlusJakartaSans,
-                                    fontSize = 11.sp,
-                                    fontWeight = if (selectedTab == index) FontWeight.SemiBold else FontWeight.Normal,
-                                    maxLines = 1,
-                                    softWrap = false,
-                                    overflow = TextOverflow.Ellipsis,
-                                )
-                            },
-                            colors = NavigationBarItemDefaults.colors(
-                                selectedIconColor = DS.accent,
-                                selectedTextColor = DS.accent,
-                                unselectedIconColor = DS.inkTertiary,
-                                unselectedTextColor = DS.inkTertiary,
-                                indicatorColor = DS.accentTint,
-                            ),
-                        )
+        if (selectedCourse != null) {
+                if (!readerReady) {
+                    LaunchedEffect(selectedCourse!!.id) {
+                        // Let the home tree finish disposing and acknowledge the tap
+                        // before loading CourseScreen classes (dex2oat on first open).
+                        delay(if (constrained) 80L else 24L)
+                        readerReady = true
                     }
-                }
-            },
-        ) { padding ->
-            when (selectedTab) {
-                0 -> HomeTikTokScreen(
-                    modifier = Modifier.padding(padding),
-                    language = language,
-                    favoriteIds = progress.favoriteCourseIds.toSet(),
-                    autoSwipeCourseId = autoSwipeCourseId,
-                    onAutoSwipeConsumed = { autoSwipeCourseId = null },
-                    onToggleFavorite = { app.progressManager.toggleFavorite(it) },
-                    onStartCourse = { openCourseById(it) },
-                    onUserSwipe = {
-                        if (!isPremium) app.discountManager.registerSwipe()
-                    },
-                    streak = progress.streak,
-                )
-                1 -> LibraryScreen(
-                    modifier = Modifier.padding(padding),
-                    language = language,
-                    progress = progress,
-                    onOpenCourse = { openCourseById(it) },
-                )
-                2 -> CollectionsScreen(
-                    modifier = Modifier.padding(padding),
-                    language = language,
-                    progress = progress,
-                    onOpenCourse = { openCourseById(it) },
-                )
-                3 -> TrainingScreen(
-                    modifier = Modifier.padding(padding),
+                    Box(
+                        modifier = Modifier.fillMaxSize().background(DS.canvas),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        CircularProgressIndicator(color = DS.accent)
+                    }
+                } else {
+                    CourseScreen(
+                    course = selectedCourse!!,
                     language = language,
                     isPremium = isPremium,
-                    progress = progress,
+                    isDailyFreeCourse = app.progressManager.isDailyFreeCourse(selectedCourse!!.id),
                     progressManager = app.progressManager,
-                    storeViewModel = storeViewModel,
-                    onPremiumUnlocked = { storeViewModel.refresh() },
-                )
-                4 -> ProfileScreen(
-                    modifier = Modifier.padding(padding),
-                    language = language,
-                    progress = progress,
-                    isPremium = isPremium,
-                    onOpenCourse = { openCourseById(it) },
-                    onOpenSettings = { overlay = OverlayScreen.Settings },
-                    onShowPaywall = { paywall = PaywallContext.DEBLOQUER_COURS },
-                    onOpenFriends = { friendUserId ->
-                        pendingFriendUserId = friendUserId
-                        overlay = OverlayScreen.Friends
+                    onCourseCompleted = {
+                        pendingCompletionCourseId = selectedCourse?.id
+                    },
+                    onDismiss = { dismissCourse() },
+                    onRequestPaywall = { key ->
+                        if (key == "debloquer_cours" || key == "quizz") {
+                            app.analytics.trackFreemiumGateHit(key, courseId = selectedCourse?.id)
+                        }
+                        paywall = when (key) {
+                            "quizz" -> PaywallContext.QUIZZ
+                            "offre_discount" -> PaywallContext.OFFRE_DISCOUNT
+                            "fin_onboarding" -> PaywallContext.FIN_ONBOARDING
+                            else -> PaywallContext.DEBLOQUER_COURS
+                        }
                     },
                 )
             }
-        }
+        } else {
+    // Autorenew is the Material twin of the iOS `arrow.triangle.2.circlepath`; RestartAlt
+        // read as "reset", and it is also the icon of the reset rows in settings.
+        val tabs = listOf(
+            Triple("tab.home", Icons.Filled.Home, 0),
+            Triple("tab.library", Icons.Filled.AutoStories, 1),
+            Triple("tab.collections", Icons.Filled.ViewModule, 2),
+            Triple("tab.training", Icons.Filled.Autorenew, 3),
+            Triple("tab.profile", Icons.Filled.Person, 4),
+        )
 
-        if (!isPremium && selectedCourse == null && paywall == null) {
-            if (discount.isGiftPending) {
-                // The gift is earned by swiping home, so it opens on home, like iOS.
-                if (selectedTab == 0) {
-                    DiscountGiftOverlay(
+            Scaffold(
+                containerColor = DS.canvas,
+                bottomBar = {
+                    NavigationBar(containerColor = DS.canvas, contentColor = DS.accent) {
+                        tabs.forEach { (key, icon, index) ->
+                            NavigationBarItem(
+                                selected = selectedTab == index,
+                                onClick = { selectedTab = index },
+                                icon = { Icon(icon, contentDescription = null) },
+                                label = {
+                                    // Five tabs and labels as long as "Entraînement": without
+                                    // this the label wrapped to two lines and pushed the icon
+                                    // out of the item.
+                                    Text(
+                                        text = StringStore.text(context, key, language),
+                                        fontFamily = PlusJakartaSans,
+                                        fontSize = 11.sp,
+                                        fontWeight = if (selectedTab == index) FontWeight.SemiBold else FontWeight.Normal,
+                                        maxLines = 1,
+                                        softWrap = false,
+                                        overflow = TextOverflow.Ellipsis,
+                                    )
+                                },
+                                colors = NavigationBarItemDefaults.colors(
+                                    selectedIconColor = DS.accent,
+                                    selectedTextColor = DS.accent,
+                                    unselectedIconColor = DS.inkTertiary,
+                                    unselectedTextColor = DS.inkTertiary,
+                                    indicatorColor = DS.accentTint,
+                                ),
+                            )
+                        }
+                    }
+                },
+            ) { padding ->
+                // On a tablet or a Chromebook every tab stretched edge to edge, so a line of
+                // body text ran the full width of a landscape screen. Capping the content
+                // and centring it keeps the layouts at the width they were designed for; on
+                // a phone the cap is wider than the screen and changes nothing.
+                Box(
+                    modifier = Modifier.fillMaxSize().padding(padding),
+                    contentAlignment = Alignment.TopCenter,
+                ) {
+                val tabModifier = Modifier.widthIn(max = TABLET_CONTENT_WIDTH)
+                when (selectedTab) {
+                    0 -> HomeTikTokScreen(
+                        modifier = tabModifier,
                         language = language,
-                        onOpened = {
-                            app.discountManager.consumeGift()
-                            app.discountManager.triggerIfNeeded()
+                        favoriteIds = progress.favoriteCourseIds.toSet(),
+                        autoSwipeCourseId = autoSwipeCourseId,
+                        onAutoSwipeConsumed = { autoSwipeCourseId = null },
+                        onToggleFavorite = { app.progressManager.toggleFavorite(it) },
+                        onStartCourse = { openCourseById(it) },
+                        onUserSwipe = {
+                            if (!isPremium) app.discountManager.registerSwipe()
+                        },
+                        onOpenMyCourses = { overlay = OverlayScreen.MyCourses },
+                        streak = progress.streak,
+                        completedCourses = progress.courseProgress.count { it.value.isCompleted },
+                    )
+                    1 -> LibraryScreen(
+                        modifier = tabModifier,
+                        language = language,
+                        progress = progress,
+                        onOpenCourse = { openCourseById(it) },
+                    )
+                    2 -> CollectionsScreen(
+                        modifier = tabModifier,
+                        language = language,
+                        progress = progress,
+                        onOpenCourse = { openCourseById(it) },
+                    )
+                    3 -> TrainingScreen(
+                        modifier = tabModifier,
+                        language = language,
+                        isPremium = isPremium,
+                        progress = progress,
+                        progressManager = app.progressManager,
+                        storeViewModel = storeViewModel,
+                        onPremiumUnlocked = { storeViewModel.refresh() },
+                    )
+                    4 -> ProfileScreen(
+                        modifier = tabModifier,
+                        language = language,
+                        progress = progress,
+                        isPremium = isPremium,
+                        onOpenCourse = { openCourseById(it) },
+                        onOpenSettings = { overlay = OverlayScreen.Settings },
+                        onShowPaywall = { paywall = PaywallContext.DEBLOQUER_COURS },
+                        onOpenFriends = { friendUserId ->
+                            pendingFriendUserId = friendUserId
+                            overlay = OverlayScreen.Friends
+                        },
+                    )
+                }
+                }
+            }
+
+            if (!isPremium && selectedCourse == null && paywall == null) {
+                if (discount.isGiftPending) {
+                    // The gift is earned by swiping home, so it opens on home, like iOS.
+                    if (selectedTab == 0) {
+                        DiscountGiftOverlay(
+                            language = language,
+                            onOpened = {
+                                app.discountManager.consumeGift()
+                                app.discountManager.triggerIfNeeded()
+                                app.discountManager.markShownToday()
+                                app.analytics.trackDiscountOfferViewed("gift")
+                                paywall = PaywallContext.OFFRE_DISCOUNT
+                            },
+                        )
+                    }
+                } else if (discount.isActive) {
+                    // The countdown follows the user across tabs: it is running either way.
+                    DiscountSideTab(
+                        state = discount,
+                        language = language,
+                        onClick = {
+                            app.analytics.trackDiscountOfferViewed("side_tab")
                             app.discountManager.markShownToday()
-                            app.analytics.trackDiscountOfferViewed("gift")
                             paywall = PaywallContext.OFFRE_DISCOUNT
                         },
                     )
                 }
-            } else if (discount.isActive) {
-                // The countdown follows the user across tabs: it is running either way.
-                DiscountSideTab(
-                    state = discount,
+            }
+        }
+
+        overlay?.let { current ->
+            SophiaOverlayLayer {
+                when (current) {
+                    OverlayScreen.Settings ->
+                        SettingsScreen(
+                            language = language,
+                            progress = progress,
+                            isPremium = isPremium,
+                            onBack = { closeOverlay() },
+                            onLanguageChange = { app.languageManager.setLanguage(it) },
+                            onShowPaywall = {
+                                overlay = null
+                                paywall = PaywallContext.DEBLOQUER_COURS
+                            },
+                            onOpenFeedback = { openFromSettings(OverlayScreen.Feedback) },
+                            onOpenAmbassador = { openFromSettings(OverlayScreen.Ambassador) },
+                            onOpenTerms = { openFromSettings(OverlayScreen.Terms) },
+                            onOpenPrivacy = { openFromSettings(OverlayScreen.Privacy) },
+                            onRestorePurchases = {
+                                storeViewModel.restore { result ->
+                                    val key = when (result) {
+                                        StoreViewModel.RestoreResult.RESTORED -> "paywall.restore.success"
+                                        StoreViewModel.RestoreResult.NOTHING_FOUND -> "paywall.restore.none"
+                                        StoreViewModel.RestoreResult.FAILED -> "paywall.restore.error"
+                                    }
+                                    Toast.makeText(
+                                        context,
+                                        StringStore.text(context, key, language),
+                                        Toast.LENGTH_LONG,
+                                    ).show()
+                                }
+                            },
+                        )
+                    OverlayScreen.Friends ->
+                        FriendsScreen(
+                            language = language,
+                            initialFriendUserId = pendingFriendUserId,
+                            onBack = {
+                                pendingFriendUserId = null
+                                closeOverlay()
+                            },
+                        )
+                    OverlayScreen.Feedback ->
+                        FeedbackScreen(
+                            language = language,
+                            isPremium = isPremium,
+                            onBack = { closeOverlay() },
+                        )
+                    OverlayScreen.Ambassador ->
+                        AmbassadorScreen(
+                            language = language,
+                            onBack = { closeOverlay() },
+                        )
+                    OverlayScreen.Terms ->
+                        LegalDocumentScreen(
+                            kind = LegalDocKind.Terms,
+                            language = language,
+                            onBack = { closeOverlay() },
+                        )
+                    OverlayScreen.MyCourses ->
+                        MyCoursesScreen(
+                            language = language,
+                            progress = progress,
+                            onOpenCourse = { id ->
+                                overlay = null
+                                openCourseById(id)
+                            },
+                            onDiscover = {
+                                overlay = null
+                                selectedTab = 0
+                            },
+                            onBack = { closeOverlay() },
+                        )
+                    OverlayScreen.Privacy ->
+                        LegalDocumentScreen(
+                            kind = LegalDocKind.Privacy,
+                            language = language,
+                            onBack = { closeOverlay() },
+                        )
+                }
+            }
+        }
+
+        if (paywall != null) {
+            SophiaOverlayLayer {
+                val ctx = paywall!!
+                LaunchedEffect(ctx) {
+                    paywallPresentedAtMs = System.currentTimeMillis()
+                    app.analytics.trackPaywallViewed(ctx.analyticsContext)
+                }
+                PaywallScreen(
+                    context = ctx,
                     language = language,
-                    onClick = {
-                        app.analytics.trackDiscountOfferViewed("side_tab")
-                        app.discountManager.markShownToday()
-                        paywall = PaywallContext.OFFRE_DISCOUNT
+                    storeViewModel = storeViewModel,
+                    onDismiss = {
+                        val duration = paywallPresentedAtMs?.let {
+                            ((System.currentTimeMillis() - it) / 1000).toInt().coerceAtLeast(0)
+                        } ?: 0
+                        app.analytics.trackPaywallDismissed(ctx.analyticsContext, duration)
+                        paywallPresentedAtMs = null
+                        paywall = null
+                    },
+                    onPurchased = {
+                        // Meta filled via onPurchaseMeta below; keep dismiss path clean.
+                        if (ctx == PaywallContext.OFFRE_DISCOUNT) {
+                            app.discountManager.markExpired()
+                        }
+                        paywallPresentedAtMs = null
+                        paywall = null
+                    },
+                    onPurchaseMeta = { offeringId, packageId ->
+                        app.analytics.trackPurchaseCompleted(
+                            context = ctx.analyticsContext,
+                            offeringId = offeringId ?: ctx.offeringId,
+                            packageId = packageId,
+                        )
+                    },
+                    // A restore is not a purchase: it closes the paywall without reporting a sale.
+                    onRestored = {
+                        paywallPresentedAtMs = null
+                        paywall = null
                     },
                 )
             }
+        }
+
+        rewardSteps?.let { steps ->
+            SophiaOverlayLayer {
+                PostCompletionRewardFlow(
+                    steps = steps,
+                    language = language,
+                    onFinished = {
+                        app.progressManager.markStreakShownToday()
+                        app.progressManager.clearPendingRankUp()
+                        rewardSteps = null
+                    },
+                )
+            }
+        }
+
+        if (showCreateAccountPrompt) {
+            ConfirmDialog(
+                title = StringStore.text(context, "account.createLater.title", language),
+                message = StringStore.text(context, "account.createLater.body", language),
+                confirm = StringStore.text(context, "account.create.title", language),
+                cancel = StringStore.text(context, "account.createLater.later", language),
+                onConfirm = {
+                    showCreateAccountPrompt = false
+                    scope.launch {
+                        runCatching { app.authService.signInWithGoogle(context) }
+                        if (app.authService.isSignedIn) {
+                            app.onboardingStore.markAccountOffered()
+                            runCatching {
+                                app.progressSyncService.pullOnLogin(
+                                    app.progressManager.progress.value,
+                                )
+                            }
+                        }
+                    }
+                },
+                onDismiss = { showCreateAccountPrompt = false },
+            )
+        }
+
+        if (showCreateAccountPrompt) {
+            ConfirmDialog(
+                title = StringStore.text(context, "account.createLater.title", language),
+                message = StringStore.text(context, "account.createLater.body", language),
+                confirm = StringStore.text(context, "account.create.title", language),
+                cancel = StringStore.text(context, "account.createLater.later", language),
+                onConfirm = {
+                    showCreateAccountPrompt = false
+                    scope.launch {
+                        runCatching { app.authService.signInWithGoogle(context) }
+                        if (app.authService.isSignedIn) {
+                            app.onboardingStore.markAccountOffered()
+                            runCatching {
+                                app.progressSyncService.pullOnLogin(
+                                    app.progressManager.progress.value,
+                                )
+                            }
+                        }
+                    }
+                },
+                onDismiss = { showCreateAccountPrompt = false },
+            )
         }
 
         AnimatedVisibility(
@@ -513,5 +675,22 @@ fun MainTabs(
         ) {
             TrialEndingMiniBanner(language = language)
         }
+    }
+}
+
+/**
+ * An opaque, touch-absorbing layer drawn over whatever is underneath. The empty `softPress`
+ * is what stops taps reaching the screen below, which would otherwise stay interactive
+ * through the overlay.
+ */
+@Composable
+private fun SophiaOverlayLayer(content: @Composable () -> Unit) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(DS.canvas)
+            .softPress(onClick = {}),
+    ) {
+        content()
     }
 }

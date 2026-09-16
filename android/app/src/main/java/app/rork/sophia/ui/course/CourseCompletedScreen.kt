@@ -6,6 +6,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -44,6 +46,7 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.ui.components.CourseImage
+import app.rork.sophia.ui.onboarding.readableWidth
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -76,13 +79,22 @@ fun CourseCompletedScreen(
     LaunchedEffect(course.id) { appeared = true }
 
     Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(DS.canvas)
-            .padding(DS.Space.l),
+        modifier = Modifier.fillMaxSize().background(DS.canvas),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Spacer(Modifier.weight(1f))
+        // Cover, XP ring and freemium note together overflow a short phone at a large font
+        // scale, and the weighted spacers then collapsed to nothing and pushed the buttons
+        // off the bottom — leaving the reader with no way out of the course.
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .readableWidth()
+                .verticalScroll(rememberScrollState())
+                .padding(DS.Space.l),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
         Box(
             modifier = Modifier
                 .size(168.dp)
@@ -114,7 +126,7 @@ fun CourseCompletedScreen(
             Spacer(Modifier.height(10.dp))
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    text = course.subjectEnum.name.lowercase().replaceFirstChar { it.titlecase() },
+                    text = course.subjectEnum.name.lowercase(java.util.Locale.ROOT).replaceFirstChar { it.titlecase(java.util.Locale.ROOT) },
                     style = SophiaTypography.labelMedium,
                     modifier = Modifier.weight(1f),
                 )
@@ -156,9 +168,9 @@ fun CourseCompletedScreen(
                 Text(text = freemiumNote, style = SophiaTypography.labelMedium)
             }
         }
-        Spacer(Modifier.weight(1f))
+        }
         Row(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().readableWidth().padding(DS.Space.l),
             horizontalArrangement = Arrangement.spacedBy(14.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {

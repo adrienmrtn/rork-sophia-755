@@ -148,13 +148,23 @@ class SocialService(private val auth: AuthService) {
         }.onFailure { _errorKey.value = errorKeyFor(it.message) }
     }
 
+    /**
+     * Two taps between "week" and "all" issue two requests, and the network decides which
+     * lands last. Publishing a response whose period is no longer the selected one showed
+     * week totals under the "all" chip, so a late reply for a period nobody is looking at is
+     * dropped rather than displayed.
+     */
     suspend fun refreshLeaderboard() {
         @Serializable
         data class Params(val period: String)
-        val period = _period.value.rpcValue
+        val requested = _period.value
         runCatching {
-            _leaderboard.value = db.rpc("friends_leaderboard", Params(period = period)).decodeList()
-        }.onFailure { _errorKey.value = errorKeyFor(it.message) }
+            val rows: List<FriendLeaderboardEntry> =
+                db.rpc("friends_leaderboard", Params(period = requested.rpcValue)).decodeList()
+            if (_period.value == requested) _leaderboard.value = rows
+        }.onFailure {
+            if (_period.value == requested) _errorKey.value = errorKeyFor(it.message)
+        }
     }
 
     suspend fun friendStats(userId: String): FriendPublicStats? {
@@ -175,8 +185,10 @@ class SocialService(private val auth: AuthService) {
     }
 
     companion object {
+        // Locale.ROOT, not the device locale: on a Turkish phone `lowercase()` turns "I"
+        // into a dotless "ı", which is not a handle anyone can be found by.
         fun sanitizeHandle(raw: String): String =
-            raw.trim().removePrefix("@").lowercase()
+            raw.trim().removePrefix("@").lowercase(java.util.Locale.ROOT)
 
         /** Postgres raises bare codes; turn them into StringStore keys. */
         fun errorKeyFor(message: String?): String {

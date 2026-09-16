@@ -30,6 +30,27 @@ struct OnboardingV2TrialSteps: View {
     }
 
     var body: some View {
+        // Four rows of wrapping copy. At a large Dynamic Type size on a short phone the
+        // weighted spacer collapsed to nothing and the CTA went off the bottom, leaving the
+        // page with no way out. Scrolls instead, with the button pinned.
+        OV2ScrollableContent {
+            pageBody
+        } footer: {
+            OnboardingV2Button(title: languageManager.text("onboardingV2.trial.cta"), action: onNext)
+        }
+        .ov2Background()
+        .onAppear {
+            for i in 0..<steps.count {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2 + Double(i) * 0.18) {
+                    withAnimation(.spring(response: 0.5, dampingFraction: 0.82)) { revealed = i + 1 }
+                    OnboardingHaptics.selection()
+                }
+            }
+        }
+    }
+
+    /// Page content, unchanged; the container above is what keeps the CTA on screen.
+    private var pageBody: some View {
         VStack(alignment: .leading, spacing: 0) {
             Spacer().frame(height: 72)
 
@@ -71,17 +92,6 @@ struct OnboardingV2TrialSteps: View {
             .padding(.horizontal, 28)
 
             Spacer()
-
-            OnboardingV2Button(title: languageManager.text("onboardingV2.trial.cta"), action: onNext)
-        }
-        .ov2Background()
-        .onAppear {
-            for i in 0..<steps.count {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2 + Double(i) * 0.18) {
-                    withAnimation(.spring(response: 0.5, dampingFraction: 0.82)) { revealed = i + 1 }
-                    OnboardingHaptics.selection()
-                }
-            }
         }
     }
 

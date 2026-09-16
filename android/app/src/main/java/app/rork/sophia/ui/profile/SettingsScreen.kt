@@ -18,6 +18,7 @@ import androidx.compose.material.icons.automirrored.filled.Login
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.DeleteForever
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.LocalFireDepartment
@@ -30,11 +31,10 @@ import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Today
 import androidx.compose.material.icons.filled.WorkspacePremium
-import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -89,6 +89,9 @@ fun SettingsScreen(
     val scope = rememberCoroutineScope()
     val userId by app.authService.userId.collectAsState()
     var showResetProgress by remember { mutableStateOf(false) }
+    var showDeleteAccount by remember { mutableStateOf(false) }
+    var deletingAccount by remember { mutableStateOf(false) }
+    var deleteError by remember { mutableStateOf<String?>(null) }
     val completedCount = progress.courseProgress.count { it.value.isCompleted }
 
     Column(
@@ -138,6 +141,33 @@ fun SettingsScreen(
                     label = StringStore.text(context, "account.signOut.action", language),
                     destructive = true,
                     onClick = { scope.launch { app.authService.signOut() } },
+                )
+                HorizontalDivider(color = DS.hairline)
+                // Google Play requires an in-app route to delete the account, and the terms
+                // promise it lives here. Confirmation first: this is not undoable.
+                SettingsRow(
+                    icon = Icons.Filled.DeleteForever,
+                    label = StringStore.text(context, "account.delete.action", language),
+                    subtitle = deleteError,
+                    destructive = true,
+                    showChevron = false,
+                    trailing = if (deletingAccount) {
+                        {
+                            CircularProgressIndicator(
+                                color = DS.danger,
+                                strokeWidth = 2.dp,
+                                modifier = Modifier.size(18.dp),
+                            )
+                        }
+                    } else {
+                        null
+                    },
+                    onClick = {
+                        if (!deletingAccount) {
+                            deleteError = null
+                            showDeleteAccount = true
+                        }
+                    },
                 )
             }
         }
@@ -251,23 +281,28 @@ fun SettingsScreen(
                 destructive = true,
                 onClick = { showResetProgress = true },
             )
-            HorizontalDivider(color = DS.hairline)
             // Hands today's free course back, so the freemium gates can be re-tested.
-            SettingsRow(
-                icon = Icons.Filled.Today,
-                label = StringStore.text(context, "settings.debug.resetDaily", language),
-                subtitle = StringStore.text(
-                    context,
-                    if (app.progressManager.hasClaimedDailyFreeCourse) {
-                        "settings.debug.daily.done"
-                    } else {
-                        "settings.debug.daily.pending"
-                    },
-                    language,
-                ),
-                showChevron = false,
-                onClick = { app.progressManager.resetDailyCourseFlag() },
-            )
+            // Debug builds only: in release this row let any free user replay the daily
+            // unlock after every course and read the whole catalogue for nothing.
+            // `BuildConfig.DEBUG` is a compile-time constant, so R8 drops the branch.
+            if (BuildConfig.DEBUG) {
+                HorizontalDivider(color = DS.hairline)
+                SettingsRow(
+                    icon = Icons.Filled.Today,
+                    label = StringStore.text(context, "settings.debug.resetDaily", language),
+                    subtitle = StringStore.text(
+                        context,
+                        if (app.progressManager.hasClaimedDailyFreeCourse) {
+                            "settings.debug.daily.done"
+                        } else {
+                            "settings.debug.daily.pending"
+                        },
+                        language,
+                    ),
+                    showChevron = false,
+                    onClick = { app.progressManager.resetDailyCourseFlag() },
+                )
+            }
         }
 
         SettingsSection(StringStore.text(context, "settings.section.about", language))
@@ -287,6 +322,31 @@ fun SettingsScreen(
             style = SophiaTypography.labelMedium,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth(),
+        )
+    }
+
+    if (showDeleteAccount) {
+        ConfirmDialog(
+            title = StringStore.text(context, "account.delete.title", language),
+            message = StringStore.text(context, "account.delete.message", language),
+            confirm = StringStore.text(context, "account.delete.confirm", language),
+            cancel = StringStore.text(context, "settings.reset.alert.cancel", language),
+            onConfirm = {
+                showDeleteAccount = false
+                deletingAccount = true
+                scope.launch {
+                    val result = runCatching { app.authService.deleteAccount() }
+                    deletingAccount = false
+                    if (result.isSuccess) {
+                        // Nothing left to show under "Account": the row list rebuilds itself
+                        // from `userId`, which the sign-out inside deleteAccount cleared.
+                        deleteError = null
+                    } else {
+                        deleteError = StringStore.text(context, "account.delete.error", language)
+                    }
+                }
+            },
+            onDismiss = { showDeleteAccount = false },
         )
     }
 
@@ -327,6 +387,7 @@ private fun SettingsRow(
     subtitle: String? = null,
     destructive: Boolean = false,
     showChevron: Boolean = true,
+    trailing: (@Composable () -> Unit)? = null,
 ) {
     Row(
         modifier = Modifier
@@ -350,11 +411,16 @@ private fun SettingsRow(
                 color = if (destructive) DS.danger else DS.ink,
             )
             if (subtitle != null) {
-                Text(text = subtitle, style = SophiaTypography.labelMedium)
+                Text(
+                    text = subtitle,
+                    style = SophiaTypography.labelMedium,
+                    color = if (destructive) DS.danger else SophiaTypography.labelMedium.color,
+                )
             }
         }
-        if (showChevron) {
-            Icon(
+        when {
+            trailing != null -> trailing()
+            showChevron -> Icon(
                 Icons.AutoMirrored.Filled.ArrowForwardIos,
                 contentDescription = null,
                 tint = DS.inkTertiary,

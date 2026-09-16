@@ -63,23 +63,34 @@ struct OnboardingV2Personalize: View {
 
     // MARK: - Animation
 
+    /// Cette page n'a pas de bouton : la seule indication qu'il faut taper est `showHint`,
+    /// révélée à la fin de l'animation. Annulée en cours (rotation / redimensionnement de
+    /// fenêtre sur iPad, retour d'arrière-plan), l'ancienne version laissait une phrase à
+    /// moitié en gras, sans indice et sans issue visible — et `guard animTask == nil`
+    /// interdisait tout redémarrage. L'animation reprend maintenant où elle en était, et
+    /// l'indice s'affiche quoi qu'il arrive.
     private func animate() {
-        guard animTask == nil else { return }
+        guard !showHint else { return }
+        animTask?.cancel()
         animTask = Task { @MainActor in
-            let count = words.count
-            guard count > 0 else { showHint = true; return }
-
-            // Gras progressif, mot par mot.
-            try? await Task.sleep(nanoseconds: 500_000_000)
-            for i in 1...count {
-                if Task.isCancelled { return }
-                withAnimation(.easeOut(duration: 0.3)) { boldCount = i }
-                OnboardingHaptics.selection()
-                try? await Task.sleep(nanoseconds: 320_000_000)
-            }
-
-            if Task.isCancelled { return }
+            await playAnimation()
+            // Terminée ou interrompue, l'utilisateur sait toujours qu'il peut avancer.
             withAnimation(.easeIn(duration: 0.5)) { showHint = true }
+        }
+    }
+
+    /// Gras progressif, mot par mot, repris à l'état courant.
+    private func playAnimation() async {
+        let count = words.count
+        guard count > 0, boldCount < count else { return }
+        if boldCount == 0 {
+            try? await Task.sleep(nanoseconds: 500_000_000)
+        }
+        for i in (boldCount + 1)...count {
+            if Task.isCancelled { return }
+            withAnimation(.easeOut(duration: 0.3)) { boldCount = i }
+            OnboardingHaptics.selection()
+            try? await Task.sleep(nanoseconds: 320_000_000)
         }
     }
 

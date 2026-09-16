@@ -5,5 +5,12 @@
         <item name="android:navigationBarColor">#F7F8FA</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowBackground">#F7F8FA</item>
+        <!--
+          Xiaomi, Oppo and OnePlus ship a system-wide "force dark" that inverts any app
+          which has not opted out. Sophia is a light-only design with its own palette, so
+          the inversion produced grey-on-grey body text and washed-out course covers.
+          Declaring the app light-only is what tells those layers to leave it alone.
+        -->
+        <item name="android:forceDarkAllowed">false</item>
     </style>
 </resources>

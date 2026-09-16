@@ -114,7 +114,12 @@ fun RankUpCelebration(
                 color = DS.accentSoft,
             )
             Spacer(Modifier.height(8.dp))
-            Text(rankKey.replaceFirstChar { it.titlecase() }, style = SophiaTypography.displayLarge)
+            // `rankKey` is the storage key ("erudit"), not a label: title-casing it printed
+            // the raw value in every language. The translations live under `globalRank.*`.
+            Text(
+                text = StringStore.text(context, "globalRank.$rankKey", language),
+                style = SophiaTypography.displayLarge,
+            )
             Text(
                 text = StringStore.text(context, "common.levelShort", language, level),
                 style = SophiaTypography.titleMedium,

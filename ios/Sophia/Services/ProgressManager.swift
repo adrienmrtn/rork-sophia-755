@@ -257,27 +257,53 @@ class ProgressManager {
         progress.courseProgress[courseId]?.lastLessonIndex ?? 0
     }
 
+    /// One shared formatter: `ISO8601DateFormatter()` is expensive to build, and these
+    /// dates are written on every page turn.
+    static let isoFormatter = ISO8601DateFormatter()
+
     func bestScore(for courseId: String) -> Int? {
         progress.courseProgress[courseId]?.bestQuizScore
     }
 
-    func updateLessonProgress(courseId: String, lessonIndex: Int) {
+    func updateLessonProgress(courseId: String, lessonIndex: Int, lessonCount: Int = 0) {
         var cp = progress.courseProgress[courseId] ?? CourseProgress(lastLessonIndex: 0, isCompleted: false, bestQuizScore: 0)
         if lessonIndex > cp.lastLessonIndex {
             cp.lastLessonIndex = lessonIndex
+        }
+        // Reaching a page is what makes a course "in progress"; kept from the first time.
+        if cp.startedAt == nil {
+            cp.startedAt = Self.isoFormatter.string(from: Date())
+        }
+        if lessonCount > 0 {
+            cp.lessonCount = lessonCount
         }
         progress.courseProgress[courseId] = cp
         save()
     }
 
-    func completeCourse(courseId: String, quizScore: Int, completedQuiz: Bool = false) {
+    func completeCourse(
+        courseId: String,
+        quizScore: Int,
+        completedQuiz: Bool = false,
+        quizTotalPoints: Int? = nil
+    ) {
         var cp = progress.courseProgress[courseId] ?? CourseProgress(lastLessonIndex: 0, isCompleted: false, bestQuizScore: 0)
         cp.isCompleted = true
+        if cp.startedAt == nil {
+            cp.startedAt = Self.isoFormatter.string(from: Date())
+        }
+        // Kept from the first completion: re-reading a course does not make it new.
+        if cp.completedAt == nil {
+            cp.completedAt = Self.isoFormatter.string(from: Date())
+        }
         if quizScore > cp.bestQuizScore {
             cp.bestQuizScore = quizScore
         }
+        if let quizTotalPoints, quizTotalPoints > 0 {
+            cp.quizTotalPoints = quizTotalPoints
+        }
         if completedQuiz {
-            cp.lastQuizDate = ISO8601DateFormatter().string(from: Date())
+            cp.lastQuizDate = Self.isoFormatter.string(from: Date())
             if !progress.completedQuizCourseIds.contains(courseId) {
                 progress.completedQuizCourseIds.append(courseId)
             }

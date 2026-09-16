@@ -57,6 +57,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.domain.locale
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import kotlinx.coroutines.delay
 
@@ -80,9 +81,17 @@ internal fun PhoneTimeStep(
     var slider by remember { mutableFloatStateOf(minutes.toFloat()) }
     var lastStep by remember { mutableIntStateOf(minutes / 30) }
 
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
+    OnboardingPage(
+        contentArrangement = Arrangement.Top,
+        footer = {
+            OnboardingCta(
+                text = StringStore.text(context, "common.continue", language),
+                onClick = {
+                    onMinutesChange(slider.toInt())
+                    onContinue()
+                },
+            )
+        },
     ) {
         Spacer(Modifier.height(84.dp))
         Text(
@@ -94,7 +103,6 @@ internal fun PhoneTimeStep(
                 .padding(horizontal = 28.dp)
                 .ov2Reveal(100),
         )
-        Spacer(Modifier.weight(1f))
         AnimatedContent(
             targetState = slider.toInt(),
             transitionSpec = {
@@ -142,14 +150,6 @@ internal fun PhoneTimeStep(
                 Text(screenTimeLabel(context, 600, language), style = OV2.caption.copy(color = OV2.inkTertiary))
             }
         }
-        Spacer(Modifier.weight(1f))
-        OnboardingCta(
-            text = StringStore.text(context, "common.continue", language),
-            onClick = {
-                onMinutesChange(slider.toInt())
-                onContinue()
-            },
-        )
     }
 }
 
@@ -492,7 +492,12 @@ internal fun ReviewStep(
     }
     val listAlpha by animateFloatAsState(if (listIn) 1f else 0f, tween(900), label = "reviewIn")
 
-    Column(modifier = Modifier.fillMaxSize()) {
+    OnboardingPage(
+        contentArrangement = Arrangement.Top,
+        footer = {
+            OnboardingCta(StringStore.text(context, "common.continue", language), onContinue)
+        },
+    ) {
         Spacer(Modifier.height(84.dp))
         Text(
             text = StringStore.text(context, "onboardingV2.review.title", language),
@@ -503,7 +508,6 @@ internal fun ReviewStep(
                 .padding(horizontal = 28.dp)
                 .ov2Reveal(50),
         )
-        Spacer(Modifier.weight(1f))
         OnboardingRoulette(
             items = testimonials,
             slotSpacing = 172.dp,
@@ -518,8 +522,6 @@ internal fun ReviewStep(
         ) { testimonial, _ ->
             ReviewCard(quote = testimonial.first, author = testimonial.second)
         }
-        Spacer(Modifier.weight(1f))
-        OnboardingCta(StringStore.text(context, "common.continue", language), onContinue)
     }
 }
 
@@ -589,11 +591,11 @@ internal fun ReminderStep(language: AppLanguage, onContinue: () -> Unit) {
         label = "bellWobble",
     )
 
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
+    OnboardingPage(
+        footer = {
+            OnboardingCta(StringStore.text(context, "onboardingV2.reminder.cta", language), onContinue)
+        },
     ) {
-        Spacer(Modifier.weight(1f))
         ProgressiveWords(
             words = words,
             boldCount = boldCount,
@@ -611,8 +613,6 @@ internal fun ReminderStep(language: AppLanguage, onContinue: () -> Unit) {
                 transformOrigin = androidx.compose.ui.graphics.TransformOrigin(0.5f, 0f)
             },
         )
-        Spacer(Modifier.weight(1f))
-        OnboardingCta(StringStore.text(context, "onboardingV2.reminder.cta", language), onContinue)
     }
 }
 
@@ -622,7 +622,9 @@ internal fun TrialStepsStep(language: AppLanguage, onContinue: () -> Unit) {
     val haptics = rememberOnboardingHaptics()
     val endDate = remember(language) {
         java.time.LocalDate.now().plusDays(3).format(
-            java.time.format.DateTimeFormatter.ofPattern("d MMMM", java.util.Locale(language.code)),
+            // `Locale("sr")` resolves to Cyrillic, which put a Cyrillic month next to the
+            // Latin text of Sophia's own Serbian table. `language.locale` pins the script.
+            java.time.format.DateTimeFormatter.ofPattern("d MMMM", language.locale),
         )
     }
     val steps = remember(language, endDate) {
@@ -644,7 +646,12 @@ internal fun TrialStepsStep(language: AppLanguage, onContinue: () -> Unit) {
         }
     }
 
-    Column(modifier = Modifier.fillMaxSize()) {
+    OnboardingPage(
+        contentArrangement = Arrangement.Top,
+        footer = {
+            OnboardingCta(StringStore.text(context, "onboardingV2.trial.cta", language), onContinue)
+        },
+    ) {
         Spacer(Modifier.height(72.dp))
         Text(
             text = StringStore.text(context, "onboardingV2.trial.title", language),
@@ -665,8 +672,6 @@ internal fun TrialStepsStep(language: AppLanguage, onContinue: () -> Unit) {
                 )
             }
         }
-        Spacer(Modifier.weight(1f))
-        OnboardingCta(StringStore.text(context, "onboardingV2.trial.cta", language), onContinue)
     }
 }
 

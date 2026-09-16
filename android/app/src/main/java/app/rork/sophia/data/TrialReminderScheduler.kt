@@ -104,6 +104,33 @@ object TrialReminderScheduler {
         }
     }
 
+    /**
+     * Drops a pending reminder. The trial belongs to an account and to a subscription: once
+     * either is gone (sign-out, deletion, a cancelled or lapsed entitlement) the alarm has
+     * nothing left to remind anyone about, and a "your trial ends tomorrow" push landing
+     * after the fact is the worst version of this notification.
+     *
+     * Safe to call when nothing is armed — cancelling an absent alarm is a no-op.
+     */
+    fun cancel(context: Context) {
+        val alarm = context.getSystemService(AlarmManager::class.java)
+        val pending = PendingIntent.getBroadcast(
+            context,
+            REQUEST_CODE,
+            Intent(context, TrialReminderReceiver::class.java).setAction(ACTION),
+            PendingIntent.FLAG_NO_CREATE or PendingIntent.FLAG_IMMUTABLE,
+        )
+        if (pending != null) {
+            runCatching { alarm?.cancel(pending) }
+            pending.cancel()
+        }
+        armedAt = 0L
+        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+            .edit()
+            .remove(KEY_TRIGGER_AT)
+            .apply()
+    }
+
     /** Reads a catalog asset to pick the featured course, so keep it off the main thread. */
     fun showReminderNotification(context: Context) {
         ensureChannel(context)

@@ -563,7 +563,12 @@ internal fun QuestionsStep(
     val questions = remember(language) {
         (1..10).map { StringStore.text(context, "onboardingV2.questions.q$it", language) }
     }
-    Column(modifier = Modifier.fillMaxSize()) {
+    OnboardingPage(
+        contentArrangement = Arrangement.Top,
+        footer = {
+            OnboardingCta(StringStore.text(context, "common.continue", language), onContinue)
+        },
+    ) {
         Spacer(Modifier.height(84.dp))
         Text(
             text = StringStore.text(context, "onboardingV2.questions.title", language),
@@ -574,7 +579,6 @@ internal fun QuestionsStep(
                 .padding(horizontal = 28.dp)
                 .ov2Reveal(100),
         )
-        Spacer(Modifier.weight(1f))
         OnboardingRoulette(
             items = questions,
             slotSpacing = 152.dp,
@@ -587,8 +591,6 @@ internal fun QuestionsStep(
         ) { question, focused ->
             QuestionCard(question = question, focused = focused)
         }
-        Spacer(Modifier.weight(1f))
-        OnboardingCta(StringStore.text(context, "common.continue", language), onContinue)
     }
 }
 

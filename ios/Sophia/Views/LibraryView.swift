@@ -26,6 +26,8 @@ struct LibraryView: View {
     @Binding var selectedCourse: Course?
     @State private var searchText: String = ""
     @State private var featuredIndex: Int = 0
+    /// Height of the tallest featured card, measured. See `featuredCarousel`.
+    @State private var featuredCardHeight: CGFloat = 350
     @FocusState private var searchFocused: Bool
 
     private let previewCount = 4
@@ -226,7 +228,31 @@ struct LibraryView: View {
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .frame(height: 350)
+            // A paged `TabView` cannot size itself to its content. Pinned at 350pt, a card
+            // with a long title or at a large Dynamic Type size had its bottom cut off; the
+            // tallest card decides the height instead.
+            .frame(height: featuredCardHeight)
+            .background {
+                VStack(spacing: 0) {
+                    ForEach(featuredCourses) { course in
+                        LibraryFeaturedCard(
+                            course: course,
+                            status: progressManager.courseStatus(for: course.id),
+                            onTap: {}
+                        )
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 8)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .onGeometryChange(for: CGFloat.self) { proxy in
+                            proxy.size.height
+                        } action: { height in
+                            if height > featuredCardHeight { featuredCardHeight = height }
+                        }
+                    }
+                }
+                .hidden()
+                .accessibilityHidden(true)
+            }
             .onAppear {
                 CourseImageMap.preloadImages(for: featuredCourses.map(\.id))
             }

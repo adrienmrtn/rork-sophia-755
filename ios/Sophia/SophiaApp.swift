@@ -10,7 +10,7 @@ struct SophiaApp: App {
     @State private var languageManager = LanguageManager.shared
     @State private var appearanceManager = AppearanceManager.shared
     @State private var showOnboarding: Bool = !OnboardingViewModel.isOnboardingCompleted
-    @State private var deepLinkCourseId: String?
+    @State private var deepLinkRouter = DeepLinkRouter.shared
 
     init() {
         #if DEBUG
@@ -52,7 +52,7 @@ struct SophiaApp: App {
                                 showOnboarding = true
                             }
                         },
-                        deepLinkCourseId: $deepLinkCourseId
+                        router: deepLinkRouter
                     )
                 }
             }
@@ -63,6 +63,17 @@ struct SophiaApp: App {
             .environment(\.layoutDirection, languageManager.layoutDirection)
             .preferredColorScheme(appearanceManager.preference.preferredColorScheme)
             .animation(.easeInOut(duration: 0.25), value: appearanceManager.preference)
+            // Mounted at the root, above every forced scheme, so it reports the device's
+            // real appearance. Without it, Automatic sampled the trait once and an open
+            // course stayed light for the rest of its life when the phone went dark.
+            .background {
+                SystemAppearanceObserver { scheme in
+                    appearanceManager.updateSystemColorScheme(scheme)
+                }
+                .frame(width: 0, height: 0)
+                .allowsHitTesting(false)
+                .accessibilityHidden(true)
+            }
             .onAppear {
                 // ATT dès l'ouverture de l'app (avant/pendant l'onboarding), pas après.
                 MetaAdsService.requestTrackingAuthorizationAtLaunch()
@@ -75,7 +86,9 @@ struct SophiaApp: App {
                 // Callbacks Meta (fb…) + deep links Sophia (`sophia://…`).
                 MetaAdsService.handleOpenURL(url)
                 if let courseId = SophiaDeepLink.courseId(from: url) {
-                    deepLinkCourseId = courseId
+                    // Parked rather than delivered: the onboarding may still be on screen,
+                    // and the home opens it as soon as it is ready.
+                    deepLinkRouter.requestCourse(courseId)
                 }
             }
         }

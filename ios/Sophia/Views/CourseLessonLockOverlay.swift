@@ -5,6 +5,8 @@ import SwiftUI
 /// (`DS.*`): white surface, accent lock, hairline border, soft shadow and a gentle pulse
 /// with soft attention rings. Tapping it opens the paywall.
 struct CourseLessonLockOverlay: View {
+    @Environment(LanguageManager.self) private var languageManager
+
     let onUnlock: () -> Void
 
     @State private var appeared = false
@@ -65,6 +67,12 @@ struct CourseLessonLockOverlay: View {
             }
         }
         .buttonStyle(.plain)
+        // The label is a padlock glyph, which VoiceOver would announce as "lock" with no
+        // hint of what tapping it does. With the lesson body now hidden, this button is the
+        // whole page as far as VoiceOver is concerned, so it says what it is.
+        .accessibilityLabel(Text(languageManager.text("course.unlock.cta")))
+        .accessibilityHint(Text(languageManager.text("paywall.course.subtitle")))
+        .accessibilityAddTraits(.isButton)
         .opacity(appeared ? 1 : 0)
         .onAppear {
             withAnimation(.spring(response: 0.55, dampingFraction: 0.72)) { appeared = true }

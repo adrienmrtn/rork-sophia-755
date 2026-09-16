@@ -19,3 +19,8 @@ local.properties
 # IDE
 .idea/
 content/locales/_legal_mt_cache/
+
+# Android build output
+android/app/build/
+android/build/
+android/.gradle/

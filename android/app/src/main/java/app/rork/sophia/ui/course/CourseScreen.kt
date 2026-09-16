@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -129,6 +130,18 @@ fun CourseScreen(
         }
     }
 
+    // Inside a course, back is a step backwards through the reader, not an exit from the
+    // app. Only the first page hands back to whoever opened the course.
+    BackHandler(enabled = showQuiz) { showQuiz = false }
+    BackHandler(enabled = !showQuiz && showCompleted) { onDismiss() }
+    BackHandler(enabled = !showQuiz && !showCompleted) {
+        if (pagesReady && pagerState.currentPage > 0) {
+            scope.launch { pagerState.animateScrollToPage(pagerState.currentPage - 1) }
+        } else {
+            onDismiss()
+        }
+    }
+
     if (showQuiz) {
         LaunchedEffect(Unit) { sessionTracker.markQuiz() }
         QuizScreen(
@@ -178,7 +191,7 @@ fun CourseScreen(
         if (!pagesReady) return@LaunchedEffect
         val pageIndex = pagerState.currentPage
         sessionTracker.recordLessonReached(pageIndex)
-        progressManager.updateLessonIndex(course.id, pageIndex)
+        progressManager.updateLessonIndex(course.id, pageIndex, lessonCount = pages.size)
         InAppReviewHelper.requestIfEligible(
             context = context,
             progressManager = progressManager,
@@ -286,11 +299,8 @@ fun CourseScreen(
                 SophiaPrimaryButton(
                     text = when {
                         courseLocked || !isLast -> StringStore.text(context, "course.continue", language)
-                            .takeIf { it != "course.continue" } ?: "Continuer"
                         course.hasQuiz -> StringStore.text(context, "course.quiz", language)
-                            .takeIf { it != "course.quiz" } ?: "Quiz"
                         else -> StringStore.text(context, "course.finish", language)
-                            .takeIf { it != "course.finish" } ?: "Terminer"
                     },
                     onClick = {
                         if (courseLocked) {

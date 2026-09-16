@@ -7,6 +7,9 @@ struct HomeView: View {
     @Binding var selectedCourse: Course?
     @Binding var autoSwipeCourseId: String?
     var onShowDiscountPaywall: (() -> Void)? = nil
+    /// Only the TikTok home carries the history button; the other two presentations are
+    /// kept for rollback and are not part of this feature.
+    var onOpenMyCourses: (() -> Void)? = nil
 
     var body: some View {
         switch HomeCardPresentation.style {
@@ -35,7 +38,8 @@ struct HomeView: View {
                 isPremium: isPremium,
                 selectedCourse: $selectedCourse,
                 autoSwipeCourseId: $autoSwipeCourseId,
-                onShowDiscountPaywall: onShowDiscountPaywall
+                onShowDiscountPaywall: onShowDiscountPaywall,
+                onOpenMyCourses: onOpenMyCourses
             )
         }
     }

@@ -76,6 +76,12 @@ class ProgressSyncService(
         }
     }
 
+    /** Drops a conflict dialog that no longer has an account behind it (sign-out, deletion). */
+    fun clearPendingConflict() {
+        pushJob?.cancel()
+        _conflict.value = null
+    }
+
     fun resolveKeepLocal() {
         val c = _conflict.value ?: return
         scope.launch { push(c.local) }
