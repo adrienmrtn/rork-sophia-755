@@ -89,7 +89,8 @@ struct OnboardingV2Review: View {
                             reviewCard(
                                 quote: testimonials[i].quote,
                                 author: testimonials[i].author,
-                                focused: false
+                                focused: false,
+                                height: nil
                             )
                             .fixedSize(horizontal: false, vertical: true)
                             .onGeometryChange(for: CGFloat.self) { proxy in
@@ -131,7 +132,12 @@ struct OnboardingV2Review: View {
             ForEach(slots, id: \.self) { k in
                 let distance = Double(k) - position
                 let ti = ((k % count) + count) % count
-                reviewCard(quote: testimonials[ti].quote, author: testimonials[ti].author, focused: abs(distance) < 0.5)
+                reviewCard(
+                    quote: testimonials[ti].quote,
+                    author: testimonials[ti].author,
+                    focused: abs(distance) < 0.5,
+                    height: cardHeight
+                )
                     .scaleEffect(scale(for: distance))
                     .opacity(opacity(for: distance))
                     .blur(radius: blur(for: distance))
@@ -159,7 +165,15 @@ struct OnboardingV2Review: View {
         return min(7, CGFloat((d - 0.5) * 9))
     }
 
-    private func reviewCard(quote: String, author: String, focused: Bool) -> some View {
+    /// [height] `nil` pour la mesure hors écran (hauteur idéale), la hauteur mesurée pour
+    /// les cartes visibles.
+    ///
+    /// Elle doit être **imposée** sur les cartes visibles : la roulette est un `ZStack` haut
+    /// de plusieurs centaines de points, et il propose sa propre hauteur à chacun de ses
+    /// enfants. Avec un simple `minHeight`, le `Spacer(minLength: 0)` de la carte s'étirait
+    /// pour remplir toute la fenêtre — une carte de 400 pt avec trois lignes de texte en
+    /// haut et du vide en dessous.
+    private func reviewCard(quote: String, author: String, focused: Bool, height: CGFloat?) -> some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 2) {
                 ForEach(0..<5, id: \.self) { _ in
@@ -178,6 +192,7 @@ struct OnboardingV2Review: View {
         }
         .padding(18)
         .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(height: height, alignment: .topLeading)
         .frame(minHeight: Self.minCardHeight, alignment: .topLeading)
         .background(OV2.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(OV2.hairline, lineWidth: 1))

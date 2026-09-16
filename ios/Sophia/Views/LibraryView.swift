@@ -26,9 +26,24 @@ struct LibraryView: View {
     @Binding var selectedCourse: Course?
     @State private var searchText: String = ""
     @State private var featuredIndex: Int = 0
-    /// Height of the tallest featured card, measured. See `featuredCarousel`.
-    @State private var featuredCardHeight: CGFloat = 350
+
+    /// Hauteur du bloc texte de la carte « À la une ».
+    ///
+    /// Constante plutôt que mesurée : la carte a une hauteur déterministe (couverture fixe,
+    /// et les deux textes réservent exactement deux lignes chacun), donc il n'y a rien à
+    /// mesurer. La mesure hors écran qui était là ne pouvait que **monter** — une seule
+    /// passe de mise en page trop haute restait acquise — et laissait la carte flotter au
+    /// milieu d'un cadre bien trop grand, avec un vide au-dessus et au-dessous.
+    ///
+    /// `@ScaledMetric` couvre la raison d'être de cette mesure : la carte suit la taille de
+    /// texte du système, donc plus rien n'est rogné en bas aux grandes tailles.
+    @ScaledMetric(relativeTo: .body) private var featuredPanelHeight: CGFloat = 190
+
     @FocusState private var searchFocused: Bool
+
+    private var featuredCardHeight: CGFloat {
+        LibraryFeaturedCard.coverHeight + featuredPanelHeight
+    }
 
     private let previewCount = 4
     private let cream = DS.canvas
@@ -214,45 +229,29 @@ struct LibraryView: View {
 
             TabView(selection: $featuredIndex) {
                 ForEach(Array(featuredCourses.enumerated()), id: \.element.id) { index, course in
-                    LibraryFeaturedCard(
-                        course: course,
-                        status: progressManager.courseStatus(for: course.id),
-                        onTap: {
-                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                            selectedCourse = course
-                        }
-                    )
+                    // Calée en haut : un `TabView` paginé centre ses pages, donc le moindre
+                    // point de marge en trop se voyait en décalant la carte vers le bas.
+                    // Ici l'éventuel reste passe sous la carte, où il ne se remarque pas.
+                    VStack(spacing: 0) {
+                        LibraryFeaturedCard(
+                            course: course,
+                            status: progressManager.courseStatus(for: course.id),
+                            onTap: {
+                                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                selectedCourse = course
+                            }
+                        )
+                        Spacer(minLength: 0)
+                    }
                     .padding(.horizontal, 20)
                     .padding(.vertical, 8)
                     .tag(index)
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            // A paged `TabView` cannot size itself to its content. Pinned at 350pt, a card
-            // with a long title or at a large Dynamic Type size had its bottom cut off; the
-            // tallest card decides the height instead.
-            .frame(height: featuredCardHeight)
-            .background {
-                VStack(spacing: 0) {
-                    ForEach(featuredCourses) { course in
-                        LibraryFeaturedCard(
-                            course: course,
-                            status: progressManager.courseStatus(for: course.id),
-                            onTap: {}
-                        )
-                        .padding(.horizontal, 20)
-                        .padding(.vertical, 8)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .onGeometryChange(for: CGFloat.self) { proxy in
-                            proxy.size.height
-                        } action: { height in
-                            if height > featuredCardHeight { featuredCardHeight = height }
-                        }
-                    }
-                }
-                .hidden()
-                .accessibilityHidden(true)
-            }
+            // Un `TabView` paginé ne peut pas se dimensionner sur son contenu : la hauteur
+            // vient de la carte, taille de texte système comprise.
+            .frame(height: featuredCardHeight + 16)
             .onAppear {
                 CourseImageMap.preloadImages(for: featuredCourses.map(\.id))
             }
@@ -437,6 +436,10 @@ struct LibraryFeaturedCard: View {
         }
     }
 
+    /// Hauteur de la couverture. Exposée pour que le carrousel calcule la hauteur de la
+    /// carte sans que les deux valeurs puissent diverger.
+    static let coverHeight: CGFloat = 160
+
     private var cover: some View {
         DS.surfaceMuted
             .overlay {
@@ -451,7 +454,7 @@ struct LibraryFeaturedCard: View {
                         .foregroundStyle(DS.accentSoft.opacity(0.5))
                 }
             }
-            .frame(height: 160)
+            .frame(height: Self.coverHeight)
             .frame(maxWidth: .infinity)
             .clipped()
     }
