@@ -82,6 +82,7 @@ internal fun PhoneTimeStep(
     var lastStep by remember { mutableIntStateOf(minutes / 30) }
 
     OnboardingPage(
+        contentArrangement = Arrangement.Top,
         footer = {
             OnboardingCta(
                 text = StringStore.text(context, "common.continue", language),

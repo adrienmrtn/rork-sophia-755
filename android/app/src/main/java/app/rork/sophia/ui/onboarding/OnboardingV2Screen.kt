@@ -246,7 +246,14 @@ fun OnboardingV2Screen(
         }
     }
 
-    Box(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
+    Box(
+        modifier = Modifier.fillMaxSize().background(DS.canvas),
+        contentAlignment = Alignment.TopCenter,
+    ) {
+        // Bounded and centred on a tablet. Stretched across a landscape tablet these
+        // one-column pages stop resembling the design, and the tallest of them pushes its
+        // button below the fold. On a phone the cap is wider than the screen.
+        Box(modifier = Modifier.fillMaxSize().readableWidth()) {
         AnimatedContent(
             targetState = step,
             transitionSpec = {
@@ -416,6 +423,8 @@ fun OnboardingV2Screen(
                     )
                 }
             }
+        }
+
         }
 
         val dotIndex = DOT_STEPS.indexOf(step)

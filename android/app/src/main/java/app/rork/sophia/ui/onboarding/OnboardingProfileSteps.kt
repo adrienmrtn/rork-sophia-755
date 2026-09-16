@@ -450,6 +450,7 @@ internal fun LoadingProfileStep(language: AppLanguage, onContinue: () -> Unit) {
     val ratingAlpha by animateFloatAsState(if (allDone) 1f else 0.4f, tween(300), label = "rating")
 
     OnboardingPage(
+        contentArrangement = Arrangement.Top,
         footer = {
             OnboardingCta(
                 text = StringStore.text(context, "onboardingV2.loading.cta", language),

@@ -564,6 +564,7 @@ internal fun QuestionsStep(
         (1..10).map { StringStore.text(context, "onboardingV2.questions.q$it", language) }
     }
     OnboardingPage(
+        contentArrangement = Arrangement.Top,
         footer = {
             OnboardingCta(StringStore.text(context, "common.continue", language), onContinue)
         },
