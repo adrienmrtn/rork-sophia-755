@@ -30,6 +30,25 @@ struct OnboardingV2PhoneTime: View {
     private let step: Double = 30
 
     var body: some View {
+        // Big number, slider and labels: at a large text size on a short phone the CTA below
+        // them went off screen. Scrolls instead, with the button pinned.
+        OV2ScrollableContent {
+            pageBody
+        } footer: {
+            OnboardingV2Button(title: languageManager.text("common.continue")) {
+                vm.phoneDailyMinutes = Int(minutes)
+                onNext()
+            }
+        }
+        .ov2Background()
+        .onAppear {
+            minutes = Double(vm.phoneDailyMinutes)
+            lastStep = Int(minutes / step)
+        }
+    }
+
+    /// Page content, unchanged; the container above is what keeps the CTA on screen.
+    private var pageBody: some View {
         VStack(spacing: 0) {
             Spacer().frame(height: 84)
 
@@ -75,16 +94,6 @@ struct OnboardingV2PhoneTime: View {
             .ov2Reveal(delay: 0.3)
 
             Spacer()
-
-            OnboardingV2Button(title: languageManager.text("common.continue")) {
-                vm.phoneDailyMinutes = Int(minutes)
-                onNext()
-            }
-        }
-        .ov2Background()
-        .onAppear {
-            minutes = Double(vm.phoneDailyMinutes)
-            lastStep = Int(minutes / step)
         }
     }
 }
@@ -119,6 +128,24 @@ struct OnboardingV2YearsGrid: View {
     }
 
     var body: some View {
+        // The 80-square grid is the tallest block in the flow. On an iPad in landscape it
+        // grew until the button sat hundreds of points below the fold, and on a short
+        // phone at a large text size the caption pushed it off the bottom. Scrolls, with
+        // the button pinned; `ov2Background` caps the width on a tablet.
+        OV2ScrollableContent {
+            pageBody
+        } footer: {
+            OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
+                .opacity(showButton ? 1 : 0)
+                .allowsHitTesting(showButton)
+        }
+        .ov2Background()
+        .onAppear { runSequence() }
+        .onDisappear { animTask?.cancel() }
+    }
+
+    /// Page content, unchanged; the container above is what keeps the CTA on screen.
+    private var pageBody: some View {
         VStack(spacing: 0) {
             Spacer(minLength: 72)
 
@@ -157,16 +184,7 @@ struct OnboardingV2YearsGrid: View {
             .padding(.horizontal, 36)
             .opacity(showCaption ? 1 : 0)
             .offset(y: showCaption ? 0 : 12)
-
-            Spacer(minLength: 72)
-
-            OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
-                .opacity(showButton ? 1 : 0)
-                .allowsHitTesting(showButton)
         }
-        .ov2Background()
-        .onAppear { runSequence() }
-        .onDisappear { animTask?.cancel() }
     }
 
     /// Enchaînement scénarisé : (1) ouverture des 80 carrés gris, (2) apparition douce du

@@ -13,8 +13,17 @@ struct OnboardingV2Review: View {
     @State private var titleIn = false
     @State private var listIn = false
 
+    /// Hauteur minimale d'une carte d'avis. La hauteur réelle suit le texte : une citation
+    /// longue (allemand, finnois) ou une grande taille de texte débordait d'un cadre fixe à
+    /// 148pt et se retrouvait coupée en plein milieu.
+    private static let minCardHeight: CGFloat = 148
+
+    /// Hauteur de la plus haute carte, mesurée. L'espacement des créneaux en découle : avec
+    /// un pas fixe, une carte qui grandit chevaucherait sa voisine.
+    @State private var cardHeight: CGFloat = OnboardingV2Review.minCardHeight
+
     /// Espacement vertical entre deux avis (cartes plus hautes que les questions).
-    private let slotSpacing: CGFloat = 172
+    private var slotSpacing: CGFloat { cardHeight + 24 }
     private let scrollDuration: Double = 0.95
     private let tickInterval: UInt64 = 3_000_000_000
 
@@ -26,39 +35,11 @@ struct OnboardingV2Review: View {
     }
 
     var body: some View {
-        VStack(spacing: 0) {
-            Spacer().frame(height: 84)
-
-            Text(languageManager.text("onboardingV2.review.title"))
-                .font(DS.title(.title, .heavy))
-                .foregroundStyle(OV2.ink)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 28)
-                .opacity(titleIn ? 1 : 0)
-                .offset(y: titleIn ? 0 : 12)
-
-            Spacer()
-
-            roulette
-                .frame(height: 380)
-                .frame(maxWidth: .infinity)
-                .padding(.horizontal, 24)
-                .opacity(listIn ? 1 : 0)
-                // Dégradé haut/bas pour l'effet roulette (les voisins s'estompent).
-                .mask(
-                    LinearGradient(
-                        stops: [
-                            .init(color: .clear, location: 0.0),
-                            .init(color: .black, location: 0.26),
-                            .init(color: .black, location: 0.74),
-                            .init(color: .clear, location: 1.0),
-                        ],
-                        startPoint: .top, endPoint: .bottom
-                    )
-                )
-
-            Spacer()
-
+        // The testimonial roulette is 380pt tall; on a short phone at a large text size the CTA
+        // below it went off screen. Scrolls instead, with the button pinned.
+        OV2ScrollableContent {
+            pageBody
+        } footer: {
             OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
         }
         .ov2Background()
@@ -78,6 +59,65 @@ struct OnboardingV2Review: View {
                 }
                 OnboardingHaptics.selection()
             }
+        }
+    }
+
+    /// Page content, unchanged; the container above is what keeps the CTA on screen.
+    private var pageBody: some View {
+        VStack(spacing: 0) {
+            Spacer().frame(height: 84)
+
+            Text(languageManager.text("onboardingV2.review.title"))
+                .font(DS.title(.title, .heavy))
+                .foregroundStyle(OV2.ink)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 28)
+                .opacity(titleIn ? 1 : 0)
+                .offset(y: titleIn ? 0 : 12)
+
+            Spacer()
+
+            roulette
+                .frame(height: max(380, slotSpacing * 2 + 36))
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 24)
+                // Mesure hors écran de la plus haute citation, pour que le pas de la
+                // roulette suive le texte au lieu de le rogner.
+                .background {
+                    VStack(spacing: 0) {
+                        ForEach(testimonials.indices, id: \.self) { i in
+                            reviewCard(
+                                quote: testimonials[i].quote,
+                                author: testimonials[i].author,
+                                focused: false
+                            )
+                            .fixedSize(horizontal: false, vertical: true)
+                            .onGeometryChange(for: CGFloat.self) { proxy in
+                                proxy.size.height
+                            } action: { height in
+                                if height > cardHeight { cardHeight = height }
+                            }
+                        }
+                    }
+                    .padding(.horizontal, 24)
+                    .hidden()
+                    .accessibilityHidden(true)
+                }
+                .opacity(listIn ? 1 : 0)
+                // Dégradé haut/bas pour l'effet roulette (les voisins s'estompent).
+                .mask(
+                    LinearGradient(
+                        stops: [
+                            .init(color: .clear, location: 0.0),
+                            .init(color: .black, location: 0.26),
+                            .init(color: .black, location: 0.74),
+                            .init(color: .clear, location: 1.0),
+                        ],
+                        startPoint: .top, endPoint: .bottom
+                    )
+                )
+
+            Spacer()
         }
     }
 
@@ -138,7 +178,7 @@ struct OnboardingV2Review: View {
         }
         .padding(18)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .frame(height: 148)
+        .frame(minHeight: Self.minCardHeight, alignment: .topLeading)
         .background(OV2.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(OV2.hairline, lineWidth: 1))
         .shadow(color: .black.opacity(focused ? 0.08 : 0.03), radius: focused ? 16 : 8, y: focused ? 8 : 4)

@@ -28,8 +28,13 @@ struct OnboardingV2SwipeCourses: View {
     @State private var isCommitting = false
 
     var body: some View {
+        // The deck was a fixed 420pt tall between two flexible spacers. On an iPhone SE, or
+        // at a large Dynamic Type size, the title plus the deck plus the buttons exceeded
+        // the screen and the ❤️ / ✕ row was pushed off the bottom — the one screen in the
+        // flow you cannot skip. The deck is sized from the height actually left over.
+        GeometryReader { geo in
         VStack(spacing: 0) {
-            Spacer().frame(height: 72)
+            Spacer().frame(height: geo.size.height < 620 ? 40 : 72)
 
             VStack(spacing: 8) {
                 Text(languageManager.text("onboardingV2.swipe.title"))
@@ -47,9 +52,9 @@ struct OnboardingV2SwipeCourses: View {
             Spacer()
 
             if done {
-                completionView
+                completionView(height: deckHeight(in: geo))
             } else {
-                cardStack
+                cardStack(height: deckHeight(in: geo))
                     .scaleEffect(enter ? 1 : 0.86)
                     .opacity(enter ? 1 : 0)
                     .offset(y: enter ? 0 : 64)
@@ -64,11 +69,13 @@ struct OnboardingV2SwipeCourses: View {
                     swipeButton(systemName: "heart.fill", tint: OV2.success) { swipeTop(like: true) }
                 }
                 .disabled(isCommitting || isFinishing)
-                .padding(.bottom, 28)
+                .padding(.bottom, geo.size.height < 620 ? 16 : 28)
                 .ov2Reveal(delay: 0.3)
             } else {
                 Color.clear.frame(height: 60)
             }
+        }
+        .frame(width: geo.size.width, height: geo.size.height)
         }
         .ov2Background()
         .onAppear {
@@ -88,12 +95,23 @@ struct OnboardingV2SwipeCourses: View {
 
     // MARK: - Card stack
 
-    private var cardStack: some View {
+    /// Height left for the deck once the title and the buttons have taken theirs.
+    ///
+    /// The card is 3:4, so the width it can use is the binding constraint on a wide screen
+    /// and the height is on a short one; whichever runs out first decides.
+    private func deckHeight(in geo: GeometryProxy) -> CGFloat {
+        let chrome: CGFloat = geo.size.height < 620 ? 230 : 290
+        let byHeight = geo.size.height - chrome
+        let byWidth = (geo.size.width - 48) * 4 / 3
+        return max(min(byHeight, byWidth, 420), 220)
+    }
+
+    private func cardStack(height: CGFloat) -> some View {
         ZStack {
             ForEach(Array(courses.enumerated()), id: \.element.id) { i, course in
                 if i >= index, i < index + 3 {
                     let depth = i - index
-                    courseCard(course)
+                    courseCard(course, height: height)
                         .scaleEffect(1 - CGFloat(depth) * 0.04)
                         .offset(y: CGFloat(depth) * 12)
                         .offset(x: depth == 0 ? drag.width : 0, y: depth == 0 ? drag.height * 0.2 : 0)
@@ -105,10 +123,16 @@ struct OnboardingV2SwipeCourses: View {
                 }
             }
         }
-        .frame(height: 420)
+        .frame(height: height)
     }
 
-    private func courseCard(_ course: Course) -> some View {
+    /// The card keeps its 3:4 proportions inside whatever height the deck was given.
+    private func courseCard(_ course: Course, height: CGFloat) -> some View {
+        let width = height * 3 / 4
+        return cardBody(course, width: width, height: height)
+    }
+
+    private func cardBody(_ course: Course, width: CGFloat, height: CGFloat) -> some View {
         ZStack(alignment: .bottomLeading) {
             Group {
                 if let img = CourseImageMap.loadImage(for: course.id) {
@@ -120,7 +144,7 @@ struct OnboardingV2SwipeCourses: View {
                     )
                 }
             }
-            .frame(width: 300, height: 400)
+            .frame(width: width, height: height)
             .clipped()
 
             LinearGradient(
@@ -143,7 +167,7 @@ struct OnboardingV2SwipeCourses: View {
 
             likeStamp
         }
-        .frame(width: 300, height: 400)
+        .frame(width: width, height: height)
         .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
         .overlay(
             RoundedRectangle(cornerRadius: 24, style: .continuous)
@@ -182,7 +206,7 @@ struct OnboardingV2SwipeCourses: View {
             .rotationEffect(.degrees(drag.width > 0 ? -12 : 12))
     }
 
-    private var completionView: some View {
+    private func completionView(height: CGFloat) -> some View {
         VStack(spacing: 18) {
             ZStack {
                 Circle().fill(OV2.success.opacity(0.12)).frame(width: 120, height: 120)
@@ -197,7 +221,7 @@ struct OnboardingV2SwipeCourses: View {
                 .foregroundStyle(OV2.ink)
                 .opacity(checkIn ? 1 : 0)
         }
-        .frame(height: 420)
+        .frame(height: height)
     }
 
     // MARK: - Gesture / actions

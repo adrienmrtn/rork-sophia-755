@@ -287,13 +287,17 @@ private struct TikTokCourseCard: View {
             // the START of the next card rather than empty space above it.
             let cardWidth = geo.size.width - DS.Space.m * 2
             let maxCardHeight = geo.size.height - DS.Space.s * 2
-            // Illustration scales down a little on short screens so the whole card fits.
-            let imageHeight = min(max(geo.size.height * 0.30, 170), 240)
+            // "Commencer" is the only way into a course, so everything else gives way to it.
+            // The illustration used to have a 170pt floor: on an iPhone SE the cover, the
+            // pills, a two-line title and a six-line blurb together overflowed the card, and
+            // `maxHeight` clips rather than shrinks — the button ended up under the next
+            // card's peek, with no way to start a course at all.
+            let metrics = CardMetrics(availableHeight: geo.size.height)
 
             VStack(spacing: 0) {
-                cardContent(imageHeight: imageHeight)
+                cardContent(metrics: metrics)
                     .frame(width: cardWidth)
-                    .frame(maxHeight: maxCardHeight)
+                    .frame(maxHeight: maxCardHeight, alignment: .top)
                     .padding(.top, DS.Space.s)
                 Spacer(minLength: 0)
             }
@@ -306,10 +310,35 @@ private struct TikTokCourseCard: View {
         }
     }
 
-    private func cardContent(imageHeight: CGFloat) -> some View {
-        VStack(alignment: .leading, spacing: 14) {
+    /// How the card divides the height it is given.
+    ///
+    /// Three sizes rather than a continuous scale: a picture that shrinks by a few points
+    /// per device reads as a mistake, one that steps down a tier reads as a layout.
+    private struct CardMetrics {
+        let imageHeight: CGFloat
+        let descriptionLines: Int
+        let spacing: CGFloat
+        let padding: CGFloat
+        let titleStyle: Font.TextStyle
+
+        init(availableHeight: CGFloat) {
+            // iPhone SE and the mini at a large Display Zoom land under 620; split-screen
+            // and the shortest of those land under 520.
+            let compact = availableHeight < 620
+            let veryCompact = availableHeight < 520
+            let fraction: CGFloat = veryCompact ? 0.22 : (compact ? 0.26 : 0.30)
+            imageHeight = min(max(availableHeight * fraction, 96), 240)
+            descriptionLines = veryCompact ? 2 : (compact ? 3 : 6)
+            spacing = compact ? 10 : 14
+            padding = compact ? DS.Space.m : DS.Space.l
+            titleStyle = compact ? .headline : .title3
+        }
+    }
+
+    private func cardContent(metrics: CardMetrics) -> some View {
+        VStack(alignment: .leading, spacing: metrics.spacing) {
             courseIllustration
-                .frame(height: imageHeight)
+                .frame(height: metrics.imageHeight)
                 .frame(maxWidth: .infinity)
                 .clipShape(.rect(cornerRadius: DS.Radius.control))
                 .overlay {
@@ -325,9 +354,10 @@ private struct TikTokCourseCard: View {
             }
 
             Text(course.title)
-                .font(DS.title(.title3))
+                .font(DS.title(metrics.titleStyle))
                 .foregroundStyle(DS.ink)
                 .lineLimit(2)
+                .minimumScaleFactor(0.85)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
@@ -335,7 +365,7 @@ private struct TikTokCourseCard: View {
                 .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.inkSecondary)
                 .lineSpacing(4)
-                .lineLimit(6)
+                .lineLimit(metrics.descriptionLines)
                 .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -353,8 +383,11 @@ private struct TikTokCourseCard: View {
             .buttonStyle(DSPrimaryButtonStyle())
             .sensoryFeedback(.impact(weight: .medium), trigger: startTrigger)
             .padding(.top, 2)
+            // Measured before the illustration and the blurb, so it can never be the part
+            // that is squeezed out.
+            .layoutPriority(1)
         }
-        .padding(DS.Space.l)
+        .padding(metrics.padding)
         .background(DS.surface)
         .clipShape(.rect(cornerRadius: DS.Radius.card))
         .overlay {

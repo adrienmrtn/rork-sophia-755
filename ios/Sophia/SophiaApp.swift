@@ -63,6 +63,17 @@ struct SophiaApp: App {
             .environment(\.layoutDirection, languageManager.layoutDirection)
             .preferredColorScheme(appearanceManager.preference.preferredColorScheme)
             .animation(.easeInOut(duration: 0.25), value: appearanceManager.preference)
+            // Mounted at the root, above every forced scheme, so it reports the device's
+            // real appearance. Without it, Automatic sampled the trait once and an open
+            // course stayed light for the rest of its life when the phone went dark.
+            .background {
+                SystemAppearanceObserver { scheme in
+                    appearanceManager.updateSystemColorScheme(scheme)
+                }
+                .frame(width: 0, height: 0)
+                .allowsHitTesting(false)
+                .accessibilityHidden(true)
+            }
             .onAppear {
                 // ATT dès l'ouverture de l'app (avant/pendant l'onboarding), pas après.
                 MetaAdsService.requestTrackingAuthorizationAtLaunch()
