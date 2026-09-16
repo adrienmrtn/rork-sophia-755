@@ -40,6 +40,7 @@ import app.rork.sophia.data.CourseImagePrefetch
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.ui.components.RichTextWithGlossary
+import app.rork.sophia.ui.components.inlineRichText
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -202,7 +203,7 @@ private fun ImageBlock(block: ReaderBlock.Image) {
             if (url != null) {
                 AsyncImage(
                     model = CourseImagePrefetch.request(context, block.asset, url),
-                    contentDescription = block.caption,
+                    contentDescription = block.caption?.let { inlineRichText(it).text },
                     modifier = Modifier.fillMaxSize(),
                     contentScale = if (block.ratio == null) ContentScale.Fit else ContentScale.Crop,
                 )
@@ -211,7 +212,9 @@ private fun ImageBlock(block: ReaderBlock.Image) {
         block.caption?.let { caption ->
             Spacer(Modifier.height(DS.Space.xs))
             Text(
-                text = caption,
+                // Captions are authored with the same markers as body text, so printed raw
+                // they showed `**` and `[[ ]]` under the picture.
+                text = inlineRichText(caption),
                 style = SophiaTypography.bodyMedium,
                 modifier = Modifier.padding(horizontal = 4.dp),
             )

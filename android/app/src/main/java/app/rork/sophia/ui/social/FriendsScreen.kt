@@ -15,7 +15,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -54,6 +54,7 @@ import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.SendRequestOutcome
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.domain.uppercaseIn
 import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.ConfirmDialog
 import app.rork.sophia.ui.theme.DS
@@ -299,7 +300,18 @@ fun FriendsScreen(
                 ),
             )
             Button(
-                onClick = { scope.launch { social.updateHandle(handleInput) } },
+                onClick = {
+                    scope.launch {
+                        social.updateHandle(handleInput).onSuccess { saved ->
+                            // Show what was stored, not what was typed: the server trims the
+                            // "@" and lowercases, so the field used to disagree with the
+                            // handle friends actually search for. And say that it worked —
+                            // a silent save reads as a broken button.
+                            handleInput = saved
+                            noticeKey = "friends.handle.saved"
+                        }
+                    }
+                },
                 enabled = handleInput.isNotBlank() && handleInput != handle,
                 colors = ButtonDefaults.buttonColors(containerColor = DS.accent),
             ) {
@@ -339,8 +351,23 @@ fun FriendsLeaderboardSection(
     onOpenFriend: (FriendLeaderboardEntry) -> Unit,
     modifier: Modifier = Modifier,
     nestedScroll: Boolean = false,
+    /** Cap for the preview on the profile tab; null shows everyone. */
+    maxRows: Int? = null,
 ) {
     val context = LocalContext.current
+    // Ranks come from the full board, so trimming the preview cannot renumber anyone. And
+    // the caller's own row is always kept: a profile that cut the list at five simply did
+    // not show you once you were sixth, which is exactly when you most want to see it.
+    val rows = remember(leaderboard, maxRows) {
+        val ranked = leaderboard.mapIndexed { index, entry -> index + 1 to entry }
+        if (maxRows == null || ranked.size <= maxRows) {
+            ranked
+        } else {
+            val head = ranked.take(maxRows)
+            val me = ranked.firstOrNull { it.second.is_me }
+            if (me == null || head.any { it.second.is_me }) head else head.dropLast(1) + me
+        }
+    }
     Column(modifier = modifier) {
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             PeriodChip(
@@ -365,14 +392,14 @@ fun FriendsLeaderboardSection(
             )
         } else if (nestedScroll) {
             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                leaderboard.forEachIndexed { index, row ->
-                    LeaderboardRow(language, index, row, onOpenFriend)
+                rows.forEach { (rank, row) ->
+                    LeaderboardRow(language, rank, row, onOpenFriend)
                 }
             }
         } else {
             LazyColumn(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                itemsIndexed(leaderboard) { index, row ->
-                    LeaderboardRow(language, index, row, onOpenFriend)
+                items(rows, key = { it.second.user_id }) { (rank, row) ->
+                    LeaderboardRow(language, rank, row, onOpenFriend)
                 }
             }
         }
@@ -382,7 +409,7 @@ fun FriendsLeaderboardSection(
 @Composable
 private fun LeaderboardRow(
     language: AppLanguage,
-    index: Int,
+    rank: Int,
     row: FriendLeaderboardEntry,
     onOpenFriend: (FriendLeaderboardEntry) -> Unit,
 ) {
@@ -399,7 +426,7 @@ private fun LeaderboardRow(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            Text("${index + 1}.", style = SophiaTypography.labelLarge, color = DS.inkTertiary)
+            Text("$rank.", style = SophiaTypography.labelLarge, color = DS.inkTertiary)
             Text("@${row.handle}", style = SophiaTypography.bodyLarge)
             if (row.is_me) {
                 Text(
@@ -461,7 +488,8 @@ private fun FriendProfileSheet(
             GlobalRankRing(progress = progress, size = 88.dp)
             Spacer(Modifier.height(12.dp))
             Text(
-                StringStore.text(context, "globalRank.${level.rank.storageKey}", language).uppercase(),
+                StringStore.text(context, "globalRank.${level.rank.storageKey}", language)
+                    .uppercaseIn(language),
                 style = SophiaTypography.labelLarge,
                 color = DS.accentSoft,
                 letterSpacing = 2.sp,

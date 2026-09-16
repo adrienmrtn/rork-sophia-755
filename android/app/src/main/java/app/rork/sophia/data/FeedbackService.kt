@@ -1,6 +1,7 @@
 package app.rork.sophia.data
 
 import app.rork.sophia.AppConfig
+import app.rork.sophia.BuildConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
@@ -8,6 +9,22 @@ import java.net.HttpURLConnection
 import java.net.URL
 
 object FeedbackService {
+    /**
+     * Deliberately loose: the point is to catch "jean@gmail" and "jean.gmail.com" before the
+     * form provider rejects the whole submission, not to adjudicate RFC 5322.
+     */
+    private fun isPlausibleEmail(raw: String): Boolean {
+        val value = raw.trim()
+        val at = value.indexOf('@')
+        if (at <= 0 || at != value.lastIndexOf('@')) return false
+        val domain = value.substring(at + 1)
+        return domain.length >= 3 &&
+            domain.contains('.') &&
+            !domain.startsWith('.') &&
+            !domain.endsWith('.') &&
+            value.none { it.isWhitespace() }
+    }
+
     suspend fun submitFeedback(
         message: String,
         category: String,
@@ -16,18 +33,26 @@ object FeedbackService {
         email: String? = null,
     ): Result<Unit> = withContext(Dispatchers.IO) {
         if (message.isBlank()) return@withContext Result.failure(IllegalArgumentException("empty"))
+        // Formspree rejects the whole submission when `_replyto` is not a valid address, so a
+        // typo in an optional field used to throw away the message the user actually wrote.
+        // It is checked before sending, and reported as its own failure.
+        if (!email.isNullOrBlank() && !isPlausibleEmail(email)) {
+            return@withContext Result.failure(IllegalArgumentException("email"))
+        }
         val body = JSONObject()
             .put("message", message.trim())
             .put("category", category)
             .put("_subject", "Sophia Android feedback")
-            .put("app_version", "1.0.0")
+            // Was hardcoded, so every report from every build claimed to be 1.0.0 — which
+            // made "is this already fixed?" unanswerable.
+            .put("app_version", BuildConfig.VERSION_NAME)
             .put("android_version", android.os.Build.VERSION.RELEASE)
             .put("device", android.os.Build.MODEL)
             .put("language", language)
             .put("is_premium", isPremium)
         if (!email.isNullOrBlank()) {
-            body.put("email", email)
-            body.put("_replyto", email)
+            body.put("email", email.trim())
+            body.put("_replyto", email.trim())
         }
         post(AppConfig.FORMSPREE_ENDPOINT, body)
     }
@@ -41,7 +66,7 @@ object FeedbackService {
         countryConfirmed: Boolean,
         language: String,
     ): Result<Unit> = withContext(Dispatchers.IO) {
-        if (!email.contains("@") || !email.contains(".")) {
+        if (!isPlausibleEmail(email)) {
             return@withContext Result.failure(IllegalArgumentException("email"))
         }
         if (age !in 16..120 || presentation.trim().length < 10 || !countryConfirmed) {
@@ -66,7 +91,7 @@ object FeedbackService {
             .put("country_confirmed", countryConfirmed)
             .put("eligible_countries", "FR,CA,BE,CH")
             .put("_subject", "Sophia Android ambassador")
-            .put("app_version", "1.0.0")
+            .put("app_version", BuildConfig.VERSION_NAME)
             .put("android_version", android.os.Build.VERSION.RELEASE)
             .put("device", android.os.Build.MODEL)
             .put("language", language)

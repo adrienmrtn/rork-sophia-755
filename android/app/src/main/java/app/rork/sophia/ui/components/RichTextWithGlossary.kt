@@ -22,6 +22,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
@@ -32,7 +33,18 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaTypography
 
-private data class TextSeg(val text: String, val term: String? = null, val bold: Boolean = false)
+private data class TextSeg(
+    val text: String,
+    val term: String? = null,
+    val bold: Boolean = false,
+    val italic: Boolean = false,
+)
+
+/** The span style a parsed segment renders with, before glossary styling is layered on. */
+private fun TextSeg.spanStyle(): SpanStyle = SpanStyle(
+    fontWeight = if (bold) FontWeight.SemiBold else null,
+    fontStyle = if (italic) FontStyle.Italic else null,
+)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -64,10 +76,8 @@ fun RichTextWithGlossary(
                         ),
                     ) { append(seg.text) }
                     pop()
-                } else if (seg.bold) {
-                    withStyle(SpanStyle(fontWeight = FontWeight.SemiBold)) { append(seg.text) }
                 } else {
-                    append(seg.text)
+                    withStyle(seg.spanStyle()) { append(seg.text) }
                 }
             }
         }
@@ -112,17 +122,19 @@ fun RichTextWithGlossary(
  */
 fun inlineRichText(raw: String): AnnotatedString = buildAnnotatedString {
     parseSegments(raw) { false }.forEach { seg ->
-        if (seg.bold) {
-            withStyle(SpanStyle(fontWeight = FontWeight.SemiBold)) { append(seg.text) }
-        } else {
-            append(seg.text)
-        }
+        withStyle(seg.spanStyle()) { append(seg.text) }
     }
 }
 
 private fun parseSegments(raw: String, hasEntry: (String) -> Boolean): List<TextSeg> {
     val out = mutableListOf<TextSeg>()
-    appendSegments(raw.replace(Regex("==([^=]+)=="), "$1"), bold = false, out = out, hasEntry = hasEntry)
+    appendSegments(
+        raw.replace(Regex("==([^=]+)=="), "$1"),
+        bold = false,
+        italic = false,
+        out = out,
+        hasEntry = hasEntry,
+    )
     return out
 }
 
@@ -130,10 +142,15 @@ private fun parseSegments(raw: String, hasEntry: (String) -> Boolean): List<Text
  * Glossary terms are often authored bold (`**[[Term]]**`). Descending into the bold
  * span rather than treating it as opaque is what keeps those clickable instead of
  * printing the brackets.
+ *
+ * `*italic*` is parsed here too. Titles of works are authored that way — "*The Flowers of
+ * Evil*" — and, with no rule for a single asterisk, the reader printed the asterisks
+ * verbatim. It is matched after `**`, so a bold marker is never read as two italic ones.
  */
 private fun appendSegments(
     s: String,
     bold: Boolean,
+    italic: Boolean,
     out: MutableList<TextSeg>,
     hasEntry: (String) -> Boolean,
 ) {
@@ -141,39 +158,76 @@ private fun appendSegments(
     while (i < s.length) {
         val nextTerm = s.indexOf("[[", i)
         val nextBold = if (bold) -1 else s.indexOf("**", i)
-        val next = when {
-            nextTerm < 0 -> nextBold
-            nextBold < 0 -> nextTerm
-            else -> minOf(nextTerm, nextBold)
-        }
+        val nextItalic = if (italic) -1 else indexOfItalicMarker(s, i)
+        val next = listOf(nextTerm, nextBold, nextItalic).filter { it >= 0 }.minOrNull() ?: -1
         if (next < 0) {
-            out += TextSeg(s.substring(i), bold = bold)
+            out += TextSeg(s.substring(i), bold = bold, italic = italic)
             return
         }
-        if (next > i) out += TextSeg(s.substring(i, next), bold = bold)
-        if (next == nextTerm) {
-            val end = s.indexOf("]]", next + 2)
-            // A marker with no closing partner is malformed authoring. Drop it and
-            // keep parsing rather than printing the brackets at the reader.
-            if (end < 0) {
-                i = next + 2
-                continue
+        if (next > i) out += TextSeg(s.substring(i, next), bold = bold, italic = italic)
+        when (next) {
+            nextTerm -> {
+                val end = s.indexOf("]]", next + 2)
+                // A marker with no closing partner is malformed authoring. Drop it and
+                // keep parsing rather than printing the brackets at the reader.
+                if (end < 0) {
+                    i = next + 2
+                    continue
+                }
+                val term = s.substring(next + 2, end).trim()
+                out += when {
+                    term.isEmpty() -> TextSeg(s.substring(next, end + 2), bold = bold, italic = italic)
+                    hasEntry(term) -> TextSeg(term, term = term, bold = bold, italic = italic)
+                    else -> TextSeg(term, bold = bold, italic = italic)
+                }
+                i = end + 2
             }
-            val term = s.substring(next + 2, end).trim()
-            out += when {
-                term.isEmpty() -> TextSeg(s.substring(next, end + 2), bold = bold)
-                hasEntry(term) -> TextSeg(term, term = term, bold = bold)
-                else -> TextSeg(term, bold = bold)
+            nextBold -> {
+                val end = s.indexOf("**", next + 2)
+                if (end < 0) {
+                    i = next + 2
+                    continue
+                }
+                appendSegments(
+                    s.substring(next + 2, end),
+                    bold = true,
+                    italic = italic,
+                    out = out,
+                    hasEntry = hasEntry,
+                )
+                i = end + 2
             }
-            i = end + 2
-        } else {
-            val end = s.indexOf("**", next + 2)
-            if (end < 0) {
-                i = next + 2
-                continue
+            else -> {
+                val end = indexOfItalicMarker(s, next + 1)
+                if (end < 0) {
+                    i = next + 1
+                    continue
+                }
+                appendSegments(
+                    s.substring(next + 1, end),
+                    bold = bold,
+                    italic = true,
+                    out = out,
+                    hasEntry = hasEntry,
+                )
+                i = end + 1
             }
-            appendSegments(s.substring(next + 2, end), bold = true, out = out, hasEntry = hasEntry)
-            i = end + 2
         }
     }
+}
+
+/** A lone `*`: an asterisk with no asterisk either side, so `**bold**` is left to its own rule. */
+private fun indexOfItalicMarker(s: String, from: Int): Int {
+    var i = from
+    while (i < s.length) {
+        val at = s.indexOf('*', i)
+        if (at < 0) return -1
+        val doubled = (at > 0 && s[at - 1] == '*') || (at + 1 < s.length && s[at + 1] == '*')
+        if (!doubled) return at
+        // Skip the whole run of asterisks, not just this one.
+        var j = at
+        while (j < s.length && s[j] == '*') j++
+        i = j
+    }
+    return -1
 }

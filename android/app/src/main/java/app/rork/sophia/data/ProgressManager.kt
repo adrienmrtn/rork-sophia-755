@@ -117,16 +117,27 @@ class ProgressManager(context: Context) {
         mutate { current ->
             val map = current.courseProgress.toMutableMap()
             val existing = map[courseId] ?: CourseProgress()
-            map[courseId] = existing.copy(lastLessonIndex = maxOf(existing.lastLessonIndex, index))
+            map[courseId] = existing.copy(
+                lastLessonIndex = maxOf(existing.lastLessonIndex, index),
+                // First page reached is when this course became "in progress".
+                startedAt = existing.startedAt ?: nowIso(),
+            )
             current.copy(courseProgress = map)
         }
     }
+
+    private fun nowIso(): String = Instant.now().toString()
 
     fun markCourseCompleted(courseId: String) {
         mutate { current ->
             val map = current.courseProgress.toMutableMap()
             val existing = map[courseId] ?: CourseProgress()
-            map[courseId] = existing.copy(isCompleted = true)
+            map[courseId] = existing.copy(
+                isCompleted = true,
+                startedAt = existing.startedAt ?: nowIso(),
+                // Kept from the first completion: re-reading a course does not make it new.
+                completedAt = existing.completedAt ?: nowIso(),
+            )
             val awarded = current.globalCourseXPAwardedIds.toMutableList()
             var globalXP = current.globalXP
             var pending = current.pendingGlobalRankUp
@@ -162,7 +173,9 @@ class ProgressManager(context: Context) {
             map[courseId] = existing.copy(
                 isCompleted = true,
                 bestQuizScore = maxOf(existing.bestQuizScore, score),
-                lastQuizDate = Instant.now().toString(),
+                lastQuizDate = nowIso(),
+                startedAt = existing.startedAt ?: nowIso(),
+                completedAt = existing.completedAt ?: nowIso(),
             )
             val completedQuizzes = current.completedQuizCourseIds.toMutableList()
             if (courseId !in completedQuizzes) completedQuizzes.add(courseId)
@@ -268,6 +281,27 @@ class ProgressManager(context: Context) {
         out
     }
 
+    /**
+     * Drops a streak that the calendar has already broken.
+     *
+     * [bumpStreak] only ever runs when a course is completed, so a user who stopped two
+     * weeks ago kept seeing "12 days" on home and in their profile until they finished
+     * something. Call this on launch and whenever the app comes back to the foreground —
+     * the day can turn while the process is alive. Parity with the iOS `updateStreak`.
+     */
+    fun refreshStreak() {
+        mutate { current ->
+            val last = current.lastActiveDate ?: return@mutate current
+            val today = today()
+            if (last == today) return@mutate current
+            val yesterday = LocalDate.now().minusDays(1).format(DateTimeFormatter.ISO_LOCAL_DATE)
+            // Active yesterday: the streak is alive and today can still extend it.
+            if (last == yesterday) return@mutate current
+            if (current.streak == 0) return@mutate current
+            current.copy(streak = 0)
+        }
+    }
+
     private fun bumpStreak(current: UserProgress): Int {
         val today = today()
         val last = current.lastActiveDate
@@ -367,14 +401,23 @@ class ProgressManager(context: Context) {
             progress.courseProgress[id]?.isCompleted == true
         }
 
+    /**
+     * Collections that moved forward because [newlyCompletedCourseId] was completed.
+     *
+     * The previous count is read from what was actually celebrated, not assumed to be one
+     * less than the current one: finishing or skipping the quiz of an already-completed
+     * course marks it complete again, and the old assumption replayed the whole collection
+     * celebration every time. Calling this records the new count, so it is celebrated once.
+     */
     fun collectionProgressEvents(
         newlyCompletedCourseId: String,
         collections: List<LearningCollection>,
     ): List<CollectionProgressEvent> {
-        return collections.mapNotNull { collection ->
+        val celebrated = _progress.value.celebratedCollectionCounts
+        val events = collections.mapNotNull { collection ->
             if (newlyCompletedCourseId !in collection.courseIds) return@mapNotNull null
             val newCount = completedCount(collection)
-            val previousCount = (newCount - 1).coerceAtLeast(0)
+            val previousCount = celebrated[collection.id] ?: (newCount - 1).coerceAtLeast(0)
             if (newCount <= previousCount) return@mapNotNull null
             CollectionProgressEvent(
                 collection = collection,
@@ -383,6 +426,14 @@ class ProgressManager(context: Context) {
                 totalCount = collection.courseIds.size,
             )
         }
+        if (events.isNotEmpty()) {
+            mutate { current ->
+                val counts = current.celebratedCollectionCounts.toMutableMap()
+                events.forEach { counts[it.collection.id] = it.newCompletedCount }
+                current.copy(celebratedCollectionCounts = counts)
+            }
+        }
+        return events
     }
 
     fun awardCollectionCompletionXpIfNeeded(collection: LearningCollection) {

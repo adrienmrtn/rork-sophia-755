@@ -197,9 +197,7 @@ fun HomeTikTokScreen(
             } else if (cards.isEmpty()) {
                 Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
                     Text(
-                        text = StringStore.text(context, "home.allCaughtUp", language)
-                            .takeIf { it != "home.allCaughtUp" }
-                            ?: "Tous les cours sont faits — bravo !",
+                        text = StringStore.text(context, "home.allCaughtUp", language),
                         fontFamily = PlusJakartaSans,
                         color = DS.ink,
                     )
@@ -440,8 +438,7 @@ private fun TikTokCourseCard(
             overflow = TextOverflow.Ellipsis,
         )
         SophiaPrimaryButton(
-            text = StringStore.text(context, "home.start", language)
-                .takeIf { it != "home.start" } ?: "Commencer",
+            text = StringStore.text(context, "home.start", language),
             onClick = onStart,
             leadingIcon = Icons.Filled.PlayArrow,
         )

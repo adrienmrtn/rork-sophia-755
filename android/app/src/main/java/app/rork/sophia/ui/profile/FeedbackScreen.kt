@@ -220,7 +220,15 @@ fun FeedbackScreen(
                         sent = true
                     } else {
                         app.analytics.trackFeedbackFailed(category)
-                        error = StringStore.text(context, "feedback.error.generic", language)
+                        // The message stays in the field either way: a rejected email is a
+                        // reason to fix one line, not to retype the whole report.
+                        val badEmail = (result.exceptionOrNull() as? IllegalArgumentException)
+                            ?.message == "email"
+                        error = StringStore.text(
+                            context,
+                            if (badEmail) "feedback.error.email" else "feedback.error.generic",
+                            language,
+                        )
                     }
                 }
             },

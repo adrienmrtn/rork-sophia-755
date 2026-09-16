@@ -1,5 +1,6 @@
 package app.rork.sophia.ui.onboarding
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
@@ -15,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -22,6 +24,9 @@ import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.Saver
+import androidx.compose.runtime.saveable.listSaver
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -79,6 +84,27 @@ private val DOT_STEPS = listOf(
     OnboardingStep.Loading,
 )
 
+/** Saves the step by name, so a reordering of the enum cannot restore a different page. */
+private val OnboardingStepSaver: Saver<OnboardingStep, String> = Saver(
+    save = { it.name },
+    restore = { name -> runCatching { OnboardingStep.valueOf(name) }.getOrNull() },
+)
+
+/**
+ * The page back should land on. Mostly the declaration order, with the two branches the
+ * forward flow can skip: the notifications page is not shown once the permission is settled,
+ * and the trial explanation is skipped when the served product has no trial. Going back
+ * through a page that was never shown would strand the user on a dead end.
+ */
+private fun previousStep(step: OnboardingStep, showsTrialSteps: Boolean): OnboardingStep? = when (step) {
+    OnboardingStep.Welcome -> null
+    // The paywall is the end of the flow; its own close button decides what "leaving" means.
+    OnboardingStep.Paywall -> null
+    OnboardingStep.Reminder -> if (showsTrialSteps) OnboardingStep.Trial else OnboardingStep.Login
+    OnboardingStep.Trial -> OnboardingStep.Login
+    else -> OnboardingStep.entries.getOrNull(step.ordinal - 1)
+}
+
 @Composable
 fun OnboardingV2Screen(
     language: AppLanguage,
@@ -91,11 +117,31 @@ fun OnboardingV2Screen(
     val isPremium by storeViewModel.isPremium.collectAsState()
     // Blur and long infinite animations are dropped on Go phones and emulators.
     val richMotion = remember { !DeviceCapabilities.isConstrained(context) }
-    var step by remember { mutableStateOf(OnboardingStep.Welcome) }
-    var selectedObjectives by remember { mutableStateOf(setOf<String>()) }
-    var phoneMinutes by remember { mutableIntStateOf(180) }
-    var likedCourseIds by remember { mutableStateOf(listOf<String>()) }
-    var sawPaywall by remember { mutableStateOf(false) }
+    // rememberSaveable, not remember: rotating the phone, switching theme or changing the
+    // font size recreates the activity, and plain `remember` sent the user back to the
+    // welcome page having lost every answer. The enum is saved by name so reordering the
+    // steps later cannot resurrect the wrong one.
+    var step by rememberSaveable(stateSaver = OnboardingStepSaver) {
+        mutableStateOf(
+            app.onboardingStore.lastStep()
+                ?.let { name -> runCatching { OnboardingStep.valueOf(name) }.getOrNull() }
+                ?: OnboardingStep.Welcome,
+        )
+    }
+    var selectedObjectives by rememberSaveable(
+        saver = listSaver<MutableState<Set<String>>, String>(
+            save = { it.value.toList() },
+            restore = { mutableStateOf(it.toSet()) },
+        ),
+    ) { mutableStateOf(setOf()) }
+    var phoneMinutes by rememberSaveable { mutableIntStateOf(180) }
+    var likedCourseIds by rememberSaveable(
+        saver = listSaver<MutableState<List<String>>, String>(
+            save = { it.value },
+            restore = { mutableStateOf(it) },
+        ),
+    ) { mutableStateOf(listOf()) }
+    var sawPaywall by rememberSaveable { mutableStateOf(false) }
     var lastAdvanceAt by remember { mutableLongStateOf(0L) }
     var signingIn by remember { mutableStateOf(false) }
     var signInError by remember { mutableStateOf<String?>(null) }
@@ -115,6 +161,8 @@ fun OnboardingV2Screen(
     LaunchedEffect(Unit) { app.analytics.trackOnboardingStarted() }
     LaunchedEffect(step) {
         app.analytics.trackOnboardingStep(step.ordinal, step.analyticsName)
+        // Killing the app mid-onboarding used to restart the whole flow, answers and all.
+        app.onboardingStore.rememberStep(step.name)
     }
     // Warm the home feed + glossary during paywall so arriving on TikTok home is instant.
     LaunchedEffect(step, language) {
@@ -186,6 +234,16 @@ fun OnboardingV2Screen(
     LaunchedEffect(language) {
         swipeCourses = ContentCatalog.summariesAsync(context.applicationContext, language).shuffled().take(5)
         swipeReady = true
+    }
+
+    // Back walks the flow backwards. The welcome page is the one place with nothing behind
+    // it, so there the system default (leave the app) is the right answer.
+    BackHandler(enabled = step != OnboardingStep.Welcome) {
+        val previous = previousStep(step, storeViewModel.shouldShowTrialSteps())
+        if (previous != null) {
+            lastAdvanceAt = System.currentTimeMillis()
+            step = previous
+        }
     }
 
     Box(modifier = Modifier.fillMaxSize().background(DS.canvas)) {

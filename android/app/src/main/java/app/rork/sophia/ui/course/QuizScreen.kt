@@ -1,5 +1,6 @@
 package app.rork.sophia.ui.course
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -50,6 +51,7 @@ import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
+import app.rork.sophia.domain.formatted
 import app.rork.sophia.domain.QuizAnswer
 import app.rork.sophia.domain.QuizQuestionType
 import app.rork.sophia.domain.QuizScoring
@@ -59,8 +61,9 @@ import app.rork.sophia.ui.components.AnswerOptionRow
 import app.rork.sophia.ui.components.AnswerState
 import app.rork.sophia.ui.components.CalmProgressBar
 import app.rork.sophia.ui.components.CircleIconButton
+import app.rork.sophia.ui.components.OrderingAnswerControl
 import app.rork.sophia.ui.components.QuizFeedbackPanel
-import app.rork.sophia.ui.components.SectionLabel
+import app.rork.sophia.ui.components.SliderAnswerCard
 import app.rork.sophia.ui.components.SophiaPrimaryButton
 import app.rork.sophia.ui.components.SophiaSecondaryButton
 import app.rork.sophia.ui.components.optionLetter
@@ -144,13 +147,21 @@ fun QuizScreen(
         selected = null
         hasAnswered = false
         lastPoints = 0
-        sliderValue = (q.sliderMin + q.sliderMax) / 2.0
+        sliderValue = q.snapToStep((q.sliderMin + q.sliderMax) / 2.0)
         chronoSlots.clear()
         chronoPool.clear()
         if (q.type == QuizQuestionType.CHRONOLOGICAL) {
             chronoSlots.addAll(List(q.items.size) { null })
             chronoPool.addAll(q.items.indices)
         }
+    }
+
+    // Question 1 only ever got the defaults of the `remember` blocks: a slider pinned at 0
+    // even when the range started elsewhere, and — worse — an ordering question with no
+    // slots and no items to place, which could not be answered at all. Only questions 2
+    // onwards went through resetForQuestion.
+    LaunchedEffect(questions.size) {
+        if (questions.isNotEmpty()) resetForQuestion(index)
     }
 
     if (questions.isEmpty()) {
@@ -168,8 +179,7 @@ fun QuizScreen(
             )
             Spacer(Modifier.height(24.dp))
             SophiaPrimaryButton(
-                text = StringStore.text(context, "course.finish", language)
-                    .takeIf { it != "course.finish" } ?: "Terminer",
+                text = StringStore.text(context, "course.finish", language),
                 onClick = onFinished,
             )
         }
@@ -200,6 +210,11 @@ fun QuizScreen(
         )
         return
     }
+
+    // Back leaves the quiz rather than the app. Mid-quiz it is the same exit the close
+    // button offers: answers are scored as they are validated, so nothing is lost that
+    // was not already lost.
+    BackHandler { onDismiss() }
 
     val q = questions[index]
     val canValidate = when (q.type) {
@@ -266,98 +281,21 @@ fun QuizScreen(
                         }
                     }
                 }
-                QuizQuestionType.CHRONOLOGICAL -> {
-                    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                        Text(
-                            text = StringStore.text(context, "quiz.chronological.instruction", language),
-                            style = SophiaTypography.bodyMedium,
-                        )
-                        chronoSlots.forEachIndexed { slot, displayIdx ->
-                            ChronoSlot(
-                                position = slot + 1,
-                                label = displayIdx?.let { q.items.getOrNull(it) },
-                                placeholder = StringStore.text(context, "quiz.chronological.emptySlot", language),
-                                enabled = !hasAnswered && displayIdx != null,
-                                onClick = {
-                                    displayIdx?.let {
-                                        chronoPool.add(it)
-                                        chronoSlots[slot] = null
-                                    }
-                                },
-                            )
-                        }
-                        if (chronoPool.isNotEmpty()) {
-                            Spacer(Modifier.height(2.dp))
-                            SectionLabel(StringStore.text(context, "quiz.chronological.remaining", language))
-                            chronoPool.toList().forEach { displayIdx ->
-                                AnswerOptionRow(
-                                    letter = "•",
-                                    text = q.items[displayIdx],
-                                    state = AnswerState.Idle,
-                                    enabled = !hasAnswered,
-                                    onClick = {
-                                        val empty = chronoSlots.indexOfFirst { it == null }
-                                        if (empty >= 0) {
-                                            chronoSlots[empty] = displayIdx
-                                            chronoPool.remove(displayIdx)
-                                        }
-                                    },
-                                )
-                            }
-                        }
-                    }
-                }
-                QuizQuestionType.NUMERIC_SLIDER, QuizQuestionType.PERCENTAGE_SLIDER -> {
-                    Column(
-                        modifier = Modifier.fillMaxWidth().sophiaCard().padding(DS.Space.l),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                    ) {
-                        Text(
-                            text = "${sliderValue.toInt()}${q.unit}",
-                            fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.ExtraBold,
-                            fontSize = 40.sp,
-                            color = DS.ink,
-                        )
-                        Slider(
-                            value = sliderValue.toFloat(),
-                            onValueChange = { if (!hasAnswered) sliderValue = it.toDouble() },
-                            valueRange = q.sliderMin.toFloat()..q.sliderMax.toFloat(),
-                            colors = SliderDefaults.colors(
-                                thumbColor = DS.accent,
-                                activeTrackColor = DS.accent,
-                                inactiveTrackColor = DS.hairline,
-                            ),
-                        )
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                        ) {
-                            Text("${q.sliderMin.toInt()}${q.unit}", style = SophiaTypography.labelMedium)
-                            Text("${q.sliderMax.toInt()}${q.unit}", style = SophiaTypography.labelMedium)
-                        }
-                        if (hasAnswered) {
-                            Spacer(Modifier.height(12.dp))
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.spacedBy(10.dp),
-                            ) {
-                                ResultPill(
-                                    label = StringStore.text(context, "quiz.slider.yourGuess", language),
-                                    value = "${sliderValue.toInt()}${q.unit}",
-                                    tint = DS.inkSecondary,
-                                    modifier = Modifier.weight(1f),
-                                )
-                                ResultPill(
-                                    label = StringStore.text(context, "quiz.slider.correctAnswer", language),
-                                    value = "${q.correctValue.toInt()}${q.unit}",
-                                    tint = DS.success,
-                                    modifier = Modifier.weight(1f),
-                                )
-                            }
-                        }
-                    }
-                }
+                QuizQuestionType.CHRONOLOGICAL -> OrderingAnswerControl(
+                    question = q,
+                    language = language,
+                    slots = chronoSlots,
+                    pool = chronoPool,
+                    answered = hasAnswered,
+                )
+                QuizQuestionType.NUMERIC_SLIDER, QuizQuestionType.PERCENTAGE_SLIDER ->
+                    SliderAnswerCard(
+                        question = q,
+                        language = language,
+                        value = sliderValue,
+                        onValueChange = { sliderValue = it },
+                        answered = hasAnswered,
+                    )
             }
             Spacer(Modifier.height(8.dp))
         }
@@ -375,7 +313,6 @@ fun QuizScreen(
                     StringStore.text(context, "training.finish", language)
                 } else {
                     StringStore.text(context, "course.continue", language)
-                        .takeIf { it != "course.continue" } ?: "Continuer"
                 },
                 onContinue = {
                     if (index + 1 >= questions.size) {
@@ -389,8 +326,7 @@ fun QuizScreen(
         } else {
             Box(modifier = Modifier.padding(horizontal = DS.Space.l, vertical = 16.dp)) {
                 SophiaPrimaryButton(
-                    text = StringStore.text(context, "quiz.validate", language)
-                        .takeIf { it != "quiz.validate" } ?: "Valider",
+                    text = StringStore.text(context, "quiz.validate", language),
                     enabled = canValidate,
                     onClick = {
                         val answer = when (q.type) {
@@ -520,64 +456,4 @@ private fun QuizResults(
     }
 }
 
-@Composable
-private fun ChronoSlot(
-    position: Int,
-    label: String?,
-    placeholder: String,
-    enabled: Boolean,
-    onClick: () -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .heightIn(min = 56.dp)
-            .clip(DS.controlShape)
-            .background(if (label == null) DS.surfaceMuted else DS.surface)
-            .border(1.dp, DS.hairline, DS.controlShape)
-            .then(if (enabled) Modifier.clickable(onClick = onClick) else Modifier)
-            .padding(horizontal = 14.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        Box(
-            modifier = Modifier.size(28.dp).clip(CircleShape).background(DS.accentTint),
-            contentAlignment = Alignment.Center,
-        ) {
-            Text(
-                text = "$position",
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 13.sp,
-                color = DS.accentSoft,
-            )
-        }
-        Text(
-            text = label ?: placeholder,
-            style = SophiaTypography.bodyLarge.copy(
-                color = if (label == null) DS.inkTertiary else DS.ink,
-            ),
-        )
-    }
-}
 
-@Composable
-private fun ResultPill(label: String, value: String, tint: Color, modifier: Modifier = Modifier) {
-    Column(
-        modifier = modifier
-            .clip(DS.controlShape)
-            .background(DS.surfaceMuted)
-            .padding(vertical = 10.dp, horizontal = 12.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
-        SectionLabel(label)
-        Spacer(Modifier.height(4.dp))
-        Text(
-            text = value,
-            fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 15.sp,
-            color = tint,
-        )
-    }
-}

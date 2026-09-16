@@ -9,7 +9,21 @@ class OnboardingStore(context: Context) {
         get() = prefs.getBoolean(KEY, false)
 
     fun markCompleted() {
-        prefs.edit().putBoolean(KEY, true).apply()
+        prefs.edit().putBoolean(KEY, true).remove(KEY_STEP).apply()
+    }
+
+    /**
+     * The onboarding page the user last reached, by enum name, or null on a first run.
+     *
+     * Closing the app halfway through used to drop every answer and start again at the
+     * welcome page — a flow with eighteen pages that has to be redone from scratch is a flow
+     * people abandon. Stored by name rather than index so reordering the pages later cannot
+     * resume someone onto a different one.
+     */
+    fun lastStep(): String? = prefs.getString(KEY_STEP, null)
+
+    fun rememberStep(name: String) {
+        prefs.edit().putString(KEY_STEP, name).apply()
     }
 
     /**
@@ -42,6 +56,7 @@ class OnboardingStore(context: Context) {
 
     companion object {
         private const val KEY = "sophia_onboarding_completed"
+        private const val KEY_STEP = "sophia_onboarding_step"
         private const val KEY_SKIPPED_ACCOUNT = "sophia_onboarding_skipped_account"
         private const val KEY_ACCOUNT_PROMPTED = "sophia_account_prompted"
     }

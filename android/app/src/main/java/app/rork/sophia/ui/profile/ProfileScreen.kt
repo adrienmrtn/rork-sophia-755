@@ -249,7 +249,8 @@ fun ProfileScreen(
                 FriendsLeaderboardSection(
                     language = language,
                     period = period,
-                    leaderboard = leaderboard.take(5),
+                    leaderboard = leaderboard,
+                    maxRows = 5,
                     onPeriodChange = {
                         app.socialService.setPeriod(it)
                         scope.launch { app.socialService.refreshLeaderboard() }

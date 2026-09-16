@@ -24,8 +24,11 @@ import androidx.compose.material.icons.filled.VerifiedUser
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
@@ -57,6 +60,8 @@ import app.rork.sophia.ui.components.AnswerState
 import app.rork.sophia.ui.components.CalmProgressBar
 import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.FirstOpenExplanation
+import app.rork.sophia.ui.components.OrderingAnswerControl
+import app.rork.sophia.ui.components.SliderAnswerCard
 import app.rork.sophia.ui.components.QuizFeedbackPanel
 import app.rork.sophia.ui.components.SophiaPrimaryButton
 import app.rork.sophia.ui.components.optionLetter
@@ -252,6 +257,26 @@ private fun TrainingSession(
     var lastCorrect by remember { mutableStateOf(false) }
     var correctCount by remember { mutableIntStateOf(0) }
     var finished by remember { mutableStateOf(false) }
+    var sliderValue by remember { mutableDoubleStateOf(0.0) }
+    val orderSlots = remember { mutableStateListOf<Int?>() }
+    val orderPool = remember { mutableStateListOf<Int>() }
+
+    fun resetForQuestion(i: Int) {
+        val q = shuffled[i].second
+        selected = null
+        answered = false
+        sliderValue = q.snapToStep((q.sliderMin + q.sliderMax) / 2.0)
+        orderSlots.clear()
+        orderPool.clear()
+        if (q.type == QuizQuestionType.CHRONOLOGICAL) {
+            orderSlots.addAll(List(q.items.size) { null })
+            orderPool.addAll(q.items.indices)
+        }
+    }
+
+    LaunchedEffect(shuffled) {
+        if (shuffled.isNotEmpty()) resetForQuestion(index)
+    }
 
     if (finished) {
         Column(
@@ -282,7 +307,13 @@ private fun TrainingSession(
     }
 
     val (course, q) = shuffled[index]
-    val interactive = q.type == QuizQuestionType.MCQ || q.type == QuizQuestionType.TRUE_FALSE
+    // Every question type is answerable here now, so "can we score yet?" replaces the old
+    // "is this one of the two types we render?".
+    val canValidate = when (q.type) {
+        QuizQuestionType.MCQ, QuizQuestionType.TRUE_FALSE -> selected != null
+        QuizQuestionType.CHRONOLOGICAL -> orderSlots.isNotEmpty() && orderSlots.none { it == null }
+        QuizQuestionType.NUMERIC_SLIDER, QuizQuestionType.PERCENTAGE_SLIDER -> true
+    }
 
     Column(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
         Row(
@@ -322,29 +353,41 @@ private fun TrainingSession(
                 Text(text = q.question, style = SophiaTypography.titleMedium.copy(fontSize = 20.sp))
             }
 
-            if (interactive) {
-                Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                    q.options.forEachIndexed { i, option ->
-                        AnswerOptionRow(
-                            letter = optionLetter(i),
-                            text = option,
-                            state = when {
-                                answered && i == q.correctIndex -> AnswerState.Correct
-                                answered && selected == i -> AnswerState.Wrong
-                                answered -> AnswerState.Dimmed
-                                selected == i -> AnswerState.Selected
-                                else -> AnswerState.Idle
-                            },
-                            enabled = !answered,
-                            onClick = { selected = i },
-                        )
+            when (q.type) {
+                QuizQuestionType.MCQ, QuizQuestionType.TRUE_FALSE -> {
+                    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                        q.options.forEachIndexed { i, option ->
+                            AnswerOptionRow(
+                                letter = optionLetter(i),
+                                text = option,
+                                state = when {
+                                    answered && i == q.correctIndex -> AnswerState.Correct
+                                    answered && selected == i -> AnswerState.Wrong
+                                    answered -> AnswerState.Dimmed
+                                    selected == i -> AnswerState.Selected
+                                    else -> AnswerState.Idle
+                                },
+                                enabled = !answered,
+                                onClick = { selected = i },
+                            )
+                        }
                     }
                 }
-            } else {
-                Text(
-                    text = StringStore.text(context, "quiz.slider.validate", language),
-                    style = SophiaTypography.bodyMedium,
+                QuizQuestionType.CHRONOLOGICAL -> OrderingAnswerControl(
+                    question = q,
+                    language = language,
+                    slots = orderSlots,
+                    pool = orderPool,
+                    answered = answered,
                 )
+                QuizQuestionType.NUMERIC_SLIDER, QuizQuestionType.PERCENTAGE_SLIDER ->
+                    SliderAnswerCard(
+                        question = q,
+                        language = language,
+                        value = sliderValue,
+                        onValueChange = { sliderValue = it },
+                        answered = answered,
+                    )
             }
             Spacer(Modifier.height(8.dp))
         }
@@ -362,32 +405,31 @@ private fun TrainingSession(
                     StringStore.text(context, "training.finish", language)
                 } else {
                     StringStore.text(context, "course.continue", language)
-                        .takeIf { it != "course.continue" } ?: "Continuer"
                 },
                 onContinue = {
                     if (index + 1 >= shuffled.size) {
                         finished = true
                     } else {
                         index += 1
-                        selected = null
-                        answered = false
+                        resetForQuestion(index)
                     }
                 },
             )
         } else {
             Box(modifier = Modifier.padding(horizontal = DS.Space.l, vertical = 16.dp)) {
                 SophiaPrimaryButton(
-                    text = StringStore.text(context, "quiz.validate", language)
-                        .takeIf { it != "quiz.validate" } ?: "Valider",
-                    enabled = !interactive || selected != null,
+                    text = StringStore.text(context, "quiz.validate", language),
+                    enabled = canValidate,
                     onClick = {
                         val answer = when (q.type) {
                             QuizQuestionType.MCQ, QuizQuestionType.TRUE_FALSE ->
                                 QuizAnswer.SingleChoice(selected ?: return@SophiaPrimaryButton)
                             QuizQuestionType.NUMERIC_SLIDER, QuizQuestionType.PERCENTAGE_SLIDER ->
-                                QuizAnswer.Value((q.sliderMin + q.sliderMax) / 2)
-                            QuizQuestionType.CHRONOLOGICAL ->
-                                QuizAnswer.Order(q.items.indices.toList())
+                                QuizAnswer.Value(sliderValue)
+                            QuizQuestionType.CHRONOLOGICAL -> {
+                                if (orderSlots.any { it == null }) return@SophiaPrimaryButton
+                                QuizAnswer.Order(orderSlots.filterNotNull())
+                            }
                         }
                         val ok = QuizScoring.isFullyCorrect(q, answer)
                         lastCorrect = ok
