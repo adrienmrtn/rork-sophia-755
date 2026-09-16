@@ -856,5 +856,19 @@
   "course.quiz": "Quiz",
   "home.allCaughtUp": "Every course done — well played!",
   "friends.handle.saved": "Your @ has been saved.",
-  "feedback.error.email": "This email address looks wrong. Correct it, or leave the field empty."
+  "feedback.error.email": "This email address looks wrong. Correct it, or leave the field empty.",
+  "settings.courses.completed.one": "%d course completed",
+  "settings.courses.completed.other": "%d courses completed",
+  "subject.courses.count.one": "%d course",
+  "subject.courses.count.other": "%d courses",
+  "profile.favorites.count.one": "%d saved course",
+  "profile.favorites.count.other": "%d saved courses",
+  "training.dueCount.one": "%d question to review today",
+  "training.dueCount.other": "%d questions to review today",
+  "settings.streak.title.one": "%d-day streak",
+  "settings.streak.title.other": "%d-day streak",
+  "favorites.badge.count.one": "%d COURSE",
+  "favorites.badge.count.other": "%d COURSES",
+  "onboardingV2.weeks.title.one": "That's %d week a year",
+  "onboardingV2.weeks.title.other": "That's %d weeks a year"
 }

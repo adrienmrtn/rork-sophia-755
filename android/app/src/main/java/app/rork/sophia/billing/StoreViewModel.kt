@@ -7,6 +7,7 @@ import app.rork.sophia.AppConfig
 import app.rork.sophia.BuildConfig
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.TrialReminderScheduler
+import app.rork.sophia.domain.locale
 import com.revenuecat.purchases.CustomerInfo
 import com.revenuecat.purchases.LogLevel
 import com.revenuecat.purchases.EntitlementInfo
@@ -254,7 +255,11 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         val price = pkg?.product?.price ?: return fallbackYearly
         val monthlyMicros = price.amountMicros / 12.0
         return try {
-            val format = NumberFormat.getCurrencyInstance(Locale.getDefault())
+            // Formatted for the language the user reads the paywall in. The device locale
+            // put Arabic-Indic digits in a French price on an Arabic phone.
+            val appLanguage = (getApplication() as? SophiaApplication)
+                ?.languageManager?.current?.value
+            val format = NumberFormat.getCurrencyInstance(appLanguage?.locale ?: Locale.getDefault())
             format.currency = Currency.getInstance(price.currencyCode)
             format.format(monthlyMicros / 1_000_000.0)
         } catch (_: Exception) {

@@ -66,6 +66,7 @@ import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.uppercaseInApp
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.delay
@@ -631,7 +632,7 @@ fun DiscountCountdownChip(label: String, time: String) {
     ) {
         Text("🔥", fontSize = 14.sp)
         Text(
-            text = label.uppercase(),
+            text = label.uppercaseInApp(),
             fontFamily = PlusJakartaSans,
             fontWeight = FontWeight.Bold,
             fontSize = 11.sp,

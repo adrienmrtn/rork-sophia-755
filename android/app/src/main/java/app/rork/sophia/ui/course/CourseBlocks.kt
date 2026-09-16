@@ -42,6 +42,7 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.ui.components.RichTextWithGlossary
 import app.rork.sophia.ui.components.inlineRichText
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.uppercaseInApp
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 import coil.compose.AsyncImage
@@ -306,7 +307,7 @@ private fun QuoteBlock(block: ReaderBlock.Quote, prose: Color) {
         block.attribution?.let { attribution ->
             Spacer(Modifier.height(10.dp))
             Text(
-                text = attribution.uppercase(),
+                text = attribution.uppercaseInApp(),
                 fontFamily = PlusJakartaSans,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 12.sp,
@@ -341,7 +342,7 @@ private fun CalloutCard(
                 modifier = Modifier.size(14.dp),
             )
             Text(
-                text = label.uppercase(),
+                text = label.uppercaseInApp(),
                 fontFamily = PlusJakartaSans,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 11.sp,

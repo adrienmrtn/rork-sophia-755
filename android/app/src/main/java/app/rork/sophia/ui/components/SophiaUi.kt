@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.uppercaseInApp
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 
@@ -160,7 +161,7 @@ fun SophiaSecondaryButton(
 @Composable
 fun SectionLabel(text: String, modifier: Modifier = Modifier, color: Color = DS.inkTertiary) {
     Text(
-        text = text.uppercase(),
+        text = text.uppercaseInApp(),
         fontFamily = PlusJakartaSans,
         fontWeight = FontWeight.SemiBold,
         fontSize = 11.sp,
@@ -257,7 +258,7 @@ fun Pill(
     uppercase: Boolean = false,
 ) {
     Text(
-        text = if (uppercase) text.uppercase() else text,
+        text = if (uppercase) text.uppercaseInApp() else text,
         fontFamily = PlusJakartaSans,
         fontWeight = FontWeight.SemiBold,
         fontSize = 11.sp,

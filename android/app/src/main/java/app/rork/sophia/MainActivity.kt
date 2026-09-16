@@ -9,6 +9,7 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -34,7 +35,11 @@ class MainActivity : ComponentActivity() {
         deepLinkCourseId = courseIdFromIntent(intent)
         observeForeground()
         setContent {
-            SophiaTheme {
+            // The theme needs the language to pick a font family whose script the user can
+            // actually read, so it is resolved above the tree rather than inside it.
+            val language by (application as SophiaApplication).languageManager.current
+                .collectAsState()
+            SophiaTheme(language = language) {
                 SophiaRoot(
                     storeViewModel = storeViewModel,
                     deepLinkCourseId = deepLinkCourseId,

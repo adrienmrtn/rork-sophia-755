@@ -10,23 +10,31 @@ import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
@@ -49,6 +57,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.ui.theme.DS
@@ -73,48 +82,48 @@ object OV2 {
     val danger = Color(0xFFDB5A5C)
     val success = DS.success
 
-    val title = TextStyle(
-        fontFamily = PlusJakartaSans,
-        fontWeight = FontWeight.ExtraBold,
-        fontSize = 27.sp,
-        lineHeight = 34.sp,
-        color = DS.ink,
-    )
-    val titleLarge = TextStyle(
-        fontFamily = PlusJakartaSans,
-        fontWeight = FontWeight.ExtraBold,
-        fontSize = 34.sp,
-        lineHeight = 40.sp,
-        color = DS.ink,
-    )
-    val headline = TextStyle(
-        fontFamily = PlusJakartaSans,
-        fontWeight = FontWeight.Bold,
-        fontSize = 17.sp,
-        lineHeight = 23.sp,
-        color = DS.ink,
-    )
-    val body = TextStyle(
-        fontFamily = PlusJakartaSans,
-        fontWeight = FontWeight.Medium,
-        fontSize = 16.sp,
-        lineHeight = 23.sp,
-        color = DS.inkSecondary,
-    )
-    val subheadline = TextStyle(
-        fontFamily = PlusJakartaSans,
-        fontWeight = FontWeight.Medium,
-        fontSize = 15.sp,
-        lineHeight = 21.sp,
-        color = DS.inkSecondary,
-    )
-    val caption = TextStyle(
-        fontFamily = PlusJakartaSans,
-        fontWeight = FontWeight.SemiBold,
-        fontSize = 13.sp,
-        color = DS.inkSecondary,
-    )
+    // Composable getters: the family is resolved from the composition, so a Russian, Greek
+    // or Hebrew reader gets one consistent typeface rather than Jakarta punctuation around
+    // system-fallback letters.
+    val title: TextStyle
+        @Composable @ReadOnlyComposable
+        get() = ov2Style(FontWeight.ExtraBold, 27.sp, 34.sp, DS.ink)
+
+    val titleLarge: TextStyle
+        @Composable @ReadOnlyComposable
+        get() = ov2Style(FontWeight.ExtraBold, 34.sp, 40.sp, DS.ink)
+
+    val headline: TextStyle
+        @Composable @ReadOnlyComposable
+        get() = ov2Style(FontWeight.Bold, 17.sp, 23.sp, DS.ink)
+
+    val body: TextStyle
+        @Composable @ReadOnlyComposable
+        get() = ov2Style(FontWeight.Medium, 16.sp, 23.sp, DS.inkSecondary)
+
+    val subheadline: TextStyle
+        @Composable @ReadOnlyComposable
+        get() = ov2Style(FontWeight.Medium, 15.sp, 21.sp, DS.inkSecondary)
+
+    val caption: TextStyle
+        @Composable @ReadOnlyComposable
+        get() = ov2Style(FontWeight.SemiBold, 13.sp, TextUnit.Unspecified, DS.inkSecondary)
 }
+
+@Composable
+@ReadOnlyComposable
+private fun ov2Style(
+    weight: FontWeight,
+    size: TextUnit,
+    lineHeight: TextUnit,
+    color: Color,
+) = TextStyle(
+    fontFamily = PlusJakartaSans,
+    fontWeight = weight,
+    fontSize = size,
+    lineHeight = lineHeight,
+    color = color,
+)
 
 object OV2Shapes {
     val card = androidx.compose.foundation.shape.RoundedCornerShape(DS.Radius.card)
@@ -169,6 +178,61 @@ fun Modifier.ov2Reveal(delayMillis: Int = 120, yOffset: Dp = 16.dp): Modifier {
         translationY = (1f - progress) * offsetPx
     }
 }
+
+/**
+ * The shape every full-page step should have: a scrolling body with the call to action
+ * pinned below it, inside a column whose width is capped on a tablet.
+ *
+ * Two failures this replaces. A body laid out with `Spacer(weight(1f))` and no scroll simply
+ * pushed the button off the bottom on a small phone at a large font scale — the user could
+ * see the copy and had no way to continue, which ends the onboarding for them. And on a
+ * tablet in landscape the same body stretched the full width, pushing the button hundreds of
+ * points below the fold.
+ *
+ * [contentArrangement] is `Center` by default because most steps are a short block of copy
+ * that should sit in the middle when there is room; a long step passes `Top`.
+ */
+@Composable
+fun OnboardingPage(
+    modifier: Modifier = Modifier,
+    scrollState: ScrollState = rememberScrollState(),
+    contentArrangement: Arrangement.Vertical = Arrangement.Center,
+    footer: @Composable ColumnScope.() -> Unit,
+    content: @Composable ColumnScope.() -> Unit,
+) {
+    Column(
+        modifier = modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .readableWidth()
+                .verticalScroll(scrollState),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = contentArrangement,
+            content = content,
+        )
+        Column(
+            modifier = Modifier.fillMaxWidth().readableWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            content = footer,
+        )
+    }
+}
+
+/**
+ * Caps a column at a comfortable reading width and centres it.
+ *
+ * Sophia is published for iPad and for Android tablets, and its screens are one column of
+ * text: stretched across a 1280pt landscape tablet the onboarding grid grew until its button
+ * sat roughly 450pt below the fold, which is an onboarding nobody can finish — and Apple
+ * tests on iPad during review. 440dp is the width the phone layouts were designed at.
+ */
+fun Modifier.readableWidth(max: Dp = READABLE_WIDTH): Modifier = this.widthIn(max = max)
+
+val READABLE_WIDTH: Dp = 440.dp
 
 /** Full-width capsule CTA with the soft press feedback used across the iOS flow. */
 @Composable

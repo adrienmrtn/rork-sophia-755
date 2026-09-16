@@ -64,6 +64,7 @@ import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.OrderingAnswerControl
 import app.rork.sophia.ui.components.QuizFeedbackPanel
 import app.rork.sophia.ui.components.SliderAnswerCard
+import app.rork.sophia.ui.onboarding.readableWidth
 import app.rork.sophia.ui.components.SophiaPrimaryButton
 import app.rork.sophia.ui.components.SophiaSecondaryButton
 import app.rork.sophia.ui.components.optionLetter
@@ -369,7 +370,11 @@ private fun QuizPremiumGate(
     val context = LocalContext.current
     Box(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
         Column(
-            modifier = Modifier.fillMaxSize().padding(DS.Space.l),
+            modifier = Modifier
+                .fillMaxSize()
+                .readableWidth()
+                .verticalScroll(rememberScrollState())
+                .padding(DS.Space.l),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
@@ -417,10 +422,19 @@ private fun QuizResults(
 ) {
     val context = LocalContext.current
     Column(
-        modifier = Modifier.fillMaxSize().background(DS.canvas).padding(DS.Space.l),
-        verticalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxSize().background(DS.canvas),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .readableWidth()
+                .verticalScroll(rememberScrollState())
+                .padding(DS.Space.l),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
         QuizHero(icon = Icons.Filled.EmojiEvents)
         Spacer(Modifier.height(24.dp))
         Text(
@@ -448,10 +462,11 @@ private fun QuizResults(
             Spacer(Modifier.height(14.dp))
             CalmProgressBar(fraction = if (max == 0) 0f else score.toFloat() / max)
         }
-        Spacer(Modifier.height(28.dp))
+        }
         SophiaPrimaryButton(
             text = StringStore.text(context, "training.finish", language),
             onClick = onFinish,
+            modifier = Modifier.readableWidth().padding(DS.Space.l),
         )
     }
 }

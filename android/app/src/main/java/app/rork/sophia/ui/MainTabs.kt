@@ -11,6 +11,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
@@ -39,6 +40,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
@@ -81,6 +83,12 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 private enum class OverlayScreen { Settings, Friends, Feedback, Ambassador, Terms, Privacy }
+
+/**
+ * Widest the tab content is allowed to get. Sophia's screens are a single column; past this
+ * they stop reading like the design and start reading like a stretched phone app.
+ */
+private val TABLET_CONTENT_WIDTH = 640.dp
 
 @Composable
 fun MainTabs(
@@ -377,9 +385,18 @@ fun MainTabs(
                     }
                 },
             ) { padding ->
+                // On a tablet or a Chromebook every tab stretched edge to edge, so a line of
+                // body text ran the full width of a landscape screen. Capping the content
+                // and centring it keeps the layouts at the width they were designed for; on
+                // a phone the cap is wider than the screen and changes nothing.
+                Box(
+                    modifier = Modifier.fillMaxSize().padding(padding),
+                    contentAlignment = Alignment.TopCenter,
+                ) {
+                val tabModifier = Modifier.widthIn(max = TABLET_CONTENT_WIDTH)
                 when (selectedTab) {
                     0 -> HomeTikTokScreen(
-                        modifier = Modifier.padding(padding),
+                        modifier = tabModifier,
                         language = language,
                         favoriteIds = progress.favoriteCourseIds.toSet(),
                         autoSwipeCourseId = autoSwipeCourseId,
@@ -392,19 +409,19 @@ fun MainTabs(
                         streak = progress.streak,
                     )
                     1 -> LibraryScreen(
-                        modifier = Modifier.padding(padding),
+                        modifier = tabModifier,
                         language = language,
                         progress = progress,
                         onOpenCourse = { openCourseById(it) },
                     )
                     2 -> CollectionsScreen(
-                        modifier = Modifier.padding(padding),
+                        modifier = tabModifier,
                         language = language,
                         progress = progress,
                         onOpenCourse = { openCourseById(it) },
                     )
                     3 -> TrainingScreen(
-                        modifier = Modifier.padding(padding),
+                        modifier = tabModifier,
                         language = language,
                         isPremium = isPremium,
                         progress = progress,
@@ -413,7 +430,7 @@ fun MainTabs(
                         onPremiumUnlocked = { storeViewModel.refresh() },
                     )
                     4 -> ProfileScreen(
-                        modifier = Modifier.padding(padding),
+                        modifier = tabModifier,
                         language = language,
                         progress = progress,
                         isPremium = isPremium,
@@ -425,6 +442,7 @@ fun MainTabs(
                             overlay = OverlayScreen.Friends
                         },
                     )
+                }
                 }
             }
 

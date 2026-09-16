@@ -47,6 +47,7 @@ import app.rork.sophia.ui.components.inlineRichText
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.uppercaseInApp
 import app.rork.sophia.ui.theme.SophiaTypography
 
 @Composable
@@ -113,7 +114,7 @@ fun CollectionsScreen(
                 if (rest.isNotEmpty()) {
                     item(key = "rest-header") {
                         Text(
-                            text = StringStore.text(context, "collections.title", language).uppercase(),
+                            text = StringStore.text(context, "collections.title", language).uppercaseInApp(),
                             style = SophiaTypography.labelMedium,
                             modifier = Modifier.padding(top = 8.dp),
                         )
@@ -170,7 +171,7 @@ private fun FeaturedCollectionCard(
         )
         Column(modifier = Modifier.padding(DS.Space.m)) {
             Text(
-                text = StringStore.text(context, "collections.featured", language).uppercase(),
+                text = StringStore.text(context, "collections.featured", language).uppercaseInApp(),
                 style = SophiaTypography.labelMedium,
                 color = DS.accentSoft,
             )

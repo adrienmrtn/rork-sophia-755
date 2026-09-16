@@ -16,9 +16,21 @@
         android:theme="@style/Theme.Sophia"
         android:usesCleartextTraffic="false">
 
+        <!--
+          singleTask: a course link or a notification used to start a second copy of
+          MainActivity on top of the running one, so back left the user in a stale
+          duplicate of the app. With one task, `onNewIntent` delivers the link to the
+          instance that is already open.
+
+          configChanges: Compose reads the new configuration itself, and letting the
+          activity survive a rotation, a theme switch or a font-size change is what keeps
+          the reader on its page and the onboarding on its step.
+        -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|uiMode|fontScale|density|locale|layoutDirection"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.Sophia">
             <intent-filter>

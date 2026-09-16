@@ -63,6 +63,7 @@ import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.LocalFullBleedBackground
 import app.rork.sophia.ui.legal.LegalDocKind
+import app.rork.sophia.ui.onboarding.readableWidth
 import app.rork.sophia.ui.legal.LegalDocumentScreen
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -333,13 +334,25 @@ private fun OnboardingAnnualPaywall(
 
     LaunchedEffect(Unit) { storeViewModel.trackPaywallImpression("onboarding_annual") }
 
-    Column(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
-        Row(modifier = Modifier.fillMaxWidth().padding(horizontal = DS.Space.l, vertical = 8.dp)) {
+    Column(
+        modifier = Modifier.fillMaxSize().background(DS.canvas),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .readableWidth()
+                .padding(horizontal = DS.Space.l, vertical = 8.dp),
+        ) {
             PaywallCloseButton(onClose = onDismiss)
         }
         PaywallEntry(modifier = Modifier.weight(1f)) {
             Column(
-                modifier = Modifier.fillMaxSize().padding(horizontal = 28.dp),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .readableWidth()
+                    .verticalScroll(rememberScrollState())
+                    .padding(horizontal = 28.dp),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
@@ -381,7 +394,10 @@ private fun OnboardingAnnualPaywall(
             }
         }
         Column(
-            modifier = Modifier.padding(horizontal = 24.dp).padding(bottom = 12.dp),
+            modifier = Modifier
+                .readableWidth()
+                .padding(horizontal = 24.dp)
+                .padding(bottom = 12.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
@@ -452,13 +468,22 @@ private fun ComparisonPaywall(
         storeViewModel.trackPaywallImpression("paywall_comparison", offeringId)
     }
 
-    Column(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
-        Row(modifier = Modifier.fillMaxWidth().padding(horizontal = DS.Space.l, vertical = 8.dp)) {
+    Column(
+        modifier = Modifier.fillMaxSize().background(DS.canvas),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .readableWidth()
+                .padding(horizontal = DS.Space.l, vertical = 8.dp),
+        ) {
             PaywallCloseButton(onClose = onDismiss)
         }
         Column(
             modifier = Modifier
                 .weight(1f)
+                .readableWidth()
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 24.dp),
         ) {
@@ -477,7 +502,10 @@ private fun ComparisonPaywall(
             Spacer(Modifier.height(12.dp))
         }
         Column(
-            modifier = Modifier.padding(horizontal = 24.dp).padding(bottom = 12.dp),
+            modifier = Modifier
+                .readableWidth()
+                .padding(horizontal = 24.dp)
+                .padding(bottom = 12.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             PlanSelectorCard(
@@ -1048,13 +1076,25 @@ private fun DiscountPaywall(
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
-        Column(modifier = Modifier.fillMaxSize()) {
-            Row(modifier = Modifier.fillMaxWidth().padding(horizontal = DS.Space.l, vertical = 8.dp)) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .readableWidth()
+                    .padding(horizontal = DS.Space.l, vertical = 8.dp),
+            ) {
                 PaywallCloseButton(onClose = onDismiss, light = true)
             }
             PaywallEntry(modifier = Modifier.weight(1f)) {
                 Column(
-                    modifier = Modifier.fillMaxSize().padding(horizontal = 28.dp),
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .readableWidth()
+                        .verticalScroll(rememberScrollState())
+                        .padding(horizontal = 28.dp),
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
@@ -1106,7 +1146,10 @@ private fun DiscountPaywall(
                 }
             }
             Column(
-                modifier = Modifier.padding(horizontal = 24.dp).padding(bottom = 12.dp),
+                modifier = Modifier
+                    .readableWidth()
+                    .padding(horizontal = 24.dp)
+                    .padding(bottom = 12.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
@@ -1175,14 +1218,23 @@ private fun PaywallShell(
     ctaIcon: androidx.compose.ui.graphics.vector.ImageVector? = null,
     content: @Composable () -> Unit,
 ) {
-    Column(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
-        Row(modifier = Modifier.fillMaxWidth().padding(horizontal = DS.Space.l, vertical = 8.dp)) {
+    Column(
+        modifier = Modifier.fillMaxSize().background(DS.canvas),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .readableWidth()
+                .padding(horizontal = DS.Space.l, vertical = 8.dp),
+        ) {
             PaywallCloseButton(onClose = onDismiss, delayMillis = closeDelayMillis)
         }
         PaywallEntry(modifier = Modifier.weight(1f)) {
             Column(
                 modifier = Modifier
                     .fillMaxSize()
+                    .readableWidth()
                     .verticalScroll(rememberScrollState())
                     .padding(horizontal = 24.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -1193,7 +1245,10 @@ private fun PaywallShell(
             }
         }
         Column(
-            modifier = Modifier.padding(horizontal = 24.dp).padding(bottom = 12.dp),
+            modifier = Modifier
+                .readableWidth()
+                .padding(horizontal = 24.dp)
+                .padding(bottom = 12.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             if (error != null) PaywallErrorNote(error)

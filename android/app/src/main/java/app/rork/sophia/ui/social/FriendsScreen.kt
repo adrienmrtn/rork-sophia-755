@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -120,6 +121,9 @@ fun FriendsScreen(
         modifier = modifier
             .fillMaxSize()
             .background(DS.canvas)
+            // The username and "add a friend" fields sit low on this screen; without this
+            // the keyboard covered both them and the button next to them.
+            .imePadding()
             .padding(DS.Space.l),
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {

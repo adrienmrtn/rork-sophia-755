@@ -57,10 +57,12 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.ContentCatalog
@@ -72,6 +74,7 @@ import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.legal.LegalDocKind
 import app.rork.sophia.ui.legal.LegalDocumentScreen
 import app.rork.sophia.ui.theme.PlusJakartaSans
+import app.rork.sophia.ui.theme.uppercaseInApp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.Locale
@@ -97,6 +100,11 @@ internal fun SwipeCoursesStep(
     var crossedThreshold by remember { mutableStateOf(false) }
     val dragX = remember { Animatable(0f) }
     var enter by remember { mutableStateOf(false) }
+    // Compose mirrors the button Row in Arabic and Hebrew, so ❤️ ends up on the left — while
+    // the drag still read "right means like", and the LIKE / NOPE stamps still pointed the
+    // old way. Swiping towards the heart is the whole affordance, so the gesture follows the
+    // buttons rather than the other way round.
+    val likeSign = if (LocalLayoutDirection.current == LayoutDirection.Rtl) -1f else 1f
 
     LaunchedEffect(ready) {
         if (ready) {
@@ -121,7 +129,9 @@ internal fun SwipeCoursesStep(
         if (isLast) finishing = true
         haptics.commit()
         scope.launch {
-            val target = with(density) { if (like) 600.dp.toPx() else (-600).dp.toPx() }
+            val target = with(density) {
+                (if (like) 600.dp.toPx() else (-600).dp.toPx()) * likeSign
+            }
             dragX.animateTo(target, tween(240))
             if (like) liked = liked + course.id
             index += 1
@@ -134,11 +144,14 @@ internal fun SwipeCoursesStep(
         }
     }
 
+    // The deck is sized against the height actually available, not a fixed 4:3 card: at a
+    // large font scale on a short phone the card used to grow past the bottom of the screen
+    // and take the ❤️ / ✕ buttons with it, which ends the onboarding for that user.
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().readableWidth(),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Spacer(Modifier.height(72.dp))
+        Spacer(Modifier.height(48.dp))
         Column(modifier = Modifier.padding(horizontal = 28.dp).ov2Reveal(100)) {
             Text(
                 text = StringStore.text(context, "onboardingV2.swipe.title", language),
@@ -154,18 +167,23 @@ internal fun SwipeCoursesStep(
                 modifier = Modifier.fillMaxWidth(),
             )
         }
-        Spacer(Modifier.weight(1f))
+        Spacer(Modifier.height(16.dp))
 
         if (!ready) {
-            CircularProgressIndicator(color = OV2.accent)
+            Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator(color = OV2.accent)
+            }
         } else if (done) {
-            SwipeCompletion(language = language)
+            Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.Center) {
+                SwipeCompletion(language = language)
+            }
         } else {
             BoxWithConstraints(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().weight(1f),
                 contentAlignment = Alignment.Center,
             ) {
-                val cardWidth = minOf(300.dp, maxWidth - 56.dp)
+                // Whichever of width and height runs out first decides the card.
+                val cardWidth = minOf(300.dp, maxWidth - 56.dp, (maxHeight - 24.dp) * 3 / 4)
                 val cardHeight = cardWidth * 4 / 3
                 val thresholdPx = with(density) { 100.dp.toPx() }
                 Box(
@@ -201,7 +219,7 @@ internal fun SwipeCoursesStep(
                                             onDragEnd = {
                                                 crossedThreshold = false
                                                 if (abs(dragX.value) > thresholdPx) {
-                                                    commit(dragX.value > 0)
+                                                    commit(dragX.value * likeSign > 0)
                                                 } else {
                                                     scope.launch {
                                                         dragX.animateTo(
@@ -236,7 +254,7 @@ internal fun SwipeCoursesStep(
                                 } else {
                                     { 0f }
                                 },
-                                stampDirection = { dragX.value },
+                                stampDirection = { dragX.value * likeSign },
                             )
                         }
                     }
@@ -244,17 +262,16 @@ internal fun SwipeCoursesStep(
             }
         }
 
-        Spacer(Modifier.weight(1f))
         if (!done) {
             Row(
                 horizontalArrangement = Arrangement.spacedBy(40.dp),
-                modifier = Modifier.padding(bottom = 40.dp).ov2Reveal(300),
+                modifier = Modifier.padding(vertical = 24.dp).ov2Reveal(300),
             ) {
                 SwipeActionButton(like = false, enabled = ready) { commit(false) }
                 SwipeActionButton(like = true, enabled = ready) { commit(true) }
             }
         } else {
-            Spacer(Modifier.height(104.dp))
+            Spacer(Modifier.height(88.dp))
         }
     }
 }
@@ -302,7 +319,7 @@ private fun SwipeCard(
                     context,
                     "subject.${course.subjectEnum.storageKey}.short",
                     language,
-                ).uppercase(Locale.getDefault()),
+                ).uppercaseInApp(),
                 style = OV2.caption.copy(fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color.White),
                 modifier = Modifier
                     .clip(CircleShape)
@@ -342,7 +359,7 @@ private fun androidx.compose.foundation.layout.BoxScope.SwipeStamp(
     alpha: () -> Float,
 ) {
     Text(
-        text = text.uppercase(Locale.getDefault()),
+        text = text.uppercaseInApp(),
         style = OV2.title.copy(fontSize = 22.sp, color = color),
         modifier = Modifier
             .align(alignment)
@@ -432,7 +449,15 @@ internal fun LoadingProfileStep(language: AppLanguage, onContinue: () -> Unit) {
     }
     val ratingAlpha by animateFloatAsState(if (allDone) 1f else 0.4f, tween(300), label = "rating")
 
-    Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+    OnboardingPage(
+        footer = {
+            OnboardingCta(
+                text = StringStore.text(context, "onboardingV2.loading.cta", language),
+                onClick = onContinue,
+                enabled = allDone,
+            )
+        },
+    ) {
         Spacer(Modifier.height(84.dp))
         Text(
             text = StringStore.text(context, "onboardingV2.loading.title", language),
@@ -471,12 +496,6 @@ internal fun LoadingProfileStep(language: AppLanguage, onContinue: () -> Unit) {
                 style = OV2.caption,
             )
         }
-        Spacer(Modifier.weight(1f))
-        OnboardingCta(
-            text = StringStore.text(context, "onboardingV2.loading.cta", language),
-            onClick = onContinue,
-            enabled = allDone,
-        )
     }
 }
 
@@ -612,7 +631,7 @@ internal fun ProfileRewardStep(
                 ) {
                     Text(
                         text = StringStore.text(context, "onboardingV2.profile.eyebrow", language)
-                            .uppercase(Locale.getDefault()),
+                            .uppercaseInApp(),
                         style = OV2.caption.copy(color = OV2.accentSoft),
                         letterSpacing = 1.2.sp,
                     )
@@ -640,7 +659,7 @@ internal fun ProfileRewardStep(
                 ) {
                     Text(
                         text = StringStore.text(context, "onboardingV2.profile.objectiveTitle", language)
-                            .uppercase(Locale.getDefault()),
+                            .uppercaseInApp(),
                         style = OV2.caption.copy(color = OV2.inkTertiary),
                         letterSpacing = 1.sp,
                     )
@@ -755,7 +774,7 @@ private fun ProfileCourseCard(
                     context,
                     "subject.${course.subjectEnum.storageKey}.short",
                     language,
-                ).uppercase(Locale.getDefault()),
+                ).uppercaseInApp(),
                 style = OV2.caption.copy(fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color.White),
                 modifier = Modifier
                     .clip(CircleShape)

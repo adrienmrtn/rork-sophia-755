@@ -82,7 +82,9 @@ object GlossaryStore {
     }
 
     private fun normalize(s: String): String =
-        s.lowercase().filter { it.isLetterOrDigit() }
+        // Locale.ROOT: a Turkish phone lowercases "I" to a dotless "ı", which would
+        // stop every glossary term containing an I from ever matching.
+        s.lowercase(java.util.Locale.ROOT).filter { it.isLetterOrDigit() }
 
     fun clearCache() {
         cache.clear()

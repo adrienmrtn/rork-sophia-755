@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -78,7 +79,8 @@ fun AmbassadorScreen(
                 Column(
                     modifier = Modifier
                         .weight(1f)
-                        .verticalScroll(rememberScrollState()),
+                        .verticalScroll(rememberScrollState())
+                        .imePadding(),
                 ) {
                     Text(t("ambassador.program.heading"), style = SophiaTypography.titleLarge)
                     Spacer(Modifier.height(12.dp))
@@ -131,7 +133,8 @@ fun AmbassadorScreen(
                 Column(
                     modifier = Modifier
                         .weight(1f)
-                        .verticalScroll(rememberScrollState()),
+                        .verticalScroll(rememberScrollState())
+                        .imePadding(),
                 ) {
                     Text(t("ambassador.form.title"), style = SophiaTypography.titleLarge)
                     Spacer(Modifier.height(12.dp))
