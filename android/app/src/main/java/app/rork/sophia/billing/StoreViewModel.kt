@@ -27,6 +27,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import java.text.DecimalFormat
 import java.text.NumberFormat
 import java.util.Calendar
 import java.util.Currency
@@ -251,16 +252,36 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
     fun formattedPrice(pkg: Package?, fallback: String): String =
         pkg?.product?.price?.formatted ?: fallback
 
+    /**
+     * Twelfth of an annual plan's price, written the way this phone writes that currency.
+     *
+     * Two different things decide how it reads, and they are not the same thing:
+     *
+     *  - **Digits and separators** follow the language the paywall is being read in. The
+     *    device locale put Arabic-Indic digits in a French price on an Arabic phone.
+     *  - **The currency symbol** comes from the device's own locale, because that is the
+     *    country whose store served the price. ICU only prints a currency's local symbol
+     *    when the *language* is that currency's own: asking for Turkish lira in French
+     *    gives "33,33 TRY", so a Turkish customer reading the app in French saw the annual
+     *    price as "₺399,99" (Play's own string) next to a monthly "33,33 TRY" — the same
+     *    currency written two ways on one card. Taking the symbol from the device matches
+     *    what Play printed. Adding the region to the reading locale does not work: fr-TR
+     *    still gives "TRY".
+     */
     fun formattedYearlyPerMonth(pkg: Package?, fallbackYearly: String): String {
         val price = pkg?.product?.price ?: return fallbackYearly
         val monthlyMicros = price.amountMicros / 12.0
         return try {
-            // Formatted for the language the user reads the paywall in. The device locale
-            // put Arabic-Indic digits in a French price on an Arabic phone.
             val appLanguage = (getApplication() as? SophiaApplication)
                 ?.languageManager?.current?.value
+            val currency = Currency.getInstance(price.currencyCode)
             val format = NumberFormat.getCurrencyInstance(appLanguage?.locale ?: Locale.getDefault())
-            format.currency = Currency.getInstance(price.currencyCode)
+            format.currency = currency
+            (format as? DecimalFormat)?.let { decimal ->
+                decimal.decimalFormatSymbols = decimal.decimalFormatSymbols.apply {
+                    currencySymbol = currency.getSymbol(Locale.getDefault())
+                }
+            }
             format.format(monthlyMicros / 1_000_000.0)
         } catch (_: Exception) {
             fallbackYearly
