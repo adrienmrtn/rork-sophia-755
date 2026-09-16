@@ -40,6 +40,13 @@ struct CourseView: View {
 
     private var isPremium: Bool { store.isPremium }
 
+    /// True while a `fullScreenCover` is presented over the reader. Each of these removes the
+    /// reader from the visible hierarchy without the user having left the course.
+    private var isCoveredByOverlay: Bool {
+        showQuiz || showDebloquerPaywall || showQuizPaywall
+            || showComparisonOverQuiz || showComparisonOverDebloquer
+    }
+
     /// The one course a free user can fully read today (claimed on open in `ContentView`).
     private var isDailyFreeCourse: Bool {
         progressManager.isDailyFreeCourse(course.id)
@@ -143,6 +150,12 @@ struct CourseView: View {
         }
         .navigationBarBackButtonHidden()
         .onAppear {
+            // A `fullScreenCover` takes its presenter off screen, so opening the quiz or a
+            // paywall over the course fired `onDisappear` then `onAppear` again on the way
+            // back. Mixpanel saw a course closed and a second course opened for one reading
+            // session, which inflated opens and cut every session short. An existing tracker
+            // means this is a return from a cover, not a new visit.
+            guard sessionTracker == nil else { return }
             progressManager.registerFirstCourseOpenedIfNeeded(course.id)
             requestAppStoreReviewIfEligible(lessonIndex: currentIndex)
             sessionTracker = CourseSessionTracker(course: course)
@@ -156,6 +169,8 @@ struct CourseView: View {
             maybeShowTermCoachmark(lessonIndex: currentIndex)
         }
         .onDisappear {
+            // Covered, not closed: the reader is still the screen the user is on.
+            guard !isCoveredByOverlay else { return }
             let reason = sessionTracker?.completed == true ? "completed" : "dismiss"
             sessionTracker?.finish(exitReason: reason)
             sessionTracker = nil
@@ -358,6 +373,11 @@ struct CourseView: View {
                             .compositingGroup()
                             .blur(radius: 5)
                             .allowsHitTesting(false)
+                            // Blurring hides the text from the eye but not from VoiceOver,
+                            // which read the whole locked lesson aloud — the paid content,
+                            // for free, to the users least able to tell it was meant to be
+                            // hidden. The lock below is what this page has to offer.
+                            .accessibilityHidden(true)
                             .padding(.horizontal, 24)
                             .padding(.top, 24)
                             .padding(.bottom, max(geo.size.height * 0.34, 180))

@@ -10,7 +10,7 @@ struct SophiaApp: App {
     @State private var languageManager = LanguageManager.shared
     @State private var appearanceManager = AppearanceManager.shared
     @State private var showOnboarding: Bool = !OnboardingViewModel.isOnboardingCompleted
-    @State private var deepLinkCourseId: String?
+    @State private var deepLinkRouter = DeepLinkRouter.shared
 
     init() {
         #if DEBUG
@@ -52,7 +52,7 @@ struct SophiaApp: App {
                                 showOnboarding = true
                             }
                         },
-                        deepLinkCourseId: $deepLinkCourseId
+                        router: deepLinkRouter
                     )
                 }
             }
@@ -75,7 +75,9 @@ struct SophiaApp: App {
                 // Callbacks Meta (fb…) + deep links Sophia (`sophia://…`).
                 MetaAdsService.handleOpenURL(url)
                 if let courseId = SophiaDeepLink.courseId(from: url) {
-                    deepLinkCourseId = courseId
+                    // Parked rather than delivered: the onboarding may still be on screen,
+                    // and the home opens it as soon as it is ready.
+                    deepLinkRouter.requestCourse(courseId)
                 }
             }
         }

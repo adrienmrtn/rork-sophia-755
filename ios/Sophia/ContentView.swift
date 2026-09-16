@@ -6,7 +6,7 @@ struct ContentView: View {
     @Environment(AppearanceManager.self) private var appearance
     @Environment(AuthService.self) private var auth
     var onResetOnboarding: (() -> Void)? = nil
-    @Binding var deepLinkCourseId: String?
+    let router: DeepLinkRouter
 
     @State private var progressManager = ProgressManager()
     @State private var syncService = ProgressSyncService.shared
@@ -237,8 +237,14 @@ struct ContentView: View {
                 onboardingCompleted: true
             )
         }
-        .onChange(of: deepLinkCourseId) { _, courseId in
-            openDeepLinkedCourse(courseId)
+        // Both paths matter: `onChange` for a link that arrives while home is on screen,
+        // and `task` for one that was parked during the onboarding — `onChange` does not
+        // replay the value the view was born with.
+        .onChange(of: router.token) { _, _ in
+            openPendingDeepLink()
+        }
+        .task {
+            openPendingDeepLink()
         }
         .trackAnalyticsLifecycle(isPremium: storeVM.isPremium)
     }
@@ -287,16 +293,17 @@ struct ContentView: View {
         }
     }
 
-    private func openDeepLinkedCourse(_ courseId: String?) {
-        guard let courseId,
-              let course = ContentCatalog.course(withId: courseId) else {
-            deepLinkCourseId = nil
+    private func openPendingDeepLink() {
+        guard let courseId = router.pendingCourseId else { return }
+        guard let course = ContentCatalog.course(withId: courseId) else {
+            // Unknown id: drop it rather than retry it on every appearance.
+            router.discard()
             return
         }
+        _ = router.consume()
         selectedTab = 0
         pendingCourseSource = "deep_link"
         AnalyticsService.trackDeepLinkOpened(courseId: courseId)
         selectedCourse = course
-        deepLinkCourseId = nil
     }
 }

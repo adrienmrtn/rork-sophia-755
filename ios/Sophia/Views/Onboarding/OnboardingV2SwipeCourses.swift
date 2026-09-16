@@ -19,6 +19,13 @@ struct OnboardingV2SwipeCourses: View {
     /// cannot schedule a second `onNext()` while the fly-off animation is in flight.
     @State private var isFinishing = false
     @State private var hasAdvanced = false
+    /// True while a card is flying off. `isFinishing` only ever guarded the *last* card, so
+    /// two fast taps on the second-to-last one each scheduled their own `index += 1`: the
+    /// deck ran one past its end, `finishing` was never true, and the screen sat there with
+    /// no cards and two buttons that did nothing — an onboarding you can only leave by
+    /// reinstalling. One commit at a time, and the advance below no longer depends on
+    /// catching the exact last card.
+    @State private var isCommitting = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -56,6 +63,7 @@ struct OnboardingV2SwipeCourses: View {
                     swipeButton(systemName: "xmark", tint: OV2.danger) { swipeTop(like: false) }
                     swipeButton(systemName: "heart.fill", tint: OV2.success) { swipeTop(like: true) }
                 }
+                .disabled(isCommitting || isFinishing)
                 .padding(.bottom, 28)
                 .ov2Reveal(delay: 0.3)
             } else {
@@ -68,6 +76,9 @@ struct OnboardingV2SwipeCourses: View {
                 courses = vm.recommendedCourses(language: languageManager.current)
                 vm.rememberSwipedCourses(courses)
             }
+            // Nothing to swipe is also "no cards left", and has to move on rather than
+            // present an empty deck.
+            if courses.isEmpty { finishDeck() }
             // Entrée dédiée à cette page : les cartes montent et se posent en douceur.
             withAnimation(.spring(response: 0.62, dampingFraction: 0.74).delay(0.15)) {
                 enter = true
@@ -223,7 +234,8 @@ struct OnboardingV2SwipeCourses: View {
     }
 
     private func swipeTop(like: Bool) {
-        guard !isFinishing, !hasAdvanced, index < courses.count else { return }
+        guard !isCommitting, !isFinishing, !hasAdvanced, index < courses.count else { return }
+        isCommitting = true
         let finishing = index == courses.count - 1
         if finishing { isFinishing = true }
 
@@ -236,18 +248,29 @@ struct OnboardingV2SwipeCourses: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.22) {
             drag = .zero
             index += 1
-            if finishing {
-                withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) { done = true }
-                OnboardingHaptics.counterComplete()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                    withAnimation(.spring(response: 0.5, dampingFraction: 0.6)) { checkIn = true }
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                    guard !hasAdvanced else { return }
-                    hasAdvanced = true
-                    onNext()
-                }
+            isCommitting = false
+            // Driven by the deck being empty rather than by recognising the last card, so
+            // there is no arrangement of taps that can leave this screen with nothing to
+            // show and nowhere to go.
+            if index >= courses.count { finishDeck() }
+        }
+    }
+
+    /// Runs the completion beat and leaves. Safe to call more than once.
+    private func finishDeck() {
+        guard !hasAdvanced else { return }
+        isFinishing = true
+        if !done {
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) { done = true }
+            OnboardingHaptics.counterComplete()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                withAnimation(.spring(response: 0.5, dampingFraction: 0.6)) { checkIn = true }
             }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            guard !hasAdvanced else { return }
+            hasAdvanced = true
+            onNext()
         }
     }
 
