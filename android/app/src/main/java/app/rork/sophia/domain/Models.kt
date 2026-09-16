@@ -148,6 +148,8 @@ data class CourseProgress(
     val lastLessonIndex: Int = 0,
     val isCompleted: Boolean = false,
     val bestQuizScore: Int = 0,
+    /** Points the quiz was out of, so a stored score can be shown as a ratio. */
+    val quizMaxPoints: Int = 0,
     val lastQuizDate: String? = null,
     /**
      * When the course was first opened and when it was finished, ISO-8601. Both default to
@@ -156,6 +158,13 @@ data class CourseProgress(
      */
     val startedAt: String? = null,
     val completedAt: String? = null,
+    /**
+     * Pages this course had when it was last read. Recorded by the reader because the slim
+     * home catalogue carries no lesson count, and loading every course's body just to show
+     * "3 of 5" would cost more than the line is worth. 0 means "not known yet" — progress
+     * saved by an older build — and the ratio is simply not shown.
+     */
+    val lessonCount: Int = 0,
 )
 
 @Serializable

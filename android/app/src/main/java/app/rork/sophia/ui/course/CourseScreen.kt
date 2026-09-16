@@ -191,7 +191,7 @@ fun CourseScreen(
         if (!pagesReady) return@LaunchedEffect
         val pageIndex = pagerState.currentPage
         sessionTracker.recordLessonReached(pageIndex)
-        progressManager.updateLessonIndex(course.id, pageIndex)
+        progressManager.updateLessonIndex(course.id, pageIndex, lessonCount = pages.size)
         InAppReviewHelper.requestIfEligible(
             context = context,
             progressManager = progressManager,

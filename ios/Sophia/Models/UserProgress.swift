@@ -6,11 +6,37 @@ nonisolated struct CourseProgress: Codable, Sendable {
     var bestQuizScore: Int
     var lastQuizDate: String?
 
-    init(lastLessonIndex: Int, isCompleted: Bool, bestQuizScore: Int, lastQuizDate: String? = nil) {
+    /// When the course was first opened and when it was finished, ISO-8601.
+    ///
+    /// Both are optional so progress written by an older build still decodes: those courses
+    /// simply sort last in "My courses", which is the honest place for a date nobody
+    /// recorded. `quizTotalPoints` is stored alongside the score so it can be shown as a
+    /// ratio rather than a bare number.
+    var startedAt: String?
+    var completedAt: String?
+    var quizTotalPoints: Int?
+    /// Pages the course had when it was last read, so "3 of 5" can be shown without loading
+    /// every course body. 0 means "not recorded yet" and the ratio is simply omitted.
+    var lessonCount: Int?
+
+    init(
+        lastLessonIndex: Int,
+        isCompleted: Bool,
+        bestQuizScore: Int,
+        lastQuizDate: String? = nil,
+        startedAt: String? = nil,
+        completedAt: String? = nil,
+        quizTotalPoints: Int? = nil,
+        lessonCount: Int? = nil
+    ) {
         self.lastLessonIndex = lastLessonIndex
         self.isCompleted = isCompleted
         self.bestQuizScore = bestQuizScore
         self.lastQuizDate = lastQuizDate
+        self.startedAt = startedAt
+        self.completedAt = completedAt
+        self.quizTotalPoints = quizTotalPoints
+        self.lessonCount = lessonCount
     }
 }
 

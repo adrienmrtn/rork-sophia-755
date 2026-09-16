@@ -40,6 +40,8 @@ struct HomeViewTikTok: View {
     @Binding var selectedCourse: Course?
     @Binding var autoSwipeCourseId: String?
     var onShowDiscountPaywall: (() -> Void)? = nil
+    /// Opens the reader's own history. Presented by `ContentView`, which owns the sheets.
+    var onOpenMyCourses: (() -> Void)? = nil
 
     @State private var cards: [Course] = []
     @State private var scrolledCardId: String?
@@ -171,8 +173,40 @@ struct HomeViewTikTok: View {
 
             Spacer(minLength: 8)
 
+            myCoursesBadge
             streakBadge
         }
+    }
+
+    /// Same badge shape as the streak, beside it: the two things worth a glance from home
+    /// are how many days in a row, and what you have already read.
+    private var myCoursesBadge: some View {
+        Button {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            onOpenMyCourses?()
+        } label: {
+            HStack(spacing: 6) {
+                Image(systemName: "books.vertical")
+                    .font(.jakarta(size: 14, weight: .medium))
+                    .foregroundStyle(DS.accentSoft)
+                Text("\(completedCourseCount)")
+                    .font(DS.sans(.subheadline, .semibold))
+                    .foregroundStyle(DS.ink)
+                    .monospacedDigit()
+                    .fixedSize(horizontal: true, vertical: true)
+            }
+            .padding(.horizontal, 14)
+            .padding(.vertical, 8)
+            .fixedSize(horizontal: true, vertical: false)
+            .background(DS.surface, in: Capsule())
+            .overlay(Capsule().strokeBorder(DS.hairline, lineWidth: 1))
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(Text(languageManager.text("myCourses.title")))
+    }
+
+    private var completedCourseCount: Int {
+        progressManager.progress.courseProgress.values.filter { $0.isCompleted }.count
     }
 
     private var streakBadge: some View {

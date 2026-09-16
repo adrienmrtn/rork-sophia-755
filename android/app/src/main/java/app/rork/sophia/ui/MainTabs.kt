@@ -62,6 +62,7 @@ import app.rork.sophia.ui.home.DiscountGiftOverlay
 import app.rork.sophia.ui.home.DiscountSideTab
 import app.rork.sophia.ui.home.HomeTikTokScreen
 import app.rork.sophia.ui.library.LibraryScreen
+import app.rork.sophia.ui.library.MyCoursesScreen
 import app.rork.sophia.ui.paywall.PaywallContext
 import app.rork.sophia.ui.paywall.PaywallScreen
 import app.rork.sophia.ui.legal.LegalDocKind
@@ -82,7 +83,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-private enum class OverlayScreen { Settings, Friends, Feedback, Ambassador, Terms, Privacy }
+private enum class OverlayScreen { Settings, Friends, Feedback, Ambassador, Terms, Privacy, MyCourses }
 
 /**
  * Widest the tab content is allowed to get. Sophia's screens are a single column; past this
@@ -406,7 +407,9 @@ fun MainTabs(
                         onUserSwipe = {
                             if (!isPremium) app.discountManager.registerSwipe()
                         },
+                        onOpenMyCourses = { overlay = OverlayScreen.MyCourses },
                         streak = progress.streak,
+                        completedCourses = progress.courseProgress.count { it.value.isCompleted },
                     )
                     1 -> LibraryScreen(
                         modifier = tabModifier,
@@ -533,6 +536,20 @@ fun MainTabs(
                         LegalDocumentScreen(
                             kind = LegalDocKind.Terms,
                             language = language,
+                            onBack = { closeOverlay() },
+                        )
+                    OverlayScreen.MyCourses ->
+                        MyCoursesScreen(
+                            language = language,
+                            progress = progress,
+                            onOpenCourse = { id ->
+                                overlay = null
+                                openCourseById(id)
+                            },
+                            onDiscover = {
+                                overlay = null
+                                selectedTab = 0
+                            },
                             onBack = { closeOverlay() },
                         )
                     OverlayScreen.Privacy ->

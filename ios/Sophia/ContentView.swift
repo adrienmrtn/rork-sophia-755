@@ -21,6 +21,10 @@ struct ContentView: View {
     @State private var autoSwipeCourseId: String? = nil
     @State private var pendingCourseSource = "home_tinder"
     @State private var showTrialEndingBanner: Bool = false
+    @State private var showMyCourses: Bool = false
+    /// Set by an entry point that knows where the course came from (a link, the history
+    /// screen) and consumed on the next open.
+    @State private var explicitCourseSource: String? = nil
 
     var body: some View {
         ZStack {
@@ -37,7 +41,8 @@ struct ContentView: View {
                             AnalyticsService.trackDiscountOfferViewed(source: "home_banner")
                             discountManager.markShownToday()
                             paywallContext = .offreDiscount
-                        }
+                        },
+                        onOpenMyCourses: { showMyCourses = true }
                     )
                 }
 
@@ -96,7 +101,15 @@ struct ContentView: View {
                     // course opened today is intro-only + locked.
                     progressManager.claimDailyFreeCourseIfNeeded(course.id)
                 }
-                pendingCourseSource = courseSourceForCurrentTab()
+                // An entry point that names itself keeps its name. This used to overwrite
+                // every source with the current tab, so a course opened from a link was
+                // reported as opened from home.
+                if let explicit = explicitCourseSource {
+                    pendingCourseSource = explicit
+                    explicitCourseSource = nil
+                } else {
+                    pendingCourseSource = courseSourceForCurrentTab()
+                }
                 pendingCourse = course
             }
             .fullScreenCover(item: $pendingCourse) { course in
@@ -177,6 +190,21 @@ struct ContentView: View {
         .animation(.easeInOut(duration: 0.3), value: discountManager.isGiftPending)
         .animation(.spring(response: 0.5, dampingFraction: 0.8), value: discountManager.isActive)
         .animation(.easeInOut(duration: 0.25), value: showTrialEndingBanner)
+        .fullScreenCover(isPresented: $showMyCourses) {
+            MyCoursesView(
+                progressManager: progressManager,
+                onOpenCourse: { course in
+                    showMyCourses = false
+                    explicitCourseSource = "my_courses"
+                    // The sheet has to be gone before the reader is presented, or the two
+                    // presentations race and neither appears.
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                        selectedCourse = course
+                    }
+                },
+                onDiscover: { selectedTab = 0 }
+            )
+        }
         .fullScreenCover(item: $paywallContext) { context in
             SophiaPaywallView(
                 context: context,
@@ -302,7 +330,7 @@ struct ContentView: View {
         }
         _ = router.consume()
         selectedTab = 0
-        pendingCourseSource = "deep_link"
+        explicitCourseSource = "deep_link"
         AnalyticsService.trackDeepLinkOpened(courseId: courseId)
         selectedCourse = course
     }

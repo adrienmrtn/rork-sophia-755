@@ -429,14 +429,22 @@ struct CourseView: View {
                 guard !isLastLesson else { return }
                 sessionTracker?.recordContinueTap()
                 currentIndex += 1
-                progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
+                progressManager.updateLessonProgress(
+                    courseId: course.id,
+                    lessonIndex: currentIndex,
+                    lessonCount: course.lessons.count
+                )
                 return
             }
             if isLastLesson {
                 guard FreemiumGate.canCompleteCourse(isPremium: isPremium, isDailyFreeCourse: isDailyFreeCourse) else { return }
                 sessionTracker?.recordContinueTap()
                 sessionTracker?.markCompleted()
-                progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
+                progressManager.updateLessonProgress(
+                    courseId: course.id,
+                    lessonIndex: currentIndex,
+                    lessonCount: course.lessons.count
+                )
                 let wasCompletedBefore = progressManager.courseStatus(for: course.id) == .completed
                 previousSubjectCount = progressManager.completedCount(for: course.subject)
                 previousSubjectXP = progressManager.xp(for: course.subject)
@@ -455,7 +463,11 @@ struct CourseView: View {
                 sessionTracker?.recordContinueTap()
                 // Le slide est animé par `.animation(_:value: currentIndex)` sur le TabView.
                 currentIndex += 1
-                progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
+                progressManager.updateLessonProgress(
+                    courseId: course.id,
+                    lessonIndex: currentIndex,
+                    lessonCount: course.lessons.count
+                )
             }
         } label: {
             HStack(spacing: 8) {

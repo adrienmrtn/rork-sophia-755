@@ -1058,7 +1058,12 @@ struct QuizView: View {
                 reason: .quizCompleted(courseId: course.id),
                 amount: ProgressManager.globalQuizCompletionXP
             )
-            progressManager.completeCourse(courseId: course.id, quizScore: totalPointsEarned, completedQuiz: true)
+            progressManager.completeCourse(
+                courseId: course.id,
+                quizScore: totalPointsEarned,
+                completedQuiz: true,
+                quizTotalPoints: maxPossiblePoints
+            )
             progressManager.registerTrainingQuestions(courseId: course.id, questionIds: course.quiz.map(\.id))
             if !courseWasCompletedBeforeQuiz {
                 pendingCollectionEvents = progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)

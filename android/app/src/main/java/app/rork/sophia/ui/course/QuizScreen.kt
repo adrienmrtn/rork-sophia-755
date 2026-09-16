@@ -197,6 +197,7 @@ fun QuizScreen(
                 progressManager.completeQuiz(
                     courseId = course.id,
                     score = totalPoints,
+                    maxPoints = max,
                     questionIds = questions.map { it.id },
                     subjectKey = course.subjectEnum.storageKey,
                 )

@@ -880,6 +880,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Mes cours",
+        "myCourses.tab.inProgress": "En cours",
+        "myCourses.tab.completed": "Terminés",
+        "myCourses.empty.title": "Tu n'as pas encore lu de cours",
+        "myCourses.empty.cta": "Découvrir un cours",
+        "myCourses.progress": "%1$d page sur %2$d",
+        "myCourses.quizScore": "Quiz : %1$d/%2$d",
     ]
     // MARK: - English
 
@@ -1719,6 +1726,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "My courses",
+        "myCourses.tab.inProgress": "In progress",
+        "myCourses.tab.completed": "Completed",
+        "myCourses.empty.title": "You haven't read a course yet",
+        "myCourses.empty.cta": "Discover a course",
+        "myCourses.progress": "%1$d of %2$d pages",
+        "myCourses.quizScore": "Quiz: %1$d/%2$d",
     ]
     // MARK: - Spanish
 
@@ -2558,6 +2572,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Mis cursos",
+        "myCourses.tab.inProgress": "En curso",
+        "myCourses.tab.completed": "Completados",
+        "myCourses.empty.title": "Aún no has leído ningún curso",
+        "myCourses.empty.cta": "Descubrir un curso",
+        "myCourses.progress": "%1$d de %2$d páginas",
+        "myCourses.quizScore": "Test: %1$d/%2$d",
     ]
     // MARK: - German
 
@@ -3397,6 +3418,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Meine Kurse",
+        "myCourses.tab.inProgress": "Angefangen",
+        "myCourses.tab.completed": "Abgeschlossen",
+        "myCourses.empty.title": "Du hast noch keinen Kurs gelesen",
+        "myCourses.empty.cta": "Einen Kurs entdecken",
+        "myCourses.progress": "Seite %1$d von %2$d",
+        "myCourses.quizScore": "Quiz: %1$d/%2$d",
     ]
     // MARK: - Portuguese
 
@@ -4236,6 +4264,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Os meus cursos",
+        "myCourses.tab.inProgress": "Em curso",
+        "myCourses.tab.completed": "Concluídos",
+        "myCourses.empty.title": "Ainda não leste nenhum curso",
+        "myCourses.empty.cta": "Descobrir um curso",
+        "myCourses.progress": "%1$d de %2$d páginas",
+        "myCourses.quizScore": "Quiz: %1$d/%2$d",
     ]
     // MARK: - Italian
 
@@ -5075,6 +5110,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "I miei corsi",
+        "myCourses.tab.inProgress": "In corso",
+        "myCourses.tab.completed": "Completati",
+        "myCourses.empty.title": "Non hai ancora letto nessun corso",
+        "myCourses.empty.cta": "Scopri un corso",
+        "myCourses.progress": "%1$d di %2$d pagine",
+        "myCourses.quizScore": "Quiz: %1$d/%2$d",
     ]
     // MARK: - Turkish
 
@@ -5914,6 +5956,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Kurslarım",
+        "myCourses.tab.inProgress": "Devam eden",
+        "myCourses.tab.completed": "Tamamlanan",
+        "myCourses.empty.title": "Henüz bir kurs okumadın",
+        "myCourses.empty.cta": "Bir kurs keşfet",
+        "myCourses.progress": "%2$d sayfadan %1$d",
+        "myCourses.quizScore": "Test: %1$d/%2$d",
     ]
     // MARK: - Polish
 
@@ -6753,6 +6802,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Moje kursy",
+        "myCourses.tab.inProgress": "W trakcie",
+        "myCourses.tab.completed": "Ukończone",
+        "myCourses.empty.title": "Nie przeczytałeś jeszcze żadnego kursu",
+        "myCourses.empty.cta": "Odkryj kurs",
+        "myCourses.progress": "%1$d z %2$d stron",
+        "myCourses.quizScore": "Quiz: %1$d/%2$d",
     ]
     // MARK: - Romanian
 
@@ -7592,6 +7648,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Cursurile mele",
+        "myCourses.tab.inProgress": "În curs",
+        "myCourses.tab.completed": "Terminate",
+        "myCourses.empty.title": "Încă nu ai citit niciun curs",
+        "myCourses.empty.cta": "Descoperă un curs",
+        "myCourses.progress": "%1$d din %2$d pagini",
+        "myCourses.quizScore": "Test: %1$d/%2$d",
     ]
     // MARK: - Dutch
 
@@ -8431,6 +8494,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Mijn cursussen",
+        "myCourses.tab.inProgress": "Bezig",
+        "myCourses.tab.completed": "Afgerond",
+        "myCourses.empty.title": "Je hebt nog geen cursus gelezen",
+        "myCourses.empty.cta": "Ontdek een cursus",
+        "myCourses.progress": "%1$d van %2$d pagina's",
+        "myCourses.quizScore": "Quiz: %1$d/%2$d",
     ]
     // MARK: - Greek
 
@@ -9270,6 +9340,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Τα μαθήματά μου",
+        "myCourses.tab.inProgress": "Σε εξέλιξη",
+        "myCourses.tab.completed": "Ολοκληρωμένα",
+        "myCourses.empty.title": "Δεν έχεις διαβάσει ακόμα κανένα μάθημα",
+        "myCourses.empty.cta": "Ανακάλυψε ένα μάθημα",
+        "myCourses.progress": "%1$d από %2$d σελίδες",
+        "myCourses.quizScore": "Κουίζ: %1$d/%2$d",
     ]
     // MARK: - Swedish
 
@@ -10109,6 +10186,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Mina kurser",
+        "myCourses.tab.inProgress": "Pågående",
+        "myCourses.tab.completed": "Klara",
+        "myCourses.empty.title": "Du har inte läst någon kurs än",
+        "myCourses.empty.cta": "Upptäck en kurs",
+        "myCourses.progress": "%1$d av %2$d sidor",
+        "myCourses.quizScore": "Quiz: %1$d/%2$d",
     ]
     // MARK: - Hungarian
 
@@ -10948,6 +11032,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Kurzusaim",
+        "myCourses.tab.inProgress": "Folyamatban",
+        "myCourses.tab.completed": "Elvégzett",
+        "myCourses.empty.title": "Még nem olvastál kurzust",
+        "myCourses.empty.cta": "Fedezz fel egy kurzust",
+        "myCourses.progress": "%1$d / %2$d oldal",
+        "myCourses.quizScore": "Kvíz: %1$d/%2$d",
     ]
     // MARK: - Bulgarian
 
@@ -11787,6 +11878,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Моите курсове",
+        "myCourses.tab.inProgress": "В процес",
+        "myCourses.tab.completed": "Завършени",
+        "myCourses.empty.title": "Още не си чел курс",
+        "myCourses.empty.cta": "Открий курс",
+        "myCourses.progress": "%1$d от %2$d страници",
+        "myCourses.quizScore": "Тест: %1$d/%2$d",
     ]
     // MARK: - Czech
 
@@ -12626,6 +12724,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Moje kurzy",
+        "myCourses.tab.inProgress": "Rozečtené",
+        "myCourses.tab.completed": "Dokončené",
+        "myCourses.empty.title": "Zatím jsi nečetl žádný kurz",
+        "myCourses.empty.cta": "Objevit kurz",
+        "myCourses.progress": "%1$d z %2$d stran",
+        "myCourses.quizScore": "Kvíz: %1$d/%2$d",
     ]
 
     // MARK: - Danish
@@ -13466,6 +13571,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Mine kurser",
+        "myCourses.tab.inProgress": "I gang",
+        "myCourses.tab.completed": "Gennemførte",
+        "myCourses.empty.title": "Du har ikke læst et kursus endnu",
+        "myCourses.empty.cta": "Find et kursus",
+        "myCourses.progress": "%1$d af %2$d sider",
+        "myCourses.quizScore": "Quiz: %1$d/%2$d",
     ]
 
     // MARK: - Norwegian
@@ -14306,6 +14418,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Kursene mine",
+        "myCourses.tab.inProgress": "Pågående",
+        "myCourses.tab.completed": "Fullførte",
+        "myCourses.empty.title": "Du har ikke lest et kurs ennå",
+        "myCourses.empty.cta": "Oppdag et kurs",
+        "myCourses.progress": "%1$d av %2$d sider",
+        "myCourses.quizScore": "Quiz: %1$d/%2$d",
     ]
 
     // MARK: - Russian
@@ -15146,6 +15265,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Мои курсы",
+        "myCourses.tab.inProgress": "В процессе",
+        "myCourses.tab.completed": "Завершённые",
+        "myCourses.empty.title": "Ты ещё не читал ни одного курса",
+        "myCourses.empty.cta": "Найти курс",
+        "myCourses.progress": "%1$d из %2$d страниц",
+        "myCourses.quizScore": "Тест: %1$d/%2$d",
     ]
 
     // MARK: - Croatian
@@ -15986,6 +16112,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Moji tečajevi",
+        "myCourses.tab.inProgress": "U tijeku",
+        "myCourses.tab.completed": "Završeni",
+        "myCourses.empty.title": "Još nisi čitao nijedan tečaj",
+        "myCourses.empty.cta": "Otkrij tečaj",
+        "myCourses.progress": "%1$d od %2$d stranica",
+        "myCourses.quizScore": "Kviz: %1$d/%2$d",
     ]
 
     // MARK: - Slovenian
@@ -16826,6 +16959,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Moji tečaji",
+        "myCourses.tab.inProgress": "V teku",
+        "myCourses.tab.completed": "Končani",
+        "myCourses.empty.title": "Še nisi prebral nobenega tečaja",
+        "myCourses.empty.cta": "Odkrij tečaj",
+        "myCourses.progress": "%1$d od %2$d strani",
+        "myCourses.quizScore": "Kviz: %1$d/%2$d",
     ]
 
     // MARK: - Slovak
@@ -17666,6 +17806,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Moje kurzy",
+        "myCourses.tab.inProgress": "Rozčítané",
+        "myCourses.tab.completed": "Dokončené",
+        "myCourses.empty.title": "Zatiaľ si nečítal žiadny kurz",
+        "myCourses.empty.cta": "Objaviť kurz",
+        "myCourses.progress": "%1$d z %2$d strán",
+        "myCourses.quizScore": "Kvíz: %1$d/%2$d",
     ]
 
     // MARK: - Serbian
@@ -18506,6 +18653,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Moji kursevi",
+        "myCourses.tab.inProgress": "U toku",
+        "myCourses.tab.completed": "Završeni",
+        "myCourses.empty.title": "Još nisi čitao nijedan kurs",
+        "myCourses.empty.cta": "Otkrij kurs",
+        "myCourses.progress": "%1$d od %2$d stranica",
+        "myCourses.quizScore": "Kviz: %1$d/%2$d",
     ]
 
     // MARK: - Arabic
@@ -19346,6 +19500,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "دوراتي",
+        "myCourses.tab.inProgress": "قيد التقدّم",
+        "myCourses.tab.completed": "مكتملة",
+        "myCourses.empty.title": "لم تقرأ أي دورة بعد",
+        "myCourses.empty.cta": "اكتشف دورة",
+        "myCourses.progress": "%1$d من %2$d صفحات",
+        "myCourses.quizScore": "الاختبار: %1$d/%2$d",
     ]
 
     // MARK: - Hebrew
@@ -20186,6 +20347,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "הקורסים שלי",
+        "myCourses.tab.inProgress": "בתהליך",
+        "myCourses.tab.completed": "הושלמו",
+        "myCourses.empty.title": "עדיין לא קראת אף קורס",
+        "myCourses.empty.cta": "גלה קורס",
+        "myCourses.progress": "%1$d מתוך %2$d עמודים",
+        "myCourses.quizScore": "חידון: %1$d/%2$d",
     ]
 
     // MARK: - Finnish
@@ -21026,6 +21194,13 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Kurssini",
+        "myCourses.tab.inProgress": "Kesken",
+        "myCourses.tab.completed": "Suoritetut",
+        "myCourses.empty.title": "Et ole vielä lukenut yhtään kurssia",
+        "myCourses.empty.cta": "Löydä kurssi",
+        "myCourses.progress": "%1$d / %2$d sivua",
+        "myCourses.quizScore": "Tietovisa: %1$d/%2$d",
     ]
 
     // MARK: - Estonian
@@ -21866,5 +22041,12 @@ enum AppLocalizable {
         "language.hebrew": "עברית",
         "language.finnish": "Suomi",
         "language.estonian": "Eesti",
+        "myCourses.title": "Minu kursused",
+        "myCourses.tab.inProgress": "Pooleli",
+        "myCourses.tab.completed": "Lõpetatud",
+        "myCourses.empty.title": "Sa pole veel ühtegi kursust lugenud",
+        "myCourses.empty.cta": "Avasta kursus",
+        "myCourses.progress": "%1$d / %2$d leheküljest",
+        "myCourses.quizScore": "Viktoriin: %1$d/%2$d",
     ]
 }

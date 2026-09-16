@@ -26,6 +26,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.LocalFireDepartment
@@ -83,6 +84,7 @@ import app.rork.sophia.ui.components.FirstOpenExplanation
 import app.rork.sophia.ui.components.Pill
 import app.rork.sophia.ui.components.SophiaPrimaryButton
 import app.rork.sophia.ui.components.inlineRichText
+import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -102,7 +104,9 @@ fun HomeTikTokScreen(
     onToggleFavorite: (String) -> Unit,
     onStartCourse: (String) -> Unit,
     onUserSwipe: () -> Unit = {},
+    onOpenMyCourses: () -> Unit = {},
     streak: Int = 0,
+    completedCourses: Int = 0,
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -170,6 +174,35 @@ fun HomeTikTokScreen(
                     color = DS.ink,
                 )
                 Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                // Same badge shape as the streak, next to it: the two things you want at a
+                // glance from home are how many days in a row and what you have read.
+                Row(
+                    modifier = Modifier
+                        .clip(CircleShape)
+                        .background(DS.surface)
+                        .softPress(onClick = onOpenMyCourses)
+                        .padding(horizontal = 14.dp, vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                ) {
+                    Icon(
+                        Icons.AutoMirrored.Filled.MenuBook,
+                        contentDescription = StringStore.text(context, "myCourses.title", language),
+                        tint = DS.accentSoft,
+                        modifier = Modifier.size(18.dp),
+                    )
+                    Text(
+                        text = "$completedCourses",
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 15.sp,
+                        color = DS.ink,
+                    )
+                }
+                Row(
                     modifier = Modifier
                         .clip(CircleShape)
                         .background(DS.surface)
@@ -202,6 +235,7 @@ fun HomeTikTokScreen(
                         color = DS.inkSecondary,
                         maxLines = 1,
                     )
+                }
                 }
             }
 

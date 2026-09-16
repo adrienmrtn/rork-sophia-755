@@ -113,7 +113,7 @@ class ProgressManager(context: Context) {
     fun courseProgress(courseId: String): CourseProgress? =
         _progress.value.courseProgress[courseId]
 
-    fun updateLessonIndex(courseId: String, index: Int) {
+    fun updateLessonIndex(courseId: String, index: Int, lessonCount: Int = 0) {
         mutate { current ->
             val map = current.courseProgress.toMutableMap()
             val existing = map[courseId] ?: CourseProgress()
@@ -121,6 +121,7 @@ class ProgressManager(context: Context) {
                 lastLessonIndex = maxOf(existing.lastLessonIndex, index),
                 // First page reached is when this course became "in progress".
                 startedAt = existing.startedAt ?: nowIso(),
+                lessonCount = if (lessonCount > 0) lessonCount else existing.lessonCount,
             )
             current.copy(courseProgress = map)
         }
@@ -166,13 +167,20 @@ class ProgressManager(context: Context) {
         }
     }
 
-    fun completeQuiz(courseId: String, score: Int, questionIds: List<String>, subjectKey: String) {
+    fun completeQuiz(
+        courseId: String,
+        score: Int,
+        maxPoints: Int,
+        questionIds: List<String>,
+        subjectKey: String,
+    ) {
         mutate { current ->
             val map = current.courseProgress.toMutableMap()
             val existing = map[courseId] ?: CourseProgress()
             map[courseId] = existing.copy(
                 isCompleted = true,
                 bestQuizScore = maxOf(existing.bestQuizScore, score),
+                quizMaxPoints = if (maxPoints > 0) maxPoints else existing.quizMaxPoints,
                 lastQuizDate = nowIso(),
                 startedAt = existing.startedAt ?: nowIso(),
                 completedAt = existing.completedAt ?: nowIso(),
