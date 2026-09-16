@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Kursforslag",
-  "notification.channel.description": "Av og til en liten dytt for å ta fatt på et kurs igjen."
+  "notification.channel.description": "Av og til en liten dytt for å ta fatt på et kurs igjen.",
+  "paywall.quiz.faq.a1.play": "Ja. Åpne Google Play → profilen din → Betalinger og abonnementer → Abonnementer → Sophia → Si opp abonnementet. Ferdig på noen trykk.",
+  "paywall.quiz.faq.a3.noTrial.play": "Nei. Ingen binding: si opp når du vil i Google Play, og du beholder tilgangen ut perioden du allerede har betalt for.",
+  "paywall.manageSubscription": "Administrer abonnementet",
+  "purchase.pending": "Betalingen venter. Tilgangen din åpnes så snart den er bekreftet.",
+  "paywall.restore.success": "Kjøpene er gjenopprettet.",
+  "paywall.restore.none": "Fant ingen abonnementer for denne kontoen.",
+  "paywall.restore.error": "Klarte ikke å gjenopprette kjøpene dine. Prøv igjen.",
+  "auth.continueWithoutAccount": "Fortsett uten konto",
+  "auth.withoutAccount.note": "Fremgangen din blir på denne telefonen. Du kan opprette en konto senere.",
+  "auth.unavailable.body": "Google-innlogging er ikke tilgjengelig på denne enheten.",
+  "account.createLater.title": "Lagre fremgangen din?",
+  "account.createLater.body": "Opprett en konto, så følger kursene dine med til neste telefon. Det tar noen sekunder.",
+  "account.createLater.later": "Ikke nå",
+  "paywall.error.network": "Ingen tilkobling. Sjekk nettverket og prøv igjen.",
+  "paywall.error.notAllowed": "Dette kjøpet er ikke tillatt på denne enheten eller Google-kontoen."
 }

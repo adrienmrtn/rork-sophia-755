@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Kursusesoovitused",
-  "notification.channel.description": "Aeg-ajalt meeldetuletus kursuse juurde naasta."
+  "notification.channel.description": "Aeg-ajalt meeldetuletus kursuse juurde naasta.",
+  "paywall.quiz.faq.a1.play": "Jah. Ava Google Play → oma profiil → Maksed ja tellimused → Tellimused → Sophia → Tühista tellimus. Mõne puudutusega tehtud.",
+  "paywall.quiz.faq.a3.noTrial.play": "Ei. Ilma kohustuseta: tühista millal soovid Google Plays ja ligipääs jääb kuni juba makstud perioodi lõpuni.",
+  "paywall.manageSubscription": "Halda tellimust",
+  "purchase.pending": "Makse ootel. Ligipääs avaneb kohe, kui makse on kinnitatud.",
+  "paywall.restore.success": "Ostud taastatud.",
+  "paywall.restore.none": "Sellele kontole tellimust ei leitud.",
+  "paywall.restore.error": "Ostude taastamine ebaõnnestus. Proovi uuesti.",
+  "auth.continueWithoutAccount": "Jätka ilma kontota",
+  "auth.withoutAccount.note": "Sinu edenemine jääb sellesse telefoni. Konto saad luua hiljem.",
+  "auth.unavailable.body": "Google'i sisselogimine pole selles seadmes saadaval.",
+  "account.createLater.title": "Kas salvestame su edenemise?",
+  "account.createLater.body": "Loo konto ja su kursused tulevad kaasa ka järgmisse telefoni. See võtab paar sekundit.",
+  "account.createLater.later": "Mitte praegu",
+  "paywall.error.network": "Ühendus puudub. Kontrolli võrku ja proovi uuesti.",
+  "paywall.error.notAllowed": "See ost pole selles seadmes või Google'i kontol lubatud."
 }

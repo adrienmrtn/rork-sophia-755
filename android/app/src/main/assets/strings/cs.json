@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Návrhy kurzů",
-  "notification.channel.description": "Občasná připomenutí, abys navázal na kurz."
+  "notification.channel.description": "Občasná připomenutí, abys navázal na kurz.",
+  "paywall.quiz.faq.a1.play": "Ano. Otevři Google Play → svůj profil → Platby a předplatné → Předplatné → Sophia → Zrušit předplatné. Hotovo v pár klepnutích.",
+  "paywall.quiz.faq.a3.noTrial.play": "Ne. Žádný závazek: zruš kdykoli v Google Play a přístup ti zůstane do konce už zaplaceného období.",
+  "paywall.manageSubscription": "Spravovat předplatné",
+  "purchase.pending": "Platba čeká na potvrzení. Přístup se ti odemkne, jakmile bude potvrzena.",
+  "paywall.restore.success": "Nákupy obnoveny.",
+  "paywall.restore.none": "Pro tento účet jsme nenašli žádné předplatné.",
+  "paywall.restore.error": "Nákupy se nepodařilo obnovit. Zkus to znovu.",
+  "auth.continueWithoutAccount": "Pokračovat bez účtu",
+  "auth.withoutAccount.note": "Tvůj pokrok zůstane v tomhle telefonu. Účet si můžeš vytvořit později.",
+  "auth.unavailable.body": "Přihlášení přes Google není na tomto zařízení dostupné.",
+  "account.createLater.title": "Uložit tvůj pokrok?",
+  "account.createLater.body": "Vytvoř si účet a tvoje kurzy tě doprovodí i na další telefon. Zabere to pár sekund.",
+  "account.createLater.later": "Teď ne",
+  "paywall.error.network": "Není připojení. Zkontroluj síť a zkus to znovu.",
+  "paywall.error.notAllowed": "Tento nákup není na tomto zařízení nebo účtu Google povolen."
 }

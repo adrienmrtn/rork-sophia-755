@@ -159,6 +159,11 @@ class DiscountOfferManager(context: Context) {
         startTicker()
     }
 
+    /** Wipes the promo countdown so a deleted account leaves no offer behind. */
+    fun clearLocalState() {
+        persist(DiscountState())
+    }
+
     fun markExpired() {
         ticker?.cancel()
         mutate { it.copy(isExpiredForever = true, remainingSeconds = 0) }

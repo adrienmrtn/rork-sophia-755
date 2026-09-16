@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "הצעות לקורסים",
-  "notification.channel.description": "תזכורת מדי פעם לחזור לקורס."
+  "notification.channel.description": "תזכורת מדי פעם לחזור לקורס.",
+  "paywall.quiz.faq.a1.play": "כן. פתח את Google Play ← הפרופיל שלך ← תשלומים ומינויים ← מינויים ← Sophia ← ביטול המינוי. נעשה בכמה הקשות.",
+  "paywall.quiz.faq.a3.noTrial.play": "לא. ללא התחייבות: בטל מתי שתרצה ב-Google Play, והגישה נשמרת עד סוף התקופה ששולמה כבר.",
+  "paywall.manageSubscription": "ניהול המינוי שלי",
+  "purchase.pending": "התשלום ממתין לאישור. הגישה שלך תיפתח ברגע שהוא יאושר.",
+  "paywall.restore.success": "הרכישות שוחזרו.",
+  "paywall.restore.none": "לא נמצא מינוי עבור החשבון הזה.",
+  "paywall.restore.error": "לא ניתן היה לשחזר את הרכישות שלך. נסה שוב.",
+  "auth.continueWithoutAccount": "המשך ללא חשבון",
+  "auth.withoutAccount.note": "ההתקדמות שלך נשארת בטלפון הזה. אפשר ליצור חשבון מאוחר יותר.",
+  "auth.unavailable.body": "התחברות עם Google אינה זמינה במכשיר הזה.",
+  "account.createLater.title": "לשמור את ההתקדמות שלך?",
+  "account.createLater.body": "צור חשבון והקורסים שלך יעברו איתך לטלפון הבא. זה לוקח כמה שניות.",
+  "account.createLater.later": "לא עכשיו",
+  "paywall.error.network": "אין חיבור. בדוק את הרשת ונסה שוב.",
+  "paywall.error.notAllowed": "רכישה זו אינה מותרת במכשיר או בחשבון Google הזה."
 }

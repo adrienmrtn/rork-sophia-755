@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Προτάσεις μαθημάτων",
-  "notification.channel.description": "Περιστασιακές υπενθυμίσεις για να συνεχίσεις ένα μάθημα."
+  "notification.channel.description": "Περιστασιακές υπενθυμίσεις για να συνεχίσεις ένα μάθημα.",
+  "paywall.quiz.faq.a1.play": "Ναι. Άνοιξε το Google Play → το προφίλ σου → Πληρωμές και συνδρομές → Συνδρομές → Sophia → Ακύρωση συνδρομής. Έτοιμο σε λίγα πατήματα.",
+  "paywall.quiz.faq.a3.noTrial.play": "Όχι. Καμία δέσμευση: ακύρωσε όποτε θέλεις από το Google Play και κρατάς την πρόσβαση μέχρι το τέλος της ήδη πληρωμένης περιόδου.",
+  "paywall.manageSubscription": "Διαχείριση συνδρομής",
+  "purchase.pending": "Πληρωμή σε εκκρεμότητα. Η πρόσβασή σου θα ενεργοποιηθεί μόλις επιβεβαιωθεί.",
+  "paywall.restore.success": "Οι αγορές αποκαταστάθηκαν.",
+  "paywall.restore.none": "Δεν βρέθηκε συνδρομή για αυτόν τον λογαριασμό.",
+  "paywall.restore.error": "Δεν ήταν δυνατή η αποκατάσταση των αγορών σου. Δοκίμασε ξανά.",
+  "auth.continueWithoutAccount": "Συνέχεια χωρίς λογαριασμό",
+  "auth.withoutAccount.note": "Η πρόοδός σου μένει σε αυτό το τηλέφωνο. Μπορείς να φτιάξεις λογαριασμό αργότερα.",
+  "auth.unavailable.body": "Η σύνδεση με Google δεν είναι διαθέσιμη σε αυτή τη συσκευή.",
+  "account.createLater.title": "Να αποθηκεύσουμε την πρόοδό σου;",
+  "account.createLater.body": "Φτιάξε λογαριασμό και τα μαθήματά σου θα σε ακολουθήσουν στο επόμενο τηλέφωνο. Παίρνει λίγα δευτερόλεπτα.",
+  "account.createLater.later": "Όχι τώρα",
+  "paywall.error.network": "Καμία σύνδεση. Έλεγξε το δίκτυό σου και δοκίμασε ξανά.",
+  "paywall.error.notAllowed": "Αυτή η αγορά δεν επιτρέπεται σε αυτή τη συσκευή ή τον λογαριασμό Google."
 }

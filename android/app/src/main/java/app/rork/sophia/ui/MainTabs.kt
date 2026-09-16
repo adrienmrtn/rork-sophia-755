@@ -1,5 +1,6 @@
 package app.rork.sophia.ui
 
+import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -48,6 +49,7 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.PostCompletionRewardStep
 import app.rork.sophia.ui.collections.CollectionsScreen
+import app.rork.sophia.ui.components.ConfirmDialog
 import app.rork.sophia.ui.components.PostCompletionRewardFlow
 import app.rork.sophia.ui.components.TrialEndingMiniBanner
 import app.rork.sophia.ui.course.CourseScreen
@@ -106,6 +108,7 @@ fun MainTabs(
     var paywallPresentedAtMs by remember { mutableStateOf<Long?>(null) }
     var showTrialEndingBanner by remember { mutableStateOf(false) }
     var readerReady by remember { mutableStateOf(false) }
+    var showCreateAccountPrompt by remember { mutableStateOf(false) }
 
     LaunchedEffect(language, isPremium, progress.subjectXP) {
         if (constrained) delay(800)
@@ -266,6 +269,11 @@ fun MainTabs(
                         packageId = packageId,
                     )
                 },
+                // A restore is not a purchase: it closes the paywall without reporting a sale.
+                onRestored = {
+                    paywallPresentedAtMs = null
+                    paywall = null
+                },
             )
             return
         }
@@ -284,7 +292,20 @@ fun MainTabs(
                 onOpenAmbassador = { openFromSettings(OverlayScreen.Ambassador) },
                 onOpenTerms = { openFromSettings(OverlayScreen.Terms) },
                 onOpenPrivacy = { openFromSettings(OverlayScreen.Privacy) },
-                onRestorePurchases = { storeViewModel.restore() },
+                onRestorePurchases = {
+                    storeViewModel.restore { result ->
+                        val key = when (result) {
+                            StoreViewModel.RestoreResult.RESTORED -> "paywall.restore.success"
+                            StoreViewModel.RestoreResult.NOTHING_FOUND -> "paywall.restore.none"
+                            StoreViewModel.RestoreResult.FAILED -> "paywall.restore.error"
+                        }
+                        Toast.makeText(
+                            context,
+                            StringStore.text(context, key, language),
+                            Toast.LENGTH_LONG,
+                        ).show()
+                    }
+                },
             )
             return
         }
@@ -362,6 +383,18 @@ fun MainTabs(
                     selectedCourse = null
                     autoSwipeCourseId = id
                     presentRewardsIfNeeded(completedId)
+                    // Someone who skipped sign-in and has read three courses has something
+                    // worth losing now. Ask once, on the way out of a course, never during.
+                    if (completedId != null &&
+                        signedInUserId == null &&
+                        app.onboardingStore.skippedAccount &&
+                        !app.onboardingStore.accountPrompted &&
+                        app.progressManager.progress.value.courseProgress
+                            .count { it.value.isCompleted } >= 3
+                    ) {
+                        app.onboardingStore.markAccountPrompted()
+                        showCreateAccountPrompt = true
+                    }
                 },
                 onRequestPaywall = { key ->
                     if (key == "debloquer_cours" || key == "quizz") {
@@ -503,6 +536,30 @@ fun MainTabs(
                     },
                 )
             }
+        }
+
+        if (showCreateAccountPrompt) {
+            ConfirmDialog(
+                title = StringStore.text(context, "account.createLater.title", language),
+                message = StringStore.text(context, "account.createLater.body", language),
+                confirm = StringStore.text(context, "account.create.title", language),
+                cancel = StringStore.text(context, "account.createLater.later", language),
+                onConfirm = {
+                    showCreateAccountPrompt = false
+                    scope.launch {
+                        runCatching { app.authService.signInWithGoogle(context) }
+                        if (app.authService.isSignedIn) {
+                            app.onboardingStore.markAccountOffered()
+                            runCatching {
+                                app.progressSyncService.pullOnLogin(
+                                    app.progressManager.progress.value,
+                                )
+                            }
+                        }
+                    }
+                },
+                onDismiss = { showCreateAccountPrompt = false },
+            )
         }
 
         AnimatedVisibility(

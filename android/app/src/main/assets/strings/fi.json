@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Kurssiehdotuksia",
-  "notification.channel.description": "Satunnainen muistutus palata kurssin pariin."
+  "notification.channel.description": "Satunnainen muistutus palata kurssin pariin.",
+  "paywall.quiz.faq.a1.play": "Kyllä. Avaa Google Play → profiilisi → Maksut ja tilaukset → Tilaukset → Sophia → Peruuta tilaus. Valmista muutamalla napautuksella.",
+  "paywall.quiz.faq.a3.noTrial.play": "Ei. Ei sitoutumista: peruuta milloin haluat Google Playssä, ja käyttöoikeus säilyy jo maksetun jakson loppuun.",
+  "paywall.manageSubscription": "Hallitse tilaustani",
+  "purchase.pending": "Maksu odottaa vahvistusta. Käyttöoikeus avautuu heti, kun se vahvistetaan.",
+  "paywall.restore.success": "Ostokset palautettu.",
+  "paywall.restore.none": "Tälle tilille ei löytynyt tilausta.",
+  "paywall.restore.error": "Ostoksia ei voitu palauttaa. Yritä uudelleen.",
+  "auth.continueWithoutAccount": "Jatka ilman tiliä",
+  "auth.withoutAccount.note": "Edistymisesi pysyy tässä puhelimessa. Voit luoda tilin myöhemmin.",
+  "auth.unavailable.body": "Google-kirjautuminen ei ole käytettävissä tällä laitteella.",
+  "account.createLater.title": "Tallennetaanko edistymisesi?",
+  "account.createLater.body": "Luo tili, niin kurssisi seuraavat mukana seuraavaan puhelimeen. Se vie muutaman sekunnin.",
+  "account.createLater.later": "Ei nyt",
+  "paywall.error.network": "Ei yhteyttä. Tarkista verkko ja yritä uudelleen.",
+  "paywall.error.notAllowed": "Tätä ostoa ei sallita tällä laitteella tai Google-tilillä."
 }

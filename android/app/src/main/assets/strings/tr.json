@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Kurs önerileri",
-  "notification.channel.description": "Bir kursa geri dönmen için ara sıra hatırlatmalar."
+  "notification.channel.description": "Bir kursa geri dönmen için ara sıra hatırlatmalar.",
+  "paywall.quiz.faq.a1.play": "Evet. Google Play → profilin → Ödemeler ve abonelikler → Abonelikler → Sophia → Aboneliği iptal et. Birkaç dokunuşta biter.",
+  "paywall.quiz.faq.a3.noTrial.play": "Hayır. Taahhüt yok: Google Play'den istediğin zaman iptal et, ödediğin dönemin sonuna kadar erişimin sürer.",
+  "paywall.manageSubscription": "Aboneliğimi yönet",
+  "purchase.pending": "Ödeme beklemede. Onaylandığı anda erişimin açılacak.",
+  "paywall.restore.success": "Satın alımlar geri yüklendi.",
+  "paywall.restore.none": "Bu hesap için abonelik bulunamadı.",
+  "paywall.restore.error": "Satın alımların geri yüklenemedi. Tekrar dene.",
+  "auth.continueWithoutAccount": "Hesap olmadan devam et",
+  "auth.withoutAccount.note": "İlerlemen bu telefonda kalır. Hesabı daha sonra oluşturabilirsin.",
+  "auth.unavailable.body": "Bu cihazda Google ile giriş kullanılamıyor.",
+  "account.createLater.title": "İlerlemen kaydedilsin mi?",
+  "account.createLater.body": "Bir hesap oluştur, kurslarin bir sonraki telefonuna da gelsin. Birkaç saniye sürer.",
+  "account.createLater.later": "Şimdi değil",
+  "paywall.error.network": "Bağlantı yok. Ağını kontrol edip tekrar dene.",
+  "paywall.error.notAllowed": "Bu satın alma bu cihazda veya Google hesabında izinli değil."
 }

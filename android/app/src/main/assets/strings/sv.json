@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Kursförslag",
-  "notification.channel.description": "Enstaka påminnelser om att ta upp en kurs igen."
+  "notification.channel.description": "Enstaka påminnelser om att ta upp en kurs igen.",
+  "paywall.quiz.faq.a1.play": "Ja. Öppna Google Play → din profil → Betalningar och prenumerationer → Prenumerationer → Sophia → Avsluta prenumeration. Klart på några tryck.",
+  "paywall.quiz.faq.a3.noTrial.play": "Nej. Ingen bindningstid: avsluta när du vill i Google Play, och du behåller åtkomsten till slutet av den redan betalda perioden.",
+  "paywall.manageSubscription": "Hantera min prenumeration",
+  "purchase.pending": "Betalningen väntar. Din åtkomst aktiveras så snart den bekräftas.",
+  "paywall.restore.success": "Köpen har återställts.",
+  "paywall.restore.none": "Ingen prenumeration hittades för det här kontot.",
+  "paywall.restore.error": "Det gick inte att återställa dina köp. Försök igen.",
+  "auth.continueWithoutAccount": "Fortsätt utan konto",
+  "auth.withoutAccount.note": "Dina framsteg stannar på den här telefonen. Du kan skapa ett konto senare.",
+  "auth.unavailable.body": "Google-inloggning är inte tillgänglig på den här enheten.",
+  "account.createLater.title": "Spara dina framsteg?",
+  "account.createLater.body": "Skapa ett konto så följer dina kurser med till nästa telefon. Det tar några sekunder.",
+  "account.createLater.later": "Inte nu",
+  "paywall.error.network": "Ingen anslutning. Kontrollera nätverket och försök igen.",
+  "paywall.error.notAllowed": "Det här köpet är inte tillåtet på den här enheten eller det här Google-kontot."
 }

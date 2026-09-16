@@ -702,6 +702,25 @@ fun CheckedFeatureRow(text: String) {
     }
 }
 
+/**
+ * Neutral counterpart to [PaywallErrorNote]: a pending Play payment is not a failure, so it
+ * must not be painted in the red that means "something went wrong".
+ */
+@Composable
+fun PaywallNotice(message: String, light: Boolean = false) {
+    Text(
+        text = message,
+        style = SophiaTypography.labelMedium.copy(fontSize = 12.sp),
+        color = if (light) Color.White else DS.accentSoft,
+        textAlign = TextAlign.Center,
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .background(if (light) Color.White.copy(alpha = 0.18f) else DS.accentTint)
+            .padding(horizontal = 12.dp, vertical = 10.dp),
+    )
+}
+
 @Composable
 fun PaywallErrorNote(message: String, light: Boolean = false) {
     Text(

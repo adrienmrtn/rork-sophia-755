@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Kurzusajánlatok",
-  "notification.channel.description": "Alkalmi emlékeztetők, hogy folytass egy kurzust."
+  "notification.channel.description": "Alkalmi emlékeztetők, hogy folytass egy kurzust.",
+  "paywall.quiz.faq.a1.play": "Igen. Nyisd meg a Google Playt → profilod → Fizetések és előfizetések → Előfizetések → Sophia → Előfizetés lemondása. Pár koppintással kész.",
+  "paywall.quiz.faq.a3.noTrial.play": "Nem. Nincs elköteleződés: mondd le bármikor a Google Playben, és a hozzáférés a már kifizetett időszak végéig megmarad.",
+  "paywall.manageSubscription": "Előfizetés kezelése",
+  "purchase.pending": "Függőben lévő fizetés. A hozzáférésed a megerősítés után azonnal aktiválódik.",
+  "paywall.restore.success": "A vásárlások visszaállítva.",
+  "paywall.restore.none": "Nem találtunk előfizetést ehhez a fiókhoz.",
+  "paywall.restore.error": "Nem sikerült visszaállítani a vásárlásaidat. Próbáld újra.",
+  "auth.continueWithoutAccount": "Folytatás fiók nélkül",
+  "auth.withoutAccount.note": "A haladásod ezen a telefonon marad. Fiókot később is létrehozhatsz.",
+  "auth.unavailable.body": "A Google-bejelentkezés nem érhető el ezen az eszközön.",
+  "account.createLater.title": "Mentsük a haladásodat?",
+  "account.createLater.body": "Hozz létre fiókot, és a kurzusaid átjönnek a következő telefonodra is. Pár másodperc.",
+  "account.createLater.later": "Most nem",
+  "paywall.error.network": "Nincs kapcsolat. Ellenőrizd a hálózatot, és próbáld újra.",
+  "paywall.error.notAllowed": "Ez a vásárlás nem engedélyezett ezen az eszközön vagy Google-fiókon."
 }

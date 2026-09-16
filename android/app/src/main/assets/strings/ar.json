@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "اقتراحات الدورات",
-  "notification.channel.description": "تذكير بين الحين والآخر للعودة إلى دورة."
+  "notification.channel.description": "تذكير بين الحين والآخر للعودة إلى دورة.",
+  "paywall.quiz.faq.a1.play": "نعم. افتح Google Play ← ملفك الشخصي ← المدفوعات والاشتراكات ← الاشتراكات ← Sophia ← إلغاء الاشتراك. يتم ذلك ببضع نقرات.",
+  "paywall.quiz.faq.a3.noTrial.play": "لا. بدون التزام: ألغِ متى شئت من Google Play، وتحتفظ بالوصول حتى نهاية الفترة المدفوعة بالفعل.",
+  "paywall.manageSubscription": "إدارة اشتراكي",
+  "purchase.pending": "الدفع قيد الانتظار. سيُفتح وصولك بمجرد تأكيده.",
+  "paywall.restore.success": "تمت استعادة المشتريات.",
+  "paywall.restore.none": "لم يتم العثور على اشتراك لهذا الحساب.",
+  "paywall.restore.error": "تعذّرت استعادة مشترياتك. حاول مرة أخرى.",
+  "auth.continueWithoutAccount": "المتابعة بدون حساب",
+  "auth.withoutAccount.note": "يبقى تقدمك على هذا الهاتف. يمكنك إنشاء حساب لاحقًا.",
+  "auth.unavailable.body": "تسجيل الدخول عبر Google غير متاح على هذا الجهاز.",
+  "account.createLater.title": "هل تريد حفظ تقدمك؟",
+  "account.createLater.body": "أنشئ حسابًا لتنتقل دوراتك معك إلى هاتفك التالي. يستغرق الأمر بضع ثوانٍ.",
+  "account.createLater.later": "ليس الآن",
+  "paywall.error.network": "لا يوجد اتصال. تحقق من الشبكة وحاول مرة أخرى.",
+  "paywall.error.notAllowed": "هذا الشراء غير مسموح على هذا الجهاز أو حساب Google."
 }

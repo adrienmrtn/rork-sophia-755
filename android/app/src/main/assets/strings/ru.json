@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Рекомендации курсов",
-  "notification.channel.description": "Изредка напоминаем вернуться к курсу."
+  "notification.channel.description": "Изредка напоминаем вернуться к курсу.",
+  "paywall.quiz.faq.a1.play": "Да. Открой Google Play → свой профиль → Платежи и подписки → Подписки → Sophia → Отменить подписку. Пара нажатий.",
+  "paywall.quiz.faq.a3.noTrial.play": "Нет. Никаких обязательств: отмени когда захочешь в Google Play — доступ останется до конца уже оплаченного периода.",
+  "paywall.manageSubscription": "Управление подпиской",
+  "purchase.pending": "Платёж обрабатывается. Доступ откроется, как только он подтвердится.",
+  "paywall.restore.success": "Покупки восстановлены.",
+  "paywall.restore.none": "Для этого аккаунта подписка не найдена.",
+  "paywall.restore.error": "Не удалось восстановить покупки. Попробуй ещё раз.",
+  "auth.continueWithoutAccount": "Продолжить без аккаунта",
+  "auth.withoutAccount.note": "Твой прогресс останется на этом телефоне. Аккаунт можно создать позже.",
+  "auth.unavailable.body": "Вход через Google недоступен на этом устройстве.",
+  "account.createLater.title": "Сохранить прогресс?",
+  "account.createLater.body": "Создай аккаунт — и твои курсы перейдут на следующий телефон. Это займёт несколько секунд.",
+  "account.createLater.later": "Не сейчас",
+  "paywall.error.network": "Нет соединения. Проверь сеть и попробуй ещё раз.",
+  "paywall.error.notAllowed": "Эта покупка недоступна на этом устройстве или аккаунте Google."
 }

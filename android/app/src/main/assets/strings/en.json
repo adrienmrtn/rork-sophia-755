@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Course suggestions",
-  "notification.channel.description": "Occasional nudges to pick a course back up."
+  "notification.channel.description": "Occasional nudges to pick a course back up.",
+  "paywall.quiz.faq.a1.play": "Yes. Open Google Play → your profile → Payments and subscriptions → Subscriptions → Sophia → Cancel subscription. Done in a few taps.",
+  "paywall.quiz.faq.a3.noTrial.play": "No. No commitment: cancel whenever you want from Google Play, and you keep access until the end of the period you already paid for.",
+  "paywall.manageSubscription": "Manage my subscription",
+  "purchase.pending": "Payment pending. Your access will unlock as soon as it is confirmed.",
+  "paywall.restore.success": "Purchases restored.",
+  "paywall.restore.none": "No subscription found for this account.",
+  "paywall.restore.error": "Couldn't restore your purchases. Please try again.",
+  "auth.continueWithoutAccount": "Continue without an account",
+  "auth.withoutAccount.note": "Your progress stays on this phone. You can create an account later.",
+  "auth.unavailable.body": "Google sign-in isn't available on this device.",
+  "account.createLater.title": "Save your progress?",
+  "account.createLater.body": "Create an account and your courses follow you to your next phone. It takes a few seconds.",
+  "account.createLater.later": "Not now",
+  "paywall.error.network": "No connection. Check your network and try again.",
+  "paywall.error.notAllowed": "This purchase isn't allowed on this device or Google account."
 }

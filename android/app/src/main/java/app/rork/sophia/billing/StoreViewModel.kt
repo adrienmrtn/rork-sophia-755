@@ -79,6 +79,16 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         // authoritative expiry every time it lands; an unchanged target is a no-op.
         if (trialEnd != null) {
             TrialReminderScheduler.scheduleTrialEndingReminder(getApplication(), trialEnd)
+        } else if (entitlement != null) {
+            // This customer has an entitlement on record and it is not in a trial: either it
+            // converted to paid, or it was bought with no trial at all, or it lapsed. Nothing
+            // is ending, so a pending "your trial ends tomorrow" alarm has to go.
+            //
+            // Deliberately not cancelling when `entitlement` is null: that is also what a
+            // brand-new purchase looks like in the seconds before RevenueCat reports the
+            // trial, and the onboarding has just armed an assumed 3-day reminder that this
+            // would silently throw away.
+            TrialReminderScheduler.cancel(getApplication())
         }
     }
 
@@ -283,18 +293,30 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         _isPremium.value = value
     }
 
-    fun restore(onResult: (success: Boolean, message: String?) -> Unit = { _, _ -> }) {
+    /**
+     * Outcome of a restore, as something the screen can put in front of the user. The old
+     * signature handed back a raw RevenueCat message — untranslated, and empty on the happy
+     * path, which is why tapping Restore used to look like nothing had happened.
+     */
+    enum class RestoreResult { RESTORED, NOTHING_FOUND, FAILED }
+
+    fun restore(onResult: (RestoreResult) -> Unit = {}) {
         if (!Purchases.isConfigured) {
-            onResult(false, "RevenueCat non configuré")
+            onResult(RestoreResult.FAILED)
             return
         }
         Purchases.sharedInstance.restorePurchasesWith(
-            onError = { error -> onResult(false, error.message) },
+            onError = { onResult(RestoreResult.FAILED) },
             onSuccess = { info ->
                 applyCustomerInfo(info)
-                val active = _isPremium.value
-                onResult(active, if (active) null else "Aucun abonnement trouvé")
+                onResult(
+                    if (_isPremium.value) RestoreResult.RESTORED else RestoreResult.NOTHING_FOUND,
+                )
             },
         )
     }
+
+    /** True when the entitlement this app sells is active right now on this customer info. */
+    fun isEntitlementActive(customerInfo: CustomerInfo): Boolean =
+        customerInfo.entitlements[AppConfig.PREMIUM_ENTITLEMENT]?.isActive == true
 }

@@ -4,6 +4,7 @@ import app.rork.sophia.AppConfig
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.auth.Auth
+import io.github.jan.supabase.functions.Functions
 import io.github.jan.supabase.postgrest.Postgrest
 
 object SupabaseManager {
@@ -14,6 +15,9 @@ object SupabaseManager {
         ) {
             install(Auth)
             install(Postgrest)
+            // `delete-user` runs with the service role and is the only way an account can be
+            // removed from the app, which Google Play requires.
+            install(Functions)
         }
     }
 }

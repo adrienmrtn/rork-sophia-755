@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Propozycje kursów",
-  "notification.channel.description": "Sporadyczne przypomnienia, by wrócić do kursu."
+  "notification.channel.description": "Sporadyczne przypomnienia, by wrócić do kursu.",
+  "paywall.quiz.faq.a1.play": "Tak. Otwórz Google Play → swój profil → Płatności i subskrypcje → Subskrypcje → Sophia → Anuluj subskrypcję. Kilka stuknięć i gotowe.",
+  "paywall.quiz.faq.a3.noTrial.play": "Nie. Bez zobowiązań: anuluj kiedy chcesz w Google Play, a dostęp zachowasz do końca już opłaconego okresu.",
+  "paywall.manageSubscription": "Zarządzaj subskrypcją",
+  "purchase.pending": "Płatność oczekuje. Dostęp włączy się, gdy tylko zostanie potwierdzona.",
+  "paywall.restore.success": "Zakupy przywrócone.",
+  "paywall.restore.none": "Nie znaleziono subskrypcji dla tego konta.",
+  "paywall.restore.error": "Nie udało się przywrócić zakupów. Spróbuj ponownie.",
+  "auth.continueWithoutAccount": "Kontynuuj bez konta",
+  "auth.withoutAccount.note": "Twoje postępy zostają na tym telefonie. Konto możesz założyć później.",
+  "auth.unavailable.body": "Logowanie przez Google nie jest dostępne na tym urządzeniu.",
+  "account.createLater.title": "Zapisać postępy?",
+  "account.createLater.body": "Załóż konto, a twoje kursy przeniosą się na kolejny telefon. To kilka sekund.",
+  "account.createLater.later": "Nie teraz",
+  "paywall.error.network": "Brak połączenia. Sprawdź sieć i spróbuj ponownie.",
+  "paywall.error.notAllowed": "Ten zakup nie jest dozwolony na tym urządzeniu lub koncie Google."
 }

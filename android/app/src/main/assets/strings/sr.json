@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Предлози курсева",
-  "notification.channel.description": "Повремени подсетник да се вратиш курсу."
+  "notification.channel.description": "Повремени подсетник да се вратиш курсу.",
+  "paywall.quiz.faq.a1.play": "Da. Otvori Google Play → svoj profil → Plaćanja i pretplate → Pretplate → Sophia → Otkaži pretplatu. Gotovo u par dodira.",
+  "paywall.quiz.faq.a3.noTrial.play": "Ne. Bez obaveze: otkaži kad god želiš u Google Play-u i zadržavaš pristup do kraja već plaćenog perioda.",
+  "paywall.manageSubscription": "Upravljaj pretplatom",
+  "purchase.pending": "Plaćanje na čekanju. Pristup će se aktivirati čim bude potvrđeno.",
+  "paywall.restore.success": "Kupovine su vraćene.",
+  "paywall.restore.none": "Nije pronađena pretplata za ovaj nalog.",
+  "paywall.restore.error": "Nismo uspeli da vratimo kupovine. Pokušaj ponovo.",
+  "auth.continueWithoutAccount": "Nastavi bez naloga",
+  "auth.withoutAccount.note": "Tvoj napredak ostaje na ovom telefonu. Nalog možeš napraviti kasnije.",
+  "auth.unavailable.body": "Prijava preko Google-a nije dostupna na ovom uređaju.",
+  "account.createLater.title": "Sačuvati tvoj napredak?",
+  "account.createLater.body": "Napravi nalog i tvoji kursevi će preći na sledeći telefon. Traje par sekundi.",
+  "account.createLater.later": "Ne sada",
+  "paywall.error.network": "Nema veze. Proveri mrežu i pokušaj ponovo.",
+  "paywall.error.notAllowed": "Ova kupovina nije dozvoljena na ovom uređaju ili Google nalogu."
 }

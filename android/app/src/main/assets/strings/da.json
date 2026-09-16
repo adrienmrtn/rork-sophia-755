@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Kursusforslag",
-  "notification.channel.description": "Et lille skub i ny og næ til at tage fat på et kursus igen."
+  "notification.channel.description": "Et lille skub i ny og næ til at tage fat på et kursus igen.",
+  "paywall.quiz.faq.a1.play": "Ja. Åbn Google Play → din profil → Betalinger og abonnementer → Abonnementer → Sophia → Opsig abonnement. Klaret på få tryk.",
+  "paywall.quiz.faq.a3.noTrial.play": "Nej. Ingen binding: opsig når du vil i Google Play, og du beholder adgangen indtil udgangen af den allerede betalte periode.",
+  "paywall.manageSubscription": "Administrer mit abonnement",
+  "purchase.pending": "Betaling afventer. Din adgang åbnes, så snart den er bekræftet.",
+  "paywall.restore.success": "Køb er gendannet.",
+  "paywall.restore.none": "Der blev ikke fundet noget abonnement til denne konto.",
+  "paywall.restore.error": "Dine køb kunne ikke gendannes. Prøv igen.",
+  "auth.continueWithoutAccount": "Fortsæt uden konto",
+  "auth.withoutAccount.note": "Dine fremskridt bliver på denne telefon. Du kan oprette en konto senere.",
+  "auth.unavailable.body": "Google-login er ikke tilgængeligt på denne enhed.",
+  "account.createLater.title": "Gem dine fremskridt?",
+  "account.createLater.body": "Opret en konto, så følger dine kurser med til din næste telefon. Det tager få sekunder.",
+  "account.createLater.later": "Ikke nu",
+  "paywall.error.network": "Ingen forbindelse. Tjek dit netværk, og prøv igen.",
+  "paywall.error.notAllowed": "Dette køb er ikke tilladt på denne enhed eller Google-konto."
 }

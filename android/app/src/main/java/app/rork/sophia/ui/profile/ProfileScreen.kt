@@ -20,6 +20,7 @@ import androidx.compose.material.icons.filled.Bolt
 import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.LocalFireDepartment
+import androidx.compose.material.icons.filled.CloudUpload
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.WorkspacePremium
@@ -30,7 +31,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -87,6 +91,7 @@ fun ProfileScreen(
     val favorites = progress.favoriteCourseIds.mapNotNull { id ->
         summaries.firstOrNull { it.id == id }
     }
+    var signingIn by remember { mutableStateOf(false) }
     val level = ProgressManager.globalLevelProgress(progress.globalXP)
     val rankProgress = if (level.xpForLevel == 0) 0f else level.xpIntoLevel.toFloat() / level.xpForLevel
     val completedCount = progress.courseProgress.count { it.value.isCompleted }
@@ -113,6 +118,33 @@ fun ProfileScreen(
                 modifier = Modifier.weight(1f),
             )
             CircleIconButton(icon = Icons.Filled.Settings, onClick = onOpenSettings, size = 44.dp)
+        }
+
+        // Signing in is optional on Android, so a user who chose "continue without an
+        // account" has nothing backing up their progress. Offer it here, where it is easy
+        // to ignore, rather than blocking the onboarding on it.
+        if (userId == null) {
+            CreateAccountCard(
+                language = language,
+                signingIn = signingIn,
+                onCreateAccount = {
+                    if (!signingIn) {
+                        signingIn = true
+                        scope.launch {
+                            runCatching { app.authService.signInWithGoogle(context) }
+                            signingIn = false
+                            if (app.authService.isSignedIn) {
+                                app.onboardingStore.markAccountOffered()
+                                runCatching {
+                                    app.progressSyncService.pullOnLogin(
+                                        app.progressManager.progress.value,
+                                    )
+                                }
+                            }
+                        }
+                    }
+                },
+            )
         }
 
         // Identity: rank ring, nickname, level, and the climb to the next rank.
@@ -346,6 +378,52 @@ private fun ProfileShortcutRow(
             contentDescription = null,
             tint = DS.inkTertiary,
             modifier = Modifier.size(18.dp),
+        )
+    }
+}
+
+/**
+ * The standing offer to back progress up. Deliberately a card in the flow rather than a
+ * dialog: the user already said no once during onboarding, and a modal would be a second ask
+ * they did not invite.
+ */
+@Composable
+private fun CreateAccountCard(
+    language: AppLanguage,
+    signingIn: Boolean,
+    onCreateAccount: () -> Unit,
+) {
+    val context = LocalContext.current
+    Column(
+        modifier = Modifier.fillMaxWidth().sophiaCard().padding(DS.Space.l),
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            TintedIconBox(
+                icon = Icons.Filled.CloudUpload,
+                size = 40.dp,
+                tint = DS.accentSoft,
+                background = DS.accentTint,
+            )
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = StringStore.text(context, "account.signedOut.headline", language),
+                    style = SophiaTypography.titleMedium,
+                )
+                Text(
+                    text = StringStore.text(context, "account.signedOut.body", language),
+                    style = SophiaTypography.bodyMedium,
+                )
+            }
+        }
+        SophiaPrimaryButton(
+            text = StringStore.text(context, "account.create.title", language),
+            onClick = onCreateAccount,
+            enabled = !signingIn,
+            modifier = Modifier.fillMaxWidth(),
         )
     }
 }

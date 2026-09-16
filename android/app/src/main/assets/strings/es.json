@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Sugerencias de cursos",
-  "notification.channel.description": "Avisos ocasionales para retomar un curso."
+  "notification.channel.description": "Avisos ocasionales para retomar un curso.",
+  "paywall.quiz.faq.a1.play": "Sí. Abre Google Play → tu perfil → Pagos y suscripciones → Suscripciones → Sophia → Cancelar suscripción. Listo en unos toques.",
+  "paywall.quiz.faq.a3.noTrial.play": "No. Sin compromiso: cancela cuando quieras desde Google Play y conservas el acceso hasta el final del periodo ya pagado.",
+  "paywall.manageSubscription": "Gestionar mi suscripción",
+  "purchase.pending": "Pago pendiente. Tu acceso se activará en cuanto se confirme.",
+  "paywall.restore.success": "Compras restauradas.",
+  "paywall.restore.none": "No se encontró ninguna suscripción para esta cuenta.",
+  "paywall.restore.error": "No se pudieron restaurar tus compras. Inténtalo de nuevo.",
+  "auth.continueWithoutAccount": "Continuar sin cuenta",
+  "auth.withoutAccount.note": "Tu progreso se queda en este teléfono. Podrás crear una cuenta más adelante.",
+  "auth.unavailable.body": "El inicio de sesión con Google no está disponible en este dispositivo.",
+  "account.createLater.title": "¿Guardar tu progreso?",
+  "account.createLater.body": "Crea una cuenta y tus cursos te acompañarán a tu próximo teléfono. Tarda unos segundos.",
+  "account.createLater.later": "Ahora no",
+  "paywall.error.network": "Sin conexión. Comprueba tu red e inténtalo de nuevo.",
+  "paywall.error.notAllowed": "Esta compra no está permitida en este dispositivo o cuenta de Google."
 }

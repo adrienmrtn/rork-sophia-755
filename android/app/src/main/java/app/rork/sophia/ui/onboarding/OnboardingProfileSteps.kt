@@ -773,7 +773,15 @@ private fun ProfileCourseCard(
 }
 
 @Composable
-internal fun LoginStep(language: AppLanguage, onGoogle: () -> Unit, onSkip: () -> Unit) {
+internal fun LoginStep(
+    language: AppLanguage,
+    signingIn: Boolean,
+    errorMessage: String?,
+    googleAvailable: Boolean,
+    onGoogle: () -> Unit,
+    onContinueWithoutAccount: () -> Unit,
+    onSkip: () -> Unit,
+) {
     val context = LocalContext.current
     var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
     val doc = legalDoc
@@ -785,47 +793,93 @@ internal fun LoginStep(language: AppLanguage, onGoogle: () -> Unit, onSkip: () -
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Spacer(Modifier.weight(1f))
-        OnboardingCircleBadge(
-            size = 96.dp,
-            background = OV2.accentSoft.copy(alpha = 0.12f),
-            modifier = Modifier.ov2Reveal(50),
+        // Scrolls so the buttons stay reachable at large font scales on a short phone.
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState()),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center,
         ) {
-            Icon(
-                Icons.Filled.HowToReg,
-                contentDescription = null,
-                tint = OV2.accent,
-                modifier = Modifier.size(44.dp),
+            Spacer(Modifier.height(24.dp))
+            OnboardingCircleBadge(
+                size = 96.dp,
+                background = OV2.accentSoft.copy(alpha = 0.12f),
+                modifier = Modifier.ov2Reveal(50),
+            ) {
+                Icon(
+                    Icons.Filled.HowToReg,
+                    contentDescription = null,
+                    tint = OV2.accent,
+                    modifier = Modifier.size(44.dp),
+                )
+            }
+            Spacer(Modifier.height(16.dp))
+            Text(
+                text = StringStore.text(context, "onboardingV2.login.title", language),
+                style = OV2.title,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 28.dp).ov2Reveal(120),
             )
+            Spacer(Modifier.height(10.dp))
+            Text(
+                text = StringStore.text(
+                    context,
+                    // Without Play services there is no Google to sign in with, so the page
+                    // must not promise one.
+                    if (googleAvailable) "onboardingV2.login.subtitle" else "auth.withoutAccount.note",
+                    language,
+                ),
+                style = OV2.body,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp).ov2Reveal(180),
+            )
+            if (errorMessage != null) {
+                Spacer(Modifier.height(18.dp))
+                LoginErrorNote(errorMessage)
+            }
+            Spacer(Modifier.height(24.dp))
         }
-        Spacer(Modifier.height(16.dp))
-        Text(
-            text = StringStore.text(context, "onboardingV2.login.title", language),
-            style = OV2.title,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 28.dp).ov2Reveal(120),
-        )
-        Spacer(Modifier.height(10.dp))
-        Text(
-            text = StringStore.text(context, "onboardingV2.login.subtitle", language),
-            style = OV2.body,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp).ov2Reveal(180),
-        )
-        Spacer(Modifier.weight(1f))
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.fillMaxWidth().ov2Reveal(240),
         ) {
-            OnboardingCta("Continue with Google", onGoogle)
+            if (googleAvailable) {
+                OnboardingCta(
+                    // Was hardcoded English on every language. The translation already exists.
+                    text = StringStore.text(
+                        context,
+                        if (errorMessage == null) "auth.continueWithGoogle" else "paywall.error.retry",
+                        language,
+                    ),
+                    // A second tap while the account picker is opening starts a second
+                    // Credential Manager request, which cancels the first one.
+                    enabled = !signingIn,
+                    onClick = onGoogle,
+                    bottomInset = 8.dp,
+                )
+            }
+            // The only way out when Google fails, is unavailable, or is refused by a child
+            // account. Progress stays local and the app offers an account again later.
+            Text(
+                text = StringStore.text(context, "auth.continueWithoutAccount", language),
+                style = OV2.caption.copy(
+                    fontSize = 15.sp,
+                    color = if (googleAvailable) OV2.inkSecondary else OV2.accent,
+                ),
+                modifier = Modifier
+                    .clickable(enabled = !signingIn, onClick = onContinueWithoutAccount)
+                    .padding(horizontal = 20.dp, vertical = 10.dp),
+            )
             if (DeviceCapabilities.allowsLoginBypass()) {
                 Text(
                     text = "Skip login · emulator only",
-                    style = OV2.caption.copy(fontSize = 15.sp),
+                    style = OV2.caption.copy(fontSize = 13.sp, color = OV2.inkTertiary),
                     modifier = Modifier.clickable(onClick = onSkip).padding(8.dp),
                 )
             }
-            Spacer(Modifier.height(12.dp))
+            Spacer(Modifier.height(10.dp))
             Text(
                 text = StringStore.text(context, "auth.legal.prefix", language),
                 style = OV2.caption.copy(fontSize = 12.sp, color = OV2.inkTertiary),
@@ -847,7 +901,22 @@ internal fun LoginStep(language: AppLanguage, onGoogle: () -> Unit, onSkip: () -
                         .padding(horizontal = 6.dp, vertical = 4.dp),
                 )
             }
-            Spacer(Modifier.height(24.dp))
+            Spacer(Modifier.height(20.dp))
         }
     }
+}
+
+/** Sign-in failures used to be a Toast thrown from the service; they belong on the page. */
+@Composable
+private fun LoginErrorNote(message: String) {
+    Text(
+        text = message,
+        style = OV2.caption.copy(fontSize = 13.sp, color = OV2.danger),
+        textAlign = TextAlign.Center,
+        modifier = Modifier
+            .padding(horizontal = 28.dp)
+            .fillMaxWidth()
+            .background(OV2.danger.copy(alpha = 0.10f), OV2Shapes.control)
+            .padding(horizontal = 14.dp, vertical = 12.dp),
+    )
 }

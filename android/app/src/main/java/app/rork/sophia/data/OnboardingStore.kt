@@ -12,7 +12,37 @@ class OnboardingStore(context: Context) {
         prefs.edit().putBoolean(KEY, true).apply()
     }
 
+    /**
+     * Whether the user chose to go on without an account. Signing in is optional, so this is
+     * the signal that the app still owes them the offer — in the profile tab, and once after
+     * their third course.
+     */
+    val skippedAccount: Boolean
+        get() = prefs.getBoolean(KEY_SKIPPED_ACCOUNT, false)
+
+    fun markSkippedAccount() {
+        prefs.edit().putBoolean(KEY_SKIPPED_ACCOUNT, true).apply()
+    }
+
+    /** Cleared once an account exists, so the reminder stops for good. */
+    fun markAccountOffered() {
+        prefs.edit()
+            .putBoolean(KEY_SKIPPED_ACCOUNT, false)
+            .putBoolean(KEY_ACCOUNT_PROMPTED, true)
+            .apply()
+    }
+
+    /** True once the after-third-course prompt has been shown, so it never nags twice. */
+    val accountPrompted: Boolean
+        get() = prefs.getBoolean(KEY_ACCOUNT_PROMPTED, false)
+
+    fun markAccountPrompted() {
+        prefs.edit().putBoolean(KEY_ACCOUNT_PROMPTED, true).apply()
+    }
+
     companion object {
         private const val KEY = "sophia_onboarding_completed"
+        private const val KEY_SKIPPED_ACCOUNT = "sophia_onboarding_skipped_account"
+        private const val KEY_ACCOUNT_PROMPTED = "sophia_account_prompted"
     }
 }

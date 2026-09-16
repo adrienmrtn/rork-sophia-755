@@ -1,6 +1,9 @@
 package app.rork.sophia.ui.paywall
 
 import android.app.Activity
+import android.content.Intent
+import android.net.Uri
+import android.widget.Toast
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
@@ -68,6 +71,7 @@ import com.revenuecat.purchases.Package
 import com.revenuecat.purchases.PurchaseParams
 import com.revenuecat.purchases.Purchases
 import com.revenuecat.purchases.PurchasesError
+import com.revenuecat.purchases.PurchasesErrorCode
 import com.revenuecat.purchases.interfaces.PurchaseCallback
 import com.revenuecat.purchases.models.StoreTransaction
 import kotlinx.coroutines.delay
@@ -89,7 +93,8 @@ fun OnboardingPaywallFlow(
     language: AppLanguage,
     storeViewModel: StoreViewModel,
     onDismiss: () -> Unit,
-    onPurchased: () -> Unit,
+    /** The package that was actually bought, so the caller can tell a trial from a plain sale. */
+    onPurchased: (Package?) -> Unit,
     onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit = { _, _ -> },
     onComparisonShown: () -> Unit = {},
 ) {
@@ -99,52 +104,50 @@ fun OnboardingPaywallFlow(
     val offerings by storeViewModel.offerings.collectAsState()
     val annual = remember(offerings) { storeViewModel.annualPackage(PaywallContext.FIN_ONBOARDING.offeringId) }
     val monthly = remember(offerings) { storeViewModel.monthlyPackage(PaywallContext.FIN_ONBOARDING.offeringId) }
-
-    val doc = legalDoc
-    if (doc != null) {
-        LegalDocumentScreen(kind = doc, language = language, onBack = { legalDoc = null })
-        return
-    }
+    // A restore carries no package: nothing was just bought, so no trial was just started.
+    val restore = rememberRestoreAction(language, storeViewModel) { onPurchased(null) }
 
     val legalFooter: @Composable () -> Unit = {
         PaywallLegalRow(
             language = language,
-            onRestore = { storeViewModel.restore() },
+            onRestore = restore,
             onTerms = { legalDoc = LegalDocKind.Terms },
             onPrivacy = { legalDoc = LegalDocKind.Privacy },
         )
     }
 
-    if (!showComparison) {
-        OnboardingAnnualPaywall(
-            language = language,
-            annual = annual,
-            storeViewModel = storeViewModel,
-            onViewAllPlans = {
-                showComparison = true
-                onComparisonShown()
-            },
-            onDismiss = onDismiss,
-            onPurchased = {
-                onPurchaseMeta(PaywallContext.FIN_ONBOARDING.offeringId, annual?.identifier)
-                onPurchased()
-            },
-            legalFooter = legalFooter,
-        )
-    } else {
-        ComparisonPaywall(
-            language = language,
-            annual = annual,
-            monthly = monthly,
-            offeringId = PaywallContext.FIN_ONBOARDING.offeringId,
-            storeViewModel = storeViewModel,
-            onDismiss = onDismiss,
-            onPurchased = { pkg ->
-                onPurchaseMeta(PaywallContext.FIN_ONBOARDING.offeringId, pkg)
-                onPurchased()
-            },
-            legalFooter = legalFooter,
-        )
+    PaywallLegalOverlay(doc = legalDoc, language = language, onBack = { legalDoc = null }) {
+        if (!showComparison) {
+            OnboardingAnnualPaywall(
+                language = language,
+                annual = annual,
+                storeViewModel = storeViewModel,
+                onViewAllPlans = {
+                    showComparison = true
+                    onComparisonShown()
+                },
+                onDismiss = onDismiss,
+                onPurchased = {
+                    onPurchaseMeta(PaywallContext.FIN_ONBOARDING.offeringId, annual?.identifier)
+                    onPurchased(annual)
+                },
+                legalFooter = legalFooter,
+            )
+        } else {
+            ComparisonPaywall(
+                language = language,
+                annual = annual,
+                monthly = monthly,
+                offeringId = PaywallContext.FIN_ONBOARDING.offeringId,
+                storeViewModel = storeViewModel,
+                onDismiss = onDismiss,
+                onPurchased = { pkg ->
+                    onPurchaseMeta(PaywallContext.FIN_ONBOARDING.offeringId, pkg?.identifier)
+                    onPurchased(pkg)
+                },
+                legalFooter = legalFooter,
+            )
+        }
     }
 }
 
@@ -156,20 +159,17 @@ fun PaywallScreen(
     onDismiss: () -> Unit,
     onPurchased: () -> Unit,
     onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit = { _, _ -> },
+    onRestored: () -> Unit = onPurchased,
 ) {
     var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
     // iOS stacks a plan-comparison paywall when the first offer is dismissed, rather than
     // letting the user out on the first tap.
     var secondChance by remember(context) { mutableStateOf(false) }
-    val doc = legalDoc
-    if (doc != null) {
-        LegalDocumentScreen(kind = doc, language = language, onBack = { legalDoc = null })
-        return
-    }
+    val restore = rememberRestoreAction(language, storeViewModel) { onRestored() }
     val legalFooter: @Composable () -> Unit = {
         PaywallLegalRow(
             language = language,
-            onRestore = { storeViewModel.restore() },
+            onRestore = restore,
             onTerms = { legalDoc = LegalDocKind.Terms },
             onPrivacy = { legalDoc = LegalDocKind.Privacy },
         )
@@ -178,70 +178,135 @@ fun PaywallScreen(
         context == PaywallContext.DEBLOQUER_COURS ||
         context == PaywallContext.ENTRAINEMENT
 
-    if (secondChance) {
-        val offerings by storeViewModel.offerings.collectAsState()
-        val annual = remember(offerings, context) { storeViewModel.annualPackage(context.offeringId) }
-        val monthly = remember(offerings, context) { storeViewModel.monthlyPackage(context.offeringId) }
-        ComparisonPaywall(
-            language = language,
-            annual = annual,
-            monthly = monthly,
-            offeringId = context.offeringId,
-            storeViewModel = storeViewModel,
-            onDismiss = onDismiss,
-            onPurchased = { pkg ->
-                onPurchaseMeta(context.offeringId, pkg)
-                onPurchased()
-            },
-            legalFooter = legalFooter,
-        )
-        return
-    }
-
     val dismiss: () -> Unit = {
         if (offersSecondChance) secondChance = true else onDismiss()
     }
 
-    when (context) {
-        PaywallContext.FIN_ONBOARDING -> OnboardingPaywallFlow(
-            language = language,
-            storeViewModel = storeViewModel,
-            onDismiss = onDismiss,
-            onPurchased = onPurchased,
-            onPurchaseMeta = onPurchaseMeta,
-        )
-        PaywallContext.OFFRE_DISCOUNT -> DiscountPaywall(
-            language = language,
-            storeViewModel = storeViewModel,
-            onDismiss = onDismiss,
-            onPurchased = onPurchased,
-            onPurchaseMeta = onPurchaseMeta,
-            onRestore = { storeViewModel.restore() },
-        )
-        PaywallContext.QUIZZ -> QuizPaywall(
-            language = language,
-            storeViewModel = storeViewModel,
-            onDismiss = dismiss,
-            onPurchased = onPurchased,
-            onPurchaseMeta = onPurchaseMeta,
-            legalFooter = legalFooter,
-        )
-        PaywallContext.ENTRAINEMENT -> TrainingPaywall(
-            language = language,
-            storeViewModel = storeViewModel,
-            onDismiss = dismiss,
-            onPurchased = onPurchased,
-            onPurchaseMeta = onPurchaseMeta,
-            legalFooter = legalFooter,
-        )
-        PaywallContext.DEBLOQUER_COURS -> CourseUnlockPaywall(
-            language = language,
-            storeViewModel = storeViewModel,
-            onDismiss = dismiss,
-            onPurchased = onPurchased,
-            onPurchaseMeta = onPurchaseMeta,
-            legalFooter = legalFooter,
-        )
+    PaywallLegalOverlay(doc = legalDoc, language = language, onBack = { legalDoc = null }) {
+        if (secondChance) {
+            val offerings by storeViewModel.offerings.collectAsState()
+            val annual = remember(offerings, context) { storeViewModel.annualPackage(context.offeringId) }
+            val monthly = remember(offerings, context) { storeViewModel.monthlyPackage(context.offeringId) }
+            ComparisonPaywall(
+                language = language,
+                annual = annual,
+                monthly = monthly,
+                offeringId = context.offeringId,
+                storeViewModel = storeViewModel,
+                onDismiss = onDismiss,
+                onPurchased = { pkg ->
+                    onPurchaseMeta(context.offeringId, pkg?.identifier)
+                    onPurchased()
+                },
+                legalFooter = legalFooter,
+            )
+            return@PaywallLegalOverlay
+        }
+
+        when (context) {
+            PaywallContext.FIN_ONBOARDING -> OnboardingPaywallFlow(
+                language = language,
+                storeViewModel = storeViewModel,
+                onDismiss = onDismiss,
+                onPurchased = { onPurchased() },
+                onPurchaseMeta = onPurchaseMeta,
+            )
+            PaywallContext.OFFRE_DISCOUNT -> DiscountPaywall(
+                language = language,
+                storeViewModel = storeViewModel,
+                onDismiss = onDismiss,
+                onPurchased = onPurchased,
+                onPurchaseMeta = onPurchaseMeta,
+                onRestore = restore,
+                onOpenTerms = { legalDoc = LegalDocKind.Terms },
+                onOpenPrivacy = { legalDoc = LegalDocKind.Privacy },
+            )
+            PaywallContext.QUIZZ -> QuizPaywall(
+                language = language,
+                storeViewModel = storeViewModel,
+                onDismiss = dismiss,
+                onPurchased = onPurchased,
+                onPurchaseMeta = onPurchaseMeta,
+                legalFooter = legalFooter,
+            )
+            PaywallContext.ENTRAINEMENT -> TrainingPaywall(
+                language = language,
+                storeViewModel = storeViewModel,
+                onDismiss = dismiss,
+                onPurchased = onPurchased,
+                onPurchaseMeta = onPurchaseMeta,
+                legalFooter = legalFooter,
+            )
+            PaywallContext.DEBLOQUER_COURS -> CourseUnlockPaywall(
+                language = language,
+                storeViewModel = storeViewModel,
+                onDismiss = dismiss,
+                onPurchased = onPurchased,
+                onPurchaseMeta = onPurchaseMeta,
+                legalFooter = legalFooter,
+            )
+        }
+    }
+}
+
+/**
+ * Keeps the paywall alive underneath while a legal document is open.
+ *
+ * Swapping the paywall out for [LegalDocumentScreen] tore down its composition: coming back
+ * rebuilt it from scratch, which lost the selected plan, the second-chance state and the
+ * countdown, and re-ran the `LaunchedEffect(Unit)` that reports a paywall impression — so
+ * reading the terms counted as a second view of the paywall. Drawn on top, nothing below
+ * moves.
+ */
+@Composable
+private fun PaywallLegalOverlay(
+    doc: LegalDocKind?,
+    language: AppLanguage,
+    onBack: () -> Unit,
+    content: @Composable () -> Unit,
+) {
+    Box(modifier = Modifier.fillMaxSize()) {
+        content()
+        if (doc != null) {
+            // Opaque and clickable so nothing shows through or reacts underneath.
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(DS.canvas)
+                    .softPress(onClick = {}),
+            ) {
+                LegalDocumentScreen(kind = doc, language = language, onBack = onBack)
+            }
+        }
+    }
+}
+
+/**
+ * Restore, with something to show for it. The tap used to fire and return in silence — the
+ * user could not tell a restored subscription from a dead button. Reports every outcome, and
+ * leaves the paywall when the entitlement really did come back.
+ */
+@Composable
+private fun rememberRestoreAction(
+    language: AppLanguage,
+    storeViewModel: StoreViewModel,
+    onRestored: () -> Unit,
+): () -> Unit {
+    val context = LocalContext.current
+    return {
+        storeViewModel.restore { result ->
+            val key = when (result) {
+                StoreViewModel.RestoreResult.RESTORED -> "paywall.restore.success"
+                StoreViewModel.RestoreResult.NOTHING_FOUND -> "paywall.restore.none"
+                StoreViewModel.RestoreResult.FAILED -> "paywall.restore.error"
+            }
+            Toast.makeText(
+                context,
+                StringStore.text(context, key, language),
+                Toast.LENGTH_LONG,
+            ).show()
+            if (result == StoreViewModel.RestoreResult.RESTORED) onRestored()
+        }
     }
 }
 
@@ -258,6 +323,7 @@ private fun OnboardingAnnualPaywall(
     val context = LocalContext.current
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
+    var notice by remember { mutableStateOf<String?>(null) }
     val hasTrial = storeViewModel.hasFreeTrial(annual)
     val yearly = storeViewModel.formattedPrice(
         annual,
@@ -308,6 +374,10 @@ private fun OnboardingAnnualPaywall(
                     Spacer(Modifier.height(16.dp))
                     PaywallErrorNote(error!!)
                 }
+                if (notice != null) {
+                    Spacer(Modifier.height(12.dp))
+                    PaywallNotice(notice!!)
+                }
             }
         }
         Column(
@@ -335,7 +405,8 @@ private fun OnboardingAnnualPaywall(
                         storeViewModel = storeViewModel,
                         onStart = { purchasing = true },
                         onDone = { purchasing = false },
-                        onError = { error = it; purchasing = false },
+                        onError = { error = it; notice = null; purchasing = false },
+                        onPending = { notice = it; error = null; purchasing = false },
                         onPurchased = onPurchased,
                     )
                 },
@@ -353,13 +424,15 @@ private fun ComparisonPaywall(
     offeringId: String,
     storeViewModel: StoreViewModel,
     onDismiss: () -> Unit,
-    onPurchased: (packageId: String?) -> Unit,
+    /** The package the user picked and bought — annual or monthly. */
+    onPurchased: (Package?) -> Unit,
     legalFooter: @Composable () -> Unit,
 ) {
     val context = LocalContext.current
     var yearlySelected by remember { mutableStateOf(true) }
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
+    var notice by remember { mutableStateOf<String?>(null) }
     val annualPrice = storeViewModel.formattedPrice(
         annual,
         StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
@@ -427,6 +500,7 @@ private fun ComparisonPaywall(
                 trialBadge = if (monthlyHasTrial) trialBadge else null,
             )
             if (error != null) PaywallErrorNote(error!!)
+            if (notice != null) PaywallNotice(notice!!)
             PurchaseButton(
                 text = StringStore.text(
                     context,
@@ -443,8 +517,9 @@ private fun ComparisonPaywall(
                         storeViewModel = storeViewModel,
                         onStart = { purchasing = true },
                         onDone = { purchasing = false },
-                        onError = { error = it; purchasing = false },
-                        onPurchased = { onPurchased(pkg?.identifier) },
+                        onError = { error = it; notice = null; purchasing = false },
+                        onPending = { notice = it; error = null; purchasing = false },
+                        onPurchased = { onPurchased(pkg) },
                     )
                 },
             )
@@ -483,6 +558,7 @@ private fun CourseUnlockPaywall(
     val secondsToReset = remember { app.progressManager.secondsUntilDailyReset() }
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
+    var notice by remember { mutableStateOf<String?>(null) }
 
     PaywallShell(
         language = language,
@@ -497,6 +573,7 @@ private fun CourseUnlockPaywall(
         ctaIcon = if (hasTrial) Icons.Filled.LockOpen else Icons.Filled.AutoAwesome,
         purchasing = purchasing,
         error = error,
+        notice = notice,
         legalFooter = legalFooter,
         onPurchase = {
             purchasePackage(
@@ -506,7 +583,8 @@ private fun CourseUnlockPaywall(
                 storeViewModel = storeViewModel,
                 onStart = { purchasing = true },
                 onDone = { purchasing = false },
-                onError = { error = it; purchasing = false },
+                onError = { error = it; notice = null; purchasing = false },
+                onPending = { notice = it; error = null; purchasing = false },
                 onPurchased = {
                     onPurchaseMeta(PaywallContext.DEBLOQUER_COURS.offeringId, annual?.identifier)
                     onPurchased()
@@ -599,6 +677,7 @@ private fun TrainingPaywall(
     val perMonth = perMonthLabel(context, language, storeViewModel, annual)
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
+    var notice by remember { mutableStateOf<String?>(null) }
 
     PaywallShell(
         language = language,
@@ -612,6 +691,7 @@ private fun TrainingPaywall(
         ctaIcon = Icons.Filled.AutoAwesome,
         purchasing = purchasing,
         error = error,
+        notice = notice,
         legalFooter = legalFooter,
         onPurchase = {
             purchasePackage(
@@ -621,7 +701,8 @@ private fun TrainingPaywall(
                 storeViewModel = storeViewModel,
                 onStart = { purchasing = true },
                 onDone = { purchasing = false },
-                onError = { error = it; purchasing = false },
+                onError = { error = it; notice = null; purchasing = false },
+                onPending = { notice = it; error = null; purchasing = false },
                 onPurchased = {
                     onPurchaseMeta(PaywallContext.ENTRAINEMENT.offeringId, annual?.identifier)
                     onPurchased()
@@ -706,12 +787,16 @@ private fun QuizPaywall(
     val perMonth = perMonthLabel(context, language, storeViewModel, annual)
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
+    var notice by remember { mutableStateOf<String?>(null) }
     var expandedFaq by remember { mutableStateOf<Int?>(null) }
+    // The answers are shared with iOS and talk about the App Store. On Android the only
+    // place a subscription can be cancelled is Google Play, so cancellation answers use the
+    // `.play` variants; the trial answer (a3) names no store and is reused as is.
     val faq = listOf(
-        "paywall.quiz.faq.q1" to "paywall.quiz.faq.a1",
+        "paywall.quiz.faq.q1" to "paywall.quiz.faq.a1.play",
         "paywall.quiz.faq.q2" to "paywall.quiz.faq.a2",
         (if (hasTrial) "paywall.quiz.faq.q3" else "paywall.quiz.faq.q3.noTrial") to
-            (if (hasTrial) "paywall.quiz.faq.a3" else "paywall.quiz.faq.a3.noTrial"),
+            (if (hasTrial) "paywall.quiz.faq.a3" else "paywall.quiz.faq.a3.noTrial.play"),
     )
 
     PaywallShell(
@@ -727,6 +812,7 @@ private fun QuizPaywall(
         ctaIcon = Icons.Filled.AutoAwesome,
         purchasing = purchasing,
         error = error,
+        notice = notice,
         legalFooter = legalFooter,
         onPurchase = {
             purchasePackage(
@@ -736,7 +822,8 @@ private fun QuizPaywall(
                 storeViewModel = storeViewModel,
                 onStart = { purchasing = true },
                 onDone = { purchasing = false },
-                onError = { error = it; purchasing = false },
+                onError = { error = it; notice = null; purchasing = false },
+                onPending = { notice = it; error = null; purchasing = false },
                 onPurchased = {
                     onPurchaseMeta(PaywallContext.QUIZZ.offeringId, annual?.identifier)
                     onPurchased()
@@ -770,8 +857,45 @@ private fun QuizPaywall(
                 )
             }
         }
-        Spacer(Modifier.height(16.dp))
+        Spacer(Modifier.height(12.dp))
+        // Play's own subscription centre, deep-linked to Sophia. Saying where to cancel and
+        // then making them find it is half an answer.
+        Text(
+            text = StringStore.text(context, "paywall.manageSubscription", language),
+            style = SophiaTypography.labelMedium.copy(fontSize = 12.sp, color = DS.accentSoft),
+            modifier = Modifier
+                .softPress(onClick = { openPlaySubscriptions(context, annual?.product?.id) })
+                .padding(horizontal = 8.dp, vertical = 6.dp),
+        )
+        Spacer(Modifier.height(12.dp))
         RatingLine(StringStore.text(context, "paywall.quiz.rating", language))
+    }
+}
+
+/**
+ * Opens Google Play on the Sophia subscription, falling back to the subscription list and
+ * then to the Play listing in the browser — a phone with the Play app removed still has to
+ * land somewhere real.
+ *
+ * [productId] is the store product RevenueCat actually served, never a hardcoded sku: the
+ * deep link only lands on the right subscription when the id matches what Play sold, and a
+ * guess would silently drop the user on an empty page. When offerings have not loaded yet it
+ * is null, and the plain subscription list is the honest destination.
+ */
+private fun openPlaySubscriptions(context: android.content.Context, productId: String?) {
+    val packageName = context.packageName
+    // RevenueCat reports a subscription product as "product:base_plan"; Play wants the
+    // product alone.
+    val sku = productId?.substringBefore(':')?.takeIf { it.isNotBlank() }
+    val targets = listOfNotNull(
+        sku?.let { "https://play.google.com/store/account/subscriptions?sku=$it&package=$packageName" },
+        "https://play.google.com/store/account/subscriptions",
+        "https://play.google.com/store/apps/details?id=$packageName",
+    )
+    for (url in targets) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        if (runCatching { context.startActivity(intent) }.isSuccess) return
     }
 }
 
@@ -871,6 +995,8 @@ private fun DiscountPaywall(
     onPurchased: () -> Unit,
     onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit,
     onRestore: () -> Unit,
+    onOpenTerms: () -> Unit,
+    onOpenPrivacy: () -> Unit,
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -887,6 +1013,7 @@ private fun DiscountPaywall(
     val regularAnnual = remember(offerings) { storeViewModel.annualPackage(null) }
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
+    var notice by remember { mutableStateOf<String?>(null) }
     val promo = storeViewModel.formattedPrice(
         annual,
         StringStore.text(context, "paywall.discount.fallbackPrice", language),
@@ -972,6 +1099,10 @@ private fun DiscountPaywall(
                         Spacer(Modifier.height(16.dp))
                         PaywallErrorNote(error!!, light = true)
                     }
+                    if (notice != null) {
+                        Spacer(Modifier.height(16.dp))
+                        PaywallNotice(notice!!, light = true)
+                    }
                 }
             }
             Column(
@@ -993,7 +1124,8 @@ private fun DiscountPaywall(
                             storeViewModel = storeViewModel,
                             onStart = { purchasing = true },
                             onDone = { purchasing = false },
-                            onError = { error = it; purchasing = false },
+                            onError = { error = it; notice = null; purchasing = false },
+                            onPending = { notice = it; error = null; purchasing = false },
                             onPurchased = {
                                 onPurchaseMeta(PaywallContext.OFFRE_DISCOUNT.offeringId, annual?.identifier)
                                 onPurchased()
@@ -1010,13 +1142,14 @@ private fun DiscountPaywall(
                     ),
                     textAlign = TextAlign.Center,
                 )
-                Text(
-                    text = StringStore.text(context, "paywall.restore", language),
-                    style = SophiaTypography.labelMedium.copy(
-                        fontSize = 11.sp,
-                        color = Color.White.copy(alpha = 0.75f),
-                    ),
-                    modifier = Modifier.softPress(onClick = onRestore).padding(6.dp),
+                // This paywall sells a subscription like every other one, so it owes the
+                // same links: Restore alone was missing Terms and Privacy.
+                PaywallLegalRow(
+                    language = language,
+                    onRestore = onRestore,
+                    onTerms = onOpenTerms,
+                    onPrivacy = onOpenPrivacy,
+                    light = true,
                 )
             }
         }
@@ -1037,6 +1170,7 @@ private fun PaywallShell(
     error: String?,
     legalFooter: @Composable () -> Unit,
     onPurchase: () -> Unit,
+    notice: String? = null,
     closeDelayMillis: Int = 0,
     ctaIcon: androidx.compose.ui.graphics.vector.ImageVector? = null,
     content: @Composable () -> Unit,
@@ -1063,6 +1197,8 @@ private fun PaywallShell(
             verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             if (error != null) PaywallErrorNote(error)
+            // A pending Play payment is good news waiting on a bank, not a failure.
+            if (notice != null) PaywallNotice(notice)
             PriceLine(priceLine)
             PurchaseButton(
                 text = ctaText,
@@ -1108,6 +1244,18 @@ private fun perMonthLabel(
     return "$amount ${StringStore.text(context, "paywall.plan.perMonth", language)}"
 }
 
+/**
+ * Runs a Play purchase and reports what actually happened.
+ *
+ * Two outcomes used to be collapsed into "error, in English". Google Play accepts *pending*
+ * transactions — bank transfer, cash at a counter, a parent's approval on a child account —
+ * which are common in Poland, Brazil, India and Japan. Those arrive as
+ * [PurchasesErrorCode.PaymentPendingError], or as a completed transaction whose entitlement
+ * is not active yet, and both mean "paid, waiting for confirmation", not "failed".
+ *
+ * [onPurchased] therefore only fires once the entitlement is genuinely active, so the paywall
+ * never closes on a purchase that has not unlocked anything.
+ */
 private fun purchasePackage(
     context: android.content.Context,
     language: AppLanguage,
@@ -1117,6 +1265,7 @@ private fun purchasePackage(
     onDone: () -> Unit,
     onError: (String) -> Unit,
     onPurchased: () -> Unit,
+    onPending: (String) -> Unit = {},
 ) {
     if (pkg == null) {
         if (!Purchases.isConfigured) {
@@ -1139,15 +1288,48 @@ private fun purchasePackage(
             ) {
                 onDone()
                 storeViewModel.refresh()
-                onPurchased()
+                if (storeViewModel.isEntitlementActive(customerInfo)) {
+                    onPurchased()
+                } else {
+                    // Play took the order but has not granted it yet.
+                    onPending(StringStore.text(context, "purchase.pending", language))
+                }
             }
 
             override fun onError(error: PurchasesError, userCancelled: Boolean) {
                 onDone()
-                if (!userCancelled) onError(error.message)
+                if (userCancelled) return
+                if (error.code == PurchasesErrorCode.PaymentPendingError) {
+                    onPending(StringStore.text(context, "purchase.pending", language))
+                } else {
+                    onError(localizedPurchaseError(context, language, error))
+                }
             }
         },
     )
+}
+
+/**
+ * RevenueCat messages are English-only and written for developers. Map the codes a user can
+ * actually hit to the app's own copy, and keep the raw message as a last resort so a rare
+ * failure is still describable in a support thread.
+ */
+private fun localizedPurchaseError(
+    context: android.content.Context,
+    language: AppLanguage,
+    error: PurchasesError,
+): String {
+    val key = when (error.code) {
+        PurchasesErrorCode.NetworkError -> "paywall.error.network"
+        PurchasesErrorCode.StoreProblemError,
+        PurchasesErrorCode.ProductNotAvailableForPurchaseError,
+        -> "paywall.unavailable.title"
+        PurchasesErrorCode.PurchaseNotAllowedError,
+        PurchasesErrorCode.PurchaseInvalidError,
+        -> "paywall.error.notAllowed"
+        else -> null
+    } ?: return error.message
+    return StringStore.text(context, key, language)
 }
 
 private fun android.content.Context.findActivity(): android.app.Activity? {

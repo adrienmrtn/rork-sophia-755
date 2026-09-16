@@ -57,6 +57,32 @@ object DeviceCapabilities {
      */
     fun allowsLoginBypass(): Boolean = BuildConfig.DEBUG && isEmulator()
 
+    /**
+     * Credential Manager routes Sign in with Google through Google Play services. Huawei
+     * phones sold after the ban, Amazon Fire tablets and de-Googled ROMs have no such
+     * package, so the button can only ever fail there: the login step hides it instead and
+     * offers the no-account path directly.
+     *
+     * Resolved by package presence rather than by `GoogleApiAvailability`, which would pull
+     * play-services-base in only to answer this one question.
+     */
+    @Volatile
+    private var playServices: Boolean? = null
+
+    fun hasGooglePlayServices(context: Context): Boolean {
+        playServices?.let { return it }
+        val pm = context.applicationContext.packageManager
+        val value = runCatching {
+            // Present but disabled by the user or by the ROM is the same dead end.
+            @Suppress("DEPRECATION")
+            pm.getApplicationInfo(PLAY_SERVICES_PACKAGE, 0).enabled
+        }.getOrDefault(false)
+        playServices = value
+        return value
+    }
+
+    private const val PLAY_SERVICES_PACKAGE = "com.google.android.gms"
+
     fun analyticsProps(context: Context): Map<String, Any?> = mapOf(
         "low_ram" to isLowRam(context),
         "emulator" to isEmulator(),
@@ -66,5 +92,6 @@ object DeviceCapabilities {
         "manufacturer" to Build.MANUFACTURER,
         "release" to Build.VERSION.RELEASE,
         "sdk" to Build.VERSION.SDK_INT,
+        "play_services" to hasGooglePlayServices(context),
     )
 }

@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Predlogi tečajev",
-  "notification.channel.description": "Občasen opomnik, da se vrneš k tečaju."
+  "notification.channel.description": "Občasen opomnik, da se vrneš k tečaju.",
+  "paywall.quiz.faq.a1.play": "Da. Odpri Google Play → svoj profil → Plačila in naročnine → Naročnine → Sophia → Prekliči naročnino. Opravljeno v nekaj tapih.",
+  "paywall.quiz.faq.a3.noTrial.play": "Ne. Brez obveznosti: prekliči, kadar želiš, v Google Playu in dostop obdržiš do konca že plačanega obdobja.",
+  "paywall.manageSubscription": "Upravljaj naročnino",
+  "purchase.pending": "Plačilo v obdelavi. Dostop se bo odklenil takoj, ko bo potrjeno.",
+  "paywall.restore.success": "Nakupi so obnovljeni.",
+  "paywall.restore.none": "Za ta račun ni bilo najdene naročnine.",
+  "paywall.restore.error": "Nakupov ni bilo mogoče obnoviti. Poskusi znova.",
+  "auth.continueWithoutAccount": "Nadaljuj brez računa",
+  "auth.withoutAccount.note": "Tvoj napredek ostane na tem telefonu. Račun lahko ustvariš pozneje.",
+  "auth.unavailable.body": "Prijava z Googlom na tej napravi ni na voljo.",
+  "account.createLater.title": "Shranimo tvoj napredek?",
+  "account.createLater.body": "Ustvari račun in tvoji tečaji te bodo spremljali na naslednji telefon. Traja nekaj sekund.",
+  "account.createLater.later": "Ne zdaj",
+  "paywall.error.network": "Ni povezave. Preveri omrežje in poskusi znova.",
+  "paywall.error.notAllowed": "Ta nakup na tej napravi ali Google računu ni dovoljen."
 }

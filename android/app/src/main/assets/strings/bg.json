@@ -835,5 +835,20 @@
   "language.finnish": "Suomi",
   "language.estonian": "Eesti",
   "notification.channel.name": "Предложения за курсове",
-  "notification.channel.description": "Понякога напомняне да продължиш курс."
+  "notification.channel.description": "Понякога напомняне да продължиш курс.",
+  "paywall.quiz.faq.a1.play": "Да. Отвори Google Play → профила ти → Плащания и абонаменти → Абонаменти → Sophia → Отмени абонамента. Готово с няколко докосвания.",
+  "paywall.quiz.faq.a3.noTrial.play": "Не. Без ангажимент: отмени когато поискаш от Google Play и запазваш достъпа до края на вече платения период.",
+  "paywall.manageSubscription": "Управление на абонамента",
+  "purchase.pending": "Чакащо плащане. Достъпът ти ще се активира веднага щом бъде потвърдено.",
+  "paywall.restore.success": "Покупките са възстановени.",
+  "paywall.restore.none": "Няма намерен абонамент за този акаунт.",
+  "paywall.restore.error": "Покупките не можаха да бъдат възстановени. Опитай отново.",
+  "auth.continueWithoutAccount": "Продължи без акаунт",
+  "auth.withoutAccount.note": "Напредъкът ти остава на този телефон. Може да създадеш акаунт по-късно.",
+  "auth.unavailable.body": "Влизането с Google не е налично на това устройство.",
+  "account.createLater.title": "Да запазим ли напредъка ти?",
+  "account.createLater.body": "Създай акаунт и курсовете ти ще те последват на следващия телефон. Отнема няколко секунди.",
+  "account.createLater.later": "Не сега",
+  "paywall.error.network": "Няма връзка. Провери мрежата и опитай отново.",
+  "paywall.error.notAllowed": "Тази покупка не е разрешена на това устройство или Google акаунт."
 }
