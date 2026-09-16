@@ -291,15 +291,24 @@ struct OnboardingV2PaywallComparison: View {
                     Text(isYearly ? languageManager.text("onboardingV2.pw.yearly") : languageManager.text("onboardingV2.pw.monthly"))
                         .font(DS.sans(.body, .bold))
                         .foregroundStyle(OV2.ink)
-                    Text(isYearly ? prices.yearlyPerMonth : languageManager.text("onboardingV2.pw.monthlyBilling"))
+                    // Le prix affiché en gros est mensuel des deux côtés — comparer un plan
+                    // annuel à un plan mensuel demande la même unité, sinon « 39,99 € » à
+                    // côté de « 9,99 € » fait passer l'annuel pour le plus cher. Le montant
+                    // réellement prélevé reste sous le nom du plan.
+                    Text(isYearly ? prices.yearlyBilledNote : languageManager.text("onboardingV2.pw.monthlyBilling"))
                         .font(DS.sans(.caption, .medium))
                         .foregroundStyle(OV2.inkSecondary)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.85)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
                 Spacer()
                 VStack(alignment: .trailing, spacing: 3) {
-                    Text(isYearly ? prices.yearlyPrice : prices.monthlyPrice)
+                    Text(isYearly ? prices.yearlyPerMonth : prices.monthlyPrice)
                         .font(DS.sans(.body, .bold))
                         .foregroundStyle(OV2.ink)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
                     if isYearly ? yearlyHasTrial : monthlyHasTrial {
                         Text(languageManager.text("onboardingV2.pw.trialBadge"))
                             .font(DS.sans(.caption2, .bold))

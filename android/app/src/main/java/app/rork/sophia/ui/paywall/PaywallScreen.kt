@@ -508,10 +508,15 @@ private fun ComparisonPaywall(
                 .padding(bottom = 12.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
+            // Le gros prix est mensuel des deux côtés : comparer un plan annuel à un plan
+            // mensuel demande la même unité, sinon « 39,99 € » à côté de « 9,99 € » fait
+            // passer l'annuel pour le plus cher. Le montant réellement prélevé reste juste
+            // sous le nom du plan — Google Play l'exige, et c'est honnête pour un
+            // abonnement facturé une fois par an.
             PlanSelectorCard(
                 name = StringStore.text(context, "onboardingV2.pw.yearly", language),
-                subtitle = perMonth,
-                price = annualPrice,
+                subtitle = StringStore.text(context, "paywall.plan.billedYearly", language, annualPrice),
+                price = perMonth,
                 selected = yearlySelected,
                 onClick = { yearlySelected = true },
                 trialBadge = if (yearlyHasTrial) trialBadge else null,
@@ -1050,6 +1055,11 @@ private fun DiscountPaywall(
         regularAnnual,
         StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
     )
+    // Affiché au mois, comme les plans de l'écran comparatif : deux montants annuels côte à
+    // côte ne disent pas au lecteur ce que ça lui coûte par mois. Le prélèvement annuel réel
+    // reste en dessous.
+    val promoPerMonth = storeViewModel.formattedYearlyPerMonth(annual, promo)
+    val regularPerMonth = regularAnnual?.let { storeViewModel.formattedYearlyPerMonth(it, regular) }
     val badge = storeViewModel.percentOff(annual, regularAnnual)
         ?: StringStore.text(context, "paywall.plan.discount", language)
 
@@ -1131,9 +1141,12 @@ private fun DiscountPaywall(
                     )
                     Spacer(Modifier.height(18.dp))
                     DiscountPriceBlock(
-                        regular = regular,
-                        promo = promo,
-                        perYear = StringStore.text(context, "paywall.discount.perYear", language),
+                        regular = regularPerMonth,
+                        promo = promoPerMonth,
+                        perMonth = StringStore.text(context, "paywall.discount.perMonth", language),
+                        billedYearly = StringStore.text(
+                            context, "paywall.plan.billedYearly", language, promo,
+                        ),
                     )
                     if (error != null) {
                         Spacer(Modifier.height(16.dp))

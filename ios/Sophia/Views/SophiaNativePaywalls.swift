@@ -1818,22 +1818,37 @@ struct SophiaDiscountPaywall: View {
 
     // MARK: Price block
 
+    /// Prix mensuels, comme partout ailleurs dans l'app : l'offre est comparée au plan
+    /// annuel normal, et deux montants annuels côte à côte ne disent pas au lecteur ce que
+    /// ça lui coûte par mois. Le montant réellement prélevé une fois par an reste juste en
+    /// dessous — c'est ce qu'exige l'App Store (3.1.2) et ce que mérite un abonnement
+    /// facturé d'un coup.
     private var priceBlock: some View {
         VStack(spacing: 4) {
             HStack(alignment: .firstTextBaseline, spacing: 10) {
-                if let regular = prices.regularYearly {
+                if let regular = prices.regularPerMonth {
                     Text(regular)
                         .font(DS.sans(.title3, .semibold))
                         .foregroundStyle(.white.opacity(0.7))
                         .strikethrough()
                 }
-                Text(prices.promoYearly)
+                Text(prices.promoPerMonth)
                     .font(DS.title(.largeTitle, .heavy))
                     .foregroundStyle(.white)
             }
-            Text(languageManager.text("paywall.discount.perYear"))
+            .lineLimit(1)
+            .minimumScaleFactor(0.7)
+
+            Text(languageManager.text("paywall.discount.perMonth"))
                 .font(DS.sans(.footnote, .semibold))
                 .foregroundStyle(.white.opacity(0.85))
+                .multilineTextAlignment(.center)
+
+            Text(prices.billedYearlyNote)
+                .font(DS.sans(.caption, .medium))
+                .foregroundStyle(.white.opacity(0.75))
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
         }
     }
 

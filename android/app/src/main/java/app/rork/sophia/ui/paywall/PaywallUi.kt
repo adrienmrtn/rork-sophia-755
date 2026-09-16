@@ -582,7 +582,7 @@ fun NumberedStepRow(number: Int, text: String) {
 
 /** Struck-through regular price next to the promo price, on the discount paywall. */
 @Composable
-fun DiscountPriceBlock(regular: String?, promo: String, perYear: String) {
+fun DiscountPriceBlock(regular: String?, promo: String, perMonth: String, billedYearly: String) {
     Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(4.dp)) {
         Row(verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             if (regular != null) {
@@ -604,9 +604,18 @@ fun DiscountPriceBlock(regular: String?, promo: String, perYear: String) {
             )
         }
         Text(
-            text = perYear,
+            text = perMonth,
             color = Color.White.copy(alpha = 0.85f),
             style = SophiaTypography.labelMedium.copy(fontWeight = FontWeight.SemiBold, color = Color.White),
+            textAlign = TextAlign.Center,
+        )
+        // Ce que la boutique prélève réellement : le prix mensuel mis en avant ne le
+        // remplace jamais.
+        Text(
+            text = billedYearly,
+            color = Color.White.copy(alpha = 0.75f),
+            style = SophiaTypography.bodySmall.copy(color = Color.White.copy(alpha = 0.75f)),
+            textAlign = TextAlign.Center,
         )
     }
 }
