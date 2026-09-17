@@ -35,8 +35,8 @@ android {
         targetSdk = 36
         // Play refuses a versionCode it has already seen, permanently. Bump on every upload,
         // including a re-upload to internal testing.
-        versionCode = 6
-        versionName = "1.0.4"
+        versionCode = 7
+        versionName = "1.0.5"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         // Public SDK key of the RevenueCat Google Play app. It ships inside every APK, so it
