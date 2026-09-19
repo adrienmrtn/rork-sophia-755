@@ -18,6 +18,8 @@ struct SettingsView: View {
     @State private var showFeedback: Bool = false
     @State private var showAmbassador: Bool = false
     @State private var hapticTrigger: Int = 0
+    /// Set only by the developer section, which is itself behind `#if DEBUG`.
+    @State private var showDiscountPaywall: Bool = false
 
     private static let destructive = DS.danger
     private static let destructiveTint = DS.dangerTint
@@ -85,6 +87,23 @@ struct SettingsView: View {
             }
             .navigationBarHidden(true)
             .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
+            .fullScreenCover(isPresented: $showDiscountPaywall) {
+                #if DEBUG
+                // Presented from here rather than routed through ContentView: the real
+                // offer is a once-a-day affair with its own countdown and its own
+                // analytics, and a shortcut for looking at the screen has no business
+                // spending any of that. With no manager the paywall runs its own
+                // 60-minute clock, so it still looks like itself.
+                SophiaDiscountPaywall(
+                    store: store,
+                    tracksAnalytics: false,
+                    onPurchased: { showDiscountPaywall = false },
+                    onRestored: { showDiscountPaywall = false },
+                    onDismissed: { showDiscountPaywall = false }
+                )
+                .preferredColorScheme(.light)
+                #endif
+            }
             .alert(languageManager.text("settings.reset.alert.title"), isPresented: $showResetAlert) {
                 Button(languageManager.text("settings.reset.alert.cancel"), role: .cancel) { }
                 Button(languageManager.text("settings.reset.alert.confirm"), role: .destructive) {
@@ -318,6 +337,14 @@ struct SettingsView: View {
                 ) {
                     hapticTrigger += 1
                     progressManager.resetDailyCourseFlag()
+                }
+                rowDivider
+                actionRow(
+                    icon: "flame.fill",
+                    title: languageManager.text("settings.debug.discountPaywall")
+                ) {
+                    hapticTrigger += 1
+                    showDiscountPaywall = true
                 }
             }
         }
