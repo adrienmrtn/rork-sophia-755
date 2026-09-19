@@ -170,14 +170,12 @@ class StoreViewModel {
     // MARK: - Discount (offre_discount) pricing
 
     struct DiscountPriceDisplay {
-        /// Promo price, per month (e.g. "1,67 €") — what the paywall leads with.
-        let promoPerMonth: String
-        /// Regular annual price, per month, shown struck-through (e.g. "3,33 €").
-        let regularPerMonth: String?
-        /// "facturé 19,99 € par an" — the amount actually charged, which the per-month
-        /// headline must never replace: it is the App Store's rule (3.1.2) and the honest
-        /// thing to show for a plan billed once a year.
-        let billedYearlyNote: String
+        /// Promo price for the year (e.g. "19,99 €") — what the paywall leads with, and
+        /// what the store will actually charge, so App Store 3.1.2 is met by the headline
+        /// itself rather than by a note under it.
+        let promoYearly: String
+        /// Regular yearly price shown struck-through (e.g. "39,99 €"), when available.
+        let regularYearly: String?
         /// Savings badge like "-50%", when computable.
         let discountBadge: String?
     }
@@ -185,11 +183,9 @@ class StoreViewModel {
     func discountPriceDisplay(language: AppLanguage) -> DiscountPriceDisplay {
         guard let promo = promoPackage?.storeProduct else {
             let fallback = AppLocalizable.string("paywall.discount.fallbackPrice", language: language)
-            let regularProduct: StoreProduct? = annualPackage?.storeProduct
             return DiscountPriceDisplay(
-                promoPerMonth: fallback,
-                regularPerMonth: regularProduct.map { perMonthPrice($0, language: language) },
-                billedYearlyNote: billedYearlyNote(fallback, language: language),
+                promoYearly: fallback,
+                regularYearly: annualPackage?.storeProduct.localizedPriceString,
                 discountBadge: nil
             )
         }
@@ -201,9 +197,8 @@ class StoreViewModel {
             if percent > 0 { badge = "-\(percent)%" }
         }
         return DiscountPriceDisplay(
-            promoPerMonth: perMonthPrice(promo, language: language),
-            regularPerMonth: regular.map { perMonthPrice($0, language: language) },
-            billedYearlyNote: billedYearlyNote(promo.localizedPriceString, language: language),
+            promoYearly: promo.localizedPriceString,
+            regularYearly: regular?.localizedPriceString,
             discountBadge: badge
         )
     }
@@ -238,14 +233,10 @@ class StoreViewModel {
     }
 
     struct PaywallPriceDisplay {
+        /// What the store charges for a year, which is what every paywall now shows. The
+        /// plan rows carry their billing period in words beside it, so the two plans stay
+        /// readable against each other without converting the yearly one to a month.
         let yearlyPrice: String
-        /// "3,33 € / mois" — the annual plan's monthly equivalent, which the plan rows lead
-        /// with: a yearly plan is compared against a monthly one, so both have to be read in
-        /// the same unit.
-        let yearlyPerMonth: String
-        /// "facturé 39,99 € par an". The per-month headline never stands alone — the amount
-        /// actually charged stays on screen (App Store 3.1.2).
-        let yearlyBilledNote: String
         let monthlyPrice: String
         let discountBadge: String?
     }
@@ -253,64 +244,13 @@ class StoreViewModel {
     func paywallPriceDisplay(language: AppLanguage) -> PaywallPriceDisplay {
         if let annual = annualPackage?.storeProduct,
            let monthly = monthlyPackage?.storeProduct {
-            let perMonthLabel = AppLocalizable.string("paywall.plan.perMonth", language: language)
             return PaywallPriceDisplay(
                 yearlyPrice: annual.localizedPriceString,
-                yearlyPerMonth: "\(perMonthPrice(annual, language: language)) \(perMonthLabel)",
-                yearlyBilledNote: billedYearlyNote(annual.localizedPriceString, language: language),
                 monthlyPrice: monthly.localizedPriceString,
                 discountBadge: savingsBadge(annual: annual.price, monthly: monthly.price)
             )
         }
         return Self.fallbackPaywallPrices(language: language)
-    }
-
-    // MARK: - Prix mensuel équivalent
-
-    /// Douzième du prix annuel, écrit comme la boutique de ce client l'écrirait.
-    ///
-    /// Le formateur vient du produit lui-même (`StoreProduct.priceFormatter`), donc de la
-    /// boutique App Store servie : devise **et** conventions du pays. Une table
-    /// devise → locale ne peut pas faire ça — un client allemand et un client irlandais
-    /// paient tous les deux en euros et ne les écrivent pas pareil (« 3,33 € » contre
-    /// « €3.33 ») — elle ne sert plus que de filet si StoreKit ne fournit pas de formateur.
-    func perMonthPrice(_ product: StoreProduct, language: AppLanguage) -> String {
-        let amount = product.price / 12
-        if let formatter = product.priceFormatter,
-           let text = formatter.string(from: amount as NSDecimalNumber) {
-            return text
-        }
-        return formatCurrency(amount, currencyCode: product.currencyCode, language: language)
-    }
-
-    /// « facturé 39,99 € par an » — ce que la boutique prélèvera réellement.
-    private func billedYearlyNote(_ yearlyPrice: String, language: AppLanguage) -> String {
-        String(
-            format: AppLocalizable.string("paywall.plan.billedYearly", language: language),
-            yearlyPrice
-        )
-    }
-
-    /// Filet quand StoreKit ne fournit pas de formateur : on écrit le montant dans la langue
-    /// que l'utilisateur lit, avec la devise du produit.
-    ///
-    /// Il y avait ici une table devise → pays — EUR vers `fr_FR`, GBP vers `en_GB`, USD vers
-    /// `en_US` — et elle faisait plus de mal que de bien. Une devise ne désigne pas un pays :
-    /// un Allemand et un Irlandais paient tous les deux en euros, un Canadien et un Américain
-    /// tous les deux en dollars, et ils ne les écrivent pas pareil. La table imposait donc
-    /// l'écriture française à toute la zone euro, quelle que soit la langue de l'app. Et les
-    /// devises absentes de la liste — la livre turque, le zloty, la couronne, le shekel,
-    /// c'est-à-dire la majorité des 26 langues — tombaient de toute façon dans le cas par
-    /// défaut, qui est celui-ci : le bon.
-    ///
-    /// La devise reste celle du produit, donc elle est toujours juste ; seule la façon de
-    /// l'écrire suit la langue. C'est exactement ce que fait déjà l'app Android.
-    private func formatCurrency(_ amount: Decimal, currencyCode: String?, language: AppLanguage) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.locale = Locale(identifier: language.localeIdentifier)
-        formatter.currencyCode = currencyCode
-        return formatter.string(from: amount as NSDecimalNumber) ?? "\(amount)"
     }
 
     private func savingsBadge(annual: Decimal, monthly: Decimal) -> String? {
@@ -324,14 +264,8 @@ class StoreViewModel {
     }
 
     private static func fallbackPaywallPrices(language: AppLanguage) -> PaywallPriceDisplay {
-        let yearly = AppLocalizable.string("paywall.plan.fallback.yearlyPrice", language: language)
         return PaywallPriceDisplay(
-            yearlyPrice: yearly,
-            yearlyPerMonth: AppLocalizable.string("paywall.plan.fallback.yearlyMonthly", language: language),
-            yearlyBilledNote: String(
-                format: AppLocalizable.string("paywall.plan.billedYearly", language: language),
-                yearly
-            ),
+            yearlyPrice: AppLocalizable.string("paywall.plan.fallback.yearlyPrice", language: language),
             monthlyPrice: AppLocalizable.string("paywall.plan.fallback.monthlyPrice", language: language),
             discountBadge: AppLocalizable.string("paywall.plan.discount", language: language)
         )

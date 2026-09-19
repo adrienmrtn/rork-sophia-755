@@ -309,7 +309,7 @@ struct SophiaStandardPaywall: View {
     private var priceLine: String {
         String(
             format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
-            prices.yearlyPrice, prices.yearlyPerMonth
+            prices.yearlyPrice
         )
     }
 
@@ -607,7 +607,7 @@ struct SophiaTrainingPaywall: View {
     private var priceLine: String {
         String(
             format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
-            prices.yearlyPrice, prices.yearlyPerMonth
+            prices.yearlyPrice
         )
     }
 
@@ -891,7 +891,7 @@ struct SophiaQuizPaywall: View {
     private var priceLine: String {
         String(
             format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
-            prices.yearlyPrice, prices.yearlyPerMonth
+            prices.yearlyPrice
         )
     }
 
@@ -1600,7 +1600,7 @@ struct SophiaCourseUnlockPaywall: View {
     private var priceLine: String {
         String(
             format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
-            prices.yearlyPrice, prices.yearlyPerMonth
+            prices.yearlyPrice
         )
     }
 
@@ -1818,35 +1818,29 @@ struct SophiaDiscountPaywall: View {
 
     // MARK: Price block
 
-    /// Prix mensuels, comme partout ailleurs dans l'app : l'offre est comparée au plan
-    /// annuel normal, et deux montants annuels côte à côte ne disent pas au lecteur ce que
-    /// ça lui coûte par mois. Le montant réellement prélevé une fois par an reste juste en
-    /// dessous — c'est ce qu'exige l'App Store (3.1.2) et ce que mérite un abonnement
-    /// facturé d'un coup.
+    /// Prix annuels, comme partout ailleurs dans l'app : le grand chiffre est le montant
+    /// que la boutique prélèvera, donc l'App Store (3.1.2) est servi par le prix lui-même
+    /// plutôt que par une note sous lui, et le barré au-dessus se compare à lui dans la
+    /// même unité.
     private var priceBlock: some View {
         VStack(spacing: 4) {
             HStack(alignment: .firstTextBaseline, spacing: 10) {
-                if let regular = prices.regularPerMonth {
+                if let regular = prices.regularYearly {
                     Text(regular)
                         .font(DS.sans(.title3, .semibold))
                         .foregroundStyle(.white.opacity(0.7))
                         .strikethrough()
                 }
-                Text(prices.promoPerMonth)
+                Text(prices.promoYearly)
                     .font(DS.title(.largeTitle, .heavy))
                     .foregroundStyle(.white)
             }
             .lineLimit(1)
             .minimumScaleFactor(0.7)
 
-            Text(languageManager.text("paywall.discount.perMonth"))
+            Text(languageManager.text("paywall.discount.perYear"))
                 .font(DS.sans(.footnote, .semibold))
                 .foregroundStyle(.white.opacity(0.85))
-                .multilineTextAlignment(.center)
-
-            Text(prices.billedYearlyNote)
-                .font(DS.sans(.caption, .medium))
-                .foregroundStyle(.white.opacity(0.75))
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }

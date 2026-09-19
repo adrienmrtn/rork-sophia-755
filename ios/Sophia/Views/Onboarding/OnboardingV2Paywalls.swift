@@ -92,7 +92,7 @@ struct OnboardingV2PaywallAnnual: View {
                 return Text(
                     String(
                         format: languageManager.text("onboardingV2.pw.priceNoTrial"),
-                        prices.yearlyPerMonth, prices.yearlyPrice
+                        prices.yearlyPrice
                     )
                 )
                 .font(DS.title(.title2, .heavy))
@@ -101,7 +101,7 @@ struct OnboardingV2PaywallAnnual: View {
             let green = languageManager.text("onboardingV2.pw.tryFree")
             let rest = String(
                 format: languageManager.text("onboardingV2.pw.thenPrice"),
-                prices.yearlyPerMonth, prices.yearlyPrice
+                prices.yearlyPrice
             )
             return Text(green + " ").font(DS.title(.title2, .heavy)).foregroundColor(OV2.success)
                 + Text(rest).font(DS.title(.title2, .heavy)).foregroundColor(OV2.ink)
@@ -291,11 +291,11 @@ struct OnboardingV2PaywallComparison: View {
                     Text(isYearly ? languageManager.text("onboardingV2.pw.yearly") : languageManager.text("onboardingV2.pw.monthly"))
                         .font(DS.sans(.body, .bold))
                         .foregroundStyle(OV2.ink)
-                    // Le prix affiché en gros est mensuel des deux côtés — comparer un plan
-                    // annuel à un plan mensuel demande la même unité, sinon « 39,99 € » à
-                    // côté de « 9,99 € » fait passer l'annuel pour le plus cher. Le montant
-                    // réellement prélevé reste sous le nom du plan.
-                    Text(isYearly ? prices.yearlyBilledNote : languageManager.text("onboardingV2.pw.monthlyBilling"))
+                    // Chaque ligne porte le montant que la boutique prélève pour ce plan,
+                    // et la période en toutes lettres sous le nom : « facturé chaque année »
+                    // face à « facturé chaque mois ». C'est la période, pas une conversion
+                    // au mois, qui dit au lecteur ce que les deux chiffres comparent.
+                    Text(languageManager.text(isYearly ? "onboardingV2.pw.yearlyBilling" : "onboardingV2.pw.monthlyBilling"))
                         .font(DS.sans(.caption, .medium))
                         .foregroundStyle(OV2.inkSecondary)
                         .lineLimit(2)
@@ -304,7 +304,7 @@ struct OnboardingV2PaywallComparison: View {
                 }
                 Spacer()
                 VStack(alignment: .trailing, spacing: 3) {
-                    Text(isYearly ? prices.yearlyPerMonth : prices.monthlyPrice)
+                    Text(isYearly ? prices.yearlyPrice : prices.monthlyPrice)
                         .font(DS.sans(.body, .bold))
                         .foregroundStyle(OV2.ink)
                         .lineLimit(1)
