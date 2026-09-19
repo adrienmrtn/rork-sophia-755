@@ -1671,6 +1671,10 @@ struct SophiaDiscountPaywall: View {
     let store: StoreViewModel
     /// Drives the live 60-minute countdown. Optional so previews / fallbacks still render.
     var discountManager: DiscountOfferManager? = nil
+    /// Off for the developer shortcut in Settings. Mixpanel runs in debug builds on the
+    /// production token, so a paywall opened to look at it would otherwise land in the
+    /// funnel as a real impression and a real dismissal.
+    var tracksAnalytics: Bool = true
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
     var onDismissed: (() -> Void)? = nil
@@ -1730,8 +1734,10 @@ struct SophiaDiscountPaywall: View {
         .onAppear {
             presentedAt = Date()
             didTrackDismiss = false
-            AnalyticsService.trackPaywallViewed(context: context.rawValue)
-            store.trackPaywallImpression(paywallId: "native_discount", offeringIdentifier: context.offeringIdentifier)
+            if tracksAnalytics {
+                AnalyticsService.trackPaywallViewed(context: context.rawValue)
+                store.trackPaywallImpression(paywallId: "native_discount", offeringIdentifier: context.offeringIdentifier)
+            }
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
                 appeared = true
             }
@@ -1931,7 +1937,7 @@ struct SophiaDiscountPaywall: View {
     }
 
     private func trackDismissIfNeeded() {
-        guard !didTrackDismiss else { return }
+        guard tracksAnalytics, !didTrackDismiss else { return }
         didTrackDismiss = true
         let duration = Int(Date().timeIntervalSince(presentedAt ?? Date()))
         AnalyticsService.trackPaywallDismissed(context: context.rawValue, durationSeconds: max(0, duration))
