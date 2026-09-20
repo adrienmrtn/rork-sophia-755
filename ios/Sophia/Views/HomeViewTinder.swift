@@ -231,6 +231,9 @@ struct HomeViewTinder: View {
 
     private func commitSwipeLeft() {
         registerDiscountSwipe()
+        if let passedOver = cards.first {
+            DeckSkipStore.registerSkip(passedOver.id)
+        }
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
         withAnimation(.snappy(duration: 0.35)) {
             topCardOffset = CGSize(width: -520, height: topCardOffset.height)
@@ -263,12 +266,14 @@ struct HomeViewTinder: View {
     }
 
     private func openCourse(_ course: Course) {
+        DeckSkipStore.clear(course.id)
         selectedCourse = course
     }
 
     private func loadCards() {
         cards = HomeDeckBuilder.deck(
             from: ContentCatalog.activeCourses,
+            context: DeckContext.current(progressManager: progressManager),
             isCompleted: { progressManager.courseStatus(for: $0) == .completed }
         )
         let preloadIds = cards.prefix(5).map(\.id)

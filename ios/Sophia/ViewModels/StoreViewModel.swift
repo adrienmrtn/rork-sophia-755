@@ -10,6 +10,16 @@ class StoreViewModel {
     var isInFreeTrial: Bool = false
     /// True when the free trial expires tomorrow (calendar day) — drives the in-app mini banner.
     var trialExpiresInOneDay: Bool = false
+    /// Entitlement still active, but the store says it will not renew: the customer has
+    /// cancelled and is running out the period they already have.
+    ///
+    /// This is the save window, and until now nothing in the app could see it —
+    /// `isPremium` alone reads a cancelled subscriber as a happy one. On an annual plan
+    /// the window is months; on the 3-day trial it is a day or two, and the person is
+    /// still opening the app every one of them.
+    var willNotRenew: Bool = false
+    /// When the current period ends, for copy that names the date.
+    var expiresAt: Date?
     var isLoading: Bool = false
     var isPurchasing: Bool = false
     var error: String?
@@ -30,6 +40,8 @@ class StoreViewModel {
         isPremium = entitlement?.isActive == true
         isInFreeTrial = isPremium && entitlement?.periodType == .trial
         trialExpiresInOneDay = Self.isTrialExpiringInOneDay(entitlement)
+        willNotRenew = isPremium && entitlement?.willRenew == false
+        expiresAt = entitlement?.expirationDate
     }
 
     /// Calendar-day check: trial is active and expires tomorrow.
@@ -165,6 +177,85 @@ class StoreViewModel {
         Purchases.shared.trackCustomPaywallImpression(
             CustomPaywallImpressionParams(paywallId: paywallId, offering: resolved)
         )
+    }
+
+    // MARK: - Retention (cancellation save)
+
+    /// Promotional offer identifier created on the annual product in App Store Connect.
+    ///
+    /// Apple decides eligibility, not the app: a promotional offer is only granted to
+    /// someone who has, or has had, an active subscription. Someone in a free trial
+    /// qualifies — they are a current subscriber — and because redeeming an offer on the
+    /// *same* product takes effect at the next renewal, a trial that is cancelled keeps
+    /// running and is simply billed at the offer price when it ends. That is the whole
+    /// mechanism, and it has to be confirmed in sandbox before it ships: if it charged
+    /// immediately instead, it would end someone's trial and take their money.
+    static let retentionOfferIdentifier = "retention_14_99"
+
+    /// A signed retention offer, ready to buy, or `nil` when there is none to show.
+    struct RetentionOffer {
+        let package: Package
+        let offer: PromotionalOffer
+        /// The discounted price, already formatted in the store's currency.
+        let price: String
+        /// The normal price of the same package, to show beside it.
+        let regularPrice: String
+    }
+
+    /// Fetches the retention offer, returning `nil` unless the store will actually grant it.
+    ///
+    /// `nil` covers every reason: no offer configured, the product not carrying it, the
+    /// In-App Purchase key missing from RevenueCat so nothing can be signed, or Apple
+    /// judging this customer ineligible. The caller must show no offer at all in that
+    /// case — presenting one anyway would put a 14,99 € headline above a purchase the
+    /// store charges 39,99 € for.
+    func retentionOffer() async -> RetentionOffer? {
+        if offerings == nil { await loadOfferingsWithRetry() }
+        guard let package = annualPackage else { return nil }
+        let product = package.storeProduct
+        guard let discount = product.discounts.first(
+            where: { $0.offerIdentifier == Self.retentionOfferIdentifier }
+        ) else { return nil }
+
+        do {
+            let offer = try await Purchases.shared.promotionalOffer(
+                forProductDiscount: discount,
+                product: product
+            )
+            return RetentionOffer(
+                package: package,
+                offer: offer,
+                price: discount.localizedPriceString,
+                regularPrice: product.localizedPriceString
+            )
+        } catch {
+            // Not an error worth surfacing: an ineligible customer is the expected case.
+            return nil
+        }
+    }
+
+    /// Buys the annual package at the retention price.
+    func purchase(retention: RetentionOffer) async -> Bool {
+        isPurchasing = true
+        defer { isPurchasing = false }
+        do {
+            let result = try await Purchases.shared.purchase(
+                package: retention.package,
+                promotionalOffer: retention.offer
+            )
+            if !result.userCancelled {
+                applyCustomerInfo(result.customerInfo)
+                return isPremium
+            }
+            return false
+        } catch ErrorCode.purchaseCancelledError {
+            return false
+        } catch ErrorCode.paymentPendingError {
+            return false
+        } catch {
+            self.error = error.localizedDescription
+            return false
+        }
     }
 
     // MARK: - Discount (offre_discount) pricing

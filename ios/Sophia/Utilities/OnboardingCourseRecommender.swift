@@ -1,102 +1,49 @@
 import Foundation
 
-/// Hand-picked onboarding recommendations per subject — stable IDs, strong hooks.
+/// Course recommendations for the screens that show a short list rather than the
+/// home deck: the onboarding swipe, the profile screen's "waiting for you", and the
+/// library's recommended row.
+///
+/// It used to be 24 course ids typed by hand, dealt round-robin by subject. Because
+/// the round-robin took index 0 of each subject in `Subject.allCases` order and the
+/// commonest objectives map to every subject, the first five cards were the same
+/// five courses for everyone — which is why those five now sit in 38–62 % of all
+/// accounts' favourites while the sixth-placed course sits at 1.3 %. A hand-picked
+/// list also had no way of knowing that one of its five, "Napoléon à Ulm", is
+/// finished by only 36 % of the people who open it, the worst rate of any course it
+/// was competing against.
+///
+/// So this is now the same model as the home deck — observed quality, co-read
+/// neighbours, subject quotas — asked for the first few cards instead of the whole
+/// pack. The interests still matter, they just no longer filter: science belongs in
+/// everyone's list, since roughly half the readers of every other subject read it too.
 enum OnboardingCourseRecommender {
-  private static let picksBySubject: [String: [String]] = [
-    "histoire": [
-      "course_12_la_strategie_de_napoleon_a_ulm_1805",
-      "course_29_la_chute_du_mur_de_berlin_1989",
-      "course_9_l_empire_azteque",
-      "course_16_la_bataille_de_verdun_1916",
-    ],
-    "sciences": [
-      "course_67_qu_est_ce_qu_un_trou_noir",
-      "course_51_la_decouverte_de_la_penicilline_fleming",
-      "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur",
-      "course_52_la_decouverte_de_l_electricite_et_ses_ap",
-    ],
-    "litterature": [
-      "course_97_le_mythe_de_sisyphe_camus",
-      "course_198_sindbad_le_marin",
-      "course_a_la_recherche_du_temps_perdu_proust",
-      "course_cent_ans_de_solitude_garcia_marquez",
-    ],
-    "art": [
-      "course_150_la_nuit_etoilee_van_gogh",
-      "course_124_rembrandt_et_le_clair_obscur",
-      "course_125_le_romantisme_en_peinture_delacroix_geri",
-      "course_123_le_caravage_et_le_clair_obscur",
-    ],
-    "mythologie": [
-      "course_184_romulus_et_remus_la_fondation_de_rome",
-      "course_162_promethee_le_voleur_de_feu",
-      "course_169_tantale_et_son_supplice",
-      "course_189_dionysos_le_dieu_du_vin_et_de_l_exces",
-    ],
-    "comprendreLeMonde": [
-      "course_204_le_concept_de_monde_multipolaire",
-      "course_32_la_guerre_du_vietnam_1955_1975",
-      "course_31_le_plan_marshall_1947_1952",
-      "course_22_la_crise_des_missiles_de_cuba_1962",
-    ],
-  ]
+    /// Recommends up to `limit` courses for the given interests.
+    ///
+    /// `excluding` lets a caller skip courses already surfaced elsewhere (e.g. the
+    /// onboarding swipe deck) so the profile screen shows *different* courses.
+    ///
+    /// Stable for a given install and exclusion set: these lists are read from SwiftUI
+    /// computed properties, which are recomputed on every layout pass, so anything
+    /// drawn from system randomness would reshuffle under the reader mid-screen.
+    /// Different installs still get different lists — that is the point of no longer
+    /// dealing everyone the same five cards.
+    static func recommendedCourses(
+        interests: Set<String>,
+        language: AppLanguage,
+        limit: Int = 4,
+        excluding: Set<String> = []
+    ) -> [Course] {
+        let catalogue = ContentCatalog.courses(for: language)
+        guard !catalogue.isEmpty, limit > 0 else { return [] }
 
-  /// Recommends up to `limit` courses for the given interests.
-  ///
-  /// `excluding` lets a caller skip courses already surfaced elsewhere (e.g. the onboarding
-  /// swipe deck) so the profile screen shows *different* courses. Falls back progressively —
-  /// hand-picked pool → curated starters → any course in the interest subjects → any course —
-  /// so the exclusion never leaves the screen short.
-  static func recommendedCourses(
-    interests: Set<String>,
-    language: AppLanguage,
-    limit: Int = 4,
-    excluding: Set<String> = []
-  ) -> [Course] {
-    let orderedKeys = Subject.allCases.map(\.storageKey).filter { interests.contains($0) }
-    var ids: [String] = []
-    var pickIndex = 0
-
-    func tryAppend(_ id: String) -> Bool {
-      guard !ids.contains(id), !excluding.contains(id) else { return false }
-      ids.append(id)
-      return true
+        var generator = RecommendationSeed.generator(salt: "onboarding")
+        let deck = HomeDeckBuilder.deck(
+            from: catalogue,
+            context: DeckContext(objectiveSubjects: interests),
+            isCompleted: { excluding.contains($0) },
+            using: &generator
+        )
+        return Array(deck.prefix(limit))
     }
-
-    while ids.count < limit {
-      var added = false
-      for key in orderedKeys {
-        guard let pool = picksBySubject[key], pickIndex < pool.count else { continue }
-        if tryAppend(pool[pickIndex]) {
-          added = true
-          if ids.count >= limit { break }
-        }
-      }
-      if !added { break }
-      pickIndex += 1
-    }
-
-    if ids.count < limit {
-      for fallbackId in CuratedStarterCourses.ids where ids.count < limit {
-        _ = tryAppend(fallbackId)
-      }
-    }
-
-    // Broaden to any course in the selected subjects, then to any course at all, so an
-    // exclusion set never shrinks the result below `limit` when the catalog can fill it.
-    if ids.count < limit {
-      let subjects = Set(orderedKeys)
-      let catalog = ContentCatalog.courses(for: language)
-      for course in catalog where ids.count < limit {
-        if subjects.isEmpty || subjects.contains(course.subject.storageKey) {
-          _ = tryAppend(course.id)
-        }
-      }
-      for course in catalog where ids.count < limit {
-        _ = tryAppend(course.id)
-      }
-    }
-
-    return ids.compactMap { ContentCatalog.course(withId: $0, language: language) }
-  }
 }

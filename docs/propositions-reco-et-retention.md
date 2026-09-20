@@ -1,6 +1,5 @@
 # Propositions — reco de cours & offres de rétention
 
-Document de propositions uniquement : rien n'a été modifié dans l'app.
 Chiffres tirés de Supabase (`afnmcoovdvbtkgohtdij`, snapshot du 20/09/2026, 114 888 comptes).
 
 ---
@@ -90,50 +89,81 @@ Un simple modèle de co-lecture battrait le hasard **aujourd'hui, sans ML**.
 contre 36,3 % sur « Napoléon à Ulm »… qui est justement la carte n°1 imposée à tout le monde en
 histoire.
 
-## 1.3 Proposition
+## 1.3 Ce qui est livré
 
-### Étape 0 — Logguer (prérequis, ~1 j)
+Des **quotas, jamais de filtre**. Aucune matière n'est exclue, quel que soit l'objectif.
 
-Sans impressions, pas d'exemples négatifs, donc pas de modèle. Le reste en dépend.
+### Les parts de matière
 
-- Table Supabase `course_events (user_id, course_id, surface, action, dwell_ms, position, ts)`
-  avec `action ∈ {impression, open, complete, skip, save, quiz_done}`. Envoi par batch.
-- Découpler les likes d'onboarding des favoris : `onboardingLikedCourseIds` séparé de
-  `favoriteCourseIds`. (Les 5 IDs pollués sont identifiables et nettoyables rétroactivement.)
-- Reconnecter le MCP Mixpanel sur `mcp-eu.mixpanel.com` — le projet « Sophia ios » est en EU,
-  je n'ai pas pu tirer les funnels d'ici.
+Dérivées du nombre de finishers par cours — sous exposition uniforme, c'est
+`P(ouvre × termine)`, exactement ce qu'une première carte doit maximiser :
 
-### Étape 1 — Modèle de co-lecture côté serveur (~2–3 j)
+| | sciences | comprendreLeMonde | histoire | art | littérature | mythologie |
+| --- | --- | --- | --- | --- | --- | --- |
+| Part de base | **35,3 %** | 17,8 % | 14,3 % | 11,4 % | 11,2 % | 9,9 % |
 
-- Job SQL nocturne → table `course_neighbors (course_id, neighbor_id, score)`, top 20 voisins
-  par cours (~4 800 lignes). La requête de lift ci-dessus est déjà écrite, elle tourne en
-  quelques secondes.
-- L'app télécharge cette table au lancement et range le deck localement :
+Puis déformées par le comportement réel :
 
-  ```
-  score(c) =  w₁ · affinité_matière(user)          // lectures/complétions réelles, pas l'objectif
-            + w₂ · max voisinage(c, N derniers lus)
-            + w₃ · qualité(c)                      // complétion observée, prior bayésien
-            − w₄ · fatigue(c)                      // impressions sans ouverture, avec decay
-  ```
+```
+poids(m) = base(m) × (1 + 1,5 × affinité(m))      plancher 5 % par matière
+affinité = part des cours finis dans m − part attendue, bornée à ±1
+```
 
-- **Garder 20–30 % d'aléatoire** dans le deck. C'est ce qui maintient le log non biaisé et
-  permet de continuer à apprendre. On réduit le hasard, on ne le supprime pas.
-- Cold start (le cas majoritaire — 1,62 cours lus en moyenne) : les 3 premières cartes = les
-  meilleurs cours **par complétion observée** dans les matières de l'objectif, pas une liste
-  écrite en dur. Un cours à 36 % de complétion n'a rien à faire en carte n°1.
+Un lecteur qui ne termine que des sciences monte à 57,5 % de sciences, et la
+mythologie tient quand même son plancher à 7 %. **Le plancher compte** : sans lui une
+matière disparaît, on n'apprend plus rien dessus, et 40 cours meurent. Il est appliqué
+en une passe exacte (les matières au-dessus paient au prorata), pas par un
+`max(poids, 5 %)` suivi d'une renormalisation qui les ferait repasser dessous.
 
-### Étape 2 — Apprentissage (après 4–6 semaines de log)
+L'objectif d'onboarding **ne filtre plus rien** : +20 % sur ses matières, et il
+s'efface dès 3 cours terminés.
 
-Régression logistique ou gradient boosting sur (features user, features cours, contexte) →
-P(ouverture) et P(complétion), recalculé en batch, servi via la même table. Inutile d'y aller
-avant : sans impressions il n'y a pas de négatifs, et le modèle n'apprendrait que la popularité.
+### Le cours dans la matière tirée
 
-### Mesure
+```
+score(c) = qualité(c) + voisinage(c) − fatigue(c)
+```
 
-A/B par feature flag serveur. Primaire : **cours complétés par session**. Secondaires :
-lectures/DAU, D7, conversion paywall. La baseline est mesurable immédiatement puisque le
-comportement actuel *est* le bras de contrôle.
+- `qualité` : finishers observés, normalisés **à l'intérieur de la matière** — les
+  poids portent déjà la préférence entre matières, la compter deux fois empêcherait
+  les humanités de gagner un créneau que le quota venait de leur donner ;
+- `voisinage` : meilleur lift avec les 5 derniers cours lus, dans les deux sens (les
+  listes sont tronquées aux 8 meilleurs, A peut être chez B sans que B soit chez A) ;
+- `fatigue` : cartes montrées et passées, plafonnée — on rétrograde, on ne bannit pas.
+
+### L'ordre : un motif, pas un tri
+
+Trier par score donnerait dix cartes de sciences d'affilée. Les matières sont tirées
+au poids, **jamais trois fois de suite**, et une carte sur quatre est tirée au hasard
+hors matière dominante.
+
+Cette exploration dilue le quota : **28 % de sciences sur les 20 premières cartes**,
+contre 35 % de quota brut et 16,7 % pour le shuffle qu'elle remplace. C'est le prix à
+payer pour que le log reste non biaisé — sans quoi le prochain rafraîchissement du
+modèle serait entraîné sur ses propres recommandations.
+
+### Les fichiers
+
+| Fichier | Rôle |
+| --- | --- |
+| `supabase/queries/course_quality.sql`, `course_neighbours.sql` | les deux exports à lancer dans l'éditeur SQL |
+| `scripts/data/*.csv` | l'export commité, pour que la régénération soit reproductible |
+| `scripts/build_course_affinity.py` | génère le Swift à partir des CSV |
+| `ios/Sophia/Utilities/CourseAffinity.swift` | **généré** — 238 cours notés, 228 avec voisins (lift ≥ ×2) |
+| `ios/Sophia/Utilities/HomeDeckBuilder.swift` | l'algo (quotas, score, motif) |
+| `ios/Sophia/Utilities/DeckContextBuilder.swift` | lit les signaux dans `ProgressManager` |
+| `ios/Sophia/Utilities/DeckSkipStore.swift` | compte les cartes montrées et passées |
+| `ios/Sophia/Utilities/OnboardingCourseRecommender.swift` | les 24 IDs en dur remplacés par le même modèle |
+
+Zéro backend, zéro migration. À régénérer une fois par mois :
+`python3 scripts/build_course_affinity.py`.
+
+### Ce qui reste à faire
+
+Le modèle est **figé** : il ne s'améliore pas tout seul. `DeckSkipStore` est la moitié
+bon marché du log d'impressions — local, par appareil, non synchronisé. La moitié utile
+reste une table `course_events` côté Supabase. Sans elle, pas d'exemples négatifs,
+donc pas de modèle appris.
 
 ---
 
@@ -150,12 +180,12 @@ Aujourd'hui `SettingsView` n'a même pas de ligne « Gérer mon abonnement », e
 vouloir partir ? » (streak, XP, cours finis, cours en cours) + offre → *ensuite seulement*
 `AppStore.showManageSubscriptions`. N'attrape que ceux qui passent par l'app.
 
-**b) RevenueCat Customer Center** — le meilleur rapport effort/résultat vu la stack
-(RevenueCat + RevenueCatUI sont déjà intégrés). Écran drop-in (iOS 15+) : sondage d'annulation
-puis promotional offer Apple servie automatiquement selon la réponse — « trop cher » → offre
-prix, « acheté par erreur » → refund. Tout se configure depuis le dashboard
-(Lifecycle → Retention), pas dans le code. Prérequis : créer les promotional offers dans App
-Store Connect.
+**b) Servir l'offre promotionnelle Apple depuis les paywalls natifs** — c'est ce qui est
+livré. Les paywalls de l'app sont natifs, pas des templates RevenueCat, donc **Customer
+Center est inutile** : le SDK ne sert qu'à signer l'offre côté serveur, aucune UI n'est
+imposée. `SophiaRetentionPaywall` est le 6ᵉ paywall natif, dans le même fichier et le même
+dispatcher que les cinq autres. Customer Center resterait utile pour une seule chose — le
+motif d'annulation — mais un sondage maison à trois boutons le donne aussi.
 
 **c) Apple Retention Messaging API** — c'est le « depuis Apple » de ta question, et **le seul
 levier qui attrape les gens qui annulent depuis Réglages iOS**. Apple affiche ton message sur
@@ -193,17 +223,20 @@ Proposition :
 
 ---
 
-# 3. Ordre suggéré
+# 3. Où en est chaque chantier
 
-| # | Chantier | Effort | Débloque |
-| --- | --- | --- | --- |
-| 1 | Log d'impressions + découplage favoris/onboarding | ~1 j | tout le reste |
-| 2 | « Gérer mon abonnement » + écran de sortie maison | 1–2 j | premières saves, mesurables |
-| 3 | `course_neighbors` + scoring du deck, A/B vs aléatoire | 2–3 j | le vrai gain produit |
-| 4 | Customer Center + promotional offers App Store Connect | 2–3 j | saves automatisées |
-| 5 | Demande d'accès Retention Messaging API à Apple | à lancer **maintenant** | le délai court en parallèle |
-| 6 | Win-back offers | 1 j | récupération des partis |
-| 7 | Modèle appris sur les impressions | après 4–6 sem. | |
+| # | Chantier | État |
+| --- | --- | --- |
+| 1 | Modèle de deck (quotas + voisins + qualité), 24 IDs en dur supprimés | **livré** |
+| 2 | Compteur local des cartes passées (`DeckSkipStore`) | **livré** |
+| 3 | Détection `willRenew == false` + paywall de rétention natif | **livré**, bloqué sur l'offre ASC |
+| 4 | « Gérer mon abonnement » → paywall → `showManageSubscriptions` | **livré** |
+| 5 | Offre promotionnelle `retention_14_99` dans App Store Connect + clé In-App Purchase dans RevenueCat | **à faire côté ASC** |
+| 6 | Test sandbox du « next renewal » | **à faire, obligatoire avant prod** |
+| 7 | Accès Retention Messaging API à demander à Apple | **à lancer maintenant** |
+| 8 | Win-back offers | à faire |
+| 9 | Table `course_events` (vrai log d'impressions) | à faire |
+| 10 | Modèle appris sur les impressions | après 4–6 semaines de log |
 
 ---
 

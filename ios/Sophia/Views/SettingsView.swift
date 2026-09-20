@@ -1,3 +1,4 @@
+import StoreKit
 import SwiftUI
 import Supabase
 
@@ -20,6 +21,7 @@ struct SettingsView: View {
     @State private var hapticTrigger: Int = 0
     /// Set only by the developer section, which is itself behind `#if DEBUG`.
     @State private var showDiscountPaywall: Bool = false
+    @State private var showRetentionPaywall: Bool = false
 
     private static let destructive = DS.danger
     private static let destructiveTint = DS.dangerTint
@@ -58,6 +60,8 @@ struct SettingsView: View {
 
                         if !store.isPremium {
                             premiumSection
+                        } else {
+                            subscriptionSection
                         }
 
                         dataSection
@@ -125,6 +129,19 @@ struct SettingsView: View {
             .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaSheetChrome() }
             .sheet(isPresented: $showFeedback) { FeedbackView(isPremium: store.isPremium) }
             .sheet(isPresented: $showAmbassador) { AmbassadorView() }
+            .sheet(isPresented: $showRetentionPaywall) {
+                SophiaPaywallView(
+                    context: .retention,
+                    store: store,
+                    retentionSummary: RetentionSummary.current(
+                        store: store,
+                        progressManager: progressManager
+                    ),
+                    onContinueToCancel: { Self.openSubscriptionSettings() },
+                    onPurchased: { showRetentionPaywall = false },
+                    onRestored: { showRetentionPaywall = false }
+                )
+            }
         }
         .sophiaColorScheme()
     }
@@ -247,6 +264,50 @@ struct SettingsView: View {
                 .padding(.horizontal, 20)
             }
             .buttonStyle(SoftPressButtonStyle())
+        }
+    }
+
+    /// Subscription management for someone who already pays.
+    ///
+    /// The app had no such row at all: the only way out was Settings › Subscriptions,
+    /// where nothing of ours is ever seen. Cancelling still happens there — only Apple
+    /// can cancel a subscription — but the offer now comes first, which is the whole
+    /// point of the detour.
+    private var subscriptionSection: some View {
+        section(languageManager.text("settings.section.subscription")) {
+            groupedCard {
+                actionRow(
+                    icon: "creditcard",
+                    title: languageManager.text("settings.subscription.manage.title"),
+                    subtitle: languageManager.text("settings.subscription.manage.subtitle")
+                ) {
+                    hapticTrigger += 1
+                    showRetentionPaywall = true
+                }
+            }
+        }
+    }
+
+    /// Opens Apple's subscription settings.
+    ///
+    /// `AppStore.showManageSubscriptions(in:)` needs a window scene, and this is
+    /// presented from a sheet, so the scene is fetched rather than passed down. If
+    /// there is none to be found the App Store URL is the honest fallback — better
+    /// than a button that does nothing when the reader has decided to leave.
+    @MainActor
+    private static func openSubscriptionSettings() {
+        guard let scene = UIApplication.shared.connectedScenes
+            .compactMap({ $0 as? UIWindowScene })
+            .first(where: { $0.activationState == .foregroundActive })
+            ?? UIApplication.shared.connectedScenes.compactMap({ $0 as? UIWindowScene }).first
+        else {
+            if let url = URL(string: "https://apps.apple.com/account/subscriptions") {
+                UIApplication.shared.open(url)
+            }
+            return
+        }
+        Task {
+            try? await AppStore.showManageSubscriptions(in: scene)
         }
     }
 

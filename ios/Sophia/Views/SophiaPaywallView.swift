@@ -11,6 +11,10 @@ enum SophiaPaywallContext: String, Identifiable {
     /// Training-tab unlock. Its own analytics funnel, but purchases still attribute to the
     /// `quizz` RevenueCat offering (see `offeringIdentifier`).
     case entrainement = "entrainement"
+    /// Shown to someone who has cancelled and is running out their remaining period.
+    /// It sells the standard annual package at an App Store promotional-offer price, so
+    /// it has no offering of its own — impressions fall back to the current one.
+    case retention = "retention"
 
     var id: String { rawValue }
 
@@ -31,6 +35,7 @@ enum SophiaPaywallContext: String, Identifiable {
 /// - `.quizz` → `SophiaQuizPaywall` (auto-playing quiz demo, FAQ, activate-trial CTA).
 /// - `.debloquerCours` → `SophiaCourseUnlockPaywall` (rating, 6-courses/day stat, reviews, countdown).
 /// - `.finOnboarding` → `SophiaStandardPaywall` (single annual plan, 39,99 €/an, 3-day trial).
+/// - `.retention` → `SophiaRetentionPaywall` (cancellation save, Apple promotional offer).
 struct SophiaPaywallView: View {
     let context: SophiaPaywallContext
     let store: StoreViewModel
@@ -38,6 +43,11 @@ struct SophiaPaywallView: View {
     var discountManager: DiscountOfferManager? = nil
     /// Seconds until the daily free course resets, forwarded to the course-unlock paywall.
     var secondsUntilReset: Int? = nil
+    /// Streak, courses and renewal date for `.retention`. Required by that context only.
+    var retentionSummary: RetentionSummary? = nil
+    /// `.retention` only: hands the reader over to Apple's subscription settings, which
+    /// is the only place a subscription can actually be cancelled.
+    var onContinueToCancel: (() -> Void)? = nil
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
     var onDismissed: (() -> Void)? = nil
@@ -50,6 +60,21 @@ struct SophiaPaywallView: View {
     @ViewBuilder
     private var paywall: some View {
         switch context {
+        case .retention:
+            SophiaRetentionPaywall(
+                store: store,
+                summary: retentionSummary ?? RetentionSummary(
+                    streak: 0,
+                    completedCourses: 0,
+                    globalXP: 0,
+                    expiresAt: nil,
+                    isTrial: false
+                ),
+                onPurchased: onPurchased,
+                onRestored: onRestored,
+                onDismissed: onDismissed,
+                onContinueToCancel: onContinueToCancel
+            )
         case .offreDiscount:
             SophiaDiscountPaywall(
                 store: store,
