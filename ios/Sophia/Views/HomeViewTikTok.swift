@@ -123,6 +123,10 @@ struct HomeViewTikTok: View {
                             // Légère vibration à chaque scroll (swipe utilisateur).
                             UIImpactFeedbackGenerator(style: .light).impactOccurred()
                             registerDiscountSwipe()
+                            // The card scrolled away from was dealt and not opened.
+                            if let passedOver = oldValue {
+                                DeckSkipStore.registerSkip(passedOver)
+                            }
                         }
                     }
                     // Fondu d'entrée sans `scaleEffect` : la mise à l'échelle du conteneur
@@ -240,6 +244,7 @@ struct HomeViewTikTok: View {
 
     private func startCourse(_ course: Course) {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        DeckSkipStore.clear(course.id)
         selectedCourse = course
     }
 
@@ -278,6 +283,7 @@ struct HomeViewTikTok: View {
     private func loadCards() {
         cards = HomeDeckBuilder.deck(
             from: ContentCatalog.activeCourses,
+            context: DeckContext.current(progressManager: progressManager),
             isCompleted: { progressManager.courseStatus(for: $0) == .completed }
         )
         scrolledCardId = cards.first?.id

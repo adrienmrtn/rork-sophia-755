@@ -45,6 +45,24 @@ enum AppLocalizable {
     // MARK: - French
 
     private static let french: [String: String] = [
+        // MARK: Rétention (annulation)
+        "settings.section.subscription": "Abonnement",
+        "settings.subscription.manage.title": "Gérer mon abonnement",
+        "settings.subscription.manage.subtitle": "Modifier ou résilier",
+        "retention.title.trial": "Tu es sûr de vouloir partir ?",
+        "retention.title.paid": "Tu es sûr de vouloir partir ?",
+        "retention.subtitle.trial": "Ton essai se termine le {date}. Tu ne seras pas débité de 39,99 €.",
+        "retention.subtitle.paid": "Ton accès se termine le {date}. Tout ce que tu as construit reste ici en t\u{2019}attendant.",
+        "retention.stat.streak": "jours de série",
+        "retention.stat.courses": "cours terminés",
+        "retention.stat.xp": "XP gagnés",
+        "retention.offer.whenTrial": "Prélevé seulement à la fin de ton essai, au lieu du plein tarif.",
+        "retention.offer.whenPaid": "Appliqué à ton prochain renouvellement, au lieu du plein tarif.",
+        "retention.cta.stay": "Je reste à ce prix",
+        "retention.cta.continueCancel": "Continuer la résiliation",
+        "retention.cta.noThanks": "Non merci",
+        "retention.cta.manage": "Gérer mon abonnement",
+        "retention.noOffer.body": "Aucune offre n\u{2019}est disponible sur ton compte pour le moment.",
         "tab.home": "Accueil",
         "tab.library": "Biblio",
         "tab.collections": "Collections",
@@ -891,6 +909,24 @@ enum AppLocalizable {
     // MARK: - English
 
     private static let english: [String: String] = [
+        // MARK: Retention (cancellation)
+        "settings.section.subscription": "Subscription",
+        "settings.subscription.manage.title": "Manage my subscription",
+        "settings.subscription.manage.subtitle": "Change or cancel",
+        "retention.title.trial": "Sure you want to leave?",
+        "retention.title.paid": "Sure you want to leave?",
+        "retention.subtitle.trial": "Your trial ends on {date}. You will not be charged the full price.",
+        "retention.subtitle.paid": "Your access ends on {date}. Everything you have built stays here waiting for you.",
+        "retention.stat.streak": "day streak",
+        "retention.stat.courses": "courses finished",
+        "retention.stat.xp": "XP earned",
+        "retention.offer.whenTrial": "Charged only when your trial ends, instead of the full price.",
+        "retention.offer.whenPaid": "Applied at your next renewal, instead of the full price.",
+        "retention.cta.stay": "Stay at this price",
+        "retention.cta.continueCancel": "Continue cancelling",
+        "retention.cta.noThanks": "No thanks",
+        "retention.cta.manage": "Manage my subscription",
+        "retention.noOffer.body": "No offer is available on your account right now.",
         "course.unlock.free": "Unlock for free",
         "course.quiz.access": "Open the quiz",
         "course.unlock.cta": "Unlock the course",

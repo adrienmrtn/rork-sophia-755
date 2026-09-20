@@ -37,6 +37,7 @@ struct HomeViewLegacy: View {
     private func loadCards() {
         cards = HomeDeckBuilder.deck(
             from: ContentCatalog.activeCourses,
+            context: DeckContext.current(progressManager: progressManager),
             isCompleted: { progressManager.courseStatus(for: $0) == .completed }
         )
         let preloadIds = cards.prefix(5).map(\.id)
@@ -137,6 +138,7 @@ struct HomeViewLegacy: View {
                         progressManager.toggleFavorite(course.id)
                     },
                     onStart: {
+                        DeckSkipStore.clear(course.id)
                         selectedCourse = course
                     }
                 )
@@ -168,6 +170,9 @@ struct HomeViewLegacy: View {
                 if abs(value.translation.width) > threshold || abs(velocity) > 800 {
                     if !isPremium {
                         discountManager.registerSwipe()
+                    }
+                    if let passedOver = cards.first {
+                        DeckSkipStore.registerSkip(passedOver.id)
                     }
                     let direction: CGFloat = value.translation.width > 0 ? 1 : -1
                     let g = UIImpactFeedbackGenerator(style: .light)

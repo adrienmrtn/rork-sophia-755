@@ -211,6 +211,10 @@ struct ContentView: View {
                 store: storeVM,
                 discountManager: discountManager,
                 secondsUntilReset: context == .debloquerCours ? progressManager.secondsUntilDailyReset() : nil,
+                retentionSummary: context == .retention
+                    ? RetentionSummary.current(store: storeVM, progressManager: progressManager)
+                    : nil,
+                onContinueToCancel: nil,
                 onPurchased: {
                     if context == .offreDiscount { discountManager.markExpired() }
                     paywallContext = nil
@@ -245,6 +249,7 @@ struct ContentView: View {
                 onboardingCompleted: true
             )
             presentTrialEndingBannerIfNeeded()
+            presentRetentionPaywallIfNeeded()
             // ATT est demandée dès l'ouverture de l'app (voir SophiaApp), plus ici.
             guard HomeCardPresentation.style == .legacy else { return }
             if !progressManager.hasSeenSwipeTutorial {
@@ -257,6 +262,9 @@ struct ContentView: View {
         }
         .onChange(of: storeVM.trialExpiresInOneDay) { _, _ in
             presentTrialEndingBannerIfNeeded()
+        }
+        .onChange(of: storeVM.willNotRenew) { _, _ in
+            presentRetentionPaywallIfNeeded()
         }
         .onChange(of: storeVM.isPremium) { _, isPremium in
             AnalyticsService.updateUserContext(
@@ -275,6 +283,25 @@ struct ContentView: View {
             openPendingDeepLink()
         }
         .trackAnalyticsLifecycle(isPremium: storeVM.isPremium)
+    }
+
+    /// Offers the retention price to someone who has cancelled but is still inside the
+    /// period they have.
+    ///
+    /// Only when the store says the subscription will not renew. A reader whose trial
+    /// is simply running its course is left alone: they were about to pay 39,99 €, and
+    /// showing them 14,99 € would cost the difference for nothing.
+    ///
+    /// Once, ever. A cancellation that has been answered with an offer and refused is
+    /// answered; re-asking on every launch of the remaining period would be nagging
+    /// someone who is already paying us.
+    private func presentRetentionPaywallIfNeeded() {
+        guard storeVM.willNotRenew, paywallContext == nil, pendingCourse == nil else { return }
+        let defaults = UserDefaults.standard
+        let key = "sophia_retention_offer_shown"
+        guard !defaults.bool(forKey: key) else { return }
+        defaults.set(true, forKey: key)
+        paywallContext = .retention
     }
 
     /// In-app only: tiny banner the calendar day before trial end, once per day, auto-hides in 1s.
