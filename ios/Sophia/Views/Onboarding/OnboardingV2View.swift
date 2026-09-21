@@ -26,6 +26,8 @@ struct OnboardingV2View: View {
     /// no longer achieve anything, so it is skipped. Resolved at launch, long before the page
     /// is reached; defaulting to `false` shows the page while the status is still unknown.
     @State private var notificationsSettled = false
+    /// Sign-in sheet opened from the welcome page by someone who already has an account.
+    @State private var showExistingAccountSignIn = false
 
     private enum Screen: Hashable {
         case welcome, language, objectives, objectiveIntro
@@ -117,6 +119,12 @@ struct OnboardingV2View: View {
         .onChange(of: auth.isSignedIn) { _, signedIn in
             if signedIn, current == .login { advance() }
         }
+        .sheet(isPresented: $showExistingAccountSignIn) {
+            OnboardingV2ExistingAccountSheet(onSignedIn: {
+                showExistingAccountSignIn = false
+                finish()
+            })
+        }
         .onAppear {
             restoreStepIndex()
             AnalyticsService.trackOnboardingStarted()
@@ -136,7 +144,17 @@ struct OnboardingV2View: View {
     private func page(for screen: Screen) -> some View {
         switch screen {
         case .welcome:
-            OnboardingV2Welcome(onNext: advance)
+            OnboardingV2Welcome(
+                onNext: advance,
+                onExistingAccount: {
+                    AnalyticsService.trackOnboardingStepViewed(
+                        stepIndex: stepIndex,
+                        stepName: Screen.welcome.analyticsName,
+                        action: "existing_account"
+                    )
+                    showExistingAccountSignIn = true
+                }
+            )
         case .language:
             OnboardingV2Language(onNext: advance)
         case .objectives:

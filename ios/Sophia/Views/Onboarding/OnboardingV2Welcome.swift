@@ -4,6 +4,9 @@ import SwiftUI
 struct OnboardingV2Welcome: View {
     @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
+    /// Tapped by someone who is reinstalling or switching phone. Optional so the
+    /// screen still renders in a preview that has no coordinator behind it.
+    var onExistingAccount: (() -> Void)? = nil
 
     @State private var logoIn = false
     @State private var haloScale: CGFloat = 0.6
@@ -50,7 +53,24 @@ struct OnboardingV2Welcome: View {
 
             Spacer()
 
-            OnboardingV2Button(title: languageManager.text("onboardingV2.welcome.cta"), action: onNext)
+            // No spacing of its own: `OnboardingV2Button` already carries 20pt below
+            // itself, which is the gap between the two.
+            VStack(spacing: 0) {
+                OnboardingV2Button(title: languageManager.text("onboardingV2.welcome.cta"), action: onNext)
+
+                // Quiet on purpose: this is the door for people who already know the
+                // app, and it must not compete with "Get started" for a new one.
+                if let onExistingAccount {
+                    Button(action: onExistingAccount) {
+                        Text(languageManager.text("onboardingV2.welcome.existingAccount"))
+                            .font(DS.sans(.subheadline, .semibold))
+                            .foregroundStyle(OV2.inkSecondary)
+                            .underline()
+                    }
+                    .padding(.bottom, 24)
+                    .opacity(titleIn ? 1 : 0)
+                }
+            }
         }
         .ov2Background()
         .onAppear {
