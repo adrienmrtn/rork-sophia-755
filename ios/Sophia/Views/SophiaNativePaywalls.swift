@@ -59,6 +59,54 @@ private enum PaywallCountdown {
     }
 }
 
+// MARK: - Yearly price line (quizz + debloquer_cours)
+
+/// The price above the CTA of the quiz and course-unlock paywalls.
+///
+/// It used to be a footnote in the lightest grey, right above a button that said
+/// « Débloquer gratuitement »: the amount the store will actually charge was the hardest
+/// thing on the screen to read. The sentence is still the translated one, in every language;
+/// it is only split on its single `%@`, so that the yearly price gets a line of its own,
+/// large and in full ink — "Essai gratuit de 3 jours, puis" above, "39,99 € / an" below.
+/// Without a trial the sentence starts with the price, so nothing goes above it.
+private struct PaywallYearlyPriceLine: View {
+    /// A translated format carrying the yearly price as its only `%@`.
+    let format: String
+    let price: String
+
+    var body: some View {
+        VStack(spacing: 2) {
+            let parts = format.components(separatedBy: "%@")
+            if parts.count == 2 {
+                let lead = parts[0].trimmingCharacters(in: .whitespaces)
+                if !lead.isEmpty {
+                    Text(lead)
+                        .font(DS.sans(.subheadline, .medium))
+                        .foregroundStyle(DS.inkSecondary)
+                }
+                Text(price)
+                    .font(DS.title(.title2, .heavy))
+                    .foregroundColor(DS.ink)
+                    + Text(parts[1])
+                    .font(DS.sans(.subheadline, .semibold))
+                    .foregroundColor(DS.ink)
+            } else {
+                // A translation that lost its placeholder, or gained a second one, still
+                // shows its whole sentence, just without the split.
+                Text(format.replacingOccurrences(of: "%@", with: price))
+                    .font(DS.sans(.headline, .semibold))
+                    .foregroundStyle(DS.ink)
+            }
+        }
+        .multilineTextAlignment(.center)
+        .fixedSize(horizontal: false, vertical: true)
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal, 24)
+        // One sentence split over two lines for the eye; VoiceOver reads it as one.
+        .accessibilityElement(children: .combine)
+    }
+}
+
 // MARK: - Standard paywall (quizz + debloquer_cours)
 
 /// Minimalist, single-offer native paywall used for the `quizz` and `debloquer_cours`
@@ -678,6 +726,9 @@ struct SophiaQuizPaywall: View {
     @Environment(LanguageManager.self) private var languageManager
 
     let store: StoreViewModel
+    /// Off for the developer shortcut in Settings, as on the discount paywall: Mixpanel runs
+    /// in debug builds on the production token.
+    var tracksAnalytics: Bool = true
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
     var onDismissed: (() -> Void)? = nil
@@ -760,8 +811,10 @@ struct SophiaQuizPaywall: View {
         .onAppear {
             presentedAt = Date()
             didTrackDismiss = false
-            AnalyticsService.trackPaywallViewed(context: context.rawValue)
-            store.trackPaywallImpression(paywallId: "native_quiz", offeringIdentifier: context.rawValue)
+            if tracksAnalytics {
+                AnalyticsService.trackPaywallViewed(context: context.rawValue)
+                store.trackPaywallImpression(paywallId: "native_quiz", offeringIdentifier: context.rawValue)
+            }
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
                 appeared = true
             }
@@ -863,10 +916,7 @@ struct SophiaQuizPaywall: View {
 
     private var bottomBar: some View {
         VStack(spacing: 10) {
-            Text(priceLine)
-                .font(DS.sans(.footnote, .medium))
-                .foregroundStyle(DS.inkTertiary)
-                .multilineTextAlignment(.center)
+            PaywallYearlyPriceLine(format: priceFormat, price: prices.yearlyPrice)
 
             Button(action: purchase) {
                 HStack(spacing: 8) {
@@ -888,11 +938,8 @@ struct SophiaQuizPaywall: View {
         }
     }
 
-    private var priceLine: String {
-        String(
-            format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
-            prices.yearlyPrice
-        )
+    private var priceFormat: String {
+        languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial")
     }
 
     private var closeButton: some View {
@@ -942,7 +989,7 @@ struct SophiaQuizPaywall: View {
     }
 
     private func trackDismissIfNeeded() {
-        guard !didTrackDismiss else { return }
+        guard tracksAnalytics, !didTrackDismiss else { return }
         didTrackDismiss = true
         let duration = Int(Date().timeIntervalSince(presentedAt ?? Date()))
         AnalyticsService.trackPaywallDismissed(context: context.rawValue, durationSeconds: max(0, duration))
@@ -1349,6 +1396,9 @@ struct SophiaCourseUnlockPaywall: View {
     let store: StoreViewModel
     var course: Course? = nil
     var secondsUntilReset: Int? = nil
+    /// Off for the developer shortcut in Settings, as on the discount paywall: Mixpanel runs
+    /// in debug builds on the production token.
+    var tracksAnalytics: Bool = true
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
     var onDismissed: (() -> Void)? = nil
@@ -1420,8 +1470,10 @@ struct SophiaCourseUnlockPaywall: View {
         .onAppear {
             presentedAt = Date()
             didTrackDismiss = false
-            AnalyticsService.trackPaywallViewed(context: context.rawValue, triggerCourseId: course?.id)
-            store.trackPaywallImpression(paywallId: "native_course_unlock", offeringIdentifier: context.rawValue)
+            if tracksAnalytics {
+                AnalyticsService.trackPaywallViewed(context: context.rawValue, triggerCourseId: course?.id)
+                store.trackPaywallImpression(paywallId: "native_course_unlock", offeringIdentifier: context.rawValue)
+            }
             if let course { courseThumb = CourseImageMap.loadImage(for: course.id) }
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
                 appeared = true
@@ -1572,10 +1624,7 @@ struct SophiaCourseUnlockPaywall: View {
 
     private var bottomBar: some View {
         VStack(spacing: 10) {
-            Text(priceLine)
-                .font(DS.sans(.footnote, .medium))
-                .foregroundStyle(DS.inkTertiary)
-                .multilineTextAlignment(.center)
+            PaywallYearlyPriceLine(format: priceFormat, price: prices.yearlyPrice)
 
             Button(action: purchase) {
                 HStack(spacing: 8) {
@@ -1584,7 +1633,9 @@ struct SophiaCourseUnlockPaywall: View {
                     } else {
                         Image(systemName: hasTrial ? "lock.open.fill" : "sparkles")
                             .font(.jakarta(size: 15, weight: .bold))
-                        Text(languageManager.text(hasTrial ? "paywall.cta.unlockFree" : "paywall.cta.subscribe"))
+                        // Not « Débloquer gratuitement », which reads as free for good: the
+                        // quiz paywall's wording, which says it is the trial that is free.
+                        Text(languageManager.text(hasTrial ? "paywall.cta.activateTrial" : "paywall.cta.subscribe"))
                     }
                 }
             }
@@ -1597,11 +1648,8 @@ struct SophiaCourseUnlockPaywall: View {
         }
     }
 
-    private var priceLine: String {
-        String(
-            format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
-            prices.yearlyPrice
-        )
+    private var priceFormat: String {
+        languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial")
     }
 
     private var closeButton: some View {
@@ -1651,7 +1699,7 @@ struct SophiaCourseUnlockPaywall: View {
     }
 
     private func trackDismissIfNeeded() {
-        guard !didTrackDismiss else { return }
+        guard tracksAnalytics, !didTrackDismiss else { return }
         didTrackDismiss = true
         let duration = Int(Date().timeIntervalSince(presentedAt ?? Date()))
         AnalyticsService.trackPaywallDismissed(context: context.rawValue, durationSeconds: max(0, duration))

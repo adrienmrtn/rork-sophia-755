@@ -20,7 +20,7 @@ struct SettingsView: View {
     @State private var showAmbassador: Bool = false
     @State private var hapticTrigger: Int = 0
     /// Set only by the developer section, which is itself behind `#if DEBUG`.
-    @State private var showDiscountPaywall: Bool = false
+    @State private var debugPaywall: SophiaPaywallContext? = nil
     @State private var showRetentionPaywall: Bool = false
 
     private static let destructive = DS.danger
@@ -91,21 +91,13 @@ struct SettingsView: View {
             }
             .navigationBarHidden(true)
             .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
-            .fullScreenCover(isPresented: $showDiscountPaywall) {
+            .fullScreenCover(item: $debugPaywall) { context in
                 #if DEBUG
                 // Presented from here rather than routed through ContentView: the real
-                // offer is a once-a-day affair with its own countdown and its own
-                // analytics, and a shortcut for looking at the screen has no business
-                // spending any of that. With no manager the paywall runs its own
-                // 60-minute clock, so it still looks like itself.
-                SophiaDiscountPaywall(
-                    store: store,
-                    tracksAnalytics: false,
-                    onPurchased: { showDiscountPaywall = false },
-                    onRestored: { showDiscountPaywall = false },
-                    onDismissed: { showDiscountPaywall = false }
-                )
-                .preferredColorScheme(.light)
+                // paywalls come with their own triggers, counters and analytics, and a
+                // shortcut for looking at a screen has no business spending any of that.
+                debugPaywallScreen(context)
+                    .preferredColorScheme(.light)
                 #endif
             }
             .alert(languageManager.text("settings.reset.alert.title"), isPresented: $showResetAlert) {
@@ -405,9 +397,67 @@ struct SettingsView: View {
                     title: languageManager.text("settings.debug.discountPaywall")
                 ) {
                     hapticTrigger += 1
-                    showDiscountPaywall = true
+                    debugPaywall = .offreDiscount
+                }
+                rowDivider
+                actionRow(
+                    icon: "questionmark.circle.fill",
+                    title: languageManager.text("settings.debug.quizPaywall")
+                ) {
+                    hapticTrigger += 1
+                    debugPaywall = .quizz
+                }
+                rowDivider
+                actionRow(
+                    icon: "lock.fill",
+                    title: languageManager.text("settings.debug.courseUnlockPaywall")
+                ) {
+                    hapticTrigger += 1
+                    debugPaywall = .debloquerCours
                 }
             }
+        }
+    }
+
+    /// The paywalls the developer section opens, with tracking off: Mixpanel runs in debug
+    /// builds on the production token, so a paywall opened to look at it would otherwise land
+    /// in the funnel as a real impression and a real dismissal.
+    ///
+    /// Closing one just closes it. The comparison paywall that `CourseView` stacks on top of
+    /// the quiz and course-unlock paywalls belongs to the course, not to the screen being
+    /// looked at.
+    @ViewBuilder
+    private func debugPaywallScreen(_ context: SophiaPaywallContext) -> some View {
+        switch context {
+        case .quizz:
+            SophiaQuizPaywall(
+                store: store,
+                tracksAnalytics: false,
+                onPurchased: { debugPaywall = nil },
+                onRestored: { debugPaywall = nil },
+                onDismissed: { debugPaywall = nil }
+            )
+        case .debloquerCours:
+            // A real course, so the thumbnail shows, and the real countdown to midnight.
+            SophiaCourseUnlockPaywall(
+                store: store,
+                course: ContentCatalog.activeCourses.first,
+                secondsUntilReset: progressManager.secondsUntilDailyReset(),
+                tracksAnalytics: false,
+                onPurchased: { debugPaywall = nil },
+                onRestored: { debugPaywall = nil },
+                onDismissed: { debugPaywall = nil }
+            )
+        default:
+            // The discount paywall, the only other one the section opens. With no manager
+            // it runs its own 60-minute clock, so it still looks like itself.
+            SophiaDiscountPaywall(
+                store: store,
+                tracksAnalytics: false,
+                onPurchased: { debugPaywall = nil },
+                onRestored: { debugPaywall = nil },
+                onDismissed: { debugPaywall = nil }
+            )
         }
     }
     #endif
