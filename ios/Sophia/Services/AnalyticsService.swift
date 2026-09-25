@@ -242,6 +242,28 @@ enum AnalyticsService {
         track("deep_link_opened", ["course_id": courseId])
     }
 
+    // MARK: - TikTok blocker
+
+    static func trackTikTokBlockerToggled(enabled: Bool) {
+        track("tiktok_blocker_toggled", ["enabled": enabled])
+    }
+
+    static func trackTikTokBlockerCourseOpened(courseId: String) {
+        track("tiktok_blocker_course_opened", ["course_id": courseId])
+    }
+
+    static func trackTikTokBlockerUnlocked(minutes: Int, courseId: String, fromShield: Bool) {
+        track("tiktok_blocker_unlocked", [
+            "minutes": minutes,
+            "course_id": courseId,
+            "from_shield": fromShield,
+        ])
+    }
+
+    static func trackTikTokBlockerReturnedToTikTok() {
+        track("tiktok_blocker_returned_to_tiktok")
+    }
+
     // MARK: - Feedback
 
     static func trackFeedbackOpened() {

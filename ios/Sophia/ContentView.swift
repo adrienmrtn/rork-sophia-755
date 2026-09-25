@@ -5,6 +5,7 @@ struct ContentView: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AppearanceManager.self) private var appearance
     @Environment(AuthService.self) private var auth
+    @Environment(\.scenePhase) private var scenePhase
     var onResetOnboarding: (() -> Void)? = nil
     let router: DeepLinkRouter
 
@@ -12,6 +13,7 @@ struct ContentView: View {
     @State private var syncService = ProgressSyncService.shared
     @State private var storeVM = StoreViewModel()
     @State private var discountManager = DiscountOfferManager()
+    @State private var blocker = TikTokBlockerManager.shared
     @State private var selectedTab: Int = 0
     @State private var selectedCourse: Course? = nil
     @State private var paywallContext: SophiaPaywallContext? = nil
@@ -186,7 +188,22 @@ struct ContentView: View {
                 .zIndex(60)
             }
 
+            // Shield-originated visit paid off: TikTok is open, say so and offer the
+            // way back. Waits for the reader to be gone so it is not drawn under it.
+            if blocker.showUnlockedScreen, pendingCourse == nil {
+                TikTokUnlockedView(
+                    onBackToTikTok: {
+                        _ = blocker.openTikTok()
+                        blocker.endSession()
+                    },
+                    onStay: { blocker.endSession() }
+                )
+                .transition(.opacity)
+                .zIndex(90)
+            }
+
         }
+        .animation(.easeInOut(duration: 0.3), value: blocker.showUnlockedScreen)
         .animation(.easeInOut(duration: 0.3), value: discountManager.isGiftPending)
         .animation(.spring(response: 0.5, dampingFraction: 0.8), value: discountManager.isActive)
         .animation(.easeInOut(duration: 0.25), value: showTrialEndingBanner)
@@ -278,9 +295,26 @@ struct ContentView: View {
         // replay the value the view was born with.
         .onChange(of: router.token) { _, _ in
             openPendingDeepLink()
+            openBlockerCourseIfNeeded()
         }
         .task {
             openPendingDeepLink()
+        }
+        // The blocker's two foreground duties: keep the shield in line with the stored
+        // state (an unlock window may have ended while we were away), and answer a tap
+        // on the shield by opening a course straight away.
+        .task {
+            blocker.syncLanguage(languageManager.current)
+            blocker.reconcileShield()
+            openBlockerCourseIfNeeded()
+        }
+        .onChange(of: scenePhase) { _, phase in
+            guard phase == .active else { return }
+            blocker.reconcileShield()
+            openBlockerCourseIfNeeded()
+        }
+        .onChange(of: languageManager.current) { _, language in
+            blocker.syncLanguage(language)
         }
         .trackAnalyticsLifecycle(isPremium: storeVM.isPremium)
     }
@@ -346,6 +380,40 @@ struct ContentView: View {
         default:
             return "unknown"
         }
+    }
+
+    /// "Open Sophia" on the TikTok shield lands here. No home, no picker: the course is
+    /// chosen and opened at once, and the reader shows its lock banner.
+    private func openBlockerCourseIfNeeded() {
+        guard blocker.consumePendingRequest() else { return }
+        guard let course = blocker.startSession(candidate: blockerCandidateCourse) else { return }
+        paywallContext = nil
+        showMyCourses = false
+        if let open = pendingCourse {
+            if open.id == course.id { return }
+            pendingCourse = nil
+            selectedCourse = nil
+        }
+        selectedTab = 0
+        explicitCourseSource = "tiktok_blocker"
+        // Any cover that was up needs to be gone before the reader is presented, or the
+        // two presentations race and neither appears (same delay as `MyCoursesView`).
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            selectedCourse = course
+        }
+    }
+
+    /// Same recommendation as the home deck, restricted to courses that have a quiz:
+    /// without one there is nothing to finish. Everything done: any course with a quiz,
+    /// a re-read is still a read.
+    private func blockerCandidateCourse() -> Course? {
+        let withQuiz = ContentCatalog.activeCourses.filter(\.hasQuiz)
+        let deck = HomeDeckBuilder.deck(
+            from: withQuiz,
+            context: DeckContext.current(progressManager: progressManager),
+            isCompleted: { progressManager.courseStatus(for: $0) == .completed }
+        )
+        return deck.first ?? withQuiz.randomElement()
     }
 
     private func openPendingDeepLink() {

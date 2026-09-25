@@ -18,6 +18,7 @@ struct SettingsView: View {
     @State private var showPrivacy: Bool = false
     @State private var showFeedback: Bool = false
     @State private var showAmbassador: Bool = false
+    @State private var showTikTokBlocker: Bool = false
     @State private var hapticTrigger: Int = 0
     /// Set only by the developer section, which is itself behind `#if DEBUG`.
     @State private var debugPaywall: SophiaPaywallContext? = nil
@@ -55,6 +56,8 @@ struct SettingsView: View {
                         }
 
                         appearanceSection
+
+                        tiktokBlockerSection
 
                         progressionSection
 
@@ -116,6 +119,9 @@ struct SettingsView: View {
             } message: {
                 Text(languageManager.text("settings.onboarding.alert.message"))
             }
+            .navigationDestination(isPresented: $showTikTokBlocker) {
+                TikTokBlockerSettingsView(store: store, onShowPaywall: onShowPaywall)
+            }
             .sheet(isPresented: $showAccount) { AccountView() }
             .sheet(isPresented: $showTerms) { TermsView().sophiaSheetChrome() }
             .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaSheetChrome() }
@@ -175,6 +181,62 @@ struct SettingsView: View {
                         .padding(.horizontal, 24)
                 }
             }
+        }
+    }
+
+    /// "Cultive-toi avant de scroller": TikTok stays shielded until a course and its
+    /// quiz are done. Premium only to switch on; anyone can switch it off.
+    private var tiktokBlockerSection: some View {
+        section(languageManager.text("tiktokBlocker.section")) {
+            groupedCard {
+                Button {
+                    hapticTrigger += 1
+                    showTikTokBlocker = true
+                } label: {
+                    HStack(spacing: 14) {
+                        iconBadge(name: "lock.fill")
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(languageManager.text("tiktokBlocker.settings.row.title"))
+                                .font(DS.sans(.body, .medium))
+                                .foregroundStyle(DS.ink)
+                            Text(languageManager.text("tiktokBlocker.settings.row.subtitle"))
+                                .font(DS.sans(.caption, .medium))
+                                .foregroundStyle(DS.inkSecondary)
+                        }
+                        Spacer()
+                        tiktokBlockerStatusPill
+                        Image(systemName: "chevron.forward")
+                            .font(.jakarta(size: 12, weight: .semibold))
+                            .foregroundStyle(DS.inkTertiary)
+                    }
+                    .padding(.horizontal, 14)
+                    .padding(.vertical, 12)
+                    .contentShape(Rectangle())
+                }
+                .buttonStyle(SoftPressButtonStyle())
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var tiktokBlockerStatusPill: some View {
+        let blocker = TikTokBlockerManager.shared
+        if !store.isPremium {
+            Text(languageManager.text("tiktokBlocker.premium.badge").uppercased())
+                .font(DS.sans(.caption2, .bold))
+                .tracking(0.6)
+                .foregroundStyle(.white)
+                .padding(.horizontal, 7)
+                .padding(.vertical, 3)
+                .background(DS.warm, in: Capsule())
+        } else if blocker.isEnabled {
+            Text(languageManager.text("tiktokBlocker.settings.row.on").uppercased())
+                .font(DS.sans(.caption2, .bold))
+                .tracking(0.6)
+                .foregroundStyle(DS.success)
+                .padding(.horizontal, 7)
+                .padding(.vertical, 3)
+                .background(DS.successTint, in: Capsule())
         }
     }
 
