@@ -14,6 +14,9 @@
 		A1B2C3D4E5F600000002SUPA /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = A1B2C3D4E5F600000001SUPA /* Supabase */; };
 		A1B2C3D4E5F600000002GSIN /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A1B2C3D4E5F600000001GSIN /* GoogleSignIn */; };
 		A1B2C3D4E5F600000002GSSW /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A1B2C3D4E5F600000001GSSW /* GoogleSignInSwift */; };
+		B10C00000000000000001A0D /* SophiaShieldConfiguration.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B10C00000000000000001A02 /* SophiaShieldConfiguration.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B10C00000000000000002A0D /* SophiaShieldAction.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B10C00000000000000002A02 /* SophiaShieldAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B10C00000000000000003A0D /* SophiaDeviceActivityMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B10C00000000000000003A02 /* SophiaDeviceActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,18 +34,119 @@
 			remoteGlobalIDString = 105FC5792E9EAD3100EA8BCF;
 			remoteInfo = SophiaUITests;
 		};
+		B10C00000000000000001A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 105FC5722E9EAD3100EA8BCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B10C00000000000000001A01;
+			remoteInfo = SophiaShieldConfiguration;
+		};
+		B10C00000000000000002A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 105FC5722E9EAD3100EA8BCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B10C00000000000000002A01;
+			remoteInfo = SophiaShieldAction;
+		};
+		B10C00000000000000003A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 105FC5722E9EAD3100EA8BCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B10C00000000000000003A01;
+			remoteInfo = SophiaDeviceActivityMonitor;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B10C0000000000000000E000 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B10C00000000000000001A0D /* SophiaShieldConfiguration.appex in Embed Foundation Extensions */,
+				B10C00000000000000002A0D /* SophiaShieldAction.appex in Embed Foundation Extensions */,
+				B10C00000000000000003A0D /* SophiaDeviceActivityMonitor.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		105FC57A2E9EAD3100EA8BCF /* Sophia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sophia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105FC5892E9EAD3200EA8BCF /* SophiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		105FC5932E9EAD3200EA8BCF /* SophiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10C00000000000000001A02 /* SophiaShieldConfiguration.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SophiaShieldConfiguration.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10C00000000000000002A02 /* SophiaShieldAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SophiaShieldAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10C00000000000000003A02 /* SophiaDeviceActivityMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SophiaDeviceActivityMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B10C00000000000000001A0A /* Exceptions for "SophiaShieldConfiguration" folder in "SophiaShieldConfiguration" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B10C00000000000000001A01 /* SophiaShieldConfiguration */;
+		};
+		B10C00000000000000002A0A /* Exceptions for "SophiaShieldAction" folder in "SophiaShieldAction" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B10C00000000000000002A01 /* SophiaShieldAction */;
+		};
+		B10C00000000000000003A0A /* Exceptions for "SophiaDeviceActivityMonitor" folder in "SophiaDeviceActivityMonitor" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B10C00000000000000003A01 /* SophiaDeviceActivityMonitor */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		105FC57C2E9EAD3100EA8BCF /* Sophia */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Sophia; sourceTree = "<group>"; };
 		105FC58C2E9EAD3200EA8BCF /* SophiaTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SophiaTests; sourceTree = "<group>"; };
 		105FC5962E9EAD3200EA8BCF /* SophiaUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SophiaUITests; sourceTree = "<group>"; };
+		B10C0000000000000000A000 /* SophiaBlockerShared */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SophiaBlockerShared; sourceTree = "<group>"; };
+		B10C00000000000000001A09 /* SophiaShieldConfiguration */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B10C00000000000000001A0A /* Exceptions for "SophiaShieldConfiguration" folder in "SophiaShieldConfiguration" target */,
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = SophiaShieldConfiguration;
+			sourceTree = "<group>";
+		};
+		B10C00000000000000002A09 /* SophiaShieldAction */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B10C00000000000000002A0A /* Exceptions for "SophiaShieldAction" folder in "SophiaShieldAction" target */,
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = SophiaShieldAction;
+			sourceTree = "<group>";
+		};
+		B10C00000000000000003A09 /* SophiaDeviceActivityMonitor */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B10C00000000000000003A0A /* Exceptions for "SophiaDeviceActivityMonitor" folder in "SophiaDeviceActivityMonitor" target */,
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = SophiaDeviceActivityMonitor;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +178,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B10C00000000000000001A04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10C00000000000000002A04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10C00000000000000003A04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,6 +208,10 @@
 				105FC57C2E9EAD3100EA8BCF /* Sophia */,
 				105FC58C2E9EAD3200EA8BCF /* SophiaTests */,
 				105FC5962E9EAD3200EA8BCF /* SophiaUITests */,
+				B10C0000000000000000A000 /* SophiaBlockerShared */,
+				B10C00000000000000001A09 /* SophiaShieldConfiguration */,
+				B10C00000000000000002A09 /* SophiaShieldAction */,
+				B10C00000000000000003A09 /* SophiaDeviceActivityMonitor */,
 				105FC57B2E9EAD3100EA8BCF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +222,9 @@
 				105FC57A2E9EAD3100EA8BCF /* Sophia.app */,
 				105FC5892E9EAD3200EA8BCF /* SophiaTests.xctest */,
 				105FC5932E9EAD3200EA8BCF /* SophiaUITests.xctest */,
+				B10C00000000000000001A02 /* SophiaShieldConfiguration.appex */,
+				B10C00000000000000002A02 /* SophiaShieldAction.appex */,
+				B10C00000000000000003A02 /* SophiaDeviceActivityMonitor.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,13 +239,18 @@
 				105FC5762E9EAD3100EA8BCF /* Sources */,
 				105FC5772E9EAD3100EA8BCF /* Frameworks */,
 				105FC5782E9EAD3100EA8BCF /* Resources */,
+				B10C0000000000000000E000 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B10C00000000000000001A0C /* PBXTargetDependency */,
+				B10C00000000000000002A0C /* PBXTargetDependency */,
+				B10C00000000000000003A0C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				105FC57C2E9EAD3100EA8BCF /* Sophia */,
+				B10C0000000000000000A000 /* SophiaBlockerShared */,
 			);
 			name = Sophia;
 			packageProductDependencies = (
@@ -175,6 +312,75 @@
 			productReference = 105FC5932E9EAD3200EA8BCF /* SophiaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B10C00000000000000001A01 /* SophiaShieldConfiguration */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B10C00000000000000001A08 /* Build configuration list for PBXNativeTarget "SophiaShieldConfiguration" */;
+			buildPhases = (
+				B10C00000000000000001A03 /* Sources */,
+				B10C00000000000000001A04 /* Frameworks */,
+				B10C00000000000000001A05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B10C00000000000000001A09 /* SophiaShieldConfiguration */,
+				B10C0000000000000000A000 /* SophiaBlockerShared */,
+			);
+			name = SophiaShieldConfiguration;
+			packageProductDependencies = (
+			);
+			productName = SophiaShieldConfiguration;
+			productReference = B10C00000000000000001A02 /* SophiaShieldConfiguration.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B10C00000000000000002A01 /* SophiaShieldAction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B10C00000000000000002A08 /* Build configuration list for PBXNativeTarget "SophiaShieldAction" */;
+			buildPhases = (
+				B10C00000000000000002A03 /* Sources */,
+				B10C00000000000000002A04 /* Frameworks */,
+				B10C00000000000000002A05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B10C00000000000000002A09 /* SophiaShieldAction */,
+				B10C0000000000000000A000 /* SophiaBlockerShared */,
+			);
+			name = SophiaShieldAction;
+			packageProductDependencies = (
+			);
+			productName = SophiaShieldAction;
+			productReference = B10C00000000000000002A02 /* SophiaShieldAction.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B10C00000000000000003A01 /* SophiaDeviceActivityMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B10C00000000000000003A08 /* Build configuration list for PBXNativeTarget "SophiaDeviceActivityMonitor" */;
+			buildPhases = (
+				B10C00000000000000003A03 /* Sources */,
+				B10C00000000000000003A04 /* Frameworks */,
+				B10C00000000000000003A05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B10C00000000000000003A09 /* SophiaDeviceActivityMonitor */,
+				B10C0000000000000000A000 /* SophiaBlockerShared */,
+			);
+			name = SophiaDeviceActivityMonitor;
+			packageProductDependencies = (
+			);
+			productName = SophiaDeviceActivityMonitor;
+			productReference = B10C00000000000000003A02 /* SophiaDeviceActivityMonitor.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,6 +406,15 @@
 					105FC5922E9EAD3200EA8BCF = {
 						CreatedOnToolsVersion = 26.0;
 						TestTargetID = 105FC5792E9EAD3100EA8BCF;
+					};
+					B10C00000000000000001A01 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					B10C00000000000000002A01 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					B10C00000000000000003A01 = {
+						CreatedOnToolsVersion = 26.0;
 					};
 				};
 			};
@@ -252,6 +467,9 @@
 				105FC5792E9EAD3100EA8BCF /* Sophia */,
 				105FC5882E9EAD3200EA8BCF /* SophiaTests */,
 				105FC5922E9EAD3200EA8BCF /* SophiaUITests */,
+				B10C00000000000000001A01 /* SophiaShieldConfiguration */,
+				B10C00000000000000002A01 /* SophiaShieldAction */,
+				B10C00000000000000003A01 /* SophiaDeviceActivityMonitor */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +490,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		105FC5912E9EAD3200EA8BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10C00000000000000001A05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10C00000000000000002A05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10C00000000000000003A05 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,6 +541,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B10C00000000000000001A03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10C00000000000000002A03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10C00000000000000003A03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -314,6 +574,21 @@
 			isa = PBXTargetDependency;
 			target = 105FC5792E9EAD3100EA8BCF /* Sophia */;
 			targetProxy = 105FC5942E9EAD3200EA8BCF /* PBXContainerItemProxy */;
+		};
+		B10C00000000000000001A0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B10C00000000000000001A01 /* SophiaShieldConfiguration */;
+			targetProxy = B10C00000000000000001A0B /* PBXContainerItemProxy */;
+		};
+		B10C00000000000000002A0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B10C00000000000000002A01 /* SophiaShieldAction */;
+			targetProxy = B10C00000000000000002A0B /* PBXContainerItemProxy */;
+		};
+		B10C00000000000000003A0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B10C00000000000000003A01 /* SophiaDeviceActivityMonitor */;
+			targetProxy = B10C00000000000000003A0B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -611,6 +886,174 @@
 			};
 			name = Release;
 		};
+		B10C00000000000000001A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SophiaShieldConfiguration/SophiaShieldConfiguration.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 69;
+				DEVELOPMENT_TEAM = K792T8TQ4X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SophiaShieldConfiguration/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sophia Shield";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.ShieldConfiguration;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B10C00000000000000001A07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SophiaShieldConfiguration/SophiaShieldConfiguration.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 69;
+				DEVELOPMENT_TEAM = K792T8TQ4X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SophiaShieldConfiguration/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sophia Shield";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.ShieldConfiguration;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B10C00000000000000002A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SophiaShieldAction/SophiaShieldAction.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 69;
+				DEVELOPMENT_TEAM = K792T8TQ4X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SophiaShieldAction/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sophia Shield Action";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.ShieldAction;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B10C00000000000000002A07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SophiaShieldAction/SophiaShieldAction.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 69;
+				DEVELOPMENT_TEAM = K792T8TQ4X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SophiaShieldAction/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sophia Shield Action";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.ShieldAction;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B10C00000000000000003A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SophiaDeviceActivityMonitor/SophiaDeviceActivityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 69;
+				DEVELOPMENT_TEAM = K792T8TQ4X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SophiaDeviceActivityMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sophia Activity Monitor";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.DeviceActivityMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B10C00000000000000003A07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SophiaDeviceActivityMonitor/SophiaDeviceActivityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 69;
+				DEVELOPMENT_TEAM = K792T8TQ4X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SophiaDeviceActivityMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sophia Activity Monitor";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.DeviceActivityMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -646,6 +1089,33 @@
 			buildConfigurations = (
 				105FC5A42E9EAD3200EA8BCF /* Debug */,
 				105FC5A52E9EAD3200EA8BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B10C00000000000000001A08 /* Build configuration list for PBXNativeTarget "SophiaShieldConfiguration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10C00000000000000001A06 /* Debug */,
+				B10C00000000000000001A07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B10C00000000000000002A08 /* Build configuration list for PBXNativeTarget "SophiaShieldAction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10C00000000000000002A06 /* Debug */,
+				B10C00000000000000002A07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B10C00000000000000003A08 /* Build configuration list for PBXNativeTarget "SophiaDeviceActivityMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10C00000000000000003A06 /* Debug */,
+				B10C00000000000000003A07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

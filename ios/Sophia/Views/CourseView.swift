@@ -401,6 +401,10 @@ struct CourseView: View {
         VStack(spacing: 0) {
             headerBar
 
+            if TikTokBlockerManager.shared.isLockSession(for: course.id) {
+                TikTokLockBanner()
+            }
+
             TabView(selection: $currentIndex) {
                 ForEach(Array(course.lessons.enumerated()), id: \.element.id) { index, lesson in
                     lessonContent(lesson: lesson, lessonIndex: index)

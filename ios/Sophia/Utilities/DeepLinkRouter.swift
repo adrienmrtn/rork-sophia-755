@@ -30,6 +30,13 @@ final class DeepLinkRouter {
         token += 1
     }
 
+    /// `sophia://unlock` (TikTok blocker). The request itself lives in the App Group
+    /// stamp; this only wakes the home screen so it reads the stamp now rather than on
+    /// its next foreground.
+    func requestUnlock() {
+        token += 1
+    }
+
     /// Takes the pending course, if there is one. Returns nil once it has been handled.
     func consume() -> String? {
         defer { pendingCourseId = nil }
