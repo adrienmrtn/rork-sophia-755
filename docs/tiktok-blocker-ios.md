@@ -96,7 +96,7 @@ Une fois l'entitlement accordé :
   retirer `Info.plist` de l'appartenance à la cible (File inspector) : le projet
   contient déjà l'exception, ce point est là au cas où.
 - Le `MARKETING_VERSION` des extensions doit rester identique à celui de l'app
-  (`1.1.6` aujourd'hui) : à bumper ensemble. Le `CURRENT_PROJECT_VERSION` est déjà
+  (`1.1.7` aujourd'hui) : à bumper ensemble. Le `CURRENT_PROJECT_VERSION` est déjà
   aligné sur toutes les cibles par `ci_scripts/ci_pre_xcodebuild.sh`.
 
 ### 4. Tester
