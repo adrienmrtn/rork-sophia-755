@@ -19,6 +19,9 @@ struct TikTokBlockerSettingsView: View {
     @Bindable private var blocker = TikTokBlockerManager.shared
     @State private var showPicker = false
     @State private var notificationsAllowed = true
+    /// iOS has never been asked: the prompt can still be shown from here. Once refused,
+    /// only Settings can turn it back on.
+    @State private var notificationsUndetermined = false
     @State private var hapticTrigger = 0
     @State private var toggleOn = TikTokBlockerManager.shared.isEnabled
 
@@ -229,6 +232,12 @@ struct TikTokBlockerSettingsView: View {
                     return
                 }
             }
+            // The shield's "Open Sophia" button reaches the user through a notification:
+            // ask now, while the switch is in hand, rather than warn afterwards.
+            if await NotificationPermission.status() == .notDetermined {
+                await NotificationPermission.request()
+                await refreshNotificationStatus()
+            }
             if blocker.hasSelection {
                 blocker.setEnabled(true)
             } else {
@@ -408,8 +417,17 @@ struct TikTokBlockerSettingsView: View {
             icon: "bell.badge",
             title: languageManager.text("tiktokBlocker.notifications.title"),
             message: languageManager.text("tiktokBlocker.notifications.subtitle"),
-            buttonTitle: languageManager.text("tiktokBlocker.notifications.open"),
-            action: openSystemSettings
+            buttonTitle: languageManager.text(notificationsUndetermined ? "tiktokBlocker.notifications.enable" : "tiktokBlocker.notifications.open"),
+            action: {
+                if notificationsUndetermined {
+                    Task {
+                        await NotificationPermission.request()
+                        await refreshNotificationStatus()
+                    }
+                } else {
+                    openSystemSettings()
+                }
+            }
         )
     }
 
@@ -446,6 +464,7 @@ struct TikTokBlockerSettingsView: View {
     private func refreshNotificationStatus() async {
         let status = await NotificationPermission.status()
         notificationsAllowed = status == .authorized || status == .provisional || status == .ephemeral
+        notificationsUndetermined = status == .notDetermined
     }
 
     // MARK: - How it works
