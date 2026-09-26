@@ -46,6 +46,7 @@ struct TikTokBlockerSettingsView: View {
                         appSection
                         durationSection
                         statusSection
+                        automationSection
                     }
 
                     if blocker.authorization == .denied {
@@ -398,6 +399,64 @@ struct TikTokBlockerSettingsView: View {
             .padding(.horizontal, 14)
             .padding(.vertical, 14)
         }
+    }
+
+    // MARK: - Direct open (Shortcuts automation)
+
+    /// The shield cannot launch Sophia, a Shortcuts automation can. Apple lets nobody
+    /// create one on the user's behalf, so this is a guide: the steps, and a button that
+    /// opens the Shortcuts app.
+    private var automationSection: some View {
+        section(languageManager.text("tiktokBlocker.automation.title")) {
+            card {
+                VStack(alignment: .leading, spacing: 0) {
+                    HStack(alignment: .top, spacing: 14) {
+                        iconBadge("bolt.fill", tint: DS.warm, bg: DS.warm.opacity(0.15))
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(languageManager.text("tiktokBlocker.automation.headline"))
+                                .font(DS.title(.subheadline, .semibold))
+                                .foregroundStyle(DS.ink)
+                            Text(languageManager.text("tiktokBlocker.automation.body"))
+                                .font(DS.sans(.caption, .medium))
+                                .foregroundStyle(DS.inkSecondary)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                    }
+                    .padding(.horizontal, 14)
+                    .padding(.vertical, 14)
+
+                    divider
+
+                    ForEach(1...6, id: \.self) { n in
+                        step(n, languageManager.text("tiktokBlocker.automation.step\(n)"))
+                        if n < 6 { divider }
+                    }
+
+                    Button {
+                        hapticTrigger += 1
+                        openShortcuts()
+                    } label: {
+                        HStack(spacing: 8) {
+                            Image(systemName: "arrow.up.forward.app.fill")
+                                .font(.jakarta(size: 14, weight: .semibold))
+                            Text(languageManager.text("tiktokBlocker.automation.open"))
+                                .font(DS.sans(.subheadline, .semibold))
+                        }
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 13)
+                        .background(DS.accent, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
+                    }
+                    .buttonStyle(SoftPressButtonStyle())
+                    .padding(14)
+                }
+            }
+        }
+    }
+
+    private func openShortcuts() {
+        guard let url = URL(string: "shortcuts://") else { return }
+        UIApplication.shared.open(url)
     }
 
     // MARK: - Warnings

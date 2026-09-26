@@ -54,6 +54,8 @@
 		<string>fbshareextension</string>
 		<!-- Bouton « Retourner sur TikTok » du TikTok blocker (canOpenURL). -->
 		<string>tiktok</string>
+		<!-- Guide de l'automatisation Raccourcis du TikTok blocker. -->
+		<string>shortcuts</string>
 	</array>
 	<!-- Texte ATT affiché par iOS avant la demande de tracking publicitaire. -->
 	<key>NSUserTrackingUsageDescription</key>
