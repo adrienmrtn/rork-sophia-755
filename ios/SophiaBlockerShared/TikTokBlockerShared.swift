@@ -125,9 +125,20 @@ enum TikTokBlockerShared {
         }
     }
 
+    /// A tap on "Open Sophia" that the app has not consumed yet.
+    static var isRequestPending: Bool {
+        guard let at = pendingRequestAt else { return false }
+        return Date().timeIntervalSince(at) < pendingRequestLifetime
+    }
+
     /// Two-letter app language, mirrored from the app so the shield speaks the same one.
+    /// Before the app has written it once, the device language is the best guess.
     static var language: String {
-        get { defaults.string(forKey: Keys.language) ?? "en" }
+        get {
+            if let stored = defaults.string(forKey: Keys.language) { return stored }
+            let device = Locale.preferredLanguages.first ?? "en"
+            return String(device.prefix(2)).lowercased()
+        }
         set { defaults.set(newValue, forKey: Keys.language) }
     }
 
@@ -182,6 +193,8 @@ enum TikTokBlockerShared {
     struct ShieldCopy {
         let title: String
         let subtitle: String
+        /// Shown instead of [subtitle] while a tap on the primary button is pending.
+        let pendingSubtitle: String
         let primaryButton: String
         let secondaryButton: String
         let notificationTitle: String
@@ -194,6 +207,7 @@ enum TikTokBlockerShared {
             return ShieldCopy(
                 title: "Cultive-toi avant de scroller",
                 subtitle: "Un cours Sophia de 3 minutes et son quiz débloquent TikTok pendant \(unlockMinutes) min.",
+                pendingSubtitle: "C\u{2019}est noté ! Ouvre Sophia maintenant : ton cours t\u{2019}attend.",
                 primaryButton: "Ouvrir Sophia",
                 secondaryButton: "Fermer",
                 notificationTitle: "Un cours, puis tu scrolles",
@@ -203,6 +217,7 @@ enum TikTokBlockerShared {
             return ShieldCopy(
                 title: "Cultívate antes de scrollear",
                 subtitle: "Un curso de Sophia de 3 minutos y su quiz desbloquean TikTok durante \(unlockMinutes) min.",
+                pendingSubtitle: "¡Anotado! Abre Sophia ahora: tu curso te espera.",
                 primaryButton: "Abrir Sophia",
                 secondaryButton: "Cerrar",
                 notificationTitle: "Un curso y luego a scrollear",
@@ -212,6 +227,7 @@ enum TikTokBlockerShared {
             return ShieldCopy(
                 title: "Erst lernen, dann scrollen",
                 subtitle: "Ein 3-Minuten-Kurs von Sophia und sein Quiz schalten TikTok für \(unlockMinutes) Min. frei.",
+                pendingSubtitle: "Notiert! Öffne jetzt Sophia: dein Kurs wartet.",
                 primaryButton: "Sophia öffnen",
                 secondaryButton: "Schließen",
                 notificationTitle: "Ein Kurs, dann darfst du scrollen",
@@ -221,6 +237,7 @@ enum TikTokBlockerShared {
             return ShieldCopy(
                 title: "Coltivati prima di scrollare",
                 subtitle: "Un corso Sophia di 3 minuti e il suo quiz sbloccano TikTok per \(unlockMinutes) min.",
+                pendingSubtitle: "Segnato! Apri Sophia adesso: il tuo corso ti aspetta.",
                 primaryButton: "Apri Sophia",
                 secondaryButton: "Chiudi",
                 notificationTitle: "Un corso, poi scrolli",
@@ -230,6 +247,7 @@ enum TikTokBlockerShared {
             return ShieldCopy(
                 title: "Cultiva-te antes de fazer scroll",
                 subtitle: "Um curso Sophia de 3 minutos e o seu quiz desbloqueiam o TikTok durante \(unlockMinutes) min.",
+                pendingSubtitle: "Anotado! Abre a Sophia agora: o teu curso está à espera.",
                 primaryButton: "Abrir Sophia",
                 secondaryButton: "Fechar",
                 notificationTitle: "Um curso, depois fazes scroll",
@@ -239,6 +257,7 @@ enum TikTokBlockerShared {
             return ShieldCopy(
                 title: "Learn something before you scroll",
                 subtitle: "A 3-minute Sophia course and its quiz unlock TikTok for \(unlockMinutes) min.",
+                pendingSubtitle: "Got it! Open Sophia now: your course is waiting.",
                 primaryButton: "Open Sophia",
                 secondaryButton: "Close",
                 notificationTitle: "One course, then you scroll",
