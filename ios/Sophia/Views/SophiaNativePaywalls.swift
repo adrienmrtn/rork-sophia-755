@@ -59,51 +59,22 @@ private enum PaywallCountdown {
     }
 }
 
-// MARK: - Yearly price line (quizz + debloquer_cours)
+// MARK: - Price footnote (quizz + debloquer_cours)
 
-/// The price above the CTA of the quiz and course-unlock paywalls.
-///
-/// It used to be a footnote in the lightest grey, right above a button that said
-/// « Débloquer gratuitement »: the amount the store will actually charge was the hardest
-/// thing on the screen to read. The sentence is still the translated one, in every language;
-/// it is only split on its single `%@`, so that the yearly price gets a line of its own,
-/// large and in full ink — "Essai gratuit de 3 jours, puis" above, "39,99 € / an" below.
-/// Without a trial the sentence starts with the price, so nothing goes above it.
-private struct PaywallYearlyPriceLine: View {
-    /// A translated format carrying the yearly price as its only `%@`.
-    let format: String
-    let price: String
+/// The price above the CTA of the quiz and course-unlock paywalls: one small grey line,
+/// "Essai gratuit de 3 jours, puis 39,99 € / an". The button underneath says what today
+/// costs; this says what the store charges once the trial is over.
+private struct PaywallPriceFootnote: View {
+    let text: String
 
     var body: some View {
-        VStack(spacing: 2) {
-            let parts = format.components(separatedBy: "%@")
-            if parts.count == 2 {
-                let lead = parts[0].trimmingCharacters(in: .whitespaces)
-                if !lead.isEmpty {
-                    Text(lead)
-                        .font(DS.sans(.subheadline, .medium))
-                        .foregroundStyle(DS.inkSecondary)
-                }
-                Text(price)
-                    .font(DS.title(.title2, .heavy))
-                    .foregroundColor(DS.ink)
-                    + Text(parts[1])
-                    .font(DS.sans(.subheadline, .semibold))
-                    .foregroundColor(DS.ink)
-            } else {
-                // A translation that lost its placeholder, or gained a second one, still
-                // shows its whole sentence, just without the split.
-                Text(format.replacingOccurrences(of: "%@", with: price))
-                    .font(DS.sans(.headline, .semibold))
-                    .foregroundStyle(DS.ink)
-            }
-        }
-        .multilineTextAlignment(.center)
-        .fixedSize(horizontal: false, vertical: true)
-        .frame(maxWidth: .infinity)
-        .padding(.horizontal, 24)
-        // One sentence split over two lines for the eye; VoiceOver reads it as one.
-        .accessibilityElement(children: .combine)
+        Text(text)
+            .font(DS.sans(.footnote, .medium))
+            .foregroundStyle(DS.inkTertiary)
+            .multilineTextAlignment(.center)
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal, 24)
     }
 }
 
@@ -916,7 +887,7 @@ struct SophiaQuizPaywall: View {
 
     private var bottomBar: some View {
         VStack(spacing: 10) {
-            PaywallYearlyPriceLine(format: priceFormat, price: prices.yearlyPrice)
+            PaywallPriceFootnote(text: priceLine)
 
             Button(action: purchase) {
                 HStack(spacing: 8) {
@@ -925,7 +896,7 @@ struct SophiaQuizPaywall: View {
                     } else {
                         Image(systemName: "sparkles")
                             .font(.jakarta(size: 15, weight: .bold))
-                        Text(languageManager.text(hasTrial ? "paywall.cta.activateTrial" : "paywall.cta.subscribe"))
+                        Text(ctaTitle)
                     }
                 }
             }
@@ -938,8 +909,19 @@ struct SophiaQuizPaywall: View {
         }
     }
 
-    private var priceFormat: String {
-        languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial")
+    private var priceLine: String {
+        String(
+            format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
+            prices.yearlyPrice
+        )
+    }
+
+    /// « Continuer pour 0,00 € » while the trial is served: what today costs, in the
+    /// store's currency. Without a trial the button says what it does.
+    private var ctaTitle: String {
+        hasTrial
+            ? String(format: languageManager.text("paywall.cta.continueFor"), store.zeroPriceString(language: languageManager.current))
+            : languageManager.text("paywall.cta.subscribe")
     }
 
     private var closeButton: some View {
@@ -1624,7 +1606,7 @@ struct SophiaCourseUnlockPaywall: View {
 
     private var bottomBar: some View {
         VStack(spacing: 10) {
-            PaywallYearlyPriceLine(format: priceFormat, price: prices.yearlyPrice)
+            PaywallPriceFootnote(text: priceLine)
 
             Button(action: purchase) {
                 HStack(spacing: 8) {
@@ -1633,9 +1615,7 @@ struct SophiaCourseUnlockPaywall: View {
                     } else {
                         Image(systemName: hasTrial ? "lock.open.fill" : "sparkles")
                             .font(.jakarta(size: 15, weight: .bold))
-                        // Not « Débloquer gratuitement », which reads as free for good: the
-                        // quiz paywall's wording, which says it is the trial that is free.
-                        Text(languageManager.text(hasTrial ? "paywall.cta.activateTrial" : "paywall.cta.subscribe"))
+                        Text(ctaTitle)
                     }
                 }
             }
@@ -1648,8 +1628,19 @@ struct SophiaCourseUnlockPaywall: View {
         }
     }
 
-    private var priceFormat: String {
-        languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial")
+    private var priceLine: String {
+        String(
+            format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
+            prices.yearlyPrice
+        )
+    }
+
+    /// « Continuer pour 0,00 € » while the trial is served: what today costs, in the
+    /// store's currency. Without a trial the button says what it does.
+    private var ctaTitle: String {
+        hasTrial
+            ? String(format: languageManager.text("paywall.cta.continueFor"), store.zeroPriceString(language: languageManager.current))
+            : languageManager.text("paywall.cta.subscribe")
     }
 
     private var closeButton: some View {
@@ -1872,29 +1863,33 @@ struct SophiaDiscountPaywall: View {
 
     // MARK: Price block
 
-    /// Prix annuels, comme partout ailleurs dans l'app : le grand chiffre est le montant
-    /// que la boutique prélèvera, donc l'App Store (3.1.2) est servi par le prix lui-même
-    /// plutôt que par une note sous lui, et le barré au-dessus se compare à lui dans la
-    /// même unité.
+    /// Prix mensuels, comme sur les paywalls de l'onboarding : l'offre se compare au plan
+    /// annuel normal dans la même unité. Le montant réellement prélevé une fois par an
+    /// reste juste en dessous, en petit (App Store 3.1.2).
     private var priceBlock: some View {
         VStack(spacing: 4) {
             HStack(alignment: .firstTextBaseline, spacing: 10) {
-                if let regular = prices.regularYearly {
+                if let regular = prices.regularPerMonth {
                     Text(regular)
                         .font(DS.sans(.title3, .semibold))
                         .foregroundStyle(.white.opacity(0.7))
                         .strikethrough()
                 }
-                Text(prices.promoYearly)
+                Text(prices.promoPerMonth)
                     .font(DS.title(.largeTitle, .heavy))
                     .foregroundStyle(.white)
             }
             .lineLimit(1)
             .minimumScaleFactor(0.7)
 
-            Text(languageManager.text("paywall.discount.perYear"))
+            Text(languageManager.text("paywall.discount.perMonth"))
                 .font(DS.sans(.footnote, .semibold))
                 .foregroundStyle(.white.opacity(0.85))
+                .multilineTextAlignment(.center)
+
+            Text(prices.billedYearlyNote)
+                .font(DS.sans(.caption, .medium))
+                .foregroundStyle(.white.opacity(0.75))
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }

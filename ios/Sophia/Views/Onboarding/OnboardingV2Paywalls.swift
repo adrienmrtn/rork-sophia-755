@@ -86,13 +86,16 @@ struct OnboardingV2PaywallAnnual: View {
 
     /// With a trial, the offer leads with the free days (in green). Without one, the price is
     /// the whole headline — promising a free trial that isn't served would be misleading.
+    ///
+    /// The headline carries the monthly equivalent ("3,33 € / mois"); the amount the store
+    /// actually charges sits right under it, small and grey ("facturé 39,99 € par an").
     private var headline: some View {
         let content: Text = {
             guard hasTrial else {
                 return Text(
                     String(
-                        format: languageManager.text("onboardingV2.pw.priceNoTrial"),
-                        prices.yearlyPrice
+                        format: Self.withoutParenthetical(languageManager.text("onboardingV2.pw.priceNoTrial")),
+                        prices.yearlyPerMonth
                     )
                 )
                 .font(DS.title(.title2, .heavy))
@@ -100,13 +103,25 @@ struct OnboardingV2PaywallAnnual: View {
             }
             let green = languageManager.text("onboardingV2.pw.tryFree")
             let rest = String(
-                format: languageManager.text("onboardingV2.pw.thenPrice"),
-                prices.yearlyPrice
+                format: Self.withoutParenthetical(languageManager.text("onboardingV2.pw.thenPrice")),
+                prices.yearlyPerMonth
             )
             return Text(green + " ").font(DS.title(.title2, .heavy)).foregroundColor(OV2.success)
                 + Text(rest).font(DS.title(.title2, .heavy)).foregroundColor(OV2.ink)
         }()
-        return content.multilineTextAlignment(.center)
+        return VStack(spacing: 6) {
+            content.multilineTextAlignment(.center)
+            Text(prices.yearlyBilledNote)
+                .font(DS.sans(.footnote, .medium))
+                .foregroundStyle(OV2.inkSecondary)
+                .multilineTextAlignment(.center)
+        }
+    }
+
+    /// "puis %@ (facturé annuellement)." → "puis %@." — the billing period moves to the
+    /// grey note under the headline, in every language, so it is not said twice.
+    private static func withoutParenthetical(_ text: String) -> String {
+        text.replacingOccurrences(of: #"\s*\([^)]*\)"#, with: "", options: .regularExpression)
     }
 
     private var closeButton: some View {
@@ -291,11 +306,10 @@ struct OnboardingV2PaywallComparison: View {
                     Text(isYearly ? languageManager.text("onboardingV2.pw.yearly") : languageManager.text("onboardingV2.pw.monthly"))
                         .font(DS.sans(.body, .bold))
                         .foregroundStyle(OV2.ink)
-                    // Chaque ligne porte le montant que la boutique prélève pour ce plan,
-                    // et la période en toutes lettres sous le nom : « facturé chaque année »
-                    // face à « facturé chaque mois ». C'est la période, pas une conversion
-                    // au mois, qui dit au lecteur ce que les deux chiffres comparent.
-                    Text(languageManager.text(isYearly ? "onboardingV2.pw.yearlyBilling" : "onboardingV2.pw.monthlyBilling"))
+                    // Le prix affiché en gros est mensuel des deux côtés, pour comparer les
+                    // deux plans dans la même unité. Le montant réellement prélevé reste
+                    // sous le nom du plan, en petit : « facturé 39,99 € par an ».
+                    Text(isYearly ? prices.yearlyBilledNote : languageManager.text("onboardingV2.pw.monthlyBilling"))
                         .font(DS.sans(.caption, .medium))
                         .foregroundStyle(OV2.inkSecondary)
                         .lineLimit(2)
@@ -304,7 +318,7 @@ struct OnboardingV2PaywallComparison: View {
                 }
                 Spacer()
                 VStack(alignment: .trailing, spacing: 3) {
-                    Text(isYearly ? prices.yearlyPrice : prices.monthlyPrice)
+                    Text(isYearly ? prices.yearlyPerMonth : prices.monthlyPrice)
                         .font(DS.sans(.body, .bold))
                         .foregroundStyle(OV2.ink)
                         .lineLimit(1)
