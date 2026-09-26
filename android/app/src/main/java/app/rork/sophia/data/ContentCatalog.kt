@@ -17,6 +17,18 @@ object ContentCatalog {
         isLenient = true
     }
 
+    /**
+     * Courses withheld from a language. Absent from the catalogue as if never bundled:
+     * no feed card, no library row, no collection slot, no lookup by id. Switching
+     * language brings them back.
+     */
+    private val withheldCourseIds: Map<AppLanguage, Set<String>> = mapOf(
+        AppLanguage.TURKISH to setOf("course_25_le_genocide_armenien_1915_1916"),
+    )
+
+    fun isWithheld(language: AppLanguage, courseId: String): Boolean =
+        withheldCourseIds[language]?.contains(courseId) == true
+
     private val summaryCache = ConcurrentHashMap<String, List<CourseSummary>>()
     private val summaryById = ConcurrentHashMap<String, Map<String, CourseSummary>>()
     private val collectionCache = ConcurrentHashMap<String, List<LearningCollection>>()
@@ -50,6 +62,7 @@ object ContentCatalog {
             return cached
         }
         val loaded = readSummaries(context, language)
+            .filterNot { isWithheld(language, it.id) }
         summaryCache[language.code] = loaded
         summaryById[language.code] = loaded.associateBy { it.id }
         return loaded
@@ -91,6 +104,10 @@ object ContentCatalog {
     fun collections(context: Context, language: AppLanguage): List<LearningCollection> {
         return collectionCache.getOrPut(language.code) {
             val loaded = loadList<LearningCollection>(context, "locales/collections.${language.code}.json")
+                .map { collection ->
+                    val kept = collection.courseIds.filterNot { isWithheld(language, it) }
+                    if (kept.size == collection.courseIds.size) collection else collection.copy(courseIds = kept)
+                }
             if (language == AppLanguage.FRENCH || loaded.all { it.coverAssetName.isNotBlank() }) {
                 loaded
             } else {
@@ -123,6 +140,7 @@ object ContentCatalog {
     }
 
     fun quizQuestions(context: Context, language: AppLanguage, id: String): List<QuizQuestion> {
+        if (isWithheld(language, id)) return emptyList()
         val key = "${language.code}:$id"
         quizCache[key]?.let { return it }
         val loaded = try {
@@ -143,6 +161,7 @@ object ContentCatalog {
     ): List<QuizQuestion> = withContext(Dispatchers.IO) { quizQuestions(context, language, id) }
 
     fun hasStructuredContent(context: Context, language: AppLanguage, courseId: String): Boolean {
+        if (isWithheld(language, courseId)) return false
         return try {
             context.assets.open("courses_v2/${language.code}/$courseId.json").close()
             true
