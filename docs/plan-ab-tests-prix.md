@@ -1,50 +1,60 @@
-# Plan d'A/B tests prix — Sophia
+# Plan d'A/B tests prix — Sophia (lancement simultané)
 
 Analyse faite le 26/09/2026 à partir des données RevenueCat (projet `proj3f496a80`, clé lecture
-seule), du code iOS/Android et d'une veille concurrentielle. **Rien n'a été modifié** : ni dans
-RevenueCat, ni dans App Store Connect / Play Console, ni dans le code. Ce document est le plan
-d'action à valider avant toute exécution.
+seule), du code iOS/Android et d'une veille concurrentielle. Version 2 : **tous les tests partent
+en parallèle**, en trois vagues rapprochées (J0, J+3, J+14), au lieu d'un programme séquentiel de
+13 semaines. **Rien n'a encore été modifié** : ni dans RevenueCat, ni dans App Store Connect /
+Play Console, ni dans le code.
 
 Sommaire : 0. Résumé · 1. Photographie chiffrée · 2. Leçons des 5 expériences passées ·
-3. Grille de prix actuelle par pays · 4. Concurrents · 5. Prérequis techniques ·
-6. Programme de tests · 7. Grille de prix par pays proposée · 8. Règles de décision ·
-9. Suivi · 10. Résultat attendu · Annexes.
+3. Grille de prix actuelle par pays · 4. Concurrents · 5. Architecture du lancement simultané ·
+6. Plan d'action jour par jour · 7. Matrice produits et offerings · 8. Version R1 (code) ·
+9. Lecture des résultats et décisions · 10. Grille de prix par pays · 11. Risques · Annexes.
 
 ---
 
 ## 0. Résumé
 
-- **Le contexte a changé en août.** Nouveaux utilisateurs ×5 (14 980 en juillet → 71 915 en août
-  → 77 904 du 1er au 26 septembre), abonnements actifs 1 153 → 5 150, MRR 4,5 k€ → 17,4 k€.
-  L'app est devenue internationale : la Türkiye est le 1er pays d'acquisition, la France n'est
-  plus que 4 % des nouveaux utilisateurs en septembre.
-- **L'annuel fait 95 % du revenu**, le mensuel 5 %. Le paywall de fin d'onboarding génère 84 %
-  des essais et 70 % du revenu. La question « quel prix annuel » pèse donc dix fois plus que
-  « mensuel ou hebdo ».
-- **Deux signaux d'alerte à surveiller pendant les tests** : le taux de remboursement est à
-  10,8 % en août (pire décile des apps Éducation sur l'App Store) et la conversion d'essai est
-  tombée de 44–48 % à 32 % avec l'arrivée des pays à faible pouvoir d'achat.
-- **La grille de prix actuelle est une simple conversion de change** : l'annuel iOS vaut entre 29 €
-  et 44 € partout (médiane 31 €), dont 36 € en Türkiye. Android est 20 % plus cher qu'iOS. Aucun
-  ajustement au pouvoir d'achat.
-- **Les 5 expériences passées n'ont rien prouvé** : arrêtées après 1 à 6 jours avec moins de
-  700 utilisateurs par variante. Avec ~3 000 nouveaux utilisateurs/jour, un test bien dimensionné
-  se lit désormais en 3 à 5 semaines.
-- **Programme proposé (≈ 13 semaines)** : une semaine de prérequis, puis
-  1. prix annuel 39,99 / 49,99 / 59,99 € sur les pays « Tier A » (Europe de l'Ouest, UK, CH,
-     Amérique du Nord) ;
-  2. en parallèle, sur une audience disjointe, test de prix Türkiye (1 999 vs 999 vs 499 TRY) ;
-  3. plan secondaire : mensuel 9,99 € avec essai (contrôle) vs mensuel sans essai vs hebdo 6,99 € ;
-  4. en parallèle, sur le placement discount : 19,99 vs 29,99 € ;
-  5. consolidation en une grille par pays et deuxième vague (Tier B, 44,99 €, durée d'essai).
-- **Ce que dit le marché** : 39,99 € est dans le bas de la fourchette Éducation (médiane 44,99 $,
-  Elevate 45,99 €, Headway/Blinkist 80 €), l'essai standard est 7 jours (un essai ≤ 4 jours
-  convertit 24 % contre 33 % à 5–9 jours), et Sophia est 2 à 10 fois plus chère que Duolingo,
-  Elevate ou Impulse en Türkiye.
-- **Prérequis bloquants** : passer les 4 contextes de paywall aux *Placements* RevenueCat (sinon
-  seuls les paywalls d'onboarding voient les expériences), créer les produits (et les rattacher
-  à l'entitlement `premium`, oubli constaté sur les produits de test existants), supporter un
-  package hebdo dans les apps.
+- **Le contexte** (détail § 1 à 4) : ×5 de nouveaux utilisateurs en août, ~3 100 nouveaux
+  clients par jour en septembre, annuel = 95 % du revenu, paywall de fin d'onboarding = 84 % des
+  essais, remboursements 10,8 %, conversion d'essai 32 %. 39,99 € est dans le bas de la fourchette
+  Éducation ; la grille par pays est une simple conversion de change ; la Türkiye (1er pays
+  d'acquisition) paie 2 à 10 fois plus cher que chez Duolingo, Elevate ou Impulse.
+- **La contrainte qui dicte l'architecture** : RevenueCat refuse deux expériences actives sur des
+  audiences qui se chevauchent, et plafonne à 4 variantes par expérience. On découpe donc le
+  trafic en **5 audiences pays disjointes**, on empile **deux variables par expérience** (plans
+  factoriels 2×2 à 4 bras), et le test discount passe **côté app** (tirage aléatoire), ce qui lui
+  donne 100 % du trafic sans entrer en conflit avec les expériences.
+- **Ce qui part aujourd'hui (J0), sans nouvelle version de l'app** : l'expérience A1 (annuel
+  39,99 vs 59,99 × mensuel avec vs sans essai) sur Italie, France, Benelux, Suisse, US, UK,
+  Canada, Nordiques. Les deux produits nécessaires (`Sophia_yearly_5999`, `Sophia_monthly_notrial`)
+  sont déjà approuvés par Apple ; il manque seulement leur rattachement à l'entitlement `premium`,
+  trois offerings, une audience et l'expérience.
+- **J+3, dès validation Apple des nouveaux produits** : B (Europe centrale : 29,99 / 39,99 /
+  49,99 €), TR (Türkiye : 1 999 / 999 / 499 TRY), C (LatAm, MENA, Asie, Afrique : 100 / 50 / 25 %
+  du prix). Toujours sans nouvelle version.
+- **J+14, version R1 déployée** : A2 (Espagne, Allemagne, Autriche, Portugal, Grèce : annuel
+  39,99 vs 49,99 × mensuel vs hebdo 6,99 €) et le test discount 19,99 vs 29,99 € sur tout le
+  monde. R1 apporte aussi la cohérence de prix entre paywalls (les paywalls quiz / cours lisent
+  l'offering servie par l'expérience) et l'alignement Android.
+- **Quand on saura** : garde-fous à J+21 ; premières décisions à J+30 (Türkiye et Tier C si
+  l'effet est grand, A1 provisoire) ; décisions finales à J+45 pour A1, B, TR, C ; A2 et discount
+  à J+45–60. Puis vague suivante à J+45 : essai 7 jours, affinage ± 5 €, plans courts par palier.
+
+Effet minimum détectable (baisse relative de conversion payante, puissance 80 %) :
+
+| Expérience | Départ | Exposés / j | MDE à J+30 | MDE à J+45 | MDE à J+60 | Seuil de neutralité de la variante |
+| --- | :---: | ---: | ---: | ---: | ---: | --- |
+| A1 · 59,99 × mensuel sans essai (2×2) | J0 | 608 | 24 % | 19 % | 17 % | 59,99 rentable si conv. ≥ 67 % du contrôle |
+| A2 · 49,99 × hebdo 6,99 (2×2) | J+14 | 572 | 33 % | 24 % | 20 % | 49,99 rentable si conv. ≥ 80 % |
+| B · 29,99 / 39,99 / 49,99 (3 bras) | J+3 | 511 | 34 % | 28 % | 24 % | 29,99 rentable si conv. ≥ 133 % ; 49,99 si ≥ 80 % |
+| TR · 1 999 / 999 / 499 TRY (3 bras) | J+3 | 416 | 48 % | 38 % | 33 % | 999 rentable si conv. ×2 ; 499 si ×4 |
+| C · 100 / 50 / 25 % (3 bras) | J+3 | 541 | 40 % | 32 % | 27 % | idem TR |
+| Discount 19,99 vs 29,99 (côté app, 2 bras) | J+14 | ≈ 556 vues | 48 % | 35 % | 28 % | 29,99 rentable si conv. ≥ 67 % |
+
+Lecture : à J+45, A1 tranche 59,99 € (il faut voir une baisse de 33 % pour que ce soit perdant, on
+détecte 19 %) ; TR et C tranchent leurs paliers si l'effet attendu (×2 à ×4) est là ; B et A2
+donnent une direction nette, une confirmation fine demande J+60.
 
 ---
 
@@ -275,7 +285,7 @@ fixent à la main.
 
 Ce que la veille change dans le plan : (1) 49,99 € est un test à faible risque et 59,99 € reste
 dans la fourchette du marché ; (2) l'essai de 3 jours sur l'annuel est probablement le levier
-n° 2 après le prix, il monte en tête de la vague 2 ; (3) l'hebdo se teste **comme ancre** avec
+n° 2 après le prix, il ouvre la vague suivante dès J+45 ; (3) l'hebdo se teste **comme ancre** avec
 l'annuel présélectionné, jamais comme plan principal ; (4) la Türkiye se teste avec des paliers
 plus bas que prévu (999 et 499 TRY) ; (5) Android à 47,99 € est à l'envers du marché, où le
 revenu par installation Play vaut environ la moitié d'iOS.
@@ -289,281 +299,327 @@ blog.funnelfox.com.
 
 ---
 
-## 5. Prérequis techniques (semaine 0)
+---
 
-Sans ces étapes, les tests ne mesurent pas ce qu'on croit.
+## 5. Architecture du lancement simultané
 
-### 5.1 Faire remonter les expériences jusqu'aux paywalls (code, iOS + Android)
+### 5.1 Les règles RevenueCat qui contraignent le design
 
-Une expérience RevenueCat fonctionne en remplaçant l'offering **courante** servie à l'utilisateur.
-Aujourd'hui :
+1. **Pas de chevauchement d'audiences** entre expériences actives : l'interface refuse de lancer
+   ou reprendre une expérience dont l'audience recoupe une expérience en cours. Un client n'est
+   enrôlé que dans une expérience. → Les audiences sont définies par **pays** (condition de
+   ciblage), et elles sont disjointes.
+2. **4 variantes maximum** par expérience. → Chaque expérience teste **deux variables à deux
+   niveaux** (plan factoriel 2×2 : chaque effet principal se lit sur 2 bras contre 2, ce qui
+   double la puissance par rapport à un test « une variable à la fois »), ou trois niveaux d'une
+   seule variable (paliers de prix).
+3. **Une expérience remplace l'offering courante** servie au client. Les paywalls d'onboarding
+   lisent `offerings.current` : aucune modification d'app n'est nécessaire pour les tests de
+   prix et de plan mensuel. L'hebdo, lui, demande du code (`$rc_weekly` inconnu des apps).
+4. **Enrôlement « nouveaux clients uniquement »**, à la première ouverture ; minimum 10 % de
+   l'audience, ici 100 %. Les clients existants ne voient jamais un prix différent du leur.
+5. **Le discount ne passe pas par une expérience RevenueCat** (il entrerait en conflit avec
+   toutes les audiences) : l'app tire un bucket au hasard à la première ouverture, le mémorise,
+   l'envoie à RevenueCat comme attribut client `discount_bucket`, et charge l'offering
+   `offre_discount` ou `offre_discount_2999` en conséquence. Lecture : graphiques *Revenue* et
+   *Trial/Paid conversion* segmentés par `offering_identifier` et par attribut client.
 
-- les paywalls d'onboarding (`OnboardingV2PaywallAnnual` / `Comparison`) lisent
-  `offerings.current` → **les expériences les atteignent** (84 % des essais) ;
-- les paywalls `quizz`, `debloquer_cours`, `offre_discount`, `entrainement` lisent
-  `offerings.offering(identifier:)` (iOS `SophiaPaywallView`, Android `PaywallContext.offeringId`)
-  → **aucune expérience ne les atteint**, y compris le test discount.
+### 5.2 Les cinq audiences (nouveaux clients / jour, septembre 2026)
 
-À faire : déclarer 4 Placements RevenueCat (`onboarding`, `quizz`, `debloquer_cours`,
-`offre_discount`), une règle de ciblage « Any audience » qui sert l'offering actuelle de chaque
-placement, et remplacer les appels par `offerings.currentOffering(forPlacement:)` (iOS) /
-`getCurrentOfferingForPlacement` (Android), avec repli sur l'identifiant historique si le
-placement ne renvoie rien (anciennes versions). Fichiers : `StoreViewModel.swift`,
-`SophiaPaywallView.swift`, `SophiaNativePaywalls.swift`, `PaywallScreen.kt`, `StoreViewModel.kt`.
+| Audience | Pays (codes storefront) | Nouveaux / j | Exposés au paywall / j | Ce qu'on y teste |
+| --- | --- | ---: | ---: | --- |
+| **A1** | IT, FR, NL, BE, CH, LU, US, GB, IE, CA, AU, NZ, SE, NO, DK, FI, IS | 715 | 608 | annuel 59,99 × mensuel sans essai |
+| **A2** | ES, DE, AT, PT, GR, CY, MT, JP, KR, IL, SG, HK, TW, AE, SA, QA, KW | 673 | 572 | annuel 49,99 × hebdo 6,99 |
+| **B** | PL, RO, HU, CZ, SK, HR, SI, BG, RS, BA, ME, MK, AL, MD, LT, LV, EE | 601 | 511 | palier 75 / 100 / 125 % |
+| **TR** | TR | 489 | 416 | palier 100 / 50 / 25 % |
+| **C** | MX, CO, AR, PE, BR, CL, EC, VE, BO, GT, DO, PY, CR, UY, HN, PA, SV, NI, et MENA (EG, MA, DZ, TN, JO, LB, IQ), Asie (IN, ID, PH, VN, TH, MY, PK, BD, KZ, AZ, UZ, GE, AM), Afrique (NG, ZA, KE, GH, SN, CI, CM), UA, RU, BY | 637 | 541 | palier 100 / 50 / 25 % |
 
-### 5.2 Supporter un package hebdomadaire
+Tout pays absent des listes tombe dans « aucune expérience » et garde l'offering courante ; on
+complète les listes au lancement à partir de la liste complète des pays RevenueCat.
 
-Les deux apps ne connaissent que `$rc_annual` et `$rc_monthly`. Le test hebdo demande :
-`$rc_weekly` dans `StoreViewModel` (iOS/Android), un libellé « par semaine » sur le paywall
-comparatif, le calcul du prix ramené à la semaine (`perMonthPrice` → généraliser), et des textes
-de repli qui ne disent plus « 9,99 € / mois » en dur (26 occurrences de prix codés en dur côté
-iOS, clés `paywall.plan.fallback.*` côté Android). La détection d'essai est déjà dynamique
-(`hasFreeTrial`) : rien à changer pour « avec / sans essai ».
+Le partage A1 / A2 mélange volontairement des pays à forte LTV (FR, DE) et à LTV moyenne (IT, ES)
+dans chaque moitié, pour que les deux expériences soient comparables. La Hongrie (2,37 € par
+nouveau client, meilleur pays d'Europe) et la Grèce (1,79 €) sont des anomalies de leur palier
+PPP : la Grèce est mise en A2, la Hongrie reste en B et son bras 49,99 dira si elle supporte un
+prix plein.
 
-### 5.3 Produits à créer (App Store Connect, Play Console, Test Store RevenueCat)
+### 5.3 Matrice des expériences
 
-Toujours de **nouveaux identifiants** (jamais de changement de prix sur `Sophia_yearly`, qui
-toucherait les abonnés existants). Tous rattachés à l'entitlement `premium`.
+| Expérience | Audience | Bras (annuel · plan court) | Produits iOS | Variables lues | Départ |
+| --- | --- | --- | --- | --- | :---: |
+| **A1** | A1 | ① 39,99 · mensuel 9,99 essai 3 j (contrôle = `fin_onboarding`) ② 59,99 · mensuel essai ③ 39,99 · mensuel **sans essai** ④ 59,99 · mensuel sans essai | `Sophia_yearly`, `Sophia_yearly_5999`, `Sophia_monthly`, `Sophia_monthly_notrial` | effet prix 59,99 = (②+④) vs (①+③) ; effet « sans essai » = (③+④) vs (①+②) ; interaction = ④ | **J0** |
+| **A2** | A2 | ① 39,99 · mensuel essai (contrôle) ② 49,99 · mensuel essai ③ 39,99 · **hebdo 6,99** sans essai ④ 49,99 · hebdo | `Sophia_yearly_4999`, `Sophia_weekly_699` | effet prix 49,99 ; effet hebdo ; combo 49,99 + hebdo | J+14 (R1) |
+| **B** | B | ① 39,99 (contrôle) ② **29,99** ③ **49,99** — mensuel 9,99 essai partout | `Sophia_yearly_2999`, `Sophia_yearly_4999` | élasticité Europe centrale | J+3 |
+| **TR** | TR | ① 1 999,99 TRY (contrôle) ② ≈ 999,99 TRY ③ ≈ 499,99 TRY — mensuel local partout | `Sophia_yearly_t50`, `Sophia_yearly_t25` | palier Türkiye | J+3 |
+| **C** | C | ① prix équilibré actuel (≈ 40 €) ② 50 % ③ 25 % | mêmes produits `_t50` / `_t25` (Apple équilibre 19,99 € et 9,99 € dans chaque devise) | palier pays émergents | J+3 |
+| **Discount** | tous | ① `offre_discount` 19,99 € ② `offre_discount_2999` 29,99 € — tirage côté app | `discount_yearly`, `discount_yearly_2999` | profondeur de remise | J+14 (R1) |
 
-| Usage | iOS (groupe « Sophia Premium ») | Android (`sophia_pro`, nouveau base plan / offre) | Essai | Prix FR |
+Métrique de décision partout : **LTV réalisée par client à 30 jours (proceeds)**, avec lecture
+provisoire à 14 jours. Diagnostics : conversion initiale, conversion d'essai, conversion payante,
+part annuel / plan court, remboursements par bras. Les paliers TR et C se lisent aussi en
+« revenu par client » en devise locale convertie, et en remboursements.
+
+### 5.4 Ce qui ne bouge pas pendant les tests
+
+- Les abonnés existants : aucun produit existant ne change de prix (sauf la baisse Android,
+  § 6, qui ne peut que leur être favorable).
+- Les paywalls `quizz`, `debloquer_cours` et `entrainement` : jusqu'à R1 ils continuent d'afficher
+  39,99 € via leur offering propre ; à partir de R1 ils affichent le prix de l'offering servie
+  par l'expérience (cohérence pour l'utilisateur, plus de fuite vers un prix plus bas).
+- Le paywall de rétention (offre promotionnelle Apple `retention_14_99`) : inchangé.
+
+---
+
+## 6. Plan d'action jour par jour
+
+### J0 — aujourd'hui
+
+**RevenueCat (≈ 1 h, dashboard ou MCP avec une clé `read_write`)**
+
+1. Entitlement `premium` → rattacher `Sophia_yearly_5999` (`prod2ad0152b81`) et
+   `Sophia_monthly_notrial` (`prodbc71e740f7`). Sans ça, un achat dans ces bras encaisse sans
+   débloquer Premium.
+2. Créer 3 offerings copiées de `fin_onboarding` (mêmes packages `$rc_annual` / `$rc_monthly`,
+   mêmes produits Test Store et Android) en changeant seulement le produit iOS visé :
+   `a1__5999_mtrial`, `a1__3999_mnotrial`, `a1__5999_mnotrial`. Métadonnées : `experiment=A1`,
+   `annual=5999|3999`, `monthly_trial=yes|no`.
+3. Tester chaque offering sur un vrai appareil via *Customer → Offering override* (un achat
+   sandbox par offering : prix affiché, essai affiché ou non, Premium débloqué).
+4. Créer l'audience A1 (condition pays = liste § 5.2).
+5. Créer l'expérience A1 : nouveaux clients, 100 %, 4 variantes, métrique primaire
+   « Realized LTV per customer », notes = hypothèses et seuils (§ 9). **Lancer.**
+6. Créer les audiences A2, B, TR, C (prêtes), et archiver les 19 offerings et ~20 paywalls
+   orphelins pour garder l'écran des expériences lisible.
+
+**App Store Connect (≈ 2 h)**
+
+7. Créer 7 abonnements dans le groupe « Sophia Premium » (§ 7.1), localisations copiées de
+   `Sophia_yearly`, prix de base FR, essai 3 j via offre d'introduction sauf mention contraire,
+   captures et notes de revue identiques aux produits existants. Soumettre pour revue
+   (sans binaire : 1 à 3 jours).
+8. Vérifier la grille générée pour `Sophia_yearly_t50` et `Sophia_yearly_t25` en Türkiye
+   (attendu ≈ 999,99 et 499,99 TRY) ; corriger le storefront TR à la main si Apple arrondit ailleurs.
+
+**Play Console (≈ 1 h)**
+
+9. Abonnement `sophia_pro` : créer les base plans `p1y-4999`, `p1y-5999`, `p1y-2999`, `p1y-t50`,
+   `p1y-t25`, `monthly-notrial`, `weekly-699`, `annual-promo-2999` (§ 7.1), essai 3 j en offre
+   sur les annuels. **Aligner** `p1y` 47,99 → 39,99 € et `annual-promo` 23,99 → 19,99 € (baisse :
+   sans impact négatif pour les abonnés existants). Aucune revue.
+10. Dans RevenueCat, importer les nouveaux produits Play et les rattacher à `premium`.
+
+**Développement (démarrage de R1, § 8)** — objectif : soumission J+7.
+
+### J+1 → J+3 — validation Apple, deuxième vague
+
+11. À chaque produit approuvé : rattacher à `premium`, l'ajouter au package correspondant.
+12. Créer les offerings B (`b__2999`, `b__4999`), TR (`tr__t50`, `tr__t25`), C (`c__t50`, `c__t25`),
+    test appareil par override, puis créer et **lancer B, TR, C**.
+13. Contrôles du jour 1 sur A1 (puis sur chacune) : dans *Results*, « Customers » et « Paywall
+    viewers » qui montent sur les 4 bras (viewers ≈ 85 % des customers ; si 0, le tracking
+    d'impressions des paywalls natifs est en cause et se corrige dans R1), premiers essais sur
+    chaque bras dans les 24 h, aucun ticket support « j'ai payé mais rien n'est débloqué ».
+
+### J+7 → J+14 — version R1
+
+14. Soumission R1 iOS + Android à J+7 ; mise en ligne J+9 ; déploiement 100 % ; suivi de
+    l'adoption dans RevenueCat (*App version*). À ≥ 80 % des nouveaux clients sur R1 : créer les
+    offerings A2 (`a2__4999_mtrial`, `a2__3999_weekly`, `a2__4999_weekly`) et **lancer A2**.
+15. Le test discount démarre de lui-même avec R1 (le tirage est dans l'app) ; créer avant J+9
+    l'offering `offre_discount_2999` et vérifier que l'attribut `discount_bucket` remonte.
+
+### J+21 — garde-fous
+
+16. Par bras : remboursements, tickets support, taux de « set to cancel » des essais. Arrêt
+    d'un bras seulement si remboursements > contrôle + 3 points ou conversion < 60 % du contrôle.
+    Pas de décision positive à cette date.
+
+### J+30 — premières décisions
+
+17. TR et C : si un palier bas double (ou plus) la conversion payante, l'effet dépasse largement
+    le MDE (48 % / 40 %) → décision. Sinon, on attend J+45.
+18. A1 : lecture provisoire (MDE 24 %) ; décision si 59,99 € est clairement perdant (conv. < 60 %
+    du contrôle) ou clairement neutre-gagnant sur la LTV 14 j.
+
+### J+45 — décisions finales et vague suivante
+
+19. A1, B, TR, C : décision sur la LTV 30 j (MDE 19 à 38 %). A2 et discount : provisoire (final J+60).
+20. Déploiement : l'offering gagnante devient l'offering courante (Tier A) ou est servie par une
+    règle de ciblage pays (B, TR, C) ; les offerings perdantes sont archivées ; les produits
+    perdants retirés de la vente ; grille § 10 mise à jour.
+21. Vague suivante, lancée le même jour sur les audiences libérées : essai 3 vs 7 jours sur
+    l'annuel gagnant (A1), affinage ± 5 € autour du gagnant (B ou A1), plan court par palier
+    (TR : hebdo local ?), mensuel sans essai généralisé si ③/④ l'emportent.
+
+---
+
+## 7. Matrice produits et offerings
+
+### 7.1 Produits à créer (tous rattachés à `premium`)
+
+| iOS (App Store Connect) | Play (base plan de `sophia_pro`) | Test Store | Prix de base FR | Essai | Sert à | État |
+| --- | --- | --- | ---: | :---: | --- | --- |
+| `Sophia_yearly_5999` | `p1y-5999` | `sophia_annual_5999` | 59,99 € | 3 j | A1 | **iOS approuvé** ; à rattacher |
+| `Sophia_monthly_notrial` | `monthly-notrial` | `sophia_monthly_notrial` | 9,99 € | aucun | A1 | **iOS approuvé** ; à rattacher |
+| `Sophia_yearly_4999` | `p1y-4999` | `sophia_annual_4999` | 49,99 € | 3 j | A2, B | à créer |
+| `Sophia_weekly_699` | `weekly-699` | `sophia_weekly_699` | 6,99 € / semaine | aucun | A2 | à créer |
+| `Sophia_yearly_2999` | `p1y-2999` | `sophia_annual_2999` | 29,99 € | 3 j | B | à créer |
+| `Sophia_yearly_t50` | `p1y-t50` | `sophia_annual_t50` | 19,99 € (≈ 999,99 TRY) | 3 j | TR, C | à créer |
+| `Sophia_yearly_t25` | `p1y-t25` | `sophia_annual_t25` | 9,99 € (≈ 499,99 TRY) | 3 j | TR, C | à créer |
+| `discount_yearly_2999` | `annual-promo-2999` | `discount_yearly_2999` | 29,99 € | aucun | Discount | à créer |
+| `Sophia_yearly_trial7` | `p1y-trial7` | — | prix gagnant A1/A2 | **7 j** | vague suivante | à créer à J+30 |
+
+Règles : jamais de changement de prix sur `Sophia_yearly`, `Sophia_monthly`, `discount_yearly`
+(abonnés existants) ; identifiants immuables ; un produit par point de prix ; localisations et
+captures copiées ; les paliers `_t50` / `_t25` utilisent l'équilibrage Apple et Google à partir
+de 19,99 € / 9,99 €, ce qui donne automatiquement ≈ 50 % / 25 % dans chaque devise (Türkiye,
+Mexique, Brésil, Inde…), avec vérification manuelle des 5 plus gros storefronts.
+
+### 7.2 Offerings par expérience
+
+| Offering | `$rc_annual` (iOS / Play / Test) | `$rc_monthly` ou `$rc_weekly` | Expérience · bras |
+| --- | --- | --- | --- |
+| `fin_onboarding` (existante, courante) | `Sophia_yearly` / `p1y` / `sophia_annual` | `$rc_monthly` : `Sophia_monthly` / `monthly` / `sophia_monthly` | contrôle de A1, A2, B, TR, C |
+| `a1__5999_mtrial` | `Sophia_yearly_5999` / `p1y-5999` | `$rc_monthly` : `Sophia_monthly` | A1 · ② |
+| `a1__3999_mnotrial` | `Sophia_yearly` / `p1y` | `$rc_monthly` : `Sophia_monthly_notrial` / `monthly-notrial` | A1 · ③ |
+| `a1__5999_mnotrial` | `Sophia_yearly_5999` | `$rc_monthly` : `Sophia_monthly_notrial` | A1 · ④ |
+| `a2__4999_mtrial` | `Sophia_yearly_4999` / `p1y-4999` | `$rc_monthly` : `Sophia_monthly` | A2 · ② |
+| `a2__3999_weekly` | `Sophia_yearly` | `$rc_weekly` : `Sophia_weekly_699` / `weekly-699` | A2 · ③ |
+| `a2__4999_weekly` | `Sophia_yearly_4999` | `$rc_weekly` : `Sophia_weekly_699` | A2 · ④ |
+| `b__2999` | `Sophia_yearly_2999` / `p1y-2999` | `$rc_monthly` : `Sophia_monthly` | B · ② |
+| `b__4999` | `Sophia_yearly_4999` | `$rc_monthly` : `Sophia_monthly` | B · ③ |
+| `tr__t50`, `c__t50` | `Sophia_yearly_t50` / `p1y-t50` | `$rc_monthly` : `Sophia_monthly` | TR · ②, C · ② |
+| `tr__t25`, `c__t25` | `Sophia_yearly_t25` / `p1y-t25` | `$rc_monthly` : `Sophia_monthly` | TR · ③, C · ③ |
+| `offre_discount` (existante) | `discount_yearly` / `annual-promo` | — | Discount · ① |
+| `offre_discount_2999` | `discount_yearly_2999` / `annual-promo-2999` | — | Discount · ② |
+
+Le mensuel des paliers TR / C reste `Sophia_monthly` (≈ 499,99 TRY / mois) : volontairement, pour
+que l'annuel à 999 ou 499 TRY paraisse imbattable. Un mensuel de palier sera testé en vague suivante.
+
+### 7.3 Réglages de chaque expérience
+
+Type « Custom » (2×2) ou « Price point » (paliers) ; enrôlement **nouveaux clients uniquement** ;
+**100 %** de l'audience ; audience = règle pays ; variantes nommées comme les offerings ; métrique
+primaire *Realized LTV per customer* ; secondaires *initial conversion*, *trial conversion*,
+*conversion to paying*, *refunds* ; notes = hypothèse, seuil de neutralité, date de lecture.
+
+---
+
+## 8. Version R1 (iOS + Android) — soumission J+7
+
+| # | Changement | iOS | Android | Pourquoi |
 | --- | --- | --- | --- | --- |
-| Annuel 49,99 | `Sophia_yearly_4999` | base plan `p1y-4999` | 3 j | 49,99 € |
-| Annuel 59,99 | `Sophia_yearly_5999` (existe, à rattacher à `premium`) | `p1y-5999` | 3 j | 59,99 € |
-| Mensuel sans essai | `Sophia_monthly_notrial` (existe, à rattacher) | `monthly-notrial` | aucun | 9,99 € |
-| Hebdo | `Sophia_weekly_699` | `weekly-699` | aucun | 6,99 € |
-| Discount 29,99 | `discount_yearly_2999` | `annual-promo-2999` | aucun | 29,99 € |
-| Türkiye palier 2 | `Sophia_yearly_tr2` (prix personnalisé TR uniquement) | `p1y-tr2` | 3 j | 999,99 TRY |
-| Türkiye palier 3 | `Sophia_yearly_tr3` | `p1y-tr3` | 3 j | 499,99 TRY |
+| 1 | Paywalls `quizz`, `debloquer_cours`, `entrainement` : prendre `$rc_annual` / `$rc_monthly` dans `offerings.current` (offering servie par l'expérience), repli sur l'offering du contexte ; garder l'attribution d'impression au contexte | `StoreViewModel.annualPackage(forOfferingIdentifier:)`, `SophiaNativePaywalls.swift` | `StoreViewModel.kt`, `PaywallScreen.kt` | Prix cohérent pour l'utilisateur ; plus de fuite vers 39,99 € pour les bras 49,99 / 59,99 |
+| 2 | Package hebdo : `weeklyPackage` (`$rc_weekly`), paywall comparatif « Annuel vs Hebdo » quand le mensuel est absent, prix ramené à la semaine, CTA sans mention d'essai | `StoreViewModel.swift`, `OnboardingV2Paywalls.swift`, `SophiaNativePaywalls.swift` | `StoreViewModel.kt`, `PaywallScreen.kt` | A2 |
+| 3 | Test discount côté app : bucket `A`/`B` tiré à la première ouverture (UserDefaults / DataStore), attribut RevenueCat `discount_bucket`, offering `offre_discount` ou `offre_discount_2999`, impression trackée avec la bonne offering | `DiscountOfferManager.swift`, `StoreViewModel.promoPackage` | `DiscountOfferManager.kt` (équivalent) | Discount sur 100 % du trafic sans conflit d'audience |
+| 4 | Durée d'essai dynamique : lire `introductoryDiscount.subscriptionPeriod` et l'injecter dans les 21 textes « 3 jours » (clé paramétrée `{days}`), rappel J-1 calé sur la vraie durée | `AppLocalizable.swift`, `OnboardingV2TrialSteps.swift`, `SophiaNativePaywalls.swift` | `OnboardingV2Screen.kt`, `TrialReminderScheduler.kt` | Prêt pour l'essai 7 jours (vague suivante) sans nouvelle version |
+| 5 | Textes de repli sans prix codé en dur (26 occurrences iOS, clés `paywall.plan.fallback.*` Android) : afficher « — » ou masquer le prix tant que StoreKit / Billing n'a pas répondu | `AppLocalizable.swift`, `StoreViewModel.swift` | `strings/*.json` | Un bras à 59,99 € ne doit jamais afficher « 39,99 € » en secours |
+| 6 | Vérifier que `trackCustomPaywallImpression` est appelé une fois par présentation avec l'offering réellement servie | `SophiaNativePaywalls.swift` | `PaywallScreen.kt` | « Paywall viewers » des expériences |
 
-Les achats intégrés se soumettent à la revue Apple sans nouveau binaire (compter 1 à 3 jours).
-Côté Play, aucune revue. Créer aussi les équivalents Test Store pour les builds de debug.
-
-### 5.4 Offerings et expériences RevenueCat
-
-- Une offering par variante, nommée `<placement>__<variable>_<valeur>` : `onboarding__annual_4999`,
-  `onboarding__annual_5999`, `onboarding__secondary_monthly_notrial`, `onboarding__secondary_weekly_699`,
-  `discount__2999`, `onboarding__tr_999`, `onboarding__tr_599`. Métadonnées : `experiment`,
-  `variant`, `hypothesis` (comme sur les offerings de juillet).
-- Expériences : enrôlement **nouveaux clients uniquement**, 100 % de l'audience ciblée, 2 à 4
-  variantes, type « Price point » ou « Free trial ». Audiences par pays (Targeting → condition
-  pays) pour faire tourner deux tests en parallèle sans recouvrement.
-- Vérifier au jour 1 que « Paywall viewers » se remplit : les paywalls natifs déclarent leurs
-  impressions via `trackCustomPaywallImpression` ; depuis leur mise en ligne début août, le
-  graphique *Paywall Conversion* ne compte plus que les templates RevenueCat (159 vues en août
-  contre 23 876 en juillet). Si les viewers restent à zéro, corriger le tracking avant de continuer.
-- Archiver les 19 offerings et ~20 paywalls orphelins (voir `PLAN.md`) pour que le dashboard
-  des expériences reste lisible.
-
-### 5.5 Garde-fou remboursements
-
-Le taux de remboursement (10,8 %) sera lu **par variante** dans les résultats d'expérience
-(« Refunded customers »). Avant de lancer, activer la notification J-1 de fin d'essai pour 100 %
-des essais (déjà présente côté app : `trialExpiresInOneDay`) et vérifier le texte du CTA
-« Continuer pour 0,00 € » : un prix plus élevé rend chaque oubli plus coûteux et plus contesté.
+Estimation : 3 jours iOS, 2 jours Android, 1 jour de QA (achats sandbox sur chaque offering
+listée en § 7.2, y compris Test Store). Pas de Placements RevenueCat dans R1 : ils ne sont pas
+nécessaires avec le point 1 et ajouteraient un risque d'interaction avec les expériences déjà
+lancées. À reconsidérer après la vague 1.
 
 ---
 
-## 6. Programme de tests
+## 9. Lecture des résultats et décisions
 
-Tailles d'échantillon calculées sur la conversion payante (α = 5 %, puissance 80 %), exposition
-≈ 85 % des nouveaux clients au paywall d'onboarding, volumes de septembre.
+### 9.1 Lire un plan 2×2 dans RevenueCat
 
-| Baseline conv. payante | Détecter −15 % | −20 % | −25 % | −33 % | −50 % |
-| ---: | ---: | ---: | ---: | ---: | ---: |
-| 3,0 % (Tier A) | 20 915 / bras | 11 456 | 7 133 | 3 912 | 1 534 |
-| 1,8 % (Türkiye) | 35 256 | 19 305 | 12 017 | 6 586 | 2 581 |
-| 1,5 % (discount) | 49 046 | 26 852 | 16 713 | 9 158 | 3 587 |
+RevenueCat compare chaque variante au contrôle. Pour A1 et A2, on lit aussi les **effets
+principaux** en regroupant les bras (je les calcule chaque semaine via le MCP) :
 
-Volumes exposés par jour : Tier A (FR ES DE IT NL) ≈ 980, Tier B (PL RO HU) ≈ 440, Tier C
-(TR MX CO BR) ≈ 640 dont Türkiye ≈ 400, total ≈ 2 550.
+- effet du prix = LTV/client moyenne pondérée de (② + ④) contre (① + ③) ;
+- effet du plan court = (③ + ④) contre (① + ②) ;
+- interaction = ④ comparé à ce que ① + les deux effets laisseraient attendre. Si ④ est meilleur
+  que la somme des effets, le combo est retenu tel quel.
 
-### Test A — Prix annuel (Tier A) · semaines 1 → 5
+### 9.2 Règles
 
-| | |
-| --- | --- |
-| Question | Le revenu par nouvel utilisateur monte-t-il à 49,99 € ou 59,99 € ? |
-| Audience | Nouveaux clients, pays Tier A : FR, DE, ES, IT, NL, BE, AT, IE, PT, FI, LU, CH, GB, US, CA, AU, NZ, JP, pays nordiques. Un seul placement : `onboarding` (offering courante). |
-| Variantes | Contrôle 39,99 € (3 j d'essai) · B 49,99 € · C 59,99 €. Mensuel inchangé (9,99 €, essai) dans les trois. |
-| Métrique de décision | LTV réalisée par client à 30 jours (proceeds), lue sur RevenueCat. |
-| Secondaires | Conversion initiale (essais démarrés), conversion d'essai, conversion payante, refunds par variante, part annuel/mensuel. |
-| Seuils de neutralité | 49,99 € est rentable si sa conversion payante reste ≥ 80 % du contrôle (2,4 % vs 3,0 %) ; 59,99 € si ≥ 67 % (2,0 %). |
-| Taille | 11 456 par bras pour détecter −20 % → 34 000 exposés → **≈ 5 semaines** d'enrôlement à 980/j, puis 30 jours de maturation pour la LTV 30 j (lecture provisoire à J+14). |
-| Arrêt anticipé | Uniquement pour dégradation : remboursements d'une variante > contrôle + 3 points, ou conv. payante < 60 % du contrôle après 4 000 exposés. |
-| Issue attendue | Un prix retenu pour le Tier A. Si 49,99 € gagne, tester 44,99 vs 49,99 vs 54,99 en vague 2. |
+1. Décision sur la **LTV réalisée par client à 30 jours (proceeds)**. Les conversions sont des
+   diagnostics.
+2. **Victoire** : probabilité de battre le contrôle ≥ 95 % et intervalle du lift excluant 0, ou,
+   pour un effet principal 2×2, différence supérieure au MDE du jour (tableau § 0). **Match nul**
+   sur la LTV : on garde le prix le plus élevé si les remboursements ne montent pas (moins de
+   clients à servir pour le même revenu), sinon le contrôle.
+3. **Arrêt d'un bras** avant la date : remboursements > contrôle + 3 points, ou conversion
+   payante < 60 % du contrôle après 4 000 exposés. Un bras arrêté = expérience mise en pause,
+   pas stoppée (les données continuent de mûrir).
+4. **Pas de lecture positive avant J+30**, garde-fous exceptés.
+5. **Déploiement** : Tier A → l'offering gagnante devient courante ; B, TR, C → règle de ciblage
+   pays servant l'offering gagnante ; discount → l'app fixe le bucket gagnant pour tous.
+6. **Journal** : une ligne par expérience dans ce fichier (départ, taille, décision, offering
+   déployée), l'offering perdante archivée le jour même.
 
-### Test T — Palier Türkiye · semaines 1 → 7 (en parallèle, audience disjointe)
+### 9.3 Suivi hebdomadaire (lecture seule, via le MCP)
 
-| | |
-| --- | --- |
-| Question | À quel prix la Türkiye rapporte-t-elle le plus par utilisateur ? |
-| Audience | Nouveaux clients, pays = TR, placement `onboarding`. |
-| Variantes | Contrôle 1 999,99 TRY (≈ 36 €) · B 999,99 TRY (≈ 18 €, palier PPP « 50 % ») · C 499,99 TRY (≈ 9 €, entre Elevate 399,99 et Duolingo 329,99–1 209,99). Prix fixés par storefront sur des produits dédiés (§ 5.3). |
-| Métrique | LTV / client 30 j ; secondaires conversion d'essai (aujourd'hui 25,7 %), refunds. |
-| Seuils | 999 TRY gagne s'il double la conversion payante (break-even ×2,0) ; 499 TRY s'il la quadruple (×4,0). Si aucun n'y arrive, la Türkiye reste au prix plein et on réduit plutôt l'acquisition. |
-| Taille | 6 586 par bras pour détecter un écart de 33 % → **≈ 7 semaines** à 400/j en 3 bras, 5 semaines en 2 bras. Les effets attendus étant grands (×2 à ×4), une lecture provisoire à 3 000 exposés par bras est possible. |
-| Issue attendue | Un multiplicateur de pouvoir d'achat à appliquer au Tier C (MX, BR, CO, EG, IN, ID, PH, PK, NG, MA, DZ, TN, UA…). |
-
-### Test B — Plan secondaire : mensuel avec essai vs sans essai vs hebdo · semaines 6 → 9
-
-| | |
-| --- | --- |
-| Question | Quel plan « court » maximise le revenu total : mensuel 9,99 € avec essai (actuel), mensuel sans essai, ou hebdo 6,99 € ? |
-| Pourquoi après le Test A | Le plan court sert d'ancre : il faut le tester face au prix annuel retenu. Le mensuel ne pèse que 5 % du revenu et churne à 53 %/mois : l'effet se mesure surtout sur la part annuel et le revenu global du paywall. Le marché est partagé : l'hebdo renouvelle le mieux de la catégorie (58 %) et fait 52 % du revenu Éducation chez Adapty, mais il cannibalise l'annuel quand il devient le plan principal (Apphud). D'où : hebdo comme ancre, annuel présélectionné. |
-| Audience | Nouveaux clients Tier A + Tier B, placement `onboarding` (paywall comparatif). |
-| Variantes | Contrôle : annuel gagnant + mensuel 9,99 € essai 3 j · B : annuel + mensuel 9,99 € sans essai · C : annuel + hebdo 6,99 € sans essai (= 363 €/an affiché, l'annuel paraît −89 %). |
-| Métriques | LTV / client 30 j ; part des achats annuels ; refunds (les hebdos sont les plus contestés) ; rétention à 4 semaines de la cohorte hebdo. |
-| Taille | 20 915 par bras (détecter ±15 % sur la conversion payante globale) → **≈ 16 jours** à 1 400/j avec 3 bras, + 30 j de maturation. |
-| Garde-fous | Refunds hebdo > 15 % ou plaintes : arrêter la variante. Apple accepte l'hebdo mais ces plans concentrent les litiges. |
-
-### Test D — Discount 19,99 vs 29,99 € · semaines 6 → 9 (en parallèle, placement `offre_discount`)
-
-| | |
-| --- | --- |
-| Question | L'offre flash rapporte-t-elle plus à 29,99 € (−25 %) qu'à 19,99 € (−50 %) ? |
-| Prérequis | Placement `offre_discount` en prod (§ 5.1). Sans lui, ce test est impossible. |
-| Audience | Utilisateurs gratuits qui ouvrent le cadeau après 3 swipes (déclencheur actuel), tous pays Tier A/B. |
-| Variantes | Contrôle 19,99 € · B 29,99 €. |
-| Métriques | Revenu par vue du paywall discount ; conversion (1,5 % en juillet) ; refunds. |
-| Seuil | 29,99 € gagne si sa conversion reste ≥ 67 % du contrôle. |
-| Taille | 7 924 par bras → **≈ 20 jours** à ~800 vues/j. |
-| Note | Si le Test A relève l'annuel à 49,99 €, un discount à 24,99 € (−50 %) devient une 3ᵉ variante naturelle. |
-
-### Vague 2 — semaines 10 → 13
-
-- **Durée d'essai sur l'annuel : 3 vs 7 jours** (Tier A, au prix retenu). C'est le levier le mieux
-  documenté après le prix : un essai ≤ 4 jours convertit 24 % contre 33 % à 5–9 jours, et
-  renouvelle 18 % contre 33–47 % ; la catégorie est à 7 jours (Elevate, Headway, Blinkist,
-  Imprint). Sophia est à 32 % avec 3 jours et 10,8 % de remboursements : un essai de 7 jours peut
-  améliorer les deux. À lancer dès la fin du Test A si le volume le permet.
-- **Tier B** (PL, RO, HU, CZ, SK, HR, BG, GR, PT si besoin) : annuel Tier A retenu vs −25 %.
-- **Affinage** autour du gagnant du Test A (± 5 €). Une variable à la fois.
-- **Déploiement** de la grille par pays (§ 7) hors expérience, via prix par storefront + règles de
-  ciblage RevenueCat, puis mesure avant/après par pays.
-
-Calendrier récapitulatif :
-
-| Semaine | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Prérequis (§ 5) | ■ | | | | | | | | | | | | | |
-| A · annuel Tier A | | ■ | ■ | ■ | ■ | ■ | lecture J+14 → J+30 | | | | | | | |
-| T · Türkiye | | ■ | ■ | ■ | ■ | ■ | ■ | ■ | lecture | | | | | |
-| B · plan secondaire | | | | | | | ■ | ■ | ■ | lecture | | | | |
-| D · discount | | | | | | | ■ | ■ | ■ | lecture | | | | |
-| Vague 2 + grille pays | | | | | | | | | | | ■ | ■ | ■ | ■ |
+Chaque lundi : tableau par expérience et par bras (customers, viewers, essais, conversions,
+LTV 14 j / 30 j, remboursements), effets principaux 2×2, remboursements et conversion d'essai par
+pays, taux d'adoption de R1, anomalies (« Unknown », attribution, produits manquants). Une page
+dans `docs/` par semaine.
 
 ---
 
-## 7. Grille de prix par pays proposée (hypothèses à tester, pas à appliquer en l'état)
+## 10. Grille de prix par pays (hypothèse, mise à jour à J+45)
 
-Principe : trois paliers indexés sur le pouvoir d'achat, mis en œuvre par **prix personnalisés par
-storefront** (App Store Connect et Play Console le permettent sur un même produit) pour le
-déploiement, et par produits dédiés uniquement le temps des tests. Android aligné sur iOS.
-
-| Palier | Pays (selon acquisition actuelle) | Annuel | Mensuel / hebdo | Discount | Base de la recommandation |
+| Palier | Pays | Annuel | Plan court | Discount | Décidé par |
 | --- | --- | --- | --- | --- | --- |
-| A | Zone euro Ouest, UK, CH, US, CA, AU, NZ, JP, Nordiques | 39,99 → **test 49,99 / 59,99 €** | 9,99 € ou 6,99 €/sem | 19,99 → test 29,99 € | LTV/client 1,1–2,5 €, conv. d'essai 40–45 % |
-| B | PL, RO, HU, CZ, SK, HR, BG, GR, Baltes, PT | **≈ 29,99 €** (test vs Tier A) | 6,99 € | 14,99 € | Conv. d'essai 37–39 % mais LTV 0,77 € : prix plein trop haut pour une partie de l'audience |
-| C | TR, MX, BR, CO, AR, CL, PE, EG, MA, DZ, TN, IN, ID, PH, VN, PK, NG, UA, ZA, MENA hors Golfe | **≈ 30–50 % du Tier A** (Türkiye : test 999 TRY) | 2,99–3,99 € | 9,99 € | Conv. d'essai 20–26 %, LTV 0,5 €, refunds probablement concentrés ici (à vérifier par pays) |
+| A | A1 + A2 (§ 5.2) | 39,99 → 49,99 ou 59,99 | mensuel 9,99 (avec / sans essai) ou hebdo 6,99 | 19,99 ou 29,99 | A1, A2, Discount |
+| B | Europe centrale et Balkans | 29,99 / 39,99 / 49,99 | mensuel 9,99 | 50 % de l'annuel retenu | B |
+| C-TR | Türkiye | 1 999 / 999 / 499 TRY | mensuel ≈ 499 TRY (à tester ensuite) | 50 % de l'annuel retenu | TR |
+| C | LatAm, MENA, Asie, Afrique | 100 / 50 / 25 % | mensuel local | 50 % de l'annuel retenu | C |
 
-Points d'attention :
-
-- Les prix personnalisés par storefront **ne suivent pas l'inflation** : en Türkiye, prévoir une
-  révision trimestrielle (Apple révise ses grilles équilibrées, pas les prix fixés à la main).
-- Un prix plus bas en Türkiye ou en Inde n'ouvre pas la porte au contournement : le storefront
-  dépend du moyen de paiement du compte, et le volume concerné est déjà là.
-- Le Golfe (SA, AE, QA) reste en Tier A malgré des prix équilibrés à 31–35 €.
+Android aligné sur iOS dès J0 (47,99 → 39,99 €, promo 23,99 → 19,99 €), puis suit les décisions.
+Les prix fixés par storefront ne suivent pas l'inflation : revue trimestrielle pour la Türkiye et
+l'Argentine.
 
 ---
 
-## 8. Règles de décision et garde-fous
+## 11. Risques et parades
 
-1. **Une variable par test**, 2 à 4 variantes, nouveaux clients uniquement, audiences disjointes
-   pour les tests parallèles (pays ou placement différents).
-2. **Métrique de décision unique** définie avant le lancement : LTV réalisée par client à 30 jours
-   (proceeds). Les conversions sont des diagnostics, pas des critères de victoire.
-3. **Pas de lecture avant la taille cible**, sauf garde-fous : remboursements d'une variante
-   supérieurs au contrôle de plus de 3 points, ou effondrement de conversion (< 60 % du contrôle)
-   après 4 000 exposés.
-4. **Victoire** : probabilité de battre le contrôle ≥ 95 % sur la LTV 30 j **et** intervalle de
-   crédibilité du lift qui exclut 0. Sinon, prolonger ou conserver le contrôle.
-5. **Jamais de changement de prix sur un produit existant** : les abonnés actuels gardent leur prix,
-   les tests passent par de nouveaux identifiants.
-6. **Deux plateformes** : lancer les expériences sur iOS et Android, mais décider sur iOS (Android
-   représente 1,3 % des nouveaux clients) et appliquer la décision aux deux.
-7. **Journal de bord** : pour chaque test, une ligne dans ce document (date de début, taille
-   atteinte, décision, offering déployée), et l'offering perdante archivée le jour même.
-
----
-
-## 9. Suivi
-
-- Hebdomadaire : résultats d'expérience (LTV 30 j, conversion, refunds par variante), graphique
-  *Refund Rate* filtré par pays, *Trial Conversion Rate* par pays, *Realized LTV per Customer*
-  par pays (`first_country`). Tout est lisible via le MCP RevenueCat en lecture seule ; je peux
-  produire ce point chaque semaine sans rien toucher.
-- À la fin de chaque test : capture des résultats dans `docs/`, décision consignée, offering
-  déployée comme courante (Test A/B) ou via la règle de placement (Test D), produits perdants
-  retirés de la vente.
-
----
-
-## 10. Résultat attendu
-
-Ordres de grandeur, à confirmer par les tests :
-
-- **Annuel 49,99 € en Tier A** : les tests publiés vont dans les deux sens (+50 % de prix →
-  −19 % de conversion et +25 % de revenu par utilisateur chez BuyBye ; +30 % → −5 % de conversion
-  sur une app voyage ; mais 59,99 → 44,99 $ a gagné chez SellRaze). Avec un prix de départ sous
-  la médiane de la catégorie, le pari est : 49,99 € gagne (conversion −10 à −15 %, revenu +5 à
-  +12 %), 59,99 € perd ou fait match nul, avec des remboursements en hausse sur le montant contesté.
-- **Türkiye à 999 TRY** : doubler la conversion payante (1,75 % → 3,5 %) est plausible vu l'écart
-  avec l'Allemagne (3,8 %) et les prix locaux des concurrents (Elevate 149–399 TRY, Duolingo
-  330–1 210 TRY) ; le revenu par utilisateur passerait de 0,52 € à ≈ 0,6–0,7 €, avec moins de
-  remboursements. Pari : 999 TRY gagne, 499 TRY neutre ou légèrement gagnant.
-- **Hebdo 6,99 €** : augmente la part d'annuel (effet d'ancre) et capte des impulsifs ; le marché
-  montre +20 à +50 % d'ARPU quand l'hebdo sert d'ancre, et une perte nette quand il devient le
-  plan principal. Pari : léger gain de LTV 30 j, à confirmer sur 90 j.
-- **Mensuel sans essai** : baisse des essais, hausse des conversions directes ; effet global
-  probablement neutre à légèrement positif (Flibbo +20 %, et la catégorie vend le mensuel sans
-  essai). Utile surtout s'il réduit les remboursements.
-- **Discount 29,99 €** : à −25 % l'offre perd son effet « moitié prix » ; pari : perte de
-  conversion supérieure à 33 %, donc 19,99 € conservé (ou 24,99 € si l'annuel passe à 49,99 €).
-
-Le « meilleur combo » se lira à la semaine 13 : un prix annuel par palier, un plan court, un
-discount, et une grille par pays écrite dans ce document.
+| Risque | Parade |
+| --- | --- |
+| Un bras encaisse sans débloquer Premium (produit non rattaché) | Rattachement vérifié par achat sandbox avant chaque lancement (§ 6, étapes 3 et 12) |
+| « Paywall viewers » à zéro (impressions natives non comptées) | Contrôle J+1 ; correctif dans R1 (§ 8, point 6) ; les métriques « Customers » restent exploitables |
+| Fuite de prix : un utilisateur du bras 59,99 achète à 39,99 sur le paywall quiz | Biais conservateur jusqu'à R1 (16 % des essais), supprimé par R1 point 1 |
+| Remboursements en hausse sur les bras chers | Garde-fou J+21 (+3 points) ; rappel J-1 de fin d'essai actif ; texte du CTA explicite sur le montant |
+| Revue Apple des produits > 3 jours | A1 part sans attendre ; B, TR, C décalés d'autant, rien d'autre ne bouge |
+| Adoption lente de R1 | A2 et discount démarrent à 80 % d'adoption, pas avant ; les utilisateurs sur l'ancienne version restent hors A2 (audience pays + version d'app si besoin) |
+| Chevauchement d'audiences refusé par RevenueCat | Listes de pays disjointes par construction ; un pays ne figure que dans une audience |
+| Inflation TRY / ARS | Prix TR et AR revus tous les trimestres |
+| Trafic qui retombe (fin de viralité) | Les dates de lecture sont recalculées chaque semaine sur le volume réel |
+| Décisions contradictoires entre A1 (59,99) et A2 (49,99) | Les deux se comparent à leur contrôle 39,99 : on retient le lift de LTV le plus élevé, puis on confronte 49,99 et 59,99 en tête-à-tête en vague suivante si les deux gagnent |
 
 ---
 
 ## Annexes
 
-### A. Identifiants existants utiles
+### A. Identifiants utiles
 
 - Projet `proj3f496a80` · apps `app152440cc2e` (App Store), `app3dcadd8517` (Play), `app257be138ae` (Test Store).
 - Entitlement `premium` = `entl5b0c63b9a1`.
-- Offerings : `fin_onboarding` = `ofrngb1bfff7210` (courante), `quizz` = `ofrng2d26aa3789`,
-  `debloquer_cours` = `ofrng0b892fe7f7`, `offre_discount` = `ofrng8974f13d40`,
-  `price_test_annual_5999` = `ofrng2e73869147`, `trial_test_monthly_notrial` = `ofrng1f98dd206a`.
+- Offerings : `fin_onboarding` = `ofrngb1bfff7210` (courante), `offre_discount` = `ofrng8974f13d40`,
+  `quizz` = `ofrng2d26aa3789`, `debloquer_cours` = `ofrng0b892fe7f7`.
 - Produits iOS : `Sophia_yearly` = `prodf40359e7e1`, `Sophia_monthly` = `prodf59fa512ae`,
-  `discount_yearly` (iOS) = `prod87ca86a482`, `Sophia_yearly_5999` = `prod2ad0152b81`.
+  `Sophia_yearly_5999` = `prod2ad0152b81` (approuvé), `Sophia_monthly_notrial` = `prodbc71e740f7`
+  (approuvé), `discount_yearly` = `prod87ca86a482`.
+- Produits Play : `sophia_pro:p1y` = `prod4d34542d2a`, `sophia_pro:monthly` = `prod7460a66c69`,
+  `sophia_pro:annual-promo` = `prod707c4e8f3a`.
 
-### B. Checklist de lancement d'une expérience
+### B. Contrôles du jour 1 d'une expérience
 
-1. Produits créés dans les 3 stores, approuvés, rattachés à `premium`.
-2. Offerings variantes créées avec les mêmes packages que le contrôle, seule la variable change.
-3. Placement en prod dans la version d'app diffusée à ≥ 90 % des utilisateurs (vérifier
-   *SDK versions* et *App version* dans RevenueCat).
-4. Audience pays définie, absence de recouvrement avec les tests en cours.
-5. Expérience créée : nouveaux clients, 100 %, métrique primaire LTV, notes = hypothèse et seuils.
-6. Jour 1 : « Paywall viewers » ≈ 85 % des « Customers » ; achats visibles sur chaque variante.
-7. Date de lecture inscrite au calendrier (taille cible + 30 jours).
+1. « Customers » répartis à ± 5 % entre les bras au bout de 24 h.
+2. « Paywall viewers » ≈ 85 % des customers sur chaque bras.
+3. Au moins un essai démarré et un achat direct visibles sur chaque bras.
+4. Le prix affiché correspond au bras (capture depuis un appareil avec override).
+5. Aucun achat attribué à « Unknown » en hausse.
 
-### C. Changements de code à prévoir (aucun fait à ce stade)
+### C. Ce que je peux faire moi-même
 
-| Fichier | Changement |
-| --- | --- |
-| `ios/Sophia/ViewModels/StoreViewModel.swift` | `offering(forPlacement:)` avec repli ; `weeklyPackage` ; prix ramené à la semaine générique ; impression trackée avec l'offering réellement servie |
-| `ios/Sophia/Views/SophiaPaywallView.swift`, `SophiaNativePaywalls.swift` | Contexte → placement ; affichage hebdo sur le comparatif |
-| `ios/Sophia/Views/Onboarding/OnboardingV2Paywalls.swift` | Plan secondaire dynamique (mensuel ou hebdo), libellés d'essai déjà dynamiques |
-| `ios/Sophia/Utilities/AppLocalizable.swift` (+ 20 langues) | Textes de repli sans prix codé en dur |
-| `android/.../ui/paywall/PaywallScreen.kt`, `StoreViewModel.kt` | Idem : placements, `$rc_weekly`, libellés |
-| `PLAN.md` | Cases à cocher correspondantes |
+- Avec la clé actuelle (lecture seule) : suivi hebdomadaire, effets 2×2, alertes garde-fous,
+  mise à jour de ce document.
+- Avec une clé `read_write` dans l'environnement : rattachements à l'entitlement, création des
+  offerings et des packages, audiences et expériences si le MCP les expose, archivage des
+  offerings orphelines. La création des produits reste dans App Store Connect et Play Console.
+- Dans le repo : la version R1 (§ 8) sur cette branche, prête pour revue.
