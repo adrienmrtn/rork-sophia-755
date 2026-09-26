@@ -23,6 +23,10 @@ code iOS et Android. Coche les cases des actions que tu valides.
   terminés, et les produits iOS fantômes (constats 3 à 5).
 - [ ] Sécuriser l'entitlement `premium` : rattacher ou archiver les 2 produits actifs non reliés (constat 2).
 - [ ] Option : webhook RevenueCat vers Supabase pour connaître le statut Premium côté serveur (constat 8).
+- [ ] Programme d'A/B tests prix sur 13 semaines (détail, chiffres et calendrier dans
+  `docs/plan-ab-tests-prix.md`) : annuel 39,99 / 49,99 / 59,99 € (Tier A), palier Türkiye
+  (1 999 / 999 / 499 TRY), mensuel avec ou sans essai vs hebdo 6,99 €, discount 19,99 vs 29,99 €,
+  puis grille de prix par pays. Rien n'est lancé tant que ce point n'est pas coché.
 
 **Constats**
 
@@ -79,4 +83,13 @@ code iOS et Android. Coche les cases des actions que tu valides.
   (aucun `PaywallView` ni Customer Center utilisé) et, si plus rien ne l'utilise, le produit
   `RevenueCatUI` du projet Xcode.
 - [ ] Option : webhook RevenueCat vers une edge function Supabase (`is_premium`, `expires_at`).
+- [ ] Tests prix, prérequis code (iOS + Android) : lire les offerings par *Placement*
+  (`onboarding`, `quizz`, `debloquer_cours`, `offre_discount`) avec repli sur l'identifiant
+  actuel ; supporter `$rc_weekly` et un libellé « par semaine » ; retirer les prix codés en dur
+  des textes de repli.
+- [ ] Tests prix, prérequis stores : créer les produits listés au § 5.3 du plan (annuel 49,99,
+  hebdo 6,99, discount 29,99, paliers Türkiye), les rattacher à `premium`, et aligner le prix
+  Android sur iOS (47,99 → 39,99 €).
+- [ ] Tests prix, prérequis RevenueCat : 4 placements + règle « Any audience », offerings
+  variantes, audiences par pays, vérification des impressions des paywalls natifs au jour 1.
 - [ ] Sécurité : régénérer la clé API v2 RevenueCat après l'avoir mise dans l'environnement.
