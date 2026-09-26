@@ -28,7 +28,7 @@ struct CourseCardRainOverlay: View {
 
     private var localizedPool: [(title: String, courseId: String, colorIndex: Int)] {
         let titles = Dictionary(
-            uniqueKeysWithValues: LocalizedContentLoader.courses(for: languageManager.current).map { ($0.id, $0.title) }
+            uniqueKeysWithValues: ContentCatalog.courses(for: languageManager.current).map { ($0.id, $0.title) }
         )
         return pool.compactMap { item in
             guard let title = titles[item.courseId] else { return nil }
