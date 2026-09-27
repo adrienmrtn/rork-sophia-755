@@ -23,7 +23,8 @@ What `apply` does for one product, in order, skipping every step already done:
     4. prices: the base-territory price point for the manifest price, then one
        subscriptionPrice per territory from that point's `equalizations` (Apple's
        own grid), then the manifest `overrides` (e.g. TUR = 999.99)
-    5. POST /subscriptionIntroductoryOffers  free trial, when the manifest says so
+    5. POST /subscriptionIntroductoryOffers  free trial, one per territory, when the
+       manifest says so
     6. review screenshot copied from the reference product (download + upload)
 
 Credentials come from the environment, never from the repository (same three
@@ -40,6 +41,7 @@ import argparse
 import hashlib
 import json
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -49,6 +51,28 @@ from appstore_metadata import ApiError, Client, find_app  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "appstore" / "subscriptions" / "price_tests.json"
+
+
+class PatientClient(Client):
+    """Same client, but a rate limit or a transient 5xx is waited out, not fatal.
+
+    One `apply` is roughly 350 calls per product (a price and an introductory
+    offer per territory), so a run can brush Apple's hourly quota.
+    """
+
+    RETRY_ON = {429, 500, 502, 503, 504}
+
+    def call(self, method: str, path: str, *, body: dict | None = None, params: dict | None = None) -> dict:
+        for attempt in range(6):
+            try:
+                return super().call(method, path, body=body, params=params)
+            except ApiError as error:
+                if error.status not in self.RETRY_ON or attempt == 5:
+                    raise
+                wait = 60 if error.status == 429 else 5 * (attempt + 1)
+                print(f"  (Apple answered {error.status}, waiting {wait}s before retrying)", flush=True)
+                time.sleep(wait)
+        raise AssertionError("unreachable")
 
 
 def load_manifest(path: Path) -> dict:
@@ -192,7 +216,7 @@ def territory_of(point: dict) -> str | None:
 
 
 def current_prices(client: Client, sub_id: str) -> dict[str, dict]:
-    prices = client.get_all(f"/subscriptions/{sub_id}/prices", {"include": "territory"})
+    prices = client.get_all(f"/subscriptions/{sub_id}/prices", {"include": "territory,subscriptionPricePoint"})
     return {territory_of(p): p for p in prices if territory_of(p)}
 
 
@@ -248,31 +272,41 @@ def ensure_prices(client: Client, sub_id: str | None, spec: dict, base_territory
         print(f"  override {territory}: set to {customer_price}")
 
 
-def ensure_intro_offer(client: Client, sub_id: str | None, spec: dict) -> None:
+def ensure_intro_offer(client: Client, sub_id: str | None, spec: dict, territories: list[str]) -> None:
+    """App Store Connect stores one introductory offer per territory, so a free
+    trial "in every territory" is one POST per territory. Territories that
+    already carry an offer are skipped, which makes an interrupted run resumable."""
     duration = spec.get("trial")
     if not duration:
         print("  introductory offer: none (by design)")
         return
+    have: set[str] = set()
     if sub_id:
-        offers = client.get_all(f"/subscriptions/{sub_id}/introductoryOffers")
-        if offers:
-            print(f"  introductory offer: already present ({len(offers)} rows)")
-            return
-    if client.dry_run or not sub_id:
-        print(f"  would add introductory offer: free trial {duration}, all territories")
+        offers = client.get_all(f"/subscriptions/{sub_id}/introductoryOffers", {"include": "territory"})
+        have = {t for t in (territory_of(o) for o in offers) if t}
+    missing = [t for t in territories if t not in have]
+    if not missing:
+        print(f"  introductory offer: free trial {duration} already in all {len(have)} territories")
         return
-    client.call(
-        "POST",
-        "/subscriptionIntroductoryOffers",
-        body={
-            "data": {
-                "type": "subscriptionIntroductoryOffers",
-                "attributes": {"duration": duration, "offerMode": "FREE_TRIAL", "numberOfPeriods": 1},
-                "relationships": {"subscription": rel("subscriptions", sub_id)},
-            }
-        },
-    )
-    print(f"  introductory offer: free trial {duration}")
+    if client.dry_run or not sub_id:
+        print(f"  would add introductory offer: free trial {duration} in {len(missing)} territories")
+        return
+    for territory in missing:
+        client.call(
+            "POST",
+            "/subscriptionIntroductoryOffers",
+            body={
+                "data": {
+                    "type": "subscriptionIntroductoryOffers",
+                    "attributes": {"duration": duration, "offerMode": "FREE_TRIAL", "numberOfPeriods": 1},
+                    "relationships": {
+                        "subscription": rel("subscriptions", sub_id),
+                        "territory": rel("territories", territory),
+                    },
+                }
+            },
+        )
+    print(f"  introductory offer: free trial {duration} added in {len(missing)} territories ({len(have)} already there)")
 
 
 def reference_screenshot(client: Client, reference_id: str) -> tuple[str, bytes] | None:
@@ -377,7 +411,7 @@ def run(client: Client, manifest: dict, only: list[str] | None) -> int:
         ensure_localizations(client, sub_id, manifest["localizations"][spec["kind"]])
         ensure_availability(client, sub_id, territories)
         ensure_prices(client, sub_id, spec, manifest["base_territory"])
-        ensure_intro_offer(client, sub_id, spec)
+        ensure_intro_offer(client, sub_id, spec, territories)
         ensure_screenshot(client, sub_id, screenshot)
     print("\nNothing was written (plan)." if client.dry_run else "\nDone. Run `status`, then `submit`.")
     return 0
@@ -435,7 +469,7 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="With submit: show what would be submitted")
     args = parser.parse_args()
     manifest = load_manifest(args.manifest)
-    client = Client(dry_run=args.command == "plan" or args.dry_run)
+    client = PatientClient(dry_run=args.command == "plan" or args.dry_run)
     try:
         if args.command in ("plan", "apply"):
             return run(client, manifest, args.only)

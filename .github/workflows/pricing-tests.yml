@@ -87,6 +87,7 @@ jobs:
 
       - name: Run
         env:
+          PYTHONUNBUFFERED: "1"
           TARGET: ${{ inputs.target }}
           ACTION: ${{ inputs.action }}
           ONLY: ${{ inputs.only }}
