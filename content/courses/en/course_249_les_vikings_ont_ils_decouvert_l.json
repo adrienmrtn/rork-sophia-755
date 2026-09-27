@@ -1,0 +1,142 @@
+{
+  "id": "course_249_les_vikings_ont_ils_decouvert_l",
+  "title": "Did the Vikings reach America before Columbus?",
+  "subtitle": "Around the year 1000",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Five centuries before Columbus, sailors from Greenland landed on the coast of Canada. The sagas had told the story since the Middle Ages; archaeology proved it in the 1960s.",
+  "author": "benjamin-campbell",
+  "hero": {
+    "image": "leif_erikson_discovers_america_krohg_1893",
+    "ratio": "16:9",
+    "hook": "Columbus was not the first: five centuries before him, Norse sailors had already set foot in Canada."
+  },
+  "sections": [
+    {
+      "id": "course_249_les_vikings_ont_ils_decouvert_l_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On **August 3, 1492**, [[Christopher Columbus]] left Spain and sailed west. He was looking for a new route to Asia and ended up landing in the Americas. Yet **500 years** earlier, an entirely different group of Europeans had already reached the coast of Canada: Norse sailors from [[Greenland]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "These Norsemen, also known as Vikings, were expert sailors. They had settled Iceland and then Greenland, and kept pushing west in search of resources and new land. Their voyages brought them to a place they called Vinland, which seems to have included part of present-day [[Newfoundland]]. Yet saying they \"discovered\" America would be false: Indigenous peoples had lived there for thousands of years. They were simply the first known Europeans to reach it. So the real question becomes: is there any actual evidence that they came?"
+        }
+      ]
+    },
+    {
+      "id": "course_249_les_vikings_ont_ils_decouvert_l_p1",
+      "title": "The sagas and the land of Vinland",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "What we know of these voyages comes first from two medieval Icelandic texts, the [[Vinland Sagas]]: the *Saga of Erik the Red* and the *Saga of the Greenlanders*, written down in the **13th and 14th centuries**. They describe the lands met along the way. Helluland was a country of rock, Markland a region covered in forest. Vinland, further south, was rich in timber, fertile land and grapes."
+        },
+        {
+          "type": "image",
+          "asset": "skalholt_map_1590_vinland_helluland_markland",
+          "ratio": "4:3",
+          "caption": "The Skálholt map (1590), drawn from the sagas: Helluland, Markland and the \"promontory of Vinland\" west of Greenland."
+        },
+        {
+          "type": "paragraph",
+          "text": "The central figure of these stories is [[Leif Eriksson]], who is said to have sailed to these new lands around the **year 1000**. But the sagas were written almost **400 years** after his death: they are not eyewitness accounts. For a long time, they could be dismissed as legends. Yet they become far more convincing once we set them against what archaeologists have found."
+        }
+      ]
+    },
+    {
+      "id": "course_249_les_vikings_ont_ils_decouvert_l_p2",
+      "title": "L'Anse aux Meadows: the proof from archaeology",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In the **1960s**, archaeologists Helge Ingstad and Anne Stine Ingstad found proof that the Norse had indeed reached North America. On the northern tip of Newfoundland, at a site called [[L'Anse aux Meadows]], they uncovered the remains of a Norse settlement. Excavations revealed **eight buildings**, including homes and workshops."
+        },
+        {
+          "type": "image",
+          "asset": "lanse_aux_meadows_norse_sod_houses_newfoundland",
+          "ratio": "3:2",
+          "caption": "The reconstructed sod houses of L'Anse aux Meadows, on the northern tip of Newfoundland."
+        },
+        {
+          "type": "paragraph",
+          "text": "The archaeologists compared these buildings with Norse homes of the same period in Greenland and Iceland: same materials, same designs. The digs also yielded typically Norse objects, including a bronze cloak pin. Everything pointed to one conclusion: the stories of Vinland were not medieval fiction, they were based on a real voyage."
+        },
+        {
+          "type": "funFact",
+          "text": "Iron was worked at the site. That craft was closely tied to Norse culture and unknown among the Indigenous peoples of the region: one more clue for the archaeologists."
+        }
+      ]
+    },
+    {
+      "id": "course_249_les_vikings_ont_ils_decouvert_l_p3",
+      "title": "A base camp, not a colony",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The Vikings never founded a lasting colony in North America. L'Anse aux Meadows served instead as a base camp for further expeditions. From there, sailors ventured further south for what Greenland lacked, timber above all. One likely reason they never settled: the immense distance between these shores and their homeland."
+        },
+        {
+          "type": "paragraph",
+          "text": "During their stay, the Norse may have met Indigenous groups. The sagas mention a people they call the [[Skrælingar]], but the details remain uncertain and the archaeological evidence for these encounters is thin. Why did they eventually abandon the site? The debate is still open. Their presence remained small and temporary: reaching a new land and building a colony that lasts are two very different things."
+        }
+      ]
+    },
+    {
+      "id": "course_249_les_vikings_ont_ils_decouvert_l_p4",
+      "title": "Columbus and the new Atlantic",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "It is now generally accepted that the Norse arrived in North America long before Columbus. But their voyages created no lasting connection between Europe and the continent. The expedition of **1492** produced something else entirely: a regular route between Europe and the New World."
+        },
+        {
+          "type": "image",
+          "asset": "christopher_columbus_portrait",
+          "ratio": "1:1",
+          "caption": "Christopher Columbus, whose voyage of 1492 opened a regular route between Europe and America."
+        },
+        {
+          "type": "paragraph",
+          "text": "In the decades that followed, further crossings led to the colonization of the Americas and the movement of goods, plants, animals and even diseases. So when we ask who \"discovered\" America, we have to distinguish between arriving first and changing the course of history. The Vikings were the first known Europeans to touch the continent. Columbus's voyage, on the other hand, reshaped the history of both worlds."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "c. 1000",
+              "title": "Leif Eriksson's voyage",
+              "detail": "Norse sailors from Greenland reach Vinland."
+            },
+            {
+              "date": "13th-14th century",
+              "title": "The sagas are written down",
+              "detail": "The Saga of Erik the Red and the Saga of the Greenlanders."
+            },
+            {
+              "date": "1492",
+              "title": "Columbus's voyage",
+              "detail": "A regular route opens between Europe and the New World."
+            },
+            {
+              "date": "1960s",
+              "title": "L'Anse aux Meadows excavated",
+              "detail": "Helge and Anne Stine Ingstad discover the Norse site in Newfoundland."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "The Vikings did reach America around the year 1000, as L'Anse aux Meadows proves, but it was Columbus's voyage of 1492 that linked the two worlds for good."
+        }
+      ]
+    }
+  ]
+}
