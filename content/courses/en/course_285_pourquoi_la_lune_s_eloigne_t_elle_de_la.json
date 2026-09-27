@@ -1,0 +1,131 @@
+{
+  "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la",
+  "title": "Why is the Moon moving away from Earth?",
+  "subtitle": "3.8 cm a year",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Every year the Moon gains 3.8 cm on us, about as fast as a fingernail grows. Our own oceans are pushing it away, and the bill is paid in longer days and in total eclipses doomed to disappear.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "full_moon_rising_over_ocean_horizon",
+    "ratio": "16:9",
+    "hook": "The Moon is drifting away from us as fast as our nails grow: one day, no total eclipse will be possible anymore."
+  },
+  "sections": [
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "How far away is the Moon? It can be measured with lasers. During the [[Apollo missions]], astronauts placed special reflectors on the lunar surface. From Earth, scientists fire laser pulses at them and time how long the light takes to come back. The result: the Moon sits on average about **385,000 km** away from us."
+        },
+        {
+          "type": "paragraph",
+          "text": "But that distance is not fixed. Every year, the Moon moves about **3.8 cm** farther away, roughly as fast as our fingernails grow. From one year to the next, the change is tiny. Over millions of years, it adds up. So what could possibly be pushing the Moon away from us?"
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p1",
+      "title": "The Moon lifts the oceans",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Like Earth, the Moon has [[gravity]], a force that pulls objects toward it, Earth included. But this pull is not equally strong everywhere. The side of Earth facing the Moon is pulled slightly harder than the far side. This difference creates two [[tidal bulges]], slight swellings of the oceans, one facing the Moon and the other on the opposite side."
+        },
+        {
+          "type": "image",
+          "asset": "mont_saint_michel_bay_high_tide_aerial",
+          "ratio": "3:2",
+          "caption": "The bay of Mont-Saint-Michel at high tide: water lifted by the Moon surrounds the Mount."
+        },
+        {
+          "type": "paragraph",
+          "text": "These bulges do not sit directly beneath the Moon. Earth spins once every **24 hours**, while the Moon takes about a month to travel around it. Because Earth turns so much faster, it carries the bulges slightly ahead of the Moon. That small offset matters enormously: it lets the bulge pull the Moon forward along its [[orbit]]."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p2",
+      "title": "Earth pushes the Moon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The ocean bulge has mass, so it has gravity of its own. Because it sits slightly ahead of the Moon, its pull tugs the Moon gently forward as it travels around Earth. That tug adds energy to the Moon's orbit. Instead of simply speeding up along the same path, the Moon shifts into a slightly wider orbit. That is why its average distance grows by about **3.8 cm** each year."
+        },
+        {
+          "type": "image",
+          "asset": "apollo_11_lunar_laser_retroreflector_nasa_1969",
+          "ratio": "4:3",
+          "caption": "The laser reflector left by Apollo 11 in July 1969, the target of the measurements that track the Moon's retreat."
+        },
+        {
+          "type": "paragraph",
+          "text": "So no mysterious force is pushing the Moon away. The energy comes from Earth's rotation. As it spins, our planet gradually hands over part of its [[rotational energy]] to the Moon, through the tides. A minute push, but one repeated with every turn."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p3",
+      "title": "Earth is slowing down too",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The energy given to the Moon comes at a price. Earth gradually loses a small part of its rotational energy, so it spins a tiny bit more slowly. Over a human lifetime, the change is imperceptible. Over millions of years, it builds up."
+        },
+        {
+          "type": "funFact",
+          "text": "In the distant past, Earth spun faster on its axis: a day was once shorter than the **24 hours** we live by today."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tides therefore do two things at once: they push the Moon away and they slow Earth's spin. These are not two separate phenomena, but two sides of the same exchange between Earth and the Moon. That exchange has been going on for billions of years, and it continues today, with every tide."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p4",
+      "title": "The end of total eclipses",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "This slow retreat will eventually change something spectacular in our sky. Today, the Sun is about **400 times** wider than the Moon. It is also about 400 times farther from Earth. By pure coincidence, the two bodies therefore appear almost the same size. That is what allows the Moon to cover the Sun completely during a [[total solar eclipse]]."
+        },
+        {
+          "type": "image",
+          "asset": "total_solar_eclipse_corona_2017_nasa",
+          "ratio": "4:3",
+          "caption": "The total eclipse of August 21, 2017: the Moon covers the Sun's disk exactly and reveals its corona."
+        },
+        {
+          "type": "paragraph",
+          "text": "As it moves away, the Moon will look slightly smaller. In roughly **600 million years**, perhaps more, it will no longer appear large enough to hide the Sun completely. Total eclipses will then disappear for good. The Moon is not about to escape from Earth. But its slow retreat is a reminder that even something as familiar as the night sky is not permanent."
+        },
+        {
+          "type": "takeaway",
+          "text": "The Moon recedes by **3.8 cm** a year because the tides hand it part of Earth's rotational energy: our days grow longer and, in 600 million years, total eclipses will be gone."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "NASA Jet Propulsion Laboratory, « The Apollo Experiment That Keeps on Giving », 2019."
+    },
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, section 4.6 « Ocean Tides and the Moon », p. 116-119."
+    },
+    {
+      "text": "NASA Science, « Tidal Locking »."
+    },
+    {
+      "text": "NASA Science, « Eclipses and the Moon »."
+    }
+  ]
+}
