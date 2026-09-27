@@ -152,7 +152,7 @@ struct OnboardingV2PaywallAnnual: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: SophiaPaywallContext.finOnboarding.rawValue,
-                    offeringId: store.offerings?.current?.identifier,
+                    offeringId: package.presentedOfferingContext.offeringIdentifier,
                     packageId: package.identifier
                 )
                 onSubscribed()
@@ -382,7 +382,7 @@ struct OnboardingV2PaywallComparison: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: SophiaPaywallContext.finOnboarding.rawValue,
-                    offeringId: store.offerings?.current?.identifier,
+                    offeringId: package.presentedOfferingContext.offeringIdentifier,
                     packageId: package.identifier
                 )
                 onSubscribed()

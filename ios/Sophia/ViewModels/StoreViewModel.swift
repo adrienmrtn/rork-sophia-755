@@ -130,8 +130,14 @@ class StoreViewModel {
         offerings?.current?.package(identifier: "$rc_annual")
     }
 
+    /// Offering behind the flash discount paywall. Explicit by design: it is never the
+    /// current offering, so an experiment on the onboarding price leaves it untouched.
+    var promoOffering: Offering? {
+        offerings?.offering(identifier: "offre_discount")
+    }
+
     var promoPackage: Package? {
-        offerings?.offering(identifier: "offre_discount")?.package(identifier: "$rc_annual")
+        promoOffering?.package(identifier: "$rc_annual")
     }
 
     /// Offering matching a context identifier (e.g. `quizz`, `debloquer_cours`), if loaded.
@@ -140,11 +146,27 @@ class StoreViewModel {
         return offerings.all[identifier] ?? offerings.offering(identifier: identifier)
     }
 
-    /// Annual package for a specific offering identifier, falling back to the current
-    /// offering's annual package. Pricing follows whichever offering RevenueCat serves, so a
-    /// price/trial experiment on this context is reflected automatically.
+    /// Offering a context paywall (`quizz`, `debloquer_cours`, `entrainement`) actually displays.
+    ///
+    /// RevenueCat experiments work by swapping the **current** offering, and the context
+    /// offerings carry the same products as `fin_onboarding`: they exist for attribution, not
+    /// to sell another price. So a context paywall shows and charges the current offering
+    /// whenever it has an annual package, and only falls back to its own offering when the
+    /// current one has none. Before this, `paywallPriceDisplay` (current offering) and the
+    /// purchase (context offering) could disagree: a customer enrolled in a 59,99 € variant
+    /// was shown 59,99 € and charged 39,99 €, and could buy at 39,99 € from any course.
+    func displayedOffering(forContextIdentifier identifier: String) -> Offering? {
+        if let current = offerings?.current, current.package(identifier: "$rc_annual") != nil {
+            return current
+        }
+        return offering(identifier: identifier)
+    }
+
+    /// Annual package a context paywall sells: the served (current) offering first, then the
+    /// context offering. See `displayedOffering(forContextIdentifier:)`.
     func annualPackage(forOfferingIdentifier identifier: String) -> Package? {
-        offering(identifier: identifier)?.package(identifier: "$rc_annual") ?? annualPackage
+        displayedOffering(forContextIdentifier: identifier)?.package(identifier: "$rc_annual")
+            ?? annualPackage
     }
 
     // MARK: - Trial awareness
@@ -172,10 +194,20 @@ class StoreViewModel {
     ///
     /// Call once per presentation (not from a callback that can fire repeatedly).
     func trackPaywallImpression(paywallId: String, offeringIdentifier: String? = nil) {
-        let resolved = offeringIdentifier.flatMap { offering(identifier: $0) } ?? offerings?.current
-        guard let resolved else { return }
+        // The offering reported must be the one on screen, or a customer enrolled in an
+        // experiment is never counted as exposed: that is the served offering, resolved the
+        // same way the paywall picks its package.
+        let resolved = offeringIdentifier.flatMap { displayedOffering(forContextIdentifier: $0) }
+            ?? offerings?.current
+        trackPaywallImpression(paywallId: paywallId, offering: resolved)
+    }
+
+    /// Same, for a paywall that knows exactly which offering it displays (the discount
+    /// paywall, whose offering is never the current one).
+    func trackPaywallImpression(paywallId: String, offering: Offering?) {
+        guard let offering else { return }
         Purchases.shared.trackCustomPaywallImpression(
-            CustomPaywallImpressionParams(paywallId: paywallId, offering: resolved)
+            CustomPaywallImpressionParams(paywallId: paywallId, offering: offering)
         )
     }
 

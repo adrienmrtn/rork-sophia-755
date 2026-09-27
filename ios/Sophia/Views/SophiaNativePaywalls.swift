@@ -364,7 +364,7 @@ struct SophiaStandardPaywall: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: context.rawValue,
-                    offeringId: store.offering(identifier: context.rawValue)?.identifier,
+                    offeringId: package.presentedOfferingContext.offeringIdentifier,
                     packageId: package.identifier
                 )
                 onPurchased()
@@ -392,8 +392,9 @@ struct SophiaStandardPaywall: View {
 /// Dedicated native paywall for the `quizz` context, opened from the training tab's
 /// "Débloquer" CTA. Rather than a generic feature list, it *sells the training method*:
 /// it explains what training is, shows spaced-repetition statistics, and frames spaced
-/// repetition as the most proven way to anchor lasting knowledge. Purchases still attribute
-/// to the `quizz` RevenueCat offering (single annual plan, 3-day trial).
+/// repetition as the most proven way to anchor lasting knowledge. It sells the annual plan of
+/// the offering RevenueCat currently serves (so price experiments apply here too), with the
+/// `quizz` offering as fallback; the impression and the purchase report that same offering.
 struct SophiaTrainingPaywall: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(\.dismiss) private var dismiss
@@ -662,7 +663,7 @@ struct SophiaTrainingPaywall: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: context.rawValue,
-                    offeringId: store.offering(identifier: context.offeringIdentifier)?.identifier,
+                    offeringId: package.presentedOfferingContext.offeringIdentifier,
                     packageId: package.identifier
                 )
                 onPurchased()
@@ -955,7 +956,7 @@ struct SophiaQuizPaywall: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: context.rawValue,
-                    offeringId: store.offering(identifier: context.rawValue)?.identifier,
+                    offeringId: package.presentedOfferingContext.offeringIdentifier,
                     packageId: package.identifier
                 )
                 onPurchased()
@@ -1674,7 +1675,7 @@ struct SophiaCourseUnlockPaywall: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: context.rawValue,
-                    offeringId: store.offering(identifier: context.rawValue)?.identifier,
+                    offeringId: package.presentedOfferingContext.offeringIdentifier,
                     packageId: package.identifier
                 )
                 onPurchased()
@@ -1775,7 +1776,7 @@ struct SophiaDiscountPaywall: View {
             didTrackDismiss = false
             if tracksAnalytics {
                 AnalyticsService.trackPaywallViewed(context: context.rawValue)
-                store.trackPaywallImpression(paywallId: "native_discount", offeringIdentifier: context.offeringIdentifier)
+                store.trackPaywallImpression(paywallId: "native_discount", offering: store.promoOffering)
             }
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
                 appeared = true
@@ -1964,7 +1965,7 @@ struct SophiaDiscountPaywall: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: context.rawValue,
-                    offeringId: store.offering(identifier: context.offeringIdentifier)?.identifier,
+                    offeringId: package.presentedOfferingContext.offeringIdentifier,
                     packageId: package.identifier
                 )
                 onPurchased()
@@ -2282,7 +2283,7 @@ struct SophiaRetentionPaywall: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: context.rawValue,
-                    offeringId: store.offering(identifier: context.offeringIdentifier)?.identifier,
+                    offeringId: offer.package.presentedOfferingContext.offeringIdentifier,
                     packageId: offer.package.identifier
                 )
                 onPurchased()
