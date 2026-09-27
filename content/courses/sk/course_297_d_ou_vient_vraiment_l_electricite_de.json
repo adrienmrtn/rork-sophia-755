@@ -1,0 +1,141 @@
+{
+  "id": "course_297_d_ou_vient_vraiment_l_electricite_de",
+  "title": "Odkiaľ naozaj pochádza elektrina v tvojej zásuvke?",
+  "subtitle": "Neviditeľná zmes",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Na zásuvke nie je napísané, či prúd pochádza zo slnka, z vetra alebo z uhoľnej elektrárne. Za týmto bežným úkonom sa skrýva zmes, ktorá sa mení z hodiny na hodinu a niekedy aj z krajiny na krajinu.",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "wind_turbines_coal_power_plant_landscape",
+    "ratio": "4:3",
+    "hook": "Zásuvka je všade rovnaká. To, čo je za ňou, nikdy."
+  },
+  "sections": [
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zapojíš telefón a elektrina príde bez štítku. Na zásuvke nič neprezrádza, či ju vyrobilo slnečné svetlo, voda z priehrady alebo palivo spálené v elektrárni. Ani dva domy na tej istej ulici nedokážu určiť elektráreň, z ktorej pochádza každá jednotka prúdu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dôvod je jednoduchý: takmer všetky domácnosti odoberajú prúd z [[elektrickej siete]], spleti káblov, ktorá spája elektrárne a spotrebiteľov na danom území. Napája ju naraz viacero elektrární a ich podiely tvoria [[energetický mix]]. Tento mix opisuje zdroje, ktoré sieť zásobujú, nie oddelený tok solárnej či plynovej elektriny smerujúci rovno do tvojho telefónu. Odpoveď sa teda začína ďaleko za stenami domu."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p1",
+      "title": "Para, turbíny a solárne panely",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uhoľné elektrárne a mnohé jadrové elektrárne využívajú teplo na výrobu pary. Para roztáča [[turbínu]], sústavu lopatiek, ktorá poháňa [[alternátor]], stroj meniaci pohyb na elektrinu. Plynové elektrárne môžu svoje turbíny roztáčať aj priamo horúcimi spalinami. Postupy sú rôzne, elektrina je však rovnaká a vstupuje do tej istej siete."
+        },
+        {
+          "type": "image",
+          "asset": "steam_turbine_generator_hall_power_plant",
+          "ratio": "2:1",
+          "caption": "Starý parný turbogenerátor vystavený v Technickom múzeu vo Viedni: turbína je spojená so svojím alternátorom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Veterné turbíny sa točia vďaka vetru, vodné elektrárne vďaka tečúcej vode. Solárne panely idú inou cestou: vyrábajú elektrinu priamo zo svetla, bez akýchkoľvek otáčajúcich sa lopatiek. Tieto zdroje nepracujú v rovnakých podmienkach. Výroba zo slnka pri západe slnka klesne, výroba z vetra sa mení s počasím. Elektrárne, ktoré spaľujú palivo, potom môžu dodávať prúd, keď ostatné vyrábajú menej."
+        },
+        {
+          "type": "funFact",
+          "text": "Jadrová elektráreň funguje v podstate ako uhoľná: teplo privedie vodu do varu a turbínu poháňa para. Líši sa iba zdroj tepla."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p2",
+      "title": "Mix, ktorý sa mení počas dňa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na poludnie bežia solárne panely naplno, zatiaľ čo kancelárie a byty odoberajú prúd. Po západe slnka sa zastavia, no lampy, vlaky a kuchyne elektrinu potrebujú aj naďalej. Veterné popoludnie môže vystriedať bezveterný večer, zatiaľ čo spotreba stúpa alebo klesá."
+        },
+        {
+          "type": "image",
+          "asset": "electricity_grid_control_room_operators_screens",
+          "ratio": "16:9",
+          "caption": "Mapa vedení vysokého napätia a rozvodní v Spojených štátoch: spleť, ktorú musí prevádzkovateľ sústavy udržiavať v rovnováhe."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Prevádzkovateľ sústavy]], organizácia, ktorá túto spleť riadi, musí neustále udržiavať rovnováhu medzi ponukou a dopytom. Niektoré elektrárne upravujú svoj výkon. Tam, kde sú nainštalované batérie, vracajú elektrinu uloženú skôr. Iné zdroje zaplnia medzeru, ktorú necháva zapadajúce slnko. Neexistuje žiadny denný recept: mix na poludnie sa môže veľmi líšiť od mixu o pár hodín neskôr, hoci tvoja zásuvka sa nezmenila."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p3",
+      "title": "Čo skrýva ročný priemer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V roku 2025 pochádzala približne **štvrtina** (24 %) elektriny vyrobenej veľkými elektrárňami v Spojených štátoch z [[obnoviteľných zdrojov]], teda zo zdrojov, ktoré príroda sama obnovuje: zo slnečného svetla, z vetra a z tečúcej vody. Toto zatiaľ predbežné číslo opisuje celý rok. Neznamená, že obnoviteľné zdroje dodávali rovnaký podiel zakaždým, keď niekto zapol rýchlovarnú kanvicu alebo nabíjal telefón."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ročné percento mieša slnečné popoludnia, veterné noci aj obdobia, keď slnko a vietor vyrábajú málo. Sčítava aj hodiny vysokého a nízkeho dopytu. Ak chceš vedieť, ktoré zdroje napájajú sieť v konkrétnej chvíli, musíš sa pozrieť na jej hodinový mix, nie na ročný priemer. Oba pohľady sú užitočné, no neodpovedajú na tú istú otázku."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p4",
+      "title": "Elektrina odinakiaľ",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hodinový mix si žiada ešte jeden detail: aká elektrina je v tvojej oblasti skutočne k dispozícii. Elektráreň na jednej strane hranice môže zásobovať sieť na druhej strane. Táto dovezená elektrina sa mieša s miestnou výrobou. [[Spotrebný mix]], teda zdroje, ktoré napájajú spotrebiteľov v danej oblasti, sa preto môže líšiť od mixu vyrobeného na mieste."
+        },
+        {
+          "type": "image",
+          "asset": "belchatow_coal_power_plant_cooling_towers_poland",
+          "ratio": "4:3",
+          "caption": "Uhoľná elektráreň Bełchatów v Poľsku, najväčšia v Európe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na tom záleží pri emisiách spojených s tvojou elektrinou. Spaľovanie uhlia alebo plynu uvoľňuje oxid uhličitý, plyn, ktorý otepľuje planétu. Veterné turbíny, solárne panely a jadrové elektrárne ho pri výrobe prúdu priamo nevypúšťajú. Elektrina sa na hranici nezastaví, a jej vplyv tiež nie. Podľa pôvodu dovozu môžu byť emisie spojené s tvojou spotrebou vyššie alebo nižšie, než naznačuje miestna výroba."
+        },
+        {
+          "type": "takeaway",
+          "text": "Elektrina v tvojej zásuvke je zmes, ktorá sa mení z hodiny na hodinu a prekračuje hranice, takže ani ročný priemer, ani miestna výroba samy osebe nepovedia, odkiaľ pochádza."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Delivered to Consumers », sections « The electric power grid », « Electricity sources and types of providers » et « Balancing authorities »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Generated », sections « Turbine driven generators » et « Other types of generators »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Energy Storage for Electricity Generation », section « Uses and benefits of energy storage systems »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity Generation, Capacity, and Sales in the United States », section « Electricity generation », données 2025 provisoires."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity and the Environment », sections « Fossil fuel, biomass, and waste burning power plants » et « Nuclear power plants »."
+    },
+    {
+      "text": "Electricity Maps, « Methodology », sections « Defining Granularity: Spatial and Temporal », « Consumption-based Calculation » et « The Flow-Tracing Algorithm »."
+    },
+    {
+      "text": "B. Tranberg et al., « Real-time carbon accounting method for the European electricity markets », Energy Strategy Reviews, vol. 26, 2019, art. 100367.",
+      "url": "https://doi.org/10.1016/j.esr.2019.100367"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie",
+  "title": "Spotrebuje umelá inteligencia veľa energie?",
+  "subtitle": "Za každou odpoveďou",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Každá odpoveď umelej inteligencie vychádza z budovy plnej strojov, ktoré bežia dňom i nocou. Koľko elektriny to naozaj stojí, od trénovania modelu až po sieť, ktorá ho napája?",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "data_center_server_racks_aisle_blue_lights",
+    "ratio": "4:3",
+    "hook": "Umelá inteligencia vyzerá ako softvér, no každá odpoveď vzniká v celkom skutočnej budove, pripojenej na tú istú sieť ako váš dom."
+  },
+  "sections": [
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Položíte otázku online umelej inteligencii a odpoveď sa objaví za pár sekúnd. Samotná práca sa však neodohráva vo vašom telefóne. Prebieha v budove, ktorou je [[dátové centrum]], plnej strojov, ktoré spracúvajú a ukladajú informácie. Tieto stroje nepretržite spotrebúvajú elektrinu, hoci ich nikto nevidí."
+        },
+        {
+          "type": "paragraph",
+          "text": "Podľa organizácie [[Medzinárodná energetická agentúra]] spotrebovali v roku 2025 všetky dátové centrá dokopy asi **1,5 %** svetovej elektriny. Toto číslo zahŕňa všetky online služby, nielen umelú inteligenciu. Zariadení určených pre umelú inteligenciu však rýchlo pribúda. Krátka odpoveď sama osebe stojí málo. Pre každú z nich však bežia stroje a na jej vytvorenie odoberá prúd naraz viacero systémov."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p1",
+      "title": "Servery, najväčší spotrebitelia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ako [[server]] sa označuje počítač, ktorý spracúva dáta a prevádzkuje online služby. V dátovom centre robia väčšinu výpočtov práve servery, takže sú najväčšími spotrebiteľmi elektriny. Ak rozdelíme účet moderného dátového centra, na servery z neho v priemere pripadá **60 %**. Toto číslo platí pre dátové centrá všeobecne, nie iba pre zariadenia umelej inteligencie."
+        },
+        {
+          "type": "image",
+          "asset": "data_center_cooling_pipes_chillers",
+          "ratio": "3:2",
+          "caption": "Rady serverov v dátovom centre: práve ony spotrebúvajú väčšinu elektriny."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zvyšok slúži na ukladanie a presun dát, chladenie zariadení a chod budovy. Chladenie je dôležité, pretože počítač pri práci vytvára teplo. Bez systému, ktorý ho odvádza, by sa stroje napokon prehriali. Elektrina za odpoveďou umelej inteligencie teda napája oveľa viac než len počítače, ktoré ju vytvárajú."
+        },
+        {
+          "type": "funFact",
+          "text": "Podľa IEA vzrástla spotreba elektriny dátových centier určených pre umelú inteligenciu len za rok 2025 o 50 %."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p2",
+      "title": "Najprv trénovať, potom odpovedať",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Skôr než služba umelej inteligencie začne odpovedať, potrebuje model: systém, ktorý sa z príkladov naučil zákonitosti. Na jeho vytvorenie je potrebné [[trénovanie]], fáza, počas ktorej počítače preosievajú obrovské množstvá dát. Táto práca môže veľmi výkonné stroje zamestnávať dlhý čas."
+        },
+        {
+          "type": "image",
+          "asset": "frontier_supercomputer_oak_ridge_cabinets",
+          "ratio": "4:3",
+          "caption": "Skrine superpočítača Columbia agentúry NASA: práve takéto stroje sa nasadzujú na trénovanie modelu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Keď je model natrénovaný, začína iná práca. Nastupuje [[inferencia]], výpočet, ktorý vytvorí odpoveď na vašu požiadavku. Trénovanie sa pri každej otázke neopakuje celé od začiatku; inferencia sa naopak opakuje pri každej požiadavke. Ktorá z nich časom váži viac? Závisí to od toho, ako je služba postavená a koľko ľudí ju používa. Veľmi vyťažená služba zamestnáva svoje počítače odpovedaním aj medzi dvoma veľkými fázami trénovania."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p3",
+      "title": "Požiadavka bez pevnej ceny",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Koľko elektriny spotrebuje jediná textová požiadavka? Zverejnené odhady nedávajú rovnakú odpoveď. Google, ktorý meral svoju službu v prevádzke, uvádza pre mediánovú textovú požiadavku **0,24 Wh**. Jednotkou, ktorou sa meria množstvo energie, je [[watthodina]] (Wh). Iná štúdia dospela k mediánu **0,31 Wh**, pričom stredná polovica jej štandardných požiadaviek sa pohybuje medzi **0,16 a 0,60 Wh**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tieto čísla si neprotirečia: opisujú rôzne systémy a metódy, nie dve protichodné merania tej istej úlohy. Vynechávajú aj oveľa náročnejšie úlohy. Keď umelú inteligenciu požiadate, aby pred odpoveďou uvažovala v niekoľkých krokoch, zamestná svoje počítače oveľa dlhšie. Energia na jednu požiadavku teda závisí od systému, od spôsobu merania a od požadovanej práce."
+        },
+        {
+          "type": "funFact",
+          "text": "V tej istej štúdii dosahuje požiadavka s dlhým uvažovaním, pri ktorej model pred záverom rozpíše svoje kroky, medián 3,91 Wh, teda viac ako desaťnásobok štandardnej požiadavky."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p4",
+      "title": "Elektrické siete pod tlakom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spleť vedení, ktoré prenášajú prúd z elektrární do domácností a podnikov, sa nazýva [[elektrická sieť]]. Veľké zariadenia umelej inteligencie sa pripájajú na tú istú sieť. Pre predstavu: IEA porovnáva ročnú spotrebu dátového centra určeného pre umelú inteligenciu, teda budovy postavenej najmä na prevádzku týchto služieb, so spotrebou približne **100.000 domácností**."
+        },
+        {
+          "type": "image",
+          "asset": "high_voltage_power_lines_data_center_virginia",
+          "ratio": "4:3",
+          "caption": "Stožiare vedenia veľmi vysokého napätia (750 kV): dátové centrá sa pripájajú na tú istú sieť."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tieto zariadenia majú navyše sklon zoskupovať sa na rovnakých miestach. Keď si v jednej oblasti žiada prúd viacero veľkých lokalít, delia sa o miestnu sieť a existujúce vedenia môže byť potrebné posilniť. Oblasť s rezervnou kapacitou prijme nové lokality ľahšie než oblasť, ktorá je už blízko svojich limitov. Miesto, kde sa infraštruktúra umelej inteligencie stavia, teda pre jej susedov niečo mení."
+        },
+        {
+          "type": "takeaway",
+          "text": "Elektrina umelej inteligencie sa míňa na viacerých úrovniach, od serverov, ktoré treba chladiť, až po miestnu sieť, a cena jednej požiadavky závisí od systému, od merania a od požadovanej práce."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "International Energy Agency (IEA), Key Questions on Energy and AI, 2026, p. 9 et 17."
+    },
+    {
+      "text": "International Energy Agency (IEA), Energy and AI, 2025, p. 13, 38 et 52."
+    },
+    {
+      "text": "Shehabi et al., 2024 United States Data Center Energy Usage Report, Lawrence Berkeley National Laboratory, 2024, p. 22-23."
+    },
+    {
+      "text": "Oviedo et al., Joule, 2026, p. 1.",
+      "url": "https://doi.org/10.1016/j.joule.2026.102430"
+    },
+    {
+      "text": "Elsworth et al., Measuring the Environmental Impact of Delivering AI at Google Scale, Google, 2025, p. 7."
+    }
+  ]
+}

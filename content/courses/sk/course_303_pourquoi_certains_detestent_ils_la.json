@@ -1,0 +1,123 @@
+{
+  "id": "course_303_pourquoi_certains_detestent_ils_la",
+  "title": "Prečo niektorí neznášajú koriander?",
+  "subtitle": "Chuť mydla",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Časti ľudstva chutí koriander ako mydlo. Na vine je jediné písmeno, ktoré sa zmenilo v géne pre čuch, a možno aj dedičstvo po našich predkoch.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "fresh_coriander_cilantro_bunch_leaves",
+    "ratio": "4:3",
+    "hook": "Ten istý lístok, dve chute: pre jedných čerstvá bylinka, pre druhých mydlo. Rozdiel spočíva v jedinom písmene vašej DNA."
+  },
+  "sections": [
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Koriander patrí k najstarším a najpoužívanejším rastlinám na svete. Pestovali ho už starovekí Gréci a Rimania, na varenie aj na liečenie. Nájdeme ho v južnej Ázii, v Číne aj v Latinskej Amerike, v tisíckach receptov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niektorí ľudia ho však nemôžu vystáť. Kým väčšina stolovníkov cíti čerstvú bylinku, oni prisahajú, že žujú mydlo. Nie je to rozmar ani nezvyk: odpoveď sa skrýva v ich nose, presnejšie v ich génoch."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p1",
+      "title": "Čuchové receptory, od nosa po mozog",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Všetko, čo ochutnávame alebo cítime, má chemické zloženie, ktoré musí mozog rozlúštiť. Chuť úzko súvisí s čuchom, pre ktorý vedci používajú termín [[olfakcia]]: veľká časť „chuti“ jedla v skutočnosti prechádza nosom, a to aj počas žuvania."
+        },
+        {
+          "type": "image",
+          "asset": "olfactory_nerve_nasal_cavity_gray_anatomy_plate",
+          "ratio": "3:2",
+          "caption": "Rez nosovou sliznicou pod mikroskopom: práve výstelka nosovej dutiny ukrýva čuchové receptory."
+        },
+        {
+          "type": "paragraph",
+          "text": "V nosovej dutine majú bunky [[čuchové receptory]]. Tie zachytávajú molekuly potravy a menia ich na signál, ktorý čuchové neuróny privedú do mozgu. Každý receptor vzniká podľa určitého génu. Ak sa gén zmení, zmení sa aj receptor a s ním aj vnímaná chuť. Presne to sa deje pri koriandri."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p2",
+      "title": "OR6A2, gén mydlovej chuti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Genetici vinníka odhalili: je to gén s názvom [[OR6A2]]. Kóduje čuchový receptor citlivý na [[nenasýtené aldehydy]], molekuly, ktoré koriander obsahuje. U väčšiny ľudí ich tento receptor prekladá na sviežu bylinkovú vôňu."
+        },
+        {
+          "type": "image",
+          "asset": "dna_double_helix_nhgri_illustration",
+          "ratio": "2:1",
+          "caption": "Dvojzávitnica DNA: na zmenu receptora stačí jediné zmenené písmeno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niektorí ľudia majú na tomto géne [[jednonukleotidový polymorfizmus]], skrátene SNP: líši sa jediné „písmeno“ DNA. Táto drobná zmena ovplyvní, ako sa gén prejavuje, a teda aj receptor, ktorý vytvára. Receptor stále funguje: zachytí molekulu a pošle signál do mozgu. Správa však už nie je presná. Namiesto čerstvej bylinky mozog prečíta: mydlo."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p3",
+      "title": "Prečo táto mutácia prežila?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tento variant sa u človeka neobjavuje náhodne. Z rodičov na deti sa dedí už stáročia. V závislosti od oblasti sveta ho nosí **4 %** až **20 %** obyvateľstva. Prečo sa však taká vlastnosť udržala, keď toľko kuchýň robí z koriandra základnú surovinu?"
+        },
+        {
+          "type": "image",
+          "asset": "cilantro_lime_mexican_tacos_street_food",
+          "ratio": "3:2",
+          "caption": "Stánok s tacos v Spojených štátoch: v mexickej kuchyni je čerstvý koriander základnou surovinou."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niektorí evoluční biológovia ponúkajú hypotézu. V dávnom svete mali mydlovú chuť aj niektoré jedovaté rastliny. Receptor, vďaka ktorému je táto chuť odpudivá, by slúžil ako mechanizmus prežitia: odvracal našich predkov od nebezpečných rastlín. Neškodný koriander by bol len vedľajšou obeťou tohto poplašného signálu."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p4",
+      "title": "Dá sa koriander naučiť mať rád?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dobrá správa pre tých, ktorí snívajú o poriadnom tacu: mozog sa dá preučiť. Receptor sa nezmení, no časom sa môžete naučiť ignorovať signál, ktorý posiela do mozgu. Metódu vystihuje jediné slovo: opakovanie."
+        },
+        {
+          "type": "paragraph",
+          "text": "V praxi začnete tak, že trochu koriandra pridáte do jedla, ktoré už máte radi. Mydlový tón môžete aj prekryť výraznou chuťou, citrónovou šťavou alebo octom. Po dostatočnom počte skúseností bez nepríjemného prekvapenia mozog napokon uzná, že koriander nie je hrozba, a znechutenie slabne."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mydlová chuť koriandra pochádza z variantu génu OR6A2, ktorý má podľa oblasti 4 až 20 % ľudí: ich čuchový receptor nesprávne prekladá jeho aldehydy, čo je možno pradávny ochranný reflex proti jedovatým rastlinám."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "N. Eriksson, S. Wu, C. B. Do et al., « A genetic variant near olfactory receptor genes influences cilantro preference », Flavour, vol. 1, 2012, art. 22.",
+      "url": "https://doi.org/10.1186/2044-7248-1-22"
+    },
+    {
+      "text": "Academic Path, « Why coriander tastes like soap ».",
+      "url": "https://academicpath.org/why-coriander-tastes-like-soap"
+    }
+  ]
+}
