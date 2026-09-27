@@ -395,6 +395,11 @@ copiées de `Sophia_yearly`, essai 3 jours en offre d'introduction sauf mention 
 | `Sophia_weekly_699` | 6,99 € / semaine | aucun | vague 2 |
 | `discount_yearly_2999` | 29,99 € | aucun | vague 2 |
 
+**Ou automatisé** : workflow GitHub « Pricing tests » (`.github/workflows/pricing-tests.yml`,
+manifeste `appstore/subscriptions/price_tests.json`) : `appstore · plan` puis `apply` créent les 7
+abonnements avec localisations, disponibilité, grille de prix et essai ; `status` puis `submit`
+soumettent le groupe. Détail dans `docs/soumission-apple-lundi.md` § 0.
+
 Soumettre les 7 d'un coup (revue sans binaire, 1 à 3 jours). Vérifier la grille générée pour
 `_t50` et `_t25` en Türkiye, Mexique, Brésil, Inde ; corriger le storefront à la main si Apple
 arrondit loin de 50 % / 25 %.
@@ -404,7 +409,9 @@ arrondit loin de 50 % / 25 %.
 en offre sur les annuels). **Aligner** `p1y` 47,99 → 39,99 € et `annual-promo` 23,99 → 19,99 €.
 Aucune revue. Puis importer les produits Play dans RevenueCat.
 
-**RevenueCat (≈ 2 h, dashboard ou MCP avec une clé `read_write`)**
+**RevenueCat (≈ 2 h, dashboard ou MCP avec une clé `read_write`)** — les points 1 et 3 sont
+couverts par le même workflow (`revenuecat · plan` puis `apply`, secret `REVENUECAT_SECRET_API_KEY`) ;
+audiences et expériences restent manuelles, l'API v2 ne les expose pas.
 
 1. Entitlement `premium` → rattacher `Sophia_yearly_5999` (`prod2ad0152b81`) et
    `Sophia_monthly_notrial` (`prodbc71e740f7`), ainsi que tous les produits Play créés.

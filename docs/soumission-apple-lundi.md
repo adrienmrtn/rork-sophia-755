@@ -9,6 +9,31 @@ nouveau binaire : le bouton « Soumettre pour examen » sur chaque produit suffi
 Deux produits déjà approuvés n'ont rien à faire chez Apple : `Sophia_yearly_5999` et
 `Sophia_monthly_notrial` (à rattacher à l'entitlement dans RevenueCat seulement).
 
+## 0. Option automatisée (GitHub Actions)
+
+Tout le § 1 à § 5 est scripté. Onglet **Actions → Pricing tests → Run workflow** :
+
+1. `appstore · plan` : lit le compte et liste ce qui serait créé. N'écrit rien.
+2. `appstore · apply` : crée les 7 abonnements dans le groupe « Sophia Premium » (mêmes
+   réglages que ce document : niveau du groupe copié de `Sophia_yearly`, 12 localisations,
+   tous les pays, grille de prix Apple depuis le prix France, Türkiye forcée à 999,99 /
+   499,99 TRY pour les paliers, essai gratuit 3 jours, capture d'examen copiée de
+   `Sophia_yearly`, notes d'examen du § 4). Relançable sans risque : rien n'est créé deux fois.
+3. `appstore · status` : état de chaque abonnement ; attendre « READY_TO_SUBMIT ».
+4. `appstore · submit` : soumet le groupe à Apple.
+5. `revenuecat · plan` puis `apply` : crée les produits dans RevenueCat (App Store et Play),
+   rattache tout à `premium` (y compris les deux produits de juillet), crée les 13 offerings
+   et leurs packages.
+
+Secrets requis dans le repo : `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_PRIVATE_KEY` (déjà utilisés
+par le workflow « App Store metadata ») et `REVENUECAT_SECRET_API_KEY` (clé v2 avec droits
+d'écriture, à créer dans le dashboard RevenueCat, jamais dans le chat ni dans le repo).
+Source de vérité : `appstore/subscriptions/price_tests.json`. Ce qui reste manuel : Play
+Console (§ 6) et, dans RevenueCat, les audiences et les expériences.
+
+Le script n'a pas pu être exécuté contre le compte depuis l'environnement de travail :
+lancer `plan` en premier, lire la sortie, puis `apply`.
+
 ## 1. Les sept produits
 
 | # | Product ID (exact) | Nom de référence (interne) | Durée | Prix de base, France | Offre d'introduction | Copié de |

@@ -90,7 +90,10 @@ code iOS et Android. Coche les cases des actions que tu valides.
   discount côté app (bucket + attribut `discount_bucket`), durée d'essai dynamique.
 - [ ] Tests prix, stores (lundi 28/09) : 7 produits iOS (49,99 ; 69,99 ; 29,99 ; paliers 50 % et
   25 % ; hebdo 6,99 ; discount 29,99) et base plans Play équivalents, rattachés à `premium` ;
-  Android aligné (47,99 → 39,99 €, promo 23,99 → 19,99 €).
+  Android aligné (47,99 → 39,99 €, promo 23,99 → 19,99 €). **Côté iOS et RevenueCat, scripté** :
+  workflow « Pricing tests » (`plan` → `apply` → `status` → `submit`), manifeste
+  `appstore/subscriptions/price_tests.json`, secret `REVENUECAT_SECRET_API_KEY` à ajouter ;
+  Play Console, audiences et expériences restent manuels.
 - [ ] Tests prix, RevenueCat (lundi, puis J0) : rattacher `Sophia_yearly_5999` et
   `Sophia_monthly_notrial` à `premium`, 5 audiences pays, 12 offerings, 5 expériences en
   brouillon ; achat sandbox par offering ; lancement des 5 le jour de la validation Apple.
