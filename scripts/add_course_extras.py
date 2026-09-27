@@ -47,6 +47,7 @@ from add_courses_to_catalog import (  # noqa: E402
     GLOSSARY_ENTRY_RE,
     GLOSSARY_SWIFT,
     LOCALES,
+    QUIZ_KEYS,
     QUIZZES,
     dump_json,
     load_json,
@@ -158,6 +159,10 @@ def validate_extras(extras: dict, path: Path) -> dict:
             question["id"] = f"{course_id}_q{number}"
             question.setdefault("type", "mcq")
             validate_question(question, f"{path.name} quiz.{lang} q{number}")
+        # Same key order as the catalogs, so the two copies compare equal byte for byte.
+        quiz[lang] = [
+            {key: question[key] for key in QUIZ_KEYS if key in question} for question in questions
+        ]
     extras["_courses"] = courses
     return extras
 
