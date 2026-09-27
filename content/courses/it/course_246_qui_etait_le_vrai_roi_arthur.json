@@ -1,0 +1,141 @@
+{
+  "id": "course_246_qui_etait_le_vrai_roi_arthur",
+  "title": "Chi era il vero re Artù?",
+  "subtitle": "Una guerra diventata leggenda",
+  "subject": "mythologie",
+  "subcategory": "Leggende e creature",
+  "description": "Nessun documento del suo tempo, e nemmeno il suo nome nel più antico racconto della sua vittoria più grande. Ci vogliono tre secoli perché un testo nomini Artù, e molto di più perché qualcuno ne faccia un re.",
+  "author": "angela-bouma",
+  "hero": {
+    "image": "tintagel_castle_ruins_cornwall_coast",
+    "ratio": "4:3",
+    "hook": "La storia ci dà una guerra; la leggenda ne fa un re."
+  },
+  "sections": [
+    {
+      "id": "course_246_qui_etait_le_vrai_roi_arthur_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Artù non ha atto di nascita, né documenti dell'epoca, né una sola riga scritta negli anni in cui sarebbe vissuto. La tradizione nasce nel caos della Britannia dopo Roma: crollo politico, migrazioni, guerra. Nel **secolo V** l'amministrazione romana non governa più l'isola. I suoi abitanti, i Britanni, subiscono la pressione di popoli arrivati dal continente, che le fonti chiameranno poi [[Sassoni]], Angli e Iuti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Capi locali e signori della guerra prendono il testimone per difendere un territorio che prima proteggeva Roma. Ma sul momento non si scrive quasi nulla. Colui che diventerà **Artù** va ricostruito da frammenti, scritti secoli dopo da persone che stanno già trasformando il ricordo in leggenda."
+        }
+      ]
+    },
+    {
+      "id": "course_246_qui_etait_le_vrai_roi_arthur_p1",
+      "title": "Gildas e la battaglia di Badon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La fonte più importante che ci sia arrivata è [[Gildas]], un chierico britanno del **secolo VI**. Descrive il caos tra i Britanni e gli invasori sassoni, e ricorda una grande vittoria britanna: la [[battaglia di Badon]]. Non nomina mai Artù. Quel silenzio pesa, perché Badon diventerà poi il trionfo fondante della leggenda arturiana. Il capo che nomina è un altro uomo: [[Ambrosio Aureliano]]."
+        },
+        {
+          "type": "image",
+          "asset": "badbury_rings_hillfort_dorset_aerial",
+          "ratio": "4:3",
+          "caption": "I bastioni di Badbury Rings, nel Dorset, uno dei luoghi proposti per la battaglia di Badon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Badon è l'àncora del racconto. Gildas la colloca nella memoria viva della sua generazione, verso la fine del **secolo V** o l'inizio del VI, ma la data esatta e il luogo restano discussi. Al di là dei dettagli contestati, un punto regge: una fonte antica registra una vera vittoria britanna."
+        }
+      ]
+    },
+    {
+      "id": "course_246_qui_etait_le_vrai_roi_arthur_p2",
+      "title": "Ambrosio, il candidato ideale",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gildas descrive **Ambrosio** come l'erede di una grande famiglia romano-britannica: i suoi genitori furono uccisi nelle violenze, e lui fu tra i pochi a sopravvivere alla catastrofe. Le forze britanne disperse si raccolsero intorno a lui e ottennero una prima vittoria. Poi la guerra si trascinò per anni, tra successi britanni e sassoni, fino a Badon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gildas non dice mai se a Badon comandasse Ambrosio o se qualcun altro avesse preso il suo posto. Autori più tardi lo collegano comunque ad Artù, ma nelle testimonianze più antiche nulla li rende la stessa persona. È solo un **candidato seducente** per la leggenda: un capo prestigioso, dell'epoca giusta, legato a una vittoria famosa che Gildas non attribuisce a nessuno in particolare."
+        }
+      ]
+    },
+    {
+      "id": "course_246_qui_etait_le_vrai_roi_arthur_p3",
+      "title": "Artù compare, tre secoli dopo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Artù compare per la prima volta col suo nome nella *Historia Brittonum*, un testo latino del **secolo IX** spesso attribuito a uno scrittore gallese, [[Nennio]]. Lì non è re. Lo chiamano *dux bellorum*, “capo delle battaglie”: combatte al fianco dei re britanni e sconfigge i Sassoni in una serie di battaglie, l'ultima delle quali è Badon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niente Camelot. Niente Tavola rotonda. Niente spada nella roccia. Questo Artù è un capo militare, non un sovrano, più vicino ad Ambrosio che al re che immaginiamo oggi. Lo scarto di tempo pesa: Gildas, molto più vicino ai fatti, non lo nomina mai. La *Historia Brittonum* arriva **trecento anni** dopo, proprio il tipo di distanza che rende una storia difficile da credere."
+        },
+        {
+          "type": "funFact",
+          "text": "Il Graal, la ricerca che più di tutte associamo a re Artù, non compare in nessuna delle fonti più antiche. Entra nella leggenda secoli dopo, grazie ai romanzieri francesi, la stessa tradizione che un giorno ci regalerà i cavalli a noci di cocco dei Monty Python."
+        }
+      ]
+    },
+    {
+      "id": "course_246_qui_etait_le_vrai_roi_arthur_p4",
+      "title": "Un re per legittimare i Normanni",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La Britannia ha bisogno di un eroe, così se ne costruisce uno, e le date spiegano perché. [[Goffredo di Monmouth]] scrive il suo Artù incoronato, un vero re, nel **secolo XII**, pochi decenni dopo la [[conquista normanna]]. I nuovi padroni dell'Inghilterra devono allora dimostrare il loro diritto a un trono appena preso con la forza."
+        },
+        {
+          "type": "image",
+          "asset": "king_arthur_enthroned_royal_ms_20_a_ii",
+          "ratio": "5:4",
+          "caption": "Re Artù affronta Mordred, episodio già raccontato da Goffredo di Monmouth. Dipinto di William Hatherell, inizio del secolo XX."
+        },
+        {
+          "type": "paragraph",
+          "text": "Artù, re britanno di prima dei Sassoni, vincitore degli invasori e sovrano glorioso, offre all'Inghilterra normanna la **legittimità antica** che la sola conquista non dà: un antenato leggendario di cui nessuno al potere deve rispondere, e un'età dell'oro che il loro regno può dire di restaurare. Quasi tutte le leggende di fondazione funzionano così: un filo sottile di fatti, e un bisogno politico abbastanza preciso da spiegare quale eroe si costruisce, e perché."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "secolo V",
+              "title": "Roma lascia la Britannia",
+              "detail": "I capi locali difendono l'isola da soli."
+            },
+            {
+              "date": "intorno al 500",
+              "title": "Battaglia di Badon",
+              "detail": "Una vera vittoria britanna, senza il nome di un capo."
+            },
+            {
+              "date": "secolo VI",
+              "title": "Gildas scrive",
+              "detail": "Nomina Ambrosio, mai Artù."
+            },
+            {
+              "date": "secolo IX",
+              "title": "Historia Brittonum",
+              "detail": "Compare Artù, “capo delle battaglie”."
+            },
+            {
+              "date": "secolo XII",
+              "title": "Goffredo di Monmouth",
+              "detail": "Artù diventa re, dopo la conquista normanna."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Dietro re Artù ci sono una guerra vera e una vittoria vera, ma il suo nome compare solo tre secoli dopo, e la sua corona viene da un'Inghilterra normanna in cerca di legittimità."
+        }
+      ]
+    }
+  ]
+}
