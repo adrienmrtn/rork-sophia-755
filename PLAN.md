@@ -88,13 +88,23 @@ code iOS et Android. Coche les cases des actions que tu valides.
   entraînement alignés sur l'offering servie par l'expérience (urgent) ; textes de repli sans
   prix codé en dur ; impressions vérifiées ; puis pour la vague 2 : package `$rc_weekly`, test
   discount côté app (bucket + attribut `discount_bucket`), durée d'essai dynamique.
-- [ ] Tests prix, stores (lundi 28/09) : 7 produits iOS (49,99 ; 69,99 ; 29,99 ; paliers 50 % et
-  25 % ; hebdo 6,99 ; discount 29,99) et base plans Play équivalents, rattachés à `premium` ;
-  Android aligné (47,99 → 39,99 €, promo 23,99 → 19,99 €). **Côté iOS et RevenueCat, scripté** :
-  workflow « Pricing tests » (`plan` → `apply` → `status` → `submit`), manifeste
-  `appstore/subscriptions/price_tests.json`, secret `REVENUECAT_SECRET_API_KEY` à ajouter ;
-  Play Console, audiences et expériences restent manuels.
-- [ ] Tests prix, RevenueCat (lundi, puis J0) : rattacher `Sophia_yearly_5999` et
-  `Sophia_monthly_notrial` à `premium`, 5 audiences pays, 12 offerings, 5 expériences en
-  brouillon ; achat sandbox par offering ; lancement des 5 le jour de la validation Apple.
+- [x] Tests prix, App Store Connect — **fait le 27/09 par le workflow « Pricing tests »** : les 7
+  produits (49,99 ; 69,99 ; 29,99 ; paliers 50 % et 25 % ; hebdo 6,99 ; discount 29,99) existent
+  avec 12 localisations, 175 pays, grille Apple vérifiée (`prices` : paliers à 50–57 % et 25–29 %
+  de `Sophia_yearly` en TR, MX, BR, IN), essai 3 jours sur les annuels, capture d'examen.
+  Türkiye forcée à 999,99 / 499,99 TRY. Soumission du groupe lancée (`submit`) ; à confirmer par
+  `status` = `WAITING_FOR_REVIEW`, puis attendre la validation Apple (1 à 3 jours).
+- [ ] Tests prix, Play Console (manuel, sans revue) : abonnement `sophia_pro`, 9 base plans
+  `p1y-4999`, `p1y-5999`, `p1y-6999`, `p1y-2999`, `p1y-t50`, `p1y-t25`, `monthly-notrial`,
+  `weekly-699`, `annual-promo-2999` (essai 3 j en offre sur les annuels) ; aligner `p1y`
+  47,99 → 39,99 € et `annual-promo` 23,99 → 19,99 €. Les produits RevenueCat correspondants
+  existent déjà, rien à importer ensuite.
+- [x] Tests prix, RevenueCat catalogue — **fait le 27/09 par le workflow** (`revenuecat · apply`) :
+  14 produits créés (7 App Store, 7 Play), 16 produits rattachés à `premium` dont
+  `Sophia_yearly_5999` et `Sophia_monthly_notrial`, 13 offerings avec leurs packages
+  (`p__4999`, `p__5999`, `p__6999`, `s__4999_mtrial`, `s__3999_mnotrial`, `s__4999_mnotrial`,
+  `b__2999`, `b__4999`, `tr__t50`, `tr__t25`, `c__t50`, `c__t25`, `offre_discount_2999`).
+- [ ] Tests prix, RevenueCat dashboard (manuel, pas d'API) : 5 audiences pays (§ 5.2 du plan),
+  5 expériences en brouillon (§ 7.3) ; achat sandbox par offering ; lancement des 5 le jour de la
+  validation Apple.
 - [ ] Sécurité : régénérer la clé API v2 RevenueCat après l'avoir mise dans l'environnement.
