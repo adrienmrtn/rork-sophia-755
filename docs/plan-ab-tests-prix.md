@@ -410,8 +410,11 @@ en offre sur les annuels ; `p1y-5999` et `monthly-notrial` n'existaient que côt
 Aucune revue. Puis importer les produits Play dans RevenueCat.
 
 **RevenueCat (≈ 2 h, dashboard ou MCP avec une clé `read_write`)** — les points 1 et 3 sont
-couverts par le même workflow (`revenuecat · plan` puis `apply`, secret `REVENUECAT_SECRET_API_KEY`) ;
-audiences et expériences restent manuelles, l'API v2 ne les expose pas.
+couverts par le workflow (`revenuecat · plan` puis `apply`, secret `REVENUECAT_SECRET_API_KEY`) ;
+les points 2 et 4 aussi (`revenuecat-experiments · plan` puis `apply`, l'API v2 crée audiences et
+expériences en brouillon ; il n'y a pas d'endpoint pour les démarrer, le Start reste un clic).
+Décision du 27/09 : Play Console est reporté après les résultats iOS, les audiences portent donc
+une condition `platform = ios` et Android garde l'offering courante pendant les tests.
 
 1. Entitlement `premium` → rattacher `Sophia_yearly_5999` (`prod2ad0152b81`) et
    `Sophia_monthly_notrial` (`prodbc71e740f7`), ainsi que tous les produits Play créés.

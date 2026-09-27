@@ -94,7 +94,7 @@ code iOS et Android. Coche les cases des actions que tu valides.
   de `Sophia_yearly` en TR, MX, BR, IN), essai 3 jours sur les annuels, capture d'examen.
   Türkiye forcée à 999,99 / 499,99 TRY. Soumission du groupe lancée (`submit`) ; à confirmer par
   `status` = `WAITING_FOR_REVIEW`, puis attendre la validation Apple (1 à 3 jours).
-- [ ] Tests prix, Play Console (manuel, sans revue) : abonnement `sophia_pro`, 9 base plans
+- [ ] Tests prix, Play Console — **reporté après les résultats iOS** (décision du 27/09) : abonnement `sophia_pro`, 9 base plans
   `p1y-4999`, `p1y-5999`, `p1y-6999`, `p1y-2999`, `p1y-t50`, `p1y-t25`, `monthly-notrial`,
   `weekly-699`, `annual-promo-2999` (essai 3 j en offre sur les annuels) ; aligner `p1y`
   47,99 → 39,99 € et `annual-promo` 23,99 → 19,99 €. Les produits RevenueCat correspondants
@@ -104,7 +104,11 @@ code iOS et Android. Coche les cases des actions que tu valides.
   `Sophia_yearly_5999` et `Sophia_monthly_notrial`, 13 offerings avec leurs packages
   (`p__4999`, `p__5999`, `p__6999`, `s__4999_mtrial`, `s__3999_mnotrial`, `s__4999_mnotrial`,
   `b__2999`, `b__4999`, `tr__t50`, `tr__t25`, `c__t50`, `c__t25`, `offre_discount_2999`).
-- [ ] Tests prix, RevenueCat dashboard (manuel, pas d'API) : 5 audiences pays (§ 5.2 du plan),
-  5 expériences en brouillon (§ 7.3) ; achat sandbox par offering ; lancement des 5 le jour de la
-  validation Apple.
+- [ ] Tests prix, audiences et expériences RevenueCat — **scripté** (`revenuecat-experiments ·
+  plan` puis `apply`, permissions `audiences:audiences:read_write` et
+  `project_configuration:experiments:read_write` sur la clé) : 5 audiences pays **iOS uniquement**
+  (Play reporté après les résultats, Android garde l'offering courante), 5 expériences en
+  brouillon, contrôle `fin_onboarding`, 100 % des nouveaux clients. Reste manuel : achat sandbox
+  par offering, puis **Start** sur chaque brouillon dans le dashboard le jour de la validation Apple
+  (pas d'endpoint documenté pour démarrer).
 - [ ] Sécurité : régénérer la clé API v2 RevenueCat après l'avoir mise dans l'environnement.
