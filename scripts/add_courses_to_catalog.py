@@ -43,6 +43,11 @@ ROOT = Path(__file__).resolve().parents[1]
 CONTENT = ROOT / "content" / "courses"
 QUIZZES = ROOT / "content" / "locales"
 COURSE_DATA = ROOT / "ios" / "Sophia" / "Services" / "CourseData.swift"
+
+def _resplit_course_data() -> None:
+    """CourseData.swift is not compiled: the chunks under CourseDataChunks/ are."""
+    import subprocess, sys
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "split_course_data.py")], check=True)
 LOCALES = ROOT / "ios" / "Sophia" / "Resources" / "Locales"
 IMAGE_MAP_SWIFT = ROOT / "ios" / "Sophia" / "Utilities" / "CourseImageMap.swift"
 IMAGE_MAP_ANDROID = ROOT / "android" / "app" / "src" / "main" / "assets" / "course_image_map.json"
@@ -315,6 +320,7 @@ def main() -> int:
 
     if "fr" in languages:
         COURSE_DATA.write_text(swift_source, encoding="utf-8")
+        _resplit_course_data()
     for lang in changed_catalogs:
         dump_json(LOCALES / f"courses.{lang}.json", catalogs[lang])
     IMAGE_MAP_SWIFT.write_text(image_map_swift, encoding="utf-8")
