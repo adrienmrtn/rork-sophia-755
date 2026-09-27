@@ -1,14 +1,15 @@
 {
   "id": "course_149_la_joconde",
-  "title": "Che cosa ha reso “La Gioconda” così famosa?",
-  "subtitle": "1503-1519",
+  "title": "La Gioconda contava davvero per Leonardo?",
+  "subtitle": "1503",
   "subject": "art",
   "subcategory": "Opere iconiche",
-  "description": "Dipinta da **Leonardo da Vinci** tra il **1503** e il **1519**, *La Gioconda* è diventata l'icona assoluta del Louvre. Tecnica, sorriso misterioso... e un furto nel **1911** che ha cambiato tutto.",
+  "description": "È il dipinto più famoso del mondo. Eppure, nel 1503, il suo stesso autore aveva di meglio da fare che il ritratto della moglie di un mercante.",
+  "author": "dusan-nikolic",
   "hero": {
     "image": "la_joconde",
     "ratio": "16:9",
-    "hook": "Un sorriso, un furto, un mito: come un ritratto è diventato l'opera più celebre del mondo."
+    "hook": "Il quadro più guardato del pianeta forse fu, per Leonardo, un lavoro di ripiego."
   },
   "sections": [
     {
@@ -18,89 +19,93 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "*La Gioconda*, dipinta tra il **1503** e il **1519** da **Leonardo da Vinci**, è il quadro più visitato del mondo. Esposta al **Louvre**, affascina tanto per la tecnica quanto per la sua storia. Non è solo un bel ritratto. È un mito fabbricato dall'arte, dalla scienza e da un fatto di cronaca."
+          "text": "Per essere uno dei dipinti più celebri del mondo, della *Gioconda* sappiamo pochissime cose certe. Gli storici dell'arte concordano sull'essenziale: Leonardo da Vinci la dipinse a Firenze tra il **1503 e il 1506**. Nel **1517** la portò con sé in Francia, e la tavola finì nella collezione del re [[Francesco I]]."
         },
         {
           "type": "paragraph",
-          "text": "Perché questo volto e non un altro? Perché Leonardo vi ha concentrato delle innovazioni, e perché un furto spettacolare l'ha resa celebre su scala planetaria."
+          "text": "Il vuoto storico si è riempito di leggende. Del quadro si parla come di una donna, “lei”. Il suo mezzo sorriso viene detto misterioso. Dopo il furto del **1911** si dubitò perfino della sua autenticità. Tutte queste storie ne hanno fatto la gloria, ma ne hanno cancellato il contesto. Eppure, quando Leonardo la dipinse, quest'opera forse non contava nulla per lui."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p1",
-      "title": "Leonardo e lo sfumato",
+      "title": "Chi è la Gioconda?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il ritratto inizia a Firenze verso il **1503**. Il committente è il mercante **Francesco del Giocondo**. Il modello sarebbe sua moglie, [[Lisa Gherardini]]. Ma Leonardo non consegna mai il quadro. Lo tiene, lo ritocca per anni, e lo porta in Francia, dove muore nel **1519**."
+          "text": "Gli storici dell'arte ammettono quasi tutti che la modella sia [[Lisa Gherardini]], moglie di **Francesco del Giocondo**, mercante e piccolo notabile del governo fiorentino. Da qui il nome di “Gioconda”. L'identificazione si basa sulla biografia di Leonardo pubblicata da [[Giorgio Vasari]] nel **1550** e poi nel **1568**, nelle sue *Vite de' più eccellenti pittori, scultori e architettori*."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_leonardo_da_vinci_louvre_painting",
-          "ratio": "4:3",
-          "caption": "La Gioconda al Louvre: un piccolo pannello di pioppo diventato icona mondiale"
+          "asset": "vasari_lives_of_the_artists_1568_title_page",
+          "ratio": "3:4",
+          "caption": "Le Vite di Vasari, edizione fiorentina del 1568: il testo che dà un nome alla modella."
         },
         {
           "type": "paragraph",
-          "text": "La sua tecnica firma è lo [[sfumato leonardesco]]: velature, strati sottilissimi, che cancellano i contorni. Niente più linea dura. Il volto si fonde nell'aria. Leonardo aggiunge anche la [[Prospettiva aerea]]: il paesaggio lontano azzurreggia e si addolcisce, come nella vista reale."
+          "text": "Perché Francesco commissionò questo ritratto? Non lo sappiamo. Leonardo ci si mise all'inizio del **1503**. Il seguito resta discusso: per gli storici, il racconto di Vasari è un'invenzione letteraria, quella di un biografo che riempie i vuoti con una bella storia. A metà del **1506** Leonardo lasciò Firenze per Milano, in cerca di un impiego migliore. Il ritratto, incompiuto, partì con lui."
+        },
+        {
+          "type": "funFact",
+          "text": "Secondo Vasari, Leonardo avrebbe ingaggiato musici e buffoni per distrarre la modella durante le sedute di posa. Gli storici ci vedono un'invenzione del biografo, ma è proprio questa storia ad aver lanciato il mito del “sorriso della Gioconda”."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p2",
-      "title": "Il sorriso che gioca con l'occhio",
+      "title": "Anghiari: una commissione più prestigiosa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il famoso sorriso non è solo un'emozione dipinta. Gioca con la nostra [[Visione periferica]]. Quando fissi gli occhi del modello, i bordi della retina vedono la bocca in ombre morbide: il sorriso sembra presente. Quando guardi dritto la bocca, si attenua."
+          "text": "Nell'ottobre del **1503** il governo fiorentino incaricò Leonardo di dipingere la [[Battaglia di Anghiari]] a [[Palazzo Vecchio]], sede della Repubblica di Firenze. Il dipinto murale doveva celebrare la vittoria di Firenze su Milano nel **1440**. Nel Rinascimento una scena storica valeva molto più di un ritratto. Insieme ai soggetti religiosi, mitologici e allegorici, era considerata la forma d'arte più alta."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_smile_detail_close_up",
-          "ratio": "1:1",
-          "caption": "Più lo fissi, più il sorriso sembra sottrarsi"
-        },
-        {
-          "type": "funFact",
-          "text": "Leonardo, insieme pittore e scienziato, studiava l'ottica. Il mistero del sorriso poggia in parte su una conoscenza precisa del modo in cui l'occhio umano tratta le ombre."
+          "asset": "rubens_copy_battle_of_anghiari_louvre_drawing",
+          "ratio": "16:9",
+          "caption": "La copia di Rubens della mischia centrale: unica traccia della grande decorazione incompiuta di Palazzo Vecchio."
         },
         {
           "type": "paragraph",
-          "text": "Risultato: il volto sembra vivo, mutevole, quasi consapevole del nostro sguardo."
+          "text": "Di fronte a una grande commissione pubblica, il ritratto privato della moglie di un piccolo funzionario pesava poco. Già dal dicembre **1503** Leonardo dedicò sempre più tempo alla grande composizione. Prestigio e paga migliore: la Gioconda poteva aspettare. Alla fine del suo secondo soggiorno fiorentino il ritratto non era finito. Nemmeno la *Battaglia di Anghiari*: ne restano solo gli studi preparatori e le loro copie."
+        },
+        {
+          "type": "funFact",
+          "text": "È possibile che solo il paesaggio sullo sfondo fosse ancora incompiuto quando Leonardo partì per Milano nel 1506."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p3",
-      "title": "1911: il furto che inventa la celebrità",
+      "title": "Come nasce un'icona",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nel secolo XIX *La Gioconda* è ammirata, ma non è ancora l'opera numero 1 del Louvre. Tutto cambia il **21 agosto 1911**. [[Vincenzo Peruggia]], un vetraio italiano del museo, la ruba: è [[Il furto della Gioconda (1911)]]. La nasconde sotto il camice e esce con calma."
+          "text": "Leonardo morì il **2 maggio 1519** ad Amboise, in Francia. La *Gioconda* non arrivò mai in casa Giocondo. Dopo la Rivoluzione francese la collezione reale divenne pubblica e il dipinto entrò al **Louvre**. Dall'inizio del secolo XIX il suo sorriso è stato descritto in mille modi, da divino a sensuale."
         },
         {
           "type": "image",
           "asset": "mona_lisa_stolen_1911_newspaper_headline",
           "ratio": "4:3",
-          "caption": "1911: l'assenza del quadro fa il titolo e crea una star"
+          "caption": "La prima pagina dell'Excelsior nel gennaio 1914: il ritorno della Gioconda dopo il furto del 1911."
         },
         {
           "type": "paragraph",
-          "text": "L'inchiesta vira allo scandalo. Il poeta [[Guillaume Apollinaire]] è imprigionato per un po'. [[Pablo Picasso]] viene interrogato. Quando il quadro riappare nel **1913**, non è più soltanto una pittura. È una celebrità."
+          "text": "La svolta fu il furto del quadro dal museo, nel **1911**. I giornali trasformarono Monna Lisa in un caso mondiale. Da allora la stampa popolare e i romanzi rimettono spesso in dubbio l'autenticità dell'opera e l'identità della modella, senza alcuna base in una vera analisi storica. Il dipinto è diventato il centro di storie sempre più numerose, che si raccontano ancora oggi."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p4",
-      "title": "Un'icona sotto vetro",
+      "title": "Un quadro che ha superato il suo autore",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oggi, dipinta su legno di pioppo, vive dietro un [[Vetro antiproiettile]], in una vetrina climatizzata. Attacchi all'acido, lanci di oggetti: la protezione è diventata necessaria. E le parodie, da Duchamp fino a Internet, provano che è diventata un linguaggio universale."
+          "text": "Più di **500 anni** dopo l'inizio del ritratto, Lisa del Giocondo attira più che mai. Chiuso dietro un vetro blindato al Louvre, il dipinto è separato dal suo contesto storico. Liberato da quel contesto, è diventato un'icona universale. Questo status ha un prezzo: in epoca moderna non si è più tentato alcun restauro."
         },
         {
           "type": "timeline",
@@ -108,30 +113,47 @@
             {
               "date": "1503",
               "title": "Inizio del ritratto",
-              "detail": "Leonardo inizia La Gioconda a Firenze."
+              "detail": "Leonardo comincia il ritratto di Lisa Gherardini a Firenze."
+            },
+            {
+              "date": "ott. 1503",
+              "title": "La commissione di Anghiari",
+              "detail": "Firenze gli affida un grande dipinto murale per Palazzo Vecchio."
+            },
+            {
+              "date": "1506",
+              "title": "Partenza per Milano",
+              "detail": "Leonardo lascia Firenze con il ritratto incompiuto sotto il braccio."
             },
             {
               "date": "1519",
               "title": "Morte di Leonardo",
-              "detail": "Il quadro resta in Francia."
+              "detail": "Ad Amboise, il 2 maggio. Il dipinto resta in Francia."
             },
             {
               "date": "1911",
               "title": "Il furto",
-              "detail": "Peruggia trasforma l'opera in mito mediatico."
-            },
-            {
-              "date": "1913",
-              "title": "Ritorno",
-              "detail": "Il quadro torna al Louvre da star mondiale."
+              "detail": "La stampa fa di Monna Lisa un caso mondiale."
             }
           ]
         },
         {
+          "type": "paragraph",
+          "text": "Togliere la [[vernice]] ingiallita dai secoli, lo strato che protegge la pittura a olio, rischierebbe di danneggiare l'opera. E anche se il restauro riuscisse, si teme che la *Gioconda* perda il suo potere di fascinazione. La tecnica e i colori originali di Leonardo contano meno dell'immagine. Diventato contenitore di innumerevoli storie, il dipinto ha superato il suo autore e la storia dell'arte."
+        },
+        {
           "type": "takeaway",
-          "text": "*La Gioconda* deve la sua gloria tanto al genio di Leonardo (sfumato, sorriso ottico) quanto alla storia: un furto nel 1911 ha trasformato un capolavoro ammirato in icona planetaria."
+          "text": "Messa da parte nel 1503 per una commissione più prestigiosa, la *Gioconda* deve il suo status di icona a cinque secoli di leggende e a un furto, molto più che al posto che le dava Leonardo."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. Campbell, Leonardo da Vinci: An Untraceable Life, Princeton University Press, 2025, p. 43-45."
+    },
+    {
+      "text": "F. Zöllner, « Leonardo's Portrait of Mona Lisa del Giocondo », Gazette des Beaux-Arts, vol. 121, 1993, p. 115-138."
     }
   ]
 }
