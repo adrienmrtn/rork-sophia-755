@@ -1,0 +1,131 @@
+{
+  "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos",
+  "title": "Why is there cobalt in our batteries?",
+  "subtitle": "Element 27",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Almost nobody digs for cobalt, yet there is some in the battery of every phone. The story of a metal the industry cannot replace, and is trying to design out all the same.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "cobalt_copper_open_pit_mine_kolwezi_drc",
+    "ratio": "16:9",
+    "hook": "The metal electric cars depend on is almost never mined for its own sake."
+  },
+  "sections": [
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cobalt is element **27** of the periodic table, wedged between iron and nickel. It is in the battery of the phone in your hand, in magnets, in alloys hard enough to survive inside a jet engine. And almost nobody digs for it."
+        },
+        {
+          "type": "paragraph",
+          "text": "About **99%** of the world's cobalt comes out of the ground as a by-product: it is scraped from ore that was worth mining for its copper or its nickel. The [[Democratic Republic of the Congo]] supplies roughly **three-quarters** of it, nearly all from copper mines. So the supply of cobalt does not depend on how much cobalt the world wants, but on how much copper and nickel it wants. A strange way to run the metal electric cars are built on."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p1",
+      "title": "The battery that needed cobalt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1980**, at Oxford, [[John Goodenough]] and Koichi Mizushima found that lithium cobalt oxide (LiCoO2, or LCO) worked as an [[intercalation]] electrode: layers of cobalt oxide with lithium ions slotted in between, able to slide out and back without the layers collapsing. It was the [[cathode]] the battery needed, one of its two electrodes."
+        },
+        {
+          "type": "image",
+          "asset": "john_goodenough_portrait_lithium_battery_inventor",
+          "ratio": "1:1",
+          "caption": "John Goodenough, who discovered the cobalt cathode with Koichi Mizushima in 1980."
+        },
+        {
+          "type": "paragraph",
+          "text": "The world then waited more than ten years. In **1991**, Sony sold the first commercial lithium-ion battery, and LCO was the cathode inside it. Until around **2010**, almost every lithium-ion cathode was made this way. LCO still dominates consumer electronics: that is why your phone carries a few grams of a metal that nobody set out to mine."
+        },
+        {
+          "type": "funFact",
+          "text": "Cobalt was discovered in 1735 by the Swedish chemist Georg Brandt, nearly two and a half centuries before it went into our batteries."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p2",
+      "title": "A battery that makes its own oxygen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Think of the cathode as a brick wall. The cobalt oxide layers are the shelves, and the lithium ions are the bricks sitting between them. Charge the battery too hard and you pull out too many bricks: the wall becomes unstable. Above about **130 °C**, or when it is overcharged, the structure starts to collapse, and the oxygen locked inside the cobalt oxide breaks free as a gas."
+        },
+        {
+          "type": "image",
+          "asset": "lithium_ion_battery_fire_thermal_runaway_test",
+          "ratio": "4:3",
+          "caption": "A lithium-ion cell in thermal runaway during a test: flames and a jet of gas."
+        },
+        {
+          "type": "paragraph",
+          "text": "The liquid filling the cell is **flammable**, and the battery has just supplied the oxygen to burn it. The heat drives more decomposition, which frees more oxygen, which makes more heat. This is [[thermal runaway]]. It is why a lithium battery fire cannot simply be smothered: the oxygen is already inside."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p3",
+      "title": "Why cobalt is still there",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Back to the brick wall. Every time you charge or use the battery, the lithium bricks slide out, then back in. Cobalt is the glue that stops the wall warping or collapsing over hundreds of cycles. Other materials cannot do the job alone: **nickel** holds more energy but wears out too fast, and **manganese** is cheap but lacks power."
+        },
+        {
+          "type": "paragraph",
+          "text": "That is why the blends found in most electric cars, such as the **NMC** (nickel, manganese, cobalt) and **NCA** (nickel, cobalt, aluminum) cathodes, only shrink the amount of cobalt instead of getting rid of it. For fifteen years, engineers have been cutting it down to save money, but they still need a pinch of it to hold the whole system together. The only one that skips it entirely, the [[LFP battery]], pulls it off by throwing away the wall to build an entirely different internal structure."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p4",
+      "title": "Designing cobalt out",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cobalt's problem is not chemistry. Part of the Congolese supply comes from [[artisanal mining]], worked by hand in unsafe conditions and, in places, by children. The price swings hard and fast, which makes any battery built on it impossible to plan for. And almost all of it leaves from **a single country**."
+        },
+        {
+          "type": "image",
+          "asset": "artisanal_cobalt_miners_kolwezi_congo",
+          "ratio": "3:2",
+          "caption": "Artisanal miners sorting cobalt ore by hand near Kolwezi, in the Democratic Republic of the Congo."
+        },
+        {
+          "type": "paragraph",
+          "text": "So the industry is trying to design the metal out. The main answer is **LFP**, lithium iron phosphate, which replaces cobalt with iron and phosphorus, two of the cheapest and most abundant elements there are. It runs cooler and is far harder to push into thermal runaway."
+        },
+        {
+          "type": "paragraph",
+          "text": "The trade-off is energy: for the **same weight**, an LFP cell stores less. That is why your car may already use one, and why your phone still does not: in an object that fits in a pocket, every gram counts."
+        },
+        {
+          "type": "takeaway",
+          "text": "Cobalt holds the structure of lithium-ion batteries together, but it comes almost entirely from one country, as a by-product of copper: the industry only escapes it by changing chemistry, with LFP, at the cost of less energy."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Cobalt Institute, « Cobalt uses ».",
+      "url": "https://www.cobaltinstitute.org/global-cobalt/cobalt-uses/"
+    },
+    {
+      "text": "« One hundred years of cobalt production in the Democratic Republic of the Congo », Resources Policy, 2022.",
+      "url": "https://doi.org/10.1016/j.resourpol.2022.103007"
+    }
+  ]
+}

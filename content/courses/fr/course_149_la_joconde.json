@@ -1,14 +1,15 @@
 {
   "id": "course_149_la_joconde",
-  "title": "Qu'est-ce qui a rendu « La Joconde » si célèbre ?",
-  "subtitle": "1503-1519",
+  "title": "La Joconde comptait-elle vraiment pour Léonard ?",
+  "subtitle": "1503",
   "subject": "art",
   "subcategory": "Œuvres iconiques",
-  "description": "Peinte par **Léonard de Vinci** entre **1503** et **1519**, *La Joconde* est devenue l'icône absolue du Louvre. Technique, sourire mystérieux… et un vol en **1911** qui a tout changé.",
+  "description": "C'est le tableau le plus célèbre du monde. Pourtant, en 1503, son propre auteur avait mieux à faire que le portrait d'une épouse de marchand.",
+  "author": "dusan-nikolic",
   "hero": {
     "image": "la_joconde",
     "ratio": "16:9",
-    "hook": "Un sourire, un vol, un mythe : comment un portrait est devenu l'œuvre la plus célèbre du monde."
+    "hook": "Le tableau le plus regardé de la planète a peut-être été, pour Léonard, un travail secondaire."
   },
   "sections": [
     {
@@ -16,55 +17,143 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "*La Joconde*, peinte entre **1503** et **1519** par **Léonard de Vinci**, est le tableau le plus visité du monde. Exposée au **Louvre**, elle fascine autant par sa technique que par son histoire. Ce n'est pas seulement un beau portrait. C'est un mythe fabriqué par l'art, la science et un fait divers." },
-        { "type": "paragraph", "text": "Pourquoi ce visage plutôt qu'un autre ? Parce que Léonard y a concentré des innovations, et parce qu'un vol spectaculaire l'a rendue célèbre à l'échelle planétaire." }
+        {
+          "type": "paragraph",
+          "text": "Pour l'un des tableaux les plus célèbres du monde, on sait très peu de choses sûres sur *La Joconde*. Les historiens de l'art s'accordent sur l'essentiel : Léonard de Vinci la peint à Florence entre **1503 et 1506**. En **1517**, il l'emporte avec lui en France, et le panneau finit dans la collection du roi [[François Ier]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le vide historique s'est rempli de légendes. On parle du tableau comme d'une femme, « elle ». Son demi-sourire est dit mystérieux. Après le vol de **1911**, on doute même de son authenticité. Toutes ces histoires ont fait sa gloire, mais elles ont effacé son contexte. Or, à l'époque où Léonard la peint, cette œuvre n'avait peut-être aucune importance à ses yeux."
+        }
       ]
     },
     {
       "id": "course_149_la_joconde_p1",
-      "title": "Léonard et le sfumato",
+      "title": "Qui est la Joconde ?",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Le portrait commence à Florence vers **1503**. Le commanditaire est le marchand **Francesco del Giocondo**. Le modèle serait son épouse, [[Lisa Gherardini]]. Mais Léonard ne livre jamais le tableau. Il le garde, le retouche pendant des années, et l'emporte en France, où il meurt en **1519**." },
-        { "type": "image", "asset": "mona_lisa_leonardo_da_vinci_louvre_painting", "ratio": "4:3", "caption": "La Joconde au Louvre : un petit panneau de peuplier devenu icône mondiale." },
-        { "type": "paragraph", "text": "Sa technique signature est le [[sfumato léonardien]] : des glacis, couches très fines, qui effacent les contours. Plus de ligne dure. Le visage fond dans l'air. Léonard ajoute aussi la [[Perspective atmosphérique]] : le paysage lointain bleuit et s'adoucit, comme dans la vraie vision." }
+        {
+          "type": "paragraph",
+          "text": "Les historiens de l'art admettent largement que le modèle est [[Lisa Gherardini]], épouse de **Francesco del Giocondo**, marchand et petit notable du gouvernement florentin. D'où le nom de « Joconde ». Cette identification repose sur la biographie de Léonard publiée par [[Giorgio Vasari]] en **1550** puis en **1568**, dans ses *Vies des meilleurs peintres, sculpteurs et architectes*."
+        },
+        {
+          "type": "image",
+          "asset": "vasari_lives_of_the_artists_1568_title_page",
+          "ratio": "3:4",
+          "caption": "Les Vies de Vasari, édition florentine de 1568 : le texte qui donne un nom au modèle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pourquoi Francesco commande-t-il ce portrait ? On l'ignore. Léonard s'y met au début de **1503**. La suite reste débattue : pour les historiens, le récit de Vasari tient de l'invention littéraire, celle d'un biographe qui comble les blancs avec une belle histoire. Au milieu de **1506**, Léonard quitte Florence pour Milan, en quête d'un meilleur emploi. Le portrait, inachevé, part avec lui."
+        },
+        {
+          "type": "funFact",
+          "text": "Selon Vasari, Léonard aurait engagé des musiciens et des bouffons pour distraire son modèle pendant les séances de pose. Les historiens y voient une invention du biographe, mais c'est elle qui a lancé le mythe du « sourire de la Joconde »."
+        }
       ]
     },
     {
       "id": "course_149_la_joconde_p2",
-      "title": "Le sourire qui joue avec l'œil",
+      "title": "Anghiari : une commande plus prestigieuse",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Le fameux sourire n'est pas qu'une émotion peinte. Il joue avec notre [[Vision périphérique]]. Quand on fixe les yeux du modèle, les bords de la rétine voient la bouche en ombres douces : le sourire semble présent. Quand on regarde directement la bouche, il s'atténue." },
-        { "type": "image", "asset": "mona_lisa_smile_detail_close_up", "ratio": "1:1", "caption": "Plus on le fixe, plus le sourire semble se dérober." },
-        { "type": "funFact", "text": "Léonard, à la fois peintre et savant, étudiait l'optique. Le mystère du sourire repose en partie sur une connaissance précise de la façon dont l'œil humain traite les ombres." },
-        { "type": "paragraph", "text": "Résultat : le visage semble vivant, changeant, presque conscient de notre regard." }
+        {
+          "type": "paragraph",
+          "text": "En octobre **1503**, le gouvernement florentin engage Léonard pour peindre la [[Bataille d'Anghiari]] au [[Palazzo Vecchio]], le siège de la République de Florence. La peinture murale doit célébrer la victoire de Florence sur Milan en **1440**. À la Renaissance, une scène d'histoire vaut bien plus qu'un portrait. Avec les sujets religieux, mythologiques et allégoriques, elle passe pour la forme la plus haute de l'art."
+        },
+        {
+          "type": "image",
+          "asset": "rubens_copy_battle_of_anghiari_louvre_drawing",
+          "ratio": "4:3",
+          "caption": "La copie par Rubens de la mêlée centrale : seule trace du grand décor inachevé du Palazzo Vecchio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Face à une grande commande publique, le portrait privé de l'épouse d'un petit fonctionnaire pèse peu. Dès décembre **1503**, Léonard consacre de plus en plus de temps à préparer la grande composition. Prestige et meilleure paie : la Joconde attend. À la fin de son second séjour florentin, le portrait n'est pas terminé. La *Bataille d'Anghiari* non plus : il n'en reste que des esquisses préparatoires et leurs copies."
+        },
+        {
+          "type": "funFact",
+          "text": "Il est possible que seul le paysage de fond soit resté inachevé quand Léonard part pour Milan en 1506."
+        }
       ]
     },
     {
       "id": "course_149_la_joconde_p3",
-      "title": "1911 : le vol qui invente la célébrité",
+      "title": "La fabrique d'une icône",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Au XIXe siècle, *La Joconde* est admirée, mais pas encore l'œuvre n°1 du Louvre. Tout bascule le **21 août 1911**. [[Vincenzo Peruggia]], un vitrier italien du musée, la dérobe : c'est le [[vol de la Joconde (1911)]]. Il la cache sous sa blouse et sort tranquillement." },
-        { "type": "image", "asset": "mona_lisa_stolen_1911_newspaper_headline", "ratio": "4:3", "caption": "1911 : l'absence du tableau fait la une et crée une star." },
-        { "type": "paragraph", "text": "L'enquête vire au scandale. Le poète [[Guillaume Apollinaire]] est emprisonné un temps. [[Pablo Picasso]] est interrogé. Quand le tableau réapparaît en **1913**, il n'est plus seulement une peinture. Il est une célébrité." }
+        {
+          "type": "paragraph",
+          "text": "Léonard meurt le **2 mai 1519** à Amboise, en France. *La Joconde* n'arrive jamais chez les Giocondo. Après la Révolution française, la collection royale devient publique et le tableau entre au **Louvre**. Depuis le début du XIXe siècle, son sourire est décrit de mille façons, de divin à sensuel."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_stolen_1911_newspaper_headline",
+          "ratio": "4:3",
+          "caption": "La une de l'Excelsior en janvier 1914 : le retour de La Joconde après le vol de 1911."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le tournant est le vol du tableau au musée, en **1911**. Les journaux transforment Mona Lisa en sensation mondiale. Depuis, la presse populaire et les romans remettent régulièrement en cause l'authenticité de l'œuvre et l'identité du modèle, sans aucun fondement dans une vraie analyse historique. Le tableau est devenu le centre d'histoires toujours plus nombreuses, que l'on raconte encore aujourd'hui."
+        }
       ]
     },
     {
       "id": "course_149_la_joconde_p4",
-      "title": "Une icône sous verre",
+      "title": "Un tableau qui a dépassé son auteur",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Aujourd'hui, peinte sur bois de peuplier, elle vit derrière un [[Verre pare-balles]], dans une vitrine climatisée. Attaques à l'acide, jets d'objets : la protection est devenue nécessaire. Et les parodies, de Duchamp jusqu'à Internet, prouvent qu'elle est devenue un langage universel." },
-        { "type": "timeline", "events": [
-          { "date": "1503", "title": "Début du portrait", "detail": "Léonard commence La Joconde à Florence." },
-          { "date": "1519", "title": "Mort de Léonard", "detail": "Le tableau reste en France." },
-          { "date": "1911", "title": "Le vol", "detail": "Peruggia transforme l'œuvre en mythe médiatique." },
-          { "date": "1913", "title": "Retour", "detail": "Le tableau revient au Louvre en star mondiale." }
-        ] },
-        { "type": "takeaway", "text": "*La Joconde* doit sa gloire autant au génie de Léonard (sfumato, sourire optique) qu'à l'histoire : un vol en 1911 a transformé un chef-d'œuvre admiré en icône planétaire." }
+        {
+          "type": "paragraph",
+          "text": "Plus de **500 ans** après le début du portrait, Lisa del Giocondo attire plus que jamais. Placé sous verre blindé au Louvre, le tableau est coupé de son contexte historique. Libéré de lui, il a acquis le statut d'icône universelle. Ce statut a un prix : à l'époque moderne, plus aucune restauration n'est engagée."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1503",
+              "title": "Début du portrait",
+              "detail": "Léonard commence le portrait de Lisa Gherardini à Florence."
+            },
+            {
+              "date": "oct. 1503",
+              "title": "La commande d'Anghiari",
+              "detail": "Florence lui confie une grande peinture murale pour le Palazzo Vecchio."
+            },
+            {
+              "date": "1506",
+              "title": "Départ pour Milan",
+              "detail": "Léonard quitte Florence, le portrait inachevé sous le bras."
+            },
+            {
+              "date": "1519",
+              "title": "Mort de Léonard",
+              "detail": "À Amboise, le 2 mai. Le tableau reste en France."
+            },
+            {
+              "date": "1911",
+              "title": "Le vol",
+              "detail": "La presse fait de Mona Lisa une sensation mondiale."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Retirer le [[vernis]] jauni par les siècles, cette couche protectrice de la peinture à l'huile, risquerait d'abîmer l'œuvre. Et même si la restauration réussissait, on craint que *La Joconde* perde son pouvoir de fascination. La technique et les couleurs d'origine de Léonard comptent moins que l'image. Devenu réceptacle d'innombrables histoires, le tableau a dépassé son auteur et l'histoire de l'art."
+        },
+        {
+          "type": "takeaway",
+          "text": "Délaissée en 1503 pour une commande plus prestigieuse, *La Joconde* doit son statut d'icône à cinq siècles de légendes et à un vol, bien plus qu'au rang que lui donnait Léonard."
+        }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. Campbell, Leonardo da Vinci: An Untraceable Life, Princeton University Press, 2025, p. 43-45."
+    },
+    {
+      "text": "F. Zöllner, « Leonardo's Portrait of Mona Lisa del Giocondo », Gazette des Beaux-Arts, vol. 121, 1993, p. 115-138."
     }
   ]
 }

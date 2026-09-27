@@ -1,0 +1,171 @@
+{
+  "id": "course_276_pourquoi_les_antibiotiques_cessent_ils",
+  "title": "Pourquoi les antibiotiques cessent-ils d'agir ?",
+  "subtitle": "Les bactéries contre-attaquent",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Une angine, une infection urinaire, une opération de routine : sans antibiotiques efficaces, tout redevient dangereux. Et à force d'en abuser, nous apprenons aux bactéries à leur survivre.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "antibiogram_petri_dish_inhibition_zones",
+    "ratio": "16:9",
+    "hook": "À force de les combattre, nous avons entraîné les bactéries à survivre à nos médicaments."
+  },
+  "sections": [
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Quand des bactéries envahissent notre corps, le système immunitaire riposte : les **globules blancs** attaquent l'infection et nous allons vite mieux. Mais si nos défenses sont affaiblies, ou débordées, il faut un renfort : les antibiotiques. Un antibiotique [[bactéricide]] détruit la bactérie en s'attaquant à sa paroi et à son contenu ; un bactériostatique l'empêche seulement de se multiplier."
+        },
+        {
+          "type": "funFact",
+          "text": "L'antibiotique n'est pas une invention moderne : des indices montrent que des humains en utilisaient déjà il y a plus de 1 500 ans, sans rien savoir des bactéries."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selon l'infection, le médecin choisit un antibiotique à **large spectre**, actif contre de nombreuses espèces, ou à spectre étroit, réservé à quelques-unes. Efficaces, peu coûteux, faciles à obtenir, ces médicaments couvrent une immense gamme d'infections. C'est ce succès même qui a conduit le monde moderne à en abuser. Et les bactéries ont commencé à répliquer."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p1",
+      "title": "Comment les bactéries apprennent à résister",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les antibiotiques comptent parmi les plus grandes avancées de la médecine moderne. Ils ont sauvé d'innombrables vies et nous en dépendons. Mais leur usage massif a créé un problème : l'[[antibiorésistance]]. Des antibiotiques qui tuaient une bactérie ou bloquaient sa croissance ne font plus effet. La bactérie a évolué pour déjouer le traitement."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Alexander Fleming, découvreur de la pénicilline, dans son laboratoire."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'évolution est un processus naturel, que les agressions du milieu accélèrent. Traiter sans cesse des bactéries avec des molécules conçues pour les tuer revient à sélectionner celles qui savent survivre. Leurs parades sont variées : **mutations** génétiques, enzymes qui dissolvent l'antibiotique, changements de fonctionnement, et même de minuscules [[pompes à efflux]] qui rejettent le médicament hors de la cellule."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces parades sont inscrites dans les gènes. Quand une bactérie résistante se divise, elle les transmet à ses descendantes, qui les transmettent à leur tour. Une seule survivante peut fonder toute une lignée de résistantes. C'est ainsi que la résistance se propage."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p2",
+      "title": "Des gènes qui voyagent : le cas du SARM",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Une bactérie résistante voyage comme n'importe quel microbe. La pandémie de **Covid** a montré à quelle vitesse un virus passe d'une personne, puis d'un pays, à l'autre. Les bactéries circulent de la même façon : par contact humain, dans des milieux favorables, par manque d'hygiène, ou des animaux vers l'homme."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elles disposent en plus d'un raccourci : le [[transfert horizontal de gènes]]. Une bactérie résistante peut céder directement ses gènes de résistance à une voisine, sans attendre de se diviser. En très peu de temps, une population entière de bactéries résistantes se forme."
+        },
+        {
+          "type": "image",
+          "asset": "mrsa_staphylococcus_aureus_electron_micrograph_cdc",
+          "ratio": "4:3",
+          "caption": "Amas de staphylocoques dorés résistants à la méticilline, vus au microscope électronique."
+        },
+        {
+          "type": "paragraph",
+          "text": "La plus connue est le [[SARM]], le staphylocoque doré résistant à la méticilline. Il tient tête à de nombreux antibiotiques courants, d'où son surnom de « superbactérie ». L'usage massif d'antibiotiques a éliminé les souches fragiles et laissé le champ libre à celles qui, comme lui, ont appris à résister. Les conséquences peuvent être mortelles."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p3",
+      "title": "1,27 million de morts par an : l'alerte de l'OMS",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Que signifie cette résistance pour nous ? L'[[OMS]], l'Organisation mondiale de la santé, classe la résistance aux antimicrobiens, les médicaments qui combattent les microbes, antibiotiques compris, parmi les **trois** principales menaces de santé publique dans le monde. Avec de moins en moins de médicaments efficaces contre les infections bactériennes, c'est toute la médecine moderne qui perd du terrain."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les chiffres donnent la mesure du danger. Pour la seule année 2019, **1,27 million** de décès dans le monde ont été attribués à la résistance aux antimicrobiens. Et la courbe monte : les projections tablent sur **10 millions** de morts par an d'ici **2050**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les scientifiques ne restent pas les bras croisés. Ils mettent au point des traitements nouveaux et plus précis, qui visent les bactéries résistantes. Ils cherchent aussi à restaurer l'efficacité des antibiotiques existants et à réduire les prescriptions inutiles : chaque traitement évité est une occasion de moins, pour les bactéries, de s'adapter."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p4",
+      "title": "Un monde sans antibiotiques efficaces",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nous avalons nos antibiotiques sans y réfléchir. Ils sont bon marché, efficaces et disponibles partout. Sans eux, une infection banale, **angine** bactérienne ou infection urinaire, deviendrait bien plus difficile à soigner. Un genou écorché pourrait dégénérer en [[septicémie]], une infection généralisée qui met la vie en danger."
+        },
+        {
+          "type": "image",
+          "asset": "hospital_operating_room_surgery_team",
+          "ratio": "3:2",
+          "caption": "Un bloc opératoire moderne : sans antibiotiques, les opérations de routine redeviendraient risquées."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les opérations courantes, **césarienne** ou pose d'une prothèse de hanche, comporteraient un risque bien plus élevé. Les antibiotiques sont en effet souvent prescrits après une chirurgie pour prévenir une infection. Sans eux, des interventions qui sauvent ou améliorent des vies deviendraient trop dangereuses pour être pratiquées."
+        },
+        {
+          "type": "takeaway",
+          "text": "L'avenir de la médecine moderne dépend d'une seule chose : garder aux antibiotiques leur efficacité, donc cesser d'en abuser."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Medical News Today, « Antibiotics: How they work, uses, side effects and how to use ».",
+      "url": "https://www.medicalnewstoday.com/articles/10278"
+    },
+    {
+      "text": "Wikipedia, « Antibiotic ».",
+      "url": "https://en.wikipedia.org/wiki/Antibiotic"
+    },
+    {
+      "text": "B. K. Nimmana et A. D. Nguyen, « Antibiotic Resistance », StatPearls, StatPearls Publishing, Treasure Island (FL), 2026.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513277/"
+    },
+    {
+      "text": "H. Endale, M. Mathewos et D. Abdeta, « Potential Causes of Spread of Antimicrobial Resistance and Preventive Measures in One Health Perspective: A Review », Infection and Drug Resistance, vol. 16, 2023, p. 7515-7545.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10715026/"
+    },
+    {
+      "text": "American Society for Microbiology, « Plasmids and the Spread of Antibiotic Resistance Genes », janvier 2023.",
+      "url": "https://asm.org/articles/2023/january/plasmids-and-the-spread-of-antibiotic-resistance-g"
+    },
+    {
+      "text": "M. A. Salam, M. Y. Al-Amin, M. T. Salam, J. S. Pawar et al., « Antimicrobial Resistance: A Growing Serious Threat for Global Public Health », Healthcare, vol. 11, n° 13, 2023, art. 1946.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10340576/"
+    },
+    {
+      "text": "Wikipedia, « Methicillin-resistant Staphylococcus aureus ».",
+      "url": "https://en.wikipedia.org/wiki/Methicillin-resistant_Staphylococcus_aureus"
+    },
+    {
+      "text": "S. Rugarabamu et G. Mwanyika, « Biotechnological Innovations to Combat Antimicrobial Resistance and Advance Global Health Equity », Bacteria, vol. 4, n° 3, 2025, art. 46.",
+      "url": "https://www.mdpi.com/2674-1334/4/3/46"
+    },
+    {
+      "text": "A. Nazir, A. Nazir, V. Zuhair, S. Aman et al., « The Global Challenge of Antimicrobial Resistance: Mechanisms, Case Studies, and Mitigation Approaches », Health Science Reports, vol. 8, n° 7, 2025, e71077.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12284435/"
+    },
+    {
+      "text": "ITN Business, « Antimicrobial resistance: understanding its global impact ».",
+      "url": "https://business.itn.co.uk/antimicrobial-resistance-understanding-its-global-impact/"
+    }
+  ]
+}

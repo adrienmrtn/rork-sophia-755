@@ -1,0 +1,137 @@
+{
+  "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert",
+  "title": "Why did Mars become a desert?",
+  "subtitle": "From rivers to desert",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "More than 3 billion years ago, rivers carved valleys and floods swept across the surface of Mars. Today the planet is cold and dry, but its water has not all disappeared.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "mars_valles_marineris_hemisphere_viking_mosaic",
+    "ratio": "16:9",
+    "hook": "Rivers, deltas, lakes: the red planet was not always a frozen desert."
+  },
+  "sections": [
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For decades, scientists have searched Mars for signs of past life. All known life needs water, and the Martian surface today is cold and extremely dry. Yet Mars was not always like this. Rovers, the wheeled robots that explore its ground, have found rocks and minerals that only form in the presence of **liquid water**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seen from above, the landscape confirms it: ancient river valleys, deltas, dried-up lakebeds. Many of these features date back more than **3 billion years**. NASA has even found traces of gigantic floods that swept across whole regions about **3.5 billion years** ago. So water once flowed on Mars. The mystery is what came next: how did a wet planet turn into the desert we see today?"
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p1",
+      "title": "A thick atmosphere was needed",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Having water is not enough. A planet also needs conditions that keep it liquid. Today the atmosphere of Mars is very thin: its [[atmospheric pressure]] is less than **1%** of Earth's. Under such low pressure, liquid water cannot remain stable on the surface for long. It freezes, or it turns to vapor."
+        },
+        {
+          "type": "image",
+          "asset": "jezero_crater_river_delta_mars_reconnaissance_orbiter",
+          "ratio": "4:3",
+          "caption": "The fossil delta of Jezero Crater, seen from orbit: sediments laid down by a river in an ancient lake."
+        },
+        {
+          "type": "paragraph",
+          "text": "So how did early Mars hold on to its water? Billions of years ago, its atmosphere was much thicker, and that helped in two ways. Higher pressure kept water in its liquid state. And the gases in the air trapped heat, a [[greenhouse effect]] that kept the surface warmer."
+        },
+        {
+          "type": "funFact",
+          "text": "Scientists still debate exactly how warm early Mars was. One thing is certain, though: liquid water stayed on its surface long enough to carve valleys and fill lakes."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p2",
+      "title": "Mars lost its atmosphere",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Over billions of years, a large part of that atmosphere escaped into space. The first reason is the planet's size. Mars is small, its **gravity** is weaker than Earth's, and so it holds on to its gases less firmly. The second reason: Mars lost its [[magnetic field]], the invisible shield that protected its atmosphere from charged particles coming from the Sun."
+        },
+        {
+          "type": "image",
+          "asset": "maven_solar_wind_stripping_mars_atmosphere_nasa",
+          "ratio": "4:3",
+          "caption": "A NASA visualization for the MAVEN mission: the solar wind strips gases from the upper atmosphere of Mars."
+        },
+        {
+          "type": "paragraph",
+          "text": "Those particles form the [[solar wind]], a continuous stream of charged matter flowing out of the Sun. With no shield, it strikes the upper Martian atmosphere and knocks gases away into space. The most energetic sunlight plays its part too: it breaks apart water and other molecules, and the **light atoms** set free escape the weak gravity of Mars more easily. As the atmosphere thinned, Mars grew colder and drier."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p3",
+      "title": "Not all the water left",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yet not all of the water on Mars fled into space. Some of it, rising into the upper atmosphere, was indeed broken into light atoms that escaped. But the rest stayed behind. Part of it froze beneath the surface. Another part reacted chemically with the rocks and ended up locked inside **minerals**."
+        },
+        {
+          "type": "funFact",
+          "text": "A study published in 2021 in the journal *Science* estimates that between **30 and 99%** of the water on Mars may have been trapped in the minerals of its rocks. The range is wide, a sign that the question remains open."
+        },
+        {
+          "type": "paragraph",
+          "text": "So this water did not simply collect underground as ice or liquid. It became part of the [[crust]], the planet's outer rocky layer. In other words, a large share of the \"missing\" water of Mars may still be there, held prisoner in its rocks."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p4",
+      "title": "Dry, but not waterless",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mars looks like a desert today, but it is not without water. What has largely disappeared is the stable water that once flowed across the surface. Large amounts remain frozen in the [[polar ice caps]]. More lies beneath the ground as **buried ice**. Still more is locked inside the minerals of the crust."
+        },
+        {
+          "type": "image",
+          "asset": "mars_north_polar_ice_cap_mars_global_surveyor",
+          "ratio": "4:3",
+          "caption": "The north polar ice cap of Mars in summer: a spiral of ice on the ocher ground."
+        },
+        {
+          "type": "paragraph",
+          "text": "The lesson reaches beyond Mars. Having water is not enough to make a planet wet and livable: the surrounding conditions matter just as much. A thick enough atmosphere keeps water liquid and lets it gather into rivers and lakes. Mars did not become a desert because every drop flew off into space. It dried out because its atmosphere could no longer keep its water moving."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mars dried out because its atmosphere, thinned by billions of years of leakage into space, could no longer keep liquid water on the surface: much of that water is still there, frozen at the poles or locked inside the rocks."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "B. M. Jakosky et al., « Mars' atmospheric history derived from upper-atmosphere measurements of 38Ar/36Ar », Science, vol. 355, n° 6332, 2017, p. 1408.",
+      "url": "https://doi.org/10.1126/science.aai7721"
+    },
+    {
+      "text": "NASA Science, « NASA: New Insights into How Mars Became Uninhabitable », 2024."
+    },
+    {
+      "text": "E. L. Scheller et al., « Long-term drying of Mars by sequestration of ocean-scale volumes of water in the crust », Science, vol. 372, n° 6537, 2021, p. 56-62.",
+      "url": "https://doi.org/10.1126/science.abc7717"
+    },
+    {
+      "text": "NASA, « NASA Mission Reveals Speed of Solar Wind Stripping Martian Atmosphere », 2015."
+    }
+  ]
+}

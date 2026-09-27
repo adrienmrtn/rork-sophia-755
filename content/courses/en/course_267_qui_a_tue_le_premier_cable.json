@@ -1,0 +1,157 @@
+{
+  "id": "course_267_qui_a_tue_le_premier_cable",
+  "title": "Who killed the first transatlantic cable?",
+  "subtitle": "1858",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "In August 1858, a cable joined Europe and America for the first time, and Queen Victoria congratulated President Buchanan. Three weeks later the line was dead: the story of an electrician in too much of a hurry and a cable that was built wrong.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "hms_agamemnon_laying_atlantic_telegraph_cable_1858",
+    "ratio": "16:9",
+    "hook": "The cable that united two continents was already dying when the world celebrated it."
+  },
+  "sections": [
+    {
+      "id": "course_267_qui_a_tue_le_premier_cable_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On **August 16, 1858**, a telegraph cable carried a message from [[Valentia Island]] in Ireland to Trinity Bay in Newfoundland: a letter of congratulation from Queen Victoria to the American president, James Buchanan. For the first time, two continents were joined. Three weeks later, the line fell silent. The blame landed on [[Wildman Whitehouse]], the company's electrician, who had been driving enormous voltages into the wire to force the signals through."
+        },
+        {
+          "type": "paragraph",
+          "text": "He was not innocent. But the historian **Donard de Cogan**, examining lengths of cable recovered from the seabed, found manufacturing defects in it: in places, the copper core sat off-center inside its insulation. Whitehouse did not kill a sound cable. He finished off a damaged one, and the damage was there before it ever sailed."
+        }
+      ]
+    },
+    {
+      "id": "course_267_qui_a_tue_le_premier_cable_p1",
+      "title": "The first message crosses the ocean",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The first message across was not the Queen's. On the same day, the directors of the [[Atlantic Telegraph Company]] in Britain wrote to their American counterparts: \"**Europe and America are united by telegraph**...\" And the message went on."
+        },
+        {
+          "type": "image",
+          "asset": "new_york_atlantic_cable_celebration_september_1858",
+          "ratio": "4:3",
+          "caption": "New York celebrates the cable on September 1, 1858: parade, flags and illuminations in front of City Hall."
+        },
+        {
+          "type": "paragraph",
+          "text": "In the exchange that followed, President Buchanan replied to Queen Victoria. He called the cable a triumph more glorious, because far more useful to mankind, than any ever won by a conqueror on a battlefield, and he hoped it would prove a bond of **perpetual peace** between the two nations. Nobody sending these words knew that the cable carrying them was already dying."
+        }
+      ]
+    },
+    {
+      "id": "course_267_qui_a_tue_le_premier_cable_p2",
+      "title": "Two theories, and the cheaper one wins",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The men building the cable did not agree on how it would work. The physicist [[William Thomson]] predicted that signals would crawl through a long submarine cable, an effect he called [[retardation]]. Whitehouse, who had no training in physics, disputed it. Given overnight access to long underground telegraph lines, he joined them end to end until they matched the Atlantic distance, sent signals through, and declared there would be no problem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Thomson answered that a buried cable and an underwater cable do not behave the same way. He also tested copper of supposedly identical specification and found its electrical resistance varying by a **factor of two**: a thin core was not only slow, it was unpredictable. A thicker one was needed. But manufacture was already under way. The thinner, cheaper cable won."
+        }
+      ]
+    },
+    {
+      "id": "course_267_qui_a_tue_le_premier_cable_p3",
+      "title": "Whitehouse fakes the tape",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On **August 5, 1858**, the cable reached Valentia and Thomson handed over to Whitehouse. Throughout the voyage, Thomson had been reading the faint incoming pulses on his [[mirror galvanometer]], an instrument sensitive enough to catch a signal that had just crossed an ocean."
+        },
+        {
+          "type": "image",
+          "asset": "thomson_mirror_galvanometer_1858_instrument",
+          "ratio": "4:3",
+          "caption": "A mirror galvanometer by William Thomson, of the type used to read the signals of the 1858 cable."
+        },
+        {
+          "type": "paragraph",
+          "text": "Whitehouse disconnected it and attached his own, far cruder equipment. Nothing registered. So he drove up to **2,000 volts** into the cable to force a response, pushing insulation that was already defective past what it could survive. The Queen's message reached Newfoundland, but Whitehouse could not read the confirmation coming back. He waited until **August 17** to announce it."
+        },
+        {
+          "type": "paragraph",
+          "text": "What he did not announce: he had reconnected Thomson's galvanometer to read the message, then retyped it into his own printing telegraph, so that the paper tape would look as though **his instrument** had received it."
+        }
+      ]
+    },
+    {
+      "id": "course_267_qui_a_tue_le_premier_cable_p4",
+      "title": "The proof in a bucket of seawater",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **September 1858**, the line died for good. Whitehouse was dismissed, and Thomson took over at Valentia to reconstruct what had happened. The board tested offcuts of the same cable in seawater. Sound samples took **thousands of volts** without complaint. A sample pierced by a single pinhole burned a wide hole through its insulation. Voltage alone was survivable. Voltage through a manufacturing fault was not."
+        },
+        {
+          "type": "image",
+          "asset": "atlantic_telegraph_cable_1858_cross_section_sample",
+          "ratio": "4:3",
+          "caption": "A section of the 1858 cable: seven twisted copper wires, a gutta-percha sheath, an armor of iron wires."
+        },
+        {
+          "type": "paragraph",
+          "text": "The worst of it lay close to home: the first hundred miles out of Ireland were leftover **1857** cable, spliced in, with its copper core sitting off-center. Before it died, the line carried **732 messages**. In 1865, the [[Great Eastern]] tried again and lost the cable mid-ocean. In 1866, it succeeded."
+        },
+        {
+          "type": "funFact",
+          "text": "One of the 732 messages countermanded an order for two regiments stationed in Canada to sail for England. A single dispatch saved the British government 50,000 pounds."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "August 5, 1858",
+              "title": "The cable comes ashore",
+              "detail": "At Valentia, Thomson hands over to Whitehouse."
+            },
+            {
+              "date": "August 16, 1858",
+              "title": "The Queen's message",
+              "detail": "Victoria congratulates President Buchanan."
+            },
+            {
+              "date": "September 1858",
+              "title": "The line falls silent",
+              "detail": "Whitehouse is dismissed, Thomson investigates."
+            },
+            {
+              "date": "1865",
+              "title": "Another failure",
+              "detail": "The Great Eastern loses the cable in mid-ocean."
+            },
+            {
+              "date": "1866",
+              "title": "Success",
+              "detail": "The Great Eastern finally links the two shores."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "The first transatlantic cable was not killed by Whitehouse's 2,000 volts alone, but by a badly made cable that those voltages finished off: Thomson's physics had been right, and the cheaper version had won."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "The Institution of Engineering and Technology, IET Archives, « The first transatlantic telegraph cable, 1858 ».",
+      "url": "https://www.theiet.org/membership/library-and-archives/the-iet-archives/archives-highlights/the-first-transatlantic-telegraph-cable-1858"
+    }
+  ]
+}
