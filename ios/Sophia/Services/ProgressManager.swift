@@ -309,6 +309,8 @@ class ProgressManager {
             }
         }
         progress.courseProgress[courseId] = cp
+        // The day's course is done, whichever course it was: what the streak counts.
+        progress.lastCourseCompletedDate = dateFormatter.string(from: Date())
         recordActivity()
         save()
     }

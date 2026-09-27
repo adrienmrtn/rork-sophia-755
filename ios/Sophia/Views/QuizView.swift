@@ -1073,9 +1073,9 @@ struct QuizView: View {
                 score: totalPointsEarned,
                 total: maxPossiblePoints
             )
-            // Course read, quiz done: if TikTok is waiting on this, it opens now, before
-            // the result screen, so leaving the app from here still counts.
-            TikTokBlockerManager.shared.registerQuizCompletion(courseId: course.id)
+            // A finished quiz is a finished course too (belt and braces for a course whose
+            // completion the blocker missed).
+            TikTokBlockerManager.shared.registerDailyCourseCompleted(courseId: course.id)
             withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
                 isFinished = true
             }

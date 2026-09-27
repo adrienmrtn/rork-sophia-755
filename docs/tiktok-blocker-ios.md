@@ -1,8 +1,9 @@
 # TikTok blocker iOS — « Cultive-toi avant de scroller »
 
-Réservé aux abonnés Premium. TikTok reste bloqué tant que l'utilisateur n'a pas
-terminé un cours Sophia **et** son quiz ; ensuite TikTok s'ouvre pendant 15, 30 ou
-60 minutes, puis le blocage revient tout seul.
+Réservé aux abonnés Premium. TikTok reste bloqué tant que l'utilisateur n'a pas fait
+son **cours du jour** (n'importe quel cours lu jusqu'au bout, la même complétion que
+celle qui compte pour la série) ; ensuite TikTok est débloqué jusqu'à minuit, puis le
+blocage revient tout seul. L'entrée se trouve dans l'onglet Profil.
 
 ## Comment ça marche (technique)
 

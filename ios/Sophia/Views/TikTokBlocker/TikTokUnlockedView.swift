@@ -1,7 +1,7 @@
 import SwiftUI
 
-/// "You learned something, well done": shown over home once a shield-originated visit
-/// has finished its course and quiz. TikTok is already unlocked by the time this appears;
+/// "Well done, your daily course is done": shown over home once a shield-originated visit
+/// has finished the day's course. TikTok is already unlocked by the time this appears;
 /// the screen just says so and offers the way back.
 struct TikTokUnlockedView: View {
     @Environment(LanguageManager.self) private var languageManager
@@ -42,7 +42,7 @@ struct TikTokUnlockedView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 28)
 
-                Text(String(format: languageManager.text("tiktokBlocker.unlocked.subtitle"), blocker.unlockMinutes))
+                Text(languageManager.text("tiktokBlocker.unlocked.subtitle"))
                     .font(DS.sans(.body, .medium))
                     .foregroundStyle(DS.inkSecondary)
                     .multilineTextAlignment(.center)
