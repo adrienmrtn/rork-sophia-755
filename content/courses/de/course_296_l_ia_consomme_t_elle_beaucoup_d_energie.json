@@ -1,0 +1,139 @@
+{
+  "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie",
+  "title": "Verbraucht KI viel Energie?",
+  "subtitle": "Hinter jeder Antwort",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Umwelt & Zukunft",
+  "description": "Jede Antwort einer KI kommt aus einem Gebäude voller Maschinen, die Tag und Nacht laufen. Wie viel Strom kostet das wirklich, vom Training des Modells bis zum Netz, das es versorgt?",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "data_center_server_racks_aisle_blue_lights",
+    "ratio": "4:3",
+    "hook": "KI wirkt wie Software, doch jede Antwort entsteht in einem sehr realen Gebäude, angeschlossen an dasselbe Netz wie Ihr Zuhause."
+  },
+  "sections": [
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sie stellen einer Online-KI eine Frage, und in wenigen Sekunden erscheint die Antwort. Die Arbeit selbst geschieht aber nicht in Ihrem Handy. Sie findet in einem [[Rechenzentrum]] statt, einem Gebäude voller Maschinen, die Informationen verarbeiten und speichern. Diese Maschinen verbrauchen ununterbrochen Strom, auch wenn niemand sie sieht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die [[Internationale Energieagentur]] schätzt, dass alle Rechenzentren zusammen 2025 rund **1,5%** des weltweiten Stroms verbrauchten. Diese Zahl umfasst sämtliche Onlinedienste, nicht nur KI. Doch Anlagen speziell für KI vermehren sich schnell. Eine kurze Antwort kostet für sich genommen wenig. Trotzdem laufen für jede einzelne Maschinen, und mehrere Systeme ziehen gleichzeitig Strom, um sie zu erzeugen."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p1",
+      "title": "Server, die größten Verbraucher",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein [[Server]] ist ein Computer, der Daten verarbeitet und Onlinedienste betreibt. In einem Rechenzentrum leisten die Server den Großteil der Rechenarbeit und sind damit die größten Stromverbraucher. Teilt man die Rechnung eines modernen Rechenzentrums auf, entfallen im Schnitt **60%** auf die Server. Diese Zahl gilt für Rechenzentren allgemein, nicht nur für KI-Anlagen."
+        },
+        {
+          "type": "image",
+          "asset": "data_center_cooling_pipes_chillers",
+          "ratio": "3:2",
+          "caption": "Serverreihen in einem Rechenzentrum: Sie verbrauchen den Großteil des Stroms."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Rest dient dazu, Daten zu speichern und zu bewegen, die Geräte zu kühlen und das Gebäude zu betreiben. Die Kühlung zählt, weil ein Computer bei der Arbeit Wärme erzeugt. Ohne ein System, das sie abführt, würden die Maschinen irgendwann überhitzen. Der Strom hinter einer KI-Antwort versorgt also weit mehr als nur die Computer, die sie berechnen."
+        },
+        {
+          "type": "funFact",
+          "text": "Laut IEA ist der Stromverbrauch von Rechenzentren speziell für KI allein im Jahr 2025 um 50% gestiegen."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p2",
+      "title": "Erst trainieren, dann antworten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bevor ein KI-Dienst antworten kann, braucht er ein Modell: ein System, das aus Beispielen Muster gelernt hat. Um es zu erschaffen, braucht es [[Training]], eine Phase, in der Computer riesige Datenmengen durchkämmen. Diese Arbeit kann sehr leistungsstarke Maschinen lange beschäftigen."
+        },
+        {
+          "type": "image",
+          "asset": "frontier_supercomputer_oak_ridge_cabinets",
+          "ratio": "4:3",
+          "caption": "Die Schränke des NASA-Supercomputers Columbia: die Art von Maschinen, mit denen man ein Modell trainiert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ist das Modell trainiert, beginnt eine andere Arbeit. Die [[Inferenz]] ist die Berechnung, die eine Antwort auf Ihre Anfrage erzeugt. Das Training beginnt nicht bei jeder Frage von vorn, die Inferenz dagegen wiederholt sich bei jeder Anfrage. Was wiegt mit der Zeit schwerer? Das hängt davon ab, wie der Dienst aufgebaut ist und wie viele Menschen ihn nutzen. Ein stark genutzter Dienst hält seine Computer mit Antworten beschäftigt, auch zwischen zwei großen Trainingsphasen."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p3",
+      "title": "Eine Anfrage ohne festen Preis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wie viel Strom verbraucht eine einzelne Textanfrage? Die veröffentlichten Schätzungen geben keine einheitliche Antwort. Google hat seinen laufenden Dienst gemessen und beziffert seine mittlere Textanfrage auf **0,24 Wh**. Die [[Wattstunde]] (Wh) ist die Einheit, die eine Energiemenge misst. Eine andere Studie kommt auf einen Median von **0,31 Wh**, wobei die mittlere Hälfte ihrer Standardanfragen zwischen **0,16 und 0,60 Wh** liegt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Zahlen widersprechen sich nicht: Sie beschreiben verschiedene Systeme und Methoden, nicht zwei gegensätzliche Messungen derselben Aufgabe. Viel aufwendigere Arbeiten lassen sie zudem außen vor. Wer eine KI bittet, vor der Antwort in mehreren Schritten nachzudenken, beschäftigt ihre Computer viel länger. Die Energie pro Anfrage hängt also vom System ab, von der Art der Messung und von der verlangten Arbeit."
+        },
+        {
+          "type": "funFact",
+          "text": "In derselben Studie erreicht eine lange Denkanfrage, bei der das Modell seine Schritte ausführt, bevor es zum Schluss kommt, einen Median von 3,91 Wh, mehr als das Zehnfache einer Standardanfrage."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p4",
+      "title": "Stromnetze unter Druck",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das [[Stromnetz]] ist das Geflecht aus Leitungen, das den Strom von den Kraftwerken zu Häusern und Unternehmen bringt. Große KI-Anlagen hängen am selben Netz. Um eine Größenordnung zu geben, vergleicht die IEA den Jahresverbrauch eines Rechenzentrums speziell für KI, eines Gebäudes, das vor allem für diese Dienste gebaut wurde, mit dem von rund **100.000 Haushalten**."
+        },
+        {
+          "type": "image",
+          "asset": "high_voltage_power_lines_data_center_virginia",
+          "ratio": "4:3",
+          "caption": "Masten einer Höchstspannungsleitung (750 kV): Rechenzentren hängen am selben Netz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Anlagen ballen sich außerdem gern an denselben Orten. Wenn mehrere große Standorte im selben Gebiet Strom verlangen, teilen sie sich das örtliche Netz, und bestehende Leitungen müssen womöglich verstärkt werden. Eine Region mit Reservekapazitäten nimmt neue Standorte leichter auf als eine Region, die schon nahe an ihren Grenzen ist. Wo die Infrastruktur der KI gebaut wird, macht also für ihre Nachbarn einen Unterschied."
+        },
+        {
+          "type": "takeaway",
+          "text": "Der Strom der KI wird auf mehreren Ebenen verbraucht, von den zu kühlenden Servern bis zum örtlichen Netz, und die Kosten einer Anfrage hängen vom System, von der Messung und von der verlangten Arbeit ab."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "International Energy Agency (IEA), Key Questions on Energy and AI, 2026, p. 9 et 17."
+    },
+    {
+      "text": "International Energy Agency (IEA), Energy and AI, 2025, p. 13, 38 et 52."
+    },
+    {
+      "text": "Shehabi et al., 2024 United States Data Center Energy Usage Report, Lawrence Berkeley National Laboratory, 2024, p. 22-23."
+    },
+    {
+      "text": "Oviedo et al., Joule, 2026, p. 1.",
+      "url": "https://doi.org/10.1016/j.joule.2026.102430"
+    },
+    {
+      "text": "Elsworth et al., Measuring the Environmental Impact of Delivering AI at Google Scale, Google, 2025, p. 7."
+    }
+  ]
+}

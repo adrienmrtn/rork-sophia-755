@@ -1,14 +1,15 @@
 {
   "id": "course_234_la_securite_alimentaire_mondiale",
-  "title": "Por que 800 milhões de pessoas ainda passam fome?",
-  "subtitle": "800 milhões de pessoas",
+  "title": "Como alimentar oito bilhões de pessoas?",
+  "subtitle": "Produzir melhor, desperdiçar menos",
   "subject": "comprendreLeMonde",
   "subcategory": "Ambiente & futuro",
-  "description": "A Terra produz comida suficiente para todo mundo. Então por que **800 milhões de pessoas** ainda passam fome?",
+  "description": "O planeta produz mais comida do que nunca, e mesmo assim a fome aumenta. O problema não é a quantidade, mas o jeito como produzimos, transportamos e desperdiçamos o que comemos.",
+  "author": "kate-waddams",
   "hero": {
-    "image": "la_securite_alimentaire_mondiale",
-    "ratio": "16:9",
-    "hook": "A fome de 800 milhões de humanos não é um problema de comida, e sim de partilha."
+    "image": "combine_harvester_wheat_field_aerial",
+    "ratio": "4:3",
+    "hook": "Produzimos o bastante para alimentar todo mundo. O problema é o que fazemos com essa comida."
   },
   "sections": [
     {
@@ -18,95 +19,120 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hoje, cerca de **800 milhões de pessoas** passam fome no mundo, ou seja, uma em cada dez. O número fica ainda mais estranho porque a humanidade nunca produziu tanta comida: estatisticamente, há de sobra para alimentar a todos."
+          "text": "Com o avanço da fome e da [[desnutrição]] no mundo, dá para achar que a Terra já não produz o suficiente para uma população que só cresce. Não é verdade. Desde os anos **1960**, a produção agrícola aumenta mais rápido que o número de seres humanos. O que emperra é o jeito como essa comida é produzida e distribuída."
         },
         {
           "type": "paragraph",
-          "text": "A fome, portanto, não é um problema de quantidade, e sim de distribuição. Entender a segurança alimentar mundial é entender por que a fartura e a fome podem coexistir no mesmo planeta."
+          "text": "Os números se contradizem. **7%** das crianças com menos de cinco anos sofrem de desnutrição, enquanto **40%** dos adultos estão acima do peso. E hoje a má alimentação mata mais adultos que o cigarro. Alimentar oito bilhões de pessoas não tem nada de simples: a [[cadeia de abastecimento]] tem falhas, desperdiçamos uma quantidade enorme de comida e muitas práticas agrícolas já não se sustentam."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p1",
-      "title": "A geografia da fome",
+      "title": "As fazendas transformam sol em comida",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Segundo **[[A FAO]]**, a agência das Nações Unidas para a alimentação, a subalimentação crônica ainda atingia cerca de 800 milhões de pessoas em 2024. Esse número global esconde realidades bem diferentes. As zonas mais atingidas ficam na África subsaariana, onde mais de um quarto da população passa fome com regularidade, e no Sul da Ásia."
+          "text": "Uma fazenda capta a luz do sol e a transforma em comida. Quem faz esse trabalho são as plantas: cultivadas, elas dão alimentos que podemos comer. O gado no pasto, por sua vez, converte capim em carne e leite. Mesmo assim, as fazendas têm má fama: solos degradados, poluição, desmatamento, animais que disputam comida e espaço com os humanos."
         },
         {
           "type": "image",
-          "asset": "famine_sub_saharan_africa_malnutrition_child",
-          "ratio": "auto",
-          "caption": "A fome ainda atinge centenas de milhões de pessoas, sobretudo na África subsaariana"
+          "asset": "dairy_cows_grazing_green_pasture",
+          "ratio": "3:2",
+          "caption": "Vacas no pasto: capim transformado em leite e carne."
         },
         {
           "type": "paragraph",
-          "text": "Existem várias formas de sofrimento alimentar. A **subalimentação** é a falta de calorias. As **carências de micronutrientes**, muitas vezes chamadas “fome oculta”, atingem 2 bilhões de pessoas que não têm vitaminas ou minerais essenciais, com efeitos sobre o crescimento ou a saúde. Por fim, a **desnutrição** inclui também, de modo surpreendente, a obesidade: em muitos países em desenvolvimento, os habitantes trocam aos poucos os produtos frescos por alimentos processados, ricos em calorias e pobres em nutrientes."
+          "text": "Esses problemas vêm em parte de práticas agrícolas não sustentáveis. É isso que precisa mudar. Muita gente acha que produzir cada vez mais obriga a pôr cada vez mais recursos nos sistemas de produção. Não é verdade. Produzir mais não exige necessariamente mais agrotóxicos, adubos, terras ou mão de obra. Pode até significar o contrário."
         },
         {
-          "type": "funFact",
-          "text": "Se o desperdício alimentar mundial caísse só 25%, seria possível, em tese, alimentar o conjunto dos 800 milhões de pessoas que hoje passam fome."
+          "type": "paragraph",
+          "text": "Tudo se resume a uma palavra: eficiência. Com métodos agrícolas mais eficientes, dá para produzir mais comida para bilhões de pessoas usando menos [[insumos]], ou seja, menos adubo, agrotóxicos, energia e mão de obra, e ocupando menos terra."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p2",
-      "title": "O paradoxo da fartura e do desperdício",
+      "title": "Um terço da comida nunca chega ao prato",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O mundo produz hoje o equivalente a 2.800 quilocalorias por pessoa e por dia, de sobra para acabar com a fome. O verdadeiro problema não é a escassez, e sim o **acesso**: as populações mais pobres simplesmente não têm como comprar alimentos cujo preço muda sem parar nos mercados mundiais."
+          "text": "Produzir o bastante é só metade do caminho. Ainda é preciso levar a comida até os consumidores, um desafio bem diferente. O número assusta: **um terço** da comida produzida no mundo se perde ou é desperdiçada, ou seja, **1,3 bilhão de toneladas** por ano."
         },
         {
-          "type": "paragraph",
-          "text": "A outra face desse paradoxo é o **desperdício**. Cerca de um terço da produção mundial, ou 1,3 bilhão de toneladas de comida, se perde cada ano. Nos países pobres, as perdas vêm cedo: falta de locais de armazenamento, ausência de câmaras frias, estradas ruins. Nos países ricos, o desperdício ocorre mais tarde, na distribuição e no consumo."
+          "type": "image",
+          "asset": "discarded_fruit_vegetables_food_waste_dumpster",
+          "ratio": "3:2",
+          "caption": "Campanha americana contra o desperdício na Primeira Guerra Mundial: crianças ensinam adultos a fazer conservas de frutas e legumes."
         },
         {
           "type": "funFact",
-          "text": "Desde os anos 2010, a obesidade e as doenças ligadas ao sobrepeso matam cada ano mais pessoas no mundo do que a subnutrição, uma virada histórica para a saúde pública mundial."
+          "text": "O [[desperdício de alimentos]] custa mais do que parece. Jogar fora uma maçã é jogar fora também o tempo, a energia e o dinheiro gastos para plantá-la, colhê-la e transportá-la."
+        },
+        {
+          "type": "paragraph",
+          "text": "Com a [[globalização]] da agricultura, o comércio entre continentes e a abertura dos mercados, os países já não dependem da própria produção para alimentar sua população. Alguns produtos deixaram de ser sazonais: são importados de todos os cantos do mundo. Mas esse acesso maior alonga as cadeias de abastecimento, e quanto mais longa a cadeia, mais elos frágeis ela tem."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p3",
-      "title": "Quando a comida vira arma geopolítica",
+      "title": "Produzir mais com menos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A segurança alimentar também é uma questão de geopolítica. Muitos países dependem das exportações de algumas grandes potências agrícolas, o que os deixa muito vulneráveis ao menor bloqueio. A Ucrânia e a Rússia juntas respondem por cerca de 30% das exportações mundiais de trigo. Quando esse fluxo para, os preços disparam no **[[mercado a prazo]]** de Chicago, onde se negociam as colheitas futuras, e países como o Egito ou o Líbano entram em crise social grave."
+          "text": "Aumentar os insumos para acompanhar a demanda não é sustentável nem realista. Os agricultores precisam adotar práticas melhores, e o crescimento da população não é o único motivo. Eles já sentem a mudança climática: um clima instável e imprevisível os obriga a sair do caminho de sempre."
         },
         {
           "type": "paragraph",
-          "text": "Essa fragilidade também vem de uma escolha feita nos anos 1960: a **[[revolução verde]]**. Essa onda de novas técnicas agrícolas permitiu aumentar muito os rendimentos, mas também reduziu a diversidade das culturas e deixou os agricultores dependentes de fertilizantes químicos. Resultado: cada alta do preço do petróleo se reflete direto no preço do pão."
+          "text": "Melhorar a saúde do solo, aumentar o desempenho dos animais, plantar culturas resistentes ao clima, praticar a [[agricultura de precisão]]: tudo isso são formas de tirar mais de menos. Em vez de espalhar adubo pelo campo inteiro, um robô analisa o solo em tempo real e aplica só a dose exata de que aquele trecho precisa. Resultado: custos menores, impacto ambiental reduzido e colheitas melhores."
+        },
+        {
+          "type": "image",
+          "asset": "agricultural_drone_precision_farming_field",
+          "ratio": "4:3",
+          "caption": "Vista aérea de um campo de cereais e das trilhas do trator, perto de Dülmen (Alemanha), em 2024."
         },
         {
           "type": "paragraph",
-          "text": "O conceito de **food power** designa justamente o uso voluntário das exportações de comida como meio de pressão diplomática, ou até como sanção contra um país adversário."
+          "text": "Essas tecnologias fazem parte da solução e ganham cada vez mais espaço na pesquisa agrícola. Para alimentar oito bilhões de pessoas, não precisamos necessariamente de mais terras, mais animais nem mais hectares plantados. Precisamos tirar mais do que já usamos."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p4",
-      "title": "Alimentar 10 bilhões de humanos sem esgotar o planeta",
+      "title": "Um problema de todos, da fazenda ao consumidor",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Até 2050, a população mundial deve chegar a 10 bilhões de habitantes. A mudança climática já ameaça os rendimentos ao multiplicar secas e inundações, e desloca as terras cultiváveis. A agricultura intensiva também esgota os solos e os aquíferos, que às vezes se esvaziam mais depressa do que se enchem."
+          "text": "Os agricultores costumam levar a culpa. Mas são eles que alimentam nossos filhos, e também cuidam do campo e do meio ambiente. Só que alimentar o planeta não é tarefa só deles: exige muito mais do que plantar comida."
         },
         {
           "type": "paragraph",
-          "text": "Uma das pistas de futuro se chama **[[agroecologia]]**: produzir apoiando-se nos ciclos naturais, como o composto ou a rotação de culturas, em vez de combatê-los com produtos químicos. O desafio é garantir, para cada ser humano, um acesso permanente a uma comida saudável, sem esgotar ainda mais o planeta."
+          "text": "Exige de nós escolhas sustentáveis: preferir produtos mais saudáveis e de origem responsável, e comprar só o que vamos comer de verdade. Toda a cadeia alimentar, indústrias de processamento, embaladores, transportadores, distribuidores e nós, consumidores, também pode mudar de hábitos. O futuro da comida é um problema de todos. A alimentação de oito bilhões de pessoas molda o planeta inteiro, e você faz parte disso."
         },
         {
           "type": "takeaway",
-          "text": "A Terra produz calorias suficientes para alimentar a todos. A fome de 800 milhões de pessoas vem, portanto, de um problema de acesso, de desperdício e de crises geopolíticas, agravado pela mudança climática."
+          "text": "A Terra produz o bastante para todos: alimentar oito bilhões de pessoas exige desperdiçar menos, produzir mais com menos insumos e menos terra, e mudar nossas escolhas, da fazenda ao prato."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "United Nations, Department of Economic and Social Affairs, « Can we feed the billions? ».",
+      "url": "https://www.un.org/en/desa/can-we-feed-billions"
+    },
+    {
+      "text": "H. Ritchie, « No, growing more food does not mean we always need more and more inputs », Sustainability by Numbers.",
+      "url": "https://hannahritchie.substack.com/p/agricultural-total-factor-productivity"
+    },
+    {
+      "text": "J. Gustavsson, C. Cederberg, U. Sonesson, R. van Otterdijk et A. Meybeck, Global Food Losses and Food Waste: Extent, Causes and Prevention, FAO, Rome, 2011."
     }
   ]
 }
