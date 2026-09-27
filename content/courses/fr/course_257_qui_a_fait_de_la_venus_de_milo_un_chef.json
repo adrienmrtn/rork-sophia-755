@@ -8,7 +8,7 @@
   "author": "dusan-nikolic",
   "hero": {
     "image": "venus_de_milo_louvre_gallery_wide_view",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Une statue antique parmi tant d'autres, mutilée et mal datée : il a fallu la France du XIXe siècle pour en faire un mythe."
   },
   "sections": [
@@ -43,7 +43,7 @@
         {
           "type": "image",
           "asset": "olivier_voutier_drawing_venus_de_milo_1820",
-          "ratio": "4:3",
+          "ratio": "3:4",
           "caption": "Étude académique d'après un buste de la Vénus de Milo, dessin anonyme (1855-1875, Musea Brugge)."
         },
         {
@@ -64,7 +64,7 @@
         {
           "type": "image",
           "asset": "venus_de_milo_arms_reconstruction_furtwangler_1893",
-          "ratio": "3:4",
+          "ratio": "2:1",
           "caption": "Hypothèses de restitution des bras de la Vénus de Milo : près de Mars, tenant une couronne, appuyée sur un pilier."
         },
         {
@@ -89,7 +89,7 @@
         {
           "type": "image",
           "asset": "venus_de_milo_louvre_19th_century_photograph",
-          "ratio": "4:3",
+          "ratio": "3:2",
           "caption": "La foule des visiteurs autour de la Vénus de Milo au Louvre, de nos jours."
         },
         {

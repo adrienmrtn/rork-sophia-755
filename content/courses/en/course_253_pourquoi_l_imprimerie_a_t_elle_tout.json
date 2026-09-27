@@ -8,7 +8,7 @@
   "author": "benjamin-campbell",
   "hero": {
     "image": "gutenberg_bible_open_pages_library_of_congress",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "A single book once took a scribe months of work; suddenly one press could turn out hundreds of copies."
   },
   "sections": [
@@ -62,12 +62,6 @@
           "text": "Once the invention took off, book printing grew across Europe at a remarkable rate. By around **1500**, barely fifty years after Gutenberg's breakthrough, the continent is estimated to have held **20 million** books. Thousands of different titles circulated between cities, universities, churches and private readers."
         },
         {
-          "type": "image",
-          "asset": "jost_amman_printing_shop_woodcut_1568",
-          "ratio": "3:4",
-          "caption": "A printing shop in 1568, engraved by Jost Amman: the hand press, the inker with his ink balls, and the compositor at his case."
-        },
-        {
           "type": "paragraph",
           "text": "The change was about more than speed. Printing broke the old copying bottleneck. One carefully prepared text could be reproduced again and again, and the same information reached thousands of people. For the first time in history, written knowledge spread across the continent on a scale that hand copying could never have matched."
         }
@@ -85,7 +79,7 @@
         {
           "type": "image",
           "asset": "luther_ninety_five_theses_1517_printed_broadsheet",
-          "ratio": "3:4",
+          "ratio": "5:4",
           "caption": "A broadsheet for the Reformation centenary (1617): Luther writes his theses on the Wittenberg church door with a giant quill."
         },
         {

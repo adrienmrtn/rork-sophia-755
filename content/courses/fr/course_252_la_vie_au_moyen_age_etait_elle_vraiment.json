@@ -8,7 +8,7 @@
   "author": "benjamin-campbell",
   "hero": {
     "image": "tres_riches_heures_berry_june_haymaking",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Vies courtes, corps sales, ventres vides : les archives et les squelettes racontent une autre histoire."
   },
   "sections": [
@@ -58,12 +58,6 @@
           "text": "Pour la plupart des paysans, le repas ordinaire tourne autour du pain et du [[potage]], une bouillie épaisse de céréales, souvent enrichie de fèves, de légumes du jardin et de restes de viande. Le foyer dispose aussi de fromage, d'œufs et de laitages, autant de sources précieuses de protéines."
         },
         {
-          "type": "image",
-          "asset": "tacuinum_sanitatis_medieval_bread_baking_illumination",
-          "ratio": "3:4",
-          "caption": "Le boulanger et son four dans le Tacuinum Sanitatis, un traité de santé illustré du XIVe siècle."
-        },
-        {
           "type": "paragraph",
           "text": "La viande est bien présente, mais sa fréquence dépend de la fortune, de la région et de la saison. Le **poisson** nourrit de nombreuses communautés, et les légumes conservés apportent de la variété quand les produits frais manquent. La bière et d'autres boissons fermentées sont courantes. L'image de paysans qui survivent avec du pain et de la bière est donc dépassée : ce qu'ils mangent dépend de ce qu'ils peuvent cultiver, conserver ou acheter, une nourriture pratique et saisonnière plutôt que monotone."
         }
@@ -81,7 +75,7 @@
         {
           "type": "image",
           "asset": "medieval_public_bathhouse_illumination_15th_century",
-          "ratio": "4:3",
+          "ratio": "1:1",
           "caption": "Un bain public dans un manuscrit de Valère Maxime, vers 1470."
         },
         {

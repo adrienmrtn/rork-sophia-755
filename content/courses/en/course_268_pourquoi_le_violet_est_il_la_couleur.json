@@ -8,7 +8,7 @@
   "author": "guido-manuel-de-la-torre-olvera",
   "hero": {
     "image": "justinian_mosaic_san_vitale_ravenna_purple_robe",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "The most expensive dye of the ancient world came out of a sea snail's poison gland."
   },
   "sections": [
@@ -54,7 +54,7 @@
         {
           "type": "image",
           "asset": "bolinus_brandaris_murex_shells_tyrian_purple",
-          "ratio": "4:3",
+          "ratio": "5:4",
           "caption": "Murex shells in Tyre, Lebanon: the sea snail whose gland supplies the purple."
         },
         {
@@ -75,12 +75,6 @@
         {
           "type": "paragraph",
           "text": "There is no single Tyrian purple. What comes out of the gland is a mixture, and the shade depends on the proportions. With no bromine attached, the molecule is plain blue indigo. One bromine atom turns it violet. **Two** give the reddish purple the Romans prized."
-        },
-        {
-          "type": "image",
-          "asset": "murex_dyed_wool_shades_purple_to_tekhelet_blue",
-          "ratio": "4:3",
-          "caption": "Wool dyed with murex: the range runs from red-purple to blue, all from the same snail."
         },
         {
           "type": "paragraph",

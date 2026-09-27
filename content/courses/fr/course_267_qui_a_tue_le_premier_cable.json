@@ -8,7 +8,7 @@
   "author": "guido-manuel-de-la-torre-olvera",
   "hero": {
     "image": "hms_agamemnon_laying_atlantic_telegraph_cable_1858",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Le câble qui unissait deux continents était déjà en train de mourir quand le monde le fêtait."
   },
   "sections": [
@@ -39,7 +39,7 @@
         {
           "type": "image",
           "asset": "new_york_atlantic_cable_celebration_september_1858",
-          "ratio": "4:3",
+          "ratio": "4:5",
           "caption": "New York fête le câble en septembre 1858 : la foule sur Broadway, photographiée par William England."
         },
         {
@@ -73,12 +73,6 @@
           "text": "Le **5 août 1858**, le câble atteint Valentia et Thomson passe la main à Whitehouse. Pendant toute la traversée, Thomson a lu les faibles impulsions sur son [[galvanomètre à miroir]], un instrument assez sensible pour capter un signal qui a traversé un océan."
         },
         {
-          "type": "image",
-          "asset": "thomson_mirror_galvanometer_1858_instrument",
-          "ratio": "4:3",
-          "caption": "Un galvanomètre à miroir de Thomson, du type utilisé pour lire les signaux du câble de 1858."
-        },
-        {
           "type": "paragraph",
           "text": "Whitehouse le débranche et installe son propre matériel, bien plus grossier. Rien ne s'affiche. Il envoie alors jusqu'à **2 000 volts** dans le câble pour arracher une réponse, et pousse un isolant déjà défectueux au-delà de ses limites. Le message de la reine atteint Terre-Neuve, mais Whitehouse ne parvient pas à lire la confirmation en retour."
         },
@@ -100,7 +94,7 @@
         {
           "type": "image",
           "asset": "atlantic_telegraph_cable_1858_cross_section_sample",
-          "ratio": "4:3",
+          "ratio": "2:3",
           "caption": "Planche « The Atlantic Telegraph » de G. W. Bacon, vers 1865 : carte du tracé, le Great Eastern, coupes des câbles."
         },
         {

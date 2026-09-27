@@ -8,7 +8,7 @@
   "author": "angela-bouma",
   "hero": {
     "image": "tintagel_castle_ruins_cornwall_coast",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "History gives a war; legend gives a king."
   },
   "sections": [
@@ -39,7 +39,7 @@
         {
           "type": "image",
           "asset": "badbury_rings_hillfort_dorset_aerial",
-          "ratio": "3:2",
+          "ratio": "4:3",
           "caption": "The ramparts of Badbury Rings, in Dorset, one of the sites proposed for the Battle of Badon."
         },
         {
@@ -73,12 +73,6 @@
           "text": "Arthur first appears by name in the *Historia Brittonum*, a Latin text of the **9th century** often attributed to a Welsh writer, [[Nennius]]. He is not a king there. He is called *dux bellorum*, \"leader of battles\": he fights alongside the British kings and defeats the Saxons in a series of battles, the last of which is Badon."
         },
         {
-          "type": "image",
-          "asset": "historia_brittonum_harley_3859_manuscript_page",
-          "ratio": "3:4",
-          "caption": "A page of the Historia Brittonum (British Library, Harley 3859, c. 1100), the earliest text to name Arthur."
-        },
-        {
           "type": "paragraph",
           "text": "No Camelot. No Round Table. No sword in the stone. This Arthur is a war leader, not a monarch, closer to Ambrosius than to the king people picture today. The gap in time weighs heavily: Gildas, writing much closer to the events, never mentions him. The *Historia Brittonum* arrives **three hundred years** later, exactly the kind of distance that makes a story hard to trust."
         },
@@ -100,7 +94,7 @@
         {
           "type": "image",
           "asset": "king_arthur_enthroned_royal_ms_20_a_ii",
-          "ratio": "3:4",
+          "ratio": "5:4",
           "caption": "King Arthur fights Mordred, an episode already told by Geoffrey of Monmouth. Painting by William Hatherell, early 20th century."
         },
         {

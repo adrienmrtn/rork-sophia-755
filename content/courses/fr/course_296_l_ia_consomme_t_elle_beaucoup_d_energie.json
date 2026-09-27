@@ -8,7 +8,7 @@
   "author": "rana-abdalla",
   "hero": {
     "image": "data_center_server_racks_aisle_blue_lights",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "L'IA ressemble à un logiciel, mais chaque réponse est fabriquée dans un bâtiment bien réel, branché sur le même réseau que votre maison."
   },
   "sections": [
@@ -39,7 +39,7 @@
         {
           "type": "image",
           "asset": "data_center_cooling_pipes_chillers",
-          "ratio": "4:3",
+          "ratio": "3:2",
           "caption": "Des rangées de serveurs dans un centre de données : ce sont eux qui consomment l'essentiel de l'électricité."
         },
         {
@@ -64,7 +64,7 @@
         {
           "type": "image",
           "asset": "frontier_supercomputer_oak_ridge_cabinets",
-          "ratio": "3:2",
+          "ratio": "4:3",
           "caption": "Les armoires du supercalculateur Columbia de la NASA : le genre de machines mobilisées pour entraîner un modèle."
         },
         {
@@ -104,7 +104,7 @@
         {
           "type": "image",
           "asset": "high_voltage_power_lines_data_center_virginia",
-          "ratio": "3:2",
+          "ratio": "4:3",
           "caption": "Pylônes d'une ligne à très haute tension (750 kV) : les centres de données se branchent sur ce même réseau."
         },
         {

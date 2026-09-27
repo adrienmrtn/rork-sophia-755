@@ -8,7 +8,7 @@
   "author": "muhammad-zaheer",
   "hero": {
     "image": "mars_valles_marineris_hemisphere_viking_mosaic",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Des rivières, des deltas, des lacs : la planète rouge n'a pas toujours été un désert glacé."
   },
   "sections": [
@@ -39,7 +39,7 @@
         {
           "type": "image",
           "asset": "jezero_crater_river_delta_mars_reconnaissance_orbiter",
-          "ratio": "4:3",
+          "ratio": "5:4",
           "caption": "Carte topographique de la région du cratère Jezero (ESA/DLR/FU Berlin) : en médaillon, les deltas déposés par d'anciennes rivières."
         },
         {
@@ -64,7 +64,7 @@
         {
           "type": "image",
           "asset": "maven_solar_wind_stripping_mars_atmosphere_nasa",
-          "ratio": "4:3",
+          "ratio": "16:9",
           "caption": "Les orbites de la sonde MAVEN, qui mesure la fuite de l'atmosphère martienne, avant et après l'aérofreinage de 2019 (NASA)."
         },
         {
@@ -104,7 +104,7 @@
         {
           "type": "image",
           "asset": "mars_north_polar_ice_cap_mars_global_surveyor",
-          "ratio": "4:3",
+          "ratio": "2:1",
           "caption": "Carte globale de Mars d'après les sondes Viking (NASA/USGS) : en médaillon, les deux pôles et leurs calottes de glace."
         },
         {

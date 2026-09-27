@@ -8,7 +8,7 @@
   "author": "guido-manuel-de-la-torre-olvera",
   "hero": {
     "image": "justinian_mosaic_san_vitale_ravenna_purple_robe",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Le colorant le plus cher de l'Antiquité sort de la glande à venin d'un escargot de mer."
   },
   "sections": [
@@ -54,7 +54,7 @@
         {
           "type": "image",
           "asset": "bolinus_brandaris_murex_shells_tyrian_purple",
-          "ratio": "4:3",
+          "ratio": "5:4",
           "caption": "Coquilles de murex à Tyr, au Liban : l'escargot de mer dont la glande fournit la pourpre."
         },
         {
@@ -75,12 +75,6 @@
         {
           "type": "paragraph",
           "text": "Il n'existe pas une seule pourpre de Tyr. Ce qui sort de la glande est un mélange, et la teinte dépend des proportions. Sans brome, la molécule est un indigo bleu ordinaire. Un atome de brome la rend violette. **Deux** donnent le pourpre rougeâtre que prisaient les Romains."
-        },
-        {
-          "type": "image",
-          "asset": "murex_dyed_wool_shades_purple_to_tekhelet_blue",
-          "ratio": "4:3",
-          "caption": "Laines teintes au murex : la gamme va du rouge-pourpre au bleu, à partir du même escargot."
         },
         {
           "type": "paragraph",

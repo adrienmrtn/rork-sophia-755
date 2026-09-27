@@ -8,7 +8,7 @@
   "author": "angela-bouma",
   "hero": {
     "image": "tintagel_castle_ruins_cornwall_coast",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "L'histoire donne une guerre ; la légende en fait un roi."
   },
   "sections": [
@@ -39,7 +39,7 @@
         {
           "type": "image",
           "asset": "badbury_rings_hillfort_dorset_aerial",
-          "ratio": "3:2",
+          "ratio": "4:3",
           "caption": "Les remparts de Badbury Rings, dans le Dorset, l'un des sites proposés pour la bataille de Badon."
         },
         {
@@ -73,12 +73,6 @@
           "text": "Arthur apparaît pour la première fois sous son nom dans l'*Historia Brittonum*, un texte latin du **IXe siècle** souvent attribué à un écrivain gallois, [[Nennius]]. Il n'y est pas roi. On l'appelle *dux bellorum*, « chef des batailles » : il combat aux côtés des rois bretons et bat les Saxons dans une série de batailles, dont la dernière est Badon."
         },
         {
-          "type": "image",
-          "asset": "historia_brittonum_harley_3859_manuscript_page",
-          "ratio": "3:4",
-          "caption": "Une page de l'Historia Brittonum (British Library, Harley 3859, vers 1100), le plus ancien texte à nommer Arthur."
-        },
-        {
           "type": "paragraph",
           "text": "Pas de Camelot. Pas de Table ronde. Pas d'épée dans le rocher. Cet Arthur est un chef de guerre, pas un monarque, plus proche d'Ambrosius que du roi que l'on imagine aujourd'hui. L'écart dans le temps pèse lourd : Gildas, bien plus proche des événements, ne le mentionne jamais. L'*Historia Brittonum* arrive **trois cents ans** plus tard, exactement le genre de distance qui rend une histoire difficile à croire."
         },
@@ -100,7 +94,7 @@
         {
           "type": "image",
           "asset": "king_arthur_enthroned_royal_ms_20_a_ii",
-          "ratio": "3:4",
+          "ratio": "5:4",
           "caption": "Le roi Arthur affronte Mordred, épisode déjà raconté par Geoffroy de Monmouth. Peinture de William Hatherell, début du XXe siècle."
         },
         {

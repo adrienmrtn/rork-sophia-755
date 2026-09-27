@@ -8,7 +8,7 @@
   "author": "dusan-nikolic",
   "hero": {
     "image": "lascaux_cave_hall_of_the_bulls_paintings",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "En cherchant un passage secret, quatre garçons et leur chien sont tombés sur l'un des plus grands trésors de l'art préhistorique."
   },
   "sections": [
@@ -72,7 +72,7 @@
         {
           "type": "image",
           "asset": "magdalenian_bone_harpoons_upper_paleolithic_tools",
-          "ratio": "4:3",
+          "ratio": "16:9",
           "caption": "Une pointe de sagaie magdalénienne en matière osseuse, vue sous deux faces, trouvée à Bruniquel (Muséum de Toulouse)."
         },
         {
@@ -93,7 +93,7 @@
         {
           "type": "image",
           "asset": "lascaux_shaft_scene_bird_headed_man_bison",
-          "ratio": "4:3",
+          "ratio": "3:2",
           "caption": "La salle des Taureaux, reproduite à Lascaux II : grand taureau noir, vaches rouges et chevaux devant les visiteurs."
         },
         {

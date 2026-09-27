@@ -8,7 +8,7 @@
   "author": "simon-lea",
   "hero": {
     "image": "gilgamesh_hero_lion_relief_khorsabad_louvre",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Le plus vieux livre du monde n'a pas de pages : il est écrit dans l'argile, et il en manque encore un tiers."
   },
   "sections": [
@@ -71,12 +71,6 @@
         {
           "type": "paragraph",
           "text": "Au fil de leurs aventures, Gilgamesh et Enkidu affrontent des monstres. Le premier est [[Humbaba]], un ogre qui garde la Forêt des Cèdres, lieu légendaire où les rois allaient chercher le bois de leurs constructions. Humbaba est tué et les arbres abattus. Ce meurtre, suivi de ce saccage, met les dieux en colère."
-        },
-        {
-          "type": "image",
-          "asset": "humbaba_clay_mask_face_british_museum",
-          "ratio": "4:3",
-          "caption": "Masque d'argile du démon Humbaba, gardien de la Forêt des Cèdres, vers 1800-1600 av. J.-C."
         },
         {
           "type": "paragraph",

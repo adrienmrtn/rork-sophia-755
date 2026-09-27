@@ -8,7 +8,7 @@
   "author": "vedran-obucina",
   "hero": {
     "image": "taiping_rebellion_battle_qing_court_painting_1860s",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Vingt à trente millions de morts, et à sa tête un homme qui se disait le frère cadet de Jésus : la guerre la plus meurtrière de l'histoire n'est pas celle que l'on croit."
   },
   "sections": [
@@ -39,7 +39,7 @@
         {
           "type": "image",
           "asset": "hong_xiuquan_portrait_taiping_heavenly_king",
-          "ratio": "1:1",
+          "ratio": "4:3",
           "caption": "Des écrits de Hong Xiuquan exposés dans un musée : les textes imprimés qui fondent la doctrine religieuse des Taiping."
         },
         {
@@ -100,12 +100,6 @@
         {
           "type": "paragraph",
           "text": "Nankin résiste près de deux ans de siège. Les combattants Taiping défendent avec acharnement ce qu'ils tiennent pour le Royaume de Dieu. Mais les Qing coupent les ravitaillements. En **juillet 1864**, leurs troupes entrent dans la ville et s'en emparent. Hong est mort peu avant, et le Royaume céleste s'effondre."
-        },
-        {
-          "type": "image",
-          "asset": "recapture_of_nanjing_1864_qing_court_painting",
-          "ratio": "4:3",
-          "caption": "La reprise de Nankin par les troupes impériales en juillet 1864, peinture de cour Qing."
         },
         {
           "type": "paragraph",

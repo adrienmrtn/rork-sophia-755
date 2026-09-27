@@ -8,7 +8,7 @@
   "author": "stacy-jankowski",
   "hero": {
     "image": "studio_microphone_headphones_voice_recording",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Videos of your friends do not bother you. But your own voice in a voice message makes you wince. Why does that one sound ring false?"
   },
   "sections": [
@@ -43,7 +43,7 @@
         {
           "type": "image",
           "asset": "cochlea_stereocilia_hair_cells_electron_micrograph",
-          "ratio": "4:3",
+          "ratio": "4:5",
           "caption": "Mouse cochleas under the electron microscope, normal (left) and mutant: the rows of hair cells bristling with stereocilia."
         }
       ]
@@ -60,7 +60,7 @@
         {
           "type": "image",
           "asset": "tuning_fork_weber_test_bone_conduction_skull",
-          "ratio": "4:3",
+          "ratio": "3:4",
           "caption": "A tuning fork placed on the skull during a hearing test: the sound travels through bone, not air."
         },
         {
@@ -77,12 +77,6 @@
         {
           "type": "paragraph",
           "text": "That leaves the discomfort to explain. Researchers do not yet have a definitive answer, but one idea is appealing: the [[uncanny valley]] effect. The concept comes from robotics and animation. The more an artificial creature resembles a human, the more familiar and likeable it seems to us. Up to a point."
-        },
-        {
-          "type": "image",
-          "asset": "humanoid_android_robot_face_geminoid",
-          "ratio": "4:3",
-          "caption": "An almost human android: it is that \"almost\" that unsettles us."
         },
         {
           "type": "paragraph",

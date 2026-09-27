@@ -8,7 +8,7 @@
   "author": "angela-bouma",
   "hero": {
     "image": "grey_wolf_snowy_forest_dusk",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "La peur est ancienne. Le monstre, lui, change de visage à chaque époque."
   },
   "sections": [
@@ -35,12 +35,6 @@
         {
           "type": "paragraph",
           "text": "Le récit le plus souvent associé au loup-garou est celui de [[Lycaon]], roi d'[[Arcadie]], en Grèce, que le poète latin Ovide raconte dans les *Métamorphoses*. **Jupiter**, le roi des dieux, visite l'Arcadie déguisé en simple voyageur. Lycaon soupçonne son hôte d'être un dieu et décide de le tester : il tue un otage, fait cuire le corps et le sert à table. Si l'étranger est vraiment divin, il saura ce qu'il mange."
-        },
-        {
-          "type": "image",
-          "asset": "lycaon_turned_into_wolf_goltzius_1589_engraving",
-          "ratio": "4:3",
-          "caption": "Lycaon fuit le banquet et se change en loup sous les yeux de Jupiter. Gravure d'Hendrick Goltzius, 1589."
         },
         {
           "type": "paragraph",
@@ -77,12 +71,6 @@
           "text": "Au **XIIe siècle**, la poétesse [[Marie de France]] écrit l'un des récits de loup-garou les plus célèbres : [[Bisclavret]]. Son héros est un seigneur qui, régulièrement, se change en loup. Sa femme découvre le secret et finit par voler les vêtements dont il a besoin pour reprendre forme humaine. Sans eux, il reste prisonnier de sa peau de loup."
         },
         {
-          "type": "image",
-          "asset": "marie_de_france_writing_medieval_illumination",
-          "ratio": "3:4",
-          "caption": "Marie de France en train d'écrire, enluminure du XIIIe siècle (BnF, Arsenal 3142)."
-        },
-        {
           "type": "paragraph",
           "text": "Ce loup-garou a quelque chose d'inhabituel : ce n'est **pas vraiment un monstre**. Bisclavret garde son intelligence et sa droiture sous l'apparence de la bête. L'histoire parle moins de chasse au monstre que d'identité, de mariage et de trahison. Les apparences trompent : un homme qui ressemble à un loup peut se conduire avec honneur, et un humain d'allure ordinaire se montrer cruel."
         }
@@ -100,7 +88,7 @@
         {
           "type": "image",
           "asset": "werewolf_woodcut_lucas_cranach_elder_1512",
-          "ratio": "4:3",
+          "ratio": "3:4",
           "caption": "« Le Loup-garou » de Lucas Cranach l'Ancien, vers 1512 : un homme à quatre pattes attaque un village."
         },
         {

@@ -8,7 +8,7 @@
   "author": "rana-abdalla",
   "hero": {
     "image": "data_center_server_racks_aisle_blue_lights",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "AI looks like software, but every answer is made in a very real building, plugged into the same grid as your home."
   },
   "sections": [
@@ -39,7 +39,7 @@
         {
           "type": "image",
           "asset": "data_center_cooling_pipes_chillers",
-          "ratio": "4:3",
+          "ratio": "3:2",
           "caption": "Rows of servers in a data center: they are the ones that use most of the electricity."
         },
         {
@@ -64,7 +64,7 @@
         {
           "type": "image",
           "asset": "frontier_supercomputer_oak_ridge_cabinets",
-          "ratio": "3:2",
+          "ratio": "4:3",
           "caption": "The cabinets of NASA's Columbia supercomputer: the kind of machine used to train a model."
         },
         {
@@ -104,7 +104,7 @@
         {
           "type": "image",
           "asset": "high_voltage_power_lines_data_center_virginia",
-          "ratio": "3:2",
+          "ratio": "4:3",
           "caption": "Pylons of a 750 kV high-voltage line: data centers plug into this same grid."
         },
         {

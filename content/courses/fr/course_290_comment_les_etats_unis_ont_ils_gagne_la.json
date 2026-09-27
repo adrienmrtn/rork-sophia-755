@@ -8,7 +8,7 @@
   "author": "myra-houser",
   "hero": {
     "image": "apollo_11_aldrin_us_flag_lunar_module_1969",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Pendant des années, les Soviétiques ont mené la course. Le 20 juillet 1969, ce sont pourtant deux Américains qui marchent sur la Lune."
   },
   "sections": [
@@ -35,12 +35,6 @@
         {
           "type": "paragraph",
           "text": "L'Union soviétique place les premiers satellites en orbite, les [[Spoutnik]], à partir de **1957**. En **1961**, [[Youri Gagarine]] devient le premier être humain à voler dans l'espace. Les États-Unis, eux, envoient dès les années 1940 plusieurs générations de singes, tous baptisés Albert, au-delà de l'atmosphère."
-        },
-        {
-          "type": "image",
-          "asset": "laika_soviet_space_dog_sputnik_2_1957",
-          "ratio": "1:1",
-          "caption": "La chienne Laïka dans son harnais de vol, avant le lancement de Spoutnik 2 en novembre 1957."
         },
         {
           "type": "paragraph",
@@ -104,7 +98,7 @@
         {
           "type": "image",
           "asset": "apollo_soyuz_handshake_stafford_leonov_1975",
-          "ratio": "4:3",
+          "ratio": "3:2",
           "caption": "La poignée de main entre Thomas Stafford et Alexeï Leonov dans le sas d'Apollo-Soyouz, juillet 1975."
         },
         {

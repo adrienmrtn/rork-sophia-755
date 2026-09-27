@@ -8,7 +8,7 @@
   "author": "myra-houser",
   "hero": {
     "image": "apollo_11_aldrin_us_flag_lunar_module_1969",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "For years, the Soviets led the race. On July 20, 1969, it was two Americans who walked on the Moon."
   },
   "sections": [
@@ -35,12 +35,6 @@
         {
           "type": "paragraph",
           "text": "The Soviet Union put the first satellites into orbit, the [[Sputnik]] series, starting in **1957**. In **1961**, [[Yuri Gagarin]] became the first human to fly in space. The United States, for its part, had been sending several generations of monkeys, all named Albert, beyond the atmosphere since the 1940s."
-        },
-        {
-          "type": "image",
-          "asset": "laika_soviet_space_dog_sputnik_2_1957",
-          "ratio": "1:1",
-          "caption": "The dog Laika in her flight harness, before the launch of Sputnik 2 in November 1957."
         },
         {
           "type": "paragraph",
@@ -104,7 +98,7 @@
         {
           "type": "image",
           "asset": "apollo_soyuz_handshake_stafford_leonov_1975",
-          "ratio": "4:3",
+          "ratio": "3:2",
           "caption": "The handshake between Thomas Stafford and Alexei Leonov in the Apollo-Soyuz docking module, July 1975."
         },
         {

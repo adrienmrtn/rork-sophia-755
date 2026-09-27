@@ -8,7 +8,7 @@
   "author": "muhammad-zaheer",
   "hero": {
     "image": "crab_nebula_supernova_remnant_hubble",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Une étoile peut s'éteindre en douceur ou exploser avec une violence inimaginable : tout se joue sur sa masse."
   },
   "sections": [
@@ -58,7 +58,7 @@
         {
           "type": "image",
           "asset": "helix_nebula_planetary_nebula_white_dwarf_hubble",
-          "ratio": "4:3",
+          "ratio": "1:1",
           "caption": "La nébuleuse de l'Hélice : le gaz expulsé par une étoile mourante, avec la naine blanche visible au centre."
         },
         {
@@ -83,7 +83,7 @@
         {
           "type": "image",
           "asset": "m87_black_hole_event_horizon_telescope_2019",
-          "ratio": "1:1",
+          "ratio": "16:9",
           "caption": "Le trou noir de M87 : la première image de 2019 (à gauche) et sa version affinée par l'algorithme PRIMO (2023)."
         }
       ]
@@ -100,7 +100,7 @@
         {
           "type": "image",
           "asset": "pillars_of_creation_eagle_nebula_jwst_2022",
-          "ratio": "3:4",
+          "ratio": "2:3",
           "caption": "Les Piliers de la création, vus par le télescope James Webb en 2022 : de nouvelles étoiles y naissent."
         },
         {

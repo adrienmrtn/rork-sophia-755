@@ -8,7 +8,7 @@
   "author": "muhammad-zaheer",
   "hero": {
     "image": "crab_nebula_supernova_remnant_hubble",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "A star can fade away quietly or explode with unimaginable force: it all comes down to its mass."
   },
   "sections": [
@@ -58,7 +58,7 @@
         {
           "type": "image",
           "asset": "helix_nebula_planetary_nebula_white_dwarf_hubble",
-          "ratio": "4:3",
+          "ratio": "1:1",
           "caption": "The Helix Nebula: gas thrown off by a dying star, with the white dwarf visible at the center."
         },
         {
@@ -83,7 +83,7 @@
         {
           "type": "image",
           "asset": "m87_black_hole_event_horizon_telescope_2019",
-          "ratio": "1:1",
+          "ratio": "16:9",
           "caption": "The M87 black hole: the first image from 2019 (left) and its sharpened PRIMO reconstruction (2023)."
         }
       ]
@@ -100,7 +100,7 @@
         {
           "type": "image",
           "asset": "pillars_of_creation_eagle_nebula_jwst_2022",
-          "ratio": "3:4",
+          "ratio": "2:3",
           "caption": "The Pillars of Creation, seen by the James Webb Space Telescope in 2022: new stars are being born there."
         },
         {

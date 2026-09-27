@@ -8,7 +8,7 @@
   "author": "nathan-hewitt",
   "hero": {
     "image": "rms_titanic_departing_southampton_april_1912",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Le Titanic transportait exactement le nombre de canots exigé par la loi : voilà pourquoi personne n'a jamais été puni pour ses 1 500 morts."
   },
   "sections": [
@@ -43,7 +43,7 @@
         {
           "type": "image",
           "asset": "titanic_boat_deck_lifeboats_welin_davits_1912",
-          "ratio": "4:3",
+          "ratio": "3:2",
           "caption": "Le pont des embarcations du Titanic, avec ses canots suspendus aux bossoirs, en 1912."
         }
       ]
@@ -79,7 +79,7 @@
         {
           "type": "image",
           "asset": "titanic_lifeboat_survivors_approaching_carpathia_1912",
-          "ratio": "3:2",
+          "ratio": "4:3",
           "caption": "Un canot du Titanic à moitié vide approche du Carpathia, le navire venu à son secours, au matin du 15 avril 1912."
         }
       ]

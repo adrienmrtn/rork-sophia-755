@@ -262,7 +262,7 @@ Les bundles iOS (`CoursesV2/*.fr|en.json`) et Android (`courses_v2/fr|en/`) sont
 côté d'un cours (fichier « extras » par cours) dans les tables partagées, ce qui permet d'écrire
 des dizaines de cours en parallèle sans se marcher dessus ; les autres scripts sont inchangés.
 
-**Images** : 70 couvertures et 197 illustrations à fournir, 20 images existantes réutilisées,
+**Images** : les 267 fichiers ont été livrés le jour même (couvertures : illustrations carrées maison ; illustrations : Wikimedia Commons). Après relecture image par image, 118 légendes ont été réécrites pour coller à l'image réellement fournie et 23 blocs retirés faute de rapport avec le passage (liste dans `docs/images-a-creer.md`). À l'origine : 70 couvertures et 197 illustrations à fournir, 20 images existantes réutilisées,
 listées par cours dans `docs/images-a-creer.md` (ce que l'image doit montrer, ratio, piste). Tant
 qu'un fichier manque, l'app affiche un cadre gris avec le nom. Pour les trois cours remplacés
 dont la couverture change (`course_57`, `course_214`, `course_234`), l'ancienne couverture reste

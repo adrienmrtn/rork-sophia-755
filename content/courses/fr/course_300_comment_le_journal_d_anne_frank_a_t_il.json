@@ -8,7 +8,7 @@
   "author": "simon-lea",
   "hero": {
     "image": "anne_frank_red_checkered_diary_1942",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Sans deux employées qui ramassent, après l'arrestation, des cahiers laissés au sol, le journal d'Anne Frank n'existerait pas."
   },
   "sections": [
@@ -39,7 +39,7 @@
         {
           "type": "image",
           "asset": "anne_frank_diary_handwritten_pages_photos_glued",
-          "ratio": "4:3",
+          "ratio": "16:9",
           "caption": "Fac-similé du carnet rouge ouvert sur deux pages d'octobre 1942, avec des photographies collées par Anne Frank."
         },
         {
@@ -75,7 +75,7 @@
         {
           "type": "image",
           "asset": "anne_frank_house_bookcase_secret_annex_entrance",
-          "ratio": "3:4",
+          "ratio": "3:2",
           "caption": "Miep Gies devant la bibliothèque pivotante qui cachait l'Annexe, lors de la présentation de ses mémoires à Amsterdam, 1987."
         },
         {

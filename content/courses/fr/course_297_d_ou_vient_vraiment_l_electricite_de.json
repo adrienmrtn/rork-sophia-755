@@ -8,7 +8,7 @@
   "author": "rana-abdalla",
   "hero": {
     "image": "wind_turbines_coal_power_plant_landscape",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "La prise est la même partout. Ce qu'il y a derrière ne l'est jamais."
   },
   "sections": [
@@ -39,7 +39,7 @@
         {
           "type": "image",
           "asset": "steam_turbine_generator_hall_power_plant",
-          "ratio": "3:2",
+          "ratio": "2:1",
           "caption": "Un ancien groupe turbo-alternateur à vapeur exposé au Musée technique de Vienne : la turbine est couplée à son alternateur."
         },
         {
@@ -64,7 +64,7 @@
         {
           "type": "image",
           "asset": "electricity_grid_control_room_operators_screens",
-          "ratio": "3:2",
+          "ratio": "16:9",
           "caption": "Carte des lignes à haute tension et des postes électriques des États-Unis : le maillage qu'un gestionnaire de réseau doit équilibrer."
         },
         {
@@ -100,7 +100,7 @@
         {
           "type": "image",
           "asset": "belchatow_coal_power_plant_cooling_towers_poland",
-          "ratio": "3:2",
+          "ratio": "4:3",
           "caption": "La centrale à charbon de Bełchatów, en Pologne, la plus grande d'Europe."
         },
         {

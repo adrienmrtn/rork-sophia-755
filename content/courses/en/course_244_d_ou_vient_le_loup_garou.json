@@ -8,7 +8,7 @@
   "author": "angela-bouma",
   "hero": {
     "image": "grey_wolf_snowy_forest_dusk",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "The fear is old. The monster changes its face with every age."
   },
   "sections": [
@@ -35,12 +35,6 @@
         {
           "type": "paragraph",
           "text": "The story most often linked to the werewolf is that of [[Lycaon]], king of [[Arcadia]], in Greece, as the Roman poet Ovid tells it in the *Metamorphoses*. **Jupiter**, king of the gods, visits Arcadia disguised as an ordinary traveler. Lycaon suspects his guest might be a god and decides to test him: he kills a hostage, cooks the body and serves it at the table. If the stranger is truly divine, he will know what he is eating."
-        },
-        {
-          "type": "image",
-          "asset": "lycaon_turned_into_wolf_goltzius_1589_engraving",
-          "ratio": "4:3",
-          "caption": "Lycaon flees the banquet and turns into a wolf before Jupiter's eyes. Engraving by Hendrick Goltzius, 1589."
         },
         {
           "type": "paragraph",
@@ -77,12 +71,6 @@
           "text": "In the **12th century**, the poet [[Marie de France]] wrote one of the best-known werewolf stories of all: [[Bisclavret]]. Its hero is a nobleman who regularly turns into a wolf. His wife discovers the secret and eventually steals the clothes he needs to return to human form. Without them, he stays trapped in his wolf's skin."
         },
         {
-          "type": "image",
-          "asset": "marie_de_france_writing_medieval_illumination",
-          "ratio": "3:4",
-          "caption": "Marie de France at work, 13th-century illumination (BnF, Arsenal 3142)."
-        },
-        {
           "type": "paragraph",
           "text": "There is something unusual about this werewolf: he is **not really a monster**. Bisclavret keeps his intelligence and his decency in the shape of the beast. The story is less about hunting a monster than about identity, marriage and betrayal. Appearances are misleading: a man who looks like a wolf can behave honorably, and an ordinary-looking human can behave cruelly."
         }
@@ -100,7 +88,7 @@
         {
           "type": "image",
           "asset": "werewolf_woodcut_lucas_cranach_elder_1512",
-          "ratio": "4:3",
+          "ratio": "3:4",
           "caption": "\"The Werewolf\" by Lucas Cranach the Elder, around 1512: a man on all fours attacks a village."
         },
         {

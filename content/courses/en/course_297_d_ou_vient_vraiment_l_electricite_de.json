@@ -8,7 +8,7 @@
   "author": "rana-abdalla",
   "hero": {
     "image": "wind_turbines_coal_power_plant_landscape",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "The plug is the same everywhere. What lies behind it never is."
   },
   "sections": [
@@ -39,7 +39,7 @@
         {
           "type": "image",
           "asset": "steam_turbine_generator_hall_power_plant",
-          "ratio": "3:2",
+          "ratio": "2:1",
           "caption": "An early steam turbine generator set on display at the Vienna Technical Museum: the turbine is coupled to its generator."
         },
         {
@@ -64,7 +64,7 @@
         {
           "type": "image",
           "asset": "electricity_grid_control_room_operators_screens",
-          "ratio": "3:2",
+          "ratio": "16:9",
           "caption": "Map of high-voltage lines and substations in the United States: the network a grid operator must keep in balance."
         },
         {
@@ -100,7 +100,7 @@
         {
           "type": "image",
           "asset": "belchatow_coal_power_plant_cooling_towers_poland",
-          "ratio": "3:2",
+          "ratio": "4:3",
           "caption": "The Bełchatów coal plant in Poland, the largest in Europe."
         },
         {

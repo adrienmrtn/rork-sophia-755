@@ -8,7 +8,7 @@
   "author": "muhammad-zaheer",
   "hero": {
     "image": "mars_valles_marineris_hemisphere_viking_mosaic",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Rivers, deltas, lakes: the red planet was not always a frozen desert."
   },
   "sections": [
@@ -39,7 +39,7 @@
         {
           "type": "image",
           "asset": "jezero_crater_river_delta_mars_reconnaissance_orbiter",
-          "ratio": "4:3",
+          "ratio": "5:4",
           "caption": "Topographic map of the Jezero Crater region (ESA/DLR/FU Berlin): the inset shows the deltas laid down by ancient rivers."
         },
         {
@@ -64,7 +64,7 @@
         {
           "type": "image",
           "asset": "maven_solar_wind_stripping_mars_atmosphere_nasa",
-          "ratio": "4:3",
+          "ratio": "16:9",
           "caption": "Orbits of the MAVEN probe, which measures the escape of Mars's atmosphere, before and after its 2019 aerobraking (NASA)."
         },
         {
@@ -104,7 +104,7 @@
         {
           "type": "image",
           "asset": "mars_north_polar_ice_cap_mars_global_surveyor",
-          "ratio": "4:3",
+          "ratio": "2:1",
           "caption": "Global map of Mars from the Viking orbiters (NASA/USGS): the insets show the two poles and their ice caps."
         },
         {
