@@ -1,0 +1,141 @@
+{
+  "id": "course_297_d_ou_vient_vraiment_l_electricite_de",
+  "title": "¿De dónde viene de verdad la electricidad de tu enchufe?",
+  "subtitle": "Una mezcla invisible",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Medio ambiente y futuro",
+  "description": "En el enchufe, nada indica si la corriente viene del sol, del viento o de una central de carbón. Detrás de ese gesto cotidiano se esconde una mezcla que cambia de hora en hora, y a veces de país.",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "wind_turbines_coal_power_plant_landscape",
+    "ratio": "4:3",
+    "hook": "El enchufe es igual en todas partes. Lo que hay detrás nunca lo es."
+  },
+  "sections": [
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Conectas tu teléfono y la electricidad llega sin etiqueta. Nada, en el enchufe, dice si se produjo con la luz del sol, el agua de una presa o un combustible quemado en una central. Ni siquiera dos casas de la misma calle pueden señalar la central de la que sale cada unidad de corriente."
+        },
+        {
+          "type": "paragraph",
+          "text": "La razón es sencilla: casi todos los hogares toman la corriente de una [[red eléctrica]], una malla de cables que une las centrales y los usuarios de un territorio. Varias centrales la alimentan al mismo tiempo, y sus partes respectivas forman el [[mix eléctrico]]. Ese mix describe las fuentes que abastecen la red, no un flujo aparte de electricidad solar o de gas enviado directo a tu teléfono. La respuesta empieza, por tanto, mucho más allá de las paredes de tu casa."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p1",
+      "title": "Vapor, turbinas y paneles solares",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Las centrales de carbón y muchas centrales nucleares usan el calor para producir vapor. Ese vapor hace girar una [[turbina]], un conjunto de palas conectado a un [[alternador]], la máquina que convierte el movimiento en electricidad. Las centrales de gas también pueden hacer girar sus turbinas directamente con los gases calientes de la combustión. Procesos distintos, pero una misma electricidad, que entra en la misma red."
+        },
+        {
+          "type": "image",
+          "asset": "steam_turbine_generator_hall_power_plant",
+          "ratio": "2:1",
+          "caption": "Un antiguo grupo turboalternador de vapor expuesto en el Museo Técnico de Viena: la turbina está acoplada a su alternador."
+        },
+        {
+          "type": "paragraph",
+          "text": "Los aerogeneradores giran con el viento y las centrales hidroeléctricas con el agua que corre. Los paneles solares siguen otro camino: producen electricidad directamente a partir de la luz, sin ninguna pala que gire. Estas fuentes no trabajan en las mismas condiciones. La producción solar cae al ponerse el sol y la eólica cambia con el tiempo. Las centrales que queman un combustible pueden entonces aportar corriente cuando las demás producen menos."
+        },
+        {
+          "type": "funFact",
+          "text": "En el fondo, una central nuclear funciona como una de carbón: el calor hace hervir agua, y es el vapor el que mueve la turbina. Solo cambia la fuente de calor."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p2",
+      "title": "Un mix que cambia a lo largo del día",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Al mediodía, los paneles solares rinden al máximo mientras oficinas y viviendas consumen corriente. Después de la puesta de sol se detienen, pero las lámparas, los trenes y las cocinas siguen necesitando electricidad. Una tarde de viento también puede dar paso a una noche en calma, mientras el consumo sube o baja."
+        },
+        {
+          "type": "image",
+          "asset": "electricity_grid_control_room_operators_screens",
+          "ratio": "16:9",
+          "caption": "Mapa de las líneas de alta tensión y las subestaciones de Estados Unidos: la malla que un operador de red debe mantener en equilibrio."
+        },
+        {
+          "type": "paragraph",
+          "text": "El [[operador de red]], el organismo que dirige esa malla, debe mantener en todo momento el equilibrio entre la oferta y la demanda. Algunas centrales ajustan su producción. Donde hay baterías instaladas, devuelven la electricidad almacenada antes. Otras fuentes llenan el hueco que deja el sol al bajar. No hay una receta diaria: el mix del mediodía puede ser muy distinto del de unas horas después, aunque tu enchufe no haya cambiado."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p3",
+      "title": "Lo que esconde la media anual",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En 2025, cerca de **una cuarta parte** (24%) de la electricidad producida por las grandes centrales de Estados Unidos venía de [[energías renovables]], las fuentes que la naturaleza repone por sí sola: la luz del sol, el viento, el agua que corre. La cifra, todavía provisional, describe el año entero. No significa que las renovables aportaran la misma parte cada vez que alguien encendía un hervidor o cargaba un teléfono."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un porcentaje anual mezcla las tardes soleadas, las noches de mucho viento y los periodos en que el sol y el viento producen poco. También suma las horas de demanda alta y baja. Para saber qué fuentes alimentan una red en un momento preciso, hay que mirar su mix hora por hora y no su media anual. Los dos puntos de vista son útiles, pero no responden a la misma pregunta."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p4",
+      "title": "Una electricidad llegada de otra parte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El mix horario exige todavía un detalle: qué electricidad está realmente disponible en tu zona. Una central situada a un lado de una frontera puede alimentar la red del otro lado. Esa electricidad importada se mezcla con la producción local. El [[mix de consumo]], es decir, las fuentes que abastecen a los usuarios de una zona, puede diferir del mix producido allí mismo."
+        },
+        {
+          "type": "image",
+          "asset": "belchatow_coal_power_plant_cooling_towers_poland",
+          "ratio": "4:3",
+          "caption": "La central de carbón de Bełchatów, en Polonia, la más grande de Europa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esto importa para las emisiones ligadas a tu electricidad. Quemar carbón o gas libera dióxido de carbono, un gas que calienta el planeta. Los aerogeneradores, los paneles solares y las centrales nucleares no lo emiten directamente cuando producen corriente. La electricidad no se detiene en la frontera, y su impacto tampoco. Según el origen de las importaciones, las emisiones ligadas a tu consumo pueden ser mayores o menores de lo que sugiere la producción local."
+        },
+        {
+          "type": "takeaway",
+          "text": "La electricidad de tu enchufe es una mezcla que cambia de hora en hora y cruza fronteras, así que ni la media anual ni la producción local dicen por sí solas de dónde viene."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Delivered to Consumers », sections « The electric power grid », « Electricity sources and types of providers » et « Balancing authorities »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Generated », sections « Turbine driven generators » et « Other types of generators »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Energy Storage for Electricity Generation », section « Uses and benefits of energy storage systems »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity Generation, Capacity, and Sales in the United States », section « Electricity generation », données 2025 provisoires."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity and the Environment », sections « Fossil fuel, biomass, and waste burning power plants » et « Nuclear power plants »."
+    },
+    {
+      "text": "Electricity Maps, « Methodology », sections « Defining Granularity: Spatial and Temporal », « Consumption-based Calculation » et « The Flow-Tracing Algorithm »."
+    },
+    {
+      "text": "B. Tranberg et al., « Real-time carbon accounting method for the European electricity markets », Energy Strategy Reviews, vol. 26, 2019, art. 100367.",
+      "url": "https://doi.org/10.1016/j.esr.2019.100367"
+    }
+  ]
+}

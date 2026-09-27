@@ -1,0 +1,149 @@
+{
+  "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout",
+  "title": "Warum veränderte der Buchdruck alles?",
+  "subtitle": "Mainz, um 1450",
+  "subject": "histoire",
+  "subcategory": "Frühe Neuzeit & 19. Jahrhundert",
+  "description": "Um 1450 setzte ein Handwerker in Mainz Buchstaben aus Metall zusammen, um ganze Seiten zu drucken. Fünfzig Jahre später gab es in Europa 20 Millionen Bücher, und Informationen ließen sich viel schwerer kontrollieren.",
+  "author": "benjamin-campbell",
+  "hero": {
+    "image": "gutenberg_bible_open_pages_library_of_congress",
+    "ratio": "4:3",
+    "hook": "Ein Buch kostete einen Schreiber monatelange Arbeit. Plötzlich druckte eine Presse Hunderte Exemplare davon."
+  },
+  "sections": [
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_intro",
+      "title": "Einleitung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lange vor dem Buchdruck war die Herstellung eines Buches in Europa langsame und teure Arbeit. Jedes Werk schrieb ein ausgebildeter [[Kopist]] von Hand ab, der Monate, manchmal Jahre an einer einzigen Handschrift saß. Bücher blieben deshalb den Reichen, den kirchlichen Einrichtungen und den Universitäten vorbehalten. Nicht, weil andere keine wollten: Ein einziger Band kostete einfach enorm viel Zeit und Arbeitskraft."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dann, Mitte des **15. Jahrhunderts**, begann sich alles zu ändern. In Mainz entwickelte ein Handwerker namens [[Johannes Gutenberg]] ein neues Druckverfahren, das die Buchherstellung revolutionierte. Seine Erfindung veränderte nicht nur die Welt der Bücher: Sie veränderte, wie Informationen vervielfältigt und verbreitet werden konnten. Warum hatte eine Druckpresse eine solche Wirkung?"
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p1",
+      "title": "Gutenberg hat den Druck nicht erfunden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gutenberg war nicht der Erste, der druckte. Der [[Holztafeldruck]], bei dem man eine ganze Seite in eine Holzplatte schnitzt und sie dann auf Papier drückt, war in **China** und ganz Asien schon seit Jahrhunderten üblich. Neu an seinem System waren [[bewegliche Lettern]] aus Metall."
+        },
+        {
+          "type": "image",
+          "asset": "movable_metal_type_letters_composing_stick",
+          "ratio": "3:2",
+          "caption": "Bewegliche thailändische Lettern in einem Winkelhaken (Nationalmuseum Bangkok): Jeder Buchstabe ist spiegelverkehrt gegossen und dient später für eine andere Seite."
+        },
+        {
+          "type": "paragraph",
+          "text": "Statt ein ganzes Buch in Holz zu schnitzen, gossen die Drucker jeden Buchstaben einzeln und setzten die Lettern dann zu Wörtern und Seiten zusammen. Das Ganze wurde eingefärbt und auf Papier gepresst. War die Seite gedruckt, nahm man die Lettern wieder auseinander und nutzte sie für die nächste. Das Verfahren wurde viel flexibler: Ein Drucker konnte **Hunderte Exemplare** herstellen, ohne für jede Seite eine neue Platte zu schnitzen."
+        },
+        {
+          "type": "funFact",
+          "text": "Die Gutenberg-Bibel, um 1455 gedruckt, war nicht das erste in Europa gedruckte Buch, aber das erste große Werk, das mit seinem Satzsystem entstand. Von etwa 180 gedruckten Exemplaren sind heute nur rund fünfzig erhalten."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p2",
+      "title": "Zwanzig Millionen Bücher in fünfzig Jahren",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Als die Erfindung einmal in der Welt war, breitete sich der Buchdruck in Europa in bemerkenswertem Tempo aus. Um **1500**, kaum fünfzig Jahre nach Gutenbergs Durchbruch, gab es auf dem Kontinent schätzungsweise schon **20 Millionen** Bücher. Tausende verschiedene Titel zirkulierten zwischen Städten, Universitäten, Kirchen und privaten Lesern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Es ging nicht nur um Geschwindigkeit. Der Buchdruck sprengte den alten Engpass des Abschreibens. Ein sorgfältig vorbereiteter Text ließ sich immer wieder vervielfältigen, und dieselbe Information erreichte Tausende Menschen. Zum ersten Mal in der Geschichte verbreitete sich geschriebenes Wissen in einem Ausmaß über den Kontinent, mit dem das Abschreiben von Hand niemals hätte mithalten können."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p3",
+      "title": "Luther und die Reformation in Flugschriften",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zu Beginn des **16. Jahrhunderts** stellte sich ein deutscher Mönch und Professor, [[Martin Luther]], gegen die katholische Kirche und löste aus, was zur [[Reformation]] wurde. In früheren Jahrhunderten wäre der Streit wohl eine örtliche theologische Debatte geblieben. Mit dem Buchdruck kam es anders."
+        },
+        {
+          "type": "image",
+          "asset": "luther_ninety_five_theses_1517_printed_broadsheet",
+          "ratio": "5:4",
+          "caption": "Flugblatt zum hundertjährigen Reformationsjubiläum (1617): Luther schreibt seine Thesen mit einer riesigen Feder an die Tür in Wittenberg."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Argumente wurden rasch als Flugschriften nachgedruckt und weit über die Universität hinaus verbreitet, an der er lehrte. Seine Schriften erschienen auch auf Deutsch und erreichten so Menschen, die kein Latein lasen. Der Buchdruck hat die Reformation nicht allein geschaffen, aber er brachte Luthers Ideen zu viel mehr Menschen, als es jede Handschrift gekonnt hätte. Für die Kirchenoberen wurde der Streit viel schwerer einzudämmen."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p4",
+      "title": "Vom Telegrafen zum Internet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Buchdruck gilt als eine der ersten Techniken, die den Engpass des Abschreibens durchbrachen. Er blieb nicht die letzte. Im **19. Jahrhundert** ermöglichte der [[Telegraf]], eine Nachricht in wenigen Minuten statt in Tagen über riesige Entfernungen zu schicken. Das Internet ging noch weiter: Informationen lassen sich in Sekunden kopieren und versenden."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "um 1450",
+              "title": "Gutenbergs Presse",
+              "detail": "In Mainz ersetzen bewegliche Metalllettern das Abschreiben von Hand."
+            },
+            {
+              "date": "um 1500",
+              "title": "20 Millionen Bücher",
+              "detail": "Fünfzig Jahre nach Gutenberg zählt Europa Millionen gedruckter Bände."
+            },
+            {
+              "date": "1517",
+              "title": "Luthers Thesen",
+              "detail": "Gedruckte Flugschriften tragen die Reformation weit über seine Universität hinaus."
+            },
+            {
+              "date": "19. Jahrhundert",
+              "title": "Der Telegraf",
+              "detail": "Eine Nachricht überwindet riesige Entfernungen in wenigen Minuten."
+            },
+            {
+              "date": "Ende des 20. Jahrhunderts",
+              "title": "Das Internet",
+              "detail": "Informationen werden in Sekunden kopiert und versendet."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Jede dieser Techniken veränderte mehr als nur das Tempo der Kommunikation. Sie erschütterte die Institutionen, die gebaut waren, um Informationen zu kontrollieren und zu verteilen. Kirchen, Regierungen, Zeitungen und Unternehmen mussten sich alle anpassen, als Informationen leichter zu vervielfältigen und viel schwerer zu kontrollieren waren. Der Buchdruck bleibt ein nützlicher Maßstab dafür, was eine Erfindung mit der Welt machen kann."
+        },
+        {
+          "type": "takeaway",
+          "text": "Der Buchdruck veränderte alles, nicht weil Gutenberg das Drucken erfand, sondern weil seine beweglichen Lettern den Engpass des Abschreibens sprengten: Informationen wurden leicht zu vervielfältigen und schwer zu kontrollieren. Dieses Muster wiederholten später der Telegraf und das Internet."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "L. Febvre et H.-J. Martin, The Coming of the Book: The Impact of Printing, 1450-1800, trad. D. Gerard, Verso, 1976, p. 186."
+    },
+    {
+      "text": "K.-W. Chow, « Reinventing Gutenberg: Woodblock and Movable-Type Printing in Europe and China », Late Imperial China, vol. 28, n° 1, 2007, p. 185-186."
+    }
+  ]
+}

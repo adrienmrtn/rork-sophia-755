@@ -1,14 +1,15 @@
 {
   "id": "course_149_la_joconde",
-  "title": "Was machte die “Mona Lisa” so berühmt?",
-  "subtitle": "1503-1519",
+  "title": "War die Mona Lisa Leonardo wirklich wichtig?",
+  "subtitle": "1503",
   "subject": "art",
   "subcategory": "Ikonische Werke",
-  "description": "Gemalt von **Leonardo da Vinci** zwischen **1503** und **1519**, ist *Die Mona Lisa* zur absoluten Ikone des Louvre geworden. Technik, rätselhaftes Lächeln... und ein Diebstahl **1911**, der alles veränderte.",
+  "description": "Es ist das berühmteste Gemälde der Welt. Doch 1503 hatte sein eigener Maler Besseres zu tun als das Porträt einer Kaufmannsfrau.",
+  "author": "dusan-nikolic",
   "hero": {
     "image": "la_joconde",
     "ratio": "16:9",
-    "hook": "Ein Lächeln, ein Diebstahl, ein Mythos: wie ein Porträt zum berühmtesten Werk der Welt wurde."
+    "hook": "Das meistbestaunte Gemälde der Welt war für Leonardo vielleicht nur eine Nebenarbeit."
   },
   "sections": [
     {
@@ -18,89 +19,93 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "*Die Mona Lisa*, gemalt zwischen **1503** und **1519** von **Leonardo da Vinci**, ist das meistbesuchte Bild der Welt. Ausgestellt im **Louvre**, fasziniert sie durch Technik und Geschichte. Es ist nicht nur ein schönes Porträt. Es ist ein Mythos, gebaut aus Kunst, Wissenschaft und einem Kriminalfall."
+          "text": "Für eines der berühmtesten Gemälde der Welt weiß man erstaunlich wenig Sicheres über die *Mona Lisa*. In den Grundzügen sind sich Kunsthistoriker einig: Leonardo da Vinci malte sie zwischen **1503 und 1506** in Florenz. **1517** nahm er sie mit nach Frankreich, und die Holztafel landete in der Sammlung von König [[Franz I.]]"
         },
         {
           "type": "paragraph",
-          "text": "Warum dieses Gesicht und kein anderes? Weil Leonardo darin Innovationen gebündelt hat, und weil ein spektakulärer Diebstahl sie weltweit berühmt machte."
+          "text": "Die Lücken der Geschichte füllten sich mit Legenden. Man spricht von dem Bild wie von einer Frau, von “ihr”. Ihr halbes Lächeln gilt als geheimnisvoll. Nach dem Diebstahl von **1911** zweifelte man sogar an seiner Echtheit. All diese Geschichten machten das Bild berühmt, doch sie verdrängten seinen Zusammenhang. Dabei war das Werk Leonardo, als er es malte, vielleicht gar nicht wichtig."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p1",
-      "title": "Leonardo und das Sfumato",
+      "title": "Wer ist die Mona Lisa?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Das Porträt beginnt in Florenz um **1503**. Auftraggeber ist der Kaufmann **Francesco del Giocondo**. Das Modell soll seine Frau sein, [[Lisa Gherardini]]. Aber Leonardo liefert das Bild nie. Er behält es, überarbeitet es jahrelang und nimmt es nach Frankreich mit, wo er **1519** stirbt."
+          "text": "Kunsthistoriker gehen weitgehend davon aus, dass [[Lisa Gherardini]] Modell saß, die Frau von **Francesco del Giocondo**, einem Kaufmann und kleinen Amtsträger der Florentiner Regierung. Daher der Name “La Gioconda”. Diese Zuordnung stützt sich auf die Leonardo-Biografie, die [[Giorgio Vasari]] **1550** und erneut **1568** in seinen *Lebensbeschreibungen der berühmtesten Maler, Bildhauer und Architekten* veröffentlichte."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_leonardo_da_vinci_louvre_painting",
-          "ratio": "4:3",
-          "caption": "Die Mona Lisa im Louvre: eine kleine Pappeltafel, die zur Weltikone wurde"
+          "asset": "vasari_lives_of_the_artists_1568_title_page",
+          "ratio": "3:4",
+          "caption": "Vasaris Lebensbeschreibungen, Florentiner Ausgabe von 1568: der Text, der dem Modell einen Namen gibt."
         },
         {
           "type": "paragraph",
-          "text": "Seine Signaturtechnik ist [[Das leonardische Sfumato]]: Lasuren, hauchdünne Schichten, die die Konturen auflösen. Keine harte Linie mehr. Das Gesicht geht in die Luft über. Leonardo fügt auch die [[atmosphärische Perspektive]] hinzu: die ferne Landschaft blaut und weicht, wie im wirklichen Sehen."
+          "text": "Warum gab Francesco das Porträt in Auftrag? Man weiß es nicht. Leonardo machte sich Anfang **1503** an die Arbeit. Was danach geschah, ist umstritten: Für Historiker ist Vasaris Bericht eher literarische Erfindung, die eines Biografen, der Lücken mit einer schönen Geschichte füllt. Mitte **1506** verließ Leonardo Florenz auf der Suche nach einer besseren Stelle und ging nach Mailand. Das unvollendete Porträt nahm er mit."
+        },
+        {
+          "type": "funFact",
+          "text": "Laut Vasari soll Leonardo Musiker und Spaßmacher engagiert haben, um sein Modell während der Sitzungen zu unterhalten. Historiker halten das für eine Erfindung des Biografen, doch genau sie begründete den Mythos vom “Lächeln der Mona Lisa”."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p2",
-      "title": "Das Lächeln, das mit dem Auge spielt",
+      "title": "Anghiari: ein glanzvollerer Auftrag",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Das berühmte Lächeln ist nicht nur ein gemaltes Gefühl. Es nutzt das [[peripheres Sehen]]. Wenn man die Augen des Modells fixiert, sehen die Ränder der Netzhaut den Mund in weichen Schatten: das Lächeln scheint da. Schaut man direkt auf den Mund, wird es schwächer."
+          "text": "Im Oktober **1503** beauftragte die Florentiner Regierung Leonardo, die [[Schlacht von Anghiari]] im [[Palazzo Vecchio]] zu malen, dem Sitz der Republik Florenz. Das Wandbild sollte den Sieg von Florenz über Mailand im Jahr **1440** feiern. In der Renaissance galt eine Geschichtsszene weit mehr als ein Porträt. Zusammen mit religiösen, mythologischen und allegorischen Themen zählte sie zur höchsten Form der Kunst."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_smile_detail_close_up",
-          "ratio": "1:1",
-          "caption": "Je länger man es fixiert, desto mehr entzieht sich das Lächeln"
-        },
-        {
-          "type": "funFact",
-          "text": "Leonardo, Maler und Forscher zugleich, studierte die Optik. Das Rätsel des Lächelns beruht zum Teil auf einem genauen Wissen, wie das menschliche Auge Schatten verarbeitet."
+          "asset": "rubens_copy_battle_of_anghiari_louvre_drawing",
+          "ratio": "16:9",
+          "caption": "Rubens' Kopie des zentralen Reitergefechts: die einzige Spur des großen, unvollendeten Wandbilds im Palazzo Vecchio."
         },
         {
           "type": "paragraph",
-          "text": "Ergebnis: das Gesicht wirkt lebendig, wechselnd, fast bewusst unseres Blicks."
+          "text": "Neben einem großen öffentlichen Auftrag zählte das private Porträt der Frau eines kleinen Beamten wenig. Ab Dezember **1503** steckte Leonardo immer mehr Zeit in die Vorbereitung der großen Komposition. Mehr Ansehen, besserer Lohn: Die Mona Lisa musste warten. Am Ende seines zweiten Aufenthalts in Florenz war das Porträt nicht fertig. Die *Schlacht von Anghiari* ebenso wenig: Von ihr blieben nur vorbereitende Skizzen und deren Kopien."
+        },
+        {
+          "type": "funFact",
+          "text": "Möglicherweise war nur noch die Landschaft im Hintergrund unvollendet, als Leonardo 1506 nach Mailand aufbrach."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p3",
-      "title": "1911: der Diebstahl, der den Ruhm erfindet",
+      "title": "Wie eine Ikone entsteht",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Im 19. Jahrhundert wird *Die Mona Lisa* bewundert, ist aber noch nicht Werk Nummer 1 des Louvre. Alles kippt am **21. August 1911**. [[Vincenzo Peruggia]], ein italienischer Glaser des Museums, stiehlt sie: das ist [[Der Diebstahl der Mona Lisa (1911)]]. Er versteckt sie unter seinem Kittel und geht ruhig hinaus."
+          "text": "Leonardo starb am **2. Mai 1519** in Amboise in Frankreich. Die *Mona Lisa* kam nie bei den Giocondos an. Nach der Französischen Revolution wurde die königliche Sammlung öffentlich, und das Gemälde kam in den **Louvre**. Seit Anfang des 19. Jahrhunderts wird sein Lächeln auf tausend Arten beschrieben, von göttlich bis sinnlich."
         },
         {
           "type": "image",
           "asset": "mona_lisa_stolen_1911_newspaper_headline",
           "ratio": "4:3",
-          "caption": "1911: die Abwesenheit des Bildes macht Schlagzeilen und erschafft einen Star"
+          "caption": "Die Titelseite des Excelsior im Januar 1914: die Rückkehr der Mona Lisa nach dem Diebstahl von 1911."
         },
         {
           "type": "paragraph",
-          "text": "Die Ermittlung wird zum Skandal. Der Dichter [[Guillaume Apollinaire]] sitzt eine Zeit im Gefängnis. [[Pablo Picasso]] wird verhört. Als das Bild **1913** wieder auftaucht, ist es nicht mehr nur ein Gemälde. Es ist eine Berühmtheit."
+          "text": "Der Wendepunkt war der Diebstahl des Bildes aus dem Museum im Jahr **1911**. Die Zeitungen machten die Mona Lisa zur weltweiten Sensation. Seitdem ziehen Boulevardpresse und Romane die Echtheit des Werks und die Identität des Modells immer wieder in Zweifel, ohne jede Grundlage in einer echten historischen Analyse. Das Gemälde wurde zum Mittelpunkt immer neuer Geschichten, die man sich bis heute erzählt."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p4",
-      "title": "Eine Ikone hinter Glas",
+      "title": "Ein Bild, das größer wurde als sein Maler",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Heute, gemalt auf Pappelholz, lebt sie hinter [[schusssicheres Glas]], in einer klimatisierten Vitrine. Säureangriffe, geworfene Gegenstände: der Schutz ist nötig geworden. Und die Parodien, von Duchamp bis zum Internet, beweisen, dass sie zu einer Weltsprache geworden ist."
+          "text": "Mehr als **500 Jahre** nach dem Beginn des Porträts zieht Lisa del Giocondo mehr Menschen an denn je. Hinter Panzerglas im Louvre ist das Bild von seinem historischen Zusammenhang abgeschnitten. Davon befreit, wurde es zur universellen Ikone. Dieser Status hat seinen Preis: In der Neuzeit wurde keine Restaurierung mehr gewagt."
         },
         {
           "type": "timeline",
@@ -108,30 +113,47 @@
             {
               "date": "1503",
               "title": "Beginn des Porträts",
-              "detail": "Leonardo beginnt die Mona Lisa in Florenz."
+              "detail": "Leonardo beginnt in Florenz das Porträt von Lisa Gherardini."
+            },
+            {
+              "date": "Oktober 1503",
+              "title": "Der Auftrag für Anghiari",
+              "detail": "Florenz vertraut ihm ein großes Wandbild für den Palazzo Vecchio an."
+            },
+            {
+              "date": "1506",
+              "title": "Aufbruch nach Mailand",
+              "detail": "Leonardo verlässt Florenz, das unvollendete Porträt unter dem Arm."
             },
             {
               "date": "1519",
-              "title": "Tod Leonardos",
-              "detail": "Das Bild bleibt in Frankreich."
+              "title": "Leonardos Tod",
+              "detail": "In Amboise, am 2. Mai. Das Gemälde bleibt in Frankreich."
             },
             {
               "date": "1911",
               "title": "Der Diebstahl",
-              "detail": "Peruggia macht das Werk zum Medienmythos."
-            },
-            {
-              "date": "1913",
-              "title": "Rückkehr",
-              "detail": "Das Bild kommt als Weltstar in den Louvre zurück."
+              "detail": "Die Presse macht die Mona Lisa zur weltweiten Sensation."
             }
           ]
         },
         {
+          "type": "paragraph",
+          "text": "Den über die Jahrhunderte vergilbten [[Firnis]], die Schutzschicht der Ölmalerei, abzunehmen, könnte das Werk beschädigen. Und selbst wenn die Restaurierung gelänge, fürchtet man, die *Mona Lisa* könnte ihre Faszination verlieren. Leonardos ursprüngliche Technik und Farben zählen weniger als das Bild selbst. Als Gefäß unzähliger Geschichten ist das Gemälde über seinen Maler und über die Kunstgeschichte hinausgewachsen."
+        },
+        {
           "type": "takeaway",
-          "text": "*Die Mona Lisa* verdankt ihren Ruhm dem Genie Leonardos (Sfumato, optisches Lächeln) ebenso wie der Geschichte: ein Diebstahl **1911** hat ein bewundertes Meisterwerk in eine globale Ikone verwandelt."
+          "text": "1503 für einen glanzvolleren Auftrag beiseitegelegt, verdankt die *Mona Lisa* ihren Status als Ikone fünf Jahrhunderten voller Legenden und einem Diebstahl, weit mehr als dem Rang, den Leonardo ihr gab."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. Campbell, Leonardo da Vinci: An Untraceable Life, Princeton University Press, 2025, p. 43-45."
+    },
+    {
+      "text": "F. Zöllner, « Leonardo's Portrait of Mona Lisa del Giocondo », Gazette des Beaux-Arts, vol. 121, 1993, p. 115-138."
     }
   ]
 }

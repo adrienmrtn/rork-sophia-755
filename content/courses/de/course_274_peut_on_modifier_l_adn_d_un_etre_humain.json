@@ -1,0 +1,159 @@
+{
+  "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain",
+  "title": "Kann man die DNA eines Menschen verändern?",
+  "subtitle": "Die Genschere CRISPR",
+  "subject": "sciences",
+  "subcategory": "Entdeckungen, die die Welt veränderten",
+  "description": "Seit 2012 lässt sich DNA mit einer von Bakterien abgeschauten “molekularen Schere” genau an der gewünschten Stelle schneiden. Erste Heilungen, mögliche Fehler und Designerbabys: Wie weit wird man gehen?",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "genetics_lab_pipette_dna_samples_gloved_hands",
+    "ratio": "4:3",
+    "hook": "Was, wenn man einen Buchstaben seiner DNA korrigieren könnte wie einen Tippfehler?"
+  },
+  "sections": [
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Haare, Augen, Hautfarbe, Statur: Wir sind alle verschieden. Diese körperlichen Merkmale sind ein Erbe: Jedes [[Gen]] ist ein Abschnitt DNA, den wir von unseren leiblichen Eltern bekommen haben. Natürlich zählt auch die Umwelt: was wir essen, mit wem wir Umgang haben, was wir glauben. Aber unsere Gene nehmen wir als gegeben hin. Manchmal wären wir gern größer oder schlanker, doch wir leben damit, ohne groß darüber nachzudenken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Was würden Sie ändern, wenn Sie Ihre DNA umschreiben könnten? Die Frage ist nicht mehr theoretisch. **2012** entwickelten die amerikanische Biochemikerin **Jennifer Doudna** und die französische Mikrobiologin **Emmanuelle Charpentier** eine Methode, ein Protein zu programmieren, das DNA schneidet. Damit konnten sie ein unerwünschtes Gen entfernen und so, theoretisch, die DNA eines Menschen verändern."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p1",
+      "title": "CRISPR, eine Schere aus dem Reich der Bakterien",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[CRISPR]] ist nicht das einzige Werkzeug, das DNA verändern kann, aber das berühmteste. Sein Prinzip wurde zuerst bei Mikroben beobachtet. Um sich zu wehren, erkennt ein Bakterium die DNA des angreifenden Virus und zerschneidet sie. Dafür nutzt es DNA-Abschnitte namens CRISPR und ein Enzym namens **Cas**, das die Rolle der Schere spielt."
+        },
+        {
+          "type": "image",
+          "asset": "emmanuelle_charpentier_jennifer_doudna_crispr_pioneers",
+          "ratio": "16:9",
+          "caption": "Emmanuelle Charpentier und Jennifer Doudna, die beiden Forscherinnen, die aus dieser Abwehr der Bakterien ein Werkzeug machten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Wissenschaft hat dieses natürliche Abwehrsystem umfunktioniert. Statt auf ein Virus zu zielen, lenkt man das Enzym an eine genau bestimmte Stelle in der DNA eines Menschen. Dort schneidet es, und eine gezielte Veränderung wird möglich. Manchmal wird das Zielgen einfach abgeschaltet. Manchmal werden einige seiner Buchstaben geändert. Manchmal wird es komplett ersetzt."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p2",
+      "title": "Die ersten Heilungen: Sichelzellenanämie und Thalassämie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DNA bearbeiten zu können, öffnet die Tür zur Behandlung vieler Erbkrankheiten. Unsere DNA ist mit **vier Basen** geschrieben: A, T, C und G. Ihre Abfolge bildet unser [[Genom]], den Bauplan unseres Körpers. Schon ein einziger Fehler in diesem Text kann eine Krankheit auslösen, und ihn zu korrigieren kann sie im Prinzip heilen."
+        },
+        {
+          "type": "image",
+          "asset": "sickle_cell_red_blood_cells_micrograph",
+          "ratio": "3:2",
+          "caption": "Lebergewebe eines Patienten mit Sichelzellenanämie unter dem Mikroskop: die erste Krankheit, die mit CRISPR behandelt wurde."
+        },
+        {
+          "type": "paragraph",
+          "text": "**2023** wurde Großbritannien das erste Land, das ein Medikament auf CRISPR-Basis zuließ. Es richtet sich gegen zwei erbliche Blutkrankheiten, die [[Sichelzellenanämie]] und die Beta-Thalassämie. Die Behandlung verändert die blutbildenden Zellen so, dass sie mehr [[fetales Hämoglobin]] herstellen, eine Form des Hämoglobins, die normalerweise vor der Geburt gebildet wird."
+        },
+        {
+          "type": "funFact",
+          "text": "Ein Tippfehler kann töten. Ein einziger falscher Buchstabe in der DNA, etwa ein T statt eines C, reicht manchmal für eine tödliche Erbkrankheit. Den richtigen Buchstaben wieder einzusetzen, könnte sie theoretisch heilen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Und das ist erst der Anfang. Klinische Studien testen CRISPR heute gegen Krebs, Stoffwechselstörungen, Autoimmunkrankheiten, Herz-Kreislauf-Erkrankungen und Muskeldystrophien. Die Liste ist lang. Gehören Erbkrankheiten also bald der Vergangenheit an?"
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p3",
+      "title": "Warum wir nicht alles heilen werden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "So einfach ist es nicht. Erstens hängt die Art, wie ein Gen wirkt, nicht nur vom Erbe der Eltern ab: Auch die Umwelt beeinflusst sie. Zweitens geht eine Krankheit nicht unbedingt auf ein einziges defektes Gen zurück. Oft sind mehrere Gene beteiligt, und die Reparatur wird dann viel komplizierter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Auch CRISPR selbst kann sich irren. Manchmal schneidet die Schere an der falschen Stelle, oder die beiden Schnittenden wachsen nicht richtig zusammen. Diese veränderte DNA kann neue Probleme schaffen, ohne das ursprüngliche zu beheben. Trotzdem macht die Medizin große Schritte, um einige der schlimmsten Erbkrankheiten auszurotten."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p4",
+      "title": "Designerbabys: Wo liegt die Grenze?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dass man schwere oder tödliche Krankheiten behandeln will, leuchtet jedem ein. Aber wo soll die Wissenschaft die Grenze ziehen? Soll man damit den “perfekten Menschen” erschaffen? Die Frage stellt sich mit neuer Schärfe, seit man DNA nach Belieben schneiden kann."
+        },
+        {
+          "type": "image",
+          "asset": "ivf_embryo_icsi_microinjection_micrograph",
+          "ratio": "16:9",
+          "caption": "Eine menschliche Eizelle, von einer Pipette gehalten, bei einer Mikroinjektion im Labor."
+        },
+        {
+          "type": "funFact",
+          "text": "Der Begriff “Designerbaby” ist nicht mit CRISPR entstanden. Man verwendet ihn seit dem Aufkommen der [[In-vitro-Fertilisation]], mit der sich ein Embryo im Labor zeugen lässt, bevor man ihn einpflanzt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die [[Keimbahn-Editierung]] verändert die DNA von Fortpflanzungszellen: Spermien, Eizellen oder Embryonen in ihren allerersten Stadien. Der Unterschied zu einer gewöhnlichen Behandlung ist gewaltig: Diese Veränderungen werden von Generation zu Generation weitergegeben. Heute ist die Keimbahn-Editierung in allen Ländern verboten. Doch wie lange noch? Ab wann kippt die medizinische Genbearbeitung in genetische Linien nach Wunsch?"
+        },
+        {
+          "type": "takeaway",
+          "text": "Seit 2012 lässt sich menschliche DNA mit der Genschere CRISPR korrigieren, und 2023 wurden erste Heilverfahren zugelassen. Doch Fehler bleiben möglich, viele Krankheiten betreffen mehrere Gene, und die Keimbahn-Editierung ist überall verboten."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "National Science Foundation, « CRISPR: A Biotech Breakthrough », NSF Impacts.",
+      "url": "https://www.nsf.gov/impacts/crispr"
+    },
+    {
+      "text": "National Cancer Institute, « How CRISPR Is Changing Cancer Research and Treatment », Cancer Currents Blog, 2020.",
+      "url": "https://www.cancer.gov/news-events/cancer-currents-blog/2020/crispr-cancer-research-treatment"
+    },
+    {
+      "text": "CRISPR Medicine News, « Clinical Trials », liste des essais cliniques fondés sur CRISPR.",
+      "url": "https://crisprmedicinenews.com/clinical-trials/"
+    },
+    {
+      "text": "House of Lords Library, « World's first personalised DNA editing treatment », UK Parliament.",
+      "url": "https://lordslibrary.parliament.uk/worlds-first-personalised-dna-editing-treatment/"
+    },
+    {
+      "text": "« The gene editor CRISPR won't fully fix sick people anytime soon. Here's why », Science, 2016.",
+      "url": "https://www.science.org/content/article/gene-editor-crispr-won-t-fully-fix-sick-people-anytime-soon-here-s-why"
+    },
+    {
+      "text": "Boston Children's Hospital, « CRISPR gene editing », Answers.",
+      "url": "https://answers.childrenshospital.org/crispr-gene-editing/"
+    },
+    {
+      "text": "« The Guardian view on gene-edited humans: darker uses must be acknowledged alongside medical ones », The Guardian, 5 juillet 2026.",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/05/the-guardian-view-on-gene-edited-humans-darker-uses-must-be-acknowledged-alongside-medical-ones"
+    },
+    {
+      "text": "K. E. Ormond et al., « Human Germline Genome Editing », American Journal of Human Genetics, vol. 101, 2017.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5544380/"
+    }
+  ]
+}

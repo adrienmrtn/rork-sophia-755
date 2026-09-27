@@ -1,0 +1,124 @@
+{
+  "id": "course_302_quel_est_le_plus_vieux_livre_du_monde",
+  "title": "¿Cuál es el libro más antiguo del mundo?",
+  "subtitle": "Hacia el 2000 a. C.",
+  "subject": "litterature",
+  "subcategory": "Anglosajones y literatura mundial",
+  "description": "Hace unos 4.000 años, en Mesopotamia, la historia de un rey tirano que aprendió a ser sabio quedó grabada en arcilla. Nos han llegado dos tercios del texto, y el resto todavía se busca.",
+  "author": "simon-lea",
+  "hero": {
+    "image": "gilgamesh_hero_lion_relief_khorsabad_louvre",
+    "ratio": "4:3",
+    "hook": "El libro más antiguo del mundo no tiene páginas: está escrito en arcilla, y todavía le falta un tercio."
+  },
+  "sections": [
+    {
+      "id": "course_302_quel_est_le_plus_vieux_livre_du_monde_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El libro más antiguo del mundo no es un libro encuadernado. Es un largo poema, la *Epopeya de Gilgamesh*, escrito hace unos **4.000 años** en [[Mesopotamia]], en el actual Irak. Su héroe, **Gilgamesh**, es el rey tirano de la ciudad de [[Uruk]]. El texto lo describe, curiosamente, como “dos tercios divino y un tercio humano”."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para castigar su crueldad, la diosa madre crea a [[Enkidu]], un hombre salvaje encargado de enfrentarse a él y humillarlo. Pero un sueño advierte al rey de que Enkidu será su amigo. Una prostituta sagrada, Shamhat, lo doma en siete días y siete noches. Los dos hombres luchan y luego se vuelven inseparables, quizá amantes. Su amistad los lleva a la aventura, después al duelo y, por último, a la búsqueda de la inmortalidad."
+        }
+      ]
+    },
+    {
+      "id": "course_302_quel_est_le_plus_vieux_livre_du_monde_p1",
+      "title": "Tablillas de arcilla de 4.000 años",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se sabe poco sobre los orígenes del poema. La arqueología confirma su edad: unos **4.000 años**. Conservamos aproximadamente **dos tercios**, en las tablillas de arcilla originales, escritas en [[cuneiforme]]. Por suerte, la arcilla es extremadamente resistente."
+        },
+        {
+          "type": "image",
+          "asset": "gilgamesh_tablet_cuneiform_nineveh_british_museum",
+          "ratio": "3:2",
+          "caption": "Tablilla de la Epopeya de Gilgamesh en escritura cuneiforme, hallada en Nínive (Museo Británico)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada cierto tiempo aparecen nuevas tablillas, y se espera encontrar algún día el tercio que falta. Como todo texto tan antiguo, este mezcla leyendas más viejas que él con añadidos muy posteriores: algunos pasajes serían **mil años** más recientes que el original. El sentido del poema cambia, por tanto, según la versión que se lea."
+        }
+      ]
+    },
+    {
+      "id": "course_302_quel_est_le_plus_vieux_livre_du_monde_p2",
+      "title": "Un rey real convertido en mito",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pese a estos préstamos y retoques, los especialistas están bastante seguros de que la *Epopeya de Gilgamesh* tiene un autor único y coherente. También se sabe que existió de verdad un rey llamado Gilgamesh, aunque el rey del poema se convirtió en gran parte en un mito. Otros reyes de la mitología, como el rey Midas, corrieron la misma suerte."
+        },
+        {
+          "type": "paragraph",
+          "text": "El estudio de las tablillas más antiguas muestra que el relato original habla sobre todo del rey Gilgamesh, de su vida y sus aventuras. Pero en cuanto se tienen en cuenta los añadidos posteriores, el poema se convierte en otra cosa: una reflexión sobre la condición mortal del ser humano y sobre el sentido de la vida y la muerte."
+        }
+      ]
+    },
+    {
+      "id": "course_302_quel_est_le_plus_vieux_livre_du_monde_p3",
+      "title": "Humbaba y el Toro del Cielo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En sus aventuras, Gilgamesh y Enkidu se enfrentan a monstruos. El primero es [[Humbaba]], un ogro que guarda el Bosque de los Cedros, un lugar legendario al que los reyes iban a buscar madera para sus construcciones. Humbaba muere y los árboles son talados. Esa muerte, seguida de ese saqueo, enfurece a los dioses."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tras el combate, mientras Gilgamesh se lava, la diosa [[Ishtar]] lo ve y le ofrece su amor. El rey conoce su fama: ninguno de sus amantes ha vivido mucho. La rechaza con groserías. Furiosa, Ishtar lanza contra él al Toro del Cielo. Los dos amigos lo matan, y Enkidu le arroja a la diosa una de sus patas traseras. Estas hazañas muestran la fuerza de Gilgamesh, pero también una desmesura que los dioses no dejarán sin castigo."
+        },
+        {
+          "type": "funFact",
+          "text": "La constelación de Tauro muestra un toro sin cuartos traseros. Hay quien ve en ella un recuerdo de Enkidu arrancando una pata trasera al Toro del Cielo para lanzársela a Ishtar."
+        }
+      ]
+    },
+    {
+      "id": "course_302_quel_est_le_plus_vieux_livre_du_monde_p4",
+      "title": "La búsqueda de la inmortalidad",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Para castigar la muerte del Toro del Cielo, los dioses condenan a Enkidu a morir. La pérdida de su amigo le revela a Gilgamesh que él también es mortal. Empieza a temer la muerte y parte en busca del secreto de la inmortalidad. Solo se conoce a un hombre que haya vencido a la muerte: [[Utnapishtim]]."
+        },
+        {
+          "type": "image",
+          "asset": "gilgamesh_flood_tablet_utnapishtim_myth",
+          "ratio": "3:2",
+          "caption": "La “tablilla del Diluvio”, undécima tablilla de la epopeya, que cuenta la historia de Utnapishtim (Museo Británico)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Su historia es anterior a la de Noé, y casi idéntica: tras sobrevivir al diluvio, él y su esposa se volvieron inmortales. Cuando Gilgamesh por fin lo encuentra, Utnapishtim le aconseja renunciar a la vida eterna. Aun así, le ofrece una planta que devuelve la juventud. Una serpiente se la roba."
+        },
+        {
+          "type": "funFact",
+          "text": "Noé y Utnapishtim reciben ambos el aviso del diluvio y el encargo de construir un enorme barco para refugiar a los animales. Cuando se tradujeron las tablillas, encontrar este relato miles de años antes del Génesis conmocionó al mundo: para unos era la prueba de que la historia de Noé procedía de una religión más antigua; para otros, la confirmación de que hubo de verdad un gran diluvio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gilgamesh renuncia a la inmortalidad y vuelve a su casa, en Uruk, a una vida de contemplación tranquila. La lección del libro más antiguo del mundo parece caber en una frase: aceptar que la vida es breve y preferir la sabiduría a la acción."
+        },
+        {
+          "type": "takeaway",
+          "text": "La *Epopeya de Gilgamesh*, grabada en arcilla hace 4.000 años y todavía incompleta, pasó de ser un relato de aventuras reales a una meditación sobre la muerte, a lo largo de mil años de añadidos."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "B. B. Powell, Classical Myth, 9th ed., Oxford University Press, New York, 2020, p. 326."
+    }
+  ]
+}
