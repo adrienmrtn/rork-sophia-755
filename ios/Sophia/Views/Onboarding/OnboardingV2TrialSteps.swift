@@ -1,15 +1,17 @@
 import SwiftUI
 
-/// Page 11 — « How your free trial works » (timeline). Inspiré du 1er screenshot, adapté à
-/// un essai de **3 jours** (Aujourd'hui → J+2 rappel → J+3 fin).
+/// Page 11 — « How your free trial works » (timeline). Inspiré du 1er screenshot :
+/// Aujourd'hui → rappel la veille → fin de l'essai, sur la durée réellement servie par le
+/// store (`trialDays`, 3 par défaut).
 struct OnboardingV2TrialSteps: View {
     @Environment(LanguageManager.self) private var languageManager
+    var trialDays: Int = 3
     let onNext: () -> Void
 
     @State private var revealed = 0
 
     private var endDateString: String {
-        let date = Calendar.current.date(byAdding: .day, value: 3, to: Date()) ?? Date()
+        let date = Calendar.current.date(byAdding: .day, value: trialDays, to: Date()) ?? Date()
         let f = DateFormatter()
         f.locale = Locale(identifier: languageManager.current.localeIdentifier)
         f.dateFormat = "d MMMM"
@@ -22,9 +24,9 @@ struct OnboardingV2TrialSteps: View {
              languageManager.text("onboardingV2.trial.step0.detail"), false, true),
             ("lock.open.fill", languageManager.text("onboardingV2.trial.step1.title"),
              languageManager.text("onboardingV2.trial.step1.detail"), true, false),
-            ("bell.fill", languageManager.text("onboardingV2.trial.step2.title"),
+            ("bell.fill", languageManager.trialText("onboardingV2.trial.step2.title", days: max(1, trialDays - 1)),
              languageManager.text("onboardingV2.trial.step2.detail"), false, false),
-            ("star.fill", languageManager.text("onboardingV2.trial.step3.title"),
+            ("star.fill", languageManager.trialText("onboardingV2.trial.step3.title", days: trialDays),
              String(format: languageManager.text("onboardingV2.trial.step3.detail"), endDateString), false, false),
         ]
     }

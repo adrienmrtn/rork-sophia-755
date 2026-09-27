@@ -34,6 +34,8 @@ struct CourseView: View {
     /// Glossary term tapped in the lesson body. Shown as an in-app overlay (not a system
     /// sheet) so the course text stays perfectly still when a term is tapped.
     @State private var selectedGlossaryEntry: GlossaryEntry? = nil
+    /// Professor whose page is open (byline or "written by" card tapped).
+    @State private var presentedAuthor: CourseAuthor? = nil
 
     /// Fixed XP awarded for finishing a course (reaching the completion screen). Always granted.
     private let courseCompletionXP: Int = 10
@@ -156,6 +158,9 @@ struct CourseView: View {
             // session, which inflated opens and cut every session short. An existing tracker
             // means this is a return from a cover, not a new visit.
             guard sessionTracker == nil else { return }
+            // Inline images come from the bucket: start fetching them now so paging forward
+            // finds them on disk rather than in flight.
+            CourseImageLoader.prefetch(courseId: course.id)
             progressManager.registerFirstCourseOpenedIfNeeded(course.id)
             requestAppStoreReviewIfEligible(lessonIndex: currentIndex)
             sessionTracker = CourseSessionTracker(course: course)
@@ -179,6 +184,18 @@ struct CourseView: View {
             requestAppStoreReviewIfEligible(lessonIndex: newIndex)
             sessionTracker?.recordLessonIndex(newIndex)
             maybeShowTermCoachmark(lessonIndex: newIndex)
+        }
+        .sheet(item: $presentedAuthor) { author in
+            AuthorView(
+                author: author,
+                currentCourseId: course.id,
+                progressManager: progressManager,
+                onOpenCourse: { target in
+                    presentedAuthor = nil
+                    guard target.id != course.id else { return }
+                    openOtherCourse(target)
+                }
+            )
         }
         .fullScreenCover(isPresented: $showQuiz) {
             QuizView(
@@ -311,7 +328,9 @@ struct CourseView: View {
                 accent: DS.accentSoft,
                 courseId: course.id,
                 courseTitle: course.title,
-                onGlossaryTap: showGlossary
+                onGlossaryTap: showGlossary,
+                isLast: resolved.isLast,
+                onAuthorTap: { author in presentedAuthor = author }
             )
         } else {
             VStack(alignment: .leading, spacing: 24) {
@@ -334,6 +353,17 @@ struct CourseView: View {
     /// Surface a tapped glossary term as an in-app overlay. No course-text movement.
     private func showGlossary(_ entry: GlossaryEntry) {
         selectedGlossaryEntry = entry
+    }
+
+    /// Another course picked on the author's page: close this reader, then ask the home
+    /// screen to open the new one through the deep-link door, so the daily free course and
+    /// the open-source attribution follow the same rules as any other entry point. The
+    /// delay lets the full-screen cover finish dismissing before the next one is presented.
+    private func openOtherCourse(_ target: Course) {
+        onDismissToHome()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            DeepLinkRouter.shared.requestCourse(target.id, source: "author_page")
+        }
     }
 
     private func unlockedLessonView(lesson: LessonPage, lessonIndex: Int) -> some View {

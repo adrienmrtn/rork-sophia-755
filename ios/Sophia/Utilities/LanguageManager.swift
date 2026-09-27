@@ -31,4 +31,9 @@ final class LanguageManager {
     func text(_ key: String) -> String {
         AppLocalizable.string(key, language: current)
     }
+
+    /// A trial string with its day count filled in (see `AppLocalizable.trialString`).
+    func trialText(_ key: String, days: Int) -> String {
+        AppLocalizable.trialString(key, days: days, language: current)
+    }
 }

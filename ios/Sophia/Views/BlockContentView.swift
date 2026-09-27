@@ -16,8 +16,19 @@ struct BlockContentView: View {
     /// Glossary taps are surfaced to the enclosing `CourseView`, which shows the explanation
     /// as an in-app overlay (not a system sheet) so the course text never shifts.
     let onGlossaryTap: (GlossaryEntry) -> Void
+    /// Whether this is the course's last section: it then closes on the author card and the
+    /// sources, after the "À retenir" block.
+    var isLast: Bool = false
+    /// Tap on the byline or the author card (professor-authored courses only).
+    var onAuthorTap: ((CourseAuthor) -> Void)? = nil
 
     private static let ink = DS.ink
+
+    /// The professor behind the course, when the JSON names one that the bundle knows.
+    private var author: CourseAuthor? {
+        guard let slug = content.author else { return nil }
+        return AuthorStore.author(slug: slug)
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
@@ -25,6 +36,10 @@ struct BlockContentView: View {
 
             ForEach(Array(section.blocks.enumerated()), id: \.offset) { _, block in
                 blockView(block)
+            }
+
+            if isLast {
+                footer
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -39,11 +54,30 @@ struct BlockContentView: View {
                 subtitle: content.subtitle,
                 accent: accent
             )
+            if let author {
+                AuthorBylineV2(author: author) { tapped in
+                    onAuthorTap?(tapped)
+                }
+            }
         } else {
             Text(section.title)
                 .font(DS.title(.largeTitle, .semibold))
                 .foregroundStyle(Self.ink)
                 .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    /// Signature and references, only ever after the last block of the last section.
+    @ViewBuilder
+    private var footer: some View {
+        if let author {
+            AuthorCardV2(author: author) { tapped in
+                onAuthorTap?(tapped)
+            }
+            .padding(.top, 4)
+        }
+        if let sources = content.sources, !sources.isEmpty {
+            SourcesCardV2(sources: sources)
         }
     }
 
@@ -438,8 +472,16 @@ private struct HeroBlockView: View {
         AspectRatioSpec.value(from: hero.ratio) ?? (16.0 / 9.0)
     }
 
-    private var image: UIImage? {
-        CourseInlineImage.loadImage(named: CourseInlineImage.slug(hero.image))
+    /// Covers are bundled, so this is normally filled before the first frame.
+    @State private var image: UIImage?
+    @State private var failed = false
+
+    init(hero: CourseHeroV2, title: String, subtitle: String?, accent: Color) {
+        self.hero = hero
+        self.title = title
+        self.subtitle = subtitle
+        self.accent = accent
+        _image = State(initialValue: CourseImageLoader.cached(hero.image))
     }
 
     private var creditText: String? {
@@ -463,8 +505,20 @@ private struct HeroBlockView: View {
                 } else {
                     Color.clear
                         .aspectRatio(ratio, contentMode: .fit)
-                        .overlay { ImagePlaceholder(label: hero.image) }
+                        .overlay {
+                            if failed {
+                                ImagePlaceholder(label: hero.image)
+                            } else {
+                                ImageLoadingPlaceholder()
+                            }
+                        }
                 }
+            }
+            .task(id: hero.image) {
+                guard image == nil else { return }
+                let loaded = await CourseImageLoader.image(for: hero.image)
+                image = loaded
+                failed = loaded == nil
             }
             .frame(maxWidth: .infinity)
             .clipShape(.rect(cornerRadius: DS.Radius.card))
@@ -512,11 +566,19 @@ struct AspectImageView: View {
     let block: ImageBlockV2
 
     @State private var fullscreenItem: FullscreenCourseImage?
+    /// Starts from the sync caches (bundle, memory, disk) so a known image never flashes;
+    /// otherwise the bucket is asked once, and the result lands here.
+    @State private var image: UIImage?
+    @State private var failed = false
 
     private let ink = DS.ink
 
+    init(block: ImageBlockV2) {
+        self.block = block
+        _image = State(initialValue: CourseImageLoader.cached(block.asset))
+    }
+
     private var slug: String { CourseInlineImage.slug(block.asset) }
-    private var image: UIImage? { CourseInlineImage.loadImage(named: slug) }
 
     private var ratio: CGFloat {
         if let explicit = AspectRatioSpec.value(from: block.ratio) { return explicit }
@@ -548,7 +610,13 @@ struct AspectImageView: View {
                 } else {
                     Color.clear
                         .aspectRatio(ratio, contentMode: .fit)
-                        .overlay { ImagePlaceholder(label: block.asset) }
+                        .overlay {
+                            if failed {
+                                ImagePlaceholder(label: block.asset)
+                            } else {
+                                ImageLoadingPlaceholder()
+                            }
+                        }
                 }
             }
             .frame(maxWidth: .infinity)
@@ -556,6 +624,12 @@ struct AspectImageView: View {
             .overlay {
                 RoundedRectangle(cornerRadius: DS.Radius.control)
                     .strokeBorder(DS.hairline, lineWidth: 1)
+            }
+            .task(id: block.asset) {
+                guard image == nil else { return }
+                let loaded = await CourseImageLoader.image(for: block.asset)
+                image = loaded
+                failed = loaded == nil
             }
 
             if let caption = block.caption, !caption.isEmpty {
@@ -588,6 +662,20 @@ private struct FullscreenCourseImage: Identifiable {
     let credit: String?
 }
 
+/// Shown while an image is on its way from the bucket: the frame at its final size, a
+/// soft surface and a small spinner. No slug, no icon: nothing is wrong yet.
+private struct ImageLoadingPlaceholder: View {
+    var body: some View {
+        ZStack {
+            DS.surfaceMuted
+            ProgressView()
+                .tint(DS.inkTertiary)
+        }
+    }
+}
+
+/// Shown when an image exists nowhere (bundle, cache, bucket): the slug tells the
+/// content team which file to provide.
 private struct ImagePlaceholder: View {
     let label: String
 

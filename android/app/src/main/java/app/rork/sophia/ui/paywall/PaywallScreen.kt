@@ -56,6 +56,7 @@ import androidx.compose.ui.unit.sp
 import androidx.core.view.WindowCompat
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
+import app.rork.sophia.data.DiscountBucket
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.ui.components.SectionLabel
@@ -77,6 +78,12 @@ import com.revenuecat.purchases.interfaces.PurchaseCallback
 import com.revenuecat.purchases.models.StoreTransaction
 import kotlinx.coroutines.delay
 
+/**
+ * Paywall contexts. [offeringId] is the **fallback** RevenueCat offering of the context: the price
+ * shown and charged comes from the offering RevenueCat currently serves (what experiments
+ * swap), so a customer sees one price everywhere — see [StoreViewModel.displayedOffering].
+ * The discount context is the exception: its offering is picked by the install's bucket.
+ */
 enum class PaywallContext(val offeringId: String, val analyticsContext: String = offeringId) {
     FIN_ONBOARDING("fin_onboarding"),
     OFFRE_DISCOUNT("offre_discount"),
@@ -104,7 +111,7 @@ fun OnboardingPaywallFlow(
     LaunchedEffect(Unit) { storeViewModel.fetchOfferings() }
     val offerings by storeViewModel.offerings.collectAsState()
     val annual = remember(offerings) { storeViewModel.annualPackage(PaywallContext.FIN_ONBOARDING.offeringId) }
-    val monthly = remember(offerings) { storeViewModel.monthlyPackage(PaywallContext.FIN_ONBOARDING.offeringId) }
+    val shortPlan = remember(offerings) { storeViewModel.shortPlanPackage(PaywallContext.FIN_ONBOARDING.offeringId) }
     // A restore carries no package: nothing was just bought, so no trial was just started.
     val restore = rememberRestoreAction(language, storeViewModel) { onPurchased(null) }
 
@@ -129,7 +136,7 @@ fun OnboardingPaywallFlow(
                 },
                 onDismiss = onDismiss,
                 onPurchased = {
-                    onPurchaseMeta(PaywallContext.FIN_ONBOARDING.offeringId, annual?.identifier)
+                    onPurchaseMeta(offeringIdOf(annual, PaywallContext.FIN_ONBOARDING), annual?.identifier)
                     onPurchased(annual)
                 },
                 legalFooter = legalFooter,
@@ -138,12 +145,12 @@ fun OnboardingPaywallFlow(
             ComparisonPaywall(
                 language = language,
                 annual = annual,
-                monthly = monthly,
+                shortPlan = shortPlan,
                 offeringId = PaywallContext.FIN_ONBOARDING.offeringId,
                 storeViewModel = storeViewModel,
                 onDismiss = onDismiss,
                 onPurchased = { pkg ->
-                    onPurchaseMeta(PaywallContext.FIN_ONBOARDING.offeringId, pkg?.identifier)
+                    onPurchaseMeta(offeringIdOf(pkg, PaywallContext.FIN_ONBOARDING), pkg?.identifier)
                     onPurchased(pkg)
                 },
                 legalFooter = legalFooter,
@@ -187,16 +194,16 @@ fun PaywallScreen(
         if (secondChance) {
             val offerings by storeViewModel.offerings.collectAsState()
             val annual = remember(offerings, context) { storeViewModel.annualPackage(context.offeringId) }
-            val monthly = remember(offerings, context) { storeViewModel.monthlyPackage(context.offeringId) }
+            val shortPlan = remember(offerings, context) { storeViewModel.shortPlanPackage(context.offeringId) }
             ComparisonPaywall(
                 language = language,
                 annual = annual,
-                monthly = monthly,
+                shortPlan = shortPlan,
                 offeringId = context.offeringId,
                 storeViewModel = storeViewModel,
                 onDismiss = onDismiss,
                 onPurchased = { pkg ->
-                    onPurchaseMeta(context.offeringId, pkg?.identifier)
+                    onPurchaseMeta(offeringIdOf(pkg, context), pkg?.identifier)
                     onPurchased()
                 },
                 legalFooter = legalFooter,
@@ -326,10 +333,8 @@ private fun OnboardingAnnualPaywall(
     var error by remember { mutableStateOf<String?>(null) }
     var notice by remember { mutableStateOf<String?>(null) }
     val hasTrial = storeViewModel.hasFreeTrial(annual)
-    val yearly = storeViewModel.formattedPrice(
-        annual,
-        StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
-    )
+    val trialDays = storeViewModel.trialDays(annual) ?: 3
+    val yearly = storeViewModel.formattedPrice(annual, StoreViewModel.UNKNOWN_PRICE)
     val perMonth = perMonthLabel(context, language, storeViewModel, annual)
 
     LaunchedEffect(Unit) { storeViewModel.trackPaywallImpression("onboarding_annual") }
@@ -360,7 +365,7 @@ private fun OnboardingAnnualPaywall(
                 Spacer(Modifier.height(20.dp))
                 if (hasTrial) {
                     Text(
-                        text = StringStore.text(context, "onboardingV2.pw.tryFree", language),
+                        text = StringStore.trialText(context, "onboardingV2.pw.tryFree", language, trialDays),
                         style = SophiaTypography.titleLarge.copy(fontSize = 22.sp, color = DS.success),
                         textAlign = TextAlign.Center,
                     )
@@ -407,11 +412,11 @@ private fun OnboardingAnnualPaywall(
                 textAlign = TextAlign.Center,
             )
             PurchaseButton(
-                text = StringStore.text(
-                    context,
-                    if (hasTrial) "onboardingV2.pw.startTrial" else "onboardingV2.pw.subscribe",
-                    language,
-                ),
+                text = if (hasTrial) {
+                    StringStore.trialText(context, "onboardingV2.pw.startTrial", language, trialDays)
+                } else {
+                    StringStore.text(context, "onboardingV2.pw.subscribe", language)
+                },
                 purchasing = purchasing,
                 onClick = {
                     purchasePackage(
@@ -436,11 +441,12 @@ private fun OnboardingAnnualPaywall(
 private fun ComparisonPaywall(
     language: AppLanguage,
     annual: Package?,
-    monthly: Package?,
+    /** Monthly today; weekly when the served offering carries a weekly package instead. */
+    shortPlan: Package?,
     offeringId: String,
     storeViewModel: StoreViewModel,
     onDismiss: () -> Unit,
-    /** The package the user picked and bought — annual or monthly. */
+    /** The package the user picked and bought — annual or the short plan. */
     onPurchased: (Package?) -> Unit,
     legalFooter: @Composable () -> Unit,
 ) {
@@ -449,19 +455,25 @@ private fun ComparisonPaywall(
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
     var notice by remember { mutableStateOf<String?>(null) }
-    val annualPrice = storeViewModel.formattedPrice(
-        annual,
-        StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
-    )
-    val monthlyPrice = storeViewModel.formattedPrice(
-        monthly,
-        StringStore.text(context, "paywall.plan.fallback.monthlyPrice", language),
-    )
-    val perMonth = perMonthLabel(context, language, storeViewModel, annual)
+    val annualPrice = storeViewModel.formattedPrice(annual, StoreViewModel.UNKNOWN_PRICE)
+    val shortPlanPrice = storeViewModel.formattedPrice(shortPlan, StoreViewModel.UNKNOWN_PRICE)
+    // The short plan is monthly unless the served offering carries a weekly package; the
+    // annual card then reads per week too, so both cards share one unit.
+    val shortIsWeekly = storeViewModel.isWeekly(shortPlan)
+    val perPeriod = if (shortIsWeekly) {
+        perWeekLabel(context, language, storeViewModel, annual)
+    } else {
+        perMonthLabel(context, language, storeViewModel, annual)
+    }
     val yearlyHasTrial = storeViewModel.hasFreeTrial(annual)
-    val monthlyHasTrial = storeViewModel.hasFreeTrial(monthly)
-    val selectedHasTrial = if (yearlySelected) yearlyHasTrial else monthlyHasTrial
-    val trialBadge = StringStore.text(context, "onboardingV2.pw.trialBadge", language)
+    val shortHasTrial = storeViewModel.hasFreeTrial(shortPlan)
+    val selectedHasTrial = if (yearlySelected) yearlyHasTrial else shortHasTrial
+    val yearlyTrialBadge = StringStore.trialText(
+        context, "onboardingV2.pw.trialBadge", language, storeViewModel.trialDays(annual) ?: 3,
+    )
+    val shortTrialBadge = StringStore.trialText(
+        context, "onboardingV2.pw.trialBadge", language, storeViewModel.trialDays(shortPlan) ?: 3,
+    )
 
     LaunchedEffect(offeringId) {
         storeViewModel.fetchOfferings()
@@ -508,41 +520,52 @@ private fun ComparisonPaywall(
                 .padding(bottom = 12.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
-            // Le gros prix est mensuel des deux côtés : comparer un plan annuel à un plan
-            // mensuel demande la même unité, sinon « 39,99 € » à côté de « 9,99 € » fait
-            // passer l'annuel pour le plus cher. Le montant réellement prélevé reste juste
-            // sous le nom du plan — Google Play l'exige, et c'est honnête pour un
-            // abonnement facturé une fois par an.
+            // Le gros prix est dans l'unité du plan court des deux côtés (par mois, ou par
+            // semaine face à un plan hebdo) : comparer un plan annuel à un plan court demande
+            // la même unité, sinon « 39,99 € » à côté de « 9,99 € » fait passer l'annuel pour
+            // le plus cher. Le montant réellement prélevé reste juste sous le nom du plan —
+            // Google Play l'exige, et c'est honnête pour un abonnement facturé une fois par an.
             PlanSelectorCard(
                 name = StringStore.text(context, "onboardingV2.pw.yearly", language),
                 subtitle = StringStore.text(context, "paywall.plan.billedYearly", language, annualPrice),
-                price = perMonth,
+                price = perPeriod,
                 selected = yearlySelected,
                 onClick = { yearlySelected = true },
-                trialBadge = if (yearlyHasTrial) trialBadge else null,
-                saveBadge = storeViewModel.discountBadge(annual, monthly)?.let {
+                trialBadge = if (yearlyHasTrial) yearlyTrialBadge else null,
+                saveBadge = storeViewModel.discountBadge(annual, shortPlan, if (shortIsWeekly) 52 else 12)?.let {
                     StringStore.text(context, "onboardingV2.pw.save", language, it)
                 },
             )
             PlanSelectorCard(
-                name = StringStore.text(context, "onboardingV2.pw.monthly", language),
-                subtitle = StringStore.text(context, "onboardingV2.pw.monthlyBilling", language),
-                price = monthlyPrice,
+                name = StringStore.text(
+                    context,
+                    if (shortIsWeekly) "onboardingV2.pw.weekly" else "onboardingV2.pw.monthly",
+                    language,
+                ),
+                subtitle = StringStore.text(
+                    context,
+                    if (shortIsWeekly) "onboardingV2.pw.weeklyBilling" else "onboardingV2.pw.monthlyBilling",
+                    language,
+                ),
+                price = shortPlanPrice,
                 selected = !yearlySelected,
                 onClick = { yearlySelected = false },
-                trialBadge = if (monthlyHasTrial) trialBadge else null,
+                trialBadge = if (shortHasTrial) shortTrialBadge else null,
             )
             if (error != null) PaywallErrorNote(error!!)
             if (notice != null) PaywallNotice(notice!!)
             PurchaseButton(
-                text = StringStore.text(
-                    context,
-                    if (selectedHasTrial) "onboardingV2.pw.startTrial" else "onboardingV2.pw.subscribe",
-                    language,
-                ),
+                text = if (selectedHasTrial) {
+                    StringStore.trialText(
+                        context, "onboardingV2.pw.startTrial", language,
+                        storeViewModel.trialDays(if (yearlySelected) annual else shortPlan) ?: 3,
+                    )
+                } else {
+                    StringStore.text(context, "onboardingV2.pw.subscribe", language)
+                },
                 purchasing = purchasing,
                 onClick = {
-                    val pkg = if (yearlySelected) annual else monthly
+                    val pkg = if (yearlySelected) annual else shortPlan
                     purchasePackage(
                         context = context,
                         language = language,
@@ -582,10 +605,8 @@ private fun CourseUnlockPaywall(
         storeViewModel.annualPackage(PaywallContext.DEBLOQUER_COURS.offeringId)
     }
     val hasTrial = storeViewModel.hasFreeTrial(annual)
-    val yearly = storeViewModel.formattedPrice(
-        annual,
-        StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
-    )
+    val trialDays = storeViewModel.trialDays(annual) ?: 3
+    val yearly = storeViewModel.formattedPrice(annual, StoreViewModel.UNKNOWN_PRICE)
     val perMonth = perMonthLabel(context, language, storeViewModel, annual)
     val dailyCourseId = app.progressManager.progress.value.dailyFreeCourseId
     val secondsToReset = remember { app.progressManager.secondsUntilDailyReset() }
@@ -597,7 +618,7 @@ private fun CourseUnlockPaywall(
         language = language,
         onDismiss = onDismiss,
         closeDelayMillis = 2000,
-        priceLine = priceLineText(context, language, hasTrial, yearly, perMonth),
+        priceLine = priceLineText(context, language, hasTrial, trialDays, yearly, perMonth),
         ctaText = StringStore.text(
             context,
             if (hasTrial) "paywall.cta.unlockFree" else "paywall.cta.subscribe",
@@ -619,7 +640,7 @@ private fun CourseUnlockPaywall(
                 onError = { error = it; notice = null; purchasing = false },
                 onPending = { notice = it; error = null; purchasing = false },
                 onPurchased = {
-                    onPurchaseMeta(PaywallContext.DEBLOQUER_COURS.offeringId, annual?.identifier)
+                    onPurchaseMeta(offeringIdOf(annual, PaywallContext.DEBLOQUER_COURS), annual?.identifier)
                     onPurchased()
                 },
             )
@@ -703,10 +724,8 @@ private fun TrainingPaywall(
         storeViewModel.annualPackage(PaywallContext.ENTRAINEMENT.offeringId)
     }
     val hasTrial = storeViewModel.hasFreeTrial(annual)
-    val yearly = storeViewModel.formattedPrice(
-        annual,
-        StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
-    )
+    val trialDays = storeViewModel.trialDays(annual) ?: 3
+    val yearly = storeViewModel.formattedPrice(annual, StoreViewModel.UNKNOWN_PRICE)
     val perMonth = perMonthLabel(context, language, storeViewModel, annual)
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
@@ -715,7 +734,7 @@ private fun TrainingPaywall(
     PaywallShell(
         language = language,
         onDismiss = onDismiss,
-        priceLine = priceLineText(context, language, hasTrial, yearly, perMonth),
+        priceLine = priceLineText(context, language, hasTrial, trialDays, yearly, perMonth),
         ctaText = StringStore.text(
             context,
             if (hasTrial) "paywall.cta.activateTrial" else "paywall.cta.subscribe",
@@ -737,7 +756,7 @@ private fun TrainingPaywall(
                 onError = { error = it; notice = null; purchasing = false },
                 onPending = { notice = it; error = null; purchasing = false },
                 onPurchased = {
-                    onPurchaseMeta(PaywallContext.ENTRAINEMENT.offeringId, annual?.identifier)
+                    onPurchaseMeta(offeringIdOf(annual, PaywallContext.ENTRAINEMENT), annual?.identifier)
                     onPurchased()
                 },
             )
@@ -813,10 +832,8 @@ private fun QuizPaywall(
     val offerings by storeViewModel.offerings.collectAsState()
     val annual = remember(offerings) { storeViewModel.annualPackage(PaywallContext.QUIZZ.offeringId) }
     val hasTrial = storeViewModel.hasFreeTrial(annual)
-    val yearly = storeViewModel.formattedPrice(
-        annual,
-        StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
-    )
+    val trialDays = storeViewModel.trialDays(annual) ?: 3
+    val yearly = storeViewModel.formattedPrice(annual, StoreViewModel.UNKNOWN_PRICE)
     val perMonth = perMonthLabel(context, language, storeViewModel, annual)
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
@@ -836,7 +853,7 @@ private fun QuizPaywall(
         language = language,
         onDismiss = onDismiss,
         closeDelayMillis = 4000,
-        priceLine = priceLineText(context, language, hasTrial, yearly, perMonth),
+        priceLine = priceLineText(context, language, hasTrial, trialDays, yearly, perMonth),
         ctaText = StringStore.text(
             context,
             if (hasTrial) "paywall.cta.activateTrial" else "paywall.cta.subscribe",
@@ -858,7 +875,7 @@ private fun QuizPaywall(
                 onError = { error = it; notice = null; purchasing = false },
                 onPending = { notice = it; error = null; purchasing = false },
                 onPurchased = {
-                    onPurchaseMeta(PaywallContext.QUIZZ.offeringId, annual?.identifier)
+                    onPurchaseMeta(offeringIdOf(annual, PaywallContext.QUIZZ), annual?.identifier)
                     onPurchased()
                 },
             )
@@ -1036,32 +1053,30 @@ private fun DiscountPaywall(
     val discount by app.discountManager.state.collectAsState()
     LaunchedEffect(Unit) {
         storeViewModel.fetchOfferings()
-        storeViewModel.trackPaywallImpression("native_discount", PaywallContext.OFFRE_DISCOUNT.offeringId)
+        // Reported on the bucket's own offering, never on the experiment-served current one.
+        storeViewModel.trackPaywallImpressionForOffering(
+            "native_discount",
+            storeViewModel.promoOffering()?.identifier
+                ?: DiscountBucket.offeringIdentifier(DiscountBucket.get(context)),
+        )
     }
     val offerings by storeViewModel.offerings.collectAsState()
-    val annual = remember(offerings) {
-        storeViewModel.annualPackage(PaywallContext.OFFRE_DISCOUNT.offeringId)
-    }
+    // Picked by the install's discount bucket (A: offre_discount, B: offre_discount_2999).
+    val annual = remember(offerings) { storeViewModel.promoPackage() }
     // The struck-through price is the regular annual plan, so the saving shown is the real one.
     val regularAnnual = remember(offerings) { storeViewModel.annualPackage(null) }
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
     var notice by remember { mutableStateOf<String?>(null) }
-    val promo = storeViewModel.formattedPrice(
-        annual,
-        StringStore.text(context, "paywall.discount.fallbackPrice", language),
-    )
-    val regular = storeViewModel.formattedPrice(
-        regularAnnual,
-        StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
-    )
+    val promo = storeViewModel.formattedPrice(annual, StoreViewModel.UNKNOWN_PRICE)
+    val regular = storeViewModel.formattedPrice(regularAnnual, StoreViewModel.UNKNOWN_PRICE)
     // Affiché au mois, comme les plans de l'écran comparatif : deux montants annuels côte à
     // côte ne disent pas au lecteur ce que ça lui coûte par mois. Le prélèvement annuel réel
     // reste en dessous.
     val promoPerMonth = storeViewModel.formattedYearlyPerMonth(annual, promo)
     val regularPerMonth = regularAnnual?.let { storeViewModel.formattedYearlyPerMonth(it, regular) }
+    // No badge at all rather than a remembered « -58 % » when either price is unknown.
     val badge = storeViewModel.percentOff(annual, regularAnnual)
-        ?: StringStore.text(context, "paywall.plan.discount", language)
 
     // Insets are consumed at the root, so painting the gradient here alone left the strips
     // behind the status and navigation bars on the pale canvas. Handing the brush up paints it
@@ -1113,7 +1128,7 @@ private fun DiscountPaywall(
                         time = discount.formattedRemaining,
                     )
                     Spacer(Modifier.height(18.dp))
-                    Text(
+                    if (badge != null) Text(
                         text = badge,
                         color = Color.White,
                         fontFamily = PlusJakartaSans,
@@ -1183,7 +1198,7 @@ private fun DiscountPaywall(
                             onError = { error = it; notice = null; purchasing = false },
                             onPending = { notice = it; error = null; purchasing = false },
                             onPurchased = {
-                                onPurchaseMeta(PaywallContext.OFFRE_DISCOUNT.offeringId, annual?.identifier)
+                                onPurchaseMeta(offeringIdOf(annual, PaywallContext.OFFRE_DISCOUNT), annual?.identifier)
                                 onPurchased()
                             },
                         )
@@ -1283,15 +1298,14 @@ private fun priceLineText(
     context: android.content.Context,
     language: AppLanguage,
     hasTrial: Boolean,
+    trialDays: Int,
     yearly: String,
     perMonth: String,
-): String = StringStore.text(
-    context,
-    if (hasTrial) "paywall.price.trialThenYearly" else "paywall.price.yearlyNoTrial",
-    language,
-    yearly,
-    perMonth,
-)
+): String = if (hasTrial) {
+    StringStore.trialText(context, "paywall.price.trialThenYearly", language, trialDays, yearly, perMonth)
+} else {
+    StringStore.text(context, "paywall.price.yearlyNoTrial", language, yearly, perMonth)
+}
 
 /**
  * The monthly equivalent of an annual plan, with its unit: « 4,00 € / mois ». The bare amount
@@ -1306,11 +1320,25 @@ private fun perMonthLabel(
     annual: Package?,
 ): String {
     val amount = storeViewModel.formattedYearlyPerMonth(annual, "")
-    if (amount.isEmpty()) {
-        return StringStore.text(context, "paywall.plan.fallback.yearlyMonthly", language)
-    }
+    if (amount.isEmpty()) return StoreViewModel.UNKNOWN_PRICE
     return "$amount ${StringStore.text(context, "paywall.plan.perMonth", language)}"
 }
+
+/** The weekly equivalent of an annual plan, with its unit, for the card next to a weekly plan. */
+private fun perWeekLabel(
+    context: android.content.Context,
+    language: AppLanguage,
+    storeViewModel: StoreViewModel,
+    annual: Package?,
+): String {
+    val amount = storeViewModel.formattedYearlyPerWeek(annual, "")
+    if (amount.isEmpty()) return StoreViewModel.UNKNOWN_PRICE
+    return "$amount ${StringStore.text(context, "paywall.plan.perWeek", language)}"
+}
+
+/** The offering a purchase is attributed to: the served one, or the context's fallback. */
+private fun offeringIdOf(pkg: Package?, context: PaywallContext): String =
+    pkg?.presentedOfferingContext?.offeringIdentifier ?: context.offeringId
 
 /**
  * Runs a Play purchase and reports what actually happened.

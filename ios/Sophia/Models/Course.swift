@@ -73,7 +73,27 @@ nonisolated enum Subject: String, Codable, CaseIterable, Sendable {
 nonisolated struct LessonPage: Codable, Identifiable, Sendable {
     let id: String
     let title: String
+    /// Legacy body, only rendered for a course with no structured (V2) edition. The
+    /// bundled catalogs no longer carry it (see `scripts/slim_ios_catalogs.py`), so a
+    /// missing key decodes as empty rather than failing the whole catalog.
     let content: String
+
+    init(id: String, title: String, content: String = "") {
+        self.id = id
+        self.title = title
+        self.content = content
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case id, title, content
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(String.self, forKey: .id)
+        title = try container.decode(String.self, forKey: .title)
+        content = try container.decodeIfPresent(String.self, forKey: .content) ?? ""
+    }
 }
 
 /// The interaction style of a quiz question. See `content/CHARTE_QUIZ.md` for the

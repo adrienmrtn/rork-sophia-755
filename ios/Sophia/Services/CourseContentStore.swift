@@ -46,15 +46,16 @@ enum CourseContentStore {
         content(courseId: courseId, language: language) != nil
     }
 
-    /// Resolves a single section plus whether it is the first (intro) section.
+    /// Resolves a single section plus whether it is the first (intro) or the last section.
+    /// The first carries the hero and the author byline, the last the author card and sources.
     static func section(
         courseId: String,
         sectionId: String,
         language: AppLanguage = AppLanguage.currentPersisted()
-    ) -> (content: CourseContentV2, section: CourseSectionV2, isFirst: Bool)? {
+    ) -> (content: CourseContentV2, section: CourseSectionV2, isFirst: Bool, isLast: Bool)? {
         guard let content = content(courseId: courseId, language: language) else { return nil }
         guard let index = content.sections.firstIndex(where: { $0.id == sectionId }) else { return nil }
-        return (content, content.sections[index], index == 0)
+        return (content, content.sections[index], index == 0, index == content.sections.count - 1)
     }
 
     private static func cacheKey(courseId: String, language: AppLanguage) -> String {

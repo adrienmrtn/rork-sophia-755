@@ -42,6 +42,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
+import app.rork.sophia.data.AuthorStore
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.CourseCoverUrls
 import app.rork.sophia.data.CourseImagePrefetch
@@ -64,6 +65,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.JsonPrimitive
+import kotlinx.serialization.json.contentOrNull
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
@@ -78,6 +82,8 @@ fun CourseScreen(
     onDismiss: () -> Unit,
     onCourseCompleted: () -> Unit,
     onRequestPaywall: (String) -> Unit,
+    /** Byline or "written by" card tapped: the professor's slug. */
+    onOpenAuthor: (String) -> Unit = {},
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -89,6 +95,8 @@ fun CourseScreen(
         progressManager.courseProgress(course.id)?.isCompleted == true
     }
     var pages by remember(course.id, language) { mutableStateOf<List<ReaderPage>>(emptyList()) }
+    var meta by remember(course.id, language) { mutableStateOf(ReaderMeta()) }
+    val author = remember(meta.authorSlug) { meta.authorSlug?.let { AuthorStore.author(it) } }
     var pagesReady by remember(course.id, language) { mutableStateOf(false) }
     // A pager per course, so the page reached in the previous course cannot leak into
     // this one. Resetting it with scrollToPage instead would deadlock: that call waits
@@ -107,18 +115,21 @@ fun CourseScreen(
 
     LaunchedEffect(course.id, language) {
         val appContext = context.applicationContext
-        val loaded = withContext(Dispatchers.IO) {
+        val (loaded, loadedMeta) = withContext(Dispatchers.IO) {
             GlossaryStore.preload(appContext, language)
+            AuthorStore.preload(appContext)
             // Resolves inline image slugs; without this the first block would read
             // the map from assets during composition.
             CourseCoverUrls.ensureBlockMap(appContext)
-            buildPages(appContext, course, language).also { pages ->
+            val built = buildPages(appContext, course, language).also { pages ->
                 // Enqueue while the spinner is still up, so the opening pages are
                 // already decoded by the time they are scrolled into view.
                 CourseImagePrefetch.warmAssets(appContext, pages.leadingImageAssets(PREFETCH_IMAGES))
             }
+            built to structuredMeta(appContext, course, language)
         }
         pages = loaded
+        meta = loadedMeta
         sessionTracker.lessonCount = loaded.size.coerceAtLeast(1)
         pagesReady = true
         progressManager.recordFirstCourseOpenedIfNeeded(course.id)
@@ -260,6 +271,14 @@ fun CourseScreen(
                         ) {
                             // The title stays sharp; only the paid body is blurred.
                             Text(text = page.title, style = SophiaTypography.titleLarge)
+                            // The intro is the free page: who wrote the course belongs there.
+                            if (index == 0 && author != null) {
+                                AuthorByline(
+                                    author = author,
+                                    language = language,
+                                    onClick = { onOpenAuthor(author.slug) },
+                                )
+                            }
                             Column(
                                 modifier = Modifier.lockedContentBlur(locked),
                                 verticalArrangement = Arrangement.spacedBy(DS.Space.m),
@@ -271,6 +290,19 @@ fun CourseScreen(
                                         courseId = course.id,
                                         locked = locked,
                                     )
+                                }
+                                // Signature and references close the last page, after "À retenir".
+                                if (index == pages.lastIndex) {
+                                    if (author != null) {
+                                        AuthorCard(
+                                            author = author,
+                                            language = language,
+                                            onOpenAuthor = { onOpenAuthor(author.slug) },
+                                        )
+                                    }
+                                    if (meta.sources.isNotEmpty()) {
+                                        SourcesCard(sources = meta.sources, language = language)
+                                    }
                                 }
                             }
                         }
@@ -394,6 +426,31 @@ private const val PREFETCH_IMAGES = 4
 private const val COURSE_COMPLETION_XP = 50
 
 private data class ReaderPage(val title: String, val blocks: List<ReaderBlock>)
+
+/** Author slug and references of a professor-authored course, read from the V2 root. */
+data class ReaderMeta(val authorSlug: String? = null, val sources: List<ReaderSource> = emptyList())
+
+private fun JsonObject.text(key: String): String? =
+    (this[key] as? JsonPrimitive)?.contentOrNull?.takeIf { it.isNotBlank() }
+
+private fun structuredMeta(
+    context: android.content.Context,
+    course: Course,
+    language: AppLanguage,
+): ReaderMeta {
+    val raw = ContentCatalog.structuredContentJson(context, language, course.id) ?: return ReaderMeta()
+    return try {
+        val root = Json.parseToJsonElement(raw).jsonObject
+        val sources = root["sources"]?.jsonArray.orEmpty().mapNotNull { element ->
+            val source = element as? JsonObject ?: return@mapNotNull null
+            val text = source.text("text") ?: return@mapNotNull null
+            ReaderSource(text = text, url = source.text("url")?.takeIf { it.startsWith("http") })
+        }
+        ReaderMeta(authorSlug = root.text("author"), sources = sources)
+    } catch (_: Exception) {
+        ReaderMeta()
+    }
+}
 
 /** Inline image assets in reading order, so the first pages are warmed first. */
 private fun List<ReaderPage>.leadingImageAssets(limit: Int): List<String> =

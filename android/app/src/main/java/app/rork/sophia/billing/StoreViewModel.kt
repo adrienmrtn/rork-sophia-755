@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import app.rork.sophia.AppConfig
 import app.rork.sophia.BuildConfig
 import app.rork.sophia.SophiaApplication
+import app.rork.sophia.data.DiscountBucket
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.locale
 import com.revenuecat.purchases.CustomerInfo
@@ -14,6 +15,7 @@ import com.revenuecat.purchases.EntitlementInfo
 import com.revenuecat.purchases.Offering
 import com.revenuecat.purchases.Offerings
 import com.revenuecat.purchases.Package
+import com.revenuecat.purchases.PackageType
 import com.revenuecat.purchases.PeriodType
 import com.revenuecat.purchases.Purchases
 import com.revenuecat.purchases.PurchasesConfiguration
@@ -21,6 +23,7 @@ import com.revenuecat.purchases.PurchasesError
 import com.revenuecat.purchases.getOfferingsWith
 import com.revenuecat.purchases.interfaces.ReceiveCustomerInfoCallback
 import com.revenuecat.purchases.interfaces.UpdatedCustomerInfoListener
+import com.revenuecat.purchases.models.Period
 import com.revenuecat.purchases.paywalls.events.CustomPaywallImpressionParams
 import com.revenuecat.purchases.restorePurchasesWith
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -120,6 +123,7 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
             _configured.value = true
             observeCustomerInfo()
             attachSignedInUser()
+            reportDiscountBucket()
             return
         }
         val key = AppConfig.revenueCatApiKey
@@ -137,6 +141,7 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         _configured.value = true
         observeCustomerInfo()
         attachSignedInUser()
+        reportDiscountBucket()
     }
 
     /**
@@ -147,6 +152,19 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
     private fun attachSignedInUser() {
         runCatching {
             (getApplication() as? SophiaApplication)?.authService?.linkRevenueCatIfNeeded()
+        }
+    }
+
+    /**
+     * Tells RevenueCat which discount bucket this customer is in (see [DiscountBucket]).
+     * Sent at every launch: attributes are cheap, RevenueCat ignores unchanged values, and a
+     * re-send after `logIn` keeps the identified customer tagged as well as the anonymous one.
+     */
+    private fun reportDiscountBucket() {
+        runCatching {
+            Purchases.sharedInstance.setAttributes(
+                mapOf("discount_bucket" to DiscountBucket.get(getApplication())),
+            )
         }
     }
 
@@ -197,17 +215,66 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         return all.getOffering(identifier) ?: all.current
     }
 
-    fun annualPackage(offeringIdentifier: String? = null): Package? {
-        val offering = offering(offeringIdentifier) ?: return null
-        return offering.annual
+    /**
+     * Offering a context paywall (`quizz`, `debloquer_cours`, `entrainement`) actually displays.
+     *
+     * RevenueCat experiments work by swapping the **current** offering, and the context
+     * offerings carry the same products as `fin_onboarding`: they exist for attribution, not
+     * to sell another price. So a context paywall shows and charges the current offering
+     * whenever it has an annual package, and only falls back to its own offering when the
+     * current one has none — otherwise a customer enrolled in a 59,99 € variant could buy at
+     * 39,99 € from any course. The discount paywall never goes through here: see [promoOffering].
+     */
+    fun displayedOffering(contextIdentifier: String?): Offering? {
+        val all = _offerings.value ?: return null
+        val current = all.current
+        if (current != null && annualOf(current) != null) return current
+        return offering(contextIdentifier)
+    }
+
+    private fun annualOf(offering: Offering): Package? =
+        offering.annual
             ?: offering.availablePackages.firstOrNull {
                 it.packageType.name.contains("ANNUAL", ignoreCase = true)
             }
+
+    fun annualPackage(offeringIdentifier: String? = null): Package? {
+        val offering = displayedOffering(offeringIdentifier) ?: return null
+        return annualOf(offering)
     }
 
     fun monthlyPackage(offeringIdentifier: String? = null): Package? {
-        return offering(offeringIdentifier)?.monthly
+        return displayedOffering(offeringIdentifier)?.monthly
     }
+
+    fun weeklyPackage(offeringIdentifier: String? = null): Package? {
+        return displayedOffering(offeringIdentifier)?.weekly
+    }
+
+    /**
+     * The plan sold next to the annual one on the comparison paywall: the monthly plan, or the
+     * weekly plan when the served offering carries a weekly package instead (a RevenueCat
+     * experiment can swap one for the other without an app update).
+     */
+    fun shortPlanPackage(offeringIdentifier: String? = null): Package? =
+        monthlyPackage(offeringIdentifier) ?: weeklyPackage(offeringIdentifier)
+
+    fun isWeekly(pkg: Package?): Boolean = pkg?.packageType == PackageType.WEEKLY
+
+    /**
+     * Offering behind the flash discount paywall: the bucket's offering, or `offre_discount`
+     * while the bucket's own offering does not exist yet in RevenueCat. Explicit by design: it
+     * is never the current offering, so an experiment on the onboarding price leaves it
+     * untouched.
+     */
+    fun promoOffering(): Offering? {
+        val all = _offerings.value ?: return null
+        val bucket = DiscountBucket.get(getApplication())
+        return all.getOffering(DiscountBucket.offeringIdentifier(bucket))
+            ?: all.getOffering(DiscountBucket.offeringIdentifier(DiscountBucket.A))
+    }
+
+    fun promoPackage(): Package? = promoOffering()?.let { annualOf(it) }
 
     /**
      * Whether a package's store product ships a free-trial introductory offer.
@@ -222,6 +289,26 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         hasFreeTrial(annualPackage(offeringIdentifier))
 
     /**
+     * Days of free trial a package's product ships, or null when it has none. Read from the
+     * store rather than assumed, so copy that names the number follows whatever the served
+     * product carries — a 7-day variant included.
+     */
+    fun trialDays(pkg: Package?): Int? {
+        val period = pkg?.product?.subscriptionOptions?.freeTrial?.freePhase?.billingPeriod ?: return null
+        val unitDays = when (period.unit) {
+            Period.Unit.DAY -> 1
+            Period.Unit.WEEK -> 7
+            Period.Unit.MONTH -> 30
+            Period.Unit.YEAR -> 365
+            else -> 1
+        }
+        return (period.value * unitDays).coerceAtLeast(1)
+    }
+
+    /** Days of the annual plan's free trial, for copy; 3 until the products are loaded. */
+    fun annualTrialDays(): Int = trialDays(annualPackage(null)) ?: 3
+
+    /**
      * When offerings aren't loaded yet, treat as "has trial" so we don't skip the trial
      * onboarding page prematurely (parity with iOS: `offerings == nil || annualHasFreeTrial`).
      */
@@ -234,9 +321,17 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
      * Marks the customer as exposed to their experiment variant. Call once per presentation.
      */
     fun trackPaywallImpression(paywallId: String, offeringIdentifier: String? = null) {
+        // The offering reported must be the one on screen, or a customer enrolled in an
+        // experiment is never counted as exposed: resolved the same way the paywall picks
+        // its package.
+        trackPaywallImpressionForOffering(paywallId, displayedOffering(offeringIdentifier)?.identifier)
+    }
+
+    /** Same, for a paywall that knows exactly which offering it displays (the discount one). */
+    fun trackPaywallImpressionForOffering(paywallId: String, offeringId: String?) {
         if (!Purchases.isConfigured) return
         try {
-            val resolvedId = offeringIdentifier
+            val resolvedId = offeringId
                 ?: offering(null)?.identifier
             Purchases.sharedInstance.trackCustomPaywallImpression(
                 CustomPaywallImpressionParams(
@@ -268,9 +363,16 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
      *    what Play printed. Adding the region to the reading locale does not work: fr-TR
      *    still gives "TRY".
      */
-    fun formattedYearlyPerMonth(pkg: Package?, fallbackYearly: String): String {
+    fun formattedYearlyPerMonth(pkg: Package?, fallbackYearly: String): String =
+        formattedYearlyPerPeriod(pkg, 12, fallbackYearly)
+
+    /** Fifty-second of the annual price, for the comparison card next to a weekly plan. */
+    fun formattedYearlyPerWeek(pkg: Package?, fallbackYearly: String): String =
+        formattedYearlyPerPeriod(pkg, 52, fallbackYearly)
+
+    private fun formattedYearlyPerPeriod(pkg: Package?, periodsPerYear: Int, fallbackYearly: String): String {
         val price = pkg?.product?.price ?: return fallbackYearly
-        val monthlyMicros = price.amountMicros / 12.0
+        val monthlyMicros = price.amountMicros / periodsPerYear.toDouble()
         return try {
             val appLanguage = (getApplication() as? SophiaApplication)
                 ?.languageManager?.current?.value
@@ -292,11 +394,11 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
      * « -58 % » style badge comparing the annual plan to twelve monthly ones. Null when
      * either price is missing or the annual plan isn't actually cheaper.
      */
-    fun discountBadge(annual: Package?, monthly: Package?): String? {
+    fun discountBadge(annual: Package?, shortPlan: Package?, periodsPerYear: Int = 12): String? {
         val annualMicros = annual?.product?.price?.amountMicros ?: return null
-        val monthlyMicros = monthly?.product?.price?.amountMicros ?: return null
+        val monthlyMicros = shortPlan?.product?.price?.amountMicros ?: return null
         if (monthlyMicros <= 0) return null
-        val yearOfMonthly = monthlyMicros * 12.0
+        val yearOfMonthly = monthlyMicros * periodsPerYear.toDouble()
         if (annualMicros >= yearOfMonthly) return null
         val percent = ((1.0 - annualMicros / yearOfMonthly) * 100).toInt()
         return if (percent <= 0) null else "-$percent%"
@@ -345,4 +447,13 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
     /** True when the entitlement this app sells is active right now on this customer info. */
     fun isEntitlementActive(customerInfo: CustomerInfo): Boolean =
         customerInfo.entitlements[AppConfig.PREMIUM_ENTITLEMENT]?.isActive == true
+
+    companion object {
+        /**
+         * What a paywall shows before Play has answered, or when it never does: no number at
+         * all. The old fallback was a hard-coded « 39,99 € » per language, wrong the moment a
+         * price experiment or a country tier serves anything else.
+         */
+        const val UNKNOWN_PRICE = "…"
+    }
 }
