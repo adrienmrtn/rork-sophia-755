@@ -1,0 +1,131 @@
+{
+  "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la",
+  "title": "Dlaczego Księżyc oddala się od Ziemi?",
+  "subtitle": "3,8 cm rocznie",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Co roku Księżyc oddala się od nas o 3,8 cm, mniej więcej w tempie, w jakim rośnie paznokieć. Odpychają go nasze oceany, a rachunek płacimy coraz dłuższymi dniami i całkowitymi zaćmieniami, które kiedyś znikną.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "full_moon_rising_over_ocean_horizon",
+    "ratio": "4:3",
+    "hook": "Księżyc oddala się od nas w tempie, w jakim rosną paznokcie: pewnego dnia całkowite zaćmienie nie będzie już możliwe."
+  },
+  "sections": [
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_intro",
+      "title": "Wstęp",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jak daleko jest Księżyc? Można to zmierzyć laserem. Gdy trwały [[misje Apollo]], astronauci zostawili na powierzchni Księżyca specjalne odbłyśniki. Naukowcy wysyłają w ich stronę z Ziemi impulsy lasera i mierzą, ile czasu światło potrzebuje na powrót. Wynik: Księżyc jest od nas średnio około **385.000 km**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ale ta odległość nie jest stała. Co roku Księżyc oddala się o około **3,8 cm**, mniej więcej w tempie, w jakim rosną nasze paznokcie. Z roku na rok zmiana jest znikoma. Przez miliony lat się sumuje. Co więc może odpychać Księżyc coraz dalej od nas?"
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p1",
+      "title": "Księżyc unosi oceany",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tak jak Ziemia, Księżyc ma własną siłę przyciągania: to [[grawitacja]], która ściąga ku niemu przedmioty, w tym samą Ziemię. Ale to przyciąganie nie wszędzie jest jednakowe. Strona Ziemi zwrócona ku Księżycowi jest przyciągana nieco mocniej niż strona przeciwna. Ta różnica tworzy dwa [[wybrzuszenia pływowe]], lekkie uniesienia oceanów: jedno naprzeciw Księżyca, drugie po przeciwnej stronie."
+        },
+        {
+          "type": "image",
+          "asset": "mont_saint_michel_bay_high_tide_aerial",
+          "ratio": "3:2",
+          "caption": "Mont-Saint-Michel podczas odpływu: morze, które Księżyc unosi dwa razy na dobę, cofnęło się daleko."
+        },
+        {
+          "type": "paragraph",
+          "text": "Te wybrzuszenia nie leżą dokładnie pod Księżycem. Ziemia obraca się wokół własnej osi w **24 godziny**, a Księżyc okrąża ją w mniej więcej miesiąc. Ponieważ Ziemia obraca się znacznie szybciej, przesuwa wybrzuszenia nieco przed Księżyc. To małe przesunięcie ma ogromne znaczenie: dzięki niemu wybrzuszenie ciągnie Księżyc do przodu po torze, jakim jest jego [[orbita]]."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p2",
+      "title": "Ziemia popycha Księżyc",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wybrzuszenie oceanu ma masę, a więc i własną grawitację. Ponieważ wyprzedza nieco Księżyc, jego przyciąganie lekko ciągnie Księżyc do przodu, gdy ten krąży wokół Ziemi. To ciągnięcie dodaje energii orbicie Księżyca. Zamiast przyspieszać na tym samym torze, Księżyc przechodzi na nieco szerszą orbitę. Dlatego jego średnia odległość rośnie co roku o około **3,8 cm**."
+        },
+        {
+          "type": "image",
+          "asset": "apollo_11_lunar_laser_retroreflector_nasa_1969",
+          "ratio": "4:3",
+          "caption": "Laserowy retroreflektor z misji Apollo (egzemplarz z National Air and Space Museum): taki sam model leży na Księżycu od lipca 1969 roku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Żadna tajemnicza siła nie odpycha więc Księżyca. Energia pochodzi z obrotu Ziemi. Za pośrednictwem pływów [[energia obrotowa]] naszej planety powoli, po trochu, przechodzi na Księżyc. To znikome pchnięcie, ale powtarzane przy każdym obrocie."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p3",
+      "title": "Ziemia też zwalnia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Energia oddana Księżycowi ma swoją cenę. Ziemia powoli traci niewielką część energii obrotowej, więc obraca się odrobinę wolniej. W skali ludzkiego życia ta zmiana jest niezauważalna. Przez miliony lat się kumuluje."
+        },
+        {
+          "type": "funFact",
+          "text": "W dalekiej przeszłości Ziemia obracała się szybciej: doba trwała wtedy krócej niż dzisiejsze **24 godziny**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pływy robią więc dwie rzeczy naraz: oddalają Księżyc i hamują obrót Ziemi. To nie dwa osobne zjawiska, lecz dwie strony tej samej wymiany między Ziemią a Księżycem. Ta wymiana trwa od miliardów lat i nie ustaje dziś, przy każdym przypływie."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p4",
+      "title": "Koniec całkowitych zaćmień",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To powolne oddalanie się w końcu zmieni coś spektakularnego na naszym niebie. Dziś Słońce jest około **400 razy** szersze od Księżyca. Jest też mniej więcej 400 razy dalej od Ziemi. Czystym przypadkiem oba ciała wydają się więc prawie tej samej wielkości. Dzięki temu Księżyc może całkowicie zasłonić Słońce, gdy następuje [[całkowite zaćmienie Słońca]]."
+        },
+        {
+          "type": "image",
+          "asset": "total_solar_eclipse_corona_2017_nasa",
+          "ratio": "3:2",
+          "caption": "Widok z pokładu statku Artemis II w kwietniu 2026 roku: Księżyc zasłania Słońce i odsłania jego koronę."
+        },
+        {
+          "type": "paragraph",
+          "text": "W miarę oddalania się Księżyc będzie wyglądał na nieco mniejszy. Za około **600 milionów lat**, a może później, nie będzie już dość duży, by całkiem zakryć Słońce. Całkowite zaćmienia znikną wtedy na zawsze. Księżyc nieprędko ucieknie od Ziemi. Ale jego powolne oddalanie przypomina, że nawet tak znajomy widok jak nocne niebo nie jest wieczny."
+        },
+        {
+          "type": "takeaway",
+          "text": "Księżyc oddala się o **3,8 cm** rocznie, bo pływy przekazują mu część energii obrotowej Ziemi: nasze doby się wydłużają, a za 600 milionów lat całkowitych zaćmień już nie będzie."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "NASA Jet Propulsion Laboratory, « The Apollo Experiment That Keeps on Giving », 2019."
+    },
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, section 4.6 « Ocean Tides and the Moon », p. 116-119."
+    },
+    {
+      "text": "NASA Science, « Tidal Locking »."
+    },
+    {
+      "text": "NASA Science, « Eclipses and the Moon »."
+    }
+  ]
+}
