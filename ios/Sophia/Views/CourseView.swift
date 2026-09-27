@@ -158,6 +158,9 @@ struct CourseView: View {
             // session, which inflated opens and cut every session short. An existing tracker
             // means this is a return from a cover, not a new visit.
             guard sessionTracker == nil else { return }
+            // Inline images come from the bucket: start fetching them now so paging forward
+            // finds them on disk rather than in flight.
+            CourseImageLoader.prefetch(courseId: course.id)
             progressManager.registerFirstCourseOpenedIfNeeded(course.id)
             requestAppStoreReviewIfEligible(lessonIndex: currentIndex)
             sessionTracker = CourseSessionTracker(course: course)

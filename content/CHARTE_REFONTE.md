@@ -57,7 +57,8 @@ Le quiz existant est **conservé tel quel** (hors périmètre de cette refonte).
 - Ratios recommandés : `16:9` (hero, paysages), `4:3` (scènes, œuvres), `1:1` (portraits, objets), `auto` (respect du ratio natif).
 - Chaque image : **légende** courte optionnelle + **crédit** (réutilise `image_credits.json`).
 - Coins arrondis, contour néobrutaliste conservé (cohérence avec l'app).
-- Source : réutiliser en priorité les 834 images de `ios/Sophia/CourseImages`, sinon sourcer sous licence (Wikimedia Commons / domaine public / Unsplash) avec crédit.
+- Source : réutiliser en priorité le pool d'images du dépôt (`content/images`, plus les couvertures de `ios/Sophia/CourseImages`), sinon sourcer sous licence (Wikimedia Commons / domaine public / Unsplash) avec crédit.
+- **Où vivent les fichiers** (depuis le 27/09/2026) : la **couverture** de chaque cours (image du `hero`, aussi la carte de la home) est dans `ios/Sophia/CourseImages/` et embarquée dans l'app iOS ; **toutes les autres images** (blocs `image`, pool) sont dans `content/images/` et ne sont **pas** embarquées : les deux apps les lisent dans le bucket Supabase public `course-images` (`scripts/upload_course_images_to_supabase.py`, à relancer après tout ajout). Sur iOS, `CourseImageLoader` cherche d'abord le bundle, puis son cache disque, puis le bucket ; en attendant le téléchargement, un cadre neutre avec un petit indicateur ; si le fichier n'existe nulle part, le cadre gris avec le nom du slug.
 
 ### Hero
 - Image large en tête d'intro (ratio `16:9` ou `3:2`), titre + sous-titre (ex. année) en surimpression ou juste dessous, + hook.
@@ -155,7 +156,7 @@ Un fichier JSON par cours : `content/courses/fr/<course_id>.json`.
   - la mise à jour de l'entrée legacy `CourseData.swift` (paging / quiz / freemium / progression conservés),
   - (ultérieurement) les JSON de langue à partir du FR.
 - **Rendu** : `BlockContentView` (SwiftUI) consomme les blocs. Prose rendue via `AttributedString` dans un `UITextView` encapsulé (`UIViewRepresentable`) pour un wrapping / une justification / des liens glossaire natifs et fiables — le `FlowInlineLayout` maison est abandonné pour les cours v2.
-- **Coexistence** : un cours s'affiche en v2 si sa ressource `CoursesV2/<id>` existe ; sinon fallback sur `RichContentView` legacy. Migration cours par cours.
+- **Coexistence** : un cours s'affiche en v2 si sa ressource `CoursesV2/<id>` existe ; sinon fallback sur `RichContentView` legacy. Depuis le 27/09/2026 les catalogues (`CourseData.swift`, `courses.<lang>.json`) ne portent plus le texte legacy des leçons (46 Mo pour rien, `scripts/slim_ios_catalogs.py`) : le fallback affiche une page vide, ce qui ne peut arriver que si une édition V2 manque, et toutes existent.
 
 ---
 
