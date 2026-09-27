@@ -1,0 +1,137 @@
+{
+  "id": "course_268_pourquoi_le_violet_est_il_la_couleur",
+  "title": "Pourquoi le violet est-il la couleur des rois ?",
+  "subtitle": "La pourpre de Tyr",
+  "subject": "sciences",
+  "subcategory": "Découvertes qui ont changé le monde",
+  "description": "La couleur des empereurs romains sortait d'une glande d'escargot de mer, à raison de quelques grammes de teinture pour des milliers de coquillages. Un chimiste a retrouvé la recette en 1998, et la molécule sert aujourd'hui de transistor.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "justinian_mosaic_san_vitale_ravenna_purple_robe",
+    "ratio": "16:9",
+    "hook": "Le colorant le plus cher de l'Antiquité sort de la glande à venin d'un escargot de mer."
+  },
+  "sections": [
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La pourpre est la couleur **la plus chère** du monde antique. Pourpre royale, pourpre impériale : elle borde la toge des sénateurs romains, puis devient si réglementée que la porter peut coûter la vie. Elle sort d'un escargot de mer, le [[murex]], ramassé au large de [[Tyr]], en Phénicie, sur la côte du Liban actuel. C'est cette ville qui donne son nom à la couleur."
+        },
+        {
+          "type": "paragraph",
+          "text": "La chimie tient en une molécule. Prends l'[[indigo]], le bleu du jean, et accroche-lui **deux atomes** de [[brome]]. Voilà toute la différence entre le colorant le moins cher de l'histoire et le plus coûteux. Car pour extraire la pourpre de l'animal, il faut des **milliers d'escargots** pour quelques grammes de teinture."
+        }
+      ]
+    },
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_p1",
+      "title": "Une couleur réservée aux empereurs",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les Phéniciens teignent à la pourpre dès **1200** av. J.-C. environ, et le commerce leur survit. La Grèce s'en empare, puis Rome, et la production continue jusqu'à la chute de Constantinople, la capitale de l'Empire byzantin, en **1453**. Pendant l'essentiel de ces **vingt-six siècles**, la couleur est contrôlée."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rome fixe qui a le droit de la porter. Plus tard, les empereurs se réservent la **pourpre pleine**, à eux seuls. La teinte est belle, mais c'est surtout son prix qui en fait un signal fiable : si tu peux t'habiller d'escargots, tout le monde le voit. Voilà pourquoi le violet paraît encore royal aujourd'hui. L'association a survécu au colorant, à l'empire et à l'escargot. Nous avons hérité d'un symbole de statut légué par une industrie qui n'existe plus."
+        }
+      ]
+    },
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_p2",
+      "title": "Douze mille escargots pour un ourlet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les murex vivent en Méditerranée orientale et le long de la côte atlantique du Maroc. D'après un récit antique, **12 000** coquillages donnent environ **1,4 gramme** de teinture, de quoi colorer l'ourlet d'un seul vêtement. La couleur vient d'une seule glande, sous la coquille. Les teinturiers antiques écrasaient les escargots entiers ; les chercheurs d'aujourd'hui prélèvent la glande."
+        },
+        {
+          "type": "image",
+          "asset": "bolinus_brandaris_murex_shells_tyrian_purple",
+          "ratio": "4:3",
+          "caption": "Coquilles de murex épineux (Bolinus brandaris), l'escargot de mer dont la glande fournit la pourpre."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'escargot ne fabrique pas cette couleur pour être beau. Sa sécrétion endort ses proies et protège ses œufs des bactéries. La pourpre des empereurs est donc le sous-produit d'une **arme chimique**, une défense de mollusque que les teinturiers ont transformée en parure."
+        },
+        {
+          "type": "funFact",
+          "text": "Le brome de la molécule vient de la mer elle-même, qui en regorge. Un animal terrestre ne pourrait pas fabriquer cette couleur."
+        }
+      ]
+    },
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_p3",
+      "title": "Un escargot, plusieurs pourpres",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il n'existe pas une seule pourpre de Tyr. Ce qui sort de la glande est un mélange, et la teinte dépend des proportions. Sans brome, la molécule est un indigo bleu ordinaire. Un atome de brome la rend violette. **Deux** donnent le pourpre rougeâtre que prisaient les Romains."
+        },
+        {
+          "type": "image",
+          "asset": "murex_dyed_wool_shades_purple_to_tekhelet_blue",
+          "ratio": "4:3",
+          "caption": "Laines teintes au murex : la gamme va du rouge-pourpre au bleu, à partir du même escargot."
+        },
+        {
+          "type": "paragraph",
+          "text": "La lumière change encore la donne. Le soleil arrache des atomes de brome et pousse la couleur vers le **bleu** : c'est ainsi que le même escargot fournit aussi le [[tekhelet]], le bleu des franges rituelles juives. La chaleur déplace aussi la teinte. Le teinturier ne suit donc pas la recette d'une couleur, il pilote une réaction. Les chimistes d'aujourd'hui savent séparer le mélange et lire exactement quelles molécules ont donné sa nuance à une étoffe antique."
+        }
+      ]
+    },
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_p4",
+      "title": "De la cuve de teinture au transistor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La recette se perd pendant des siècles. Il faut attendre **1998** pour qu'un chimiste, après de longs tâtonnements, comprenne comment la cuve devait fonctionner. Il lit des témoignages du XVe au XVIIIe siècle, s'inspire de la façon dont les teinturiers font fermenter le pastel, une plante à bleu, et consulte la recette incomplète laissée par [[Pline l'Ancien]]. En ajustant le sel marin et en ajoutant de la potasse, il obtient enfin un pourpre profond sur la laine."
+        },
+        {
+          "type": "paragraph",
+          "text": "La molécule trouve ensuite une seconde vie. Elle conduit l'électricité et transporte les **deux types** de charge électrique, ce qui est rare. Évaporée en couche mince, elle fonctionne comme un [[transistor]]. Ce qui la fait marcher, c'est la même prise serrée entre molécules qui fixe la couleur au tissu."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "v. 1200 av. J.-C.",
+              "title": "Les Phéniciens teignent à la pourpre",
+              "detail": "Le commerce part de Tyr et survivra à ses fondateurs."
+            },
+            {
+              "date": "1453",
+              "title": "Fin de la production",
+              "detail": "La chute de Constantinople clôt vingt-six siècles de pourpre."
+            },
+            {
+              "date": "1998",
+              "title": "La recette retrouvée",
+              "detail": "Un chimiste refait fonctionner la cuve et teint la laine en pourpre profond."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "La pourpre de Tyr doit son prestige à sa rareté, des milliers d'escargots pour quelques grammes, et sa molécule, un indigo chargé de deux atomes de brome, sert aujourd'hui de transistor."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "University of Chicago Library, « Tyrian Purple », The Origins of Color: Organic Dyes and Lakes (exposition en ligne).",
+      "url": "https://www.lib.uchicago.edu/collex/exhibits/originsof-color/organic-dyes-and-lakes/tyrian-purple/"
+    }
+  ]
+}

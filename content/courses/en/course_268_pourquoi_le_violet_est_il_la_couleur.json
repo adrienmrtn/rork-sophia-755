@@ -1,0 +1,137 @@
+{
+  "id": "course_268_pourquoi_le_violet_est_il_la_couleur",
+  "title": "Why is purple the color of kings?",
+  "subtitle": "Tyrian purple",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "The color of Roman emperors came out of a sea snail's gland, a few grams of dye for thousands of shells. A chemist recovered the recipe in 1998, and the molecule now works as a transistor.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "justinian_mosaic_san_vitale_ravenna_purple_robe",
+    "ratio": "16:9",
+    "hook": "The most expensive dye of the ancient world came out of a sea snail's poison gland."
+  },
+  "sections": [
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Purple was **the most expensive** color in the ancient world. Royal purple, imperial purple: it edged the toga of Roman senators, then became so restricted that wearing it could cost you your life. It came out of a sea snail, the [[murex]], gathered off the coast of [[Tyre]] in Phoenicia, on the shore of modern Lebanon. That city gave the color its name."
+        },
+        {
+          "type": "paragraph",
+          "text": "The chemistry comes down to one molecule. Take [[indigo]], the blue of denim, and attach **two atoms** of [[bromine]]. That is the whole difference between the cheapest dye in history and the most costly. Because to get the purple out of the animal, you need **thousands of snails** for a few grams of dye."
+        }
+      ]
+    },
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_p1",
+      "title": "A color reserved for emperors",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The Phoenicians were dyeing with purple by about **1200 BC**, and the trade outlived them. Greece took it up, then Rome, and production continued until the fall of Constantinople, the capital of the Byzantine Empire, in **1453**. For most of those **twenty-six centuries**, the color was controlled."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rome laid down who was allowed to wear it. Later, the emperors reserved **full purple** for themselves alone. The shade is beautiful, but above all its price made it a reliable signal: if you can afford to dress in snails, everyone can see it. That is why purple still reads as royal today. The association has outlived the dye, the empire and the snail. We inherited a status symbol from an industry that no longer exists."
+        }
+      ]
+    },
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_p2",
+      "title": "Twelve thousand snails for a hem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Murex snails live in the eastern Mediterranean and along the Atlantic coast of Morocco. By one ancient account, **12,000** of them yield about **1.4 grams** of dye, enough to color the hem of a single garment. The color comes from one gland under the shell. Ancient dyers crushed the snails whole; today's researchers take the gland instead."
+        },
+        {
+          "type": "image",
+          "asset": "bolinus_brandaris_murex_shells_tyrian_purple",
+          "ratio": "4:3",
+          "caption": "Spiny murex shells (Bolinus brandaris), the sea snail whose gland supplies the purple."
+        },
+        {
+          "type": "paragraph",
+          "text": "The snail does not make this color to be beautiful. Its secretion sedates its prey and protects its eggs from bacteria. The emperors' purple is therefore the by-product of a **chemical weapon**, a mollusk's defense that dyers turned into finery."
+        },
+        {
+          "type": "funFact",
+          "text": "The bromine in the molecule comes from the sea itself, which is full of it. A land animal could not make this color."
+        }
+      ]
+    },
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_p3",
+      "title": "One snail, many purples",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "There is no single Tyrian purple. What comes out of the gland is a mixture, and the shade depends on the proportions. With no bromine attached, the molecule is plain blue indigo. One bromine atom turns it violet. **Two** give the reddish purple the Romans prized."
+        },
+        {
+          "type": "image",
+          "asset": "murex_dyed_wool_shades_purple_to_tekhelet_blue",
+          "ratio": "4:3",
+          "caption": "Wool dyed with murex: the range runs from red-purple to blue, all from the same snail."
+        },
+        {
+          "type": "paragraph",
+          "text": "Light changes things further. Sunlight knocks bromine atoms back off and pushes the color toward **blue**: that is how the same snail can also yield [[tekhelet]], the blue of Jewish ritual fringes. Heat shifts the shade too. So the dyer is not following a recipe for one color, he is controlling a reaction. Chemists today can pull the mixture apart and read exactly which molecules gave an ancient cloth its shade."
+        }
+      ]
+    },
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_p4",
+      "title": "From the dye vat to the transistor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The recipe was lost for centuries. Only in **1998**, after long trial and error, did a chemist work out how the vat must have run. He read accounts from the 15th to the 18th century, borrowed from the way dyers ferment woad, a plant that gives blue, and consulted the incomplete recipe left by [[Pliny the Elder]]. By adjusting the sea salt and adding potash, he finally produced a deep purple on wool."
+        },
+        {
+          "type": "paragraph",
+          "text": "Then the molecule found a second life. It conducts electricity and carries **both kinds** of electrical charge, which is rare. Evaporated into a thin film, it works as a [[transistor]]. What makes it work is the same tight grip between molecules that holds the color fast to cloth."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "c. 1200 BC",
+              "title": "The Phoenicians dye with purple",
+              "detail": "The trade starts in Tyre and will outlive its founders."
+            },
+            {
+              "date": "1453",
+              "title": "Production ends",
+              "detail": "The fall of Constantinople closes twenty-six centuries of purple."
+            },
+            {
+              "date": "1998",
+              "title": "The recipe recovered",
+              "detail": "A chemist gets the vat running again and dyes wool a deep purple."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Tyrian purple owes its prestige to its scarcity, thousands of snails for a few grams, and its molecule, an indigo carrying two bromine atoms, now works as a transistor."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "University of Chicago Library, « Tyrian Purple », The Origins of Color: Organic Dyes and Lakes (exposition en ligne).",
+      "url": "https://www.lib.uchicago.edu/collex/exhibits/originsof-color/organic-dyes-and-lakes/tyrian-purple/"
+    }
+  ]
+}
