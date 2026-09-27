@@ -9,6 +9,10 @@ nouveau binaire : le bouton « Soumettre pour examen » sur chaque produit suffi
 Deux produits déjà approuvés n'ont rien à faire chez Apple : `Sophia_yearly_5999` et
 `Sophia_monthly_notrial` (à rattacher à l'entitlement dans RevenueCat seulement).
 
+> **État au 27/09** : tout ce document a été exécuté par le workflow. Les 7 produits existent,
+> la grille de prix est vérifiée, la soumission du groupe est lancée. Les § 1 à 5 restent comme
+> référence de ce qui a été créé ; le § 6 (Play Console) reste à faire à la main.
+
 ## 0. Option automatisée (GitHub Actions)
 
 Tout le § 1 à § 5 est scripté. Onglet **Actions → Pricing tests → Run workflow** :
@@ -20,8 +24,10 @@ Tout le § 1 à § 5 est scripté. Onglet **Actions → Pricing tests → Run wo
    499,99 TRY pour les paliers, essai gratuit 3 jours, capture d'examen copiée de
    `Sophia_yearly`, notes d'examen du § 4). Relançable sans risque : rien n'est créé deux fois.
 3. `appstore · status` : état de chaque abonnement ; attendre « READY_TO_SUBMIT ».
-4. `appstore · submit` : soumet le groupe à Apple.
-5. `revenuecat · plan` puis `apply` : crée les produits dans RevenueCat (App Store et Play),
+4. `appstore · prices` : prix client de chaque abonnement dans 12 pays, pour vérifier la grille
+   d'Apple sur `_t50` et `_t25` (Türkiye, Mexique, Brésil, Inde) avant de soumettre.
+5. `appstore · submit` : soumet le groupe à Apple.
+6. `revenuecat · plan` puis `apply` : crée les produits dans RevenueCat (App Store et Play),
    rattache tout à `premium` (y compris les deux produits de juillet), crée les 13 offerings
    et leurs packages.
 

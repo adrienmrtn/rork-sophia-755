@@ -12,6 +12,8 @@ Four subcommands, in the order you run them:
     apply    create what is missing. Idempotent: a product that already exists is
              completed (localizations, prices, offer, screenshot), never duplicated.
     status   one line per subscription of the group with its App Store state.
+    prices   the customer price of every subscription of the group in a dozen
+             territories, to check Apple's grid before submitting.
     submit   submit the group for review (every subscription in "Ready to Submit").
 
 What `apply` does for one product, in order, skipping every step already done:
@@ -23,7 +25,8 @@ What `apply` does for one product, in order, skipping every step already done:
     4. prices: the base-territory price point for the manifest price, then one
        subscriptionPrice per territory from that point's `equalizations` (Apple's
        own grid), then the manifest `overrides` (e.g. TUR = 999.99)
-    5. POST /subscriptionIntroductoryOffers  free trial, when the manifest says so
+    5. POST /subscriptionIntroductoryOffers  free trial, one per territory, when the
+       manifest says so
     6. review screenshot copied from the reference product (download + upload)
 
 Credentials come from the environment, never from the repository (same three
@@ -40,6 +43,7 @@ import argparse
 import hashlib
 import json
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -49,6 +53,49 @@ from appstore_metadata import ApiError, Client, find_app  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "appstore" / "subscriptions" / "price_tests.json"
+
+
+class PatientClient(Client):
+    """Same client, built for a run longer than one token.
+
+    One `apply` is roughly 350 calls per product (a price and an introductory
+    offer per territory): a full run takes 20 to 30 minutes, longer than the
+    20-minute lifetime Apple allows a token, and can brush the hourly quota.
+    So the token is minted again every 15 minutes (and once more on a 401),
+    and a rate limit or a transient 5xx is waited out instead of being fatal.
+    """
+
+    TOKEN_LIFETIME = 15 * 60
+    RETRY_ON = {429, 500, 502, 503, 504}
+
+    def __init__(self, dry_run: bool = False) -> None:
+        super().__init__(dry_run=dry_run)
+        self._minted_at = 0.0
+
+    @property
+    def auth(self) -> str:
+        if self._token is None or time.monotonic() - self._minted_at > self.TOKEN_LIFETIME:
+            self._token = None
+            self._minted_at = time.monotonic()
+        return super().auth
+
+    def call(self, method: str, path: str, *, body: dict | None = None, params: dict | None = None) -> dict:
+        refreshed = False
+        for attempt in range(6):
+            try:
+                return super().call(method, path, body=body, params=params)
+            except ApiError as error:
+                if error.status == 401 and not refreshed:
+                    refreshed = True
+                    self._token = None
+                    print("  (token expired, minting a new one)", flush=True)
+                    continue
+                if error.status not in self.RETRY_ON or attempt == 5:
+                    raise
+                wait = 60 if error.status == 429 else 5 * (attempt + 1)
+                print(f"  (Apple answered {error.status}, waiting {wait}s before retrying)", flush=True)
+                time.sleep(wait)
+        raise AssertionError("unreachable")
 
 
 def load_manifest(path: Path) -> dict:
@@ -192,7 +239,7 @@ def territory_of(point: dict) -> str | None:
 
 
 def current_prices(client: Client, sub_id: str) -> dict[str, dict]:
-    prices = client.get_all(f"/subscriptions/{sub_id}/prices", {"include": "territory"})
+    prices = client.get_all(f"/subscriptions/{sub_id}/prices", {"include": "territory,subscriptionPricePoint"})
     return {territory_of(p): p for p in prices if territory_of(p)}
 
 
@@ -248,31 +295,41 @@ def ensure_prices(client: Client, sub_id: str | None, spec: dict, base_territory
         print(f"  override {territory}: set to {customer_price}")
 
 
-def ensure_intro_offer(client: Client, sub_id: str | None, spec: dict) -> None:
+def ensure_intro_offer(client: Client, sub_id: str | None, spec: dict, territories: list[str]) -> None:
+    """App Store Connect stores one introductory offer per territory, so a free
+    trial "in every territory" is one POST per territory. Territories that
+    already carry an offer are skipped, which makes an interrupted run resumable."""
     duration = spec.get("trial")
     if not duration:
         print("  introductory offer: none (by design)")
         return
+    have: set[str] = set()
     if sub_id:
-        offers = client.get_all(f"/subscriptions/{sub_id}/introductoryOffers")
-        if offers:
-            print(f"  introductory offer: already present ({len(offers)} rows)")
-            return
-    if client.dry_run or not sub_id:
-        print(f"  would add introductory offer: free trial {duration}, all territories")
+        offers = client.get_all(f"/subscriptions/{sub_id}/introductoryOffers", {"include": "territory"})
+        have = {t for t in (territory_of(o) for o in offers) if t}
+    missing = [t for t in territories if t not in have]
+    if not missing:
+        print(f"  introductory offer: free trial {duration} already in all {len(have)} territories")
         return
-    client.call(
-        "POST",
-        "/subscriptionIntroductoryOffers",
-        body={
-            "data": {
-                "type": "subscriptionIntroductoryOffers",
-                "attributes": {"duration": duration, "offerMode": "FREE_TRIAL", "numberOfPeriods": 1},
-                "relationships": {"subscription": rel("subscriptions", sub_id)},
-            }
-        },
-    )
-    print(f"  introductory offer: free trial {duration}")
+    if client.dry_run or not sub_id:
+        print(f"  would add introductory offer: free trial {duration} in {len(missing)} territories")
+        return
+    for territory in missing:
+        client.call(
+            "POST",
+            "/subscriptionIntroductoryOffers",
+            body={
+                "data": {
+                    "type": "subscriptionIntroductoryOffers",
+                    "attributes": {"duration": duration, "offerMode": "FREE_TRIAL", "numberOfPeriods": 1},
+                    "relationships": {
+                        "subscription": rel("subscriptions", sub_id),
+                        "territory": rel("territories", territory),
+                    },
+                }
+            },
+        )
+    print(f"  introductory offer: free trial {duration} added in {len(missing)} territories ({len(have)} already there)")
 
 
 def reference_screenshot(client: Client, reference_id: str) -> tuple[str, bytes] | None:
@@ -292,7 +349,10 @@ def reference_screenshot(client: Client, reference_id: str) -> tuple[str, bytes]
     url = template.replace("{w}", str(asset.get("width", 1290))).replace("{h}", str(asset.get("height", 2796))).replace("{f}", "png")
     with urllib.request.urlopen(url, timeout=60) as response:
         data = response.read()
-    return attributes.get("fileName") or "review.png", data
+    # The template always serves a PNG, whatever the original upload was called
+    # (the account answers "SOURCE", with no extension), so name the copy as one.
+    stem = Path(attributes.get("fileName") or "review").stem or "review"
+    return f"{stem}.png", data
 
 
 def ensure_screenshot(client: Client, sub_id: str | None, source: tuple[str, bytes] | None) -> None:
@@ -374,7 +434,7 @@ def run(client: Client, manifest: dict, only: list[str] | None) -> int:
         ensure_localizations(client, sub_id, manifest["localizations"][spec["kind"]])
         ensure_availability(client, sub_id, territories)
         ensure_prices(client, sub_id, spec, manifest["base_territory"])
-        ensure_intro_offer(client, sub_id, spec)
+        ensure_intro_offer(client, sub_id, spec, territories)
         ensure_screenshot(client, sub_id, screenshot)
     print("\nNothing was written (plan)." if client.dry_run else "\nDone. Run `status`, then `submit`.")
     return 0
@@ -389,6 +449,44 @@ def status(client: Client, manifest: dict) -> int:
         mark = "*" if product_id in wanted else " "
         print(f"{mark} {product_id:<26} {attributes.get('state', '?'):<26} level {attributes.get('groupLevel')} {attributes.get('subscriptionPeriod')}")
     print("\n* = product of the price-test manifest. Ready to Submit → run `submit`.")
+    return 0
+
+
+CHECK_TERRITORIES = ["FRA", "DEU", "USA", "GBR", "ITA", "ESP", "POL", "TUR", "MEX", "BRA", "IND", "JPN"]
+
+
+def prices(client: Client, manifest: dict) -> int:
+    """Customer prices per territory, read back from the account (not computed here)."""
+    app_id = find_app(client, manifest["bundle_id"])
+    group = find_group(client, app_id, manifest["group_name"])
+    wanted = {p["product_id"] for p in manifest["products"]}
+    header = f"{'':2}{'product':<24}" + "".join(f"{t:>12}" for t in CHECK_TERRITORIES)
+    print(header)
+    currencies: dict[str, str] = {}
+    for product_id, sub in sorted(subscriptions_in(client, group["id"]).items(), key=lambda kv: kv[0] or ""):
+        page = client.call(
+            "GET",
+            f"/subscriptions/{sub['id']}/prices",
+            params={
+                "filter[territory]": ",".join(CHECK_TERRITORIES),
+                "include": "territory,subscriptionPricePoint",
+                "limit": 200,
+            },
+        )
+        points = {i["id"]: (i["attributes"] or {}) for i in page.get("included") or [] if i["type"] == "subscriptionPricePoints"}
+        for i in page.get("included") or []:
+            if i["type"] == "territories":
+                currencies[i["id"]] = (i["attributes"] or {}).get("currency", "")
+        by_territory: dict[str, str] = {}
+        for price in page.get("data") or []:
+            territory = territory_of(price)
+            point_id = (((price.get("relationships") or {}).get("subscriptionPricePoint") or {}).get("data") or {}).get("id")
+            if territory and point_id in points:
+                by_territory[territory] = points[point_id].get("customerPrice", "?")
+        mark = "*" if product_id in wanted else " "
+        print(f"{mark:2}{product_id:<24}" + "".join(f"{by_territory.get(t, '-'):>12}" for t in CHECK_TERRITORIES))
+    print(f"{'':2}{'currency':<24}" + "".join(f"{currencies.get(t, ''):>12}" for t in CHECK_TERRITORIES))
+    print("\n* = product of the price-test manifest. Compare _t50 and _t25 with Sophia_yearly in TUR, MEX, BRA, IND.")
     return 0
 
 
@@ -426,18 +524,20 @@ def submit(client: Client, manifest: dict) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["plan", "apply", "status", "submit"])
+    parser.add_argument("command", choices=["plan", "apply", "status", "prices", "submit"])
     parser.add_argument("--manifest", type=Path, default=MANIFEST)
     parser.add_argument("--only", action="append", help="Limit to one product id (repeatable)")
     parser.add_argument("--dry-run", action="store_true", help="With submit: show what would be submitted")
     args = parser.parse_args()
     manifest = load_manifest(args.manifest)
-    client = Client(dry_run=args.command == "plan" or args.dry_run)
+    client = PatientClient(dry_run=args.command == "plan" or args.dry_run)
     try:
         if args.command in ("plan", "apply"):
             return run(client, manifest, args.only)
         if args.command == "status":
             return status(client, manifest)
+        if args.command == "prices":
+            return prices(client, manifest)
         return submit(client, manifest)
     except ApiError as error:
         print(f"App Store Connect refused: {error}", file=sys.stderr)

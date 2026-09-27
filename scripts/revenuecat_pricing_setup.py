@@ -4,8 +4,9 @@
 Reads ``appstore/subscriptions/price_tests.json`` and, through the RevenueCat
 REST API v2, makes sure that:
 
-    1. every product of the manifest exists in RevenueCat for the App Store app
-       and for the Play Store app (store identifiers from the manifest);
+    1. every product an offering references exists in RevenueCat for the App
+       Store app and for the Play Store app (store identifiers from the
+       manifest), older products reused by an offering included;
     2. every product the offerings reference, new or existing, is attached to the
        `premium` entitlement — the audit found two approved products that were not;
     3. every offering of the manifest exists, with its packages, each package
@@ -175,14 +176,19 @@ def run(api_key: str, manifest: dict, dry_run: bool) -> int:
     app_summary = ", ".join(f"{store}={app['id']}" for store, app in apps.items())
     print(f"Project {project_id}: apps {app_summary}; entitlement {entitlement['id']}")
 
-    # 1. products of the manifest, on App Store and Play Store
+    # 1. every product the offerings reference, on App Store and Play Store.
+    # That covers the manifest's new products and the older ones an offering
+    # reuses on one store only (Sophia_yearly_5999 and Sophia_monthly_notrial
+    # had no Play product, so their Android variants would have had no price).
     print("\nProducts")
-    for spec in manifest["products"]:
-        ids = store_ids(manifest, spec["product_id"])
+    names = {spec["product_id"]: spec["name"] for spec in manifest["products"]}
+    referenced_ids = sorted({ios_id for offering in manifest["offerings"] for ios_id in offering["packages"].values()})
+    for ios_id in referenced_ids:
+        ids = store_ids(manifest, ios_id)
         for store in ("app_store", "play_store"):
             app = apps.get(store)
             if app and ids.get(store):
-                ensure_product(api_key, project_id, products, app, ids[store], spec["name"], dry_run)
+                ensure_product(api_key, project_id, products, app, ids[store], names.get(ios_id, ios_id), dry_run)
 
     # 2. everything the offerings reference is attached to the entitlement
     print("\nEntitlement")

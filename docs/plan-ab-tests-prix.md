@@ -404,9 +404,9 @@ Soumettre les 7 d'un coup (revue sans binaire, 1 à 3 jours). Vérifier la grill
 `_t50` et `_t25` en Türkiye, Mexique, Brésil, Inde ; corriger le storefront à la main si Apple
 arrondit loin de 50 % / 25 %.
 
-**Play Console (≈ 1 h)** — abonnement `sophia_pro` : base plans `p1y-4999`, `p1y-6999`,
+**Play Console (≈ 1 h)** — abonnement `sophia_pro` : base plans `p1y-4999`, `p1y-5999`, `p1y-6999`,
 `p1y-2999`, `p1y-t50`, `p1y-t25`, `monthly-notrial`, `weekly-699`, `annual-promo-2999` (essai 3 j
-en offre sur les annuels). **Aligner** `p1y` 47,99 → 39,99 € et `annual-promo` 23,99 → 19,99 €.
+en offre sur les annuels ; `p1y-5999` et `monthly-notrial` n'existaient que côté iOS). **Aligner** `p1y` 47,99 → 39,99 € et `annual-promo` 23,99 → 19,99 €.
 Aucune revue. Puis importer les produits Play dans RevenueCat.
 
 **RevenueCat (≈ 2 h, dashboard ou MCP avec une clé `read_write`)** — les points 1 et 3 sont
