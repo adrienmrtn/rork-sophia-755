@@ -292,7 +292,10 @@ def reference_screenshot(client: Client, reference_id: str) -> tuple[str, bytes]
     url = template.replace("{w}", str(asset.get("width", 1290))).replace("{h}", str(asset.get("height", 2796))).replace("{f}", "png")
     with urllib.request.urlopen(url, timeout=60) as response:
         data = response.read()
-    return attributes.get("fileName") or "review.png", data
+    # The template always serves a PNG, whatever the original upload was called
+    # (the account answers "SOURCE", with no extension), so name the copy as one.
+    stem = Path(attributes.get("fileName") or "review").stem or "review"
+    return f"{stem}.png", data
 
 
 def ensure_screenshot(client: Client, sub_id: str | None, source: tuple[str, bytes] | None) -> None:
