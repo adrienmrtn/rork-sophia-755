@@ -1,21 +1,28 @@
 # Images à créer pour les cours des profs
 
 Convention : chaque image est référencée dans le JSON du cours par un nom en anglais, minuscules
-et underscores. Le fichier attendu est `ios/Sophia/CourseImages/<nom>.jpg` (JPEG, 2 Mo max, le
-bucket Supabase refuse au-delà). Tant que le fichier n'existe pas, l'app affiche un cadre gris
-avec le nom : rien ne casse. Une fois les fichiers déposés :
+et underscores, fichier JPEG de 2 Mo max (le bucket Supabase refuse au-delà). Où le déposer :
 
-1. `python3 scripts/upload_course_images_to_supabase.py` (clé service_role) pour Android ;
+- **couverture** (image du `hero`, aussi la carte de la home) : `ios/Sophia/CourseImages/<nom>.jpg`,
+  embarquée dans l'app iOS ;
+- **toute autre image** (blocs `image` dans les sections) : `content/images/<nom>.jpg`, jamais
+  embarquée, servie par le bucket Supabase aux deux apps.
+
+Tant que le fichier n'existe nulle part, l'app affiche un cadre gris avec le nom : rien ne casse.
+Une fois les fichiers déposés :
+
+1. `python3 scripts/upload_course_images_to_supabase.py` (clé service_role) : indispensable, sur
+   iOS comme sur Android, pour toutes les images hors couvertures ;
 2. `python3 scripts/build_block_image_map.py` puis `python3 scripts/export_ios_content_for_android.py` ;
 3. me donner la source de chaque image (un lien Wikimedia suffit) pour remplir
    `ios/Sophia/Resources/image_credits.json`.
 
 Le **hero** sert aussi de couverture sur la carte de la home (`CourseImageMap`), donc un cadrage
-large 16:9 avec le sujet au centre.
+large avec le sujet au centre.
 
 ## Pilote (3 cours) : images livrées le 27/09
 
-Toutes en place dans `ios/Sophia/CourseImages/`. Deux fichiers ont été renommés d'après ce
+Toutes en place : les trois couvertures dans `ios/Sophia/CourseImages/`, les neuf illustrations dans `content/images/` (à uploader vers le bucket). Deux fichiers ont été renommés d'après ce
 qu'ils montrent réellement : `wienerisches_diarium_1725_vampire_report` est devenu
 `edvard_munch_vampire_painting_1895` (tableau de Munch) et
 `diaphragm_lungs_glottis_anatomy_diagram` est devenu `mouse_diaphragm_muscle_fibres_microscopy`

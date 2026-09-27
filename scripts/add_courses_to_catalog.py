@@ -14,9 +14,9 @@ holds the body, but the list of courses, their lesson ids and their quiz still l
     language; ``export_ios_content_for_android.py`` then derives ``course_index.fr.json``)
 
 This script derives all of that from the V2 source of the course: the lesson ids and
-titles are the section ids and titles, the legacy lesson body is the section's prose
-(never rendered while the V2 resource exists, kept as a fallback), the cover is the hero
-image, and the quiz comes from ``content/locales/<lang>/quizzes_v2.json``.
+titles are the section ids and titles (no legacy body: the reader renders the V2
+edition and the catalogs stay slim), the cover is the hero image, and the quiz comes
+from ``content/locales/<lang>/quizzes_v2.json``.
 
 It is idempotent: an entry that already exists (a course being replaced) is rewritten
 in place; a new one is appended. Languages without a V2 file for the course are left
@@ -87,17 +87,6 @@ def swift_number(value) -> str:
     return str(int(number)) if number.is_integer() else repr(number)
 
 
-def legacy_lesson_content(section: dict) -> str:
-    """The section's prose as one legacy string: paragraphs separated by blank lines,
-    glossary marks in the legacy ``<Term>`` form."""
-    parts: list[str] = []
-    for block in section.get("blocks", []):
-        if block.get("type") in {"heading", "paragraph"} and block.get("text"):
-            parts.append(block["text"])
-    text = "\n\n".join(parts)
-    return re.sub(r"\[\[(.+?)\]\]", r"<\1>", text)
-
-
 def quiz_for(lang: str, course_id: str) -> list[dict]:
     path = QUIZZES / lang / "quizzes_v2.json"
     if not path.is_file():
@@ -142,10 +131,9 @@ def swift_quiz_question(question: dict) -> str:
 
 def swift_course_block(course: dict, quiz: list[dict]) -> str:
     lessons = "\n".join(
-        "                LessonPage(id: {id}, title: {title}, content: {content}),".format(
+        "                LessonPage(id: {id}, title: {title}, content: \"\"),".format(
             id=swift_string(section["id"]),
             title=swift_string(section["title"]),
-            content=swift_string(legacy_lesson_content(section)),
         )
         for section in course["sections"]
     )
@@ -193,10 +181,9 @@ def catalog_entry(course: dict, quiz: list[dict]) -> dict:
         "description": course.get("description", ""),
         "subject": course["subject"],
         "subcategory": course.get("subcategory", ""),
-        "lessons": [
-            {"id": s["id"], "title": s["title"], "content": legacy_lesson_content(s)}
-            for s in course["sections"]
-        ],
+        # No legacy body: the reader renders the V2 edition and the catalogs stay slim
+        # (see scripts/slim_ios_catalogs.py).
+        "lessons": [{"id": s["id"], "title": s["title"]} for s in course["sections"]],
         "quiz": quiz,
     }
 

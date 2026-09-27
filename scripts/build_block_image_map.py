@@ -25,16 +25,19 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-IMAGES = ROOT / "ios" / "Sophia" / "CourseImages"
+IMAGE_DIRS = (
+    ROOT / "ios" / "Sophia" / "CourseImages",  # covers, bundled on iOS
+    ROOT / "content" / "images",               # everything else, bucket only
+)
 ALIASES = ROOT / "ios" / "Sophia" / "Utilities" / "CourseImageAliases.swift"
 COURSES_V2 = ROOT / "android" / "app" / "src" / "main" / "assets" / "courses_v2"
 OUT = ROOT / "android" / "app" / "src" / "main" / "assets" / "course_block_images.json"
 
 
 def available_objects() -> set[str]:
-    names = {path.stem for path in IMAGES.glob("*.jpg")}
+    names = {path.stem for folder in IMAGE_DIRS for path in folder.glob("*.jpg")}
     if not names:
-        sys.exit(f"no JPEGs in {IMAGES}")
+        sys.exit(f"no JPEGs in {', '.join(str(d) for d in IMAGE_DIRS)}")
     return names
 
 

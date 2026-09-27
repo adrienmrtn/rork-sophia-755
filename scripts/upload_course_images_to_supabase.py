@@ -1,13 +1,21 @@
 #!/usr/bin/env python3
-"""Upload iOS CourseImages JPEGs to the public Supabase Storage bucket `course-images`.
+"""Upload the course images to the public Supabase Storage bucket `course-images`.
+
+Two folders feed the bucket, which both apps read:
+
+  * ``ios/Sophia/CourseImages``  the covers (hero of each course), also bundled in the
+    iOS app so the home and the intro page work offline;
+  * ``content/images``           every other course image (inline illustrations and
+    the pool not yet used), served only from the bucket on iOS and on Android.
 
 Requires a secret key (service_role), not the publishable/anon key:
 
   export SUPABASE_URL=https://afnmcoovdvbtkgohtdij.supabase.co
   export SUPABASE_SERVICE_ROLE_KEY=eyJ...   # Project Settings → API → service_role
-  python3 scripts/upload_course_images_to_supabase.py
+  python3 scripts/upload_course_images_to_supabase.py                # everything (upsert)
+  python3 scripts/upload_course_images_to_supabase.py eiffel_* mercy_brown_*   # a few
 
-Creates the bucket if missing, then upserts every *.jpg from ios/Sophia/CourseImages.
+Creates the bucket if missing, then upserts every *.jpg it finds.
 """
 
 from __future__ import annotations
@@ -20,7 +28,10 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-IMAGES = ROOT / "ios" / "Sophia" / "CourseImages"
+IMAGE_DIRS = (
+    ROOT / "ios" / "Sophia" / "CourseImages",
+    ROOT / "content" / "images",
+)
 BUCKET = "course-images"
 DEFAULT_URL = "https://afnmcoovdvbtkgohtdij.supabase.co"
 
@@ -79,11 +90,16 @@ def upload_one(base: str, key: str, path: Path) -> int:
 
 
 def main() -> int:
+    import fnmatch
+
     base = os.environ.get("SUPABASE_URL", DEFAULT_URL).rstrip("/")
     key = env_key()
-    files = sorted(IMAGES.glob("*.jpg"))
+    patterns = sys.argv[1:]
+    files = sorted(path for folder in IMAGE_DIRS for path in folder.glob("*.jpg"))
+    if patterns:
+        files = [f for f in files if any(fnmatch.fnmatch(f.stem, p) for p in patterns)]
     if not files:
-        sys.exit(f"no JPEGs in {IMAGES}")
+        sys.exit(f"no JPEGs matching in {', '.join(str(d) for d in IMAGE_DIRS)}")
     print(f"=== Upload {len(files)} covers → {base}/storage/v1/object/public/{BUCKET}/ ===")
     ensure_bucket(base, key)
     ok = 0

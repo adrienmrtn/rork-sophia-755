@@ -37,6 +37,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE_ROOT = ROOT / "content" / "courses"
 BUNDLE_DIR = ROOT / "ios" / "Sophia" / "Resources" / "CoursesV2"
 AUTHORS_SOURCE = ROOT / "content" / "authors.json"
+IMAGE_DIRS = (ROOT / "ios" / "Sophia" / "CourseImages", ROOT / "content" / "images")
+ALIASES_SWIFT = ROOT / "ios" / "Sophia" / "Utilities" / "CourseImageAliases.swift"
 AUTHORS_BUNDLE = ROOT / "ios" / "Sophia" / "Resources" / "authors.json"
 
 LANGUAGES = ALL_CONTENT_LANGS
@@ -105,6 +107,31 @@ def validate_course(data: dict, origin: Path, authors: dict[str, dict] | None = 
                     require(isinstance(event.get("title"), str), f"{ev} missing 'title'")
 
 
+def known_images() -> set[str]:
+    """File stems of every course image, plus the slugs the iOS alias table maps to them."""
+    stems = {p.stem for folder in IMAGE_DIRS for p in folder.glob("*.jpg")}
+    stems |= {p.stem for folder in IMAGE_DIRS for p in folder.glob("*.png")}
+    if ALIASES_SWIFT.is_file():
+        import re
+        for slug, target in re.findall(r'"([^"]+)":\s*"([^"]+)"', ALIASES_SWIFT.read_text(encoding="utf-8")):
+            if target in stems:
+                stems.add(slug)
+    return stems
+
+
+def missing_images(data: dict, known: set[str]) -> list[str]:
+    """Slugs a course references that no folder holds (they render as a placeholder)."""
+    refs = []
+    hero = (data.get("hero") or {}).get("image")
+    if hero:
+        refs.append(hero)
+    for section in data.get("sections", []):
+        for block in section.get("blocks", []):
+            if block.get("type") == "image" and block.get("asset"):
+                refs.append(block["asset"])
+    return [r for r in refs if r not in known and r.lower() not in known]
+
+
 def write_json(path: Path, data: dict) -> bool:
     """Writes minified JSON. Returns True if the file content changed."""
     payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
@@ -133,6 +160,7 @@ def build(patterns: list[str], check_only: bool) -> int:
         return 0
 
     authors = load_authors()
+    known = known_images()
     built = 0
     errors = 0
     for source in sources:
@@ -146,6 +174,8 @@ def build(patterns: list[str], check_only: bool) -> int:
 
         course_id = data["id"]
         print(f"  OK  {course_id} ({len(data['sections'])} sections)")
+        for slug in missing_images(data, known):
+            print(f"    image to provide: {slug}")
 
         if check_only:
             continue
