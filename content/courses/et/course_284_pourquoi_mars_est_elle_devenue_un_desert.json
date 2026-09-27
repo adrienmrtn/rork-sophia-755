@@ -1,0 +1,137 @@
+{
+  "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert",
+  "title": "Miks sai Marsist kõrb?",
+  "subtitle": "Jõgedest kõrbeni",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Üle 3 miljardi aasta tagasi uuristasid jõed Marsil orge ja üleujutused pühkisid üle selle pinna. Tänapäeval on planeet külm ja kuiv, kuid kogu tema vesi pole kadunud.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "mars_valles_marineris_hemisphere_viking_mosaic",
+    "ratio": "4:3",
+    "hook": "Jõed, deltad, järved: punane planeet ei ole alati olnud jäine kõrb."
+  },
+  "sections": [
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Teadlased on aastakümneid otsinud Marsilt mineviku elu jälgi. Kogu teadaolev elu vajab vett, kuid Marsi pind on tänapäeval külm ja äärmiselt kuiv. Ometi pole Mars alati selline olnud: kulgurid, need ratastel robotid, mis uurivad tema pinda, on leidnud kivimeid ja mineraale, mis tekivad ainult **vedela vee** juuresolekul."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ülalt vaadates kinnitab maastik sama: iidsed jõeorud, deltad, kuivanud järvepõhjad. Paljud neist pinnavormidest on üle **3 miljardi aasta** vanad. NASA on leidnud isegi hiiglaslike üleujutuste jälgi umbes **3,5 miljardi aasta** tagant. Marsil on seega vesi voolanud. Mõistatuseks jääb: kuidas sai niiskest planeedist selline kõrb?"
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p1",
+      "title": "Vaja oli paksu atmosfääri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Veest üksi ei piisa, vaja on tingimusi, mis hoiavad selle vedelana. Marsi praegune atmosfäär on aga väga hõre: selle [[atmosfäärirõhk]] on alla **1%** Maa omast. Nii madala rõhu juures ei püsi vedel vesi pinnal stabiilsena: see külmub või aurustub."
+        },
+        {
+          "type": "image",
+          "asset": "jezero_crater_river_delta_mars_reconnaissance_orbiter",
+          "ratio": "5:4",
+          "caption": "Jezero kraatri piirkonna topograafiline kaart (ESA/DLR/FU Berlin): väikesel pildil iidsete jõgede kuhjatud deltad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kuidas hoidis noor Mars oma vett? Miljardeid aastaid tagasi oli tema atmosfäär palju paksem ja see aitas kahel moel. Suurem rõhk hoidis vee vedelana. Ja õhus olevad gaasid hoidsid soojust kinni: see oli [[kasvuhooneefekt]], mis hoidis pinna soojemana."
+        },
+        {
+          "type": "funFact",
+          "text": "Teadlased vaidlevad endiselt noore Marsi täpse temperatuuri üle. Üks on kindel: vedel vesi püsis seal piisavalt kaua, et uuristada orge ja täita järvi."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p2",
+      "title": "Mars kaotas oma atmosfääri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Miljardite aastate jooksul pääses suur osa sellest atmosfäärist kosmosesse. Esimene põhjus: planeedi suurus. Mars on väike, tema **gravitatsioon** on nõrgem kui Maal ja ta hoiab oma gaase halvemini kinni. Teine põhjus: kadus Marsi [[magnetväli]], nähtamatu kilp, mis kaitses tema atmosfääri Päikeselt tulevate laetud osakeste eest."
+        },
+        {
+          "type": "image",
+          "asset": "maven_solar_wind_stripping_mars_atmosphere_nasa",
+          "ratio": "16:9",
+          "caption": "Marsi atmosfääri lekkimist mõõtva kosmosesondi MAVEN orbiidid enne ja pärast 2019. aasta aeropidurdust (NASA)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nendest osakestest koosneb [[päikesetuul]], pidev laetud aine voog, mis Päikesest välja paiskub. Kilbita tabab see Marsi ülemist atmosfääri ja rebib sealt gaase. Oma osa on ka kõige energiarikkamal päikesevalgusel: see lõhub veemolekule ja teisi molekule ning vabanenud **kerged aatomid** pääsevad Marsi nõrgast gravitatsioonist kergemini välja. Mida hõredamaks atmosfäär muutub, seda külmemaks ja kuivemaks muutub Mars."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p3",
+      "title": "Kogu vesi pole läinud",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kogu Marsi vesi ei ole siiski kosmosesse põgenenud. Osa sellest tõusis ülemisse atmosfääri, kus see lõhuti kergeteks aatomiteks, mis pääsesid minema. Ülejäänu jäi aga paigale: osa külmus pinna all, osa reageeris kivimitega ja jäi **mineraalidesse** lõksu."
+        },
+        {
+          "type": "funFact",
+          "text": "Ajakirjas *Science* 2021. aastal avaldatud uuringu hinnangul võib **30 kuni 99%** Marsi veest olla lõksus tema kivimite mineraalides. Vahemik on lai: küsimus on endiselt lahtine."
+        },
+        {
+          "type": "paragraph",
+          "text": "See vesi ei ole seega kogunenud maa alla ainult jääna või vedelikuna. Nüüd sisaldab seda planeedi välimine kivimkiht ehk [[koorik]]. Teisisõnu võib suur osa Marsi „kadunud“ veest olla endiselt alles, tema kivimite vangis."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p4",
+      "title": "Kuiv, kuid mitte veeta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mars meenutab tänapäeval kõrbe, kuid ta pole veeta. Suures osas on kadunud pinnal voolanud stabiilne vesi. Suuri koguseid hoiavad endiselt külmunult [[polaarmütsid]], osa on peidus pinnase all **maetud jääna** ja osa on suletud kooriku mineraalidesse."
+        },
+        {
+          "type": "image",
+          "asset": "mars_north_polar_ice_cap_mars_global_surveyor",
+          "ratio": "2:1",
+          "caption": "Marsi globaalne kaart Vikingi sondide andmetel (NASA/USGS): väikestel piltidel kaks poolust ja nende jäämütsid."
+        },
+        {
+          "type": "paragraph",
+          "text": "See õppetund ulatub Marsist kaugemale. Vesi üksi ei tee planeeti niiskeks ja elamiskõlblikuks: tingimused on sama olulised. Piisavalt paks atmosfäär hoiab vee vedelana ja laseb sel koguneda jõgedeks ja järvedeks. Mars ei muutunud kõrbeks sellepärast, et iga piisk lendas kosmosesse, vaid sellepärast, et tema atmosfäär ei suutnud enam vett liikumas hoida."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mars kuivas, sest hõrenenud atmosfäär ei suutnud enam hoida vett pinnal vedelana: suur osa sellest veest on endiselt alles, külmunult poolustel või kivimitesse suletuna."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "B. M. Jakosky et al., « Mars' atmospheric history derived from upper-atmosphere measurements of 38Ar/36Ar », Science, vol. 355, n° 6332, 2017, p. 1408.",
+      "url": "https://doi.org/10.1126/science.aai7721"
+    },
+    {
+      "text": "NASA Science, « NASA: New Insights into How Mars Became Uninhabitable », 2024."
+    },
+    {
+      "text": "E. L. Scheller et al., « Long-term drying of Mars by sequestration of ocean-scale volumes of water in the crust », Science, vol. 372, n° 6537, 2021, p. 56-62.",
+      "url": "https://doi.org/10.1126/science.abc7717"
+    },
+    {
+      "text": "NASA, « NASA Mission Reveals Speed of Solar Wind Stripping Martian Atmosphere », 2015."
+    }
+  ]
+}

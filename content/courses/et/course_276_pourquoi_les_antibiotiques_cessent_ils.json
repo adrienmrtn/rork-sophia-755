@@ -1,0 +1,171 @@
+{
+  "id": "course_276_pourquoi_les_antibiotiques_cessent_ils",
+  "title": "Miks antibiootikumid enam ei mõju?",
+  "subtitle": "Bakterid löövad vastu",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Angiin, kuseteede põletik, rutiinne operatsioon: ilma tõhusate antibiootikumideta muutub see kõik taas ohtlikuks. Ja neid kuritarvitades õpetame bakteritele, kuidas neist üle elada.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "antibiogram_petri_dish_inhibition_zones",
+    "ratio": "4:3",
+    "hook": "Baktereid ikka ja jälle rünnates oleme treeninud neid meie ravimitele vastu pidama."
+  },
+  "sections": [
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kui bakterid tungivad meie kehasse, lööb immuunsüsteem vastu: **valged verelibled** ründavad nakkust ja meil hakkab kiiresti parem. Kui aga meie kaitsevõime on nõrgenenud või üle koormatud, on vaja abijõude: antibiootikume. [[bakteritsiidne]] antibiootikum hävitab bakteri, rünnates selle rakuseina ja sisu; bakteriostaatiline takistab üksnes selle paljunemist."
+        },
+        {
+          "type": "funFact",
+          "text": "Antibiootikum ei ole tänapäeva leiutis: on tõendeid, et inimesed kasutasid neid juba enam kui 1500 aastat tagasi, teadmata bakteritest midagi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sõltuvalt nakkusest valib arst kas **laia toimespektriga** antibiootikumi, mis mõjub paljudele liikidele, või kitsa spektriga antibiootikumi, mis on mõeldud vaid mõnele. Tõhusad, odavad ja kergesti kättesaadavad, katavad need ravimid tohutu hulga nakkusi. Just see edu pani tänapäeva maailma neid kuritarvitama. Ja bakterid hakkasid vastu lööma."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p1",
+      "title": "Kuidas bakterid õpivad vastu panema",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Antibiootikumid on tänapäeva meditsiini suurimaid saavutusi. Need on päästnud lugematu arvu elusid ja me sõltume neist. Nende massiline kasutamine on aga tekitanud probleemi: [[antibiootikumiresistentsus]]. Antibiootikumid, mis varem tapsid bakteri või peatasid selle kasvu, enam ei mõju. Bakter on arenenud nii, et suudab ravi üle kavaldada."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Penitsilliini avastaja Alexander Fleming oma laboris."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evolutsioon on loomulik protsess, mida keskkonna surve kiirendab. Kui baktereid pidevalt ravida molekulidega, mis on loodud neid tapma, valitakse sellega välja need, kes oskavad ellu jääda. Nende kaitsevõtted on mitmekesised: geneetilised **mutatsioonid**, antibiootikumi lagundavad ensüümid, muutused talitluses ja isegi pisikesed [[väljavoolupumbad]], mis heidavad ravimi rakust välja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Need kaitsevõtted on kirjas geenides. Kui resistentne bakter jaguneb, annab ta need edasi oma järglastele, kes annavad need omakorda edasi. Üksainus ellujäänu võib rajada terve resistentsete bakterite liini. Nii resistentsus levibki."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p2",
+      "title": "Rändavad geenid: MRSA juhtum",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Resistentne bakter rändab nagu iga teine mikroob. **Covidi** pandeemia näitas, kui kiiresti liigub viirus ühelt inimeselt ja ühest riigist teise. Bakterid levivad samamoodi: inimkontakti kaudu, soodsas keskkonnas, puuduliku hügieeni tõttu või loomadelt inimestele."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lisaks on neil otsetee: [[horisontaalne geeniülekanne]]. Resistentne bakter võib anda oma resistentsusgeenid otse naabrile, ootamata jagunemist. Väga lühikese ajaga tekib terve resistentsete bakterite populatsioon."
+        },
+        {
+          "type": "image",
+          "asset": "mrsa_staphylococcus_aureus_electron_micrograph_cdc",
+          "ratio": "5:4",
+          "caption": "Metitsilliiniresistentse kuldse stafülokoki kogumikud elektronmikroskoobi all."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tuntuim neist on [[MRSA]], metitsilliiniresistentne kuldne stafülokokk. See peab vastu paljudele levinud antibiootikumidele, mistõttu kutsutakse seda „superbakteriks“. Antibiootikumide massiline kasutamine hävitas nõrgemad tüved ja jättis välja vabaks neile, kes nagu tema olid õppinud vastu panema. Tagajärjed võivad olla surmavad."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p3",
+      "title": "1,27 miljonit surma aastas: WHO hoiatus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mida see resistentsus meie jaoks tähendab? Maailma Terviseorganisatsioon, lühendatult [[WHO]], liigitab antimikroobse resistentsuse, see tähendab vastupanu mikroobe tõrjuvatele ravimitele, sealhulgas antibiootikumidele, maailma **kolme** suurima rahvatervise ohu hulka. Kui bakteriaalsete nakkuste vastu mõjuvaid ravimeid jääb järjest vähemaks, kaotab maad kogu tänapäeva meditsiin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Arvud näitavad ohu suurust. Ainuüksi 2019. aastal omistati antimikroobsele resistentsusele maailmas **1,27 miljonit** surmajuhtumit. Ja kõver tõuseb: prognooside järgi võib see **2050. aastaks** nõuda **10 miljonit** elu aastas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Teadlased ei istu käed rüpes. Nad töötavad välja uusi ja täpsemaid ravimeetodeid, mis on suunatud resistentsetele bakteritele. Samuti püüavad nad taastada olemasolevate antibiootikumide tõhusust ja vähendada tarbetuid väljakirjutamisi: iga ärajäänud ravikuur on bakteritele üks kohanemisvõimalus vähem."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p4",
+      "title": "Maailm ilma tõhusate antibiootikumideta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Me neelame oma antibiootikume sellele mõtlemata. Need on odavad, tõhusad ja kõikjal saadaval. Ilma nendeta muutuks tavaline nakkus, bakteriaalne **angiin** või kuseteede põletik, palju raskemini ravitavaks. Marraskil põlvest võiks alguse saada [[sepsis]], kogu keha haarav eluohtlik nakkus."
+        },
+        {
+          "type": "image",
+          "asset": "hospital_operating_room_surgery_team",
+          "ratio": "3:2",
+          "caption": "Tänapäevane operatsioonisaal: ilma antibiootikumideta muutuksid rutiinsed operatsioonid taas riskantseks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tavapärased operatsioonid, näiteks **keisrilõige** või puusaproteesi paigaldamine, oleksid palju riskantsemad. Antibiootikume määratakse ju sageli pärast kirurgilist sekkumist, et nakkust ennetada. Ilma nendeta muutuksid elupäästvad või elukvaliteeti parandavad protseduurid tegemiseks liiga ohtlikuks."
+        },
+        {
+          "type": "takeaway",
+          "text": "Tänapäeva meditsiini tulevik sõltub ühest asjast: antibiootikumide tõhususe säilitamisest ehk sellest, et me lõpetaksime nende kuritarvitamise."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Medical News Today, « Antibiotics: How they work, uses, side effects and how to use ».",
+      "url": "https://www.medicalnewstoday.com/articles/10278"
+    },
+    {
+      "text": "Wikipedia, « Antibiotic ».",
+      "url": "https://en.wikipedia.org/wiki/Antibiotic"
+    },
+    {
+      "text": "B. K. Nimmana et A. D. Nguyen, « Antibiotic Resistance », StatPearls, StatPearls Publishing, Treasure Island (FL), 2026.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513277/"
+    },
+    {
+      "text": "H. Endale, M. Mathewos et D. Abdeta, « Potential Causes of Spread of Antimicrobial Resistance and Preventive Measures in One Health Perspective: A Review », Infection and Drug Resistance, vol. 16, 2023, p. 7515-7545.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10715026/"
+    },
+    {
+      "text": "American Society for Microbiology, « Plasmids and the Spread of Antibiotic Resistance Genes », janvier 2023.",
+      "url": "https://asm.org/articles/2023/january/plasmids-and-the-spread-of-antibiotic-resistance-g"
+    },
+    {
+      "text": "M. A. Salam, M. Y. Al-Amin, M. T. Salam, J. S. Pawar et al., « Antimicrobial Resistance: A Growing Serious Threat for Global Public Health », Healthcare, vol. 11, n° 13, 2023, art. 1946.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10340576/"
+    },
+    {
+      "text": "Wikipedia, « Methicillin-resistant Staphylococcus aureus ».",
+      "url": "https://en.wikipedia.org/wiki/Methicillin-resistant_Staphylococcus_aureus"
+    },
+    {
+      "text": "S. Rugarabamu et G. Mwanyika, « Biotechnological Innovations to Combat Antimicrobial Resistance and Advance Global Health Equity », Bacteria, vol. 4, n° 3, 2025, art. 46.",
+      "url": "https://www.mdpi.com/2674-1334/4/3/46"
+    },
+    {
+      "text": "A. Nazir, A. Nazir, V. Zuhair, S. Aman et al., « The Global Challenge of Antimicrobial Resistance: Mechanisms, Case Studies, and Mitigation Approaches », Health Science Reports, vol. 8, n° 7, 2025, e71077.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12284435/"
+    },
+    {
+      "text": "ITN Business, « Antimicrobial resistance: understanding its global impact ».",
+      "url": "https://business.itn.co.uk/antimicrobial-resistance-understanding-its-global-impact/"
+    }
+  ]
+}
