@@ -117,7 +117,13 @@ Un fichier JSON par cours : `content/courses/fr/<course_id>.json`.
   "glossary": [                                      // optionnel (sinon glossaire global)
     { "term": "Hégire", "classification": "concept", "explanation": "…" }
   ],
-  "quiz": [ /* inchangé, format QuizQuestion existant */ ]
+  "quiz": [ /* inchangé, format QuizQuestion existant */ ],
+  // Cours écrits par un prof (voir §9) :
+  "author": "dusan-nikolic",                        // slug de content/authors.json
+  "sources": [                                       // références seules, langue d'origine, jamais traduites
+    { "text": "W. Thompson, « … », The French Review, 2000, p. 1130-1133." },
+    { "text": "Cleveland Clinic, « Hiccups ».", "url": "https://…" }
+  ]
 }
 ```
 
@@ -192,7 +198,58 @@ traduction automatique déforme sont listés dans `scripts/proper_nouns.json`.
 
 ---
 
+## 9. Cours écrits par des profs (auteur, sources, page prof)
+
+À partir de septembre 2026, des cours sont écrits par des enseignants et chercheurs
+(plateforme auteurs). Ils suivent la charte ci-dessus sans exception, plus les règles suivantes.
+
+**Données**
+- `content/authors.json` : une fiche par prof (`slug`, `name`, `photo`, `institution`,
+  `country`, `links`, `title` et `bio` par code langue). `title` est la ligne de pedigree
+  affichée sous le nom (« Docteure en sciences biomédicales, Boston University »).
+- Dans le cours : `"author": "<slug>"` et, s'il y en a, `"sources": [{ text, url? }]`.
+  Ces deux clés sont **structurelles** : copiées telles quelles dans toutes les langues
+  (`course_translation_io.STRUCTURAL_KEYS`). Les sources sont des références seules, dans
+  la langue de la publication citée, sans l'affirmation qu'elles appuient.
+- `scripts/build_courses.py` refuse un `author` inconnu et écrit
+  `ios/Sophia/Resources/authors.json`, où chaque prof porte les `courseIds` de ses cours.
+- `scripts/add_courses_to_catalog.py` inscrit un cours V2 dans les catalogues legacy
+  (`CourseData.swift`, `courses.<lang>.json`, maps de couverture, catalogue et glossaire FR
+  d'Android). C'est le passage obligé pour un cours **nouveau**.
+- Photos : `ios/Sophia/Resources/AuthorPhotos/<photo>.jpg`, 512 × 512, copiées dans
+  `android/app/src/main/assets/author_photos/` par l'export Android. Sans photo, initiales.
+
+**Rendu** (`CourseAuthorViews.swift`, `CourseAuthorUi.kt`)
+- Introduction (page gratuite) : **byline** sous le hook, « Par Prénom Nom · pedigree »,
+  cliquable.
+- Dernière section, après « À retenir » : **carte auteur** (portrait, nom, pedigree, bio
+  courte, bouton « Autres cours de ce prof ») puis **sources** repliées, sur le modèle du
+  « Le savais-tu ? », chaque référence avec son lien.
+- **Page prof** (`AuthorView.swift`, `AuthorScreen.kt`) : portrait, pedigree, institution,
+  bio, liste de ses cours avec l'état de lecture. Ouvrir un cours depuis cette page ferme le
+  lecteur et rouvre par la porte des liens profonds (source `author_page`), pour que les
+  règles freemium et l'attribution restent au même endroit.
+
+**Images** : le rédacteur nomme les images (slug anglais, `hero` + 1 par section environ)
+et liste ce qu'elles doivent montrer dans `docs/images-a-creer.md` ; les fichiers sont
+déposés ensuite sous ce nom. Tant qu'un fichier manque, l'app affiche le cadre gris avec
+le nom.
+
+**Rubriques ajoutées** pour ces cours : Histoire « Époque moderne & XIXe siècle »,
+Mythologie « Légendes & créatures ».
+
+---
+
 ## 7. Journal des itérations
+
+### Itération 7 (pilote profs, 27/09/2026)
+- Trois cours écrits par des profs, réécrits en français puis édités en anglais selon la
+  charte : « Pourquoi voulait-on démolir la tour Eiffel ? » (Dusan Nikolic, art),
+  « Pourquoi a-t-on le hoquet ? » (Stacy Jankowski, sciences), « Pourquoi a-t-on inventé
+  les vampires ? » (Angela Bouma, mythologie, rubrique « Légendes & créatures »).
+- Champs `author` et `sources`, fichier `content/authors.json`, byline, carte auteur,
+  sources repliées et page prof sur iOS et Android (§9). Images à créer listées dans
+  `docs/images-a-creer.md`. Pas encore de traduction au-delà de l'anglais.
 
 ### Itération 1 (retours sur le pilote)
 - Langage rendu **plus accessible** (moins de mots savants hors contexte), à longueur et sérieux constants.

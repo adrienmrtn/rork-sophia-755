@@ -16,8 +16,19 @@ struct BlockContentView: View {
     /// Glossary taps are surfaced to the enclosing `CourseView`, which shows the explanation
     /// as an in-app overlay (not a system sheet) so the course text never shifts.
     let onGlossaryTap: (GlossaryEntry) -> Void
+    /// Whether this is the course's last section: it then closes on the author card and the
+    /// sources, after the "À retenir" block.
+    var isLast: Bool = false
+    /// Tap on the byline or the author card (professor-authored courses only).
+    var onAuthorTap: ((CourseAuthor) -> Void)? = nil
 
     private static let ink = DS.ink
+
+    /// The professor behind the course, when the JSON names one that the bundle knows.
+    private var author: CourseAuthor? {
+        guard let slug = content.author else { return nil }
+        return AuthorStore.author(slug: slug)
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
@@ -25,6 +36,10 @@ struct BlockContentView: View {
 
             ForEach(Array(section.blocks.enumerated()), id: \.offset) { _, block in
                 blockView(block)
+            }
+
+            if isLast {
+                footer
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -39,11 +54,30 @@ struct BlockContentView: View {
                 subtitle: content.subtitle,
                 accent: accent
             )
+            if let author {
+                AuthorBylineV2(author: author) { tapped in
+                    onAuthorTap?(tapped)
+                }
+            }
         } else {
             Text(section.title)
                 .font(DS.title(.largeTitle, .semibold))
                 .foregroundStyle(Self.ink)
                 .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    /// Signature and references, only ever after the last block of the last section.
+    @ViewBuilder
+    private var footer: some View {
+        if let author {
+            AuthorCardV2(author: author) { tapped in
+                onAuthorTap?(tapped)
+            }
+            .padding(.top, 4)
+        }
+        if let sources = content.sources, !sources.isEmpty {
+            SourcesCardV2(sources: sources)
         }
     }
 

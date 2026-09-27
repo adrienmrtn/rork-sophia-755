@@ -30,7 +30,12 @@ FR_GLOSSARY_SWIFT = ROOT / "ios" / "Sophia" / "Services" / "GlossaryData.swift"
 GLOSSARY_RE = re.compile(r"\[\[(.+?)\]\]")
 
 #: Fields copied verbatim from the French skeleton, never translated.
-STRUCTURAL_KEYS = {"id", "subject", "subcategory", "type", "asset", "image", "ratio", "free"}
+STRUCTURAL_KEYS = {
+    "id", "subject", "subcategory", "type", "asset", "image", "ratio", "free",
+    # Professor-authored courses: the author slug and the bibliographic references are
+    # copied as they are (references stay in their original language).
+    "author", "sources",
+}
 
 
 def segments(course: dict) -> list[tuple[str, str]]:

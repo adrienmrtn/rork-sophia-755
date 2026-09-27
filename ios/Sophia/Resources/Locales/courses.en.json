@@ -34614,5 +34614,409 @@
         ]
       }
     ]
+  },
+  {
+    "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel",
+    "title": "Why did people want to tear down the Eiffel Tower?",
+    "description": "In 1887, the biggest names in French arts and letters demanded that work stop on a \"factory chimney.\" Twenty years later, nobody could picture Paris without it.",
+    "subject": "art",
+    "subcategory": "Cinema, photography & architecture",
+    "lessons": [
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_intro",
+        "title": "Introduction",
+        "content": "On **March 31, 1889**, Gustave Eiffel climbed to the top of his tower and raised the French flag. At **300 meters**, it was the tallest structure ever built by human hands. It had taken a little over two years, about **18,000 iron parts** and **2.5 million** rivets.\n\nToday it is the symbol of France. But in 1887, when work began on the <Champ de Mars>, part of Parisian high society cried scandal. Writers, painters and architects demanded that the project be abandoned. How did the most hated monument of its day become the most loved?"
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_p1",
+        "title": "A tower built to last twenty years",
+        "content": "In **1889**, France marked the centenary of the Revolution with the <1889 Universal Exhibition>, a great fair where every nation showed off its progress. To mark the entrance, the government launched a competition in **1886**: \"a tower of 300 meters.\" The plan submitted by the engineering firm of <Gustave Eiffel> beat about a hundred rival proposals.\n\nConstruction began on **January 28, 1887**. The contract was clear: Eiffel would run the tower for **20 years**, and then it would be dismantled. Nobody was building it for eternity. But some people did not even want to wait for the opening."
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_p2",
+        "title": "The artists' anger",
+        "content": "On **February 14, 1887**, the newspaper *Le Temps* published the <Artists' Protest>. Around fifty signatures: Guy de Maupassant, Charles Gounod, Alexandre Dumas fils, and Charles Garnier, the architect of the Opera. They denounced a \"useless and monstrous\" tower, a \"gigantic black factory chimney\" that would crush Notre-Dame and the Louvre.\n\nBehind the question of taste lay a question of class. The nineteenth-century <bourgeoisie> loved the old styles, the columns and pediments inherited from antiquity. A bare iron spire with no ornament had, in their eyes, \"no artistic merit.\" And the tower was unsettling in another way: during the six months of the Exhibition, nearly **2 million** visitors went up, workers and bourgeois mixed together in the same elevators. The protests were brushed aside."
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_p3",
+        "title": "Saved by science and radio",
+        "content": "The twenty years went by. In **1909**, the government had to decide: dismantle or keep. In the meantime, Eiffel had done everything he could to make his tower indispensable. He set up an office on the third floor, ran weather and astronomical observations there, and lent the summit to physicists for experiments on falling bodies and air resistance.\n\nThe decisive argument was military. From **1903**, <wireless telegraphy> antennas were strung from the top. During World War I, the tower's station jammed German communications and intercepted their messages. The \"factory chimney\" had become a strategic ear. Even the poets changed their minds: for Apollinaire, it was the \"shepherdess\" of the bridges of Paris, a symbol of a modern and optimistic future."
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_p4",
+        "title": "Paris can no longer be imagined without it",
+        "content": "Since 1889, about **300 million** people have climbed the tower. Today it welcomes nearly **7 million** visitors a year from all over the world. It no longer serves as a laboratory, but it still carries antennas: television, radio, air-quality monitoring.\n\nThe iron giant outlived its contract, its detractors and its lack of \"artistic merit.\" The critics wanted to protect Paris from the tower. A century later, it is the tower that stands for Paris in the eyes of the whole world."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q1",
+        "type": "mcq",
+        "question": "For which event was the Eiffel Tower built?",
+        "explanation": "The tower marked the entrance to the 1889 Universal Exhibition, held for the hundredth anniversary of the French Revolution.",
+        "options": [
+          "The 1889 Universal Exhibition, for the centenary of the Revolution",
+          "The opening of the Paris metro",
+          "The commemoration of the victory of 1870",
+          "The Paris Olympic Games"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q2",
+        "type": "numericSlider",
+        "question": "How tall was the Eiffel Tower when it opened in 1889?",
+        "explanation": "At 300 meters, the tower was in 1889 the tallest structure ever built by human hands.",
+        "correctValue": 300.0,
+        "sliderMin": 100.0,
+        "sliderMax": 500.0,
+        "tolerance": 20.0,
+        "unit": "m"
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q3",
+        "type": "chronological",
+        "question": "Put these milestones in the tower's history in order.",
+        "explanation": "Competition in 1886, work begins on January 28, 1887, protest on February 14, 1887, inauguration on March 31, 1889, permanent reprieve in 1909.",
+        "items": [
+          "The competition for \"a tower of 300 meters\"",
+          "Work begins on the Champ de Mars",
+          "The Artists' Protest in Le Temps",
+          "The inauguration of the tower",
+          "The government decides to keep the tower"
+        ]
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q4",
+        "type": "trueFalse",
+        "question": "True or false: the Eiffel Tower was supposed to be dismantled after twenty years.",
+        "explanation": "The contract gave Eiffel twenty years to run the tower, after which it was to be dismantled. The government gave up on that in 1909.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q5",
+        "type": "mcq",
+        "question": "How did the Artists' Protest of 1887 describe the tower?",
+        "explanation": "The signatories, including Maupassant and Garnier, denounced a \"useless and monstrous\" tower, a \"gigantic black factory chimney.\"",
+        "options": [
+          "A \"gigantic black factory chimney\"",
+          "An \"iron cathedral\"",
+          "A \"lighthouse for Europe\"",
+          "A \"toy for millionaires\""
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q6",
+        "type": "mcq",
+        "question": "Which argument mainly convinced the government to keep the tower in 1909?",
+        "explanation": "Eiffel had turned the tower into a place of scientific observation, and its wireless telegraphy antennas made it a military tool.",
+        "options": [
+          "Its scientific and military usefulness, especially wireless telegraphy",
+          "The number of foreign tourists",
+          "Pressure from artists who had become admirers",
+          "The excessive cost of dismantling it"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q7",
+        "type": "numericSlider",
+        "question": "How many visitors does the Eiffel Tower welcome each year today, in millions?",
+        "explanation": "Nearly 7 million people climb the tower every year, from all over the world.",
+        "correctValue": 7.0,
+        "sliderMin": 1.0,
+        "sliderMax": 15.0,
+        "tolerance": 1.0,
+        "unit": "million"
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q8",
+        "type": "mcq",
+        "question": "Which monument had Eiffel's firm worked on before the tower?",
+        "explanation": "Eiffel's workshops in Levallois-Perret designed the iron skeleton of the Statue of Liberty, presented to the United States in 1886.",
+        "options": [
+          "The iron framework of the Statue of Liberty",
+          "The dome of the Pantheon",
+          "The facade of the Opera Garnier",
+          "The Crystal Palace in London"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "course_242_pourquoi_a_t_on_le_hoquet",
+    "title": "Why do we get hiccups?",
+    "description": "A spasm of the diaphragm, a snapping glottis, and that \"hic\" you cannot control. What the body is really doing, and why no cure has ever been proven.",
+    "subject": "sciences",
+    "subcategory": "Our daily life explained",
+    "lessons": [
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+        "title": "Introduction",
+        "content": "Everyone gets hiccups, from newborns to grandfathers, and everyone knows a foolproof cure. The neighbor swears by a glass of water drunk upside down, grandma by a spoonful of sugar. Yet hiccups remain one of the most mysterious reflexes of the human body.\n\nBehind that little \"hic\" lies a precise piece of machinery: nerves, a muscle that contracts without warning, and a door that slams shut in the throat. Here is what medicine knows about it, and what it still does not."
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+        "title": "A reflex that bypasses the brain",
+        "content": "Hiccups travel along a <reflex arc>, a neural pathway that triggers a reaction without any conscious decision. It is the same mechanism that makes your leg jump when the doctor taps below your knee, or pulls your hand away from a hot stove before you have even felt the pain.\n\nWhen the nerves linking the brain to the breathing muscles are irritated, the <diaphragm> contracts all at once. Air rushes into the lungs. A fraction of a second later, the <glottis>, the opening between the vocal cords, snaps shut. That snap is what produces the \"hic.\""
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+        "title": "From the womb to old age",
+        "content": "Most hiccups are called **transient**: they last less than **48 hours** and go away on their own. Their triggers are ordinary: eating too fast, drinking carbonated drinks, swallowing air, or drinking alcohol. Anything that stretches the stomach or irritates the nearby nerves can set off the reflex.\n\nPeople get hiccups at any age, even before birth. Ultrasound scans show fetuses hiccupping in the womb. They are certainly not eating too fast. One hypothesis: these spasms may be training the breathing muscles, a dress rehearsal before the first gulp of air."
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+        "title": "When the hiccups will not stop",
+        "content": "Sometimes hiccups settle in. Beyond **two days**, doctors speak of **persistent** hiccups; beyond **a month**, of <intractable hiccups>. These rare forms often signal something else: a disease of the stomach or esophagus, a lung problem, or damage to the central nervous system.\n\nIn those cases, the doctor looks for the cause and prescribes a treatment, sometimes medication that calms the reflex circuit. The hiccups are then no longer a passing nuisance but a symptom, one that stops you from eating, sleeping and talking."
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+        "title": "Dozens of remedies, none proven",
+        "content": "For transient hiccups, the good news is that they go away by themselves. The less good news: no home remedy has ever been validated by a serious study. Holding your breath, drinking cold water, pulling on your tongue, breathing into a bag... All of it rests on anecdotes, not evidence.\n\nYet these tricks share a common logic: they disrupt the reflex circuit. Holding your breath raises the carbon dioxide in your blood and calms the diaphragm. Swallowing or pulling your tongue stimulates the nerves in the throat and may \"reset\" the circuit. Sometimes it works. Nobody really knows why."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q1",
+        "type": "mcq",
+        "question": "Which muscle contracts suddenly during a hiccup?",
+        "explanation": "A hiccup is an involuntary contraction of the diaphragm, the large breathing muscle below the lungs.",
+        "options": [
+          "The diaphragm",
+          "The heart",
+          "The tongue",
+          "The abdominal muscles"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q2",
+        "type": "mcq",
+        "question": "Where does the \"hic\" sound come from?",
+        "explanation": "Right after the diaphragm contracts, the glottis snaps shut: that snap is what produces the \"hic.\"",
+        "options": [
+          "The glottis snapping shut between the vocal cords",
+          "Air rushing back out of the lungs",
+          "A deliberate vibration of the vocal cords",
+          "A contraction of the stomach"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q3",
+        "type": "trueFalse",
+        "question": "True or false: a fetus can get hiccups in its mother's womb.",
+        "explanation": "Ultrasound scans show fetuses hiccupping, perhaps to train their breathing muscles before birth.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q4",
+        "type": "mcq",
+        "question": "What is a reflex arc?",
+        "explanation": "The reflex arc bypasses conscious decision: the signal travels to the spinal cord or brainstem, which answers at once.",
+        "options": [
+          "A neural circuit that triggers an automatic reaction, without any conscious decision",
+          "A curve of the diaphragm during inhalation",
+          "A reflex you can learn to control",
+          "An area of the brain devoted to breathing"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q5",
+        "type": "mcq",
+        "question": "Which of these is a common cause of passing hiccups?",
+        "explanation": "Eating too fast, drinking carbonated drinks, swallowing air or drinking alcohol stretches the stomach and irritates the nearby nerves.",
+        "options": [
+          "Eating too fast or drinking carbonated drinks",
+          "Sleeping on your left side",
+          "Reading in dim light",
+          "Walking barefoot"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q6",
+        "type": "numericSlider",
+        "question": "How many years did the longest known attack of hiccups last, according to Guinness World Records?",
+        "explanation": "Charles Osborne, an American farmer, hiccupped without a break from 1922 to 1990, 68 years.",
+        "correctValue": 68.0,
+        "sliderMin": 1.0,
+        "sliderMax": 100.0,
+        "tolerance": 5.0,
+        "unit": "years"
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q7",
+        "type": "trueFalse",
+        "question": "True or false: the effectiveness of home remedies for hiccups has been scientifically proven.",
+        "explanation": "No home remedy has been validated by a serious study. They rest on anecdotes, even though all of them aim to disrupt the reflex circuit.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q8",
+        "type": "mcq",
+        "question": "What are hiccups called when they last more than a month?",
+        "explanation": "Beyond two days, hiccups are called persistent; beyond a month, intractable. These rare forms often signal a disease.",
+        "options": [
+          "Intractable hiccups",
+          "Persistent hiccups",
+          "Transient hiccups",
+          "Nervous hiccups"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "course_243_pourquoi_a_t_on_invente_les_vampires",
+    "title": "Why did we invent vampires?",
+    "description": "Before it was an aristocrat in a cape, the vampire was a neighbor who died too soon and was blamed for taking his family with him. The story of a fear that found a name.",
+    "subject": "mythologie",
+    "subcategory": "Legends & creatures",
+    "lessons": [
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_intro",
+        "title": "Introduction",
+        "content": "In **1645**, a Greek scholar living in Rome, <Leo Allatius>, described a creature feared by the villagers of his homeland: the <vrykolakas>. A dead man who walks by night and comes back to torment his own family, because he was buried without the last rites. Only fire can destroy him.\n\nFor two centuries, epidemics and unexplained deaths within the same household kept the belief alive. Every new body buried without the proper rites risked becoming another one. How did this village panic turn into the vampire in evening dress of novels and films?"
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p1",
+        "title": "The dead man who asked for his shoes",
+        "content": "In **1725**, in the Serbian village of Kisiljevo, then under Austrian administration, a peasant named <Petar Blagojevic> died. Within days, nine neighbors died in turn. All of them, in their final hours, accused him of coming to smother them at night. His widow said he had come back to ask her for his shoes, and then she left the village.\n\nThe villagers dug up the body. They found it strangely intact: fresh skin, blood at the mouth, hair and nails that seemed to have grown. Proof enough. They drove a stake through his heart and burned the remains. An Austrian official watched the scene and wrote a report. The word \"vampire\" spread through the newspapers of Europe.\n\nWhat the villagers took for supernatural signs were the ordinary effects of decay. Gases produced by bacteria bloat the abdomen and the face, and force a dark fluid out of the mouth and nose that looks disturbingly like blood. The skin shrinks back and exposes the roots of the nails and hair, which seem longer."
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p2",
+        "title": "The disease behind the legend",
+        "content": "In nineteenth-century New England, a different fear took the same shape. <Tuberculosis>, then called \"consumption,\" made its victims waste away and cough for months. Contagious, it passed from one member of a family to the next. Seen from outside, a dead relative seemed to be coming back to drain the life from the survivors, one after another. It does not explain the older Balkan tradition: the two are separate, parallel beliefs, born in different times and places, but answering the same anxiety.\n\nIn **1892**, in Exeter, Rhode Island, <Mercy Brown> died of tuberculosis at 19, after her mother and sister. When her brother Edwin fell ill in turn, the neighbors exhumed all three bodies. Mercy's, buried in the depths of winter, was well preserved, and her heart still held blood. They burned it and gave the ashes to Edwin to drink, as a cure. He died two months later."
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p3",
+        "title": "The vampire becomes an aristocrat",
+        "content": "In **1819**, a young English doctor, <John Polidori>, published *The Vampyre*, the first sustained prose vampire story in English. The idea was born three years earlier, during the famous rainy summer on Lake Geneva when Mary Shelley dreamed up *Frankenstein*. His character, **Lord Ruthven**, has nothing left of the peasant risen from his grave: he is rich, mysterious, seductive, and hunts in the drawing rooms of London.\n\nThe story was reprinted, translated and adapted for the stage. The society vampire caught on among Gothic writers. In **1897**, <Bram Stoker> published *Dracula* and fixed the model for a century: the count, the castle, the fangs, the garlic and the crucifixes. Almost everything the cinema would make of it is already there."
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p4",
+        "title": "Fear wears many names",
+        "content": "Vampire traditions are not really about the supernatural. Before science could explain decay, contagion or sudden death, a community needed some way to make sense of what it saw. A returning corpse gives fear a shape and a name. And a culprit that can be burned.\n\nThe same mechanism produces the Greek vrykolakas, the Slavic *upyr*, the Chinese *jiangshi*: each one is a local answer to the same unanswered question. Werewolf legends follow the same pattern and fill the same gap, with transformation instead of blood."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q1",
+        "type": "mcq",
+        "question": "Who described the vrykolakas in 1645?",
+        "explanation": "Leo Allatius, a Greek scholar living in Rome, described the vrykolakas in 1645: a dead man who returns to torment his family.",
+        "options": [
+          "Leo Allatius, a Greek scholar",
+          "Bram Stoker, an Irish writer",
+          "John Polidori, an English doctor",
+          "Vlad the Impaler, a prince of Wallachia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q2",
+        "type": "mcq",
+        "question": "Why could an exhumed corpse look \"swollen with blood\"?",
+        "explanation": "Gases produced by bacteria bloat the abdomen and face, and force out of the mouth and nose a dark fluid that looks like blood.",
+        "options": [
+          "Gases from decay bloat the body and force a dark fluid out of the mouth",
+          "The dead man had really drunk blood",
+          "The cold of the grave keeps blood liquid",
+          "The villagers had embalmed him"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q3",
+        "type": "chronological",
+        "question": "Put these episodes in the history of vampires in order.",
+        "explanation": "1645, 1725, 1819, 1892, 1897: from village belief to the novel that fixed the modern vampire.",
+        "items": [
+          "Leo Allatius describes the vrykolakas",
+          "The Petar Blagojevic case in Serbia",
+          "Polidori publishes The Vampyre",
+          "Mercy Brown is exhumed in Exeter",
+          "Stoker publishes Dracula"
+        ]
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q4",
+        "type": "mcq",
+        "question": "Which disease fed the fear of vampires in nineteenth-century New England?",
+        "explanation": "Tuberculosis, or consumption, passes from one family member to the next: seen from outside, a dead relative seems to drain the life from the living.",
+        "options": [
+          "Tuberculosis",
+          "The plague",
+          "Rabies",
+          "Smallpox"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q5",
+        "type": "trueFalse",
+        "question": "True or false: Dracula is the first prose vampire story written in English.",
+        "explanation": "The first is John Polidori's The Vampyre, published in 1819. Bram Stoker's Dracula dates from 1897.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q6",
+        "type": "numericSlider",
+        "question": "In what year did Bram Stoker publish Dracula?",
+        "explanation": "Dracula came out in 1897 and fixed the image of the vampire for a century: the count, the castle, the fangs, the garlic and the crucifixes.",
+        "correctValue": 1897.0,
+        "sliderMin": 1800.0,
+        "sliderMax": 1950.0,
+        "tolerance": 5.0,
+        "unit": ""
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q7",
+        "type": "mcq",
+        "question": "What does Lord Ruthven, Polidori's character, change in the image of the vampire?",
+        "explanation": "With Lord Ruthven, the vampire leaves the peasant's grave to become rich, mysterious and worldly.",
+        "options": [
+          "He makes it a seductive aristocrat who hunts in London drawing rooms",
+          "He makes it an animal living in the forests",
+          "He makes it a bodiless ghost",
+          "He makes it a mad scientist"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q8",
+        "type": "mcq",
+        "question": "What do the vrykolakas, the upyr and the jiangshi have in common?",
+        "explanation": "Greece, the Slavic world, China: each culture invented a returning dead man to give the same anxiety a shape and a name.",
+        "options": [
+          "Each is a local answer to the same fear: unexplained death",
+          "They are three characters in the novel Dracula",
+          "They all come from the Balkans",
+          "They all turn into bats"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

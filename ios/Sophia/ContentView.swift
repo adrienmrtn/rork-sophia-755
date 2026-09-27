@@ -423,10 +423,13 @@ struct ContentView: View {
             router.discard()
             return
         }
+        let source = router.pendingSource
         _ = router.consume()
         selectedTab = 0
-        explicitCourseSource = "deep_link"
-        AnalyticsService.trackDeepLinkOpened(courseId: courseId)
+        explicitCourseSource = source
+        if source == "deep_link" {
+            AnalyticsService.trackDeepLinkOpened(courseId: courseId)
+        }
         selectedCourse = course
     }
 }

@@ -27246,5 +27246,316 @@
         ]
       }
     ]
+  },
+  {
+    "courseId": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel",
+    "quiz": [
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q1",
+        "type": "mcq",
+        "question": "For which event was the Eiffel Tower built?",
+        "explanation": "The tower marked the entrance to the 1889 Universal Exhibition, held for the hundredth anniversary of the French Revolution.",
+        "options": [
+          "The 1889 Universal Exhibition, for the centenary of the Revolution",
+          "The opening of the Paris metro",
+          "The commemoration of the victory of 1870",
+          "The Paris Olympic Games"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q2",
+        "type": "numericSlider",
+        "question": "How tall was the Eiffel Tower when it opened in 1889?",
+        "explanation": "At 300 meters, the tower was in 1889 the tallest structure ever built by human hands.",
+        "correctValue": 300.0,
+        "sliderMin": 100.0,
+        "sliderMax": 500.0,
+        "tolerance": 20.0,
+        "unit": "m"
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q3",
+        "type": "chronological",
+        "question": "Put these milestones in the tower's history in order.",
+        "explanation": "Competition in 1886, work begins on January 28, 1887, protest on February 14, 1887, inauguration on March 31, 1889, permanent reprieve in 1909.",
+        "items": [
+          "The competition for \"a tower of 300 meters\"",
+          "Work begins on the Champ de Mars",
+          "The Artists' Protest in Le Temps",
+          "The inauguration of the tower",
+          "The government decides to keep the tower"
+        ]
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q4",
+        "type": "trueFalse",
+        "question": "True or false: the Eiffel Tower was supposed to be dismantled after twenty years.",
+        "explanation": "The contract gave Eiffel twenty years to run the tower, after which it was to be dismantled. The government gave up on that in 1909.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q5",
+        "type": "mcq",
+        "question": "How did the Artists' Protest of 1887 describe the tower?",
+        "explanation": "The signatories, including Maupassant and Garnier, denounced a \"useless and monstrous\" tower, a \"gigantic black factory chimney.\"",
+        "options": [
+          "A \"gigantic black factory chimney\"",
+          "An \"iron cathedral\"",
+          "A \"lighthouse for Europe\"",
+          "A \"toy for millionaires\""
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q6",
+        "type": "mcq",
+        "question": "Which argument mainly convinced the government to keep the tower in 1909?",
+        "explanation": "Eiffel had turned the tower into a place of scientific observation, and its wireless telegraphy antennas made it a military tool.",
+        "options": [
+          "Its scientific and military usefulness, especially wireless telegraphy",
+          "The number of foreign tourists",
+          "Pressure from artists who had become admirers",
+          "The excessive cost of dismantling it"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q7",
+        "type": "numericSlider",
+        "question": "How many visitors does the Eiffel Tower welcome each year today, in millions?",
+        "explanation": "Nearly 7 million people climb the tower every year, from all over the world.",
+        "correctValue": 7.0,
+        "sliderMin": 1.0,
+        "sliderMax": 15.0,
+        "tolerance": 1.0,
+        "unit": "million"
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q8",
+        "type": "mcq",
+        "question": "Which monument had Eiffel's firm worked on before the tower?",
+        "explanation": "Eiffel's workshops in Levallois-Perret designed the iron skeleton of the Statue of Liberty, presented to the United States in 1886.",
+        "options": [
+          "The iron framework of the Statue of Liberty",
+          "The dome of the Pantheon",
+          "The facade of the Opera Garnier",
+          "The Crystal Palace in London"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "courseId": "course_242_pourquoi_a_t_on_le_hoquet",
+    "quiz": [
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q1",
+        "type": "mcq",
+        "question": "Which muscle contracts suddenly during a hiccup?",
+        "explanation": "A hiccup is an involuntary contraction of the diaphragm, the large breathing muscle below the lungs.",
+        "options": [
+          "The diaphragm",
+          "The heart",
+          "The tongue",
+          "The abdominal muscles"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q2",
+        "type": "mcq",
+        "question": "Where does the \"hic\" sound come from?",
+        "explanation": "Right after the diaphragm contracts, the glottis snaps shut: that snap is what produces the \"hic.\"",
+        "options": [
+          "The glottis snapping shut between the vocal cords",
+          "Air rushing back out of the lungs",
+          "A deliberate vibration of the vocal cords",
+          "A contraction of the stomach"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q3",
+        "type": "trueFalse",
+        "question": "True or false: a fetus can get hiccups in its mother's womb.",
+        "explanation": "Ultrasound scans show fetuses hiccupping, perhaps to train their breathing muscles before birth.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q4",
+        "type": "mcq",
+        "question": "What is a reflex arc?",
+        "explanation": "The reflex arc bypasses conscious decision: the signal travels to the spinal cord or brainstem, which answers at once.",
+        "options": [
+          "A neural circuit that triggers an automatic reaction, without any conscious decision",
+          "A curve of the diaphragm during inhalation",
+          "A reflex you can learn to control",
+          "An area of the brain devoted to breathing"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q5",
+        "type": "mcq",
+        "question": "Which of these is a common cause of passing hiccups?",
+        "explanation": "Eating too fast, drinking carbonated drinks, swallowing air or drinking alcohol stretches the stomach and irritates the nearby nerves.",
+        "options": [
+          "Eating too fast or drinking carbonated drinks",
+          "Sleeping on your left side",
+          "Reading in dim light",
+          "Walking barefoot"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q6",
+        "type": "numericSlider",
+        "question": "How many years did the longest known attack of hiccups last, according to Guinness World Records?",
+        "explanation": "Charles Osborne, an American farmer, hiccupped without a break from 1922 to 1990, 68 years.",
+        "correctValue": 68.0,
+        "sliderMin": 1.0,
+        "sliderMax": 100.0,
+        "tolerance": 5.0,
+        "unit": "years"
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q7",
+        "type": "trueFalse",
+        "question": "True or false: the effectiveness of home remedies for hiccups has been scientifically proven.",
+        "explanation": "No home remedy has been validated by a serious study. They rest on anecdotes, even though all of them aim to disrupt the reflex circuit.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q8",
+        "type": "mcq",
+        "question": "What are hiccups called when they last more than a month?",
+        "explanation": "Beyond two days, hiccups are called persistent; beyond a month, intractable. These rare forms often signal a disease.",
+        "options": [
+          "Intractable hiccups",
+          "Persistent hiccups",
+          "Transient hiccups",
+          "Nervous hiccups"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "courseId": "course_243_pourquoi_a_t_on_invente_les_vampires",
+    "quiz": [
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q1",
+        "type": "mcq",
+        "question": "Who described the vrykolakas in 1645?",
+        "explanation": "Leo Allatius, a Greek scholar living in Rome, described the vrykolakas in 1645: a dead man who returns to torment his family.",
+        "options": [
+          "Leo Allatius, a Greek scholar",
+          "Bram Stoker, an Irish writer",
+          "John Polidori, an English doctor",
+          "Vlad the Impaler, a prince of Wallachia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q2",
+        "type": "mcq",
+        "question": "Why could an exhumed corpse look \"swollen with blood\"?",
+        "explanation": "Gases produced by bacteria bloat the abdomen and face, and force out of the mouth and nose a dark fluid that looks like blood.",
+        "options": [
+          "Gases from decay bloat the body and force a dark fluid out of the mouth",
+          "The dead man had really drunk blood",
+          "The cold of the grave keeps blood liquid",
+          "The villagers had embalmed him"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q3",
+        "type": "chronological",
+        "question": "Put these episodes in the history of vampires in order.",
+        "explanation": "1645, 1725, 1819, 1892, 1897: from village belief to the novel that fixed the modern vampire.",
+        "items": [
+          "Leo Allatius describes the vrykolakas",
+          "The Petar Blagojevic case in Serbia",
+          "Polidori publishes The Vampyre",
+          "Mercy Brown is exhumed in Exeter",
+          "Stoker publishes Dracula"
+        ]
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q4",
+        "type": "mcq",
+        "question": "Which disease fed the fear of vampires in nineteenth-century New England?",
+        "explanation": "Tuberculosis, or consumption, passes from one family member to the next: seen from outside, a dead relative seems to drain the life from the living.",
+        "options": [
+          "Tuberculosis",
+          "The plague",
+          "Rabies",
+          "Smallpox"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q5",
+        "type": "trueFalse",
+        "question": "True or false: Dracula is the first prose vampire story written in English.",
+        "explanation": "The first is John Polidori's The Vampyre, published in 1819. Bram Stoker's Dracula dates from 1897.",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q6",
+        "type": "numericSlider",
+        "question": "In what year did Bram Stoker publish Dracula?",
+        "explanation": "Dracula came out in 1897 and fixed the image of the vampire for a century: the count, the castle, the fangs, the garlic and the crucifixes.",
+        "correctValue": 1897.0,
+        "sliderMin": 1800.0,
+        "sliderMax": 1950.0,
+        "tolerance": 5.0,
+        "unit": ""
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q7",
+        "type": "mcq",
+        "question": "What does Lord Ruthven, Polidori's character, change in the image of the vampire?",
+        "explanation": "With Lord Ruthven, the vampire leaves the peasant's grave to become rich, mysterious and worldly.",
+        "options": [
+          "He makes it a seductive aristocrat who hunts in London drawing rooms",
+          "He makes it an animal living in the forests",
+          "He makes it a bodiless ghost",
+          "He makes it a mad scientist"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q8",
+        "type": "mcq",
+        "question": "What do the vrykolakas, the upyr and the jiangshi have in common?",
+        "explanation": "Greece, the Slavic world, China: each culture invented a returning dead man to give the same anxiety a shape and a name.",
+        "options": [
+          "Each is a local answer to the same fear: unexplained death",
+          "They are three characters in the novel Dracula",
+          "They all come from the Balkans",
+          "They all turn into bats"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]
