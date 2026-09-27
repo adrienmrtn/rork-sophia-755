@@ -1,0 +1,135 @@
+{
+  "id": "course_242_pourquoi_a_t_on_le_hoquet",
+  "title": "Pourquoi a-t-on le hoquet ?",
+  "subtitle": "Réflexes & respiration",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Un spasme du diaphragme, une glotte qui claque, et ce « hic » impossible à contrôler. Ce que le corps fabrique vraiment, et pourquoi aucun remède n'est prouvé.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "child_hiccups_surprised_hand_over_mouth",
+    "ratio": "16:9",
+    "hook": "On te dit de retenir ton souffle, de boire la tête en bas ou de te faire peur. Mais que se passe-t-il vraiment dans ton corps ?"
+  },
+  "sections": [
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tout le monde a le hoquet, du nourrisson au grand-père, et chacun connaît un remède infaillible. Le voisin jure par le verre d'eau bu à l'envers, la grand-mère par la cuillère de sucre. Pourtant, le hoquet reste l'un des réflexes les plus mystérieux du corps humain."
+        },
+        {
+          "type": "paragraph",
+          "text": "Derrière ce petit « hic » se cache une mécanique précise : des nerfs, un muscle qui se contracte sans prévenir, et une porte qui claque dans la gorge. Voici ce que la médecine en sait, et ce qu'elle ignore encore."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+      "title": "Un réflexe qui court-circuite le cerveau",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le hoquet passe par un [[arc réflexe]], un circuit nerveux qui déclenche une réaction sans décision consciente. C'est le même mécanisme qui fait bondir ta jambe quand le médecin tape sous le genou, ou qui retire ta main d'une plaque brûlante avant même que tu aies senti la douleur."
+        },
+        {
+          "type": "image",
+          "asset": "diaphragm_lungs_glottis_anatomy_diagram",
+          "ratio": "4:3",
+          "caption": "Le diaphragme, sous les poumons, et la glotte, dans la gorge : les deux acteurs du hoquet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quand les nerfs qui relient le cerveau aux muscles respiratoires sont irrités, le [[diaphragme]] se contracte d'un coup. L'air s'engouffre dans les poumons. Une fraction de seconde plus tard, la [[glotte]], l'ouverture entre les cordes vocales, se referme brutalement. C'est ce claquement qui produit le « hic »."
+        },
+        {
+          "type": "funFact",
+          "text": "Le nom scientifique du hoquet est *singultus*, un mot latin qui désigne aussi le sanglot. Le hoquet qui secoue les enfants après une grosse crise de larmes n'a donc rien d'étonnant."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+      "title": "Du fœtus au grand-père",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La plupart des hoquets sont dits **transitoires** : ils durent moins de **48 heures** et partent tout seuls. Leurs déclencheurs sont banals : manger trop vite, boire des boissons gazeuses, avaler de l'air, ou boire de l'alcool. Tout ce qui distend l'estomac ou irrite les nerfs du voisinage peut lancer le réflexe."
+        },
+        {
+          "type": "image",
+          "asset": "fetal_ultrasound_scan_pregnancy",
+          "ratio": "4:3",
+          "caption": "À l'échographie, on voit déjà le fœtus avoir le hoquet, bien avant sa première respiration."
+        },
+        {
+          "type": "paragraph",
+          "text": "On a le hoquet à tout âge, et même avant la naissance. Les échographies montrent des fœtus pris de hoquet dans le ventre de leur mère. Ils ne mangent pourtant pas trop vite. Une hypothèse : ces spasmes entraîneraient les muscles respiratoires, une répétition générale avant la première bouffée d'air."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+      "title": "Quand le hoquet ne s'arrête plus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il arrive que le hoquet s'installe. Au-delà de **deux jours**, on parle de hoquet **persistant** ; au-delà d'**un mois**, de [[hoquet réfractaire]]. Ces formes rares signalent souvent autre chose : une maladie de l'estomac ou de l'œsophage, un problème pulmonaire, ou une atteinte du système nerveux central."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dans ces cas, le médecin cherche la cause et prescrit un traitement, parfois des médicaments qui calment le circuit réflexe. Le hoquet n'est alors plus une gêne passagère mais un symptôme, qui empêche de manger, de dormir et de parler."
+        },
+        {
+          "type": "funFact",
+          "text": "Le record du hoquet le plus long est détenu par un fermier américain, [[Charles Osborne]], qui a hoqueté sans interruption de **1922 à 1990**, soit 68 ans, selon le Guinness des records. Il a tout de même eu le temps de se marier deux fois et d'avoir huit enfants."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+      "title": "Des remèdes par dizaines, aucun prouvé",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pour un hoquet transitoire, la bonne nouvelle est qu'il disparaît seul. La moins bonne : aucun remède de grand-mère n'a été validé par une étude sérieuse. Retenir son souffle, boire de l'eau froide, tirer sur sa langue, respirer dans un sac... Tout cela repose sur des témoignages, pas sur des preuves."
+        },
+        {
+          "type": "image",
+          "asset": "glass_of_cold_water_home_remedy_hiccups",
+          "ratio": "1:1",
+          "caption": "Le verre d'eau froide : le plus répandu des remèdes, et l'un des moins étudiés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces astuces ont pourtant une logique commune : elles perturbent le circuit réflexe. Retenir sa respiration augmente le gaz carbonique dans le sang et calme le diaphragme. Avaler ou tirer la langue stimule les nerfs de la gorge et peut « réinitialiser » le circuit. Cela marche parfois. Sans qu'on sache vraiment pourquoi."
+        },
+        {
+          "type": "takeaway",
+          "text": "Le hoquet est un réflexe : le diaphragme se contracte, la glotte se ferme, « hic ». Passager dans presque tous les cas, il devient un symptôme au-delà de 48 heures. Aucun remède maison n'est prouvé, même si tous visent à casser le circuit."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Alimentary Pharmacology & Therapeutics (Wiley), revue sur la physiopathologie et le traitement du hoquet.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.13374"
+    },
+    {
+      "text": "Cleveland Clinic, « Hiccups ».",
+      "url": "https://my.clevelandclinic.org/health/diseases/17672-hiccups"
+    },
+    {
+      "text": "Guinness World Records, « Longest attack of hiccups ».",
+      "url": "https://www.guinnessworldrecords.com/world-records/67619-longest-attack-of-hiccups"
+    }
+  ]
+}

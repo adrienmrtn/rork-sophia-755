@@ -10,6 +10,7 @@ Writes:
   android/app/src/main/assets/courses_v2/{lang}/{courseId}.json
   android/app/src/main/assets/strings/{lang}.json   (every app language, from AppLocalizable)
   android/app/src/main/assets/locales/courses.fr.json (+ collections/glossary) from Swift when present
+  android/app/src/main/assets/authors.json + author_photos/*.jpg   (course authors, from iOS Resources)
 
 Course catalogs are slimmed after copy (no lesson bodies; lesson text lives in courses_v2).
 """
@@ -37,6 +38,9 @@ ANDROID_ASSETS = ROOT / "android" / "app" / "src" / "main" / "assets"
 ANDROID_LOCALES = ANDROID_ASSETS / "locales"
 ANDROID_STRINGS = ANDROID_ASSETS / "strings"
 ANDROID_COURSES_V2 = ANDROID_ASSETS / "courses_v2"
+IOS_AUTHORS = ROOT / "ios" / "Sophia" / "Resources" / "authors.json"
+IOS_AUTHOR_PHOTOS = ROOT / "ios" / "Sophia" / "Resources" / "AuthorPhotos"
+ANDROID_AUTHOR_PHOTOS = ANDROID_ASSETS / "author_photos"
 
 # Full app language set — the canonical list, so a new locale is added once.
 ALL_LANGS = list(ALL_CONTENT_LANGS)
@@ -231,6 +235,27 @@ def export_ui_strings(ref: str | None) -> list[str]:
     return written
 
 
+def export_authors() -> int:
+    """Copy the bundled authors file and the professor portraits into the APK assets.
+
+    ``authors.json`` is written by ``scripts/build_courses.py`` from ``content/authors.json``;
+    the portraits are the 512 px JPEGs iOS ships. Both are small, so they travel in the
+    APK rather than through Supabase like the course images.
+    """
+    if not IOS_AUTHORS.is_file():
+        print("  skip authors (no ios/Sophia/Resources/authors.json)")
+        return 0
+    (ANDROID_ASSETS / "authors.json").write_bytes(IOS_AUTHORS.read_bytes())
+    copied = 0
+    if IOS_AUTHOR_PHOTOS.is_dir():
+        ANDROID_AUTHOR_PHOTOS.mkdir(parents=True, exist_ok=True)
+        for photo in sorted(IOS_AUTHOR_PHOTOS.glob("*.jpg")):
+            (ANDROID_AUTHOR_PHOTOS / photo.name).write_bytes(photo.read_bytes())
+            copied += 1
+    print(f"  authors.json + {copied} portrait(s)")
+    return copied
+
+
 def sync_fr_catalog_quizzes() -> None:
     """iOS has no courses.fr.json; FR quizzes live in content/locales/fr/quizzes_v2.json."""
     v2_path = CONTENT_LOCALES / "fr" / "quizzes_v2.json"
@@ -290,6 +315,9 @@ def main() -> int:
     print(f"Exporting UI strings from AppLocalizable ({len(ALL_LANGS)} langs)…")
     strings = export_ui_strings(ref)
     print(f"  wrote {len(strings)} string packs")
+
+    print("Exporting course authors…")
+    export_authors()
 
     v2_counts: dict[str, int] = {}
     if not args.skip_courses_v2:

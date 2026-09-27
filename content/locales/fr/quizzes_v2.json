@@ -27246,5 +27246,316 @@
         ]
       }
     ]
+  },
+  {
+    "courseId": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel",
+    "quiz": [
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q1",
+        "type": "mcq",
+        "question": "Pour quel événement la tour Eiffel a-t-elle été construite ?",
+        "explanation": "La tour marque l'entrée de l'Exposition universelle de 1889, organisée pour les cent ans de la Révolution française.",
+        "options": [
+          "L'Exposition universelle de 1889, pour le centenaire de la Révolution",
+          "L'inauguration du métro parisien",
+          "La commémoration de la victoire de 1870",
+          "Les Jeux olympiques de Paris"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q2",
+        "type": "numericSlider",
+        "question": "Quelle était la hauteur de la tour Eiffel à son inauguration en 1889 ?",
+        "explanation": "Avec ses 300 mètres, la tour était en 1889 la plus haute construction jamais élevée par l'homme.",
+        "correctValue": 300.0,
+        "sliderMin": 100.0,
+        "sliderMax": 500.0,
+        "tolerance": 20.0,
+        "unit": "m"
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q3",
+        "type": "chronological",
+        "question": "Remets ces étapes de l'histoire de la tour dans l'ordre.",
+        "explanation": "Concours en 1886, début du chantier le 28 janvier 1887, protestation le 14 février 1887, inauguration le 31 mars 1889, sursis définitif en 1909.",
+        "items": [
+          "Le concours « une tour de 300 mètres »",
+          "Le premier coup de pioche au Champ-de-Mars",
+          "La Protestation des artistes dans Le Temps",
+          "L'inauguration de la tour",
+          "La décision de l'État de garder la tour"
+        ]
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q4",
+        "type": "trueFalse",
+        "question": "Vrai ou faux : la tour Eiffel devait être démontée au bout de vingt ans.",
+        "explanation": "Le contrat accordait à Eiffel vingt ans d'exploitation, après quoi la tour devait être démontée. L'État y a renoncé en 1909.",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q5",
+        "type": "mcq",
+        "question": "Comment la Protestation des artistes de 1887 qualifiait-elle la tour ?",
+        "explanation": "Les signataires, dont Maupassant et Garnier, dénonçaient une tour « inutile et monstrueuse », une « gigantesque et noire cheminée d'usine ».",
+        "options": [
+          "Une « gigantesque et noire cheminée d'usine »",
+          "Une « cathédrale de fer »",
+          "Un « phare pour l'Europe »",
+          "Un « jouet pour millionnaires »"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q6",
+        "type": "mcq",
+        "question": "Quel argument a surtout convaincu l'État de garder la tour en 1909 ?",
+        "explanation": "Eiffel avait fait de la tour un lieu d'observations scientifiques, et ses antennes de télégraphie sans fil en faisaient un outil militaire.",
+        "options": [
+          "Son utilité scientifique et militaire, notamment la télégraphie sans fil",
+          "Le nombre de touristes étrangers",
+          "La pression des artistes devenus admirateurs",
+          "Le coût trop élevé du démontage"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q7",
+        "type": "numericSlider",
+        "question": "Combien de visiteurs la tour Eiffel accueille-t-elle chaque année aujourd'hui, en millions ?",
+        "explanation": "Près de 7 millions de personnes montent chaque année sur la tour, venues du monde entier.",
+        "correctValue": 7.0,
+        "sliderMin": 1.0,
+        "sliderMax": 15.0,
+        "tolerance": 1.0,
+        "unit": "millions"
+      },
+      {
+        "id": "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel_q8",
+        "type": "mcq",
+        "question": "Sur quel monument l'entreprise Eiffel avait-elle travaillé avant la tour ?",
+        "explanation": "Les ateliers Eiffel de Levallois-Perret ont conçu le squelette de fer de la statue de la Liberté, offerte aux États-Unis en 1886.",
+        "options": [
+          "L'ossature métallique de la statue de la Liberté",
+          "La coupole du Panthéon",
+          "La façade de l'Opéra Garnier",
+          "Le Crystal Palace de Londres"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "courseId": "course_242_pourquoi_a_t_on_le_hoquet",
+    "quiz": [
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q1",
+        "type": "mcq",
+        "question": "Quel muscle se contracte brusquement lors d'un hoquet ?",
+        "explanation": "Le hoquet est une contraction involontaire du diaphragme, le grand muscle de la respiration situé sous les poumons.",
+        "options": [
+          "Le diaphragme",
+          "Le cœur",
+          "La langue",
+          "Les abdominaux"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q2",
+        "type": "mcq",
+        "question": "D'où vient le bruit du « hic » ?",
+        "explanation": "Juste après la contraction du diaphragme, la glotte se referme d'un coup : c'est ce claquement qui produit le « hic ».",
+        "options": [
+          "De la fermeture brutale de la glotte entre les cordes vocales",
+          "De l'air qui ressort des poumons",
+          "D'une vibration volontaire des cordes vocales",
+          "D'une contraction de l'estomac"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q3",
+        "type": "trueFalse",
+        "question": "Vrai ou faux : un fœtus peut avoir le hoquet dans le ventre de sa mère.",
+        "explanation": "Les échographies montrent des fœtus pris de hoquet, peut-être pour entraîner leurs muscles respiratoires avant la naissance.",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q4",
+        "type": "mcq",
+        "question": "Qu'est-ce qu'un arc réflexe ?",
+        "explanation": "L'arc réflexe court-circuite la décision consciente : le signal remonte vers la moelle épinière ou le tronc cérébral, qui répond aussitôt.",
+        "options": [
+          "Un circuit nerveux qui déclenche une réaction automatique, sans décision consciente",
+          "Une courbure du diaphragme pendant l'inspiration",
+          "Un réflexe que l'on peut apprendre à contrôler",
+          "Une zone du cerveau dédiée à la respiration"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q5",
+        "type": "mcq",
+        "question": "Lequel de ces gestes est une cause courante de hoquet passager ?",
+        "explanation": "Manger trop vite, boire des boissons gazeuses, avaler de l'air ou boire de l'alcool distend l'estomac et irrite les nerfs voisins.",
+        "options": [
+          "Manger trop vite ou boire des boissons gazeuses",
+          "Dormir sur le côté gauche",
+          "Lire dans la pénombre",
+          "Marcher pieds nus"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q6",
+        "type": "numericSlider",
+        "question": "Combien d'années a duré la plus longue crise de hoquet connue, selon le Guinness des records ?",
+        "explanation": "Charles Osborne, fermier américain, a eu le hoquet sans interruption de 1922 à 1990, soit 68 ans.",
+        "correctValue": 68.0,
+        "sliderMin": 1.0,
+        "sliderMax": 100.0,
+        "tolerance": 5.0,
+        "unit": "ans"
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q7",
+        "type": "trueFalse",
+        "question": "Vrai ou faux : l'efficacité des remèdes de grand-mère contre le hoquet a été prouvée scientifiquement.",
+        "explanation": "Aucun remède maison n'a été validé par une étude sérieuse. Ils reposent sur des témoignages, même si tous visent à perturber le circuit réflexe.",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_242_pourquoi_a_t_on_le_hoquet_q8",
+        "type": "mcq",
+        "question": "Comment appelle-t-on un hoquet qui dure plus d'un mois ?",
+        "explanation": "Au-delà de deux jours, le hoquet est dit persistant ; au-delà d'un mois, réfractaire. Ces formes rares signalent souvent une maladie.",
+        "options": [
+          "Un hoquet réfractaire",
+          "Un hoquet persistant",
+          "Un hoquet transitoire",
+          "Un hoquet nerveux"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "courseId": "course_243_pourquoi_a_t_on_invente_les_vampires",
+    "quiz": [
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q1",
+        "type": "mcq",
+        "question": "Qui décrit le vrykolakas en 1645 ?",
+        "explanation": "Leo Allatius, érudit grec installé à Rome, décrit en 1645 le vrykolakas, mort qui revient tourmenter sa famille.",
+        "options": [
+          "Leo Allatius, un érudit grec",
+          "Bram Stoker, un écrivain irlandais",
+          "John Polidori, un médecin anglais",
+          "Vlad l'Empaleur, un prince de Valachie"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q2",
+        "type": "mcq",
+        "question": "Pourquoi un cadavre exhumé pouvait-il paraître « gonflé de sang » ?",
+        "explanation": "Les gaz produits par les bactéries gonflent l'abdomen et le visage, et font sortir par la bouche et le nez un liquide sombre qui ressemble à du sang.",
+        "options": [
+          "Les gaz de décomposition gonflent le corps et poussent un liquide sombre par la bouche",
+          "Le mort avait réellement bu du sang",
+          "Le froid de la tombe conserve le sang liquide",
+          "Les villageois l'avaient embaumé"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q3",
+        "type": "chronological",
+        "question": "Remets ces épisodes de l'histoire des vampires dans l'ordre.",
+        "explanation": "1645, 1725, 1819, 1892, 1897 : de la croyance villageoise au roman qui fixe le vampire moderne.",
+        "items": [
+          "Leo Allatius décrit le vrykolakas",
+          "L'affaire Petar Blagojević en Serbie",
+          "Polidori publie Le Vampire",
+          "Mercy Brown est exhumée à Exeter",
+          "Stoker publie Dracula"
+        ]
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q4",
+        "type": "mcq",
+        "question": "Quelle maladie a nourri la peur des vampires en Nouvelle-Angleterre au XIXe siècle ?",
+        "explanation": "La tuberculose, ou consomption, passe d'un membre de la famille à l'autre : vu de l'extérieur, un mort semble vider ses proches de leur vie.",
+        "options": [
+          "La tuberculose",
+          "La peste",
+          "La rage",
+          "La variole"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q5",
+        "type": "trueFalse",
+        "question": "Vrai ou faux : Dracula est le premier récit de vampire en prose écrit en anglais.",
+        "explanation": "Le premier est Le Vampire de John Polidori, publié en 1819. Dracula de Bram Stoker date de 1897.",
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q6",
+        "type": "numericSlider",
+        "question": "En quelle année Bram Stoker publie-t-il Dracula ?",
+        "explanation": "Dracula paraît en 1897 et fixe pour un siècle l'image du vampire : le comte, le château, les canines, l'ail et les crucifix.",
+        "correctValue": 1897.0,
+        "sliderMin": 1800.0,
+        "sliderMax": 1950.0,
+        "tolerance": 5.0,
+        "unit": ""
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q7",
+        "type": "mcq",
+        "question": "Que change Lord Ruthven, le personnage de Polidori, dans l'image du vampire ?",
+        "explanation": "Avec Lord Ruthven, le vampire quitte la tombe du paysan pour devenir riche, mystérieux et mondain.",
+        "options": [
+          "Il en fait un aristocrate séduisant qui chasse dans les salons de Londres",
+          "Il en fait un animal qui vit dans les forêts",
+          "Il en fait un fantôme sans corps",
+          "Il en fait un savant fou"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_243_pourquoi_a_t_on_invente_les_vampires_q8",
+        "type": "mcq",
+        "question": "Quel est le point commun entre le vrykolakas, l'upyr et le jiangshi ?",
+        "explanation": "Grèce, monde slave, Chine : chaque culture a inventé un mort qui revient pour donner une forme et un nom à la même angoisse.",
+        "options": [
+          "Chacun est la réponse locale à une même peur : la mort inexpliquée",
+          "Ce sont trois personnages du roman Dracula",
+          "Ils viennent tous des Balkans",
+          "Ils se transforment tous en chauve-souris"
+        ],
+        "correctIndex": 0
+      }
+    ]
   }
 ]

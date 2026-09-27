@@ -73,6 +73,10 @@ def main() -> int:
         cat_q = by_id(cat)
         v2_q = by_id(v2)
         for cid, fr_quiz in fr.items():
+            # A course with no edition in this language (content/courses/<lang>/<id>.json)
+            # is not in its catalog either, by design: nothing to compare yet.
+            if not (ROOT / "content" / "courses" / lang / f"{cid}.json").is_file():
+                continue
             for source, label in ((cat_q, "catalog"), (v2_q, "v2")):
                 got = source.get(cid)
                 if got is None:

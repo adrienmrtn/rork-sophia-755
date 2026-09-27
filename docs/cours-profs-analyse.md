@@ -202,3 +202,25 @@ description de carte, la sous-catégorie, 3 à 8 termes de glossaire et leurs fi
 « À retenir » par cours, le placement des anecdotes, les images (hero + 1 à 2 par cours, soit
 environ 250 images à sourcer et créditer ; aucune fournie), un quiz si on en veut un, les
 sources normalisées, puis les 25 traductions.
+
+---
+
+## 7. Pilote livré le 27/09 (3 cours)
+
+Décisions prises : les six recoupements remplacent les cours existants (le premier de chaque
+paire de doublons remplace, le second devient un cours neuf) ; quiz écrits par nos soins ;
+sources affichées en référence seule ; deux rubriques créées (« Époque moderne & XIXe
+siècle », « Légendes & créatures ») ; les cours des deux auteurs non signataires attendent.
+
+Cours pilotes : `course_241` tour Eiffel (Dusan Nikolic), `course_242` hoquet (Stacy
+Jankowski), `course_243` vampires (Angela Bouma). Pour chacun : JSON V2 en français et en
+anglais, glossaire FR et EN, quiz de 8 questions FR et EN, entrée dans `CourseData.swift` et
+`courses.en.json`, bundles iOS et Android, couverture, auteur et sources. Le modèle auteur et
+son rendu (byline, carte, sources, page prof) sont décrits au §9 de `content/CHARTE_REFONTE.md`.
+Les 12 images à fournir sont dans `docs/images-a-creer.md`.
+
+Reste à faire pour généraliser : traduire les trois cours dans les 24 autres langues (chaîne
+`make_translation_briefs.py` → `apply_translation_briefs.py` → `check_course_translation.py`,
+puis `add_courses_to_catalog.py`), compiler et tester iOS et Android (aucune compilation
+possible dans l'environnement de rédaction), puis dérouler la même chaîne sur les 82 autres
+cours une fois le format validé.

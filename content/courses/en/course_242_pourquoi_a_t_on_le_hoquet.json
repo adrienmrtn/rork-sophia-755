@@ -1,0 +1,135 @@
+{
+  "id": "course_242_pourquoi_a_t_on_le_hoquet",
+  "title": "Why do we get hiccups?",
+  "subtitle": "Reflexes & breathing",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "A spasm of the diaphragm, a snapping glottis, and that \"hic\" you cannot control. What the body is really doing, and why no cure has ever been proven.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "child_hiccups_surprised_hand_over_mouth",
+    "ratio": "16:9",
+    "hook": "You are told to hold your breath, drink upside down or have someone scare you. But what is really happening inside your body?"
+  },
+  "sections": [
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Everyone gets hiccups, from newborns to grandfathers, and everyone knows a foolproof cure. The neighbor swears by a glass of water drunk upside down, grandma by a spoonful of sugar. Yet hiccups remain one of the most mysterious reflexes of the human body."
+        },
+        {
+          "type": "paragraph",
+          "text": "Behind that little \"hic\" lies a precise piece of machinery: nerves, a muscle that contracts without warning, and a door that slams shut in the throat. Here is what medicine knows about it, and what it still does not."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+      "title": "A reflex that bypasses the brain",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hiccups travel along a [[reflex arc]], a neural pathway that triggers a reaction without any conscious decision. It is the same mechanism that makes your leg jump when the doctor taps below your knee, or pulls your hand away from a hot stove before you have even felt the pain."
+        },
+        {
+          "type": "image",
+          "asset": "diaphragm_lungs_glottis_anatomy_diagram",
+          "ratio": "4:3",
+          "caption": "The diaphragm, below the lungs, and the glottis, in the throat: the two actors in a hiccup."
+        },
+        {
+          "type": "paragraph",
+          "text": "When the nerves linking the brain to the breathing muscles are irritated, the [[diaphragm]] contracts all at once. Air rushes into the lungs. A fraction of a second later, the [[glottis]], the opening between the vocal cords, snaps shut. That snap is what produces the \"hic.\""
+        },
+        {
+          "type": "funFact",
+          "text": "The scientific name for hiccups is *singultus*, a Latin word that also means a sob. The hiccups that shake children after a long bout of crying are no surprise at all."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+      "title": "From the womb to old age",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Most hiccups are called **transient**: they last less than **48 hours** and go away on their own. Their triggers are ordinary: eating too fast, drinking carbonated drinks, swallowing air, or drinking alcohol. Anything that stretches the stomach or irritates the nearby nerves can set off the reflex."
+        },
+        {
+          "type": "image",
+          "asset": "fetal_ultrasound_scan_pregnancy",
+          "ratio": "4:3",
+          "caption": "On an ultrasound, a fetus can already be seen hiccupping, long before its first breath."
+        },
+        {
+          "type": "paragraph",
+          "text": "People get hiccups at any age, even before birth. Ultrasound scans show fetuses hiccupping in the womb. They are certainly not eating too fast. One hypothesis: these spasms may be training the breathing muscles, a dress rehearsal before the first gulp of air."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+      "title": "When the hiccups will not stop",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sometimes hiccups settle in. Beyond **two days**, doctors speak of **persistent** hiccups; beyond **a month**, of [[intractable hiccups]]. These rare forms often signal something else: a disease of the stomach or esophagus, a lung problem, or damage to the central nervous system."
+        },
+        {
+          "type": "paragraph",
+          "text": "In those cases, the doctor looks for the cause and prescribes a treatment, sometimes medication that calms the reflex circuit. The hiccups are then no longer a passing nuisance but a symptom, one that stops you from eating, sleeping and talking."
+        },
+        {
+          "type": "funFact",
+          "text": "The record for the longest attack of hiccups belongs to an American farmer, [[Charles Osborne]], who hiccupped without a break from **1922 to 1990**, 68 years, according to Guinness World Records. He still found time to marry twice and have eight children."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+      "title": "Dozens of remedies, none proven",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For transient hiccups, the good news is that they go away by themselves. The less good news: no home remedy has ever been validated by a serious study. Holding your breath, drinking cold water, pulling on your tongue, breathing into a bag... All of it rests on anecdotes, not evidence."
+        },
+        {
+          "type": "image",
+          "asset": "glass_of_cold_water_home_remedy_hiccups",
+          "ratio": "1:1",
+          "caption": "A glass of cold water: the most common remedy, and one of the least studied."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yet these tricks share a common logic: they disrupt the reflex circuit. Holding your breath raises the carbon dioxide in your blood and calms the diaphragm. Swallowing or pulling your tongue stimulates the nerves in the throat and may \"reset\" the circuit. Sometimes it works. Nobody really knows why."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hiccups are a reflex: the diaphragm contracts, the glottis closes, \"hic.\" Passing in almost every case, they become a symptom beyond 48 hours. No home remedy is proven, even though all of them aim to break the circuit."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Alimentary Pharmacology & Therapeutics (Wiley), revue sur la physiopathologie et le traitement du hoquet.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.13374"
+    },
+    {
+      "text": "Cleveland Clinic, « Hiccups ».",
+      "url": "https://my.clevelandclinic.org/health/diseases/17672-hiccups"
+    },
+    {
+      "text": "Guinness World Records, « Longest attack of hiccups ».",
+      "url": "https://www.guinnessworldrecords.com/world-records/67619-longest-attack-of-hiccups"
+    }
+  ]
+}

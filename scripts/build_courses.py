@@ -9,6 +9,9 @@ For each source file it:
   2. Emits the bundled French resource ``ios/Sophia/Resources/CoursesV2/<id>.fr.json``.
   3. (Optional) copies committed translations from ``content/courses/<lang>/`` into
      ``ios/Sophia/Resources/CoursesV2/<id>.<lang>.json`` when they exist.
+  4. Emits ``ios/Sophia/Resources/authors.json`` from ``content/authors.json``, each
+     author carrying the ids of the courses that name it in ``author`` (so the app can
+     list "other courses by this professor" without decoding every course).
 
 Translations themselves are produced only after the French content of a course is
 validated; this script does not machine-translate — it only wires validated files
@@ -33,6 +36,8 @@ from i18n_languages import ALL_CONTENT_LANGS
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_ROOT = ROOT / "content" / "courses"
 BUNDLE_DIR = ROOT / "ios" / "Sophia" / "Resources" / "CoursesV2"
+AUTHORS_SOURCE = ROOT / "content" / "authors.json"
+AUTHORS_BUNDLE = ROOT / "ios" / "Sophia" / "Resources" / "authors.json"
 
 LANGUAGES = ALL_CONTENT_LANGS
 BLOCK_TYPES = {"heading", "paragraph", "image", "timeline", "funFact", "takeaway", "quote"}
@@ -42,7 +47,16 @@ class ValidationError(Exception):
     pass
 
 
-def validate_course(data: dict, origin: Path) -> None:
+def load_authors() -> dict[str, dict]:
+    """Authors keyed by slug, or an empty dict when the file does not exist yet."""
+    if not AUTHORS_SOURCE.is_file():
+        return {}
+    data = json.loads(AUTHORS_SOURCE.read_text(encoding="utf-8"))
+    authors = data.get("authors", data) if isinstance(data, dict) else data
+    return {author["slug"]: author for author in authors}
+
+
+def validate_course(data: dict, origin: Path, authors: dict[str, dict] | None = None) -> None:
     def require(condition: bool, message: str) -> None:
         if not condition:
             raise ValidationError(f"{origin.name}: {message}")
@@ -50,6 +64,23 @@ def validate_course(data: dict, origin: Path) -> None:
     require(isinstance(data.get("id"), str) and data["id"], "missing 'id'")
     require(isinstance(data.get("title"), str) and data["title"], "missing 'title'")
     require(isinstance(data.get("sections"), list) and data["sections"], "missing 'sections'")
+
+    # Professor-authored courses: `author` names a slug of content/authors.json and
+    # `sources` lists the references shown under the course (reference text, optional URL).
+    author = data.get("author")
+    if author is not None:
+        require(isinstance(author, str) and author, "'author' must be a non-empty slug")
+        if authors is not None:
+            require(author in authors, f"unknown author '{author}' (not in content/authors.json)")
+    sources = data.get("sources")
+    if sources is not None:
+        require(isinstance(sources, list), "'sources' must be a list")
+        for index, source in enumerate(sources):
+            loc = f"sources[{index}]"
+            require(isinstance(source, dict), f"{loc} must be an object")
+            require(isinstance(source.get("text"), str) and source["text"].strip(), f"{loc} missing 'text'")
+            url = source.get("url")
+            require(url is None or (isinstance(url, str) and url.startswith("http")), f"{loc} 'url' must be http(s)")
 
     for index, section in enumerate(data["sections"]):
         loc = f"section[{index}]"
@@ -101,12 +132,13 @@ def build(patterns: list[str], check_only: bool) -> int:
         print("No matching course sources found.")
         return 0
 
+    authors = load_authors()
     built = 0
     errors = 0
     for source in sources:
         try:
             data = json.loads(source.read_text(encoding="utf-8"))
-            validate_course(data, source)
+            validate_course(data, source, authors)
         except (json.JSONDecodeError, ValidationError) as error:
             print(f"  INVALID {source.name}: {error}", file=sys.stderr)
             errors += 1
@@ -130,7 +162,7 @@ def build(patterns: list[str], check_only: bool) -> int:
             if translated.is_file():
                 try:
                     tdata = json.loads(translated.read_text(encoding="utf-8"))
-                    validate_course(tdata, translated)
+                    validate_course(tdata, translated, authors)
                 except (json.JSONDecodeError, ValidationError) as error:
                     print(f"    skip {lang}: {error}", file=sys.stderr)
                     continue
@@ -140,6 +172,10 @@ def build(patterns: list[str], check_only: bool) -> int:
     if errors:
         print(f"\n{errors} course(s) failed validation.", file=sys.stderr)
         return 1
+
+    if authors and not check_only:
+        if write_authors_bundle(authors, sorted(fr_dir.glob("*.json"))):
+            print("  + authors.json")
 
     stale = check_bundle_sync(sources)
     if stale:
@@ -155,6 +191,33 @@ def build(patterns: list[str], check_only: bool) -> int:
     else:
         print(f"\nBuilt/updated {built} bundle file(s) from {len(sources)} source(s).")
     return 0
+
+
+def write_authors_bundle(authors: dict[str, dict], fr_sources: list[Path]) -> bool:
+    """Write the bundled authors file: content/authors.json plus each author's course ids.
+
+    Course ids come from every French source (not only the ones being built), so the
+    list is complete whatever pattern the script was run with.
+    """
+    course_ids: dict[str, list[str]] = {slug: [] for slug in authors}
+    for source in fr_sources:
+        try:
+            data = json.loads(source.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        slug = data.get("author")
+        if isinstance(slug, str) and slug in course_ids:
+            course_ids[slug].append(data["id"])
+    bundle = []
+    for slug, author in authors.items():
+        entry = {key: value for key, value in author.items() if not key.startswith("_")}
+        entry["courseIds"] = sorted(course_ids[slug])
+        bundle.append(entry)
+    payload = json.dumps({"authors": bundle}, ensure_ascii=False, indent=2) + "\n"
+    if AUTHORS_BUNDLE.exists() and AUTHORS_BUNDLE.read_text(encoding="utf-8") == payload:
+        return False
+    AUTHORS_BUNDLE.write_text(payload, encoding="utf-8")
+    return True
 
 
 def check_bundle_sync(fr_sources: list[Path]) -> int:
