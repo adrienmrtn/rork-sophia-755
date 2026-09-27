@@ -58,6 +58,9 @@ def request(method: str, url: str, key: str, data: bytes | None = None, content_
     }
     if content_type:
         headers["Content-Type"] = content_type
+        # Storage reads the overwrite flag from this header, not from the query string:
+        # without it, re-uploading an existing object fails with 400 (Duplicate).
+        headers["x-upsert"] = "true"
     req = urllib.request.Request(url, data=data, headers=headers, method=method)
     try:
         with urllib.request.urlopen(req, timeout=60) as resp:
