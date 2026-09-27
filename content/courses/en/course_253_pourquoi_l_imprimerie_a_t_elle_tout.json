@@ -1,0 +1,149 @@
+{
+  "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout",
+  "title": "Why did the printing press change everything?",
+  "subtitle": "Mainz, around 1450",
+  "subject": "histoire",
+  "subcategory": "Early modern era & 19th century",
+  "description": "Around 1450, a craftsman in Mainz assembled metal letters to print whole pages. Fifty years later, Europe had 20 million books, and information had become far harder to control.",
+  "author": "benjamin-campbell",
+  "hero": {
+    "image": "gutenberg_bible_open_pages_library_of_congress",
+    "ratio": "4:3",
+    "hook": "A single book once took a scribe months of work; suddenly one press could turn out hundreds of copies."
+  },
+  "sections": [
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Long before the printing press, producing a book in Europe was slow and expensive work. Each volume was copied by hand by a trained [[scribe]], who spent months, sometimes years, on a single manuscript. Books were therefore reserved for the wealthy, religious institutions and universities. Not because nobody else wanted them: making a single volume simply took an enormous amount of time and labor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Then, in the middle of the **15th century**, everything began to change. In Mainz, in Germany, a craftsman named [[Johannes Gutenberg]] developed a new printing system that revolutionized the making of books. His invention transformed more than the world of books: it changed how information could be copied and shared. Why did one press have such an effect?"
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p1",
+      "title": "Gutenberg did not invent printing",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gutenberg was not the first to print. The technique of [[woodblock printing]], which carves a whole page into a wooden block and stamps it onto paper, had been used in **China** and across Asia for centuries. What set his system apart was its metal [[movable type]]."
+        },
+        {
+          "type": "image",
+          "asset": "movable_metal_type_letters_composing_stick",
+          "ratio": "3:2",
+          "caption": "Thai movable type in a composing stick (Bangkok National Museum): each letter, cast in reverse, serves again for another page."
+        },
+        {
+          "type": "paragraph",
+          "text": "Instead of carving an entire book into wood, printers cast each letter separately, then arranged them into words and pages. The whole was inked and pressed onto paper. Once the page was printed, the letters were taken apart and used again for the next one. The process became far more flexible: a printer could turn out **hundreds of copies** without carving a new block for every page."
+        },
+        {
+          "type": "funFact",
+          "text": "The Gutenberg Bible, printed around 1455, was not the first book printed in Europe, but it was the first major work produced with his typographic system. Of the roughly 180 copies printed, only about 50 survive today."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p2",
+      "title": "Twenty million books in fifty years",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Once the invention took off, book printing grew across Europe at a remarkable rate. By around **1500**, barely fifty years after Gutenberg's breakthrough, the continent is estimated to have held **20 million** books. Thousands of different titles circulated between cities, universities, churches and private readers."
+        },
+        {
+          "type": "paragraph",
+          "text": "The change was about more than speed. Printing broke the old copying bottleneck. One carefully prepared text could be reproduced again and again, and the same information reached thousands of people. For the first time in history, written knowledge spread across the continent on a scale that hand copying could never have matched."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p3",
+      "title": "Luther and the Reformation in pamphlets",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In the early **16th century**, a German monk and professor, [[Martin Luther]], challenged the Catholic Church and set off what became the [[Protestant Reformation]]. In earlier centuries, the quarrel might well have remained a local theological dispute. Printing changed that."
+        },
+        {
+          "type": "image",
+          "asset": "luther_ninety_five_theses_1517_printed_broadsheet",
+          "ratio": "5:4",
+          "caption": "A broadsheet for the Reformation centenary (1617): Luther writes his theses on the Wittenberg church door with a giant quill."
+        },
+        {
+          "type": "paragraph",
+          "text": "His arguments were quickly reproduced in pamphlets and distributed far beyond the university where he taught. His writings were also printed in German, which made them accessible to people who could not read Latin. Printing did not create the Reformation by itself, but it let Luther's ideas reach far more people than any handwritten copy could. The controversy became much harder for Church authorities to contain."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p4",
+      "title": "From the telegraph to the Internet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The printing press is remembered as one of the first technologies to break the copying bottleneck. It was not the last. In the **19th century**, the [[telegraph]] made it possible to send a message across vast distances in minutes rather than days. The Internet went further still: information could be copied and sent in seconds."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "c. 1450",
+              "title": "Gutenberg's press",
+              "detail": "In Mainz, metal movable type replaces copying by hand."
+            },
+            {
+              "date": "c. 1500",
+              "title": "20 million books",
+              "detail": "Fifty years after Gutenberg, Europe holds millions of printed volumes."
+            },
+            {
+              "date": "1517",
+              "title": "Luther's theses",
+              "detail": "Printed pamphlets carry the Reformation far beyond his university."
+            },
+            {
+              "date": "19th century",
+              "title": "The telegraph",
+              "detail": "A message crosses vast distances in minutes."
+            },
+            {
+              "date": "Late 20th century",
+              "title": "The Internet",
+              "detail": "Information is copied and sent in seconds."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Each technology changed more than the speed of communication. It shook the institutions built to control and distribute information. Churches, governments, newspapers and businesses all had to adapt as information became easier to reproduce and much harder to control. The printing press remains a useful guide to what an invention can do to the world."
+        },
+        {
+          "type": "takeaway",
+          "text": "The printing press changed everything not because Gutenberg invented printing, but because his movable type broke the copying bottleneck: information became easy to reproduce and hard to control, a pattern the telegraph and then the Internet repeated."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "L. Febvre et H.-J. Martin, The Coming of the Book: The Impact of Printing, 1450-1800, trad. D. Gerard, Verso, 1976, p. 186."
+    },
+    {
+      "text": "K.-W. Chow, « Reinventing Gutenberg: Woodblock and Movable-Type Printing in Europe and China », Late Imperial China, vol. 28, n° 1, 2007, p. 185-186."
+    }
+  ]
+}

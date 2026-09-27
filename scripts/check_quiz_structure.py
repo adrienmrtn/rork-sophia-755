@@ -58,6 +58,18 @@ def untranslated(option: str, fr_option: str, en_option: str | None, lang: str) 
     return bool(ENGLISH_LEFTOVERS.search(option))
 
 
+def skeleton(path) -> list:
+    """Section ids and block types of an edition: identical across languages of one course."""
+    try:
+        course = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+    return [
+        (section.get("id"), [block.get("type") for block in section.get("blocks", [])])
+        for section in course.get("sections", [])
+    ]
+
+
 def main() -> int:
     fr = by_id(FR)
     en = by_id(EN)
@@ -67,6 +79,7 @@ def main() -> int:
         + ")(?![0-9A-Za-zÀ-ÿČčĆćĐđŠšŽž])"
     )
     errors = 0
+    stale = 0
     for lang in LANGS:
         cat = json.loads((IOS / f"courses.{lang}.json").read_text())
         v2 = json.loads((ROOT / "content" / "locales" / lang / "quizzes_v2.json").read_text())
@@ -75,7 +88,14 @@ def main() -> int:
         for cid, fr_quiz in fr.items():
             # A course with no edition in this language (content/courses/<lang>/<id>.json)
             # is not in its catalog either, by design: nothing to compare yet.
-            if not (ROOT / "content" / "courses" / lang / f"{cid}.json").is_file():
+            edition = ROOT / "content" / "courses" / lang / f"{cid}.json"
+            if not edition.is_file():
+                continue
+            # An edition whose skeleton no longer matches the French source is a stale
+            # translation (the French course was rewritten): its quiz is the old one on
+            # purpose until the course is retranslated, so it is not compared.
+            if skeleton(edition) != skeleton(ROOT / "content" / "courses" / "fr" / f"{cid}.json"):
+                stale += 1
                 continue
             for source, label in ((cat_q, "catalog"), (v2_q, "v2")):
                 got = source.get(cid)
@@ -139,6 +159,8 @@ def main() -> int:
     if errors:
         print(f"FAILED {errors} errors")
         return 1
+    if stale:
+        print(f"skipped {stale} stale edition(s) (French source rewritten, translation pending)")
     print("quiz structure OK vs FR + catalog/v2 sync")
     return 0
 

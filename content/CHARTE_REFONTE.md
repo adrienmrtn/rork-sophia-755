@@ -217,6 +217,13 @@ traduction automatique déforme sont listés dans `scripts/proper_nouns.json`.
 - `scripts/add_courses_to_catalog.py` inscrit un cours V2 dans les catalogues legacy
   (`CourseData.swift`, `courses.<lang>.json`, maps de couverture, catalogue et glossaire FR
   d'Android). C'est le passage obligé pour un cours **nouveau**.
+- `scripts/add_course_extras.py` fusionne dans les tables partagées le glossaire et le quiz
+  écrits à côté d'un cours (un fichier « extras » par cours : `{ courseId, glossary: { fr, en },
+  quiz: { fr, en } }`). Il valide les fiches (chaque `[[terme]]` du cours a la sienne) et le
+  quiz (types et champs de `CHARTE_QUIZ.md`), puis écrit `GlossaryData.swift`,
+  `glossary.<lang>.json` et `quizzes_v2.json`. Ordre pour un lot : cours + extras en parallèle,
+  `add_course_extras.py`, `build_courses.py`, `add_courses_to_catalog.py`,
+  `build_block_image_map.py`, `export_ios_content_for_android.py`.
 - Photos : `ios/Sophia/Resources/AuthorPhotos/<photo>.jpg`, 512 × 512, copiées dans
   `android/app/src/main/assets/author_photos/` par l'export Android. Sans photo, initiales.
 

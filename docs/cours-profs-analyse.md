@@ -224,3 +224,53 @@ Reste à faire pour généraliser : traduire les trois cours dans les 24 autres 
 puis `add_courses_to_catalog.py`), compiler et tester iOS et Android (aucune compilation
 possible dans l'environnement de rédaction), puis dérouler la même chaîne sur les 82 autres
 cours une fois le format validé.
+
+---
+
+## 8. Lot 2 livré le 27/09 : les 72 autres cours signés
+
+Même chaîne que le pilote, en parallèle : un plan par prof (titre en question, rubrique, images
+nommées), puis la rédaction FR + EN, le glossaire et le quiz de chaque cours, enfin la fusion dans
+les tables partagées et les catalogues.
+
+**Périmètre** : 85 cours moins les 3 du pilote et les 10 des deux auteurs non signataires
+(Christofer Bolanos Alvarado, Grigory Mechetin), soit 72 cours de 16 profs : 68 nouveaux
+(`course_244` à `course_311`) et 4 remplacements (`course_57` Internet, `course_149` Joconde,
+`course_214` État-providence, `course_234` nourrir huit milliards), qui gardent leur id, leur
+matière, leur rubrique, leurs ids de sections et la progression des lecteurs. Les deux doublons
+restants (« What is soft power? », « What happens when a population ages ») attendent la signature
+de leur auteur ; « Why do the United States have so much power? » est devenu un cours neuf
+(`course_271`).
+
+**Ce que contient chaque cours** : 5 sections (intro gratuite + 4 parties), 450 à 850 mots par
+langue (médiane 790 en FR ; les textes courts de Stacy Jankowski font 580 à 670 mots), un hero
+16:9 et 2 ou 3 images de corps nommées d'après le plan, 4 à 8 termes `[[…]]` avec fiche FR et EN,
+0 à 2 « Le savais-tu ? » tirés des anecdotes du prof, une frise quand le texte s'y prête, un « À
+retenir », l'`author`, et les `sources` du prof normalisées en références (URL conservées quand
+elles étaient données). Rien n'est inventé au-delà du texte du prof ; ses erreurs factuelles
+manifestes ont été neutralisées plutôt que reproduites (voir les comptes rendus par cours dans le
+scratchpad de la session, non versionnés).
+
+**Tables partagées** : 484 entrées ajoutées à `GlossaryData.swift` (31 entrées orphelines des
+anciens titres remplacés retirées), 483 à `glossary.en.json`, 72 quiz de 8 questions en FR et en
+EN dans `quizzes_v2.json` (types mêlés selon la charte), 72 entrées dans `CourseData.swift`,
+`courses.en.json`, les catalogues Android, `CourseImageMap.swift` et `course_image_map.json`.
+Les bundles iOS (`CoursesV2/*.fr|en.json`) et Android (`courses_v2/fr|en/`) sont régénérés ;
+`authors.json` relie 16 profs à 75 cours (pilote compris).
+
+**Outillage ajouté** : `scripts/add_course_extras.py` fusionne le glossaire et le quiz écrits à
+côté d'un cours (fichier « extras » par cours) dans les tables partagées, ce qui permet d'écrire
+des dizaines de cours en parallèle sans se marcher dessus ; les autres scripts sont inchangés.
+
+**Images** : les 267 fichiers ont été livrés le jour même (couvertures : illustrations carrées maison ; illustrations : Wikimedia Commons). Après relecture image par image, 118 légendes ont été réécrites pour coller à l'image réellement fournie et 23 blocs retirés faute de rapport avec le passage (liste dans `docs/images-a-creer.md`). À l'origine : 70 couvertures et 197 illustrations à fournir, 20 images existantes réutilisées,
+listées par cours dans `docs/images-a-creer.md` (ce que l'image doit montrer, ratio, piste). Tant
+qu'un fichier manque, l'app affiche un cadre gris avec le nom. Pour les trois cours remplacés
+dont la couverture change (`course_57`, `course_214`, `course_234`), l'ancienne couverture reste
+dans les maps jusqu'à l'arrivée du nouveau fichier ; relancer
+`add_courses_to_catalog.py` sur ces trois ids une fois les fichiers déposés.
+
+**Reste à faire** : déposer les images et leurs crédits (`image_credits.json`), lancer l'upload
+Supabase ; compiler iOS et Android (les vues auteur et sources du pilote servent telles quelles) ;
+plus tard, les 24 autres langues (les éditions étrangères des 4 cours remplacés affichent
+l'ancien contenu jusque-là : c'est cohérent langue par langue, mais à retraduire en priorité),
+et les 10 cours des deux auteurs non signataires quand ils auront signé.

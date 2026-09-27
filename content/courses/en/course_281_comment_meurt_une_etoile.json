@@ -1,0 +1,128 @@
+{
+  "id": "course_281_comment_meurt_une_etoile",
+  "title": "How does a star die?",
+  "subtitle": "Red giant or supernova",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "For billions of years, a star holds a balance between gravity and the fusion in its core. When the fuel runs out, it swells, collapses or explodes, and its ending depends on one thing only: its mass.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "crab_nebula_supernova_remnant_hubble",
+    "ratio": "4:3",
+    "hook": "A star can fade away quietly or explode with unimaginable force: it all comes down to its mass."
+  },
+  "sections": [
+    {
+      "id": "course_281_comment_meurt_une_etoile_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "What actually makes a star die? A star begins to die when it can no longer hold itself up against its own gravity. For most of its life, gravity pulls its material inward. At the same time, the energy produced in its core creates pressure that pushes outward. These two effects cancel each other out, and the star stays stable."
+        },
+        {
+          "type": "paragraph",
+          "text": "That energy comes from [[nuclear fusion]]: hydrogen nuclei join together to form helium and release enormous amounts of energy. The balance can last for millions, billions or even trillions of years. It all depends on mass. Low-mass stars use up their fuel slowly, while massive stars burn through it much faster. One day, the balance breaks. What happens next depends on how massive the star is."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p1",
+      "title": "The star swells into a red giant",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For most of its life, a star turns the hydrogen in its core, its central region, into helium. When that hydrogen starts to run low, fusion slows down at the center. The core shrinks and gets hotter. Around it, a layer of hydrogen keeps fusing and releasing energy. Under that push, the star's outer layers expand enormously."
+        },
+        {
+          "type": "paragraph",
+          "text": "The result is a [[red giant]]: a star far larger than before, with a cooler surface. So a dying star starts by growing, rather than simply fading away. The Sun is expected to enter this stage in about **5 billion years**."
+        },
+        {
+          "type": "funFact",
+          "text": "As a red giant, the Sun could grow large enough to swallow Mercury and Venus. Earth's exact fate, for its part, remains uncertain."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p2",
+      "title": "A white dwarf the size of Earth",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A star like the Sun cannot keep swelling forever. As it ages, it loses its outer layers, which drift off into space. That gas spreads out and forms a glowing cloud, a [[planetary nebula]]. What remains at the center is a [[white dwarf]]: the hot, dense core of the star, laid bare once the outer layers are gone."
+        },
+        {
+          "type": "image",
+          "asset": "helix_nebula_planetary_nebula_white_dwarf_hubble",
+          "ratio": "1:1",
+          "caption": "The Helix Nebula: gas thrown off by a dying star, with the white dwarf visible at the center."
+        },
+        {
+          "type": "paragraph",
+          "text": "A white dwarf is no bigger than **Earth**, yet it still holds a large share of the original star's mass. Fusion has stopped inside it: it no longer produces energy. If it shines, it is only because it is still extremely hot. Over an immense stretch of time, it slowly cools and fades."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p3",
+      "title": "Supernova, neutron star or black hole",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A far more massive star does not stop there. It keeps joining lighter elements into heavier ones: helium makes carbon, and later reactions create heavier elements still. Little by little, a core rich in **iron** builds up. But with iron, fusion can no longer supply the energy needed to hold the star up against gravity. The core collapses in an instant."
+        },
+        {
+          "type": "paragraph",
+          "text": "That collapse can trigger a [[supernova]], a gigantic explosion that blasts much of the star out into space. The collapsed core, though, remains. If it is not too massive, it becomes a [[neutron star]], an object of extreme density no bigger than a city. If it is massive enough, gravity keeps crushing it until a [[black hole]] forms, where the pull is so strong that not even light can escape."
+        },
+        {
+          "type": "image",
+          "asset": "m87_black_hole_event_horizon_telescope_2019",
+          "ratio": "16:9",
+          "caption": "The M87 black hole: the first image from 2019 (left) and its sharpened PRIMO reconstruction (2023)."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p4",
+      "title": "We are made of stardust",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A dying star does not simply vanish. It gives part of its material back to space, loaded with the elements it made during its lifetime. Over time, some of that material can become part of new stars, new planets and other worlds."
+        },
+        {
+          "type": "image",
+          "asset": "pillars_of_creation_eagle_nebula_jwst_2022",
+          "ratio": "2:3",
+          "caption": "The Pillars of Creation, seen by the James Webb Space Telescope in 2022: new stars are being born there."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Carbon** is the best example. It is essential to life on Earth, including in our own bodies. Yet most of that carbon was made inside generations of stars that have long since disappeared. That is why people sometimes say we are made of stardust. The phrase is poetic, but the science behind it is real. The death of a star is therefore also a beginning: its material may one day form another star, another planet, or even a living world."
+        },
+        {
+          "type": "takeaway",
+          "text": "Deprived of fusion, a star gives in to gravity: small ones fade out as white dwarfs, massive ones explode as supernovas and leave a neutron star or a black hole, and their scattered material feeds the stars, planets and living things to come."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, p. 541."
+    },
+    {
+      "text": "NASA Science, « Types of Stars: White Dwarfs »."
+    },
+    {
+      "text": "S. Frazier, « Why the Sun Won't Become a Black Hole », NASA Goddard Space Flight Center, 2019."
+    }
+  ]
+}

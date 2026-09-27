@@ -1,0 +1,141 @@
+{
+  "id": "course_246_qui_etait_le_vrai_roi_arthur",
+  "title": "Who was the real King Arthur?",
+  "subtitle": "A war turned legend",
+  "subject": "mythologie",
+  "subcategory": "Legends & creatures",
+  "description": "No document from his lifetime, and not even his name in the earliest account of his greatest victory. It takes three centuries for a text to name Arthur, and much longer still to make him a king.",
+  "author": "angela-bouma",
+  "hero": {
+    "image": "tintagel_castle_ruins_cornwall_coast",
+    "ratio": "4:3",
+    "hook": "History gives a war; legend gives a king."
+  },
+  "sections": [
+    {
+      "id": "course_246_qui_etait_le_vrai_roi_arthur_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Arthur has no birth certificate, no contemporary records, and not a single line written in the years he is supposed to have lived. The tradition begins in the chaos of post-Roman Britain: political collapse, migration, war. By the **5th century**, Roman administration no longer governs the island. Its people, the Britons, face mounting pressure from groups arriving from the continent, whom later sources call [[Saxons]], Angles and Jutes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Local rulers and war leaders step in to defend territory once protected by Rome. But almost nothing is written down as it happens. Whoever eventually becomes **Arthur** has to be pieced together from scraps, written centuries later by people already turning memory into legend."
+        }
+      ]
+    },
+    {
+      "id": "course_246_qui_etait_le_vrai_roi_arthur_p1",
+      "title": "Gildas and the Battle of Badon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The most important surviving source is [[Gildas]], a British cleric of the **6th century**. He describes the chaos between the Britons and the invading Saxons, and records a major British victory: the [[Battle of Badon]]. He never names Arthur. That silence matters, because Badon later becomes the defining triumph of Arthurian legend. The leader he names is a different man: [[Ambrosius Aurelianus]]."
+        },
+        {
+          "type": "image",
+          "asset": "badbury_rings_hillfort_dorset_aerial",
+          "ratio": "4:3",
+          "caption": "The ramparts of Badbury Rings, in Dorset, one of the sites proposed for the Battle of Badon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Badon anchors the story. Gildas places it within the living memory of his own generation, around the late **5th century** or the early 6th, though the exact date and location remain disputed. Beyond the contested details, one thing holds: an early source records an actual British victory."
+        }
+      ]
+    },
+    {
+      "id": "course_246_qui_etait_le_vrai_roi_arthur_p2",
+      "title": "Ambrosius, the ideal candidate",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gildas describes **Ambrosius** as the heir of a prominent Romano-British family whose parents were killed in the violence, leaving him among the few survivors of the catastrophe. The scattered British forces regroup under him and win a first victory. Then the war grinds on for years, swinging between British and Saxon successes, until Badon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gildas never says whether Ambrosius commands at Badon or whether someone else has taken over by then. Later writers connect him to Arthur anyway, but nothing in the earliest evidence makes them the same man. He is simply an **appealing candidate** for legend: a prestigious leader, from the right period, associated with a famous victory that Gildas assigns to no one in particular."
+        }
+      ]
+    },
+    {
+      "id": "course_246_qui_etait_le_vrai_roi_arthur_p3",
+      "title": "Arthur appears, three centuries later",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Arthur first appears by name in the *Historia Brittonum*, a Latin text of the **9th century** often attributed to a Welsh writer, [[Nennius]]. He is not a king there. He is called *dux bellorum*, \"leader of battles\": he fights alongside the British kings and defeats the Saxons in a series of battles, the last of which is Badon."
+        },
+        {
+          "type": "paragraph",
+          "text": "No Camelot. No Round Table. No sword in the stone. This Arthur is a war leader, not a monarch, closer to Ambrosius than to the king people picture today. The gap in time weighs heavily: Gildas, writing much closer to the events, never mentions him. The *Historia Brittonum* arrives **three hundred years** later, exactly the kind of distance that makes a story hard to trust."
+        },
+        {
+          "type": "funFact",
+          "text": "The Holy Grail, the quest most people associate with King Arthur, does not appear in any of the earliest sources. It enters the legend centuries later, in the hands of French romance writers, the same tradition that would one day give us Monty Python's coconut horses."
+        }
+      ]
+    },
+    {
+      "id": "course_246_qui_etait_le_vrai_roi_arthur_p4",
+      "title": "A king to legitimize the Normans",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Britain needs a hero, so it builds one, and the timing tells you why. [[Geoffrey of Monmouth]] writes his crowned Arthur, a true king, in the **12th century**, decades after the [[Norman Conquest]]. England's new rulers then need to prove their right to a throne they have just seized by force."
+        },
+        {
+          "type": "image",
+          "asset": "king_arthur_enthroned_royal_ms_20_a_ii",
+          "ratio": "5:4",
+          "caption": "King Arthur fights Mordred, an episode already told by Geoffrey of Monmouth. Painting by William Hatherell, early 20th century."
+        },
+        {
+          "type": "paragraph",
+          "text": "Arthur, a British king from before the Saxons, conqueror of invaders and glorious ruler, gives Norman England the **ancient legitimacy** that conquest alone cannot provide: a legendary ancestor nobody in power has to answer to, and a golden age their own rule can claim to restore. This is how most founding legends work: a thin thread of fact, and a political need specific enough to explain which hero gets built, and why."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "5th century",
+              "title": "Rome leaves Britain",
+              "detail": "Local leaders defend the island on their own."
+            },
+            {
+              "date": "c. 500",
+              "title": "Battle of Badon",
+              "detail": "A real British victory, with no leader's name."
+            },
+            {
+              "date": "6th century",
+              "title": "Gildas writes",
+              "detail": "He names Ambrosius, never Arthur."
+            },
+            {
+              "date": "9th century",
+              "title": "Historia Brittonum",
+              "detail": "Arthur appears, a \"leader of battles.\""
+            },
+            {
+              "date": "12th century",
+              "title": "Geoffrey of Monmouth",
+              "detail": "Arthur becomes a king, after the Norman Conquest."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Behind King Arthur there is a real war and a real victory, but his name only appears three centuries later, and his crown comes from a Norman England in search of legitimacy."
+        }
+      ]
+    }
+  ]
+}
