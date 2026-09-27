@@ -1,0 +1,156 @@
+{
+  "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires",
+  "title": "Hvorfor har vi tidssoner?",
+  "subtitle": "1884",
+  "subject": "histoire",
+  "subcategory": "Early modern era & 19th century",
+  "description": "Fram til 1800-tallet levde hver by etter sin egen tid. Jernbanen, og deretter en konferanse i Washington i 1884, skulle skape tiden på nytt.",
+  "author": "nathan-hewitt",
+  "hero": {
+    "image": "shepherd_gate_clock_royal_observatory_greenwich",
+    "ratio": "4:3",
+    "hook": "Før togene var klokka tolv aldri helt det samme fra én by til den neste."
+  },
+  "sections": [
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_intro",
+      "title": "Innledning",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gjennom mesteparten av historien har tiden vært lokal. Hver by stilte klokkene sine selv, og middag i én by kunne komme flere minutter før eller etter middag i nabobyen. Ingen brydde seg: man reiste ikke fort nok mellom byene til at forskjellen spilte noen rolle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Så kom jernbanen. Når to byer lå bare minutter fra hverandre, ble disse avvikene et problem. På lange strekninger passerte et tog stasjoner der den lokale tiden varierte med flere hele timer. Tidssystemene menneskeheten hadde brukt i årtusener, holdt ikke lenger. Skulle togene gå knirkefritt, måtte selve tiden skapes på nytt."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p1",
+      "title": "Jernbanen tar i bruk Greenwich-tid",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tidsforskjellene mellom byene var et mareritt for rutetabellene. De var også farlige: flere togulykker skyldtes rutetider som ikke stemte overens. Selskapene innså at de trengte en felles tid. I **1840** var britiske [[Great Western Railway]] først ute med løsningen: selskapet la rutetabellene etter tiden ved det kongelige observatoriet i Greenwich, [[Greenwich-tid]]. Alle togene og stasjonene gikk nå etter samme klokke."
+        },
+        {
+          "type": "image",
+          "asset": "bristol_corn_exchange_clock_two_minute_hands",
+          "ratio": "4:3",
+          "caption": "Klokken på Corn Exchange i Bristol, med sine to minuttvisere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Endringen fungerte utmerket. Avganger og ankomster kunne endelig samordnes trygt. Snart tok alle britiske jernbaneselskaper i bruk samme system. Allerede i **1850-årene** var de fleste offentlige klokker i landet stilt etter Greenwich. I **1880** ble det Storbritannias lovfestede tid."
+        },
+        {
+          "type": "funFact",
+          "text": "I Bristol har klokken på Corn Exchange to minuttvisere: én for byens lokale tid og én for jernbanetiden, altså Greenwich-tid, med ti minutters forskjell. Et minne fra den gang byen levde etter to klokker på én gang."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p2",
+      "title": "USA finner opp tidssonene",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I USA var ikke den britiske oppskriften nok. Togene der tilbakela langt større avstander: når klokka var tolv i California, var ettermiddagen allerede godt i gang i Washington. Løsningen var [[tidssoner]]: å dele landet inn i **fem** belter, med én times forskjell mellom hvert."
+        },
+        {
+          "type": "image",
+          "asset": "william_allen_railroad_time_zones_map_1883",
+          "ratio": "4:3",
+          "caption": "Reklamekart fra Burlington Route, 1892: jernbanens tidssoner fra 1883 avgrenser Pacific, Mountain, Central og Eastern Time."
+        },
+        {
+          "type": "paragraph",
+          "text": "Slik kunne lokaltogene gå etter en tid som ga mening der de var, og tog som krysset flere soner, kunne enkelt regne om rutetidene sine. Flere inndelinger ble foreslått; det var forslaget fra [[William Allen]], redaktør av jernbaneguider, som vant fram. I **november 1883** vedtok amerikanske og kanadiske jernbaneselskaper offisielt hans fem soner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Men jernbanen var ikke alene om å slite med lokal tid. Den internasjonale skipsfarten vokste raskt, og telegrafen hadde nettopp kommet. Samordning av tiden var blitt et globalt problem, og det krevde et globalt svar."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p3",
+      "title": "Konferansen i Washington i 1884",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1884** kalte den amerikanske presidenten Chester A. Arthur inn til en konferanse i Washington for å løse saken. Representanter fra **25 land**, nesten alle amerikanske eller europeiske, samlet seg til [[Den internasjonale meridiankonferansen]]. De bestemte at Greenwich-meridianen skulle være nullmeridian og tiden der universell tid, med et døgn på 24 timer som begynner ved midnatt, Greenwich-tid."
+        },
+        {
+          "type": "image",
+          "asset": "sandford_fleming_portrait_photograph_1890s",
+          "ratio": "3:4",
+          "caption": "Sandford Fleming, skotsk-kanadisk ingeniør: portrett trykt i Canadian Alpine Journal i 1907."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den skotsk-kanadiske ingeniøren [[Sandford Fleming]] argumenterte der for et verdensomspennende system av tidssoner. Han delte kloden inn i **24 soner** etter [[lengdegrad]]: for hver **15. grad** går klokka én time fram sammenlignet med forrige sone. I motsetning til hva mange tror, vedtok ikke konferansen sonene hans offisielt. Greenwich-tid ble en universell referanse, men ingen påla at den skulle erstatte de lokale tidene."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p4",
+      "title": "En langsom og omstridt innføring",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tidssonene ble altså innført gradvis. I **1900** hadde de fleste europeiske land tatt i bruk en tid knyttet til Greenwich. Imperiemakter som Storbritannia og Frankrike påla den koloniene sine. Andre land sluttet seg til av praktiske grunner, noen ganger etter flere tiår: Kina ventet til **1918**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selv når den nye tiden var offisielt innført, tok det tid før den slo rot. I årevis skapte den forvirring og hån, og lokal tid var fortsatt vanlig over hele verden. Det tok flere tiår, og verktøy som offentlig skole og radioens sendeskjemaer, å viske den helt ut. I **1920-årene** levde de fleste land endelig etter en tid knyttet til Greenwich. Tiden var skapt på nytt, fordi jernbanen hadde ønsket det."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1840",
+              "title": "Togene går etter Greenwich-tid",
+              "detail": "Great Western Railway legger rutetabellene etter det kongelige observatoriet."
+            },
+            {
+              "date": "1880",
+              "title": "Lovfestet tid i Storbritannia",
+              "detail": "Greenwich-tid blir Storbritannias offisielle tid."
+            },
+            {
+              "date": "Nov. 1883",
+              "title": "Fem nordamerikanske soner",
+              "detail": "Amerikanske og kanadiske jernbaneselskaper vedtar William Allens inndeling."
+            },
+            {
+              "date": "1884",
+              "title": "Konferansen i Washington",
+              "detail": "25 land gjør Greenwich-tid til universell tid."
+            },
+            {
+              "date": "1918",
+              "title": "Kina følger etter",
+              "detail": "Kina tar også i bruk en tid knyttet til Greenwich."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Tidssonene ble ikke til gjennom et verdensdekret, men av jernbanens behov, og det tok flere tiår før de erstattet den lokale tiden."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. A. Johnston, The Clocks Are Telling Lies: Science, Society, and the Construction of Time, 2022, p. 24, 104 et 188, et chap. 5."
+    }
+  ]
+}
