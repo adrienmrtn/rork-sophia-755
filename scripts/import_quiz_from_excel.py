@@ -6,6 +6,12 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def _resplit_course_data() -> None:
+    """CourseData.swift is not compiled: the chunks under CourseDataChunks/ are."""
+    import subprocess, sys
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "split_course_data.py")], check=True)
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from import_courses_and_glossary import (  # noqa: E402
@@ -165,6 +171,7 @@ def main():
         raise ValueError(f"No Excel quiz for {len(missing)} courses: {missing[:5]}")
 
     COURSE_DATA.write_text(text, encoding="utf-8")
+    _resplit_course_data()
     print(f"Updated quiz for {updated} courses in {COURSE_DATA}")
 
 
