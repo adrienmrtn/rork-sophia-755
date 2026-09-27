@@ -1,0 +1,169 @@
+{
+  "id": "course_311_qui_a_invente_les_zombies",
+  "title": "Who invented zombies?",
+  "subtitle": "From Vodou to Hollywood",
+  "subject": "mythologie",
+  "subcategory": "Legends & creatures",
+  "description": "The slow, hungry walking corpse of the movies is not even a hundred years old. Behind it lies a far older, and far sadder, Haitian figure: a person whose soul has been stolen.",
+  "author": "vedran-obucina",
+  "hero": {
+    "image": "night_of_the_living_dead_1968_still",
+    "ratio": "16:9",
+    "hook": "Before it devoured the living on screen, the zombie was a man whose will had been stolen."
+  },
+  "sections": [
+    {
+      "id": "course_311_qui_a_invente_les_zombies_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Everyone knows what a zombie looks like: a slow, voiceless dead man, walking aimlessly. The image seems very old. It is not. The movie zombie is a product of the **20th century**, when horror films turned it into a monster that eats human flesh."
+        },
+        {
+          "type": "paragraph",
+          "text": "A much older idea comes from Haiti. [[Vodou]], the local religion, was shaped by West African beliefs, Catholic Christianity, the island's history and popular customs. In this world, the zonbi is not a hungry corpse chasing innocent people. It is a person whose soul or free will has been taken away. A sorcerer, the [[bokor]], practices the magic that allows him to control such beings. How did this Haitian figure become a monster known the world over?"
+        }
+      ]
+    },
+    {
+      "id": "course_311_qui_a_invente_les_zombies_p1",
+      "title": "A word from Haiti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The word zombie comes from African languages spoken by the enslaved people who arrived in Haiti. In [[Haitian Creole]] it is spelled zonbi; in French, zombi. It is tied to ideas about spirits, the dead and people without free will. The zonbi can be a body that someone else controls after death. It can also be the spiritual part of a person, the soul, captured or separated from the body."
+        },
+        {
+          "type": "image",
+          "asset": "haitian_vodou_ceremony_drums_ritual",
+          "ratio": "3:2",
+          "caption": "A Vodou ceremony in Haiti: drums, participants dressed in white and embroidered flags."
+        },
+        {
+          "type": "paragraph",
+          "text": "These beliefs belong to a specific religious and historical culture. They draw on African ideas about the spirit world, but also on the experience of slavery and of life in Haiti. So the zonbi is nothing like the monster we picture: it is a sad figure, a person who has lost their inner freedom."
+        },
+        {
+          "type": "funFact",
+          "text": "The Haitian zonbi is not created by infection or by a bite: that idea comes from later popular culture. In Haiti, the zonbi has to do with the soul, the body and the loss of personal freedom, through rituals that the bokors keep secret."
+        }
+      ]
+    },
+    {
+      "id": "course_311_qui_a_invente_les_zombies_p2",
+      "title": "Americans reinvent the creature",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In the early 20th century, American visitors, journalists, adventurers and writers began writing about Haiti and Vodou. They came across zombies too. This happened during the [[American occupation of Haiti]], from **1915 to 1934**. They told Haitian traditions and stories to a public that knew almost nothing about the country."
+        },
+        {
+          "type": "paragraph",
+          "text": "Among the most influential authors is [[William Seabrook]]. His book *The Magic Island*, published in **1929**, lastingly changed the way this Caribbean island was seen. Seabrook describes Haiti as a mysterious and dangerous place. His account of zombies is fairly accurate: dead people working against their will. But it is too simplified. Haitians place the zombie within their storytelling, beliefs and history; foreigners see only an exotic horror. That is when the zombie became an invented monster."
+        },
+        {
+          "type": "image",
+          "asset": "william_seabrook_magic_island_1929_book_cover",
+          "ratio": "3:4",
+          "caption": "The first edition of The Magic Island, William Seabrook's book published in 1929."
+        }
+      ]
+    },
+    {
+      "id": "course_311_qui_a_invente_les_zombies_p3",
+      "title": "Hollywood gives it a body",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1932**, the film *White Zombie* came out. In it, the zombie is a living person turned into an obedient tool, controlled by another man. The film keeps the old idea of a person stripped of free will. Hollywood made the zombie a movie star, but not yet the one we know today."
+        },
+        {
+          "type": "image",
+          "asset": "white_zombie_1932_bela_lugosi_film_poster",
+          "ratio": "3:4",
+          "caption": "The poster for White Zombie (1932): Bela Lugosi, with his hypnotic stare, looms over a young woman in white."
+        },
+        {
+          "type": "paragraph",
+          "text": "The great turning point came with *Night of the Living Dead* by [[George A. Romero]], in **1968**. In it, the dead rise and attack the living. No master commands them. This change laid the foundation of the modern zombie: the films, series and video games that followed build on the same pattern."
+        }
+      ]
+    },
+    {
+      "id": "course_311_qui_a_invente_les_zombies_p4",
+      "title": "A global metaphor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Today zombies turn up in films, novels, apps and even political commentary. A metaphor is an image that uses one thing to talk about another. So the zombie can stand for fear of infection, a crowd that follows manipulative leaders, overconsumption, the collapse of a society or the loss of control. Its meaning changes with time and place."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1915-1934",
+              "title": "The American occupation of Haiti",
+              "detail": "American journalists and writers discover Vodou and zombies."
+            },
+            {
+              "date": "1929",
+              "title": "The Magic Island",
+              "detail": "William Seabrook presents Haiti as a mysterious and dangerous island."
+            },
+            {
+              "date": "1932",
+              "title": "White Zombie",
+              "detail": "The first movie zombie: a living person reduced to obedience by a master."
+            },
+            {
+              "date": "1968",
+              "title": "Night of the Living Dead",
+              "detail": "In George A. Romero's film, the dead rise and attack with no master."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "So the zombie has no single inventor. Haitian religious traditions provided the starting idea. American popular culture turned it into a monster story. Romero then fixed the form we know: the dead rising, attacking the living and bringing about a catastrophe. Many hands build a monster, and stories change as they travel."
+        },
+        {
+          "type": "takeaway",
+          "text": "Born in Haiti as the figure of a person robbed of their soul, the zombie became, through American writing and then Romero's films, the hungry walking corpse that now serves as a metaphor for all our collective fears."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "« Zombies in Print », Oxford Research Encyclopedia of Literature, Oxford University Press, 2016."
+    },
+    {
+      "text": "« Haitian Origins », Springer, 2025.",
+      "url": "https://link.springer.com/rwe/10.1007/978-3-032-05696-2_8"
+    },
+    {
+      "text": "R. Hoermann, « Figures of Terror: The \"Zombie\" and the Haitian Revolution », University of Central Lancashire.",
+      "url": "https://clok.uclan.ac.uk/id/eprint/16036/1/R_Hoermann_Figures%20of%20terror_The%20zombie%20and%20the%20Haitian%20Revolution_clok.pdf"
+    },
+    {
+      "text": "W. B. Seabrook, The Magic Island, Harcourt, Brace and Company, 1929."
+    },
+    {
+      "text": "Australian Centre for the Moving Image, « White Zombie », 8 mars 2023.",
+      "url": "https://www.acmi.net.au/works/82246--white-zombie/"
+    },
+    {
+      "text": "G. A. Romero (réal.), Night of the Living Dead, Walter Reade Organization, 1968."
+    },
+    {
+      "text": "« Normalizing Monstrous Bodies Through Zombie Media », Carleton University.",
+      "url": "https://carleton.scholaris.ca/items/7e9538eb-0713-4f6b-8f3b-629029d08c99"
+    }
+  ]
+}

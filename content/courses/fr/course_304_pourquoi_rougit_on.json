@@ -1,0 +1,131 @@
+{
+  "id": "course_304_pourquoi_rougit_on",
+  "title": "Pourquoi rougit-on ?",
+  "subtitle": "L'expression la plus humaine",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Une remarque gênante, un compliment : dans les deux cas, les joues chauffent et rosissent. Ce que le corps fabrique à cet instant, et pourquoi on ne peut presque rien y faire.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "blushing_red_cheeks_woman_portrait_close_up",
+    "ratio": "16:9",
+    "hook": "Une remarque de travers, et tes joues s'enflamment. Un compliment, et c'est pareil. Personne ne décide de rougir."
+  },
+  "sections": [
+    {
+      "id": "course_304_pourquoi_rougit_on_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tout le monde connaît la sensation. Quelqu'un lance une remarque gênante à ton sujet : ton visage chauffe, ta peau rosit. Le phénomène a intrigué jusqu'au naturaliste [[Charles Darwin]], qui y voyait « la plus singulière et la plus humaine de toutes les expressions »."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le plus étrange, c'est que le compliment produit le même effet que la moquerie. Félicité devant les autres, on sent la même chaleur monter aux joues. Que se passe-t-il exactement sous la peau, et pourquoi le corps répond-il de la même façon à la honte et au plaisir ?"
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p1",
+      "title": "Un coup de chaud sous la peau",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rougir est d'abord une affaire de sang. Le volume qui circule dans les petits vaisseaux du visage, situés tout près de la surface de la peau, augmente d'un coup. Ce phénomène est commandé par le [[système nerveux sympathique]], la branche du système nerveux qui pilote la [[réaction de lutte ou de fuite]], notre réponse d'urgence face au danger."
+        },
+        {
+          "type": "image",
+          "asset": "thermal_infrared_image_human_face_heat",
+          "ratio": "4:3",
+          "caption": "Un visage vu par une caméra thermique : les zones les plus chaudes apparaissent en rouge et en jaune."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quand ce système s'active, le cœur bat plus vite et la température du corps grimpe. Pour évacuer ce surplus, les vaisseaux du visage se dilatent : plus de sang y passe, et la chaleur qu'il transporte s'échappe à travers la peau. Comme ces vaisseaux affleurent, l'afflux se voit : la peau prend une teinte rose ou rouge. Rougir, c'est un système de refroidissement en action."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p2",
+      "title": "La gêne, un réflexe de fuite",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Une gaffe en société, une règle tacite enfreinte sans le vouloir : le cerveau y répond comme à une menace. Il active le système nerveux sympathique, avec l'envie de se défendre (« lutter ») ou de disparaître (« fuir »). Le sang afflue dans les vaisseaux du visage, et les joues s'embrasent."
+        },
+        {
+          "type": "image",
+          "asset": "embarrassed_person_hiding_face_in_hands",
+          "ratio": "3:2",
+          "caption": "Se cacher le visage dans les mains : le réflexe de fuite, version bureau."
+        },
+        {
+          "type": "paragraph",
+          "text": "Certaines personnes rougissent plus que d'autres. Celles qui souffrent d'[[anxiété sociale]] portent souvent un regard plus sévère sur elles-mêmes. Ce biais négatif amplifie la réponse du système sympathique, et la moindre maladresse déclenche une véritable alerte dans tout le corps."
+        },
+        {
+          "type": "funFact",
+          "text": "La peur de rougir fait rougir. Chez ceux qui redoutent leurs rougeurs, la simple conscience d'être observé renforce la réponse du système sympathique. On rougit donc d'avoir rougi, et la boucle se referme."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p3",
+      "title": "Rougir aussi de plaisir",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'attention positive déclenche le même mécanisme. Un éloge en public, des applaudissements, un compliment inattendu : on se sent soudain exposé au regard des autres, ou inquiet de ne pas savoir remercier comme il faut. Cette gêne suffit à lancer la réponse d'urgence."
+        },
+        {
+          "type": "image",
+          "asset": "shy_speaker_receiving_applause_audience",
+          "ratio": "3:2",
+          "caption": "Applaudie par la salle, la lauréate baisse les yeux : l'attention positive fait rougir aussi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le cerveau, lui, sait très bien distinguer une félicitation d'une humiliation. Mais le système nerveux sympathique est plus fruste : il n'a pas encore décidé s'il faut prendre la fuite ou non. Le temps qu'il tranche, le visage a déjà changé de couleur."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p4",
+      "title": "Peut-on s'empêcher de rougir ?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pas vraiment, et ce n'est pas grave : rougir est une réponse naturelle au monde social qui nous entoure, pas un défaut à corriger. En revanche, on peut agir sur ce qui le déclenche, c'est-à-dire la façon dont le cerveau range une situation embarrassante dans la catégorie « danger »."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deux approches peuvent aider. La [[thérapie d'exposition]] consiste à affronter progressivement les situations redoutées, jusqu'à ce qu'elles ne déclenchent plus l'alarme. La [[pleine conscience]] apprend à observer la chaleur qui monte sans la craindre. Dans les deux cas, on ne supprime pas le rougissement : on désamorce la peur de rougir, et la boucle se calme."
+        },
+        {
+          "type": "takeaway",
+          "text": "Rougir, c'est le système nerveux sympathique qui dilate les vaisseaux du visage pour évacuer la chaleur d'une alerte, qu'elle vienne d'une gaffe ou d'un compliment : on ne l'empêche pas, mais on peut apprendre à ne plus le craindre."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "C. Darwin, The Expression of the Emotions in Man and Animals, John Murray, 1872, p. 301.",
+      "url": "https://darwin-online.org.uk/content/frameset?viewtype=text&itemID=F1142&pageseq=1"
+    },
+    {
+      "text": "P. D. Drummond, G. B. Shapiro, M. Nikolić et S. M. Bögels, « Treatment Options for Fear of Blushing », Current Psychiatry Reports, vol. 22, n° 6, 2020.",
+      "url": "https://doi.org/10.1007/s11920-020-01152-5"
+    },
+    {
+      "text": "D. J. Stein et C. Bouwer, « Blushing and social phobia: a neuroethological speculation », Medical Hypotheses, vol. 49, n° 1, 1997, p. 101-108.",
+      "url": "https://doi.org/10.1016/S0306-9877(97)90260-7"
+    }
+  ]
+}
