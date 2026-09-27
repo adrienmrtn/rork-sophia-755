@@ -1,0 +1,135 @@
+{
+  "id": "course_242_pourquoi_a_t_on_le_hoquet",
+  "title": "Zakaj se nam kolca?",
+  "subtitle": "Refleksi in dihanje",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Krč trebušne prepone, glasilna špranja, ki se zaloputne, in tisti »hik«, ki ga ne moremo nadzorovati. Kaj se v telesu v resnici dogaja in zakaj nobeno zdravilo ni dokazano.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "child_hiccups_surprised_hand_over_mouth",
+    "ratio": "4:3",
+    "hook": "Svetujejo ti, naj zadržiš dih, piješ z glavo navzdol ali naj te kdo prestraši. A kaj se v resnici dogaja v tvojem telesu?"
+  },
+  "sections": [
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kolca se vsem, od dojenčkov do dedkov, in vsak pozna zanesljivo zdravilo. Sosed prisega na kozarec vode, popit narobe, babica na žličko sladkorja. Kljub temu ostaja kolcanje eden najbolj skrivnostnih refleksov človeškega telesa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za tem drobnim »hik« se skriva natančen mehanizem: živci, mišica, ki se skrči brez opozorila, in vrata, ki se v grlu zaloputnejo. Tole medicina o njem ve in tole še vedno ne."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+      "title": "Refleks, ki obide možgane",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za kolcanje je odgovoren [[refleksni lok]], živčna pot, ki sproži odziv brez zavestne odločitve. Isti mehanizem ti požene nogo v zrak, ko zdravnik udari pod koleno, ali umakne roko z vroče plošče, še preden začutiš bolečino."
+        },
+        {
+          "type": "image",
+          "asset": "mouse_diaphragm_muscle_fibres_microscopy",
+          "ratio": "auto",
+          "caption": "Trebušna prepona pod mikroskopom: progasta mišica, kakršne so mišice rok in nog."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ko so živci, ki povezujejo možgane z dihalnimi mišicami, razdraženi, se [[trebušna prepona]] sunkovito skrči. Zrak šine v pljuča. Delček sekunde pozneje se [[glasilna špranja]], odprtina med glasilkama, nenadoma zapre. Prav ta udarec ustvari »hik«."
+        },
+        {
+          "type": "funFact",
+          "text": "Znanstveno ime za kolcanje je *singultus*, latinska beseda, ki pomeni tudi ihtenje. Zato ni nič čudnega, da otroke po dolgem joku pogosto strese kolcanje."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+      "title": "Od zarodka do dedka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Večina kolcanj je **prehodnih**: trajajo manj kot **48 ur** in minejo sama od sebe. Sprožilci so vsakdanji: prehitro hranjenje, gazirane pijače, požiranje zraka ali alkohol. Karkoli raztegne želodec ali razdraži bližnje živce, lahko sproži refleks."
+        },
+        {
+          "type": "image",
+          "asset": "fetal_ultrasound_scan_pregnancy",
+          "ratio": "2:1",
+          "caption": "Na ultrazvoku je mogoče videti, kako se plodu kolca, še dolgo pred prvim vdihom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kolca se nam lahko v vsaki starosti, celo pred rojstvom. Ultrazvočni posnetki kažejo plodove, ki se jim kolca v materinem trebuhu. Ti zagotovo ne jedo prehitro. Ena od hipotez: s temi krči naj bi urili dihalne mišice, kot generalka pred prvim požirkom zraka."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+      "title": "Ko se kolcanje ne ustavi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Včasih se kolcanje zasidra. Če traja več kot **dva dneva**, govorimo o **vztrajnem** kolcanju, po več kot **enem mesecu** pa nastopi [[refraktarno kolcanje]]. Te redke oblike pogosto kažejo na nekaj drugega: bolezen želodca ali požiralnika, težave s pljuči ali okvaro osrednjega živčevja."
+        },
+        {
+          "type": "paragraph",
+          "text": "V takih primerih zdravnik išče vzrok in predpiše zdravljenje, včasih zdravila, ki pomirijo refleksni krog. Kolcanje tedaj ni več mimobežna nadloga, temveč simptom, ki onemogoča hranjenje, spanje in govor."
+        },
+        {
+          "type": "funFact",
+          "text": "Rekord v najdaljšem kolcanju drži ameriški kmet [[Charles Osborne]], ki je po Guinnessovi knjigi rekordov kolcal brez prestanka od **1922 do 1990**, torej 68 let. Kljub temu se je uspel dvakrat poročiti in imeti osem otrok."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+      "title": "Na desetine zdravil, nobeno dokazano",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dobra novica pri prehodnem kolcanju je, da mine samo. Manj dobra: nobenega domačega zdravila ni potrdila resna študija. Zadrževanje diha, pitje hladne vode, vlečenje jezika, dihanje v vrečko... Vse to temelji na pričevanjih, ne na dokazih."
+        },
+        {
+          "type": "image",
+          "asset": "glass_of_cold_water_home_remedy_hiccups",
+          "ratio": "3:2",
+          "caption": "Kozarec hladne vode: najbolj razširjeno zdravilo in eno najmanj raziskanih."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ti triki imajo vendarle skupno logiko: zmotijo refleksni krog. Zadrževanje diha poveča količino ogljikovega dioksida v krvi in pomiri prepono. Požiranje ali vlečenje jezika spodbudi živce v grlu in lahko krog »ponastavi«. Včasih deluje. Zakaj, v resnici nihče ne ve."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kolcanje je refleks: prepona se skrči, glasilna špranja se zapre, »hik«. Skoraj vedno je mimobežno, po 48 urah pa postane simptom. Nobeno domače zdravilo ni dokazano, čeprav vsa skušajo prekiniti refleksni krog."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Alimentary Pharmacology & Therapeutics (Wiley), revue sur la physiopathologie et le traitement du hoquet.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.13374"
+    },
+    {
+      "text": "Cleveland Clinic, « Hiccups ».",
+      "url": "https://my.clevelandclinic.org/health/diseases/17672-hiccups"
+    },
+    {
+      "text": "Guinness World Records, « Longest attack of hiccups ».",
+      "url": "https://www.guinnessworldrecords.com/world-records/67619-longest-attack-of-hiccups"
+    }
+  ]
+}
