@@ -9,6 +9,10 @@ nouveau binaire : le bouton « Soumettre pour examen » sur chaque produit suffi
 Deux produits déjà approuvés n'ont rien à faire chez Apple : `Sophia_yearly_5999` et
 `Sophia_monthly_notrial` (à rattacher à l'entitlement dans RevenueCat seulement).
 
+> **État au 27/09** : tout ce document a été exécuté par le workflow. Les 7 produits existent,
+> la grille de prix est vérifiée, la soumission du groupe est lancée. Les § 1 à 5 restent comme
+> référence de ce qui a été créé ; le § 6 (Play Console) reste à faire à la main.
+
 ## 0. Option automatisée (GitHub Actions)
 
 Tout le § 1 à § 5 est scripté. Onglet **Actions → Pricing tests → Run workflow** :
