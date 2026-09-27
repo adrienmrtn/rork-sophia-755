@@ -521,6 +521,10 @@ un mensuel de palier est une question de vague 2.
 
 ## 8. Version R1 (iOS + Android) — soumission jeudi 01/10
 
+> **État au 27/09** : les six points ci-dessous sont implémentés sur la branche (voir
+> `docs/r1-notes-de-test.md` pour le détail, les deux API SDK à confirmer au build et la grille
+> de QA sur appareil). Compilation et QA restent à faire avant soumission.
+
 | # | Changement | iOS | Android | Pourquoi |
 | --- | --- | --- | --- | --- |
 | 1 | Paywalls `quizz`, `debloquer_cours`, `entrainement` : prendre `$rc_annual` / `$rc_monthly` dans `offerings.current` (offering servie par l'expérience), repli sur l'offering du contexte ; garder l'attribution d'impression au contexte | `StoreViewModel.annualPackage(forOfferingIdentifier:)`, `SophiaNativePaywalls.swift` | `StoreViewModel.kt`, `PaywallScreen.kt` | **Urgent pour la vague 1** : prix cohérent, plus de fuite vers 39,99 € |

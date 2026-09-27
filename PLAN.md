@@ -84,7 +84,7 @@ code iOS et Android. Coche les cases des actions que tu valides.
   (aucun `PaywallView` ni Customer Center utilisé) et, si plus rien ne l'utilise, le produit
   `RevenueCatUI` du projet Xcode.
 - [ ] Option : webhook RevenueCat vers une edge function Supabase (`is_premium`, `expires_at`).
-- [ ] Tests prix, version R1 (iOS + Android, soumission 01/10) : paywalls quiz / cours /
+- [ ] Tests prix, version R1 (iOS + Android, soumission 01/10) — **code livré sur la branche le 27/09, à compiler et tester (`docs/r1-notes-de-test.md`)** : paywalls quiz / cours /
   entraînement alignés sur l'offering servie par l'expérience (urgent) ; textes de repli sans
   prix codé en dur ; impressions vérifiées ; puis pour la vague 2 : package `$rc_weekly`, test
   discount côté app (bucket + attribut `discount_bucket`), durée d'essai dynamique.
