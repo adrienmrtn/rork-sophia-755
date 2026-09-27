@@ -1,0 +1,135 @@
+{
+  "id": "course_242_pourquoi_a_t_on_le_hoquet",
+  "title": "Zašto štucamo?",
+  "subtitle": "Refleksi i disanje",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Grč ošita, glotis koji se naglo zatvori i onaj „hik” koji ne možete obuzdati. Što tijelo zapravo radi i zašto nijedan lijek nije dokazan.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "child_hiccups_surprised_hand_over_mouth",
+    "ratio": "4:3",
+    "hook": "Kažu vam da zadržite dah, pijete naglavačke ili da vas netko prestraši. No što se zapravo događa u vašem tijelu?"
+  },
+  "sections": [
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svi štucaju, od novorođenčeta do djeda, i svatko zna neki siguran lijek. Susjed se kune u čašu vode popijenu naopako, baka u žličicu šećera. Ipak, štucanje ostaje jedan od najzagonetnijih refleksa ljudskog tijela."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iza malog „hik” krije se precizan mehanizam: živci, mišić koji se steže bez upozorenja i vrata koja se zalupe u grlu. Evo što medicina o tome zna, a što još ne zna."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+      "title": "Refleks koji zaobilazi mozak",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iza štucanja stoji [[refleksni luk]], živčani krug koji pokreće reakciju bez svjesne odluke. Isti mehanizam trzne vam nogu kad liječnik lupne ispod koljena ili vam povuče ruku s vruće ploče prije nego što ste uopće osjetili bol."
+        },
+        {
+          "type": "image",
+          "asset": "mouse_diaphragm_muscle_fibres_microscopy",
+          "ratio": "auto",
+          "caption": "Ošit pod mikroskopom: poprečnoprugasti mišić, poput mišića ruku i nogu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kad se nadraže živci koji povezuju mozak s dišnim mišićima, [[ošit]] se naglo stegne. Zrak nahrupi u pluća. Djelić sekunde kasnije [[glotis]], otvor između glasnica, naglo se zatvori. Upravo taj udar proizvodi „hik”."
+        },
+        {
+          "type": "funFact",
+          "text": "Znanstveni naziv za štucanje je *singultus*, latinska riječ koja znači i jecaj. Nije onda čudno što djecu nakon dugog plača često trese štucavica."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+      "title": "Od fetusa do djeda",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Većina štucanja je **prolazna**: traje kraće od **48 sati** i prestane samo od sebe. Okidači su svakodnevni: prebrzo jedenje, gazirana pića, gutanje zraka ili alkohol. Sve što rastegne želudac ili nadraži obližnje živce može pokrenuti refleks."
+        },
+        {
+          "type": "image",
+          "asset": "fetal_ultrasound_scan_pregnancy",
+          "ratio": "2:1",
+          "caption": "Na ultrazvuku se vidi kako fetus štuca, davno prije prvog udaha."
+        },
+        {
+          "type": "paragraph",
+          "text": "Štucamo u svakoj dobi, pa i prije rođenja. Ultrazvuk pokazuje fetuse koji štucaju u majčinoj utrobi. A oni sigurno ne jedu prebrzo. Jedna hipoteza: ti grčevi možda treniraju dišne mišiće, kao generalna proba prije prvog udisaja."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+      "title": "Kad štucanje ne prestaje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ponekad se štucanje ustali. Ako traje dulje od **dva dana**, govori se o **upornom** štucanju, a nakon **mjesec dana** o stanju koje se naziva [[tvrdokorno štucanje]]. Ti rijetki oblici često upućuju na nešto drugo: bolest želuca ili jednjaka, problem s plućima ili oštećenje središnjeg živčanog sustava."
+        },
+        {
+          "type": "paragraph",
+          "text": "U tim slučajevima liječnik traži uzrok i propisuje liječenje, ponekad lijekove koji smiruju refleksni krug. Štucanje tada više nije prolazna smetnja nego simptom koji onemogućuje jelo, spavanje i govor."
+        },
+        {
+          "type": "funFact",
+          "text": "Rekord za najdulje štucanje drži američki farmer [[Charles Osborne]], koji je prema Guinnessovoj knjizi rekorda štucao bez prestanka **od 1922. do 1990. godine**, punih 68 godina. Ipak je stigao dvaput se oženiti i dobiti osmero djece."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+      "title": "Deseci lijekova, nijedan dokazan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dobra vijest o prolaznom štucanju jest da nestane samo. Manje dobra: nijedan bakin lijek nije potvrdila ozbiljna studija. Zadržavanje daha, hladna voda, povlačenje jezika, disanje u vrećicu... Sve to počiva na svjedočanstvima, a ne na dokazima."
+        },
+        {
+          "type": "image",
+          "asset": "glass_of_cold_water_home_remedy_hiccups",
+          "ratio": "3:2",
+          "caption": "Čaša hladne vode: najrašireniji lijek i jedan od najslabije istraženih."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ti trikovi ipak imaju zajedničku logiku: remete refleksni krug. Zadržavanje daha povećava ugljikov dioksid u krvi i smiruje ošit. Gutanje ili isplaženi jezik podražuju živce u grlu i mogu „resetirati” krug. Ponekad upali. A da se zapravo ne zna zašto."
+        },
+        {
+          "type": "takeaway",
+          "text": "Štucanje je refleks: ošit se stegne, glotis se zatvori, „hik”. U gotovo svim slučajevima prolazno, nakon 48 sati postaje simptom. Nijedan kućni lijek nije dokazan, iako svi nastoje prekinuti taj krug."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Alimentary Pharmacology & Therapeutics (Wiley), revue sur la physiopathologie et le traitement du hoquet.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.13374"
+    },
+    {
+      "text": "Cleveland Clinic, « Hiccups ».",
+      "url": "https://my.clevelandclinic.org/health/diseases/17672-hiccups"
+    },
+    {
+      "text": "Guinness World Records, « Longest attack of hiccups ».",
+      "url": "https://www.guinnessworldrecords.com/world-records/67619-longest-attack-of-hiccups"
+    }
+  ]
+}
