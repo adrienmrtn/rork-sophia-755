@@ -1,0 +1,151 @@
+{
+  "id": "course_247_pourquoi_les_momies_font_elles_peur",
+  "title": "Miksi muumiot pelottavat?",
+  "subtitle": "Haudasta valkokankaalle",
+  "subject": "mythologie",
+  "subcategory": "Legends & creatures",
+  "description": "Egyptiläiset balsamoivat vainajansa suojellakseen heitä, eivät pelotellakseen eläviä. Muumiosta tarvittiin apteekkareita, toimittajia ja Hollywood, ennen kuin siitä tuli hirviö.",
+  "author": "angela-bouma",
+  "hero": {
+    "image": "tutankhamun_golden_mask_egyptian_museum_cairo",
+    "ratio": "4:3",
+    "hook": "Ruumiin kuuluu kadota. Muumio kieltäytyy, ja juuri se häiritsee."
+  },
+  "sections": [
+    {
+      "id": "course_247_pourquoi_les_momies_font_elles_peur_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Useimmat ruumiit maatuvat. Muumio ei. Se on selvästi kuollut, mutta näyttää yhä ihmiseltä: iho, hiukset, hampaat ja kasvonpiirteet voivat säilyä **vuosisatoja**. Sen herättämä pelko ei johdu väkivallasta vaan ruumiista, joka itsepintaisesti kieltäytyy katoamasta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tunnetuin on **egyptiläinen** muumio, mutta monet ilmastot säilövät ruumiita. Aavikko, jää, suot ja suola tekevät sen luonnostaan. Tarkoituksellinen [[muumiointi]] saa aikaan saman tuloksen: ruumis kuivataan, elimet poistetaan ja kaikki peitetään hartseilla ja kääreillä. Kummassakin tapauksessa ruumis pysyy tallella kauan sen jälkeen, kun kuoleman olisi pitänyt viedä se."
+        }
+      ]
+    },
+    {
+      "id": "course_247_pourquoi_les_momies_font_elles_peur_p1",
+      "title": "Ruumiin säilyttäminen tuonpuoleista varten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mikään maa ei liity muumioihin niin kiinteästi kuin **Egypti**. Perinne muotoutui siellä tuhansien vuosien kuluessa yhdessä kuolemaa ja tuonpuoleista koskevien uskomusten kanssa. Kun ruumis säilyi, vainaja saattoi jatkaa olemassaoloaan. Siksi ruumis oli egyptiläisten hautajaisriittien keskiössä."
+        },
+        {
+          "type": "image",
+          "asset": "anubis_embalming_mummy_sennedjem_tomb_painting",
+          "ratio": "3:2",
+          "caption": "Sakaalinpäinen jumala Anubis balsamoi muumiota. Sennedjemin hauta, Deir el-Medina."
+        },
+        {
+          "type": "paragraph",
+          "text": "Varhaisimmissa haudoissa luotettiin aavikon kuivaan kuumuuteen. Vähitellen balsamoijat hioivat menetelmiään. [[Uuden valtakunnan]] aikana, noin vuosina **1550-1070** eKr., varakkaat egyptiläiset saivat perusteellisen käsittelyn: elimet poistettiin ja säilytettiin erikseen, ruumis kuivattiin [[natronilla]], voideltiin öljyillä ja käärittiin pellavaan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mikään tästä ei tähdännyt hirviön luomiseen. Muumio edusti **säilymistä** ja uskonnollista jatkuvuutta järjestelmässä, joka oli luotu suojelemaan kuolleita eikä pelottelemaan eläviä. Merkitys muuttui vasta, kun muumio lähti paikasta, jota varten se oli tehty."
+        }
+      ]
+    },
+    {
+      "id": "course_247_pourquoi_les_momies_font_elles_peur_p2",
+      "title": "Pyhästä jäänteestä jauhetuksi lääkkeeksi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merkitys muuttui heti, kun muumiot päätyivät **Eurooppaan**. Keskiajalla ja uuden ajan alussa eurooppalaiset kohtasivat ne kaupan, matkojen ja muinaisesineiden tutkimuksen kautta. Egyptin kaukaiset ja huonosti ymmärretyt riitit alkoivat näyttää pelkästään salaperäisiltä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oudoin käänne tuli lääketieteestä. Bitumimaista ainetta tarkoittava arabian sana **mūmiyā** alkoi Euroopan markkinoilla liittyä egyptiläisiin muumioihin. Jo keskiajalla muumiojauhetta, jota myytiin nimellä [[mumia]], pidettiin aitona lääkkeenä, jota lääkärit ja apteekkarit määräsivät kaikenlaisiin vaivoihin. Vuosisatojen ajan oikeita muumioita siis myytiin ja jauhettiin lääkkeeksi. Pyhästä ruumiista oli tullut **kauppatavaraa**."
+        },
+        {
+          "type": "image",
+          "asset": "mumia_apothecary_jar_powdered_mummy_medicine",
+          "ratio": "3:4",
+          "caption": "Egyptiläinen kanooppiastia, johon balsamoinnissa poistetut elimet pantiin, nykyään Lontoossa (Wellcome Collection)."
+        },
+        {
+          "type": "funFact",
+          "text": "Viktoriaanisella ajalla taidemaalarit käyttivät ”muumionruskeaksi” kutsuttua pigmenttiä, joka valmistettiin oikeista jauhetuista muumioista. Kun taiteilijat saivat tietää, mistä väri oli tehty, jotkut kuulemma hautasivat maaliputkilonsa vastalauseena."
+        }
+      ]
+    },
+    {
+      "id": "course_247_pourquoi_les_momies_font_elles_peur_p3",
+      "title": "Tutankhamonin kirous",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Egyptiläisissä haudoissa on toisinaan varoituksia tunkeilijoille. Muinaista uskoa yliluonnolliseen kiroukseen, joka tappaisi kenet tahansa haudan avaajan, ei kuitenkaan koskaan ollut. **Muumion kirous** on moderni keksintö, joka syntyi tarinoista ja sensaatiolehdistöstä eikä egyptiläisestä uskonnosta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vuonna **1922** brittiläinen arkeologi [[Howard Carter]] löysi [[Tutankhamonin]] haudan. Silloin myytti juurtui. Kaivauksia rahoittanut [[Lordi Carnarvon]] kuoli seuraavana vuonna sairauden seurauksena. Sanomalehdet yhdistivät hänen kuolemansa haudan oletettuun kiroukseen, ja sattumasta tuli legenda. Tarina pysyy hengissä, koska se on puoliksi totta: oikea hauta, oikea muumio ja oikea kuolema, punottuina yliluonnolliseen kertomukseen, jota tosiasiat eivät ole koskaan tukeneet."
+        }
+      ]
+    },
+    {
+      "id": "course_247_pourquoi_les_momies_font_elles_peur_p4",
+      "title": "Se, mikä ei suostu pysymään haudattuna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elokuva viimeisteli muodonmuutoksen. Vuonna **1932** *Muumio*, jonka pääosassa oli [[Boris Karloff]], teki arkeologisesta esineestä hirviön, joka liikkuu, jahtaa ja kostaa. Kaikki myöhemmät muumioelokuvat ammentavat siitä. Kääreistä, haudasta ja laahustavista askelista tuli pikakirjoitusta aina, kun tarina haluaa sanoa ”vaara menneisyydestä”."
+        },
+        {
+          "type": "image",
+          "asset": "the_mummy_1932_film_poster_boris_karloff",
+          "ratio": "2:3",
+          "caption": "Elokuvan Muumio (1932) amerikkalainen juliste, pääosassa Boris Karloff."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "n. 1550-1070 eKr.",
+              "title": "Uusi valtakunta",
+              "detail": "Varakkaat egyptiläiset saavat perusteellisen balsamoinnin."
+            },
+            {
+              "date": "Keskiaika",
+              "title": "Mumia apteekissa",
+              "detail": "Muumiojauhetta myydään lääkkeenä Euroopassa."
+            },
+            {
+              "date": "1922",
+              "title": "Tutankhamonin hauta",
+              "detail": "Howard Carter avaa hautakammion."
+            },
+            {
+              "date": "1923",
+              "title": "Lordi Carnarvonin kuolema",
+              "detail": "Sanomalehdet puhuvat kirouksesta."
+            },
+            {
+              "date": "1932",
+              "title": "Muumio valkokankaalla",
+              "detail": "Boris Karloff tekee muumiosta hirviön."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Todellinen kauhu ei ole egyptiläinen uskonto vaan se, mitä tuli sen jälkeen: ruumis, joka säilöttiin turvaamaan paikka tuonpuoleisessa, riistetään tästä merkityksestä, ja siitä tulee menneisyyden symboli, joka ei suostu pysymään haudattuna. Kääreiden alla muumiolla on yhä **ihmisen kasvot**, ja juuri siksi se häiritsee. Ruumiin kuuluu kadota. Muumio ei katoa, ja se riittää, vaikka kukaan ei enää usko kirouksiin."
+        },
+        {
+          "type": "takeaway",
+          "text": "Vainajaa suojelemaan tehdystä muumiosta tuli pelottava vasta, kun se revittiin haudastaan: se jauhettiin lääkkeeksi, lehdistö paisutti sen legendaksi ja lopulta elokuva herätti sen henkiin."
+        }
+      ]
+    }
+  ]
+}
