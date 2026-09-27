@@ -30,6 +30,8 @@ Tout le § 1 à § 5 est scripté. Onglet **Actions → Pricing tests → Run wo
 6. `revenuecat · plan` puis `apply` : crée les produits dans RevenueCat (App Store et Play),
    rattache tout à `premium` (y compris les deux produits de juillet), crée les 13 offerings
    et leurs packages.
+7. `revenuecat-experiments · plan` puis `apply` : 5 audiences pays (iOS) et 5 expériences en
+   brouillon ; Start à la main le jour de la validation Apple.
 
 Secrets requis dans le repo : `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_PRIVATE_KEY` (déjà utilisés
 par le workflow « App Store metadata ») et `REVENUECAT_SECRET_API_KEY` (clé v2 avec droits
