@@ -1,0 +1,121 @@
+{
+  "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix",
+  "title": "Zašto mrzimo slušati svoj snimljeni glas?",
+  "subtitle": "Zvuk vlastitog ja",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Na snimci ti glas zvuči strano, gotovo neugodno. Krivac nije mikrofon: kriva je tvoja lubanja i način na koji tvoj mozak prepoznaje sam sebe.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "studio_microphone_headphones_voice_recording",
+    "ratio": "4:3",
+    "hook": "Snimke prijatelja ne smetaju ti. Ali zbog vlastitog glasa u glasovnoj poruci se trgneš. Zašto baš taj zvuk zvuči lažno?"
+  },
+  "sections": [
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Što je to „ja”? Filozofi, znanstvenici i umjetnici to se pitaju stoljećima. Da bi ga proučavali, istraživači se često služe slikom lica, koje svatko prepozna na prvi pogled. No glas je jednako važan za osjećaj da smo to mi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Otuda paradoks. Snimke prijatelja ili obitelji gledamo bez muke. A onda stigne glasovna poruka koju smo sami snimili i ustuknemo: to nije moj glas. A ipak jest. Da bismo shvatili zašto, treba pratiti put zvuka."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p1",
+      "title": "Govoriti i čuti: zrak koji titra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Govor počinje naletom zraka. Ošit potiskuje zrak iz pluća prema grlu. Prolazeći kroz grlo, zrak vrlo brzo zatitra [[glasnice]]: te vibracije, više ili niže, putuju uz grlo. Usta i jezik zatim ih oblikuju u glasove i riječi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Slušanje je obrnut put. Većinu zvukova do nas prenosi [[zračna vodljivost]]: valovi prolaze zvukovodom i zatitraju bubnjić, koji te vibracije prenosi sićušnim koščicama srednjeg uha. Pojačane, one stižu u unutarnje uho, gdje ih prima [[pužnica]]. U njoj tisuće osjetnih stanica savijaju svoje nakostriješene [[stereocilije]] i stvaraju električni signal. Slušni živac nosi ga do mozga, koji ga prepoznaje i razvrstava."
+        },
+        {
+          "type": "image",
+          "asset": "cochlea_stereocilia_hair_cells_electron_micrograph",
+          "ratio": "4:5",
+          "caption": "Mišje pužnice pod elektronskim mikroskopom, normalna (lijevo) i mutirana: redovi osjetnih stanica nakostriješenih stereocilijama."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p2",
+      "title": "Slušati sebe kroz kosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kad slušamo vlastitu snimku, sve prolazi zračnom vodljivošću, kao i kod svakog drugog zvuka. No kad govorimo, pridružuje se drugi kanal: [[koštana vodljivost]]. Mehaničke vibracije glasa šire se izravno kroz kosti lubanje do unutarnjeg uha, zaobilazeći bubnjić i srednje uho."
+        },
+        {
+          "type": "image",
+          "asset": "tuning_fork_weber_test_bone_conduction_skull",
+          "ratio": "3:4",
+          "caption": "Glazbena vilica prislonjena na lubanju tijekom pretrage sluha: zvuk prolazi kroz kost, a ne kroz zrak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pužnica, dakle, prima dva signala istodobno, jedan iz zraka i drugi iz kostiju, i oba pretvara u poruke za mozak. U stvarnom vremenu tvoj je glas bogatiji i složeniji zvuk od svega što mikrofon može uhvatiti. Snimka prenosi samo dio njega."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p3",
+      "title": "Jeziva dolina",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ostaje objasniti nelagodu. Istraživači još nemaju konačan odgovor, ali jedna je zamisao privlačna: učinak koji se naziva [[jeziva dolina]]. Pojam potječe iz robotike i animacije. Što je umjetno stvorenje sličnije čovjeku, to nam se čini poznatijim i simpatičnijim. Do određene granice."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kad oponašanje postane vrlo blisko, ali ne i savršeno, simpatija se pretvara u nelagodu, pa čak i u odbojnost. A snimka prenosi samo zračni dio našeg glasa, bez bogatstva koštane vodljivosti. Čujemo najvažnije, ali ne sve. Mozak se nađe u jezivoj dolini: to sam gotovo „ja”, ali ne sasvim."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p4",
+      "title": "Jedan glas, tisuću inačica tebe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jeziva dolina ne objašnjava sve. Snimka pokazuje i samo jedno lice načina na koji se predstavljamo drugima. Jer glas nije nepromjenjiv: neprestano ga prilagođavamo kontekstu, često i ne razmišljajući, a osjećaj sebe gradi se na svim tim varijacijama odjednom."
+        },
+        {
+          "type": "funFact",
+          "text": "U poslovnom okruženju rado spuštamo ton kako bismo djelovali staloženije. Pred bebom ili kućnim ljubimcem glas nam se penje u visine. Usta, jezik i usne mijenjaju postavke, a s njima i inačicu „sebe” koju dajemo drugima da čuju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Doživljaj sebe, dakle, složena je tvorevina sastavljena od desetaka različitih glasova. Mozak nema nijedan jedinstveni uzorak s kojim bi usporedio snimku. Ono što čuje dolazi iz mikrofona bez prolaska kroz kosti, zamrznuto u jednom registru: dovoljno blisko da se prepozna, previše drukčije da se prihvati kao svoje."
+        },
+        {
+          "type": "takeaway",
+          "text": "Tvoj snimljeni glas zvuči lažno jer mu nedostaje koštana vodljivost koju dodaje tvoja lubanja dok govoriš i jer zamrzava samo jednu od tisuću inačica tebe: dovoljno blisku da je prepoznaš, ali ne toliko da je prihvatiš."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "M. Kimura et Y. Yotsumoto, « Auditory traits of \"own voice\" », PLOS ONE, vol. 13, n° 6, 2018, e0199443.",
+      "url": "https://doi.org/10.1371/journal.pone.0199443"
+    },
+    {
+      "text": "NIDCD (National Institute on Deafness and Other Communication Disorders), « How Do We Hear? ».",
+      "url": "https://www.nidcd.nih.gov/health/how-do-we-hear"
+    }
+  ]
+}
