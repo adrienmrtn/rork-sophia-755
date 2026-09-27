@@ -2,19 +2,136 @@
   "_comment": "Auteurs des cours (profs). Source : export de la plateforme auteurs. `slug` est la clé référencée par le champ `author` des cours. `title` (ligne de pedigree) et `bio` sont localisés par code langue ; l'app retombe sur `en` puis `fr` quand la langue manque. `photo` est le nom de fichier (sans extension) dans ios/Sophia/Resources/AuthorPhotos ; null = initiales.",
   "authors": [
     {
-      "slug": "dusan-nikolic",
-      "name": "Dusan Nikolic",
-      "photo": "author_dusan_nikolic",
-      "institution": "University of Belgrade",
-      "country": "RS",
+      "slug": "rana-abdalla",
+      "name": "Rana Abdalla",
+      "photo": "author_rana_abdalla",
+      "institution": "Jeonbuk National University",
+      "country": "KR",
       "links": {},
       "title": {
-        "fr": "Historien de l'art, master de l'université de Belgrade",
-        "en": "Art historian, MA in Art History, University of Belgrade"
+        "fr": "Doctorante en ingénierie des systèmes industriels, université nationale Jeonbuk",
+        "en": "PhD candidate in Industrial Systems Engineering, Jeonbuk National University"
       },
       "bio": {
-        "fr": "Historien de l'art installé à Belgrade, il s'intéresse surtout à l'art byzantin et à l'art européen de la fin du XIXe siècle.",
-        "en": "Art historian from Belgrade with a main interest in Byzantine and late nineteenth-century European art."
+        "fr": "Doctorante en ingénierie des systèmes industriels à l'université nationale Jeonbuk (Corée du Sud), formée en génie chimique, environnemental et énergétique. Ses recherches portent sur les approches fondées sur les données appliquées à l'énergie, au développement durable et aux systèmes industriels.",
+        "en": "PhD candidate in industrial systems engineering at Jeonbuk National University, South Korea, with a background in chemical, environmental and energy engineering. Her research focuses on data-driven approaches to energy, sustainability and industrial systems."
+      }
+    },
+    {
+      "slug": "ezgi-gizem-berkay",
+      "name": "Ezgi Gizem Berkay",
+      "photo": null,
+      "institution": "Istanbul Kent University",
+      "country": "TR",
+      "links": {
+        "orcid": "https://orcid.org/0000-0002-1967-705X",
+        "scholar": "https://scholar.google.com/citations?user=vST_YxUAAAAJ"
+      },
+      "title": {
+        "fr": "Médecin, docteure en génétique médicale, master d'histoire ancienne, université Kent d'Istanbul",
+        "en": "MD, PhD in Medical Genetics, MA in Ancient History, Istanbul Kent University"
+      },
+      "bio": {
+        "fr": "Médecin et généticienne (doctorat de médecine et de génétique, université d'Istanbul), elle s'est ensuite formée à l'histoire, avec une licence d'histoire et un master d'histoire ancienne. Elle enseigne à l'université Kent d'Istanbul.",
+        "en": "Physician and geneticist (MD and PhD, Istanbul University) who then trained as a historian, with a BA in History and an MA in Ancient History. She teaches at Istanbul Kent University."
+      }
+    },
+    {
+      "slug": "angela-bouma",
+      "name": "Angela Bouma",
+      "photo": null,
+      "institution": "Barton Community College",
+      "country": "US",
+      "links": {},
+      "title": {
+        "fr": "Professeure d'histoire et podcasteuse, Barton Community College",
+        "en": "History professor and podcaster, Barton Community College"
+      },
+      "bio": {
+        "fr": "Docteure en histoire (Liberty University, 2026), elle enseigne l'histoire au Barton Community College et anime un podcast.",
+        "en": "PhD in History (Liberty University, 2026), she teaches history at Barton Community College and hosts a podcast."
+      }
+    },
+    {
+      "slug": "benjamin-campbell",
+      "name": "Benjamin Campbell",
+      "photo": null,
+      "institution": "Queen's University Belfast",
+      "country": "GB",
+      "links": {},
+      "title": {
+        "fr": "Chercheur en archéologie et auteur, Queen's University Belfast",
+        "en": "Archaeology researcher and writer, Queen's University Belfast"
+      },
+      "bio": {
+        "fr": "Chercheur en archéologie et auteur, spécialiste des migrations européennes de l'âge du bronze et de l'histoire médiévale. Son travail suit la circulation des peuples et des idées, de la mobilité préhistorique aux paysages mouvants du Moyen Âge.",
+        "en": "Archaeology researcher and writer specialising in Bronze Age European migrations and medieval history. His work follows the movement of ancient peoples and ideas, from prehistoric mobility to the shifting landscapes of the Middle Ages."
+      }
+    },
+    {
+      "slug": "nathan-hewitt",
+      "name": "Nathan Hewitt",
+      "photo": null,
+      "institution": "University of Oxford",
+      "country": "GB",
+      "links": {},
+      "title": {
+        "fr": "Doctorant en histoire globale et impériale, université d'Oxford",
+        "en": "Doctoral candidate in Global and Imperial History, University of Oxford"
+      },
+      "bio": {
+        "fr": "Historien de l'Empire britannique entre 1815 et 1914. Formé en histoire ancienne et moderne à Oxford, titulaire d'un master d'histoire de l'université de Cardiff, il achève un doctorat d'histoire globale et impériale à l'université d'Oxford.",
+        "en": "Historian of the British Empire between 1815 and 1914. He studied ancient and modern history at Oxford, took an MA in history at Cardiff and is now completing a DPhil in global and imperial history at the University of Oxford."
+      }
+    },
+    {
+      "slug": "mark-n-hoffman",
+      "name": "Mark N. Hoffman",
+      "photo": "author_mark_n_hoffman",
+      "institution": "Saint Xavier University, Chicago",
+      "country": "US",
+      "links": {
+        "site": "https://umn.academia.edu/MarkHoffman"
+      },
+      "title": {
+        "fr": "Docteur en science politique (université du Minnesota), professeur à l'université Saint Xavier de Chicago",
+        "en": "PhD in Political Science, University of Minnesota; professor at Saint Xavier University, Chicago"
+      },
+      "bio": {
+        "fr": "Mark N. Hoffman enseigne la science politique à l'université Saint Xavier de Chicago, après avoir enseigné aux collèges Vassar et Macalester. Il est docteur en science politique de l'université du Minnesota et titulaire d'un master de théorie politique et de critique sociale de la Queen's University de Belfast.",
+        "en": "Mark N. Hoffman teaches political science at Saint Xavier University in Chicago and previously taught at Vassar and Macalester colleges. He holds a PhD in political science from the University of Minnesota and an MA in political theory and social criticism from Queen's University Belfast."
+      }
+    },
+    {
+      "slug": "myra-houser",
+      "name": "Myra Houser",
+      "photo": null,
+      "institution": null,
+      "country": "US",
+      "links": {},
+      "title": {
+        "fr": "Historienne",
+        "en": "Historian"
+      },
+      "bio": {
+        "fr": "Historienne installée aux États-Unis. Ses cours reviennent sur les tournants du XXe siècle, du pont aérien de Berlin à la chute de l'URSS.",
+        "en": "Historian based in the United States. Her courses revisit the turning points of the twentieth century, from the Berlin airlift to the fall of the USSR."
+      }
+    },
+    {
+      "slug": "elizabeth-singer-hunt",
+      "name": "Elizabeth Singer Hunt",
+      "photo": "author_elizabeth_singer_hunt",
+      "institution": "SOAS, University of London",
+      "country": null,
+      "links": {},
+      "title": {
+        "fr": "Autrice primée, master d'études sud-est asiatiques, SOAS (université de Londres)",
+        "en": "Award-winning author, MA in Southeast Asian Studies, SOAS University of London"
+      },
+      "bio": {
+        "fr": "Autrice à succès de plus de vingt livres publiés dans le monde entier, dont une série en cours d'adaptation pour la télévision. Son travail couvre l'histoire, l'art, la géographie, la culture et l'espionnage.",
+        "en": "Bestselling author of more than twenty internationally published books, including a series currently being adapted for television. Her work spans history, art, geography, culture and espionage."
       }
     },
     {
@@ -34,19 +151,121 @@
       }
     },
     {
-      "slug": "angela-bouma",
-      "name": "Angela Bouma",
-      "photo": null,
-      "institution": "Barton Community College",
-      "country": "US",
-      "links": {},
+      "slug": "simon-lea",
+      "name": "Simon Lea",
+      "photo": "author_simon_lea",
+      "institution": null,
+      "country": "GB",
+      "links": {
+        "site": "http://www.camus-society.com"
+      },
       "title": {
-        "fr": "Professeure d'histoire et podcasteuse, Barton Community College",
-        "en": "History professor and podcaster, Barton Community College"
+        "fr": "Docteur en philosophie, chercheur indépendant",
+        "en": "PhD in Philosophy, independent scholar"
       },
       "bio": {
-        "fr": "Docteure en histoire (Liberty University, 2026), elle enseigne l'histoire au Barton Community College et anime un podcast.",
-        "en": "PhD in History (Liberty University, 2026), she teaches history at Barton Community College and hosts a podcast."
+        "fr": "Docteur en philosophie, Simon Lea a cofondé l'Albert Camus Society. Depuis plus de vingt ans, il travaille à faire connaître la philosophie, la littérature philosophique et l'art à un large public. Il s'intéresse particulièrement à Camus, à Nietzsche, à l'existentialisme, à l'absurde et au mythe.",
+        "en": "Simon Lea holds a PhD in philosophy and co-founded the Albert Camus Society. For more than twenty years he has worked to bring philosophy, philosophical literature and art to a wider public. His special interests include Camus, Nietzsche, existentialism, absurdism and myth."
+      }
+    },
+    {
+      "slug": "dusan-nikolic",
+      "name": "Dusan Nikolic",
+      "photo": "author_dusan_nikolic",
+      "institution": "University of Belgrade",
+      "country": "RS",
+      "links": {},
+      "title": {
+        "fr": "Historien de l'art, master de l'université de Belgrade",
+        "en": "Art historian, MA in Art History, University of Belgrade"
+      },
+      "bio": {
+        "fr": "Historien de l'art installé à Belgrade, il s'intéresse surtout à l'art byzantin et à l'art européen de la fin du XIXe siècle.",
+        "en": "Art historian from Belgrade with a main interest in Byzantine and late nineteenth-century European art."
+      }
+    },
+    {
+      "slug": "vedran-obucina",
+      "name": "Vedran Obucina",
+      "photo": null,
+      "institution": null,
+      "country": null,
+      "links": {},
+      "title": {
+        "fr": "Théologien anglican et historien, docteur en histoire",
+        "en": "Anglican theologian and historian, PhD in History"
+      },
+      "bio": {
+        "fr": "Théologien anglican et historien, docteur en histoire. Ses cours vont des débuts de l'Église aux frontières de l'Afrique moderne, des origines de la science-fiction au mythe des zombies.",
+        "en": "Anglican theologian and historian with a PhD in history. His courses range from the early Church to the borders of modern Africa, and from the origins of science fiction to the zombie myth."
+      }
+    },
+    {
+      "slug": "guido-manuel-de-la-torre-olvera",
+      "name": "Guido Manuel De La Torre Olvera",
+      "photo": "author_guido_manuel_de_la_torre_olvera",
+      "institution": "Slovak Academy of Sciences",
+      "country": "SK",
+      "links": {
+        "orcid": "https://orcid.org/0000-0002-5604-7452",
+        "scholar": "https://scholar.google.com/citations?user=2JjlNSIAAAAJ",
+        "site": "https://www.linkedin.com/in/guido-de-la-torre-91280164/"
+      },
+      "title": {
+        "fr": "Docteur en chimie inorganique, chimiste des matériaux, Académie slovaque des sciences",
+        "en": "PhD in Inorganic Chemistry, materials chemist, Slovak Academy of Sciences"
+      },
+      "bio": {
+        "fr": "Chercheur postdoctoral à l'Institut de chimie inorganique de l'Académie slovaque des sciences, à Bratislava. Il travaille sur le carbure et le nitrure de silicium, des céramiques assez dures pour couper l'acier, et cherche à les faire réagir à des températures bien plus basses que celles des manuels. Originaire d'Équateur, il s'est formé comme ingénieur chimiste à Guayaquil et à Budapest et a enseigné à l'université en Équateur et en Slovaquie.",
+        "en": "Postdoctoral researcher at the Institute of Inorganic Chemistry of the Slovak Academy of Sciences in Bratislava. He works on silicon carbide and silicon nitride, ceramics hard enough to cut steel, and on making them react at far lower temperatures than the textbooks assume. Originally from Ecuador, he trained as a chemical engineer in Guayaquil and Budapest and has taught at university level in Ecuador and Slovakia."
+      }
+    },
+    {
+      "slug": "ivana-toskovic",
+      "name": "Ivana Toskovic",
+      "photo": "author_ivana_toskovic",
+      "institution": "University of Belgrade",
+      "country": "RS",
+      "links": {},
+      "title": {
+        "fr": "Master d'études régionales sur les États-Unis, licence de relations internationales, université de Belgrade",
+        "en": "MSc in Regional Studies of the United States, BA in International Relations, University of Belgrade"
+      },
+      "bio": {
+        "fr": "Formée aux relations internationales à l'université de Belgrade, avec un master consacré aux États-Unis. Ses cours regardent comment se fabriquent la puissance et les frontières, des Balkans à la péninsule coréenne.",
+        "en": "Trained in international relations at the University of Belgrade, with a master's degree devoted to the United States. Her courses look at how power and borders are made, from the Balkans to the Korean peninsula."
+      }
+    },
+    {
+      "slug": "kate-waddams",
+      "name": "Kate Waddams",
+      "photo": null,
+      "institution": null,
+      "country": "GB",
+      "links": {},
+      "title": {
+        "fr": "Docteure en microbiologie moléculaire",
+        "en": "PhD in Molecular Microbiology"
+      },
+      "bio": {
+        "fr": "Après une licence de zoologie, elle a soutenu un doctorat de microbiologie moléculaire consacré à l'alimentation des ruminants. Elle poursuit depuis ses recherches en agriculture et écrit pour le monde agricole.",
+        "en": "After a degree in zoology, she completed a PhD in molecular microbiology on improving ruminant nutrition. She has since continued her research in agriculture and writes for the farming industry."
+      }
+    },
+    {
+      "slug": "muhammad-zaheer",
+      "name": "Muhammad Zaheer",
+      "photo": null,
+      "institution": null,
+      "country": "GB",
+      "links": {},
+      "title": {
+        "fr": "Docteur en chimie, maître de conférences et chercheur",
+        "en": "PhD in Chemistry, senior lecturer and researcher"
+      },
+      "bio": {
+        "fr": "Chimiste, universitaire, chercheur et enseignant, il s'intéresse de près à la vulgarisation scientifique. Ses centres d'intérêt vont des sciences et des technologies au développement durable et à l'éducation, avec le souci de rendre claires des idées scientifiques complexes.",
+        "en": "Chemist, university academic, researcher and educator with a strong interest in science communication. His interests span science, technology, sustainability and education, with a focus on making complex scientific ideas clear and accessible."
       }
     }
   ]
