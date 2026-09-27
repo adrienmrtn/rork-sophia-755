@@ -1,0 +1,131 @@
+{
+  "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la",
+  "title": "Miks Kuu Maast eemaldub?",
+  "subtitle": "3,8 cm aastas",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Igal aastal kaugeneb Kuu meist 3,8 cm, umbes sama kiiresti, kui kasvab küüs. Kuud lükkavad eemale meie ookeanid ning selle eest makstakse pikenevate päevade ja kaduma määratud täielike varjutustega.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "full_moon_rising_over_ocean_horizon",
+    "ratio": "4:3",
+    "hook": "Kuu eemaldub meist sama kiiresti, kui kasvavad meie küüned: ühel päeval ei ole täielik varjutus enam võimalik."
+  },
+  "sections": [
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kui kaugel on Kuu? Seda saab mõõta laseriga. Selle võimaldasid [[Apollo missioonid]]: nende käigus paigutasid astronaudid Kuu pinnale spetsiaalsed helkurid. Maalt saadavad teadlased nende poole laserimpulsse ja mõõdavad aega, mis kulub valgusel tagasijõudmiseks. Tulemus: Kuu asub meist keskmiselt umbes **385 000 km** kaugusel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kuid see kaugus pole muutumatu. Igal aastal eemaldub Kuu umbes **3,8 cm**, ligikaudu sama kiiresti, kui kasvavad meie küüned. Aastast aastasse on muutus pisike. Miljonite aastate jooksul see koguneb. Mis siis lükkab Kuud meist kaugemale?"
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p1",
+      "title": "Kuu kergitab ookeane",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nagu Maal, on ka Kuul [[gravitatsioon]], jõud, mis tõmbab kehi enda poole, Maa kaasa arvatud. Kuid see tõmme pole kõikjal ühesugune. Kuu poole jääv Maa külg tõmmatakse veidi tugevamini kui vastaskülg. Sellest erinevusest tekivad [[loodekühmud]]: kaks kerget ookeanipaisumist, üks Kuu pool ja teine vastasküljel."
+        },
+        {
+          "type": "image",
+          "asset": "mont_saint_michel_bay_high_tide_aerial",
+          "ratio": "3:2",
+          "caption": "Mont-Saint-Michel mõõna ajal: meri, mida Kuu kaks korda päevas kergitab, on kaugele taandunud."
+        },
+        {
+          "type": "paragraph",
+          "text": "Need kühmud ei asu täpselt Kuu all. Maa teeb ümber oma telje tiiru **24 tunniga**, Kuul aga kulub Maale tiiru tegemiseks umbes kuu. Kuna Maa pöörleb palju kiiremini, kannab ta kühmud Kuust veidi ettepoole. Sellel pisikesel nihkel on tohutu tähtsus: see laseb kühmul tõmmata Kuud ettepoole mööda tema teekonda, mis on [[orbiit]] ümber Maa."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p2",
+      "title": "Maa lükkab Kuud",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ookeanikühmul on mass ja seega ka oma gravitatsioon. Kuna see asub Kuust veidi eespool, tõmbab selle külgetõmme Kuud ümber Maa tiirlemise ajal kergelt ettepoole. See tõmme lisab Kuu orbiidile energiat. Selle asemel et samal rajal lihtsalt kiirendada, siirdub Kuu veidi laiemale orbiidile. Sellepärast kasvab tema keskmine kaugus igal aastal umbes **3,8 cm**."
+        },
+        {
+          "type": "image",
+          "asset": "apollo_11_lunar_laser_retroreflector_nasa_1969",
+          "ratio": "4:3",
+          "caption": "Apollo laserhelkur (National Air and Space Museumi eksemplar): samasugune mudel on Kuul olnud juulist 1969."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ükski salapärane jõud Kuud seega eemale ei tõuka. Energia tuleb Maa pöörlemisest. Meie planeedi pöörlemises peitub energia, [[pöörlemisenergia]], ja loodete kaudu annab Maa sellest vähehaaval osa Kuule üle. Tilluke tõuge, kuid see kordub iga pöördega."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p3",
+      "title": "Ka Maa aeglustub",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuule antud energial on oma hind. Maa kaotab järk-järgult väikese osa oma pöörlemisenergiast ja pöörleb seetõttu pisut aeglasemalt. Inimelu mastaabis on muutus märkamatu. Miljonite aastate jooksul see koguneb."
+        },
+        {
+          "type": "funFact",
+          "text": "Kauges minevikus pöörles Maa kiiremini: ööpäev kestis siis vähem kui praegused **24 tundi**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Looded teevad seega korraga kaht asja: nad lükkavad Kuud eemale ja pidurdavad Maa pöörlemist. Need pole kaks eraldi nähtust, vaid ühe ja sama Maa ja Kuu vahelise vahetuse kaks külge. See vahetus on kestnud miljardeid aastaid ja jätkub praegugi, iga loodetsükliga."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p4",
+      "title": "Täielike varjutuste lõpp",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "See aeglane taganemine muudab lõpuks midagi vaatemängulist meie taevas. Praegu on Päike umbes **400 korda** laiem kui Kuu. Ta on ka umbes 400 korda Maast kaugemal. Puhta kokkusattumuse tõttu paistavad need kaks taevakeha seega peaaegu ühesuurused. Tänu sellele saab Kuu Päikese täielikult katta ja nii tekib [[täielik päikesevarjutus]]."
+        },
+        {
+          "type": "image",
+          "asset": "total_solar_eclipse_corona_2017_nasa",
+          "ratio": "3:2",
+          "caption": "Vaade kosmoselaevalt Artemis II 2026. aasta aprillis: Kuu varjab Päikest ja nähtavale tuleb Päikese kroon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eemaldudes paistab Kuu veidi väiksemana. Umbes **600 miljoni aasta** pärast, võib-olla hiljemgi, ei tundu ta enam piisavalt suur, et Päikest täielikult varjata. Siis kaovad täielikud varjutused lõplikult. Kuu ei ole Maa küljest lahti pääsemas. Kuid tema aeglane taganemine meenutab, et isegi nii tuttav vaatepilt nagu öötaevas ei ole igavene."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kuu eemaldub **3,8 cm** aastas, sest looded kannavad talle üle osa Maa pöörlemisenergiast: meie päevad pikenevad ja 600 miljoni aasta pärast on täielikud varjutused kadunud."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "NASA Jet Propulsion Laboratory, « The Apollo Experiment That Keeps on Giving », 2019."
+    },
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, section 4.6 « Ocean Tides and the Moon », p. 116-119."
+    },
+    {
+      "text": "NASA Science, « Tidal Locking »."
+    },
+    {
+      "text": "NASA Science, « Eclipses and the Moon »."
+    }
+  ]
+}
