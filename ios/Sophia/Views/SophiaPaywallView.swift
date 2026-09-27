@@ -1,15 +1,19 @@
 import SwiftUI
 
-/// Identifiers for each paywall context. Each maps to a RevenueCat offering of the same
-/// name (so analytics + product attribution stay per-context) but is now rendered by a
-/// **native** SwiftUI paywall rather than a RevenueCat dashboard template.
+/// Identifiers for each paywall context, rendered by **native** SwiftUI paywalls rather than
+/// RevenueCat dashboard templates.
+///
+/// The price shown and charged always comes from the offering RevenueCat currently serves
+/// (`offerings.current`, which is what experiments swap), so a customer sees one price
+/// everywhere. The offering of the same name as the context is only a fallback when the
+/// current offering has no annual package; analytics keep the context in `context`.
 enum SophiaPaywallContext: String, Identifiable {
     case finOnboarding = "fin_onboarding"
     case offreDiscount = "offre_discount"
     case debloquerCours = "debloquer_cours"
     case quizz = "quizz"
-    /// Training-tab unlock. Its own analytics funnel, but purchases still attribute to the
-    /// `quizz` RevenueCat offering (see `offeringIdentifier`).
+    /// Training-tab unlock. Its own analytics funnel; its fallback offering is `quizz`
+    /// (see `offeringIdentifier`).
     case entrainement = "entrainement"
     /// Shown to someone who has cancelled and is running out their remaining period.
     /// It sells the standard annual package at an App Store promotional-offer price, so
@@ -18,7 +22,8 @@ enum SophiaPaywallContext: String, Identifiable {
 
     var id: String { rawValue }
 
-    /// RevenueCat offering identifier used for purchase attribution. Usually the raw value,
+    /// Fallback RevenueCat offering identifier for this context (see
+    /// `StoreViewModel.displayedOffering(forContextIdentifier:)`). Usually the raw value,
     /// but `.entrainement` reuses the shared `quizz` offering.
     var offeringIdentifier: String {
         switch self {
@@ -30,11 +35,11 @@ enum SophiaPaywallContext: String, Identifiable {
 
 /// Dispatcher that renders the appropriate native paywall for a given context.
 ///
-/// - `.offreDiscount` → `SophiaDiscountPaywall` (flash sale, `offre_discount`, 19,99 €/an).
+/// - `.offreDiscount` → `SophiaDiscountPaywall` (flash sale on the `offre_discount` offering).
 /// - `.entrainement` → `SophiaTrainingPaywall` (sells the spaced-repetition training method).
 /// - `.quizz` → `SophiaQuizPaywall` (auto-playing quiz demo, FAQ, activate-trial CTA).
 /// - `.debloquerCours` → `SophiaCourseUnlockPaywall` (rating, 6-courses/day stat, reviews, countdown).
-/// - `.finOnboarding` → `SophiaStandardPaywall` (single annual plan, 39,99 €/an, 3-day trial).
+/// - `.finOnboarding` → `SophiaStandardPaywall` (single annual plan, price and trial from the store).
 /// - `.retention` → `SophiaRetentionPaywall` (cancellation save, Apple promotional offer).
 struct SophiaPaywallView: View {
     let context: SophiaPaywallContext

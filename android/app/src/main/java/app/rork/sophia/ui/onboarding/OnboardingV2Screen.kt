@@ -191,12 +191,14 @@ fun OnboardingV2Screen(
         // the annual plan instead armed a "your trial ends tomorrow" reminder for someone
         // who had just bought a monthly plan with no trial at all.
         if (!storeViewModel.hasFreeTrial(purchased)) return
-        // RevenueCat rarely knows the expiry this early, so this arms an assumed 3-day
-        // trial; StoreViewModel re-aims it once the real expiration date arrives — and
-        // cancels it if the entitlement turns out not to be in a trial.
+        // RevenueCat rarely knows the expiry this early, so this arms a reminder for the
+        // trial length the bought product declares; StoreViewModel re-aims it once the real
+        // expiration date arrives — and cancels it if the entitlement turns out not to be in
+        // a trial.
         TrialReminderScheduler.scheduleTrialEndingReminder(
             context,
             storeViewModel.trialExpirationDate.value,
+            assumedTrialDays = storeViewModel.trialDays(purchased) ?: 3,
         )
     }
 
@@ -395,7 +397,7 @@ fun OnboardingV2Screen(
                         if (DeviceCapabilities.allowsLoginBypass()) advanceFromLogin()
                     },
                 )
-                OnboardingStep.Trial -> TrialStepsStep(language) { goTo(OnboardingStep.Reminder) }
+                OnboardingStep.Trial -> TrialStepsStep(language, storeViewModel.annualTrialDays()) { goTo(OnboardingStep.Reminder) }
                 OnboardingStep.Reminder -> ReminderStep(language, onContinue = { advanceFromReminder() })
                 OnboardingStep.Paywall -> {
                     LaunchedEffect(Unit) { sawPaywall = true }

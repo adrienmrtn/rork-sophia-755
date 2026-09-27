@@ -8,6 +8,7 @@ import org.json.JSONArray
 import org.json.JSONObject
 
 class AnalyticsService(context: Context) {
+    private val appContext = context.applicationContext
     private val prefs = context.getSharedPreferences("sophia_prefs", Context.MODE_PRIVATE)
     private val mixpanel: MixpanelAPI? = runCatching {
         MixpanelAPI.getInstance(context, AppConfig.MIXPANEL_TOKEN, true).also {
@@ -30,6 +31,7 @@ class AnalyticsService(context: Context) {
             mixpanel?.registerSuperProperties(
                 JSONObject()
                     .put("language", language)
+                    .put("discount_bucket", DiscountBucket.get(appContext))
                     .put("is_premium", isPremium)
                     .put("onboarding_completed", onboardingCompleted)
                     .put("unlocked_subjects", JSONArray(unlockedSubjects.toList())),
@@ -116,7 +118,10 @@ class AnalyticsService(context: Context) {
         track("paywall_dismissed", mapOf("context" to context, "duration_seconds" to durationSeconds))
 
     fun trackDiscountOfferViewed(source: String) =
-        track("discount_offer_viewed", mapOf("source" to source))
+        track(
+            "discount_offer_viewed",
+            mapOf("source" to source, "discount_bucket" to DiscountBucket.get(appContext)),
+        )
 
     fun trackPurchaseCompleted(context: String, offeringId: String? = null, packageId: String? = null) {
         track(

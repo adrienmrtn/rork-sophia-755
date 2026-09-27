@@ -617,20 +617,30 @@ internal fun ReminderStep(language: AppLanguage, onContinue: () -> Unit) {
 }
 
 @Composable
-internal fun TrialStepsStep(language: AppLanguage, onContinue: () -> Unit) {
+internal fun TrialStepsStep(language: AppLanguage, trialDays: Int = 3, onContinue: () -> Unit) {
     val context = LocalContext.current
     val haptics = rememberOnboardingHaptics()
-    val endDate = remember(language) {
-        java.time.LocalDate.now().plusDays(3).format(
+    val endDate = remember(language, trialDays) {
+        java.time.LocalDate.now().plusDays(trialDays.toLong()).format(
             // `Locale("sr")` resolves to Cyrillic, which put a Cyrillic month next to the
             // Latin text of Sophia's own Serbian table. `language.locale` pins the script.
             java.time.format.DateTimeFormatter.ofPattern("d MMMM", language.locale),
         )
     }
-    val steps = remember(language, endDate) {
+    val steps = remember(language, endDate, trialDays) {
         (0..3).map { i ->
+            // Steps 2 and 3 name the reminder day and the last day of the trial.
+            val dayNumber = when (i) {
+                2 -> (trialDays - 1).coerceAtLeast(1)
+                3 -> trialDays
+                else -> 0
+            }
             Triple(
-                StringStore.text(context, "onboardingV2.trial.step$i.title", language),
+                if (i >= 2) {
+                    StringStore.trialText(context, "onboardingV2.trial.step$i.title", language, dayNumber)
+                } else {
+                    StringStore.text(context, "onboardingV2.trial.step$i.title", language)
+                },
                 StringStore.text(context, "onboardingV2.trial.step$i.detail", language, endDate),
                 i,
             )

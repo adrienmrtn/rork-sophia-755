@@ -35,6 +35,7 @@ enum AnalyticsService {
         let mixpanel = Mixpanel.mainInstance()
         mixpanel.registerSuperProperties([
             "language": language.rawValue,
+            "discount_bucket": StoreViewModel.discountBucket.rawValue,
             "is_premium": isPremium,
             "onboarding_completed": onboardingCompleted,
             "unlocked_subjects": unlocked,
@@ -127,7 +128,10 @@ enum AnalyticsService {
     }
 
     static func trackDiscountOfferViewed(source: String) {
-        track("discount_offer_viewed", ["source": source])
+        track("discount_offer_viewed", [
+            "source": source,
+            "discount_bucket": StoreViewModel.discountBucket.rawValue,
+        ])
     }
 
     static func trackPurchaseCompleted(context: String, offeringId: String? = nil, packageId: String? = nil) {
