@@ -25,6 +25,7 @@ class StoreViewModel {
     var error: String?
 
     init() {
+        reportDiscountBucket()
         Task { await listenForUpdates() }
         Task { await loadOfferingsWithRetry() }
     }
@@ -145,10 +146,54 @@ class StoreViewModel {
         offerings?.current?.package(identifier: "$rc_annual")
     }
 
-    /// Offering behind the flash discount paywall. Explicit by design: it is never the
-    /// current offering, so an experiment on the onboarding price leaves it untouched.
+    // MARK: - Discount A/B bucket
+
+    /// Which flash-discount offering this install sees. Drawn once at random, kept for the
+    /// life of the install, and reported to RevenueCat as the `discount_bucket` subscriber
+    /// attribute so revenue and conversion split by bucket in the charts. It lives in the
+    /// app rather than in a RevenueCat experiment because a customer can only be in one
+    /// experiment at a time, and every new customer is already in a price experiment on
+    /// the onboarding paywall.
+    enum DiscountBucket: String, CaseIterable {
+        case a = "A"
+        case b = "B"
+
+        /// Offering this bucket sells; bucket A keeps today's `offre_discount`.
+        var offeringIdentifier: String {
+            switch self {
+            case .a: return "offre_discount"
+            case .b: return "offre_discount_2999"
+            }
+        }
+    }
+
+    static let discountBucketKey = "sophia_discount_bucket"
+
+    static let discountBucket: DiscountBucket = {
+        let defaults = UserDefaults.standard
+        if let raw = defaults.string(forKey: discountBucketKey),
+           let saved = DiscountBucket(rawValue: raw) {
+            return saved
+        }
+        let drawn = DiscountBucket.allCases.randomElement() ?? .a
+        defaults.set(drawn.rawValue, forKey: discountBucketKey)
+        return drawn
+    }()
+
+    /// Offering behind the flash discount paywall: the bucket's offering, or `offre_discount`
+    /// while the bucket's own offering does not exist yet in RevenueCat. Explicit by design:
+    /// it is never the current offering, so an experiment on the onboarding price leaves it
+    /// untouched.
     var promoOffering: Offering? {
-        offerings?.offering(identifier: "offre_discount")
+        offerings?.offering(identifier: Self.discountBucket.offeringIdentifier)
+            ?? offerings?.offering(identifier: DiscountBucket.a.offeringIdentifier)
+    }
+
+    /// Tells RevenueCat which bucket this customer is in. Sent at every launch: attributes
+    /// are cheap, RevenueCat ignores unchanged values, and a re-send after `logIn` keeps
+    /// the identified customer tagged as well as the anonymous one.
+    private func reportDiscountBucket() {
+        Purchases.shared.attribution.setAttributes(["discount_bucket": Self.discountBucket.rawValue])
     }
 
     var promoPackage: Package? {
