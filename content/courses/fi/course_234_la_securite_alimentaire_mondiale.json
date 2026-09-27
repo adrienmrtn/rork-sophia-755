@@ -1,14 +1,15 @@
 {
   "id": "course_234_la_securite_alimentaire_mondiale",
-  "title": "Miksi 800 miljoonaa ihmistä näkee yhä nälkää?",
-  "subtitle": "800 miljoonaa ihmistä",
+  "title": "Miten ruokkia kahdeksan miljardia ihmistä?",
+  "subtitle": "Parempaa tuotantoa, vähemmän hävikkiä",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Maapallo tuottaa tarpeeksi ruokaa kaikille. Joten miksi **800 matkaa** on edelleen nälkäinen?",
+  "description": "Maapallo tuottaa ruokaa enemmän kuin koskaan, ja silti nälkä yleistyy. Ongelma ei ole määrä vaan se, miten syömämme ruoka tuotetaan, kuljetetaan ja haaskataan.",
+  "author": "kate-waddams",
   "hero": {
-    "image": "la_securite_alimentaire_mondiale",
-    "ratio": "16:9",
-    "hook": "800 miljoonan ihmisen nälkä ei ole ruoan, vaan jakamisen ongelma."
+    "image": "combine_harvester_wheat_field_aerial",
+    "ratio": "4:3",
+    "hook": "Tuotamme tarpeeksi ruokkiaksemme kaikki. Ongelma on se, mitä teemme tällä ruoalla."
   },
   "sections": [
     {
@@ -18,95 +19,120 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nykyään noin **800 matkaa** kärsii nälästä maailmassa eli joka kymmenes ihminen. Tämä luku on sitäkin kummallisempi, koska ihmiskunta ei ole koskaan tuottanut niin paljon ruokaa: tilastollisesti syötävää on enemmän kuin tarpeeksi kaikille."
+          "text": "Kun nälkä ja [[aliravitsemus]] yleistyvät maailmassa, voisi luulla, ettei maapallo enää tuota tarpeeksi kasvavalle väestölle. Näin ei ole. Jo **1960-luvulta** lähtien maataloustuotanto on kasvanut nopeammin kuin ihmisten määrä. Ongelma on siinä, miten ruoka tuotetaan ja jaetaan."
         },
         {
           "type": "paragraph",
-          "text": "Nälkä ei siis ole määrän, vaan jakautumisen ongelma. Globaalin elintarviketurvan ymmärtäminen tarkoittaa sen ymmärtämistä, miksi yltäkylläisyys ja nälänhätä voivat esiintyä rinnakkain samalla planeetalla."
+          "text": "Luvut ovat ristiriitaisia. **7 %** alle viisivuotiaista lapsista kärsii aliravitsemuksesta, kun taas **40 %** aikuisista on ylipainoisia. Nykyään huono ruokavalio tappaa enemmän aikuisia kuin tupakka. Kahdeksan miljardin ihmisen ruokkiminen ei ole yksinkertaista: [[toimitusketju]] on täynnä aukkoja, haaskaamme valtavasti ruokaa, ja monet viljelytavat eivät ole enää kestäviä."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p1",
-      "title": "Nälkän maantiede",
+      "title": "Maatilat muuttavat auringonvalon ruoaksi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "YK:n elintarvikeviraston **[[FAO]]** mukaan krooninen aliravitsemus vaivasi vielä noin 800 miljoonaa ihmistä vuonna 2024. Tämä globaali luku kätkee hyvin erilaisia todellisuutta. Eniten kärsimät alueet ovat Saharan eteläpuolisessa Afrikassa, jossa yli neljänneksellä väestöstä on säännöllisesti pulaa ravinnosta, sekä Etelä-Aasiassa."
+          "text": "Maatila sieppaa auringonvaloa ja muuttaa sen ruoaksi. Työn tekevät kasvit: viljeltyinä ne antavat syötävää ravintoa. Laitumella käyvä karja puolestaan muuttaa ruohon lihaksi ja maidoksi. Silti maatiloilla on huono maine: köyhtynyt maaperä, saasteet, metsäkato ja eläimet, jotka kilpailevat ihmisten kanssa ruoasta ja tilasta."
         },
         {
           "type": "image",
-          "asset": "famine_sub_saharan_africa_malnutrition_child",
-          "ratio": "auto",
-          "caption": "Nälkä koskettaa edelleen satoja miljoonia ihmisiä, erityisesti Saharan eteläpuolisessa Afrikassa."
+          "asset": "dairy_cows_grazing_green_pasture",
+          "ratio": "3:2",
+          "caption": "Lehmiä laitumella: ruohoa, joka muuttuu maidoksi ja lihaksi."
         },
         {
           "type": "paragraph",
-          "text": "Ruokahäviöitä on useita muotoja. **aliravitsemus** vastaa kalorien puutetta. **Mikroravinteiden levit**, jota usein kutsutaan \"piilotukselliseksi nälkäksi\", vaikuttaa 2 miljardiin ihmiseen, joilta puuttuu tärkeitä vitamiineja tai kivennäisaineita, millä on seurauksia kasvulle tai terveydelle. Lopuksi **aliravitsemus** sisältää yllättäen myös liikalihavuuden: monissa kehitysmaissa ihmiset korvaavat vähitellen tuoretuotteet jalostetuilla elintarvikkeilla, joissa on paljon kaloreita mutta vähän ravintoaineita."
+          "text": "Nämä ongelmat johtuvat osittain kestämättömistä viljelykäytännöistä. Juuri niitä on muutettava. Yleisen käsityksen mukaan yhä suurempi tuotanto vaatii yhä suurempia panoksia tuotantojärjestelmiin. Se ei pidä paikkaansa. Suurempi tuotanto ei välttämättä edellytä enempää torjunta-aineita, lannoitteita, maata tai työvoimaa. Se voi tarkoittaa jopa päinvastaista."
         },
         {
-          "type": "funFact",
-          "text": "Jos vähentäisimme maailmanlaajuista ruokahävikkiä vain 25 prosentilla, voisimme teoriassa ruokkia kaikki 800 miljoonaa ihmistä, jotka kärsivät nälkää nykyään."
+          "type": "paragraph",
+          "text": "Kaikki tiivistyy yhteen sanaan: tehokkuus. Tehokkaammilla viljelymenetelmillä miljardeille ihmisille voidaan tuottaa enemmän ruokaa, vaikka [[tuotantopanokset]] eli lannoitteet, torjunta-aineet, energia ja työvoima vähenevät ja viljelymaata kuluu vähemmän."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p2",
-      "title": "Runsauden ja tuhlauksen paradoksi",
+      "title": "Kolmannes ruoasta ei koskaan päädy lautaselle",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Maailma tuottaa tällä hetkellä 2 800 kilokaloria henkilöä kohti päivässä, mikä on enemmän kuin tarpeeksi nälän poistamiseen. Todellinen ongelma ei siis ole pula, vaan saatavuus: köyhimmällä väestöllä ei yksinkertaisesti ole mahdollisuutta ostaa ruokaa, jonka hinta vaihtelee jatkuvasti maailmanmarkkinoilla."
+          "text": "Riittävä tuotanto on vasta puoli voittoa. Ruoka on vielä saatava kuluttajille asti, ja se on aivan toinen haaste. Luku huimaa: **kolmannes** maailmassa tuotetusta ruoasta menetetään tai haaskataan, eli **1,3 miljardia tonnia** joka vuosi."
         },
         {
-          "type": "paragraph",
-          "text": "Tämän paradoksin toinen puoli on **jätettä**. Noin kolmannes maailman tuotannosta eli 1,3 miljardia tonnia ruokaa menetetään vuosittain. Köyhissä maissa häviöt syntyvät aikaisin: varastopaikkojen puute, kylmähuoneiden puuttuminen, tiet huonokuntoiset. Rikkaissa maissa jätettä syntyy myöhemmin, jakelun ja kulutuksen aikana."
+          "type": "image",
+          "asset": "discarded_fruit_vegetables_food_waste_dumpster",
+          "ratio": "3:2",
+          "caption": "Yhdysvaltalainen hävikinvastainen kampanja ensimmäisen maailmansodan ajalta: lapset opettavat aikuisille hedelmien ja vihannesten säilömistä."
         },
         {
           "type": "funFact",
-          "text": "Lihavuus ja liikalihavuuteen liittyvät sairaudet ovat tappaneet vuosittain enemmän ihmisiä maailmanlaajuisesti 2010-luvulta lähtien kuin aliravitsemus, mikä on historiallinen käännekohta maailmanlaajuiselle kansanterveydelle."
+          "text": "Lisäksi [[ruokahävikki]] tulee kalliimmaksi kuin miltä näyttää. Kun omena heitetään pois, hukkaan menevät myös aika, energia ja raha, jotka sen kasvattamiseen, korjaamiseen ja kuljettamiseen kuluivat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Maatalouden [[globalisaatio]], mantereiden välinen kauppa ja avautuneet markkinat ovat tehneet sen, etteivät maat enää ole riippuvaisia omasta tuotannostaan ruokkiakseen väestönsä. Osa tuotteista ei ole enää sesonkituotteita: niitä tuodaan joka puolelta maailmaa. Laajempi saatavuus kuitenkin pidentää toimitusketjuja, ja mitä pidempi ketju, sitä enemmän siinä on heikkoja lenkkejä."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p3",
-      "title": "Kun ruoasta tulee geopoliittinen ase",
+      "title": "Enemmän vähemmällä",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ruokaturva on myös geopoliittinen kysymys. Monet maat ovat riippuvaisia muutamien suurten maatalousmahtien viennistä, mikä tekee niistä erittäin haavoittuvia pienimmillekin tukkeille. Ukrainan ja Venäjän osuus maailman vehnän viennistä on yhteensä lähes 30 prosenttia. Kun tämä virtaus pysähtyy, hinnat nousevat **[[futuurimarkkinat]]** Chicagossa, jossa neuvotellaan tulevaisuuden sadoista ja maat kuten Egypti tai Libanon joutuvat vakavaan sosiaaliseen kriisiin."
+          "text": "Tuotantopanosten lisääminen kysynnän tahdissa ei ole kestävää eikä realistista. Viljelijöiden on otettava käyttöön parempia käytäntöjä, eikä siihen painosta pelkkä väestönkasvu. Ilmastonmuutos koettelee heitä jo nyt: epävakaa ja arvaamaton sää pakottaa heidät etsimään uusia ratkaisuja."
         },
         {
           "type": "paragraph",
-          "text": "Tämä hauraus johtuu myös 1960-luvulla tehdystä valinnasta: **[[Vihreä vallankumous]]**. Tämä uusien maataloustekniikoiden aalto on lisännyt huomattavasti satoja, mutta se on myös vähentänyt viljelykasvien monimuotoisuutta ja tehnyt viljelijät riippuvaiseksi kemiallisista lannoitteista. Tämän seurauksena jokaisella öljyn hinnan nousulla on suoria vaikutuksia leivän hintaan."
+          "text": "Maaperän kunnon parantaminen, eläinten tuotoksen optimointi, ilmastoa kestävät lajikkeet ja [[täsmäviljely]]: kaikki ne ovat keinoja saada enemmän vähemmästä. Sen sijaan että lannoitetta levitettäisiin koko pellolle, robotti analysoi maaperän reaaliajassa ja annostelee vain sen määrän, jonka juuri tämä peltolohko tarvitsee. Tuloksena ovat pienemmät kustannukset, vähäisempi ympäristövaikutus ja optimoidut sadot."
+        },
+        {
+          "type": "image",
+          "asset": "agricultural_drone_precision_farming_field",
+          "ratio": "4:3",
+          "caption": "Ilmakuva viljapellosta ja sen traktorinurista Dülmenin lähellä Saksassa vuonna 2024."
         },
         {
           "type": "paragraph",
-          "text": "Käsite **ruoan teho** viittaa nimenomaan elintarvikeviennin vapaaehtoiseen käyttöön diplomaattisen painostuksen välineenä tai jopa pakotteena vastustavaa maata vastaan."
+          "text": "Tällaiset teknologiat ovat osa ratkaisua, ja niiden painoarvo maatalouden tutkimuksessa kasvaa. Kahdeksan miljardin ihmisen ruokkiminen ei välttämättä vaadi lisää maata, lisää eläimiä tai lisää hehtaareja viljelyksiä. On saatava enemmän irti siitä, mitä jo käytämme."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p4",
-      "title": "Ruoki 10 miljardia ihmistä tuhoamatta planeettaa",
+      "title": "Yhteinen ongelma pellolta kuluttajalle",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vuoteen 2050 mennessä maailman väestön odotetaan nousevan 10 miljardiin. Ilmastonmuutos uhkaa jo satoa lisäämällä kuivuutta ja tulvia ja syrjäyttämällä peltoa. Tehoviljely myös kuluttaa maaperää ja pohjavettä, joka joskus valuu nopeammin kuin täyttyy."
+          "text": "Viljelijöitä syyllistetään usein. Kuitenkin juuri he ruokkivat lapsemme, ja he myös vaalivat maaseutua ja ympäristöä. Maailman ruokkiminen ei silti ole yksin heidän asiansa: se vaatii paljon muutakin kuin ruoan kasvattamista."
         },
         {
           "type": "paragraph",
-          "text": "Yksi tulevaisuuden keinoista on nimeltään **[[agroekologia]]**: tuotanto perustuu luonnollisiin kiertokulkuihin, kuten kompostiin tai viljelykiertoon, sen sijaan, että taistettaisiin niitä kemikaaleilla. Haasteena on taata jokaiselle ihmiselle pysyvä mahdollisuus saada terveellistä ruokaa ilman, että planeetta heikkenee entisestään."
+          "text": "Se vaatii meiltä kestäviä valintoja: terveellisempiä ja vastuullisesti tuotettuja tuotteita sekä vain sen ostamista, minkä todella syömme. Koko elintarvikeketju, jalostajat, pakkaajat, kuljettajat, jakelijat ja me kuluttajat, voi myös muuttaa tapojaan. Ruoan tulevaisuus on yhteinen ongelma. Kahdeksan miljardin ihmisen ruokavalio muokkaa koko planeettaa, ja sinä olet osa sitä."
         },
         {
           "type": "takeaway",
-          "text": "Maapallo tuottaa tarpeeksi kaloreita kaikkien ruokkimiseen. 800 miljoonan ihmisen nälkä johtuu siis pääsyongelmista, jätteistä ja geopoliittisista kriiseistä, joita ilmastonmuutos pahentaa."
+          "text": "Maapallo tuottaa tarpeeksi kaikille: kahdeksan miljardin ihmisen ruokkiminen edellyttää vähemmän hävikkiä, suurempaa tuotantoa pienemmillä panoksilla ja pienemmällä maa-alalla sekä muutoksia valinnoissamme pellolta lautaselle."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "United Nations, Department of Economic and Social Affairs, « Can we feed the billions? ».",
+      "url": "https://www.un.org/en/desa/can-we-feed-billions"
+    },
+    {
+      "text": "H. Ritchie, « No, growing more food does not mean we always need more and more inputs », Sustainability by Numbers.",
+      "url": "https://hannahritchie.substack.com/p/agricultural-total-factor-productivity"
+    },
+    {
+      "text": "J. Gustavsson, C. Cederberg, U. Sonesson, R. van Otterdijk et A. Meybeck, Global Food Losses and Food Waste: Extent, Causes and Prevention, FAO, Rome, 2011."
     }
   ]
 }
