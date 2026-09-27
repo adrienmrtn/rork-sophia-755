@@ -1,0 +1,179 @@
+{
+  "id": "course_309_d_ou_vient_la_science_fiction",
+  "title": "Da dove viene la fantascienza?",
+  "subtitle": "Da Luciano a Frankenstein",
+  "subject": "litterature",
+  "subcategory": "Anglosassoni e letteratura mondiale",
+  "description": "Nel secolo II Luciano di Samosata mandava già il suo narratore sulla Luna. Ma servirono la rivoluzione scientifica, e poi il mostro di Mary Shelley, perché quei sogni diventassero un modo nuovo di interrogare il cambiamento.",
+  "author": "vedran-obucina",
+  "hero": {
+    "image": "melies_trip_to_the_moon_1902",
+    "ratio": "4:3",
+    "hook": "Un viaggio sulla Luna nel secolo II, un mostro cucito nel 1818, un nome trovato nel 1929: la fantascienza è molto più vecchia dei suoi razzi."
+  },
+  "sections": [
+    {
+      "id": "course_309_d_ou_vient_la_science_fiction_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La fantascienza non comincia con le astronavi. Per secoli si sono immaginati viaggi verso la Luna, società strane ed esseri creati dal nulla. Nel **secolo II** l'autore greco [[Luciano di Samosata]] scrisse la *Storia vera*: il narratore viaggia fino alla Luna e lì incontra creature sorprendenti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Non è ancora fantascienza in senso moderno. Luciano esagera, prende in giro, usa la satira per ridere delle idee umane. Ma il suo racconto pone già la domanda essenziale: come sarebbe il mondo se la realtà funzionasse in un altro modo? Qualcosa cambiò il giorno in cui si cominciò a credere che la scienza potesse spiegare la natura e trasformare il futuro."
+        }
+      ]
+    },
+    {
+      "id": "course_309_d_ou_vient_la_science_fiction_p1",
+      "title": "Il cannocchiale cambia la domanda",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La [[rivoluzione scientifica]] è il periodo in cui osservazione, misura ed esperimento sconvolsero le idee europee sulla natura. Nel **secolo XVII** si guardavano la Luna e i pianeti con un interesse nuovo. Il cannocchiale, che Galileo puntò verso il cielo nel 1610, mostrò che la volta celeste non era né perfetta né immutabile, al contrario di quanto molti credevano."
+        },
+        {
+          "type": "image",
+          "asset": "galileo_moon_drawings_sidereus_nuncius_1610",
+          "ratio": "3:4",
+          "caption": "Mongolfiere ed esploratori della Luna in una stampa comica di F. Wenzel (secolo XIX): l'astro osservato diventa una meta."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'astronomo [[Giovanni Keplero]] fece suo questo sapere nuovo nel *Somnium*, “Il sogno”, pubblicato nel **1634**, dopo la sua morte. Vi immagina un viaggio verso la Luna e descrive come apparirebbe la Terra vista dallo spazio. Il testo non ha un genere letterario preciso. Ma le idee scientifiche non fanno più solo da sfondo: diventano il materiale con cui uno scrittore costruisce un mondo immaginario."
+        }
+      ]
+    },
+    {
+      "id": "course_309_d_ou_vient_la_science_fiction_p2",
+      "title": "Frankenstein dà forma al genere",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel **1818** [[Mary Shelley]] pubblicò *Frankenstein*. È una storia di mostri, ma la sua domanda centrale è nuova: che cosa succede quando uno scienziato usa il suo sapere per creare la vita? Victor Frankenstein supera un confine che si considera contro natura. Quando la sua creatura prende vita, il successo scientifico gli porta la gloria, ma anche il disastro."
+        },
+        {
+          "type": "image",
+          "asset": "frankenstein_monster_illustration_1831",
+          "ratio": "3:4",
+          "caption": "La creatura si risveglia sul tavolo del laboratorio: frontespizio dell'edizione del 1831."
+        },
+        {
+          "type": "paragraph",
+          "text": "Shelley parla di responsabilità, di paura, di sofferenza. Si chiede se l'ambizione umana non corra più veloce della nostra capacità di capirne le conseguenze. È la domanda stessa della [[rivoluzione industriale]]: macchine, fabbriche e tecniche nuove cambiavano la vita a gran velocità. La tecnologia smette di essere un'idea astratta quando entra nelle città, nelle officine e perfino nei corpi. La fantascienza trova tutta la sua forza quando la tecnica diventa la fonte dei grandi problemi."
+        }
+      ]
+    },
+    {
+      "id": "course_309_d_ou_vient_la_science_fiction_p3",
+      "title": "Un nome arrivato molto più tardi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I racconti di fantascienza esistevano ben prima della parola. Jules Verne e H. G. Wells svilupparono grandi idee: viaggi nello spazio, macchine straordinarie, viaggi nel tempo, società del futuro. Negli anni **1920** l'editore americano [[Hugo Gernsback]] aiutò queste storie a trovare il loro posto. Le sue riviste pubblicavano racconti di scienza, tecnica, invenzioni e futuri possibili."
+        },
+        {
+          "type": "image",
+          "asset": "amazing_stories_april_1926_cover_frank_paul",
+          "ratio": "3:4",
+          "caption": "La copertina del primo numero di Amazing Stories, aprile 1926, illustrata da Frank R. Paul."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ormai i lettori potevano seguire un genere intero, e non più qualche libro isolato. Gernsback non ha “creato” la fantascienza. Le ha dato un nome riconosciuto, uno spazio pubblico e commerciale, una familiarità. L'espressione inglese “science fiction” si impose alla fine del decennio, quando lui la legò alla sua rivista *Science Wonder Stories*. Il genere aveva finalmente un indirizzo letterario."
+        },
+        {
+          "type": "funFact",
+          "text": "Hugo Gernsback parlò prima di “scientifiction”, poi si impose “science fiction”. Lanciò *Amazing Stories* nel 1926, poi contribuì a diffondere il nome moderno con *Science Wonder Stories* nel 1929."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Secolo II",
+              "title": "La Storia vera di Luciano",
+              "detail": "Un viaggio satirico fino alla Luna."
+            },
+            {
+              "date": "1634",
+              "title": "Il Somnium di Keplero",
+              "detail": "Uscito dopo la sua morte, descrive la Terra vista dallo spazio."
+            },
+            {
+              "date": "1818",
+              "title": "Il Frankenstein di Mary Shelley",
+              "detail": "Uno scienziato crea la vita e scatena il disastro."
+            },
+            {
+              "date": "1926",
+              "title": "Amazing Stories",
+              "detail": "Hugo Gernsback lancia la sua rivista."
+            },
+            {
+              "date": "1929",
+              "title": "Science Wonder Stories",
+              "detail": "Si impone l'espressione “science fiction”."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_309_d_ou_vient_la_science_fiction_p4",
+      "title": "Un modo di pensare il cambiamento",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Astronavi, robot, alieni, scienziati: non è questo a definire per prima cosa la fantascienza. Il suo tema più profondo è il cambiamento. Che cosa succede quando una scoperta, una tecnica o un'idea scientifica trasforma la vita umana? Lo stesso genere può viaggiare verso pianeti lontani, esplorare l'intelligenza artificiale, giocare con l'ingegneria genetica o descrivere società che ancora non esistono."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il mondo immaginato deve essere strano, nuovo, spettacolare. Ma in fondo pone domande sul nostro mondo, sulle sue paure, le sue angosce e le sue speranze. Romanzo inquietante o thriller al cinema, la fantascienza si immerge nell'etica e nella psicologia umane. Esiste ogni volta che si usa un futuro immaginato per interrogare il presente."
+        },
+        {
+          "type": "takeaway",
+          "text": "La fantascienza nasce quando la scienza diventa materia di racconto, da Keplero a Mary Shelley, e vive ogni volta che un futuro immaginato serve a porre le domande che il presente non sa ancora risolvere."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Lucien de Samosate, « A True Story », dans The Works of Lucian of Samosata."
+    },
+    {
+      "text": "J. Romm, « Kepler's Somnium », Stockton University, 1987.",
+      "url": "https://www2.stockton.edu/hellenic-studies/documents/keplers-somnium.pdf"
+    },
+    {
+      "text": "J. Kepler, Somnium, seu opus posthumum de astronomia lunari, Sumptibus haeredum authoris, 1634."
+    },
+    {
+      "text": "L. Lovisetti, The Dream of Kepler: A Retrospective Work on the Human Side of the Scientist, University of Milan, 2024.",
+      "url": "https://air.unimi.it/retrieve/f810a5be-c1de-4077-9ec0-15a40dcfb3cd/LovisettiLuisa_TheDreamOfKeplerARetros20240227171542.pdf"
+    },
+    {
+      "text": "M. Shelley, Frankenstein; or, The Modern Prometheus, Lackington, Hughes, Harding, Mavor & Jones, 1818."
+    },
+    {
+      "text": "A. Roberts, The History of Science Fiction, Palgrave Macmillan, 2005."
+    },
+    {
+      "text": "H. Gernsback (dir.), Amazing Stories, Experimenter Publishing, 1926."
+    },
+    {
+      "text": "H. Gernsback (dir.), Science Wonder Stories, Stellar Publishing Corporation, 1929."
+    },
+    {
+      "text": "A. R. Cameron, « On the Origins of Science Fiction », 13 octobre 2014.",
+      "url": "https://andrewrcameron.com/2014/10/13/on-the-origins-of-science-fiction/"
+    }
+  ]
+}

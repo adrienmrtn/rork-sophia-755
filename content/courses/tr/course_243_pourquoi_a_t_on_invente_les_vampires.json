@@ -1,0 +1,155 @@
+{
+  "id": "course_243_pourquoi_a_t_on_invente_les_vampires",
+  "title": "Vampirleri neden icat ettik?",
+  "subtitle": "1645-1897",
+  "subject": "mythologie",
+  "subcategory": "Legends & creatures",
+  "description": "Pelerinli bir aristokrat olmadan önce vampir, vaktinden önce ölen ve ailesini de peşinden götürmekle suçlanan bir komşuydu. Kendine bir ad bulan bir korkunun hikâyesi.",
+  "author": "angela-bouma",
+  "hero": {
+    "image": "foggy_village_graveyard_night_balkans",
+    "ratio": "4:3",
+    "hook": "Ölüm korkutur. Onu açıklayamamak daha da çok korkutur."
+  },
+  "sections": [
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1645** yılında Roma'ya yerleşmiş Yunan bir bilgin, [[Leo Allatius]], memleketindeki köylülerin korktuğu bir yaratığı anlattı: [[vrykolakas]]. Son dini ayinleri yapılmadan gömüldüğü için geceleri mezarından çıkıp kendi ailesine eziyet eden bir ölü. Onu yalnızca ateş yok edebilirdi."
+        },
+        {
+          "type": "paragraph",
+          "text": "İki yüzyıl boyunca salgınlar ve aynı evde art arda gelen açıklanamayan ölümler bu inancı canlı tuttu. Usulüne göre gömülmeyen her yeni ölü, bir başka hortlak olmaya adaydı. Bu köy paniği, romanların ve sinemanın fraklı vampirine nasıl dönüştü?"
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p1",
+      "title": "Ayakkabılarını isteyen ölü",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1725** yılında, o sırada Avusturya yönetimindeki Sırp köyü Kisiljevo'da [[Petar Blagojević]] adlı bir köylü öldü. Birkaç gün içinde dokuz komşusu da peş peşe öldü. Hepsi son anlarında onu, geceleri gelip kendilerini boğmakla suçladı. Dul karısı, kocasının geri dönüp ayakkabılarını istediğini anlattı, sonra köyü terk etti."
+        },
+        {
+          "type": "image",
+          "asset": "edvard_munch_vampire_painting_1895",
+          "ratio": "auto",
+          "caption": "Edvard Munch'un “Vampir” tablosu (1895). Ressamlardan ve romancılardan önce vampir bir köy meselesiydi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Köylüler cesedi mezardan çıkardı. Beden şaşırtıcı derecede sağlamdı: taze bir cilt, ağızda kan, uzamış gibi görünen saçlar ve tırnaklar. Bu kadarı kanıt olarak yetti. Kalbine bir kazık çaktılar ve cesedi yaktılar. Olaya tanık olan Avusturyalı bir memur bir rapor yazdı. “Vampir” sözcüğü Avrupa gazetelerine yayıldı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Köylülerin doğaüstü işaret sandığı şeyler, çürümenin sıradan etkileriydi. Bakterilerin ürettiği gazlar karnı ve yüzü şişirir, ağızdan ve burundan kana benzeyen koyu bir sıvıyı dışarı iter. Deri büzülür ve tırnakların, saçların dibini açığa çıkarır. Bu yüzden onlar daha uzun görünür."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p2",
+      "title": "Efsanenin ardındaki hastalık",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "19. yüzyılda Yeni İngiltere'de başka bir korku aynı biçime büründü. O zamanlar “ince hastalık” da denen [[tüberküloz]], kurbanlarını aylarca eritip öksürtüyordu. Bulaşıcıydı ve aileden birinden ötekine geçiyordu. Dışarıdan bakınca, bir ölü geri dönüp yakınlarının hayatını birer birer emiyor gibiydi. Yine de Balkanlardaki eski geleneği açıklamaz: bunlar farklı çağlarda ve yerlerde doğmuş iki paralel inançtır, ama aynı kaygıya yanıt verirler."
+        },
+        {
+          "type": "image",
+          "asset": "mercy_brown_grave_exeter_rhode_island",
+          "ratio": "3:4",
+          "caption": "Mercy Brown'ın Exeter'daki (Rhode Island) mezarı, bugün hâlâ ziyaret ediliyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1892** yılında Rhode Island'daki Exeter'da [[Mercy Brown]], annesi ve kız kardeşinden sonra, 19 yaşında tüberkülozdan öldü. Erkek kardeşi Edwin de hastalanınca komşular üç cesedi mezardan çıkardı. Karakışta gömülen Mercy'nin bedeni iyi korunmuştu ve kalbinde hâlâ kan vardı. Kalbi yakıldı ve külleri ilaç niyetine Edwin'e içirildi. Edwin iki ay sonra öldü."
+        },
+        {
+          "type": "funFact",
+          "text": "Vrykolakas yalnızca Yunanistan'a özgü değil. Antik Mezopotamya'nın kan içen iblisleri vardı, Rusya'nın *upyr* denen hortlağı, Çin'in de *jiangshi* denen hortlağı: kollarını öne uzatıp zıplayarak ilerleyen kaskatı bir ceset."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p3",
+      "title": "Vampir aristokrat oluyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1819** yılında genç bir İngiliz doktor, [[John Polidori]], *Vampir* adlı öyküsünü yayımladı: bu yaratığa ayrılmış, İngilizce yazılmış ilk düzyazı anlatı. Fikir üç yıl önce, Cenevre Gölü kıyısında Mary Shelley'nin aklına *Frankenstein* fikrinin geldiği o ünlü yağmurlu yazda doğmuştu. Polidori'nin kahramanı **Lord Ruthven**, mezarından çıkan köylüye hiç benzemez: zengin, gizemli ve çekicidir, Londra salonlarında avlanır."
+        },
+        {
+          "type": "image",
+          "asset": "bram_stoker_dracula_1897_first_edition_cover",
+          "ratio": "3:4",
+          "caption": "Drakula'nın ilk baskısı (1897), sarı bez cilt üzerine kırmızı harfler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Öykü yeniden basıldı, çevrildi, sahneye uyarlandı. Sosyete vampiri gotik yazarlar arasında moda oldu. **1897** yılında [[Bram Stoker]] *Drakula* romanını yayımladı ve bir yüzyıl boyunca geçerli olacak modeli belirledi: kont, şato, sivri dişler, sarımsak ve haçlar. Sinemanın ondan yapacağı neredeyse her şey zaten oradaydı."
+        },
+        {
+          "type": "funFact",
+          "text": "Stoker, Transilvanya'ya hiç ayak basmadı. *Drakula* romanını seyahat rehberlerinden ve Whitby kütüphanesindeki kitaplardan yararlanarak yazdı. Whitby, romanda kontun karaya çıktığı küçük İngiliz kasabasıdır."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p4",
+      "title": "Korkunun pek çok adı var",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vampir gelenekleri aslında doğaüstünü anlatmaz. Bilim çürümeyi, bulaşmayı ya da ani ölümü açıklayamadan önce, bir topluluğun gördüklerine bir anlam vermesi gerekiyordu. Geri dönen bir ölü, korkuya bir biçim ve bir ad verir. Bir de yakılabilecek bir suçlu."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1645",
+              "title": "Vrykolakas anlatılıyor",
+              "detail": "Leo Allatius Yunan inancını kayda geçiriyor."
+            },
+            {
+              "date": "1725",
+              "title": "Blagojević olayı",
+              "detail": "“Vampir” sözcüğü gazetelere giriyor."
+            },
+            {
+              "date": "1819",
+              "title": "Polidori'nin Vampir'i",
+              "detail": "Vampir bir aristokrata dönüşüyor."
+            },
+            {
+              "date": "1892",
+              "title": "Mercy Brown mezardan çıkarılıyor",
+              "detail": "ABD'deki son büyük vampir vakası."
+            },
+            {
+              "date": "1897",
+              "title": "Drakula",
+              "detail": "Bram Stoker modern modeli belirliyor."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Yunan vrykolakas, Slav *upyr* ve Çin *jiangshi* aynı mekanizmanın ürünüdür: her biri, yanıtı olmayan aynı soruya verilmiş yerel bir yanıttır. Kurt adam efsaneleri de aynı şemayı izler ve aynı boşluğu doldurur. Orada kanın yerini dönüşüm alır."
+        },
+        {
+          "type": "takeaway",
+          "text": "Aynı korkular karşısında her kültür aynı hikâyenin bir türünü anlatır. Bir canavarla yaşamak, yanıtsız bir soruyla yaşamaktan daha kolaydır."
+        }
+      ]
+    }
+  ]
+}
