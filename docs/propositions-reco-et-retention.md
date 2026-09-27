@@ -202,24 +202,127 @@ Le produit doit avoir été approuvé par App Review.
 
 ## 2.2 Le prix : attention à l'échelle
 
-Grille actuelle : **39,99 €/an** (essai 3 j) · **9,99 €/mois** · **19,99 €/an** en promo flash —
-promo qui se redéclenche *tous les jours* pour les gratuits (`DiscountOfferManager` : 3 swipes →
-cadeau → 60 min). Ajouter 15 € donne une échelle 39,99 → 19,99 → 15. Deux risques :
+**Ce que fait une offre, exactement.** Annuler ne rembourse rien : c'est couper le renouvellement
+automatique. L'accès court jusqu'à `expirationDate`, le paiement déjà encaissé reste encaissé, et
+seul Apple peut rembourser (reportaproblem.apple.com, à sa discrétion). Une offre promotionnelle
+redéemée sur **le même produit** s'applique **au renouvellement suivant**, sans débit immédiat.
 
-1. L'ancre réelle est déjà 19,99 pour beaucoup : 15 € n'est plus un −62 %, c'est un −25 %.
+Conséquence directe, et elle commande tout le reste : sur un **annuel** annulé au jour 4, l'offre
+ne sauve rien aujourd'hui — elle brade un renouvellement qui est à 361 jours. Sur un **mensuel**,
+le prochain paiement est à ≤ 30 jours : c'est là que l'offre mord. Le seul cas où elle est le bon
+geste immédiat sur un annuel, c'est l'annulation **pendant l'essai** : rien n'a été débité, l'essai
+continue et se facture au prix de l'offre à son terme (comportement à confirmer en sandbox,
+chantier 10 — s'il débitait tout de suite il couperait l'essai et prendrait l'argent).
+
+**Le plancher.** La promo flash est à 19,99 € (`offre_discount` / `discount_yearly` ; 29,99 € dans
+le bucket B du test de prix), et elle se redéclenche tous les jours pour les gratuits
+(`DiscountOfferManager` : 3 swipes → cadeau → 60 min). La rétention doit passer **sous** ce prix,
+sinon elle ne dit rien de neuf à quelqu'un qui l'a déjà vue.
+
+Une offre par produit : elles se rattachent au produit, plusieurs par produit, et le *Promotional
+Offer Product Code* n'a pas besoin d'être unique à l'échelle de l'app. Garder **le même code sur
+tous les produits** (`retention_annual`, `retention_monthly`) évite de toucher au code : le SDK lit
+l'offre portée par le produit servi par l'expérience, et `RetentionOffer.price` vient de
+`discount.localizedPriceString`. `retention_14_99` mentirait sur six produits sur sept.
+
+**Annuels** — pay-up-front, 1 an, puis plein tarif. Perte bornée à une année.
+
+| Produit | Plein | Rétention | Écart |
+| --- | --- | --- | --- |
+| `Sophia_yearly_t25` | 9,99 | 3,99 | −60 % |
+| `Sophia_yearly_t50` | 19,99 | 6,99 | −65 % |
+| `Sophia_yearly_2999` | 29,99 | 9,99 | −67 % |
+| `Sophia_yearly` | 39,99 | 12,99 | −68 % |
+| `Sophia_yearly_4999` | 49,99 | 14,99 | −70 % |
+| `Sophia_yearly_5999` | 59,99 | 16,99 | −72 % |
+| `Sophia_yearly_6999` | 69,99 | 18,99 | −73 % |
+
+Overrides Türkiye à aligner comme pour les produits : `t50` 999,99 → ~349,99 TRY, `t25`
+499,99 → ~199,99 TRY, sur les price points Apple réellement disponibles (`price_point()` les résout).
+
+**Mensuels** — pay-as-you-go, retour au plein tarif après. Perte bornée à 15 €.
+
+| Produit | Plein | Rétention | Écart |
+| --- | --- | --- | --- |
+| `Sophia_monthly` | 9,99 /mois | 4,99 €/mois × 3 mois | −50 % |
+| `Sophia_monthly_notrial` | 9,99 /mois | 4,99 €/mois × 3 mois | −50 % |
+
+**Hebdo** (vague 2) — renouvellement à ≤ 7 jours, l'offre mord immédiatement. Perte bornée à 14 €.
+
+| Produit | Plein | Rétention | Écart |
+| --- | --- | --- | --- |
+| `Sophia_weekly_699` | 6,99 /sem | 3,49 €/sem × 4 semaines | −50 % |
+
+À côté du rabais, l'alternative **« 1 mois offert »** (format *free*, 1 mois) : c'est la réponse au
+motif « je ne l'utilise pas assez », pour lequel baisser le prix ne sauve rien. Une pause déguisée,
+9,99 € de manque à gagner, et elle n'apprend pas à la personne qu'annuler fait baisser le prix.
+
+Deux risques qui restent :
+
+1. L'ancre réelle est déjà 19,99 pour beaucoup. Une rétention au-dessus n'est pas une offre.
 2. Une offre de rétention systématique s'apprend vite — annuler devient le moyen d'obtenir le
-   prix bas.
+   prix bas. D'où : **une seule fois par compte**, et **réservée aux profils qui ont de l'usage**
+   (≥ 3 cours lus, ou streak > n). Pour les autres, le rabais ne sauve rien.
 
-Proposition :
+Segmenter par motif du sondage : « trop cher » → offre prix ; « je ne l'utilise pas assez » → pause
+ou switch, pas de rabais. Et mesurer le save rate par motif **avec un groupe témoin sans offre** :
+sans témoin, on ne sait pas si on a sauvé un client ou bradé un renouvellement qui aurait eu lieu.
 
-- Promotional offer Apple **« renouvellement à 14,99 € la première année, puis plein tarif »**,
-  pay-up-front, **une seule fois par compte**, et **réservée aux profils qui ont de l'usage**
-  (≥ 3 cours lus, ou streak > n). Pour les autres, le rabais ne sauve rien.
-- Segmenter par motif du sondage : « trop cher » → offre prix ; **« je ne l'utilise pas assez » →
-  surtout pas un rabais**, mais une pause d'un mois ou un passage annuel → mensuel.
-- Mesurer le save rate par motif, et surtout la **LTV à 12 mois du groupe sauvé vs un groupe
-  témoin sans offre**. Sans témoin, on ne sait pas si on a sauvé un client ou bradé un
-  renouvellement qui aurait eu lieu de toute façon.
+## 2.3 Le switch mensuel → annuel : le seul levier qui ne dépend pas d'Apple
+
+Pour un mensuel qui annule, « passe à l'annuel » bat le rabais mensuel sur les trois axes.
+
+**L'encaissement.** 39,99 € d'un coup contre 14,97 € étalés sur trois mois, et 12 mois verrouillés
+au lieu d'un renouvellement mensuel à reconquérir.
+
+**L'argument.** 9,99 €/mois → 39,99 €/an, c'est **3,33 €/mois, −67 %** sans aucun rabais consenti.
+Le plein tarif annuel suffit. `perMonthPrice()` (`StoreViewModel.swift:494`) fabrique déjà la copie.
+
+**La dépendance.** Aucune. Pas d'offre promotionnelle à créer dans App Store Connect, pas de clé
+In-App Purchase dans RevenueCat, pas de signature, pas d'App Review, pas d'accès Retention
+Messaging à demander. C'est l'achat d'un produit déjà APPROVED. **Tout le reste du chantier 2 est
+bloqué côté ASC ; celui-ci est livrable tout de suite.**
+
+La mécanique tombe juste : `appstore_subscriptions.py:419` crée tous les produits au **même
+`groupLevel`** que le produit de référence. Mensuel → annuel est donc un **crossgrade de même
+niveau, durées différentes → effet au prochain renouvellement**. Pas de débit immédiat, pas de
+prorata : au jour 30 la personne est débitée de l'annuel et bascule.
+
+**Le piège.** Ne pas y accrocher l'offre de rétention annuelle : 119,88 €/an → 12,99 €/an. Pour le
+switch, c'est le **plein tarif annuel**, et rien d'autre.
+
+## 2.4 Quand montrer quoi
+
+Le déclencheur compte plus que le prix, et une seule règle suffit :
+
+```
+offre de prix  si  isInFreeTrial || jours(expiresAt) <= 45
+écran de valeur seul  sinon
+```
+
+Elle couvre le mensuel en permanence (renouvellement toujours à ≤ 31 jours) et l'annuel seulement
+près de l'échéance — sans branche par produit. `expiresAt` est déjà là
+(`StoreViewModel.swift:45`, et dans `RetentionSummary`).
+
+Deux conséquences sur le code livré :
+
+- `ContentView.swift:322` tire sur `willNotRenew`, **une fois à vie**, dès la prochaine ouverture.
+  Pour l'annuel du jour 4, c'est 361 jours trop tôt et la cartouche est grillée. Il faut deux clés
+  (`écran de valeur vu` / `offre de prix vue`) au lieu du booléen `sophia_retention_offer_shown`,
+  pour que l'offre puisse revenir près du renouvellement.
+- `StoreViewModel.retentionOffer()` (`:330`) part de `annualPackage` en dur. Un abonné **mensuel**
+  qui annule se voit donc proposer l'offre de l'**annuel**. Il faut le produit réellement actif :
+  `applyCustomerInfo` (`:36-45`) ne stocke pas `entitlement.productIdentifier` — une ligne à
+  ajouter, puis chercher le package qui le porte dans l'offering servie.
+
+**La fuite du chemin Réglages.** `SettingsView.swift:339` ouvre le paywall de rétention sur la
+ligne « Gérer mon abonnement », et le paywall va chercher l'offre immédiatement. Un mensuel
+parfaitement content qui tape cette ligne par curiosité se voit donc offrir −50 %, ou l'annuel à
+−67 %. À cet endroit `willNotRenew` est encore `false` : rien ne distingue la curiosité de
+l'intention de partir. Le remède est un écran de plus, pas une condition : écran 1 = la valeur
+(série, XP, cours finis) et « Continuer la résiliation » ; écran 2 = le save (offre de prix, ou
+switch annuel) puis `showManageSubscriptions`. Le rabais reste derrière une intention prouvée, et
+l'ordre colle à celui de l'écran Apple.
 
 ---
 
@@ -231,12 +334,16 @@ Proposition :
 | 2 | Compteur local des cartes passées (`DeckSkipStore`) | **livré** |
 | 3 | Détection `willRenew == false` + paywall de rétention natif | **livré**, bloqué sur l'offre ASC |
 | 4 | « Gérer mon abonnement » → paywall → `showManageSubscriptions` | **livré** |
-| 5 | Offre promotionnelle `retention_14_99` dans App Store Connect + clé In-App Purchase dans RevenueCat | **à faire côté ASC** |
-| 6 | Test sandbox du « next renewal » | **à faire, obligatoire avant prod** |
-| 7 | Accès Retention Messaging API à demander à Apple | **à lancer maintenant** |
-| 8 | Win-back offers | à faire |
-| 9 | Table `course_events` (vrai log d'impressions) | à faire |
-| 10 | Modèle appris sur les impressions | après 4–6 semaines de log |
+| 5 | **Switch mensuel → annuel au plein tarif** dans le paywall de rétention (§ 2.3) | à faire — **aucune dépendance Apple, livrable tout de suite** |
+| 6 | Déclencheur : `isInFreeTrial || jours(expiresAt) <= 45`, deux clés au lieu d'une (§ 2.4) | à faire |
+| 7 | `retentionOffer()` sur le produit réellement actif, pas `annualPackage` en dur (§ 2.4) | à faire |
+| 8 | Écran 1 valeur / écran 2 save sur le chemin Réglages (§ 2.4) | à faire |
+| 9 | 10 offres promotionnelles en ASC (7 annuelles, 2 mensuelles, 1 hebdo) + clé In-App Purchase dans RevenueCat | **à faire côté ASC** — à scripter sur `subscriptionPromotionalOffers` |
+| 10 | Test sandbox du « next renewal » | **à faire, obligatoire avant prod** |
+| 11 | Accès Retention Messaging API à demander à Apple | **à lancer maintenant** |
+| 12 | Win-back offers | à faire |
+| 13 | Table `course_events` (vrai log d'impressions) | à faire |
+| 14 | Modèle appris sur les impressions | après 4–6 semaines de log |
 
 ---
 
@@ -247,3 +354,7 @@ Proposition :
 - [Apple Retention Messaging API — RevenueCat](https://www.revenuecat.com/docs/platform-resources/apple-platform-resources/apple-retention-messaging-api)
 - [The beginner's guide to Apple win-back offers](https://www.revenuecat.com/blog/growth/guide-to-apple-win-back-offers)
 - [iOS Subscription Offers — RevenueCat](https://www.revenuecat.com/docs/subscription-guidance/subscription-offers/ios-subscription-offers)
+- [Implementing promotional offers — Apple](https://developer.apple.com/documentation/storekit/implementing-promotional-offers-in-your-app)
+- [Upgrades, downgrades & crossgrades — RevenueCat](https://www.revenuecat.com/docs/subscription-guidance/managing-subscriptions)
+- [Offer auto-renewable subscriptions — App Store Connect Help](https://developer.apple.com/help/app-store-connect/manage-subscriptions/offer-auto-renewable-subscriptions/)
+- [Explore Retention Messaging in App Store Connect — WWDC26 session 309](https://developer.apple.com/videos/play/wwdc2026/309/)
