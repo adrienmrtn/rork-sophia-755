@@ -1,14 +1,15 @@
 {
   "id": "course_234_la_securite_alimentaire_mondiale",
-  "title": "Prečo 800 miliónov ľudí stále hladuje?",
-  "subtitle": "800 miliónov ľudí",
+  "title": "Ako nasýtiť osem miliárd ľudí?",
+  "subtitle": "Pestovať lepšie, plytvať menej",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Zem produkuje dostatok jedla pre každého. Prečo teda **800 miliónov dolárov** stále hladuje?",
+  "description": "Planéta vyrába viac jedla ako kedykoľvek predtým, a predsa hladu pribúda. Problémom nie je množstvo, ale to, ako potraviny pestujeme, prepravujeme a vyhadzujeme.",
+  "author": "kate-waddams",
   "hero": {
-    "image": "la_securite_alimentaire_mondiale",
-    "ratio": "16:9",
-    "hook": "Hlad 800 miliónov ľudí nie je problémom jedla, ale zdieľania."
+    "image": "combine_harvester_wheat_field_aerial",
+    "ratio": "4:3",
+    "hook": "Jedla vyrobíme dosť pre všetkých. Problém je v tom, čo s ním robíme."
   },
   "sections": [
     {
@@ -18,95 +19,120 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V súčasnosti trpí hladom na svete približne **800 miliónov dolárov**, teda jeden z desiatich ľudí. Tento údaj je o to zvláštnejší, že ľudstvo nikdy nevyprodukovalo toľko potravín: štatisticky je toho na jedenie viac než dosť pre každého."
+          "text": "Keď vo svete pribúda hladu a šíri sa [[podvýživa]], mohlo by sa zdať, že Zem už pre rastúcu populáciu nevyprodukuje dosť. Nie je to tak. Od **60. rokov** 20. storočia rastie poľnohospodárska produkcia rýchlejšie ako počet ľudí. Zadrháva sa to inde: pri tom, ako sa jedlo vyrába a rozdeľuje."
         },
         {
           "type": "paragraph",
-          "text": "Hlad teda nie je problémom kvantity, ale distribúcie. Pochopiť globálnu potravinovú bezpečnosť znamená pochopiť, prečo môže hojnosť a hladomor koexistovať na tej istej planéte."
+          "text": "Čísla si protirečia. Podvýživou trpí **7 %** detí mladších ako päť rokov, no zároveň má nadváhu **40 %** dospelých. A zlá strava dnes zabíja viac dospelých ako tabak. Nasýtiť osem miliárd ľudí vôbec nie je jednoduché: [[dodávateľský reťazec]] má medzery, obrovské množstvo jedla vyhadzujeme a mnohé poľnohospodárske postupy už nie sú udržateľné."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p1",
-      "title": "Geografia hladu",
+      "title": "Farmy menia slnko na jedlo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Podľa **[[FAO]]**, potravinovej agentúry OSN, chronická podvýživa v roku 2024 stále postihovala približne 800 miliónov ľudí. Tento globálny údaj skrýva veľmi odlišné skutočnosti. Najviac postihnuté sú oblasti v subsaharskej Afrike, kde viac ako štvrtine obyvateľstva pravidelne chýba jedlo, a v južnej Ázii."
+          "text": "Farma zachytáva slnečné svetlo a mení ho na jedlo. Túto prácu robia rastliny: keď ich vypestujeme, dajú nám jedlé plodiny. Dobytok na pastve zasa premieňa trávu na mäso a mlieko. Farmy však majú zlú povesť: zničená pôda, znečistenie, odlesňovanie, zvieratá, ktoré s ľuďmi súperia o potravu aj o priestor."
         },
         {
           "type": "image",
-          "asset": "famine_sub_saharan_africa_malnutrition_child",
-          "ratio": "auto",
-          "caption": "Hlad stále postihuje stovky miliónov ľudí, najmä v subsaharskej Afrike."
+          "asset": "dairy_cows_grazing_green_pasture",
+          "ratio": "3:2",
+          "caption": "Kravy na pastve: tráva premenená na mlieko a mäso."
         },
         {
           "type": "paragraph",
-          "text": "Existuje niekoľko foriem potravinovej núdze. **Podvýživa** zodpovedá nedostatku kalórií. **Nedostatky mikroživín**, často nazývané „skrytý hlad“, postihujú 2 miliardy ľudí, ktorým chýbajú základné vitamíny alebo minerály, čo má dôsledky na rast alebo zdravie. Napokon, **podvýživa** prekvapivo zahŕňa aj obezitu: v mnohých rozvojových krajinách ľudia postupne nahrádzajú čerstvé produkty spracovanými potravinami, ktoré majú vysoký obsah kalórií, ale chudobné na živiny."
+          "text": "Tieto problémy čiastočne vyplývajú z neudržateľných poľnohospodárskych postupov. Práve tie treba zmeniť. Rozšírený omyl tvrdí, že kto chce vyrábať stále viac, musí do výroby stále viac vkladať. Nie je to pravda. Vyššia produkcia si nemusí vyžadovať viac pesticídov, hnojív, pôdy ani pracovnej sily. Môže to byť dokonca naopak."
         },
         {
-          "type": "funFact",
-          "text": "Ak by sme znížili celosvetové plytvanie potravinami len o 25 %, teoreticky by sme mohli nasýtiť všetkých 800 miliónov ľudí, ktorí dnes trpia hladom."
+          "type": "paragraph",
+          "text": "Všetko sa točí okolo jediného slova: efektívnosť. Efektívnejšími metódami dokážeme vypestovať viac jedla pre miliardy ľudí, a pritom znížiť [[vstupy]], teda hnojivá, pesticídy, energiu a prácu, a zaberať menej pôdy."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p2",
-      "title": "Paradox hojnosti a plytvania",
+      "title": "Tretina jedla sa na tanier nikdy nedostane",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Svet v súčasnosti produkuje ekvivalent 2.800 kilokalórií na osobu a deň, čo je viac ako dosť na odstránenie hladu. Skutočným problémom teda nie je nedostatok, ale prístup: najchudobnejšie obyvateľstvo jednoducho nemá prostriedky na nákup potravín, ktorých cena sa na svetových trhoch neustále mení."
+          "text": "Vypestovať dosť je len polovica úlohy. Jedlo sa ešte musí dostať k spotrebiteľom, a to je úplne iná výzva. Číslo až desí: **tretina** potravín vyrobených na svete sa stratí alebo vyhodí, čo je **1,3 miliardy ton** ročne."
         },
         {
-          "type": "paragraph",
-          "text": "Druhou stranou tohto paradoxu je **odpad**. Každý rok sa stratí asi tretina svetovej produkcie, čiže 1,3 miliardy ton potravín. V chudobných krajinách sa straty vyskytujú skoro: nedostatok skladovacích miest, absencia chladiacich miestností, cesty v zlom stave. V bohatých krajinách k odpadu dochádza až neskôr, pri distribúcii a spotrebe."
+          "type": "image",
+          "asset": "discarded_fruit_vegetables_food_waste_dumpster",
+          "ratio": "3:2",
+          "caption": "Americká kampaň proti plytvaniu z prvej svetovej vojny: deti učia dospelých zavárať ovocie a zeleninu."
         },
         {
           "type": "funFact",
-          "text": "Od roku 2010 zabila obezita a choroby súvisiace s obezitou na celom svete každý rok viac ľudí ako podvýživa, čo je historický zlom pre globálne verejné zdravie."
+          "text": "[[Plytvanie potravinami]] stojí viac, než sa zdá. S vyhodeným jablkom vyhadzujeme aj čas, energiu a peniaze, ktoré si vyžiadalo jeho pestovanie, zber a preprava."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Globalizácia]] poľnohospodárstva, obchod medzi kontinentmi a otvorené trhy spôsobili, že krajiny už nie sú odkázané na vlastnú úrodu, aby uživili obyvateľov. Niektoré produkty už nie sú sezónne: dovážajú sa z celého sveta. Širší prístup však predlžuje dodávateľské reťazce, a čím je reťaz dlhšia, tým viac má slabých článkov."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p3",
-      "title": "Keď sa jedlo stane geopolitickou zbraňou",
+      "title": "Vyrobiť viac s menším vkladom",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Potravinová bezpečnosť je tiež otázkou geopolitiky. Mnohé krajiny sú závislé od vývozu niekoľkých veľkých poľnohospodárskych mocností, čo ich robí veľmi zraniteľnými voči najmenšej blokáde. Ukrajina a Rusko spolu tvoria takmer 30 % svetového exportu pšenice. Keď sa tento tok zastaví, ceny stúpajú na chicagskom **[[termínovaný trh]]**, kde sa rokuje o budúcej úrode, a krajiny ako Egypt alebo Libanon upadajú do vážnej sociálnej krízy."
+          "text": "Pridávať stále viac vstupov, aby sme stačili dopytu, nie je udržateľné ani reálne. Poľnohospodári musia prejsť na lepšie postupy a netlačí ich k tomu len demografia. Klimatickú zmenu už pociťujú: nevyspytateľné a nepredvídateľné počasie ich núti hľadať nové cesty."
         },
         {
           "type": "paragraph",
-          "text": "Táto krehkosť pochádza aj z výberu zo 60. rokov 20. storočia: **[[Zelená revolúcia]]**. Táto vlna nových poľnohospodárskych techník výrazne zvýšila výnosy, ale tiež znížila rozmanitosť plodín a urobila farmárov závislými od chemických hnojív. Výsledkom je, že každé zvýšenie ceny ropy má priamy dopad na cenu chleba."
+          "text": "Zdravšia pôda, lepšia úžitkovosť zvierat, plodiny odolné voči klíme či [[presné poľnohospodárstvo]]: to všetko sú spôsoby, ako z menej získať viac. Namiesto toho, aby sa hnojivo rozhodilo po celom poli, robot analyzuje pôdu v reálnom čase a dávkuje presne toľko, koľko daný kúsok potrebuje. Výsledok: nižšie náklady, menší vplyv na životné prostredie a vyššie výnosy."
+        },
+        {
+          "type": "image",
+          "asset": "agricultural_drone_precision_farming_field",
+          "ratio": "4:3",
+          "caption": "Letecký pohľad na obilné pole s koľajami po traktore pri meste Dülmen (Nemecko) v roku 2024."
         },
         {
           "type": "paragraph",
-          "text": "Pojem **potravinová sila** sa vzťahuje práve na dobrovoľné využívanie vývozu potravín ako prostriedku diplomatického nátlaku, či dokonca ako sankcie voči opozičnej krajine."
+          "text": "Tieto technológie sú súčasťou riešenia a v poľnohospodárskom výskume majú čoraz väčšiu váhu. Na nasýtenie ôsmich miliárd ľudí nemusíme nutne potrebovať viac pôdy, viac zvierat ani viac hektárov plodín. Potrebujeme vyťažiť viac z toho, čo už využívame."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p4",
-      "title": "Nakŕmte 10 miliárd ľudí bez vyčerpania planéty",
+      "title": "Spoločný problém od farmy po spotrebiteľa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Očakáva sa, že do roku 2050 dosiahne svetová populácia 10 miliárd. Klimatické zmeny už teraz ohrozujú výnosy rastúcimi obdobiami sucha a záplav, ktoré vytláčajú ornú pôdu. Intenzívne poľnohospodárstvo tiež vyčerpáva pôdu a podzemnú vodu, ktorá niekedy rýchlejšie odteká, ako sa napĺňa."
+          "text": "Na poľnohospodárov sa často ukazuje prstom. Pritom práve oni živia naše deti a sú aj strážcami vidieka a životného prostredia. Nasýtiť planétu však nie je len ich vec: vyžaduje si to oveľa viac než pestovanie potravín."
         },
         {
           "type": "paragraph",
-          "text": "Jedna z ciest do budúcnosti sa nazýva **[[agroekológie]]**: výroba spoliehaním sa na prírodné cykly, ako je kompost alebo striedanie plodín, a nie boj proti nim chemikáliami. Výzvou je zaručiť každému človeku trvalý prístup k zdravým potravinám bez ďalšieho vyčerpania planéty."
+          "text": "Vyžaduje si to od nás udržateľné rozhodnutia: siahať po zdravších potravinách zodpovedného pôvodu a kupovať len to, čo naozaj zjeme. Celý potravinový reťazec, spracovatelia, výrobcovia obalov, prepravcovia, predajcovia aj my spotrebitelia, môže tiež zmeniť svoje návyky. Budúcnosť jedla je spoločný problém. Strava ôsmich miliárd ľudí formuje celú planétu a vy ste jej súčasťou."
         },
         {
           "type": "takeaway",
-          "text": "Zem produkuje dostatok kalórií, aby nasýtila každého. Hlad 800 miliónov ľudí preto pochádza z problému prístupu, odpadu a geopolitických kríz, ktoré ešte zhoršila zmena klímy."
+          "text": "Zem vyprodukuje dosť pre všetkých: nasýtiť osem miliárd ľudí znamená menej plytvať, vyrábať viac s menším množstvom vstupov a pôdy a meniť naše rozhodnutia, od farmy až po tanier."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "United Nations, Department of Economic and Social Affairs, « Can we feed the billions? ».",
+      "url": "https://www.un.org/en/desa/can-we-feed-billions"
+    },
+    {
+      "text": "H. Ritchie, « No, growing more food does not mean we always need more and more inputs », Sustainability by Numbers.",
+      "url": "https://hannahritchie.substack.com/p/agricultural-total-factor-productivity"
+    },
+    {
+      "text": "J. Gustavsson, C. Cederberg, U. Sonesson, R. van Otterdijk et A. Meybeck, Global Food Losses and Food Waste: Extent, Causes and Prevention, FAO, Rome, 2011."
     }
   ]
 }

@@ -1,0 +1,139 @@
+{
+  "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie",
+  "title": "Ali umetna inteligenca porabi veliko energije?",
+  "subtitle": "Za vsakim odgovorom",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Vsak odgovor umetne inteligence pride iz stavbe, polne strojev, ki delajo noč in dan. Koliko elektrike to v resnici stane, od učenja modela do omrežja, ki ga napaja?",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "data_center_server_racks_aisle_blue_lights",
+    "ratio": "4:3",
+    "hook": "Umetna inteligenca je videti kot programska oprema, a vsak odgovor nastane v povsem resnični stavbi, priključeni na isto omrežje kot vaš dom."
+  },
+  "sections": [
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spletni umetni inteligenci zastavite vprašanje in odgovor se prikaže v nekaj sekundah. Samo delo pa ne poteka v vašem telefonu. Opravi ga [[podatkovni center]], stavba, polna strojev, ki obdelujejo in shranjujejo podatke. Ti stroji neprekinjeno porabljajo elektriko, čeprav jih nihče ne vidi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kot navaja [[Mednarodna agencija za energijo]], so vsi podatkovni centri skupaj leta 2025 porabili približno **1,5 %** svetovne elektrike. Ta številka zajema vse spletne storitve, ne le umetne inteligence. A objektov, namenjenih umetni inteligenci, hitro pribiva. Kratek odgovor sam po sebi stane malo. Vendar za vsakega delajo stroji in za njegovo pripravo hkrati črpa elektriko več sistemov."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p1",
+      "title": "Strežniki, največji porabniki",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Računalnik, ki obdeluje podatke in poganja spletne storitve, se imenuje [[strežnik]]. V podatkovnem centru strežniki opravijo večino računanja, zato so največji porabniki elektrike. Če račun sodobnega podatkovnega centra razdelimo, strežniki v povprečju poberejo **60 %**. Ta številka velja za podatkovne centre na splošno, ne le za objekte umetne inteligence."
+        },
+        {
+          "type": "image",
+          "asset": "data_center_cooling_pipes_chillers",
+          "ratio": "3:2",
+          "caption": "Vrste strežnikov v podatkovnem centru: prav oni porabijo večino elektrike."
+        },
+        {
+          "type": "paragraph",
+          "text": "Preostanek gre za shranjevanje in prenos podatkov, hlajenje opreme in delovanje stavbe. Hlajenje je pomembno, ker računalnik med delom oddaja toploto. Brez sistema, ki jo odvaja, bi se stroji sčasoma pregreli. Elektrika za odgovorom umetne inteligence torej napaja veliko več kot le računalnike, ki ga ustvarijo."
+        },
+        {
+          "type": "funFact",
+          "text": "Po podatkih IEA se je poraba elektrike v podatkovnih centrih, namenjenih umetni inteligenci, samo v letu 2025 povečala za 50 %."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p2",
+      "title": "Najprej učenje, nato odgovarjanje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Preden lahko storitev umetne inteligence odgovarja, potrebuje model: sistem, ki se je iz primerov naučil vzorcev. Za njegov nastanek je potrebno [[učenje]], faza, v kateri računalniki prečešejo ogromne količine podatkov. To delo lahko zelo zmogljive stroje zaposli za dolga obdobja."
+        },
+        {
+          "type": "image",
+          "asset": "frontier_supercomputer_oak_ridge_cabinets",
+          "ratio": "4:3",
+          "caption": "Omare Nasinega superračunalnika Columbia: takšne stroje uporabljajo za učenje modela."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ko je model naučen, se začne drugačno delo. To je [[sklepanje]], izračun, ki ustvari odgovor na vašo zahtevo. Učenje se ob vsakem vprašanju ne začne v celoti znova; sklepanje pa se ponovi pri vsaki zahtevi. Kaj sčasoma bolj obremeni? To je odvisno od zasnove storitve in od tega, koliko ljudi jo uporablja. Zelo obiskana storitev ima računalnike nenehno zaposlene z odgovarjanjem, tudi med dvema velikima fazama učenja."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p3",
+      "title": "Zahteva brez stalne cene",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Koliko elektrike porabi ena sama besedilna zahteva? Objavljene ocene ne dajejo enakega odgovora. Google je meril svojo delujočo storitev in mediano besedilne zahteve postavlja na **0,24 Wh**. Enota, ki meri količino energije, je [[vatna ura]] (Wh). Druga študija pride do mediane **0,31 Wh**, pri čemer srednja polovica njenih standardnih zahtev leži med **0,16 in 0,60 Wh**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Te številke si ne nasprotujejo: opisujejo različne sisteme in metode, ne dveh nasprotujočih si meritev iste naloge. Izpuščajo tudi veliko zahtevnejša opravila. Če umetno inteligenco prosimo, naj pred odgovorom razmisli v več korakih, so njeni računalniki zaposleni veliko dlje. Energija na zahtevo je torej odvisna od sistema, načina merjenja in zahtevanega dela."
+        },
+        {
+          "type": "funFact",
+          "text": "V isti študiji zahteva z dolgim razmišljanjem, pri kateri model pred sklepom podrobno razdela svoje korake, doseže mediano 3,91 Wh, več kot desetkrat toliko kot standardna zahteva."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p4",
+      "title": "Elektroenergetska omrežja pod pritiskom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mreža vodov, ki prenaša elektriko od elektrarn do domov in podjetij, je [[elektroenergetsko omrežje]]. Veliki objekti umetne inteligence so priključeni na isto omrežje. Za občutek velikosti IEA letno porabo podatkovnega centra za umetno inteligenco, stavbe, zgrajene predvsem za poganjanje teh storitev, primerja s porabo približno **100.000 gospodinjstev**."
+        },
+        {
+          "type": "image",
+          "asset": "high_voltage_power_lines_data_center_virginia",
+          "ratio": "4:3",
+          "caption": "Stebri daljnovoda zelo visoke napetosti (750 kV): podatkovni centri so priključeni na isto omrežje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ti objekti se radi združujejo na istih krajih. Ko več velikih lokacij potrebuje elektriko na istem območju, si delijo lokalno omrežje, obstoječe vode pa je morda treba okrepiti. Regija z rezervnimi zmogljivostmi lažje sprejme nove lokacije kot regija, ki je že blizu svojih meja. Kraj, kjer gradijo infrastrukturo umetne inteligence, zato nekaj spremeni za njene sosede."
+        },
+        {
+          "type": "takeaway",
+          "text": "Elektrika umetne inteligence se porablja na več ravneh, od strežnikov, ki jih je treba hladiti, do lokalnega omrežja, cena ene zahteve pa je odvisna od sistema, merjenja in zahtevanega dela."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "International Energy Agency (IEA), Key Questions on Energy and AI, 2026, p. 9 et 17."
+    },
+    {
+      "text": "International Energy Agency (IEA), Energy and AI, 2025, p. 13, 38 et 52."
+    },
+    {
+      "text": "Shehabi et al., 2024 United States Data Center Energy Usage Report, Lawrence Berkeley National Laboratory, 2024, p. 22-23."
+    },
+    {
+      "text": "Oviedo et al., Joule, 2026, p. 1.",
+      "url": "https://doi.org/10.1016/j.joule.2026.102430"
+    },
+    {
+      "text": "Elsworth et al., Measuring the Environmental Impact of Delivering AI at Google Scale, Google, 2025, p. 7."
+    }
+  ]
+}
