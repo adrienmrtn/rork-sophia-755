@@ -20,16 +20,17 @@ import UIKit
 ///  4. The app, on becoming active, sees the stamp and opens a course straight away
 ///     (`ContentView.openBlockerCourseIfNeeded`), with [session] set so the reader shows
 ///     a "lock active" banner.
-///  5. The quiz result screen calls [registerQuizCompletion]. TikTok is unlocked at once
-///     for [unlockMinutes], and a one-shot `DeviceActivity` interval is armed whose end
-///     re-applies the shield from the `SophiaDeviceActivityMonitor` extension, whether or
-///     not Sophia is still running.
+///  5. Finishing the daily course (any course read to its last page, the same completion
+///     that feeds the streak) calls [registerDailyCourseCompleted]. TikTok is unlocked at
+///     once until local midnight, and a one-shot `DeviceActivity` interval is armed whose
+///     end re-applies the shield from the `SophiaDeviceActivityMonitor` extension, whether
+///     or not Sophia is still running.
 ///  6. Back on home, `ContentView` shows `TikTokUnlockedView` with the "Back to TikTok"
 ///     button (`tiktok://`).
 ///
-/// A quiz finished *without* coming from the shield unlocks TikTok too: the deal is "a
-/// course and a quiz buy some TikTok", not "only when we sent you". Only the celebration
-/// screen is reserved for the shield-originated visit.
+/// A course finished *without* coming from the shield unlocks TikTok too: the deal is
+/// "your daily course buys your TikTok", not "only when we sent you". Only the
+/// celebration screen is reserved for the shield-originated visit.
 @Observable
 @MainActor
 final class TikTokBlockerManager {
@@ -41,10 +42,11 @@ final class TikTokBlockerManager {
         case approved
     }
 
-    /// A shield-originated visit: which course was handed out, and whether it paid off.
+    /// A shield-originated visit: which course was handed out, and whether the day's
+    /// course has been done since.
     struct Session: Equatable {
         var courseId: String
-        var quizCompleted = false
+        var completed = false
     }
 
     private(set) var authorization: AuthorizationState
@@ -55,9 +57,6 @@ final class TikTokBlockerManager {
             reconcileShield()
         }
     }
-    var unlockMinutes: Int = TikTokBlockerShared.unlockMinutes {
-        didSet { TikTokBlockerShared.unlockMinutes = unlockMinutes }
-    }
     private(set) var unlockedUntil: Date? = TikTokBlockerShared.unlockedUntil
     private(set) var unlockCount: Int = TikTokBlockerShared.unlockCount
 
@@ -65,8 +64,8 @@ final class TikTokBlockerManager {
     /// screen is dismissed (or the blocker is switched off).
     private(set) var session: Session?
 
-    /// Set when a quiz has just earned an unlock and the user came from the shield; the
-    /// home screen shows `TikTokUnlockedView` and clears it.
+    /// Set when the daily course has just earned an unlock and the user came from the
+    /// shield; the home screen shows `TikTokUnlockedView` and clears it.
     var showUnlockedScreen = false
 
     private let center = AuthorizationCenter.shared
@@ -185,7 +184,7 @@ final class TikTokBlockerManager {
     /// unfinished course keeps it: the reco reshuffles between calls, and someone who
     /// backed out halfway should find the same course, not a new one.
     func startSession(candidate: () -> Course?) -> Course? {
-        if let current = session, !current.quizCompleted,
+        if let current = session, !current.completed,
            let course = ContentCatalog.course(withId: current.courseId) {
             return course
         }
@@ -196,23 +195,22 @@ final class TikTokBlockerManager {
         return course
     }
 
-    /// The reader shows its "lock active" banner for this course.
-    func isLockSession(for courseId: String) -> Bool {
-        guard let session, isShieldActive else { return false }
-        return session.courseId == courseId && !session.quizCompleted
+    /// The reader shows its "finish your daily course" banner while TikTok is locked.
+    var showsLockBanner: Bool {
+        isShieldActive
     }
 
-    /// Called by the quiz result screen for every finished quiz. Unlocks TikTok when the
-    /// blocker is armed and no window is already open; the celebration screen is queued
-    /// only for a shield-originated visit.
-    func registerQuizCompletion(courseId: String) {
+    /// Called whenever a course is read to its last page (the completion that feeds the
+    /// streak). Unlocks TikTok until midnight when the blocker is armed and no window is
+    /// already open; the celebration screen is queued only for a shield-originated visit.
+    func registerDailyCourseCompleted(courseId: String) {
         guard isArmed else { return }
-        let fromShield = session?.courseId == courseId
+        let fromShield = session != nil
         if fromShield {
-            session?.quizCompleted = true
+            session?.completed = true
         }
         guard !isUnlockWindowOpen else {
-            if fromShield { showUnlockedScreen = true }
+            if fromShield, !showUnlockedScreen { showUnlockedScreen = true }
             return
         }
         grantUnlock(courseId: courseId, fromShield: fromShield)
@@ -244,8 +242,8 @@ final class TikTokBlockerManager {
     // MARK: - Unlock window
 
     private func grantUnlock(courseId: String, fromShield: Bool) {
-        let minutes = unlockMinutes
-        let until = Date().addingTimeInterval(TimeInterval(minutes * 60))
+        let until = TikTokBlockerShared.unlockWindowEnd()
+        let minutes = Int(until.timeIntervalSinceNow / 60)
         TikTokBlockerShared.unlockedUntil = until
         TikTokBlockerShared.unlockCount += 1
         unlockedUntil = until
@@ -266,8 +264,8 @@ final class TikTokBlockerManager {
         deviceCenter.stopMonitoring([unlockActivity])
         let calendar = Calendar.current
         let fields: Set<Calendar.Component> = [.year, .month, .day, .hour, .minute, .second]
-        // DeviceActivity wants at least 15 minutes between start and end; `unlockMinutes`
-        // is floored to 15 in the shared store, so this always holds.
+        // DeviceActivity wants at least 15 minutes between start and end;
+        // `unlockWindowEnd` guarantees it.
         let schedule = DeviceActivitySchedule(
             intervalStart: calendar.dateComponents(fields, from: Date()),
             intervalEnd: calendar.dateComponents(fields, from: until),

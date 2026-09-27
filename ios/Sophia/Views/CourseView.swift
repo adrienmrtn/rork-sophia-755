@@ -431,7 +431,7 @@ struct CourseView: View {
         VStack(spacing: 0) {
             headerBar
 
-            if TikTokBlockerManager.shared.isLockSession(for: course.id) {
+            if TikTokBlockerManager.shared.showsLockBanner {
                 TikTokLockBanner()
             }
 
@@ -483,6 +483,8 @@ struct CourseView: View {
                 previousSubjectCount = progressManager.completedCount(for: course.subject)
                 previousSubjectXP = progressManager.xp(for: course.subject)
                 progressManager.completeCourse(courseId: course.id, quizScore: 0)
+                // The daily course is done: if TikTok was waiting on it, it opens now.
+                TikTokBlockerManager.shared.registerDailyCourseCompleted(courseId: course.id)
                 progressManager.addXP(subject: course.subject, amount: courseCompletionXP)
                 globalCourseAwardResult = progressManager.awardGlobalXP(
                     reason: .courseCompleted(courseId: course.id),

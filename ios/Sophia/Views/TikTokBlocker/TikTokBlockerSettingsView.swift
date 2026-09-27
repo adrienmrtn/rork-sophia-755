@@ -15,6 +15,9 @@ struct TikTokBlockerSettingsView: View {
 
     let store: StoreViewModel
     var onShowPaywall: (() -> Void)? = nil
+    /// Presented as a cover from the profile rather than pushed: the back control is a
+    /// close cross.
+    var presentedAsCover: Bool = false
 
     @Bindable private var blocker = TikTokBlockerManager.shared
     @State private var showPicker = false
@@ -44,9 +47,7 @@ struct TikTokBlockerSettingsView: View {
 
                     if blocker.isEnabled || blocker.hasSelection {
                         appSection
-                        durationSection
                         statusSection
-                        automationSection
                     }
 
                     if blocker.authorization == .denied {
@@ -114,7 +115,7 @@ struct TikTokBlockerSettingsView: View {
                 hapticTrigger += 1
                 dismiss()
             } label: {
-                Image(systemName: "chevron.backward")
+                Image(systemName: presentedAsCover ? "xmark" : "chevron.backward")
                     .font(.jakarta(size: 15, weight: .semibold))
                     .foregroundStyle(DS.inkSecondary)
                     .frame(width: 40, height: 40)
@@ -145,7 +146,7 @@ struct TikTokBlockerSettingsView: View {
                     .foregroundStyle(.white)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            Text(String(format: languageManager.text("tiktokBlocker.hero.body"), blocker.unlockMinutes))
+            Text(languageManager.text("tiktokBlocker.hero.body"))
                 .font(DS.sans(.subheadline, .medium))
                 .foregroundStyle(.white.opacity(0.85))
                 .fixedSize(horizontal: false, vertical: true)
@@ -195,7 +196,7 @@ struct TikTokBlockerSettingsView: View {
             return languageManager.text("tiktokBlocker.toggle.subtitle.premium")
         }
         if blocker.isEnabled {
-            return String(format: languageManager.text("tiktokBlocker.toggle.subtitle.on"), blocker.unlockMinutes)
+            return languageManager.text("tiktokBlocker.toggle.subtitle.on")
         }
         return languageManager.text("tiktokBlocker.toggle.subtitle.off")
     }
@@ -307,38 +308,6 @@ struct TikTokBlockerSettingsView: View {
         }
     }
 
-    // MARK: - Duration
-
-    private var durationSection: some View {
-        section(languageManager.text("tiktokBlocker.duration.title")) {
-            HStack(spacing: 8) {
-                ForEach(TikTokBlockerShared.unlockOptions, id: \.self) { minutes in
-                    let selected = blocker.unlockMinutes == minutes
-                    Button {
-                        hapticTrigger += 1
-                        blocker.unlockMinutes = minutes
-                    } label: {
-                        Text(String(format: languageManager.text("tiktokBlocker.duration.minutes"), minutes))
-                            .font(DS.sans(.subheadline, .semibold))
-                            .foregroundStyle(selected ? .white : DS.ink)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 12)
-                            .background(
-                                RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                    .fill(selected ? DS.accent : DS.surface)
-                            )
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                    .strokeBorder(selected ? Color.clear : DS.hairline, lineWidth: 1)
-                            )
-                    }
-                    .buttonStyle(SoftPressButtonStyle())
-                }
-            }
-            .padding(.horizontal, 20)
-        }
-    }
-
     // MARK: - Status
 
     private var statusSection: some View {
@@ -399,64 +368,6 @@ struct TikTokBlockerSettingsView: View {
             .padding(.horizontal, 14)
             .padding(.vertical, 14)
         }
-    }
-
-    // MARK: - Direct open (Shortcuts automation)
-
-    /// The shield cannot launch Sophia, a Shortcuts automation can. Apple lets nobody
-    /// create one on the user's behalf, so this is a guide: the steps, and a button that
-    /// opens the Shortcuts app.
-    private var automationSection: some View {
-        section(languageManager.text("tiktokBlocker.automation.title")) {
-            card {
-                VStack(alignment: .leading, spacing: 0) {
-                    HStack(alignment: .top, spacing: 14) {
-                        iconBadge("bolt.fill", tint: DS.warm, bg: DS.warm.opacity(0.15))
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(languageManager.text("tiktokBlocker.automation.headline"))
-                                .font(DS.title(.subheadline, .semibold))
-                                .foregroundStyle(DS.ink)
-                            Text(languageManager.text("tiktokBlocker.automation.body"))
-                                .font(DS.sans(.caption, .medium))
-                                .foregroundStyle(DS.inkSecondary)
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
-                    }
-                    .padding(.horizontal, 14)
-                    .padding(.vertical, 14)
-
-                    divider
-
-                    ForEach(1...6, id: \.self) { n in
-                        step(n, languageManager.text("tiktokBlocker.automation.step\(n)"))
-                        if n < 6 { divider }
-                    }
-
-                    Button {
-                        hapticTrigger += 1
-                        openShortcuts()
-                    } label: {
-                        HStack(spacing: 8) {
-                            Image(systemName: "arrow.up.forward.app.fill")
-                                .font(.jakarta(size: 14, weight: .semibold))
-                            Text(languageManager.text("tiktokBlocker.automation.open"))
-                                .font(DS.sans(.subheadline, .semibold))
-                        }
-                        .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 13)
-                        .background(DS.accent, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
-                    }
-                    .buttonStyle(SoftPressButtonStyle())
-                    .padding(14)
-                }
-            }
-        }
-    }
-
-    private func openShortcuts() {
-        guard let url = URL(string: "shortcuts://") else { return }
-        UIApplication.shared.open(url)
     }
 
     // MARK: - Warnings
@@ -536,7 +447,7 @@ struct TikTokBlockerSettingsView: View {
                     divider
                     step(2, languageManager.text("tiktokBlocker.how.step2"))
                     divider
-                    step(3, String(format: languageManager.text("tiktokBlocker.how.step3"), blocker.unlockMinutes))
+                    step(3, languageManager.text("tiktokBlocker.how.step3"))
                 }
             }
         }

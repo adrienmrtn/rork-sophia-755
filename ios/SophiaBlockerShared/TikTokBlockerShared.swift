@@ -33,10 +33,9 @@ enum TikTokBlockerShared {
     /// `LSApplicationQueriesSchemes` so `canOpenURL` can answer.
     static let tiktokURL = URL(string: "tiktok://")!
 
-    /// Unlock lengths offered in settings, in minutes. DeviceActivity refuses schedules
-    /// shorter than 15 minutes, which is where the floor comes from.
-    static let unlockOptions = [15, 30, 60]
-    static let defaultUnlockMinutes = 30
+    /// DeviceActivity refuses schedules shorter than this, in minutes: a course finished
+    /// just before midnight still buys a window at least this long.
+    static let minimumUnlockMinutes = 15
 
     /// A shield tap older than this is stale: the user tapped, got distracted, and should
     /// not be ambushed with a course hours later.
@@ -45,7 +44,6 @@ enum TikTokBlockerShared {
     enum Keys {
         static let enabled = "tiktokBlocker.enabled"
         static let selection = "tiktokBlocker.selection"
-        static let unlockMinutes = "tiktokBlocker.unlockMinutes"
         static let unlockedUntil = "tiktokBlocker.unlockedUntil"
         static let pendingRequestAt = "tiktokBlocker.pendingRequestAt"
         static let language = "tiktokBlocker.language"
@@ -87,15 +85,6 @@ enum TikTokBlockerShared {
         return !(s.applicationTokens.isEmpty && s.categoryTokens.isEmpty && s.webDomainTokens.isEmpty)
     }
 
-    /// Length of the window a finished course + quiz buys.
-    static var unlockMinutes: Int {
-        get {
-            let stored = defaults.integer(forKey: Keys.unlockMinutes)
-            return stored == 0 ? defaultUnlockMinutes : max(15, stored)
-        }
-        set { defaults.set(max(15, newValue), forKey: Keys.unlockMinutes) }
-    }
-
     static var unlockedUntil: Date? {
         get { defaults.object(forKey: Keys.unlockedUntil) as? Date }
         set {
@@ -110,6 +99,15 @@ enum TikTokBlockerShared {
     static var isUnlockWindowOpen: Bool {
         guard let until = unlockedUntil else { return false }
         return until > Date()
+    }
+
+    /// The daily course unlocks TikTok until the day is over: local midnight, or at least
+    /// [minimumUnlockMinutes] from now when midnight is closer than that.
+    static func unlockWindowEnd(from now: Date = Date()) -> Date {
+        let calendar = Calendar.current
+        let startOfTomorrow = calendar.startOfDay(for: calendar.date(byAdding: .day, value: 1, to: now) ?? now)
+        let floor = now.addingTimeInterval(TimeInterval(minimumUnlockMinutes * 60))
+        return max(startOfTomorrow, floor)
     }
 
     /// Written by the shield-action extension when the user taps "Open Sophia". The app
@@ -206,62 +204,62 @@ enum TikTokBlockerShared {
         case "fr":
             return ShieldCopy(
                 title: "Cultive-toi avant de scroller",
-                subtitle: "Un cours Sophia de 3 minutes et son quiz débloquent TikTok pendant \(unlockMinutes) min.",
+                subtitle: "Finis ton cours du jour sur Sophia pour débloquer TikTok jusqu\u{2019}à demain.",
                 pendingSubtitle: "C\u{2019}est noté ! Ouvre Sophia maintenant : ton cours t\u{2019}attend.",
                 primaryButton: "Ouvrir Sophia",
                 secondaryButton: "Fermer",
                 notificationTitle: "Un cours, puis tu scrolles",
-                notificationBody: "Appuie ici : un cours de 3 minutes et son quiz débloquent TikTok."
+                notificationBody: "Appuie ici : ton cours du jour débloque TikTok."
             )
         case "es":
             return ShieldCopy(
                 title: "Cultívate antes de scrollear",
-                subtitle: "Un curso de Sophia de 3 minutos y su quiz desbloquean TikTok durante \(unlockMinutes) min.",
+                subtitle: "Termina tu curso del día en Sophia para desbloquear TikTok hasta mañana.",
                 pendingSubtitle: "¡Anotado! Abre Sophia ahora: tu curso te espera.",
                 primaryButton: "Abrir Sophia",
                 secondaryButton: "Cerrar",
                 notificationTitle: "Un curso y luego a scrollear",
-                notificationBody: "Toca aquí: un curso de 3 minutos y su quiz desbloquean TikTok."
+                notificationBody: "Toca aquí: tu curso del día desbloquea TikTok."
             )
         case "de":
             return ShieldCopy(
                 title: "Erst lernen, dann scrollen",
-                subtitle: "Ein 3-Minuten-Kurs von Sophia und sein Quiz schalten TikTok für \(unlockMinutes) Min. frei.",
+                subtitle: "Beende deinen Tageskurs in Sophia, um TikTok bis morgen freizuschalten.",
                 pendingSubtitle: "Notiert! Öffne jetzt Sophia: dein Kurs wartet.",
                 primaryButton: "Sophia öffnen",
                 secondaryButton: "Schließen",
                 notificationTitle: "Ein Kurs, dann darfst du scrollen",
-                notificationBody: "Tippe hier: ein 3-Minuten-Kurs und sein Quiz schalten TikTok frei."
+                notificationBody: "Tippe hier: dein Tageskurs schaltet TikTok frei."
             )
         case "it":
             return ShieldCopy(
                 title: "Coltivati prima di scrollare",
-                subtitle: "Un corso Sophia di 3 minuti e il suo quiz sbloccano TikTok per \(unlockMinutes) min.",
+                subtitle: "Finisci il corso del giorno su Sophia per sbloccare TikTok fino a domani.",
                 pendingSubtitle: "Segnato! Apri Sophia adesso: il tuo corso ti aspetta.",
                 primaryButton: "Apri Sophia",
                 secondaryButton: "Chiudi",
                 notificationTitle: "Un corso, poi scrolli",
-                notificationBody: "Tocca qui: un corso di 3 minuti e il suo quiz sbloccano TikTok."
+                notificationBody: "Tocca qui: il tuo corso del giorno sblocca TikTok."
             )
         case "pt":
             return ShieldCopy(
                 title: "Cultiva-te antes de fazer scroll",
-                subtitle: "Um curso Sophia de 3 minutos e o seu quiz desbloqueiam o TikTok durante \(unlockMinutes) min.",
+                subtitle: "Termina o teu curso do dia na Sophia para desbloquear o TikTok até amanhã.",
                 pendingSubtitle: "Anotado! Abre a Sophia agora: o teu curso está à espera.",
                 primaryButton: "Abrir Sophia",
                 secondaryButton: "Fechar",
                 notificationTitle: "Um curso, depois fazes scroll",
-                notificationBody: "Toca aqui: um curso de 3 minutos e o seu quiz desbloqueiam o TikTok."
+                notificationBody: "Toca aqui: o teu curso do dia desbloqueia o TikTok."
             )
         default:
             return ShieldCopy(
                 title: "Learn something before you scroll",
-                subtitle: "A 3-minute Sophia course and its quiz unlock TikTok for \(unlockMinutes) min.",
+                subtitle: "Finish your daily course on Sophia to unlock TikTok until tomorrow.",
                 pendingSubtitle: "Got it! Open Sophia now: your course is waiting.",
                 primaryButton: "Open Sophia",
                 secondaryButton: "Close",
                 notificationTitle: "One course, then you scroll",
-                notificationBody: "Tap here: a 3-minute course and its quiz unlock TikTok."
+                notificationBody: "Tap here: your daily course unlocks TikTok."
             )
         }
     }

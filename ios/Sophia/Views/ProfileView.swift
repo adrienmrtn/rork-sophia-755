@@ -14,6 +14,7 @@ struct ProfileView: View {
     @State private var showAllQuizzes: Bool = false
     @State private var showPendingGlobalRankUp: Bool = false
     @State private var showEditHandle: Bool = false
+    @State private var showTikTokBlocker: Bool = false
     @State private var hapticTrigger: Int = 0
     @State private var appeared: Bool = false
     @Bindable private var social = SocialService.shared
@@ -33,6 +34,9 @@ struct ProfileView: View {
                             .padding(.horizontal, 20)
 
                         statsSection
+                            .padding(.horizontal, 20)
+
+                        tiktokBlockerCard
                             .padding(.horizontal, 20)
 
                         FriendsLeaderboardSection(social: social)
@@ -55,6 +59,14 @@ struct ProfileView: View {
             }
             .navigationBarHidden(true)
             .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
+            .fullScreenCover(isPresented: $showTikTokBlocker) {
+                TikTokBlockerSettingsView(
+                    store: store,
+                    onShowPaywall: onShowPaywall,
+                    presentedAsCover: true
+                )
+                .sophiaColorScheme()
+            }
             .fullScreenCover(isPresented: $showSettings) {
                 SettingsView(
                     progressManager: progressManager,
@@ -348,6 +360,64 @@ struct ProfileView: View {
     }
 
     // MARK: - Favorites shortcut
+
+    // MARK: - TikTok blocker
+
+    /// "Cultive-toi avant de scroller", where the daily goal lives. One card, four
+    /// states: not Premium, off, locked (finish today's course), done (well played).
+    private var tiktokBlockerCard: some View {
+        let blocker = TikTokBlockerManager.shared
+        let state: (icon: String, tint: Color, bg: Color, title: String, subtitle: String) = {
+            if !store.isPremium {
+                return ("lock.fill", DS.accentSoft, DS.accentTint,
+                        languageManager.text("tiktokBlocker.card.premium.title"),
+                        languageManager.text("tiktokBlocker.card.premium.subtitle"))
+            }
+            if !blocker.isArmed {
+                return ("lock.fill", DS.accentSoft, DS.accentTint,
+                        languageManager.text("tiktokBlocker.card.off.title"),
+                        languageManager.text("tiktokBlocker.card.off.subtitle"))
+            }
+            if blocker.isUnlockWindowOpen {
+                return ("checkmark.seal.fill", DS.success, DS.successTint,
+                        languageManager.text("tiktokBlocker.card.done.title"),
+                        languageManager.text("tiktokBlocker.card.done.subtitle"))
+            }
+            return ("lock.fill", DS.warm, DS.warm.opacity(0.15),
+                    languageManager.text("tiktokBlocker.card.locked.title"),
+                    languageManager.text("tiktokBlocker.card.locked.subtitle"))
+        }()
+
+        return Button {
+            hapticTrigger += 1
+            showTikTokBlocker = true
+        } label: {
+            HStack(spacing: 14) {
+                Image(systemName: state.icon)
+                    .font(.jakarta(size: 16, weight: .medium))
+                    .foregroundStyle(state.tint)
+                    .frame(width: 40, height: 40)
+                    .background(state.bg, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(state.title)
+                        .font(DS.title(.headline, .semibold))
+                        .foregroundStyle(DS.ink)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text(state.subtitle)
+                        .font(DS.sans(.caption, .medium))
+                        .foregroundStyle(DS.inkSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer()
+                Image(systemName: "chevron.forward")
+                    .font(.jakarta(size: 13, weight: .semibold))
+                    .foregroundStyle(DS.inkTertiary)
+            }
+            .dsCard(padding: 14)
+        }
+        .buttonStyle(ProfileCardPress())
+    }
 
     private var favoritesShortcut: some View {
         Button {
