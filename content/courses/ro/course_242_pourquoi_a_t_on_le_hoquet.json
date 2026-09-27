@@ -1,0 +1,135 @@
+{
+  "id": "course_242_pourquoi_a_t_on_le_hoquet",
+  "title": "De ce avem sughiț?",
+  "subtitle": "Reflexe și respirație",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Un spasm al diafragmei, o glotă care se închide brusc și acel „hic” pe care nu-l poți controla. Ce face de fapt corpul și de ce niciun remediu nu e dovedit.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "child_hiccups_surprised_hand_over_mouth",
+    "ratio": "4:3",
+    "hook": "Ți se spune să-ți ții respirația, să bei cu capul în jos sau să te sperie cineva. Dar ce se întâmplă de fapt în corpul tău?"
+  },
+  "sections": [
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Toată lumea are sughiț, de la sugar la bunic, și fiecare știe un leac sigur. Vecinul jură pe paharul cu apă băut invers, bunica pe lingurița de zahăr. Și totuși, sughițul rămâne unul dintre cele mai misterioase reflexe ale corpului omenesc."
+        },
+        {
+          "type": "paragraph",
+          "text": "În spatele acestui mic „hic” stă un mecanism precis: nervi, un mușchi care se contractă fără să te anunțe și o ușă care se trântește în gât. Iată ce știe medicina despre el și ce nu știe încă."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+      "title": "Un reflex care ocolește creierul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sughițul trece printr-un circuit numit [[arc reflex]], o cale nervoasă care declanșează o reacție fără nicio decizie conștientă. E același mecanism care îți face piciorul să sară când medicul te lovește ușor sub genunchi sau care îți retrage mâna de pe o plită fierbinte înainte să simți durerea."
+        },
+        {
+          "type": "image",
+          "asset": "mouse_diaphragm_muscle_fibres_microscopy",
+          "ratio": "auto",
+          "caption": "Diafragma la microscop: un mușchi striat, ca aceia ai brațelor și picioarelor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Când nervii care leagă creierul de mușchii respirației sunt iritați, [[diafragma]] se contractă dintr-odată. Aerul năvălește în plămâni. O fracțiune de secundă mai târziu, [[glota]], deschiderea dintre corzile vocale, se închide brusc. Acest pocnet produce „hic”-ul."
+        },
+        {
+          "type": "funFact",
+          "text": "Numele științific al sughițului este *singultus*, un cuvânt latinesc care înseamnă și suspin. Nu e deloc ciudat, deci, că îi apucă sughițul pe copii după o criză mare de plâns."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+      "title": "De la făt la bunic",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cele mai multe sughițuri sunt numite **trecătoare**: durează mai puțin de **48 de ore** și dispar singure. Cauzele sunt banale: mâncatul prea repede, băuturile acidulate, aerul înghițit sau alcoolul. Orice întinde stomacul sau irită nervii din apropiere poate porni reflexul."
+        },
+        {
+          "type": "image",
+          "asset": "fetal_ultrasound_scan_pregnancy",
+          "ratio": "2:1",
+          "caption": "La ecografie, fătul are deja sughiț, cu mult înainte de prima respirație."
+        },
+        {
+          "type": "paragraph",
+          "text": "Poți avea sughiț la orice vârstă, chiar și înainte de naștere. Ecografiile arată feți cu sughiț în burta mamei. Ei, totuși, nu mănâncă prea repede. O ipoteză: aceste spasme ar antrena mușchii respirației, o repetiție generală înainte de prima gură de aer."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+      "title": "Când sughițul nu se mai oprește",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uneori sughițul se instalează. După **două zile**, medicii vorbesc de sughiț **persistent**. După **o lună**, avem de-a face cu un [[sughiț rebel]]. Aceste forme rare semnalează adesea altceva: o boală a stomacului sau a esofagului, o problemă la plămâni sau o afectare a sistemului nervos central."
+        },
+        {
+          "type": "paragraph",
+          "text": "În aceste cazuri, medicul caută cauza și prescrie un tratament, uneori medicamente care liniștesc circuitul reflex. Sughițul nu mai e atunci o jenă trecătoare, ci un simptom care te împiedică să mănânci, să dormi și să vorbești."
+        },
+        {
+          "type": "funFact",
+          "text": "Recordul pentru cel mai lung sughiț îl deține un fermier american, [[Charles Osborne]], care a sughițat fără oprire din **1922 până în 1990**, adică 68 de ani, potrivit Guinness World Records. A avut totuși timp să se căsătorească de două ori și să facă opt copii."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+      "title": "Zeci de leacuri, niciunul dovedit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vestea bună despre sughițul trecător e că dispare singur. Vestea mai puțin bună: niciun leac băbesc n-a fost confirmat de un studiu serios. Să-ți ții respirația, să bei apă rece, să tragi de limbă, să respiri într-o pungă... Toate se sprijină pe povești, nu pe dovezi."
+        },
+        {
+          "type": "image",
+          "asset": "glass_of_cold_water_home_remedy_hiccups",
+          "ratio": "3:2",
+          "caption": "Paharul cu apă rece: cel mai răspândit leac și unul dintre cele mai puțin studiate."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aceste trucuri au totuși o logică comună: dau peste cap circuitul reflex. Când îți ții respirația, crește dioxidul de carbon din sânge și diafragma se liniștește. Înghițitul sau trasul de limbă stimulează nervii din gât și poate „reseta” circuitul. Uneori merge. Fără să știm prea bine de ce."
+        },
+        {
+          "type": "takeaway",
+          "text": "Sughițul e un reflex: diafragma se contractă, glota se închide, „hic”. Trecător aproape mereu, devine un simptom după 48 de ore. Niciun leac casnic nu e dovedit, chiar dacă toate încearcă să rupă circuitul."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Alimentary Pharmacology & Therapeutics (Wiley), revue sur la physiopathologie et le traitement du hoquet.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.13374"
+    },
+    {
+      "text": "Cleveland Clinic, « Hiccups ».",
+      "url": "https://my.clevelandclinic.org/health/diseases/17672-hiccups"
+    },
+    {
+      "text": "Guinness World Records, « Longest attack of hiccups ».",
+      "url": "https://www.guinnessworldrecords.com/world-records/67619-longest-attack-of-hiccups"
+    }
+  ]
+}
