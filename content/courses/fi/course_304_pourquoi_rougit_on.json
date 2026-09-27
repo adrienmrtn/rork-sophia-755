@@ -1,0 +1,131 @@
+{
+  "id": "course_304_pourquoi_rougit_on",
+  "title": "Miksi punastumme?",
+  "subtitle": "Kaikkein inhimillisin ilme",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Kiusallinen huomautus tai kohteliaisuus: kummassakin tapauksessa posket kuumenevat ja punertuvat. Mitä keho tekee sillä hetkellä, ja miksi asialle ei voi juuri mitään.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "blushing_red_cheeks_woman_portrait_close_up",
+    "ratio": "4:3",
+    "hook": "Yksi kömpelö huomautus, ja poskesi leimahtavat. Kohteliaisuus, ja käy samoin. Kukaan ei päätä punastua."
+  },
+  "sections": [
+    {
+      "id": "course_304_pourquoi_rougit_on_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tunne on kaikille tuttu. Joku heittää sinusta kiusallisen huomautuksen: kasvosi kuumenevat, ihosi punertuu. Jopa luonnontieteilijä [[Charles Darwin]] oli ilmiöstä ymmällään ja piti sitä ”kaikkein omituisimpana ja inhimillisimpänä kaikista ilmeistä”."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oudointa on, että kohteliaisuus saa aikaan saman vaikutuksen kuin pilkka. Kun sinua kehutaan muiden edessä, tunnet saman kuumotuksen nousevan poskille. Mitä ihon alla oikeastaan tapahtuu, ja miksi keho reagoi samalla tavalla häpeään ja mielihyvään?"
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p1",
+      "title": "Kuumuuden aalto ihon alla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Punastuminen on ennen kaikkea veren asia. Kasvojen pienissä, aivan ihon pinnan lähellä sijaitsevissa suonissa virtaavan veren määrä kasvaa äkkiä. Ilmiötä ohjaa [[sympaattinen hermosto]], hermoston osa, josta käynnistyy [[taistele tai pakene -reaktio]], hätävasteemme vaaran edessä."
+        },
+        {
+          "type": "image",
+          "asset": "thermal_infrared_image_human_face_heat",
+          "ratio": "3:2",
+          "caption": "Hahmoja lämpökameran läpi nähtynä: mitä lämpimämpi pinta, sitä vaaleampana se näkyy näytöllä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kun tämä järjestelmä aktivoituu, sydän lyö nopeammin ja kehon lämpötila nousee. Ylimääräisen lämmön poistamiseksi kasvojen verisuonet laajenevat: niiden läpi virtaa enemmän verta, ja sen kuljettama lämpö haihtuu ihon läpi. Koska suonet ovat aivan pinnassa, verentulva näkyy: iho muuttuu vaaleanpunaiseksi tai punaiseksi. Punastuminen on jäähdytysjärjestelmä toiminnassa."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p2",
+      "title": "Nolous, pakorefleksi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seurassa tehty moka, tahattomasti rikottu kirjoittamaton sääntö: aivot reagoivat siihen kuin uhkaan. Ne aktivoivat sympaattisen hermoston, ja mieleen nousee halu puolustautua (”taistele”) tai kadota (”pakene”). Veri syöksyy kasvojen suoniin, ja posket leimahtavat punaisiksi."
+        },
+        {
+          "type": "image",
+          "asset": "embarrassed_person_hiding_face_in_hands",
+          "ratio": "3:2",
+          "caption": "Kasvojen peittäminen käsiin: pakorefleksin arkinen versio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jotkut punastuvat muita enemmän. Ne, joilla on [[sosiaalinen ahdistuneisuus]], suhtautuvat usein itseensä ankarammin. Tämä kielteinen vinouma voimistaa sympaattisen hermoston vastetta, ja pieninkin kömmähdys laukaisee koko kehossa todellisen hälytyksen."
+        },
+        {
+          "type": "funFact",
+          "text": "Punastumisen pelko saa punastumaan. Niillä, jotka pelkäävät punastumistaan, jo pelkkä tietoisuus siitä, että heitä katsotaan, voimistaa sympaattista vastetta. Punastut siis siksi, että punastuit, ja kehä sulkeutuu."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p3",
+      "title": "Punastumista myös ilosta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Myönteinen huomio käynnistää saman mekanismin. Julkinen kehu, aplodit, odottamaton kohteliaisuus: tunnet yhtäkkiä olevasi muiden katseiden kohteena tai huolestut siitä, ettet osaa kiittää oikein. Tämä vaivautuneisuus riittää käynnistämään hätävasteen."
+        },
+        {
+          "type": "image",
+          "asset": "shy_speaker_receiving_applause_audience",
+          "ratio": "5:4",
+          "caption": "Bostonin pormestari taputtaa puhujalle ulkoilmalounaalla 1960-luvulla: myönteinenkin huomio saa punastumaan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aivot kyllä erottavat kehun nöyryytyksestä oikein hyvin. Sympaattinen hermosto on kuitenkin karkeampi: se ei ole vielä päättänyt, pitääkö paeta vai ei. Siinä vaiheessa, kun se tekee ratkaisunsa, kasvot ovat jo vaihtaneet väriä."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p4",
+      "title": "Voiko punastumisen estää?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ei oikeastaan, eikä se haittaa: punastuminen on luonnollinen reaktio ympäröivään sosiaaliseen maailmaan, ei korjattava vika. Sen sijaan voit vaikuttaa siihen, mikä sen laukaisee, eli siihen, miten aivot luokittelevat kiusallisen tilanteen ”vaaraksi”."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kaksi lähestymistapaa voi auttaa. Yksi on [[altistusterapia]], jossa pelättyjä tilanteita kohdataan vähitellen, kunnes ne eivät enää laukaise hälytystä. Toinen on [[tietoinen läsnäolo]], joka opettaa tarkkailemaan nousevaa kuumotusta pelkäämättä sitä. Kummassakaan punastuminen ei katoa: punastumisen pelko sen sijaan purkautuu, ja kehä rauhoittuu."
+        },
+        {
+          "type": "takeaway",
+          "text": "Punastuminen on sympaattisen hermoston keino laajentaa kasvojen verisuonia ja poistaa hälytyksen synnyttämää lämpöä, johtui hälytys sitten mokasta tai kohteliaisuudesta: sitä ei voi estää, mutta sitä voi oppia olemaan pelkäämättä."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "C. Darwin, The Expression of the Emotions in Man and Animals, John Murray, 1872, p. 301.",
+      "url": "https://darwin-online.org.uk/content/frameset?viewtype=text&itemID=F1142&pageseq=1"
+    },
+    {
+      "text": "P. D. Drummond, G. B. Shapiro, M. Nikolić et S. M. Bögels, « Treatment Options for Fear of Blushing », Current Psychiatry Reports, vol. 22, n° 6, 2020.",
+      "url": "https://doi.org/10.1007/s11920-020-01152-5"
+    },
+    {
+      "text": "D. J. Stein et C. Bouwer, « Blushing and social phobia: a neuroethological speculation », Medical Hypotheses, vol. 49, n° 1, 1997, p. 101-108.",
+      "url": "https://doi.org/10.1016/S0306-9877(97)90260-7"
+    }
+  ]
+}
