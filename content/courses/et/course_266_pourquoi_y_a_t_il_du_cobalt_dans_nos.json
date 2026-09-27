@@ -1,0 +1,131 @@
+{
+  "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos",
+  "title": "Miks on meie akudes koobaltit?",
+  "subtitle": "Element 27",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Peaaegu keegi ei kaevanda koobaltit selle enda pärast, ja ometi leidub seda iga telefoni akus. Lugu metallist, mida tööstus ei suuda asendada, kuid millest ta sellegipoolest üritab vabaneda.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "cobalt_copper_open_pit_mine_kolwezi_drc",
+    "ratio": "4:3",
+    "hook": "Metalli, millest elektriautod sõltuvad, ei kaevandata peaaegu kunagi selle enda pärast."
+  },
+  "sections": [
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Koobalt on perioodilisuse tabeli element number **27**, surutud raua ja nikli vahele. Seda on telefoni akus, mida sa käes hoiad, magnetites ja sulamites, mis on piisavalt kõvad, et pidada vastu lennukimootori sees. Ja peaaegu keegi ei kaevanda seda selle enda pärast."
+        },
+        {
+          "type": "paragraph",
+          "text": "Umbes **99%** maailma koobaltist tuleb maapõuest kõrvalsaadusena: see eraldatakse maagist, mida kaevandatakse vase või nikli pärast. Ligikaudu **kolm neljandikku** sellest annab [[Kongo Demokraatlik Vabariik]], peaaegu täielikult vasekaevandustest. Koobalti pakkumine ei sõltu seega koobaltinõudlusest, vaid vase ja nikli nõudlusest. Kummaline viis majandada metalli, millele elektriautod toetuvad."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p1",
+      "title": "Aku, mis vajas koobaltit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1980. aastal** avastavad [[John Goodenough]] ja Koichi Mizushima Oxfordis, et liitiumkoobaltoksiid (LiCoO2 ehk LCO) toimib elektroodina, mille aluseks on [[interkalatsioon]]: koobaltoksiidi kihid, mille vahele liitiumioonid libisevad ja sealt uuesti välja, ilma et kihistus kokku variseks. See oligi just see [[katood]], mida vaja oli, üks aku kahest elektroodist."
+        },
+        {
+          "type": "image",
+          "asset": "john_goodenough_portrait_lithium_battery_inventor",
+          "ratio": "3:4",
+          "caption": "John Goodenough, kes avastas 1980. aastal koos Koichi Mizushimaga koobaltkatoodi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seejärel ootab maailm üle kümne aasta. **1991. aastal** hakkab Sony müüma esimest kaubanduslikku liitiumioonakut ja selle katood on LCO. Umbes **2010. aastani** valmistatakse peaaegu kõik liitiumioonakude katoodid just nii. LCO valitseb endiselt tarbeelektroonikat: seepärast sisaldab su telefon paar grammi metalli, mida keegi polnud otsustanud kaevandada."
+        },
+        {
+          "type": "funFact",
+          "text": "Koobalti avastas 1735. aastal Rootsi keemik Georg Brandt, ligi kaks ja pool sajandit enne seda, kui see meie akudesse jõudis."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p2",
+      "title": "Aku, mis toodab ise oma hapnikku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kujuta katoodi ette telliskivimüürina. Koobaltoksiidi kihid on riiulid ja liitiumioonid on nende vahele laotud tellised. Kui laed akut liiga tugevalt, võtad välja liiga palju telliseid ja müür muutub ebastabiilseks. Umbes **130 °C** kohal või ülelaadimisel hakkab struktuur kokku varisema ning koobaltoksiidi lukustatud hapnik pääseb gaasina välja."
+        },
+        {
+          "type": "image",
+          "asset": "lithium_ion_battery_fire_thermal_runaway_test",
+          "ratio": "2:3",
+          "caption": "Kahest 18650 liitiumioonelemendist koosnev plokk: juba silt hoiatab, et see võib tules plahvatada."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elementi täitev vedelik on **tuleohtlik** ja aku on just ise andnud hapniku selle põletamiseks. Kuumus kiirendab lagunemist, mis vabastab rohkem hapnikku, mis toodab rohkem kuumust. Seda nähtust nimetatakse nii: [[termiline läbiminek]]. Seepärast ei saa liitiumaku põlengut kustutada lämmatades: hapnik on juba sees."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p3",
+      "title": "Miks koobalt ikka alles on",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tuleme tagasi telliskivimüüri juurde. Iga laadimise ja kasutamisega libisevad liitiumitellised välja ja siis tagasi. Koobalt on mört, mis hoiab müüri sadade tsüklite jooksul kõverdumast või kokku varisemast. Teised materjalid üksi sellega hakkama ei saa: **nikkel** salvestab rohkem energiat, kuid kulub liiga kiiresti, **mangaan** on odav, kuid jääb võimsuselt alla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seepärast vähendavad enamiku elektriautode segud, näiteks **NMC** (nikkel, mangaan, koobalt) ja **NCA** (nikkel, koobalt, alumiinium) katoodid, koobalti osakaalu, kuid ei kaota seda kunagi päriselt. Viisteist aastat on insenerid seda kulude kärpimiseks vähendanud, kuid terviku koos hoidmiseks on ikka vaja näpuotsatäit. Ainus, mis saab täiesti ilma, on [[LFP-aku]], ja see õnnestub tal ainult nii, et müür visatakse minema ja ehitatakse hoopis teistsugune sisestruktuur."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p4",
+      "title": "Koobaltist loobumine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Koobalti probleem ei ole keemiline. Osa Kongo toodangust tuleb kohtadest, kus käib [[käsitsikaevandamine]]: kaevatakse käsitsi, ohtlikes tingimustes ja kohati lapstööjõuga. Koobalti hind kõigub kiiresti ja tugevalt, mis teeb iga sellest sõltuva aku ettearvamatuks. Ja peaaegu kõik see pärineb **ühestainsast riigist**."
+        },
+        {
+          "type": "image",
+          "asset": "artisanal_cobalt_miners_kolwezi_congo",
+          "ratio": "4:3",
+          "caption": "Käsitsikaevurid täidavad Kongo Demokraatlikus Vabariigis kotte koobaltimaagiga."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seepärast püüab tööstus kujundada akusid ilma selle metallita. Peamine vastus on **LFP**, liitiumraudfosfaat, mis asendab koobalti raua ja fosforiga, kahe kõige odavama ja rohkem levinud elemendiga. See kuumeneb vähem ja seda on palju raskem termilisse läbiminekusse ajada."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hinnaks on energia: **sama kaalu** juures salvestab LFP-element vähem. Seepärast võib su auto juba sellist kasutada, kuid su telefon pole veel üle läinud: taskus loeb iga gramm."
+        },
+        {
+          "type": "takeaway",
+          "text": "Koobalt hoiab koos liitiumioonakude struktuuri, kuid see pärineb peaaegu täielikult ühest riigist ja vase kõrvalsaadusena: tööstus vabaneb sellest ainult keemiat vahetades, LFP abil, väiksema energia hinnaga."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Cobalt Institute, « Cobalt uses ».",
+      "url": "https://www.cobaltinstitute.org/global-cobalt/cobalt-uses/"
+    },
+    {
+      "text": "« One hundred years of cobalt production in the Democratic Republic of the Congo », Resources Policy, 2022.",
+      "url": "https://doi.org/10.1016/j.resourpol.2022.103007"
+    }
+  ]
+}
