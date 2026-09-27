@@ -40,7 +40,7 @@
           "type": "image",
           "asset": "oxyrhynchus_greek_papyrus_fragment_ancient_text",
           "ratio": "4:3",
-          "caption": "Fragment of a Greek papyrus from Oxyrhynchus, Egypt (1st to 3rd century): a material that lasts only in dry air."
+          "caption": "Fragment of a Greek scroll from Oxyrhynchus, Egypt (1st to 3rd century): a material that lasts only in dry air."
         },
         {
           "type": "paragraph",
@@ -55,7 +55,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Heavy as they were, these losses did not erase humanity's knowledge. What survived reached us through Byzantine scribes, Arab scholars and Latin translators. In Baghdad, under the [[Abbasids]], scholars translated Aristotle, Euclid and Ptolemy, then pushed Greek science far beyond its limits. **Al-Khwarizmi** turned algebra into an organized discipline and gave it its name. **Ibn al-Haytham** rebuilt optics on observation and experiment."
+          "text": "These losses did not erase humanity's knowledge. What survived reached us through Byzantine scribes, Arab scholars and Latin translators. In Baghdad, under the [[Abbasids]], scholars translated Aristotle, Euclid and Ptolemy, then pushed Greek science far beyond its limits. **Al-Khwarizmi** turned algebra into an organized discipline and gave it its name. **Ibn al-Haytham** rebuilt optics on observation and experiment."
         },
         {
           "type": "image",
@@ -65,11 +65,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Elsewhere, knowledge advanced too: Indian mathematicians developed the decimal place-value system and the zero, and China invented paper and printing. When Western Europe finally went looking for the Greek texts, it turned to Arabic. In the **12th century**, scholars of the [[Toledo School of Translators]], such as Gerard of Cremona, rendered Ptolemy's *Almagest* and dozens of other scientific works into Latin."
-        },
-        {
-          "type": "paragraph",
-          "text": "This is where the legend falls apart. To say that the fire at Alexandria \"set humanity back a thousand years\" is to assume that Mediterranean learning was all of human knowledge. It ignores everyone who kept building while Europe supposedly sat in the dark."
+          "text": "Elsewhere, knowledge advanced too: Indian mathematicians invented the decimal place-value system and the zero, and China developed paper and printing. In the **12th century**, scholars of the [[Toledo School of Translators]], such as Gerard of Cremona, rendered Ptolemy's *Almagest* and dozens of other works from Arabic into Latin. To say that the fire at Alexandria \"set humanity back a thousand years\" is therefore to assume that Mediterranean learning was all of human knowledge, and to ignore everyone who kept building."
         }
       ]
     },
@@ -80,17 +76,13 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "If the disaster never happened, why do we remember it so vividly? Because neglect does not make a good story. We prefer a single catastrophe and someone to blame. Two episodes supplied the raw material: the armies of the emperor Aurelian razed the palace district around **273**, and a Christian mob destroyed the [[Serapeum]] and its annex library in **391**."
+          "text": "If the disaster never happened, why do we remember it so vividly? Because neglect does not make a good story: we prefer a single catastrophe and someone to blame. The armies of the emperor Aurelian razed the palace district around **273**, and a Christian mob destroyed the [[Serapeum]] and its annex library in **391**. Then a **13th-century** invention added that the caliph Omar had the manuscripts burned, in 642, to heat the city's baths. Three separate episodes, welded into a single imaginary catastrophe."
         },
         {
           "type": "image",
           "asset": "pompeys_pillar_serapeum_ruins_alexandria_photo",
           "ratio": "3:2",
           "caption": "Pompey's Pillar, standing among the ruins of the Serapeum in Alexandria."
-        },
-        {
-          "type": "paragraph",
-          "text": "The most striking myth is a **13th-century** invention: the caliph Omar supposedly ordered the manuscripts burned in **642** to heat the city's baths. Three separate events, centuries apart, were thus welded into a single imaginary catastrophe."
         },
         {
           "type": "funFact",
@@ -115,9 +107,9 @@
           "type": "timeline",
           "events": [
             {
-              "date": "48 BC",
-              "title": "The harbor fire",
-              "detail": "Caesar's siege destroys warehouses full of scrolls."
+              "date": "273",
+              "title": "The palace district razed",
+              "detail": "Aurelian's armies ravage the heart of the city."
             },
             {
               "date": "391",
@@ -125,9 +117,9 @@
               "detail": "A Christian mob razes the sanctuary and its library."
             },
             {
-              "date": "13th century",
+              "date": "642",
               "title": "The Omar legend",
-              "detail": "A late invention: manuscripts burned to heat the baths."
+              "detail": "A 13th-century invention: manuscripts burned to heat the baths."
             },
             {
               "date": "1876",

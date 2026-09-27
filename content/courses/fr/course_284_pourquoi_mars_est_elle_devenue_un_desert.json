@@ -19,11 +19,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depuis des décennies, les scientifiques cherchent sur Mars des traces de vie passée. Toute vie connue a besoin d'eau, et la surface martienne est aujourd'hui froide et extrêmement sèche. Pourtant, Mars n'a pas toujours été ainsi. Les rovers, ces robots à roues qui explorent son sol, y ont trouvé des roches et des minéraux qui ne se forment qu'en présence d'**eau liquide**."
+          "text": "Depuis des décennies, les scientifiques cherchent sur Mars des traces de vie passée. Toute vie connue a besoin d'eau, or la surface martienne est aujourd'hui froide et extrêmement sèche. Mars n'a pourtant pas toujours été ainsi : les rovers, ces robots à roues qui explorent son sol, y ont trouvé des roches et des minéraux qui ne se forment qu'en présence d'**eau liquide**."
         },
         {
           "type": "paragraph",
-          "text": "Vu d'en haut, le paysage confirme : anciennes vallées fluviales, deltas, fonds de lacs asséchés. Beaucoup de ces reliefs datent de plus de **3 milliards d'années**. La NASA a même relevé les traces de crues gigantesques qui ont balayé des régions entières il y a environ **3,5 milliards d'années**. De l'eau a donc coulé sur Mars. Le mystère, c'est la suite : comment une planète humide est-elle devenue le désert que l'on observe aujourd'hui ?"
+          "text": "Vu d'en haut, le paysage confirme : anciennes vallées fluviales, deltas, fonds de lacs asséchés. Beaucoup de ces reliefs ont plus de **3 milliards d'années**. La NASA a même relevé les traces de crues gigantesques il y a environ **3,5 milliards d'années**. De l'eau a donc coulé sur Mars. Reste le mystère : comment une planète humide est-elle devenue ce désert ?"
         }
       ]
     },
@@ -34,21 +34,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Avoir de l'eau ne suffit pas. Il faut aussi des conditions qui la maintiennent liquide. Or l'atmosphère actuelle de Mars est très ténue : sa [[pression atmosphérique]] vaut moins de **1 %** de celle de la Terre. Sous une pression aussi faible, l'eau liquide ne reste pas stable en surface bien longtemps. Elle gèle, ou elle se transforme en vapeur."
+          "text": "Avoir de l'eau ne suffit pas, il faut des conditions qui la maintiennent liquide. Or l'atmosphère actuelle de Mars est très ténue : sa [[pression atmosphérique]] vaut moins de **1 %** de celle de la Terre. Sous une pression aussi faible, l'eau liquide ne reste pas stable en surface : elle gèle ou s'évapore."
         },
         {
           "type": "image",
           "asset": "jezero_crater_river_delta_mars_reconnaissance_orbiter",
           "ratio": "4:3",
-          "caption": "Le delta fossile du cratère Jezero, vu depuis l'orbite : les sédiments déposés par une rivière dans un ancien lac."
+          "caption": "Le delta fossile du cratère Jezero vu depuis l'orbite : les sédiments d'une rivière dans un ancien lac."
         },
         {
           "type": "paragraph",
-          "text": "Comment la jeune Mars gardait-elle donc son eau ? Il y a des milliards d'années, son atmosphère était bien plus épaisse, et cela l'aidait de deux façons. Une pression plus forte maintenait l'eau à l'état liquide. Et les gaz de l'air retenaient la chaleur, un [[effet de serre]] qui gardait la surface plus tiède."
+          "text": "Comment la jeune Mars gardait-elle son eau ? Il y a des milliards d'années, son atmosphère était bien plus épaisse, et cela l'aidait de deux façons. Une pression plus forte maintenait l'eau à l'état liquide. Et les gaz de l'air retenaient la chaleur, un [[effet de serre]] qui gardait la surface plus tiède."
         },
         {
           "type": "funFact",
-          "text": "Les chercheurs débattent encore de la température exacte de la jeune Mars. Une certitude, tout de même : l'eau liquide y est restée assez longtemps pour creuser des vallées et remplir des lacs."
+          "text": "Les chercheurs débattent encore de la température exacte de la jeune Mars. Une certitude : l'eau liquide y est restée assez longtemps pour creuser des vallées et remplir des lacs."
         }
       ]
     },
@@ -59,17 +59,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au fil des milliards d'années, une grande partie de cette atmosphère s'est échappée dans l'espace. Première raison : la taille de la planète. Mars est petite, sa **gravité** est plus faible que celle de la Terre, et elle retient donc moins bien ses gaz. Deuxième raison : Mars a perdu son [[champ magnétique]], ce bouclier invisible qui protégeait son atmosphère des particules chargées venues du Soleil."
+          "text": "Au fil des milliards d'années, une grande partie de cette atmosphère s'est échappée dans l'espace. Première raison : la taille de la planète. Mars est petite, sa **gravité** est plus faible que celle de la Terre, et elle retient moins bien ses gaz. Deuxième raison : Mars a perdu son [[champ magnétique]], le bouclier invisible qui protégeait son atmosphère des particules chargées du Soleil."
         },
         {
           "type": "image",
           "asset": "maven_solar_wind_stripping_mars_atmosphere_nasa",
           "ratio": "4:3",
-          "caption": "Vue d'artiste de la NASA pour la mission MAVEN : le vent solaire arrache des gaz à la haute atmosphère de Mars."
+          "caption": "Vue d'artiste de la NASA (mission MAVEN) : le vent solaire arrache des gaz à la haute atmosphère martienne."
         },
         {
           "type": "paragraph",
-          "text": "Ces particules forment le [[vent solaire]], un flux continu de matière chargée qui s'échappe du Soleil. Sans bouclier, il frappe la haute atmosphère martienne et en arrache des gaz vers l'espace. La lumière solaire la plus énergétique joue aussi son rôle : elle casse les molécules d'eau et d'autres molécules, et les **atomes légers** ainsi libérés échappent plus facilement à la faible gravité de Mars. À mesure que l'atmosphère s'amincit, Mars devient plus froide et plus sèche."
+          "text": "Ces particules forment le [[vent solaire]], un flux continu de matière chargée qui s'échappe du Soleil. Sans bouclier, il frappe la haute atmosphère martienne et en arrache des gaz. La lumière solaire la plus énergétique compte aussi : elle casse les molécules d'eau et d'autres molécules, et les **atomes légers** libérés échappent plus facilement à la faible gravité de Mars. À mesure que l'atmosphère s'amincit, Mars devient plus froide et plus sèche."
         }
       ]
     },
@@ -80,15 +80,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Toute l'eau de Mars n'a pourtant pas fui dans l'espace. Une partie, montée dans la haute atmosphère, y a bien été brisée en atomes légers qui se sont échappés. Mais le reste est demeuré sur place. Une fraction a gelé sous la surface. Une autre a réagi chimiquement avec les roches et s'est retrouvée enfermée dans des **minéraux**."
+          "text": "Toute l'eau de Mars n'a pourtant pas fui dans l'espace. Une partie, montée dans la haute atmosphère, y a été brisée en atomes légers qui se sont échappés. Mais le reste est demeuré sur place : une fraction a gelé sous la surface, une autre a réagi avec les roches et s'est retrouvée enfermée dans des **minéraux**."
         },
         {
           "type": "funFact",
-          "text": "Une étude publiée en 2021 dans la revue *Science* estime qu'entre **30 et 99 %** de l'eau de Mars pourrait avoir été piégée dans les minéraux de ses roches. La fourchette est large, signe que la question reste ouverte."
+          "text": "Une étude publiée en 2021 dans la revue *Science* estime qu'entre **30 et 99 %** de l'eau de Mars pourrait avoir été piégée dans les minéraux de ses roches. Une fourchette large : la question reste ouverte."
         },
         {
           "type": "paragraph",
-          "text": "Cette eau ne s'est donc pas seulement accumulée sous terre, sous forme de glace ou de liquide. Elle est devenue partie intégrante de la [[croûte]], la couche rocheuse externe de la planète. Autrement dit, une part importante de l'eau « disparue » de Mars serait toujours là, prisonnière de ses roches."
+          "text": "Cette eau ne s'est donc pas seulement accumulée sous terre en glace ou en liquide. Elle fait désormais partie de la [[croûte]], la couche rocheuse externe de la planète. Autrement dit, une part importante de l'eau « disparue » de Mars serait toujours là, prisonnière de ses roches."
         }
       ]
     },
@@ -99,7 +99,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mars ressemble aujourd'hui à un désert, mais elle n'est pas dépourvue d'eau. Ce qui a largement disparu, c'est l'eau stable qui coulait en surface. De grandes quantités restent gelées dans les [[calottes polaires]]. D'autres dorment sous le sol, sous forme de **glace enfouie**. D'autres encore sont enfermées dans les minéraux de la croûte."
+          "text": "Mars ressemble aujourd'hui à un désert, mais elle n'est pas dépourvue d'eau. Ce qui a largement disparu, c'est l'eau stable qui coulait en surface. De grandes quantités restent gelées dans les [[calottes polaires]], d'autres dorment sous le sol en **glace enfouie**, d'autres encore sont enfermées dans les minéraux de la croûte."
         },
         {
           "type": "image",
@@ -109,11 +109,11 @@
         },
         {
           "type": "paragraph",
-          "text": "La leçon dépasse Mars. Posséder de l'eau ne suffit pas à rendre une planète humide et habitable : les conditions qui l'entourent comptent tout autant. Une atmosphère assez épaisse maintient l'eau liquide et lui permet de se rassembler en rivières et en lacs. Mars n'est pas devenue un désert parce que chaque goutte s'est envolée dans l'espace. Elle s'est asséchée parce que son atmosphère ne pouvait plus garder son eau en mouvement."
+          "text": "La leçon dépasse Mars. Posséder de l'eau ne suffit pas à rendre une planète humide et habitable : les conditions comptent tout autant. Une atmosphère assez épaisse garde l'eau liquide et la laisse se rassembler en rivières et en lacs. Mars n'est pas devenue un désert parce que chaque goutte s'est envolée dans l'espace, mais parce que son atmosphère ne pouvait plus garder son eau en mouvement."
         },
         {
           "type": "takeaway",
-          "text": "Mars a séché parce que son atmosphère, amincie par des milliards d'années de fuite vers l'espace, ne pouvait plus garder l'eau liquide en surface : une grande partie de cette eau est encore là, gelée aux pôles ou enfermée dans les roches."
+          "text": "Mars a séché parce que son atmosphère amincie ne pouvait plus garder l'eau liquide en surface : une grande partie de cette eau est encore là, gelée aux pôles ou enfermée dans les roches."
         }
       ]
     }
