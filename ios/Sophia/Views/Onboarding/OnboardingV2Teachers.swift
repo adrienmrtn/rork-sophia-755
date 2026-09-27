@@ -76,14 +76,11 @@ struct OnboardingV2Teachers: View {
     /// fully out, the offset wraps and the second is exactly where the first was.
     private var marquee: some View {
         TimelineView(.animation) { context in
-            let t = context.date.timeIntervalSinceReferenceDate
-            let speed: CGFloat = 38 // points per second
-            let x = stripWidth > 0 ? CGFloat(t * Double(speed)).truncatingRemainder(dividingBy: stripWidth) : 0
             HStack(spacing: gap) {
                 strip
                 strip
             }
-            .offset(x: -x)
+            .offset(x: -marqueeOffset(at: context.date))
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .frame(height: logoHeight + 16)
@@ -99,6 +96,14 @@ struct OnboardingV2Teachers: View {
                 startPoint: .leading, endPoint: .trailing
             )
         )
+    }
+
+    /// 38 points per second, wrapped on the strip width.
+    private func marqueeOffset(at date: Date) -> CGFloat {
+        guard stripWidth > 0 else { return 0 }
+        let travelled: Double = date.timeIntervalSinceReferenceDate * 38.0
+        let wrapped: Double = travelled.truncatingRemainder(dividingBy: Double(stripWidth))
+        return CGFloat(wrapped)
     }
 
     private var strip: some View {
