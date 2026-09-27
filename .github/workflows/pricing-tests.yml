@@ -10,6 +10,7 @@
 #              (localizations, availability, Apple price grid + overrides, free
 #              trial, review screenshot copied from Sophia_yearly).
 #     status   state of every subscription in the "Sophia Premium" group.
+#     prices   customer price of every subscription in a dozen territories.
 #     submit   submit the group for review (only what is Ready to Submit).
 #
 #   target = revenuecat
@@ -38,6 +39,7 @@ on:
           - plan
           - apply
           - status
+          - prices
           - submit
       only:
         description: "appstore only: one product id, e.g. Sophia_yearly_4999 (blank = all)"
@@ -105,6 +107,7 @@ jobs:
             appstore/plan)     set -- scripts/appstore_subscriptions.py plan "${only[@]}" ;;
             appstore/apply)    set -- scripts/appstore_subscriptions.py apply "${only[@]}" ;;
             appstore/status)   set -- scripts/appstore_subscriptions.py status ;;
+            appstore/prices)   set -- scripts/appstore_subscriptions.py prices ;;
             appstore/submit)   set -- scripts/appstore_subscriptions.py submit ;;
             revenuecat/plan)   set -- scripts/revenuecat_pricing_setup.py plan ;;
             revenuecat/apply)  set -- scripts/revenuecat_pricing_setup.py apply ;;

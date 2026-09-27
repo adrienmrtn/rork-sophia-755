@@ -12,6 +12,8 @@ Four subcommands, in the order you run them:
     apply    create what is missing. Idempotent: a product that already exists is
              completed (localizations, prices, offer, screenshot), never duplicated.
     status   one line per subscription of the group with its App Store state.
+    prices   the customer price of every subscription of the group in a dozen
+             territories, to check Apple's grid before submitting.
     submit   submit the group for review (every subscription in "Ready to Submit").
 
 What `apply` does for one product, in order, skipping every step already done:
@@ -450,6 +452,44 @@ def status(client: Client, manifest: dict) -> int:
     return 0
 
 
+CHECK_TERRITORIES = ["FRA", "DEU", "USA", "GBR", "ITA", "ESP", "POL", "TUR", "MEX", "BRA", "IND", "JPN"]
+
+
+def prices(client: Client, manifest: dict) -> int:
+    """Customer prices per territory, read back from the account (not computed here)."""
+    app_id = find_app(client, manifest["bundle_id"])
+    group = find_group(client, app_id, manifest["group_name"])
+    wanted = {p["product_id"] for p in manifest["products"]}
+    header = f"{'':2}{'product':<24}" + "".join(f"{t:>12}" for t in CHECK_TERRITORIES)
+    print(header)
+    currencies: dict[str, str] = {}
+    for product_id, sub in sorted(subscriptions_in(client, group["id"]).items(), key=lambda kv: kv[0] or ""):
+        page = client.call(
+            "GET",
+            f"/subscriptions/{sub['id']}/prices",
+            params={
+                "filter[territory]": ",".join(CHECK_TERRITORIES),
+                "include": "territory,subscriptionPricePoint",
+                "limit": 200,
+            },
+        )
+        points = {i["id"]: (i["attributes"] or {}) for i in page.get("included") or [] if i["type"] == "subscriptionPricePoints"}
+        for i in page.get("included") or []:
+            if i["type"] == "territories":
+                currencies[i["id"]] = (i["attributes"] or {}).get("currency", "")
+        by_territory: dict[str, str] = {}
+        for price in page.get("data") or []:
+            territory = territory_of(price)
+            point_id = (((price.get("relationships") or {}).get("subscriptionPricePoint") or {}).get("data") or {}).get("id")
+            if territory and point_id in points:
+                by_territory[territory] = points[point_id].get("customerPrice", "?")
+        mark = "*" if product_id in wanted else " "
+        print(f"{mark:2}{product_id:<24}" + "".join(f"{by_territory.get(t, '-'):>12}" for t in CHECK_TERRITORIES))
+    print(f"{'':2}{'currency':<24}" + "".join(f"{currencies.get(t, ''):>12}" for t in CHECK_TERRITORIES))
+    print("\n* = product of the price-test manifest. Compare _t50 and _t25 with Sophia_yearly in TUR, MEX, BRA, IND.")
+    return 0
+
+
 def submit(client: Client, manifest: dict) -> int:
     app_id = find_app(client, manifest["bundle_id"])
     group = find_group(client, app_id, manifest["group_name"])
@@ -484,7 +524,7 @@ def submit(client: Client, manifest: dict) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["plan", "apply", "status", "submit"])
+    parser.add_argument("command", choices=["plan", "apply", "status", "prices", "submit"])
     parser.add_argument("--manifest", type=Path, default=MANIFEST)
     parser.add_argument("--only", action="append", help="Limit to one product id (repeatable)")
     parser.add_argument("--dry-run", action="store_true", help="With submit: show what would be submitted")
@@ -496,6 +536,8 @@ def main() -> int:
             return run(client, manifest, args.only)
         if args.command == "status":
             return status(client, manifest)
+        if args.command == "prices":
+            return prices(client, manifest)
         return submit(client, manifest)
     except ApiError as error:
         print(f"App Store Connect refused: {error}", file=sys.stderr)
