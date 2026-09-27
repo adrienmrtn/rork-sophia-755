@@ -1,0 +1,159 @@
+{
+  "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain",
+  "title": "אפשר לשנות את ה-DNA של בן אדם?",
+  "subtitle": "המספריים של CRISPR",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "מאז 2012, \"מספריים מולקולריים\" שנלקחו מחיידקים מאפשרים לחתוך DNA בדיוק במקום הרצוי. החלמות ראשונות, טעויות אפשריות ותינוקות מעוצבים: עד לאן זה יגיע?",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "genetics_lab_pipette_dna_samples_gloved_hands",
+    "ratio": "4:3",
+    "hook": "ומה אם אפשר היה לתקן אות ב-DNA שלך כמו שמתקנים שגיאת הקלדה?"
+  },
+  "sections": [
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_intro",
+      "title": "מבוא",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "שיער, עיניים, צבע עור, מבנה גוף: כולנו שונים זה מזה. התכונות הגופניות האלה הן עניין של תורשה: כל [[גן]] הוא מקטע DNA שקיבלנו מההורים הביולוגיים שלנו. גם הסביבה משפיעה, כמובן: מה שאנחנו אוכלים, האנשים שסביבנו, מה שאנחנו מאמינים בו. אבל את הגנים שלנו אנחנו מקבלים כמובן מאליו. לפעמים היינו רוצים להיות גבוהים או רזים יותר, אבל חיים איתם בלי לחשוב על זה באמת."
+        },
+        {
+          "type": "paragraph",
+          "text": "מה הייתם משנים אילו יכולתם לערוך את ה-DNA שלכם? השאלה כבר אינה תיאורטית. ב-**2012** מפתחות ביוכימאית אמריקאית, **ג'ניפר דאודנה**, ומיקרוביולוגית צרפתייה, **עמנואל שרפנטייה**, שיטה לתכנת חלבון שחותך DNA. מעכשיו הן יכולות להסיר גן לא רצוי, וכך, בתיאוריה, לשנות את ה-DNA של בן אדם."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p1",
+      "title": "CRISPR, מספריים שנלקחו מחיידקים",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[CRISPR]] אינו הכלי היחיד שמסוגל לשנות DNA, אבל הוא המפורסם ביותר. העיקרון שלו נצפה לראשונה אצל חיידקים. כדי להתגונן, חיידק מזהה את ה-DNA של הנגיף שתוקף אותו וחותך אותו לחתיכות. לשם כך הוא משתמש במקטעי DNA שנקראים CRISPR ובאנזים בשם **Cas**, שמשמש כמספריים."
+        },
+        {
+          "type": "image",
+          "asset": "emmanuelle_charpentier_jennifer_doudna_crispr_pioneers",
+          "ratio": "16:9",
+          "caption": "עמנואל שרפנטייה וג'ניפר דאודנה, שתי החוקרות שהפכו את מנגנון ההגנה של החיידקים לכלי."
+        },
+        {
+          "type": "paragraph",
+          "text": "המדענים רתמו את מערכת ההגנה הטבעית הזאת לצורכיהם. במקום לכוון אותה לנגיף, הם מנחים את האנזים למקום מדויק ב-DNA של אדם. שם הוא חותך, ושינוי מכוון נעשה אפשרי. לפעמים הגן שבמטרה פשוט מושבת. לפעמים משנים כמה מהאותיות שלו. ולפעמים מחליפים אותו כולו."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p2",
+      "title": "ההחלמות הראשונות: אנמיה חרמשית ותלסמיה",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "היכולת לערוך DNA פותחת את הדלת לטיפול במחלות גנטיות רבות. ה-DNA שלנו כתוב ב**ארבעה בסיסים**, A, T, C ו-G. הרצף שלהם יוצר את ה[[גנום]] שלנו, תוכנית הבנייה של הגוף. טעות אחת בטקסט הזה יכולה להספיק כדי לעורר מחלה, ותיקונה יכול, עקרונית, לרפא אותה."
+        },
+        {
+          "type": "image",
+          "asset": "sickle_cell_red_blood_cells_micrograph",
+          "ratio": "3:2",
+          "caption": "חתך רקמת כבד של חולה באנמיה חרמשית, במבט מבעד למיקרוסקופ: המחלה הראשונה שטופלה ב-CRISPR."
+        },
+        {
+          "type": "paragraph",
+          "text": "ב-**2023** הופכת בריטניה למדינה הראשונה שמאשרת תרופה המבוססת על CRISPR. היא מיועדת לשתי מחלות דם תורשתיות, [[אנמיה חרמשית]] ותלסמיה מסוג בטא. הטיפול משנה את התאים שמייצרים את הדם כך שייצרו יותר [[המוגלובין עוברי]], צורה של המוגלובין שנוצרת בדרך כלל לפני הלידה."
+        },
+        {
+          "type": "funFact",
+          "text": "שגיאת הקלדה יכולה להרוג. אות שגויה אחת ב-DNA, למשל T במקום C, מספיקה לפעמים כדי לגרום למחלה גנטית קטלנית. החזרת האות הנכונה יכולה, בתיאוריה, לרפא אותה."
+        },
+        {
+          "type": "paragraph",
+          "text": "וזו רק ההתחלה. ניסויים קליניים בודקים היום את CRISPR נגד סרטן, הפרעות מטבוליות, מחלות אוטואימוניות, מחלות לב וכלי דם וגם ניוון שרירים. הרשימה ארוכה. האם מחלות גנטיות יהפכו בקרוב לנחלת העבר?"
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p3",
+      "title": "למה לא נרפא הכול",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "זה לא כל כך פשוט. ראשית, האופן שבו גן מתבטא אינו תלוי רק בתורשה שקיבלנו מההורים: גם הסביבה משפיעה עליו. שנית, מחלה אינה בהכרח תוצאה של גן פגום אחד. כמה גנים יכולים להיות מעורבים, ואז התיקון נעשה מסובך הרבה יותר."
+        },
+        {
+          "type": "paragraph",
+          "text": "גם CRISPR עצמו יכול לטעות. קורה שהמספריים חותכים במקום הלא נכון, או ששני הקצוות החתוכים לא מתחברים מחדש כמו שצריך. ה-DNA הפגום הזה יכול ליצור בעיות חדשות בלי לתקן את הבעיה המקורית. ובכל זאת, הרפואה מתקדמת בצעדי ענק לעבר חיסולן של כמה מהמחלות הגנטיות הקשות ביותר."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p4",
+      "title": "תינוקות מעוצבים: איפה עובר הגבול?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "לרפא מחלות קטלניות או מחלות שמשתקות את החיים, בזה כולם רואים תועלת. אבל איפה המדע צריך למתוח את הקו? האם להשתמש בו כדי ליצור את \"האדם המושלם\"? השאלה נעשתה בוערת מתמיד מאז שלמדנו לחתוך DNA כרצוננו."
+        },
+        {
+          "type": "image",
+          "asset": "ivf_embryo_icsi_microinjection_micrograph",
+          "ratio": "16:9",
+          "caption": "ביצית אנושית מוחזקת בפיפטה במהלך מיקרו-הזרקה במעבדה."
+        },
+        {
+          "type": "funFact",
+          "text": "הביטוי \"תינוק מעוצב\" לא נולד עם CRISPR. משתמשים בו מאז הופעת ה[[הפריה חוץ-גופית]], שמאפשרת ליצור עובר במעבדה לפני שמשתילים אותו."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[עריכת תאי הנבט]] משנה את ה-DNA של תאי הרבייה: זרעונים, ביציות או עוברים בשלבים המוקדמים ביותר. ההבדל מטיפול רגיל מהותי: השינויים האלה עוברים אחר כך מדור לדור. היום עריכת תאי הנבט אסורה בכל המדינות. אבל עד מתי? באיזה שלב תעבור העריכה הגנטית למטרות רפואיות לשושלות גנטיות לפי הזמנה?"
+        },
+        {
+          "type": "takeaway",
+          "text": "מאז 2012 מאפשרים המספריים של CRISPR לתקן DNA אנושי, וב-2023 אושרו הטיפולים המרפאים הראשונים, אבל טעויות עדיין אפשריות, מחלות רבות מערבות כמה גנים, ועריכת תאי הנבט נשארת אסורה בכל מקום."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "National Science Foundation, « CRISPR: A Biotech Breakthrough », NSF Impacts.",
+      "url": "https://www.nsf.gov/impacts/crispr"
+    },
+    {
+      "text": "National Cancer Institute, « How CRISPR Is Changing Cancer Research and Treatment », Cancer Currents Blog, 2020.",
+      "url": "https://www.cancer.gov/news-events/cancer-currents-blog/2020/crispr-cancer-research-treatment"
+    },
+    {
+      "text": "CRISPR Medicine News, « Clinical Trials », liste des essais cliniques fondés sur CRISPR.",
+      "url": "https://crisprmedicinenews.com/clinical-trials/"
+    },
+    {
+      "text": "House of Lords Library, « World's first personalised DNA editing treatment », UK Parliament.",
+      "url": "https://lordslibrary.parliament.uk/worlds-first-personalised-dna-editing-treatment/"
+    },
+    {
+      "text": "« The gene editor CRISPR won't fully fix sick people anytime soon. Here's why », Science, 2016.",
+      "url": "https://www.science.org/content/article/gene-editor-crispr-won-t-fully-fix-sick-people-anytime-soon-here-s-why"
+    },
+    {
+      "text": "Boston Children's Hospital, « CRISPR gene editing », Answers.",
+      "url": "https://answers.childrenshospital.org/crispr-gene-editing/"
+    },
+    {
+      "text": "« The Guardian view on gene-edited humans: darker uses must be acknowledged alongside medical ones », The Guardian, 5 juillet 2026.",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/05/the-guardian-view-on-gene-edited-humans-darker-uses-must-be-acknowledged-alongside-medical-ones"
+    },
+    {
+      "text": "K. E. Ormond et al., « Human Germline Genome Editing », American Journal of Human Genetics, vol. 101, 2017.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5544380/"
+    }
+  ]
+}
