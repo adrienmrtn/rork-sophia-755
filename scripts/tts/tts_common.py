@@ -278,6 +278,10 @@ def problems(text, lang):
     for sym in ('[[', ']]', '*', '_', '<', '>', '#', '`', '?.', '!.'):
         if sym in bare:
             found.append(('symbole', sym))
+    # Une heure mal convertie laisse « dreizehn:dreißig » : deux mots soudés
+    # par un signe qui n'a plus rien à séparer. Aucun contrôle ne le voyait.
+    for m in re.finditer(r'\w[:;/]\w', bare):
+        found.append(('ponctuation collée', m.group(0)))
     found += lang.extra_checks(bare)
     return found
 

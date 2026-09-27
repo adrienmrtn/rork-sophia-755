@@ -184,6 +184,8 @@ ABKURZUNGEN = [
     (re.compile(r'\bbzw\.'), 'beziehungsweise'),
     (re.compile(r'\busw\.'), 'und so weiter'),
     (re.compile(r'\bca\.'), 'circa'),
+    (re.compile(r'\bvs\.'), 'versus'),
+    (re.compile(r'\bJr\.'), 'Junior'),
     (re.compile(r'\bMio\.'), 'Millionen'),
     (re.compile(r'\bMrd\.'), 'Milliarden'),
 ]
@@ -192,6 +194,9 @@ ABKURZUNGEN = [
 # Feste Wendungen, die keine Regel zerlegen soll.
 BEZEICHNER = [
     ('E=mc²', 'E gleich m c Quadrat'),
+    ('CO₂', 'C-O-zwei'),
+    ('4/4-Takt', 'Vierviertel-Takt'),
+    ('“1-Rohr”', '“Eins-Rohr”'),
     ('E = mc²', 'E gleich m c Quadrat'),
     ('R&B', 'Rhythm and Blues'),
     ('rock\'n\'roll', 'Rock and Roll'),
@@ -228,6 +233,10 @@ HERRSCHER = {
 }
 # Nach der Ziffer trägt der Punkt meist auch das Satzende ("Elisabeth I. Die
 # Stücke"). Nur diese Namensteile setzen den Namen fort.
+SATZANFANG = {'Aber', 'Doch', 'Und', 'Denn', 'Dann', 'Als', 'So', 'Nur', 'Er',
+              'Sie', 'Es', 'Diese', 'Dieser', 'Dieses', 'Heute', 'Damit',
+              'Dabei', 'Nach', 'Seit', 'Bei', 'Von', 'Zu', 'Mit', 'Für', 'Im',
+              'In', 'Am', 'Auf', 'Der', 'Die', 'Das', 'Ein', 'Eine'}
 NAMENSZUSATZ = {'August', 'Komnenos', 'Palaiologos', 'Barbarossa', 'Plantagenet',
                 'der', 'von', 'zu'}
 HERRSCHERIN = {'Elisabeth', 'Katharina', 'Maria', 'Viktoria', 'Anna', 'Isabella'}
@@ -243,6 +252,8 @@ def romisch_zu_zahl(s):
     return total
 
 
+TITEL = {'Kaiser', 'Kaiserin', 'König', 'Königin', 'Papst', 'Zar', 'Zaren',
+         'Zarin', 'Sultan', 'Fürst', 'Herzog', 'Kalif', 'Sultans', 'Königs'}
 HERRSCHER_RX = re.compile(
     r'(?P<vor>(?:\b[a-zäöü]+\s+)?)(?P<name>[A-ZÄÖÜ][\wäöüß]+)\s+'
     r'(?P<rom>[IVXLCDM]{1,5})(?P<punkt>\.)?(?!\w)')
@@ -279,6 +290,15 @@ def fix_herrscher(t, cid, log):
         weiblich = basis in HERRSCHERIN
         stamm = ordinal_stamm(romisch_zu_zahl(rom))
         vor = m.group('vor').strip().lower()
+        # "das Russland des Zaren Alexander I.": der Genitivartikel steht vor
+        # dem Titel, nicht vor dem Namen.
+        davor = re.findall(r"[\wäöüßÄÖÜ]+", t[max(0, m.start() - 45):m.start()])
+        for wort in reversed(davor[-3:]):
+            if wort in TITEL:
+                continue
+            if wort.lower() in ('des', 'eines'):
+                genitiv = True
+            break
         gross = stamm[0].upper() + stamm[1:]   # "Ludwig der Sechzehnte"
         umgebung = t[max(0, m.start() - 40):m.end() + 40]
         sonderfall = next((k for rx, k in KASUS_AUSNAHMEN if rx.search(umgebung)), None)
@@ -291,10 +311,12 @@ def fix_herrscher(t, cid, log):
         else:
             gelenk = ('die ' if weiblich else 'der ') + gross + 'e'
         out = f"{m.group('vor')}{stamm_name} {gelenk}"
-        folgt = re.match(r'[*_"„]*([A-ZÄÖÜ][\wäöüß]*)', t[m.end():m.end() + 40].lstrip())
+        folgt = re.match(r'[*_"„“”«»]*([A-ZÄÖÜ][\wäöüß]*)',
+                         t[m.end():m.end() + 40].lstrip())
         # Ein Genitiv hängt am folgenden Substantiv; dort endet kein Satz. Und
         # ohne Punkt in der Quelle gab es nie einen zu erhalten.
-        if m.group('punkt') and folgt and not genitiv and folgt.group(1) not in NAMENSZUSATZ:
+        satzende = folgt and (not genitiv or folgt.group(1) in SATZANFANG)
+        if m.group('punkt') and satzende and folgt.group(1) not in NAMENSZUSATZ:
             out += '.'                     # der Punkt schloss auch den Satz
         log(cid, 'Herrscher', m.group(0), out.strip())
         return out
@@ -316,7 +338,7 @@ def fix_initialen(t, cid, log):
     return INITIALE.sub(rep, t)
 
 
-UHRZEIT = re.compile(r'(?<![\d.,])(?P<h>\d{1,2})\.(?P<m>\d{2})\s?Uhr\b')
+UHRZEIT = re.compile(r'(?<![\d.,])(?P<h>\d{1,2})[.:](?P<m>\d{2})\s?Uhr\b')
 ORD_BEREICH = re.compile(r'(?<![\d.,])(?P<a>\d{1,3})\.\s*[-–]\s*(?P<b>\d{1,3})\.(?!\d)')
 ORDINAL = re.compile(r'(?<![\d.,])(?P<n>\d{1,3})\.(?!\d)')
 
@@ -329,7 +351,8 @@ def fix_uhrzeit(t, cid, log):
     """« 8.46 Uhr » ist eine Uhrzeit, kein Tausenderpunkt und keine
     Ordinalzahl: "acht Uhr sechsundvierzig"."""
     def rep(m):
-        out = f"{cardinal(int(m.group('h')))} Uhr {cardinal(int(m.group('m')))}"
+        # "ein Uhr", nicht "eins Uhr": vor dem Substantiv steht die kurze Form.
+        out = f"{cardinal(int(m.group('h')), True)} Uhr {cardinal(int(m.group('m')))}"
         log(cid, 'Uhrzeit', m.group(0), out)
         return out
     return UHRZEIT.sub(rep, t)
@@ -369,7 +392,7 @@ EINHEITEN = [('km/h', 'Kilometer pro Stunde'), ('km²', 'Quadratkilometer'),
              ('cm', 'Zentimeter'), ('mm', 'Millimeter'), ('kg', 'Kilogramm'),
              ('°', 'Grad')]
 _EINHEIT_ALT = '|'.join(re.escape(u) for u, _ in EINHEITEN)
-EINHEIT = re.compile(r'(?P<vz>[-–+~≈]?)(?P<n>' + ZAHL + r')\s?(?P<u>'
+EINHEIT = re.compile(r'(?P<vz>[-–+~≈]?)(?P<n>' + ZAHL + r')(?P<tr>[\s-]?)(?P<u>'
                      + _EINHEIT_ALT + r')(?![\w²])')
 EINHEIT_SKALA = re.compile(r'(?P<skala>\b(?:Millionen|Million|Milliarden|Milliarde|'
                            r'Billionen|Tausend)\s)(?P<u>' + _EINHEIT_ALT + r')(?![\w²])')
@@ -389,7 +412,7 @@ def fix_einheiten(t, cid, log):
     def rep(m):
         wort = next(w for u, w in EINHEITEN if u == m.group('u'))
         out = (VORZEICHEN.get(m.group('vz'), '') + _zahlwort(m.group('n'))
-               + ' ' + wort)
+               + (m.group('tr') or ' ') + wort)
         log(cid, 'Einheit', m.group(0), out)
         return out
     return EINHEIT.sub(rep, t)
@@ -450,6 +473,33 @@ def fix_zahlen(t, cid, log):
     return GANZZAHL.sub(rep_g, t)
 
 
+BUCHSTABE_ZIFFER = re.compile(r'(?<=[A-Za-zÄÖÜäöü])(?=\d)')
+ZIFFER_BUCHSTABE = re.compile(r'(?<=\d)(?=[A-ZÄÖÜ])')
+
+
+def fix_buchstabe_ziffer(t, cid, log):
+    """« M87 » wird sonst zu « Msiebenundachtzig »; « 1960er » dagegen ist ein
+    Jahrzehnt und muss zusammenbleiben."""
+    vorher = t
+    t = ZIFFER_BUCHSTABE.sub(' ', BUCHSTABE_ZIFFER.sub(' ', t))
+    if t != vorher:
+        log(cid, 'Buchstabe und Ziffer', vorher[:40], t[:40])
+    return t
+
+
+MINUS = re.compile(r'(?<![\w\d.–-])-(?=\d)')
+BINDESTRICH_MAL = re.compile(r'(?<=[\wäöüß])-(?=mal\b)')
+
+
+def fix_minus(t, cid, log):
+    """« -70 Millivolt »: das Minus steht vor einer ausgeschriebenen Einheit,
+    die keine Einheitenregel kennt."""
+    def rep(m):
+        log(cid, 'Vorzeichen', '-', 'minus')
+        return 'minus '
+    return MINUS.sub(rep, t)
+
+
 SYMBOLE = [('&', ' und '), ('→', ' ergibt '), ('=', ' gleich '), ('+', ' plus '),
            ('€', ' Euro'), ('$', ' Dollar'), ('£', ' Pfund'), ('/', '-')]
 
@@ -464,6 +514,84 @@ def fix_symbole(t, cid, log):
 
 
 SOURCE_FIXES = {
+    # Werktitel im Nominativ nach einer Präposition: ein Sprecher dekliniert
+    # sie, denn die Anführungszeichen der Schrift hört niemand.
+    'course_125_le_romantisme_en_peinture_delacroix_geri': [
+        ('mit *Das Floß der Medusa*', 'mit dem *Floß der Medusa*'),
+    ],
+    'course_142_charlie_chaplin_et_le_cinema_muet': [
+        ('mit *Der Jazzsänger*', 'mit dem *Jazzsänger*'),
+    ],
+    'course_97_le_mythe_de_sisyphe_camus': [
+        ('zu **Der Fremde**', 'zum **Fremden**'),
+    ],
+    # Das Glossar-Stichwort steht im Nominativ. Nach einer Präposition, die
+    # einen anderen Kasus regiert, ist das falsches Deutsch — und anders als
+    # die Grossschreibung hört man den Artikel: « mit das Soma » statt
+    # « mit dem Soma ». Auch das Adjektiv wird schwach dekliniert.
+    'course_100_les_fleurs_du_mal_baudelaire': [
+        ('in **[[Der Spleen von Paris]]**', 'im **Spleen von Paris**'),
+    ],
+    'course_101_1984_george_orwell': [
+        ('[[Der sowjetische Totalitarismus als Modell]]', 'den sowjetischen Totalitarismus als Modell'),
+    ],
+    'course_105_le_meilleur_des_mondes_aldous_huxley': [
+        ('[[Das Soma]]', 'dem Soma'),
+    ],
+    'course_106_frankenstein_mary_shelley': [
+        ('[[Die Verantwortung des Schöpfers (der moderne Prometheus)]]', 'der Verantwortung des Schöpfers'),
+    ],
+    'course_110_les_raisins_de_la_colere_steinbeck': [
+        ('[[Die amerikanische Arbeiterbewegung der 1930er Jahre]]', 'der amerikanischen Arbeiterbewegung der 1930er Jahre'),
+    ],
+    'course_115_cent_ans_de_solitude_garcia_marquez': [
+        ('[[Die United Fruit Company und die „Bananenrepubliken“]]', 'der United Fruit Company und den „Bananenrepubliken“'),
+    ],
+    'course_11_la_prise_de_la_bastille_1789': [
+        ('[[Der Lettre de cachet]]', 'den Lettre de cachet'),
+    ],
+    'course_122_la_naissance_de_l_impressionnisme': [
+        ('von [[Der offizielle Pariser Salon]]', 'vom offiziellen Pariser Salon'),
+    ],
+    'course_127_le_surrealisme_dali_et_magritte': [
+        ('[[Die Freudsche Psychoanalyse als Quelle]]', 'der Freudschen Psychoanalyse'),
+    ],
+    'course_134_l_opera_de_verdi': [
+        ('in [[Das italienische Risorgimento]]', 'im italienischen Risorgimento'),
+    ],
+    'course_135_mozart_enfant_prodige_et_vie_tragique': [
+        ('[[Die Zauberflöte]]', 'der Zauberflöte'),
+    ],
+    'course_14_la_commune_de_paris_1871': [
+        ('[[Der Deutsch-Französische Krieg]]', 'dem Deutsch-Französischen Krieg'),
+    ],
+    'course_150_la_nuit_etoilee_van_gogh': [
+        ('[[Das Drama von Arles mit Gauguin]]', 'dem Drama von Arles mit Gauguin'),
+    ],
+    'course_151_guernica_picasso': [
+        ('[[Der Spanische Bürgerkrieg]]', 'des Spanischen Bürgerkriegs'),
+    ],
+    'course_191_enee_et_la_fondation_de_rome_virgile': [
+        ('[[Die Göttliche Komödie]]', 'der Göttlichen Komödie'),
+    ],
+    'course_217_l_economie_de_plateforme_uber_airbnb': [
+        ('[[Die Gig Economy und die Uberisierung]]', 'der Gig Economy und der Uberisierung'),
+    ],
+    'course_36_la_revolution_culturelle_en_chine_1966_1': [
+        ('von **[[Der Große Sprung nach vorn]]**', 'vom **Großen Sprung nach vorn**'),
+    ],
+    'course_63_comment_se_forment_les_tremblements_de_t': [
+        ('[[Die San-Andreas-Verwerfung]]', 'der San-Andreas-Verwerfung'),
+    ],
+    'course_8_la_chute_de_constantinople_1453': [
+        ('von [[Das byzantinische Recht und das römische Erbe]]', 'vom byzantinischen Recht und vom römischen Erbe'),
+    ],
+    'course_94_candide_voltaire': [
+        ('zu [[Die Philosophie der Aufklärung]]', 'zur Philosophie der Aufklärung'),
+    ],
+    'course_95_les_confessions_rousseau': [
+        ('[[Der Rousseauismus und der „edle Wilde“]]', 'dem Rousseauismus und dem „edlen Wilden“'),
+    ],
     # Glossar-Slugs, die nie eine Anzeigeform bekommen haben.
     'course_153_la_creation_d_adam_michel_ange': [
         ('[[dissection_anatomique]]', 'anatomischen Sektion'),
@@ -488,7 +616,9 @@ def normalize(t, cid, log):
     t = fix_einheit_skala(t, cid, log)
     t = fix_prozent(t, cid, log)
     t = fix_jahr_bereich(t, cid, log)
-    t = fix_zahlen(t, cid, log)
+    t = fix_buchstabe_ziffer(t, cid, log)
+    t = fix_minus(t, cid, log)
+    t = BINDESTRICH_MAL.sub('', fix_zahlen(t, cid, log))
     return fix_symbole(t, cid, log)
 
 
@@ -550,12 +680,12 @@ QUOTES = {
         'So sprechen die Büchermenschen, in Fahrenheit vierhunderteinundfünfzig '
         'von Ray Bradbury.'},
     'course_117_le_maitre_et_marguerite_boulgakov': {'attribution':
-        'Das sagt Woland, in Der Meister und Margarita von Michail Bulgakow.'},
+        'Das sagt Woland in Michail Bulgakows Roman Der Meister und Margarita.'},
     'course_119_le_petit_prince_saint_exupery': {'attribution':
-        'So verrät der Fuchs sein Geheimnis, in Der kleine Prinz von '
-        'Antoine de Saint-Exupéry.'},
+        'So verrät der Fuchs sein Geheimnis in Antoine de Saint-Exupérys '
+        'Erzählung Der kleine Prinz.'},
     'course_91_les_miserables_victor_hugo': {'attribution':
-        'So spricht Bischof Myriel zu Jean Valjean, in Die Elenden von Victor Hugo.'},
+        'So spricht Bischof Myriel zu Jean Valjean in Victor Hugos Roman Die Elenden.'},
     'course_94_candide_voltaire': {'attribution':
         'Das sagt der Sklave von Surinam, in Candide von Voltaire.'},
     'course_96_l_etranger_camus': {'attribution':
