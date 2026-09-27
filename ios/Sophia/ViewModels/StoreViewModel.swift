@@ -126,6 +126,21 @@ class StoreViewModel {
         offerings?.current?.package(identifier: "$rc_monthly")
     }
 
+    var weeklyPackage: Package? {
+        offerings?.current?.package(identifier: "$rc_weekly")
+    }
+
+    /// The plan sold next to the annual one on the comparison paywall: the monthly plan, or
+    /// the weekly plan when the served offering carries a weekly package instead (a
+    /// RevenueCat experiment can swap one for the other without an app update).
+    var shortPlanPackage: Package? {
+        monthlyPackage ?? weeklyPackage
+    }
+
+    var shortPlanIsWeekly: Bool {
+        monthlyPackage == nil && weeklyPackage != nil
+    }
+
     var annualPackage: Package? {
         offerings?.current?.package(identifier: "$rc_annual")
     }
@@ -341,7 +356,7 @@ class StoreViewModel {
         let currentID = offerings.current?.identifier ?? "nil"
         print("[OnboardingPaywall] RC offerings available: [\(available)] — current: \(currentID)")
 
-        for (label, package) in [("annual", annualPackage), ("monthly", monthlyPackage)] {
+        for (label, package) in [("annual", annualPackage), ("monthly", monthlyPackage), ("weekly", weeklyPackage)] {
             guard let package else {
                 print("[OnboardingPaywall] \(label) package missing in current offering '\(currentID)'")
                 continue
@@ -365,26 +380,41 @@ class StoreViewModel {
         /// "3,33 € / mois" — the annual plan's monthly equivalent, which the onboarding and
         /// discount paywalls lead with.
         let yearlyPerMonth: String
+        /// The annual plan in the short plan's own unit: per month next to a monthly plan,
+        /// per week next to a weekly one ("0,77 € / semaine"), so the comparison card reads
+        /// in one unit.
+        let yearlyPerShortPeriod: String
         /// "facturé 39,99 € par an". The per-month headline never stands alone — the amount
         /// actually charged stays on screen, small and grey (App Store 3.1.2).
         let yearlyBilledNote: String
-        let monthlyPrice: String
+        /// Price of the short plan (monthly or weekly) as the store writes it.
+        let shortPlanPrice: String
+        let shortPlanIsWeekly: Bool
         let discountBadge: String?
     }
 
     func paywallPriceDisplay(language: AppLanguage) -> PaywallPriceDisplay {
-        if let annual = annualPackage?.storeProduct,
-           let monthly = monthlyPackage?.storeProduct {
-            let perMonthLabel = AppLocalizable.string("paywall.plan.perMonth", language: language)
-            return PaywallPriceDisplay(
-                yearlyPrice: annual.localizedPriceString,
-                yearlyPerMonth: "\(perMonthPrice(annual, language: language)) \(perMonthLabel)",
-                yearlyBilledNote: billedYearlyNote(annual.localizedPriceString, language: language),
-                monthlyPrice: monthly.localizedPriceString,
-                discountBadge: savingsBadge(annual: annual.price, monthly: monthly.price)
-            )
+        guard let annual = annualPackage?.storeProduct else {
+            return Self.fallbackPaywallPrices(language: language)
         }
-        return Self.fallbackPaywallPrices(language: language)
+        let short = shortPlanPackage?.storeProduct
+        let weekly = shortPlanIsWeekly
+        let perMonthLabel = AppLocalizable.string("paywall.plan.perMonth", language: language)
+        let perWeekLabel = AppLocalizable.string("paywall.plan.perWeek", language: language)
+        let yearlyPerMonth = "\(perMonthPrice(annual, language: language)) \(perMonthLabel)"
+        return PaywallPriceDisplay(
+            yearlyPrice: annual.localizedPriceString,
+            yearlyPerMonth: yearlyPerMonth,
+            yearlyPerShortPeriod: weekly
+                ? "\(perWeekPrice(annual, language: language)) \(perWeekLabel)"
+                : yearlyPerMonth,
+            yearlyBilledNote: billedYearlyNote(annual.localizedPriceString, language: language),
+            shortPlanPrice: short?.localizedPriceString ?? Self.unknownPrice,
+            shortPlanIsWeekly: weekly,
+            discountBadge: short.flatMap {
+                savingsBadge(annual: annual.price, shortPlan: $0.price, periodsPerYear: weekly ? 52 : 12)
+            }
+        )
     }
 
     // MARK: - Prix mensuel équivalent
@@ -393,7 +423,16 @@ class StoreViewModel {
     /// formateur vient du produit (`StoreProduct.priceFormatter`), donc devise et
     /// conventions du pays servi. Filet sur un formateur local si StoreKit n'en donne pas.
     func perMonthPrice(_ product: StoreProduct, language: AppLanguage) -> String {
-        let amount = product.price / 12
+        perPeriodPrice(product, periodsPerYear: 12, language: language)
+    }
+
+    /// Fifty-second of the annual price, for the comparison card next to a weekly plan.
+    func perWeekPrice(_ product: StoreProduct, language: AppLanguage) -> String {
+        perPeriodPrice(product, periodsPerYear: 52, language: language)
+    }
+
+    private func perPeriodPrice(_ product: StoreProduct, periodsPerYear: Int, language: AppLanguage) -> String {
+        let amount = product.price / Decimal(periodsPerYear)
         if let formatter = product.priceFormatter,
            let text = formatter.string(from: amount as NSDecimalNumber) {
             return text
@@ -432,9 +471,11 @@ class StoreViewModel {
         return formatter.string(from: amount as NSDecimalNumber) ?? "\(amount)"
     }
 
-    private func savingsBadge(annual: Decimal, monthly: Decimal) -> String? {
-        guard monthly > 0 else { return nil }
-        let fullYearAtMonthly = monthly * 12
+    /// « -58 % » : what the annual plan saves against a year of the short plan (twelve
+    /// monthly or fifty-two weekly payments).
+    private func savingsBadge(annual: Decimal, shortPlan: Decimal, periodsPerYear: Int) -> String? {
+        guard shortPlan > 0 else { return nil }
+        let fullYearAtMonthly = shortPlan * Decimal(periodsPerYear)
         guard fullYearAtMonthly > annual else { return nil }
         let ratio = (fullYearAtMonthly - annual) / fullYearAtMonthly
         let percent = Int((ratio as NSDecimalNumber).doubleValue * 100)
@@ -452,8 +493,10 @@ class StoreViewModel {
         PaywallPriceDisplay(
             yearlyPrice: unknownPrice,
             yearlyPerMonth: unknownPrice,
+            yearlyPerShortPeriod: unknownPrice,
             yearlyBilledNote: "",
-            monthlyPrice: unknownPrice,
+            shortPlanPrice: unknownPrice,
+            shortPlanIsWeekly: false,
             discountBadge: nil
         )
     }
