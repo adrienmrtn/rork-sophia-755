@@ -1,137 +1,159 @@
 {
   "id": "course_149_la_joconde",
-  "title": "Hvad gjorde “Mona Lisa” så berømt?",
-  "subtitle": "1503-1519",
+  "title": "Betød Mona Lisa egentlig noget for Leonardo?",
+  "subtitle": "1503",
   "subject": "art",
   "subcategory": "Iconic works",
-  "description": "Malet af **Leonardo da Vinci** mellem **1503** og **1519**, *Mona Lisa* er blevet Louvres absolutte ikon. Teknik, mystisk smil... og en flyvetur i **1911**, der ændrede alt.",
+  "description": "Det er verdens mest berømte maleri. Alligevel havde dets egen skaber i 1503 vigtigere ting at tage sig til end et portræt af en købmands hustru.",
+  "author": "dusan-nikolic",
   "hero": {
     "image": "la_joconde",
     "ratio": "16:9",
-    "hook": "Et smil, et tyveri, en myte: hvordan et portræt blev det mest berømte værk i verden."
+    "hook": "Planetens mest beskuede maleri var måske bare en bibeskæftigelse for Leonardo."
   },
   "sections": [
     {
       "id": "course_149_la_joconde_intro",
-      "title": "Introduktion",
+      "title": "Indledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "*Mona Lisa*, malet mellem **1503** og **1519** af **Leonardo da Vinci**, er det mest besøgte maleri i verden. Den er udstillet på **Louvre** og fascinerer lige så meget af sin teknik som af sin historie. Det er ikke bare et smukt portræt. Det er en myte lavet af kunst, videnskab og en nyhed."
+          "text": "Til at være et af verdens mest berømte malerier ved vi meget lidt med sikkerhed om *Mona Lisa*. Kunsthistorikerne er enige om det væsentlige: Leonardo da Vinci malede det i Firenze mellem **1503 og 1506**. I **1517** tog han det med sig til Frankrig, og panelet endte i den kongelige samling hos [[Frans 1.]] af Frankrig."
         },
         {
           "type": "paragraph",
-          "text": "Hvorfor dette ansigt frem for et andet? Fordi Leonardo koncentrerede innovationer der, og fordi en spektakulær flyvning gjorde det berømt på globalt plan."
+          "text": "Det historiske tomrum er blevet fyldt ud med legender. Man omtaler maleriet som en kvinde, »hende«. Hendes halve smil kaldes gådefuldt. Efter tyveriet i **1911** blev selv ægtheden draget i tvivl. Alle disse historier skabte dets berømmelse, men de skubbede sammenhængen til side. Og da Leonardo malede det, betød værket måske slet ikke noget for ham."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p1",
-      "title": "Leonardo og sfumatoen",
+      "title": "Hvem er Mona Lisa?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Portrættet begynder i Firenze omkring **1503**. Sponsoren er købmanden **Francesco del Giocondo**. Modellen ville være hans kone, [[Lisa Gherardini]]. Men Leonard leverer aldrig maleriet. Han beholdt den, retoucherede den i årevis og tog den med til Frankrig, hvor han døde i **1519**."
+          "text": "Kunsthistorikerne er stort set enige om, at modellen er [[Lisa Gherardini]], gift med **Francesco del Giocondo**, købmand og mindre fremtrædende skikkelse i Firenzes styre. Deraf maleriets andet navn, *La Gioconda*. Identifikationen bygger på den biografi om Leonardo, som [[Giorgio Vasari]] udgav i **1550** og igen i **1568** i sine *De ypperste maleres, billedhuggeres og arkitekters liv*."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_leonardo_da_vinci_louvre_painting",
-          "ratio": "4:3",
-          "caption": "Mona Lisa ved Louvre: et lille poppelpanel, der er blevet et globalt ikon."
+          "asset": "vasari_lives_of_the_artists_1568_title_page",
+          "ratio": "3:4",
+          "caption": "Vasaris kunstnerbiografier i den florentinske udgave fra 1568: teksten, der giver modellen et navn."
         },
         {
           "type": "paragraph",
-          "text": "Hans signaturteknik er [[Leonardian sfumato]]: glasurer, meget tynde lag, som sletter konturerne. Ikke mere hård linje. Ansigtet smelter i luften. Leonardo tilføjer også [[Luftperspektiv]]: det fjerne landskab bliver blåt og blødgøres, som i den virkelige vision."
+          "text": "Hvorfor bestilte Francesco portrættet? Det ved ingen. Leonardo gik i gang i begyndelsen af **1503**. Hvad der skete siden, er stadig omdiskuteret: for historikerne ligner Vasaris beretning litterær opdigtning, en biograf, der fylder hullerne ud med en god historie. Midt i **1506** forlod Leonardo Firenze for Milano på jagt efter en bedre stilling. Det ufærdige portræt fulgte med ham."
+        },
+        {
+          "type": "funFact",
+          "text": "Ifølge Vasari hyrede Leonardo musikanter og gøglere til at underholde sin model under sessionerne. Historikerne ser det som biografens opfindelse, men det var denne historie, der skabte myten om »Mona Lisa-smilet«."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p2",
-      "title": "Smilet der leger med øjet",
+      "title": "Anghiari: en finere bestilling",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Det berømte smil er ikke bare en malet følelse. Han spiller med vores [[Perifert syn]]. Når vi stirrer på modellens øjne, ser kanterne af nethinden munden i bløde skygger: Smilet virker nærværende. Når du kigger direkte på munden, bliver den mindre."
+          "text": "I oktober **1503** hyrede Firenzes styre Leonardo til at male [[Slaget ved Anghiari]] i [[Palazzo Vecchio]], sæde for republikken Firenze. Vægmaleriet skulle fejre byens sejr over Milano i **1440**. I renæssancen var en historisk scene langt mere værd end et portræt. Sammen med religiøse, mytologiske og allegoriske motiver blev den regnet for kunstens højeste form."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_smile_detail_close_up",
-          "ratio": "1:1",
-          "caption": "Jo mere du stirrer på det, jo mere ser smilet ud til at forsvinde."
-        },
-        {
-          "type": "funFact",
-          "text": "Leonardo, både maler og lærd, studerede optik. Smilets mysterium hviler til dels på en præcis viden om, hvordan det menneskelige øje bearbejder skygger."
+          "asset": "rubens_copy_battle_of_anghiari_louvre_drawing",
+          "ratio": "16:9",
+          "caption": "Rubens' kopi af det centrale slagsmål: det eneste spor af den store, ufærdige udsmykning i Palazzo Vecchio."
         },
         {
           "type": "paragraph",
-          "text": "Resultat: ansigtet virker levende, i forandring, næsten bevidst om vores blik."
+          "text": "Over for en stor offentlig bestilling vejede et privat portræt af en mindre embedsmands hustru ikke meget. Fra december **1503** brugte Leonardo mere og mere tid på at forberede den store komposition. Prestige og bedre løn: Mona Lisa måtte vente. Ved slutningen af hans andet ophold i Firenze var portrættet ikke færdigt. Det var *Slaget ved Anghiari* heller ikke: kun forberedende skitser og kopier af dem er bevaret."
+        },
+        {
+          "type": "funFact",
+          "text": "Det er muligt, at kun landskabet i baggrunden stadig manglede, da Leonardo rejste til Milano i 1506."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p3",
-      "title": "1911: flyvningen, der opfandt berømmelse",
+      "title": "Hvordan et ikon bliver til",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I det 19. århundrede blev *Mona Lisa* beundret, men endnu ikke nummer et værk i Louvre. Alt ændrede sig den 21. **august 1911**. [[Vincenzo Peruggia]], en italiensk glarmester fra museet, stjæler den tyveri af Mona Lisa (1911): det er [[tyveri af Mona Lisa (1911)]]. Han gemmer den under blusen og går stille ud."
+          "text": "Leonardo døde den **2. maj 1519** i Amboise i Frankrig. *Mona Lisa* nåede aldrig frem til familien Giocondo. Efter Den Franske Revolution blev den kongelige samling offentlig, og maleriet kom til **Louvre**. Siden begyndelsen af 1800-tallet er smilet blevet beskrevet på tusind måder, fra guddommeligt til sanseligt."
         },
         {
           "type": "image",
           "asset": "mona_lisa_stolen_1911_newspaper_headline",
           "ratio": "4:3",
-          "caption": "1911: fraværet af maleriet skaber overskrifter og skaber en stjerne."
+          "caption": "Forsiden af avisen Excelsior i januar 1914: Mona Lisa vender hjem efter tyveriet i 1911."
         },
         {
           "type": "paragraph",
-          "text": "Efterforskningen bliver til en skandale. Digteren [[Guillaume Apollinaire]] sad fængslet i en tid. [[Pablo Picasso]] er interviewet. Når maleriet dukker op igen i **1913**, er det ikke længere kun et maleri. Han er en berømthed."
+          "text": "Vendepunktet var tyveriet af maleriet fra museet i **1911**. Aviserne gjorde Mona Lisa til en verdenssensation. Siden har populærpressen og romaner jævnligt sat spørgsmålstegn ved værkets ægthed og modellens identitet, uden noget grundlag i egentlig historisk analyse. Maleriet er blevet midtpunkt for stadig flere historier, som vi stadig hører i dag."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p4",
-      "title": "Et ikon under glas",
+      "title": "Et maleri, der er vokset fra sin skaber",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I dag, malet på poppeltræ, lever den bag et [[Skudsikkert glas]], i en klimatiseret montre. Syreangreb, kast med genstande: beskyttelse er blevet nødvendig. Og parodierne, fra Duchamp til internettet, beviser, at det er blevet et universelt sprog."
+          "text": "Mere end **500 år** efter at portrættet blev påbegyndt, tiltrækker Lisa del Giocondo flere end nogensinde. Bag skudsikkert glas i Louvre er maleriet revet ud af sin historiske sammenhæng. Befriet for den har det fået status af universelt ikon. Den status har en pris: i moderne tid er der ikke gjort forsøg på at restaurere det."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1503",
-              "title": "Begyndelsen af portrættet",
-              "detail": "Leonardo begynder Mona Lisa i Firenze."
+              "title": "Portrættet påbegyndes",
+              "detail": "Leonardo begynder portrættet af Lisa Gherardini i Firenze."
+            },
+            {
+              "date": "okt. 1503",
+              "title": "Bestillingen fra Anghiari",
+              "detail": "Firenze overdrager ham et stort vægmaleri til Palazzo Vecchio."
+            },
+            {
+              "date": "1506",
+              "title": "Afrejse til Milano",
+              "detail": "Leonardo forlader Firenze med det ufærdige portræt under armen."
             },
             {
               "date": "1519",
               "title": "Leonardos død",
-              "detail": "Maleriet forbliver i Frankrig."
+              "detail": "I Amboise, den 2. maj. Maleriet bliver i Frankrig."
             },
             {
               "date": "1911",
-              "title": "Flyvningen",
-              "detail": "Peruggia forvandler værket til en mediemyte."
-            },
-            {
-              "date": "1913",
-              "title": "Tilbage",
-              "detail": "Maleriet vender tilbage til Louvre som verdensstjerne."
+              "title": "Tyveriet",
+              "detail": "Pressen gør Mona Lisa til en verdenssensation."
             }
           ]
         },
         {
+          "type": "paragraph",
+          "text": "At fjerne den [[fernis]], der er gulnet gennem århundreder, oliemaleriets beskyttende lag, ville risikere at skade værket. Og selv hvis en restaurering lykkedes, frygter man, at *Mona Lisa* ville miste sin magt over os. Leonardos oprindelige teknik og farver betyder mindre end billedet. Som beholder for utallige historier er maleriet vokset fra både sin skaber og kunsthistorien."
+        },
+        {
           "type": "takeaway",
-          "text": "*Mona Lisa* skylder sin herlighed lige så meget til Leonardos genialitet (sfumato, optisk smil) som til historien: et tyveri i 1911 forvandlede et beundret mesterværk til et globalt ikon."
+          "text": "Lagt til side i 1503 til fordel for en finere bestilling skylder *Mona Lisa* sin ikonstatus fem århundreders legender og et tyveri, langt mere end den rang, Leonardo gav det."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. Campbell, Leonardo da Vinci: An Untraceable Life, Princeton University Press, 2025, p. 43-45."
+    },
+    {
+      "text": "F. Zöllner, « Leonardo's Portrait of Mona Lisa del Giocondo », Gazette des Beaux-Arts, vol. 121, 1993, p. 115-138."
     }
   ]
 }
