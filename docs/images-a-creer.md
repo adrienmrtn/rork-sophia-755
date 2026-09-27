@@ -13,7 +13,17 @@ avec le nom : rien ne casse. Une fois les fichiers déposés :
 Le **hero** sert aussi de couverture sur la carte de la home (`CourseImageMap`), donc un cadrage
 large 16:9 avec le sujet au centre.
 
-## Pilote (3 cours)
+## Pilote (3 cours) : images livrées le 27/09
+
+Toutes en place dans `ios/Sophia/CourseImages/`. Deux fichiers ont été renommés d'après ce
+qu'ils montrent réellement : `wienerisches_diarium_1725_vampire_report` est devenu
+`edvard_munch_vampire_painting_1895` (tableau de Munch) et
+`diaphragm_lungs_glottis_anatomy_diagram` est devenu `mouse_diaphragm_muscle_fibres_microscopy`
+(microscopie). L'image « Tokyo Tower » fournie pour `eiffel_tower_radio_antenna_1914_military` a
+été remplacée par la gravure « Antenne tour Eiffel 1914 » (Wikimedia Commons, domaine public).
+Les trois couvertures n'ont pas de crédit renseigné : à compléter dans `image_credits.json`
+si elles ne sont pas des créations maison. Reste l'upload Supabase pour Android.
+
 
 ### course_241 · Pourquoi voulait-on démolir la tour Eiffel ?
 

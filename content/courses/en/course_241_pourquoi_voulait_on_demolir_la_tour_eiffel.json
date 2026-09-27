@@ -8,7 +8,7 @@
   "author": "dusan-nikolic",
   "hero": {
     "image": "eiffel_tower_1889_universal_exhibition",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Before it became the symbol of Paris, it was a \"hateful column of bolted sheet metal\" that people dreamed of pulling down."
   },
   "sections": [
@@ -39,7 +39,7 @@
         {
           "type": "image",
           "asset": "eiffel_tower_construction_1888_champ_de_mars",
-          "ratio": "4:3",
+          "ratio": "3:2",
           "caption": "The building site on the Champ de Mars in 1888: the four piers reach the first floor."
         },
         {
@@ -89,8 +89,8 @@
         {
           "type": "image",
           "asset": "eiffel_tower_radio_antenna_1914_military",
-          "ratio": "4:3",
-          "caption": "Wireless telegraphy antennas strung from the summit in the early twentieth century."
+          "ratio": "1:1",
+          "caption": "The tower's wireless telegraphy station in 1914: the antennas run from the summit down to the Champ de Mars."
         },
         {
           "type": "paragraph",

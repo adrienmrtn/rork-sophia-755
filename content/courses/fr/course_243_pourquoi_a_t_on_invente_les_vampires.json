@@ -8,7 +8,7 @@
   "author": "angela-bouma",
   "hero": {
     "image": "foggy_village_graveyard_night_balkans",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "La mort fait peur. Ne pas pouvoir l'expliquer fait encore plus peur."
   },
   "sections": [
@@ -38,9 +38,9 @@
         },
         {
           "type": "image",
-          "asset": "wienerisches_diarium_1725_vampire_report",
-          "ratio": "4:3",
-          "caption": "Le rapport de l'affaire Blagojević, publié dans un journal de Vienne en 1725 : le mot « vampire » entre dans la presse."
+          "asset": "edvard_munch_vampire_painting_1895",
+          "ratio": "auto",
+          "caption": "« Vampire », d'Edvard Munch (1895). Avant les peintres et les romanciers, le vampire est une affaire de village."
         },
         {
           "type": "paragraph",
@@ -64,7 +64,7 @@
         {
           "type": "image",
           "asset": "mercy_brown_grave_exeter_rhode_island",
-          "ratio": "4:3",
+          "ratio": "3:4",
           "caption": "La tombe de Mercy Brown, à Exeter (Rhode Island), toujours visitée aujourd'hui."
         },
         {
@@ -89,7 +89,7 @@
         {
           "type": "image",
           "asset": "bram_stoker_dracula_1897_first_edition_cover",
-          "ratio": "4:3",
+          "ratio": "3:4",
           "caption": "La première édition de Dracula (1897), reliée de toile jaune et lettrée de rouge."
         },
         {

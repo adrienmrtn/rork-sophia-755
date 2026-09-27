@@ -8,7 +8,7 @@
   "author": "stacy-jankowski",
   "hero": {
     "image": "child_hiccups_surprised_hand_over_mouth",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "On te dit de retenir ton souffle, de boire la tête en bas ou de te faire peur. Mais que se passe-t-il vraiment dans ton corps ?"
   },
   "sections": [
@@ -38,9 +38,9 @@
         },
         {
           "type": "image",
-          "asset": "diaphragm_lungs_glottis_anatomy_diagram",
-          "ratio": "4:3",
-          "caption": "Le diaphragme, sous les poumons, et la glotte, dans la gorge : les deux acteurs du hoquet."
+          "asset": "mouse_diaphragm_muscle_fibres_microscopy",
+          "ratio": "auto",
+          "caption": "Le diaphragme vu au microscope : un muscle strié, comme ceux des bras et des jambes."
         },
         {
           "type": "paragraph",
@@ -64,7 +64,7 @@
         {
           "type": "image",
           "asset": "fetal_ultrasound_scan_pregnancy",
-          "ratio": "4:3",
+          "ratio": "2:1",
           "caption": "À l'échographie, on voit déjà le fœtus avoir le hoquet, bien avant sa première respiration."
         },
         {
@@ -104,7 +104,7 @@
         {
           "type": "image",
           "asset": "glass_of_cold_water_home_remedy_hiccups",
-          "ratio": "1:1",
+          "ratio": "3:2",
           "caption": "Le verre d'eau froide : le plus répandu des remèdes, et l'un des moins étudiés."
         },
         {

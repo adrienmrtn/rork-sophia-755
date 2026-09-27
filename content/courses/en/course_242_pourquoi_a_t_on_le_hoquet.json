@@ -8,7 +8,7 @@
   "author": "stacy-jankowski",
   "hero": {
     "image": "child_hiccups_surprised_hand_over_mouth",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "You are told to hold your breath, drink upside down or have someone scare you. But what is really happening inside your body?"
   },
   "sections": [
@@ -38,9 +38,9 @@
         },
         {
           "type": "image",
-          "asset": "diaphragm_lungs_glottis_anatomy_diagram",
-          "ratio": "4:3",
-          "caption": "The diaphragm, below the lungs, and the glottis, in the throat: the two actors in a hiccup."
+          "asset": "mouse_diaphragm_muscle_fibres_microscopy",
+          "ratio": "auto",
+          "caption": "The diaphragm under the microscope: a striated muscle, like those of the arms and legs."
         },
         {
           "type": "paragraph",
@@ -64,7 +64,7 @@
         {
           "type": "image",
           "asset": "fetal_ultrasound_scan_pregnancy",
-          "ratio": "4:3",
+          "ratio": "2:1",
           "caption": "On an ultrasound, a fetus can already be seen hiccupping, long before its first breath."
         },
         {
@@ -104,7 +104,7 @@
         {
           "type": "image",
           "asset": "glass_of_cold_water_home_remedy_hiccups",
-          "ratio": "1:1",
+          "ratio": "3:2",
           "caption": "A glass of cold water: the most common remedy, and one of the least studied."
         },
         {

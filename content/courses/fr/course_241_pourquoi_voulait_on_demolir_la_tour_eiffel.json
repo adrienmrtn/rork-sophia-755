@@ -8,7 +8,7 @@
   "author": "dusan-nikolic",
   "hero": {
     "image": "eiffel_tower_1889_universal_exhibition",
-    "ratio": "16:9",
+    "ratio": "4:3",
     "hook": "Avant d'être le symbole de Paris, elle a été une « odieuse colonne de tôle boulonnée » que l'on rêvait d'abattre."
   },
   "sections": [
@@ -39,7 +39,7 @@
         {
           "type": "image",
           "asset": "eiffel_tower_construction_1888_champ_de_mars",
-          "ratio": "4:3",
+          "ratio": "3:2",
           "caption": "Le chantier au Champ-de-Mars en 1888 : les quatre piliers rejoignent le premier étage."
         },
         {
@@ -89,8 +89,8 @@
         {
           "type": "image",
           "asset": "eiffel_tower_radio_antenna_1914_military",
-          "ratio": "4:3",
-          "caption": "Les antennes de télégraphie sans fil tendues depuis le sommet, au début du XXe siècle."
+          "ratio": "1:1",
+          "caption": "Le poste de télégraphie sans fil de la tour en 1914 : les antennes descendent du sommet vers le Champ-de-Mars."
         },
         {
           "type": "paragraph",
