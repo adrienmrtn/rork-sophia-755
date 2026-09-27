@@ -2,7 +2,7 @@
 """Build the narration text ElevenLabs reads, one file per course.
 
     python3 scripts/tts/build_tts.py --lang fr --out ~/Desktop/tts_fr
-    python3 scripts/tts/build_tts.py --lang en --out ~/Desktop/tts_en
+    python3 scripts/tts/build_tts.py --lang de --out ~/Desktop/tts_de
 
 Writes next to the per-course files:
   chapitres/            one file per chapter, for mixing a jingle between them
@@ -19,13 +19,14 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import lang_de  # noqa: E402
 import lang_en  # noqa: E402
 import lang_es  # noqa: E402
 import lang_fr  # noqa: E402
 import lang_tr  # noqa: E402
 import tts_common  # noqa: E402
 
-LANGS = {'fr': lang_fr, 'en': lang_en, 'es': lang_es, 'tr': lang_tr}
+LANGS = {'fr': lang_fr, 'en': lang_en, 'es': lang_es, 'tr': lang_tr, 'de': lang_de}
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
