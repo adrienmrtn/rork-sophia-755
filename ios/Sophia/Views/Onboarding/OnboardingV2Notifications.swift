@@ -154,6 +154,8 @@ struct OnboardingV2Notifications: View {
         asked = true
         Task { @MainActor in
             await NotificationPermission.request()
+            // Granted: the daily reminder goes on the calendar at the hour just chosen.
+            DailyCourseReminder.scheduleIfAllowed()
             leave()
         }
         // Garde-temps : iOS met son alerte en file d'attente derrière une autre alerte

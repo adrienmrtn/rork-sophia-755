@@ -37,20 +37,21 @@ struct OnboardingV2Loading: View {
             Spacer().frame(height: 32)
 
             VStack(spacing: 6) {
-                HStack(spacing: 6) {
-                    Text("4.8/5")
-                        .font(DS.title(.headline, .heavy))
-                        .foregroundStyle(OV2.ink)
-                    HStack(spacing: 3) {
-                        ForEach(0..<5, id: \.self) { _ in
-                            Image(systemName: "star.fill").font(.system(size: 13)).foregroundStyle(OV2.warm)
-                        }
-                    }
-                }
-                Text(languageManager.text("onboardingV2.loading.reviews"))
-                    .font(DS.sans(.caption, .semibold))
+                Text(languageManager.text("onboardingV2.loading.social.count"))
+                    .font(DS.title(.title2, .heavy))
+                    .foregroundStyle(OV2.accent)
+                Text(languageManager.text("onboardingV2.loading.social.body"))
+                    .font(DS.sans(.subheadline, .medium))
                     .foregroundStyle(OV2.inkSecondary)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text(languageManager.text("onboardingV2.loading.social.join"))
+                    .font(DS.sans(.subheadline, .bold))
+                    .foregroundStyle(OV2.ink)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 2)
             }
+            .padding(.horizontal, 32)
             .opacity(allDone ? 1 : 0.4)
 
             Spacer()

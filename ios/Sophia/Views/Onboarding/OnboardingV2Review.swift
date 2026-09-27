@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Page 8 — preuve sociale, épurée : un titre qui s'affiche doucement, puis des avis
 /// d'utilisateurs qui défilent en **roulette floutée** (même effet que « Avec Sophia, tu
@@ -27,10 +28,11 @@ struct OnboardingV2Review: View {
     private let scrollDuration: Double = 0.95
     private let tickInterval: UInt64 = 3_000_000_000
 
-    private var testimonials: [(quote: String, author: String)] {
+    private var testimonials: [(quote: String, author: String, index: Int)] {
         (1...6).map { i in
             (languageManager.text("onboardingV2.review.t\(i).quote"),
-             languageManager.text("onboardingV2.review.t\(i).author"))
+             languageManager.text("onboardingV2.review.t\(i).author"),
+             i)
         }
     }
 
@@ -89,6 +91,7 @@ struct OnboardingV2Review: View {
                             reviewCard(
                                 quote: testimonials[i].quote,
                                 author: testimonials[i].author,
+                                index: testimonials[i].index,
                                 focused: false,
                                 height: nil
                             )
@@ -135,6 +138,7 @@ struct OnboardingV2Review: View {
                 reviewCard(
                     quote: testimonials[ti].quote,
                     author: testimonials[ti].author,
+                    index: testimonials[ti].index,
                     focused: abs(distance) < 0.5,
                     height: cardHeight
                 )
@@ -173,11 +177,19 @@ struct OnboardingV2Review: View {
     /// enfants. Avec un simple `minHeight`, le `Spacer(minLength: 0)` de la carte s'étirait
     /// pour remplir toute la fenêtre — une carte de 400 pt avec trois lignes de texte en
     /// haut et du vide en dessous.
-    private func reviewCard(quote: String, author: String, focused: Bool, height: CGFloat?) -> some View {
+    private func reviewCard(quote: String, author: String, index: Int, focused: Bool, height: CGFloat?) -> some View {
         VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 2) {
-                ForEach(0..<5, id: \.self) { _ in
-                    Image(systemName: "star.fill").font(.system(size: 12)).foregroundStyle(OV2.warm)
+            HStack(spacing: 10) {
+                ReviewAvatar(index: index, name: author)
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(author)
+                        .font(DS.sans(.caption, .semibold))
+                        .foregroundStyle(OV2.ink)
+                    HStack(spacing: 2) {
+                        ForEach(0..<5, id: \.self) { _ in
+                            Image(systemName: "star.fill").font(.system(size: 11)).foregroundStyle(OV2.warm)
+                        }
+                    }
                 }
             }
             Text(quote)
@@ -186,9 +198,6 @@ struct OnboardingV2Review: View {
                 .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
             Spacer(minLength: 0)
-            Text(author)
-                .font(DS.sans(.caption, .semibold))
-                .foregroundStyle(OV2.inkSecondary)
         }
         .padding(18)
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -197,5 +206,49 @@ struct OnboardingV2Review: View {
         .background(OV2.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(OV2.hairline, lineWidth: 1))
         .shadow(color: .black.opacity(focused ? 0.08 : 0.03), radius: focused ? 16 : 8, y: focused ? 8 : 4)
+    }
+}
+
+// MARK: - Avatar
+
+/// Profile picture of a testimonial. A bundled `review_avatar_<n>.png` is used when there
+/// is one; otherwise a generated portrait: initials on a gradient that is always the same
+/// for the same person.
+private struct ReviewAvatar: View {
+    let index: Int
+    let name: String
+
+    private static let palettes: [(Color, Color)] = [
+        (Color(red: 0.98, green: 0.62, blue: 0.45), Color(red: 0.93, green: 0.35, blue: 0.45)),
+        (Color(red: 0.45, green: 0.72, blue: 0.98), Color(red: 0.25, green: 0.45, blue: 0.85)),
+        (Color(red: 0.55, green: 0.85, blue: 0.65), Color(red: 0.22, green: 0.60, blue: 0.45)),
+        (Color(red: 0.85, green: 0.65, blue: 0.98), Color(red: 0.56, green: 0.40, blue: 0.92)),
+        (Color(red: 0.99, green: 0.80, blue: 0.40), Color(red: 0.92, green: 0.55, blue: 0.15)),
+        (Color(red: 0.55, green: 0.85, blue: 0.92), Color(red: 0.25, green: 0.60, blue: 0.75)),
+    ]
+
+    private var initial: String {
+        String(name.trimmingCharacters(in: .whitespaces).prefix(1)).uppercased()
+    }
+
+    var body: some View {
+        Group {
+            if let image = UIImage(named: "review_avatar_\(index)") {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+            } else {
+                let palette = Self.palettes[(index - 1 + Self.palettes.count) % Self.palettes.count]
+                ZStack {
+                    LinearGradient(colors: [palette.0, palette.1], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    Text(initial)
+                        .font(.system(size: 15, weight: .bold, design: .rounded))
+                        .foregroundStyle(.white)
+                }
+            }
+        }
+        .frame(width: 36, height: 36)
+        .clipShape(Circle())
+        .overlay(Circle().strokeBorder(.white.opacity(0.6), lineWidth: 1))
     }
 }
