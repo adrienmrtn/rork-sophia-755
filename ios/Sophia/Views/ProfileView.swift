@@ -365,29 +365,49 @@ struct ProfileView: View {
 
     /// "Cultive-toi avant de scroller", where the daily goal lives. One card, four
     /// states: not Premium, off, locked (finish today's course), done (well played).
-    private var tiktokBlockerCard: some View {
-        let blocker = TikTokBlockerManager.shared
-        let state: (icon: String, tint: Color, bg: Color, title: String, subtitle: String) = {
-            if !store.isPremium {
-                return ("lock.fill", DS.accentSoft, DS.accentTint,
-                        languageManager.text("tiktokBlocker.card.premium.title"),
-                        languageManager.text("tiktokBlocker.card.premium.subtitle"))
-            }
-            if !blocker.isArmed {
-                return ("lock.fill", DS.accentSoft, DS.accentTint,
-                        languageManager.text("tiktokBlocker.card.off.title"),
-                        languageManager.text("tiktokBlocker.card.off.subtitle"))
-            }
-            if blocker.isUnlockWindowOpen {
-                return ("checkmark.seal.fill", DS.success, DS.successTint,
-                        languageManager.text("tiktokBlocker.card.done.title"),
-                        languageManager.text("tiktokBlocker.card.done.subtitle"))
-            }
-            return ("lock.fill", DS.warm, DS.warm.opacity(0.15),
-                    languageManager.text("tiktokBlocker.card.locked.title"),
-                    languageManager.text("tiktokBlocker.card.locked.subtitle"))
-        }()
+    private struct BlockerCardState {
+        let icon: String
+        let tint: Color
+        let bg: Color
+        let title: String
+        let subtitle: String
+    }
 
+    /// One of four states, resolved in plain statements: the tuple-returning closure this
+    /// replaced was a type-checker sink.
+    private var blockerCardState: BlockerCardState {
+        let blocker = TikTokBlockerManager.shared
+        if !store.isPremium {
+            return BlockerCardState(
+                icon: "lock.fill", tint: DS.accentSoft, bg: DS.accentTint,
+                title: languageManager.text("tiktokBlocker.card.premium.title"),
+                subtitle: languageManager.text("tiktokBlocker.card.premium.subtitle")
+            )
+        }
+        if !blocker.isArmed {
+            return BlockerCardState(
+                icon: "lock.fill", tint: DS.accentSoft, bg: DS.accentTint,
+                title: languageManager.text("tiktokBlocker.card.off.title"),
+                subtitle: languageManager.text("tiktokBlocker.card.off.subtitle")
+            )
+        }
+        if blocker.isUnlockWindowOpen {
+            return BlockerCardState(
+                icon: "checkmark.seal.fill", tint: DS.success, bg: DS.successTint,
+                title: languageManager.text("tiktokBlocker.card.done.title"),
+                subtitle: languageManager.text("tiktokBlocker.card.done.subtitle")
+            )
+        }
+        let warmTint: Color = DS.warm.opacity(0.15)
+        return BlockerCardState(
+            icon: "lock.fill", tint: DS.warm, bg: warmTint,
+            title: languageManager.text("tiktokBlocker.card.locked.title"),
+            subtitle: languageManager.text("tiktokBlocker.card.locked.subtitle")
+        )
+    }
+
+    private var tiktokBlockerCard: some View {
+        let state: BlockerCardState = blockerCardState
         return Button {
             hapticTrigger += 1
             showTikTokBlocker = true
