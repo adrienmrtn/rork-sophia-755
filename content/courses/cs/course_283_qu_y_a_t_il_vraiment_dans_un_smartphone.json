@@ -1,0 +1,135 @@
+{
+  "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone",
+  "title": "Co je doopravdy uvnitř smartphonu?",
+  "subtitle": "Kapesní důl",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Až 50 kovů, sklo upravené draslíkem, kobalt z Konga a lithium z Chile: telefon je koncentrát celé planety. A když dosluhuje, jeho materiály mají pořád cenu.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "disassembled_smartphone_components_flat_lay",
+    "ratio": "4:3",
+    "hook": "Tvůj telefon vypadá jako jedna věc, ale skrývá desítky materiálů vytěžených na několika kontinentech."
+  },
+  "sections": [
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Smartphone vypadá jako jediný předmět. Ve skutečnosti je to skládačka z desítek materiálů z celého světa, a to daleko za hranicemi skla, plastu a kovu, které vidíš. Podle Evropské komise může telefon obsahovat až **50 různých kovů**. Geologická služba Spojených států odhaduje, že nejméně polovina součástek mobilního zařízení pochází z nerostů vytěžených ze země nebo z nich zpracovaných."
+        },
+        {
+          "type": "paragraph",
+          "text": "Proč tak malý předmět potřebuje tolik různých látek? Protože každá součástka vyžaduje určitou vlastnost: vést elektřinu, zůstat průhledná, chovat se jako magnet nebo uchovávat energii. Jinými slovy, velká část tvého telefonu začíná v hornině."
+        }
+      ]
+    },
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p1",
+      "title": "I sklo má svou práci",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Displej potřebuje krycí sklo, které je průhledné a zároveň pevné. Mnoho telefonů používá [[Gorilla Glass]], tvrzené sklo, jehož základem je [[křemík]] spolu s hliníkem a kyslíkem. Jeho odolnost pochází z důmyslné úpravy: u povrchu se malé atomy sodíku nahradí většími atomy draslíku. Tyto objemnější ionty se na povrchu tlačí na sebe a vytvářejí tlak, který brání šíření prasklin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hned pod sklem bývá tenká vrstva, kterou tvoří [[oxid india a cínu]], materiál se vzácnými vlastnostmi: vede elektřinu a přitom zůstává průhledný. Když se prst dotkne displeje, změní elektrický signál v této vrstvě. Telefon tu změnu zaznamená, aniž by cokoli zakryl z obrazu pod ní."
+        }
+      ]
+    },
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p2",
+      "title": "Každý materiál má svůj úkol",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pod displejem byl každý materiál vybrán pro určitý úkol. Křemík tvoří základ drobných obvodů vyleptaných do čipů. Měď vede elektřinu mezi součástkami. Baterie využívá [[lithium]] a grafit, jednu z forem uhlíku, aby ukládala a uvolňovala energii."
+        },
+        {
+          "type": "image",
+          "asset": "smartphone_logic_board_chips_gold_contacts_macro",
+          "ratio": "4:3",
+          "caption": "Základní deska smartphonu: křemíkové čipy, měděné spoje a pozlacené kontakty."
+        },
+        {
+          "type": "funFact",
+          "text": "Ani zlato, ani lithium: nejhojnějším kovem ve smartphonu je **měď**, která propojuje všechny součástky."
+        },
+        {
+          "type": "paragraph",
+          "text": "K výrobě drobných, ale velmi silných magnetů do reproduktorů, mikrofonů a vibračního motorku slouží [[prvky vzácných zemin]], například neodym. Telefon obsahuje i nepatrné množství drahých kovů, zlata a stříbra. **Zlato** je obzvlášť užitečné: dobře vede elektřinu a nekoroduje, takže je ideálním materiálem pro drobné a spolehlivé spoje uvnitř přístroje."
+        }
+      ]
+    },
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p3",
+      "title": "Telefon, který obletěl svět",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tvůj telefon možná nese štítek „vyrobeno v...”, ale jeho materiály jen zřídka pocházejí z jediné země. Než se dostanou do závěrečné továrny, často procestují několik kontinentů. Klíčový kov pro baterie, [[kobalt]], se z větší části těží v Demokratické republice Kongo. Lithium se zase vyrábí v zemích jako Austrálie, Chile, Čína a Argentina."
+        },
+        {
+          "type": "image",
+          "asset": "salar_de_atacama_lithium_evaporation_ponds_aerial",
+          "ratio": "2:3",
+          "caption": "Chile ze satelitu (MODIS, 2015): na severu solné pláně Atacamy, kde se těží lithium."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tyto suroviny se pak rafinují a jinde zpracovávají na součástky, než se telefon sestaví. Smartphone je tedy skutečně globální výrobek, jehož cesta začíná dávno před továrnou. A ta cesta má svou cenu: těžba a rafinace potřebují půdu, vodu a energii, což zatěžuje životní prostředí."
+        }
+      ]
+    },
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p4",
+      "title": "Starý telefon má pořád cenu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Telefon je k ničemu, když přestane fungovat a už se nedá opravit. Materiály v něm ale svou hodnotu neztrácejí: dají se získat zpět a znovu použít. V roce **2022** dosáhl [[elektronický odpad]] na celém světě, včetně smartphonů, **62 milionů tun**. Sebráno a recyklováno bylo jen o málo víc než **20%**."
+        },
+        {
+          "type": "image",
+          "asset": "e_waste_pile_discarded_mobile_phones",
+          "ratio": "3:2",
+          "caption": "Skládka elektronického odpadu v Ghaně, kde končí část vyřazených přístrojů z celého světa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Když tyto materiály získáme zpět, nemusíme tolik těžit a zpracovávat nové suroviny. Cenné zdroje tak navíc zůstávají v oběhu déle. Telefon může zestárnout. Materiály v něm nestárnou. Jde o to udržet je v používání co nejdéle."
+        },
+        {
+          "type": "takeaway",
+          "text": "Smartphone je kapesní důl, až 50 kovů z několika kontinentů, a skutečnou výzvou není ho vyměnit, ale udržet jeho materiály v oběhu co nejdéle."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "G. Ragonnaud, Securing Europe's Supply of Critical Raw Materials, European Parliamentary Research Service, PE 739.294, 2023, p. 2."
+    },
+    {
+      "text": "J. E. Jenness, J. A. Ober, A. M. Wilkins et J. Gambogi, A World of Minerals in Your Mobile Device, U.S. Geological Survey, General Information Product 167, 2016, p. 1.",
+      "url": "https://doi.org/10.3133/gip167"
+    },
+    {
+      "text": "B. Rohrig, « Smartphones: Smart Chemistry », ChemMatters, American Chemical Society, avril-mai 2015, p. 11-12."
+    },
+    {
+      "text": "C. P. Baldé et al., The Global E-waste Monitor 2024, UNITAR et ITU, 2024, p. 27."
+    },
+    {
+      "text": "A. Brunning, « The Chemical Elements of a Smartphone », Compound Interest."
+    }
+  ]
+}

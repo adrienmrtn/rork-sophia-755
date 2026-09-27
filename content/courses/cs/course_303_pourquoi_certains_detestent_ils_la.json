@@ -1,0 +1,123 @@
+{
+  "id": "course_303_pourquoi_certains_detestent_ils_la",
+  "title": "Proč někdo nesnáší koriandr?",
+  "subtitle": "Chuť mýdla",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Části lidstva chutná koriandr jako mýdlo. Na vině je jediné změněné písmeno v genu pro čich, a možná i dědictví po našich předcích.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "fresh_coriander_cilantro_bunch_leaves",
+    "ratio": "4:3",
+    "hook": "Tentýž lístek, dvě chuti: pro jedny čerstvá bylinka, pro druhé mýdlo. Rozdíl dělá jediné písmeno tvé DNA."
+  },
+  "sections": [
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Koriandr patří k nejstarším a nejpoužívanějším rostlinám na světě. Pěstovali ho už staří Řekové a Římané, v kuchyni i v lékařství. Najdeš ho v jižní Asii, v Číně, v Latinské Americe, v tisících receptů."
+        },
+        {
+          "type": "paragraph",
+          "text": "Někteří lidé ho přesto nesnesou. Kde většina strávníků cítí čerstvou bylinku, oni přísahají, že žvýkají mýdlo. Nejde o rozmar ani o nezvyk: odpověď se skrývá v jejich nose, přesněji v jejich genech."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p1",
+      "title": "Čichové receptory, od nosu k mozku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Všechno, co ochutnáš nebo ucítíš, má chemické složení, které musí mozek rozluštit. Chuť a čich, jehož vědecký název zní [[olfakce]], spolu úzce souvisejí: velká část „chuti” jídla ve skutečnosti prochází nosem, i když zrovna žvýkáš."
+        },
+        {
+          "type": "image",
+          "asset": "olfactory_nerve_nasal_cavity_gray_anatomy_plate",
+          "ratio": "3:2",
+          "caption": "Řez nosní sliznicí pod mikroskopem: právě stěna nosní dutiny ukrývá čichové receptory."
+        },
+        {
+          "type": "paragraph",
+          "text": "V nosní dutině nesou některé buňky [[čichové receptory]]. Ty zachytí molekuly z jídla a přemění je na signál, který čichové neurony dopraví až do mozku. Každý receptor vzniká podle určitého genu. Když se gen změní, změní se i receptor a s ním i chuť, kterou vnímáš. Přesně to se děje u koriandru."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p2",
+      "title": "OR6A2, gen mýdlové chuti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Genetici viníka našli: je to gen, který se jmenuje [[OR6A2]]. Kóduje čichový receptor citlivý na [[nenasycené aldehydy]], molekuly obsažené v koriandru. U většiny lidí je tento receptor překládá na svěží bylinný tón."
+        },
+        {
+          "type": "image",
+          "asset": "dna_double_helix_nhgri_illustration",
+          "ratio": "2:1",
+          "caption": "Dvojšroubovice DNA: ke změně receptoru stačí jediné změněné písmeno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Někteří lidé mají v tomto genu [[jednonukleotidový polymorfismus]], zkráceně SNP: jediné „písmeno” DNA je jiné. Tahle drobná změna ovlivní, jak se gen projevuje, a tedy i receptor, který vytváří. Receptor pořád funguje: zachytí molekulu a pošle mozku signál. Jenže zpráva už není přesná. Místo čerstvé bylinky mozek přečte: mýdlo."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p3",
+      "title": "Proč tahle mutace přežila?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tato varianta se u jednotlivce neobjeví náhodou. Z rodičů na děti se předává už po staletí. Podle oblasti světa ji nosí **4%** až **20%** obyvatel. Proč se ale takový rys udržel, když tolik kuchyní bere koriandr jako základní surovinu?"
+        },
+        {
+          "type": "image",
+          "asset": "cilantro_lime_mexican_tacos_street_food",
+          "ratio": "3:2",
+          "caption": "Pojízdný stánek s tacos ve Spojených státech: v mexické kuchyni je čerstvý koriandr základní surovinou."
+        },
+        {
+          "type": "paragraph",
+          "text": "Někteří evoluční biologové nabízejí hypotézu. Ve starém světě měly mýdlovou chuť i některé jedovaté rostliny. Receptor, díky kterému je tahle chuť odporná, mohl sloužit jako mechanismus přežití: odváděl naše předky od nebezpečných rostlin. Neškodný koriandr by pak byl vedlejší obětí tohoto poplašného signálu."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p4",
+      "title": "Dá se koriandr naučit mít rád?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dobrá zpráva pro všechny, kdo sní o pořádném tacu: mozek se dá přeučit. Receptor se sice nezmění, ale časem se můžeš naučit signál, který posílá do mozku, přehlížet. Metoda se vejde do jednoho slova: opakování."
+        },
+        {
+          "type": "paragraph",
+          "text": "V praxi začneš tím, že trochu koriandru přidáš do jídla, které už máš rád. Mýdlový tón můžeš také přebít silnou chutí, třeba citronovou šťávou nebo octem. Po dostatku zkušeností bez nepříjemného překvapení mozek nakonec přijme, že koriandr není hrozba, a odpor slábne."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mýdlová chuť koriandru pochází z varianty genu OR6A2, kterou má podle oblasti 4 až 20% lidí: jejich čichový receptor špatně čte aldehydy koriandru, což je možná starý ochranný reflex proti jedovatým rostlinám."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "N. Eriksson, S. Wu, C. B. Do et al., « A genetic variant near olfactory receptor genes influences cilantro preference », Flavour, vol. 1, 2012, art. 22.",
+      "url": "https://doi.org/10.1186/2044-7248-1-22"
+    },
+    {
+      "text": "Academic Path, « Why coriander tastes like soap ».",
+      "url": "https://academicpath.org/why-coriander-tastes-like-soap"
+    }
+  ]
+}

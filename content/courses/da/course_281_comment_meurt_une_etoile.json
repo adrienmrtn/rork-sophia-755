@@ -1,0 +1,128 @@
+{
+  "id": "course_281_comment_meurt_une_etoile",
+  "title": "Hvordan dør en stjerne?",
+  "subtitle": "Rød kæmpe eller supernova",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "I milliarder af år balancerer en stjerne mellem tyngdekraften og fusionen i sin kerne. Når brændstoffet slipper op, svulmer den op, falder sammen eller eksploderer, og hvordan den ender, afhænger af én eneste ting: dens masse.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "crab_nebula_supernova_remnant_hubble",
+    "ratio": "4:3",
+    "hook": "En stjerne kan slukkes stille og roligt eller eksplodere med ufattelig voldsomhed: alt afgøres af dens masse."
+  },
+  "sections": [
+    {
+      "id": "course_281_comment_meurt_une_etoile_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hvad får en stjerne til at dø? Den begynder at dø, når den ikke længere kan modstå sin egen tyngdekraft. Det meste af sit liv trækker tyngdekraften stjernens stof ind mod midten. Samtidig skaber energien fra kernen et tryk, der presser udad. De to kræfter udligner hinanden, og stjernen forbliver stabil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Energien kommer fra [[kernefusion]]: brintkerner smelter sammen til helium og frigiver en enorm energi. Ligevægten kan vare millioner, milliarder, ja endda billioner af år. Alt afhænger af massen. Små stjerner forbruger deres brændstof langsomt, massive stjerner brænder det langt hurtigere af. En dag bryder ligevægten sammen. Hvad der så sker, afhænger af stjernens masse."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p1",
+      "title": "Stjernen svulmer op til en rød kæmpe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det meste af sit liv omdanner stjernen brinten i sin kerne, det centrale område, til helium. Når brinten slipper op, går fusionen langsommere i midten. Kernen trækker sig sammen og bliver varmere. Omkring den fortsætter et lag af brint med at fusionere og frigive energi. Under det pres svulmer stjernens ydre lag voldsomt op."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultatet er en [[rød kæmpe]]: en stjerne, der er langt større end før, med en koldere overflade. En døende stjerne begynder altså med at vokse i stedet for at gå stille ud. Solen ventes at gå ind i denne fase om omkring **5 milliarder år**."
+        },
+        {
+          "type": "funFact",
+          "text": "Som rød kæmpe kan Solen blive så stor, at den opsluger Merkur og Venus. Hvad der præcis sker med Jorden, er stadig uvist."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p2",
+      "title": "En hvid dværg på størrelse med Jorden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En stjerne som Solen kan ikke svulme op i det uendelige. Med alderen mister den sine ydre lag, som slipper ud i rummet. Gassen spredes og danner en lysende sky, en [[planetarisk tåge]]. Tilbage i midten ligger en [[hvid dværg]]: stjernens varme og tætte kerne, blottet, når de ydre lag er væk."
+        },
+        {
+          "type": "image",
+          "asset": "helix_nebula_planetary_nebula_white_dwarf_hubble",
+          "ratio": "1:1",
+          "caption": "Helixtågen: gassen, som en døende stjerne har slynget ud, med den hvide dværg synlig i midten."
+        },
+        {
+          "type": "paragraph",
+          "text": "En hvid dværg er ikke større end **Jorden**, men rummer stadig en stor del af den oprindelige stjernes masse. Fusionen er gået i stå: den producerer ikke længere energi. Når den lyser, er det kun, fordi den stadig er ekstremt varm. Over et enormt tidsrum køler den ned og blegner lidt efter lidt."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p3",
+      "title": "Supernova, neutronstjerne eller sort hul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En meget mere massiv stjerne stopper ikke der. Den fortsætter med at smelte lette grundstoffer sammen til tungere: helium bliver til kulstof, og mere avancerede reaktioner skaber derefter endnu tungere grundstoffer. Efterhånden dannes en kerne rig på **jern**. Men med jern giver fusionen ikke længere den energi, der skal til for at holde stjernen oppe mod tyngdekraften. Kernen styrter sammen på et øjeblik."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sammenstyrtningen kan udløse en [[supernova]], en gigantisk eksplosion, der slynger en stor del af stjernen ud i rummet. Den sammenstyrtede kerne bliver dog tilbage. Er den ikke for massiv, bliver den til en [[neutronstjerne]], et objekt med ekstrem tæthed, ikke større end en by. Er den massiv nok, fortsætter tyngdekraften med at presse den sammen, til der dannes et [[sort hul]], hvor tiltrækningen er så stærk, at selv lyset ikke kan slippe ud."
+        },
+        {
+          "type": "image",
+          "asset": "m87_black_hole_event_horizon_telescope_2019",
+          "ratio": "16:9",
+          "caption": "Det sorte hul i M87: det første billede fra 2019 (til venstre) og versionen skærpet af algoritmen PRIMO (2023)."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p4",
+      "title": "Vi er stjernestøv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En døende stjerne forsvinder ikke. Den giver en del af sit stof tilbage til rummet, fyldt med de grundstoffer, den har dannet i løbet af sit liv. Med tiden kan dette stof indgå i nye stjerner, planeter og andre verdener."
+        },
+        {
+          "type": "image",
+          "asset": "pillars_of_creation_eagle_nebula_jwst_2022",
+          "ratio": "2:3",
+          "caption": "Skabelsens søjler set med James Webb-teleskopet i 2022: her fødes nye stjerner."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Kulstof** er det bedste eksempel. Det er uundværligt for livet på Jorden, også i vores egne kroppe. Og det meste af dette kulstof er blevet dannet i generationer af stjerner, der i dag er forsvundet. Derfor siger man nogle gange, at vi er skabt af stjernestøv. Udtrykket er poetisk, men videnskaben bag er helt virkelig. En stjernes død er altså også en begyndelse: dens stof vil måske en dag danne en ny stjerne, en ny planet eller endda en levende verden."
+        },
+        {
+          "type": "takeaway",
+          "text": "Uden fusion giver en stjerne efter for tyngdekraften: de små slukkes som hvide dværge, de massive eksploderer som supernovaer og efterlader en neutronstjerne eller et sort hul, og deres spredte stof giver næring til fremtidens stjerner, planeter og levende væsener."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, p. 541."
+    },
+    {
+      "text": "NASA Science, « Types of Stars: White Dwarfs »."
+    },
+    {
+      "text": "S. Frazier, « Why the Sun Won't Become a Black Hole », NASA Goddard Space Flight Center, 2019."
+    }
+  ]
+}

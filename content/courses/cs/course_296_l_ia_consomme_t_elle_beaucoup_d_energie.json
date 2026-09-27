@@ -1,0 +1,139 @@
+{
+  "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie",
+  "title": "Spotřebuje AI hodně energie?",
+  "subtitle": "Za každou odpovědí",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Každá odpověď umělé inteligence vzniká v budově plné strojů, které běží ve dne v noci. Kolik elektřiny to doopravdy stojí, od trénování modelu až po síť, která ho napájí?",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "data_center_server_racks_aisle_blue_lights",
+    "ratio": "4:3",
+    "hook": "AI vypadá jako software, ale každá odpověď se vyrábí ve skutečné budově, připojené ke stejné síti jako tvůj dům."
+  },
+  "sections": [
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Položíš otázku umělé inteligenci na internetu a odpověď se objeví za pár sekund. Samotná práce se ale neodehrává v tvém telefonu. Odvádí ji [[datové centrum]], budova plná strojů, které zpracovávají a ukládají informace. Tyhle stroje neustále spotřebovávají elektřinu, i když je nikdo nevidí."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jak uvádí [[Mezinárodní energetická agentura]], v roce 2025 spotřebovala všechna datová centra dohromady asi **1,5%** světové elektřiny. To číslo zahrnuje všechny online služby, nejen AI. Zařízení určených pro AI ale rychle přibývá. Krátká odpověď sama o sobě stojí málo. Přesto kvůli každé z nich běží stroje a na její výrobu odebírá proud několik systémů najednou."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p1",
+      "title": "Servery na prvním místě",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Počítač, který zpracovává data a pohání online služby, se nazývá [[server]]. V datovém centru odvádějí většinu výpočtů právě servery, a jsou proto největšími spotřebiteli elektřiny. Když rozdělíš účet moderního datového centra, servery z něj v průměru spolknou **60%**. To platí pro datová centra obecně, nejen pro zařízení pro AI."
+        },
+        {
+          "type": "image",
+          "asset": "data_center_cooling_pipes_chillers",
+          "ratio": "3:2",
+          "caption": "Řady serverů v datovém centru: právě ony spotřebují většinu elektřiny."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zbytek padne na ukládání a přesun dat, chlazení zařízení a provoz budovy. Chlazení je důležité, protože počítač při práci vyrábí teplo. Bez systému, který ho odvádí, by se stroje nakonec přehřály. Elektřina za odpovědí AI tedy pohání mnohem víc než jen počítače, které ji vytvářejí."
+        },
+        {
+          "type": "funFact",
+          "text": "Podle IEA vzrostla spotřeba elektřiny datových center určených pro AI jen za rok 2025 o 50%."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p2",
+      "title": "Nejdřív trénovat, pak odpovídat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Než může služba AI odpovídat, potřebuje model: systém, který se z příkladů naučil pravidelnosti. Jeho vytvoření vyžaduje [[trénování]], fázi, kdy počítače prosévají obrovské množství dat. Tahle práce může velmi výkonné stroje zaměstnat na dlouhou dobu."
+        },
+        {
+          "type": "image",
+          "asset": "frontier_supercomputer_oak_ridge_cabinets",
+          "ratio": "4:3",
+          "caption": "Skříně superpočítače Columbia agentury NASA: právě takové stroje se používají k trénování modelu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Když je model natrénovaný, začíná jiná práce. Jmenuje se [[inference]] a je to výpočet, který vytvoří odpověď na tvůj dotaz. Trénování se s každou otázkou neopakuje celé znovu, inference se naopak opakuje při každém dotazu. Která z nich v čase váží víc? Záleží na tom, jak je služba postavená a kolik lidí ji používá. Hodně vytížená služba zaměstnává své počítače odpovídáním i mezi dvěma velkými koly trénování."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p3",
+      "title": "Dotaz bez pevné ceny",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kolik elektřiny spotřebuje jediný textový dotaz? Zveřejněné odhady se neshodují. Google, který měřil svou běžící službu, uvádí pro svůj mediánový textový dotaz **0,24 Wh**. Jednotkou, která měří množství energie, je [[watthodina]] (Wh). Jiná studie dospěla k mediánu **0,31 Wh**, přičemž prostřední polovina jejích standardních dotazů leží mezi **0,16 a 0,60 Wh**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tahle čísla si neodporují: popisují různé systémy a metody, ne dvě protichůdná měření téhož úkolu. Navíc vynechávají mnohem náročnější práci. Když po AI chceš, aby před odpovědí uvažovala v několika krocích, zaměstná to její počítače mnohem déle. Energie na dotaz tedy závisí na systému, na způsobu měření a na tom, jakou práci požaduješ."
+        },
+        {
+          "type": "funFact",
+          "text": "Podle téže studie dosahuje dotaz s dlouhým uvažováním, kdy model před závěrem rozepisuje jednotlivé kroky, mediánu 3,91 Wh, tedy víc než desetinásobku standardního dotazu."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p4",
+      "title": "Elektrické sítě pod tlakem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Síť vedení, která přivádí proud z elektráren do domácností a firem, se nazývá [[elektrická síť]]. Velká zařízení pro AI se připojují právě k ní. Pro představu: IEA přirovnává roční spotřebu datového centra určeného pro AI, tedy budovy postavené hlavně pro provoz těchto služeb, ke spotřebě zhruba **100.000 domácností**."
+        },
+        {
+          "type": "image",
+          "asset": "high_voltage_power_lines_data_center_virginia",
+          "ratio": "4:3",
+          "caption": "Stožáry vedení velmi vysokého napětí (750 kV): datová centra se připojují ke stejné síti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tato zařízení se navíc často shlukují na stejných místech. Když několik velkých areálů potřebuje proud ve stejné oblasti, dělí se o místní síť a stávající vedení může být nutné posílit. Oblast s volnou kapacitou přijme nové areály snáz než taková, která už je blízko svých limitů. Kde se infrastruktura AI staví, tedy její sousedé poznají."
+        },
+        {
+          "type": "takeaway",
+          "text": "Elektřina pro AI se spotřebovává na několika úrovních, od serverů, které je třeba chladit, až po místní síť, a cena jednoho dotazu závisí na systému, na měření a na požadované práci."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "International Energy Agency (IEA), Key Questions on Energy and AI, 2026, p. 9 et 17."
+    },
+    {
+      "text": "International Energy Agency (IEA), Energy and AI, 2025, p. 13, 38 et 52."
+    },
+    {
+      "text": "Shehabi et al., 2024 United States Data Center Energy Usage Report, Lawrence Berkeley National Laboratory, 2024, p. 22-23."
+    },
+    {
+      "text": "Oviedo et al., Joule, 2026, p. 1.",
+      "url": "https://doi.org/10.1016/j.joule.2026.102430"
+    },
+    {
+      "text": "Elsworth et al., Measuring the Environmental Impact of Delivering AI at Google Scale, Google, 2025, p. 7."
+    }
+  ]
+}
