@@ -1,0 +1,143 @@
+{
+  "id": "course_292_pourquoi_le_titanic_manquait_il_de",
+  "title": "Why didn't the Titanic have enough lifeboats?",
+  "subtitle": "1912",
+  "subject": "histoire",
+  "subcategory": "Early modern era & 19th century",
+  "description": "In April 1912, the largest liner in the world set sail with lifeboats for less than half the people aboard. The law allowed it, and the company that owned her had refused to carry more.",
+  "author": "nathan-hewitt",
+  "hero": {
+    "image": "rms_titanic_departing_southampton_april_1912",
+    "ratio": "16:9",
+    "hook": "The Titanic carried exactly the number of lifeboats the law required: that is why nobody was ever punished for her 1,500 dead."
+  },
+  "sections": [
+    {
+      "id": "course_292_pourquoi_le_titanic_manquait_il_de_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "When the Titanic set sail in **April 1912**, she was said to be \"practically unsinkable.\" She was the largest ship ever built and could carry as many as **3,500 people**. The [[White Star Line]], the company that owned her, used that reputation as an excuse to cut corners on safety."
+        },
+        {
+          "type": "paragraph",
+          "text": "The liner left port without enough lifeboats for everyone aboard, and the company knew it. When disaster struck, passengers and crew discovered that their safety had been sacrificed to the owner's bottom line. The toll: **1,500 dead**, the most infamous tragedy in maritime history. And very likely a preventable one."
+        }
+      ]
+    },
+    {
+      "id": "course_292_pourquoi_le_titanic_manquait_il_de_p1",
+      "title": "A law from 1894 outgrown by the giants of the sea",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The lifeboat question should have been settled by law. But the latest British rules on safety at sea dated from **1894**, and they reasoned by a ship's weight, not by the number of people aboard. Any vessel over 10,000 tons had to carry at least **16 lifeboats**. Ships had grown enormously since then. The Titanic weighed in at over **52,000 tons** and carried more people than any ship before her. Legally, 16 lifeboats were still enough."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Alexander Carlisle]], the engineer in charge of the ship's safety features, saw the problem. He designed new [[davits]], the crane-like arms used to store lifeboats and lower them into the water. Each of his could hold up to **four** boats. With 16 davits on board, the Titanic could carry more than enough lifeboats for everyone."
+        },
+        {
+          "type": "image",
+          "asset": "titanic_boat_deck_lifeboats_welin_davits_1912",
+          "ratio": "4:3",
+          "caption": "The Titanic's boat deck, with the lifeboats hanging from their davits, in 1912."
+        }
+      ]
+    },
+    {
+      "id": "course_292_pourquoi_le_titanic_manquait_il_de_p2",
+      "title": "The White Star Line skimps on lifeboats",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Carlisle's warnings did not persuade the White Star Line. To the company, the ship was unsinkable: spending time and money on lifeboats the law did not require looked like waste. And if the Titanic got more of them, the other ships in the fleet would demand the same."
+        },
+        {
+          "type": "paragraph",
+          "text": "So Carlisle began to compromise. He first lowered his recommendation to **48 lifeboats**, then to **32**. By the time the [[Merchant Shipping Advisory Committee]], the British government's advisory body on merchant shipping, reviewed the Titanic's safety features in **May 1911**, the figure was down to 20. Carlisle warned that this was not enough. The committee gave its approval anyway. The Titanic would sail with lifeboats for less than half the people aboard her."
+        }
+      ]
+    },
+    {
+      "id": "course_292_pourquoi_le_titanic_manquait_il_de_p3",
+      "title": "The night of April 14, 1912",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On the night of **April 14**, 1912, that decision proved fatal. At 11:40 p.m., the Titanic struck an iceberg. Shortly after midnight, Captain [[Edward Smith]] ordered the crew to prepare the lifeboats. He already knew there would not be enough for everyone."
+        },
+        {
+          "type": "paragraph",
+          "text": "To avoid a panic, passengers were told that the evacuation was only a precaution. The band was allowed to keep playing to keep everyone calm. Faced with an impossible situation, it was a necessary response. But the ship sank faster than expected. Panic set in and the crew struggled to keep order. In the chaos, most lifeboats were launched **before they were full**. Some never had time to launch at all."
+        },
+        {
+          "type": "image",
+          "asset": "titanic_lifeboat_survivors_approaching_carpathia_1912",
+          "ratio": "3:2",
+          "caption": "A half-empty Titanic lifeboat approaches the Carpathia, the ship that came to the rescue, on the morning of April 15, 1912."
+        }
+      ]
+    },
+    {
+      "id": "course_292_pourquoi_le_titanic_manquait_il_de_p4",
+      "title": "712 survivors and an international convention",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The Titanic slipped beneath the waves at 2:20 a.m. Only **18 lifeboats** had been launched in time, carrying **712 survivors**. Everyone else went down with the ship. Most of the survivors were women. Faced with so few places, men of every class stepped aside to let them go. Most of the women on board survived. Most of the men did not."
+        },
+        {
+          "type": "image",
+          "asset": "new_york_times_front_page_titanic_1912",
+          "ratio": "3:4",
+          "caption": "The front page of the New York Times on April 16, 1912 announces the sinking to the world."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Titanic had the number of lifeboats the law required: nobody was ever punished for the disaster. But the sinking led to the creation of the [[SOLAS Convention]], an international agreement for the safety of life at sea. It set new safety rules so that such a tragedy could never happen again. Among them: every new ship would have to carry enough lifeboats for everyone aboard."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1894",
+              "title": "The lifeboat law",
+              "detail": "Above 10,000 tons, 16 lifeboats are enough, whatever the number of passengers."
+            },
+            {
+              "date": "May 1911",
+              "title": "The committee approves 20 lifeboats",
+              "detail": "Carlisle warns that this is not enough."
+            },
+            {
+              "date": "April 14, 1912, 11:40 p.m.",
+              "title": "Collision with the iceberg",
+              "detail": "Captain Smith has the lifeboats prepared shortly after midnight."
+            },
+            {
+              "date": "April 15, 1912, 2:20 a.m.",
+              "title": "The Titanic sinks",
+              "detail": "18 lifeboats launched, 712 survivors."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "The Titanic complied with an 1894 law outgrown by the size of ships, and her owners refused the extra lifeboats their engineer asked for: it took 1,500 deaths before lifeboats for everyone aboard became compulsory."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "T. Fitch, J. K. Layton et B. Wormstedt, On a Sea of Glass: The Life and Loss of the RMS Titanic, 3e éd., 2015, chap. 1 et 7."
+    }
+  ]
+}

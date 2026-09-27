@@ -38,7 +38,7 @@
         },
         {
           "type": "paragraph",
-          "text": "In the early **1960s**, an engineer named [[Paul Baran]] experimented with [[packet switching]]: instead of sending a message in one block, it is cut into small amounts of data that travel separately across the telecommunications network. Baran and his colleagues bet that data moving this way over telephone lines would survive a Soviet attack. Out of this work came [[ARPANET]], a program of the U.S. Department of Defense."
+          "text": "In the early **1960s**, an engineer named [[Paul Baran]] experimented with [[packet switching]]: instead of sending a message in one block, it is cut into small packets of data that travel separately across the network. Baran and his colleagues bet that data moving this way over telephone lines would survive a Soviet attack. Out of this work came [[ARPANET]], a program of the U.S. Department of Defense."
         },
         {
           "type": "image",
@@ -65,7 +65,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Through the **1970s** and early 1980s, dozens of teams around the world moved information over telephone lines and radio. The result was a multitude of small, separate networks, each in its own corner. In **1974**, a research paper shortened \"internetwork,\" a network of networks, to \"internet.\" It is the first known use of the word."
+          "text": "Through the **1970s** and early 1980s, dozens of teams around the world moved information over telephone lines and radio. The result was a multitude of small, separate networks. In **1974**, a research paper shortened \"internetwork,\" a network of networks, to \"internet.\" It is the first known use of the word."
         }
       ]
     },
@@ -76,11 +76,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Until the **mid-1980s**, these \"internets\" lived apart. In the United States, the National Science Foundation, the federal agency that funds research, poured money into supercomputers and linked them to universities and other research networks. Then, from **1989** to **1995**, American lawmakers gradually lifted the restrictions that had banned commercial hosting on the Internet."
+          "text": "Until the **mid-1980s**, these \"internets\" lived apart. In the United States, the National Science Foundation, the federal agency that funds research, poured money into supercomputers and linked them to universities. Then, from **1989** to **1995**, American lawmakers gradually lifted the restrictions that had banned commercial services on the Internet."
         },
         {
           "type": "paragraph",
-          "text": "By 1995, big companies such as **Sprint** and **AT&T** were offering dial-up connections. Subscribers plugged a modem into the phone socket and dialed a number to get online. Meanwhile, in **1990**, the British computer scientist Tim Berners-Lee launched the [[World Wide Web]] at CERN, the large European physics laboratory in Switzerland, near Geneva. The Web gathered data scattered across servers and let publishers create hyperlinks leading from one page to the next."
+          "text": "By 1995, big companies such as **Sprint** and **AT&T** were offering dial-up connections: subscribers plugged a modem into the phone socket and dialed a number. Meanwhile, in **1990**, the British computer scientist Tim Berners-Lee launched the [[World Wide Web]] at CERN, the European physics laboratory near Geneva. The Web gathered data scattered across servers and linked pages to one another with hyperlinks."
         },
         {
           "type": "image",
