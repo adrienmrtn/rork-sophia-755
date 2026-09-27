@@ -1,0 +1,137 @@
+{
+  "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert",
+  "title": "De ce a devenit Marte un deșert?",
+  "subtitle": "De la râuri la deșert",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Acum peste 3 miliarde de ani, râurile săpau văi, iar viiturile măturau suprafața lui Marte. Azi planeta e rece și uscată, dar apa ei n-a dispărut toată.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "mars_valles_marineris_hemisphere_viking_mosaic",
+    "ratio": "4:3",
+    "hook": "Râuri, delte, lacuri: planeta roșie n-a fost dintotdeauna un deșert înghețat."
+  },
+  "sections": [
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De decenii, oamenii de știință caută pe Marte urme de viață din trecut. Orice formă de viață cunoscută are nevoie de apă, iar suprafața marțiană e azi rece și extrem de uscată. Totuși, Marte n-a fost mereu așa: roverele, roboții pe roți care îi explorează solul, au găsit roci și minerale care se formează doar în prezența **apei lichide**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Văzut de sus, peisajul confirmă: foste văi de râuri, delte, funduri de lacuri secate. Multe dintre aceste forme de relief au peste **3 miliarde de ani**. NASA a găsit chiar urmele unor viituri uriașe de acum circa **3,5 miliarde de ani**. Așadar, pe Marte a curs apă. Rămâne misterul: cum a ajuns o planetă umedă acest deșert?"
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p1",
+      "title": "Era nevoie de o atmosferă groasă",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nu ajunge să ai apă, îți trebuie condiții care s-o păstreze lichidă. Iar atmosfera de azi a lui Marte e foarte subțire: [[presiunea atmosferică]] de acolo e sub **1%** din cea a Pământului. La o presiune atât de mică, apa lichidă nu rămâne stabilă la suprafață: îngheață sau se evaporă."
+        },
+        {
+          "type": "image",
+          "asset": "jezero_crater_river_delta_mars_reconnaissance_orbiter",
+          "ratio": "5:4",
+          "caption": "Hartă topografică a regiunii craterului Jezero (ESA/DLR/FU Berlin): în medalion, deltele depuse de râuri străvechi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cum își păstra atunci tânărul Marte apa? Acum miliarde de ani, atmosfera lui era mult mai groasă, iar asta îl ajuta în două feluri. O presiune mai mare ținea apa în stare lichidă. Iar gazele din aer rețineau căldura, un [[efect de seră]] care păstra suprafața mai caldă."
+        },
+        {
+          "type": "funFact",
+          "text": "Cercetătorii încă dezbat cât de cald era exact tânărul Marte. Un lucru e sigur: apa lichidă a rămas acolo destul de mult ca să sape văi și să umple lacuri."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p2",
+      "title": "Marte și-a pierdut atmosfera",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De-a lungul miliardelor de ani, o mare parte din această atmosferă a scăpat în spațiu. Primul motiv: mărimea planetei. Marte e mic, **gravitația** lui e mai slabă decât a Pământului și își reține mai greu gazele. Al doilea motiv: Marte și-a pierdut [[câmpul magnetic]], scutul invizibil care îi apăra atmosfera de particulele încărcate venite de la Soare."
+        },
+        {
+          "type": "image",
+          "asset": "maven_solar_wind_stripping_mars_atmosphere_nasa",
+          "ratio": "16:9",
+          "caption": "Orbitele sondei MAVEN, care măsoară scurgerea atmosferei marțiene, înainte și după frânarea aerodinamică din 2019 (NASA)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aceste particule formează [[vântul solar]], un flux continuu de materie încărcată care pleacă de la Soare. Fără scut, el lovește atmosfera înaltă a lui Marte și îi smulge gaze. Contează și lumina solară cea mai energetică: ea sparge moleculele de apă și alte molecule, iar **atomii ușori** eliberați scapă mai ușor de gravitația slabă a lui Marte. Pe măsură ce atmosfera se subțiază, Marte devine mai rece și mai uscat."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p3",
+      "title": "Apa n-a plecat toată",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Totuși, nu toată apa lui Marte a fugit în spațiu. O parte, urcată în atmosfera înaltă, a fost spartă acolo în atomi ușori care au scăpat. Dar restul a rămas pe loc: o parte a înghețat sub suprafață, alta a reacționat cu rocile și a ajuns închisă în **minerale**."
+        },
+        {
+          "type": "funFact",
+          "text": "Un studiu publicat în 2021 în revista *Science* estimează că între **30 și 99%** din apa lui Marte ar fi putut rămâne prinsă în mineralele rocilor sale. Un interval larg: întrebarea rămâne deschisă."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deci apa aceasta nu s-a strâns doar sub pământ, ca gheață sau lichid. Acum face parte din [[scoarța]] planetei, stratul stâncos exterior. Altfel spus, o bună parte din apa „dispărută” a lui Marte ar fi încă acolo, prizonieră în roci."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p4",
+      "title": "Uscat, dar nu fără apă",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Marte arată azi ca un deșert, dar nu e lipsit de apă. Ce a dispărut în mare parte e apa stabilă care curgea la suprafață. Cantități mari rămân înghețate în [[calotele polare]], altele stau sub sol ca **gheață îngropată**, iar altele sunt închise în mineralele scoarței."
+        },
+        {
+          "type": "image",
+          "asset": "mars_north_polar_ice_cap_mars_global_surveyor",
+          "ratio": "2:1",
+          "caption": "Hartă globală a lui Marte după sondele Viking (NASA/USGS): în medalion, cei doi poli și calotele lor de gheață."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lecția trece dincolo de Marte. Nu ajunge să ai apă ca o planetă să fie umedă și locuibilă: condițiile contează la fel de mult. O atmosferă destul de groasă ține apa lichidă și o lasă să se adune în râuri și lacuri. Marte n-a devenit deșert pentru că fiecare picătură a zburat în spațiu, ci pentru că atmosfera lui nu-și mai putea ține apa în mișcare."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marte s-a uscat pentru că atmosfera lui subțiată nu mai putea păstra apa lichidă la suprafață: o mare parte din această apă e încă acolo, înghețată la poli sau închisă în roci."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "B. M. Jakosky et al., « Mars' atmospheric history derived from upper-atmosphere measurements of 38Ar/36Ar », Science, vol. 355, n° 6332, 2017, p. 1408.",
+      "url": "https://doi.org/10.1126/science.aai7721"
+    },
+    {
+      "text": "NASA Science, « NASA: New Insights into How Mars Became Uninhabitable », 2024."
+    },
+    {
+      "text": "E. L. Scheller et al., « Long-term drying of Mars by sequestration of ocean-scale volumes of water in the crust », Science, vol. 372, n° 6537, 2021, p. 56-62.",
+      "url": "https://doi.org/10.1126/science.abc7717"
+    },
+    {
+      "text": "NASA, « NASA Mission Reveals Speed of Solar Wind Stripping Martian Atmosphere », 2015."
+    }
+  ]
+}
