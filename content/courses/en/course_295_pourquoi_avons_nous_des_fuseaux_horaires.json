@@ -1,0 +1,156 @@
+{
+  "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires",
+  "title": "Why do we have time zones?",
+  "subtitle": "1884",
+  "subject": "histoire",
+  "subcategory": "Early modern era & 19th century",
+  "description": "Until the 19th century, every town kept its own time. The railways, and then a conference held in Washington in 1884, set out to remake time itself.",
+  "author": "nathan-hewitt",
+  "hero": {
+    "image": "shepherd_gate_clock_royal_observatory_greenwich",
+    "ratio": "16:9",
+    "hook": "Before the trains, noon was never quite the same hour from one town to the next."
+  },
+  "sections": [
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For most of history, time was local. Each town set its own clocks, and noon in one place could fall several minutes before or after noon in the next. Nobody minded: people could not travel fast enough between towns for the difference to matter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Then came the railways. Once two towns were minutes apart, those gaps became a nuisance. On long routes, a train passed through stops where local time varied by whole hours. The time systems humanity had used for millennia were no longer good enough. If the trains were to run smoothly, time itself had to be remade."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p1",
+      "title": "The railways adopt Greenwich time",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Time differences between towns were a scheduling nightmare. They were also dangerous: several train accidents were caused by misaligned timetables. The companies realized they needed a shared time. In **1840**, Britain's [[Great Western Railway]] was the first to find the answer: it based its timetables on the time kept at the Royal Observatory in Greenwich, known as [[Greenwich Mean Time]]. All its trains and stations now ran on the same clock."
+        },
+        {
+          "type": "image",
+          "asset": "bristol_corn_exchange_clock_two_minute_hands",
+          "ratio": "4:3",
+          "caption": "The clock of the Corn Exchange in Bristol, with its two minute hands."
+        },
+        {
+          "type": "paragraph",
+          "text": "The change worked remarkably well. Departures and arrivals could at last be coordinated safely. Soon every British railway adopted the same system. By the **1850s**, most public clocks in the country were set to Greenwich. In **1880**, it became Britain's legal time."
+        },
+        {
+          "type": "funFact",
+          "text": "In Bristol, the Corn Exchange clock has two minute hands: one for the town's local time, the other for railway time, which is Greenwich time, ten minutes apart. A reminder of the days when the city lived by two clocks at once."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p2",
+      "title": "The United States invents time zones",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In the United States, the British recipe was not enough. Trains there covered far greater distances: when it was noon in California, the afternoon was already well under way in Washington. A single time for the whole country would make no local sense. The solution was [[time zones]]: divide the country into **five** bands, with an hour's difference between each."
+        },
+        {
+          "type": "image",
+          "asset": "william_allen_railroad_time_zones_map_1883",
+          "ratio": "4:3",
+          "caption": "The North American railroad time zones adopted on November 18, 1883, based on William F. Allen's proposal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Local trains could run on a time that made sense on the ground, and trains crossing several zones could easily convert their schedules. Several schemes were proposed; the one that won out came from [[William Allen]], an editor of railway guides. In **November 1883**, American and Canadian railroad companies officially adopted his five zones."
+        },
+        {
+          "type": "paragraph",
+          "text": "But the railways were not alone in struggling with local time. International shipping was growing fast and the telegraph had just appeared. Coordinating time had become a global problem, and it called for a global answer."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p3",
+      "title": "The Washington conference of 1884",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1884**, American President Chester A. Arthur summoned a conference in Washington to settle the question. Delegates from **25 countries**, almost all American or European, gathered at the [[International Meridian Conference]]. They decided that the Greenwich meridian would serve as the prime meridian and its time as universal time, with a 24-hour day beginning at midnight, Greenwich time."
+        },
+        {
+          "type": "image",
+          "asset": "sandford_fleming_portrait_photograph_1890s",
+          "ratio": "1:1",
+          "caption": "Sandford Fleming, the Scottish-Canadian engineer, photographed in the 1890s."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Scottish-Canadian engineer [[Sandford Fleming]] argued there for a worldwide system of time zones. He divided the globe into **24 zones** by [[longitude]]: every **15 degrees**, the time moved one hour ahead of the previous zone. Contrary to a common belief, the conference did not formally adopt his zones. Greenwich time became a universal reference, but nobody ordered it to replace local times."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p4",
+      "title": "A slow and contested adoption",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The adoption of time zones therefore came gradually. By **1900**, most European countries had adopted a time offset from Greenwich by whole hours. Imperial powers such as Britain and France imposed it on their colonies. Other countries came around for convenience, sometimes after decades: China waited until **1918**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Even once officially adopted, the new time was slow to take hold. For years it met confusion and even mockery, and local time remained common all over the world. It took decades, and tools such as public schooling and radio schedules, to erase it for good. By the **1920s**, most countries finally lived on a time pegged to Greenwich. Time had been reshaped, because the railroads had wanted it."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1840",
+              "title": "Trains on Greenwich time",
+              "detail": "The Great Western Railway bases its timetables on the Royal Observatory."
+            },
+            {
+              "date": "1880",
+              "title": "Britain's legal time",
+              "detail": "Greenwich time becomes the official time of Great Britain."
+            },
+            {
+              "date": "Nov. 1883",
+              "title": "Five North American zones",
+              "detail": "American and Canadian railroads adopt William Allen's scheme."
+            },
+            {
+              "date": "1884",
+              "title": "Washington conference",
+              "detail": "25 countries make Greenwich time the universal time."
+            },
+            {
+              "date": "1918",
+              "title": "China falls into line",
+              "detail": "China in turn adopts a time pegged to Greenwich."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Time zones were born not from a world decree but from the needs of the railways, and it took decades for them to replace local time."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. A. Johnston, The Clocks Are Telling Lies: Science, Society, and the Construction of Time, 2022, p. 24, 104 et 188, et chap. 5."
+    }
+  ]
+}

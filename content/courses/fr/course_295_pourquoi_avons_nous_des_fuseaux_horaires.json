@@ -1,0 +1,156 @@
+{
+  "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires",
+  "title": "Pourquoi avons-nous des fuseaux horaires ?",
+  "subtitle": "1884",
+  "subject": "histoire",
+  "subcategory": "Époque moderne & XIXe siècle",
+  "description": "Jusqu'au XIXe siècle, chaque ville vit à sa propre heure. Les chemins de fer, puis une conférence réunie à Washington en 1884, vont refaire le temps lui-même.",
+  "author": "nathan-hewitt",
+  "hero": {
+    "image": "shepherd_gate_clock_royal_observatory_greenwich",
+    "ratio": "16:9",
+    "hook": "Avant les trains, midi n'était jamais tout à fait la même heure d'une ville à la suivante."
+  },
+  "sections": [
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pendant la plus grande partie de l'histoire, l'heure est locale. Chaque ville règle ses horloges pour elle-même, et midi dans une cité peut tomber plusieurs minutes avant ou après midi dans la voisine. Personne ne s'en soucie : on ne se déplace pas assez vite d'une ville à l'autre pour que la différence compte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Puis viennent les chemins de fer. Quand on relie deux villes en quelques minutes, ces écarts deviennent gênants. Sur les longues distances, un train traverse des arrêts où l'heure locale varie d'heures entières. Les systèmes de temps que l'humanité utilise depuis des millénaires ne suffisent plus. Pour que les trains roulent sans accroc, il faut refaire le temps lui-même."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p1",
+      "title": "Les chemins de fer adoptent l'heure de Greenwich",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les écarts d'heure entre les villes sont un cauchemar pour les horaires. Ils sont aussi dangereux : plusieurs accidents de train sont causés par des horaires mal alignés. Les compagnies comprennent qu'il leur faut une heure commune. En **1840**, la [[Great Western Railway]], en Grande-Bretagne, trouve la parade la première : elle cale ses horaires sur l'heure de l'observatoire royal de Greenwich, l'[[heure de Greenwich]]. Tous ses trains et toutes ses gares vivent désormais à la même heure."
+        },
+        {
+          "type": "image",
+          "asset": "bristol_corn_exchange_clock_two_minute_hands",
+          "ratio": "4:3",
+          "caption": "L'horloge du Corn Exchange de Bristol et ses deux aiguilles des minutes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le changement fonctionne à merveille. Départs et arrivées se coordonnent enfin en sécurité. Bientôt, toutes les compagnies britanniques adoptent le même système. Dès les années **1850**, la plupart des horloges publiques du pays sont réglées sur Greenwich. En **1880**, cette heure devient l'heure légale de la Grande-Bretagne."
+        },
+        {
+          "type": "funFact",
+          "text": "À Bristol, l'horloge du Corn Exchange affiche deux aiguilles des minutes : l'une pour l'heure locale de la ville, l'autre pour l'heure des chemins de fer, celle de Greenwich, avec dix minutes d'écart. Un souvenir de l'époque où la ville vivait à deux heures à la fois."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p2",
+      "title": "Les États-Unis inventent les fuseaux horaires",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aux États-Unis, la recette britannique ne suffit pas. Les trains y parcourent des distances bien plus grandes : quand il est midi en Californie, l'après-midi est déjà bien entamé à Washington. Une seule heure pour tout le pays n'aurait aucun sens local. La solution, ce sont les [[fuseaux horaires]] : découper le pays en **cinq** bandes, avec une heure d'écart entre chacune."
+        },
+        {
+          "type": "image",
+          "asset": "william_allen_railroad_time_zones_map_1883",
+          "ratio": "4:3",
+          "caption": "Les fuseaux horaires ferroviaires nord-américains adoptés le 18 novembre 1883, d'après la proposition de William F. Allen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les trains locaux roulent ainsi à une heure qui a un sens sur place, et ceux qui traversent plusieurs fuseaux convertissent facilement leurs horaires. Plusieurs découpages sont proposés ; c'est celui de [[William Allen]], rédacteur de guides ferroviaires, qui l'emporte. En **novembre 1883**, les compagnies de chemin de fer américaines et canadiennes adoptent officiellement ses cinq fuseaux."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mais les chemins de fer ne sont pas seuls à souffrir de l'heure locale. Le transport maritime international se développe vite et le télégraphe vient d'apparaître. La coordination du temps est devenue un problème mondial, qui appelle une réponse mondiale."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p3",
+      "title": "La conférence de Washington de 1884",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1884**, le président américain Chester A. Arthur convoque une conférence à Washington pour régler la question. Les représentants de **25 pays**, presque tous américains ou européens, se réunissent à la [[Conférence internationale du méridien]]. Ils décident que le méridien de Greenwich servira de méridien d'origine et son heure de temps universel, avec une journée de 24 heures qui commence à minuit, heure de Greenwich."
+        },
+        {
+          "type": "image",
+          "asset": "sandford_fleming_portrait_photograph_1890s",
+          "ratio": "1:1",
+          "caption": "Sandford Fleming, ingénieur écossais-canadien, photographié dans les années 1890."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'ingénieur écossais-canadien [[Sandford Fleming]] y défend un système mondial de fuseaux horaires. Il découpe le globe en **24 zones** selon la [[longitude]] : tous les **15 degrés**, l'heure avance d'une heure par rapport à la zone précédente. Contrairement à une idée répandue, la conférence n'adopte pas officiellement ses fuseaux. L'heure de Greenwich devient une référence universelle, mais personne n'ordonne qu'elle remplace les heures locales."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p4",
+      "title": "Une adoption lente et contestée",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'adoption des fuseaux horaires se fait donc peu à peu. En **1900**, la plupart des pays européens ont adopté une heure décalée de Greenwich d'un nombre entier d'heures. Les puissances impériales comme la Grande-Bretagne et la France l'imposent à leurs colonies. D'autres pays s'y rallient par commodité, parfois après des décennies : la Chine attend **1918**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Même officiellement adoptée, la nouvelle heure peine à entrer dans les habitudes. Pendant des années, elle suscite confusion et moqueries, et l'heure locale reste courante un peu partout dans le monde. Il faut des décennies, et des outils comme l'école publique ou les grilles de programmes de la radio, pour l'effacer tout à fait. Dans les années **1920**, la plupart des pays vivent enfin à une heure calée sur Greenwich. Le temps a été refait, parce que les chemins de fer l'avaient voulu."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1840",
+              "title": "Les trains à l'heure de Greenwich",
+              "detail": "La Great Western Railway cale ses horaires sur l'observatoire royal."
+            },
+            {
+              "date": "1880",
+              "title": "Heure légale britannique",
+              "detail": "L'heure de Greenwich devient l'heure officielle de la Grande-Bretagne."
+            },
+            {
+              "date": "Nov. 1883",
+              "title": "Cinq fuseaux nord-américains",
+              "detail": "Les compagnies américaines et canadiennes adoptent le découpage de William Allen."
+            },
+            {
+              "date": "1884",
+              "title": "Conférence de Washington",
+              "detail": "25 pays font de l'heure de Greenwich le temps universel."
+            },
+            {
+              "date": "1918",
+              "title": "La Chine s'aligne",
+              "detail": "La Chine adopte à son tour une heure calée sur Greenwich."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Les fuseaux horaires ne sont pas nés d'un décret mondial mais des besoins des chemins de fer, et il a fallu des décennies pour qu'ils remplacent l'heure locale."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. A. Johnston, The Clocks Are Telling Lies: Science, Society, and the Construction of Time, 2022, p. 24, 104 et 188, et chap. 5."
+    }
+  ]
+}
