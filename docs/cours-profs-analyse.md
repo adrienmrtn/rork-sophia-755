@@ -159,3 +159,46 @@ Une fois le CSV en main, l'ordre de travail : (a) parseur CSV → JSON V2 brouil
 (b) réécriture éditoriale à la charte (typos, tirets, `[[Terme]]`, placement des images et des
 « Le savais-tu ? », takeaway), (c) images et crédits, (d) glossaire, (e) `add_course.py` et
 catalogues, (f) modèle auteur/sources + rendu iOS et Android, (g) traductions, (h) exports.
+
+---
+
+## 6. Les fichiers reçus le 27/09 (état des lieux)
+
+Trois exports de la plateforme auteurs (projet Supabase distinct de celui de l'app).
+
+**`profs_export.csv`** : 26 fiches, dont 18 signent des cours. Colonnes utiles : `display_name`
+(à préférer à `full_name` : « Kate Lewis » publie sous « Kate Waddams », « Mark Hoffman » sous
+« Mark N. Hoffman »), `byline` (la ligne de pedigree voulue, mais vide ou réduite au nom pour
+3 profs : repli sur `title`), `title`, `institution`, `formation`, `country`, `bio` (5) et
+`short_bio` (6), `orcid`, `personal_site`, `scholar_url`, `photo_url` (9 photos, URLs signées
+valables 7 jours, 400 px à 2 500 px, un fichier WebP), `agreement`. Tout est en anglais.
+Deux auteurs de cours n'ont pas signé l'accord : Christofer Bolanos Alvarado (6 cours) et
+Grigory Mechetin (4 cours). Deux fiches de test à exclure (« Test Author », « E2E Test Author »).
+
+**`cours_valides.csv`** : 85 cours, tous `accepted`, aucun `published_at`. Répartition :
+Histoire 26, Sciences 22, Comprendre le monde actuel 17, Littérature 7, Mythologie 7, Art 6.
+Les 18 profs signent 2 à 6 cours chacun. `language` vaut `fr` partout mais **les 85 textes sont
+en anglais**, titres compris. `full_text` contient tout, dans cet ordre : titre, sous-titre
+(68 cours en ont un), ligne « Prof · Lnn · Matière » (Lnn = numéro de lot par prof, sans
+usage), 5 blocs `SCREEN n — Titre` de 1 à 4 paragraphes, un bloc `DID YOU KNOW` (44 cours,
+1 à 4 anecdotes ; chez deux profs les anecdotes sont intercalées après chaque écran), un bloc
+`SOURCES` (62 cours, 1 à 17 lignes, formats hétérogènes : « affirmation — référence URL »,
+« libellé — URL », « Screen n — référence », URL nue, DOI), puis « Total: n words ».
+Longueur : 466 à 1 756 mots, médiane 767 (cible de la charte : 400 à 700). Un seul cours a un
+« À retenir », deux mentionnent une image, aucun n'a de `[[Terme]]`, 51 utilisent le gras
+`**…**`, tous contiennent des tirets cadratins. Aucun titre ne correspond à un cours existant,
+mais six recoupent un sujet déjà traité (État-providence, soft power, naissance d'Internet,
+Joconde, nourrir 8 milliards, vieillissement) : à trancher, remplacement ou ajout.
+
+**`cours_pages.csv`** : les mêmes 85 cours déjà découpés en 5 pages (425 lignes) avec
+`page_title`, `content` et les `sources` du cours répétées sur chaque ligne. Contenu identique
+aux écrans de `full_text` pour 82 cours sur 85 (les 3 autres ont des anecdotes ou un
+« À retenir » mêlés au texte de page). Il ne contient **pas** les `DID YOU KNOW` : il sert de
+squelette propre, `full_text` reste nécessaire pour les anecdotes.
+
+**Ce que le CSV n'apporte pas et qu'il faudra produire** : la version française (source de
+vérité de l'app), la réduction de longueur, le titre en question, l'accroche (`hook`) et la
+description de carte, la sous-catégorie, 3 à 8 termes de glossaire et leurs fiches, un
+« À retenir » par cours, le placement des anecdotes, les images (hero + 1 à 2 par cours, soit
+environ 250 images à sourcer et créditer ; aucune fournie), un quiz si on en veut un, les
+sources normalisées, puis les 25 traductions.
