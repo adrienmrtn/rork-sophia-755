@@ -18,7 +18,15 @@
 #     apply    products (App Store + Play Store), attachment to `premium`,
 #              offerings and packages of the manifest.
 #
-# Experiments and audiences have no API: RevenueCat dashboard, plan § 6.
+#   target = revenuecat-experiments
+#     plan     previews the 5 country audiences (iOS only) and lists the 5 draft
+#              experiments `apply` would create. Writes nothing.
+#     apply    creates the missing audiences and the missing experiments, as
+#              drafts. Never starts one: that is a click in the dashboard on the
+#              day Apple approves the products.
+#
+# Extra key permissions for that target: audiences:audiences:read_write and
+# project_configuration:experiments:read_write.
 name: Pricing tests
 
 on:
@@ -31,6 +39,7 @@ on:
         options:
           - appstore
           - revenuecat
+          - revenuecat-experiments
       action:
         description: "What to do (plan writes nothing)"
         type: choice
@@ -111,6 +120,8 @@ jobs:
             appstore/submit)   set -- scripts/appstore_subscriptions.py submit ;;
             revenuecat/plan)   set -- scripts/revenuecat_pricing_setup.py plan ;;
             revenuecat/apply)  set -- scripts/revenuecat_pricing_setup.py apply ;;
+            revenuecat-experiments/plan)  set -- scripts/revenuecat_experiments.py plan ;;
+            revenuecat-experiments/apply) set -- scripts/revenuecat_experiments.py apply ;;
             *) echo "unsupported: $TARGET / $ACTION" >&2; exit 1 ;;
           esac
           {
