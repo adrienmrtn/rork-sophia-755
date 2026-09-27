@@ -60,9 +60,9 @@ code iOS et Android. Coche les cases des actions que tu valides.
 6. Android : chaque package `$rc_annual` contient aussi `sophia_pro:monthly` avec le critère
    `google_sdk_lt_6`. C'est volontaire (compatibilité SDK Google < 6), et sans effet : 100 % des
    abonnés Android sont sur le SDK 9.26.
-7. Offre de rétention `retention_14_99` (offre promotionnelle App Store lue par
-   `StoreViewModel.retentionOffer`) : invisible via le MCP. L'annuel iOS `Sophia_yearly` est bien
-   APPROVED avec un essai de 3 jours. À confirmer dans App Store Connect.
+7. Offre de rétention `retention_14_99` : **retirée de l'app le 27/09** (écran « Sure you want to
+   leave? », déclenchement au lancement et entrée dans les réglages supprimés) ; l'offre
+   promotionnelle peut rester côté App Store Connect sans effet.
 8. Aucun webhook RevenueCat : Supabase ignore le statut Premium, tout repose sur `CustomerInfo`
    côté client.
 9. La clé API utilisée pour cet audit a transité par le chat : à régénérer une fois stockée dans
@@ -79,7 +79,7 @@ code iOS et Android. Coche les cases des actions que tu valides.
 - [ ] Dashboard : rattacher `Sophia_yearly_5999` et `Sophia_monthly_notrial` à `premium`, ou les
   archiver avec leurs offerings de test.
 - [ ] Dashboard : archiver les produits iOS fantômes du constat 3 après vérification dans App Store Connect.
-- [ ] App Store Connect : confirmer l'offre promotionnelle `retention_14_99` sur `Sophia_yearly`.
+- [x] ~~App Store Connect : confirmer l'offre promotionnelle `retention_14_99` sur `Sophia_yearly`.~~ Sans objet : écran de rétention retiré le 27/09.
 - [ ] Code iOS : retirer les `import RevenueCatUI` morts de `ContentView.swift` et `CourseView.swift`
   (aucun `PaywallView` ni Customer Center utilisé) et, si plus rien ne l'utilise, le produit
   `RevenueCatUI` du projet Xcode.

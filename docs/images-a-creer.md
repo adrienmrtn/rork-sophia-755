@@ -28,8 +28,7 @@ qu'ils montrent réellement : `wienerisches_diarium_1725_vampire_report` est dev
 `diaphragm_lungs_glottis_anatomy_diagram` est devenu `mouse_diaphragm_muscle_fibres_microscopy`
 (microscopie). L'image « Tokyo Tower » fournie pour `eiffel_tower_radio_antenna_1914_military` a
 été remplacée par la gravure « Antenne tour Eiffel 1914 » (Wikimedia Commons, domaine public).
-Les trois couvertures n'ont pas de crédit renseigné : à compléter dans `image_credits.json`
-si elles ne sont pas des créations maison. Reste l'upload Supabase pour Android.
+Les trois couvertures sont des créations maison, sans entrée de crédit. Reste l'upload Supabase pour Android.
 
 
 ### course_241 · Pourquoi voulait-on démolir la tour Eiffel ?
@@ -68,7 +67,8 @@ la légende FR et EN a été réécrite pour décrire ce qu'elles montrent, et *
 avec le passage** : leur bloc a été retiré du cours et le fichier supprimé du dépôt. Les ratios des blocs
 ont été alignés sur les proportions réelles des fichiers ; les couvertures (illustrations carrées) sont en
 4:3 comme celles du pilote. Les crédits des 174 illustrations conservées sont dans `image_credits.json` ;
-**les 70 couvertures n'ont pas encore de crédit** (créations maison ?).
+les 70 couvertures sont des créations maison, sans entrée de crédit, comme les 240 couvertures
+existantes.
 
 ### 23 emplacements à pourvoir (le nom et le rôle restent ceux du plan)
 

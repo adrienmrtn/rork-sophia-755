@@ -22,7 +22,6 @@ struct SettingsView: View {
     @State private var hapticTrigger: Int = 0
     /// Set only by the developer section, which is itself behind `#if DEBUG`.
     @State private var debugPaywall: SophiaPaywallContext? = nil
-    @State private var showRetentionPaywall: Bool = false
 
     private static let destructive = DS.danger
     private static let destructiveTint = DS.dangerTint
@@ -127,19 +126,6 @@ struct SettingsView: View {
             .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaSheetChrome() }
             .sheet(isPresented: $showFeedback) { FeedbackView(isPremium: store.isPremium) }
             .sheet(isPresented: $showAmbassador) { AmbassadorView() }
-            .sheet(isPresented: $showRetentionPaywall) {
-                SophiaPaywallView(
-                    context: .retention,
-                    store: store,
-                    retentionSummary: RetentionSummary.current(
-                        store: store,
-                        progressManager: progressManager
-                    ),
-                    onContinueToCancel: { Self.openSubscriptionSettings() },
-                    onPurchased: { showRetentionPaywall = false },
-                    onRestored: { showRetentionPaywall = false }
-                )
-            }
         }
         .sophiaColorScheme()
     }
@@ -321,12 +307,8 @@ struct SettingsView: View {
         }
     }
 
-    /// Subscription management for someone who already pays.
-    ///
-    /// The app had no such row at all: the only way out was Settings › Subscriptions,
-    /// where nothing of ours is ever seen. Cancelling still happens there — only Apple
-    /// can cancel a subscription — but the offer now comes first, which is the whole
-    /// point of the detour.
+    /// One row that opens Apple's subscription settings, the only place a subscription
+    /// can be changed or cancelled.
     private var subscriptionSection: some View {
         section(languageManager.text("settings.section.subscription")) {
             groupedCard {
@@ -336,7 +318,7 @@ struct SettingsView: View {
                     subtitle: languageManager.text("settings.subscription.manage.subtitle")
                 ) {
                     hapticTrigger += 1
-                    showRetentionPaywall = true
+                    Self.openSubscriptionSettings()
                 }
             }
         }
