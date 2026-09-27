@@ -1,106 +1,111 @@
 {
   "id": "course_149_la_joconde",
-  "title": "Co sprawiło, że „Mona Lisa” jest tak sławna?",
-  "subtitle": "1503-1519",
+  "title": "Czy Mona Lisa naprawdę była ważna dla Leonarda?",
+  "subtitle": "1503",
   "subject": "art",
   "subcategory": "Iconic works",
-  "description": "Namalowana przez **Leonarda da Vinci** między **1503** a **1519**, *Mona Lisa* stała się absolutną ikoną Luwru. Technika, zagadkowy uśmiech i kradzież w **1911**, która wszystko przestawiła.",
+  "description": "To najsłynniejszy obraz na świecie. A jednak w 1503 roku jego własny autor miał ciekawsze zajęcia niż portret żony kupca.",
+  "author": "dusan-nikolic",
   "hero": {
     "image": "la_joconde",
     "ratio": "16:9",
-    "hook": "Uśmiech, kradzież, mit: jak jeden portret został najsłynniejszym dziełem świata."
+    "hook": "Najczęściej oglądany obraz na świecie mógł być dla Leonarda pracą poboczną."
   },
   "sections": [
     {
       "id": "course_149_la_joconde_intro",
-      "title": "Wprowadzenie",
+      "title": "Wstęp",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "*Mona Lisa*, malowana między **1503** a **1519** przez **Leonarda da Vinci**, jest najczęściej odwiedzanym obrazem świata. Wystawiona w **Luwrze**, fascynuje techniką tak samo jak historią. To nie tylko ładny portret. To mit złożony ze sztuki, nauki i jednego głośnego przestępstwa."
+          "text": "Jak na jeden z najsłynniejszych obrazów świata, o *Monie Lisie* wiemy bardzo mało pewnych rzeczy. Historycy sztuki zgadzają się co do najważniejszego: Leonardo da Vinci namalował ją we Florencji między **1503 a 1506** rokiem. W **1517** roku zabrał ją ze sobą do Francji, a obraz ostatecznie trafił do kolekcji, jaką posiadał król [[Franciszek I]]."
         },
         {
           "type": "paragraph",
-          "text": "Dlaczego ta twarz, a nie inna? Bo Leonardo zebrał w niej nowości, a spektakularna kradzież zrobiła z niej sławę na całą planetę."
+          "text": "Historyczną pustkę wypełniły legendy. O obrazie mówi się jak o kobiecie: „ona”. Jej półuśmiech uchodzi za tajemniczy. Po kradzieży w **1911** roku podważano nawet jego autentyczność. Wszystkie te historie zbudowały jego sławę, ale przesłoniły kontekst. A przecież w czasach, gdy Leonardo go malował, ten obraz mógł nie mieć dla niego żadnego znaczenia."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p1",
-      "title": "Leonardo i sfumato",
+      "title": "Kim jest Mona Lisa?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Portret startuje we Florencji około **1503**. Zamawia go kupiec **Francesco del Giocondo**. Modelem ma być jego żona, [[Lisy Gherardini]]. Leonardo jednak obrazu nie oddaje. Trzyma go, poprawia przez lata i zabiera do Francji, gdzie umiera w **1519**."
+          "text": "Historycy sztuki są w większości zgodni, że modelką była [[Lisa Gherardini]], żona **Francesca del Giocondo**, kupca i drobnego urzędnika we florenckim rządzie. Stąd druga nazwa obrazu: „Gioconda”. To ustalenie opiera się na biografii Leonarda, którą [[Giorgio Vasari]] wydał w **1550**, a potem w **1568** roku w swoich *Żywotach najsławniejszych malarzy, rzeźbiarzy i architektów*."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_leonardo_da_vinci_louvre_painting",
-          "ratio": "4:3",
-          "caption": "Mona Lisa w Luwrze: mała topolowa deska, która została ikoną świata"
+          "asset": "vasari_lives_of_the_artists_1568_title_page",
+          "ratio": "3:4",
+          "caption": "Żywoty Vasariego, florenckie wydanie z 1568 roku: tekst, który nadaje modelce imię."
         },
         {
           "type": "paragraph",
-          "text": "Jego podpisem jest [[Leonardiańskie sfumato]]: werniksy, bardzo cienkie warstwy, które zmazują kontury. Koniec twardej linii. Twarz topi się w powietrzu. Wchodzi też [[Perspektywa powietrzna]]: daleki pejzaż błękitnieje i mięknie, jak w prawdziwym wzroku."
+          "text": "Dlaczego Francesco zamówił ten portret? Nie wiadomo. Leonardo zabrał się do pracy na początku **1503** roku. Dalszy ciąg wciąż budzi spory: zdaniem historyków relacja Vasariego to literacki wymysł biografa, który zapełnia luki piękną opowieścią. W połowie **1506** roku Leonardo wyjechał z Florencji do Mediolanu w poszukiwaniu lepszej posady. Niedokończony portret pojechał razem z nim."
+        },
+        {
+          "type": "funFact",
+          "text": "Według Vasariego Leonardo wynajmował muzyków i błaznów, żeby zabawiali modelkę podczas pozowania. Historycy uważają to za wymysł biografa, ale to właśnie ta opowieść dała początek mitowi „uśmiechu Mony Lisy”."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p2",
-      "title": "Uśmiech, który igra z okiem",
+      "title": "Anghiari: bardziej prestiżowe zamówienie",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Słynny uśmiech to nie tylko namalowana emocja. Igra tu [[Widzenie peryferyjne]]. Gdy wbijasz wzrok w oczy modelki, brzegi siatkówki widzą usta w miękkich cieniach: uśmiech wydaje się obecny. Gdy patrzysz prosto na usta, słabnie."
+          "text": "W październiku **1503** roku florencki rząd zamówił u Leonarda malowidło ścienne, znane dziś jako [[Bitwa pod Anghiari]], do gmachu [[Palazzo Vecchio]], siedziby Republiki Florenckiej. Dzieło miało uczcić zwycięstwo Florencji nad Mediolanem w **1440** roku. W renesansie scena historyczna była warta znacznie więcej niż portret. Obok tematów religijnych, mitologicznych i alegorycznych uchodziła za najwyższą formę sztuki."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_smile_detail_close_up",
-          "ratio": "1:1",
-          "caption": "Im mocniej go wbijasz, tym bardziej uśmiech zdaje się uchodzić"
-        },
-        {
-          "type": "funFact",
-          "text": "Leonardo, malarz i uczony zarazem, badał optykę. Tajemnica uśmiechu opiera się po części na precyzyjnej wiedzy o tym, jak ludzkie oko czyta cienie."
+          "asset": "rubens_copy_battle_of_anghiari_louvre_drawing",
+          "ratio": "16:9",
+          "caption": "Kopia centralnej walki wykonana przez Rubensa: jedyny ślad wielkiego, niedokończonego malowidła w Palazzo Vecchio."
         },
         {
           "type": "paragraph",
-          "text": "Skutek: twarz zdaje się żywa, zmienna, prawie świadoma naszego spojrzenia."
+          "text": "Przy wielkim zamówieniu publicznym prywatny portret żony drobnego urzędnika niewiele znaczył. Już od grudnia **1503** roku Leonardo poświęcał coraz więcej czasu na przygotowanie wielkiej kompozycji. Prestiż i lepsza zapłata: Mona Lisa mogła poczekać. Pod koniec drugiego pobytu Leonarda we Florencji portret wciąż nie był skończony. *Bitwa pod Anghiari* również: zostały po niej tylko szkice przygotowawcze i ich kopie."
+        },
+        {
+          "type": "funFact",
+          "text": "Możliwe, że gdy Leonardo wyjeżdżał do Mediolanu w 1506 roku, niedokończony był już tylko pejzaż w tle."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p3",
-      "title": "1911: kradzież, która wymyśla sławę",
+      "title": "Jak powstała ikona",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W XIX wieku *Mona Lisa* jest podziwiana, ale jeszcze nie dziełem numer jeden Luwru. Wszystko wali się **21 sierpnia 1911**. Działa [[Vincenzo Peruggi]], włoski szklarz muzeum: to [[Kradzież Mony Lisy (1911)]]. Chowa deskę pod fartuch i wychodzi spokojnie."
+          "text": "Leonardo zmarł **2 maja 1519** roku w Amboise we Francji. *Mona Lisa* nigdy nie trafiła do rodziny Giocondo. Po rewolucji francuskiej kolekcja królewska stała się publiczna, a obraz trafił do **Luwru**. Od początku XIX wieku jego uśmiech opisywano na tysiące sposobów, od boskiego po zmysłowy."
         },
         {
           "type": "image",
           "asset": "mona_lisa_stolen_1911_newspaper_headline",
           "ratio": "4:3",
-          "caption": "1911: nieobecność obrazu robi pierwsze strony i stwarza gwiazdę"
+          "caption": "Pierwsza strona dziennika Excelsior ze stycznia 1914 roku: powrót Mony Lisy po kradzieży z 1911 roku."
         },
         {
           "type": "paragraph",
-          "text": "Śledztwo robi skandal. Aresztowanie [[Guillaume’a Apollinaire’a]] trwa chwilę. Przesłuchują [[Pabla Picassa]]. Gdy obraz wraca w **1913**, nie jest już tylko malowidłem. Jest celebrytą."
+          "text": "Punktem zwrotnym była kradzież obrazu z muzeum w **1911** roku. Gazety zrobiły z Mony Lisy światową sensację. Od tamtej pory prasa popularna i powieści regularnie podważają autentyczność dzieła i tożsamość modelki, bez żadnych podstaw w rzetelnej analizie historycznej. Obraz stał się osią coraz liczniejszych opowieści, które krążą do dziś."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p4",
-      "title": "Ikona pod szkłem",
+      "title": "Obraz, który przerósł swojego twórcę",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dziś, malowana na topoli, żyje za osłoną: [[Szkło kuloodporne]] stoi w klimatyzowanej gablocie. Ataki kwasem, rzuty przedmiotami: ochrona stała się konieczna. A parodie, od Duchampa po internet, pokazują, że obraz stał się uniwersalnym językiem."
+          "text": "Ponad **500 lat** po rozpoczęciu portretu Lisa del Giocondo przyciąga bardziej niż kiedykolwiek. Obraz, umieszczony w Luwrze za pancerną szybą, jest odcięty od swojego kontekstu historycznego. Uwolniony od niego, zyskał status uniwersalnej ikony. Ten status ma swoją cenę: w czasach współczesnych nie podjęto już żadnej restauracji."
         },
         {
           "type": "timeline",
@@ -108,30 +113,47 @@
             {
               "date": "1503",
               "title": "Początek portretu",
-              "detail": "Leonardo zaczyna Monę Lisę we Florencji."
+              "detail": "Leonardo zaczyna portret Lisy Gherardini we Florencji."
+            },
+            {
+              "date": "październik 1503",
+              "title": "Zamówienie na Anghiari",
+              "detail": "Florencja powierza mu wielkie malowidło ścienne do Palazzo Vecchio."
+            },
+            {
+              "date": "1506",
+              "title": "Wyjazd do Mediolanu",
+              "detail": "Leonardo opuszcza Florencję z niedokończonym portretem pod pachą."
             },
             {
               "date": "1519",
               "title": "Śmierć Leonarda",
-              "detail": "Obraz zostaje we Francji."
+              "detail": "W Amboise, 2 maja. Obraz zostaje we Francji."
             },
             {
               "date": "1911",
               "title": "Kradzież",
-              "detail": "Peruggia robi z dzieła światowy mit mediów."
-            },
-            {
-              "date": "1913",
-              "title": "Powrót",
-              "detail": "Obraz wraca do Luwru jako gwiazda świata."
+              "detail": "Prasa robi z Mony Lisy światową sensację."
             }
           ]
         },
         {
+          "type": "paragraph",
+          "text": "Usunięcie pożółkłej przez wieki warstwy ochronnej, jaką na obrazie olejnym jest [[werniks]], groziłoby uszkodzeniem dzieła. Nawet gdyby restauracja się udała, istnieje obawa, że *Mona Lisa* straciłaby swoją moc przyciągania. Oryginalna technika i kolory Leonarda liczą się mniej niż sam wizerunek. Obraz, w który wpisano niezliczone opowieści, przerósł swojego twórcę i historię sztuki."
+        },
+        {
           "type": "takeaway",
-          "text": "*Mona Lisa* zawdzięcza sławę geniuszowi Leonarda (sfumato, optyczny uśmiech) tak samo jak historii: kradzież z 1911 zamieniła podziwiane arcydzieło w ikonę planety."
+          "text": "Odłożona na bok w 1503 roku dla bardziej prestiżowego zamówienia, *Mona Lisa* zawdzięcza status ikony pięciu wiekom legend i jednej kradzieży, o wiele bardziej niż randze, jaką nadawał jej Leonardo."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. Campbell, Leonardo da Vinci: An Untraceable Life, Princeton University Press, 2025, p. 43-45."
+    },
+    {
+      "text": "F. Zöllner, « Leonardo's Portrait of Mona Lisa del Giocondo », Gazette des Beaux-Arts, vol. 121, 1993, p. 115-138."
     }
   ]
 }

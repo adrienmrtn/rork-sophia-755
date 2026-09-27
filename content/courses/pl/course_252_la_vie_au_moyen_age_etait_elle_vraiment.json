@@ -1,0 +1,121 @@
+{
+  "id": "course_252_la_vie_au_moyen_age_etait_elle_vraiment",
+  "title": "Czy w średniowieczu żyło się aż tak nędznie?",
+  "subtitle": "Ani krótko, ani brudno",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Wyobrażamy sobie chłopów, którzy umierali przed trzydziestką, brudni i żywieni suchym chlebem. Akta, rachunki domowe i szkielety malują zupełnie inny obraz.",
+  "author": "benjamin-campbell",
+  "hero": {
+    "image": "tres_riches_heures_berry_june_haymaking",
+    "ratio": "4:3",
+    "hook": "Krótkie życie, brudne ciała, puste żołądki: akta i szkielety opowiadają inną historię."
+  },
+  "sections": [
+    {
+      "id": "course_252_la_vie_au_moyen_age_etait_elle_vraiment_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Średniowiecze ma złą opinię: wyobrażamy sobie ludzi, którzy żyli krótko, źle i w brudzie. Pewna liczba zdaje się to potwierdzać: średnia długość życia wynosiła około **30 lat**. To jednak złudzenie. Średnią zaniżała [[śmiertelność niemowląt]], bo bardzo wiele dzieci umierało we wczesnym wieku. Nie znaczy to, że większość ludzi umierała przed trzydziestką."
+        },
+        {
+          "type": "paragraph",
+          "text": "Żeby zrozumieć życie sprzed ponad **1.000 lat**, historycy nie poprzestają już na takich statystykach. Czytają akta sądowe i rachunki domowe, rozkopują dawne domostwa i badają szkielety. Te źródła mówią, jak ludzie pracowali, co jedli i jak umierali. Co zdradzają o codzienności średniowiecznego chłopa albo mieszczanina?"
+        }
+      ]
+    },
+    {
+      "id": "course_252_la_vie_au_moyen_age_etait_elle_vraiment_p1",
+      "title": "Praca w rytmie pór roku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Chłopi ciężko pracowali, ale nie znali tygodnia od poniedziałku do piątku. Praca w polu szła za **porami roku** i światłem dnia. Siew i żniwa oznaczały długie, wyczerpujące dni. Zima była za to znacznie spokojniejsza i wiele zajęć czekało na powrót ładnej pogody."
+        },
+        {
+          "type": "image",
+          "asset": "luttrell_psalter_ploughing_scene_14th_century",
+          "ratio": "3:2",
+          "caption": "Replika Psałterza z Luttrell (Anglia, ok. 1325-1340): tekst psalmów, a na marginesach mnóstwo małych postaci."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rok wyznaczał też [[kalendarz liturgiczny]], czyli kalendarz świąt kościelnych. Niedziele i święta często przerywały zwykłą pracę: niektóre zajęcia były wtedy wstrzymane albo zakazane. Te przerwy nie robiły z chłopów uprzywilejowanych. Rolnictwo pozostawało harówką, a jeden nieudany zbiór mógł zagrozić całemu domowi. Ale obraz ludzi, którzy przez cały rok harują od świtu do zmierzchu, pomija rzecz najważniejszą: praca w średniowieczu miała swój rytm, a ten rytm zmieniał się z miesiąca na miesiąc."
+        }
+      ]
+    },
+    {
+      "id": "course_252_la_vie_au_moyen_age_etait_elle_vraiment_p2",
+      "title": "Chleb, ale nie tylko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U większości chłopów zwykły posiłek to był chleb i [[polewka]], gęsta papka ze zboża, często wzbogacona bobem, warzywami z ogrodu i resztkami mięsa. W domu był też ser, jajka i nabiał, czyli cenne źródła białka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mięso jadano, ale to, jak często, zależało od zamożności, regionu i pory roku. **Ryby** żywiły wiele społeczności, a zakonserwowane warzywa urozmaicały jadłospis, gdy brakowało świeżych. Piwo i inne sfermentowane napoje były na porządku dziennym. Obraz chłopów, którzy przeżywali o chlebie i piwie, jest więc przestarzały: jedli to, co mogli wyhodować, przechować albo kupić. Ich jedzenie było praktyczne i sezonowe, a nie monotonne."
+        }
+      ]
+    },
+    {
+      "id": "course_252_la_vie_au_moyen_age_etait_elle_vraiment_p3",
+      "title": "Mycie bez łazienki",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kolejny współczesny stereotyp: ludzie, którzy prawie się nie myli. Choć nie mieli rur ani łazienek, mężczyźni i kobiety średniowiecza dbali o czystość. **Mydłem** myto ciało i prano bieliznę, a większość ludzi myła się w domu wodą ze studni albo z innego źródła."
+        },
+        {
+          "type": "image",
+          "asset": "medieval_public_bathhouse_illumination_15th_century",
+          "ratio": "1:1",
+          "caption": "Łaźnia publiczna w rękopisie Waleriusza Maksymusa, ok. 1470."
+        },
+        {
+          "type": "paragraph",
+          "text": "W niektórych miastach [[łaźnie publiczne]] były wręcz czymś zwyczajnym. Za to zbiorowa [[sanitacja]] wyglądała znacznie gorzej niż dziś: przeludnione miasta ledwo radziły sobie z odpadami, a woda często była skażona. Higiena osobista i czystość miasta to jednak dwie różne sprawy. Ludzie średniowiecza żyli obok brudu, ale wcale nie godzili się na to, by być brudnymi."
+        },
+        {
+          "type": "funFact",
+          "text": "W niektórych średniowiecznych miastach łaźni publicznych było tak dużo, że władze wydawały dla nich przepisy i pobierały od nich podatek."
+        }
+      ]
+    },
+    {
+      "id": "course_252_la_vie_au_moyen_age_etait_elle_vraiment_p4",
+      "title": "Tysiąc lat, tysiąc żyć",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nie było jednego średniowiecznego życia. Arystokrata w kamiennym zamku, chłop na swojej ziemi i kupiec w gwarnym mieście nie mieli ani tego samego stołu, ani tej samej pracy, ani tego samego zdrowia. Miejsce i **pozycja społeczna** decydowały niemal o wszystkim, od jedzenia po zdrowie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Równie ważny był czas. Życie, jakie znało [[wczesne średniowiecze]], czyli pierwsze wieki po upadku Rzymu, w niczym nie przypominało życia w **XIV wieku**, a warunki w Anglii różniły się od tych na kontynencie. Epoka trwała około **1.000 lat** i przeszła ogromne zmiany techniczne, społeczne i polityczne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Średniowiecze nie było więc epoką nieustannego głodu, brudu i nędzy. To długi okres, w którym ludzie żyli bardzo różnie. Niektórzy wiedli dość wygodne życie w gospodarstwie albo w mieście, inni znali biedę, choroby i wczesną śmierć. To, gdzie i kiedy się żyło, często znaczyło więcej niż etykieta „średniowieczny”."
+        },
+        {
+          "type": "takeaway",
+          "text": "Trzydzieści lat życia, brud i suchy chleb to stereotypy: średniowieczna codzienność zależała od miejsca, pozycji i stulecia dużo bardziej niż od słowa „średniowiecze”."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "N. Müller-Scheeßel, C. Rinne et K. Fuchs, « Adult mortality in the metropolis of London 1100-1850: A Bayesian view based on osteological data », American Journal of Biological Anthropology, vol. 185, n° 3, 2024, e25025.",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/ajpa.25025"
+    }
+  ]
+}
