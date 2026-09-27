@@ -35,11 +35,11 @@ enum SophiaPaywallContext: String, Identifiable {
 
 /// Dispatcher that renders the appropriate native paywall for a given context.
 ///
-/// - `.offreDiscount` → `SophiaDiscountPaywall` (flash sale, `offre_discount`, 19,99 €/an).
+/// - `.offreDiscount` → `SophiaDiscountPaywall` (flash sale on the `offre_discount` offering).
 /// - `.entrainement` → `SophiaTrainingPaywall` (sells the spaced-repetition training method).
 /// - `.quizz` → `SophiaQuizPaywall` (auto-playing quiz demo, FAQ, activate-trial CTA).
 /// - `.debloquerCours` → `SophiaCourseUnlockPaywall` (rating, 6-courses/day stat, reviews, countdown).
-/// - `.finOnboarding` → `SophiaStandardPaywall` (single annual plan, 39,99 €/an, 3-day trial).
+/// - `.finOnboarding` → `SophiaStandardPaywall` (single annual plan, price and trial from the store).
 /// - `.retention` → `SophiaRetentionPaywall` (cancellation save, Apple promotional offer).
 struct SophiaPaywallView: View {
     let context: SophiaPaywallContext

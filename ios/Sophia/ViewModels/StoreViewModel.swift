@@ -306,12 +306,12 @@ class StoreViewModel {
 
     func discountPriceDisplay(language: AppLanguage) -> DiscountPriceDisplay {
         guard let promo = promoPackage?.storeProduct else {
-            let fallback = AppLocalizable.string("paywall.discount.fallbackPrice", language: language)
+            // Store not answered yet: no number rather than a remembered one.
             let regularProduct: StoreProduct? = annualPackage?.storeProduct
             return DiscountPriceDisplay(
-                promoPerMonth: fallback,
+                promoPerMonth: Self.unknownPrice,
                 regularPerMonth: regularProduct.map { perMonthPrice($0, language: language) },
-                billedYearlyNote: billedYearlyNote(fallback, language: language),
+                billedYearlyNote: "",
                 discountBadge: nil
             )
         }
@@ -442,17 +442,19 @@ class StoreViewModel {
         return "-\(percent)%"
     }
 
+    /// What a paywall shows before StoreKit has answered, or when it never does: no number
+    /// at all. The old fallback was a hard-coded « 39,99 € » per language, which is wrong the
+    /// moment a price experiment or a country tier serves anything else — and a wrong price
+    /// on a paywall is worse than a missing one.
+    static let unknownPrice = "…"
+
     private static func fallbackPaywallPrices(language: AppLanguage) -> PaywallPriceDisplay {
-        let yearly = AppLocalizable.string("paywall.plan.fallback.yearlyPrice", language: language)
-        return PaywallPriceDisplay(
-            yearlyPrice: yearly,
-            yearlyPerMonth: AppLocalizable.string("paywall.plan.fallback.yearlyMonthly", language: language),
-            yearlyBilledNote: String(
-                format: AppLocalizable.string("paywall.plan.billedYearly", language: language),
-                yearly
-            ),
-            monthlyPrice: AppLocalizable.string("paywall.plan.fallback.monthlyPrice", language: language),
-            discountBadge: AppLocalizable.string("paywall.plan.discount", language: language)
+        PaywallPriceDisplay(
+            yearlyPrice: unknownPrice,
+            yearlyPerMonth: unknownPrice,
+            yearlyBilledNote: "",
+            monthlyPrice: unknownPrice,
+            discountBadge: nil
         )
     }
 }
