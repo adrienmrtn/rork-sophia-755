@@ -20,8 +20,10 @@ Tout le § 1 à § 5 est scripté. Onglet **Actions → Pricing tests → Run wo
    499,99 TRY pour les paliers, essai gratuit 3 jours, capture d'examen copiée de
    `Sophia_yearly`, notes d'examen du § 4). Relançable sans risque : rien n'est créé deux fois.
 3. `appstore · status` : état de chaque abonnement ; attendre « READY_TO_SUBMIT ».
-4. `appstore · submit` : soumet le groupe à Apple.
-5. `revenuecat · plan` puis `apply` : crée les produits dans RevenueCat (App Store et Play),
+4. `appstore · prices` : prix client de chaque abonnement dans 12 pays, pour vérifier la grille
+   d'Apple sur `_t50` et `_t25` (Türkiye, Mexique, Brésil, Inde) avant de soumettre.
+5. `appstore · submit` : soumet le groupe à Apple.
+6. `revenuecat · plan` puis `apply` : crée les produits dans RevenueCat (App Store et Play),
    rattache tout à `premium` (y compris les deux produits de juillet), crée les 13 offerings
    et leurs packages.
 
