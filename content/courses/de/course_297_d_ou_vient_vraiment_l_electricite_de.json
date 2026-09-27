@@ -1,0 +1,141 @@
+{
+  "id": "course_297_d_ou_vient_vraiment_l_electricite_de",
+  "title": "Woher kommt der Strom aus deiner Steckdose wirklich?",
+  "subtitle": "Eine unsichtbare Mischung",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Umwelt & Zukunft",
+  "description": "An der Steckdose verrät nichts, ob der Strom von der Sonne, vom Wind oder aus einem Kohlekraftwerk kommt. Hinter diesem alltäglichen Handgriff steckt eine Mischung, die sich stündlich ändert und manchmal Grenzen überquert.",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "wind_turbines_coal_power_plant_landscape",
+    "ratio": "4:3",
+    "hook": "Die Steckdose ist überall gleich. Was dahinter steckt, ist es nie."
+  },
+  "sections": [
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Du steckst dein Handy ein, und der Strom kommt ohne Etikett. Nichts an der Steckdose verrät, ob er mit Sonnenlicht, dem Wasser eines Staudamms oder einem in einem Kraftwerk verbrannten Brennstoff erzeugt wurde. Selbst zwei Häuser in derselben Straße können nicht sagen, aus welchem Kraftwerk jede Einheit ihres Stroms stammt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Grund ist einfach: Fast alle Haushalte beziehen ihren Strom aus einem [[Stromnetz]], einem Geflecht von Leitungen, das die Kraftwerke und die Verbraucher einer Region verbindet. Mehrere Kraftwerke speisen gleichzeitig ein, und ihre jeweiligen Anteile bilden den [[Strommix]]. Dieser Mix beschreibt die Quellen, die das Netz versorgen, keinen eigenen Strom aus Sonne oder Gas, der direkt zu deinem Handy fließt. Die Antwort beginnt also weit jenseits der eigenen vier Wände."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p1",
+      "title": "Dampf, Turbinen und Solarmodule",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kohlekraftwerke und viele Kernkraftwerke nutzen Wärme, um Dampf zu erzeugen. Dieser Dampf treibt eine [[Turbine]] an, einen Satz Schaufeln, der mit einem [[Generator]] verbunden ist, der Maschine, die Bewegung in Strom verwandelt. Gaskraftwerke können ihre Turbinen auch direkt mit den heißen Verbrennungsgasen antreiben. Verschiedene Verfahren, aber derselbe Strom, der ins selbe Netz fließt."
+        },
+        {
+          "type": "image",
+          "asset": "steam_turbine_generator_hall_power_plant",
+          "ratio": "2:1",
+          "caption": "Ein früher Dampfturbosatz im Technischen Museum Wien: Die Turbine ist mit ihrem Generator gekoppelt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Windräder drehen sich mit dem Wind, Wasserkraftwerke mit fließendem Wasser. Solarmodule gehen einen anderen Weg: Sie erzeugen Strom direkt aus Licht, ganz ohne sich drehende Schaufeln. Diese Quellen arbeiten nicht unter denselben Bedingungen. Die Solarproduktion bricht bei Sonnenuntergang ein, die Windproduktion schwankt mit dem Wetter. Kraftwerke, die Brennstoff verbrennen, können dann Strom liefern, wenn die anderen weniger erzeugen."
+        },
+        {
+          "type": "funFact",
+          "text": "Ein Kernkraftwerk funktioniert im Grunde wie ein Kohlekraftwerk: Wärme bringt Wasser zum Kochen, und der Dampf treibt die Turbine an. Nur die Wärmequelle ist eine andere."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p2",
+      "title": "Ein Mix, der sich im Lauf des Tages ändert",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mittags laufen die Solarmodule auf Hochtouren, während Büros und Wohnungen Strom ziehen. Nach Sonnenuntergang stehen sie still, doch Lampen, Züge und Küchen brauchen weiter Strom. Auf einen windigen Nachmittag kann auch ein windstiller Abend folgen, während der Verbrauch steigt oder sinkt."
+        },
+        {
+          "type": "image",
+          "asset": "electricity_grid_control_room_operators_screens",
+          "ratio": "16:9",
+          "caption": "Karte der Hochspannungsleitungen und Umspannwerke in den USA: das Geflecht, das ein Netzbetreiber im Gleichgewicht halten muss."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der [[Netzbetreiber]], die Stelle, die dieses Geflecht steuert, muss Angebot und Nachfrage ständig im Gleichgewicht halten. Manche Kraftwerke passen ihre Leistung an. Wo Batterien installiert sind, geben sie zuvor gespeicherten Strom ab. Andere Quellen füllen die Lücke, die die untergehende Sonne hinterlässt. Ein festes Tagesrezept gibt es nicht: Der Mix am Mittag kann ganz anders aussehen als wenige Stunden später, obwohl sich an deiner Steckdose nichts geändert hat."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p3",
+      "title": "Was der Jahresdurchschnitt verbirgt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "2025 stammte etwa **ein Viertel** (24%) des Stroms aus den großen Kraftwerken der USA aus [[erneuerbaren Energien]], also aus Quellen, die sich von selbst erneuern: Sonnenlicht, Wind, fließendes Wasser. Die noch vorläufige Zahl beschreibt das ganze Jahr. Sie bedeutet nicht, dass die Erneuerbaren jedes Mal denselben Anteil lieferten, wenn jemand einen Wasserkocher einschaltete oder ein Handy auflud."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Jahreswert vermischt sonnige Nachmittage, stürmische Nächte und Phasen, in denen Sonne und Wind wenig liefern. Er zählt auch Stunden mit hoher und niedriger Nachfrage zusammen. Wer wissen will, welche Quellen ein Netz in einem bestimmten Moment versorgen, muss auf den stündlichen Mix schauen statt auf den Jahresdurchschnitt. Beide Blickwinkel sind nützlich, beantworten aber nicht dieselbe Frage."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p4",
+      "title": "Strom von anderswo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der stündliche Mix braucht noch ein Detail: welcher Strom in deiner Region tatsächlich verfügbar ist. Ein Kraftwerk auf der einen Seite einer Grenze kann das Netz auf der anderen Seite versorgen. Dieser importierte Strom mischt sich mit der lokalen Erzeugung. Der [[Verbrauchsmix]], also die Quellen, die die Verbraucher einer Region versorgen, kann sich daher vom vor Ort erzeugten Mix unterscheiden."
+        },
+        {
+          "type": "image",
+          "asset": "belchatow_coal_power_plant_cooling_towers_poland",
+          "ratio": "4:3",
+          "caption": "Das Kohlekraftwerk Bełchatów in Polen, das größte Europas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Das zählt für die Emissionen deines Stroms. Wer Kohle oder Gas verbrennt, setzt Kohlendioxid frei, ein Gas, das den Planeten erwärmt. Windräder, Solarmodule und Kernkraftwerke stoßen es bei der Stromerzeugung nicht direkt aus. Strom macht an der Grenze nicht halt, und seine Wirkung auch nicht. Je nach Herkunft der Importe können die Emissionen deines Verbrauchs höher oder niedriger sein, als die lokale Erzeugung vermuten lässt."
+        },
+        {
+          "type": "takeaway",
+          "text": "Der Strom aus deiner Steckdose ist eine Mischung, die sich stündlich ändert und Grenzen überquert. Weder der Jahresdurchschnitt noch die lokale Erzeugung allein verraten also, woher er kommt."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Delivered to Consumers », sections « The electric power grid », « Electricity sources and types of providers » et « Balancing authorities »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Generated », sections « Turbine driven generators » et « Other types of generators »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Energy Storage for Electricity Generation », section « Uses and benefits of energy storage systems »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity Generation, Capacity, and Sales in the United States », section « Electricity generation », données 2025 provisoires."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity and the Environment », sections « Fossil fuel, biomass, and waste burning power plants » et « Nuclear power plants »."
+    },
+    {
+      "text": "Electricity Maps, « Methodology », sections « Defining Granularity: Spatial and Temporal », « Consumption-based Calculation » et « The Flow-Tracing Algorithm »."
+    },
+    {
+      "text": "B. Tranberg et al., « Real-time carbon accounting method for the European electricity markets », Energy Strategy Reviews, vol. 26, 2019, art. 100367.",
+      "url": "https://doi.org/10.1016/j.esr.2019.100367"
+    }
+  ]
+}
