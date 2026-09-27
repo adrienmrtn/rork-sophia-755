@@ -23,11 +23,11 @@ code iOS et Android. Coche les cases des actions que tu valides.
   terminés, et les produits iOS fantômes (constats 3 à 5).
 - [ ] Sécuriser l'entitlement `premium` : rattacher ou archiver les 2 produits actifs non reliés (constat 2).
 - [ ] Option : webhook RevenueCat vers Supabase pour connaître le statut Premium côté serveur (constat 8).
-- [ ] Programme d'A/B tests prix en **lancement simultané** (détail dans
-  `docs/plan-ab-tests-prix.md`) : J0 expérience A1 (annuel 59,99 × mensuel sans essai, sans
-  nouvelle version), J+3 paliers B / Türkiye / Tier C, J+14 avec la version R1 : A2 (annuel
-  49,99 × hebdo 6,99) et discount 19,99 vs 29,99 côté app ; Android aligné sur iOS dès J0.
-  Décisions J+30 / J+45. Rien n'est lancé tant que ce point n'est pas coché.
+- [ ] Programme d'A/B tests prix, **cinq tests lancés le même jour** dès validation Apple des
+  produits soumis lundi 28/09 (détail dans `docs/plan-ab-tests-prix.md`) : fort pouvoir d'achat
+  39,99 / 49,99 / 59,99 / 69,99 € ; Europe du Sud 49,99 × mensuel sans essai ; Europe centrale
+  29,99 / 39,99 / 49,99 ; Türkiye 1 999 / 999 / 499 TRY ; émergents 100 / 50 / 25 %. Vague 2 à
+  J+45 avec R1 : hebdo, discount, essai 7 jours. Android aligné sur iOS dès lundi.
 
 **Constats**
 
@@ -84,13 +84,14 @@ code iOS et Android. Coche les cases des actions que tu valides.
   (aucun `PaywallView` ni Customer Center utilisé) et, si plus rien ne l'utilise, le produit
   `RevenueCatUI` du projet Xcode.
 - [ ] Option : webhook RevenueCat vers une edge function Supabase (`is_premium`, `expires_at`).
-- [ ] Tests prix, version R1 (iOS + Android, soumission J+7) : paywalls quiz / cours / entraînement
-  alignés sur l'offering servie par l'expérience ; package `$rc_weekly` et paywall « annuel vs
-  hebdo » ; test discount côté app (bucket aléatoire + attribut `discount_bucket`) ; durée d'essai
-  dynamique dans les textes ; textes de repli sans prix codé en dur.
-- [ ] Tests prix, stores (J0) : 7 produits iOS + base plans Play du § 7.1 du plan, rattachés à
-  `premium` ; Android aligné (47,99 → 39,99 €, promo 23,99 → 19,99 €).
-- [ ] Tests prix, RevenueCat (J0) : rattacher `Sophia_yearly_5999` et `Sophia_monthly_notrial` à
-  `premium`, offerings A1, audiences pays A1 / A2 / B / TR / C, expérience A1 lancée ; B, TR, C à
-  la validation Apple ; A2 et discount à R1.
+- [ ] Tests prix, version R1 (iOS + Android, soumission 01/10) : paywalls quiz / cours /
+  entraînement alignés sur l'offering servie par l'expérience (urgent) ; textes de repli sans
+  prix codé en dur ; impressions vérifiées ; puis pour la vague 2 : package `$rc_weekly`, test
+  discount côté app (bucket + attribut `discount_bucket`), durée d'essai dynamique.
+- [ ] Tests prix, stores (lundi 28/09) : 7 produits iOS (49,99 ; 69,99 ; 29,99 ; paliers 50 % et
+  25 % ; hebdo 6,99 ; discount 29,99) et base plans Play équivalents, rattachés à `premium` ;
+  Android aligné (47,99 → 39,99 €, promo 23,99 → 19,99 €).
+- [ ] Tests prix, RevenueCat (lundi, puis J0) : rattacher `Sophia_yearly_5999` et
+  `Sophia_monthly_notrial` à `premium`, 5 audiences pays, 12 offerings, 5 expériences en
+  brouillon ; achat sandbox par offering ; lancement des 5 le jour de la validation Apple.
 - [ ] Sécurité : régénérer la clé API v2 RevenueCat après l'avoir mise dans l'environnement.
