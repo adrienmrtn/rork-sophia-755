@@ -54,19 +54,40 @@ MANIFEST = ROOT / "appstore" / "subscriptions" / "price_tests.json"
 
 
 class PatientClient(Client):
-    """Same client, but a rate limit or a transient 5xx is waited out, not fatal.
+    """Same client, built for a run longer than one token.
 
     One `apply` is roughly 350 calls per product (a price and an introductory
-    offer per territory), so a run can brush Apple's hourly quota.
+    offer per territory): a full run takes 20 to 30 minutes, longer than the
+    20-minute lifetime Apple allows a token, and can brush the hourly quota.
+    So the token is minted again every 15 minutes (and once more on a 401),
+    and a rate limit or a transient 5xx is waited out instead of being fatal.
     """
 
+    TOKEN_LIFETIME = 15 * 60
     RETRY_ON = {429, 500, 502, 503, 504}
 
+    def __init__(self, dry_run: bool = False) -> None:
+        super().__init__(dry_run=dry_run)
+        self._minted_at = 0.0
+
+    @property
+    def auth(self) -> str:
+        if self._token is None or time.monotonic() - self._minted_at > self.TOKEN_LIFETIME:
+            self._token = None
+            self._minted_at = time.monotonic()
+        return super().auth
+
     def call(self, method: str, path: str, *, body: dict | None = None, params: dict | None = None) -> dict:
+        refreshed = False
         for attempt in range(6):
             try:
                 return super().call(method, path, body=body, params=params)
             except ApiError as error:
+                if error.status == 401 and not refreshed:
+                    refreshed = True
+                    self._token = None
+                    print("  (token expired, minting a new one)", flush=True)
+                    continue
                 if error.status not in self.RETRY_ON or attempt == 5:
                     raise
                 wait = 60 if error.status == 429 else 5 * (attempt + 1)
