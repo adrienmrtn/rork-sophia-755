@@ -184,7 +184,7 @@ struct OnboardingV2View: View {
         case .login:
             OnboardingV2Login(onSignedIn: advance)
         case .trialSteps:
-            OnboardingV2TrialSteps(onNext: advance)
+            OnboardingV2TrialSteps(trialDays: store.annualTrialDays, onNext: advance)
         case .reminder:
             OnboardingV2Reminder(onNext: advance)
         case .paywallAnnual:

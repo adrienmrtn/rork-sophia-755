@@ -248,6 +248,30 @@ class StoreViewModel {
     /// Whether the current offering's annual package includes a free trial.
     var annualHasFreeTrial: Bool { hasFreeTrial(annualPackage) }
 
+    // MARK: - Trial length
+
+    /// Days of free trial a package's product ships, or nil when it has none. Read from the
+    /// store rather than assumed, so copy that names the number (« 3 jours offerts ») follows
+    /// whatever the served product carries — a 7-day variant included.
+    func trialDays(for package: Package?) -> Int? {
+        guard let intro = package?.storeProduct.introductoryDiscount,
+              intro.paymentMode == .freeTrial else { return nil }
+        let period = intro.subscriptionPeriod
+        let unitDays: Int
+        switch period.unit {
+        case .day: unitDays = 1
+        case .week: unitDays = 7
+        case .month: unitDays = 30
+        case .year: unitDays = 365
+        @unknown default: unitDays = 1
+        }
+        return max(1, period.value * unitDays * max(1, intro.numberOfPeriods))
+    }
+
+    /// Days of the annual plan's free trial, for copy; 3 (what the store has always served)
+    /// until the products are loaded.
+    var annualTrialDays: Int { trialDays(for: annualPackage) ?? 3 }
+
     /// Marks the customer as exposed to their experiment variant. RevenueCat only counts
     /// impressions automatically for its own paywall templates, so every native paywall here must
     /// report itself or enrolled customers are dropped from experiment results.

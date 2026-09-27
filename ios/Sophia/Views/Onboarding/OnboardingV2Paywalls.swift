@@ -70,7 +70,9 @@ struct OnboardingV2PaywallAnnual: View {
                 OnboardingV2Button(
                     title: purchasing
                         ? languageManager.text("common.processing")
-                        : languageManager.text(hasTrial ? "onboardingV2.pw.startTrial" : "onboardingV2.pw.subscribe"),
+                        : (hasTrial
+                            ? languageManager.trialText("onboardingV2.pw.startTrial", days: store.annualTrialDays)
+                            : languageManager.text("onboardingV2.pw.subscribe")),
                     enabled: !purchasing,
                     action: purchase
                 )
@@ -101,7 +103,7 @@ struct OnboardingV2PaywallAnnual: View {
                 .font(DS.title(.title2, .heavy))
                 .foregroundColor(OV2.ink)
             }
-            let green = languageManager.text("onboardingV2.pw.tryFree")
+            let green = languageManager.trialText("onboardingV2.pw.tryFree", days: store.annualTrialDays)
             let rest = String(
                 format: Self.withoutParenthetical(languageManager.text("onboardingV2.pw.thenPrice")),
                 prices.yearlyPerMonth
@@ -205,6 +207,10 @@ struct OnboardingV2PaywallComparison: View {
         selected == .yearly ? yearlyHasTrial : shortHasTrial
     }
 
+    private func trialDays(_ plan: Plan) -> Int {
+        store.trialDays(for: plan == .yearly ? store.annualPackage : store.shortPlanPackage) ?? 3
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             HStack {
@@ -234,7 +240,9 @@ struct OnboardingV2PaywallComparison: View {
                 OnboardingV2Button(
                     title: purchasing
                         ? languageManager.text("common.processing")
-                        : languageManager.text(selectedHasTrial ? "onboardingV2.pw.startTrial" : "onboardingV2.pw.subscribe"),
+                        : (selectedHasTrial
+                            ? languageManager.trialText("onboardingV2.pw.startTrial", days: trialDays(selected))
+                            : languageManager.text("onboardingV2.pw.subscribe")),
                     enabled: !purchasing,
                     action: purchase
                 )
@@ -331,7 +339,7 @@ struct OnboardingV2PaywallComparison: View {
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)
                     if isYearly ? yearlyHasTrial : shortHasTrial {
-                        Text(languageManager.text("onboardingV2.pw.trialBadge"))
+                        Text(languageManager.trialText("onboardingV2.pw.trialBadge", days: trialDays(plan)))
                             .font(DS.sans(.caption2, .bold))
                             .foregroundStyle(OV2.success)
                             .lineLimit(2)

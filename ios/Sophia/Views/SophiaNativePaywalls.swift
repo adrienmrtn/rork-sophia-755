@@ -327,7 +327,9 @@ struct SophiaStandardPaywall: View {
     /// wording when the served product has no introductory offer.
     private var priceLine: String {
         String(
-            format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
+            format: hasTrial
+                ? languageManager.trialText("paywall.price.trialThenYearly", days: store.annualTrialDays)
+                : languageManager.text("paywall.price.yearlyNoTrial"),
             prices.yearlyPrice
         )
     }
@@ -626,7 +628,9 @@ struct SophiaTrainingPaywall: View {
     /// wording when the served product has no introductory offer.
     private var priceLine: String {
         String(
-            format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
+            format: hasTrial
+                ? languageManager.trialText("paywall.price.trialThenYearly", days: store.annualTrialDays)
+                : languageManager.text("paywall.price.yearlyNoTrial"),
             prices.yearlyPrice
         )
     }
@@ -912,7 +916,9 @@ struct SophiaQuizPaywall: View {
 
     private var priceLine: String {
         String(
-            format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
+            format: hasTrial
+                ? languageManager.trialText("paywall.price.trialThenYearly", days: store.annualTrialDays)
+                : languageManager.text("paywall.price.yearlyNoTrial"),
             prices.yearlyPrice
         )
     }
@@ -1631,7 +1637,9 @@ struct SophiaCourseUnlockPaywall: View {
 
     private var priceLine: String {
         String(
-            format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
+            format: hasTrial
+                ? languageManager.trialText("paywall.price.trialThenYearly", days: store.annualTrialDays)
+                : languageManager.text("paywall.price.yearlyNoTrial"),
             prices.yearlyPrice
         )
     }
