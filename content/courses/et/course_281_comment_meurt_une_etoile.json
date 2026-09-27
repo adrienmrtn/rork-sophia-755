@@ -1,0 +1,128 @@
+{
+  "id": "course_281_comment_meurt_une_etoile",
+  "title": "Kuidas täht sureb?",
+  "subtitle": "Punane hiid või supernoova",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Miljardeid aastaid püsib täht tasakaalus gravitatsiooni ja oma tuuma termotuumareaktsioonide vahel. Kui kütus otsa saab, täht paisub, variseb kokku või plahvatab ning tema lõpp sõltub vaid ühest asjast: massist.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "crab_nebula_supernova_remnant_hubble",
+    "ratio": "4:3",
+    "hook": "Täht võib kustuda vaikselt või plahvatada kujuteldamatu jõuga: kõik oleneb tema massist."
+  },
+  "sections": [
+    {
+      "id": "course_281_comment_meurt_une_etoile_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mis paneb tähe surema? Täht hakkab surema siis, kui ta ei suuda enam oma gravitatsioonile vastu panna. Suurema osa elust tõmbab gravitatsioon tähe ainet keskpunkti poole. Samal ajal tekitab tuumas toodetud energia rõhu, mis surub väljapoole. Need kaks mõju tasakaalustavad teineteist ja täht püsib stabiilsena."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selle energia allikas on [[tuumasüntees]]: vesiniku tuumad ühinevad heeliumiks ja vabastavad tohutul hulgal energiat. Tasakaal võib kesta miljoneid, miljardeid ja isegi tuhandeid miljardeid aastaid. Kõik oleneb massist. Väikesed tähed kulutavad oma kütust aeglaselt, massiivsed põletavad selle palju kiiremini. Ühel päeval tasakaal katkeb. Mis edasi saab, sõltub tähe massist."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p1",
+      "title": "Täht paisub punaseks hiiuks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suurema osa elust muundab täht oma tuuma ehk keskosa vesinikku heeliumiks. Kui see vesinik hakkab lõppema, aeglustub süntees keskel. Tuum tõmbub kokku ja muutub kuumemaks. Selle ümber jätkab vesinikukiht ühinemist ja energia vabastamist. Selle surve all paisuvad tähe välimised kihid tohutult."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tulemuseks on [[punane hiid]]: täht, mis on varasemast palju suurem ja mille pind on jahedam. Surev täht ei kustu seega vaikselt, vaid hakkab kõigepealt kasvama. Päike peaks sellesse faasi jõudma umbes **5 miljardi aasta** pärast."
+        },
+        {
+          "type": "funFact",
+          "text": "Punaseks hiiuks muutununa võib Päike paisuda nii suureks, et neelab Merkuuri ja Veenuse. Maa täpne saatus on aga ebaselge."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p2",
+      "title": "Maa-suurune valge kääbus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Päikesesarnane täht ei saa lõputult paisuda. Vananedes kaotab ta oma välimised kihid, mis paiskuvad kosmosesse. See gaas hajub ja moodustab helendava pilve: tekib [[planetaarudu]]. Keskele jääb [[valge kääbus]]: tähe kuum ja tihe tuum, mis on paljaks jäänud, kui välimised kihid on lahkunud."
+        },
+        {
+          "type": "image",
+          "asset": "helix_nebula_planetary_nebula_white_dwarf_hubble",
+          "ratio": "1:1",
+          "caption": "Heeliksi udu: sureva tähe välja paisatud gaas, mille keskel on näha valge kääbus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Valge kääbus pole suurem kui **Maa**, kuid sisaldab endiselt suure osa algse tähe massist. Termotuumareaktsioonid on seal lakanud: ta ei tooda enam energiat. Kui ta särab, siis ainult seetõttu, et on veel äärmiselt kuum. Määratult pika aja jooksul ta jahtub ja tuhmub järk-järgult."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p3",
+      "title": "Supernoova, neutrontäht või must auk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Palju massiivsem täht ei peatu sellega. Ta jätkab kergete elementide liitmist raskemateks: heeliumist saab süsinik, seejärel loovad keerukamad reaktsioonid veelgi raskemaid elemente. Järk-järgult tekib tuum, milles on palju **rauda**. Raua puhul aga ei anna süntees enam energiat, mida on vaja tähe hoidmiseks gravitatsiooni vastu. Tuum variseb silmapilkselt kokku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kokkuvarisemisest võib sündida [[supernoova]], hiiglaslik plahvatus, mis paiskab suure osa tähest kosmosesse. Kokkuvarisenud tuum aga jääb alles. Kui see pole liiga massiivne, saab sellest [[neutrontäht]], äärmiselt tihe objekt, mis pole suurem kui linn. Kui tuum on piisavalt massiivne, surub gravitatsioon seda edasi kokku, kuni tekib [[must auk]], mille tõmme on nii tugev, et isegi valgus ei pääse sealt välja."
+        },
+        {
+          "type": "image",
+          "asset": "m87_black_hole_event_horizon_telescope_2019",
+          "ratio": "16:9",
+          "caption": "Galaktika M87 must auk: esimene pilt 2019. aastast (vasakul) ja algoritmiga PRIMO täpsustatud versioon (2023)."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p4",
+      "title": "Me oleme tähetolm",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Surev täht ei kao. Ta annab kosmosele tagasi osa oma ainest, mis on laetud tema eluajal valmistatud elementidega. Aja jooksul võib see aine saada osaks uutest tähtedest, planeetidest ja teistest maailmadest."
+        },
+        {
+          "type": "image",
+          "asset": "pillars_of_creation_eagle_nebula_jwst_2022",
+          "ratio": "2:3",
+          "caption": "Loomise sambad James Webbi teleskoobi pildil 2022. aastal: seal sünnivad uued tähed."
+        },
+        {
+          "type": "paragraph",
+          "text": "Parim näide on **süsinik**. See on eluks Maal hädavajalik, ka meie oma kehas. Enamik sellest süsinikust on aga valmistatud tänaseks kadunud tähtede põlvkondades. Sellepärast öeldaksegi mõnikord, et oleme tehtud tähetolmust. Väljend on poeetiline, kuid selle taga olev teadus on täiesti tõeline. Tähe surm on seega ka algus: tema ainest võib kunagi saada uus täht, uus planeet või isegi elusmaailm."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ilma termotuumareaktsioonideta alistub täht gravitatsioonile: väikesed kustuvad valgeks kääbuseks, massiivsed plahvatavad supernoovana ja jätavad endast maha neutrontähe või musta augu, ning nende laiali paisatud aine toidab tulevasi tähti, planeete ja elusolendeid."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, p. 541."
+    },
+    {
+      "text": "NASA Science, « Types of Stars: White Dwarfs »."
+    },
+    {
+      "text": "S. Frazier, « Why the Sun Won't Become a Black Hole », NASA Goddard Space Flight Center, 2019."
+    }
+  ]
+}
