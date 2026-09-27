@@ -1,0 +1,135 @@
+{
+  "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone",
+  "title": "Mitä älypuhelimen sisällä oikeasti on?",
+  "subtitle": "Taskukokoinen kaivos",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Jopa 50 metallia, kaliumilla käsiteltyä lasia, kobolttia Kongosta ja litiumia Chilestä: puhelin on tiivistetty pala maapalloa. Ja kun se hajoaa, sen materiaalit ovat yhä arvokkaita.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "disassembled_smartphone_components_flat_lay",
+    "ratio": "4:3",
+    "hook": "Puhelimesi näyttää yhdeltä esineeltä, mutta sen sisällä on kymmeniä materiaaleja, jotka on kaivettu maasta usealla mantereella."
+  },
+  "sections": [
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Älypuhelin näyttää yhdeltä esineeltä. Todellisuudessa se on koottu kymmenistä materiaaleista eri puolilta maailmaa, ja niitä on paljon enemmän kuin näkyvä lasi, muovi ja metalli. Euroopan komission mukaan puhelimessa voi olla jopa **50 eri metallia**. Yhdysvaltain geologisen tutkimuskeskuksen arvion mukaan ainakin puolet mobiililaitteen osista on peräisin maasta louhituista mineraaleista tai niistä jalostetuista aineista."
+        },
+        {
+          "type": "paragraph",
+          "text": "Miksi näin pieni esine tarvitsee niin monta eri ainetta? Koska jokaiselta osalta vaaditaan tietty ominaisuus: sen on johdettava sähköä, pysyttävä läpinäkyvänä, toimittava magneetin tavoin tai varastoitava energiaa. Toisin sanoen suuri osa puhelimestasi saa alkunsa kalliosta."
+        }
+      ]
+    },
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p1",
+      "title": "Lasikin tekee töitä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Näyttö tarvitsee suojalasin, joka on sekä läpinäkyvä että luja. Monissa puhelimissa lasina on [[Gorilla Glass]], karkaistu lasi, jonka ainesosat ovat [[pii]], alumiini ja happi. Sen lujuus perustuu nokkelaan käsittelyyn: pinnan lähellä pienet natriumatomit korvataan suuremmilla kaliumatomeilla. Nämä kookkaat ionit ahtautuvat pintaan ja synnyttävät puristuksen, joka estää halkeamia leviämästä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aivan lasin alla on usein ohut kerros ainetta nimeltä [[indiumtinaoksidi]], jolla on harvinaiset ominaisuudet: se johtaa sähköä ja pysyy silti läpinäkyvänä. Kun sormi koskettaa näyttöä, se muuttaa tämän kerroksen sähköistä signaalia. Puhelin havaitsee muutoksen peittämättä lainkaan alla näkyvää kuvaa."
+        }
+      ]
+    },
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p2",
+      "title": "Jokaisella materiaalilla on tehtävänsä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Näytön alla jokainen materiaali on valittu tiettyyn tehtävään. Pii muodostaa pohjan siruihin syövytetyille pikkuruisille piireille. Kupari kuljettaa sähköä osien välillä. Akku tarvitsee energian varastointiin ja vapauttamiseen kaksi ainetta: [[litium]] ja grafiitti, joka on eräs hiilen muoto."
+        },
+        {
+          "type": "image",
+          "asset": "smartphone_logic_board_chips_gold_contacts_macro",
+          "ratio": "4:3",
+          "caption": "Älypuhelimen emolevy: piisiruja, kuparivedoksia ja kullattuja liitäntöjä."
+        },
+        {
+          "type": "funFact",
+          "text": "Ei kulta eikä litium: älypuhelimen runsain metalli on **kupari**, joka yhdistää kaikki osat toisiinsa."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Harvinaiset maametallit]], kuten neodyymi, ovat raaka-aineena pienille mutta hyvin voimakkaille magneeteille, joita tarvitaan kaiuttimissa, mikrofoneissa ja värinämoottorissa. Puhelimessa on myös pieniä määriä jalometalleja, kultaa ja hopeaa. **Kulta** on erityisen hyödyllinen: se johtaa hyvin sähköä eikä syövy, joten se sopii täydellisesti laitteen pieniin ja luotettaviin liitäntöihin."
+        }
+      ]
+    },
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p3",
+      "title": "Puhelin, joka on kiertänyt maailman",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Puhelimessasi saattaa lukea ”valmistettu maassa...”, mutta sen materiaalit tulevat harvoin yhdestä maasta. Ennen kuin ne päätyvät kokoonpanotehtaalle, ne ovat usein ylittäneet useita mantereita. Maailman [[koboltti]], akkujen keskeinen metalli, louhitaan suurimmaksi osaksi Kongon demokraattisessa tasavallassa. Litiumia puolestaan tuotetaan esimerkiksi Australiassa, Chilessä, Kiinassa ja Argentiinassa."
+        },
+        {
+          "type": "image",
+          "asset": "salar_de_atacama_lithium_evaporation_ponds_aerial",
+          "ratio": "2:3",
+          "caption": "Chile satelliitista nähtynä (MODIS, 2015): pohjoisessa Atacaman suola-aavikot, joilta litiumia otetaan talteen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nämä raaka-aineet jalostetaan ja muutetaan komponenteiksi jossain muualla, ennen kuin puhelin kootaan. Älypuhelin on siis aidosti maailmanlaajuinen tuote, jonka matka alkaa kauan ennen tehdasta. Ja matkalla on hintansa: kaivostoiminta ja jalostus vaativat maata, vettä ja energiaa, mikä kuormittaa ympäristöä."
+        }
+      ]
+    },
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p4",
+      "title": "Vanha puhelin on yhä arvokas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Puhelimesta tulee hyödytön, kun se lakkaa toimimasta eikä sitä voi enää korjata. Sen sisältämät materiaalit säilyttävät kuitenkin arvonsa: ne voidaan ottaa talteen ja käyttää uudelleen. Vuonna **2022** maailman [[elektroniikkajäte]], älypuhelimet mukaan lukien, oli määrältään **62 miljoonaa tonnia**. Siitä kerättiin ja kierrätettiin vain hieman yli **20 %**."
+        },
+        {
+          "type": "image",
+          "asset": "e_waste_pile_discarded_mobile_phones",
+          "ratio": "3:2",
+          "caption": "Elektroniikkajätteen kaatopaikka Ghanassa, jonne osa maailman käytöstä poistetuista laitteista päätyy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Materiaalien talteenotto vähentää tarvetta louhia ja jalostaa uusia raaka-aineita. Se myös pitää arvokkaat luonnonvarat kierrossa pidempään. Puhelin voi vanhentua. Sen sisältämät materiaalit eivät vanhene. Koko haaste on pitää ne käytössä mahdollisimman pitkään."
+        },
+        {
+          "type": "takeaway",
+          "text": "Älypuhelin on taskukokoinen kaivos, jossa on jopa 50 metallia usealta mantereelta, eikä todellinen haaste ole sen korvaaminen uudella vaan sen materiaalien pitäminen kierrossa mahdollisimman pitkään."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "G. Ragonnaud, Securing Europe's Supply of Critical Raw Materials, European Parliamentary Research Service, PE 739.294, 2023, p. 2."
+    },
+    {
+      "text": "J. E. Jenness, J. A. Ober, A. M. Wilkins et J. Gambogi, A World of Minerals in Your Mobile Device, U.S. Geological Survey, General Information Product 167, 2016, p. 1.",
+      "url": "https://doi.org/10.3133/gip167"
+    },
+    {
+      "text": "B. Rohrig, « Smartphones: Smart Chemistry », ChemMatters, American Chemical Society, avril-mai 2015, p. 11-12."
+    },
+    {
+      "text": "C. P. Baldé et al., The Global E-waste Monitor 2024, UNITAR et ITU, 2024, p. 27."
+    },
+    {
+      "text": "A. Brunning, « The Chemical Elements of a Smartphone », Compound Interest."
+    }
+  ]
+}
