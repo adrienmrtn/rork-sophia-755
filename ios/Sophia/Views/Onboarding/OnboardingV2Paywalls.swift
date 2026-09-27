@@ -2,13 +2,23 @@ import SwiftUI
 import RevenueCat
 
 /// Fonctionnalités comparées Free vs Pro (paywall comparatif).
-private let ov2PaywallFeatureKeys = [
-    "onboardingV2.pw.feature.allSubjects",
-    "onboardingV2.pw.feature.unlimited",
-    "onboardingV2.pw.feature.quiz",
-    "onboardingV2.pw.feature.favorites",
-    "onboardingV2.pw.feature.noAds",
-    "onboardingV2.pw.feature.weekly",
+/// The comparison rows, and whether the free plan has each one. This is the real freemium
+/// rule (`FreemiumGate`): free readers already have every subject, unlimited favourites
+/// and the weekly additions; what they do not have is more than one course a day, the
+/// quizzes, the audio mode and the TikTok blocker.
+private struct OV2PaywallFeature {
+    let key: String
+    let free: Bool
+}
+
+private let ov2PaywallFeatures: [OV2PaywallFeature] = [
+    .init(key: "onboardingV2.pw.feature.allSubjects", free: true),
+    .init(key: "onboardingV2.pw.feature.favorites", free: true),
+    .init(key: "onboardingV2.pw.feature.weekly", free: true),
+    .init(key: "onboardingV2.pw.feature.unlimited", free: false),
+    .init(key: "onboardingV2.pw.feature.quiz", free: false),
+    .init(key: "onboardingV2.pw.feature.audio", free: false),
+    .init(key: "onboardingV2.pw.feature.tiktokBlocker", free: false),
 ]
 
 // MARK: - Page 13 : paywall annuel (essai 3 jours)
@@ -282,17 +292,25 @@ struct OnboardingV2PaywallComparison: View {
             }
             .padding(.bottom, 8)
 
-            ForEach(ov2PaywallFeatureKeys, id: \.self) { key in
+            ForEach(ov2PaywallFeatures, id: \.key) { feature in
                 HStack(spacing: 0) {
-                    Text(languageManager.text(key))
+                    Text(languageManager.text(feature.key))
                         .font(DS.sans(.subheadline, .medium))
                         .foregroundStyle(OV2.ink)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    Image(systemName: "minus")
-                        .font(.system(size: 12, weight: .bold))
-                        .foregroundStyle(OV2.inkTertiary)
-                        .frame(width: comparisonColumnWidth)
+                    Group {
+                        if feature.free {
+                            Image(systemName: "checkmark.circle.fill")
+                                .font(.system(size: 18))
+                                .foregroundStyle(OV2.inkTertiary)
+                        } else {
+                            Image(systemName: "minus")
+                                .font(.system(size: 12, weight: .bold))
+                                .foregroundStyle(OV2.inkTertiary)
+                        }
+                    }
+                    .frame(width: comparisonColumnWidth)
                     Image(systemName: "checkmark.circle.fill")
                         .font(.system(size: 18))
                         .foregroundStyle(OV2.accent)
@@ -360,7 +378,8 @@ struct OnboardingV2PaywallComparison: View {
             )
             .overlay(alignment: .topTrailing) {
                 if isYearly, let badge = prices.discountBadge {
-                    Text(String(format: languageManager.text("onboardingV2.pw.save"), badge))
+                    // "-58%" is a badge; "Économise -58 %" would read as a double negative.
+                    Text(String(format: languageManager.text("onboardingV2.pw.save"), badge.trimmingCharacters(in: CharacterSet(charactersIn: "-"))))
                         .font(DS.sans(.caption2, .bold))
                         .foregroundStyle(.white)
                         .padding(.horizontal, 8).padding(.vertical, 4)

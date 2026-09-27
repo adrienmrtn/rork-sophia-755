@@ -25,6 +25,12 @@ final class OnboardingV2ViewModel {
     }
     /// Temps d'écran quotidien déclaré (en minutes, par blocs de 30) — écran « temps téléphone ».
     /// Sert à l'écran « ta vie en années » (remplissage rouge).
+    /// Hour of the day (local, 5…23) the user wants to read their course. Becomes the
+    /// daily reminder once notifications are allowed.
+    var reminderHour: Int = DailyCourseReminder.storedHour {
+        didSet { DailyCourseReminder.storedHour = reminderHour }
+    }
+
     var phoneDailyMinutes: Int = 180 {
         didSet { OnboardingResumeStore.phoneDailyMinutes = phoneDailyMinutes }
     }
@@ -100,13 +106,24 @@ final class OnboardingV2ViewModel {
     // MARK: - Recommandations (swipe)
 
     /// 5 cours à swiper, dérivés des matières des objectifs (fallback : starters curatés).
+    /// Four hand-picked hooks first, in this order, then two from the recommender.
+    static let pinnedSwipeCourseIds: [String] = [
+        "course_47_pourquoi_baille_t_on",
+        "course_201_la_naissance_du_conflit_israelo_palestin",
+        "course_149_la_joconde",
+        "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
+    ]
+
     func recommendedCourses(language: AppLanguage) -> [Course] {
         let interests = Set(selectedSubjects)
-        return OnboardingCourseRecommender.recommendedCourses(
+        let pinned = Self.pinnedSwipeCourseIds.compactMap { ContentCatalog.course(withId: $0, language: language) }
+        let rest = OnboardingCourseRecommender.recommendedCourses(
             interests: interests,
             language: language,
-            limit: 5
+            limit: 2,
+            excluding: Set(Self.pinnedSwipeCourseIds)
         )
+        return pinned + rest.filter { course in !pinned.contains { $0.id == course.id } }
     }
 
     /// Mémorise les cours affichés dans le swipe pour les exclure de l'écran profil.
@@ -171,6 +188,9 @@ final class OnboardingV2ViewModel {
         if !objectiveKeys.isEmpty {
             UserDefaults.standard.set(objectiveKeys, forKey: "sophia_onboarding_objectives")
         }
+
+        DailyCourseReminder.storedHour = reminderHour
+        DailyCourseReminder.scheduleIfAllowed()
 
         OnboardingViewModel().completeOnboarding()
     }

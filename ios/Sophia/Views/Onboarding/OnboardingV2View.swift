@@ -30,9 +30,9 @@ struct OnboardingV2View: View {
     @State private var showExistingAccountSignIn = false
 
     private enum Screen: Hashable {
-        case welcome, language, objectives, objectiveIntro
-        case questions, phoneTime, yearsGrid, transform, review, personalize
-        case swipe, loading, profile, notifications, login
+        case welcome, language, objectives, problem, objectiveIntro
+        case questions, phoneTime, yearsGrid, transform, review, teachers, personalize
+        case swipe, loading, profile, readingTime, notifications, login
         case trialSteps, reminder, paywallAnnual, paywallComparison
 
         /// Nom envoyé à l'analytics : la séquence étant dynamique (page d'essai retirée quand
@@ -42,16 +42,19 @@ struct OnboardingV2View: View {
             case .welcome: "welcome"
             case .language: "language"
             case .objectives: "objective"
+            case .problem: "problem"
             case .objectiveIntro: "objective_intro"
             case .questions: "questions"
             case .phoneTime: "phone_time"
             case .yearsGrid: "years_grid"
             case .transform: "transform"
             case .review: "review"
+            case .teachers: "teachers"
             case .personalize: "personalize"
             case .swipe: "swipe_courses"
             case .loading: "loading"
             case .profile: "profile"
+            case .readingTime: "reading_time"
             case .notifications: "notifications"
             case .login: "login"
             case .trialSteps: "trial_steps"
@@ -70,9 +73,9 @@ struct OnboardingV2View: View {
     /// l'offering servie (variante d'expérience RevenueCat) n'inclut pas d'essai, sinon on
     /// promettrait un essai que l'utilisateur n'aura pas.
     private var screens: [Screen] {
-        var list: [Screen] = [.welcome, .language, .objectives, .objectiveIntro,
-                              .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
-                              .swipe, .loading, .profile, .notifications, .login]
+        var list: [Screen] = [.welcome, .language, .objectives, .problem, .objectiveIntro,
+                              .questions, .phoneTime, .yearsGrid, .transform, .review, .teachers, .personalize,
+                              .swipe, .loading, .profile, .readingTime, .notifications, .login]
         if store.offerings == nil || store.annualHasFreeTrial {
             list.append(.trialSteps)
         }
@@ -81,7 +84,7 @@ struct OnboardingV2View: View {
     }
 
     private static let dotScreens: Set<Screen> = [
-        .objectives, .objectiveIntro, .questions, .phoneTime, .yearsGrid, .review, .swipe, .loading,
+        .objectives, .problem, .objectiveIntro, .questions, .phoneTime, .yearsGrid, .review, .teachers, .swipe, .loading,
     ]
 
     private var current: Screen {
@@ -159,6 +162,8 @@ struct OnboardingV2View: View {
             OnboardingV2Language(onNext: advance)
         case .objectives:
             OnboardingV2Objective(vm: vm, onNext: advance)
+        case .problem:
+            OnboardingV2Problem(onNext: advance)
         case .objectiveIntro:
             OnboardingV2ObjectiveIntro(onNext: advance)
         case .questions:
@@ -171,6 +176,8 @@ struct OnboardingV2View: View {
             OnboardingV2Transform(onNext: advance)
         case .review:
             OnboardingV2Review(onNext: advance)
+        case .teachers:
+            OnboardingV2Teachers(onNext: advance)
         case .personalize:
             OnboardingV2Personalize(onNext: advance)
         case .swipe:
@@ -179,6 +186,8 @@ struct OnboardingV2View: View {
             OnboardingV2Loading(onNext: advance)
         case .profile:
             OnboardingV2Profile(vm: vm, onNext: advance)
+        case .readingTime:
+            OnboardingV2ReadingTime(vm: vm, onNext: advance)
         case .notifications:
             OnboardingV2Notifications(vm: vm, onNext: advance)
         case .login:
