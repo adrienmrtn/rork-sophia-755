@@ -17,7 +17,9 @@ pour l'instant.
   bannière qui passe prend le relais ; en remontant, la barre revient au niveau précédent puis
   à « Parcours ». Le bouton flèche à gauche ramène au pod à jouer.
 - **Défilement automatique** une seule fois par session, vers le pod à jouer ; ensuite la page
-  garde sa position, sauf pour suivre une animation de déblocage.
+  garde sa position, sauf pour suivre une animation de déblocage. Pendant le rejeu, la page ne
+  bouge que si le pod suivant sortirait de l'écran (un seul mouvement doux, jamais de saut en
+  haut du niveau), et ne se recentre pas à la fin quand le pod à jouer est déjà visible.
 - **Déblocage linéaire.** Dans un niveau, les cours s'ouvrent l'un après l'autre. Un cours
   déjà terminé ailleurs (accueil, Biblio) compte comme pod terminé. Le pod quiz s'ouvre
   quand tous les cours du niveau sont terminés. Le niveau suivant s'ouvre quand le quiz

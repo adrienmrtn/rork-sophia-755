@@ -187,6 +187,7 @@ struct PathStartBubble: View {
             Text(text)
                 .font(DS.sans(.caption, .bold))
                 .tracking(1.2)
+                .lineLimit(1)
                 .foregroundStyle(tint)
                 .padding(.horizontal, 14)
                 .padding(.vertical, 9)
@@ -195,6 +196,9 @@ struct PathStartBubble: View {
                 .fill(DS.surface)
                 .frame(width: 16, height: 8)
         }
+        // Its own width, whatever the pod underneath proposes: as an overlay of a 74 pt pod
+        // the word was wrapped in two ("COMM" / "ENCER").
+        .fixedSize()
         .compositingGroup()
         .shadow(color: .black.opacity(0.12), radius: 10, y: 5)
         .phaseAnimator([false, true]) { content, raised in
