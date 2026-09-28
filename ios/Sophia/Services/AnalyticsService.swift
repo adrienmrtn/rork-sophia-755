@@ -212,6 +212,34 @@ enum AnalyticsService {
         ])
     }
 
+    // MARK: - Learning path
+
+    static func trackPathQuizStarted(collectionId: String, level: Int, questionCount: Int) {
+        track("path_quiz_started", [
+            "collection_id": collectionId,
+            "level": level,
+            "question_count": questionCount,
+        ])
+    }
+
+    static func trackPathQuizCompleted(collectionId: String, level: Int, correct: Int, total: Int, passed: Bool, attempt: Int) {
+        track("path_quiz_completed", [
+            "collection_id": collectionId,
+            "level": level,
+            "correct": correct,
+            "total": total,
+            "passed": passed,
+            "attempt": attempt,
+        ])
+    }
+
+    static func trackPathLevelUnlocked(collectionId: String, level: Int) {
+        track("path_level_unlocked", [
+            "collection_id": collectionId,
+            "level": level,
+        ])
+    }
+
     // MARK: - Streak & gates
 
     static func trackStreakUpdated(streakDays: Int, isNewRecord: Bool) {

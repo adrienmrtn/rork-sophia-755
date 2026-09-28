@@ -8,6 +8,7 @@ enum TutorialFlags {
         case homeSwipe = "sophia_tut_home_swipe"
         case courseTerms = "sophia_tut_course_terms"
         case collections = "sophia_tut_collections"
+        case path = "sophia_tut_path"
         case training = "sophia_tut_training"
         /// L'utilisateur a déjà parcouru le mini-onboarding « entraînement » (déclenché par
         /// « Découvrir ») au moins une fois — après quoi le bouton devient « Débloquer ».
