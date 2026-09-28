@@ -1,0 +1,159 @@
+{
+  "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain",
+  "title": "Dá sa upraviť ľudská DNA?",
+  "subtitle": "Nožnice CRISPR",
+  "subject": "sciences",
+  "subcategory": "Objavy, ktoré zmenili svet",
+  "description": "Od roku 2012 dokážu „molekulárne nožnice“ prevzaté od baktérií prestrihnúť DNA presne tam, kde chceme. Prvé vyliečené choroby, možné chyby a deti na objednávku: kam až to zájde?",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "genetics_lab_pipette_dna_samples_gloved_hands",
+    "ratio": "4:3",
+    "hook": "Čo keby sa písmeno vo vašej DNA dalo opraviť ako preklep?"
+  },
+  "sections": [
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vlasy, oči, farba pleti, postava: každý z nás je iný. Tieto telesné znaky sú dedičstvom: každý [[gén]] je úsek DNA, ktorý sme dostali od biologických rodičov. Samozrejme, záleží aj na prostredí: na tom, čo jeme, s kým sa stretávame, čomu veríme. Svoje gény však berieme ako danosť. Niekedy by sme chceli byť vyšší alebo štíhlejší, ale žijeme s nimi a veľmi o tom nepremýšľame."
+        },
+        {
+          "type": "paragraph",
+          "text": "Čo by ste zmenili, keby ste si mohli upraviť DNA? Táto otázka už nie je teoretická. V roku **2012** americká biochemička **Jennifer Doudnová** a francúzska mikrobiologička **Emmanuelle Charpentierová** vyvinuli spôsob, ako naprogramovať bielkovinu, ktorá strihá DNA. Odteraz dokážu odstrániť nežiaduci gén, a teda teoreticky upraviť DNA človeka."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p1",
+      "title": "CRISPR, nožnice požičané od baktérií",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[CRISPR]] nie je jediný nástroj, ktorý dokáže meniť DNA, ale je najslávnejší. Jeho princíp najprv pozorovali u mikróbov. Baktéria sa bráni tak, že rozpozná DNA vírusu, ktorý ju napadol, a rozstrihá ju na kúsky. Používa na to úseky DNA nazývané CRISPR a enzým s názvom **Cas**, ktorý slúži ako nožnice."
+        },
+        {
+          "type": "image",
+          "asset": "emmanuelle_charpentier_jennifer_doudna_crispr_pioneers",
+          "ratio": "16:9",
+          "caption": "Emmanuelle Charpentierová a Jennifer Doudnová, dve vedkyne, ktoré z tejto bakteriálnej obrany urobili nástroj."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vedci tento prirodzený obranný systém využili na iný účel. Namiesto na vírus nasmerujú enzým na presné miesto v DNA človeka. Tam strihne a cielená zmena sa stáva možnou. Niekedy sa zasiahnutý gén jednoducho vypne. Inokedy sa zmení niekoľko jeho písmen. A niekedy sa nahradí celý."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p2",
+      "title": "Prvé vyliečenia: kosáčikovitá anémia a talasémia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Schopnosť upravovať DNA otvára dvere liečbe mnohých genetických chorôb. Naša DNA je zapísaná **štyrmi bázami**: A, T, C a G. Ich poradie tvorí náš [[genóm]], stavebný plán nášho tela. Jediná chyba v tomto texte môže stačiť na vznik choroby a jej oprava ju môže v princípe vyliečiť."
+        },
+        {
+          "type": "image",
+          "asset": "sickle_cell_red_blood_cells_micrograph",
+          "ratio": "3:2",
+          "caption": "Rez pečeňou pacienta s kosáčikovitou anémiou pod mikroskopom: prvá choroba liečená pomocou CRISPR."
+        },
+        {
+          "type": "paragraph",
+          "text": "V roku **2023** sa Spojené kráľovstvo stáva prvou krajinou, ktorá schváli liek založený na CRISPR. Zameriava sa na dve dedičné choroby krvi: jednou je [[kosáčikovitá anémia]], druhou beta-talasémia. Liečba upraví bunky, ktoré tvoria krv, aby vyrábali viac látky, ktorou je [[fetálny hemoglobín]]: forma hemoglobínu, ktorá sa bežne tvorí pred narodením."
+        },
+        {
+          "type": "funFact",
+          "text": "Preklep môže zabiť. Jediné chybné písmeno v DNA, napríklad T namiesto C, niekedy stačí na smrteľnú genetickú chorobu. Vrátiť na miesto správne písmeno by ju teoreticky mohlo vyliečiť."
+        },
+        {
+          "type": "paragraph",
+          "text": "A to je len začiatok. Klinické skúšky dnes testujú CRISPR proti rakovine, poruchám metabolizmu, autoimunitným ochoreniam, srdcovo-cievnym chorobám aj svalovým dystrofiám. Zoznam je dlhý. Stanú sa genetické choroby čoskoro minulosťou?"
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p3",
+      "title": "Prečo nevyliečime všetko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Také jednoduché to nie je. Po prvé, to, ako sa gén prejaví, nezávisí len od dedičstva po rodičoch: ovplyvňuje ho aj prostredie. Po druhé, za chorobou nemusí stáť jediný chybný gén. Môže ísť o viacero génov a oprava je potom oveľa zložitejšia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aj samotný CRISPR sa môže pomýliť. Stáva sa, že nožnice strihnú na nesprávnom mieste alebo že sa dva prestrihnuté konce nespoja správne. Takto pozmenená DNA môže spôsobiť nové problémy a pôvodný pritom nevyrieši. Napriek tomu medicína rýchlo napreduje k odstráneniu niektorých z najhorších genetických chorôb."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p4",
+      "title": "Deti na objednávku: kde je hranica?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Liečiť choroby, ktoré človeka ochromia alebo zabijú: prínos vidí každý. Kde však má veda stanoviť hranicu? Má sa využiť na stvorenie „dokonalého človeka“? Táto otázka je naliehavejšia než kedykoľvek predtým, odkedy vieme strihať DNA podľa ľubovôle."
+        },
+        {
+          "type": "image",
+          "asset": "ivf_embryo_icsi_microinjection_micrograph",
+          "ratio": "16:9",
+          "caption": "Ľudské vajíčko pridržiavané pipetou počas mikroinjekcie v laboratóriu."
+        },
+        {
+          "type": "funFact",
+          "text": "Výraz „dieťa na objednávku“ nevznikol s CRISPR. Používa sa odvtedy, čo prišlo [[oplodnenie in vitro]], ktoré umožňuje počať embryo v laboratóriu a až potom ho implantovať."
+        },
+        {
+          "type": "paragraph",
+          "text": "Takzvaná [[zárodočná editácia]] mení DNA pohlavných buniek: spermií, vajíčok alebo embryí v najranejších štádiách. Rozdiel oproti bežnej liečbe je zásadný: tieto zmeny sa potom dedia z generácie na generáciu. Dnes je zárodočná editácia zakázaná vo všetkých krajinách. Ale ako dlho ešte? Kedy sa genetické úpravy na liečebné účely prehupnú k dedičným líniám na objednávku?"
+        },
+        {
+          "type": "takeaway",
+          "text": "Od roku 2012 umožňujú nožnice CRISPR opravovať ľudskú DNA a prvé liečby boli schválené v roku 2023. Chyby sú však stále možné, mnohé choroby zahŕňajú viacero génov a zárodočná editácia zostáva všade zakázaná."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "National Science Foundation, « CRISPR: A Biotech Breakthrough », NSF Impacts.",
+      "url": "https://www.nsf.gov/impacts/crispr"
+    },
+    {
+      "text": "National Cancer Institute, « How CRISPR Is Changing Cancer Research and Treatment », Cancer Currents Blog, 2020.",
+      "url": "https://www.cancer.gov/news-events/cancer-currents-blog/2020/crispr-cancer-research-treatment"
+    },
+    {
+      "text": "CRISPR Medicine News, « Clinical Trials », liste des essais cliniques fondés sur CRISPR.",
+      "url": "https://crisprmedicinenews.com/clinical-trials/"
+    },
+    {
+      "text": "House of Lords Library, « World's first personalised DNA editing treatment », UK Parliament.",
+      "url": "https://lordslibrary.parliament.uk/worlds-first-personalised-dna-editing-treatment/"
+    },
+    {
+      "text": "« The gene editor CRISPR won't fully fix sick people anytime soon. Here's why », Science, 2016.",
+      "url": "https://www.science.org/content/article/gene-editor-crispr-won-t-fully-fix-sick-people-anytime-soon-here-s-why"
+    },
+    {
+      "text": "Boston Children's Hospital, « CRISPR gene editing », Answers.",
+      "url": "https://answers.childrenshospital.org/crispr-gene-editing/"
+    },
+    {
+      "text": "« The Guardian view on gene-edited humans: darker uses must be acknowledged alongside medical ones », The Guardian, 5 juillet 2026.",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/05/the-guardian-view-on-gene-edited-humans-darker-uses-must-be-acknowledged-alongside-medical-ones"
+    },
+    {
+      "text": "K. E. Ormond et al., « Human Germline Genome Editing », American Journal of Human Genetics, vol. 101, 2017.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5544380/"
+    }
+  ]
+}

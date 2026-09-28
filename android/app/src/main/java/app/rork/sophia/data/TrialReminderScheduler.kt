@@ -43,10 +43,11 @@ object TrialReminderScheduler {
     private val LEAD_MILLIS = TimeUnit.HOURS.toMillis(10)
 
     /**
-     * Store trials are 3 days. Only used until RevenueCat reports the real expiry, which
-     * normally lands moments after the purchase but is not guaranteed to be there yet.
+     * Fallback trial length, only used until RevenueCat reports the real expiry, which
+     * normally lands moments after the purchase but is not guaranteed to be there yet. The
+     * caller passes what the bought product declares; 3 days is what it has always been.
      */
-    private val ASSUMED_TRIAL_MILLIS = TimeUnit.DAYS.toMillis(3)
+    private const val DEFAULT_ASSUMED_TRIAL_DAYS = 3
 
     /** Small drift between two RevenueCat reads must not re-arm the alarm every time. */
     private val RESCHEDULE_TOLERANCE_MILLIS = TimeUnit.MINUTES.toMillis(5)
@@ -73,15 +74,20 @@ object TrialReminderScheduler {
     }
 
     /**
-     * Arms the reminder for [trialEndsAt] minus 10 hours, assuming a 3-day trial when the
-     * real end date is not known yet. Safe to call repeatedly: the alarm is replaced, never
-     * duplicated, and an unchanged target is skipped.
+     * Arms the reminder for [trialEndsAt] minus 10 hours, assuming a trial of
+     * [assumedTrialDays] when the real end date is not known yet. Safe to call repeatedly:
+     * the alarm is replaced, never duplicated, and an unchanged target is skipped.
      */
-    fun scheduleTrialEndingReminder(context: Context, trialEndsAt: Date? = null) {
+    fun scheduleTrialEndingReminder(
+        context: Context,
+        trialEndsAt: Date? = null,
+        assumedTrialDays: Int = DEFAULT_ASSUMED_TRIAL_DAYS,
+    ) {
         // A user who refused notifications must see nothing change, and arming an alarm whose
         // notification the system would drop achieves nothing either way.
         if (!NotificationManagerCompat.from(context).areNotificationsEnabled()) return
-        val endsAt = trialEndsAt?.time ?: (System.currentTimeMillis() + ASSUMED_TRIAL_MILLIS)
+        val endsAt = trialEndsAt?.time
+            ?: (System.currentTimeMillis() + TimeUnit.DAYS.toMillis(assumedTrialDays.toLong()))
         val triggerAt = endsAt - LEAD_MILLIS
         // Trials shorter than the lead time, or discovered too late, leave no window.
         if (triggerAt <= System.currentTimeMillis()) return

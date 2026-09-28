@@ -1,0 +1,123 @@
+{
+  "id": "course_303_pourquoi_certains_detestent_ils_la",
+  "title": "Bazıları kişnişten neden nefret eder?",
+  "subtitle": "Sabun tadı",
+  "subject": "sciences",
+  "subcategory": "Gündelik hayatın sırları",
+  "description": "İnsanlığın bir kısmı için kişnişin tadı sabun gibidir. Sorumlusu, koku alma genlerinden birinde değişen tek bir harf ve belki de atalarımızdan kalma bir miras.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "fresh_coriander_cilantro_bunch_leaves",
+    "ratio": "4:3",
+    "hook": "Aynı yaprak, iki tat: kimine taze ot, kimine sabun. Fark, DNA'ndaki tek bir harfte."
+  },
+  "sections": [
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kişniş, dünyanın en eski ve en çok kullanılan bitkilerinden biridir. Antik çağda Yunanlar ve Romalılar onu hem mutfak hem de tıp için yetiştiriyordu. Güney Asya'da, Çin'de, Latin Amerika'da binlerce tarifte karşımıza çıkar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yine de bazı insanlar ona katlanamaz. Sofradakilerin çoğu taze bir ot tadı alırken, onlar sabun çiğnediklerine yemin eder. Bu ne bir kapris ne de alışkanlık eksikliğidir: yanıt burunlarında, daha doğrusu genlerinde saklıdır."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p1",
+      "title": "Koku reseptörleri, burundan beyne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tattığımız ya da kokladığımız her şeyin, beynin çözmesi gereken bir kimyasal bileşimi vardır. Tat alma ve bilim insanlarının [[koku alma]] dediği duyu birbirine sıkı sıkıya bağlıdır: bir yemeğin “lezzetinin” büyük bir kısmı aslında burundan geçer, hem de çiğnerken bile."
+        },
+        {
+          "type": "image",
+          "asset": "olfactory_nerve_nasal_cavity_gray_anatomy_plate",
+          "ratio": "3:2",
+          "caption": "Mikroskop altında burun mukozasının kesiti: koku reseptörlerini barındıran, burun boşluğunun iç yüzeyidir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Burun boşluğundaki bazı hücreler [[koku reseptörleri]] taşır. Bunlar besinlerdeki molekülleri algılar ve bir sinyale dönüştürür, koku nöronları da bu sinyali beyne iletir. Her reseptör bir gene göre üretilir. Gen değişirse reseptör de değişir, onunla birlikte algılanan tat da. Kişnişte olan tam olarak budur."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p2",
+      "title": "OR6A2, sabun tadının geni",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Genetikçiler suçluyu buldu: adı [[OR6A2]] olan bir gen. Bu gen, kişnişte bulunan moleküllere, yani [[doymamış aldehitler]] grubuna duyarlı bir koku reseptörünü kodlar. Çoğu insanda bu reseptör onları taze, otsu bir nota olarak yorumlar."
+        },
+        {
+          "type": "image",
+          "asset": "dna_double_helix_nhgri_illustration",
+          "ratio": "2:1",
+          "caption": "DNA'nın çift sarmalı: tek bir harfin değişmesi bir reseptörü değiştirmeye yeter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bazı insanlar bu gende bir [[tek nükleotid polimorfizmi]], kısaca SNP taşır: DNA'nın tek bir “harfi” farklıdır. Bu minicik değişiklik genin ifade edilme biçimini, dolayısıyla ürettiği reseptörü değiştirir. Reseptör hâlâ çalışır: molekülü algılar ve beyne bir sinyal gönderir. Ama mesaj artık doğru değildir. Beyin taze ot yerine sabun okur."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p3",
+      "title": "Bu mutasyon neden hayatta kaldı?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bu varyant bir bireyde rastgele ortaya çıkmaz. Yüzyıllardır anne babadan çocuklara aktarılır. Dünyanın bölgesine göre nüfusun **4%** ile **20%** arasındaki bir kısmı onu taşır. Peki bunca mutfak kişnişi temel malzeme yaparken böyle bir özellik neden sürüp gitti?"
+        },
+        {
+          "type": "image",
+          "asset": "cilantro_lime_mexican_tacos_street_food",
+          "ratio": "3:2",
+          "caption": "ABD'de bir taco kamyonu: Meksika mutfağında taze kişniş temel malzemelerden biridir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bazı evrim biyologları bir varsayım öne sürüyor. Eski dünyada bazı zehirli bitkiler de sabun tadı veriyordu. Bu tadı itici kılan bir reseptör, bir hayatta kalma mekanizması işlevi görmüş olabilir: atalarımızı tehlikeli bitkilerden uzak tutuyordu. Zararsız kişniş ise bu alarm sinyalinin yan kurbanı olurdu."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p4",
+      "title": "Kişnişi sevmeyi öğrenebilir miyiz?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gerçek bir taco hayal edenlere iyi haber: beyin yeniden eğitilebilir. Reseptörün kendisi değişmeyecek, ama zamanla onun beyne gönderdiği sinyali görmezden gelmeyi öğrenebilirsin. Yöntem tek bir sözcüğe sığar: tekrar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uygulamada, zaten sevdiğin bir yemeğe biraz kişniş katarak başlarsın. Sabunumsu notayı limon suyu ya da sirke gibi güçlü bir tatla da bastırabilirsin. Kötü sürpriz yaşanmayan deneyimler biriktikçe beyin sonunda kişnişin bir tehdit olmadığını kabul eder ve tiksinti azalır."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kişnişin sabun tadı, bölgeye göre insanların 4% ile 20%'sinin taşıdığı OR6A2 geninin bir varyantından gelir: bu kişilerin koku reseptörü kişnişin aldehitlerini yanlış okur. Belki de zehirli bitkilere karşı eski bir korunma refleksidir."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "N. Eriksson, S. Wu, C. B. Do et al., « A genetic variant near olfactory receptor genes influences cilantro preference », Flavour, vol. 1, 2012, art. 22.",
+      "url": "https://doi.org/10.1186/2044-7248-1-22"
+    },
+    {
+      "text": "Academic Path, « Why coriander tastes like soap ».",
+      "url": "https://academicpath.org/why-coriander-tastes-like-soap"
+    }
+  ]
+}

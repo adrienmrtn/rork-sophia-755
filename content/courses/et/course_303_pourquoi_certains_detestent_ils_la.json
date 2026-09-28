@@ -1,0 +1,123 @@
+{
+  "id": "course_303_pourquoi_certains_detestent_ils_la",
+  "title": "Miks mõned vihkavad koriandrit?",
+  "subtitle": "Seebimaitse",
+  "subject": "sciences",
+  "subcategory": "Meie igapäevaelu lahti seletatud",
+  "description": "Osale inimkonnast maitseb koriander nagu seep. Põhjus: üks muutunud täht ühes haistmisgeenis ja võib-olla meie esivanemate pärand.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "fresh_coriander_cilantro_bunch_leaves",
+    "ratio": "4:3",
+    "hook": "Sama leht, kaks maitset: ühtedele värske ürt, teistele seep. Erinevus taandub ühele tähele teie DNA-s."
+  },
+  "sections": [
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Koriander on üks maailma vanimaid ja enim kasutatud taimi. Juba antiikaja kreeklased ja roomlased kasvatasid seda nii toiduks kui ka ravimiks. Seda leidub Lõuna-Aasias, Hiinas ja Ladina-Ameerikas tuhandetes retseptides."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ometi ei talu mõned inimesed seda üldse. Kui enamik lauasolijaid tunneb värske ürdi maitset, siis nemad vannuvad, et närivad seepi. See ei ole kapriis ega harjumatus: vastus peitub nende ninas ja täpsemalt nende geenides."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p1",
+      "title": "Haistmisretseptorid ninast ajuni",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kõigel, mida maitseme või haistame, on keemiline koostis, mille aju peab lahti mõtestama. Maitse ja lõhn on tihedalt seotud. Lõhnataju teaduslik nimetus on [[haistmine]]: suur osa roa „maitsest“ jõuab meieni tegelikult nina kaudu, isegi närimise ajal."
+        },
+        {
+          "type": "image",
+          "asset": "olfactory_nerve_nasal_cavity_gray_anatomy_plate",
+          "ratio": "3:2",
+          "caption": "Ninalimaskesta läbilõige mikroskoobi all: just ninaõõne sein hoiab haistmisretseptoreid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ninaõõnes paiknevatel rakkudel asuvad [[haistmisretseptorid]]. Need tuvastavad toidu molekule ja muudavad need signaaliks, mille haistmisneuronid ajju edastavad. Iga retseptor valmistatakse ühe geeni järgi. Kui see geen muutub, muutub ka retseptor ja koos sellega tajutav maitse. Täpselt nii juhtubki koriandriga."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p2",
+      "title": "OR6A2, seebimaitse geen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Geneetikud on süüdlase tuvastanud: see on geen nimega [[OR6A2]]. See kodeerib haistmisretseptorit, mis on tundlik teatud koriandris leiduvate molekulide suhtes: need on [[küllastumata aldehüüdid]]. Enamikul inimestel tõlgib see retseptor need värskeks ja rohtseks nooti."
+        },
+        {
+          "type": "image",
+          "asset": "dna_double_helix_nhgri_illustration",
+          "ratio": "2:1",
+          "caption": "DNA kaksikheeliks: retseptori muutmiseks piisab ühest muutunud tähest."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mõnel inimesel esineb selles geenis [[üksiknukleotiidne polümorfism]] ehk SNP: üks DNA „täht“ on teistsugune. See pisike muutus mõjutab seda, kuidas geen avaldub, ja seega ka retseptorit, mida see toodab. Retseptor töötab endiselt: see tuvastab molekuli ja saadab ajju signaali. Kuid sõnum pole enam täpne. Värske ürdi asemel loeb aju: seep."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p3",
+      "title": "Miks see mutatsioon säilis?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "See variant ei teki üksikul inimesel juhuslikult. See on vanematelt lastele edasi kandunud sajandeid. Olenevalt maailma piirkonnast kannab seda **4%** kuni **20%** elanikkonnast. Aga miks on selline tunnus püsima jäänud, kui nii paljud köögid kasutavad koriandrit põhikoostisosana?"
+        },
+        {
+          "type": "image",
+          "asset": "cilantro_lime_mexican_tacos_street_food",
+          "ratio": "3:2",
+          "caption": "Tacoauto Ameerika Ühendriikides: Mehhiko köögis on värske koriander põhikoostisosa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mõned evolutsioonibioloogid pakuvad välja hüpoteesi. Muistses maailmas oli ka mõnel mürgisel taimel seebine maitse. Retseptor, mis muudab selle maitse vastikuks, võis olla ellujäämismehhanism: see hoidis meie esivanemaid ohtlikest taimedest eemale. Kahjutu koriander oleks selle häiresignaali juhuslik ohver."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p4",
+      "title": "Kas koriandrit saab armastama õppida?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hea uudis kõigile, kes unistavad korralikust tacost: aju saab ümber õpetada. Retseptor ise ei muutu, kuid aja jooksul saab õppida eirama signaali, mida see ajju saadab. Meetod mahub ühte sõnasse: kordamine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikas alustatakse sellest, et lisatakse veidi koriandrit roale, mis juba meeldib. Seebise noodi saab ka varjata mõne tugeva maitsega, näiteks sidrunimahla või äädikaga. Kui ebameeldivaid üllatusi ikka ja jälle ei tule, leppib aju lõpuks sellega, et koriander pole oht, ja vastikus taandub."
+        },
+        {
+          "type": "takeaway",
+          "text": "Koriandri seebimaitse tuleneb geeni OR6A2 variandist, mida kannab olenevalt piirkonnast 4 kuni 20% inimestest: nende haistmisretseptor loeb koriandri aldehüüde valesti, ja see võib olla iidne kaitserefleks mürgiste taimede vastu."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "N. Eriksson, S. Wu, C. B. Do et al., « A genetic variant near olfactory receptor genes influences cilantro preference », Flavour, vol. 1, 2012, art. 22.",
+      "url": "https://doi.org/10.1186/2044-7248-1-22"
+    },
+    {
+      "text": "Academic Path, « Why coriander tastes like soap ».",
+      "url": "https://academicpath.org/why-coriander-tastes-like-soap"
+    }
+  ]
+}

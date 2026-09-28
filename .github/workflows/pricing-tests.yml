@@ -1,0 +1,136 @@
+# Create the price-test subscriptions and their RevenueCat offerings from the
+# Actions tab, with no key on anyone's laptop. Same .p8 secrets as the App Store
+# metadata workflow, plus a RevenueCat v2 secret key with write access.
+#
+# Trigger: "Run workflow". Defaults to a plan (dry run) that writes nothing.
+#
+#   target = appstore
+#     plan     what `apply` would create in App Store Connect. Writes nothing.
+#     apply    create the 7 subscriptions of appstore/subscriptions/price_tests.json
+#              (localizations, availability, Apple price grid + overrides, free
+#              trial, review screenshot copied from Sophia_yearly).
+#     status   state of every subscription in the "Sophia Premium" group.
+#     prices   customer price of every subscription in a dozen territories.
+#     submit   submit the group for review (only what is Ready to Submit).
+#
+#   target = revenuecat
+#     plan     what `apply` would create or attach in RevenueCat. Writes nothing.
+#     apply    products (App Store + Play Store), attachment to `premium`,
+#              offerings and packages of the manifest.
+#
+#   target = revenuecat-experiments
+#     plan     previews the 5 country audiences (iOS only) and lists the 5 draft
+#              experiments `apply` would create. Writes nothing.
+#     apply    creates the missing audiences and the missing experiments, as
+#              drafts. Never starts one: that is a click in the dashboard on the
+#              day Apple approves the products.
+#
+# Extra key permissions for that target: audiences:audiences:read_write and
+# project_configuration:experiments:read_write.
+name: Pricing tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Where"
+        type: choice
+        default: appstore
+        options:
+          - appstore
+          - revenuecat
+          - revenuecat-experiments
+      action:
+        description: "What to do (plan writes nothing)"
+        type: choice
+        default: plan
+        options:
+          - plan
+          - apply
+          - status
+          - prices
+          - submit
+      only:
+        description: "appstore only: one product id, e.g. Sophia_yearly_4999 (blank = all)"
+        type: string
+        default: ""
+
+concurrency:
+  group: pricing-tests
+  cancel-in-progress: false
+
+jobs:
+  run:
+    name: ${{ inputs.target }} · ${{ inputs.action }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install the JWT signer
+        run: pip install --quiet pyjwt cryptography
+
+      - name: Check the secrets are set
+        env:
+          TARGET: ${{ inputs.target }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+          REVENUECAT_SECRET_API_KEY: ${{ secrets.REVENUECAT_SECRET_API_KEY }}
+        run: |
+          missing=""
+          if [ "$TARGET" = "appstore" ]; then names="ASC_KEY_ID ASC_ISSUER_ID ASC_PRIVATE_KEY"; else names="REVENUECAT_SECRET_API_KEY"; fi
+          for name in $names; do
+            [ -n "${!name}" ] || missing="$missing $name"
+          done
+          if [ -n "$missing" ]; then
+            echo "Missing repository secret(s):$missing" >&2
+            echo "Settings -> Secrets and variables -> Actions -> New repository secret" >&2
+            exit 1
+          fi
+
+      - name: Run
+        env:
+          PYTHONUNBUFFERED: "1"
+          TARGET: ${{ inputs.target }}
+          ACTION: ${{ inputs.action }}
+          ONLY: ${{ inputs.only }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+          REVENUECAT_SECRET_API_KEY: ${{ secrets.REVENUECAT_SECRET_API_KEY }}
+          REVENUECAT_PROJECT_ID: ${{ secrets.REVENUECAT_PROJECT_ID }}
+        run: |
+          only=()
+          if [ -n "$ONLY" ]; then
+            only=(--only "$ONLY")
+          fi
+          case "$TARGET/$ACTION" in
+            appstore/plan)     set -- scripts/appstore_subscriptions.py plan "${only[@]}" ;;
+            appstore/apply)    set -- scripts/appstore_subscriptions.py apply "${only[@]}" ;;
+            appstore/status)   set -- scripts/appstore_subscriptions.py status ;;
+            appstore/prices)   set -- scripts/appstore_subscriptions.py prices ;;
+            appstore/submit)   set -- scripts/appstore_subscriptions.py submit ;;
+            revenuecat/plan)   set -- scripts/revenuecat_pricing_setup.py plan ;;
+            revenuecat/apply)  set -- scripts/revenuecat_pricing_setup.py apply ;;
+            revenuecat-experiments/plan)  set -- scripts/revenuecat_experiments.py plan ;;
+            revenuecat-experiments/apply) set -- scripts/revenuecat_experiments.py apply ;;
+            *) echo "unsupported: $TARGET / $ACTION" >&2; exit 1 ;;
+          esac
+          {
+            echo "### \`$TARGET · $ACTION\`"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          set +e
+          python3 "$@" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          status=${PIPESTATUS[0]}
+          set -e
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"

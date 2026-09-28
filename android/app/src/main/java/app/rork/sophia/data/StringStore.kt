@@ -39,6 +39,31 @@ object StringStore {
     }
 
     /**
+     * A trial string with its day count filled in: `{n}` is the number of days, `{dayWord}`
+     * the unit for the languages that inflect it with the number (Russian, Czech, Slovak).
+     * The store decides the trial length, so no string may carry the number itself.
+     */
+    fun trialText(context: Context, key: String, language: AppLanguage, days: Int, vararg formatArgs: Any): String =
+        text(context, key, language, *formatArgs)
+            .replace("{n}", days.toString())
+            .replace("{dayWord}", dayWord(days, language))
+
+    private fun dayWord(n: Int, language: AppLanguage): String = when (language.code) {
+        "ru" -> {
+            val mod10 = n % 10
+            val mod100 = n % 100
+            when {
+                mod10 == 1 && mod100 != 11 -> "день"
+                mod10 in 2..4 && mod100 !in 12..14 -> "дня"
+                else -> "дней"
+            }
+        }
+        "cs" -> if (n == 1) "den" else if (n in 2..4) "dny" else "dní"
+        "sk" -> if (n == 1) "deň" else if (n in 2..4) "dni" else "dní"
+        else -> ""
+    }
+
+    /**
      * The variant key for a count, or [key] itself when the table has no plural forms for it.
      * Checked against the user's table first and English second, so a key that is pluralized
      * in only one of them still resolves.

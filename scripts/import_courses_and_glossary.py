@@ -6,6 +6,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 COURSE_DATA = ROOT / "ios/Sophia/Services/CourseData.swift"
+
+def _resplit_course_data() -> None:
+    """CourseData.swift is not compiled: the chunks under CourseDataChunks/ are."""
+    import subprocess, sys
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "split_course_data.py")], check=True)
 GLOSSARY_DATA = ROOT / "ios/Sophia/Services/GlossaryData.swift"
 EXCEL_COURS = Path("/Users/didiermartinot/Desktop/Excel_cours_V5.xlsx")
 EXCEL_GLOSS = Path("/Users/didiermartinot/Desktop/Glossaire_culture_generale.xlsx")
@@ -344,6 +349,7 @@ def main():
     header = "import Foundation\n\nnonisolated enum CourseData {\n    static let allCourses: [Course] = [\n"
     footer = "\n    ]\n}\n"
     COURSE_DATA.write_text(header + ",\n".join(blocks) + footer, encoding="utf-8")
+    _resplit_course_data()
     GLOSSARY_DATA.write_text(generate_glossary_swift(links), encoding="utf-8")
     print(f"Wrote {COURSE_DATA}")
     print(f"Wrote {GLOSSARY_DATA}")

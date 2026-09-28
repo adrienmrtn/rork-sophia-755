@@ -1,14 +1,15 @@
 {
   "id": "course_234_la_securite_alimentaire_mondiale",
-  "title": "Pourquoi 800 millions de personnes ont-elles encore faim ?",
-  "subtitle": "800 millions de personnes",
+  "title": "Comment nourrir huit milliards d'humains ?",
+  "subtitle": "Produire mieux, gaspiller moins",
   "subject": "comprendreLeMonde",
   "subcategory": "Environnement & avenir",
-  "description": "La Terre produit assez de nourriture pour tout le monde. Alors pourquoi **800 millions de personnes** souffrent-elles encore de la faim ?",
+  "description": "La planète produit plus de nourriture que jamais, et pourtant la faim progresse. Le problème n'est pas la quantité, mais la façon dont on produit, transporte et gaspille ce que l'on mange.",
+  "author": "kate-waddams",
   "hero": {
-    "image": "la_securite_alimentaire_mondiale",
-    "ratio": "16:9",
-    "hook": "La faim de 800 millions d'humains n'est pas un problème de nourriture, mais de partage."
+    "image": "combine_harvester_wheat_field_aerial",
+    "ratio": "4:3",
+    "hook": "Nous produisons assez pour nourrir tout le monde. Le problème, c'est ce que nous faisons de cette nourriture."
   },
   "sections": [
     {
@@ -18,95 +19,120 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aujourd'hui, environ **800 millions de personnes** souffrent de la faim dans le monde, soit une personne sur dix. Ce chiffre est d'autant plus étrange que l'humanité n'a jamais produit autant de nourriture : statistiquement, il y a largement assez à manger pour tout le monde."
+          "text": "Avec la montée de la faim et de la [[malnutrition]] dans le monde, on pourrait croire que la Terre ne produit plus assez pour une population qui grossit. C'est faux. Depuis les années **1960**, la production agricole augmente plus vite que le nombre d'humains. Ce qui coince, c'est la manière dont cette nourriture est produite et distribuée."
         },
         {
           "type": "paragraph",
-          "text": "La faim n'est donc pas un problème de quantité, mais de répartition. Comprendre la sécurité alimentaire mondiale, c'est comprendre pourquoi l'abondance et la famine peuvent coexister sur la même planète."
+          "text": "Les chiffres sont contradictoires. **7 %** des enfants de moins de cinq ans souffrent de malnutrition, alors que **40 %** des adultes sont en surpoids. Et aujourd'hui, une mauvaise alimentation tue plus d'adultes que le tabac. Nourrir huit milliards de personnes n'a rien de simple : la [[chaîne d'approvisionnement]] a des trous, nous gaspillons énormément, et beaucoup de pratiques agricoles ne sont plus tenables."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p1",
-      "title": "La géographie de la faim",
+      "title": "Les fermes transforment le soleil en nourriture",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Selon la **[[FAO]]**, l'agence des Nations unies pour l'alimentation, la sous-alimentation chronique touchait encore environ 800 millions de personnes en 2024. Ce chiffre global cache des réalités très différentes. Les zones les plus touchées se trouvent en Afrique subsaharienne, où plus d'un quart de la population manque régulièrement de nourriture, et en Asie du Sud."
+          "text": "Une ferme capte la lumière du soleil et la transforme en nourriture. Ce travail, ce sont les plantes qui le font : cultivées, elles donnent des aliments comestibles. Le bétail au pâturage, lui, convertit l'herbe en viande et en lait. Pourtant, les fermes ont mauvaise presse : sols dégradés, pollution, déforestation, animaux qui concurrencent les humains pour la nourriture et l'espace."
         },
         {
           "type": "image",
-          "asset": "famine_sub_saharan_africa_malnutrition_child",
-          "ratio": "auto",
-          "caption": "La faim touche encore des centaines de millions de personnes, surtout en Afrique subsaharienne."
+          "asset": "dairy_cows_grazing_green_pasture",
+          "ratio": "3:2",
+          "caption": "Des vaches au pâturage : de l'herbe transformée en lait et en viande."
         },
         {
           "type": "paragraph",
-          "text": "Il existe plusieurs formes de détresse alimentaire. La **sous-alimentation** correspond à un manque de calories. Les **carences en micronutriments**, souvent appelées « faim cachée », touchent 2 milliards de personnes qui manquent de vitamines ou de minéraux essentiels, avec des conséquences sur la croissance ou la santé. Enfin, la **malnutrition** inclut aussi, de façon surprenante, l'obésité : dans de nombreux pays en développement, les habitants remplacent peu à peu les produits frais par des aliments transformés, riches en calories mais pauvres en nutriments."
+          "text": "Ces problèmes viennent en partie de pratiques agricoles non durables. C'est cela qu'il faut changer. Une idée reçue veut que produire toujours plus oblige à injecter toujours plus dans les systèmes de production. C'est faux. Produire davantage n'exige pas forcément plus de pesticides, d'engrais, de terres ou de main-d'œuvre. Cela peut même signifier l'inverse."
         },
         {
-          "type": "funFact",
-          "text": "Si l'on réduisait le gaspillage alimentaire mondial de seulement 25 %, on pourrait théoriquement nourrir l'ensemble des 800 millions de personnes qui souffrent aujourd'hui de la faim."
+          "type": "paragraph",
+          "text": "Tout tient dans un mot : l'efficacité. Avec des méthodes agricoles plus efficaces, on peut produire plus de nourriture pour des milliards de personnes tout en utilisant moins d'[[intrants]], c'est-à-dire moins d'engrais, de pesticides, d'énergie et de main-d'œuvre, et en occupant moins de terres."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p2",
-      "title": "Le paradoxe de l'abondance et du gaspillage",
+      "title": "Un tiers de la nourriture n'arrive jamais dans l'assiette",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le monde produit actuellement l'équivalent de 2 800 kilocalories par personne et par jour, largement assez pour éliminer la faim. Le vrai problème n'est donc pas la pénurie, mais l'**accès** : les populations les plus pauvres n'ont simplement pas les moyens d'acheter des aliments dont le prix varie sans cesse sur les marchés mondiaux."
+          "text": "Produire assez n'est que la moitié du chemin. Encore faut-il acheminer la nourriture jusqu'aux consommateurs, un tout autre défi. Le chiffre donne le vertige : **un tiers** de la nourriture produite dans le monde est perdu ou gaspillé, soit **1,3 milliard de tonnes** chaque année."
         },
         {
-          "type": "paragraph",
-          "text": "L'autre versant de ce paradoxe est le **gaspillage**. Environ un tiers de la production mondiale, soit 1,3 milliard de tonnes de nourriture, est perdu chaque année. Dans les pays pauvres, les pertes surviennent tôt : manque de lieux de stockage, absence de chambres froides, routes en mauvais état. Dans les pays riches, le gaspillage a lieu plus tard, au moment de la distribution et de la consommation."
+          "type": "image",
+          "asset": "discarded_fruit_vegetables_food_waste_dumpster",
+          "ratio": "3:2",
+          "caption": "Campagne anti-gaspillage américaine de la Première Guerre mondiale : des enfants apprennent aux adultes à mettre fruits et légumes en conserve."
         },
         {
           "type": "funFact",
-          "text": "Depuis les années 2010, l'obésité et les maladies liées au surpoids tuent chaque année davantage de personnes dans le monde que la sous-nutrition, un tournant historique pour la santé publique mondiale."
+          "text": "Le [[gaspillage alimentaire]] coûte plus qu'il n'y paraît. Jeter une pomme, c'est aussi jeter le temps, l'énergie et l'argent qu'il a fallu pour la faire pousser, la récolter et la transporter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Avec la [[mondialisation]] de l'agriculture, le commerce entre continents et l'ouverture des marchés, les pays ne dépendent plus de leur propre production pour nourrir leur population. Certains produits ne sont plus saisonniers : on les importe des quatre coins du monde. Mais cet accès élargi allonge les chaînes d'approvisionnement, et plus une chaîne est longue, plus elle compte de maillons fragiles."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p3",
-      "title": "Quand la nourriture devient une arme géopolitique",
+      "title": "Produire plus avec moins",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La sécurité alimentaire est aussi une question de géopolitique. De nombreux pays dépendent des exportations de quelques grandes puissances agricoles, ce qui les rend très vulnérables au moindre blocage. L'Ukraine et la Russie assurent ensemble près de 30 % des exportations mondiales de blé. Quand ce flux s'arrête, les prix s'envolent sur le **[[marché à terme]]** de Chicago, où se négocient les récoltes futures, et des pays comme l'Égypte ou le Liban basculent dans une crise sociale grave."
+          "text": "Augmenter les intrants pour suivre la demande n'est ni durable ni réaliste. Les agriculteurs doivent adopter de meilleures pratiques, et la démographie n'est pas la seule à les y pousser. Ils subissent déjà le changement climatique : une météo erratique et imprévisible les force à sortir des sentiers battus."
         },
         {
           "type": "paragraph",
-          "text": "Cette fragilité vient aussi d'un choix fait dans les années 1960 : la **[[révolution verte]]**. Cette vague de nouvelles techniques agricoles a permis d'augmenter fortement les rendements, mais elle a aussi réduit la diversité des cultures et rendu les agriculteurs dépendants des engrais chimiques. Résultat, chaque hausse du prix du pétrole se répercute directement sur le prix du pain."
+          "text": "Améliorer la santé des sols, optimiser les performances des animaux, planter des cultures résistantes au climat, pratiquer l'[[agriculture de précision]] : autant de façons de tirer plus de moins. Plutôt que d'épandre de l'engrais sur tout un champ, un robot analyse le sol en temps réel et ne délivre que la dose exacte nécessaire à cette parcelle. Résultat : des coûts réduits, un impact environnemental limité et des rendements optimisés."
+        },
+        {
+          "type": "image",
+          "asset": "agricultural_drone_precision_farming_field",
+          "ratio": "4:3",
+          "caption": "Vue aérienne d'un champ de céréales et de ses passages de tracteur, près de Dülmen (Allemagne), en 2024."
         },
         {
           "type": "paragraph",
-          "text": "Le concept de **food power** désigne justement l'utilisation volontaire des exportations de nourriture comme moyen de pression diplomatique, voire comme sanction contre un pays adverse."
+          "text": "Ces technologies font partie de la solution et pèsent de plus en plus dans la recherche agricole. Pour nourrir huit milliards de personnes, il ne faut pas forcément plus de terres, plus d'animaux ni plus d'hectares de cultures. Il faut tirer davantage de ce que nous utilisons déjà."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p4",
-      "title": "Nourrir 10 milliards d'humains sans épuiser la planète",
+      "title": "Un problème partagé, de la ferme au consommateur",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "D'ici 2050, la population mondiale devrait atteindre 10 milliards d'habitants. Le changement climatique menace déjà les rendements en multipliant sécheresses et inondations, déplaçant les terres cultivables. L'agriculture intensive épuise aussi les sols et les nappes d'eau souterraines, qui se vident parfois plus vite qu'elles ne se remplissent."
+          "text": "Les agriculteurs sont souvent montrés du doigt. Ce sont pourtant eux qui nourrissent nos enfants, et ils sont aussi les gardiens des campagnes et de l'environnement. Mais nourrir la planète n'est pas leur affaire à eux seuls : cela demande bien plus que de faire pousser des aliments."
         },
         {
           "type": "paragraph",
-          "text": "L'une des pistes d'avenir s'appelle l'**[[agroécologie]]** : produire en s'appuyant sur les cycles naturels, comme le compost ou la rotation des cultures, plutôt qu'en les combattant à coups de produits chimiques. L'enjeu est de garantir, pour chaque être humain, un accès permanent à une nourriture saine, sans épuiser davantage la planète."
+          "text": "Cela nous demande des choix durables : préférer des produits plus sains et d'origine responsable, et n'acheter que ce que nous mangerons vraiment. Toute la filière alimentaire, transformateurs, emballeurs, transporteurs, distributeurs et nous, les consommateurs, peut aussi changer ses habitudes. L'avenir de l'alimentation est un problème partagé. L'alimentation de huit milliards de personnes façonne la planète entière, et vous en faites partie."
         },
         {
           "type": "takeaway",
-          "text": "La Terre produit assez de calories pour nourrir tout le monde. La faim de 800 millions de personnes vient donc d'un problème d'accès, de gaspillage et de crises géopolitiques, aggravé par le changement climatique."
+          "text": "La Terre produit assez pour tous : nourrir huit milliards d'humains suppose de gaspiller moins, de produire plus avec moins d'intrants et de terres, et de changer nos choix, de la ferme à l'assiette."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "United Nations, Department of Economic and Social Affairs, « Can we feed the billions? ».",
+      "url": "https://www.un.org/en/desa/can-we-feed-billions"
+    },
+    {
+      "text": "H. Ritchie, « No, growing more food does not mean we always need more and more inputs », Sustainability by Numbers.",
+      "url": "https://hannahritchie.substack.com/p/agricultural-total-factor-productivity"
+    },
+    {
+      "text": "J. Gustavsson, C. Cederberg, U. Sonesson, R. van Otterdijk et A. Meybeck, Global Food Losses and Food Waste: Extent, Causes and Prevention, FAO, Rome, 2011."
     }
   ]
 }

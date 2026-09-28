@@ -1,0 +1,135 @@
+{
+  "id": "course_242_pourquoi_a_t_on_le_hoquet",
+  "title": "Hvorfor får vi hikke?",
+  "subtitle": "Reflekser og pust",
+  "subject": "sciences",
+  "subcategory": "Hverdagen forklart",
+  "description": "En krampe i mellomgulvet, en stemmespalte som smekker igjen, og et «hikk» du ikke kan styre. Hva kroppen egentlig gjør, og hvorfor ingen kur er bevist.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "child_hiccups_surprised_hand_over_mouth",
+    "ratio": "4:3",
+    "hook": "Du får høre at du skal holde pusten, drikke opp ned eller bli skremt. Men hva skjer egentlig inne i kroppen din?"
+  },
+  "sections": [
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+      "title": "Innledning",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alle får hikke, fra spedbarnet til bestefar, og alle kjenner en kur som aldri slår feil. Naboen sverger til et glass vann drukket opp ned, bestemor til en skje sukker. Likevel er hikke fortsatt en av menneskekroppens mest gåtefulle reflekser."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bak det lille «hikket» ligger et presist maskineri: nerver, en muskel som trekker seg sammen uten forvarsel, og en dør som smeller igjen i halsen. Her er det medisinen vet om saken, og det den ennå ikke vet."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+      "title": "En refleks som går utenom hjernen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hikke styres av en [[refleksbue]], en nervekrets som utløser en reaksjon uten noen bevisst beslutning. Det er samme mekanisme som får beinet ditt til å sparke når legen banker under kneet, eller som trekker hånden din bort fra en varm kokeplate før du rekker å kjenne smerten."
+        },
+        {
+          "type": "image",
+          "asset": "mouse_diaphragm_muscle_fibres_microscopy",
+          "ratio": "auto",
+          "caption": "Mellomgulvet i mikroskop: en tverrstripet muskel, som musklene i armer og bein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Når nervene som forbinder hjernen med pustemusklene blir irritert, trekker [[mellomgulvet]] seg plutselig sammen. Luften strømmer ned i lungene. Et brøkdels sekund senere lukker [[stemmespalten]], åpningen mellom stemmebåndene, seg brått. Det er dette smellet som gir «hikket»."
+        },
+        {
+          "type": "funFact",
+          "text": "Det vitenskapelige navnet på hikke er *singultus*, et latinsk ord som også betyr hulk. Det er derfor ikke rart at barn ofte får hikke etter et langt gråteanfall."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+      "title": "Fra fosteret til bestefar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De fleste hikkeanfall kalles **forbigående**: de varer kortere enn **48 timer** og går over av seg selv. Utløserne er hverdagslige: å spise for fort, drikke kullsyreholdig drikke, svelge luft eller drikke alkohol. Alt som spiler ut magesekken eller irriterer nervene i nærheten, kan sette i gang refleksen."
+        },
+        {
+          "type": "image",
+          "asset": "fetal_ultrasound_scan_pregnancy",
+          "ratio": "2:1",
+          "caption": "På ultralyd kan man allerede se fosteret hikke, lenge før det trekker sitt første åndedrag."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vi kan få hikke i alle aldre, til og med før vi er født. Ultralydbilder viser fostre som hikker i mors mage. Og de spiser neppe for fort. En hypotese: krampene trener kanskje opp pustemusklene, en generalprøve før det første åndedraget."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+      "title": "Når hikken ikke vil gi seg",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Noen ganger slår hikken seg ned. Varer den lenger enn **to døgn**, snakker legene om **vedvarende** hikke; varer den over **en måned**, om [[refraktær hikke]]. Disse sjeldne formene er ofte tegn på noe annet: en sykdom i magesekken eller spiserøret, et lungeproblem eller en skade i sentralnervesystemet."
+        },
+        {
+          "type": "paragraph",
+          "text": "I slike tilfeller leter legen etter årsaken og setter i gang behandling, noen ganger med medisiner som demper refleksbanen. Hikken er da ikke lenger et forbigående ubehag, men et symptom som hindrer deg i å spise, sove og snakke."
+        },
+        {
+          "type": "funFact",
+          "text": "Rekorden for lengste hikkeanfall innehas av en amerikansk bonde, [[Charles Osborne]], som hikket uavbrutt fra **1922 til 1990**, altså i 68 år, ifølge Guinness rekordbok. Han rakk likevel å gifte seg to ganger og få åtte barn."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+      "title": "Kurer i massevis, ingen bevist",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den gode nyheten om forbigående hikke er at den går over av seg selv. Den mindre gode: ingen husmorråd er bekreftet av en seriøs studie. Holde pusten, drikke kaldt vann, dra i tungen, puste i en pose... Alt bygger på erfaringer, ikke på bevis."
+        },
+        {
+          "type": "image",
+          "asset": "glass_of_cold_water_home_remedy_hiccups",
+          "ratio": "3:2",
+          "caption": "Et glass kaldt vann: det mest utbredte rådet, og et av de minst undersøkte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Triksene har likevel en felles logikk: de forstyrrer refleksbanen. Å holde pusten øker mengden karbondioksid i blodet og roer mellomgulvet. Å svelge eller dra i tungen stimulerer nervene i halsen og kan «nullstille» kretsen. Noen ganger virker det. Uten at noen helt vet hvorfor."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hikke er en refleks: mellomgulvet trekker seg sammen, stemmespalten lukker seg, «hikk». Nesten alltid går den over, men etter 48 timer blir den et symptom. Ingen husmorråd er bevist, selv om alle forsøker å bryte kretsen."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Alimentary Pharmacology & Therapeutics (Wiley), revue sur la physiopathologie et le traitement du hoquet.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.13374"
+    },
+    {
+      "text": "Cleveland Clinic, « Hiccups ».",
+      "url": "https://my.clevelandclinic.org/health/diseases/17672-hiccups"
+    },
+    {
+      "text": "Guinness World Records, « Longest attack of hiccups ».",
+      "url": "https://www.guinnessworldrecords.com/world-records/67619-longest-attack-of-hiccups"
+    }
+  ]
+}

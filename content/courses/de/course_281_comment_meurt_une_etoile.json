@@ -1,0 +1,128 @@
+{
+  "id": "course_281_comment_meurt_une_etoile",
+  "title": "Wie stirbt ein Stern?",
+  "subtitle": "Roter Riese oder Supernova",
+  "subject": "sciences",
+  "subcategory": "Die Erde und das Universum",
+  "description": "Milliarden Jahre lang hält ein Stern das Gleichgewicht zwischen der Schwerkraft und der Fusion in seinem Kern. Geht der Brennstoff aus, bläht er sich auf, stürzt in sich zusammen oder explodiert, und sein Ende hängt von einer einzigen Sache ab: seiner Masse.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "crab_nebula_supernova_remnant_hubble",
+    "ratio": "4:3",
+    "hook": "Ein Stern kann sanft verlöschen oder mit unvorstellbarer Wucht explodieren: Alles entscheidet seine Masse."
+  },
+  "sections": [
+    {
+      "id": "course_281_comment_meurt_une_etoile_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Woran stirbt ein Stern? Er beginnt zu sterben, wenn er seiner eigenen Schwerkraft nicht mehr standhalten kann. Den größten Teil seines Lebens zieht die Schwerkraft seine Materie zur Mitte hin. Gleichzeitig erzeugt die Energie aus seinem Kern einen Druck, der nach außen drückt. Beide Kräfte gleichen sich aus, und der Stern bleibt stabil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Energie stammt aus der [[Kernfusion]]: Wasserstoffkerne verschmelzen zu Helium und setzen dabei gewaltige Energie frei. Das Gleichgewicht kann Millionen, Milliarden oder sogar Billionen Jahre halten. Alles hängt von der Masse ab. Kleine Sterne verbrauchen ihren Brennstoff langsam, massereiche Sterne verfeuern ihn viel schneller. Eines Tages kippt das Gleichgewicht. Was dann geschieht, hängt von der Masse des Sterns ab."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p1",
+      "title": "Der Stern bläht sich zum Roten Riesen auf",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den größten Teil seines Lebens wandelt der Stern den Wasserstoff in seinem Kern, seiner zentralen Region, in Helium um. Geht dieser Wasserstoff zur Neige, verlangsamt sich die Fusion im Zentrum. Der Kern zieht sich zusammen und wird heißer. Um ihn herum verschmilzt eine Wasserstoffschicht weiter und setzt Energie frei. Unter diesem Druck blähen sich die äußeren Schichten des Sterns gewaltig auf."
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Ergebnis ist ein [[Roter Riese]]: ein Stern, viel größer als zuvor, mit einer kühleren Oberfläche. Ein sterbender Stern wird also zuerst größer, statt sanft zu verlöschen. Die Sonne dürfte diese Phase in etwa **5 Milliarden Jahren** erreichen."
+        },
+        {
+          "type": "funFact",
+          "text": "Als Roter Riese könnte die Sonne so groß werden, dass sie Merkur und Venus verschluckt. Das genaue Schicksal der Erde bleibt dagegen ungewiss."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p2",
+      "title": "Ein Weißer Zwerg so groß wie die Erde",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Stern wie die Sonne kann sich nicht endlos aufblähen. Mit dem Alter verliert er seine äußeren Schichten, die ins All entweichen. Dieses Gas verteilt sich und bildet eine leuchtende Wolke, einen [[planetarischen Nebel]]. In der Mitte bleibt ein [[Weißer Zwerg]] zurück: der heiße, dichte Kern des Sterns, freigelegt, sobald die äußeren Schichten fort sind."
+        },
+        {
+          "type": "image",
+          "asset": "helix_nebula_planetary_nebula_white_dwarf_hubble",
+          "ratio": "1:1",
+          "caption": "Der Helixnebel: das von einem sterbenden Stern ausgestoßene Gas, mit dem Weißen Zwerg in der Mitte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Weißer Zwerg ist nicht größer als die **Erde**, enthält aber noch einen großen Teil der Masse des ursprünglichen Sterns. Die Fusion hat in ihm aufgehört: Er erzeugt keine Energie mehr. Wenn er leuchtet, dann nur, weil er noch extrem heiß ist. Über eine unermesslich lange Zeit kühlt er ab und verblasst allmählich."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p3",
+      "title": "Supernova, Neutronenstern oder Schwarzes Loch",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein viel massereicherer Stern hört hier nicht auf. Er verschmilzt weiter leichte Elemente zu schwereren: Aus Helium wird Kohlenstoff, und spätere Reaktionen erzeugen noch schwerere Elemente. Nach und nach bildet sich ein Kern voller **Eisen**. Doch mit Eisen liefert die Fusion nicht mehr die Energie, die den Stern gegen die Schwerkraft stützt. Der Kern stürzt in einem Augenblick in sich zusammen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dieser Kollaps kann eine [[Supernova]] auslösen, eine gewaltige Explosion, die einen großen Teil des Sterns ins All schleudert. Der zusammengestürzte Kern aber bleibt. Ist er nicht zu massereich, wird er zu einem [[Neutronenstern]], einem Objekt von extremer Dichte, nicht größer als eine Stadt. Ist er massereich genug, presst ihn die Schwerkraft weiter zusammen, bis ein [[Schwarzes Loch]] entsteht, dessen Anziehung so stark ist, dass nicht einmal Licht entkommt."
+        },
+        {
+          "type": "image",
+          "asset": "m87_black_hole_event_horizon_telescope_2019",
+          "ratio": "16:9",
+          "caption": "Das Schwarze Loch in M87: das erste Bild von 2019 (links) und seine mit dem Algorithmus PRIMO geschärfte Fassung (2023)."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p4",
+      "title": "Wir sind Sternenstaub",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein sterbender Stern verschwindet nicht einfach. Er gibt einen Teil seiner Materie ans All zurück, angereichert mit den Elementen, die er im Laufe seines Lebens erzeugt hat. Mit der Zeit kann diese Materie in neue Sterne, Planeten und andere Welten eingehen."
+        },
+        {
+          "type": "image",
+          "asset": "pillars_of_creation_eagle_nebula_jwst_2022",
+          "ratio": "2:3",
+          "caption": "Die Säulen der Schöpfung, aufgenommen vom James-Webb-Teleskop 2022: Hier entstehen neue Sterne."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Kohlenstoff** ist das beste Beispiel. Er ist unverzichtbar für das Leben auf der Erde, auch in unseren eigenen Körpern. Doch der meiste Kohlenstoff entstand in Generationen von Sternen, die heute längst verschwunden sind. Deshalb heißt es manchmal, wir seien aus Sternenstaub gemacht. Das klingt poetisch, doch die Wissenschaft dahinter ist ganz real. Der Tod eines Sterns ist also auch ein Anfang: Seine Materie bildet vielleicht eines Tages einen anderen Stern, einen anderen Planeten oder sogar eine belebte Welt."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ohne Fusion gibt ein Stern der Schwerkraft nach: Kleine Sterne verlöschen als Weiße Zwerge, massereiche explodieren als Supernova und hinterlassen einen Neutronenstern oder ein Schwarzes Loch, und ihre verstreute Materie nährt künftige Sterne, Planeten und Lebewesen."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, p. 541."
+    },
+    {
+      "text": "NASA Science, « Types of Stars: White Dwarfs »."
+    },
+    {
+      "text": "S. Frazier, « Why the Sun Won't Become a Black Hole », NASA Goddard Space Flight Center, 2019."
+    }
+  ]
+}

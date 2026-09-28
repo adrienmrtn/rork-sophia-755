@@ -20,13 +20,24 @@ final class DeepLinkRouter {
     static let shared = DeepLinkRouter()
 
     private(set) var pendingCourseId: String?
+    /// Where the pending request came from: `deep_link` for a `sophia://` URL, otherwise the
+    /// in-app entry point that reused this door (the author page opening another course).
+    private(set) var pendingSource: String = "deep_link"
     /// Increments on every request, so two requests for the same course are still two events.
     private(set) var token: Int = 0
 
     private init() {}
 
-    func requestCourse(_ courseId: String) {
+    func requestCourse(_ courseId: String, source: String = "deep_link") {
         pendingCourseId = courseId
+        pendingSource = source
+        token += 1
+    }
+
+    /// `sophia://unlock` (TikTok blocker). The request itself lives in the App Group
+    /// stamp; this only wakes the home screen so it reads the stamp now rather than on
+    /// its next foreground.
+    func requestUnlock() {
         token += 1
     }
 

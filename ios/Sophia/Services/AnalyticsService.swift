@@ -35,6 +35,7 @@ enum AnalyticsService {
         let mixpanel = Mixpanel.mainInstance()
         mixpanel.registerSuperProperties([
             "language": language.rawValue,
+            "discount_bucket": StoreViewModel.discountBucket.rawValue,
             "is_premium": isPremium,
             "onboarding_completed": onboardingCompleted,
             "unlocked_subjects": unlocked,
@@ -127,7 +128,10 @@ enum AnalyticsService {
     }
 
     static func trackDiscountOfferViewed(source: String) {
-        track("discount_offer_viewed", ["source": source])
+        track("discount_offer_viewed", [
+            "source": source,
+            "discount_bucket": StoreViewModel.discountBucket.rawValue,
+        ])
     }
 
     static func trackPurchaseCompleted(context: String, offeringId: String? = nil, packageId: String? = nil) {
@@ -208,6 +212,34 @@ enum AnalyticsService {
         ])
     }
 
+    // MARK: - Learning path
+
+    static func trackPathQuizStarted(collectionId: String, level: Int, questionCount: Int) {
+        track("path_quiz_started", [
+            "collection_id": collectionId,
+            "level": level,
+            "question_count": questionCount,
+        ])
+    }
+
+    static func trackPathQuizCompleted(collectionId: String, level: Int, correct: Int, total: Int, passed: Bool, attempt: Int) {
+        track("path_quiz_completed", [
+            "collection_id": collectionId,
+            "level": level,
+            "correct": correct,
+            "total": total,
+            "passed": passed,
+            "attempt": attempt,
+        ])
+    }
+
+    static func trackPathLevelUnlocked(collectionId: String, level: Int) {
+        track("path_level_unlocked", [
+            "collection_id": collectionId,
+            "level": level,
+        ])
+    }
+
     // MARK: - Streak & gates
 
     static func trackStreakUpdated(streakDays: Int, isNewRecord: Bool) {
@@ -240,6 +272,28 @@ enum AnalyticsService {
 
     static func trackDeepLinkOpened(courseId: String) {
         track("deep_link_opened", ["course_id": courseId])
+    }
+
+    // MARK: - TikTok blocker
+
+    static func trackTikTokBlockerToggled(enabled: Bool) {
+        track("tiktok_blocker_toggled", ["enabled": enabled])
+    }
+
+    static func trackTikTokBlockerCourseOpened(courseId: String) {
+        track("tiktok_blocker_course_opened", ["course_id": courseId])
+    }
+
+    static func trackTikTokBlockerUnlocked(minutes: Int, courseId: String, fromShield: Bool) {
+        track("tiktok_blocker_unlocked", [
+            "minutes": minutes,
+            "course_id": courseId,
+            "from_shield": fromShield,
+        ])
+    }
+
+    static func trackTikTokBlockerReturnedToTikTok() {
+        track("tiktok_blocker_returned_to_tiktok")
     }
 
     // MARK: - Feedback

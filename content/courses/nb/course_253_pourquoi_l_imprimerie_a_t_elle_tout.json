@@ -1,0 +1,149 @@
+{
+  "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout",
+  "title": "Hvorfor forandret boktrykkerkunsten alt?",
+  "subtitle": "Mainz, ca. 1450",
+  "subject": "histoire",
+  "subcategory": "Tidlig nytid og 1800-tallet",
+  "description": "Rundt 1450 setter en håndverker i Mainz sammen bokstaver av metall for å trykke hele sider. Femti år senere finnes det 20 millioner bøker i Europa, og informasjon er blitt langt vanskeligere å kontrollere.",
+  "author": "benjamin-campbell",
+  "hero": {
+    "image": "gutenberg_bible_open_pages_library_of_congress",
+    "ratio": "4:3",
+    "hook": "En bok kostet en avskriver måneder med arbeid. Plutselig kunne én presse lage hundrevis av eksemplarer."
+  },
+  "sections": [
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_intro",
+      "title": "Innledning",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lenge før boktrykkerkunsten var det et langsomt og kostbart arbeid å lage en bok i Europa. Hvert verk ble kopiert for hånd av en utdannet [[avskriver]], som kunne bruke måneder, noen ganger år, på ett eneste manuskript. Bøker var derfor forbeholdt de rike, religiøse institusjoner og universitetene. Ikke fordi andre ikke ønsket seg bøker, men fordi det rett og slett krevde enormt med tid og arbeidskraft å lage ett eneste bind."
+        },
+        {
+          "type": "paragraph",
+          "text": "Så, midt på **1400-tallet**, begynte alt å endre seg. I Mainz i Tyskland utviklet en håndverker ved navn [[Johannes Gutenberg]] et nytt trykksystem som revolusjonerte bokproduksjonen. Oppfinnelsen forandret ikke bare bokens verden: den endret måten informasjon kunne kopieres og deles på. Hvorfor fikk én trykkpresse så stor virkning?"
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p1",
+      "title": "Gutenberg fant ikke opp trykkingen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gutenberg var ikke den første som trykket. [[Tresnittrykk]], der man skjærer ut en hel side i en treplate og deretter trykker den på papir, hadde vært i bruk i **Kina** og i hele Asia i århundrer. Det som skilte hans system ut, var de [[løse typene]] av metall."
+        },
+        {
+          "type": "image",
+          "asset": "movable_metal_type_letters_composing_stick",
+          "ratio": "3:2",
+          "caption": "Thailandske løse typer i en vinkelhake (Nasjonalmuseet i Bangkok): hver bokstav er støpt speilvendt og kan brukes igjen på en annen side."
+        },
+        {
+          "type": "paragraph",
+          "text": "I stedet for å skjære en hel bok i tre støpte trykkerne hver bokstav for seg og satte dem så sammen til ord og sider. Det hele ble svertet og presset mot papiret. Når siden var trykket, ble bokstavene tatt fra hverandre og brukt på nytt til den neste. Metoden ble langt mer fleksibel: en trykker kunne lage **hundrevis av eksemplarer** uten å skjære en ny plate for hver side."
+        },
+        {
+          "type": "funFact",
+          "text": "Gutenbergbibelen, trykket rundt 1455, var ikke den første trykte boken i Europa, men den var det første store verket laget med hans typografiske system. Av de rundt 180 eksemplarene som ble trykket, finnes bare omkring femti i dag."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p2",
+      "title": "Tjue millioner bøker på femti år",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Da oppfinnelsen først hadde slått an, bredte boktrykkingen seg i Europa i et bemerkelsesverdig tempo. Rundt **1500**, knapt femti år etter Gutenbergs gjennombrudd, anslår man at kontinentet allerede hadde **20 millioner** bøker. Tusenvis av ulike titler sirkulerte mellom byer, universiteter, kirker og private lesere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Endringen handlet ikke bare om fart. Boktrykkerkunsten sprengte den gamle flaskehalsen i kopieringen. En nøye forberedt tekst kunne mangfoldiggjøres igjen og igjen, og den samme informasjonen nådde tusenvis av mennesker. For første gang i historien spredte skriftlig kunnskap seg over kontinentet i et omfang som håndkopiering aldri kunne ha matchet."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p3",
+      "title": "Luther og reformasjonen i flygeblader",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tidlig på **1500-tallet** utfordret en tysk munk og professor, [[Martin Luther]], den katolske kirken og satte i gang det som ble [[reformasjonen]]. I tidligere århundrer ville striden trolig ha forblitt en lokal teologisk debatt. Boktrykkerkunsten endret spillereglene."
+        },
+        {
+          "type": "image",
+          "asset": "luther_ninety_five_theses_1517_printed_broadsheet",
+          "ratio": "5:4",
+          "caption": "Plakat til reformasjonens hundreårsjubileum (1617): Luther skriver tesene sine på kirkedøren i Wittenberg med en kjempestor fjærpenn."
+        },
+        {
+          "type": "paragraph",
+          "text": "Argumentene hans ble raskt trykket opp i flygeblader og spredt langt utenfor universitetet der han underviste. Skriftene hans ble også trykket på tysk, slik at de ble tilgjengelige for dem som ikke kunne lese latin. Boktrykkerkunsten skapte ikke reformasjonen alene, men den lot Luthers ideer nå langt flere mennesker enn noen håndskrevet kopi kunne. For kirkens myndigheter ble striden mye vanskeligere å holde under kontroll."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p4",
+      "title": "Fra telegrafen til internett",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Boktrykkerkunsten huskes som en av de første teknikkene som brøt flaskehalsen i kopieringen. Den var ikke den siste. På **1800-tallet** gjorde [[telegrafen]] det mulig å sende en beskjed over enorme avstander på noen minutter i stedet for flere dager. Internett gikk enda lenger: informasjon kunne kopieres og sendes på sekunder."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "ca. 1450",
+              "title": "Gutenbergs presse",
+              "detail": "I Mainz erstatter løse metalltyper kopiering for hånd."
+            },
+            {
+              "date": "ca. 1500",
+              "title": "20 millioner bøker",
+              "detail": "Femti år etter Gutenberg finnes det millioner av trykte bind i Europa."
+            },
+            {
+              "date": "1517",
+              "title": "Luthers teser",
+              "detail": "Trykte flygeblader bærer reformasjonen langt utenfor universitetet hans."
+            },
+            {
+              "date": "1800-tallet",
+              "title": "Telegrafen",
+              "detail": "En beskjed krysser enorme avstander på noen minutter."
+            },
+            {
+              "date": "Slutten av 1900-tallet",
+              "title": "Internett",
+              "detail": "Informasjon kopieres og sendes på sekunder."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Hver teknikk endret mer enn kommunikasjonens hastighet. Den rystet institusjonene som var bygd for å kontrollere og fordele informasjon. Kirker, myndigheter, aviser og bedrifter måtte alle tilpasse seg etter hvert som informasjon ble lettere å mangfoldiggjøre og mye vanskeligere å kontrollere. Boktrykkerkunsten er fortsatt en nyttig pekepinn på hva en oppfinnelse kan gjøre med verden."
+        },
+        {
+          "type": "takeaway",
+          "text": "Boktrykkerkunsten forandret alt, ikke fordi Gutenberg fant opp trykkingen, men fordi de løse typene hans brøt flaskehalsen i kopieringen: informasjon ble lett å mangfoldiggjøre og vanskelig å kontrollere, et mønster som telegrafen og siden internett gjentok."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "L. Febvre et H.-J. Martin, The Coming of the Book: The Impact of Printing, 1450-1800, trad. D. Gerard, Verso, 1976, p. 186."
+    },
+    {
+      "text": "K.-W. Chow, « Reinventing Gutenberg: Woodblock and Movable-Type Printing in Europe and China », Late Imperial China, vol. 28, n° 1, 2007, p. 185-186."
+    }
+  ]
+}

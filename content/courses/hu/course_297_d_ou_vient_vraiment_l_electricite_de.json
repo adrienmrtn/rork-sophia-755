@@ -1,0 +1,141 @@
+{
+  "id": "course_297_d_ou_vient_vraiment_l_electricite_de",
+  "title": "Honnan jön valójában az áram a konnektorodban?",
+  "subtitle": "Egy láthatatlan keverék",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Környezet és jövő",
+  "description": "A konnektoron semmi sem jelzi, hogy az áram a napból, a szélből vagy egy szénerőműből jön. E hétköznapi mozdulat mögött egy keverék rejlik, amely óráról órára változik, és néha országhatárokat is átlép.",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "wind_turbines_coal_power_plant_landscape",
+    "ratio": "4:3",
+    "hook": "A konnektor mindenhol ugyanaz. Ami mögötte van, soha."
+  },
+  "sections": [
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bedugod a telefonodat, és az áram címke nélkül érkezik. A konnektoron semmi sem árulja el, hogy napfényből, egy gát mögött felduzzasztott vízből vagy egy erőműben elégetett tüzelőanyagból állították-e elő. Még két ugyanabban az utcában álló ház sem tudja megmondani, melyik erőműből jön az általa használt áram egy-egy egysége."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az ok egyszerű: szinte minden háztartás egy [[villamosenergia-hálózat]] áramát használja, vagyis egy olyan vezetékhálóét, amely egy terület erőműveit és fogyasztóit köti össze. Egyszerre több erőmű táplálja, és ezek részesedése adja a [[villamosenergia-mix]] összetételét. A mix a hálózatot tápláló forrásokat írja le, nem egy külön napenergiás vagy gázos áramfolyamot, amely egyenesen a telefonodba megy. A válasz tehát jóval a ház falain túl kezdődik."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p1",
+      "title": "Gőz, turbinák és napelemek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A szénerőművek és sok atomerőmű hővel állít elő gőzt. Ez a gőz forgat meg egy [[turbina]] nevű lapátkereket, amely egy [[generátor]] tengelyéhez kapcsolódik, vagyis ahhoz a géphez, amely a mozgást elektromos árammá alakítja. A gázerőművek a turbinákat közvetlenül az égés forró gázaival is megforgathatják. Különböző eljárások, de ugyanaz az áram, amely ugyanabba a hálózatba kerül."
+        },
+        {
+          "type": "image",
+          "asset": "steam_turbine_generator_hall_power_plant",
+          "ratio": "2:1",
+          "caption": "Régi gőzturbinás turbógenerátor a bécsi Műszaki Múzeumban: a turbina össze van kapcsolva a generátorával."
+        },
+        {
+          "type": "paragraph",
+          "text": "A szélturbinákat a szél hajtja, a vízerőműveket az áramló víz. A napelemek más úton járnak: közvetlenül a fényből állítanak elő áramot, egyetlen forgó lapát nélkül. Ezek a források nem ugyanolyan körülmények között dolgoznak. A napenergia termelése napnyugtakor visszaesik, a széltermelés pedig az időjárással változik. Amikor a többiek kevesebbet termelnek, a tüzelőanyagot égető erőművek adhatnak áramot."
+        },
+        {
+          "type": "funFact",
+          "text": "Egy atomerőmű lényegében úgy működik, mint egy szénerőmű: a hő felforralja a vizet, és a gőz hajtja a turbinát. Csak a hőforrás más."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p2",
+      "title": "Egy nap alatt változó mix",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Délben a napelemek teljes erővel termelnek, miközben az irodák és a lakások áramot vesznek fel. Napnyugta után leállnak, de a lámpáknak, a vonatoknak és a konyháknak továbbra is áram kell. Egy szeles délutánt szélcsendes este is követhet, miközben a fogyasztás nő vagy csökken."
+        },
+        {
+          "type": "image",
+          "asset": "electricity_grid_control_room_operators_screens",
+          "ratio": "16:9",
+          "caption": "Az Egyesült Államok nagyfeszültségű vezetékeinek és alállomásainak térképe: a háló, amelynek egyensúlyát a rendszerirányítónak fenn kell tartania."
+        },
+        {
+          "type": "paragraph",
+          "text": "A [[rendszerirányító]], vagyis a hálózatot vezérlő szervezet, folyamatosan egyensúlyban kell tartania a kínálatot és a keresletet. Egyes erőművek módosítják a termelésüket. Ahol akkumulátorokat telepítettek, azok visszaadják a korábban eltárolt áramot. Más források pótolják azt, amit a lemenő nap már nem ad. Nincs napi recept: a déli mix egészen más lehet, mint néhány órával később, pedig a konnektorod nem változott."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p3",
+      "title": "Amit az éves átlag elrejt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "2025-ben az Egyesült Államok nagy erőművei által termelt áram mintegy **negyede** (24%) [[megújuló energiaforrások]] felhasználásával készült, vagyis olyanokból, amelyeket a természet magától pótol: napfényből, szélből, áramló vízből. A még előzetes adat az egész évre vonatkozik. Nem azt jelenti, hogy a megújulók ugyanakkora részt adtak minden alkalommal, amikor valaki bekapcsolt egy vízforralót vagy feltöltött egy telefont."
+        },
+        {
+          "type": "paragraph",
+          "text": "Egy éves százalék összemossa a napos délutánokat, a szeles éjszakákat és azokat az időszakokat, amikor a nap és a szél keveset termel. Összeadja a nagy és a kis kereslet óráit is. Ha tudni akarod, milyen források táplálnak egy hálózatot egy adott pillanatban, az óránkénti mixét kell nézned, nem az éves átlagát. Mindkét nézőpont hasznos, de nem ugyanarra a kérdésre felelnek."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p4",
+      "title": "Máshonnan érkező áram",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az óránkénti mixhez még egy részlet kell: milyen áram áll valóban rendelkezésre a te területeden. Egy határ egyik oldalán álló erőmű a másik oldal hálózatát is táplálhatja. Ez az importált áram összekeveredik a helyi termeléssel. A [[fogyasztási mix]], vagyis az egy terület fogyasztóit tápláló források összetétele, ezért eltérhet a helyben termelt mixtől."
+        },
+        {
+          "type": "image",
+          "asset": "belchatow_coal_power_plant_cooling_towers_poland",
+          "ratio": "4:3",
+          "caption": "A lengyelországi Bełchatówi Erőmű, Európa legnagyobb szénerőműve."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez számít az áramodhoz kötődő kibocsátás szempontjából. A szén vagy a gáz elégetése szén-dioxidot szabadít fel, amely melegíti a bolygót. A szélturbinák, a napelemek és az atomerőművek áramtermelés közben közvetlenül nem bocsátanak ki ilyet. Az áram nem áll meg a határon, és a hatása sem. Attól függően, honnan jön az import, a fogyasztásodhoz kötődő kibocsátás nagyobb vagy kisebb lehet, mint amit a helyi termelés sejtet."
+        },
+        {
+          "type": "takeaway",
+          "text": "A konnektorodból jövő áram óráról órára változó, határokon átívelő keverék, így sem az éves átlag, sem a helyi termelés önmagában nem mondja meg, honnan jön."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Delivered to Consumers », sections « The electric power grid », « Electricity sources and types of providers » et « Balancing authorities »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Generated », sections « Turbine driven generators » et « Other types of generators »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Energy Storage for Electricity Generation », section « Uses and benefits of energy storage systems »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity Generation, Capacity, and Sales in the United States », section « Electricity generation », données 2025 provisoires."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity and the Environment », sections « Fossil fuel, biomass, and waste burning power plants » et « Nuclear power plants »."
+    },
+    {
+      "text": "Electricity Maps, « Methodology », sections « Defining Granularity: Spatial and Temporal », « Consumption-based Calculation » et « The Flow-Tracing Algorithm »."
+    },
+    {
+      "text": "B. Tranberg et al., « Real-time carbon accounting method for the European electricity markets », Energy Strategy Reviews, vol. 26, 2019, art. 100367.",
+      "url": "https://doi.org/10.1016/j.esr.2019.100367"
+    }
+  ]
+}

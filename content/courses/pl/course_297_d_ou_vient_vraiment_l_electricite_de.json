@@ -1,0 +1,141 @@
+{
+  "id": "course_297_d_ou_vient_vraiment_l_electricite_de",
+  "title": "Skąd naprawdę bierze się prąd w twoim gniazdku?",
+  "subtitle": "Niewidzialna mieszanka",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Środowisko i przyszłość",
+  "description": "Gniazdko nie mówi, czy prąd pochodzi ze słońca, z wiatru czy z elektrowni węglowej. Za tym zwykłym gestem kryje się mieszanka, która zmienia się z godziny na godzinę, a czasem i z kraju na kraj.",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "wind_turbines_coal_power_plant_landscape",
+    "ratio": "4:3",
+    "hook": "Gniazdko wszędzie wygląda tak samo. To, co jest za nim, nigdy."
+  },
+  "sections": [
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Podłączasz telefon, a prąd przychodzi bez etykiety. Nic w gniazdku nie mówi, czy wytworzono go ze światła słonecznego, z wody spiętrzonej przez zaporę czy z paliwa spalonego w elektrowni. Nawet dwa domy przy tej samej ulicy nie potrafią wskazać elektrowni, z której pochodzi każda porcja prądu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Powód jest prosty: prawie wszystkie domy czerpią prąd z jednej wspólnej całości. To [[sieć energetyczna]], plątanina przewodów łącząca elektrownie i odbiorców na danym obszarze. Zasila ją jednocześnie wiele elektrowni, a ich udziały tworzą [[miks energetyczny]]. Ten miks opisuje źródła, które zasilają sieć, a nie osobny strumień prądu słonecznego czy gazowego płynący prosto do twojego telefonu. Odpowiedź zaczyna się więc daleko za ścianami domu."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p1",
+      "title": "Para, turbiny i panele słoneczne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elektrownie węglowe i wiele elektrowni jądrowych wytwarza ciepłem parę. Ta para wprawia w ruch zestaw łopatek. To [[turbina]], a połączony z nią [[generator]] zamienia ruch w prąd. Elektrownie gazowe mogą też obracać turbiny bezpośrednio gorącymi gazami ze spalania. Różne metody, ale ten sam prąd, który trafia do tej samej sieci."
+        },
+        {
+          "type": "image",
+          "asset": "steam_turbine_generator_hall_power_plant",
+          "ratio": "2:1",
+          "caption": "Dawny parowy turbogenerator w Muzeum Techniki w Wiedniu: turbina jest sprzężona z generatorem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Turbiny wiatrowe kręci wiatr, a elektrownie wodne płynąca woda. Panele słoneczne idą inną drogą: wytwarzają prąd bezpośrednio ze światła, bez żadnych obracających się łopatek. Te źródła nie pracują w tych samych warunkach. Produkcja słoneczna spada o zachodzie słońca, a wiatrowa zmienia się z pogodą. Elektrownie spalające paliwo mogą wtedy dostarczać prąd, gdy pozostałe wytwarzają go mniej."
+        },
+        {
+          "type": "funFact",
+          "text": "Elektrownia jądrowa działa w gruncie rzeczy jak węglowa: ciepło zagotowuje wodę, a para napędza turbinę. Zmienia się tylko źródło ciepła."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p2",
+      "title": "Miks, który zmienia się w ciągu dnia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W południe panele słoneczne pracują pełną parą, a biura i mieszkania pobierają prąd. Po zachodzie słońca przestają, ale lampy, pociągi i kuchnie wciąż potrzebują energii. Wietrzne popołudnie może też przejść w bezwietrzny wieczór, podczas gdy zużycie rośnie albo spada."
+        },
+        {
+          "type": "image",
+          "asset": "electricity_grid_control_room_operators_screens",
+          "ratio": "16:9",
+          "caption": "Mapa linii wysokiego napięcia i stacji elektroenergetycznych w Stanach Zjednoczonych: sieć, którą operator musi zrównoważyć."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tą siecią kieruje [[operator sieci]], który musi bez przerwy utrzymywać równowagę między podażą a popytem. Niektóre elektrownie dostosowują produkcję. Tam, gdzie zainstalowano baterie, oddają one prąd zmagazynowany wcześniej. Inne źródła wypełniają lukę po zachodzącym słońcu. Nie ma jednego codziennego przepisu: miks z południa może się bardzo różnić od tego sprzed kilku godzin, choć twoje gniazdko się nie zmieniło."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p3",
+      "title": "Co kryje roczna średnia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W 2025 roku około **jednej czwartej** (24%) prądu z dużych elektrowni w Stanach Zjednoczonych dostarczyły [[odnawialne źródła energii]], czyli takie, które przyroda sama odnawia: światło słoneczne, wiatr, płynąca woda. Ta wciąż wstępna liczba opisuje cały rok. Nie znaczy, że odnawialne źródła dawały ten sam udział za każdym razem, gdy ktoś włączał czajnik albo ładował telefon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Roczny odsetek miesza słoneczne popołudnia, wietrzne noce i okresy, gdy słońce i wiatr dają niewiele. Sumuje też godziny wysokiego i niskiego zapotrzebowania. Żeby wiedzieć, jakie źródła zasilają sieć w danej chwili, trzeba patrzeć na jej miks godzina po godzinie, a nie na roczną średnią. Oba spojrzenia są przydatne, ale odpowiadają na różne pytania."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p4",
+      "title": "Prąd z innych stron",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Miks godzinowy wymaga jeszcze jednego szczegółu: jaki prąd jest naprawdę dostępny w twojej strefie. Elektrownia po jednej stronie granicy może zasilać sieć po drugiej stronie. Ten importowany prąd miesza się z lokalną produkcją. Dlatego [[miks zużycia]], czyli źródła, które zasilają odbiorców w danej strefie, może różnić się od miksu wytwarzanego na miejscu."
+        },
+        {
+          "type": "image",
+          "asset": "belchatow_coal_power_plant_cooling_towers_poland",
+          "ratio": "4:3",
+          "caption": "Elektrownia węglowa Bełchatów w Polsce, największa w Europie."
+        },
+        {
+          "type": "paragraph",
+          "text": "To ma znaczenie dla emisji związanych z twoim prądem. Spalanie węgla lub gazu uwalnia dwutlenek węgla, gaz, który ogrzewa planetę. Turbiny wiatrowe, panele słoneczne i elektrownie jądrowe nie emitują go bezpośrednio, gdy wytwarzają prąd. Prąd nie zatrzymuje się na granicy, a jego wpływ też nie. W zależności od pochodzenia importu emisje związane z twoim zużyciem mogą być wyższe albo niższe, niż sugeruje lokalna produkcja."
+        },
+        {
+          "type": "takeaway",
+          "text": "Prąd w twoim gniazdku to mieszanka, która zmienia się z godziny na godzinę i przekracza granice, więc ani roczna średnia, ani lokalna produkcja nie mówią same, skąd naprawdę pochodzi."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Delivered to Consumers », sections « The electric power grid », « Electricity sources and types of providers » et « Balancing authorities »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Generated », sections « Turbine driven generators » et « Other types of generators »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Energy Storage for Electricity Generation », section « Uses and benefits of energy storage systems »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity Generation, Capacity, and Sales in the United States », section « Electricity generation », données 2025 provisoires."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity and the Environment », sections « Fossil fuel, biomass, and waste burning power plants » et « Nuclear power plants »."
+    },
+    {
+      "text": "Electricity Maps, « Methodology », sections « Defining Granularity: Spatial and Temporal », « Consumption-based Calculation » et « The Flow-Tracing Algorithm »."
+    },
+    {
+      "text": "B. Tranberg et al., « Real-time carbon accounting method for the European electricity markets », Energy Strategy Reviews, vol. 26, 2019, art. 100367.",
+      "url": "https://doi.org/10.1016/j.esr.2019.100367"
+    }
+  ]
+}

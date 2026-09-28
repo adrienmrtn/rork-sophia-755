@@ -1,0 +1,131 @@
+{
+  "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la",
+  "title": "Ay neden Dünya'dan uzaklaşıyor?",
+  "subtitle": "Yılda 3,8 cm",
+  "subject": "sciences",
+  "subcategory": "Dünya ve evren",
+  "description": "Ay her yıl bizden 3,8 cm uzaklaşıyor, aşağı yukarı bir tırnağın uzama hızıyla. Onu iten bizim okyanuslarımız. Bedeli de uzayan günler ve bir gün yok olacak tam tutulmalarla ödeniyor.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "full_moon_rising_over_ocean_horizon",
+    "ratio": "4:3",
+    "hook": "Ay, tırnaklarımızın uzama hızıyla bizden uzaklaşıyor: bir gün artık hiçbir tam tutulma mümkün olmayacak."
+  },
+  "sections": [
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ay ne kadar uzakta? Bunu lazerle ölçebiliriz. [[Apollo görevleri]] sırasında astronotlar Ay yüzeyine özel yansıtıcılar bıraktı. Bilim insanları Dünya'dan bu yansıtıcılara lazer atımları gönderiyor ve ışığın geri dönme süresini ölçüyor. Sonuç: Ay bizden ortalama yaklaşık **385.000 km** uzakta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ama bu mesafe sabit değil. Ay her yıl yaklaşık **3,8 cm** uzaklaşıyor, aşağı yukarı tırnaklarımızın uzama hızıyla. Bir yıldan ötekine değişim çok küçük. Milyonlarca yıl boyunca ise birikiyor. Peki Ay'ı bizden uzağa iten ne olabilir?"
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p1",
+      "title": "Ay okyanusları kabartıyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dünya gibi Ay'ın da [[kütleçekim]] kuvveti vardır: cisimleri, Dünya dahil, kendine doğru çeken bir kuvvet. Ama bu çekim her yerde aynı değildir. Dünya'nın Ay'a bakan tarafı, karşı tarafından biraz daha fazla çekilir. Bu fark okyanuslarda [[gelgit şişkinlikleri]] oluşturur: biri Ay'a dönük, öteki tam karşı tarafta duran iki hafif kabarma."
+        },
+        {
+          "type": "image",
+          "asset": "mont_saint_michel_bay_high_tide_aerial",
+          "ratio": "3:2",
+          "caption": "Cezir sırasında Mont-Saint-Michel: Ay'ın günde iki kez kabarttığı deniz çok uzaklara çekilmiş."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu şişkinlikler tam Ay'ın altında durmaz. Dünya kendi etrafında **24 saatte** döner, Ay ise onun çevresini yaklaşık bir ayda dolaşır. Dünya çok daha hızlı döndüğü için şişkinlikleri Ay'ın biraz önüne taşır. Bu küçük kayma çok önemlidir: şişkinliğin Ay'ı [[yörünge]] üzerinde ileri doğru çekmesini sağlar."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p2",
+      "title": "Dünya Ay'ı itiyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Okyanus şişkinliğinin bir kütlesi, dolayısıyla kendine ait bir kütleçekimi vardır. Ay'ın biraz önünde durduğu için, Ay Dünya'nın çevresinde dolanırken onu hafifçe ileri çeker. Bu çekiş Ay'ın yörüngesine enerji ekler. Ay aynı yolda hızlanmak yerine biraz daha geniş bir yörüngeye geçer. Ortalama uzaklığının her yıl yaklaşık **3,8 cm** artmasının nedeni budur."
+        },
+        {
+          "type": "image",
+          "asset": "apollo_11_lunar_laser_retroreflector_nasa_1969",
+          "ratio": "4:3",
+          "caption": "Apollo lazer geri yansıtıcısı (National Air and Space Museum'daki örnek): aynı model Temmuz 1969'dan beri Ay'da duruyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yani Ay'ı iten gizemli bir kuvvet yok. Enerji Dünya'nın dönüşünden geliyor. Kendi etrafında dönen gezegenimiz, gelgitler aracılığıyla Ay'a yavaş yavaş [[dönme enerjisi]] aktarıyor, yani kendi enerjisinin bir kısmını veriyor. Minicik bir itiş, ama her turda tekrarlanıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p3",
+      "title": "Dünya da yavaşlıyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ay'a verilen enerjinin bir bedeli var. Dünya dönme enerjisinin küçük bir kısmını yavaş yavaş kaybediyor, bu yüzden de azıcık daha yavaş dönüyor. Bir insan ömrü ölçeğinde bu değişim fark edilmez. Milyonlarca yıl boyunca ise birikir."
+        },
+        {
+          "type": "funFact",
+          "text": "Uzak geçmişte Dünya kendi etrafında daha hızlı dönüyordu: o zamanlar bir gün, bugün bildiğimiz **24 saatten** daha kısaydı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Demek ki gelgitler aynı anda iki şey yapıyor: Ay'ı uzaklaştırıyor ve Dünya'nın dönüşünü frenliyor. Bunlar iki ayrı olay değil, Dünya ile Ay arasındaki aynı alışverişin iki yüzü. Bu alışveriş milyarlarca yıldır sürüyor ve bugün de her gelgitte devam ediyor."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p4",
+      "title": "Tam tutulmaların sonu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bu yavaş geri çekiliş, sonunda gökyüzümüzde muhteşem bir şeyi değiştirecek. Bugün Güneş, Ay'dan yaklaşık **400 kat** daha geniştir. Dünya'ya da yaklaşık 400 kat daha uzaktır. Tamamen tesadüf eseri, iki gök cismi bu yüzden neredeyse aynı büyüklükte görünür. Ay'ın bir [[tam güneş tutulması]] sırasında Güneş'i bütünüyle örtebilmesini sağlayan budur."
+        },
+        {
+          "type": "image",
+          "asset": "total_solar_eclipse_corona_2017_nasa",
+          "ratio": "3:2",
+          "caption": "Nisan 2026'da Artemis II aracından görünüm: Ay Güneş'i örtüyor ve taç katmanını ortaya çıkarıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ay uzaklaştıkça biraz daha küçük görünecek. Yaklaşık **600 milyon yıl** sonra, belki daha da sonra, Güneş'i tamamen gizleyecek kadar büyük görünmeyecek. O zaman tam tutulmalar sonsuza dek yok olacak. Ay yakın zamanda Dünya'dan kaçacak değil. Ama yavaş geri çekilişi, gece gökyüzü kadar tanıdık bir manzaranın bile kalıcı olmadığını hatırlatıyor."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ay yılda **3,8 cm** uzaklaşıyor, çünkü gelgitler ona Dünya'nın dönme enerjisinin bir kısmını aktarıyor: günlerimiz uzuyor ve 600 milyon yıl sonra tam tutulmalar yok olmuş olacak."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "NASA Jet Propulsion Laboratory, « The Apollo Experiment That Keeps on Giving », 2019."
+    },
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, section 4.6 « Ocean Tides and the Moon », p. 116-119."
+    },
+    {
+      "text": "NASA Science, « Tidal Locking »."
+    },
+    {
+      "text": "NASA Science, « Eclipses and the Moon »."
+    }
+  ]
+}

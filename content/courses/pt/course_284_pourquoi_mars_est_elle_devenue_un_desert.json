@@ -1,0 +1,137 @@
+{
+  "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert",
+  "title": "Por que Marte virou um deserto?",
+  "subtitle": "Dos rios ao deserto",
+  "subject": "sciences",
+  "subcategory": "A Terra e o Universo",
+  "description": "Há mais de 3 bilhões de anos, rios escavavam vales e enchentes varriam a superfície de Marte. Hoje o planeta é frio e seco, mas sua água não sumiu toda.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "mars_valles_marineris_hemisphere_viking_mosaic",
+    "ratio": "4:3",
+    "hook": "Rios, deltas, lagos: o planeta vermelho nem sempre foi um deserto gelado."
+  },
+  "sections": [
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Há décadas, os cientistas procuram em Marte sinais de vida passada. Toda vida conhecida precisa de água, e a superfície marciana hoje é fria e extremamente seca. Mas Marte nem sempre foi assim: os rovers, os robôs sobre rodas que exploram seu solo, encontraram ali rochas e minerais que só se formam na presença de **água líquida**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Visto de cima, a paisagem confirma: antigos vales de rios, deltas, fundos de lagos secos. Muitos desses relevos têm mais de **3 bilhões de anos**. A NASA chegou a identificar marcas de enchentes gigantescas de cerca de **3,5 bilhões de anos** atrás. Então, a água já correu em Marte. Resta o mistério: como um planeta úmido virou esse deserto?"
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p1",
+      "title": "Era preciso uma atmosfera espessa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ter água não basta, é preciso condições que a mantenham líquida. E a atmosfera atual de Marte é muito rarefeita: sua [[pressão atmosférica]] é menos de **1%** da terrestre. Com uma pressão tão baixa, a água líquida não fica estável na superfície: ela congela ou evapora."
+        },
+        {
+          "type": "image",
+          "asset": "jezero_crater_river_delta_mars_reconnaissance_orbiter",
+          "ratio": "5:4",
+          "caption": "Mapa topográfico da região da cratera Jezero (ESA/DLR/FU Berlin): no destaque, os deltas deixados por antigos rios."
+        },
+        {
+          "type": "paragraph",
+          "text": "Como a jovem Marte guardava sua água? Há bilhões de anos, sua atmosfera era bem mais espessa, e isso ajudava de dois jeitos. Uma pressão maior mantinha a água no estado líquido. E os gases do ar retinham o calor, um [[efeito estufa]] que deixava a superfície mais amena."
+        },
+        {
+          "type": "funFact",
+          "text": "Os pesquisadores ainda discutem a temperatura exata da jovem Marte. Uma coisa é certa: a água líquida ficou lá tempo suficiente para escavar vales e encher lagos."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p2",
+      "title": "Marte perdeu sua atmosfera",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ao longo de bilhões de anos, grande parte dessa atmosfera escapou para o espaço. Primeiro motivo: o tamanho do planeta. Marte é pequeno, sua **gravidade** é mais fraca que a da Terra, e ele segura pior seus gases. Segundo motivo: Marte perdeu seu [[campo magnético]], o escudo invisível que protegia sua atmosfera das partículas carregadas do Sol."
+        },
+        {
+          "type": "image",
+          "asset": "maven_solar_wind_stripping_mars_atmosphere_nasa",
+          "ratio": "16:9",
+          "caption": "As órbitas da sonda MAVEN, que mede a fuga da atmosfera marciana, antes e depois da aerofrenagem de 2019 (NASA)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Essas partículas formam o [[vento solar]], um fluxo contínuo de matéria carregada que sai do Sol. Sem escudo, ele atinge a alta atmosfera marciana e arranca gases dela. A luz solar mais energética também conta: ela quebra as moléculas de água e outras moléculas, e os **átomos leves** liberados escapam mais facilmente da fraca gravidade de Marte. À medida que a atmosfera afinava, Marte ficava mais frio e mais seco."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p3",
+      "title": "Nem toda a água foi embora",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mas nem toda a água de Marte fugiu para o espaço. Uma parte, ao subir até a alta atmosfera, foi quebrada em átomos leves que escaparam. O resto, porém, ficou no planeta: uma fração congelou sob a superfície, outra reagiu com as rochas e acabou presa dentro de **minerais**."
+        },
+        {
+          "type": "funFact",
+          "text": "Um estudo publicado em 2021 na revista *Science* estima que entre **30 e 99%** da água de Marte pode ter ficado presa nos minerais de suas rochas. Uma faixa larga: a questão continua em aberto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Essa água, então, não se acumulou só debaixo da terra, como gelo ou líquido. Agora ela faz parte da [[crosta]], a camada rochosa externa do planeta. Em outras palavras, boa parte da água “desaparecida” de Marte ainda estaria lá, presa em suas rochas."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p4",
+      "title": "Seco, mas não sem água",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hoje Marte parece um deserto, mas não está sem água. O que sumiu em grande parte foi a água estável que corria na superfície. Grandes quantidades continuam congeladas nas [[calotas polares]], outras dormem sob o solo como **gelo enterrado**, e outras ainda estão presas nos minerais da crosta."
+        },
+        {
+          "type": "image",
+          "asset": "mars_north_polar_ice_cap_mars_global_surveyor",
+          "ratio": "2:1",
+          "caption": "Mapa global de Marte feito a partir das sondas Viking (NASA/USGS): no destaque, os dois polos e suas calotas de gelo."
+        },
+        {
+          "type": "paragraph",
+          "text": "A lição vai além de Marte. Ter água não basta para tornar um planeta úmido e habitável: as condições contam tanto quanto. Uma atmosfera espessa o bastante mantém a água líquida e deixa que ela se junte em rios e lagos. Marte não virou um deserto porque cada gota voou para o espaço, mas porque sua atmosfera já não conseguia manter a água em movimento."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marte secou porque sua atmosfera, mais fina, já não conseguia manter água líquida na superfície: boa parte dessa água ainda está lá, congelada nos polos ou presa nas rochas."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "B. M. Jakosky et al., « Mars' atmospheric history derived from upper-atmosphere measurements of 38Ar/36Ar », Science, vol. 355, n° 6332, 2017, p. 1408.",
+      "url": "https://doi.org/10.1126/science.aai7721"
+    },
+    {
+      "text": "NASA Science, « NASA: New Insights into How Mars Became Uninhabitable », 2024."
+    },
+    {
+      "text": "E. L. Scheller et al., « Long-term drying of Mars by sequestration of ocean-scale volumes of water in the crust », Science, vol. 372, n° 6537, 2021, p. 56-62.",
+      "url": "https://doi.org/10.1126/science.abc7717"
+    },
+    {
+      "text": "NASA, « NASA Mission Reveals Speed of Solar Wind Stripping Martian Atmosphere », 2015."
+    }
+  ]
+}

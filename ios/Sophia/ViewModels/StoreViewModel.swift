@@ -25,6 +25,7 @@ class StoreViewModel {
     var error: String?
 
     init() {
+        reportDiscountBucket()
         Task { await listenForUpdates() }
         Task { await loadOfferingsWithRetry() }
     }
@@ -126,12 +127,77 @@ class StoreViewModel {
         offerings?.current?.package(identifier: "$rc_monthly")
     }
 
+    var weeklyPackage: Package? {
+        offerings?.current?.package(identifier: "$rc_weekly")
+    }
+
+    /// The plan sold next to the annual one on the comparison paywall: the monthly plan, or
+    /// the weekly plan when the served offering carries a weekly package instead (a
+    /// RevenueCat experiment can swap one for the other without an app update).
+    var shortPlanPackage: Package? {
+        monthlyPackage ?? weeklyPackage
+    }
+
+    var shortPlanIsWeekly: Bool {
+        monthlyPackage == nil && weeklyPackage != nil
+    }
+
     var annualPackage: Package? {
         offerings?.current?.package(identifier: "$rc_annual")
     }
 
+    // MARK: - Discount A/B bucket
+
+    /// Which flash-discount offering this install sees. Drawn once at random, kept for the
+    /// life of the install, and reported to RevenueCat as the `discount_bucket` subscriber
+    /// attribute so revenue and conversion split by bucket in the charts. It lives in the
+    /// app rather than in a RevenueCat experiment because a customer can only be in one
+    /// experiment at a time, and every new customer is already in a price experiment on
+    /// the onboarding paywall.
+    enum DiscountBucket: String, CaseIterable {
+        case a = "A"
+        case b = "B"
+
+        /// Offering this bucket sells; bucket A keeps today's `offre_discount`.
+        var offeringIdentifier: String {
+            switch self {
+            case .a: return "offre_discount"
+            case .b: return "offre_discount_2999"
+            }
+        }
+    }
+
+    static let discountBucketKey = "sophia_discount_bucket"
+
+    static let discountBucket: DiscountBucket = {
+        let defaults = UserDefaults.standard
+        if let raw = defaults.string(forKey: discountBucketKey),
+           let saved = DiscountBucket(rawValue: raw) {
+            return saved
+        }
+        let drawn = DiscountBucket.allCases.randomElement() ?? .a
+        defaults.set(drawn.rawValue, forKey: discountBucketKey)
+        return drawn
+    }()
+
+    /// Offering behind the flash discount paywall: the bucket's offering, or `offre_discount`
+    /// while the bucket's own offering does not exist yet in RevenueCat. Explicit by design:
+    /// it is never the current offering, so an experiment on the onboarding price leaves it
+    /// untouched.
+    var promoOffering: Offering? {
+        offerings?.offering(identifier: Self.discountBucket.offeringIdentifier)
+            ?? offerings?.offering(identifier: DiscountBucket.a.offeringIdentifier)
+    }
+
+    /// Tells RevenueCat which bucket this customer is in. Sent at every launch: attributes
+    /// are cheap, RevenueCat ignores unchanged values, and a re-send after `logIn` keeps
+    /// the identified customer tagged as well as the anonymous one.
+    private func reportDiscountBucket() {
+        Purchases.shared.attribution.setAttributes(["discount_bucket": Self.discountBucket.rawValue])
+    }
+
     var promoPackage: Package? {
-        offerings?.offering(identifier: "offre_discount")?.package(identifier: "$rc_annual")
+        promoOffering?.package(identifier: "$rc_annual")
     }
 
     /// Offering matching a context identifier (e.g. `quizz`, `debloquer_cours`), if loaded.
@@ -140,11 +206,27 @@ class StoreViewModel {
         return offerings.all[identifier] ?? offerings.offering(identifier: identifier)
     }
 
-    /// Annual package for a specific offering identifier, falling back to the current
-    /// offering's annual package. Pricing follows whichever offering RevenueCat serves, so a
-    /// price/trial experiment on this context is reflected automatically.
+    /// Offering a context paywall (`quizz`, `debloquer_cours`, `entrainement`) actually displays.
+    ///
+    /// RevenueCat experiments work by swapping the **current** offering, and the context
+    /// offerings carry the same products as `fin_onboarding`: they exist for attribution, not
+    /// to sell another price. So a context paywall shows and charges the current offering
+    /// whenever it has an annual package, and only falls back to its own offering when the
+    /// current one has none. Before this, `paywallPriceDisplay` (current offering) and the
+    /// purchase (context offering) could disagree: a customer enrolled in a 59,99 € variant
+    /// was shown 59,99 € and charged 39,99 €, and could buy at 39,99 € from any course.
+    func displayedOffering(forContextIdentifier identifier: String) -> Offering? {
+        if let current = offerings?.current, current.package(identifier: "$rc_annual") != nil {
+            return current
+        }
+        return offering(identifier: identifier)
+    }
+
+    /// Annual package a context paywall sells: the served (current) offering first, then the
+    /// context offering. See `displayedOffering(forContextIdentifier:)`.
     func annualPackage(forOfferingIdentifier identifier: String) -> Package? {
-        offering(identifier: identifier)?.package(identifier: "$rc_annual") ?? annualPackage
+        displayedOffering(forContextIdentifier: identifier)?.package(identifier: "$rc_annual")
+            ?? annualPackage
     }
 
     // MARK: - Trial awareness
@@ -166,117 +248,74 @@ class StoreViewModel {
     /// Whether the current offering's annual package includes a free trial.
     var annualHasFreeTrial: Bool { hasFreeTrial(annualPackage) }
 
+    // MARK: - Trial length
+
+    /// Days of free trial a package's product ships, or nil when it has none. Read from the
+    /// store rather than assumed, so copy that names the number (« 3 jours offerts ») follows
+    /// whatever the served product carries — a 7-day variant included.
+    func trialDays(for package: Package?) -> Int? {
+        guard let intro = package?.storeProduct.introductoryDiscount,
+              intro.paymentMode == .freeTrial else { return nil }
+        let period = intro.subscriptionPeriod
+        let unitDays: Int
+        switch period.unit {
+        case .day: unitDays = 1
+        case .week: unitDays = 7
+        case .month: unitDays = 30
+        case .year: unitDays = 365
+        @unknown default: unitDays = 1
+        }
+        return max(1, period.value * unitDays * max(1, intro.numberOfPeriods))
+    }
+
+    /// Days of the annual plan's free trial, for copy; 3 (what the store has always served)
+    /// until the products are loaded.
+    var annualTrialDays: Int { trialDays(for: annualPackage) ?? 3 }
+
     /// Marks the customer as exposed to their experiment variant. RevenueCat only counts
     /// impressions automatically for its own paywall templates, so every native paywall here must
     /// report itself or enrolled customers are dropped from experiment results.
     ///
     /// Call once per presentation (not from a callback that can fire repeatedly).
     func trackPaywallImpression(paywallId: String, offeringIdentifier: String? = nil) {
-        let resolved = offeringIdentifier.flatMap { offering(identifier: $0) } ?? offerings?.current
-        guard let resolved else { return }
+        // The offering reported must be the one on screen, or a customer enrolled in an
+        // experiment is never counted as exposed: that is the served offering, resolved the
+        // same way the paywall picks its package.
+        let resolved = offeringIdentifier.flatMap { displayedOffering(forContextIdentifier: $0) }
+            ?? offerings?.current
+        trackPaywallImpression(paywallId: paywallId, offering: resolved)
+    }
+
+    /// Same, for a paywall that knows exactly which offering it displays (the discount
+    /// paywall, whose offering is never the current one).
+    func trackPaywallImpression(paywallId: String, offering: Offering?) {
+        guard let offering else { return }
         Purchases.shared.trackCustomPaywallImpression(
-            CustomPaywallImpressionParams(paywallId: paywallId, offering: resolved)
+            CustomPaywallImpressionParams(paywallId: paywallId, offering: offering)
         )
     }
-
-    // MARK: - Retention (cancellation save)
-
-    /// Promotional offer identifier created on the annual product in App Store Connect.
-    ///
-    /// Apple decides eligibility, not the app: a promotional offer is only granted to
-    /// someone who has, or has had, an active subscription. Someone in a free trial
-    /// qualifies — they are a current subscriber — and because redeeming an offer on the
-    /// *same* product takes effect at the next renewal, a trial that is cancelled keeps
-    /// running and is simply billed at the offer price when it ends. That is the whole
-    /// mechanism, and it has to be confirmed in sandbox before it ships: if it charged
-    /// immediately instead, it would end someone's trial and take their money.
-    static let retentionOfferIdentifier = "retention_14_99"
-
-    /// A signed retention offer, ready to buy, or `nil` when there is none to show.
-    struct RetentionOffer {
-        let package: Package
-        let offer: PromotionalOffer
-        /// The discounted price, already formatted in the store's currency.
-        let price: String
-        /// The normal price of the same package, to show beside it.
-        let regularPrice: String
-    }
-
-    /// Fetches the retention offer, returning `nil` unless the store will actually grant it.
-    ///
-    /// `nil` covers every reason: no offer configured, the product not carrying it, the
-    /// In-App Purchase key missing from RevenueCat so nothing can be signed, or Apple
-    /// judging this customer ineligible. The caller must show no offer at all in that
-    /// case — presenting one anyway would put a 14,99 € headline above a purchase the
-    /// store charges 39,99 € for.
-    func retentionOffer() async -> RetentionOffer? {
-        if offerings == nil { await loadOfferingsWithRetry() }
-        guard let package = annualPackage else { return nil }
-        let product = package.storeProduct
-        guard let discount = product.discounts.first(
-            where: { $0.offerIdentifier == Self.retentionOfferIdentifier }
-        ) else { return nil }
-
-        do {
-            let offer = try await Purchases.shared.promotionalOffer(
-                forProductDiscount: discount,
-                product: product
-            )
-            return RetentionOffer(
-                package: package,
-                offer: offer,
-                price: discount.localizedPriceString,
-                regularPrice: product.localizedPriceString
-            )
-        } catch {
-            // Not an error worth surfacing: an ineligible customer is the expected case.
-            return nil
-        }
-    }
-
-    /// Buys the annual package at the retention price.
-    func purchase(retention: RetentionOffer) async -> Bool {
-        isPurchasing = true
-        defer { isPurchasing = false }
-        do {
-            let result = try await Purchases.shared.purchase(
-                package: retention.package,
-                promotionalOffer: retention.offer
-            )
-            if !result.userCancelled {
-                applyCustomerInfo(result.customerInfo)
-                return isPremium
-            }
-            return false
-        } catch ErrorCode.purchaseCancelledError {
-            return false
-        } catch ErrorCode.paymentPendingError {
-            return false
-        } catch {
-            self.error = error.localizedDescription
-            return false
-        }
-    }
-
     // MARK: - Discount (offre_discount) pricing
 
     struct DiscountPriceDisplay {
-        /// Promo price for the year (e.g. "19,99 €") — what the paywall leads with, and
-        /// what the store will actually charge, so App Store 3.1.2 is met by the headline
-        /// itself rather than by a note under it.
-        let promoYearly: String
-        /// Regular yearly price shown struck-through (e.g. "39,99 €"), when available.
-        let regularYearly: String?
+        /// Promo price, per month (e.g. "1,67 €") — what the paywall leads with.
+        let promoPerMonth: String
+        /// Regular annual price, per month, shown struck-through (e.g. "3,33 €").
+        let regularPerMonth: String?
+        /// "facturé 19,99 € par an" — the amount actually charged, kept small under the
+        /// per-month headline (App Store 3.1.2).
+        let billedYearlyNote: String
         /// Savings badge like "-50%", when computable.
         let discountBadge: String?
     }
 
     func discountPriceDisplay(language: AppLanguage) -> DiscountPriceDisplay {
         guard let promo = promoPackage?.storeProduct else {
-            let fallback = AppLocalizable.string("paywall.discount.fallbackPrice", language: language)
+            // Store not answered yet: no number rather than a remembered one.
+            let regularProduct: StoreProduct? = annualPackage?.storeProduct
             return DiscountPriceDisplay(
-                promoYearly: fallback,
-                regularYearly: annualPackage?.storeProduct.localizedPriceString,
+                promoPerMonth: Self.unknownPrice,
+                regularPerMonth: regularProduct.map { perMonthPrice($0, language: language) },
+                billedYearlyNote: "",
                 discountBadge: nil
             )
         }
@@ -288,8 +327,9 @@ class StoreViewModel {
             if percent > 0 { badge = "-\(percent)%" }
         }
         return DiscountPriceDisplay(
-            promoYearly: promo.localizedPriceString,
-            regularYearly: regular?.localizedPriceString,
+            promoPerMonth: perMonthPrice(promo, language: language),
+            regularPerMonth: regular.map { perMonthPrice($0, language: language) },
+            billedYearlyNote: billedYearlyNote(promo.localizedPriceString, language: language),
             discountBadge: badge
         )
     }
@@ -305,7 +345,7 @@ class StoreViewModel {
         let currentID = offerings.current?.identifier ?? "nil"
         print("[OnboardingPaywall] RC offerings available: [\(available)] — current: \(currentID)")
 
-        for (label, package) in [("annual", annualPackage), ("monthly", monthlyPackage)] {
+        for (label, package) in [("annual", annualPackage), ("monthly", monthlyPackage), ("weekly", weeklyPackage)] {
             guard let package else {
                 print("[OnboardingPaywall] \(label) package missing in current offering '\(currentID)'")
                 continue
@@ -324,29 +364,107 @@ class StoreViewModel {
     }
 
     struct PaywallPriceDisplay {
-        /// What the store charges for a year, which is what every paywall now shows. The
-        /// plan rows carry their billing period in words beside it, so the two plans stay
-        /// readable against each other without converting the yearly one to a month.
+        /// What the store charges for a year (e.g. "39,99 €").
         let yearlyPrice: String
-        let monthlyPrice: String
+        /// "3,33 € / mois" — the annual plan's monthly equivalent, which the onboarding and
+        /// discount paywalls lead with.
+        let yearlyPerMonth: String
+        /// The annual plan in the short plan's own unit: per month next to a monthly plan,
+        /// per week next to a weekly one ("0,77 € / semaine"), so the comparison card reads
+        /// in one unit.
+        let yearlyPerShortPeriod: String
+        /// "facturé 39,99 € par an". The per-month headline never stands alone — the amount
+        /// actually charged stays on screen, small and grey (App Store 3.1.2).
+        let yearlyBilledNote: String
+        /// Price of the short plan (monthly or weekly) as the store writes it.
+        let shortPlanPrice: String
+        let shortPlanIsWeekly: Bool
         let discountBadge: String?
     }
 
     func paywallPriceDisplay(language: AppLanguage) -> PaywallPriceDisplay {
-        if let annual = annualPackage?.storeProduct,
-           let monthly = monthlyPackage?.storeProduct {
-            return PaywallPriceDisplay(
-                yearlyPrice: annual.localizedPriceString,
-                monthlyPrice: monthly.localizedPriceString,
-                discountBadge: savingsBadge(annual: annual.price, monthly: monthly.price)
-            )
+        guard let annual = annualPackage?.storeProduct else {
+            return Self.fallbackPaywallPrices(language: language)
         }
-        return Self.fallbackPaywallPrices(language: language)
+        let short = shortPlanPackage?.storeProduct
+        let weekly = shortPlanIsWeekly
+        let perMonthLabel = AppLocalizable.string("paywall.plan.perMonth", language: language)
+        let perWeekLabel = AppLocalizable.string("paywall.plan.perWeek", language: language)
+        let yearlyPerMonth = "\(perMonthPrice(annual, language: language)) \(perMonthLabel)"
+        return PaywallPriceDisplay(
+            yearlyPrice: annual.localizedPriceString,
+            yearlyPerMonth: yearlyPerMonth,
+            yearlyPerShortPeriod: weekly
+                ? "\(perWeekPrice(annual, language: language)) \(perWeekLabel)"
+                : yearlyPerMonth,
+            yearlyBilledNote: billedYearlyNote(annual.localizedPriceString, language: language),
+            shortPlanPrice: short?.localizedPriceString ?? Self.unknownPrice,
+            shortPlanIsWeekly: weekly,
+            discountBadge: short.flatMap {
+                savingsBadge(annual: annual.price, shortPlan: $0.price, periodsPerYear: weekly ? 52 : 12)
+            }
+        )
     }
 
-    private func savingsBadge(annual: Decimal, monthly: Decimal) -> String? {
-        guard monthly > 0 else { return nil }
-        let fullYearAtMonthly = monthly * 12
+    // MARK: - Prix mensuel équivalent
+
+    /// Douzième du prix annuel, écrit comme la boutique de ce client l'écrirait : le
+    /// formateur vient du produit (`StoreProduct.priceFormatter`), donc devise et
+    /// conventions du pays servi. Filet sur un formateur local si StoreKit n'en donne pas.
+    func perMonthPrice(_ product: StoreProduct, language: AppLanguage) -> String {
+        perPeriodPrice(product, periodsPerYear: 12, language: language)
+    }
+
+    /// Fifty-second of the annual price, for the comparison card next to a weekly plan.
+    func perWeekPrice(_ product: StoreProduct, language: AppLanguage) -> String {
+        perPeriodPrice(product, periodsPerYear: 52, language: language)
+    }
+
+    private func perPeriodPrice(_ product: StoreProduct, periodsPerYear: Int, language: AppLanguage) -> String {
+        let amount = product.price / Decimal(periodsPerYear)
+        if let formatter = product.priceFormatter,
+           let text = formatter.string(from: amount as NSDecimalNumber) {
+            return text
+        }
+        return formatCurrency(amount, currencyCode: product.currencyCode, language: language)
+    }
+
+    /// « 0,00 € » dans la devise de la boutique : ce que coûte le jour où l'on appuie sur
+    /// le bouton quand un essai gratuit est servi.
+    func zeroPriceString(language: AppLanguage) -> String {
+        if let product = annualPackage?.storeProduct {
+            if let formatter = product.priceFormatter,
+               let text = formatter.string(from: 0) {
+                return text
+            }
+            return formatCurrency(0, currencyCode: product.currencyCode, language: language)
+        }
+        return formatCurrency(0, currencyCode: nil, language: language)
+    }
+
+    /// « facturé 39,99 € par an » — ce que la boutique prélèvera réellement.
+    private func billedYearlyNote(_ yearlyPrice: String, language: AppLanguage) -> String {
+        String(
+            format: AppLocalizable.string("paywall.plan.billedYearly", language: language),
+            yearlyPrice
+        )
+    }
+
+    /// Filet quand StoreKit ne fournit pas de formateur : le montant s'écrit dans la langue
+    /// lue, avec la devise du produit (ou celle de la langue si aucun produit n'est chargé).
+    private func formatCurrency(_ amount: Decimal, currencyCode: String?, language: AppLanguage) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: language.localeIdentifier)
+        if let currencyCode { formatter.currencyCode = currencyCode }
+        return formatter.string(from: amount as NSDecimalNumber) ?? "\(amount)"
+    }
+
+    /// « -58 % » : what the annual plan saves against a year of the short plan (twelve
+    /// monthly or fifty-two weekly payments).
+    private func savingsBadge(annual: Decimal, shortPlan: Decimal, periodsPerYear: Int) -> String? {
+        guard shortPlan > 0 else { return nil }
+        let fullYearAtMonthly = shortPlan * Decimal(periodsPerYear)
         guard fullYearAtMonthly > annual else { return nil }
         let ratio = (fullYearAtMonthly - annual) / fullYearAtMonthly
         let percent = Int((ratio as NSDecimalNumber).doubleValue * 100)
@@ -354,11 +472,21 @@ class StoreViewModel {
         return "-\(percent)%"
     }
 
+    /// What a paywall shows before StoreKit has answered, or when it never does: no number
+    /// at all. The old fallback was a hard-coded « 39,99 € » per language, which is wrong the
+    /// moment a price experiment or a country tier serves anything else — and a wrong price
+    /// on a paywall is worse than a missing one.
+    static let unknownPrice = "…"
+
     private static func fallbackPaywallPrices(language: AppLanguage) -> PaywallPriceDisplay {
-        return PaywallPriceDisplay(
-            yearlyPrice: AppLocalizable.string("paywall.plan.fallback.yearlyPrice", language: language),
-            monthlyPrice: AppLocalizable.string("paywall.plan.fallback.monthlyPrice", language: language),
-            discountBadge: AppLocalizable.string("paywall.plan.discount", language: language)
+        PaywallPriceDisplay(
+            yearlyPrice: unknownPrice,
+            yearlyPerMonth: unknownPrice,
+            yearlyPerShortPeriod: unknownPrice,
+            yearlyBilledNote: "",
+            shortPlanPrice: unknownPrice,
+            shortPlanIsWeekly: false,
+            discountBadge: nil
         )
     }
 }

@@ -1,0 +1,128 @@
+{
+  "id": "course_281_comment_meurt_une_etoile",
+  "title": "Ako umiera hviezda?",
+  "subtitle": "Červený obor alebo supernova",
+  "subject": "sciences",
+  "subcategory": "Zem a vesmír",
+  "description": "Miliardy rokov udržiava hviezda rovnováhu medzi gravitáciou a syntézou vo svojom jadre. Keď jej dôjde palivo, nafúkne sa, zrúti alebo vybuchne a jej koniec závisí od jedinej veci: od jej hmotnosti.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "crab_nebula_supernova_remnant_hubble",
+    "ratio": "4:3",
+    "hook": "Hviezda môže pokojne dohasnúť alebo vybuchnúť s nepredstaviteľnou silou: všetko rozhoduje jej hmotnosť."
+  },
+  "sections": [
+    {
+      "id": "course_281_comment_meurt_une_etoile_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Čo vlastne spôsobí smrť hviezdy? Hviezda začína umierať, keď už nedokáže odolávať vlastnej gravitácii. Väčšinu života ťahá gravitácia jej hmotu k stredu. Zároveň energia vznikajúca v jej jadre vytvára tlak, ktorý tlačí smerom von. Tieto dva účinky sa vyrovnávajú a hviezda zostáva stabilná."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zdrojom tejto energie je [[jadrová syntéza]]: jadrá vodíka sa spájajú na hélium a uvoľňujú obrovské množstvo energie. Rovnováha môže trvať milióny, miliardy, ba až bilióny rokov. Všetko závisí od hmotnosti. Malé hviezdy spotrebúvajú palivo pomaly, hmotné hviezdy ho spaľujú oveľa rýchlejšie. Jedného dňa sa rovnováha naruší. Čo bude nasledovať, závisí od hmotnosti hviezdy."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p1",
+      "title": "Hviezda sa nafúkne na červeného obra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Väčšinu svojho života premieňa hviezda vodík vo svojom jadre, teda v centrálnej oblasti, na hélium. Keď tohto vodíka začne ubúdať, syntéza v strede sa spomalí. Jadro sa zmršťuje a zahrieva. Okolo neho ďalej prebieha syntéza vo vrstve vodíka, ktorá uvoľňuje energiu. Pod týmto tlakom sa vonkajšie vrstvy hviezdy obrovsky nafúknu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Výsledkom je [[červený obor]]: hviezda oveľa väčšia než predtým, s chladnejším povrchom. Umierajúca hviezda teda najprv rastie, a nie iba pokojne dohasína. Slnko by malo vstúpiť do tejto fázy asi o **5 miliárd rokov**."
+        },
+        {
+          "type": "funFact",
+          "text": "Keď sa Slnko stane červeným obrom, môže sa nafúknuť natoľko, že pohltí Merkúr a Venušu. Presný osud Zeme zostáva neistý."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p2",
+      "title": "Biely trpaslík veľký ako Zem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hviezda ako Slnko sa nemôže nafukovať donekonečna. Ako starne, stráca vonkajšie vrstvy, ktoré unikajú do vesmíru. Tento plyn sa rozptýli a vznikne žiariaci oblak: [[planetárna hmlovina]]. V strede zostane [[biely trpaslík]]: horúce a husté jadro hviezdy, obnažené po odchode vonkajších vrstiev."
+        },
+        {
+          "type": "image",
+          "asset": "helix_nebula_planetary_nebula_white_dwarf_hubble",
+          "ratio": "1:1",
+          "caption": "Hmlovina Helix: plyn vyvrhnutý umierajúcou hviezdou, v strede je viditeľný biely trpaslík."
+        },
+        {
+          "type": "paragraph",
+          "text": "Biely trpaslík nie je väčší ako **Zem**, no stále obsahuje veľkú časť hmotnosti pôvodnej hviezdy. Syntéza v ňom ustala: už nevyrába energiu. Ak svieti, tak iba preto, že je stále mimoriadne horúci. Počas nesmierne dlhého času postupne chladne a bledne."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p3",
+      "title": "Supernova, neutrónová hviezda alebo čierna diera",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oveľa hmotnejšia hviezda sa tu nezastaví. Ďalej spája ľahšie prvky na ťažšie: z hélia vzniká uhlík a ďalšie reakcie potom vytvárajú ešte ťažšie prvky. Postupne sa vytvorí jadro bohaté na **železo**. So železom však syntéza už nedodáva energiu potrebnú na to, aby hviezdu udržala proti gravitácii. Jadro sa v okamihu zrúti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Z tohto kolapsu môže vzniknúť [[supernova]], obrovský výbuch, ktorý vymrští veľkú časť hviezdy do vesmíru. Zrútené jadro však zostáva. Ak nie je príliš hmotné, stane sa z neho [[neutrónová hviezda]], objekt s extrémnou hustotou, nie väčší ako mesto. Ak je dostatočne hmotné, gravitácia ho drví ďalej, až kým nevznikne [[čierna diera]], kde je príťažlivosť taká silná, že z nej neunikne ani svetlo."
+        },
+        {
+          "type": "image",
+          "asset": "m87_black_hole_event_horizon_telescope_2019",
+          "ratio": "16:9",
+          "caption": "Čierna diera v galaxii M87: prvý snímok z roku 2019 (vľavo) a jeho verzia spresnená algoritmom PRIMO (2023)."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p4",
+      "title": "Sme hviezdny prach",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Umierajúca hviezda nezmizne. Časť svojej hmoty vráti vesmíru a s ňou aj prvky, ktoré počas života vyrobila. Časom sa táto hmota môže stať súčasťou nových hviezd, planét a iných svetov."
+        },
+        {
+          "type": "image",
+          "asset": "pillars_of_creation_eagle_nebula_jwst_2022",
+          "ratio": "2:3",
+          "caption": "Stĺpy stvorenia na snímke Webbovho teleskopu z roku 2022: rodia sa tu nové hviezdy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najlepším príkladom je **uhlík**. Je nevyhnutný pre život na Zemi vrátane našich vlastných tiel. Väčšina tohto uhlíka však vznikla v generáciách hviezd, ktoré už dávno zanikli. Preto sa niekedy hovorí, že sme z hviezdneho prachu. Znie to poeticky, no veda, ktorá za tým stojí, je celkom skutočná. Smrť hviezdy je teda aj začiatkom: jej hmota možno raz vytvorí inú hviezdu, inú planétu alebo dokonca živý svet."
+        },
+        {
+          "type": "takeaway",
+          "text": "Bez syntézy hviezda podľahne gravitácii: malé dohasnú ako biele trpaslíky, hmotné vybuchnú ako supernovy a zanechajú neutrónovú hviezdu alebo čiernu dieru a ich rozptýlená hmota živí budúce hviezdy, planéty aj živé bytosti."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, p. 541."
+    },
+    {
+      "text": "NASA Science, « Types of Stars: White Dwarfs »."
+    },
+    {
+      "text": "S. Frazier, « Why the Sun Won't Become a Black Hole », NASA Goddard Space Flight Center, 2019."
+    }
+  ]
+}

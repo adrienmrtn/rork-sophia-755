@@ -59,51 +59,22 @@ private enum PaywallCountdown {
     }
 }
 
-// MARK: - Yearly price line (quizz + debloquer_cours)
+// MARK: - Price footnote (quizz + debloquer_cours)
 
-/// The price above the CTA of the quiz and course-unlock paywalls.
-///
-/// It used to be a footnote in the lightest grey, right above a button that said
-/// « Débloquer gratuitement »: the amount the store will actually charge was the hardest
-/// thing on the screen to read. The sentence is still the translated one, in every language;
-/// it is only split on its single `%@`, so that the yearly price gets a line of its own,
-/// large and in full ink — "Essai gratuit de 3 jours, puis" above, "39,99 € / an" below.
-/// Without a trial the sentence starts with the price, so nothing goes above it.
-private struct PaywallYearlyPriceLine: View {
-    /// A translated format carrying the yearly price as its only `%@`.
-    let format: String
-    let price: String
+/// The price above the CTA of the quiz and course-unlock paywalls: one small grey line,
+/// "Essai gratuit de 3 jours, puis 39,99 € / an". The button underneath says what today
+/// costs; this says what the store charges once the trial is over.
+private struct PaywallPriceFootnote: View {
+    let text: String
 
     var body: some View {
-        VStack(spacing: 2) {
-            let parts = format.components(separatedBy: "%@")
-            if parts.count == 2 {
-                let lead = parts[0].trimmingCharacters(in: .whitespaces)
-                if !lead.isEmpty {
-                    Text(lead)
-                        .font(DS.sans(.subheadline, .medium))
-                        .foregroundStyle(DS.inkSecondary)
-                }
-                Text(price)
-                    .font(DS.title(.title2, .heavy))
-                    .foregroundColor(DS.ink)
-                    + Text(parts[1])
-                    .font(DS.sans(.subheadline, .semibold))
-                    .foregroundColor(DS.ink)
-            } else {
-                // A translation that lost its placeholder, or gained a second one, still
-                // shows its whole sentence, just without the split.
-                Text(format.replacingOccurrences(of: "%@", with: price))
-                    .font(DS.sans(.headline, .semibold))
-                    .foregroundStyle(DS.ink)
-            }
-        }
-        .multilineTextAlignment(.center)
-        .fixedSize(horizontal: false, vertical: true)
-        .frame(maxWidth: .infinity)
-        .padding(.horizontal, 24)
-        // One sentence split over two lines for the eye; VoiceOver reads it as one.
-        .accessibilityElement(children: .combine)
+        Text(text)
+            .font(DS.sans(.footnote, .medium))
+            .foregroundStyle(DS.inkTertiary)
+            .multilineTextAlignment(.center)
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal, 24)
     }
 }
 
@@ -356,7 +327,9 @@ struct SophiaStandardPaywall: View {
     /// wording when the served product has no introductory offer.
     private var priceLine: String {
         String(
-            format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
+            format: hasTrial
+                ? languageManager.trialText("paywall.price.trialThenYearly", days: store.annualTrialDays)
+                : languageManager.text("paywall.price.yearlyNoTrial"),
             prices.yearlyPrice
         )
     }
@@ -393,7 +366,7 @@ struct SophiaStandardPaywall: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: context.rawValue,
-                    offeringId: store.offering(identifier: context.rawValue)?.identifier,
+                    offeringId: package.presentedOfferingContext.offeringIdentifier,
                     packageId: package.identifier
                 )
                 onPurchased()
@@ -421,8 +394,9 @@ struct SophiaStandardPaywall: View {
 /// Dedicated native paywall for the `quizz` context, opened from the training tab's
 /// "Débloquer" CTA. Rather than a generic feature list, it *sells the training method*:
 /// it explains what training is, shows spaced-repetition statistics, and frames spaced
-/// repetition as the most proven way to anchor lasting knowledge. Purchases still attribute
-/// to the `quizz` RevenueCat offering (single annual plan, 3-day trial).
+/// repetition as the most proven way to anchor lasting knowledge. It sells the annual plan of
+/// the offering RevenueCat currently serves (so price experiments apply here too), with the
+/// `quizz` offering as fallback; the impression and the purchase report that same offering.
 struct SophiaTrainingPaywall: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(\.dismiss) private var dismiss
@@ -654,7 +628,9 @@ struct SophiaTrainingPaywall: View {
     /// wording when the served product has no introductory offer.
     private var priceLine: String {
         String(
-            format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
+            format: hasTrial
+                ? languageManager.trialText("paywall.price.trialThenYearly", days: store.annualTrialDays)
+                : languageManager.text("paywall.price.yearlyNoTrial"),
             prices.yearlyPrice
         )
     }
@@ -691,7 +667,7 @@ struct SophiaTrainingPaywall: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: context.rawValue,
-                    offeringId: store.offering(identifier: context.offeringIdentifier)?.identifier,
+                    offeringId: package.presentedOfferingContext.offeringIdentifier,
                     packageId: package.identifier
                 )
                 onPurchased()
@@ -916,7 +892,7 @@ struct SophiaQuizPaywall: View {
 
     private var bottomBar: some View {
         VStack(spacing: 10) {
-            PaywallYearlyPriceLine(format: priceFormat, price: prices.yearlyPrice)
+            PaywallPriceFootnote(text: priceLine)
 
             Button(action: purchase) {
                 HStack(spacing: 8) {
@@ -925,7 +901,7 @@ struct SophiaQuizPaywall: View {
                     } else {
                         Image(systemName: "sparkles")
                             .font(.jakarta(size: 15, weight: .bold))
-                        Text(languageManager.text(hasTrial ? "paywall.cta.activateTrial" : "paywall.cta.subscribe"))
+                        Text(ctaTitle)
                     }
                 }
             }
@@ -938,8 +914,21 @@ struct SophiaQuizPaywall: View {
         }
     }
 
-    private var priceFormat: String {
-        languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial")
+    private var priceLine: String {
+        String(
+            format: hasTrial
+                ? languageManager.trialText("paywall.price.trialThenYearly", days: store.annualTrialDays)
+                : languageManager.text("paywall.price.yearlyNoTrial"),
+            prices.yearlyPrice
+        )
+    }
+
+    /// « Continuer pour 0,00 € » while the trial is served: what today costs, in the
+    /// store's currency. Without a trial the button says what it does.
+    private var ctaTitle: String {
+        hasTrial
+            ? String(format: languageManager.text("paywall.cta.continueFor"), store.zeroPriceString(language: languageManager.current))
+            : languageManager.text("paywall.cta.subscribe")
     }
 
     private var closeButton: some View {
@@ -973,7 +962,7 @@ struct SophiaQuizPaywall: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: context.rawValue,
-                    offeringId: store.offering(identifier: context.rawValue)?.identifier,
+                    offeringId: package.presentedOfferingContext.offeringIdentifier,
                     packageId: package.identifier
                 )
                 onPurchased()
@@ -1624,7 +1613,7 @@ struct SophiaCourseUnlockPaywall: View {
 
     private var bottomBar: some View {
         VStack(spacing: 10) {
-            PaywallYearlyPriceLine(format: priceFormat, price: prices.yearlyPrice)
+            PaywallPriceFootnote(text: priceLine)
 
             Button(action: purchase) {
                 HStack(spacing: 8) {
@@ -1633,9 +1622,7 @@ struct SophiaCourseUnlockPaywall: View {
                     } else {
                         Image(systemName: hasTrial ? "lock.open.fill" : "sparkles")
                             .font(.jakarta(size: 15, weight: .bold))
-                        // Not « Débloquer gratuitement », which reads as free for good: the
-                        // quiz paywall's wording, which says it is the trial that is free.
-                        Text(languageManager.text(hasTrial ? "paywall.cta.activateTrial" : "paywall.cta.subscribe"))
+                        Text(ctaTitle)
                     }
                 }
             }
@@ -1648,8 +1635,21 @@ struct SophiaCourseUnlockPaywall: View {
         }
     }
 
-    private var priceFormat: String {
-        languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial")
+    private var priceLine: String {
+        String(
+            format: hasTrial
+                ? languageManager.trialText("paywall.price.trialThenYearly", days: store.annualTrialDays)
+                : languageManager.text("paywall.price.yearlyNoTrial"),
+            prices.yearlyPrice
+        )
+    }
+
+    /// « Continuer pour 0,00 € » while the trial is served: what today costs, in the
+    /// store's currency. Without a trial the button says what it does.
+    private var ctaTitle: String {
+        hasTrial
+            ? String(format: languageManager.text("paywall.cta.continueFor"), store.zeroPriceString(language: languageManager.current))
+            : languageManager.text("paywall.cta.subscribe")
     }
 
     private var closeButton: some View {
@@ -1683,7 +1683,7 @@ struct SophiaCourseUnlockPaywall: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: context.rawValue,
-                    offeringId: store.offering(identifier: context.rawValue)?.identifier,
+                    offeringId: package.presentedOfferingContext.offeringIdentifier,
                     packageId: package.identifier
                 )
                 onPurchased()
@@ -1784,7 +1784,7 @@ struct SophiaDiscountPaywall: View {
             didTrackDismiss = false
             if tracksAnalytics {
                 AnalyticsService.trackPaywallViewed(context: context.rawValue)
-                store.trackPaywallImpression(paywallId: "native_discount", offeringIdentifier: context.offeringIdentifier)
+                store.trackPaywallImpression(paywallId: "native_discount", offering: store.promoOffering)
             }
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
                 appeared = true
@@ -1872,29 +1872,33 @@ struct SophiaDiscountPaywall: View {
 
     // MARK: Price block
 
-    /// Prix annuels, comme partout ailleurs dans l'app : le grand chiffre est le montant
-    /// que la boutique prélèvera, donc l'App Store (3.1.2) est servi par le prix lui-même
-    /// plutôt que par une note sous lui, et le barré au-dessus se compare à lui dans la
-    /// même unité.
+    /// Prix mensuels, comme sur les paywalls de l'onboarding : l'offre se compare au plan
+    /// annuel normal dans la même unité. Le montant réellement prélevé une fois par an
+    /// reste juste en dessous, en petit (App Store 3.1.2).
     private var priceBlock: some View {
         VStack(spacing: 4) {
             HStack(alignment: .firstTextBaseline, spacing: 10) {
-                if let regular = prices.regularYearly {
+                if let regular = prices.regularPerMonth {
                     Text(regular)
                         .font(DS.sans(.title3, .semibold))
                         .foregroundStyle(.white.opacity(0.7))
                         .strikethrough()
                 }
-                Text(prices.promoYearly)
+                Text(prices.promoPerMonth)
                     .font(DS.title(.largeTitle, .heavy))
                     .foregroundStyle(.white)
             }
             .lineLimit(1)
             .minimumScaleFactor(0.7)
 
-            Text(languageManager.text("paywall.discount.perYear"))
+            Text(languageManager.text("paywall.discount.perMonth"))
                 .font(DS.sans(.footnote, .semibold))
                 .foregroundStyle(.white.opacity(0.85))
+                .multilineTextAlignment(.center)
+
+            Text(prices.billedYearlyNote)
+                .font(DS.sans(.caption, .medium))
+                .foregroundStyle(.white.opacity(0.75))
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -1969,326 +1973,8 @@ struct SophiaDiscountPaywall: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: context.rawValue,
-                    offeringId: store.offering(identifier: context.offeringIdentifier)?.identifier,
+                    offeringId: package.presentedOfferingContext.offeringIdentifier,
                     packageId: package.identifier
-                )
-                onPurchased()
-            }
-        }
-    }
-
-    private func restore() {
-        Task {
-            await store.restore()
-            if store.isPremium { onRestored() }
-        }
-    }
-
-    private func trackDismissIfNeeded() {
-        guard tracksAnalytics, !didTrackDismiss else { return }
-        didTrackDismiss = true
-        let duration = Int(Date().timeIntervalSince(presentedAt ?? Date()))
-        AnalyticsService.trackPaywallDismissed(context: context.rawValue, durationSeconds: max(0, duration))
-    }
-}
-
-// MARK: - Retention (cancellation save)
-
-/// What the reader stands to lose, gathered for the retention paywall's copy.
-///
-/// Plain values rather than a `ProgressManager`, so the paywall dispatcher does not
-/// have to carry one and the screen can be previewed.
-nonisolated struct RetentionSummary: Sendable {
-    var streak: Int
-    var completedCourses: Int
-    var globalXP: Int
-    /// End of the period already paid for — the trial's last day, or the renewal date.
-    var expiresAt: Date?
-    /// Whether the cancelled subscription is still in its free trial. The argument
-    /// differs completely: a trial leaver is refusing a charge that has not happened
-    /// yet, a paying leaver is giving up something they have been using.
-    var isTrial: Bool
-
-    @MainActor
-    static func current(store: StoreViewModel, progressManager: ProgressManager) -> RetentionSummary {
-        RetentionSummary(
-            streak: progressManager.progress.streak,
-            completedCourses: progressManager.progress.courseProgress.values.filter(\.isCompleted).count,
-            globalXP: progressManager.progress.globalXP,
-            expiresAt: store.expiresAt,
-            isTrial: store.isInFreeTrial
-        )
-    }
-}
-
-/// Shown to someone on their way out: what they have built, and the offer that keeps
-/// them.
-///
-/// The offer is fetched before anything about a price is drawn, and the screen falls
-/// back to its progress half when the store returns nothing. Apple grants promotional
-/// offers only to current or former subscribers and decides eligibility itself, so an
-/// offer headline drawn optimistically would sit above a purchase charged at full
-/// price. Nothing here promises a number the store has not already signed.
-struct SophiaRetentionPaywall: View {
-    @Environment(LanguageManager.self) private var languageManager
-    @Environment(\.dismiss) private var dismiss
-
-    let store: StoreViewModel
-    var summary: RetentionSummary
-    var tracksAnalytics: Bool = true
-    var onPurchased: () -> Void = {}
-    var onRestored: () -> Void = {}
-    var onDismissed: (() -> Void)? = nil
-    /// Called when the reader declines and wants Apple's subscription settings. The
-    /// app cannot cancel for them — only Apple can — so this hands them over rather
-    /// than pretending to.
-    var onContinueToCancel: (() -> Void)? = nil
-
-    @State private var offer: StoreViewModel.RetentionOffer?
-    @State private var loadingOffer = true
-    @State private var purchasing = false
-    @State private var appeared = false
-    @State private var presentedAt: Date?
-    @State private var didTrackDismiss = false
-
-    private let context = SophiaPaywallContext.retention
-
-    var body: some View {
-        ZStack {
-            DS.canvas.ignoresSafeArea()
-
-            VStack(spacing: 0) {
-                HStack {
-                    closeButton
-                    Spacer()
-                }
-                .padding(.horizontal, 20)
-                .padding(.top, 12)
-
-                ScrollView {
-                    VStack(spacing: 26) {
-                        headline
-                        progressBlock
-                        if loadingOffer {
-                            ProgressView().tint(DS.ink)
-                        } else if let offer {
-                            offerBlock(offer)
-                        } else {
-                            noOfferNote
-                        }
-                    }
-                    .padding(.horizontal, 24)
-                    .padding(.top, 8)
-                    .padding(.bottom, 24)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 18)
-                }
-                .scrollBounceBehavior(.basedOnSize)
-
-                bottomBar
-            }
-            .frame(maxWidth: OV2.readableWidth)
-        }
-        .onAppear {
-            presentedAt = Date()
-            didTrackDismiss = false
-            if tracksAnalytics {
-                AnalyticsService.trackPaywallViewed(context: context.rawValue)
-            }
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
-                appeared = true
-            }
-        }
-        .task {
-            offer = await store.retentionOffer()
-            loadingOffer = false
-            if tracksAnalytics, offer != nil {
-                store.trackPaywallImpression(
-                    paywallId: "native_retention",
-                    offeringIdentifier: context.offeringIdentifier
-                )
-            }
-        }
-        .onDisappear { trackDismissIfNeeded() }
-    }
-
-    // MARK: Copy
-
-    private var headline: some View {
-        VStack(spacing: 10) {
-            Text(languageManager.text(summary.isTrial ? "retention.title.trial" : "retention.title.paid"))
-                .font(DS.title(.title, .heavy))
-                .foregroundStyle(DS.ink)
-                .multilineTextAlignment(.center)
-
-            Text(subtitle)
-                .font(DS.sans(.subheadline, .medium))
-                .foregroundStyle(DS.inkSecondary)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-        }
-    }
-
-    private var subtitle: String {
-        let key = summary.isTrial ? "retention.subtitle.trial" : "retention.subtitle.paid"
-        let template = languageManager.text(key)
-        guard let expiresAt = summary.expiresAt else {
-            // No date from the store: drop the placeholder rather than print it.
-            return template.replacingOccurrences(of: "{date}", with: "").trimmingCharacters(in: .whitespaces)
-        }
-        return template.replacingOccurrences(of: "{date}", with: Self.dateFormatter.string(from: expiresAt))
-    }
-
-    private static let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-        return formatter
-    }()
-
-    /// Streak, courses and XP — the three things the app itself calls progress, and the
-    /// only honest argument available to a screen that is not allowed to discount.
-    private var progressBlock: some View {
-        HStack(spacing: 12) {
-            stat(value: "\(summary.streak)", label: languageManager.text("retention.stat.streak"))
-            stat(value: "\(summary.completedCourses)", label: languageManager.text("retention.stat.courses"))
-            stat(value: "\(summary.globalXP)", label: languageManager.text("retention.stat.xp"))
-        }
-    }
-
-    private func stat(value: String, label: String) -> some View {
-        VStack(spacing: 4) {
-            Text(value)
-                .font(DS.title(.title2, .heavy))
-                .foregroundStyle(DS.ink)
-                .lineLimit(1)
-                .minimumScaleFactor(0.6)
-            Text(label)
-                .font(DS.sans(.caption2, .semibold))
-                .foregroundStyle(DS.inkSecondary)
-                .multilineTextAlignment(.center)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 16)
-        .background(DS.surface, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-        .overlay(
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
-        )
-    }
-
-    private func offerBlock(_ offer: StoreViewModel.RetentionOffer) -> some View {
-        VStack(spacing: 8) {
-            HStack(alignment: .firstTextBaseline, spacing: 10) {
-                Text(offer.regularPrice)
-                    .font(DS.sans(.title3, .semibold))
-                    .foregroundStyle(DS.inkSecondary)
-                    .strikethrough()
-                Text(offer.price)
-                    .font(DS.title(.largeTitle, .heavy))
-                    .foregroundStyle(DS.ink)
-            }
-            .lineLimit(1)
-            .minimumScaleFactor(0.7)
-
-            Text(languageManager.text(summary.isTrial ? "retention.offer.whenTrial" : "retention.offer.whenPaid"))
-                .font(DS.sans(.footnote, .medium))
-                .foregroundStyle(DS.inkSecondary)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-        }
-        .padding(.vertical, 20)
-        .padding(.horizontal, 18)
-        .frame(maxWidth: .infinity)
-        .background(DS.surface, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
-        .overlay(
-            RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .strokeBorder(DS.ink.opacity(0.12), lineWidth: 1)
-        )
-    }
-
-    /// No offer to show. The screen keeps the progress half and says nothing about
-    /// price — there is no number it is allowed to promise.
-    private var noOfferNote: some View {
-        Text(languageManager.text("retention.noOffer.body"))
-            .font(DS.sans(.footnote, .medium))
-            .foregroundStyle(DS.inkSecondary)
-            .multilineTextAlignment(.center)
-            .fixedSize(horizontal: false, vertical: true)
-    }
-
-    // MARK: Bottom bar
-
-    private var bottomBar: some View {
-        VStack(spacing: 10) {
-            if let offer {
-                Button(action: { purchase(offer) }) {
-                    if purchasing {
-                        ProgressView().tint(.white)
-                    } else {
-                        Text(languageManager.text("retention.cta.stay"))
-                    }
-                }
-                .buttonStyle(DSPrimaryButtonStyle())
-                .disabled(purchasing)
-            }
-
-            Button(languageManager.text(secondaryLabelKey)) {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                trackDismissIfNeeded()
-                dismiss()
-                onContinueToCancel?()
-            }
-            .buttonStyle(DSSecondaryButtonStyle())
-            .disabled(purchasing)
-
-            Button(languageManager.text("paywall.restore"), action: restore)
-                .font(DS.sans(.caption2, .medium))
-                .foregroundStyle(DS.inkSecondary)
-                .padding(.bottom, 14)
-        }
-        .padding(.horizontal, 24)
-        .padding(.top, 8)
-    }
-
-    /// The decline button says different things on the two ways in. Opened from
-    /// settings, the reader is still subscribed and is on their way to cancel, so it
-    /// takes them there. Opened because the store reported a cancellation, that has
-    /// already happened and there is nothing to continue — it is just a refusal.
-    private var secondaryLabelKey: String {
-        guard onContinueToCancel != nil else { return "retention.cta.noThanks" }
-        return offer == nil ? "retention.cta.manage" : "retention.cta.continueCancel"
-    }
-
-    private var closeButton: some View {
-        Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            trackDismissIfNeeded()
-            dismiss()
-            onDismissed?()
-        } label: {
-            Image(systemName: "xmark")
-                .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(DS.ink)
-                .frame(width: 40, height: 40)
-                .background(DS.surface, in: Circle())
-        }
-    }
-
-    // MARK: Actions
-
-    private func purchase(_ offer: StoreViewModel.RetentionOffer) {
-        guard !purchasing else { return }
-        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-        purchasing = true
-        Task {
-            let ok = await store.purchase(retention: offer)
-            purchasing = false
-            if ok {
-                AnalyticsService.trackPurchaseCompleted(
-                    context: context.rawValue,
-                    offeringId: store.offering(identifier: context.offeringIdentifier)?.identifier,
-                    packageId: offer.package.identifier
                 )
                 onPurchased()
             }

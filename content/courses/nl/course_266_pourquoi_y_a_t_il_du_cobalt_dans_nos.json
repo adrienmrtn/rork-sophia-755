@@ -1,0 +1,131 @@
+{
+  "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos",
+  "title": "Waarom zit er kobalt in onze batterijen?",
+  "subtitle": "Element 27",
+  "subject": "sciences",
+  "subcategory": "Het dagelijks leven verklaard",
+  "description": "Bijna niemand graaft naar kobalt, en toch zit het in de batterij van elke telefoon. Het verhaal van een metaal dat de industrie niet kan vervangen, maar toch probeert kwijt te raken.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "cobalt_copper_open_pit_mine_kolwezi_drc",
+    "ratio": "4:3",
+    "hook": "Het metaal waar elektrische auto's op draaien, wordt bijna nooit om zichzelf gewonnen."
+  },
+  "sections": [
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kobalt is element **27** van het periodiek systeem, ingeklemd tussen ijzer en nikkel. Het zit in de batterij van de telefoon die je vasthoudt, in magneten, in legeringen die hard genoeg zijn om het binnen in een straalmotor uit te houden. En bijna niemand graaft ernaar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ongeveer **99%** van het kobalt in de wereld komt als bijproduct uit de grond: het wordt gewonnen uit erts dat eigenlijk om het koper of het nikkel wordt gedolven. De [[Democratische Republiek Congo]] levert er bijna **driekwart** van, vrijwel helemaal uit kopermijnen. Het aanbod van kobalt hangt dus niet af van de vraag naar kobalt, maar van de vraag naar koper en nikkel. Een vreemde manier om het metaal van elektrische auto's te beheren."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p1",
+      "title": "De batterij die kobalt nodig had",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1980** ontdekken [[John Goodenough]] en Koichi Mizushima in Oxford dat lithiumkobaltoxide (LiCoO2, of LCO) werkt als elektrode op basis van [[intercalatie]]: lagen kobaltoxide waartussen lithiumionen naar binnen glijden en weer naar buiten, zonder dat de stapel instort. Dat was de [[kathode]] waar men naar zocht, een van de twee elektroden van de batterij."
+        },
+        {
+          "type": "image",
+          "asset": "john_goodenough_portrait_lithium_battery_inventor",
+          "ratio": "3:4",
+          "caption": "John Goodenough, die in 1980 samen met Koichi Mizushima de kobaltkathode ontdekte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Daarna wacht de wereld nog ruim tien jaar. In **1991** verkoopt Sony de eerste commerciële lithium-ionbatterij, met LCO als kathode. Tot ongeveer **2010** worden bijna alle lithium-ionkathodes zo gemaakt. LCO overheerst nog altijd in consumentenelektronica: daarom bevat je telefoon een paar gram van een metaal dat niemand bewust had willen delven."
+        },
+        {
+          "type": "funFact",
+          "text": "Kobalt werd in 1735 ontdekt door de Zweedse scheikundige Georg Brandt, bijna tweeënhalve eeuw voordat het in onze batterijen belandde."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p2",
+      "title": "Een batterij die haar eigen zuurstof maakt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zie de kathode als een bakstenen muur. De lagen kobaltoxide zijn de planken, de lithiumionen de stenen die ertussen liggen. Laad je de batterij te hard op, dan haal je te veel stenen weg: de muur wordt wankel. Boven ongeveer **130 °C**, of bij overladen, begint de structuur in te storten en ontsnapt de zuurstof die in het kobaltoxide opgesloten zat als gas."
+        },
+        {
+          "type": "image",
+          "asset": "lithium_ion_battery_fire_thermal_runaway_test",
+          "ratio": "2:3",
+          "caption": "Een pakket van twee lithium-ioncellen van het type 18650: het etiket waarschuwt zelf dat het in vuur kan ontploffen."
+        },
+        {
+          "type": "paragraph",
+          "text": "De vloeistof in de cel is **brandbaar**, en de batterij heeft net zelf de zuurstof geleverd om die te laten branden. De hitte versnelt de afbraak, die meer zuurstof vrijmaakt, die weer meer hitte geeft. Dat heet [[thermal runaway]]. Daarom kun je een brand in een lithiumbatterij niet zomaar smoren: de zuurstof zit er al in."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p3",
+      "title": "Waarom het kobalt er nog steeds in zit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Terug naar de bakstenen muur. Bij elke keer laden en gebruiken glijden de lithiumstenen eruit en weer erin. Kobalt is het cement dat voorkomt dat de muur na honderden cycli scheeftrekt of instort. Andere materialen kunnen dat niet alleen: **nikkel** slaat meer energie op maar slijt te snel, **mangaan** is goedkoop maar heeft te weinig vermogen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Daarom verminderen de mengsels in de meeste elektrische auto's, zoals de **NMC**-kathodes (nikkel, mangaan, kobalt) en **NCA**-kathodes (nikkel, kobalt, aluminium), het aandeel kobalt zonder het ooit te schrappen. Al vijftien jaar halen ingenieurs er kobalt uit om kosten te besparen, maar er blijft altijd een snufje nodig om het geheel bij elkaar te houden. De enige die het volledig zonder doet, de [[LFP-batterij]], lukt dat door de muur weg te gooien en een heel andere inwendige structuur te bouwen."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p4",
+      "title": "Zonder kobalt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Het probleem van kobalt is niet chemisch. Een deel van de Congolese productie komt uit [[ambachtelijke mijnbouw]]: met de hand gegraven, onder gevaarlijke omstandigheden en op sommige plekken door kinderen. De prijs schommelt snel en sterk, waardoor elke batterij die ervan afhangt onvoorspelbaar wordt. En bijna alles komt uit **één enkel land**."
+        },
+        {
+          "type": "image",
+          "asset": "artisanal_cobalt_miners_kolwezi_congo",
+          "ratio": "4:3",
+          "caption": "Ambachtelijke mijnwerkers vullen zakken met kobalterts in de Democratische Republiek Congo."
+        },
+        {
+          "type": "paragraph",
+          "text": "De industrie probeert dus batterijen zonder dit metaal te ontwerpen. Het belangrijkste antwoord is **LFP**, lithium-ijzerfosfaat, dat kobalt vervangt door ijzer en fosfor, twee van de goedkoopste en meest voorkomende elementen. Het wordt minder heet en is veel moeilijker in thermal runaway te krijgen."
+        },
+        {
+          "type": "paragraph",
+          "text": "De prijs die je betaalt, is energie: bij **hetzelfde gewicht** slaat een LFP-cel er minder van op. Daarom gebruikt je auto er misschien al een, en je telefoon nog niet: in je broekzak telt elke gram."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kobalt houdt de structuur van lithium-ionbatterijen bijeen, maar het komt bijna helemaal uit één land, als bijproduct van koper: de industrie komt er alleen van los door van chemie te wisselen, met LFP, ten koste van minder energie."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Cobalt Institute, « Cobalt uses ».",
+      "url": "https://www.cobaltinstitute.org/global-cobalt/cobalt-uses/"
+    },
+    {
+      "text": "« One hundred years of cobalt production in the Democratic Republic of the Congo », Resources Policy, 2022.",
+      "url": "https://doi.org/10.1016/j.resourpol.2022.103007"
+    }
+  ]
+}

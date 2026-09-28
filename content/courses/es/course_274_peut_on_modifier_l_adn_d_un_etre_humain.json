@@ -1,0 +1,159 @@
+{
+  "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain",
+  "title": "¿Se puede modificar el ADN de un ser humano?",
+  "subtitle": "Las tijeras CRISPR",
+  "subject": "sciences",
+  "subcategory": "Descubrimientos que cambiaron el mundo",
+  "description": "Desde 2012, unas “tijeras moleculares” tomadas de las bacterias permiten cortar el ADN en el punto deseado. Primeras curas, errores posibles y bebés a la carta: ¿hasta dónde llegaremos?",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "genetics_lab_pipette_dna_samples_gloved_hands",
+    "ratio": "4:3",
+    "hook": "¿Y si pudieras corregir una letra de tu ADN como una errata?"
+  },
+  "sections": [
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pelo, ojos, color de piel, silueta: todos somos distintos. Estos rasgos físicos se deben a una herencia: cada [[gen]] es un fragmento de ADN que recibimos de nuestros padres biológicos. El entorno también cuenta, claro: lo que comemos, la gente con la que nos relacionamos, lo que creemos. Pero nuestros genes los damos por sentados. A veces nos gustaría ser más altos o más delgados, pero vivimos con ellos sin pensarlo mucho."
+        },
+        {
+          "type": "paragraph",
+          "text": "¿Qué cambiarías si pudieras retocar tu ADN? La pregunta ya no es teórica. En **2012**, una bioquímica estadounidense, **Jennifer Doudna**, y una microbióloga francesa, **Emmanuelle Charpentier**, desarrollaron una forma de programar una proteína que corta el ADN. Desde entonces pueden eliminar un gen no deseado y, por tanto, en teoría, modificar el ADN de un ser humano."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p1",
+      "title": "CRISPR, unas tijeras tomadas de las bacterias",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[CRISPR]] no es la única herramienta capaz de modificar el ADN, pero sí la más famosa. Su principio se observó primero en los microbios. Para defenderse, una bacteria detecta el ADN del virus que la ataca y lo corta en trozos. Para ello usa unos fragmentos de ADN llamados CRISPR y una enzima llamada **Cas**, que hace de tijeras."
+        },
+        {
+          "type": "image",
+          "asset": "emmanuelle_charpentier_jennifer_doudna_crispr_pioneers",
+          "ratio": "16:9",
+          "caption": "Emmanuelle Charpentier y Jennifer Doudna, las dos investigadoras que convirtieron esta defensa bacteriana en una herramienta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Los científicos aprovecharon este sistema de defensa natural. En lugar de apuntar a un virus, guían la enzima hacia un punto preciso del ADN de una persona. Allí corta, y se vuelve posible una modificación deliberada. A veces el gen elegido simplemente se desactiva. A veces se cambian algunas de sus letras. A veces se sustituye por completo."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p2",
+      "title": "Las primeras curas: drepanocitosis y talasemia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Poder editar el ADN abre la puerta al tratamiento de muchas enfermedades genéticas. Nuestro ADN se escribe con **cuatro bases**, A, T, C y G. Su secuencia forma nuestro [[genoma]], el plano de construcción de nuestro cuerpo. Un error en ese texto puede bastar para desencadenar una enfermedad, y corregirlo puede, en principio, curarla."
+        },
+        {
+          "type": "image",
+          "asset": "sickle_cell_red_blood_cells_micrograph",
+          "ratio": "3:2",
+          "caption": "Corte de hígado de un enfermo de drepanocitosis visto al microscopio: la primera enfermedad tratada con CRISPR."
+        },
+        {
+          "type": "paragraph",
+          "text": "En **2023**, el Reino Unido se convirtió en el primer país en autorizar un medicamento basado en CRISPR. Está dirigido a dos enfermedades hereditarias de la sangre, la [[drepanocitosis]] y la betatalasemia. El tratamiento modifica las células que fabrican la sangre para que produzcan más [[hemoglobina fetal]], una forma de hemoglobina que normalmente se produce antes del nacimiento."
+        },
+        {
+          "type": "funFact",
+          "text": "Una errata puede matar. Una sola letra equivocada en el ADN, una T en lugar de una C por ejemplo, basta a veces para provocar una enfermedad genética mortal. Volver a poner la letra correcta podría, en teoría, curarla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Y esto es solo el principio. Hoy hay ensayos clínicos que prueban CRISPR contra cánceres, trastornos del metabolismo, enfermedades autoinmunes, enfermedades cardiovasculares o distrofias musculares. La lista es larga. ¿Pronto las enfermedades genéticas serán cosa del pasado?"
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p3",
+      "title": "Por qué no lo curaremos todo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No es tan sencillo. Primero, la forma en que se expresa un gen no depende solo de la herencia recibida de los padres: el entorno también influye. Segundo, una enfermedad no se debe necesariamente a un solo gen defectuoso. Pueden intervenir varios genes, y entonces la reparación se vuelve mucho más complicada."
+        },
+        {
+          "type": "paragraph",
+          "text": "El propio CRISPR puede equivocarse. A veces las tijeras cortan en el lugar equivocado, o los dos extremos cortados no vuelven a unirse bien. Ese ADN alterado puede crear nuevos problemas sin corregir el primero. Aun así, la medicina avanza a grandes pasos hacia la eliminación de algunas de las peores enfermedades genéticas."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p4",
+      "title": "Bebés a la carta: ¿dónde poner el límite?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Todo el mundo ve la utilidad de tratar enfermedades incapacitantes o mortales. Pero ¿dónde debe trazar la ciencia el límite? ¿Hay que usarla para crear al “ser humano perfecto”? La pregunta se plantea con una urgencia nueva desde que sabemos cortar el ADN a voluntad."
+        },
+        {
+          "type": "image",
+          "asset": "ivf_embryo_icsi_microinjection_micrograph",
+          "ratio": "16:9",
+          "caption": "Un óvulo humano sujeto con una pipeta durante una microinyección en el laboratorio."
+        },
+        {
+          "type": "funFact",
+          "text": "La expresión “bebé a la carta” no nació con CRISPR. Se usa desde la llegada de la [[fecundación in vitro]], que permite concebir un embrión en el laboratorio antes de implantarlo."
+        },
+        {
+          "type": "paragraph",
+          "text": "La [[edición germinal]] modifica el ADN de las células reproductoras: espermatozoides, óvulos o embriones en sus primerísimas fases. La diferencia con un tratamiento corriente es enorme: esos cambios se transmiten luego de generación en generación. Hoy, la edición germinal está prohibida en todos los países. Pero ¿por cuánto tiempo? ¿En qué momento pasará la edición genética con fines médicos a las líneas genéticas a la carta?"
+        },
+        {
+          "type": "takeaway",
+          "text": "Desde 2012, las tijeras CRISPR permiten corregir el ADN humano, con las primeras curas autorizadas en 2023, pero los errores siguen siendo posibles, muchas enfermedades implican varios genes y la edición germinal sigue prohibida en todas partes."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "National Science Foundation, « CRISPR: A Biotech Breakthrough », NSF Impacts.",
+      "url": "https://www.nsf.gov/impacts/crispr"
+    },
+    {
+      "text": "National Cancer Institute, « How CRISPR Is Changing Cancer Research and Treatment », Cancer Currents Blog, 2020.",
+      "url": "https://www.cancer.gov/news-events/cancer-currents-blog/2020/crispr-cancer-research-treatment"
+    },
+    {
+      "text": "CRISPR Medicine News, « Clinical Trials », liste des essais cliniques fondés sur CRISPR.",
+      "url": "https://crisprmedicinenews.com/clinical-trials/"
+    },
+    {
+      "text": "House of Lords Library, « World's first personalised DNA editing treatment », UK Parliament.",
+      "url": "https://lordslibrary.parliament.uk/worlds-first-personalised-dna-editing-treatment/"
+    },
+    {
+      "text": "« The gene editor CRISPR won't fully fix sick people anytime soon. Here's why », Science, 2016.",
+      "url": "https://www.science.org/content/article/gene-editor-crispr-won-t-fully-fix-sick-people-anytime-soon-here-s-why"
+    },
+    {
+      "text": "Boston Children's Hospital, « CRISPR gene editing », Answers.",
+      "url": "https://answers.childrenshospital.org/crispr-gene-editing/"
+    },
+    {
+      "text": "« The Guardian view on gene-edited humans: darker uses must be acknowledged alongside medical ones », The Guardian, 5 juillet 2026.",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/05/the-guardian-view-on-gene-edited-humans-darker-uses-must-be-acknowledged-alongside-medical-ones"
+    },
+    {
+      "text": "K. E. Ormond et al., « Human Germline Genome Editing », American Journal of Human Genetics, vol. 101, 2017.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5544380/"
+    }
+  ]
+}

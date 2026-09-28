@@ -1,0 +1,155 @@
+{
+  "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn",
+  "title": "Čo sa naozaj dá vyčítať z DNA?",
+  "subtitle": "Gény a osud",
+  "subject": "sciences",
+  "subcategory": "Každodenný život pod lupou",
+  "description": "Chute, povaha, riziko chorôb, dávny pôvod: naša DNA o nás prezradí veľa. Predispozícia však nikdy nebola osudom.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "dna_double_helix_3d_render_blue",
+    "ratio": "4:3",
+    "hook": "Vaša DNA prezrádza, odkiaľ pochádzate, čo máte radi a čo vás ohrozuje, ale nerozhoduje o všetkom."
+  },
+  "sections": [
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Naša DNA o nás prezrádza nesmierne veľa: odkiaľ pochádzame, čoho je naše telo schopné, a možno aj to, čo nás čaká. Je to náš príbeh aj stavebný plán. Čo to však presne je? DNA sa nachádza takmer v každej bunke tela. Je stočená do **dvojitej špirály** a nesie genetické pokyny, ktoré riadia, ako fungujeme, rastieme, vyvíjame sa a rozmnožujeme."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jej vlákna tvoria len **štyri malé jednotky**, nukleotidy, označované A, T, C a G. Poradie týchto štyroch písmen tvorí [[genóm]], genetický plán jedinečný pre každého z nás. Čo sa z neho naozaj dá vyčítať? Naše chute, riziká chorôb, náš pôvod. A nakoľko tento text píše našu budúcnosť?"
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p1",
+      "title": "Gény formujú vaše chute aj povahu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Každý [[gén]] je úsek tohto textu. Funguje ako biologický návod: hovorí telu, ako vyrábať **bielkoviny**, ktoré zasa stavajú a poháňajú naše bunky. Odtiaľ pochádzajú naše viditeľné znaky. Gény však zohrávajú oveľa hlbšiu úlohu než len vo vzhľade."
+        },
+        {
+          "type": "image",
+          "asset": "identical_twins_sisters_portrait_nature_nurture",
+          "ratio": "5:4",
+          "caption": "„Spoločníčky na cestách“ od Augusta Egga (1862): dve mladé ženy podobné vo všetkom, jedna spí, druhá číta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mierne odlišnou verziou génu je [[genetický variant]]. Vedci nedávno viacero z nich spojili s **osobnosťou**. Jemné genetické nastavenia môžu usmerňovať naše záľuby: či šport zbožňujeme, alebo neznášame, či sme extroverti, či zbierame koníčky. Naša DNA by tak ovplyvňovala každodenný život oveľa viac, než si myslíme. Z toho vyplýva otázka: aká časť nášho správania je už zapísaná v našej biológii?"
+        },
+        {
+          "type": "funFact",
+          "text": "Čaj, alebo káva? Aj táto celkom jednoduchá preferencia môže podľa výskumov, ktoré spájajú DNA s osobnosťou, závisieť od jemných odchýlok v našich génoch."
+        },
+        {
+          "type": "paragraph",
+          "text": "A to možno nie je všetko. DNA ponúka aj stopy o ľuďoch, u ktorých existuje [[genetická predispozícia]] k niektorým poruchám **duševného zdravia**, napríklad k depresii. Nehovorí teda len o tom, čo máme radi, ale aj o tom, čo nás môže oslabiť."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p2",
+      "title": "Čo DNA prezrádza o riziku chorôb",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Duševné zdravie nie je jedinou oblasťou. Zloženie našej DNA nás môže urobiť zraniteľnejšími aj voči iným chorobám, z ktorých niektoré sú „rodinné“. Známy príklad: zdedené varianty génov [[BRCA1 a BRCA2]] predurčujú niektoré ženy na **včasnú rakovinu prsníka**."
+        },
+        {
+          "type": "image",
+          "asset": "dna_sequencing_chromatogram_sanger_readout",
+          "ratio": "2:1",
+          "caption": "Sekvenačný chromatogram: každý farebný vrchol je jedno písmeno DNA. Práve z tohto záznamu test odhalí variant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tu naberá plnú hodnotu [[genetický test]], pre zdravotníctvo aj pre dotknutých ľudí. Odhaliť dedičné riziko umožňuje konať včas: skorší **skríning**, dôkladnejšie sledovanie, lieky alebo iná preventívna liečba. Tento náskok môže zachrániť životy a znížiť náklady na zdravotnú starostlivosť."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p3",
+      "title": "Stroj času: odkiaľ pochádzate?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Naša DNA sa odovzdáva z generácie na generáciu. Uchováva stopy o našich predkoch: odkiaľ prišli, čo jedli, ako žili. Je to skutočný stroj času. Porovnávaním **genetických vzorcov** dnešných populácií dokázali vedci zrekonštruovať cestu, ktorou ľudia putovali po celej zemeguli."
+        },
+        {
+          "type": "image",
+          "asset": "early_human_migrations_out_of_africa_map",
+          "ratio": "5:4",
+          "caption": "Najstaršie línie Homo sapiens v Afrike a ich odchod do Eurázie, ako ich zrekonštruovala populačná genetika."
+        },
+        {
+          "type": "paragraph",
+          "text": "Príklad. Písomné pramene uvádzajú, že obyvatelia **severnej Afriky** prenikli v rokoch **700 až 1200** na [[Pyrenejský polostrov]]. DNA tento príbeh potvrdzuje: dnešní obyvatelia polostrova stále nesú genetickú stopu týchto stretnutí."
+        },
+        {
+          "type": "funFact",
+          "text": "Aj náš najdávnejší pôvod je zložitejší než obyčajný rodokmeň. Štúdia založená na celých genómoch našla stopy dvoch dávnych ľudských populácií, ktoré sa oddelili približne pred **1,5 miliónom rokov** a neskôr sa opäť zmiešali."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p4",
+      "title": "Predispozícia nie je osud",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vaša DNA teda ovplyvňuje mnohé vaše vlastnosti. Predispozícia k niečomu však neznamená, že váš osud je spečatený. Ak nesiete genetické riziko **depresie**, neznamená to, že sa u vás depresia rozvinie. Genetické riziko nie je istota."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gény otvárajú možnosti, nevnucujú ich. Naše skúsenosti, voľby a okolnosti sú rovnako dôležité. Čítať svoju DNA znamená čítať časť seba: cennú časť, niekedy rozhodujúcu pre zdravie, ale len časť."
+        },
+        {
+          "type": "takeaway",
+          "text": "DNA rozpráva o našich chutiach, rizikách a pôvode, no predispozícia nikdy nie je istotou: vaša DNA je len časťou vás."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Yale School of Medicine, « How Genes Shape Personality Traits: New Links Are Discovered », Yale Medicine News, 9 septembre 2024.",
+      "url": "https://medicine.yale.edu/news-article/how-genes-shape-personality-traits-new-links-are-discovered/"
+    },
+    {
+      "text": "« DNA », Wikipedia, The Free Encyclopedia.",
+      "url": "https://en.wikipedia.org/wiki/DNA"
+    },
+    {
+      "text": "Institute of Medicine (US), « Genetics and Health », dans L. M. Hernandez et D. G. Blazer (dir.), Genes, Behavior, and the Social Environment: Moving Beyond the Nature/Nurture Debate, National Academies Press, Washington (DC), 2006.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK19932/"
+    },
+    {
+      "text": "NIHR Oxford Biomedical Research Centre, « International study reveals how our genes shape blood proteins linked to disease ».",
+      "url": "https://oxfordbrc.nihr.ac.uk/international-study-reveals-how-our-genes-shape-blood-proteins-linked-to-disease/"
+    },
+    {
+      "text": "« What Our DNA Can Tell Us About the History of Humans », Frontiers for Young Minds, 2020.",
+      "url": "https://kids.frontiersin.org/articles/10.3389/frym.2020.00106"
+    },
+    {
+      "text": "« How genetics determine our life choices », BBC Future, 9 mai 2023.",
+      "url": "https://www.bbc.co.uk/future/article/20230509-how-genetics-determine-our-life-choices"
+    },
+    {
+      "text": "University of Cambridge, « Genetic study reveals hidden chapter in human evolution », Research news, 18 mars 2025.",
+      "url": "https://www.cam.ac.uk/research/news/genetic-study-reveals-hidden-chapter-in-human-evolution"
+    }
+  ]
+}

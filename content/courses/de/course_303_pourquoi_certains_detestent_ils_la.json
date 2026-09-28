@@ -1,0 +1,123 @@
+{
+  "id": "course_303_pourquoi_certains_detestent_ils_la",
+  "title": "Warum hassen manche Menschen Koriander?",
+  "subtitle": "Ein Geschmack nach Seife",
+  "subject": "sciences",
+  "subcategory": "Unser Alltag erklärt",
+  "description": "Für einen Teil der Menschheit schmeckt Koriander nach Seife. Schuld ist ein einziger veränderter Buchstabe in einem Riechgen und vielleicht ein Erbe unserer Vorfahren.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "fresh_coriander_cilantro_bunch_leaves",
+    "ratio": "4:3",
+    "hook": "Dasselbe Blatt, zwei Geschmäcker: frisches Kraut für die einen, Seife für die anderen. Der Unterschied liegt in einem einzigen Buchstaben deiner DNA."
+  },
+  "sections": [
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_intro",
+      "title": "Einleitung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Koriander ist eine der ältesten und meistgenutzten Pflanzen der Welt. Schon Griechen und Römer der Antike bauten ihn an, für die Küche wie für die Medizin. Man findet ihn in Südasien, in China, in Lateinamerika, in Tausenden Rezepten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trotzdem können manche Menschen ihn nicht ausstehen. Wo die meisten am Tisch ein frisches Kraut schmecken, schwören sie, auf Seife zu kauen. Das ist weder eine Laune noch mangelnde Gewöhnung: Die Antwort steckt in ihrer Nase, genauer gesagt in ihren Genen."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p1",
+      "title": "Riechrezeptoren, von der Nase zum Gehirn",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alles, was wir schmecken oder riechen, hat eine chemische Zusammensetzung, die das Gehirn entschlüsseln muss. Geschmack und Geruchssinn, den die Wissenschaft [[Olfaktion]] nennt, hängen eng zusammen: Ein Großteil des “Geschmacks” eines Gerichts läuft in Wahrheit über die Nase, sogar während wir kauen."
+        },
+        {
+          "type": "image",
+          "asset": "olfactory_nerve_nasal_cavity_gray_anatomy_plate",
+          "ratio": "3:2",
+          "caption": "Schnitt durch die Nasenschleimhaut unter dem Mikroskop: Die Wand der Nasenhöhle beherbergt die Riechrezeptoren."
+        },
+        {
+          "type": "paragraph",
+          "text": "In der Nasenhöhle tragen Zellen [[Riechrezeptoren]]. Sie erkennen die Moleküle der Nahrung und wandeln sie in ein Signal um, das Riechneuronen zum Gehirn leiten. Jeder Rezeptor wird nach der Vorlage eines Gens gebaut. Ändert sich das Gen, ändert sich auch der Rezeptor und mit ihm der wahrgenommene Geschmack. Genau das passiert beim Koriander."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p2",
+      "title": "OR6A2, das Seifengeschmack-Gen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Genetiker haben den Schuldigen gefunden: ein Gen namens [[OR6A2]]. Es enthält den Bauplan für einen Riechrezeptor, der auf [[ungesättigte Aldehyde]] anspricht, Moleküle, die im Koriander vorkommen. Bei den meisten Menschen übersetzt dieser Rezeptor sie in eine frische, krautige Note."
+        },
+        {
+          "type": "image",
+          "asset": "dna_double_helix_nhgri_illustration",
+          "ratio": "2:1",
+          "caption": "Die Doppelhelix der DNA: Ein einziger veränderter Buchstabe genügt, um einen Rezeptor zu verändern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Manche Menschen tragen auf diesem Gen einen [[Einzelnukleotid-Polymorphismus]], kurz SNP: Ein einziger “Buchstabe” der DNA ist anders. Diese winzige Änderung beeinflusst, wie das Gen abgelesen wird, und damit den Rezeptor, den es herstellt. Der Rezeptor funktioniert noch: Er erkennt das Molekül und sendet ein Signal ans Gehirn. Aber die Botschaft stimmt nicht mehr. Statt frischem Kraut liest das Gehirn: Seife."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p3",
+      "title": "Warum hat diese Mutation überlebt?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Diese Variante taucht nicht zufällig bei einem Einzelnen auf. Sie wird seit Jahrhunderten von Eltern an Kinder weitergegeben. Je nach Weltregion tragen sie **4%** bis **20%** der Bevölkerung. Doch warum hat sich ein solches Merkmal gehalten, wo doch so viele Küchen Koriander als Grundzutat nutzen?"
+        },
+        {
+          "type": "image",
+          "asset": "cilantro_lime_mexican_tacos_street_food",
+          "ratio": "3:2",
+          "caption": "Ein Taco-Truck in den USA: In der mexikanischen Küche ist frischer Koriander eine Grundzutat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einige Evolutionsbiologen haben eine Hypothese. In der alten Welt verströmten auch giftige Pflanzen einen seifigen Geschmack. Ein Rezeptor, der diesen Geschmack abstoßend macht, hätte als Überlebensmechanismus gedient: Er hielt unsere Vorfahren von gefährlichen Pflanzen fern. Der harmlose Koriander wäre ein Kollateralschaden dieses Alarmsignals."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p4",
+      "title": "Kann man lernen, Koriander zu mögen?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gute Nachricht für alle, die von einem echten Taco träumen: Das Gehirn lässt sich umerziehen. Der Rezeptor selbst wird sich nicht ändern, aber man kann mit der Zeit lernen, das Signal zu ignorieren, das er ans Gehirn schickt. Die Methode lässt sich in einem Wort sagen: Wiederholung."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konkret gibt man zunächst etwas Koriander in ein Gericht, das man schon mag. Man kann die seifige Note auch mit einem kräftigen Geschmack überdecken, etwa mit Zitronensaft oder Essig. Nach genug Erfahrungen ohne böse Überraschung akzeptiert das Gehirn schließlich, dass Koriander keine Gefahr ist, und der Ekel lässt nach."
+        },
+        {
+          "type": "takeaway",
+          "text": "Der Seifengeschmack von Koriander stammt von einer Variante des Gens OR6A2, die je nach Region 4 bis 20% der Menschen tragen: Ihr Riechrezeptor liest seine Aldehyde falsch, vielleicht ein alter Schutzreflex gegen giftige Pflanzen."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "N. Eriksson, S. Wu, C. B. Do et al., « A genetic variant near olfactory receptor genes influences cilantro preference », Flavour, vol. 1, 2012, art. 22.",
+      "url": "https://doi.org/10.1186/2044-7248-1-22"
+    },
+    {
+      "text": "Academic Path, « Why coriander tastes like soap ».",
+      "url": "https://academicpath.org/why-coriander-tastes-like-soap"
+    }
+  ]
+}

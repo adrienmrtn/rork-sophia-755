@@ -94,6 +94,21 @@ nonisolated struct CourseSectionV2: Decodable, Sendable, Identifiable {
     let blocks: [ContentBlockV2]
 }
 
+/// A bibliographic reference listed under a professor-authored course. Only the
+/// reference is shown (never the claim it backs), in its original language.
+nonisolated struct CourseSourceV2: Decodable, Sendable, Identifiable {
+    let text: String
+    let url: String?
+    var id: String { text }
+
+    var linkURL: URL? {
+        guard let url, let parsed = URL(string: url), parsed.scheme?.hasPrefix("http") == true else {
+            return nil
+        }
+        return parsed
+    }
+}
+
 nonisolated struct CourseGlossaryTermV2: Decodable, Sendable {
     let term: String
     let classification: String?
@@ -111,6 +126,9 @@ nonisolated struct CourseContentV2: Decodable, Sendable {
     let keyDates: [KeyDateV2]?
     let sections: [CourseSectionV2]
     let glossary: [CourseGlossaryTermV2]?
+    /// Slug of the professor who wrote the course (see `AuthorStore`); nil for house content.
+    let author: String?
+    let sources: [CourseSourceV2]?
 }
 
 /// Parses ratio specs like "16:9", "4:3", "1", or "auto" into a width/height ratio.

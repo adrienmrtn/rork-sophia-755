@@ -1,14 +1,15 @@
 {
   "id": "course_57_l_invention_d_internet",
-  "title": "Az internet feltalálása",
-  "subtitle": "Hálózatok",
+  "title": "Hogyan született meg az internet a hidegháborúból?",
+  "subtitle": "Az ARPANET-től a webig",
   "subject": "sciences",
-  "subcategory": "Discoveries that changed the world",
-  "description": "Az internetnek nincs egyetlen feltalálója. Hosszú lánc: egy katonai hálózat, egy közös nyelv, aztán a web az embereknek.",
+  "subcategory": "Világot megváltoztató felfedezések",
+  "description": "Egy katonai hálózat, amelyet egy szovjet támadás túlélésére terveztek, aztán tucatnyi kis hálózat, végül a modem és a web. Ötven év alatt egy hidegháborús projektből a mindennapjaink része lett.",
+  "author": "myra-houser",
   "hero": {
-    "image": "l_invention_d_internet",
-    "ratio": "16:9",
-    "hook": "Először egy hálózat, hogy ellenálljon a háborúnak. Aztán az egész világ rácsatlakozott."
+    "image": "ibm_mainframe_computer_room_1960s_operators",
+    "ratio": "4:3",
+    "hook": "Mielőtt behálózta volna a bolygót, az internetnek mindenekelőtt egy szovjet támadást kellett túlélnie."
   },
   "sections": [
     {
@@ -18,83 +19,127 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az internet nem egyetlen zseni garázsából született. Évtizedeken át tartó közös építkezés."
+          "text": "Ahogy Róma, úgy az internet sem egy nap alatt épült fel. Kezdetben a hálózat csupán az **amerikai védelmi minisztérium** néhány számítógépéből állt. A műszaki fejlődés hívta életre, de a [[hidegháború]] két szuperhatalmának kémkedési ambíciói is. A 20. század végére a telefonvonalas kapcsolat a legtöbb amerikai otthonba eljutott, és nem sokkal utána megjelent a webes böngészés is."
         },
         {
           "type": "paragraph",
-          "text": "Három egyszerű állomást érdemes megjegyezni: egy első hálózat (ARPANET), egy közös nyelv (TCP/IP), aztán egy könnyű felület (a web)."
+          "text": "Az ezredfordulóra a technológia egyszerre lett annyira elterjedt és annyira új, hogy egyes elemzők világméretű összeomlást jósoltak arra az esetre, ha a számítógépek naptárai nem váltanak át rendben a **2000. évre**. Így született meg a félelem a [[2000-es év problémája]] miatt. A 21. században az azonnali üzenetküldők, a közösségi média és a mesterséges intelligencia újra átalakította az online kommunikációt. Hogyan lett egy katonai projektből az egész világ mindennapja?"
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p1",
-      "title": "ARPANET, az első hálózat",
+      "title": "Egy támadást is túlélő hálózat",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az **1960**-as évek végén, a hidegháború kellős közepén az amerikai hadsereg egy projektet finanszírozott: számítógépeket összekötni, hogy akkor is beszéljenek, ha a hálózat egy része megsemmisül."
+          "text": "A projekt az **1950-es években** indult. A számítógépek akkoriban hatalmasak és drágák voltak: egyetlen gép egy egész szobát elfoglalt. Csak kormányhivataloknak és néhány egyetemnek volt ilyen. Amikor nőtt a feszültség a Szovjetunióval, az amerikai vezetők olyan kommunikációs hálózatot kerestek, amelyet a szovjet ügynökök nem tudnak lehallgatni. Az első lépés az időosztás volt, amellyel több felhasználó dolgozhatott ugyanazon a számítógépen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az **1960-as évek** elején egy [[Paul Baran]] nevű mérnök a [[csomagkapcsolás]] módszerével kísérletezett: az üzenetet nem egyben küldték el, hanem kis adatcsomagokra bontották, és ezek külön-külön haladtak a hálózaton. Baran és kollégái arra fogadtak, hogy az így, telefonvonalakon utazó adatok túlélnének egy szovjet támadást. Ebből a munkából született az [[ARPANET]], az amerikai védelmi minisztérium programja."
         },
         {
           "type": "image",
           "asset": "arpanet_1969_computer_ucla",
           "ratio": "4:3",
-          "caption": "Az ARPANET először néhány amerikai egyetemet kötött össze"
-        },
-        {
-          "type": "paragraph",
-          "text": "Ezt a hálózatot **ARPANET**-nek hívták. Az üzeneteket kis csomagokra vágták, amelyek más-más utat jártak. Ha egy út elesett, egy másik vette át."
+          "caption": "A UCLA SDS Sigma 7 gépe, az első számítógép, amelyet 1969-ben az ARPANET-re kötöttek."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p2",
-      "title": "TCP/IP: ugyanazt a nyelvet beszélni",
+      "title": "Az ARPANET-től az „internetekig”: a csomagkapcsolás",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hogy a különböző hálózatok értsék egymást, közös szabályok kellenek. **Vint Cerf** és **Bob Kahn** dolgozta ki a **TCP/IP** protokollt: egy nyelvet, amely megmondja, hogyan vágjuk, címezzük és rakjuk össze az adatokat."
+          "text": "A csomagok továbbításához az ARPANET egy brit tudósok által kidolgozott megoldást vett át. Ez a [[router]], a telefonhálózat olyan eszköze, amely összegyűjti a csomagokat, és más gépek felé küldi tovább őket. **1969-ben** összekötötték az első számítógépeket, elsőként a Kaliforniai Egyetem Los Angeles-i gépét. Hawaiin informatikusok egy rokon ötletet próbáltak ki, az **ALOHAnet** nevű hálózatot, amelyben a csomagok rádióhullámokon utaztak."
         },
         {
           "type": "image",
-          "asset": "vint_cerf_bob_kahn_internet",
-          "ratio": "4:3",
-          "caption": "Cerf és Kahn: az internet nyelvének építészei"
+          "asset": "arpanet_logical_map_1977_network_diagram",
+          "ratio": "3:2",
+          "caption": "Az ARPANET logikai térképe 1983. augusztus 25-i állapotában, a BBN rajzolta: egymással összekötött egyetemek, laboratóriumok és katonai telephelyek."
         },
         {
-          "type": "funFact",
-          "text": "**1983**. január 1-jén az ARPANET hivatalosan TCP/IP-re váltott. Sokan ezt a dátumot tekintik az internet technikai „születésének”."
+          "type": "paragraph",
+          "text": "Az **1970-es években** és az 1980-as évek elején a világ tucatnyi csapata küldött adatokat telefonvonalon és rádión. Az eredmény rengeteg kis, egymástól elszigetelt hálózat lett. **1974-ben** egy tudományos cikk az „internetwork”, vagyis a hálózatok hálózata szót „internet” alakra rövidítette. Ez a szó első ismert előfordulása."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p3",
-      "title": "A web emberivé teszi a hálózatot",
+      "title": "Modemek, előfizetések és a web születése a CERN-ben",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az internet a hálózat. A **World Wide Web**, amelyet **Tim Berners-Lee** talált fel a CERN-ben az **1990**-es évek elején, a könnyű réteg: oldalak, linkek, böngészők."
+          "text": "Az **1980-as évek** közepéig ezek az „internetek” külön éltek. Az Egyesült Államokban a Nemzeti Tudományos Alapítvány (NSF), a kutatást finanszírozó szövetségi ügynökség, sok pénzt fektetett szuperszámítógépekbe, és összekötötte őket az egyetemekkel. Aztán **1989** és **1995** között az amerikai törvényhozás fokozatosan feloldotta azokat a korlátozásokat, amelyek tiltották a kereskedelmi szolgáltatásokat az interneten."
         },
         {
           "type": "paragraph",
-          "text": "Web nélkül az internet főleg szakértők eszköze maradt volna. Vele bárki kattinthat."
+          "text": "1995-re olyan nagy cégek, mint a **Sprint** és az **AT&T**, telefonvonalas kapcsolatot kínáltak: az előfizető a modemét a telefonaljzatba dugta, és feltárcsázott egy számot. Közben, még **1990-ben**, Tim Berners-Lee brit informatikus útjára indította a [[World Wide Web]] nevű rendszert a CERN-ben, a Genf mellett működő európai fizikai laboratóriumban. A web összegyűjtötte a szervereken szétszórt adatokat, és hiperhivatkozásokkal kapcsolta össze az oldalakat."
+        },
+        {
+          "type": "image",
+          "asset": "tim_berners_lee_next_computer_cern_first_web_server",
+          "ratio": "3:2",
+          "caption": "Tim Berners-Lee NeXT számítógépe a CERN-ben, az első webszerver 1990-ben: egy címke kéri, hogy soha ne kapcsolják ki."
+        },
+        {
+          "type": "funFact",
+          "text": "Az 1990-es években sok előfizető percdíjat fizetett a kapcsolatért. Minden lassan betöltődő oldal pénzbe került, és amíg a modem vonalban volt, az otthoni telefon foglaltat jelzett."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p4",
-      "title": "A világ idegrendszere",
+      "title": "Az e-mailtől az iPhone-ig: az internet a mindennapokban",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ma az internet viszi a leveleket, a videókat, a bankokat, a kórházakat, a GPS-t. Új bajokat is hozott: dezinformációt, megfigyelést, digitális szakadékot."
+          "text": "Az 1990-es évek közepétől az internet villámgyorsan nőtt, és mindenki egyre több emberrel tartotta a kapcsolatot. Az e-mail, a csevegőszobák és az azonnali üzenetküldés valós idejű beszélgetést tett lehetővé. **2000-ben** a távközlési forgalom több mint **fele** már az interneten zajlott. A 2000-es évek elején sorra jelentek meg a blogok és az első közösségi oldalak, a MySpace, majd a TheFacebook.com."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aztán a hálózat kilépett az irodákból és a nappalikból. **2005-től** a BlackBerry telefonokkal már üzeneteket lehetett küldeni a saját hálózatukon. **2007-től** az iPhone zsebre tette az internetet: ettől kezdve mobiltelefonról is lehetett böngészni. A hidegháborúban védelmi stratégiaként született hálózatok hálózata ma a mindennapi élet része."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1969",
+              "title": "Az első gépek összekötése",
+              "detail": "Az ARPANET összeköti első számítógépeit, köztük a UCLA gépét."
+            },
+            {
+              "date": "1974",
+              "title": "Az „internet” szó",
+              "detail": "Egy cikk lerövidíti az „internetwork” szót: ez a kifejezés első ismert nyoma."
+            },
+            {
+              "date": "1990",
+              "title": "A web születése",
+              "detail": "Tim Berners-Lee a CERN-ben útjára indítja a World Wide Webet."
+            },
+            {
+              "date": "1995",
+              "title": "Az internet megnyílik mindenki előtt",
+              "detail": "Megszűnnek a kereskedelmi korlátozások, a Sprint és az AT&T modemes kapcsolatot kínál."
+            },
+            {
+              "date": "2007",
+              "title": "Internet a zsebben",
+              "detail": "Az iPhone-nal mobiltelefonról is lehet böngészni."
+            }
+          ]
         },
         {
           "type": "takeaway",
-          "text": "Az internet az ARPANET-ből született, a TCP/IP tette egyetemessé, a web pedig elérhetővé. Nem egyetlen találmány, hanem közös szerkezet."
+          "text": "A hidegháború idején egy támadás túlélésére tervezték. Az internet a katonai számítógépekről az egyetemekre került, aztán a modemnek és a webnek köszönhetően az otthonokba, végül belefért egy telefonba."
         }
       ]
     }

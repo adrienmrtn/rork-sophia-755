@@ -5,6 +5,7 @@ struct ContentView: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AppearanceManager.self) private var appearance
     @Environment(AuthService.self) private var auth
+    @Environment(\.scenePhase) private var scenePhase
     var onResetOnboarding: (() -> Void)? = nil
     let router: DeepLinkRouter
 
@@ -12,6 +13,7 @@ struct ContentView: View {
     @State private var syncService = ProgressSyncService.shared
     @State private var storeVM = StoreViewModel()
     @State private var discountManager = DiscountOfferManager()
+    @State private var blocker = TikTokBlockerManager.shared
     @State private var selectedTab: Int = 0
     @State private var selectedCourse: Course? = nil
     @State private var paywallContext: SophiaPaywallContext? = nil
@@ -53,11 +55,9 @@ struct ContentView: View {
                     )
                 }
 
-                Tab(languageManager.text("tab.collections"), systemImage: "square.stack.3d.up.fill", value: 2) {
-                    CollectionsView(
-                        progressManager: progressManager,
-                        selectedCourse: $selectedCourse
-                    )
+                // The path took the collections' slot; the former collections pages are gone.
+                Tab(languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath.fill", value: 2) {
+                    pathTab
                 }
 
                 Tab(languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", value: 3) {
@@ -130,9 +130,7 @@ struct ContentView: View {
                 .sophiaColorScheme()
             }
             .onChange(of: pendingCourse) { _, newValue in
-                if newValue == nil {
-                    selectedCourse = nil
-                }
+                clearSelectionIfDismissed(newValue)
             }
 
             if showSwipeTutorial, HomeCardPresentation.style == .legacy {
@@ -186,7 +184,22 @@ struct ContentView: View {
                 .zIndex(60)
             }
 
+            // Shield-originated visit paid off: TikTok is open, say so and offer the
+            // way back. Waits for the reader to be gone so it is not drawn under it.
+            if blocker.showUnlockedScreen, pendingCourse == nil {
+                TikTokUnlockedView(
+                    onBackToTikTok: {
+                        _ = blocker.openTikTok()
+                        blocker.endSession()
+                    },
+                    onStay: { blocker.endSession() }
+                )
+                .transition(.opacity)
+                .zIndex(90)
+            }
+
         }
+        .animation(.easeInOut(duration: 0.3), value: blocker.showUnlockedScreen)
         .animation(.easeInOut(duration: 0.3), value: discountManager.isGiftPending)
         .animation(.spring(response: 0.5, dampingFraction: 0.8), value: discountManager.isActive)
         .animation(.easeInOut(duration: 0.25), value: showTrialEndingBanner)
@@ -211,10 +224,6 @@ struct ContentView: View {
                 store: storeVM,
                 discountManager: discountManager,
                 secondsUntilReset: context == .debloquerCours ? progressManager.secondsUntilDailyReset() : nil,
-                retentionSummary: context == .retention
-                    ? RetentionSummary.current(store: storeVM, progressManager: progressManager)
-                    : nil,
-                onContinueToCancel: nil,
                 onPurchased: {
                     if context == .offreDiscount { discountManager.markExpired() }
                     paywallContext = nil
@@ -249,7 +258,6 @@ struct ContentView: View {
                 onboardingCompleted: true
             )
             presentTrialEndingBannerIfNeeded()
-            presentRetentionPaywallIfNeeded()
             // ATT est demandée dès l'ouverture de l'app (voir SophiaApp), plus ici.
             guard HomeCardPresentation.style == .legacy else { return }
             if !progressManager.hasSeenSwipeTutorial {
@@ -263,9 +271,6 @@ struct ContentView: View {
         .onChange(of: storeVM.trialExpiresInOneDay) { _, _ in
             presentTrialEndingBannerIfNeeded()
         }
-        .onChange(of: storeVM.willNotRenew) { _, _ in
-            presentRetentionPaywallIfNeeded()
-        }
         .onChange(of: storeVM.isPremium) { _, isPremium in
             AnalyticsService.updateUserContext(
                 language: languageManager.current,
@@ -278,30 +283,35 @@ struct ContentView: View {
         // replay the value the view was born with.
         .onChange(of: router.token) { _, _ in
             openPendingDeepLink()
+            openBlockerCourseIfNeeded()
         }
         .task {
             openPendingDeepLink()
         }
+        // The blocker's two foreground duties: keep the shield in line with the stored
+        // state (an unlock window may have ended while we were away), and answer a tap
+        // on the shield by opening a course straight away.
+        .task {
+            blocker.syncLanguage(languageManager.current)
+            blocker.reconcileShield()
+            openBlockerCourseIfNeeded()
+        }
+        .onChange(of: scenePhase) { _, phase in
+            guard phase == .active else { return }
+            blocker.reconcileShield()
+            openBlockerCourseIfNeeded()
+        }
+        .onChange(of: languageManager.current) { _, language in
+            blocker.syncLanguage(language)
+        }
         .trackAnalyticsLifecycle(isPremium: storeVM.isPremium)
     }
 
-    /// Offers the retention price to someone who has cancelled but is still inside the
-    /// period they have.
-    ///
-    /// Only when the store says the subscription will not renew. A reader whose trial
-    /// is simply running its course is left alone: they were about to pay 39,99 €, and
-    /// showing them 14,99 € would cost the difference for nothing.
-    ///
-    /// Once, ever. A cancellation that has been answered with an offer and refused is
-    /// answered; re-asking on every launch of the remaining period would be nagging
-    /// someone who is already paying us.
-    private func presentRetentionPaywallIfNeeded() {
-        guard storeVM.willNotRenew, paywallContext == nil, pendingCourse == nil else { return }
-        let defaults = UserDefaults.standard
-        let key = "sophia_retention_offer_shown"
-        guard !defaults.bool(forKey: key) else { return }
-        defaults.set(true, forKey: key)
-        paywallContext = .retention
+    private var pathTab: some View {
+        LearningPathView(
+            progressManager: progressManager,
+            selectedCourse: $selectedCourse
+        )
     }
 
     /// In-app only: tiny banner the calendar day before trial end, once per day, auto-hides in 1s.
@@ -322,6 +332,12 @@ struct ContentView: View {
         }
     }
 
+    private func clearSelectionIfDismissed(_ course: Course?) {
+        if course == nil {
+            selectedCourse = nil
+        }
+    }
+
     private static func dayKey(for date: Date) -> String {
         let comps = Calendar.current.dateComponents([.year, .month, .day], from: date)
         return String(format: "%04d-%02d-%02d", comps.year ?? 0, comps.month ?? 0, comps.day ?? 0)
@@ -338,7 +354,7 @@ struct ContentView: View {
         case 1:
             return "library"
         case 2:
-            return "collections"
+            return "path"
         case 3:
             return "training"
         case 4:
@@ -348,6 +364,40 @@ struct ContentView: View {
         }
     }
 
+    /// "Open Sophia" on the TikTok shield lands here. No home, no picker: the course is
+    /// chosen and opened at once, and the reader shows its lock banner.
+    private func openBlockerCourseIfNeeded() {
+        guard blocker.consumePendingRequest() else { return }
+        guard let course = blocker.startSession(candidate: blockerCandidateCourse) else { return }
+        paywallContext = nil
+        showMyCourses = false
+        if let open = pendingCourse {
+            if open.id == course.id { return }
+            pendingCourse = nil
+            selectedCourse = nil
+        }
+        selectedTab = 0
+        explicitCourseSource = "tiktok_blocker"
+        // Any cover that was up needs to be gone before the reader is presented, or the
+        // two presentations race and neither appears (same delay as `MyCoursesView`).
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            selectedCourse = course
+        }
+    }
+
+    /// Same recommendation as the home deck, restricted to courses that have a quiz:
+    /// without one there is nothing to finish. Everything done: any course with a quiz,
+    /// a re-read is still a read.
+    private func blockerCandidateCourse() -> Course? {
+        let withQuiz = ContentCatalog.activeCourses.filter(\.hasQuiz)
+        let deck = HomeDeckBuilder.deck(
+            from: withQuiz,
+            context: DeckContext.current(progressManager: progressManager),
+            isCompleted: { progressManager.courseStatus(for: $0) == .completed }
+        )
+        return deck.first ?? withQuiz.randomElement()
+    }
+
     private func openPendingDeepLink() {
         guard let courseId = router.pendingCourseId else { return }
         guard let course = ContentCatalog.course(withId: courseId) else {
@@ -355,10 +405,13 @@ struct ContentView: View {
             router.discard()
             return
         }
+        let source = router.pendingSource
         _ = router.consume()
         selectedTab = 0
-        explicitCourseSource = "deep_link"
-        AnalyticsService.trackDeepLinkOpened(courseId: courseId)
+        explicitCourseSource = source
+        if source == "deep_link" {
+            AnalyticsService.trackDeepLinkOpened(courseId: courseId)
+        }
         selectedCourse = course
     }
 }

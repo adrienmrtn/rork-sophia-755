@@ -1,0 +1,133 @@
+{
+  "id": "course_251_pourquoi_londres_a_t_elle_brule_en_1666",
+  "title": "Zakaj je London leta 1666 zgorel?",
+  "subtitle": "Štiri dni plamenov",
+  "subject": "histoire",
+  "subcategory": "Zgodnji novi vek in 19. stoletje",
+  "description": "2. septembra 1666 se ogenj iz pekarne razširi čez Pudding Lane. Štiri dni pozneje je v pepelu 13.000 hiš in katedrala svetega Pavla, zabeleženih pa je le šest mrtvih.",
+  "author": "benjamin-campbell",
+  "hero": {
+    "image": "great_fire_london_1666_thames_painting",
+    "ratio": "4:3",
+    "hook": "Pekovska peč, močan veter in leseno mesto: več ni bilo treba, da izgine srednjeveški London."
+  },
+  "sections": [
+    {
+      "id": "course_251_pourquoi_londres_a_t_elle_brule_en_1666_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**2. septembra 1666** v neki pekarni na [[Pudding Lane]] v Londonu izbruhne ogenj. Kar je sprva le majhno žarišče, preraste v enega najbolj uničujočih požarov v zgodovini mesta. Plameni gorijo **štiri dni** in uničijo okoli **13.000 hiš** ter velik del srednjeveškega mesta. Med ruševinami ostane tudi [[Katedrala svetega Pavla]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "O razsežnosti nesreče pripoveduje več takratnih prič, med njimi [[Samuel Pepys]], visoki uradnik mornarice in član britanskega parlamenta. V svojem dnevniku opisuje ogenj, ki se širi po Londonu, uničenje, ki se kopiči, in zmedo ljudi, ki skušajo pobegniti. Kako pa je lahko ogenj iz pekarne zrasel tako, da je uničil skoraj vse mesto?"
+        }
+      ]
+    },
+    {
+      "id": "course_251_pourquoi_londres_a_t_elle_brule_en_1666_p1",
+      "title": "Leseno mesto, ki ga žene veter",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leta **1666** je večina londonskih stavb lesenih. Mnoge hiše imajo slamnato ali s smolo premazano streho, iz materialov, ki se hitro vnamejo. Stavbe se gnetejo ob ozkih ulicah: ponekod se hiše, ki stojijo druga nasproti drugi, skoraj dotikajo. Ogenj tu najde idealne razmere za širjenje."
+        },
+        {
+          "type": "image",
+          "asset": "hollar_map_london_burnt_area_1666",
+          "ratio": "4:3",
+          "caption": "Ostanki požarov iz let 1666 in 1940 v cerkvi St Bride v Londonu: zoglenel les, drobci zvona, zvito steklo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Veter vse še poslabša. Ko se ogenj začne širiti, zapiha močan sunek in plamene požene proti zahodu, proti preostalemu mestu. Goreči kosi lesa in slame letijo po zraku in prižigajo nova žarišča pred glavnim požarom. Sam požar ni bil nič posebnega: vse, kar je potreboval, da se razbesni, so mu dale natrpane ulice in lesene konstrukcije."
+        }
+      ]
+    },
+    {
+      "id": "course_251_pourquoi_londres_a_t_elle_brule_en_1666_p2",
+      "title": "Zakaj ga nihče ni mogel ustaviti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leta 1666 London nima uradne gasilske službe. Prostovoljci pridejo na ulice s črpalkami za vodo, usnjenimi vedri, kavlji in sekirami v upanju, da bodo ustavili ogenj. Pred plameni skušajo rušiti stavbe, da bi nastala [[protipožarna preseka]], prazen prostor, ki ga ogenj ne more preskočiti."
+        },
+        {
+          "type": "paragraph",
+          "text": "A sprva hiš in trgovin nočejo rušiti, kar je širjenje najbrž še pospešilo. [[Thomas Bloodworth]], londonski lord župan, ne ukaže takoj obsežnega rušenja. Ko velike preseke končno organizirajo, je že prepozno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nekateri zgodovinarji menijo, da je Bloodworthovo obotavljanje ognju omogočilo širjenje. Toda odziv Londona so omejevali tudi orodja in raven organizacije, ki so bili takrat na voljo. Mesto se je preprosto spopadalo s katastrofo, na katero ni bilo pripravljeno."
+        }
+      ]
+    },
+    {
+      "id": "course_251_pourquoi_londres_a_t_elle_brule_en_1666_p3",
+      "title": "Res samo šest mrtvih?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Požar je uničil večji del Londona, človeške žrtve pa se zdijo zelo maloštevilne. Takratne evidence navajajo le okoli **šest mrtvih**. Ob tisočih stavbah, ki so v štirih dneh zgorele, se ta številka zdi skoraj nemogoča."
+        },
+        {
+          "type": "image",
+          "asset": "great_fire_london_ludgate_fleeing_crowd_painting",
+          "ratio": "4:3",
+          "caption": "Londončani bežijo s čolni po Temzi pred gorečo katedralo svetega Pavla: slika Philippa Jacquesa de Loutherbourga, nastala okoli leta 1797."
+        },
+        {
+          "type": "paragraph",
+          "text": "V resnici nihče ne ve, koliko ljudi je zares umrlo, in nekateri zgodovinarji menijo, da jih je bilo več. Najrevnejši Londončani so za seboj pustili malo pisnih sledi: smrti, ki jih je ogenj povzročil posredno, niso nikoli zabeležili. Druga razlaga: ogenj se je sprva širil dokaj počasi, zato so prebivalci imeli čas za beg. Gmotno uničenje je ogromno, zabeleženih smrti pa je malo."
+        },
+        {
+          "type": "funFact",
+          "text": "Požar je bil tako vroč, da sta se talila keramika in steklo. Arheologi so našli materiale, ki jih je vročina stopila ali zlepila, kar dokazuje, kako silovit je bil ogenj."
+        }
+      ]
+    },
+    {
+      "id": "course_251_pourquoi_londres_a_t_elle_brule_en_1666_p4",
+      "title": "London, ponovno zgrajen iz opeke",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po požaru London spremeni podobo. Oblasti sprejmejo nova gradbena pravila, ki omejujejo les in graditelje usmerjajo h kamnu in opeki. Mnoge ulice razširijo, da bi prihodnji ogenj težje preskočil z ene fasade na drugo."
+        },
+        {
+          "type": "image",
+          "asset": "monument_great_fire_london_pudding_lane",
+          "ratio": "4:3",
+          "caption": "Relief na spomeniku velikemu požaru (1677) blizu Pudding Lane: Karel II. prihaja na pomoč Cityju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Katastrofa spodbudi tudi razmislek o zavarovanju. Pred letom 1666 je bil le redkokateri meščan kakorkoli zaščiten. Pozneje nastanejo novi sistemi in utrejo pot, po kateri se razvije sodobno [[požarno zavarovanje]], ki ga mnogi uporabljajo še danes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Londonski požar razkrije vzorec, ki še vedno oblikuje naša mesta. Velika katastrofa razgali slabosti mesta, tako v gradnji kot v zaščiti, in prisili k novemu premisleku o varnosti tistih, ki bodo v njem živeli pozneje."
+        },
+        {
+          "type": "takeaway",
+          "text": "London je zgorel, ker je utesnjeno leseno mesto brez gasilcev naletelo na močan veter in prepočasen odziv; iz njegovega pepela so se rodila pravila o gradnji z opeko in požarno zavarovanje."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. Pepys, The Diary of Samuel Pepys, éd. R. Latham et W. Matthews, vol. 7, University of California Press, 1972."
+    },
+    {
+      "text": "J. F. Field, London, Londoners and the Great Fire of 1666: Disaster and Recovery, Routledge, 2018, p. 20."
+    }
+  ]
+}

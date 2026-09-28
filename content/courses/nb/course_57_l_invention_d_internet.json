@@ -1,100 +1,145 @@
 {
   "id": "course_57_l_invention_d_internet",
-  "title": "Oppfinnelsen av Internett",
-  "subtitle": "Nettverk",
+  "title": "Hvordan ble internett til under den kalde krigen?",
+  "subtitle": "Fra ARPANET til weben",
   "subject": "sciences",
-  "subcategory": "Discoveries that changed the world",
-  "description": "Internett har ikke en eneste oppfinner. Det er en lang kjede: et militært nettverk, et felles språk, deretter nettet for mennesker.",
+  "subcategory": "Oppdagelser som endret verden",
+  "description": "Et militært nettverk laget for å tåle et sovjetisk angrep, dusinvis av små nettverk, så modemet og weben. På femti år ble et prosjekt fra den kalde krigen en del av hverdagen vår.",
+  "author": "myra-houser",
   "hero": {
-    "image": "l_invention_d_internet",
-    "ratio": "16:9",
-    "hook": "Først et nettverk for å motstå krigen. Da stiller hele verden inn."
+    "image": "ibm_mainframe_computer_room_1960s_operators",
+    "ratio": "4:3",
+    "hook": "Før internett bandt sammen kloden, skulle det først og fremst overleve et sovjetisk angrep."
   },
   "sections": [
     {
       "id": "course_57_l_invention_d_internet_intro",
-      "title": "Introduksjon",
+      "title": "Innledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Internett ble ikke født fra et eneste geni i en garasje. Det er en kollektiv konstruksjon over flere tiår."
+          "text": "Akkurat som Roma ble ikke internett bygd på én dag. I begynnelsen var nettverket bare en håndfull datamaskiner i **det amerikanske forsvarsdepartementet**. Det vokste fram av teknisk fremgang, men også av spionasjeambisjonene til de to supermaktene under [[den kalde krigen]]. Mot slutten av 1900-tallet hadde oppringt tilkobling via telefonlinjen nådd de fleste amerikanske hjem, og surfing på weben fulgte tett etter."
         },
         {
           "type": "paragraph",
-          "text": "Tre enkle trinn å huske: et første nettverk (ARPANET), et felles språk (TCP/IP), deretter et enkelt grensesnitt (nettet)."
+          "text": "Ved årtusenskiftet var teknologien på én gang så utbredt og så ny at noen analytikere spådde et verdensomspennende sammenbrudd hvis datamaskinenes kalendere ikke taklet overgangen til **år 2000**: frykten for [[år 2000-problemet]]. På 2000-tallet har direktemeldinger, sosiale medier og kunstig intelligens nok en gang forandret måten vi kommuniserer på nett. Hvordan ble et militært prosjekt en del av hverdagen for hele verden?"
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p1",
-      "title": "ARPANET, det første nettverket",
+      "title": "Et nettverk som kunne overleve et angrep",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På slutten av **1960**-årene, midt i den kalde krigen, finansierte den amerikanske hæren et prosjekt: å koble sammen datamaskiner slik at de fortsatte å kommunisere selv om en del av nettverket ble ødelagt."
+          "text": "Prosjektet begynte på **1950-tallet**. Datamaskinene var den gang enorme og dyre: én enkelt maskin fylte et helt rom. Bare offentlige kontorer og noen få universiteter hadde en. Da spenningen med Sovjetunionen økte, lette amerikanske ledere etter et kommunikasjonsnett som sovjetiske agenter ikke kunne avlytte. Første steg var tidsdeling, som lot flere brukere arbeide på samme datamaskin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tidlig på **1960-tallet** eksperimenterte ingeniøren [[Paul Baran]] med [[pakkesvitsjing]]: i stedet for å sende en melding i ett stykke deler man den opp i små datapakker som reiser hver for seg gjennom nettverket. Baran og kollegene hans satset på at data som reiste slik over telefonlinjene, ville overleve et sovjetisk angrep. Ut av dette arbeidet kom [[ARPANET]], et program under det amerikanske forsvarsdepartementet."
         },
         {
           "type": "image",
           "asset": "arpanet_1969_computer_ucla",
           "ratio": "4:3",
-          "caption": "ARPANET kobler først sammen noen få amerikanske universiteter."
-        },
-        {
-          "type": "paragraph",
-          "text": "Dette nettverket kalles **ARPANET**. Meldinger deles opp i små pakker som tar forskjellige veier. Hvis en vei faller, tar en annen over."
+          "caption": "UCLAs SDS Sigma 7, den første datamaskinen som ble koblet til ARPANET, i 1969."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p2",
-      "title": "TCP/IP: snakker samme språk",
+      "title": "Fra ARPANET til «internettene»: pakkesvitsjing",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "For at ulike nettverk skal forstå hverandre, trengs felles regler. **Vint Cerf** og **Bob Kahn** utvikler **TCP/IP**-protokollen: et språk som forteller hvordan man klipper, adresserer og komponerer data på nytt."
+          "text": "For å frakte pakkene tok ARPANET i bruk en teknikk utviklet av britiske forskere: en [[ruter]], en enhet i telefonnettet som samler inn pakkene og sender dem videre til andre maskiner. I **1969** ble de første datamaskinene koblet sammen, først den ved University of California i Los Angeles. På Hawaii testet dataforskere en beslektet idé, **ALOHAnet**, der pakkene reiste med radiobølger."
         },
         {
           "type": "image",
-          "asset": "vint_cerf_bob_kahn_internet",
-          "ratio": "4:3",
-          "caption": "Cerf og Kahn: arkitektene bak språket på Internett."
+          "asset": "arpanet_logical_map_1977_network_diagram",
+          "ratio": "3:2",
+          "caption": "ARPANETs logiske kart per 25. august 1983, tegnet av BBN: universiteter, laboratorier og militære anlegg koblet sammen."
         },
         {
-          "type": "funFact",
-          "text": "1. januar **1983** byttet ARPANET offisielt til TCP/IP. Mange anser denne datoen for å være den tekniske \"fødselen\" til Internett."
+          "type": "paragraph",
+          "text": "Gjennom **1970-tallet** og tidlig på 1980-tallet sendte dusinvis av forskerlag verden over informasjon via telefonlinjer og radio. Resultatet ble en mengde små, atskilte nettverk. I **1974** forkortet en vitenskapelig artikkel «internetwork», et nettverk av nettverk, til «internet». Det er det eldste kjente sporet av ordet."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p3",
-      "title": "Nettet gjør nettverket menneskelig",
+      "title": "Modemer, abonnementer og webens fødsel ved CERN",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Internett er nettverket. **World Wide Web**, oppfunnet av **Tim Berners-Lee** ved CERN ved begynnelsen av årene **1990**, er det enkle laget: sider, lenker, nettlesere."
+          "text": "Fram til midten av **1980-tallet** levde disse «internettene» hvert for seg. I USA investerte National Science Foundation, det føderale organet som finansierer forskning, tungt i superdatamaskiner og koblet dem til universitetene. Så, fra **1989** til **1995**, opphevet amerikanske lovgivere gradvis restriksjonene som hadde forbudt kommersielle tjenester på internett."
         },
         {
           "type": "paragraph",
-          "text": "Uten nettet ville Internett forbli primært et verktøy for eksperter. Med den kan alle klikke."
+          "text": "I 1995 tilbød store selskaper som **Sprint** og **AT&T** oppringt tilkobling: abonnenten koblet modemet til telefonkontakten og slo et nummer. I mellomtiden, i **1990**, hadde den britiske dataforskeren Tim Berners-Lee lansert [[World Wide Web]] ved CERN, det europeiske fysikklaboratoriet like ved Genève. Weben samlet data spredt på mange servere og bandt sidene sammen med hyperlenker."
+        },
+        {
+          "type": "image",
+          "asset": "tim_berners_lee_next_computer_cern_first_web_server",
+          "ratio": "3:2",
+          "caption": "Tim Berners-Lees NeXT-maskin ved CERN, den første webserveren i 1990: en lapp ber om at den aldri må slås av."
+        },
+        {
+          "type": "funFact",
+          "text": "På 1990-tallet betalte mange abonnenter for tilkoblingen per minutt. Hver side som lastet sakte, kostet penger, og hjemmetelefonen var opptatt så lenge modemet var på nett."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p4",
-      "title": "Verdens nervesystem",
+      "title": "Fra e-post til iPhone: internett i hverdagen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I dag bærer Internett e-poster, videoer, banker, sykehus, GPS. Det har også skapt nye problemer: desinformasjon, overvåking, digital kløft."
+          "text": "Fra midten av 1990-tallet vokste internett i rekordfart, og folk utvidet kretsen av kontakter. E-post, chatterom og direktemeldinger gjorde det mulig å prate i sanntid. I **2000** gikk allerede over **halvparten** av all teletrafikk via internett. Tidlig på 2000-tallet skjøt blogger og de første sosiale nettverkene, MySpace og deretter TheFacebook.com, opp som paddehatter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deretter forlot nettet kontorene og stuene. Fra **2005** kunne BlackBerry-telefoner sende meldinger over sine egne nettverk. Fra **2007** la iPhone internett i lomma: nå surfet man fra mobiltelefonen. Nettverkenes nettverk ble født som en forsvarsstrategi under den kalde krigen, og i dag er det en del av hverdagen."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1969",
+              "title": "De første maskinene koblet sammen",
+              "detail": "ARPANET kobler sammen sine første datamaskiner, blant dem UCLAs."
+            },
+            {
+              "date": "1974",
+              "title": "Ordet «internet»",
+              "detail": "En artikkel forkorter «internetwork»: det eldste kjente sporet av ordet."
+            },
+            {
+              "date": "1990",
+              "title": "Weben blir født",
+              "detail": "Tim Berners-Lee lanserer World Wide Web ved CERN."
+            },
+            {
+              "date": "1995",
+              "title": "Internett åpnes for folk flest",
+              "detail": "De kommersielle restriksjonene faller, og Sprint og AT&T tilbyr oppringt tilkobling."
+            },
+            {
+              "date": "2007",
+              "title": "Internett i lomma",
+              "detail": "iPhone gjør det mulig å surfe fra mobiltelefonen."
+            }
+          ]
         },
         {
           "type": "takeaway",
-          "text": "Internett ble født fra ARPANET, ble universelt takket være TCP/IP, og tilgjengelig takket være nettet. Dette er ikke en unik oppfinnelse, det er en delt arkitektur."
+          "text": "Internett ble unnfanget under den kalde krigen for å tåle et angrep. Det gikk fra militære datamaskiner til universitetene, så inn i hjemmene takket være modemet og weben, før det fikk plass i en telefon."
         }
       ]
     }

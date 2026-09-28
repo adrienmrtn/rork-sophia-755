@@ -1,0 +1,159 @@
+{
+  "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain",
+  "title": "هل يمكن تعديل الحمض النووي للإنسان؟",
+  "subtitle": "مقصّ كريسبر",
+  "subject": "sciences",
+  "subcategory": "اكتشافات غيّرت العالم",
+  "description": "منذ عام 2012، صار «مقصّ جزيئي» مستعار من البكتيريا يتيح قطع الحمض النووي في الموضع المطلوب. أولى حالات الشفاء، وأخطاء محتملة، وأطفال حسب الطلب: إلى أين سنمضي؟",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "genetics_lab_pipette_dna_samples_gloved_hands",
+    "ratio": "4:3",
+    "hook": "ماذا لو أمكنك تصحيح حرف في حمضك النووي كما تصحّح خطأً مطبعيًا؟"
+  },
+  "sections": [
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_intro",
+      "title": "مقدمة",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "الشعر والعينان ولون البشرة والقوام: كلنا مختلفون. وترجع هذه السمات الجسدية إلى الوراثة، فكل [[جين]] هو قطعة من الحمض النووي تلقيناها من والدينا البيولوجيين. وللبيئة دورها أيضًا بالطبع: ما نأكله، ومن نخالطهم، وما نؤمن به. لكننا نتعامل مع جيناتنا كأمر مسلّم به. قد نتمنى أحيانًا لو كنا أطول أو أنحف، لكننا نتعايش معها دون أن نفكر فيها كثيرًا."
+        },
+        {
+          "type": "paragraph",
+          "text": "ماذا كنت ستغيّر لو استطعت تعديل حمضك النووي؟ لم يعد السؤال نظريًا. ففي عام **2012**، طوّرت عالمة الكيمياء الحيوية الأمريكية **جينيفر داودنا** وعالمة الأحياء الدقيقة الفرنسية **إيمانويل شاربنتييه** طريقة لبرمجة بروتين يقطع الحمض النووي. وصار بإمكانهما إزالة جين غير مرغوب فيه، ومن ثَمّ، نظريًا، تعديل الحمض النووي للإنسان."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p1",
+      "title": "كريسبر، مقصّ مستعار من البكتيريا",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "ليست [[كريسبر]] الأداة الوحيدة القادرة على تعديل الحمض النووي، لكنها الأشهر. وقد لوحظ مبدؤها أول مرة لدى الميكروبات. فالبكتيريا، دفاعًا عن نفسها، تتعرّف على الحمض النووي للفيروس الذي يهاجمها وتقطّعه إربًا. وتستعين في ذلك بقطع من الحمض النووي تُسمّى كريسبر وبإنزيم يُدعى **كاس** يؤدي دور المقص."
+        },
+        {
+          "type": "image",
+          "asset": "emmanuelle_charpentier_jennifer_doudna_crispr_pioneers",
+          "ratio": "16:9",
+          "caption": "إيمانويل شاربنتييه وجينيفر داودنا، الباحثتان اللتان حوّلتا هذا الدفاع البكتيري إلى أداة."
+        },
+        {
+          "type": "paragraph",
+          "text": "سخّر العلماء نظام الدفاع الطبيعي هذا لغرض آخر. فبدلًا من استهداف فيروس، يوجّهون الإنزيم إلى موضع محدد في الحمض النووي لشخص ما. وهناك يقطع، فيصبح التعديل المقصود ممكنًا. أحيانًا يُعطَّل الجين المستهدف ببساطة، وأحيانًا تُغيَّر بضعة من حروفه، وأحيانًا يُستبدل بالكامل."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p2",
+      "title": "أولى حالات الشفاء: فقر الدم المنجلي والثلاسيميا",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "إن القدرة على تحرير الحمض النووي تفتح الباب أمام علاج أمراض وراثية كثيرة. فحمضنا النووي مكتوب بـ**أربع قواعد**: A وT وC وG. وتسلسلها يشكّل [[الجينوم]]، أي مخطط بناء أجسامنا. وقد يكفي خطأ واحد في هذا النص لإحداث مرض، وتصحيحه قد يشفيه من حيث المبدأ."
+        },
+        {
+          "type": "image",
+          "asset": "sickle_cell_red_blood_cells_micrograph",
+          "ratio": "3:2",
+          "caption": "مقطع من كبد مريض بفقر الدم المنجلي تحت المجهر: أول مرض عولج بتقنية كريسبر."
+        },
+        {
+          "type": "paragraph",
+          "text": "في عام **2023** أصبحت المملكة المتحدة أول دولة تجيز دواءً قائمًا على كريسبر. وهو يستهدف مرضين وراثيين في الدم: [[فقر الدم المنجلي]] والثلاسيميا بيتا. ويعدّل العلاج الخلايا المنتجة للدم لكي تُفرز مزيدًا من [[الهيموغلوبين الجنيني]]، وهو شكل من الهيموغلوبين يُنتَج عادةً قبل الولادة."
+        },
+        {
+          "type": "funFact",
+          "text": "الخطأ المطبعي قد يقتل. فحرف واحد خاطئ في الحمض النووي، كحرف T مكان حرف C مثلًا، يكفي أحيانًا لإحداث مرض وراثي قاتل. وإعادة الحرف الصحيح قد تشفيه، من الناحية النظرية."
+        },
+        {
+          "type": "paragraph",
+          "text": "وما هذه إلا البداية. فالتجارب السريرية تختبر اليوم كريسبر في مواجهة السرطانات واضطرابات الأيض وأمراض المناعة الذاتية وأمراض القلب والأوعية الدموية وضمور العضلات. والقائمة طويلة. فهل تصبح الأمراض الوراثية قريبًا من الماضي؟"
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p3",
+      "title": "لماذا لن نشفي كل شيء",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "الأمر ليس بهذه البساطة. فأولًا، لا تتوقف طريقة تعبير الجين عن نفسه على ما ورثناه من والدينا وحده، بل تؤثر فيها البيئة أيضًا. وثانيًا، لا ينتج المرض بالضرورة عن جين معيب واحد، فقد تتدخل عدة جينات، ويصبح الإصلاح عندئذٍ أعقد بكثير."
+        },
+        {
+          "type": "paragraph",
+          "text": "وكريسبر نفسها قد تخطئ. فأحيانًا يقطع المقص في الموضع الخطأ، أو لا يلتئم الطرفان المقطوعان على النحو الصحيح. وقد يُحدث هذا الحمض النووي المعدَّل مشكلات جديدة دون أن يصلح المشكلة الأولى. ومع ذلك، يتقدم الطب بخطى واسعة نحو القضاء على بعض أسوأ الأمراض الوراثية."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p4",
+      "title": "أطفال حسب الطلب: أين نضع الحدّ؟",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "علاج الأمراض المُقعِدة أو القاتلة أمر يرى الجميع فائدته. لكن أين ينبغي للعلم أن يرسم الحد؟ هل يجب أن يُستخدم لصنع «الإنسان الكامل»؟ لقد اكتسب هذا السؤال إلحاحًا جديدًا منذ أن صار قطع الحمض النووي ممكنًا متى شئنا."
+        },
+        {
+          "type": "image",
+          "asset": "ivf_embryo_icsi_microinjection_micrograph",
+          "ratio": "16:9",
+          "caption": "بويضة بشرية تثبّتها ماصّة أثناء حقن مجهري في المختبر."
+        },
+        {
+          "type": "funFact",
+          "text": "لم تولد عبارة «طفل حسب الطلب» مع كريسبر، بل تُستخدم منذ ظهور [[الإخصاب في المختبر]]، الذي يتيح تكوين جنين في المختبر قبل زرعه في الرحم."
+        },
+        {
+          "type": "paragraph",
+          "text": "أما [[تعديل الخط الجنسي]] فيغيّر الحمض النووي للخلايا التناسلية: الحيوانات المنوية أو البويضات أو الأجنة في مراحلها الأولى. والفرق عن العلاج التقليدي كبير، إذ تنتقل هذه التعديلات بعد ذلك من جيل إلى جيل. واليوم، هذا النوع من التعديل محظور في كل الدول. لكن إلى متى؟ ومتى سينزلق التعديل الجيني ذو الغاية الطبية نحو سلالات وراثية حسب الطلب؟"
+        },
+        {
+          "type": "takeaway",
+          "text": "منذ عام 2012 يتيح مقصّ كريسبر تصحيح الحمض النووي البشري، وقد أُجيزت أولى العلاجات عام 2023، لكن الأخطاء تظل ممكنة، وكثير من الأمراض يشمل عدة جينات، وتعديل الخط الجنسي لا يزال محظورًا في كل مكان."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "National Science Foundation, « CRISPR: A Biotech Breakthrough », NSF Impacts.",
+      "url": "https://www.nsf.gov/impacts/crispr"
+    },
+    {
+      "text": "National Cancer Institute, « How CRISPR Is Changing Cancer Research and Treatment », Cancer Currents Blog, 2020.",
+      "url": "https://www.cancer.gov/news-events/cancer-currents-blog/2020/crispr-cancer-research-treatment"
+    },
+    {
+      "text": "CRISPR Medicine News, « Clinical Trials », liste des essais cliniques fondés sur CRISPR.",
+      "url": "https://crisprmedicinenews.com/clinical-trials/"
+    },
+    {
+      "text": "House of Lords Library, « World's first personalised DNA editing treatment », UK Parliament.",
+      "url": "https://lordslibrary.parliament.uk/worlds-first-personalised-dna-editing-treatment/"
+    },
+    {
+      "text": "« The gene editor CRISPR won't fully fix sick people anytime soon. Here's why », Science, 2016.",
+      "url": "https://www.science.org/content/article/gene-editor-crispr-won-t-fully-fix-sick-people-anytime-soon-here-s-why"
+    },
+    {
+      "text": "Boston Children's Hospital, « CRISPR gene editing », Answers.",
+      "url": "https://answers.childrenshospital.org/crispr-gene-editing/"
+    },
+    {
+      "text": "« The Guardian view on gene-edited humans: darker uses must be acknowledged alongside medical ones », The Guardian, 5 juillet 2026.",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/05/the-guardian-view-on-gene-edited-humans-darker-uses-must-be-acknowledged-alongside-medical-ones"
+    },
+    {
+      "text": "K. E. Ormond et al., « Human Germline Genome Editing », American Journal of Human Genetics, vol. 101, 2017.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5544380/"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "id": "course_245_d_ou_vient_le_pere_noel",
+  "title": "Woher kommt der Weihnachtsmann?",
+  "subtitle": "Sechzehn Jahrhunderte Legende",
+  "subject": "mythologie",
+  "subcategory": "Legenden & Kreaturen",
+  "description": "Ein griechischer Bischof aus dem 3. Jahrhundert, ein holländischer Reiter, ein New Yorker Gedicht, ein Pressezeichner und eine Werbekampagne. Der Weihnachtsmann wurde nicht geboren, er wurde Stück für Stück zusammengesetzt.",
+  "author": "angela-bouma",
+  "hero": {
+    "image": "santa_claus_thomas_nast_1881_harpers_weekly",
+    "ratio": "4:3",
+    "hook": "Er wurde nicht geboren. Man hat ihn gebaut, Stück für Stück, über sechzehn Jahrhunderte."
+  },
+  "sections": [
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein griechischer Bischof, ein heidnischer Wohltäter und eine Werbeillustration verschmelzen zum Weihnachtsmann. Alles beginnt mit [[Nikolaus von Myra]], geboren **270**, einem Bischof, der sein eigenes Vermögen an die Bedürftigsten verteilt. Er wird zum [[Schutzpatron]] der Kinder und der Seeleute."
+        },
+        {
+          "type": "paragraph",
+          "text": "In den folgenden **1.600 Jahren** nimmt die Legende Gestalt an. Die Feste mitten im Winter bringen in Nordeuropa die Familien zu einem Festmahl zusammen. Ein Schlitten, **acht Rentiere**, der Weg durch den Kamin: Ein Gedicht legt fest, wie man die Festzeit erwartet. Dann verpackt eine Werbekampagne die Legende wie ein Produkt. Heraus kommt der Weihnachtsmann, den alle kennen."
+        }
+      ]
+    },
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_p1",
+      "title": "Sinterklaas trifft Father Christmas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In den Niederlanden reitet [[Sinterklaas]] auf einem **weißen Pferd** durch die Städte, mit Mitra, in Rot gekleidet, den Bischofsstab in der Hand. Die Kinder stellen ihre Schuhe hinaus, mit Karotten und Heu für sein Reittier. Der Brauch gelangt nach Amerika, wo aus Sinterklaas nach und nach **Santa Claus** wird."
+        },
+        {
+          "type": "image",
+          "asset": "sinterklaas_white_horse_arrival_netherlands",
+          "ratio": "3:2",
+          "caption": "Sinterklaas auf seinem weißen Pferd, mit roter Mitra und rotem Chormantel, bei seiner Ankunft in einer niederländischen Stadt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Engländer haben ihren eigenen Winterbesucher. In Pelz gekleidet und stets fröhlich, bringt [[Father Christmas]] das Festmahl. Er verkörpert die Freude und das Feiern der Jahreszeit und ist mindestens seit dem **15. Jahrhundert** belegt. In dieser Fassung hat er keine Geschenke für die Kinder. Englische Siedler nehmen ihn mit nach Amerika, wo er sich neben Sinterklaas niederlässt."
+        }
+      ]
+    },
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_p2",
+      "title": "Ein Gedicht und ein Zeichner",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1823** erscheint im Staat New York anonym ein Gedicht, *A Visit from St. Nicholas* (“Ein Besuch vom heiligen Nikolaus”). Es gibt Santa Claus seine bekannteste Gestalt: ein Schlitten, acht Rentiere und die Idee, dass er in einer verschneiten Nacht durch den Kamin steigt, um Geschenke dazulassen. Als Verfasser gilt [[Clement Clarke Moore]], doch die Frage ist bis heute umstritten."
+        },
+        {
+          "type": "image",
+          "asset": "a_visit_from_st_nicholas_troy_sentinel_1823",
+          "ratio": "3:2",
+          "caption": "Ein Santa Claus im Pelz, wie im Gedicht von 1823: Fotografie aus dem Staat New York, um 1872."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ab **1863** baut der Zeichner [[Thomas Nast]] das Bild in seinen Illustrationen für die Zeitschrift *Harper's Weekly* aus. Er gibt ihm den runden Bauch, den weißen Bart und die Werkstatt am **Nordpol**. Für den heutigen Santa Claus nimmt Nast sich sowohl Sinterklaas als auch Father Christmas zum Vorbild."
+        }
+      ]
+    },
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_p3",
+      "title": "Coca-Cola legt das Bild fest",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ab **1931** prägen die illustrierten Werbekampagnen von Coca-Cola, gezeichnet vom Künstler [[Haddon Sundblom]], den warmherzigen, großväterlichen Santa, den man heute kennt: weißer Bart, dicker Bauch, Gürtel und Hosenträger. Das Unternehmen erfindet den Weihnachtsmann nicht. Es hilft, sein Bild festzulegen, überall gleich, Jahr für Jahr."
+        },
+        {
+          "type": "funFact",
+          "text": "Der rote Anzug ist keine Idee von Coca-Cola. Thomas Nast zeichnete Santa Claus schon in Rot, lange vor der ersten Kampagne der Marke."
+        },
+        {
+          "type": "image",
+          "asset": "department_store_santa_claus_children_1940s",
+          "ratio": "4:3",
+          "caption": "Ein Weihnachtsmann im Kaufhaus Eaton in Montreal, umringt von Kindern, Mitte des 20. Jahrhunderts."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mitte des **20. Jahrhunderts** führen Kaufhäuser, Radiosendungen und Filme das Erbe von Sinterklaas, dem englischen Father Christmas und Nasts Zeichnungen zusammen. Heraus kommt eine einzige, weltweite Figur, die je nach Land anders heißt, aber überall auf den ersten Blick zu erkennen ist."
+        }
+      ]
+    },
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_p4",
+      "title": "Eine Legende aus vielen Händen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Geschichte des Weihnachtsmanns ist kein Einzelfall. Feste und Volkshelden entstehen auf dieselbe Weise. Durch **Handel** und Kontakt mit anderen Gruppen wandern Ideen und verändern sich. Ein religiöser Brauch schlüpft in ein älteres Fest der Jahreszeit. Die nächste Generation fügt ihre eigene Fassung hinzu, passend zu ihren Bedürfnissen."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "270",
+              "title": "Geburt des Nikolaus von Myra",
+              "detail": "Der Bischof, der sein Vermögen verschenkt, wird Schutzpatron der Kinder."
+            },
+            {
+              "date": "15. Jahrhundert",
+              "title": "Father Christmas",
+              "detail": "Der englische Winterbesucher bringt das Festmahl, keine Geschenke."
+            },
+            {
+              "date": "1823",
+              "title": "A Visit from St. Nicholas",
+              "detail": "Schlitten, acht Rentiere und Kamin."
+            },
+            {
+              "date": "1863",
+              "title": "Thomas Nast",
+              "detail": "Runder Bauch, weißer Bart, Werkstatt am Nordpol."
+            },
+            {
+              "date": "1931",
+              "title": "Coca-Cola",
+              "detail": "Haddon Sundblom legt den Großvater in Rot fest."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Jede neue Begegnung zwischen Kulturen bereichert die Erzählung und verändert das Gesicht der Figuren. Keine Zivilisation besitzt diese Gestalten allein: Sie gehören der menschlichen Kultur als Ganzes. Santa Claus feiert, was über **1.600 Jahre** geschieht, wenn Völker einander begegnen und ein Fest teilen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Griechischer Bischof, holländischer Reiter, englischer Festbruder, Gedicht, Pressezeichnungen und Werbung: Der Weihnachtsmann ist eine Legende, an der sechzehn Jahrhunderte lang viele Hände geschrieben haben."
+        }
+      ]
+    }
+  ]
+}

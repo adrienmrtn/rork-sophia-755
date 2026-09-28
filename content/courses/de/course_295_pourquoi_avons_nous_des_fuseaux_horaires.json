@@ -1,0 +1,156 @@
+{
+  "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires",
+  "title": "Warum gibt es Zeitzonen?",
+  "subtitle": "1884",
+  "subject": "histoire",
+  "subcategory": "Frühe Neuzeit & 19. Jahrhundert",
+  "description": "Bis ins 19. Jahrhundert lebte jede Stadt nach ihrer eigenen Uhrzeit. Die Eisenbahn und dann eine Konferenz in Washington im Jahr 1884 ordneten die Zeit selbst neu.",
+  "author": "nathan-hewitt",
+  "hero": {
+    "image": "shepherd_gate_clock_royal_observatory_greenwich",
+    "ratio": "4:3",
+    "hook": "Vor der Eisenbahn war Mittag nie ganz dieselbe Stunde von einer Stadt zur nächsten."
+  },
+  "sections": [
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die meiste Zeit der Geschichte war die Uhrzeit eine örtliche Sache. Jede Stadt stellte ihre Uhren für sich, und Mittag konnte in einem Ort einige Minuten früher oder später schlagen als im Nachbarort. Das störte niemanden: Man reiste nicht schnell genug von Stadt zu Stadt, als dass der Unterschied eine Rolle spielte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dann kam die Eisenbahn. Sobald zwei Städte nur Minuten auseinanderlagen, wurden diese Abweichungen lästig. Auf langen Strecken fuhr ein Zug durch Bahnhöfe, deren Ortszeit um ganze Stunden abwich. Die Zeitsysteme, die die Menschheit seit Jahrtausenden nutzte, reichten nicht mehr. Damit die Züge reibungslos fuhren, musste man die Zeit selbst neu ordnen."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p1",
+      "title": "Die Eisenbahn übernimmt die Greenwich-Zeit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Zeitunterschiede zwischen den Städten waren ein Albtraum für die Fahrpläne. Sie waren auch gefährlich: Mehrere Zugunglücke gingen auf schlecht abgestimmte Fahrpläne zurück. Die Gesellschaften begriffen, dass sie eine gemeinsame Zeit brauchten. **1840** fand die britische [[Great Western Railway]] als Erste die Lösung: Sie richtete ihre Fahrpläne nach der Zeit der königlichen Sternwarte in Greenwich, der [[Greenwich-Zeit]]. Alle ihre Bahnhöfe lebten nun nach derselben Uhr."
+        },
+        {
+          "type": "image",
+          "asset": "bristol_corn_exchange_clock_two_minute_hands",
+          "ratio": "4:3",
+          "caption": "Die Uhr der Corn Exchange in Bristol mit ihren zwei Minutenzeigern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Umstellung funktionierte hervorragend. Abfahrten und Ankünfte ließen sich endlich sicher abstimmen. Bald übernahmen alle britischen Bahngesellschaften dasselbe System. In den **1850er** Jahren waren die meisten öffentlichen Uhren des Landes nach Greenwich gestellt. **1880** wurde diese Zeit zur gesetzlichen Zeit Großbritanniens."
+        },
+        {
+          "type": "funFact",
+          "text": "In Bristol hat die Uhr der Corn Exchange zwei Minutenzeiger: einen für die Ortszeit, den anderen für die Bahnzeit, also die Greenwich-Zeit, zehn Minuten auseinander. Eine Erinnerung an die Zeit, als die Stadt nach zwei Uhren zugleich lebte."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p2",
+      "title": "Die USA erfinden die Zeitzonen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In den Vereinigten Staaten reichte das britische Rezept nicht aus. Die Züge legten dort weit größere Strecken zurück: Wenn es in Kalifornien Mittag war, war in Washington schon der Nachmittag weit fortgeschritten. Die Lösung waren [[Zeitzonen]]: das Land in **fünf** Streifen aufteilen, mit einer Stunde Unterschied zwischen zwei benachbarten."
+        },
+        {
+          "type": "image",
+          "asset": "william_allen_railroad_time_zones_map_1883",
+          "ratio": "4:3",
+          "caption": "Werbekarte der Burlington Route, 1892: Die 1883 eingeführten Bahnzeitzonen grenzen Pacific, Mountain, Central und Eastern Time voneinander ab."
+        },
+        {
+          "type": "paragraph",
+          "text": "So fuhren die Regionalzüge nach einer Zeit, die vor Ort Sinn ergab, und Züge, die mehrere Zonen durchquerten, konnten ihre Fahrpläne leicht umrechnen. Mehrere Einteilungen wurden vorgeschlagen. Durchgesetzt hat sich die von [[William Allen]], einem Herausgeber von Eisenbahnfahrplänen. Im **November 1883** übernahmen die amerikanischen und kanadischen Bahngesellschaften offiziell seine fünf Zonen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Doch nicht nur die Eisenbahn litt unter der Ortszeit. Die internationale Schifffahrt wuchs rasch, und der Telegraf war gerade erst aufgekommen. Die Abstimmung der Zeit war zu einem weltweiten Problem geworden, das eine weltweite Antwort verlangte."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p3",
+      "title": "Die Konferenz von Washington 1884",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1884** berief der amerikanische Präsident Chester A. Arthur eine Konferenz nach Washington ein, um die Frage zu klären. Vertreter aus **25 Ländern**, fast alle aus Amerika oder Europa, bildeten die [[Internationale Meridiankonferenz]]. Sie beschlossen, dass der Meridian von Greenwich als Nullmeridian und seine Zeit als Weltzeit dienen sollte, mit einem 24-Stunden-Tag, der um Mitternacht Greenwich-Zeit beginnt."
+        },
+        {
+          "type": "image",
+          "asset": "sandford_fleming_portrait_photograph_1890s",
+          "ratio": "3:4",
+          "caption": "Sandford Fleming, schottisch-kanadischer Ingenieur: Porträt aus dem Canadian Alpine Journal von 1907."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der schottisch-kanadische Ingenieur [[Sandford Fleming]] warb dort für ein weltweites System von Zeitzonen. Er teilte den Globus in **24 Zonen** ein, Maßstab war die [[geografische Länge]]: Alle **15 Grad** geht die Uhr eine Stunde weiter als in der vorigen Zone. Anders als oft behauptet, nahm die Konferenz seine Zonen nicht offiziell an. Die Greenwich-Zeit wurde zum weltweiten Bezugspunkt, doch niemand ordnete an, dass sie die Ortszeiten ersetzen sollte."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p4",
+      "title": "Eine langsame und umstrittene Einführung",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Zeitzonen setzten sich also nur nach und nach durch. **1900** hatten die meisten europäischen Länder eine an Greenwich ausgerichtete Zeit eingeführt. Kolonialmächte wie Großbritannien und Frankreich zwangen sie ihren Kolonien auf. Andere Länder schlossen sich aus Bequemlichkeit an, manchmal erst nach Jahrzehnten: China wartete bis **1918**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selbst nach der offiziellen Einführung tat sich die neue Zeit schwer im Alltag. Jahrelang sorgte sie für Verwirrung und Spott, und die Ortszeit blieb weltweit verbreitet. Es brauchte Jahrzehnte und Hilfsmittel wie die staatliche Schule oder die Sendezeiten des Radios, um sie ganz zu verdrängen. In den **1920er** Jahren lebten die meisten Länder endlich nach einer an Greenwich ausgerichteten Zeit. Die Zeit war neu geordnet worden, weil die Eisenbahn es so wollte."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1840",
+              "title": "Züge nach Greenwich-Zeit",
+              "detail": "Die Great Western Railway richtet ihre Fahrpläne nach der königlichen Sternwarte."
+            },
+            {
+              "date": "1880",
+              "title": "Gesetzliche Zeit in Großbritannien",
+              "detail": "Die Greenwich-Zeit wird zur amtlichen Zeit Großbritanniens."
+            },
+            {
+              "date": "Nov. 1883",
+              "title": "Fünf nordamerikanische Zonen",
+              "detail": "Die amerikanischen und kanadischen Bahngesellschaften übernehmen William Allens Einteilung."
+            },
+            {
+              "date": "1884",
+              "title": "Konferenz von Washington",
+              "detail": "25 Länder machen die Greenwich-Zeit zur Weltzeit."
+            },
+            {
+              "date": "1918",
+              "title": "China zieht nach",
+              "detail": "Auch China führt eine an Greenwich ausgerichtete Zeit ein."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Die Zeitzonen entstanden nicht durch einen weltweiten Erlass, sondern aus den Bedürfnissen der Eisenbahn, und es dauerte Jahrzehnte, bis sie die Ortszeit ersetzten."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. A. Johnston, The Clocks Are Telling Lies: Science, Society, and the Construction of Time, 2022, p. 24, 104 et 188, et chap. 5."
+    }
+  ]
+}

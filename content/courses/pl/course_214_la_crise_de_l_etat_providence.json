@@ -1,14 +1,15 @@
 {
   "id": "course_214_la_crise_de_l_etat_providence",
-  "title": "Czy państwo opiekuńcze przetrwa starzenie się społeczeństw?",
-  "subtitle": "Umowa społeczna pod presją",
+  "title": "Czy państwo opiekuńcze jest tylko dla obywateli?",
+  "subtitle": "Algierczycy i braceros",
   "subject": "comprendreLeMonde",
-  "subcategory": "Economy & society",
-  "description": "Powstałe po 1945, żeby chronić każdego obywatela przed chorobą, bezrobociem i starością, państwo opiekuńcze jest dziś bujane przez starzenie społeczeństwa i globalizację.",
+  "subcategory": "Gospodarka i społeczeństwo",
+  "description": "We Francji i w Stanach Zjednoczonych ochronę socjalną zbudowaną po 1945 roku finansowali także robotnicy z dawnych kolonii. Odmowa renty dla Algierczyka, meksykańscy braceros bez emerytury, buldożer w Vitry: historia kryzysu starszego niż deficyty.",
+  "author": "mark-n-hoffman",
   "hero": {
-    "image": "la_crise_de_l_etat_providence",
-    "ratio": "16:9",
-    "hook": "W 1960 roku Francja miała 4 osoby aktywne na emeryturę 1 emeryta. Dziś zostało ich już tylko 2."
+    "image": "bracero_mexican_farmworkers_california_1942_lange",
+    "ratio": "4:3",
+    "hook": "Dla robotników z dawnych kolonii kryzys państwa opiekuńczego nie zaczął się od deficytów: trwał od pierwszego dnia."
   },
   "sections": [
     {
@@ -18,91 +19,157 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Państwo opiekuńcze** to zespół pomocy, którą państwo daje obywatelom, żeby chronić ich przed chorobą, bezrobociem albo starością. Ten system w nowoczesnej postaci rodzi się tuż po drugiej wojnie światowej, jako obietnica zbiorowej solidarności."
+          "text": "W **2025** roku francuskie ubezpieczenia społeczne mają deficyt **21,6 miliarda euro**. W Stanach Zjednoczonych zarządcy Social Security, federalnego systemu emerytalnego, przewidują, że jego rezerwy wyczerpią się w **2034** roku. Dla wielu te liczby są dowodem: [[państwo opiekuńcze]], czyli emerytury, leczenie i zasiłki finansowane z podatków, przeżywa kryzys."
         },
         {
           "type": "paragraph",
-          "text": "Od końca XX wieku ten filar rozwiniętych społeczeństw przechodzi kryzys finansowania. Starzenie ludności, globalizacja, nowe formy pracy: równowaga między ochroną społeczną a gospodarką jest dziś kwestionowana wszędzie na świecie."
+          "text": "Państwo jednak nie tylko płaci: decyduje też, komu co się należy. W 2025 roku prezydent Donald Trump polecił agencjom federalnym zaostrzyć kontrolę imigrantów bez dokumentów, w imię emerytur i opieki zdrowotnej obywateli. Tymczasem ci imigranci i tak są wykluczeni z większości świadczeń. Gdy rząd ogłasza kryzys państwa opiekuńczego, o czyich świadczeniach właściwie mówi?"
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p1",
-      "title": "1945: narodziny umowy społecznej",
+      "title": "Powojenny układ i ci, których z niego wyłączono",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W 1942 brytyjski ekonomista William Beveridge publikuje raport, który stanie się fundamentem: [[Raport Beveridge'a]]. Ambicja jest prosta: chronić każdego obywatela przed pięcioma wielkimi ryzykami: chorobą, ignorancją, nędzą mieszkaniową, bezczynnością i biedą."
+          "text": "Po drugiej wojnie światowej amerykańscy przemysłowcy, związki zawodowe i rząd zawarli układ. Robotnicy przemysłowi dostali wyższe płace i zabezpieczenie socjalne. W zamian związki poparły masową produkcję i odłożyły najbardziej radykalne żądania. Politolog Mark Rupert widzi w tych związkach obywateli „młodszego partnera” całego porozumienia."
+        },
+        {
+          "type": "image",
+          "asset": "renault_billancourt_immigrant_workers_assembly_line",
+          "ratio": "4:5",
+          "caption": "Plakat z Maja 1968 z pracowni ludowej Beaux-Arts: robotnicy Renault-Billancourt, wielkiej fabryki zatrudniającej imigrantów."
         },
         {
           "type": "paragraph",
-          "text": "Francja idzie tą drogą i w 1945 tworzy zabezpieczenie społeczne. System rodzi się z politycznego kompromisu. Autorem jest [[Krajowa Rada Ruchu Oporu]], organizacja, która scaliła ruchy oporu w czasie wojny. Państwo nie poprzestaje już na policji i sądach: staje się gwarantem dobrostanu wszystkich."
-        },
-        {
-          "type": "funFact",
-          "text": "Państwa opiekuńczego nie wymyślili socjaliści, tylko konserwatywny kanclerz niemiecki Otto von Bismarck w 1883. Cel był strategiczny: uspokoić robotników i uniknąć rewolucji."
+          "text": "Francja stworzyła z kolei szerszy publiczny system ubezpieczeń społecznych, na który składki płacą i pracodawcy, i pracownicy. Państwo obniżyło później składki pracodawców od niskich pensji, żeby ułatwić zatrudnianie. Oba układy łączy jednak jedno: faworyzują krajową siłę roboczą kosztem nieobywateli z kolonii. Francuskie fabryki zatrudniają Algierczyków, niedawnych kolonizowanych, których urzędy przeklasyfikowują na „cudzoziemców imigrantów”. Amerykańskie farmy werbują Meksykanów, których umowy trzymają z dala od grona uprawnionych."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p2",
-      "title": "Wstrząs demograficzny",
+      "title": "Sprawa Mazariego: odmowa renty",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Równowaga lat powojennych pękła pod wpływem dwóch wielkich ewolucji społecznych. Pierwsza jest demograficzna: ludzie żyją dłużej, a rodziny mają mniej dzieci. To pcha wydatki na zdrowie i wydłuża czas, przez który bierze się emeryturę."
+          "text": "W **1986** roku Mazari, Algierczyk mieszkający we Francji kontynentalnej, poprosił o dodatek do francuskiej renty inwalidzkiej, świadczenie dla rencistów o niskich dochodach. Kasa odmówiła. Obywatel Francji z taką samą rentą i takimi samymi dochodami by go dostał: powodem odmowy było obywatelstwo. W **1991** roku [[Sąd Kasacyjny]], najwyższy sąd cywilny w kraju, uchylił tę odmowę opartą na obywatelstwie."
         },
         {
           "type": "image",
-          "asset": "elderly_retirees_demographic_aging_population",
+          "asset": "cour_de_cassation_paris_palais_de_justice",
           "ratio": "16:9",
-          "caption": "Starzenie ludności co roku coraz mocniej ciąży na rachunkach społecznych."
+          "caption": "Sąd Kasacyjny mieści się w Pałacu Sprawiedliwości w Paryżu, na wyspie Cité."
         },
         {
           "type": "paragraph",
-          "text": "We Francji w latach 1960 na jednego emeryta pracowały jeszcze 4 osoby aktywne. Dziś ta liczba spadła poniżej 2. Druga zmiana: wzrost bezrobocia od szoków naftowych 1973 i [[ekonomia gigów]]: niezależne, niepewne zajęcia, które mniej składkują do systemu, a bardziej są wystawione na ryzyko."
+          "text": "W **1993** roku wpływowy deputowany Jean Charroppin wyraził powszechny niepokój: takie wnioski mogą obciążyć francuski „budżet socjalny”. Obawa była jasna: inni imigranci z dawnych kolonii mogliby zaskarżyć podobne odmowy. A przecież od czasów kolonialnych źle opłacana praca Algierczyków bogaciła francuskich pracodawców i przez podatki i składki finansowała samo państwo opiekuńcze. Odmawiać im praw obywateli to przywracać porządek kolonialny."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p3",
-      "title": "Globalizacja cisnie ten społeczny model",
+      "title": "Braceros, czyli importowany kolonializm",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W zglobalizowanej gospodarce firmy i kapitał łatwo przesuwają się z kraju do kraju. Podatki i składki potrzebne do finansowania ochrony społecznej wyglądają wtedy jak przeszkoda wobec krajów, gdzie praca kosztuje mniej."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ciekawy kontrprzykład dają kraje skandynawskie. Szwecja albo Dania trzymają wysoki poziom ochrony społecznej i zostają bardzo konkurencyjne. Ich sekret nazywa się [[elastyczność i bezpieczeństwo]]: firmy mogą łatwo zwalniać, ale pracownicy dostają w zamian hojne zasiłki i mocne wsparcie w drodze do nowej pracy."
+          "text": "W Stanach Zjednoczonych ta sama logika działała na polach, a jej narzędziem był [[program Bracero]]. Pozwalał on wielkim farmerom werbować obywateli Meksyku do zbiorów na umowy czasowe. Po **lipcu 1951** roku ci robotnicy kontraktowi przestali być objęci Social Security. A przecież Meksyk, inaczej niż Algieria pod francuskim panowaniem, był krajem niepodległym."
         },
         {
           "type": "funFact",
-          "text": "Dania przeznacza około 32% swojego PKB na ochronę społeczną, jeden z najwyższych wskaźników na świecie, i regularnie ląduje wśród krajów, w których najłatwiej założyć firmę."
+          "text": "Prawo amerykańskie zakazywało kiedyś sprowadzania zagranicznych robotników na kontraktach, bo uważano ich za zagrożenie dla wolnej pracy. W 1951 roku Kongres zrobił wyjątek dla działającego już programu Bracero: umowy wiązały robotników z pracą tymczasową i nakazywały im powrót do Meksyku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Historyczka Mae Ngai używa tu określenia [[importowany kolonializm]]: meksykańscy robotnicy weszli do amerykańskiej gospodarki bez pewnego miejsca we wspólnocie politycznej, bez emerytury i opieki zdrowotnej, które obywatelom należą się od urodzenia. To wykluczenie wciąż dotyczy robotników rolnych z wizą H-2A, za których pracodawcy nie płacą składek na Social Security. Różnymi drogami prawnymi Francja i Stany Zjednoczone wcieliły tych ludzi do imperialnej siły roboczej, ograniczając ich prawa."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p4",
-      "title": "Wymyślić ochronę społeczną na nowo",
+      "title": "„Próg tolerancji” i buldożer w Vitry",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "System jutra musi chronić przed nowymi ryzykami: uberizacją pracy, transformacją ekologiczną, zależnością związaną z późnym wiekiem. Francuska reforma 2023, która przesunęła ustawowy wiek emerytalny do 64 lat, pokazuje, jak trudno takie zmiany przepchnąć."
+          "text": "Filozof [[Étienne Balibar]] przyjrzał się powszechnemu przekonaniu, że imigracja przekroczyła „[[próg tolerancji]]”. Jego zwolennicy, zarówno z prawicy, jak i z lewicy, chętnie obwiniają imigrantów o brak pracy, przepełnione mieszkania i zatłoczone szpitale."
         },
         {
           "type": "paragraph",
-          "text": "Spór idzie też o finansowanie: czy dalej składać ciężar systemu głównie na pracę, ryzykując karę dla zatrudnienia, czy przesunąć się ku szerszemu finansowaniu z podatku, jak [[CSG]] we Francji, które obejmuje wszystkie dochody, nie tylko pensje?"
+          "text": "W **grudniu 1980** roku w Vitry-sur-Seine komunistyczny mer Paul Mercieca wysłał buldożer, żeby zablokować hotel robotniczy zajmowany przez robotników z Mali. [[Georges Marchais]], przywódca Francuskiej Partii Komunistycznej, stanął w jego obronie: Vitry nie może przyjąć więcej imigrantów. Tam bycie Francuzem najwyraźniej liczyło się bardziej niż bycie robotnikiem, nawet dla komunistów."
+        },
+        {
+          "type": "image",
+          "asset": "georges_marchais_portrait_1981",
+          "ratio": "2:3",
+          "caption": "Georges Marchais, sekretarz generalny Francuskiej Partii Komunistycznej, około 1981 roku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Od dawna Francja i Stany Zjednoczone werbują w dawnych koloniach robotników do swoich imperialnych gospodarek. Ich praca przynosiła zyski i wpływy do budżetu. Przepisy socjalne odmawiały im równych praw, a gdy prosili o mieszkanie czy pomoc, urzędy widziały w tym nowe koszty. Dzisiejsze alarmy budżetowe przychodzą późno: dla robotników imigrantów państwo opiekuńcze jest w kryzysie od samego początku."
         },
         {
           "type": "takeaway",
-          "text": "Państwo opiekuńcze, urodzone w 1945, żeby chronić każdego przed chorobą, bezrobociem i starością, słabnie przez bezprecedensowe starzenie demograficzne i przez globalizację. Jego przetrwanie zależy od tego, czy potrafi wynaleźć się na nowo i nie zgubić obietnicy solidarności."
+          "text": "We Francji i w Stanach Zjednoczonych państwo opiekuńcze, finansowane także pracą Algierczyków i meksykańskich braceros, od początku odmawiało im równych praw: jego kryzys nie zaczął się od deficytów."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Mario Draghi, The Future of European Competitiveness: Part A, A Competitiveness Strategy for Europe, European Commission, septembre 2024, p. 5 et 19.",
+      "url": "https://commission.europa.eu/document/download/97e481fd-2dc3-412d-be4c-f152a8232961_en"
+    },
+    {
+      "text": "Mark Rupert, Producing Hegemony: The Politics of Mass Production and American Global Power, Cambridge University Press, 1995, chap. 5-7, p. 83-166.",
+      "url": "https://www.maxwell.syr.edu/research/article/producing-hegemony-the-politics-of-mass-production-and-american-global-power"
+    },
+    {
+      "text": "Mark N. Hoffman, Rethinking the Politics of Immigration: Colonial Modes of Immigration Management and the Ambivalent Resilience of the Empire State, thèse de doctorat, University of Minnesota, 2013, p. 120-121.",
+      "url": "https://conservancy.umn.edu/bitstream/11299/158374/1/Hoffman_umn_0130E_14071.pdf"
+    },
+    {
+      "text": "Paul A. Silverstein, Algeria in France: Transpolitics, Race, and Nation, Indiana University Press, 2004, chap. « Colonization and the Production of Ethnicity » et « Spatializing Practices: Migration, Domesticity, Urban Planning ».",
+      "url": "https://iupress.org/9780253217127/algeria-in-france/"
+    },
+    {
+      "text": "Cour de cassation, chambre sociale, 7 mai 1991, pourvoi n° 88-15.407, Bulletin civil V, n° 231, p. 141.",
+      "url": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000007026345/"
+    },
+    {
+      "text": "Jean Charroppin, question écrite n° 3186, Journal officiel de l'Assemblée nationale, 5 juillet 1993, p. 1861, et réponse du gouvernement, 20 septembre 1993, p. 3035.",
+      "url": "https://questions.assemblee-nationale.fr/q10/10-3186QE.htm"
+    },
+    {
+      "text": "Mae M. Ngai, Impossible Subjects: Illegal Aliens and the Making of Modern America, Princeton University Press, 2004, chap. 4, p. 127-166.",
+      "url": "https://www.jstor.org/stable/j.ctt5hhr9r"
+    },
+    {
+      "text": "Mae M. Ngai, « A New Bracero Program Is Not the Solution », The Atlantic, 9 décembre 2024.",
+      "url": "https://www.theatlantic.com/politics/archive/2024/12/disturbing-history-bracero-program/680926/"
+    },
+    {
+      "text": "U.S. Social Security Administration, Social Security Ruling 86-11c, 1986.",
+      "url": "https://www.ssa.gov/OP_Home/rulings/oasi/45/SSR86-11-oasi-45.html"
+    },
+    {
+      "text": "Joyce C. Vialet et Barbara McClure, Temporary Worker Programs: Background and Issues, U.S. Government Printing Office, 1980, p. 31.",
+      "url": "https://www.govinfo.gov/content/pkg/CPRT-96SPRT44151/pdf/CPRT-96SPRT44151.pdf"
+    },
+    {
+      "text": "J.-M. Durand-Souffland, « Offensés mais pas résignés », Le Monde, 30 décembre 1980.",
+      "url": "https://www.lemonde.fr/archives/article/1980/12/30/offenses-mais-pas-resignes_2807243_1819218.html"
+    },
+    {
+      "text": "Georges Marchais, « Lettre ouverte au recteur de la Mosquée de Paris », L'Humanité, 7 janvier 1981, reproduite dans À gauche, 25 août 2018.",
+      "url": "https://agauche.org/2018/08/25/la-lettre-de-georges-marchais-suite-a-lexpulsion-des-maliens-du-foyer-de-vitry-en-1980/"
+    },
+    {
+      "text": "Étienne Balibar, « Droit de cité or Apartheid? », dans We, the People of Europe? Reflections on Transnational Citizenship, Princeton University Press, 2004, p. 31-50.",
+      "url": "https://doi.org/10.1515/9781400825783"
     }
   ]
 }

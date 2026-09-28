@@ -1,0 +1,171 @@
+{
+  "id": "course_276_pourquoi_les_antibiotiques_cessent_ils",
+  "title": "Warum wirken Antibiotika nicht mehr?",
+  "subtitle": "Die Bakterien schlagen zurück",
+  "subject": "sciences",
+  "subcategory": "Unser Alltag erklärt",
+  "description": "Eine Mandelentzündung, eine Harnwegsinfektion, eine Routineoperation: Ohne wirksame Antibiotika wird all das wieder gefährlich. Und weil wir sie so maßlos einsetzen, bringen wir den Bakterien bei, sie zu überleben.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "antibiogram_petri_dish_inhibition_zones",
+    "ratio": "4:3",
+    "hook": "Im Kampf gegen die Bakterien haben wir sie darauf trainiert, unsere Medikamente zu überleben."
+  },
+  "sections": [
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wenn Bakterien in unseren Körper eindringen, schlägt das Immunsystem zurück: Die **weißen Blutkörperchen** greifen die Infektion an, und bald geht es uns besser. Sind unsere Abwehrkräfte aber geschwächt oder überfordert, braucht es Verstärkung: Antibiotika. Ein [[bakterizid]] wirkendes Antibiotikum zerstört das Bakterium, indem es seine Zellwand und sein Inneres angreift. Ein bakteriostatisches hindert es nur daran, sich zu vermehren."
+        },
+        {
+          "type": "funFact",
+          "text": "Antibiotika sind keine moderne Erfindung: Es gibt Hinweise, dass Menschen sie schon vor mehr als 1.500 Jahren nutzten, ohne irgendetwas über Bakterien zu wissen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Je nach Infektion wählt der Arzt ein **Breitbandantibiotikum**, das gegen viele Arten wirkt, oder ein Schmalspektrum-Antibiotikum für nur wenige. Wirksam, billig und leicht zu bekommen, decken diese Medikamente eine riesige Bandbreite von Infektionen ab. Gerade dieser Erfolg hat die moderne Welt dazu verleitet, sie zu übernutzen. Und die Bakterien begannen, sich zu wehren."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p1",
+      "title": "Wie Bakterien lernen, Widerstand zu leisten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Antibiotika gehören zu den größten Fortschritten der modernen Medizin. Sie haben unzählige Leben gerettet, und wir sind auf sie angewiesen. Doch ihr massenhafter Einsatz hat ein Problem geschaffen: [[Antibiotikaresistenz]]. Antibiotika, die ein Bakterium früher töteten oder sein Wachstum bremsten, wirken nicht mehr. Das Bakterium hat sich so entwickelt, dass es der Behandlung entgeht."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Alexander Fleming, der Entdecker des Penicillins, in seinem Labor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evolution ist ein natürlicher Prozess, den Belastungen aus der Umwelt beschleunigen. Bakterien immer wieder mit Molekülen zu behandeln, die sie töten sollen, heißt, genau jene auszulesen, die zu überleben wissen. Ihre Abwehrtricks sind vielfältig: genetische **Mutationen**, Enzyme, die das Antibiotikum auflösen, eine veränderte Arbeitsweise und sogar winzige [[Effluxpumpen]], die das Medikament aus der Zelle hinausbefördern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Abwehrtricks sind in den Genen festgeschrieben. Wenn sich ein resistentes Bakterium teilt, gibt es sie an seine Nachkommen weiter, die sie ihrerseits weitergeben. Eine einzige Überlebende kann eine ganze Linie resistenter Bakterien begründen. So breitet sich Resistenz aus."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p2",
+      "title": "Gene auf Reisen: der Fall MRSA",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein resistentes Bakterium reist wie jeder andere Keim. Die **Covid**-Pandemie hat gezeigt, wie schnell ein Virus von einem Menschen zum nächsten und von einem Land ins andere springt. Bakterien verbreiten sich genauso: durch menschlichen Kontakt, in günstiger Umgebung, bei mangelnder Hygiene oder vom Tier auf den Menschen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dazu kommt eine Abkürzung: [[horizontaler Gentransfer]]. Ein resistentes Bakterium kann seine Resistenzgene direkt an einen Nachbarn weitergeben, ohne sich erst teilen zu müssen. In sehr kurzer Zeit entsteht so eine ganze Population resistenter Bakterien."
+        },
+        {
+          "type": "image",
+          "asset": "mrsa_staphylococcus_aureus_electron_micrograph_cdc",
+          "ratio": "5:4",
+          "caption": "Haufen von methicillinresistenten Staphylococcus aureus unter dem Elektronenmikroskop."
+        },
+        {
+          "type": "paragraph",
+          "text": "Am bekanntesten ist [[MRSA]], der methicillinresistente Staphylococcus aureus. Er trotzt vielen gängigen Antibiotika, daher sein Spitzname “Superkeim”. Der massenhafte Einsatz von Antibiotika hat die empfindlichen Stämme beseitigt und denen das Feld überlassen, die wie er gelernt haben, sich zu wehren. Die Folgen können tödlich sein."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p3",
+      "title": "1,27 Millionen Tote pro Jahr: die Warnung der WHO",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Was bedeutet diese Resistenz für uns? Die [[WHO]], die Weltgesundheitsorganisation, zählt die Resistenz gegen antimikrobielle Mittel, also gegen Medikamente, die Mikroben bekämpfen, Antibiotika eingeschlossen, zu den **drei** größten Gefahren für die öffentliche Gesundheit weltweit. Mit immer weniger wirksamen Mitteln gegen bakterielle Infektionen verliert die gesamte moderne Medizin an Boden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Zahlen zeigen das Ausmaß der Gefahr. Allein im Jahr 2019 wurden weltweit **1,27 Millionen** Todesfälle auf Resistenzen gegen antimikrobielle Mittel zurückgeführt. Und die Kurve steigt: Prognosen rechnen bis **2050** mit **10 Millionen** Toten pro Jahr."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Wissenschaft sieht nicht tatenlos zu. Forscher entwickeln neue, gezieltere Behandlungen gegen resistente Bakterien. Sie versuchen auch, die Wirksamkeit bestehender Antibiotika wiederherzustellen und unnötige Verschreibungen zu verringern: Jede vermiedene Behandlung ist eine Gelegenheit weniger, bei der sich Bakterien anpassen können."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p4",
+      "title": "Eine Welt ohne wirksame Antibiotika",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wir schlucken Antibiotika, ohne darüber nachzudenken. Sie sind billig, wirksam und überall erhältlich. Ohne sie wäre eine alltägliche Infektion, eine bakterielle **Mandelentzündung** oder eine Harnwegsinfektion, viel schwerer zu behandeln. Ein aufgeschürftes Knie könnte in eine [[Sepsis]] münden, eine Infektion des ganzen Körpers, die lebensgefährlich ist."
+        },
+        {
+          "type": "image",
+          "asset": "hospital_operating_room_surgery_team",
+          "ratio": "3:2",
+          "caption": "Ein moderner Operationssaal: Ohne Antibiotika würden Routineeingriffe wieder riskant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gängige Operationen wie ein **Kaiserschnitt** oder ein neues Hüftgelenk wären mit einem viel höheren Risiko verbunden. Antibiotika werden nämlich oft nach einem Eingriff verschrieben, um einer Infektion vorzubeugen. Ohne sie würden Operationen, die Leben retten oder verbessern, zu gefährlich, um sie durchzuführen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Die Zukunft der modernen Medizin hängt an einer einzigen Sache: Antibiotika wirksam zu halten, also aufzuhören, sie maßlos einzusetzen."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Medical News Today, « Antibiotics: How they work, uses, side effects and how to use ».",
+      "url": "https://www.medicalnewstoday.com/articles/10278"
+    },
+    {
+      "text": "Wikipedia, « Antibiotic ».",
+      "url": "https://en.wikipedia.org/wiki/Antibiotic"
+    },
+    {
+      "text": "B. K. Nimmana et A. D. Nguyen, « Antibiotic Resistance », StatPearls, StatPearls Publishing, Treasure Island (FL), 2026.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513277/"
+    },
+    {
+      "text": "H. Endale, M. Mathewos et D. Abdeta, « Potential Causes of Spread of Antimicrobial Resistance and Preventive Measures in One Health Perspective: A Review », Infection and Drug Resistance, vol. 16, 2023, p. 7515-7545.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10715026/"
+    },
+    {
+      "text": "American Society for Microbiology, « Plasmids and the Spread of Antibiotic Resistance Genes », janvier 2023.",
+      "url": "https://asm.org/articles/2023/january/plasmids-and-the-spread-of-antibiotic-resistance-g"
+    },
+    {
+      "text": "M. A. Salam, M. Y. Al-Amin, M. T. Salam, J. S. Pawar et al., « Antimicrobial Resistance: A Growing Serious Threat for Global Public Health », Healthcare, vol. 11, n° 13, 2023, art. 1946.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10340576/"
+    },
+    {
+      "text": "Wikipedia, « Methicillin-resistant Staphylococcus aureus ».",
+      "url": "https://en.wikipedia.org/wiki/Methicillin-resistant_Staphylococcus_aureus"
+    },
+    {
+      "text": "S. Rugarabamu et G. Mwanyika, « Biotechnological Innovations to Combat Antimicrobial Resistance and Advance Global Health Equity », Bacteria, vol. 4, n° 3, 2025, art. 46.",
+      "url": "https://www.mdpi.com/2674-1334/4/3/46"
+    },
+    {
+      "text": "A. Nazir, A. Nazir, V. Zuhair, S. Aman et al., « The Global Challenge of Antimicrobial Resistance: Mechanisms, Case Studies, and Mitigation Approaches », Health Science Reports, vol. 8, n° 7, 2025, e71077.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12284435/"
+    },
+    {
+      "text": "ITN Business, « Antimicrobial resistance: understanding its global impact ».",
+      "url": "https://business.itn.co.uk/antimicrobial-resistance-understanding-its-global-impact/"
+    }
+  ]
+}

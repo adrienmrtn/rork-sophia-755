@@ -1,0 +1,159 @@
+{
+  "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain",
+  "title": "Czy można zmienić ludzkie DNA?",
+  "subtitle": "Nożyczki CRISPR",
+  "subject": "sciences",
+  "subcategory": "Odkrycia, które zmieniły świat",
+  "description": "Od 2012 roku „molekularne nożyczki” zapożyczone od bakterii pozwalają przeciąć DNA dokładnie tam, gdzie chcemy. Pierwsze wyleczenia, możliwe pomyłki i dzieci na zamówienie: dokąd to zajdzie?",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "genetics_lab_pipette_dna_samples_gloved_hands",
+    "ratio": "4:3",
+    "hook": "A gdyby można było poprawić literę w swoim DNA jak literówkę?"
+  },
+  "sections": [
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_intro",
+      "title": "Wstęp",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Włosy, oczy, kolor skóry, sylwetka: każdy z nas wygląda inaczej. Te cechy fizyczne to kwestia dziedziczenia: każdy [[gen]] to odcinek DNA otrzymany od biologicznych rodziców. Oczywiście liczy się też otoczenie: to, co jemy, ludzie, z którymi przebywamy, to, w co wierzymy. Ale geny traktujemy jako coś danego. Czasem chcielibyśmy być wyżsi albo szczuplejsi, ale żyjemy z nimi, nie zastanawiając się nad tym."
+        },
+        {
+          "type": "paragraph",
+          "text": "Co byś zmienił, gdybyś mógł poprawić swoje DNA? To pytanie przestało być teoretyczne. W **2012** roku amerykańska biochemiczka **Jennifer Doudna** i francuska mikrobiolożka **Emmanuelle Charpentier** opracowały sposób programowania białka, które tnie DNA. Odtąd mogły usunąć niechciany gen, a więc, w teorii, zmienić DNA człowieka."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p1",
+      "title": "CRISPR, nożyczki zapożyczone od bakterii",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[CRISPR]] nie jest jedynym narzędziem, które potrafi zmieniać DNA, ale jest najsłynniejsze. Jego zasadę najpierw zaobserwowano u drobnoustrojów. Żeby się bronić, bakteria rozpoznaje DNA atakującego ją wirusa i tnie je na kawałki. Używa do tego odcinków DNA zwanych CRISPR i enzymu o nazwie **Cas**, który działa jak nożyczki."
+        },
+        {
+          "type": "image",
+          "asset": "emmanuelle_charpentier_jennifer_doudna_crispr_pioneers",
+          "ratio": "16:9",
+          "caption": "Emmanuelle Charpentier i Jennifer Doudna, dwie badaczki, które zmieniły tę bakteryjną obronę w narzędzie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Naukowcy przejęli ten naturalny system obronny. Zamiast w wirusa, kierują enzym w konkretne miejsce DNA człowieka. Tam enzym tnie i można wprowadzić zamierzoną zmianę. Czasem docelowy gen zostaje po prostu wyłączony. Czasem zmienia się kilka jego liter. Czasem wymienia się go w całości."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p2",
+      "title": "Pierwsze wyleczenia: anemia sierpowata i talasemia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Możliwość edytowania DNA otwiera drogę do leczenia wielu chorób genetycznych. Nasze DNA zapisane jest **czterema zasadami**: A, T, C i G. Ich kolejność tworzy nasz [[genom]], plan budowy naszego ciała. Jeden błąd w tym tekście może wystarczyć, żeby wywołać chorobę, a jego poprawienie może ją, w zasadzie, wyleczyć."
+        },
+        {
+          "type": "image",
+          "asset": "sickle_cell_red_blood_cells_micrograph",
+          "ratio": "3:2",
+          "caption": "Przekrój wątroby chorego na anemię sierpowatą pod mikroskopem: to pierwsza choroba leczona za pomocą CRISPR."
+        },
+        {
+          "type": "paragraph",
+          "text": "W **2023** roku Wielka Brytania jako pierwszy kraj dopuściła lek oparty na CRISPR. Jest przeznaczony na dwie dziedziczne choroby krwi: to [[anemia sierpowata]] i beta-talasemia. Leczenie zmienia komórki wytwarzające krew. Dzięki temu w większej ilości powstaje [[hemoglobina płodowa]], odmiana hemoglobiny, którą organizm zwykle wytwarza przed narodzinami."
+        },
+        {
+          "type": "funFact",
+          "text": "Literówka może zabić. Jedna błędna litera w DNA, na przykład T zamiast C, czasem wystarczy, żeby wywołać śmiertelną chorobę genetyczną. Przywrócenie właściwej litery mogłoby ją, w teorii, wyleczyć."
+        },
+        {
+          "type": "paragraph",
+          "text": "A to dopiero początek. Badania kliniczne sprawdzają dziś CRISPR w leczeniu nowotworów, zaburzeń metabolizmu, chorób autoimmunologicznych, chorób serca i naczyń czy dystrofii mięśniowych. Lista jest długa. Czy choroby genetyczne wkrótce przejdą do historii?"
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p3",
+      "title": "Dlaczego nie wyleczymy wszystkiego",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To nie takie proste. Po pierwsze, to, jak działa gen, nie zależy wyłącznie od tego, co odziedziczyliśmy po rodzicach: wpływa na to także środowisko. Po drugie, za chorobę nie zawsze odpowiada jeden wadliwy gen. Może chodzić o kilka genów, a wtedy naprawa staje się dużo trudniejsza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sam CRISPR też może się pomylić. Zdarza się, że nożyczki tną w złym miejscu albo że dwa przecięte końce źle się ze sobą łączą. Tak zmienione DNA może wywołać nowe problemy, nie naprawiając pierwotnego. Mimo to medycyna robi wielkie kroki w stronę wyeliminowania niektórych z najgorszych chorób genetycznych."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p4",
+      "title": "Dzieci na zamówienie: gdzie postawić granicę?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Każdy rozumie, po co leczyć choroby, które odbierają sprawność albo zabijają. Ale gdzie nauka powinna wyznaczyć granicę? Czy wolno jej używać do tworzenia „człowieka doskonałego”? To pytanie stało się pilne jak nigdy, odkąd umiemy ciąć DNA, gdzie chcemy."
+        },
+        {
+          "type": "image",
+          "asset": "ivf_embryo_icsi_microinjection_micrograph",
+          "ratio": "16:9",
+          "caption": "Ludzka komórka jajowa przytrzymywana pipetą podczas mikroiniekcji w laboratorium."
+        },
+        {
+          "type": "funFact",
+          "text": "Określenie „dziecko na zamówienie” nie narodziło się wraz z CRISPR. Używa się go, odkąd pojawiło się [[zapłodnienie in vitro]], które pozwala stworzyć zarodek w laboratorium, zanim zostanie wszczepiony."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tak zwana [[edycja linii zarodkowej]] zmienia DNA komórek rozrodczych: plemników, komórek jajowych albo zarodków na najwcześniejszym etapie. Różnica wobec zwykłego leczenia jest ogromna: te zmiany przechodzą potem z pokolenia na pokolenie. Dziś edycja linii zarodkowej jest zakazana we wszystkich krajach. Ale jak długo jeszcze? W którym momencie edycja genów w celach medycznych przejdzie w genetyczne linie na zamówienie?"
+        },
+        {
+          "type": "takeaway",
+          "text": "Od 2012 roku nożyczki CRISPR pozwalają poprawiać ludzkie DNA, a pierwsze terapie dopuszczono w 2023 roku. Pomyłki są jednak wciąż możliwe, wiele chorób zależy od kilku genów, a edycja linii zarodkowej pozostaje wszędzie zakazana."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "National Science Foundation, « CRISPR: A Biotech Breakthrough », NSF Impacts.",
+      "url": "https://www.nsf.gov/impacts/crispr"
+    },
+    {
+      "text": "National Cancer Institute, « How CRISPR Is Changing Cancer Research and Treatment », Cancer Currents Blog, 2020.",
+      "url": "https://www.cancer.gov/news-events/cancer-currents-blog/2020/crispr-cancer-research-treatment"
+    },
+    {
+      "text": "CRISPR Medicine News, « Clinical Trials », liste des essais cliniques fondés sur CRISPR.",
+      "url": "https://crisprmedicinenews.com/clinical-trials/"
+    },
+    {
+      "text": "House of Lords Library, « World's first personalised DNA editing treatment », UK Parliament.",
+      "url": "https://lordslibrary.parliament.uk/worlds-first-personalised-dna-editing-treatment/"
+    },
+    {
+      "text": "« The gene editor CRISPR won't fully fix sick people anytime soon. Here's why », Science, 2016.",
+      "url": "https://www.science.org/content/article/gene-editor-crispr-won-t-fully-fix-sick-people-anytime-soon-here-s-why"
+    },
+    {
+      "text": "Boston Children's Hospital, « CRISPR gene editing », Answers.",
+      "url": "https://answers.childrenshospital.org/crispr-gene-editing/"
+    },
+    {
+      "text": "« The Guardian view on gene-edited humans: darker uses must be acknowledged alongside medical ones », The Guardian, 5 juillet 2026.",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/05/the-guardian-view-on-gene-edited-humans-darker-uses-must-be-acknowledged-alongside-medical-ones"
+    },
+    {
+      "text": "K. E. Ormond et al., « Human Germline Genome Editing », American Journal of Human Genetics, vol. 101, 2017.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5544380/"
+    }
+  ]
+}

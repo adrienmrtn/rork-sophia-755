@@ -85,6 +85,12 @@ struct SophiaApp: App {
                 }
                 // Callbacks Meta (fb…) + deep links Sophia (`sophia://…`).
                 MetaAdsService.handleOpenURL(url)
+                if SophiaDeepLink.isUnlockRequest(url) {
+                    // Same stamp the shield writes; the home screen reads it right away.
+                    TikTokBlockerShared.pendingRequestAt = Date()
+                    deepLinkRouter.requestUnlock()
+                    return
+                }
                 if let courseId = SophiaDeepLink.courseId(from: url) {
                     // Parked rather than delivered: the onboarding may still be on screen,
                     // and the home opens it as soon as it is ready.

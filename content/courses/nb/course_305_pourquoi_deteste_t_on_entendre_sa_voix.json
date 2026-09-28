@@ -1,0 +1,121 @@
+{
+  "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix",
+  "title": "Hvorfor misliker vi å høre vår egen stemme på opptak?",
+  "subtitle": "Lyden av deg selv",
+  "subject": "sciences",
+  "subcategory": "Hverdagen forklart",
+  "description": "På et opptak høres stemmen din fremmed ut, nesten pinlig. Synderen er ikke mikrofonen: det er hodeskallen din, og måten hjernen din kjenner seg selv igjen på.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "studio_microphone_headphones_voice_recording",
+    "ratio": "4:3",
+    "hook": "Videoer av vennene dine plager deg ikke. Men din egen stemme i en talemelding får deg til å grimasere. Hvorfor høres akkurat den lyden feil ut?"
+  },
+  "sections": [
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_intro",
+      "title": "Innledning",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hva er «selvet»? Filosofer, forskere og kunstnere har stilt dette spørsmålet i århundrer. For å studere det bruker forskere ofte bildet av ansiktet, som alle kjenner igjen ved første øyekast. Men stemmen betyr like mye for følelsen av å være seg selv."
+        },
+        {
+          "type": "paragraph",
+          "text": "Derav paradokset. Du ser uten problemer på videoer av venner eller familie. Så kommer en talemelding du har spilt inn selv, og du kvepper: den stemmen er ikke min. Men jo, det er den. For å forstå hvorfor må du følge lydens vei."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p1",
+      "title": "Å snakke og å høre: luft som vibrerer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tale begynner med et luftstøt. Mellomgulvet presser luft fra lungene opp i halsen. Når luften passerer mellom [[stemmebåndene]], får den dem til å vibrere i høy hastighet: disse vibrasjonene, lysere eller mørkere, stiger opp gjennom halsen. Munnen og tungen former dem deretter til lyder og ord."
+        },
+        {
+          "type": "paragraph",
+          "text": "Å høre er den motsatte veien. De fleste lyder når oss gjennom [[luftledning]]: bølgene går inn i øregangen og får trommehinnen til å vibrere, og trommehinnen sender vibrasjonene videre til de små beina i mellomøret. Forsterket når de fram til [[sneglehuset]] i det indre øret, der tusenvis av hårceller besatt med [[stereocilier]] bøyer seg og lager et elektrisk signal. Hørselsnerven fører det til hjernen, som identifiserer og sorterer det."
+        },
+        {
+          "type": "image",
+          "asset": "cochlea_stereocilia_hair_cells_electron_micrograph",
+          "ratio": "4:5",
+          "caption": "Sneglehus fra mus i elektronmikroskop, normalt (til venstre) og mutert: radene med hårceller besatt med stereocilier."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p2",
+      "title": "Å høre seg selv gjennom beinet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Når du lytter til et opptak av deg selv, går alt gjennom luftledning, som med enhver annen lyd. Men når du snakker, kommer en ekstra kanal til: [[beinledning]]. Stemmens mekaniske vibrasjoner brer seg direkte gjennom hodeskallens bein til det indre øret, forbi både trommehinnen og mellomøret."
+        },
+        {
+          "type": "image",
+          "asset": "tuning_fork_weber_test_bone_conduction_skull",
+          "ratio": "3:4",
+          "caption": "En stemmegaffel plassert mot hodeskallen under en hørselsundersøkelse: lyden går gjennom beinet, ikke gjennom luften."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sneglehuset tar altså imot to signaler samtidig, ett fra luften og ett fra beina, og gjør begge om til beskjeder til hjernen. I sanntid er stemmen din en rikere og mer sammensatt lyd enn noe en mikrofon kan fange opp. Opptaket gjengir bare en del av den."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p3",
+      "title": "Den uhyggelige dalen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Da gjenstår det å forklare ubehaget. Forskerne har ennå ikke noe endelig svar, men én idé er fristende: effekten kalt [[den uhyggelige dalen]]. Begrepet kommer fra robotikk og animasjon. Jo mer en kunstig skapning ligner et menneske, desto mer kjent og sympatisk virker den på oss. Opp til et visst punkt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Når etterligningen kommer svært nær uten å være perfekt, slår sympatien over i ubehag, ja til og med avsky. Og et opptak gir bare den luftbårne delen av stemmen vår, uten rikdommen fra beinledningen. Vi hører det meste, men ikke alt. Hjernen havner i den uhyggelige dalen: det er nesten «meg», men ikke helt."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p4",
+      "title": "Én stemme, tusen versjoner av deg",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den uhyggelige dalen forklarer ikke alt. Et opptak viser også bare én side av hvordan vi framstår for andre. For stemmen er ikke fast: vi tilpasser den hele tiden etter situasjonen, ofte uten å tenke over det, og følelsen av selvet bygges på alle disse variasjonene samtidig."
+        },
+        {
+          "type": "funFact",
+          "text": "I jobbsammenheng senker mange gjerne stemmen for å virke roligere. Overfor en baby eller et kjæledyr klatrer stemmen opp i lyst leie. Munn, tunge og lepper endrer innstilling, og med dem den versjonen av «seg selv» man lar andre høre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selvoppfatningen er altså en forseggjort konstruksjon, bygget av dusinvis av ulike stemmer. Hjernen har ingen enkelt mal å sammenligne opptaket med. Det den hører, kommer ut av mikrofonen uten å ha gått gjennom beinet, frosset i ett eneste leie: nær nok til å bli gjenkjent, for annerledes til å bli godtatt som sin egen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Stemmen din på opptak høres feil ut fordi den mangler beinledningen hodeskallen din legger til når du snakker, og fordi den fryser bare én av de tusen versjonene av deg: nær nok til å bli gjenkjent, ikke nær nok til å bli akseptert."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "M. Kimura et Y. Yotsumoto, « Auditory traits of \"own voice\" », PLOS ONE, vol. 13, n° 6, 2018, e0199443.",
+      "url": "https://doi.org/10.1371/journal.pone.0199443"
+    },
+    {
+      "text": "NIDCD (National Institute on Deafness and Other Communication Disorders), « How Do We Hear? ».",
+      "url": "https://www.nidcd.nih.gov/health/how-do-we-hear"
+    }
+  ]
+}

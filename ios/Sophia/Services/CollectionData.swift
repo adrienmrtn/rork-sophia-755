@@ -22,14 +22,14 @@ nonisolated enum CollectionData {
             title: "Le Corps Humain : de la Guérison à la Technologie",
             description: "L'évolution de notre rapport à la santé et au progrès biologique.",
             coverAssetName: "collection_le_corps_humain_de_la_guerison_a_la_technologie",
-            courseIds: ["course_51_la_decouverte_de_la_penicilline_fleming", "course_58_la_structure_de_l_adn_watson_crick_1953", "course_226_l_ia_et_l_emploi", "course_228_la_sante_mentale_comme_enjeu_de_societe"]
+            courseIds: ["course_51_la_decouverte_de_la_penicilline_fleming", "course_58_la_structure_de_l_adn_watson_crick_1953", "course_226_l_ia_et_l_emploi", "course_228_la_sante_mentale_comme_enjeu_de_societe", "course_275_que_peut_on_vraiment_lire_dans_son_adn"]
         ),
         LearningCollection(
             id: "c_vblwguvnamcf",
             title: "Sons et Sens : La Science de la Musique",
             description: "Pourquoi la musique nous touche-t-elle ? Une exploration entre art et biologie.",
             coverAssetName: "collection_sons_et_sens_la_science_de_la_musique",
-            courseIds: ["course_136_beethoven_genie_et_surdite", "course_79_pourquoi_certains_sons_nous_donnent_ils", "course_138_bach_et_la_musique_baroque", "course_78_comment_fonctionne_l_electricite_dans_no", "course_131_la_naissance_de_la_musique_electronique"]
+            courseIds: ["course_136_beethoven_genie_et_surdite", "course_79_pourquoi_certains_sons_nous_donnent_ils", "course_138_bach_et_la_musique_baroque", "course_78_comment_fonctionne_l_electricite_dans_no", "course_131_la_naissance_de_la_musique_electronique", "course_305_pourquoi_deteste_t_on_entendre_sa_voix"]
         ),
         LearningCollection(
             id: "c_fgpg15z4amcf",
@@ -43,7 +43,7 @@ nonisolated enum CollectionData {
             title: "L'Espace : l'Ultime Frontière",
             description: "La conquête du cosmos entre astrophysique et imaginaire cinématographique.",
             coverAssetName: "collection_l_espace_l_ultime_frontiere",
-            courseIds: ["course_61_le_big_bang", "course_67_qu_est_ce_qu_un_trou_noir", "course_145_kubrick_2001_l_odyssee_de_l_espace", "course_68_la_theorie_de_la_relativite_pour_tous", "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive"]
+            courseIds: ["course_61_le_big_bang", "course_67_qu_est_ce_qu_un_trou_noir", "course_145_kubrick_2001_l_odyssee_de_l_espace", "course_68_la_theorie_de_la_relativite_pour_tous", "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive", "course_290_comment_les_etats_unis_ont_ils_gagne_la", "course_284_pourquoi_mars_est_elle_devenue_un_desert"]
         ),
         LearningCollection(
             id: "c_idrry5c5amcf",
@@ -64,35 +64,35 @@ nonisolated enum CollectionData {
             title: "Architecture et Pouvoir",
             description: "Comment les structures bâties reflètent les croyances et les systèmes politiques.",
             coverAssetName: "collection_architecture_et_pouvoir",
-            courseIds: ["course_39_la_democratie_athenienne", "course_147_l_architecture_gothique_les_cathedrales", "course_148_le_bauhaus", "course_29_la_chute_du_mur_de_berlin_1989", "course_4_le_couronnement_de_charlemagne_800"]
+            courseIds: ["course_39_la_democratie_athenienne", "course_147_l_architecture_gothique_les_cathedrales", "course_148_le_bauhaus", "course_29_la_chute_du_mur_de_berlin_1989", "course_4_le_couronnement_de_charlemagne_800", "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel", "course_255_comment_un_roman_a_t_il_sauve_notre_dame"]
         ),
         LearningCollection(
             id: "c_7etcora6amcf",
             title: "Le feu : entre châtiment divin et énergie",
             description: "Étude du feu à travers la mythologie, la géologie et l'histoire de la technologie.",
             coverAssetName: "collection_le_feu_entre_chatiment_divin_et_energie",
-            courseIds: ["course_162_promethee_le_voleur_de_feu", "course_62_pourquoi_les_volcans_entrent_ils_en_erup", "course_106_frankenstein_mary_shelley", "course_238_la_transition_energetique", "course_114_fahrenheit_451_bradbury"]
+            courseIds: ["course_162_promethee_le_voleur_de_feu", "course_62_pourquoi_les_volcans_entrent_ils_en_erup", "course_106_frankenstein_mary_shelley", "course_238_la_transition_energetique", "course_114_fahrenheit_451_bradbury", "course_251_pourquoi_londres_a_t_elle_brule_en_1666", "course_261_a_t_on_vraiment_tout_perdu_dans_l"]
         ),
         LearningCollection(
             id: "c_nuv73pnuamcf",
             title: "Génocides et Mémoire : Plus jamais ça",
             description: "Une analyse historique, sociologique et judiciaire des crimes contre l'humanité au XXe siècle.",
             coverAssetName: "collection_genocides_et_memoire_plus_jamais_ca",
-            courseIds: ["course_37_la_shoah_mecanismes_d_un_genocide", "course_25_le_genocide_armenien_1915_1916", "course_28_le_genocide_rwandais_1994", "course_33_le_proces_de_nuremberg_1945_1946", "course_151_guernica_picasso"]
+            courseIds: ["course_37_la_shoah_mecanismes_d_un_genocide", "course_25_le_genocide_armenien_1915_1916", "course_28_le_genocide_rwandais_1994", "course_33_le_proces_de_nuremberg_1945_1946", "course_151_guernica_picasso", "course_300_comment_le_journal_d_anne_frank_a_t_il"]
         ),
         LearningCollection(
             id: "c_tl61pxu9amcf",
             title: "L'Homme et la Mer : Mythes et Réalités",
             description: "De l'écume des mythes grecs aux enjeux géopolitiques contemporains des océans.",
             coverAssetName: "collection_l_homme_et_la_mer_mythes_et_realites",
-            courseIds: ["course_81_l_odyssee_homere", "course_118_moby_dick_melville", "course_44_pourquoi_l_eau_de_mer_est_elle_salee", "course_206_le_canal_de_suez_pourquoi_il_est_strateg", "course_225_la_montee_des_eaux"]
+            courseIds: ["course_81_l_odyssee_homere", "course_118_moby_dick_melville", "course_44_pourquoi_l_eau_de_mer_est_elle_salee", "course_206_le_canal_de_suez_pourquoi_il_est_strateg", "course_225_la_montee_des_eaux", "course_249_les_vikings_ont_ils_decouvert_l", "course_292_pourquoi_le_titanic_manquait_il_de"]
         ),
         LearningCollection(
             id: "c_9y3ap3px8kck",
             title: "Femmes d'exception : de la science à la liberté",
             description: "Un parcours transverse honorant les femmes qui ont bouleversé l'histoire, qu'il s'agisse de découvertes scientifiques majeures, de luttes sociales ou de littérature fondatrice.",
             coverAssetName: "collection_femmes_d_exception_de_la_science_a_la_liberte",
-            courseIds: ["course_56_la_decouverte_de_la_radioactivite_marie", "course_21_rosa_parks_et_montgomery_1955", "course_106_frankenstein_mary_shelley", "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14"]
+            courseIds: ["course_56_la_decouverte_de_la_radioactivite_marie", "course_21_rosa_parks_et_montgomery_1955", "course_106_frankenstein_mary_shelley", "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14", "course_299_pourquoi_aurore_dupin_s_est_elle"]
         ),
         LearningCollection(
             id: "g_mpzqlws4_0n3de",
@@ -106,14 +106,14 @@ nonisolated enum CollectionData {
             title: "Les révolutions scientifiques",
             description: "De la gravitation à l'ADN, découvrez les percées qui ont transformé notre compréhension du vivant.",
             coverAssetName: "collection_les_revolutions_scientifiques",
-            courseIds: ["course_55_la_theorie_de_la_gravitation_newton_1687", "course_60_la_theorie_de_l_evolution_de_darwin_1859", "course_58_la_structure_de_l_adn_watson_crick_1953", "course_56_la_decouverte_de_la_radioactivite_marie", "course_68_la_theorie_de_la_relativite_pour_tous"]
+            courseIds: ["course_55_la_theorie_de_la_gravitation_newton_1687", "course_60_la_theorie_de_l_evolution_de_darwin_1859", "course_58_la_structure_de_l_adn_watson_crick_1953", "course_56_la_decouverte_de_la_radioactivite_marie", "course_68_la_theorie_de_la_relativite_pour_tous", "course_253_pourquoi_l_imprimerie_a_t_elle_tout"]
         ),
         LearningCollection(
             id: "g_mpzqlws4_24n9h",
             title: "Initiation à l'histoire de l'art",
             description: "Un voyage visuel des chefs-d'œuvre de la Renaissance aux ruptures de l'art abstrait.",
             coverAssetName: "collection_initiation_a_l_histoire_de_l_art",
-            courseIds: ["course_121_la_renaissance_italienne", "course_149_la_joconde", "course_123_le_caravage_et_le_clair_obscur", "course_122_la_naissance_de_l_impressionnisme", "course_126_le_cubisme_picasso_et_braque", "course_129_l_art_abstrait_kandinsky_et_mondrian"]
+            courseIds: ["course_256_pourquoi_a_t_on_peint_les_parois_de", "course_121_la_renaissance_italienne", "course_149_la_joconde", "course_123_le_caravage_et_le_clair_obscur", "course_122_la_naissance_de_l_impressionnisme", "course_126_le_cubisme_picasso_et_braque", "course_129_l_art_abstrait_kandinsky_et_mondrian"]
         ),
         LearningCollection(
             id: "g_mpzqlws4_382sp",
@@ -162,7 +162,7 @@ nonisolated enum CollectionData {
             title: "Comprendre la Géopolitique actuelle",
             description: "Les clés pour décrypter les rapports de force et les tensions du monde moderne.",
             coverAssetName: "collection_comprendre_la_geopolitique_actuelle",
-            courseIds: ["course_202_la_rivalite_chine_etats_unis", "course_210_la_guerre_en_ukraine_expliquee", "course_209_la_russie_de_poutine", "course_203_les_tensions_autour_de_taiwan", "course_204_le_concept_de_monde_multipolaire"]
+            courseIds: ["course_202_la_rivalite_chine_etats_unis", "course_210_la_guerre_en_ukraine_expliquee", "course_209_la_russie_de_poutine", "course_203_les_tensions_autour_de_taiwan", "course_204_le_concept_de_monde_multipolaire", "course_271_pourquoi_les_etats_unis_sont_ils_si", "course_277_les_sanctions_evitent_elles_vraiment_la"]
         ),
         LearningCollection(
             id: "g_mpzqlws4_afvtk",
@@ -176,21 +176,21 @@ nonisolated enum CollectionData {
             title: "L'ère du numérique",
             description: "De l'invention d'Internet aux dérives des réseaux sociaux et de l'IA.",
             coverAssetName: "collection_l_ere_du_numerique",
-            courseIds: ["course_57_l_invention_d_internet", "course_237_les_gafam_puissance_et_derives", "course_226_l_ia_et_l_emploi", "course_219_la_fracture_numerique_mondiale"]
+            courseIds: ["course_57_l_invention_d_internet", "course_237_les_gafam_puissance_et_derives", "course_226_l_ia_et_l_emploi", "course_219_la_fracture_numerique_mondiale", "course_267_qui_a_tue_le_premier_cable", "course_296_l_ia_consomme_t_elle_beaucoup_d_energie"]
         ),
         LearningCollection(
             id: "g_mpzqlws4_cuig5",
             title: "Splendeurs du Moyen Âge",
             description: "Entre châteaux, cathédrales et grandes épidémies : l'Europe médiévale.",
             coverAssetName: "collection_splendeurs_du_moyen_age",
-            courseIds: ["course_4_le_couronnement_de_charlemagne_800", "course_147_l_architecture_gothique_les_cathedrales", "course_6_la_peste_noire_en_europe_1347_1353", "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14", "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1"]
+            courseIds: ["course_4_le_couronnement_de_charlemagne_800", "course_147_l_architecture_gothique_les_cathedrales", "course_6_la_peste_noire_en_europe_1347_1353", "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14", "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1", "course_252_la_vie_au_moyen_age_etait_elle_vraiment", "course_246_qui_etait_le_vrai_roi_arthur"]
         ),
         LearningCollection(
             id: "g_mpzqlws4_dtp66",
             title: "Progrès et Médecine",
             description: "Comment la science a appris à soigner le corps humain et à combattre les virus.",
             coverAssetName: "collection_progres_et_medecine",
-            courseIds: ["course_51_la_decouverte_de_la_penicilline_fleming", "course_59_la_decouverte_de_l_anesthesie", "course_53_la_decouverte_des_rayons_x_rontgen_1895", "course_50_comment_le_savon_tue_t_il_les_virus"]
+            courseIds: ["course_51_la_decouverte_de_la_penicilline_fleming", "course_59_la_decouverte_de_l_anesthesie", "course_53_la_decouverte_des_rayons_x_rontgen_1895", "course_50_comment_le_savon_tue_t_il_les_virus", "course_276_pourquoi_les_antibiotiques_cessent_ils", "course_274_peut_on_modifier_l_adn_d_un_etre_humain"]
         ),
         LearningCollection(
             id: "g_mpzqlws4_exr09",
@@ -204,35 +204,98 @@ nonisolated enum CollectionData {
             title: "Luttes pour la liberté",
             description: "Les mouvements civils et les figures qui ont brisé les chaînes de l'oppression.",
             coverAssetName: "collection_luttes_pour_la_liberte",
-            courseIds: ["course_21_rosa_parks_et_montgomery_1955", "course_35_l_apartheid_et_mandela_1948_1994", "course_14_la_commune_de_paris_1871", "course_34_la_decolonisation_panorama_1945_1975", "course_11_la_prise_de_la_bastille_1789"]
+            courseIds: ["course_21_rosa_parks_et_montgomery_1955", "course_35_l_apartheid_et_mandela_1948_1994", "course_14_la_commune_de_paris_1871", "course_34_la_decolonisation_panorama_1945_1975", "course_11_la_prise_de_la_bastille_1789", "course_291_l_esclavage_americain_a_t_il_vraiment"]
         ),
         LearningCollection(
             id: "g_mpzqlws4_gcstj",
             title: "Introduction à la philosophie",
             description: "Les grandes interrogations sur l'État, la morale et la condition humaine.",
             coverAssetName: "collection_introduction_a_la_philosophie",
-            courseIds: ["course_87_l_apologie_de_socrate_platon", "course_86_la_republique_platon", "course_85_le_banquet_platon", "course_97_le_mythe_de_sisyphe_camus", "course_94_candide_voltaire"]
+            courseIds: ["course_87_l_apologie_de_socrate_platon", "course_86_la_republique_platon", "course_85_le_banquet_platon", "course_97_le_mythe_de_sisyphe_camus", "course_94_candide_voltaire", "course_301_pourquoi_machiavel_a_t_il_ecrit_le"]
         ),
         LearningCollection(
             id: "g_mpzqlws4_hlrmk",
             title: "Aux confins de l'Univers",
             description: "Un voyage de la naissance du cosmos aux mystères des trous noirs.",
             coverAssetName: "collection_aux_confins_de_l_univers",
-            courseIds: ["course_61_le_big_bang", "course_67_qu_est_ce_qu_un_trou_noir", "course_77_qu_est_ce_que_la_matiere_noire", "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive", "course_68_la_theorie_de_la_relativite_pour_tous"]
+            courseIds: ["course_61_le_big_bang", "course_67_qu_est_ce_qu_un_trou_noir", "course_77_qu_est_ce_que_la_matiere_noire", "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive", "course_68_la_theorie_de_la_relativite_pour_tous", "course_281_comment_meurt_une_etoile"]
         ),
         LearningCollection(
             id: "g_mpzqlws4_ikf6h",
             title: "Les rouages de l'économie mondiale",
             description: "Comprendre les flux de capitaux, les crises et les nouvelles formes de travail.",
             coverAssetName: "collection_les_rouages_de_l_economie_mondiale",
-            courseIds: ["course_18_la_grande_depression_1929", "course_212_les_paradis_fiscaux_expliques", "course_216_la_dette_mondiale", "course_217_l_economie_de_plateforme_uber_airbnb", "course_205_le_petrole_comme_source_de_conflits"]
+            courseIds: ["course_18_la_grande_depression_1929", "course_212_les_paradis_fiscaux_expliques", "course_216_la_dette_mondiale", "course_217_l_economie_de_plateforme_uber_airbnb", "course_205_le_petrole_comme_source_de_conflits", "course_280_pourquoi_le_dollar_domine_t_il_le_monde", "course_214_la_crise_de_l_etat_providence"]
         ),
         LearningCollection(
             id: "g_mpzqlws4_jwtrk",
             title: "Phénomènes naturels expliqués",
             description: "Découvrez la science qui se cache derrière les manifestations de notre planète.",
             coverAssetName: "collection_phenomenes_naturels_expliques",
-            courseIds: ["course_62_pourquoi_les_volcans_entrent_ils_en_erup", "course_63_comment_se_forment_les_tremblements_de_t", "course_69_comment_se_forment_les_eclairs", "course_45_pourquoi_y_a_t_il_des_saisons", "course_75_la_photosynthese_expliquee_simplement"]
+            courseIds: ["course_62_pourquoi_les_volcans_entrent_ils_en_erup", "course_63_comment_se_forment_les_tremblements_de_t", "course_69_comment_se_forment_les_eclairs", "course_45_pourquoi_y_a_t_il_des_saisons", "course_75_la_photosynthese_expliquee_simplement", "course_282_que_se_passerait_il_si_un_supervolcan", "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la"]
+        ),
+        LearningCollection(
+            id: "c_origines_monstres",
+            title: "Aux origines de nos monstres",
+            description: "Vampires, loups-garous, zombies : d'où viennent les créatures qui hantent nos peurs ?",
+            coverAssetName: "collection_aux_origines_de_nos_monstres",
+            courseIds: ["course_247_pourquoi_les_momies_font_elles_peur", "course_248_pourquoi_les_sorcieres_volent_elles_sur", "course_243_pourquoi_a_t_on_invente_les_vampires", "course_244_d_ou_vient_le_loup_garou", "course_106_frankenstein_mary_shelley", "course_311_qui_a_invente_les_zombies"]
+        ),
+        LearningCollection(
+            id: "c_art_de_raconter",
+            title: "De Gilgamesh à Superman : l'art de raconter",
+            description: "Comment les histoires naissent, voyagent et se réinventent, du plus vieux livre du monde aux super-héros.",
+            coverAssetName: "collection_de_gilgamesh_a_superman_l_art_de_raconter",
+            courseIds: ["course_302_quel_est_le_plus_vieux_livre_du_monde", "course_298_esope_a_t_il_vraiment_existe", "course_246_qui_etait_le_vrai_roi_arthur", "course_245_d_ou_vient_le_pere_noel", "course_309_d_ou_vient_la_science_fiction", "course_260_d_ou_viennent_les_super_heros"]
+        ),
+        LearningCollection(
+            id: "c_guerre_froide",
+            title: "La Guerre froide, un monde coupé en deux",
+            description: "De Berlin à la Lune, quarante ans d'affrontement sans guerre ouverte entre deux blocs.",
+            coverAssetName: "collection_la_guerre_froide_un_monde_coupe_en_deux",
+            courseIds: ["course_287_pourquoi_a_t_on_ravitaille_berlin_par", "course_272_pourquoi_la_coree_est_elle_coupee_en", "course_22_la_crise_des_missiles_de_cuba_1962", "course_290_comment_les_etats_unis_ont_ils_gagne_la", "course_57_l_invention_d_internet", "course_29_la_chute_du_mur_de_berlin_1989", "course_289_pourquoi_l_urss_s_est_elle_effondree_en"]
+        ),
+        LearningCollection(
+            id: "c_enigmes_du_passe",
+            title: "Des pyramides à Gengis Khan : énigmes du passé",
+            description: "Bâtisseurs, guerriers et routes marchandes : ce que les mondes anciens ont vraiment laissé.",
+            coverAssetName: "collection_des_pyramides_a_gengis_khan_enigmes_du_passe",
+            courseIds: ["course_264_qui_a_vraiment_construit_les_pyramides", "course_265_pourquoi_les_spartiates_etaient_ils_si", "course_261_a_t_on_vraiment_tout_perdu_dans_l", "course_263_a_quoi_servait_vraiment_la_route_de_la", "course_262_comment_pompei_a_t_elle_disparu_en_dix", "course_307_comment_le_christianisme_est_il_devenu", "course_250_comment_gengis_khan_a_t_il_conquis_la"]
+        ),
+        LearningCollection(
+            id: "c_mysteres_du_corps",
+            title: "Les petits mystères du corps",
+            description: "Hoquet, rougeur, fou rire : la science derrière les réactions que l'on ne contrôle pas.",
+            coverAssetName: "collection_les_petits_mysteres_du_corps",
+            courseIds: ["course_242_pourquoi_a_t_on_le_hoquet", "course_47_pourquoi_baille_t_on", "course_49_pourquoi_a_t_on_des_frissons", "course_304_pourquoi_rougit_on", "course_306_pourquoi_rit_on_quand_on_nous_chatouille", "course_303_pourquoi_certains_detestent_ils_la", "course_305_pourquoi_deteste_t_on_entendre_sa_voix"]
+        ),
+        LearningCollection(
+            id: "c_xixe_siecle",
+            title: "Le XIXe siècle invente le monde moderne",
+            description: "Fuseaux horaires, ruée vers l'or, empires coloniaux : le siècle qui a dessiné notre monde.",
+            coverAssetName: "collection_le_xixe_siecle_invente_le_monde_moderne",
+            courseIds: ["course_293_pourquoi_l_angleterre_s_est_elle_battue", "course_294_pourquoi_l_irlande_affamee_exportait", "course_258_qui_s_est_vraiment_enrichi_pendant_la", "course_269_pourquoi_personne_ne_sourit_sur_les", "course_295_pourquoi_avons_nous_des_fuseaux_horaires", "course_310_qui_a_trace_les_frontieres_de_l_afrique", "course_259_pourquoi_amundsen_a_t_il_battu_scott_au"]
+        ),
+        LearningCollection(
+            id: "c_prix_cache_quotidien",
+            title: "Le prix caché de notre quotidien",
+            description: "Électricité, smartphone, assiette : ce qu'il faut de ressources et de risques pour faire tourner nos vies.",
+            coverAssetName: "collection_le_prix_cache_de_notre_quotidien",
+            courseIds: ["course_297_d_ou_vient_vraiment_l_electricite_de", "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone", "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos", "course_296_l_ia_consomme_t_elle_beaucoup_d_energie", "course_234_la_securite_alimentaire_mondiale", "course_286_comment_a_t_on_evite_la_famine_annoncee", "course_288_que_s_est_il_passe_a_bhopal_la_nuit_du"]
+        ),
+        LearningCollection(
+            id: "c_guerre_paix_diplomatie",
+            title: "Guerre, paix et diplomatie",
+            description: "Neutralité, sanctions, alliances : comment les États se protègent, se menacent et négocient.",
+            coverAssetName: "collection_guerre_paix_et_diplomatie",
+            courseIds: ["course_308_quelle_a_ete_la_guerre_la_plus", "course_273_pourquoi_la_suisse_n_est_elle_jamais_en", "course_207_l_otan_a_quoi_ca_sert_encore", "course_279_pourquoi_accepter_une_armee_etrangere", "course_270_pourquoi_la_yougoslavie_a_t_elle_eclate", "course_277_les_sanctions_evitent_elles_vraiment_la", "course_278_pourquoi_les_accords_climatiques_sont"]
+        ),
+        LearningCollection(
+            id: "c_secrets_chefs_d_oeuvre",
+            title: "Les secrets des chefs-d'œuvre",
+            description: "Faussaires, couleurs précieuses et coups de génie : ce que cachent les œuvres les plus célèbres.",
+            coverAssetName: "collection_les_secrets_des_chefs_d_oeuvre",
+            courseIds: ["course_257_qui_a_fait_de_la_venus_de_milo_un_chef", "course_268_pourquoi_le_violet_est_il_la_couleur", "course_149_la_joconde", "course_254_qui_a_vendu_un_faux_vermeer_a_goring", "course_150_la_nuit_etoilee_van_gogh", "course_128_l_expressionnisme_munch_et_le_cri"]
         )
     ]
 }

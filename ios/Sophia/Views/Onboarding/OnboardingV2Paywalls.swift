@@ -2,13 +2,23 @@ import SwiftUI
 import RevenueCat
 
 /// Fonctionnalités comparées Free vs Pro (paywall comparatif).
-private let ov2PaywallFeatureKeys = [
-    "onboardingV2.pw.feature.allSubjects",
-    "onboardingV2.pw.feature.unlimited",
-    "onboardingV2.pw.feature.quiz",
-    "onboardingV2.pw.feature.favorites",
-    "onboardingV2.pw.feature.noAds",
-    "onboardingV2.pw.feature.weekly",
+/// The comparison rows, and whether the free plan has each one. This is the real freemium
+/// rule (`FreemiumGate`): free readers already have every subject, unlimited favourites
+/// and the weekly additions; what they do not have is more than one course a day, the
+/// quizzes, the audio mode and the TikTok blocker.
+private struct OV2PaywallFeature {
+    let key: String
+    let free: Bool
+}
+
+private let ov2PaywallFeatures: [OV2PaywallFeature] = [
+    .init(key: "onboardingV2.pw.feature.allSubjects", free: true),
+    .init(key: "onboardingV2.pw.feature.favorites", free: true),
+    .init(key: "onboardingV2.pw.feature.weekly", free: true),
+    .init(key: "onboardingV2.pw.feature.unlimited", free: false),
+    .init(key: "onboardingV2.pw.feature.quiz", free: false),
+    .init(key: "onboardingV2.pw.feature.audio", free: false),
+    .init(key: "onboardingV2.pw.feature.tiktokBlocker", free: false),
 ]
 
 // MARK: - Page 13 : paywall annuel (essai 3 jours)
@@ -70,7 +80,9 @@ struct OnboardingV2PaywallAnnual: View {
                 OnboardingV2Button(
                     title: purchasing
                         ? languageManager.text("common.processing")
-                        : languageManager.text(hasTrial ? "onboardingV2.pw.startTrial" : "onboardingV2.pw.subscribe"),
+                        : (hasTrial
+                            ? languageManager.trialText("onboardingV2.pw.startTrial", days: store.annualTrialDays)
+                            : languageManager.text("onboardingV2.pw.subscribe")),
                     enabled: !purchasing,
                     action: purchase
                 )
@@ -86,27 +98,42 @@ struct OnboardingV2PaywallAnnual: View {
 
     /// With a trial, the offer leads with the free days (in green). Without one, the price is
     /// the whole headline — promising a free trial that isn't served would be misleading.
+    ///
+    /// The headline carries the monthly equivalent ("3,33 € / mois"); the amount the store
+    /// actually charges sits right under it, small and grey ("facturé 39,99 € par an").
     private var headline: some View {
         let content: Text = {
             guard hasTrial else {
                 return Text(
                     String(
-                        format: languageManager.text("onboardingV2.pw.priceNoTrial"),
-                        prices.yearlyPrice
+                        format: Self.withoutParenthetical(languageManager.text("onboardingV2.pw.priceNoTrial")),
+                        prices.yearlyPerMonth
                     )
                 )
                 .font(DS.title(.title2, .heavy))
                 .foregroundColor(OV2.ink)
             }
-            let green = languageManager.text("onboardingV2.pw.tryFree")
+            let green = languageManager.trialText("onboardingV2.pw.tryFree", days: store.annualTrialDays)
             let rest = String(
-                format: languageManager.text("onboardingV2.pw.thenPrice"),
-                prices.yearlyPrice
+                format: Self.withoutParenthetical(languageManager.text("onboardingV2.pw.thenPrice")),
+                prices.yearlyPerMonth
             )
             return Text(green + " ").font(DS.title(.title2, .heavy)).foregroundColor(OV2.success)
                 + Text(rest).font(DS.title(.title2, .heavy)).foregroundColor(OV2.ink)
         }()
-        return content.multilineTextAlignment(.center)
+        return VStack(spacing: 6) {
+            content.multilineTextAlignment(.center)
+            Text(prices.yearlyBilledNote)
+                .font(DS.sans(.footnote, .medium))
+                .foregroundStyle(OV2.inkSecondary)
+                .multilineTextAlignment(.center)
+        }
+    }
+
+    /// "puis %@ (facturé annuellement)." → "puis %@." — the billing period moves to the
+    /// grey note under the headline, in every language, so it is not said twice.
+    private static func withoutParenthetical(_ text: String) -> String {
+        text.replacingOccurrences(of: #"\s*\([^)]*\)"#, with: "", options: .regularExpression)
     }
 
     private var closeButton: some View {
@@ -137,7 +164,7 @@ struct OnboardingV2PaywallAnnual: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: SophiaPaywallContext.finOnboarding.rawValue,
-                    offeringId: store.offerings?.current?.identifier,
+                    offeringId: package.presentedOfferingContext.offeringIdentifier,
                     packageId: package.identifier
                 )
                 onSubscribed()
@@ -161,7 +188,7 @@ struct OnboardingV2PaywallAnnual: View {
     }
 }
 
-// MARK: - Page 14 : paywall comparatif (annuel vs mensuel)
+// MARK: - Page 14 : paywall comparatif (annuel vs plan court : mensuel ou hebdo)
 
 /// Paywall natif comparatif. Fermer (X) → freemium (fin d'onboarding).
 struct OnboardingV2PaywallComparison: View {
@@ -170,7 +197,7 @@ struct OnboardingV2PaywallComparison: View {
     let onSubscribed: () -> Void
     let onClose: () -> Void
 
-    enum Plan { case yearly, monthly }
+    enum Plan { case yearly, short }
     @State private var selected: Plan = .yearly
     @State private var purchasing = false
     @State private var didReloadOfferings = false
@@ -182,10 +209,16 @@ struct OnboardingV2PaywallComparison: View {
     /// Trial availability is per product, so each plan card is checked independently: an
     /// experiment can remove the intro offer from one plan only.
     private var yearlyHasTrial: Bool { store.hasFreeTrial(store.annualPackage) }
-    private var monthlyHasTrial: Bool { store.hasFreeTrial(store.monthlyPackage) }
+    private var shortHasTrial: Bool { store.hasFreeTrial(store.shortPlanPackage) }
+    /// The short plan is monthly unless the served offering carries a weekly package.
+    private var shortIsWeekly: Bool { prices.shortPlanIsWeekly }
 
     private var selectedHasTrial: Bool {
-        selected == .yearly ? yearlyHasTrial : monthlyHasTrial
+        selected == .yearly ? yearlyHasTrial : shortHasTrial
+    }
+
+    private func trialDays(_ plan: Plan) -> Int {
+        store.trialDays(for: plan == .yearly ? store.annualPackage : store.shortPlanPackage) ?? 3
     }
 
     var body: some View {
@@ -212,12 +245,14 @@ struct OnboardingV2PaywallComparison: View {
 
             VStack(spacing: 10) {
                 planCard(.yearly)
-                planCard(.monthly)
+                planCard(.short)
 
                 OnboardingV2Button(
                     title: purchasing
                         ? languageManager.text("common.processing")
-                        : languageManager.text(selectedHasTrial ? "onboardingV2.pw.startTrial" : "onboardingV2.pw.subscribe"),
+                        : (selectedHasTrial
+                            ? languageManager.trialText("onboardingV2.pw.startTrial", days: trialDays(selected))
+                            : languageManager.text("onboardingV2.pw.subscribe")),
                     enabled: !purchasing,
                     action: purchase
                 )
@@ -257,17 +292,25 @@ struct OnboardingV2PaywallComparison: View {
             }
             .padding(.bottom, 8)
 
-            ForEach(ov2PaywallFeatureKeys, id: \.self) { key in
+            ForEach(ov2PaywallFeatures, id: \.key) { feature in
                 HStack(spacing: 0) {
-                    Text(languageManager.text(key))
+                    Text(languageManager.text(feature.key))
                         .font(DS.sans(.subheadline, .medium))
                         .foregroundStyle(OV2.ink)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    Image(systemName: "minus")
-                        .font(.system(size: 12, weight: .bold))
-                        .foregroundStyle(OV2.inkTertiary)
-                        .frame(width: comparisonColumnWidth)
+                    Group {
+                        if feature.free {
+                            Image(systemName: "checkmark.circle.fill")
+                                .font(.system(size: 18))
+                                .foregroundStyle(OV2.inkTertiary)
+                        } else {
+                            Image(systemName: "minus")
+                                .font(.system(size: 12, weight: .bold))
+                                .foregroundStyle(OV2.inkTertiary)
+                        }
+                    }
+                    .frame(width: comparisonColumnWidth)
                     Image(systemName: "checkmark.circle.fill")
                         .font(.system(size: 18))
                         .foregroundStyle(OV2.accent)
@@ -288,14 +331,18 @@ struct OnboardingV2PaywallComparison: View {
         } label: {
             HStack(spacing: 12) {
                 VStack(alignment: .leading, spacing: 3) {
-                    Text(isYearly ? languageManager.text("onboardingV2.pw.yearly") : languageManager.text("onboardingV2.pw.monthly"))
+                    Text(isYearly
+                         ? languageManager.text("onboardingV2.pw.yearly")
+                         : languageManager.text(shortIsWeekly ? "onboardingV2.pw.weekly" : "onboardingV2.pw.monthly"))
                         .font(DS.sans(.body, .bold))
                         .foregroundStyle(OV2.ink)
-                    // Chaque ligne porte le montant que la boutique prélève pour ce plan,
-                    // et la période en toutes lettres sous le nom : « facturé chaque année »
-                    // face à « facturé chaque mois ». C'est la période, pas une conversion
-                    // au mois, qui dit au lecteur ce que les deux chiffres comparent.
-                    Text(languageManager.text(isYearly ? "onboardingV2.pw.yearlyBilling" : "onboardingV2.pw.monthlyBilling"))
+                    // Le prix affiché en gros est dans l'unité du plan court des deux côtés
+                    // (par mois, ou par semaine face à un plan hebdo), pour comparer les deux
+                    // plans dans la même unité. Le montant réellement prélevé reste sous le
+                    // nom du plan, en petit : « facturé 39,99 € par an ».
+                    Text(isYearly
+                         ? prices.yearlyBilledNote
+                         : languageManager.text(shortIsWeekly ? "onboardingV2.pw.weeklyBilling" : "onboardingV2.pw.monthlyBilling"))
                         .font(DS.sans(.caption, .medium))
                         .foregroundStyle(OV2.inkSecondary)
                         .lineLimit(2)
@@ -304,13 +351,13 @@ struct OnboardingV2PaywallComparison: View {
                 }
                 Spacer()
                 VStack(alignment: .trailing, spacing: 3) {
-                    Text(isYearly ? prices.yearlyPrice : prices.monthlyPrice)
+                    Text(isYearly ? prices.yearlyPerShortPeriod : prices.shortPlanPrice)
                         .font(DS.sans(.body, .bold))
                         .foregroundStyle(OV2.ink)
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)
-                    if isYearly ? yearlyHasTrial : monthlyHasTrial {
-                        Text(languageManager.text("onboardingV2.pw.trialBadge"))
+                    if isYearly ? yearlyHasTrial : shortHasTrial {
+                        Text(languageManager.trialText("onboardingV2.pw.trialBadge", days: trialDays(plan)))
                             .font(DS.sans(.caption2, .bold))
                             .foregroundStyle(OV2.success)
                             .lineLimit(2)
@@ -331,7 +378,8 @@ struct OnboardingV2PaywallComparison: View {
             )
             .overlay(alignment: .topTrailing) {
                 if isYearly, let badge = prices.discountBadge {
-                    Text(String(format: languageManager.text("onboardingV2.pw.save"), badge))
+                    // "-58%" is a badge; "Économise -58 %" would read as a double negative.
+                    Text(String(format: languageManager.text("onboardingV2.pw.save"), badge.trimmingCharacters(in: CharacterSet(charactersIn: "-"))))
                         .font(DS.sans(.caption2, .bold))
                         .foregroundStyle(.white)
                         .padding(.horizontal, 8).padding(.vertical, 4)
@@ -357,7 +405,7 @@ struct OnboardingV2PaywallComparison: View {
 
     private func purchase() {
         guard !purchasing else { return }
-        let selectedPackage = selected == .yearly ? store.annualPackage : store.monthlyPackage
+        let selectedPackage = selected == .yearly ? store.annualPackage : store.shortPlanPackage
         // Offres pas encore chargées (réseau lent au lancement) : on les recharge au lieu de
         // laisser un bouton qui ne fait rien, puis on relance l'achat.
         guard let package = selectedPackage else { reloadOfferingsThenPurchase(); return }
@@ -368,7 +416,7 @@ struct OnboardingV2PaywallComparison: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: SophiaPaywallContext.finOnboarding.rawValue,
-                    offeringId: store.offerings?.current?.identifier,
+                    offeringId: package.presentedOfferingContext.offeringIdentifier,
                     packageId: package.identifier
                 )
                 onSubscribed()

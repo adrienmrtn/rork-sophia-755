@@ -1,14 +1,15 @@
 {
   "id": "course_214_la_crise_de_l_etat_providence",
-  "title": "Ali lahko socialna država preživi staranje prebivalstva?",
-  "subtitle": "Družbena pogodba pod pritiskom",
+  "title": "Je socialna država samo za državljane?",
+  "subtitle": "Alžirci in braceros",
   "subject": "comprendreLeMonde",
-  "subcategory": "Economy & society",
-  "description": "Socialno državo, ki je nastala po letu 1945, da bi zaščitila vsakega državljana pred boleznijo, brezposelnostjo in starostjo, danes pretresata staranje in globalizacija.",
+  "subcategory": "Gospodarstvo in družba",
+  "description": "Tako v Franciji kot v Združenih državah so socialno zaščito, ki je nastala po letu 1945, financirali tudi delavci iz nekdanjih kolonij. Pokojnina, zavrnjena Alžircu, mehiški braceros brez pravice do pokojnine, buldožer v Vitryju: zgodba o krizi, ki je starejša od primanjkljajev.",
+  "author": "mark-n-hoffman",
   "hero": {
-    "image": "la_crise_de_l_etat_providence",
-    "ratio": "16:9",
-    "hook": "Leta 1960 je imela Francija 4 delavce, ki so financirali upokojitev 1 upokojenca. Danes sta le še 2."
+    "image": "bracero_mexican_farmworkers_california_1942_lange",
+    "ratio": "4:3",
+    "hook": "Za delavce iz nekdanjih kolonij se kriza socialne države ni začela s primanjkljaji: začela se je že prvi dan."
   },
   "sections": [
     {
@@ -18,91 +19,157 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**socialna država** označuje vso pomoč, ki jo država zagotavlja državljanom za zaščito pred boleznijo, brezposelnostjo ali starostjo. Ta sistem se je v svoji moderni obliki rodil takoj po drugi svetovni vojni kot obljuba kolektivne solidarnosti."
+          "text": "Leta **2025** računi francoske socialne varnosti izkazujejo primanjkljaj v višini **21,6 milijarde evrov**. V Združenih državah upravitelji Social Security, zveznega pokojninskega sistema, napovedujejo, da bodo njegove rezerve pošle leta **2034**. Za mnoge je to dokaz: [[socialna država]], skupek pokojnin, zdravstvene oskrbe in nadomestil, ki jih plačujemo z davki, je v krizi."
         },
         {
           "type": "paragraph",
-          "text": "Od konca 20. stoletja ta steber razvitih družb preživlja finančno krizo. Staranje prebivalstva, globalizacija, nove oblike dela: ravnotežje med socialno zaščito in gospodarstvom je zdaj po vsem svetu pod vprašajem."
+          "text": "A država ne le plačuje: odloča tudi, kdo je do česa upravičen. Leta 2025 ameriški predsednik Donald Trump zveznim agencijam naroči, naj zaostrijo nadzor nad priseljenci brez dokumentov, v imenu pokojnin in zdravstvene oskrbe državljanov. Ti priseljenci so sicer že izključeni iz večine dajatev. Ko vlada razglasi krizo socialne države, o katerih upravičencih pravzaprav govori?"
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p1",
-      "title": "1945: rojstvo družbene pogodbe",
+      "title": "Povojni dogovor in tisti, ki so ostali zunaj",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Leta 1942 je britanski ekonomist William Beveridge objavil poročilo, ki je postalo temeljno: [[Beveridgeovo poročilo]]. Njen cilj je zaščititi vsakega državljana pred petimi glavnimi tveganji: boleznijo, nevednostjo, nehigienskimi razmerami, brezdeljem in revščino."
+          "text": "Po drugi svetovni vojni ameriški industrialci, sindikati in vlada sklenejo kupčijo. Industrijski delavci dobijo višje plače in socialno zaščito; v zameno sindikati podprejo množično proizvodnjo in pospravijo v predal svoje najbolj radikalne zahteve. Politolog Mark Rupert vidi v teh sindikatih državljanov »mlajšega partnerja« v tem dogovoru."
+        },
+        {
+          "type": "image",
+          "asset": "renault_billancourt_immigrant_workers_assembly_line",
+          "ratio": "4:5",
+          "caption": "Plakat ljudske delavnice Beaux-Arts iz maja 1968: delavci Renaulta v Billancourtu, veliki tovarni s priseljensko delovno silo."
         },
         {
           "type": "paragraph",
-          "text": "Francija je sledila temu gibanju in leta 1945 ustanovila socialno varnost. Ta sistem se je rodil iz političnega kompromisa znotraj [[Nacionalni svet odpora]], organizacije, ki je združevala odporniška gibanja med vojno. Država se ne zadovolji več s policijo ali pravosodjem: postane porok za dobrobit vseh."
-        },
-        {
-          "type": "funFact",
-          "text": "Socialne države si niso izmislili socialisti, ampak konservativni nemški kancler Otto von Bismarck leta 1883. Njen cilj je bil strateški: pomiriti delavce, da se izognejo revoluciji."
+          "text": "Francija medtem vzpostavi širši javni sistem socialnega zavarovanja, v katerega prispevajo tako delodajalci kot zaposleni; država je pozneje znižala prispevke delodajalcev za nizke plače, da bi spodbudila zaposlovanje. Oba dogovora pa imata nekaj skupnega: domači delovni sili dajeta prednost na račun nedržavljanov iz kolonij. Francoske tovarne zaposlujejo Alžirce, še včeraj kolonizirane, ki jih uprava zdaj uvršča med »priseljene tujce«. Ameriške kmetije najemajo Mehičane, ki jih pogodbe puščajo zunaj kroga upravičencev."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p2",
-      "title": "Demografski šok",
+      "title": "Primer Mazari: zavrnjena pokojnina",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ravnovesje povojnih let sta porušila dva pomembna dogodka. Prvi je demografski: ljudje živijo dlje in družine imajo manj otrok. To poveča stroške zdravstvene oskrbe in podaljša obdobje prejemanja pokojnine."
+          "text": "Leta **1986** Mazari, Alžirec, ki živi v celinski Franciji, zaprosi za dodatek k svoji francoski invalidski pokojnini, pomoč, ki je namenjena upokojencem z nizkimi dohodki. Blagajna ga zavrne. Francoski državljan z enako pokojnino in enakimi dohodki bi ga dobil: razlog za zavrnitev je njegovo državljanstvo. Leta **1991** [[Kasacijsko sodišče]], najvišje civilno sodišče v državi, to zavrnitev, utemeljeno na državljanstvu, razveljavi."
         },
         {
           "type": "image",
-          "asset": "elderly_retirees_demographic_aging_population",
+          "asset": "cour_de_cassation_paris_palais_de_justice",
           "ratio": "16:9",
-          "caption": "Staranje prebivalstva vsako leto bolj bremeni družbene račune."
+          "caption": "Kasacijsko sodišče ima sedež v pariški Palači pravice na otoku Cité."
         },
         {
           "type": "paragraph",
-          "text": "V Franciji so bili v šestdesetih letih 20. stoletja štirje delavci, ki so financirali upokojitev enega samega upokojenca. Danes je ta številka padla na manj kot 2. Drugi razvoj: porast brezposelnosti od naftne krize leta 1973 in porast [[gig gospodarstvo]], teh neodvisnih in prekarnih služb, ki manj prispevajo k sistemu, a so bolj izpostavljene tveganjem."
+          "text": "Leta **1993** vpliven poslanec Jean Charroppin izrazi razširjeno zaskrbljenost: takšne zahteve bi lahko obremenile francoski »socialni proračun«. Strah je jasen: tudi drugi priseljenci iz nekdanjih kolonij bi lahko izpodbijali enake zavrnitve. Vendar že od kolonialnih časov slabo plačano delo Alžircev bogati francoske delodajalce ter z davki in prispevki financira prav socialno državo. Odrekati jim pravice državljanov pomeni obnavljati kolonialni red."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p3",
-      "title": "Globalizacija postavlja model pod pritisk",
+      "title": "Braceros, uvoženi kolonializem",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V globaliziranem gospodarstvu se lahko podjetja in kapital zlahka selijo iz ene države v drugo. Davki in prispevki, potrebni za financiranje socialne zaščite, se potem obravnavajo kot ovira v primerjavi z državami, kjer delo stane manj."
-        },
-        {
-          "type": "paragraph",
-          "text": "Zanimiv je nasprotni primer skandinavskih držav. Švedska in Danska ohranjata visoko raven socialne zaščite, hkrati pa ostajata zelo konkurenčni. Njihova skrivnost se imenuje [[prožna varnost]]: podjetja zlahka odpuščajo delavce, zaposleni pa v zameno prejmejo izdatno nadomestilo za brezposelnost in močno podporo pri novi zaposlitvi."
+          "text": "V Združenih državah na poljih velja ista logika. [[Program bracero]] velikim kmetijskim pridelovalcem omogoča, da za žetev najemajo mehiške državljane z začasnimi pogodbami. Po **juliju 1951** ti pogodbeni delavci niso več zajeti v Social Security. Pa vendar je Mehika, za razliko od Alžirije pod francosko oblastjo, neodvisna država."
         },
         {
           "type": "funFact",
-          "text": "Danska porabi približno 32 % svojega BDP za socialno zaščito, kar je ena najvišjih stopenj na svetu, hkrati pa je dosledno uvrščena med države, v katerih je najlažje ustanoviti podjetje."
+          "text": "Ameriški zakon je nekoč prepovedoval, da bi tuje delavce pripeljali s pogodbo, saj so jih imeli za grožnjo svobodnemu delu. Leta 1951 kongres naredi izjemo za program bracero, ki je že deloval: pogodbe delavce vežejo na začasno zaposlitev in jim nalagajo vrnitev v Mehiko."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zgodovinarka Mae Ngai to imenuje [[uvoženi kolonializem]]: mehiški delavci vstopijo v ameriško gospodarstvo brez varnega mesta v politični skupnosti, pa tudi brez pokojnine in zdravstvene oskrbe, ki so državljanom obljubljene od rojstva. Izključitev še vedno velja za kmetijske delavce z vizumom H-2A, za katere delodajalci ne plačujejo prispevkov za Social Security. Po različnih pravnih poteh sta Francija in Združene države te delavce vključili v imperialno delovno silo in jim hkrati omejili pravice."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p4",
-      "title": "Ponovno odkrivanje socialne zaščite",
+      "title": "»Prag tolerance« in buldožer v Vitryju",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sistem prihodnosti mora zaščititi pred novimi tveganji: uberizacijo dela, ekološkim prehodom, odvisnostjo, povezano s starostjo. Francoska reforma iz leta 2023, ki je zakonsko upokojitveno starost dvignila na 64 let, kaže, kako težko je te spremembe sprejeti."
+          "text": "Filozof [[Étienne Balibar]] se je lotil zelo razširjenega prepričanja: da naj bi priseljevanje preseglo »[[prag tolerance]]«. Zagovorniki te ideje, tako na desnici kot na levici, priseljencem radi očitajo, da jemljejo delovna mesta, prenatrpavajo stanovanja in zasedajo bolnišnice."
         },
         {
           "type": "paragraph",
-          "text": "Razprava zadeva tudi financiranje: ali naj še naprej večino sistema postavljamo na delo, s čimer tvegamo kaznovanje zaposlovanja, ali naj preidemo na širše financiranje prek davkov, kot je [[CSG]] v Franciji, ki vpliva na vse dohodke in ne le na plače?"
+          "text": "**Decembra 1980** v Vitry-sur-Seinu komunistični župan Paul Mercieca pošlje buldožer, da zapre dom, v katerem živijo malijski delavci. [[Georges Marchais]], vodja Francoske komunistične partije, ga zagovarja: Vitry ne more sprejeti več priseljencev. Tam je biti Francoz očitno pomembnejše kot biti delavec, celo za komuniste."
+        },
+        {
+          "type": "image",
+          "asset": "georges_marchais_portrait_1981",
+          "ratio": "2:3",
+          "caption": "Georges Marchais, generalni sekretar Francoske komunistične partije, okoli leta 1981."
+        },
+        {
+          "type": "paragraph",
+          "text": "Francija in Združene države že dolgo novačijo delavce v nekdanjih kolonijah za svoja imperialna gospodarstva. Njihovo delo je ustvarjalo dobiček in prihodke. Socialna pravila so jim odrekala enake pravice, in ko so zaprosili za stanovanje ali pomoč, je uprava v tem videla nove stroške. Proračunski alarmi prihajajo zelo pozno: za priseljene delavce je socialna država v krizi že od samega začetka."
         },
         {
           "type": "takeaway",
-          "text": "Socialna država, ki se je rodila leta 1945, da bi vsakogar zaščitila pred boleznijo, brezposelnostjo in starostjo, je oslabljena zaradi demografskega staranja brez primere in globalizacije. Njegovo preživetje bo odvisno od njegove sposobnosti, da se na novo odkrije, ne da bi pri tem izgubil obljubo solidarnosti."
+          "text": "Tako v Franciji kot v Združenih državah je socialna država, ki so jo s svojim delom financirali tudi Alžirci in mehiški braceros, tem delavcem že od začetka odrekala enake pravice: njena kriza se ni začela s primanjkljaji."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Mario Draghi, The Future of European Competitiveness: Part A, A Competitiveness Strategy for Europe, European Commission, septembre 2024, p. 5 et 19.",
+      "url": "https://commission.europa.eu/document/download/97e481fd-2dc3-412d-be4c-f152a8232961_en"
+    },
+    {
+      "text": "Mark Rupert, Producing Hegemony: The Politics of Mass Production and American Global Power, Cambridge University Press, 1995, chap. 5-7, p. 83-166.",
+      "url": "https://www.maxwell.syr.edu/research/article/producing-hegemony-the-politics-of-mass-production-and-american-global-power"
+    },
+    {
+      "text": "Mark N. Hoffman, Rethinking the Politics of Immigration: Colonial Modes of Immigration Management and the Ambivalent Resilience of the Empire State, thèse de doctorat, University of Minnesota, 2013, p. 120-121.",
+      "url": "https://conservancy.umn.edu/bitstream/11299/158374/1/Hoffman_umn_0130E_14071.pdf"
+    },
+    {
+      "text": "Paul A. Silverstein, Algeria in France: Transpolitics, Race, and Nation, Indiana University Press, 2004, chap. « Colonization and the Production of Ethnicity » et « Spatializing Practices: Migration, Domesticity, Urban Planning ».",
+      "url": "https://iupress.org/9780253217127/algeria-in-france/"
+    },
+    {
+      "text": "Cour de cassation, chambre sociale, 7 mai 1991, pourvoi n° 88-15.407, Bulletin civil V, n° 231, p. 141.",
+      "url": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000007026345/"
+    },
+    {
+      "text": "Jean Charroppin, question écrite n° 3186, Journal officiel de l'Assemblée nationale, 5 juillet 1993, p. 1861, et réponse du gouvernement, 20 septembre 1993, p. 3035.",
+      "url": "https://questions.assemblee-nationale.fr/q10/10-3186QE.htm"
+    },
+    {
+      "text": "Mae M. Ngai, Impossible Subjects: Illegal Aliens and the Making of Modern America, Princeton University Press, 2004, chap. 4, p. 127-166.",
+      "url": "https://www.jstor.org/stable/j.ctt5hhr9r"
+    },
+    {
+      "text": "Mae M. Ngai, « A New Bracero Program Is Not the Solution », The Atlantic, 9 décembre 2024.",
+      "url": "https://www.theatlantic.com/politics/archive/2024/12/disturbing-history-bracero-program/680926/"
+    },
+    {
+      "text": "U.S. Social Security Administration, Social Security Ruling 86-11c, 1986.",
+      "url": "https://www.ssa.gov/OP_Home/rulings/oasi/45/SSR86-11-oasi-45.html"
+    },
+    {
+      "text": "Joyce C. Vialet et Barbara McClure, Temporary Worker Programs: Background and Issues, U.S. Government Printing Office, 1980, p. 31.",
+      "url": "https://www.govinfo.gov/content/pkg/CPRT-96SPRT44151/pdf/CPRT-96SPRT44151.pdf"
+    },
+    {
+      "text": "J.-M. Durand-Souffland, « Offensés mais pas résignés », Le Monde, 30 décembre 1980.",
+      "url": "https://www.lemonde.fr/archives/article/1980/12/30/offenses-mais-pas-resignes_2807243_1819218.html"
+    },
+    {
+      "text": "Georges Marchais, « Lettre ouverte au recteur de la Mosquée de Paris », L'Humanité, 7 janvier 1981, reproduite dans À gauche, 25 août 2018.",
+      "url": "https://agauche.org/2018/08/25/la-lettre-de-georges-marchais-suite-a-lexpulsion-des-maliens-du-foyer-de-vitry-en-1980/"
+    },
+    {
+      "text": "Étienne Balibar, « Droit de cité or Apartheid? », dans We, the People of Europe? Reflections on Transnational Citizenship, Princeton University Press, 2004, p. 31-50.",
+      "url": "https://doi.org/10.1515/9781400825783"
     }
   ]
 }

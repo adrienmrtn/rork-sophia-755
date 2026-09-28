@@ -1,14 +1,15 @@
 {
   "id": "course_214_la_crise_de_l_etat_providence",
-  "title": "Kan välfärdsstaten överleva den åldrande befolkningen?",
-  "subtitle": "Ett samhällskontrakt under press",
+  "title": "Är välfärdsstaten bara till för medborgarna?",
+  "subtitle": "Algerier och braceros",
   "subject": "comprendreLeMonde",
-  "subcategory": "Economy & society",
-  "description": "Född efter **1945** för att skydda varje medborgare mot sjukdom, arbetslöshet och ålderdom skakas välfärdsstaten nu av åldrande befolkningar och av globaliseringen.",
+  "subcategory": "Ekonomi och samhälle",
+  "description": "I Frankrike liksom i USA betalades det sociala skyddsnätet som byggdes efter 1945 också av arbetare från de forna kolonierna. En pension som nekades en algerier, mexikanska braceros utan pension, en bulldozer i Vitry: historien om en kris som är äldre än underskotten.",
+  "author": "mark-n-hoffman",
   "hero": {
-    "image": "la_crise_de_l_etat_providence",
-    "ratio": "16:9",
-    "hook": "**1960** hade Frankrike fyra yrkesverksamma som betalade för varje pensionär. I dag är de knappt två."
+    "image": "bracero_mexican_farmworkers_california_1942_lange",
+    "ratio": "4:3",
+    "hook": "För arbetarna från de forna kolonierna började välfärdsstatens kris inte med underskotten. Den började första dagen."
   },
   "sections": [
     {
@@ -18,91 +19,157 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Välfärdsstaten** är hela paketet av stöd en regering ger sina medborgare för att skydda dem mot sjukdom, arbetslöshet och ålderdom. I sin moderna form föddes systemet strax efter andra världskriget, som ett löfte om kollektiv solidaritet."
+          "text": "År **2025** visade den franska socialförsäkringen ett underskott på **21,6 miljarder euro**. I USA räknar förvaltarna av Social Security, det federala pensionssystemet, med att reserverna tar slut **2034**. För många bevisar siffrorna saken: [[välfärdsstaten]], alltså de pensioner, den vård och de bidrag som betalas med skatt, är i kris."
         },
         {
           "type": "paragraph",
-          "text": "Sedan slutet av 1900-talet har den här pelaren i rika samhällen gått genom en finansieringskris. Åldrande befolkningar, globalisering, nya former av arbete: balansen mellan socialt skydd och ekonomi ifrågasätts överallt i världen."
+          "text": "Men en stat betalar inte bara ut pengar. Den bestämmer också vem som har rätt till vad. År 2025 beordrade USA:s president Donald Trump de federala myndigheterna att skärpa kontrollen av papperslösa invandrare, med hänvisning till medborgarnas pensioner och vård. Ändå var dessa invandrare redan utestängda från de flesta förmåner. När en regering utropar välfärdsstatens kris, vems förmåner talar den då om?"
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p1",
-      "title": "1945: födelsen av ett samhällskontrakt",
+      "title": "Efterkrigstidens uppgörelse och de som hölls utanför",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1942** publicerade den brittiske ekonomen William Beveridge en rapport som skulle bli en grundtext: [[Beveridge-rapporten]]. Ambitionen var att skydda varje medborgare mot fem stora risker: sjukdom, okunnighet, usla bostäder, sysslolöshet och fattigdom."
+          "text": "Efter andra världskriget slöt amerikanska industriägare, fackförbund och regering en uppgörelse. Industriarbetarna fick högre löner och socialt skydd. I gengäld stödde facket massproduktionen och lade sina mest radikala krav åt sidan. Statsvetaren Mark Rupert ser dessa fackförbund av medborgare som uppgörelsens „juniorpartner”."
+        },
+        {
+          "type": "image",
+          "asset": "renault_billancourt_immigrant_workers_assembly_line",
+          "ratio": "4:5",
+          "caption": "Affisch från maj 1968 av Atelier populaire vid Beaux-Arts: arbetarna vid Renault-Billancourt, en stor fabrik med många invandrade arbetare."
         },
         {
           "type": "paragraph",
-          "text": "Frankrike följde samma väg **1945** genom att skapa socialförsäkringen. Den växte ur en politisk kompromiss inne i [[Motståndsrörelsens nationella råd]], organet som hade enat motståndsrörelserna under kriget. Staten begränsade sig inte längre till polis och rättvisa. Den blev garanten för allas välfärd."
-        },
-        {
-          "type": "funFact",
-          "text": "Välfärdsstaten uppfanns inte av socialister utan av den konservative tyske förbundskanslern Otto von Bismarck **1883**. Målet var strategiskt: att lugna arbetarna och avvärja en revolution."
+          "text": "Frankrike byggde för sin del upp en bredare offentlig socialförsäkring, där både arbetsgivare och anställda betalar avgifter. Staten har sedan dess sänkt arbetsgivaravgifterna på låga löner för att få fler anställda. Ändå hade de två uppgörelserna något gemensamt: de gynnade en inhemsk arbetskraft på bekostnad av icke-medborgare från kolonierna. Franska fabriker anställde algerier, som nyss varit koloniserade och som myndigheterna nu omklassade till „invandrade utlänningar”. Amerikanska lantbruk rekryterade mexikaner vars kontrakt höll dem utanför kretsen av förmånsberättigade."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p2",
-      "title": "Den demografiska chocken",
+      "title": "Fallet Mazari: en nekad pension",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Efterkrigsbalansen bröts under två stora förändringar. Den första är demografisk: människor lever längre och familjer får färre barn. Det höjer vårdkostnaderna och förlänger tiden varje person tar ut pension."
+          "text": "År **1986** ansökte Mazari, en algerier bosatt i det franska fastlandet, om ett tillägg till sin franska sjukpension, ett stöd för pensionärer med låga inkomster. Kassan sa nej. En fransk medborgare med samma pension och samma inkomst hade fått tillägget: det var hans nationalitet som låg bakom avslaget. År **1991** upphävde [[Kassationsdomstolen]], landets högsta civila domstol, detta avslag som byggde på nationalitet."
         },
         {
           "type": "image",
-          "asset": "elderly_retirees_demographic_aging_population",
+          "asset": "cour_de_cassation_paris_palais_de_justice",
           "ratio": "16:9",
-          "caption": "En åldrande befolkning tynger de sociala räkenskaperna mer för varje år"
+          "caption": "Kassationsdomstolen har sitt säte i justitiepalatset i Paris, på ön Île de la Cité."
         },
         {
           "type": "paragraph",
-          "text": "I Frankrike betalade fyra yrkesverksamma för varje pensionär på 1960-talet. I dag har siffran sjunkit under två. Den andra förändringen är den stigande arbetslösheten sedan oljechockerna **1973**, tillsammans med tillväxten av [[spelningsekonomi]], de där självständiga och otrygga jobben som betalar mindre in i systemet samtidigt som de är mer utsatta för risk."
+          "text": "År **1993** gav en inflytelserik parlamentsledamot, Jean Charroppin, röst åt en utbredd oro: sådana ansökningar kunde tynga Frankrikes „sociala budget”. Rädslan var tydlig: andra invandrare från de forna kolonierna kunde överklaga samma avslag. Men ända sedan kolonialtiden hade algeriernas lågt betalda arbete gjort franska arbetsgivare rikare och, genom skatter och avgifter, finansierat själva välfärdsstaten. Att neka dem medborgarnas rättigheter var att återupprätta en kolonial ordning."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p3",
-      "title": "Globaliseringen sätter modellen under press",
+      "title": "Braceros, en importerad kolonialism",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I en globaliserad ekonomi flyttar bolag och kapital lätt från ett land till ett annat. Skatterna och avgifterna som behövs för att finansiera socialt skydd ser då ut som ett handikapp jämfört med länder där arbetet är billigare."
-        },
-        {
-          "type": "paragraph",
-          "text": "De nordiska länderna är ett intressant motexempel. Sverige och Danmark håller en hög nivå av socialt skydd och förblir ändå mycket konkurrenskraftiga. Hemligheten har ett namn: [[flexicurity]]. Företag kan säga upp folk lätt, men i utbyte får arbetare generös arbetslöshetsersättning och starkt stöd att hitta ett nytt jobb."
+          "text": "I USA gällde samma logik ute på fälten. [[Braceroprogrammet]] lät stora jordbruksföretag rekrytera mexikanska medborgare till skördarna på tillfälliga kontrakt. Efter **juli 1951** omfattades dessa kontraktsarbetare inte längre av Social Security. Ändå var Mexiko, till skillnad från det franskstyrda Algeriet, ett självständigt land."
         },
         {
           "type": "funFact",
-          "text": "Danmark lägger omkring **32%** av BNP på socialt skydd, en av de högsta satserna i världen, och rankas ändå regelbundet bland de lättaste länderna att starta företag i."
+          "text": "Amerikansk lag förbjöd tidigare arbetsgivare att ta in utländska kontraktsarbetare, som sågs som ett hot mot det fria arbetet. År 1951 gjorde kongressen ett undantag för braceroprogrammet, som redan fanns: kontrakten band arbetarna vid ett tillfälligt jobb och krävde att de återvände till Mexiko."
+        },
+        {
+          "type": "paragraph",
+          "text": "Historikern Mae Ngai talar om [[importerad kolonialism]]: de mexikanska arbetarna kom in i den amerikanska ekonomin utan en säker plats i det politiska samhället, och utan den pension och vård som medborgarna var lovade från födseln. Utestängningen gäller fortfarande lantarbetare med H-2A-visum, vars arbetsgivare inte betalar några avgifter till Social Security. På olika juridiska vägar har Frankrike och USA dragit in dessa arbetare i en imperiell arbetskraft och samtidigt begränsat deras rättigheter."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p4",
-      "title": "Att uppfinna det sociala skyddet på nytt",
+      "title": "„Toleransgränsen” och bulldozern i Vitry",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Morgondagens system måste täcka nya risker: arbetets uberisering, den gröna omställningen och förlusten av självständighet som kommer med mycket hög ålder. Den franska reformen **2023**, som sköt den lagliga pensionsåldern till **64**, visar hur svåra de här förändringarna är att få accepterade."
+          "text": "Filosofen [[Étienne Balibar]] granskade en vitt spridd övertygelse: att invandringen hade passerat en „[[toleransgräns]]”. Dess anhängare, både till höger och till vänster, skyller gärna på invandrarna för att jobben blir färre, bostäderna trångare och sjukhusen överbelastade."
         },
         {
           "type": "paragraph",
-          "text": "Debatten handlar också om finansiering. Ska merparten av systemet fortsätta vila på löner, med risk att straffa sysselsättningen, eller ska det skifta mot bredare finansiering via skatt, som [[CSG]] i Frankrike, en avgift som träffar varje slags inkomst och inte bara löner?"
+          "text": "I **december 1980** skickade den kommunistiske borgmästaren i Vitry-sur-Seine, Paul Mercieca, en bulldozer för att spärra ett boende där arbetare från Mali bodde. [[Georges Marchais]], ledare för Franska kommunistpartiet, försvarade honom: Vitry kunde inte ta emot fler invandrare. Där vägde det tydligen tyngre att vara fransman än att vara arbetare, även för kommunister."
+        },
+        {
+          "type": "image",
+          "asset": "georges_marchais_portrait_1981",
+          "ratio": "2:3",
+          "caption": "Georges Marchais, generalsekreterare för Franska kommunistpartiet, omkring 1981."
+        },
+        {
+          "type": "paragraph",
+          "text": "Frankrike och USA har länge hämtat arbetare från sina forna kolonier till sina imperiella ekonomier. Deras arbete gav vinster och skatteintäkter. Välfärdsreglerna nekade dem lika rättigheter, och när de bad om bostad eller stöd såg myndigheterna bara nya kostnader. Dagens budgetvarningar kommer sent: för de invandrade arbetarna har välfärdsstaten varit i kris från början."
         },
         {
           "type": "takeaway",
-          "text": "Välfärdsstaten, född **1945** för att skydda alla mot sjukdom, arbetslöshet och ålderdom, har försvagats av ett åldrande utan motstycke och av globaliseringen. Dess överlevnad beror på förmågan att uppfinna sig själv på nytt utan att tappa löftet om solidaritet."
+          "text": "I Frankrike som i USA nekade välfärdsstaten, som delvis betalades av algeriers och mexikanska braceros arbete, dem lika rättigheter från första början: dess kris började inte med underskotten."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Mario Draghi, The Future of European Competitiveness: Part A, A Competitiveness Strategy for Europe, European Commission, septembre 2024, p. 5 et 19.",
+      "url": "https://commission.europa.eu/document/download/97e481fd-2dc3-412d-be4c-f152a8232961_en"
+    },
+    {
+      "text": "Mark Rupert, Producing Hegemony: The Politics of Mass Production and American Global Power, Cambridge University Press, 1995, chap. 5-7, p. 83-166.",
+      "url": "https://www.maxwell.syr.edu/research/article/producing-hegemony-the-politics-of-mass-production-and-american-global-power"
+    },
+    {
+      "text": "Mark N. Hoffman, Rethinking the Politics of Immigration: Colonial Modes of Immigration Management and the Ambivalent Resilience of the Empire State, thèse de doctorat, University of Minnesota, 2013, p. 120-121.",
+      "url": "https://conservancy.umn.edu/bitstream/11299/158374/1/Hoffman_umn_0130E_14071.pdf"
+    },
+    {
+      "text": "Paul A. Silverstein, Algeria in France: Transpolitics, Race, and Nation, Indiana University Press, 2004, chap. « Colonization and the Production of Ethnicity » et « Spatializing Practices: Migration, Domesticity, Urban Planning ».",
+      "url": "https://iupress.org/9780253217127/algeria-in-france/"
+    },
+    {
+      "text": "Cour de cassation, chambre sociale, 7 mai 1991, pourvoi n° 88-15.407, Bulletin civil V, n° 231, p. 141.",
+      "url": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000007026345/"
+    },
+    {
+      "text": "Jean Charroppin, question écrite n° 3186, Journal officiel de l'Assemblée nationale, 5 juillet 1993, p. 1861, et réponse du gouvernement, 20 septembre 1993, p. 3035.",
+      "url": "https://questions.assemblee-nationale.fr/q10/10-3186QE.htm"
+    },
+    {
+      "text": "Mae M. Ngai, Impossible Subjects: Illegal Aliens and the Making of Modern America, Princeton University Press, 2004, chap. 4, p. 127-166.",
+      "url": "https://www.jstor.org/stable/j.ctt5hhr9r"
+    },
+    {
+      "text": "Mae M. Ngai, « A New Bracero Program Is Not the Solution », The Atlantic, 9 décembre 2024.",
+      "url": "https://www.theatlantic.com/politics/archive/2024/12/disturbing-history-bracero-program/680926/"
+    },
+    {
+      "text": "U.S. Social Security Administration, Social Security Ruling 86-11c, 1986.",
+      "url": "https://www.ssa.gov/OP_Home/rulings/oasi/45/SSR86-11-oasi-45.html"
+    },
+    {
+      "text": "Joyce C. Vialet et Barbara McClure, Temporary Worker Programs: Background and Issues, U.S. Government Printing Office, 1980, p. 31.",
+      "url": "https://www.govinfo.gov/content/pkg/CPRT-96SPRT44151/pdf/CPRT-96SPRT44151.pdf"
+    },
+    {
+      "text": "J.-M. Durand-Souffland, « Offensés mais pas résignés », Le Monde, 30 décembre 1980.",
+      "url": "https://www.lemonde.fr/archives/article/1980/12/30/offenses-mais-pas-resignes_2807243_1819218.html"
+    },
+    {
+      "text": "Georges Marchais, « Lettre ouverte au recteur de la Mosquée de Paris », L'Humanité, 7 janvier 1981, reproduite dans À gauche, 25 août 2018.",
+      "url": "https://agauche.org/2018/08/25/la-lettre-de-georges-marchais-suite-a-lexpulsion-des-maliens-du-foyer-de-vitry-en-1980/"
+    },
+    {
+      "text": "Étienne Balibar, « Droit de cité or Apartheid? », dans We, the People of Europe? Reflections on Transnational Citizenship, Princeton University Press, 2004, p. 31-50.",
+      "url": "https://doi.org/10.1515/9781400825783"
     }
   ]
 }

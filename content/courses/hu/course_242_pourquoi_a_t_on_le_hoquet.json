@@ -1,0 +1,135 @@
+{
+  "id": "course_242_pourquoi_a_t_on_le_hoquet",
+  "title": "Miért csuklunk?",
+  "subtitle": "Reflexek és légzés",
+  "subject": "sciences",
+  "subcategory": "Mindennapjaink tudománya",
+  "description": "Egy rekeszizomgörcs, egy csattanó hangrés és az a „hukk”, amit képtelenség irányítani. Mi történik valójában a testben, és miért nincs egyetlen bizonyított ellenszer sem?",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "child_hiccups_surprised_hand_over_mouth",
+    "ratio": "4:3",
+    "hook": "Azt mondják, tartsd vissza a lélegzeted, igyál fejjel lefelé, vagy ijesszen meg valaki. De mi zajlik közben valójában a testedben?"
+  },
+  "sections": [
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mindenki csuklik, a csecsemőtől a nagyapáig, és mindenki ismer egy biztos módszert ellene. A szomszéd a fordítva megivott pohár vízre esküszik, a nagymama egy kanál cukorra. A csuklás mégis az emberi test egyik legrejtélyesebb reflexe maradt."
+        },
+        {
+          "type": "paragraph",
+          "text": "A kis „hukk” mögött pontos gépezet rejlik: idegek, egy izom, amely szó nélkül összehúzódik, és egy ajtó, amely becsapódik a torokban. Lássuk, mit tud erről az orvostudomány, és mit nem tud még ma sem."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+      "title": "Reflex, amely kikerüli a tudatot",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A csuklás egy [[reflexív]] mentén fut: ez olyan idegpálya, amely tudatos döntés nélkül vált ki választ. Ugyanez a mechanizmus rántja meg a lábadat, amikor az orvos a térded alá koppint, és ez kapja el a kezedet a forró főzőlapról, mielőtt még éreznéd a fájdalmat."
+        },
+        {
+          "type": "image",
+          "asset": "mouse_diaphragm_muscle_fibres_microscopy",
+          "ratio": "auto",
+          "caption": "A rekeszizom mikroszkóp alatt: harántcsíkolt izom, akárcsak a kar és a láb izmai."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ha az agyat a légzőizmokkal összekötő idegek ingerlődnek, a [[rekeszizom]] hirtelen összehúzódik. A levegő betódul a tüdőbe. A másodperc töredékével később a [[hangrés]], vagyis a hangszalagok közötti nyílás, hirtelen bezárul. Ez a csattanás adja a „hukk” hangot."
+        },
+        {
+          "type": "funFact",
+          "text": "A csuklás tudományos neve *singultus*, ez a latin szó a zokogást is jelenti. Nem csoda hát, hogy a gyerekeket egy nagy sírás után csuklás rázza."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+      "title": "A magzattól a nagyapáig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A legtöbb csuklás **átmeneti**: kevesebb mint **48 óráig** tart, és magától elmúlik. A kiváltó okok hétköznapiak: túl gyors evés, szénsavas italok, levegőnyelés vagy alkohol. Bármi, ami kitágítja a gyomrot vagy ingerli a közeli idegeket, beindíthatja a reflexet."
+        },
+        {
+          "type": "image",
+          "asset": "fetal_ultrasound_scan_pregnancy",
+          "ratio": "2:1",
+          "caption": "Az ultrahangon már a magzat csuklása is látszik, jóval az első lélegzetvétele előtt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bármely életkorban csuklunk, sőt már születés előtt is. Az ultrahangfelvételeken látszik, ahogy a magzat csuklik az anyaméhben. Pedig ő biztosan nem eszik túl gyorsan. Az egyik feltevés szerint ezek a görcsök a légzőizmokat edzik: főpróba az első korty levegő előtt."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+      "title": "Amikor a csuklás nem akar elmúlni",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Előfordul, hogy a csuklás tartósan megmarad. Ha **két napnál** tovább tart, **elhúzódó** csuklásról beszélünk, ha **egy hónapnál** tovább, akkor ez már [[makacs csuklás]]. Ezek a ritka formák gyakran másra utalnak: a gyomor vagy a nyelőcső betegségére, tüdőproblémára vagy a központi idegrendszer károsodására."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ilyenkor az orvos megkeresi az okot, és kezelést ír elő, néha olyan gyógyszert, amely lecsillapítja a reflexkört. A csuklás ekkor már nem múló kellemetlenség, hanem tünet, amely akadályozza az evést, az alvást és a beszédet."
+        },
+        {
+          "type": "funFact",
+          "text": "A leghosszabb csuklás rekordját egy amerikai farmer, [[Charles Osborne]] tartja, aki a Guinness Rekordok Könyve szerint megszakítás nélkül csuklott **1922-től 1990-ig**, vagyis 68 évig. Közben azért kétszer is megnősült, és nyolc gyereke született."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+      "title": "Rengeteg módszer, egy sem bizonyított",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az átmeneti csuklásról a jó hír, hogy magától elmúlik. A kevésbé jó: egyetlen népi praktikát sem igazolt komoly vizsgálat. Lélegzet-visszatartás, hideg víz ivása, a nyelv kihúzása, zacskóba lélegzés... Mindez beszámolókon alapul, nem bizonyítékokon."
+        },
+        {
+          "type": "image",
+          "asset": "glass_of_cold_water_home_remedy_hiccups",
+          "ratio": "3:2",
+          "caption": "Egy pohár hideg víz: a legelterjedtebb módszer, és az egyik legkevésbé vizsgált."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ezekben a trükkökben mégis van közös logika: megzavarják a reflexkört. A lélegzet visszatartása megnöveli a vér szén-dioxid-szintjét, és megnyugtatja a rekeszizmot. A nyelés vagy a nyelv kinyújtása ingerli a torok idegeit, és „újraindíthatja” a kört. Néha beválik. Hogy pontosan miért, azt senki sem tudja."
+        },
+        {
+          "type": "takeaway",
+          "text": "A csuklás reflex: a rekeszizom összehúzódik, a hangrés bezárul, „hukk”. Szinte mindig múló jelenség, 48 óra után viszont már tünetnek számít. Egyetlen házi módszer sem bizonyított, bár mindegyik a reflexkör megszakítására törekszik."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Alimentary Pharmacology & Therapeutics (Wiley), revue sur la physiopathologie et le traitement du hoquet.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.13374"
+    },
+    {
+      "text": "Cleveland Clinic, « Hiccups ».",
+      "url": "https://my.clevelandclinic.org/health/diseases/17672-hiccups"
+    },
+    {
+      "text": "Guinness World Records, « Longest attack of hiccups ».",
+      "url": "https://www.guinnessworldrecords.com/world-records/67619-longest-attack-of-hiccups"
+    }
+  ]
+}

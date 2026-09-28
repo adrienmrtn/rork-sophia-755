@@ -1,0 +1,151 @@
+{
+  "id": "course_267_qui_a_tue_le_premier_cable",
+  "title": "Quem matou o primeiro cabo transatlântico?",
+  "subtitle": "1858",
+  "subject": "sciences",
+  "subcategory": "Descobertas que mudaram o mundo",
+  "description": "Em agosto de 1858, um cabo ligou pela primeira vez a Europa e a América, e a rainha Vitória cumprimentou o presidente Buchanan. Três semanas depois, a linha estava morta: a história de um eletricista apressado demais e de um cabo malfeito.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "hms_agamemnon_laying_atlantic_telegraph_cable_1858",
+    "ratio": "4:3",
+    "hook": "O cabo que unia dois continentes já estava morrendo enquanto o mundo o festejava."
+  },
+  "sections": [
+    {
+      "id": "course_267_qui_a_tue_le_premier_cable_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em **16 de agosto de 1858**, um cabo telegráfico levou uma mensagem da ilha de [[Valentia]], na Irlanda, até Trinity Bay, na Terra Nova: os cumprimentos da rainha Vitória ao presidente americano James Buchanan. Dois continentes estavam ligados pela primeira vez. Três semanas depois, a linha se calou. O culpado apontado foi [[Wildman Whitehouse]], o eletricista da companhia, que tinha mandado voltagens enormes pelo fio para forçar os sinais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ele não é inocente. Mas o historiador **Donard de Cogan**, ao examinar trechos do cabo retirados do fundo do mar, encontrou defeitos de fabricação: em alguns pontos, o núcleo de cobre estava fora do centro do isolante. Whitehouse não matou um cabo saudável. Ele deu o golpe final num cabo danificado, e o estrago já existia antes de o navio zarpar."
+        }
+      ]
+    },
+    {
+      "id": "course_267_qui_a_tue_le_premier_cable_p1",
+      "title": "A primeira mensagem atravessa o oceano",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A primeira mensagem a atravessar o oceano não foi a da rainha. No mesmo dia, os diretores da [[Atlantic Telegraph Company]], a companhia que instalava o cabo, escreveram da Grã-Bretanha aos colegas americanos: “**A Europa e a América estão unidas pelo telégrafo**...” E a mensagem continuava."
+        },
+        {
+          "type": "image",
+          "asset": "new_york_atlantic_cable_celebration_september_1858",
+          "ratio": "4:5",
+          "caption": "Nova York festeja o cabo em setembro de 1858: a multidão na Broadway, fotografada por William England."
+        },
+        {
+          "type": "paragraph",
+          "text": "Buchanan respondeu depois à rainha. Ele viu no cabo um triunfo mais glorioso, porque muito mais útil à humanidade, do que todos os que um conquistador já obteve num campo de batalha, e desejou que ele fosse um laço de **paz perpétua** entre as duas nações. Ninguém que enviava essas palavras sabia que o cabo que as levava já estava morrendo."
+        }
+      ]
+    },
+    {
+      "id": "course_267_qui_a_tue_le_premier_cable_p2",
+      "title": "Duas teorias, e a mais barata vence",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os construtores do cabo não concordavam sobre como ele funcionaria. O físico [[William Thomson]] previu que os sinais iriam se arrastar num longo cabo submarino, um efeito que ele chamou de [[retardo]]. Whitehouse, que não tinha **nenhuma formação em física**, contestou. Autorizado a usar à noite longas linhas subterrâneas, ele as emendou até chegar ao comprimento do Atlântico, mandou sinais por elas e concluiu que não haveria problema nenhum."
+        },
+        {
+          "type": "paragraph",
+          "text": "Thomson respondeu que um cabo enterrado e um cabo submerso não se comportam do mesmo jeito. Ele também testou cobres que deveriam ser idênticos: a resistência elétrica deles variava até o **dobro**. Um núcleo fino não era só lento, era imprevisível. Era preciso um mais grosso. Mas a fabricação já tinha começado. O cabo mais fino, o mais barato, venceu."
+        }
+      ]
+    },
+    {
+      "id": "course_267_qui_a_tue_le_premier_cable_p3",
+      "title": "Whitehouse frauda a fita",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em **5 de agosto de 1858**, o cabo chegou a Valentia, e Thomson passou o comando a Whitehouse. Durante toda a travessia, Thomson tinha lido os fracos impulsos em seu [[galvanômetro de espelho]], um instrumento sensível o bastante para captar um sinal que tinha atravessado um oceano."
+        },
+        {
+          "type": "paragraph",
+          "text": "Whitehouse o desligou e instalou seu próprio equipamento, bem mais rudimentar. Nada aparecia. Então ele mandou até **2.000 volts** pelo cabo para arrancar uma resposta, e levou um isolante já defeituoso além do limite. A mensagem da rainha chegou à Terra Nova, mas Whitehouse não conseguiu ler a confirmação que voltava."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ele esperou até **17 de agosto** para anunciá-la. O que ele não anunciou: tinha religado o galvanômetro de Thomson para ler a mensagem e depois a redigitou em seu telégrafo impressor, para que a fita parecesse sair do **seu instrumento**."
+        }
+      ]
+    },
+    {
+      "id": "course_267_qui_a_tue_le_premier_cable_p4",
+      "title": "A prova num balde de água do mar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em **setembro de 1858**, a linha morreu de vez. Whitehouse foi demitido, e Thomson assumiu seu lugar em Valentia para entender o que tinha acontecido. O conselho testou sobras do mesmo cabo em água do mar. As amostras saudáveis aguentaram **milhares de volts** sem problema. Uma amostra com um furo do tamanho de um alfinete queimou um buraco largo no isolante. A voltagem sozinha era suportável. A voltagem passando por um defeito de fabricação, não."
+        },
+        {
+          "type": "image",
+          "asset": "atlantic_telegraph_cable_1858_cross_section_sample",
+          "ratio": "2:3",
+          "caption": "Prancha “The Atlantic Telegraph” de G. W. Bacon, por volta de 1865: mapa do trajeto, o Great Eastern, cortes dos cabos."
+        },
+        {
+          "type": "paragraph",
+          "text": "O pior estava bem perto da costa: as primeiras cem milhas a partir da Irlanda eram uma sobra do cabo de **1857**, emendada ao novo, com o núcleo de cobre fora do centro. Antes de morrer, a linha transmitiu **732 mensagens**. Em 1865, o [[Great Eastern]] tentou de novo e perdeu o cabo em pleno oceano. Em 1866, conseguiu."
+        },
+        {
+          "type": "funFact",
+          "text": "Uma das 732 mensagens cancelou a ordem para que dois regimentos no Canadá voltassem à Inglaterra: um único despacho fez o governo economizar 50.000 libras."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "5 de agosto de 1858",
+              "title": "O cabo chega à terra",
+              "detail": "Em Valentia, Thomson passa o comando a Whitehouse."
+            },
+            {
+              "date": "16 de agosto de 1858",
+              "title": "A mensagem da rainha",
+              "detail": "Vitória cumprimenta o presidente Buchanan."
+            },
+            {
+              "date": "Setembro de 1858",
+              "title": "A linha se cala",
+              "detail": "Whitehouse é demitido, e Thomson investiga."
+            },
+            {
+              "date": "1865",
+              "title": "Novo fracasso",
+              "detail": "O Great Eastern perde o cabo em pleno oceano."
+            },
+            {
+              "date": "1866",
+              "title": "O sucesso",
+              "detail": "O Great Eastern finalmente liga as duas margens."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Os 2.000 volts de Whitehouse não mataram um cabo saudável, mas deram o golpe final num cabo malfeito: a física de Thomson estava certa, e a versão mais barata tinha vencido."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "The Institution of Engineering and Technology, IET Archives, « The first transatlantic telegraph cable, 1858 ».",
+      "url": "https://www.theiet.org/membership/library-and-archives/the-iet-archives/archives-highlights/the-first-transatlantic-telegraph-cable-1858"
+    }
+  ]
+}

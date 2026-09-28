@@ -1,0 +1,128 @@
+{
+  "id": "course_281_comment_meurt_une_etoile",
+  "title": "Kako umire zvijezda?",
+  "subtitle": "Crveni div ili supernova",
+  "subject": "sciences",
+  "subcategory": "Zemlja i svemir",
+  "description": "Milijardama godina zvijezda održava ravnotežu između gravitacije i fuzije u svojoj jezgri. Kad ponestane goriva, ona se napuhne, uruši ili eksplodira, a njezin kraj ovisi samo o jednome: o masi.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "crab_nebula_supernova_remnant_hubble",
+    "ratio": "4:3",
+    "hook": "Zvijezda se može tiho ugasiti ili eksplodirati nezamislivom silinom: sve ovisi o njezinoj masi."
+  },
+  "sections": [
+    {
+      "id": "course_281_comment_meurt_une_etoile_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zbog čega zvijezda umire? Počinje umirati kad više ne može odolijevati vlastitoj gravitaciji. Većinu njezina života gravitacija vuče tvar prema središtu. Istodobno energija nastala u jezgri stvara tlak koji gura prema van. Ta se dva učinka poništavaju i zvijezda ostaje stabilna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvor te energije je [[nuklearna fuzija]]: jezgre vodika spajaju se u helij i pritom oslobađaju golemu energiju. Ravnoteža može trajati milijunima, milijardama, pa i tisućama milijardi godina. Sve ovisi o masi. Male zvijezde troše gorivo polako, a masivne ga sagorijevaju mnogo brže. Jednoga dana ravnoteža se naruši. Što će se dalje zbiti, ovisi o masi zvijezde."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p1",
+      "title": "Zvijezda se napuhuje u crvenog diva",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Veći dio života zvijezda pretvara vodik iz svoje jezgre, središnjeg područja, u helij. Kad tog vodika ponestane, fuzija u središtu slabi. Jezgra se steže i postaje toplija. Oko nje sloj vodika i dalje se spaja i oslobađa energiju. Pod tim pritiskom vanjski se slojevi zvijezde silno napuhuju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rezultat je [[crveni div]]: zvijezda mnogo veća nego prije, s hladnijom površinom. Zvijezda koja umire, dakle, najprije raste, umjesto da se tiho ugasi. Sunce bi u tu fazu trebalo ući za otprilike **5 milijardi godina**."
+        },
+        {
+          "type": "funFact",
+          "text": "Kad postane crveni div, Sunce bi moglo narasti toliko da proguta Merkur i Veneru. Točna sudbina Zemlje ostaje neizvjesna."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p2",
+      "title": "Bijeli patuljak velik kao Zemlja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zvijezda poput Sunca ne može se napuhivati unedogled. Kako stari, gubi vanjske slojeve, koji odlaze u svemir. Taj se plin raspršuje i tvori svjetleći oblak koji se naziva [[planetarna maglica]]. U središtu ostaje [[bijeli patuljak]]: vruća i gusta jezgra zvijezde, ogoljena nakon što su vanjski slojevi otišli."
+        },
+        {
+          "type": "image",
+          "asset": "helix_nebula_planetary_nebula_white_dwarf_hubble",
+          "ratio": "1:1",
+          "caption": "Maglica Heliks: plin koji je izbacila zvijezda na umoru, s bijelim patuljkom vidljivim u središtu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bijeli patuljak nije veći od **Zemlje**, ali i dalje sadržava velik dio mase izvorne zvijezde. Fuzija je u njemu prestala: više ne proizvodi energiju. Ako svijetli, to je samo zato što je još uvijek iznimno vruć. Tijekom golemog razdoblja polako se hladi i blijedi."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p3",
+      "title": "Supernova, neutronska zvijezda ili crna rupa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mnogo masivnija zvijezda tu se ne zaustavlja. Nastavlja spajati lakše elemente u teže: od helija nastaje ugljik, a zatim naprednije reakcije stvaraju još teže elemente. Malo-pomalo nastaje jezgra bogata **željezom**. No kod željeza fuzija više ne daje energiju potrebnu da zvijezdu održi nasuprot gravitaciji. Jezgra se u trenu uruši."
+        },
+        {
+          "type": "paragraph",
+          "text": "Posljedica tog urušavanja može biti [[supernova]], golema eksplozija koja velik dio zvijezde izbaci u svemir. Urušena jezgra, međutim, ostaje. Ako nije prevelike mase, postaje [[neutronska zvijezda]], objekt krajnje gustoće, ne veći od jednoga grada. Ako je dovoljno masivna, gravitacija je nastavlja drobiti dok ne nastane [[crna rupa]], u kojoj je privlačnost tako jaka da iz nje ne može umaći ni svjetlost."
+        },
+        {
+          "type": "image",
+          "asset": "m87_black_hole_event_horizon_telescope_2019",
+          "ratio": "16:9",
+          "caption": "Crna rupa u M87: prva snimka iz 2019. (lijevo) i njezina inačica izoštrena algoritmom PRIMO (2023.)."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p4",
+      "title": "Mi smo zvjezdana prašina",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zvijezda koja umire ne nestaje. Svemiru vraća dio svoje tvari, obogaćene elementima nastalima tijekom njezina života. S vremenom ta tvar može postati dio novih zvijezda, planeta i drugih svjetova."
+        },
+        {
+          "type": "image",
+          "asset": "pillars_of_creation_eagle_nebula_jwst_2022",
+          "ratio": "2:3",
+          "caption": "Stupovi stvaranja kroz oko svemirskog teleskopa James Webb 2022.: ondje se rađaju nove zvijezde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najbolji je primjer **ugljik**. Neophodan je za život na Zemlji, pa i u našim vlastitim tijelima. A najveći je dio tog ugljika nastao u naraštajima zvijezda kojih danas više nema. Zato se ponekad kaže da smo sazdani od zvjezdane prašine. Izreka je pjesnička, ali znanost iza nje posve je stvarna. Smrt zvijezde tako je ujedno i početak: njezina tvar možda će jednoga dana oblikovati drugu zvijezdu, drugi planet, pa čak i svijet pun života."
+        },
+        {
+          "type": "takeaway",
+          "text": "Bez fuzije zvijezda popušta gravitaciji: male se gase kao bijeli patuljci, masivne eksplodiraju kao supernove i ostavljaju neutronsku zvijezdu ili crnu rupu, a njihova raspršena tvar hrani buduće zvijezde, planete i živa bića."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, p. 541."
+    },
+    {
+      "text": "NASA Science, « Types of Stars: White Dwarfs »."
+    },
+    {
+      "text": "S. Frazier, « Why the Sun Won't Become a Black Hole », NASA Goddard Space Flight Center, 2019."
+    }
+  ]
+}

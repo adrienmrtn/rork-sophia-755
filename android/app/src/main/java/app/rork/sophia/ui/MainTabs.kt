@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
+import app.rork.sophia.data.AuthorStore
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.ProgressManager
@@ -57,6 +58,7 @@ import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.ConfirmDialog
 import app.rork.sophia.ui.components.PostCompletionRewardFlow
 import app.rork.sophia.ui.components.TrialEndingMiniBanner
+import app.rork.sophia.ui.course.AuthorScreen
 import app.rork.sophia.ui.course.CourseScreen
 import app.rork.sophia.ui.home.DiscountGiftOverlay
 import app.rork.sophia.ui.home.DiscountSideTab
@@ -108,6 +110,8 @@ fun MainTabs(
     val discount by app.discountManager.state.collectAsState()
     var selectedTab by remember { mutableIntStateOf(0) }
     var selectedCourse by remember { mutableStateOf<Course?>(null) }
+    // Professor page opened from a course's byline or "written by" card.
+    var selectedAuthorSlug by remember { mutableStateOf<String?>(null) }
     var autoSwipeCourseId by remember { mutableStateOf<String?>(null) }
     var paywall by remember { mutableStateOf<PaywallContext?>(null) }
     var overlay by remember { mutableStateOf<OverlayScreen?>(null) }
@@ -300,6 +304,10 @@ fun MainTabs(
     ) {
         selectedTab = 0
     }
+    // Registered last, so it takes precedence: the author page sits above the reader.
+    BackHandler(enabled = selectedAuthorSlug != null) {
+        selectedAuthorSlug = null
+    }
 
     Box(modifier = Modifier.fillMaxSize()) {
         if (selectedCourse != null) {
@@ -327,6 +335,7 @@ fun MainTabs(
                         pendingCompletionCourseId = selectedCourse?.id
                     },
                     onDismiss = { dismissCourse() },
+                    onOpenAuthor = { selectedAuthorSlug = it },
                     onRequestPaywall = { key ->
                         if (key == "debloquer_cours" || key == "quizz") {
                             app.analytics.trackFreemiumGateHit(key, courseId = selectedCourse?.id)
@@ -558,6 +567,29 @@ fun MainTabs(
                             language = language,
                             onBack = { closeOverlay() },
                         )
+                }
+            }
+        }
+
+        selectedAuthorSlug?.let { slug ->
+            val author = remember(slug) { AuthorStore.author(context.applicationContext, slug) }
+            if (author == null) {
+                // An unknown slug (content ahead of the bundled authors file): nothing to show.
+                LaunchedEffect(slug) { selectedAuthorSlug = null }
+            } else {
+                SophiaOverlayLayer {
+                    AuthorScreen(
+                        author = author,
+                        language = language,
+                        progress = progress,
+                        currentCourseId = selectedCourse?.id,
+                        onOpenCourse = { id ->
+                            selectedAuthorSlug = null
+                            if (id != selectedCourse?.id) openCourseById(id)
+                        },
+                        onBack = { selectedAuthorSlug = null },
+                        modifier = Modifier.fillMaxSize(),
+                    )
                 }
             }
         }

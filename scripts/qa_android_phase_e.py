@@ -169,6 +169,10 @@ def check_catalog(c: Checker) -> None:
     fr_ids = {course["id"] for course in fr_courses}
     fr_v2 = {p.name for p in (ASSETS / "courses_v2" / "fr").glob("*.json")}
     quiz_total = sum(len(course.get("quiz") or []) for course in fr_courses)
+    fr_cols = [
+        (col["id"], col["courseIds"])
+        for col in json.loads((ASSETS / "locales" / "collections.fr.json").read_text(encoding="utf-8"))
+    ]
     for lang in CATALOG_LANGS:
         courses = json.loads((ASSETS / "locales" / f"courses.{lang}.json").read_text(encoding="utf-8"))
         ids = {course["id"] for course in courses}
@@ -190,8 +194,8 @@ def check_catalog(c: Checker) -> None:
         if v2 != fr_v2:
             c.fail(f"courses_v2/{lang} file set != FR")
         cols = json.loads((ASSETS / "locales" / f"collections.{lang}.json").read_text(encoding="utf-8"))
-        if len(cols) != 31:
-            c.fail(f"collections.{lang}.json count={len(cols)} (expected 31)")
+        if [(col["id"], col["courseIds"]) for col in cols] != fr_cols:
+            c.fail(f"collections.{lang}.json ids/courseIds != FR ({len(cols)} vs {len(fr_cols)})")
     images_dir = ASSETS / "images"
     image_files = list(images_dir.glob("*")) if images_dir.is_dir() else []
     if image_files:

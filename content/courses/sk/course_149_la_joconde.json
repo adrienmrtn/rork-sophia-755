@@ -1,14 +1,15 @@
 {
   "id": "course_149_la_joconde",
-  "title": "Čo urobilo „Monu Lisu“ takou slávnou?",
-  "subtitle": "1503-1519",
+  "title": "Záležalo Leonardovi vôbec na Mone Lise?",
+  "subtitle": "1503",
   "subject": "art",
-  "subcategory": "Iconic works",
-  "description": "Maľoval **Leonardo da Vinci** medzi **1503** a **1519**, *Mona Lisa* sa stala absolútnou ikonou Louvru. Technika, tajomný úsmev... a let v **1911**, ktorý všetko zmenil.",
+  "subcategory": "Veľdiela",
+  "description": "Je to najslávnejší obraz sveta. No v roku 1503 mal jeho autor na práci dôležitejšie veci než portrét manželky istého obchodníka.",
+  "author": "dusan-nikolic",
   "hero": {
     "image": "la_joconde",
     "ratio": "16:9",
-    "hook": "Úsmev, krádež, mýtus: ako sa portrét stal najslávnejším dielom na svete."
+    "hook": "Najsledovanejší obraz planéty bol pre Leonarda možno len vedľajšou zákazkou."
   },
   "sections": [
     {
@@ -18,89 +19,93 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "*Mona Lisa*, namaľovaná medzi **1503** a **1519** od **Leonarda da Vinci**, je najnavštevovanejším obrazom na svete. Vystavená na **Louvre** fascinuje rovnako svojou technikou ako svojou históriou. Nie je to len krásny portrét. Je to mýtus vytvorený umením, vedou a novinkou."
+          "text": "Na jeden z najslávnejších obrazov sveta vieme o *Mone Lise* s istotou prekvapivo málo. Historici umenia sa zhodujú na podstatnom: Leonardo da Vinci ju maľoval vo Florencii v rokoch **1503 až 1506**. V roku **1517** si ju vzal so sebou do Francúzska a doska napokon skončila v zbierke, ktorú vlastnil kráľ [[František I.]]"
         },
         {
           "type": "paragraph",
-          "text": "Prečo radšej táto tvár ako iná? Pretože tam Leonardo sústredil inovácie a veľkolepý let ho preslávil v celosvetovom meradle."
+          "text": "Prázdne miesta v dejinách zaplnili legendy. O obraze sa hovorí ako o žene, „ona“. Jej polovičný úsmev vraj skrýva tajomstvo. Po krádeži v roku **1911** sa dokonca pochybovalo o jeho pravosti. Všetky tieto príbehy mu priniesli slávu, no zatlačili do úzadia jeho kontext. A pritom v čase, keď ho Leonardo maľoval, preňho toto dielo možno nemalo nijakú váhu."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p1",
-      "title": "Leonardo a sfumato",
+      "title": "Kto je Mona Lisa?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Portrét začína vo Florencii okolo **1503**. Sponzorom je obchodník **Francesco del Giocondo**. Modelkou je vraj jeho manželka [[Lisa Gherardiniová]]. Leonard však obraz nikdy nedoručí. Nechal si ho, roky ho retušoval a odviezol do Francúzska, kde v roku **1519** zomrel."
+          "text": "Historici umenia všeobecne uznávajú, že modelom bola [[Lisa Gherardini]], manželka **Francesca del Giocondo**, obchodníka a menšieho hodnostára florentskej vlády. Odtiaľ aj druhé meno obrazu, *La Gioconda*. Táto identifikácia sa opiera o Leonardov životopis, ktorý vydal [[Giorgio Vasari]] v roku **1550** a znova v roku **1568** vo svojich *Životopisoch najvýznačnejších maliarov, sochárov a architektov*."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_leonardo_da_vinci_louvre_painting",
-          "ratio": "4:3",
-          "caption": "Mona Lisa v Louvri: malý topoľový panel, ktorý sa stal globálnou ikonou."
+          "asset": "vasari_lives_of_the_artists_1568_title_page",
+          "ratio": "3:4",
+          "caption": "Vasariho Životopisy, florentské vydanie z roku 1568: text, ktorý dal modelu meno."
         },
         {
           "type": "paragraph",
-          "text": "Jeho charakteristická technika je [[Leonardian sfumato]]: glazúry, veľmi tenké vrstvy, ktoré zmazávajú kontúry. Už žiadna tvrdá línia. Tvár sa topí vo vzduchu. Leonardo pridáva aj [[Letecká perspektíva]]: vzdialená krajina sa sfarbí do modra a zjemní, ako v skutočnej vízii."
+          "text": "Prečo si Francesco portrét objednal? To nevieme. Leonardo sa doň pustil začiatkom roka **1503**. Čo nasledovalo, je dodnes predmetom sporov: historici považujú Vasariho rozprávanie za literárnu fikciu, za dielo životopisca, ktorý vyplnil medzery pekným príbehom. V polovici roka **1506** Leonardo odišiel z Florencie do Milána hľadať lepšie miesto. Nedokončený portrét si vzal so sebou."
+        },
+        {
+          "type": "funFact",
+          "text": "Podľa Vasariho Leonardo najal hudobníkov a šašov, aby jeho model zabávali počas sedení. Historici to pokladajú za výmysel životopisca, no práve tento príbeh dal vzniknúť mýtu o „úsmeve Mony Lisy“."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p2",
-      "title": "Úsmev, ktorý sa hrá s očami",
+      "title": "Anghiari: prestížnejšia zákazka",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Povestný úsmev nie je len namaľovaná emócia. Hrá sa s našou [[Periférne videnie]]. Keď sa pozeráme do očí modelky, okraje sietnice vidia ústa v jemných tieňoch: úsmev sa zdá prítomný. Keď sa pozriete priamo do úst, zmenšuje sa."
+          "text": "V októbri **1503** najala florentská vláda Leonarda, aby v [[Palazzo Vecchio]], sídle Florentskej republiky, namaľoval nástennú maľbu [[Bitka pri Anghiari]]. Mala oslavovať víťazstvo Florencie nad Milánom v roku **1440**. V renesancii mala historická scéna oveľa väčšiu cenu než portrét. Spolu s náboženskými, mytologickými a alegorickými námetmi platila za najvyššiu formu umenia."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_smile_detail_close_up",
-          "ratio": "1:1",
-          "caption": "Čím viac sa na to budete pozerať, tým viac úsmev zmizne."
-        },
-        {
-          "type": "funFact",
-          "text": "Leonardo, maliar aj učenec, vyštudoval optiku. Tajomstvo úsmevu čiastočne spočíva na presnej znalosti toho, ako ľudské oko spracováva tiene."
+          "asset": "rubens_copy_battle_of_anghiari_louvre_drawing",
+          "ratio": "16:9",
+          "caption": "Rubensova kópia ústrednej vravy: jediná stopa po veľkej nedokončenej maľbe v Palazzo Vecchio."
         },
         {
           "type": "paragraph",
-          "text": "Výsledok: tvár sa zdá byť živá, meniaca sa, takmer vedomá nášho pohľadu."
+          "text": "Popri veľkej verejnej zákazke mal súkromný portrét manželky drobného úradníka malú váhu. Už od decembra **1503** venoval Leonardo stále viac času prípravám veľkej kompozície. Prestíž a lepší honorár: Mona Lisa mohla počkať. Na konci jeho druhého florentského pobytu portrét hotový nebol. *Bitka pri Anghiari* takisto nie: zachovali sa z nej len prípravné skice a ich kópie."
+        },
+        {
+          "type": "funFact",
+          "text": "Je možné, že keď Leonardo v roku 1506 odchádzal do Milána, zostávala nedokončená už iba krajina v pozadí."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p3",
-      "title": "1911: let, ktorý vynašiel slávu",
+      "title": "Ako sa rodí ikona",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V 19. storočí bola *Mona Lisa* obdivovaná, ale ešte nebola dielom číslo jeden v Louvri. Všetko sa zmenilo **Dňa 21. augusta 1911**. Ukradne ho taliansky sklenár z múzea [[Vincenzo Peruggia]]: je to [[Krádež Mony Lisy (1911)]]. Skryje ho pod blúzkou a potichu vyjde von."
+          "text": "Leonardo zomrel **2. mája 1519** v Amboise vo Francúzsku. *Mona Lisa* sa do rodiny Giocondovcov nikdy nedostala. Po Francúzskej revolúcii sa kráľovská zbierka stala verejnou a obraz sa ocitol v **Louvri**. Od začiatku 19. storočia sa jej úsmev opisuje na tisíc spôsobov, od božského po zmyselný."
         },
         {
           "type": "image",
           "asset": "mona_lisa_stolen_1911_newspaper_headline",
           "ratio": "4:3",
-          "caption": "1911: absencia obrazu robí titulky a vytvára hviezdu."
+          "caption": "Titulná strana denníka Excelsior z januára 1914: Mona Lisa sa vracia po krádeži z roku 1911."
         },
         {
           "type": "paragraph",
-          "text": "Vyšetrovanie sa mení na škandál. Básnik [[Guillaume Apollinaire]] bol istý čas uväznený. Rozhovor so [[Pablo Picasso]]. Keď sa obraz znova objaví v **1913**, už to nie je len obraz. Je to celebrita."
+          "text": "Zlomom bola krádež obrazu z múzea v roku **1911**. Noviny urobili z Mony Lisy svetovú senzáciu. Odvtedy bulvárna tlač a romány pravidelne spochybňujú pravosť diela aj totožnosť modelu, bez akejkoľvek opory v serióznom historickom bádaní. Obraz sa stal stredobodom čoraz väčšieho počtu príbehov, ktoré počúvame dodnes."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p4",
-      "title": "Ikona pod sklom",
+      "title": "Obraz, ktorý prerástol svojho autora",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dnes namaľovaný na topoľovom dreve žije za [[Nepriestrelné sklo]], v klimatizovanej vitríne. Útoky kyselinou, hádzanie predmetov: ochrana sa stala nevyhnutnou. A paródie, od Duchamp po internet, dokazujú, že sa stal univerzálnym jazykom."
+          "text": "Viac než **500 rokov** po tom, čo sa portrét začal maľovať, priťahuje Lisa del Giocondo viac ako kedykoľvek predtým. Obraz, uložený za nepriestrelným sklom v Louvri, je odtrhnutý od svojho historického kontextu. Oslobodený od neho získal status univerzálnej ikony. Tento status má svoju cenu: v modernej dobe sa už nepristúpilo k nijakému reštaurovaniu."
         },
         {
           "type": "timeline",
@@ -108,30 +113,47 @@
             {
               "date": "1503",
               "title": "Začiatok portrétu",
-              "detail": "Leonardo začína film Mona Lisa vo Florencii."
+              "detail": "Leonardo začína vo Florencii portrét Lisy Gherardini."
+            },
+            {
+              "date": "okt. 1503",
+              "title": "Zákazka Anghiari",
+              "detail": "Florencia mu zveruje veľkú nástennú maľbu pre Palazzo Vecchio."
+            },
+            {
+              "date": "1506",
+              "title": "Odchod do Milána",
+              "detail": "Leonardo opúšťa Florenciu s nedokončeným portrétom pod pazuchou."
             },
             {
               "date": "1519",
-              "title": "Smrť Leonarda",
-              "detail": "Obraz zostáva vo Francúzsku."
+              "title": "Leonardova smrť",
+              "detail": "V Amboise, 2. mája. Obraz zostáva vo Francúzsku."
             },
             {
               "date": "1911",
-              "title": "Let",
-              "detail": "Peruggia pretvára dielo na mediálny mýtus."
-            },
-            {
-              "date": "1913",
-              "title": "Späť",
-              "detail": "Obraz sa vracia do Louvru ako svetová hviezda."
+              "title": "Krádež",
+              "detail": "Tlač robí z Mony Lisy svetovú senzáciu."
             }
           ]
         },
         {
+          "type": "paragraph",
+          "text": "Odstrániť stáročiami zožltnutý [[lak]], ochrannú vrstvu olejomaľby, by znamenalo riskovať poškodenie diela. A aj keby sa reštaurovanie podarilo, panujú obavy, že *Mona Lisa* stratí svoju podmanivú moc. Leonardova pôvodná technika a farby znamenajú menej než samotný obraz ako symbol. Ako nádoba nespočetných príbehov prerástol obraz svojho autora aj dejiny umenia."
+        },
+        {
           "type": "takeaway",
-          "text": "Mona Lisa vďačí za svoju slávu genialite Leonarda (sfumato, optický úsmev), ako aj histórii: krádež v roku 1911 premenila obdivované majstrovské dielo na globálnu ikonu."
+          "text": "*Mona Lisa*, odložená v roku 1503 kvôli prestížnejšej zákazke, vďačí za svoj status ikony piatim storočiam legiend a jednej krádeži, oveľa viac než miestu, ktoré jej prisudzoval Leonardo."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. Campbell, Leonardo da Vinci: An Untraceable Life, Princeton University Press, 2025, p. 43-45."
+    },
+    {
+      "text": "F. Zöllner, « Leonardo's Portrait of Mona Lisa del Giocondo », Gazette des Beaux-Arts, vol. 121, 1993, p. 115-138."
     }
   ]
 }

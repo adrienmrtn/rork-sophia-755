@@ -1,0 +1,135 @@
+{
+  "id": "course_242_pourquoi_a_t_on_le_hoquet",
+  "title": "Proč máme škytavku?",
+  "subtitle": "Reflexy a dýchání",
+  "subject": "sciences",
+  "subcategory": "Věda všedního dne",
+  "description": "Křeč bránice, cvaknutí v hrdle a to „hik”, které nejde ovládnout. Co tělo doopravdy dělá a proč žádný lék nemá důkaz.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "child_hiccups_surprised_hand_over_mouth",
+    "ratio": "4:3",
+    "hook": "Radí ti zadržet dech, pít vzhůru nohama nebo se nechat vylekat. Ale co se ve skutečnosti děje v tvém těle?"
+  },
+  "sections": [
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Škytavku má každý, od miminka po dědečka, a každý zná zaručený lék. Soused přísahá na sklenici vody vypitou obráceně, babička na lžičku cukru. Přesto zůstává škytavka jedním z nejzáhadnějších reflexů lidského těla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za tím malým „hik” se skrývá přesný mechanismus: nervy, sval, který se stáhne bez varování, a dvířka, která v hrdle zaklapnou. Tady je, co o tom medicína ví a co ještě neví."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+      "title": "Reflex, který obejde mozek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Škytavku řídí [[reflexní oblouk]], nervový okruh, který spustí reakci bez vědomého rozhodnutí. Stejný mechanismus ti vymrští nohu, když ti lékař poklepe pod koleno, nebo ucukne rukou od rozpálené plotny dřív, než vůbec ucítíš bolest."
+        },
+        {
+          "type": "image",
+          "asset": "mouse_diaphragm_muscle_fibres_microscopy",
+          "ratio": "auto",
+          "caption": "Bránice pod mikroskopem: příčně pruhovaný sval, stejně jako svaly paží a nohou."
+        },
+        {
+          "type": "paragraph",
+          "text": "Když se podráždí nervy, které spojují mozek s dýchacími svaly, najednou se stáhne [[bránice]]. Vzduch se nahrne do plic. Zlomek vteřiny nato se prudce zavře [[hlasivková štěrbina]], otvor mezi hlasivkami. Právě toto cvaknutí vydá ono „hik”."
+        },
+        {
+          "type": "funFact",
+          "text": "Odborně se škytavka jmenuje *singultus*, latinským slovem, které znamená také vzlyk. Škytavka, která děti rozhází po pořádném pláči, tedy není žádné překvapení."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+      "title": "Od plodu po dědečka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Většina škytavek je **přechodná**: trvá méně než **48 hodin** a přejde sama. Spouštěče jsou všední: jíst příliš rychle, pít perlivé nápoje, polykat vzduch nebo pít alkohol. Reflex může rozjet cokoli, co roztáhne žaludek nebo podráždí nervy v okolí."
+        },
+        {
+          "type": "image",
+          "asset": "fetal_ultrasound_scan_pregnancy",
+          "ratio": "2:1",
+          "caption": "Na ultrazvuku je vidět, jak plod škytá, dávno před prvním nádechem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Škytavku máme v každém věku, dokonce i před narozením. Ultrazvuk ukazuje plody, které škytají v matčině břiše. A přitom rozhodně nejedí příliš rychle. Jedna hypotéza: tyto křeče možná trénují dýchací svaly, taková generálka před prvním douškem vzduchu."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+      "title": "Když škytavka nepřestává",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Někdy se škytavka usadí. Když trvá déle než **dva dny**, mluví se o **přetrvávající** škytavce; když déle než **měsíc**, lékaři jí říkají [[neutišitelná škytavka]]. Tyto vzácné formy často prozrazují něco jiného: nemoc žaludku nebo jícnu, potíže s plícemi nebo poškození centrální nervové soustavy."
+        },
+        {
+          "type": "paragraph",
+          "text": "V takových případech lékař hledá příčinu a předepíše léčbu, někdy léky, které reflexní okruh zklidní. Škytavka pak už není přechodná nepříjemnost, ale příznak, který brání jíst, spát a mluvit."
+        },
+        {
+          "type": "funFact",
+          "text": "Rekord v nejdelší škytavce drží americký farmář [[Charles Osborne]], který podle Guinnessovy knihy rekordů škytal bez přestávky od **1922 do 1990**, tedy 68 let. Přesto stihl dvakrát se oženit a mít osm dětí."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+      "title": "Desítky léků, žádný prokázaný",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U přechodné škytavky je dobrá zpráva, že zmizí sama. Ta horší: žádný babiččin recept nepotvrdila seriózní studie. Zadržet dech, napít se studené vody, zatahat se za jazyk, dýchat do sáčku... To vše stojí na historkách, ne na důkazech."
+        },
+        {
+          "type": "image",
+          "asset": "glass_of_cold_water_home_remedy_hiccups",
+          "ratio": "3:2",
+          "caption": "Sklenice studené vody: nejrozšířenější lék a jeden z nejméně prozkoumaných."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tyto triky ale mají společnou logiku: narušují reflexní okruh. Zadržený dech zvýší v krvi oxid uhličitý a zklidní bránici. Polykání nebo tahání za jazyk dráždí nervy v hrdle a může okruh „restartovat”. Někdy to funguje. Proč přesně, nikdo neví."
+        },
+        {
+          "type": "takeaway",
+          "text": "Škytavka je reflex: bránice se stáhne, hlasivková štěrbina se zavře, „hik”. Téměř vždy je přechodná, po 48 hodinách se z ní stává příznak. Žádný domácí lék není prokázaný, i když všechny se snaží okruh přerušit."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Alimentary Pharmacology & Therapeutics (Wiley), revue sur la physiopathologie et le traitement du hoquet.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.13374"
+    },
+    {
+      "text": "Cleveland Clinic, « Hiccups ».",
+      "url": "https://my.clevelandclinic.org/health/diseases/17672-hiccups"
+    },
+    {
+      "text": "Guinness World Records, « Longest attack of hiccups ».",
+      "url": "https://www.guinnessworldrecords.com/world-records/67619-longest-attack-of-hiccups"
+    }
+  ]
+}

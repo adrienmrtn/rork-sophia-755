@@ -1,0 +1,155 @@
+{
+  "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn",
+  "title": "Was verrät unsere DNA wirklich?",
+  "subtitle": "Gene und Schicksal",
+  "subject": "sciences",
+  "subcategory": "Unser Alltag erklärt",
+  "description": "Vorlieben, Charakter, Krankheitsrisiken, ferne Herkunft: Unsere DNA sagt viel über uns. Doch eine Veranlagung war noch nie ein Schicksal.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "dna_double_helix_3d_render_blue",
+    "ratio": "4:3",
+    "hook": "Unsere DNA erzählt, woher wir kommen, was wir mögen und was uns bedroht, aber sie entscheidet nicht alles."
+  },
+  "sections": [
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Unsere DNA verrät enorm viel über uns: woher wir kommen, wozu unser Körper fähig ist und vielleicht sogar, was uns erwartet. Sie ist unsere Geschichte und unser Bauplan. Aber was genau ist sie? DNA steckt in fast jeder Zelle des Körpers. Zur **Doppelhelix** gewunden, trägt sie die genetischen Anweisungen, die steuern, wie wir funktionieren, wachsen, uns entwickeln und fortpflanzen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ihre Stränge bestehen aus nur **vier kleinen Bausteinen**, den Nukleotiden, abgekürzt A, T, C und G. Die Abfolge dieser vier Buchstaben bildet unser [[Genom]], einen genetischen Bauplan, den jeder von uns nur einmal hat. Was lässt sich darin wirklich lesen? Unsere Vorlieben, unsere Krankheitsrisiken, unsere Herkunft. Und wie weit schreibt dieser Text unsere Zukunft?"
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p1",
+      "title": "Unsere Gene prägen Vorlieben und Charakter",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein [[Gen]] ist ein Stück dieses Textes. Es wirkt wie eine biologische Bauanleitung: Es sagt dem Körper, wie er seine **Proteine** herstellt, die wiederum unsere Zellen aufbauen und am Laufen halten. Daraus entstehen unsere sichtbaren Merkmale. Doch Gene reichen viel tiefer als das Aussehen."
+        },
+        {
+          "type": "image",
+          "asset": "identical_twins_sisters_portrait_nature_nurture",
+          "ratio": "5:4",
+          "caption": "“Die Reisegefährtinnen” von Augustus Egg (1862): zwei junge Frauen, die sich in allem gleichen, die eine schläft, die andere liest."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine [[genetische Variante]] ist eine leicht abgewandelte Version eines Gens. Vor Kurzem haben Forscher mehrere davon mit der **Persönlichkeit** in Verbindung gebracht. Feine genetische Unterschiede können unsere Vorlieben lenken: Sport lieben oder hassen, extrovertiert sein, Hobbys sammeln. Unsere DNA könnte unseren Alltag viel stärker beeinflussen, als wir denken. Daraus folgt eine Frage: Wie viel unseres Verhaltens steht schon in unserer Biologie geschrieben?"
+        },
+        {
+          "type": "funFact",
+          "text": "Tee oder Kaffee? Selbst diese simple Vorliebe könnte an feinen Unterschieden in unseren Genen liegen, so die Studien, die DNA und Persönlichkeit verknüpfen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Und das ist vielleicht noch nicht alles. Die DNA liefert auch Hinweise darauf, wer eine [[genetische Veranlagung]] zu bestimmten **psychischen** Erkrankungen hat, etwa zur Depression. Sie verrät also nicht nur, was wir mögen, sondern auch, was uns verletzlich machen kann."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p2",
+      "title": "Was die DNA über Krankheitsrisiken verrät",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die psychische Gesundheit ist nicht der einzige Bereich. Unser Erbgut kann uns auch für andere Krankheiten anfälliger machen, von denen manche “in der Familie liegen”. Ein bekanntes Beispiel: Vererbte Varianten der Gene [[BRCA1 und BRCA2]] machen manche Frauen anfällig für **früh auftretenden Brustkrebs**."
+        },
+        {
+          "type": "image",
+          "asset": "dna_sequencing_chromatogram_sanger_readout",
+          "ratio": "2:1",
+          "caption": "Chromatogramm einer Sequenzierung: Jeder farbige Ausschlag ist ein Buchstabe der DNA. Auf dieser Auswertung erkennt ein Test eine Variante."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hier zeigt der [[Gentest]] seinen ganzen Wert, für das Gesundheitssystem wie für die Betroffenen. Wer ein erbliches Risiko erkennt, kann früh handeln: frühere **Vorsorgeuntersuchungen**, engmaschige Kontrollen, Medikamente oder eine andere vorbeugende Behandlung. Dieser Vorsprung kann Leben retten und Behandlungskosten senken."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p3",
+      "title": "Eine Zeitmaschine: Woher kommen wir?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Unsere DNA wird von Generation zu Generation weitergegeben. Sie bewahrt Hinweise auf unsere Vorfahren: woher sie kamen, was sie aßen, wie sie lebten. Sie ist eine echte Zeitmaschine. Durch den Vergleich der **genetischen Muster** heutiger Bevölkerungen konnten Forscher den Weg nachzeichnen, den die Menschen rund um den Globus genommen haben."
+        },
+        {
+          "type": "image",
+          "asset": "early_human_migrations_out_of_africa_map",
+          "ratio": "5:4",
+          "caption": "Die ersten Linien des Homo sapiens in Afrika und ihr Aufbruch nach Eurasien, rekonstruiert durch die Populationsgenetik."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Beispiel. Schriftliche Quellen berichten, dass Menschen aus **Nordafrika** zwischen **700 und 1200** die [[Iberische Halbinsel]] besiedelten. Die DNA bestätigt den Bericht: Die heutigen Bewohner der Halbinsel tragen noch die genetische Spur dieser Begegnungen."
+        },
+        {
+          "type": "funFact",
+          "text": "Selbst unsere fernste Herkunft ist verwickelter als ein einfacher Stammbaum. Eine Studie auf Grundlage vollständiger Genome fand Spuren zweier früher Menschengruppen, die sich vor etwa **1,5 Millionen Jahren** getrennt und später wieder vermischt hatten."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p4",
+      "title": "Veranlagung ist kein Schicksal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die DNA beeinflusst also viele unserer Eigenschaften. Doch für etwas veranlagt zu sein heißt nicht, dass das Schicksal besiegelt ist. Wer ein genetisches Risiko für **Depression** trägt, bekommt deshalb nicht zwangsläufig eine Depression. Ein genetisches Risiko ist keine Gewissheit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gene eröffnen Möglichkeiten, sie erzwingen sie nicht. Unsere Erfahrungen, Entscheidungen und Lebensumstände zählen genauso viel. Seine DNA zu lesen heißt, einen Teil von sich selbst zu lesen: einen wertvollen, für die Gesundheit manchmal entscheidenden Teil, aber eben nur einen Teil."
+        },
+        {
+          "type": "takeaway",
+          "text": "Die DNA erzählt von unseren Vorlieben, Risiken und Wurzeln, doch eine Veranlagung ist nie eine Gewissheit: Unsere DNA ist nur ein Teil von uns."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Yale School of Medicine, « How Genes Shape Personality Traits: New Links Are Discovered », Yale Medicine News, 9 septembre 2024.",
+      "url": "https://medicine.yale.edu/news-article/how-genes-shape-personality-traits-new-links-are-discovered/"
+    },
+    {
+      "text": "« DNA », Wikipedia, The Free Encyclopedia.",
+      "url": "https://en.wikipedia.org/wiki/DNA"
+    },
+    {
+      "text": "Institute of Medicine (US), « Genetics and Health », dans L. M. Hernandez et D. G. Blazer (dir.), Genes, Behavior, and the Social Environment: Moving Beyond the Nature/Nurture Debate, National Academies Press, Washington (DC), 2006.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK19932/"
+    },
+    {
+      "text": "NIHR Oxford Biomedical Research Centre, « International study reveals how our genes shape blood proteins linked to disease ».",
+      "url": "https://oxfordbrc.nihr.ac.uk/international-study-reveals-how-our-genes-shape-blood-proteins-linked-to-disease/"
+    },
+    {
+      "text": "« What Our DNA Can Tell Us About the History of Humans », Frontiers for Young Minds, 2020.",
+      "url": "https://kids.frontiersin.org/articles/10.3389/frym.2020.00106"
+    },
+    {
+      "text": "« How genetics determine our life choices », BBC Future, 9 mai 2023.",
+      "url": "https://www.bbc.co.uk/future/article/20230509-how-genetics-determine-our-life-choices"
+    },
+    {
+      "text": "University of Cambridge, « Genetic study reveals hidden chapter in human evolution », Research news, 18 mars 2025.",
+      "url": "https://www.cam.ac.uk/research/news/genetic-study-reveals-hidden-chapter-in-human-evolution"
+    }
+  ]
+}

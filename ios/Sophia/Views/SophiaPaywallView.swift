@@ -1,24 +1,25 @@
 import SwiftUI
 
-/// Identifiers for each paywall context. Each maps to a RevenueCat offering of the same
-/// name (so analytics + product attribution stay per-context) but is now rendered by a
-/// **native** SwiftUI paywall rather than a RevenueCat dashboard template.
+/// Identifiers for each paywall context, rendered by **native** SwiftUI paywalls rather than
+/// RevenueCat dashboard templates.
+///
+/// The price shown and charged always comes from the offering RevenueCat currently serves
+/// (`offerings.current`, which is what experiments swap), so a customer sees one price
+/// everywhere. The offering of the same name as the context is only a fallback when the
+/// current offering has no annual package; analytics keep the context in `context`.
 enum SophiaPaywallContext: String, Identifiable {
     case finOnboarding = "fin_onboarding"
     case offreDiscount = "offre_discount"
     case debloquerCours = "debloquer_cours"
     case quizz = "quizz"
-    /// Training-tab unlock. Its own analytics funnel, but purchases still attribute to the
-    /// `quizz` RevenueCat offering (see `offeringIdentifier`).
+    /// Training-tab unlock. Its own analytics funnel; its fallback offering is `quizz`
+    /// (see `offeringIdentifier`).
     case entrainement = "entrainement"
-    /// Shown to someone who has cancelled and is running out their remaining period.
-    /// It sells the standard annual package at an App Store promotional-offer price, so
-    /// it has no offering of its own — impressions fall back to the current one.
-    case retention = "retention"
 
     var id: String { rawValue }
 
-    /// RevenueCat offering identifier used for purchase attribution. Usually the raw value,
+    /// Fallback RevenueCat offering identifier for this context (see
+    /// `StoreViewModel.displayedOffering(forContextIdentifier:)`). Usually the raw value,
     /// but `.entrainement` reuses the shared `quizz` offering.
     var offeringIdentifier: String {
         switch self {
@@ -30,12 +31,11 @@ enum SophiaPaywallContext: String, Identifiable {
 
 /// Dispatcher that renders the appropriate native paywall for a given context.
 ///
-/// - `.offreDiscount` → `SophiaDiscountPaywall` (flash sale, `offre_discount`, 19,99 €/an).
+/// - `.offreDiscount` → `SophiaDiscountPaywall` (flash sale on the `offre_discount` offering).
 /// - `.entrainement` → `SophiaTrainingPaywall` (sells the spaced-repetition training method).
 /// - `.quizz` → `SophiaQuizPaywall` (auto-playing quiz demo, FAQ, activate-trial CTA).
 /// - `.debloquerCours` → `SophiaCourseUnlockPaywall` (rating, 6-courses/day stat, reviews, countdown).
-/// - `.finOnboarding` → `SophiaStandardPaywall` (single annual plan, 39,99 €/an, 3-day trial).
-/// - `.retention` → `SophiaRetentionPaywall` (cancellation save, Apple promotional offer).
+/// - `.finOnboarding` → `SophiaStandardPaywall` (single annual plan, price and trial from the store).
 struct SophiaPaywallView: View {
     let context: SophiaPaywallContext
     let store: StoreViewModel
@@ -43,11 +43,6 @@ struct SophiaPaywallView: View {
     var discountManager: DiscountOfferManager? = nil
     /// Seconds until the daily free course resets, forwarded to the course-unlock paywall.
     var secondsUntilReset: Int? = nil
-    /// Streak, courses and renewal date for `.retention`. Required by that context only.
-    var retentionSummary: RetentionSummary? = nil
-    /// `.retention` only: hands the reader over to Apple's subscription settings, which
-    /// is the only place a subscription can actually be cancelled.
-    var onContinueToCancel: (() -> Void)? = nil
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
     var onDismissed: (() -> Void)? = nil
@@ -60,21 +55,6 @@ struct SophiaPaywallView: View {
     @ViewBuilder
     private var paywall: some View {
         switch context {
-        case .retention:
-            SophiaRetentionPaywall(
-                store: store,
-                summary: retentionSummary ?? RetentionSummary(
-                    streak: 0,
-                    completedCourses: 0,
-                    globalXP: 0,
-                    expiresAt: nil,
-                    isTrial: false
-                ),
-                onPurchased: onPurchased,
-                onRestored: onRestored,
-                onDismissed: onDismissed,
-                onContinueToCancel: onContinueToCancel
-            )
         case .offreDiscount:
             SophiaDiscountPaywall(
                 store: store,

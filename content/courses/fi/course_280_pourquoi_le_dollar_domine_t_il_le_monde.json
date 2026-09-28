@@ -1,0 +1,221 @@
+{
+  "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde",
+  "title": "Miksi dollari hallitsee maailmaa?",
+  "subtitle": "Bretton Woods, 1944",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Talous ja yhteiskunta",
+  "description": "Vuonna 2022 Sri Lankalta loppuvat dollarit, se ei pysty maksamaan polttoainettaan, ja lukiolaiset jäävät kotiin. Miten yhden maan valuutasta tuli koko maapallon raha?",
+  "author": "mark-n-hoffman",
+  "hero": {
+    "image": "us_hundred_dollar_bills_stack_close_up",
+    "ratio": "4:3",
+    "hook": "Kun maalta loppuvat dollarit, sen koulukyydit pysähtyvät: yhden kansakunnan valuutasta on tullut koko maailman raha."
+  },
+  "sections": [
+    {
+      "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Huhtikuussa 2022** Jithminin koulukuljetusautosta loppuu polttoaine. **17-vuotias** srilankalainen tyttö ei pääse enää lukioon. Maan keskuspankki säästää harvat dollarinsa välttämättömään tuontiin, ennen kaikkea polttoaineeseen. Veronalennukset ja matkailun romahdus ovat laukaisseet valuuttakriisin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yhdysvaltain ulkopuolella monet yritykset laskuttavat dollareissa, pankit lainaavat dollareita, ja hallitusten [[valuuttavarannot]] ovat dollareina, jotta ulkomaille voidaan maksaa ja hätätilanteisiin varautua. Srilankalaisen maahantuojan, joka on toimittajalleen velkaa dollareita, on hankittava ne ennen kuin lasti lähtee matkaan. Miksi niin moni myyjä hyväksyy vain dollareita? Se on pitkä tarina."
+        }
+      ]
+    },
+    {
+      "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde_p1",
+      "title": "1944: Amerikalla on kulta, tavarat ja raha",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Toinen maailmansota antaa Yhdysvalloille ennennäkemättömän painoarvon maailman rahajärjestelmän säännöissä. Sen tehtaat tuottavat ylijäämää samaan aikaan, kun Euroopan tehtaat, tiet ja satamat ovat raunioina. Sodan aikana ja sen jälkeen Yhdysvalloilla on hallussaan **valtaosa kullasta**, jolla kansainväliset maksut hoidetaan, ja se on maailman suurin velkoja."
+        },
+        {
+          "type": "image",
+          "asset": "gold_bars_federal_reserve_new_york_vault",
+          "ratio": "3:2",
+          "caption": "12,5 kilon kultaharkko, keskuspankkien varantojen vakiokoko, esillä sveitsiläisessä museossa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eurooppa tarvitsee ruokaa, polttoainetta ja koneita. Amerikkalaiset yritykset voivat myydä niitä, mutta haluavat dollareita, joita teollisuudeltaan tuhoutuneiden Euroopan maiden on vaikea ansaita viennillä. Lainat ja avustukset paikkaavat myöhemmin osan aukosta. Kun **44 valtuuskuntaa** kokoontuu New Hampshiressa vuonna **1944**, ne kirjoittavat säännöt maailmalle, jossa Amerikalla on tavarat, kulta ja lainattava raha."
+        }
+      ]
+    },
+    {
+      "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde_p2",
+      "title": "Bretton Woods: dollari, kulta ja Keynes",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kun [[Bretton Woodsin konferenssi]] kokoontuu, edustajat sitoutuvat pitämään valuuttansa kiinteässä arvossa dollariin nähden, mutta arvoa voi muuttaa vakavissa vaikeuksissa. Yhdysvallat lupaa vaihtaa ulkomaisten hallitusten dollarit kultaan hintaan **35 dollaria unssilta**. Muut valuutat sidotaan dollariin ja dollari kultaan."
+        },
+        {
+          "type": "image",
+          "asset": "keynes_harry_dexter_white_bretton_woods_1944",
+          "ratio": "2:1",
+          "caption": "Mount Washington -hotellin kokoussali Bretton Woodsissa, jossa heinäkuun 1944 konferenssi pidettiin (tuore kuva)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Britannian puolesta neuvotteleva [[John Maynard Keynes]] haluaa mennä pidemmälle: maat maksaisivat keskinäiset velkansa uudella yksiköllä, jonka nimi olisi [[bancor]], ja maita, jotka myyvät paljon enemmän kuin ostavat, painostettaisiin korjaamaan suuntaa, aivan kuten liikaa ostavia. Kultaansa luottava amerikkalaisryhmä suosii rahastoa, joka lainaa kansallisia valuuttoja. Sopimuksella perustetaan [[Kansainvälinen valuuttarahasto]]; bancor ja suurin osa ylijäämämaihin kohdistuvasta paineesta jäävät paperille."
+        }
+      ]
+    },
+    {
+      "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde_p3",
+      "title": "1971: kulta-ajan loppu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1960-luvun lopulla ulkomailla on enemmän dollareita kuin Yhdysvaltain kulta riittää kattamaan kiinteällä hinnalla. Jotkin hallitukset pyytävät saada vaihtaa dollarinsa kultaan. **Elokuussa 1971** presidentti Nixon lakkaa lunastamasta lupausta. Vuonna **1973** suurten valuuttojen kiinteät kurssit ovat historiaa, ja tilalle ovat tulleet [[kelluvat valuuttakurssit]]: valuutan arvo vaihtelee nyt markkinoiden mukaan."
+        },
+        {
+          "type": "image",
+          "asset": "richard_nixon_televised_address_august_1971",
+          "ratio": "4:3",
+          "caption": "Richard Nixon televisiossa vuonna 1952, lähes kaksikymmentä vuotta ennen elokuun 1971 dollaripäätöstään."
+        },
+        {
+          "type": "paragraph",
+          "text": "Silti laskut tulevat yhä dollareina, ja pankit haluavat saada lainansa takaisin dollareina. Hallitukset pitävät varannoissaan dollareita, ja usein ne ovat [[Yhdysvaltain valtionobligaatiot]], Yhdysvaltain valtiolle annettuja lainoja, joita on helppo ostaa ja myydä. Jokainen dollarin käyttökerta tekee seuraavasta ennustettavamman, turvallisemman ja yksinkertaisemman. Vanhan lainan periminen ei vaadi kultalupausta: sopimus edellyttää dollareita, ja niin edellyttävät uudetkin sopimukset."
+        },
+        {
+          "type": "funFact",
+          "text": "Maaliskuussa 2020 Yhdysvaltain keskuspankki avasi väliaikaiset rahoituslinjat toimittaakseen dollareita yhdeksälle uudelle ulkomaiselle keskuspankille. Puoli vuosisataa kultalupauksen päättymisen jälkeen dollarin kysyntä pomppaa yhä kriisien aikana."
+        }
+      ]
+    },
+    {
+      "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde_p4",
+      "title": "Itseään ruokkiva ylivalta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Keskuspankeilla on yhä dollareita, IMF:n mukaan noin **57 %** ilmoitetuista valuuttavarannoista vuoden 2026 alussa, ja yritykset laskuttavat ja lainaavat edelleen dollareissa. Jos dollari vähitellen menettäisi etumatkansa, uudet sopimukset voitaisiin tehdä euroissa tai jossakin muussa valuutassa, keskuspankit siirtäisivät varojaan, ja Yhdysvaltain valtio, jota ulkomaiset lainanantajat eivät enää tavoittelisi yhtä innokkaasti, maksaisi lainanotostaan enemmän. Vanhat dollarilainat olisi kuitenkin yhä maksettava dollareina."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Heinäkuu 1944",
+              "title": "Bretton Woods",
+              "detail": "44 valtuuskuntaa sitoo valuuttansa dollariin ja dollarin kultaan."
+            },
+            {
+              "date": "Elokuu 1971",
+              "title": "Kultalupaus päättyy",
+              "detail": "Nixon lopettaa ulkomaisten hallitusten dollarien vaihtamisen kultaan."
+            },
+            {
+              "date": "1973",
+              "title": "Kelluvat kurssit",
+              "detail": "Suurten valuuttojen kurssit kelluvat suhteessa dollariin."
+            },
+            {
+              "date": "Maaliskuu 2020",
+              "title": "Dollarilinjat",
+              "detail": "Yhdysvaltain keskuspankki toimittaa dollareita yhdeksälle uudelle keskuspankille."
+            },
+            {
+              "date": "Huhtikuu 2022",
+              "title": "Kriisi Sri Lankassa",
+              "detail": "Dollarien puutteessa polttoaine loppuu ja koulukyydit pysähtyvät."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Jos Sri Lankan polttoainelaskuun olisi kirjoitettu toinen valuutta, Jithminin koulukuljetusauton tankki ei olisi silti täyttynyt. Maa olisi yhä tarvinnut rahaa, jonka myyjä hyväksyy, ja se olisi pitänyt saada viennistä, varannoista tai lainasta. Valuutan nimi voi vaihtua, mutta ongelma pysyy: sitä on saatava kokoon tarpeeksi, jotta tuonnin voi maksaa."
+        },
+        {
+          "type": "takeaway",
+          "text": "Dollari hallitsee, koska vuoden 1944 Amerikalla oli kulta, tavarat ja raha, ja sen jälkeen siksi, että jokainen dollarilasku ja dollarilaina teki seuraavasta luontevamman: kultalupaus katosi vuonna 1971, tottumus jäi."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "UNICEF Sri Lanka, « In Tackling the Current Crisis in Sri Lanka, Put Children's Needs First », communiqué du 27 avril 2022.",
+      "url": "https://www.unicef.org/srilanka/press-releases/tackling-current-crisis-sri-lanka-put-childrens-needs-first"
+    },
+    {
+      "text": "Central Bank of Sri Lanka, Financial System Stability Review 2022, p. 40.",
+      "url": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/publications/fssr/fssr_2022e.pdf"
+    },
+    {
+      "text": "International Monetary Fund, Sri Lanka: 2021 Article IV Consultation, Country Report n° 22/91, mars 2022, résumé et paragraphes 9-10.",
+      "url": "https://www.imf.org/en/publications/cr/issues/2022/03/25/sri-lanka-2021-article-iv-consultation-press-release-staff-report-and-statement-by-the-515737"
+    },
+    {
+      "text": "C. Bertaut, B. von Beschwitz et S. Curcuru, « The International Role of the U.S. Dollar: 2025 Edition », FEDS Notes, Federal Reserve Board, 18 juillet 2025.",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/the-international-role-of-the-u-s-dollar-2025-edition-20250718.html"
+    },
+    {
+      "text": "B. Eichengreen et M. Flandreau, « The Rise and Fall of the Dollar, or When Did the Dollar Replace Sterling as the Leading Reserve Currency? », 2008, p. 1-3.",
+      "url": "https://eml.berkeley.edu/~eichengr/rise_fall_dollar_temin.pdf"
+    },
+    {
+      "text": "R. L. Hetzel, « Launch of the Bretton Woods System », Federal Reserve History, 2013.",
+      "url": "https://www.federalreservehistory.org/essays/bretton-woods-launched"
+    },
+    {
+      "text": "Governments of the United States and United Kingdom, Anglo-American Financial and Commercial Agreements, 6 décembre 1945, « Financial Agreement », sections 2-3, p. 7, Federal Reserve Bank of St. Louis (FRASER).",
+      "url": "https://fraser.stlouisfed.org/files/docs/historical/martin/17_07_19451206.pdf"
+    },
+    {
+      "text": "S. Kollen Ghizoni, « Creation of the Bretton Woods System », Federal Reserve History, 2013.",
+      "url": "https://www.federalreservehistory.org/essays/bretton-woods-created"
+    },
+    {
+      "text": "J. M. Boughton, « Why White, Not Keynes? Inventing the Postwar International Monetary System », IMF Working Paper n° 02/52, 2002.",
+      "url": "https://www.imf.org/en/publications/wp/issues/2016/12/30/why-white-not-keynes-inventing-the-post-war-international-monetary-system-15718"
+    },
+    {
+      "text": "S. Kollen Ghizoni, « Nixon Ends Convertibility of U.S. Dollars to Gold and Announces Wage/Price Controls », Federal Reserve History, 2013.",
+      "url": "https://www.federalreservehistory.org/essays/gold-convertibility-ends"
+    },
+    {
+      "text": "International Monetary Fund, « World Official Foreign Currency Reserves Largely Unchanged in the First Quarter of 2026 », IMF Data Brief, 1er juillet 2026.",
+      "url": "https://data.imf.org/en/news/imf%20data%20brief%20july%201"
+    },
+    {
+      "text": "C. J. Waller, « The Dollar's International Role », discours, Federal Reserve Board, 15 février 2024.",
+      "url": "https://www.federalreserve.gov/newsevents/speech/waller20240215a.htm"
+    },
+    {
+      "text": "Metropolitan Museum of Art, « Cuneiform tablet: administrative account with entries concerning malt and barley groats », objet 1988.433.3, vers 3100-2900 av. J.-C.",
+      "url": "https://www.metmuseum.org/art/collection/search/327385"
+    },
+    {
+      "text": "Bank of England, « What Is Money? », 27 février 2025.",
+      "url": "https://www.bankofengland.co.uk/explainers/what-is-money"
+    },
+    {
+      "text": "Royal Society of Chemistry, « Gold », Periodic Table, « Uses and Properties » et « Natural Abundance ».",
+      "url": "https://periodic-table.rsc.org/element/79/"
+    },
+    {
+      "text": "Smithsonian National Museum of the American Indian, « The Great Inka Road: Impact of the Spanish Invasion ».",
+      "url": "https://americanindian.si.edu/inkaroad/invasion/impact.html"
+    },
+    {
+      "text": "G. Richardson, A. Komai et M. Gou, « Gold Reserve Act of 1934 », Federal Reserve History.",
+      "url": "https://www.federalreservehistory.org/essays/gold-reserve-act"
+    },
+    {
+      "text": "Board of Governors of the Federal Reserve System, « Federal Reserve Announces the Establishment of Temporary U.S. Dollar Liquidity Arrangements with Other Central Banks », communiqué du 19 mars 2020.",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200319b.htm"
+    }
+  ]
+}

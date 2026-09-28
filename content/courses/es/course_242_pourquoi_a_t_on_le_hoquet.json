@@ -1,0 +1,135 @@
+{
+  "id": "course_242_pourquoi_a_t_on_le_hoquet",
+  "title": "¿Por qué nos da hipo?",
+  "subtitle": "Reflejos y respiración",
+  "subject": "sciences",
+  "subcategory": "Nuestro día a día explicado",
+  "description": "Un espasmo del diafragma, una glotis que se cierra de golpe y ese “hip” imposible de controlar. Lo que el cuerpo hace de verdad, y por qué ningún remedio está probado.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "child_hiccups_surprised_hand_over_mouth",
+    "ratio": "4:3",
+    "hook": "Te dicen que aguantes la respiración, que bebas cabeza abajo o que alguien te asuste. Pero ¿qué pasa realmente en tu cuerpo?"
+  },
+  "sections": [
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A todo el mundo le da hipo, del bebé al abuelo, y cada uno conoce un remedio infalible. El vecino jura por el vaso de agua bebido al revés, la abuela por la cucharada de azúcar. Sin embargo, el hipo sigue siendo uno de los reflejos más misteriosos del cuerpo humano."
+        },
+        {
+          "type": "paragraph",
+          "text": "Detrás de ese pequeño “hip” hay un mecanismo preciso: nervios, un músculo que se contrae sin avisar y una puerta que se cierra de golpe en la garganta. Esto es lo que la medicina sabe del hipo, y lo que todavía ignora."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+      "title": "Un reflejo que se salta el cerebro",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El hipo pasa por un [[arco reflejo]], un circuito nervioso que desencadena una reacción sin decisión consciente. Es el mismo mecanismo que hace saltar tu pierna cuando el médico te golpea bajo la rodilla, o que retira tu mano de una placa ardiendo antes incluso de que sientas el dolor."
+        },
+        {
+          "type": "image",
+          "asset": "mouse_diaphragm_muscle_fibres_microscopy",
+          "ratio": "auto",
+          "caption": "El diafragma visto al microscopio: un músculo estriado, como los de los brazos y las piernas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cuando los nervios que conectan el cerebro con los músculos de la respiración se irritan, el [[diafragma]] se contrae de golpe. El aire entra de repente en los pulmones. Una fracción de segundo después, la [[glotis]], la abertura entre las cuerdas vocales, se cierra bruscamente. Ese chasquido es lo que produce el “hip”."
+        },
+        {
+          "type": "funFact",
+          "text": "El nombre científico del hipo es *singultus*, una palabra latina que también significa sollozo. No es raro, entonces, que el hipo sacuda a los niños después de un buen llanto."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+      "title": "Del feto al abuelo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La mayoría de los hipos son **transitorios**: duran menos de **48 horas** y se van solos. Sus causas son corrientes: comer demasiado rápido, tomar bebidas con gas, tragar aire o beber alcohol. Todo lo que dilata el estómago o irrita los nervios cercanos puede poner en marcha el reflejo."
+        },
+        {
+          "type": "image",
+          "asset": "fetal_ultrasound_scan_pregnancy",
+          "ratio": "2:1",
+          "caption": "En la ecografía ya se ve al feto con hipo, mucho antes de su primera respiración."
+        },
+        {
+          "type": "paragraph",
+          "text": "El hipo aparece a cualquier edad, e incluso antes de nacer. Las ecografías muestran fetos con hipo en el vientre de su madre. Y eso que no comen demasiado rápido. Una hipótesis: estos espasmos entrenarían los músculos respiratorios, como un ensayo general antes de la primera bocanada de aire."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+      "title": "Cuando el hipo no se va",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A veces el hipo se instala. Si dura más de **dos días**, se habla de hipo **persistente**; si pasa de **un mes**, de [[hipo refractario]]. Estas formas raras suelen indicar otra cosa: una enfermedad del estómago o del esófago, un problema pulmonar o una lesión del sistema nervioso central."
+        },
+        {
+          "type": "paragraph",
+          "text": "En esos casos, el médico busca la causa y receta un tratamiento, a veces medicamentos que calman el circuito reflejo. El hipo deja de ser una molestia pasajera y se convierte en un síntoma que impide comer, dormir y hablar."
+        },
+        {
+          "type": "funFact",
+          "text": "El récord del hipo más largo lo tiene un granjero estadounidense, [[Charles Osborne]], que tuvo hipo sin parar de **1922 a 1990**, es decir, 68 años, según el Libro Guinness de los récords. Aun así, tuvo tiempo de casarse dos veces y de tener ocho hijos."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+      "title": "Decenas de remedios, ninguno probado",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Con un hipo transitorio, la buena noticia es que desaparece solo. La no tan buena: ningún remedio casero ha sido validado por un estudio serio. Aguantar la respiración, beber agua fría, tirar de la lengua, respirar dentro de una bolsa... Todo se basa en testimonios, no en pruebas."
+        },
+        {
+          "type": "image",
+          "asset": "glass_of_cold_water_home_remedy_hiccups",
+          "ratio": "3:2",
+          "caption": "El vaso de agua fría: el remedio más extendido, y uno de los menos estudiados."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aun así, estos trucos tienen una lógica común: alteran el circuito reflejo. Aguantar la respiración aumenta el dióxido de carbono en la sangre y calma el diafragma. Tragar o sacar la lengua estimula los nervios de la garganta y puede “reiniciar” el circuito. A veces funciona. Sin que se sepa bien por qué."
+        },
+        {
+          "type": "takeaway",
+          "text": "El hipo es un reflejo: el diafragma se contrae, la glotis se cierra, “hip”. Pasajero en casi todos los casos, se convierte en un síntoma a partir de las 48 horas. Ningún remedio casero está probado, aunque todos buscan romper el circuito."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Alimentary Pharmacology & Therapeutics (Wiley), revue sur la physiopathologie et le traitement du hoquet.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.13374"
+    },
+    {
+      "text": "Cleveland Clinic, « Hiccups ».",
+      "url": "https://my.clevelandclinic.org/health/diseases/17672-hiccups"
+    },
+    {
+      "text": "Guinness World Records, « Longest attack of hiccups ».",
+      "url": "https://www.guinnessworldrecords.com/world-records/67619-longest-attack-of-hiccups"
+    }
+  ]
+}

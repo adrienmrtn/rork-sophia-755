@@ -1,14 +1,15 @@
 {
   "id": "course_149_la_joconde",
-  "title": "Wat maakte de „Mona Lisa” zo beroemd?",
-  "subtitle": "1503-1519",
+  "title": "Vond Leonardo de Mona Lisa eigenlijk wel belangrijk?",
+  "subtitle": "1503",
   "subject": "art",
-  "subcategory": "Iconic works",
-  "description": "Geschilderd door **Leonardo da Vinci** tussen **1503** en **1519** werd *Mona Lisa* het absolute icoon van het Louvre. Techniek, mysterieuze glimlach... en een diefstal in **1911** die alles veranderde.",
+  "subcategory": "Iconische werken",
+  "description": "Het is het beroemdste schilderij ter wereld. Toch had de maker zelf in 1503 wel wat beters te doen dan het portret van een koopmansvrouw.",
+  "author": "dusan-nikolic",
   "hero": {
     "image": "la_joconde",
     "ratio": "16:9",
-    "hook": "Een glimlach, een diefstal, een mythe: hoe een portret het beroemdste werk ter wereld werd."
+    "hook": "Het meest bekeken schilderij op aarde was voor Leonardo misschien maar een bijklus."
   },
   "sections": [
     {
@@ -18,89 +19,93 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "*Mona Lisa*, geschilderd tussen **1503** en **1519** door **Leonardo da Vinci**, is het meest bezochte schilderij ter wereld. Te zien in het **Louvre** fascineert ze evenzeer door haar techniek als door haar geschiedenis. Het is niet alleen een mooi portret. Het is een mythe, gemaakt door kunst, wetenschap en een geruchtmakende zaak."
+          "text": "Voor een van de beroemdste schilderijen ter wereld weten we opvallend weinig zeker over de *Mona Lisa*. Kunsthistorici zijn het over de hoofdzaken eens: Leonardo da Vinci schilderde haar in Florence tussen **1503 en 1506**. In **1517** nam hij het paneel mee naar Frankrijk, waar het in de collectie van koning [[Frans I]] belandde."
         },
         {
           "type": "paragraph",
-          "text": "Waarom dit gezicht eerder dan een ander? Omdat Leonardo er vondsten in bundelde, en omdat een spectaculaire diefstal haar wereldberoemd maakte."
+          "text": "Het historische gat raakte gevuld met legendes. Over het schilderij praat men als over een vrouw: „zij”. Haar halve glimlach heet mysterieus. Na de diefstal van **1911** twijfelde men zelfs aan de echtheid. Al die verhalen maakten het werk beroemd, maar ze wisten de context uit. Want toen Leonardo het schilderde, betekende het voor hem misschien helemaal niets."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p1",
-      "title": "Leonardo en het sfumato",
+      "title": "Wie is de Mona Lisa?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Het portret begint in Florence rond **1503**. De opdrachtgever is de koopman **Francesco del Giocondo**. Het model zou zijn vrouw zijn, [[Lisa Gherardini]]. Maar Leonardo levert het schilderij nooit. Hij bewaart het paneel, werkt er jaren aan en neemt het mee naar Frankrijk, waar hij in **1519** sterft."
+          "text": "Kunsthistorici nemen algemeen aan dat het model [[Lisa Gherardini]] was, de vrouw van **Francesco del Giocondo**, koopman en kleine notabele in het Florentijnse bestuur. Vandaar de andere naam van het schilderij: *La Gioconda*. Die identificatie steunt op de biografie van Leonardo die [[Giorgio Vasari]] in **1550** en opnieuw in **1568** publiceerde, in zijn *Levens van de beroemdste schilders, beeldhouwers en architecten*."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_leonardo_da_vinci_louvre_painting",
-          "ratio": "4:3",
-          "caption": "Mona Lisa in het Louvre: een klein populierenpaneel dat een wereldicoon werd"
+          "asset": "vasari_lives_of_the_artists_1568_title_page",
+          "ratio": "3:4",
+          "caption": "De Levens van Vasari, Florentijnse uitgave van 1568: de tekst die het model een naam geeft."
         },
         {
           "type": "paragraph",
-          "text": "Zijn kenmerkende techniek is de [[Leonardiaanse sfumato]]: glacis, heel dunne lagen, die de contouren wissen. Geen harde lijn meer. Het gezicht lost op in de lucht. Leonardo voegt ook het [[Luchtperspectief]] toe: het verre landschap wordt blauwer en zachter, zoals in het echte zien."
+          "text": "Waarom bestelde Francesco dit portret? Dat weet niemand. Leonardo begon er begin **1503** aan. Wat daarna gebeurde, staat nog ter discussie: volgens historici is het verhaal van Vasari eerder literaire fantasie, van een biograaf die de gaten vult met een mooi verhaal. Halverwege **1506** vertrok Leonardo uit Florence naar Milaan, op zoek naar betere opdrachten. Het onvoltooide portret ging mee."
+        },
+        {
+          "type": "funFact",
+          "text": "Volgens Vasari huurde Leonardo muzikanten en narren in om zijn model te vermaken tijdens het poseren. Historici zien er een verzinsel van de biograaf in, maar juist dat verhaal zette de mythe van „de glimlach van de Mona Lisa” in gang."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p2",
-      "title": "De glimlach die met het oog speelt",
+      "title": "Anghiari: een eervollere opdracht",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De beroemde glimlach is niet alleen een geschilderde emotie. Ze speelt met onze [[Perifere visie]]. Als je de ogen van het model vastzet, zien de randen van het netvlies de mond in zachte schaduwen: de glimlach lijkt aanwezig. Als je rechtstreeks naar de mond kijkt, zwakt hij af."
+          "text": "In oktober **1503** nam het Florentijnse bestuur Leonardo in dienst om de [[Slag bij Anghiari]] te schilderen in het [[Palazzo Vecchio]], de zetel van de Florentijnse Republiek. De muurschildering moest de overwinning van Florence op Milaan in **1440** vieren. In de renaissance was een historiestuk veel meer waard dan een portret. Samen met religieuze, mythologische en allegorische onderwerpen gold het als de hoogste vorm van kunst."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_smile_detail_close_up",
-          "ratio": "1:1",
-          "caption": "Hoe meer je hem vastzet, hoe meer de glimlach zich lijkt te onttrekken"
-        },
-        {
-          "type": "funFact",
-          "text": "Leonardo, tegelijk schilder en geleerde, bestudeerde de optica. Het mysterie van de glimlach rust deels op een precieze kennis van hoe het menselijk oog schaduwen verwerkt."
+          "asset": "rubens_copy_battle_of_anghiari_louvre_drawing",
+          "ratio": "16:9",
+          "caption": "Rubens' kopie van het middelste gevecht: het enige spoor van de grote, onvoltooide schildering in het Palazzo Vecchio."
         },
         {
           "type": "paragraph",
-          "text": "Gevolg: het gezicht lijkt levend, wisselend, bijna bewust van onze blik."
+          "text": "Naast een grote openbare opdracht woog het privéportret van de vrouw van een kleine ambtenaar weinig. Vanaf december **1503** stak Leonardo steeds meer tijd in de voorbereiding van de grote compositie. Meer aanzien en beter betaald: de Mona Lisa moest wachten. Aan het eind van zijn tweede verblijf in Florence was het portret niet af. De *Slag bij Anghiari* evenmin: daarvan bleven alleen voorstudies en kopieën over."
+        },
+        {
+          "type": "funFact",
+          "text": "Misschien was alleen het landschap op de achtergrond nog niet af toen Leonardo in 1506 naar Milaan vertrok."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p3",
-      "title": "1911: de diefstal die de beroemdheid uitvindt",
+      "title": "Hoe een icoon ontstaat",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In de 19e eeuw wordt *Mona Lisa* bewonderd, maar is ze nog niet werk nummer 1 van het Louvre. Alles kantelt op **21 augustus 1911**. [[Vincenzo Peruggia]], een Italiaanse glazenier van het museum, steelt haar: dat is de [[diefstal van de Mona Lisa (1911)]]. Hij stopt haar onder zijn kiel en loopt rustig naar buiten."
+          "text": "Leonardo stierf op **2 mei 1519** in Amboise, in Frankrijk. De *Mona Lisa* kwam nooit bij de familie Giocondo terecht. Na de Franse Revolutie werd de koninklijke collectie openbaar en kwam het schilderij in het **Louvre**. Sinds het begin van de 19e eeuw is haar glimlach op duizend manieren beschreven, van goddelijk tot sensueel."
         },
         {
           "type": "image",
           "asset": "mona_lisa_stolen_1911_newspaper_headline",
           "ratio": "4:3",
-          "caption": "1911: de afwezigheid van het schilderij haalt de voorpagina en schept een ster"
+          "caption": "De voorpagina van Excelsior in januari 1914: de Mona Lisa keert terug na de diefstal van 1911."
         },
         {
           "type": "paragraph",
-          "text": "Het onderzoek slaat om in een schandaal. De dichter [[Guillaume Apollinaire]] zit een tijdje vast. [[Pablo Picasso]] wordt verhoord. Wanneer het schilderij in **1913** weer opduikt, is het niet meer alleen een schilderij. Het is een beroemdheid."
+          "text": "Het keerpunt was de diefstal van het schilderij uit het museum, in **1911**. De kranten maakten van de Mona Lisa een wereldsensatie. Sindsdien trekken de populaire pers en romans geregeld de echtheid van het werk en de identiteit van het model in twijfel, zonder enige basis in echt historisch onderzoek. Het schilderij werd het middelpunt van steeds meer verhalen, die we vandaag nog altijd horen."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p4",
-      "title": "Een icoon achter glas",
+      "title": "Een schilderij dat groter werd dan zijn maker",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vandaag, geschilderd op populierenhout, leeft ze achter [[Kogelvrij glas]], in een geklimatiseerde vitrine. Zuur aanvallen, voorwerpen gooien: de bescherming werd nodig. En de parodieën, van Duchamp tot internet, bewijzen dat ze een universele taal werd."
+          "text": "Meer dan **500 jaar** nadat het portret werd begonnen, trekt Lisa del Giocondo meer publiek dan ooit. Achter kogelvrij glas in het Louvre is het schilderij losgeknipt uit zijn historische context. Juist daardoor kreeg het de status van universeel icoon. Die status heeft een prijs: in de moderne tijd is er geen restauratie meer ondernomen."
         },
         {
           "type": "timeline",
@@ -108,30 +113,47 @@
             {
               "date": "1503",
               "title": "Begin van het portret",
-              "detail": "Leonardo begint Mona Lisa in Florence."
+              "detail": "Leonardo begint in Florence aan het portret van Lisa Gherardini."
+            },
+            {
+              "date": "okt. 1503",
+              "title": "De opdracht voor Anghiari",
+              "detail": "Florence geeft hem een grote muurschildering voor het Palazzo Vecchio."
+            },
+            {
+              "date": "1506",
+              "title": "Vertrek naar Milaan",
+              "detail": "Leonardo verlaat Florence, met het onvoltooide portret onder de arm."
             },
             {
               "date": "1519",
               "title": "Dood van Leonardo",
-              "detail": "Het schilderij blijft in Frankrijk."
+              "detail": "In Amboise, op 2 mei. Het schilderij blijft in Frankrijk."
             },
             {
               "date": "1911",
               "title": "De diefstal",
-              "detail": "Peruggia maakt van het werk een mediamythe."
-            },
-            {
-              "date": "1913",
-              "title": "Terugkeer",
-              "detail": "Het schilderij keert als wereldster terug naar het Louvre."
+              "detail": "De pers maakt van de Mona Lisa een wereldsensatie."
             }
           ]
         },
         {
+          "type": "paragraph",
+          "text": "Het door de eeuwen vergeelde [[vernis]] verwijderen, de beschermlaag van een olieverfschilderij, zou het werk kunnen beschadigen. En zelfs als een restauratie lukt, vreest men dat de *Mona Lisa* haar aantrekkingskracht verliest. Leonardo's oorspronkelijke techniek en kleuren tellen minder dan het beeld. Als drager van talloze verhalen is het schilderij groter geworden dan zijn maker en dan de kunstgeschiedenis."
+        },
+        {
           "type": "takeaway",
-          "text": "*Mona Lisa* dankt haar roem evenzeer aan het genie van Leonardo (sfumato, optische glimlach) als aan de geschiedenis: een diefstal in 1911 veranderde een bewonderd meesterwerk in een wereldicoon."
+          "text": "In 1503 opzijgezet voor een eervollere opdracht, dankt de *Mona Lisa* haar status als icoon aan vijf eeuwen legendes en een diefstal, veel meer dan aan de plaats die Leonardo haar gaf."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. Campbell, Leonardo da Vinci: An Untraceable Life, Princeton University Press, 2025, p. 43-45."
+    },
+    {
+      "text": "F. Zöllner, « Leonardo's Portrait of Mona Lisa del Giocondo », Gazette des Beaux-Arts, vol. 121, 1993, p. 115-138."
     }
   ]
 }

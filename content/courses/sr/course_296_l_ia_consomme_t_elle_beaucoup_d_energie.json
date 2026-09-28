@@ -1,0 +1,139 @@
+{
+  "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie",
+  "title": "Da li veštačka inteligencija troši mnogo energije?",
+  "subtitle": "Iza svakog odgovora",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Životna sredina i budućnost",
+  "description": "Svaki odgovor veštačke inteligencije nastaje u zgradi punoj mašina koje rade danju i noću. Koliko struje to zaista košta, od treniranja modela do mreže koja ga napaja?",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "data_center_server_racks_aisle_blue_lights",
+    "ratio": "4:3",
+    "hook": "Veštačka inteligencija liči na softver, ali svaki odgovor nastaje u sasvim stvarnoj zgradi, priključenoj na istu mrežu kao i vaša kuća."
+  },
+  "sections": [
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Postavite pitanje veštačkoj inteligenciji na mreži i odgovor se pojavi za nekoliko sekundi. Ali sam posao se ne obavlja u vašem telefonu. Obavlja se u zgradi koja se zove [[centar podataka]], punoj mašina koje obrađuju i čuvaju informacije. Te mašine neprekidno troše struju, iako ih niko ne vidi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prema podacima koje objavljuje [[Međunarodna agencija za energiju]], svi centri podataka zajedno potrošili su 2025. godine oko **1,5%** svetske električne energije. Ta brojka obuhvata sve usluge na mreži, ne samo veštačku inteligenciju. Ali postrojenja namenjena veštačkoj inteligenciji brzo se umnožavaju. Jedan kratak odgovor sam po sebi košta malo. Ipak, za svaki od njih rade mašine, a više sistema istovremeno vuče struju da bi ga proizvelo."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p1",
+      "title": "Serveri, najveći potrošači",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jedan [[server]] je računar koji obrađuje podatke i pokreće usluge na mreži. U centru podataka serveri obavljaju najveći deo računanja, pa su zato i najveći potrošači struje. Ako se račun savremenog centra podataka raščlani, serveri u proseku odnose **60%**. Ta brojka važi za centre podataka uopšte, a ne samo za postrojenja veštačke inteligencije."
+        },
+        {
+          "type": "image",
+          "asset": "data_center_cooling_pipes_chillers",
+          "ratio": "3:2",
+          "caption": "Redovi servera u centru podataka: upravo oni troše najveći deo struje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ostatak odlazi na čuvanje i prenos podataka, hlađenje opreme i rad same zgrade. Hlađenje je važno, jer računar dok radi proizvodi toplotu. Bez sistema koji je odvodi, mašine bi se na kraju pregrejale. Struja iza jednog odgovora veštačke inteligencije, dakle, napaja mnogo više od računara koji ga proizvode."
+        },
+        {
+          "type": "funFact",
+          "text": "Prema IEA, potrošnja struje centara podataka namenjenih veštačkoj inteligenciji porasla je za 50% samo tokom 2025. godine."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p2",
+      "title": "Prvo trening, zatim odgovori",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pre nego što može da odgovara, usluzi veštačke inteligencije potreban je model: sistem koji je iz primera naučio pravilnosti. Njegovo stvaranje prolazi kroz fazu koja se zove [[treniranje]], kada računari pretresaju ogromne količine podataka. Taj posao može dugo da zaposli veoma moćne mašine."
+        },
+        {
+          "type": "image",
+          "asset": "frontier_supercomputer_oak_ridge_cabinets",
+          "ratio": "4:3",
+          "caption": "Ormari NASA-inog superračunara Kolumbija: mašine one vrste koja se koristi za treniranje modela."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kada je model istreniran, počinje drugi posao, a to je [[inferencija]]: proračun koji daje odgovor na vaš zahtev. Treniranje ne počinje iznova u celosti pri svakom pitanju, dok se inferencija ponavlja pri svakom upitu. Šta s vremenom više opterećuje? To zavisi od toga kako je usluga izgrađena i koliko je ljudi koristi. Veoma posećena usluga drži svoje računare zauzetim odgovaranjem, čak i između dve velike faze treniranja."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p3",
+      "title": "Upit bez fiksne cene",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Koliko struje troši jedan tekstualni upit? Objavljene procene ne daju isti odgovor. Gugl, merenjem svoje usluge u radu, smešta svoj medijalni tekstualni upit na **0,24 Wh**. Jedinica [[vat-čas]] (Wh) meri količinu energije. Druga studija, pak, dolazi do medijane od **0,31 Wh**, pri čemu se srednja polovina njenih standardnih upita kreće između **0,16 i 0,60 Wh**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Te brojke ne protivreče jedna drugoj: opisuju različite sisteme i metode, a ne dva suprotna merenja istog zadatka. One ujedno izostavljaju mnogo zahtevnije poslove. Kada se od veštačke inteligencije traži da pre odgovora rezonuje u više koraka, njeni računari ostaju zauzeti znatno duže. Energija po upitu zato zavisi od sistema, načina merenja i traženog posla."
+        },
+        {
+          "type": "funFact",
+          "text": "U istoj studiji upit sa dugim rezonovanjem, u kom model detaljno izlaže korake pre zaključka, dostiže medijanu od 3,91 Wh, više od deset puta više od standardnog upita."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p4",
+      "title": "Električne mreže pod pritiskom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ono što zovemo [[električna mreža]] jeste splet vodova koji prenosi struju od elektrana do kuća i preduzeća. Velika postrojenja veštačke inteligencije priključuju se na tu istu mrežu. Da bi dočarala razmere, IEA poredi godišnju potrošnju jednog centra podataka namenjenog veštačkoj inteligenciji, zgrade izgrađene pre svega za pokretanje takvih usluga, sa potrošnjom oko **100.000 domaćinstava**."
+        },
+        {
+          "type": "image",
+          "asset": "high_voltage_power_lines_data_center_virginia",
+          "ratio": "4:3",
+          "caption": "Stubovi dalekovoda vrlo visokog napona (750 kV): centri podataka priključuju se na tu istu mrežu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta postrojenja uz to imaju sklonost da se grupišu na istim mestima. Kada više velikih lokacija traži struju u istoj oblasti, one dele lokalnu mrežu, pa postojeće vodove ponekad treba ojačati. Region koji ima rezervne kapacitete lakše prima nove lokacije od regiona koji je već blizu svojih granica. Mesto na kom se gradi infrastruktura veštačke inteligencije zato nešto menja i za njene susede."
+        },
+        {
+          "type": "takeaway",
+          "text": "Struja veštačke inteligencije troši se na više nivoa, od servera koje treba hladiti do lokalne mreže, a cena jednog upita zavisi od sistema, merenja i traženog posla."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "International Energy Agency (IEA), Key Questions on Energy and AI, 2026, p. 9 et 17."
+    },
+    {
+      "text": "International Energy Agency (IEA), Energy and AI, 2025, p. 13, 38 et 52."
+    },
+    {
+      "text": "Shehabi et al., 2024 United States Data Center Energy Usage Report, Lawrence Berkeley National Laboratory, 2024, p. 22-23."
+    },
+    {
+      "text": "Oviedo et al., Joule, 2026, p. 1.",
+      "url": "https://doi.org/10.1016/j.joule.2026.102430"
+    },
+    {
+      "text": "Elsworth et al., Measuring the Environmental Impact of Delivering AI at Google Scale, Google, 2025, p. 7."
+    }
+  ]
+}
