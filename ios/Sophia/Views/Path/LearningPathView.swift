@@ -1,5 +1,14 @@
 import SwiftUI
 
+/// Where the trail is brought to when the page moves on its own.
+enum PathScrollAnchor {
+    /// A level's banner in the upper part of the screen: about a quarter of the way down, far
+    /// enough under the bar not to be drawn retracted, with its first pod visible below.
+    static let levelTop = UnitPoint(x: 0.5, y: 0.24)
+    /// A pod a little above the middle, so the pod after it (and its "start" bubble) shows too.
+    static let revealFocus = UnitPoint(x: 0.5, y: 0.36)
+}
+
 /// The "Parcours" tab. Every collection is a level drawn as a winding trail of pods, closed
 /// by a quiz pod. Levels open one after the other, the courses of a level one after the
 /// other, and whatever changed since the reader last looked (a course finished, a level
@@ -37,6 +46,8 @@ struct LearningPathView: View {
     @State private var showExplain = false
     /// Levels whose banner has slid under the top bar; the last of them is the one the bar names.
     @State private var passedBannerIds: Set<String> = []
+    /// Levels the lazy trail currently has built; a pod can only be scrolled to once its level is.
+    @State private var builtLevelIds: Set<String> = []
     @State private var barHeight: CGFloat = 52
 
     private struct PathToast: Identifiable {
@@ -139,6 +150,13 @@ struct LearningPathView: View {
                             },
                             onBannerCrossing: { passed in
                                 bannerCrossed(levelId: level.id, passed: passed)
+                            },
+                            onBuiltChange: { built in
+                                if built {
+                                    builtLevelIds.insert(level.id)
+                                } else {
+                                    builtLevelIds.remove(level.id)
+                                }
                             }
                         )
                         .id(level.id)
@@ -432,13 +450,26 @@ struct LearningPathView: View {
 
     private func runReveal(upgrades: [String], actual: [String: PathNodeState]) async {
         try? await Task.sleep(for: .milliseconds(450))
-        guard !Task.isCancelled, let first = upgrades.first else { return }
-        scrollTo(nodeId: first)
-        try? await Task.sleep(for: .milliseconds(700))
+        guard !Task.isCancelled else { return }
 
+        // Where the page was last brought to: pods within a row of it stay on screen, so
+        // the page only moves again when the sequence reaches further down.
+        var anchor: (levelId: String, row: Int)? = nil
         for id in upgrades {
             guard !Task.isCancelled else { return }
-            guard let target = actual[id] else { continue }
+            guard let target = actual[id],
+                  let level = snapshot.level(containing: id),
+                  let node = level.nodes.first(where: { $0.id == id }) else { continue }
+            let opensLevel = target == .available && level.nodes.first?.id == id
+            if opensLevel {
+                // The level unlock brings its banner into view itself.
+                anchor = (level.id, 0)
+            } else if anchor == nil || anchor?.levelId != level.id || abs(node.index - (anchor?.row ?? 0)) >= 2 {
+                await scrollToNode(id, anchor: PathScrollAnchor.revealFocus)
+                anchor = (level.id, node.index)
+                try? await Task.sleep(for: .milliseconds(250))
+                guard !Task.isCancelled else { return }
+            }
             switch target {
             case .completed:
                 await animateCompletion(of: id)
@@ -451,9 +482,16 @@ struct LearningPathView: View {
 
         guard !Task.isCancelled else { return }
         LearningPathSeenStore.save(actual)
-        try? await Task.sleep(for: .milliseconds(400))
-        guard !Task.isCancelled else { return }
-        scrollToCurrentNode()
+
+        // Rest on the pod to play, but only when it is not already right there.
+        if let currentId = snapshot.currentNodeId,
+           let level = snapshot.level(containing: currentId),
+           let node = level.nodes.first(where: { $0.id == currentId }),
+           anchor == nil || anchor?.levelId != level.id || abs(node.index - (anchor?.row ?? 0)) >= 2 {
+            try? await Task.sleep(for: .milliseconds(400))
+            guard !Task.isCancelled else { return }
+            await scrollToNode(currentId, anchor: PathScrollAnchor.revealFocus)
+        }
     }
 
     /// The pod fills with its colour and pops; then the connector below it creeps to the
@@ -546,7 +584,7 @@ struct LearningPathView: View {
     /// to life under a shower of confetti, and the level's first pod lights up.
     private func animateLevelUnlock(_ level: PathLevel, firstNodeId id: String) async {
         scrollTo(levelId: level.id)
-        try? await Task.sleep(for: .milliseconds(650))
+        try? await Task.sleep(for: .milliseconds(750))
         guard !Task.isCancelled else { return }
 
         withAnimation(.linear(duration: 0.55)) {
@@ -588,22 +626,39 @@ struct LearningPathView: View {
 
     // MARK: - Scrolling
 
+    /// Brings a level's banner just under the bar, low enough not to be retracted.
     private func scrollTo(levelId: String) {
         guard let proxy = scrollProxy else { return }
-        withAnimation(.easeInOut(duration: 0.5)) {
-            proxy.scrollTo(levelId, anchor: .top)
+        withAnimation(.easeInOut(duration: 0.55)) {
+            proxy.scrollTo(levelId, anchor: PathScrollAnchor.levelTop)
         }
     }
 
-    private func scrollTo(nodeId: String) {
+    /// One smooth move to a pod. A pod in a level the lazy trail has not built yet cannot be
+    /// found, so its level is brought in first and the pod settled on right after.
+    private func scrollTo(nodeId: String, anchor: UnitPoint = .center) {
         guard let proxy = scrollProxy, let level = snapshot.level(containing: nodeId) else { return }
-        // The level first, so a lazily built section exists before its pod is asked for.
-        proxy.scrollTo(level.id, anchor: .top)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-            withAnimation(.easeInOut(duration: 0.5)) {
-                proxy.scrollTo(nodeId, anchor: .center)
+        if builtLevelIds.contains(level.id) {
+            withAnimation(.easeInOut(duration: 0.55)) {
+                proxy.scrollTo(nodeId, anchor: anchor)
+            }
+        } else {
+            withAnimation(.easeInOut(duration: 0.45)) {
+                proxy.scrollTo(level.id, anchor: PathScrollAnchor.levelTop)
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                withAnimation(.easeInOut(duration: 0.45)) {
+                    proxy.scrollTo(nodeId, anchor: anchor)
+                }
             }
         }
+    }
+
+    /// Same as `scrollTo(nodeId:anchor:)`, waiting for the move to end.
+    private func scrollToNode(_ nodeId: String, anchor: UnitPoint) async {
+        let needsTwoMoves = snapshot.level(containing: nodeId).map { !builtLevelIds.contains($0.id) } ?? false
+        scrollTo(nodeId: nodeId, anchor: anchor)
+        try? await Task.sleep(for: .milliseconds(needsTwoMoves ? 1_050 : 600))
     }
 
     private func scrollToCurrentNode() {
@@ -644,6 +699,7 @@ private struct PathLevelSection: View {
     let barHeight: CGFloat
     let onTapNode: (PathNode) -> Void
     let onBannerCrossing: (Bool) -> Void
+    let onBuiltChange: (Bool) -> Void
 
     private func shownState(_ node: PathNode) -> PathNodeState {
         displayedStates[node.id] ?? node.state
@@ -694,6 +750,8 @@ private struct PathLevelSection: View {
             trailBody
                 .padding(.top, 30)
         }
+        .onAppear { onBuiltChange(true) }
+        .onDisappear { onBuiltChange(false) }
     }
 
     private var trailBody: some View {
