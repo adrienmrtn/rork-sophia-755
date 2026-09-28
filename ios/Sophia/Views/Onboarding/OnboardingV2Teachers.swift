@@ -10,11 +10,11 @@ struct OnboardingV2Teachers: View {
     let onNext: () -> Void
 
     @State private var logos: [UIImage] = []
-    @State private var offset: CGFloat = 0
-    @State private var stripWidth: CGFloat = 0
 
     private let logoHeight: CGFloat = 44
     private let gap: CGFloat = 40
+    /// Fixed slot per logo, so the strip's width is known without measuring anything.
+    private let slotWidth: CGFloat = 118
 
     var body: some View {
         OV2ScrollableContent {
@@ -72,72 +72,78 @@ struct OnboardingV2Teachers: View {
 
     // MARK: - Marquee
 
-    /// Two copies of the strip side by side, slid left forever: when the first copy is
-    /// fully out, the offset wraps and the second is exactly where the first was.
+    private var slotCount: Int { logos.isEmpty ? Self.placeholderSymbols.count : logos.count }
+    /// Width of one strip plus the gap to the next copy: the distance after which the
+    /// second copy sits exactly where the first was.
+    private var period: CGFloat { CGFloat(slotCount) * (slotWidth + gap) }
+
+    /// A fixed-height, full-width frame with the sliding strips drawn as an **overlay**:
+    /// an overlay never takes part in its parent's layout, so however wide the strips
+    /// are they cannot widen the page. The first version put them in the layout and the
+    /// whole column stretched off screen with them.
     private var marquee: some View {
-        TimelineView(.animation) { context in
-            HStack(spacing: gap) {
-                strip
-                strip
+        Color.clear
+            .frame(maxWidth: .infinity)
+            .frame(height: logoHeight + 16)
+            .overlay(alignment: .leading) {
+                TimelineView(.animation) { context in
+                    HStack(spacing: gap) {
+                        strip
+                        strip
+                    }
+                    .fixedSize()
+                    .offset(x: -marqueeOffset(at: context.date))
+                }
             }
-            .offset(x: -marqueeOffset(at: context.date))
-            .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .frame(height: logoHeight + 16)
-        .clipped()
-        .mask(
-            LinearGradient(
-                stops: [
-                    .init(color: .clear, location: 0),
-                    .init(color: .black, location: 0.12),
-                    .init(color: .black, location: 0.88),
-                    .init(color: .clear, location: 1),
-                ],
-                startPoint: .leading, endPoint: .trailing
+            .clipped()
+            .mask(
+                LinearGradient(
+                    stops: [
+                        .init(color: .clear, location: 0),
+                        .init(color: .black, location: 0.12),
+                        .init(color: .black, location: 0.88),
+                        .init(color: .clear, location: 1),
+                    ],
+                    startPoint: .leading, endPoint: .trailing
+                )
             )
-        )
     }
 
-    /// 38 points per second, wrapped on the strip width.
+    /// 38 points per second, wrapped on one strip period.
     private func marqueeOffset(at date: Date) -> CGFloat {
-        guard stripWidth > 0 else { return 0 }
         let travelled: Double = date.timeIntervalSinceReferenceDate * 38.0
-        let wrapped: Double = travelled.truncatingRemainder(dividingBy: Double(stripWidth))
+        let wrapped: Double = travelled.truncatingRemainder(dividingBy: Double(period))
         return CGFloat(wrapped)
     }
 
     private var strip: some View {
         HStack(spacing: gap) {
-            if logos.isEmpty {
-                ForEach(0..<6, id: \.self) { i in
-                    placeholder(i)
-                }
-            } else {
-                ForEach(logos.indices, id: \.self) { i in
-                    Image(uiImage: logos[i])
-                        .resizable()
-                        .renderingMode(.original)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: logoHeight)
-                        .opacity(0.85)
-                }
+            ForEach(0..<slotCount, id: \.self) { i in
+                slot(i)
+                    .frame(width: slotWidth, height: logoHeight)
             }
-        }
-        .padding(.trailing, gap)
-        .onGeometryChange(for: CGFloat.self) { proxy in
-            proxy.size.width
-        } action: { width in
-            stripWidth = width
         }
     }
 
-    private func placeholder(_ i: Int) -> some View {
-        let symbols = ["building.columns.fill", "books.vertical.fill", "graduationcap.fill", "text.book.closed.fill", "building.2.fill", "scroll.fill"]
-        return Image(systemName: symbols[i % symbols.count])
-            .font(.system(size: 30, weight: .medium))
-            .foregroundStyle(OV2.inkTertiary)
-            .frame(width: 72, height: logoHeight)
+    @ViewBuilder
+    private func slot(_ i: Int) -> some View {
+        if logos.isEmpty {
+            Image(systemName: Self.placeholderSymbols[i % Self.placeholderSymbols.count])
+                .font(.system(size: 30, weight: .medium))
+                .foregroundStyle(OV2.inkTertiary)
+        } else {
+            Image(uiImage: logos[i])
+                .resizable()
+                .renderingMode(.original)
+                .aspectRatio(contentMode: .fit)
+                .opacity(0.85)
+        }
     }
+
+    private static let placeholderSymbols = [
+        "building.columns.fill", "books.vertical.fill", "graduationcap.fill",
+        "text.book.closed.fill", "building.2.fill", "scroll.fill",
+    ]
 
     private static func loadLogos() -> [UIImage] {
         let urls = Bundle.main.urls(forResourcesWithExtension: "png", subdirectory: nil) ?? []

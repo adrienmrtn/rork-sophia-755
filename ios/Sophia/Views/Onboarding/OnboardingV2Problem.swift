@@ -1,19 +1,35 @@
 import SwiftUI
 
-/// « Se cultiver c'est long… et cher » : le problème, en trois phrases qui arrivent l'une
-/// après l'autre, juste avant « Sophia va t'aider ». Pas de bouton : on tape pour passer.
+/// « Se cultiver c'est long… et cher » : le problème, en trois phrases. Le gras avance mot
+/// à mot au rythme de la lecture, ligne après ligne ; une fois la dernière phrase lue, un
+/// coup de surligneur passe sur « personnalisé » et « clair ». Pas de bouton : on tape pour
+/// passer.
 struct OnboardingV2Problem: View {
     @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
 
-    @State private var revealed = 0
+    /// Number of words, across all lines, already in bold.
+    @State private var boldCount = 0
+    @State private var highlighted = false
     @State private var canTap = false
     @State private var hintPulse = false
     @State private var animTask: Task<Void, Never>?
 
-    private var lines: [String] {
-        (1...3).map { languageManager.text("onboardingV2.problem.line\($0)") }
+    private var lines: [[String]] {
+        (1...3).map { languageManager.text("onboardingV2.problem.line\($0)").split(separator: " ").map(String.init) }
     }
+
+    /// Words that get the highlighter, comma-separated in the strings file.
+    private var highlightWords: Set<String> {
+        Set(
+            languageManager.text("onboardingV2.problem.highlights")
+                .split(separator: ",")
+                .map { Self.normalized(String($0)) }
+                .filter { !$0.isEmpty }
+        )
+    }
+
+    private var totalWords: Int { lines.reduce(0) { $0 + $1.count } }
 
     var body: some View {
         ZStack {
@@ -22,21 +38,12 @@ struct OnboardingV2Problem: View {
             VStack(spacing: 0) {
                 Spacer()
 
-                VStack(alignment: .leading, spacing: 26) {
-                    ForEach(lines.indices, id: \.self) { i in
-                        let isLast = i == lines.count - 1
-                        Text(lines[i])
-                            .font(DS.title(isLast ? .title2 : .title, .heavy))
-                            .foregroundStyle(isLast ? OV2.accent : OV2.ink)
-                            .multilineTextAlignment(.leading)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .opacity(i < revealed ? 1 : 0)
-                            .offset(y: i < revealed ? 0 : 16)
-                            .blur(radius: i < revealed ? 0 : 6)
+                VStack(spacing: 28) {
+                    ForEach(lines.indices, id: \.self) { lineIndex in
+                        lineView(lineIndex)
                     }
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 32)
+                .padding(.horizontal, 30)
 
                 Spacer()
 
@@ -51,9 +58,10 @@ struct OnboardingV2Problem: View {
         .contentShape(Rectangle())
         .onTapGesture {
             guard canTap else {
-                // Impatient tap: the rest of the text lands at once.
+                // Impatient tap: the rest lands at once, highlighter included.
                 animTask?.cancel()
-                withAnimation(.easeOut(duration: 0.35)) { revealed = lines.count }
+                withAnimation(.easeOut(duration: 0.3)) { boldCount = totalWords }
+                withAnimation(.easeOut(duration: 0.5)) { highlighted = true }
                 allowTap()
                 return
             }
@@ -64,17 +72,77 @@ struct OnboardingV2Problem: View {
         .onDisappear { animTask?.cancel() }
     }
 
+    // MARK: - Lines
+
+    /// Index of the first word of a line, in the running count.
+    private func firstWordIndex(ofLine lineIndex: Int) -> Int {
+        lines.prefix(lineIndex).reduce(0) { $0 + $1.count }
+    }
+
+    private func lineView(_ lineIndex: Int) -> some View {
+        let words = lines[lineIndex]
+        let base = firstWordIndex(ofLine: lineIndex)
+        let isLast = lineIndex == lines.count - 1
+        let style: Font.TextStyle = isLast ? .title2 : .title
+        return OV2FlowLayout(spacing: 7, lineSpacing: 8) {
+            ForEach(words.indices, id: \.self) { i in
+                wordCell(
+                    words[i],
+                    bold: base + i < boldCount,
+                    style: style,
+                    highlight: isLast && highlightWords.contains(Self.normalized(words[i]))
+                )
+            }
+        }
+    }
+
+    /// One word, in a slot as wide as its bold form so the line never shifts when the
+    /// bold arrives. A highlighted word carries a marker stroke behind it that sweeps in
+    /// from the left once the reading is over.
+    private func wordCell(_ word: String, bold: Bool, style: Font.TextStyle, highlight: Bool) -> some View {
+        ZStack {
+            Text(word).font(DS.title(style, .heavy)).opacity(0)
+            if highlight {
+                RoundedRectangle(cornerRadius: 6, style: .continuous)
+                    .fill(OV2.warm.opacity(0.55))
+                    .padding(.horizontal, -5)
+                    .padding(.vertical, 2)
+                    .rotationEffect(.degrees(-1.5))
+                    .scaleEffect(x: highlighted ? 1 : 0.02, y: 1, anchor: .leading)
+                    .opacity(highlighted ? 1 : 0)
+            }
+            Text(word)
+                .font(DS.title(style, bold ? .heavy : .semibold))
+                .foregroundStyle(bold ? OV2.ink : OV2.inkTertiary.opacity(0.5))
+                .animation(.easeOut(duration: 0.25), value: bold)
+        }
+        .fixedSize()
+    }
+
+    private static func normalized(_ word: String) -> String {
+        word.lowercased().trimmingCharacters(in: CharacterSet.punctuationCharacters.union(.whitespaces))
+    }
+
+    // MARK: - Animation
+
     private func play() {
-        guard revealed < lines.count else { allowTap(); return }
+        guard boldCount < totalWords || !highlighted else { allowTap(); return }
         animTask?.cancel()
         animTask = Task { @MainActor in
-            try? await Task.sleep(nanoseconds: 400_000_000)
-            for i in revealed..<lines.count {
+            try? await Task.sleep(nanoseconds: 450_000_000)
+            let lineEnds = Set(lines.indices.map { firstWordIndex(ofLine: $0) + lines[$0].count })
+            while boldCount < totalWords {
                 if Task.isCancelled { return }
-                withAnimation(.spring(response: 0.7, dampingFraction: 0.85)) { revealed = i + 1 }
+                boldCount += 1
                 OnboardingHaptics.selection()
-                try? await Task.sleep(nanoseconds: i == lines.count - 2 ? 1_900_000_000 : 1_500_000_000)
+                // A breath at the end of each sentence, a steady pace inside it.
+                let pause: UInt64 = lineEnds.contains(boldCount) ? 900_000_000 : 150_000_000
+                try? await Task.sleep(nanoseconds: pause)
             }
+            if Task.isCancelled { return }
+            withAnimation(.easeInOut(duration: 0.55)) { highlighted = true }
+            OnboardingHaptics.primaryCTA()
+            try? await Task.sleep(nanoseconds: 500_000_000)
             if Task.isCancelled { return }
             allowTap()
         }
