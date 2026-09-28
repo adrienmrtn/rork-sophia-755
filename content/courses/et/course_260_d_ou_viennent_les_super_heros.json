@@ -1,0 +1,196 @@
+{
+  "id": "course_260_d_ou_viennent_les_super_heros",
+  "title": "Kust on pärit superkangelased?",
+  "subtitle": "Herculesest Supermanini",
+  "subject": "litterature",
+  "subcategory": "Ingliskeelne ja muu maailmakirjandus",
+  "description": "Superman, Wonder Woman, Shazam ja Marveli Thor on vaevalt sajandivanused. Neid inspireerinud tegelased, Hercules, amatsoonid, Simson ja äikesejumal, on tuhandeid aastaid vanad.",
+  "author": "elizabeth-singer-hunt",
+  "hero": {
+    "image": "superman_fleischer_cartoon_1941_flying_metropolis",
+    "ratio": "4:3",
+    "hook": "Supermani keebi ja Wonder Womani kostüümi all peituvad kolm tuhat aastat vanad kangelased."
+  },
+  "sections": [
+    {
+      "id": "course_260_d_ou_viennent_les_super_heros_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tuhandeid aastaid enne Supermani või Marveli Thorit rääkisid kreeklased ja roomlased juba lugusid üliinimlike võimetega tegelastest. [[Herakles]], keda tuntakse paremini tema Rooma nime Hercules järgi, on **Zeusi** poeg, kes on kuulus oma jõu ja näiliselt võimatute vägitegude poolest. **Achilleus**, Homerose *Iliase* suurim sõdalane, võitleb nagu ei keegi teine ning [[amatsoonid]] oma kuninganna Hippolyte juhtimisel kehastavad naissõdalast."
+        },
+        {
+          "type": "paragraph",
+          "text": "20. sajandi koomiksiloojad ammutasid neist lugudest ainest, et luua **Wonder Woman** või **Captain Marvel** ehk Shazam. Need kangelased on modernsed, kuid osa neid kandvatest ideedest ulatub tagasi mitme aastatuhande vanuste lugudeni. Kust siis superkangelased tegelikult pärit on?"
+        }
+      ]
+    },
+    {
+      "id": "course_260_d_ou_viennent_les_super_heros_p1",
+      "title": "Shazam, antiikajast pärit võlusõna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Supermani ilmumine pöörab koomiksimaailma pea peale. Stsenarist Jerry Siegeli ja kunstnik Joe Shusteri loodud kangelane ilmub **1938. aastal** väljaandes *Action Comics* nr 1 ja paneb aluse kogu žanrile. Teised kirjastajad tahavad oma superkangelast. Kirjastuses [[Fawcett Comics]] mõtleb Bill Parker esmalt välja kangelaste meeskonna, kellest igaühel on mõne mütoloogilise tegelase võime, ja ühendab seejärel need võimed üheks tegelaseks, keda joonistab C. C. Beck: **Billy Batson**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Billy debüteerib Captain Marvelina ajakirjas *Whiz Comics* nr 2 **1940. aastal**. Poiss muutub täiskasvanud superkangelaseks, kui hüüab „Shazam!“. Võlusõna peidab iidset saladust: see on akronüüm **kuuest tegelasest**, kelle võimed ta pärib. Saalomoni tarkus, Herculese jõud, Atlase vastupidavus, Zeusi vägevus, Achilleuse julgus ja Merkuuri kiirus. Saalomon on piibli kuningas, teised pärinevad Kreeka ja Rooma mütoloogiast."
+        }
+      ]
+    },
+    {
+      "id": "course_260_d_ou_viennent_les_super_heros_p2",
+      "title": "Wonder Woman, amatsoonide tütar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wonder Woman sünnib **1941. aastal** Harry G. Peteri pliiatsi all psühholoog William Moulton Marstoni idee põhjal. Looja juurib kangelanna loo teadlikult Kreeka mütoloogiasse: tema ema on amatsoonide kuninganna **Hippolyte**. Hercules orjastas amatsoonid ja pani nad ahelaisse, kuid lõpuks nad vabanesid ja rajasid oma ühiskonna."
+        },
+        {
+          "type": "image",
+          "asset": "heracles_fighting_amazons_attic_black_figure_amphora",
+          "ratio": "3:2",
+          "caption": "Herakles võitlemas amatsoonidega: maalikunstnik Oltose punafiguuriline Atika joogikauss, 6. sajandi lõpp eKr."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tema hävimatud käevõrud meenutavad neid ahelaid: vangipõlve mälestusest saab relv, millega ta kuule tõrjub. Tema ilmumine keset **Teist maailmasõda** pole juhus. Segi paisatud ühiskonnas tahab Marston, et temast saaks „psühholoogiline propaganda uut tüüpi naise jaoks“. Ta võitleb teljeriikidega, samal ajal kui tema tsiviilne teisik **Diana Prince** töötab USA sõjaväeluures."
+        },
+        {
+          "type": "funFact",
+          "text": "Kaheksakümmend viis aastat hiljem nimetab Smithsoni Instituut teda kõige tuntumaks ja pikaealisemaks superkangelannaks. Telesarjad, filmid, videomängud: ta on endiselt rahvusvaheline naiste jõu sümbol."
+        }
+      ]
+    },
+    {
+      "id": "course_260_d_ou_viennent_les_super_heros_p3",
+      "title": "Simsonist Supermanini",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Klassikaline mütoloogia pole superkangelaste ainus iidne allikas. Nende loojad pöörduvad ka Piibli poole. Jerry Siegel ise on öelnud, et **Supermani** üks peamisi mõjutajaid oli [[Simson]], Vana Testamendi jõumees. Mõlemal on erakordne jõud ja Supermani esimestes seiklustes võrreldakse teda otse Simsoniga."
+        },
+        {
+          "type": "image",
+          "asset": "samson_slaying_the_lion_cranach_1525_painting",
+          "ratio": "2:3",
+          "caption": "Simson lõvi alistamas, Lucas Cranach vanem, umbes 1525."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oma hukule määratud koduplaneedilt **Kryptonilt** Maale saadetud Superman kasvab üles Clark Kentina, enne kui temast saab Metropolise kaitsja. Erakordne jõud ja kiirus, hiljem lennuvõime: ta rakendab oma võimed võitlusse kuritegevuse ja ebaõigluse vastu. Kui ta 1938. aastal ilmub, jõuab iidne üliinimliku kangelase idee uude aega."
+        },
+        {
+          "type": "funFact",
+          "text": "Supermani päritolu on võrreldud ka Moosese omaga: kaks imikut, kelle vanemad saadavad minema, et päästa nad hävingust, kelle kasvatavad üles kasuvanemad ja keda ootab suur saatus. Siegel ise pole aga Moosest kunagi inspiratsiooniallikana nimetanud."
+        }
+      ]
+    },
+    {
+      "id": "course_260_d_ou_viennent_les_super_heros_p4",
+      "title": "Thor, Põhjala jumal Marvelis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1960. aastate alguses osaleb [[Stan Lee]] Marveli uue kangelaste põlvkonna loomisel: **1961. aastal** sünnib Fantastiline Nelik, **1962. aastal** Hulk. Ta tahab „midagi teistsugust ja suuremat kui kõik muu“ ning küsib endalt, „mis võiks olla suurem kui jumal“. Kuna Kreeka ja Rooma jumalad on juba tuttavad, pöördub ta Skandinaavia mütoloogia poole."
+        },
+        {
+          "type": "image",
+          "asset": "thor_hammer_mjolnir_norse_god_painting",
+          "ratio": "3:4",
+          "caption": "Thor haamrit vibutamas, 19. sajandi maal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Koos oma venna Larry Lieberi ja kunstnik **Jack Kirbyga** leiutab ta **1962. aastal** väljaandes *Journey into Mystery* nr 83 uuesti Thori, Odini poja ja haamri [[Mjölnir]] kandja. Odin, Loki ja Asgard järgnevad talle Marveli universumisse. Nii rändab äikesejumal Skandinaavia müütidest koomiksitesse ja sealt kino suurlavastustesse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Võib-olla seepärast tunduvadki tänapäeva superkangelased korraga uued ja kummaliselt tuttavad. Tuhandeid aastaid on jutuvestjad loonud erakordseid kangelasi, et meid innustada ja näidata, kuidas leida julgust astuda vastu kurjusele, olgu selle nägu milline tahes."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1938",
+              "title": "Superman",
+              "detail": "Jerry Siegel ja Joe Shuster avaldavad ta väljaandes Action Comics nr 1."
+            },
+            {
+              "date": "1940",
+              "title": "Captain Marvel",
+              "detail": "Billy Batson hüüab esimest korda „Shazam!“ ajakirjas Whiz Comics nr 2."
+            },
+            {
+              "date": "1941",
+              "title": "Wonder Woman",
+              "detail": "Marston ja Peter loovad amatsoonide kuninganna Hippolyte tütre."
+            },
+            {
+              "date": "1962",
+              "title": "Thor Marvelis",
+              "detail": "Stan Lee, Larry Lieber ja Jack Kirby leiutavad Põhjala jumala uuesti väljaandes Journey into Mystery nr 83."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Tänapäeva superkangelased taaskasutavad aastatuhandete vanuseid tegelasi: Hercules, amatsoonid, Simson ja Thor elavad edasi Shazami, Wonder Womani, Supermani ja Marveli Thori kostüümides."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Smithsonian Magazine, « The Origin Story of Wonder Woman ».",
+      "url": "https://www.smithsonianmag.com/arts-culture/origin-story-wonder-woman-180952710/"
+    },
+    {
+      "text": "Smithsonian Magazine, « How Wonder Woman 1984 Was Filmed at the Smithsonian, and What It Would Have Really Been Like for Diana to Work There ».",
+      "url": "https://www.smithsonianmag.com/smithsonian-institution/how-wonder-woman-1984-was-filmed-smithsonianand-what-it-would-have-really-been-diana-work-there-180976778/"
+    },
+    {
+      "text": "Smithsonian Magazine, « Amazon Women: Is There Any Truth Behind the Myth? ».",
+      "url": "https://www.smithsonianmag.com/history/amazon-women-there-any-truth-behind-myth-180950188/"
+    },
+    {
+      "text": "Smithsonian Institution, National Museum of American History, notice de collection consacrée à Wonder Woman.",
+      "url": "https://www.si.edu/object/nmah_1836825"
+    },
+    {
+      "text": "Library of Congress, « Comic Books », guide de recherche American Women (Serial and Government Publications Division).",
+      "url": "https://guides.loc.gov/american-women-serials/popular-culture/comic-books"
+    },
+    {
+      "text": "DC Comics, « Shazam », fiche du personnage.",
+      "url": "https://www.dc.com/characters/shazam"
+    },
+    {
+      "text": "DC Comics, « Rounding Up the Easter Eggs in Shazam! Fury of the Gods », 21 mars 2023.",
+      "url": "https://www.dc.com/blog/2023/03/21/rounding-up-the-easter-eggs-in-shazam-fury-of-the-gods"
+    },
+    {
+      "text": "Marvel, « Stan Lee and the Silver Age », History of Marvel Comics.",
+      "url": "https://www.marvel.com/articles/comics/stan-lee-silver-age-history-of-marvel-comics"
+    },
+    {
+      "text": "Marvel, Journey into Mystery (1952) n° 83, fiche de l'épisode.",
+      "url": "https://www.marvel.com/comics/issue/9779/journey-into-mystery-1952-83"
+    },
+    {
+      "text": "Marvel, Journey into Mystery (1952) n° 85, fiche de l'épisode.",
+      "url": "https://www.marvel.com/comics/issue/9781/journey-into-mystery-1952-85"
+    },
+    {
+      "text": "Marvel v. Kirby, déposition de Stan Lee, Los Angeles, 13 mai 2010, transcription.",
+      "url": "https://www.scribd.com/document/356489019/201000-Marvel-v-Kirby-Full-Deposition-of-Stan-Lee-Los-Angeles-May-13-2010"
+    }
+  ]
+}

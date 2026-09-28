@@ -1,0 +1,135 @@
+{
+  "id": "course_242_pourquoi_a_t_on_le_hoquet",
+  "title": "Por que temos soluço?",
+  "subtitle": "Reflexos e respiração",
+  "subject": "sciences",
+  "subcategory": "O nosso quotidiano explicado",
+  "description": "Um espasmo do diafragma, uma glote que se fecha de repente e aquele “hic” impossível de controlar. O que o corpo faz de verdade, e por que nenhum remédio tem eficácia comprovada.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "child_hiccups_surprised_hand_over_mouth",
+    "ratio": "4:3",
+    "hook": "Dizem para você prender a respiração, beber água de cabeça para baixo ou levar um susto. Mas o que acontece de verdade no seu corpo?"
+  },
+  "sections": [
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Todo mundo tem soluço, do recém-nascido ao avô, e cada um conhece um remédio infalível. O vizinho jura pelo copo d'água bebido ao contrário, a avó pela colher de açúcar. Mesmo assim, o soluço continua sendo um dos reflexos mais misteriosos do corpo humano."
+        },
+        {
+          "type": "paragraph",
+          "text": "Por trás desse pequeno “hic” existe uma mecânica precisa: nervos, um músculo que se contrai sem avisar e uma porta que bate na garganta. Veja o que a medicina sabe sobre ele, e o que ainda não sabe."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+      "title": "Um reflexo que passa por cima do cérebro",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O soluço passa por um [[arco reflexo]], um circuito nervoso que dispara uma reação sem nenhuma decisão consciente. É o mesmo mecanismo que faz sua perna pular quando o médico bate logo abaixo do joelho, ou que tira sua mão de uma chapa quente antes mesmo de você sentir a dor."
+        },
+        {
+          "type": "image",
+          "asset": "mouse_diaphragm_muscle_fibres_microscopy",
+          "ratio": "auto",
+          "caption": "O diafragma visto ao microscópio: um músculo estriado, como os dos braços e das pernas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quando os nervos que ligam o cérebro aos músculos da respiração ficam irritados, o [[diafragma]] se contrai de uma vez. O ar entra com força nos pulmões. Uma fração de segundo depois, a [[glote]], a abertura entre as cordas vocais, se fecha bruscamente. É esse estalo que produz o “hic”."
+        },
+        {
+          "type": "funFact",
+          "text": "O nome científico do soluço é *singultus*, uma palavra latina que também quer dizer choro entrecortado. Por isso não é de estranhar o soluço que sacode as crianças depois de uma longa crise de choro."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+      "title": "Do feto ao avô",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A maioria dos soluços é chamada de **transitória**: dura menos de **48 horas** e passa sozinha. Os gatilhos são banais: comer rápido demais, tomar bebidas com gás, engolir ar ou beber álcool. Tudo o que estica o estômago ou irrita os nervos ao redor pode disparar o reflexo."
+        },
+        {
+          "type": "image",
+          "asset": "fetal_ultrasound_scan_pregnancy",
+          "ratio": "2:1",
+          "caption": "No ultrassom já dá para ver o feto soluçando, muito antes da primeira respiração."
+        },
+        {
+          "type": "paragraph",
+          "text": "O soluço aparece em qualquer idade, e até antes do nascimento. Os ultrassons mostram fetos soluçando na barriga da mãe. E eles com certeza não estão comendo rápido demais. Uma hipótese: esses espasmos treinariam os músculos da respiração, um ensaio geral antes do primeiro gole de ar."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+      "title": "Quando o soluço não para mais",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Às vezes o soluço se instala. Depois de **dois dias**, fala-se em soluço **persistente**; depois de **um mês**, em [[soluço intratável]]. Essas formas raras muitas vezes indicam outra coisa: uma doença do estômago ou do esôfago, um problema nos pulmões ou uma lesão no sistema nervoso central."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nesses casos, o médico procura a causa e receita um tratamento, às vezes remédios que acalmam o circuito do reflexo. O soluço deixa de ser um incômodo passageiro e vira um sintoma, que impede a pessoa de comer, dormir e falar."
+        },
+        {
+          "type": "funFact",
+          "text": "O recorde de soluço mais longo pertence a um fazendeiro americano, [[Charles Osborne]], que soluçou sem parar de **1922 a 1990**, ou seja, 68 anos, segundo o Guinness World Records. Mesmo assim, ele teve tempo de se casar duas vezes e ter oito filhos."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+      "title": "Dezenas de remédios, nenhum comprovado",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No soluço transitório, a boa notícia é que ele some sozinho. A notícia menos boa: nenhuma receita caseira foi validada por um estudo sério. Prender a respiração, beber água gelada, puxar a língua, respirar dentro de um saco... Tudo isso se apoia em relatos, não em provas."
+        },
+        {
+          "type": "image",
+          "asset": "glass_of_cold_water_home_remedy_hiccups",
+          "ratio": "3:2",
+          "caption": "O copo de água gelada: o remédio mais popular, e um dos menos estudados."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esses truques, porém, seguem a mesma lógica: eles perturbam o circuito do reflexo. Prender a respiração aumenta o gás carbônico no sangue e acalma o diafragma. Engolir ou puxar a língua estimula os nervos da garganta e pode “reiniciar” o circuito. Às vezes funciona. Sem que se saiba direito por quê."
+        },
+        {
+          "type": "takeaway",
+          "text": "O soluço é um reflexo: o diafragma se contrai, a glote se fecha, “hic”. Passageiro em quase todos os casos, ele vira um sintoma depois de 48 horas. Nenhuma receita caseira tem eficácia comprovada, embora todas tentem quebrar o circuito."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Alimentary Pharmacology & Therapeutics (Wiley), revue sur la physiopathologie et le traitement du hoquet.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.13374"
+    },
+    {
+      "text": "Cleveland Clinic, « Hiccups ».",
+      "url": "https://my.clevelandclinic.org/health/diseases/17672-hiccups"
+    },
+    {
+      "text": "Guinness World Records, « Longest attack of hiccups ».",
+      "url": "https://www.guinnessworldrecords.com/world-records/67619-longest-attack-of-hiccups"
+    }
+  ]
+}

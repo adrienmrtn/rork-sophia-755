@@ -1,0 +1,171 @@
+{
+  "id": "course_276_pourquoi_les_antibiotiques_cessent_ils",
+  "title": "Miért nem hatnak már az antibiotikumok?",
+  "subtitle": "A baktériumok visszavágnak",
+  "subject": "sciences",
+  "subcategory": "Mindennapjaink tudománya",
+  "description": "Egy torokgyulladás, egy húgyúti fertőzés, egy rutinműtét: hatékony antibiotikumok nélkül mind újra veszélyessé válik. Azzal pedig, hogy visszaélünk velük, megtanítjuk a baktériumokat túlélni őket.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "antibiogram_petri_dish_inhibition_zones",
+    "ratio": "4:3",
+    "hook": "Annyira harcoltunk ellenük, hogy megtanítottuk a baktériumokat túlélni a gyógyszereinket."
+  },
+  "sections": [
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Amikor baktériumok támadják meg a testünket, az immunrendszer visszavág: a **fehérvérsejtek** megtámadják a fertőzést, és hamar jobban leszünk. Ha viszont a védekezésünk gyenge vagy túlterhelt, erősítés kell: antibiotikum. Egy [[baktericid]] antibiotikum elpusztítja a baktériumot, mert a sejtfalát és a belsejét támadja. A bakteriosztatikus csak a szaporodását akadályozza meg."
+        },
+        {
+          "type": "funFact",
+          "text": "Az antibiotikum nem modern találmány: nyomok utalnak arra, hogy az emberek már több mint 1.500 éve használták, anélkül hogy bármit tudtak volna a baktériumokról."
+        },
+        {
+          "type": "paragraph",
+          "text": "A fertőzéstől függően az orvos **széles spektrumú** antibiotikumot választ, amely sok faj ellen hat, vagy szűk spektrumút, amely csak néhány ellen. Hatékonyak, olcsók, könnyen beszerezhetők, és a fertőzések óriási körét lefedik. Éppen ez a siker vezette oda a modern világot, hogy visszaéljen velük. A baktériumok pedig elkezdtek visszavágni."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p1",
+      "title": "Hogyan tanulnak meg ellenállni a baktériumok?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az antibiotikumok a modern orvoslás legnagyobb vívmányai közé tartoznak. Számtalan életet mentettek meg, és függünk tőlük. Tömeges használatuk azonban problémát szült: az [[antibiotikum-rezisztencia]] jelenségét. Olyan antibiotikumok, amelyek korábban megölték a baktériumot vagy gátolták a növekedését, már nem hatnak. A baktérium kifejlődött, hogy kicselezze a kezelést."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Alexander Fleming, a penicillin felfedezője a laboratóriumában."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az evolúció természetes folyamat, amelyet a környezet támadásai felgyorsítanak. Ha a baktériumokat szüntelenül olyan molekulákkal kezeljük, amelyeket a pusztításukra terveztek, azzal a túlélni tudókat válogatjuk ki. Sokféle módon védekeznek: genetikai **mutációkkal**, az antibiotikumot lebontó enzimekkel, a működésük megváltoztatásával, sőt apró [[effluxpumpák]] segítségével is, amelyek kilökik a gyógyszert a sejtből."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ezek a védekezési módok a génekben rögzülnek. Amikor egy ellenálló baktérium osztódik, továbbadja őket az utódainak, azok pedig a sajátjaiknak. Egyetlen túlélőből ellenálló baktériumok egész nemzedéke születhet. Így terjed a rezisztencia."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p2",
+      "title": "Vándorló gének: az MRSA esete",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Egy ellenálló baktérium ugyanúgy utazik, mint bármely más kórokozó. A **Covid**-járvány megmutatta, milyen gyorsan jut el egy vírus emberről emberre, majd országról országra. A baktériumok ugyanígy terjednek: emberi érintkezéssel, kedvező környezetben, a higiénia hiánya miatt, vagy állatról emberre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Van ráadásul egy rövidítésük is: a [[horizontális géntranszfer]]. Egy ellenálló baktérium közvetlenül átadhatja rezisztenciagénjeit a szomszédjának, anélkül hogy osztódnia kellene. Nagyon rövid idő alatt kialakul az ellenálló baktériumok egész populációja."
+        },
+        {
+          "type": "image",
+          "asset": "mrsa_staphylococcus_aureus_electron_micrograph_cdc",
+          "ratio": "5:4",
+          "caption": "Meticillinrezisztens Staphylococcus aureus-telepek elektronmikroszkóp alatt."
+        },
+        {
+          "type": "paragraph",
+          "text": "A legismertebb az [[MRSA]], a meticillinrezisztens Staphylococcus aureus. Számos gyakori antibiotikumnak ellenáll, ezért „szuperbaktériumnak” is hívják. Az antibiotikumok tömeges használata kiirtotta a sérülékeny törzseket, és szabad teret hagyott azoknak, amelyek hozzá hasonlóan megtanultak ellenállni. A következmények halálosak lehetnek."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p3",
+      "title": "Évi 1,27 millió halott: a WHO figyelmeztetése",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mit jelent számunkra ez a rezisztencia? A [[WHO]], az Egészségügyi Világszervezet, az antimikrobiális rezisztenciát, vagyis a kórokozók elleni gyógyszerekkel, köztük az antibiotikumokkal szembeni ellenállást, a világ **három** legnagyobb közegészségügyi fenyegetése közé sorolja. Ha egyre kevesebb gyógyszer hat a bakteriális fertőzések ellen, az egész modern orvoslás teret veszít."
+        },
+        {
+          "type": "paragraph",
+          "text": "A számok mutatják a veszély méretét. Csak 2019-ben **1,27 millió** halálesetet tulajdonítottak világszerte az antimikrobiális rezisztenciának. A görbe emelkedik: az előrejelzések **2050-re** évi **10 millió** halálos áldozattal számolnak."
+        },
+        {
+          "type": "paragraph",
+          "text": "A tudósok nem ülnek ölbe tett kézzel. Új, pontosabb kezeléseket fejlesztenek, amelyek az ellenálló baktériumokat célozzák. Azon is dolgoznak, hogy visszaadják a meglévő antibiotikumok hatékonyságát, és csökkentsék a fölösleges felírásokat: minden elkerült kezeléssel eggyel kevesebb esélyük van a baktériumoknak alkalmazkodni."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p4",
+      "title": "Világ hatékony antibiotikumok nélkül",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gondolkodás nélkül nyeljük le az antibiotikumokat. Olcsók, hatékonyak, és mindenütt kaphatók. Nélkülük egy hétköznapi fertőzés, egy bakteriális **torokgyulladás** vagy egy húgyúti fertőzés, sokkal nehezebben lenne gyógyítható. Egy lehorzsolt térdből is kialakulhatna [[szepszis]], vagyis az egész szervezetre kiterjedő, életveszélyes fertőzés."
+        },
+        {
+          "type": "image",
+          "asset": "hospital_operating_room_surgery_team",
+          "ratio": "3:2",
+          "caption": "Modern műtő: antibiotikumok nélkül a rutinműtétek újra kockázatossá válnának."
+        },
+        {
+          "type": "paragraph",
+          "text": "A gyakori beavatkozások, például a **császármetszés** vagy a csípőprotézis beültetése, sokkal nagyobb kockázattal járnának. Az antibiotikumokat ugyanis gyakran műtét után írják fel, hogy megelőzzék a fertőzést. Nélkülük életmentő vagy életminőséget javító beavatkozások válnának túl veszélyessé."
+        },
+        {
+          "type": "takeaway",
+          "text": "A modern orvoslás jövője egyetlen dolgon múlik: meg kell őriznünk az antibiotikumok hatékonyságát, vagyis abba kell hagynunk a velük való visszaélést."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Medical News Today, « Antibiotics: How they work, uses, side effects and how to use ».",
+      "url": "https://www.medicalnewstoday.com/articles/10278"
+    },
+    {
+      "text": "Wikipedia, « Antibiotic ».",
+      "url": "https://en.wikipedia.org/wiki/Antibiotic"
+    },
+    {
+      "text": "B. K. Nimmana et A. D. Nguyen, « Antibiotic Resistance », StatPearls, StatPearls Publishing, Treasure Island (FL), 2026.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513277/"
+    },
+    {
+      "text": "H. Endale, M. Mathewos et D. Abdeta, « Potential Causes of Spread of Antimicrobial Resistance and Preventive Measures in One Health Perspective: A Review », Infection and Drug Resistance, vol. 16, 2023, p. 7515-7545.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10715026/"
+    },
+    {
+      "text": "American Society for Microbiology, « Plasmids and the Spread of Antibiotic Resistance Genes », janvier 2023.",
+      "url": "https://asm.org/articles/2023/january/plasmids-and-the-spread-of-antibiotic-resistance-g"
+    },
+    {
+      "text": "M. A. Salam, M. Y. Al-Amin, M. T. Salam, J. S. Pawar et al., « Antimicrobial Resistance: A Growing Serious Threat for Global Public Health », Healthcare, vol. 11, n° 13, 2023, art. 1946.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10340576/"
+    },
+    {
+      "text": "Wikipedia, « Methicillin-resistant Staphylococcus aureus ».",
+      "url": "https://en.wikipedia.org/wiki/Methicillin-resistant_Staphylococcus_aureus"
+    },
+    {
+      "text": "S. Rugarabamu et G. Mwanyika, « Biotechnological Innovations to Combat Antimicrobial Resistance and Advance Global Health Equity », Bacteria, vol. 4, n° 3, 2025, art. 46.",
+      "url": "https://www.mdpi.com/2674-1334/4/3/46"
+    },
+    {
+      "text": "A. Nazir, A. Nazir, V. Zuhair, S. Aman et al., « The Global Challenge of Antimicrobial Resistance: Mechanisms, Case Studies, and Mitigation Approaches », Health Science Reports, vol. 8, n° 7, 2025, e71077.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12284435/"
+    },
+    {
+      "text": "ITN Business, « Antimicrobial resistance: understanding its global impact ».",
+      "url": "https://business.itn.co.uk/antimicrobial-resistance-understanding-its-global-impact/"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "course_242_pourquoi_a_t_on_le_hoquet",
+  "title": "Perché ci viene il singhiozzo?",
+  "subtitle": "Riflessi e respirazione",
+  "subject": "sciences",
+  "subcategory": "La nostra quotidianità spiegata",
+  "description": "Uno spasmo del diaframma, una glottide che scatta e quel “hic” che non riesci a controllare. Che cosa fa davvero il corpo, e perché nessun rimedio è mai stato provato.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "child_hiccups_surprised_hand_over_mouth",
+    "ratio": "4:3",
+    "hook": "Ti dicono di trattenere il fiato, di bere a testa in giù o di farti spaventare. Ma che cosa succede davvero nel tuo corpo?"
+  },
+  "sections": [
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il singhiozzo viene a tutti, dal neonato al nonno, e ognuno conosce un rimedio infallibile. Il vicino giura sul bicchiere d'acqua bevuto al contrario, la nonna sul cucchiaino di zucchero. Eppure il singhiozzo resta uno dei riflessi più misteriosi del corpo umano."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dietro quel piccolo “hic” si nasconde un meccanismo preciso: dei nervi, un muscolo che si contrae senza preavviso e una porta che sbatte in gola. Ecco che cosa ne sa la medicina, e che cosa ancora ignora."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+      "title": "Un riflesso che scavalca il cervello",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il singhiozzo passa per un [[arco riflesso]], un circuito nervoso che scatena una reazione senza alcuna decisione cosciente. È lo stesso meccanismo che fa scattare la gamba quando il medico batte sotto il ginocchio, o che ritira la mano da una piastra rovente prima ancora che tu senta il dolore."
+        },
+        {
+          "type": "image",
+          "asset": "mouse_diaphragm_muscle_fibres_microscopy",
+          "ratio": "auto",
+          "caption": "Il diaframma al microscopio: un muscolo striato, come quelli delle braccia e delle gambe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quando i nervi che collegano il cervello ai muscoli della respirazione vengono irritati, il [[diaframma]] si contrae di colpo. L'aria entra di slancio nei polmoni. Una frazione di secondo dopo la [[glottide]], l'apertura tra le corde vocali, si richiude bruscamente. È questo scatto a produrre il “hic”."
+        },
+        {
+          "type": "funFact",
+          "text": "Il nome scientifico del singhiozzo è *singultus*, una parola latina che indica anche il singulto del pianto. Non stupisce quindi il singhiozzo che scuote i bambini dopo un lungo pianto."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+      "title": "Dal feto al nonno",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La maggior parte dei singhiozzi è detta **transitoria**: dura meno di **48 ore** e se ne va da sola. Le cause sono banali: mangiare troppo in fretta, bere bibite gassate, ingoiare aria o bere alcol. Tutto ciò che dilata lo stomaco o irrita i nervi vicini può far partire il riflesso."
+        },
+        {
+          "type": "image",
+          "asset": "fetal_ultrasound_scan_pregnancy",
+          "ratio": "2:1",
+          "caption": "All'ecografia si vede già il feto con il singhiozzo, molto prima del suo primo respiro."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il singhiozzo viene a ogni età, e perfino prima di nascere. Le ecografie mostrano feti col singhiozzo nella pancia della madre. Eppure non mangiano certo troppo in fretta. Un'ipotesi: questi spasmi allenerebbero i muscoli della respirazione, una prova generale prima della prima boccata d'aria."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+      "title": "Quando il singhiozzo non smette più",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A volte il singhiozzo si installa. Oltre i **due giorni** si parla di singhiozzo **persistente**; oltre **un mese**, di [[singhiozzo refrattario]]. Queste forme rare segnalano spesso altro: una malattia dello stomaco o dell'esofago, un problema ai polmoni o un danno al sistema nervoso centrale."
+        },
+        {
+          "type": "paragraph",
+          "text": "In questi casi il medico cerca la causa e prescrive una cura, a volte farmaci che calmano il circuito riflesso. Il singhiozzo allora non è più un fastidio passeggero ma un sintomo, che impedisce di mangiare, dormire e parlare."
+        },
+        {
+          "type": "funFact",
+          "text": "Il record del singhiozzo più lungo appartiene a un contadino americano, [[Charles Osborne]], che singhiozzò senza sosta dal **1922 al 1990**, cioè 68 anni, secondo il Guinness dei primati. Trovò comunque il tempo di sposarsi due volte e di avere otto figli."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+      "title": "Rimedi a decine, nessuno provato",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per il singhiozzo transitorio la buona notizia è che passa da solo. Quella meno buona: nessun rimedio della nonna è stato confermato da uno studio serio. Trattenere il fiato, bere acqua fredda, tirarsi la lingua, respirare in un sacchetto... Tutto si basa su testimonianze, non su prove."
+        },
+        {
+          "type": "image",
+          "asset": "glass_of_cold_water_home_remedy_hiccups",
+          "ratio": "3:2",
+          "caption": "Il bicchiere d'acqua fredda: il rimedio più diffuso, e uno dei meno studiati."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eppure questi trucchi hanno una logica comune: disturbano il circuito riflesso. Trattenere il respiro fa salire l'anidride carbonica nel sangue e calma il diaframma. Deglutire o tirare fuori la lingua stimola i nervi della gola e può “azzerare” il circuito. A volte funziona. Senza che si sappia davvero perché."
+        },
+        {
+          "type": "takeaway",
+          "text": "Il singhiozzo è un riflesso: il diaframma si contrae, la glottide si chiude, “hic”. Passeggero quasi sempre, diventa un sintomo oltre le 48 ore. Nessun rimedio casalingo è provato, anche se tutti puntano a spezzare il circuito."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Alimentary Pharmacology & Therapeutics (Wiley), revue sur la physiopathologie et le traitement du hoquet.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.13374"
+    },
+    {
+      "text": "Cleveland Clinic, « Hiccups ».",
+      "url": "https://my.clevelandclinic.org/health/diseases/17672-hiccups"
+    },
+    {
+      "text": "Guinness World Records, « Longest attack of hiccups ».",
+      "url": "https://www.guinnessworldrecords.com/world-records/67619-longest-attack-of-hiccups"
+    }
+  ]
+}

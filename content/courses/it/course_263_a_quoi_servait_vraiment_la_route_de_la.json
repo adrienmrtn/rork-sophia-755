@@ -1,0 +1,140 @@
+{
+  "id": "course_263_a_quoi_servait_vraiment_la_route_de_la",
+  "title": "A che cosa serviva davvero la via della seta?",
+  "subtitle": "Cavalli, seta e microbi",
+  "subject": "histoire",
+  "subcategory": "Antichità & Medioevo",
+  "description": "Un imperatore cinese voleva cavalli e alleati. Senza saperlo aprì il corridoio attraverso cui la seta, il buddismo, il vaiolo e la peste attraversarono l'Eurasia.",
+  "author": "ezgi-gizem-berkay",
+  "hero": {
+    "image": "silk_road_camel_caravan_dunhuang_sand_dunes",
+    "ratio": "4:3",
+    "hook": "Né il mercante né la peste percorrevano l'intera via: avanzavano a staffetta, di tappa in tappa."
+  },
+  "sections": [
+    {
+      "id": "course_263_a_quoi_servait_vraiment_la_route_de_la_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nessun imperatore ne decretò il tracciato, nessun ingegnere ne disegnò il percorso su una carta. La via della seta non è una strada: è una rete di piste che il tempo ha trasformato in leggenda. Perché fu aperta, e che cosa diventò? Sono due domande diverse: una riguarda un'intenzione, l'altra un risultato che la superò di gran lunga."
+        },
+        {
+          "type": "paragraph",
+          "text": "Contrariamente a quanto si crede, la via nacque per ragioni militari e diplomatiche. Nel **secolo II a.C.** l'imperatore Wu, della dinastia cinese Han, mandò il suo inviato [[Zhang Qian]] verso ovest a cercare alleati contro gli [[Xiongnu]], nomadi che minacciavano il nord dell'impero. Al ritorno Zhang Qian descrisse le città e le ricchezze dell'Asia centrale, e soprattutto i leggendari “cavalli celesti” di [[Fergana]]."
+        }
+      ]
+    },
+    {
+      "id": "course_263_a_quoi_servait_vraiment_la_route_de_la_p1",
+      "title": "Dalla seta ai microbi: una staffetta fatale",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Quei cavalli contavano tanto per l'esercito Han che Wu lanciò due grandi campagne contro Fergana tra il **104 e il 101 a.C.**: la “guerra dei cavalli celesti”. Una volta aperta, la via superò presto il suo scopo. Oltre alla seta vi si scambiavano cavalli, vetri, pietre preziose, spezie, carta e oggetti di metallo. A Roma la seta diventò il lusso più ambito e il simbolo di tutta la rete."
+        },
+        {
+          "type": "image",
+          "asset": "mogao_caves_dunhuang_buddhist_mural_silk_road",
+          "ratio": "4:3",
+          "caption": "Ancelle che portano fiori, particolare di una copia del “Ritratto della dama Wang”, pittura murale di epoca Tang a Mogao (Dunhuang)."
+        },
+        {
+          "type": "funFact",
+          "text": "Il nome è recente: fu nel **1877** che il geografo tedesco Ferdinand von Richthofen chiamò queste piste “Seidenstraße”, la via della seta. Prima di lui, Oriente e Occidente attraversavano quelle sabbie senza dare un nome ai legami che intrecciavano."
+        },
+        {
+          "type": "paragraph",
+          "text": "Con le merci viaggiavano persone e idee: il buddismo entrò in Cina, tecniche e stili artistici circolarono. Ma il carico più letale era invisibile. Gli agenti patogeni passavano di mano in mano veloci quanto le sete e le spezie. Né il mercante né la peste percorrevano l'intera via: avanzavano a staffetta, e ogni tappa passava il contagio alla successiva. I viaggiatori e le loro bestie da soma erano i vettori principali."
+        }
+      ]
+    },
+    {
+      "id": "course_263_a_quoi_servait_vraiment_la_route_de_la_p2",
+      "title": "Le pestilenze che scossero Roma",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Due grandi epidemie che scossero l'Impero romano sono strettamente legate alle rotte commerciali d'Oriente. La prima è la [[peste antonina]], dal **165 al 180**. Gli storici vi riconoscono di solito il vaiolo, riportato dalle legioni di ritorno dalle campagne contro i Parti. L'epidemia segnò il regno dell'imperatore **Marco Aurelio**, decimò la popolazione e indebolì l'esercito imperiale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quasi un secolo dopo colpì la peste di Cipriano, dal **249 al 262**. La si crede venuta dall'Oriente, ma la sua natura esatta è ancora discussa: vaiolo, morbillo o febbre emorragica virale? Una cosa è certa: l'insaziabile fame di seta di Roma portò verso Occidente agenti patogeni fino ad allora sconosciuti."
+        }
+      ]
+    },
+    {
+      "id": "course_263_a_quoi_servait_vraiment_la_route_de_la_p3",
+      "title": "Da Giustiniano alla peste nera",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La peste di Giustiniano, dal **541 al 750**, è riconosciuta come la prima grande pandemia di peste bubbonica, causata dal batterio [[Yersinia pestis]]. Le cronache dell'epoca ne collocano l'inizio a Pelusio, in Egitto. Ma le sue vere origini sono altrove: il sequenziamento del DNA antico ha stabilito che il batterio veniva dall'Asia centrale e si diffuse verso ovest lungo le rotte commerciali."
+        },
+        {
+          "type": "image",
+          "asset": "yersinia_pestis_bacteria_electron_micrograph",
+          "ratio": "4:3",
+          "caption": "Il batterio Yersinia pestis, responsabile della peste, visto al microscopio elettronico."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'esempio più famoso di questo meccanismo è la peste nera del **secolo XIV**, seconda pandemia di Yersinia pestis. Scoppiò proprio quando l'Impero mongolo rendeva sicure e unificava quelle reti commerciali: la [[Pax Mongolica]]. La stessa infrastruttura accelerò la malattia, dall'Asia centrale verso Occidente. Tra il **1347 e il 1351** la pandemia uccise da un terzo alla metà della popolazione europea."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "165",
+              "title": "La peste antonina",
+              "detail": "Probabilmente vaiolo, riportato dalle legioni."
+            },
+            {
+              "date": "249",
+              "title": "La peste di Cipriano",
+              "detail": "La sua natura esatta è ancora discussa."
+            },
+            {
+              "date": "541",
+              "title": "La peste di Giustiniano",
+              "detail": "La prima grande pandemia di peste bubbonica."
+            },
+            {
+              "date": "1347",
+              "title": "La peste nera",
+              "detail": "In quattro anni muore da un terzo alla metà dell'Europa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_263_a_quoi_servait_vraiment_la_route_de_la_p4",
+      "title": "L'unificazione microbica del mondo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La via non diffuse solo grandi epidemie. Portò anche malattie endemiche e silenziose, che mettevano radici dove arrivavano: la lebbra, la tubercolosi, i parassiti intestinali. Lo schema è sempre lo stesso: mondi a lungo separati mettono in comune i loro microbi insieme alle merci."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gli storici chiamano questo fenomeno [[unificazione microbica del mondo]], o convergenza dei serbatoi di malattie. L'espressione si deve allo storico francese **Emmanuel Le Roy Ladurie**, nel **1973**. Tre anni dopo, in *La peste nella storia* (1976), lo storico **William McNeill** pose le basi di una storia dei rapporti tra malattie e società umane."
+        },
+        {
+          "type": "paragraph",
+          "text": "Allora, a che cosa serviva davvero la via della seta? A procurare cavalli e alleati a un imperatore cinese. Che cosa diventò: un corridoio in cui viaggiarono la seta, il buddismo e la carta, ma anche il vaiolo e la peste. I suoi effetti più duraturi non furono né voluti né previsti."
+        },
+        {
+          "type": "takeaway",
+          "text": "Aperta dagli Han per cavalli e alleanze, la via della seta diventò il corridoio che mise in comune le merci, le idee e i microbi dell'Eurasia, dalla peste antonina alla peste nera."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "course_302_quel_est_le_plus_vieux_livre_du_monde",
+  "title": "Koja je najstarija knjiga na svetu?",
+  "subtitle": "Oko 2000. p. n. e.",
+  "subject": "litterature",
+  "subcategory": "Anglofona i svetska književnost",
+  "description": "Pre oko 4.000 godina, u Mesopotamiji, priča o tiranskom kralju koji je postao mudar utisnuta je u glinu. Do nas su stigle dve trećine teksta, a ostatak se i dalje traži.",
+  "author": "simon-lea",
+  "hero": {
+    "image": "gilgamesh_hero_lion_relief_khorsabad_louvre",
+    "ratio": "4:3",
+    "hook": "Najstarija knjiga na svetu nema stranice: napisana je u glini, a jedna trećina joj i dalje nedostaje."
+  },
+  "sections": [
+    {
+      "id": "course_302_quel_est_le_plus_vieux_livre_du_monde_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Najstarija knjiga na svetu nije ukoričena knjiga. To je duga pesma, *Ep o Gilgamešu*, napisana pre oko **4.000 godina** u oblasti koju zovemo [[Mesopotamija]], na tlu današnjeg Iraka. Njen junak, **Gilgameš**, tiranski je kralj grada koji se zove [[Uruk]]. Tekst ga, neobično, opisuje kao „dve trećine boga, a jednu trećinu čoveka“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da bi kaznila njegovu okrutnost, boginja majka stvara divljeg čoveka: to je [[Enkidu]], poslat da se suoči sa kraljem i da ga ponizi. Ali san upozorava kralja da će mu Enkidu postati prijatelj. Sveta bludnica Šamhat pripitomljava ga za sedam dana i sedam noći. Dvojica muškaraca se sukobe, a zatim postanu nerazdvojni, možda i ljubavnici. Njihovo prijateljstvo vodi u avanturu, zatim u žalost, pa u potragu za besmrtnošću."
+        }
+      ]
+    },
+    {
+      "id": "course_302_quel_est_le_plus_vieux_livre_du_monde_p1",
+      "title": "Glinene pločice stare 4.000 godina",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O poreklu pesme malo se zna. Arheologija potvrđuje njenu starost: oko **4.000 godina**. Imamo otprilike **dve trećine** teksta, sačuvane na izvornim glinenim pločicama, ispisanim pismom koje se zove [[klinasto pismo]]. Srećom, glina je izuzetno otporna."
+        },
+        {
+          "type": "image",
+          "asset": "gilgamesh_tablet_cuneiform_nineveh_british_museum",
+          "ratio": "3:2",
+          "caption": "Pločica Epa o Gilgamešu na klinastom pismu, pronađena u Ninivi (Britanski muzej)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nove pločice redovno izlaze iz zemlje, pa se nadamo da će jednog dana biti pronađena i trećina koja nedostaje. Kao svaki tako star tekst, i ovaj meša legende starije od sebe sa mnogo kasnijim dodacima: neki odlomci možda potiču i **hiljadu godina** posle izvornika. Smisao pesme se zato menja u zavisnosti od verzije koju čitamo."
+        }
+      ]
+    },
+    {
+      "id": "course_302_quel_est_le_plus_vieux_livre_du_monde_p2",
+      "title": "Stvarni kralj koji je postao mit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uprkos tim pozajmicama i doradama, stručnjaci su prilično sigurni da *Ep o Gilgamešu* ima jednog, doslednog autora. Zna se i da je kralj Gilgameš zaista postojao, iako je kralj iz pesme u velikoj meri pretvoren u mit. Isto se desilo i drugim kraljevima iz mitologije, kao što je kralj Mida."
+        },
+        {
+          "type": "paragraph",
+          "text": "Proučavanje najstarijih pločica pokazuje da prvobitna priča govori pre svega o kralju Gilgamešu, njegovom životu i pustolovinama. Ali kada se uzmu u obzir kasniji dodaci, pesma postaje nešto sasvim drugo: razmišljanje o ljudskoj smrtnosti i o smislu života i smrti."
+        }
+      ]
+    },
+    {
+      "id": "course_302_quel_est_le_plus_vieux_livre_du_monde_p3",
+      "title": "Humbaba i Nebeski bik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U svojim pustolovinama Gilgameš i Enkidu se bore sa čudovištima. Prvo je [[Humbaba]], div koji čuva Kedrovu šumu, legendarno mesto gde su kraljevi dolazili po drvo za svoje građevine. Humbaba je ubijen, a drveće posečeno. To ubistvo, praćeno pustošenjem, razgnevi bogove."
+        },
+        {
+          "type": "paragraph",
+          "text": "Posle borbe, dok se Gilgameš kupa, boginja [[Ištar]] ga ugleda i ponudi mu svoju ljubav. Kralj zna kakav glas ima: nijedan njen ljubavnik nije dugo živeo. On je grubo odbija. Besna, Ištar na njega pušta Nebeskog bika. Dva prijatelja ga ubijaju, a Enkidu baca boginji jednu njegovu zadnju nogu. Ti podvizi pokazuju Gilgamešovu snagu, ali i oholost koju bogovi neće ostaviti nekažnjenom."
+        },
+        {
+          "type": "funFact",
+          "text": "Sazvežđe Bika prikazuje bika bez zadnjeg dela tela. Neki u tome vide sećanje na Enkidua, koji je Nebeskom biku otkinuo zadnju nogu da bi je bacio na Ištar."
+        }
+      ]
+    },
+    {
+      "id": "course_302_quel_est_le_plus_vieux_livre_du_monde_p4",
+      "title": "Potraga za besmrtnošću",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Da bi kaznili smrt Nebeskog bika, bogovi osuđuju Enkidua na smrt. Gubitak prijatelja otkriva Gilgamešu njegovu sopstvenu smrtnost. On počinje da se boji smrti i kreće u potragu za tajnom besmrtnosti. Samo je jedan čovek poznat po tome što je pobedio smrt: [[Utnapištim]]."
+        },
+        {
+          "type": "image",
+          "asset": "gilgamesh_flood_tablet_utnapishtim_myth",
+          "ratio": "3:2",
+          "caption": "„Pločica o potopu“, jedanaesta pločica epa, koja priča priču o Utnapištimu (Britanski muzej)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Njegova priča je starija od priče o Noju, i gotovo joj je istovetna: pošto su preživeli potop, on i njegova žena postali su besmrtni. Kada ga Gilgameš najzad sretne, Utnapištim mu savetuje da se odrekne večnog života. Ipak mu daruje biljku koja vraća mladost. Zmija mu je ukrade."
+        },
+        {
+          "type": "funFact",
+          "text": "I Noje i Utnapištim bivaju upozoreni na potop i dobijaju zadatak da sagrade ogroman brod u kom će skloniti životinje. Kada su pločice prevedene, otkriće ove priče, hiljadama godina starije od Knjige postanja, potreslo je svet: za jedne je to bio dokaz da je priča o Noju pozajmljena iz starije religije, za druge potvrda da se veliki potop zaista dogodio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gilgameš se odriče besmrtnosti i vraća se kući, u Uruk, u život mirnog razmišljanja. Pouka najstarije knjige na svetu kao da staje u jednu rečenicu: prihvatiti da je život kratak i mudrost pretpostaviti delanju."
+        },
+        {
+          "type": "takeaway",
+          "text": "*Ep o Gilgamešu*, utisnut u glinu pre 4.000 godina i još uvek nepotpun, tokom hiljadu godina dodataka pretvorio se iz priče o kraljevskim pustolovinama u razmišljanje o smrti."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "B. B. Powell, Classical Myth, 9th ed., Oxford University Press, New York, 2020, p. 326."
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "id": "course_297_d_ou_vient_vraiment_l_electricite_de",
+  "title": "Waar komt de stroom uit je stopcontact echt vandaan?",
+  "subtitle": "Een onzichtbare mix",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Milieu en toekomst",
+  "description": "Aan het stopcontact zie je niet of de stroom van de zon, de wind of een kolencentrale komt. Achter dat alledaagse gebaar zit een mix die per uur verandert en soms zelfs de grens over komt.",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "wind_turbines_coal_power_plant_landscape",
+    "ratio": "4:3",
+    "hook": "Het stopcontact is overal hetzelfde. Wat erachter zit nooit."
+  },
+  "sections": [
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Je steekt de stekker van je telefoon in het stopcontact, en de stroom komt zonder etiket. Niets aan het stopcontact vertelt of hij is opgewekt met zonlicht, water achter een stuwdam of brandstof die in een centrale is verbrand. Zelfs twee huizen in dezelfde straat kunnen niet aanwijzen uit welke centrale elke eenheid stroom komt."
+        },
+        {
+          "type": "paragraph",
+          "text": "De reden is simpel: bijna alle huishoudens tappen stroom af van een [[elektriciteitsnet]], een web van kabels dat de centrales en de gebruikers in een gebied met elkaar verbindt. Verschillende centrales voeden het tegelijk, en hun aandelen samen vormen de [[elektriciteitsmix]]. Die mix beschrijft de bronnen die het net voeden, niet een aparte stroom zonne- of gaselektriciteit die rechtstreeks naar je telefoon gaat. Het antwoord begint dus ver buiten de muren van je huis."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p1",
+      "title": "Stoom, turbines en zonnepanelen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kolencentrales en veel kerncentrales gebruiken warmte om stoom te maken. Die stoom laat een [[turbine]] draaien, een stel schoepen dat verbonden is met een [[generator]], de machine die beweging omzet in elektriciteit. Gascentrales kunnen hun turbines ook rechtstreeks aandrijven met de hete gassen van de verbranding. Verschillende processen, maar dezelfde elektriciteit, die in hetzelfde net terechtkomt."
+        },
+        {
+          "type": "image",
+          "asset": "steam_turbine_generator_hall_power_plant",
+          "ratio": "2:1",
+          "caption": "Een oude stoomturbine met generator in het Technisch Museum in Wenen: de turbine is gekoppeld aan haar generator."
+        },
+        {
+          "type": "paragraph",
+          "text": "Windturbines draaien op de wind, waterkrachtcentrales op stromend water. Zonnepanelen gaan een andere weg: ze maken stroom rechtstreeks uit licht, zonder enige draaiende schoep. Die bronnen werken niet onder dezelfde omstandigheden. Zonnestroom valt weg als de zon ondergaat, windstroom verandert met het weer. Centrales die brandstof verbranden, kunnen dan stroom leveren als de andere minder produceren."
+        },
+        {
+          "type": "funFact",
+          "text": "Een kerncentrale werkt in de grond net als een kolencentrale: warmte brengt water aan de kook, en de stoom drijft de turbine aan. Alleen de warmtebron is anders."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p2",
+      "title": "Een mix die in de loop van de dag verandert",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rond het middaguur draaien zonnepanelen op volle toeren terwijl kantoren en woningen stroom verbruiken. Na zonsondergang stoppen ze, maar lampen, treinen en keukens hebben nog steeds stroom nodig. Een winderige middag kan ook overgaan in een windstille avond, terwijl het verbruik stijgt of daalt."
+        },
+        {
+          "type": "image",
+          "asset": "electricity_grid_control_room_operators_screens",
+          "ratio": "16:9",
+          "caption": "Kaart van de hoogspanningslijnen en schakelstations in de Verenigde Staten: het web dat een netbeheerder in evenwicht moet houden."
+        },
+        {
+          "type": "paragraph",
+          "text": "De [[netbeheerder]], de organisatie die dat web bestuurt, moet vraag en aanbod voortdurend in evenwicht houden. Sommige centrales passen hun productie aan. Waar batterijen staan, geven die stroom terug die eerder is opgeslagen. Andere bronnen vullen het gat dat de ondergaande zon achterlaat. Er is geen vast dagrecept: de mix rond het middaguur kan er heel anders uitzien dan die van een paar uur later, terwijl je stopcontact niet is veranderd."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p3",
+      "title": "Wat het jaargemiddelde verbergt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In 2025 kwam ongeveer **een kwart** (24%) van de stroom uit de grote centrales in de Verenigde Staten uit [[hernieuwbare energiebronnen]], bronnen die de natuur zelf aanvult: zonlicht, wind, stromend water. Dat cijfer, nog voorlopig, beschrijft het hele jaar. Het betekent niet dat hernieuwbare bronnen hetzelfde aandeel leverden telkens als iemand een waterkoker aanzette of een telefoon oplaadde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Een jaarpercentage gooit zonnige middagen, stormachtige nachten en periodes waarin zon en wind weinig opleveren op één hoop. Het telt ook uren met hoge en lage vraag bij elkaar op. Wie wil weten welke bronnen een net op een bepaald moment voeden, moet naar de mix per uur kijken en niet naar het jaargemiddelde. Beide invalshoeken zijn nuttig, maar ze beantwoorden niet dezelfde vraag."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p4",
+      "title": "Stroom van elders",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De mix per uur vraagt nog één detail: welke stroom er in jouw gebied echt beschikbaar is. Een centrale aan de ene kant van een grens kan het net aan de andere kant voeden. Die ingevoerde stroom vermengt zich met de lokale productie. De [[verbruiksmix]], dus de bronnen die de gebruikers in een gebied voeden, kan daardoor verschillen van de mix die ter plaatse wordt opgewekt."
+        },
+        {
+          "type": "image",
+          "asset": "belchatow_coal_power_plant_cooling_towers_poland",
+          "ratio": "4:3",
+          "caption": "De kolencentrale van Bełchatów in Polen, de grootste van Europa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dat is van belang voor de uitstoot van je stroom. Het verbranden van kolen of gas levert koolstofdioxide op, een gas dat de aarde opwarmt. Windturbines, zonnepanelen en kerncentrales stoten het niet rechtstreeks uit terwijl ze stroom maken. Stroom houdt niet op bij de grens, en de gevolgen ervan evenmin. Afhankelijk van waar de invoer vandaan komt, kan de uitstoot van jouw verbruik hoger of lager zijn dan de lokale productie doet vermoeden."
+        },
+        {
+          "type": "takeaway",
+          "text": "De stroom uit je stopcontact is een mix die per uur verandert en grenzen overschrijdt, zodat noch het jaargemiddelde, noch de lokale productie op zich vertelt waar hij vandaan komt."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Delivered to Consumers », sections « The electric power grid », « Electricity sources and types of providers » et « Balancing authorities »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Generated », sections « Turbine driven generators » et « Other types of generators »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Energy Storage for Electricity Generation », section « Uses and benefits of energy storage systems »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity Generation, Capacity, and Sales in the United States », section « Electricity generation », données 2025 provisoires."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity and the Environment », sections « Fossil fuel, biomass, and waste burning power plants » et « Nuclear power plants »."
+    },
+    {
+      "text": "Electricity Maps, « Methodology », sections « Defining Granularity: Spatial and Temporal », « Consumption-based Calculation » et « The Flow-Tracing Algorithm »."
+    },
+    {
+      "text": "B. Tranberg et al., « Real-time carbon accounting method for the European electricity markets », Energy Strategy Reviews, vol. 26, 2019, art. 100367.",
+      "url": "https://doi.org/10.1016/j.esr.2019.100367"
+    }
+  ]
+}

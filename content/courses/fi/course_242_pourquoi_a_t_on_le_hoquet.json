@@ -1,0 +1,135 @@
+{
+  "id": "course_242_pourquoi_a_t_on_le_hoquet",
+  "title": "Mistä hikka johtuu?",
+  "subtitle": "Refleksit ja hengitys",
+  "subject": "sciences",
+  "subcategory": "Arkemme selitettynä",
+  "description": "Pallean kouristus, napsahtava äänirako ja se ”hik”, jota ei voi hallita. Mitä kehossa oikeasti tapahtuu, ja miksi yhdenkään hoitokeinon tehoa ei ole todistettu.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "child_hiccups_surprised_hand_over_mouth",
+    "ratio": "4:3",
+    "hook": "Sinua neuvotaan pidättämään hengitystä, juomaan pää alaspäin tai säikähtämään. Mutta mitä kehossasi oikeasti tapahtuu?"
+  },
+  "sections": [
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hikka yllättää kaikki vauvasta vaariin, ja jokainen tuntee varman keinon siihen. Naapuri vannoo väärin päin juodun vesilasin nimeen, isoäiti sokerilusikallisen. Silti hikka on yhä yksi ihmiskehon arvoituksellisimmista reflekseistä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pienen ”hikin” takana on tarkka mekanismi: hermoja, lihas, joka supistuu varoittamatta, ja kurkussa paukahtava ovi. Tässä on se, mitä lääketiede hikasta tietää, ja se, mitä se ei vielä tiedä."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+      "title": "Refleksi, joka ohittaa aivot",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hikan taustalla on [[refleksikaari]], hermorata, joka laukaisee reaktion ilman tietoista päätöstä. Sama mekanismi saa jalkasi potkaisemaan, kun lääkäri napauttaa polven alle, tai vetää kätesi pois kuumalta liedeltä jo ennen kuin ehdit tuntea kivun."
+        },
+        {
+          "type": "image",
+          "asset": "mouse_diaphragm_muscle_fibres_microscopy",
+          "ratio": "auto",
+          "caption": "Pallea mikroskoopin alla: poikkijuovainen lihas, samanlainen kuin käsivarsien ja jalkojen lihakset."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kun aivoja ja hengityslihaksia yhdistävät hermot ärtyvät, [[pallea]] supistuu äkillisesti. Ilmaa ryntää keuhkoihin. Sekunnin murto-osaa myöhemmin [[äänirako]], äänihuulten välinen aukko, sulkeutuu rajusti. Juuri tämä napsahdus synnyttää ”hikin”."
+        },
+        {
+          "type": "funFact",
+          "text": "Hikan tieteellinen nimi on *singultus*, latinan sana, joka tarkoittaa myös nyyhkytystä. Ei siis ihme, että lapsi alkaa usein hikotella kovan itkukohtauksen jälkeen."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+      "title": "Kohdusta vanhuuteen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Useimmat hikat ovat **ohimeneviä**: ne kestävät alle **48 tuntia** ja loppuvat itsestään. Laukaisijat ovat arkisia: liian nopea syöminen, hiilihapolliset juomat, ilman nieleminen tai alkoholi. Kaikki, mikä venyttää mahalaukkua tai ärsyttää lähellä kulkevia hermoja, voi käynnistää refleksin."
+        },
+        {
+          "type": "image",
+          "asset": "fetal_ultrasound_scan_pregnancy",
+          "ratio": "2:1",
+          "caption": "Ultraäänikuvassa sikiön hikan voi nähdä jo kauan ennen ensimmäistä hengenvetoa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hikka voi iskeä missä iässä tahansa, jopa ennen syntymää. Ultraäänikuvissa näkyy sikiöitä hikottelemassa kohdussa. Liian nopeasta syömisestä ei heidän kohdallaan voi olla kyse. Yksi selitys: kouristukset ehkä harjoittavat hengityslihaksia, kenraaliharjoitus ennen ensimmäistä henkäystä."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+      "title": "Kun hikka ei lopu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Joskus hikka jää päälle. Kun se on jatkunut yli **kaksi päivää**, puhutaan **pitkittyneestä** hikasta; kun kestoa on yli **kuukauden**, käytetään nimitystä [[vaikeahoitoinen hikka]]. Nämä harvinaiset muodot kertovat usein jostain muusta: mahalaukun tai ruokatorven sairaudesta, keuhko-ongelmasta tai keskushermoston vauriosta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Silloin lääkäri etsii syytä ja määrää hoidon, joskus lääkkeitä, jotka rauhoittavat refleksirataa. Hikka ei ole enää ohimenevä harmi vaan oire, joka estää syömästä, nukkumasta ja puhumasta."
+        },
+        {
+          "type": "funFact",
+          "text": "Guinnessin ennätysten mukaan pisimmän hikan ennätystä pitää yhdysvaltalainen maanviljelijä [[Charles Osborne]], joka hikotteli taukoamatta **vuodesta 1922 vuoteen 1990**, eli 68 vuotta. Silti hän ehti mennä kahdesti naimisiin ja saada kahdeksan lasta."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+      "title": "Kymmeniä kotikonsteja, yksikään ei todistettu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ohimenevästä hikasta hyvä uutinen on, että se häviää itsestään. Huonompi uutinen: yhtäkään kotikonstia ei ole osoitettu toimivaksi kunnollisessa tutkimuksessa. Hengityksen pidättäminen, kylmän veden juominen, kielestä vetäminen, pussiin hengittäminen... Kaikki perustuu kokemuksiin, ei näyttöön."
+        },
+        {
+          "type": "image",
+          "asset": "glass_of_cold_water_home_remedy_hiccups",
+          "ratio": "3:2",
+          "caption": "Lasillinen kylmää vettä: yleisin kotikonsti ja yksi vähiten tutkituista."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konsteilla on silti yhteinen logiikka: ne häiritsevät refleksirataa. Hengityksen pidättäminen nostaa veren hiilidioksidipitoisuutta ja rauhoittaa palleaa. Nieleminen tai kielestä vetäminen stimuloi kurkun hermoja ja voi ”nollata” radan. Joskus se toimii. Kukaan ei oikeastaan tiedä miksi."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hikka on refleksi: pallea supistuu, äänirako sulkeutuu, ”hik”. Lähes aina se on ohimenevä, mutta yli 48 tuntia jatkuessaan siitä tulee oire. Yhdenkään kotikonstin tehoa ei ole todistettu, vaikka kaikki pyrkivät katkaisemaan refleksiradan."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Alimentary Pharmacology & Therapeutics (Wiley), revue sur la physiopathologie et le traitement du hoquet.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.13374"
+    },
+    {
+      "text": "Cleveland Clinic, « Hiccups ».",
+      "url": "https://my.clevelandclinic.org/health/diseases/17672-hiccups"
+    },
+    {
+      "text": "Guinness World Records, « Longest attack of hiccups ».",
+      "url": "https://www.guinnessworldrecords.com/world-records/67619-longest-attack-of-hiccups"
+    }
+  ]
+}

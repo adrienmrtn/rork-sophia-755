@@ -1,0 +1,139 @@
+{
+  "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie",
+  "title": "A IA gasta muita energia?",
+  "subtitle": "Por trás de cada resposta",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Ambiente & futuro",
+  "description": "Cada resposta de uma IA sai de um prédio cheio de máquinas que funcionam dia e noite. Quanta eletricidade isso custa de verdade, do treinamento do modelo até a rede que o alimenta?",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "data_center_server_racks_aisle_blue_lights",
+    "ratio": "4:3",
+    "hook": "A IA parece um software, mas cada resposta é fabricada num prédio bem real, ligado à mesma rede que a sua casa."
+  },
+  "sections": [
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Você faz uma pergunta a uma IA on-line, e a resposta aparece em poucos segundos. Mas o trabalho não acontece no seu celular. Ele é feito num [[centro de dados]], um prédio cheio de máquinas que processam e armazenam informação. Essas máquinas consomem eletricidade sem parar, mesmo que ninguém as veja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Em 2025, segundo a [[Agência Internacional de Energia]], o conjunto dos centros de dados usou cerca de **1,5%** da eletricidade do mundo. Esse número cobre todos os serviços on-line, não só a IA. Mas as instalações dedicadas à IA se multiplicam depressa. Uma resposta curta custa pouco, sozinha. Mesmo assim, há máquinas funcionando para cada uma delas, e vários sistemas puxam energia ao mesmo tempo para produzi-la."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p1",
+      "title": "Os servidores, os maiores consumidores",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Um [[servidor]] é um computador que processa dados e roda serviços on-line. Num centro de dados, são os servidores que fazem a maior parte do cálculo, e por isso são os maiores consumidores de eletricidade. Se dividirmos a conta de luz de um centro de dados moderno, os servidores ficam em média com **60%**. Esse número vale para os centros de dados em geral, não só para as instalações de IA."
+        },
+        {
+          "type": "image",
+          "asset": "data_center_cooling_pipes_chillers",
+          "ratio": "3:2",
+          "caption": "Fileiras de servidores num centro de dados: são eles que consomem a maior parte da eletricidade."
+        },
+        {
+          "type": "paragraph",
+          "text": "O resto serve para armazenar e mover dados, resfriar os equipamentos e manter o prédio funcionando. O resfriamento pesa, porque um computador produz calor enquanto trabalha. Sem um sistema para tirar esse calor, as máquinas acabariam superaquecendo. A eletricidade por trás de uma resposta de IA alimenta, portanto, muito mais do que os computadores que a produzem."
+        },
+        {
+          "type": "funFact",
+          "text": "Segundo a AIE, o consumo de eletricidade dos centros de dados dedicados à IA cresceu 50% só em 2025."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p2",
+      "title": "Treinar, depois responder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Antes de poder responder, um serviço de IA precisa de um modelo: um sistema que aprendeu padrões a partir de exemplos. Criá-lo exige o [[treinamento]], uma fase em que computadores vasculham quantidades enormes de dados. Esse trabalho pode ocupar máquinas muito potentes por longos períodos."
+        },
+        {
+          "type": "image",
+          "asset": "frontier_supercomputer_oak_ridge_cabinets",
+          "ratio": "4:3",
+          "caption": "Os gabinetes do supercomputador Columbia, da NASA: o tipo de máquina usada para treinar um modelo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Depois que o modelo está treinado, começa outro trabalho. A [[inferência]] é o cálculo que produz uma resposta ao seu pedido. O treinamento não recomeça do zero a cada pergunta; já a inferência se repete a cada solicitação. Qual das duas pesa mais com o tempo? Depende de como o serviço foi construído e de quantas pessoas o usam. Um serviço muito procurado mantém seus computadores ocupados respondendo, mesmo entre duas grandes rodadas de treinamento."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p3",
+      "title": "Uma solicitação sem custo fixo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Quanta eletricidade consome uma única solicitação de texto? As estimativas publicadas não dão a mesma resposta. O Google, medindo seu serviço em funcionamento, calcula sua solicitação de texto mediana em **0,24 Wh**. O [[watt-hora]] (Wh) é a unidade que mede uma quantidade de energia. Outro estudo chega a uma mediana de **0,31 Wh**, com a metade central de suas solicitações comuns entre **0,16 e 0,60 Wh**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esses números não se contradizem: eles descrevem sistemas e métodos diferentes, não duas medidas opostas da mesma tarefa. Também deixam de fora trabalhos muito mais pesados. Pedir a uma IA que raciocine em várias etapas antes de responder ocupa seus computadores por muito mais tempo. A energia por solicitação depende, então, do sistema, do jeito de medir e do trabalho pedido."
+        },
+        {
+          "type": "funFact",
+          "text": "No mesmo estudo, uma solicitação de raciocínio longo, em que o modelo detalha suas etapas antes de concluir, chega a uma mediana de 3,91 Wh, mais de dez vezes a solicitação comum."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p4",
+      "title": "Redes elétricas sob pressão",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A [[rede elétrica]] é a malha de linhas que leva a energia das usinas até as casas e as empresas. As grandes instalações de IA se ligam a essa mesma rede. Para dar uma ideia de escala, a AIE compara o consumo anual de um centro de dados dedicado à IA, um prédio construído sobretudo para rodar esses serviços, ao de cerca de **100.000 residências**."
+        },
+        {
+          "type": "image",
+          "asset": "high_voltage_power_lines_data_center_virginia",
+          "ratio": "4:3",
+          "caption": "Torres de uma linha de altíssima tensão (750 kV): os centros de dados se ligam a essa mesma rede."
+        },
+        {
+          "type": "paragraph",
+          "text": "Essas instalações também tendem a se agrupar nos mesmos lugares. Quando vários grandes complexos exigem energia na mesma área, eles dividem a rede local, e as linhas existentes podem precisar de reforço. Uma região com capacidade de sobra recebe novos complexos com mais facilidade do que uma região já perto do limite. O lugar onde se constrói a infraestrutura da IA faz, portanto, diferença para os vizinhos."
+        },
+        {
+          "type": "takeaway",
+          "text": "A eletricidade da IA se gasta em vários níveis, dos servidores que precisam de resfriamento até a rede local, e o custo de uma solicitação depende do sistema, da medição e do trabalho pedido."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "International Energy Agency (IEA), Key Questions on Energy and AI, 2026, p. 9 et 17."
+    },
+    {
+      "text": "International Energy Agency (IEA), Energy and AI, 2025, p. 13, 38 et 52."
+    },
+    {
+      "text": "Shehabi et al., 2024 United States Data Center Energy Usage Report, Lawrence Berkeley National Laboratory, 2024, p. 22-23."
+    },
+    {
+      "text": "Oviedo et al., Joule, 2026, p. 1.",
+      "url": "https://doi.org/10.1016/j.joule.2026.102430"
+    },
+    {
+      "text": "Elsworth et al., Measuring the Environmental Impact of Delivering AI at Google Scale, Google, 2025, p. 7."
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos",
+  "title": "Bataryalarımızda neden kobalt var?",
+  "subtitle": "27 numaralı element",
+  "subject": "sciences",
+  "subcategory": "Gündelik hayatın sırları",
+  "description": "Neredeyse kimse kobalt bulmak için kazı yapmıyor, ama her telefonun bataryasında biraz kobalt var. Sanayinin yerine bir şey koyamadığı ama yine de kurtulmaya çalıştığı bir metalin hikâyesi.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "cobalt_copper_open_pit_mine_kolwezi_drc",
+    "ratio": "4:3",
+    "hook": "Elektrikli otomobillerin muhtaç olduğu metal, neredeyse hiçbir zaman kendisi için çıkarılmıyor."
+  },
+  "sections": [
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kobalt, periyodik tablonun **27** numaralı elementi; demir ile nikelin arasına sıkışmış durumda. Elindeki telefonun bataryasında, mıknatıslarda, bir uçak motorunun içinde dayanacak kadar sert alaşımlarda bulunuyor. Ve neredeyse kimse onun için kazı yapmıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dünyadaki kobaltın yaklaşık **99%**'u yan ürün olarak topraktan çıkıyor: bakırı ya da nikeli için işletilen cevherlerden elde ediliyor. [[Kongo Demokratik Cumhuriyeti]] bunun **dörtte üçe** yakınını sağlıyor, hem de neredeyse tamamen bakır madenlerinden. Yani kobalt arzı kobalt talebine değil, bakır ve nikel talebine bağlı. Elektrikli otomobillerin metalini yönetmek için tuhaf bir yol."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p1",
+      "title": "Kobalta muhtaç batarya",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1980**'de Oxford'da [[John Goodenough]] ve Koichi Mizushima, lityum kobalt oksidin (LiCoO2 ya da LCO) [[interkalasyon]] elektrodu olarak çalıştığını keşfetti: kobalt oksit katmanları arasına lityum iyonları girip çıkıyor, ama yığın çökmüyordu. Bataryanın iki elektrodundan biri için aranan [[katot]] buydu."
+        },
+        {
+          "type": "image",
+          "asset": "john_goodenough_portrait_lithium_battery_inventor",
+          "ratio": "3:4",
+          "caption": "1980'de Koichi Mizushima ile birlikte kobalt katodu keşfeden John Goodenough."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ardından dünya on yıldan fazla bekledi. **1991**'de Sony ilk ticari lityum iyon bataryayı satışa çıkardı, katodu da LCO'ydu. Yaklaşık **2010**'a kadar neredeyse bütün lityum iyon katotları böyle üretildi. LCO bugün de tüketici elektroniğine hâkim: telefonunun, kimsenin çıkarmaya karar vermediği bir metalden birkaç gram taşımasının nedeni bu."
+        },
+        {
+          "type": "funFact",
+          "text": "Kobalt 1735'te İsveçli kimyager Georg Brandt tarafından keşfedildi, bataryalarımıza girmesinden neredeyse iki buçuk yüzyıl önce."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p2",
+      "title": "Kendi oksijenini üreten batarya",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Katodu tuğladan bir duvar gibi düşün. Kobalt oksit katmanları raflar, lityum iyonları da aralarına dizilmiş tuğlalar. Bataryayı fazla şarj edersen çok fazla tuğla çekersin: duvar dengesizleşir. Yaklaşık **130 °C**'nin üstünde ya da aşırı şarjda yapı çökmeye başlar ve kobalt oksidin içine hapsolmuş oksijen gaz olarak dışarı kaçar."
+        },
+        {
+          "type": "image",
+          "asset": "lithium_ion_battery_fire_thermal_runaway_test",
+          "ratio": "2:3",
+          "caption": "İki adet 18650 lityum iyon hücreden oluşan bir paket: etiketin kendisi ateşte patlayabileceği uyarısını yapıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hücreyi dolduran sıvı **yanıcıdır** ve onu yakacak oksijeni batarya kendisi sağlamıştır. Isı ayrışmayı hızlandırır, ayrışma daha çok oksijen salar, o da daha çok ısı üretir. Buna [[termal kaçak]] denir. Lityum batarya yangını bu yüzden üstü örtülerek söndürülemez: oksijen zaten içeridedir."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p3",
+      "title": "Kobalt neden hâlâ orada?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tuğla duvara dönelim. Her şarjda ve her kullanımda lityum tuğlaları dışarı kayar, sonra geri girer. Kobalt, yüzlerce döngü boyunca duvarın eğilmesini ya da yıkılmasını önleyen harçtır. Diğer malzemeler bu işi tek başına yapamaz: **nikel** daha çok enerji depolar ama çabuk yıpranır, **manganez** ucuzdur ama gücü yetmez."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elektrikli otomobillerin çoğunda kullanılan karışımlar, örneğin **NMC** (nikel, manganez, kobalt) ve **NCA** (nikel, kobalt, alüminyum) katotları, bu yüzden kobaltı azaltır ama hiç çıkarmaz. On beş yıldır mühendisler maliyeti düşürmek için kobaltı kısıyor, ama bütünü bir arada tutmak için hep bir tutam gerekiyor. Ondan tamamen vazgeçen tek tür olan [[LFP batarya]] ise bunu duvarı atıp bambaşka bir iç yapı kurarak başarıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p4",
+      "title": "Kobaltsız yapabilmek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kobaltın sorunu kimyasal değil. Kongo üretiminin bir kısmı [[zanaatkâr madencilik]] yoluyla çıkarılıyor: tehlikeli koşullarda elle kazılıyor ve bazı yerlerde bu işi çocuklar yapıyor. Fiyatı hızla ve sert biçimde dalgalanıyor, bu da ona bağlı her bataryayı öngörülemez kılıyor. Üstelik neredeyse tamamı **tek bir ülkeden** geliyor."
+        },
+        {
+          "type": "image",
+          "asset": "artisanal_cobalt_miners_kolwezi_congo",
+          "ratio": "4:3",
+          "caption": "Kongo Demokratik Cumhuriyeti'nde çuvallara kobalt cevheri dolduran zanaatkâr madenciler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sanayi bu yüzden bu metal olmadan bataryalar tasarlamaya çalışıyor. Başlıca yanıt **LFP**, yani lityum demir fosfat. Burada kobaltın yerini, en ucuz ve en bol elementlerden ikisi olan demir ve fosfor alıyor. LFP daha az ısınıyor ve termal kaçağa sürüklenmesi çok daha zor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bedeli ise enerji: **aynı ağırlıkta** bir LFP hücresi daha az enerji depoluyor. Otomobilinin belki de şimdiden bunu kullanmasının, telefonununsa henüz geçmemiş olmasının nedeni bu: cepte her gram önemli."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kobalt lityum iyon bataryaların yapısını ayakta tutuyor, ama neredeyse tamamı tek bir ülkeden, bakırın yan ürünü olarak geliyor. Sanayi ondan ancak kimyayı değiştirerek, LFP ile ve daha az enerji pahasına kurtulabiliyor."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Cobalt Institute, « Cobalt uses ».",
+      "url": "https://www.cobaltinstitute.org/global-cobalt/cobalt-uses/"
+    },
+    {
+      "text": "« One hundred years of cobalt production in the Democratic Republic of the Congo », Resources Policy, 2022.",
+      "url": "https://doi.org/10.1016/j.resourpol.2022.103007"
+    }
+  ]
+}

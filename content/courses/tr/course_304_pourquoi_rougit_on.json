@@ -1,0 +1,131 @@
+{
+  "id": "course_304_pourquoi_rougit_on",
+  "title": "Neden kızarırız?",
+  "subtitle": "En insani ifade",
+  "subject": "sciences",
+  "subcategory": "Gündelik hayatın sırları",
+  "description": "Utandıran bir söz ya da bir iltifat: iki durumda da yanakların ısınır ve pembeleşir. O anda bedenin neler yaptığı ve buna neden neredeyse hiçbir şey yapamadığın.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "blushing_red_cheeks_woman_portrait_close_up",
+    "ratio": "4:3",
+    "hook": "Ters bir söz, yanakların alev alır. Bir iltifat, yine aynısı. Kimse kızarmaya karar vermez."
+  },
+  "sections": [
+    {
+      "id": "course_304_pourquoi_rougit_on_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bu duyguyu herkes bilir. Biri senin hakkında utandırıcı bir laf eder: yüzün ısınır, derin pembeleşir. Doğa bilimci [[Charles Darwin]] bile bu olayı merak etmiş ve onda “bütün ifadelerin en tuhafı ve en insanisini” görmüştü."
+        },
+        {
+          "type": "paragraph",
+          "text": "En garibi, iltifatın da alay kadar etkili olması. Başkalarının önünde övüldüğünde de yanaklarına aynı sıcaklığın yükseldiğini hissedersin. Derinin altında tam olarak ne oluyor ve beden neden utanca da hoşnutluğa da aynı cevabı veriyor?"
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p1",
+      "title": "Derinin altında ani bir ısınma",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kızarmak her şeyden önce bir kan meselesidir. Yüzde, derinin hemen altında bulunan küçük damarlardan geçen kanın hacmi birden artar. Bu olayı [[sempatik sinir sistemi]] yönetir. Sinir sisteminin bu kolu, [[savaş ya da kaç tepkisi]] denen, tehlike karşısındaki acil durum cevabımızı da yönetir."
+        },
+        {
+          "type": "image",
+          "asset": "thermal_infrared_image_human_face_heat",
+          "ratio": "3:2",
+          "caption": "Termal kamerayla görülen insan siluetleri: bir yüzey ne kadar sıcaksa ekranda o kadar açık renkte görünür."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu sistem devreye girince kalp hızlanır, beden ısısı yükselir. Fazla ısıyı atmak için yüzdeki damarlar genişler: oradan daha çok kan geçer ve kanın taşıdığı ısı deriden dışarı çıkar. Bu damarlar yüzeye çok yakın olduğu için kan akını görünür: deri pembe ya da kırmızı bir renk alır. Kızarmak, çalışan bir soğutma sistemidir."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p2",
+      "title": "Utanç, bir kaçma refleksi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Toplum içinde bir gaf, istemeden çiğnenen yazısız bir kural: beyin buna bir tehdit gibi karşılık verir. Sempatik sinir sistemini harekete geçirir; kendini savunma (“savaş”) ya da ortadan kaybolma (“kaç”) isteği doğar. Kan yüzdeki damarlara hücum eder, yanaklar alev alır."
+        },
+        {
+          "type": "image",
+          "asset": "embarrassed_person_hiding_face_in_hands",
+          "ratio": "3:2",
+          "caption": "Yüzünü ellerinin arkasına saklamak: kaçma refleksinin gündelik hali."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bazı insanlar başkalarından daha çok kızarır. [[Sosyal kaygı]] yaşayanlar çoğu zaman kendilerine daha sert bakar. Bu olumsuz önyargı sempatik sistemin tepkisini büyütür ve en küçük beceriksizlik bile bütün bedende gerçek bir alarm başlatır."
+        },
+        {
+          "type": "funFact",
+          "text": "Kızarma korkusu kızartır. Kızarmaktan çekinenlerde, izlendiğini fark etmek bile sempatik sistemin tepkisini güçlendirir. Kızardığın için kızarırsın ve döngü kapanır."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p3",
+      "title": "Hoşnutluktan da kızarmak",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olumlu ilgi de aynı mekanizmayı tetikler. Herkesin önünde bir övgü, alkışlar, beklenmedik bir iltifat: birden kendini başkalarının bakışlarına açık hissedersin ya da nasıl teşekkür edeceğini bilememekten endişelenirsin. Bu huzursuzluk, acil durum cevabını başlatmaya yeter."
+        },
+        {
+          "type": "image",
+          "asset": "shy_speaker_receiving_applause_audience",
+          "ratio": "5:4",
+          "caption": "Boston belediye başkanı, 1960'larda açık havada verilen bir öğle yemeğinde bir konuşmacıyı alkışlıyor: olumlu ilgi de insanı kızartır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Beyin, tebrikle aşağılamayı gayet iyi ayırt eder. Ama sempatik sinir sistemi daha kabadır: kaçmak gerekip gerekmediğine henüz karar vermemiştir. O karar verene kadar yüzün çoktan renk değiştirmiştir."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p4",
+      "title": "Kızarmayı engelleyebilir miyiz?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pek değil, ama bunda bir sakınca yok: kızarmak, çevremizdeki toplumsal dünyaya verilen doğal bir cevaptır, düzeltilmesi gereken bir kusur değil. Buna karşılık onu tetikleyen şey üzerinde çalışabilirsin, yani beynin utandırıcı bir durumu “tehlike” sınıfına koyma biçimi üzerinde."
+        },
+        {
+          "type": "paragraph",
+          "text": "İki yaklaşım yardımcı olabilir. Birincisi [[maruz bırakma terapisi]]: korkulan durumlarla, artık alarmı çalıştırmayana kadar adım adım yüzleşmek. İkincisi [[bilinçli farkındalık]]; yükselen sıcaklığı korkmadan gözlemlemeyi öğretir. İki durumda da kızarma ortadan kalkmaz: kızarma korkusu etkisiz hale gelir ve döngü yatışır."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kızarmak, ister bir gaftan ister bir iltifattan gelsin, bir alarmın yarattığı ısıyı atmak için yüzdeki damarları genişleten sempatik sinir sisteminin işidir: onu engelleyemezsin, ama ondan korkmamayı öğrenebilirsin."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "C. Darwin, The Expression of the Emotions in Man and Animals, John Murray, 1872, p. 301.",
+      "url": "https://darwin-online.org.uk/content/frameset?viewtype=text&itemID=F1142&pageseq=1"
+    },
+    {
+      "text": "P. D. Drummond, G. B. Shapiro, M. Nikolić et S. M. Bögels, « Treatment Options for Fear of Blushing », Current Psychiatry Reports, vol. 22, n° 6, 2020.",
+      "url": "https://doi.org/10.1007/s11920-020-01152-5"
+    },
+    {
+      "text": "D. J. Stein et C. Bouwer, « Blushing and social phobia: a neuroethological speculation », Medical Hypotheses, vol. 49, n° 1, 1997, p. 101-108.",
+      "url": "https://doi.org/10.1016/S0306-9877(97)90260-7"
+    }
+  ]
+}

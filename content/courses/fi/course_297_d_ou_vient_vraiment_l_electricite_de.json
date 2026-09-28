@@ -1,0 +1,141 @@
+{
+  "id": "course_297_d_ou_vient_vraiment_l_electricite_de",
+  "title": "Mistä pistorasiasi sähkö oikeasti tulee?",
+  "subtitle": "Näkymätön sekoitus",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Ympäristö ja tulevaisuus",
+  "description": "Pistorasiassa mikään ei kerro, tuleeko virta auringosta, tuulesta vai hiilivoimalasta. Arkisen liikkeen takana on sekoitus, joka muuttuu tunnista toiseen ja joskus jopa maasta toiseen.",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "wind_turbines_coal_power_plant_landscape",
+    "ratio": "4:3",
+    "hook": "Pistorasia on kaikkialla sama. Sen takana oleva ei ole koskaan."
+  },
+  "sections": [
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kytket puhelimesi lataukseen, ja sähkö saapuu ilman tuotemerkintää. Pistorasiassa mikään ei kerro, onko se tuotettu auringonvalolla, padon vedellä vai voimalaitoksessa poltetulla polttoaineella. Edes saman kadun kaksi taloa eivät pysty osoittamaan voimalaa, josta kukin niiden sähköyksikkö tulee."
+        },
+        {
+          "type": "paragraph",
+          "text": "Syy on yksinkertainen: lähes kaikki kodit ottavat sähkönsä samasta paikasta. Se on [[sähköverkko]], johtojen verkosto, joka yhdistää alueen voimalaitokset ja käyttäjät. Useat voimalat syöttävät sitä samanaikaisesti, ja niiden osuuksista muodostuu [[sähkömix]]. Se kuvaa verkkoa syöttäviä lähteitä, ei erillistä aurinko- tai kaasusähkön virtaa, joka kulkisi suoraan puhelimeesi. Vastaus alkaa siis kaukana kotisi seinien ulkopuolella."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p1",
+      "title": "Höyryä, turbiineja ja aurinkopaneeleja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hiilivoimalat ja monet ydinvoimalat tuottavat lämmöllä höyryä. Tämän höyryn voimalla pyörii [[turbiini]], siipisarja, joka on kytketty sähkökoneeseen. Tuo kone on [[generaattori]], joka muuttaa liikkeen sähköksi. Kaasuvoimalat voivat myös pyörittää turbiinejaan suoraan palamisen kuumilla kaasuilla. Menetelmät eroavat, mutta sähkö on samaa, ja se virtaa samaan verkkoon."
+        },
+        {
+          "type": "image",
+          "asset": "steam_turbine_generator_hall_power_plant",
+          "ratio": "2:1",
+          "caption": "Varhainen höyryturbiinigeneraattori Wienin teknillisessä museossa: turbiini on kytketty generaattoriinsa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tuuliturbiinit pyörivät tuulen, vesivoimalat virtaavan veden voimalla. Aurinkopaneelit kulkevat toista tietä: ne tuottavat sähköä suoraan valosta ilman ainuttakaan pyörivää siipeä. Nämä lähteet eivät toimi samoissa olosuhteissa. Aurinkosähkön tuotanto romahtaa auringonlaskun aikaan, ja tuulivoiman tuotanto vaihtelee sään mukaan. Polttoainetta polttavat voimalat voivat silloin tuottaa virtaa, kun muut tuottavat vähemmän."
+        },
+        {
+          "type": "funFact",
+          "text": "Ydinvoimala toimii pohjimmiltaan kuin hiilivoimala: lämpö keittää vettä, ja höyry pyörittää turbiinia. Vain lämmönlähde on eri."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p2",
+      "title": "Sekoitus, joka muuttuu päivän mittaan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Keskipäivällä aurinkopaneelit tuottavat täydellä teholla, kun toimistot ja kodit kuluttavat sähköä. Auringonlaskun jälkeen ne pysähtyvät, mutta lamput, junat ja keittiöt tarvitsevat yhä sähköä. Tuulinen iltapäivä voi myös vaihtua tyyneksi illaksi, samalla kun kulutus nousee tai laskee."
+        },
+        {
+          "type": "image",
+          "asset": "electricity_grid_control_room_operators_screens",
+          "ratio": "16:9",
+          "caption": "Kartta Yhdysvaltain suurjännitelinjoista ja sähköasemista: verkosto, jonka tasapainosta verkko-operaattorin on huolehdittava."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Verkko-operaattori]], eli tätä verkostoa ohjaava organisaatio, joutuu pitämään tarjonnan ja kysynnän jatkuvasti tasapainossa. Jotkin voimalat säätävät tuotantoaan. Siellä, missä on akkuja, ne palauttavat aiemmin varastoitua sähköä. Muut lähteet paikkaavat laskevan auringon jättämää aukkoa. Päivittäistä reseptiä ei ole: keskipäivän mix voi näyttää hyvin erilaiselta kuin muutamaa tuntia myöhemmin, vaikka pistorasiasi ei ole muuttunut."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p3",
+      "title": "Mitä vuosikeskiarvo kätkee",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vuonna 2025 noin **neljännes** (24 %) Yhdysvaltain suurten voimalaitosten tuottamasta sähköstä tuli lähteistä, jotka luonto uusii itse: niitä ovat [[uusiutuvat energialähteet]], kuten auringonvalo, tuuli ja virtaava vesi. Luku on vielä alustava ja kuvaa koko vuotta. Se ei tarkoita, että uusiutuvien osuus olisi ollut sama joka kerta, kun joku laittoi vedenkeittimen päälle tai latasi puhelinta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vuotuinen prosenttiosuus sekoittaa aurinkoiset iltapäivät, tuuliset yöt ja jaksot, jolloin aurinko ja tuuli tuottavat vähän. Se laskee yhteen myös suuren ja pienen kysynnän tunnit. Jos haluaa tietää, mitkä lähteet syöttävät verkkoa tietyllä hetkellä, on katsottava sen tuntikohtaista mixiä eikä vuosikeskiarvoa. Kumpikin näkökulma on hyödyllinen, mutta ne vastaavat eri kysymykseen."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p4",
+      "title": "Sähköä muualta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tuntikohtainen mix vaatii vielä yhden tarkennuksen: mitä sähköä omalla alueellasi on todella saatavilla. Rajan yhdellä puolella sijaitseva voimala voi syöttää verkkoa sen toisella puolella. Tämä tuontisähkö sekoittuu paikalliseen tuotantoon. Siksi [[kulutusmix]], eli alueen käyttäjiä syöttävät lähteet, voi poiketa paikan päällä tuotetusta mixistä."
+        },
+        {
+          "type": "image",
+          "asset": "belchatow_coal_power_plant_cooling_towers_poland",
+          "ratio": "4:3",
+          "caption": "Bełchatówin hiilivoimala Puolassa, Euroopan suurin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tällä on merkitystä sähköösi liittyvien päästöjen kannalta. Hiilen tai kaasun polttaminen vapauttaa hiilidioksidia, kaasua, joka lämmittää maapalloa. Tuuliturbiinit, aurinkopaneelit ja ydinvoimalat eivät päästä sitä suoraan tuottaessaan sähköä. Sähkö ei pysähdy rajalle, eikä sen vaikutuskaan. Tuonnin alkuperästä riippuen kulutukseesi liittyvät päästöt voivat olla suuremmat tai pienemmät kuin pelkkä paikallinen tuotanto antaa ymmärtää."
+        },
+        {
+          "type": "takeaway",
+          "text": "Pistorasiasi sähkö on sekoitus, joka muuttuu tunnista toiseen ja ylittää rajoja, joten sen alkuperää ei kerro yksin vuosikeskiarvo eikä paikallinen tuotanto."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Delivered to Consumers », sections « The electric power grid », « Electricity sources and types of providers » et « Balancing authorities »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Generated », sections « Turbine driven generators » et « Other types of generators »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Energy Storage for Electricity Generation », section « Uses and benefits of energy storage systems »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity Generation, Capacity, and Sales in the United States », section « Electricity generation », données 2025 provisoires."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity and the Environment », sections « Fossil fuel, biomass, and waste burning power plants » et « Nuclear power plants »."
+    },
+    {
+      "text": "Electricity Maps, « Methodology », sections « Defining Granularity: Spatial and Temporal », « Consumption-based Calculation » et « The Flow-Tracing Algorithm »."
+    },
+    {
+      "text": "B. Tranberg et al., « Real-time carbon accounting method for the European electricity markets », Energy Strategy Reviews, vol. 26, 2019, art. 100367.",
+      "url": "https://doi.org/10.1016/j.esr.2019.100367"
+    }
+  ]
+}

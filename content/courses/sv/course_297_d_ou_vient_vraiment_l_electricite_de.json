@@ -1,0 +1,141 @@
+{
+  "id": "course_297_d_ou_vient_vraiment_l_electricite_de",
+  "title": "Varifrån kommer elen i ditt uttag egentligen?",
+  "subtitle": "En osynlig blandning",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Miljö och framtid",
+  "description": "I uttaget syns inte om strömmen kommer från solen, vinden eller ett kolkraftverk. Bakom den vardagliga handlingen döljer sig en blandning som skiftar från timme till timme, och ibland korsar gränser.",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "wind_turbines_coal_power_plant_landscape",
+    "ratio": "4:3",
+    "hook": "Uttaget ser likadant ut överallt. Det som finns bakom gör aldrig det."
+  },
+  "sections": [
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_intro",
+      "title": "Inledning",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Du sätter mobilen på laddning, och elen kommer utan etikett. Ingenting i uttaget säger om den gjordes av solljus, vatten bakom en damm eller bränsle som eldats i ett kraftverk. Inte ens två hus på samma gata kan peka ut vilket kraftverk varje enhet ström kommer från."
+        },
+        {
+          "type": "paragraph",
+          "text": "Förklaringen är enkel: nästan alla hushåll hämtar sin ström från ett [[elnät]], ett nät av ledningar som förbinder kraftverk och användare inom ett område. Flera kraftverk matar det samtidigt, och deras andelar utgör [[elmixen]]. Mixen beskriver vilka källor som försörjer nätet, inte en separat ström av sol- eller gasel som skickas rakt till din mobil. Svaret börjar alltså långt utanför husets väggar."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p1",
+      "title": "Ånga, turbiner och solpaneler",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kolkraftverk och många kärnkraftverk använder värme för att göra ånga. Ångan driver en [[turbin]], en uppsättning skovlar kopplad till en [[generator]], maskinen som omvandlar rörelse till el. Gaskraftverk kan också driva sina turbiner direkt med de heta förbränningsgaserna. Olika processer, men samma el, som går ut i samma nät."
+        },
+        {
+          "type": "image",
+          "asset": "steam_turbine_generator_hall_power_plant",
+          "ratio": "2:1",
+          "caption": "Ett tidigt ångturbinaggregat utställt på Tekniska museet i Wien: turbinen är kopplad till sin generator."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vindkraftverk snurrar med vinden, vattenkraftverk med strömmande vatten. Solpaneler går en annan väg: de gör el direkt av ljus, utan några snurrande blad alls. Källorna arbetar inte under samma villkor. Solelen faller när solen går ned, och vindkraften skiftar med vädret. Kraftverk som eldar bränsle kan då leverera ström när de andra producerar mindre."
+        },
+        {
+          "type": "funFact",
+          "text": "Ett kärnkraftverk fungerar i grunden som ett kolkraftverk: värmen kokar vatten, och det är ångan som driver turbinen. Bara värmekällan är en annan."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p2",
+      "title": "En mix som skiftar under dagen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mitt på dagen går solpanelerna för fullt medan kontor och bostäder drar ström. Efter solnedgången stannar de, men lampor, tåg och kök behöver fortfarande el. En blåsig eftermiddag kan också följas av en vindstilla kväll, medan förbrukningen stiger eller sjunker."
+        },
+        {
+          "type": "image",
+          "asset": "electricity_grid_control_room_operators_screens",
+          "ratio": "16:9",
+          "caption": "Karta över högspänningsledningar och ställverk i USA: det nät som en systemoperatör måste hålla i balans."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den [[systemoperatör]] som styr nätet måste hela tiden hålla utbud och efterfrågan i balans. Vissa kraftverk justerar sin produktion. Där det finns batterier släpper de ut el som lagrats tidigare. Andra källor fyller luckan när solen sjunker. Det finns inget fast dagsrecept: mixen mitt på dagen kan se helt annorlunda ut än några timmar senare, fast ditt uttag är detsamma."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p3",
+      "title": "Det som årsgenomsnittet döljer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "År 2025 kom ungefär **en fjärdedel** (24%) av elen från de stora kraftverken i USA från [[förnybar energi]], källor som naturen själv fyller på: solljus, vind, strömmande vatten. Siffran, som fortfarande är preliminär, gäller hela året. Den betyder inte att förnybart stod för samma andel varje gång någon satte på en vattenkokare eller laddade en mobil."
+        },
+        {
+          "type": "paragraph",
+          "text": "En årlig procentsats blandar soliga eftermiddagar, blåsiga nätter och perioder när sol och vind ger lite. Den lägger också ihop timmar med hög och låg efterfrågan. Vill du veta vilka källor som försörjer ett nät vid en viss tidpunkt måste du titta på mixen timme för timme i stället för årsgenomsnittet. Båda perspektiven är användbara, men de svarar inte på samma fråga."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p4",
+      "title": "El från andra håll",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Timmixen behöver ännu en detalj: vilken el som faktiskt finns tillgänglig i ditt område. Ett kraftverk på ena sidan en gräns kan mata nätet på andra sidan. Den importerade elen blandas med den lokala produktionen. [[Konsumtionsmixen]], alltså de källor som försörjer användarna i ett område, kan därför skilja sig från mixen som produceras på plats."
+        },
+        {
+          "type": "image",
+          "asset": "belchatow_coal_power_plant_cooling_towers_poland",
+          "ratio": "4:3",
+          "caption": "Kolkraftverket i Bełchatów i Polen, det största i Europa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det spelar roll för utsläppen från din el. När man eldar kol eller gas släpps koldioxid ut, en gas som värmer upp planeten. Vindkraftverk, solpaneler och kärnkraftverk släpper inte ut den direkt när de producerar ström. Elen stannar inte vid gränsen, och det gör inte dess påverkan heller. Beroende på var importen kommer ifrån kan utsläppen från din förbrukning bli högre eller lägre än den lokala produktionen antyder."
+        },
+        {
+          "type": "takeaway",
+          "text": "Elen i ditt uttag är en blandning som skiftar från timme till timme och korsar gränser, så varken årsgenomsnittet eller den lokala produktionen kan ensam säga varifrån den kommer."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Delivered to Consumers », sections « The electric power grid », « Electricity sources and types of providers » et « Balancing authorities »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Generated », sections « Turbine driven generators » et « Other types of generators »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Energy Storage for Electricity Generation », section « Uses and benefits of energy storage systems »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity Generation, Capacity, and Sales in the United States », section « Electricity generation », données 2025 provisoires."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity and the Environment », sections « Fossil fuel, biomass, and waste burning power plants » et « Nuclear power plants »."
+    },
+    {
+      "text": "Electricity Maps, « Methodology », sections « Defining Granularity: Spatial and Temporal », « Consumption-based Calculation » et « The Flow-Tracing Algorithm »."
+    },
+    {
+      "text": "B. Tranberg et al., « Real-time carbon accounting method for the European electricity markets », Energy Strategy Reviews, vol. 26, 2019, art. 100367.",
+      "url": "https://doi.org/10.1016/j.esr.2019.100367"
+    }
+  ]
+}

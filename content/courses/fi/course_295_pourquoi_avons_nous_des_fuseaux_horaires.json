@@ -1,0 +1,156 @@
+{
+  "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires",
+  "title": "Miksi meillä on aikavyöhykkeet?",
+  "subtitle": "1884",
+  "subject": "histoire",
+  "subcategory": "Uuden ajan alku ja 1800-luku",
+  "description": "1800-luvulle asti jokainen kaupunki eli omassa ajassaan. Rautatiet ja vuonna 1884 Washingtonissa koolle kutsuttu konferenssi muuttivat itse ajan.",
+  "author": "nathan-hewitt",
+  "hero": {
+    "image": "shepherd_gate_clock_royal_observatory_greenwich",
+    "ratio": "4:3",
+    "hook": "Ennen junia keskipäivä ei ollut koskaan aivan sama hetki kahdessa vierekkäisessä kaupungissa."
+  },
+  "sections": [
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suurimman osan historiaa aika on paikallista. Jokainen kaupunki asettaa kellonsa itse, ja keskipäivä yhdessä kaupungissa voi osua useita minuutteja ennen tai jälkeen naapurikaupungin keskipäivän. Kukaan ei välitä: kaupungista toiseen ei liikuta niin nopeasti, että erolla olisi merkitystä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sitten tulevat rautatiet. Kun kahden kaupungin välin taittaa muutamassa minuutissa, erot alkavat haitata. Pitkillä matkoilla juna ohittaa pysäkkejä, joiden paikallinen aika vaihtelee kokonaisia tunteja. Ihmiskunnan vuosituhansia käyttämät ajanlaskujärjestelmät eivät enää riitä. Jotta junat kulkisivat sujuvasti, itse aika on luotava uudelleen."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p1",
+      "title": "Rautatiet ottavat käyttöön Greenwichin ajan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kaupunkien väliset aikaerot ovat aikatauluille painajainen. Ne ovat myös vaarallisia: huonosti yhteen sovitetut aikataulut aiheuttavat useita junaonnettomuuksia. Yhtiöt ymmärtävät tarvitsevansa yhteisen ajan. Vuonna **1840** brittiläinen [[Great Western Railway]] keksii ratkaisun ensimmäisenä: se sovittaa aikataulunsa Greenwichin kuninkaallisen observatorion aikaan, josta käytetään nimeä [[Greenwichin aika]]. Kaikki sen asemat elävät nyt samassa ajassa."
+        },
+        {
+          "type": "image",
+          "asset": "bristol_corn_exchange_clock_two_minute_hands",
+          "ratio": "4:3",
+          "caption": "Bristolin Corn Exchangen kello ja sen kaksi minuuttiviisaria."
+        },
+        {
+          "type": "paragraph",
+          "text": "Muutos toimii erinomaisesti. Lähdöt ja saapumiset saadaan vihdoin sovitettua turvallisesti yhteen. Pian kaikki brittiläiset yhtiöt ottavat saman järjestelmän käyttöön. Jo **1850-luvulla** useimmat maan julkiset kellot on asetettu Greenwichin mukaan. Vuonna **1880** siitä tulee Ison-Britannian virallinen aika."
+        },
+        {
+          "type": "funFact",
+          "text": "Bristolissa Corn Exchangen kellossa on kaksi minuuttiviisaria: toinen näyttää paikallista aikaa, toinen rautateiden aikaa eli Greenwichin aikaa, kymmenen minuutin erolla. Muisto ajalta, jolloin kaupunki eli kahdessa ajassa yhtä aikaa."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p2",
+      "title": "Yhdysvallat keksii aikavyöhykkeet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yhdysvalloissa brittiläinen resepti ei riitä. Junat kulkevat siellä paljon pidempiä matkoja: kun Kaliforniassa on keskipäivä, Washingtonissa iltapäivä on jo pitkällä. Ratkaisu ovat [[aikavyöhykkeet]]: maa jaetaan **viiteen** kaistaan, joiden välillä on tunnin ero."
+        },
+        {
+          "type": "image",
+          "asset": "william_allen_railroad_time_zones_map_1883",
+          "ratio": "4:3",
+          "caption": "Burlington Routen mainoskartta vuodelta 1892: vuonna 1883 käyttöön otetut rautateiden vyöhykkeet rajaavat Pacific-, Mountain-, Central- ja Eastern Time -ajat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Näin paikalliset junat kulkevat ajassa, jolla on merkitystä paikan päällä, ja useiden vyöhykkeiden halki kulkevat junat voivat muuntaa aikataulunsa helposti. Jakoja ehdotetaan useita; voittajaksi selviää rautatieoppaita toimittanut [[William Allen]]. **Marraskuussa 1883** Yhdysvaltojen ja Kanadan rautatieyhtiöt ottavat virallisesti käyttöön hänen viisi vyöhykettään."
+        },
+        {
+          "type": "paragraph",
+          "text": "Paikallinen aika ei kuitenkaan vaivaa vain rautateitä. Kansainvälinen merenkulku kasvaa nopeasti, ja lennätin on juuri keksitty. Ajan yhteensovittamisesta on tullut maailmanlaajuinen ongelma, joka vaatii maailmanlaajuisen ratkaisun."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p3",
+      "title": "Washingtonin konferenssi 1884",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vuonna **1884** Yhdysvaltain presidentti Chester A. Arthur kutsuu Washingtoniin koolle konferenssin ratkaisemaan kysymyksen. **25 maan** edustajat, lähes kaikki Amerikasta tai Euroopasta, saapuvat paikalle, ja [[Kansainvälinen meridiaanikonferenssi]] alkaa. Siellä päätetään, että Greenwichin meridiaani on nollameridiaani ja sen aika maailmanaika, ja vuorokausi kestää 24 tuntia alkaen keskiyöstä Greenwichin aikaa."
+        },
+        {
+          "type": "image",
+          "asset": "sandford_fleming_portrait_photograph_1890s",
+          "ratio": "3:4",
+          "caption": "Skotlantilais-kanadalainen insinööri Sandford Fleming: Canadian Alpine Journalissa vuonna 1907 julkaistu muotokuva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Skotlantilais-kanadalainen insinööri [[Sandford Fleming]] ajaa siellä maailmanlaajuista aikavyöhykejärjestelmää. Hän jakaa maapallon **24 vyöhykkeeseen**, joiden perustana on [[pituusaste]]: joka **15 asteen** välein aika siirtyy tunnilla edellisestä vyöhykkeestä. Toisin kuin yleisesti luullaan, konferenssi ei virallisesti hyväksy hänen vyöhykkeitään. Greenwichin ajasta tulee yleismaailmallinen vertailukohta, mutta kukaan ei määrää sitä korvaamaan paikallisia aikoja."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p4",
+      "title": "Hidas ja kiistelty käyttöönotto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aikavyöhykkeet otetaan siis käyttöön vähitellen. Vuoteen **1900** mennessä useimmat Euroopan maat ovat siirtyneet Greenwichiin sidottuun aikaan. Ison-Britannian ja Ranskan kaltaiset siirtomaavallat pakottavat sen siirtomailleen. Muut maat liittyvät mukaan käytännön syistä, joskus vuosikymmenten jälkeen: Kiina odottaa vuoteen **1918**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Virallisestikin käyttöön otettu uusi aika juurtuu tapoihin hitaasti. Vuosien ajan se aiheuttaa sekaannusta ja pilkkaa, ja paikallinen aika pysyy yleisenä kaikkialla maailmassa. Sen hävittäminen kokonaan vaatii vuosikymmeniä sekä välineitä kuten yleisen koululaitoksen ja radion ohjelma-ajat. **1920-luvulla** useimmat maat elävät vihdoin Greenwichiin sidotussa ajassa. Aika on luotu uudelleen, koska rautatiet halusivat niin."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1840",
+              "title": "Junat Greenwichin aikaan",
+              "detail": "Great Western Railway sovittaa aikataulunsa kuninkaallisen observatorion mukaan."
+            },
+            {
+              "date": "1880",
+              "title": "Britannian virallinen aika",
+              "detail": "Greenwichin ajasta tulee Ison-Britannian virallinen aika."
+            },
+            {
+              "date": "Marraskuu 1883",
+              "title": "Viisi pohjoisamerikkalaista vyöhykettä",
+              "detail": "Yhdysvaltojen ja Kanadan yhtiöt ottavat käyttöön William Allenin jaon."
+            },
+            {
+              "date": "1884",
+              "title": "Washingtonin konferenssi",
+              "detail": "25 maata tekee Greenwichin ajasta maailmanajan."
+            },
+            {
+              "date": "1918",
+              "title": "Kiina mukautuu",
+              "detail": "Myös Kiina ottaa käyttöön Greenwichiin sidotun ajan."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Aikavyöhykkeet eivät syntyneet maailmanlaajuisesta määräyksestä vaan rautateiden tarpeista, ja niiltä kesti vuosikymmeniä korvata paikallinen aika."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. A. Johnston, The Clocks Are Telling Lies: Science, Society, and the Construction of Time, 2022, p. 24, 104 et 188, et chap. 5."
+    }
+  ]
+}

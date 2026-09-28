@@ -1,0 +1,135 @@
+{
+  "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone",
+  "title": "Mis nutitelefonis tegelikult on?",
+  "subtitle": "Kaevandus taskus",
+  "subject": "sciences",
+  "subcategory": "Meie igapäevaelu lahti seletatud",
+  "description": "Kuni 50 metalli, kaaliumiga töödeldud klaas, Kongo koobalt ja Tšiili liitium: telefon on kontsentreeritud planeet. Ja kui see sureb, jäävad selle materjalid ikka väärtuslikuks.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "disassembled_smartphone_components_flat_lay",
+    "ratio": "4:3",
+    "hook": "Teie telefon näib ühe esemena, kuid peidab kümneid materjale, mis on maa seest välja kaevatud mitmel mandril."
+  },
+  "sections": [
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nutitelefon näib olevat üks ese. Tegelikult on see kokku pandud kümnetest materjalidest üle kogu maailma, ja neid on palju rohkem kui nähtav klaas, plast ja metall. Euroopa Komisjoni andmetel võib telefonis olla kuni **50 eri metalli**. Ameerika Ühendriikide geoloogiateenistus hindab, et vähemalt pool mobiilseadme komponentidest pärineb maast kaevandatud mineraalidest või on neist töödeldud."
+        },
+        {
+          "type": "paragraph",
+          "text": "Miks vajab nii väike ese nii palju eri aineid? Sest iga osa nõuab kindlat omadust: juhtida elektrit, püsida läbipaistev, käituda magnetina või salvestada energiat. Teisisõnu saab suur osa teie telefonist alguse kivimist."
+        }
+      ]
+    },
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p1",
+      "title": "Isegi klaas teeb tööd",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ekraan vajab klaasi, mis on korraga läbipaistev ja tugev. Paljud telefonid kasutavad klaasi nimega [[Gorilla Glass]]. See on karastatud klaas, mille koostisosad on [[räni]], alumiinium ja hapnik. Selle tugevus tuleneb nutikast töötlusest: pinna lähedal asendatakse väikesed naatriumiaatomid suuremate kaaliumiaatomitega. Need mahukad ioonid tunglevad pinnal ja tekitavad surve, mis takistab pragude levikut."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vahetult klaasi all on sageli õhuke kiht haruldaste omadustega materjali, milleks on [[indiumtinaoksiid]]: see juhib elektrit ja jääb samal ajal läbipaistvaks. Kui sõrm puudutab ekraani, muudab see elektrisignaali selles kihis. Telefon tuvastab muutuse, varjamata midagi all olevast pildist."
+        }
+      ]
+    },
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p2",
+      "title": "Igal materjalil oma ülesanne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ekraani all on iga materjal valitud kindla ülesande jaoks. Räni on kiipidesse söövitatud pisikeste vooluringide alus. Vask kannab elektrit komponentide vahel. Aku energia salvestamise ja vabastamise eest vastutavad [[liitium]] ja grafiit, üks süsiniku vorme."
+        },
+        {
+          "type": "image",
+          "asset": "smartphone_logic_board_chips_gold_contacts_macro",
+          "ratio": "4:3",
+          "caption": "Nutitelefoni emaplaat: ränikiibid, vaskjuhtmed ja kullatud kontaktid."
+        },
+        {
+          "type": "funFact",
+          "text": "Mitte kuld ega liitium: nutitelefonis on kõige rohkem **vaske**, mis ühendab kõik komponendid omavahel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Valjuhääldite, mikrofonide ja vibraatori pisikesed, kuid väga võimsad magnetid valmistatakse ainetest, mille nimi on [[haruldased muldmetallid]], näiteks neodüüm. Telefonis on ka väga väikeses koguses väärismetalle, kulda ja hõbedat. **Kuld** on eriti kasulik: see juhib hästi elektrit ega korrodeeru, mistõttu sobib see ideaalselt seadme väikesteks ja töökindlateks ühendusteks."
+        }
+      ]
+    },
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p3",
+      "title": "Telefon, mis on teinud maailmareisi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Teie telefonil võib olla silt „valmistatud riigis...“, kuid selle materjalid pärinevad harva ühest riigist. Enne lõppmonteerimise tehaseni jõudmist on nad sageli läbinud mitu mandrit. Akudele hädavajalik metall [[koobalt]] kaevandatakse suuremalt jaolt Kongo Demokraatlikus Vabariigis. Liitiumi toodetakse aga sellistes riikides nagu Austraalia, Tšiili, Hiina ja Argentina."
+        },
+        {
+          "type": "image",
+          "asset": "salar_de_atacama_lithium_evaporation_ponds_aerial",
+          "ratio": "2:3",
+          "caption": "Tšiili satelliidipildil (MODIS, 2015): põhjas Atacama soolatasandikud, kus kaevandatakse liitiumi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seejärel need toorained rafineeritakse ja muudetakse kusagil mujal komponentideks, enne kui telefon kokku pannakse. Nutitelefon on seega tõeliselt ülemaailmne toode, mille teekond algab ammu enne tehast. Ja sellel teekonnal on hind: kaevandamine ja rafineerimine nõuavad maad, vett ja energiat ning see läheb keskkonnale maksma."
+        }
+      ]
+    },
+    {
+      "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_p4",
+      "title": "Vana telefon on endiselt väärtuslik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Telefon muutub kasutuks, kui see lakkab töötamast ja seda ei saa enam parandada. Kuid selles leiduvad materjalid säilitavad oma väärtuse: neid saab kätte ja uuesti kasutada. Maailmas **2022**. aastal tekkinud [[elektroonikajäätmed]], nutitelefonid kaasa arvatud, kaalusid kokku **62 miljonit tonni**. Neist koguti ja võeti ringlusse vaevu üle **20%**."
+        },
+        {
+          "type": "image",
+          "asset": "e_waste_pile_discarded_mobile_phones",
+          "ratio": "3:2",
+          "caption": "Elektroonikajäätmete prügimägi Ghanas, kuhu jõuab osa maailmas kasutuselt kõrvaldatud seadmetest."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nende materjalide taaskasutamine vähendab vajadust kaevandada ja töödelda uusi tooraineid. Samuti hoiab see väärtuslikke ressursse kauem ringluses. Telefon võib vananeda. Selles leiduvad materjalid aga ei vanane. Kogu küsimus on selles, kuidas hoida neid kasutuses võimalikult kaua."
+        },
+        {
+          "type": "takeaway",
+          "text": "Nutitelefon on kaevandus taskus, kuni 50 metalli mitmelt mandrilt, ja tegelik väljakutse ei ole selle väljavahetamine, vaid selle materjalide võimalikult pikk ringluses hoidmine."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "G. Ragonnaud, Securing Europe's Supply of Critical Raw Materials, European Parliamentary Research Service, PE 739.294, 2023, p. 2."
+    },
+    {
+      "text": "J. E. Jenness, J. A. Ober, A. M. Wilkins et J. Gambogi, A World of Minerals in Your Mobile Device, U.S. Geological Survey, General Information Product 167, 2016, p. 1.",
+      "url": "https://doi.org/10.3133/gip167"
+    },
+    {
+      "text": "B. Rohrig, « Smartphones: Smart Chemistry », ChemMatters, American Chemical Society, avril-mai 2015, p. 11-12."
+    },
+    {
+      "text": "C. P. Baldé et al., The Global E-waste Monitor 2024, UNITAR et ITU, 2024, p. 27."
+    },
+    {
+      "text": "A. Brunning, « The Chemical Elements of a Smartphone », Compound Interest."
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "course_281_comment_meurt_une_etoile",
+  "title": "Hogyan hal meg egy csillag?",
+  "subtitle": "Vörös óriás vagy szupernóva",
+  "subject": "sciences",
+  "subcategory": "A Föld és a világegyetem",
+  "description": "Egy csillag évmilliárdokig egyensúlyoz a gravitáció és a magjában zajló fúzió között. Amikor elfogy az üzemanyag, felfúvódik, összeomlik vagy felrobban, és hogy melyik, azt egyetlen dolog dönti el: a tömege.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "crab_nebula_supernova_remnant_hubble",
+    "ratio": "4:3",
+    "hook": "Egy csillag kihunyhat csendben, vagy elképzelhetetlen erővel robbanhat fel: minden a tömegén múlik."
+  },
+  "sections": [
+    {
+      "id": "course_281_comment_meurt_une_etoile_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mitől hal meg egy csillag? Akkor kezd meghalni, amikor már nem tud ellenállni a saját gravitációjának. Élete nagy részében a gravitáció a középpont felé húzza az anyagát. Ugyanekkor a magjában termelődő energia nyomást kelt, amely kifelé tol. A két hatás kiegyenlíti egymást, és a csillag stabil marad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez az energia a [[magfúzió]] révén keletkezik: hidrogénatommagok egyesülnek héliummá, és óriási energiát szabadítanak fel. Az egyensúly tarthat millió, milliárd, sőt billió évig is. Minden a tömegtől függ. A kis csillagok lassan fogyasztják az üzemanyagukat, a nagy tömegűek sokkal gyorsabban égetik el. Egy nap az egyensúly felborul. Hogy mi jön ezután, az a csillag tömegén múlik."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p1",
+      "title": "A csillag vörös óriássá fúvódik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Élete nagy részében a csillag a magjában, vagyis a központi részében lévő hidrogént héliummá alakítja. Amikor ez a hidrogén fogyni kezd, a középpontban lelassul a fúzió. A mag összehúzódik és felforrósodik. Körülötte egy hidrogénréteg tovább fuzionál, és energiát szabadít fel. Ennek a nyomásnak engedve a csillag külső rétegei óriásira fúvódnak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az eredmény egy [[vörös óriás]]: a korábbinál sokkal nagyobb csillag, hűvösebb felszínnel. A haldokló csillag tehát először megnő, ahelyett hogy csendben kihunyna. A Nap nagyjából **5 milliárd év** múlva léphet ebbe a szakaszba."
+        },
+        {
+          "type": "funFact",
+          "text": "Vörös óriásként a Nap akkorára nőhet, hogy elnyeli a Merkúrt és a Vénuszt. A Föld pontos sorsa viszont bizonytalan."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p2",
+      "title": "Földnyi méretű fehér törpe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Egy Naphoz hasonló csillag nem fúvódhat fel a végtelenségig. Ahogy öregszik, elveszíti külső rétegeit, amelyek elszállnak az űrbe. Ez a gáz szétterül, és világító felhőt alkot: ez a [[planetáris köd]]. A közepén egy [[fehér törpe]] marad: a csillag forró, sűrű magja, amely a külső rétegek távozása után csupaszon maradt."
+        },
+        {
+          "type": "image",
+          "asset": "helix_nebula_planetary_nebula_white_dwarf_hubble",
+          "ratio": "1:1",
+          "caption": "A Helix-köd: egy haldokló csillag által kidobott gáz, közepén a látható fehér törpével."
+        },
+        {
+          "type": "paragraph",
+          "text": "Egy fehér törpe nem nagyobb a **Földnél**, mégis az eredeti csillag tömegének nagy részét hordozza. A fúzió leállt benne: már nem termel energiát. Ha világít, csak azért, mert még rendkívül forró. Hihetetlenül hosszú idő alatt lassan kihűl és elhalványul."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p3",
+      "title": "Szupernóva, neutroncsillag vagy fekete lyuk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Egy sokkal nagyobb tömegű csillag itt nem áll meg. Tovább egyesíti a könnyű elemeket nehezebbekké: a héliumból szén lesz, majd további reakciók még nehezebb elemeket hoznak létre. Lassanként **vasban** gazdag mag alakul ki. A vassal azonban a fúzió már nem ad elég energiát ahhoz, hogy a csillag ellenálljon a gravitációnak. A mag egy pillanat alatt összeomlik."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez az összeomlás kiválthat egy [[szupernóva]] néven ismert óriási robbanást, amely a csillag nagy részét kilövi az űrbe. Az összeomlott mag viszont megmarad. Ha nem túl nagy a tömege, [[neutroncsillag]] lesz belőle, egy rendkívül sűrű égitest, amely nem nagyobb egy városnál. Ha elég nagy a tömege, a gravitáció tovább préseli, amíg létre nem jön egy [[fekete lyuk]], amelynek vonzása olyan erős, hogy még a fény sem tud kiszökni belőle."
+        },
+        {
+          "type": "image",
+          "asset": "m87_black_hole_event_horizon_telescope_2019",
+          "ratio": "16:9",
+          "caption": "Az M87 fekete lyuka: az első, 2019-es kép (balra) és a PRIMO algoritmussal élesített változata (2023)."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p4",
+      "title": "Csillagporból vagyunk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A haldokló csillag nem tűnik el egyszerűen. Anyagának egy részét visszaadja az űrnek, tele az élete során előállított elemekkel. Idővel ez az anyag új csillagok, bolygók és más világok részévé válhat."
+        },
+        {
+          "type": "image",
+          "asset": "pillars_of_creation_eagle_nebula_jwst_2022",
+          "ratio": "2:3",
+          "caption": "A teremtés oszlopai a James Webb űrtávcső 2022-es felvételén: itt új csillagok születnek."
+        },
+        {
+          "type": "paragraph",
+          "text": "Erre a **szén** a legjobb példa. Nélkülözhetetlen a földi élethez, a saját testünkben is. Ennek a szénnek a nagy része azonban olyan csillagnemzedékekben keletkezett, amelyek mára eltűntek. Ezért mondják néha, hogy csillagporból vagyunk. A megfogalmazás költői, de a mögötte álló tudomány nagyon is valós. Egy csillag halála tehát kezdet is: anyagából egy nap talán egy másik csillag, egy másik bolygó vagy akár egy élő világ lesz."
+        },
+        {
+          "type": "takeaway",
+          "text": "Fúzió nélkül a csillag enged a gravitációnak. A kicsik fehér törpeként hunynak ki, a nagy tömegűek szupernóvaként robbannak fel, és neutroncsillagot vagy fekete lyukat hagynak hátra. Szétszórt anyaguk pedig az eljövendő csillagokat, bolygókat és élőlényeket táplálja."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, p. 541."
+    },
+    {
+      "text": "NASA Science, « Types of Stars: White Dwarfs »."
+    },
+    {
+      "text": "S. Frazier, « Why the Sun Won't Become a Black Hole », NASA Goddard Space Flight Center, 2019."
+    }
+  ]
+}

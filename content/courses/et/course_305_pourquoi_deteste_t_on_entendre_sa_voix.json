@@ -1,0 +1,121 @@
+{
+  "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix",
+  "title": "Miks me ei salli oma salvestatud häält?",
+  "subtitle": "Iseenda kõla",
+  "subject": "sciences",
+  "subcategory": "Meie igapäevaelu lahti seletatud",
+  "description": "Salvestiselt kõlab su hääl võõralt, peaaegu piinlikult. Süüdi pole mikrofon, vaid su kolju ja see, kuidas su aju iseennast ära tunneb.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "studio_microphone_headphones_voice_recording",
+    "ratio": "4:3",
+    "hook": "Sõprade videod sind ei häiri. Aga su enda hääl häälsõnumis paneb sind nägu krimpsu tõmbama. Miks just see heli kõlab valesti?"
+  },
+  "sections": [
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mis on „mina“? Filosoofid, teadlased ja kunstnikud on seda küsinud juba sajandeid. Uurijad kasutavad selleks sageli näopilti, sest oma nägu tunneb igaüks esimesest pilgust ära. Kuid tunde jaoks, et oled sina ise, on hääl täpselt sama oluline."
+        },
+        {
+          "type": "paragraph",
+          "text": "Siit ka paradoks. Sõprade või pereliikmete videoid vaatad sa rahulikult. Siis tuleb häälsõnum, mille oled ise salvestanud, ja sa võpatad: see hääl pole minu oma. Ometi on. Et mõista, miks, tuleb jälgida heli teekonda."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p1",
+      "title": "Rääkimine ja kuulmine: võnkuv õhk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rääkimine algab õhutõukega. Diafragma surub õhu kopsudest kõrri. Teel jäävad ette [[häälepaelad]]: õhk liigub nende vahelt läbi ja paneb need suure kiirusega võnkuma. Need kõrgemad või madalamad võnked liiguvad mööda kõri üles, kus suu ja keel vormivad neist häälikud ja sõnad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kuulmine on vastupidine teekond. Enamiku helide puhul toimib [[õhujuhtivus]]: lained liiguvad läbi kuulmekäigu ja panevad võnkuma trummikile, mis annab võnked edasi keskkõrva pisikestele luudele. Võimendatuna jõuavad need sisekõrva, kus asub [[kõrvatigu]]. Seal painduvad tuhanded karvarakud, mille pinnal on [[stereotsiilid]], ja tekitavad elektrisignaali. Kuulmisnärv viib selle ajju, kus see ära tuntakse ja liigitatakse."
+        },
+        {
+          "type": "image",
+          "asset": "cochlea_stereocilia_hair_cells_electron_micrograph",
+          "ratio": "4:5",
+          "caption": "Hiire kõrvateod elektronmikroskoobi all, normaalne (vasakul) ja mutantne: stereotsiilidega kaetud karvarakkude read."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p2",
+      "title": "Kuuled ennast luude kaudu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kui kuulad iseenda salvestist, kulgeb kõik õhujuhtivuse teel, nagu iga teise heli puhul. Kuid rääkides lisandub teine kanal: [[luujuhtivus]]. Hääle mehaanilised võnked levivad kolju luude kaudu otse sisekõrva, trummikilest ja keskkõrvast mööda minnes."
+        },
+        {
+          "type": "image",
+          "asset": "tuning_fork_weber_test_bone_conduction_skull",
+          "ratio": "3:4",
+          "caption": "Kuulmisuuringul koljule asetatud helihark: heli liigub luu, mitte õhu kaudu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kõrvatigu saab seega korraga kaks signaali, üks tuleb õhust ja teine luudest, ning muudab mõlemad sõnumiteks ajule. Reaalajas on su hääl rikkalikum ja keerukam heli, kui mikrofon suudab kinni püüda. Salvestis annab edasi vaid osa sellest."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p3",
+      "title": "Õõvaorg",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jääb üle seletada ebamugavustunnet. Teadlastel pole veel lõplikku vastust, kuid üks idee on ahvatlev: nähtus nimega [[õõvaorg]]. See mõiste pärineb robootikast ja animatsioonist. Mida rohkem tehisolend inimest meenutab, seda tuttavam ja sümpaatsem ta meile tundub. Kuni teatud piirini."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kui jäljendus läheb originaalile väga lähedale, kuid pole täiuslik, asendub sümpaatia ebamugavuse ja isegi vastikusega. Salvestis annab aga edasi vaid meie hääle õhu kaudu leviva osa, ilma luujuhtivuse rikkuseta. Me kuuleme peamist, kuid mitte kõike. Aju satub õõvaorgu: see on peaaegu „mina“, aga mitte päris."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p4",
+      "title": "Üks hääl, tuhat versiooni sinust",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Õõvaorg ei seleta kõike. Salvestis näitab pealegi vaid üht tahku sellest, kuidas me end teistele esitleme. Hääl ei ole ju muutumatu: me kohandame seda pidevalt olukorrale, sageli sellele mõtlemata, ning minatunne rajaneb kõigil neil variatsioonidel korraga."
+        },
+        {
+          "type": "funFact",
+          "text": "Tööl kipume häält madalamaks tõmbama, et tunduda tasakaalukamad. Beebi või lemmiklooma poole pöördudes ronib hääl kõrgemale. Suu, keel ja huuled muudavad seadistust ning koos nendega muutub ka see „mina“ versioon, mida teistele kuulda laseme."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enesetaju on seega keerukas konstruktsioon, mis koosneb kümnetest eri häältest. Ajul pole ühtainsat mudelit, millega salvestist võrrelda. See, mida ta kuuleb, tuleb mikrofonist luid läbimata ja on tardunud ühte registrisse: piisavalt lähedane, et seda ära tunda, liiga erinev, et seda omaks võtta."
+        },
+        {
+          "type": "takeaway",
+          "text": "Su salvestatud hääl kõlab valesti, sest sellest puudub luujuhtivus, mille su kolju rääkides lisab, ja sest see külmutab vaid ühe sinu tuhandest versioonist: piisavalt lähedane, et seda ära tunda, aga mitte piisavalt, et sellega leppida."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "M. Kimura et Y. Yotsumoto, « Auditory traits of \"own voice\" », PLOS ONE, vol. 13, n° 6, 2018, e0199443.",
+      "url": "https://doi.org/10.1371/journal.pone.0199443"
+    },
+    {
+      "text": "NIDCD (National Institute on Deafness and Other Communication Disorders), « How Do We Hear? ».",
+      "url": "https://www.nidcd.nih.gov/health/how-do-we-hear"
+    }
+  ]
+}

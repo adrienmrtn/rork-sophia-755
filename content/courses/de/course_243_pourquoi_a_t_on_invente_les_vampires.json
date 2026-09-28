@@ -1,0 +1,155 @@
+{
+  "id": "course_243_pourquoi_a_t_on_invente_les_vampires",
+  "title": "Warum haben wir Vampire erfunden?",
+  "subtitle": "1645-1897",
+  "subject": "mythologie",
+  "subcategory": "Legenden & Kreaturen",
+  "description": "Bevor er ein Aristokrat im Umhang wurde, war der Vampir ein Nachbar, der zu früh starb und angeblich seine Familie mit ins Grab zog. Die Geschichte einer Angst, die einen Namen fand.",
+  "author": "angela-bouma",
+  "hero": {
+    "image": "foggy_village_graveyard_night_balkans",
+    "ratio": "4:3",
+    "hook": "Der Tod macht Angst. Ihn nicht erklären zu können, macht noch mehr Angst."
+  },
+  "sections": [
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_intro",
+      "title": "Einleitung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Jahr **1645** beschrieb ein griechischer Gelehrter in Rom, [[Leo Allatius]], ein Wesen, das die Dorfbewohner seiner Heimat fürchteten: den [[Vrykolakas]]. Einen Toten, der nachts umgeht und seine eigene Familie heimsucht, weil er ohne die Sterbesakramente begraben wurde. Nur Feuer kann ihn vernichten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zwei Jahrhunderte lang nährten Seuchen und rätselhafte Todesfälle im selben Haus diesen Glauben. Jeder neue Tote, der nicht richtig bestattet war, konnte zum nächsten werden. Wie wurde aus dieser Dorfpanik der Vampir im Abendanzug aus Romanen und Filmen?"
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p1",
+      "title": "Der Tote, der seine Schuhe zurückwollte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Jahr **1725** starb im serbischen Dorf Kisiljevo, damals unter österreichischer Verwaltung, ein Bauer namens [[Petar Blagojević]]. Innerhalb weniger Tage starben neun Nachbarn. Alle beschuldigten ihn in ihren letzten Stunden, er sei nachts gekommen, um sie zu ersticken. Seine Witwe erzählte, er sei zurückgekehrt und habe seine Schuhe verlangt. Dann verließ sie das Dorf."
+        },
+        {
+          "type": "image",
+          "asset": "edvard_munch_vampire_painting_1895",
+          "ratio": "auto",
+          "caption": "*Vampir* von Edvard Munch (1895). Vor den Malern und Romanautoren war der Vampir eine Sache der Dörfer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Dorfbewohner gruben die Leiche aus. Sie fanden sie erstaunlich unversehrt: frische Haut, Blut am Mund, Haare und Nägel, die gewachsen schienen. Beweis genug. Sie trieben ihm einen Pfahl ins Herz und verbrannten die Überreste. Ein österreichischer Beamter sah zu und schrieb einen Bericht. Das Wort “Vampir” verbreitete sich in den Zeitungen Europas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Was die Dorfbewohner für übernatürliche Zeichen hielten, waren die gewöhnlichen Folgen der Verwesung. Gase, die Bakterien erzeugen, blähen Bauch und Gesicht auf und drücken eine dunkle Flüssigkeit aus Mund und Nase, die wie Blut aussieht. Die Haut zieht sich zurück und legt die Wurzeln von Nägeln und Haaren frei, die dadurch länger wirken."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p2",
+      "title": "Die Krankheit hinter der Legende",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Neuengland des 19. Jahrhunderts nahm eine andere Angst dieselbe Gestalt an. Die [[Tuberkulose]], damals “Schwindsucht” genannt, ließ ihre Opfer monatelang abmagern und husten. Sie war ansteckend und ging von einem Familienmitglied auf das nächste über. Von außen sah es so aus, als kehre ein Toter zurück, um seinen Angehörigen einem nach dem anderen das Leben auszusaugen. Die alte Tradition des Balkans erklärt sie nicht: Es sind zwei parallele Glaubensformen, zu anderen Zeiten und an anderen Orten entstanden, die aber auf dieselbe Angst antworten."
+        },
+        {
+          "type": "image",
+          "asset": "mercy_brown_grave_exeter_rhode_island",
+          "ratio": "3:4",
+          "caption": "Das Grab von Mercy Brown in Exeter (Rhode Island), das bis heute besucht wird."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im Jahr **1892** starb [[Mercy Brown]] in Exeter, Rhode Island, mit 19 Jahren an Tuberkulose, nach ihrer Mutter und ihrer Schwester. Als auch ihr Bruder Edwin erkrankte, gruben die Nachbarn alle drei Leichen aus. Mercys Körper, mitten im Winter begraben, war gut erhalten, und ihr Herz enthielt noch Blut. Man verbrannte es und gab Edwin die Asche als Heilmittel zu trinken. Er starb zwei Monate später."
+        },
+        {
+          "type": "funFact",
+          "text": "Der Vrykolakas ist keine griechische Besonderheit. Das alte Mesopotamien hatte seine blutsaugenden Dämonen, Russland seinen *Upyr* und China seinen *Jiangshi*, eine steife Leiche, die mit ausgestreckten Armen umherhüpft."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p3",
+      "title": "Der Vampir wird Aristokrat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Jahr **1819** veröffentlichte ein junger englischer Arzt, [[John Polidori]], *Der Vampyr*, die erste englische Prosaerzählung über das Wesen. Die Idee war drei Jahre zuvor entstanden, in jenem berühmten verregneten Sommer am Genfer See, in dem Mary Shelley *Frankenstein* erdachte. Seine Figur, **Lord Ruthven**, hat nichts mehr vom Bauern, der aus dem Grab steigt: Er ist reich, geheimnisvoll, verführerisch und jagt in den Salons von London."
+        },
+        {
+          "type": "image",
+          "asset": "bram_stoker_dracula_1897_first_edition_cover",
+          "ratio": "3:4",
+          "caption": "Die Erstausgabe von Dracula (1897), in gelbes Leinen gebunden und rot beschriftet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Erzählung wurde neu aufgelegt, übersetzt und für die Bühne bearbeitet. Der Vampir der feinen Gesellschaft machte Schule bei den Autoren der Schauerliteratur. Im Jahr **1897** veröffentlichte [[Bram Stoker]] *Dracula* und legte das Vorbild für ein Jahrhundert fest: der Graf, das Schloss, die Eckzähne, der Knoblauch und die Kruzifixe. Fast alles, was das Kino daraus machen sollte, ist schon da."
+        },
+        {
+          "type": "funFact",
+          "text": "Stoker hat Transsilvanien nie betreten. Er schrieb *Dracula* mithilfe von Reiseführern und Büchern aus der Bibliothek von Whitby, dem englischen Städtchen, in dem der Graf im Roman an Land geht."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p4",
+      "title": "Die Angst hat viele Namen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vampirtraditionen handeln eigentlich nicht vom Übernatürlichen. Bevor die Wissenschaft Verwesung, Ansteckung oder plötzlichen Tod erklären konnte, musste eine Gemeinschaft dem, was sie sah, einen Sinn geben. Ein Toter, der zurückkehrt, gibt der Angst eine Gestalt und einen Namen. Und einen Schuldigen, den man verbrennen kann."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1645",
+              "title": "Der Vrykolakas beschrieben",
+              "detail": "Leo Allatius hält den griechischen Volksglauben fest."
+            },
+            {
+              "date": "1725",
+              "title": "Der Fall Blagojević",
+              "detail": "Das Wort “Vampir” gelangt in die Zeitungen."
+            },
+            {
+              "date": "1819",
+              "title": "Polidoris Der Vampyr",
+              "detail": "Der Vampir wird zum Aristokraten."
+            },
+            {
+              "date": "1892",
+              "title": "Mercy Brown exhumiert",
+              "detail": "Der letzte große Vampirfall in den Vereinigten Staaten."
+            },
+            {
+              "date": "1897",
+              "title": "Dracula",
+              "detail": "Bram Stoker legt das moderne Vorbild fest."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Derselbe Mechanismus bringt den griechischen Vrykolakas, den slawischen *Upyr* und den chinesischen *Jiangshi* hervor: Jeder ist die örtliche Antwort auf dieselbe unbeantwortete Frage. Werwolflegenden folgen demselben Muster und füllen dieselbe Lücke, mit der Verwandlung anstelle des Bluts."
+        },
+        {
+          "type": "takeaway",
+          "text": "Vor denselben Ängsten erzählt jede Kultur ihre Fassung derselben Geschichte. Mit einem Monster lebt es sich leichter als mit einer Frage ohne Antwort."
+        }
+      ]
+    }
+  ]
+}

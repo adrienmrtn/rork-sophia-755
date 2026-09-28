@@ -1,0 +1,155 @@
+{
+  "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn",
+  "title": "Che cosa si legge davvero nel tuo DNA?",
+  "subtitle": "Geni e destino",
+  "subject": "sciences",
+  "subcategory": "La nostra quotidianità spiegata",
+  "description": "Gusti, carattere, rischi di malattia, origini lontane: il nostro DNA dice molto di noi. Ma una predisposizione non è mai stata un destino.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "dna_double_helix_3d_render_blue",
+    "ratio": "4:3",
+    "hook": "Il tuo DNA racconta da dove vieni, che cosa ti piace e che cosa ti minaccia, ma non decide tutto."
+  },
+  "sections": [
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il nostro DNA dice moltissimo di noi: da dove veniamo, di che cosa è capace il nostro corpo, e forse perfino che cosa ci aspetta. È la nostra storia e il nostro progetto di costruzione. Ma che cos'è esattamente? Il DNA si trova in quasi tutte le cellule del corpo. Avvolto a **doppia elica**, porta le istruzioni genetiche che regolano il nostro funzionamento, la crescita, lo sviluppo e la riproduzione."
+        },
+        {
+          "type": "paragraph",
+          "text": "I suoi filamenti sono fatti di sole **quattro piccole unità**, i nucleotidi, indicati con A, T, C e G. È la sequenza di queste quattro lettere a formare il nostro [[genoma]], un progetto genetico unico per ognuno di noi. Che cosa ci si può leggere davvero? I nostri gusti, i rischi di malattia, le origini. E fino a che punto questo testo scrive il nostro futuro?"
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p1",
+      "title": "I geni plasmano gusti e carattere",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un [[gene]] è un pezzo di questo testo. Funziona come un libretto di istruzioni biologico: dice al corpo come fabbricare le sue **proteine**, che a loro volta costruiscono le cellule e le fanno funzionare. Da qui nascono i nostri tratti visibili. Ma i geni hanno un ruolo molto più profondo dell'aspetto."
+        },
+        {
+          "type": "image",
+          "asset": "identical_twins_sisters_portrait_nature_nurture",
+          "ratio": "5:4",
+          "caption": "“Compagne di viaggio” di Augustus Egg (1862): due ragazze identiche in tutto, una dorme, l'altra legge."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una [[variante genetica]] è una versione leggermente diversa di un gene. Di recente alcuni scienziati ne hanno collegate diverse alla **personalità**. Piccole regolazioni genetiche possono orientare le nostre preferenze: adorare lo sport o detestarlo, essere estroversi, collezionare hobby. Il DNA peserebbe sulla vita di tutti i giorni molto più di quanto immaginiamo. Da qui una domanda: quanta parte del nostro comportamento è già scritta nella biologia?"
+        },
+        {
+          "type": "funFact",
+          "text": "Tè o caffè? Perfino una preferenza così semplice potrebbe dipendere da piccole variazioni dei geni, secondo gli studi che collegano il DNA alla personalità."
+        },
+        {
+          "type": "paragraph",
+          "text": "E forse non è tutto. Il DNA dà anche indizi su chi ha una [[predisposizione genetica]] a certi disturbi della **salute mentale**, come la depressione. Non dice quindi solo che cosa ci piace, ma anche che cosa può renderci fragili."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p2",
+      "title": "Che cosa rivela il DNA sui rischi di malattia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La salute mentale non è l'unica in gioco. La composizione del DNA può renderci più vulnerabili anche ad altre malattie, alcune delle quali “sono di famiglia”. Un esempio noto: varianti ereditate dei geni [[BRCA1 e BRCA2]] predispongono alcune donne a un **tumore al seno precoce**."
+        },
+        {
+          "type": "image",
+          "asset": "dna_sequencing_chromatogram_sanger_readout",
+          "ratio": "2:1",
+          "caption": "Cromatogramma di sequenziamento: ogni picco colorato è una lettera del DNA. È su questa lettura che un test individua una variante."
+        },
+        {
+          "type": "paragraph",
+          "text": "È qui che il [[test genetico]] mostra tutto il suo valore, per il sistema sanitario come per le persone interessate. Individuare un rischio ereditario permette di agire presto: **screening** anticipato, controlli ravvicinati, farmaci o altre cure preventive. Questo vantaggio può salvare vite e ridurre i costi sanitari."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p3",
+      "title": "Una macchina del tempo: da dove vieni?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il nostro DNA passa di generazione in generazione. Conserva indizi sui nostri antenati: da dove venivano, che cosa mangiavano, come vivevano. È una vera macchina del tempo. Confrontando i **profili genetici** delle popolazioni attuali, gli scienziati hanno potuto ricostruire il cammino percorso dagli esseri umani sul pianeta."
+        },
+        {
+          "type": "image",
+          "asset": "early_human_migrations_out_of_africa_map",
+          "ratio": "5:4",
+          "caption": "Le prime linee di Homo sapiens in Africa e la loro uscita verso l'Eurasia, ricostruite dalla genetica delle popolazioni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un esempio. Le fonti scritte raccontano che popolazioni del **Nord Africa** si stabilirono nella [[penisola iberica]] tra il **700 e il 1200**. Il DNA conferma il racconto: gli abitanti di oggi della penisola portano ancora la traccia genetica di quegli incontri."
+        },
+        {
+          "type": "funFact",
+          "text": "Anche le nostre origini più lontane sono più complicate di un semplice albero genealogico. Uno studio basato su genomi completi ha trovato la traccia di due antiche popolazioni umane, separate circa **1,5 milioni di anni** fa, che poi si sono mescolate di nuovo."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p4",
+      "title": "Predisposizione non è destino",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il tuo DNA influenza quindi molte delle tue caratteristiche. Ma essere predisposto a qualcosa non vuol dire che il tuo destino sia segnato. Avere un rischio genetico di **depressione** non significa che ti ammalerai di depressione. Un rischio genetico non è una certezza."
+        },
+        {
+          "type": "paragraph",
+          "text": "I geni aprono possibilità, non le impongono. Le nostre esperienze, le scelte e le circostanze contano altrettanto. Leggere il proprio DNA è leggere una parte di sé: una parte preziosa, a volte decisiva per la salute, ma solo una parte."
+        },
+        {
+          "type": "takeaway",
+          "text": "Il DNA racconta i nostri gusti, i rischi e le origini, ma una predisposizione non è mai una certezza: il tuo DNA è solo una parte di te."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Yale School of Medicine, « How Genes Shape Personality Traits: New Links Are Discovered », Yale Medicine News, 9 septembre 2024.",
+      "url": "https://medicine.yale.edu/news-article/how-genes-shape-personality-traits-new-links-are-discovered/"
+    },
+    {
+      "text": "« DNA », Wikipedia, The Free Encyclopedia.",
+      "url": "https://en.wikipedia.org/wiki/DNA"
+    },
+    {
+      "text": "Institute of Medicine (US), « Genetics and Health », dans L. M. Hernandez et D. G. Blazer (dir.), Genes, Behavior, and the Social Environment: Moving Beyond the Nature/Nurture Debate, National Academies Press, Washington (DC), 2006.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK19932/"
+    },
+    {
+      "text": "NIHR Oxford Biomedical Research Centre, « International study reveals how our genes shape blood proteins linked to disease ».",
+      "url": "https://oxfordbrc.nihr.ac.uk/international-study-reveals-how-our-genes-shape-blood-proteins-linked-to-disease/"
+    },
+    {
+      "text": "« What Our DNA Can Tell Us About the History of Humans », Frontiers for Young Minds, 2020.",
+      "url": "https://kids.frontiersin.org/articles/10.3389/frym.2020.00106"
+    },
+    {
+      "text": "« How genetics determine our life choices », BBC Future, 9 mai 2023.",
+      "url": "https://www.bbc.co.uk/future/article/20230509-how-genetics-determine-our-life-choices"
+    },
+    {
+      "text": "University of Cambridge, « Genetic study reveals hidden chapter in human evolution », Research news, 18 mars 2025.",
+      "url": "https://www.cam.ac.uk/research/news/genetic-study-reveals-hidden-chapter-in-human-evolution"
+    }
+  ]
+}

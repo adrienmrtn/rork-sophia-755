@@ -1,0 +1,137 @@
+{
+  "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert",
+  "title": "Warum wurde der Mars zur Wüste?",
+  "subtitle": "Von Flüssen zur Wüste",
+  "subject": "sciences",
+  "subcategory": "Die Erde und das Universum",
+  "description": "Vor mehr als 3 Milliarden Jahren gruben Flüsse Täler, und Fluten fegten über die Oberfläche des Mars. Heute ist der Planet kalt und trocken, doch sein Wasser ist nicht ganz verschwunden.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "mars_valles_marineris_hemisphere_viking_mosaic",
+    "ratio": "4:3",
+    "hook": "Flüsse, Deltas, Seen: Der Rote Planet war nicht immer eine eisige Wüste."
+  },
+  "sections": [
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seit Jahrzehnten suchen Forscher auf dem Mars nach Spuren früheren Lebens. Alles bekannte Leben braucht Wasser, doch die Marsoberfläche ist heute kalt und extrem trocken. So war der Mars aber nicht immer: Die Rover, die fahrenden Roboter, die seinen Boden erkunden, fanden dort Gesteine und Minerale, die nur in Gegenwart von **flüssigem Wasser** entstehen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Von oben bestätigt die Landschaft diesen Befund: alte Flusstäler, Deltas, ausgetrocknete Seeböden. Viele dieser Formen sind über **3 Milliarden Jahre** alt. Die NASA fand sogar Spuren gewaltiger Fluten vor etwa **3,5 Milliarden Jahren**. Auf dem Mars ist also Wasser geflossen. Bleibt das Rätsel: Wie wurde aus einem feuchten Planeten diese Wüste?"
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p1",
+      "title": "Es brauchte eine dichte Atmosphäre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wasser zu haben reicht nicht, es braucht auch Bedingungen, die es flüssig halten. Die heutige Marsatmosphäre ist jedoch sehr dünn: Ihr [[Luftdruck]] beträgt weniger als **1%** des irdischen. Bei so geringem Druck bleibt flüssiges Wasser an der Oberfläche nicht stabil: Es gefriert oder verdunstet."
+        },
+        {
+          "type": "image",
+          "asset": "jezero_crater_river_delta_mars_reconnaissance_orbiter",
+          "ratio": "5:4",
+          "caption": "Topografische Karte der Region um den Krater Jezero (ESA/DLR/FU Berlin): im Ausschnitt die Deltas, die alte Flüsse abgelagert haben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wie konnte der junge Mars sein Wasser halten? Vor Milliarden Jahren war seine Atmosphäre viel dichter, und das half auf zweierlei Weise. Ein höherer Druck hielt das Wasser flüssig. Und die Gase der Luft hielten die Wärme zurück, ein [[Treibhauseffekt]], der die Oberfläche milder hielt."
+        },
+        {
+          "type": "funFact",
+          "text": "Wie warm der junge Mars genau war, ist unter Forschern noch umstritten. Sicher ist: Flüssiges Wasser blieb dort lange genug, um Täler zu graben und Seen zu füllen."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p2",
+      "title": "Der Mars verlor seine Atmosphäre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im Lauf von Milliarden Jahren entwich ein großer Teil dieser Atmosphäre ins All. Der erste Grund ist die Größe des Planeten. Der Mars ist klein, seine **Schwerkraft** ist schwächer als die der Erde, und er hält seine Gase weniger gut fest. Der zweite Grund: Der Mars verlor sein [[Magnetfeld]], den unsichtbaren Schild, der seine Atmosphäre vor den geladenen Teilchen der Sonne schützte."
+        },
+        {
+          "type": "image",
+          "asset": "maven_solar_wind_stripping_mars_atmosphere_nasa",
+          "ratio": "16:9",
+          "caption": "Die Umlaufbahnen der Sonde MAVEN, die das Entweichen der Marsatmosphäre misst, vor und nach dem Aerobraking von 2019 (NASA)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Teilchen bilden den [[Sonnenwind]], einen ständigen Strom geladener Materie, der von der Sonne ausgeht. Ohne Schild trifft er die obere Marsatmosphäre und reißt Gase mit sich. Auch das energiereichste Sonnenlicht spielt eine Rolle: Es spaltet Wassermoleküle und andere Moleküle, und die freigesetzten **leichten Atome** entkommen der schwachen Schwerkraft des Mars leichter. Je dünner die Atmosphäre wurde, desto kälter und trockener wurde der Mars."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p3",
+      "title": "Nicht alles Wasser ist fort",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Doch nicht das ganze Wasser des Mars ist ins All entwichen. Ein Teil stieg in die obere Atmosphäre auf und wurde dort in leichte Atome gespalten, die entkamen. Der Rest aber blieb: Ein Teil gefror unter der Oberfläche, ein anderer reagierte mit dem Gestein und wurde in **Mineralen** eingeschlossen."
+        },
+        {
+          "type": "funFact",
+          "text": "Eine 2021 in der Zeitschrift *Science* veröffentlichte Studie schätzt, dass zwischen **30 und 99%** des Marswassers in den Mineralen seiner Gesteine gebunden sein könnten. Eine große Spanne: Die Frage bleibt offen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dieses Wasser hat sich also nicht nur als Eis oder Flüssigkeit im Untergrund gesammelt. Es ist heute Teil der [[Kruste]], der äußeren Gesteinsschicht des Planeten. Mit anderen Worten: Ein großer Teil des “verschwundenen” Marswassers könnte noch da sein, gefangen in seinen Gesteinen."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p4",
+      "title": "Trocken, aber nicht ohne Wasser",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Mars sieht heute aus wie eine Wüste, doch er ist nicht wasserlos. Weitgehend verschwunden ist das stabile Wasser, das einst an der Oberfläche floss. Große Mengen sind noch in den [[Polkappen]] gefroren, weitere schlummern als **vergrabenes Eis** unter dem Boden, und wieder andere sind in den Mineralen der Kruste eingeschlossen."
+        },
+        {
+          "type": "image",
+          "asset": "mars_north_polar_ice_cap_mars_global_surveyor",
+          "ratio": "2:1",
+          "caption": "Globale Marskarte nach Daten der Viking-Sonden (NASA/USGS): in den Ausschnitten die beiden Pole mit ihren Eiskappen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Lehre reicht über den Mars hinaus. Wasser zu besitzen genügt nicht, um einen Planeten feucht und bewohnbar zu machen: Die Bedingungen zählen genauso. Eine ausreichend dichte Atmosphäre hält Wasser flüssig und lässt es sich zu Flüssen und Seen sammeln. Der Mars wurde nicht zur Wüste, weil jeder Tropfen ins All verschwand, sondern weil seine Atmosphäre sein Wasser nicht mehr in Bewegung halten konnte."
+        },
+        {
+          "type": "takeaway",
+          "text": "Der Mars trocknete aus, weil seine dünner gewordene Atmosphäre kein flüssiges Wasser mehr an der Oberfläche halten konnte. Ein großer Teil dieses Wassers ist noch da, gefroren an den Polen oder eingeschlossen im Gestein."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "B. M. Jakosky et al., « Mars' atmospheric history derived from upper-atmosphere measurements of 38Ar/36Ar », Science, vol. 355, n° 6332, 2017, p. 1408.",
+      "url": "https://doi.org/10.1126/science.aai7721"
+    },
+    {
+      "text": "NASA Science, « NASA: New Insights into How Mars Became Uninhabitable », 2024."
+    },
+    {
+      "text": "E. L. Scheller et al., « Long-term drying of Mars by sequestration of ocean-scale volumes of water in the crust », Science, vol. 372, n° 6537, 2021, p. 56-62.",
+      "url": "https://doi.org/10.1126/science.abc7717"
+    },
+    {
+      "text": "NASA, « NASA Mission Reveals Speed of Solar Wind Stripping Martian Atmosphere », 2015."
+    }
+  ]
+}

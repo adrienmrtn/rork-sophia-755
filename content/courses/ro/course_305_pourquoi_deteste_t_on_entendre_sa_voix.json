@@ -1,0 +1,121 @@
+{
+  "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix",
+  "title": "De ce nu ne place să ne auzim vocea înregistrată?",
+  "subtitle": "Sunetul sinelui",
+  "subject": "sciences",
+  "subcategory": "Viața de zi cu zi, explicată",
+  "description": "Pe o înregistrare, vocea ta ți se pare străină, aproape jenantă. Vinovatul nu e microfonul: e craniul tău și felul în care creierul tău se recunoaște.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "studio_microphone_headphones_voice_recording",
+    "ratio": "4:3",
+    "hook": "Filmulețele prietenilor nu te deranjează. Dar propria voce dintr-un mesaj vocal te face să te strâmbi. De ce sună fals tocmai acest sunet?"
+  },
+  "sections": [
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ce este „sinele”? Filosofii, oamenii de știință și artiștii își pun această întrebare de secole. Ca să-l studieze, cercetătorii folosesc des imaginea chipului, pe care oricine îl recunoaște dintr-o privire. Dar vocea contează la fel de mult în sentimentul de a fi tu însuți."
+        },
+        {
+          "type": "paragraph",
+          "text": "De aici paradoxul. Te uiți fără probleme la filmulețe cu prietenii sau cu familia. Apoi vine un mesaj vocal pe care l-ai înregistrat chiar tu și tresari: vocea asta nu e a mea. Ba da, este. Ca să înțelegi de ce, trebuie să urmărești drumul sunetului."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p1",
+      "title": "A vorbi și a auzi: aer care vibrează",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vorbirea începe cu o împingere de aer. Diafragma scoate aerul din plămâni spre gât. Trecând printre [[corzile vocale]], aerul le face să vibreze foarte repede: aceste vibrații, mai înalte sau mai joase, urcă pe gât. Gura și limba le modelează apoi în sunete și cuvinte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Auzul este drumul invers. Cele mai multe sunete ajung la noi prin [[conducție aeriană]]: undele trec prin canalul auditiv și fac să vibreze timpanul, care transmite vibrațiile oscioarelor din urechea medie. Amplificate, ele ajung în [[cohlee]], în urechea internă, unde mii de celule ciliate acoperite de [[stereocili]] se îndoaie și produc un semnal electric. Nervul auditiv îl duce la creier, care îl identifică și îl clasează."
+        },
+        {
+          "type": "image",
+          "asset": "cochlea_stereocilia_hair_cells_electron_micrograph",
+          "ratio": "4:5",
+          "caption": "Cohlee de șoarece la microscopul electronic, normală (în stânga) și mutantă: rândurile de celule ciliate acoperite de stereocili."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p2",
+      "title": "Să te auzi prin oase",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Când asculți o înregistrare cu tine, totul trece prin conducția aeriană, ca la orice alt sunet. Dar când vorbești, se adaugă un al doilea canal: [[conducția osoasă]]. Vibrațiile mecanice ale vocii se propagă direct prin oasele craniului până în urechea internă, fără să treacă prin timpan sau prin urechea medie."
+        },
+        {
+          "type": "image",
+          "asset": "tuning_fork_weber_test_bone_conduction_skull",
+          "ratio": "3:4",
+          "caption": "Un diapazon așezat pe craniu în timpul unui examen al auzului: sunetul trece prin os, nu prin aer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cohleea primește deci două semnale deodată, unul venit prin aer, celălalt prin oase, și le transformă pe amândouă în mesaje pentru creier. În timp real, vocea ta e un sunet mai bogat și mai complex decât poate prinde un microfon. Înregistrarea redă doar o parte din el."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p3",
+      "title": "Valea stranie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rămâne de explicat disconfortul. Cercetătorii nu au încă un răspuns definitiv, dar o ipoteză e atrăgătoare: efectul numit [[valea stranie]]. Ideea vine din robotică și din animație. Cu cât o creatură artificială seamănă mai mult cu un om, cu atât ni se pare mai familiară și mai simpatică. Până la un punct."
+        },
+        {
+          "type": "paragraph",
+          "text": "Când imitația devine foarte apropiată fără să fie perfectă, simpatia se transformă în disconfort, chiar în respingere. Iar o înregistrare redă doar partea aeriană a vocii noastre, fără bogăția conducției osoase. Auzim esențialul, dar nu tot. Creierul ajunge în valea stranie: e aproape „eu”, dar nu chiar."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p4",
+      "title": "O voce, o mie de versiuni ale tale",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valea stranie nu explică totul. O înregistrare arată și o singură fațetă a felului în care ne prezentăm celorlalți. Pentru că vocea nu e fixă: o modulăm mereu după context, adesea fără să ne gândim, iar sentimentul de sine se construiește pe toate aceste variații deodată."
+        },
+        {
+          "type": "funFact",
+          "text": "La serviciu, coborâm bucuroși tonul ca să părem mai calmi. În fața unui bebeluș sau a unui animal de companie, vocea urcă spre sunetele înalte. Gura, limba și buzele își schimbă reglajele și, odată cu ele, versiunea de „sine” pe care o lăsăm să se audă."
+        },
+        {
+          "type": "paragraph",
+          "text": "Percepția de sine este deci o construcție complicată, făcută din zeci de voci diferite. Creierul nu are niciun model unic cu care să compare înregistrarea. Ce aude iese din microfon fără să treacă prin oase, încremenit într-un singur registru: destul de apropiat ca să fie recunoscut, prea diferit ca să fie acceptat."
+        },
+        {
+          "type": "takeaway",
+          "text": "Vocea ta înregistrată sună fals pentru că îi lipsește conducția osoasă pe care craniul tău o adaugă când vorbești și pentru că încremenește doar una dintre cele o mie de versiuni ale tale: destul de apropiată ca s-o recunoști, nu destul ca s-o accepți."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "M. Kimura et Y. Yotsumoto, « Auditory traits of \"own voice\" », PLOS ONE, vol. 13, n° 6, 2018, e0199443.",
+      "url": "https://doi.org/10.1371/journal.pone.0199443"
+    },
+    {
+      "text": "NIDCD (National Institute on Deafness and Other Communication Disorders), « How Do We Hear? ».",
+      "url": "https://www.nidcd.nih.gov/health/how-do-we-hear"
+    }
+  ]
+}

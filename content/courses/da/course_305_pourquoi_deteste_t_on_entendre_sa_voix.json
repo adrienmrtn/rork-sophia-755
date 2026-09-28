@@ -1,0 +1,121 @@
+{
+  "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix",
+  "title": "Hvorfor hader vi at høre vores egen stemme på optagelser?",
+  "subtitle": "Lyden af en selv",
+  "subject": "sciences",
+  "subcategory": "Hverdagen forklaret",
+  "description": "På en optagelse lyder din stemme fremmed, næsten pinlig. Synderen er ikke mikrofonen: det er dit kranie og den måde, din hjerne genkender sig selv på.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "studio_microphone_headphones_voice_recording",
+    "ratio": "4:3",
+    "hook": "Dine venners videoer generer dig ikke. Men din egen stemme i en talebesked får dig til at krympe dig. Hvorfor lyder netop den forkert?"
+  },
+  "sections": [
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hvad er »selvet«? Filosoffer, forskere og kunstnere har stillet spørgsmålet i århundreder. For at undersøge det bruger forskere ofte ansigtet, som alle genkender ved første øjekast. Men stemmen betyder lige så meget for følelsen af at være sig selv."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deraf paradokset. Man ser uden besvær videoer af sine venner eller sin familie. Så kommer en talebesked, man selv har indtalt, og man farer sammen: den stemme er ikke min. Jo, den er. For at forstå hvorfor må man følge lydens vej."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p1",
+      "title": "At tale og høre: luft, der vibrerer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tale begynder med et luftstød. Mellemgulvet presser luften fra lungerne op i halsen. Når den passerer mellem [[stemmebåndene]], sætter den dem i hurtige svingninger: disse vibrationer, lysere eller dybere, bevæger sig op gennem halsen. Mund og tunge former dem derefter til lyde og ord."
+        },
+        {
+          "type": "paragraph",
+          "text": "At høre er den modsatte vej. De fleste lyde når os via [[luftledning]]: bølgerne går gennem øregangen og sætter trommehinden i svingninger, og trommehinden giver dem videre til mellemørets små knogler. Forstærket når de frem til [[cochlea]] i det indre øre, hvor tusindvis af hårceller besat med [[stereocilier]] bøjer sig og skaber et elektrisk signal. Hørenerven fører det til hjernen, som identificerer og sorterer det."
+        },
+        {
+          "type": "image",
+          "asset": "cochlea_stereocilia_hair_cells_electron_micrograph",
+          "ratio": "4:5",
+          "caption": "Cochleaer fra mus i elektronmikroskop, normal (til venstre) og mutant: rækkerne af hårceller besat med stereocilier."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p2",
+      "title": "At høre sig selv gennem knoglerne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Når man lytter til en optagelse af sig selv, går alt via luftledning, ligesom med enhver anden lyd. Men når man taler, kommer en ekstra kanal til: [[knogleledning]]. Stemmens mekaniske vibrationer forplanter sig direkte gennem kraniets knogler til det indre øre, uden om trommehinden og mellemøret."
+        },
+        {
+          "type": "image",
+          "asset": "tuning_fork_weber_test_bone_conduction_skull",
+          "ratio": "3:4",
+          "caption": "En stemmegaffel sat mod kraniet under en høreundersøgelse: lyden går gennem knoglen, ikke gennem luften."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cochlea modtager altså to signaler på én gang, det ene fra luften og det andet fra knoglerne, og omdanner dem begge til beskeder til hjernen. Mens du taler, er din stemme en rigere og mere sammensat lyd end noget, en mikrofon kan opfange. Optagelsen gengiver kun en del af den."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p3",
+      "title": "Uncanny valley",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tilbage står ubehaget. Forskerne har endnu ikke et endeligt svar, men én forklaring er tillokkende: den effekt, der kaldes [[uncanny valley]], den »uhyggelige dal«. Begrebet stammer fra robotteknologi og animation. Jo mere en kunstig skabning ligner et menneske, jo mere velkendt og sympatisk virker den. Op til et vist punkt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Når efterligningen kommer meget tæt på uden at være perfekt, slår sympatien om i ubehag, ja endda afsky. En optagelse leverer kun den luftbårne del af vores stemme, uden knogleledningens fylde. Vi hører det meste, men ikke det hele. Hjernen havner i den uhyggelige dal: det er næsten »mig«, men ikke helt."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p4",
+      "title": "Én stemme, tusind udgaver af dig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den uhyggelige dal forklarer ikke alt. En optagelse viser også kun én side af den måde, vi fremstiller os selv på over for andre. For stemmen ligger ikke fast: vi tilpasser den hele tiden til sammenhængen, ofte uden at tænke over det, og følelsen af selv bygger på alle disse variationer på én gang."
+        },
+        {
+          "type": "funFact",
+          "text": "I arbejdssammenhæng sænker man gerne stemmen for at virke mere afklaret. Over for en baby eller et kæledyr kravler stemmen op i de lyse toner. Mund, tunge og læber skifter indstilling, og med dem den udgave af »selvet«, man lader andre høre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Opfattelsen af selvet er altså en omfattende konstruktion, bygget af snesevis af forskellige stemmer. Hjernen har ingen enkelt skabelon at sammenligne optagelsen med. Det, den hører, kommer ud af mikrofonen uden at have passeret knoglerne, frosset fast i ét enkelt leje: tæt nok på til at blive genkendt, for anderledes til at blive vedkendt."
+        },
+        {
+          "type": "takeaway",
+          "text": "Din optagede stemme lyder forkert, fordi den mangler den knogleledning, dit kranie tilføjer, når du taler, og fordi den fastfryser kun én af de tusind udgaver af dig: tæt nok på til at blive genkendt, ikke tæt nok til at blive accepteret."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "M. Kimura et Y. Yotsumoto, « Auditory traits of \"own voice\" », PLOS ONE, vol. 13, n° 6, 2018, e0199443.",
+      "url": "https://doi.org/10.1371/journal.pone.0199443"
+    },
+    {
+      "text": "NIDCD (National Institute on Deafness and Other Communication Disorders), « How Do We Hear? ».",
+      "url": "https://www.nidcd.nih.gov/health/how-do-we-hear"
+    }
+  ]
+}

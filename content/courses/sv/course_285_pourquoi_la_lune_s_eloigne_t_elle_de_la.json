@@ -1,0 +1,131 @@
+{
+  "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la",
+  "title": "Varför glider månen bort från jorden?",
+  "subtitle": "3,8 cm om året",
+  "subject": "sciences",
+  "subcategory": "Jorden och universum",
+  "description": "Varje år flyttar sig månen 3,8 cm längre bort från oss, ungefär lika fort som en nagel växer. Det är våra egna hav som knuffar bort den, och priset betalas med längre dagar och totala solförmörkelser som en dag försvinner.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "full_moon_rising_over_ocean_horizon",
+    "ratio": "4:3",
+    "hook": "Månen glider bort från oss lika fort som våra naglar växer: en dag blir inga totala solförmörkelser möjliga längre."
+  },
+  "sections": [
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_intro",
+      "title": "Inledning",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hur långt bort är månen? Det går att mäta med laser. Under [[Apollofärderna]] placerade astronauterna särskilda reflektorer på månens yta. Från jorden skickar forskare laserpulser mot dem och tar tid på hur länge ljuset behöver för att komma tillbaka. Resultatet: månen befinner sig i genomsnitt ungefär **385.000 km** från oss."
+        },
+        {
+          "type": "paragraph",
+          "text": "Men avståndet är inte fast. Varje år flyttar sig månen ungefär **3,8 cm** längre bort, ungefär lika fort som våra naglar växer. Från ett år till nästa är förändringen pytteliten. Under miljontals år blir den stor. Så vad kan det vara som knuffar bort månen från oss?"
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p1",
+      "title": "Månen lyfter haven",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Precis som jorden har månen [[gravitation]], en kraft som drar föremål mot den, jorden inräknad. Men dragningen är inte lika stark överallt. Den sida av jorden som vetter mot månen dras lite hårdare än den bortre sidan. Skillnaden skapar två [[tidvattenbuktningar]], små utbuktningar av haven, en mot månen och en på motsatt sida."
+        },
+        {
+          "type": "image",
+          "asset": "mont_saint_michel_bay_high_tide_aerial",
+          "ratio": "3:2",
+          "caption": "Mont-Saint-Michel vid lågvatten: havet, som månen lyfter två gånger om dygnet, har dragit sig långt ut."
+        },
+        {
+          "type": "paragraph",
+          "text": "Buktningarna ligger inte exakt under månen. Jorden snurrar ett varv på **24 timmar**, medan månen behöver ungefär en månad för att gå runt den. Eftersom jorden snurrar så mycket fortare drar den med sig buktningarna en bit framför månen. Den lilla förskjutningen betyder enormt mycket: den gör att buktningen kan dra månen framåt i dess [[omloppsbana]]."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p2",
+      "title": "Jorden knuffar månen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Havsbuktningen har massa och därmed en egen gravitation. Eftersom den ligger lite före månen drar den försiktigt månen framåt medan den går runt jorden. Dragningen tillför energi till månens bana. I stället för att bara öka farten längs samma bana flyttar sig månen ut till en lite vidare bana. Därför växer dess genomsnittliga avstånd med ungefär **3,8 cm** varje år."
+        },
+        {
+          "type": "image",
+          "asset": "apollo_11_lunar_laser_retroreflector_nasa_1969",
+          "ratio": "4:3",
+          "caption": "Apollos laserreflektor (exemplaret på National Air and Space Museum): samma modell har legat på månen sedan juli 1969."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det finns alltså ingen mystisk kraft som stöter bort månen. Energin kommer från jordens rotation. När vår planet snurrar lämnar den steg för steg över en del av sin [[rotationsenergi]] till månen, via tidvattnet. En pytteliten knuff, men den upprepas varje varv."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p3",
+      "title": "Jorden saktar också in",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Energin som månen får har ett pris. Jorden förlorar sakta en liten del av sin rotationsenergi och snurrar därför en aning långsammare. Under ett människoliv märks förändringen inte. Under miljontals år blir den stor."
+        },
+        {
+          "type": "funFact",
+          "text": "I ett avlägset förflutet snurrade jorden fortare: ett dygn var då kortare än de **24 timmar** vi lever efter i dag."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tidvattnet gör alltså två saker samtidigt: det flyttar bort månen och bromsar jordens rotation. Det är inte två separata fenomen, utan två sidor av samma utbyte mellan jorden och månen. Utbytet har pågått i miljarder år, och det fortsätter i dag, vid varje tidvatten."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p4",
+      "title": "Slutet för totala solförmörkelser",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den långsamma reträtten kommer till slut att ändra något spektakulärt på vår himmel. I dag är solen ungefär **400 gånger** bredare än månen. Den är också ungefär 400 gånger längre bort från jorden. Av ren slump ser de två himlakropparna därför nästan lika stora ut. Det är det som gör att månen helt kan täcka solen vid en [[total solförmörkelse]]."
+        },
+        {
+          "type": "image",
+          "asset": "total_solar_eclipse_corona_2017_nasa",
+          "ratio": "3:2",
+          "caption": "Sett från rymdfarkosten Artemis II i april 2026: månen skymmer solen och visar dess korona."
+        },
+        {
+          "type": "paragraph",
+          "text": "Allteftersom månen avlägsnar sig kommer den att se lite mindre ut. Om ungefär **600 miljoner år**, kanske mer, ser den inte längre tillräckligt stor ut för att helt dölja solen. Då försvinner de totala solförmörkelserna för gott. Månen är inte på väg att slita sig loss från jorden. Men dess långsamma reträtt påminner om att inte ens något så välbekant som natthimlen är beständigt."
+        },
+        {
+          "type": "takeaway",
+          "text": "Månen avlägsnar sig **3,8 cm** om året eftersom tidvattnet för över en del av jordens rotationsenergi till den: våra dygn blir längre, och om 600 miljoner år har de totala solförmörkelserna försvunnit."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "NASA Jet Propulsion Laboratory, « The Apollo Experiment That Keeps on Giving », 2019."
+    },
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, section 4.6 « Ocean Tides and the Moon », p. 116-119."
+    },
+    {
+      "text": "NASA Science, « Tidal Locking »."
+    },
+    {
+      "text": "NASA Science, « Eclipses and the Moon »."
+    }
+  ]
+}

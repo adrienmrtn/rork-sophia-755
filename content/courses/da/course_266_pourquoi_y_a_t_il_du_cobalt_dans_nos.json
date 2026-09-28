@@ -1,0 +1,131 @@
+{
+  "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos",
+  "title": "Hvorfor er der kobolt i vores batterier?",
+  "subtitle": "Grundstof 27",
+  "subject": "sciences",
+  "subcategory": "Hverdagen forklaret",
+  "description": "Næsten ingen graver efter kobolt, og alligevel sidder det i batteriet i hver eneste telefon. Historien om et metal, som industrien ikke kan erstatte, men som den alligevel prøver at slippe af med.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "cobalt_copper_open_pit_mine_kolwezi_drc",
+    "ratio": "4:3",
+    "hook": "Det metal, elbilerne er afhængige af, bliver næsten aldrig udvundet for sin egen skyld."
+  },
+  "sections": [
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kobolt er grundstof nummer **27** i det periodiske system, klemt inde mellem jern og nikkel. Det sidder i batteriet i den telefon, du holder, i magneter og i legeringer, der er hårde nok til at overleve inde i en flymotor. Og næsten ingen graver efter det."
+        },
+        {
+          "type": "paragraph",
+          "text": "Omkring **99 %** af verdens kobolt kommer op af jorden som biprodukt: det udvindes af malm, der brydes for kobberets eller nikkelets skyld. [[Den Demokratiske Republik Congo]] leverer næsten **tre fjerdedele**, stort set alt fra kobberminer. Udbuddet af kobolt afhænger altså ikke af efterspørgslen efter kobolt, men af efterspørgslen efter kobber og nikkel. En besynderlig måde at forvalte elbilernes metal på."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p1",
+      "title": "Batteriet, der manglede kobolt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1980** opdager [[John Goodenough]] og Koichi Mizushima i Oxford, at litiumkoboltoxid (LiCoO2, eller LCO) fungerer som elektrode ved [[interkalation]]: lag af koboltoxid, hvor litiumioner kan glide ind imellem og ud igen, uden at lagene falder sammen. Det var den [[katode]], man havde brug for, den ene af batteriets to elektroder."
+        },
+        {
+          "type": "image",
+          "asset": "john_goodenough_portrait_lithium_battery_inventor",
+          "ratio": "3:4",
+          "caption": "John Goodenough, der i 1980 opdagede koboltkatoden sammen med Koichi Mizushima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Derefter venter verden i mere end ti år. I **1991** sælger Sony det første kommercielle litiumionbatteri, og LCO er katoden i det. Frem til omkring **2010** er næsten alle litiumionkatoder lavet sådan. LCO dominerer stadig forbrugerelektronikken: derfor indeholder din telefon et par gram af et metal, som ingen havde besluttet at udvinde."
+        },
+        {
+          "type": "funFact",
+          "text": "Kobolt blev opdaget i 1735 af den svenske kemiker Georg Brandt, næsten to et halvt århundrede før det kom i vores batterier."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p2",
+      "title": "Et batteri, der laver sin egen ilt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Forestil dig katoden som en mur af mursten. Lagene af koboltoxid er hylderne, og litiumionerne er stenene, der ligger imellem dem. Lader du batteriet for hårdt op, fjerner du for mange sten: muren bliver ustabil. Over cirka **130 °C**, eller ved overopladning, begynder strukturen at bryde sammen, og ilten i koboltoxiden slipper fri som gas."
+        },
+        {
+          "type": "image",
+          "asset": "lithium_ion_battery_fire_thermal_runaway_test",
+          "ratio": "2:3",
+          "caption": "En pakke med to 18650-litiumionceller: selve etiketten advarer om, at den kan eksplodere i ild."
+        },
+        {
+          "type": "paragraph",
+          "text": "Væsken, der fylder cellen, er **brandbar**, og batteriet har netop selv leveret ilten til at brænde den. Varmen fremskynder nedbrydningen, som frigør mere ilt, som skaber mere varme. Det er [[termisk løbskhed]]. Derfor kan man ikke bare kvæle en brand i et litiumbatteri: ilten er allerede indeni."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p3",
+      "title": "Hvorfor kobolten stadig er der",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tilbage til muren. Hver gang du oplader eller bruger batteriet, glider litiumstenene ud og ind igen. Kobolt er mørtlen, der forhindrer muren i at slå sig eller styrte sammen gennem hundredvis af cyklusser. Andre materialer kan ikke klare opgaven alene: **nikkel** lagrer mere energi, men slides for hurtigt, og **mangan** er billigt, men mangler kraft."
+        },
+        {
+          "type": "paragraph",
+          "text": "Derfor mindsker de blandinger, der sidder i de fleste elbiler, som **NMC**-katoder (nikkel, mangan, kobolt) og **NCA**-katoder (nikkel, kobolt, aluminium), mængden af kobolt uden nogensinde at fjerne den. I femten år har ingeniørerne skåret ned på den for at spare penge, men der skal stadig en knivspids til for at holde det hele sammen. Det eneste, der helt klarer sig uden, [[LFP-batteriet]], gør det ved at smide muren væk og bygge en helt anden indre struktur."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p4",
+      "title": "Et liv uden kobolt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Koboltens problem er ikke kemisk. En del af den congolesiske produktion kommer fra [[håndværksmæssig minedrift]], hvor der graves med håndkraft under farlige forhold og nogle steder af børn. Prisen svinger hurtigt og voldsomt, hvilket gør ethvert batteri, der afhænger af den, uforudsigeligt. Og næsten det hele kommer fra **ét enkelt land**."
+        },
+        {
+          "type": "image",
+          "asset": "artisanal_cobalt_miners_kolwezi_congo",
+          "ratio": "4:3",
+          "caption": "Minearbejdere fylder sække med koboltmalm i Den Demokratiske Republik Congo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Industrien forsøger derfor at konstruere batterier uden metallet. Det vigtigste svar er **LFP**, litiumjernfosfat, som erstatter kobolt med jern og fosfor, to af de billigste og mest udbredte grundstoffer. Det bliver mindre varmt og er langt sværere at drive ud i termisk løbskhed."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prisen er energien: ved **samme vægt** lagrer en LFP-celle mindre. Derfor bruger din bil måske allerede en, mens din telefon endnu ikke er skiftet over: i lommen tæller hvert gram."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kobolt holder sammen på strukturen i litiumionbatterier, men det kommer næsten udelukkende fra ét land, som biprodukt af kobber: industrien slipper kun fri ved at skifte kemi, med LFP, til gengæld for mindre energi."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Cobalt Institute, « Cobalt uses ».",
+      "url": "https://www.cobaltinstitute.org/global-cobalt/cobalt-uses/"
+    },
+    {
+      "text": "« One hundred years of cobalt production in the Democratic Republic of the Congo », Resources Policy, 2022.",
+      "url": "https://doi.org/10.1016/j.resourpol.2022.103007"
+    }
+  ]
+}

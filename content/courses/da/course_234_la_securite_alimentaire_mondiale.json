@@ -1,14 +1,15 @@
 {
   "id": "course_234_la_securite_alimentaire_mondiale",
-  "title": "Hvorfor sulter 800 millioner mennesker stadig?",
-  "subtitle": "800 millioner mennesker",
+  "title": "Hvordan brødføder man otte milliarder mennesker?",
+  "subtitle": "Dyrk bedre, spild mindre",
   "subject": "comprendreLeMonde",
-  "subcategory": "Environment & the future",
-  "description": "Jorden producerer mad nok til alle. Så hvorfor går **800 millioner mennesker** stadig sultne?",
+  "subcategory": "Miljø og fremtid",
+  "description": "Kloden producerer mere mad end nogensinde, og alligevel breder sulten sig. Problemet er ikke mængden, men måden vi producerer, transporterer og spilder det, vi spiser.",
+  "author": "kate-waddams",
   "hero": {
-    "image": "la_securite_alimentaire_mondiale",
-    "ratio": "16:9",
-    "hook": "800 millioner menneskers sult er ikke et problem med mad, men om at dele."
+    "image": "combine_harvester_wheat_field_aerial",
+    "ratio": "4:3",
+    "hook": "Vi producerer nok til at mætte alle. Problemet er, hvad vi gør med maden."
   },
   "sections": [
     {
@@ -18,95 +19,120 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I dag lider omkring **800 millioner mennesker** af sult i verden, eller én ud af ti mennesker. Dette tal er så meget desto mere mærkeligt, fordi menneskeheden aldrig har produceret så meget mad: statistisk set er der mere end nok at spise til alle."
+          "text": "Når sult og [[underernæring]] breder sig i verden, kunne man tro, at Jorden ikke længere producerer nok til en voksende befolkning. Det passer ikke. Siden **1960'erne** er landbrugsproduktionen vokset hurtigere end antallet af mennesker. Det, der halter, er måden maden bliver produceret og fordelt på."
         },
         {
           "type": "paragraph",
-          "text": "Sult er derfor ikke et kvantitetsproblem, men om distribution. At forstå global fødevaresikkerhed betyder at forstå, hvorfor overflod og hungersnød kan eksistere side om side på den samme planet."
+          "text": "Tallene peger i hver sin retning. **7 %** af børn under fem år lider af underernæring, mens **40 %** af de voksne er overvægtige. Og i dag slår dårlig kost flere voksne ihjel end tobak. At brødføde otte milliarder mennesker er ingen enkel sag: [[forsyningskæden]] har huller, vi smider enorme mængder mad ud, og mange landbrugsmetoder holder ikke i længden."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p1",
-      "title": "Sultens geografi",
+      "title": "Landbruget gør sollys til mad",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ifølge **[[FAO]]**, FN's fødevareagentur, ramte kronisk underernæring stadig omkring 800 millioner mennesker i 2024. Dette globale tal skjuler meget forskellige realiteter. De mest ramte områder er i Afrika syd for Sahara, hvor mere end en fjerdedel af befolkningen regelmæssigt mangler mad, og i Sydasien."
+          "text": "En gård fanger sollys og forvandler det til mad. Det arbejde udfører planterne: når de dyrkes, giver de os spiselige fødevarer. Husdyr på græs forvandler til gengæld græs til kød og mælk. Alligevel har landbruget et dårligt ry: udpint jord, forurening, skovrydning og dyr, der konkurrerer med mennesker om føde og plads."
         },
         {
           "type": "image",
-          "asset": "famine_sub_saharan_africa_malnutrition_child",
-          "ratio": "auto",
-          "caption": "Sult påvirker stadig flere hundrede millioner mennesker, især i Afrika syd for Sahara."
+          "asset": "dairy_cows_grazing_green_pasture",
+          "ratio": "3:2",
+          "caption": "Køer på græs: græs, der bliver til mælk og kød."
         },
         {
           "type": "paragraph",
-          "text": "Der er flere former for madnød. **underernæring** svarer til mangel på kalorier. **Mikronæringsstofmangler**, ofte kaldet \"skjult sult\", påvirker 2 milliarder mennesker, som mangler essentielle vitaminer eller mineraler, med konsekvenser for vækst eller sundhed. Endelig inkluderer **fejlernæring** overraskende også fedme: I mange udviklingslande erstatter folk gradvist friske råvarer med forarbejdede fødevarer, der er højt i kalorier, men fattige på næringsstoffer."
+          "text": "Problemerne skyldes til dels landbrugsmetoder, der ikke er bæredygtige. Det er dem, der skal ændres. En udbredt forestilling siger, at man for at producere stadig mere må pumpe stadig mere ind i produktionen. Det er forkert. Større produktion kræver ikke nødvendigvis flere pesticider, mere gødning, mere jord eller mere arbejdskraft. Det kan endda betyde det modsatte."
         },
         {
-          "type": "funFact",
-          "text": "Hvis vi reducerede det globale madspild med kun 25 %, kunne vi teoretisk brødføde alle de 800 millioner mennesker, der lider af sult i dag."
+          "type": "paragraph",
+          "text": "Det hele handler om ét ord: effektivitet. Med mere effektive dyrkningsmetoder kan vi producere mere mad til milliarder af mennesker og samtidig bruge færre [[input]], altså mindre gødning, færre pesticider, mindre energi og mindre arbejdskraft, og lægge beslag på mindre jord."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p2",
-      "title": "Paradokset med overflod og affald",
+      "title": "En tredjedel af maden når aldrig tallerkenen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Verden producerer i øjeblikket, hvad der svarer til 2.800 kilokalorier per person om dagen, mere end nok til at eliminere sult. Det virkelige problem er derfor ikke mangel, men adgang: De fattigste befolkninger har simpelthen ikke midlerne til at købe fødevarer, hvis pris konstant varierer på verdensmarkederne."
+          "text": "At producere nok er kun halvdelen af opgaven. Maden skal også frem til forbrugerne, og det er en helt anden udfordring. Tallet er svimlende: **en tredjedel** af den mad, der produceres i verden, går tabt eller bliver spildt, omkring **1,3 milliarder tons** hvert år."
         },
         {
-          "type": "paragraph",
-          "text": "Den anden side af dette paradoks er **spild**. Omkring en tredjedel af den globale produktion, eller 1,3 milliarder tons fødevarer, går tabt hvert år. I fattige lande opstår tab tidligt: mangel på lagerpladser, fravær af kølerum, veje i dårlig stand. I rige lande opstår affald senere, under distribution og forbrug."
+          "type": "image",
+          "asset": "discarded_fruit_vegetables_food_waste_dumpster",
+          "ratio": "3:2",
+          "caption": "Amerikansk kampagne mod madspild fra Første Verdenskrig: børn lærer de voksne at henkoge frugt og grøntsager."
         },
         {
           "type": "funFact",
-          "text": "Siden 2010'erne har fedme og fedme-relaterede sygdomme hvert år dræbt flere mennesker på verdensplan end underernæring, et historisk vendepunkt for den globale folkesundhed."
+          "text": "[[Madspild]] koster mere, end man skulle tro. Når et æble ryger i skraldespanden, ryger også den tid, energi og de penge, det krævede at dyrke det, høste det og transportere det."
+        },
+        {
+          "type": "paragraph",
+          "text": "Med landbrugets [[globalisering]], handel mellem kontinenter og åbne markeder er landene ikke længere afhængige af deres egen produktion for at brødføde befolkningen. Nogle varer er ikke længere sæsonbestemte: de importeres fra hele verden. Men den bredere adgang gør forsyningskæderne længere, og jo længere en kæde er, desto flere svage led har den."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p3",
-      "title": "Når mad bliver et geopolitisk våben",
+      "title": "Mere med mindre",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fødevaresikkerhed er også et spørgsmål om geopolitik. Mange lande er afhængige af eksport fra nogle få store landbrugsmagter, hvilket gør dem meget sårbare over for den mindste blokering. Ukraine og Rusland tegner sig tilsammen for næsten 30 % af verdens hvedeeksport. Når denne strøm stopper, stiger priserne på **[[futures marked]]** i Chicago, hvor der forhandles om fremtidig høst, og lande som Egypten eller Libanon falder ind i en alvorlig social krise."
+          "text": "At øge mængden af input for at følge med efterspørgslen er hverken bæredygtigt eller realistisk. Landmændene må tage bedre metoder i brug, og det er ikke kun befolkningstilvæksten, der presser dem. De mærker allerede klimaforandringerne: et uberegneligt og uforudsigeligt vejr tvinger dem til at tænke nyt."
         },
         {
           "type": "paragraph",
-          "text": "Denne skrøbelighed kommer også fra et valg, der blev truffet i 1960'erne: **[[Grøn revolution]]**. Denne bølge af nye landbrugsteknikker har i høj grad øget udbyttet, men den har også reduceret afgrødediversiteten og gjort landmændene afhængige af kunstgødning. Som følge heraf har hver stigning i olieprisen direkte konsekvenser for brødprisen."
+          "text": "Sundere jord, bedre ydelse hos dyrene, klimarobuste afgrøder og [[præcisionslandbrug]]: alt sammen måder at få mere ud af mindre. I stedet for at sprede gødning ud over en hel mark analyserer en robot jorden i realtid og tildeler kun præcis den dosis, netop den plet har brug for. Resultatet: lavere omkostninger, mindre miljøaftryk og bedre udbytter."
+        },
+        {
+          "type": "image",
+          "asset": "agricultural_drone_precision_farming_field",
+          "ratio": "4:3",
+          "caption": "Luftfoto af en kornmark med traktorspor nær Dülmen i Tyskland, 2024."
         },
         {
           "type": "paragraph",
-          "text": "Begrebet **fødekraft** refererer netop til den frivillige brug af fødevareeksport som et middel til diplomatisk pres, eller endda som en sanktion mod et modstridende land."
+          "text": "Den slags teknologi er en del af løsningen og fylder mere og mere i landbrugsforskningen. For at brødføde otte milliarder mennesker behøver vi ikke nødvendigvis mere jord, flere dyr eller flere hektar afgrøder. Vi skal have mere ud af det, vi allerede bruger."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p4",
-      "title": "Mad 10 milliarder mennesker uden at udtømme planeten",
+      "title": "Et fælles problem, fra jord til bord",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I 2050 forventes verdens befolkning at nå 10 mia. Klimaforandringerne truer allerede udbyttet af stigende tørke og oversvømmelser, der fortrænger agerjord. Intensivt landbrug udtømmer også jord og grundvand, som nogle gange dræner hurtigere, end det fyldes."
+          "text": "Landmændene får ofte skylden. Men det er dem, der brødføder vores børn, og de passer også på landskabet og miljøet. At brødføde kloden er dog ikke deres opgave alene: det kræver langt mere end at dyrke mad."
         },
         {
           "type": "paragraph",
-          "text": "En af mulighederne for fremtiden hedder **[[agroøkologi]]**: at producere ved at stole på naturlige kredsløb, såsom kompost eller sædskifte, i stedet for at bekæmpe dem med kemikalier. Udfordringen er at garantere, for ethvert menneske, permanent adgang til sund mad uden at udtømme planeten yderligere."
+          "text": "Det kræver bæredygtige valg af os: at vælge sundere og ansvarligt producerede varer og kun købe det, vi faktisk spiser. Hele fødevarebranchen, forarbejdningsvirksomheder, emballageproducenter, transportører, detailhandlen og os forbrugere, kan også ændre vaner. Fremtidens mad er et fælles problem. Otte milliarder menneskers kost former hele planeten, og du er en del af det."
         },
         {
           "type": "takeaway",
-          "text": "Jorden producerer nok kalorier til at brødføde alle. 800 millioner menneskers sult kommer derfor fra et problem med adgang, affald og geopolitiske kriser, forværret af klimaændringer."
+          "text": "Jorden producerer nok til alle: at brødføde otte milliarder mennesker kræver, at vi spilder mindre, producerer mere med færre input og mindre jord og ændrer vores valg, fra jord til bord."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "United Nations, Department of Economic and Social Affairs, « Can we feed the billions? ».",
+      "url": "https://www.un.org/en/desa/can-we-feed-billions"
+    },
+    {
+      "text": "H. Ritchie, « No, growing more food does not mean we always need more and more inputs », Sustainability by Numbers.",
+      "url": "https://hannahritchie.substack.com/p/agricultural-total-factor-productivity"
+    },
+    {
+      "text": "J. Gustavsson, C. Cederberg, U. Sonesson, R. van Otterdijk et A. Meybeck, Global Food Losses and Food Waste: Extent, Causes and Prevention, FAO, Rome, 2011."
     }
   ]
 }

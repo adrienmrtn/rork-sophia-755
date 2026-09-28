@@ -1,0 +1,171 @@
+{
+  "id": "course_276_pourquoi_les_antibiotiques_cessent_ils",
+  "title": "Dlaczego antybiotyki przestają działać?",
+  "subtitle": "Bakterie przechodzą do kontrataku",
+  "subject": "sciences",
+  "subcategory": "Codzienność bez tajemnic",
+  "description": "Angina, infekcja dróg moczowych, rutynowa operacja: bez skutecznych antybiotyków wszystko znów staje się groźne. A nadużywając ich, uczymy bakterie, jak je przetrwać.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "antibiogram_petri_dish_inhibition_zones",
+    "ratio": "4:3",
+    "hook": "Walcząc z bakteriami, wytrenowaliśmy je, żeby przeżywały nasze leki."
+  },
+  "sections": [
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_intro",
+      "title": "Wstęp",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gdy bakterie wtargną do naszego ciała, układ odpornościowy odpowiada: **białe krwinki** atakują zakażenie i szybko dochodzimy do siebie. Ale jeśli nasza obrona jest osłabiona albo nie nadąża, potrzebne jest wsparcie: antybiotyki. Antybiotyk [[bakteriobójczy]] niszczy bakterię, atakując jej ścianę i wnętrze. Bakteriostatyczny tylko nie pozwala jej się namnażać."
+        },
+        {
+          "type": "funFact",
+          "text": "Antybiotyk to nie nowoczesny wynalazek: są ślady, że ludzie używali antybiotyków już ponad 1.500 lat temu, choć nic nie wiedzieli o bakteriach."
+        },
+        {
+          "type": "paragraph",
+          "text": "W zależności od zakażenia lekarz wybiera antybiotyk o **szerokim spektrum**, działający na wiele gatunków, albo o wąskim spektrum, przeznaczony dla kilku. Skuteczne, tanie i łatwo dostępne, te leki obejmują ogromną gamę zakażeń. I właśnie ten sukces sprawił, że współczesny świat zaczął ich nadużywać. A bakterie zaczęły odpowiadać."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p1",
+      "title": "Jak bakterie uczą się stawiać opór",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Antybiotyki to jedno z największych osiągnięć współczesnej medycyny. Uratowały niezliczone życia, a my jesteśmy od nich zależni. Ale ich masowe stosowanie stworzyło problem. Tym problemem jest [[antybiotykooporność]]. Antybiotyki, które zabijały bakterię albo hamowały jej wzrost, przestają działać. Bakteria wyewoluowała tak, żeby wymknąć się leczeniu."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Alexander Fleming, odkrywca penicyliny, w swoim laboratorium."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ewolucja to naturalny proces, który przyspieszają zagrożenia ze strony otoczenia. Ciągłe leczenie bakterii cząsteczkami zaprojektowanymi, by je zabijać, oznacza wybieranie tych, które potrafią przeżyć. Ich sposoby obrony są różne: **mutacje** genetyczne, enzymy rozkładające antybiotyk, zmiany w działaniu komórki, a nawet maleńkie [[pompy efluksowe]], które wyrzucają lek z komórki."
+        },
+        {
+          "type": "paragraph",
+          "text": "Te sposoby obrony są zapisane w genach. Gdy oporna bakteria się dzieli, przekazuje je potomnym komórkom, a te przekazują je dalej. Jedna ocalała bakteria może dać początek całej linii opornych. Tak rozprzestrzenia się oporność."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p2",
+      "title": "Geny w podróży: przypadek MRSA",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oporna bakteria podróżuje jak każdy inny drobnoustrój. Pandemia **Covid** pokazała, jak szybko wirus przechodzi z człowieka na człowieka, a potem z kraju do kraju. Bakterie krążą tak samo: przez kontakt między ludźmi, w sprzyjającym środowisku, przez brak higieny albo ze zwierząt na człowieka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mają przy tym skrót, a jest nim [[horyzontalny transfer genów]]. Oporna bakteria może przekazać swoje geny oporności wprost sąsiadce, bez czekania na podział. W bardzo krótkim czasie powstaje cała populacja opornych bakterii."
+        },
+        {
+          "type": "image",
+          "asset": "mrsa_staphylococcus_aureus_electron_micrograph_cdc",
+          "ratio": "5:4",
+          "caption": "Skupiska gronkowców złocistych opornych na metycylinę pod mikroskopem elektronowym."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najbardziej znany jest [[MRSA]], gronkowiec złocisty oporny na metycylinę. Opiera się wielu popularnym antybiotykom, stąd jego przydomek „superbakteria”. Masowe stosowanie antybiotyków wybiło słabsze szczepy i zostawiło wolne pole tym, które tak jak on nauczyły się stawiać opór. Skutki mogą być śmiertelne."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p3",
+      "title": "1,27 miliona zgonów rocznie: alarm WHO",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Co ta oporność oznacza dla nas? [[WHO]], czyli Światowa Organizacja Zdrowia, zalicza oporność na środki przeciwdrobnoustrojowe, czyli leki zwalczające drobnoustroje, w tym antybiotyki, do **trzech** największych zagrożeń dla zdrowia publicznego na świecie. Skoro leków skutecznych na zakażenia bakteryjne jest coraz mniej, pole traci cała współczesna medycyna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Liczby pokazują skalę zagrożenia. Tylko w 2019 roku **1,27 miliona** zgonów na świecie przypisano oporności na środki przeciwdrobnoustrojowe. I krzywa rośnie: prognozy mówią o **10 milionach** zgonów rocznie do **2050** roku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Naukowcy nie siedzą z założonymi rękami. Opracowują nowe, bardziej precyzyjne terapie, wymierzone w oporne bakterie. Próbują też przywrócić skuteczność istniejących antybiotyków i ograniczyć niepotrzebne recepty: każda terapia, której udało się uniknąć, to jedna okazja mniej dla bakterii, by się przystosować."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p4",
+      "title": "Świat bez skutecznych antybiotyków",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Połykamy antybiotyki bez zastanowienia. Są tanie, skuteczne i dostępne wszędzie. Bez nich zwykłe zakażenie, bakteryjna **angina** czy infekcja dróg moczowych, byłoby o wiele trudniejsze do wyleczenia. Obtarte kolano mogłoby skończyć się tak, że rozwinie się [[sepsa]], uogólnione zakażenie zagrażające życiu."
+        },
+        {
+          "type": "image",
+          "asset": "hospital_operating_room_surgery_team",
+          "ratio": "3:2",
+          "caption": "Nowoczesna sala operacyjna: bez antybiotyków rutynowe operacje znów byłyby ryzykowne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zwykłe zabiegi, jak **cesarskie cięcie** czy wszczepienie endoprotezy biodra, niosłyby dużo większe ryzyko. Antybiotyki często podaje się bowiem po operacji, żeby zapobiec zakażeniu. Bez nich zabiegi, które ratują życie albo poprawiają jego jakość, stałyby się zbyt niebezpieczne, by je wykonywać."
+        },
+        {
+          "type": "takeaway",
+          "text": "Przyszłość współczesnej medycyny zależy od jednego: od utrzymania skuteczności antybiotyków, a więc od tego, czy przestaniemy ich nadużywać."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Medical News Today, « Antibiotics: How they work, uses, side effects and how to use ».",
+      "url": "https://www.medicalnewstoday.com/articles/10278"
+    },
+    {
+      "text": "Wikipedia, « Antibiotic ».",
+      "url": "https://en.wikipedia.org/wiki/Antibiotic"
+    },
+    {
+      "text": "B. K. Nimmana et A. D. Nguyen, « Antibiotic Resistance », StatPearls, StatPearls Publishing, Treasure Island (FL), 2026.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513277/"
+    },
+    {
+      "text": "H. Endale, M. Mathewos et D. Abdeta, « Potential Causes of Spread of Antimicrobial Resistance and Preventive Measures in One Health Perspective: A Review », Infection and Drug Resistance, vol. 16, 2023, p. 7515-7545.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10715026/"
+    },
+    {
+      "text": "American Society for Microbiology, « Plasmids and the Spread of Antibiotic Resistance Genes », janvier 2023.",
+      "url": "https://asm.org/articles/2023/january/plasmids-and-the-spread-of-antibiotic-resistance-g"
+    },
+    {
+      "text": "M. A. Salam, M. Y. Al-Amin, M. T. Salam, J. S. Pawar et al., « Antimicrobial Resistance: A Growing Serious Threat for Global Public Health », Healthcare, vol. 11, n° 13, 2023, art. 1946.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10340576/"
+    },
+    {
+      "text": "Wikipedia, « Methicillin-resistant Staphylococcus aureus ».",
+      "url": "https://en.wikipedia.org/wiki/Methicillin-resistant_Staphylococcus_aureus"
+    },
+    {
+      "text": "S. Rugarabamu et G. Mwanyika, « Biotechnological Innovations to Combat Antimicrobial Resistance and Advance Global Health Equity », Bacteria, vol. 4, n° 3, 2025, art. 46.",
+      "url": "https://www.mdpi.com/2674-1334/4/3/46"
+    },
+    {
+      "text": "A. Nazir, A. Nazir, V. Zuhair, S. Aman et al., « The Global Challenge of Antimicrobial Resistance: Mechanisms, Case Studies, and Mitigation Approaches », Health Science Reports, vol. 8, n° 7, 2025, e71077.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12284435/"
+    },
+    {
+      "text": "ITN Business, « Antimicrobial resistance: understanding its global impact ».",
+      "url": "https://business.itn.co.uk/antimicrobial-resistance-understanding-its-global-impact/"
+    }
+  ]
+}

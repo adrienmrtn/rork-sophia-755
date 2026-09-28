@@ -1,0 +1,149 @@
+{
+  "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout",
+  "title": "Dlaczego druk zmienił wszystko?",
+  "subtitle": "Moguncja, ok. 1450",
+  "subject": "histoire",
+  "subcategory": "Nowożytność i XIX wiek",
+  "description": "Około 1450 roku rzemieślnik z Moguncji złożył metalowe litery, żeby drukować całe strony. Pięćdziesiąt lat później Europa miała 20 milionów książek, a informację było znacznie trudniej kontrolować.",
+  "author": "benjamin-campbell",
+  "hero": {
+    "image": "gutenberg_bible_open_pages_library_of_congress",
+    "ratio": "4:3",
+    "hook": "Jedna książka to były miesiące pracy kopisty. Nagle prasa odbijała setki egzemplarzy."
+  },
+  "sections": [
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_intro",
+      "title": "Wstęp",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na długo przed wynalezieniem druku zrobienie książki w Europie było pracą powolną i kosztowną. Każde dzieło przepisywał ręcznie wyszkolony [[kopista]], który spędzał nad jednym rękopisem miesiące, a czasem lata. Książki miały więc tylko bogacze, instytucje kościelne i uniwersytety. Nie dlatego, że inni ich nie chcieli: wykonanie jednego tomu wymagało po prostu ogromu czasu i pracy."
+        },
+        {
+          "type": "paragraph",
+          "text": "W połowie **XV wieku** wszystko zaczęło się zmieniać. W niemieckiej Moguncji rzemieślnik [[Johannes Gutenberg]] opracował nowy sposób drukowania, który zrewolucjonizował wyrób książek. Jego wynalazek zmienił nie tylko świat książki: zmienił też to, jak można kopiować informacje i dzielić się nimi. Dlaczego jedna prasa miała aż taki wpływ?"
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p1",
+      "title": "Gutenberg nie wynalazł druku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gutenberg nie był pierwszym, który drukował. W **Chinach** i w całej Azji od stuleci znana była [[ksylografia]]: rzeźbiono całą stronę w drewnianym klocku, a potem odbijano ją na papierze. Jego system wyróżniały metalowe [[ruchome czcionki]]."
+        },
+        {
+          "type": "image",
+          "asset": "movable_metal_type_letters_composing_stick",
+          "ratio": "3:2",
+          "caption": "Tajskie ruchome czcionki w wierszowniku (Muzeum Narodowe w Bangkoku): każda litera, odlana w lustrzanym odbiciu, posłuży znów do innej strony."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zamiast rzeźbić całą książkę w drewnie, drukarze odlewali każdą literę osobno, a potem składali je w słowa i strony. Całość smarowano farbą i odciskano na papierze. Po odbiciu strony litery rozbierano i używano ponownie do następnej. Metoda stała się dużo bardziej elastyczna: drukarz mógł wykonać **setki egzemplarzy** bez rzeźbienia nowego klocka dla każdej strony."
+        },
+        {
+          "type": "funFact",
+          "text": "Biblia Gutenberga, wydrukowana około 1455 roku, nie była pierwszą książką drukowaną w Europie, ale była pierwszym dużym dziełem wykonanym jego metodą. Z około 180 odbitych egzemplarzy do dziś przetrwało zaledwie około pięćdziesięciu."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p2",
+      "title": "Dwadzieścia milionów książek w pięćdziesiąt lat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kiedy wynalazek się przyjął, drukowanie książek rozwijało się w Europie w zadziwiającym tempie. Szacuje się, że około **1500** roku, ledwie pół wieku po przełomie Gutenberga, na kontynencie było już **20 milionów** książek. Tysiące różnych tytułów krążyły między miastami, uniwersytetami, kościołami i prywatnymi czytelnikami."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nie chodziło tylko o szybkość. Druk usunął stare wąskie gardło, jakim było przepisywanie. Starannie przygotowany tekst dawało się powielać raz za razem, a te same informacje docierały do tysięcy ludzi. Po raz pierwszy w historii słowo pisane rozchodziło się po kontynencie na skalę, której ręczne kopiowanie nigdy by nie osiągnęło."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p3",
+      "title": "Luter i reformacja w pamfletach",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na początku **XVI wieku** niemiecki mnich i profesor [[Marcin Luter]] zakwestionował Kościół katolicki i zapoczątkował ruch, który przeszedł do historii jako [[reformacja]]. W poprzednich stuleciach spór zapewne pozostałby lokalną dysputą teologiczną. Druk to zmienił."
+        },
+        {
+          "type": "image",
+          "asset": "luther_ninety_five_theses_1517_printed_broadsheet",
+          "ratio": "5:4",
+          "caption": "Afisz na stulecie reformacji (1617): Luter pisze swoje tezy na drzwiach kościoła w Wittenberdze olbrzymim piórem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jego argumenty szybko powielano w pamfletach i rozpowszechniano daleko poza uniwersytetem, na którym wykładał. Jego pisma drukowano też po niemiecku, więc mogli je czytać ci, którzy nie znali łaciny. Druk sam nie stworzył reformacji, ale pozwolił ideom Lutra dotrzeć do znacznie większej liczby ludzi niż jakikolwiek odpis ręczny. Władzom kościelnym dużo trudniej było ten spór opanować."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p4",
+      "title": "Od telegrafu do internetu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Druk zapamiętano jako jedną z pierwszych technik, które przełamały wąskie gardło kopiowania. Nie ostatnią. W **XIX wieku** [[telegraf]] pozwolił przesłać wiadomość na ogromne odległości w kilka minut zamiast w kilka dni. Internet poszedł jeszcze dalej: informację kopiuje się i wysyła w kilka sekund."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "ok. 1450",
+              "title": "Prasa Gutenberga",
+              "detail": "W Moguncji metalowe ruchome czcionki zastępują ręczne przepisywanie."
+            },
+            {
+              "date": "ok. 1500",
+              "title": "20 milionów książek",
+              "detail": "Pięćdziesiąt lat po Gutenbergu Europa ma miliony drukowanych tomów."
+            },
+            {
+              "date": "1517",
+              "title": "Tezy Lutra",
+              "detail": "Drukowane pamflety niosą reformację daleko poza jego uniwersytet."
+            },
+            {
+              "date": "XIX wiek",
+              "title": "Telegraf",
+              "detail": "Wiadomość pokonuje ogromne odległości w kilka minut."
+            },
+            {
+              "date": "koniec XX wieku",
+              "title": "Internet",
+              "detail": "Informację kopiuje się i wysyła w kilka sekund."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Każda z tych technik zmieniła coś więcej niż szybkość komunikacji. Wstrząsnęła instytucjami zbudowanymi po to, by informację kontrolować i rozdzielać. Kościoły, rządy, gazety i firmy musiały się dostosować, bo informację coraz łatwiej było powielać i coraz trudniej kontrolować. Druk pozostaje dobrym punktem odniesienia, gdy chcemy zrozumieć, co wynalazek może zrobić ze światem."
+        },
+        {
+          "type": "takeaway",
+          "text": "Druk zmienił wszystko nie dlatego, że Gutenberg go wynalazł, lecz dlatego, że jego ruchome czcionki przełamały wąskie gardło kopiowania: informację łatwo było powielać i trudno kontrolować, a ten sam schemat powtórzyły potem telegraf i internet."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "L. Febvre et H.-J. Martin, The Coming of the Book: The Impact of Printing, 1450-1800, trad. D. Gerard, Verso, 1976, p. 186."
+    },
+    {
+      "text": "K.-W. Chow, « Reinventing Gutenberg: Woodblock and Movable-Type Printing in Europe and China », Late Imperial China, vol. 28, n° 1, 2007, p. 185-186."
+    }
+  ]
+}

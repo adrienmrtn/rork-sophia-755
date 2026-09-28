@@ -1,14 +1,15 @@
 {
   "id": "course_57_l_invention_d_internet",
-  "title": "De uitvinding van internet",
-  "subtitle": "Netwerken",
+  "title": "Hoe kwam het internet voort uit de Koude Oorlog?",
+  "subtitle": "Van ARPANET tot het web",
   "subject": "sciences",
-  "subcategory": "Discoveries that changed the world",
-  "description": "Internet heeft niet één uitvinder. Het is een lange keten: een militair netwerk, een gemeenschappelijke taal, daarna het web voor mensen.",
+  "subcategory": "Ontdekkingen die de wereld veranderden",
+  "description": "Een militair netwerk dat een Sovjetaanval moest doorstaan, tientallen kleine netwerken, daarna het modem en het web. In vijftig jaar werd een project uit de Koude Oorlog deel van ons dagelijks leven.",
+  "author": "myra-houser",
   "hero": {
-    "image": "l_invention_d_internet",
-    "ratio": "16:9",
-    "hook": "Eerst een netwerk om de oorlog te weerstaan. Daarna sluit de hele wereld zich aan."
+    "image": "ibm_mainframe_computer_room_1960s_operators",
+    "ratio": "4:3",
+    "hook": "Voordat het de wereld verbond, moest het internet vooral een Sovjetaanval overleven."
   },
   "sections": [
     {
@@ -18,83 +19,127 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Internet is niet geboren uit één genie in een garage. Het is een collectieve bouw over meerdere decennia."
+          "text": "Net als Rome is het internet niet in één dag gebouwd. In het begin was het netwerk niet meer dan een handvol computers van het **Amerikaanse ministerie van Defensie**. Het ontstond uit technische vooruitgang, maar ook uit de spionageambities van de twee supermachten van de [[Koude Oorlog]]. Aan het eind van de 20e eeuw hadden de meeste Amerikaanse huishoudens een inbelverbinding via de telefoonlijn, en surfen op het web volgde snel."
         },
         {
           "type": "paragraph",
-          "text": "Drie eenvoudige stappen om te onthouden: een eerste netwerk (ARPANET), een gemeenschappelijke taal (TCP/IP), daarna een makkelijke interface (het web)."
+          "text": "Tegen het einde van het millennium was de technologie zo wijdverbreid en tegelijk zo nieuw dat analisten een wereldwijde storing voorspelden als de kalenders van computers niet goed naar het **jaar 2000** zouden overgaan: de angst voor de [[millenniumbug]]. In de 21e eeuw veranderden chatdiensten, sociale media en kunstmatige intelligentie opnieuw de manier waarop we online communiceren. Hoe werd een militair project deel van het dagelijks leven van de hele wereld?"
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p1",
-      "title": "ARPANET, het eerste netwerk",
+      "title": "Een netwerk dat een aanval kon overleven",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Eind jaren **1960**, midden in de Koude Oorlog, financiert het Amerikaanse leger een project: computers verbinden zodat ze blijven communiceren, zelfs als een deel van het netwerk wordt vernietigd."
+          "text": "Het project begon in de **jaren 1950**. Computers waren toen enorm en duur: één machine vulde een hele kamer. Alleen overheidsdiensten en een paar universiteiten hadden er een. Toen de spanning met de Sovjet-Unie opliep, zochten Amerikaanse leiders een communicatienetwerk dat Sovjetagenten niet konden onderscheppen. De eerste stap was timesharing: meerdere gebruikers konden tegelijk op dezelfde computer werken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Begin **jaren 1960** experimenteerde een ingenieur genaamd [[Paul Baran]] met [[pakketschakeling]]: in plaats van een bericht in één blok te versturen, knip je het in kleine datapakketjes die elk apart door het netwerk reizen. Baran en zijn collega's gokten erop dat gegevens die zo over telefoonlijnen reisden een Sovjetaanval zouden overleven. Uit dat werk ontstond [[ARPANET]], een programma van het Amerikaanse ministerie van Defensie."
         },
         {
           "type": "image",
           "asset": "arpanet_1969_computer_ucla",
           "ratio": "4:3",
-          "caption": "ARPANET verbindt eerst een paar Amerikaanse universiteiten."
-        },
-        {
-          "type": "paragraph",
-          "text": "Dat netwerk heet **ARPANET**. De berichten worden in kleine pakketten geknipt die verschillende wegen nemen. Valt één route uit, dan neemt een andere het over."
+          "caption": "De SDS Sigma 7 van UCLA, de eerste computer die in 1969 op ARPANET werd aangesloten."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p2",
-      "title": "TCP/IP: dezelfde taal spreken",
+      "title": "Van ARPANET naar „internets”: pakketschakeling",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wil je dat verschillende netwerken elkaar begrijpen, dan heb je gemeenschappelijke regels nodig. **Vint Cerf** en **Bob Kahn** maken het protocol **TCP/IP**: een taal die zegt hoe je gegevens knipt, adresseert en weer in elkaar zet."
+          "text": "Om die pakketten te vervoeren, gebruikte ARPANET een techniek die Britse wetenschappers hadden ontwikkeld: de [[router]], een apparaat in het telefoonnet dat pakketten verzamelt en doorstuurt naar andere machines. In **1969** werden de eerste computers verbonden, te beginnen met die van de Universiteit van Californië in Los Angeles. Op Hawaï testten informatici een verwant idee, **ALOHAnet**, waarbij de pakketten via radiogolven reisden."
         },
         {
           "type": "image",
-          "asset": "vint_cerf_bob_kahn_internet",
-          "ratio": "4:3",
-          "caption": "Cerf en Kahn: de architecten van de taal van internet."
+          "asset": "arpanet_logical_map_1977_network_diagram",
+          "ratio": "3:2",
+          "caption": "De logische kaart van ARPANET op 25 augustus 1983, getekend door BBN: universiteiten, laboratoria en militaire locaties met elkaar verbonden."
         },
         {
-          "type": "funFact",
-          "text": "Op 1 januari **1983** stapt ARPANET officieel over op TCP/IP. Velen zien die datum als de technische „geboorte” van internet."
+          "type": "paragraph",
+          "text": "In de **jaren 1970** en begin jaren 1980 stuurden tientallen teams over de hele wereld informatie over telefoonlijnen en via de radio. Het resultaat was een wirwar van kleine, losse netwerken. In **1974** kortte een wetenschappelijk artikel „internetwork”, een netwerk van netwerken, af tot „internet”. Dat is het oudste bekende gebruik van het woord."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p3",
-      "title": "Het web maakt het netwerk menselijk",
+      "title": "Modems, abonnementen en de geboorte van het web bij CERN",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Internet is het netwerk. Het **World Wide Web**, uitgevonden door **Tim Berners-Lee** bij CERN begin jaren **1990**, is de makkelijke laag: pagina's, links, browsers."
+          "text": "Tot het midden van de **jaren 1980** leefden die „internets” elk hun eigen leven. In de Verenigde Staten investeerde de National Science Foundation, het federale agentschap dat onderzoek financiert, flink in supercomputers en verbond die met de universiteiten. Van **1989** tot **1995** hief de Amerikaanse wetgever stap voor stap de beperkingen op die commerciële diensten op het internet verboden."
         },
         {
           "type": "paragraph",
-          "text": "Zonder het web zou internet vooral een gereedschap van experts blijven. Met het web kan iedereen klikken."
+          "text": "In 1995 boden grote bedrijven als **Sprint** en **AT&T** inbelverbindingen aan: de abonnee stak zijn modem in het telefoonstopcontact en draaide een nummer. Intussen, in **1990**, lanceerde de Britse informaticus Tim Berners-Lee het [[World Wide Web]] bij CERN, het Europese natuurkundelaboratorium bij Genève. Het web bracht gegevens die over servers verspreid lagen samen en verbond pagina's met elkaar via hyperlinks."
+        },
+        {
+          "type": "image",
+          "asset": "tim_berners_lee_next_computer_cern_first_web_server",
+          "ratio": "3:2",
+          "caption": "De NeXT-computer van Tim Berners-Lee bij CERN, de eerste webserver in 1990: een etiket vraagt hem nooit uit te zetten."
+        },
+        {
+          "type": "funFact",
+          "text": "In de jaren 1990 betaalden veel abonnees hun verbinding per minuut. Elke pagina die traag laadde kostte geld, en de telefoon thuis bleef bezet zolang het modem online was."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p4",
-      "title": "Het zenuwstelsel van de wereld",
+      "title": "Van e-mail tot iPhone: het internet in het dagelijks leven",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vandaag draagt internet mails, video's, banken, ziekenhuizen, gps. Het schiep ook nieuwe problemen: desinformatie, surveillance, de digitale kloof."
+          "text": "Vanaf het midden van de jaren 1990 groeide het internet razendsnel en breidde iedereen zijn kring van contacten uit. E-mail, chatrooms en instant messaging maakten gesprekken in realtime mogelijk. In **2000** liep al meer dan de **helft** van al het telecomverkeer via het internet. Begin jaren 2000 schoten blogs en de eerste sociale netwerken, eerst MySpace en daarna TheFacebook.com, als paddenstoelen uit de grond."
+        },
+        {
+          "type": "paragraph",
+          "text": "Daarna verliet het netwerk kantoren en huiskamers. Vanaf **2005** konden BlackBerry-telefoons berichten versturen over hun eigen netwerken. Vanaf **2007** stopte de iPhone het internet in je broekzak: voortaan surfte je op een mobiele telefoon. Het netwerk van netwerken, geboren als defensiestrategie tijdens de Koude Oorlog, hoort nu bij het leven van alledag."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1969",
+              "title": "Eerste machines verbonden",
+              "detail": "ARPANET verbindt zijn eerste computers, waaronder die van UCLA."
+            },
+            {
+              "date": "1974",
+              "title": "Het woord „internet”",
+              "detail": "Een artikel kort „internetwork” af: het oudste bekende gebruik van de term."
+            },
+            {
+              "date": "1990",
+              "title": "Geboorte van het web",
+              "detail": "Tim Berners-Lee lanceert het World Wide Web bij CERN."
+            },
+            {
+              "date": "1995",
+              "title": "Het internet gaat open voor het publiek",
+              "detail": "Einde van de commerciële beperkingen, inbelverbindingen bij Sprint en AT&T."
+            },
+            {
+              "date": "2007",
+              "title": "Het internet in je broekzak",
+              "detail": "Met de iPhone kun je surfen op een mobiele telefoon."
+            }
+          ]
         },
         {
           "type": "takeaway",
-          "text": "Internet ontstaat uit ARPANET, wordt universeel dankzij TCP/IP, en toegankelijk dankzij het web. Het is geen unieke uitvinding, het is een gedeelde architectuur."
+          "text": "Het internet werd tijdens de Koude Oorlog ontworpen om een aanval te doorstaan. Het ging van militaire computers naar universiteiten, dankzij het modem en het web naar de huiskamer, en past nu in een telefoon."
         }
       ]
     }

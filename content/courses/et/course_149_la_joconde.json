@@ -1,14 +1,15 @@
 {
   "id": "course_149_la_joconde",
-  "title": "Mis tegi „Mona Lisa“ nii kuulsaks?",
-  "subtitle": "1503-1519",
+  "title": "Kas Mona Lisa oli Leonardo jaoks tõesti tähtis?",
+  "subtitle": "1503",
   "subject": "art",
-  "subcategory": "Iconic works",
-  "description": "Maalinud **Leonardo da Vinci** **1503** ja **1519** vahel. *Mona Lisa* on muutunud Louvre'i absoluutseks ikooniks. Tehnika, salapärane naeratus… ja lend lennuga **1911**, mis muutis kõike.",
+  "subcategory": "Meistriteosed",
+  "description": "See on maailma kuulsaim maal. Ometi oli selle autoril 1503. aastal tähtsamatki teha kui maalida ühe kaupmehe naise portreed.",
+  "author": "dusan-nikolic",
   "hero": {
     "image": "la_joconde",
     "ratio": "16:9",
-    "hook": "Naeratus, vargus, müüt: kuidas portreest sai maailma kuulsaim teos."
+    "hook": "Planeedi enim vaadatud maal võis Leonardo jaoks olla lihtsalt kõrvaltöö."
   },
   "sections": [
     {
@@ -18,89 +19,93 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "***Leonardo da Vinci** **1503** ja **1519** vahel maalitud Mona Lisa* on maailma enimkülastatud maal. Näitusel **Louvre** võlub see nii oma tehnika kui ka ajaloo poolest. See pole lihtsalt ilus portree. See on müüt, mille loovad kunst, teadus ja uudis."
+          "text": "Ehkki *Mona Lisa* on üks maailma kuulsamaid maale, teatakse sellest kindlalt väga vähe. Kunstiajaloolased on põhilises ühel meelel: Leonardo da Vinci maalis selle Firenzes **1503. ja 1506. aasta** vahel. **1517. aastal** viis ta maali endaga Prantsusmaale ja lõpuks jõudis tahvel kuninga kogusse, kelleks oli [[Franciscus I]]."
         },
         {
           "type": "paragraph",
-          "text": "Miks see nägu pigem kui teine? Sellepärast, et Leonardo koondas sinna uuendused ja selle maailma mastaabis kuulsaks tegi suurejooneline lend."
+          "text": "Ajaloo tühimiku on täitnud legendid. Maalist räägitakse kui naisest, „temast“. Tema poolnaeratust nimetatakse salapäraseks. Pärast **1911. aasta** vargust kaheldi isegi teose ehtsuses. Kõik need lood tegid maali kuulsaks, kuid lükkasid selle ajaloolise tausta varju. Ent sel ajal, kui Leonardo seda maalis, ei pruukinud teos tema silmis üldse tähtis olla."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p1",
-      "title": "Leonardo ja sfumato",
+      "title": "Kes on Mona Lisa?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Portree algab Firenzest **1503** paiku. Sponsor on kaupmees **Francesco del Giocondo**. Modelliks oleks tema naine [[Lisa Gherardini]]. Kuid Leonard ei anna kunagi maali kohale. Ta hoidis seda, retušeeris seda aastaid ja viis selle Prantsusmaale, kus ta suri linnas **1519**."
+          "text": "Kunstiajaloolased nõustuvad laialdaselt, et modell on [[Lisa Gherardini]], kaupmehe ja Firenze valitsuse väikeametniku **Francesco del Giocondo** abikaasa. Sellest tuleneb maali teine nimi, *La Gioconda*. Samastus põhineb Leonardo elulool, mille avaldas [[Giorgio Vasari]] aastal **1550** ja uuesti **1568** oma teoses *Kuulsamate maalijate, skulptorite ja arhitektide elulood*."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_leonardo_da_vinci_louvre_painting",
-          "ratio": "4:3",
-          "caption": "Mona Lisa Louvre'is: väike pappelpaneel, millest on saanud ülemaailmne ikoon."
+          "asset": "vasari_lives_of_the_artists_1568_title_page",
+          "ratio": "3:4",
+          "caption": "Vasari „Elulood“, Firenze väljaanne aastast 1568: tekst, mis annab modellile nime."
         },
         {
           "type": "paragraph",
-          "text": "Tema tunnustehnika on [[Leonardi sfumato]]: glasuurid, väga õhukesed kihid, mis kustutavad kontuurid. Pole enam karmi joont. Nägu sulab õhus. Leonardo lisab ka [[Õhuperspektiiv]]: kauge maastik muutub siniseks ja pehmemaks, nagu päris nägemuses."
+          "text": "Miks Francesco portree tellis? Seda ei tea keegi. Leonardo asus tööle **1503. aasta** alguses. Mis edasi sai, on siiani vaidlusalune: ajaloolaste arvates on Vasari jutustus pigem kirjanduslik väljamõeldis, eluloolase katse täita lüngad hea looga. **1506. aasta** keskel lahkus Leonardo paremat tööd otsides Firenzest Milanosse. Lõpetamata portree läks temaga kaasa."
+        },
+        {
+          "type": "funFact",
+          "text": "Vasari järgi palkas Leonardo poseerimise ajaks muusikuid ja narre, et modellil igav ei hakkaks. Ajaloolased peavad seda eluloolase väljamõeldiseks, kuid just see lugu pani aluse müüdile „Mona Lisa naeratusest“."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p2",
-      "title": "Naeratus, mis mängib silmaga",
+      "title": "Anghiari: mainekam tellimus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kuulus naeratus pole lihtsalt maalitud emotsioon. Ta mängib meie [[Perifeerne nägemine]]-ga. Kui vaatame modelli silmi, näevad võrkkesta servad suud pehmetes varjudes: naeratus tundub olevat. Otse suhu vaadates see väheneb."
+          "text": "**1503. aasta** oktoobris tellis Firenze valitsus Leonardolt seinamaali, mille teemaks oli [[Anghiari lahing]]. Töö asukoht oli [[Palazzo Vecchio]], Firenze Vabariigi valitsuse hoone. Maal pidi jäädvustama Firenze võitu Milano üle **1440. aastal**. Renessansiajal hinnati ajaloostseeni palju kõrgemalt kui portreed. Koos religioossete, mütoloogiliste ja allegooriliste teemadega peeti seda kunsti kõrgeimaks vormiks."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_smile_detail_close_up",
-          "ratio": "1:1",
-          "caption": "Mida rohkem sa seda vaatad, seda enam näib naeratus kaduvat."
-        },
-        {
-          "type": "funFact",
-          "text": "Leonardo, nii maalikunstnik kui õpetlane, õppis optikat. Naeratuse mõistatus põhineb osaliselt täpsel teadmisel selle kohta, kuidas inimsilm varje töötleb."
+          "asset": "rubens_copy_battle_of_anghiari_louvre_drawing",
+          "ratio": "16:9",
+          "caption": "Rubensi koopia keskmisest rüselusest: ainus jälg Palazzo Vecchio suurest lõpetamata seinamaalist."
         },
         {
           "type": "paragraph",
-          "text": "Tulemus: nägu näib olevat elav, muutuv, peaaegu teadlik meie pilgust."
+          "text": "Suure avaliku tellimuse kõrval ei kaalunud väikeametniku naise eraportree kuigi palju. Juba **1503. aasta** detsembrist pühendas Leonardo üha rohkem aega suure kompositsiooni ettevalmistamisele. Maine ja parem palk: Mona Lisa võis oodata. Teise Firenze-perioodi lõpuks polnud portree valmis. Samuti mitte *Anghiari lahing*: sellest on alles vaid ettevalmistavad visandid ja nende koopiad."
+        },
+        {
+          "type": "funFact",
+          "text": "On võimalik, et 1506. aastal Milanosse lahkudes oli Leonardol pooleli ainult taustamaastik."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p3",
-      "title": "1911: lend, mis leiutas kuulsuse",
+      "title": "Ikooni sünd",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "19. sajandil imetleti *Mona Lisa*, kuid mitte veel Louvre'i teos number üks. Kõik muutus **21. augustil 1911. a**. [[Vincenzo Peruggia]], muuseumi itaalia klaasija, varastab selle: see on [[Mona Lisa vargus (1911)]]. Peidab selle pluusi alla ja läheb vaikselt välja."
+          "text": "Leonardo suri **2. mail 1519** Prantsusmaal Amboise'is. *Mona Lisa* ei jõudnudki Giocondode perekonda. Pärast Prantsuse revolutsiooni muutus kuninglik kogu avalikuks ja maal jõudis **Louvre'i**. Alates 19. sajandi algusest on selle naeratust kirjeldatud tuhandel moel, jumalikust kuni meeleliseni."
         },
         {
           "type": "image",
           "asset": "mona_lisa_stolen_1911_newspaper_headline",
           "ratio": "4:3",
-          "caption": "1911: maali puudumine lööb pealkirjades ja loob tähe."
+          "caption": "Ajalehe Excelsior esikülg 1914. aasta jaanuaris: Mona Lisa naaseb pärast 1911. aasta vargust."
         },
         {
           "type": "paragraph",
-          "text": "Uurimine muutub skandaaliks. Luuletaja [[Guillaume Apollinaire]] pandi mõneks ajaks vangi. Intervjueeritakse [[Pablo Picasso]]-d. Kui maal **1913**-s uuesti ilmub, pole see enam lihtsalt maal. Ta on kuulsus."
+          "text": "Pöördepunkt oli maali vargus muuseumist **1911. aastal**. Ajalehed tegid Mona Lisast ülemaailmse sensatsiooni. Sestpeale on kõmuajakirjandus ja ilukirjandus korduvalt seadnud kahtluse alla teose ehtsuse ja modelli isiku, ilma et sel oleks mingit alust tõsises ajaloolises analüüsis. Maal on muutunud üha arvukamate lugude keskpunktiks ja neid räägitakse tänapäevani."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p4",
-      "title": "Ikoon klaasi all",
+      "title": "Maal, mis kasvas autorist suuremaks",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tänaseks paplipuule värvituna elab see [[Kuulikindel klaas]] taga, konditsioneeriga vitriinis. Happerünnak, esemete loopimine: kaitse on muutunud vajalikuks. Ja paroodiad alates Duchampist kuni Internetini tõestavad, et sellest on saanud universaalne keel."
+          "text": "Enam kui **500 aastat** pärast portree alustamist köidab Lisa del Giocondo inimesi rohkem kui kunagi varem. Louvre'is kuulikindla klaasi taga olev maal on oma ajaloolisest kontekstist ära lõigatud. Sellest vabanenuna on ta saanud üleilmse ikooni staatuse. Sel staatusel on oma hind: uusajal pole teost enam kordagi restaureeritud."
         },
         {
           "type": "timeline",
@@ -108,30 +113,47 @@
             {
               "date": "1503",
               "title": "Portree algus",
-              "detail": "Leonardo alustab Firenzes \"Mona Lisat\"."
+              "detail": "Leonardo alustab Firenzes Lisa Gherardini portreed."
+            },
+            {
+              "date": "okt 1503",
+              "title": "Anghiari tellimus",
+              "detail": "Firenze usaldab talle Palazzo Vecchio jaoks suure seinamaali."
+            },
+            {
+              "date": "1506",
+              "title": "Lahkumine Milanosse",
+              "detail": "Leonardo lahkub Firenzest, lõpetamata portree kaenla all."
             },
             {
               "date": "1519",
               "title": "Leonardo surm",
-              "detail": "Maal jääb Prantsusmaale."
+              "detail": "Amboise'is 2. mail. Maal jääb Prantsusmaale."
             },
             {
               "date": "1911",
-              "title": "Lend",
-              "detail": "Peruggia muudab teose meediamüüdiks."
-            },
-            {
-              "date": "1913",
-              "title": "Tagasi",
-              "detail": "Maal naaseb Louvre'i maailmastaarina."
+              "title": "Vargus",
+              "detail": "Ajakirjandus teeb Mona Lisast ülemaailmse sensatsiooni."
             }
           ]
         },
         {
+          "type": "paragraph",
+          "text": "Sajanditega kolletunud [[lakk]] on õlimaali kaitsekiht, ja selle eemaldamine võiks teost kahjustada. Ning isegi kui restaureerimine õnnestuks, kardetakse, et *Mona Lisa* kaotaks oma lummava jõu. Leonardo algne tehnika ja värvid on vähem olulised kui kujutis ise. Lugematute lugude kandjana on maal kasvanud suuremaks nii oma autorist kui ka kunstiajaloost."
+        },
+        {
           "type": "takeaway",
-          "text": "*Mona Lisa* võlgneb oma hiilguse nii Leonardo geeniusele (sfumato, optiline naeratus) kui ka ajaloole: 1911. aastal toimunud vargus muutis imetletud meistriteose ülemaailmseks ikooniks."
+          "text": "1503. aastal mainekama tellimuse nimel kõrvale jäetud *Mona Lisa* võlgneb oma ikooni staatuse viiele sajandile legendidele ja ühele vargusele, palju rohkem kui kohale, mille Leonardo talle andis."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. Campbell, Leonardo da Vinci: An Untraceable Life, Princeton University Press, 2025, p. 43-45."
+    },
+    {
+      "text": "F. Zöllner, « Leonardo's Portrait of Mona Lisa del Giocondo », Gazette des Beaux-Arts, vol. 121, 1993, p. 115-138."
     }
   ]
 }

@@ -1,0 +1,139 @@
+{
+  "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie",
+  "title": "Yapay zekâ çok mu enerji tüketiyor?",
+  "subtitle": "Her yanıtın ardında",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Çevre ve gelecek",
+  "description": "Bir yapay zekânın her yanıtı, gece gündüz çalışan makinelerle dolu bir binadan çıkıyor. Modelin eğitiminden onu besleyen şebekeye kadar, bu gerçekte ne kadar elektriğe mal oluyor?",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "data_center_server_racks_aisle_blue_lights",
+    "ratio": "4:3",
+    "hook": "Yapay zekâ bir yazılım gibi görünür, ama her yanıt, evinle aynı şebekeye bağlı gerçek bir binada üretilir."
+  },
+  "sections": [
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Çevrimiçi bir yapay zekâya bir soru soruyorsun, yanıt birkaç saniyede ekrana geliyor. Ama asıl iş telefonunda yapılmıyor. İş, [[veri merkezi]] denen, bilgiyi işleyen ve saklayan makinelerle dolu bir binada yapılıyor. Bu makineler, kimse onları görmese de durmaksızın elektrik tüketiyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Uluslararası Enerji Ajansı]] verilerine göre 2025'te bütün veri merkezleri dünya elektriğinin yaklaşık **1,5%**'ini kullandı. Bu rakam yalnızca yapay zekâyı değil, bütün çevrimiçi hizmetleri kapsıyor. Ama yapay zekâya ayrılmış tesisler hızla çoğalıyor. Kısa bir yanıt tek başına pek bir şeye mal olmaz. Yine de her biri için makineler çalışır ve onu üretmek için birkaç sistem aynı anda akım çeker."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p1",
+      "title": "İlk sırada sunucular",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Verileri işleyen ve çevrimiçi hizmetleri çalıştıran bilgisayara [[sunucu]] denir. Bir veri merkezinde hesaplamanın büyük kısmını sunucular yapar, bu yüzden elektriği en çok onlar tüketir. Modern bir veri merkezinin faturasını bölersen sunucular ortalama **60%**'ını alır. Bu rakam yalnızca yapay zekâ tesisleri için değil, genel olarak veri merkezleri için geçerlidir."
+        },
+        {
+          "type": "image",
+          "asset": "data_center_cooling_pipes_chillers",
+          "ratio": "3:2",
+          "caption": "Bir veri merkezinde sıra sıra sunucular: elektriğin büyük kısmını tüketenler onlar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Geri kalanı verileri saklamaya ve taşımaya, donanımı soğutmaya ve binayı ayakta tutmaya gider. Soğutma önemlidir, çünkü bir bilgisayar çalışırken ısı üretir. Bu ısıyı dışarı atacak bir sistem olmasa makineler sonunda aşırı ısınırdı. Yani bir yapay zekâ yanıtının ardındaki elektrik, onu üreten bilgisayarlardan çok daha fazlasını besler."
+        },
+        {
+          "type": "funFact",
+          "text": "IEA'ya göre yapay zekâya ayrılmış veri merkezlerinin elektrik tüketimi yalnızca 2025 yılında 50% arttı."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p2",
+      "title": "Önce eğitmek, sonra yanıtlamak",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bir yapay zekâ hizmetinin yanıt verebilmesi için önce bir modele ihtiyacı vardır: örneklerden düzenlilikler öğrenmiş bir sistem. Bu model, bilgisayarların muazzam miktarda veriyi elekten geçirdiği [[eğitim]] aşamasıyla oluşturulur. Bu iş çok güçlü makineleri uzun süre meşgul edebilir."
+        },
+        {
+          "type": "image",
+          "asset": "frontier_supercomputer_oak_ridge_cabinets",
+          "ratio": "4:3",
+          "caption": "NASA'nın Columbia süper bilgisayarının dolapları: bir modeli eğitmek için kullanılan türden makineler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Model eğitildikten sonra başka bir iş başlar. Senin isteğine yanıt üreten hesaplamaya [[çıkarım]] denir. Eğitim her soruda baştan başlamaz; çıkarım ise her istekte yinelenir. Zaman içinde hangisi daha ağır basar? Bu, hizmetin nasıl kurulduğuna ve kaç kişinin kullandığına bağlıdır. Çok kullanılan bir hizmet, iki büyük eğitim aşaması arasında bile bilgisayarlarını yanıt vermekle meşgul tutar."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p3",
+      "title": "Sabit bir maliyeti olmayan istek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tek bir metin isteği ne kadar elektrik tüketir? Yayımlanan tahminler aynı yanıtı vermiyor. Google, çalışan hizmetini ölçerek medyan metin isteğini **0,24 Wh** olarak belirliyor. Enerji miktarını ölçen birim [[watt-saat]] (Wh). Başka bir çalışma ise **0,31 Wh**'lik bir medyana ulaşıyor; standart isteklerinin ortadaki yarısı **0,16 ile 0,60 Wh** arasında."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu rakamlar birbiriyle çelişmiyor: aynı işin birbirine zıt iki ölçümünü değil, farklı sistemleri ve yöntemleri anlatıyorlar. Çok daha ağır işleri de dışarıda bırakıyorlar. Bir yapay zekâdan yanıt vermeden önce birkaç adımda akıl yürütmesini istemek, bilgisayarlarını çok daha uzun süre meşgul eder. Yani istek başına enerji; sisteme, ölçüm biçimine ve istenen işe bağlıdır."
+        },
+        {
+          "type": "funFact",
+          "text": "Aynı çalışmada, modelin sonuca varmadan önce adımlarını tek tek açtığı uzun bir akıl yürütme isteği 3,91 Wh medyana ulaşıyor: standart bir isteğin on katından fazla."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p4",
+      "title": "Baskı altındaki elektrik şebekeleri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Santrallerden evlere ve işyerlerine akımı taşıyan hat ağına [[elektrik şebekesi]] denir. Büyük yapay zekâ tesisleri de aynı şebekeye bağlanır. Bir fikir vermek için IEA, esas olarak bu hizmetleri çalıştırmak için kurulmuş, yapay zekâya ayrılmış bir veri merkezinin yıllık tüketimini yaklaşık **100.000 hanenin** tüketimiyle karşılaştırıyor."
+        },
+        {
+          "type": "image",
+          "asset": "high_voltage_power_lines_data_center_virginia",
+          "ratio": "4:3",
+          "caption": "Çok yüksek gerilim hattı direkleri (750 kV): veri merkezleri de aynı şebekeye bağlanıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu tesisler aynı yerlerde kümelenme eğilimi de gösteriyor. Birkaç büyük tesis aynı bölgede akım talep edince yerel şebekeyi paylaşırlar ve mevcut hatların güçlendirilmesi gerekebilir. Yedek kapasitesi olan bir bölge, sınırlarına zaten yaklaşmış bir bölgeye göre yeni tesisleri daha kolay kabul eder. Yani yapay zekâ altyapısının nereye kurulduğu, komşuları için bir şey değiştirir."
+        },
+        {
+          "type": "takeaway",
+          "text": "Yapay zekânın elektriği, soğutulması gereken sunuculardan yerel şebekeye kadar birkaç katmanda harcanıyor. Bir isteğin maliyeti de sisteme, ölçüm biçimine ve istenen işe bağlı."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "International Energy Agency (IEA), Key Questions on Energy and AI, 2026, p. 9 et 17."
+    },
+    {
+      "text": "International Energy Agency (IEA), Energy and AI, 2025, p. 13, 38 et 52."
+    },
+    {
+      "text": "Shehabi et al., 2024 United States Data Center Energy Usage Report, Lawrence Berkeley National Laboratory, 2024, p. 22-23."
+    },
+    {
+      "text": "Oviedo et al., Joule, 2026, p. 1.",
+      "url": "https://doi.org/10.1016/j.joule.2026.102430"
+    },
+    {
+      "text": "Elsworth et al., Measuring the Environmental Impact of Delivering AI at Google Scale, Google, 2025, p. 7."
+    }
+  ]
+}

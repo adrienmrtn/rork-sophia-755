@@ -1,0 +1,147 @@
+{
+  "id": "course_245_d_ou_vient_le_pere_noel",
+  "title": "¿De dónde viene Papá Noel?",
+  "subtitle": "Dieciséis siglos de leyenda",
+  "subject": "mythologie",
+  "subcategory": "Leyendas y criaturas",
+  "description": "Un obispo griego del siglo III, un jinete holandés, un poema neoyorquino, un dibujante de prensa y una campaña publicitaria. Papá Noel no nació: lo armaron pieza a pieza.",
+  "author": "angela-bouma",
+  "hero": {
+    "image": "santa_claus_thomas_nast_1881_harpers_weekly",
+    "ratio": "4:3",
+    "hook": "No nació. Lo construyeron, pieza a pieza, durante dieciséis siglos."
+  },
+  "sections": [
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un obispo griego, un benefactor pagano y una ilustración publicitaria se mezclan para dar vida a Papá Noel. Todo empieza con [[Nicolás de Mira]], nacido en **270**, un obispo que reparte su fortuna personal entre quienes más la necesitan. Se convierte en el [[santo patrón]] de los niños y de los marineros."
+        },
+        {
+          "type": "paragraph",
+          "text": "Durante los **1.600 años** siguientes, la leyenda toma forma. Las fiestas de pleno invierno, en el norte de Europa, reúnen a las familias en torno a un banquete. Un trineo, **ocho renos**, una bajada por la chimenea: un poema fija la manera de esperar la temporada. Luego una campaña publicitaria envuelve la leyenda como un producto. El resultado es el Papá Noel que todo el mundo conoce."
+        }
+      ]
+    },
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_p1",
+      "title": "Sinterklaas se encuentra con Father Christmas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En los Países Bajos, [[Sinterklaas]] recorre las ciudades sobre un **caballo blanco**, con mitra, vestido de rojo y un báculo en la mano. Los niños dejan sus zapatos fuera, con zanahorias y heno para su montura. La tradición pasa a América, donde Sinterklaas se convierte poco a poco en **Santa Claus**."
+        },
+        {
+          "type": "image",
+          "asset": "sinterklaas_white_horse_arrival_netherlands",
+          "ratio": "3:2",
+          "caption": "Sinterklaas sobre su caballo blanco, con mitra y capa pluvial rojas, a su llegada a una ciudad neerlandesa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Los ingleses tienen su propio visitante de invierno. Vestido de pieles y siempre alegre, [[Father Christmas]] trae el banquete. Encarna la alegría y los festejos de la temporada, y aparece al menos desde el **siglo XV**. En esta versión no tiene ningún regalo para los niños. Los colonos ingleses lo llevan a América, donde se instala junto a Sinterklaas."
+        }
+      ]
+    },
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_p2",
+      "title": "Un poema y un dibujante",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1823**, un poema publicado de forma anónima en el estado de Nueva York, *A Visit from St. Nicholas* (“Una visita de san Nicolás”), le da a Santa Claus su forma más reconocible: un trineo, ocho renos y la idea de que baja por la chimenea, en una noche de nieve, para dejar regalos. Se atribuye a [[Clement Clarke Moore]], pero la autoría todavía se discute."
+        },
+        {
+          "type": "image",
+          "asset": "a_visit_from_st_nicholas_troy_sentinel_1823",
+          "ratio": "3:2",
+          "caption": "Un Santa Claus vestido de pieles, como en el poema de 1823: fotografía tomada en el estado de Nueva York hacia 1872."
+        },
+        {
+          "type": "paragraph",
+          "text": "A partir de **1863**, el dibujante [[Thomas Nast]] completa el retrato en sus ilustraciones para el periódico *Harper's Weekly*. Le da su barriga redonda, su barba blanca y su taller en el **Polo Norte**. Para dibujar al Santa Claus actual, Nast se inspira a la vez en Sinterklaas y en Father Christmas."
+        }
+      ]
+    },
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_p3",
+      "title": "Coca-Cola fija la imagen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A partir de **1931**, las campañas publicitarias ilustradas de Coca-Cola, obra del artista [[Haddon Sundblom]], imponen al Santa cálido y bonachón, de aire de abuelo, que hoy reconocemos: barba blanca, barriga grande, cinturón y tirantes. La empresa no inventa a Papá Noel. Ayuda a fijar su imagen, la misma en todas partes, año tras año."
+        },
+        {
+          "type": "funFact",
+          "text": "El traje rojo no es una idea de Coca-Cola. Thomas Nast ya dibujaba a Santa Claus de rojo, mucho antes de la primera campaña de la marca."
+        },
+        {
+          "type": "image",
+          "asset": "department_store_santa_claus_children_1940s",
+          "ratio": "4:3",
+          "caption": "Un Papá Noel de los grandes almacenes Eaton, en Montreal, rodeado de niños, a mediados del siglo XX."
+        },
+        {
+          "type": "paragraph",
+          "text": "A mediados del **siglo XX**, grandes almacenes, programas de radio y películas reúnen las herencias de Sinterklaas, del Father Christmas inglés y de los dibujos de Nast. El resultado es un personaje único y mundial, con nombres distintos según el país, pero reconocible en todas partes a primera vista."
+        }
+      ]
+    },
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_p4",
+      "title": "Una leyenda escrita a muchas manos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La historia de Santa no tiene nada de excepcional. Las fiestas y los héroes populares se fabrican del mismo modo. A través del **comercio** y del contacto con otros grupos, las ideas viajan y se transforman. Una tradición religiosa se cuela en una fiesta estacional más antigua. La generación siguiente añade su propia versión, adaptada a sus necesidades."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "270",
+              "title": "Nace Nicolás de Mira",
+              "detail": "El obispo que regala su fortuna se convierte en santo patrón de los niños."
+            },
+            {
+              "date": "Siglo XV",
+              "title": "Father Christmas",
+              "detail": "El visitante de invierno inglés trae el banquete, no los regalos."
+            },
+            {
+              "date": "1823",
+              "title": "A Visit from St. Nicholas",
+              "detail": "Trineo, ocho renos y chimenea."
+            },
+            {
+              "date": "1863",
+              "title": "Thomas Nast",
+              "detail": "Barriga redonda, barba blanca, taller en el Polo Norte."
+            },
+            {
+              "date": "1931",
+              "title": "Coca-Cola",
+              "detail": "Haddon Sundblom fija al abuelo vestido de rojo."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada nuevo encuentro entre culturas enriquece el relato y cambia el rostro de sus personajes. Ninguna civilización es dueña de estas figuras: pertenecen a la cultura humana en su conjunto. Santa Claus celebra lo que ocurre, a lo largo de **1.600 años**, cuando los pueblos se encuentran y comparten una fiesta."
+        },
+        {
+          "type": "takeaway",
+          "text": "Obispo griego, jinete holandés, juerguista inglés, poema, dibujos de prensa y publicidad: Papá Noel es una leyenda escrita a muchas manos durante dieciséis siglos."
+        }
+      ]
+    }
+  ]
+}

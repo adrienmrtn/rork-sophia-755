@@ -1,0 +1,128 @@
+{
+  "id": "course_281_comment_meurt_une_etoile",
+  "title": "Como uma estrela morre?",
+  "subtitle": "Gigante vermelha ou supernova",
+  "subject": "sciences",
+  "subcategory": "A Terra e o Universo",
+  "description": "Por bilhões de anos, uma estrela se equilibra entre a gravidade e a fusão no seu núcleo. Quando o combustível acaba, ela incha, desaba ou explode, e seu fim depende de uma coisa só: a massa.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "crab_nebula_supernova_remnant_hubble",
+    "ratio": "4:3",
+    "hook": "Uma estrela pode se apagar suavemente ou explodir com uma violência inimaginável: tudo depende da sua massa."
+  },
+  "sections": [
+    {
+      "id": "course_281_comment_meurt_une_etoile_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O que faz uma estrela morrer? Ela começa a morrer quando não consegue mais resistir à própria gravidade. Durante quase toda a vida, a gravidade puxa sua matéria para o centro. Ao mesmo tempo, a energia produzida no núcleo cria uma pressão que empurra para fora. Os dois efeitos se compensam, e a estrela continua estável."
+        },
+        {
+          "type": "paragraph",
+          "text": "Essa energia vem da [[fusão nuclear]]: núcleos de hidrogênio se juntam para formar hélio e liberam uma energia colossal. O equilíbrio pode durar milhões, bilhões ou até trilhões de anos. Tudo depende da massa. As estrelas pequenas gastam seu combustível devagar, e as estrelas massivas o queimam muito mais rápido. Um dia, o equilíbrio se rompe. O que vem depois depende da massa da estrela."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p1",
+      "title": "A estrela incha e vira gigante vermelha",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Durante a maior parte da vida, a estrela transforma em hélio o hidrogênio do seu núcleo, a região central. Quando esse hidrogênio começa a faltar, a fusão desacelera no centro. O núcleo se contrai e fica mais quente. Em volta dele, uma camada de hidrogênio continua a se fundir e a liberar energia. Com esse empurrão, as camadas externas da estrela incham enormemente."
+        },
+        {
+          "type": "paragraph",
+          "text": "O resultado é uma [[gigante vermelha]]: uma estrela muito maior do que antes, com a superfície mais fria. Ou seja, uma estrela que morre começa crescendo, em vez de se apagar devagar. O Sol deve entrar nessa fase daqui a cerca de **5 bilhões de anos**."
+        },
+        {
+          "type": "funFact",
+          "text": "Quando virar gigante vermelha, o Sol poderá crescer a ponto de engolir Mercúrio e Vênus. O destino exato da Terra continua incerto."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p2",
+      "title": "Uma anã branca do tamanho da Terra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uma estrela como o Sol não pode inchar para sempre. Ao envelhecer, ela perde as camadas externas, que escapam para o espaço. Esse gás se espalha e forma uma nuvem luminosa, uma [[nebulosa planetária]]. No centro fica uma [[anã branca]]: o núcleo quente e denso da estrela, exposto depois que as camadas externas se foram."
+        },
+        {
+          "type": "image",
+          "asset": "helix_nebula_planetary_nebula_white_dwarf_hubble",
+          "ratio": "1:1",
+          "caption": "A Nebulosa da Hélice: o gás expelido por uma estrela moribunda, com a anã branca visível no centro."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uma anã branca não é maior que a **Terra**, mas ainda contém boa parte da massa da estrela original. A fusão parou ali dentro: ela não produz mais energia. Se brilha, é só porque ainda está extremamente quente. Ao longo de um tempo imenso, ela esfria e empalidece pouco a pouco."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p3",
+      "title": "Supernova, estrela de nêutrons ou buraco negro",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uma estrela muito mais massiva não para por aí. Ela continua juntando elementos leves em elementos mais pesados: o hélio vira carbono, e reações mais intensas criam elementos ainda mais pesados. Aos poucos se forma um núcleo rico em **ferro**. Só que, com o ferro, a fusão não fornece mais a energia necessária para sustentar a estrela contra a gravidade. O núcleo desaba num instante."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esse colapso pode desencadear uma [[supernova]], uma explosão gigantesca que lança boa parte da estrela no espaço. O núcleo colapsado, porém, fica. Se não for massivo demais, vira uma [[estrela de nêutrons]], um objeto de densidade extrema, não maior que uma cidade. Se for massivo o bastante, a gravidade continua a esmagá-lo até formar um [[buraco negro]], onde a atração é tão forte que nem a luz escapa."
+        },
+        {
+          "type": "image",
+          "asset": "m87_black_hole_event_horizon_telescope_2019",
+          "ratio": "16:9",
+          "caption": "O buraco negro de M87: a primeira imagem, de 2019 (à esquerda), e sua versão refinada pelo algoritmo PRIMO (2023)."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p4",
+      "title": "Somos poeira de estrelas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uma estrela que morre não desaparece. Ela devolve ao espaço parte da sua matéria, carregada dos elementos fabricados durante a vida. Com o tempo, essa matéria pode entrar na composição de novas estrelas, de planetas e de outros mundos."
+        },
+        {
+          "type": "image",
+          "asset": "pillars_of_creation_eagle_nebula_jwst_2022",
+          "ratio": "2:3",
+          "caption": "Os Pilares da Criação, vistos pelo telescópio James Webb em 2022: ali nascem novas estrelas."
+        },
+        {
+          "type": "paragraph",
+          "text": "O **carbono** é o melhor exemplo. Ele é indispensável à vida na Terra, inclusive no nosso corpo. E a maior parte desse carbono foi fabricada em gerações de estrelas que já desapareceram. É por isso que às vezes se diz que somos feitos de poeira de estrelas. A frase é poética, mas a ciência por trás dela é bem real. A morte de uma estrela é, portanto, também um começo: sua matéria talvez forme um dia outra estrela, outro planeta ou até um mundo vivo."
+        },
+        {
+          "type": "takeaway",
+          "text": "Sem fusão, uma estrela cede à gravidade: as pequenas se apagam como anãs brancas, as massivas explodem como supernovas e deixam uma estrela de nêutrons ou um buraco negro, e sua matéria espalhada alimenta as estrelas, os planetas e os seres vivos do futuro."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, p. 541."
+    },
+    {
+      "text": "NASA Science, « Types of Stars: White Dwarfs »."
+    },
+    {
+      "text": "S. Frazier, « Why the Sun Won't Become a Black Hole », NASA Goddard Space Flight Center, 2019."
+    }
+  ]
+}

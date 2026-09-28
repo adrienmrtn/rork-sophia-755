@@ -1,0 +1,135 @@
+{
+  "id": "course_242_pourquoi_a_t_on_le_hoquet",
+  "title": "Skąd się bierze czkawka?",
+  "subtitle": "Odruchy i oddychanie",
+  "subject": "sciences",
+  "subcategory": "Codzienność bez tajemnic",
+  "description": "Skurcz przepony, trzask głośni i to „hik”, którego nie da się powstrzymać. Co naprawdę robi wtedy ciało i dlaczego żaden sposób na czkawkę nie ma dowodów.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "child_hiccups_surprised_hand_over_mouth",
+    "ratio": "4:3",
+    "hook": "Każą ci wstrzymać oddech, pić do góry nogami albo ktoś próbuje cię przestraszyć. Ale co tak naprawdę dzieje się w twoim ciele?"
+  },
+  "sections": [
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Czkawkę ma każdy, od niemowlęcia po dziadka, i każdy zna niezawodny sposób, żeby ją przegonić. Sąsiad przysięga na szklankę wody wypitą od drugiej strony, babcia na łyżeczkę cukru. A jednak czkawka wciąż jest jednym z najbardziej zagadkowych odruchów ludzkiego ciała."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za tym małym „hik” kryje się precyzyjny mechanizm: nerwy, mięsień, który kurczy się bez ostrzeżenia, i drzwiczki, które trzaskają w gardle. Oto co medycyna o tym wie, a czego wciąż nie wie."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+      "title": "Odruch, który omija mózg",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za czkawkę odpowiada [[łuk odruchowy]], czyli obwód nerwowy wywołujący reakcję bez świadomej decyzji. Ten sam mechanizm sprawia, że noga podskakuje, gdy lekarz stuknie cię pod kolanem, albo że cofasz rękę z gorącej płyty, zanim jeszcze poczujesz ból."
+        },
+        {
+          "type": "image",
+          "asset": "mouse_diaphragm_muscle_fibres_microscopy",
+          "ratio": "auto",
+          "caption": "Przepona pod mikroskopem: mięsień poprzecznie prążkowany, taki sam jak mięśnie rąk i nóg."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gdy nerwy łączące mózg z mięśniami oddechowymi zostaną podrażnione, [[przepona]] nagle się kurczy. Powietrze wpada do płuc. Ułamek sekundy później [[głośnia]], czyli szpara między strunami głosowymi, gwałtownie się zamyka. To właśnie ten trzask daje „hik”."
+        },
+        {
+          "type": "funFact",
+          "text": "Naukowa nazwa czkawki to *singultus*, łacińskie słowo, które oznacza też szloch. Nic więc dziwnego, że dzieci po długim płaczu często dostają czkawki."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+      "title": "Od płodu do dziadka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Większość przypadków czkawki to czkawka **przemijająca**: trwa krócej niż **48 godzin** i znika sama. Wywołują ją zwykłe rzeczy: zbyt szybkie jedzenie, napoje gazowane, połykanie powietrza albo alkohol. Wszystko, co rozciąga żołądek lub drażni pobliskie nerwy, może uruchomić odruch."
+        },
+        {
+          "type": "image",
+          "asset": "fetal_ultrasound_scan_pregnancy",
+          "ratio": "2:1",
+          "caption": "Na USG widać, że płód ma czkawkę, na długo przed pierwszym oddechem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Czkawkę mamy w każdym wieku, a nawet przed narodzinami. Badania USG pokazują płody, które czkają w brzuchu matki. A przecież nie jedzą za szybko. Jedna z hipotez mówi, że te skurcze ćwiczą mięśnie oddechowe, jak próba generalna przed pierwszym haustem powietrza."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+      "title": "Gdy czkawka nie mija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Czasem czkawka zostaje na dłużej. Gdy trwa ponad **dwa dni**, lekarze nazywają ją **przetrwałą**, a gdy ponad **miesiąc**, to już [[czkawka oporna]]. Te rzadkie postaci często zdradzają coś innego: chorobę żołądka lub przełyku, kłopot z płucami albo uszkodzenie ośrodkowego układu nerwowego."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wtedy lekarz szuka przyczyny i zaleca leczenie, czasem leki, które wyciszają obwód odruchowy. Czkawka nie jest już chwilową uciążliwością, tylko objawem, który nie pozwala jeść, spać ani mówić."
+        },
+        {
+          "type": "funFact",
+          "text": "Rekord najdłuższej czkawki należy do amerykańskiego farmera. Był nim [[Charles Osborne]], który czkał bez przerwy od **1922 do 1990** roku, czyli 68 lat, jak podaje Księga rekordów Guinnessa. Zdążył mimo to dwa razy się ożenić i doczekać się ośmiorga dzieci."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+      "title": "Dziesiątki sposobów, żaden sprawdzony",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dobra wiadomość o przemijającej czkawce jest taka, że znika sama. Gorsza: żadnego domowego sposobu nie potwierdziło rzetelne badanie. Wstrzymywanie oddechu, picie zimnej wody, ciągnięcie za język, oddychanie do torebki... Wszystko to opiera się na relacjach, a nie na dowodach."
+        },
+        {
+          "type": "image",
+          "asset": "glass_of_cold_water_home_remedy_hiccups",
+          "ratio": "3:2",
+          "caption": "Szklanka zimnej wody: najpopularniejszy sposób i jeden z najsłabiej zbadanych."
+        },
+        {
+          "type": "paragraph",
+          "text": "Te triki łączy jednak wspólna logika: zaburzają obwód odruchowy. Wstrzymanie oddechu podnosi poziom dwutlenku węgla we krwi i uspokaja przeponę. Przełykanie albo wyciąganie języka pobudza nerwy gardła i może „zresetować” obwód. Czasem to działa. Nikt nie wie dokładnie dlaczego."
+        },
+        {
+          "type": "takeaway",
+          "text": "Czkawka to odruch: przepona się kurczy, głośnia się zamyka, „hik”. Niemal zawsze mija sama, a po 48 godzinach staje się objawem. Żaden domowy sposób nie ma dowodów, choć wszystkie próbują przerwać obwód."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Alimentary Pharmacology & Therapeutics (Wiley), revue sur la physiopathologie et le traitement du hoquet.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.13374"
+    },
+    {
+      "text": "Cleveland Clinic, « Hiccups ».",
+      "url": "https://my.clevelandclinic.org/health/diseases/17672-hiccups"
+    },
+    {
+      "text": "Guinness World Records, « Longest attack of hiccups ».",
+      "url": "https://www.guinnessworldrecords.com/world-records/67619-longest-attack-of-hiccups"
+    }
+  ]
+}

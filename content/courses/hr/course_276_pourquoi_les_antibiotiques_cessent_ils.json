@@ -1,0 +1,171 @@
+{
+  "id": "course_276_pourquoi_les_antibiotiques_cessent_ils",
+  "title": "Zašto antibiotici prestaju djelovati?",
+  "subtitle": "Bakterije uzvraćaju udarac",
+  "subject": "sciences",
+  "subcategory": "Svakodnevica pod povećalom",
+  "description": "Angina, upala mokraćnog sustava, rutinski zahvat: bez djelotvornih antibiotika sve to ponovno postaje opasno. A pretjeranom uporabom učimo bakterije kako da ih prežive.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "antibiogram_petri_dish_inhibition_zones",
+    "ratio": "4:3",
+    "hook": "Boreći se protiv bakterija, istrenirali smo ih da prežive naše lijekove."
+  },
+  "sections": [
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kad bakterije prodru u naše tijelo, imunosni sustav uzvraća: **bijele krvne stanice** napadaju infekciju i ubrzo nam je bolje. No ako je obrana oslabljena ili preopterećena, potrebno je pojačanje: antibiotici. Ako je antibiotik [[baktericidan]], uništava bakteriju napadajući njezinu stijenku i sadržaj; bakteriostatski je samo sprječava da se razmnožava."
+        },
+        {
+          "type": "funFact",
+          "text": "Antibiotik nije moderan izum: tragovi pokazuju da su ih ljudi koristili već prije više od 1.500 godina, a da o bakterijama nisu znali ništa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ovisno o infekciji, liječnik bira antibiotik **širokog spektra**, djelotvoran protiv mnogih vrsta, ili uskog spektra, namijenjen samo nekolicini. Djelotvorni, jeftini i lako dostupni, ti lijekovi pokrivaju golem raspon infekcija. Upravo je taj uspjeh naveo suvremeni svijet da ih zlorabi. A bakterije su počele uzvraćati."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p1",
+      "title": "Kako bakterije uče biti otporne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Antibiotici su među najvećim dostignućima suvremene medicine. Spasili su bezbrojne živote i o njima ovisimo. No njihova masovna uporaba stvorila je problem: [[otpornost na antibiotike]]. Antibiotici koji su nekoć ubijali bakteriju ili zaustavljali njezin rast više ne djeluju. Bakterija se razvila tako da nadmudri liječenje."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Alexander Fleming, otkrivač penicilina, u svom laboratoriju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evolucija je prirodan proces, a pritisci iz okoline ubrzavaju ga. Neprestano liječiti bakterije molekulama stvorenima da ih ubiju znači odabirati one koje znaju preživjeti. Njihove su obrane raznolike: genetske **mutacije**, enzimi koji razgrađuju antibiotik, promjene u načinu funkcioniranja, pa čak i sićušne [[efluksne pumpe]] koje izbacuju lijek iz stanice."
+        },
+        {
+          "type": "paragraph",
+          "text": "Te su obrane upisane u gene. Kad se otporna bakterija podijeli, prenosi ih na svoje potomke, a oni ih prenose dalje. Jedna jedina preživjela bakterija može utemeljiti cijelu lozu otpornih. Tako se otpornost širi."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p2",
+      "title": "Geni koji putuju: slučaj MRSA-e",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Otporna bakterija putuje kao i svaki drugi mikrob. Pandemija **covida** pokazala je kojom brzinom virus prelazi s osobe na osobu, pa iz zemlje u zemlju. Bakterije se šire na isti način: ljudskim dodirom, u pogodnim sredinama, zbog loše higijene ili sa životinja na ljude."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uz to imaju i prečac: [[horizontalni prijenos gena]]. Otporna bakterija može svoje gene otpornosti izravno predati susjednoj, ne čekajući diobu. U vrlo kratkom vremenu nastaje cijela populacija otpornih bakterija."
+        },
+        {
+          "type": "image",
+          "asset": "mrsa_staphylococcus_aureus_electron_micrograph_cdc",
+          "ratio": "5:4",
+          "caption": "Nakupine zlatnog stafilokoka otpornog na meticilin pod elektronskim mikroskopom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najpoznatija je bakterija [[MRSA]], zlatni stafilokok otporan na meticilin. Odolijeva mnogim uobičajenim antibioticima, pa je dobila nadimak „superbakterija”. Masovna uporaba antibiotika uklonila je osjetljive sojeve i otvorila put onima koji su, poput nje, naučili odolijevati. Posljedice mogu biti smrtonosne."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p3",
+      "title": "1,27 milijuna mrtvih godišnje: upozorenje SZO-a",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Što ta otpornost znači za nas? [[SZO]], Svjetska zdravstvena organizacija, svrstava otpornost na antimikrobne lijekove, one koji se bore protiv mikroba, uključujući antibiotike, među **tri** najveće prijetnje javnom zdravlju u svijetu. Sa sve manje lijekova djelotvornih protiv bakterijskih infekcija, cijela suvremena medicina gubi tlo pod nogama."
+        },
+        {
+          "type": "paragraph",
+          "text": "Brojke pokazuju razmjere opasnosti. Samo u 2019. godini otpornosti na antimikrobne lijekove pripisano je **1,27 milijuna** smrti u svijetu. A krivulja i dalje raste: projekcije predviđaju **10 milijuna** mrtvih godišnje do **2050**. godine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Znanstvenici ne sjede skrštenih ruku. Razvijaju nove, preciznije terapije usmjerene na otporne bakterije. Nastoje i vratiti djelotvornost postojećim antibioticima te smanjiti nepotrebno propisivanje: svako izbjegnuto liječenje jedna je prilika manje da se bakterije prilagode."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p4",
+      "title": "Svijet bez djelotvornih antibiotika",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Antibiotike gutamo ne razmišljajući. Jeftini su, djelotvorni i dostupni posvuda. Bez njih bi se obična infekcija, bakterijska **angina** ili upala mokraćnog sustava, mnogo teže liječila. Obična ogrebotina na koljenu mogla bi završiti tako da nastupi [[sepsa]], generalizirana infekcija opasna po život."
+        },
+        {
+          "type": "image",
+          "asset": "hospital_operating_room_surgery_team",
+          "ratio": "3:2",
+          "caption": "Suvremena operacijska dvorana: bez antibiotika rutinski bi zahvati ponovno postali rizični."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uobičajeni zahvati, poput **carskog reza** ili ugradnje proteze kuka, nosili bi mnogo veći rizik. Antibiotici se, naime, često propisuju nakon operacije kako bi se spriječila infekcija. Bez njih bi zahvati koji spašavaju ili poboljšavaju živote postali preopasni da bi se izvodili."
+        },
+        {
+          "type": "takeaway",
+          "text": "Budućnost suvremene medicine ovisi o jednom: da antibiotici ostanu djelotvorni, a to znači da ih prestanemo zlorabiti."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Medical News Today, « Antibiotics: How they work, uses, side effects and how to use ».",
+      "url": "https://www.medicalnewstoday.com/articles/10278"
+    },
+    {
+      "text": "Wikipedia, « Antibiotic ».",
+      "url": "https://en.wikipedia.org/wiki/Antibiotic"
+    },
+    {
+      "text": "B. K. Nimmana et A. D. Nguyen, « Antibiotic Resistance », StatPearls, StatPearls Publishing, Treasure Island (FL), 2026.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513277/"
+    },
+    {
+      "text": "H. Endale, M. Mathewos et D. Abdeta, « Potential Causes of Spread of Antimicrobial Resistance and Preventive Measures in One Health Perspective: A Review », Infection and Drug Resistance, vol. 16, 2023, p. 7515-7545.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10715026/"
+    },
+    {
+      "text": "American Society for Microbiology, « Plasmids and the Spread of Antibiotic Resistance Genes », janvier 2023.",
+      "url": "https://asm.org/articles/2023/january/plasmids-and-the-spread-of-antibiotic-resistance-g"
+    },
+    {
+      "text": "M. A. Salam, M. Y. Al-Amin, M. T. Salam, J. S. Pawar et al., « Antimicrobial Resistance: A Growing Serious Threat for Global Public Health », Healthcare, vol. 11, n° 13, 2023, art. 1946.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10340576/"
+    },
+    {
+      "text": "Wikipedia, « Methicillin-resistant Staphylococcus aureus ».",
+      "url": "https://en.wikipedia.org/wiki/Methicillin-resistant_Staphylococcus_aureus"
+    },
+    {
+      "text": "S. Rugarabamu et G. Mwanyika, « Biotechnological Innovations to Combat Antimicrobial Resistance and Advance Global Health Equity », Bacteria, vol. 4, n° 3, 2025, art. 46.",
+      "url": "https://www.mdpi.com/2674-1334/4/3/46"
+    },
+    {
+      "text": "A. Nazir, A. Nazir, V. Zuhair, S. Aman et al., « The Global Challenge of Antimicrobial Resistance: Mechanisms, Case Studies, and Mitigation Approaches », Health Science Reports, vol. 8, n° 7, 2025, e71077.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12284435/"
+    },
+    {
+      "text": "ITN Business, « Antimicrobial resistance: understanding its global impact ».",
+      "url": "https://business.itn.co.uk/antimicrobial-resistance-understanding-its-global-impact/"
+    }
+  ]
+}

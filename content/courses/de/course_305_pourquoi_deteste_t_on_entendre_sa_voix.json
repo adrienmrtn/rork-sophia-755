@@ -1,0 +1,121 @@
+{
+  "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix",
+  "title": "Warum hassen wir unsere eigene Stimme auf Aufnahmen?",
+  "subtitle": "Der Klang des Ichs",
+  "subject": "sciences",
+  "subcategory": "Unser Alltag erklärt",
+  "description": "Auf einer Aufnahme klingt deine Stimme fremd, fast peinlich. Schuld ist nicht das Mikrofon, sondern dein Schädel und die Art, wie dein Gehirn sich selbst erkennt.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "studio_microphone_headphones_voice_recording",
+    "ratio": "4:3",
+    "hook": "Videos von Freunden stören dich nicht. Aber deine eigene Stimme in einer Sprachnachricht lässt dich das Gesicht verziehen. Warum klingt ausgerechnet sie falsch?"
+  },
+  "sections": [
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Was ist das “Ich”? Philosophen, Wissenschaftler und Künstler stellen sich diese Frage seit Jahrhunderten. Um es zu erforschen, nutzen Forscher oft das Bild des Gesichts, das jeder auf den ersten Blick erkennt. Doch die Stimme zählt genauso viel für das Gefühl, man selbst zu sein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Daher das Paradox. Videos von Freunden oder Familie schaut man sich mühelos an. Dann kommt eine Sprachnachricht, die man selbst aufgenommen hat, und man zuckt zurück: Diese Stimme ist nicht meine. Doch, sie ist es. Um das zu verstehen, muss man dem Weg des Schalls folgen."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p1",
+      "title": "Sprechen und Hören: schwingende Luft",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sprechen beginnt mit einem Luftstoß. Das Zwerchfell drückt Luft aus der Lunge hinauf in den Hals. Sie strömt durch die [[Stimmbänder]] und versetzt sie in schnelle Schwingungen: Diese mehr oder weniger hohen Schwingungen steigen den Hals hinauf. Mund und Zunge formen sie dann zu Lauten und Wörtern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hören ist der umgekehrte Weg. Die meisten Geräusche erreichen uns über [[Luftleitung]]: Die Schallwellen wandern durch den Gehörgang und bringen das Trommelfell zum Schwingen, das diese Schwingungen an die winzigen Knochen des Mittelohrs weitergibt. Verstärkt erreichen sie die [[Hörschnecke]] im Innenohr, wo sich Tausende Haarzellen mit ihren [[Stereozilien]] biegen und ein elektrisches Signal erzeugen. Der Hörnerv trägt es zum Gehirn, das es erkennt und einordnet."
+        },
+        {
+          "type": "image",
+          "asset": "cochlea_stereocilia_hair_cells_electron_micrograph",
+          "ratio": "4:5",
+          "caption": "Hörschnecken von Mäusen unter dem Elektronenmikroskop, normal (links) und mutiert: die Reihen der Haarzellen mit ihren Stereozilien."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p2",
+      "title": "Sich über die Knochen hören",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hört man eine Aufnahme von sich selbst, kommt alles über die Luftleitung an, wie bei jedem anderen Geräusch. Beim Sprechen dagegen kommt ein zweiter Kanal hinzu: die [[Knochenleitung]]. Die mechanischen Schwingungen der Stimme breiten sich direkt über die Schädelknochen bis ins Innenohr aus, ohne Umweg über Trommelfell und Mittelohr."
+        },
+        {
+          "type": "image",
+          "asset": "tuning_fork_weber_test_bone_conduction_skull",
+          "ratio": "3:4",
+          "caption": "Eine Stimmgabel am Schädel bei einem Hörtest: Der Schall läuft über den Knochen, nicht durch die Luft."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Hörschnecke empfängt also zwei Signale zugleich, eines aus der Luft und eines aus den Knochen, und verwandelt beide in Botschaften für das Gehirn. In Echtzeit ist deine Stimme ein reicherer, vielschichtigerer Klang, als ein Mikrofon ihn einfangen kann. Die Aufnahme gibt nur einen Teil davon wieder."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p3",
+      "title": "Das Uncanny Valley",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bleibt das Unbehagen zu erklären. Eine endgültige Antwort haben die Forscher noch nicht, aber eine Spur ist verlockend: der Effekt des [[Uncanny Valley]], des “unheimlichen Tals”. Die Idee stammt aus Robotik und Animation. Je mehr ein künstliches Wesen einem Menschen ähnelt, desto vertrauter und sympathischer wirkt es auf uns. Bis zu einem gewissen Punkt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wird die Nachahmung sehr ähnlich, ohne perfekt zu sein, schlägt die Sympathie in Unbehagen um, ja in Abscheu. Eine Aufnahme liefert aber nur den Luftanteil unserer Stimme, ohne den Reichtum der Knochenleitung. Wir hören das Wesentliche, aber nicht alles. Das Gehirn landet im Uncanny Valley: Das bin fast “ich”, aber eben nicht ganz."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p4",
+      "title": "Eine Stimme, tausend Versionen von uns",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Uncanny Valley erklärt nicht alles. Eine Aufnahme zeigt auch nur eine einzige Seite davon, wie man sich anderen gegenüber gibt. Denn die Stimme ist nicht festgelegt: Man passt sie ständig dem Zusammenhang an, oft ohne es zu merken, und das Selbstgefühl baut auf all diesen Varianten zugleich auf."
+        },
+        {
+          "type": "funFact",
+          "text": "Im Beruf senkt man gern die Stimme, um gelassener zu wirken. Vor einem Baby oder einem Haustier klettert sie in die Höhe. Mund, Zunge und Lippen stellen sich um, und mit ihnen die Version des “Ichs”, die man hören lässt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Wahrnehmung des Selbst ist also ein kunstvolles Gebilde aus Dutzenden verschiedener Stimmen. Das Gehirn hat kein einziges Muster, mit dem es die Aufnahme vergleichen könnte. Was es hört, kommt aus dem Mikrofon, ohne Weg über die Knochen, erstarrt in einer einzigen Tonlage: ähnlich genug, um erkannt zu werden, zu fremd, um angenommen zu werden."
+        },
+        {
+          "type": "takeaway",
+          "text": "Deine aufgenommene Stimme klingt falsch, weil ihr die Knochenleitung fehlt, die dein Schädel beim Sprechen hinzufügt, und weil sie nur eine von tausend Versionen von dir festhält: ähnlich genug, um erkannt zu werden, nicht ähnlich genug, um akzeptiert zu werden."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "M. Kimura et Y. Yotsumoto, « Auditory traits of \"own voice\" », PLOS ONE, vol. 13, n° 6, 2018, e0199443.",
+      "url": "https://doi.org/10.1371/journal.pone.0199443"
+    },
+    {
+      "text": "NIDCD (National Institute on Deafness and Other Communication Disorders), « How Do We Hear? ».",
+      "url": "https://www.nidcd.nih.gov/health/how-do-we-hear"
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "id": "course_278_pourquoi_les_accords_climatiques_sont",
+  "title": "¿Por qué se cumplen tan poco los acuerdos climáticos?",
+  "subtitle": "De Kioto a París",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Medio ambiente y futuro",
+  "description": "Kioto imponía objetivos obligatorios y París apostó por promesas voluntarias: en ambos casos, grandes emisores se echaron atrás. ¿Por qué los Estados que reconocen el peligro no logran cumplir sus compromisos?",
+  "author": "mark-n-hoffman",
+  "hero": {
+    "image": "cop21_paris_agreement_adoption_2015_fabius_gavel",
+    "ratio": "4:3",
+    "hook": "Los Estados firman, aplauden y luego se retiran: ningún tribunal puede obligar a un país a cumplir su promesa climática."
+  },
+  "sections": [
+    {
+      "id": "course_278_pourquoi_les_accords_climatiques_sont_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En el verano de **2022**, el calor extremo mató a unas **38.000 personas** en Europa. Si las emisiones de [[gases de efecto invernadero]] no bajan, el continente podría sumar más de **120.000 muertes** al año de aquí a 2050. En menos de veinticinco años, la subida del mar podría inundar cada año costas enteras y desplazar a cientos de millones de personas, sin contar las cosechas perdidas y las enfermedades causadas por el humo de los incendios y el agua contaminada."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cabría pensar que miles de muertos, casas perdidas y la escasez de agua y alimentos empujarían a los gobiernos a cooperar. Sin embargo, algunos de los mayores emisores se niegan a firmar los acuerdos mundiales sobre el clima. Otros se retiran de ellos, o se quedan lejos de los recortes necesarios para frenar el calentamiento."
+        }
+      ]
+    },
+    {
+      "id": "course_278_pourquoi_les_accords_climatiques_sont_p1",
+      "title": "Kioto, 1997: el precio de cooperar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Algunos gobiernos sí intentaron una respuesta colectiva. En **1997**, el [[Protocolo de Kioto]] fijó objetivos de reducción jurídicamente vinculantes para los países que más habían contribuido al calentamiento. Los países en desarrollo no tenían ningún objetivo obligatorio. Estados Unidos se negó a ratificar el texto: a su juicio, esos países no asumían suficiente parte del coste. Canadá lo ratificó en **2002** y se retiró diez años después."
+        },
+        {
+          "type": "image",
+          "asset": "factory_chimneys_greenhouse_gas_emissions",
+          "ratio": "4:3",
+          "caption": "Reducir emisiones cuesta primero a las industrias más contaminantes, frente a competidoras extranjeras sin ninguna obligación."
+        },
+        {
+          "type": "funFact",
+          "text": "Kioto sí preveía sanciones. Al país que superaba su cuota de emisiones en el primer periodo se le descontaba el exceso de la cuota siguiente. Además, debía presentar un plan para cumplir y podía quedarse sin derecho a vender sus derechos de emisión a otros países."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reducir emisiones impone a las industrias nacionales más contaminantes obligaciones y costes que sus competidoras extranjeras no tienen, mientras que los beneficios llegan también a los países que no hicieron nada. Así que a cada gobierno le conviene esperar a que actúen los demás, aunque el retraso agrave las consecuencias. Es un [[problema de acción colectiva]]. Los negociadores necesitan compromisos que cambien de verdad los comportamientos, pero cuanto más exigen, menos quieren participar los Estados."
+        }
+      ]
+    },
+    {
+      "id": "course_278_pourquoi_les_accords_climatiques_sont_p2",
+      "title": "París, 2015: promesas sin sanciones",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **2015**, el [[Acuerdo de París]] eligió otro camino para atraer a los participantes: cada país fija sus propios objetivos de reducción. Debe presentar un nuevo compromiso cada **cinco años**, actuar en casa para cumplirlo e informar de sus avances. Estos compromisos son jurídicamente vinculantes, pero el comité de seguimiento del acuerdo no tiene ningún poder para sancionar a un país que no cumple sus objetivos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este seguimiento basado en informes propios debía crear confianza y animar a cada uno a cumplir su palabra. Pero no va acompañado de ningún mecanismo para obligar, y cualquier país puede retirarse en cualquier momento. Estados Unidos abandonó por completo el acuerdo en **2026**. La flexibilidad de París sí atrajo a más gobiernos, pero no garantizó que cumplieran sus compromisos a largo plazo."
+        }
+      ]
+    },
+    {
+      "id": "course_278_pourquoi_les_accords_climatiques_sont_p3",
+      "title": "El peso de la política interna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1987**, el [[Protocolo de Montreal]] obligó a los Estados a prohibir una serie de sustancias químicas que destruyen la capa de ozono. Algunos países recibieron ayuda económica para adaptar sus fábricas a productos sustitutos. Esta vez, el compromiso se cumplió."
+        },
+        {
+          "type": "image",
+          "asset": "montreal_protocol_1987_signing_ceremony",
+          "ratio": "4:3",
+          "caption": "La ceremonia de firma del Protocolo de Montreal, en septiembre de 1987."
+        },
+        {
+          "type": "funFact",
+          "text": "En 2023 había desaparecido casi el 99% de las sustancias prohibidas por el Protocolo de Montreal. Si las políticas actuales se mantienen, la capa de ozono debería recuperar su nivel de 1980 hacia 2040 en la mayor parte del planeta, y hacia 2066 sobre la Antártida."
+        },
+        {
+          "type": "paragraph",
+          "text": "Incluso cuando un gobierno se ha fijado un objetivo obligatorio, aplicarlo sigue siendo difícil. Cerrar una mina de carbón, por ejemplo, pone en contra a la empresa que invirtió en ella sumas enormes y a los obreros que pierden su empleo sin tiempo para encontrar otro. Para poner en práctica lo firmado en las cumbres del clima, hay que ganarse el apoyo de estos poderosos grupos de interés."
+        }
+      ]
+    },
+    {
+      "id": "course_278_pourquoi_les_accords_climatiques_sont_p4",
+      "title": "Cooperar en un mundo de rivales",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Los tratados climáticos los negocian gobiernos soberanos, y se espera que cada uno defienda los intereses nacionales en el mercado mundial. Por eso pueden reconocer un problema común y a la vez rechazar las medidas que amenazan a una industria poderosa, al empleo o a un grupo influyente. Los acuerdos hacen posible la cooperación, pero también dejan a la vista la inacción."
+        },
+        {
+          "type": "image",
+          "asset": "garzweiler_lignite_open_pit_mine_germany",
+          "ratio": "2:1",
+          "caption": "La mina de lignito a cielo abierto de Garzweiler, en Renania, Alemania."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hacer cumplir estos acuerdos con más rigor exigiría que los Estados aceptaran límites a su [[soberanía]], es decir, a su poder de decidir solos. El reto va más allá de mejorar los textos: hay que cambiar los incentivos para esperar, y las condiciones en las que un gobierno puede abandonar un compromiso común. En un sistema internacional de Estados nación tan competitivo, es difícil. Pero una cosa está clara: sin una cooperación duradera, la catástrofe ambiental espera al final del camino."
+        },
+        {
+          "type": "takeaway",
+          "text": "De Kioto a París, los acuerdos climáticos fracasan menos por falta de textos que porque a cada Estado soberano, en competencia con los demás, le conviene esperar a que otros paguen el precio del esfuerzo."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "T. M. Beck, D. L. Schumacher, H. Achebak, A. M. Vicedo-Cabrera, S. I. Seneviratne et J. Ballester, « Mortality burden attributed to anthropogenic warming during Europe's 2022 record-breaking summer », npj Climate and Atmospheric Science, vol. 7, article 245, 2024.",
+      "url": "https://doi.org/10.1038/s41612-024-00783-2"
+    },
+    {
+      "text": "J. Ballester, M. Quijal-Zamorano, R. F. Méndez Turrubiates, F. Pegenaute, F. R. Herrmann, J. M. Robine, X. Basagaña, C. Tonne, J. M. Antó et H. Achebak, « Heat-related mortality in Europe during the summer of 2022 », Nature Medicine, vol. 29, 2023, p. 1857-1866.",
+      "url": "https://doi.org/10.1038/s41591-023-02419-z"
+    },
+    {
+      "text": "S. A. Kulp et B. H. Strauss, « New elevation data triple estimates of global vulnerability to sea-level rise and coastal flooding », Nature Communications, vol. 10, article 4844, 2019.",
+      "url": "https://doi.org/10.1038/s41467-019-12808-z"
+    },
+    {
+      "text": "Intergovernmental Panel on Climate Change, « Summary for Policymakers », dans Climate Change 2022: Impacts, Adaptation and Vulnerability, 2022.",
+      "url": "https://www.ipcc.ch/report/ar6/wg2/chapter/summary-for-policymakers/"
+    },
+    {
+      "text": "World Health Organization, « Wildfires », fiche d'information, 31 juillet 2026.",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/wildfires-and-health"
+    },
+    {
+      "text": "World Health Organization, Regional Office for the Eastern Mediterranean, Risk Communication, Community Engagement and Infodemic Management: Comprehensive Guidance and Key Messages for Flood Preparedness and Response.",
+      "url": "https://www.emro.who.int/rcce/floods.html"
+    },
+    {
+      "text": "United Nations Environment Programme, Emissions Gap Report 2025: Off Target, 2025.",
+      "url": "https://www.unep.org/resources/emissions-gap-report-2025"
+    },
+    {
+      "text": "United Nations Framework Convention on Climate Change, « The Kyoto Protocol ».",
+      "url": "https://unfccc.int/process-and-meetings/the-kyoto-protocol"
+    },
+    {
+      "text": "United Nations Framework Convention on Climate Change, « An Introduction to the Kyoto Protocol Compliance Mechanism ».",
+      "url": "https://unfccc.int/process-and-meetings/the-kyoto-protocol/compliance-under-the-kyoto-protocol/introduction"
+    },
+    {
+      "text": "United States Senate, S. Res. 98, 105e Congrès, résolution adoptée le 25 juillet 1997.",
+      "url": "https://www.congress.gov/105/bills/sres98/BILLS-105sres98ats.pdf"
+    },
+    {
+      "text": "United Nations Treaty Collection, « Kyoto Protocol to the United Nations Framework Convention on Climate Change », chapitre XXVII, 7(a), consulté le 25 septembre 2026.",
+      "url": "https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-7-a&chapter=27&clang=_en"
+    },
+    {
+      "text": "Intergovernmental Panel on Climate Change, « International Cooperation », dans Climate Change 2022: Mitigation of Climate Change, chapitre 14, 2022.",
+      "url": "https://www.ipcc.ch/report/ar6/wg3/chapter/chapter-14/"
+    },
+    {
+      "text": "United Nations Framework Convention on Climate Change, Paris Agreement, 2015.",
+      "url": "https://unfccc.int/sites/default/files/resource/parisagreement_publication.pdf"
+    },
+    {
+      "text": "United Nations Treaty Collection, « Paris Agreement », chapitre XXVII, 7(d), consulté le 25 septembre 2026.",
+      "url": "https://treaties.un.org/pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVII-7-d&chapter=27&clang=_en"
+    },
+    {
+      "text": "United Nations Environment Programme, « About Montreal Protocol », OzonAction.",
+      "url": "https://www.unep.org/ozonaction/who-we-are/about-montreal-protocol"
+    },
+    {
+      "text": "United Nations Environment Programme, « Ozone layer recovery is on track, helping avoid global warming by 0.5°C », communiqué du 9 janvier 2023.",
+      "url": "https://www.unep.org/news-and-stories/press-release/ozone-layer-recovery-track-helping-avoid-global-warming-05degc"
+    },
+    {
+      "text": "Intergovernmental Panel on Climate Change, « Accelerating the Transition in the Context of Sustainable Development », dans Climate Change 2022: Mitigation of Climate Change, chapitre 17, 2022.",
+      "url": "https://www.ipcc.ch/report/ar6/wg3/chapter/chapter-17/"
+    },
+    {
+      "text": "Intergovernmental Panel on Climate Change, « Introduction and Framing », dans Climate Change 2022: Mitigation of Climate Change, chapitre 1, 2022.",
+      "url": "https://www.ipcc.ch/report/ar6/wg3/chapter/chapter-1/"
+    }
+  ]
+}

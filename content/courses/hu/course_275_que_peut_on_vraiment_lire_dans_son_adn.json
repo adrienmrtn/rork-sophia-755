@@ -1,0 +1,155 @@
+{
+  "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn",
+  "title": "Mit olvashatsz ki valójában a DNS-edből?",
+  "subtitle": "Gének és sors",
+  "subject": "sciences",
+  "subcategory": "Mindennapjaink tudománya",
+  "description": "Ízlés, jellem, betegségkockázat, távoli eredet: a DNS-ünk rengeteget elárul rólunk. Csakhogy a hajlam még sosem volt végzet.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "dna_double_helix_3d_render_blue",
+    "ratio": "4:3",
+    "hook": "A DNS-ed elmondja, honnan jössz, mit szeretsz és mi fenyeget, de nem mindenről ő dönt."
+  },
+  "sections": [
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A DNS-ünk rengeteget elárul rólunk: honnan jöttünk, mire képes a testünk, és talán azt is, mi vár ránk. Ez a történetünk és az építési tervünk. De pontosan mi is ez? A DNS a test szinte minden sejtjében megtalálható. **Kettős spirállá** tekeredve hordozza azokat a genetikai utasításokat, amelyek a működésünket, a növekedésünket, a fejlődésünket és a szaporodásunkat szabályozzák."
+        },
+        {
+          "type": "paragraph",
+          "text": "A szálai mindössze **négy kis egységből**, nukleotidokból állnak, ezek jele A, T, C és G. E négy betű sorrendje alkotja a [[genom]] szövegét, azt a genetikai tervet, amely mindannyiunknál egyedi. Mit lehet valójában kiolvasni belőle? Az ízlésünket, a betegségkockázatainkat, az eredetünket. És mennyire írja meg ez a szöveg a jövőnket?"
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p1",
+      "title": "A génjeid alakítják az ízlésedet és a jellemedet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Egy [[gén]] ennek a szövegnek egy darabja. Biológiai használati utasításként működik: megmondja a testnek, hogyan készítse el a **fehérjéit**, amelyek aztán felépítik és működtetik a sejtjeinket. Ebből erednek a látható tulajdonságaink. A gének szerepe azonban sokkal mélyebb a külsőnél."
+        },
+        {
+          "type": "image",
+          "asset": "identical_twins_sisters_portrait_nature_nurture",
+          "ratio": "5:4",
+          "caption": "Augustus Egg: Útitársak (1862). Két mindenben hasonló fiatal nő: az egyik alszik, a másik olvas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Egy [[genetikai variáns]] ugyanannak a génnek kissé eltérő változata. A kutatók nemrég többet is összefüggésbe hoztak a **személyiséggel**. Apró genetikai finomhangolások terelhetik a preferenciáinkat: imádjuk vagy utáljuk a sportot, extrovertáltak vagyunk, hobbikat gyűjtünk. A DNS-ünk talán sokkal jobban befolyásolja a hétköznapjainkat, mint gondolnánk. Ebből adódik a kérdés: a viselkedésünk mekkora része van már megírva a biológiánkban?"
+        },
+        {
+          "type": "funFact",
+          "text": "Tea vagy kávé? A DNS-t és a személyiséget összekötő kutatások szerint még ez az egyszerű választás is a génjeink apró eltérésein múlhat."
+        },
+        {
+          "type": "paragraph",
+          "text": "És talán ez sem minden. A DNS arról is árulkodik, kinél áll fenn [[genetikai hajlam]] bizonyos **mentális** zavarokra, például a depresszióra. Tehát nemcsak azt mondja meg, mit szeretünk, hanem azt is, mi tehet sebezhetővé."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p2",
+      "title": "Mit árul el a DNS a betegségkockázatról?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nem csak a lelki egészségről van szó. A DNS-ünk összetétele más betegségekre is fogékonyabbá tehet, és ezek közül némelyik „családi vonás”. Ismert példa: a [[BRCA1 és BRCA2]] gének bizonyos öröklött variánsai egyes nőknél **korai mellrákra** hajlamosítanak."
+        },
+        {
+          "type": "image",
+          "asset": "dna_sequencing_chromatogram_sanger_readout",
+          "ratio": "2:1",
+          "caption": "Szekvenálási kromatogram: minden színes csúcs a DNS egy betűje. Ebből a kiolvasásból szúrja ki a teszt a variánst."
+        },
+        {
+          "type": "paragraph",
+          "text": "Itt mutatkozik meg igazán a [[genetikai teszt]] értéke, az egészségügy és az érintettek számára egyaránt. Ha kiderül egy öröklött kockázat, korán lehet cselekedni: korábbi **szűrés**, szorosabb követés, gyógyszer vagy más megelőző kezelés. Ez az előny életeket menthet, és csökkentheti az egészségügyi költségeket."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p3",
+      "title": "Időgép: honnan származol?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A DNS-ünk nemzedékről nemzedékre száll. Nyomokat őriz az őseinkről: honnan jöttek, mit ettek, hogyan éltek. Valóságos időgép. A mai népességek **genetikai mintázatainak** összevetésével a kutatók meg tudták rajzolni, milyen úton járta be az ember a Földet."
+        },
+        {
+          "type": "image",
+          "asset": "early_human_migrations_out_of_africa_map",
+          "ratio": "5:4",
+          "caption": "A Homo sapiens legkorábbi ágai Afrikában és kivándorlásuk Eurázsia felé, ahogy a populációgenetika rekonstruálja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Egy példa. Az írott források szerint **Észak-Afrikából** érkezett népcsoportok telepedtek le az [[Ibériai-félsziget]] területén **700 és 1200** között. A DNS igazolja a beszámolót: a félsziget mai lakói még mindig hordozzák ezeknek a találkozásoknak a genetikai nyomát."
+        },
+        {
+          "type": "funFact",
+          "text": "Még a legtávolabbi eredetünk is bonyolultabb egy egyszerű családfánál. Egy teljes genomokon alapuló vizsgálat két ősi emberi népesség nyomát találta meg, amelyek nagyjából **1,5 millió éve** váltak szét, később pedig újra keveredtek."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p4",
+      "title": "A hajlam nem végzet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A DNS-ed tehát sok tulajdonságodat befolyásolja. De ha hajlamos vagy valamire, attól még nincs megpecsételve a sorsod. Ha genetikailag nagyobb a **depresszió** kockázata nálad, az nem jelenti, hogy depressziós leszel. A genetikai kockázat nem bizonyosság."
+        },
+        {
+          "type": "paragraph",
+          "text": "A gének lehetőségeket nyitnak meg, nem kényszerítenek ránk semmit. A tapasztalataink, a döntéseink és a körülményeink ugyanúgy számítanak. Aki a DNS-ét olvassa, önmaga egy részét olvassa: értékes, az egészség szempontjából néha döntő részét, de csak egy részét."
+        },
+        {
+          "type": "takeaway",
+          "text": "A DNS elmeséli az ízlésünket, a kockázatainkat és az eredetünket, de a hajlam soha nem bizonyosság: a DNS-ed csak egy része annak, aki vagy."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Yale School of Medicine, « How Genes Shape Personality Traits: New Links Are Discovered », Yale Medicine News, 9 septembre 2024.",
+      "url": "https://medicine.yale.edu/news-article/how-genes-shape-personality-traits-new-links-are-discovered/"
+    },
+    {
+      "text": "« DNA », Wikipedia, The Free Encyclopedia.",
+      "url": "https://en.wikipedia.org/wiki/DNA"
+    },
+    {
+      "text": "Institute of Medicine (US), « Genetics and Health », dans L. M. Hernandez et D. G. Blazer (dir.), Genes, Behavior, and the Social Environment: Moving Beyond the Nature/Nurture Debate, National Academies Press, Washington (DC), 2006.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK19932/"
+    },
+    {
+      "text": "NIHR Oxford Biomedical Research Centre, « International study reveals how our genes shape blood proteins linked to disease ».",
+      "url": "https://oxfordbrc.nihr.ac.uk/international-study-reveals-how-our-genes-shape-blood-proteins-linked-to-disease/"
+    },
+    {
+      "text": "« What Our DNA Can Tell Us About the History of Humans », Frontiers for Young Minds, 2020.",
+      "url": "https://kids.frontiersin.org/articles/10.3389/frym.2020.00106"
+    },
+    {
+      "text": "« How genetics determine our life choices », BBC Future, 9 mai 2023.",
+      "url": "https://www.bbc.co.uk/future/article/20230509-how-genetics-determine-our-life-choices"
+    },
+    {
+      "text": "University of Cambridge, « Genetic study reveals hidden chapter in human evolution », Research news, 18 mars 2025.",
+      "url": "https://www.cam.ac.uk/research/news/genetic-study-reveals-hidden-chapter-in-human-evolution"
+    }
+  ]
+}

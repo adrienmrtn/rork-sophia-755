@@ -1,14 +1,15 @@
 {
   "id": "course_149_la_joconde",
-  "title": "Šta je „Mona Lizu“ učinilo tako slavnom?",
-  "subtitle": "1503-1519",
+  "title": "Da li je Mona Liza Leonardu zaista bila važna?",
+  "subtitle": "1503",
   "subject": "art",
-  "subcategory": "Iconic works",
-  "description": "Naslikao **Leonardo da Vinči** između **1503** i **1519**, *Mona Liza* je postala apsolutna ikona Luvra. Tehnika, misteriozni osmeh... i let u **1911** koji je sve promenio.",
+  "subcategory": "Čuvena dela",
+  "description": "To je najpoznatija slika na svetu. Ipak, 1503. godine njen autor imao je pametnija posla od portreta jedne trgovčeve žene.",
+  "author": "dusan-nikolic",
   "hero": {
     "image": "la_joconde",
     "ratio": "16:9",
-    "hook": "Osmeh, krađa, mit: kako je portret postao najpoznatije delo na svetu."
+    "hook": "Najgledanija slika na planeti možda je za Leonarda bila samo usputni posao."
   },
   "sections": [
     {
@@ -18,120 +19,141 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "*Mona Liza*, naslikana između **1503** i **1519** autora **Leonarda da Vinči**, je najposećenija slika na svetu. Izložen u **Louvre**, fascinira koliko svojom tehnikom, tako i svojom istorijom. To nije samo lep portret. To je mit koji stvaraju umetnost, nauka i vest."
+          "text": "Za jednu od najpoznatijih slika na svetu, o *Mona Lizi* znamo iznenađujuće malo pouzdanih stvari. Istoričari umetnosti slažu se oko suštine: Leonardo da Vinči ju je slikao u Firenci od **1503. do 1506**. godine. Godine **1517**. poneo ju je sa sobom u Francusku, a slika na dasci završila je u zbirci kralja [[Fransoa I]]."
         },
         {
           "type": "paragraph",
-          "text": "Zašto ovo lice, a ne neko drugo? Zato što je Leonardo tamo koncentrisao inovacije, i zato što ga je spektakularan let učinio poznatim u svetskim razmerama."
+          "text": "Istorijsku prazninu popunile su legende. O slici se govori kao o ženi, „njoj“. Za njen poluosmeh kaže se da je tajanstven. Posle krađe **1911**. sumnjalo se čak i u njenu autentičnost. Sve te priče stvorile su njenu slavu, ali su izbrisale njen kontekst. A u vreme kada ju je Leonardo slikao, to delo mu možda uopšte nije bilo važno."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p1",
-      "title": "Leonardo i sfumato",
+      "title": "Ko je Mona Liza?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Portret počinje u Firenci oko **1503**. Sponzor je trgovac **Frančesko del Đokondo**. Za model se kaže da je njegova žena, [[Lisa Gerardini]]. Ali Leonard nikada ne isporučuje sliku. Čuvao ga je, godinama retuširao i odneo u Francusku, gde je umro u **1519**."
+          "text": "Istoričari umetnosti uglavnom prihvataju da je model [[Liza Gerardini]], supruga **Frančeska del Đokonda**, trgovca i sitnog službenika firentinske vlade. Otuda i drugo ime slike, „Đokonda“. Ta identifikacija počiva na Leonardovoj biografiji koju je [[Đorđo Vazari]] objavio **1550**. i ponovo **1568**. godine, u svojim *Životima najistaknutijih slikara, vajara i arhitekata*."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_leonardo_da_vinci_louvre_painting",
-          "ratio": "4:3",
-          "caption": "Mona Liza u Luvru: mali panel od topole koji je postao globalna ikona."
+          "asset": "vasari_lives_of_the_artists_1568_title_page",
+          "ratio": "3:4",
+          "caption": "Vazarijevi Životi, firentinsko izdanje iz 1568: tekst koji modelu daje ime."
         },
         {
           "type": "paragraph",
-          "text": "Njegova prepoznatljiva tehnika je [[Leonardov sfumato]]: glazure, vrlo tanki slojevi, koji brišu konture. Nema više čvrste linije. Lice se topi u vazduhu. Leonardo takođe dodaje [[Vazdušna perspektiva]]: daleki pejzaž postaje plavi i omekšava, kao u stvarnoj viziji."
+          "text": "Zašto je Frančesko naručio portret? Ne zna se. Leonardo je počeo da radi početkom **1503**. godine. Šta je bilo dalje, još se raspravlja: istoričarima Vazarijeva priča liči na književnu izmišljotinu, biografa koji praznine popunjava lepom pričom. Sredinom **1506**. Leonardo napušta Firencu i odlazi u Milano u potrazi za boljim poslom. Nedovršeni portret putuje s njim."
+        },
+        {
+          "type": "funFact",
+          "text": "Prema Vazariju, Leonardo je unajmio muzičare i lakrdijaše da zabavljaju model tokom poziranja. Istoričari u tome vide biografovu izmišljotinu, ali upravo je ta priča pokrenula mit o „osmehu Mona Lize“."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p2",
-      "title": "Osmeh koji se igra okom",
+      "title": "Angijari: ugledniji nalog",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Čuveni osmeh nije samo naslikana emocija. Igra sa našim [[Periferni vid]]. Kada se zagledamo u oči modela, ivice mrežnjače vide usta u mekim senkama: osmeh izgleda prisutan. Kada pogledate direktno u usta, ona se smanjuje."
+          "text": "U oktobru **1503**. firentinska vlada angažuje Leonarda da naslika zidnu sliku [[Bitka kod Angijarija]] u palati [[Palaco Vekio]], sedištu Firentinske republike. Ona treba da proslavi pobedu Firence nad Milanom **1440**. godine. U renesansi istorijska scena vredi mnogo više od portreta. Zajedno sa religioznim, mitološkim i alegorijskim temama, smatra se najvišim oblikom umetnosti."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_smile_detail_close_up",
-          "ratio": "1:1",
-          "caption": "Što više buljite u to, čini se da osmeh više nestaje."
-        },
-        {
-          "type": "funFact",
-          "text": "Leonardo, i slikar i naučnik, studirao je optiku. Misterija osmeha delimično počiva na preciznom znanju o tome kako ljudsko oko obrađuje senke."
+          "asset": "rubens_copy_battle_of_anghiari_louvre_drawing",
+          "ratio": "16:9",
+          "caption": "Rubensova kopija središnjeg meteža: jedini trag velike nedovršene zidne slike u Palaco Vekiju."
         },
         {
           "type": "paragraph",
-          "text": "Rezultat: lice izgleda živo, promenljivo, gotovo svesno našeg pogleda."
+          "text": "Pored velikog javnog naloga, privatni portret supruge sitnog službenika malo znači. Već od decembra **1503**. Leonardo sve više vremena posvećuje pripremi velike kompozicije. Ugled i bolja plata: Mona Liza može da čeka. Na kraju njegovog drugog boravka u Firenci portret nije dovršen. Nije ni *Bitka kod Angijarija*: od nje su ostale samo pripremne skice i njihove kopije."
+        },
+        {
+          "type": "funFact",
+          "text": "Moguće je da je nedovršen ostao samo pejzaž u pozadini kada je Leonardo 1506. otišao u Milano."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p3",
-      "title": "1911: let koji je izmislio slavu",
+      "title": "Kako nastaje ikona",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U 19. veku, *Mona Liza* je bila obožavana, ali još uvek ne delo broj jedan u Luvru. Sve se promenilo **U 21. avgusta 1911. godine**.. [[Vincenzo Peruđa]], italijanski staklar iz muzeja, krade ga: to je [[Krađa Mona Lize (1911)]]. Sakri ga ispod bluze i tiho izađe."
+          "text": "Leonardo umire **2. maja 1519**. u Amboazu, u Francuskoj. *Mona Liza* nikada ne stiže do porodice Đokondo. Posle Francuske revolucije kraljevska zbirka postaje javna i slika ulazi u **Luvr**. Od početka 19. veka njen osmeh opisuje se na hiljadu načina, od božanskog do čulnog."
         },
         {
           "type": "image",
           "asset": "mona_lisa_stolen_1911_newspaper_headline",
           "ratio": "4:3",
-          "caption": "1911: odsustvo slike čini naslove i stvara zvezdu."
+          "caption": "Naslovna strana lista Excelsior u januaru 1914: povratak Mona Lize posle krađe iz 1911."
         },
         {
           "type": "paragraph",
-          "text": "Istraga se pretvara u skandal. Pesnik [[Gijom Apoliner]] je jedno vreme bio u zatvoru. [[Pablo Picasso]] je intervjuisan. Kada se slika ponovo pojavi u **1913**, to više nije samo slika. On je slavna ličnost."
+          "text": "Prekretnica je krađa slike iz muzeja **1911**. godine. Novine od Mona Lize prave svetsku senzaciju. Od tada popularna štampa i romani redovno dovode u pitanje autentičnost dela i identitet modela, bez ikakvog osnova u ozbiljnoj istorijskoj analizi. Slika je postala središte sve brojnijih priča, koje se pričaju i danas."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p4",
-      "title": "Ikona ispod stakla",
+      "title": "Slika koja je nadrasla svog autora",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Danas, oslikan na drvetu topole, živi iza [[Neprobojno staklo]], u klimatizovanoj vitrini. Napadi kiselinom, bacanje predmeta: zaštita je postala neophodna. I parodije, od Duchamp do interneta, dokazuju da je on postao univerzalni jezik."
+          "text": "Više od **500 godina** posle početka portreta, Liza del Đokondo privlači više nego ikad. Iza neprobojnog stakla u Luvru, slika je odsečena od svog istorijskog konteksta. Oslobođena njega, stekla je status univerzalne ikone. Taj status ima svoju cenu: u moderno doba više nijedna restauracija nije pokrenuta."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "1503",
+              "date": "1503.",
               "title": "Početak portreta",
-              "detail": "Leonardo počinje Mona Lizu u Firenci."
+              "detail": "Leonardo u Firenci počinje portret Lize Gerardini."
             },
             {
-              "date": "1519",
+              "date": "okt. 1503.",
+              "title": "Nalog za Angijari",
+              "detail": "Firenca mu poverava veliku zidnu sliku za Palaco Vekio."
+            },
+            {
+              "date": "1506.",
+              "title": "Odlazak u Milano",
+              "detail": "Leonardo napušta Firencu s nedovršenim portretom pod miškom."
+            },
+            {
+              "date": "1519.",
               "title": "Leonardova smrt",
-              "detail": "Slika ostaje u Francuskoj."
+              "detail": "U Amboazu, 2. maja. Slika ostaje u Francuskoj."
             },
             {
-              "date": "1911",
-              "title": "Let",
-              "detail": "Peruđa pretvara delo u medijski mit."
-            },
-            {
-              "date": "1913",
-              "title": "Nazad",
-              "detail": "Slika se vraća u Luvr kao svetska zvezda."
+              "date": "1911.",
+              "title": "Krađa",
+              "detail": "Štampa od Mona Lize pravi svetsku senzaciju."
             }
           ]
         },
         {
+          "type": "paragraph",
+          "text": "Ukloniti vekovima požuteli [[lak]], zaštitni premaz uljane slike, značilo bi rizikovati oštećenje dela. Čak i ako bi restauracija uspela, strahuje se da bi *Mona Liza* izgubila svoju moć da opčinjava. Leonardova izvorna tehnika i boje manje su važne od slike kao simbola. Pošto je postala posuda za bezbroj priča, slika je nadrasla i svog autora i istoriju umetnosti."
+        },
+        {
           "type": "takeaway",
-          "text": "*Mona Liza* duguje svoju slavu koliko Leonardovom geniju (sfumato, optički osmeh), tako i istoriji: krađa 1911. pretvorila je remek-delo kome se divili u globalnu ikonu."
+          "text": "Zapostavljena 1503. zbog uglednijeg naloga, *Mona Liza* status ikone duguje pre svega petovekovnim legendama i jednoj krađi, a ne mestu koje joj je Leonardo davao."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. Campbell, Leonardo da Vinci: An Untraceable Life, Princeton University Press, 2025, p. 43-45."
+    },
+    {
+      "text": "F. Zöllner, « Leonardo's Portrait of Mona Lisa del Giocondo », Gazette des Beaux-Arts, vol. 121, 1993, p. 115-138."
     }
   ]
 }

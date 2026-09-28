@@ -1,0 +1,131 @@
+{
+  "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos",
+  "title": "Perché c'è il cobalto nelle nostre batterie?",
+  "subtitle": "Elemento 27",
+  "subject": "sciences",
+  "subcategory": "La nostra quotidianità spiegata",
+  "description": "Quasi nessuno scava per trovare il cobalto, eppure ce n'è nella batteria di ogni telefono. La storia di un metallo che l'industria non riesce a sostituire, e che pure cerca di far sparire.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "cobalt_copper_open_pit_mine_kolwezi_drc",
+    "ratio": "4:3",
+    "hook": "Il metallo da cui dipendono le auto elettriche non viene quasi mai estratto per sé stesso."
+  },
+  "sections": [
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il cobalto è l'elemento **27** della tavola periodica, stretto tra il ferro e il nichel. È nella batteria del telefono che hai in mano, nei magneti, in leghe abbastanza dure da resistere dentro un motore d'aereo. Eppure quasi nessuno scava per cercarlo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Circa il **99%** del cobalto mondiale esce dalla terra come sottoprodotto: lo si recupera da minerali estratti per il loro rame o il loro nichel. La [[Repubblica Democratica del Congo]] ne fornisce quasi **tre quarti**, quasi tutto da miniere di rame. L'offerta di cobalto quindi non dipende dalla domanda di cobalto, ma da quella di rame e nichel. Uno strano modo di gestire il metallo delle auto elettriche."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p1",
+      "title": "La batteria che aveva bisogno del cobalto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel **1980**, a Oxford, [[John Goodenough]] e Koichi Mizushima scoprirono che l'ossido di litio e cobalto (LiCoO2, o LCO) funziona come elettrodo a [[intercalazione]]: strati di ossido di cobalto tra cui gli ioni di litio si infilano e poi escono, senza che la pila di strati crolli. Era il [[catodo]] che serviva, uno dei due elettrodi della batteria."
+        },
+        {
+          "type": "image",
+          "asset": "john_goodenough_portrait_lithium_battery_inventor",
+          "ratio": "3:4",
+          "caption": "John Goodenough, che nel 1980 scoprì il catodo al cobalto insieme a Koichi Mizushima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Poi il mondo aspettò più di dieci anni. Nel **1991** Sony mise in vendita la prima batteria agli ioni di litio commerciale, con un catodo in LCO. Fino al **2010** circa, quasi tutti i catodi agli ioni di litio erano fatti così. L'LCO domina ancora l'elettronica di consumo: ecco perché il tuo telefono contiene qualche grammo di un metallo che nessuno aveva deciso di estrarre."
+        },
+        {
+          "type": "funFact",
+          "text": "Il cobalto fu scoperto nel 1735 dal chimico svedese Georg Brandt, quasi due secoli e mezzo prima di entrare nelle nostre batterie."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p2",
+      "title": "Una batteria che produce il proprio ossigeno",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Immagina il catodo come un muro di mattoni. Gli strati di ossido di cobalto sono i ripiani, gli ioni di litio i mattoni posati tra l'uno e l'altro. Carica troppo la batteria e togli troppi mattoni: il muro diventa instabile. Sopra i **130 °C** circa, o in caso di sovraccarica, la struttura comincia a crollare e l'ossigeno chiuso nell'ossido di cobalto si libera sotto forma di gas."
+        },
+        {
+          "type": "image",
+          "asset": "lithium_ion_battery_fire_thermal_runaway_test",
+          "ratio": "2:3",
+          "caption": "Un pacco di due celle agli ioni di litio 18650: l'etichetta stessa avverte che può esplodere nel fuoco."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il liquido che riempie la cella è **infiammabile**, e la batteria ha appena fornito da sola l'ossigeno per bruciarlo. Il calore accelera la decomposizione, che libera altro ossigeno, che produce altro calore. È la [[fuga termica]]. Ecco perché un incendio di una batteria al litio non si spegne soffocandolo: l'ossigeno è già dentro."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p3",
+      "title": "Perché il cobalto è ancora lì",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Torna al muro di mattoni. A ogni ricarica e a ogni utilizzo, i mattoni di litio scivolano fuori, poi dentro. Il cobalto è il cemento che impedisce al muro di deformarsi o di crollare nel corso di centinaia di cicli. Gli altri materiali da soli non ci riescono: il **nichel** immagazzina più energia ma si consuma troppo in fretta, il **manganese** costa poco ma ha poca potenza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per questo le miscele montate sulla maggior parte delle auto elettriche, come i catodi **NMC** (nichel, manganese, cobalto) e **NCA** (nichel, cobalto, alluminio), riducono la quota di cobalto senza mai eliminarla. Da quindici anni gli ingegneri ne tolgono per abbassare i costi, ma ne serve sempre un pizzico per tenere insieme il tutto. L'unica che ne fa del tutto a meno, la [[batteria LFP]], ci riesce buttando via il muro per costruire una struttura interna completamente diversa."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p4",
+      "title": "Fare a meno del cobalto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il problema del cobalto non è chimico. Una parte della produzione congolese viene dall'[[estrazione artigianale]], scavata a mano in condizioni pericolose e, in certi posti, da bambini. Il suo prezzo oscilla in fretta e di molto, e questo rende imprevedibile qualsiasi batteria che ne dipenda. E quasi tutto parte da **un solo Paese**."
+        },
+        {
+          "type": "image",
+          "asset": "artisanal_cobalt_miners_kolwezi_congo",
+          "ratio": "4:3",
+          "caption": "Minatori artigianali riempiono sacchi di minerale di cobalto nella Repubblica Democratica del Congo."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'industria cerca quindi di progettare batterie senza questo metallo. La risposta principale è l'**LFP**, litio ferro fosfato, che sostituisce il cobalto con ferro e fosforo, due degli elementi più economici e abbondanti. Si scalda meno ed è molto più difficile da spingere verso la fuga termica."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il prezzo da pagare è l'energia: a **parità di peso**, una cella LFP ne immagazzina meno. Ecco perché la tua auto forse monta già una cella LFP, mentre il tuo telefono non l'ha ancora adottata: in tasca, ogni grammo conta."
+        },
+        {
+          "type": "takeaway",
+          "text": "Il cobalto tiene in piedi la struttura delle batterie agli ioni di litio, ma arriva quasi tutto da un solo Paese, come sottoprodotto del rame: l'industria se ne libera solo cambiando chimica, con l'LFP, al prezzo di meno energia."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Cobalt Institute, « Cobalt uses ».",
+      "url": "https://www.cobaltinstitute.org/global-cobalt/cobalt-uses/"
+    },
+    {
+      "text": "« One hundred years of cobalt production in the Democratic Republic of the Congo », Resources Policy, 2022.",
+      "url": "https://doi.org/10.1016/j.resourpol.2022.103007"
+    }
+  ]
+}

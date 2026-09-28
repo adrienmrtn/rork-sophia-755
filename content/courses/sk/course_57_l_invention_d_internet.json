@@ -1,14 +1,15 @@
 {
   "id": "course_57_l_invention_d_internet",
-  "title": "Vynález internetu",
-  "subtitle": "siete",
+  "title": "Ako sa internet zrodil zo studenej vojny?",
+  "subtitle": "Od ARPANETu po web",
   "subject": "sciences",
-  "subcategory": "Discoveries that changed the world",
-  "description": "Internet nemá jediného vynálezcu. Je to dlhý reťazec: vojenská sieť, spoločný jazyk a potom web pre ľudí.",
+  "subcategory": "Objavy, ktoré zmenili svet",
+  "description": "Vojenská sieť navrhnutá tak, aby prežila sovietsky útok, desiatky malých sietí, potom modem a web. Za päťdesiat rokov sa projekt zo studenej vojny stal súčasťou nášho každodenného života.",
+  "author": "myra-houser",
   "hero": {
-    "image": "l_invention_d_internet",
-    "ratio": "16:9",
-    "hook": "Najprv sieť na odpor proti vojne. Potom sa naladí celý svet."
+    "image": "ibm_mainframe_computer_room_1960s_operators",
+    "ratio": "4:3",
+    "hook": "Skôr než internet prepojil planétu, mal predovšetkým prežiť sovietsky útok."
   },
   "sections": [
     {
@@ -18,83 +19,127 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Internet sa nezrodil od jediného génia v garáži. Ide o kolektívnu stavbu v priebehu niekoľkých desaťročí."
+          "text": "Ani internet, podobne ako Rím, nevznikol za jeden deň. Na začiatku bola sieť len hŕstkou počítačov **amerického ministerstva obrany**. Zrodila sa z technického pokroku, ale aj zo špionážnych ambícií dvoch superveľmocí [[studenej vojny]]. Koncom 20. storočia sa pripojenie cez telefónnu linku dostalo do väčšiny amerických domácností a hneď za ním prišlo aj prehliadanie webu."
         },
         {
           "type": "paragraph",
-          "text": "Tri jednoduché kroky na zapamätanie: prvá sieť (ARPANET), spoločný jazyk (TCP/IP), potom jednoduché rozhranie (web)."
+          "text": "Na konci tisícročia bola táto technológia taká rozšírená a zároveň taká nová, že niektorí analytici predpovedali celosvetový kolaps, ak kalendáre počítačov správne neprejdú do **roku 2000**: to bol povestný [[problém roku 2000]]. V 21. storočí okamžité správy, sociálne siete a umelá inteligencia opäť menia spôsob, akým komunikujeme online. Ako sa z vojenského projektu stala každodennosť celého sveta?"
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p1",
-      "title": "ARPANET, prvá sieť",
+      "title": "Sieť, ktorá prežije útok",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na konci rokov **1960**, uprostred studenej vojny, financovala americká armáda projekt: prepojenie počítačov tak, aby pokračovali v komunikácii, aj keď bola časť siete zničená."
+          "text": "Projekt sa začal v **50. rokoch**. Počítače boli vtedy obrovské a drahé: jediný stroj zaplnil celú miestnosť. Vlastnili ich len vládne úrady a niekoľko univerzít. Keď rástlo napätie so ZSSR, americkí predstavitelia hľadali komunikačnú sieť, ktorú by sovietski agenti nedokázali odpočúvať. Prvým krokom bolo zdieľanie času, vďaka ktorému mohlo na jednom počítači pracovať viacero používateľov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na začiatku **60. rokov** inžinier menom [[Paul Baran]] experimentoval s [[prepájaním paketov]]: správa sa neposiela v jednom kuse, ale rozdelí sa na malé dátové pakety, ktoré putujú sieťou samostatne. Baran a jeho kolegovia stavili na to, že dáta cestujúce takto po telefónnych linkách by sovietsky útok prežili. Z tejto práce vzišiel [[ARPANET]], program amerického ministerstva obrany."
         },
         {
           "type": "image",
           "asset": "arpanet_1969_computer_ucla",
           "ratio": "4:3",
-          "caption": "ARPANET najprv spája niekoľko amerických univerzít."
-        },
-        {
-          "type": "paragraph",
-          "text": "Táto sieť sa nazýva **ARPANET**. Správy sú rozdelené do malých paketov, ktoré majú rôzne cesty. Ak jedna cesta padne, prevezme ju iná."
+          "caption": "Počítač SDS Sigma 7 na UCLA, prvý stroj pripojený k ARPANETu v roku 1969."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p2",
-      "title": "TCP/IP: hovorí rovnakým jazykom",
+      "title": "Od ARPANETu k „internetom“: prepájanie paketov",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aby si rôzne siete navzájom rozumeli, sú potrebné spoločné pravidlá. **Vint Cerf** a **Bob Kahn** vyvíjajú protokol **TCP/IP**: jazyk, ktorý hovorí, ako strihať, adresovať a prekladať údaje."
+          "text": "Na prenos paketov siahol ARPANET po technike, ktorú vyvinuli britskí vedci: [[smerovač]], zariadenie telefónnej siete, ktoré pakety zbiera a posiela ďalej k iným strojom. V roku **1969** boli prepojené prvé počítače, počnúc tým na Kalifornskej univerzite v Los Angeles. Na Havaji skúšali informatici príbuzný nápad, **ALOHAnet**, v ktorom pakety putovali rádiovými vlnami."
         },
         {
           "type": "image",
-          "asset": "vint_cerf_bob_kahn_internet",
-          "ratio": "4:3",
-          "caption": "Cerf a Kahn: architekti jazyka internetu."
+          "asset": "arpanet_logical_map_1977_network_diagram",
+          "ratio": "3:2",
+          "caption": "Logická mapa ARPANETu k 25. augustu 1983, ktorú zostavila firma BBN: navzájom prepojené univerzity, laboratóriá a vojenské pracoviská."
         },
         {
-          "type": "funFact",
-          "text": "1. januára **1983** ARPANET oficiálne prešiel na TCP/IP. Mnohí považujú tento dátum za technický „zrod“ internetu."
+          "type": "paragraph",
+          "text": "V **70. rokoch** a na začiatku 80. rokov posielali desiatky tímov po celom svete informácie telefónnymi linkami aj rádiom. Výsledkom bolo množstvo malých, navzájom oddelených sietí. V roku **1974** skrátil jeden vedecký článok slovo „internetwork“, teda sieť sietí, na „internet“. Je to prvý známy výskyt tohto slova."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p3",
-      "title": "Web robí sieť ľudskou",
+      "title": "Modemy, predplatné a zrod webu v CERN-e",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Internet je sieť. **World Wide Web**, ktorú vynašiel **Tim Berners-Lee** v CERN na začiatku rokov **1990**, je jednoduchá vrstva: stránky, odkazy, prehliadače."
+          "text": "Až do polovice **80. rokov** žil každý z týchto „internetov“ sám pre seba. V Spojených štátoch investovala National Science Foundation, federálna agentúra financujúca výskum, obrovské sumy do superpočítačov a prepojila ich s univerzitami. V rokoch **1989** až **1995** potom americkí zákonodarcovia postupne rušili obmedzenia, ktoré zakazovali komerčné služby na internete."
         },
         {
           "type": "paragraph",
-          "text": "Bez webu by internet zostal predovšetkým nástrojom pre odborníkov. S ním môže kliknúť každý."
+          "text": "V roku 1995 ponúkali veľké spoločnosti ako **Sprint** a **AT&T** pripojenie cez telefónnu linku: predplatiteľ zapojil modem do zásuvky a vytočil číslo. Medzitým, už v roku **1990**, spustil britský informatik Tim Berners-Lee v CERN-e, európskom fyzikálnom laboratóriu pri Ženeve, [[World Wide Web]]. Web zhromaždil dáta roztrúsené po serveroch a prepojil stránky navzájom hypertextovými odkazmi."
+        },
+        {
+          "type": "image",
+          "asset": "tim_berners_lee_next_computer_cern_first_web_server",
+          "ratio": "3:2",
+          "caption": "Počítač NeXT Tima Bernersa-Leeho v CERN-e, prvý webový server z roku 1990: štítok žiada, aby ho nikto nevypínal."
+        },
+        {
+          "type": "funFact",
+          "text": "V 90. rokoch platilo mnoho predplatiteľov za pripojenie od minúty. Každá pomaly sa načítavajúca stránka stála peniaze a domáci telefón bol obsadený, kým bol modem online."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p4",
-      "title": "Nervový systém sveta",
+      "title": "Od e-mailu po iPhone: internet v každodennom živote",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Internet dnes prenáša e-maily, videá, banky, nemocnice, GPS. Spôsobilo to aj nové problémy: dezinformácie, sledovanie, digitálna priepasť."
+          "text": "Od polovice 90. rokov internet rástol závratnou rýchlosťou a každý si rozširoval okruh ľudí, s ktorými si písal. E-mail, chatovacie miestnosti a okamžité správy umožnili komunikovať v reálnom čase. V roku **2000** už viac ako **polovica** telekomunikačnej prevádzky prechádzala internetom. V prvých rokoch nového tisícročia pribúdali blogy a prvé sociálne siete, MySpace a potom TheFacebook.com."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sieť potom opustila kancelárie a obývačky. Už od roku **2005** umožňovali telefóny BlackBerry posielať správy cez vlastné siete. Od roku **2007** dal iPhone internet do vrecka: odteraz sa dalo surfovať z mobilného telefónu. Sieť sietí, ktorá vznikla ako obranná stratégia počas studenej vojny, je dnes súčasťou každodenného života."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1969",
+              "title": "Prvé prepojené stroje",
+              "detail": "ARPANET prepojil svoje prvé počítače vrátane počítača na UCLA."
+            },
+            {
+              "date": "1974",
+              "title": "Slovo „internet“",
+              "detail": "Vedecký článok skrátil slovo „internetwork“: prvý známy výskyt tohto výrazu."
+            },
+            {
+              "date": "1990",
+              "title": "Zrod webu",
+              "detail": "Tim Berners-Lee spustil v CERN-e World Wide Web."
+            },
+            {
+              "date": "1995",
+              "title": "Internet sa otvára verejnosti",
+              "detail": "Koniec obchodných obmedzení, pripojenie cez modem od spoločností Sprint a AT&T."
+            },
+            {
+              "date": "2007",
+              "title": "Internet vo vrecku",
+              "detail": "iPhone umožnil surfovať z mobilného telefónu."
+            }
+          ]
         },
         {
           "type": "takeaway",
-          "text": "Internet sa zrodil z ARPANETu, stal sa univerzálnym vďaka TCP/IP a dostupný vďaka webu. Toto nie je jedinečný vynález, je to zdieľaná architektúra."
+          "text": "Internet, navrhnutý počas studenej vojny tak, aby odolal útoku, prešiel z vojenských počítačov na univerzity, potom vďaka modemu a webu do domácností, až sa napokon zmestil do telefónu."
         }
       ]
     }
