@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Screens pushed from the path header.
+/// Screens pushed from the path's top bar.
 enum PathRoute: Hashable {
     case collections
 }
@@ -9,10 +9,16 @@ enum PathRoute: Hashable {
 /// by a quiz pod. Levels open one after the other, the courses of a level one after the
 /// other, and whatever changed since the reader last looked (a course finished from the
 /// home, a level passed) is played back as an animation when they come back.
+///
+/// A translucent bar sits at the top. It reads "Parcours" until a level's banner slides
+/// under it; from then on it names that level, and each banner that passes takes its turn.
 struct LearningPathView: View {
     @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
     @Binding var selectedCourse: Course?
+
+    /// Coordinate space of the trail, in which the banners report where they are.
+    nonisolated static let scrollSpace = "learningPathScroll"
 
     @State private var snapshot: LearningPathSnapshot = .empty
     /// States as drawn. They trail the real ones while a change is being animated.
@@ -29,6 +35,9 @@ struct LearningPathView: View {
     @State private var poppingNodeId: String? = nil
     @State private var celebratingLevelId: String? = nil
     @State private var showExplain = false
+    /// Levels whose banner has slid under the top bar; the last of them is the one the bar names.
+    @State private var passedBannerIds: Set<String> = []
+    @State private var barHeight: CGFloat = 52
 
     private struct PathToast: Identifiable {
         let id = UUID()
@@ -41,15 +50,17 @@ struct LearningPathView: View {
         "\(progressManager.completedCount)|\(progressManager.passedPathLevelCount)|\(languageManager.current.rawValue)"
     }
 
+    /// The level the top bar names: the last one whose banner went under it.
+    private var compactLevel: PathLevel? {
+        snapshot.levels.last { passedBannerIds.contains($0.id) }
+    }
+
     var body: some View {
         NavigationStack {
             ZStack {
                 DS.canvas.ignoresSafeArea()
 
-                VStack(spacing: 0) {
-                    header
-                    trail
-                }
+                trail
 
                 if let toast {
                     toastView(toast)
@@ -71,7 +82,6 @@ struct LearningPathView: View {
                     .zIndex(20)
                 }
             }
-            .animation(.spring(response: 0.4, dampingFraction: 0.85), value: toast?.id)
             .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: PathRoute.self) { route in
                 switch route {
@@ -113,101 +123,6 @@ struct LearningPathView: View {
         }
     }
 
-    // MARK: - Header
-
-    private var header: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(alignment: .firstTextBaseline) {
-                Text(languageManager.text("path.title"))
-                    .font(DS.title(.largeTitle, .semibold))
-                    .foregroundStyle(DS.ink)
-
-                Spacer()
-
-                NavigationLink(value: PathRoute.collections) {
-                    HStack(spacing: 6) {
-                        Image(systemName: "square.stack.3d.up.fill")
-                            .font(.jakarta(size: 12, weight: .semibold))
-                        Text(languageManager.text("path.collections"))
-                            .font(DS.sans(.caption, .semibold))
-                    }
-                    .foregroundStyle(DS.accentSoft)
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 8)
-                    .background(DS.accentTint, in: Capsule())
-                }
-                .buttonStyle(SoftPressButtonStyle())
-            }
-
-            currentLevelCard
-        }
-        .padding(.horizontal, 20)
-        .padding(.top, 8)
-        .padding(.bottom, 10)
-    }
-
-    @ViewBuilder
-    private var currentLevelCard: some View {
-        if let level = snapshot.activeLevel {
-            Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                scrollToCurrentNode()
-            } label: {
-                HStack(spacing: 14) {
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text(String(format: languageManager.text("path.levelCaption"), level.number)
-                            .uppercased(with: languageManager.current.foundationLocale))
-                            .font(DS.sans(.caption2, .semibold))
-                            .tracking(1.1)
-                            .foregroundStyle(DS.accentSoft)
-                        Text(level.collection.title)
-                            .font(DS.title(.subheadline, .semibold))
-                            .foregroundStyle(DS.ink)
-                            .lineLimit(1)
-                        CalmProgressBar(
-                            fraction: Double(level.completedCourseCount) / Double(max(level.courseCount, 1)),
-                            height: 5
-                        )
-                        .padding(.top, 2)
-                    }
-
-                    Text(String(format: languageManager.text("path.courses.count"), level.completedCourseCount, level.courseCount))
-                        .font(DS.sans(.caption, .medium))
-                        .foregroundStyle(DS.inkSecondary)
-                        .monospacedDigit()
-                        .fixedSize()
-
-                    Image(systemName: "arrow.down.circle.fill")
-                        .font(.jakarta(size: 20, weight: .medium))
-                        .foregroundStyle(DS.accentSoft)
-                }
-                .padding(14)
-                .frame(maxWidth: .infinity)
-                .background(DS.surface)
-                .clipShape(.rect(cornerRadius: DS.Radius.control))
-                .overlay {
-                    RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                        .strokeBorder(DS.hairline, lineWidth: 1)
-                }
-            }
-            .buttonStyle(SoftPressButtonStyle())
-        } else if snapshot.isEverythingPassed {
-            HStack(spacing: 10) {
-                Image(systemName: "checkmark.seal.fill")
-                    .font(.jakarta(size: 18, weight: .medium))
-                    .foregroundStyle(PathPalette.gold)
-                Text(languageManager.text("path.allPassed"))
-                    .font(DS.sans(.subheadline, .semibold))
-                    .foregroundStyle(DS.ink)
-                Spacer()
-            }
-            .padding(14)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(DS.accentTint)
-            .clipShape(.rect(cornerRadius: DS.Radius.control))
-        }
-    }
-
     // MARK: - Trail
 
     private var trail: some View {
@@ -223,8 +138,12 @@ struct LearningPathView: View {
                             poppingNodeId: poppingNodeId,
                             isCelebrating: celebratingLevelId == level.id,
                             accentIndex: level.number - 1,
+                            barHeight: barHeight,
                             onTapNode: { node in
                                 handleTap(node: node, in: level)
+                            },
+                            onBannerCrossing: { passed in
+                                bannerCrossed(levelId: level.id, passed: passed)
                             }
                         )
                         .id(level.id)
@@ -232,12 +151,124 @@ struct LearningPathView: View {
 
                     pathEnd
                 }
-                .padding(.top, 6)
+                .padding(.top, 14)
                 .padding(.bottom, 40)
             }
             .scrollIndicators(.hidden)
+            .coordinateSpace(.named(Self.scrollSpace))
+            .safeAreaInset(edge: .top, spacing: 0) {
+                topBar
+            }
             .onAppear { scrollProxy = proxy }
         }
+    }
+
+    private func bannerCrossed(levelId: String, passed: Bool) {
+        if passed {
+            passedBannerIds.insert(levelId)
+        } else {
+            passedBannerIds.remove(levelId)
+        }
+    }
+
+    // MARK: - Top bar
+
+    /// Navigation-bar-like strip: translucent, the page title in the middle until a level's
+    /// banner slides underneath, then that level's title and progress.
+    private var topBar: some View {
+        HStack(spacing: 8) {
+            jumpToCurrentButton
+
+            ZStack {
+                if let level = compactLevel {
+                    VStack(spacing: 1) {
+                        Text(level.collection.title)
+                            .font(DS.title(.headline, .semibold))
+                            .foregroundStyle(DS.ink)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.9)
+                        Text(compactSubtitle(for: level))
+                            .font(DS.sans(.caption2, .medium))
+                            .foregroundStyle(DS.inkSecondary)
+                            .lineLimit(1)
+                    }
+                    .id(level.id)
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .bottom).combined(with: .opacity),
+                        removal: .move(edge: .top).combined(with: .opacity)
+                    ))
+                } else {
+                    Text(languageManager.text("path.title"))
+                        .font(DS.title(.headline, .semibold))
+                        .foregroundStyle(DS.ink)
+                        .transition(.asymmetric(
+                            insertion: .move(edge: .top).combined(with: .opacity),
+                            removal: .move(edge: .bottom).combined(with: .opacity)
+                        ))
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .frame(height: 52)
+            .clipped()
+            .multilineTextAlignment(.center)
+
+            collectionsButton
+        }
+        .padding(.horizontal, 16)
+        .frame(height: 52)
+        .background(.bar, ignoresSafeAreaEdges: .top)
+        .overlay(alignment: .bottom) {
+            Rectangle()
+                .fill(DS.hairline)
+                .frame(height: 0.5)
+                .opacity(compactLevel == nil ? 0 : 1)
+        }
+        .onGeometryChange(for: CGFloat.self) { proxy in
+            proxy.size.height
+        } action: { height in
+            if height > 0 { barHeight = height }
+        }
+        .animation(.spring(response: 0.35, dampingFraction: 0.85), value: compactLevel?.id)
+    }
+
+    private func compactSubtitle(for level: PathLevel) -> String {
+        let levelText = String(format: languageManager.text("path.levelCaption"), level.number)
+        let coursesText = String(format: languageManager.text("path.courses.count"), level.completedCourseCount, level.courseCount)
+        return "\(levelText) · \(coursesText)"
+    }
+
+    private var jumpToCurrentButton: some View {
+        Button {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            scrollToCurrentNode()
+        } label: {
+            Image(systemName: "arrow.down.circle")
+                .font(.jakarta(size: 18, weight: .medium))
+                .foregroundStyle(DS.accentSoft)
+                .frame(width: 36, height: 36)
+                .contentShape(Rectangle())
+        }
+        .buttonStyle(SoftPressButtonStyle())
+        .accessibilityLabel(languageManager.text("library.section.continue"))
+        .opacity(snapshot.currentNodeId == nil ? 0 : 1)
+        .disabled(snapshot.currentNodeId == nil)
+    }
+
+    private var collectionsButton: some View {
+        NavigationLink(value: PathRoute.collections) {
+            HStack(spacing: 6) {
+                Image(systemName: "square.stack.3d.up.fill")
+                    .font(.jakarta(size: 12, weight: .semibold))
+                Text(languageManager.text("path.collections"))
+                    .font(DS.sans(.caption, .semibold))
+                    .lineLimit(1)
+            }
+            .foregroundStyle(DS.accentSoft)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 7)
+            .background(DS.accentTint, in: Capsule())
+        }
+        .buttonStyle(SoftPressButtonStyle())
     }
 
     private var pathEnd: some View {
@@ -296,11 +327,15 @@ struct LearningPathView: View {
 
     private func showToast(_ text: String, icon: String) {
         toastTask?.cancel()
-        toast = PathToast(text: text, icon: icon)
+        withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+            toast = PathToast(text: text, icon: icon)
+        }
         toastTask = Task {
             try? await Task.sleep(for: .seconds(2.4))
             guard !Task.isCancelled else { return }
-            toast = nil
+            withAnimation(.easeOut(duration: 0.25)) {
+                toast = nil
+            }
         }
     }
 
@@ -366,6 +401,8 @@ struct LearningPathView: View {
         revealTask?.cancel()
         if upgrades.isEmpty {
             LearningPathSeenStore.save(actual)
+            // Once per session: land on the pod to play. After that the page keeps whatever
+            // position the reader left it in.
             if !hasSettledOnce {
                 hasSettledOnce = true
                 revealTask = Task { await settleOnCurrentNode() }
@@ -377,7 +414,7 @@ struct LearningPathView: View {
     }
 
     private func settleOnCurrentNode() async {
-        try? await Task.sleep(for: .milliseconds(250))
+        try? await Task.sleep(for: .milliseconds(350))
         guard !Task.isCancelled else { return }
         scrollToCurrentNode()
     }
@@ -386,7 +423,7 @@ struct LearningPathView: View {
         try? await Task.sleep(for: .milliseconds(400))
         guard !Task.isCancelled, let first = upgrades.first else { return }
         scrollTo(nodeId: first)
-        try? await Task.sleep(for: .milliseconds(550))
+        try? await Task.sleep(for: .milliseconds(650))
 
         for id in upgrades {
             guard !Task.isCancelled else { return }
@@ -512,7 +549,9 @@ private struct PathLevelSection: View {
     let poppingNodeId: String?
     let isCelebrating: Bool
     let accentIndex: Int
+    let barHeight: CGFloat
     let onTapNode: (PathNode) -> Void
+    let onBannerCrossing: (Bool) -> Void
 
     private func shownState(_ node: PathNode) -> PathNodeState {
         displayedStates[node.id] ?? node.state
@@ -541,15 +580,14 @@ private struct PathLevelSection: View {
 
     var body: some View {
         VStack(spacing: 18) {
-            NavigationLink(value: level.collection) {
-                PathLevelBanner(
-                    level: level,
-                    isUnlocked: displayedUnlocked,
-                    isPassed: displayedPassed,
-                    accentIndex: accentIndex
-                )
-            }
-            .buttonStyle(SoftPressButtonStyle())
+            PathLevelBannerHost(
+                level: level,
+                isUnlocked: displayedUnlocked,
+                isPassed: displayedPassed,
+                accentIndex: accentIndex,
+                barHeight: barHeight,
+                onCrossingChange: onBannerCrossing
+            )
             .overlay {
                 if isCelebrating {
                     PathConfettiBurst(colors: confettiColors, pieceCount: 80, duration: 3.0, origin: CGPoint(x: 0.5, y: 0.45))
@@ -559,7 +597,9 @@ private struct PathLevelSection: View {
             .padding(.horizontal, 20)
             .zIndex(2)
 
+            // Room above the first pod for its "start" bubble, which used to hide under the banner.
             trailBody
+                .padding(.top, 30)
         }
     }
 
@@ -683,6 +723,53 @@ private struct PathLevelSection: View {
         case .locked: languageManager.text("path.status.locked")
         case .available: languageManager.text("home.start")
         case .completed: languageManager.text("collections.complete")
+        }
+    }
+}
+
+// MARK: - Banner host
+
+/// The banner of a level as it lives in the trail: it tracks its own position under the top
+/// bar, shrinks and fades as it slides underneath (the "retract"), and tells the page once
+/// when it crosses the bar, so the page only re-renders on a crossing, not on every frame.
+private struct PathLevelBannerHost: View {
+    let level: PathLevel
+    let isUnlocked: Bool
+    let isPassed: Bool
+    let accentIndex: Int
+    let barHeight: CGFloat
+    let onCrossingChange: (Bool) -> Void
+
+    /// 0 while the banner is well below the bar, 1 once it is under it.
+    @State private var retract: CGFloat = 0
+    @State private var hasCrossed = false
+
+    var body: some View {
+        NavigationLink(value: level.collection) {
+            PathLevelBanner(
+                level: level,
+                isUnlocked: isUnlocked,
+                isPassed: isPassed,
+                accentIndex: accentIndex
+            )
+        }
+        .buttonStyle(SoftPressButtonStyle())
+        .scaleEffect(1 - 0.06 * retract, anchor: .top)
+        .opacity(1 - 0.35 * retract)
+        .onGeometryChange(for: CGFloat.self) { proxy in
+            proxy.frame(in: .named(LearningPathView.scrollSpace)).minY
+        } action: { minY in
+            let distanceBelowBar = minY - barHeight
+            let newRetract = min(1, max(0, (72 - distanceBelowBar) / 72))
+            if abs(newRetract - retract) > 0.005 {
+                retract = newRetract
+            }
+            // A little hysteresis so the bar does not flicker right at the edge.
+            let crossed = hasCrossed ? (minY < barHeight + 4) : (minY < barHeight - 4)
+            if crossed != hasCrossed {
+                hasCrossed = crossed
+                onCrossingChange(crossed)
+            }
         }
     }
 }

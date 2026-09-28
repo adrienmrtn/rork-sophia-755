@@ -7,9 +7,16 @@ Parcours, en attendant que le Parcours la remplace pour de bon. iOS uniquement p
 ## Ce que voit l'utilisateur
 
 - **Un niveau = une collection**, dans l'ordre des collections du catalogue. Chaque niveau a
-  sa bannière (couverture, numéro, titre, progression) puis ses **pods** sur un chemin
-  sinueux : un pod par cours, et un **pod quiz** (trophée doré) pour finir. Le chemin est
-  un seul scroll qui descend sur tous les niveaux.
+  sa bannière (couverture, numéro, titre et progression centrés sur l'image) puis ses
+  **pods** sur un chemin sinueux : un pod par cours, et un **pod quiz** (trophée doré) pour
+  finir. Le chemin est un seul scroll qui descend sur tous les niveaux.
+- **Barre du haut** façon barre de navigation iOS (translucide) : « Parcours » et le bouton
+  Collections. Quand une bannière de niveau glisse dessous, elle se rétracte (léger
+  rétrécissement + fondu) et la barre prend son titre, centré, avec « Niveau N · x / y cours »
+  en sous-titre. Chaque bannière qui passe prend le relais ; en remontant, la barre revient au
+  niveau précédent puis à « Parcours ». Le bouton flèche à gauche ramène au pod à jouer.
+- **Défilement automatique** une seule fois par session, vers le pod à jouer ; ensuite la page
+  garde sa position, sauf pour suivre une animation de déblocage.
 - **Déblocage linéaire.** Dans un niveau, les cours s'ouvrent l'un après l'autre. Un cours
   déjà terminé ailleurs (accueil, Biblio) compte comme pod terminé. Le pod quiz s'ouvre
   quand tous les cours du niveau sont terminés. Le niveau suivant s'ouvre quand le quiz
@@ -35,7 +42,7 @@ Parcours, en attendant que le Parcours la remplace pour de bon. iOS uniquement p
 | Fichier | Rôle |
 |---|---|
 | `Models/LearningPath.swift` | Règles (`LearningPathRules`), nœuds et niveaux (`PathNode`, `PathLevel`, `LearningPathSnapshot`), moteur qui dérive l'état du chemin de la progression (`LearningPathEngine`), tirage du quiz (`PathQuizBuilder`), mémoire de ce que l'utilisateur a déjà vu (`LearningPathSeenStore`, UserDefaults, non synchronisé). |
-| `Views/Path/LearningPathView.swift` | L'onglet : en-tête (niveau en cours, bouton Collections), scroll des niveaux, gestion des taps, toasts, séquence d'animations de révélation, auto-scroll. |
+| `Views/Path/LearningPathView.swift` | L'onglet : barre du haut qui se transforme, scroll des niveaux, gestion des taps, toasts, séquence d'animations de révélation, auto-scroll ; `PathLevelBannerHost` (position de la bannière sous la barre). |
 | `Views/Path/PathNodeViews.swift` | Géométrie du chemin (`PathLayout`), palette (`PathPalette`), pods 3D (`PathPodPressStyle`, `PathPodFace`, `PathQuizPodFace`), bulle, halo, secousse, connecteurs, bannière de niveau. |
 | `Views/Path/PathQuizView.swift` | Écran du quiz de niveau : règles, session, résultat réussi/raté, XP, rang. |
 | `Views/Path/QuizQuestionPane.swift` | Une question avec ses réponses et sa barre de feedback, tous types de questions. Même interaction que `QuizView` / `TrainingView`, réutilisable. |
@@ -58,6 +65,12 @@ Parcours, en attendant que le Parcours la remplace pour de bon. iOS uniquement p
 - Un cours retiré d'une langue (`ContentCatalog.withheldCourseIds`) disparaît aussi du
   niveau : le quiz ne tire que dans les cours visibles.
 - Le pod quiz d'un niveau réussi reste jouable (« Toujours au niveau »), sans nouvelle XP.
+- **Animations en boucle** (bulle « Commencer », halo) : toujours via `phaseAnimator`, jamais
+  `withAnimation(.repeatForever)` dans `onAppear`. Cette dernière forme « fuit » hors de la vue
+  dans une `LazyVStack` et fait osciller toute la page (bug constaté en TestFlight le 28/09).
+- La détection « bannière passée sous la barre » se fait dans `PathLevelBannerHost` avec
+  `onGeometryChange` dans l'espace de coordonnées du scroll ; seule la traversée du seuil
+  remonte à la page (pas de re-rendu à chaque frame), le rétrécissement reste local à la bannière.
 
 ## Suite envisagée
 
