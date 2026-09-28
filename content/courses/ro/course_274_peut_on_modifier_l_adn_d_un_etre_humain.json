@@ -1,0 +1,159 @@
+{
+  "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain",
+  "title": "Putem modifica ADN-ul unui om?",
+  "subtitle": "Foarfecele CRISPR",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Din 2012, niște „foarfece moleculare” împrumutate de la bacterii pot tăia ADN-ul exact unde vrem. Primele vindecări, erori posibile și bebeluși la comandă: până unde vom merge?",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "genetics_lab_pipette_dna_samples_gloved_hands",
+    "ratio": "4:3",
+    "hook": "Și dacă ai putea corecta o literă din ADN-ul tău ca pe o greșeală de tipar?"
+  },
+  "sections": [
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Păr, ochi, culoarea pielii, siluetă: suntem cu toții diferiți. Trăsăturile astea țin de moștenire: fiecare [[genă]] e un segment de ADN primit de la părinții noștri biologici. Contează și mediul, desigur: ce mâncăm, oamenii cu care ne vedem, ce credem. Dar genele le luăm ca pe un dat. Ne-am dori uneori să fim mai înalți sau mai slabi, dar trăim cu ele fără să ne gândim prea mult."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce ai schimba dacă ți-ai putea retușa ADN-ul? Întrebarea nu mai e teoretică. În **2012**, o biochimistă americană, **Jennifer Doudna**, și o microbiologă franceză, **Emmanuelle Charpentier**, pun la punct un mod de a programa o proteină care taie ADN-ul. De acum pot scoate o genă nedorită și deci, în teorie, pot modifica ADN-ul unui om."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p1",
+      "title": "CRISPR, foarfece împrumutate de la bacterii",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[CRISPR]] nu e singura unealtă care poate modifica ADN-ul, dar e cea mai celebră. Principiul lui a fost observat mai întâi la microbi. Ca să se apere, o bacterie recunoaște ADN-ul virusului care o atacă și îl taie în bucăți. Pentru asta folosește segmente de ADN numite CRISPR și o enzimă numită **Cas**, care joacă rolul foarfecelor."
+        },
+        {
+          "type": "image",
+          "asset": "emmanuelle_charpentier_jennifer_doudna_crispr_pioneers",
+          "ratio": "16:9",
+          "caption": "Emmanuelle Charpentier și Jennifer Doudna, cele două cercetătoare care au transformat această apărare a bacteriilor într-o unealtă."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oamenii de știință au deturnat acest sistem natural de apărare. În loc să țintească un virus, ei ghidează enzima spre un loc precis din ADN-ul unei persoane. Acolo, ea taie, iar o modificare voită devine posibilă. Uneori gena vizată e pur și simplu dezactivată. Alteori i se schimbă câteva litere. Alteori e înlocuită cu totul."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p2",
+      "title": "Primele vindecări: anemia falciformă și talasemia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Posibilitatea de a edita ADN-ul deschide calea spre tratarea multor boli genetice. ADN-ul nostru se scrie cu **patru baze**, A, T, C și G. Șirul lor formează [[genomul]] nostru, planul după care e construit corpul. O singură greșeală în acest text poate fi de ajuns ca să declanșeze o boală, iar corectarea ei poate, în principiu, s-o vindece."
+        },
+        {
+          "type": "image",
+          "asset": "sickle_cell_red_blood_cells_micrograph",
+          "ratio": "3:2",
+          "caption": "Secțiune de ficat de la un bolnav de anemie falciformă, văzută la microscop: prima boală tratată cu CRISPR."
+        },
+        {
+          "type": "paragraph",
+          "text": "În **2023**, Regatul Unit devine prima țară care autorizează un medicament bazat pe CRISPR. El țintește două boli ereditare ale sângelui, [[anemia falciformă]] și beta-talasemia. Tratamentul modifică celulele care fabrică sângele, ca să producă mai multă [[hemoglobină fetală]], o formă de hemoglobină produsă în mod normal înainte de naștere."
+        },
+        {
+          "type": "funFact",
+          "text": "O greșeală de tipar poate ucide. O singură literă greșită în ADN, de pildă un T în loc de un C, e uneori de ajuns ca să provoace o boală genetică mortală. Punerea literei corecte la loc ar putea, în teorie, s-o vindece."
+        },
+        {
+          "type": "paragraph",
+          "text": "Și acesta e doar începutul. Studii clinice testează azi CRISPR împotriva cancerelor, tulburărilor de metabolism, bolilor autoimune, bolilor cardiovasculare sau distrofiilor musculare. Lista e lungă. Vor ajunge oare bolile genetice curând de domeniul trecutului?"
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p3",
+      "title": "De ce nu vom vindeca totul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nu e chiar atât de simplu. Mai întâi, felul în care se exprimă o genă nu depinde doar de moștenirea primită de la părinți: o influențează și mediul. Apoi, o boală nu e neapărat opera unei singure gene defecte. Pot fi implicate mai multe gene, iar reparația devine atunci mult mai complicată."
+        },
+        {
+          "type": "paragraph",
+          "text": "Chiar și CRISPR poate greși. Se întâmplă ca foarfecele să taie în locul greșit sau ca cele două capete tăiate să nu se sudeze corect la loc. ADN-ul alterat poate crea probleme noi fără s-o rezolve pe prima. Cu toate acestea, medicina face pași mari spre eliminarea unora dintre cele mai grave boli genetice."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p4",
+      "title": "Bebeluși la comandă: unde tragem linia?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Toată lumea vede rostul tratării bolilor invalidante sau mortale. Dar unde trebuie să tragă știința linia? Ar trebui folosită ca să creeze „omul perfect”? Întrebarea a devenit mult mai presantă de când știm să tăiem ADN-ul după voie."
+        },
+        {
+          "type": "image",
+          "asset": "ivf_embryo_icsi_microinjection_micrograph",
+          "ratio": "16:9",
+          "caption": "Un ovocit uman ținut cu o pipetă în timpul unei microinjecții în laborator."
+        },
+        {
+          "type": "funFact",
+          "text": "Expresia „bebeluș la comandă” nu s-a născut odată cu CRISPR. E folosită de când a apărut [[fertilizarea in vitro]], care permite conceperea unui embrion în laborator înainte de a fi implantat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prin [[editarea germinală]] se modifică ADN-ul celulelor reproducătoare: spermatozoizi, ovule sau embrioni în primele stadii. Diferența față de un tratament obișnuit e uriașă: modificările se transmit apoi din generație în generație. Astăzi, editarea germinală e interzisă în toate țările. Dar pentru cât timp? Când va trece editarea genetică în scop medical la linii genetice la cerere?"
+        },
+        {
+          "type": "takeaway",
+          "text": "Din 2012, foarfecele CRISPR permit corectarea ADN-ului uman, cu primele vindecări autorizate în 2023, dar erorile rămân posibile, multe boli implică mai multe gene, iar editarea germinală rămâne interzisă peste tot."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "National Science Foundation, « CRISPR: A Biotech Breakthrough », NSF Impacts.",
+      "url": "https://www.nsf.gov/impacts/crispr"
+    },
+    {
+      "text": "National Cancer Institute, « How CRISPR Is Changing Cancer Research and Treatment », Cancer Currents Blog, 2020.",
+      "url": "https://www.cancer.gov/news-events/cancer-currents-blog/2020/crispr-cancer-research-treatment"
+    },
+    {
+      "text": "CRISPR Medicine News, « Clinical Trials », liste des essais cliniques fondés sur CRISPR.",
+      "url": "https://crisprmedicinenews.com/clinical-trials/"
+    },
+    {
+      "text": "House of Lords Library, « World's first personalised DNA editing treatment », UK Parliament.",
+      "url": "https://lordslibrary.parliament.uk/worlds-first-personalised-dna-editing-treatment/"
+    },
+    {
+      "text": "« The gene editor CRISPR won't fully fix sick people anytime soon. Here's why », Science, 2016.",
+      "url": "https://www.science.org/content/article/gene-editor-crispr-won-t-fully-fix-sick-people-anytime-soon-here-s-why"
+    },
+    {
+      "text": "Boston Children's Hospital, « CRISPR gene editing », Answers.",
+      "url": "https://answers.childrenshospital.org/crispr-gene-editing/"
+    },
+    {
+      "text": "« The Guardian view on gene-edited humans: darker uses must be acknowledged alongside medical ones », The Guardian, 5 juillet 2026.",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/05/the-guardian-view-on-gene-edited-humans-darker-uses-must-be-acknowledged-alongside-medical-ones"
+    },
+    {
+      "text": "K. E. Ormond et al., « Human Germline Genome Editing », American Journal of Human Genetics, vol. 101, 2017.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5544380/"
+    }
+  ]
+}

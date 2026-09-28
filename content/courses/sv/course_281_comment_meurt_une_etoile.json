@@ -1,0 +1,128 @@
+{
+  "id": "course_281_comment_meurt_une_etoile",
+  "title": "Hur dör en stjärna?",
+  "subtitle": "Röd jätte eller supernova",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "I miljarder år balanserar en stjärna mellan gravitationen och fusionen i sitt inre. När bränslet tar slut sväller den, kollapsar eller exploderar, och hur det slutar beror på en enda sak: dess massa.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "crab_nebula_supernova_remnant_hubble",
+    "ratio": "4:3",
+    "hook": "En stjärna kan slockna i stillhet eller explodera med ofattbar kraft: allt avgörs av dess massa."
+  },
+  "sections": [
+    {
+      "id": "course_281_comment_meurt_une_etoile_intro",
+      "title": "Inledning",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vad är det egentligen som får en stjärna att dö? Den börjar dö när den inte längre orkar stå emot sin egen gravitation. Under större delen av sitt liv drar gravitationen stjärnans materia inåt mot mitten. Samtidigt skapar energin som bildas i dess kärna ett tryck som pressar utåt. De två krafterna tar ut varandra, och stjärnan förblir stabil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Energin kommer från [[kärnfusion]]: vätekärnor slås ihop till helium och frigör enorma mängder energi. Jämvikten kan hålla i miljoner, miljarder eller till och med tusentals miljarder år. Allt beror på massan. Små stjärnor gör av med sitt bränsle långsamt, medan tunga stjärnor bränner det mycket snabbare. En dag bryts jämvikten. Vad som händer sedan beror på stjärnans massa."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p1",
+      "title": "Stjärnan sväller till en röd jätte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Under större delen av sitt liv omvandlar stjärnan vätet i sin kärna, det centrala området, till helium. När vätet börjar ta slut saktar fusionen in i mitten. Kärnan drar ihop sig och blir hetare. Runt den fortsätter ett lager väte att fusionera och frigöra energi. Av den kraften sväller stjärnans yttre lager enormt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultatet blir en väldig [[röd jätte]]: en stjärna som är mycket större än förut, med en kallare yta. En döende stjärna börjar alltså med att växa, i stället för att bara slockna. Solen väntas gå in i den fasen om ungefär **5 miljarder år**."
+        },
+        {
+          "type": "funFact",
+          "text": "Som röd jätte kan solen bli så stor att den slukar Merkurius och Venus. Exakt vad som händer med jorden är däremot osäkert."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p2",
+      "title": "En vit dvärg stor som jorden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En stjärna som solen kan inte svälla i all oändlighet. När den åldras förlorar den sina yttre lager, som driver ut i rymden. Gasen sprids och bildar ett lysande moln, en så kallad [[planetarisk nebulosa]]. Kvar i mitten blir en liten [[vit dvärg]]: stjärnans heta och täta kärna, som blottas när de yttre lagren har försvunnit."
+        },
+        {
+          "type": "image",
+          "asset": "helix_nebula_planetary_nebula_white_dwarf_hubble",
+          "ratio": "1:1",
+          "caption": "Helixnebulosan: gasen som en döende stjärna kastat ut, med den vita dvärgen synlig i mitten."
+        },
+        {
+          "type": "paragraph",
+          "text": "En vit dvärg är inte större än **jorden**, men den rymmer fortfarande en stor del av den ursprungliga stjärnans massa. Fusionen har upphört: den producerar ingen energi längre. Att den lyser beror bara på att den fortfarande är extremt het. Under en ofattbart lång tid svalnar den och bleknar sakta."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p3",
+      "title": "Supernova, neutronstjärna eller svart hål",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En mycket tyngre stjärna stannar inte där. Den fortsätter att slå ihop lätta grundämnen till tyngre: helium blir kol, och senare reaktioner skapar ännu tyngre ämnen. Så småningom bildas en kärna rik på **järn**. Men med järn kan fusionen inte längre ge den energi som behövs för att hålla stjärnan uppe mot gravitationen. Kärnan kollapsar på ett ögonblick."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kollapsen kan utlösa en jättelik [[supernova]], en explosion som slungar ut en stor del av stjärnan i rymden. Den kollapsade kärnan blir dock kvar. Om den inte är för tung blir den en extremt tät [[neutronstjärna]], inte större än en stad. Om den är tung nog fortsätter gravitationen att krossa den tills det bildas ett så kallat [[svart hål]], där dragningskraften är så stark att inte ens ljus kan ta sig ut."
+        },
+        {
+          "type": "image",
+          "asset": "m87_black_hole_event_horizon_telescope_2019",
+          "ratio": "16:9",
+          "caption": "Det svarta hålet i M87: den första bilden från 2019 (till vänster) och en skarpare version framtagen med algoritmen PRIMO (2023)."
+        }
+      ]
+    },
+    {
+      "id": "course_281_comment_meurt_une_etoile_p4",
+      "title": "Vi är gjorda av stjärnstoft",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En döende stjärna försvinner inte bara. Den ger tillbaka en del av sin materia till rymden, laddad med de grundämnen den har tillverkat under sitt liv. Med tiden kan den materian bli en del av nya stjärnor, planeter och andra världar."
+        },
+        {
+          "type": "image",
+          "asset": "pillars_of_creation_eagle_nebula_jwst_2022",
+          "ratio": "2:3",
+          "caption": "Skapelsens pelare, sedda med James Webb-teleskopet 2022: här föds nya stjärnor."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Kol** är det bästa exemplet. Det är nödvändigt för livet på jorden, också i våra egna kroppar. Men det mesta av det kolet tillverkades i generationer av stjärnor som för länge sedan är borta. Därför säger man ibland att vi är gjorda av stjärnstoft. Uttrycket är poetiskt, men vetenskapen bakom är verklig. En stjärnas död är alltså också en början: dess materia kan en dag bilda en ny stjärna, en ny planet eller till och med en levande värld."
+        },
+        {
+          "type": "takeaway",
+          "text": "Utan fusion ger en stjärna efter för gravitationen. Små stjärnor slocknar som vita dvärgar, tunga exploderar som supernovor och lämnar kvar en neutronstjärna eller ett svart hål, och deras utspridda materia föder framtidens stjärnor, planeter och levande varelser."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "A. Fraknoi, D. Morrison et S. C. Wolff, Astronomy 2e, OpenStax, 2022, p. 541."
+    },
+    {
+      "text": "NASA Science, « Types of Stars: White Dwarfs »."
+    },
+    {
+      "text": "S. Frazier, « Why the Sun Won't Become a Black Hole », NASA Goddard Space Flight Center, 2019."
+    }
+  ]
+}

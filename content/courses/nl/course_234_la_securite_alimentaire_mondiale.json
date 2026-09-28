@@ -1,14 +1,15 @@
 {
   "id": "course_234_la_securite_alimentaire_mondiale",
-  "title": "Waarom lijden 800 miljoen mensen nog honger?",
-  "subtitle": "800 miljoen mensen",
+  "title": "Hoe voed je acht miljard mensen?",
+  "subtitle": "Beter produceren, minder verspillen",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "De aarde produceert genoeg voedsel voor iedereen. Waarom lijden dan nog **800 miljoen mensen** honger?",
+  "description": "De aarde produceert meer voedsel dan ooit, en toch neemt de honger toe. Het probleem is niet de hoeveelheid, maar de manier waarop we produceren, vervoeren en verspillen wat we eten.",
+  "author": "kate-waddams",
   "hero": {
-    "image": "la_securite_alimentaire_mondiale",
-    "ratio": "16:9",
-    "hook": "De honger van 800 miljoen mensen is geen probleem van voedsel, maar van verdeling."
+    "image": "combine_harvester_wheat_field_aerial",
+    "ratio": "4:3",
+    "hook": "We produceren genoeg om iedereen te voeden. Het probleem is wat we met dat voedsel doen."
   },
   "sections": [
     {
@@ -18,95 +19,120 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vandaag lijden ongeveer **800 miljoen mensen** honger in de wereld, één op de tien. Dat cijfer is des te vreemder omdat de mensheid nooit zoveel voedsel heeft geproduceerd: statistisch is er ruim genoeg te eten voor iedereen."
+          "text": "Nu honger en [[ondervoeding]] wereldwijd toenemen, zou je denken dat de aarde niet meer genoeg produceert voor een groeiende bevolking. Dat klopt niet. Sinds de jaren **1960** groeit de landbouwproductie sneller dan het aantal mensen. Wat misgaat, is de manier waarop dat voedsel wordt geproduceerd en verdeeld."
         },
         {
           "type": "paragraph",
-          "text": "Honger is dus geen kwestie van hoeveelheid, maar van verdeling. Wereldwijde voedselzekerheid begrijpen, is begrijpen waarom overvloed en hongersnood op dezelfde planeet kunnen bestaan."
+          "text": "De cijfers spreken elkaar tegen. **7%** van de kinderen onder de vijf jaar is ondervoed, terwijl **40%** van de volwassenen overgewicht heeft. En slecht eten doodt vandaag meer volwassenen dan tabak. Acht miljard mensen voeden is allesbehalve eenvoudig: de [[toeleveringsketen]] heeft gaten, we verspillen enorm veel, en veel landbouwmethoden zijn niet langer houdbaar."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p1",
-      "title": "De geografie van de honger",
+      "title": "Boerderijen maken voedsel van zonlicht",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Volgens de **[[FAO]]**, het VN-agentschap voor voeding, trof chronische ondervoeding in 2024 nog ongeveer 800 miljoen mensen. Dat wereldcijfer verbergt heel verschillende realiteiten. De zwaarst getroffen zones liggen in Afrika ten zuiden van de Sahara, waar meer dan een kwart van de bevolking geregeld voedsel tekortkomt, en in Zuid-Azië."
+          "text": "Een boerderij vangt zonlicht op en zet het om in voedsel. Dat werk doen de planten: als gewas leveren ze eetbaar voedsel op. Grazend vee maakt van gras vlees en melk. Toch hebben boerderijen een slechte naam: uitgeputte bodems, vervuiling, ontbossing, dieren die met mensen concurreren om voedsel en ruimte."
         },
         {
           "type": "image",
-          "asset": "famine_sub_saharan_africa_malnutrition_child",
-          "ratio": "auto",
-          "caption": "Honger treft nog honderden miljoenen mensen, vooral in Afrika ten zuiden van de Sahara"
+          "asset": "dairy_cows_grazing_green_pasture",
+          "ratio": "3:2",
+          "caption": "Koeien in de wei: gras dat melk en vlees wordt."
         },
         {
           "type": "paragraph",
-          "text": "Er bestaan verschillende vormen van voedselnood. **Ondervoeding** is een tekort aan calorieën. **Tekorten aan micronutriënten**, vaak „verborgen honger” genoemd, treffen 2 miljard mensen die vitamines of essentiële mineralen missen, met gevolgen voor groei of gezondheid. **Malnutritie** omvat, verrassend genoeg, ook obesitas: in veel ontwikkelingslanden vervangen inwoners verse producten langzaam door bewerkte voeding, rijk aan calorieën maar arm aan voedingsstoffen."
+          "text": "Die problemen komen deels voort uit landbouwmethoden die niet duurzaam zijn. Dat moet veranderen. Een hardnekkig idee is dat je steeds meer in de productie moet stoppen om steeds meer te oogsten. Dat is onjuist. Meer produceren vraagt niet per se meer pesticiden, kunstmest, grond of arbeid. Het kan zelfs het omgekeerde betekenen."
         },
         {
-          "type": "funFact",
-          "text": "Als je de wereldwijde voedselverspilling met slechts 25% zou verminderen, zou je in theorie alle 800 miljoen mensen kunnen voeden die nu honger lijden."
+          "type": "paragraph",
+          "text": "Alles draait om één woord: efficiëntie. Met efficiëntere landbouwmethoden kun je meer voedsel voor miljarden mensen produceren met minder [[productiemiddelen]], dus minder kunstmest, pesticiden, energie en arbeid, en op minder grond."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p2",
-      "title": "De paradox van overvloed en verspilling",
+      "title": "Een derde van het voedsel komt nooit op het bord",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De wereld produceert nu het equivalent van 2.800 kilocalorieën per persoon per dag, ruim genoeg om honger uit te wissen. Het echte probleem is dus geen tekort, maar **toegang**: de armste bevolkingen hebben simpelweg geen geld om voedsel te kopen waarvan de prijs op de wereldmarkten blijft schommelen."
+          "text": "Genoeg produceren is maar de helft van het werk. Het voedsel moet ook nog bij de consument komen, en dat is een heel andere uitdaging. Het cijfer is duizelingwekkend: **een derde** van het voedsel dat wereldwijd wordt geproduceerd, gaat verloren of wordt verspild. Dat is **1,3 miljard ton** per jaar."
         },
         {
-          "type": "paragraph",
-          "text": "De andere kant van die paradox is de **verspilling**. Ongeveer een derde van de wereldproductie, 1,3 miljard ton voedsel, gaat elk jaar verloren. In arme landen komen de verliezen vroeg: te weinig opslag, geen koelcellen, slechte wegen. In rijke landen gebeurt de verspilling later, bij de distributie en de consumptie."
+          "type": "image",
+          "asset": "discarded_fruit_vegetables_food_waste_dumpster",
+          "ratio": "3:2",
+          "caption": "Amerikaanse campagne tegen verspilling uit de Eerste Wereldoorlog: kinderen leren volwassenen groente en fruit inmaken."
         },
         {
           "type": "funFact",
-          "text": "Sinds de jaren 2010 doden obesitas en ziekten door overgewicht elk jaar meer mensen in de wereld dan ondervoeding, een historisch keerpunt voor de wereldwijde volksgezondheid."
+          "text": "[[Voedselverspilling]] kost meer dan je zou denken. Wie een appel weggooit, gooit ook de tijd, de energie en het geld weg die nodig waren om hem te laten groeien, te oogsten en te vervoeren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Door de [[globalisering]] van de landbouw, de handel tussen continenten en open markten zijn landen niet meer afhankelijk van hun eigen oogst om hun bevolking te voeden. Sommige producten zijn niet langer seizoensgebonden: ze komen van overal ter wereld. Maar die ruimere toegang maakt de toeleveringsketens langer, en hoe langer een keten, hoe meer zwakke schakels ze heeft."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p3",
-      "title": "Wanneer voedsel een geopolitiek wapen wordt",
+      "title": "Meer produceren met minder",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Voedselzekerheid is ook een geopolitieke kwestie. Veel landen hangen af van de export van een paar grote landbouwmachten, en worden zo kwetsbaar bij de kleinste blokkade. Oekraïne en Rusland verzorgen samen bijna 30% van de wereldwijde tarwe-export. Als die stroom stopt, schieten de prijzen omhoog op de **[[termijnmarkt]]** van Chicago, waar toekomstige oogsten worden verhandeld, en glijden landen als Egypte of Libanon in een zware sociale crisis."
+          "text": "Steeds meer productiemiddelen inzetten om de vraag bij te houden, is duurzaam noch realistisch. Boeren moeten betere methoden gebruiken, en de bevolkingsgroei is niet het enige wat hen daartoe dwingt. Ze merken de klimaatverandering nu al: grillig en onvoorspelbaar weer dwingt hen om buiten de gebaande paden te denken."
         },
         {
           "type": "paragraph",
-          "text": "Die kwetsbaarheid komt ook uit een keuze uit de jaren 1960: de **[[Groene Revolutie]]**. Die golf van nieuwe landbouwtechnieken verhoogde de opbrengsten sterk, maar verkleinde ook de diversiteit van gewassen en maakte boeren afhankelijk van kunstmest. Gevolg: elke stijging van de olieprijs slaat meteen door op de prijs van het brood."
+          "text": "De bodem gezonder maken, dieren beter laten presteren, klimaatbestendige gewassen planten, aan [[precisielandbouw]] doen: allemaal manieren om meer uit minder te halen. In plaats van kunstmest over een heel veld te strooien, analyseert een robot de bodem direct en geeft alleen de precieze dosis die dat stuk grond nodig heeft. Het resultaat: lagere kosten, minder milieuschade en betere opbrengsten."
+        },
+        {
+          "type": "image",
+          "asset": "agricultural_drone_precision_farming_field",
+          "ratio": "4:3",
+          "caption": "Luchtfoto van een graanveld met trekkersporen bij Dülmen (Duitsland), in 2024."
         },
         {
           "type": "paragraph",
-          "text": "Het begrip **food power** wijst precies op het bewuste gebruik van voedselexport als diplomatieke druk, of zelfs als sanctie tegen een vijandig land."
+          "text": "Zulke technologie is een deel van de oplossing en krijgt steeds meer aandacht in het landbouwonderzoek. Om acht miljard mensen te voeden, heb je niet per se meer grond, meer dieren of meer hectares gewassen nodig. Je moet meer halen uit wat we al gebruiken."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p4",
-      "title": "10 miljard mensen voeden zonder de planeet uit te putten",
+      "title": "Een gedeeld probleem, van boer tot consument",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tegen 2050 zou de wereldbevolking 10 miljard inwoners moeten bereiken. Klimaatverandering bedreigt de opbrengsten al door droogtes en overstromingen te vermenigvuldigen, en verplaatst de bebouwbare grond. Intensieve landbouw put ook de bodems en de ondergrondse watervoorraden uit, die soms sneller leeglopen dan ze zich vullen."
+          "text": "Boeren krijgen vaak de schuld. Toch zijn zij het die onze kinderen voeden, en ze zorgen ook voor het platteland en het milieu. Maar de wereld voeden is niet alleen hun taak: daar komt veel meer bij kijken dan voedsel verbouwen."
         },
         {
           "type": "paragraph",
-          "text": "Een van de pistes voor de toekomst heet **[[agro-ecologie]]**: produceren door te steunen op natuurlijke cycli, zoals compost of vruchtwisseling, in plaats van ze met chemicaliën te bestrijden. De inzet is voor elk mens een blijvende toegang tot gezond voedsel te garanderen, zonder de planeet verder uit te putten."
+          "text": "Het vraagt van ons duurzame keuzes: gezondere en verantwoord geproduceerde producten kiezen, en alleen kopen wat we echt opeten. De hele voedselketen, verwerkers, verpakkers, vervoerders, verkopers en wij als consumenten, kan ook haar gewoonten veranderen. De toekomst van ons voedsel is een gedeeld probleem. Wat acht miljard mensen eten, vormt de hele planeet, en jij hoort daarbij."
         },
         {
           "type": "takeaway",
-          "text": "De aarde produceert genoeg calorieën om iedereen te voeden. De honger van 800 miljoen mensen komt dus uit een probleem van toegang, verspilling en geopolitieke crises, verergerd door klimaatverandering."
+          "text": "De aarde produceert genoeg voor iedereen: acht miljard mensen voeden betekent minder verspillen, meer produceren met minder productiemiddelen en grond, en andere keuzes maken, van boer tot bord."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "United Nations, Department of Economic and Social Affairs, « Can we feed the billions? ».",
+      "url": "https://www.un.org/en/desa/can-we-feed-billions"
+    },
+    {
+      "text": "H. Ritchie, « No, growing more food does not mean we always need more and more inputs », Sustainability by Numbers.",
+      "url": "https://hannahritchie.substack.com/p/agricultural-total-factor-productivity"
+    },
+    {
+      "text": "J. Gustavsson, C. Cederberg, U. Sonesson, R. van Otterdijk et A. Meybeck, Global Food Losses and Food Waste: Extent, Causes and Prevention, FAO, Rome, 2011."
     }
   ]
 }

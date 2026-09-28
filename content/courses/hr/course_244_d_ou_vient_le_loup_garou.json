@@ -1,0 +1,135 @@
+{
+  "id": "course_244_d_ou_vient_le_loup_garou",
+  "title": "Odakle dolazi vukodlak?",
+  "subtitle": "Od Likaona do Hollywooda",
+  "subject": "mythologie",
+  "subcategory": "Legends & creatures",
+  "description": "Pun mjesec, ugriz, srebrni metak: filmski vukodlak novijeg je datuma. Najstarije priče govore o kralju kojeg je kaznio bog i o plemiću kojeg je izdala žena.",
+  "author": "angela-bouma",
+  "hero": {
+    "image": "grey_wolf_snowy_forest_dusk",
+    "ratio": "4:3",
+    "hook": "Strah je star. Čudovište pak u svakom dobu mijenja lice."
+  },
+  "sections": [
+    {
+      "id": "course_244_d_ou_vient_le_loup_garou_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pun mjesec, čovjek kojem niče krzno i koji noću odlazi u lov, gonjen glađu koju ne može obuzdati. Da bi postao **vukodlak**, mora ga ugristi drugi vukodlak, katkad samo za noći punog mjeseca. Tu sliku svi poznajemo. A ipak je vrlo nova."
+        },
+        {
+          "type": "paragraph",
+          "text": "Izvorna priča mnogo je čudnija. Jedno od najstarijih svjedočanstava ostavio je grčki povjesničar [[Herodot]] u **5. stoljeću** pr. Kr. On opisuje narod zvan [[Neuri]], nastanjen sjeverno od **Crnog mora**: svaki se od njih, kako su mu pričali, nekoliko dana godišnje pretvara u vuka, a zatim ponovno poprima ljudski oblik. Herodot bilježi priču, ali napominje da u nju ne vjeruje ni riječi."
+        }
+      ]
+    },
+    {
+      "id": "course_244_d_ou_vient_le_loup_garou_p1",
+      "title": "Likaon, kralj pretvoren u vuka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Priča koja se najčešće povezuje s vukodlakom jest ona o kralju po imenu [[Likaon]], vladaru pokrajine [[Arkadija]] u Grčkoj, kako je pripovijeda rimski pjesnik Ovidije u *Metamorfozama*. **Jupiter**, kralj bogova, dolazi u Arkadiju prerušen u običnog putnika. Likaon sumnja da mu je gost bog i odluči ga iskušati: ubije taoca, skuha tijelo i posluži ga za stolom. Ako je stranac doista božanski, znat će što jede."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jupiter otkriva zločin i kažnjava kralja: pretvara ga u vuka. Njegova okrutnost napokon dobiva oblik po svojoj mjeri. To je jedna od najstarijih priča o vukodlaku i nimalo ne nalikuje našoj. Likaona nitko nije ugrizao. Nema punog mjeseca, nema srebra. Postaje vuk zato što ga **kažnjava bog**."
+        },
+        {
+          "type": "funFact",
+          "text": "Engleski usklik „By Jove!” star je najmanje 450 godina: najraniji poznati primjer nalazi se u jednoj drami iz 1575. „Jove” je staro ime za Jupitera."
+        }
+      ]
+    },
+    {
+      "id": "course_244_d_ou_vient_le_loup_garou_p2",
+      "title": "Devet godina u vučjoj koži",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Drugi antički pisci opisuju preobrazbu koja nije konačna. Čovjek može živjeti kao vuk **devet ili deset godina**, ovisno o tome tko priča, a zatim ponovno postati čovjek, pod jednim uvjetom: da nikad nije okusio ljudsko meso. Takav slučaj nekog **Demeneta** bilježi [[Plinije Stariji]], rimski prirodoslovac iz 1. stoljeća. Nema mjesečne preobrazbe ni punog mjeseca: samo dugo izgnanstvo, uz mogućnost povratka kući."
+        },
+        {
+          "type": "paragraph",
+          "text": "To su književne priče, a ne dokaz da je netko doista proveo **devet godina** u vučjoj koži. Prema njima valja zadržati istu zadršku koju je Herodot stoljećima ranije imao prema Neurima. Pravi povijesni podatak leži drugdje: ne u tome da se to dogodilo, nego u tome što su antički pisci, naraštaj za naraštajem, tu priču pričali jedni drugima."
+        }
+      ]
+    },
+    {
+      "id": "course_244_d_ou_vient_le_loup_garou_p3",
+      "title": "Bisclavret, časni vukodlak",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U **12. stoljeću** pjesnikinja [[Marija Francuska]] piše jednu od najslavnijih priča o vukodlaku: [[Bisclavret]]. Junak je plemić koji se redovito pretvara u vuka. Žena mu otkrije tajnu i naposljetku mu ukrade odjeću koja mu treba da bi se vratio u ljudski oblik. Bez nje ostaje zarobljen u vučjoj koži."
+        },
+        {
+          "type": "paragraph",
+          "text": "U tom vukodlaku ima nečeg neobičnog: on **nije pravo čudovište**. Bisclavret pod zvjerskom pojavom čuva razum i poštenje. Priča govori manje o lovu na čudovište, a više o identitetu, braku i izdaji. Izgled vara: čovjek koji nalikuje vuku može se ponašati časno, a čovjek sasvim običnog izgleda može biti okrutan."
+        }
+      ]
+    },
+    {
+      "id": "course_244_d_ou_vient_le_loup_garou_p4",
+      "title": "Strah ispod krzna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vukodlak se mijenja jer se mijenjaju strahovi oko njega. Antička Grčka kažnjava Likaona božjim prokletstvom. Srednjovjekovna Francuska pita se što zapravo čini čudovište. Ranonovovjekovna Europa uklapa ga u **vještičarenje** i strah od đavla: isto doba koje proizvodi svoje optužene vještice i svoje vampire koji piju krv."
+        },
+        {
+          "type": "image",
+          "asset": "werewolf_woodcut_lucas_cranach_elder_1512",
+          "ratio": "3:4",
+          "caption": "„Vukodlak” Lucasa Cranacha Starijeg, oko 1512.: čovjek na sve četiri napada selo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hollywood mu napokon daje **pun mjesec** i **srebrni metak**. To više nije vjerski strah, nego priča sazdana za ekran i prodana kao zabava. Vukodlak dakle nema ni jedan oblik ni jedno podrijetlo. Poput vještice i vampira, on dokazuje da svako doba izmišlja strah koji mu treba, a zatim o njemu sebi priča priču."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "5. st. pr. Kr.",
+              "title": "Herodotovi Neuri",
+              "detail": "Narod koji se navodno pretvara u vukove nekoliko dana godišnje."
+            },
+            {
+              "date": "1. stoljeće",
+              "title": "Likaon i Demenet",
+              "detail": "Ovidije i Plinije Stariji zapisuju priču o vukodlaku."
+            },
+            {
+              "date": "12. stoljeće",
+              "title": "Bisclavret",
+              "detail": "Marija Francuska piše o časnom vukodlaku."
+            },
+            {
+              "date": "oko 1512.",
+              "title": "Cranachov drvorez",
+              "detail": "Vukodlak se pridružuje strahu od vještica."
+            },
+            {
+              "date": "20. stoljeće",
+              "title": "Hollywood",
+              "detail": "Pun mjesec i srebrni metak."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Od kralja kojeg je kaznio Jupiter do filmskog čudovišta, vukodlak nema jedno podrijetlo, nego mnoga: svako mu doba posuđuje strah o kojem treba pričati."
+        }
+      ]
+    }
+  ]
+}

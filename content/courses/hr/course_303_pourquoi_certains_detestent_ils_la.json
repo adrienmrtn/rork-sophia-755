@@ -1,0 +1,123 @@
+{
+  "id": "course_303_pourquoi_certains_detestent_ils_la",
+  "title": "Zašto neki ljudi mrze korijandar?",
+  "subtitle": "Okus sapuna",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Dijelu čovječanstva korijandar ima okus sapuna. Krivac je jedno jedino promijenjeno slovo u genu za njuh, a možda i nasljeđe naših predaka.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "fresh_coriander_cilantro_bunch_leaves",
+    "ratio": "4:3",
+    "hook": "Isti list, dva okusa: jednima svježa trava, drugima sapun. Razlika je u samo jednom slovu tvoje DNK."
+  },
+  "sections": [
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Korijandar je jedna od najstarijih i najkorištenijih biljaka na svijetu. Uzgajali su ga već antički Grci i Rimljani, i za kuhinju i za liječenje. Nalazimo ga u južnoj Aziji, u Kini, u Latinskoj Americi, u tisućama recepata."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ipak, neki ga ljudi ne podnose. Dok većina za stolom osjeća svježu travu, oni se kunu da žvaču sapun. To nije ni hir ni stvar navike: odgovor je u njihovu nosu, točnije u njihovim genima."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p1",
+      "title": "Njušni receptori, od nosa do mozga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sve što kušamo ili mirišemo ima kemijski sastav koji mozak mora dešifrirati. Okus i njuh, za koji je znanstveni naziv [[olfakcija]], usko su povezani: velik dio „okusa” nekog jela zapravo prolazi kroz nos, i to dok još žvačemo."
+        },
+        {
+          "type": "image",
+          "asset": "olfactory_nerve_nasal_cavity_gray_anatomy_plate",
+          "ratio": "3:2",
+          "caption": "Presjek nosne sluznice pod mikroskopom: stijenka nosne šupljine sadrži njušne receptore."
+        },
+        {
+          "type": "paragraph",
+          "text": "U nosnoj šupljini nalaze se stanice na kojima su [[njušni receptori]]. Oni prepoznaju molekule iz hrane i pretvaraju ih u signal, koji njušni neuroni prenose do mozga. Svaki se receptor izrađuje prema jednom genu. Ako se taj gen promijeni, mijenja se i receptor, a s njim i okus koji osjećamo. Upravo se to događa s korijandrom."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p2",
+      "title": "OR6A2, gen za okus sapuna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Genetičari su pronašli krivca: to je gen po imenu [[OR6A2]]. On kodira njušni receptor koji reagira na jednu skupinu molekula iz korijandra, a to su [[nezasićeni aldehidi]]. U većine ljudi taj ih receptor prevodi u svjež, travnat miris."
+        },
+        {
+          "type": "image",
+          "asset": "dna_double_helix_nhgri_illustration",
+          "ratio": "2:1",
+          "caption": "Dvostruka uzvojnica DNK: dovoljno je jedno promijenjeno slovo da se promijeni receptor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neki ljudi na tom genu nose [[polimorfizam jednog nukleotida]], ili SNP: razlikuje se samo jedno „slovo” DNK. Ta sićušna promjena mijenja način na koji se gen izražava, pa time i receptor koji nastaje. Receptor i dalje radi: prepoznaje molekulu i šalje signal mozgu. No poruka više nije točna. Umjesto svježe trave mozak čita: sapun."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p3",
+      "title": "Zašto je ta mutacija preživjela?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ta se inačica ne pojavljuje slučajno u pojedincu. Stoljećima se prenosi s roditelja na djecu. Ovisno o dijelu svijeta, nosi je od **4 %** do **20 %** stanovništva. No zašto se takva osobina održala kad je u toliko kuhinja korijandar osnovni sastojak?"
+        },
+        {
+          "type": "image",
+          "asset": "cilantro_lime_mexican_tacos_street_food",
+          "ratio": "3:2",
+          "caption": "Kamion s tacosima u Sjedinjenim Državama: u meksičkoj kuhinji svježi korijandar je osnovni sastojak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Neki evolucijski biolozi nude hipotezu. U drevnom svijetu i neke su otrovne biljke imale okus sapuna. Receptor koji taj okus čini odbojnim mogao je služiti kao mehanizam preživljavanja: odvraćao je naše pretke od opasnog bilja. Bezopasni korijandar bio bi kolateralna žrtva tog znaka za uzbunu."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p4",
+      "title": "Može li se naučiti voljeti korijandar?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dobra vijest za one koji sanjaju o pravom tacosu: mozak se može preodgojiti. Sam receptor neće se promijeniti, ali s vremenom možemo naučiti zanemarivati signal koji šalje mozgu. Metoda stane u jednu riječ: ponavljanje."
+        },
+        {
+          "type": "paragraph",
+          "text": "U praksi se počinje tako da se malo korijandra doda jelu koje već volimo. Sapunasta nota može se i prikriti jakim okusom, limunovim sokom ili octom. Nakon dovoljno iskustava bez neugodnog iznenađenja mozak na kraju prihvati da korijandar nije prijetnja, i gađenje slabi."
+        },
+        {
+          "type": "takeaway",
+          "text": "Okus sapuna u korijandru potječe od inačice gena OR6A2, koju nosi od 4 do 20 % ljudi, ovisno o području: njihov njušni receptor pogrešno čita njegove aldehide, možda zbog drevnog zaštitnog refleksa protiv otrovnih biljaka."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "N. Eriksson, S. Wu, C. B. Do et al., « A genetic variant near olfactory receptor genes influences cilantro preference », Flavour, vol. 1, 2012, art. 22.",
+      "url": "https://doi.org/10.1186/2044-7248-1-22"
+    },
+    {
+      "text": "Academic Path, « Why coriander tastes like soap ».",
+      "url": "https://academicpath.org/why-coriander-tastes-like-soap"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos",
+  "title": "Proč je v našich bateriích kobalt?",
+  "subtitle": "Prvek 27",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Kvůli kobaltu skoro nikdo nekope, a přesto je v baterii každého telefonu. Příběh kovu, který průmysl neumí nahradit, a přesto se ho snaží zbavit.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "cobalt_copper_open_pit_mine_kolwezi_drc",
+    "ratio": "4:3",
+    "hook": "Kov, na kterém závisí elektromobily, se skoro nikdy netěží kvůli němu samotnému."
+  },
+  "sections": [
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kobalt je prvek číslo **27** periodické tabulky, vklíněný mezi železo a nikl. Je v baterii telefonu, který držíš v ruce, v magnetech i ve slitinách tak tvrdých, že vydrží uvnitř leteckého motoru. A kvůli němu skoro nikdo nekope."
+        },
+        {
+          "type": "paragraph",
+          "text": "Asi **99%** světového kobaltu se dostává ze země jako vedlejší produkt: získává se z rud, které se těží kvůli mědi nebo niklu. [[Demokratická republika Kongo]] ho dodává téměř **tři čtvrtiny**, skoro celý z měděných dolů. Nabídka kobaltu tedy nezávisí na poptávce po kobaltu, ale na poptávce po mědi a niklu. Zvláštní způsob, jak hospodařit s kovem, na kterém stojí elektromobily."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p1",
+      "title": "Baterie, která potřebovala kobalt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V roce **1980** v Oxfordu zjistili [[John Goodenough]] a Koiči Mizušima, že oxid lithno-kobaltitý (LiCoO2, zkráceně LCO) funguje jako elektroda, v níž probíhá [[interkalace]]: mezi vrstvy oxidu kobaltu se vsouvají ionty lithia a zase z nich vyklouzávají, aniž by se vrstvy zhroutily. Právě taková [[katoda]] baterii chyběla, tedy jedna z jejích dvou elektrod."
+        },
+        {
+          "type": "image",
+          "asset": "john_goodenough_portrait_lithium_battery_inventor",
+          "ratio": "3:4",
+          "caption": "John Goodenough, který v roce 1980 spolu s Koičim Mizušimou objevil kobaltovou katodu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svět pak čekal víc než deset let. V roce **1991** začalo Sony prodávat první komerční lithium-iontovou baterii a její katodou bylo LCO. Zhruba do roku **2010** se takhle vyráběly skoro všechny lithium-iontové katody. LCO dodnes vládne spotřební elektronice: proto má tvůj telefon v sobě pár gramů kovu, který nikdo neplánoval těžit."
+        },
+        {
+          "type": "funFact",
+          "text": "Kobalt objevil v roce 1735 švédský chemik Georg Brandt, skoro dvě a půl století předtím, než se dostal do našich baterií."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p2",
+      "title": "Baterie, která si vyrábí vlastní kyslík",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Představ si katodu jako cihlovou zeď. Vrstvy oxidu kobaltu jsou police a ionty lithia cihly, které leží mezi nimi. Když baterii nabiješ příliš, vytáhneš moc cihel a zeď začne být nestabilní. Nad zhruba **130 °C** nebo při přebití se struktura začne hroutit a kyslík uzavřený v oxidu kobaltu uniká jako plyn."
+        },
+        {
+          "type": "image",
+          "asset": "lithium_ion_battery_fire_thermal_runaway_test",
+          "ratio": "2:3",
+          "caption": "Blok dvou lithium-iontových článků 18650: už samotná etiketa varuje, že v ohni může vybuchnout."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kapalina, která článek vyplňuje, je **hořlavá**, a baterie si právě sama dodala kyslík, aby ji spálila. Teplo urychluje rozklad, ten uvolňuje další kyslík a ten vyrábí další teplo. Tomu se říká [[tepelný únik]]. Proto se hořící lithiová baterie nedá uhasit udušením: kyslík už je uvnitř."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p3",
+      "title": "Proč tam kobalt pořád je",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vraťme se k cihlové zdi. Při každém nabíjení a používání cihly lithia vyklouznou ven a zase zpátky. Kobalt je malta, která brání tomu, aby se zeď během stovek cyklů zkroutila nebo zřítila. Jiné materiály to samy nezvládnou: **nikl** pojme víc energie, ale opotřebuje se příliš rychle, **mangan** je levný, ale chybí mu výkon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Proto směsi, které pohánějí většinu elektromobilů, jako katody **NMC** (nikl, mangan, kobalt) a **NCA** (nikl, kobalt, hliník), podíl kobaltu jen snižují, nikdy ho neodstraní. Už patnáct let ho inženýři ubírají, aby snížili náklady, ale špetku pořád potřebují, aby celek držel pohromadě. Jediná, která se bez něj obejde úplně, [[baterie LFP]], toho dosahuje tak, že zeď zahodí a postaví úplně jinou vnitřní strukturu."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p4",
+      "title": "Jak se obejít bez kobaltu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Problém kobaltu není chemický. Část konžské produkce zajišťuje [[řemeslná těžba]]: kope se ručně, v nebezpečných podmínkách a místy i dětmi. Jeho cena rychle a prudce kolísá, takže každá baterie, která na něm závisí, je nepředvídatelná. A skoro všechno pochází z **jediné země**."
+        },
+        {
+          "type": "image",
+          "asset": "artisanal_cobalt_miners_kolwezi_congo",
+          "ratio": "4:3",
+          "caption": "Drobní horníci plní pytle kobaltovou rudou v Demokratické republice Kongo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Průmysl se proto snaží navrhovat baterie bez tohoto kovu. Hlavní odpovědí je **LFP**, lithium-železo-fosfát, který kobalt nahrazuje železem a fosforem, dvěma z nejlevnějších a nejhojnějších prvků. Méně se zahřívá a je mnohem těžší dohnat ho k tepelnému úniku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Daní za to je energie: při **stejné hmotnosti** jí článek LFP uloží méně. Proto ho tvoje auto možná už používá, ale tvůj telefon na něj ještě nepřešel: v kapse rozhoduje každý gram."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kobalt drží strukturu lithium-iontových baterií, ale pochází skoro celý z jediné země jako vedlejší produkt mědi. Průmysl se ho zbavuje jen změnou chemie, pomocí LFP, za cenu menšího množství energie."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Cobalt Institute, « Cobalt uses ».",
+      "url": "https://www.cobaltinstitute.org/global-cobalt/cobalt-uses/"
+    },
+    {
+      "text": "« One hundred years of cobalt production in the Democratic Republic of the Congo », Resources Policy, 2022.",
+      "url": "https://doi.org/10.1016/j.resourpol.2022.103007"
+    }
+  ]
+}

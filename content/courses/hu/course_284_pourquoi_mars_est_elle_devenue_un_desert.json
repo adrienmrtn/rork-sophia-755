@@ -1,0 +1,137 @@
+{
+  "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert",
+  "title": "Miért lett sivatag a Mars?",
+  "subtitle": "A folyóktól a sivatagig",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Több mint 3 milliárd évvel ezelőtt folyók vájtak völgyeket, és áradások söpörtek végig a Mars felszínén. Ma a bolygó hideg és száraz, de a vize nem tűnt el teljesen.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "mars_valles_marineris_hemisphere_viking_mosaic",
+    "ratio": "4:3",
+    "hook": "Folyók, delták, tavak: a vörös bolygó nem mindig volt fagyos sivatag."
+  },
+  "sections": [
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A tudósok évtizedek óta keresik a Marson az egykori élet nyomait. Minden ismert életformának víz kell, a marsi felszín viszont ma hideg és rendkívül száraz. A Mars azonban nem mindig volt ilyen: a talaját járó kerekes robotok, a marsjárók olyan kőzeteket és ásványokat találtak, amelyek csak **folyékony víz** jelenlétében keletkeznek."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fentről nézve a táj is ezt igazolja: ősi folyóvölgyek, delták, kiszáradt tómedrek. Ezeknek a formáknak a nagy része több mint **3 milliárd éves**. A NASA még óriási áradások nyomait is megtalálta nagyjából **3,5 milliárd évvel** ezelőttről. A Marson tehát folyt víz. A rejtély megmarad: hogyan lett egy nedves bolygóból ez a sivatag?"
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p1",
+      "title": "Vastag légkör kellett hozzá",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nem elég, ha van víz: olyan körülmények is kellenek, amelyek folyékony állapotban tartják. A Mars mai légköre viszont nagyon ritka: a [[légköri nyomás]] ott nem éri el a földi érték **1%**-át sem. Ilyen alacsony nyomáson a folyékony víz nem marad meg a felszínen: megfagy vagy elpárolog."
+        },
+        {
+          "type": "image",
+          "asset": "jezero_crater_river_delta_mars_reconnaissance_orbiter",
+          "ratio": "5:4",
+          "caption": "A Jezero-kráter vidékének domborzati térképe (ESA/DLR/FU Berlin): a kiemelt részleten az egykori folyók által lerakott delták."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hogyan tartotta meg a fiatal Mars a vizét? Évmilliárdokkal ezelőtt a légköre sokkal vastagabb volt, és ez kétféleképpen segített. A nagyobb nyomás folyékony állapotban tartotta a vizet. A levegő gázai pedig megtartották a hőt: ez az [[üvegházhatás]] melegebben tartotta a felszínt."
+        },
+        {
+          "type": "funFact",
+          "text": "A kutatók még ma is vitatkoznak arról, pontosan milyen meleg volt a fiatal Mars. Egy biztos: a folyékony víz elég sokáig maradt a felszínén ahhoz, hogy völgyeket vájjon és tavakat töltsön meg."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p2",
+      "title": "A Mars elvesztette a légkörét",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Évmilliárdok alatt ennek a légkörnek a nagy része elszökött az űrbe. Az első ok a bolygó mérete. A Mars kicsi, a **gravitációja** gyengébb a Földénél, ezért kevésbé tudja megtartani a gázait. A második ok: a Mars [[mágneses mező]] nélkül maradt, pedig ez a láthatatlan pajzs védte a légkörét a Napból érkező töltött részecskéktől."
+        },
+        {
+          "type": "image",
+          "asset": "maven_solar_wind_stripping_mars_atmosphere_nasa",
+          "ratio": "16:9",
+          "caption": "A marsi légkör szökését mérő MAVEN szonda pályái a 2019-es légköri fékezés előtt és után (NASA)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ezekből a részecskékből áll a [[napszél]], a töltött anyag folyamatos áramlása, amely a Napból árad ki. Pajzs híján nekiütközik a marsi felső légkörnek, és gázokat szakít ki belőle. A legnagyobb energiájú napfény is számít: széttöri a vízmolekulákat és más molekulákat, a felszabaduló **könnyű atomok** pedig könnyebben megszöknek a Mars gyenge gravitációja elől. Ahogy a légkör ritkult, a Mars egyre hidegebb és szárazabb lett."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p3",
+      "title": "Nem tűnt el minden víz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Mars vize azonban nem szökött el teljesen az űrbe. Egy része a felső légkörbe jutott, ott könnyű atomokra bomlott, és azok megszöktek. A többi viszont a helyén maradt: egy része a felszín alatt megfagyott, egy másik része reakcióba lépett a kőzetekkel, és **ásványokba** zárva maradt."
+        },
+        {
+          "type": "funFact",
+          "text": "A *Science* folyóiratban 2021-ben megjelent tanulmány szerint a Mars vizének **30-99%**-a is ásványokba zárva rekedhetett a kőzeteiben. Ez tág tartomány: a kérdés nyitott."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez a víz tehát nem csupán jégként vagy folyadékként gyűlt össze a föld alatt. Ma már a [[kéreg]] része: ez a bolygó külső, kőzetekből álló rétege. Vagyis a Mars „eltűnt” vizének jelentős része valószínűleg még mindig ott van, a kőzeteibe zárva."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p4",
+      "title": "Száraz, de nem víztelen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Mars ma sivatagnak látszik, de nem víztelen. Ami nagyrészt eltűnt, az a felszínen folyó, stabil víz. Nagy mennyiség maradt fagyott állapotban a [[sarki jégsapkák]] anyagában, más része **eltemetett jégként** szunnyad a talaj alatt, megint más része pedig a kéreg ásványaiba zárva rejtőzik."
+        },
+        {
+          "type": "image",
+          "asset": "mars_north_polar_ice_cap_mars_global_surveyor",
+          "ratio": "2:1",
+          "caption": "A Mars teljes térképe a Viking-szondák felvételei alapján (NASA/USGS): a kiemelt részleteken a két pólus és jégsapkáik."
+        },
+        {
+          "type": "paragraph",
+          "text": "A tanulság túlmutat a Marson. Attól, hogy egy bolygón van víz, még nem lesz nedves és lakható: a körülmények ugyanannyit számítanak. Egy elég vastag légkör folyékonyan tartja a vizet, és hagyja, hogy folyókká és tavakká gyűljön. A Mars nem azért lett sivatag, mert minden csepp vize elszállt az űrbe, hanem mert a légköre már nem tudta mozgásban tartani a vizet."
+        },
+        {
+          "type": "takeaway",
+          "text": "A Mars azért száradt ki, mert a megritkult légköre már nem tudta folyékony állapotban tartani a vizet a felszínen: ennek a víznek nagy része azonban még mindig ott van, a sarkokon megfagyva vagy a kőzetekbe zárva."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "B. M. Jakosky et al., « Mars' atmospheric history derived from upper-atmosphere measurements of 38Ar/36Ar », Science, vol. 355, n° 6332, 2017, p. 1408.",
+      "url": "https://doi.org/10.1126/science.aai7721"
+    },
+    {
+      "text": "NASA Science, « NASA: New Insights into How Mars Became Uninhabitable », 2024."
+    },
+    {
+      "text": "E. L. Scheller et al., « Long-term drying of Mars by sequestration of ocean-scale volumes of water in the crust », Science, vol. 372, n° 6537, 2021, p. 56-62.",
+      "url": "https://doi.org/10.1126/science.abc7717"
+    },
+    {
+      "text": "NASA, « NASA Mission Reveals Speed of Solar Wind Stripping Martian Atmosphere », 2015."
+    }
+  ]
+}

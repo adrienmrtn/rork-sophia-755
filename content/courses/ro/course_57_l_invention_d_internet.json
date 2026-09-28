@@ -1,14 +1,15 @@
 {
   "id": "course_57_l_invention_d_internet",
-  "title": "Invenția internetului",
-  "subtitle": "Rețele",
+  "title": "Cum s-a născut internetul din Războiul Rece?",
+  "subtitle": "De la ARPANET la Web",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Internetul n-are un singur inventator. E un lanț lung: o rețea militară, un limbaj comun, apoi Web-ul pentru oameni.",
+  "description": "O rețea militară gândită să reziste unui atac sovietic, zeci de rețele mici, apoi modemul și Webul. În cincizeci de ani, un proiect al Războiului Rece a ajuns parte din viața noastră de zi cu zi.",
+  "author": "myra-houser",
   "hero": {
-    "image": "l_invention_d_internet",
-    "ratio": "16:9",
-    "hook": "Mai întâi o rețea ca să reziste la război. Apoi toată lumea se leagă."
+    "image": "ibm_mainframe_computer_room_1960s_operators",
+    "ratio": "4:3",
+    "hook": "Înainte să lege planeta, internetul trebuia mai ales să supraviețuiască unui atac sovietic."
   },
   "sections": [
     {
@@ -18,83 +19,127 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Internetul nu s-a născut dintr-un singur geniu într-un garaj. E o construcție colectivă pe mai multe decenii."
+          "text": "Ca și Roma, internetul nu s-a făcut într-o zi. La început, rețeaua era doar o mână de calculatoare ale **Departamentului Apărării al SUA**. S-a născut din progresul tehnic, dar și din ambițiile de spionaj ale celor două superputeri aflate față în față în [[Războiul Rece]]. La sfârșitul secolului XX, conexiunea prin linia telefonică a intrat în majoritatea caselor americane, iar navigarea pe Web a urmat îndeaproape."
         },
         {
           "type": "paragraph",
-          "text": "Trei etape simple de ținut minte: o primă rețea (ARPANET), un limbaj comun (TCP/IP), apoi o interfață ușoară (Web-ul)."
+          "text": "La sfârșitul mileniului, tehnologia era atât de răspândită și atât de nouă încât unii analiști au prezis o pană mondială dacă ceasurile calculatoarelor nu treceau corect în **anul 2000**: era frica de [[problema anului 2000]]. În secolul XXI, mesageria instantanee, rețelele sociale și inteligența artificială au schimbat din nou felul în care comunicăm online. Cum a ajuns un proiect militar parte din viața de zi cu zi a întregii lumi?"
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p1",
-      "title": "ARPANET, prima rețea",
+      "title": "O rețea care să supraviețuiască unui atac",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La sfârșitul anilor **1960**, în plin Război Rece, armata americană finanțează un proiect: să lege calculatoare ca să continue să comunice chiar dacă o parte din rețea e distrusă."
+          "text": "Proiectul a început în **anii 1950**. Calculatoarele erau pe atunci uriașe și scumpe: o singură mașină ocupa o cameră întreagă. Doar câteva birouri guvernamentale și câteva universități aveau așa ceva. Când tensiunea cu URSS a crescut, conducătorii americani au căutat o rețea de comunicații pe care agenții sovietici să n-o poată intercepta. Primul pas a fost partajarea timpului, care le permitea mai multor utilizatori să lucreze pe același calculator."
+        },
+        {
+          "type": "paragraph",
+          "text": "La începutul **anilor 1960**, un inginer pe nume [[Paul Baran]] a experimentat [[comutarea de pachete]]: în loc să trimiți un mesaj dintr-o bucată, îl tai în mici pachete de date care circulă separat prin rețea. Baran și colegii lui au pariat că datele care călătoresc așa pe liniile telefonice ar supraviețui unui atac sovietic. Din aceste lucrări s-a născut [[ARPANET]], un program al Departamentului Apărării al SUA."
         },
         {
           "type": "image",
           "asset": "arpanet_1969_computer_ucla",
           "ratio": "4:3",
-          "caption": "ARPANET leagă mai întâi câteva universități americane."
-        },
-        {
-          "type": "paragraph",
-          "text": "Rețeaua asta se numește **ARPANET**. Mesajele sunt tăiate în pachete mici care iau drumuri diferite. Dacă un traseu cade, altul preia ștafeta."
+          "caption": "SDS Sigma 7 de la UCLA, primul calculator conectat la ARPANET, în 1969."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p2",
-      "title": "TCP/IP: a vorbi aceeași limbă",
+      "title": "De la ARPANET la „internete”: comutarea de pachete",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ca rețele diferite să se înțeleagă, trebuie reguli comune. **Vint Cerf** și **Bob Kahn** pun la punct protocolul **TCP/IP**: un limbaj care spune cum se taie, se adresează și se recompun datele."
+          "text": "Ca să transporte aceste pachete, ARPANET a preluat o tehnică pusă la punct de cercetători britanici: [[routerul]], un echipament al rețelei telefonice care strânge pachetele și le trimite mai departe spre alte mașini. În **1969** au fost conectate primele calculatoare, începând cu cel al Universității California din Los Angeles. În Hawaii, informaticienii testau o idee înrudită, **ALOHAnet**, în care pachetele călătoreau prin unde radio."
         },
         {
           "type": "image",
-          "asset": "vint_cerf_bob_kahn_internet",
-          "ratio": "4:3",
-          "caption": "Cerf și Kahn: arhitecții limbajului internetului."
+          "asset": "arpanet_logical_map_1977_network_diagram",
+          "ratio": "3:2",
+          "caption": "Harta logică a ARPANET la 25 august 1983, întocmită de BBN: universități, laboratoare și baze militare legate între ele."
         },
         {
-          "type": "funFact",
-          "text": "Pe 1 ianuarie **1983**, ARPANET trece oficial la TCP/IP. Mulți consideră data asta „nașterea” tehnică a internetului."
+          "type": "paragraph",
+          "text": "În **anii 1970** și la începutul anilor 1980, zeci de echipe din toată lumea au transmis informații prin linii telefonice și prin radio. Rezultatul: o mulțime de rețele mici, separate. În **1974**, un articol științific a prescurtat „internetwork”, rețea de rețele, în „internet”. Este prima apariție cunoscută a cuvântului."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p3",
-      "title": "Web-ul face rețeaua omenească",
+      "title": "Modemuri, abonamente și nașterea Webului la CERN",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Internetul e rețeaua. **World Wide Web**, inventat de **Tim Berners-Lee** la CERN la începutul anilor **1990**, e stratul ușor: pagini, legături, navigatoare."
+          "text": "Până la mijlocul **anilor 1980**, aceste „internete” au trăit fiecare pe cont propriu. În Statele Unite, National Science Foundation, agenția federală care finanțează cercetarea, a investit masiv în supercalculatoare și le-a legat de universități. Apoi, între **1989** și **1995**, legiuitorul american a ridicat treptat restricțiile care interziceau serviciile comerciale pe internet."
         },
         {
           "type": "paragraph",
-          "text": "Fără Web, internetul ar rămâne mai ales o unealtă de experți. Cu el, oricine poate da click."
+          "text": "În 1995, mari companii precum **Sprint** și **AT&T** ofereau conexiuni prin linia telefonică: abonatul își băga modemul în priză și forma un număr. Între timp, în **1990**, informaticianul britanic Tim Berners-Lee lansase [[World Wide Web]] la CERN, laboratorul european de fizică de lângă Geneva. Webul a adunat datele împrăștiate pe servere și a legat paginile între ele prin hyperlinkuri."
+        },
+        {
+          "type": "image",
+          "asset": "tim_berners_lee_next_computer_cern_first_web_server",
+          "ratio": "3:2",
+          "caption": "Calculatorul NeXT al lui Tim Berners-Lee de la CERN, primul server web, în 1990: o etichetă cere să nu fie oprit niciodată."
+        },
+        {
+          "type": "funFact",
+          "text": "În anii 1990, mulți abonați își plăteau conexiunea la minut. Fiecare pagină care se încărca greu costa bani, iar telefonul casei rămânea ocupat cât timp modemul era conectat."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p4",
-      "title": "Sistemul nervos al lumii",
+      "title": "De la e-mail la iPhone: internetul de zi cu zi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Azi, internetul poartă mailuri, video, bănci, spitale, GPS. A creat și probleme noi: dezinformare, supraveghere, fractură digitală."
+          "text": "De la mijlocul anilor 1990, internetul a crescut în mare viteză și fiecare și-a lărgit cercul de corespondenți. E-mailul, camerele de chat și mesageria instantanee au făcut posibilă conversația în timp real. În **2000**, peste **jumătate** din traficul de telecomunicații trecea deja prin internet. La începutul anilor 2000 s-au înmulțit blogurile și primele rețele sociale, MySpace, apoi TheFacebook.com."
+        },
+        {
+          "type": "paragraph",
+          "text": "Apoi rețeaua a ieșit din birouri și din sufragerii. Din **2005**, telefoanele BlackBerry permiteau trimiterea de mesaje prin rețelele lor. Din **2007**, iPhone-ul a pus internetul în buzunar: de acum navigai de pe un telefon mobil. Născută ca strategie de apărare în Războiul Rece, rețeaua rețelelor face azi parte din viața de zi cu zi."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1969",
+              "title": "Primele mașini conectate",
+              "detail": "ARPANET își leagă primele calculatoare, printre care cel de la UCLA."
+            },
+            {
+              "date": "1974",
+              "title": "Cuvântul „internet”",
+              "detail": "Un articol prescurtează „internetwork”: prima apariție cunoscută a termenului."
+            },
+            {
+              "date": "1990",
+              "title": "Nașterea Webului",
+              "detail": "Tim Berners-Lee lansează World Wide Web la CERN."
+            },
+            {
+              "date": "1995",
+              "title": "Internetul se deschide publicului",
+              "detail": "Cad restricțiile comerciale, iar Sprint și AT&T oferă conexiuni prin modem."
+            },
+            {
+              "date": "2007",
+              "title": "Internetul în buzunar",
+              "detail": "iPhone-ul permite navigarea de pe un telefon mobil."
+            }
+          ]
         },
         {
           "type": "takeaway",
-          "text": "Internetul se naște din ARPANET, devine universal datorită TCP/IP și accesibil datorită Web-ului. Nu e o invenție unică, e o arhitectură împărtășită."
+          "text": "Gândit în Războiul Rece ca să reziste unui atac, internetul a trecut de la calculatoarele militare la universități, apoi în case datorită modemului și Webului, înainte să încapă într-un telefon."
         }
       ]
     }

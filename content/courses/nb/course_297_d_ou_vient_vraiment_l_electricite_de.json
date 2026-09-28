@@ -1,0 +1,141 @@
+{
+  "id": "course_297_d_ou_vient_vraiment_l_electricite_de",
+  "title": "Hvor kommer strømmen i stikkontakten egentlig fra?",
+  "subtitle": "En usynlig blanding",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Stikkontakten sier ingenting om strømmen kommer fra sola, vinden eller et kullkraftverk. Bak den hverdagslige bevegelsen skjuler det seg en blanding som endrer seg fra time til time, og som noen ganger krysser landegrenser.",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "wind_turbines_coal_power_plant_landscape",
+    "ratio": "4:3",
+    "hook": "Stikkontakten er den samme overalt. Det som ligger bak den, er det aldri."
+  },
+  "sections": [
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_intro",
+      "title": "Innledning",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Du setter telefonen til lading, og strømmen kommer uten merkelapp. Ingenting ved stikkontakten forteller om den ble produsert med sollys, vann fra en demning eller brensel som ble brent i et kraftverk. Selv to hus i samme gate kan ikke peke ut hvilket kraftverk hver enhet av strømmen deres kommer fra."
+        },
+        {
+          "type": "paragraph",
+          "text": "Grunnen er enkel: nesten alle husholdninger henter strøm fra et [[strømnett]], et nettverk av kabler som knytter sammen kraftverkene og brukerne i et område. Flere kraftverk forsyner det samtidig, og andelene deres utgjør det som kalles [[kraftmiks]]. Denne miksen beskriver kildene som forsyner nettet, ikke en egen strøm av sol- eller gasskraft som sendes rett til telefonen din. Svaret begynner altså langt utenfor husets vegger."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p1",
+      "title": "Damp, turbiner og solcellepaneler",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kullkraftverk og mange kjernekraftverk bruker varme til å lage damp. Dampen driver en [[turbin]], et sett med skovler koblet til en [[generator]], maskinen som gjør bevegelse om til elektrisitet. Gasskraftverk kan også drive turbinene sine direkte med de varme forbrenningsgassene. Ulike prosesser, men den samme elektrisiteten, som går inn i det samme nettet."
+        },
+        {
+          "type": "image",
+          "asset": "steam_turbine_generator_hall_power_plant",
+          "ratio": "2:1",
+          "caption": "Et tidlig dampturbinaggregat utstilt på Teknisk museum i Wien: turbinen er koblet til generatoren sin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vindturbiner går med vinden, vannkraftverk med vannet som renner. Solcellepaneler går en annen vei: de produserer elektrisitet direkte fra lys, uten noen skovler som roterer. Disse kildene arbeider ikke under de samme forholdene. Solkraften faller når sola går ned, og vindkraften endrer seg med været. Kraftverk som brenner brensel, kan da levere strøm når de andre produserer mindre."
+        },
+        {
+          "type": "funFact",
+          "text": "Et kjernekraftverk virker i bunn og grunn som et kullkraftverk: varmen koker vann, og det er dampen som driver turbinen. Det er bare varmekilden som er annerledes."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p2",
+      "title": "En miks som endrer seg gjennom døgnet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Midt på dagen går solcellepanelene for fullt mens kontorer og boliger trekker strøm. Etter solnedgang stanser de, men lamper, tog og kjøkken trenger fortsatt elektrisitet. En vindfull ettermiddag kan også bli fulgt av en vindstille kveld, mens forbruket går opp eller ned."
+        },
+        {
+          "type": "image",
+          "asset": "electricity_grid_control_room_operators_screens",
+          "ratio": "16:9",
+          "caption": "Kart over høyspentlinjer og transformatorstasjoner i USA: nettet en systemoperatør må holde i balanse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Organet som styrer nettet, en såkalt [[systemoperatør]], må hele tiden holde balansen mellom tilbud og etterspørsel. Noen kraftverk justerer produksjonen. Der det finnes batterier, leverer de tilbake strøm som ble lagret tidligere. Andre kilder fyller hullet etter sola som går ned. Det finnes ingen fast døgnoppskrift: miksen midt på dagen kan se helt annerledes ut enn miksen noen timer senere, selv om stikkontakten din er den samme."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p3",
+      "title": "Det årsgjennomsnittet skjuler",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I 2025 kom omtrent **en fjerdedel** (24 %) av strømmen fra de store kraftverkene i USA fra [[fornybare energikilder]], kilder som naturen fornyer av seg selv: sollys, vind og rennende vann. Tallet, som ennå er foreløpig, beskriver hele året. Det betyr ikke at fornybar energi sto for den samme andelen hver gang noen skrudde på en vannkoker eller ladet en telefon."
+        },
+        {
+          "type": "paragraph",
+          "text": "En årlig prosentandel blander solrike ettermiddager, vindfulle netter og perioder der sol og vind gir lite. Den legger også sammen timer med høyt og lavt forbruk. For å vite hvilke kilder som forsyner et nett i et bestemt øyeblikk, må du se på miksen time for time i stedet for årsgjennomsnittet. Begge perspektivene er nyttige, men de svarer ikke på det samme spørsmålet."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p4",
+      "title": "Strøm fra andre steder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Timemiksen trenger enda en detalj: hvilken strøm som faktisk er tilgjengelig i ditt område. Et kraftverk på den ene siden av en grense kan forsyne nettet på den andre siden. Den importerte strømmen blander seg med den lokale produksjonen. Det som kalles [[forbruksmiks]], altså kildene som forsyner brukerne i et område, kan derfor skille seg fra miksen som produseres lokalt."
+        },
+        {
+          "type": "image",
+          "asset": "belchatow_coal_power_plant_cooling_towers_poland",
+          "ratio": "4:3",
+          "caption": "Kullkraftverket i Bełchatów i Polen, det største i Europa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette har betydning for utslippene knyttet til strømmen din. Å brenne kull eller gass slipper ut karbondioksid, en gass som varmer opp kloden. Vindturbiner, solcellepaneler og kjernekraftverk slipper ikke ut noe direkte mens de produserer strøm. Strømmen stopper ikke ved grensen, og det gjør heller ikke virkningen av den. Avhengig av hvor importen kommer fra, kan utslippene knyttet til forbruket ditt være høyere eller lavere enn den lokale produksjonen alene tilsier."
+        },
+        {
+          "type": "takeaway",
+          "text": "Strømmen i stikkontakten din er en blanding som endrer seg fra time til time og krysser grenser, så verken årsgjennomsnittet eller den lokale produksjonen alene forteller hvor den kommer fra."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Delivered to Consumers », sections « The electric power grid », « Electricity sources and types of providers » et « Balancing authorities »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Generated », sections « Turbine driven generators » et « Other types of generators »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Energy Storage for Electricity Generation », section « Uses and benefits of energy storage systems »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity Generation, Capacity, and Sales in the United States », section « Electricity generation », données 2025 provisoires."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity and the Environment », sections « Fossil fuel, biomass, and waste burning power plants » et « Nuclear power plants »."
+    },
+    {
+      "text": "Electricity Maps, « Methodology », sections « Defining Granularity: Spatial and Temporal », « Consumption-based Calculation » et « The Flow-Tracing Algorithm »."
+    },
+    {
+      "text": "B. Tranberg et al., « Real-time carbon accounting method for the European electricity markets », Energy Strategy Reviews, vol. 26, 2019, art. 100367.",
+      "url": "https://doi.org/10.1016/j.esr.2019.100367"
+    }
+  ]
+}

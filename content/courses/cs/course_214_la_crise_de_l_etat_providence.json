@@ -1,14 +1,15 @@
 {
   "id": "course_214_la_crise_de_l_etat_providence",
-  "title": "Přežije sociální stát stárnutí populace?",
-  "subtitle": "Sociální smlouva pod tlakem",
+  "title": "Je sociální stát jen pro občany?",
+  "subtitle": "Alžířané a braceros",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Zrozený po roce 1945, aby každého občana chránil před nemocí, nezaměstnaností a stářím, sociální stát dnes otřásá stárnutí i globalizace.",
+  "description": "Ve Francii i ve Spojených státech sociální ochranu vzniklou po roce 1945 financovali také dělníci z bývalých kolonií. Důchod odepřený Alžířanovi, mexičtí braceros bez penze, buldozer ve Vitry: příběh krize, která je starší než deficity.",
+  "author": "mark-n-hoffman",
   "hero": {
-    "image": "la_crise_de_l_etat_providence",
-    "ratio": "16:9",
-    "hook": "Roku 1960 Francie měla 4 aktivní na financování důchodu 1 důchodce. Dnes jsou už jen 2."
+    "image": "bracero_mexican_farmworkers_california_1942_lange",
+    "ratio": "4:3",
+    "hook": "Pro dělníky z bývalých kolonií nezačala krize sociálního státu s deficity. Začala hned prvním dnem."
   },
   "sections": [
     {
@@ -18,91 +19,157 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Sociální stát** označuje soubor podpor, které stát dává občanům, aby je chránil před nemocí, nezaměstnaností nebo stářím. Ten systém se v moderní podobě zrodil hned po druhé světové válce jako slib kolektivní solidarity."
+          "text": "V roce **2025** vykazují účty francouzského sociálního zabezpečení schodek **21,6 miliardy eur**. Ve Spojených státech správci Social Security, federálního důchodového systému, předpovídají, že jeho rezervy dojdou v roce **2034**. Pro mnohé je to jasný důkaz: [[sociální stát]], tedy soubor důchodů, zdravotní péče a dávek placených z daní, je v krizi."
         },
         {
           "type": "paragraph",
-          "text": "Od konce 20. století ten pilíř vyspělých společností prochází krizí financování. Stárnutí obyvatelstva, globalizace, nové formy práce: rovnováha mezi sociální ochranou a ekonomikou je dnes zpochybněná po celém světě, nejen v jedné zemi."
+          "text": "Stát ale jen neplatí. Rozhoduje také o tom, kdo má na co nárok. V roce 2025 nařídil americký prezident Donald Trump federálním úřadům přísněji kontrolovat přistěhovalce bez dokladů, a to ve jménu důchodů a zdravotní péče občanů. Tito přistěhovalci přitom už z většiny dávek vyloučeni jsou. Když vláda vyhlásí krizi sociálního státu, o čích dávkách vlastně mluví?"
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p1",
-      "title": "1945: zrod sociální smlouvy",
+      "title": "Poválečná dohoda a ti, kdo zůstali venku",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Roku 1942 britský ekonom William Beveridge vydá zprávu, která se stane zakladatelskou: [[Beveridgeova zpráva]]. Ambice je chránit každého občana proti pěti velkým rizikům: nemoci, nevědomosti, nezdravému bydlení, nečinnosti a chudobě."
+          "text": "Po druhé světové válce uzavřeli američtí průmyslníci, odbory a vláda obchod. Tovární dělníci dostali lepší mzdy a sociální zabezpečení. Odbory na oplátku podpořily masovou výrobu a odložily své nejradikálnější požadavky. Politolog Mark Rupert vidí v těchto odborech občanů „juniorního partnera” celého uspořádání."
+        },
+        {
+          "type": "image",
+          "asset": "renault_billancourt_immigrant_workers_assembly_line",
+          "ratio": "4:5",
+          "caption": "Plakát z května 1968 od Lidové dílny École des Beaux-Arts: dělníci z Renault-Billancourt, velké továrny zaměstnávající přistěhovalce."
         },
         {
           "type": "paragraph",
-          "text": "Francie ten pohyb následuje a roku 1945 založí sociální zabezpečení. Ten systém se zrodí z politického kompromisu uvnitř [[Národní rada odboje]], organizace, která za války sjednotila odbojová hnutí. Stát se už nespokojí s policií nebo justicí: stane se ručitelem blahobytu všech."
-        },
-        {
-          "type": "funFact",
-          "text": "Sociální stát nevymysleli socialisté, ale německý konzervativní kancléř Otto von Bismarck roku 1883. Cíl byl strategický: uklidnit dělníky a vyhnout se revoluci."
+          "text": "Francie zase vytvořila širší veřejný systém sociálního pojištění, do něhož přispívají zaměstnavatelé i zaměstnanci. Stát od té doby snížil odvody zaměstnavatelů z nízkých mezd, aby podpořil zaměstnanost. Obě dohody ale mají něco společného: dávají přednost domácí pracovní síle na úkor neobčanů z kolonií. Francouzské továrny najímají Alžířany, včerejší kolonizované, které úřady nově zařazují jako „přistěhovalé cizince”. Americké farmy najímají Mexičany, jejichž smlouvy je drží mimo okruh oprávněných."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p2",
-      "title": "Demografický šok",
+      "title": "Případ Mazari: odepřený důchod",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rovnováha poválečných let se zlomila pod dvěma velkými posuny. První je demografický: lidé žijí déle a rodiny mají méně dětí. To zvedne výdaje na zdraví a prodlouží dobu, po kterou se bere důchod, zatímco dětí na platce ubývá."
+          "text": "V roce **1986** požádal Mazari, Alžířan žijící v kontinentální Francii, o příplatek ke svému francouzskému invalidnímu důchodu, dávku určenou důchodcům s nízkými příjmy. Pokladna žádost zamítla. Francouzský občan se stejným důchodem a stejnými příjmy by příplatek dostal: důvodem zamítnutí byla Mazariho státní příslušnost. V roce **1991** zrušil toto zamítnutí založené na státní příslušnosti [[Kasační soud]], nejvyšší civilní soud v zemi."
         },
         {
           "type": "image",
-          "asset": "elderly_retirees_demographic_aging_population",
+          "asset": "cour_de_cassation_paris_palais_de_justice",
           "ratio": "16:9",
-          "caption": "Stárnutí obyvatelstva každý rok víc zatěžuje sociální účty."
+          "caption": "Kasační soud sídlí v pařížském Justičním paláci na ostrově Cité."
         },
         {
           "type": "paragraph",
-          "text": "Ve Francii připadali 4 aktivní na financování důchodu jednoho důchodce v 60. letech. Dnes to číslo spadlo pod 2. Druhý posun: růst nezaměstnanosti od ropných šoků roku 1973 a vzestup modelu [[koncertní ekonomika]], těch nezávislých a nejistých prací, které do systému odvádějí méně, a přitom jsou rizikům víc vystavené."
+          "text": "V roce **1993** vyslovil vlivný poslanec Jean Charroppin rozšířenou obavu: takové žádosti mohou zatížit francouzský „sociální rozpočet”. Strach byl zřejmý: stejná zamítnutí by mohli napadnout i další přistěhovalci z bývalých kolonií. Přitom už od koloniálních časů obohacovala špatně placená práce Alžířanů francouzské zaměstnavatele a prostřednictvím daní a odvodů financovala i samotný sociální stát. Upírat jim práva občanů znamená obnovovat koloniální řád."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p3",
-      "title": "Globalizace dává model pod tlak",
+      "title": "Braceros, dovezený kolonialismus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V globalizované ekonomice se firmy i kapitál snadno přesunou ze země do země. Daně a odvody potřebné k financování sociální ochrany se pak berou jako handicap proti zemím, kde práce stojí méně a odvody jsou nižší."
-        },
-        {
-          "type": "paragraph",
-          "text": "Zajímavý protipříklad jsou skandinávské země. Švédsko nebo Dánsko drží vysokou úroveň sociální ochrany, a přitom zůstanou velmi konkurenceschopné. Jejich tajemství se jmenuje [[flexikurita]]: firmy mohou snadno propouštět, ale zaměstnanci dostanou štědré podpory v nezaměstnanosti a silný doprovod k nové práci."
+          "text": "Ve Spojených státech platila na polích stejná logika. Takzvaný [[program Bracero]] umožňoval velkým zemědělcům najímat na sklizeň mexické občany na dočasné smlouvy. Po **červenci 1951** už tyto smluvní dělníky Social Security nekrylo. Mexiko přitom, na rozdíl od Alžírska pod francouzskou nadvládou, bylo nezávislou zemí."
         },
         {
           "type": "funFact",
-          "text": "Dánsko věnuje na sociální ochranu zhruba 32% HDP, jednu z nejvyšších sazeb světa, a přitom ho pravidelně řadí mezi země, kde se firma zakládá nejsnáze."
+          "text": "Americký zákon kdysi zakazoval přivážet zahraniční dělníky na smlouvu, protože je považoval za hrozbu pro svobodnou práci. V roce 1951 udělal Kongres výjimku pro program Bracero, který už běžel: smlouvy vázaly dělníky na dočasnou práci a ukládaly jim návrat do Mexika."
+        },
+        {
+          "type": "paragraph",
+          "text": "Historička Mae Ngai mluví o jevu, který nazývá [[dovezený kolonialismus]]: mexičtí dělníci vstupují do americké ekonomiky bez jistého místa v politickém společenství, bez důchodu a bez zdravotní péče, které mají občané slíbené od narození. Vyloučení dodnes platí pro zemědělské dělníky s vízy H-2A, za něž zaměstnavatelé neplatí žádné odvody na Social Security. Různými právními cestami začlenily Francie i Spojené státy tyto dělníky do imperiální pracovní síly a zároveň omezily jejich práva."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p4",
-      "title": "Vynalézt sociální ochranu znovu",
+      "title": "„Práh tolerance” a buldozer ve Vitry",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zítřejší systém musí chránit před novými riziky: uberizací práce, ekologickým přechodem, závislostí ve vysokém věku. Francouzská reforma roku 2023, která posunula zákonný věk odchodu do důchodu na 64 let, ukáže, jak těžko se ty změny nechávají přijmout."
+          "text": "Filozof [[Étienne Balibar]] zkoumal široce sdílené přesvědčení, že přistěhovalectví překročilo určitý „[[práh tolerance]]”. Jeho zastánci, napravo i nalevo, rádi obviňují přistěhovalce, že berou práci, přeplňují byty a zahlcují nemocnice."
         },
         {
           "type": "paragraph",
-          "text": "Debata se točí i kolem financování: dál nechat hlavní tíhu systému na práci, s rizikem trestat zaměstnanost, nebo se překlopit k širšímu financování daní, jako je [[CSG]] ve Francii, která zasáhne všechny příjmy, ne jen mzdy, a rozloží tíhu širší?"
+          "text": "V **prosinci 1980** poslal komunistický starosta Vitry-sur-Seine Paul Mercieca buldozer, aby zatarasil ubytovnu obývanou dělníky z Mali. [[Georges Marchais]], šéf Francouzské komunistické strany, ho hájil: Vitry prý další přistěhovalce přijmout nemůže. Tady zjevně znamenalo být Francouzem víc než být dělníkem, a to i pro komunisty."
+        },
+        {
+          "type": "image",
+          "asset": "georges_marchais_portrait_1981",
+          "ratio": "2:3",
+          "caption": "Georges Marchais, generální tajemník Francouzské komunistické strany, kolem roku 1981."
+        },
+        {
+          "type": "paragraph",
+          "text": "Francie i Spojené státy dlouho najímaly ve svých bývalých koloniích dělníky pro své imperiální ekonomiky. Jejich práce přinášela zisky a příjmy. Sociální pravidla jim upírala stejná práva, a když žádali o bydlení nebo pomoc, úřady v tom viděly nové náklady. Rozpočtové poplachy přicházejí dost pozdě: pro přistěhovalé dělníky je sociální stát v krizi od samého začátku."
         },
         {
           "type": "takeaway",
-          "text": "Sociální stát, zrozený roku 1945, aby každého chránil před nemocí, nezaměstnaností a stářím, oslabuje bezprecedentní demografické stárnutí a globalizace. Jeho přežití bude stát na schopnosti vynalézt se znovu, aniž ztratí slib solidarity."
+          "text": "Ve Francii i ve Spojených státech upíral sociální stát, financovaný i prací Alžířanů a mexických braceros, těmto lidem stejná práva od samého počátku: jeho krize nezačala s deficity."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Mario Draghi, The Future of European Competitiveness: Part A, A Competitiveness Strategy for Europe, European Commission, septembre 2024, p. 5 et 19.",
+      "url": "https://commission.europa.eu/document/download/97e481fd-2dc3-412d-be4c-f152a8232961_en"
+    },
+    {
+      "text": "Mark Rupert, Producing Hegemony: The Politics of Mass Production and American Global Power, Cambridge University Press, 1995, chap. 5-7, p. 83-166.",
+      "url": "https://www.maxwell.syr.edu/research/article/producing-hegemony-the-politics-of-mass-production-and-american-global-power"
+    },
+    {
+      "text": "Mark N. Hoffman, Rethinking the Politics of Immigration: Colonial Modes of Immigration Management and the Ambivalent Resilience of the Empire State, thèse de doctorat, University of Minnesota, 2013, p. 120-121.",
+      "url": "https://conservancy.umn.edu/bitstream/11299/158374/1/Hoffman_umn_0130E_14071.pdf"
+    },
+    {
+      "text": "Paul A. Silverstein, Algeria in France: Transpolitics, Race, and Nation, Indiana University Press, 2004, chap. « Colonization and the Production of Ethnicity » et « Spatializing Practices: Migration, Domesticity, Urban Planning ».",
+      "url": "https://iupress.org/9780253217127/algeria-in-france/"
+    },
+    {
+      "text": "Cour de cassation, chambre sociale, 7 mai 1991, pourvoi n° 88-15.407, Bulletin civil V, n° 231, p. 141.",
+      "url": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000007026345/"
+    },
+    {
+      "text": "Jean Charroppin, question écrite n° 3186, Journal officiel de l'Assemblée nationale, 5 juillet 1993, p. 1861, et réponse du gouvernement, 20 septembre 1993, p. 3035.",
+      "url": "https://questions.assemblee-nationale.fr/q10/10-3186QE.htm"
+    },
+    {
+      "text": "Mae M. Ngai, Impossible Subjects: Illegal Aliens and the Making of Modern America, Princeton University Press, 2004, chap. 4, p. 127-166.",
+      "url": "https://www.jstor.org/stable/j.ctt5hhr9r"
+    },
+    {
+      "text": "Mae M. Ngai, « A New Bracero Program Is Not the Solution », The Atlantic, 9 décembre 2024.",
+      "url": "https://www.theatlantic.com/politics/archive/2024/12/disturbing-history-bracero-program/680926/"
+    },
+    {
+      "text": "U.S. Social Security Administration, Social Security Ruling 86-11c, 1986.",
+      "url": "https://www.ssa.gov/OP_Home/rulings/oasi/45/SSR86-11-oasi-45.html"
+    },
+    {
+      "text": "Joyce C. Vialet et Barbara McClure, Temporary Worker Programs: Background and Issues, U.S. Government Printing Office, 1980, p. 31.",
+      "url": "https://www.govinfo.gov/content/pkg/CPRT-96SPRT44151/pdf/CPRT-96SPRT44151.pdf"
+    },
+    {
+      "text": "J.-M. Durand-Souffland, « Offensés mais pas résignés », Le Monde, 30 décembre 1980.",
+      "url": "https://www.lemonde.fr/archives/article/1980/12/30/offenses-mais-pas-resignes_2807243_1819218.html"
+    },
+    {
+      "text": "Georges Marchais, « Lettre ouverte au recteur de la Mosquée de Paris », L'Humanité, 7 janvier 1981, reproduite dans À gauche, 25 août 2018.",
+      "url": "https://agauche.org/2018/08/25/la-lettre-de-georges-marchais-suite-a-lexpulsion-des-maliens-du-foyer-de-vitry-en-1980/"
+    },
+    {
+      "text": "Étienne Balibar, « Droit de cité or Apartheid? », dans We, the People of Europe? Reflections on Transnational Citizenship, Princeton University Press, 2004, p. 31-50.",
+      "url": "https://doi.org/10.1515/9781400825783"
     }
   ]
 }

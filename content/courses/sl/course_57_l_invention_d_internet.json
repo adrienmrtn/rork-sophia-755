@@ -1,14 +1,15 @@
 {
   "id": "course_57_l_invention_d_internet",
-  "title": "Izum interneta",
-  "subtitle": "Omrežja",
+  "title": "Kako se je internet rodil iz hladne vojne?",
+  "subtitle": "Od ARPANET-a do spleta",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Internet nima niti enega izumitelja. To je dolga veriga: vojaško omrežje, skupni jezik, nato splet za ljudi.",
+  "description": "Vojaško omrežje, zasnovano tako, da bi preživelo sovjetski napad, nato na desetine majhnih omrežij, modem in splet. V petdesetih letih je projekt hladne vojne postal del našega vsakdana.",
+  "author": "myra-houser",
   "hero": {
-    "image": "l_invention_d_internet",
-    "ratio": "16:9",
-    "hook": "Najprej mreža za upor proti vojni. Potem se oglasi ves svet."
+    "image": "ibm_mainframe_computer_room_1960s_operators",
+    "ratio": "4:3",
+    "hook": "Preden je povezal ves planet, je moral internet predvsem preživeti sovjetski napad."
   },
   "sections": [
     {
@@ -18,83 +19,127 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Internet se ni rodil iz enega samega genija v garaži. Gre za večdesetletno kolektivno gradnjo."
+          "text": "Tudi internet, tako kot Rim, ni nastal v enem dnevu. Na začetku je bilo omrežje le peščica računalnikov **ameriškega obrambnega ministrstva**. Rodil se je iz tehničnega napredka, pa tudi iz vohunskih ambicij obeh velesil, ki sta se merili v obdobju, znanem kot [[hladna vojna]]. Konec 20. stoletja je klicni dostop prek telefonske linije prišel v večino ameriških domov, brskanje po spletu pa mu je sledilo tik za petami."
         },
         {
           "type": "paragraph",
-          "text": "Trije preprosti koraki, ki si jih morate zapomniti: prvo omrežje (ARPANET), skupni jezik (TCP/IP), nato preprost vmesnik (splet)."
+          "text": "Ob koncu tisočletja je bila tehnologija hkrati tako razširjena in tako nova, da so nekateri analitiki napovedovali svetovni zlom, če koledarji v računalnikih ne bodo pravilno prestopili v **leto 2000**: to je bil strah pred pojavom, ki so ga imenovali [[hrošč leta 2000]]. V 21. stoletju so neposredna sporočila, družbena omrežja in umetna inteligenca znova spremenili način sporazumevanja na spletu. Kako je vojaški projekt postal vsakdan vsega sveta?"
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p1",
-      "title": "ARPANET, prvo omrežje",
+      "title": "Omrežje, ki bi preživelo napad",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ob koncu **1960** let, sredi hladne vojne, je ameriška vojska financirala projekt: povezovanje računalnikov tako, da so še naprej komunicirali, tudi če je bil del omrežja uničen."
+          "text": "Projekt se je začel v **petdesetih letih 20. stoletja**. Računalniki so bili takrat ogromni in dragi: en sam stroj je zasedel celo sobo. Imeli so jih le vladni uradi in nekatere univerze. Ko so napetosti s Sovjetsko zvezo naraščale, so ameriški voditelji iskali komunikacijsko omrežje, ki ga sovjetski agenti ne bi mogli prestreči. Prvi korak je bil časovna delitev, ki je več uporabnikom omogočila delo na istem računalniku."
+        },
+        {
+          "type": "paragraph",
+          "text": "V začetku **šestdesetih let** je inženir [[Paul Baran]] preizkušal postopek, imenovan [[paketno preklapljanje]]: sporočila ne pošljemo v enem kosu, temveč ga razrežemo na majhne podatkovne pakete, ki po omrežju potujejo vsak zase. Baran in njegovi sodelavci so stavili, da bi podatki, ki tako potujejo po telefonskih linijah, preživeli sovjetski napad. Iz tega dela se je rodil [[ARPANET]], program ameriškega obrambnega ministrstva."
         },
         {
           "type": "image",
           "asset": "arpanet_1969_computer_ucla",
           "ratio": "4:3",
-          "caption": "ARPANET najprej povezuje nekaj ameriških univerz."
-        },
-        {
-          "type": "paragraph",
-          "text": "To omrežje se imenuje **ARPANET**. Sporočila so razdeljena na majhne pakete, ki imajo različne poti. Če ena cesta pade, jo prevzame druga."
+          "caption": "Računalnik SDS Sigma 7 na UCLA, prvi računalnik, povezan v ARPANET, leta 1969."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p2",
-      "title": "TCP/IP: govori isti jezik",
+      "title": "Od ARPANET-a do »internetov«: paketno preklapljanje",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Da se različna omrežja med seboj razumejo, so potrebna skupna pravila. **Vint Cerf** in **Bob Kahn** razvijata protokol **TCP/IP**: jezik, ki pove, kako izrezati, nasloviti in ponovno sestaviti podatke."
+          "text": "Za prenos teh paketov je ARPANET prevzel tehniko, ki so jo razvili britanski znanstveniki. Ključna naprava je bil [[usmerjevalnik]], del telefonskega omrežja, ki zbira pakete in jih pošilja naprej drugim strojem. Leta **1969** so povezali prve računalnike, najprej tistega na Kalifornijski univerzi v Los Angelesu. Na Havajih so računalničarji preizkušali sorodno zamisel, **ALOHAnet**, v kateri so paketi potovali po radijskih valovih."
         },
         {
           "type": "image",
-          "asset": "vint_cerf_bob_kahn_internet",
-          "ratio": "4:3",
-          "caption": "Cerf in Kahn: arhitekta jezika interneta."
+          "asset": "arpanet_logical_map_1977_network_diagram",
+          "ratio": "3:2",
+          "caption": "Logični zemljevid ARPANET-a s stanjem na dan 25. avgusta 1983, ki ga je izdelalo podjetje BBN: med seboj povezane univerze, laboratoriji in vojaške lokacije."
         },
         {
-          "type": "funFact",
-          "text": "1. januarja **1983** je ARPANET uradno prešel na TCP/IP. Mnogi menijo, da je ta datum tehnično \"rojstvo\" interneta."
+          "type": "paragraph",
+          "text": "V **sedemdesetih letih** in na začetku osemdesetih so na desetine ekip po svetu prenašale podatke po telefonskih linijah in po radiu. Posledica je bila množica majhnih, ločenih omrežij. Leta **1974** je neki znanstveni članek besedo »internetwork«, omrežje omrežij, skrajšal v »internet«. To je prva znana raba te besede."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p3",
-      "title": "Splet naredi omrežje človeško",
+      "title": "Modemi, naročnine in rojstvo spleta v CERN-u",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Internet je omrežje. **svetovni splet**, ki ga je izumil **Tim Berners-Lee** v CERN-u v začetku leta **1990**, je preprosta plast: strani, povezave, brskalniki."
+          "text": "Do sredine **osemdesetih let** so ti »interneti« živeli vsak zase. V Združenih državah je Nacionalna znanstvena fundacija (National Science Foundation), zvezna agencija, ki financira raziskave, veliko vlagala v superračunalnike in jih povezala z univerzami. Nato je ameriški zakonodajalec med letoma **1989** in **1995** postopoma odpravil omejitve, ki so na internetu prepovedovale komercialne storitve."
         },
         {
           "type": "paragraph",
-          "text": "Brez spleta bi internet ostal predvsem orodje za strokovnjake. Z njim lahko vsak klikne."
+          "text": "Leta 1995 so velika podjetja, kot sta **Sprint** in **AT&T**, ponujala klicne povezave: naročnik je modem priključil v telefonsko vtičnico in poklical številko. Že prej, leta **1990**, je britanski računalničar Tim Berners-Lee v CERN-u, evropskem laboratoriju za fiziko blizu Ženeve, zagnal [[World Wide Web]]. Splet je zbral podatke, raztresene po strežnikih, in strani med seboj povezal s hiperpovezavami."
+        },
+        {
+          "type": "image",
+          "asset": "tim_berners_lee_next_computer_cern_first_web_server",
+          "ratio": "3:2",
+          "caption": "Računalnik NeXT Tima Berners-Leeja v CERN-u, prvi spletni strežnik leta 1990: nalepka prosi, naj ga nikoli ne izklopijo."
+        },
+        {
+          "type": "funFact",
+          "text": "V devetdesetih letih so številni naročniki povezavo plačevali po minutah. Vsaka stran, ki se je počasi nalagala, je stala denar, domači telefon pa je bil zaseden, dokler je bil modem na zvezi."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p4",
-      "title": "Živčni sistem sveta",
+      "title": "Od e-pošte do iPhona: internet v vsakdanjem življenju",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Danes internet prenaša elektronsko pošto, videe, banke, bolnišnice, GPS. Ustvaril je tudi nove težave: dezinformacije, nadzor, digitalni razkorak."
+          "text": "Od sredine devetdesetih let je internet rasel z vso hitrostjo in ljudje so širili krog svojih dopisovalcev. E-pošta, klepetalnice in neposredna sporočila so omogočili pogovor v realnem času. Leta **2000** je že več kot **polovica** telekomunikacijskega prometa potekala prek interneta. V začetku 2000. let so se razmnožili blogi in prva družbena omrežja, najprej MySpace, nato TheFacebook.com."
+        },
+        {
+          "type": "paragraph",
+          "text": "Omrežje je nato zapustilo pisarne in dnevne sobe. Že od leta **2005** so telefoni BlackBerry omogočali pošiljanje sporočil prek svojih omrežij. Od leta **2007** je iPhone spravil internet v žep: po spletu se je odslej dalo brskati z mobilnim telefonom. Omrežje omrežij, rojeno kot obrambna strategija v času hladne vojne, je danes del vsakdanjega življenja."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1969",
+              "title": "Prvi povezani stroji",
+              "detail": "ARPANET poveže prve računalnike, med njimi tistega na UCLA."
+            },
+            {
+              "date": "1974",
+              "title": "Beseda »internet«",
+              "detail": "Članek skrajša »internetwork«: prva znana raba izraza."
+            },
+            {
+              "date": "1990",
+              "title": "Rojstvo spleta",
+              "detail": "Tim Berners-Lee v CERN-u zažene World Wide Web."
+            },
+            {
+              "date": "1995",
+              "title": "Internet se odpre javnosti",
+              "detail": "Konec komercialnih omejitev, klicne povezave pri Sprintu in AT&T."
+            },
+            {
+              "date": "2007",
+              "title": "Internet v žepu",
+              "detail": "Z iPhonom lahko brskamo po spletu kar z mobilnim telefonom."
+            }
+          ]
         },
         {
           "type": "takeaway",
-          "text": "Internet se je rodil iz ARPANET-a, postal univerzalen zahvaljujoč TCP/IP in dostopen zahvaljujoč spletu. To ni edinstven izum, je skupna arhitektura."
+          "text": "Internet, zasnovan med hladno vojno, da bi preživel napad, se je iz vojaških računalnikov preselil na univerze, nato z modemom in spletom v domove, na koncu pa je zlezel v telefon."
         }
       ]
     }

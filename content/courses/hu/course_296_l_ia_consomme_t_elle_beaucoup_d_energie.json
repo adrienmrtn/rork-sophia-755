@@ -1,0 +1,139 @@
+{
+  "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie",
+  "title": "Sok energiát fogyaszt a mesterséges intelligencia?",
+  "subtitle": "Minden válasz mögött",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Egy MI minden válasza egy olyan épületből érkezik, amely éjjel-nappal működő gépekkel van tele. Mennyi áramba kerül ez valójában, a modell betanításától a hálózatig, amely ellátja?",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "data_center_server_racks_aisle_blue_lights",
+    "ratio": "4:3",
+    "hook": "Az MI szoftvernek látszik, de minden válasz egy nagyon is valóságos épületben készül, amely ugyanarra a hálózatra csatlakozik, mint a te otthonod."
+  },
+  "sections": [
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Felteszel egy kérdést egy online MI-nek, és néhány másodperc alatt megjelenik a válasz. A munka azonban nem a telefonodban zajlik, hanem egy [[adatközpont]] belsejében: ez egy olyan épület, amely az információt feldolgozó és tároló gépekkel van tele. Ezek a gépek folyamatosan fogyasztják az áramot, még ha senki sem látja is őket."
+        },
+        {
+          "type": "paragraph",
+          "text": "A [[Nemzetközi Energiaügynökség]] (IEA) szerint 2025-ben az összes adatközpont együtt a világ villamosenergiájának nagyjából **1,5%-át** használta fel. Ez a szám minden online szolgáltatást lefed, nem csak az MI-t. Az MI-re szakosodott létesítmények száma viszont gyorsan nő. Egy rövid válasz önmagában keveset fogyaszt. Mégis gépek dolgoznak mindegyikért, és egyszerre több rendszer vesz fel áramot, hogy elkészüljön."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p1",
+      "title": "A szerverek fogyasztanak a legtöbbet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A [[szerver]] olyan számítógép, amely adatokat dolgoz fel és online szolgáltatásokat futtat. Egy adatközpontban a számítás nagy részét a szerverek végzik, így ők a legnagyobb áramfogyasztók. Ha felbontjuk egy modern adatközpont villanyszámláját, átlagosan **60%** jut a szerverekre. Ez a szám általában az adatközpontokra érvényes, nem csak az MI-létesítményekre."
+        },
+        {
+          "type": "image",
+          "asset": "data_center_cooling_pipes_chillers",
+          "ratio": "3:2",
+          "caption": "Szerversorok egy adatközpontban: ezek fogyasztják az áram nagy részét."
+        },
+        {
+          "type": "paragraph",
+          "text": "A maradék az adatok tárolására és mozgatására, a berendezések hűtésére és az épület működtetésére megy el. A hűtés számít, mert a számítógép munka közben hőt termel. Ha nem vezetnék el, a gépek végül túlmelegednének. Az MI-válasz mögötti áram tehát sokkal többet táplál, mint azokat a számítógépeket, amelyek a választ előállítják."
+        },
+        {
+          "type": "funFact",
+          "text": "Az IEA szerint az MI-re szakosodott adatközpontok áramfogyasztása csak 2025-ben 50%-kal nőtt."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p2",
+      "title": "Előbb tanulni, aztán válaszolni",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mielőtt válaszolni tudna, egy MI-szolgáltatásnak modellre van szüksége: egy olyan rendszerre, amely példákból tanult meg szabályszerűségeket. Ehhez [[betanítás]] kell, amely során számítógépek hatalmas adatmennyiségeken rágják át magukat. Ez a munka nagyon erős gépeket foglalhat le hosszú ideig."
+        },
+        {
+          "type": "image",
+          "asset": "frontier_supercomputer_oak_ridge_cabinets",
+          "ratio": "4:3",
+          "caption": "A NASA Columbia szuperszámítógépének szekrényei: ilyen gépekkel tanítanak be egy modellt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ha a modell betanult, másfajta munka kezdődik. Ez az [[inferencia]], vagyis az a számítás, amely választ ad a kérésedre. A betanítás nem indul újra teljesen minden kérdésnél, az inferencia viszont minden kérésnél megismétlődik. Melyik nyom többet a latban idővel? Ez attól függ, hogyan épül fel a szolgáltatás, és hányan használják. Egy forgalmas szolgáltatás számítógépei folyamatosan válaszolnak, két nagy betanítási szakasz között is."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p3",
+      "title": "Egy kérésnek nincs fix ára",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mennyi áramot fogyaszt egyetlen szöveges kérés? A közzétett becslések nem ugyanazt a választ adják. A Google működő szolgáltatását mérve **0,24 Wh**-ra teszi a medián szöveges kérést. A [[wattóra]] (Wh) az energiamennyiség mértékegysége. Egy másik tanulmány **0,31 Wh** mediánt kapott, és a standard kérések középső fele **0,16 és 0,60 Wh** közé esett."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ezek a számok nem mondanak ellent egymásnak: különböző rendszereket és módszereket írnak le, nem ugyanannak a feladatnak két ellentétes mérését. A jóval nehezebb feladatokat pedig kihagyják. Ha egy MI-t arra kérünk, hogy több lépésben gondolkodjon, mielőtt válaszol, a számítógépei sokkal tovább dolgoznak. A kérésenkénti energia tehát a rendszertől, a mérés módjától és a kért munkától függ."
+        },
+        {
+          "type": "funFact",
+          "text": "Ugyanebben a tanulmányban egy hosszú gondolkodást igénylő kérés, amelynél a modell kifejti a lépéseit, mielőtt következtetésre jut, 3,91 Wh mediánt ér el, a standard kérés több mint tízszeresét."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p4",
+      "title": "Nyomás alatt az elektromos hálózatok",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az [[elektromos hálózat]] az a vezetékrendszer, amely az erőművektől a lakásokig és a vállalatokig szállítja az áramot. A nagy MI-létesítmények ugyanerre a hálózatra csatlakoznak. Hogy érzékeltesse a nagyságrendet, az IEA egy MI-re szakosodott adatközpont, vagyis főként ezeknek a szolgáltatásoknak a futtatására épült létesítmény éves fogyasztását nagyjából **100.000 háztartáséhoz** hasonlítja."
+        },
+        {
+          "type": "image",
+          "asset": "high_voltage_power_lines_data_center_virginia",
+          "ratio": "4:3",
+          "caption": "Egy 750 kV-os nagyfeszültségű távvezeték oszlopai: az adatközpontok ugyanerre a hálózatra csatlakoznak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ezek a létesítmények ráadásul hajlamosak ugyanazokon a helyeken tömörülni. Ha egy területen több nagy telephely is áramot igényel, osztozniuk kell a helyi hálózaton, és a meglévő vezetékeket meg kellhet erősíteni. Egy tartalék kapacitással rendelkező régió könnyebben fogad új telephelyeket, mint egy olyan, amely már a határai közelében jár. Az tehát, hogy hol épül fel az MI infrastruktúrája, a szomszédoknak sem mindegy."
+        },
+        {
+          "type": "takeaway",
+          "text": "Az MI árama több szinten fogy el, a hűtendő szerverektől a helyi hálózatig, és egy kérés ára a rendszertől, a méréstől és a kért munkától függ."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "International Energy Agency (IEA), Key Questions on Energy and AI, 2026, p. 9 et 17."
+    },
+    {
+      "text": "International Energy Agency (IEA), Energy and AI, 2025, p. 13, 38 et 52."
+    },
+    {
+      "text": "Shehabi et al., 2024 United States Data Center Energy Usage Report, Lawrence Berkeley National Laboratory, 2024, p. 22-23."
+    },
+    {
+      "text": "Oviedo et al., Joule, 2026, p. 1.",
+      "url": "https://doi.org/10.1016/j.joule.2026.102430"
+    },
+    {
+      "text": "Elsworth et al., Measuring the Environmental Impact of Delivering AI at Google Scale, Google, 2025, p. 7."
+    }
+  ]
+}

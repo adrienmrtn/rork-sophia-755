@@ -1,0 +1,155 @@
+{
+  "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn",
+  "title": "DNA'n gerçekte neler anlatır?",
+  "subtitle": "Genler ve kader",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Zevkler, karakter, hastalık riskleri, uzak kökenler: DNA'mız bizim hakkımızda çok şey söyler. Ama bir yatkınlık hiçbir zaman kader olmadı.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "dna_double_helix_3d_render_blue",
+    "ratio": "4:3",
+    "hook": "DNA'n nereden geldiğini, neyi sevdiğini ve seni neyin tehdit ettiğini anlatır, ama her şeye o karar vermez."
+  },
+  "sections": [
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DNA'mız bizim hakkımızda son derece çok şey söyler: nereden geldiğimizi, vücudumuzun neler yapabildiğini, belki de bizi neyin beklediğini. O hem hikâyemiz hem de yapım planımızdır. Peki tam olarak nedir? DNA, vücuttaki hemen hemen her hücrede bulunur. **Çift sarmal** halinde kıvrılmış olarak, işleyişimizi, büyümemizi, gelişmemizi ve üremimizi düzenleyen genetik talimatları taşır."
+        },
+        {
+          "type": "paragraph",
+          "text": "İplikleri yalnızca **dört küçük birimden**, A, T, C ve G harfleriyle gösterilen nükleotitlerden oluşur. Bu dört harfin dizilişi, [[genom]] dediğimiz şeyi, yani her birimize özgü genetik planı oluşturur. Peki onda gerçekte ne okunabilir? Zevklerimiz, hastalık risklerimiz, kökenlerimiz. Ve bu metin geleceğimizi ne ölçüde yazar?"
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p1",
+      "title": "Genlerin zevklerini ve karakterini biçimlendirir",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bir [[gen]], bu metnin bir parçasıdır. Biyolojik bir kullanım kılavuzu gibi çalışır: vücuda **proteinlerini** nasıl üreteceğini söyler, proteinler de hücrelerimizi kurar ve çalıştırır. Görünür özelliklerimiz buradan doğar. Ama genlerin rolü dış görünüşten çok daha derindir."
+        },
+        {
+          "type": "image",
+          "asset": "identical_twins_sisters_portrait_nature_nurture",
+          "ratio": "5:4",
+          "caption": "Augustus Egg'in “Yol Arkadaşları” tablosu (1862): her şeyleriyle birbirine benzeyen iki genç kadın, biri uyuyor, öteki okuyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Genetik varyant]], bir genin biraz farklı bir versiyonudur. Bilim insanları yakın zamanda bunların birkaçını **kişilikle** ilişkilendirdi. İnce genetik ayarlar tercihlerimizi yönlendirebilir: sporu sevmek ya da ondan nefret etmek, dışa dönük olmak, hobi biriktirmek. DNA'mız gündelik hayatımızı sandığımızdan çok daha fazla etkiliyor olabilir. Bu da bir soru doğurur: davranışımızın ne kadarı biyolojimizde zaten yazılı?"
+        },
+        {
+          "type": "funFact",
+          "text": "Çay mı, kahve mi? DNA'yı kişilikle ilişkilendiren araştırmalara göre bu basit tercih bile genlerimizdeki ince farklardan kaynaklanıyor olabilir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Üstelik iş bununla bitmiyor olabilir. DNA, depresyon gibi bazı **ruh sağlığı** bozukluklarına [[genetik yatkınlık]] taşıyan kişiler hakkında da ipuçları verir. Yani yalnızca neyi sevdiğimizi değil, bizi neyin kırılgan kılabileceğini de anlatır."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p2",
+      "title": "DNA'nın hastalık riskleri hakkında söyledikleri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "İşin içinde yalnızca ruh sağlığı yok. DNA'mızın yapısı bizi başka hastalıklara karşı da daha savunmasız kılabilir, bunların bazıları “ailede görülür”. Bilinen bir örnek: [[BRCA1 ve BRCA2]] genlerinin kalıtsal varyantları bazı kadınları **erken yaşta meme kanserine** yatkın hale getirir."
+        },
+        {
+          "type": "image",
+          "asset": "dna_sequencing_chromatogram_sanger_readout",
+          "ratio": "2:1",
+          "caption": "Dizileme kromatogramı: her renkli tepe DNA'nın bir harfidir. Bir test, varyantı bu okuma üzerinde tespit eder."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Genetik test]] tam da burada, hem sağlık sistemi hem de ilgili kişiler için bütün değerini kazanır. Kalıtsal bir riski tespit etmek erken harekete geçmeyi sağlar: daha erken **tarama**, yakın takip, ilaç ya da başka bir koruyucu tedavi. Bu erken davranma hayat kurtarabilir ve tıbbi masrafları azaltabilir."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p3",
+      "title": "Bir zaman makinesi: nereden geliyorsun?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DNA'mız kuşaktan kuşağa aktarılır. Atalarımızla ilgili ipuçlarını saklar: nereden geldiklerini, ne yediklerini, nasıl yaşadıklarını. Gerçek bir zaman makinesidir. Bilim insanları bugünkü toplulukların **genetik örüntülerini** karşılaştırarak insanların yeryüzünde izlediği yolu yeniden çizebildi."
+        },
+        {
+          "type": "image",
+          "asset": "early_human_migrations_out_of_africa_map",
+          "ratio": "5:4",
+          "caption": "Afrika'daki ilk Homo sapiens soyları ve Avrasya'ya çıkışları, popülasyon genetiğiyle yeniden kurulmuş hali."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bir örnek. Yazılı kaynaklar, **Kuzey Afrika**'dan gelen toplulukların **700 ile 1200** yılları arasında [[İber Yarımadası]] topraklarına yerleştiğini anlatır. DNA bu anlatıyı doğrular: yarımadanın bugünkü sakinleri bu karşılaşmaların genetik izini hâlâ taşıyor."
+        },
+        {
+          "type": "funFact",
+          "text": "En uzak kökenlerimiz bile basit bir soy ağacından daha karmaşıktır. Tam genomlara dayanan bir çalışma, yaklaşık **1,5 milyon yıl** önce ayrılan ve sonra yeniden karışan iki eski insan topluluğunun izini buldu."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p4",
+      "title": "Yatkınlık kader değildir",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Demek ki DNA'n pek çok özelliğini etkiliyor. Ama bir şeye yatkın olmak, kaderinin mühürlendiği anlamına gelmez. Genetik bir **depresyon** riski taşımak, depresyona gireceğin anlamına gelmez. Genetik risk bir kesinlik değildir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Genler olasılıkların kapısını açar, onları dayatmaz. Deneyimlerimiz, seçimlerimiz ve koşullarımız da en az onlar kadar önemlidir. DNA'nı okumak, kendinin bir parçasını okumaktır: değerli, bazen sağlığın için belirleyici bir parça, ama yalnızca bir parça."
+        },
+        {
+          "type": "takeaway",
+          "text": "DNA zevklerimizi, risklerimizi ve kökenlerimizi anlatır, ama bir yatkınlık asla kesinlik değildir: DNA'n senin yalnızca bir parçandır."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Yale School of Medicine, « How Genes Shape Personality Traits: New Links Are Discovered », Yale Medicine News, 9 septembre 2024.",
+      "url": "https://medicine.yale.edu/news-article/how-genes-shape-personality-traits-new-links-are-discovered/"
+    },
+    {
+      "text": "« DNA », Wikipedia, The Free Encyclopedia.",
+      "url": "https://en.wikipedia.org/wiki/DNA"
+    },
+    {
+      "text": "Institute of Medicine (US), « Genetics and Health », dans L. M. Hernandez et D. G. Blazer (dir.), Genes, Behavior, and the Social Environment: Moving Beyond the Nature/Nurture Debate, National Academies Press, Washington (DC), 2006.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK19932/"
+    },
+    {
+      "text": "NIHR Oxford Biomedical Research Centre, « International study reveals how our genes shape blood proteins linked to disease ».",
+      "url": "https://oxfordbrc.nihr.ac.uk/international-study-reveals-how-our-genes-shape-blood-proteins-linked-to-disease/"
+    },
+    {
+      "text": "« What Our DNA Can Tell Us About the History of Humans », Frontiers for Young Minds, 2020.",
+      "url": "https://kids.frontiersin.org/articles/10.3389/frym.2020.00106"
+    },
+    {
+      "text": "« How genetics determine our life choices », BBC Future, 9 mai 2023.",
+      "url": "https://www.bbc.co.uk/future/article/20230509-how-genetics-determine-our-life-choices"
+    },
+    {
+      "text": "University of Cambridge, « Genetic study reveals hidden chapter in human evolution », Research news, 18 mars 2025.",
+      "url": "https://www.cam.ac.uk/research/news/genetic-study-reveals-hidden-chapter-in-human-evolution"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires",
+  "title": "Por que temos fusos horários?",
+  "subtitle": "1884",
+  "subject": "histoire",
+  "subcategory": "Idade Moderna & século XIX",
+  "description": "Até o século XIX, cada cidade vivia na sua própria hora. As ferrovias e depois uma conferência reunida em Washington em 1884 refizeram o próprio tempo.",
+  "author": "nathan-hewitt",
+  "hero": {
+    "image": "shepherd_gate_clock_royal_observatory_greenwich",
+    "ratio": "4:3",
+    "hook": "Antes dos trens, meio-dia nunca era exatamente a mesma hora de uma cidade para a outra."
+  },
+  "sections": [
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Durante a maior parte da história, a hora foi local. Cada cidade acertava seus relógios por conta própria, e o meio-dia numa cidade podia cair vários minutos antes ou depois do meio-dia na vizinha. Ninguém se importava: ninguém viajava rápido o bastante de uma cidade para outra para que a diferença fizesse falta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Então vieram as ferrovias. Quando duas cidades ficam a poucos minutos de distância, essas diferenças passam a atrapalhar. Nas longas distâncias, um trem passava por paradas onde a hora local variava horas inteiras. Os sistemas de tempo que a humanidade usava havia milênios já não bastavam. Para os trens andarem sem problemas, era preciso refazer o próprio tempo."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p1",
+      "title": "As ferrovias adotam a hora de Greenwich",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "As diferenças de hora entre as cidades eram um pesadelo para os horários. E também eram perigosas: vários acidentes de trem foram causados por horários desencontrados. As companhias entenderam que precisavam de uma hora comum. Em **1840**, a [[Great Western Railway]], na Grã-Bretanha, foi a primeira a achar a saída: acertou seus horários pela hora do Observatório Real de Greenwich, a [[hora de Greenwich]]. A partir daí, todas as suas estações passaram a viver na mesma hora."
+        },
+        {
+          "type": "image",
+          "asset": "bristol_corn_exchange_clock_two_minute_hands",
+          "ratio": "4:3",
+          "caption": "O relógio do Corn Exchange de Bristol e seus dois ponteiros dos minutos."
+        },
+        {
+          "type": "paragraph",
+          "text": "A mudança funcionou muito bem. Partidas e chegadas enfim se coordenavam com segurança. Logo, todas as companhias britânicas adotaram o mesmo sistema. Já nos anos **1850**, a maioria dos relógios públicos do país estava acertada por Greenwich. Em **1880**, essa hora virou a hora legal da Grã-Bretanha."
+        },
+        {
+          "type": "funFact",
+          "text": "Em Bristol, o relógio do Corn Exchange tem dois ponteiros dos minutos: um para a hora local, outro para a hora das ferrovias, a de Greenwich, com dez minutos de diferença. Uma lembrança do tempo em que a cidade vivia em duas horas ao mesmo tempo."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p2",
+      "title": "Os Estados Unidos inventam os fusos horários",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nos Estados Unidos, a receita britânica não bastava. Os trens percorriam distâncias muito maiores: quando era meio-dia na Califórnia, a tarde já ia avançada em Washington. A solução foram os [[fusos horários]]: dividir o país em **cinco** faixas, cada uma com uma hora de diferença em relação à seguinte."
+        },
+        {
+          "type": "image",
+          "asset": "william_allen_railroad_time_zones_map_1883",
+          "ratio": "4:3",
+          "caption": "Mapa publicitário da Burlington Route, 1892: os fusos ferroviários adotados em 1883 delimitam o Pacific, o Mountain, o Central e o Eastern Time."
+        },
+        {
+          "type": "paragraph",
+          "text": "Assim, os trens locais andavam numa hora que fazia sentido no lugar, e os que cruzavam vários fusos convertiam seus horários com facilidade. Várias divisões foram propostas, e a que venceu foi a de [[William Allen]], editor de guias ferroviários. Em **novembro de 1883**, as companhias ferroviárias americanas e canadenses adotaram oficialmente seus cinco fusos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mas as ferrovias não eram as únicas a sofrer com a hora local. O transporte marítimo internacional crescia rápido, e o telégrafo tinha acabado de surgir. A coordenação do tempo tinha virado um problema mundial, que pedia uma resposta mundial."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p3",
+      "title": "A conferência de Washington de 1884",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em **1884**, o presidente americano Chester A. Arthur convocou uma conferência em Washington para resolver a questão. Representantes de **25 países**, quase todos americanos ou europeus, se reuniram na [[Conferência Internacional do Meridiano]]. Eles decidiram que o meridiano de Greenwich seria o meridiano de origem e sua hora, o tempo universal, com um dia de 24 horas começando à meia-noite, hora de Greenwich."
+        },
+        {
+          "type": "image",
+          "asset": "sandford_fleming_portrait_photograph_1890s",
+          "ratio": "3:4",
+          "caption": "Sandford Fleming, engenheiro escocês-canadense: retrato publicado no Canadian Alpine Journal em 1907."
+        },
+        {
+          "type": "paragraph",
+          "text": "O engenheiro escocês-canadense [[Sandford Fleming]] defendeu ali um sistema mundial de fusos horários. Ele dividiu o globo em **24 zonas** conforme a [[longitude]]: a cada **15 graus**, a hora avança uma hora em relação à zona anterior. Ao contrário do que muita gente pensa, a conferência não adotou oficialmente seus fusos. A hora de Greenwich virou uma referência universal, mas ninguém mandou que ela substituísse as horas locais."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p4",
+      "title": "Uma adoção lenta e contestada",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A adoção dos fusos horários, portanto, aconteceu aos poucos. Em **1900**, a maioria dos países europeus já tinha adotado uma hora baseada em Greenwich. Potências imperiais como a Grã-Bretanha e a França a impuseram às suas colônias. Outros países aderiram por conveniência, às vezes depois de décadas: a China esperou até **1918**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mesmo adotada oficialmente, a nova hora custou a entrar nos hábitos. Durante anos, ela gerou confusão e piadas, e a hora local continuou comum no mundo inteiro. Foram precisas décadas, e ferramentas como a escola pública ou a programação do rádio, para apagá-la de vez. Nos anos **1920**, a maioria dos países enfim vivia numa hora baseada em Greenwich. O tempo foi refeito porque as ferrovias quiseram."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1840",
+              "title": "Trens na hora de Greenwich",
+              "detail": "A Great Western Railway acerta seus horários pelo Observatório Real."
+            },
+            {
+              "date": "1880",
+              "title": "Hora legal britânica",
+              "detail": "A hora de Greenwich vira a hora oficial da Grã-Bretanha."
+            },
+            {
+              "date": "Nov. de 1883",
+              "title": "Cinco fusos norte-americanos",
+              "detail": "As companhias americanas e canadenses adotam a divisão de William Allen."
+            },
+            {
+              "date": "1884",
+              "title": "Conferência de Washington",
+              "detail": "25 países fazem da hora de Greenwich o tempo universal."
+            },
+            {
+              "date": "1918",
+              "title": "A China se alinha",
+              "detail": "A China também adota uma hora baseada em Greenwich."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Os fusos horários não nasceram de um decreto mundial, mas das necessidades das ferrovias, e foram precisas décadas para que substituíssem a hora local."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. A. Johnston, The Clocks Are Telling Lies: Science, Society, and the Construction of Time, 2022, p. 24, 104 et 188, et chap. 5."
+    }
+  ]
+}

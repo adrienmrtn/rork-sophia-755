@@ -1,0 +1,131 @@
+{
+  "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos",
+  "title": "Zašto u našim baterijama ima kobalta?",
+  "subtitle": "Element 27",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Gotovo nitko ne kopa da bi došao do kobalta, a ipak ga ima u bateriji svakog mobitela. Priča o metalu koji industrija ne uspijeva zamijeniti, a ipak ga se nastoji riješiti.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "cobalt_copper_open_pit_mine_kolwezi_drc",
+    "ratio": "4:3",
+    "hook": "Metal o kojem ovise električni automobili gotovo se nikad ne vadi radi njega samog."
+  },
+  "sections": [
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kobalt je element **27** periodnog sustava, smješten između željeza i nikla. Nalazi se u bateriji mobitela koji držite u ruci, u magnetima, u slitinama dovoljno tvrdima da izdrže unutar mlaznog motora. A gotovo nitko ne kopa zbog njega."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oko **99 %** svjetskog kobalta izlazi iz zemlje kao nusproizvod: izdvaja se iz ruda koje se kopaju zbog bakra ili nikla. [[Demokratska Republika Kongo]] daje gotovo **tri četvrtine** te količine, i to gotovo isključivo iz rudnika bakra. Ponuda kobalta, dakle, ne ovisi o potražnji za kobaltom, nego o potražnji za bakrom i niklom. Čudan način upravljanja metalom na kojem počivaju električni automobili."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p1",
+      "title": "Baterija kojoj je trebao kobalt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Godine **1980**. u Oxfordu [[John Goodenough]] i Koichi Mizushima otkrivaju da litij-kobaltov oksid (LiCoO2, ili LCO) može služiti kao elektroda zahvaljujući pojavi koja se zove [[interkalacija]]: između slojeva kobaltova oksida uvlače se litijevi ioni, a zatim ponovno izlaze, a da se slojevi ne uruše. To je [[katoda]] koja je nedostajala, jedna od dviju elektroda baterije."
+        },
+        {
+          "type": "image",
+          "asset": "john_goodenough_portrait_lithium_battery_inventor",
+          "ratio": "3:4",
+          "caption": "John Goodenough, koji je 1980. s Koichijem Mizushimom otkrio kobaltnu katodu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svijet zatim čeka više od deset godina. Godine **1991**. Sony prodaje prvu komercijalnu litij-ionsku bateriju, a LCO joj je katoda. Sve do otprilike **2010**. gotovo se sve litij-ionske katode izrađuju na taj način. LCO i danas prevladava u potrošačkoj elektronici: zato vaš mobitel sadrži nekoliko grama metala koji nitko nije odlučio vaditi."
+        },
+        {
+          "type": "funFact",
+          "text": "Kobalt je 1735. otkrio švedski kemičar Georg Brandt, gotovo dva i pol stoljeća prije nego što je dospio u naše baterije."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p2",
+      "title": "Baterija koja sama proizvodi kisik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zamislite katodu kao zid od opeka. Slojevi kobaltova oksida su police, a litijevi ioni opeke složene između njih. Napunite li bateriju previše, izvadit ćete previše opeka: zid postaje nestabilan. Iznad otprilike **130 °C**, ili pri prepunjavanju, struktura se počinje urušavati, a kisik zarobljen u kobaltovu oksidu oslobađa se kao plin."
+        },
+        {
+          "type": "image",
+          "asset": "lithium_ion_battery_fire_thermal_runaway_test",
+          "ratio": "2:3",
+          "caption": "Paket od dviju litij-ionskih ćelija 18650: sama naljepnica upozorava da u vatri može eksplodirati."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tekućina koja ispunjava ćeliju je **zapaljiva**, a baterija je upravo sama dala kisik za njezino gorenje. Toplina ubrzava razgradnju, koja oslobađa još kisika, koji stvara još topline. To je [[toplinski bijeg]]. Zato se požar litijske baterije ne gasi gušenjem: kisik je već unutra."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p3",
+      "title": "Zašto je kobalt još uvijek tu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vratimo se zidu od opeka. Pri svakom punjenju i svakoj uporabi litijeve opeke izlaze pa se vraćaju. Kobalt je vezivo koje sprječava da se zid iskrivi ili sruši tijekom stotina ciklusa. Drugi materijali to ne mogu sami: **nikal** pohranjuje više energije, ali se prebrzo troši, a **mangan** je jeftin, ali mu nedostaje snage."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zato mješavine u većini električnih automobila, poput katoda **NMC** (nikal, mangan, kobalt) i **NCA** (nikal, kobalt, aluminij), samo smanjuju udio kobalta, ali ga nikad ne uklanjaju. Već petnaest godina inženjeri ga izbacuju kako bi smanjili troškove, no uvijek im treba prstohvat da sve drži na okupu. Jedina koja posve bez njega može, [[LFP baterija]], uspijeva u tome tako što odbacuje zid i gradi potpuno drukčiju unutarnju strukturu."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p4",
+      "title": "Kako se osloboditi kobalta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Problem kobalta nije kemijski. Dio kongoanske proizvodnje otpada na ono što se zove [[zanatsko rudarenje]]: kopa se ručno, u opasnim uvjetima, a ponegdje to rade djeca. Cijena mu se mijenja brzo i snažno, pa je svaka baterija koja o njemu ovisi nepredvidiva. I gotovo sve dolazi iz **jedne jedine zemlje**."
+        },
+        {
+          "type": "image",
+          "asset": "artisanal_cobalt_miners_kolwezi_congo",
+          "ratio": "4:3",
+          "caption": "Zanatski rudari pune vreće rudom kobalta u Demokratskoj Republici Kongo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Industrija stoga nastoji osmisliti baterije bez tog metala. Glavni je odgovor **LFP**, litij-željezov fosfat, u kojem kobalt zamjenjuju željezo i fosfor, dva od najjeftinijih i najzastupljenijih elemenata. Manje se zagrijava i mnogo ga je teže dovesti do toplinskog bijega."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cijena toga je energija: pri **jednakoj masi** LFP ćelija pohranjuje manje. Zato je vaš automobil možda već koristi, a vaš mobitel još nije prešao na nju: u džepu je svaki gram važan."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kobalt drži strukturu litij-ionskih baterija, ali dolazi gotovo isključivo iz jedne zemlje, kao nusproizvod bakra: industrija ga se oslobađa samo promjenom kemije, s LFP-om, po cijenu manje energije."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Cobalt Institute, « Cobalt uses ».",
+      "url": "https://www.cobaltinstitute.org/global-cobalt/cobalt-uses/"
+    },
+    {
+      "text": "« One hundred years of cobalt production in the Democratic Republic of the Congo », Resources Policy, 2022.",
+      "url": "https://doi.org/10.1016/j.resourpol.2022.103007"
+    }
+  ]
+}

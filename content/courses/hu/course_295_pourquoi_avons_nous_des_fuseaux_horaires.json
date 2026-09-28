@@ -1,0 +1,156 @@
+{
+  "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires",
+  "title": "Miért vannak időzónák?",
+  "subtitle": "1884",
+  "subject": "histoire",
+  "subcategory": "Early modern era & 19th century",
+  "description": "A 19. századig minden város a saját ideje szerint élt. Aztán a vasút, majd egy 1884-es washingtoni konferencia magát az időt alakította át.",
+  "author": "nathan-hewitt",
+  "hero": {
+    "image": "shepherd_gate_clock_royal_observatory_greenwich",
+    "ratio": "4:3",
+    "hook": "A vonatok előtt a dél sosem volt pontosan ugyanakkor két szomszédos városban."
+  },
+  "sections": [
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A történelem nagy részében az idő helyi volt. Minden város maga állította be az óráit, és az egyik városban néhány perccel korábban vagy később lehetett dél, mint a szomszédban. Ez senkit sem zavart: nem lehetett olyan gyorsan eljutni egyik városból a másikba, hogy a különbség számítson."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aztán jött a vasút. Amikor két várost néhány perc választott el, ezek az eltérések zavarókká váltak. Hosszú útvonalakon a vonat olyan megállókon haladt át, ahol a helyi idő egész órákkal eltért. Az évezredek óta használt időrendszerek már nem voltak elegendők. Ahhoz, hogy a vonatok zökkenőmentesen közlekedjenek, magát az időt kellett újragondolni."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p1",
+      "title": "A vasút átveszi a greenwichi időt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A városok közötti időeltérések rémálmot jelentettek a menetrendeknek. Veszélyesek is voltak: több vonatbalesetet rosszul összehangolt menetrendek okoztak. A társaságok rájöttek, hogy közös időre van szükségük. **1840**-ben a brit [[Great Western Railway]] talált elsőként megoldást: menetrendjét a greenwichi királyi csillagvizsgáló órájához igazította, ez a [[greenwichi idő]]. Ettől kezdve minden állomása ugyanazt az időt követte."
+        },
+        {
+          "type": "image",
+          "asset": "bristol_corn_exchange_clock_two_minute_hands",
+          "ratio": "4:3",
+          "caption": "A bristoli Corn Exchange órája a két percmutatójával."
+        },
+        {
+          "type": "paragraph",
+          "text": "A változás remekül bevált. Az indulásokat és érkezéseket végre biztonságosan össze lehetett hangolni. Hamarosan minden brit vasúttársaság ugyanezt a rendszert vette át. Az **1850-es évekre** az ország legtöbb nyilvános óráját Greenwichhez igazították. **1880**-ban ez lett Nagy-Britannia törvényes ideje."
+        },
+        {
+          "type": "funFact",
+          "text": "Bristolban a Corn Exchange órájának két percmutatója van: az egyik a helyi időt mutatja, a másik a vasúti, vagyis a greenwichi időt, tízperces eltéréssel. Emléke annak a kornak, amikor a város egyszerre két idő szerint élt."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p2",
+      "title": "Az Egyesült Államok feltalálja az időzónákat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az Egyesült Államokban a brit recept nem volt elég. A vonatok ott sokkal nagyobb távolságokat tettek meg: amikor Kaliforniában dél volt, Washingtonban már jócskán benne jártak a délutánban. A megoldást az [[időzónák]] jelentették: az országot **öt** sávra osztották, mindegyik között egy óra eltéréssel."
+        },
+        {
+          "type": "image",
+          "asset": "william_allen_railroad_time_zones_map_1883",
+          "ratio": "4:3",
+          "caption": "A Burlington Route reklámtérképe, 1892: az 1883-ban bevezetett vasúti zónák a Pacific, a Mountain, a Central és az Eastern Time határait jelölik."
+        },
+        {
+          "type": "paragraph",
+          "text": "A helyi vonatok így olyan idő szerint közlekedtek, amelynek ott helyben értelme volt, a több zónán áthaladók pedig könnyen átszámíthatták a menetrendjüket. Több felosztást is javasoltak. Végül [[William Allen]] vasúti menetrendkönyv-szerkesztő változata győzött. **1883 novemberében** az amerikai és a kanadai vasúttársaságok hivatalosan is bevezették az ő öt zónáját."
+        },
+        {
+          "type": "paragraph",
+          "text": "A helyi idő azonban nemcsak a vasútnak okozott gondot. A nemzetközi hajózás gyorsan fejlődött, és éppen megjelent a távíró. Az idő összehangolása világméretű problémává vált, amely világméretű választ követelt."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p3",
+      "title": "Az 1884-es washingtoni konferencia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1884**-ben Chester A. Arthur amerikai elnök konferenciát hívott össze Washingtonban, hogy rendezzék a kérdést. **25 ország** képviselői, szinte mind amerikaiak vagy európaiak, a [[Nemzetközi Meridián Konferencia]] keretében ültek össze. Úgy döntöttek, hogy a greenwichi délkör lesz a kezdő délkör, az ottani idő pedig a világidő, és a 24 órás nap greenwichi idő szerint éjfélkor kezdődik."
+        },
+        {
+          "type": "image",
+          "asset": "sandford_fleming_portrait_photograph_1890s",
+          "ratio": "3:4",
+          "caption": "Sandford Fleming skót-kanadai mérnök: a Canadian Alpine Journalban 1907-ben megjelent portré."
+        },
+        {
+          "type": "paragraph",
+          "text": "A skót-kanadai mérnök, [[Sandford Fleming]] itt egy világméretű időzóna-rendszer mellett érvelt. A földgömböt a [[földrajzi hosszúság]] alapján **24 zónára** osztotta: **15 fokonként** egy órával előrébb jár az idő, mint az előző zónában. A közhiedelemmel ellentétben a konferencia hivatalosan nem fogadta el a zónáit. A greenwichi idő egyetemes viszonyítási pont lett, de senki sem rendelte el, hogy felváltsa a helyi időket."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p4",
+      "title": "Lassú és vitatott elfogadás",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az időzónák tehát fokozatosan terjedtek el. **1900**-ra a legtöbb európai ország Greenwichhez igazított időt vezetett be. Az olyan gyarmattartó hatalmak, mint Nagy-Britannia és Franciaország, a gyarmataikra is ráerőltették. Más országok kényelmi okokból csatlakoztak, néha évtizedek után: Kína **1918**-ig várt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az új idő még hivatalos bevezetése után is nehezen honosodott meg. Évekig zavart és gúnyolódást keltett, és a helyi idő szerte a világon elterjedt maradt. Évtizedek kellettek, és olyan eszközök, mint az állami iskola vagy a rádió műsorrendje, hogy végleg eltűnjön. Az **1920-as évekre** a legtöbb ország végre Greenwichhez igazított idő szerint élt. Az időt újraformálták, mert a vasút így akarta."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1840",
+              "title": "Vonatok greenwichi idő szerint",
+              "detail": "A Great Western Railway a királyi csillagvizsgálóhoz igazítja a menetrendjét."
+            },
+            {
+              "date": "1880",
+              "title": "Brit törvényes idő",
+              "detail": "A greenwichi idő Nagy-Britannia hivatalos ideje lesz."
+            },
+            {
+              "date": "1883. november",
+              "title": "Öt észak-amerikai zóna",
+              "detail": "Az amerikai és kanadai társaságok bevezetik William Allen felosztását."
+            },
+            {
+              "date": "1884",
+              "title": "A washingtoni konferencia",
+              "detail": "25 ország a greenwichi időt teszi meg világidőnek."
+            },
+            {
+              "date": "1918",
+              "title": "Kína is csatlakozik",
+              "detail": "Kína is bevezeti a Greenwichhez igazított időt."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Az időzónák nem világméretű rendeletből születtek, hanem a vasút igényeiből, és évtizedekbe telt, mire felváltották a helyi időt."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. A. Johnston, The Clocks Are Telling Lies: Science, Society, and the Construction of Time, 2022, p. 24, 104 et 188, et chap. 5."
+    }
+  ]
+}

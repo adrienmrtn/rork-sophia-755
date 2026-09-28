@@ -1,0 +1,155 @@
+{
+  "id": "course_243_pourquoi_a_t_on_invente_les_vampires",
+  "title": "Skąd się wzięły wampiry?",
+  "subtitle": "1645-1897",
+  "subject": "mythologie",
+  "subcategory": "Legends & creatures",
+  "description": "Zanim wampir stał się arystokratą w pelerynie, był sąsiadem, który umarł za wcześnie i którego oskarżano, że zabiera ze sobą rodzinę. Historia strachu, który znalazł sobie imię.",
+  "author": "angela-bouma",
+  "hero": {
+    "image": "foggy_village_graveyard_night_balkans",
+    "ratio": "4:3",
+    "hook": "Śmierć przeraża. Jeszcze bardziej przeraża to, że nie umiemy jej wyjaśnić."
+  },
+  "sections": [
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_intro",
+      "title": "Wstęp",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1645** roku grecki uczony mieszkający w Rzymie, [[Leo Allatius]], opisał stwora, przed którym drżeli wieśniacy w jego ojczyźnie: [[wrykolakas]]. To zmarły, który wychodzi nocą i wraca dręczyć własną rodzinę, bo pochowano go bez ostatnich sakramentów. Zniszczyć go może tylko ogień."
+        },
+        {
+          "type": "paragraph",
+          "text": "Przez dwa stulecia epidemie i niewyjaśnione zgony w jednym domu podtrzymywały tę wiarę. Każdy kolejny źle pochowany zmarły groził, że stanie się następnym. Jak ta wiejska panika zmieniła się w wampira we fraku z powieści i filmów?"
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p1",
+      "title": "Zmarły, który chciał swoich butów",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1725** roku w serbskiej wsi Kisiljevo, podlegającej wtedy Austrii, zmarł chłop o imieniu [[Petar Blagojević]]. W ciągu kilku dni zmarło dziewięciu sąsiadów. Każdy z nich w ostatnich chwilach twierdził, że to on przychodził nocą ich dusić. Wdowa opowiadała, że wrócił po swoje buty, a potem wyjechała ze wsi."
+        },
+        {
+          "type": "image",
+          "asset": "edvard_munch_vampire_painting_1895",
+          "ratio": "auto",
+          "caption": "„Wampir” Edvarda Muncha (1895). Zanim zajęli się nim malarze i pisarze, wampir był sprawą wiejską."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wieśniacy wykopali ciało. Wyglądało zaskakująco nienaruszone: świeża skóra, krew w ustach, włosy i paznokcie, które zdawały się urosnąć. To wystarczyło za dowód. Wbili mu kołek w serce i spalili zwłoki. Austriacki urzędnik przyglądał się temu i napisał raport. Słowo „wampir” rozeszło się po gazetach całej Europy."
+        },
+        {
+          "type": "paragraph",
+          "text": "To, co wieśniacy brali za znaki nadprzyrodzone, było zwykłym skutkiem rozkładu. Gazy wytwarzane przez bakterie wzdymają brzuch i twarz, a przez usta i nos wypychają ciemny płyn podobny do krwi. Skóra się kurczy i odsłania nasady paznokci i włosów, które wydają się dłuższe."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p2",
+      "title": "Choroba za legendą",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W XIX wieku w Nowej Anglii inny strach przybrał ten sam kształt. Chodziło o chorobę nazywaną wtedy „suchotami”: [[gruźlica]] całymi miesiącami wyniszczała chorych i męczyła ich kaszlem. Była zaraźliwa i przechodziła z jednego członka rodziny na drugiego. Z zewnątrz wyglądało to tak, jakby zmarły wracał i po kolei wysysał życie z bliskich. Nie tłumaczy to jednak starszej tradycji bałkańskiej: to dwa równoległe wierzenia, zrodzone w innych czasach i miejscach, ale odpowiadające na ten sam lęk."
+        },
+        {
+          "type": "image",
+          "asset": "mercy_brown_grave_exeter_rhode_island",
+          "ratio": "3:4",
+          "caption": "Grób Mercy Brown w Exeter (Rhode Island), odwiedzany do dziś."
+        },
+        {
+          "type": "paragraph",
+          "text": "W **1892** roku w Exeter, w stanie Rhode Island, [[Mercy Brown]] zmarła na gruźlicę w wieku 19 lat, po matce i siostrze. Gdy zachorował jej brat Edwin, sąsiedzi ekshumowali wszystkie trzy ciała. Ciało Mercy, pochowane w środku zimy, było dobrze zachowane, a w sercu wciąż była krew. Serce spalono, a popiół dano Edwinowi do wypicia jako lekarstwo. Zmarł dwa miesiące później."
+        },
+        {
+          "type": "funFact",
+          "text": "Wrykolakas nie jest wyłącznie grecki. Starożytna Mezopotamia miała swoje demony pijące krew, Ruś swojego *upyra*, a Chiny swojego *jiangshi*, sztywnego trupa, który porusza się podskokami, z wyciągniętymi rękami."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p3",
+      "title": "Wampir zostaje arystokratą",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1819** roku młody angielski lekarz [[John Polidori]] wydał *Wampira*, pierwsze prozatorskie opowiadanie o tym stworze w języku angielskim. Pomysł narodził się trzy lata wcześniej, podczas słynnego deszczowego lata nad Jeziorem Genewskim, gdy Mary Shelley wymyśliła *Frankensteina*. Jego bohater, **lord Ruthven**, nie ma już nic z chłopa wstającego z grobu: jest bogaty, tajemniczy, uwodzicielski i poluje w londyńskich salonach."
+        },
+        {
+          "type": "image",
+          "asset": "bram_stoker_dracula_1897_first_edition_cover",
+          "ratio": "3:4",
+          "caption": "Pierwsze wydanie Drakuli (1897) w żółtej płóciennej oprawie z czerwonymi literami."
+        },
+        {
+          "type": "paragraph",
+          "text": "Opowiadanie wznawiano, tłumaczono i przenoszono na scenę. Światowy wampir stał się wzorem dla autorów powieści gotyckich. W **1897** roku [[Bram Stoker]] wydał *Drakulę* i ustalił model na całe stulecie: hrabia, zamek, kły, czosnek i krucyfiksy. Prawie wszystko, co zrobi z nim potem kino, już tam jest."
+        },
+        {
+          "type": "funFact",
+          "text": "Stoker nigdy nie był w Siedmiogrodzie. Napisał *Drakulę* na podstawie przewodników i książek z biblioteki w Whitby, angielskim miasteczku, w którym hrabia schodzi na ląd w powieści."
+        }
+      ]
+    },
+    {
+      "id": "course_243_pourquoi_a_t_on_invente_les_vampires_p4",
+      "title": "Strach ma wiele imion",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wierzenia o wampirach nie mówią tak naprawdę o tym, co nadprzyrodzone. Zanim nauka wyjaśniła rozkład, zarażanie się czy nagłą śmierć, społeczność musiała jakoś nadać sens temu, co widziała. Powracający zmarły daje strachowi kształt i imię. I winnego, którego można spalić."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1645",
+              "title": "Opis wrykolakasa",
+              "detail": "Leo Allatius spisuje greckie wierzenie."
+            },
+            {
+              "date": "1725",
+              "title": "Sprawa Blagojevicia",
+              "detail": "Słowo „wampir” trafia do gazet."
+            },
+            {
+              "date": "1819",
+              "title": "„Wampir” Polidoriego",
+              "detail": "Wampir staje się arystokratą."
+            },
+            {
+              "date": "1892",
+              "title": "Ekshumacja Mercy Brown",
+              "detail": "Ostatnia wielka sprawa wampira w Stanach Zjednoczonych."
+            },
+            {
+              "date": "1897",
+              "title": "Drakula",
+              "detail": "Bram Stoker ustala nowoczesny wzór."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ten sam mechanizm rodzi greckiego wrykolakasa, słowiańskiego *upyra* i chińskiego *jiangshi*: każdy jest lokalną odpowiedzią na to samo pytanie bez odpowiedzi. Legendy o wilkołakach działają tak samo i wypełniają tę samą pustkę, tylko zamiast krwi jest przemiana."
+        },
+        {
+          "type": "takeaway",
+          "text": "W obliczu tych samych lęków każda kultura opowiada własną wersję tej samej historii. Z potworem łatwiej żyć niż z pytaniem bez odpowiedzi."
+        }
+      ]
+    }
+  ]
+}

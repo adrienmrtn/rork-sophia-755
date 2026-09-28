@@ -1,14 +1,15 @@
 {
   "id": "course_214_la_crise_de_l_etat_providence",
-  "title": "¿Puede el Estado del bienestar sobrevivir al envejecimiento?",
-  "subtitle": "Un contrato social bajo presión",
+  "title": "¿Es el Estado de bienestar solo para los ciudadanos?",
+  "subtitle": "Argelinos y braceros",
   "subject": "comprendreLeMonde",
   "subcategory": "Economía y sociedad",
-  "description": "Nacido después de 1945 para proteger a cada ciudadano contra la enfermedad, el paro y la vejez, el Estado del bienestar se ve hoy sacudido por el envejecimiento y por la globalización.",
+  "description": "En Francia y en Estados Unidos, la protección social nacida después de 1945 también la financiaron trabajadores llegados de las antiguas colonias. Una pensión negada a un argelino, braceros mexicanos sin jubilación, una excavadora en Vitry: la historia de una crisis más antigua que los déficits.",
+  "author": "mark-n-hoffman",
   "hero": {
-    "image": "la_crise_de_l_etat_providence",
-    "ratio": "16:9",
-    "hook": "En 1960, Francia tenía cuatro personas trabajando por cada jubilado. Hoy apenas hay dos."
+    "image": "bracero_mexican_farmworkers_california_1942_lange",
+    "ratio": "4:3",
+    "hook": "Para los trabajadores llegados de las antiguas colonias, la crisis del Estado de bienestar no empezó con los déficits: empezó el primer día."
   },
   "sections": [
     {
@@ -18,91 +19,157 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El **Estado del bienestar** es el conjunto de apoyos que un gobierno da a sus ciudadanos para protegerlos contra la enfermedad, el paro y la vejez. En su forma moderna el sistema nació justo después de la Segunda Guerra Mundial, como una promesa de solidaridad colectiva."
+          "text": "En **2025**, las cuentas de la Seguridad Social francesa registran un déficit de **21.600 millones de euros**. En Estados Unidos, los administradores de la Social Security, el sistema federal de jubilaciones, prevén que sus reservas se agoten en **2034**. Para muchos, estas cifras lo demuestran: el [[Estado de bienestar]], ese conjunto de pensiones, atención médica y prestaciones pagado con impuestos, está en crisis."
         },
         {
           "type": "paragraph",
-          "text": "Desde finales del siglo XX, este pilar de las sociedades desarrolladas atraviesa una crisis de financiación. Envejecimiento, globalización, formas nuevas de trabajo: el equilibrio entre protección social y economía se cuestiona en todo el mundo."
+          "text": "Pero un Estado no solo paga: también decide quién tiene derecho a qué. En 2025, el presidente estadounidense Donald Trump ordenó a las agencias federales endurecer el control de los inmigrantes sin papeles, en nombre de las pensiones y la atención médica de los ciudadanos. Sin embargo, esos inmigrantes ya están excluidos de la mayoría de las prestaciones. Cuando un gobierno declara la crisis del Estado de bienestar, ¿de qué beneficiarios habla?"
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p1",
-      "title": "1945: el nacimiento de un contrato social",
+      "title": "El pacto de posguerra y sus excluidos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En 1942, el economista británico William Beveridge publicó un informe que se volvería un texto fundador: [[El informe Beveridge]]. Su ambición era proteger a cada ciudadano contra cinco grandes males: la enfermedad, la ignorancia, la miseria, la ociosidad y la necesidad."
+          "text": "Tras la Segunda Guerra Mundial, los industriales, los sindicatos y el gobierno de Estados Unidos cerraron un trato. Los obreros de la industria consiguieron mejores salarios y cobertura social; a cambio, los sindicatos apoyaron la producción en masa y guardaron sus reivindicaciones más radicales. El politólogo Mark Rupert ve en esos sindicatos de ciudadanos al “socio menor” del acuerdo."
+        },
+        {
+          "type": "image",
+          "asset": "renault_billancourt_immigrant_workers_assembly_line",
+          "ratio": "4:5",
+          "caption": "Cartel de Mayo del 68 del taller popular de Bellas Artes: los obreros de Renault-Billancourt, gran fábrica de mano de obra inmigrante."
         },
         {
           "type": "paragraph",
-          "text": "Francia siguió el mismo camino en 1945 al crear su sistema de seguridad social. Nació de un compromiso político alcanzado dentro del [[Consejo Nacional de la Resistencia]], el órgano que había unido a los movimientos de la Resistencia durante la guerra. El Estado ya no se limitaba a la policía y a la justicia. Se volvió el garante del bienestar de todos."
-        },
-        {
-          "type": "funFact",
-          "text": "El Estado del bienestar no lo inventaron los socialistas, sino el canciller conservador alemán Otto von Bismarck en 1883. Su fin era estratégico: calmar a los obreros y adelantarse a una revolución."
+          "text": "Francia, por su parte, creó un sistema público de seguro social más amplio, al que cotizan tanto empleadores como asalariados; desde entonces, el Estado ha rebajado las cotizaciones patronales sobre los salarios bajos para fomentar la contratación. Aun así, los dos pactos tienen algo en común: favorecen a la mano de obra nacional a costa de los no ciudadanos llegados de las colonias. Las fábricas francesas contrataban a argelinos, colonizados hasta hacía poco, a quienes la administración reclasificó como “extranjeros inmigrantes”. Las granjas estadounidenses reclutaban a mexicanos cuyos contratos los dejaban fuera de los derechohabientes."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p2",
-      "title": "El choque demográfico",
+      "title": "El caso Mazari: una pensión negada",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El equilibrio de posguerra se rompió bajo dos grandes cambios. El primero es demográfico: la gente vive más y las familias tienen menos hijos. Eso sube el gasto sanitario y alarga el tiempo que cada persona cobra una pensión."
+          "text": "En **1986**, Mazari, un argelino que vivía en la Francia metropolitana, pidió un complemento para su pensión de invalidez francesa, una ayuda reservada a los pensionistas con ingresos bajos. La caja se lo negó. Un ciudadano francés con la misma pensión y los mismos ingresos lo habría obtenido: la negativa se debía a su nacionalidad. En **1991**, el [[Tribunal de Casación]], el más alto tribunal civil del país, anuló esa negativa basada en la nacionalidad."
         },
         {
           "type": "image",
-          "asset": "elderly_retirees_demographic_aging_population",
+          "asset": "cour_de_cassation_paris_palais_de_justice",
           "ratio": "16:9",
-          "caption": "Una población que envejece pesa cada año más sobre las cuentas sociales"
+          "caption": "El Tribunal de Casación tiene su sede en el Palacio de Justicia de París, en la isla de la Cité."
         },
         {
           "type": "paragraph",
-          "text": "En Francia, cuatro personas trabajando pagaban por cada jubilado en los años 1960. Hoy la cifra ha caído por debajo de dos. El segundo cambio es el auge del paro desde los shocks petroleros de 1973, junto al crecimiento de la [[gig economy]], esos empleos independientes e inseguros que cotizan menos al sistema y están más expuestos al riesgo."
+          "text": "En **1993**, un diputado influyente, Jean Charroppin, se hizo eco de una inquietud extendida: esas solicitudes amenazaban con engordar el “presupuesto social” de Francia. El temor era claro: otros inmigrantes de las antiguas colonias podían impugnar las mismas negativas. Pero desde la época colonial, el trabajo mal pagado de los argelinos enriquece a los empleadores franceses y financia, con impuestos y cotizaciones, el propio Estado de bienestar. Negarles los derechos de los ciudadanos equivale a restablecer un orden colonial."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p3",
-      "title": "La globalización pone el modelo bajo presión",
+      "title": "Los braceros, un colonialismo importado",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En una economía globalizada, las empresas y el capital se mueven con facilidad de un país a otro. Los impuestos y las cotizaciones necesarios para financiar la protección social parecen entonces un hándicap frente a países donde el trabajo es más barato."
-        },
-        {
-          "type": "paragraph",
-          "text": "Los países nórdicos son un contraejemplo interesante. Suecia y Dinamarca mantienen un alto nivel de protección social y siguen siendo muy competitivos. Su secreto tiene un nombre: la [[flexiseguridad]]. Las empresas pueden despedir con facilidad, pero a cambio los trabajadores reciben prestaciones de paro generosas y un apoyo fuerte para encontrar un empleo nuevo."
+          "text": "En Estados Unidos, la misma lógica se aplicó en los campos. El [[Programa Bracero]] permitía a los grandes productores agrícolas contratar a ciudadanos mexicanos para las cosechas, con contratos temporales. Después de **julio de 1951**, esos obreros contratados dejaron de estar cubiertos por la Social Security. Y eso que México, a diferencia de Argelia bajo dominio francés, era un país independiente."
         },
         {
           "type": "funFact",
-          "text": "Dinamarca gasta alrededor del 32% de su PIB en protección social, una de las tasas más altas del mundo, y aun así se la sitúa con regularidad entre los países más fáciles para crear una empresa."
+          "text": "La ley estadounidense prohibía antes traer trabajadores extranjeros con contrato, vistos como una amenaza para el trabajo libre. En 1951, el Congreso hizo una excepción para el programa bracero, que ya existía: los contratos ataban a los obreros a un empleo temporal y les imponían el regreso a México."
+        },
+        {
+          "type": "paragraph",
+          "text": "La historiadora Mae Ngai habla de un [[colonialismo importado]]: los trabajadores mexicanos entraron en la economía estadounidense sin un lugar seguro en la comunidad política, ni la jubilación y la atención médica prometidas a los ciudadanos por nacimiento. La exclusión sigue vigente para los jornaleros agrícolas con visado H-2A, por quienes los empleadores no pagan ninguna cotización a la Social Security. Por vías jurídicas diversas, Francia y Estados Unidos integraron a estos trabajadores en una mano de obra imperial limitando sus derechos."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p4",
-      "title": "Reinventar la protección social",
+      "title": "El “umbral de tolerancia” y la excavadora de Vitry",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El sistema de mañana tiene que cubrir riesgos nuevos: la uberización del trabajo, la transición verde y la pérdida de autonomía que llega con una vejez muy avanzada. La reforma francesa de 2023, que subió la edad legal de jubilación a 64 años, muestra lo difícil que es hacer aceptar estos cambios."
+          "text": "El filósofo [[Étienne Balibar]] estudió una convicción muy extendida: la inmigración habría superado un “[[umbral de tolerancia]]”. Sus defensores, de derecha y de izquierda, suelen acusar a los inmigrantes de dejar menos empleos, saturar las viviendas y colapsar los hospitales."
         },
         {
           "type": "paragraph",
-          "text": "El debate es también de financiación. ¿Debe el grueso del sistema seguir descansando en los salarios, a riesgo de penalizar el empleo, o debe desplazarse hacia una financiación más amplia por el impuesto, como la [[CSG]] en Francia, una tasa que toca todo tipo de ingreso y no solo los sueldos?"
+          "text": "En **diciembre de 1980**, en Vitry-sur-Seine, el alcalde comunista Paul Mercieca envió una excavadora a bloquear un albergue ocupado por trabajadores malienses. [[Georges Marchais]], el líder del Partido Comunista Francés, lo defendió: Vitry no podía acoger a más inmigrantes. Allí, ser francés contaba claramente más que ser obrero, incluso para los comunistas."
+        },
+        {
+          "type": "image",
+          "asset": "georges_marchais_portrait_1981",
+          "ratio": "2:3",
+          "caption": "Georges Marchais, secretario general del Partido Comunista Francés, hacia 1981."
+        },
+        {
+          "type": "paragraph",
+          "text": "Desde hace mucho, Francia y Estados Unidos reclutan en sus antiguas colonias trabajadores para sus economías imperiales. Su trabajo generó beneficios e ingresos. Las normas sociales les negaron la igualdad de derechos, y cuando pidieron una vivienda o una ayuda, la administración vio en ello nuevos costos. Las alarmas presupuestarias llegan muy tarde: para los trabajadores inmigrantes, el Estado de bienestar está en crisis desde el principio."
         },
         {
           "type": "takeaway",
-          "text": "El Estado del bienestar, nacido en 1945 para proteger a todos contra la enfermedad, el paro y la vejez, se ha debilitado por un envejecimiento sin precedente y por la globalización. Su supervivencia dependerá de su capacidad de reinventarse sin perder su promesa de solidaridad."
+          "text": "En Francia y en Estados Unidos, el Estado de bienestar, financiado también por el trabajo de los argelinos y de los braceros mexicanos, les negó la igualdad de derechos desde el origen: su crisis no empezó con los déficits."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Mario Draghi, The Future of European Competitiveness: Part A, A Competitiveness Strategy for Europe, European Commission, septembre 2024, p. 5 et 19.",
+      "url": "https://commission.europa.eu/document/download/97e481fd-2dc3-412d-be4c-f152a8232961_en"
+    },
+    {
+      "text": "Mark Rupert, Producing Hegemony: The Politics of Mass Production and American Global Power, Cambridge University Press, 1995, chap. 5-7, p. 83-166.",
+      "url": "https://www.maxwell.syr.edu/research/article/producing-hegemony-the-politics-of-mass-production-and-american-global-power"
+    },
+    {
+      "text": "Mark N. Hoffman, Rethinking the Politics of Immigration: Colonial Modes of Immigration Management and the Ambivalent Resilience of the Empire State, thèse de doctorat, University of Minnesota, 2013, p. 120-121.",
+      "url": "https://conservancy.umn.edu/bitstream/11299/158374/1/Hoffman_umn_0130E_14071.pdf"
+    },
+    {
+      "text": "Paul A. Silverstein, Algeria in France: Transpolitics, Race, and Nation, Indiana University Press, 2004, chap. « Colonization and the Production of Ethnicity » et « Spatializing Practices: Migration, Domesticity, Urban Planning ».",
+      "url": "https://iupress.org/9780253217127/algeria-in-france/"
+    },
+    {
+      "text": "Cour de cassation, chambre sociale, 7 mai 1991, pourvoi n° 88-15.407, Bulletin civil V, n° 231, p. 141.",
+      "url": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000007026345/"
+    },
+    {
+      "text": "Jean Charroppin, question écrite n° 3186, Journal officiel de l'Assemblée nationale, 5 juillet 1993, p. 1861, et réponse du gouvernement, 20 septembre 1993, p. 3035.",
+      "url": "https://questions.assemblee-nationale.fr/q10/10-3186QE.htm"
+    },
+    {
+      "text": "Mae M. Ngai, Impossible Subjects: Illegal Aliens and the Making of Modern America, Princeton University Press, 2004, chap. 4, p. 127-166.",
+      "url": "https://www.jstor.org/stable/j.ctt5hhr9r"
+    },
+    {
+      "text": "Mae M. Ngai, « A New Bracero Program Is Not the Solution », The Atlantic, 9 décembre 2024.",
+      "url": "https://www.theatlantic.com/politics/archive/2024/12/disturbing-history-bracero-program/680926/"
+    },
+    {
+      "text": "U.S. Social Security Administration, Social Security Ruling 86-11c, 1986.",
+      "url": "https://www.ssa.gov/OP_Home/rulings/oasi/45/SSR86-11-oasi-45.html"
+    },
+    {
+      "text": "Joyce C. Vialet et Barbara McClure, Temporary Worker Programs: Background and Issues, U.S. Government Printing Office, 1980, p. 31.",
+      "url": "https://www.govinfo.gov/content/pkg/CPRT-96SPRT44151/pdf/CPRT-96SPRT44151.pdf"
+    },
+    {
+      "text": "J.-M. Durand-Souffland, « Offensés mais pas résignés », Le Monde, 30 décembre 1980.",
+      "url": "https://www.lemonde.fr/archives/article/1980/12/30/offenses-mais-pas-resignes_2807243_1819218.html"
+    },
+    {
+      "text": "Georges Marchais, « Lettre ouverte au recteur de la Mosquée de Paris », L'Humanité, 7 janvier 1981, reproduite dans À gauche, 25 août 2018.",
+      "url": "https://agauche.org/2018/08/25/la-lettre-de-georges-marchais-suite-a-lexpulsion-des-maliens-du-foyer-de-vitry-en-1980/"
+    },
+    {
+      "text": "Étienne Balibar, « Droit de cité or Apartheid? », dans We, the People of Europe? Reflections on Transnational Citizenship, Princeton University Press, 2004, p. 31-50.",
+      "url": "https://doi.org/10.1515/9781400825783"
     }
   ]
 }

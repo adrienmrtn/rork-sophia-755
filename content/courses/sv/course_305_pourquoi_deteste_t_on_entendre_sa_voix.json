@@ -1,0 +1,121 @@
+{
+  "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix",
+  "title": "Varför hatar vi att höra vår inspelade röst?",
+  "subtitle": "Ljudet av sig själv",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "På en inspelning låter din röst främmande, nästan pinsam. Den skyldige är inte mikrofonen: det är din skalle, och hur din hjärna känner igen sig själv.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "studio_microphone_headphones_voice_recording",
+    "ratio": "4:3",
+    "hook": "Dina vänners videor stör dig inte. Men din egen röst i ett röstmeddelande får dig att grimasera. Varför låter just det ljudet fel?"
+  },
+  "sections": [
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_intro",
+      "title": "Inledning",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vad är „jaget”? Filosofer, forskare och konstnärer har ställt frågan i århundraden. För att studera det använder forskare ofta bilden av ansiktet, som alla känner igen på ett ögonblick. Men rösten betyder lika mycket för känslan av att vara sig själv."
+        },
+        {
+          "type": "paragraph",
+          "text": "Där uppstår paradoxen. Man tittar utan problem på videor av sina vänner eller sin familj. Sedan kommer ett röstmeddelande som man själv har spelat in, och man ryggar tillbaka: det där är inte min röst. Men det är den. För att förstå varför måste man följa ljudets väg."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p1",
+      "title": "Att tala och höra: luft som vibrerar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Att tala börjar med en luftstöt. Mellangärdet trycker ut luft från lungorna upp i halsen. När luften passerar mellan [[stämbanden]] får den dem att vibrera i hög hastighet: vibrationerna, ljusare eller mörkare, stiger uppåt genom halsen. Munnen och tungan formar dem sedan till ljud och ord."
+        },
+        {
+          "type": "paragraph",
+          "text": "Att höra är samma väg baklänges. De flesta ljud når oss genom [[luftledning]]: vågorna går in i hörselgången och får trumhinnan att vibrera, och den för vibrationerna vidare till mellanörats små ben. Förstärkta når de fram till [[hörselsnäckan]] i innerörat, där tusentals hårceller täckta av [[stereocilier]] böjs och skapar en elektrisk signal. Hörselnerven för den till hjärnan, som identifierar och sorterar den."
+        },
+        {
+          "type": "image",
+          "asset": "cochlea_stereocilia_hair_cells_electron_micrograph",
+          "ratio": "4:5",
+          "caption": "Hörselsnäckor från möss i elektronmikroskop, normal (till vänster) och muterad: raderna av hårceller täckta av stereocilier."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p2",
+      "title": "Att höra sig själv genom skelettet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "När du lyssnar på en inspelning av dig själv går allt via luftledning, som för vilket ljud som helst. Men när du talar tillkommer en andra kanal: [[benledning]]. Röstens mekaniska vibrationer sprids direkt genom skallbenen till innerörat, utan att passera trumhinnan eller mellanörat."
+        },
+        {
+          "type": "image",
+          "asset": "tuning_fork_weber_test_bone_conduction_skull",
+          "ratio": "3:4",
+          "caption": "En stämgaffel mot skallen vid en hörselundersökning: ljudet går genom benet, inte genom luften."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hörselsnäckan tar alltså emot två signaler samtidigt, en från luften och en från skelettet, och gör om båda till meddelanden till hjärnan. I realtid är din röst ett rikare och mer sammansatt ljud än någon mikrofon kan fånga. Inspelningen återger bara en del av det."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p3",
+      "title": "Den kusliga dalen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Återstår att förklara obehaget. Forskarna har ännu inget slutgiltigt svar, men en idé är lockande: effekten som kallas [[den kusliga dalen]]. Begreppet kommer från robotteknik och animation. Ju mer en konstgjord varelse liknar en människa, desto mer bekant och sympatisk verkar den. Upp till en viss gräns."
+        },
+        {
+          "type": "paragraph",
+          "text": "När efterliknelsen blir mycket nära men inte perfekt slår sympatin om i obehag, till och med motvilja. Och en inspelning ger bara den luftburna delen av vår röst, utan benledningens rikedom. Vi hör det mesta, men inte allt. Hjärnan hamnar i den kusliga dalen: det är nästan „jag”, men inte riktigt."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p4",
+      "title": "En röst, tusen versioner av dig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den kusliga dalen förklarar inte allt. En inspelning visar också bara en enda sida av hur vi framträder inför andra. Rösten är nämligen inte fast: vi anpassar den hela tiden efter sammanhanget, ofta utan att tänka på det, och känslan av jaget bygger på alla de variationerna samtidigt."
+        },
+        {
+          "type": "funFact",
+          "text": "I jobbsammanhang sänker vi gärna rösten för att verka mer sansade. Inför en bebis eller ett husdjur klättrar rösten uppåt. Mun, tunga och läppar ställer om sig, och med dem den version av „jaget” som vi låter andra höra."
+        },
+        {
+          "type": "paragraph",
+          "text": "Självbilden är alltså en avancerad konstruktion, byggd av dussintals olika röster. Hjärnan har ingen enskild förlaga att jämföra inspelningen med. Det den hör kommer ur mikrofonen utan att ha gått genom skelettet, fastfruset i ett enda register: tillräckligt likt för att kännas igen, för olikt för att bli ens eget."
+        },
+        {
+          "type": "takeaway",
+          "text": "Din inspelade röst låter fel eftersom den saknar benledningen som din skalle lägger till när du talar, och eftersom den fryser en enda av dina tusen versioner: tillräckligt lik för att kännas igen, inte tillräckligt för att accepteras."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "M. Kimura et Y. Yotsumoto, « Auditory traits of \"own voice\" », PLOS ONE, vol. 13, n° 6, 2018, e0199443.",
+      "url": "https://doi.org/10.1371/journal.pone.0199443"
+    },
+    {
+      "text": "NIDCD (National Institute on Deafness and Other Communication Disorders), « How Do We Hear? ».",
+      "url": "https://www.nidcd.nih.gov/health/how-do-we-hear"
+    }
+  ]
+}

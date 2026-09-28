@@ -1,0 +1,135 @@
+{
+  "id": "course_244_d_ou_vient_le_loup_garou",
+  "title": "¿De dónde viene el hombre lobo?",
+  "subtitle": "De Licaón a Hollywood",
+  "subject": "mythologie",
+  "subcategory": "Leyendas y criaturas",
+  "description": "Luna llena, mordisco, bala de plata: el hombre lobo del cine es un invento reciente. Los relatos más antiguos hablan de un rey castigado por un dios y de un señor traicionado por su esposa.",
+  "author": "angela-bouma",
+  "hero": {
+    "image": "grey_wolf_snowy_forest_dusk",
+    "ratio": "4:3",
+    "hook": "El miedo es antiguo. El monstruo, en cambio, cambia de cara en cada época."
+  },
+  "sections": [
+    {
+      "id": "course_244_d_ou_vient_le_loup_garou_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Luna llena, un hombre que se cubre de pelo y sale a cazar de noche, empujado por un hambre que no controla. Para convertirse en **hombre lobo**, hay que haber sido mordido por otro, a veces solo en una noche de luna llena. Todo el mundo conoce esta imagen. Y, sin embargo, es muy reciente."
+        },
+        {
+          "type": "paragraph",
+          "text": "El relato original es mucho más extraño. Uno de los testimonios más antiguos viene del historiador griego [[Heródoto]], en el **siglo V** a. C. Describe a los [[neuros]], un pueblo que vivía al norte del **mar Negro**: según le contaron, cada uno de ellos se convierte en lobo unos días al año y luego recupera su forma humana. Heródoto anota la historia, pero aclara que no se cree ni una palabra."
+        }
+      ]
+    },
+    {
+      "id": "course_244_d_ou_vient_le_loup_garou_p1",
+      "title": "Licaón, el rey convertido en lobo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El relato que más se asocia al hombre lobo es el de [[Licaón]], rey de [[Arcadia]], en Grecia, tal como lo cuenta el poeta latino Ovidio en las *Metamorfosis*. **Júpiter**, el rey de los dioses, visita Arcadia disfrazado de simple viajero. Licaón sospecha que su huésped es un dios y decide ponerlo a prueba: mata a un rehén, cocina el cuerpo y se lo sirve en la mesa. Si el forastero es de verdad divino, sabrá lo que está comiendo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Júpiter descubre el crimen y castiga al rey: lo convierte en lobo. Su crueldad recibe por fin una forma a su medida. Es uno de los relatos de hombre lobo más antiguos, y no se parece en nada al nuestro. A Licaón no lo muerden. No hay luna llena ni plata. Se vuelve lobo porque **un dios lo castiga**."
+        },
+        {
+          "type": "funFact",
+          "text": "La exclamación inglesa “By Jove!” (¡por Júpiter!) tiene al menos 450 años: el ejemplo más antiguo conocido aparece en una obra de teatro de 1575. “Jove” es el antiguo nombre inglés de Júpiter."
+        }
+      ]
+    },
+    {
+      "id": "course_244_d_ou_vient_le_loup_garou_p2",
+      "title": "Nueve años en la piel de un lobo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Otros autores antiguos cuentan una metamorfosis menos definitiva. Un hombre podía vivir **nueve o diez años** como lobo, según quién lo cuente, y luego volver a ser humano con una condición: no haber probado nunca carne humana. [[Plinio el Viejo]], naturalista romano del siglo I, relata así el caso de un tal **Demeneto**. Ni transformación mensual ni luna llena: un largo exilio, con la posibilidad de volver a casa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Son relatos literarios, no la prueba de que alguien pasara de verdad **nueve años** en la piel de un lobo. Merecen la misma distancia que Heródoto guardaba ante los neuros siglos antes. El verdadero dato histórico está en otra parte: no en que ocurriera, sino en que los autores antiguos, generación tras generación, siguieran contándoselo."
+        }
+      ]
+    },
+    {
+      "id": "course_244_d_ou_vient_le_loup_garou_p3",
+      "title": "Bisclavret, el hombre lobo honorable",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En el **siglo XII**, la poeta [[María de Francia]] escribió uno de los relatos de hombre lobo más célebres: [[Bisclavret]]. Su héroe es un señor que se transforma en lobo con regularidad. Su esposa descubre el secreto y acaba robándole la ropa que necesita para recuperar la forma humana. Sin ella, queda atrapado en su piel de lobo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este hombre lobo tiene algo inusual: **no es realmente un monstruo**. Bisclavret conserva su inteligencia y su rectitud bajo el aspecto de la bestia. La historia habla menos de cazar a un monstruo que de identidad, matrimonio y traición. Las apariencias engañan: un hombre con aspecto de lobo puede portarse con honor, y un humano de aire corriente puede mostrarse cruel."
+        }
+      ]
+    },
+    {
+      "id": "course_244_d_ou_vient_le_loup_garou_p4",
+      "title": "El miedo bajo la piel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El hombre lobo cambia porque cambian los miedos que lo rodean. La Grecia antigua castiga a Licaón con la maldición de un dios. La Francia medieval se pregunta qué hace de alguien un verdadero monstruo. La Europa de comienzos de la Edad Moderna lo mete en la **brujería** y en el miedo al demonio: es la misma época que produce sus brujas acusadas y sus vampiros bebedores de sangre."
+        },
+        {
+          "type": "image",
+          "asset": "werewolf_woodcut_lucas_cranach_elder_1512",
+          "ratio": "3:4",
+          "caption": "“El hombre lobo” de Lucas Cranach el Viejo, hacia 1512: un hombre a cuatro patas ataca un pueblo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hollywood le da por fin la **luna llena** y la **bala de plata**. Ya no es un miedo religioso, sino una historia construida para la pantalla y vendida como entretenimiento. El hombre lobo no tiene, pues, ni una forma única ni un origen único. Como la bruja y el vampiro, demuestra que cada época inventa el miedo que necesita y luego se cuenta una historia sobre él."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "siglo V a. C.",
+              "title": "Los neuros de Heródoto",
+              "detail": "Un pueblo que se convertiría en lobo unos días al año."
+            },
+            {
+              "date": "siglo I",
+              "title": "Licaón y Demeneto",
+              "detail": "Ovidio y Plinio el Viejo ponen al hombre lobo por escrito."
+            },
+            {
+              "date": "siglo XII",
+              "title": "Bisclavret",
+              "detail": "María de Francia escribe el hombre lobo honorable."
+            },
+            {
+              "date": "c. 1512",
+              "title": "El grabado de Cranach",
+              "detail": "El hombre lobo se suma al miedo a las brujas."
+            },
+            {
+              "date": "siglo XX",
+              "title": "Hollywood",
+              "detail": "Luna llena y bala de plata."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Del rey castigado por Júpiter al monstruo de cine, el hombre lobo no tiene un origen sino varios: cada época le presta el miedo que necesita contar."
+        }
+      ]
+    }
+  ]
+}

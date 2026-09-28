@@ -1,0 +1,137 @@
+{
+  "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert",
+  "title": "Proč se z Marsu stala poušť?",
+  "subtitle": "Od řek k poušti",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Před více než 3 miliardami let hloubily na Marsu řeky údolí a povrch zaplavovaly povodně. Dnes je planeta studená a suchá, ale její voda nezmizela celá.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "mars_valles_marineris_hemisphere_viking_mosaic",
+    "ratio": "4:3",
+    "hook": "Řeky, delty, jezera: rudá planeta nebyla vždycky zmrzlou pouští."
+  },
+  "sections": [
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vědci už desítky let hledají na Marsu stopy dávného života. Každý známý život potřebuje vodu, jenže povrch Marsu je dnes studený a nesmírně suchý. Takový ale Mars nebyl vždycky: vozítka, roboti na kolech, kteří jeho povrch prozkoumávají, tam našla horniny a minerály, jež vznikají jen za přítomnosti **kapalné vody**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pohled shora to potvrzuje: stará říční údolí, delty, vyschlá jezerní dna. Mnoho těchto útvarů je starších než **3 miliardy let**. NASA dokonce objevila stopy obřích povodní z doby asi před **3,5 miliardy let**. Po Marsu tedy kdysi tekla voda. Zbývá záhada: jak se z vlhké planety stala tahle poušť?"
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p1",
+      "title": "Byla potřeba hustá atmosféra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mít vodu nestačí, jsou potřeba podmínky, které ji udrží v kapalném stavu. Dnešní atmosféra Marsu je ale velmi řídká: její [[atmosférický tlak]] dosahuje ani ne **1%** pozemského. Při tak nízkém tlaku kapalná voda na povrchu nevydrží: zmrzne nebo se vypaří."
+        },
+        {
+          "type": "image",
+          "asset": "jezero_crater_river_delta_mars_reconnaissance_orbiter",
+          "ratio": "5:4",
+          "caption": "Topografická mapa oblasti kráteru Jezero (ESA/DLR/FU Berlin): ve výřezu delty, které uložily dávné řeky"
+        },
+        {
+          "type": "paragraph",
+          "text": "Jak si tedy mladý Mars udržel vodu? Před miliardami let byla jeho atmosféra mnohem hustší, a to mu pomáhalo dvojím způsobem. Vyšší tlak udržoval vodu v kapalném stavu. A plyny ve vzduchu zadržovaly teplo: právě tento [[skleníkový efekt]] udržoval povrch teplejší."
+        },
+        {
+          "type": "funFact",
+          "text": "Vědci se dodnes přou, jak teplý mladý Mars přesně byl. Jisté je jedno: kapalná voda se na něm udržela dost dlouho na to, aby vyhloubila údolí a naplnila jezera."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p2",
+      "title": "Mars přišel o atmosféru",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Během miliard let velká část této atmosféry unikla do vesmíru. První příčinou je velikost planety. Mars je malý, jeho **gravitace** je slabší než pozemská, a tak své plyny drží hůř. Druhá příčina: Mars přišel o své [[magnetické pole]], neviditelný štít, který jeho atmosféru chránil před nabitými částicemi ze Slunce."
+        },
+        {
+          "type": "image",
+          "asset": "maven_solar_wind_stripping_mars_atmosphere_nasa",
+          "ratio": "16:9",
+          "caption": "Oběžné dráhy sondy MAVEN, která měří únik marsovské atmosféry, před aerobrzděním v roce 2019 a po něm (NASA)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tyto částice tvoří [[sluneční vítr]], nepřetržitý proud nabité hmoty, který proudí ze Slunce. Bez štítu naráží do horní atmosféry Marsu a vyráží z ní plyny. Svou roli hraje i nejenergetičtější sluneční světlo: rozbíjí molekuly vody a další molekuly a uvolněné **lehké atomy** snáz uniknou slabé gravitaci Marsu. Jak atmosféra řídla, Mars byl studenější a sušší."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p3",
+      "title": "Voda neodešla celá",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Všechna voda Marsu ale do vesmíru neunikla. Část, která vystoupala do horní atmosféry, se tam rozložila na lehké atomy a ty unikly. Zbytek však zůstal na místě: část zmrzla pod povrchem, jiná reagovala s horninami a skončila uzavřená v **minerálech**."
+        },
+        {
+          "type": "funFact",
+          "text": "Studie zveřejněná v roce 2021 v časopise *Science* odhaduje, že v minerálech marsovských hornin mohlo zůstat uvězněno **30 až 99%** vody Marsu. Široké rozpětí: otázka zůstává otevřená."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tahle voda se tedy pod zemí nenahromadila jen jako led nebo kapalina. Dnes ji v sobě drží [[kůra]], vnější skalní vrstva planety. Jinými slovy: velká část „zmizelé” vody Marsu tam možná pořád je, uvězněná v jeho horninách."
+        }
+      ]
+    },
+    {
+      "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_p4",
+      "title": "Suchý, ale ne bez vody",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mars dnes vypadá jako poušť, ale vodu má. Z velké části zmizela stálá voda, která kdysi tekla po povrchu. Velké množství vody dodnes obsahují zmrzlé [[polární čepičky]], další dřímá pod zemí jako **pohřbený led** a další je uzavřená v minerálech kůry."
+        },
+        {
+          "type": "image",
+          "asset": "mars_north_polar_ice_cap_mars_global_surveyor",
+          "ratio": "2:1",
+          "caption": "Globální mapa Marsu podle snímků sond Viking (NASA/USGS): ve výřezech oba póly s ledovými čepičkami"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tohle poučení platí nejen pro Mars. Mít vodu nestačí k tomu, aby byla planeta vlhká a obyvatelná: podmínky jsou stejně důležité. Dost hustá atmosféra udrží vodu kapalnou a nechá ji slévat se do řek a jezer. Mars se nestal pouští proto, že každá kapka odletěla do vesmíru, ale proto, že jeho atmosféra už nedokázala udržet vodu v pohybu."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mars vyschl, protože jeho zředěná atmosféra už nedokázala udržet kapalnou vodu na povrchu: velká část té vody tam ale pořád je, zmrzlá na pólech nebo uzavřená v horninách."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "B. M. Jakosky et al., « Mars' atmospheric history derived from upper-atmosphere measurements of 38Ar/36Ar », Science, vol. 355, n° 6332, 2017, p. 1408.",
+      "url": "https://doi.org/10.1126/science.aai7721"
+    },
+    {
+      "text": "NASA Science, « NASA: New Insights into How Mars Became Uninhabitable », 2024."
+    },
+    {
+      "text": "E. L. Scheller et al., « Long-term drying of Mars by sequestration of ocean-scale volumes of water in the crust », Science, vol. 372, n° 6537, 2021, p. 56-62.",
+      "url": "https://doi.org/10.1126/science.abc7717"
+    },
+    {
+      "text": "NASA, « NASA Mission Reveals Speed of Solar Wind Stripping Martian Atmosphere », 2015."
+    }
+  ]
+}

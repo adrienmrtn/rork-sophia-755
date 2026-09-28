@@ -1,0 +1,135 @@
+{
+  "id": "course_242_pourquoi_a_t_on_le_hoquet",
+  "title": "Neden hıçkırık tutar?",
+  "subtitle": "Refleksler ve solunum",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Diyaframda bir kasılma, aniden kapanan bir glottis ve kontrol edemediğin o “hık”. Vücudun aslında ne yaptığı ve hiçbir çarenin neden kanıtlanmadığı.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "child_hiccups_surprised_hand_over_mouth",
+    "ratio": "4:3",
+    "hook": "Nefesini tut, baş aşağı su iç ya da birine seni korkutmasını söyle, derler. Peki vücudunda gerçekte ne oluyor?"
+  },
+  "sections": [
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bebekten dedeye herkesin hıçkırığı tutar ve herkes şaşmaz bir çare bilir. Komşu ters içilen bir bardak suya yemin eder, babaanne bir kaşık şekere. Yine de hıçkırık, insan vücudunun en gizemli reflekslerinden biri olmaya devam ediyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu küçük “hık” sesinin ardında hassas bir mekanizma yatar: sinirler, haber vermeden kasılan bir kas ve boğazda çarpılarak kapanan bir kapı. İşte tıbbın bu konuda bildikleri ve henüz bilmedikleri."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p1",
+      "title": "Beyni devre dışı bırakan bir refleks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hıçkırık bir [[refleks arkı]] üzerinden işler. Bu, bilinçli bir karar olmadan tepki başlatan bir sinir devresidir. Doktor dizinin altına vurduğunda bacağının sıçramasını ya da daha acıyı hissetmeden elini sıcak ocaktan çekmeni sağlayan mekanizma da aynıdır."
+        },
+        {
+          "type": "image",
+          "asset": "mouse_diaphragm_muscle_fibres_microscopy",
+          "ratio": "auto",
+          "caption": "Mikroskop altında diyafram: kol ve bacak kasları gibi çizgili bir kas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Beyni solunum kaslarına bağlayan sinirler tahriş olunca [[diyafram]] birden kasılır. Hava ciğerlere hücum eder. Saniyenin küçük bir kesri sonra ses telleri arasındaki açıklık olan [[glottis]] sertçe kapanır. “Hık” sesini çıkaran işte bu çarpmadır."
+        },
+        {
+          "type": "funFact",
+          "text": "Hıçkırığın bilimsel adı *singultus*'tur. Bu Latince sözcük aynı zamanda hıçkıra hıçkıra ağlamak anlamına gelir. Uzun bir ağlama krizinden sonra çocukları sarsan hıçkırıkta bu yüzden şaşılacak bir şey yok."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p2",
+      "title": "Anne karnından yaşlılığa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hıçkırıkların çoğu **geçici** sayılır: **48 saatten** kısa sürer ve kendiliğinden geçer. Tetikleyicileri sıradandır: çok hızlı yemek, gazlı içecek içmek, hava yutmak ya da alkol almak. Mideyi şişiren ya da yakındaki sinirleri tahriş eden her şey refleksi başlatabilir."
+        },
+        {
+          "type": "image",
+          "asset": "fetal_ultrasound_scan_pregnancy",
+          "ratio": "2:1",
+          "caption": "Ultrasonda fetüsün hıçkırdığı görülebiliyor, hem de ilk nefesinden çok önce."
+        },
+        {
+          "type": "paragraph",
+          "text": "Her yaşta hıçkırık tutar, hatta doğmadan önce bile. Ultrason görüntüleri anne karnında hıçkıran fetüsler gösteriyor. Oysa bu bebekler çok hızlı yemek yemiyor. Bir hipoteze göre bu kasılmalar solunum kaslarını çalıştırıyor, yani ilk nefesten önce bir tür genel prova."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p3",
+      "title": "Hıçkırık durmak bilmeyince",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bazen hıçkırık yerleşir. **İki günü** aşarsa **kalıcı** hıçkırıktan, **bir ayı** aşarsa [[inatçı hıçkırık]] tablosundan söz edilir. Bu nadir biçimler çoğu zaman başka bir şeye işaret eder: mide ya da yemek borusu hastalığı, akciğer sorunu ya da merkezi sinir sisteminde bir hasar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu durumlarda doktor nedeni arar ve tedavi yazar, bazen refleks devresini yatıştıran ilaçlar verir. Hıçkırık artık geçici bir rahatsızlık değil, yemeyi, uyumayı ve konuşmayı engelleyen bir belirtidir."
+        },
+        {
+          "type": "funFact",
+          "text": "Guinness Rekorlar Kitabı'na göre en uzun hıçkırık rekoru Amerikalı bir çiftçiye ait: [[Charles Osborne]] **1922'den 1990'a** kadar, yani 68 yıl boyunca aralıksız hıçkırdı. Yine de iki kez evlenmeye ve sekiz çocuk sahibi olmaya vakit buldu."
+        }
+      ]
+    },
+    {
+      "id": "course_242_pourquoi_a_t_on_le_hoquet_p4",
+      "title": "Onlarca çare, hiçbiri kanıtlanmış değil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Geçici hıçkırıkta iyi haber, kendi kendine geçmesi. Kötü haber ise hiçbir kocakarı ilacının ciddi bir çalışmayla doğrulanmamış olması. Nefesini tutmak, soğuk su içmek, dilini çekmek, bir torbaya nefes almak... Bunların hepsi kanıta değil, anlatılara dayanır."
+        },
+        {
+          "type": "image",
+          "asset": "glass_of_cold_water_home_remedy_hiccups",
+          "ratio": "3:2",
+          "caption": "Bir bardak soğuk su: en yaygın çare ve en az incelenenlerden biri."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yine de bu yöntemlerin ortak bir mantığı var: refleks devresini bozuyorlar. Nefesini tutmak kandaki karbondioksiti artırır ve diyaframı yatıştırır. Yutkunmak ya da dili çekmek boğazdaki sinirleri uyarır ve devreyi “sıfırlayabilir”. Bazen işe yarar. Neden olduğunu kimse tam bilmiyor."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hıçkırık bir reflekstir: diyafram kasılır, glottis kapanır, “hık”. Neredeyse her durumda gelip geçer, 48 saati aşınca bir belirtiye dönüşür. Hepsi devreyi kırmayı amaçlasa da hiçbir ev çaresi kanıtlanmış değildir."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Alimentary Pharmacology & Therapeutics (Wiley), revue sur la physiopathologie et le traitement du hoquet.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.13374"
+    },
+    {
+      "text": "Cleveland Clinic, « Hiccups ».",
+      "url": "https://my.clevelandclinic.org/health/diseases/17672-hiccups"
+    },
+    {
+      "text": "Guinness World Records, « Longest attack of hiccups ».",
+      "url": "https://www.guinnessworldrecords.com/world-records/67619-longest-attack-of-hiccups"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie",
+  "title": "Drar AI mycket energi?",
+  "subtitle": "Bakom varje svar",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Varje svar från en AI kommer ur en byggnad full av maskiner som går dygnet runt. Hur mycket el kostar det egentligen, från träningen av modellen till elnätet som driver den?",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "data_center_server_racks_aisle_blue_lights",
+    "ratio": "4:3",
+    "hook": "AI ser ut som mjukvara, men varje svar tillverkas i en helt verklig byggnad, kopplad till samma elnät som ditt hem."
+  },
+  "sections": [
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_intro",
+      "title": "Inledning",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Du ställer en fråga till en AI på nätet och svaret dyker upp på några sekunder. Själva arbetet sker inte i din mobil. Det sker i ett [[datacenter]], en byggnad full av maskiner som bearbetar och lagrar information. Maskinerna drar el hela tiden, även om ingen ser dem."
+        },
+        {
+          "type": "paragraph",
+          "text": "År 2025 använde alla datacenter tillsammans omkring **1,5%** av världens el, enligt [[Internationella energiorganet]]. Siffran gäller alla tjänster på nätet, inte bara AI. Men anläggningarna för AI blir snabbt fler. Ett kort svar kostar lite i sig. Men maskiner går för vart och ett av dem, och flera system drar ström samtidigt för att ta fram det."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p1",
+      "title": "Servrarna drar mest",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En [[server]] är en dator som bearbetar data och kör tjänster på nätet. I ett datacenter gör servrarna det mesta av beräkningarna, och därför drar de mest el. Delar man upp elräkningen för ett modernt datacenter står servrarna i genomsnitt för **60%**. Siffran gäller datacenter i allmänhet, inte bara AI-anläggningar."
+        },
+        {
+          "type": "image",
+          "asset": "data_center_cooling_pipes_chillers",
+          "ratio": "3:2",
+          "caption": "Rader av servrar i ett datacenter: det är de som drar det mesta av elen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resten går till att lagra och flytta data, kyla utrustningen och hålla byggnaden igång. Kylningen spelar roll eftersom en dator blir varm när den arbetar. Utan ett system som för bort värmen skulle maskinerna till slut överhettas. Elen bakom ett AI-svar driver alltså mycket mer än datorerna som tar fram det."
+        },
+        {
+          "type": "funFact",
+          "text": "Enligt IEA ökade elförbrukningen i datacenter för AI med 50% bara under 2025."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p2",
+      "title": "Först träna, sedan svara",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Innan en AI-tjänst kan svara behöver den en modell: ett system som har lärt sig mönster utifrån exempel. För att skapa den krävs [[träning]], en fas där datorer går igenom enorma mängder data. Det arbetet kan hålla mycket kraftfulla maskiner sysselsatta länge."
+        },
+        {
+          "type": "image",
+          "asset": "frontier_supercomputer_oak_ridge_cabinets",
+          "ratio": "4:3",
+          "caption": "Skåpen i NASA:s superdator Columbia: den sortens maskiner som används för att träna en modell."
+        },
+        {
+          "type": "paragraph",
+          "text": "När modellen är färdigtränad börjar ett annat arbete. [[Inferens]] är beräkningen som tar fram ett svar på din fråga. Träningen börjar inte om från början vid varje fråga, men inferensen upprepas vid varje förfrågan. Vilken av dem väger tyngst över tid? Det beror på hur tjänsten är byggd och hur många som använder den. En populär tjänst håller datorerna sysselsatta med att svara, även mellan två stora träningsomgångar."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p3",
+      "title": "En förfrågan har inget fast pris",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hur mycket el drar en enda textförfrågan? De publicerade uppskattningarna ger olika svar. Google mätte sin tjänst i drift och kom fram till att medianförfrågan ligger på **0,24 Wh**. En [[wattimme]] (Wh) är enheten för en mängd energi. En annan studie hamnar på en median på **0,31 Wh**, där den mittersta hälften av vanliga förfrågningar ligger mellan **0,16 och 0,60 Wh**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Siffrorna motsäger inte varandra: de beskriver olika system och metoder, inte två motstridiga mätningar av samma uppgift. De lämnar också mycket tyngre uppgifter utanför. Att be en AI resonera i flera steg innan den svarar håller datorerna igång mycket längre. Energin per förfrågan beror alltså på systemet, på hur man mäter och på vilket arbete som efterfrågas."
+        },
+        {
+          "type": "funFact",
+          "text": "I samma studie når en förfrågan med långt resonemang, där modellen går igenom sina steg innan den drar en slutsats, en median på 3,91 Wh, mer än tio gånger en vanlig förfrågan."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p4",
+      "title": "Elnät under press",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Med [[elnät]] menas nätet av ledningar som för strömmen från kraftverken till hem och företag. De stora AI-anläggningarna kopplas in på samma nät. För att ge en känsla för storleken jämför IEA den årliga elförbrukningen i ett datacenter för AI, en byggnad som främst byggs för att köra sådana tjänster, med förbrukningen i omkring **100.000 hushåll**."
+        },
+        {
+          "type": "image",
+          "asset": "high_voltage_power_lines_data_center_virginia",
+          "ratio": "4:3",
+          "caption": "Stolpar för en kraftledning med mycket hög spänning (750 kV): datacentren kopplas in på samma nät."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anläggningarna tenderar också att samlas på samma platser. När flera stora anläggningar behöver ström i samma område delar de på det lokala nätet, och befintliga ledningar kan behöva byggas ut. En region med kapacitet över tar lättare emot nya anläggningar än en som redan är nära sin gräns. Var man bygger infrastrukturen för AI spelar alltså roll för grannarna."
+        },
+        {
+          "type": "takeaway",
+          "text": "Elen till AI förbrukas i flera led, från servrar som måste kylas till det lokala elnätet, och kostnaden för en förfrågan beror på systemet, mätmetoden och arbetet som efterfrågas."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "International Energy Agency (IEA), Key Questions on Energy and AI, 2026, p. 9 et 17."
+    },
+    {
+      "text": "International Energy Agency (IEA), Energy and AI, 2025, p. 13, 38 et 52."
+    },
+    {
+      "text": "Shehabi et al., 2024 United States Data Center Energy Usage Report, Lawrence Berkeley National Laboratory, 2024, p. 22-23."
+    },
+    {
+      "text": "Oviedo et al., Joule, 2026, p. 1.",
+      "url": "https://doi.org/10.1016/j.joule.2026.102430"
+    },
+    {
+      "text": "Elsworth et al., Measuring the Environmental Impact of Delivering AI at Google Scale, Google, 2025, p. 7."
+    }
+  ]
+}

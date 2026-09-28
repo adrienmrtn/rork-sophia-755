@@ -1,14 +1,15 @@
 {
   "id": "course_57_l_invention_d_internet",
-  "title": "Die Erfindung des Internets",
-  "subtitle": "Netze",
+  "title": "Wie entstand das Internet aus dem Kalten Krieg?",
+  "subtitle": "Vom ARPANET zum Web",
   "subject": "sciences",
   "subcategory": "Entdeckungen, die die Welt veränderten",
-  "description": "Das Internet hat keinen einzelnen Erfinder. Es ist eine lange Kette: ein militärisches Netz, eine gemeinsame Sprache, dann das Web für Menschen.",
+  "description": "Ein Militärnetz, das einen sowjetischen Angriff überstehen sollte, Dutzende kleiner Netze, dann Modem und Web. In fünfzig Jahren wurde aus einem Projekt des Kalten Kriegs unser Alltag.",
+  "author": "myra-houser",
   "hero": {
-    "image": "l_invention_d_internet",
-    "ratio": "16:9",
-    "hook": "Zuerst ein Netz, das einen Krieg überstehen sollte. Dann hängt sich die ganze Welt daran."
+    "image": "ibm_mainframe_computer_room_1960s_operators",
+    "ratio": "4:3",
+    "hook": "Bevor es den Planeten verband, sollte das Internet vor allem einen sowjetischen Angriff überleben."
   },
   "sections": [
     {
@@ -18,83 +19,127 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Das Internet entstand nicht durch ein einzelnes Genie in einer Garage. Es ist ein Gemeinschaftswerk über mehrere Jahrzehnte."
+          "text": "Wie Rom wurde auch das Internet nicht an einem Tag erbaut. Anfangs bestand das Netz nur aus einer Handvoll Computer des **US-Verteidigungsministeriums**. Es entstand aus technischem Fortschritt, aber auch aus den Spionageplänen der beiden Supermächte im [[Kalten Krieg]]. Ende des 20. Jahrhunderts erreichte die Einwahl über die Telefonleitung die meisten amerikanischen Haushalte, und das Surfen im Web folgte bald."
         },
         {
           "type": "paragraph",
-          "text": "Drei einfache Stufen sollte man merken: ein erstes Netz (ARPANET), eine gemeinsame Sprache (TCP/IP), dann eine leichte Oberfläche (das Web)."
+          "text": "Zur Jahrtausendwende war die Technik zugleich so verbreitet und so neu, dass Fachleute einen weltweiten Zusammenbruch vorhersagten, falls die Computerkalender den Sprung ins **Jahr 2000** nicht schafften: die Angst vor dem [[Jahr-2000-Problem]]. Im 21. Jahrhundert veränderten Messenger, soziale Netzwerke und künstliche Intelligenz die Kommunikation im Netz erneut. Wie wurde aus einem Militärprojekt der Alltag der ganzen Welt?"
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p1",
-      "title": "ARPANET, das erste Netz",
+      "title": "Ein Netz, das einen Angriff übersteht",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ende der **1960er** Jahre, mitten im Kalten Krieg, finanzierte die US-Armee ein Projekt: Computer so verbinden, dass sie weiter Daten austauschen, selbst wenn ein Teil des Netzes zerstört wird."
+          "text": "Das Projekt begann in den **1950er-Jahren**. Computer waren damals riesig und teuer: Eine einzige Maschine füllte einen ganzen Raum. Nur Regierungsbehörden und einige Universitäten besaßen welche. Als die Spannungen mit der UdSSR wuchsen, suchte die amerikanische Führung ein Kommunikationsnetz, das sowjetische Agenten nicht abhören konnten. Der erste Schritt war das Timesharing, bei dem mehrere Nutzer am selben Computer arbeiten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anfang der **1960er-Jahre** experimentierte ein Ingenieur namens [[Paul Baran]] mit der [[Paketvermittlung]]: Statt eine Nachricht am Stück zu senden, zerlegt man sie in kleine Datenpakete, die getrennt durch das Netz laufen. Baran und seine Kollegen setzten darauf, dass so verschickte Daten auf Telefonleitungen einen sowjetischen Angriff überstehen würden. Aus diesen Arbeiten entstand das [[ARPANET]], ein Programm des US-Verteidigungsministeriums."
         },
         {
           "type": "image",
           "asset": "arpanet_1969_computer_ucla",
           "ratio": "4:3",
-          "caption": "ARPANET verbindet zuerst ein paar amerikanische Universitäten"
-        },
-        {
-          "type": "paragraph",
-          "text": "Dieses Netz hieß **ARPANET**. Die Nachrichten wurden in kleine Pakete zerlegt, die verschiedene Wege nahmen. Fiel eine Route aus, übernahm eine andere."
+          "caption": "Der SDS Sigma 7 der UCLA, 1969 der erste Computer am ARPANET."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p2",
-      "title": "TCP/IP: dieselbe Sprache sprechen",
+      "title": "Vom ARPANET zu den “Internets”: die Paketvermittlung",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Damit verschiedene Netze einander verstehen, braucht es gemeinsame Regeln. **Vint Cerf** und **Bob Kahn** entwickelten das Protokoll **TCP/IP**: eine Sprache, die sagt, wie man Daten zerlegt, adressiert und wieder zusammensetzt."
+          "text": "Um diese Pakete weiterzuleiten, griff das ARPANET auf eine Technik britischer Wissenschaftler zurück: den [[Router]], ein Gerät im Telefonnetz, das Pakete sammelt und an andere Rechner schickt. **1969** wurden die ersten Computer verbunden, angefangen mit dem der University of California in Los Angeles. Auf Hawaii testeten Informatiker eine verwandte Idee, das **ALOHAnet**, bei dem die Pakete per Funk reisten."
         },
         {
           "type": "image",
-          "asset": "vint_cerf_bob_kahn_internet",
-          "ratio": "4:3",
-          "caption": "Cerf und Kahn: die Architekten der Sprache des Internets"
+          "asset": "arpanet_logical_map_1977_network_diagram",
+          "ratio": "3:2",
+          "caption": "Die logische Karte des ARPANET vom 25. August 1983, erstellt von BBN: Universitäten, Labore und militärische Standorte im Verbund."
         },
         {
-          "type": "funFact",
-          "text": "Am 1. Januar **1983** stellte ARPANET offiziell auf TCP/IP um. Viele sehen in diesem Datum die technische “Geburt” des Internets."
+          "type": "paragraph",
+          "text": "In den **1970er-Jahren** und Anfang der 1980er-Jahre schickten Dutzende Teams weltweit Informationen über Telefonleitungen und Funk. Das Ergebnis war eine Vielzahl kleiner, getrennter Netze. **1974** kürzte ein Fachartikel “internetwork”, ein Netz aus Netzen, zu “internet” ab. Es ist der erste bekannte Beleg des Wortes."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p3",
-      "title": "Das Web macht das Netz menschlich",
+      "title": "Modems, Abos und die Geburt des Web am CERN",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Internet ist das Netz. Das **World Wide Web**, erfunden von **Tim Berners-Lee** am CERN Anfang der **1990er** Jahre, ist die leichte Schicht: Seiten, Links, Browser."
+          "text": "Bis Mitte der **1980er-Jahre** lebten diese “Internets” jeweils für sich. In den USA investierte die National Science Foundation, die Bundesbehörde für Forschungsförderung, massiv in Supercomputer und verband sie mit den Universitäten. Dann hob der amerikanische Gesetzgeber von **1989** bis **1995** nach und nach die Beschränkungen auf, die kommerzielle Dienste im Internet verboten hatten."
         },
         {
           "type": "paragraph",
-          "text": "Ohne das Web bliebe Internet vor allem ein Werkzeug für Fachleute. Mit ihm kann jeder klicken."
+          "text": "1995 boten große Unternehmen wie **Sprint** und **AT&T** Einwahlverbindungen an: Der Kunde steckte sein Modem in die Telefondose und wählte eine Nummer. Parallel dazu hatte der britische Informatiker Tim Berners-Lee schon **1990** am CERN, dem europäischen Physiklabor bei Genf, das [[World Wide Web]] gestartet. Das Web bündelte die auf Servern verstreuten Daten und verknüpfte die Seiten über Hyperlinks."
+        },
+        {
+          "type": "image",
+          "asset": "tim_berners_lee_next_computer_cern_first_web_server",
+          "ratio": "3:2",
+          "caption": "Der NeXT-Rechner von Tim Berners-Lee am CERN, 1990 der erste Webserver: Ein Aufkleber bittet, ihn nie auszuschalten."
+        },
+        {
+          "type": "funFact",
+          "text": "In den 1990er-Jahren zahlten viele Nutzer ihre Verbindung pro Minute. Jede langsam ladende Seite kostete Geld, und das Telefon zu Hause blieb besetzt, solange das Modem online war."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p4",
-      "title": "Das Nervensystem der Welt",
+      "title": "Von der E-Mail zum iPhone: das Internet im Alltag",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Heute trägt das Internet E-Mails, Videos, Banken, Krankenhäuser, GPS. Es hat auch neue Probleme geschaffen: Desinformation, Überwachung, digitale Kluft."
+          "text": "Ab Mitte der 1990er-Jahre wuchs das Internet rasant, und jeder erweiterte seinen Kreis von Kontakten. E-Mail, Chatrooms und Messenger machten den Austausch in Echtzeit möglich. Im Jahr **2000** lief bereits mehr als die **Hälfte** des Telekommunikationsverkehrs über das Internet. Anfang der 2000er-Jahre verbreiteten sich Blogs und die ersten sozialen Netzwerke, erst MySpace, dann TheFacebook.com."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dann verließ das Netz Büros und Wohnzimmer. Ab **2005** konnte man mit BlackBerry-Handys Nachrichten über deren Netze verschicken. Ab **2007** brachte das iPhone das Internet in die Hosentasche: Gesurft wurde nun auf dem Handy. Als Verteidigungsstrategie im Kalten Krieg geboren, gehört das Netz der Netze heute zum Alltag."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1969",
+              "title": "Erste Rechner verbunden",
+              "detail": "Das ARPANET verbindet seine ersten Computer, darunter den der UCLA."
+            },
+            {
+              "date": "1974",
+              "title": "Das Wort “internet”",
+              "detail": "Ein Artikel kürzt “internetwork” ab: der erste bekannte Beleg des Begriffs."
+            },
+            {
+              "date": "1990",
+              "title": "Geburt des Web",
+              "detail": "Tim Berners-Lee startet am CERN das World Wide Web."
+            },
+            {
+              "date": "1995",
+              "title": "Das Internet öffnet sich",
+              "detail": "Ende der kommerziellen Beschränkungen, Modemzugänge bei Sprint und AT&T."
+            },
+            {
+              "date": "2007",
+              "title": "Internet für die Hosentasche",
+              "detail": "Mit dem iPhone kann man auf dem Handy surfen."
+            }
+          ]
         },
         {
           "type": "takeaway",
-          "text": "Das Internet entstand aus ARPANET, wurde durch TCP/IP universell und durch das Web zugänglich. Es ist keine einzelne Erfindung, es ist eine geteilte Architektur."
+          "text": "Im Kalten Krieg entworfen, um einen Angriff zu überstehen, wanderte das Internet von Militärrechnern an die Universitäten, dann dank Modem und Web in die Haushalte, bis es schließlich in ein Telefon passte."
         }
       ]
     }

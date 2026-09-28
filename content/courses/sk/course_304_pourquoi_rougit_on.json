@@ -1,0 +1,131 @@
+{
+  "id": "course_304_pourquoi_rougit_on",
+  "title": "Prečo sa červenáme?",
+  "subtitle": "Najľudskejší prejav",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Trápna poznámka či kompliment: v oboch prípadoch líca horia a ružovejú. Čo telo v tej chvíli robí a prečo sa s tým nedá skoro nič urobiť.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "blushing_red_cheeks_woman_portrait_close_up",
+    "ratio": "4:3",
+    "hook": "Jedna nešťastná poznámka a líca ti zahoria. Kompliment, a je to rovnaké. Nikto sa nerozhodne očervenieť."
+  },
+  "sections": [
+    {
+      "id": "course_304_pourquoi_rougit_on_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ten pocit pozná každý. Niekto na tvoju adresu utrúsi trápnu poznámku: tvár ti horí, pokožka ružovie. Tento jav zaujal aj prírodovedca, ktorým bol [[Charles Darwin]]. Videl v ňom „najzvláštnejší a najľudskejší zo všetkých prejavov“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najčudnejšie je, že kompliment má rovnaký účinok ako posmech. Keď ťa pochvália pred ostatnými, cítiš, ako ti do líc stúpa rovnaké teplo. Čo sa presne deje pod kožou a prečo telo reaguje rovnako na hanbu aj na radosť?"
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p1",
+      "title": "Nával tepla pod kožou",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Červenanie je v prvom rade vecou krvi. Objem krvi, ktorý prúdi drobnými cievami v tvári tesne pod povrchom kože, sa náhle zväčší. Riadi to [[sympatický nervový systém]], časť nervovej sústavy, ktorá ovláda to, čo sa nazýva [[reakcia boj alebo útek]], teda našu núdzovú odpoveď na nebezpečenstvo."
+        },
+        {
+          "type": "image",
+          "asset": "thermal_infrared_image_human_face_heat",
+          "ratio": "3:2",
+          "caption": "Postavy videné cez termokameru: čím je povrch teplejší, tým svetlejšie sa na obrazovke javí."
+        },
+        {
+          "type": "paragraph",
+          "text": "Keď sa tento systém zapne, srdce bije rýchlejšie a telesná teplota stúpa. Aby sa telo zbavilo prebytočného tepla, cievy v tvári sa rozšíria: pretečie nimi viac krvi a teplo, ktoré nesie, unikne cez kožu. Keďže sú tieto cievy tesne pod povrchom, nával je vidieť: pokožka zružovie alebo sčervenie. Červenanie je chladiaci systém v akcii."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p2",
+      "title": "Trápnosť ako reflex úteku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spoločenský prešľap, nevedomky porušené nepísané pravidlo: mozog na to reaguje ako na hrozbu. Aktivuje sympatický nervový systém spolu s nutkaním brániť sa („boj“) alebo zmiznúť („útek“). Krv sa nahrnie do ciev v tvári a líca vzplanú."
+        },
+        {
+          "type": "image",
+          "asset": "embarrassed_person_hiding_face_in_hands",
+          "ratio": "3:2",
+          "caption": "Skryť tvár do dlaní: každodenná podoba reflexu úteku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niektorí ľudia sa červenajú viac než iní. Tí, ktorých trápi [[sociálna úzkosť]], sa často posudzujú prísnejšie. Tento negatívny sklon zosilňuje odpoveď sympatického systému a najmenšia nešikovnosť spustí v celom tele skutočný poplach."
+        },
+        {
+          "type": "funFact",
+          "text": "Strach z červenania spôsobuje červenanie. U tých, ktorí sa svojho červenania obávajú, už samotné vedomie, že ich niekto pozoruje, zosilní odpoveď sympatického systému. Červenáš sa teda preto, že si sa začervenal, a kruh sa uzatvára."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p3",
+      "title": "Červenať sa aj od radosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pozitívna pozornosť spúšťa ten istý mechanizmus. Verejná pochvala, potlesk, nečakaný kompliment: zrazu sa cítiš vystavený pohľadom ostatných alebo sa bojíš, že nebudeš vedieť poriadne poďakovať. Táto nepohoda stačí na to, aby sa spustila núdzová odpoveď."
+        },
+        {
+          "type": "image",
+          "asset": "shy_speaker_receiving_applause_audience",
+          "ratio": "5:4",
+          "caption": "Bostonský starosta tlieska rečníkovi na obede pod holým nebom, 60. roky: aj pozitívna pozornosť vyvoláva červenanie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mozog pritom veľmi dobre rozlišuje gratuláciu od poníženia. Sympatický nervový systém je však jednoduchší: ešte sa nerozhodol, či treba utiecť, alebo nie. Kým sa rozhodne, tvár už zmenila farbu."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p4",
+      "title": "Dá sa červenaniu zabrániť?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nie celkom, a nevadí to: červenanie je prirodzená odpoveď na spoločenský svet okolo nás, nie chyba, ktorú treba napraviť. Dá sa však pôsobiť na to, čo ho spúšťa, teda na spôsob, akým mozog zaradí trápnu situáciu do kategórie „nebezpečenstvo“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pomôcť môžu dva prístupy. Jedným je [[expozičná terapia]]: postupne čeliť situáciám, ktorých sa obávame, až kým prestanú spúšťať poplach. Druhým je [[všímavosť]], ktorá učí pozorovať stúpajúce teplo bez strachu. V oboch prípadoch sa červenanie neodstráni: zneškodní sa strach z červenania a kruh sa upokojí."
+        },
+        {
+          "type": "takeaway",
+          "text": "Červenanie je práca sympatického nervového systému, ktorý rozšíri cievy v tvári, aby odviedol teplo z poplachu, či už ho spustil prešľap, alebo kompliment: zabrániť mu nedokážeš, ale môžeš sa naučiť nebáť sa ho."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "C. Darwin, The Expression of the Emotions in Man and Animals, John Murray, 1872, p. 301.",
+      "url": "https://darwin-online.org.uk/content/frameset?viewtype=text&itemID=F1142&pageseq=1"
+    },
+    {
+      "text": "P. D. Drummond, G. B. Shapiro, M. Nikolić et S. M. Bögels, « Treatment Options for Fear of Blushing », Current Psychiatry Reports, vol. 22, n° 6, 2020.",
+      "url": "https://doi.org/10.1007/s11920-020-01152-5"
+    },
+    {
+      "text": "D. J. Stein et C. Bouwer, « Blushing and social phobia: a neuroethological speculation », Medical Hypotheses, vol. 49, n° 1, 1997, p. 101-108.",
+      "url": "https://doi.org/10.1016/S0306-9877(97)90260-7"
+    }
+  ]
+}

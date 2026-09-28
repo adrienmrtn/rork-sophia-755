@@ -1,14 +1,15 @@
 {
   "id": "course_214_la_crise_de_l_etat_providence",
-  "title": "Kas heaoluriik peab vastu rahvastiku vananemisele?",
-  "subtitle": "Ühiskondlik leping surve all",
+  "title": "Kas heaoluriik on ainult kodanikele?",
+  "subtitle": "Alžeerlased ja braceros-töölised",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Pärast 1945. aastat sündinud, et kaitsta iga kodanikku haiguste, töötuse ja vanaduse eest, raputavad heaoluriiki tänapäeval vananemine ja globaliseerumine.",
+  "description": "Nii Prantsusmaal kui ka Ameerika Ühendriikides rahastasid pärast 1945. aastat loodud sotsiaalkaitset ka endistest kolooniatest tulnud töölised. Alžeerlasele keelatud pension, pensionist ilma jäetud Mehhiko braceros-töölised, buldooser Vitrys: lugu kriisist, mis on eelarvepuudujääkidest vanem.",
+  "author": "mark-n-hoffman",
   "hero": {
-    "image": "la_crise_de_l_etat_providence",
-    "ratio": "16:9",
-    "hook": "1960. aastal oli Prantsusmaal 4 töötajat, kes rahastasid 1 pensionäri pensionile jäämist. Tänaseks on jäänud vaid 2."
+    "image": "bracero_mexican_farmworkers_california_1942_lange",
+    "ratio": "4:3",
+    "hook": "Endistest kolooniatest tulnud tööliste jaoks ei alanud heaoluriigi kriis eelarvepuudujääkidega: see algas esimesest päevast."
   },
   "sections": [
     {
@@ -18,91 +19,157 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Heaoluriik** tähistab kogu abi, mida riik kodanikele annab, et kaitsta neid haiguste, töötuse või vanaduse eest. See süsteem sündis oma kaasaegsel kujul vahetult pärast Teist maailmasõda kollektiivse solidaarsuse lubadusena."
+          "text": "**2025. aastal** oli Prantsuse sotsiaalkindlustuse eelarve puudujääk **21,6 miljardit eurot**. Ameerika Ühendriikides ennustavad föderaalse pensionisüsteemi Social Security haldurid, et selle reservid saavad otsa **2034. aastal**. Paljude meelest tõestavad need arvud üht: [[heaoluriik]], see maksudest rahastatud pensionide, arstiabi ja toetuste kogum, on kriisis."
         },
         {
           "type": "paragraph",
-          "text": "Alates 20. sajandi lõpust on see arenenud ühiskondade sammas elanud läbi rahastamiskriisi. Rahvastiku vananemine, globaliseerumine, uued töövormid: sotsiaalkaitse ja majanduse tasakaal seatakse nüüd kogu maailmas kahtluse alla."
+          "text": "Ent riik ei ainult maksa: ta otsustab ka, kellel on millele õigus. 2025. aastal andis USA president Donald Trump föderaalasutustele korralduse karmistada dokumentideta sisserändajate kontrolli, põhjendades seda kodanike pensionide ja arstiabiga. Ometi on need sisserändajad enamikust hüvitistest niigi välja jäetud. Kui valitsus kuulutab heaoluriigi kriisi, siis kelle hüvitistest ta tegelikult räägib?"
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p1",
-      "title": "1945: ühiskondliku lepingu sünd",
+      "title": "Sõjajärgne kokkulepe ja need, kes jäid välja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1942. aastal avaldas Briti majandusteadlane William Beveridge aruande, mis sai põhjapanevaks: [[Beveridge'i aruanne]]. Selle eesmärk on kaitsta iga kodanikku viie suure riski eest: haigused, teadmatus, ebasanitaarsed tingimused, jõudeolek ja vaesus."
+          "text": "Pärast Teist maailmasõda sõlmisid Ameerika töösturid, ametiühingud ja valitsus tehingu. Tööstustöölised said paremad palgad ja sotsiaalkaitse; vastutasuks toetasid ametiühingud masstootmist ja panid oma radikaalsemad nõudmised kõrvale. Politoloog Mark Rupert näeb neis kodanike ametiühingutes kokkuleppe „nooremat partnerit“."
+        },
+        {
+          "type": "image",
+          "asset": "renault_billancourt_immigrant_workers_assembly_line",
+          "ratio": "4:5",
+          "caption": "Beaux-Arts'i rahvatöökoja plakat 1968. aasta maist: Renault-Billancourti töölised, suure hulga sisserändajaid tööle võtnud tehase mehed."
         },
         {
           "type": "paragraph",
-          "text": "Prantsusmaa järgis seda liikumist, luues 1945. aastal sotsiaalkindlustuse. See süsteem sündis sõja ajal vastupanuliikumisi ühendanud organisatsioonis [[Riiklik Vastupanu Nõukogu]] tehtud poliitilisest kompromissist. Riik ei ole enam rahul politseitöö ega õigusemõistmisega: temast saab kõigi heaolu tagaja."
-        },
-        {
-          "type": "funFact",
-          "text": "Heaoluriiki ei leiutanud sotsialistid, vaid konservatiivne Saksa kantsler Otto von Bismarck aastal 1883. Selle eesmärk oli strateegiline: rahustada töölisi, et vältida revolutsiooni."
+          "text": "Prantsusmaa lõi omalt poolt laiema avaliku sotsiaalkindlustussüsteemi, kuhu maksavad nii tööandjad kui ka töötajad; hiljem on riik madalapalgaliste pealt tööandja makseid vähendanud, et soodustada töölevõtmist. Ometi on kahel kokkuleppel üks ühine joon: need eelistavad oma riigi tööjõudu kolooniatest tulnud mittekodanike arvelt. Prantsuse tehased palkavad alžeerlasi, eilseid koloniseerituid, keda ametnikud nüüd „sisserännanud välismaalasteks“ ümber liigitavad. Ameerika farmid värbavad mehhiklasi, kelle lepingud jätavad nad hüvitisesaajate ringist välja."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p2",
-      "title": "Demograafiline šokk",
+      "title": "Mazari juhtum: keelatud pension",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sõjajärgsete aastate tasakaalu rikkusid kaks suurt arengut. Esimene on demograafiline: inimesed elavad kauem ja pered saavad vähem lapsi. See suurendab tervishoiukulusid ja pikendab pensioni saamise aega."
+          "text": "**1986. aastal** taotleb Mandri-Prantsusmaal elav alžeerlane Mazari oma Prantsuse invaliidsuspensionile lisa, mis on ette nähtud väikese sissetulekuga pensionäridele. Kassa keeldub. Sama pensioni ja sama sissetulekuga Prantsuse kodanik oleks selle saanud: keeldumise põhjus on tema kodakondsus. **1991. aastal** tühistab [[Kassatsioonikohus]], riigi kõrgeim tsiviilkohus, selle kodakondsusel põhineva keeldumise."
         },
         {
           "type": "image",
-          "asset": "elderly_retirees_demographic_aging_population",
+          "asset": "cour_de_cassation_paris_palais_de_justice",
           "ratio": "16:9",
-          "caption": "Rahvastiku vananemine avaldab sotsiaalkontodele igal aastal suuremat raskust."
+          "caption": "Kassatsioonikohus asub Pariisi Justiitspalees Cité saarel."
         },
         {
           "type": "paragraph",
-          "text": "Prantsusmaal oli 1960. aastatel 4 töötajat, kes rahastasid ühe pensionäri pensionile jäämist. Tänaseks on see arv langenud alla 2. Teine areng: tööpuuduse kasv pärast 1973. aasta naftakriisi ja [[keikamajandus]] tõus - need sõltumatud ja ebakindlad töökohad, mis panustavad süsteemi vähem, olles samal ajal riskidele rohkem avatud."
+          "text": "**1993. aastal** annab mõjukas saadik Jean Charroppin edasi laialt levinud mure: sellised taotlused võivad koormata Prantsusmaa „sotsiaaleelarvet“. Hirm on selge: ka teised endistest kolooniatest pärit sisserändajad võiksid samu keeldumisi vaidlustada. Ometi on alžeerlaste halvasti tasustatud töö koloniaalajast saadik rikastanud Prantsuse tööandjaid ning rahastanud maksude ja sotsiaalmaksetega heaoluriiki ennast. Keelata neile kodanike õigused tähendab koloniaalkorra taastamist."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p3",
-      "title": "Globaliseerumine paneb mudeli surve alla",
+      "title": "Braceros-töölised ehk imporditud kolonialism",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Globaliseeruvas majanduses võivad ettevõtted ja kapital hõlpsasti ühest riigist teise liikuda. Sotsiaalkaitse rahastamiseks vajalikke makse ja sissemakseid peetakse siis puudeks võrreldes riikidega, kus töö maksab vähem."
-        },
-        {
-          "type": "paragraph",
-          "text": "Huvitav vastunäide on Skandinaavia riikide oma. Rootsi ja Taani säilitavad sotsiaalkaitse kõrge taseme, jäädes samas väga konkurentsivõimeliseks. Nende saladus kannab nime [[paindlikkus ja turvalisus]]: ettevõtted võivad töötajaid kergesti koondada, kuid töötajad saavad vastutasuks heldeid töötutoetusi ja tugevat tuge uue töökoha leidmisel."
+          "text": "Ameerika Ühendriikides kehtib põldudel sama loogika. [[Bracero-programm]] lubab suurfarmeritel värvata Mehhiko kodanikke saagikoristusele ajutiste lepingutega. Pärast **1951. aasta juulit** ei kata Social Security enam neid lepingulisi töölisi. Mehhiko on aga erinevalt Prantsuse võimu all olnud Alžeeriast iseseisev riik."
         },
         {
           "type": "funFact",
-          "text": "Taani kulutab umbes 32% oma SKT-st sotsiaalkaitsele, mis on üks kõrgemaid määrasid maailmas, olles samal ajal järjekindlalt riikide seas, kus on kõige lihtsam ettevõtet alustada."
+          "text": "Ameerika seadus keelas kunagi välismaiste tööliste toomise lepingu alusel, sest seda peeti ohuks vabale tööle. 1951. aastal tegi Kongress erandi juba toimivale bracero-programmile: lepingud sidusid töölised ajutise töökohaga ja kohustasid neid Mehhikosse naasma."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ajaloolase Mae Ngai sõnul on see [[imporditud kolonialism]]: Mehhiko töölised sisenevad Ameerika majandusse ilma kindla kohata poliitilises kogukonnas, ilma pensioni ja arstiabita, mis on kodanikele sünnist saati lubatud. Välistamine kehtib tänini H-2A viisaga põllutööliste kohta, kelle tööandjad ei maksa Social Security makseid. Eri õiguslikke teid pidi lülitasid Prantsusmaa ja Ameerika Ühendriigid need töölised impeeriumi tööjõu hulka, piirates samal ajal nende õigusi."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p4",
-      "title": "Sotsiaalkaitse taasleiutamine",
+      "title": "„Sallivuse lävi“ ja Vitry buldooser",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Homne süsteem peab kaitsma uute riskide eest: töö uberiseerumine, ökoloogiline üleminek, vanadusega seotud sõltuvus. Prantsusmaa 2023. aasta reform, millega tõsteti seaduslik pensioniiga 64 aastani, näitab, kui raske on neid muudatusi aktsepteerida."
+          "text": "Filosoof [[Étienne Balibar]] uuris laialt levinud veendumust, et sisseränne on ületanud „[[sallivuse läve]]“. Selle pooldajad nii paremalt kui ka vasakult süüdistavad meelsasti sisserändajaid töökohtade nappuses, ülerahvastatud eluasemetes ja ülekoormatud haiglates."
         },
         {
           "type": "paragraph",
-          "text": "Arutelu puudutab ka rahastamist: kas me peaksime jätkuvalt asetama suurema osa süsteemist tööle, ohustades tööhõivet karistades, või minna üle laiemale rahastamisele maksude kaudu, nagu Prantsusmaal [[CSG]], mis mõjutab kõiki sissetulekuid, mitte ainult palku?"
+          "text": "**1980. aasta detsembris** saadab Vitry-sur-Seine'i kommunistist linnapea Paul Mercieca buldooseri tõkestama Mali tööliste asustatud ühiselamut. Prantsuse Kommunistliku Partei juht [[Georges Marchais]] kaitseb teda: Vitry ei suuda rohkem sisserändajaid vastu võtta. Seal loeb prantslaseks olemine ilmselgelt rohkem kui töölisena olemine, isegi kommunistide jaoks."
+        },
+        {
+          "type": "image",
+          "asset": "georges_marchais_portrait_1981",
+          "ratio": "2:3",
+          "caption": "Georges Marchais, Prantsuse Kommunistliku Partei peasekretär, umbes 1981."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prantsusmaa ja Ameerika Ühendriigid on juba ammu värvanud oma endistest kolooniatest töölisi oma impeeriumimajanduse tarbeks. Nende töö tõi kasumit ja tulu. Sotsiaalreeglid keelasid neile võrdsed õigused ning kui nad palusid eluaset või abi, nägid ametnikud selles uusi kulusid. Eelarvehäired tulevad hilja: sisserännanud tööliste jaoks on heaoluriik olnud kriisis algusest peale."
         },
         {
           "type": "takeaway",
-          "text": "1945. aastal sündinud heaoluriiki, et kaitsta kõiki haiguste, töötuse ja vanaduse eest, nõrgestavad enneolematu rahvastiku vananemine ja globaliseerumine. Selle ellujäämine sõltub tema võimest end uuesti leiutada, kaotamata seejuures solidaarsuslubadust."
+          "text": "Nii Prantsusmaal kui ka Ameerika Ühendriikides keelas heaoluriik, mida rahastas ka alžeerlaste ja Mehhiko braceros-tööliste töö, neile algusest peale võrdsed õigused: selle kriis ei alanud eelarvepuudujääkidega."
         }
       ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Mario Draghi, The Future of European Competitiveness: Part A, A Competitiveness Strategy for Europe, European Commission, septembre 2024, p. 5 et 19.",
+      "url": "https://commission.europa.eu/document/download/97e481fd-2dc3-412d-be4c-f152a8232961_en"
+    },
+    {
+      "text": "Mark Rupert, Producing Hegemony: The Politics of Mass Production and American Global Power, Cambridge University Press, 1995, chap. 5-7, p. 83-166.",
+      "url": "https://www.maxwell.syr.edu/research/article/producing-hegemony-the-politics-of-mass-production-and-american-global-power"
+    },
+    {
+      "text": "Mark N. Hoffman, Rethinking the Politics of Immigration: Colonial Modes of Immigration Management and the Ambivalent Resilience of the Empire State, thèse de doctorat, University of Minnesota, 2013, p. 120-121.",
+      "url": "https://conservancy.umn.edu/bitstream/11299/158374/1/Hoffman_umn_0130E_14071.pdf"
+    },
+    {
+      "text": "Paul A. Silverstein, Algeria in France: Transpolitics, Race, and Nation, Indiana University Press, 2004, chap. « Colonization and the Production of Ethnicity » et « Spatializing Practices: Migration, Domesticity, Urban Planning ».",
+      "url": "https://iupress.org/9780253217127/algeria-in-france/"
+    },
+    {
+      "text": "Cour de cassation, chambre sociale, 7 mai 1991, pourvoi n° 88-15.407, Bulletin civil V, n° 231, p. 141.",
+      "url": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000007026345/"
+    },
+    {
+      "text": "Jean Charroppin, question écrite n° 3186, Journal officiel de l'Assemblée nationale, 5 juillet 1993, p. 1861, et réponse du gouvernement, 20 septembre 1993, p. 3035.",
+      "url": "https://questions.assemblee-nationale.fr/q10/10-3186QE.htm"
+    },
+    {
+      "text": "Mae M. Ngai, Impossible Subjects: Illegal Aliens and the Making of Modern America, Princeton University Press, 2004, chap. 4, p. 127-166.",
+      "url": "https://www.jstor.org/stable/j.ctt5hhr9r"
+    },
+    {
+      "text": "Mae M. Ngai, « A New Bracero Program Is Not the Solution », The Atlantic, 9 décembre 2024.",
+      "url": "https://www.theatlantic.com/politics/archive/2024/12/disturbing-history-bracero-program/680926/"
+    },
+    {
+      "text": "U.S. Social Security Administration, Social Security Ruling 86-11c, 1986.",
+      "url": "https://www.ssa.gov/OP_Home/rulings/oasi/45/SSR86-11-oasi-45.html"
+    },
+    {
+      "text": "Joyce C. Vialet et Barbara McClure, Temporary Worker Programs: Background and Issues, U.S. Government Printing Office, 1980, p. 31.",
+      "url": "https://www.govinfo.gov/content/pkg/CPRT-96SPRT44151/pdf/CPRT-96SPRT44151.pdf"
+    },
+    {
+      "text": "J.-M. Durand-Souffland, « Offensés mais pas résignés », Le Monde, 30 décembre 1980.",
+      "url": "https://www.lemonde.fr/archives/article/1980/12/30/offenses-mais-pas-resignes_2807243_1819218.html"
+    },
+    {
+      "text": "Georges Marchais, « Lettre ouverte au recteur de la Mosquée de Paris », L'Humanité, 7 janvier 1981, reproduite dans À gauche, 25 août 2018.",
+      "url": "https://agauche.org/2018/08/25/la-lettre-de-georges-marchais-suite-a-lexpulsion-des-maliens-du-foyer-de-vitry-en-1980/"
+    },
+    {
+      "text": "Étienne Balibar, « Droit de cité or Apartheid? », dans We, the People of Europe? Reflections on Transnational Citizenship, Princeton University Press, 2004, p. 31-50.",
+      "url": "https://doi.org/10.1515/9781400825783"
     }
   ]
 }

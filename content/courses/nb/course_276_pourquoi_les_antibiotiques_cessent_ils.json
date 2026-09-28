@@ -1,0 +1,171 @@
+{
+  "id": "course_276_pourquoi_les_antibiotiques_cessent_ils",
+  "title": "Hvorfor slutter antibiotika å virke?",
+  "subtitle": "Bakteriene slår tilbake",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "En halsbetennelse, en urinveisinfeksjon, en rutineoperasjon: uten virksom antibiotika blir alt farlig igjen. Og ved å misbruke dem lærer vi bakteriene å overleve dem.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "antibiogram_petri_dish_inhibition_zones",
+    "ratio": "4:3",
+    "hook": "Ved å bekjempe bakteriene har vi trent dem opp til å overleve medisinene våre."
+  },
+  "sections": [
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_intro",
+      "title": "Innledning",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Når bakterier invaderer kroppen, slår immunforsvaret tilbake: de **hvite blodcellene** angriper infeksjonen, og vi blir raskt friske. Men hvis forsvaret er svekket eller overveldet, trengs det forsterkninger: antibiotika. Et [[baktericid]] antibiotikum dreper bakterien ved å angripe celleveggen og innholdet; et bakteriostatisk antibiotikum hindrer den bare i å formere seg."
+        },
+        {
+          "type": "funFact",
+          "text": "Antibiotika er ingen moderne oppfinnelse: spor tyder på at mennesker brukte dem for over 1 500 år siden, uten å vite noe om bakterier."
+        },
+        {
+          "type": "paragraph",
+          "text": "Avhengig av infeksjonen velger legen et **bredspektret** antibiotikum, som virker mot mange arter, eller et smalspektret, som bare rammer noen få. Disse medisinene er effektive, billige og lette å få tak i, og de dekker et enormt spekter av infeksjoner. Nettopp denne suksessen har fått den moderne verden til å misbruke dem. Og bakteriene har begynt å svare."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p1",
+      "title": "Slik lærer bakteriene å stå imot",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Antibiotika er blant de største fremskrittene i moderne medisin. De har reddet utallige liv, og vi er avhengige av dem. Men den massive bruken har skapt et problem: [[antibiotikaresistens]]. Antibiotika som før drepte en bakterie eller stanset veksten, virker ikke lenger. Bakterien har utviklet seg for å lure behandlingen."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Alexander Fleming, som oppdaget penicillinet, i laboratoriet sitt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evolusjon er en naturlig prosess som går raskere når omgivelsene angriper. Å behandle bakterier gang på gang med stoffer laget for å drepe dem, er det samme som å velge ut dem som klarer å overleve. Forsvarsmåtene er mange: genetiske **mutasjoner**, enzymer som bryter ned antibiotikumet, endringer i hvordan cellen fungerer, og til og med bittesmå [[effluks-pumper]] som skyver medisinen ut av cellen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dette forsvaret ligger i genene. Når en resistent bakterie deler seg, gir den genene videre til etterkommerne, som i sin tur gir dem videre. Én eneste overlevende kan grunnlegge en hel slekt av resistente bakterier. Slik sprer resistensen seg."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p2",
+      "title": "Gener på reise: MRSA",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En resistent bakterie reiser som enhver annen mikrobe. **Covid**-pandemien viste hvor fort et virus går fra person til person, og fra land til land. Bakterier sprer seg på samme måte: ved menneskelig kontakt, i gunstige miljøer, ved dårlig hygiene eller fra dyr til mennesker."
+        },
+        {
+          "type": "paragraph",
+          "text": "I tillegg har de en snarvei: [[horisontal genoverføring]]. En resistent bakterie kan gi resistensgenene sine direkte til en nabo, uten å vente på å dele seg. På svært kort tid oppstår en hel bestand av resistente bakterier."
+        },
+        {
+          "type": "image",
+          "asset": "mrsa_staphylococcus_aureus_electron_micrograph_cdc",
+          "ratio": "5:4",
+          "caption": "En klynge meticillinresistente gule stafylokokker, sett i elektronmikroskop."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den mest kjente er [[MRSA]], meticillinresistente gule stafylokokker. Den står imot mange vanlige antibiotika, derav kallenavnet «superbakterie». Den massive antibiotikabruken har utryddet de sårbare stammene og gitt fritt spillerom til dem som, i likhet med denne, har lært å stå imot. Følgene kan være dødelige."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p3",
+      "title": "1,27 millioner døde i året: WHO slår alarm",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hva betyr denne resistensen for oss? [[WHO]], Verdens helseorganisasjon, rangerer resistens mot antimikrobielle midler, altså medisiner som bekjemper mikrober, inkludert antibiotika, blant de **tre** største truslene mot folkehelsen i verden. Med stadig færre virksomme medisiner mot bakterielle infeksjoner taper hele den moderne medisinen terreng."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tallene viser hvor stor faren er. Bare i 2019 ble **1,27 millioner** dødsfall i verden tilskrevet antimikrobiell resistens. Og kurven stiger: prognosene regner med **10 millioner** døde i året innen **2050**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Forskerne sitter ikke med hendene i fanget. De utvikler nye og mer treffsikre behandlinger rettet mot resistente bakterier. De prøver også å gjenopprette virkningen til eksisterende antibiotika og å kutte unødvendige resepter: hver behandling som unngås, er én sjanse mindre for bakteriene til å tilpasse seg."
+        }
+      ]
+    },
+    {
+      "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p4",
+      "title": "En verden uten virksom antibiotika",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vi svelger antibiotikaen vår uten å tenke over det. Den er billig, effektiv og tilgjengelig overalt. Uten den ville en helt vanlig infeksjon, bakteriell **halsbetennelse** eller urinveisinfeksjon, bli mye vanskeligere å behandle. Et skrubbsår på kneet kunne utvikle seg til [[sepsis]], en livstruende infeksjon i hele kroppen."
+        },
+        {
+          "type": "image",
+          "asset": "hospital_operating_room_surgery_team",
+          "ratio": "3:2",
+          "caption": "En moderne operasjonsstue: uten antibiotika ville rutineinngrep igjen bli risikable."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vanlige operasjoner, som **keisersnitt** eller innsetting av hofteprotese, ville innebære langt høyere risiko. Antibiotika gis nemlig ofte etter kirurgi for å forebygge infeksjon. Uten dem ville inngrep som redder eller forbedrer liv, bli for farlige å utføre."
+        },
+        {
+          "type": "takeaway",
+          "text": "Fremtiden til den moderne medisinen avhenger av én ting: at antibiotika beholder virkningen sin, og altså at vi slutter å misbruke dem."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Medical News Today, « Antibiotics: How they work, uses, side effects and how to use ».",
+      "url": "https://www.medicalnewstoday.com/articles/10278"
+    },
+    {
+      "text": "Wikipedia, « Antibiotic ».",
+      "url": "https://en.wikipedia.org/wiki/Antibiotic"
+    },
+    {
+      "text": "B. K. Nimmana et A. D. Nguyen, « Antibiotic Resistance », StatPearls, StatPearls Publishing, Treasure Island (FL), 2026.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513277/"
+    },
+    {
+      "text": "H. Endale, M. Mathewos et D. Abdeta, « Potential Causes of Spread of Antimicrobial Resistance and Preventive Measures in One Health Perspective: A Review », Infection and Drug Resistance, vol. 16, 2023, p. 7515-7545.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10715026/"
+    },
+    {
+      "text": "American Society for Microbiology, « Plasmids and the Spread of Antibiotic Resistance Genes », janvier 2023.",
+      "url": "https://asm.org/articles/2023/january/plasmids-and-the-spread-of-antibiotic-resistance-g"
+    },
+    {
+      "text": "M. A. Salam, M. Y. Al-Amin, M. T. Salam, J. S. Pawar et al., « Antimicrobial Resistance: A Growing Serious Threat for Global Public Health », Healthcare, vol. 11, n° 13, 2023, art. 1946.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10340576/"
+    },
+    {
+      "text": "Wikipedia, « Methicillin-resistant Staphylococcus aureus ».",
+      "url": "https://en.wikipedia.org/wiki/Methicillin-resistant_Staphylococcus_aureus"
+    },
+    {
+      "text": "S. Rugarabamu et G. Mwanyika, « Biotechnological Innovations to Combat Antimicrobial Resistance and Advance Global Health Equity », Bacteria, vol. 4, n° 3, 2025, art. 46.",
+      "url": "https://www.mdpi.com/2674-1334/4/3/46"
+    },
+    {
+      "text": "A. Nazir, A. Nazir, V. Zuhair, S. Aman et al., « The Global Challenge of Antimicrobial Resistance: Mechanisms, Case Studies, and Mitigation Approaches », Health Science Reports, vol. 8, n° 7, 2025, e71077.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12284435/"
+    },
+    {
+      "text": "ITN Business, « Antimicrobial resistance: understanding its global impact ».",
+      "url": "https://business.itn.co.uk/antimicrobial-resistance-understanding-its-global-impact/"
+    }
+  ]
+}

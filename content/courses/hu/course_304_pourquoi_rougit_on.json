@@ -1,0 +1,131 @@
+{
+  "id": "course_304_pourquoi_rougit_on",
+  "title": "Miért pirulunk el?",
+  "subtitle": "A legemberibb arckifejezés",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Egy kínos megjegyzés vagy egy dicséret: mindkét esetben felforrósodik és kipirul az arcunk. Mit csinál ilyenkor a test, és miért nem tehetünk ellene szinte semmit?",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "blushing_red_cheeks_woman_portrait_close_up",
+    "ratio": "4:3",
+    "hook": "Egy félresikerült megjegyzés, és az arcod lángba borul. Egy bók, és ugyanez történik. Senki sem dönt úgy, hogy elpirul."
+  },
+  "sections": [
+    {
+      "id": "course_304_pourquoi_rougit_on_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mindenki ismeri ezt az érzést. Valaki kínos megjegyzést tesz rád: az arcod felforrósodik, a bőröd kipirul. A jelenség még a természettudós [[Charles Darwin]] érdeklődését is felkeltette, aki „a legkülönösebb és legemberibb kifejezésnek” tartotta mind közül."
+        },
+        {
+          "type": "paragraph",
+          "text": "A legfurcsább, hogy a dicséret ugyanazt váltja ki, mint a gúnyolódás. Ha mások előtt megdicsérnek, ugyanazt a hőséget érzed felszökni az arcodba. Mi történik pontosan a bőr alatt, és miért ugyanúgy reagál a test a szégyenre és az örömre?"
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p1",
+      "title": "Hőhullám a bőr alatt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az elpirulás mindenekelőtt a véren múlik. Az arc apró, a bőrfelszínhez nagyon közel futó ereiben hirtelen megnő a keringő vér mennyisége. Ezt a [[szimpatikus idegrendszer]] irányítja, az idegrendszernek az az ága, amely az [[üss vagy fuss reakció]] mögött áll: ez a vészhelyzeti válaszunk a veszélyre."
+        },
+        {
+          "type": "image",
+          "asset": "thermal_infrared_image_human_face_heat",
+          "ratio": "3:2",
+          "caption": "Alakok hőkamerán át nézve: minél melegebb egy felület, annál világosabb a képernyőn."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amikor ez a rendszer bekapcsol, gyorsabban ver a szív, és emelkedik a testhőmérséklet. A többlethő elvezetésére kitágulnak az arc erei: több vér áramlik át rajtuk, és a vér szállította hő a bőrön át távozik. Mivel ezek az erek a felszín közelében futnak, a véráramlás látszik: a bőr rózsaszínes vagy vörös árnyalatot kap. Az elpirulás működésben lévő hűtőrendszer."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p2",
+      "title": "A zavar, egy menekülési reflex",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Egy társasági baki, egy akaratlanul megszegett íratlan szabály: az agy fenyegetésként kezeli. Bekapcsolja a szimpatikus idegrendszert, a késztetéssel, hogy védekezzünk („üss”) vagy eltűnjünk („fuss”). A vér az arc ereibe tódul, és lángba borul az arcunk."
+        },
+        {
+          "type": "image",
+          "asset": "embarrassed_person_hiding_face_in_hands",
+          "ratio": "3:2",
+          "caption": "Kezünk mögé rejtjük az arcunkat: a menekülési reflex hétköznapi változata."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vannak, akik könnyebben elpirulnak, mint mások. Akiket [[szociális szorongás]] gyötör, gyakran szigorúbban ítélik meg önmagukat. Ez a negatív torzítás felerősíti a szimpatikus rendszer válaszát, és a legkisebb ügyetlenség is valóságos riadót vált ki az egész testben."
+        },
+        {
+          "type": "funFact",
+          "text": "Az elpirulástól való félelem pirulást okoz. Akik rettegnek az elpirulástól, azoknál már az is felerősíti a szimpatikus választ, ha tudják, hogy figyelik őket. Így elpirulunk attól, hogy elpirultunk, és bezárul a kör."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p3",
+      "title": "Elpirulni örömünkben is",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A pozitív figyelem ugyanazt a mechanizmust indítja be. Nyilvános dicséret, taps, váratlan bók: hirtelen kiszolgáltatottnak érezzük magunkat mások tekintetének, vagy aggódunk, hogy nem tudjuk rendesen megköszönni. Ez a zavar elég ahhoz, hogy beinduljon a vészhelyzeti válasz."
+        },
+        {
+          "type": "image",
+          "asset": "shy_speaker_receiving_applause_audience",
+          "ratio": "5:4",
+          "caption": "Boston polgármestere egy szónoknak tapsol egy szabadtéri ebéden az 1960-as években: a pozitív figyelemtől is elpirulunk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az agy nagyon jól meg tudja különböztetni a dicséretet a megaláztatástól. A szimpatikus idegrendszer viszont nyersebb: még nem döntötte el, kell-e menekülni vagy sem. Mire dönt, az arcunk már színt váltott."
+        }
+      ]
+    },
+    {
+      "id": "course_304_pourquoi_rougit_on_p4",
+      "title": "Megakadályozhatjuk, hogy elpiruljunk?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nem igazán, és ez nem baj: az elpirulás természetes válasz a körülöttünk lévő társas világra, nem kijavítandó hiba. Arra viszont hathatunk, ami kiváltja, vagyis arra, ahogyan az agy egy kínos helyzetet a „veszély” kategóriába sorol."
+        },
+        {
+          "type": "paragraph",
+          "text": "Két módszer segíthet. Az [[expozíciós terápia]] lényege, hogy fokozatosan szembenézünk a félelmetes helyzetekkel, amíg már nem váltanak ki riadót. A [[tudatos jelenlét]] arra tanít, hogy félelem nélkül figyeljük a felszökő hőséget. Egyik sem szünteti meg az elpirulást: az elpirulástól való félelmet hatástalanítják, és a kör lecsillapodik."
+        },
+        {
+          "type": "takeaway",
+          "text": "Elpiruláskor a szimpatikus idegrendszer kitágítja az arc ereit, hogy elvezesse egy riadó hőjét, akár egy baki, akár egy bók váltotta ki: megakadályozni nem tudjuk, de megtanulhatunk nem félni tőle."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "C. Darwin, The Expression of the Emotions in Man and Animals, John Murray, 1872, p. 301.",
+      "url": "https://darwin-online.org.uk/content/frameset?viewtype=text&itemID=F1142&pageseq=1"
+    },
+    {
+      "text": "P. D. Drummond, G. B. Shapiro, M. Nikolić et S. M. Bögels, « Treatment Options for Fear of Blushing », Current Psychiatry Reports, vol. 22, n° 6, 2020.",
+      "url": "https://doi.org/10.1007/s11920-020-01152-5"
+    },
+    {
+      "text": "D. J. Stein et C. Bouwer, « Blushing and social phobia: a neuroethological speculation », Medical Hypotheses, vol. 49, n° 1, 1997, p. 101-108.",
+      "url": "https://doi.org/10.1016/S0306-9877(97)90260-7"
+    }
+  ]
+}

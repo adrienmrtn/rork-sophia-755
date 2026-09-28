@@ -1,0 +1,156 @@
+{
+  "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires",
+  "title": "Proč máme časová pásma?",
+  "subtitle": "1884",
+  "subject": "histoire",
+  "subcategory": "Early modern era & 19th century",
+  "description": "Až do 19. století žilo každé město podle vlastního času. Železnice a pak konference ve Washingtonu roku 1884 přestavěly samotný čas.",
+  "author": "nathan-hewitt",
+  "hero": {
+    "image": "shepherd_gate_clock_royal_observatory_greenwich",
+    "ratio": "4:3",
+    "hook": "Před příchodem vlaků nebylo poledne v sousedních městech nikdy úplně ve stejnou chvíli."
+  },
+  "sections": [
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po většinu dějin byl čas místní. Každé město si řídilo hodiny samo a poledne v jednom mohlo nastat o několik minut dřív nebo později než v sousedním. Nikoho to netrápilo: mezi městy se necestovalo tak rychle, aby na rozdílu záleželo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pak přišly železnice. Když spojíte dvě města za pár minut, začnou tyhle rozdíly překážet. Na dlouhých tratích projížděl vlak zastávkami, kde se místní čas lišil o celé hodiny. Systémy měření času, které lidstvo používalo tisíce let, přestaly stačit. Aby vlaky jezdily hladce, bylo nutné přestavět samotný čas."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p1",
+      "title": "Železnice přijímají greenwichský čas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Časové rozdíly mezi městy byly pro jízdní řády noční můrou. Byly i nebezpečné: několik železničních neštěstí způsobily špatně sladěné jízdní řády. Společnosti pochopily, že potřebují společný čas. Roku **1840** našla řešení jako první britská [[Great Western Railway]]: sladila jízdní řády s královskou hvězdárnou v Greenwichi a jejím měřítkem se stal [[greenwichský čas]]. Všechna její nádraží od té doby žila podle stejného času."
+        },
+        {
+          "type": "image",
+          "asset": "bristol_corn_exchange_clock_two_minute_hands",
+          "ratio": "4:3",
+          "caption": "Hodiny na budově Corn Exchange v Bristolu se dvěma minutovými ručičkami."
+        },
+        {
+          "type": "paragraph",
+          "text": "Změna fungovala skvěle. Odjezdy a příjezdy se konečně daly bezpečně koordinovat. Brzy přešly na stejný systém všechny britské společnosti. Už v **50. letech 19. století** byla většina veřejných hodin v zemi seřízena podle Greenwiche. Roku **1880** se tento čas stal v Británii zákonným."
+        },
+        {
+          "type": "funFact",
+          "text": "V Bristolu mají hodiny na budově Corn Exchange dvě minutové ručičky: jednu pro místní čas, druhou pro čas železnice, greenwichský, s rozdílem deseti minut. Památka na dobu, kdy město žilo ve dvou časech zároveň."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p2",
+      "title": "Spojené státy vymýšlejí časová pásma",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ve Spojených státech britský recept nestačil. Vlaky tam jezdily na mnohem větší vzdálenosti: když bylo v Kalifornii poledne, ve Washingtonu už bylo hodně odpoledne. Řešením jsou [[časová pásma]]: rozdělit zemi na **pět** pruhů, mezi nimiž je vždy hodina rozdílu."
+        },
+        {
+          "type": "image",
+          "asset": "william_allen_railroad_time_zones_map_1883",
+          "ratio": "4:3",
+          "caption": "Reklamní mapa Burlington Route z roku 1892: železniční pásma přijatá roku 1883 tu vymezují Pacific, Mountain, Central a Eastern Time."
+        },
+        {
+          "type": "paragraph",
+          "text": "Místní vlaky tak jezdily podle času, který dával smysl na místě, a ty, které projížděly více pásmy, si jízdní řády snadno přepočítaly. Návrhů rozdělení bylo několik. Zvítězilo to, které navrhl [[William Allen]], autor železničních průvodců. V **listopadu 1883** přijaly americké a kanadské železniční společnosti jeho pět pásem oficiálně."
+        },
+        {
+          "type": "paragraph",
+          "text": "Místním časem ale netrpěly jen železnice. Mezinárodní lodní doprava rychle rostla a právě se objevil telegraf. Koordinace času se stala světovým problémem, který si žádal světové řešení."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p3",
+      "title": "Washingtonská konference roku 1884",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Roku **1884** svolal americký prezident Chester A. Arthur do Washingtonu konferenci, která měla otázku vyřešit. Sešla se [[Mezinárodní poledníková konference]] se zástupci **25 zemí**, téměř výhradně amerických a evropských. Rozhodli, že greenwichský poledník bude nultým poledníkem a jeho čas světovým časem, se čtyřiadvacetihodinovým dnem, který začíná o půlnoci greenwichského času."
+        },
+        {
+          "type": "image",
+          "asset": "sandford_fleming_portrait_photograph_1890s",
+          "ratio": "3:4",
+          "caption": "Sandford Fleming, skotsko-kanadský inženýr: portrét otištěný v Canadian Alpine Journal roku 1907."
+        },
+        {
+          "type": "paragraph",
+          "text": "Skotsko-kanadský inženýr [[Sandford Fleming]] tam prosazoval světový systém časových pásem. Rozdělil zeměkouli na **24 pásem** podle toho, jak se mění [[zeměpisná délka]]: každých **15 stupňů** se čas posune o hodinu oproti předchozímu pásmu. Na rozdíl od rozšířené představy konference jeho pásma oficiálně nepřijala. Greenwichský čas se stal světovým měřítkem, nikdo ale nenařídil, že má nahradit místní časy."
+        }
+      ]
+    },
+    {
+      "id": "course_295_pourquoi_avons_nous_des_fuseaux_horaires_p4",
+      "title": "Pomalé a sporné přijetí",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Časová pásma se tedy prosazovala postupně. Roku **1900** měla většina evropských zemí čas odvozený od Greenwiche. Koloniální mocnosti jako Británie a Francie ho vnutily svým koloniím. Jiné země se přidaly z pohodlnosti, někdy až po desetiletích: Čína čekala do roku **1918**."
+        },
+        {
+          "type": "paragraph",
+          "text": "I když byl nový čas oficiálně přijatý, do zvyků pronikal jen ztěžka. Léta budil zmatek a posměch a místní čas zůstával běžný po celém světě. Bylo potřeba desetiletí a nástrojů jako veřejné školy nebo rozhlasové programy, aby ho zcela vytlačil. Ve **20. letech 20. století** už většina zemí žila podle času odvozeného od Greenwiche. Čas byl přestavěn, protože si to přály železnice."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1840",
+              "title": "Vlaky podle Greenwiche",
+              "detail": "Great Western Railway řídí jízdní řády podle královské hvězdárny."
+            },
+            {
+              "date": "1880",
+              "title": "Britský zákonný čas",
+              "detail": "Greenwichský čas se stává úředním časem Británie."
+            },
+            {
+              "date": "listopad 1883",
+              "title": "Pět severoamerických pásem",
+              "detail": "Americké a kanadské společnosti přijímají rozdělení Williama Allena."
+            },
+            {
+              "date": "1884",
+              "title": "Washingtonská konference",
+              "detail": "25 zemí dělá z greenwichského času světový čas."
+            },
+            {
+              "date": "1918",
+              "title": "Čína se přidává",
+              "detail": "I Čína přijímá čas odvozený od Greenwiche."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Časová pásma nevznikla světovým dekretem, ale z potřeb železnic, a trvalo desetiletí, než nahradila místní čas."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "S. A. Johnston, The Clocks Are Telling Lies: Science, Society, and the Construction of Time, 2022, p. 24, 104 et 188, et chap. 5."
+    }
+  ]
+}

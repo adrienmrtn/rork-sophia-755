@@ -1,0 +1,159 @@
+{
+  "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain",
+  "title": "Ali lahko spremenimo človeško DNK?",
+  "subtitle": "Škarje CRISPR",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Od leta 2012 lahko z »molekularnimi škarjami«, izposojenimi od bakterij, DNK prerežemo na želenem mestu. Prva ozdravljenja, možne napake in otroci po meri: kako daleč bomo šli?",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "genetics_lab_pipette_dna_samples_gloved_hands",
+    "ratio": "4:3",
+    "hook": "Kaj če bi lahko črko v svoji DNK popravili kot tipkarsko napako?"
+  },
+  "sections": [
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lasje, oči, barva kože, postava: vsi smo drugačni. Te telesne lastnosti so dediščina: vsak [[gen]] je odsek DNK, ki smo ga dobili od bioloških staršev. Seveda šteje tudi okolje: kaj jemo, s kom se družimo, v kaj verjamemo. A svoje gene jemljemo kot dane. Včasih bi bili radi višji ali vitkejši, pa vendar z njimi živimo, ne da bi o tem zares razmišljali."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kaj bi spremenili, če bi lahko popravili svojo DNK? Vprašanje ni več zgolj teoretično. Leta **2012** ameriška biokemičarka **Jennifer Doudna** in francoska mikrobiologinja **Emmanuelle Charpentier** razvijeta način, kako programirati beljakovino, ki reže DNK. Zdaj lahko odstranita neželeni gen in torej, vsaj teoretično, spremenita DNK človeka."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p1",
+      "title": "CRISPR, škarje, izposojene od bakterij",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[CRISPR]] ni edino orodje, ki lahko spreminja DNK, je pa najslavnejše. Njegovo načelo so najprej opazili pri mikrobih. Bakterija se brani tako, da prepozna DNK virusa, ki jo napada, in jo razreže na koščke. Za to uporablja odseke DNK, imenovane CRISPR, in encim z imenom **Cas**, ki ima vlogo škarij."
+        },
+        {
+          "type": "image",
+          "asset": "emmanuelle_charpentier_jennifer_doudna_crispr_pioneers",
+          "ratio": "16:9",
+          "caption": "Emmanuelle Charpentier in Jennifer Doudna, raziskovalki, ki sta to bakterijsko obrambo spremenili v orodje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Znanstveniki so ta naravni obrambni sistem preusmerili. Namesto na virus encim usmerijo na natančno določeno mesto v DNK človeka. Tam zareže in namerna sprememba postane mogoča. Včasih ciljni gen preprosto izklopijo. Včasih zamenjajo nekaj njegovih črk. Včasih ga nadomestijo v celoti."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p2",
+      "title": "Prva ozdravljenja: srpastocelična anemija in talasemija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Možnost urejanja DNK odpira vrata zdravljenju številnih genskih bolezni. Naša DNK je zapisana s **štirimi bazami**, A, T, C in G. Njihovo zaporedje tvori naš [[genom]], načrt za gradnjo našega telesa. Že ena napaka v tem besedilu lahko sproži bolezen, njen popravek pa jo načeloma lahko pozdravi."
+        },
+        {
+          "type": "image",
+          "asset": "sickle_cell_red_blood_cells_micrograph",
+          "ratio": "3:2",
+          "caption": "Mikroskopski prerez jeter bolnika s srpastocelično anemijo, prvo boleznijo, zdravljeno s CRISPR."
+        },
+        {
+          "type": "paragraph",
+          "text": "Leta **2023** Združeno kraljestvo kot prva država odobri zdravilo, ki temelji na CRISPR. Namenjeno je dvema dednima boleznima krvi: to sta [[srpastocelična anemija]] in beta talasemija. Zdravljenje spremeni celice, ki tvorijo kri, tako da izdelujejo več posebne oblike hemoglobina: to je [[fetalni hemoglobin]], ki ga telo običajno proizvaja pred rojstvom."
+        },
+        {
+          "type": "funFact",
+          "text": "Tipkarska napaka lahko ubije. Ena sama napačna črka v DNK, na primer T namesto C, včasih zadošča za smrtno gensko bolezen. Če bi vrnili pravo črko, bi jo teoretično lahko pozdravili."
+        },
+        {
+          "type": "paragraph",
+          "text": "In to je šele začetek. Klinična preskušanja danes preizkušajo CRISPR proti raku, presnovnim motnjam, avtoimunskim boleznim, boleznim srca in ožilja ter mišičnim distrofijam. Seznam je dolg. Bodo genske bolezni kmalu stvar preteklosti?"
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p3",
+      "title": "Zakaj ne bomo pozdravili vsega",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ni tako preprosto. Prvič, izražanje gena ni odvisno le od dediščine, ki smo jo dobili od staršev: nanj vpliva tudi okolje. Drugič, bolezni ne povzroči nujno en sam okvarjen gen. Vpletenih je lahko več genov in popravilo je tedaj veliko bolj zapleteno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tudi CRISPR se lahko zmoti. Zgodi se, da škarje zarežejo na napačnem mestu ali da se prerezana konca ne spojita pravilno. Tako spremenjena DNK lahko povzroči nove težave, prve pa ne odpravi. Kljub temu medicina z velikimi koraki napreduje k odpravi nekaterih najhujših genskih bolezni."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p4",
+      "title": "Otroci po meri: kje potegniti mejo?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zdravljenje bolezni, ki onesposobijo ali ubijajo, ima smisel, to vidi vsak. A kje naj znanost potegne mejo? Naj jo uporabimo za ustvarjanje »popolnega človeka«? Odkar znamo DNK rezati po mili volji, je to vprašanje bolj pereče kot kdaj koli."
+        },
+        {
+          "type": "image",
+          "asset": "ivf_embryo_icsi_microinjection_micrograph",
+          "ratio": "16:9",
+          "caption": "Človeška jajčna celica, ki jo med mikroinjiciranjem v laboratoriju drži pipeta."
+        },
+        {
+          "type": "funFact",
+          "text": "Izraz »otrok po meri« ni nastal s CRISPR. Uporabljamo ga, odkar obstaja [[oploditev in vitro]], ki omogoča, da zarodek spočnemo v laboratoriju, preden ga vstavimo v maternico."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tako imenovano [[urejanje zarodne linije]] spreminja DNK spolnih celic: semenčic, jajčec ali zarodkov v najzgodnejših fazah. Razlika od običajnega zdravljenja je velika: te spremembe se nato prenašajo iz roda v rod. Danes je urejanje zarodne linije prepovedano v vseh državah. A kako dolgo še? Kdaj se bo gensko urejanje z medicinskim namenom prevesilo v genske linije po naročilu?"
+        },
+        {
+          "type": "takeaway",
+          "text": "Od leta 2012 škarje CRISPR omogočajo popravljanje človeške DNK in leta 2023 so bila odobrena prva zdravljenja, a napake so še vedno mogoče, pri mnogih boleznih je vpletenih več genov, urejanje zarodne linije pa ostaja povsod prepovedano."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "National Science Foundation, « CRISPR: A Biotech Breakthrough », NSF Impacts.",
+      "url": "https://www.nsf.gov/impacts/crispr"
+    },
+    {
+      "text": "National Cancer Institute, « How CRISPR Is Changing Cancer Research and Treatment », Cancer Currents Blog, 2020.",
+      "url": "https://www.cancer.gov/news-events/cancer-currents-blog/2020/crispr-cancer-research-treatment"
+    },
+    {
+      "text": "CRISPR Medicine News, « Clinical Trials », liste des essais cliniques fondés sur CRISPR.",
+      "url": "https://crisprmedicinenews.com/clinical-trials/"
+    },
+    {
+      "text": "House of Lords Library, « World's first personalised DNA editing treatment », UK Parliament.",
+      "url": "https://lordslibrary.parliament.uk/worlds-first-personalised-dna-editing-treatment/"
+    },
+    {
+      "text": "« The gene editor CRISPR won't fully fix sick people anytime soon. Here's why », Science, 2016.",
+      "url": "https://www.science.org/content/article/gene-editor-crispr-won-t-fully-fix-sick-people-anytime-soon-here-s-why"
+    },
+    {
+      "text": "Boston Children's Hospital, « CRISPR gene editing », Answers.",
+      "url": "https://answers.childrenshospital.org/crispr-gene-editing/"
+    },
+    {
+      "text": "« The Guardian view on gene-edited humans: darker uses must be acknowledged alongside medical ones », The Guardian, 5 juillet 2026.",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/05/the-guardian-view-on-gene-edited-humans-darker-uses-must-be-acknowledged-alongside-medical-ones"
+    },
+    {
+      "text": "K. E. Ormond et al., « Human Germline Genome Editing », American Journal of Human Genetics, vol. 101, 2017.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5544380/"
+    }
+  ]
+}

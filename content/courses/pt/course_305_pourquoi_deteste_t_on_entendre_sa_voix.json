@@ -1,0 +1,121 @@
+{
+  "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix",
+  "title": "Por que odiamos ouvir nossa voz gravada?",
+  "subtitle": "O som de si mesmo",
+  "subject": "sciences",
+  "subcategory": "O nosso quotidiano explicado",
+  "description": "Numa gravação, sua voz parece estranha, quase constrangedora. O culpado não é o microfone: é o seu crânio, e o jeito como seu cérebro se reconhece.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "studio_microphone_headphones_voice_recording",
+    "ratio": "4:3",
+    "hook": "Os vídeos dos seus amigos não incomodam você. Mas a sua própria voz num áudio faz você torcer o nariz. Por que esse som parece errado?"
+  },
+  "sections": [
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O que é o “eu”? Filósofos, cientistas e artistas se fazem essa pergunta há séculos. Para estudá-la, os pesquisadores costumam usar a imagem do rosto, que todo mundo reconhece num piscar de olhos. Mas a voz pesa tanto quanto o rosto na sensação de ser quem somos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Daí o paradoxo. A gente assiste sem problema a vídeos de amigos ou da família. Aí chega um áudio que nós mesmos gravamos, e vem aquele recuo: essa voz não é a minha. Mas é, sim. Para entender, é preciso seguir o caminho do som."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p1",
+      "title": "Falar e ouvir: ar que vibra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Falar começa com um empurrão de ar. O diafragma expulsa o ar dos pulmões em direção à garganta. Ao passar entre as [[cordas vocais]], ele as faz vibrar em alta velocidade: essas vibrações, mais ou menos agudas, sobem pela garganta. A boca e a língua depois as esculpem em sons e palavras."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ouvir é o caminho inverso. A maioria dos sons chega até nós por [[condução aérea]]: as ondas atravessam o canal auditivo e fazem vibrar o tímpano, que transmite essas vibrações aos ossinhos do ouvido médio. Amplificadas, elas chegam à [[cóclea]], no ouvido interno, onde milhares de células ciliadas cobertas de [[estereocílios]] se dobram e produzem um sinal elétrico. O nervo auditivo o leva ao cérebro, que o identifica e o classifica."
+        },
+        {
+          "type": "image",
+          "asset": "cochlea_stereocilia_hair_cells_electron_micrograph",
+          "ratio": "4:5",
+          "caption": "Cócleas de camundongo ao microscópio eletrônico, normal (à esquerda) e mutante: as fileiras de células ciliadas cobertas de estereocílios."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p2",
+      "title": "Ouvir a si mesmo pelos ossos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Quando ouvimos uma gravação de nós mesmos, tudo passa pela condução aérea, como qualquer outro som. Mas quando falamos, entra um segundo canal: a [[condução óssea]]. As vibrações mecânicas da voz se propagam diretamente pelos ossos do crânio até o ouvido interno, sem passar pelo tímpano nem pelo ouvido médio."
+        },
+        {
+          "type": "image",
+          "asset": "tuning_fork_weber_test_bone_conduction_skull",
+          "ratio": "3:4",
+          "caption": "Um diapasão encostado no crânio durante um exame de audição: o som passa pelo osso, não pelo ar."
+        },
+        {
+          "type": "paragraph",
+          "text": "A cóclea recebe, então, dois sinais ao mesmo tempo, um vindo do ar e outro vindo dos ossos, e transforma os dois em mensagens para o cérebro. Em tempo real, sua voz é um som mais rico e mais complexo do que um microfone consegue captar. A gravação devolve só uma parte dele."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p3",
+      "title": "O vale da estranheza",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Falta explicar o incômodo. Os pesquisadores ainda não têm uma resposta definitiva, mas uma hipótese atrai: o efeito do [[vale da estranheza]]. A ideia vem da robótica e da animação. Quanto mais uma criatura artificial se parece com um humano, mais familiar e simpática ela nos parece. Até certo ponto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quando a imitação fica muito próxima sem ser perfeita, a simpatia vira incômodo, e até repulsa. Acontece que uma gravação só entrega a parte aérea da nossa voz, sem a riqueza da condução óssea. Ouvimos o essencial, mas não tudo. O cérebro cai no vale da estranheza: é quase “eu”, mas não exatamente."
+        }
+      ]
+    },
+    {
+      "id": "course_305_pourquoi_deteste_t_on_entendre_sa_voix_p4",
+      "title": "Uma voz, mil versões de si",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O vale da estranheza não explica tudo. Uma gravação também mostra só uma faceta do jeito como nos apresentamos aos outros. Isso porque a voz não é fixa: nós a ajustamos o tempo todo conforme o contexto, muitas vezes sem pensar, e a sensação de quem somos se constrói sobre todas essas variações ao mesmo tempo."
+        },
+        {
+          "type": "funFact",
+          "text": "No trabalho, a gente costuma baixar o tom para parecer mais sereno. Diante de um bebê ou de um bicho de estimação, a voz sobe para o agudo. Boca, língua e lábios mudam de ajuste, e com eles a versão do “eu” que deixamos ouvir."
+        },
+        {
+          "type": "paragraph",
+          "text": "A percepção de si é, portanto, uma construção elaborada, feita de dezenas de vozes diferentes. O cérebro não tem um modelo único com o qual comparar a gravação. O que ele ouve sai do microfone sem passar pelos ossos, congelado num só registro: parecido o bastante para ser reconhecido, diferente demais para ser adotado."
+        },
+        {
+          "type": "takeaway",
+          "text": "Sua voz gravada soa errada porque falta nela a condução óssea que seu crânio acrescenta quando você fala, e porque ela congela só uma das mil versões de você: parecida o bastante para ser reconhecida, mas não o suficiente para ser aceita."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "M. Kimura et Y. Yotsumoto, « Auditory traits of \"own voice\" », PLOS ONE, vol. 13, n° 6, 2018, e0199443.",
+      "url": "https://doi.org/10.1371/journal.pone.0199443"
+    },
+    {
+      "text": "NIDCD (National Institute on Deafness and Other Communication Disorders), « How Do We Hear? ».",
+      "url": "https://www.nidcd.nih.gov/health/how-do-we-hear"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout",
+  "title": "Miksi kirjapaino muutti kaiken?",
+  "subtitle": "Mainz, noin 1450",
+  "subject": "histoire",
+  "subcategory": "Early modern era & 19th century",
+  "description": "Noin vuonna 1450 mainzilainen käsityöläinen kokosi metallikirjaimia ja painoi niillä kokonaisia sivuja. Viisikymmentä vuotta myöhemmin Euroopassa oli 20 miljoonaa kirjaa, ja tiedon hallitseminen oli käynyt paljon vaikeammaksi.",
+  "author": "benjamin-campbell",
+  "hero": {
+    "image": "gutenberg_bible_open_pages_library_of_congress",
+    "ratio": "4:3",
+    "hook": "Kirjurilta kului yhteen kirjaan kuukausia; yhtäkkiä yksi painokone tuotti satoja kappaleita."
+  },
+  "sections": [
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kauan ennen kirjapainoa kirjan valmistaminen Euroopassa oli hidasta ja kallista työtä. Jokaisen teoksen jäljensi käsin koulutettu [[kirjuri]], joka saattoi uurastaa yhden käsikirjoituksen parissa kuukausia, joskus vuosia. Siksi kirjat olivat rikkaiden, kirkollisten laitosten ja yliopistojen etuoikeus. Muutkin olisivat kirjoja halunneet, mutta yhden niteen valmistaminen vaati yksinkertaisesti valtavasti aikaa ja työvoimaa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sitten **1400-luvun** puolivälissä kaikki alkoi muuttua. Saksan Mainzissa käsityöläinen [[Johannes Gutenberg]] kehitti uuden painomenetelmän, joka mullisti kirjojen valmistuksen. Keksintö ei muuttanut vain kirjojen maailmaa: se muutti sen, miten tietoa voitiin kopioida ja jakaa. Miksi yhdellä painokoneella oli näin suuri vaikutus?"
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p1",
+      "title": "Gutenberg ei keksinyt painamista",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gutenberg ei ollut ensimmäinen painaja. [[Puulaattapainanta]], jossa kokonainen sivu kaiverretaan puulaattaan ja painetaan sitten paperille, oli ollut käytössä **Kiinassa** ja muualla Aasiassa vuosisatoja. Gutenbergin järjestelmästä teki erityisen se, että sen [[irtokirjasimet]] oli valettu metallista."
+        },
+        {
+          "type": "image",
+          "asset": "movable_metal_type_letters_composing_stick",
+          "ratio": "3:2",
+          "caption": "Thaimaalaisia irtokirjasimia latomahakassa (Bangkokin kansallismuseo): jokainen peilikuvaksi valettu kirjain käytetään uudelleen seuraavalla sivulla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sen sijaan että koko kirja olisi kaiverrettu puuhun, painajat valoivat jokaisen kirjaimen erikseen ja kokosivat niistä sanoja ja sivuja. Kokonaisuus musteutettiin ja puristettiin paperia vasten. Kun sivu oli painettu, kirjaimet purettiin ja käytettiin uudelleen seuraavaan. Menetelmä oli paljon joustavampi: painaja pystyi tuottamaan **satoja kappaleita** kaivertamatta jokaista sivua varten uutta laattaa."
+        },
+        {
+          "type": "funFact",
+          "text": "Noin vuonna 1455 painettu Gutenbergin Raamattu ei ole Euroopan ensimmäinen painettu kirja, mutta se on ensimmäinen hänen menetelmällään tuotettu suurteos. Noin 180 painetusta kappaleesta on nykyään jäljellä vain viitisenkymmentä."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p2",
+      "title": "Kaksikymmentä miljoonaa kirjaa viidessäkymmenessä vuodessa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kun keksintö oli lähtenyt liikkeelle, kirjojen painaminen levisi Euroopassa huimaa vauhtia. Noin vuonna **1500**, vain viisikymmentä vuotta Gutenbergin läpimurron jälkeen, maanosassa arvioidaan olleen jo **20 miljoonaa** kirjaa. Tuhansia eri nimikkeitä kulki kaupunkien, yliopistojen, kirkkojen ja yksityisten lukijoiden välillä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Muutos ei koskenut pelkkää nopeutta. Kirjapaino murskasi jäljentämisen vanhan pullonkaulan. Huolellisesti valmisteltu teksti voitiin monistaa yhä uudelleen, ja sama tieto tavoitti tuhansia ihmisiä. Ensimmäistä kertaa historiassa kirjoitettu tieto levisi halki maanosan mittakaavassa, johon käsin jäljentäminen ei olisi koskaan yltänyt."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p3",
+      "title": "Luther ja lentolehtisten uskonpuhdistus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1500-luvun** alussa saksalainen munkki ja professori [[Martin Luther]] kyseenalaisti katolisen kirkon ja käynnisti liikkeen, josta kehkeytyi [[protestanttinen uskonpuhdistus]]. Aiempina vuosisatoina kiista olisi luultavasti jäänyt paikalliseksi teologiseksi väittelyksi. Kirjapaino muutti asetelman."
+        },
+        {
+          "type": "image",
+          "asset": "luther_ninety_five_theses_1517_printed_broadsheet",
+          "ratio": "5:4",
+          "caption": "Uskonpuhdistuksen satavuotisjuhlan lentolehti (1617): Luther kirjoittaa teesinsä Wittenbergin kirkon oveen jättimäisellä sulkakynällä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hänen perustelunsa monistettiin nopeasti lentolehtisiksi, ja ne levisivät kauas hänen yliopistonsa ulkopuolelle. Hänen kirjoituksiaan painettiin myös saksaksi, joten nekin, jotka eivät osanneet latinaa, pystyivät lukemaan niitä. Kirjapaino ei yksin synnyttänyt uskonpuhdistusta, mutta sen ansiosta Lutherin ajatukset tavoittivat paljon enemmän ihmisiä kuin yksikään käsin kirjoitettu kopio. Kirkon viranomaisten oli nyt paljon vaikeampi pitää kiista aisoissa."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p4",
+      "title": "Lennättimestä internetiin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kirjapaino muistetaan yhtenä ensimmäisistä tekniikoista, jotka murskasivat jäljentämisen pullonkaulan. Viimeinen se ei ollut. **1800-luvulla** [[lennätin]] mahdollisti viestin lähettämisen valtavien etäisyyksien päähän minuuteissa päivien sijaan. Internet vei kehityksen vielä pidemmälle: tieto kopioituu ja lähtee matkaan sekunneissa."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "noin 1450",
+              "title": "Gutenbergin painokone",
+              "detail": "Mainzissa metalliset irtokirjasimet korvaavat käsin jäljentämisen."
+            },
+            {
+              "date": "noin 1500",
+              "title": "20 miljoonaa kirjaa",
+              "detail": "Viisikymmentä vuotta Gutenbergin jälkeen Euroopassa on miljoonia painettuja niteitä."
+            },
+            {
+              "date": "1517",
+              "title": "Lutherin teesit",
+              "detail": "Painetut lentolehtiset vievät uskonpuhdistuksen kauas hänen yliopistonsa ulkopuolelle."
+            },
+            {
+              "date": "1800-luku",
+              "title": "Lennätin",
+              "detail": "Viesti ylittää valtavia etäisyyksiä minuuteissa."
+            },
+            {
+              "date": "1900-luvun loppu",
+              "title": "Internet",
+              "detail": "Tieto kopioituu ja lähtee matkaan sekunneissa."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Jokainen näistä tekniikoista muutti muutakin kuin viestinnän nopeutta. Se horjutti instituutioita, jotka oli rakennettu tiedon hallitsemista ja jakamista varten. Kirkkojen, hallitusten, sanomalehtien ja yritysten oli kaikkien sopeuduttava, kun tietoa oli yhä helpompi monistaa ja paljon vaikeampi hallita. Kirjapaino on yhä hyvä mittapuu sille, mitä yksi keksintö voi saada maailmassa aikaan."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kirjapaino muutti kaiken, ei siksi että Gutenberg olisi keksinyt painamisen, vaan siksi että hänen irtokirjasimensa murskasivat jäljentämisen pullonkaulan: tietoa oli helppo monistaa ja vaikea hallita, ja sama kaava toistui myöhemmin lennättimen ja internetin myötä."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "L. Febvre et H.-J. Martin, The Coming of the Book: The Impact of Printing, 1450-1800, trad. D. Gerard, Verso, 1976, p. 186."
+    },
+    {
+      "text": "K.-W. Chow, « Reinventing Gutenberg: Woodblock and Movable-Type Printing in Europe and China », Late Imperial China, vol. 28, n° 1, 2007, p. 185-186."
+    }
+  ]
+}

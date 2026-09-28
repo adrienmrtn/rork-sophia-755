@@ -1,0 +1,149 @@
+{
+  "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout",
+  "title": "Miks muutis trükikunst kõike?",
+  "subtitle": "Mainz, umbes 1450",
+  "subject": "histoire",
+  "subcategory": "Early modern era & 19th century",
+  "description": "Umbes 1450. aastal laob üks Mainzi meister metalltähtedest kokku terveid lehekülgi, et neid trükkida. Viiskümmend aastat hiljem on Euroopas 20 miljonit raamatut ja teavet on palju raskem kontrollida.",
+  "author": "benjamin-campbell",
+  "hero": {
+    "image": "gutenberg_bible_open_pages_library_of_congress",
+    "ratio": "4:3",
+    "hook": "Ühe raamatu ümberkirjutamine võttis kuid, ent trükipress annab äkitselt sadu eksemplare."
+  },
+  "sections": [
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_intro",
+      "title": "Sissejuhatus",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Enne trükikunsti oli raamatu valmistamine Euroopas aeglane ja kallis töö. Iga teose kirjutas käsitsi ümber väljaõppinud [[ümberkirjutaja]], kes veetis ühe käsikirja kallal kuid, vahel aastaid. Seetõttu olid raamatud rikaste, kiriklike asutuste ja ülikoolide pärusmaa. Mitte et teised neid ei oleks tahtnud: ühe köite valmistamine nõudis lihtsalt tohutult aega ja tööjõudu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Siis, **15. sajandi** keskel, hakkab kõik muutuma. Saksamaal Mainzis töötab meister nimega [[Johannes Gutenberg]] välja uue trükisüsteemi, mis pöörab raamatute valmistamise pea peale. Tema leiutis ei muuda ainult raamatumaailma: see muudab seda, kuidas teavet saab paljundada ja jagada. Miks oli ühel trükipressil nii suur mõju?"
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p1",
+      "title": "Gutenberg ei leiutanud trükkimist",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gutenberg ei olnud esimene, kes trükkis. **Hiinas** ja kogu Aasias kasutati juba sajandeid tehnikat nimega [[puutrükk]]: terve lehekülg lõigatakse puuplaadile ja vajutatakse seejärel paberile. Gutenbergi süsteemi eristasid metallist [[liikuvad trükitähed]]."
+        },
+        {
+          "type": "image",
+          "asset": "movable_metal_type_letters_composing_stick",
+          "ratio": "3:2",
+          "caption": "Tai liikuvad trükitähed ladumisnurgikus (Bangkoki rahvusmuuseum): iga täht on valatud tagurpidi ja läheb uuesti kasutusse järgmisel leheküljel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selle asemel et lõigata terve raamat puusse, valavad trükkalid iga tähe eraldi ning laovad need siis sõnadeks ja lehekülgedeks. Valmis ladu kaetakse värviga ja pressitakse vastu paberit. Kui lehekülg on trükitud, võetakse tähed lahti ja need lähevad kasutusse järgmises. Menetlus muutub palju paindlikumaks: trükkal saab toota **sadu eksemplare**, ilma et peaks iga lehekülje jaoks uut plaati lõikama."
+        },
+        {
+          "type": "funFact",
+          "text": "Umbes 1455. aastal trükitud Gutenbergi piibel ei ole esimene Euroopas trükitud raamat, kuid see on esimene suurteos, mis valmistati tema trükisüsteemiga. Ligikaudu 180 trükitud eksemplarist on tänaseni säilinud vaid umbes viiskümmend."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p2",
+      "title": "Kakskümmend miljonit raamatut viiekümne aastaga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kui leiutis käima läks, levis raamatutrükk Euroopas märkimisväärse kiirusega. Hinnanguliselt oli mandril umbes aastaks **1500**, vaevu viiskümmend aastat pärast Gutenbergi läbimurret, juba **20 miljonit** raamatut. Tuhanded eri pealkirjad liikusid linnade, ülikoolide, kirikute ja erakätes olevate lugejate vahel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Muutus ei seisnenud ainult kiiruses. Trükikunst lõhkus ümberkirjutamise vana kitsaskoha. Hoolikalt ette valmistatud teksti sai paljundada ikka ja jälle ning sama teave jõudis tuhandete inimesteni. Esimest korda ajaloos levis kirjalik teadmine üle kogu mandri sellises ulatuses, millega käsitsi ümberkirjutamine poleks iialgi suutnud võistelda."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p3",
+      "title": "Luther ja reformatsioon lendlehtedes",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**16. sajandi** alguses astub saksa munk ja professor [[Martin Luther]] välja katoliku kiriku vastu ja käivitab selle, millest saab [[reformatsioon]]. Varasematel sajanditel oleks tüli ilmselt jäänud kohalikuks teoloogiliseks vaidluseks. Trükikunst muudab olukorda."
+        },
+        {
+          "type": "image",
+          "asset": "luther_ninety_five_theses_1517_printed_broadsheet",
+          "ratio": "5:4",
+          "caption": "Reformatsiooni sajanda aastapäeva lendleht (1617): Luther kirjutab hiiglasliku sulepeaga oma teesid Wittenbergi kirikuuksele."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tema argumente paljundatakse kiiresti lendlehtedena ja levitatakse kaugele väljapoole ülikooli, kus ta õpetab. Tema kirjutisi trükitakse ka saksa keeles, mis teeb need kättesaadavaks neile, kes ladina keelt ei loe. Trükikunst ei loonud reformatsiooni üksi, kuid see võimaldas Lutheri ideedel jõuda palju rohkemate inimesteni kui ükski käsitsi kirjutatud koopia. Kiriku võimukandjatel on vaidlust palju raskem ohjeldada."
+        }
+      ]
+    },
+    {
+      "id": "course_253_pourquoi_l_imprimerie_a_t_elle_tout_p4",
+      "title": "Telegraafist internetini",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trükikunsti mäletatakse kui üht esimest tehnikat, mis lõhkus ümberkirjutamise kitsaskoha. Viimaseks see ei jäänud. **19. sajandil** võimaldab [[telegraaf]] saata sõnumi tohutute vahemaade taha mõne minutiga, mitte mitme päevaga. Internet läheb veelgi kaugemale: teavet saab kopeerida ja saata sekunditega."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "umbes 1450",
+              "title": "Gutenbergi trükipress",
+              "detail": "Mainzis asendavad metallist liikuvad trükitähed käsitsi ümberkirjutamise."
+            },
+            {
+              "date": "umbes 1500",
+              "title": "20 miljonit raamatut",
+              "detail": "Viiskümmend aastat pärast Gutenbergi on Euroopas miljoneid trükitud köiteid."
+            },
+            {
+              "date": "1517",
+              "title": "Lutheri teesid",
+              "detail": "Trükitud lendlehed kannavad reformatsiooni kaugele väljapoole tema ülikooli."
+            },
+            {
+              "date": "19. sajand",
+              "title": "Telegraaf",
+              "detail": "Sõnum läbib tohutuid vahemaid mõne minutiga."
+            },
+            {
+              "date": "20. sajandi lõpp",
+              "title": "Internet",
+              "detail": "Teavet kopeeritakse ja saadetakse sekunditega."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Iga tehnika muudab midagi enamat kui suhtluse kiirus. See raputab asutusi, mis on loodud teavet kontrollima ja levitama. Kirikud, valitsused, ajalehed ja ettevõtted peavad kõik kohanema, sest teavet on üha lihtsam paljundada ja palju raskem kontrollida. Trükikunst jääb kasulikuks pidepunktiks, et mõista, mida üks leiutis võib maailmaga teha."
+        },
+        {
+          "type": "takeaway",
+          "text": "Trükikunst muutis kõike mitte seetõttu, et Gutenberg oleks leiutanud trükkimise, vaid seetõttu, et tema liikuvad trükitähed lõhkusid ümberkirjutamise kitsaskoha: teavet sai lihtne paljundada ja raske kontrollida, ning seda mustrit kordasid hiljem telegraaf ja internet."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "L. Febvre et H.-J. Martin, The Coming of the Book: The Impact of Printing, 1450-1800, trad. D. Gerard, Verso, 1976, p. 186."
+    },
+    {
+      "text": "K.-W. Chow, « Reinventing Gutenberg: Woodblock and Movable-Type Printing in Europe and China », Late Imperial China, vol. 28, n° 1, 2007, p. 185-186."
+    }
+  ]
+}

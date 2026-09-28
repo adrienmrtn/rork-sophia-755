@@ -1,0 +1,131 @@
+{
+  "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos",
+  "title": "Warum steckt Kobalt in unseren Akkus?",
+  "subtitle": "Element 27",
+  "subject": "sciences",
+  "subcategory": "Unser Alltag erklärt",
+  "description": "Kaum jemand gräbt nach Kobalt, und doch steckt es im Akku jedes Handys. Die Geschichte eines Metalls, das die Industrie nicht ersetzen kann und trotzdem loswerden will.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "cobalt_copper_open_pit_mine_kolwezi_drc",
+    "ratio": "4:3",
+    "hook": "Das Metall, von dem Elektroautos abhängen, wird fast nie um seiner selbst willen abgebaut."
+  },
+  "sections": [
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kobalt ist das Element **27** im Periodensystem, eingeklemmt zwischen Eisen und Nickel. Es steckt im Akku des Handys in deiner Hand, in Magneten, in Legierungen, die hart genug sind, um im Inneren eines Flugzeugtriebwerks zu bestehen. Und fast niemand gräbt danach."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rund **99%** des weltweiten Kobalts kommen als Nebenprodukt aus der Erde: Man gewinnt es aus Erzen, die wegen ihres Kupfers oder Nickels abgebaut werden. Die [[Demokratische Republik Kongo]] liefert fast **drei Viertel** davon, nahezu alles aus Kupferminen. Das Angebot an Kobalt hängt also nicht von der Nachfrage nach Kobalt ab, sondern von der nach Kupfer und Nickel. Eine seltsame Art, mit dem Metall der Elektroautos umzugehen."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p1",
+      "title": "Der Akku, der Kobalt brauchte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1980** entdecken [[John Goodenough]] und Koichi Mizushima in Oxford, dass Lithium-Kobaltoxid (LiCoO2, kurz LCO) als Elektrode für die [[Interkalation]] taugt: Schichten aus Kobaltoxid, zwischen die Lithium-Ionen hineinschlüpfen und wieder hinausgleiten, ohne dass der Stapel einstürzt. Das war die gesuchte [[Kathode]], eine der beiden Elektroden des Akkus."
+        },
+        {
+          "type": "image",
+          "asset": "john_goodenough_portrait_lithium_battery_inventor",
+          "ratio": "3:4",
+          "caption": "John Goodenough, der 1980 zusammen mit Koichi Mizushima die Kobalt-Kathode entdeckt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dann wartet die Welt mehr als zehn Jahre. **1991** verkauft Sony den ersten kommerziellen Lithium-Ionen-Akku, mit LCO als Kathode. Bis etwa **2010** werden fast alle Lithium-Ionen-Kathoden so gebaut. In der Unterhaltungselektronik dominiert LCO noch immer: Darum enthält dein Handy ein paar Gramm eines Metalls, das niemand abbauen wollte."
+        },
+        {
+          "type": "funFact",
+          "text": "Kobalt wurde 1735 vom schwedischen Chemiker Georg Brandt entdeckt, fast zweieinhalb Jahrhunderte bevor es in unsere Akkus wanderte."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p2",
+      "title": "Ein Akku, der seinen eigenen Sauerstoff erzeugt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stell dir die Kathode als Ziegelmauer vor. Die Kobaltoxid-Schichten sind die Regalböden, die Lithium-Ionen die Ziegel dazwischen. Wer den Akku zu stark lädt, zieht zu viele Ziegel heraus, und die Mauer wird instabil. Oberhalb von etwa **130 °C** oder bei Überladung beginnt die Struktur einzustürzen, und der im Kobaltoxid eingeschlossene Sauerstoff entweicht als Gas."
+        },
+        {
+          "type": "image",
+          "asset": "lithium_ion_battery_fire_thermal_runaway_test",
+          "ratio": "2:3",
+          "caption": "Ein Pack aus zwei Lithium-Ionen-Zellen vom Typ 18650: Schon das Etikett warnt, dass es im Feuer explodieren kann."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Flüssigkeit in der Zelle ist **brennbar**, und den Sauerstoff, um sie zu verbrennen, hat der Akku gerade selbst geliefert. Die Hitze beschleunigt den Zerfall, der mehr Sauerstoff freisetzt, der mehr Hitze erzeugt. Das nennt man [[thermisches Durchgehen]]. Deshalb lässt sich ein Lithium-Akku-Brand nicht einfach ersticken: Der Sauerstoff ist schon drin."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p3",
+      "title": "Warum Kobalt immer noch drin ist",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zurück zur Ziegelmauer. Bei jedem Laden und jeder Nutzung gleiten die Lithium-Ziegel hinaus und wieder hinein. Kobalt ist der Mörtel, der verhindert, dass sich die Mauer über Hunderte Zyklen verzieht oder einstürzt. Andere Stoffe schaffen das allein nicht: **Nickel** speichert mehr Energie, verschleißt aber zu schnell, **Mangan** ist billig, aber zu schwach."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deshalb verringern die Mischungen in den meisten Elektroautos, etwa die Kathoden **NMC** (Nickel, Mangan, Kobalt) und **NCA** (Nickel, Kobalt, Aluminium), den Kobaltanteil, ohne ihn je ganz zu streichen. Seit fünfzehn Jahren nehmen Ingenieure Kobalt heraus, um Kosten zu senken, doch eine Prise braucht es immer, um das Ganze zusammenzuhalten. Ganz ohne Kobalt kommt nur die [[LFP-Batterie]] aus: Sie wirft die Mauer weg und baut eine völlig andere innere Struktur."
+        }
+      ]
+    },
+    {
+      "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_p4",
+      "title": "Ohne Kobalt auskommen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Problem des Kobalts ist nicht chemisch. Ein Teil der kongolesischen Produktion stammt aus dem [[Kleinbergbau]], von Hand gegraben, unter gefährlichen Bedingungen und mancherorts von Kindern. Der Preis schwankt schnell und heftig, was jeden Akku, der davon abhängt, unberechenbar macht. Und fast alles kommt aus **einem einzigen Land**."
+        },
+        {
+          "type": "image",
+          "asset": "artisanal_cobalt_miners_kolwezi_congo",
+          "ratio": "4:3",
+          "caption": "Kleinbergleute füllen Säcke mit Kobalterz in der Demokratischen Republik Kongo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Industrie versucht deshalb, Akkus ohne dieses Metall zu entwickeln. Die wichtigste Antwort ist **LFP**, Lithium-Eisenphosphat, das Kobalt durch Eisen und Phosphor ersetzt, zwei der billigsten und häufigsten Elemente überhaupt. Es wird weniger heiß und lässt sich viel schwerer ins thermische Durchgehen treiben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der Preis dafür ist die Energie: Bei **gleichem Gewicht** speichert eine LFP-Zelle weniger. Darum fährt dein Auto vielleicht schon damit, während dein Handy noch nicht umgestiegen ist: In der Hosentasche zählt jedes Gramm."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kobalt hält die Struktur von Lithium-Ionen-Akkus zusammen, stammt aber fast vollständig aus einem einzigen Land, als Nebenprodukt von Kupfer. Loswerden kann die Industrie es nur mit einer anderen Chemie, mit LFP, auf Kosten der Energie."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Cobalt Institute, « Cobalt uses ».",
+      "url": "https://www.cobaltinstitute.org/global-cobalt/cobalt-uses/"
+    },
+    {
+      "text": "« One hundred years of cobalt production in the Democratic Republic of the Congo », Resources Policy, 2022.",
+      "url": "https://doi.org/10.1016/j.resourpol.2022.103007"
+    }
+  ]
+}

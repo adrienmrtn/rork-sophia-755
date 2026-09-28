@@ -1,0 +1,147 @@
+{
+  "id": "course_245_d_ou_vient_le_pere_noel",
+  "title": "Honnan jött a Télapó?",
+  "subtitle": "Egy legenda tizenhat évszázada",
+  "subject": "mythologie",
+  "subcategory": "Legends & creatures",
+  "description": "Egy 3. századi görög püspök, egy holland lovas, egy New York-i vers, egy lapillusztrátor és egy reklámkampány. A Télapó nem megszületett, hanem darabról darabra rakták össze.",
+  "author": "angela-bouma",
+  "hero": {
+    "image": "santa_claus_thomas_nast_1881_harpers_weekly",
+    "ratio": "4:3",
+    "hook": "Nem született. Darabról darabra építették fel, tizenhat évszázadon át."
+  },
+  "sections": [
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Egy görög püspök, egy pogány jótevő és egy reklámillusztráció keveredett össze, és ebből lett a Télapó. Minden [[Myrai Szent Miklós]] püspökkel kezdődött, aki **270**-ben született, és a saját vagyonát osztotta szét a leginkább rászorulók között. Ő lett a gyerekek és a tengerészek [[védőszentje]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "A következő **1600 év** alatt formálódott a legenda. Észak-Európában a tél közepi ünnepek lakomára gyűjtötték össze a családokat. Szán, **nyolc rénszarvas**, leereszkedés a kéményen: egy vers rögzítette, hogyan várják az emberek az ünnepet. Aztán egy reklámkampány termékként csomagolta be a legendát. Az eredmény a Télapó, akit mindenki ismer."
+        }
+      ]
+    },
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_p1",
+      "title": "Sinterklaas és Father Christmas találkozása",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hollandiában [[Sinterklaas]] **fehér lovon** vonul végig a városokon, fején püspöksüveggel, piros ruhában, kezében pásztorbottal. A gyerekek kint hagyják a cipőjüket, benne répával és szénával a lovának. A hagyomány átkerült Amerikába, ahol Sinterklaasból lassan **Santa Claus** lett."
+        },
+        {
+          "type": "image",
+          "asset": "sinterklaas_white_horse_arrival_netherlands",
+          "ratio": "3:2",
+          "caption": "Sinterklaas fehér lován, piros püspöksüvegben és palástban érkezik egy holland városba."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az angoloknak saját téli látogatójuk van. A szőrmébe öltözött, mindig vidám [[Father Christmas]] a lakomát hozza. Ő testesíti meg az évszak örömét és mulatságait, és legalább a **15. század** óta ismerik. Ebben a változatban nem hoz ajándékot a gyerekeknek. Az angol telepesek magukkal vitték Amerikába, ahol Sinterklaas mellett ő is meggyökeresedett."
+        }
+      ]
+    },
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_p2",
+      "title": "Egy vers és egy rajzoló",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1823**-ban New York államban névtelenül megjelent egy vers, az *A Visit from St. Nicholas* („Szent Miklós látogatása”), és ez adta Santa Claus legismertebb alakját: szán, nyolc rénszarvas, és az ötlet, hogy egy havas éjszakán a kéményen át ereszkedik le, hogy ajándékot hagyjon. A szerzőségét [[Clement Clarke Moore]] nevéhez kötik, de a kérdésről máig vita folyik."
+        },
+        {
+          "type": "image",
+          "asset": "a_visit_from_st_nicholas_troy_sentinel_1823",
+          "ratio": "3:2",
+          "caption": "Szőrmébe öltözött Santa Claus, ahogy az 1823-as versben: fénykép New York államból, 1872 körül."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1863**-tól a rajzoló [[Thomas Nast]] tovább gazdagította a portrét a *Harper's Weekly* című lapnak készült illusztrációiban. Tőle kapta kerek pocakját, fehér szakállát és **északi-sarki** műhelyét. A mai Santa Claus megrajzolásához Nast egyszerre merített Sinterklaasból és Father Christmasból."
+        }
+      ]
+    },
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_p3",
+      "title": "A Coca-Cola rögzíti a képet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1931**-től a Coca-Cola rajzolt reklámkampányai, amelyeket [[Haddon Sundblom]] festett, meghonosították a meleg, nagyapás Santát, akit ma is ismerünk: fehér szakáll, nagy pocak, öv és nadrágtartó. A cég nem kitalálta a Télapót. Abban segített, hogy a képe rögzüljön, mindenhol ugyanolyan legyen, évről évre."
+        },
+        {
+          "type": "funFact",
+          "text": "A piros ruha nem a Coca-Cola ötlete. Thomas Nast már jóval a márka első kampánya előtt pirosban rajzolta Santa Claust."
+        },
+        {
+          "type": "image",
+          "asset": "department_store_santa_claus_children_1940s",
+          "ratio": "4:3",
+          "caption": "Télapó a montreali Eaton áruházban, gyerekek gyűrűjében, a 20. század közepén."
+        },
+        {
+          "type": "paragraph",
+          "text": "A **20. század** közepére az áruházak, a rádióműsorok és a filmek egyesítették Sinterklaas, az angol Father Christmas és Nast rajzainak örökségét. Az eredmény egyetlen, világszerte ismert alak lett, akit országonként más néven hívnak, de mindenhol első pillantásra felismernek."
+        }
+      ]
+    },
+    {
+      "id": "course_245_d_ou_vient_le_pere_noel_p4",
+      "title": "Sok kéz írta legenda",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Santa története egyáltalán nem egyedi. Az ünnepek és a népi hősök ugyanígy készülnek. A **kereskedelem** és a más csoportokkal való érintkezés révén az ötletek vándorolnak és átalakulnak. Egy vallási hagyomány beépül egy régebbi évszakos ünnepbe. A következő nemzedék hozzáteszi a saját, igényeihez igazított változatát."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "270",
+              "title": "Myrai Miklós születése",
+              "detail": "A vagyonát szétosztó püspökből a gyerekek védőszentje lett."
+            },
+            {
+              "date": "15. század",
+              "title": "Father Christmas",
+              "detail": "Az angol téli látogató a lakomát hozza, nem az ajándékot."
+            },
+            {
+              "date": "1823",
+              "title": "A Visit from St. Nicholas",
+              "detail": "Szán, nyolc rénszarvas és kémény."
+            },
+            {
+              "date": "1863",
+              "title": "Thomas Nast",
+              "detail": "Kerek pocak, fehér szakáll, északi-sarki műhely."
+            },
+            {
+              "date": "1931",
+              "title": "Coca-Cola",
+              "detail": "Haddon Sundblom rögzíti a piros ruhás nagyapát."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "A kultúrák minden új találkozása gazdagítja a történetet, és megváltoztatja a szereplők arcát. Egyetlen civilizáció sem birtokolja egyedül ezeket az alakokat: az egész emberi kultúráé. Santa Claus annak ünnepe, ami **1600 év** alatt történik, amikor népek találkoznak és közösen ünnepelnek."
+        },
+        {
+          "type": "takeaway",
+          "text": "Görög püspök, holland lovas, vidám angol mulatozó, vers, lapillusztrációk és reklám: a Télapó olyan legenda, amelyet tizenhat évszázadon át sok kéz írt."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn",
+  "title": "Mitä DNA:sta voi oikeasti lukea?",
+  "subtitle": "Geenit ja kohtalo",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Maku, luonne, sairausriskit, kaukainen alkuperä: DNA kertoo meistä paljon. Mutta alttius ei ole koskaan ollut kohtalo.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "dna_double_helix_3d_render_blue",
+    "ratio": "4:3",
+    "hook": "DNA:si kertoo, mistä tulet, mistä pidät ja mikä sinua uhkaa, mutta se ei päätä kaikesta."
+  },
+  "sections": [
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DNA kertoo meistä valtavasti: mistä olemme peräisin, mihin kehomme pystyy ja ehkä jopa sen, mikä meitä odottaa. Se on tarinamme ja rakennuspiirustuksemme. Mutta mistä siinä tarkalleen on kyse? DNA:ta on lähes jokaisessa kehon solussa. **Kaksoiskierteeksi** kiertyneenä se kantaa perinnöllisiä ohjeita, jotka säätelevät toimintaamme, kasvuamme, kehitystämme ja lisääntymistämme."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sen juosteet koostuvat vain **neljästä pienestä yksiköstä**, nukleotideista, joita merkitään kirjaimin A, T, C ja G. Näiden neljän kirjaimen jono on [[genomi]], jokaiselle meistä ainutlaatuinen perimän rakennuspiirustus. Mitä siitä voi oikeasti lukea? Makumme, sairausriskimme, alkuperämme. Ja kuinka pitkälle tämä teksti kirjoittaa tulevaisuutemme?"
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p1",
+      "title": "Geenisi muovaavat makuasi ja luonnettasi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tämän tekstin yksittäinen palanen on [[geeni]]. Se toimii biologisena käyttöohjeena: se kertoo keholle, miten valmistaa **proteiineja**, jotka puolestaan rakentavat solujamme ja pitävät ne käynnissä. Niistä syntyvät näkyvät ominaisuutemme. Mutta geenien rooli ulottuu paljon ulkonäköä syvemmälle."
+        },
+        {
+          "type": "image",
+          "asset": "identical_twins_sisters_portrait_nature_nurture",
+          "ratio": "5:4",
+          "caption": "Augustus Eggin ”Matkatoverit” (1862): kaksi kaikin tavoin samankaltaista nuorta naista, toinen nukkuu, toinen lukee."
+        },
+        {
+          "type": "paragraph",
+          "text": "Geenin hieman erilainen versio on [[geenivariantti]]. Tutkijat ovat hiljattain yhdistäneet useita niistä **persoonallisuuteen**. Hienovaraiset geneettiset säädöt voivat ohjata mieltymyksiämme: rakastaako vai inhoaako urheilua, onko ulospäinsuuntautunut, keräileekö harrastuksia. DNA vaikuttaisi arkeemme paljon enemmän kuin kuvittelemme. Siitä herää kysymys: kuinka suuri osa käytöksestämme on jo kirjoitettu biologiaamme?"
+        },
+        {
+          "type": "funFact",
+          "text": "Teetä vai kahvia? DNA:n ja persoonallisuuden yhteyksiä tutkivien töiden mukaan jopa tämä yksinkertainen mieltymys voi johtua geeniemme hienovaraisista eroista."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eikä siinä ehkä ole kaikki. DNA antaa vihjeitä myös siitä, keillä on [[geneettinen alttius]] tiettyihin **mielenterveyden** häiriöihin, kuten masennukseen. Se ei siis kerro vain siitä, mistä pidämme, vaan myös siitä, mikä voi tehdä meistä haavoittuvia."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p2",
+      "title": "Mitä DNA paljastaa sairausriskeistä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mielenterveys ei ole ainoa asia, jota tämä koskee. DNA:mme koostumus voi tehdä meistä alttiimpia muillekin sairauksille, joista osa ”kulkee suvussa”. Tunnettu esimerkki ovat geenit [[BRCA1 ja BRCA2]]: niiden tietyt perityt variantit altistavat osan naisista **varhaiselle rintasyövälle**."
+        },
+        {
+          "type": "image",
+          "asset": "dna_sequencing_chromatogram_sanger_readout",
+          "ratio": "2:1",
+          "caption": "Sekvensoinnin kromatogrammi: jokainen värillinen piikki on yksi DNA:n kirjain. Tämän lukeman avulla testi tunnistaa variantin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tässä kohtaa [[geenitesti]] osoittaa arvonsa niin terveydenhuollolle kuin asianomaisille itselleen. Perinnöllisen riskin tunnistaminen mahdollistaa varhaiset toimet: aikaisemmat **seulonnat**, tiiviimmän seurannan, lääkkeet tai muun ennaltaehkäisevän hoidon. Tämä etumatka voi pelastaa henkiä ja pienentää hoitokuluja."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p3",
+      "title": "Aikakone: mistä olet kotoisin?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DNA siirtyy sukupolvelta toiselle. Se säilyttää vihjeitä esivanhemmistamme: mistä he tulivat, mitä he söivät ja miten he elivät. Se on todellinen aikakone. Vertailemalla nykyisten väestöjen **geneettisiä kuvioita** tutkijat ovat pystyneet jäljittämään ihmisten matkan maapallon halki."
+        },
+        {
+          "type": "image",
+          "asset": "early_human_migrations_out_of_africa_map",
+          "ratio": "5:4",
+          "caption": "Homo sapiensin varhaisimmat linjat Afrikassa ja niiden leviäminen Euraasiaan populaatiogenetiikan rekonstruoimina."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esimerkki. Kirjallisten lähteiden mukaan [[Iberian niemimaa]] sai vuosina **700-1200** uusia asukkaita **Pohjois-Afrikasta**. DNA vahvistaa kertomuksen: niemimaan nykyiset asukkaat kantavat yhä näiden kohtaamisten geneettistä jälkeä."
+        },
+        {
+          "type": "funFact",
+          "text": "Kaukaisin alkuperämmekin on monimutkaisempi kuin pelkkä sukupuu. Kokonaisiin genomeihin perustuvassa tutkimuksessa löydettiin jälkiä kahdesta muinaisesta ihmispopulaatiosta, jotka erosivat toisistaan noin **1,5 miljoonaa vuotta** sitten ja sekoittuivat myöhemmin uudelleen."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p4",
+      "title": "Alttius ei ole kohtalo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DNA:si vaikuttaa siis moniin ominaisuuksiisi. Mutta alttius jollekin ei tarkoita, että kohtalosi olisi sinetöity. Geneettinen **masennusriski** ei tarkoita, että sairastut masennukseen. Geneettinen riski ei ole varmuus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Geenit avaavat mahdollisuuksia, mutta eivät pakota niihin. Kokemuksemme, valintamme ja olosuhteemme merkitsevät aivan yhtä paljon. DNA:n lukeminen on osan itsestään lukemista: arvokkaan osan, joskus terveyden kannalta ratkaisevan, mutta vain osan."
+        },
+        {
+          "type": "takeaway",
+          "text": "DNA kertoo meille makumme, riskimme ja alkuperämme, mutta alttius ei ole koskaan varmuus: DNA:si on vain yksi osa sinua."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Yale School of Medicine, « How Genes Shape Personality Traits: New Links Are Discovered », Yale Medicine News, 9 septembre 2024.",
+      "url": "https://medicine.yale.edu/news-article/how-genes-shape-personality-traits-new-links-are-discovered/"
+    },
+    {
+      "text": "« DNA », Wikipedia, The Free Encyclopedia.",
+      "url": "https://en.wikipedia.org/wiki/DNA"
+    },
+    {
+      "text": "Institute of Medicine (US), « Genetics and Health », dans L. M. Hernandez et D. G. Blazer (dir.), Genes, Behavior, and the Social Environment: Moving Beyond the Nature/Nurture Debate, National Academies Press, Washington (DC), 2006.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK19932/"
+    },
+    {
+      "text": "NIHR Oxford Biomedical Research Centre, « International study reveals how our genes shape blood proteins linked to disease ».",
+      "url": "https://oxfordbrc.nihr.ac.uk/international-study-reveals-how-our-genes-shape-blood-proteins-linked-to-disease/"
+    },
+    {
+      "text": "« What Our DNA Can Tell Us About the History of Humans », Frontiers for Young Minds, 2020.",
+      "url": "https://kids.frontiersin.org/articles/10.3389/frym.2020.00106"
+    },
+    {
+      "text": "« How genetics determine our life choices », BBC Future, 9 mai 2023.",
+      "url": "https://www.bbc.co.uk/future/article/20230509-how-genetics-determine-our-life-choices"
+    },
+    {
+      "text": "University of Cambridge, « Genetic study reveals hidden chapter in human evolution », Research news, 18 mars 2025.",
+      "url": "https://www.cam.ac.uk/research/news/genetic-study-reveals-hidden-chapter-in-human-evolution"
+    }
+  ]
+}

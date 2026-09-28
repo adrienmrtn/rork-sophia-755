@@ -1,0 +1,139 @@
+{
+  "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie",
+  "title": "Kuluttaako tekoäly paljon energiaa?",
+  "subtitle": "Jokaisen vastauksen takana",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Jokainen tekoälyn vastaus syntyy rakennuksessa, joka on täynnä yötä päivää käyviä koneita. Kuinka paljon sähköä se todella vie, mallin koulutuksesta aina sitä syöttävään sähköverkkoon?",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "data_center_server_racks_aisle_blue_lights",
+    "ratio": "4:3",
+    "hook": "Tekoäly näyttää ohjelmistolta, mutta jokainen vastaus valmistetaan hyvin todellisessa rakennuksessa, joka on kytketty samaan verkkoon kuin kotisi."
+  },
+  "sections": [
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_intro",
+      "title": "Johdanto",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Esität verkossa toimivalle tekoälylle kysymyksen, ja vastaus ilmestyy muutamassa sekunnissa. Itse työ ei kuitenkaan tapahdu puhelimessasi. Sen tekee [[datakeskus]], rakennus täynnä koneita, jotka käsittelevät ja tallentavat tietoa. Nämä koneet kuluttavat sähköä herkeämättä, vaikka kukaan ei niitä näe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vuonna 2025 kaikki datakeskukset käyttivät yhteensä noin **1,5 %** maailman sähköstä. Luvun on laskenut [[Kansainvälinen energiajärjestö]]. Se kattaa kaikki verkkopalvelut eikä pelkkää tekoälyä, mutta tekoälyä varten rakennetut laitokset lisääntyvät nopeasti. Yksittäinen lyhyt vastaus maksaa vähän. Silti koneet käyvät jokaisen vastauksen vuoksi, ja sen tuottamiseen ottaa virtaa samanaikaisesti useampi järjestelmä."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p1",
+      "title": "Palvelimet ensimmäisinä",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tietokone, joka käsittelee dataa ja pyörittää verkkopalveluja, on nimeltään [[palvelin]]. Datakeskuksessa palvelimet tekevät suurimman osan laskennasta, joten ne ovat myös suurimpia sähkönkuluttajia. Jos nykyaikaisen datakeskuksen sähkölasku pilkotaan osiin, palvelimien osuus on keskimäärin **60 %**. Luku koskee datakeskuksia yleensä eikä pelkästään tekoälylaitoksia."
+        },
+        {
+          "type": "image",
+          "asset": "data_center_cooling_pipes_chillers",
+          "ratio": "3:2",
+          "caption": "Palvelinrivejä datakeskuksessa: juuri ne kuluttavat suurimman osan sähköstä."
+        },
+        {
+          "type": "paragraph",
+          "text": "Loput kuluu datan tallentamiseen ja siirtämiseen, laitteiden jäähdyttämiseen ja rakennuksen ylläpitoon. Jäähdytys on tärkeää, koska tietokone tuottaa työskennellessään lämpöä. Ilman järjestelmää, joka poistaa lämmön, koneet lopulta ylikuumenisivat. Tekoälyn vastauksen takana oleva sähkö pyörittää siis paljon muutakin kuin vastauksen tuottavia tietokoneita."
+        },
+        {
+          "type": "funFact",
+          "text": "IEA:n mukaan tekoälyyn keskittyneiden datakeskusten sähkönkulutus kasvoi 50 % pelkästään vuonna 2025."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p2",
+      "title": "Ensin koulutus, sitten vastaaminen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ennen kuin tekoälypalvelu voi vastata, se tarvitsee mallin: järjestelmän, joka on oppinut säännönmukaisuuksia esimerkeistä. Mallin luomiseen tarvitaan vaihe, jonka nimi on [[koulutus]]: tietokoneet käyvät läpi valtavia määriä dataa. Tämä työ voi pitää erittäin tehokkaita koneita kiireisinä pitkiä aikoja."
+        },
+        {
+          "type": "image",
+          "asset": "frontier_supercomputer_oak_ridge_cabinets",
+          "ratio": "4:3",
+          "caption": "NASAn Columbia-supertietokoneen kaapit: juuri tällaisia koneita käytetään mallin kouluttamiseen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kun malli on koulutettu, alkaa toisenlainen työ. Kysymykseesi vastauksen tuottava laskenta on [[inferenssi]]. Koulutus ei ala kokonaan alusta jokaisen kysymyksen kohdalla, mutta inferenssi toistuu jokaisella pyynnöllä. Kumpi painaa ajan mittaan enemmän? Se riippuu siitä, miten palvelu on rakennettu ja kuinka moni sitä käyttää. Vilkas palvelu pitää tietokoneensa kiireisinä vastaamassa myös kahden suuren koulutusvaiheen välillä."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p3",
+      "title": "Pyynnöllä ei ole kiinteää hintaa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuinka paljon sähköä yksi tekstipyyntö kuluttaa? Julkaistut arviot eivät anna samaa vastausta. Google mittasi käynnissä olevaa palveluaan ja päätyi siihen, että sen tekstipyyntöjen mediaani on **0,24 Wh**. Energian määrää mittaava yksikkö on [[wattitunti]] (Wh). Toisen tutkimuksen mukaan mediaani on puolestaan **0,31 Wh**, ja sen tavallisista pyynnöistä keskimmäinen puolikas asettuu välille **0,16-0,60 Wh**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Luvut eivät ole ristiriidassa keskenään: ne kuvaavat eri järjestelmiä ja menetelmiä, eivät kahta vastakkaista mittausta samasta tehtävästä. Niistä puuttuvat myös paljon raskaammat työt. Jos tekoälyä pyydetään päättelemään useassa vaiheessa ennen vastaamista, sen tietokoneet ovat kiireisinä paljon pidempään. Pyyntökohtainen energia riippuu siis järjestelmästä, mittaustavasta ja pyydetystä työstä."
+        },
+        {
+          "type": "funFact",
+          "text": "Samassa tutkimuksessa pitkän päättelyn pyyntö, jossa malli käy vaiheensa läpi ennen johtopäätöstä, yltää 3,91 Wh:n mediaaniin, yli kymmenkertaiseksi tavalliseen pyyntöön verrattuna."
+        }
+      ]
+    },
+    {
+      "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_p4",
+      "title": "Sähköverkot paineen alla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Voimalaitoksista koteihin ja yrityksiin virtaa kuljettava johtojen verkosto on [[sähköverkko]]. Suuret tekoälylaitokset kytkeytyvät samaan verkkoon. Mittakaavan hahmottamiseksi IEA vertaa tekoälyyn keskittyvän datakeskuksen, pääasiassa näiden palvelujen pyörittämiseen rakennetun laitoksen, vuotuista sähkönkulutusta noin **100 000 kotitalouden** kulutukseen."
+        },
+        {
+          "type": "image",
+          "asset": "high_voltage_power_lines_data_center_virginia",
+          "ratio": "4:3",
+          "caption": "Erittäin suurjännitteisen (750 kV) voimalinjan pylväitä: datakeskukset kytkeytyvät samaan verkkoon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Näillä laitoksilla on myös taipumus keskittyä samoille paikoille. Kun useat suuret laitokset tarvitsevat virtaa samalla alueella, ne jakavat paikallisen verkon, ja olemassa olevia linjoja voidaan joutua vahvistamaan. Alueelle, jolla on varakapasiteettia, on helpompi tuoda uusia laitoksia kuin alueelle, joka on jo lähellä rajojaan. Se, mihin tekoälyn infrastruktuuri rakennetaan, vaikuttaa siis myös sen naapureihin."
+        },
+        {
+          "type": "takeaway",
+          "text": "Tekoälyn sähköä kuluu monella tasolla jäähdytettävistä palvelimista paikalliseen verkkoon asti, ja yhden pyynnön hinta riippuu järjestelmästä, mittaustavasta ja pyydetystä työstä."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "International Energy Agency (IEA), Key Questions on Energy and AI, 2026, p. 9 et 17."
+    },
+    {
+      "text": "International Energy Agency (IEA), Energy and AI, 2025, p. 13, 38 et 52."
+    },
+    {
+      "text": "Shehabi et al., 2024 United States Data Center Energy Usage Report, Lawrence Berkeley National Laboratory, 2024, p. 22-23."
+    },
+    {
+      "text": "Oviedo et al., Joule, 2026, p. 1.",
+      "url": "https://doi.org/10.1016/j.joule.2026.102430"
+    },
+    {
+      "text": "Elsworth et al., Measuring the Environmental Impact of Delivering AI at Google Scale, Google, 2025, p. 7."
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain",
+  "title": "Kan man ændre et menneskes DNA?",
+  "subtitle": "Gensaksen CRISPR",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Siden 2012 har »molekylære sakse« lånt fra bakterier gjort det muligt at klippe i DNA præcis, hvor man vil. De første helbredelser, mulige fejl og designerbørn: hvor langt vil man gå?",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "genetics_lab_pipette_dna_samples_gloved_hands",
+    "ratio": "4:3",
+    "hook": "Hvad nu, hvis man kunne rette et bogstav i sit DNA som en tastefejl?"
+  },
+  "sections": [
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_intro",
+      "title": "Indledning",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hår, øjne, hudfarve, kropsbygning: vi er alle forskellige. Disse fysiske træk skyldes arv: hvert [[gen]] er et stykke DNA, vi har fået fra vores biologiske forældre. Omgivelserne spiller selvfølgelig også ind: hvad vi spiser, hvem vi omgås, hvad vi tror på. Men vores gener tager vi for givet. Vi ville måske gerne være højere eller slankere, men vi lever med dem uden at tænke nærmere over det."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hvad ville du ændre, hvis du kunne redigere dit DNA? Spørgsmålet er ikke længere teoretisk. I **2012** udvikler den amerikanske biokemiker **Jennifer Doudna** og den franske mikrobiolog **Emmanuelle Charpentier** en metode til at programmere et protein, der klipper i DNA. Nu kan de fjerne et uønsket gen og dermed i teorien ændre et menneskes DNA."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p1",
+      "title": "CRISPR, en saks lånt fra bakterier",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[CRISPR]] er ikke det eneste værktøj, der kan ændre DNA, men det er det mest berømte. Princippet blev først observeret hos mikrober. For at forsvare sig genkender en bakterie DNA'et fra den virus, der angriber den, og klipper det i stykker. Til det bruger den DNA-stykker kaldet CRISPR og et enzym ved navn **Cas**, som fungerer som saksen."
+        },
+        {
+          "type": "image",
+          "asset": "emmanuelle_charpentier_jennifer_doudna_crispr_pioneers",
+          "ratio": "16:9",
+          "caption": "Emmanuelle Charpentier og Jennifer Doudna, de to forskere, der gjorde bakteriernes forsvar til et værktøj."
+        },
+        {
+          "type": "paragraph",
+          "text": "Forskerne har taget dette naturlige forsvarssystem i deres tjeneste. I stedet for at gå efter en virus fører de enzymet hen til et bestemt sted i et menneskes DNA. Dér klipper det, og en tilsigtet ændring bliver mulig. Nogle gange bliver det valgte gen blot slået fra. Nogle gange ændres nogle få af dets bogstaver. Andre gange udskiftes det helt."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p2",
+      "title": "De første helbredelser: seglcelleanæmi og thalassæmi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "At kunne redigere DNA åbner for behandling af mange genetiske sygdomme. Vores DNA er skrevet med **fire baser**, A, T, C og G. Deres rækkefølge udgør vores [[genom]], byggeplanen for vores krop. En enkelt fejl i den tekst kan være nok til at udløse en sygdom, og at rette den kan i princippet helbrede den."
+        },
+        {
+          "type": "image",
+          "asset": "sickle_cell_red_blood_cells_micrograph",
+          "ratio": "3:2",
+          "caption": "Snit af leveren fra en patient med seglcelleanæmi set i mikroskop: den første sygdom, der blev behandlet med CRISPR."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **2023** bliver Storbritannien det første land, der godkender et lægemiddel baseret på CRISPR. Det er rettet mod to arvelige blodsygdomme, [[seglcelleanæmi]] og betathalassæmi. Behandlingen ændrer de celler, der danner blodet, så de producerer mere [[føtalt hæmoglobin]], en form for hæmoglobin, der normalt dannes før fødslen."
+        },
+        {
+          "type": "funFact",
+          "text": "En tastefejl kan slå ihjel. Et enkelt forkert bogstav i DNA'et, for eksempel et T i stedet for et C, er nogle gange nok til at give en dødelig genetisk sygdom. At sætte det rigtige bogstav tilbage kunne i teorien helbrede den."
+        },
+        {
+          "type": "paragraph",
+          "text": "Og det er kun begyndelsen. I kliniske forsøg testes CRISPR i dag mod kræft, stofskiftesygdomme, autoimmune sygdomme, hjerte-kar-sygdomme og muskelsvind, blandt meget andet. Listen er lang. Hører genetiske sygdomme snart fortiden til?"
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p3",
+      "title": "Hvorfor vi ikke kan helbrede alt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Så enkelt er det ikke. For det første afhænger den måde, et gen kommer til udtryk på, ikke kun af arven fra forældrene: omgivelserne påvirker det også. For det andet skyldes en sygdom ikke nødvendigvis ét enkelt defekt gen. Flere gener kan være involveret, og så bliver reparationen langt mere kompliceret."
+        },
+        {
+          "type": "paragraph",
+          "text": "CRISPR kan også selv tage fejl. Det sker, at saksen klipper det forkerte sted, eller at de to afklippede ender ikke bliver sat korrekt sammen igen. Det ændrede DNA kan skabe nye problemer uden at løse det oprindelige. Alligevel tager lægevidenskaben store skridt mod at udrydde nogle af de værste genetiske sygdomme."
+        }
+      ]
+    },
+    {
+      "id": "course_274_peut_on_modifier_l_adn_d_un_etre_humain_p4",
+      "title": "Designerbørn: hvor går grænsen?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alle kan se fordelen ved at behandle invaliderende eller dødelige sygdomme. Men hvor skal videnskaben trække grænsen? Skal den bruges til at skabe det »perfekte menneske«? Spørgsmålet er blevet langt mere presserende, nu hvor man kan klippe i DNA efter forgodtbefindende."
+        },
+        {
+          "type": "image",
+          "asset": "ivf_embryo_icsi_microinjection_micrograph",
+          "ratio": "16:9",
+          "caption": "En menneskelig ægcelle holdt fast af en pipette under en mikroinjektion i laboratoriet."
+        },
+        {
+          "type": "funFact",
+          "text": "Udtrykket »designerbaby« opstod ikke med CRISPR. Det har været brugt, siden [[reagensglasbefrugtning]] kom til, som gør det muligt at skabe et embryo i laboratoriet, før det sættes op i livmoderen."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Kimbaneredigering]] ændrer DNA'et i kønscellerne: sædceller, ægceller eller embryoner i de allertidligste stadier. Forskellen fra en almindelig behandling er markant: ændringerne går derefter i arv fra generation til generation. I dag er kimbaneredigering forbudt i alle lande. Men hvor længe endnu? Hvornår vil genredigering i medicinsk øjemed tage springet til genetiske slægtslinjer efter bestilling?"
+        },
+        {
+          "type": "takeaway",
+          "text": "Siden 2012 har gensaksen CRISPR gjort det muligt at rette menneskets DNA, og de første helbredelser blev godkendt i 2023, men fejl kan stadig ske, mange sygdomme involverer flere gener, og kimbaneredigering er fortsat forbudt overalt."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "National Science Foundation, « CRISPR: A Biotech Breakthrough », NSF Impacts.",
+      "url": "https://www.nsf.gov/impacts/crispr"
+    },
+    {
+      "text": "National Cancer Institute, « How CRISPR Is Changing Cancer Research and Treatment », Cancer Currents Blog, 2020.",
+      "url": "https://www.cancer.gov/news-events/cancer-currents-blog/2020/crispr-cancer-research-treatment"
+    },
+    {
+      "text": "CRISPR Medicine News, « Clinical Trials », liste des essais cliniques fondés sur CRISPR.",
+      "url": "https://crisprmedicinenews.com/clinical-trials/"
+    },
+    {
+      "text": "House of Lords Library, « World's first personalised DNA editing treatment », UK Parliament.",
+      "url": "https://lordslibrary.parliament.uk/worlds-first-personalised-dna-editing-treatment/"
+    },
+    {
+      "text": "« The gene editor CRISPR won't fully fix sick people anytime soon. Here's why », Science, 2016.",
+      "url": "https://www.science.org/content/article/gene-editor-crispr-won-t-fully-fix-sick-people-anytime-soon-here-s-why"
+    },
+    {
+      "text": "Boston Children's Hospital, « CRISPR gene editing », Answers.",
+      "url": "https://answers.childrenshospital.org/crispr-gene-editing/"
+    },
+    {
+      "text": "« The Guardian view on gene-edited humans: darker uses must be acknowledged alongside medical ones », The Guardian, 5 juillet 2026.",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/05/the-guardian-view-on-gene-edited-humans-darker-uses-must-be-acknowledged-alongside-medical-ones"
+    },
+    {
+      "text": "K. E. Ormond et al., « Human Germline Genome Editing », American Journal of Human Genetics, vol. 101, 2017.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5544380/"
+    }
+  ]
+}

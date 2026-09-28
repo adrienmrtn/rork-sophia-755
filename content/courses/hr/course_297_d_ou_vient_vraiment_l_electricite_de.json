@@ -1,0 +1,141 @@
+{
+  "id": "course_297_d_ou_vient_vraiment_l_electricite_de",
+  "title": "Odakle zapravo dolazi struja iz vaše utičnice?",
+  "subtitle": "Nevidljiva mješavina",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Utičnica ne otkriva dolazi li struja od sunca, vjetra ili termoelektrane na ugljen. Iza te svakodnevne geste krije se mješavina koja se mijenja iz sata u sat, a ponekad i od zemlje do zemlje.",
+  "author": "rana-abdalla",
+  "hero": {
+    "image": "wind_turbines_coal_power_plant_landscape",
+    "ratio": "4:3",
+    "hook": "Utičnica je svugdje ista. Ono što je iza nje nikada nije."
+  },
+  "sections": [
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_intro",
+      "title": "Uvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uključite punjač mobitela i struja stiže bez ikakve oznake. Na utičnici ništa ne govori je li proizvedena sunčevom svjetlošću, vodom iz brane ili gorivom izgorjelim u elektrani. Čak ni dvije kuće u istoj ulici ne mogu odrediti iz koje elektrane dolazi svaka jedinica struje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Razlog je jednostavan: gotovo sva kućanstva napajaju se iz istog sustava, a to je [[električna mreža]], splet kabela koji povezuje elektrane i korisnike na nekom području. U nju istodobno isporučuje struju više elektrana, a njihovi udjeli zajedno tvore [[elektroenergetski miks]]. Taj miks opisuje izvore koji napajaju mrežu, a ne zaseban tok solarne ili plinske struje poslan ravno u vaš mobitel. Odgovor, dakle, počinje daleko izvan zidova kuće."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p1",
+      "title": "Para, turbine i solarni paneli",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Termoelektrane na ugljen i mnoge nuklearne elektrane toplinom proizvode paru. Ta para okreće skup lopatica, a to je [[turbina]], spojena na [[generator]], stroj koji gibanje pretvara u električnu energiju. Plinske elektrane mogu svoje turbine okretati i izravno vrućim plinovima izgaranja. Postupci su različiti, ali struja je ista i ulazi u istu mrežu."
+        },
+        {
+          "type": "image",
+          "asset": "steam_turbine_generator_hall_power_plant",
+          "ratio": "2:1",
+          "caption": "Stari parni turbogenerator izložen u Tehničkom muzeju u Beču: turbina je spojena sa svojim generatorom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vjetroturbine okreće vjetar, a hidroelektrane voda koja teče. Solarni paneli idu drugim putem: struju proizvode izravno iz svjetlosti, bez ijedne lopatice koja se okreće. Ti izvori ne rade u istim uvjetima. Solarna proizvodnja pada kad sunce zađe, a proizvodnja iz vjetra mijenja se s vremenom. Elektrane koje izgaraju gorivo tada mogu isporučivati struju kad drugi izvori proizvode manje."
+        },
+        {
+          "type": "funFact",
+          "text": "Nuklearna elektrana u osnovi radi kao termoelektrana na ugljen: toplina zagrijava vodu do vrenja, a turbinu pokreće para. Mijenja se samo izvor topline."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p2",
+      "title": "Miks koji se mijenja tijekom dana",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U podne solarni paneli rade punom snagom dok uredi i stanovi troše struju. Nakon zalaska sunca oni se zaustavljaju, ali svjetiljke, vlakovi i kuhinje i dalje trebaju električnu energiju. Vjetrovito poslijepodne može prijeći i u večer bez vjetra, dok potrošnja raste ili pada."
+        },
+        {
+          "type": "image",
+          "asset": "electricity_grid_control_room_operators_screens",
+          "ratio": "16:9",
+          "caption": "Karta dalekovoda visokog napona i trafostanica u Sjedinjenim Državama: splet koji operator mreže mora držati u ravnoteži."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tim spletom upravlja [[operator mreže]], tijelo koje mora neprestano održavati ravnotežu između ponude i potražnje. Neke elektrane prilagođavaju proizvodnju. Gdje postoje baterije, one vraćaju struju pohranjenu ranije. Drugi izvori popunjavaju prazninu koju ostavlja sunce na zalasku. Ne postoji svakodnevni recept: podnevni miks može biti posve drukčiji od onoga nekoliko sati poslije, a vaša utičnica ostala je ista."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p3",
+      "title": "Što skriva godišnji prosjek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U 2025. otprilike **četvrtinu** (24 %) električne energije koju su proizvele velike elektrane u Sjedinjenim Državama dali su [[obnovljivi izvori energije]], izvori koje priroda sama obnavlja: sunčeva svjetlost, vjetar, voda koja teče. Taj broj, još privremen, opisuje cijelu godinu. Ne znači da su obnovljivi izvori davali isti udio svaki put kad je netko uključio kuhalo za vodu ili punio mobitel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Godišnji postotak miješa sunčana poslijepodneva, noći s jakim vjetrom i razdoblja kad sunce i vjetar malo proizvode. Zbraja i sate velike i male potražnje. Da bi se znalo koji izvori napajaju mrežu u određenom trenutku, treba gledati njezin miks iz sata u sat, a ne godišnji prosjek. Oba su pogleda korisna, ali ne odgovaraju na isto pitanje."
+        }
+      ]
+    },
+    {
+      "id": "course_297_d_ou_vient_vraiment_l_electricite_de_p4",
+      "title": "Struja koja dolazi izdaleka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Satni miks traži još jedan detalj: koja je struja stvarno dostupna u vašem području. Elektrana s jedne strane granice može napajati mrežu s druge strane. Ta uvezena struja miješa se s lokalnom proizvodnjom. Zato se [[miks potrošnje]], odnosno izvori koji napajaju korisnike nekog područja, može razlikovati od miksa proizvedenog na licu mjesta."
+        },
+        {
+          "type": "image",
+          "asset": "belchatow_coal_power_plant_cooling_towers_poland",
+          "ratio": "4:3",
+          "caption": "Termoelektrana na ugljen Bełchatów u Poljskoj, najveća u Europi."
+        },
+        {
+          "type": "paragraph",
+          "text": "To je važno za emisije povezane s vašom strujom. Izgaranjem ugljena ili plina oslobađa se ugljikov dioksid, plin koji zagrijava planet. Vjetroturbine, solarni paneli i nuklearne elektrane ne ispuštaju ga izravno dok proizvode struju. Struja ne staje na granici, pa ni njezin utjecaj. Ovisno o podrijetlu uvoza, emisije povezane s vašom potrošnjom mogu biti veće ili manje nego što sugerira lokalna proizvodnja."
+        },
+        {
+          "type": "takeaway",
+          "text": "Struja iz vaše utičnice mješavina je koja se mijenja iz sata u sat i prelazi granice, pa ni godišnji prosjek ni lokalna proizvodnja sami po sebi ne govore odakle dolazi."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Delivered to Consumers », sections « The electric power grid », « Electricity sources and types of providers » et « Balancing authorities »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « How Electricity Is Generated », sections « Turbine driven generators » et « Other types of generators »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Energy Storage for Electricity Generation », section « Uses and benefits of energy storage systems »."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity Generation, Capacity, and Sales in the United States », section « Electricity generation », données 2025 provisoires."
+    },
+    {
+      "text": "U.S. Energy Information Administration (EIA), « Electricity and the Environment », sections « Fossil fuel, biomass, and waste burning power plants » et « Nuclear power plants »."
+    },
+    {
+      "text": "Electricity Maps, « Methodology », sections « Defining Granularity: Spatial and Temporal », « Consumption-based Calculation » et « The Flow-Tracing Algorithm »."
+    },
+    {
+      "text": "B. Tranberg et al., « Real-time carbon accounting method for the European electricity markets », Energy Strategy Reviews, vol. 26, 2019, art. 100367.",
+      "url": "https://doi.org/10.1016/j.esr.2019.100367"
+    }
+  ]
+}
