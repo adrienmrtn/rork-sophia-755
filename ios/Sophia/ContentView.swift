@@ -55,8 +55,7 @@ struct ContentView: View {
                     )
                 }
 
-                // The path took the collections' slot: the collections list is reached from
-                // its header until the path replaces it for good.
+                // The path took the collections' slot; the former collections pages are gone.
                 Tab(languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath.fill", value: 2) {
                     LearningPathView(
                         progressManager: progressManager,

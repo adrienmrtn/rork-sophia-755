@@ -296,17 +296,19 @@ struct PathTrailBaseShape: Shape {
 // MARK: - Level banner
 
 /// Header of a level: the collection cover with its number and title centred on it.
-/// Greyed while locked, with a chip saying so; a golden chip once the level is passed.
+/// Greyed under a padlock while locked; a golden chip once the level is passed.
 ///
 /// The text is an overlay of the fixed-height cover, so the cover's size is settled
-/// before the text is laid out: the previous bottom-aligned stack was measured one line
-/// short and its title ran off the bottom edge.
+/// before the text is laid out: a bottom-aligned stack was measured one line short and
+/// its title ran off the bottom edge.
 struct PathLevelBanner: View {
     @Environment(LanguageManager.self) private var languageManager
     let level: PathLevel
     let isUnlocked: Bool
     let isPassed: Bool
     let accentIndex: Int
+    /// Bump by one inside `withAnimation` to rattle the padlock before it comes off.
+    var lockShakes: CGFloat = 0
 
     static let height: CGFloat = 176
 
@@ -343,8 +345,19 @@ struct PathLevelBanner: View {
                 .shadow(color: .black.opacity(0.35), radius: 8, y: 2)
             }
             .overlay(alignment: .topTrailing) {
-                statusChip
-                    .padding(12)
+                if isPassed {
+                    passedChip
+                        .padding(12)
+                } else if !isUnlocked {
+                    // The padlock: rattles on demand, then flies off when the level opens.
+                    lockMedallion
+                        .padding(12)
+                        .modifier(PathShakeEffect(shakes: lockShakes, amplitude: 6))
+                        .transition(.asymmetric(
+                            insertion: .opacity,
+                            removal: .scale(scale: 1.6).combined(with: .opacity).combined(with: .offset(y: -40))
+                        ))
+                }
             }
             .clipShape(.rect(cornerRadius: DS.Radius.card))
             .overlay {
@@ -362,24 +375,27 @@ struct PathLevelBanner: View {
         return "\(levelText) · \(coursesText)".uppercased(with: languageManager.current.foundationLocale)
     }
 
-    @ViewBuilder
-    private var statusChip: some View {
-        if isPassed {
-            chip(icon: "checkmark.seal.fill", text: languageManager.text("path.status.passed"), tint: PathPalette.gold)
-        } else if !isUnlocked {
-            chip(icon: "lock.fill", text: languageManager.text("path.status.locked"), tint: .white.opacity(0.9))
+    private var lockMedallion: some View {
+        ZStack {
+            Circle().fill(.black.opacity(0.45))
+            Circle().strokeBorder(.white.opacity(0.35), lineWidth: 1)
+            Image(systemName: "lock.fill")
+                .font(.jakarta(size: 18, weight: .bold))
+                .foregroundStyle(.white)
         }
+        .frame(width: 46, height: 46)
+        .accessibilityLabel(languageManager.text("path.status.locked"))
     }
 
-    private func chip(icon: String, text: String, tint: Color) -> some View {
+    private var passedChip: some View {
         HStack(spacing: 5) {
-            Image(systemName: icon)
+            Image(systemName: "checkmark.seal.fill")
                 .font(.jakarta(size: 10, weight: .bold))
-            Text(text)
+            Text(languageManager.text("path.status.passed"))
                 .font(DS.sans(.caption2, .semibold))
                 .lineLimit(1)
         }
-        .foregroundStyle(tint)
+        .foregroundStyle(PathPalette.gold)
         .padding(.horizontal, 10)
         .padding(.vertical, 6)
         .background(.black.opacity(0.4), in: Capsule())

@@ -73,7 +73,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Parcours",
         "path.title": "Parcours",
-        "path.collections": "Collections",
         "path.levelCaption": "Niveau %d",
         "path.allPassed": "Tous les niveaux sont réussis. Chapeau !",
         "path.quizPod": "Quiz du niveau",
@@ -1050,7 +1049,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Path",
         "path.title": "Path",
-        "path.collections": "Collections",
         "path.levelCaption": "Level %d",
         "path.allPassed": "Every level passed. Hats off!",
         "path.quizPod": "Level quiz",
@@ -2027,7 +2025,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Ruta",
         "path.title": "Ruta",
-        "path.collections": "Colecciones",
         "path.levelCaption": "Nivel %d",
         "path.allPassed": "Todos los niveles superados. ¡Enhorabuena!",
         "path.quizPod": "Quiz del nivel",
@@ -2935,7 +2932,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Pfad",
         "path.title": "Pfad",
-        "path.collections": "Sammlungen",
         "path.levelCaption": "Level %d",
         "path.allPassed": "Alle Level geschafft. Hut ab!",
         "path.quizPod": "Level-Quiz",
@@ -3843,7 +3839,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Percurso",
         "path.title": "Percurso",
-        "path.collections": "Coleções",
         "path.levelCaption": "Nível %d",
         "path.allPassed": "Todos os níveis concluídos. Parabéns!",
         "path.quizPod": "Quiz do nível",
@@ -4751,7 +4746,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Percorso",
         "path.title": "Percorso",
-        "path.collections": "Collezioni",
         "path.levelCaption": "Livello %d",
         "path.allPassed": "Tutti i livelli superati. Complimenti!",
         "path.quizPod": "Quiz del livello",
@@ -5659,7 +5653,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Yol",
         "path.title": "Yol",
-        "path.collections": "Koleksiyonlar",
         "path.levelCaption": "Seviye %d",
         "path.allPassed": "Tüm seviyeler geçildi. Tebrikler!",
         "path.quizPod": "Seviye quizi",
@@ -6548,7 +6541,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Ścieżka",
         "path.title": "Ścieżka",
-        "path.collections": "Kolekcje",
         "path.levelCaption": "Poziom %d",
         "path.allPassed": "Wszystkie poziomy zaliczone. Brawo!",
         "path.quizPod": "Quiz poziomu",
@@ -7437,7 +7429,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Traseu",
         "path.title": "Traseu",
-        "path.collections": "Colecții",
         "path.levelCaption": "Nivelul %d",
         "path.allPassed": "Toate nivelurile sunt trecute. Felicitări!",
         "path.quizPod": "Quizul nivelului",
@@ -8326,7 +8317,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Route",
         "path.title": "Route",
-        "path.collections": "Collecties",
         "path.levelCaption": "Niveau %d",
         "path.allPassed": "Alle niveaus gehaald. Petje af!",
         "path.quizPod": "Niveauquiz",
@@ -9215,7 +9205,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Διαδρομή",
         "path.title": "Διαδρομή",
-        "path.collections": "Συλλογές",
         "path.levelCaption": "Επίπεδο %d",
         "path.allPassed": "Όλα τα επίπεδα ολοκληρώθηκαν. Συγχαρητήρια!",
         "path.quizPod": "Κουίζ επιπέδου",
@@ -10104,7 +10093,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Stig",
         "path.title": "Stig",
-        "path.collections": "Samlingar",
         "path.levelCaption": "Nivå %d",
         "path.allPassed": "Alla nivåer klarade. Snyggt jobbat!",
         "path.quizPod": "Nivåquiz",
@@ -10993,7 +10981,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Útvonal",
         "path.title": "Útvonal",
-        "path.collections": "Gyűjtemények",
         "path.levelCaption": "%d. szint",
         "path.allPassed": "Minden szintet teljesítettél. Le a kalappal!",
         "path.quizPod": "Szintzáró kvíz",
@@ -11882,7 +11869,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Пътека",
         "path.title": "Пътека",
-        "path.collections": "Колекции",
         "path.levelCaption": "Ниво %d",
         "path.allPassed": "Всички нива са преминати. Браво!",
         "path.quizPod": "Куиз на нивото",
@@ -12771,7 +12757,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Cesta",
         "path.title": "Cesta",
-        "path.collections": "Sbírky",
         "path.levelCaption": "Úroveň %d",
         "path.allPassed": "Všechny úrovně splněny. Klobouk dolů!",
         "path.quizPod": "Kvíz úrovně",
@@ -13661,7 +13646,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Rute",
         "path.title": "Rute",
-        "path.collections": "Samlinger",
         "path.levelCaption": "Niveau %d",
         "path.allPassed": "Alle niveauer bestået. Hatten af!",
         "path.quizPod": "Niveauquiz",
@@ -14551,7 +14535,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Løype",
         "path.title": "Løype",
-        "path.collections": "Samlinger",
         "path.levelCaption": "Nivå %d",
         "path.allPassed": "Alle nivåer bestått. Hatten av!",
         "path.quizPod": "Nivåquiz",
@@ -15441,7 +15424,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Путь",
         "path.title": "Путь",
-        "path.collections": "Коллекции",
         "path.levelCaption": "Уровень %d",
         "path.allPassed": "Все уровни пройдены. Снимаем шляпу!",
         "path.quizPod": "Квиз уровня",
@@ -16331,7 +16313,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Staza",
         "path.title": "Staza",
-        "path.collections": "Zbirke",
         "path.levelCaption": "Razina %d",
         "path.allPassed": "Sve razine prođene. Svaka čast!",
         "path.quizPod": "Kviz razine",
@@ -17221,7 +17202,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Pot",
         "path.title": "Pot",
-        "path.collections": "Zbirke",
         "path.levelCaption": "Stopnja %d",
         "path.allPassed": "Vse stopnje opravljene. Klobuk dol!",
         "path.quizPod": "Kviz stopnje",
@@ -18111,7 +18091,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Cesta",
         "path.title": "Cesta",
-        "path.collections": "Zbierky",
         "path.levelCaption": "Úroveň %d",
         "path.allPassed": "Všetky úrovne splnené. Klobúk dole!",
         "path.quizPod": "Kvíz úrovne",
@@ -19001,7 +18980,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Staza",
         "path.title": "Staza",
-        "path.collections": "Zbirke",
         "path.levelCaption": "Nivo %d",
         "path.allPassed": "Svi nivoi su pređeni. Svaka čast!",
         "path.quizPod": "Kviz nivoa",
@@ -19891,7 +19869,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "المسار",
         "path.title": "المسار",
-        "path.collections": "المجموعات",
         "path.levelCaption": "المستوى %d",
         "path.allPassed": "اجتزت كل المستويات. أحسنت!",
         "path.quizPod": "اختبار المستوى",
@@ -20781,7 +20758,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "מסלול",
         "path.title": "מסלול",
-        "path.collections": "אוספים",
         "path.levelCaption": "שלב %d",
         "path.allPassed": "כל השלבים הושלמו. כל הכבוד!",
         "path.quizPod": "מבחן השלב",
@@ -21671,7 +21647,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Polku",
         "path.title": "Polku",
-        "path.collections": "Kokoelmat",
         "path.levelCaption": "Taso %d",
         "path.allPassed": "Kaikki tasot läpäisty. Hattua nostetaan!",
         "path.quizPod": "Tason visa",
@@ -22561,7 +22536,6 @@ enum AppLocalizable {
         // MARK: Parcours (learning path tab)
         "tab.path": "Teekond",
         "path.title": "Teekond",
-        "path.collections": "Kogud",
         "path.levelCaption": "Tase %d",
         "path.allPassed": "Kõik tasemed läbitud. Tubli!",
         "path.quizPod": "Taseme viktoriin",
