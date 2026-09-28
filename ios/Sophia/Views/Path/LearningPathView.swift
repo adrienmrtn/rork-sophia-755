@@ -1,7 +1,10 @@
 import SwiftUI
 
+/// Coordinate space of the trail, in which the banners report where they are.
+nonisolated let learningPathScrollSpace = "learningPathScroll"
+
 /// Where the trail is brought to when the page moves on its own.
-enum PathScrollAnchor {
+nonisolated enum PathScrollAnchor {
     /// A level's banner in the upper part of the screen: about a quarter of the way down, far
     /// enough under the bar not to be drawn retracted, with its first pod visible below.
     static let levelTop = UnitPoint(x: 0.5, y: 0.24)
@@ -20,9 +23,6 @@ struct LearningPathView: View {
     @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
     @Binding var selectedCourse: Course?
-
-    /// Coordinate space of the trail, in which the banners report where they are.
-    nonisolated static let scrollSpace = "learningPathScroll"
 
     @State private var snapshot: LearningPathSnapshot = .empty
     /// States as drawn. They trail the real ones while a change is being animated.
@@ -168,7 +168,7 @@ struct LearningPathView: View {
                 .padding(.bottom, 40)
             }
             .scrollIndicators(.hidden)
-            .coordinateSpace(.named(Self.scrollSpace))
+            .coordinateSpace(.named(learningPathScrollSpace))
             .safeAreaInset(edge: .top, spacing: 0) {
                 topBar
             }
@@ -908,7 +908,7 @@ private struct PathLevelBannerHost: View {
         .scaleEffect(1 - 0.06 * retract, anchor: .top)
         .opacity(1 - 0.35 * retract)
         .onGeometryChange(for: CGFloat.self) { proxy in
-            proxy.frame(in: .named(LearningPathView.scrollSpace)).minY
+            proxy.frame(in: .named(learningPathScrollSpace)).minY
         } action: { minY in
             let distanceBelowBar = minY - barHeight
             let newRetract = min(1, max(0, (72 - distanceBelowBar) / 72))
