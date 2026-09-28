@@ -11,10 +11,10 @@ struct OnboardingV2Teachers: View {
 
     @State private var logos: [UIImage] = []
 
-    private let logoHeight: CGFloat = 44
-    private let gap: CGFloat = 40
+    private let logoHeight: CGFloat = 84
+    private let gap: CGFloat = 44
     /// Fixed slot per logo, so the strip's width is known without measuring anything.
-    private let slotWidth: CGFloat = 118
+    private let slotWidth: CGFloat = 176
 
     var body: some View {
         OV2ScrollableContent {
@@ -38,28 +38,10 @@ struct OnboardingV2Teachers: View {
                     .padding(.horizontal, 28)
                     .ov2Reveal(delay: 0.15)
 
-                Spacer().frame(height: 12)
-
-                Text(languageManager.text("onboardingV2.teachers.subtitle"))
-                    .font(DS.sans(.subheadline, .medium))
-                    .foregroundStyle(OV2.inkSecondary)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding(.horizontal, 32)
-                    .ov2Reveal(delay: 0.25)
-
-                Spacer().frame(height: 40)
+                Spacer().frame(height: 44)
 
                 marquee
-                    .ov2Reveal(delay: 0.35)
-
-                Spacer().frame(height: 12)
-
-                Text(languageManager.text("onboardingV2.teachers.caption").uppercased())
-                    .font(DS.sans(.caption2, .semibold))
-                    .tracking(1.2)
-                    .foregroundStyle(OV2.inkTertiary)
-                    .ov2Reveal(delay: 0.45)
+                    .ov2Reveal(delay: 0.3)
 
                 Spacer().frame(height: 24)
             }
@@ -136,7 +118,6 @@ struct OnboardingV2Teachers: View {
                 .resizable()
                 .renderingMode(.original)
                 .aspectRatio(contentMode: .fit)
-                .opacity(0.85)
         }
     }
 
