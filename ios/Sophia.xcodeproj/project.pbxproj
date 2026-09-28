@@ -86,6 +86,8 @@
 		B10C0000000000000000C0DA /* Exceptions for "Sophia" folder in "Sophia" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Resources/ReviewAvatars/README.md,
+				Resources/UniversityLogos/README.md,
 				Services/CourseData.swift,
 			);
 			target = 105FC5792E9EAD3100EA8BCF /* Sophia */;
