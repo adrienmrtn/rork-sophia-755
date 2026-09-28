@@ -91,12 +91,15 @@ nonisolated enum GlobalXPReason: Sendable {
     case courseCompleted(courseId: String)
     case quizCompleted(courseId: String)
     case collectionCompleted(id: String)
+    /// End-of-level quiz of the learning path passed for the first time.
+    case pathLevelPassed(collectionId: String)
 
     var analyticsKey: String {
         switch self {
         case .courseCompleted: "course_completed"
         case .quizCompleted: "quiz_completed"
         case .collectionCompleted: "collection_completed"
+        case .pathLevelPassed: "path_level_passed"
         }
     }
 }
@@ -188,6 +191,8 @@ class ProgressManager {
     static let globalCourseCompletionXP = 50
     static let globalQuizCompletionXP = 50
     static let globalCollectionXPPerCourse = 25
+    /// Granted once per learning-path level, the first time its quiz is passed.
+    static let pathLevelPassedXP = 100
 
     private static let globalLevelXPRequirements: [Int] = {
         (1..<100).map { level in
@@ -338,6 +343,13 @@ class ProgressManager {
                 return noGlobalXPAwardResult()
             }
             progress.globalCollectionXPAwardedIds.append(id)
+        case .pathLevelPassed(let collectionId):
+            guard progress.pathLevelResults[collectionId]?.xpAwarded != true else {
+                return noGlobalXPAwardResult()
+            }
+            var result = progress.pathLevelResults[collectionId] ?? PathLevelResult()
+            result.xpAwarded = true
+            progress.pathLevelResults[collectionId] = result
         }
 
         let previousXP = progress.globalXP
@@ -516,6 +528,40 @@ class ProgressManager {
             guard let course = ContentCatalog.activeCourses.first(where: { $0.id == id }) else { return nil }
             return (course, cp.bestQuizScore, course.quiz.maxPoints, date)
         }
+    }
+
+    // MARK: - Learning path (levels are collections, each closed by a mixed quiz)
+
+    func pathLevelResult(for collectionId: String) -> PathLevelResult? {
+        progress.pathLevelResults[collectionId]
+    }
+
+    func isPathLevelPassed(_ collectionId: String) -> Bool {
+        progress.pathLevelResults[collectionId]?.isPassed == true
+    }
+
+    var passedPathLevelCount: Int {
+        progress.pathLevelResults.values.filter(\.isPassed).count
+    }
+
+    /// Records one end-of-level quiz attempt and returns whether it is the first to pass the
+    /// level. Passing again later changes nothing but the attempt count and the best score.
+    @discardableResult
+    func recordPathQuizAttempt(collectionId: String, correct: Int, total: Int, passed: Bool) -> Bool {
+        var result = progress.pathLevelResults[collectionId] ?? PathLevelResult()
+        result.attempts += 1
+        if correct > result.bestCorrect || result.bestTotal == 0 {
+            result.bestCorrect = correct
+            result.bestTotal = total
+        }
+        var newlyPassed = false
+        if passed, result.passedAt == nil {
+            result.passedAt = Self.isoFormatter.string(from: Date())
+            newlyPassed = true
+        }
+        progress.pathLevelResults[collectionId] = result
+        save()
+        return newlyPassed
     }
 
     // MARK: - Training (spaced-repetition review of already-answered quiz questions)

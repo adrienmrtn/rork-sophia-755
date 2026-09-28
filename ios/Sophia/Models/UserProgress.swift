@@ -124,6 +124,42 @@ nonisolated enum QuizAnswer: Sendable, Equatable {
     case value(Double)
 }
 
+/// How the end-of-level quiz of one learning-path level (a collection) went so far.
+nonisolated struct PathLevelResult: Codable, Sendable, Equatable {
+    /// Most fully-correct answers reached in a single attempt.
+    var bestCorrect: Int
+    /// Question count of the attempt that set `bestCorrect`.
+    var bestTotal: Int
+    var attempts: Int
+    /// ISO-8601 date of the first passing attempt; `nil` while the level is not passed.
+    var passedAt: String?
+    /// Whether the one-time global XP reward for passing was already granted.
+    var xpAwarded: Bool
+
+    init(bestCorrect: Int = 0, bestTotal: Int = 0, attempts: Int = 0, passedAt: String? = nil, xpAwarded: Bool = false) {
+        self.bestCorrect = bestCorrect
+        self.bestTotal = bestTotal
+        self.attempts = attempts
+        self.passedAt = passedAt
+        self.xpAwarded = xpAwarded
+    }
+
+    var isPassed: Bool { passedAt != nil }
+
+    private enum CodingKeys: String, CodingKey {
+        case bestCorrect, bestTotal, attempts, passedAt, xpAwarded
+    }
+
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        bestCorrect = try c.decodeIfPresent(Int.self, forKey: .bestCorrect) ?? 0
+        bestTotal = try c.decodeIfPresent(Int.self, forKey: .bestTotal) ?? 0
+        attempts = try c.decodeIfPresent(Int.self, forKey: .attempts) ?? 0
+        passedAt = try c.decodeIfPresent(String.self, forKey: .passedAt)
+        xpAwarded = try c.decodeIfPresent(Bool.self, forKey: .xpAwarded) ?? false
+    }
+}
+
 nonisolated struct UserProgress: Codable, Sendable {
     var courseProgress: [String: CourseProgress]
     var streak: Int
@@ -165,10 +201,13 @@ nonisolated struct UserProgress: Codable, Sendable {
     /// Total global XP already spent on XP-based course unlocks. Available-to-spend XP is
     /// `globalXP - spentGlobalXP`. Scaffolding for the upcoming unlock feature.
     var spentGlobalXP: Int
+    /// Learning path ("Parcours" tab): end-of-level quiz results keyed by collection id. A
+    /// level counts as passed once its entry has a `passedAt`.
+    var pathLevelResults: [String: PathLevelResult]
 
     static let empty = UserProgress(courseProgress: [:], streak: 0, lastActiveDate: nil, favoriteCourseIds: [], freeCoursesOpened: 0, hasSeenSwipeTutorial: false, hasSeenSpecialOffer: false, lastCourseCompletedDate: nil, lastStreakShownDate: nil, subjectXP: [:], globalXP: 0, globalCourseXPAwardedIds: [], globalQuizXPAwardedIds: [], globalCollectionXPAwardedIds: [], completedQuizCourseIds: [], pendingGlobalRankUp: nil, trainingQuestionStates: [:])
 
-    init(courseProgress: [String: CourseProgress], streak: Int, lastActiveDate: String?, favoriteCourseIds: [String] = [], freeCoursesOpened: Int = 0, hasSeenSwipeTutorial: Bool = false, hasSeenSpecialOffer: Bool = false, lastCourseCompletedDate: String? = nil, lastStreakShownDate: String? = nil, subjectXP: [String: Int] = [:], globalXP: Int = 0, globalCourseXPAwardedIds: [String] = [], globalQuizXPAwardedIds: [String] = [], globalCollectionXPAwardedIds: [String] = [], completedQuizCourseIds: [String] = [], pendingGlobalRankUp: PendingGlobalRankUp? = nil, trainingQuestionStates: [String: TrainingQuestionState] = [:], dailyFreeCourseId: String? = nil, dailyFreeCourseDate: String? = nil, xpUnlockedCourseIds: [String] = [], spentGlobalXP: Int = 0) {
+    init(courseProgress: [String: CourseProgress], streak: Int, lastActiveDate: String?, favoriteCourseIds: [String] = [], freeCoursesOpened: Int = 0, hasSeenSwipeTutorial: Bool = false, hasSeenSpecialOffer: Bool = false, lastCourseCompletedDate: String? = nil, lastStreakShownDate: String? = nil, subjectXP: [String: Int] = [:], globalXP: Int = 0, globalCourseXPAwardedIds: [String] = [], globalQuizXPAwardedIds: [String] = [], globalCollectionXPAwardedIds: [String] = [], completedQuizCourseIds: [String] = [], pendingGlobalRankUp: PendingGlobalRankUp? = nil, trainingQuestionStates: [String: TrainingQuestionState] = [:], dailyFreeCourseId: String? = nil, dailyFreeCourseDate: String? = nil, xpUnlockedCourseIds: [String] = [], spentGlobalXP: Int = 0, pathLevelResults: [String: PathLevelResult] = [:]) {
         self.courseProgress = courseProgress
         self.streak = streak
         self.lastActiveDate = lastActiveDate
@@ -190,6 +229,7 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.trainingQuestionStates = trainingQuestionStates
         self.xpUnlockedCourseIds = xpUnlockedCourseIds
         self.spentGlobalXP = spentGlobalXP
+        self.pathLevelResults = pathLevelResults
     }
 
     enum CodingKeys: String, CodingKey {
@@ -199,6 +239,7 @@ nonisolated struct UserProgress: Codable, Sendable {
         case globalXP, globalCourseXPAwardedIds, globalQuizXPAwardedIds, globalCollectionXPAwardedIds, completedQuizCourseIds, pendingGlobalRankUp
         case trainingQuestionStates
         case xpUnlockedCourseIds, spentGlobalXP
+        case pathLevelResults
     }
 
     init(from decoder: Decoder) throws {
@@ -224,6 +265,7 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.trainingQuestionStates = try c.decodeIfPresent([String: TrainingQuestionState].self, forKey: .trainingQuestionStates) ?? [:]
         self.xpUnlockedCourseIds = try c.decodeIfPresent([String].self, forKey: .xpUnlockedCourseIds) ?? []
         self.spentGlobalXP = try c.decodeIfPresent(Int.self, forKey: .spentGlobalXP) ?? 0
+        self.pathLevelResults = try c.decodeIfPresent([String: PathLevelResult].self, forKey: .pathLevelResults) ?? [:]
     }
 }
 
@@ -239,6 +281,7 @@ extension UserProgress {
             && trainingQuestionStates.isEmpty
             && globalXP == 0
             && streak == 0
+            && pathLevelResults.isEmpty
     }
 
     /// Score grossier « quantité de progression » utilisé pour arbitrer local vs cloud
@@ -252,6 +295,7 @@ extension UserProgress {
             + completedQuizCourseIds.count
             + trainingQuestionStates.count
             + streak
+            + pathLevelResults.values.filter(\.isPassed).count * 100
     }
 }
 
