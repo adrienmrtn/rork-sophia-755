@@ -111,15 +111,62 @@ def strip_markup(t, cid, log, lang):
     return t.replace('*', '')
 
 
-def unparenthesize(t, cid, log):
+# Words that, right after an aside, make it read as one more item in a list.
+COORDINATION = {
+    'fr': ('et', 'ou', 'puis', 'ni'),
+    'en': ('and', 'or', 'then', 'nor'),
+    'es': ('y', 'e', 'o', 'u', 'luego'),
+    'de': ('und', 'oder', 'dann', 'sowie'),
+    'tr': ('ve', 'veya', 'ya'),
+}
+# Turkish puts the verb last, so an aside set off by commas just before it
+# lands in the subject slot; and a postposition after the aside binds to the
+# aside instead of to the word the writer meant.
+POSTPOSITIONS_TR = ('ile', 'sonra', 'önce', 'beri', 'kadar', 'karşı', 'göre',
+                    'için', 'gibi', 'doğru', 'rağmen', 'boyunca', 'dolayı')
+NUMERIQUE = re.compile(r'[\d\s.,/–—\-]+\Z')
+
+
+def unparenthesize(t, cid, log, lang=None):
     """Parentheses give the voice no pause, so an aside runs straight into the
-    sentence ("Caravaggio (1571-1610) imposed"). Commas do."""
+    sentence ("Caravaggio (1571-1610) imposed"). Commas do — but only where the
+    sentence has no commas of its own. Inside a list, two more commas make the
+    gloss another item: "four forces: thrust, forward, drag, the braking of the
+    air..." is heard as eight. There the aside is dropped instead."""
+    code = getattr(lang, 'LANG', None)
+    conj = COORDINATION.get(code, ())
+
+    def autour(i, j):
+        debut = max(t.rfind(c, 0, i) for c in '.!?\n')
+        fins = [x for x in (t.find(c, j) for c in '.!?\n') if x != -1]
+        return t[debut + 1:i], t[j:min(fins) if fins else len(t)]
+
     def rep(m):
-        out = f', {m.group(1).strip()},'
+        inner = m.group(1).strip()
+        avant, apres = autour(m.start(), m.end())
+        mot = re.match(r'\s*([^\W\d_]+)', apres)
+        mot = mot.group(1).lower() if mot else ''
+        postposition = code == 'tr' and mot in POSTPOSITIONS_TR
+        # Only prose lands wrongly in the Turkish subject slot; a date sitting
+        # next to the verb is read as the apposition it is.
+        sujet_tr = code == 'tr' and len(apres.split()) <= 5
+        # A bare date or number is never mistaken for an item, so it survives
+        # the list test — that case is what the commas were added for.
+        if NUMERIQUE.match(inner) and not postposition:
+            out = f', {inner},'
+            log(cid, 'parenthèses', m.group(0).strip(), out)
+            return out
+        if (postposition or sujet_tr or mot in conj
+                or ',' in avant or ',' in apres or ':' in avant):
+            log(cid, 'parenthèse retirée', m.group(0).strip(), '(supprimée)')
+            return ''
+        out = f', {inner},'
         log(cid, 'parenthèses', m.group(0).strip(), out)
         return out
 
-    return re.sub(r'\s*\(([^()]*)\)', rep, t)
+    t = re.sub(r'\s*\(([^()]*)\)', rep, t)
+    # "av. J.-C.," at the close of a sentence leaves a comma against the period.
+    return re.sub(r',(\s*[.;:!?])', r'\1', t)
 
 
 def capitalize_first(t, lang=None):
@@ -143,7 +190,10 @@ def capitalize_sentences(t, lang=None):
         if t[max(0, i - 2):i] == '..':          # « ... ou explosent » : suspension
             return m.group(0)
         mot_avant = re.search(r'([\w\u00c0-\u024f-]+)$', t[:i])
-        if mot_avant and mot_avant.group(1).strip('-') in ABREV_POINT:
+        avant = mot_avant.group(1).strip('-') if mot_avant else ''
+        # Une initiale isolée — « John F. » — porte un point qui n'est pas
+        # une fin de phrase : capitaliser le mot suivant la couperait en deux.
+        if avant in ABREV_POINT or (len(avant) == 1 and avant.isupper()):
             return m.group(0)                   # « av. J.-C. », « vs. »
         return m.group('fin') + m.group('esp') + capitalize_first(m.group('mot'), lang)
     return SENTENCE_START.sub(rep, t)
@@ -185,7 +235,7 @@ def render(course, lang, log):
 
     def say(text):
         t = strip_markup(prep(text), cid, log, lang)
-        t = unparenthesize(t, cid, log)
+        t = unparenthesize(t, cid, log, lang)
         t = lang.normalize(t, cid, log)
         t = lang.respell(t, cid, log)
         return capitalize_sentences(capitalize_first(tidy(t), lang), lang)
@@ -280,8 +330,12 @@ def problems(text, lang):
             found.append(('symbole', sym))
     # Une heure mal convertie laisse « dreizehn:dreißig » : deux mots soudés
     # par un signe qui n'a plus rien à séparer. Aucun contrôle ne le voyait.
-    for m in re.finditer(r'\w[:;/]\w', bare):
+    for m in re.finditer(r'\w[:;/,]\w', bare):
         found.append(('ponctuation collée', m.group(0)))
+    # « doscientos treinta y tresC » : une unité mangée laisse sa lettre
+    # collée au mot, et rien ne le signalait.
+    for m in re.finditer(r'[a-zà-öø-ÿ][A-Z]\b', bare):
+        found.append(('lettre orpheline', m.group(0)))
     found += lang.extra_checks(bare)
     return found
 

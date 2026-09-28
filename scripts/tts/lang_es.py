@@ -66,6 +66,8 @@ SOURCE_FIXES = {
 }
 
 QUOTES = {
+    'course_298_esope_a_t_il_vraiment_existe': {'attribution':
+        'Es el mandamiento que reescriben los cerdos, en Rebelión en la granja, la fábula que George Orwell publicó en mil novecientos cuarenta y cinco.'},
     'course_100_les_fleurs_du_mal_baudelaire': {'attribution':
         'Son los primeros versos de Correspondencias, de Charles Baudelaire.'},
     'course_101_1984_george_orwell': {'attribution':
@@ -175,11 +177,16 @@ def cardinal(n, genre='m', apocope=False):
 
 
 ORDINALES = {1: 'primer', 2: 'segund', 3: 'tercer', 4: 'cuart', 5: 'quint', 6: 'sext',
-             7: 'séptim', 8: 'octav', 9: 'noven', 10: 'décim'}
+             7: 'séptim', 8: 'octav', 9: 'noven', 10: 'décim',
+             # « la Decimotercera Enmienda », no « la trece Enmienda »: en los
+             # nombres propios el español mantiene el ordinal más allá de diez.
+             11: 'undécim', 12: 'duodécim', 13: 'decimotercer', 14: 'decimocuart',
+             15: 'decimoquint', 16: 'decimosext', 17: 'decimoséptim',
+             18: 'decimoctav', 19: 'decimonoven', 20: 'vigésim'}
 
 
 def ordinal(n, genre='m'):
-    """Spanish uses an ordinal only up to ten; past that the cardinal is said."""
+    """Ordinals are said up to twenty; past that Spanish says the cardinal."""
     if n in ORDINALES:
         return ORDINALES[n] + ('a' if genre == 'f' else 'o')
     return cardinal(n, genre)
@@ -228,14 +235,20 @@ def roman_to_int(r):
 
 # 26 soberanos del corpus. Nada se deduce del patrón: « rayos X », « una V »,
 # « Franklin D. » y « a. C. » tienen exactamente la misma forma.
-REGNAL_FEM = {'Isabel'}
-REGNAL = ['Urbano II', 'Nicolás II', 'Luis XVI', 'Napoleón III', 'Carlos VII', 'Julio II',
-          'Carlos X', 'Moctezuma II', 'León III', 'Mehmed II', 'Constantino XI', 'Isabel I',
-          'Francisco I', 'Francisco II', 'Alejandro I', 'José II', 'Luis XIV', 'Abdülhamid II',
-          'Alejo I', 'Alarico I', 'Felipe II', 'Inocencio III', 'Enrique III', 'Clemente VI',
-          'Enrique VI', 'Luis Felipe I']
-_REGNAL_RE = re.compile(r'(?<![\w-])(' + '|'.join(re.escape(k) for k in sorted(REGNAL, key=len, reverse=True))
-                        + r')(?=[\s.,;:!?¿¡\'’”)]|$)')
+REGNAL_FEM = {'Isabel', 'Catalina', 'María', 'Victoria', 'Ana'}
+# Una lista de parejas nombre+cifra se queda corta en cuanto llega un curso
+# nuevo: se enumeran los NOMBRES, y la cifra se convierte sola.
+REGNAL = {
+    'Urbano', 'Nicolás', 'Luis', 'Napoleón', 'Carlos', 'Julio', 'Moctezuma',
+    'León', 'Mehmed', 'Constantino', 'Isabel', 'Francisco', 'Alejandro',
+    'José', 'Abdülhamid', 'Alejo', 'Alarico', 'Felipe', 'Inocencio',
+    'Enrique', 'Clemente', 'Teodosio', 'Valentiniano', 'Lorenzo', 'Fernando',
+    'Pedro', 'Juan', 'Pío', 'Gregorio', 'Ricardo', 'Eduardo', 'Jorge',
+    'Catalina', 'María', 'Victoria', 'Ana', 'Guillermo', 'Otón', 'Federico',
+}
+_REGNAL_RE = re.compile(r'(?<![\w-])(?P<nom>' + '|'.join(sorted(REGNAL, key=len, reverse=True))
+                        + r')(?:\s+Felipe)?\s+(?P<rom>[IVXLCDM]{1,6})'
+                        + r'(?=[\s.,;:!?¿¡\'’”)]|$)')
 
 SIGLO = re.compile(r'\b(?P<pal>[Ss]iglos?)\s+(?P<a>[IVXLCDM]+)\b'
                    r'(?:(?P<sep>\s*-\s*|\s+(?:al?|y(?:\s+el)?)\s+)(?P<b>[IVXLCDM]+)\b)?')
@@ -253,9 +266,29 @@ def fix_era(t, cid, log):
     return ERA.sub(rep, t)
 
 
+# « del siglo V o principios del VI »: la segunda cifra sigue hablando de
+# siglos, pero ya no lleva la palabra delante.
+SIGLO_ELIDIDO = re.compile(r'\b(?P<art>del|de la|al|a la|o|u|y|e)\s+(?P<rom>[IVXLCDM]{1,5})\b')
+
+
+def fix_siglo_elidido(t, cid, log):
+    def rep(m):
+        avant = t[max(0, m.start() - 90):m.start()]
+        if not re.search(r'[Ss]iglos?\b', avant):
+            return m.group(0)
+        n = roman_to_int(m.group('rom'))
+        out = f"{m.group('art')} {ordinal(n, 'm') if n <= 10 else cardinal(n)}"
+        log(cid, 'siglo', m.group(0), out)
+        return out
+    return SIGLO_ELIDIDO.sub(rep, t)
+
+
 def fix_siglos(t, cid, log):
     def rep(m):
-        out = f"{m.group('pal')} {cardinal(roman_to_int(m.group('a')))}"
+        n = roman_to_int(m.group('a'))
+        # « siglo quinto », no « siglo cinco »: hasta diez el español
+        # dice el ordinal, y el resto del módulo ya lo hace así.
+        out = f"{m.group('pal')} {ordinal(n, 'm') if n <= 10 else cardinal(n)}"
         if m.group('b'):
             out += f"{m.group('sep')}{cardinal(roman_to_int(m.group('b')))}"
         log(cid, 'siglo', m.group(0), out)
@@ -265,11 +298,13 @@ def fix_siglos(t, cid, log):
 
 def fix_regnal(t, cid, log):
     def rep(m):
-        raw = m.group(1)
-        nombre, rom = raw.rsplit(' ', 1)
+        nombre, rom = m.group('nom'), m.group('rom')
+        n = roman_to_int(rom)
         genre = 'f' if nombre in REGNAL_FEM else 'm'
-        out = f'{nombre} {ordinal(roman_to_int(rom), genre)}'
-        log(cid, 'romano', raw, out)
+        # « Luis segundo » hasta diez, « Luis dieciséis » después.
+        cifra = ordinal(n, genre) if n <= 10 else cardinal(n, genre)
+        out = m.group(0)[:m.group(0).rindex(rom)] + cifra
+        log(cid, 'romano', m.group(0), out)
         return out
     return _REGNAL_RE.sub(rep, t)
 
@@ -296,6 +331,7 @@ UNIDADES = [
     ('km/s', 'kilómetro por segundo', 'kilómetros por segundo'),
     ('m/s', 'metro por segundo', 'metros por segundo'),
     ('g/l', 'gramo por litro', 'gramos por litro'),
+    ('km³', 'kilómetro cúbico', 'kilómetros cúbicos'),
     ('km²', 'kilómetro cuadrado', 'kilómetros cuadrados'),
     ('°C', 'grado Celsius', 'grados Celsius'),
     ('°F', 'grado Fahrenheit', 'grados Fahrenheit'),
@@ -312,13 +348,29 @@ UNIDAD = re.compile(r'(?:(?P<signo>[-+~≈])\s*)?(?P<n>' + NUM + r')\s?(?P<u>' +
 UNIDAD_SOLA = re.compile(r'(?P<pre>\b(?:millones|miles|millón) de )(?P<u>' + _ALT + r')(?![\w²])')
 SIGNOS = {'-': 'menos ', '+': 'más ', '~': 'unos ', '≈': 'unos '}
 RELOJ = re.compile(r'\b(?P<h>\d{1,2}):(?P<m>\d{2})\b')
-ORDINAL_IND = re.compile(r'\b(?P<n>\d{1,3})\.?(?P<g>[ºª°])')
+# El grado « ° » no es un indicador ordinal: « 233°C » es una temperatura,
+# y la regla se la comía dejando la « C » pegada al número.
+ORDINAL_IND = re.compile(r'(?<![\d,.])(?P<n>\d{1,3})\.?(?P<g>[ºª])(?![CF]\b)')
 CIRCA = re.compile(r'(?<![A-Za-zá-ú])c\.\s?(?=\d)')
 PORCIENTO = re.compile(r'(?P<n>' + NUM + r')\s?%')
 
 
 def _valor(s):
     return float(s.replace('.', '').replace(',', '.'))
+
+
+# « 82°17' » : des coordonnées, pas une température.
+COORD = re.compile(r"(?<![\d,.])(?P<d>\d{1,3})\s?°\s?(?:(?P<m>\d{1,2})\s?')?")
+
+
+def fix_coord(t, cid, log):
+    def rep(m):
+        out = f"{cardinal(int(m.group('d')))} grados"
+        if m.group('m'):
+            out += f" {cardinal(int(m.group('m')))} minutos"
+        log(cid, 'coordonnées', m.group(0), out)
+        return out
+    return COORD.sub(rep, t)
 
 
 def fix_unidades(t, cid, log):
@@ -384,6 +436,9 @@ def fix_porciento(t, cid, log):
 
 
 DESIGNADORES = [
+    ('MIC', 'M-I-C'),
+    ('Lascaux II', 'Lascaux dos'),
+
     ('CO₂', 'CO dos'),
     ('E=mc²', 'E igual a m c al cuadrado'),
     ('4/4', 'cuatro por cuatro'),
@@ -494,15 +549,17 @@ def fix_numeros(t, cid, log):
 def normalize(t, cid, log):
     t = fix_era(t, cid, log)
     t = fix_siglos(t, cid, log)
+    t = fix_siglo_elidido(t, cid, log)
     t = fix_regnal(t, cid, log)
     t = fix_republica(t, cid, log)
     t = fix_partes(t, cid, log)
     t = fix_circa(t, cid, log)
+    t = fix_unidades(t, cid, log)
+    t = fix_coord(t, cid, log)
     t = fix_numero(t, cid, log)
     t = fix_ordinal_ind(t, cid, log)
     t = fix_reloj(t, cid, log)
     t = fix_porciento(t, cid, log)
-    t = fix_unidades(t, cid, log)
     t = fix_designadores(t, cid, log)
     t = fix_rangos(t, cid, log)
     return fix_numeros(t, cid, log)

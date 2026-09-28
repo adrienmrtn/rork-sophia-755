@@ -83,6 +83,8 @@ SOURCE_FIXES = {
 # always says "Author, Work" while most of these lines belong to a character:
 # « La guerre, c'est la paix » is the Party's slogan, not Orwell's opinion.
 QUOTES = {
+    'course_298_esope_a_t_il_vraiment_existe': {'attribution':
+        "C'est le commandement réécrit par les cochons, dans La Ferme des animaux, la fable que George Orwell publie en mille neuf cent quarante-cinq."},
     'course_100_les_fleurs_du_mal_baudelaire': {'attribution':
         "Ce sont les premiers vers de Correspondances, de Charles Baudelaire."},
     'course_101_1984_george_orwell': {'attribution':
@@ -220,7 +222,9 @@ def ordinal_fr(n, feminin=False):
 ROMAN_VAL = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
 ROMAN_WORD = {1: 'premier', 2: 'deux', 3: 'trois', 4: 'quatre', 5: 'cinq', 6: 'six', 7: 'sept',
               8: 'huit', 9: 'neuf', 10: 'dix', 11: 'onze', 12: 'douze', 13: 'treize', 14: 'quatorze',
-              15: 'quinze', 16: 'seize'}
+              15: 'quinze', 16: 'seize', 17: 'dix-sept', 18: 'dix-huit',
+              19: 'dix-neuf', 20: 'vingt', 21: 'vingt et un', 22: 'vingt-deux',
+              23: 'vingt-trois', 24: 'vingt-quatre'}
 
 
 def roman_to_int(r):
@@ -316,12 +320,24 @@ RANGE = re.compile(r'\b(?P<a>1\d{3})\s*[-–]\s*(?P<b>\d{2,4})\b')
 RANGE_ANY = re.compile(r'(?<![\d,])(?P<a>\d+)\s*[-–]\s*(?P<b>\d+)(?!\d)')
 
 
+# « En 1936-1937 » ne devient pas « En de mille... » : la préposition qui
+# précède commande déjà, et c'est « et » qu'il faut alors, pas « de ... à ».
+PREP_ET = re.compile(r'\b(?:[Ee]n|[Vv]ers|[Ee]ntre|années)\s+$')
+PREP_A = re.compile(r"\b(?:[Dd]e|[Dd]epuis|[Dd]ès|[Dd]u|jusqu'en)\s+$")
+
+
 def fix_ranges(t, cid, log):
     def rep(m):
         a, b = m.group('a'), m.group('b')
         if len(b) == 2:
             b = a[:2] + b
-        out = f'de {a} à {b}'
+        avant = t[max(0, m.start() - 24):m.start()]
+        if PREP_ET.search(avant):
+            out = f'{a} et {b}'
+        elif PREP_A.search(avant):
+            out = f'{a} à {b}'
+        else:
+            out = f'de {a} à {b}'
         log(cid, 'plage', m.group(0), out)
         return out
     t = RANGE.sub(rep, t)
@@ -369,6 +385,20 @@ def fix_heures(t, cid, log):
     return HEURE.sub(rep, t)
 
 
+# « 82°17' sud » : des coordonnées, pas une température.
+COORDONNEES = re.compile(r"(?<![\d,])(?P<d>\d{1,3})\s?°\s?(?:(?P<m>\d{1,2})\s?')?")
+
+
+def fix_coordonnees(t, cid, log):
+    def rep(m):
+        out = f"{en_lettres(int(m.group('d')))} degrés"
+        if m.group('m'):
+            out += f" {en_lettres(int(m.group('m')))} minutes"
+        log(cid, 'coordonnées', m.group(0), out)
+        return out
+    return COORDONNEES.sub(rep, t)
+
+
 UNITES = [
     ('km/h', 'kilomètre par heure', 'kilomètres par heure'),
     ('km/s', 'kilomètre par seconde', 'kilomètres par seconde'),
@@ -376,6 +406,7 @@ UNITES = [
     ('g/l', 'gramme par litre', 'grammes par litre'),
     ('°C', 'degré Celsius', 'degrés Celsius'),
     ('°F', 'degré Fahrenheit', 'degrés Fahrenheit'),
+    ('km³', 'kilomètre cube', 'kilomètres cubes'),
     ('km²', 'kilomètre carré', 'kilomètres carrés'),
     ('km', 'kilomètre', 'kilomètres'),
     ('cm', 'centimètre', 'centimètres'),
@@ -421,6 +452,9 @@ def fix_unites(t, cid, log):
 # Noms qui collent des lettres et des chiffres : sans espace, le chiffre se
 # soude au mot (« M87 » donnait « Mquatre-vingt-sept »).
 DESIGNATEURS = [
+    ('MIC', 'M-I-C'),
+    ('Lascaux II', 'Lascaux deux'),
+
     ('CO₂', 'CO deux'),
     ('E=mc²', 'E égale m c au carré'),
     ('4/4', 'quatre-quatre'),
@@ -516,6 +550,7 @@ def normalize(t, cid, log):
     t = fix_percent(t, cid, log)
     t = fix_heures(t, cid, log)
     t = fix_unites(t, cid, log)
+    t = fix_coordonnees(t, cid, log)
     t = fix_designateurs(t, cid, log)
     t = fix_symboles(t, cid, log)
     return fix_elision(fix_nombres(t, cid, log), cid, log)

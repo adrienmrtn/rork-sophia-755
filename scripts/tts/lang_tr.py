@@ -78,6 +78,8 @@ SOURCE_FIXES = {
 }
 
 QUOTES = {
+    'course_298_esope_a_t_il_vraiment_existe': {'attribution':
+        "Domuzların yeniden yazdığı buyruk budur; George Orwell'in bin dokuz yüz kırk beşte yayımladığı Hayvan Çiftliği adlı fablda."},
     'course_100_les_fleurs_du_mal_baudelaire': {'attribution':
         "Bunlar, Charles Baudelaire'in Karşılıklar adlı sonesinin ilk dizeleridir."},
     'course_101_1984_george_orwell': {'attribution':
@@ -220,20 +222,21 @@ def roman_to_int(r):
 
 # Türkçede sıra sayısı adın önüne gelir: « XVI. Louis » = « On Altıncı Louis ».
 # Hiçbir kalıptan çıkarılamaz: « D. Roosevelt » ve « C. Clarke » aynı biçimdedir.
-HUKUMDAR_ONDE = [('II', 'Urban'), ('XVI', 'Louis'), ('II', 'Julius'), ('II', 'Nikolay'),
-                 ('III', 'Leo'), ('II', 'Mehmed'), ('I', 'Elizabeth'), ('I', 'François'),
-                 ('II', 'Franz'), ('I', 'Aleksandr'), ('II', 'Joseph'), ('XIV', 'Louis'),
-                 ('II', 'Abdülhamid'), ('III', 'Henry'), ('VI', 'Henry'), ('III', 'Napolyon'),
-                 ('X', 'Charles')]
-HUKUMDAR_ARKADA = [('Charles', 'VII'), ('Napolyon', 'III'), ('Moctezuma', 'II'),
-                   ('Konstantin', 'XI'), ('Nicholas', 'II'), ('Charles', 'X'),
-                   ('Louis-Philippe', 'I'), ('Aleksios', 'I'), ('Philip', 'II'),
-                   ('Masum', 'III'), ('Klement', 'VI')]
-
-_ONDE = re.compile(r'(?<![\w-])(' + '|'.join(f'{r}\\.\\s+{re.escape(n)}' for r, n in HUKUMDAR_ONDE)
-                   + r')(?![\w])')
-_ARKADA = re.compile(r'(?<![\w-])(' + '|'.join(f'{re.escape(n)}\\s+{r}' for n, r in HUKUMDAR_ARKADA)
-                     + r')(?![\w.])')
+# Çift listesi her yeni derste yetersiz kalıyor: adlar sayılır, rakam kendi
+# başına çevrilir. Türkçe sayıyı adın ÖNÜNE koyar: « İkinci Urban ».
+HUKUMDAR = {
+    'Urban', 'Louis', 'Julius', 'Nikolay', 'Nicholas', 'Leo', 'Mehmed',
+    'Elizabeth', 'François', 'Franz', 'Aleksandr', 'Joseph', 'Abdülhamid',
+    'Henry', 'Napolyon', 'Charles', 'Moctezuma', 'Konstantin', 'Aleksios',
+    'Philip', 'Masum', 'Klement', 'Theodosius', 'Valentinianus', 'Lorenzo',
+    'Ferdinand', 'Pedro', 'Jean', 'Pius', 'Gregorius', 'Richard', 'Edward',
+    'George', 'Katerina', 'Maria', 'Victoria', 'Anne', 'Wilhelm', 'Otto',
+    'Friedrich', 'James', 'Louis-Philippe', 'Sezar', 'Justinianus',
+}
+_NOMS = '|'.join(sorted((re.escape(n) for n in HUKUMDAR), key=len, reverse=True))
+# Kaynak iki biçimi de yazıyor: « II. Lorenzo » ve « Louis XVI ».
+_ONDE = re.compile(r'(?<![\w-])(?P<rom>[IVXLCDM]{1,6})\.\s+(?P<ad>' + _NOMS + r')(?![\wçğıöşü])')
+_ARKADA = re.compile(r'(?<![\w-])(?P<ad>' + _NOMS + r')\s+(?P<rom>[IVXLCDM]{1,6})(?![\w.çğıöşü])')
 ERA = re.compile(r'\bM\.\s?Ö\.|\bMÖ\b|\bM\.\s?S\.|\bMS\b')
 
 
@@ -247,25 +250,17 @@ def fix_era(t, cid, log):
 
 
 def fix_hukumdar(t, cid, log):
-    def onde(m):
-        rom, ad = m.group(1).split('.', 1)
-        out = f'{capitalize_first(ordinal(roman_to_int(rom)))} {ad.strip()}'
-        log(cid, 'romalı', m.group(1), out)
+    def rep(m):
+        out = f"{capitalize_first(ordinal(roman_to_int(m.group('rom'))))} {m.group('ad')}"
+        log(cid, 'hükümdar', m.group(0), out)
         return out
-    t = _ONDE.sub(onde, t)
-
-    def arkada(m):
-        ad, rom = m.group(1).rsplit(' ', 1)
-        # Türkçede sıra sayısı önce söylenir
-        out = f'{capitalize_first(ordinal(roman_to_int(rom)))} {ad}'
-        log(cid, 'romalı', m.group(1), out)
-        return out
-    return _ARKADA.sub(arkada, t)
-
+    return _ARKADA.sub(rep, _ONDE.sub(rep, t))
 
 SAAT = re.compile(r"(?<!\d)(?P<h>\d{1,2})\.(?P<d>\d{2})(?!\d)(?:['’](?P<ek>[a-zçğıöşü]+))?")
 SIRA_ARALIK = re.compile(r'\b(?P<a>\d{1,3})\.\s*[-–]\s*(?P<b>\d{1,3})\.')
-SIRA = re.compile(r'\b(?P<n>\d{1,3})\.\s+(?=[a-zçğıöşüA-ZÇĞİÖŞÜ])')
+# « büyüklük 9,5. Odak… »: burada nokta cümleyi bitirir ve 5 ondalıktır.
+# Virgülden sonra gelen basamak asla sıra sayısı değildir.
+SIRA = re.compile(r'(?<![\d,])\b(?P<n>\d{1,3})\.\s+(?=[a-zçğıöşüA-ZÇĞİÖŞÜ])')
 
 
 def fix_saat(t, cid, log):
@@ -307,7 +302,7 @@ YUZDE_ARKADA = re.compile(r'(?P<n>' + SAYI + r')\s?%')
 
 BIRIMLER = [('km/h', 'saatte', 'kilometre'), ('km/s', 'saniyede', 'kilometre'),
             ('m/s', 'saniyede', 'metre'), ('g/l', 'litrede', 'gram')]
-BASIT = [('km²', 'kilometrekare'), ('°C', 'santigrat derece'), ('°F', 'Fahrenhayt derece'),
+BASIT = [('km³', 'kilometreküp'), ('km²', 'kilometrekare'), ('°C', 'santigrat derece'), ('°F', 'Fahrenhayt derece'),
          ('km', 'kilometre'), ('cm', 'santimetre'), ('mm', 'milimetre'), ('kg', 'kilogram'),
          ('m²', 'metrekare'), ('°', 'derece')]
 _BIRIM_ALT = '|'.join(re.escape(u) for u, _, _ in BIRIMLER)
@@ -325,6 +320,20 @@ def fix_yuzde(t, cid, log):
         return out
     t = YUZDE_ONDE.sub(rep, t)
     return YUZDE_ARKADA.sub(rep, t)
+
+
+# « 82°17' » : des coordonnées, pas une température.
+COORD = re.compile(r"(?<![\d,.])(?P<d>\d{1,3})\s?°\s?(?:(?P<m>\d{1,2})\s?')?")
+
+
+def fix_coord(t, cid, log):
+    def rep(m):
+        out = f"{cardinal(int(m.group('d')))} derece"
+        if m.group('m'):
+            out += f" {cardinal(int(m.group('m')))} dakika"
+        log(cid, 'coordonnées', m.group(0), out)
+        return out
+    return COORD.sub(rep, t)
 
 
 def fix_birimler(t, cid, log):
@@ -351,7 +360,10 @@ def fix_birimler(t, cid, log):
     return BIRIM.sub(basit, t)
 
 
-DESIGNATOR = [('CO₂', 'CO iki'), ('E=mc²', 'E eşittir m c kare'), ('4/4', 'dört dörtlük'),
+DESIGNATOR = [
+    ('MIC', 'M-İ-C'),
+    ('Lascaux II', 'Lascaux iki'),
+('CO₂', 'CO iki'), ('E=mc²', 'E eşittir m c kare'), ('4/4', 'dört dörtlük'),
               ('TCP/IP', 'TCP IP'), ('OPEC+', 'OPEC artı'), ('OPEP+', 'OPEC artı')]
 SEMBOL = [
     (re.compile(r'\s*→\s*'), ' verir '),
@@ -438,6 +450,7 @@ SESSIZ_SERT = set('pçtkfhsş')
 # Bu yüzden kural yalnızca boru hattının simge/birim açtığı için apostrofun
 # yanlış sözcüğe yapıştığı durumları onarır; kaynak metne dokunmaz.
 PIPELINE_SOZCUKLERI = ({STAR_WORD}
+                       | {d.split()[-1] for _, d in DESIGNATOR}
                        | {ad for _, _, ad in BIRIMLER}
                        | {ad.split()[-1] for _, ad in BASIT})
 EK_APOSTROF = re.compile(r"\b(?P<kok>[A-Za-zÇĞİÖŞÜçğıöşü]+)['’](?P<ek>[a-zçğıöşü]+)")
@@ -487,6 +500,7 @@ def normalize(t, cid, log):
     t = fix_sira(t, cid, log)
     t = fix_yuzde(t, cid, log)
     t = fix_birimler(t, cid, log)
+    t = fix_coord(t, cid, log)
     t = fix_designator(t, cid, log)
     t = fix_aralik(t, cid, log)
     return fix_ek_apostrof(fix_sayilar(t, cid, log), cid, log)

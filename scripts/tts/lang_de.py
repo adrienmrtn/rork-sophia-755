@@ -193,6 +193,9 @@ ABKURZUNGEN = [
 
 # Feste Wendungen, die keine Regel zerlegen soll.
 BEZEICHNER = [
+    ('MIC', 'M-I-C'),
+    ('Lascaux II', 'Lascaux zwei'),
+
     ('E=mc²', 'E gleich m c Quadrat'),
     ('CO₂', 'C-O-zwei'),
     ('4/4-Takt', 'Vierviertel-Takt'),
@@ -228,6 +231,7 @@ HERRSCHER = {
     'Abdülhamid', 'Alarich', 'Alexander', 'Alexios', 'Clemens', 'Elisabeth',
     'Franz', 'Friedrich', 'Heinrich', 'Innozenz', 'Iwan', 'Johannes', 'Joseph',
     'Julius', 'Karl', 'Katharina', 'Konstantin', 'Leo', 'Ludwig', 'Maria',
+    'Lorenzo', 'Theodosius', 'Valentinian', 'Justinian', 'Konstantin',
     'Mehmed', 'Moctezuma', 'Napoleon', 'Nikolaus', 'Otto', 'Peter', 'Philipp',
     'Philippe', 'Pius', 'Urban', 'Viktoria', 'Wilhelm',
 }
@@ -255,7 +259,7 @@ def romisch_zu_zahl(s):
 TITEL = {'Kaiser', 'Kaiserin', 'König', 'Königin', 'Papst', 'Zar', 'Zaren',
          'Zarin', 'Sultan', 'Fürst', 'Herzog', 'Kalif', 'Sultans', 'Königs'}
 HERRSCHER_RX = re.compile(
-    r'(?P<vor>(?:\b[a-zäöü]+\s+)?)(?P<name>[A-ZÄÖÜ][\wäöüß]+)\s+'
+    r'(?P<vor>(?:\b[a-zäöü]+\s+)?(?:[A-ZÄÖÜ][\wäöüß]+\s+)?)(?P<name>[A-ZÄÖÜ][\wäöüß]+)\s+'
     r'(?P<rom>[IVXLCDM]{1,5})(?P<punkt>\.)?(?!\w)')
 
 # Präpositionen, die den Kasus des nachgestellten "der Zweite" bestimmen.
@@ -289,10 +293,15 @@ def fix_herrscher(t, cid, log):
         stamm_name = name
         weiblich = basis in HERRSCHERIN
         stamm = ordinal_stamm(romisch_zu_zahl(rom))
-        vor = m.group('vor').strip().lower()
+        # « unter Kaiser Franz II. »: die Präposition steht vor dem Titel,
+        # also zählt das erste kleingeschriebene Wort, nicht die Gruppe.
+        vor = next((w.lower() for w in m.group('vor').split() if w[:1].islower()), '')
         # "das Russland des Zaren Alexander I.": der Genitivartikel steht vor
         # dem Titel, nicht vor dem Namen.
-        davor = re.findall(r"[\wäöüßÄÖÜ]+", t[max(0, m.start() - 45):m.start()])
+        # Der Artikel kann jetzt im Treffer selbst stecken (« des Zaren
+        # Alexander I. »), also wird die Gruppe mitgelesen.
+        davor = re.findall(r"[\wäöüßÄÖÜ]+",
+                           t[max(0, m.start() - 45):m.start()] + m.group('vor'))
         for wort in reversed(davor[-3:]):
             if wort in TITEL:
                 continue
@@ -300,7 +309,10 @@ def fix_herrscher(t, cid, log):
                 genitiv = True
             break
         gross = stamm[0].upper() + stamm[1:]   # "Ludwig der Sechzehnte"
-        umgebung = t[max(0, m.start() - 40):m.end() + 40]
+        # Nur der laufende Satz zählt: sonst greift die Ausnahme von
+        # « ruft man Heinrich VI. aus » noch auf « Karl VII. » dahinter.
+        satz_anfang = max([t.rfind(c, 0, m.start()) for c in '.!?\n'] + [-1])
+        umgebung = t[max(satz_anfang + 1, m.start() - 40):m.end() + 40]
         sonderfall = next((k for rx, k in KASUS_AUSNAHMEN if rx.search(umgebung)), None)
         if genitiv:                        # "Urbans II. Aufruf"
             gelenk = ('der ' if weiblich else 'des ') + gross + 'en'
@@ -323,7 +335,9 @@ def fix_herrscher(t, cid, log):
     return HERRSCHER_RX.sub(rep, t)
 
 
-INITIALE = re.compile(r'\b([A-ZÄÖÜ])\.(?=\s*[A-ZÄÖÜ])')
+# « …bei 233 °C. Mehr als… »: das C gehört zur Einheit, der Punkt schliesst
+# den Satz. Eine Initiale steht nie hinter einer Ziffer oder einem Gradzeichen.
+INITIALE = re.compile(r'(?<![\d°\s])\b([A-ZÄÖÜ])\.(?=\s*[A-ZÄÖÜ])')
 
 
 def fix_initialen(t, cid, log):
@@ -386,7 +400,9 @@ def fix_ordinal(t, cid, log):
 
 ZAHL = r'\d{1,3}(?:\.\d{3})+|\d+(?:,\d+)?'
 
-EINHEITEN = [('km/h', 'Kilometer pro Stunde'), ('km²', 'Quadratkilometer'),
+EINHEITEN = [('km/h', 'Kilometer pro Stunde'), ('km/s', 'Kilometer pro Sekunde'),
+             ('m/s', 'Meter pro Sekunde'), ('g/l', 'Gramm pro Liter'),
+             ('km³', 'Kubikkilometer'), ('km²', 'Quadratkilometer'),
              ('m²', 'Quadratmeter'), ('°C', 'Grad Celsius'),
              ('°F', 'Grad Fahrenheit'), ('km', 'Kilometer'),
              ('cm', 'Zentimeter'), ('mm', 'Millimeter'), ('kg', 'Kilogramm'),
@@ -408,10 +424,27 @@ def _zahlwort(s, attributiv=False):
     return cardinal(int(s.replace('.', '')), attributiv)
 
 
+# « 82°17' » : des coordonnées, pas une température.
+COORD = re.compile(r"(?<![\d,.])(?P<d>\d{1,3})\s?°\s?(?:(?P<m>\d{1,2})\s?')?")
+
+
+def fix_coord(t, cid, log):
+    def rep(m):
+        out = f"{cardinal(int(m.group('d')))} Grad"
+        if m.group('m'):
+            out += f" {cardinal(int(m.group('m')))} Minuten"
+        log(cid, 'coordonnées', m.group(0), out)
+        return out
+    return COORD.sub(rep, t)
+
+
 def fix_einheiten(t, cid, log):
     def rep(m):
         wort = next(w for u, w in EINHEITEN if u == m.group('u'))
-        out = (VORZEICHEN.get(m.group('vz'), '') + _zahlwort(m.group('n'))
+        # « ein Kilometer », nicht « eins Kilometer »: vor dem Substantiv
+        # steht die kurze Form.
+        out = (VORZEICHEN.get(m.group('vz'), '')
+               + _zahlwort(m.group('n'), attributiv=(m.group('n') == '1'))
                + (m.group('tr') or ' ') + wort)
         log(cid, 'Einheit', m.group(0), out)
         return out
@@ -437,7 +470,9 @@ def fix_prozent(t, cid, log):
     return PROZENT.sub(rep, t)
 
 
-JAHR_BEREICH = re.compile(r'(?<![\d.,])(?P<a>\d{3,4})\s?[-–]\s?(?P<b>\d{3,4})(?![\d.,])')
+# Eine Jahreszahl in Klammern bekommt vom Komma-Ersatz ein Komma dahinter;
+# mit (?![\d.,]) schlug die Spanne dann fehl und blieb « 1870-1871 ».
+JAHR_BEREICH = re.compile(r'(?<![\d.,])(?P<a>\d{3,4})\s?[-–]\s?(?P<b>\d{3,4})(?!\d)')
 
 
 def fix_jahr_bereich(t, cid, log):
@@ -501,10 +536,16 @@ def fix_minus(t, cid, log):
 
 
 SYMBOLE = [('&', ' und '), ('→', ' ergibt '), ('=', ' gleich '), ('+', ' plus '),
-           ('€', ' Euro'), ('$', ' Dollar'), ('£', ' Pfund'), ('/', '-')]
+           ('€', ' Euro'), ('$', ' Dollar'), ('£', ' Pfund')]
+
+
+# « Ost/West » se dit « Ost-West »; la barre des vers, elle, est entourée
+# d'espaces et doit rester une frontière de vers.
+BARRE_MOT = re.compile(r'(?<=[A-Za-zÄÖÜäöüß])/(?=[A-Za-zÄÖÜäöüß])')
 
 
 def fix_symbole(t, cid, log):
+    t = BARRE_MOT.sub('-', t)
     for zeichen, wort in SYMBOLE:
         if zeichen in t:
             for _ in range(t.count(zeichen)):
@@ -598,9 +639,6 @@ SOURCE_FIXES = {
         ('[[manière_moderne]]', 'maniera moderna'),
     ],
     # Das Stichwort bündelt zwei Begriffe; eingefügt macht es den Satz falsch.
-    'course_214_la_crise_de_l_etat_providence': [
-        ('auf 1 Rentner', 'auf einen Rentner'),
-    ],
 }
 
 
@@ -613,6 +651,7 @@ def normalize(t, cid, log):
     t = fix_ordinal_bereich(t, cid, log)
     t = fix_ordinal(t, cid, log)
     t = fix_einheiten(t, cid, log)
+    t = fix_coord(t, cid, log)
     t = fix_einheit_skala(t, cid, log)
     t = fix_prozent(t, cid, log)
     t = fix_jahr_bereich(t, cid, log)
@@ -655,6 +694,8 @@ def extra_checks(bare):
 
 
 QUOTES = {
+    'course_298_esope_a_t_il_vraiment_existe': {'attribution':
+        'So schreiben die Schweine das Gebot um, in Farm der Tiere, der Fabel, die George Orwell neunzehnhundertfünfundvierzig veröffentlichte.'},
     'course_100_les_fleurs_du_mal_baudelaire': {'attribution':
         'Das sind die ersten Verse von Correspondances, von Charles Baudelaire.'},
     'course_101_1984_george_orwell': {'attribution':

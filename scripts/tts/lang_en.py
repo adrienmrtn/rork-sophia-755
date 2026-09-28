@@ -65,6 +65,8 @@ SOURCE_FIXES = {
 
 # Speaker first whenever the line is not the author's own voice.
 QUOTES = {
+    'course_298_esope_a_t_il_vraiment_existe': {'attribution':
+        'That is the commandment the pigs rewrite, in Animal Farm, the fable George Orwell published in nineteen forty-five.'},
     'course_100_les_fleurs_du_mal_baudelaire': {'attribution':
         'These are the opening lines of the sonnet Correspondences, by Charles Baudelaire.'},
     'course_101_1984_george_orwell': {'attribution':
@@ -215,6 +217,9 @@ TITLES = [
 ]
 
 DESIGNATORS = [
+    ('MIC', 'M-I-C'),
+    ('Lascaux II', 'Lascaux Two'),
+
     ('TR-808', 'T-R eight-oh-eight'),
     ('B-612', 'B six-twelve'),
     ('COVID-19', 'Covid nineteen'),
@@ -270,32 +275,70 @@ def fix_abbreviations(t, cid, log):
 
 # The 26 regnal names of the corpus plus the numbered parts, from a whitelist:
 # a pattern on the bare letters converts the pronoun "I", X-rays and initials.
+_ROMAN = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+
+
+def roman_to_int(r):
+    total = 0
+    for i, c in enumerate(r):
+        v = _ROMAN[c]
+        total += -v if i + 1 < len(r) and v < _ROMAN[r[i + 1]] else v
+    return total
+
+
+# A list of name+numeral pairs falls behind the moment a course is added, so
+# the NAMES are listed and the numeral is spelled out from them.
 REGNAL = {
-    'Urban II': 'Urban the Second', 'Nicholas II': 'Nicholas the Second',
-    'Louis XVI': 'Louis the Sixteenth', 'Napoleon III': 'Napoleon the Third',
-    'Charles VII': 'Charles the Seventh', 'Julius II': 'Julius the Second',
-    'Charles X': 'Charles the Tenth', 'Moctezuma II': 'Moctezuma the Second',
-    'Leo III': 'Leo the Third', 'Mehmed II': 'Mehmed the Second',
-    'Constantine XI': 'Constantine the Eleventh', 'Elizabeth I': 'Elizabeth the First',
-    'Francis I': 'Francis the First', 'Francis II': 'Francis the Second',
-    'Alexander I': 'Alexander the First', 'Joseph II': 'Joseph the Second',
-    'Louis-Philippe I': 'Louis-Philippe the First', 'Louis XIV': 'Louis the Fourteenth',
-    'Abdul Hamid II': 'Abdul Hamid the Second', 'Alexios I': 'Alexios the First',
-    'Alaric I': 'Alaric the First', 'Philip II': 'Philip the Second',
-    'Innocent III': 'Innocent the Third', 'Henry III': 'Henry the Third',
-    'Clement VI': 'Clement the Sixth', 'Henry VI': 'Henry the Sixth',
-    # numbered parts read as bare cardinals: "World War One", "Book Nine"
+    'Urban', 'Nicholas', 'Louis', 'Napoleon', 'Charles', 'Julius', 'Moctezuma',
+    'Leo', 'Mehmed', 'Constantine', 'Elizabeth', 'Francis', 'Alexander',
+    'Joseph', 'Abdul Hamid', 'Alexios', 'Alaric', 'Philip', 'Innocent',
+    'Henry', 'Clement', 'Theodosius', 'Valentinian', 'Lorenzo', 'Ferdinand',
+    'Peter', 'John', 'Pius', 'Gregory', 'Richard', 'Edward', 'George',
+    'Catherine', 'Mary', 'Victoria', 'Anne', 'William', 'Otto', 'Frederick',
+    'James', 'Louis-Philippe',
+}
+# Numbered parts are read as bare cardinals, not as "the Second".
+PART_NUMERALS = {
     'World War I': 'World War One', 'World War II': 'World War Two',
     'Book IX': 'Book Nine',
 }
-_REGNAL = re.compile(r'(?<![\w-])(' + '|'.join(re.escape(k) for k in sorted(REGNAL, key=len, reverse=True))
-                     + r')(?=[\s.,;:!?\'’”)]|$)')
+_PARTS = re.compile(r'(?<![\w-])(' + '|'.join(re.escape(k) for k in sorted(PART_NUMERALS, key=len, reverse=True))
+                    + r')(?=[\s.,;:!?\'’”)]|$)')
+_REGNAL = re.compile(r'(?<![\w-])(?P<name>' + '|'.join(sorted(REGNAL, key=len, reverse=True))
+                     + r')\s+(?P<rom>[IVXLCDM]{1,6})(?=[\s.,;:!?\'’”)]|$)')
+
+
+NUMERO = re.compile(r'#\s?(?=\d)')
+# "Y2K", "H-2A": a digit welded between letters is a code, not a quantity, and
+# it has to come apart before the number speller glues it to its neighbours.
+CODE_ALNUM = re.compile(r'(?<=[A-Za-z])(?=\d)|(?<=\d)(?=[A-Z])')
+
+
+def fix_codes(t, cid, log):
+    def num(m):
+        log(cid, 'sign', '#', 'number')
+        return 'number '
+    t = NUMERO.sub(num, t)
+    vorher = t
+    t = CODE_ALNUM.sub(' ', t)
+    if t != vorher:
+        log(cid, 'code', vorher[:38], t[:38])
+    return t
 
 
 def fix_regnal(t, cid, log):
+    def part(m):
+        log(cid, 'roman', m.group(1), PART_NUMERALS[m.group(1)])
+        return PART_NUMERALS[m.group(1)]
+    t = _PARTS.sub(part, t)
+
     def rep(m):
-        log(cid, 'romain', m.group(1), REGNAL[m.group(1)])
-        return REGNAL[m.group(1)]
+        # "Louis the Sixteenth": the ordinal is part of the name, so it is
+        # capitalised as the name is.
+        word = ordinal(roman_to_int(m.group('rom')))
+        out = f"{m.group('name')} the {word[:1].upper()}{word[1:]}"
+        log(cid, 'roman', m.group(0), out)
+        return out
     return _REGNAL.sub(rep, t)
 
 
@@ -359,6 +402,7 @@ UNITS = [
     ('km/s', 'kilometer per second', 'kilometers per second'),
     ('m/s', 'meter per second', 'meters per second'),
     ('g/l', 'gram per liter', 'grams per liter'),
+    ('km³', 'cubic kilometer', 'cubic kilometers'),
     ('km²', 'square kilometer', 'square kilometers'),
     ('°C', 'degree Celsius', 'degrees Celsius'),
     ('°F', 'degree Fahrenheit', 'degrees Fahrenheit'),
@@ -371,6 +415,20 @@ UNITS = [
 _UNIT_ALT = '|'.join(re.escape(u) for u, _, _ in UNITS)
 UNIT = re.compile(r'(?P<n>' + NUM + r')\s?(?P<u>' + _UNIT_ALT + r')(?![\w²])')
 UNIT_AFTER_SCALE = re.compile(r'(?P<scale>\b(?:million|billion|thousand) )(?P<u>' + _UNIT_ALT + r')(?![\w²])')
+
+
+# « 82°17' » : des coordonnées, pas une température.
+COORD = re.compile(r"(?<![\d,.])(?P<d>\d{1,3})\s?°\s?(?:(?P<m>\d{1,2})\s?')?")
+
+
+def fix_coord(t, cid, log):
+    def rep(m):
+        out = f"{cardinal(int(m.group('d')))} degrees"
+        if m.group('m'):
+            out += f" {cardinal(int(m.group('m')))} minutes"
+        log(cid, 'coordonnées', m.group(0), out)
+        return out
+    return COORD.sub(rep, t)
 
 
 def fix_units(t, cid, log):
@@ -561,11 +619,13 @@ def normalize(t, cid, log):
         s = _whole_token(s, TITLES, cid, log, 'titre')
         s = _whole_token(s, DESIGNATORS, cid, log, 'désignateur')
         s = fix_abbreviations(s, cid, log)
+        s = fix_codes(s, cid, log)
         s = fix_regnal(s, cid, log)
         s = fix_signs(s, cid, log)
         s = fix_currency(s, cid, log)
         s = fix_percent(s, cid, log)
         s = fix_units(s, cid, log)
+        s = fix_coord(s, cid, log)
         s = fix_initials(s, cid, log)
         s = fix_times(s, cid, log)
         s = fix_decimals_and_thousands(s, cid, log)
@@ -613,9 +673,10 @@ def extra_checks(bare):
     for sym in ('%', '$', '°', '/', '=', '+', '€', '£', '₂', '²', '³', '&'):
         if sym in bare:
             found.append(('symbole', sym))
-    for raw in REGNAL:
-        if re.search(r'(?<![\w-])' + re.escape(raw) + r'(?=[\s.,;:!?\'’”)]|$)', bare):
-            found.append(('romain', raw))
+    # REGNAL now lists names, so a bare "Nicholas" is ordinary prose: only a
+    # name still followed by its numeral means the rule failed to fire.
+    if _REGNAL.search(bare):
+        found.append(('romain', _REGNAL.search(bare).group(0)))
     for m in re.finditer(r'\b[IVX]{2,}\b', bare):
         found.append(('romain', m.group(0)))
     return found
