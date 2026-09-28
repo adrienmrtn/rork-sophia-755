@@ -57,10 +57,7 @@ struct ContentView: View {
 
                 // The path took the collections' slot; the former collections pages are gone.
                 Tab(languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath.fill", value: 2) {
-                    LearningPathView(
-                        progressManager: progressManager,
-                        selectedCourse: $selectedCourse
-                    )
+                    pathTab
                 }
 
                 Tab(languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", value: 3) {
@@ -133,9 +130,7 @@ struct ContentView: View {
                 .sophiaColorScheme()
             }
             .onChange(of: pendingCourse) { _, newValue in
-                if newValue == nil {
-                    selectedCourse = nil
-                }
+                clearSelectionIfDismissed(newValue)
             }
 
             if showSwipeTutorial, HomeCardPresentation.style == .legacy {
@@ -312,6 +307,13 @@ struct ContentView: View {
         .trackAnalyticsLifecycle(isPremium: storeVM.isPremium)
     }
 
+    private var pathTab: some View {
+        LearningPathView(
+            progressManager: progressManager,
+            selectedCourse: $selectedCourse
+        )
+    }
+
     /// In-app only: tiny banner the calendar day before trial end, once per day, auto-hides in 1s.
     private func presentTrialEndingBannerIfNeeded() {
         guard auth.isSignedIn, storeVM.trialExpiresInOneDay, !showTrialEndingBanner else { return }
@@ -327,6 +329,12 @@ struct ContentView: View {
             withAnimation(.easeOut(duration: 0.25)) {
                 showTrialEndingBanner = false
             }
+        }
+    }
+
+    private func clearSelectionIfDismissed(_ course: Course?) {
+        if course == nil {
+            selectedCourse = nil
         }
     }
 
