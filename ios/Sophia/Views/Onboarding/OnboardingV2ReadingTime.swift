@@ -27,16 +27,6 @@ struct OnboardingV2ReadingTime: View {
                     .padding(.horizontal, 28)
                     .ov2Reveal(delay: 0.05)
 
-                Spacer().frame(height: 10)
-
-                Text(languageManager.text("onboardingV2.readingTime.subtitle"))
-                    .font(DS.sans(.subheadline, .medium))
-                    .foregroundStyle(OV2.inkSecondary)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding(.horizontal, 32)
-                    .ov2Reveal(delay: 0.15)
-
                 Spacer().frame(height: 28)
 
                 SkyView(hour: hour)
