@@ -211,12 +211,24 @@ struct OnboardingV2Review: View {
 
 // MARK: - Avatar
 
-/// Profile picture of a testimonial. A bundled `review_avatar_<n>.png` is used when there
-/// is one; otherwise a generated portrait: initials on a gradient that is always the same
-/// for the same person.
+/// Profile picture of a testimonial. A bundled `review_avatar_<n>.jpg` (or `.png`) is used
+/// when there is one; otherwise a generated portrait: initials on a gradient that is
+/// always the same for the same person.
 private struct ReviewAvatar: View {
     let index: Int
     let name: String
+
+    /// `UIImage(named:)` only finds a bundled file without its extension when it is a PNG,
+    /// so the JPG portraits never showed. Looked up by URL, with the extension.
+    private static func bundledImage(index: Int) -> UIImage? {
+        for ext in ["jpg", "jpeg", "png"] {
+            if let url = Bundle.main.url(forResource: "review_avatar_\(index)", withExtension: ext),
+               let image = UIImage(contentsOfFile: url.path) {
+                return image
+            }
+        }
+        return UIImage(named: "review_avatar_\(index)")
+    }
 
     private static let palettes: [(Color, Color)] = [
         (Color(red: 0.98, green: 0.62, blue: 0.45), Color(red: 0.93, green: 0.35, blue: 0.45)),
@@ -233,7 +245,7 @@ private struct ReviewAvatar: View {
 
     var body: some View {
         Group {
-            if let image = UIImage(named: "review_avatar_\(index)") {
+            if let image = Self.bundledImage(index: index) {
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFill()
