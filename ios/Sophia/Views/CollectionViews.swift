@@ -1,10 +1,11 @@
 import SwiftUI
 
-/// Standalone Collections tab (separate page from the Library).
+/// The collections page as it stood when it had its own tab. The "Parcours" tab has taken
+/// that slot; the same content is reached from the path header (`CollectionsArchiveView`)
+/// until the path replaces it for good. Kept whole so it can still be mounted as a tab.
 ///
 /// Calm / editorial art direction: soft canvas, clean cards, a single blue accent and a
-/// minimalist vertical "path" for the collection detail (replacing the former gamified
-/// Duolingo-style winding trail, reward chest, completion rings and XP badges).
+/// minimalist vertical "path" for the collection detail.
 struct CollectionsView: View {
     @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
@@ -134,6 +135,75 @@ struct CollectionsOverviewView: View {
                     .buttonStyle(SoftPressButtonStyle())
                     .padding(.horizontal, 20)
                 }
+            }
+        }
+    }
+}
+
+// MARK: - Collections reached from the path
+
+/// The collections list, pushed from the path header. Same content as `CollectionsView`
+/// without its own navigation stack: the caller's stack supplies the `LearningCollection`
+/// destination, so the cards keep opening `CollectionDetailView`.
+struct CollectionsArchiveView: View {
+    @Environment(LanguageManager.self) private var languageManager
+    @Environment(\.dismiss) private var dismiss
+    let progressManager: ProgressManager
+    @Binding var selectedCourse: Course?
+
+    @State private var appeared = false
+
+    var body: some View {
+        ZStack {
+            DS.canvas.ignoresSafeArea()
+
+            ScrollView {
+                VStack(alignment: .leading, spacing: 24) {
+                    VStack(alignment: .leading, spacing: 14) {
+                        HStack(spacing: 14) {
+                            Button {
+                                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                dismiss()
+                            } label: {
+                                Image(systemName: "chevron.backward")
+                                    .font(.jakarta(size: 15, weight: .semibold))
+                                    .foregroundStyle(DS.inkSecondary)
+                                    .frame(width: 40, height: 40)
+                                    .background(DS.surface, in: Circle())
+                                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                            }
+                            .buttonStyle(SoftPressButtonStyle())
+
+                            Text(languageManager.text("library.tab.collections"))
+                                .font(DS.title(.title2, .semibold))
+                                .foregroundStyle(DS.ink)
+
+                            Spacer()
+                        }
+
+                        Text(languageManager.text("collections.subtitle"))
+                            .font(DS.sans(.subheadline))
+                            .foregroundStyle(DS.inkSecondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 10)
+
+                    CollectionsOverviewView(
+                        progressManager: progressManager,
+                        selectedCourse: $selectedCourse
+                    )
+                }
+                .padding(.bottom, 40)
+                .opacity(appeared ? 1 : 0)
+                .offset(y: appeared ? 0 : 10)
+            }
+            .scrollIndicators(.hidden)
+        }
+        .navigationBarHidden(true)
+        .onAppear {
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.9)) {
+                appeared = true
             }
         }
     }

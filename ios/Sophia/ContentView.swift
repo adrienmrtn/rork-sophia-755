@@ -55,8 +55,10 @@ struct ContentView: View {
                     )
                 }
 
-                Tab(languageManager.text("tab.collections"), systemImage: "square.stack.3d.up.fill", value: 2) {
-                    CollectionsView(
+                // The path took the collections' slot: the collections list is reached from
+                // its header until the path replaces it for good.
+                Tab(languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath.fill", value: 2) {
+                    LearningPathView(
                         progressManager: progressManager,
                         selectedCourse: $selectedCourse
                     )
@@ -345,7 +347,7 @@ struct ContentView: View {
         case 1:
             return "library"
         case 2:
-            return "collections"
+            return "path"
         case 3:
             return "training"
         case 4:
