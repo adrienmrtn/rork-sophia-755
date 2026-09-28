@@ -174,11 +174,13 @@ struct PathQuizPodFace: View {
 // MARK: - Start bubble, halo, shake
 
 /// The bobbing "start" call-out above the pod to play next.
+///
+/// The bob runs through `phaseAnimator`, which keeps the animation inside this view. A
+/// `withAnimation(.repeatForever)` started in `onAppear` leaked into the lazy trail around
+/// it and made the whole page sway back and forth.
 struct PathStartBubble: View {
     let text: String
     let tint: Color
-
-    @State private var bob = false
 
     var body: some View {
         VStack(spacing: -1) {
@@ -195,11 +197,10 @@ struct PathStartBubble: View {
         }
         .compositingGroup()
         .shadow(color: .black.opacity(0.12), radius: 10, y: 5)
-        .offset(y: bob ? -4 : 3)
-        .onAppear {
-            withAnimation(.easeInOut(duration: 0.75).repeatForever(autoreverses: true)) {
-                bob = true
-            }
+        .phaseAnimator([false, true]) { content, raised in
+            content.offset(y: raised ? -4 : 3)
+        } animation: { _ in
+            .easeInOut(duration: 0.75)
         }
         .accessibilityHidden(true)
     }
@@ -216,23 +217,21 @@ struct PathBubblePointer: Shape {
     }
 }
 
-/// Soft breathing glow behind the pod to play next.
+/// Soft breathing glow behind the pod to play next. Same `phaseAnimator` reason as the bubble.
 struct PathPulseHalo: View {
     let tint: Color
     let diameter: CGFloat
-
-    @State private var pulse = false
 
     var body: some View {
         Circle()
             .fill(tint.opacity(0.22))
             .frame(width: diameter * 1.4, height: diameter * 1.4)
-            .scaleEffect(pulse ? 1.12 : 0.9)
-            .opacity(pulse ? 0.35 : 0.95)
-            .onAppear {
-                withAnimation(.easeInOut(duration: 1.3).repeatForever(autoreverses: true)) {
-                    pulse = true
-                }
+            .phaseAnimator([false, true]) { content, expanded in
+                content
+                    .scaleEffect(expanded ? 1.12 : 0.9)
+                    .opacity(expanded ? 0.35 : 0.95)
+            } animation: { _ in
+                .easeInOut(duration: 1.3)
             }
             .allowsHitTesting(false)
             .accessibilityHidden(true)
@@ -296,8 +295,12 @@ struct PathTrailBaseShape: Shape {
 
 // MARK: - Level banner
 
-/// Header of a level: the collection cover, its number and title. Greyed while locked,
-/// with a chip saying so; a golden chip once the level is passed.
+/// Header of a level: the collection cover with its number and title centred on it.
+/// Greyed while locked, with a chip saying so; a golden chip once the level is passed.
+///
+/// The text is an overlay of the fixed-height cover, so the cover's size is settled
+/// before the text is laid out: the previous bottom-aligned stack was measured one line
+/// short and its title ran off the bottom edge.
 struct PathLevelBanner: View {
     @Environment(LanguageManager.self) private var languageManager
     let level: PathLevel
@@ -305,47 +308,52 @@ struct PathLevelBanner: View {
     let isPassed: Bool
     let accentIndex: Int
 
+    static let height: CGFloat = 176
+
     var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            CollectionCoverView(collection: level.collection, accentIndex: accentIndex)
-                .grayscale(isUnlocked ? 0 : 1)
-                .opacity(isUnlocked ? 1 : 0.6)
-
-            LinearGradient(
-                colors: [.clear, .black.opacity(0.25), .black.opacity(0.78)],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-
-            VStack(alignment: .leading, spacing: 6) {
-                HStack(alignment: .center) {
+        CollectionCoverView(collection: level.collection, accentIndex: accentIndex)
+            .frame(height: Self.height)
+            .frame(maxWidth: .infinity)
+            .grayscale(isUnlocked ? 0 : 1)
+            .opacity(isUnlocked ? 1 : 0.55)
+            .overlay {
+                LinearGradient(
+                    colors: [.black.opacity(0.30), .black.opacity(0.46), .black.opacity(0.62)],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+            }
+            .overlay {
+                VStack(spacing: 8) {
                     Text(caption)
                         .font(DS.sans(.caption2, .bold))
                         .tracking(1.2)
                         .foregroundStyle(.white.opacity(0.85))
                         .lineLimit(1)
-                    Spacer(minLength: 8)
-                    statusChip
+                    Text(level.collection.title)
+                        .font(DS.title(.title2, .semibold))
+                        .foregroundStyle(.white)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.8)
                 }
-                Text(level.collection.title)
-                    .font(DS.title(.title3, .semibold))
-                    .foregroundStyle(.white)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
+                .padding(.horizontal, 24)
+                .padding(.vertical, 36)
+                .frame(maxWidth: .infinity)
+                .shadow(color: .black.opacity(0.35), radius: 8, y: 2)
             }
-            .padding(16)
-        }
-        .frame(height: 156)
-        .frame(maxWidth: .infinity)
-        .clipShape(.rect(cornerRadius: DS.Radius.card))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
-        }
-        .dsSoftShadow()
-        .animation(.easeInOut(duration: 0.6), value: isUnlocked)
-        .animation(.easeInOut(duration: 0.35), value: isPassed)
+            .overlay(alignment: .topTrailing) {
+                statusChip
+                    .padding(12)
+            }
+            .clipShape(.rect(cornerRadius: DS.Radius.card))
+            .overlay {
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .strokeBorder(.white.opacity(0.14), lineWidth: 1)
+            }
+            .dsSoftShadow()
+            .animation(.easeInOut(duration: 0.6), value: isUnlocked)
+            .animation(.easeInOut(duration: 0.35), value: isPassed)
     }
 
     private var caption: String {
@@ -374,6 +382,6 @@ struct PathLevelBanner: View {
         .foregroundStyle(tint)
         .padding(.horizontal, 10)
         .padding(.vertical, 6)
-        .background(.black.opacity(0.35), in: Capsule())
+        .background(.black.opacity(0.4), in: Capsule())
     }
 }
