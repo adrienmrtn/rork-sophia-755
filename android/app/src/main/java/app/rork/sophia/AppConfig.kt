@@ -14,5 +14,7 @@ object AppConfig {
     const val GOOGLE_WEB_CLIENT_ID = BuildConfig.GOOGLE_WEB_CLIENT_ID
     const val FORMSPREE_ENDPOINT = BuildConfig.FORMSPREE_ENDPOINT
     const val FORMSPREE_AMBASSADOR_ENDPOINT = BuildConfig.FORMSPREE_AMBASSADOR_ENDPOINT
+    /** Page du programme créateurs, ouverte par la bannière « Deviens ambassadeur » des réglages. */
+    const val CREATORS_URL = "https://sophia-culture.com/fr/createurs"
     const val PREMIUM_ENTITLEMENT = "premium"
 }

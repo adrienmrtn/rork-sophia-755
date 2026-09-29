@@ -132,7 +132,12 @@ struct SettingsView: View {
             .sheet(isPresented: $showTerms) { TermsView().sophiaSheetChrome() }
             .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaSheetChrome() }
             .sheet(isPresented: $showFeedback) { FeedbackView(isPremium: store.isPremium) }
-            .sheet(isPresented: $showAmbassador) { AmbassadorView() }
+            .sheet(isPresented: $showAmbassador) {
+                if let url = URL(string: AppConfig.CREATORS_URL) {
+                    InAppSafariView(url: url)
+                        .ignoresSafeArea()
+                }
+            }
             .sheet(isPresented: $showAudioDownloads) { AudioDownloadsView().sophiaSheetChrome() }
             .sheet(isPresented: $showDebugNotifications) {
                 #if DEBUG
@@ -543,9 +548,11 @@ struct SettingsView: View {
 
     // MARK: - Ambassador banner
 
+    /// Ouvre la page créateurs du site (le formulaire intégré n'est plus affiché).
     private var ambassadorBanner: some View {
         Button {
             hapticTrigger += 1
+            AnalyticsService.trackAmbassadorOpened()
             showAmbassador = true
         } label: {
             HStack(spacing: 14) {
