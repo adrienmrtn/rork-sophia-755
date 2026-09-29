@@ -2,8 +2,9 @@ import Foundation
 import RevenueCat
 import UserNotifications
 
-/// La notification quotidienne, à l'heure choisie dans l'onboarding : la question du jour
-/// (« Pourquoi le savon tue-t-il les bactéries ? »), qui ouvre le cours au toucher.
+/// La notification quotidienne, à l'heure choisie dans l'onboarding : « Ton cours du jour est
+/// prêt », avec la question du jour en sous-titre (« Pourquoi le savon tue-t-il les
+/// bactéries ? »), qui ouvre le cours au toucher.
 ///
 /// Qui la reçoit (décision du 29/09/2026) :
 ///  - **Premium en essai gratuit : rien.** Ni notification ni widget pendant l'essai ; les
@@ -100,7 +101,8 @@ enum DailyCourseReminder {
         let pendingIds = await center.pendingNotificationRequests()
             .map(\.identifier)
             .filter { $0.hasPrefix(requestPrefix) || $0 == legacyRequestId }
-        let signature = ([language.rawValue, String(hour)] + planned.map { "\($0.id)=\($0.courseId)" })
+        // "copy2": the wording changed on 29/09/2026; a new token reprograms what was pending.
+        let signature = (["copy2", language.rawValue, String(hour)] + planned.map { "\($0.id)=\($0.courseId)" })
             .joined(separator: "|")
         if signature == UserDefaults.standard.string(forKey: signatureKey),
            Set(pendingIds) == Set(planned.map(\.id)) {
@@ -119,14 +121,13 @@ enum DailyCourseReminder {
         UserDefaults.standard.set(signature, forKey: signatureKey)
     }
 
-    /// La notification d'une question : titre = la question, texte = l'accroche, toucher =
-    /// le cours. Nil si le cours n'existe pas dans cette langue.
+    /// La notification d'une question : titre « Ton cours du jour est prêt », sous-titre = la
+    /// question, toucher = le cours. Nil si le cours n'existe pas dans cette langue.
     static func content(courseId: String, language: AppLanguage) -> UNMutableNotificationContent? {
         guard let course = ContentCatalog.course(withId: courseId, language: language) else { return nil }
         let content = UNMutableNotificationContent()
-        content.title = course.title
-        content.body = hook(for: courseId, language: language)
-            ?? AppLocalizable.string("notification.courseNudge.bodyFallback", language: language)
+        content.title = AppLocalizable.string("notification.dailyReady.title", language: language)
+        content.subtitle = course.title
         content.sound = .default
         content.threadIdentifier = "sophia.dailyQuestion"
         content.userInfo = ["deepLink": "sophia://course/\(courseId)"]
@@ -142,14 +143,5 @@ enum DailyCourseReminder {
         guard entitlement?.isActive == true, entitlement?.periodType == .trial else { return today }
         let trialEnd = calendar.startOfDay(for: entitlement?.expirationDate ?? now)
         return calendar.date(byAdding: .day, value: 1, to: trialEnd) ?? today
-    }
-
-    /// L'accroche du cours, sans balisage. Toutes les questions en ont une dans les 26 langues.
-    private static func hook(for courseId: String, language: AppLanguage) -> String? {
-        guard let hook = CourseContentStore.content(courseId: courseId, language: language)?.hero?.hook else {
-            return nil
-        }
-        let text = hook.withoutInlineMarkup.trimmingCharacters(in: .whitespacesAndNewlines)
-        return text.isEmpty ? nil : text
     }
 }

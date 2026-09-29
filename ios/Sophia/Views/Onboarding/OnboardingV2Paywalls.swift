@@ -39,9 +39,6 @@ struct OnboardingV2PaywallAnnual: View {
         store.paywallPriceDisplay(language: languageManager.current)
     }
 
-    /// A RevenueCat experiment can serve an offering whose annual product has no intro offer.
-    private var hasTrial: Bool { store.annualHasFreeTrial }
-
     var body: some View {
         VStack(spacing: 0) {
             HStack {
@@ -80,12 +77,19 @@ struct OnboardingV2PaywallAnnual: View {
                 OnboardingV2Button(
                     title: purchasing
                         ? languageManager.text("common.processing")
-                        : (hasTrial
-                            ? languageManager.trialText("onboardingV2.pw.startTrial", days: store.annualTrialDays)
-                            : languageManager.text("onboardingV2.pw.subscribe")),
+                        : languageManager.trialText("onboardingV2.pw.startTrial", days: store.annualTrialDays),
                     enabled: !purchasing,
                     action: purchase
                 )
+
+                // The amount the store actually charges, small and grey, right under the
+                // button: "(facturé 39,99 € par an)".
+                if !prices.yearlyBilledNote.isEmpty {
+                    Text("(\(prices.yearlyBilledNote))")
+                        .font(DS.sans(.footnote, .medium))
+                        .foregroundStyle(OV2.inkSecondary)
+                        .multilineTextAlignment(.center)
+                }
 
                 legalRow.padding(.bottom, 12)
             }
@@ -96,44 +100,19 @@ struct OnboardingV2PaywallAnnual: View {
         }
     }
 
-    /// With a trial, the offer leads with the free days (in green). Without one, the price is
-    /// the whole headline — promising a free trial that isn't served would be misleading.
-    ///
-    /// The headline carries the monthly equivalent ("3,33 € / mois"); the amount the store
-    /// actually charges sits right under it, small and grey ("facturé 39,99 € par an").
+    /// "Essaie 3 jours gratuitement, puis 3,33 € / mois (facturé annuellement)." — the free
+    /// days in green, then the monthly equivalent. Always worded with the trial: every annual
+    /// plan of the catalogue carries one, and a store that has not served the intro offer yet
+    /// (sandbox, offer pending review) used to make the page read "Premium à 3,33 € / mois"
+    /// (decision of 29/09/2026). The day count still follows the served product.
     private var headline: some View {
-        let content: Text = {
-            guard hasTrial else {
-                return Text(
-                    String(
-                        format: Self.withoutParenthetical(languageManager.text("onboardingV2.pw.priceNoTrial")),
-                        prices.yearlyPerMonth
-                    )
-                )
-                .font(DS.title(.title2, .heavy))
-                .foregroundColor(OV2.ink)
-            }
-            let green = languageManager.trialText("onboardingV2.pw.tryFree", days: store.annualTrialDays)
-            let rest = String(
-                format: Self.withoutParenthetical(languageManager.text("onboardingV2.pw.thenPrice")),
-                prices.yearlyPerMonth
-            )
-            return Text(green + " ").font(DS.title(.title2, .heavy)).foregroundColor(OV2.success)
+        let green = languageManager.trialText("onboardingV2.pw.tryFree", days: store.annualTrialDays)
+        let rest = String(format: languageManager.text("onboardingV2.pw.thenPrice"), prices.yearlyPerMonth)
+        return (
+            Text(green + " ").font(DS.title(.title2, .heavy)).foregroundColor(OV2.success)
                 + Text(rest).font(DS.title(.title2, .heavy)).foregroundColor(OV2.ink)
-        }()
-        return VStack(spacing: 6) {
-            content.multilineTextAlignment(.center)
-            Text(prices.yearlyBilledNote)
-                .font(DS.sans(.footnote, .medium))
-                .foregroundStyle(OV2.inkSecondary)
-                .multilineTextAlignment(.center)
-        }
-    }
-
-    /// "puis %@ (facturé annuellement)." → "puis %@." — the billing period moves to the
-    /// grey note under the headline, in every language, so it is not said twice.
-    private static func withoutParenthetical(_ text: String) -> String {
-        text.replacingOccurrences(of: #"\s*\([^)]*\)"#, with: "", options: .regularExpression)
+        )
+        .multilineTextAlignment(.center)
     }
 
     private var closeButton: some View {
