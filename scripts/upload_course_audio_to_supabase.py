@@ -51,13 +51,26 @@ def env_key() -> str:
     )
 
 
-def request(method: str, url: str, key: str, data: bytes | None = None, content_type: str | None = None) -> tuple[int, bytes]:
+def request(
+    method: str,
+    url: str,
+    key: str,
+    data: bytes | None = None,
+    content_type: str | None = None,
+    cache_control: str | None = None,
+) -> tuple[int, bytes]:
     headers = {
         "Authorization": f"Bearer {key}",
         "apikey": key,
+        # Storage ignores `?upsert=true` on a POST: without this header, re-uploading an
+        # object that already exists (manifest.json every run, a corrected MP3) fails
+        # with 400 "Duplicate".
+        "x-upsert": "true",
     }
     if content_type:
         headers["Content-Type"] = content_type
+    if cache_control:
+        headers["cache-control"] = cache_control
     req = urllib.request.Request(url, data=data, headers=headers, method=method)
     try:
         with urllib.request.urlopen(req, timeout=300) as resp:
@@ -156,7 +169,9 @@ def write_manifest(base: str, key: str, languages: list[str]) -> None:
     manifest = {lang: list_language(base, key, lang) for lang in languages}
     body = json.dumps(manifest, ensure_ascii=False, indent=2).encode()
     url = f"{base}/storage/v1/object/{BUCKET}/manifest.json?upsert=true"
-    code, resp = request("POST", url, key, body, "application/json")
+    # Short CDN lifetime: the default hour kept serving the previous manifest, so a new
+    # narration stayed invisible in the app long after its upload.
+    code, resp = request("POST", url, key, body, "application/json", cache_control="max-age=60")
     if code not in (200, 201):
         sys.exit(f"could not write manifest: HTTP {code} {resp.decode(errors='replace')}")
     for lang, ids in manifest.items():

@@ -4,8 +4,9 @@ import RevenueCat
 // MARK: - Shared legal row (restore · terms · privacy)
 
 /// Compact legal / restore row shared by the native in-app paywalls, styled with the
-/// app design system (`DS`) rather than the onboarding palette.
-private struct PaywallLegalRow: View {
+/// app design system (`DS`) rather than the onboarding palette. Internal rather than
+/// private so the paywalls that live in their own file (`SophiaAudioPaywall`) share it.
+struct PaywallLegalRow: View {
     @Environment(LanguageManager.self) private var languageManager
     var onRestore: () -> Void
     @State private var showTerms = false

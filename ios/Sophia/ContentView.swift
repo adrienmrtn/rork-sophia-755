@@ -27,6 +27,8 @@ struct ContentView: View {
     /// Set by an entry point that knows where the course came from (a link, the history
     /// screen) and consumed on the next open.
     @State private var explicitCourseSource: String? = nil
+    /// Full audio player, opened from the mini-player above the tab bar.
+    @State private var showAudioPlayer: Bool = false
 
     var body: some View {
         ZStack {
@@ -46,6 +48,7 @@ struct ContentView: View {
                         },
                         onOpenMyCourses: { showMyCourses = true }
                     )
+                    .audioMiniPlayerInset(onOpen: openAudioPlayer)
                 }
 
                 Tab(languageManager.text("tab.library"), systemImage: "books.vertical.fill", value: 1) {
@@ -53,11 +56,13 @@ struct ContentView: View {
                         progressManager: progressManager,
                         selectedCourse: $selectedCourse
                     )
+                    .audioMiniPlayerInset(onOpen: openAudioPlayer)
                 }
 
                 // The path took the collections' slot; the former collections pages are gone.
                 Tab(languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath.fill", value: 2) {
                     pathTab
+                        .audioMiniPlayerInset(onOpen: openAudioPlayer)
                 }
 
                 Tab(languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", value: 3) {
@@ -70,6 +75,7 @@ struct ContentView: View {
                             paywallContext = .entrainement
                         }
                     )
+                    .audioMiniPlayerInset(onOpen: openAudioPlayer)
                 }
 
                 Tab(languageManager.text("tab.profile"), systemImage: "person.fill", value: 4) {
@@ -82,6 +88,7 @@ struct ContentView: View {
                         },
                         onResetOnboarding: onResetOnboarding
                     )
+                    .audioMiniPlayerInset(onOpen: openAudioPlayer)
                 }
             }
             .tint(DS.accent)
@@ -222,11 +229,13 @@ struct ContentView: View {
             SophiaPaywallView(
                 context: context,
                 store: storeVM,
+                course: paywallCourse(for: context),
                 discountManager: discountManager,
                 secondsUntilReset: context == .debloquerCours ? progressManager.secondsUntilDailyReset() : nil,
                 onPurchased: {
                     if context == .offreDiscount { discountManager.markExpired() }
                     paywallContext = nil
+                    if context == .audio { playAudioAfterPurchase() }
                 },
                 onRestored: { paywallContext = nil },
                 onDismissed: { paywallContext = nil }
@@ -305,6 +314,45 @@ struct ContentView: View {
             blocker.syncLanguage(language)
         }
         .trackAnalyticsLifecycle(isPremium: storeVM.isPremium)
+        .courseAudioHost(
+            store: storeVM,
+            progressManager: progressManager,
+            showPlayer: $showAudioPlayer,
+            onShowPaywall: presentAudioPaywall
+        )
+    }
+
+    // MARK: - Audio
+
+    private func openAudioPlayer() {
+        showAudioPlayer = true
+    }
+
+    /// A free user asked for audio. From the full player (a subscription that lapsed), the
+    /// sheet has to go first: a cover cannot be presented over it from here.
+    private func presentAudioPaywall() {
+        guard showAudioPlayer else {
+            paywallContext = .audio
+            return
+        }
+        showAudioPlayer = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            paywallContext = .audio
+        }
+    }
+
+    /// The audio paywall shows the course the user wanted to hear.
+    private func paywallCourse(for context: SophiaPaywallContext) -> Course? {
+        guard context == .audio, let id = CourseAudioPlayer.shared.paywallCourseId else { return nil }
+        return ContentCatalog.course(withId: id)
+    }
+
+    /// Bought from the audio paywall: play what they asked for, without a second tap.
+    private func playAudioAfterPurchase() {
+        let player = CourseAudioPlayer.shared
+        player.isPremium = storeVM.isPremium
+        guard storeVM.isPremium, let id = player.paywallCourseId else { return }
+        player.requestPlay(courseId: id, source: "paywall_purchase")
     }
 
     private var pathTab: some View {

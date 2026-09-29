@@ -386,6 +386,11 @@ private struct TikTokCourseCard: View {
                         .strokeBorder(DS.hairline, lineWidth: 1)
                 }
                 .overlay(alignment: .topTrailing) { favoriteButton }
+                // Tap: listen. Long press: queue and download.
+                .overlay(alignment: .topLeading) {
+                    CourseAudioCardButton(courseId: course.id, source: "home_tiktok")
+                        .padding(12)
+                }
 
             HStack(spacing: 8) {
                 subjectPill
