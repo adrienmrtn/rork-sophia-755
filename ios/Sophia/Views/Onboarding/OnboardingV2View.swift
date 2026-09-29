@@ -5,9 +5,10 @@ import RevenueCat
 /// objectifs sélectionnés).
 ///
 /// Welcome · Langue · Objectifs (multi) · « Sophia va t'aider » · « Me cultiver » (questions) ·
-/// Temps d'écran (slider) · Ta vie en années · « Transforme ce temps » · « Fais bon usage » ·
-/// Swipe · Loading · Profil · Notifications · **Login** · Essai · Rappel · Paywall annuel ·
-/// Paywall comparatif.
+/// Temps d'écran (slider) · Ta vie en années · « Transforme ce temps » · Avis · « Fais bon
+/// usage » · Swipe · Loading · Profil · Notifications · **Login** · Essai · Rappel · Paywall
+/// annuel · Paywall comparatif. Les pages « Se cultiver, c'est long et cher » et « Des cours
+/// écrits par des docteurs et des profs » ont été retirées le 29/09/2026.
 struct OnboardingV2View: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AuthService.self) private var auth
@@ -30,8 +31,8 @@ struct OnboardingV2View: View {
     @State private var showExistingAccountSignIn = false
 
     private enum Screen: Hashable {
-        case welcome, language, objectives, problem, objectiveIntro
-        case questions, phoneTime, yearsGrid, transform, review, teachers, personalize
+        case welcome, language, objectives, objectiveIntro
+        case questions, phoneTime, yearsGrid, transform, review, personalize
         case swipe, loading, profile, readingTime, notifications, login
         case trialSteps, reminder, paywallAnnual, paywallComparison
 
@@ -43,14 +44,12 @@ struct OnboardingV2View: View {
             case .welcome: "welcome"
             case .language: "language"
             case .objectives: "objective"
-            case .problem: "problem"
             case .objectiveIntro: "objective_intro"
             case .questions: "questions"
             case .phoneTime: "phone_time"
             case .yearsGrid: "years_grid"
             case .transform: "transform"
             case .review: "review"
-            case .teachers: "teachers"
             case .personalize: "personalize"
             case .swipe: "swipe_courses"
             case .loading: "loading"
@@ -74,8 +73,8 @@ struct OnboardingV2View: View {
     /// l'offering servie (variante d'expérience RevenueCat) n'inclut pas d'essai, sinon on
     /// promettrait un essai que l'utilisateur n'aura pas.
     private var screens: [Screen] {
-        var list: [Screen] = [.welcome, .language, .objectives, .problem, .objectiveIntro,
-                              .questions, .phoneTime, .yearsGrid, .transform, .review, .teachers, .personalize,
+        var list: [Screen] = [.welcome, .language, .objectives, .objectiveIntro,
+                              .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
                               .swipe, .loading, .profile, .readingTime, .notifications, .login]
         if store.offerings == nil || store.annualHasFreeTrial {
             list.append(.trialSteps)
@@ -85,7 +84,7 @@ struct OnboardingV2View: View {
     }
 
     private static let dotScreens: Set<Screen> = [
-        .objectives, .problem, .objectiveIntro, .questions, .phoneTime, .yearsGrid, .review, .teachers, .swipe, .loading,
+        .objectives, .objectiveIntro, .questions, .phoneTime, .yearsGrid, .review, .swipe, .loading,
     ]
 
     private var current: Screen {
@@ -153,8 +152,6 @@ struct OnboardingV2View: View {
             OnboardingV2Language(onNext: advance)
         case .objectives:
             OnboardingV2Objective(vm: vm, onNext: advance)
-        case .problem:
-            OnboardingV2Problem(onNext: advance)
         case .objectiveIntro:
             OnboardingV2ObjectiveIntro(onNext: advance)
         case .questions:
@@ -167,8 +164,6 @@ struct OnboardingV2View: View {
             OnboardingV2Transform(onNext: advance)
         case .review:
             OnboardingV2Review(onNext: advance)
-        case .teachers:
-            OnboardingV2Teachers(onNext: advance)
         case .personalize:
             OnboardingV2Personalize(onNext: advance)
         case .swipe:

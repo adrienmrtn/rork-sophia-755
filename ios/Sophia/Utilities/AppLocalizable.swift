@@ -70,6 +70,7 @@ enum AppLocalizable {
     // MARK: - French
 
     private static let french: [String: String] = [
+        "notification.dailyReady.title": "Ton cours du jour est prêt",
         // MARK: Audio mode
         "audio.playNow": "Écouter maintenant",
         "audio.suggestions.title": "Ensuite, écoute…",
@@ -1103,6 +1104,7 @@ enum AppLocalizable {
     // MARK: - English
 
     private static let english: [String: String] = [
+        "notification.dailyReady.title": "Your course of the day is ready",
         // MARK: Audio mode
         "audio.playNow": "Listen now",
         "audio.suggestions.title": "Up next, try…",
@@ -2136,6 +2138,7 @@ enum AppLocalizable {
     // MARK: - Spanish
 
     private static let spanish: [String: String] = [
+        "notification.dailyReady.title": "Tu curso del día está listo",
         // MARK: Audio mode
         "audio.playNow": "Escuchar ahora",
         "audio.suggestions.title": "Después, escucha…",
@@ -3100,6 +3103,7 @@ enum AppLocalizable {
     // MARK: - German
 
     private static let german: [String: String] = [
+        "notification.dailyReady.title": "Dein Kurs des Tages ist bereit",
         // MARK: Audio mode
         "audio.playNow": "Jetzt anhören",
         "audio.suggestions.title": "Als Nächstes hören…",
@@ -4064,6 +4068,7 @@ enum AppLocalizable {
     // MARK: - Portuguese
 
     private static let portuguese: [String: String] = [
+        "notification.dailyReady.title": "O teu curso do dia está pronto",
         // MARK: Audio mode
         "audio.playNow": "Ouvir agora",
         "audio.suggestions.title": "A seguir, ouve…",
@@ -5028,6 +5033,7 @@ enum AppLocalizable {
     // MARK: - Italian
 
     private static let italian: [String: String] = [
+        "notification.dailyReady.title": "Il tuo corso del giorno è pronto",
         // MARK: Audio mode
         "audio.playNow": "Ascolta ora",
         "audio.suggestions.title": "Poi ascolta…",
@@ -5992,6 +5998,7 @@ enum AppLocalizable {
     // MARK: - Turkish
 
     private static let turkish: [String: String] = [
+        "notification.dailyReady.title": "Günün dersin hazır",
         // MARK: Audio mode
         "audio.playNow": "Şimdi dinle",
         "audio.suggestions.title": "Sırada dinle…",
@@ -6937,6 +6944,7 @@ enum AppLocalizable {
     // MARK: - Polish
 
     private static let polish: [String: String] = [
+        "notification.dailyReady.title": "Twój kurs dnia jest gotowy",
         // MARK: Audio mode
         "audio.playNow": "Słuchaj teraz",
         "audio.suggestions.title": "Posłuchaj potem…",
@@ -7882,6 +7890,7 @@ enum AppLocalizable {
     // MARK: - Romanian
 
     private static let romanian: [String: String] = [
+        "notification.dailyReady.title": "Cursul tău de azi este gata",
         // MARK: Audio mode
         "audio.playNow": "Ascultă acum",
         "audio.suggestions.title": "Apoi ascultă…",
@@ -8827,6 +8836,7 @@ enum AppLocalizable {
     // MARK: - Dutch
 
     private static let dutch: [String: String] = [
+        "notification.dailyReady.title": "Je cursus van de dag staat klaar",
         // MARK: Audio mode
         "audio.playNow": "Nu luisteren",
         "audio.suggestions.title": "Luister hierna…",
@@ -9772,6 +9782,7 @@ enum AppLocalizable {
     // MARK: - Greek
 
     private static let greek: [String: String] = [
+        "notification.dailyReady.title": "Το μάθημα της ημέρας σου είναι έτοιμο",
         // MARK: Audio mode
         "audio.playNow": "Άκου τώρα",
         "audio.suggestions.title": "Μετά, άκου…",
@@ -10717,6 +10728,7 @@ enum AppLocalizable {
     // MARK: - Swedish
 
     private static let swedish: [String: String] = [
+        "notification.dailyReady.title": "Dagens kurs är redo",
         // MARK: Audio mode
         "audio.playNow": "Lyssna nu",
         "audio.suggestions.title": "Lyssna sedan på…",
@@ -11662,6 +11674,7 @@ enum AppLocalizable {
     // MARK: - Hungarian
 
     private static let hungarian: [String: String] = [
+        "notification.dailyReady.title": "A mai kurzusod készen áll",
         // MARK: Audio mode
         "audio.playNow": "Meghallgatás most",
         "audio.suggestions.title": "Utána hallgasd…",
@@ -12607,6 +12620,7 @@ enum AppLocalizable {
     // MARK: - Bulgarian
 
     private static let bulgarian: [String: String] = [
+        "notification.dailyReady.title": "Курсът ти за деня е готов",
         // MARK: Audio mode
         "audio.playNow": "Слушай сега",
         "audio.suggestions.title": "След това слушай…",
@@ -13552,6 +13566,7 @@ enum AppLocalizable {
     // MARK: - Czech
 
     private static let czech: [String: String] = [
+        "notification.dailyReady.title": "Tvůj kurz dne je připraven",
         // MARK: Audio mode
         "audio.playNow": "Poslechnout hned",
         "audio.suggestions.title": "Potom si poslechni…",
@@ -14498,6 +14513,7 @@ enum AppLocalizable {
     // MARK: - Danish
 
     private static let danish: [String: String] = [
+        "notification.dailyReady.title": "Dagens kursus er klar",
         // MARK: Audio mode
         "audio.playNow": "Lyt nu",
         "audio.suggestions.title": "Lyt bagefter til…",
@@ -15444,6 +15460,7 @@ enum AppLocalizable {
     // MARK: - Norwegian
 
     private static let norwegian: [String: String] = [
+        "notification.dailyReady.title": "Dagens kurs er klart",
         // MARK: Audio mode
         "audio.playNow": "Lytt nå",
         "audio.suggestions.title": "Lytt deretter til …",
@@ -16390,6 +16407,7 @@ enum AppLocalizable {
     // MARK: - Russian
 
     private static let russian: [String: String] = [
+        "notification.dailyReady.title": "Твой курс дня готов",
         // MARK: Audio mode
         "audio.playNow": "Слушать сейчас",
         "audio.suggestions.title": "Дальше послушай…",
@@ -17336,6 +17354,7 @@ enum AppLocalizable {
     // MARK: - Croatian
 
     private static let croatian: [String: String] = [
+        "notification.dailyReady.title": "Tvoj tečaj dana je spreman",
         // MARK: Audio mode
         "audio.playNow": "Slušaj sada",
         "audio.suggestions.title": "Zatim poslušaj…",
@@ -18282,6 +18301,7 @@ enum AppLocalizable {
     // MARK: - Slovenian
 
     private static let slovenian: [String: String] = [
+        "notification.dailyReady.title": "Tvoj tečaj dneva je pripravljen",
         // MARK: Audio mode
         "audio.playNow": "Poslušaj zdaj",
         "audio.suggestions.title": "Nato poslušaj …",
@@ -19228,6 +19248,7 @@ enum AppLocalizable {
     // MARK: - Slovak
 
     private static let slovak: [String: String] = [
+        "notification.dailyReady.title": "Tvoj kurz dňa je pripravený",
         // MARK: Audio mode
         "audio.playNow": "Vypočuť teraz",
         "audio.suggestions.title": "Potom si vypočuj…",
@@ -20174,6 +20195,7 @@ enum AppLocalizable {
     // MARK: - Serbian
 
     private static let serbian: [String: String] = [
+        "notification.dailyReady.title": "Tvoj kurs dana je spreman",
         // MARK: Audio mode
         "audio.playNow": "Slušaj sada",
         "audio.suggestions.title": "Zatim poslušaj…",
@@ -21120,6 +21142,7 @@ enum AppLocalizable {
     // MARK: - Arabic
 
     private static let arabic: [String: String] = [
+        "notification.dailyReady.title": "درسك اليومي جاهز",
         // MARK: Audio mode
         "audio.playNow": "استمع الآن",
         "audio.suggestions.title": "بعدها، استمع إلى…",
@@ -22066,6 +22089,7 @@ enum AppLocalizable {
     // MARK: - Hebrew
 
     private static let hebrew: [String: String] = [
+        "notification.dailyReady.title": "השיעור היומי שלך מוכן",
         // MARK: Audio mode
         "audio.playNow": "להאזין עכשיו",
         "audio.suggestions.title": "אחר כך, להאזין ל…",
@@ -23012,6 +23036,7 @@ enum AppLocalizable {
     // MARK: - Finnish
 
     private static let finnish: [String: String] = [
+        "notification.dailyReady.title": "Päivän kurssisi on valmis",
         // MARK: Audio mode
         "audio.playNow": "Kuuntele nyt",
         "audio.suggestions.title": "Kuuntele seuraavaksi…",
@@ -23958,6 +23983,7 @@ enum AppLocalizable {
     // MARK: - Estonian
 
     private static let estonian: [String: String] = [
+        "notification.dailyReady.title": "Sinu päeva kursus on valmis",
         // MARK: Audio mode
         "audio.playNow": "Kuula kohe",
         "audio.suggestions.title": "Järgmisena kuula…",
