@@ -21,6 +21,8 @@ struct SettingsView: View {
     @State private var showAudioDownloads: Bool = false
     @State private var hapticTrigger: Int = 0
     @State private var reminderHour: Int = DailyCourseReminder.storedHour
+    /// Écran de test des notifications, ouvert depuis la section développeur (Debug).
+    @State private var showDebugNotifications: Bool = false
     /// Set only by the developer section, which is itself behind `#if DEBUG`.
     @State private var debugPaywall: SophiaPaywallContext? = nil
 
@@ -132,6 +134,11 @@ struct SettingsView: View {
             .sheet(isPresented: $showFeedback) { FeedbackView(isPremium: store.isPremium) }
             .sheet(isPresented: $showAmbassador) { AmbassadorView() }
             .sheet(isPresented: $showAudioDownloads) { AudioDownloadsView().sophiaSheetChrome() }
+            .sheet(isPresented: $showDebugNotifications) {
+                #if DEBUG
+                DebugNotificationsView()
+                #endif
+            }
         }
         .sophiaColorScheme()
     }
@@ -428,6 +435,14 @@ struct SettingsView: View {
                     }
                     rowDivider
                 }
+                actionRow(
+                    icon: "bell.badge",
+                    title: languageManager.text("settings.debug.notifications")
+                ) {
+                    hapticTrigger += 1
+                    showDebugNotifications = true
+                }
+                rowDivider
                 actionRow(
                     icon: "calendar.badge.minus",
                     title: languageManager.text("settings.debug.resetDaily"),
