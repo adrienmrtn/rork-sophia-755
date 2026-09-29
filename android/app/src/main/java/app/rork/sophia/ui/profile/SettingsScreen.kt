@@ -52,6 +52,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.BuildConfig
 import app.rork.sophia.SophiaApplication
+import app.rork.sophia.audio.CourseAudioDownloads
+import androidx.compose.material.icons.filled.Download
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.UserProgress
@@ -83,6 +85,7 @@ fun SettingsScreen(
     onOpenTerms: () -> Unit,
     onOpenPrivacy: () -> Unit,
     onRestorePurchases: () -> Unit,
+    onOpenAudioDownloads: () -> Unit = {},
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -229,6 +232,24 @@ fun SettingsScreen(
                     label = StringStore.text(context, "settings.premium.title", language),
                     subtitle = StringStore.text(context, "settings.premium.subtitle", language),
                     onClick = onShowPaywall,
+                )
+            }
+        }
+
+        val audioDownloads by CourseAudioDownloads.downloaded.collectAsState()
+        if (isPremium || audioDownloads.isNotEmpty()) {
+            SettingsSection(StringStore.text(context, "settings.section.audio", language))
+            SettingsGroup {
+                SettingsRow(
+                    icon = Icons.Filled.Download,
+                    label = StringStore.text(context, "audio.downloads.title", language),
+                    subtitle = StringStore.text(
+                        context,
+                        "audio.downloads.subtitle",
+                        language,
+                        android.text.format.Formatter.formatShortFileSize(context, CourseAudioDownloads.totalBytes()),
+                    ),
+                    onClick = onOpenAudioDownloads,
                 )
             }
         }

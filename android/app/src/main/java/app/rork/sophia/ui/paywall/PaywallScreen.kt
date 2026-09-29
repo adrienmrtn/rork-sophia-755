@@ -28,6 +28,11 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Bolt
+import androidx.compose.material.icons.filled.Download
+import androidx.compose.material.icons.filled.Headphones
+import androidx.compose.material.icons.filled.Language
+import androidx.compose.material.icons.filled.PhoneAndroid
+import androidx.compose.material.icons.filled.Speed
 import androidx.compose.material.icons.filled.LockOpen
 import androidx.compose.material.icons.filled.Quiz
 import androidx.compose.material.icons.filled.RestartAlt
@@ -90,6 +95,8 @@ enum class PaywallContext(val offeringId: String, val analyticsContext: String =
     DEBLOQUER_COURS("debloquer_cours"),
     QUIZZ("quizz"),
     ENTRAINEMENT(offeringId = "quizz", analyticsContext = "entrainement"),
+    /** Audio mode unlock. `audio` is only a fallback offering: the current one sells first. */
+    AUDIO("audio"),
 }
 
 private val COMPARISON_FEATURES = listOf(
@@ -168,6 +175,8 @@ fun PaywallScreen(
     onPurchased: () -> Unit,
     onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit = { _, _ -> },
     onRestored: () -> Unit = onPurchased,
+    /** The course a free user wanted to hear, for the audio paywall's cover. */
+    courseId: String? = null,
 ) {
     var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
     // iOS stacks a plan-comparison paywall when the first offer is dismissed, rather than
@@ -248,6 +257,15 @@ fun PaywallScreen(
             PaywallContext.DEBLOQUER_COURS -> CourseUnlockPaywall(
                 language = language,
                 storeViewModel = storeViewModel,
+                onDismiss = dismiss,
+                onPurchased = onPurchased,
+                onPurchaseMeta = onPurchaseMeta,
+                legalFooter = legalFooter,
+            )
+            PaywallContext.AUDIO -> AudioPaywall(
+                language = language,
+                storeViewModel = storeViewModel,
+                courseId = courseId,
                 onDismiss = dismiss,
                 onPurchased = onPurchased,
                 onPurchaseMeta = onPurchaseMeta,
@@ -810,6 +828,103 @@ private fun TrainingPaywall(
                 text = StringStore.text(context, "paywall.training.footnote", language),
                 style = SophiaTypography.labelMedium.copy(fontSize = 12.sp),
             )
+        }
+    }
+}
+
+/**
+ * Audio paywall: a free user tapped "Écouter", "Ajouter à la file" or "Télécharger". It
+ * sells listening itself — lock screen, five languages, speed, offline — over the cover of
+ * the course they wanted to hear.
+ */
+@Composable
+private fun AudioPaywall(
+    language: AppLanguage,
+    storeViewModel: StoreViewModel,
+    courseId: String?,
+    onDismiss: () -> Unit,
+    onPurchased: () -> Unit,
+    onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit,
+    legalFooter: @Composable () -> Unit,
+) {
+    val context = LocalContext.current
+    LaunchedEffect(Unit) {
+        storeViewModel.fetchOfferings()
+        storeViewModel.trackPaywallImpression("native_audio", PaywallContext.AUDIO.offeringId)
+    }
+    val offerings by storeViewModel.offerings.collectAsState()
+    val annual = remember(offerings) { storeViewModel.annualPackage(PaywallContext.AUDIO.offeringId) }
+    val hasTrial = storeViewModel.hasFreeTrial(annual)
+    val trialDays = storeViewModel.trialDays(annual) ?: 3
+    val yearly = storeViewModel.formattedPrice(annual, StoreViewModel.UNKNOWN_PRICE)
+    val perMonth = perMonthLabel(context, language, storeViewModel, annual)
+    var purchasing by remember { mutableStateOf(false) }
+    var error by remember { mutableStateOf<String?>(null) }
+    var notice by remember { mutableStateOf<String?>(null) }
+
+    PaywallShell(
+        language = language,
+        onDismiss = onDismiss,
+        priceLine = priceLineText(context, language, hasTrial, trialDays, yearly, perMonth),
+        ctaText = StringStore.text(
+            context,
+            if (hasTrial) "paywall.cta.activateTrial" else "paywall.cta.subscribe",
+            language,
+        ),
+        ctaIcon = Icons.Filled.Headphones,
+        purchasing = purchasing,
+        error = error,
+        notice = notice,
+        legalFooter = legalFooter,
+        onPurchase = {
+            purchasePackage(
+                context = context,
+                language = language,
+                pkg = annual,
+                storeViewModel = storeViewModel,
+                onStart = { purchasing = true },
+                onDone = { purchasing = false },
+                onError = { error = it; notice = null; purchasing = false },
+                onPending = { notice = it; error = null; purchasing = false },
+                onPurchased = {
+                    onPurchaseMeta(offeringIdOf(annual, PaywallContext.AUDIO), annual?.identifier)
+                    onPurchased()
+                },
+            )
+        },
+    ) {
+        if (courseId != null) PaywallCourseHero(courseId = courseId) else PaywallHero(icon = Icons.Filled.Headphones)
+        Spacer(Modifier.height(18.dp))
+        Text(
+            text = StringStore.text(context, "paywall.audio.title", language),
+            style = SophiaTypography.titleLarge.copy(fontSize = 24.sp, lineHeight = 30.sp),
+            textAlign = TextAlign.Center,
+        )
+        Spacer(Modifier.height(8.dp))
+        Text(
+            text = StringStore.text(context, "paywall.audio.subtitle", language),
+            style = SophiaTypography.bodyMedium,
+            textAlign = TextAlign.Center,
+        )
+        Spacer(Modifier.height(20.dp))
+        Column(
+            modifier = Modifier.fillMaxWidth().sophiaCard().padding(18.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+        ) {
+            listOf(
+                Icons.Filled.PhoneAndroid to "paywall.audio.feature1",
+                Icons.Filled.Language to "paywall.audio.feature2",
+                Icons.Filled.Speed to "paywall.audio.feature3",
+                Icons.Filled.Download to "paywall.audio.feature4",
+            ).forEach { (icon, key) ->
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                    PaywallHero(icon = icon, size = 36.dp)
+                    Text(
+                        text = StringStore.text(context, key, language),
+                        style = SophiaTypography.bodyMedium.copy(color = DS.ink, fontWeight = FontWeight.Medium),
+                    )
+                }
+            }
         }
     }
 }

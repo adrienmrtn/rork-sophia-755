@@ -79,6 +79,7 @@ import app.rork.sophia.data.TutorialFlags
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.ui.components.CircleIconButton
+import app.rork.sophia.ui.audio.CourseAudioButton
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.components.FirstOpenExplanation
 import app.rork.sophia.ui.components.Pill
@@ -502,6 +503,13 @@ private fun TikTokCourseCard(
                 modifier = Modifier
                     .align(Alignment.TopEnd)
                     .padding(12.dp),
+            )
+            // Tap: listen. Long press: queue and download.
+            CourseAudioButton(
+                courseId = course.id,
+                language = language,
+                source = "home_tiktok",
+                modifier = Modifier.align(Alignment.TopStart).padding(12.dp),
             )
         }
 

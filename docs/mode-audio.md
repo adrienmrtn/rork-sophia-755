@@ -1,7 +1,7 @@
-# Mode audio (iOS)
+# Mode audio (iOS et Android)
 
 Chaque cours peut être écouté comme un podcast, en 5 langues (FR, EN, ES, DE, TR). Réservé aux
-Premium. Android suivra dans une PR séparée.
+Premium. Mêmes fonctions, mêmes fichiers Supabase et mêmes textes sur iOS et Android.
 
 ## Ce que voit l'utilisateur
 
@@ -92,3 +92,24 @@ habituel avec `context = audio`.
 6. Compte gratuit : le casque avec cadenas ouvre le paywall audio.
 7. Tuer l'app pendant une écoute, relancer : le mini-lecteur est là, la lecture reprend au bon
    endroit.
+
+## Android
+
+Même parcours que sur iOS, avec les équivalents natifs :
+
+- **Lecture** : Media3 (ExoPlayer) dans un `MediaSessionService` (`audio/CourseAudioService.kt`,
+  `foregroundServiceType="mediaPlayback"`) : notification média, écran verrouillé, casques
+  Bluetooth, Android Auto et Wear. Focus audio géré (pause pendant un appel, reprise après),
+  pause quand on débranche le casque, contenu déclaré comme parole.
+- **File** : c'est la playlist d'ExoPlayer, donc « suivant » marche aussi depuis la notification.
+- **Où** : casque sur la couverture des cartes (accueil, bibliothèque) — appui = écouter,
+  appui long = menu —, casque dans l'en-tête du cours, mini-lecteur au-dessus des onglets,
+  lecteur plein écran (vitesse, langue, téléchargement, file réordonnable, « Ensuite,
+  écoute… » avec ＋, « Parcourir tous les audios »), Réglages › Audio › Téléchargements.
+- **Gratuit** : paywall `PaywallContext.AUDIO` (impression `native_audio`), l'audio démarre
+  après l'achat.
+- **Code** : `android/app/src/main/java/app/rork/sophia/audio/` (catalogue, téléchargements
+  dans `filesDir/course_audio`, lecteur, service) et `ui/audio/` (écrans). Textes dans
+  `assets/strings/*.json`, mêmes clés qu'iOS.
+- **Pas d'équivalent AirPlay** dans le lecteur : le choix de la sortie audio passe par le
+  sélecteur système de la notification.

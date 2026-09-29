@@ -1,6 +1,9 @@
 package app.rork.sophia
 
 import android.app.Application
+import app.rork.sophia.audio.CourseAudioCatalog
+import app.rork.sophia.audio.CourseAudioDownloads
+import app.rork.sophia.audio.CourseAudioPlayer
 import app.rork.sophia.data.AnalyticsService
 import app.rork.sophia.data.AuthService
 import app.rork.sophia.data.ContentCatalog
@@ -61,6 +64,7 @@ class SophiaApplication : Application(), ImageLoaderFactory {
         analytics = AnalyticsService(this)
         tutorialFlags = TutorialFlags(this)
         authService.start()
+        setUpAudio()
 
         analytics.trackAppOpened()
         // The session itself is counted from MainActivity's ON_START, which is both the warm
@@ -77,6 +81,41 @@ class SophiaApplication : Application(), ImageLoaderFactory {
                 ContentCatalog.collections(this@SophiaApplication, lang)
                 CourseCoverUrls.ensureMap(this@SophiaApplication)
             }
+        }
+    }
+
+    /**
+     * Audio mode: restore the queue, list the downloads, fetch the manifest, and complete a
+     * course listened to the end like one read to the end — minus the celebration screens,
+     * since the listener may well have the phone in a pocket.
+     */
+    private fun setUpAudio() {
+        CourseAudioDownloads.init(this)
+        CourseAudioCatalog.loadFromDisk(this)
+        CourseAudioPlayer.init(this)
+        CourseAudioPlayer.isCourseCompleted = { id -> progressManager.courseProgress(id)?.isCompleted == true }
+        CourseAudioPlayer.onListenedToEnd = { courseId -> completeCourseFromAudio(courseId) }
+        appScope.launch { CourseAudioCatalog.refresh(this@SophiaApplication, force = true) }
+    }
+
+    private fun completeCourseFromAudio(courseId: String) {
+        val language = languageManager.current.value
+        val wasCompleted = progressManager.courseProgress(courseId)?.isCompleted == true
+        progressManager.markCourseCompleted(courseId)
+        if (wasCompleted) return
+        appScope.launch(Dispatchers.IO) {
+            val summary = ContentCatalog.summaries(this@SophiaApplication, language).firstOrNull { it.id == courseId }
+            analytics.trackCourseCompleted(
+                courseId = courseId,
+                subject = summary?.subjectEnum?.storageKey ?: "",
+                lessonCount = 0,
+                hasQuiz = false,
+            )
+            // The reward flow that normally grants collection XP does not run for a listen.
+            val collections = ContentCatalog.collections(this@SophiaApplication, language)
+            progressManager.collectionProgressEvents(courseId, collections)
+                .filter { it.isComplete }
+                .forEach { progressManager.awardCollectionCompletionXpIfNeeded(it.collection) }
         }
     }
 
