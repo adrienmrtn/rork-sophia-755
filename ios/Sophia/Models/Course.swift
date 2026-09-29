@@ -273,8 +273,15 @@ extension Course {
     /// gardent le gras `**…**`, l'italique `*…*` et les termes de glossaire `[[…]]` du
     /// contenu des cours ; le français n'en a pas.
     var plainDescription: String {
-        description
-            .replacingOccurrences(of: "[[", with: "")
+        description.withoutInlineMarkup
+    }
+}
+
+extension String {
+    /// Le texte sans le balisage du contenu des cours (`**gras**`, `*italique*`,
+    /// `[[terme]]`), pour ce qui s'affiche tel quel : cartes, notifications, widget.
+    nonisolated var withoutInlineMarkup: String {
+        replacingOccurrences(of: "[[", with: "")
             .replacingOccurrences(of: "]]", with: "")
             .replacingOccurrences(of: "*", with: "")
     }

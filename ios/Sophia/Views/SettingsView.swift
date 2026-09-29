@@ -20,6 +20,7 @@ struct SettingsView: View {
     @State private var showAmbassador: Bool = false
     @State private var showAudioDownloads: Bool = false
     @State private var hapticTrigger: Int = 0
+    @State private var reminderHour: Int = DailyCourseReminder.storedHour
     /// Set only by the developer section, which is itself behind `#if DEBUG`.
     @State private var debugPaywall: SophiaPaywallContext? = nil
 
@@ -57,6 +58,11 @@ struct SettingsView: View {
                         appearanceSection
 
                         progressionSection
+
+                        // Pendant l'essai gratuit, aucune notification : pas de réglage non plus.
+                        if !store.isInFreeTrial {
+                            reminderSection
+                        }
 
                         if !store.isPremium {
                             premiumSection
@@ -213,6 +219,41 @@ struct SettingsView: View {
                     )
                 }
             }
+        }
+    }
+
+    /// L'heure de la question du jour, choisie dans l'onboarding, modifiable ici.
+    private var reminderSection: some View {
+        section(languageManager.text("settings.section.reminder")) {
+            groupedCard {
+                HStack(spacing: 14) {
+                    iconBadge(name: "bell")
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(languageManager.text("settings.reminder.title"))
+                            .font(DS.sans(.body, .medium))
+                            .foregroundStyle(DS.ink)
+                        Text(languageManager.text("settings.reminder.subtitle"))
+                            .font(DS.sans(.caption, .medium))
+                            .foregroundStyle(DS.inkSecondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    Spacer(minLength: 8)
+                    Picker(languageManager.text("settings.reminder.title"), selection: $reminderHour) {
+                        ForEach(5...23, id: \.self) { hour in
+                            Text(OnboardingV2ReadingTime.label(hour: hour)).tag(hour)
+                        }
+                    }
+                    .pickerStyle(.menu)
+                    .labelsHidden()
+                    .tint(DS.accentSoft)
+                }
+                .padding(.horizontal, 14)
+                .padding(.vertical, 12)
+            }
+        }
+        .onChange(of: reminderHour) { _, hour in
+            DailyCourseReminder.storedHour = hour
+            DailyCourseReminder.refresh()
         }
     }
 

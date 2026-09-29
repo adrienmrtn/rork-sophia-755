@@ -52,11 +52,8 @@ struct ContentView: View {
                 }
 
                 Tab(languageManager.text("tab.library"), systemImage: "books.vertical.fill", value: 1) {
-                    LibraryView(
-                        progressManager: progressManager,
-                        selectedCourse: $selectedCourse
-                    )
-                    .audioMiniPlayerInset(onOpen: openAudioPlayer)
+                    libraryTab
+                        .audioMiniPlayerInset(onOpen: openAudioPlayer)
                 }
 
                 // The path took the collections' slot; the former collections pages are gone.
@@ -314,6 +311,7 @@ struct ContentView: View {
             blocker.syncLanguage(language)
         }
         .trackAnalyticsLifecycle(isPremium: storeVM.isPremium)
+        .dailyQuestionUpdates(store: storeVM, progressManager: progressManager)
         .courseAudioHost(
             store: storeVM,
             progressManager: progressManager,
@@ -353,6 +351,14 @@ struct ContentView: View {
         player.isPremium = storeVM.isPremium
         guard storeVM.isPremium, let id = player.paywallCourseId else { return }
         player.requestPlay(courseId: id, source: "paywall_purchase")
+    }
+
+    private var libraryTab: some View {
+        LibraryView(
+            progressManager: progressManager,
+            selectedCourse: $selectedCourse,
+            isInFreeTrial: storeVM.isInFreeTrial
+        )
     }
 
     private var pathTab: some View {
@@ -433,10 +439,18 @@ struct ContentView: View {
         }
     }
 
-    /// Same recommendation as the home deck, restricted to courses that have a quiz:
-    /// without one there is nothing to finish. Everything done: any course with a quiz,
-    /// a re-read is still a read.
+    /// The question of the day when it is still unread (every question has a quiz);
+    /// otherwise the same recommendation as the home deck, restricted to courses that
+    /// have a quiz: without one there is nothing to finish. Everything done: any course
+    /// with a quiz, a re-read is still a read.
     private func blockerCandidateCourse() -> Course? {
+        let isCompleted: (String) -> Bool = { progressManager.courseStatus(for: $0) == .completed }
+        if let id = DailyQuestion.todayCourseId(language: languageManager.current, isCompleted: isCompleted),
+           !isCompleted(id),
+           let course = ContentCatalog.course(withId: id),
+           course.hasQuiz {
+            return course
+        }
         let withQuiz = ContentCatalog.activeCourses.filter(\.hasQuiz)
         let deck = HomeDeckBuilder.deck(
             from: withQuiz,
@@ -457,8 +471,15 @@ struct ContentView: View {
         _ = router.consume()
         selectedTab = 0
         explicitCourseSource = source
-        if source == "deep_link" {
+        switch source {
+        case "deep_link":
             AnalyticsService.trackDeepLinkOpened(courseId: courseId)
+        case DeepLinkRouter.notificationSource:
+            AnalyticsService.trackDailyQuestionNotificationOpened(courseId: courseId)
+        case DeepLinkRouter.widgetSource:
+            AnalyticsService.trackDailyQuestionWidgetOpened(courseId: courseId)
+        default:
+            break
         }
         selectedCourse = course
     }

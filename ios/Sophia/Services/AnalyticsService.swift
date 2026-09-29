@@ -274,6 +274,20 @@ enum AnalyticsService {
         track("deep_link_opened", ["course_id": courseId])
     }
 
+    // MARK: - Question du jour
+
+    static func trackDailyQuestionNotificationOpened(courseId: String) {
+        track("daily_question_notification_opened", ["course_id": courseId])
+    }
+
+    static func trackDailyQuestionWidgetOpened(courseId: String) {
+        track("daily_question_widget_opened", ["course_id": courseId])
+    }
+
+    static func trackDailyQuestionWidgetPromoDismissed() {
+        track("daily_question_widget_promo_dismissed")
+    }
+
     // MARK: - TikTok blocker
 
     static func trackTikTokBlockerToggled(enabled: Bool) {

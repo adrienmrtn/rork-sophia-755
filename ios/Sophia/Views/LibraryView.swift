@@ -22,10 +22,17 @@ enum BrutalPalette {
 
 struct LibraryView: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(\.scenePhase) private var scenePhase
     let progressManager: ProgressManager
     @Binding var selectedCourse: Course?
+    /// Premium en essai gratuit : on ne lui propose pas le widget.
+    var isInFreeTrial: Bool = false
     @State private var searchText: String = ""
     @State private var featuredIndex: Int = 0
+    /// Jour affiché par « À la une ». Relu au retour au premier plan : passé minuit, les
+    /// cartes changent et le carrousel repart sur la question du jour.
+    @State private var featuredDay: String = DailyQuestion.day(for: Date()).key
+    @State private var widgetPromoVisible: Bool = false
 
     /// Hauteur du bloc texte de la carte « À la une ».
     ///
@@ -59,11 +66,22 @@ struct LibraryView: View {
 
     private var isSearching: Bool { !searchText.isEmpty }
 
-    /// Hand-picked editorial highlights for the top swipeable carousel.
+    /// « À la une » : la question du jour, puis cinq autres questions du jour. Tout change à
+    /// minuit et reste stable dans la journée.
     private var featuredCourses: [Course] {
+        _ = featuredDay
         let lang = languageManager.current
-        let curated = CuratedStarterCourses.ids.compactMap { ContentCatalog.course(withId: $0, language: lang) }
-        return Array(curated.prefix(6))
+        let isCompleted: (String) -> Bool = { progressManager.courseStatus(for: $0) == .completed }
+        let today = DailyQuestion.todayCourseId(language: lang, isCompleted: isCompleted)
+            .flatMap { ContentCatalog.course(withId: $0, language: lang) }
+        let companions = DailyQuestion.featuredCompanions(
+            count: today == nil ? 6 : 5,
+            excluding: Set([today?.id].compactMap { $0 }),
+            interests: OnboardingViewModel.userInterestKeys(),
+            language: lang,
+            isCompleted: isCompleted
+        )
+        return [today].compactMap { $0 } + companions
     }
 
     /// Courses the user already started — surfaced as a "continue" row.
@@ -113,8 +131,15 @@ struct LibraryView: View {
                                     .padding(.top, 60)
                             }
                         } else {
-                            if !featuredCourses.isEmpty {
-                                featuredCarousel
+                            let featured = featuredCourses
+                            if !featured.isEmpty {
+                                featuredCarousel(featured)
+                            }
+
+                            if widgetPromoVisible {
+                                DailyQuestionWidgetPromoCard(onDismiss: dismissWidgetPromo)
+                                    .padding(.horizontal, 20)
+                                    .transition(.opacity)
                             }
 
                             if !inProgressCourses.isEmpty {
@@ -154,6 +179,38 @@ struct LibraryView: View {
                 )
             }
         }
+        .onChange(of: scenePhase) { _, phase in
+            guard phase == .active else { return }
+            let today = DailyQuestion.day(for: Date()).key
+            if today != featuredDay {
+                featuredDay = today
+                featuredIndex = 0
+            }
+            Task { await refreshWidgetPromo() }
+        }
+        .onChange(of: progressManager.completedCount) { _, _ in
+            Task { await refreshWidgetPromo() }
+        }
+        .onChange(of: isInFreeTrial) { _, _ in
+            Task { await refreshWidgetPromo() }
+        }
+        .task { await refreshWidgetPromo() }
+    }
+
+    // MARK: - Widget promo
+
+    private func refreshWidgetPromo() async {
+        let visible = await DailyQuestionWidgetPromo.shouldShow(
+            isInFreeTrial: isInFreeTrial,
+            isCompleted: { progressManager.courseStatus(for: $0) == .completed }
+        )
+        guard visible != widgetPromoVisible else { return }
+        withAnimation(.easeInOut(duration: 0.25)) { widgetPromoVisible = visible }
+    }
+
+    private func dismissWidgetPromo() {
+        DailyQuestionWidgetPromo.dismiss()
+        withAnimation(.easeInOut(duration: 0.25)) { widgetPromoVisible = false }
     }
 
     private var searchBar: some View {
@@ -217,7 +274,7 @@ struct LibraryView: View {
 
     // MARK: - Featured swipeable carousel
 
-    private var featuredCarousel: some View {
+    private func featuredCarousel(_ featuredCourses: [Course]) -> some View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 8) {
                 Text(languageManager.text("library.section.featured"))
@@ -236,6 +293,9 @@ struct LibraryView: View {
                         LibraryFeaturedCard(
                             course: course,
                             status: progressManager.courseStatus(for: course.id),
+                            badge: index == 0 && DailyQuestion.isQuestion(course.id)
+                                ? languageManager.text("dailyQuestion.badge")
+                                : nil,
                             onTap: {
                                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
                                 selectedCourse = course
@@ -412,6 +472,8 @@ struct LibraryFeaturedCard: View {
     @Environment(LanguageManager.self) private var languageManager
     let course: Course
     let status: CourseStatus
+    /// Pastille posée sur la couverture (« Question du jour » sur la première carte).
+    var badge: String? = nil
     let onTap: () -> Void
 
     @State private var image: UIImage?
@@ -461,6 +523,23 @@ struct LibraryFeaturedCard: View {
             .overlay(alignment: .bottomTrailing) {
                 CourseAudioCardButton(courseId: course.id, source: "library_featured", size: 34)
                     .padding(10)
+            }
+            .overlay(alignment: .topLeading) {
+                if let badge {
+                    HStack(spacing: 5) {
+                        Image(systemName: "sparkles")
+                            .font(.jakarta(size: 10, weight: .semibold))
+                        Text(badge.uppercased())
+                            .font(DS.sans(.caption2, .semibold))
+                            .tracking(0.8)
+                            .lineLimit(1)
+                    }
+                    .foregroundStyle(Color.white)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 6)
+                    .background(DS.accent, in: Capsule())
+                    .padding(10)
+                }
             }
     }
 
