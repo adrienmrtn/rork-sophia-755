@@ -43,6 +43,12 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
+import app.rork.sophia.audio.CourseAudioPlayer
+import app.rork.sophia.ui.audio.AudioDownloadsScreen
+import app.rork.sophia.ui.audio.AudioMiniPlayer
+import app.rork.sophia.ui.audio.AudioPlayerScreen
+import androidx.compose.foundation.layout.Column
+import androidx.compose.runtime.DisposableEffect
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.AuthorStore
 import app.rork.sophia.data.ContentCatalog
@@ -85,7 +91,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-private enum class OverlayScreen { Settings, Friends, Feedback, Ambassador, Terms, Privacy, MyCourses }
+private enum class OverlayScreen { Settings, Friends, Feedback, Ambassador, Terms, Privacy, MyCourses, AudioDownloads }
 
 /**
  * Widest the tab content is allowed to get. Sophia's screens are a single column; past this
@@ -125,6 +131,18 @@ fun MainTabs(
     var showTrialEndingBanner by remember { mutableStateOf(false) }
     var readerReady by remember { mutableStateOf(false) }
     var showCreateAccountPrompt by remember { mutableStateOf(false) }
+    // Audio mode: the full player, and the course a free user wanted to hear.
+    var showAudioPlayer by remember { mutableStateOf(false) }
+    var audioPaywallCourseId by remember { mutableStateOf<String?>(null) }
+
+    LaunchedEffect(isPremium) { CourseAudioPlayer.isPremium = isPremium }
+    DisposableEffect(Unit) {
+        CourseAudioPlayer.onPaywallNeeded = { courseId ->
+            audioPaywallCourseId = courseId
+            paywall = PaywallContext.AUDIO
+        }
+        onDispose { CourseAudioPlayer.onPaywallNeeded = null }
+    }
 
     LaunchedEffect(language, isPremium, progress.subjectXP) {
         if (constrained) delay(800)
@@ -308,6 +326,10 @@ fun MainTabs(
     BackHandler(enabled = selectedAuthorSlug != null) {
         selectedAuthorSlug = null
     }
+    // The audio player is drawn above the reader and the author page; a paywall above it.
+    BackHandler(enabled = showAudioPlayer && paywall == null && rewardSteps == null) {
+        showAudioPlayer = false
+    }
 
     Box(modifier = Modifier.fillMaxSize()) {
         if (selectedCourse != null) {
@@ -336,6 +358,7 @@ fun MainTabs(
                     },
                     onDismiss = { dismissCourse() },
                     onOpenAuthor = { selectedAuthorSlug = it },
+                    onOpenAudio = { showAudioPlayer = true },
                     onRequestPaywall = { key ->
                         if (key == "debloquer_cours" || key == "quizz") {
                             app.analytics.trackFreemiumGateHit(key, courseId = selectedCourse?.id)
@@ -344,6 +367,10 @@ fun MainTabs(
                             "quizz" -> PaywallContext.QUIZZ
                             "offre_discount" -> PaywallContext.OFFRE_DISCOUNT
                             "fin_onboarding" -> PaywallContext.FIN_ONBOARDING
+                            "audio" -> {
+                                audioPaywallCourseId = selectedCourse?.id
+                                PaywallContext.AUDIO
+                            }
                             else -> PaywallContext.DEBLOQUER_COURS
                         }
                     },
@@ -363,6 +390,9 @@ fun MainTabs(
             Scaffold(
                 containerColor = DS.canvas,
                 bottomBar = {
+                  // The mini-player sits right on top of the tab bar, like a music app's.
+                  Column {
+                    AudioMiniPlayer(language = language, onOpen = { showAudioPlayer = true })
                     NavigationBar(containerColor = DS.canvas, contentColor = DS.accent) {
                         tabs.forEach { (key, icon, index) ->
                             NavigationBarItem(
@@ -393,6 +423,7 @@ fun MainTabs(
                             )
                         }
                     }
+                  }
                 },
             ) { padding ->
                 // On a tablet or a Chromebook every tab stretched edge to edge, so a line of
@@ -506,6 +537,7 @@ fun MainTabs(
                             onOpenAmbassador = { openFromSettings(OverlayScreen.Ambassador) },
                             onOpenTerms = { openFromSettings(OverlayScreen.Terms) },
                             onOpenPrivacy = { openFromSettings(OverlayScreen.Privacy) },
+                            onOpenAudioDownloads = { openFromSettings(OverlayScreen.AudioDownloads) },
                             onRestorePurchases = {
                                 storeViewModel.restore { result ->
                                     val key = when (result) {
@@ -567,6 +599,11 @@ fun MainTabs(
                             language = language,
                             onBack = { closeOverlay() },
                         )
+                    OverlayScreen.AudioDownloads ->
+                        AudioDownloadsScreen(
+                            language = language,
+                            onBack = { closeOverlay() },
+                        )
                 }
             }
         }
@@ -594,6 +631,12 @@ fun MainTabs(
             }
         }
 
+        if (showAudioPlayer) {
+            SophiaOverlayLayer {
+                AudioPlayerScreen(language = language, onClose = { showAudioPlayer = false })
+            }
+        }
+
         if (paywall != null) {
             SophiaOverlayLayer {
                 val ctx = paywall!!
@@ -605,6 +648,7 @@ fun MainTabs(
                     context = ctx,
                     language = language,
                     storeViewModel = storeViewModel,
+                    courseId = if (ctx == PaywallContext.AUDIO) audioPaywallCourseId else null,
                     onDismiss = {
                         val duration = paywallPresentedAtMs?.let {
                             ((System.currentTimeMillis() - it) / 1000).toInt().coerceAtLeast(0)
@@ -620,6 +664,14 @@ fun MainTabs(
                         }
                         paywallPresentedAtMs = null
                         paywall = null
+                        // Bought to listen: start listening, without a second tap.
+                        if (ctx == PaywallContext.AUDIO) {
+                            audioPaywallCourseId?.let { id ->
+                                CourseAudioPlayer.isPremium = true
+                                CourseAudioPlayer.requestPlay(id, source = "paywall_purchase")
+                                showAudioPlayer = true
+                            }
+                        }
                     },
                     onPurchaseMeta = { offeringId, packageId ->
                         app.analytics.trackPurchaseCompleted(

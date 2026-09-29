@@ -52,6 +52,7 @@ import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.components.ScreenTitle
 import app.rork.sophia.ui.components.SophiaEmptyState
+import app.rork.sophia.ui.audio.CourseAudioButton
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
@@ -215,6 +216,13 @@ private fun CourseGridCard(
                     modifier = Modifier.align(Alignment.TopStart).padding(8.dp),
                 )
             }
+            CourseAudioButton(
+                courseId = course.id,
+                language = language,
+                source = "library_card",
+                size = 32.dp,
+                modifier = Modifier.align(Alignment.BottomEnd).padding(8.dp),
+            )
         }
         Column(modifier = Modifier.padding(horizontal = 12.dp, vertical = 12.dp)) {
             Text(

@@ -192,6 +192,10 @@ dependencies {
     // Remote covers (Supabase Storage) — one image at a time, disk-cached
     implementation("io.coil-kt:coil-compose:2.7.0")
 
+    // Audio mode: ExoPlayer + MediaSession (notification, lock screen, headsets)
+    implementation("androidx.media3:media3-exoplayer:1.5.1")
+    implementation("androidx.media3:media3-session:1.5.1")
+
     // Play In-App Review
     implementation("com.google.android.play:review:2.0.2")
     implementation("com.google.android.play:review-ktx:2.0.2")

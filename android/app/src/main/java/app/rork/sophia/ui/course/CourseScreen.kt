@@ -57,6 +57,7 @@ import app.rork.sophia.domain.FreemiumGate
 import app.rork.sophia.ui.components.CalmProgressBar
 import app.rork.sophia.ui.components.lockedContentBlur
 import app.rork.sophia.ui.components.CircleIconButton
+import app.rork.sophia.ui.audio.CourseReaderAudioButton
 import app.rork.sophia.ui.components.SophiaPrimaryButton
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -84,6 +85,8 @@ fun CourseScreen(
     onRequestPaywall: (String) -> Unit,
     /** Byline or "written by" card tapped: the professor's slug. */
     onOpenAuthor: (String) -> Unit = {},
+    /** Headphones tapped by a premium listener: show the full audio player. */
+    onOpenAudio: () -> Unit = {},
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -238,6 +241,13 @@ fun CourseScreen(
                     style = SophiaTypography.titleMedium.copy(fontSize = 16.sp),
                     maxLines = 1,
                     modifier = Modifier.weight(1f).padding(horizontal = 12.dp),
+                )
+                CourseReaderAudioButton(
+                    courseId = course.id,
+                    language = language,
+                    isPremium = isPremium,
+                    onLocked = { onRequestPaywall("audio") },
+                    onOpenPlayer = onOpenAudio,
                 )
             }
             CalmProgressBar(
