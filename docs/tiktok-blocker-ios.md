@@ -54,9 +54,7 @@ iOS affiche notre écran plein à la place.
 | `SettingsView`, `ContentView`, `CourseView`, `QuizView`, `SophiaApp`, `DeepLinkRouter`, `SophiaDeepLink` | Branchements. |
 | `Sophia.entitlements`, `Info.plist`, `project.pbxproj` | Family Controls, App Group `group.app.rork.sophia`, schéma `tiktok`, 3 cibles d'extension, phase « Embed Foundation Extensions ». |
 
-Analytics Mixpanel : `tiktok_blocker_toggled`, `tiktok_blocker_course_opened`,
-`tiktok_blocker_unlocked` (minutes, course_id, from_shield),
-`tiktok_blocker_returned_to_tiktok`.
+Pas de suivi d'usage : Mixpanel a été retiré de l'app le 29/09/2026.
 
 ## Ce que tu dois faire
 

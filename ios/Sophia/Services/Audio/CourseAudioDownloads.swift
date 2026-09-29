@@ -147,7 +147,6 @@ final class CourseAudioDownloads {
         task.taskDescription = key.path
         tasks[key] = task
         task.resume()
-        AnalyticsService.trackAudioDownloadStarted(courseId: courseId, language: language.rawValue)
     }
 
     func cancel(courseId: String, language: AudioLanguage) {

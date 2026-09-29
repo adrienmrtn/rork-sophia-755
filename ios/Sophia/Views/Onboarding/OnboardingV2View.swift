@@ -35,8 +35,9 @@ struct OnboardingV2View: View {
         case swipe, loading, profile, readingTime, notifications, login
         case trialSteps, reminder, paywallAnnual, paywallComparison
 
-        /// Nom envoyé à l'analytics : la séquence étant dynamique (page d'essai retirée quand
-        /// l'offering n'inclut pas d'essai), l'index seul ne désigne pas un écran stable.
+        /// Nom stable de l'écran, mémorisé pour reprendre l'onboarding au bon endroit : la
+        /// séquence étant dynamique (page d'essai retirée quand l'offering n'inclut pas
+        /// d'essai), l'index seul ne désigne pas un écran stable.
         var analyticsName: String {
             switch self {
             case .welcome: "welcome"
@@ -130,11 +131,6 @@ struct OnboardingV2View: View {
         }
         .onAppear {
             restoreStepIndex()
-            AnalyticsService.trackOnboardingStarted()
-            AnalyticsService.trackOnboardingStepViewed(
-                stepIndex: stepIndex,
-                stepName: current.analyticsName
-            )
         }
         .task {
             notificationsSettled = await NotificationPermission.isSettled()
@@ -150,11 +146,6 @@ struct OnboardingV2View: View {
             OnboardingV2Welcome(
                 onNext: advance,
                 onExistingAccount: {
-                    AnalyticsService.trackOnboardingStepViewed(
-                        stepIndex: stepIndex,
-                        stepName: Screen.welcome.analyticsName,
-                        action: "existing_account"
-                    )
                     showExistingAccountSignIn = true
                 }
             )
@@ -233,7 +224,6 @@ struct OnboardingV2View: View {
         stepIndex = next
         // Remembered on every step, so the app being killed here resumes here.
         OnboardingResumeStore.step = list[next].analyticsName
-        AnalyticsService.trackOnboardingStepViewed(stepIndex: next, stepName: list[next].analyticsName)
     }
 
     private func finish() {
@@ -243,10 +233,6 @@ struct OnboardingV2View: View {
         // into a paywall.
         OnboardingResumeStore.clear()
         vm.persistAndComplete(progressManager: progressManager)
-        AnalyticsService.trackOnboardingCompleted(
-            sawPaywall: current == .paywallAnnual || current == .paywallComparison,
-            isPremiumAtExit: store.isPremium
-        )
         onComplete()
     }
 

@@ -41,9 +41,6 @@
   ouvre le cours au toucher. Pendant l'essai, il n'affiche que « Sophia ».
 - **Carte « Ajoute le widget »** dans la Biblio, après la première question du jour lue ; jamais
   pendant l'essai, ni quand le widget est déjà posé, ni après fermeture.
-- **Mixpanel** : `daily_question_notification_opened`, `daily_question_widget_opened`,
-  `daily_question_widget_promo_dismissed` ; `course_opened` porte la source
-  `notification_daily_question` ou `widget_daily_question`.
 - Textes dans les 26 langues.
 
 ## Ce que tu dois faire

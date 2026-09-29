@@ -159,7 +159,6 @@ final class CourseAudioPlayer {
     @discardableResult
     func requestPlay(courseId: String, language: AudioLanguage? = nil, source: String) -> Bool {
         guard isPremium else {
-            AnalyticsService.trackAudioLockedTapped(courseId: courseId, source: source)
             paywallCourseId = courseId
             askForPaywall()
             return false
@@ -173,7 +172,6 @@ final class CourseAudioPlayer {
     @discardableResult
     func requestEnqueue(courseId: String, next: Bool, source: String) -> Bool {
         guard isPremium else {
-            AnalyticsService.trackAudioLockedTapped(courseId: courseId, source: source)
             paywallCourseId = courseId
             askForPaywall()
             return false
@@ -185,7 +183,6 @@ final class CourseAudioPlayer {
     @discardableResult
     func requestDownload(courseId: String, language: AudioLanguage? = nil, source: String) -> Bool {
         guard isPremium else {
-            AnalyticsService.trackAudioLockedTapped(courseId: courseId, source: source)
             paywallCourseId = courseId
             askForPaywall()
             return false
@@ -242,7 +239,6 @@ final class CourseAudioPlayer {
         current = item
         load(item, autoplay: true)
         persistSession()
-        AnalyticsService.trackAudioPlayStarted(courseId: courseId, language: language.rawValue, source: source, rate: rate)
     }
 
     func resume() {
@@ -336,7 +332,6 @@ final class CourseAudioPlayer {
         self.current = item
         load(item, autoplay: wasPlaying)
         persistSession()
-        AnalyticsService.trackAudioLanguageChanged(courseId: current.courseId, language: language.rawValue)
     }
 
     static func snap(_ value: Double) -> Double {
@@ -362,7 +357,6 @@ final class CourseAudioPlayer {
         }
         persistSession()
         updateNowPlaying()
-        AnalyticsService.trackAudioQueued(courseId: courseId, position: next ? "next" : "end", source: source)
     }
 
     func removeFromQueue(atOffsets offsets: IndexSet) {
@@ -561,7 +555,6 @@ final class CourseAudioPlayer {
         guard let current else { return }
         reportedCompletion = true
         onListenedToEnd?(current.courseId)
-        AnalyticsService.trackAudioCompleted(courseId: current.courseId, language: current.language.rawValue, rate: rate)
     }
 
     private func syncPlaybackState() {

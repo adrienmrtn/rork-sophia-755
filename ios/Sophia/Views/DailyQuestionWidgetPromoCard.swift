@@ -19,7 +19,6 @@ enum DailyQuestionWidgetPromo {
 
     static func dismiss() {
         UserDefaults.standard.set(true, forKey: dismissedKey)
-        AnalyticsService.trackDailyQuestionWidgetPromoDismissed()
     }
 
     private static func isWidgetInstalled() async -> Bool {

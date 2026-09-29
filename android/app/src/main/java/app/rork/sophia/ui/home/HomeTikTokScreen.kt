@@ -508,7 +508,6 @@ private fun TikTokCourseCard(
             CourseAudioButton(
                 courseId = course.id,
                 language = language,
-                source = "home_tiktok",
                 modifier = Modifier.align(Alignment.TopStart).padding(12.dp),
             )
         }

@@ -1,7 +1,6 @@
 package app.rork.sophia.data
 
 import android.content.Context
-import app.rork.sophia.SophiaApplication
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CollectionProgressEvent
 import app.rork.sophia.domain.Course
@@ -318,14 +317,6 @@ class ProgressManager(context: Context) {
             last == LocalDate.now().minusDays(1).format(DateTimeFormatter.ISO_LOCAL_DATE) ->
                 current.streak + 1
             else -> 1
-        }
-        if (next > current.streak) {
-            runCatching {
-                SophiaApplication.instance.analytics.trackStreakUpdated(
-                    streakDays = next,
-                    isNewRecord = true,
-                )
-            }
         }
         return next
     }

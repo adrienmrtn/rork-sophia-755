@@ -39,7 +39,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.FeedbackService
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
@@ -64,7 +63,6 @@ fun FeedbackScreen(
     onBack: () -> Unit,
 ) {
     val context = LocalContext.current
-    val app = context.applicationContext as SophiaApplication
     val scope = rememberCoroutineScope()
     var category by remember { mutableStateOf("idea") }
     var message by remember { mutableStateOf("") }
@@ -204,7 +202,6 @@ fun FeedbackScreen(
             text = StringStore.text(context, "feedback.submit", language),
             enabled = message.isNotBlank() && !sending,
             onClick = {
-                app.analytics.trackFeedbackOpened()
                 sending = true
                 error = null
                 scope.launch {
@@ -217,11 +214,9 @@ fun FeedbackScreen(
                     )
                     sending = false
                     if (result.isSuccess) {
-                        app.analytics.trackFeedbackSubmitted(category)
                         message = ""
                         sent = true
                     } else {
-                        app.analytics.trackFeedbackFailed(category)
                         // The message stays in the field either way: a rejected email is a
                         // reason to fix one line, not to retype the whole report.
                         val badEmail = (result.exceptionOrNull() as? IllegalArgumentException)

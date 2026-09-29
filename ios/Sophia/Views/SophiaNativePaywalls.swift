@@ -105,7 +105,6 @@ struct SophiaStandardPaywall: View {
     @State private var purchasing = false
     @State private var appeared = false
     @State private var presentedAt: Date?
-    @State private var didTrackDismiss = false
     @State private var courseThumb: UIImage?
 
     private var isCourseUnlock: Bool { context == .debloquerCours }
@@ -158,8 +157,6 @@ struct SophiaStandardPaywall: View {
         }
         .onAppear {
             presentedAt = Date()
-            didTrackDismiss = false
-            AnalyticsService.trackPaywallViewed(context: context.rawValue, triggerCourseId: course?.id)
             store.trackPaywallImpression(paywallId: "native_standard", offeringIdentifier: context.rawValue)
             if let course { courseThumb = CourseImageMap.loadImage(for: course.id) }
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
@@ -169,7 +166,6 @@ struct SophiaStandardPaywall: View {
         .task {
             if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
-        .onDisappear { trackDismissIfNeeded() }
     }
 
     // MARK: Hero
@@ -338,7 +334,6 @@ struct SophiaStandardPaywall: View {
     private var closeButton: some View {
         Button {
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            trackDismissIfNeeded()
             dismiss()
             onDismissed?()
         } label: {
@@ -365,11 +360,6 @@ struct SophiaStandardPaywall: View {
             let ok = await store.purchase(package: package)
             purchasing = false
             if ok {
-                AnalyticsService.trackPurchaseCompleted(
-                    context: context.rawValue,
-                    offeringId: package.presentedOfferingContext.offeringIdentifier,
-                    packageId: package.identifier
-                )
                 onPurchased()
             }
         }
@@ -382,12 +372,6 @@ struct SophiaStandardPaywall: View {
         }
     }
 
-    private func trackDismissIfNeeded() {
-        guard !didTrackDismiss else { return }
-        didTrackDismiss = true
-        let duration = Int(Date().timeIntervalSince(presentedAt ?? Date()))
-        AnalyticsService.trackPaywallDismissed(context: context.rawValue, durationSeconds: max(0, duration))
-    }
 }
 
 // MARK: - Training paywall (quizz offering)
@@ -409,8 +393,6 @@ struct SophiaTrainingPaywall: View {
 
     @State private var purchasing = false
     @State private var appeared = false
-    @State private var presentedAt: Date?
-    @State private var didTrackDismiss = false
 
     private let context = SophiaPaywallContext.entrainement
 
@@ -461,9 +443,6 @@ struct SophiaTrainingPaywall: View {
             .frame(maxWidth: OV2.readableWidth)
         }
         .onAppear {
-            presentedAt = Date()
-            didTrackDismiss = false
-            AnalyticsService.trackPaywallViewed(context: context.rawValue)
             store.trackPaywallImpression(paywallId: "native_training", offeringIdentifier: context.offeringIdentifier)
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
                 appeared = true
@@ -472,7 +451,6 @@ struct SophiaTrainingPaywall: View {
         .task {
             if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
-        .onDisappear { trackDismissIfNeeded() }
     }
 
     // MARK: Hero
@@ -639,7 +617,6 @@ struct SophiaTrainingPaywall: View {
     private var closeButton: some View {
         Button {
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            trackDismissIfNeeded()
             dismiss()
             onDismissed?()
         } label: {
@@ -666,11 +643,6 @@ struct SophiaTrainingPaywall: View {
             let ok = await store.purchase(package: package)
             purchasing = false
             if ok {
-                AnalyticsService.trackPurchaseCompleted(
-                    context: context.rawValue,
-                    offeringId: package.presentedOfferingContext.offeringIdentifier,
-                    packageId: package.identifier
-                )
                 onPurchased()
             }
         }
@@ -683,12 +655,6 @@ struct SophiaTrainingPaywall: View {
         }
     }
 
-    private func trackDismissIfNeeded() {
-        guard !didTrackDismiss else { return }
-        didTrackDismiss = true
-        let duration = Int(Date().timeIntervalSince(presentedAt ?? Date()))
-        AnalyticsService.trackPaywallDismissed(context: context.rawValue, durationSeconds: max(0, duration))
-    }
 }
 
 // MARK: - Quiz paywall (quizz offering)
@@ -703,8 +669,8 @@ struct SophiaQuizPaywall: View {
     @Environment(LanguageManager.self) private var languageManager
 
     let store: StoreViewModel
-    /// Off for the developer shortcut in Settings, as on the discount paywall: Mixpanel runs
-    /// in debug builds on the production token.
+    /// Off for the developer shortcut in Settings, as on the discount paywall: the RevenueCat
+    /// impression would otherwise count a paywall opened only to look at it.
     var tracksAnalytics: Bool = true
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
@@ -713,8 +679,6 @@ struct SophiaQuizPaywall: View {
     @State private var purchasing = false
     @State private var appeared = false
     @State private var showClose = false
-    @State private var presentedAt: Date?
-    @State private var didTrackDismiss = false
     @State private var expandedFAQ: Int? = nil
 
     private let context = SophiaPaywallContext.quizz
@@ -786,10 +750,7 @@ struct SophiaQuizPaywall: View {
             .frame(maxWidth: OV2.readableWidth)
         }
         .onAppear {
-            presentedAt = Date()
-            didTrackDismiss = false
             if tracksAnalytics {
-                AnalyticsService.trackPaywallViewed(context: context.rawValue)
                 store.trackPaywallImpression(paywallId: "native_quiz", offeringIdentifier: context.rawValue)
             }
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
@@ -803,7 +764,6 @@ struct SophiaQuizPaywall: View {
         .task {
             if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
-        .onDisappear { trackDismissIfNeeded() }
     }
 
     // MARK: Rating (discreet, at the bottom)
@@ -935,7 +895,6 @@ struct SophiaQuizPaywall: View {
     private var closeButton: some View {
         Button {
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            trackDismissIfNeeded()
             onDismissed?()
         } label: {
             Image(systemName: "xmark")
@@ -961,11 +920,6 @@ struct SophiaQuizPaywall: View {
             let ok = await store.purchase(package: package)
             purchasing = false
             if ok {
-                AnalyticsService.trackPurchaseCompleted(
-                    context: context.rawValue,
-                    offeringId: package.presentedOfferingContext.offeringIdentifier,
-                    packageId: package.identifier
-                )
                 onPurchased()
             }
         }
@@ -978,12 +932,6 @@ struct SophiaQuizPaywall: View {
         }
     }
 
-    private func trackDismissIfNeeded() {
-        guard tracksAnalytics, !didTrackDismiss else { return }
-        didTrackDismiss = true
-        let duration = Int(Date().timeIntervalSince(presentedAt ?? Date()))
-        AnalyticsService.trackPaywallDismissed(context: context.rawValue, durationSeconds: max(0, duration))
-    }
 }
 
 // MARK: - Quiz demo showcase (auto-playing, cycles through the 4 question types)
@@ -1386,8 +1334,8 @@ struct SophiaCourseUnlockPaywall: View {
     let store: StoreViewModel
     var course: Course? = nil
     var secondsUntilReset: Int? = nil
-    /// Off for the developer shortcut in Settings, as on the discount paywall: Mixpanel runs
-    /// in debug builds on the production token.
+    /// Off for the developer shortcut in Settings, as on the discount paywall: the RevenueCat
+    /// impression would otherwise count a paywall opened only to look at it.
     var tracksAnalytics: Bool = true
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
@@ -1397,7 +1345,6 @@ struct SophiaCourseUnlockPaywall: View {
     @State private var appeared = false
     @State private var showClose = false
     @State private var presentedAt: Date?
-    @State private var didTrackDismiss = false
     @State private var courseThumb: UIImage?
 
     private let context = SophiaPaywallContext.debloquerCours
@@ -1459,9 +1406,7 @@ struct SophiaCourseUnlockPaywall: View {
         }
         .onAppear {
             presentedAt = Date()
-            didTrackDismiss = false
             if tracksAnalytics {
-                AnalyticsService.trackPaywallViewed(context: context.rawValue, triggerCourseId: course?.id)
                 store.trackPaywallImpression(paywallId: "native_course_unlock", offeringIdentifier: context.rawValue)
             }
             if let course { courseThumb = CourseImageMap.loadImage(for: course.id) }
@@ -1476,7 +1421,6 @@ struct SophiaCourseUnlockPaywall: View {
         .task {
             if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
-        .onDisappear { trackDismissIfNeeded() }
     }
 
     // MARK: Hero
@@ -1656,7 +1600,6 @@ struct SophiaCourseUnlockPaywall: View {
     private var closeButton: some View {
         Button {
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            trackDismissIfNeeded()
             onDismissed?()
         } label: {
             Image(systemName: "xmark")
@@ -1682,11 +1625,6 @@ struct SophiaCourseUnlockPaywall: View {
             let ok = await store.purchase(package: package)
             purchasing = false
             if ok {
-                AnalyticsService.trackPurchaseCompleted(
-                    context: context.rawValue,
-                    offeringId: package.presentedOfferingContext.offeringIdentifier,
-                    packageId: package.identifier
-                )
                 onPurchased()
             }
         }
@@ -1699,12 +1637,6 @@ struct SophiaCourseUnlockPaywall: View {
         }
     }
 
-    private func trackDismissIfNeeded() {
-        guard tracksAnalytics, !didTrackDismiss else { return }
-        didTrackDismiss = true
-        let duration = Int(Date().timeIntervalSince(presentedAt ?? Date()))
-        AnalyticsService.trackPaywallDismissed(context: context.rawValue, durationSeconds: max(0, duration))
-    }
 }
 
 // MARK: - Discount paywall (offre_discount)
@@ -1720,9 +1652,8 @@ struct SophiaDiscountPaywall: View {
     let store: StoreViewModel
     /// Drives the live 60-minute countdown. Optional so previews / fallbacks still render.
     var discountManager: DiscountOfferManager? = nil
-    /// Off for the developer shortcut in Settings. Mixpanel runs in debug builds on the
-    /// production token, so a paywall opened to look at it would otherwise land in the
-    /// funnel as a real impression and a real dismissal.
+    /// Off for the developer shortcut in Settings: the RevenueCat impression would otherwise
+    /// count a paywall opened only to look at it.
     var tracksAnalytics: Bool = true
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
@@ -1732,7 +1663,6 @@ struct SophiaDiscountPaywall: View {
     @State private var appeared = false
     @State private var pulse = false
     @State private var presentedAt: Date?
-    @State private var didTrackDismiss = false
 
     private let context = SophiaPaywallContext.offreDiscount
 
@@ -1782,9 +1712,7 @@ struct SophiaDiscountPaywall: View {
         }
         .onAppear {
             presentedAt = Date()
-            didTrackDismiss = false
             if tracksAnalytics {
-                AnalyticsService.trackPaywallViewed(context: context.rawValue)
                 store.trackPaywallImpression(paywallId: "native_discount", offering: store.promoOffering)
             }
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
@@ -1797,7 +1725,6 @@ struct SophiaDiscountPaywall: View {
         .task {
             if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
-        .onDisappear { trackDismissIfNeeded() }
     }
 
     // MARK: Countdown chip
@@ -1943,7 +1870,6 @@ struct SophiaDiscountPaywall: View {
     private var closeButton: some View {
         Button {
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            trackDismissIfNeeded()
             dismiss()
             onDismissed?()
         } label: {
@@ -1972,11 +1898,6 @@ struct SophiaDiscountPaywall: View {
             let ok = await store.purchase(package: package)
             purchasing = false
             if ok {
-                AnalyticsService.trackPurchaseCompleted(
-                    context: context.rawValue,
-                    offeringId: package.presentedOfferingContext.offeringIdentifier,
-                    packageId: package.identifier
-                )
                 onPurchased()
             }
         }
@@ -1989,10 +1910,4 @@ struct SophiaDiscountPaywall: View {
         }
     }
 
-    private func trackDismissIfNeeded() {
-        guard tracksAnalytics, !didTrackDismiss else { return }
-        didTrackDismiss = true
-        let duration = Int(Date().timeIntervalSince(presentedAt ?? Date()))
-        AnalyticsService.trackPaywallDismissed(context: context.rawValue, durationSeconds: max(0, duration))
-    }
 }

@@ -162,11 +162,6 @@ struct OnboardingV2PaywallAnnual: View {
             let ok = await store.purchase(package: package)
             purchasing = false
             if ok {
-                AnalyticsService.trackPurchaseCompleted(
-                    context: SophiaPaywallContext.finOnboarding.rawValue,
-                    offeringId: package.presentedOfferingContext.offeringIdentifier,
-                    packageId: package.identifier
-                )
                 onSubscribed()
             }
         }
@@ -414,11 +409,6 @@ struct OnboardingV2PaywallComparison: View {
             let ok = await store.purchase(package: package)
             purchasing = false
             if ok {
-                AnalyticsService.trackPurchaseCompleted(
-                    context: SophiaPaywallContext.finOnboarding.rawValue,
-                    offeringId: package.presentedOfferingContext.offeringIdentifier,
-                    packageId: package.identifier
-                )
                 onSubscribed()
             }
         }

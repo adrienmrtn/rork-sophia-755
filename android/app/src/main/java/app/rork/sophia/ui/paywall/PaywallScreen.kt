@@ -89,12 +89,12 @@ import kotlinx.coroutines.delay
  * swap), so a customer sees one price everywhere — see [StoreViewModel.displayedOffering].
  * The discount context is the exception: its offering is picked by the install's bucket.
  */
-enum class PaywallContext(val offeringId: String, val analyticsContext: String = offeringId) {
+enum class PaywallContext(val offeringId: String) {
     FIN_ONBOARDING("fin_onboarding"),
     OFFRE_DISCOUNT("offre_discount"),
     DEBLOQUER_COURS("debloquer_cours"),
     QUIZZ("quizz"),
-    ENTRAINEMENT(offeringId = "quizz", analyticsContext = "entrainement"),
+    ENTRAINEMENT(offeringId = "quizz"),
     /** Audio mode unlock. `audio` is only a fallback offering: the current one sells first. */
     AUDIO("audio"),
 }
@@ -110,8 +110,6 @@ fun OnboardingPaywallFlow(
     onDismiss: () -> Unit,
     /** The package that was actually bought, so the caller can tell a trial from a plain sale. */
     onPurchased: (Package?) -> Unit,
-    onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit = { _, _ -> },
-    onComparisonShown: () -> Unit = {},
 ) {
     var showComparison by remember { mutableStateOf(false) }
     var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
@@ -139,11 +137,9 @@ fun OnboardingPaywallFlow(
                 storeViewModel = storeViewModel,
                 onViewAllPlans = {
                     showComparison = true
-                    onComparisonShown()
                 },
                 onDismiss = onDismiss,
                 onPurchased = {
-                    onPurchaseMeta(offeringIdOf(annual, PaywallContext.FIN_ONBOARDING), annual?.identifier)
                     onPurchased(annual)
                 },
                 legalFooter = legalFooter,
@@ -157,7 +153,6 @@ fun OnboardingPaywallFlow(
                 storeViewModel = storeViewModel,
                 onDismiss = onDismiss,
                 onPurchased = { pkg ->
-                    onPurchaseMeta(offeringIdOf(pkg, PaywallContext.FIN_ONBOARDING), pkg?.identifier)
                     onPurchased(pkg)
                 },
                 legalFooter = legalFooter,
@@ -173,7 +168,6 @@ fun PaywallScreen(
     storeViewModel: StoreViewModel,
     onDismiss: () -> Unit,
     onPurchased: () -> Unit,
-    onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit = { _, _ -> },
     onRestored: () -> Unit = onPurchased,
     /** The course a free user wanted to hear, for the audio paywall's cover. */
     courseId: String? = null,
@@ -211,8 +205,7 @@ fun PaywallScreen(
                 offeringId = context.offeringId,
                 storeViewModel = storeViewModel,
                 onDismiss = onDismiss,
-                onPurchased = { pkg ->
-                    onPurchaseMeta(offeringIdOf(pkg, context), pkg?.identifier)
+                onPurchased = { _ ->
                     onPurchased()
                 },
                 legalFooter = legalFooter,
@@ -226,14 +219,12 @@ fun PaywallScreen(
                 storeViewModel = storeViewModel,
                 onDismiss = onDismiss,
                 onPurchased = { onPurchased() },
-                onPurchaseMeta = onPurchaseMeta,
             )
             PaywallContext.OFFRE_DISCOUNT -> DiscountPaywall(
                 language = language,
                 storeViewModel = storeViewModel,
                 onDismiss = onDismiss,
                 onPurchased = onPurchased,
-                onPurchaseMeta = onPurchaseMeta,
                 onRestore = restore,
                 onOpenTerms = { legalDoc = LegalDocKind.Terms },
                 onOpenPrivacy = { legalDoc = LegalDocKind.Privacy },
@@ -243,7 +234,6 @@ fun PaywallScreen(
                 storeViewModel = storeViewModel,
                 onDismiss = dismiss,
                 onPurchased = onPurchased,
-                onPurchaseMeta = onPurchaseMeta,
                 legalFooter = legalFooter,
             )
             PaywallContext.ENTRAINEMENT -> TrainingPaywall(
@@ -251,7 +241,6 @@ fun PaywallScreen(
                 storeViewModel = storeViewModel,
                 onDismiss = dismiss,
                 onPurchased = onPurchased,
-                onPurchaseMeta = onPurchaseMeta,
                 legalFooter = legalFooter,
             )
             PaywallContext.DEBLOQUER_COURS -> CourseUnlockPaywall(
@@ -259,7 +248,6 @@ fun PaywallScreen(
                 storeViewModel = storeViewModel,
                 onDismiss = dismiss,
                 onPurchased = onPurchased,
-                onPurchaseMeta = onPurchaseMeta,
                 legalFooter = legalFooter,
             )
             PaywallContext.AUDIO -> AudioPaywall(
@@ -268,7 +256,6 @@ fun PaywallScreen(
                 courseId = courseId,
                 onDismiss = dismiss,
                 onPurchased = onPurchased,
-                onPurchaseMeta = onPurchaseMeta,
                 legalFooter = legalFooter,
             )
         }
@@ -609,7 +596,6 @@ private fun CourseUnlockPaywall(
     storeViewModel: StoreViewModel,
     onDismiss: () -> Unit,
     onPurchased: () -> Unit,
-    onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit,
     legalFooter: @Composable () -> Unit,
 ) {
     val context = LocalContext.current
@@ -658,7 +644,6 @@ private fun CourseUnlockPaywall(
                 onError = { error = it; notice = null; purchasing = false },
                 onPending = { notice = it; error = null; purchasing = false },
                 onPurchased = {
-                    onPurchaseMeta(offeringIdOf(annual, PaywallContext.DEBLOQUER_COURS), annual?.identifier)
                     onPurchased()
                 },
             )
@@ -729,7 +714,6 @@ private fun TrainingPaywall(
     storeViewModel: StoreViewModel,
     onDismiss: () -> Unit,
     onPurchased: () -> Unit,
-    onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit,
     legalFooter: @Composable () -> Unit,
 ) {
     val context = LocalContext.current
@@ -774,7 +758,6 @@ private fun TrainingPaywall(
                 onError = { error = it; notice = null; purchasing = false },
                 onPending = { notice = it; error = null; purchasing = false },
                 onPurchased = {
-                    onPurchaseMeta(offeringIdOf(annual, PaywallContext.ENTRAINEMENT), annual?.identifier)
                     onPurchased()
                 },
             )
@@ -844,7 +827,6 @@ private fun AudioPaywall(
     courseId: String?,
     onDismiss: () -> Unit,
     onPurchased: () -> Unit,
-    onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit,
     legalFooter: @Composable () -> Unit,
 ) {
     val context = LocalContext.current
@@ -887,7 +869,6 @@ private fun AudioPaywall(
                 onError = { error = it; notice = null; purchasing = false },
                 onPending = { notice = it; error = null; purchasing = false },
                 onPurchased = {
-                    onPurchaseMeta(offeringIdOf(annual, PaywallContext.AUDIO), annual?.identifier)
                     onPurchased()
                 },
             )
@@ -936,7 +917,6 @@ private fun QuizPaywall(
     storeViewModel: StoreViewModel,
     onDismiss: () -> Unit,
     onPurchased: () -> Unit,
-    onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit,
     legalFooter: @Composable () -> Unit,
 ) {
     val context = LocalContext.current
@@ -990,7 +970,6 @@ private fun QuizPaywall(
                 onError = { error = it; notice = null; purchasing = false },
                 onPending = { notice = it; error = null; purchasing = false },
                 onPurchased = {
-                    onPurchaseMeta(offeringIdOf(annual, PaywallContext.QUIZZ), annual?.identifier)
                     onPurchased()
                 },
             )
@@ -1158,7 +1137,6 @@ private fun DiscountPaywall(
     storeViewModel: StoreViewModel,
     onDismiss: () -> Unit,
     onPurchased: () -> Unit,
-    onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit,
     onRestore: () -> Unit,
     onOpenTerms: () -> Unit,
     onOpenPrivacy: () -> Unit,
@@ -1313,7 +1291,6 @@ private fun DiscountPaywall(
                             onError = { error = it; notice = null; purchasing = false },
                             onPending = { notice = it; error = null; purchasing = false },
                             onPurchased = {
-                                onPurchaseMeta(offeringIdOf(annual, PaywallContext.OFFRE_DISCOUNT), annual?.identifier)
                                 onPurchased()
                             },
                         )
@@ -1450,10 +1427,6 @@ private fun perWeekLabel(
     if (amount.isEmpty()) return StoreViewModel.UNKNOWN_PRICE
     return "$amount ${StringStore.text(context, "paywall.plan.perWeek", language)}"
 }
-
-/** The offering a purchase is attributed to: the served one, or the context's fallback. */
-private fun offeringIdOf(pkg: Package?, context: PaywallContext): String =
-    pkg?.presentedOfferingContext?.offeringIdentifier ?: context.offeringId
 
 /**
  * Runs a Play purchase and reports what actually happened.

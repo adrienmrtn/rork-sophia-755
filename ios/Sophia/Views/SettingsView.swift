@@ -17,7 +17,9 @@ struct SettingsView: View {
     @State private var showTerms: Bool = false
     @State private var showPrivacy: Bool = false
     @State private var showFeedback: Bool = false
-    @State private var showAmbassador: Bool = false
+    /// Choix du rôle (UGC ou slideshow) avant d'ouvrir la page créateurs du site.
+    @State private var showCreatorChoice: Bool = false
+    @State private var creatorsPage: CreatorsPage? = nil
     @State private var showAudioDownloads: Bool = false
     @State private var hapticTrigger: Int = 0
     @State private var reminderHour: Int = DailyCourseReminder.storedHour
@@ -132,11 +134,18 @@ struct SettingsView: View {
             .sheet(isPresented: $showTerms) { TermsView().sophiaSheetChrome() }
             .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaSheetChrome() }
             .sheet(isPresented: $showFeedback) { FeedbackView(isPremium: store.isPremium) }
-            .sheet(isPresented: $showAmbassador) {
-                if let url = URL(string: AppConfig.CREATORS_URL) {
-                    InAppSafariView(url: url)
-                        .ignoresSafeArea()
-                }
+            .confirmationDialog(
+                languageManager.text("settings.ambassador.banner.title"),
+                isPresented: $showCreatorChoice,
+                titleVisibility: .visible
+            ) {
+                Button(languageManager.text("ambassador.role.ugc.title")) { openCreatorsPage(role: "ugc") }
+                Button(languageManager.text("ambassador.role.slideshow.title")) { openCreatorsPage(role: "slideshow") }
+                Button(languageManager.text("settings.reset.alert.cancel"), role: .cancel) { }
+            }
+            .sheet(item: $creatorsPage) { page in
+                InAppSafariView(url: page.url)
+                    .ignoresSafeArea()
             }
             .sheet(isPresented: $showAudioDownloads) { AudioDownloadsView().sophiaSheetChrome() }
             .sheet(isPresented: $showDebugNotifications) {
@@ -494,9 +503,8 @@ struct SettingsView: View {
         }
     }
 
-    /// The paywalls the developer section opens, with tracking off: Mixpanel runs in debug
-    /// builds on the production token, so a paywall opened to look at it would otherwise land
-    /// in the funnel as a real impression and a real dismissal.
+    /// The paywalls the developer section opens, with tracking off: a paywall opened to look
+    /// at it would otherwise count as a real RevenueCat impression.
     ///
     /// Closing one just closes it. The comparison paywall that `CourseView` stacks on top of
     /// the quiz and course-unlock paywalls belongs to the course, not to the screen being
@@ -548,12 +556,21 @@ struct SettingsView: View {
 
     // MARK: - Ambassador banner
 
-    /// Ouvre la page créateurs du site (le formulaire intégré n'est plus affiché).
+    /// Page du site pour le rôle choisi, dans Safari intégré. Laisse le choix se refermer
+    /// avant d'ouvrir la page, sinon les deux présentations se gênent.
+    private func openCreatorsPage(role: String) {
+        guard let url = AppConfig.creatorsURL(role: role, language: languageManager.current) else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+            creatorsPage = CreatorsPage(url: url)
+        }
+    }
+
+    /// Demande le rôle (UGC ou slideshow), puis ouvre sa page sur le site. Le formulaire
+    /// intégré n'est plus affiché.
     private var ambassadorBanner: some View {
         Button {
             hapticTrigger += 1
-            AnalyticsService.trackAmbassadorOpened()
-            showAmbassador = true
+            showCreatorChoice = true
         } label: {
             HStack(spacing: 14) {
                 Image(systemName: "sparkles")
@@ -697,4 +714,10 @@ struct SettingsView: View {
         .padding(.horizontal, 14)
         .padding(.vertical, 14)
     }
+}
+
+/// Page créateurs à ouvrir dans Safari intégré.
+struct CreatorsPage: Identifiable {
+    let url: URL
+    var id: String { url.absoluteString }
 }

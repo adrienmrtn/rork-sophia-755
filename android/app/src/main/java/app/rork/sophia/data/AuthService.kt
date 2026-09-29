@@ -264,7 +264,6 @@ class AuthService(private val appContext: Context) {
         runCatching { app?.progressManager?.resetProgress() }
         runCatching { app?.progressSyncService?.clearPendingConflict() }
         runCatching { app?.discountManager?.clearLocalState() }
-        runCatching { app?.analytics?.reset() }
     }
 
     /**
@@ -304,10 +303,7 @@ class AuthService(private val appContext: Context) {
     }
 
     private fun linkRevenueCat() {
-        val uid = _userId.value ?: return
         linkRevenueCatIfNeeded()
-        // Align Mixpanel identity with RevenueCat / Supabase user id.
-        runCatching { app()?.analytics?.identify(uid) }
     }
 
     private fun app(): app.rork.sophia.SophiaApplication? =

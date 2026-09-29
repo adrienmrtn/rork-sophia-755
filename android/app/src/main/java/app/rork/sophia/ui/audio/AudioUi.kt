@@ -137,7 +137,7 @@ internal fun AudioCover(courseId: String, modifier: Modifier = Modifier, corner:
  * lands on the audio paywall.
  */
 @Composable
-internal fun AudioMenuItems(courseId: String, language: AppLanguage, source: String, onDone: () -> Unit) {
+internal fun AudioMenuItems(courseId: String, language: AppLanguage, onDone: () -> Unit) {
     val context = LocalContext.current
     val player by CourseAudioPlayer.state.collectAsState()
     CourseAudioDownloads.inFlight.collectAsState().value
@@ -150,7 +150,7 @@ internal fun AudioMenuItems(courseId: String, language: AppLanguage, source: Str
         leadingIcon = { Icon(if (premium) Icons.Filled.Headphones else Icons.Filled.Lock, null) },
         onClick = {
             onDone()
-            CourseAudioPlayer.requestPlay(courseId, source = source)
+            CourseAudioPlayer.requestPlay(courseId)
         },
     )
     if (player.current != null && !CourseAudioPlayer.isCurrent(courseId)) {
@@ -169,7 +169,7 @@ internal fun AudioMenuItems(courseId: String, language: AppLanguage, source: Str
                 leadingIcon = { Icon(Icons.Filled.SkipNext, null) },
                 onClick = {
                     onDone()
-                    CourseAudioPlayer.requestEnqueue(courseId, next = true, source = source)
+                    CourseAudioPlayer.requestEnqueue(courseId, next = true)
                 },
             )
             DropdownMenuItem(
@@ -177,7 +177,7 @@ internal fun AudioMenuItems(courseId: String, language: AppLanguage, source: Str
                 leadingIcon = { Icon(Icons.AutoMirrored.Filled.PlaylistAdd, null) },
                 onClick = {
                     onDone()
-                    CourseAudioPlayer.requestEnqueue(courseId, next = false, source = source)
+                    CourseAudioPlayer.requestEnqueue(courseId, next = false)
                 },
             )
         }
@@ -188,7 +188,7 @@ internal fun AudioMenuItems(courseId: String, language: AppLanguage, source: Str
             leadingIcon = { Icon(if (premium) Icons.Filled.Download else Icons.Filled.Lock, null) },
             onClick = {
                 onDone()
-                CourseAudioPlayer.requestDownload(courseId, downloadLanguage, source)
+                CourseAudioPlayer.requestDownload(courseId, downloadLanguage)
             },
         )
         is CourseAudioDownloads.State.Downloading -> DropdownMenuItem(
@@ -220,7 +220,6 @@ internal fun AudioMenuItems(courseId: String, language: AppLanguage, source: Str
 fun CourseAudioButton(
     courseId: String,
     language: AppLanguage,
-    source: String,
     modifier: Modifier = Modifier,
     size: Dp = 38.dp,
 ) {
@@ -253,7 +252,7 @@ fun CourseAudioButton(
                             playing -> CourseAudioPlayer.pause()
                             CourseAudioPlayer.isPremium && player.current != null &&
                                 player.current?.courseId != courseId -> choice = true
-                            else -> CourseAudioPlayer.requestPlay(courseId, source = source)
+                            else -> CourseAudioPlayer.requestPlay(courseId)
                         }
                     },
                 ),
@@ -267,15 +266,14 @@ fun CourseAudioButton(
             )
         }
         DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-            AudioMenuItems(courseId, language, source) { menu = false }
+            AudioMenuItems(courseId, language) { menu = false }
         }
     }
     if (choice) {
         AudioPlayChoiceDialog(
             courseId = courseId,
             language = language,
-            source = source,
-            onPlayNow = { CourseAudioPlayer.requestPlay(courseId, source = source) },
+            onPlayNow = { CourseAudioPlayer.requestPlay(courseId) },
             onDismiss = { choice = false },
         )
     }
@@ -288,7 +286,6 @@ fun CourseAudioButton(
 fun AudioPlayChoiceDialog(
     courseId: String,
     language: AppLanguage,
-    source: String,
     onPlayNow: () -> Unit,
     onDismiss: () -> Unit,
 ) {
@@ -323,12 +320,12 @@ fun AudioPlayChoiceDialog(
             Column {
                 Choice(t("audio.playNow"), Icons.Filled.PlayArrow, onPlayNow)
                 Choice(t("audio.playNext"), Icons.Filled.SkipNext) {
-                    if (CourseAudioPlayer.requestEnqueue(courseId, next = true, source = source)) {
+                    if (CourseAudioPlayer.requestEnqueue(courseId, next = true)) {
                         haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                     }
                 }
                 Choice(t("audio.addToQueue"), Icons.AutoMirrored.Filled.PlaylistAdd) {
-                    if (CourseAudioPlayer.requestEnqueue(courseId, next = false, source = source)) {
+                    if (CourseAudioPlayer.requestEnqueue(courseId, next = false)) {
                         haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                     }
                 }
@@ -459,18 +456,12 @@ fun CourseReaderAudioButton(
             .border(1.dp, DS.hairline, CircleShape)
             .softPress(onClick = {
                 when {
-                    !isPremium -> {
-                        (context.applicationContext as app.rork.sophia.SophiaApplication).analytics.track(
-                            "audio_locked_tapped",
-                            mapOf("course_id" to courseId, "source" to "course_reader"),
-                        )
-                        onLocked()
-                    }
+                    !isPremium -> onLocked()
                     player.current != null && !isCurrent -> choice = true
                     else -> {
                         CourseAudioPlayer.isPremium = true
                         if (!isCurrent) {
-                            CourseAudioPlayer.play(courseId, source = "course_reader")
+                            CourseAudioPlayer.play(courseId)
                         } else if (!player.isPlaying) {
                             CourseAudioPlayer.resume()
                         }
@@ -495,9 +486,8 @@ fun CourseReaderAudioButton(
         AudioPlayChoiceDialog(
             courseId = courseId,
             language = language,
-            source = "course_reader",
             onPlayNow = {
-                CourseAudioPlayer.play(courseId, source = "course_reader")
+                CourseAudioPlayer.play(courseId)
                 onOpenPlayer()
             },
             onDismiss = { choice = false },

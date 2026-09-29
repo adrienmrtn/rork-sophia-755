@@ -129,7 +129,7 @@ enum DailyCourseReminder {
             ?? AppLocalizable.string("notification.courseNudge.bodyFallback", language: language)
         content.sound = .default
         content.threadIdentifier = "sophia.dailyQuestion"
-        content.userInfo = ["deepLink": "sophia://course/\(courseId)?from=notification"]
+        content.userInfo = ["deepLink": "sophia://course/\(courseId)"]
         return content
     }
 

@@ -20,16 +20,8 @@ final class DeepLinkRouter {
     static let shared = DeepLinkRouter()
 
     private(set) var pendingCourseId: String?
-    /// Where the pending request came from: `deep_link` for a `sophia://` URL, otherwise the
-    /// in-app entry point that reused this door (the author page opening another course).
-    private(set) var pendingSource: String = "deep_link"
     /// Increments on every request, so two requests for the same course are still two events.
     private(set) var token: Int = 0
-
-    /// Sources of a course opened from the daily question's notification and widget
-    /// (`?from=notification`, `?from=widget` on the link).
-    static let notificationSource = "notification_daily_question"
-    static let widgetSource = "widget_daily_question"
 
     private init() {}
 
@@ -45,17 +37,12 @@ final class DeepLinkRouter {
         guard let courseId = SophiaDeepLink.courseId(from: url) else { return false }
         // Parked rather than delivered: the onboarding may still be on screen, and the
         // home opens it as soon as it is ready.
-        switch SophiaDeepLink.origin(of: url) {
-        case "notification": requestCourse(courseId, source: Self.notificationSource)
-        case "widget": requestCourse(courseId, source: Self.widgetSource)
-        default: requestCourse(courseId)
-        }
+        requestCourse(courseId)
         return true
     }
 
-    func requestCourse(_ courseId: String, source: String = "deep_link") {
+    func requestCourse(_ courseId: String) {
         pendingCourseId = courseId
-        pendingSource = source
         token += 1
     }
 

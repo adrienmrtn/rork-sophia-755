@@ -222,9 +222,6 @@ struct QuizView: View {
             courseWasCompletedBeforeQuiz = progressManager.courseStatus(for: course.id) == .completed
             pendingCollectionEvents = initialCollectionEvents
             shuffleAllQuestions()
-            if !course.quiz.isEmpty {
-                AnalyticsService.trackQuizStarted(course: course)
-            }
         }
         .sophiaColorScheme()
     }
@@ -1068,11 +1065,6 @@ struct QuizView: View {
             if !courseWasCompletedBeforeQuiz {
                 pendingCollectionEvents = progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)
             }
-            AnalyticsService.trackQuizCompleted(
-                course: course,
-                score: totalPointsEarned,
-                total: maxPossiblePoints
-            )
             // A finished quiz is a finished course too (belt and braces for a course whose
             // completion the blocker missed).
             TikTokBlockerManager.shared.registerDailyCourseCompleted(courseId: course.id)

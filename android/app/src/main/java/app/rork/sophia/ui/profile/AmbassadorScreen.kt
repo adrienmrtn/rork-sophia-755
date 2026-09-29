@@ -20,7 +20,6 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -33,7 +32,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.FeedbackService
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
@@ -50,7 +48,6 @@ fun AmbassadorScreen(
     onBack: () -> Unit,
 ) {
     val context = LocalContext.current
-    val app = context.applicationContext as SophiaApplication
     val scope = rememberCoroutineScope()
     var stage by remember { mutableStateOf(AmbassadorStage.Program) }
     var wantsSlideshow by remember { mutableStateOf(false) }
@@ -61,8 +58,6 @@ fun AmbassadorScreen(
     var countryConfirmed by remember { mutableStateOf(false) }
     var submitting by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
-
-    LaunchedEffect(Unit) { app.analytics.trackAmbassadorOpened() }
 
     fun t(key: String) = StringStore.text(context, key, language)
 
@@ -215,7 +210,6 @@ fun AmbassadorScreen(
                             )
                             submitting = false
                             if (result.isSuccess) {
-                                app.analytics.trackAmbassadorSubmitted()
                                 stage = AmbassadorStage.Success
                             } else {
                                 error = when (result.exceptionOrNull()?.message) {
