@@ -48,15 +48,18 @@
 
 ## Ce que tu dois faire
 
-1. **Apple Developer › Identifiers** : l'App ID du widget
-   `app.rork.assvmps5x7hpyq0ezcsut.DailyQuestionWidget` avec la capability **App Groups** et le
-   groupe `group.app.rork.sophia`. Avec la signature automatique, Xcode le crée seul si le
-   compte a les droits ; sinon le créer à la main avant le build Xcode Cloud.
-2. **Build** : la cible `SophiaWidget` a été ajoutée au projet à la main (comme les extensions
-   du blocker), sans Xcode dans la session. Le premier build Xcode Cloud la valide ; au premier
-   passage dans Xcode, vérifier Signing & Capabilities de la cible (équipe `K792T8TQ4X`).
-3. **Version** : le `MARKETING_VERSION` du widget (`1.1.7`) doit suivre celui de l'app, comme
-   ceux des extensions du blocker.
+1. **Avant le prochain build Xcode Cloud** : créer l'App ID du widget. Sur
+   developer.apple.com › Certificates, Identifiers & Profiles › Identifiers › « + » › App IDs ›
+   App : description « Sophia Widget », Bundle ID explicite
+   `app.rork.assvmps5x7hpyq0ezcsut.DailyQuestionWidget`, cocher **App Groups**, Register. Puis
+   rouvrir cet identifiant › App Groups › Configure › cocher `group.app.rork.sophia` › Save.
+2. **Lancer le build Xcode Cloud** sur `main`. S'il en était parti un avant l'étape 1 et qu'il
+   a échoué sur la signature de `SophiaWidget`, le relancer. Si la signature échoue encore :
+   ouvrir le projet dans Xcode › cible `SophiaWidget` › Signing & Capabilities › équipe
+   `K792T8TQ4X`, « Automatically manage signing » coché, App Groups avec
+   `group.app.rork.sophia` coché › commit › relancer le build.
+3. **Version** : rien à faire. `ci_scripts/ci_pre_xcodebuild.sh` recopie la version de l'app
+   sur toutes les cibles (widget et extensions du blocker) à chaque build Xcode Cloud.
 4. **À trancher** : l'onboarding promet encore « Tu recevras un rappel 1 jour avant la fin de
    ton essai » (`onboardingV2.trial.*`). Aucune notification ne part pendant l'essai.
 
