@@ -11,6 +11,12 @@ Premium. Android suivra dans une PR séparée.
   file », « Télécharger »). Rien n'apparaît sur un cours qui n'a pas d'audio.
 - **Lecteur plein écran** : couverture, position, ±15 s, vitesse de 0,5× à 2× (curseur, pas de
   0,05, bouton « 1× »), langue de l'audio, téléchargement, AirPlay, file d'attente.
+- **Ajouter à la file depuis le lecteur** : section « Ensuite, écoute… » sous le lecteur (suite
+  de la collection, puis même matière, cours non terminés d'abord) avec un **＋** par cours ; appui
+  long sur une ligne = « Lire ensuite ». « Parcourir tous les audios » ouvre la liste complète
+  (recherche, filtre par matière), avec le même **＋**.
+- **Un autre audio joue déjà** : le casque d'un autre cours (lecteur de cours ou carte) propose
+  « Écouter maintenant », « Lire ensuite » ou « Ajouter à la file » au lieu de couper l'audio.
 - **Mini-lecteur** au-dessus des onglets tant qu'un audio est chargé (lecture/pause, fermer).
 - **Natif** : l'audio continue écran verrouillé et dans une autre app ; écran verrouillé, Centre
   de contrôle, Dynamic Island, AirPods, CarPlay et Apple Watch affichent la couverture, le titre et

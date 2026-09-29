@@ -39,6 +39,8 @@ struct CourseView: View {
     /// Full audio player, opened by the headphones in the header.
     @State private var showAudioPlayer: Bool = false
     @State private var showAudioPaywall: Bool = false
+    /// Another course's narration is loaded: listen now, next, or at the end of the queue.
+    @State private var showAudioChoice: Bool = false
     /// While the reader is up, the player's paywall requests land here, not in ContentView.
     @State private var audioPaywallHandlerId: UUID?
 
@@ -268,6 +270,10 @@ struct CourseView: View {
             AudioPlayerView()
                 .sophiaSheetChrome()
         }
+        .audioPlayChoiceDialog(isPresented: $showAudioChoice, courseId: course.id, source: "course_reader") {
+            CourseAudioPlayer.shared.play(courseId: course.id, source: "course_reader")
+            showAudioPlayer = true
+        }
         .onAppear {
             guard audioPaywallHandlerId == nil else { return }
             audioPaywallHandlerId = CourseAudioPlayer.shared.pushPaywallHandler {
@@ -365,6 +371,10 @@ struct CourseView: View {
         }
         let player = CourseAudioPlayer.shared
         player.isPremium = true
+        if player.hasItem, !player.isCurrent(course.id) {
+            showAudioChoice = true
+            return
+        }
         if !player.isCurrent(course.id) {
             player.play(courseId: course.id, source: "course_reader")
         } else if !player.isPlaying {

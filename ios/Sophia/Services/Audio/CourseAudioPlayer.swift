@@ -71,6 +71,9 @@ final class CourseAudioPlayer {
     /// A course was listened to the end (once per playthrough); set by `ContentView`,
     /// which owns the progress.
     @ObservationIgnored var onListenedToEnd: ((String) -> Void)?
+    /// Whether a course is already done, so suggestions put unread courses first; set by
+    /// `ContentView`, which owns the progress.
+    @ObservationIgnored var isCourseCompleted: ((String) -> Bool)?
 
     @ObservationIgnored private let player = AVPlayer()
     @ObservationIgnored private var timeObserver: Any?
