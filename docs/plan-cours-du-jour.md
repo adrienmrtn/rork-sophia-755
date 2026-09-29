@@ -65,6 +65,16 @@
 
 ## Tester
 
+**Build Debug (lancé depuis Xcode)** : Profil › Réglages › Développeur › **Tester les
+notifications**. On y voit l'autorisation iOS, le statut RevenueCat (essai, payant, gratuit),
+le jour à partir duquel la question du jour part, l'heure et la langue. On peut envoyer,
+après 5 à 60 s, la question du jour, celle de demain, une au hasard, les 5 prochaines (une
+toutes les 10 s) et la notification du blocker TikTok, avec le même contenu et le même lien
+que les vraies. Le même écran reprogramme, efface, et liste les notifications programmées.
+Les notifications de test ont leur préfixe (`sophia.debug.`) et ne touchent pas à la
+programmation réelle. Cet écran n'existe pas dans TestFlight ni sur l'App Store.
+
+
 - Nouveau compte gratuit : la Biblio montre la question du jour en premier ; Réglages › Rappel
   quotidien → choisir la prochaine heure pleine, sortir de l'app ; à l'heure dite la
   notification arrive avec la question et ouvre le cours.

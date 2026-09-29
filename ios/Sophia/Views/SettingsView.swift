@@ -21,6 +21,8 @@ struct SettingsView: View {
     @State private var showAudioDownloads: Bool = false
     @State private var hapticTrigger: Int = 0
     @State private var reminderHour: Int = DailyCourseReminder.storedHour
+    /// Écran de test des notifications, ouvert depuis la section développeur (Debug).
+    @State private var showDebugNotifications: Bool = false
     /// Set only by the developer section, which is itself behind `#if DEBUG`.
     @State private var debugPaywall: SophiaPaywallContext? = nil
 
@@ -130,8 +132,18 @@ struct SettingsView: View {
             .sheet(isPresented: $showTerms) { TermsView().sophiaSheetChrome() }
             .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaSheetChrome() }
             .sheet(isPresented: $showFeedback) { FeedbackView(isPremium: store.isPremium) }
-            .sheet(isPresented: $showAmbassador) { AmbassadorView() }
+            .sheet(isPresented: $showAmbassador) {
+                if let url = URL(string: AppConfig.CREATORS_URL) {
+                    InAppSafariView(url: url)
+                        .ignoresSafeArea()
+                }
+            }
             .sheet(isPresented: $showAudioDownloads) { AudioDownloadsView().sophiaSheetChrome() }
+            .sheet(isPresented: $showDebugNotifications) {
+                #if DEBUG
+                DebugNotificationsView()
+                #endif
+            }
         }
         .sophiaColorScheme()
     }
@@ -429,6 +441,14 @@ struct SettingsView: View {
                     rowDivider
                 }
                 actionRow(
+                    icon: "bell.badge",
+                    title: languageManager.text("settings.debug.notifications")
+                ) {
+                    hapticTrigger += 1
+                    showDebugNotifications = true
+                }
+                rowDivider
+                actionRow(
                     icon: "calendar.badge.minus",
                     title: languageManager.text("settings.debug.resetDaily"),
                     subtitle: progressManager.hasClaimedDailyFreeCourse
@@ -528,9 +548,11 @@ struct SettingsView: View {
 
     // MARK: - Ambassador banner
 
+    /// Ouvre la page créateurs du site (le formulaire intégré n'est plus affiché).
     private var ambassadorBanner: some View {
         Button {
             hapticTrigger += 1
+            AnalyticsService.trackAmbassadorOpened()
             showAmbassador = true
         } label: {
             HStack(spacing: 14) {
