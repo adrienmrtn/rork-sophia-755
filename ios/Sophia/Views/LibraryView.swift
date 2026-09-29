@@ -477,7 +477,7 @@ struct LibraryFeaturedCard: View {
                 .lineLimit(2, reservesSpace: true)
                 .multilineTextAlignment(.leading)
 
-            Text(course.description)
+            Text(course.plainDescription)
                 .font(DS.sans(.caption))
                 .foregroundStyle(DS.inkSecondary)
                 .lineLimit(2, reservesSpace: true)

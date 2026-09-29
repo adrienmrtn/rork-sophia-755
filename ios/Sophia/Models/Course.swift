@@ -268,6 +268,16 @@ extension Course {
         }
         return "\(count / 1_000) k"
     }
+
+    /// Description sans balisage, pour les textes affichés tels quels. Les traductions
+    /// gardent le gras `**…**`, l'italique `*…*` et les termes de glossaire `[[…]]` du
+    /// contenu des cours ; le français n'en a pas.
+    var plainDescription: String {
+        description
+            .replacingOccurrences(of: "[[", with: "")
+            .replacingOccurrences(of: "]]", with: "")
+            .replacingOccurrences(of: "*", with: "")
+    }
 }
 
 extension Array where Element == QuizQuestion {
