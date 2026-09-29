@@ -31,10 +31,12 @@ import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Today
 import androidx.compose.material.icons.filled.WorkspacePremium
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -81,7 +83,8 @@ fun SettingsScreen(
     onLanguageChange: (AppLanguage) -> Unit,
     onShowPaywall: () -> Unit,
     onOpenFeedback: () -> Unit,
-    onOpenAmbassador: () -> Unit,
+    /** Ouvre la page du rôle choisi (`ugc` ou `slideshow`) du programme créateurs. */
+    onOpenCreators: (role: String) -> Unit,
     onOpenTerms: () -> Unit,
     onOpenPrivacy: () -> Unit,
     onRestorePurchases: () -> Unit,
@@ -92,6 +95,7 @@ fun SettingsScreen(
     val scope = rememberCoroutineScope()
     val userId by app.authService.userId.collectAsState()
     var showResetProgress by remember { mutableStateOf(false) }
+    var showCreatorChoice by remember { mutableStateOf(false) }
     var showDeleteAccount by remember { mutableStateOf(false) }
     var deletingAccount by remember { mutableStateOf(false) }
     var deleteError by remember { mutableStateOf<String?>(null) }
@@ -267,7 +271,10 @@ fun SettingsScreen(
                 icon = Icons.Filled.Star,
                 label = StringStore.text(context, "settings.ambassador.banner.title", language),
                 subtitle = StringStore.text(context, "settings.ambassador.banner.subtitle", language),
-                onClick = onOpenAmbassador,
+                onClick = {
+                    app.analytics.trackAmbassadorOpened()
+                    showCreatorChoice = true
+                },
             )
         }
 
@@ -382,6 +389,48 @@ fun SettingsScreen(
                 app.progressManager.resetProgress()
             },
             onDismiss = { showResetProgress = false },
+        )
+    }
+
+    // Deviens ambassadeur : on choisit son rôle, puis sa page s'ouvre sur le site.
+    if (showCreatorChoice) {
+        AlertDialog(
+            onDismissRequest = { showCreatorChoice = false },
+            containerColor = DS.surface,
+            shape = DS.cardShape,
+            title = {
+                Text(
+                    StringStore.text(context, "settings.ambassador.banner.title", language),
+                    style = SophiaTypography.titleMedium,
+                )
+            },
+            text = {
+                Column {
+                    listOf(
+                        "ugc" to "ambassador.role.ugc.title",
+                        "slideshow" to "ambassador.role.slideshow.title",
+                    ).forEach { (role, key) ->
+                        TextButton(
+                            onClick = {
+                                showCreatorChoice = false
+                                onOpenCreators(role)
+                            },
+                            modifier = Modifier.fillMaxWidth(),
+                        ) {
+                            Text(
+                                StringStore.text(context, key, language),
+                                style = SophiaTypography.bodyLarge,
+                                color = DS.accentSoft,
+                            )
+                        }
+                    }
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { showCreatorChoice = false }) {
+                    Text(StringStore.text(context, "settings.reset.alert.cancel", language), color = DS.inkSecondary)
+                }
+            },
         )
     }
 }

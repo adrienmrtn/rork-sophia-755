@@ -6,8 +6,14 @@ enum AppConfig {
     static let MIXPANEL_TOKEN: String = "d2e043bfcdd8f53a7ec613d378667519"
     static let FORMSPREE_ENDPOINT: String = "https://formspree.io/f/xwvdybwb"
     static let FORMSPREE_AMBASSADOR_ENDPOINT: String = "https://formspree.io/f/xpqvqnwb"
-    /// Page du programme créateurs, ouverte par la bannière « Deviens ambassadeur » des Réglages.
-    static let CREATORS_URL: String = "https://sophia-culture.com/fr/createurs"
+    /// Page d'un rôle du programme créateurs (`ugc` ou `slideshow`), ouverte depuis la
+    /// bannière « Deviens ambassadeur » des Réglages. Le site n'existe qu'en français et en
+    /// anglais : l'anglais pour toutes les autres langues.
+    static func creatorsURL(role: String, language: AppLanguage) -> URL? {
+        language == .french
+            ? URL(string: "https://sophia-culture.com/fr/createurs/\(role)")
+            : URL(string: "https://sophia-culture.com/en/creators/\(role)")
+    }
 
     // MARK: - Supabase (auth + sync)
     //

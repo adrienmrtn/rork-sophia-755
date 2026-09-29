@@ -1,5 +1,7 @@
 package app.rork.sophia
 
+import app.rork.sophia.domain.AppLanguage
+
 object AppConfig {
     val revenueCatApiKey: String
         get() = if (BuildConfig.USE_RC_TEST_KEY) {
@@ -14,7 +16,17 @@ object AppConfig {
     const val GOOGLE_WEB_CLIENT_ID = BuildConfig.GOOGLE_WEB_CLIENT_ID
     const val FORMSPREE_ENDPOINT = BuildConfig.FORMSPREE_ENDPOINT
     const val FORMSPREE_AMBASSADOR_ENDPOINT = BuildConfig.FORMSPREE_AMBASSADOR_ENDPOINT
-    /** Page du programme créateurs, ouverte par la bannière « Deviens ambassadeur » des réglages. */
-    const val CREATORS_URL = "https://sophia-culture.com/fr/createurs"
+
+    /**
+     * Page d'un rôle du programme créateurs (`ugc` ou `slideshow`), ouverte depuis la bannière
+     * « Deviens ambassadeur » des réglages. Le site n'existe qu'en français et en anglais :
+     * l'anglais pour toutes les autres langues.
+     */
+    fun creatorsUrl(role: String, language: AppLanguage): String =
+        if (language == AppLanguage.FRENCH) {
+            "https://sophia-culture.com/fr/createurs/$role"
+        } else {
+            "https://sophia-culture.com/en/creators/$role"
+        }
     const val PREMIUM_ENTITLEMENT = "premium"
 }

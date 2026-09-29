@@ -537,10 +537,10 @@ fun MainTabs(
                                 paywall = PaywallContext.DEBLOQUER_COURS
                             },
                             onOpenFeedback = { openFromSettings(OverlayScreen.Feedback) },
-                            // La page créateurs du site, plutôt que le formulaire intégré.
-                            onOpenAmbassador = {
-                                app.analytics.trackAmbassadorOpened()
-                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(AppConfig.CREATORS_URL))
+                            // La page du rôle choisi sur le site, plutôt que le formulaire intégré.
+                            onOpenCreators = { role ->
+                                val url = AppConfig.creatorsUrl(role, language)
+                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
                                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                 runCatching { context.startActivity(intent) }
                             },
