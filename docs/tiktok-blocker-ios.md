@@ -25,7 +25,8 @@ iOS affiche notre écran plein à la place.
    « Un cours, puis tu scrolles » et ferme TikTok. L'utilisateur tape la notification
    (ou ouvre Sophia à la main dans les 10 minutes, le tampon suffit).
 4. **Cours direct.** `ContentView` lit le tampon au premier plan et ouvre immédiatement
-   un cours (reco de l'accueil, restreinte aux cours avec quiz). Le lecteur affiche un
+   un cours : la question du jour si elle n'est pas encore lue, sinon la reco de
+   l'accueil restreinte aux cours avec quiz. Le lecteur affiche un
    bandeau « TikTok est bloqué · termine le cours et le quiz ». Si l'utilisateur
    ressort du cours, le même cours lui sera reproposé au prochain passage.
 5. **Quiz terminé.** `QuizView` prévient `TikTokBlockerManager`. Le bouclier est levé

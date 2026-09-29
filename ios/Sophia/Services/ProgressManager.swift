@@ -166,7 +166,8 @@ nonisolated struct QuizStatsSummary: Sendable {
 class ProgressManager {
     var progress: UserProgress = .empty
 
-    private let key = "sophia_user_progress"
+    private static let storageKey = "sophia_user_progress"
+    private let key = ProgressManager.storageKey
     private let dateFormatter: DateFormatter = {
         let f = DateFormatter()
         f.dateFormat = "yyyy-MM-dd"
@@ -785,6 +786,15 @@ class ProgressManager {
                 isNewRecord: progress.streak > previousStreak
             )
         }
+    }
+
+    /// Cours terminés, relus dans la sauvegarde : pour les services qui n'ont pas
+    /// d'instance sous la main (notifications, widget). La sauvegarde est écrite à chaque
+    /// changement, elle est donc à jour.
+    static func persistedCompletedCourseIds() -> Set<String> {
+        guard let data = UserDefaults.standard.data(forKey: storageKey),
+              let decoded = try? JSONDecoder().decode(UserProgress.self, from: data) else { return [] }
+        return Set(decoded.courseProgress.filter { $0.value.isCompleted }.keys)
     }
 
     private func load() {

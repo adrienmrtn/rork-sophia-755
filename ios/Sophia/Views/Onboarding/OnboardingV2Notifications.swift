@@ -24,7 +24,9 @@ struct OnboardingV2Notifications: View {
     /// système peuvent arriver tous les deux.
     @State private var moved = false
     @State private var revealed = 0
-    @State private var previewCourseTitle: String?
+    /// La vraie notification : la question du jour en titre, son accroche en texte.
+    @State private var previewTitle: String?
+    @State private var previewHook: String?
 
     var body: some View {
         OV2ScrollableContent {
@@ -108,7 +110,7 @@ struct OnboardingV2Notifications: View {
                 Text("Sophia")
                     .font(DS.sans(.caption, .semibold))
                     .foregroundStyle(OV2.inkTertiary)
-                Text(languageManager.text("notification.courseNudge.title"))
+                Text(previewTitle ?? languageManager.text("notification.courseNudge.title"))
                     .font(DS.sans(.subheadline, .medium))
                     .foregroundStyle(OV2.ink)
                 Text(previewBody)
@@ -129,10 +131,7 @@ struct OnboardingV2Notifications: View {
     }
 
     private var previewBody: String {
-        guard let title = previewCourseTitle else {
-            return languageManager.text("notification.courseNudge.bodyFallback")
-        }
-        return String(format: languageManager.text("notification.courseNudge.body"), title)
+        previewHook ?? languageManager.text("notification.courseNudge.bodyFallback")
     }
 
     private func bulletRow(_ bullet: (emoji: String, key: String), visible: Bool) -> some View {
@@ -191,11 +190,16 @@ struct OnboardingV2Notifications: View {
     }
 
     private func runAnimation() {
-        // Feature one of the courses the profile page just promised, so the preview reads as
-        // the notification this user would actually get.
-        previewCourseTitle = vm.awaitingCourses(language: languageManager.current)
-            .randomElement()?
-            .title
+        // Today's question of the day, so the preview reads as the notification this user
+        // would actually get.
+        let language = languageManager.current
+        if let id = DailyQuestion.todayCourseId(language: language, isCompleted: { _ in false }),
+           let course = ContentCatalog.course(withId: id, language: language) {
+            previewTitle = course.title
+            previewHook = CourseContentStore.content(courseId: id, language: language)?
+                .hero?.hook?
+                .withoutInlineMarkup
+        }
 
         for i in 0..<notificationBullets.count {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4 + Double(i) * 0.16) {

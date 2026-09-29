@@ -26,7 +26,32 @@ final class DeepLinkRouter {
     /// Increments on every request, so two requests for the same course are still two events.
     private(set) var token: Int = 0
 
+    /// Sources of a course opened from the daily question's notification and widget
+    /// (`?from=notification`, `?from=widget` on the link).
+    static let notificationSource = "notification_daily_question"
+    static let widgetSource = "widget_daily_question"
+
     private init() {}
+
+    /// A `sophia://` link, from `onOpenURL` or a notification tap. False when it is not ours.
+    @discardableResult
+    func open(_ url: URL) -> Bool {
+        if SophiaDeepLink.isUnlockRequest(url) {
+            // Same stamp the shield writes; the home screen reads it right away.
+            TikTokBlockerShared.pendingRequestAt = Date()
+            requestUnlock()
+            return true
+        }
+        guard let courseId = SophiaDeepLink.courseId(from: url) else { return false }
+        // Parked rather than delivered: the onboarding may still be on screen, and the
+        // home opens it as soon as it is ready.
+        switch SophiaDeepLink.origin(of: url) {
+        case "notification": requestCourse(courseId, source: Self.notificationSource)
+        case "widget": requestCourse(courseId, source: Self.widgetSource)
+        default: requestCourse(courseId)
+        }
+        return true
+    }
 
     func requestCourse(_ courseId: String, source: String = "deep_link") {
         pendingCourseId = courseId
