@@ -17,6 +17,7 @@ enum AudioFormat {
     static func speed(_ rate: Double, locale: Locale) -> String {
         let formatter = NumberFormatter()
         formatter.locale = locale
+        formatter.numberStyle = .decimal
         formatter.minimumFractionDigits = 0
         formatter.maximumFractionDigits = 2
         return (formatter.string(from: NSNumber(value: rate)) ?? String(rate)) + "×"
@@ -104,11 +105,12 @@ struct CourseAudioMenuItems: View {
 private struct CourseAudioContextMenu: ViewModifier {
     let courseId: String
     let source: String
+    let enabled: Bool
 
     @ViewBuilder
     func body(content: Content) -> some View {
         // No narration, no menu at all: an empty context menu would still lift the card.
-        if CourseAudioCatalog.shared.hasAudio(courseId) {
+        if enabled, CourseAudioCatalog.shared.hasAudio(courseId) {
             content.contextMenu {
                 CourseAudioMenuItems(courseId: courseId, source: source)
             }
@@ -120,8 +122,8 @@ private struct CourseAudioContextMenu: ViewModifier {
 
 extension View {
     /// Long press on a course card: the audio menu, when the course is narrated.
-    func courseAudioContextMenu(courseId: String, source: String) -> some View {
-        modifier(CourseAudioContextMenu(courseId: courseId, source: source))
+    func courseAudioContextMenu(courseId: String, source: String, enabled: Bool = true) -> some View {
+        modifier(CourseAudioContextMenu(courseId: courseId, source: source, enabled: enabled))
     }
 }
 

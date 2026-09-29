@@ -39,6 +39,8 @@ struct CourseView: View {
     /// Full audio player, opened by the headphones in the header.
     @State private var showAudioPlayer: Bool = false
     @State private var showAudioPaywall: Bool = false
+    /// While the reader is up, the player's paywall requests land here, not in ContentView.
+    @State private var audioPaywallHandlerId: UUID?
 
     /// Fixed XP awarded for finishing a course (reaching the completion screen). Always granted.
     /// Listening to the narration to the end grants the same (see `ContentView`).
@@ -265,6 +267,23 @@ struct CourseView: View {
         .sheet(isPresented: $showAudioPlayer) {
             AudioPlayerView()
                 .sophiaSheetChrome()
+        }
+        .onAppear {
+            guard audioPaywallHandlerId == nil else { return }
+            audioPaywallHandlerId = CourseAudioPlayer.shared.pushPaywallHandler {
+                // From the player sheet (a subscription that lapsed): the sheet goes first.
+                guard showAudioPlayer else {
+                    showAudioPaywall = true
+                    return
+                }
+                showAudioPlayer = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { showAudioPaywall = true }
+            }
+        }
+        .onDisappear {
+            guard !isCoveredByOverlay, let id = audioPaywallHandlerId else { return }
+            CourseAudioPlayer.shared.removePaywallHandler(id)
+            audioPaywallHandlerId = nil
         }
         .fullScreenCover(isPresented: $showAudioPaywall) {
             SophiaPaywallView(

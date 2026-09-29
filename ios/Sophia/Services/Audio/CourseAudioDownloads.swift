@@ -181,6 +181,8 @@ final class CourseAudioDownloads {
     }
 
     private func finish(_ key: AudioTrackKey, _ outcome: CourseAudioDownloadDelegate.Outcome) {
+        // `cancel` already cleaned up; a late callback must not clear a download restarted since.
+        if case .cancelled = outcome { return }
         tasks[key] = nil
         inFlight[key] = nil
         switch outcome {

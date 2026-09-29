@@ -63,6 +63,9 @@ final class CourseAudioPlayer {
     var isPremium = false
     /// Opens the audio paywall; set by `ContentView`.
     @ObservationIgnored var onPaywallNeeded: (() -> Void)?
+    /// Paywall hooks of screens presented over `ContentView` (the course reader), which
+    /// cannot show a cover from the root. The last one wins.
+    @ObservationIgnored private var paywallHandlers: [(id: UUID, handler: () -> Void)] = []
     /// The course a free user wanted to hear, for the paywall's cover.
     @ObservationIgnored private(set) var paywallCourseId: String?
     /// A course was listened to the end (once per playthrough); set by `ContentView`,
@@ -82,6 +85,8 @@ final class CourseAudioPlayer {
     @ObservationIgnored private var pendingStartTime: Double?
     @ObservationIgnored private var playWhenReady = false
     @ObservationIgnored private var reportedCompletion = false
+    /// Whether to pick up again when a call or an alarm ends: only if it was playing.
+    @ObservationIgnored private var wasPlayingBeforeInterruption = false
     @ObservationIgnored private var lastPositionSave = Date.distantPast
     @ObservationIgnored private var remoteCommandsConfigured = false
     @ObservationIgnored private var artworkCourseId: String?
@@ -153,7 +158,7 @@ final class CourseAudioPlayer {
         guard isPremium else {
             AnalyticsService.trackAudioLockedTapped(courseId: courseId, source: source)
             paywallCourseId = courseId
-            onPaywallNeeded?()
+            askForPaywall()
             return false
         }
         play(courseId: courseId, language: language, source: source)
@@ -167,7 +172,7 @@ final class CourseAudioPlayer {
         guard isPremium else {
             AnalyticsService.trackAudioLockedTapped(courseId: courseId, source: source)
             paywallCourseId = courseId
-            onPaywallNeeded?()
+            askForPaywall()
             return false
         }
         enqueue(courseId: courseId, next: next, source: source)
@@ -179,7 +184,7 @@ final class CourseAudioPlayer {
         guard isPremium else {
             AnalyticsService.trackAudioLockedTapped(courseId: courseId, source: source)
             paywallCourseId = courseId
-            onPaywallNeeded?()
+            askForPaywall()
             return false
         }
         guard let language = language ?? CourseAudioCatalog.shared.defaultLanguage(for: courseId) else { return false }
@@ -196,6 +201,24 @@ final class CourseAudioPlayer {
             resume()
         } else {
             paywallCourseId = current?.courseId
+            askForPaywall()
+        }
+    }
+
+    func pushPaywallHandler(_ handler: @escaping () -> Void) -> UUID {
+        let id = UUID()
+        paywallHandlers.append((id: id, handler: handler))
+        return id
+    }
+
+    func removePaywallHandler(_ id: UUID) {
+        paywallHandlers.removeAll { $0.id == id }
+    }
+
+    private func askForPaywall() {
+        if let handler = paywallHandlers.last?.handler {
+            handler()
+        } else {
             onPaywallNeeded?()
         }
     }
@@ -210,7 +233,7 @@ final class CourseAudioPlayer {
             resume()
             return
         }
-        savePosition()
+        savePosition(force: true)
         queue.removeAll { $0.courseId == courseId }
         let item = AudioQueueItem(courseId: courseId, language: language)
         current = item
@@ -238,13 +261,13 @@ final class CourseAudioPlayer {
     func pause() {
         playWhenReady = false
         player.pause()
-        savePosition()
+        savePosition(force: true)
         syncPlaybackState()
     }
 
     /// Stops and empties the player: the mini-player goes away.
     func stop() {
-        savePosition()
+        savePosition(force: true)
         playWhenReady = false
         player.pause()
         player.replaceCurrentItem(with: nil)
@@ -305,7 +328,7 @@ final class CourseAudioPlayer {
         CourseAudioCatalog.shared.preferredLanguage = language
         guard let current, current.language != language else { return }
         let wasPlaying = isPlaying
-        savePosition()
+        savePosition(force: true)
         let item = AudioQueueItem(courseId: current.courseId, language: language)
         self.current = item
         load(item, autoplay: wasPlaying)
@@ -368,7 +391,7 @@ final class CourseAudioPlayer {
     func playFromQueue(_ item: AudioQueueItem) {
         guard let index = queue.firstIndex(of: item) else { return }
         queue.remove(at: index)
-        savePosition()
+        savePosition(force: true)
         current = item
         load(item, autoplay: true)
         persistSession()
@@ -376,7 +399,7 @@ final class CourseAudioPlayer {
 
     /// Next narration in the queue; with an empty queue, the player closes.
     func skipToNext() {
-        savePosition()
+        savePosition(force: true)
         guard !queue.isEmpty else {
             stop()
             return
@@ -453,6 +476,10 @@ final class CourseAudioPlayer {
         case .readyToPlay:
             let seconds = item.duration.seconds
             if seconds.isFinite, seconds > 0 { duration = seconds }
+            // Resumed past the threshold: this playthrough was already counted.
+            if let start = pendingStartTime, duration > 0, start / duration >= Self.completionThreshold {
+                reportedCompletion = true
+            }
             if let start = pendingStartTime, duration == 0 || start < duration - 3 {
                 pendingStartTime = nil
                 player.seek(
@@ -547,11 +574,13 @@ final class CourseAudioPlayer {
         switch interruption {
         case .began:
             // The system already paused the player (a call, an alarm).
+            wasPlayingBeforeInterruption = isPlaying
             savePosition(force: true)
             syncPlaybackState()
         case .ended:
             let shouldResume = options.map { AVAudioSession.InterruptionOptions(rawValue: $0).contains(.shouldResume) } ?? false
-            if shouldResume, current != nil { resume() }
+            if shouldResume, wasPlayingBeforeInterruption, current != nil { resume() }
+            wasPlayingBeforeInterruption = false
         @unknown default:
             break
         }

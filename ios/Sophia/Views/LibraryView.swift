@@ -519,6 +519,9 @@ struct LibraryCardView: View {
     let status: CourseStatus
     let onTap: () -> Void
     var progressManager: ProgressManager? = nil
+    /// Off where the card sits in a cover over `ContentView` (favourites): the audio
+    /// paywall is presented from the root and could not show there.
+    var showsAudio: Bool = true
     @State private var favTrigger: Int = 0
 
     var body: some View {
@@ -537,7 +540,7 @@ struct LibraryCardView: View {
             .opacity(status == .completed ? 0.82 : 1.0)
         }
         .buttonStyle(BrutalCardButtonStyle(depth: 2))
-        .courseAudioContextMenu(courseId: course.id, source: "library_card")
+        .courseAudioContextMenu(courseId: course.id, source: "library_card", enabled: showsAudio)
     }
 
     private var illustration: some View {
@@ -584,8 +587,10 @@ struct LibraryCardView: View {
                 }
             }
             .overlay(alignment: .bottomTrailing) {
-                CourseAudioCardButton(courseId: course.id, source: "library_card", size: 30)
-                    .padding(8)
+                if showsAudio {
+                    CourseAudioCardButton(courseId: course.id, source: "library_card", size: 30)
+                        .padding(8)
+                }
             }
     }
 

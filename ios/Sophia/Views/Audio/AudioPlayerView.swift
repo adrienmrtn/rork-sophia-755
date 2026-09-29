@@ -155,7 +155,7 @@ struct AudioPlayerView: View {
         return VStack(spacing: 6) {
             Slider(
                 value: Binding(
-                    get: { min(shown, upper) },
+                    get: { player.duration > 0 ? min(shown, upper) : 0 },
                     set: { scrubValue = $0 }
                 ),
                 in: 0...upper,
