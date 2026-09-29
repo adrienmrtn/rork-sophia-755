@@ -16,21 +16,12 @@ object DeviceCapabilities {
     @Volatile
     private var lowRam: Boolean? = null
 
-    @Volatile
-    private var memoryClassMb: Int = -1
-
     fun isLowRam(context: Context): Boolean {
         lowRam?.let { return it }
         val am = context.applicationContext.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
-        memoryClassMb = am.memoryClass
         val value = am.isLowRamDevice || am.memoryClass <= 192
         lowRam = value
         return value
-    }
-
-    fun memoryClassMb(context: Context): Int {
-        if (memoryClassMb < 0) isLowRam(context)
-        return memoryClassMb
     }
 
     fun isEmulator(): Boolean {
@@ -82,16 +73,4 @@ object DeviceCapabilities {
     }
 
     private const val PLAY_SERVICES_PACKAGE = "com.google.android.gms"
-
-    fun analyticsProps(context: Context): Map<String, Any?> = mapOf(
-        "low_ram" to isLowRam(context),
-        "emulator" to isEmulator(),
-        "memory_class_mb" to memoryClassMb(context),
-        "model" to Build.MODEL,
-        "hardware" to Build.HARDWARE,
-        "manufacturer" to Build.MANUFACTURER,
-        "release" to Build.VERSION.RELEASE,
-        "sdk" to Build.VERSION.SDK_INT,
-        "play_services" to hasGooglePlayServices(context),
-    )
 }

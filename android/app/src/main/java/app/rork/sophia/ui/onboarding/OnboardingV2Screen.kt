@@ -51,25 +51,25 @@ import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-private enum class OnboardingStep(val analyticsName: String) {
-    Welcome("welcome"),
-    Language("language"),
-    Objectives("objective"),
-    ObjectiveIntro("objective_intro"),
-    Questions("questions"),
-    PhoneTime("phone_time"),
-    YearsGrid("years_grid"),
-    Transform("transform"),
-    Review("review"),
-    Personalize("personalize"),
-    Swipe("swipe_courses"),
-    Loading("loading"),
-    Profile("profile"),
-    Notifications("notifications"),
-    Login("login"),
-    Trial("trial_steps"),
-    Reminder("reminder"),
-    Paywall("paywall_annual"),
+private enum class OnboardingStep {
+    Welcome,
+    Language,
+    Objectives,
+    ObjectiveIntro,
+    Questions,
+    PhoneTime,
+    YearsGrid,
+    Transform,
+    Review,
+    Personalize,
+    Swipe,
+    Loading,
+    Profile,
+    Notifications,
+    Login,
+    Trial,
+    Reminder,
+    Paywall,
 }
 
 /** Steps that carry the progress dots, matching the iOS `dotScreens` set. */
@@ -141,7 +141,6 @@ fun OnboardingV2Screen(
             restore = { mutableStateOf(it) },
         ),
     ) { mutableStateOf(listOf()) }
-    var sawPaywall by rememberSaveable { mutableStateOf(false) }
     var lastAdvanceAt by remember { mutableLongStateOf(0L) }
     var signingIn by remember { mutableStateOf(false) }
     var signInError by remember { mutableStateOf<String?>(null) }
@@ -158,9 +157,7 @@ fun OnboardingV2Screen(
         step = next
     }
 
-    LaunchedEffect(Unit) { app.analytics.trackOnboardingStarted() }
     LaunchedEffect(step) {
-        app.analytics.trackOnboardingStep(step.ordinal, step.analyticsName)
         // Killing the app mid-onboarding used to restart the whole flow, answers and all.
         app.onboardingStore.rememberStep(step.name)
     }
@@ -174,14 +171,13 @@ fun OnboardingV2Screen(
         }
     }
 
-    fun finish(isPremiumAtExit: Boolean) {
+    fun finish() {
         runCatching {
             likedCourseIds.forEach { id ->
                 if (!app.progressManager.isFavorite(id)) {
                     app.progressManager.toggleFavorite(id)
                 }
             }
-            app.analytics.trackOnboardingCompleted(sawPaywall = sawPaywall, isPremium = isPremiumAtExit)
         }
         onComplete()
     }
@@ -223,9 +219,8 @@ fun OnboardingV2Screen(
     }
 
     fun advanceFromReminder() {
-        if (isPremium) finish(true)
+        if (isPremium) finish()
         else {
-            sawPaywall = true
             step = OnboardingStep.Paywall
         }
     }
@@ -283,7 +278,6 @@ fun OnboardingV2Screen(
                         }
                     },
                     onContinue = {
-                        app.analytics.trackOnboardingInterestsSet(selectedObjectives)
                         goTo(OnboardingStep.ObjectiveIntro)
                     },
                 )
@@ -400,27 +394,13 @@ fun OnboardingV2Screen(
                 OnboardingStep.Trial -> TrialStepsStep(language, storeViewModel.annualTrialDays()) { goTo(OnboardingStep.Reminder) }
                 OnboardingStep.Reminder -> ReminderStep(language, onContinue = { advanceFromReminder() })
                 OnboardingStep.Paywall -> {
-                    LaunchedEffect(Unit) { sawPaywall = true }
                     OnboardingPaywallFlow(
                         language = language,
                         storeViewModel = storeViewModel,
-                        onDismiss = { finish(false) },
+                        onDismiss = { finish() },
                         onPurchased = { purchased ->
                             scheduleTrialReminderIfEligible(purchased)
-                            finish(true)
-                        },
-                        onPurchaseMeta = { offeringId, packageId ->
-                            app.analytics.trackPurchaseCompleted(
-                                context = "fin_onboarding",
-                                offeringId = offeringId,
-                                packageId = packageId,
-                            )
-                        },
-                        onComparisonShown = {
-                            app.analytics.trackOnboardingStep(
-                                stepIndex = current.ordinal,
-                                stepName = "paywall_comparison",
-                            )
+                            finish()
                         },
                     )
                 }

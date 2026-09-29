@@ -52,10 +52,9 @@ Debug APK uses the placeholder RevenueCat key (`goog_REPLACE_ME`) until you set 
 - **Course share** (`sophia://course/{id}`)
 - **Ambassador** Formspree candidature from profile
 - **Play In-App Review** (3rd lesson of first course)
-- **Mixpanel EU** funnel events (onboarding, course, quiz, locks, discount)
 - **15 languages** (Phase A) + onboarding language scroll / scrollable profile (Phase B)
 - **Trial/no-trial paywalls**, RC impressions, quiz FAQ, lock overlay (Phase C)
-- **Legal docs** (Play-adapted), restore, analytics parity, Play store packs (Phase D)
+- **Legal docs** (Play-adapted), restore, Play store packs (Phase D)
 
 ## Phase E QA (no APK)
 

@@ -25,7 +25,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
@@ -41,12 +40,10 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.AuthorStore
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.CourseCoverUrls
 import app.rork.sophia.data.CourseImagePrefetch
-import app.rork.sophia.data.CourseSessionTracker
 import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.InAppReviewHelper
 import app.rork.sophia.data.ProgressManager
@@ -89,7 +86,6 @@ fun CourseScreen(
     onOpenAudio: () -> Unit = {},
 ) {
     val context = LocalContext.current
-    val app = context.applicationContext as SophiaApplication
     var showQuiz by remember { mutableStateOf(false) }
     var showCompleted by remember(course.id) { mutableStateOf(false) }
     var showCoachmark by remember { mutableStateOf(false) }
@@ -108,13 +104,6 @@ fun CourseScreen(
         rememberPagerState(pageCount = { pages.size.coerceAtLeast(1) })
     }
     val scope = rememberCoroutineScope()
-    val sessionTracker = remember(course.id) {
-        CourseSessionTracker(
-            courseId = course.id,
-            subject = course.subjectEnum.storageKey,
-            lessonCount = 1,
-        )
-    }
 
     LaunchedEffect(course.id, language) {
         val appContext = context.applicationContext
@@ -133,15 +122,8 @@ fun CourseScreen(
         }
         pages = loaded
         meta = loadedMeta
-        sessionTracker.lessonCount = loaded.size.coerceAtLeast(1)
         pagesReady = true
         progressManager.recordFirstCourseOpenedIfNeeded(course.id)
-    }
-
-    DisposableEffect(course.id) {
-        onDispose {
-            app.analytics.trackCourseSessionEnded(sessionTracker.endProps())
-        }
     }
 
     // Inside a course, back is a step backwards through the reader, not an exit from the
@@ -157,7 +139,6 @@ fun CourseScreen(
     }
 
     if (showQuiz) {
-        LaunchedEffect(Unit) { sessionTracker.markQuiz() }
         QuizScreen(
             course = course,
             language = language,
@@ -204,7 +185,6 @@ fun CourseScreen(
     LaunchedEffect(pagerState.currentPage, pagesReady) {
         if (!pagesReady) return@LaunchedEffect
         val pageIndex = pagerState.currentPage
-        sessionTracker.recordLessonReached(pageIndex)
         progressManager.updateLessonIndex(course.id, pageIndex, lessonCount = pages.size)
         InAppReviewHelper.requestIfEligible(
             context = context,
@@ -318,11 +298,6 @@ fun CourseScreen(
                         }
                         if (locked) {
                             CourseLessonLockOverlay {
-                                app.analytics.trackLockedContentTapped(
-                                    gateType = "debloquer_cours",
-                                    courseId = course.id,
-                                    subject = course.subjectEnum.storageKey,
-                                )
                                 onRequestPaywall("debloquer_cours")
                             }
                         }
@@ -347,7 +322,6 @@ fun CourseScreen(
                     onClick = {
                         if (courseLocked) {
                             if (!isLast) {
-                                sessionTracker.recordContinueTap()
                                 scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
                             }
                             return@SophiaPrimaryButton
@@ -356,19 +330,11 @@ fun CourseScreen(
                             if (FreemiumGate.canCompleteCourse(isPremium, isDailyFreeCourse)) {
                                 if (!wasCompletedBefore) {
                                     progressManager.markCourseCompleted(course.id)
-                                    sessionTracker.markCompleted()
-                                    app.analytics.trackCourseCompleted(
-                                        courseId = course.id,
-                                        subject = course.subjectEnum.storageKey,
-                                        lessonCount = pages.size,
-                                        hasQuiz = course.hasQuiz,
-                                    )
                                     onCourseCompleted()
                                 }
                                 showCompleted = true
                             }
                         } else {
-                            sessionTracker.recordContinueTap()
                             scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
                         }
                     },

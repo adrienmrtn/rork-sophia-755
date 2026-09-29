@@ -82,13 +82,12 @@ object CourseAudioDownloads {
 
     fun totalBytes(): Long = items().sumOf { it.bytes }
 
-    fun download(courseId: String, language: AudioLanguage, onStarted: () -> Unit = {}) {
+    fun download(courseId: String, language: AudioLanguage) {
         val key = AudioTrackKey(courseId, language)
         val target = file(key) ?: return
         synchronized(jobs) {
             if (key in _downloaded.value || jobs[key] != null) return
             _inFlight.update { it + (key to 0f) }
-            onStarted()
             val job = scope.launch(start = CoroutineStart.LAZY) {
                 val saved = runCatching { fetch(CourseAudioCatalog.remoteUrl(courseId, language), target, key) }
                     .getOrDefault(false)

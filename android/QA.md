@@ -16,7 +16,7 @@ Covers:
 4. Catalog / quiz / CoursesV2 id parity vs FR  
 5. Legal Play wording lint (no iOS / App Store / Apple / UserDefaults)  
 6. Store packs: `content/store/play_listing.*` + `revenuecat_products.*`  
-7. Code wiring smoke (lock overlay, trial detect, RC impressions, restore, legal row, analytics names)
+7. Code wiring smoke (lock overlay, trial detect, RC impressions, restore, legal row)
 
 Expected: `errors: none`.
 

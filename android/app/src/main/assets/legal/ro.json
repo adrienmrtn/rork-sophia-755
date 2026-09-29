@@ -60,7 +60,7 @@
     {
       "id": "2",
       "title": "2. Date colectate",
-      "body": "Sophia este concepută având în vedere minimizarea datelor. Aplicația stochează pe dispozitivul dvs.:\n\n- Progresul dvs. la cursuri și chestionare\n- Preferințele dvs. (interese, obiective)\n- Drumul dvs. (zile consecutive de utilizare)\n- Cursurile tale preferate\n\nAceste date locale nu sunt transmise serverelor noastre.\n\nAplicația trimite, de asemenea, evenimente de utilizare anonime către Mixpanel (regiunea UE) pentru a înțelege cum este utilizată aplicația și pentru a o îmbunătăți. Aceste evenimente nu includ numele dvs., e-mailul sau conținutul personal.\n\nDacă trimiteți feedback prin formularul din aplicație din Setări, mesajul dvs. și, dacă sunt furnizate, adresa dvs. de e-mail sunt transmise la Formspree, astfel încât să putem răspunde. Informațiile tehnice (versiunea aplicației, limbă, dispozitiv) sunt atașate automat."
+      "body": "Sophia este concepută având în vedere minimizarea datelor. Aplicația stochează pe dispozitivul dvs.:\n\n- Progresul dvs. la cursuri și chestionare\n- Preferințele dvs. (interese, obiective)\n- Drumul dvs. (zile consecutive de utilizare)\n- Cursurile tale preferate\n\nAceste date locale nu sunt transmise serverelor noastre.\n\nDacă trimiteți feedback prin formularul din aplicație din Setări, mesajul dvs. și, dacă sunt furnizate, adresa dvs. de e-mail sunt transmise la Formspree, astfel încât să putem răspunde. Informațiile tehnice (versiunea aplicației, limbă, dispozitiv) sunt atașate automat."
     },
     {
       "id": "3",
@@ -74,38 +74,33 @@
     },
     {
       "id": "5",
-      "title": "5. Date analitice (Mixpanel)",
-      "body": "Folosim Mixpanel, găzduit în Uniunea Europeană, pentru a măsura utilizarea aplicației (ecranele vizitate, cursurile deschise, interacțiunile cu paywall etc.). Mixpanel primește un identificator anonim al dispozitivului, versiunea aplicației, limba și evenimentele de utilizare agregate. Nu sunt colectate informații de identificare personală. Ne puteți contacta pentru a solicita ștergerea acestor date de analiză."
-    },
-    {
-      "id": "6",
-      "title": "6. Google Play / Android analytics",
+      "title": "5. Google Play / Android analytics",
       "body": "Aplicația poate beneficia și de statistici anonime furnizate de Google (Play Console analytics). Aceste date sunt agregate și nu pot fi folosite pentru a vă identifica personal. Puteți dezactiva partajarea analizelor în setările Android device (Setări > Confidențialitate > Analize și îmbunătățiri)."
     },
     {
-      "id": "7",
-      "title": "7. Stocarea datelor",
+      "id": "6",
+      "title": "6. Stocarea datelor",
       "body": "Datele dvs. de progres sunt stocate local pe dispozitivul dvs. (local app storage). Dacă creați un cont (Google), acesta este, de asemenea, salvat în siguranță pe serverele noastre Supabase (găzduite în Uniunea Europeană) pentru a permite sincronizarea pe dispozitivele dvs. Dezinstalarea aplicației șterge datele locale; ștergerea contului dvs. elimină definitiv datele asociate de pe server."
     },
     {
-      "id": "8",
-      "title": "8. Partajarea datelor",
-      "body": "Nu vindem, închiriem și nu partajăm date cu caracter personal cu terți în scopuri comerciale sau publicitare. Datele transmise sunt limitate la: Google și RevenueCat (abonamente), Mixpanel (analitice anonime, UE), Formspree (feedback-ul utilizatorului trimis voluntar din Setări)."
+      "id": "7",
+      "title": "7. Partajarea datelor",
+      "body": "Nu vindem, închiriem și nu partajăm date cu caracter personal cu terți în scopuri comerciale sau publicitare. Datele transmise sunt limitate la: Google și RevenueCat (abonamente), Formspree (feedback-ul utilizatorului trimis voluntar din Setări)."
     },
     {
-      "id": "9",
-      "title": "9. Drepturile utilizatorului",
+      "id": "8",
+      "title": "8. Drepturile utilizatorului",
       "body": "În conformitate cu Regulamentul general privind protecția datelor (GDPR) și legile aplicabile, aveți următoarele drepturi:\n\n- Dreptul de acces la datele dumneavoastră\n- Dreptul la rectificare\n- Dreptul la ștergere (resetare în Setări)\n- Dreptul la portabilitatea datelor\n- Dreptul de a obiecta\n\nPentru a exercita aceste drepturi, contactați-ne la adresa afișată pe pagina noastră Play Store."
     },
     {
-      "id": "10",
-      "title": "10. Protecția minorilor",
+      "id": "9",
+      "title": "9. Protecția minorilor",
       "body": "Sophia este o aplicație educațională potrivită pentru toate vârstele. Nu colectăm cu bună știință date personale de la copii sub 16 ani. Aplicația nu conține conținut neadecvat."
     },
     {
-      "id": "11",
-      "title": "11. Schimbări",
-      "body": "Ne rezervăm dreptul de a modifica această politică în orice moment. Orice modificare va fi comunicată printr-o actualizare a aplicației.\n\nUltima actualizare: iulie 2026"
+      "id": "10",
+      "title": "10. Schimbări",
+      "body": "Ne rezervăm dreptul de a modifica această politică în orice moment. Orice modificare va fi comunicată printr-o actualizare a aplicației.\n\nUltima actualizare: septembrie 2026"
     }
   ]
 }

@@ -272,7 +272,6 @@ fun SettingsScreen(
                 label = StringStore.text(context, "settings.ambassador.banner.title", language),
                 subtitle = StringStore.text(context, "settings.ambassador.banner.subtitle", language),
                 onClick = {
-                    app.analytics.trackAmbassadorOpened()
                     showCreatorChoice = true
                 },
             )

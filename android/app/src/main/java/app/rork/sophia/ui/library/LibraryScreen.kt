@@ -219,7 +219,6 @@ private fun CourseGridCard(
             CourseAudioButton(
                 courseId = course.id,
                 language = language,
-                source = "library_card",
                 size = 32.dp,
                 modifier = Modifier.align(Alignment.BottomEnd).padding(8.dp),
             )

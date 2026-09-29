@@ -66,7 +66,6 @@ import app.rork.sophia.ui.components.QuizFeedbackPanel
 import app.rork.sophia.ui.components.SophiaPrimaryButton
 import app.rork.sophia.ui.components.optionLetter
 import app.rork.sophia.ui.components.sophiaCard
-import app.rork.sophia.ui.paywall.PaywallContext
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -111,15 +110,6 @@ fun TrainingScreen(
             onPurchased = {
                 showTrainingOb = false
                 onPremiumUnlocked()
-            },
-            // Training sells through the onboarding paywall, which used to report nothing:
-            // every subscription started from this tab was missing from Mixpanel revenue.
-            onPurchaseMeta = { offeringId, packageId ->
-                app.analytics.trackPurchaseCompleted(
-                    context = PaywallContext.ENTRAINEMENT.analyticsContext,
-                    offeringId = offeringId ?: PaywallContext.ENTRAINEMENT.offeringId,
-                    packageId = packageId,
-                )
             },
             onClose = { showTrainingOb = false },
         )

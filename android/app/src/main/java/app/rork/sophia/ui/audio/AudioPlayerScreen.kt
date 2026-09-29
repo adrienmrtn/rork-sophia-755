@@ -386,12 +386,6 @@ private fun SpeedCard(language: AppLanguage) {
                 // Live, so the listener hears the speed while dragging.
                 CourseAudioPlayer.setRate(value)
             },
-            onValueChangeFinished = {
-                (context.applicationContext as app.rork.sophia.SophiaApplication).analytics.track(
-                    "audio_speed_changed",
-                    mapOf("rate" to value.toDouble()),
-                )
-            },
             valueRange = CourseAudioPlayer.SPEED_MIN..CourseAudioPlayer.SPEED_MAX,
             steps = ((CourseAudioPlayer.SPEED_MAX - CourseAudioPlayer.SPEED_MIN) / CourseAudioPlayer.SPEED_STEP).toInt() - 1,
             colors = SliderDefaults.colors(
@@ -446,7 +440,7 @@ private fun ActionRow(item: AudioQueueItem, language: AppLanguage, onOpenQueue: 
             when (val download = CourseAudioDownloads.state(item.courseId, item.language)) {
                 CourseAudioDownloads.State.None ->
                     ActionTile(Icons.Filled.Download, item.language.shortCode, t("audio.download")) {
-                        CourseAudioPlayer.requestDownload(item.courseId, item.language, "player")
+                        CourseAudioPlayer.requestDownload(item.courseId, item.language)
                     }
                 is CourseAudioDownloads.State.Downloading ->
                     ActionTile(Icons.Filled.Close, "${(download.fraction * 100).toInt()} %", t("audio.downloading")) {
@@ -547,7 +541,7 @@ private fun SuggestionsSection(courseId: String, language: AppLanguage, onBrowse
             Column(modifier = Modifier.fillMaxWidth().sophiaCard(shape = DS.controlShape, elevation = 2.dp).padding(horizontal = 12.dp)) {
                 suggestions.forEachIndexed { index, course ->
                     if (index > 0) HorizontalDivider(color = DS.hairline, modifier = Modifier.padding(start = 58.dp))
-                    AudioAddRow(course = course, language = language, source = "player_suggestions")
+                    AudioAddRow(course = course, language = language)
                 }
             }
         }
@@ -563,7 +557,7 @@ private fun SuggestionsSection(courseId: String, language: AppLanguage, onBrowse
  * it out again), the waveform while it plays. Long press on the row: the full audio menu.
  */
 @Composable
-private fun AudioAddRow(course: CourseSummary, language: AppLanguage, source: String) {
+private fun AudioAddRow(course: CourseSummary, language: AppLanguage) {
     val context = LocalContext.current
     val haptics = LocalHapticFeedback.current
     val state by CourseAudioPlayer.state.collectAsState()
@@ -602,7 +596,7 @@ private fun AudioAddRow(course: CourseSummary, language: AppLanguage, source: St
                     .softPress(enabled = !isCurrent, onClick = {
                         if (queued) {
                             CourseAudioPlayer.removeFromQueue(course.id)
-                        } else if (CourseAudioPlayer.requestEnqueue(course.id, next = false, source = source)) {
+                        } else if (CourseAudioPlayer.requestEnqueue(course.id, next = false)) {
                             haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                         }
                     }),
@@ -628,7 +622,7 @@ private fun AudioAddRow(course: CourseSummary, language: AppLanguage, source: St
             }
         }
         DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-            AudioMenuItems(course.id, language, source) { menu = false }
+            AudioMenuItems(course.id, language) { menu = false }
         }
     }
 }
@@ -804,7 +798,7 @@ private fun AudioBrowsePage(language: AppLanguage, onBack: () -> Unit) {
                     contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = DS.Space.l, vertical = 4.dp),
                 ) {
                     items(courses, key = { it.id }) { course ->
-                        AudioAddRow(course = course, language = language, source = "audio_browse")
+                        AudioAddRow(course = course, language = language)
                         HorizontalDivider(color = DS.hairline, modifier = Modifier.padding(start = 58.dp))
                     }
                 }

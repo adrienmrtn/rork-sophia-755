@@ -71,8 +71,6 @@ CODE_MARKERS = [
     (JAVA / "ui" / "paywall" / "PaywallScreen.kt", "QuizPaywall"),
     (JAVA / "data" / "LegalDocumentStore.kt", "privacy"),
     (JAVA / "ui" / "legal" / "LegalScreens.kt", "LegalDocumentScreen"),
-    (JAVA / "ui" / "onboarding" / "OnboardingV2Screen.kt", 'analyticsName'),
-    (JAVA / "data" / "CourseSessionTracker.kt", "engagement_tier"),
 ]
 
 

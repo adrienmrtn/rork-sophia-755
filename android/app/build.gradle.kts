@@ -55,11 +55,6 @@ android {
         )
         buildConfigField(
             "String",
-            "MIXPANEL_TOKEN",
-            "\"${secret("MIXPANEL_TOKEN", "d2e043bfcdd8f53a7ec613d378667519")}\"",
-        )
-        buildConfigField(
-            "String",
             "SUPABASE_URL",
             "\"${secret("SUPABASE_URL", "https://afnmcoovdvbtkgohtdij.supabase.co")}\"",
         )
@@ -180,9 +175,6 @@ dependencies {
     // Account deletion runs server-side under the service role (`delete-user`).
     implementation("io.github.jan-tennert.supabase:functions-kt")
     implementation("io.ktor:ktor-client-okhttp:3.0.3")
-
-    // Mixpanel
-    implementation("com.mixpanel.android:mixpanel-android:7.5.4")
 
     // Google Sign-In (Credential Manager)
     implementation("androidx.credentials:credentials:1.3.0")

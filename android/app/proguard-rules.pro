@@ -3,7 +3,6 @@
 # runtime rather than at build time.
 
 -keep class com.revenuecat.** { *; }
--keep class com.mixpanel.** { *; }
 
 # --- kotlinx.serialization ---------------------------------------------------
 # Generated serializers are reached through a Companion or a $serializer class that

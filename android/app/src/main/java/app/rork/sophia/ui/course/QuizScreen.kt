@@ -45,7 +45,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
@@ -86,12 +85,8 @@ fun QuizScreen(
     onDismiss: () -> Unit = onFinished,
 ) {
     val context = LocalContext.current
-    val app = context.applicationContext as SophiaApplication
 
     if (!isPremium) {
-        LaunchedEffect(Unit) {
-            app.analytics.trackFreemiumGateHit("quizz", subject = course.subjectEnum.storageKey, courseId = course.id)
-        }
         QuizPremiumGate(
             language = language,
             onRequestPaywall = onRequestPaywall,
@@ -118,11 +113,6 @@ fun QuizScreen(
         questions.clear()
         questions.addAll(raw.map { QuizShuffler.shuffle(it) })
         quizReady = true
-        app.analytics.trackQuizStarted(
-            courseId = course.id,
-            subject = course.subjectEnum.storageKey,
-            questionCount = questions.size,
-        )
     }
     if (!quizReady) {
         Box(
@@ -200,12 +190,6 @@ fun QuizScreen(
                     maxPoints = max,
                     questionIds = questions.map { it.id },
                     subjectKey = course.subjectEnum.storageKey,
-                )
-                app.analytics.trackQuizCompleted(
-                    courseId = course.id,
-                    score = totalPoints,
-                    total = max,
-                    passed = totalPoints >= (max * 0.5).toInt(),
                 )
                 onFinished()
             },

@@ -4,7 +4,6 @@ import android.app.Application
 import app.rork.sophia.audio.CourseAudioCatalog
 import app.rork.sophia.audio.CourseAudioDownloads
 import app.rork.sophia.audio.CourseAudioPlayer
-import app.rork.sophia.data.AnalyticsService
 import app.rork.sophia.data.AuthService
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.DiscountOfferManager
@@ -42,8 +41,6 @@ class SophiaApplication : Application(), ImageLoaderFactory {
         private set
     lateinit var discountManager: DiscountOfferManager
         private set
-    lateinit var analytics: AnalyticsService
-        private set
     lateinit var tutorialFlags: TutorialFlags
         private set
 
@@ -61,14 +58,9 @@ class SophiaApplication : Application(), ImageLoaderFactory {
             appScope.launch { socialService.logXPEvent(amount, "progress") }
         }
         discountManager = DiscountOfferManager(this)
-        analytics = AnalyticsService(this)
         tutorialFlags = TutorialFlags(this)
         authService.start()
         setUpAudio()
-
-        analytics.trackAppOpened()
-        // The session itself is counted from MainActivity's ON_START, which is both the warm
-        // return path and the first point where the subscription state is actually known.
 
         // Warm the slim course index (~70KB) + collections off the main thread.
         val lang = languageManager.current.value
@@ -104,13 +96,6 @@ class SophiaApplication : Application(), ImageLoaderFactory {
         progressManager.markCourseCompleted(courseId)
         if (wasCompleted) return
         appScope.launch(Dispatchers.IO) {
-            val summary = ContentCatalog.summaries(this@SophiaApplication, language).firstOrNull { it.id == courseId }
-            analytics.trackCourseCompleted(
-                courseId = courseId,
-                subject = summary?.subjectEnum?.storageKey ?: "",
-                lessonCount = 0,
-                hasQuiz = false,
-            )
             // The reward flow that normally grants collection XP does not run for a listen.
             val collections = ContentCatalog.collections(this@SophiaApplication, language)
             progressManager.collectionProgressEvents(courseId, collections)

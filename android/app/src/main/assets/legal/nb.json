@@ -60,7 +60,7 @@
     {
       "id": "2",
       "title": "2. Data samlet inn",
-      "body": "Sophia er designet med dataminimering i tankene. Appen lagrer på enheten din:\n\n- Din fremgang i kurs og quiz\n- Dine preferanser (interesser, mål)\n- Din rekke (påfølgende dager med bruk)\n- Favorittbanene dine\n\nDisse lokale dataene overføres ikke til våre servere.\n\nAppen sender også anonyme brukshendelser til Mixpanel (EU-regionen) for å forstå hvordan appen brukes og forbedre den. Disse hendelsene inkluderer ikke navn, e-post eller personlig innhold.\n\nHvis du sender tilbakemelding via skjemaet i appen i Innstillinger, blir meldingen din og, hvis oppgitt, e-postadressen din overført til Formspree slik at vi kan svare. Teknisk informasjon (appversjon, språk, enhet) legges ved automatisk."
+      "body": "Sophia er designet med dataminimering i tankene. Appen lagrer på enheten din:\n\n- Din fremgang i kurs og quiz\n- Dine preferanser (interesser, mål)\n- Din rekke (påfølgende dager med bruk)\n- Favorittbanene dine\n\nDisse lokale dataene overføres ikke til våre servere.\n\nHvis du sender tilbakemelding via skjemaet i appen i Innstillinger, blir meldingen din og, hvis oppgitt, e-postadressen din overført til Formspree slik at vi kan svare. Teknisk informasjon (appversjon, språk, enhet) legges ved automatisk."
     },
     {
       "id": "3",
@@ -74,38 +74,33 @@
     },
     {
       "id": "5",
-      "title": "5. Analytics-data (Mixpanel)",
-      "body": "Vi bruker Mixpanel, som er vert i EU, for å måle appbruk (skjermer som er besøkt, åpnet kurs, interaksjoner med betalingsmur, etc.). Mixpanel mottar en anonym enhetsidentifikator, appversjon, språk og aggregerte brukshendelser. Ingen personlig identifiserbar informasjon samles inn. Du kan kontakte oss for å be om sletting av disse analysedataene."
-    },
-    {
-      "id": "6",
-      "title": "6. Google Play / Android-analyse",
+      "title": "5. Google Play / Android-analyse",
       "body": "Appen kan også dra nytte av anonym statistikk levert av Google (Play Console analytics). Disse dataene er samlet og kan ikke brukes til å identifisere deg personlig. Du kan deaktivere analysedeling i Android-enhetsinnstillingene (Google > Administrer Google Account > Data og personvern)."
     },
     {
-      "id": "7",
-      "title": "7. Datalagring",
+      "id": "6",
+      "title": "6. Datalagring",
       "body": "Fremdriftsdataene dine lagres lokalt på enheten din (lokal applagring). Hvis du oppretter en konto (Google), er den også sikkert sikkerhetskopiert til våre Supabase-servere (vert i EU) for å muliggjøre synkronisering på tvers av enhetene dine. Avinstallering av appen sletter de lokale dataene; sletting av kontoen din fjerner de tilknyttede dataene på serveren permanent."
     },
     {
-      "id": "8",
-      "title": "8. Datadeling",
-      "body": "Vi selger, leier eller deler ikke personopplysninger med tredjeparter for kommersielle eller reklameformål. Data som overføres er begrenset til: Google og RevenueCat (abonnement), Mixpanel (anonyme analyser, EU), Formspree (brukertilbakemeldinger sendes frivillig fra Innstillinger)."
+      "id": "7",
+      "title": "7. Datadeling",
+      "body": "Vi selger, leier eller deler ikke personopplysninger med tredjeparter for kommersielle eller reklameformål. Data som overføres er begrenset til: Google og RevenueCat (abonnement), Formspree (brukertilbakemeldinger sendes frivillig fra Innstillinger)."
     },
     {
-      "id": "9",
-      "title": "9. Brukerrettigheter",
+      "id": "8",
+      "title": "8. Brukerrettigheter",
       "body": "I henhold til den generelle databeskyttelsesforordningen (GDPR) og gjeldende lover har du følgende rettigheter:\n\n- Rett til tilgang til dine data\n– Rett til retting\n- Rett til sletting (tilbakestill i Innstillinger)\n- Rett til dataportabilitet\n– Rett til å protestere\n\nFor å utøve disse rettighetene, kontakt oss via adressen oppført på vår Play Store-side."
     },
     {
-      "id": "10",
-      "title": "10. Beskyttelse av mindreårige",
+      "id": "9",
+      "title": "9. Beskyttelse av mindreårige",
       "body": "Sophia er en pedagogisk app som passer for alle aldre. Vi samler ikke bevisst inn personopplysninger fra barn under 16 år. Appen inneholder ikke noe upassende innhold."
     },
     {
-      "id": "11",
-      "title": "11. Endringer",
-      "body": "Vi forbeholder oss retten til å endre denne policyen når som helst. Eventuelle endringer vil bli kommunisert gjennom en appoppdatering.\n\nSist oppdatert: juli 2026"
+      "id": "10",
+      "title": "10. Endringer",
+      "body": "Vi forbeholder oss retten til å endre denne policyen når som helst. Eventuelle endringer vil bli kommunisert gjennom en appoppdatering.\n\nSist oppdatert: september 2026"
     }
   ]
 }

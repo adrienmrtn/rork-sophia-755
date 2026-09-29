@@ -186,37 +186,28 @@ object CourseAudioPlayer {
 
     // MARK: - Entry points (gated)
 
-    private fun gate(courseId: String?, source: String): Boolean {
+    private fun gate(courseId: String?): Boolean {
         if (isPremium) return true
-        SophiaApplication.instance.analytics.track(
-            "audio_locked_tapped",
-            mapOf("course_id" to courseId, "source" to source),
-        )
         onPaywallNeeded?.invoke(courseId)
         return false
     }
 
-    fun requestPlay(courseId: String, language: AudioLanguage? = null, source: String): Boolean {
-        if (!gate(courseId, source)) return false
-        play(courseId, language, source)
+    fun requestPlay(courseId: String, language: AudioLanguage? = null): Boolean {
+        if (!gate(courseId)) return false
+        play(courseId, language)
         return true
     }
 
-    fun requestEnqueue(courseId: String, next: Boolean, source: String): Boolean {
-        if (!gate(courseId, source)) return false
-        enqueue(courseId, next, source)
+    fun requestEnqueue(courseId: String, next: Boolean): Boolean {
+        if (!gate(courseId)) return false
+        enqueue(courseId, next)
         return true
     }
 
-    fun requestDownload(courseId: String, language: AudioLanguage? = null, source: String): Boolean {
-        if (!gate(courseId, source)) return false
+    fun requestDownload(courseId: String, language: AudioLanguage? = null): Boolean {
+        if (!gate(courseId)) return false
         val lang = language ?: CourseAudioCatalog.defaultLanguage(appContext, courseId, appLanguage()) ?: return false
-        CourseAudioDownloads.download(courseId, lang) {
-            SophiaApplication.instance.analytics.track(
-                "audio_download_started",
-                mapOf("course_id" to courseId, "audio_language" to lang.code),
-            )
-        }
+        CourseAudioDownloads.download(courseId, lang)
         return true
     }
 
@@ -231,7 +222,7 @@ object CourseAudioPlayer {
 
     // MARK: - Playback
 
-    fun play(courseId: String, language: AudioLanguage? = null, source: String) {
+    fun play(courseId: String, language: AudioLanguage? = null) {
         val lang = language ?: CourseAudioCatalog.defaultLanguage(appContext, courseId, appLanguage()) ?: return
         val current = _state.value.current
         if (current != null && current.courseId == courseId && current.language == lang) {
@@ -244,15 +235,6 @@ object CourseAudioPlayer {
         items = (listOf(item) + rest).toMutableList()
         loadPlaylist(playWhenReady = true)
         persistSession()
-        SophiaApplication.instance.analytics.track(
-            "audio_play_started",
-            mapOf(
-                "course_id" to courseId,
-                "audio_language" to lang.code,
-                "source" to source,
-                "rate" to _state.value.rate.toDouble(),
-            ),
-        )
     }
 
     fun resume() {
@@ -327,10 +309,6 @@ object CourseAudioPlayer {
         startPositionToCheck = resumePosition(item)
         _state.update { it.copy(current = item, positionMs = resumePosition(item), durationMs = 0, failed = false) }
         persistSession()
-        SophiaApplication.instance.analytics.track(
-            "audio_language_changed",
-            mapOf("course_id" to current.courseId, "audio_language" to language.code),
-        )
     }
 
     fun snap(value: Float): Float {
@@ -340,9 +318,9 @@ object CourseAudioPlayer {
 
     // MARK: - Queue
 
-    fun enqueue(courseId: String, next: Boolean, source: String) {
+    fun enqueue(courseId: String, next: Boolean) {
         if (items.isEmpty()) {
-            play(courseId, source = source)
+            play(courseId)
             return
         }
         if (isCurrent(courseId)) return
@@ -353,10 +331,6 @@ object CourseAudioPlayer {
         items.add(index, item)
         exo?.takeIf { loaded }?.addMediaItem(index, mediaItem(item))
         publishQueue()
-        SophiaApplication.instance.analytics.track(
-            "audio_queued",
-            mapOf("course_id" to courseId, "position" to if (next) "next" else "end", "source" to source),
-        )
     }
 
     fun removeFromQueue(courseId: String, persist: Boolean = true) {
@@ -511,14 +485,6 @@ object CourseAudioPlayer {
     private fun reportCompletion(item: AudioQueueItem) {
         reportedCompletionFor = item.id
         onListenedToEnd?.invoke(item.courseId)
-        SophiaApplication.instance.analytics.track(
-            "audio_completed",
-            mapOf(
-                "course_id" to item.courseId,
-                "audio_language" to item.languageCode,
-                "rate" to _state.value.rate.toDouble(),
-            ),
-        )
     }
 
     private fun syncState() {

@@ -60,7 +60,7 @@
     {
       "id": "2",
       "title": "2. Zbrani podatki",
-      "body": "Sophia je zasnovan z mislijo na zmanjševanje podatkov. App stores v vaši napravi:\n\n- Vaš napredek pri tečajih in kvizih\n- Vaše želje (zanimanja, cilji)\n- Vaš niz (zaporedni dnevi uporabe)\n- Vaši najljubši tečaji\n\nTi lokalni podatki se ne prenašajo na naše strežnike.\n\nAplikacija pošilja tudi anonimne dogodke uporabe v Mixpanel (regija EU), da razume, kako se aplikacija uporablja in jo izboljša. Ti dogodki ne vključujejo vašega imena, e-pošte ali osebne vsebine.\n\nČe pošljete povratne informacije prek obrazca v aplikaciji v nastavitvah, se vaše sporočilo in, če je naveden, vaš e-poštni naslov prenese v Formspree, da lahko odgovorimo. Tehnični podatki (različica aplikacije, jezik, naprava) so priloženi samodejno."
+      "body": "Sophia je zasnovan z mislijo na zmanjševanje podatkov. App stores v vaši napravi:\n\n- Vaš napredek pri tečajih in kvizih\n- Vaše želje (zanimanja, cilji)\n- Vaš niz (zaporedni dnevi uporabe)\n- Vaši najljubši tečaji\n\nTi lokalni podatki se ne prenašajo na naše strežnike.\n\nČe pošljete povratne informacije prek obrazca v aplikaciji v nastavitvah, se vaše sporočilo in, če je naveden, vaš e-poštni naslov prenese v Formspree, da lahko odgovorimo. Tehnični podatki (različica aplikacije, jezik, naprava) so priloženi samodejno."
     },
     {
       "id": "3",
@@ -74,38 +74,33 @@
     },
     {
       "id": "5",
-      "title": "5. Analitični podatki (Mixpanel)",
-      "body": "Uporabljamo Mixpanel, ki gostuje v Evropski uniji, za merjenje uporabe aplikacije (obiskani zasloni, odprti tečaji, interakcije plačljivega zidu itd.). Mixpanel prejme anonimni identifikator naprave, različico aplikacije, jezik in združene dogodke uporabe. Ne zbirajo se osebni podatki. Lahko nas kontaktirate in zahtevate izbris teh analitičnih podatkov."
-    },
-    {
-      "id": "6",
-      "title": "6. Analitika Google Play / Android",
+      "title": "5. Analitika Google Play / Android",
       "body": "Aplikaciji lahko koristi tudi anonimna statistika, ki jo zagotavlja Google (analitika Play Console). Ti podatki so združeni in jih ni mogoče uporabiti za vašo osebno identifikacijo. Skupno rabo analitike lahko onemogočite v nastavitvah naprave Android (Google > Upravljanje Google Account > Podatki in zasebnost)."
     },
     {
-      "id": "7",
-      "title": "7. Shranjevanje podatkov",
+      "id": "6",
+      "title": "6. Shranjevanje podatkov",
       "body": "Vaši podatki o napredku so shranjeni lokalno v vaši napravi (lokalna shramba aplikacij). Če ustvarite račun (Google), je prav tako varno varnostno kopiran na naše strežnike Supabase (gostujejo v Evropski uniji), da omogočite sinhronizacijo med vašimi napravami. Odstranitev aplikacije izbriše lokalne podatke; izbris vašega računa trajno odstrani povezane podatke na strežniku."
     },
     {
-      "id": "8",
-      "title": "8. Izmenjava podatkov",
-      "body": "Osebnih podatkov ne prodajamo, izposojamo ali delimo s tretjimi osebami v komercialne ali oglaševalske namene. Preneseni podatki so omejeni na: Google in RevenueCat (naročnine), Mixpanel (anonimna analitika, EU), Formspree (povratne informacije uporabnika, prostovoljno poslane iz nastavitev)."
+      "id": "7",
+      "title": "7. Izmenjava podatkov",
+      "body": "Osebnih podatkov ne prodajamo, izposojamo ali delimo s tretjimi osebami v komercialne ali oglaševalske namene. Preneseni podatki so omejeni na: Google in RevenueCat (naročnine), Formspree (povratne informacije uporabnika, prostovoljno poslane iz nastavitev)."
     },
     {
-      "id": "9",
-      "title": "9. Pravice uporabnika",
+      "id": "8",
+      "title": "8. Pravice uporabnika",
       "body": "V skladu s Splošno uredbo o varstvu podatkov (GDPR) in veljavno zakonodajo imate naslednje pravice:\n\n- Pravica dostopa do vaših podatkov\n- Pravica do popravka\n- Pravica do izbrisa (ponastavitev v nastavitvah)\n- Pravica do prenosljivosti podatkov\n- Pravica do ugovora\n\nZa uveljavljanje teh pravic nas kontaktirajte preko naslova, navedenega na naši strani Play Store."
     },
     {
-      "id": "10",
-      "title": "10. Varstvo mladoletnikov",
+      "id": "9",
+      "title": "9. Varstvo mladoletnikov",
       "body": "Sophia je izobraževalna aplikacija, primerna za vse starosti. Zavestno ne zbiramo osebnih podatkov otrok, mlajših od 16 let. Aplikacija ne vsebuje neprimerne vsebine."
     },
     {
-      "id": "11",
-      "title": "11. Spremembe",
-      "body": "Pridržujemo si pravico do spremembe tega pravilnika kadar koli. Vse spremembe bodo sporočene prek posodobitve aplikacije.\n\nZadnja posodobitev: julij 2026"
+      "id": "10",
+      "title": "10. Spremembe",
+      "body": "Pridržujemo si pravico do spremembe tega pravilnika kadar koli. Vse spremembe bodo sporočene prek posodobitve aplikacije.\n\nZadnja posodobitev: september 2026"
     }
   ]
 }

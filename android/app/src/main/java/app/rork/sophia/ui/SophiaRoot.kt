@@ -74,10 +74,8 @@ fun SophiaRoot(
             tabsReady = false
             return@LaunchedEffect
         }
-        app.analytics.track("home_bridge_shown", DeviceCapabilities.analyticsProps(context))
         delay(if (constrained) 480L else 80L)
         tabsReady = true
-        app.analytics.track("home_tabs_ready", DeviceCapabilities.analyticsProps(context))
     }
 
     // The app picks its own language instead of following the device, so

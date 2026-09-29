@@ -10,7 +10,6 @@ object AppConfig {
             BuildConfig.REVENUECAT_API_KEY
         }
 
-    const val MIXPANEL_TOKEN = BuildConfig.MIXPANEL_TOKEN
     const val SUPABASE_URL = BuildConfig.SUPABASE_URL
     const val SUPABASE_ANON_KEY = BuildConfig.SUPABASE_ANON_KEY
     const val GOOGLE_WEB_CLIENT_ID = BuildConfig.GOOGLE_WEB_CLIENT_ID
