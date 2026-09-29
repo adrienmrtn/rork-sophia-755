@@ -14,6 +14,7 @@ struct AudioPlayerView: View {
     @State private var scrubValue: Double = 0
     @State private var speedValue: Double = CourseAudioPlayer.shared.rate
     @State private var showQueue = false
+    @State private var showBrowse = false
     @State private var playTrigger = 0
 
     private var player: CourseAudioPlayer { .shared }
@@ -39,6 +40,10 @@ struct AudioPlayerView: View {
         .sheet(isPresented: $showQueue) {
             AudioQueueView()
                 .presentationDetents([.medium, .large])
+                .sophiaSheetChrome()
+        }
+        .sheet(isPresented: $showBrowse) {
+            AudioBrowseView()
                 .sophiaSheetChrome()
         }
         .presentationDragIndicator(.visible)
@@ -81,6 +86,10 @@ struct AudioPlayerView: View {
 
                     actionRow(item: item)
                         .padding(.horizontal, 24)
+
+                    AudioSuggestionsSection(courseId: item.courseId) { showBrowse = true }
+                        .padding(.horizontal, 24)
+                        .padding(.top, 6)
                 }
                 .padding(.bottom, 32)
             }

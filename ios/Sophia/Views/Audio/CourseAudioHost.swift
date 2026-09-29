@@ -41,6 +41,9 @@ struct CourseAudioHost: ViewModifier {
         player.onListenedToEnd = { [progressManager] courseId in
             Self.completeCourse(courseId, progressManager: progressManager)
         }
+        player.isCourseCompleted = { [progressManager] courseId in
+            progressManager.courseStatus(for: courseId) == .completed
+        }
     }
 
     /// The reader's completion (`CourseView`, last page), minus the celebration screens:

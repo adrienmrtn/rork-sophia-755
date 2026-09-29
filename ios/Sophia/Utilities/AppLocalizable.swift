@@ -71,6 +71,15 @@ enum AppLocalizable {
 
     private static let french: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Écouter maintenant",
+        "audio.suggestions.title": "Ensuite, écoute…",
+        "audio.browse": "Parcourir tous les audios",
+        "audio.browse.title": "Tous les audios",
+        "audio.browse.search": "Rechercher un cours",
+        "audio.browse.all": "Tout",
+        "audio.browse.empty": "Aucun cours audio ne correspond.",
+        "audio.choice.title": "Un audio est déjà en cours",
+        "audio.cancel": "Annuler",
         "audio.listen": "Écouter",
         "audio.nowPlaying": "En cours de lecture",
         "audio.playNext": "Lire ensuite",
@@ -1094,6 +1103,15 @@ enum AppLocalizable {
 
     private static let english: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Listen now",
+        "audio.suggestions.title": "Up next, try…",
+        "audio.browse": "Browse all audio",
+        "audio.browse.title": "All audio",
+        "audio.browse.search": "Search courses",
+        "audio.browse.all": "All",
+        "audio.browse.empty": "No audio course matches.",
+        "audio.choice.title": "Something is already playing",
+        "audio.cancel": "Cancel",
         "audio.listen": "Listen",
         "audio.nowPlaying": "Now playing",
         "audio.playNext": "Play next",
@@ -2117,6 +2135,15 @@ enum AppLocalizable {
 
     private static let spanish: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Escuchar ahora",
+        "audio.suggestions.title": "Después, escucha…",
+        "audio.browse": "Ver todos los audios",
+        "audio.browse.title": "Todos los audios",
+        "audio.browse.search": "Buscar un curso",
+        "audio.browse.all": "Todo",
+        "audio.browse.empty": "Ningún curso en audio coincide.",
+        "audio.choice.title": "Ya se está reproduciendo un audio",
+        "audio.cancel": "Cancelar",
         "audio.listen": "Escuchar",
         "audio.nowPlaying": "Reproduciendo",
         "audio.playNext": "Reproducir a continuación",
@@ -3071,6 +3098,15 @@ enum AppLocalizable {
 
     private static let german: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Jetzt anhören",
+        "audio.suggestions.title": "Als Nächstes hören…",
+        "audio.browse": "Alle Audios ansehen",
+        "audio.browse.title": "Alle Audios",
+        "audio.browse.search": "Kurs suchen",
+        "audio.browse.all": "Alle",
+        "audio.browse.empty": "Kein Audio-Kurs gefunden.",
+        "audio.choice.title": "Es läuft bereits ein Audio",
+        "audio.cancel": "Abbrechen",
         "audio.listen": "Anhören",
         "audio.nowPlaying": "Wird abgespielt",
         "audio.playNext": "Als Nächstes abspielen",
@@ -4025,6 +4061,15 @@ enum AppLocalizable {
 
     private static let portuguese: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Ouvir agora",
+        "audio.suggestions.title": "A seguir, ouve…",
+        "audio.browse": "Ver todos os áudios",
+        "audio.browse.title": "Todos os áudios",
+        "audio.browse.search": "Procurar um curso",
+        "audio.browse.all": "Tudo",
+        "audio.browse.empty": "Nenhum curso em áudio corresponde.",
+        "audio.choice.title": "Já está a tocar um áudio",
+        "audio.cancel": "Cancelar",
         "audio.listen": "Ouvir",
         "audio.nowPlaying": "A reproduzir",
         "audio.playNext": "Reproduzir a seguir",
@@ -4979,6 +5024,15 @@ enum AppLocalizable {
 
     private static let italian: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Ascolta ora",
+        "audio.suggestions.title": "Poi ascolta…",
+        "audio.browse": "Sfoglia tutti gli audio",
+        "audio.browse.title": "Tutti gli audio",
+        "audio.browse.search": "Cerca un corso",
+        "audio.browse.all": "Tutti",
+        "audio.browse.empty": "Nessun corso audio corrisponde.",
+        "audio.choice.title": "È già in riproduzione un audio",
+        "audio.cancel": "Annulla",
         "audio.listen": "Ascolta",
         "audio.nowPlaying": "In riproduzione",
         "audio.playNext": "Riproduci dopo",
@@ -5933,6 +5987,15 @@ enum AppLocalizable {
 
     private static let turkish: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Şimdi dinle",
+        "audio.suggestions.title": "Sırada dinle…",
+        "audio.browse": "Tüm sesli kurslara göz at",
+        "audio.browse.title": "Tüm sesli kurslar",
+        "audio.browse.search": "Kurs ara",
+        "audio.browse.all": "Tümü",
+        "audio.browse.empty": "Eşleşen sesli kurs yok.",
+        "audio.choice.title": "Zaten bir ses çalıyor",
+        "audio.cancel": "İptal",
         "audio.listen": "Dinle",
         "audio.nowPlaying": "Şimdi çalıyor",
         "audio.playNext": "Sonra çal",
@@ -6868,6 +6931,15 @@ enum AppLocalizable {
 
     private static let polish: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Słuchaj teraz",
+        "audio.suggestions.title": "Posłuchaj potem…",
+        "audio.browse": "Przeglądaj wszystkie nagrania",
+        "audio.browse.title": "Wszystkie nagrania",
+        "audio.browse.search": "Szukaj kursu",
+        "audio.browse.all": "Wszystko",
+        "audio.browse.empty": "Brak pasujących kursów audio.",
+        "audio.choice.title": "Już coś jest odtwarzane",
+        "audio.cancel": "Anuluj",
         "audio.listen": "Słuchaj",
         "audio.nowPlaying": "Teraz odtwarzane",
         "audio.playNext": "Odtwórz jako następne",
@@ -7803,6 +7875,15 @@ enum AppLocalizable {
 
     private static let romanian: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Ascultă acum",
+        "audio.suggestions.title": "Apoi ascultă…",
+        "audio.browse": "Vezi toate audiourile",
+        "audio.browse.title": "Toate audiourile",
+        "audio.browse.search": "Caută un curs",
+        "audio.browse.all": "Toate",
+        "audio.browse.empty": "Niciun curs audio nu corespunde.",
+        "audio.choice.title": "Deja se redă un audio",
+        "audio.cancel": "Anulează",
         "audio.listen": "Ascultă",
         "audio.nowPlaying": "Se redă acum",
         "audio.playNext": "Redă în continuare",
@@ -8738,6 +8819,15 @@ enum AppLocalizable {
 
     private static let dutch: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Nu luisteren",
+        "audio.suggestions.title": "Luister hierna…",
+        "audio.browse": "Alle audio bekijken",
+        "audio.browse.title": "Alle audio",
+        "audio.browse.search": "Cursus zoeken",
+        "audio.browse.all": "Alles",
+        "audio.browse.empty": "Geen audiocursus gevonden.",
+        "audio.choice.title": "Er speelt al audio",
+        "audio.cancel": "Annuleren",
         "audio.listen": "Luisteren",
         "audio.nowPlaying": "Speelt nu",
         "audio.playNext": "Speel hierna",
@@ -9673,6 +9763,15 @@ enum AppLocalizable {
 
     private static let greek: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Άκου τώρα",
+        "audio.suggestions.title": "Μετά, άκου…",
+        "audio.browse": "Όλοι οι ήχοι",
+        "audio.browse.title": "Όλα τα ηχητικά μαθήματα",
+        "audio.browse.search": "Αναζήτηση μαθήματος",
+        "audio.browse.all": "Όλα",
+        "audio.browse.empty": "Κανένα ηχητικό μάθημα δεν ταιριάζει.",
+        "audio.choice.title": "Ήδη παίζει ένας ήχος",
+        "audio.cancel": "Ακύρωση",
         "audio.listen": "Άκουσε",
         "audio.nowPlaying": "Παίζει τώρα",
         "audio.playNext": "Αναπαραγωγή μετά",
@@ -10608,6 +10707,15 @@ enum AppLocalizable {
 
     private static let swedish: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Lyssna nu",
+        "audio.suggestions.title": "Lyssna sedan på…",
+        "audio.browse": "Bläddra bland allt ljud",
+        "audio.browse.title": "Allt ljud",
+        "audio.browse.search": "Sök kurs",
+        "audio.browse.all": "Alla",
+        "audio.browse.empty": "Ingen ljudkurs matchar.",
+        "audio.choice.title": "Något spelas redan",
+        "audio.cancel": "Avbryt",
         "audio.listen": "Lyssna",
         "audio.nowPlaying": "Spelas nu",
         "audio.playNext": "Spela härnäst",
@@ -11543,6 +11651,15 @@ enum AppLocalizable {
 
     private static let hungarian: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Meghallgatás most",
+        "audio.suggestions.title": "Utána hallgasd…",
+        "audio.browse": "Összes hanganyag",
+        "audio.browse.title": "Összes hanganyag",
+        "audio.browse.search": "Kurzus keresése",
+        "audio.browse.all": "Mind",
+        "audio.browse.empty": "Nincs egyező hangos kurzus.",
+        "audio.choice.title": "Már szól egy hanganyag",
+        "audio.cancel": "Mégse",
         "audio.listen": "Meghallgatás",
         "audio.nowPlaying": "Most szól",
         "audio.playNext": "Lejátszás következőként",
@@ -12478,6 +12595,15 @@ enum AppLocalizable {
 
     private static let bulgarian: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Слушай сега",
+        "audio.suggestions.title": "След това слушай…",
+        "audio.browse": "Всички аудиа",
+        "audio.browse.title": "Всички аудиа",
+        "audio.browse.search": "Търси курс",
+        "audio.browse.all": "Всички",
+        "audio.browse.empty": "Няма съвпадащ аудио курс.",
+        "audio.choice.title": "Вече се възпроизвежда аудио",
+        "audio.cancel": "Отказ",
         "audio.listen": "Слушай",
         "audio.nowPlaying": "Възпроизвежда се",
         "audio.playNext": "Пусни следващо",
@@ -13413,6 +13539,15 @@ enum AppLocalizable {
 
     private static let czech: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Poslechnout hned",
+        "audio.suggestions.title": "Potom si poslechni…",
+        "audio.browse": "Procházet všechny nahrávky",
+        "audio.browse.title": "Všechny nahrávky",
+        "audio.browse.search": "Hledat kurz",
+        "audio.browse.all": "Vše",
+        "audio.browse.empty": "Žádný audio kurz neodpovídá.",
+        "audio.choice.title": "Už něco hraje",
+        "audio.cancel": "Zrušit",
         "audio.listen": "Poslechnout",
         "audio.nowPlaying": "Právě hraje",
         "audio.playNext": "Přehrát jako další",
@@ -14349,6 +14484,15 @@ enum AppLocalizable {
 
     private static let danish: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Lyt nu",
+        "audio.suggestions.title": "Lyt bagefter til…",
+        "audio.browse": "Se al lyd",
+        "audio.browse.title": "Al lyd",
+        "audio.browse.search": "Søg kursus",
+        "audio.browse.all": "Alle",
+        "audio.browse.empty": "Intet lydkursus passer.",
+        "audio.choice.title": "Der afspilles allerede lyd",
+        "audio.cancel": "Annuller",
         "audio.listen": "Lyt",
         "audio.nowPlaying": "Afspiller nu",
         "audio.playNext": "Afspil som næste",
@@ -15285,6 +15429,15 @@ enum AppLocalizable {
 
     private static let norwegian: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Lytt nå",
+        "audio.suggestions.title": "Lytt deretter til …",
+        "audio.browse": "Se all lyd",
+        "audio.browse.title": "All lyd",
+        "audio.browse.search": "Søk etter kurs",
+        "audio.browse.all": "Alle",
+        "audio.browse.empty": "Ingen lydkurs passer.",
+        "audio.choice.title": "Noe spilles allerede",
+        "audio.cancel": "Avbryt",
         "audio.listen": "Lytt",
         "audio.nowPlaying": "Spilles nå",
         "audio.playNext": "Spill neste",
@@ -16221,6 +16374,15 @@ enum AppLocalizable {
 
     private static let russian: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Слушать сейчас",
+        "audio.suggestions.title": "Дальше послушай…",
+        "audio.browse": "Все аудио",
+        "audio.browse.title": "Все аудио",
+        "audio.browse.search": "Поиск курса",
+        "audio.browse.all": "Все",
+        "audio.browse.empty": "Подходящих аудиокурсов нет.",
+        "audio.choice.title": "Уже что-то играет",
+        "audio.cancel": "Отмена",
         "audio.listen": "Слушать",
         "audio.nowPlaying": "Сейчас играет",
         "audio.playNext": "Воспроизвести следующим",
@@ -17157,6 +17319,15 @@ enum AppLocalizable {
 
     private static let croatian: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Slušaj sada",
+        "audio.suggestions.title": "Zatim poslušaj…",
+        "audio.browse": "Pregledaj sve zapise",
+        "audio.browse.title": "Svi zvučni zapisi",
+        "audio.browse.search": "Traži tečaj",
+        "audio.browse.all": "Sve",
+        "audio.browse.empty": "Nijedan audio tečaj ne odgovara.",
+        "audio.choice.title": "Već se nešto reproducira",
+        "audio.cancel": "Odustani",
         "audio.listen": "Slušaj",
         "audio.nowPlaying": "Sada svira",
         "audio.playNext": "Reproduciraj sljedeće",
@@ -18093,6 +18264,15 @@ enum AppLocalizable {
 
     private static let slovenian: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Poslušaj zdaj",
+        "audio.suggestions.title": "Nato poslušaj …",
+        "audio.browse": "Prebrskaj vse posnetke",
+        "audio.browse.title": "Vsi posnetki",
+        "audio.browse.search": "Išči tečaj",
+        "audio.browse.all": "Vse",
+        "audio.browse.empty": "Noben zvočni tečaj se ne ujema.",
+        "audio.choice.title": "Nekaj se že predvaja",
+        "audio.cancel": "Prekliči",
         "audio.listen": "Poslušaj",
         "audio.nowPlaying": "Zdaj se predvaja",
         "audio.playNext": "Predvajaj naslednje",
@@ -19029,6 +19209,15 @@ enum AppLocalizable {
 
     private static let slovak: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Vypočuť teraz",
+        "audio.suggestions.title": "Potom si vypočuj…",
+        "audio.browse": "Prehľadávať všetky nahrávky",
+        "audio.browse.title": "Všetky nahrávky",
+        "audio.browse.search": "Hľadať kurz",
+        "audio.browse.all": "Všetko",
+        "audio.browse.empty": "Žiadny audio kurz nezodpovedá.",
+        "audio.choice.title": "Už niečo hrá",
+        "audio.cancel": "Zrušiť",
         "audio.listen": "Vypočuť",
         "audio.nowPlaying": "Práve hrá",
         "audio.playNext": "Prehrať ako ďalšie",
@@ -19965,6 +20154,15 @@ enum AppLocalizable {
 
     private static let serbian: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Slušaj sada",
+        "audio.suggestions.title": "Zatim poslušaj…",
+        "audio.browse": "Pregledaj sve zapise",
+        "audio.browse.title": "Svi audio zapisi",
+        "audio.browse.search": "Pretraži kurseve",
+        "audio.browse.all": "Sve",
+        "audio.browse.empty": "Nijedan audio kurs ne odgovara.",
+        "audio.choice.title": "Već se nešto reprodukuje",
+        "audio.cancel": "Otkaži",
         "audio.listen": "Slušaj",
         "audio.nowPlaying": "Sada se reprodukuje",
         "audio.playNext": "Pusti sledeće",
@@ -20901,6 +21099,15 @@ enum AppLocalizable {
 
     private static let arabic: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "استمع الآن",
+        "audio.suggestions.title": "بعدها، استمع إلى…",
+        "audio.browse": "تصفّح كل التسجيلات",
+        "audio.browse.title": "كل التسجيلات الصوتية",
+        "audio.browse.search": "ابحث عن دورة",
+        "audio.browse.all": "الكل",
+        "audio.browse.empty": "لا توجد دورة صوتية مطابقة.",
+        "audio.choice.title": "هناك تسجيل قيد التشغيل بالفعل",
+        "audio.cancel": "إلغاء",
         "audio.listen": "استمع",
         "audio.nowPlaying": "قيد التشغيل",
         "audio.playNext": "تشغيل التالي",
@@ -21837,6 +22044,15 @@ enum AppLocalizable {
 
     private static let hebrew: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "להאזין עכשיו",
+        "audio.suggestions.title": "אחר כך, להאזין ל…",
+        "audio.browse": "לעיון בכל ההקלטות",
+        "audio.browse.title": "כל ההקלטות",
+        "audio.browse.search": "חיפוש קורס",
+        "audio.browse.all": "הכול",
+        "audio.browse.empty": "אין קורס שמע מתאים.",
+        "audio.choice.title": "כבר מתנגן שמע",
+        "audio.cancel": "ביטול",
         "audio.listen": "האזנה",
         "audio.nowPlaying": "מתנגן עכשיו",
         "audio.playNext": "הפעלה בהמשך",
@@ -22773,6 +22989,15 @@ enum AppLocalizable {
 
     private static let finnish: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Kuuntele nyt",
+        "audio.suggestions.title": "Kuuntele seuraavaksi…",
+        "audio.browse": "Selaa kaikkia ääniä",
+        "audio.browse.title": "Kaikki äänet",
+        "audio.browse.search": "Hae kurssia",
+        "audio.browse.all": "Kaikki",
+        "audio.browse.empty": "Yksikään äänikurssi ei vastaa hakua.",
+        "audio.choice.title": "Jotain toistetaan jo",
+        "audio.cancel": "Kumoa",
         "audio.listen": "Kuuntele",
         "audio.nowPlaying": "Nyt toistetaan",
         "audio.playNext": "Toista seuraavaksi",
@@ -23709,6 +23934,15 @@ enum AppLocalizable {
 
     private static let estonian: [String: String] = [
         // MARK: Audio mode
+        "audio.playNow": "Kuula kohe",
+        "audio.suggestions.title": "Järgmisena kuula…",
+        "audio.browse": "Sirvi kõiki helisid",
+        "audio.browse.title": "Kõik helid",
+        "audio.browse.search": "Otsi kursust",
+        "audio.browse.all": "Kõik",
+        "audio.browse.empty": "Ükski helikursus ei sobi.",
+        "audio.choice.title": "Midagi juba mängib",
+        "audio.cancel": "Loobu",
         "audio.listen": "Kuula",
         "audio.nowPlaying": "Praegu mängib",
         "audio.playNext": "Esita järgmisena",

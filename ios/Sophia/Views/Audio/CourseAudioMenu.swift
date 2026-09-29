@@ -135,6 +135,8 @@ struct CourseAudioCardButton: View {
     let source: String
     var size: CGFloat = 38
 
+    @State private var showChoice = false
+
     private var player: CourseAudioPlayer { .shared }
 
     var body: some View {
@@ -147,12 +149,18 @@ struct CourseAudioCardButton: View {
                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 if player.isPlayingCourse(courseId) {
                     player.pause()
+                } else if player.isPremium, player.hasItem, !player.isCurrent(courseId) {
+                    // Something else is loaded: ask rather than cut it off.
+                    showChoice = true
                 } else {
                     player.requestPlay(courseId: courseId, source: source)
                 }
             }
             .buttonStyle(.plain)
             .accessibilityLabel(Text(languageManager.text("audio.listen")))
+            .audioPlayChoiceDialog(isPresented: $showChoice, courseId: courseId, source: source) {
+                player.requestPlay(courseId: courseId, source: source)
+            }
         }
     }
 
