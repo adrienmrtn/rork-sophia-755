@@ -44,8 +44,12 @@ enum DailyCourseReminder {
     private static var needsAnotherPass = false
 
     /// Recalcule les notifications et le widget. Les appels qui arrivent pendant un passage
-    /// en déclenchent un seul de plus, à la fin.
-    static func refresh() {
+    /// en déclenchent un seul de plus, à la fin. `force` reprogramme tout, même si rien
+    /// n'a changé depuis la dernière fois.
+    static func refresh(force: Bool = false) {
+        if force {
+            UserDefaults.standard.removeObject(forKey: signatureKey)
+        }
         guard !isRefreshing else {
             needsAnotherPass = true
             return
@@ -65,7 +69,7 @@ enum DailyCourseReminder {
         // mieux vaut garder ce qui est programmé que l'envoyer à un essai.
         guard let info = try? await Purchases.shared.customerInfo() else { return }
         let now = Date()
-        let startDay = firstDay(for: info, now: now)
+        let startDay = firstNotificationDay(for: info, now: now)
         let language = AppLanguage.currentPersisted()
         let completed = ProgressManager.persistedCompletedCourseIds()
         let plan = DailyQuestion.plan(
@@ -105,27 +109,33 @@ enum DailyCourseReminder {
 
         center.removePendingNotificationRequests(withIdentifiers: pendingIds)
         for item in planned {
-            guard let course = ContentCatalog.course(withId: item.courseId, language: language) else { continue }
-            let content = UNMutableNotificationContent()
-            content.title = course.title
-            content.body = hook(for: item.courseId, language: language)
-                ?? AppLocalizable.string("notification.courseNudge.bodyFallback", language: language)
-            content.sound = .default
-            content.threadIdentifier = "sophia.dailyQuestion"
-            content.userInfo = ["deepLink": "sophia://course/\(item.courseId)?from=notification"]
-
+            guard let notification = content(courseId: item.courseId, language: language) else { continue }
             // Heure « flottante » : 8 h reste 8 h en voyage. Le calendrier est précisé pour
             // qu'un téléphone réglé sur un autre calendrier lise la bonne année.
             let components = calendar.dateComponents([.calendar, .year, .month, .day, .hour, .minute], from: item.fireDate)
             let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-            try? await center.add(UNNotificationRequest(identifier: item.id, content: content, trigger: trigger))
+            try? await center.add(UNNotificationRequest(identifier: item.id, content: notification, trigger: trigger))
         }
         UserDefaults.standard.set(signature, forKey: signatureKey)
     }
 
+    /// La notification d'une question : titre = la question, texte = l'accroche, toucher =
+    /// le cours. Nil si le cours n'existe pas dans cette langue.
+    static func content(courseId: String, language: AppLanguage) -> UNMutableNotificationContent? {
+        guard let course = ContentCatalog.course(withId: courseId, language: language) else { return nil }
+        let content = UNMutableNotificationContent()
+        content.title = course.title
+        content.body = hook(for: courseId, language: language)
+            ?? AppLocalizable.string("notification.courseNudge.bodyFallback", language: language)
+        content.sound = .default
+        content.threadIdentifier = "sophia.dailyQuestion"
+        content.userInfo = ["deepLink": "sophia://course/\(courseId)?from=notification"]
+        return content
+    }
+
     /// Premier jour où la personne peut recevoir la question : aujourd'hui, ou le lendemain
     /// de la fin de l'essai gratuit.
-    private static func firstDay(for info: CustomerInfo, now: Date) -> Date {
+    static func firstNotificationDay(for info: CustomerInfo, now: Date) -> Date {
         let calendar = DailyQuestion.calendar
         let today = calendar.startOfDay(for: now)
         let entitlement = info.entitlements["premium"]

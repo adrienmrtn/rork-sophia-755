@@ -1,5 +1,7 @@
 package app.rork.sophia.ui
 
+import android.content.Intent
+import android.net.Uri
 import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
@@ -42,6 +44,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.AppConfig
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.audio.CourseAudioPlayer
 import app.rork.sophia.ui.audio.AudioDownloadsScreen
@@ -534,7 +537,13 @@ fun MainTabs(
                                 paywall = PaywallContext.DEBLOQUER_COURS
                             },
                             onOpenFeedback = { openFromSettings(OverlayScreen.Feedback) },
-                            onOpenAmbassador = { openFromSettings(OverlayScreen.Ambassador) },
+                            // La page créateurs du site, plutôt que le formulaire intégré.
+                            onOpenAmbassador = {
+                                app.analytics.trackAmbassadorOpened()
+                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(AppConfig.CREATORS_URL))
+                                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                runCatching { context.startActivity(intent) }
+                            },
                             onOpenTerms = { openFromSettings(OverlayScreen.Terms) },
                             onOpenPrivacy = { openFromSettings(OverlayScreen.Privacy) },
                             onOpenAudioDownloads = { openFromSettings(OverlayScreen.AudioDownloads) },

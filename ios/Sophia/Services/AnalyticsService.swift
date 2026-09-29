@@ -274,6 +274,13 @@ enum AnalyticsService {
         track("deep_link_opened", ["course_id": courseId])
     }
 
+    // MARK: - Ambassadeurs
+
+    /// Même nom que sur Android : la bannière « Deviens ambassadeur » ouvre la page créateurs.
+    static func trackAmbassadorOpened() {
+        track("ambassador_opened")
+    }
+
     // MARK: - Question du jour
 
     static func trackDailyQuestionNotificationOpened(courseId: String) {
