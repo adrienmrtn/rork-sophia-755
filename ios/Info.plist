@@ -55,6 +55,11 @@
 		<!-- Bouton « Retourner sur TikTok » du TikTok blocker (canOpenURL). -->
 		<string>tiktok</string>
 	</array>
+	<!-- Mode audio : la narration d'un cours continue écran verrouillé et dans une autre app. -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 	<!-- Texte ATT affiché par iOS avant la demande de tracking publicitaire. -->
 	<key>NSUserTrackingUsageDescription</key>
 	<string>Sophia utilise cet identifiant pour mesurer l'efficacité de ses campagnes publicitaires et améliorer la pertinence des annonces.</string>

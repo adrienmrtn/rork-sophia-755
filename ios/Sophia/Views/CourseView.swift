@@ -36,9 +36,13 @@ struct CourseView: View {
     @State private var selectedGlossaryEntry: GlossaryEntry? = nil
     /// Professor whose page is open (byline or "written by" card tapped).
     @State private var presentedAuthor: CourseAuthor? = nil
+    /// Full audio player, opened by the headphones in the header.
+    @State private var showAudioPlayer: Bool = false
+    @State private var showAudioPaywall: Bool = false
 
     /// Fixed XP awarded for finishing a course (reaching the completion screen). Always granted.
-    private let courseCompletionXP: Int = 10
+    /// Listening to the narration to the end grants the same (see `ContentView`).
+    static let courseCompletionXP: Int = 10
 
     private var isPremium: Bool { store.isPremium }
 
@@ -46,7 +50,7 @@ struct CourseView: View {
     /// reader from the visible hierarchy without the user having left the course.
     private var isCoveredByOverlay: Bool {
         showQuiz || showDebloquerPaywall || showQuizPaywall
-            || showComparisonOverQuiz || showComparisonOverDebloquer
+            || showComparisonOverQuiz || showComparisonOverDebloquer || showAudioPaywall
     }
 
     /// The one course a free user can fully read today (claimed on open in `ContentView`).
@@ -89,7 +93,7 @@ struct CourseView: View {
                     course: course,
                     progressManager: progressManager,
                     previousSubjectXP: previousSubjectXP,
-                    earnedXP: courseCompletionXP,
+                    earnedXP: Self.courseCompletionXP,
                     globalAwardResult: globalCourseAwardResult,
                     showFreemiumGate: !isPremium,
                     onClose: {
@@ -258,6 +262,24 @@ struct CourseView: View {
                 )
             }
         }
+        .sheet(isPresented: $showAudioPlayer) {
+            AudioPlayerView()
+                .sophiaSheetChrome()
+        }
+        .fullScreenCover(isPresented: $showAudioPaywall) {
+            SophiaPaywallView(
+                context: .audio,
+                store: store,
+                course: course,
+                onPurchased: {
+                    showAudioPaywall = false
+                    // Bought to listen: start listening.
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { openAudio() }
+                },
+                onRestored: { showAudioPaywall = false },
+                onDismissed: { showAudioPaywall = false }
+            )
+        }
         .onAppear {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.1)) {
                 appeared = true
@@ -287,10 +309,49 @@ struct CourseView: View {
                 .font(DS.sans(.subheadline, .medium))
                 .foregroundStyle(DS.inkSecondary)
                 .monospacedDigit()
+
+            if CourseAudioCatalog.shared.hasAudio(course.id) {
+                audioButton
+            }
         }
         .padding(.horizontal, 20)
         .padding(.top, 12)
         .padding(.bottom, 12)
+    }
+
+    // MARK: Audio
+
+    /// Headphones: listen to this course. Animated while its narration plays.
+    private var audioButton: some View {
+        let player = CourseAudioPlayer.shared
+        let playing = player.isPlayingCourse(course.id)
+        return Button(action: openAudio) {
+            Image(systemName: playing ? "waveform" : (isPremium ? "headphones" : "lock.fill"))
+                .font(.jakarta(size: 15, weight: .semibold))
+                .foregroundStyle(player.isCurrent(course.id) ? DS.accent : DS.inkSecondary)
+                .symbolEffect(.variableColor.iterative, isActive: playing)
+                .frame(width: 40, height: 40)
+                .background(DS.surface, in: Circle())
+                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+        }
+        .accessibilityLabel(Text(languageManager.text("audio.listen")))
+    }
+
+    private func openAudio() {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        guard isPremium else {
+            AnalyticsService.trackAudioLockedTapped(courseId: course.id, source: "course_reader")
+            showAudioPaywall = true
+            return
+        }
+        let player = CourseAudioPlayer.shared
+        player.isPremium = true
+        if !player.isCurrent(course.id) {
+            player.play(courseId: course.id, source: "course_reader")
+        } else if !player.isPlaying {
+            player.resume()
+        }
+        showAudioPlayer = true
     }
 
     private var progressBar: some View {
@@ -485,7 +546,7 @@ struct CourseView: View {
                 progressManager.completeCourse(courseId: course.id, quizScore: 0)
                 // The daily course is done: if TikTok was waiting on it, it opens now.
                 TikTokBlockerManager.shared.registerDailyCourseCompleted(courseId: course.id)
-                progressManager.addXP(subject: course.subject, amount: courseCompletionXP)
+                progressManager.addXP(subject: course.subject, amount: Self.courseCompletionXP)
                 globalCourseAwardResult = progressManager.awardGlobalXP(
                     reason: .courseCompleted(courseId: course.id),
                     amount: ProgressManager.globalCourseCompletionXP

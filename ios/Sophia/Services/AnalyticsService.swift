@@ -310,6 +310,46 @@ enum AnalyticsService {
         track("feedback_failed", ["category": category])
     }
 
+    // MARK: - Audio
+
+    static func trackAudioPlayStarted(courseId: String, language: String, source: String, rate: Double) {
+        track("audio_play_started", [
+            "course_id": courseId,
+            "audio_language": language,
+            "source": source,
+            "rate": rate,
+        ])
+    }
+
+    static func trackAudioCompleted(courseId: String, language: String, rate: Double) {
+        track("audio_completed", [
+            "course_id": courseId,
+            "audio_language": language,
+            "rate": rate,
+        ])
+    }
+
+    static func trackAudioQueued(courseId: String, position: String, source: String) {
+        track("audio_queued", ["course_id": courseId, "position": position, "source": source])
+    }
+
+    static func trackAudioLanguageChanged(courseId: String, language: String) {
+        track("audio_language_changed", ["course_id": courseId, "audio_language": language])
+    }
+
+    static func trackAudioSpeedChanged(rate: Double) {
+        track("audio_speed_changed", ["rate": rate])
+    }
+
+    static func trackAudioDownloadStarted(courseId: String, language: String) {
+        track("audio_download_started", ["course_id": courseId, "audio_language": language])
+    }
+
+    /// A free user tapped an audio action: the moment before the audio paywall.
+    static func trackAudioLockedTapped(courseId: String, source: String) {
+        track("audio_locked_tapped", ["course_id": courseId, "source": source])
+    }
+
     // MARK: - Helpers
 
     /// Repli utilisé seulement si l'appelant ne fournit pas de nom : l'ordre reflète la

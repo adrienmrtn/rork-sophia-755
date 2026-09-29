@@ -1,0 +1,88 @@
+# Mode audio (iOS)
+
+Chaque cours peut être écouté comme un podcast, en 5 langues (FR, EN, ES, DE, TR). Réservé aux
+Premium. Android suivra dans une PR séparée.
+
+## Ce que voit l'utilisateur
+
+- **Lancer un audio** : bouton casque dans l'en-tête du cours, bouton casque sur la couverture des
+  cartes (accueil et bibliothèque ; un appui lance la lecture, un appui long ouvre le menu), et
+  appui long sur les cartes de la bibliothèque (« Écouter », « Lire ensuite », « Ajouter à la
+  file », « Télécharger »). Rien n'apparaît sur un cours qui n'a pas d'audio.
+- **Lecteur plein écran** : couverture, position, ±15 s, vitesse de 0,5× à 2× (curseur, pas de
+  0,05, bouton « 1× »), langue de l'audio, téléchargement, AirPlay, file d'attente.
+- **Mini-lecteur** au-dessus des onglets tant qu'un audio est chargé (lecture/pause, fermer).
+- **Natif** : l'audio continue écran verrouillé et dans une autre app ; écran verrouillé, Centre
+  de contrôle, Dynamic Island, AirPods, CarPlay et Apple Watch affichent la couverture, le titre et
+  le professeur, et pilotent la lecture (lecture/pause, ±15 s, suivant, barre de position,
+  vitesse). Un appel met en pause, la fin de l'appel relance.
+- **File d'attente** : manuelle, réordonnable, conservée entre deux lancements. À la fin d'un
+  audio, le suivant démarre ; file vide = le lecteur se ferme.
+- **Langue** : celle de l'app si elle fait partie des 5, sinon l'anglais. Le dernier choix fait
+  dans le lecteur est mémorisé. Chaque langue a sa propre position de reprise.
+- **Progression** : écouter 90 % d'un audio termine le cours (mêmes XP matière et globaux, série,
+  bloqueur TikTok, XP de collection), sans les écrans de célébration.
+- **Hors ligne** : téléchargement depuis le lecteur ou le menu ; Réglages › Audio ›
+  Téléchargements audio pour voir l'espace utilisé et supprimer.
+- **Gratuit** : les mêmes boutons avec un cadenas ouvrent le paywall `audio`
+  (`SophiaAudioPaywall`, avec la couverture du cours demandé). Après achat, l'audio démarre.
+
+## Ajouter les vrais MP3
+
+Un MP3 par cours et par langue, nommé d'après l'id du cours :
+
+```sh
+export SUPABASE_SERVICE_ROLE_KEY=…   # Project Settings → API → service_role
+python3 scripts/upload_course_audio_to_supabase.py dossier_fr/ --language fr --dry-run
+python3 scripts/upload_course_audio_to_supabase.py dossier_fr/ --language fr
+```
+
+Le script vérifie les ids contre `content/courses/<langue>/`, uploade dans
+`course-audio/<langue>/<course_id>.mp3` (en écrasant l'existant) puis réécrit `manifest.json`
+depuis le contenu réel du bucket. L'app lit ce manifest au lancement et au retour au premier
+plan : un nouvel audio apparaît sans mise à jour de l'app (quelques minutes de cache au plus).
+
+**Faux audios en place (à écraser)** : voix de synthèse qui lit l'intro du cours.
+
+| Cours | Langues |
+| --- | --- |
+| `course_67_qu_est_ce_qu_un_trou_noir` | FR, EN, ES, DE, TR |
+| `course_150_la_nuit_etoilee_van_gogh` | FR, EN, ES |
+| `course_12_la_strategie_de_napoleon_a_ulm_1805` | FR |
+
+Les 5 MP3 FR déjà présents depuis le 12/09 (cours 1 à 5) sont de vrais audios et n'ont pas été
+touchés. Un audio déjà téléchargé sur un téléphone reste l'ancienne version jusqu'à ce qu'il
+soit supprimé et retéléchargé.
+
+## RevenueCat
+
+Le paywall `audio` vend l'offering courante (les expériences de prix s'appliquent), comme les
+autres paywalls de contexte. Une offering `audio` n'est qu'un repli : inutile de la créer tant que
+l'offering courante a un package annuel. Impression déclarée sous `native_audio`.
+
+## Code
+
+- `Services/Audio/CourseAudioCatalog.swift` : manifest, langues, URL publiques.
+- `Services/Audio/CourseAudioDownloads.swift` : fichiers hors ligne
+  (`Application Support/CourseAudio`, exclus de la sauvegarde iCloud).
+- `Services/Audio/CourseAudioPlayer.swift` : `AVPlayer`, session `.playback`/`.spokenAudio`,
+  Now Playing, commandes à distance, file, vitesse, reprise, complétion, garde Premium.
+- `Views/Audio/` : lecteur, mini-lecteur, menus, téléchargements, paywall, et
+  `CourseAudioHost` (branchement dans `ContentView`).
+- `Info.plist` : `UIBackgroundModes` = `audio`.
+
+Mixpanel : `audio_play_started`, `audio_completed`, `audio_queued`, `audio_language_changed`,
+`audio_speed_changed`, `audio_download_started`, `audio_locked_tapped`, et le funnel paywall
+habituel avec `context = audio`.
+
+## À tester sur un iPhone
+
+1. Premium : ouvrir « Qu'est-ce qu'un trou noir ? », casque → le lecteur s'ouvre et joue.
+2. Verrouiller l'écran : l'audio continue, la couverture et les commandes sont là.
+3. Changer la vitesse (curseur et depuis l'écran verrouillé), changer de langue (TR, DE…).
+4. Appui long sur une carte de la bibliothèque → « Ajouter à la file » ; réordonner la file ;
+   laisser finir l'audio → le suivant démarre, le cours passe en « Terminé ».
+5. Télécharger, passer en mode avion, relancer l'app, rejouer.
+6. Compte gratuit : le casque avec cadenas ouvre le paywall audio.
+7. Tuer l'app pendant une écoute, relancer : le mini-lecteur est là, la lecture reprend au bon
+   endroit.

@@ -431,6 +431,7 @@ struct LibraryFeaturedCard: View {
             .dsSoftShadow()
         }
         .buttonStyle(BrutalCardButtonStyle(depth: 2))
+        .courseAudioContextMenu(courseId: course.id, source: "library_featured")
         .onAppear {
             if image == nil { image = CourseImageMap.loadImage(for: course.id) }
         }
@@ -457,6 +458,10 @@ struct LibraryFeaturedCard: View {
             .frame(height: Self.coverHeight)
             .frame(maxWidth: .infinity)
             .clipped()
+            .overlay(alignment: .bottomTrailing) {
+                CourseAudioCardButton(courseId: course.id, source: "library_featured", size: 34)
+                    .padding(10)
+            }
     }
 
     private var infoPanel: some View {
@@ -532,6 +537,7 @@ struct LibraryCardView: View {
             .opacity(status == .completed ? 0.82 : 1.0)
         }
         .buttonStyle(BrutalCardButtonStyle(depth: 2))
+        .courseAudioContextMenu(courseId: course.id, source: "library_card")
     }
 
     private var illustration: some View {
@@ -576,6 +582,10 @@ struct LibraryCardView: View {
                     .sensoryFeedback(.impact(weight: .light), trigger: favTrigger)
                     .padding(8)
                 }
+            }
+            .overlay(alignment: .bottomTrailing) {
+                CourseAudioCardButton(courseId: course.id, source: "library_card", size: 30)
+                    .padding(8)
             }
     }
 

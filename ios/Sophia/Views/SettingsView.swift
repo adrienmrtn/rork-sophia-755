@@ -18,6 +18,7 @@ struct SettingsView: View {
     @State private var showPrivacy: Bool = false
     @State private var showFeedback: Bool = false
     @State private var showAmbassador: Bool = false
+    @State private var showAudioDownloads: Bool = false
     @State private var hapticTrigger: Int = 0
     /// Set only by the developer section, which is itself behind `#if DEBUG`.
     @State private var debugPaywall: SophiaPaywallContext? = nil
@@ -61,6 +62,10 @@ struct SettingsView: View {
                             premiumSection
                         } else {
                             subscriptionSection
+                        }
+
+                        if store.isPremium || !CourseAudioDownloads.shared.downloaded.isEmpty {
+                            audioSection
                         }
 
                         dataSection
@@ -120,6 +125,7 @@ struct SettingsView: View {
             .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaSheetChrome() }
             .sheet(isPresented: $showFeedback) { FeedbackView(isPremium: store.isPremium) }
             .sheet(isPresented: $showAmbassador) { AmbassadorView() }
+            .sheet(isPresented: $showAudioDownloads) { AudioDownloadsView().sophiaSheetChrome() }
         }
         .sophiaColorScheme()
     }
@@ -285,6 +291,24 @@ struct SettingsView: View {
         }
     }
 
+    private var audioSection: some View {
+        section(languageManager.text("settings.section.audio")) {
+            groupedCard {
+                actionRow(
+                    icon: "arrow.down.circle",
+                    title: languageManager.text("audio.downloads.title"),
+                    subtitle: String(
+                        format: languageManager.text("audio.downloads.subtitle"),
+                        AudioFormat.bytes(CourseAudioDownloads.shared.totalBytes, locale: languageManager.locale)
+                    )
+                ) {
+                    hapticTrigger += 1
+                    showAudioDownloads = true
+                }
+            }
+        }
+    }
+
     private var dataSection: some View {
         section(languageManager.text("settings.section.data")) {
             groupedCard {
@@ -397,6 +421,14 @@ struct SettingsView: View {
                     hapticTrigger += 1
                     debugPaywall = .debloquerCours
                 }
+                rowDivider
+                actionRow(
+                    icon: "headphones",
+                    title: languageManager.text("settings.debug.audioPaywall")
+                ) {
+                    hapticTrigger += 1
+                    debugPaywall = .audio
+                }
             }
         }
     }
@@ -425,6 +457,15 @@ struct SettingsView: View {
                 store: store,
                 course: ContentCatalog.activeCourses.first,
                 secondsUntilReset: progressManager.secondsUntilDailyReset(),
+                tracksAnalytics: false,
+                onPurchased: { debugPaywall = nil },
+                onRestored: { debugPaywall = nil },
+                onDismissed: { debugPaywall = nil }
+            )
+        case .audio:
+            SophiaAudioPaywall(
+                store: store,
+                course: ContentCatalog.activeCourses.first,
                 tracksAnalytics: false,
                 onPurchased: { debugPaywall = nil },
                 onRestored: { debugPaywall = nil },
