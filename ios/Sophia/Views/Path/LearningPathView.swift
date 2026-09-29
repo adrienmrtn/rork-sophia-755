@@ -608,7 +608,6 @@ struct LearningPathView: View {
             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
         }
         showToast(String(format: languageManager.text("path.unlocked.toast"), level.number), icon: "sparkles")
-        AnalyticsService.trackPathLevelUnlocked(collectionId: level.collection.id, level: level.number)
         let levelId = level.id
         Task {
             try? await Task.sleep(for: .seconds(3.2))

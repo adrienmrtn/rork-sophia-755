@@ -148,7 +148,6 @@ final class TikTokBlockerManager {
             showUnlockedScreen = false
             TikTokBlockerShared.clearShield()
         }
-        AnalyticsService.trackTikTokBlockerToggled(enabled: enabled)
     }
 
     /// Mirrors the app language for the shield extension's copy.
@@ -191,7 +190,6 @@ final class TikTokBlockerManager {
         guard let course = candidate() else { return nil }
         session = Session(courseId: course.id)
         showUnlockedScreen = false
-        AnalyticsService.trackTikTokBlockerCourseOpened(courseId: course.id)
         return course
     }
 
@@ -235,7 +233,6 @@ final class TikTokBlockerManager {
     func openTikTok() -> Bool {
         guard canOpenTikTok else { return false }
         UIApplication.shared.open(TikTokBlockerShared.tiktokURL)
-        AnalyticsService.trackTikTokBlockerReturnedToTikTok()
         return true
     }
 
@@ -250,7 +247,6 @@ final class TikTokBlockerManager {
         unlockCount = TikTokBlockerShared.unlockCount
         TikTokBlockerShared.clearShield()
         armUnlockTimer(until: until)
-        AnalyticsService.trackTikTokBlockerUnlocked(minutes: minutes, courseId: courseId, fromShield: fromShield)
     }
 
     private var unlockActivity: DeviceActivityName {

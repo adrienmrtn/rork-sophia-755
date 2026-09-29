@@ -341,7 +341,6 @@ struct AudioPlayerView: View {
 
     private func commitSpeed() {
         player.setRate(speedValue)
-        AnalyticsService.trackAudioSpeedChanged(rate: player.rate)
     }
 
     // MARK: Language · download · queue

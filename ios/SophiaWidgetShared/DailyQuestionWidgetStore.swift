@@ -64,9 +64,9 @@ nonisolated enum DailyQuestionWidgetStore {
         imageDirectory?.appendingPathComponent(fileName)
     }
 
-    /// Lien ouvert au toucher : le cours, avec sa provenance pour les statistiques.
+    /// Lien ouvert au toucher : le cours.
     static func courseURL(courseId: String) -> URL? {
-        URL(string: "sophia://course/\(courseId)?from=widget")
+        URL(string: "sophia://course/\(courseId)")
     }
 
     /// Même clé que dans l'app (`DailyQuestion.day(for:)`).

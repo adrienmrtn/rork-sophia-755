@@ -13,14 +13,6 @@ enum SophiaDeepLink {
         url.scheme == scheme && url.host == "unlock"
     }
 
-    /// Where the link was tapped (`?from=notification`, `?from=widget`), if it says.
-    static func origin(of url: URL) -> String? {
-        URLComponents(url: url, resolvingAgainstBaseURL: false)?
-            .queryItems?
-            .first(where: { $0.name == "from" })?
-            .value
-    }
-
     static func courseId(from url: URL) -> String? {
         guard url.scheme == scheme else { return nil }
 

@@ -56,7 +56,7 @@ final class AuthService {
                 if event == .initialSession {
                     self.isBootstrapping = false
                 }
-                self.linkAnalyticsIdentity()
+                self.linkRevenueCatIdentity()
             }
         }
 
@@ -66,7 +66,7 @@ final class AuthService {
             let session = try? await self.client.auth.session
             self.currentUser = session?.user
             self.isBootstrapping = false
-            self.linkAnalyticsIdentity()
+            self.linkRevenueCatIdentity()
         }
     }
 
@@ -157,15 +157,13 @@ final class AuthService {
         await signOut()
     }
 
-    // MARK: - Analytics identity
+    // MARK: - RevenueCat identity
 
-    /// Lie l'identité Supabase à RevenueCat + Mixpanel pour un même utilisateur cross-device.
-    private func linkAnalyticsIdentity() {
+    /// Lie l'identité Supabase à RevenueCat pour un même utilisateur cross-device.
+    private func linkRevenueCatIdentity() {
         guard let userID = currentUser?.id.uuidString else { return }
         if Purchases.isConfigured {
-            Purchases.shared.logIn(userID) { _, _, _ in
-                AnalyticsService.linkRevenueCatUserIfNeeded()
-            }
+            Purchases.shared.logIn(userID) { _, _, _ in }
         }
     }
 

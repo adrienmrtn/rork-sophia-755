@@ -75,7 +75,6 @@ struct CourseAudioHost: ViewModifier {
                 )
             }
         }
-        AnalyticsService.trackCourseCompleted(course: course)
     }
 }
 

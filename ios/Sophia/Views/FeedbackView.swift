@@ -48,9 +48,6 @@ struct FeedbackView: View {
         }
         .presentationDragIndicator(.visible)
         .sophiaSheetChrome()
-        .onAppear {
-            AnalyticsService.trackFeedbackOpened()
-        }
     }
 
     private var formView: some View {
@@ -251,14 +248,12 @@ struct FeedbackView: View {
                 await MainActor.run {
                     isSubmitting = false
                     didSucceed = true
-                    AnalyticsService.trackFeedbackSubmitted(category: category.rawValue)
                     UINotificationFeedbackGenerator().notificationOccurred(.success)
                 }
             } catch {
                 await MainActor.run {
                     isSubmitting = false
                     errorMessage = languageManager.text("feedback.error.generic")
-                    AnalyticsService.trackFeedbackFailed(category: category.rawValue)
                     UINotificationFeedbackGenerator().notificationOccurred(.error)
                 }
             }

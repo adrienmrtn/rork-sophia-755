@@ -22,8 +22,6 @@ struct SophiaAudioPaywall: View {
 
     @State private var purchasing = false
     @State private var appeared = false
-    @State private var presentedAt: Date?
-    @State private var didTrackDismiss = false
     @State private var cover: UIImage?
 
     private let context = SophiaPaywallContext.audio
@@ -68,11 +66,8 @@ struct SophiaAudioPaywall: View {
             .frame(maxWidth: OV2.readableWidth)
         }
         .onAppear {
-            presentedAt = Date()
-            didTrackDismiss = false
             if let course { cover = CourseImageMap.loadImage(for: course.id) }
             if tracksAnalytics {
-                AnalyticsService.trackPaywallViewed(context: context.rawValue, triggerCourseId: course?.id)
                 store.trackPaywallImpression(paywallId: "native_audio", offeringIdentifier: context.offeringIdentifier)
             }
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
@@ -82,7 +77,6 @@ struct SophiaAudioPaywall: View {
         .task {
             if store.offerings == nil { await store.loadOfferingsWithRetry() }
         }
-        .onDisappear { trackDismissIfNeeded() }
     }
 
     // MARK: Hero
@@ -214,7 +208,6 @@ struct SophiaAudioPaywall: View {
     private var closeButton: some View {
         Button {
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            trackDismissIfNeeded()
             dismiss()
             onDismissed?()
         } label: {
@@ -241,13 +234,6 @@ struct SophiaAudioPaywall: View {
             let ok = await store.purchase(package: package)
             purchasing = false
             if ok {
-                if tracksAnalytics {
-                    AnalyticsService.trackPurchaseCompleted(
-                        context: context.rawValue,
-                        offeringId: package.presentedOfferingContext.offeringIdentifier,
-                        packageId: package.identifier
-                    )
-                }
                 onPurchased()
             }
         }
@@ -260,10 +246,4 @@ struct SophiaAudioPaywall: View {
         }
     }
 
-    private func trackDismissIfNeeded() {
-        guard tracksAnalytics, !didTrackDismiss else { return }
-        didTrackDismiss = true
-        let duration = Int(Date().timeIntervalSince(presentedAt ?? Date()))
-        AnalyticsService.trackPaywallDismissed(context: context.rawValue, durationSeconds: max(0, duration))
-    }
 }

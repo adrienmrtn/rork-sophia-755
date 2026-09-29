@@ -8,7 +8,6 @@ struct CourseView: View {
     let course: Course
     let progressManager: ProgressManager
     @Bindable var store: StoreViewModel
-    var openSource: String = "unknown"
     let onDismissToHome: () -> Void
     @Environment(\.dismiss) private var dismiss
     @State private var currentIndex: Int = 0
@@ -29,7 +28,10 @@ struct CourseView: View {
     @State private var pendingCollectionEvents: [CollectionProgressEvent] = []
     @State private var rewardSteps: [PostCompletionRewardStep] = []
     @State private var showRewardFlow: Bool = false
-    @State private var sessionTracker: CourseSessionTracker?
+    /// Vrai entre l'ouverture du cours et sa fermeture. Un `fullScreenCover` (quiz,
+    /// paywall) fait disparaître puis réapparaître le lecteur : ce n'est pas une nouvelle
+    /// visite, les tâches d'ouverture ne doivent pas repartir.
+    @State private var isVisitActive = false
     @State private var coachmarkTerm: String? = nil
     /// Glossary term tapped in the lesson body. Shown as an in-app overlay (not a system
     /// sheet) so the course text stays perfectly still when a term is tapped.
@@ -161,36 +163,24 @@ struct CourseView: View {
         .navigationBarBackButtonHidden()
         .onAppear {
             // A `fullScreenCover` takes its presenter off screen, so opening the quiz or a
-            // paywall over the course fired `onDisappear` then `onAppear` again on the way
-            // back. Mixpanel saw a course closed and a second course opened for one reading
-            // session, which inflated opens and cut every session short. An existing tracker
-            // means this is a return from a cover, not a new visit.
-            guard sessionTracker == nil else { return }
+            // paywall over the course fires `onDisappear` then `onAppear` again on the way
+            // back. An active visit means this is a return from a cover, not a new visit.
+            guard !isVisitActive else { return }
+            isVisitActive = true
             // Inline images come from the bucket: start fetching them now so paging forward
             // finds them on disk rather than in flight.
             CourseImageLoader.prefetch(courseId: course.id)
             progressManager.registerFirstCourseOpenedIfNeeded(course.id)
             requestAppStoreReviewIfEligible(lessonIndex: currentIndex)
-            sessionTracker = CourseSessionTracker(course: course)
-            sessionTracker?.recordLessonIndex(currentIndex)
-            AnalyticsService.trackCourseOpened(
-                courseId: course.id,
-                subject: course.subject,
-                source: openSource,
-                isFreeUser: !isPremium
-            )
             maybeShowTermCoachmark(lessonIndex: currentIndex)
         }
         .onDisappear {
             // Covered, not closed: the reader is still the screen the user is on.
             guard !isCoveredByOverlay else { return }
-            let reason = sessionTracker?.completed == true ? "completed" : "dismiss"
-            sessionTracker?.finish(exitReason: reason)
-            sessionTracker = nil
+            isVisitActive = false
         }
         .onChange(of: currentIndex) { _, newIndex in
             requestAppStoreReviewIfEligible(lessonIndex: newIndex)
-            sessionTracker?.recordLessonIndex(newIndex)
             maybeShowTermCoachmark(lessonIndex: newIndex)
         }
         .sheet(item: $presentedAuthor) { author in
@@ -365,7 +355,6 @@ struct CourseView: View {
     private func openAudio() {
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
         guard isPremium else {
-            AnalyticsService.trackAudioLockedTapped(courseId: course.id, source: "course_reader")
             showAudioPaywall = true
             return
         }
@@ -452,7 +441,7 @@ struct CourseView: View {
     private func openOtherCourse(_ target: Course) {
         onDismissToHome()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-            DeepLinkRouter.shared.requestCourse(target.id, source: "author_page")
+            DeepLinkRouter.shared.requestCourse(target.id)
         }
     }
 
@@ -466,12 +455,6 @@ struct CourseView: View {
                     .padding(.bottom, 120)
             }
             .scrollIndicators(.hidden)
-            .onScrollGeometryChange(for: CGFloat.self) { geometry in
-                geometry.contentOffset.y
-            } action: { _, offset in
-                guard lessonIndex == 0, offset > 120 else { return }
-                sessionTracker?.scrolledOnFirstLesson = true
-            }
             .onChange(of: currentIndex) { oldIndex, newIndex in
                 // Only reset to the top when moving forward (Continue / swipe next).
                 // Going back keeps the previous reading position.
@@ -551,7 +534,6 @@ struct CourseView: View {
             // Le paywall ne s'ouvre que via le cadenas sur les pages floutées.
             if isCourseLocked {
                 guard !isLastLesson else { return }
-                sessionTracker?.recordContinueTap()
                 currentIndex += 1
                 progressManager.updateLessonProgress(
                     courseId: course.id,
@@ -562,8 +544,6 @@ struct CourseView: View {
             }
             if isLastLesson {
                 guard FreemiumGate.canCompleteCourse(isPremium: isPremium, isDailyFreeCourse: isDailyFreeCourse) else { return }
-                sessionTracker?.recordContinueTap()
-                sessionTracker?.markCompleted()
                 progressManager.updateLessonProgress(
                     courseId: course.id,
                     lessonIndex: currentIndex,
@@ -581,12 +561,10 @@ struct CourseView: View {
                     amount: ProgressManager.globalCourseCompletionXP
                 )
                 pendingCollectionEvents = wasCompletedBefore ? [] : progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)
-                AnalyticsService.trackCourseCompleted(course: course)
                 withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
                     endPhase = .completed
                 }
             } else {
-                sessionTracker?.recordContinueTap()
                 // Le slide est animé par `.animation(_:value: currentIndex)` sur le TabView.
                 currentIndex += 1
                 progressManager.updateLessonProgress(

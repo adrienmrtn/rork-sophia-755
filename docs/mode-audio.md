@@ -77,9 +77,7 @@ l'offering courante a un package annuel. Impression déclarée sous `native_audi
   `CourseAudioHost` (branchement dans `ContentView`).
 - `Info.plist` : `UIBackgroundModes` = `audio`.
 
-Mixpanel : `audio_play_started`, `audio_completed`, `audio_queued`, `audio_language_changed`,
-`audio_speed_changed`, `audio_download_started`, `audio_locked_tapped`, et le funnel paywall
-habituel avec `context = audio`.
+Pas de suivi d'usage : Mixpanel a été retiré de l'app le 29/09/2026.
 
 ## À tester sur un iPhone
 

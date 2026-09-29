@@ -503,9 +503,8 @@ struct SettingsView: View {
         }
     }
 
-    /// The paywalls the developer section opens, with tracking off: Mixpanel runs in debug
-    /// builds on the production token, so a paywall opened to look at it would otherwise land
-    /// in the funnel as a real impression and a real dismissal.
+    /// The paywalls the developer section opens, with tracking off: a paywall opened to look
+    /// at it would otherwise count as a real RevenueCat impression.
     ///
     /// Closing one just closes it. The comparison paywall that `CourseView` stacks on top of
     /// the quiz and course-unlock paywalls belongs to the course, not to the screen being
@@ -571,7 +570,6 @@ struct SettingsView: View {
     private var ambassadorBanner: some View {
         Button {
             hapticTrigger += 1
-            AnalyticsService.trackAmbassadorOpened()
             showCreatorChoice = true
         } label: {
             HStack(spacing: 14) {

@@ -19,7 +19,6 @@ struct SophiaApp: App {
         #else
         Purchases.configure(withAPIKey: AppConfig.EXPO_PUBLIC_REVENUECAT_IOS_API_KEY)
         #endif
-        AnalyticsService.configure()
         AuthService.shared.start()
         // Les boutons dans un `ScrollView` (ex. « Commencer » sur les cartes accueil) répondent
         // au tap immédiatement, sans le délai UIKit qui obligeait à attendre la fin du
@@ -42,7 +41,6 @@ struct SophiaApp: App {
                             showOnboarding = false
                         }
                     })
-                    .trackAnalyticsLifecycle(isPremium: false)
                 } else {
                     ContentView(
                         onResetOnboarding: {
