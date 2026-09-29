@@ -1,0 +1,123 @@
+# Promotional Text and What's New, and nothing else, from the Actions tab.
+#
+# The texts live in appstore/metadata/<locale>/promotional_text.txt and
+# whats_new.txt. This writes those two fields to the version being prepared in
+# App Store Connect and leaves the rest of the page alone: description,
+# keywords, name, subtitle, URLs and subscriptions are not sent at all, so text
+# finished by hand in App Store Connect stays as it is.
+#
+# Trigger: "Run workflow". It defaults to dry-run, which reads the live page and
+# lists, locale by locale, what a push would change. Writes nothing.
+#
+#   dry-run   what would change, per locale. Writes nothing to Apple.
+#   push      write it.
+#
+# Both refuse to run unless the version being prepared is the one named below,
+# so notes written for 1.1.7 can never land on another release. Neither creates
+# a localization: a language missing from the version is reported and skipped.
+#
+# Same three secrets as "App Store metadata": ASC_KEY_ID, ASC_ISSUER_ID,
+# ASC_PRIVATE_KEY.
+name: App Store release notes
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version being prepared in App Store Connect"
+        type: string
+        default: "1.1.7"
+      action:
+        description: "What to do"
+        type: choice
+        default: dry-run
+        options:
+          - dry-run
+          - push
+      locale:
+        description: "One locale only, e.g. de-DE (blank = all)"
+        type: string
+        default: ""
+
+# The same group as "App Store metadata": two runs never write to the account at
+# once, whichever workflow started them.
+concurrency:
+  group: appstore-metadata
+  cancel-in-progress: false
+
+jobs:
+  run:
+    name: ${{ inputs.action }} ${{ inputs.version }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install the JWT signer
+        run: pip install --quiet pyjwt cryptography
+
+      - name: Check the secrets are set
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+        run: |
+          missing=""
+          for name in ASC_KEY_ID ASC_ISSUER_ID ASC_PRIVATE_KEY; do
+            [ -n "${!name}" ] || missing="$missing $name"
+          done
+          if [ -n "$missing" ]; then
+            echo "Missing repository secret(s):$missing" >&2
+            echo "Settings -> Secrets and variables -> Actions -> New repository secret" >&2
+            exit 1
+          fi
+
+      # Inputs go through the environment, never spliced into the script: the
+      # version and the locale are free text.
+      - name: Run
+        env:
+          ACTION: ${{ inputs.action }}
+          VERSION: ${{ inputs.version }}
+          LOCALE: ${{ inputs.locale }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+        run: |
+          if [ -z "$VERSION" ]; then
+            echo "Give the version being prepared, e.g. 1.1.7." >&2
+            exit 1
+          fi
+
+          only=()
+          if [ -n "$LOCALE" ]; then
+            only=(--locale "$LOCALE")
+          fi
+
+          case "$ACTION" in
+            dry-run) mode=(--dry-run) ;;
+            push)    mode=() ;;
+            *)       echo "unknown action: $ACTION" >&2; exit 1 ;;
+          esac
+
+          {
+            echo "### \`$ACTION\` $VERSION: Promotional Text and What's New"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          set +e
+          python3 scripts/appstore_metadata.py push \
+            --fields promotional_text,whats_new \
+            --version "$VERSION" \
+            "${mode[@]}" "${only[@]}" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          status=${PIPESTATUS[0]}
+          set -e
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"

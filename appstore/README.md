@@ -134,6 +134,26 @@ them.
 translation engine answers 429 to some data-centre ranges. Build locally and push
 from Actions if it does.
 
+## Release notes only
+
+When the rest of the page is already finished in App Store Connect, a full
+`push` is the wrong tool: it rewrites the description, keywords, name and
+subscriptions with whatever this folder holds. **App Store release notes**
+(`.github/workflows/appstore-release-notes.yml`) writes `promotional_text.txt`
+and `whats_new.txt` and nothing else:
+
+```bash
+python3 scripts/appstore_metadata.py push --fields promotional_text,whats_new --version 1.1.7 --dry-run
+```
+
+It only updates: a language the version does not have yet is reported and
+skipped, never created with release notes and no description. And it refuses to
+run unless the version being prepared is the one named, so one release's notes
+cannot land on the next.
+
+The 1.1.7 notes mention audio mode only in French, English, Spanish, German and
+Turkish (and their regional copies), the five languages it is recorded in.
+
 ## Or from a terminal
 
 Credentials come from the environment and never from this repository:
