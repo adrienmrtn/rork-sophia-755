@@ -218,7 +218,7 @@ struct BrutalPill: View {
                 Image(systemName: icon)
                     .font(.jakarta(size: 11, weight: .heavy))
             }
-            Text(text.uppercased())
+            Text(text.uppercasedInApp())
                 .font(.jakarta(.caption, design: .rounded, weight: .heavy))
                 .tracking(0.8)
         }

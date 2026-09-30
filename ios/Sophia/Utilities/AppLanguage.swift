@@ -66,8 +66,15 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
     /// Used wherever the app formats text itself — uppercasing, numbers, dates. The default
     /// locale is the *phone's*, which is why a section label read "HİSTORY" on a Turkish
     /// phone (Turkish uppercases `i` to a dotted `İ`) whatever language Sophia was in.
+    ///
+    /// Two pins, as on Android (`AppFormatting.kt`): Serbian in the Latin script its string
+    /// table is written in (`sr_RS` alone gives Cyrillic month names), and Latin digits for
+    /// every language, since the Arabic table writes its numbers that way.
     var foundationLocale: Locale {
-        Locale(identifier: localeIdentifier)
+        switch self {
+        case .serbian: Locale(identifier: "sr_Latn_RS@numbers=latn")
+        default: Locale(identifier: "\(localeIdentifier)@numbers=latn")
+        }
     }
 
     /// Writing direction of the language.
@@ -194,10 +201,18 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
     /// Very-short weekday letters Monday→Sunday for streak calendars (never hardcode French LMMJVSD).
     var mondayFirstWeekdayLetters: [String] {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: localeIdentifier)
+        formatter.locale = foundationLocale
         let symbols = formatter.veryShortWeekdaySymbols ?? ["S", "M", "T", "W", "T", "F", "S"]
         guard symbols.count == 7 else { return symbols }
         // Foundation orders Sunday-first; our week strip is Monday-first.
         return Array(symbols[1...]) + [symbols[0]]
+    }
+}
+
+extension String {
+    /// Uppercased the way the app's language does it. Plain `uppercased()` applies Unicode's
+    /// default mapping, which gave a Turkish reader "TARIH" for "TARİH".
+    func uppercasedInApp() -> String {
+        uppercased(with: AppLanguage.currentPersisted().foundationLocale)
     }
 }

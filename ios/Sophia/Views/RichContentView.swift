@@ -814,7 +814,7 @@ private struct LegacyCalloutCard<Content: View>: View {
                 Image(systemName: icon)
                     .font(.jakarta(size: 12, weight: .semibold))
                     .foregroundStyle(DS.accentSoft)
-                Text(title.uppercased())
+                Text(title.uppercasedInApp())
                     .font(DS.sans(.caption2, .semibold))
                     .foregroundStyle(DS.accentSoft)
                     .tracking(1.2)

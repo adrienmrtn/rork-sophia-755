@@ -338,7 +338,7 @@ struct FlashCard: View {
             HStack(spacing: 6) {
                 Text(course.subject.emoji)
                     .font(.jakarta(size: 16))
-                Text(course.subject.localizedShortName(language: language).uppercased())
+                Text(course.subject.localizedShortName(language: language).uppercasedInApp())
                     .font(.jakarta(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(.white)
                     .tracking(0.5)

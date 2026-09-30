@@ -153,7 +153,7 @@ struct OnboardingV2SwipeCourses: View {
             )
 
             VStack(alignment: .leading, spacing: 8) {
-                Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
+                Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
                     .font(DS.sans(.caption2, .bold))
                     .foregroundStyle(.white.opacity(0.9))
                     .padding(.horizontal, 10).padding(.vertical, 5)
@@ -198,7 +198,7 @@ struct OnboardingV2SwipeCourses: View {
     }
 
     private func stamp(text: String, color: Color) -> some View {
-        Text(text.uppercased())
+        Text(text.uppercasedInApp())
             .font(DS.title(.title2, .heavy))
             .foregroundStyle(color)
             .padding(.horizontal, 12).padding(.vertical, 6)

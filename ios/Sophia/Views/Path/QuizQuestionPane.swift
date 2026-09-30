@@ -314,7 +314,7 @@ struct QuizQuestionPane: View {
 
             if !chronoPool.isEmpty {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text(languageManager.text("quiz.chronological.remaining").uppercased())
+                    Text(languageManager.text("quiz.chronological.remaining").uppercasedInApp())
                         .font(DS.sans(.caption2, .semibold))
                         .foregroundStyle(DS.inkTertiary)
                         .tracking(1.0)
@@ -591,7 +591,7 @@ struct QuizQuestionPane: View {
 
     private func sliderResultPill(label: String, value: String, tint: Color) -> some View {
         VStack(spacing: 4) {
-            Text(label.uppercased())
+            Text(label.uppercasedInApp())
                 .font(DS.sans(.caption2, .semibold))
                 .foregroundStyle(DS.inkTertiary)
                 .tracking(0.5)

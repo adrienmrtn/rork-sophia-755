@@ -496,7 +496,7 @@ private struct TikTokCourseCard: View {
         HStack(spacing: 6) {
             Image(systemName: course.subject.icon)
                 .font(.jakarta(size: 10, weight: .semibold))
-            Text(course.subject.localizedShortName(language: language).uppercased())
+            Text(course.subject.localizedShortName(language: language).uppercasedInApp())
                 .font(DS.sans(.caption2, .bold))
                 .tracking(1.0)
         }

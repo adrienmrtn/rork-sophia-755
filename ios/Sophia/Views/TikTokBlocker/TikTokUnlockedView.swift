@@ -51,7 +51,7 @@ struct TikTokUnlockedView: View {
 
                 if let until = blocker.unlockedUntil {
                     VStack(spacing: 4) {
-                        Text(languageManager.text("tiktokBlocker.unlocked.timer").uppercased())
+                        Text(languageManager.text("tiktokBlocker.unlocked.timer").uppercasedInApp())
                             .font(DS.sans(.caption2, .semibold))
                             .tracking(1.2)
                             .foregroundStyle(DS.inkTertiary)

@@ -349,7 +349,7 @@ struct QuizView: View {
             HStack(spacing: 6) {
                 Image(systemName: course.subject.icon)
                     .font(.jakarta(size: 11, weight: .medium))
-                Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
+                Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
                     .font(DS.sans(.caption2, .semibold))
                     .tracking(0.8)
             }
@@ -580,7 +580,7 @@ struct QuizView: View {
 
             if !chronoPool.isEmpty {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text(languageManager.text("quiz.chronological.remaining").uppercased())
+                    Text(languageManager.text("quiz.chronological.remaining").uppercasedInApp())
                         .font(DS.sans(.caption2, .semibold))
                         .foregroundStyle(DS.inkTertiary)
                         .tracking(1.0)
@@ -862,7 +862,7 @@ struct QuizView: View {
 
     private func sliderResultPill(label: String, value: String, tint: Color) -> some View {
         VStack(spacing: 4) {
-            Text(label.uppercased())
+            Text(label.uppercasedInApp())
                 .font(DS.sans(.caption2, .semibold))
                 .foregroundStyle(DS.inkTertiary)
                 .tracking(0.5)
@@ -1399,7 +1399,7 @@ struct QuizView: View {
                 HStack(spacing: 6) {
                     Image(systemName: course.subject.icon)
                         .font(.jakarta(size: 12, weight: .medium))
-                    Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
+                    Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
                         .font(DS.sans(.caption, .semibold))
                         .tracking(0.8)
                 }

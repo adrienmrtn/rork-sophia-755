@@ -537,7 +537,7 @@ private struct HeroBlockView: View {
 
             VStack(alignment: .leading, spacing: 10) {
                 if let subtitle, !subtitle.isEmpty {
-                    Text(subtitle.uppercased())
+                    Text(subtitle.uppercasedInApp())
                         .font(DS.sans(.caption, .semibold))
                         .foregroundStyle(DS.accentSoft)
                         .tracking(1.2)
@@ -772,7 +772,7 @@ struct QuoteBlockView: View {
                 .foregroundStyle(DS.ink)
                 .fixedSize(horizontal: false, vertical: true)
             if let attribution, !attribution.isEmpty {
-                Text(attribution.uppercased())
+                Text(attribution.uppercasedInApp())
                     .font(DS.sans(.caption, .semibold))
                     .foregroundStyle(DS.inkTertiary)
                     .tracking(1.0)
@@ -924,7 +924,7 @@ private struct CalloutCard<Content: View>: View {
                         .font(.jakarta(size: 12, weight: .semibold))
                         .foregroundStyle(DS.accentSoft)
                 }
-                Text(badgeText.uppercased())
+                Text(badgeText.uppercasedInApp())
                     .font(DS.sans(.caption2, .semibold))
                     .foregroundStyle(DS.accentSoft)
                     .tracking(1.2)

@@ -455,7 +455,7 @@ class StoreViewModel {
     private func formatCurrency(_ amount: Decimal, currencyCode: String?, language: AppLanguage) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
-        formatter.locale = Locale(identifier: language.localeIdentifier)
+        formatter.locale = language.foundationLocale
         if let currencyCode { formatter.currencyCode = currencyCode }
         return formatter.string(from: amount as NSDecimalNumber) ?? "\(amount)"
     }

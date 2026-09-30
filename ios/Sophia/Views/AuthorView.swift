@@ -162,7 +162,7 @@ private struct AuthorCourseRow: View {
                 .clipShape(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous))
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
+                    Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
                         .font(DS.sans(.caption2, .semibold))
                         .foregroundStyle(DS.accentSoft)
                         .tracking(1.0)

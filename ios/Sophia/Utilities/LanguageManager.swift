@@ -11,7 +11,7 @@ final class LanguageManager {
     }
 
     var locale: Locale {
-        Locale(identifier: current.localeIdentifier)
+        current.foundationLocale
     }
 
     /// Writing direction of the chosen language. `\.locale` does not imply it:
