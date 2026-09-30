@@ -197,6 +197,12 @@ final class CourseAudioDownloads {
     private static func scanDisk() -> Set<AudioTrackKey> {
         var found: Set<AudioTrackKey> = []
         let fm = FileManager.default
+        // Folders of a language no longer narrated (es, de, tr): unreachable from the app,
+        // so the settings screen could never free that space.
+        let kept = Set(AudioLanguage.allCases.map(\.rawValue))
+        for name in (try? fm.contentsOfDirectory(atPath: CourseAudioStorage.directory.path)) ?? [] where !kept.contains(name) {
+            try? fm.removeItem(at: CourseAudioStorage.directory.appendingPathComponent(name, isDirectory: true))
+        }
         for language in AudioLanguage.allCases {
             let folder = CourseAudioStorage.directory.appendingPathComponent(language.rawValue, isDirectory: true)
             guard let names = try? fm.contentsOfDirectory(atPath: folder.path) else { continue }

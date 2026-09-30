@@ -135,7 +135,9 @@ object CourseAudioPlayer {
         val saved = runCatching {
             json.decodeFromString<SavedAudioSession>(prefs.getString(SESSION_KEY, null) ?: "{}")
         }.getOrNull()
-        items = saved?.items.orEmpty().toMutableList()
+        // An item saved in a language no longer narrated (es, de, tr) is dropped, not
+        // replayed in French: that course may have no French narration.
+        items = saved?.items.orEmpty().filter { AudioLanguage.fromCode(it.languageCode) != null }.toMutableList()
         val first = items.firstOrNull()
         _state.value = UiState(
             current = first,

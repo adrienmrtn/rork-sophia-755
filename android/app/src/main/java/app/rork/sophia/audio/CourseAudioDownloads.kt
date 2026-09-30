@@ -49,6 +49,10 @@ object CourseAudioDownloads {
         if (root != null) return
         val dir = File(context.filesDir, "course_audio")
         root = dir
+        // Folders of a language no longer narrated (es, de, tr): unreachable from the app,
+        // so the settings screen could never free that space.
+        val kept = AudioLanguage.entries.map { it.code }.toSet()
+        dir.listFiles()?.filter { it.name !in kept }?.forEach { it.deleteRecursively() }
         _downloaded.value = AudioLanguage.entries.flatMap { language ->
             File(dir, language.code).listFiles { f -> f.name.endsWith(".mp3") }
                 ?.map { AudioTrackKey(it.name.removeSuffix(".mp3"), language) }

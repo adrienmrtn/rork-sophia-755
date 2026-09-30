@@ -1,7 +1,11 @@
 # Mode audio (iOS et Android)
 
-Chaque cours peut être écouté comme un podcast, en 5 langues (FR, EN, ES, DE, TR). Réservé aux
-Premium. Mêmes fonctions, mêmes fichiers Supabase et mêmes textes sur iOS et Android.
+Chaque cours peut être écouté comme un podcast, en 2 langues : **français et anglais**. Réservé
+aux Premium. Mêmes fonctions, mêmes fichiers Supabase et mêmes textes sur iOS et Android.
+
+L'espagnol, l'allemand et le turc ont été retirés le 30/09/2026 : l'app ne les connaît plus, une
+file d'attente ou un téléchargement resté dans l'une de ces langues est ignoré ou effacé au
+lancement, et `--purge-other-languages` vide les dossiers `es/`, `de/`, `tr/` du bucket.
 
 ## Ce que voit l'utilisateur
 
@@ -24,7 +28,7 @@ Premium. Mêmes fonctions, mêmes fichiers Supabase et mêmes textes sur iOS et 
   vitesse). Un appel met en pause, la fin de l'appel relance.
 - **File d'attente** : manuelle, réordonnable, conservée entre deux lancements. À la fin d'un
   audio, le suivant démarre ; file vide = le lecteur se ferme.
-- **Langue** : celle de l'app si elle fait partie des 5, sinon l'anglais. Le dernier choix fait
+- **Langue** : le français si l'app est en français, sinon l'anglais. Le dernier choix fait
   dans le lecteur est mémorisé. Chaque langue a sa propre position de reprise.
 - **Progression** : écouter 90 % d'un audio termine le cours (mêmes XP matière et globaux, série,
   bloqueur TikTok, XP de collection), sans les écrans de célébration.
@@ -35,30 +39,62 @@ Premium. Mêmes fonctions, mêmes fichiers Supabase et mêmes textes sur iOS et 
 
 ## Ajouter les vrais MP3
 
-Un MP3 par cours et par langue, nommé d'après l'id du cours :
+Un MP3 par cours et par langue, nommé d'après l'id du cours, avec ou sans le suffixe de langue :
+`course_243_pourquoi_a_t_on_invente_les_vampires_fr.mp3` convient tel quel. Les ids sont les
+mêmes en français et en anglais (`course_243_…_en.mp3` pour l'anglais).
 
-```sh
-export SUPABASE_SERVICE_ROLE_KEY=…   # Project Settings → API → service_role
-python3 scripts/upload_course_audio_to_supabase.py dossier_fr/ --language fr --dry-run
-python3 scripts/upload_course_audio_to_supabase.py dossier_fr/ --language fr
-```
+Le bucket `course-audio` est public en lecture (migration
+`supabase/migrations/20260912120000_course_audio_public_bucket.sql`) ; le script le crée s'il
+manque. Un fichier y vit à `course-audio/<fr|en>/<course_id>.mp3`, et `manifest.json` (à la
+racine du bucket) dit à l'app quels cours ont un audio.
 
-Le script vérifie les ids contre `content/courses/<langue>/`, uploade dans
-`course-audio/<langue>/<course_id>.mp3` (en écrasant l'existant) puis réécrit `manifest.json`
-depuis le contenu réel du bucket. L'app lit ce manifest au lancement et au retour au premier
-plan : un nouvel audio apparaît sans mise à jour de l'app (quelques minutes de cache au plus).
+**Ne pas glisser les MP3 dans le tableau de bord Supabase** : ils garderaient leur suffixe `_fr`
+(l'app cherche `fr/<course_id>.mp3` et tomberait sur un 404) et `manifest.json` ne serait pas mis
+à jour (l'app ne les afficherait pas). Toujours passer par le script.
 
-**Faux audios en place (à écraser)** : voix de synthèse qui lit l'intro du cours.
+### Pas à pas (sur le Mac)
 
-| Cours | Langues |
-| --- | --- |
-| `course_67_qu_est_ce_qu_un_trou_noir` | FR, EN, ES, DE, TR |
-| `course_150_la_nuit_etoilee_van_gogh` | FR, EN, ES |
-| `course_12_la_strategie_de_napoleon_a_ulm_1805` | FR |
+1. **Le code sur le Mac** : `git clone https://github.com/adrienmrtn/rork-sophia-755.git`
+   (ou GitHub › Code › Download ZIP), puis ouvrir le Terminal dans ce dossier :
+   `cd ~/chemin/vers/rork-sophia-755`. Le script vérifie les noms contre `content/courses/`.
+2. **Deux dossiers** : un avec les MP3 français (`…_fr.mp3`), un avec les anglais (`…_en.mp3`).
+3. **La clé secrète** : supabase.com › projet `afnmcoovdvbtkgohtdij` › Project Settings ›
+   API Keys › *Secret keys* (`sb_secret_…`), ou onglet *Legacy API Keys* › `service_role`.
+   Elle donne tous les droits sur le projet : ne jamais la mettre dans le code ni la partager.
+   ```sh
+   export SUPABASE_SERVICE_ROLE_KEY='sb_secret_…'
+   ```
+4. **Une seule fois, le ménage** : supprime `es/`, `de/`, `tr/` du bucket et réécrit le manifest.
+   ```sh
+   python3 scripts/upload_course_audio_to_supabase.py --purge-other-languages
+   ```
+5. **Vérifier sans rien envoyer** (glisser le dossier depuis le Finder dans le Terminal colle son
+   chemin) : liste chaque cours reconnu et la taille totale, s'arrête sur un nom inconnu.
+   ```sh
+   python3 scripts/upload_course_audio_to_supabase.py ~/Desktop/fr --language fr --dry-run
+   ```
+6. **Envoyer** :
+   ```sh
+   python3 scripts/upload_course_audio_to_supabase.py ~/Desktop/fr --language fr
+   python3 scripts/upload_course_audio_to_supabase.py ~/Desktop/en --language en
+   ```
+   Si ça coupe (Wi-Fi, veille), relancer la même commande : un fichier déjà dans le bucket avec
+   la même taille est sauté. `--force` renvoie tout.
+7. **Contrôler** : la dernière ligne (`sample: https://…mp3`) s'ouvre dans un navigateur et joue.
+   Dans l'app, l'audio apparaît en 5 à 10 minutes, sans mise à jour (le manifest est relu au
+   lancement et au retour au premier plan).
 
-Les 5 MP3 FR déjà présents depuis le 12/09 (cours 1 à 5) sont de vrais audios et n'ont pas été
-touchés. Un audio déjà téléchargé sur un téléphone reste l'ancienne version jusqu'à ce qu'il
-soit supprimé et retéléchargé.
+Un audio corrigé se renvoie de la même façon (il écrase l'ancien). Un audio déjà téléchargé sur un
+téléphone reste l'ancienne version jusqu'à ce qu'il soit supprimé et retéléchargé.
+
+**Quota** : le plan Free de Supabase s'arrête à 1 Go de fichiers et 5 Go de trafic par mois ; le
+plan Pro inclut 100 Go de fichiers et 250 Go de trafic. Le `--dry-run` affiche la taille totale
+d'une langue : au-delà de 1 Go pour les deux langues, passer en Pro avant l'envoi.
+
+**Faux audios encore en place (écrasés par les vrais)** : voix de synthèse qui lit l'intro de
+`course_67_qu_est_ce_qu_un_trou_noir` (FR, EN), `course_150_la_nuit_etoilee_van_gogh` (FR, EN) et
+`course_12_la_strategie_de_napoleon_a_ulm_1805` (FR). Les 5 MP3 FR des cours 1 à 5 (12/09) sont
+de vrais audios.
 
 ## RevenueCat
 
@@ -83,7 +119,7 @@ Pas de suivi d'usage : Mixpanel a été retiré de l'app le 29/09/2026.
 
 1. Premium : ouvrir « Qu'est-ce qu'un trou noir ? », casque → le lecteur s'ouvre et joue.
 2. Verrouiller l'écran : l'audio continue, la couverture et les commandes sont là.
-3. Changer la vitesse (curseur et depuis l'écran verrouillé), changer de langue (TR, DE…).
+3. Changer la vitesse (curseur et depuis l'écran verrouillé), passer de FR à EN.
 4. Appui long sur une carte de la bibliothèque → « Ajouter à la file » ; réordonner la file ;
    laisser finir l'audio → le suivant démarre, le cours passe en « Terminé ».
 5. Télécharger, passer en mode avion, relancer l'app, rejouer.

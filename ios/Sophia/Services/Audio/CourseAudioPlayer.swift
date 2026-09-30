@@ -23,6 +23,31 @@ nonisolated struct AudioQueueItem: Codable, Hashable, Identifiable, Sendable {
 nonisolated private struct SavedAudioSession: Codable {
     var current: AudioQueueItem?
     var queue: [AudioQueueItem]
+
+    init(current: AudioQueueItem?, queue: [AudioQueueItem]) {
+        self.current = current
+        self.queue = queue
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case current, queue
+    }
+
+    /// Item by item: one saved in a language the app no longer narrates (Spanish, German,
+    /// Turkish) is dropped alone instead of losing the whole queue with it.
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        current = try? c.decodeIfPresent(AudioQueueItem.self, forKey: .current)
+        queue = ((try? c.decodeIfPresent([LenientItem].self, forKey: .queue)) ?? []).compactMap(\.item)
+    }
+
+    nonisolated private struct LenientItem: Decodable {
+        let item: AudioQueueItem?
+
+        init(from decoder: Decoder) throws {
+            item = try? AudioQueueItem(from: decoder)
+        }
+    }
 }
 
 /// The app's one audio player: course narrations, played like a podcast.
