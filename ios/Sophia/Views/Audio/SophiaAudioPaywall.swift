@@ -2,7 +2,7 @@ import SwiftUI
 import RevenueCat
 
 /// Native paywall for the `audio` context: a free user tapped "Écouter", "Ajouter à la
-/// file" or "Télécharger". It sells listening itself — lock screen, five languages, speed,
+/// file" or "Télécharger". It sells listening itself — lock screen, French and English, speed,
 /// offline — over the cover of the course they wanted to hear.
 ///
 /// Like every context paywall, it sells the annual plan of the offering RevenueCat

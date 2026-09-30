@@ -151,8 +151,8 @@ skipped, never created with release notes and no description. And it refuses to
 run unless the version being prepared is the one named, so one release's notes
 cannot land on the next.
 
-The 1.1.7 notes mention audio mode only in French, English, Spanish, German and
-Turkish (and their regional copies), the five languages it is recorded in.
+The 1.1.7 notes mention audio mode only in French and English (and their
+regional copies), the two languages it is recorded in.
 
 ## Or from a terminal
 

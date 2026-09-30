@@ -4,8 +4,9 @@
 Requires a secret key (service_role), not the publishable/anon key:
 
   export SUPABASE_URL=https://afnmcoovdvbtkgohtdij.supabase.co
-  export SUPABASE_SERVICE_ROLE_KEY=eyJ...   # Project Settings → API → service_role
+  export SUPABASE_SERVICE_ROLE_KEY=eyJ...   # Project Settings → API Keys → secret / service_role
   python3 scripts/upload_course_audio_to_supabase.py audio_fr/ --language fr
+  python3 scripts/upload_course_audio_to_supabase.py audio_en/ --language en
 
 Expects one MP3 per course, named after the course id, with or without a
 trailing language suffix:
@@ -17,6 +18,11 @@ Objects land at `<language>/<course_id>.mp3`, which is the path
 `CourseAudioCatalog.swift` builds on the client. Course ids are checked against
 content/courses/<language>/ and a mismatch stops the run: a typo here surfaces
 in the app as a silent 404 on a course that looks perfectly normal.
+
+Narrations exist in French and English only. A narration already in the bucket
+with the same size is skipped, so an interrupted run is resumed by running the
+same command again (`--force` re-uploads everything).
+`--purge-other-languages` deletes what an earlier setup left under es/, de/, tr/.
 """
 
 from __future__ import annotations
@@ -34,6 +40,8 @@ ROOT = Path(__file__).resolve().parents[1]
 BUCKET = "course-audio"
 DEFAULT_URL = "https://afnmcoovdvbtkgohtdij.supabase.co"
 MAX_BYTES = 50 * 1024 * 1024
+# The app's `AudioLanguage` (iOS and Android). The manifest lists these and nothing else.
+LANGUAGES = ("fr", "en")
 
 
 def env_key() -> str:
@@ -77,6 +85,10 @@ def request(
             return resp.status, resp.read()
     except urllib.error.HTTPError as exc:
         return exc.code, exc.read()
+    except OSError as exc:
+        # Wi-Fi drop, timeout, reset: reported like an HTTP failure (code 0) so one file
+        # does not end a run of three hundred.
+        return 0, str(exc).encode()
 
 
 def ensure_bucket(base: str, key: str) -> None:
@@ -125,37 +137,56 @@ def upload_one(base: str, key: str, path: Path, language: str) -> int:
     return request("POST", url, key, path.read_bytes(), "audio/mpeg")[0]
 
 
-def list_language(base: str, key: str, language: str) -> list[str]:
-    """Course ids that actually have an object under `<language>/`."""
-    payload = json.dumps({
-        "prefix": f"{language}/",
-        "limit": 1000,
-        "sortBy": {"column": "name", "order": "asc"},
-    }).encode()
-    code, body = request("POST", f"{base}/storage/v1/object/list/{BUCKET}", key, payload, "application/json")
-    if code != 200:
-        sys.exit(f"could not list `{language}/`: HTTP {code} {body.decode(errors='replace')}")
-    return sorted(
-        entry["name"][:-4]
-        for entry in json.loads(body)
-        if entry.get("name", "").endswith(".mp3")
-    )
+def list_folder(base: str, key: str, prefix: str) -> list[dict]:
+    """Every entry directly under `prefix`, page by page."""
+    entries: list[dict] = []
+    while True:
+        payload = json.dumps({
+            "prefix": prefix,
+            "limit": 1000,
+            "offset": len(entries),
+            "sortBy": {"column": "name", "order": "asc"},
+        }).encode()
+        code, body = request("POST", f"{base}/storage/v1/object/list/{BUCKET}", key, payload, "application/json")
+        if code != 200:
+            sys.exit(f"could not list `{prefix or '/'}`: HTTP {code} {body.decode(errors='replace')}")
+        page = json.loads(body)
+        entries.extend(page)
+        if len(page) < 1000:
+            return entries
 
 
-def bucket_languages(base: str, key: str) -> set[str]:
-    """Language folders already present at the bucket root.
-
-    Supabase reports a folder as an entry whose `id` is null.
-    """
-    payload = json.dumps({"prefix": "", "limit": 1000}).encode()
-    code, body = request("POST", f"{base}/storage/v1/object/list/{BUCKET}", key, payload, "application/json")
-    if code != 200:
-        return set()
+def list_language(base: str, key: str, language: str) -> dict[str, int]:
+    """Size in bytes of each narration under `<language>/`, by course id."""
     return {
-        entry["name"]
-        for entry in json.loads(body)
-        if entry.get("id") is None and not entry.get("name", "").endswith(".json")
+        entry["name"][:-4]: int((entry.get("metadata") or {}).get("size") or 0)
+        for entry in list_folder(base, key, f"{language}/")
+        if entry.get("name", "").endswith(".mp3")
     }
+
+
+def purge_other_languages(base: str, key: str) -> None:
+    """Delete every folder at the bucket root that is not a narrated language.
+
+    Supabase reports a folder as an entry whose `id` is null. Objects go in
+    batches: one request per object would take minutes on a full language.
+    """
+    folders = sorted(
+        entry["name"]
+        for entry in list_folder(base, key, "")
+        if entry.get("id") is None and entry["name"] not in LANGUAGES
+    )
+    if not folders:
+        print("purge: no other language in the bucket")
+        return
+    for folder in folders:
+        paths = [f"{folder}/{entry['name']}" for entry in list_folder(base, key, f"{folder}/") if entry.get("id")]
+        for start in range(0, len(paths), 100):
+            batch = json.dumps({"prefixes": paths[start:start + 100]}).encode()
+            code, body = request("DELETE", f"{base}/storage/v1/object/{BUCKET}", key, batch, "application/json")
+            if code != 200:
+                sys.exit(f"could not delete in `{folder}/`: HTTP {code} {body.decode(errors='replace')}")
+        print(f"purge: {folder}/ → {len(paths)} file(s) deleted")
 
 
 def write_manifest(base: str, key: str, languages: list[str]) -> None:
@@ -166,7 +197,7 @@ def write_manifest(base: str, key: str, languages: list[str]) -> None:
     rather than from the files just uploaded, so a half-finished earlier run
     cannot leave the manifest claiming audio that is not there.
     """
-    manifest = {lang: list_language(base, key, lang) for lang in languages}
+    manifest = {lang: sorted(list_language(base, key, lang)) for lang in languages}
     body = json.dumps(manifest, ensure_ascii=False, indent=2).encode()
     url = f"{base}/storage/v1/object/{BUCKET}/manifest.json?upsert=true"
     # Short CDN lifetime: the default hour kept serving the previous manifest, so a new
@@ -180,17 +211,43 @@ def write_manifest(base: str, key: str, languages: list[str]) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("folder", help="directory holding <course_id>.mp3 files")
-    ap.add_argument("--language", default="fr", help="language code (default: fr)")
+    ap.add_argument("folder", nargs="?", help="directory holding <course_id>.mp3 files")
+    ap.add_argument("--language", default="fr", choices=LANGUAGES, help="language code (default: fr)")
     ap.add_argument("--dry-run", action="store_true", help="validate names and sizes, upload nothing")
+    ap.add_argument("--force", action="store_true",
+                    help="re-upload narrations already in the bucket with the same size")
     ap.add_argument("--manifest-only", action="store_true",
                     help="rewrite manifest.json from the bucket, re-upload nothing")
+    ap.add_argument("--purge-other-languages", action="store_true",
+                    help="delete every folder but fr/ and en/ from the bucket, then rewrite the manifest")
     args = ap.parse_args()
 
-    folder = Path(args.folder)
-    files = sorted(folder.glob("*.mp3"))
+    if args.manifest_only or args.purge_other_languages:
+        base = os.environ.get("SUPABASE_URL", DEFAULT_URL).rstrip("/")
+        key = env_key()
+        ensure_bucket(base, key)
+        if args.purge_other_languages:
+            purge_other_languages(base, key)
+        write_manifest(base, key, list(LANGUAGES))
+        return 0
+
+    if not args.folder:
+        ap.error("folder is required (the directory holding the MP3s)")
+    folder = Path(args.folder).expanduser()
+    # Case-insensitive: some exports write `.MP3`, and the glob would silently skip them.
+    files = sorted(p for p in folder.glob("*") if p.is_file() and p.suffix.lower() == ".mp3")
     if not files:
         sys.exit(f"no MP3s in {folder}")
+
+    by_course: dict[str, list[str]] = {}
+    for p in files:
+        by_course.setdefault(course_id_for(p, args.language), []).append(p.name)
+    duplicates = {cid: names for cid, names in by_course.items() if len(names) > 1}
+    if duplicates:
+        print("several files for the same course (only one would survive):")
+        for names in duplicates.values():
+            print(f"  {', '.join(names)}")
+        return 1
 
     known = known_course_ids(args.language)
     unknown = [p.name for p in files if course_id_for(p, args.language) not in known]
@@ -219,28 +276,33 @@ def main() -> int:
     key = env_key()
     ensure_bucket(base, key)
 
-    if args.manifest_only:
-        write_manifest(base, key, sorted(bucket_languages(base, key) | {args.language}))
-        return 0
-
+    # Same size as what is already there: the same narration, from a previous run that was
+    # interrupted. Skipping it makes a rerun of the same command pick up where it stopped.
+    existing = {} if args.force else list_language(base, key, args.language)
     ok = 0
+    skipped = 0
     failed: list[str] = []
     for i, path in enumerate(files, 1):
-        code = upload_one(base, key, path, args.language)
-        if code in (200, 201):
-            ok += 1
+        size = path.stat().st_size
+        if existing.get(course_id_for(path, args.language)) == size:
+            skipped += 1
         else:
-            failed.append(f"{path.name} HTTP {code}")
-        print(f"  {i}/{len(files)} ({ok} ok)")
+            code = upload_one(base, key, path, args.language)
+            if code in (200, 201):
+                ok += 1
+            else:
+                failed.append(f"{path.name} HTTP {code}")
+        print(f"  {i}/{len(files)} ({ok} uploaded, {skipped} already there)")
 
     if failed:
         print("failures:")
         for line in failed:
             print(f"  {line}")
         print("manifest not rewritten: it would advertise audio that failed to upload")
+        print("run the same command again: what already went up is skipped")
         return 1
 
-    write_manifest(base, key, sorted(bucket_languages(base, key) | {args.language}))
+    write_manifest(base, key, list(LANGUAGES))
     print("errors: none")
     print(f"sample: {base}/storage/v1/object/public/{BUCKET}/{args.language}/{course_id_for(files[0], args.language)}.mp3")
     return 0

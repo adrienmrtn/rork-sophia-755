@@ -116,7 +116,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Écoute tes cours, partout",
         "paywall.audio.subtitle": "Chaque cours en version audio : pour apprendre en marchant, en voiture ou avant de dormir.",
         "paywall.audio.feature1": "Écoute écran verrouillé, comme un podcast",
-        "paywall.audio.feature2": "5 langues : français, anglais, espagnol, allemand, turc",
+        "paywall.audio.feature2": "2 langues : français et anglais",
         "paywall.audio.feature3": "Vitesse réglable de 0,5× à 2×",
         "paywall.audio.feature4": "Téléchargement pour écouter hors ligne",
         // MARK: Parcours (learning path tab)
@@ -1150,7 +1150,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Listen to your courses, anywhere",
         "paywall.audio.subtitle": "Every course as audio: learn while walking, driving or winding down for bed.",
         "paywall.audio.feature1": "Listen with the screen locked, like a podcast",
-        "paywall.audio.feature2": "5 languages: French, English, Spanish, German, Turkish",
+        "paywall.audio.feature2": "2 languages: French and English",
         "paywall.audio.feature3": "Adjustable speed from 0.5× to 2×",
         "paywall.audio.feature4": "Download to listen offline",
         // MARK: Parcours (learning path tab)
@@ -2184,7 +2184,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Escucha tus cursos, donde sea",
         "paywall.audio.subtitle": "Cada curso en audio: para aprender caminando, conduciendo o antes de dormir.",
         "paywall.audio.feature1": "Escucha con la pantalla bloqueada, como un pódcast",
-        "paywall.audio.feature2": "5 idiomas: francés, inglés, español, alemán, turco",
+        "paywall.audio.feature2": "2 idiomas: francés e inglés",
         "paywall.audio.feature3": "Velocidad ajustable de 0,5× a 2×",
         "paywall.audio.feature4": "Descarga para escuchar sin conexión",
         // MARK: Parcours (learning path tab)
@@ -3219,7 +3219,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Hör deine Kurse, überall",
         "paywall.audio.subtitle": "Jeder Kurs als Audio: zum Lernen beim Gehen, im Auto oder vor dem Einschlafen.",
         "paywall.audio.feature1": "Hören bei gesperrtem Bildschirm, wie ein Podcast",
-        "paywall.audio.feature2": "5 Sprachen: Französisch, Englisch, Spanisch, Deutsch, Türkisch",
+        "paywall.audio.feature2": "2 Sprachen: Französisch und Englisch",
         "paywall.audio.feature3": "Einstellbares Tempo von 0,5× bis 2×",
         "paywall.audio.feature4": "Herunterladen und offline hören",
         // MARK: Parcours (learning path tab)
@@ -4254,7 +4254,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Ouve os teus cursos, em qualquer lado",
         "paywall.audio.subtitle": "Cada curso em áudio: para aprender a caminhar, a conduzir ou antes de dormir.",
         "paywall.audio.feature1": "Ouve com o ecrã bloqueado, como um podcast",
-        "paywall.audio.feature2": "5 idiomas: francês, inglês, espanhol, alemão, turco",
+        "paywall.audio.feature2": "2 idiomas: francês e inglês",
         "paywall.audio.feature3": "Velocidade ajustável de 0,5× a 2×",
         "paywall.audio.feature4": "Transferência para ouvir offline",
         // MARK: Parcours (learning path tab)
@@ -5289,7 +5289,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Ascolta i tuoi corsi, ovunque",
         "paywall.audio.subtitle": "Ogni corso in versione audio: per imparare camminando, guidando o prima di dormire.",
         "paywall.audio.feature1": "Ascolto a schermo bloccato, come un podcast",
-        "paywall.audio.feature2": "5 lingue: francese, inglese, spagnolo, tedesco, turco",
+        "paywall.audio.feature2": "2 lingue: francese e inglese",
         "paywall.audio.feature3": "Velocità regolabile da 0,5× a 2×",
         "paywall.audio.feature4": "Download per ascoltare offline",
         // MARK: Parcours (learning path tab)
@@ -6324,7 +6324,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Kurslarını her yerde dinle",
         "paywall.audio.subtitle": "Her kurs sesli: yürürken, araba kullanırken ya da uyumadan önce öğrenmek için.",
         "paywall.audio.feature1": "Ekran kilitliyken dinle, tıpkı bir podcast gibi",
-        "paywall.audio.feature2": "5 dil: Fransızca, İngilizce, İspanyolca, Almanca, Türkçe",
+        "paywall.audio.feature2": "2 dil: Fransızca ve İngilizce",
         "paywall.audio.feature3": "0,5× ile 2× arasında ayarlanabilir hız",
         "paywall.audio.feature4": "Çevrimdışı dinlemek için indir",
         // MARK: Parcours (learning path tab)
@@ -7351,7 +7351,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Słuchaj kursów, gdziekolwiek jesteś",
         "paywall.audio.subtitle": "Każdy kurs w wersji audio: ucz się na spacerze, w samochodzie lub przed snem.",
         "paywall.audio.feature1": "Słuchanie przy zablokowanym ekranie, jak podcast",
-        "paywall.audio.feature2": "5 języków: francuski, angielski, hiszpański, niemiecki, turecki",
+        "paywall.audio.feature2": "2 języki: francuski i angielski",
         "paywall.audio.feature3": "Regulowana prędkość od 0,5× do 2×",
         "paywall.audio.feature4": "Pobieranie do słuchania offline",
         // MARK: Parcours (learning path tab)
@@ -8378,7 +8378,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Ascultă-ți cursurile oriunde",
         "paywall.audio.subtitle": "Fiecare curs în format audio: ca să înveți mergând pe jos, la volan sau înainte de culcare.",
         "paywall.audio.feature1": "Ascultare cu ecranul blocat, ca un podcast",
-        "paywall.audio.feature2": "5 limbi: franceză, engleză, spaniolă, germană, turcă",
+        "paywall.audio.feature2": "2 limbi: franceză și engleză",
         "paywall.audio.feature3": "Viteză reglabilă de la 0,5× la 2×",
         "paywall.audio.feature4": "Descărcare pentru ascultare offline",
         // MARK: Parcours (learning path tab)
@@ -9405,7 +9405,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Luister je cursussen, overal",
         "paywall.audio.subtitle": "Elke cursus als audio: leer tijdens het wandelen, in de auto of voor het slapengaan.",
         "paywall.audio.feature1": "Luisteren met vergrendeld scherm, zoals een podcast",
-        "paywall.audio.feature2": "5 talen: Frans, Engels, Spaans, Duits, Turks",
+        "paywall.audio.feature2": "2 talen: Frans en Engels",
         "paywall.audio.feature3": "Instelbare snelheid van 0,5× tot 2×",
         "paywall.audio.feature4": "Downloaden om offline te luisteren",
         // MARK: Parcours (learning path tab)
@@ -10432,7 +10432,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Άκου τα μαθήματά σου, παντού",
         "paywall.audio.subtitle": "Κάθε μάθημα σε ήχο: για να μαθαίνεις περπατώντας, οδηγώντας ή πριν κοιμηθείς.",
         "paywall.audio.feature1": "Ακρόαση με κλειδωμένη οθόνη, σαν podcast",
-        "paywall.audio.feature2": "5 γλώσσες: γαλλικά, αγγλικά, ισπανικά, γερμανικά, τουρκικά",
+        "paywall.audio.feature2": "2 γλώσσες: γαλλικά και αγγλικά",
         "paywall.audio.feature3": "Ρυθμιζόμενη ταχύτητα από 0,5× έως 2×",
         "paywall.audio.feature4": "Λήψη για ακρόαση εκτός σύνδεσης",
         // MARK: Parcours (learning path tab)
@@ -11459,7 +11459,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Lyssna på dina kurser, var som helst",
         "paywall.audio.subtitle": "Varje kurs som ljud: lär dig när du promenerar, kör bil eller varvar ned inför natten.",
         "paywall.audio.feature1": "Lyssna med låst skärm, som en podd",
-        "paywall.audio.feature2": "5 språk: franska, engelska, spanska, tyska, turkiska",
+        "paywall.audio.feature2": "2 språk: franska och engelska",
         "paywall.audio.feature3": "Justerbar hastighet från 0,5× till 2×",
         "paywall.audio.feature4": "Ladda ned och lyssna offline",
         // MARK: Parcours (learning path tab)
@@ -12486,7 +12486,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Hallgasd a kurzusaidat bárhol",
         "paywall.audio.subtitle": "Minden kurzus hangos változatban: tanulj séta, vezetés közben vagy lefekvés előtt.",
         "paywall.audio.feature1": "Hallgatás lezárt képernyővel, mint egy podcast",
-        "paywall.audio.feature2": "5 nyelv: francia, angol, spanyol, német, török",
+        "paywall.audio.feature2": "2 nyelv: francia és angol",
         "paywall.audio.feature3": "Állítható sebesség 0,5×-tól 2×-ig",
         "paywall.audio.feature4": "Letöltés offline hallgatáshoz",
         // MARK: Parcours (learning path tab)
@@ -13513,7 +13513,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Слушай курсовете си навсякъде",
         "paywall.audio.subtitle": "Всеки курс в аудио формат: учи, докато вървиш, шофираш или преди сън.",
         "paywall.audio.feature1": "Слушане при заключен екран, като подкаст",
-        "paywall.audio.feature2": "5 езика: френски, английски, испански, немски, турски",
+        "paywall.audio.feature2": "2 езика: френски и английски",
         "paywall.audio.feature3": "Регулируема скорост от 0,5× до 2×",
         "paywall.audio.feature4": "Изтегляне за слушане офлайн",
         // MARK: Parcours (learning path tab)
@@ -14540,7 +14540,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Poslouchej kurzy kdekoli",
         "paywall.audio.subtitle": "Každý kurz v audio podobě: uč se při chůzi, v autě nebo před spaním.",
         "paywall.audio.feature1": "Poslech při zamčené obrazovce, jako podcast",
-        "paywall.audio.feature2": "5 jazyků: francouzština, angličtina, španělština, němčina, turečtina",
+        "paywall.audio.feature2": "2 jazyky: francouzština a angličtina",
         "paywall.audio.feature3": "Nastavitelná rychlost od 0,5× do 2×",
         "paywall.audio.feature4": "Stažení pro poslech offline",
         // MARK: Parcours (learning path tab)
@@ -15568,7 +15568,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Lyt til dine kurser, hvor som helst",
         "paywall.audio.subtitle": "Hvert kursus som lyd: lær, mens du går, kører eller slapper af før sengetid.",
         "paywall.audio.feature1": "Lyt med låst skærm, som en podcast",
-        "paywall.audio.feature2": "5 sprog: fransk, engelsk, spansk, tysk, tyrkisk",
+        "paywall.audio.feature2": "2 sprog: fransk og engelsk",
         "paywall.audio.feature3": "Justerbar hastighed fra 0,5× til 2×",
         "paywall.audio.feature4": "Download og lyt offline",
         // MARK: Parcours (learning path tab)
@@ -16596,7 +16596,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Lytt til kursene dine, hvor som helst",
         "paywall.audio.subtitle": "Hvert kurs som lyd: lær mens du går, kjører eller før du legger deg.",
         "paywall.audio.feature1": "Lytt med låst skjerm, som en podkast",
-        "paywall.audio.feature2": "5 språk: fransk, engelsk, spansk, tysk, tyrkisk",
+        "paywall.audio.feature2": "2 språk: fransk og engelsk",
         "paywall.audio.feature3": "Justerbar hastighet fra 0,5× til 2×",
         "paywall.audio.feature4": "Last ned og lytt uten nett",
         // MARK: Parcours (learning path tab)
@@ -17624,7 +17624,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Слушай курсы где угодно",
         "paywall.audio.subtitle": "Каждый курс в аудиоформате: учись на прогулке, за рулём или перед сном.",
         "paywall.audio.feature1": "Прослушивание с заблокированным экраном, как подкаст",
-        "paywall.audio.feature2": "5 языков: французский, английский, испанский, немецкий, турецкий",
+        "paywall.audio.feature2": "2 языка: французский и английский",
         "paywall.audio.feature3": "Скорость от 0,5× до 2×",
         "paywall.audio.feature4": "Скачивание для прослушивания офлайн",
         // MARK: Parcours (learning path tab)
@@ -18652,7 +18652,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Slušaj tečajeve bilo gdje",
         "paywall.audio.subtitle": "Svaki tečaj u audio obliku: uči dok hodaš, voziš ili prije spavanja.",
         "paywall.audio.feature1": "Slušanje sa zaključanim zaslonom, poput podcasta",
-        "paywall.audio.feature2": "5 jezika: francuski, engleski, španjolski, njemački, turski",
+        "paywall.audio.feature2": "2 jezika: francuski i engleski",
         "paywall.audio.feature3": "Podesiva brzina od 0,5× do 2×",
         "paywall.audio.feature4": "Preuzimanje za izvanmrežno slušanje",
         // MARK: Parcours (learning path tab)
@@ -19680,7 +19680,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Poslušaj svoje tečaje kjerkoli",
         "paywall.audio.subtitle": "Vsak tečaj v zvočni obliki: uči se med hojo, vožnjo ali pred spanjem.",
         "paywall.audio.feature1": "Poslušanje z zaklenjenim zaslonom, kot podkast",
-        "paywall.audio.feature2": "5 jezikov: francoščina, angleščina, španščina, nemščina, turščina",
+        "paywall.audio.feature2": "2 jezika: francoščina in angleščina",
         "paywall.audio.feature3": "Nastavljiva hitrost od 0,5× do 2×",
         "paywall.audio.feature4": "Prenos za poslušanje brez povezave",
         // MARK: Parcours (learning path tab)
@@ -20708,7 +20708,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Počúvaj kurzy kdekoľvek",
         "paywall.audio.subtitle": "Každý kurz v audio podobe: uč sa pri chôdzi, v aute alebo pred spaním.",
         "paywall.audio.feature1": "Počúvanie pri zamknutej obrazovke, ako podcast",
-        "paywall.audio.feature2": "5 jazykov: francúzština, angličtina, španielčina, nemčina, turečtina",
+        "paywall.audio.feature2": "2 jazyky: francúzština a angličtina",
         "paywall.audio.feature3": "Nastaviteľná rýchlosť od 0,5× do 2×",
         "paywall.audio.feature4": "Stiahnutie na počúvanie offline",
         // MARK: Parcours (learning path tab)
@@ -21736,7 +21736,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Slušaj svoje kurseve bilo gde",
         "paywall.audio.subtitle": "Svaki kurs u audio formatu: uči dok šetaš, voziš ili pre spavanja.",
         "paywall.audio.feature1": "Slušanje sa zaključanim ekranom, kao podkast",
-        "paywall.audio.feature2": "5 jezika: francuski, engleski, španski, nemački, turski",
+        "paywall.audio.feature2": "2 jezika: francuski i engleski",
         "paywall.audio.feature3": "Podesiva brzina od 0,5× do 2×",
         "paywall.audio.feature4": "Preuzimanje za slušanje oflajn",
         // MARK: Parcours (learning path tab)
@@ -22764,7 +22764,7 @@ enum AppLocalizable {
         "paywall.audio.title": "استمع إلى دوراتك في أي مكان",
         "paywall.audio.subtitle": "كل دورة بصيغة صوتية: تعلّم أثناء المشي أو القيادة أو قبل النوم.",
         "paywall.audio.feature1": "استماع والشاشة مقفلة، مثل البودكاست",
-        "paywall.audio.feature2": "5 لغات: الفرنسية، الإنجليزية، الإسبانية، الألمانية، التركية",
+        "paywall.audio.feature2": "لغتان: الفرنسية والإنجليزية",
         "paywall.audio.feature3": "سرعة قابلة للضبط من 0.5× إلى 2×",
         "paywall.audio.feature4": "تنزيل للاستماع دون اتصال",
         // MARK: Parcours (learning path tab)
@@ -23792,7 +23792,7 @@ enum AppLocalizable {
         "paywall.audio.title": "להאזין לקורסים בכל מקום",
         "paywall.audio.subtitle": "כל קורס גם בשמע: ללמוד בהליכה, בנהיגה או לפני השינה.",
         "paywall.audio.feature1": "האזנה עם מסך נעול, כמו פודקאסט",
-        "paywall.audio.feature2": "5 שפות: צרפתית, אנגלית, ספרדית, גרמנית, טורקית",
+        "paywall.audio.feature2": "2 שפות: צרפתית ואנגלית",
         "paywall.audio.feature3": "מהירות מתכווננת מ־0.5× עד 2×",
         "paywall.audio.feature4": "הורדה להאזנה בלי חיבור",
         // MARK: Parcours (learning path tab)
@@ -24820,7 +24820,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Kuuntele kurssejasi missä vain",
         "paywall.audio.subtitle": "Jokainen kurssi äänenä: opi kävellessä, autoillessa tai ennen nukkumaanmenoa.",
         "paywall.audio.feature1": "Kuuntelu näyttö lukittuna, kuin podcast",
-        "paywall.audio.feature2": "5 kieltä: ranska, englanti, espanja, saksa, turkki",
+        "paywall.audio.feature2": "2 kieltä: ranska ja englanti",
         "paywall.audio.feature3": "Säädettävä nopeus 0,5×–2×",
         "paywall.audio.feature4": "Lataa ja kuuntele offline-tilassa",
         // MARK: Parcours (learning path tab)
@@ -25848,7 +25848,7 @@ enum AppLocalizable {
         "paywall.audio.title": "Kuula oma kursusi kõikjal",
         "paywall.audio.subtitle": "Iga kursus helina: õpi jalutades, autoga sõites või enne magamaminekut.",
         "paywall.audio.feature1": "Kuulamine lukustatud ekraaniga, nagu taskuhääling",
-        "paywall.audio.feature2": "5 keelt: prantsuse, inglise, hispaania, saksa, türgi",
+        "paywall.audio.feature2": "2 keelt: prantsuse ja inglise",
         "paywall.audio.feature3": "Reguleeritav kiirus 0,5×–2×",
         "paywall.audio.feature4": "Laadi alla ja kuula võrguühenduseta",
         // MARK: Parcours (learning path tab)

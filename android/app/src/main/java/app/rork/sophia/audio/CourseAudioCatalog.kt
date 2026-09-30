@@ -13,13 +13,14 @@ import java.io.File
 import java.net.HttpURLConnection
 import java.net.URL
 
-/** The five languages courses are narrated in, a subset of the app's 26. */
+/**
+ * The two languages courses are narrated in, a subset of the app's 26. Spanish, German and
+ * Turkish were dropped: a saved queue item, a download or a manifest key in one of them is
+ * ignored or cleaned up, never played.
+ */
 enum class AudioLanguage(val code: String, val displayName: String, val flag: String) {
     FRENCH("fr", "Français", "🇫🇷"),
     ENGLISH("en", "English", "🇬🇧"),
-    SPANISH("es", "Español", "🇪🇸"),
-    GERMAN("de", "Deutsch", "🇩🇪"),
-    TURKISH("tr", "Türkçe", "🇹🇷"),
     ;
 
     val shortCode: String get() = code.uppercase()

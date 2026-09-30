@@ -817,7 +817,7 @@ private fun TrainingPaywall(
 
 /**
  * Audio paywall: a free user tapped "Écouter", "Ajouter à la file" or "Télécharger". It
- * sells listening itself — lock screen, five languages, speed, offline — over the cover of
+ * sells listening itself — lock screen, French and English, speed, offline — over the cover of
  * the course they wanted to hear.
  */
 @Composable
