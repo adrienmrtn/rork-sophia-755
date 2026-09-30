@@ -1,8 +1,8 @@
-# Couvertures à créer pour les 9 nouvelles collections
+# Couvertures des 9 collections ajoutées le 28/09
 
-Les neuf collections ajoutées le 28/09 sont en ligne sans illustration : l'app affiche le fond
-dégradé de secours (avec une icône sur iOS) tant que l'image n'existe pas. Rien ne casse ; il
-suffit de déposer les fichiers pour qu'ils apparaissent.
+Les neuf couvertures sont installées depuis le 30/09. Ce brief reste la référence pour en
+régénérer une : sans image, l'app affiche le fond dégradé de secours (avec une icône sur iOS),
+et il suffit de remplacer le fichier pour changer la couverture.
 
 ## Format et dépôt
 
