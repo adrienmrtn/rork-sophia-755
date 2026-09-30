@@ -60,7 +60,7 @@
     {
       "id": "2",
       "title": "2. Dados recolhidos",
-      "body": "A Sophia foi concebida segundo o princÃ­pio da minimizaÃ§Ã£o de dados. A AplicaÃ§Ã£o armazena no teu dispositivo:\n\n- O teu progresso nos cursos e questionÃ¡rios\n- As tuas preferÃªncias (interesses, objetivos)\n- A tua sequÃªncia (dias consecutivos de utilizaÃ§Ã£o)\n- Os teus cursos favoritos\n\nEstes dados locais nÃ£o sÃ£o transmitidos aos nossos servidores.\n\nA AplicaÃ§Ã£o tambÃ©m envia eventos de utilizaÃ§Ã£o anÃ³nimos para o Mixpanel (regiÃ£o da UE) para compreender como a app Ã© utilizada e melhorÃ¡-la. Estes eventos nÃ£o incluem o teu nome, email ou conteÃºdo pessoal.\n\nSe nos enviares comentÃ¡rios atravÃ©s do formulÃ¡rio nas definiÃ§Ãµes, a tua mensagem e, caso o indiques, o teu endereÃ§o de email sÃ£o transmitidos ao Formspree para que possamos responder-te. As informaÃ§Ãµes tÃ©cnicas (versÃ£o da app, idioma, dispositivo) sÃ£o anexadas automaticamente."
+      "body": "A Sophia foi concebida segundo o princípio da minimização de dados. A Aplicação armazena no teu dispositivo:\n\n- O teu progresso nos cursos e questionários\n- As tuas preferências (interesses, objetivos)\n- A tua sequência (dias consecutivos de utilização)\n- Os teus cursos favoritos\n\nEstes dados locais não são transmitidos aos nossos servidores.\n\nSe nos enviares comentários através do formulário nas definições, a tua mensagem e, caso o indiques, o teu endereço de email são transmitidos ao Formspree para que possamos responder-te. As informações técnicas (versão da app, idioma, dispositivo) são anexadas automaticamente."
     },
     {
       "id": "3",
@@ -74,38 +74,33 @@
     },
     {
       "id": "5",
-      "title": "5. Dados analíticos (Mixpanel)",
-      "body": "Utilizamos o Mixpanel, alojado na União Europeia, para medir a utilização da Aplicação (ecrãs visitados, cursos abertos, interações com o paywall, etc.). O Mixpanel recebe um identificador anónimo gerado pelo dispositivo, a versão da app, o idioma e eventos de utilização agregados. Não é recolhido qualquer dado pessoal. Podes contactar-nos para solicitar a eliminação destes dados analíticos."
-    },
-    {
-      "id": "6",
-      "title": "6. Dados do Google Play / Android analytics",
+      "title": "5. Dados do Google Play / Android analytics",
       "body": "A Aplicação pode também beneficiar de estatísticas anónimas fornecidas pela Google (Play Console analytics). Estes dados são agregados e não permitem identificar-te pessoalmente. Podes desativar a partilha de dados analíticos nas definições do teu Android device (Definições > Privacidade > Análise e melhorias)."
     },
     {
-      "id": "7",
-      "title": "7. Armazenamento de dados",
+      "id": "6",
+      "title": "6. Armazenamento de dados",
       "body": "Todos os teus dados de progresso são armazenados localmente no teu dispositivo através do local app storage. Não são guardados na cloud. Desinstalar a Aplicação elimina definitivamente estes dados."
     },
     {
+      "id": "7",
+      "title": "7. Partilha de dados",
+      "body": "Não vendemos, alugamos nem partilhamos quaisquer dados pessoais com terceiros para fins comerciais ou publicitários. Os dados transmitidos limitam-se a: Google e RevenueCat (subscrições), Formspree (comentários de utilizadores enviados voluntariamente a partir das definições)."
+    },
+    {
       "id": "8",
-      "title": "8. Partilha de dados",
-      "body": "Não vendemos, alugamos nem partilhamos quaisquer dados pessoais com terceiros para fins comerciais ou publicitários. Os dados transmitidos limitam-se a: Google e RevenueCat (subscrições), Mixpanel (análise anónima, UE), Formspree (comentários de utilizadores enviados voluntariamente a partir das definições)."
+      "title": "8. Direitos dos utilizadores",
+      "body": "Nos termos do Regulamento Geral sobre a Proteção de Dados (RGPD) e das leis aplicáveis, dispões dos seguintes direitos:\n\n- Direito de acesso aos teus dados\n- Direito de retificação\n- Direito ao apagamento (repor nas definições)\n- Direito à portabilidade\n- Direito de oposição\n\nPara exercer estes direitos, contacta-nos através da morada indicada na nossa página da Play Store."
     },
     {
       "id": "9",
-      "title": "9. Direitos dos utilizadores",
-      "body": "Nos termos do Regulamento Geral sobre a ProteÃ§Ã£o de Dados (RGPD) e das leis aplicÃ¡veis, dispÃµes dos seguintes direitos:\n\n- Direito de acesso aos teus dados\n- Direito de retificaÃ§Ã£o\n- Direito ao apagamento (repor nas definiÃ§Ãµes)\n- Direito Ã  portabilidade\n- Direito de oposiÃ§Ã£o\n\nPara exercer estes direitos, contacta-nos atravÃ©s da morada indicada na nossa pÃ¡gina da Play Store."
-    },
-    {
-      "id": "10",
-      "title": "10. Proteção de menores",
+      "title": "9. Proteção de menores",
       "body": "A Sophia é uma aplicação educativa adequada a todas as idades. Não recolhemos conscientemente dados pessoais de menores de 16 anos. A Aplicação não contém conteúdos inadequados."
     },
     {
-      "id": "11",
-      "title": "11. Alterações",
-      "body": "Reservamo-nos o direito de alterar esta polÃ­tica a qualquer momento. Quaisquer alteraÃ§Ãµes serÃ£o comunicadas atravÃ©s de uma atualizaÃ§Ã£o da AplicaÃ§Ã£o.\n\nÃltima atualizaÃ§Ã£o: julho de 2026"
+      "id": "10",
+      "title": "10. Alterações",
+      "body": "Reservamo-nos o direito de alterar esta política a qualquer momento. Quaisquer alterações serão comunicadas através de uma atualização da Aplicação.\n\nÚltima atualização: setembro de 2026"
     }
   ]
 }

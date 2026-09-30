@@ -1,5 +1,7 @@
 package app.rork.sophia.ui
 
+import android.content.Intent
+import android.net.Uri
 import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
@@ -42,7 +44,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.AppConfig
 import app.rork.sophia.SophiaApplication
+import app.rork.sophia.audio.CourseAudioPlayer
+import app.rork.sophia.ui.audio.AudioDownloadsScreen
+import app.rork.sophia.ui.audio.AudioMiniPlayer
+import app.rork.sophia.ui.audio.AudioPlayerScreen
+import androidx.compose.foundation.layout.Column
+import androidx.compose.runtime.DisposableEffect
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.AuthorStore
 import app.rork.sophia.data.ContentCatalog
@@ -85,7 +94,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-private enum class OverlayScreen { Settings, Friends, Feedback, Ambassador, Terms, Privacy, MyCourses }
+private enum class OverlayScreen { Settings, Friends, Feedback, Ambassador, Terms, Privacy, MyCourses, AudioDownloads }
 
 /**
  * Widest the tab content is allowed to get. Sophia's screens are a single column; past this
@@ -121,19 +130,20 @@ fun MainTabs(
     var rewardSteps by remember { mutableStateOf<List<PostCompletionRewardStep>?>(null) }
     var pendingCompletionCourseId by remember { mutableStateOf<String?>(null) }
     var levelBeforeCompletion by remember { mutableIntStateOf(1) }
-    var paywallPresentedAtMs by remember { mutableStateOf<Long?>(null) }
     var showTrialEndingBanner by remember { mutableStateOf(false) }
     var readerReady by remember { mutableStateOf(false) }
     var showCreateAccountPrompt by remember { mutableStateOf(false) }
+    // Audio mode: the full player, and the course a free user wanted to hear.
+    var showAudioPlayer by remember { mutableStateOf(false) }
+    var audioPaywallCourseId by remember { mutableStateOf<String?>(null) }
 
-    LaunchedEffect(language, isPremium, progress.subjectXP) {
-        if (constrained) delay(800)
-        app.analytics.updateContext(
-            language = language.code,
-            isPremium = isPremium,
-            onboardingCompleted = app.onboardingStore.isCompleted,
-            unlockedSubjects = progress.subjectXP.keys,
-        )
+    LaunchedEffect(isPremium) { CourseAudioPlayer.isPremium = isPremium }
+    DisposableEffect(Unit) {
+        CourseAudioPlayer.onPaywallNeeded = { courseId ->
+            audioPaywallCourseId = courseId
+            paywall = PaywallContext.AUDIO
+        }
+        onDispose { CourseAudioPlayer.onPaywallNeeded = null }
     }
 
     // In-app only: tiny banner the calendar day before trial end, once per day, auto-hides in 1s.
@@ -160,17 +170,11 @@ fun MainTabs(
         overlayParent = null
     }
 
-    fun openCourse(course: Course, source: String = "home_tiktok") {
+    fun openCourse(course: Course) {
         if (!isPremium) {
             app.progressManager.incrementFreeCoursesOpened()
             app.progressManager.claimDailyFreeCourseIfNeeded(course.id)
         }
-        app.analytics.trackCourseOpened(
-            courseId = course.id,
-            subject = course.subjectEnum.storageKey,
-            source = source,
-            isFreeUser = !isPremium,
-        )
         pendingCompletionCourseId = null
         levelBeforeCompletion = ProgressManager.globalLevelProgress(app.progressManager.progress.value.globalXP).level
         readerReady = false
@@ -198,8 +202,7 @@ fun MainTabs(
             // Through the same door as a tap on home: setting `selectedCourse` directly
             // skipped claiming the daily free course, so a free user who arrived from a link
             // read a course and still had their free one taken by the next one they opened.
-            openCourse(it, source = "deep_link")
-            app.analytics.trackDeepLinkOpened(id)
+            openCourse(it)
         }
         onDeepLinkConsumed()
     }
@@ -219,12 +222,6 @@ fun MainTabs(
             if (event.isComplete) {
                 app.progressManager.awardCollectionCompletionXpIfNeeded(event.collection)
             }
-            app.analytics.trackCollectionProgressed(
-                collectionId = event.collection.id,
-                completed = event.newCompletedCount,
-                total = event.totalCount,
-                isComplete = event.isComplete,
-            )
             steps += PostCompletionRewardStep.Collection(event)
         }
         val levelAfter = ProgressManager.globalLevelProgress(app.progressManager.progress.value.globalXP).level
@@ -278,12 +275,6 @@ fun MainTabs(
         rewardSteps = null
     }
     BackHandler(enabled = rewardSteps == null && paywall != null) {
-        val ctx = paywall
-        val duration = paywallPresentedAtMs?.let {
-            ((System.currentTimeMillis() - it) / 1000).toInt().coerceAtLeast(0)
-        } ?: 0
-        if (ctx != null) app.analytics.trackPaywallDismissed(ctx.analyticsContext, duration)
-        paywallPresentedAtMs = null
         paywall = null
     }
     BackHandler(enabled = rewardSteps == null && paywall == null && overlay != null) {
@@ -307,6 +298,10 @@ fun MainTabs(
     // Registered last, so it takes precedence: the author page sits above the reader.
     BackHandler(enabled = selectedAuthorSlug != null) {
         selectedAuthorSlug = null
+    }
+    // The audio player is drawn above the reader and the author page; a paywall above it.
+    BackHandler(enabled = showAudioPlayer && paywall == null && rewardSteps == null) {
+        showAudioPlayer = false
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
@@ -336,14 +331,16 @@ fun MainTabs(
                     },
                     onDismiss = { dismissCourse() },
                     onOpenAuthor = { selectedAuthorSlug = it },
+                    onOpenAudio = { showAudioPlayer = true },
                     onRequestPaywall = { key ->
-                        if (key == "debloquer_cours" || key == "quizz") {
-                            app.analytics.trackFreemiumGateHit(key, courseId = selectedCourse?.id)
-                        }
                         paywall = when (key) {
                             "quizz" -> PaywallContext.QUIZZ
                             "offre_discount" -> PaywallContext.OFFRE_DISCOUNT
                             "fin_onboarding" -> PaywallContext.FIN_ONBOARDING
+                            "audio" -> {
+                                audioPaywallCourseId = selectedCourse?.id
+                                PaywallContext.AUDIO
+                            }
                             else -> PaywallContext.DEBLOQUER_COURS
                         }
                     },
@@ -363,6 +360,9 @@ fun MainTabs(
             Scaffold(
                 containerColor = DS.canvas,
                 bottomBar = {
+                  // The mini-player sits right on top of the tab bar, like a music app's.
+                  Column {
+                    AudioMiniPlayer(language = language, onOpen = { showAudioPlayer = true })
                     NavigationBar(containerColor = DS.canvas, contentColor = DS.accent) {
                         tabs.forEach { (key, icon, index) ->
                             NavigationBarItem(
@@ -393,6 +393,7 @@ fun MainTabs(
                             )
                         }
                     }
+                  }
                 },
             ) { padding ->
                 // On a tablet or a Chromebook every tab stretched edge to edge, so a line of
@@ -468,7 +469,6 @@ fun MainTabs(
                                 app.discountManager.consumeGift()
                                 app.discountManager.triggerIfNeeded()
                                 app.discountManager.markShownToday()
-                                app.analytics.trackDiscountOfferViewed("gift")
                                 paywall = PaywallContext.OFFRE_DISCOUNT
                             },
                         )
@@ -479,7 +479,6 @@ fun MainTabs(
                         state = discount,
                         language = language,
                         onClick = {
-                            app.analytics.trackDiscountOfferViewed("side_tab")
                             app.discountManager.markShownToday()
                             paywall = PaywallContext.OFFRE_DISCOUNT
                         },
@@ -503,9 +502,16 @@ fun MainTabs(
                                 paywall = PaywallContext.DEBLOQUER_COURS
                             },
                             onOpenFeedback = { openFromSettings(OverlayScreen.Feedback) },
-                            onOpenAmbassador = { openFromSettings(OverlayScreen.Ambassador) },
+                            // La page du rôle choisi sur le site, plutôt que le formulaire intégré.
+                            onOpenCreators = { role ->
+                                val url = AppConfig.creatorsUrl(role, language)
+                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                runCatching { context.startActivity(intent) }
+                            },
                             onOpenTerms = { openFromSettings(OverlayScreen.Terms) },
                             onOpenPrivacy = { openFromSettings(OverlayScreen.Privacy) },
+                            onOpenAudioDownloads = { openFromSettings(OverlayScreen.AudioDownloads) },
                             onRestorePurchases = {
                                 storeViewModel.restore { result ->
                                     val key = when (result) {
@@ -567,6 +573,11 @@ fun MainTabs(
                             language = language,
                             onBack = { closeOverlay() },
                         )
+                    OverlayScreen.AudioDownloads ->
+                        AudioDownloadsScreen(
+                            language = language,
+                            onBack = { closeOverlay() },
+                        )
                 }
             }
         }
@@ -594,43 +605,39 @@ fun MainTabs(
             }
         }
 
+        if (showAudioPlayer) {
+            SophiaOverlayLayer {
+                AudioPlayerScreen(language = language, onClose = { showAudioPlayer = false })
+            }
+        }
+
         if (paywall != null) {
             SophiaOverlayLayer {
                 val ctx = paywall!!
-                LaunchedEffect(ctx) {
-                    paywallPresentedAtMs = System.currentTimeMillis()
-                    app.analytics.trackPaywallViewed(ctx.analyticsContext)
-                }
                 PaywallScreen(
                     context = ctx,
                     language = language,
                     storeViewModel = storeViewModel,
+                    courseId = if (ctx == PaywallContext.AUDIO) audioPaywallCourseId else null,
                     onDismiss = {
-                        val duration = paywallPresentedAtMs?.let {
-                            ((System.currentTimeMillis() - it) / 1000).toInt().coerceAtLeast(0)
-                        } ?: 0
-                        app.analytics.trackPaywallDismissed(ctx.analyticsContext, duration)
-                        paywallPresentedAtMs = null
                         paywall = null
                     },
                     onPurchased = {
-                        // Meta filled via onPurchaseMeta below; keep dismiss path clean.
                         if (ctx == PaywallContext.OFFRE_DISCOUNT) {
                             app.discountManager.markExpired()
                         }
-                        paywallPresentedAtMs = null
                         paywall = null
+                        // Bought to listen: start listening, without a second tap.
+                        if (ctx == PaywallContext.AUDIO) {
+                            audioPaywallCourseId?.let { id ->
+                                CourseAudioPlayer.isPremium = true
+                                CourseAudioPlayer.requestPlay(id)
+                                showAudioPlayer = true
+                            }
+                        }
                     },
-                    onPurchaseMeta = { offeringId, packageId ->
-                        app.analytics.trackPurchaseCompleted(
-                            context = ctx.analyticsContext,
-                            offeringId = offeringId ?: ctx.offeringId,
-                            packageId = packageId,
-                        )
-                    },
-                    // A restore is not a purchase: it closes the paywall without reporting a sale.
+                    // A restore is not a purchase: it only closes the paywall.
                     onRestored = {
-                        paywallPresentedAtMs = null
                         paywall = null
                     },
                 )

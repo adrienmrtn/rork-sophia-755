@@ -222,9 +222,6 @@ struct QuizView: View {
             courseWasCompletedBeforeQuiz = progressManager.courseStatus(for: course.id) == .completed
             pendingCollectionEvents = initialCollectionEvents
             shuffleAllQuestions()
-            if !course.quiz.isEmpty {
-                AnalyticsService.trackQuizStarted(course: course)
-            }
         }
         .sophiaColorScheme()
     }
@@ -352,7 +349,7 @@ struct QuizView: View {
             HStack(spacing: 6) {
                 Image(systemName: course.subject.icon)
                     .font(.jakarta(size: 11, weight: .medium))
-                Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
+                Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
                     .font(DS.sans(.caption2, .semibold))
                     .tracking(0.8)
             }
@@ -583,7 +580,7 @@ struct QuizView: View {
 
             if !chronoPool.isEmpty {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text(languageManager.text("quiz.chronological.remaining").uppercased())
+                    Text(languageManager.text("quiz.chronological.remaining").uppercasedInApp())
                         .font(DS.sans(.caption2, .semibold))
                         .foregroundStyle(DS.inkTertiary)
                         .tracking(1.0)
@@ -865,7 +862,7 @@ struct QuizView: View {
 
     private func sliderResultPill(label: String, value: String, tint: Color) -> some View {
         VStack(spacing: 4) {
-            Text(label.uppercased())
+            Text(label.uppercasedInApp())
                 .font(DS.sans(.caption2, .semibold))
                 .foregroundStyle(DS.inkTertiary)
                 .tracking(0.5)
@@ -1068,11 +1065,6 @@ struct QuizView: View {
             if !courseWasCompletedBeforeQuiz {
                 pendingCollectionEvents = progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)
             }
-            AnalyticsService.trackQuizCompleted(
-                course: course,
-                score: totalPointsEarned,
-                total: maxPossiblePoints
-            )
             // A finished quiz is a finished course too (belt and braces for a course whose
             // completion the blocker missed).
             TikTokBlockerManager.shared.registerDailyCourseCompleted(courseId: course.id)
@@ -1407,7 +1399,7 @@ struct QuizView: View {
                 HStack(spacing: 6) {
                     Image(systemName: course.subject.icon)
                         .font(.jakarta(size: 12, weight: .medium))
-                    Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
+                    Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
                         .font(DS.sans(.caption, .semibold))
                         .tracking(0.8)
                 }

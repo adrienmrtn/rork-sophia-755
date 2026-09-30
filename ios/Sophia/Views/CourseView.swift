@@ -8,7 +8,6 @@ struct CourseView: View {
     let course: Course
     let progressManager: ProgressManager
     @Bindable var store: StoreViewModel
-    var openSource: String = "unknown"
     let onDismissToHome: () -> Void
     @Environment(\.dismiss) private var dismiss
     @State private var currentIndex: Int = 0
@@ -29,16 +28,27 @@ struct CourseView: View {
     @State private var pendingCollectionEvents: [CollectionProgressEvent] = []
     @State private var rewardSteps: [PostCompletionRewardStep] = []
     @State private var showRewardFlow: Bool = false
-    @State private var sessionTracker: CourseSessionTracker?
+    /// Vrai entre l'ouverture du cours et sa fermeture. Un `fullScreenCover` (quiz,
+    /// paywall) fait disparaître puis réapparaître le lecteur : ce n'est pas une nouvelle
+    /// visite, les tâches d'ouverture ne doivent pas repartir.
+    @State private var isVisitActive = false
     @State private var coachmarkTerm: String? = nil
     /// Glossary term tapped in the lesson body. Shown as an in-app overlay (not a system
     /// sheet) so the course text stays perfectly still when a term is tapped.
     @State private var selectedGlossaryEntry: GlossaryEntry? = nil
     /// Professor whose page is open (byline or "written by" card tapped).
     @State private var presentedAuthor: CourseAuthor? = nil
+    /// Full audio player, opened by the headphones in the header.
+    @State private var showAudioPlayer: Bool = false
+    @State private var showAudioPaywall: Bool = false
+    /// Another course's narration is loaded: listen now, next, or at the end of the queue.
+    @State private var showAudioChoice: Bool = false
+    /// While the reader is up, the player's paywall requests land here, not in ContentView.
+    @State private var audioPaywallHandlerId: UUID?
 
     /// Fixed XP awarded for finishing a course (reaching the completion screen). Always granted.
-    private let courseCompletionXP: Int = 10
+    /// Listening to the narration to the end grants the same (see `ContentView`).
+    static let courseCompletionXP: Int = 10
 
     private var isPremium: Bool { store.isPremium }
 
@@ -46,7 +56,7 @@ struct CourseView: View {
     /// reader from the visible hierarchy without the user having left the course.
     private var isCoveredByOverlay: Bool {
         showQuiz || showDebloquerPaywall || showQuizPaywall
-            || showComparisonOverQuiz || showComparisonOverDebloquer
+            || showComparisonOverQuiz || showComparisonOverDebloquer || showAudioPaywall
     }
 
     /// The one course a free user can fully read today (claimed on open in `ContentView`).
@@ -89,7 +99,7 @@ struct CourseView: View {
                     course: course,
                     progressManager: progressManager,
                     previousSubjectXP: previousSubjectXP,
-                    earnedXP: courseCompletionXP,
+                    earnedXP: Self.courseCompletionXP,
                     globalAwardResult: globalCourseAwardResult,
                     showFreemiumGate: !isPremium,
                     onClose: {
@@ -153,36 +163,24 @@ struct CourseView: View {
         .navigationBarBackButtonHidden()
         .onAppear {
             // A `fullScreenCover` takes its presenter off screen, so opening the quiz or a
-            // paywall over the course fired `onDisappear` then `onAppear` again on the way
-            // back. Mixpanel saw a course closed and a second course opened for one reading
-            // session, which inflated opens and cut every session short. An existing tracker
-            // means this is a return from a cover, not a new visit.
-            guard sessionTracker == nil else { return }
+            // paywall over the course fires `onDisappear` then `onAppear` again on the way
+            // back. An active visit means this is a return from a cover, not a new visit.
+            guard !isVisitActive else { return }
+            isVisitActive = true
             // Inline images come from the bucket: start fetching them now so paging forward
             // finds them on disk rather than in flight.
             CourseImageLoader.prefetch(courseId: course.id)
             progressManager.registerFirstCourseOpenedIfNeeded(course.id)
             requestAppStoreReviewIfEligible(lessonIndex: currentIndex)
-            sessionTracker = CourseSessionTracker(course: course)
-            sessionTracker?.recordLessonIndex(currentIndex)
-            AnalyticsService.trackCourseOpened(
-                courseId: course.id,
-                subject: course.subject,
-                source: openSource,
-                isFreeUser: !isPremium
-            )
             maybeShowTermCoachmark(lessonIndex: currentIndex)
         }
         .onDisappear {
             // Covered, not closed: the reader is still the screen the user is on.
             guard !isCoveredByOverlay else { return }
-            let reason = sessionTracker?.completed == true ? "completed" : "dismiss"
-            sessionTracker?.finish(exitReason: reason)
-            sessionTracker = nil
+            isVisitActive = false
         }
         .onChange(of: currentIndex) { _, newIndex in
             requestAppStoreReviewIfEligible(lessonIndex: newIndex)
-            sessionTracker?.recordLessonIndex(newIndex)
             maybeShowTermCoachmark(lessonIndex: newIndex)
         }
         .sheet(item: $presentedAuthor) { author in
@@ -258,6 +256,45 @@ struct CourseView: View {
                 )
             }
         }
+        .sheet(isPresented: $showAudioPlayer) {
+            AudioPlayerView()
+                .sophiaSheetChrome()
+        }
+        .audioPlayChoiceDialog(isPresented: $showAudioChoice, courseId: course.id, source: "course_reader") {
+            CourseAudioPlayer.shared.play(courseId: course.id, source: "course_reader")
+            showAudioPlayer = true
+        }
+        .onAppear {
+            guard audioPaywallHandlerId == nil else { return }
+            audioPaywallHandlerId = CourseAudioPlayer.shared.pushPaywallHandler {
+                // From the player sheet (a subscription that lapsed): the sheet goes first.
+                guard showAudioPlayer else {
+                    showAudioPaywall = true
+                    return
+                }
+                showAudioPlayer = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { showAudioPaywall = true }
+            }
+        }
+        .onDisappear {
+            guard !isCoveredByOverlay, let id = audioPaywallHandlerId else { return }
+            CourseAudioPlayer.shared.removePaywallHandler(id)
+            audioPaywallHandlerId = nil
+        }
+        .fullScreenCover(isPresented: $showAudioPaywall) {
+            SophiaPaywallView(
+                context: .audio,
+                store: store,
+                course: course,
+                onPurchased: {
+                    showAudioPaywall = false
+                    // Bought to listen: start listening.
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { openAudio() }
+                },
+                onRestored: { showAudioPaywall = false },
+                onDismissed: { showAudioPaywall = false }
+            )
+        }
         .onAppear {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.1)) {
                 appeared = true
@@ -287,10 +324,52 @@ struct CourseView: View {
                 .font(DS.sans(.subheadline, .medium))
                 .foregroundStyle(DS.inkSecondary)
                 .monospacedDigit()
+
+            if CourseAudioCatalog.shared.hasAudio(course.id) {
+                audioButton
+            }
         }
         .padding(.horizontal, 20)
         .padding(.top, 12)
         .padding(.bottom, 12)
+    }
+
+    // MARK: Audio
+
+    /// Headphones: listen to this course. Animated while its narration plays.
+    private var audioButton: some View {
+        let player = CourseAudioPlayer.shared
+        let playing = player.isPlayingCourse(course.id)
+        return Button(action: openAudio) {
+            Image(systemName: playing ? "waveform" : (isPremium ? "headphones" : "lock.fill"))
+                .font(.jakarta(size: 15, weight: .semibold))
+                .foregroundStyle(player.isCurrent(course.id) ? DS.accent : DS.inkSecondary)
+                .symbolEffect(.variableColor.iterative, isActive: playing)
+                .frame(width: 40, height: 40)
+                .background(DS.surface, in: Circle())
+                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+        }
+        .accessibilityLabel(Text(languageManager.text("audio.listen")))
+    }
+
+    private func openAudio() {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        guard isPremium else {
+            showAudioPaywall = true
+            return
+        }
+        let player = CourseAudioPlayer.shared
+        player.isPremium = true
+        if player.hasItem, !player.isCurrent(course.id) {
+            showAudioChoice = true
+            return
+        }
+        if !player.isCurrent(course.id) {
+            player.play(courseId: course.id, source: "course_reader")
+        } else if !player.isPlaying {
+            player.resume()
+        }
+        showAudioPlayer = true
     }
 
     private var progressBar: some View {
@@ -362,7 +441,7 @@ struct CourseView: View {
     private func openOtherCourse(_ target: Course) {
         onDismissToHome()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-            DeepLinkRouter.shared.requestCourse(target.id, source: "author_page")
+            DeepLinkRouter.shared.requestCourse(target.id)
         }
     }
 
@@ -376,12 +455,6 @@ struct CourseView: View {
                     .padding(.bottom, 120)
             }
             .scrollIndicators(.hidden)
-            .onScrollGeometryChange(for: CGFloat.self) { geometry in
-                geometry.contentOffset.y
-            } action: { _, offset in
-                guard lessonIndex == 0, offset > 120 else { return }
-                sessionTracker?.scrolledOnFirstLesson = true
-            }
             .onChange(of: currentIndex) { oldIndex, newIndex in
                 // Only reset to the top when moving forward (Continue / swipe next).
                 // Going back keeps the previous reading position.
@@ -461,7 +534,6 @@ struct CourseView: View {
             // Le paywall ne s'ouvre que via le cadenas sur les pages floutées.
             if isCourseLocked {
                 guard !isLastLesson else { return }
-                sessionTracker?.recordContinueTap()
                 currentIndex += 1
                 progressManager.updateLessonProgress(
                     courseId: course.id,
@@ -472,8 +544,6 @@ struct CourseView: View {
             }
             if isLastLesson {
                 guard FreemiumGate.canCompleteCourse(isPremium: isPremium, isDailyFreeCourse: isDailyFreeCourse) else { return }
-                sessionTracker?.recordContinueTap()
-                sessionTracker?.markCompleted()
                 progressManager.updateLessonProgress(
                     courseId: course.id,
                     lessonIndex: currentIndex,
@@ -485,18 +555,16 @@ struct CourseView: View {
                 progressManager.completeCourse(courseId: course.id, quizScore: 0)
                 // The daily course is done: if TikTok was waiting on it, it opens now.
                 TikTokBlockerManager.shared.registerDailyCourseCompleted(courseId: course.id)
-                progressManager.addXP(subject: course.subject, amount: courseCompletionXP)
+                progressManager.addXP(subject: course.subject, amount: Self.courseCompletionXP)
                 globalCourseAwardResult = progressManager.awardGlobalXP(
                     reason: .courseCompleted(courseId: course.id),
                     amount: ProgressManager.globalCourseCompletionXP
                 )
                 pendingCollectionEvents = wasCompletedBefore ? [] : progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)
-                AnalyticsService.trackCourseCompleted(course: course)
                 withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
                     endPhase = .completed
                 }
             } else {
-                sessionTracker?.recordContinueTap()
                 // Le slide est animé par `.animation(_:value: currentIndex)` sur le TabView.
                 currentIndex += 1
                 progressManager.updateLessonProgress(

@@ -311,7 +311,7 @@ struct AmbassadorView: View {
                 .foregroundStyle(DS.ink)
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
-            Text(label.uppercased())
+            Text(label.uppercasedInApp())
                 .font(DS.sans(.caption2, .semibold))
                 .foregroundStyle(DS.inkTertiary)
                 .tracking(0.8)
@@ -447,7 +447,7 @@ struct AmbassadorView: View {
     ) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 6) {
-                Text(label.uppercased())
+                Text(label.uppercasedInApp())
                     .font(DS.sans(.caption, .semibold))
                     .foregroundStyle(DS.inkTertiary)
                     .tracking(1.1)
@@ -683,7 +683,7 @@ struct AmbassadorView: View {
     // MARK: - Shared
 
     private func sectionTitle(_ text: String) -> some View {
-        Text(text.uppercased())
+        Text(text.uppercasedInApp())
             .font(DS.sans(.caption, .semibold))
             .foregroundStyle(DS.inkTertiary)
             .tracking(1.2)

@@ -624,7 +624,12 @@ internal fun TrialStepsStep(language: AppLanguage, trialDays: Int = 3, onContinu
         java.time.LocalDate.now().plusDays(trialDays.toLong()).format(
             // `Locale("sr")` resolves to Cyrillic, which put a Cyrillic month next to the
             // Latin text of Sophia's own Serbian table. `language.locale` pins the script.
-            java.time.format.DateTimeFormatter.ofPattern("d MMMM", language.locale),
+            // The pattern is the language's own day-month order ("3. Oktober", "3 de
+            // octubre", "October 3"); a fixed "d MMMM" read wrong in half of them.
+            java.time.format.DateTimeFormatter.ofPattern(
+                android.text.format.DateFormat.getBestDateTimePattern(language.locale, "dMMMM"),
+                language.locale,
+            ),
         )
     }
     val steps = remember(language, endDate, trialDays) {

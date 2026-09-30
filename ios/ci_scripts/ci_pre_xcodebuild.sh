@@ -31,3 +31,12 @@ fi
 
 echo "Applying CURRENT_PROJECT_VERSION=${BUILD} to all targets"
 sed -i '' "s/CURRENT_PROJECT_VERSION = [0-9]*;/CURRENT_PROJECT_VERSION = ${BUILD};/g" "$PBXPROJ"
+
+# App extensions (TikTok blocker, daily question widget) must carry the app's version,
+# or App Store Connect rejects the mismatch (ITMS-90473). The app target's
+# MARKETING_VERSION is the reference: bumping the app is enough.
+APP_VERSION=$(awk '/MARKETING_VERSION = /{v=$3} /PRODUCT_BUNDLE_IDENTIFIER = app\.rork\.assvmps5x7hpyq0ezcsut;/{print v; exit}' "$PBXPROJ" | tr -d ';')
+if [ -n "$APP_VERSION" ]; then
+  echo "Applying MARKETING_VERSION=${APP_VERSION} to all targets"
+  sed -i '' "s/MARKETING_VERSION = [0-9.]*;/MARKETING_VERSION = ${APP_VERSION};/g" "$PBXPROJ"
+fi

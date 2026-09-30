@@ -13,8 +13,12 @@ struct OnboardingV2TrialSteps: View {
     private var endDateString: String {
         let date = Calendar.current.date(byAdding: .day, value: trialDays, to: Date()) ?? Date()
         let f = DateFormatter()
-        f.locale = Locale(identifier: languageManager.current.localeIdentifier)
-        f.dateFormat = "d MMMM"
+        f.locale = languageManager.current.foundationLocale
+        // Gregorian whatever the locale's default (`ar_SA` gives a Hijri date), and the
+        // language's own day-month order: "3. Oktober", "3 de octubre", "October 3". A fixed
+        // "d MMMM" read wrong in half of them.
+        f.calendar = Calendar(identifier: .gregorian)
+        f.setLocalizedDateFormatFromTemplate("dMMMM")
         return f.string(from: date)
     }
 

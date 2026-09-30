@@ -55,11 +55,6 @@ android {
         )
         buildConfigField(
             "String",
-            "MIXPANEL_TOKEN",
-            "\"${secret("MIXPANEL_TOKEN", "d2e043bfcdd8f53a7ec613d378667519")}\"",
-        )
-        buildConfigField(
-            "String",
             "SUPABASE_URL",
             "\"${secret("SUPABASE_URL", "https://afnmcoovdvbtkgohtdij.supabase.co")}\"",
         )
@@ -181,9 +176,6 @@ dependencies {
     implementation("io.github.jan-tennert.supabase:functions-kt")
     implementation("io.ktor:ktor-client-okhttp:3.0.3")
 
-    // Mixpanel
-    implementation("com.mixpanel.android:mixpanel-android:7.5.4")
-
     // Google Sign-In (Credential Manager)
     implementation("androidx.credentials:credentials:1.3.0")
     implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
@@ -191,6 +183,10 @@ dependencies {
 
     // Remote covers (Supabase Storage) — one image at a time, disk-cached
     implementation("io.coil-kt:coil-compose:2.7.0")
+
+    // Audio mode: ExoPlayer + MediaSession (notification, lock screen, headsets)
+    implementation("androidx.media3:media3-exoplayer:1.5.1")
+    implementation("androidx.media3:media3-session:1.5.1")
 
     // Play In-App Review
     implementation("com.google.android.play:review:2.0.2")

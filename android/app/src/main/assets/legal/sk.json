@@ -60,7 +60,7 @@
     {
       "id": "2",
       "title": "2. Zozbierané údaje",
-      "body": "Sophia je navrhnutý s ohľadom na minimalizáciu dát. Aplikácia ukladá vo vašom zariadení:\n\n- Váš pokrok v kurzoch a kvízoch\n- Vaše preferencie (záujmy, ciele)\n- Vaša séria (po sebe nasledujúce dni používania)\n- Vaše obľúbené kurzy\n\nTieto miestne údaje sa neprenášajú na naše servery.\n\nAplikácia tiež odosiela anonymné udalosti používania do Mixpanel (región EÚ), aby pochopila, ako sa aplikácia používa, a zlepšila ju. Tieto udalosti nezahŕňajú vaše meno, e-mail ani osobný obsah.\n\nAk odošlete spätnú väzbu prostredníctvom formulára v aplikácii v Nastaveniach, vaša správa a ak je zadaná, aj vaša e-mailová adresa sa prenesú do Formspree, aby sme mohli odpovedať. Technické informácie (verzia aplikácie, jazyk, zariadenie) sa pripájajú automaticky."
+      "body": "Sophia je navrhnutý s ohľadom na minimalizáciu dát. Aplikácia ukladá vo vašom zariadení:\n\n- Váš pokrok v kurzoch a kvízoch\n- Vaše preferencie (záujmy, ciele)\n- Vaša séria (po sebe nasledujúce dni používania)\n- Vaše obľúbené kurzy\n\nTieto miestne údaje sa neprenášajú na naše servery.\n\nAk odošlete spätnú väzbu prostredníctvom formulára v aplikácii v Nastaveniach, vaša správa a ak je zadaná, aj vaša e-mailová adresa sa prenesú do Formspree, aby sme mohli odpovedať. Technické informácie (verzia aplikácie, jazyk, zariadenie) sa pripájajú automaticky."
     },
     {
       "id": "3",
@@ -74,38 +74,33 @@
     },
     {
       "id": "5",
-      "title": "5. Údaje služby Analytics (Mixpanel)",
-      "body": "Na meranie používania aplikácií (navštívené obrazovky, otvorené kurzy, interakcie s paywallom atď.) používame Mixpanel, ktorý je hosťovaný v Európskej únii. Mixpanel dostane anonymný identifikátor zariadenia, verziu aplikácie, jazyk a súhrnné udalosti používania. Nezhromažďujú sa žiadne osobné údaje. Môžete nás kontaktovať so žiadosťou o vymazanie týchto analytických údajov."
-    },
-    {
-      "id": "6",
-      "title": "6. Analytika Google Play / Android",
+      "title": "5. Analytika Google Play / Android",
       "body": "Aplikácia môže ťažiť aj z anonymných štatistík poskytovaných Google (analytika Play Console). Tieto údaje sú súhrnné a nemožno ich použiť na vašu osobnú identifikáciu. Zdieľanie analytických údajov môžete zakázať v nastaveniach zariadenia Android (Google > Správa Google Account > Údaje a súkromie)."
     },
     {
-      "id": "7",
-      "title": "7. Ukladanie dát",
+      "id": "6",
+      "title": "6. Ukladanie dát",
       "body": "Údaje o vašom pokroku sú uložené lokálne vo vašom zariadení (miestne úložisko aplikácií). Ak si vytvoríte účet (Google), bude tiež bezpečne zálohovaný na naše servery Supabase (hostené v Európskej únii), aby sa umožnila synchronizácia medzi vašimi zariadeniami. Odinštalovaním aplikácie sa vymažú miestne údaje; odstránením svojho účtu sa natrvalo odstránia súvisiace údaje na serveri."
     },
     {
-      "id": "8",
-      "title": "8. Zdieľanie údajov",
-      "body": "Osobné údaje nepredávame, neprenajímame ani nezdieľame s tretími stranami na komerčné alebo reklamné účely. Prenášané údaje sú obmedzené na: Google a RevenueCat (predplatné), Mixpanel (anonymná analytika, EÚ), Formspree (spätná väzba od používateľov dobrovoľne odoslaná z nastavení)."
+      "id": "7",
+      "title": "7. Zdieľanie údajov",
+      "body": "Osobné údaje nepredávame, neprenajímame ani nezdieľame s tretími stranami na komerčné alebo reklamné účely. Prenášané údaje sú obmedzené na: Google a RevenueCat (predplatné), Formspree (spätná väzba od používateľov dobrovoľne odoslaná z nastavení)."
     },
     {
-      "id": "9",
-      "title": "9. Užívateľské práva",
+      "id": "8",
+      "title": "8. Užívateľské práva",
       "body": "Podľa všeobecného nariadenia o ochrane údajov (GDPR) a príslušných zákonov máte nasledujúce práva:\n\n- Právo na prístup k vašim údajom\n- Právo na opravu\n- Právo na vymazanie (resetovať v nastaveniach)\n- Právo na prenosnosť údajov\n- Právo namietať\n\nPre uplatnenie týchto práv nás kontaktujte prostredníctvom adresy uvedenej na našej stránke Play Store."
     },
     {
-      "id": "10",
-      "title": "10. Ochrana maloletých",
+      "id": "9",
+      "title": "9. Ochrana maloletých",
       "body": "Sophia je vzdelávacia aplikácia vhodná pre všetky vekové kategórie. Vedome nezhromažďujeme osobné údaje od detí mladších ako 16 rokov. Aplikácia neobsahuje žiadny nevhodný obsah."
     },
     {
-      "id": "11",
-      "title": "11. Zmeny",
-      "body": "Vyhradzujeme si právo tieto zásady kedykoľvek upraviť. Akékoľvek zmeny budú oznámené prostredníctvom aktualizácie aplikácie.\n\nPosledná aktualizácia: júl 2026"
+      "id": "10",
+      "title": "10. Zmeny",
+      "body": "Vyhradzujeme si právo tieto zásady kedykoľvek upraviť. Akékoľvek zmeny budú oznámené prostredníctvom aktualizácie aplikácie.\n\nPosledná aktualizácia: september 2026"
     }
   ]
 }

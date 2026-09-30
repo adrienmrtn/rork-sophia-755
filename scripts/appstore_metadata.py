@@ -46,6 +46,7 @@ Usage:
     python3 scripts/appstore_metadata.py build --from fr-FR
     python3 scripts/appstore_metadata.py push --dry-run
     python3 scripts/appstore_metadata.py push
+    python3 scripts/appstore_metadata.py push --fields promotional_text,whats_new --version 1.1.7
     python3 scripts/appstore_metadata.py prune --dry-run
     python3 scripts/appstore_metadata.py prune
 """
@@ -345,11 +346,22 @@ def state_of(record: dict) -> str:
     return attributes.get("appVersionState") or attributes.get("appStoreState") or ""
 
 
-def find_version(client: Client, app_id: str) -> tuple[str, str]:
-    """The version accepting metadata edits, and its state."""
+def find_version(client: Client, app_id: str, expect: str | None = None) -> tuple[str, str]:
+    """The version accepting metadata edits, and its state.
+
+    With `expect`, the editable version must also be that version string, and the
+    run stops otherwise. Release notes name the release they describe: written to
+    whatever happens to be in preparation, 1.1.7's notes would go out on 1.1.8.
+    """
     versions = client.get_all(f"/apps/{app_id}/appStoreVersions")
     for version in versions:
         if state_of(version) in EDITABLE:
+            found = (version.get("attributes") or {}).get("versionString") or "?"
+            if expect and found != expect:
+                sys.exit(
+                    f"The version being prepared is {found}, not {expect}. Nothing written.\n"
+                    f"Create {expect} in App Store Connect, or run again with the right version."
+                )
             return version["id"], state_of(version)
     states = ", ".join(sorted({state_of(v) for v in versions})) or "none"
     sys.exit(
@@ -397,6 +409,22 @@ def load_json(path: Path) -> dict:
 def save_json(path: Path, payload: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def localization_files(folder: Path) -> list[Path]:
+    """The JSON files of `folder` that map locales to text, and no others.
+
+    subscriptions/ also holds price_tests.json, the price-test manifest read by
+    appstore_subscriptions.py and the RevenueCat scripts. It is not a product and
+    its values are not localizations: read as one, it crashed `check`, and with
+    it every `push`.
+    """
+    out: list[Path] = []
+    for path in sorted(folder.glob("*.json")) if folder.is_dir() else []:
+        payload = load_json(path)
+        if all(isinstance(value, dict) for value in payload.values()):
+            out.append(path)
+    return out
 
 
 # --- check ----------------------------------------------------------------
@@ -458,7 +486,7 @@ def check() -> int:
                 notes += [f"{locale}/{p}" for p in keyword_problems(value)]
 
     english = {"en-US", *VARIANTS.get("en-US", ())}
-    for path in sorted(SUBSCRIPTIONS.glob("*.json")) if SUBSCRIPTIONS.is_dir() else []:
+    for path in localization_files(SUBSCRIPTIONS):
         entries = load_json(path)
         source_name = ((entries.get("en-US") or {}).get("name") or "").strip()
         for locale, entry in entries.items():
@@ -702,7 +730,7 @@ def build_subscriptions(
         if not folder.is_dir():
             continue
 
-        for path in sorted(folder.glob("*.json")):
+        for path in localization_files(folder):
             entries = load_json(path)
             # The source locale is the obvious origin, but a subscription group
             # is often localized in one language and no other -- this account's
@@ -1069,13 +1097,108 @@ def push(client: Client, only: list[str] | None) -> int:
     return 0
 
 
+def push_fields(
+    client: Client, only: list[str] | None, fields: list[str], expect: str | None
+) -> int:
+    """Write a few version fields and nothing else: release notes, typically.
+
+    A full `push` rewrites the whole page, name and keywords and subscriptions
+    included, with whatever this folder holds. When the rest of the page was
+    finished in App Store Connect, that is the wrong tool: this one PATCHes only
+    `fields`, only where the text differs, and only on localizations the version
+    already has. It never creates one, because a localization born with release
+    notes and no description is an incomplete page Apple refuses to submit.
+    """
+    if check() != 0:
+        print("\nRefusing to push while check fails.", file=sys.stderr)
+        return 1
+
+    locales = [loc for loc in locales_on_disk() if loc in LANG_FOR_LOCALE and (not only or loc in only)]
+    if not locales:
+        sys.exit("No locale to push.")
+
+    app_id = find_app(client, BUNDLE_ID)
+    version_id, state = find_version(client, app_id, expect)
+    keys = {field: VERSION_FIELDS[field] for field in fields}
+    print(f"app {app_id}, version {expect or version_id} ({state})")
+    print(f"fields: {', '.join(keys.values())}")
+    print(f"{len(locales)} locale(s): {', '.join(locales)}\n")
+
+    existing = {
+        record["attributes"]["locale"]: record
+        for record in client.get_all(f"/appStoreVersions/{version_id}/appStoreVersionLocalizations")
+    }
+    changed_count = same = 0
+    absent: list[str] = []
+    failures: list[str] = []
+
+    for locale in locales:
+        wanted = {
+            key: value
+            for field, key in keys.items()
+            if (value := read_field(locale, field)) is not None
+        }
+        if not wanted:
+            continue
+        record = existing.get(locale)
+        if record is None:
+            absent.append(locale)
+            print(f"  ? {locale}  not on this version, left alone")
+            continue
+        changed = {
+            key: value
+            for key, value in wanted.items()
+            if (record["attributes"].get(key) or "").strip() != value
+        }
+        if not changed:
+            same += 1
+            print(f"  = {locale}")
+            continue
+        print(f"  ~ {locale}  ({', '.join(sorted(changed))})")
+        if client.dry_run:
+            changed_count += 1
+            continue
+        try:
+            client.call(
+                "PATCH",
+                f"/appStoreVersionLocalizations/{record['id']}",
+                body={
+                    "data": {
+                        "type": "appStoreVersionLocalizations",
+                        "id": record["id"],
+                        "attributes": changed,
+                    }
+                },
+            )
+            changed_count += 1
+        except ApiError as error:
+            failures.append(f"{locale}: {error.detail}")
+            print(f"  ! {locale}: {error.detail}", file=sys.stderr)
+
+    verb = "would change" if client.dry_run else "updated"
+    print(f"\n{changed_count} {verb}, {same} already up to date, {len(absent)} not on this version, {len(failures)} failed")
+    if client.dry_run:
+        print("dry run: nothing written")
+    if absent:
+        print(
+            "Not on this version: " + ", ".join(absent) + ". Add the language in App Store "
+            "Connect with its description first; this command only updates."
+        )
+    if failures:
+        print("\nRejected:")
+        for line in failures:
+            print(f"  {line}")
+        return 1
+    return 0
+
+
 def push_subscriptions(client: Client, app_id: str, locales: list[str]) -> list[str]:
     if not SUBSCRIPTIONS.is_dir() and not GROUPS.is_dir():
         return []
 
     failures: list[str] = []
-    wanted_by_product = {path.stem: load_json(path) for path in sorted(SUBSCRIPTIONS.glob("*.json"))}
-    wanted_by_group = {path.stem: load_json(path) for path in sorted(GROUPS.glob("*.json"))}
+    wanted_by_product = {path.stem: load_json(path) for path in localization_files(SUBSCRIPTIONS)}
+    wanted_by_group = {path.stem: load_json(path) for path in localization_files(GROUPS)}
     if not wanted_by_product and not wanted_by_group:
         return []
 
@@ -1418,6 +1541,16 @@ def main() -> int:
     pusher = sub.add_parser("push", help="upload appstore/metadata/ to App Store Connect")
     pusher.add_argument("--dry-run", action="store_true", help="report what would change, write nothing")
     pusher.add_argument("--locale", action="append", help="only this locale (repeatable)")
+    pusher.add_argument(
+        "--fields",
+        help="only these version fields, comma separated (e.g. promotional_text,whats_new); "
+        "leaves the rest of the page and the subscriptions alone, and only updates",
+    )
+    pusher.add_argument(
+        "--version",
+        dest="expect_version",
+        help="refuse unless the version being prepared is this one (e.g. 1.1.7)",
+    )
 
     pruner = sub.add_parser(
         "prune", help="delete the subscription text that was never submitted to review"
@@ -1439,12 +1572,25 @@ def main() -> int:
     if args.command == "build":
         return build(args.source, args.redo, args.locale, args.translate_name)
 
+    fields: list[str] = []
+    if args.command == "push" and args.fields:
+        fields = [f.strip() for f in args.fields.split(",") if f.strip()]
+        if unknown := [f for f in fields if f not in VERSION_FIELDS]:
+            parser.error(
+                f"--fields: not a version field: {', '.join(unknown)} "
+                f"(one of {', '.join(VERSION_FIELDS)})"
+            )
+    if args.command == "push" and args.expect_version and not fields:
+        parser.error("--version goes with --fields: a full push is not tied to one release")
+
     client = Client(dry_run=getattr(args, "dry_run", False))
     try:
         if args.command == "pull":
             return pull(client)
         if args.command == "prune":
             return prune(client, args.locale, args.include_edits)
+        if fields:
+            return push_fields(client, args.locale, fields, args.expect_version)
         return push(client, args.locale)
     except ApiError as error:
         sys.exit(f"App Store Connect refused the request: {error}")

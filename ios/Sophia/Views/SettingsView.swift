@@ -17,8 +17,14 @@ struct SettingsView: View {
     @State private var showTerms: Bool = false
     @State private var showPrivacy: Bool = false
     @State private var showFeedback: Bool = false
-    @State private var showAmbassador: Bool = false
+    /// Choix du rôle (UGC ou slideshow) avant d'ouvrir la page créateurs du site.
+    @State private var showCreatorChoice: Bool = false
+    @State private var creatorsPage: CreatorsPage? = nil
+    @State private var showAudioDownloads: Bool = false
     @State private var hapticTrigger: Int = 0
+    @State private var reminderHour: Int = DailyCourseReminder.storedHour
+    /// Écran de test des notifications, ouvert depuis la section développeur (Debug).
+    @State private var showDebugNotifications: Bool = false
     /// Set only by the developer section, which is itself behind `#if DEBUG`.
     @State private var debugPaywall: SophiaPaywallContext? = nil
 
@@ -57,10 +63,19 @@ struct SettingsView: View {
 
                         progressionSection
 
+                        // Pendant l'essai gratuit, aucune notification : pas de réglage non plus.
+                        if !store.isInFreeTrial {
+                            reminderSection
+                        }
+
                         if !store.isPremium {
                             premiumSection
                         } else {
                             subscriptionSection
+                        }
+
+                        if store.isPremium || !CourseAudioDownloads.shared.downloaded.isEmpty {
+                            audioSection
                         }
 
                         dataSection
@@ -119,7 +134,25 @@ struct SettingsView: View {
             .sheet(isPresented: $showTerms) { TermsView().sophiaSheetChrome() }
             .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaSheetChrome() }
             .sheet(isPresented: $showFeedback) { FeedbackView(isPremium: store.isPremium) }
-            .sheet(isPresented: $showAmbassador) { AmbassadorView() }
+            .confirmationDialog(
+                languageManager.text("settings.ambassador.banner.title"),
+                isPresented: $showCreatorChoice,
+                titleVisibility: .visible
+            ) {
+                Button(languageManager.text("ambassador.role.ugc.title")) { openCreatorsPage(role: "ugc") }
+                Button(languageManager.text("ambassador.role.slideshow.title")) { openCreatorsPage(role: "slideshow") }
+                Button(languageManager.text("settings.reset.alert.cancel"), role: .cancel) { }
+            }
+            .sheet(item: $creatorsPage) { page in
+                InAppSafariView(url: page.url)
+                    .ignoresSafeArea()
+            }
+            .sheet(isPresented: $showAudioDownloads) { AudioDownloadsView().sophiaSheetChrome() }
+            .sheet(isPresented: $showDebugNotifications) {
+                #if DEBUG
+                DebugNotificationsView()
+                #endif
+            }
         }
         .sophiaColorScheme()
     }
@@ -210,6 +243,41 @@ struct SettingsView: View {
         }
     }
 
+    /// L'heure de la question du jour, choisie dans l'onboarding, modifiable ici.
+    private var reminderSection: some View {
+        section(languageManager.text("settings.section.reminder")) {
+            groupedCard {
+                HStack(spacing: 14) {
+                    iconBadge(name: "bell")
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(languageManager.text("settings.reminder.title"))
+                            .font(DS.sans(.body, .medium))
+                            .foregroundStyle(DS.ink)
+                        Text(languageManager.text("settings.reminder.subtitle"))
+                            .font(DS.sans(.caption, .medium))
+                            .foregroundStyle(DS.inkSecondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    Spacer(minLength: 8)
+                    Picker(languageManager.text("settings.reminder.title"), selection: $reminderHour) {
+                        ForEach(5...23, id: \.self) { hour in
+                            Text(OnboardingV2ReadingTime.label(hour: hour)).tag(hour)
+                        }
+                    }
+                    .pickerStyle(.menu)
+                    .labelsHidden()
+                    .tint(DS.accentSoft)
+                }
+                .padding(.horizontal, 14)
+                .padding(.vertical, 12)
+            }
+        }
+        .onChange(of: reminderHour) { _, hour in
+            DailyCourseReminder.storedHour = hour
+            DailyCourseReminder.refresh()
+        }
+    }
+
     private var premiumSection: some View {
         section(languageManager.text("settings.section.premium")) {
             Button {
@@ -282,6 +350,24 @@ struct SettingsView: View {
         }
         Task {
             try? await AppStore.showManageSubscriptions(in: scene)
+        }
+    }
+
+    private var audioSection: some View {
+        section(languageManager.text("settings.section.audio")) {
+            groupedCard {
+                actionRow(
+                    icon: "arrow.down.circle",
+                    title: languageManager.text("audio.downloads.title"),
+                    subtitle: String(
+                        format: languageManager.text("audio.downloads.subtitle"),
+                        AudioFormat.bytes(CourseAudioDownloads.shared.totalBytes, locale: languageManager.locale)
+                    )
+                ) {
+                    hapticTrigger += 1
+                    showAudioDownloads = true
+                }
+            }
         }
     }
 
@@ -364,6 +450,14 @@ struct SettingsView: View {
                     rowDivider
                 }
                 actionRow(
+                    icon: "bell.badge",
+                    title: languageManager.text("settings.debug.notifications")
+                ) {
+                    hapticTrigger += 1
+                    showDebugNotifications = true
+                }
+                rowDivider
+                actionRow(
                     icon: "calendar.badge.minus",
                     title: languageManager.text("settings.debug.resetDaily"),
                     subtitle: progressManager.hasClaimedDailyFreeCourse
@@ -397,13 +491,20 @@ struct SettingsView: View {
                     hapticTrigger += 1
                     debugPaywall = .debloquerCours
                 }
+                rowDivider
+                actionRow(
+                    icon: "headphones",
+                    title: languageManager.text("settings.debug.audioPaywall")
+                ) {
+                    hapticTrigger += 1
+                    debugPaywall = .audio
+                }
             }
         }
     }
 
-    /// The paywalls the developer section opens, with tracking off: Mixpanel runs in debug
-    /// builds on the production token, so a paywall opened to look at it would otherwise land
-    /// in the funnel as a real impression and a real dismissal.
+    /// The paywalls the developer section opens, with tracking off: a paywall opened to look
+    /// at it would otherwise count as a real RevenueCat impression.
     ///
     /// Closing one just closes it. The comparison paywall that `CourseView` stacks on top of
     /// the quiz and course-unlock paywalls belongs to the course, not to the screen being
@@ -430,6 +531,15 @@ struct SettingsView: View {
                 onRestored: { debugPaywall = nil },
                 onDismissed: { debugPaywall = nil }
             )
+        case .audio:
+            SophiaAudioPaywall(
+                store: store,
+                course: ContentCatalog.activeCourses.first,
+                tracksAnalytics: false,
+                onPurchased: { debugPaywall = nil },
+                onRestored: { debugPaywall = nil },
+                onDismissed: { debugPaywall = nil }
+            )
         default:
             // The discount paywall, the only other one the section opens. With no manager
             // it runs its own 60-minute clock, so it still looks like itself.
@@ -446,10 +556,21 @@ struct SettingsView: View {
 
     // MARK: - Ambassador banner
 
+    /// Page du site pour le rôle choisi, dans Safari intégré. Laisse le choix se refermer
+    /// avant d'ouvrir la page, sinon les deux présentations se gênent.
+    private func openCreatorsPage(role: String) {
+        guard let url = AppConfig.creatorsURL(role: role, language: languageManager.current) else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+            creatorsPage = CreatorsPage(url: url)
+        }
+    }
+
+    /// Demande le rôle (UGC ou slideshow), puis ouvre sa page sur le site. Le formulaire
+    /// intégré n'est plus affiché.
     private var ambassadorBanner: some View {
         Button {
             hapticTrigger += 1
-            showAmbassador = true
+            showCreatorChoice = true
         } label: {
             HStack(spacing: 14) {
                 Image(systemName: "sparkles")
@@ -463,7 +584,7 @@ struct SettingsView: View {
                     }
 
                 VStack(alignment: .leading, spacing: 3) {
-                    Text(languageManager.text("settings.ambassador.banner.badge").uppercased())
+                    Text(languageManager.text("settings.ambassador.banner.badge").uppercasedInApp())
                         .font(DS.sans(.caption2, .semibold))
                         .foregroundStyle(DS.accentSoft)
                         .tracking(1.0)
@@ -494,7 +615,7 @@ struct SettingsView: View {
     @ViewBuilder
     private func section<Content: View>(_ title: String, @ViewBuilder content: () -> Content) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(title.uppercased())
+            Text(title.uppercasedInApp())
                 .font(DS.sans(.caption2, .semibold))
                 .foregroundStyle(DS.inkTertiary)
                 .tracking(1.2)
@@ -593,4 +714,10 @@ struct SettingsView: View {
         .padding(.horizontal, 14)
         .padding(.vertical, 14)
     }
+}
+
+/// Page créateurs à ouvrir dans Safari intégré.
+struct CreatorsPage: Identifiable {
+    let url: URL
+    var id: String { url.absoluteString }
 }

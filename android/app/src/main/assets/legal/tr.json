@@ -60,7 +60,7 @@
     {
       "id": "2",
       "title": "2. Toplanan veriler",
-      "body": "Sophia, veri minimizasyonu göz önünde bulundurularak tasarlanmıştır. Uygulama cihazınızda depolanır:\n\n- Kurslardaki ve sınavlardaki ilerlemeniz\n- Tercihleriniz (ilgi alanlarınız, hedefleriniz)\n- Seriniz (arka arkaya kullanım günleri)\n- En sevdiğiniz kurslar\n\nBu yerel veriler sunucularımıza aktarılmaz.\n\nUygulama ayrıca uygulamanın nasıl kullanıldığını anlamak ve geliştirmek için anonim kullanım olaylarını Mixpanel'e (AB bölgesi) gönderir. Bu etkinlikler adınızı, e-posta adresinizi veya kişisel içeriğinizi içermez.\n\nAyarlar'daki uygulama içi formu kullanarak geri bildirim gönderirseniz, mesajınız ve sağlanmışsa e-posta adresiniz, yanıt verebilmemiz için Formspree'ye iletilir. Teknik bilgiler (uygulama sürümü, dil, cihaz) otomatik olarak eklenir."
+      "body": "Sophia, veri minimizasyonu göz önünde bulundurularak tasarlanmıştır. Uygulama cihazınızda depolanır:\n\n- Kurslardaki ve sınavlardaki ilerlemeniz\n- Tercihleriniz (ilgi alanlarınız, hedefleriniz)\n- Seriniz (arka arkaya kullanım günleri)\n- En sevdiğiniz kurslar\n\nBu yerel veriler sunucularımıza aktarılmaz.\n\nAyarlar'daki uygulama içi formu kullanarak geri bildirim gönderirseniz, mesajınız ve sağlanmışsa e-posta adresiniz, yanıt verebilmemiz için Formspree'ye iletilir. Teknik bilgiler (uygulama sürümü, dil, cihaz) otomatik olarak eklenir."
     },
     {
       "id": "3",
@@ -74,38 +74,33 @@
     },
     {
       "id": "5",
-      "title": "5. Analitik verileri (Mixpanel)",
-      "body": "Uygulama kullanımını (ziyaret edilen ekranlar, açılan kurslar, ödeme duvarı etkileşimleri vb.) ölçmek için Avrupa Birliği'nde barındırılan Mixpanel'i kullanıyoruz. Mixpanel, anonim bir cihaz tanımlayıcısı, uygulama sürümü, dil ve toplu kullanım olaylarını alır. Kişisel olarak tanımlanabilir hiçbir bilgi toplanmaz. Bu analiz verilerinin silinmesini talep etmek için bizimle iletişime geçebilirsiniz."
-    },
-    {
-      "id": "6",
-      "title": "6.Google Analitikleri",
+      "title": "5.Google Analitikleri",
       "body": "Uygulama aynı zamanda Google tarafından sağlanan anonim istatistiklerden de yararlanabilir (Play Console analytics). Bu veriler toplanır ve sizi kişisel olarak tanımlamak için kullanılamaz. Analiz paylaşımını Android cihaz ayarlarınızda (Ayarlar > Gizlilik > Analizler ve İyileştirmeler) devre dışı bırakabilirsiniz."
     },
     {
-      "id": "7",
-      "title": "7. Veri depolama",
+      "id": "6",
+      "title": "6. Veri depolama",
       "body": "İlerleme verileriniz yerel olarak cihazınızda saklanır (local app storage). Bir hesap (Google) oluşturursanız, cihazlarınız arasında senkronizasyonu mümkün kılmak için bu hesap aynı zamanda Supabase sunucularımıza (Avrupa Birliği'nde barındırılan) güvenli bir şekilde yedeklenir. Uygulamanın kaldırılması yerel verileri siler; hesabınızı silmek, sunucudaki ilişkili verileri kalıcı olarak kaldırır."
     },
     {
-      "id": "8",
-      "title": "8. Veri paylaşımı",
-      "body": "Kişisel verileri ticari veya reklam amaçlı olarak üçüncü taraflara satmıyor, kiralamıyor veya paylaşmıyoruz. İletilen veriler şunlarla sınırlıdır: Google ve RevenueCat (abonelikler), Mixpanel (anonim analitik, AB), Formspree (Ayarlardan gönüllü olarak gönderilen kullanıcı geri bildirimi)."
+      "id": "7",
+      "title": "7. Veri paylaşımı",
+      "body": "Kişisel verileri ticari veya reklam amaçlı olarak üçüncü taraflara satmıyor, kiralamıyor veya paylaşmıyoruz. İletilen veriler şunlarla sınırlıdır: Google ve RevenueCat (abonelikler), Formspree (Ayarlardan gönüllü olarak gönderilen kullanıcı geri bildirimi)."
     },
     {
-      "id": "9",
-      "title": "9. Kullanıcı hakları",
+      "id": "8",
+      "title": "8. Kullanıcı hakları",
       "body": "Genel Veri Koruma Yönetmeliği (GDPR) ve geçerli yasalar uyarınca aşağıdaki haklara sahipsiniz:\n\n- Verilerinize erişim hakkı\n- Düzeltme hakkı\n- Silme hakkı (Ayarlardan sıfırlayın)\n- Veri taşınabilirliği hakkı\n- İtiraz hakkı\n\nBu hakları kullanmak için Play Store sayfamızda listelenen adres aracılığıyla bizimle iletişime geçin."
     },
     {
-      "id": "10",
-      "title": "10. Küçüklerin korunması",
+      "id": "9",
+      "title": "9. Küçüklerin korunması",
       "body": "Sophia her yaşa uygun eğitici bir uygulamadır. 16 yaşın altındaki çocuklardan bilerek kişisel veri toplamıyoruz. Uygulamada uygunsuz içerik bulunmamaktadır."
     },
     {
-      "id": "11",
-      "title": "11. Değişiklikler",
-      "body": "Bu politikayı herhangi bir zamanda değiştirme hakkını saklı tutuyoruz. Herhangi bir değişiklik bir Uygulama güncellemesi aracılığıyla iletilecektir.\n\nSon güncelleme: Temmuz 2026"
+      "id": "10",
+      "title": "10. Değişiklikler",
+      "body": "Bu politikayı herhangi bir zamanda değiştirme hakkını saklı tutuyoruz. Herhangi bir değişiklik bir Uygulama güncellemesi aracılığıyla iletilecektir.\n\nSon güncelleme: Eylül 2026"
     }
   ]
 }

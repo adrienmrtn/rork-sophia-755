@@ -5,9 +5,10 @@ import RevenueCat
 /// objectifs sélectionnés).
 ///
 /// Welcome · Langue · Objectifs (multi) · « Sophia va t'aider » · « Me cultiver » (questions) ·
-/// Temps d'écran (slider) · Ta vie en années · « Transforme ce temps » · « Fais bon usage » ·
-/// Swipe · Loading · Profil · Notifications · **Login** · Essai · Rappel · Paywall annuel ·
-/// Paywall comparatif.
+/// Temps d'écran (slider) · Ta vie en années · « Transforme ce temps » · Avis · « Fais bon
+/// usage » · Swipe · Loading · Profil · Notifications · **Login** · Essai · Rappel · Paywall
+/// annuel · Paywall comparatif. Les pages « Se cultiver, c'est long et cher » et « Des cours
+/// écrits par des docteurs et des profs » ont été retirées le 29/09/2026.
 struct OnboardingV2View: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AuthService.self) private var auth
@@ -30,26 +31,25 @@ struct OnboardingV2View: View {
     @State private var showExistingAccountSignIn = false
 
     private enum Screen: Hashable {
-        case welcome, language, objectives, problem, objectiveIntro
-        case questions, phoneTime, yearsGrid, transform, review, teachers, personalize
+        case welcome, language, objectives, objectiveIntro
+        case questions, phoneTime, yearsGrid, transform, review, personalize
         case swipe, loading, profile, readingTime, notifications, login
         case trialSteps, reminder, paywallAnnual, paywallComparison
 
-        /// Nom envoyé à l'analytics : la séquence étant dynamique (page d'essai retirée quand
-        /// l'offering n'inclut pas d'essai), l'index seul ne désigne pas un écran stable.
+        /// Nom stable de l'écran, mémorisé pour reprendre l'onboarding au bon endroit : la
+        /// séquence étant dynamique (page d'essai retirée quand l'offering n'inclut pas
+        /// d'essai), l'index seul ne désigne pas un écran stable.
         var analyticsName: String {
             switch self {
             case .welcome: "welcome"
             case .language: "language"
             case .objectives: "objective"
-            case .problem: "problem"
             case .objectiveIntro: "objective_intro"
             case .questions: "questions"
             case .phoneTime: "phone_time"
             case .yearsGrid: "years_grid"
             case .transform: "transform"
             case .review: "review"
-            case .teachers: "teachers"
             case .personalize: "personalize"
             case .swipe: "swipe_courses"
             case .loading: "loading"
@@ -73,8 +73,8 @@ struct OnboardingV2View: View {
     /// l'offering servie (variante d'expérience RevenueCat) n'inclut pas d'essai, sinon on
     /// promettrait un essai que l'utilisateur n'aura pas.
     private var screens: [Screen] {
-        var list: [Screen] = [.welcome, .language, .objectives, .problem, .objectiveIntro,
-                              .questions, .phoneTime, .yearsGrid, .transform, .review, .teachers, .personalize,
+        var list: [Screen] = [.welcome, .language, .objectives, .objectiveIntro,
+                              .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
                               .swipe, .loading, .profile, .readingTime, .notifications, .login]
         if store.offerings == nil || store.annualHasFreeTrial {
             list.append(.trialSteps)
@@ -84,7 +84,7 @@ struct OnboardingV2View: View {
     }
 
     private static let dotScreens: Set<Screen> = [
-        .objectives, .problem, .objectiveIntro, .questions, .phoneTime, .yearsGrid, .review, .teachers, .swipe, .loading,
+        .objectives, .objectiveIntro, .questions, .phoneTime, .yearsGrid, .review, .swipe, .loading,
     ]
 
     private var current: Screen {
@@ -130,11 +130,6 @@ struct OnboardingV2View: View {
         }
         .onAppear {
             restoreStepIndex()
-            AnalyticsService.trackOnboardingStarted()
-            AnalyticsService.trackOnboardingStepViewed(
-                stepIndex: stepIndex,
-                stepName: current.analyticsName
-            )
         }
         .task {
             notificationsSettled = await NotificationPermission.isSettled()
@@ -150,11 +145,6 @@ struct OnboardingV2View: View {
             OnboardingV2Welcome(
                 onNext: advance,
                 onExistingAccount: {
-                    AnalyticsService.trackOnboardingStepViewed(
-                        stepIndex: stepIndex,
-                        stepName: Screen.welcome.analyticsName,
-                        action: "existing_account"
-                    )
                     showExistingAccountSignIn = true
                 }
             )
@@ -162,8 +152,6 @@ struct OnboardingV2View: View {
             OnboardingV2Language(onNext: advance)
         case .objectives:
             OnboardingV2Objective(vm: vm, onNext: advance)
-        case .problem:
-            OnboardingV2Problem(onNext: advance)
         case .objectiveIntro:
             OnboardingV2ObjectiveIntro(onNext: advance)
         case .questions:
@@ -176,8 +164,6 @@ struct OnboardingV2View: View {
             OnboardingV2Transform(onNext: advance)
         case .review:
             OnboardingV2Review(onNext: advance)
-        case .teachers:
-            OnboardingV2Teachers(onNext: advance)
         case .personalize:
             OnboardingV2Personalize(onNext: advance)
         case .swipe:
@@ -233,7 +219,6 @@ struct OnboardingV2View: View {
         stepIndex = next
         // Remembered on every step, so the app being killed here resumes here.
         OnboardingResumeStore.step = list[next].analyticsName
-        AnalyticsService.trackOnboardingStepViewed(stepIndex: next, stepName: list[next].analyticsName)
     }
 
     private func finish() {
@@ -243,10 +228,6 @@ struct OnboardingV2View: View {
         // into a paywall.
         OnboardingResumeStore.clear()
         vm.persistAndComplete(progressManager: progressManager)
-        AnalyticsService.trackOnboardingCompleted(
-            sawPaywall: current == .paywallAnnual || current == .paywallComparison,
-            isPremiumAtExit: store.isPremium
-        )
         onComplete()
     }
 

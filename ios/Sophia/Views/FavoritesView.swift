@@ -41,7 +41,8 @@ struct FavoritesView: View {
                                             hapticTrigger += 1
                                             selectedCourse = course
                                         },
-                                        progressManager: progressManager
+                                        progressManager: progressManager,
+                                        showsAudio: false
                                     )
                                 }
                             }

@@ -91,10 +91,12 @@ enum LocalizedContentLoader {
             guard let base = CollectionData.allCollections.first(where: { $0.id == dto.id }) else {
                 return nil
             }
+            // Quelques traductions (allemand, portugais) ont gardé le gras `**…**`, que les
+            // titres de collection affichent tels quels.
             return LearningCollection(
                 id: dto.id,
-                title: dto.title,
-                description: dto.description,
+                title: dto.title.replacingOccurrences(of: "**", with: ""),
+                description: dto.description.replacingOccurrences(of: "**", with: ""),
                 coverAssetName: base.coverAssetName,
                 courseIds: dto.courseIds
             )

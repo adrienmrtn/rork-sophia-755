@@ -288,11 +288,6 @@ struct PathQuizView: View {
         newlyPassed = false
         awardResult = nil
         resetResultAnimation()
-        AnalyticsService.trackPathQuizStarted(
-            collectionId: level.collection.id,
-            level: level.number,
-            questionCount: items.count
-        )
         phase = .questions
     }
 
@@ -400,14 +395,6 @@ struct PathQuizView: View {
         } else {
             awardResult = nil
         }
-        AnalyticsService.trackPathQuizCompleted(
-            collectionId: level.collection.id,
-            level: level.number,
-            correct: correctCount,
-            total: total,
-            passed: passed,
-            attempt: bestResult?.attempts ?? 1
-        )
         phase = .result
     }
 

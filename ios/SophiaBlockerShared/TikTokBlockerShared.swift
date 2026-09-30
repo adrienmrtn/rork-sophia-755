@@ -251,6 +251,206 @@ enum TikTokBlockerShared {
                 notificationTitle: "Um curso, depois fazes scroll",
                 notificationBody: "Toca aqui: o teu curso do dia desbloqueia o TikTok."
             )
+        case "tr":
+            return ShieldCopy(
+                title: "Kaydırmadan önce bir şey öğren",
+                subtitle: "TikTok’un kilidini yarına kadar açmak için Sophia’da günün dersini bitir.",
+                pendingSubtitle: "Tamamdır! Şimdi Sophia’yı aç: dersin seni bekliyor.",
+                primaryButton: "Sophia’yı aç",
+                secondaryButton: "Kapat",
+                notificationTitle: "Önce bir ders, sonra kaydır",
+                notificationBody: "Buraya dokun: günün dersi TikTok’un kilidini açar."
+            )
+        case "pl":
+            return ShieldCopy(
+                title: "Najpierw nauka, potem scroll",
+                subtitle: "Ukończ kurs dnia w Sophii, aby odblokować TikToka do jutra.",
+                pendingSubtitle: "Jasne! Otwórz teraz Sophię: twój kurs czeka.",
+                primaryButton: "Otwórz Sophię",
+                secondaryButton: "Zamknij",
+                notificationTitle: "Jeden kurs i możesz scrollować",
+                notificationBody: "Dotknij tutaj: twój kurs dnia odblokuje TikToka."
+            )
+        case "ro":
+            return ShieldCopy(
+                title: "Învață ceva înainte să derulezi",
+                subtitle: "Termină cursul de azi în Sophia ca să deblochezi TikTok până mâine.",
+                pendingSubtitle: "Perfect! Deschide Sophia acum: cursul tău te așteaptă.",
+                primaryButton: "Deschide Sophia",
+                secondaryButton: "Închide",
+                notificationTitle: "Un curs, apoi derulezi",
+                notificationBody: "Atinge aici: cursul de azi deblochează TikTok."
+            )
+        case "nl":
+            return ShieldCopy(
+                title: "Leer iets voordat je scrolt",
+                subtitle: "Rond je cursus van de dag af in Sophia om TikTok tot morgen te ontgrendelen.",
+                pendingSubtitle: "Genoteerd! Open Sophia nu: je cursus wacht op je.",
+                primaryButton: "Open Sophia",
+                secondaryButton: "Sluiten",
+                notificationTitle: "Eerst een cursus, dan scrollen",
+                notificationBody: "Tik hier: je cursus van de dag ontgrendelt TikTok."
+            )
+        case "el":
+            return ShieldCopy(
+                title: "Μάθε κάτι πριν σκρολάρεις",
+                subtitle: "Τελείωσε το μάθημα της ημέρας σου στη Sophia για να ξεκλειδώσεις το TikTok μέχρι αύριο.",
+                pendingSubtitle: "Έγινε! Άνοιξε τη Sophia τώρα: το μάθημά σου σε περιμένει.",
+                primaryButton: "Άνοιξε τη Sophia",
+                secondaryButton: "Κλείσιμο",
+                notificationTitle: "Ένα μάθημα, και μετά σκρολάρεις",
+                notificationBody: "Πάτα εδώ: το μάθημα της ημέρας σου ξεκλειδώνει το TikTok."
+            )
+        case "sv":
+            return ShieldCopy(
+                title: "Lär dig något innan du scrollar",
+                subtitle: "Gör klart dagens kurs i Sophia för att låsa upp TikTok till imorgon.",
+                pendingSubtitle: "Uppfattat! Öppna Sophia nu: din kurs väntar.",
+                primaryButton: "Öppna Sophia",
+                secondaryButton: "Stäng",
+                notificationTitle: "En kurs, sen scrollar du",
+                notificationBody: "Tryck här: dagens kurs låser upp TikTok."
+            )
+        case "hu":
+            return ShieldCopy(
+                title: "Előbb tanulj, aztán görgess",
+                subtitle: "Fejezd be a mai kurzusodat a Sophiában, hogy holnapig feloldd a TikTokot.",
+                pendingSubtitle: "Megvan! Nyisd meg most a Sophiát: vár a kurzusod.",
+                primaryButton: "Sophia megnyitása",
+                secondaryButton: "Bezárás",
+                notificationTitle: "Egy kurzus, aztán görgethetsz",
+                notificationBody: "Koppints ide: a mai kurzusod feloldja a TikTokot."
+            )
+        case "bg":
+            return ShieldCopy(
+                title: "Научи нещо, преди да скролваш",
+                subtitle: "Завърши курса си за деня в Sophia, за да отключиш TikTok до утре.",
+                pendingSubtitle: "Готово! Отвори Sophia сега: курсът ти те чака.",
+                primaryButton: "Отвори Sophia",
+                secondaryButton: "Затвори",
+                notificationTitle: "Един курс, после скролваш",
+                notificationBody: "Докосни тук: курсът ти за деня отключва TikTok."
+            )
+        case "cs":
+            return ShieldCopy(
+                title: "Nejdřív se něco nauč, pak scrolluj",
+                subtitle: "Dokonči kurz dne v Sophii a TikTok se ti odblokuje do zítřka.",
+                pendingSubtitle: "Jasně! Teď otevři Sophii: kurz na tebe čeká.",
+                primaryButton: "Otevřít Sophii",
+                secondaryButton: "Zavřít",
+                notificationTitle: "Jeden kurz a pak scrolluj",
+                notificationBody: "Klepni sem: kurz dne ti odblokuje TikTok."
+            )
+        case "da":
+            return ShieldCopy(
+                title: "Lær noget, før du scroller",
+                subtitle: "Gennemfør dagens kursus på Sophia for at låse TikTok op indtil i morgen.",
+                pendingSubtitle: "Forstået! Åbn Sophia nu: dit kursus venter.",
+                primaryButton: "Åbn Sophia",
+                secondaryButton: "Luk",
+                notificationTitle: "Ét kursus, så kan du scrolle",
+                notificationBody: "Tryk her: dagens kursus låser TikTok op."
+            )
+        case "nb", "no":
+            return ShieldCopy(
+                title: "Lær noe før du scroller",
+                subtitle: "Fullfør dagens kurs på Sophia for å låse opp TikTok til i morgen.",
+                pendingSubtitle: "Notert! Åpne Sophia nå: kurset ditt venter.",
+                primaryButton: "Åpne Sophia",
+                secondaryButton: "Lukk",
+                notificationTitle: "Ett kurs, så kan du scrolle",
+                notificationBody: "Trykk her: dagens kurs låser opp TikTok."
+            )
+        case "ru":
+            return ShieldCopy(
+                title: "Сначала узнай новое, потом листай",
+                subtitle: "Пройди курс дня в Sophia, чтобы разблокировать TikTok до завтра.",
+                pendingSubtitle: "Принято! Открой Sophia прямо сейчас: курс уже ждёт.",
+                primaryButton: "Открыть Sophia",
+                secondaryButton: "Закрыть",
+                notificationTitle: "Один курс — и листай дальше",
+                notificationBody: "Нажми сюда: курс дня разблокирует TikTok."
+            )
+        case "hr":
+            return ShieldCopy(
+                title: "Nauči nešto prije skrolanja",
+                subtitle: "Završi tečaj dana u Sophiji i otključaj TikTok do sutra.",
+                pendingSubtitle: "Zabilježeno! Sad otvori Sophiju: tečaj te čeka.",
+                primaryButton: "Otvori Sophiju",
+                secondaryButton: "Zatvori",
+                notificationTitle: "Jedan tečaj, pa skrolaj",
+                notificationBody: "Dodirni ovdje: tvoj tečaj dana otključava TikTok."
+            )
+        case "sl":
+            return ShieldCopy(
+                title: "Nauči se kaj, preden drsaš",
+                subtitle: "Dokončaj tečaj dneva v Sophii in odkleni TikTok do jutri.",
+                pendingSubtitle: "Zabeleženo! Zdaj odpri Sophio: tečaj te čaka.",
+                primaryButton: "Odpri Sophio",
+                secondaryButton: "Zapri",
+                notificationTitle: "En tečaj, potem drsaj",
+                notificationBody: "Tapni tukaj: tvoj tečaj dneva odklene TikTok."
+            )
+        case "sk":
+            return ShieldCopy(
+                title: "Nauč sa niečo pred scrollovaním",
+                subtitle: "Dokonči kurz dňa v Sophii a odomkni si TikTok do zajtra.",
+                pendingSubtitle: "Mám to! Teraz otvor Sophiu: kurz na teba čaká.",
+                primaryButton: "Otvoriť Sophiu",
+                secondaryButton: "Zavrieť",
+                notificationTitle: "Jeden kurz, potom scrolluj",
+                notificationBody: "Ťukni sem: tvoj kurz dňa odomkne TikTok."
+            )
+        case "sr":
+            return ShieldCopy(
+                title: "Nauči nešto pre skrolovanja",
+                subtitle: "Završi kurs dana u aplikaciji Sophia i otključaj TikTok do sutra.",
+                pendingSubtitle: "Zabeleženo! Sad otvori Sophia: kurs te čeka.",
+                primaryButton: "Otvori Sophia",
+                secondaryButton: "Zatvori",
+                notificationTitle: "Jedan kurs, pa skroluj",
+                notificationBody: "Dodirni ovde: tvoj kurs dana otključava TikTok."
+            )
+        case "ar":
+            return ShieldCopy(
+                title: "تثقّف قبل أن تتصفّح",
+                subtitle: "أنهِ درسك اليومي على Sophia لرفع الحظر عن TikTok حتى الغد.",
+                pendingSubtitle: "حسنًا! افتح Sophia الآن: درسك بانتظارك.",
+                primaryButton: "افتح Sophia",
+                secondaryButton: "إغلاق",
+                notificationTitle: "درس أولًا، ثم تصفّح",
+                notificationBody: "اضغط هنا: درسك اليومي يرفع الحظر عن TikTok."
+            )
+        case "he":
+            return ShieldCopy(
+                title: "קצת תרבות לפני הגלילה",
+                subtitle: "סיים את השיעור היומי שלך ב־Sophia כדי לשחרר את TikTok עד מחר.",
+                pendingSubtitle: "קיבלנו! פתח את Sophia עכשיו: השיעור שלך מחכה.",
+                primaryButton: "פתח את Sophia",
+                secondaryButton: "סגור",
+                notificationTitle: "שיעור אחד, ואז גוללים",
+                notificationBody: "הקש כאן: השיעור היומי שלך משחרר את TikTok."
+            )
+        case "fi":
+            return ShieldCopy(
+                title: "Sivisty ennen kuin skrollaat",
+                subtitle: "Suorita päivän kurssisi Sophiassa, niin TikTok aukeaa huomiseen asti.",
+                pendingSubtitle: "Selvä! Avaa nyt Sophia: kurssisi odottaa.",
+                primaryButton: "Avaa Sophia",
+                secondaryButton: "Sulje",
+                notificationTitle: "Kurssi ensin, sitten skrollaamaan",
+                notificationBody: "Napauta tästä: päivän kurssisi avaa TikTokin."
+            )
+        case "et":
+            return ShieldCopy(
+                title: "Hari end enne kerimist",
+                subtitle: "Lõpeta Sophias oma päeva kursus, et TikTok homseni avada.",
+                pendingSubtitle: "Selge! Ava nüüd Sophia: sinu kursus ootab.",
+                primaryButton: "Ava Sophia",
+                secondaryButton: "Sulge",
+                notificationTitle: "Enne kursus, siis kerimine",
+                notificationBody: "Puuduta siin: sinu päeva kursus avab TikToki."
+            )
         default:
             return ShieldCopy(
                 title: "Learn something before you scroll",

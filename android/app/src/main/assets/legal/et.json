@@ -60,7 +60,7 @@
     {
       "id": "2",
       "title": "2. Kogutud andmed",
-      "body": "Sophia on loodud andmete minimeerimist silmas pidades. Rakendus salvestab teie seadmesse:\n\n- Teie edusammud kursustel ja viktoriinidel\n- Teie eelistused (huvid, eesmärgid)\n- teie jada (järjestikused kasutuspäevad)\n- Sinu lemmikkursused\n\nNeid kohalikke andmeid meie serveritesse ei edastata.\n\nRakendus saadab ka anonüümseid kasutussündmusi Mixpanel-le (EL-i piirkond), et mõista, kuidas rakendust kasutatakse ja seda täiustada. Need sündmused ei sisalda teie nime, e-posti aadressi ega isiklikku sisu.\n\nKui saadate tagasisidet jaotises Seaded rakendusesisese vormi kaudu, edastatakse teie sõnum ja (kui see on esitatud) teie e-posti aadress Formspree'i, et saaksime vastata. Tehniline teave (rakenduse versioon, keel, seade) lisatakse automaatselt."
+      "body": "Sophia on loodud andmete minimeerimist silmas pidades. Rakendus salvestab teie seadmesse:\n\n- Teie edusammud kursustel ja viktoriinidel\n- Teie eelistused (huvid, eesmärgid)\n- teie jada (järjestikused kasutuspäevad)\n- Sinu lemmikkursused\n\nNeid kohalikke andmeid meie serveritesse ei edastata.\n\nKui saadate tagasisidet jaotises Seaded rakendusesisese vormi kaudu, edastatakse teie sõnum ja (kui see on esitatud) teie e-posti aadress Formspree'i, et saaksime vastata. Tehniline teave (rakenduse versioon, keel, seade) lisatakse automaatselt."
     },
     {
       "id": "3",
@@ -74,38 +74,33 @@
     },
     {
       "id": "5",
-      "title": "5. Analyticsi andmed (Mixpanel)",
-      "body": "Kasutame Euroopa Liidus hostitud Mixpanel-i rakenduste kasutamise mõõtmiseks (külastatud ekraanid, avatud kursused, maksemüüri interaktsioonid jne). Mixpanel saab anonüümse seadme identifikaatori, rakenduse versiooni, keele ja koondatud kasutussündmused. Isiku tuvastamist võimaldavat teavet ei koguta. Võite meiega ühendust võtta, et taotleda nende analüüsiandmete kustutamist."
-    },
-    {
-      "id": "6",
-      "title": "6. Google Play / Android analüütika",
+      "title": "5. Google Play / Android analüütika",
       "body": "Rakendus võib kasu saada ka anonüümsest statistikast, mida pakub Google (Play Console analytics). Need andmed on koondatud ja neid ei saa kasutada teie isiklikuks tuvastamiseks. Saate analüütika jagamise keelata seadme Android seadetes (Google > Google Account haldamine > Andmed ja privaatsus)."
     },
     {
-      "id": "7",
-      "title": "7. Andmete salvestamine",
+      "id": "6",
+      "title": "6. Andmete salvestamine",
       "body": "Teie edenemisandmed salvestatakse teie seadmesse (kohalik rakenduste salvestusruum). Kui loote konto (Google), varundatakse see turvaliselt ka meie Supabase serveritesse (majutatakse Euroopa Liidus), et võimaldada teie seadmete vahel sünkroonimist. Rakenduse desinstallimine kustutab kohalikud andmed; konto kustutamine eemaldab serverist jäädavalt seotud andmed."
     },
     {
-      "id": "8",
-      "title": "8. Andmete jagamine",
-      "body": "Me ei müü, rendi ega jaga isikuandmeid kolmandate isikutega ärilistel või reklaamieesmärkidel. Edastatud andmed on piiratud: Google ja RevenueCat (tellimused), Mixpanel (anonüümne analüütika, EL), Formspree (kasutajate tagasiside, mis saadetakse vabatahtlikult seadetest)."
+      "id": "7",
+      "title": "7. Andmete jagamine",
+      "body": "Me ei müü, rendi ega jaga isikuandmeid kolmandate isikutega ärilistel või reklaamieesmärkidel. Edastatud andmed on piiratud: Google ja RevenueCat (tellimused), Formspree (kasutajate tagasiside, mis saadetakse vabatahtlikult seadetest)."
     },
     {
-      "id": "9",
-      "title": "9. Kasutajaõigused",
+      "id": "8",
+      "title": "8. Kasutajaõigused",
       "body": "Andmekaitse üldmääruse (GDPR) ja kehtivate seaduste kohaselt on teil järgmised õigused:\n\n- Juurdepääsuõigus teie andmetele\n- Õigus parandada\n- Kustutamise õigus (lähtestage seadetes)\n- Õigus andmete teisaldatavusele\n- Õigus esitada vastuväiteid\n\nNende õiguste kasutamiseks võtke meiega ühendust meie Play Store lehel loetletud aadressi kaudu."
     },
     {
-      "id": "10",
-      "title": "10. Alaealiste kaitse",
+      "id": "9",
+      "title": "9. Alaealiste kaitse",
       "body": "Sophia on hariv rakendus, mis sobib igas vanuses. Me ei kogu teadlikult isikuandmeid alla 16-aastastelt lastelt. Rakendus ei sisalda sobimatut sisu."
     },
     {
-      "id": "11",
-      "title": "11. Muudatused",
-      "body": "Jätame endale õiguse seda poliitikat igal ajal muuta. Kõikidest muudatustest teavitatakse rakenduse värskenduse kaudu.\n\nViimati värskendatud: juuli 2026"
+      "id": "10",
+      "title": "10. Muudatused",
+      "body": "Jätame endale õiguse seda poliitikat igal ajal muuta. Kõikidest muudatustest teavitatakse rakenduse värskenduse kaudu.\n\nViimati värskendatud: september 2026"
     }
   ]
 }

@@ -19,7 +19,6 @@ struct SophiaApp: App {
         #else
         Purchases.configure(withAPIKey: AppConfig.EXPO_PUBLIC_REVENUECAT_IOS_API_KEY)
         #endif
-        AnalyticsService.configure()
         AuthService.shared.start()
         // Les boutons dans un `ScrollView` (ex. « Commencer » sur les cartes accueil) répondent
         // au tap immédiatement, sans le délai UIKit qui obligeait à attendre la fin du
@@ -42,7 +41,6 @@ struct SophiaApp: App {
                             showOnboarding = false
                         }
                     })
-                    .trackAnalyticsLifecycle(isPremium: false)
                 } else {
                     ContentView(
                         onResetOnboarding: {
@@ -83,19 +81,9 @@ struct SophiaApp: App {
                 if GIDSignIn.sharedInstance.handle(url) {
                     return
                 }
-                // Callbacks Meta (fb…) + deep links Sophia (`sophia://…`).
+                // Callbacks Meta (fb…) + deep links Sophia (`sophia://…`, widget compris).
                 MetaAdsService.handleOpenURL(url)
-                if SophiaDeepLink.isUnlockRequest(url) {
-                    // Same stamp the shield writes; the home screen reads it right away.
-                    TikTokBlockerShared.pendingRequestAt = Date()
-                    deepLinkRouter.requestUnlock()
-                    return
-                }
-                if let courseId = SophiaDeepLink.courseId(from: url) {
-                    // Parked rather than delivered: the onboarding may still be on screen,
-                    // and the home opens it as soon as it is ready.
-                    deepLinkRouter.requestCourse(courseId)
-                }
+                deepLinkRouter.open(url)
             }
         }
     }

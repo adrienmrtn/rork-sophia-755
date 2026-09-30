@@ -21,12 +21,10 @@ struct ContentView: View {
     @State private var showSwipeTutorial: Bool = false
     @State private var pendingCourse: Course? = nil
     @State private var autoSwipeCourseId: String? = nil
-    @State private var pendingCourseSource = "home_tinder"
     @State private var showTrialEndingBanner: Bool = false
     @State private var showMyCourses: Bool = false
-    /// Set by an entry point that knows where the course came from (a link, the history
-    /// screen) and consumed on the next open.
-    @State private var explicitCourseSource: String? = nil
+    /// Full audio player, opened from the mini-player above the tab bar.
+    @State private var showAudioPlayer: Bool = false
 
     var body: some View {
         ZStack {
@@ -40,24 +38,23 @@ struct ContentView: View {
                         autoSwipeCourseId: $autoSwipeCourseId,
                         onShowDiscountPaywall: {
                             if storeVM.isPremium { return }
-                            AnalyticsService.trackDiscountOfferViewed(source: "home_banner")
                             discountManager.markShownToday()
                             paywallContext = .offreDiscount
                         },
                         onOpenMyCourses: { showMyCourses = true }
                     )
+                    .audioMiniPlayerInset(onOpen: openAudioPlayer)
                 }
 
                 Tab(languageManager.text("tab.library"), systemImage: "books.vertical.fill", value: 1) {
-                    LibraryView(
-                        progressManager: progressManager,
-                        selectedCourse: $selectedCourse
-                    )
+                    libraryTab
+                        .audioMiniPlayerInset(onOpen: openAudioPlayer)
                 }
 
                 // The path took the collections' slot; the former collections pages are gone.
                 Tab(languageManager.text("tab.path"), systemImage: "point.bottomleft.forward.to.point.topright.scurvepath.fill", value: 2) {
                     pathTab
+                        .audioMiniPlayerInset(onOpen: openAudioPlayer)
                 }
 
                 Tab(languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", value: 3) {
@@ -70,6 +67,7 @@ struct ContentView: View {
                             paywallContext = .entrainement
                         }
                     )
+                    .audioMiniPlayerInset(onOpen: openAudioPlayer)
                 }
 
                 Tab(languageManager.text("tab.profile"), systemImage: "person.fill", value: 4) {
@@ -82,6 +80,7 @@ struct ContentView: View {
                         },
                         onResetOnboarding: onResetOnboarding
                     )
+                    .audioMiniPlayerInset(onOpen: openAudioPlayer)
                 }
             }
             .tint(DS.accent)
@@ -101,15 +100,6 @@ struct ContentView: View {
                     // course opened today is intro-only + locked.
                     progressManager.claimDailyFreeCourseIfNeeded(course.id)
                 }
-                // An entry point that names itself keeps its name. This used to overwrite
-                // every source with the current tab, so a course opened from a link was
-                // reported as opened from home.
-                if let explicit = explicitCourseSource {
-                    pendingCourseSource = explicit
-                    explicitCourseSource = nil
-                } else {
-                    pendingCourseSource = courseSourceForCurrentTab()
-                }
                 pendingCourse = course
             }
             .fullScreenCover(item: $pendingCourse) { course in
@@ -117,7 +107,6 @@ struct ContentView: View {
                     course: course,
                     progressManager: progressManager,
                     store: storeVM,
-                    openSource: pendingCourseSource,
                     onDismissToHome: {
                         let courseId = course.id
                         pendingCourse = nil
@@ -152,7 +141,6 @@ struct ContentView: View {
                     discountManager.consumeGift()
                     discountManager.triggerIfNeeded()
                     discountManager.markShownToday()
-                    AnalyticsService.trackDiscountOfferViewed(source: "gift")
                     paywallContext = .offreDiscount
                 })
                 .transition(.opacity)
@@ -165,7 +153,6 @@ struct ContentView: View {
                pendingCourse == nil,
                paywallContext == nil {
                 DiscountSideTab(discountManager: discountManager) {
-                    AnalyticsService.trackDiscountOfferViewed(source: "side_tab")
                     discountManager.markShownToday()
                     paywallContext = .offreDiscount
                 }
@@ -208,7 +195,6 @@ struct ContentView: View {
                 progressManager: progressManager,
                 onOpenCourse: { course in
                     showMyCourses = false
-                    explicitCourseSource = "my_courses"
                     // The sheet has to be gone before the reader is presented, or the two
                     // presentations race and neither appears.
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
@@ -222,11 +208,13 @@ struct ContentView: View {
             SophiaPaywallView(
                 context: context,
                 store: storeVM,
+                course: paywallCourse(for: context),
                 discountManager: discountManager,
                 secondsUntilReset: context == .debloquerCours ? progressManager.secondsUntilDailyReset() : nil,
                 onPurchased: {
                     if context == .offreDiscount { discountManager.markExpired() }
                     paywallContext = nil
+                    if context == .audio { playAudioAfterPurchase() }
                 },
                 onRestored: { paywallContext = nil },
                 onDismissed: { paywallContext = nil }
@@ -252,11 +240,6 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            AnalyticsService.updateUserContext(
-                language: languageManager.current,
-                isPremium: storeVM.isPremium,
-                onboardingCompleted: true
-            )
             presentTrialEndingBannerIfNeeded()
             // ATT est demandée dès l'ouverture de l'app (voir SophiaApp), plus ici.
             guard HomeCardPresentation.style == .legacy else { return }
@@ -270,13 +253,6 @@ struct ContentView: View {
         }
         .onChange(of: storeVM.trialExpiresInOneDay) { _, _ in
             presentTrialEndingBannerIfNeeded()
-        }
-        .onChange(of: storeVM.isPremium) { _, isPremium in
-            AnalyticsService.updateUserContext(
-                language: languageManager.current,
-                isPremium: isPremium,
-                onboardingCompleted: true
-            )
         }
         // Both paths matter: `onChange` for a link that arrives while home is on screen,
         // and `task` for one that was parked during the onboarding — `onChange` does not
@@ -304,7 +280,54 @@ struct ContentView: View {
         .onChange(of: languageManager.current) { _, language in
             blocker.syncLanguage(language)
         }
-        .trackAnalyticsLifecycle(isPremium: storeVM.isPremium)
+        .dailyQuestionUpdates(store: storeVM, progressManager: progressManager)
+        .courseAudioHost(
+            store: storeVM,
+            progressManager: progressManager,
+            showPlayer: $showAudioPlayer,
+            onShowPaywall: presentAudioPaywall
+        )
+    }
+
+    // MARK: - Audio
+
+    private func openAudioPlayer() {
+        showAudioPlayer = true
+    }
+
+    /// A free user asked for audio. From the full player (a subscription that lapsed), the
+    /// sheet has to go first: a cover cannot be presented over it from here.
+    private func presentAudioPaywall() {
+        guard showAudioPlayer else {
+            paywallContext = .audio
+            return
+        }
+        showAudioPlayer = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            paywallContext = .audio
+        }
+    }
+
+    /// The audio paywall shows the course the user wanted to hear.
+    private func paywallCourse(for context: SophiaPaywallContext) -> Course? {
+        guard context == .audio, let id = CourseAudioPlayer.shared.paywallCourseId else { return nil }
+        return ContentCatalog.course(withId: id)
+    }
+
+    /// Bought from the audio paywall: play what they asked for, without a second tap.
+    private func playAudioAfterPurchase() {
+        let player = CourseAudioPlayer.shared
+        player.isPremium = storeVM.isPremium
+        guard storeVM.isPremium, let id = player.paywallCourseId else { return }
+        player.requestPlay(courseId: id, source: "paywall_purchase")
+    }
+
+    private var libraryTab: some View {
+        LibraryView(
+            progressManager: progressManager,
+            selectedCourse: $selectedCourse,
+            isInFreeTrial: storeVM.isInFreeTrial
+        )
     }
 
     private var pathTab: some View {
@@ -343,27 +366,6 @@ struct ContentView: View {
         return String(format: "%04d-%02d-%02d", comps.year ?? 0, comps.month ?? 0, comps.day ?? 0)
     }
 
-    private func courseSourceForCurrentTab() -> String {
-        switch selectedTab {
-        case 0:
-            switch HomeCardPresentation.style {
-            case .legacy: return "home_legacy"
-            case .tinder: return "home_tinder"
-            case .tiktok: return "home_tiktok"
-            }
-        case 1:
-            return "library"
-        case 2:
-            return "path"
-        case 3:
-            return "training"
-        case 4:
-            return "profile"
-        default:
-            return "unknown"
-        }
-    }
-
     /// "Open Sophia" on the TikTok shield lands here. No home, no picker: the course is
     /// chosen and opened at once, and the reader shows its lock banner.
     private func openBlockerCourseIfNeeded() {
@@ -377,7 +379,6 @@ struct ContentView: View {
             selectedCourse = nil
         }
         selectedTab = 0
-        explicitCourseSource = "tiktok_blocker"
         // Any cover that was up needs to be gone before the reader is presented, or the
         // two presentations race and neither appears (same delay as `MyCoursesView`).
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
@@ -385,10 +386,18 @@ struct ContentView: View {
         }
     }
 
-    /// Same recommendation as the home deck, restricted to courses that have a quiz:
-    /// without one there is nothing to finish. Everything done: any course with a quiz,
-    /// a re-read is still a read.
+    /// The question of the day when it is still unread (every question has a quiz);
+    /// otherwise the same recommendation as the home deck, restricted to courses that
+    /// have a quiz: without one there is nothing to finish. Everything done: any course
+    /// with a quiz, a re-read is still a read.
     private func blockerCandidateCourse() -> Course? {
+        let isCompleted: (String) -> Bool = { progressManager.courseStatus(for: $0) == .completed }
+        if let id = DailyQuestion.todayCourseId(language: languageManager.current, isCompleted: isCompleted),
+           !isCompleted(id),
+           let course = ContentCatalog.course(withId: id),
+           course.hasQuiz {
+            return course
+        }
         let withQuiz = ContentCatalog.activeCourses.filter(\.hasQuiz)
         let deck = HomeDeckBuilder.deck(
             from: withQuiz,
@@ -405,13 +414,8 @@ struct ContentView: View {
             router.discard()
             return
         }
-        let source = router.pendingSource
         _ = router.consume()
         selectedTab = 0
-        explicitCourseSource = source
-        if source == "deep_link" {
-            AnalyticsService.trackDeepLinkOpened(courseId: courseId)
-        }
         selectedCourse = course
     }
 }

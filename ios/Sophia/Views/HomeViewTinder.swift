@@ -371,7 +371,7 @@ private struct TinderFlashCard: View {
 
     private var bottomPanel: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text(course.subject.localizedShortName(language: language).uppercased())
+            Text(course.subject.localizedShortName(language: language).uppercasedInApp())
                 .font(DS.sans(.caption, .semibold))
                 .foregroundStyle(DS.accentSoft)
                 .tracking(1.2)

@@ -60,7 +60,7 @@
     {
       "id": "2",
       "title": "2. Dati raccolti",
-      "body": "Sophia Ã¨ progettata secondo il principio della minimizzazione dei dati. L'Applicazione memorizza sul tuo dispositivo:\n\n- I tuoi progressi nei corsi e nei quiz\n- Le tue preferenze (interessi, obiettivi)\n- La tua serie (giorni consecutivi di utilizzo)\n- I tuoi corsi preferiti\n\nQuesti dati locali non vengono trasmessi ai nostri server.\n\nL'Applicazione invia inoltre eventi di utilizzo anonimi a Mixpanel (regione UE) per capire come viene utilizzata l'app e migliorarla. Questi eventi non contengono il tuo nome, la tua email o contenuti personali.\n\nSe ci invii un feedback tramite il modulo nelle impostazioni, il tuo messaggio e, se fornito, il tuo indirizzo email vengono trasmessi a Formspree per consentirci di risponderti. Le informazioni tecniche (versione dell'app, lingua, dispositivo) vengono allegate automaticamente."
+      "body": "Sophia è progettata secondo il principio della minimizzazione dei dati. L'Applicazione memorizza sul tuo dispositivo:\n\n- I tuoi progressi nei corsi e nei quiz\n- Le tue preferenze (interessi, obiettivi)\n- La tua serie (giorni consecutivi di utilizzo)\n- I tuoi corsi preferiti\n\nQuesti dati locali non vengono trasmessi ai nostri server.\n\nSe ci invii un feedback tramite il modulo nelle impostazioni, il tuo messaggio e, se fornito, il tuo indirizzo email vengono trasmessi a Formspree per consentirci di risponderti. Le informazioni tecniche (versione dell'app, lingua, dispositivo) vengono allegate automaticamente."
     },
     {
       "id": "3",
@@ -74,38 +74,33 @@
     },
     {
       "id": "5",
-      "title": "5. Dati analitici (Mixpanel)",
-      "body": "Utilizziamo Mixpanel, ospitato nell'Unione europea, per misurare l'utilizzo dell'Applicazione (schermate visitate, corsi aperti, interazioni con il paywall, ecc.). Mixpanel riceve un identificatore anonimo generato dal dispositivo, la versione dell'app, la lingua ed eventi di utilizzo aggregati. Non viene raccolto alcun dato personale. Puoi contattarci per richiedere la cancellazione di questi dati analitici."
-    },
-    {
-      "id": "6",
-      "title": "6. Dati di Google Play / Android analytics",
+      "title": "5. Dati di Google Play / Android analytics",
       "body": "L'Applicazione può inoltre beneficiare delle statistiche anonime fornite da Google (Play Console analytics). Questi dati sono aggregati e non consentono di identificarti personalmente. Puoi disattivare la condivisione dei dati analitici nelle impostazioni del tuo Android device (Impostazioni > Privacy > Analisi e miglioramenti)."
     },
     {
-      "id": "7",
-      "title": "7. Conservazione dei dati",
+      "id": "6",
+      "title": "6. Conservazione dei dati",
       "body": "Tutti i tuoi dati di avanzamento sono memorizzati localmente sul tuo dispositivo tramite local app storage. Non vengono salvati nel cloud. La disinstallazione dell'Applicazione comporta l'eliminazione definitiva di questi dati."
     },
     {
+      "id": "7",
+      "title": "7. Condivisione dei dati",
+      "body": "Non vendiamo, noleggiamo né condividiamo alcun dato personale con terzi per finalità commerciali o pubblicitarie. I dati trasmessi si limitano a: Google e RevenueCat (abbonamenti), Formspree (feedback degli utenti inviati volontariamente dalle impostazioni)."
+    },
+    {
       "id": "8",
-      "title": "8. Condivisione dei dati",
-      "body": "Non vendiamo, noleggiamo né condividiamo alcun dato personale con terzi per finalità commerciali o pubblicitarie. I dati trasmessi si limitano a: Google e RevenueCat (abbonamenti), Mixpanel (analisi anonime, UE), Formspree (feedback degli utenti inviati volontariamente dalle impostazioni)."
+      "title": "8. Diritti degli utenti",
+      "body": "Ai sensi del Regolamento generale sulla protezione dei dati (GDPR) e delle leggi applicabili, disponi dei seguenti diritti:\n\n- Diritto di accesso ai tuoi dati\n- Diritto di rettifica\n- Diritto alla cancellazione (ripristino nelle impostazioni)\n- Diritto alla portabilità\n- Diritto di opposizione\n\nPer esercitare questi diritti, contattaci all'indirizzo indicato sulla nostra pagina delle Play Store."
     },
     {
       "id": "9",
-      "title": "9. Diritti degli utenti",
-      "body": "Ai sensi del Regolamento generale sulla protezione dei dati (GDPR) e delle leggi applicabili, disponi dei seguenti diritti:\n\n- Diritto di accesso ai tuoi dati\n- Diritto di rettifica\n- Diritto alla cancellazione (ripristino nelle impostazioni)\n- Diritto alla portabilitÃ \n- Diritto di opposizione\n\nPer esercitare questi diritti, contattaci all'indirizzo indicato sulla nostra pagina delle Play Store."
-    },
-    {
-      "id": "10",
-      "title": "10. Protezione dei minori",
+      "title": "9. Protezione dei minori",
       "body": "Sophia è un'applicazione educativa adatta a tutte le età. Non raccogliamo consapevolmente alcun dato personale di minori di 16 anni. L'Applicazione non contiene contenuti inappropriati."
     },
     {
-      "id": "11",
-      "title": "11. Modifiche",
-      "body": "Ci riserviamo il diritto di modificare la presente informativa in qualsiasi momento. Qualsiasi modifica sarÃ  comunicata tramite un aggiornamento dell'Applicazione.\n\nUltimo aggiornamento: luglio 2026"
+      "id": "10",
+      "title": "10. Modifiche",
+      "body": "Ci riserviamo il diritto di modificare la presente informativa in qualsiasi momento. Qualsiasi modifica sarà comunicata tramite un aggiornamento dell'Applicazione.\n\nUltimo aggiornamento: settembre 2026"
     }
   ]
 }
