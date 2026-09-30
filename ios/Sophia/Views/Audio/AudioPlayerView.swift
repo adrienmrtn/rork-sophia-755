@@ -116,7 +116,7 @@ struct AudioPlayerView: View {
 
             Spacer()
 
-            Text(languageManager.text("audio.nowPlaying").uppercased())
+            Text(languageManager.text("audio.nowPlaying").uppercasedInApp())
                 .font(DS.sans(.caption2, .semibold))
                 .foregroundStyle(DS.inkTertiary)
                 .tracking(1.2)

@@ -10,7 +10,7 @@ nonisolated struct DailyQuestionWidgetDay: Codable, Hashable, Sendable {
     let day: String
     let courseId: String
     let question: String
-    /// Nom court de la matière, dans la langue de l'app.
+    /// Nom court de la matière, dans la langue de l'app, déjà en capitales.
     let subject: String
     /// Vignette de la couverture dans `DailyQuestionWidgetStore.imageDirectory`, si elle existe.
     let imageFile: String?
@@ -18,7 +18,7 @@ nonisolated struct DailyQuestionWidgetDay: Codable, Hashable, Sendable {
 
 /// Ce que l'app écrit pour le widget.
 nonisolated struct DailyQuestionWidgetPayload: Codable, Equatable, Sendable {
-    /// « Question du jour », dans la langue de l'app.
+    /// « QUESTION DU JOUR », dans la langue de l'app, déjà en capitales.
     let label: String
     /// Nom et description du widget dans la galerie d'iOS.
     let galleryName: String

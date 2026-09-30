@@ -584,7 +584,7 @@ struct SettingsView: View {
                     }
 
                 VStack(alignment: .leading, spacing: 3) {
-                    Text(languageManager.text("settings.ambassador.banner.badge").uppercased())
+                    Text(languageManager.text("settings.ambassador.banner.badge").uppercasedInApp())
                         .font(DS.sans(.caption2, .semibold))
                         .foregroundStyle(DS.accentSoft)
                         .tracking(1.0)
@@ -615,7 +615,7 @@ struct SettingsView: View {
     @ViewBuilder
     private func section<Content: View>(_ title: String, @ViewBuilder content: () -> Content) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(title.uppercased())
+            Text(title.uppercasedInApp())
                 .font(DS.sans(.caption2, .semibold))
                 .foregroundStyle(DS.inkTertiary)
                 .tracking(1.2)

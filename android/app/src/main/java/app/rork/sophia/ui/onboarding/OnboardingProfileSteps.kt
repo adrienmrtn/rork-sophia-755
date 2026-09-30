@@ -70,6 +70,7 @@ import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
+import app.rork.sophia.domain.formatted
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.legal.LegalDocKind
 import app.rork.sophia.ui.legal.LegalDocumentScreen
@@ -488,7 +489,7 @@ internal fun LoadingProfileStep(language: AppLanguage, onContinue: () -> Unit) {
             modifier = Modifier.alpha(ratingAlpha),
         ) {
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                Text("4.8/5", style = OV2.headline)
+                Text("${4.8.formatted(language, 1)}/5", style = OV2.headline)
                 Text("★★★★★", color = OV2.warm, fontSize = 13.sp)
             }
             Spacer(Modifier.height(4.dp))

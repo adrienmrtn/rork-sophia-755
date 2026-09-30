@@ -529,7 +529,7 @@ struct LibraryFeaturedCard: View {
                     HStack(spacing: 5) {
                         Image(systemName: "sparkles")
                             .font(.jakarta(size: 10, weight: .semibold))
-                        Text(badge.uppercased())
+                        Text(badge.uppercasedInApp())
                             .font(DS.sans(.caption2, .semibold))
                             .tracking(0.8)
                             .lineLimit(1)
@@ -545,7 +545,7 @@ struct LibraryFeaturedCard: View {
 
     private var infoPanel: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
+            Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
                 .font(DS.sans(.caption2, .semibold))
                 .foregroundStyle(DS.accentSoft)
                 .tracking(1.2)
@@ -675,7 +675,7 @@ struct LibraryCardView: View {
 
     private var bottomPanel: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
+            Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
                 .font(DS.sans(.caption2, .semibold))
                 .foregroundStyle(DS.accentSoft)
                 .tracking(1.0)

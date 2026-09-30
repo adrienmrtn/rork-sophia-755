@@ -309,7 +309,7 @@ struct FriendProfileView: View {
                 GlobalRankRing(progress: progress, size: 88)
 
                 VStack(alignment: .leading, spacing: 6) {
-                    Text(progress.rank.localizedName(language: languageManager.current).uppercased())
+                    Text(progress.rank.localizedName(language: languageManager.current).uppercasedInApp())
                         .font(DS.sans(.caption2, .semibold))
                         .foregroundStyle(DS.accentSoft)
                         .tracking(1.2)

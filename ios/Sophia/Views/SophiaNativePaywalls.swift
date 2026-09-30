@@ -777,7 +777,7 @@ struct SophiaQuizPaywall: View {
                         .foregroundStyle(DS.warm)
                 }
             }
-            Text("4,8 · \(languageManager.text("paywall.quiz.rating"))")
+            Text("\((4.8).formatted(.number.precision(.fractionLength(1)).locale(languageManager.locale))) · \(languageManager.text("paywall.quiz.rating"))")
                 .font(DS.sans(.caption2, .medium))
                 .foregroundStyle(DS.inkTertiary)
         }
@@ -1461,7 +1461,7 @@ struct SophiaCourseUnlockPaywall: View {
     private var ratingHeader: some View {
         VStack(spacing: 6) {
             HStack(spacing: 8) {
-                Text("4.8")
+                Text((4.8).formatted(.number.precision(.fractionLength(1)).locale(languageManager.locale)))
                     .font(.system(size: 22, weight: .heavy, design: .rounded))
                     .foregroundStyle(DS.ink)
                 HStack(spacing: 3) {

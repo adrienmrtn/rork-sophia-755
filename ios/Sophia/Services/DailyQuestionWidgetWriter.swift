@@ -27,13 +27,17 @@ enum DailyQuestionWidgetWriter {
                 day: day.key,
                 courseId: courseId,
                 question: course.title.withoutInlineMarkup,
-                subject: course.subject.localizedShortName(language: language),
+                // Uppercased here, in the app's language: the widget's own `uppercased()`
+                // knows no language and turned a Turkish "Tarih" into "TARIH".
+                subject: course.subject.localizedShortName(language: language)
+                    .uppercased(with: language.foundationLocale),
                 imageFile: fileName
             ))
         }
 
         let payload = DailyQuestionWidgetPayload(
-            label: AppLocalizable.string("dailyQuestion.badge", language: language),
+            label: AppLocalizable.string("dailyQuestion.badge", language: language)
+                .uppercased(with: language.foundationLocale),
             galleryName: AppLocalizable.string("dailyQuestion.badge", language: language),
             galleryDescription: AppLocalizable.string("dailyQuestion.widget.description", language: language),
             days: entries

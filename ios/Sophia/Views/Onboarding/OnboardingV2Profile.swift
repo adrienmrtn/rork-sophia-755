@@ -127,7 +127,7 @@ struct OnboardingV2Profile: View {
             }
 
             VStack(spacing: 8) {
-                Text(languageManager.text("onboardingV2.profile.eyebrow").uppercased())
+                Text(languageManager.text("onboardingV2.profile.eyebrow").uppercasedInApp())
                     .font(DS.sans(.caption, .bold))
                     .tracking(1.6)
                     .foregroundStyle(OV2.accentSoft)
@@ -160,7 +160,7 @@ struct OnboardingV2Profile: View {
 
     private var objectiveReminder: some View {
         VStack(spacing: 10) {
-            Text(languageManager.text("onboardingV2.profile.objectiveTitle").uppercased())
+            Text(languageManager.text("onboardingV2.profile.objectiveTitle").uppercasedInApp())
                 .font(DS.sans(.caption2, .bold))
                 .tracking(1.2)
                 .foregroundStyle(OV2.inkTertiary)
@@ -228,7 +228,7 @@ struct OnboardingV2Profile: View {
             )
 
             VStack(alignment: .leading, spacing: 6) {
-                Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
+                Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
                     .font(DS.sans(.caption2, .bold))
                     .foregroundStyle(.white.opacity(0.92))
                     .padding(.horizontal, 8).padding(.vertical, 4)

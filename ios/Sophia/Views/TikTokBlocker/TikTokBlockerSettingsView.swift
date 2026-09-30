@@ -202,7 +202,7 @@ struct TikTokBlockerSettingsView: View {
     }
 
     private var premiumPill: some View {
-        Text(languageManager.text("tiktokBlocker.premium.badge").uppercased())
+        Text(languageManager.text("tiktokBlocker.premium.badge").uppercasedInApp())
             .font(DS.sans(.caption2, .bold))
             .tracking(0.6)
             .foregroundStyle(.white)
@@ -475,7 +475,7 @@ struct TikTokBlockerSettingsView: View {
 
     private func section<Content: View>(_ title: String, @ViewBuilder content: () -> Content) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(title.uppercased())
+            Text(title.uppercasedInApp())
                 .font(DS.sans(.caption2, .semibold))
                 .foregroundStyle(DS.inkTertiary)
                 .tracking(1.2)

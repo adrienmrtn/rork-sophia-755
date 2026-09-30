@@ -209,7 +209,7 @@ struct SubjectCoursesView: View {
 
     private func nextUpSection(course: Course) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(languageManager.text("subject.next").uppercased())
+            Text(languageManager.text("subject.next").uppercasedInApp())
                 .font(DS.sans(.caption2, .semibold))
                 .foregroundStyle(DS.inkTertiary)
                 .tracking(1.2)
@@ -222,7 +222,7 @@ struct SubjectCoursesView: View {
                     NextCourseThumb(course: course)
 
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
+                        Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
                             .font(DS.sans(.caption2, .semibold))
                             .foregroundStyle(DS.accentSoft)
                             .tracking(1.0)

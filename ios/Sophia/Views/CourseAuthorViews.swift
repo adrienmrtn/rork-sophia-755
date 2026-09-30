@@ -98,7 +98,7 @@ struct AuthorCardV2: View {
                 Image(systemName: "person.text.rectangle")
                     .font(.jakarta(size: 12, weight: .semibold))
                     .foregroundStyle(DS.accentSoft)
-                Text(AppLocalizable.string("course.author.writtenBy", language: language).uppercased())
+                Text(AppLocalizable.string("course.author.writtenBy", language: language).uppercasedInApp())
                     .font(DS.sans(.caption2, .semibold))
                     .foregroundStyle(DS.accentSoft)
                     .tracking(1.2)

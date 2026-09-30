@@ -182,7 +182,7 @@ struct ProfileView: View {
                 GlobalRankRing(progress: p, size: 96)
 
                 VStack(alignment: .leading, spacing: 6) {
-                    Text(p.rank.localizedName(language: languageManager.current).uppercased())
+                    Text(p.rank.localizedName(language: languageManager.current).uppercasedInApp())
                         .font(DS.sans(.caption2, .semibold))
                         .foregroundStyle(DS.accentSoft)
                         .tracking(1.2)
@@ -474,7 +474,7 @@ struct ProfileView: View {
     private var quizSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                Text(languageManager.text("profile.quiz.recent").uppercased())
+                Text(languageManager.text("profile.quiz.recent").uppercasedInApp())
                     .font(DS.sans(.caption2, .semibold))
                     .foregroundStyle(DS.inkTertiary)
                     .tracking(1.2)
@@ -544,7 +544,7 @@ struct ProfileView: View {
 
     private var subjectLevelsSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text(languageManager.text("profile.mastery.title").uppercased())
+            Text(languageManager.text("profile.mastery.title").uppercasedInApp())
                 .font(DS.sans(.caption2, .semibold))
                 .foregroundStyle(DS.inkTertiary)
                 .tracking(1.2)

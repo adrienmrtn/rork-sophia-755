@@ -223,7 +223,7 @@ struct FeedbackView: View {
     }
 
     private func fieldLabel(_ text: String) -> some View {
-        Text(text.uppercased())
+        Text(text.uppercasedInApp())
             .font(DS.sans(.caption, .semibold))
             .foregroundStyle(DS.inkTertiary)
             .tracking(1.1)
