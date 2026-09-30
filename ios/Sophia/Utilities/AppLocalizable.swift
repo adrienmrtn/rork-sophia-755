@@ -5998,7 +5998,7 @@ enum AppLocalizable {
     // MARK: - Turkish
 
     private static let turkish: [String: String] = [
-        "notification.dailyReady.title": "Günün dersin hazır",
+        "notification.dailyReady.title": "Günün dersi hazır",
         // MARK: Audio mode
         "audio.playNow": "Şimdi dinle",
         "audio.suggestions.title": "Sırada dinle…",
@@ -6337,7 +6337,7 @@ enum AppLocalizable {
         "onboardingV2.pw.feature.weekly": "Haftalık yeni içerik",
         "settings.title": "Ayarlar",
         "settings.section.progress": "İlerlemek",
-        "settings.section.premium": "prim",
+        "settings.section.premium": "Premium",
         "settings.section.data": "Veri",
         "settings.section.help": "Yardım",
         "settings.section.legal": "Yasal",
