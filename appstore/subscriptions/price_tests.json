@@ -427,7 +427,7 @@
   ],
   "audiences": [
     {
-      "name": "Prix · P (pays riches, iOS)",
+      "name": "Prix · P (pays riches, iOS 1.1.7+)",
       "countries": [
         "FR",
         "DE",
@@ -448,10 +448,11 @@
         "FI",
         "IS"
       ],
-      "platform": "ios"
+      "platform": "ios",
+      "min_app_version": "1.1.7"
     },
     {
-      "name": "Prix · S (Europe du Sud, iOS)",
+      "name": "Prix · S (Europe du Sud, iOS 1.1.7+)",
       "countries": [
         "IT",
         "ES",
@@ -460,10 +461,11 @@
         "CY",
         "MT"
       ],
-      "platform": "ios"
+      "platform": "ios",
+      "min_app_version": "1.1.7"
     },
     {
-      "name": "Prix · B (Europe de l'Est, iOS)",
+      "name": "Prix · B (Europe de l'Est, iOS 1.1.7+)",
       "countries": [
         "PL",
         "RO",
@@ -483,17 +485,19 @@
         "LV",
         "EE"
       ],
-      "platform": "ios"
+      "platform": "ios",
+      "min_app_version": "1.1.7"
     },
     {
-      "name": "Prix · TR (Türkiye, iOS)",
+      "name": "Prix · TR (Türkiye, iOS 1.1.7+)",
       "countries": [
         "TR"
       ],
-      "platform": "ios"
+      "platform": "ios",
+      "min_app_version": "1.1.7"
     },
     {
-      "name": "Prix · C (reste du monde, iOS)",
+      "name": "Prix · C (reste du monde, iOS 1.1.7+)",
       "countries": [
         "MX",
         "CO",
@@ -554,13 +558,14 @@
         "HK",
         "TW"
       ],
-      "platform": "ios"
+      "platform": "ios",
+      "min_app_version": "1.1.7"
     }
   ],
   "experiments": [
     {
-      "name": "Prix P · annuel 49,99 / 59,99 / 69,99",
-      "audience": "Prix · P (pays riches, iOS)",
+      "name": "Prix P · annuel 49,99 / 59,99 / 69,99 · v2",
+      "audience": "Prix · P (pays riches, iOS 1.1.7+)",
       "type": "price_point",
       "control": "fin_onboarding",
       "treatments": [
@@ -568,11 +573,11 @@
         "p__5999",
         "p__6999"
       ],
-      "notes": "Hypothèse : les pays à fort pouvoir d'achat supportent un annuel plus cher que 39,99. Seuil de neutralité : 49,99 doit garder ≥ 80 % de la conversion du contrôle, 59,99 ≥ 67 %, 69,99 ≥ 57 %. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS uniquement, Android inchangé."
+      "notes": "Hypothèse : les pays à fort pouvoir d'achat supportent un annuel plus cher que 39,99. Seuil de neutralité : 49,99 doit garder ≥ 80 % de la conversion du contrôle, 59,99 ≥ 67 %, 69,99 ≥ 57 %. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS en version 1.1.7 ou plus uniquement (la 1.1.6, sans le correctif R1, affichait le prix de la variante et facturait 39,99 € sur les paywalls cours et quiz ; la v1 du 01/10 a été arrêtée pour cette raison). Android inchangé."
     },
     {
-      "name": "Prix S · annuel 39,99 vs 49,99 × mensuel avec/sans essai",
-      "audience": "Prix · S (Europe du Sud, iOS)",
+      "name": "Prix S · annuel 39,99 vs 49,99 × mensuel avec/sans essai · v2",
+      "audience": "Prix · S (Europe du Sud, iOS 1.1.7+)",
       "type": "other",
       "control": "fin_onboarding",
       "treatments": [
@@ -580,40 +585,40 @@
         "s__3999_mnotrial",
         "s__4999_mnotrial"
       ],
-      "notes": "Plan 2×2 : prix annuel (39,99 vs 49,99) × essai gratuit sur le mensuel (avec vs sans). Contrôle = 39,99 avec essai. Seuil : 49,99 ≥ 80 % de la conversion ; le mensuel sans essai doit ≥ compenser la perte de trials en payants directs. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS uniquement, Android inchangé."
+      "notes": "Plan 2×2 : prix annuel (39,99 vs 49,99) × essai gratuit sur le mensuel (avec vs sans). Contrôle = 39,99 avec essai. Seuil : 49,99 ≥ 80 % de la conversion ; le mensuel sans essai doit ≥ compenser la perte de trials en payants directs. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS en version 1.1.7 ou plus uniquement (la 1.1.6, sans le correctif R1, affichait le prix de la variante et facturait 39,99 € sur les paywalls cours et quiz ; la v1 du 01/10 a été arrêtée pour cette raison). Android inchangé."
     },
     {
-      "name": "Prix B · annuel 29,99 vs 49,99",
-      "audience": "Prix · B (Europe de l'Est, iOS)",
+      "name": "Prix B · annuel 29,99 vs 49,99 · v2",
+      "audience": "Prix · B (Europe de l'Est, iOS 1.1.7+)",
       "type": "price_point",
       "control": "fin_onboarding",
       "treatments": [
         "b__2999",
         "b__4999"
       ],
-      "notes": "Hypothèse : l'Europe de l'Est est sensible au prix. Seuil : 29,99 doit convertir ≥ 133 % du contrôle pour être neutre en revenu ; 49,99 ≥ 80 %. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS uniquement, Android inchangé."
+      "notes": "Hypothèse : l'Europe de l'Est est sensible au prix. Seuil : 29,99 doit convertir ≥ 133 % du contrôle pour être neutre en revenu ; 49,99 ≥ 80 %. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS en version 1.1.7 ou plus uniquement (la 1.1.6, sans le correctif R1, affichait le prix de la variante et facturait 39,99 € sur les paywalls cours et quiz ; la v1 du 01/10 a été arrêtée pour cette raison). Android inchangé."
     },
     {
-      "name": "Prix TR · palier 50 % vs 25 %",
-      "audience": "Prix · TR (Türkiye, iOS)",
+      "name": "Prix TR · palier 50 % vs 25 % · v2",
+      "audience": "Prix · TR (Türkiye, iOS 1.1.7+)",
       "type": "price_point",
       "control": "fin_onboarding",
       "treatments": [
         "tr__t50",
         "tr__t25"
       ],
-      "notes": "Paliers 999,99 TRY (50 %) et 499,99 TRY (25 %) contre 1 999,99 TRY. Seuil : ×2 de conversion pour le palier 50 %, ×4 pour le palier 25 %. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS uniquement, Android inchangé."
+      "notes": "Paliers 999,99 TRY (50 %) et 499,99 TRY (25 %) contre 1 999,99 TRY. Seuil : ×2 de conversion pour le palier 50 %, ×4 pour le palier 25 %. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS en version 1.1.7 ou plus uniquement (la 1.1.6, sans le correctif R1, affichait le prix de la variante et facturait 39,99 € sur les paywalls cours et quiz ; la v1 du 01/10 a été arrêtée pour cette raison). Android inchangé."
     },
     {
-      "name": "Prix C · palier 50 % vs 25 %",
-      "audience": "Prix · C (reste du monde, iOS)",
+      "name": "Prix C · palier 50 % vs 25 % · v2",
+      "audience": "Prix · C (reste du monde, iOS 1.1.7+)",
       "type": "price_point",
       "control": "fin_onboarding",
       "treatments": [
         "c__t50",
         "c__t25"
       ],
-      "notes": "Mêmes produits que TR, prix locaux générés par Apple (≈ 50 % et 25 % du prix actuel). Seuil : ×2 pour 50 %, ×4 pour 25 %. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS uniquement, Android inchangé."
+      "notes": "Mêmes produits que TR, prix locaux générés par Apple (≈ 50 % et 25 % du prix actuel). Seuil : ×2 pour 50 %, ×4 pour 25 %. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS en version 1.1.7 ou plus uniquement (la 1.1.6, sans le correctif R1, affichait le prix de la variante et facturait 39,99 € sur les paywalls cours et quiz ; la v1 du 01/10 a été arrêtée pour cette raison). Android inchangé."
     }
   ],
   "experiment_settings": {
@@ -626,5 +631,6 @@
       "conversion_to_paying",
       "refunded_customers"
     ]
-  }
+  },
+  "experiments_history": "v1 créée le 27/09, démarrée le 01/10 à 09:54 et arrêtée le jour même : la moitié des nouveaux clients recevaient encore la 1.1.6. v2 : mêmes variantes, audiences limitées à la 1.1.7 et plus."
 }
