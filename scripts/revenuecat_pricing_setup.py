@@ -151,7 +151,11 @@ def ensure_package(api_key: str, project_id: str, offering: dict, lookup_key: st
             body={"lookup_key": lookup_key, "display_name": name, "position": position},
         )
         print(f"    created package {lookup_key}")
-    have = {p["id"] for p in paginate(api_key, f"/projects/{project_id}/packages/{package['id']}/products")}
+    # Each item is {"product": {...}, "eligibility_criteria": ...}, not a bare product.
+    have = {
+        (item.get("product") or item).get("id")
+        for item in paginate(api_key, f"/projects/{project_id}/packages/{package['id']}/products")
+    }
     missing = [p for p in product_ids if p not in have]
     if not missing:
         print(f"    package {lookup_key}: {len(product_ids)} products attached")
