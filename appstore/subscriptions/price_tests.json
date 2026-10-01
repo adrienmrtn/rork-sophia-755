@@ -167,7 +167,12 @@
       "kind": "annual",
       "review_note": "Price test variant (49.99 EUR/year) of the existing Sophia Premium annual subscription (Sophia_yearly). Same content and features as the approved annual product, only the price differs. Unlocks all premium courses, quizzes and training.",
       "play": "sophia_pro:p1y-4999",
-      "test_store": "sophia_annual_4999"
+      "test_store": "sophia_annual_4999",
+      "available_in": [
+        "P",
+        "S",
+        "B"
+      ]
     },
     {
       "product_id": "Sophia_yearly_6999",
@@ -178,7 +183,10 @@
       "kind": "annual",
       "review_note": "Price test variant (69.99 EUR/year) of the existing Sophia Premium annual subscription (Sophia_yearly). Same content and features as the approved annual product, only the price differs. Unlocks all premium courses, quizzes and training.",
       "play": "sophia_pro:p1y-6999",
-      "test_store": "sophia_annual_6999"
+      "test_store": "sophia_annual_6999",
+      "available_in": [
+        "P"
+      ]
     },
     {
       "product_id": "Sophia_yearly_2999",
@@ -189,7 +197,10 @@
       "kind": "annual",
       "review_note": "Price test variant (29.99 EUR/year) of the existing Sophia Premium annual subscription (Sophia_yearly). Same content and features as the approved annual product, only the price differs. Unlocks all premium courses, quizzes and training.",
       "play": "sophia_pro:p1y-2999",
-      "test_store": "sophia_annual_2999"
+      "test_store": "sophia_annual_2999",
+      "available_in": [
+        "B"
+      ]
     },
     {
       "product_id": "Sophia_yearly_t50",
@@ -203,7 +214,11 @@
         "TUR": "999.99"
       },
       "play": "sophia_pro:p1y-t50",
-      "test_store": "sophia_annual_t50"
+      "test_store": "sophia_annual_t50",
+      "available_in": [
+        "TR",
+        "C"
+      ]
     },
     {
       "product_id": "Sophia_yearly_t25",
@@ -217,7 +232,11 @@
         "TUR": "499.99"
       },
       "play": "sophia_pro:p1y-t25",
-      "test_store": "sophia_annual_t25"
+      "test_store": "sophia_annual_t25",
+      "available_in": [
+        "TR",
+        "C"
+      ]
     },
     {
       "product_id": "Sophia_weekly_699",
@@ -632,5 +651,6 @@
       "refunded_customers"
     ]
   },
-  "experiments_history": "v1 créée le 27/09, démarrée le 01/10 à 09:54 et arrêtée le jour même : la moitié des nouveaux clients recevaient encore la 1.1.6. v2 : mêmes variantes, audiences limitées à la 1.1.7 et plus."
+  "experiments_history": "v1 créée le 27/09, démarrée le 01/10 à 09:54 et arrêtée le jour même : la moitié des nouveaux clients recevaient encore la 1.1.6. v2 : mêmes variantes, audiences limitées à la 1.1.7 et plus.",
+  "_availability_comment": "available_in : groupes de pays (clés des audiences) où le produit est en vente. Apple montre à chaque abonné, dans les réglages d'abonnement, tous les produits du groupe vendus dans son pays : un produit vendu partout permet à n'importe qui de passer sur le palier le moins cher hors de l'app. Absent = tous les pays."
 }

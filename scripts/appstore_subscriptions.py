@@ -21,7 +21,8 @@ What `apply` does for one product, in order, skipping every step already done:
     1. POST /subscriptions            name, productId, period, reviewNote, groupLevel
                                       (same level as the reference product)
     2. POST /subscriptionLocalizations the 12 locales of the manifest
-    3. POST /subscriptionAvailabilities all territories, available in new territories
+    3. POST /subscriptionAvailabilities all territories, or only the countries of the
+       product's test (`available_in`); a differing availability is replaced
     4. prices: the base-territory price point for the manifest price, then one
        subscriptionPrice per territory from that point's `equalizations` (Apple's
        own grid), then the manifest `overrides` (e.g. TUR = 999.99)
@@ -106,6 +107,50 @@ def rel(kind: str, ident: str) -> dict:
     return {"data": {"type": kind, "id": ident}}
 
 
+# ISO 3166 alpha-2 (RevenueCat audiences) -> alpha-3 (App Store Connect territories), for the
+# countries the price tests name. A code missing here stops the run rather than being skipped.
+ISO3 = {
+    "FR": "FRA", "DE": "DEU", "AT": "AUT", "CH": "CHE", "NL": "NLD", "BE": "BEL", "LU": "LUX", "US": "USA",
+    "GB": "GBR", "IE": "IRL", "CA": "CAN", "AU": "AUS", "NZ": "NZL", "SE": "SWE", "NO": "NOR", "DK": "DNK",
+    "FI": "FIN", "IS": "ISL", "IT": "ITA", "ES": "ESP", "PT": "PRT", "GR": "GRC", "CY": "CYP", "MT": "MLT",
+    "PL": "POL", "RO": "ROU", "HU": "HUN", "CZ": "CZE", "SK": "SVK", "HR": "HRV", "SI": "SVN", "BG": "BGR",
+    "RS": "SRB", "BA": "BIH", "ME": "MNE", "MK": "MKD", "AL": "ALB", "MD": "MDA", "LT": "LTU", "LV": "LVA",
+    "EE": "EST", "TR": "TUR", "MX": "MEX", "CO": "COL", "AR": "ARG", "PE": "PER", "BR": "BRA", "CL": "CHL",
+    "EC": "ECU", "VE": "VEN", "BO": "BOL", "GT": "GTM", "DO": "DOM", "PY": "PRY", "CR": "CRI", "UY": "URY",
+    "HN": "HND", "PA": "PAN", "SV": "SLV", "NI": "NIC", "EG": "EGY", "MA": "MAR", "DZ": "DZA", "TN": "TUN",
+    "JO": "JOR", "LB": "LBN", "IQ": "IRQ", "SA": "SAU", "AE": "ARE", "QA": "QAT", "KW": "KWT", "IN": "IND",
+    "ID": "IDN", "PH": "PHL", "VN": "VNM", "TH": "THA", "MY": "MYS", "PK": "PAK", "BD": "BGD", "KZ": "KAZ",
+    "AZ": "AZE", "UZ": "UZB", "GE": "GEO", "AM": "ARM", "NG": "NGA", "ZA": "ZAF", "KE": "KEN", "GH": "GHA",
+    "SN": "SEN", "CI": "CIV", "CM": "CMR", "UA": "UKR", "RU": "RUS", "BY": "BLR", "JP": "JPN", "KR": "KOR",
+    "IL": "ISR", "SG": "SGP", "HK": "HKG", "TW": "TWN",
+}
+
+
+def wanted_territories(manifest: dict, spec: dict, all_territories: list[str]) -> list[str]:
+    """Territories a product is sold in: every territory, or only its test's countries.
+
+    Apple lists, in a subscriber's subscription settings, every product of the group that is
+    for sale in their storefront, and lets them switch to it outside the app. A regional tier
+    for sale everywhere is therefore a downgrade anyone can take; one for sale only where its
+    test runs is not.
+    """
+    groups = spec.get("available_in")
+    if not groups:
+        return list(all_territories)
+    by_key = {a["name"].split("·")[1].split("(")[0].strip(): a["countries"] for a in manifest["audiences"]}
+    codes: list[str] = []
+    for group in groups:
+        for iso2 in by_key[group]:
+            if iso2 not in ISO3:
+                sys.exit(f"No alpha-3 code for {iso2}: add it to ISO3.")
+            codes.append(ISO3[iso2])
+    known = set(all_territories)
+    missing = sorted(set(codes) - known)
+    if missing:
+        print(f"  (not App Store territories, skipped: {', '.join(missing)})")
+    return sorted(set(codes) & known)
+
+
 # --- discovery ------------------------------------------------------------
 
 
@@ -188,18 +233,29 @@ def ensure_localizations(client: Client, sub_id: str | None, texts: dict[str, li
     print(f"  localizations: added {len(missing)}")
 
 
-def ensure_availability(client: Client, sub_id: str | None, territories: list[str]) -> None:
+def ensure_availability(client: Client, sub_id: str | None, territories: list[str], restricted: bool) -> None:
+    """Sold exactly in `territories`. An availability that differs is replaced, not kept."""
+    have: set[str] | None = None
     if sub_id:
         try:
-            current = client.call("GET", f"/subscriptions/{sub_id}/subscriptionAvailability")
-            if current.get("data"):
-                print("  availability: already set")
-                return
+            current = client.call("GET", f"/subscriptions/{sub_id}/subscriptionAvailability").get("data")
         except ApiError as error:
             if error.status != 404:
                 raise
+            current = None
+        if current:
+            have = {t["id"] for t in client.get_all(f"/subscriptionAvailabilities/{current['id']}/availableTerritories")}
+    wanted = set(territories)
+    if have is not None and have == wanted:
+        print(f"  availability: {len(have)} territories, as wanted")
+        return
+    if have is None:
+        change = f"set to {len(wanted)} territories"
+    else:
+        removed, added = sorted(have - wanted), sorted(wanted - have)
+        change = f"{len(have)} -> {len(wanted)} territories (removes {len(removed)}, adds {len(added)})"
     if client.dry_run or not sub_id:
-        print(f"  would set availability: {len(territories)} territories + new territories")
+        print(f"  would change availability: {change}")
         return
     client.call(
         "POST",
@@ -207,15 +263,17 @@ def ensure_availability(client: Client, sub_id: str | None, territories: list[st
         body={
             "data": {
                 "type": "subscriptionAvailabilities",
-                "attributes": {"availableInNewTerritories": True},
+                # A product sold only in its test's countries must not appear by itself in a
+                # storefront Apple opens later.
+                "attributes": {"availableInNewTerritories": not restricted},
                 "relationships": {
                     "subscription": rel("subscriptions", sub_id),
-                    "availableTerritories": {"data": [{"type": "territories", "id": t} for t in territories]},
+                    "availableTerritories": {"data": [{"type": "territories", "id": t} for t in sorted(wanted)]},
                 },
             }
         },
     )
-    print(f"  availability: {len(territories)} territories")
+    print(f"  availability: {change}")
 
 
 def price_point(client: Client, sub_id: str, territory: str, customer_price: str) -> dict:
@@ -432,7 +490,7 @@ def run(client: Client, manifest: dict, only: list[str] | None) -> int:
         sub = ensure_subscription(client, group["id"], spec, level, existing.get(spec["product_id"]))
         sub_id = sub.get("id")
         ensure_localizations(client, sub_id, manifest["localizations"][spec["kind"]])
-        ensure_availability(client, sub_id, territories)
+        ensure_availability(client, sub_id, wanted_territories(manifest, spec, territories), bool(spec.get("available_in")))
         ensure_prices(client, sub_id, spec, manifest["base_territory"])
         ensure_intro_offer(client, sub_id, spec, territories)
         ensure_screenshot(client, sub_id, screenshot)

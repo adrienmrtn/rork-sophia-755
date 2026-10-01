@@ -182,7 +182,13 @@ def run(api_key: str, manifest: dict, dry_run: bool) -> int:
     # had no Play product, so their Android variants would have had no price).
     print("\nProducts")
     names = {spec["product_id"]: spec["name"] for spec in manifest["products"]}
-    referenced_ids = sorted({ios_id for offering in manifest["offerings"] for ios_id in offering["packages"].values()})
+    referenced_ids = sorted(
+        {ios_id for offering in manifest["offerings"] for ios_id in offering["packages"].values()}
+        # Every product of the manifest too, offered or not: Apple lets a subscriber switch to
+        # any product of the group from their settings, and one RevenueCat does not know, or
+        # that does not unlock `premium`, would cost them their access.
+        | {spec["product_id"] for spec in manifest["products"]}
+    )
     for ios_id in referenced_ids:
         ids = store_ids(manifest, ios_id)
         for store in ("app_store", "play_store"):
@@ -192,7 +198,7 @@ def run(api_key: str, manifest: dict, dry_run: bool) -> int:
 
     # 2. everything the offerings reference is attached to the entitlement
     print("\nEntitlement")
-    referenced: set[str] = set()
+    referenced: set[str] = {spec["product_id"] for spec in manifest["products"]}
     for offering in manifest["offerings"]:
         referenced.update(offering["packages"].values())
     to_attach: list[str] = []

@@ -111,6 +111,11 @@ code iOS et Android. Coche les cases des actions que tu valides.
   (`appVersion >= 1.1.7`, comparaison numérique vérifiée), créées par `revenuecat-experiments ·
   apply`. Ordre : Stop sur les 5 expériences v1 dans le dashboard, puis Start sur les 5 « · v2 ».
   Lecture à J+21 / J+30 / J+45 depuis le démarrage de la v2.
+- [ ] Disponibilité des produits de test limitée aux pays de leur test (`available_in` du
+  manifeste) : le 01/10, un abonné suédois est passé de `Sophia_yearly` (39,99 €) au palier 25 %
+  depuis les réglages d'abonnement d'Apple, qui listent tous les produits du groupe vendus dans
+  le pays. Paliers 25 % et 50 % : Türkiye et groupe C ; 29,99 : groupe B ; 49,99 : P, S, B ;
+  69,99 : P. Trou préexistant, non corrigé : `discount_yearly` (19,99 €) est vendu partout.
 - [ ] Prochaine mise à jour iOS : recharger les offerings à chaque changement d'identité RevenueCat
   (`logIn`) et partager un seul `StoreViewModel` entre l'onboarding et l'app, pour qu'un passage
   d'un compte à un autre en cours de session ne montre jamais deux variantes.
