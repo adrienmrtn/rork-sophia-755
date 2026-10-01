@@ -104,12 +104,14 @@ code iOS et Android. Coche les cases des actions que tu valides.
   `Sophia_yearly_5999` et `Sophia_monthly_notrial`, 13 offerings avec leurs packages
   (`p__4999`, `p__5999`, `p__6999`, `s__4999_mtrial`, `s__3999_mnotrial`, `s__4999_mnotrial`,
   `b__2999`, `b__4999`, `tr__t50`, `tr__t25`, `c__t50`, `c__t25`, `offre_discount_2999`).
-- [x] Tests prix, audiences et expériences RevenueCat — **fait le 27/09 par le workflow**
-  (`revenuecat-experiments · apply`) : 5 audiences pays iOS (P `aud8a262f0d73344cf0`, S
-  `audf41d46039e3d42f1`, B `aud1b24f082a239443d`, TR `aud96fea26cd09e4f5c`, C `audba122e9312db45e4`)
-  et 5 expériences en brouillon (P `expa92ff306f2`, S `exp3607b1437f`, B `exp600a3986f4`, TR
-  `exp026612f5f3`, C `exp2cc2910309`), contrôle `fin_onboarding`, 100 % des nouveaux clients.
-- [ ] J0, le jour de la validation Apple des 7 produits : achat sandbox sur un iPhone de test avec
-  une nouvelle offering, puis **Start** sur chacun des 5 brouillons dans le dashboard RevenueCat
-  (pas d'endpoint documenté). Android garde l'offering courante tant que Play n'est pas fait.
+- [x] Tests prix v1 (5 audiences iOS, 5 expériences) — démarrés le 01/10 à 09:54, **à arrêter le jour
+  même** : la moitié des nouveaux clients recevaient encore la 1.1.6, qui affiche le prix de la
+  variante sur les paywalls cours et quiz mais facture 39,99 €.
+- [ ] Tests prix v2 — mêmes variantes, audiences limitées à la **version 1.1.7 et plus**
+  (`appVersion >= 1.1.7`, comparaison numérique vérifiée), créées par `revenuecat-experiments ·
+  apply`. Ordre : Stop sur les 5 expériences v1 dans le dashboard, puis Start sur les 5 « · v2 ».
+  Lecture à J+21 / J+30 / J+45 depuis le démarrage de la v2.
+- [ ] Prochaine mise à jour iOS : recharger les offerings à chaque changement d'identité RevenueCat
+  (`logIn`) et partager un seul `StoreViewModel` entre l'onboarding et l'app, pour qu'un passage
+  d'un compte à un autre en cours de session ne montre jamais deux variantes.
 - [ ] Sécurité : régénérer la clé API v2 RevenueCat après l'avoir mise dans l'environnement.

@@ -13,10 +13,13 @@ v2:
              Idempotent: nothing is created twice, nothing is started, nothing
              is deleted.
 
-An audience is "country is any of <list> AND platform is <platform>": the price
-tests run on iOS only until the Play base plans exist, so Android keeps the
-current offering. The five country lists are disjoint, which is what lets the
-five experiments run at the same time.
+An audience is "country is any of <list> AND platform is <platform> AND app
+version >= <min_app_version>": the price tests run on iOS only until the Play
+base plans exist, so Android keeps the current offering, and only on builds that
+sell on every paywall the offering RevenueCat serves (1.1.7, the R1 fix; 1.1.6
+showed the variant's price on the course and quiz paywalls but charged 39,99 €).
+The five country lists are disjoint, which is what lets the five experiments run
+at the same time.
 
 Starting an experiment has no documented endpoint: on the day Apple approves the
 products, open each draft in the dashboard and press Start.
@@ -51,6 +54,9 @@ def rules_for(spec: dict) -> dict:
     conditions = [{"field": "country", "operator": "isAnyOf", "value": ",".join(spec["countries"])}]
     if spec.get("platform"):
         conditions.append({"field": "platform", "operator": "is", "value": spec["platform"]})
+    # RevenueCat compares versions numerically (1.1.10 >= 1.1.7), checked on the account.
+    if spec.get("min_app_version"):
+        conditions.append({"field": "appVersion", "operator": "greaterThanOrEqual", "value": spec["min_app_version"]})
     return {"groups": [{"conditions": conditions}]}
 
 
@@ -110,7 +116,7 @@ def run(api_key: str, manifest: dict, dry_run: bool) -> int:
         except RevenueCatError as error:
             matched = f"preview refused: {error}"
         if dry_run:
-            print(f"  {spec['name']}: would create — {len(spec['countries'])} countries, platform {spec.get('platform') or 'any'}; today: {matched}")
+            print(f"  {spec['name']}: would create — {len(spec['countries'])} countries, platform {spec.get('platform') or 'any'}, app >= {spec.get('min_app_version') or 'any'}; today: {matched}")
             audience_ids[spec["name"]] = None
             continue
         created = request_json("POST", f"/projects/{project_id}/audiences", api_key=api_key, body={"name": spec["name"], "rules": rules})
