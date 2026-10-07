@@ -968,10 +968,8 @@ struct TrainingView: View {
             Spacer(minLength: 40)
 
             ZStack {
-                Circle().fill(DS.accentTint).frame(width: 128, height: 128)
-                Image(systemName: "checkmark.seal.fill")
-                    .font(.jakarta(size: 50, weight: .regular))
-                    .foregroundStyle(DS.accent)
+                Circle().fill(DS.successTint).frame(width: 128, height: 128)
+                AnimatedRewardBadge(kind: .seal, size: 54)
             }
 
             VStack(spacing: 10) {

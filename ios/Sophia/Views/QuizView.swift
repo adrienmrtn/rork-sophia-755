@@ -380,8 +380,8 @@ struct QuizView: View {
 
             if showCombo && comboCount >= 2 {
                 HStack(spacing: 4) {
-                    Image(systemName: "flame.fill")
-                        .font(.jakarta(size: 10, weight: .semibold))
+                    AnimatedFlameBadge(size: 10, showGlow: false)
+                        .frame(width: 12, height: 12)
                     Text("x\(comboCount)")
                         .font(DS.sans(.caption2, .semibold))
                 }
@@ -921,8 +921,8 @@ struct QuizView: View {
         VStack {
             Spacer().frame(height: 96)
             HStack(spacing: 6) {
-                Image(systemName: "star.fill")
-                    .font(.jakarta(size: 11, weight: .medium))
+                AnimatedRewardBadge(kind: .xp, size: 13, showGlow: false)
+                    .frame(width: 15, height: 15)
                 Text("+\(popupXPAmount) XP")
                     .font(DS.sans(.subheadline, .semibold))
             }
@@ -956,8 +956,8 @@ struct QuizView: View {
 
                         if isFullyCorrect, comboCount >= 2 {
                             HStack(spacing: 4) {
-                                Image(systemName: "flame.fill")
-                                    .font(.jakarta(size: 10, weight: .semibold))
+                                AnimatedFlameBadge(size: 10, showGlow: false)
+                                    .frame(width: 12, height: 12)
                                 Text(String(format: languageManager.text("quiz.combo"), comboCount))
                                     .font(DS.sans(.caption, .medium))
                             }
@@ -1092,9 +1092,7 @@ struct QuizView: View {
                         .rotationEffect(.degrees(-90))
                     ZStack {
                         Circle().fill(DS.accentTint)
-                        Image(systemName: "trophy.fill")
-                            .font(.jakarta(size: 46, weight: .regular))
-                            .foregroundStyle(DS.accent)
+                        AnimatedRewardBadge(kind: .trophy, size: 50)
                     }
                     .frame(width: 128, height: 128)
                 }
@@ -1130,8 +1128,8 @@ struct QuizView: View {
 
                     if xpEarned > 0 {
                         HStack(spacing: 6) {
-                            Image(systemName: "star.fill")
-                                .font(.caption.weight(.medium))
+                            AnimatedRewardBadge(kind: .xp, size: 13, showGlow: false)
+                                .frame(width: 15, height: 15)
                             Text("+\(xpEarned) XP")
                                 .font(DS.sans(.subheadline, .semibold))
                         }

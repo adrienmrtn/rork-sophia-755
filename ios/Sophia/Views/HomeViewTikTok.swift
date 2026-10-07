@@ -212,9 +212,8 @@ struct HomeViewTikTok: View {
             onOpenMyCourses?()
         } label: {
             HStack(spacing: 6) {
-                Image(systemName: "books.vertical")
-                    .font(.jakarta(size: 14, weight: .medium))
-                    .foregroundStyle(DS.accentSoft)
+                AnimatedRewardBadge(kind: .courses, size: 13, showGlow: false, animated: false)
+                    .frame(width: 16, height: 16)
                 Text("\(completedCourseCount)")
                     .font(DS.sans(.subheadline, .semibold))
                     .foregroundStyle(DS.ink)
@@ -237,9 +236,9 @@ struct HomeViewTikTok: View {
 
     private var streakBadge: some View {
         HStack(spacing: 6) {
-            // Une série en cours brûle rose-orange ; à zéro, la flamme reste éteinte.
+            // Une série en cours brûle rose-orange, sans bouger ; à zéro, la flamme reste éteinte.
             if progressManager.streak > 0 {
-                AnimatedFlameBadge(size: 13, showGlow: false)
+                AnimatedFlameBadge(size: 13, showGlow: false, animated: false)
                     .frame(width: 16, height: 16)
             } else {
                 Image(systemName: "flame")

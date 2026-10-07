@@ -325,8 +325,8 @@ struct CourseCompletedView: View {
             CalmProgressBar(fraction: Double(barFill), height: 8)
 
             HStack(spacing: 6) {
-                Image(systemName: "star.fill")
-                    .font(.jakarta(size: 10, weight: .medium))
+                AnimatedRewardBadge(kind: .xp, size: 12, showGlow: false)
+                    .frame(width: 14, height: 14)
                 Text(String(format: languageManager.text("common.xpEarned"), earnedXP))
                     .font(DS.sans(.caption, .semibold))
             }

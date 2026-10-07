@@ -18,6 +18,7 @@ struct ProfileView: View {
     @State private var showEditHandle: Bool = false
     @State private var showTikTokBlocker: Bool = false
     @State private var showAntiScrollIntro: Bool = false
+    @State private var showShare: Bool = false
     @State private var hapticTrigger: Int = 0
     @State private var appeared: Bool = false
     @Bindable private var social = SocialService.shared
@@ -40,6 +41,9 @@ struct ProfileView: View {
                             .padding(.horizontal, 20)
 
                         tiktokBlockerCard
+                            .padding(.horizontal, 20)
+
+                        shareCard
                             .padding(.horizontal, 20)
 
                         FriendsLeaderboardSection(social: social)
@@ -76,6 +80,10 @@ struct ProfileView: View {
                     presentedAsCover: true
                 )
                 .sophiaColorScheme()
+            }
+            .sheet(isPresented: $showShare) {
+                ShareSophiaSheet()
+                    .sophiaSheetChrome()
             }
             // « Active l'anti-scroll » : l'explication d'abord, puis les réglages (membre) ou
             // le paywall du blocker.
@@ -277,12 +285,12 @@ struct ProfileView: View {
 
             HStack(spacing: 14) {
                 statTile(
-                    icon: "checkmark.circle",
+                    badge: .courses,
                     value: "\(completedCoursesCount)",
                     label: languageManager.text("profile.stats.coursesDone")
                 )
                 statTile(
-                    icon: "target",
+                    badge: .target,
                     value: "\(stats.successPercent)%",
                     label: languageManager.text("cards.successRate")
                 )
@@ -292,10 +300,9 @@ struct ProfileView: View {
 
     private var streakCard: some View {
         VStack(alignment: .leading, spacing: 16) {
-            HStack(alignment: .firstTextBaseline, spacing: 8) {
-                Image(systemName: "flame.fill")
-                    .font(.jakarta(size: 22, weight: .medium))
-                    .foregroundStyle(DS.accentSoft)
+            HStack(alignment: .center, spacing: 8) {
+                AnimatedFlameBadge(size: 22, showGlow: false)
+                    .frame(width: 28, height: 28)
                 Text("\(progressManager.streak)")
                     .font(DS.title(.largeTitle, .semibold))
                     .foregroundStyle(DS.ink)
@@ -311,11 +318,9 @@ struct ProfileView: View {
         .dsCard()
     }
 
-    private func statTile(icon: String, value: String, label: String) -> some View {
+    private func statTile(badge: AnimatedRewardBadge.Kind, value: String, label: String) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            Image(systemName: icon)
-                .font(.jakarta(size: 16, weight: .medium))
-                .foregroundStyle(DS.accentSoft)
+            AnimatedRewardBadge(kind: badge, size: 17, showGlow: false)
                 .frame(width: 38, height: 38)
                 .background(DS.accentTint, in: Circle())
             Text(value)
@@ -462,6 +467,41 @@ struct ProfileView: View {
                 Spacer()
                 Image(systemName: "chevron.forward")
                     .font(.jakarta(size: 13, weight: .semibold))
+                    .foregroundStyle(DS.inkTertiary)
+            }
+            .dsCard(padding: 14)
+        }
+        .buttonStyle(ProfileCardPress())
+    }
+
+    // MARK: - Partager Sophia
+
+    /// « Partage Sophia · Offre 10 minutes de culture à un ami » : ouvre la feuille de partage.
+    private var shareCard: some View {
+        Button {
+            hapticTrigger += 1
+            showShare = true
+        } label: {
+            HStack(spacing: 14) {
+                Image(systemName: "paperplane.fill")
+                    .font(.jakarta(size: 16, weight: .medium))
+                    .foregroundStyle(OV2.pink)
+                    .frame(width: 40, height: 40)
+                    .background(OV2.pink.opacity(0.12), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(languageManager.text("share.card.title"))
+                        .font(DS.title(.headline, .semibold))
+                        .foregroundStyle(DS.ink)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text(languageManager.text("share.card.subtitle"))
+                        .font(DS.sans(.caption, .medium))
+                        .foregroundStyle(DS.inkSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer()
+                Image(systemName: "square.and.arrow.up")
+                    .font(.jakarta(size: 14, weight: .semibold))
                     .foregroundStyle(DS.inkTertiary)
             }
             .dsCard(padding: 14)

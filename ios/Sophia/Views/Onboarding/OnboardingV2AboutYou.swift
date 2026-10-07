@@ -271,10 +271,14 @@ struct OnboardingV2Knowledge: View {
     let vm: OnboardingV2ViewModel
     let onNext: () -> Void
 
+    /// Position continue du pouce (0 … levelCount − 1) : il suit le doigt sans à-coups, puis
+    /// se pose sur le cran le plus proche quand on le lâche.
     @State private var level: Double = 1
     @State private var step: Int = 1
+    @State private var dragging = false
 
     private static let levelCount = OnboardingV2ViewModel.knowledgeLevelCount
+    private static let thumbSize: CGFloat = 30
 
     var body: some View {
         OV2ScrollableContent {
@@ -292,15 +296,15 @@ struct OnboardingV2Knowledge: View {
                     Text(OnboardingV2ViewModel.knowledgeLevelEmoji(step))
                         .font(.system(size: 72))
                         .id("emoji-\(step)")
-                        .transition(.scale(scale: 0.5).combined(with: .opacity))
+                        .transition(.scale(scale: 0.6).combined(with: .opacity))
                     Text(OnboardingV2ViewModel.knowledgeLevelLabel(step, language: languageManager.current))
                         .font(DS.title(.title, .heavy))
                         .foregroundStyle(OV2.accent)
                         .id("label-\(step)")
-                        .transition(.opacity)
+                        .transition(.opacity.combined(with: .offset(y: 6)))
                 }
                 .frame(height: 150)
-                .animation(.spring(response: 0.4, dampingFraction: 0.7), value: step)
+                .animation(.spring(response: 0.38, dampingFraction: 0.78), value: step)
                 .ov2Reveal(delay: 0.25)
 
                 Spacer().frame(height: 28)
@@ -324,49 +328,109 @@ struct OnboardingV2Knowledge: View {
         }
     }
 
+    // MARK: - Curseur
+
+    /// Le rail, quatre crans, le pouce ; puis les libellés, un par cran, à largeur égale.
     private var slider: some View {
-        VStack(spacing: 10) {
-            Slider(value: $level, in: 0...Double(Self.levelCount - 1), step: 1)
-                .tint(OV2.accent)
-                .onChange(of: level) { _, newValue in
-                    let s = Int(newValue.rounded())
-                    if s != step {
-                        step = s
-                        vm.knowledgeLevel = s
-                        OnboardingHaptics.selection()
+        VStack(spacing: 14) {
+            GeometryReader { geo in
+                let inset = Self.thumbSize / 2
+                let span = max(geo.size.width - inset * 2, 1)
+                let thumbX = inset + span * CGFloat(level) / CGFloat(Self.levelCount - 1)
+                let midY = geo.size.height / 2
+
+                ZStack(alignment: .leading) {
+                    Capsule().fill(OV2.hairline).frame(height: 6)
+                    Capsule().fill(OV2.accent).frame(width: thumbX, height: 6)
+
+                    ForEach(0..<Self.levelCount, id: \.self) { i in
+                        Circle()
+                            .fill(i <= step ? OV2.accent : OV2.hairline)
+                            .overlay(Circle().strokeBorder(OV2.bg, lineWidth: 2))
+                            .frame(width: 14, height: 14)
+                            .position(x: Self.tickX(i, inset: inset, span: span), y: midY)
                     }
+
+                    Circle()
+                        .fill(.white)
+                        .overlay(Circle().strokeBorder(OV2.accent, lineWidth: 3))
+                        .shadow(color: .black.opacity(0.18), radius: 8, y: 3)
+                        .frame(width: Self.thumbSize, height: Self.thumbSize)
+                        .scaleEffect(dragging ? 1.12 : 1)
+                        .animation(.spring(response: 0.25, dampingFraction: 0.7), value: dragging)
+                        .position(x: thumbX, y: midY)
                 }
+                .contentShape(Rectangle())
+                .gesture(
+                    DragGesture(minimumDistance: 0)
+                        .onChanged { value in
+                            dragging = true
+                            let fraction = (value.location.x - inset) / span
+                            move(to: Double(min(max(fraction, 0), 1)) * Double(Self.levelCount - 1))
+                        }
+                        .onEnded { _ in
+                            dragging = false
+                            withAnimation(.spring(response: 0.35, dampingFraction: 0.75)) {
+                                level = Double(step)
+                            }
+                        }
+                )
+            }
+            .frame(height: Self.thumbSize + 8)
+            .accessibilityElement()
+            .accessibilityLabel(Text(languageManager.text("onboardingV2.knowledge.title")))
+            .accessibilityValue(Text(OnboardingV2ViewModel.knowledgeLevelLabel(step, language: languageManager.current)))
+            .accessibilityAdjustableAction { direction in
+                switch direction {
+                case .increment: move(to: Double(min(step + 1, Self.levelCount - 1)), snap: true)
+                case .decrement: move(to: Double(max(step - 1, 0)), snap: true)
+                @unknown default: break
+                }
+            }
+
             tickLabels
         }
     }
 
-    /// Les quatre libellés sous les crans, alignés sur la position du pouce ; ceux des bouts
-    /// restent dans la largeur du curseur.
-    private var tickLabels: some View {
-        GeometryReader { geo in
-            let count: Int = Self.levelCount
-            let inset: CGFloat = 14
-            let span: CGFloat = max(geo.size.width - inset * 2, 1)
-            let labelWidth: CGFloat = span / CGFloat(count - 1)
-            ForEach(0..<count, id: \.self) { i in
-                let fraction: CGFloat = CGFloat(i) / CGFloat(count - 1)
-                let center: CGFloat = min(max(inset + span * fraction, labelWidth / 2), geo.size.width - labelWidth / 2)
-                Text(OnboardingV2ViewModel.knowledgeLevelLabel(i, language: languageManager.current))
-                    .font(DS.sans(.caption2, i == step ? .bold : .semibold))
-                    .foregroundStyle(i == step ? OV2.accent : OV2.inkTertiary)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
-                    .frame(width: labelWidth, alignment: Self.labelAlignment(i, count: count))
-                    .position(x: center, y: 9)
-            }
+    /// Le pouce suit la position donnée ; le cran change (emoji, libellé, vibration) dès que
+    /// le pouce dépasse la moitié du chemin vers le cran voisin.
+    private func move(to value: Double, snap: Bool = false) {
+        if snap {
+            withAnimation(.spring(response: 0.35, dampingFraction: 0.75)) { level = value }
+        } else {
+            level = value
         }
-        .frame(height: 18)
+        let s = Int(value.rounded())
+        if s != step {
+            step = s
+            vm.knowledgeLevel = s
+            OnboardingHaptics.selection()
+        }
     }
 
-    private static func labelAlignment(_ i: Int, count: Int) -> Alignment {
-        if i == 0 { return .leading }
-        if i == count - 1 { return .trailing }
-        return .center
+    private static func tickX(_ i: Int, inset: CGFloat, span: CGFloat) -> CGFloat {
+        inset + span * CGFloat(i) / CGFloat(levelCount - 1)
+    }
+
+    /// Un libellé centré sous chaque cran, tous de la même largeur, sur deux lignes au plus.
+    private var tickLabels: some View {
+        GeometryReader { geo in
+            let inset = Self.thumbSize / 2
+            let span = max(geo.size.width - inset * 2, 1)
+            let labelWidth = span / CGFloat(Self.levelCount - 1) - 6
+            ForEach(0..<Self.levelCount, id: \.self) { i in
+                Text(OnboardingV2ViewModel.knowledgeLevelLabel(i, language: languageManager.current))
+                    .font(DS.sans(.caption, i == step ? .bold : .medium))
+                    .foregroundStyle(i == step ? OV2.accent : OV2.inkTertiary)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.8)
+                    .frame(width: labelWidth)
+                    .position(x: Self.tickX(i, inset: inset, span: span), y: 16)
+            }
+        }
+        .frame(height: 34)
+        .animation(.easeInOut(duration: 0.2), value: step)
     }
 }
 

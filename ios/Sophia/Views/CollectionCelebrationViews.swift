@@ -243,9 +243,7 @@ struct CollectionCompletedCelebrationView: View {
             }
             .overlay {
                 VStack(spacing: 12) {
-                    Image(systemName: "checkmark.seal.fill")
-                        .font(.jakarta(size: 44, weight: .regular))
-                        .foregroundStyle(.white)
+                    AnimatedRewardBadge(kind: .seal, size: 44)
 
                     Text(languageManager.text("collections.pathComplete"))
                         .font(DS.title(.title3, .semibold))
@@ -260,8 +258,8 @@ struct CollectionCompletedCelebrationView: View {
 
     private var xpPill: some View {
         HStack(spacing: 10) {
-            Image(systemName: "star.fill")
-                .font(.jakarta(size: 15, weight: .medium))
+            AnimatedRewardBadge(kind: .xp, size: 16, showGlow: false)
+                .frame(width: 18, height: 18)
             Text(String(format: languageManager.text("cards.globalXP"), awardedXP))
                 .font(DS.title(.headline, .semibold))
                 .monospacedDigit()

@@ -34,10 +34,12 @@ struct OnboardingV2SocialProof: View {
 
                 Spacer(minLength: 20)
 
-                OnboardingV2StudentCluster(photos: photos, revealed: revealedPhotos)
-                    .frame(height: 176)
+                if !photos.isEmpty {
+                    OnboardingV2StudentCluster(photos: photos, revealed: revealedPhotos)
+                        .frame(height: 176)
 
-                Spacer().frame(height: 24)
+                    Spacer().frame(height: 24)
+                }
 
                 OnboardingV2LaurelBadge {
                     OnboardingV2RatingStack(caption: languageManager.text("onboardingV2.review.appStore"))
@@ -83,7 +85,7 @@ struct OnboardingV2SocialProof: View {
 
     private func reveal() {
         guard revealedPhotos == 0 else { return }
-        let count = OnboardingV2StudentCluster.slotCount
+        let count = min(photos.count, OnboardingV2StudentCluster.slotCount)
         for i in 0..<count {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3 + Double(i) * 0.1) {
                 withAnimation(.spring(response: 0.5, dampingFraction: 0.62)) {
@@ -110,7 +112,8 @@ struct OnboardingV2SocialProof: View {
 // MARK: - Photos d'étudiants
 
 /// Photos d'étudiants dans des ronds, posées en deux rangées décalées, comme une pile de
-/// polaroïds. Un emplacement sans photo montre une silhouette sur un dégradé.
+/// polaroïds. Seules les vraies photos sont montrées : sans photo pour un emplacement, pas
+/// de rond.
 struct OnboardingV2StudentCluster: View {
     let photos: [UIImage]
     let revealed: Int
@@ -123,19 +126,14 @@ struct OnboardingV2StudentCluster: View {
 
     static var slotCount: Int { slots.count }
 
-    private static let palettes: [(Color, Color)] = [
-        (Color(red: 0.98, green: 0.62, blue: 0.45), Color(red: 0.93, green: 0.35, blue: 0.45)),
-        (Color(red: 0.45, green: 0.72, blue: 0.98), Color(red: 0.25, green: 0.45, blue: 0.85)),
-        (Color(red: 0.55, green: 0.85, blue: 0.65), Color(red: 0.22, green: 0.60, blue: 0.45)),
-        (Color(red: 0.85, green: 0.65, blue: 0.98), Color(red: 0.56, green: 0.40, blue: 0.92)),
-        (Color(red: 0.99, green: 0.80, blue: 0.40), Color(red: 0.92, green: 0.55, blue: 0.15)),
-        (Color(red: 0.55, green: 0.85, blue: 0.92), Color(red: 0.25, green: 0.60, blue: 0.75)),
-    ]
+    /// Autant de ronds que de photos, dans la limite des emplacements.
+    private var shownCount: Int { min(photos.count, Self.slots.count) }
 
     var body: some View {
         ZStack {
-            ForEach(Array(Self.slots.enumerated()), id: \.offset) { i, slot in
-                portrait(i, size: slot.size)
+            ForEach(0..<shownCount, id: \.self) { i in
+                let slot = Self.slots[i]
+                portrait(photos[i], size: slot.size)
                     .offset(x: slot.x, y: slot.y)
                     .scaleEffect(i < revealed ? 1 : 0.2)
                     .opacity(i < revealed ? 1 : 0)
@@ -145,26 +143,14 @@ struct OnboardingV2StudentCluster: View {
         .accessibilityHidden(true)
     }
 
-    private func portrait(_ index: Int, size: CGFloat) -> some View {
-        Group {
-            if index < photos.count {
-                Image(uiImage: photos[index])
-                    .resizable()
-                    .scaledToFill()
-            } else {
-                let palette = Self.palettes[index % Self.palettes.count]
-                ZStack {
-                    LinearGradient(colors: [palette.0, palette.1], startPoint: .topLeading, endPoint: .bottomTrailing)
-                    Image(systemName: "person.fill")
-                        .font(.system(size: size * 0.42, weight: .semibold))
-                        .foregroundStyle(.white.opacity(0.9))
-                }
-            }
-        }
-        .frame(width: size, height: size)
-        .clipShape(Circle())
-        .overlay(Circle().strokeBorder(.white, lineWidth: 3))
-        .shadow(color: .black.opacity(0.14), radius: 10, y: 5)
+    private func portrait(_ image: UIImage, size: CGFloat) -> some View {
+        Image(uiImage: image)
+            .resizable()
+            .scaledToFill()
+            .frame(width: size, height: size)
+            .clipShape(Circle())
+            .overlay(Circle().strokeBorder(.white, lineWidth: 3))
+            .shadow(color: .black.opacity(0.14), radius: 10, y: 5)
     }
 }
 
