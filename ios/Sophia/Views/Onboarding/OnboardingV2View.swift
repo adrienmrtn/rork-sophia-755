@@ -6,7 +6,8 @@ import RevenueCat
 ///
 /// Welcome · Langue · Présentation (4 pages reliées par des points) · Preuve sociale (500 000
 /// utilisateurs) · Prénom · Âge · Culture générale (curseur) · Motivation · Objectifs (multi) ·
-/// Sujets (6 carrés) · « Sophia va t'aider » · « Me cultiver » (questions) ·
+/// Sujets (6 carrés) · « Sophia va t'aider » · Mission (gratuite à l'essai) · « Me cultiver »
+/// (questions) ·
 /// Temps d'écran (slider) · Ta vie en années · « Transforme ce temps » · Avis · « Fais bon
 /// usage » · Swipe · Loading · Profil · Notifications · **Login** · Essai · Rappel · Paywall
 /// annuel · Paywall comparatif. Les pages « Se cultiver, c'est long et cher » et « Des cours
@@ -34,7 +35,7 @@ struct OnboardingV2View: View {
 
     private enum Screen: Hashable {
         case welcome, language, intro, socialProof, name, age, knowledge, motivation
-        case objectives, topics, objectiveIntro
+        case objectives, topics, objectiveIntro, mission
         case questions, phoneTime, yearsGrid, transform, review, personalize
         case swipe, loading, profile, readingTime, notifications, login
         case trialSteps, reminder, paywallAnnual, paywallComparison
@@ -55,6 +56,7 @@ struct OnboardingV2View: View {
             case .objectives: "objective"
             case .topics: "topics"
             case .objectiveIntro: "objective_intro"
+            case .mission: "mission"
             case .questions: "questions"
             case .phoneTime: "phone_time"
             case .yearsGrid: "years_grid"
@@ -84,7 +86,7 @@ struct OnboardingV2View: View {
     /// promettrait un essai que l'utilisateur n'aura pas.
     private var screens: [Screen] {
         var list: [Screen] = [.welcome, .language, .intro, .socialProof,
-                              .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro,
+                              .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro, .mission,
                               .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
                               .swipe, .loading, .profile, .readingTime, .notifications, .login]
         if store.offerings == nil || store.annualHasFreeTrial {
@@ -95,7 +97,7 @@ struct OnboardingV2View: View {
     }
 
     private static let dotScreens: Set<Screen> = [
-        .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro,
+        .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro, .mission,
         .questions, .phoneTime, .yearsGrid, .review, .swipe, .loading,
     ]
 
@@ -180,6 +182,8 @@ struct OnboardingV2View: View {
             OnboardingV2Topics(vm: vm, onNext: advance)
         case .objectiveIntro:
             OnboardingV2ObjectiveIntro(firstName: vm.trimmedFirstName, onNext: advance)
+        case .mission:
+            OnboardingV2Mission(onNext: advance)
         case .questions:
             OnboardingV2QuestionsScreen(onNext: advance)
         case .phoneTime:

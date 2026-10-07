@@ -100,17 +100,22 @@ struct OnboardingV2PhoneTime: View {
 
 // MARK: - Page 2/4 — Ta vie en années (80 carrés)
 
-/// 80 carrés = 80 années de vie. Les carrés se remplissent lentement en rouge selon le
-/// temps d'écran quotidien (part de vie passée sur le téléphone).
+/// 80 carrés = 80 années de vie. Ils se colorent par tiers : le sommeil en vert, le travail
+/// en marron, puis le temps libre qui reste, et dedans, en rouge, les années de temps libre
+/// passées sur le téléphone (d'après le temps d'écran quotidien déclaré).
 struct OnboardingV2YearsGrid: View {
     @Environment(LanguageManager.self) private var languageManager
     let vm: OnboardingV2ViewModel
     let onNext: () -> Void
 
-    /// Nombre de carrés gris révélés (phase 1 : ouverture douce de la grille).
+    /// Nombre de carrés gris révélés (phase 1 : ouverture de la grille).
     @State private var revealed: Int = 0
-    /// Nombre de carrés rouges remplis (phase 3 : années perdues).
-    @State private var filled: Int = 0
+    /// Carrés colorés de chaque tiers, dans l'ordre où ils se remplissent.
+    @State private var sleepFilled: Int = 0
+    @State private var workFilled: Int = 0
+    @State private var freeFilled: Int = 0
+    /// Carrés rouges dans le temps libre (phase finale : années passées sur le téléphone).
+    @State private var screenFilled: Int = 0
     @State private var showTitle = false
     @State private var showCaption = false
     @State private var showButton = false
@@ -121,9 +126,22 @@ struct OnboardingV2YearsGrid: View {
 
     private let totalYears = 80
     private let columns = 10
+    /// Un tiers de la vie à dormir, un tiers à travailler ; le reste est du temps libre.
+    private let sleepYears = 27
+    private let workYears = 27
 
-    private var redYears: Int {
-        max(1, min(totalYears, Int(vm.phoneYearsOverLife.rounded())))
+    private static let sleepColor = Color(red: 0.30, green: 0.62, blue: 0.42)
+    private static let workColor = Color(red: 0.55, green: 0.38, blue: 0.24)
+    private static let freeColor = Color(red: 0.72, green: 0.82, blue: 0.95)
+
+    private var freeYears: Int {
+        totalYears - sleepYears - workYears
+    }
+
+    /// Années de temps libre passées sur le téléphone : le temps d'écran quotidien rapporté à
+    /// 80 ans, borné au temps libre (au-delà, tout le temps libre y passe).
+    private var screenYears: Int {
+        max(1, min(freeYears, Int(vm.phoneYearsOverLife.rounded())))
     }
 
     private var gridColumns: [GridItem] {
@@ -147,7 +165,7 @@ struct OnboardingV2YearsGrid: View {
         .onDisappear { animTask?.cancel() }
     }
 
-    /// Page content, unchanged; the container above is what keeps the CTA on screen.
+    /// Page content; the container above is what keeps the CTA on screen.
     private var pageBody: some View {
         VStack(spacing: 0) {
             Spacer(minLength: 72)
@@ -160,53 +178,112 @@ struct OnboardingV2YearsGrid: View {
                 .opacity(showTitle ? 1 : 0)
                 .offset(y: showTitle ? 0 : 14)
 
-            Spacer().frame(height: 36)
+            Spacer().frame(height: 30)
 
             LazyVGrid(columns: gridColumns, spacing: 8) {
                 ForEach(0..<totalYears, id: \.self) { i in
                     let isRevealed = i < revealed
-                    let isRed = i < filled
+                    let filled = isFilled(i)
                     RoundedRectangle(cornerRadius: 4, style: .continuous)
-                        .fill(isRed ? OV2.danger : OV2.hairline.opacity(0.7))
+                        .fill(squareColor(i))
                         .aspectRatio(1, contentMode: .fit)
-                        .scaleEffect(isRevealed ? (isRed ? 1 : 0.9) : 0.3)
+                        .scaleEffect(isRevealed ? (filled ? 1 : 0.9) : 0.3)
                         .opacity(isRevealed ? 1 : 0)
                 }
             }
             .padding(.horizontal, 36)
 
-            Spacer().frame(height: 28)
+            Spacer().frame(height: 22)
+
+            legend
+                .padding(.horizontal, 28)
+
+            Spacer().frame(height: 22)
 
             Text(String(
-                format: languageManager.text("onboardingV2.yearsGrid.caption"),
-                redYears
+                format: languageManager.text("onboardingV2.yearsGrid.captionFree"),
+                freeYears, screenYears
             ))
             .font(DS.sans(.subheadline, .bold))
             .foregroundStyle(OV2.danger)
             .multilineTextAlignment(.center)
+            .fixedSize(horizontal: false, vertical: true)
             .padding(.horizontal, 36)
             .opacity(showCaption ? 1 : 0)
             .offset(y: showCaption ? 0 : 12)
 
-            // Le pendant du `Spacer(minLength: 72)` du haut. Le bouton est passé dans le
-            // pied de page du conteneur scrollable, mais ce ressort-là faisait aussi partie
-            // de la mise en page : sans lui, tout le mou allait en haut et la page se
-            // retrouvait tassée en bas, la légende collée au bouton. Les deux ensemble
-            // recentrent le contenu quand il tient, et se réduisent à 72 pt dès qu'il
-            // déborde et que ça défile.
+            // Le pendant du `Spacer(minLength: 72)` du haut : les deux ensemble recentrent
+            // le contenu quand il tient, et se réduisent à 72 pt dès que ça défile.
             Spacer(minLength: 72)
         }
     }
 
+    // MARK: - Couleurs des carrés
+
+    /// Le carré `i` dans l'ordre de la grille : sommeil, travail, puis temps libre (où les
+    /// premiers carrés deviennent rouges).
+    private func squareColor(_ i: Int) -> Color {
+        if i < sleepYears {
+            return i < sleepFilled ? Self.sleepColor : OV2.hairline.opacity(0.7)
+        }
+        let work = i - sleepYears
+        if work < workYears {
+            return work < workFilled ? Self.workColor : OV2.hairline.opacity(0.7)
+        }
+        let free = i - sleepYears - workYears
+        if free < screenFilled { return OV2.danger }
+        return free < freeFilled ? Self.freeColor : OV2.hairline.opacity(0.7)
+    }
+
+    private func isFilled(_ i: Int) -> Bool {
+        if i < sleepYears { return i < sleepFilled }
+        let work = i - sleepYears
+        if work < workYears { return work < workFilled }
+        let free = i - sleepYears - workYears
+        return free < freeFilled || free < screenFilled
+    }
+
+    // MARK: - Légende
+
+    /// Une pastille par tiers, qui apparaît quand son tiers commence à se colorer.
+    private var legend: some View {
+        OV2FlowLayout(spacing: 8, lineSpacing: 8) {
+            legendChip(color: Self.sleepColor, textColor: Self.sleepColor, key: "onboardingV2.yearsGrid.sleep", years: sleepYears, shown: sleepFilled > 0)
+            legendChip(color: Self.workColor, textColor: Self.workColor, key: "onboardingV2.yearsGrid.work", years: workYears, shown: workFilled > 0)
+            legendChip(color: Self.freeColor, textColor: OV2.accentSoft, key: "onboardingV2.yearsGrid.free", years: freeYears, shown: freeFilled > 0)
+            legendChip(color: OV2.danger, textColor: OV2.danger, key: "onboardingV2.yearsGrid.screen", years: screenYears, shown: screenFilled > 0)
+        }
+    }
+
+    private func legendChip(color: Color, textColor: Color, key: String, years: Int, shown: Bool) -> some View {
+        HStack(spacing: 7) {
+            Circle().fill(color).frame(width: 10, height: 10)
+            Text(languageManager.text(key))
+                .font(DS.sans(.caption, .semibold))
+                .foregroundStyle(OV2.ink)
+            Text(AppLocalizable.yearsString(years, language: languageManager.current))
+                .font(DS.sans(.caption, .bold))
+                .foregroundStyle(textColor)
+        }
+        .padding(.horizontal, 10)
+        .padding(.vertical, 6)
+        .background(OV2.surface, in: Capsule())
+        .overlay(Capsule().strokeBorder(OV2.hairline, lineWidth: 1))
+        .opacity(shown ? 1 : 0)
+        .scaleEffect(shown ? 1 : 0.85)
+        .animation(.spring(response: 0.4, dampingFraction: 0.75), value: shown)
+    }
+
+    // MARK: - Séquence
+
     /// Démarre (ou reprend) l'enchaînement, et garantit que le CTA finit toujours par
     /// apparaître.
     ///
-    /// La séquence dure ~7 s et le bouton n'existait qu'à la toute fin. Elle était annulée
-    /// par `onDisappear`, et `guard animTask == nil` empêchait ensuite tout redémarrage :
-    /// une seule interruption pendant ces 7 s (rotation, redimensionnement de fenêtre sur
-    /// iPad, retour depuis l'arrière-plan) laissait la grille figée **sans bouton**, donc
-    /// un onboarding sans issue. C'est le blocage signalé par l'App Store (Guideline
-    /// 2.1(a), « indefinite loading during onboarding », iPad Air M3 / iPadOS 26.6.2).
+    /// La séquence était annulée par `onDisappear`, et `guard animTask == nil` empêchait
+    /// ensuite tout redémarrage : une seule interruption (rotation, redimensionnement de
+    /// fenêtre sur iPad, retour depuis l'arrière-plan) laissait la grille figée **sans
+    /// bouton**, donc un onboarding sans issue. C'est le blocage signalé par l'App Store
+    /// (Guideline 2.1(a), « indefinite loading during onboarding », iPad Air M3 / iPadOS 26.6.2).
     ///
     /// Désormais : la séquence reprend là où elle s'était arrêtée, et qu'elle aille au bout
     /// ou qu'elle soit interrompue, le bouton est révélé dans tous les cas.
@@ -221,50 +298,75 @@ struct OnboardingV2YearsGrid: View {
         }
     }
 
-    /// Enchaînement scénarisé : (1) ouverture des 80 carrés gris, (2) apparition douce du
-    /// titre, (3) remplissage progressif des carrés rouges + texte rouge, (4) bouton.
-    /// Reprend à l'état courant (`revealed` / `filled`), donc rejouable sans repartir de zéro.
-    /// Retourne `false` si elle a été annulée en cours de route.
+    /// Enchaînement scénarisé, rapide : (1) ouverture des 80 carrés gris, (2) titre,
+    /// (3) sommeil en vert, travail en marron, temps libre en bleu pâle, (4) en rouge les
+    /// années de temps libre passées sur le téléphone, (5) légende rouge puis bouton.
+    /// Reprend à l'état courant, donc rejouable sans repartir de zéro. Retourne `false` si
+    /// elle a été annulée en cours de route.
     private func playSequence() async -> Bool {
-        // Phase 1 — ouverture lente et douce des carrés gris.
+        // Phase 1 — ouverture des carrés gris.
         if revealed < totalYears {
-            try? await Task.sleep(nanoseconds: 350_000_000)
+            try? await Task.sleep(nanoseconds: 250_000_000)
             for i in (revealed + 1)...totalYears {
                 if Task.isCancelled { return false }
-                withAnimation(.spring(response: 0.45, dampingFraction: 0.72)) { revealed = i }
-                if i % 8 == 0 { OnboardingHaptics.selection() }
-                try? await Task.sleep(nanoseconds: 24_000_000)
+                withAnimation(.spring(response: 0.4, dampingFraction: 0.72)) { revealed = i }
+                if i % 10 == 0 { OnboardingHaptics.selection() }
+                try? await Task.sleep(nanoseconds: 6_000_000)
             }
         }
 
-        // Phase 2 — « Voici ta vie en années » apparaît doucement.
+        // Phase 2 — « Voici ta vie en années ».
         if !showTitle {
-            try? await Task.sleep(nanoseconds: 550_000_000)
+            try? await Task.sleep(nanoseconds: 300_000_000)
             if Task.isCancelled { return false }
-            withAnimation(.easeOut(duration: 0.9)) { showTitle = true }
+            withAnimation(.easeOut(duration: 0.6)) { showTitle = true }
+            try? await Task.sleep(nanoseconds: 350_000_000)
         }
 
-        // Phase 3 — remplissage lent des années perdues (rouge).
-        let target = redYears
-        if filled < target {
-            try? await Task.sleep(nanoseconds: 1_100_000_000)
-            for i in (filled + 1)...target {
+        // Phase 3 — les trois tiers.
+        let sleepDone = await fill(to: sleepYears, from: sleepFilled, interval: 12_000_000) { sleepFilled = $0 }
+        guard sleepDone else { return false }
+        try? await Task.sleep(nanoseconds: 200_000_000)
+        let workDone = await fill(to: workYears, from: workFilled, interval: 12_000_000) { workFilled = $0 }
+        guard workDone else { return false }
+        try? await Task.sleep(nanoseconds: 200_000_000)
+        let freeDone = await fill(to: freeYears, from: freeFilled, interval: 10_000_000) { freeFilled = $0 }
+        guard freeDone else { return false }
+
+        // Phase 4 — les années de temps libre passées sur le téléphone, un peu plus lentes.
+        let target = screenYears
+        if screenFilled < target {
+            try? await Task.sleep(nanoseconds: 350_000_000)
+            for i in (screenFilled + 1)...target {
                 if Task.isCancelled { return false }
-                withAnimation(.easeInOut(duration: 0.4)) { filled = i }
+                withAnimation(.easeInOut(duration: 0.3)) { screenFilled = i }
                 OnboardingHaptics.counterTick(progress: Double(i) / Double(target))
-                try? await Task.sleep(nanoseconds: 150_000_000)
+                try? await Task.sleep(nanoseconds: 45_000_000)
             }
             OnboardingHaptics.counterComplete()
         }
 
-        // Phase 4 — texte rouge puis bouton (révélé par l'appelant).
+        // Phase 5 — texte rouge puis bouton (révélé par l'appelant).
         if !showCaption {
-            try? await Task.sleep(nanoseconds: 350_000_000)
+            try? await Task.sleep(nanoseconds: 200_000_000)
             if Task.isCancelled { return false }
-            withAnimation(.easeOut(duration: 0.7)) { showCaption = true }
+            withAnimation(.easeOut(duration: 0.6)) { showCaption = true }
         }
-        try? await Task.sleep(nanoseconds: 600_000_000)
+        try? await Task.sleep(nanoseconds: 400_000_000)
         return !Task.isCancelled
+    }
+
+    /// Colore les carrés `from + 1` à `to` l'un après l'autre, `interval` entre deux.
+    /// Retourne `false` si la tâche a été annulée.
+    private func fill(to count: Int, from current: Int, interval: UInt64, apply: (Int) -> Void) async -> Bool {
+        guard current < count else { return true }
+        for i in (current + 1)...count {
+            if Task.isCancelled { return false }
+            withAnimation(.easeOut(duration: 0.25)) { apply(i) }
+            if i % 9 == 0 { OnboardingHaptics.selection() }
+            try? await Task.sleep(nanoseconds: interval)
+        }
+        return true
     }
 }
 
