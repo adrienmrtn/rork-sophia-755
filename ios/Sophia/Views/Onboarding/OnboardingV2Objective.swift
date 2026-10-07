@@ -13,7 +13,7 @@ struct OnboardingV2Objective: View {
             Spacer().frame(height: 72)
 
             VStack(spacing: 8) {
-                Text(languageManager.text("onboardingV2.objective.title"))
+                Text(vm.personalizedText("onboardingV2.objective.title", language: languageManager.current))
                     .font(DS.title(.title, .heavy))
                     .foregroundStyle(OV2.ink)
                     .multilineTextAlignment(.center)

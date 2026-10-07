@@ -3,6 +3,7 @@ import SwiftUI
 /// Page 9 — préparation du profil en 3 étapes (satisfaisant), note App Store, CTA « voir mon profil ».
 struct OnboardingV2Loading: View {
     @Environment(LanguageManager.self) private var languageManager
+    var firstName: String = ""
     let onNext: () -> Void
 
     @State private var progress: [Double] = [0, 0, 0]
@@ -18,7 +19,7 @@ struct OnboardingV2Loading: View {
         VStack(spacing: 0) {
             Spacer().frame(height: 84)
 
-            Text(languageManager.text("onboardingV2.loading.title"))
+            Text(OnboardingV2ViewModel.personalizedText("onboardingV2.loading.title", name: firstName, language: languageManager.current))
                 .font(DS.title(.title, .heavy))
                 .foregroundStyle(OV2.ink)
                 .multilineTextAlignment(.center)
