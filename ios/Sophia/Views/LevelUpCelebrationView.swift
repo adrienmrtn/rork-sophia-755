@@ -25,6 +25,13 @@ struct LevelUpCelebrationView: View {
 
                             SubjectBadgeView(subject: subject, iconSize: 56, cornerRadius: DS.Radius.card)
                                 .frame(width: 116, height: 116)
+                                // L'éclair du niveau gagné, posé sur le badge de la matière.
+                                .overlay(alignment: .topTrailing) {
+                                    AnimatedRewardBadge(kind: .levelUp, size: 28)
+                                        .offset(x: 16, y: -16)
+                                        .scaleEffect(showNewLevel ? 1 : 0.3)
+                                        .opacity(showNewLevel ? 1 : 0)
+                                }
                                 .scaleEffect(badgeScale)
                                 .opacity(appeared ? 1 : 0)
 
@@ -55,8 +62,10 @@ struct LevelUpCelebrationView: View {
                                     .opacity(showNewLevel ? 1 : 0.3)
 
                                 Text(String(format: languageManager.text("common.levelShort"), newLevel))
-                                    .font(.jakarta(size: 44, weight: .semibold))
-                                    .foregroundStyle(DS.ink)
+                                    .font(.jakarta(size: 44, weight: .heavy))
+                                    .foregroundStyle(
+                                        LinearGradient(colors: AnimatedRewardBadge.Kind.levelUp.colors, startPoint: .bottom, endPoint: .top)
+                                    )
                                     .scaleEffect(levelScale)
                                     .opacity(showNewLevel ? 1 : 0)
                             }
@@ -81,6 +90,17 @@ struct LevelUpCelebrationView: View {
                 .padding(.bottom, 32)
                 .opacity(showNewLevel ? 1 : 0)
                 .offset(y: showNewLevel ? 0 : 18)
+            }
+
+            if showNewLevel {
+                PathConfettiBurst(
+                    colors: AnimatedRewardBadge.Kind.levelUp.colors + [DS.accentSoft],
+                    pieceCount: 50,
+                    duration: 2.4,
+                    origin: CGPoint(x: 0.5, y: 0.28)
+                )
+                .ignoresSafeArea()
+                .allowsHitTesting(false)
             }
         }
         .onAppear { runSequence() }

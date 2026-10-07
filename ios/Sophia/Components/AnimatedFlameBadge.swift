@@ -5,6 +5,8 @@ import SwiftUI
 struct AnimatedFlameBadge: View {
     var size: CGFloat = 24
     var showGlow: Bool = true
+    /// `false` : la flamme garde ses couleurs mais ne bouge pas (l'en-tête de l'accueil).
+    var animated: Bool = true
 
     @State private var flameScale: CGFloat = 1.0
     @State private var flameRotation: Double = 0
@@ -31,13 +33,14 @@ struct AnimatedFlameBadge: View {
                         endPoint: .top
                     )
                 )
-                .symbolEffect(.variableColor.iterative.reversing)
+                .symbolEffect(.variableColor.iterative.reversing, isActive: animated)
                 .shadow(color: Self.pink.opacity(0.35), radius: size * 0.14, y: size * 0.06)
                 .scaleEffect(flameScale)
                 .rotationEffect(.degrees(flameRotation))
         }
         .frame(width: size * 1.4, height: size * 1.4)
         .onAppear {
+            guard animated else { return }
             withAnimation(.easeInOut(duration: 0.9).repeatForever(autoreverses: true)) {
                 flameScale = 1.12
             }

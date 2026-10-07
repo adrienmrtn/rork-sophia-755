@@ -17,6 +17,7 @@ struct SettingsView: View {
     @State private var showTerms: Bool = false
     @State private var showPrivacy: Bool = false
     @State private var showFeedback: Bool = false
+    @State private var showShare: Bool = false
     /// Choix du rôle (UGC ou slideshow) avant d'ouvrir la page créateurs du site.
     @State private var showCreatorChoice: Bool = false
     @State private var creatorsPage: CreatorsPage? = nil
@@ -134,6 +135,7 @@ struct SettingsView: View {
             .sheet(isPresented: $showTerms) { TermsView().sophiaSheetChrome() }
             .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaSheetChrome() }
             .sheet(isPresented: $showFeedback) { FeedbackView(isPremium: store.isPremium) }
+            .sheet(isPresented: $showShare) { ShareSophiaSheet().sophiaSheetChrome() }
             .confirmationDialog(
                 languageManager.text("settings.ambassador.banner.title"),
                 isPresented: $showCreatorChoice,
@@ -389,6 +391,15 @@ struct SettingsView: View {
     private var helpSection: some View {
         section(languageManager.text("settings.section.help")) {
             groupedCard {
+                actionRow(
+                    icon: "paperplane",
+                    title: languageManager.text("share.card.title"),
+                    subtitle: languageManager.text("share.card.subtitle")
+                ) {
+                    hapticTrigger += 1
+                    showShare = true
+                }
+                rowDivider
                 actionRow(
                     icon: "bubble.left.and.bubble.right",
                     title: languageManager.text("settings.feedback.title"),
