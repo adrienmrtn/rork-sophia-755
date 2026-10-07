@@ -9,7 +9,8 @@ import RevenueCat
 /// Sujets (6 carrés) · « Sophia va t'aider » · Mission (gratuite à l'essai) · « Me cultiver »
 /// (questions) ·
 /// Temps d'écran (slider) · Ta vie en années · « Transforme ce temps » · Avis · « Fais bon
-/// usage » · Swipe · Loading · Profil · Notifications · **Login** · Essai · Rappel · Paywall
+/// usage » · Swipe · Loading · Profil · Notifications · **Login** · Bienvenue à bord · Atouts ·
+/// Essai · Rappel · Paywall
 /// annuel · Paywall comparatif. Les pages « Se cultiver, c'est long et cher » et « Des cours
 /// écrits par des docteurs et des profs » ont été retirées le 29/09/2026.
 struct OnboardingV2View: View {
@@ -38,7 +39,7 @@ struct OnboardingV2View: View {
         case objectives, topics, objectiveIntro, mission
         case questions, phoneTime, yearsGrid, transform, review, personalize
         case swipe, loading, profile, readingTime, notifications, login
-        case trialSteps, reminder, paywallAnnual, paywallComparison
+        case welcomeAboard, features, trialSteps, reminder, paywallAnnual, paywallComparison
 
         /// Nom stable de l'écran, mémorisé pour reprendre l'onboarding au bon endroit : la
         /// séquence étant dynamique (page d'essai retirée quand l'offering n'inclut pas
@@ -69,6 +70,8 @@ struct OnboardingV2View: View {
             case .readingTime: "reading_time"
             case .notifications: "notifications"
             case .login: "login"
+            case .welcomeAboard: "welcome_aboard"
+            case .features: "features"
             case .trialSteps: "trial_steps"
             case .reminder: "reminder"
             case .paywallAnnual: "paywall_annual"
@@ -88,7 +91,8 @@ struct OnboardingV2View: View {
         var list: [Screen] = [.welcome, .language, .intro, .socialProof,
                               .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro, .mission,
                               .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
-                              .swipe, .loading, .profile, .readingTime, .notifications, .login]
+                              .swipe, .loading, .profile, .readingTime, .notifications, .login,
+                              .welcomeAboard, .features]
         if store.offerings == nil || store.annualHasFreeTrial {
             list.append(.trialSteps)
         }
@@ -208,6 +212,10 @@ struct OnboardingV2View: View {
             OnboardingV2Notifications(vm: vm, onNext: advance)
         case .login:
             OnboardingV2Login(onSignedIn: advance)
+        case .welcomeAboard:
+            OnboardingV2WelcomeAboard(vm: vm, onNext: advance)
+        case .features:
+            OnboardingV2Features(vm: vm, onNext: advance)
         case .trialSteps:
             OnboardingV2TrialSteps(trialDays: store.annualTrialDays, onNext: advance)
         case .reminder:

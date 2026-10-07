@@ -1,6 +1,7 @@
 import SwiftUI
 
-/// Page 9 — préparation du profil en 3 étapes (satisfaisant), note App Store, CTA « voir mon profil ».
+/// Page 9 — « On prépare ton parcours de connaissances » : trois barres qui se remplissent par
+/// à-coups, le bloc « 200 000 utilisateurs », CTA « voir mon profil ».
 struct OnboardingV2Loading: View {
     @Environment(LanguageManager.self) private var languageManager
     var firstName: String = ""
@@ -102,10 +103,20 @@ struct OnboardingV2Loading: View {
         }
     }
 
+    /// Jalons de chaque barre : des sauts inégaux et des pauses irrégulières, pour que la
+    /// progression ait le grain d'un vrai chargement plutôt qu'un fondu linéaire.
+    private static let checkpoints: [(progress: Double, pause: UInt64)] = [
+        (0.14, 130_000_000), (0.23, 260_000_000), (0.47, 90_000_000), (0.56, 320_000_000),
+        (0.79, 110_000_000), (0.87, 250_000_000), (1.0, 200_000_000),
+    ]
+
     private func playSteps() async {
         for i in 0..<3 where !completed[i] {
-            withAnimation(.easeInOut(duration: 1.0)) { progress[i] = 1.0 }
-            try? await Task.sleep(nanoseconds: 1_050_000_000)
+            for checkpoint in Self.checkpoints where checkpoint.progress > progress[i] {
+                if Task.isCancelled { return }
+                withAnimation(.easeOut(duration: 0.16)) { progress[i] = checkpoint.progress }
+                try? await Task.sleep(nanoseconds: checkpoint.pause)
+            }
             if Task.isCancelled { return }
             withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) { completed[i] = true }
             OnboardingHaptics.loadingStepComplete(step: i)
