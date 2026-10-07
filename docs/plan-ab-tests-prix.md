@@ -589,6 +589,24 @@ pays ; adoption de R1 ; anomalies. Une page par semaine dans `docs/`.
 
 ---
 
+### 9.5 Décision du test discount (07/10)
+
+19,99 € gagne contre 29,99 €. Mesure du 01/10 08:00 au 07/10 07:40 UTC, achats App Store lus
+client par client dans RevenueCat :
+
+| | A · 19,99 € | B · 29,99 € |
+|---|---|---|
+| Clients du groupe (attribut `discount_bucket`) | 13 210 | 13 026 |
+| Achats de l'offre | 130 | 69 |
+| Encaissé | 2 850 $ | 2 195 $ |
+| Renouvellement coupé ensuite | 17 % | 26 % |
+| Abonnés payants au prix plein (nouveaux depuis le 01/10) | 104 | 95 |
+
+19,99 vend plus (certitude ~100 %) et rapporte plus (93 %), sans retirer d'achats au prix plein.
+Mise en œuvre sans version d'app : le package `$rc_annual` de `offre_discount_2999` vend
+`discount_yearly` et `sophia_pro:annual-promo`, comme `offre_discount`. Les abonnés déjà à
+`discount_yearly_2999` gardent leur produit, qui reste rattaché à `premium`.
+
 ## 10. Grille de prix par pays (hypothèse, arrêtée à J+45)
 
 | Groupe | Annuel | Mensuel / hebdo | Discount | Décidé par |
