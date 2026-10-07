@@ -3,8 +3,9 @@ import UIKit
 
 // MARK: - Gabarit de page
 
-/// Gabarit commun des quatre pages de présentation : le visuel en haut, le titre (mots en
-/// rose) au milieu, le sous-titre calé en bas, juste au-dessus des points et du bouton.
+/// Gabarit commun des quatre pages de présentation : le titre en haut (comme sur le reste de
+/// l'onboarding), le visuel centré dans ce qui reste, le sous-titre calé en bas, juste
+/// au-dessus des points et du bouton.
 struct OnboardingV2IntroPageFrame<Visual: View>: View {
     let title: String
     var subtitle: String? = nil
@@ -13,43 +14,48 @@ struct OnboardingV2IntroPageFrame<Visual: View>: View {
     var body: some View {
         GeometryReader { geo in
             let compact = geo.size.height < 600
-            let box = CGSize(width: geo.size.width, height: Self.visualHeight(for: geo.size))
+            let box = CGSize(width: geo.size.width, height: Self.visualHeight(for: geo.size, hasSubtitle: subtitle != nil))
 
             VStack(spacing: 0) {
-                Spacer().frame(height: compact ? 8 : 20)
-
-                visual(box)
-                    .frame(width: box.width, height: box.height)
-
-                Spacer().frame(height: compact ? 16 : 26)
+                Spacer().frame(height: compact ? 40 : 64)
 
                 OV2Markup.highlighted(title)
                     .font(DS.title(.title, .heavy))
                     .foregroundStyle(OV2.ink)
                     .multilineTextAlignment(.center)
-                    .lineLimit(5)
-                    .minimumScaleFactor(0.7)
+                    .lineLimit(4)
+                    .minimumScaleFactor(0.75)
                     .padding(.horizontal, 28)
+
+                Spacer(minLength: 12)
+
+                visual(box)
+                    .frame(width: box.width, height: box.height)
 
                 Spacer(minLength: 12)
 
                 if let subtitle {
                     Text(subtitle)
-                        .font(DS.sans(.subheadline, .medium))
+                        .font(DS.sans(.body, .medium))
                         .foregroundStyle(OV2.inkSecondary)
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
                         .padding(.horizontal, 32)
-                        .padding(.bottom, 4)
+                        .padding(.bottom, 6)
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)
         }
     }
 
-    /// Un peu moins de la moitié de la page pour le visuel, borné sur les grands écrans.
-    static func visualHeight(for size: CGSize) -> CGFloat {
-        min(300, max(190, size.height * 0.44))
+    /// Le visuel prend ce qui reste entre le titre (jusqu'à quatre lignes) et le sous-titre,
+    /// borné pour rester lisible sur un petit écran comme sur un grand.
+    static func visualHeight(for size: CGSize, hasSubtitle: Bool) -> CGFloat {
+        let top: CGFloat = size.height < 600 ? 40 : 64
+        let titleBlock: CGFloat = 132
+        let subtitleBlock: CGFloat = hasSubtitle ? 70 : 0
+        let available = size.height - top - titleBlock - subtitleBlock - 24
+        return min(300, max(170, available))
     }
 }
 
@@ -213,15 +219,13 @@ struct OnboardingV2IntroResearchersPage: View {
             title: languageManager.text("onboardingV2.intro.researchers.title"),
             subtitle: languageManager.text("onboardingV2.intro.researchers.subtitle")
         ) { box in
-            VStack(spacing: 0) {
-                Spacer(minLength: 0)
+            VStack(spacing: box.height < 220 ? 22 : 34) {
                 portraitRow(width: box.width)
-                Spacer().frame(height: box.height < 220 ? 20 : 30)
-                OnboardingV2LogoMarquee(logos: logos, logoHeight: min(72, box.height * 0.3), paused: !isActive)
+                OnboardingV2LogoMarquee(logos: logos, logoHeight: min(72, box.height * 0.3), paused: !isActive || !marqueeIn)
                     .opacity(marqueeIn ? 1 : 0)
                     .offset(y: marqueeIn ? 0 : 14)
-                Spacer(minLength: 0)
             }
+            .frame(maxHeight: .infinity)
         }
         .onAppear {
             if portraits.isEmpty { portraits = Self.loadPortraits() }
@@ -276,20 +280,26 @@ struct OnboardingV2IntroResearchersPage: View {
 
 /// Logos des universités qui défilent en continu (`university_*.png` du bundle, voir
 /// `Resources/UniversityLogos/README.md`) ; sans aucun logo la bande montre des pictogrammes,
-/// pour que la page ne soit jamais vide.
+/// pour que la page ne soit jamais vide. La bande démarre avec le premier logo (Oxford) au
+/// centre de l'écran et avance lentement vers la gauche.
 struct OnboardingV2LogoMarquee: View {
     let logos: [UIImage]
     var logoHeight: CGFloat = 64
-    /// Figée quand la page n'est pas visible, pour ne pas animer dans le vide.
+    /// Figée quand la page ne la montre pas encore (ou plus) : rien ne bouge dans le vide, et
+    /// le défilement part d'Oxford au centre dès qu'elle est révélée.
     var paused: Bool = false
 
+    @State private var start = Date()
+
+    /// Points par seconde ; la première version avançait à 38.
+    private var speed: Double { 11.5 }
     private var gap: CGFloat { 28 }
     /// Largeur fixe par logo : la largeur de la bande se connaît sans rien mesurer.
     private var slotWidth: CGFloat { logoHeight * 1.6 }
 
     private var slotCount: Int { logos.isEmpty ? Self.placeholderSymbols.count : logos.count }
     /// Largeur d'une bande plus l'écart avec la copie suivante : la distance après laquelle
-    /// la seconde copie est exactement là où était la première.
+    /// la copie suivante est exactement là où était la précédente.
     private var period: CGFloat { CGFloat(slotCount) * (slotWidth + gap) }
 
     var body: some View {
@@ -298,14 +308,17 @@ struct OnboardingV2LogoMarquee: View {
         Color.clear
             .frame(maxWidth: .infinity)
             .frame(height: logoHeight + 12)
-            .overlay(alignment: .leading) {
-                TimelineView(.animation(paused: paused)) { context in
-                    HStack(spacing: gap) {
-                        strip
-                        strip
+            .overlay {
+                GeometryReader { geo in
+                    TimelineView(.animation(paused: paused)) { context in
+                        HStack(spacing: gap) {
+                            strip
+                            strip
+                            strip
+                        }
+                        .fixedSize()
+                        .offset(x: startInset(width: geo.size.width) - period - travelled(at: context.date))
                     }
-                    .fixedSize()
-                    .offset(x: -marqueeOffset(at: context.date))
                 }
             }
             .clipped()
@@ -320,13 +333,23 @@ struct OnboardingV2LogoMarquee: View {
                     startPoint: .leading, endPoint: .trailing
                 )
             )
+            .onAppear { start = Date() }
+            // Figée (Oxford au centre) tant que la page ne l'a pas révélée : l'horloge repart
+            // au moment où elle démarre, pour que le premier logo vu soit toujours Oxford.
+            .onChange(of: paused) { _, isPaused in
+                if !isPaused { start = Date() }
+            }
     }
 
-    /// 38 points par seconde, bouclés sur la période d'une bande.
-    private func marqueeOffset(at date: Date) -> CGFloat {
-        let travelled: Double = date.timeIntervalSinceReferenceDate * 38.0
-        let wrapped: Double = travelled.truncatingRemainder(dividingBy: Double(period))
-        return CGFloat(wrapped)
+    /// Décalage qui met le premier logo de la copie centrale au milieu de l'écran.
+    private func startInset(width: CGFloat) -> CGFloat {
+        (width - slotWidth) / 2
+    }
+
+    /// Distance parcourue depuis l'apparition, bouclée sur la période d'une bande.
+    private func travelled(at date: Date) -> CGFloat {
+        let distance: Double = max(0, date.timeIntervalSince(start)) * speed
+        return CGFloat(distance.truncatingRemainder(dividingBy: Double(period)))
     }
 
     private var strip: some View {
@@ -357,6 +380,7 @@ struct OnboardingV2LogoMarquee: View {
         "text.book.closed.fill", "building.2.fill", "scroll.fill",
     ]
 
+    /// Dans l'ordre des noms de fichiers : `university_01_oxford` ouvre la bande.
     static func loadLogos() -> [UIImage] {
         let urls = Bundle.main.urls(forResourcesWithExtension: "png", subdirectory: nil) ?? []
         return urls

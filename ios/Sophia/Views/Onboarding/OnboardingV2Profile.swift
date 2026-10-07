@@ -143,7 +143,7 @@ struct OnboardingV2Profile: View {
                     .opacity(nameRevealed ? 1 : 0)
 
                 Text(vm.profileTagline(language: languageManager.current))
-                    .font(DS.sans(.subheadline, .medium))
+                    .font(DS.sans(.body, .medium))
                     .foregroundStyle(OV2.inkSecondary)
                     .multilineTextAlignment(.center)
                     .lineLimit(nil)

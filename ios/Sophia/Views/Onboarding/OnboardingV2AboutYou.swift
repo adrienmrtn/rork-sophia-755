@@ -2,8 +2,8 @@ import SwiftUI
 
 /// Les pages « à propos de toi », juste avant les objectifs : prénom, âge, culture générale
 /// (curseur), motivation ; puis, après les objectifs, les sujets qui intéressent (six carrés).
-/// Le prénom est ensuite glissé dans les titres des questions
-/// (`OnboardingV2ViewModel.personalizedText`).
+/// Le prénom n'est pas répété dans les questions : il sert ensuite là où il porte (« Sophia va
+/// t'aider à atteindre tous tes objectifs », profil, chargement, après le compte).
 
 // MARK: - En-tête commun
 
@@ -20,7 +20,7 @@ private struct OnboardingV2QuestionHeader: View {
                 .multilineTextAlignment(.center)
             if let subtitle {
                 Text(subtitle)
-                    .font(DS.sans(.subheadline, .medium))
+                    .font(DS.sans(.body, .medium))
                     .foregroundStyle(OV2.inkSecondary)
                     .multilineTextAlignment(.center)
             }
@@ -213,7 +213,7 @@ struct OnboardingV2Age: View {
             Spacer().frame(height: 72)
 
             OnboardingV2QuestionHeader(
-                title: vm.personalizedText("onboardingV2.age.title", language: languageManager.current),
+                title: languageManager.text("onboardingV2.age.title"),
                 subtitle: languageManager.text("onboardingV2.age.subtitle")
             )
 
@@ -282,7 +282,7 @@ struct OnboardingV2Knowledge: View {
                 Spacer().frame(height: 72)
 
                 OnboardingV2QuestionHeader(
-                    title: vm.personalizedText("onboardingV2.knowledge.title", language: languageManager.current),
+                    title: languageManager.text("onboardingV2.knowledge.title"),
                     subtitle: languageManager.text("onboardingV2.knowledge.subtitle")
                 )
 
@@ -385,7 +385,7 @@ struct OnboardingV2Motivation: View {
             Spacer().frame(height: 72)
 
             OnboardingV2QuestionHeader(
-                title: vm.personalizedText("onboardingV2.motivation.title", language: languageManager.current),
+                title: languageManager.text("onboardingV2.motivation.title"),
                 subtitle: languageManager.text("onboardingV2.motivation.subtitle")
             )
 
@@ -451,7 +451,7 @@ struct OnboardingV2Topics: View {
                 Spacer().frame(height: geo.size.height < 700 ? 48 : 72)
 
                 OnboardingV2QuestionHeader(
-                    title: vm.personalizedText("onboardingV2.topics.title", language: languageManager.current),
+                    title: languageManager.text("onboardingV2.topics.title"),
                     subtitle: languageManager.text("onboardingV2.topics.subtitle")
                 )
 

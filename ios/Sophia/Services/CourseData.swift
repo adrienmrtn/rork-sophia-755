@@ -3661,7 +3661,7 @@ nonisolated enum CourseData {
         ),
         Course(
             id: "course_149_la_joconde",
-            title: "La Joconde comptait-elle vraiment pour Léonard ?",
+            title: "Pourquoi la Joconde est-elle aussi connue ?",
             description: "C'est le tableau le plus célèbre du monde. Pourtant, en 1503, son propre auteur avait mieux à faire que le portrait d'une épouse de marchand.",
             subject: .art,
             subcategory: "Œuvres iconiques",

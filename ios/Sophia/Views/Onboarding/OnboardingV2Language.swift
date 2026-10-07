@@ -20,7 +20,7 @@ struct OnboardingV2Language: View {
                     .foregroundStyle(OV2.ink)
                     .multilineTextAlignment(.center)
                 Text(languageManager.text("onboardingV2.language.subtitle"))
-                    .font(DS.sans(.subheadline, .medium))
+                    .font(DS.sans(.body, .medium))
                     .foregroundStyle(OV2.inkSecondary)
                     .multilineTextAlignment(.center)
             }
