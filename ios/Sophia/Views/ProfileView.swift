@@ -7,6 +7,8 @@ struct ProfileView: View {
     let store: StoreViewModel
     @Binding var selectedCourse: Course?
     var onShowPaywall: (() -> Void)? = nil
+    /// The anti-scroll paywall (`.blocker`), for the TikTok blocker card and its settings.
+    var onShowBlockerPaywall: (() -> Void)? = nil
     var onResetOnboarding: (() -> Void)? = nil
 
     @State private var showSettings: Bool = false
@@ -15,6 +17,7 @@ struct ProfileView: View {
     @State private var showPendingGlobalRankUp: Bool = false
     @State private var showEditHandle: Bool = false
     @State private var showTikTokBlocker: Bool = false
+    @State private var showAntiScrollIntro: Bool = false
     @State private var hapticTrigger: Int = 0
     @State private var appeared: Bool = false
     @Bindable private var social = SocialService.shared
@@ -62,10 +65,32 @@ struct ProfileView: View {
             .fullScreenCover(isPresented: $showTikTokBlocker) {
                 TikTokBlockerSettingsView(
                     store: store,
-                    onShowPaywall: onShowPaywall,
+                    onShowPaywall: {
+                        // The settings cover has to be gone before the paywall cover comes
+                        // up, or the two presentations race and neither appears.
+                        showTikTokBlocker = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                            (onShowBlockerPaywall ?? onShowPaywall)?()
+                        }
+                    },
                     presentedAsCover: true
                 )
                 .sophiaColorScheme()
+            }
+            // « Active l'anti-scroll » : l'explication d'abord, puis les réglages (membre) ou
+            // le paywall du blocker.
+            .sheet(isPresented: $showAntiScrollIntro) {
+                AntiScrollIntroSheet {
+                    showAntiScrollIntro = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                        if store.isPremium {
+                            showTikTokBlocker = true
+                        } else {
+                            (onShowBlockerPaywall ?? onShowPaywall)?()
+                        }
+                    }
+                }
+                .sophiaSheetChrome()
             }
             .fullScreenCover(isPresented: $showSettings) {
                 SettingsView(
@@ -410,7 +435,12 @@ struct ProfileView: View {
         let state: BlockerCardState = blockerCardState
         return Button {
             hapticTrigger += 1
-            showTikTokBlocker = true
+            // Already on: straight to the settings. Otherwise the anti-scroll explainer first.
+            if TikTokBlockerManager.shared.isEnabled {
+                showTikTokBlocker = true
+            } else {
+                showAntiScrollIntro = true
+            }
         } label: {
             HStack(spacing: 14) {
                 Image(systemName: state.icon)

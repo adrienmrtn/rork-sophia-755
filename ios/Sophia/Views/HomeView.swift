@@ -10,6 +10,8 @@ struct HomeView: View {
     /// Only the TikTok home carries the history button; the other two presentations are
     /// kept for rollback and are not part of this feature.
     var onOpenMyCourses: (() -> Void)? = nil
+    /// The anti-scroll badge beside the streak (TikTok home only). Presented by `ContentView`.
+    var onOpenAntiScroll: (() -> Void)? = nil
 
     var body: some View {
         switch HomeCardPresentation.style {
@@ -39,7 +41,8 @@ struct HomeView: View {
                 selectedCourse: $selectedCourse,
                 autoSwipeCourseId: $autoSwipeCourseId,
                 onShowDiscountPaywall: onShowDiscountPaywall,
-                onOpenMyCourses: onOpenMyCourses
+                onOpenMyCourses: onOpenMyCourses,
+                onOpenAntiScroll: onOpenAntiScroll
             )
         }
     }

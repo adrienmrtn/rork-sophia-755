@@ -25,6 +25,10 @@ struct ContentView: View {
     @State private var showMyCourses: Bool = false
     /// Full audio player, opened from the mini-player above the tab bar.
     @State private var showAudioPlayer: Bool = false
+    /// « Active l'anti-scroll », the sheet before the blocker is turned on (home badge).
+    @State private var showAntiScrollIntro: Bool = false
+    /// The blocker settings, opened from the home badge once the reader is a member.
+    @State private var showBlockerSettings: Bool = false
 
     var body: some View {
         ZStack {
@@ -41,7 +45,8 @@ struct ContentView: View {
                             discountManager.markShownToday()
                             paywallContext = .offreDiscount
                         },
-                        onOpenMyCourses: { showMyCourses = true }
+                        onOpenMyCourses: { showMyCourses = true },
+                        onOpenAntiScroll: openAntiScroll
                     )
                     .audioMiniPlayerInset(onOpen: openAudioPlayer)
                 }
@@ -77,6 +82,9 @@ struct ContentView: View {
                         selectedCourse: $selectedCourse,
                         onShowPaywall: {
                             paywallContext = .debloquerCours
+                        },
+                        onShowBlockerPaywall: {
+                            paywallContext = .blocker
                         },
                         onResetOnboarding: onResetOnboarding
                     )
@@ -215,10 +223,30 @@ struct ContentView: View {
                     if context == .offreDiscount { discountManager.markExpired() }
                     paywallContext = nil
                     if context == .audio { playAudioAfterPurchase() }
+                    if context == .blocker { openBlockerSettingsAfterPurchase() }
                 },
                 onRestored: { paywallContext = nil },
                 onDismissed: { paywallContext = nil }
             )
+        }
+        .sheet(isPresented: $showAntiScrollIntro) {
+            AntiScrollIntroSheet(onActivate: activateAntiScroll)
+                .sophiaSheetChrome()
+        }
+        .fullScreenCover(isPresented: $showBlockerSettings) {
+            TikTokBlockerSettingsView(
+                store: storeVM,
+                onShowPaywall: {
+                    // The settings cover has to be gone before the paywall cover comes up,
+                    // or the two presentations race and neither appears.
+                    showBlockerSettings = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                        paywallContext = .blocker
+                    }
+                },
+                presentedAsCover: true
+            )
+            .sophiaColorScheme()
         }
         .sheet(item: Binding(
             get: { syncService.pendingConflict },
@@ -287,6 +315,38 @@ struct ContentView: View {
             showPlayer: $showAudioPlayer,
             onShowPaywall: presentAudioPaywall
         )
+    }
+
+    // MARK: - Anti-scroll
+
+    /// The home badge: the explainer while the blocker is off, its settings once it is on.
+    private func openAntiScroll() {
+        if blocker.isEnabled {
+            showBlockerSettings = true
+        } else {
+            showAntiScrollIntro = true
+        }
+    }
+
+    /// « Activer l'anti-scroll » on the explainer: a member goes to the settings to turn it
+    /// on, a free reader meets the blocker paywall. The sheet goes first, then the cover.
+    private func activateAntiScroll() {
+        showAntiScrollIntro = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            if storeVM.isPremium {
+                showBlockerSettings = true
+            } else {
+                paywallContext = .blocker
+            }
+        }
+    }
+
+    /// Bought from the blocker paywall: straight to the switch, without a second tap.
+    private func openBlockerSettingsAfterPurchase() {
+        guard storeVM.isPremium else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+            showBlockerSettings = true
+        }
     }
 
     // MARK: - Audio

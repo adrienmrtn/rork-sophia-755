@@ -3,9 +3,9 @@ import RevenueCat
 
 /// Fonctionnalités comparées Free vs Pro (paywall comparatif).
 /// The comparison rows, and whether the free plan has each one. This is the real freemium
-/// rule (`FreemiumGate`): free readers already have every subject, unlimited favourites
-/// and the weekly additions; what they do not have is more than one course a day, the
-/// quizzes, the audio mode and the TikTok blocker.
+/// rule (`FreemiumGate`): free readers already have every subject and unlimited favourites;
+/// what they do not have is more than one course a day, the quizzes, the audio mode and
+/// the TikTok blocker.
 private struct OV2PaywallFeature {
     let key: String
     let free: Bool
@@ -14,7 +14,6 @@ private struct OV2PaywallFeature {
 private let ov2PaywallFeatures: [OV2PaywallFeature] = [
     .init(key: "onboardingV2.pw.feature.allSubjects", free: true),
     .init(key: "onboardingV2.pw.feature.favorites", free: true),
-    .init(key: "onboardingV2.pw.feature.weekly", free: true),
     .init(key: "onboardingV2.pw.feature.unlimited", free: false),
     .init(key: "onboardingV2.pw.feature.quiz", free: false),
     .init(key: "onboardingV2.pw.feature.audio", free: false),
@@ -34,6 +33,7 @@ struct OnboardingV2PaywallAnnual: View {
     @State private var purchasing = false
     @State private var didReloadOfferings = false
     @State private var appeared = false
+    @State private var photos: [UIImage] = []
 
     private var prices: StoreViewModel.PaywallPriceDisplay {
         store.paywallPriceDisplay(language: languageManager.current)
@@ -58,6 +58,8 @@ struct OnboardingV2PaywallAnnual: View {
                 headline
                     .padding(.horizontal, 28)
 
+                socialProofRow
+
                 Button(languageManager.text("onboardingV2.pw.viewAllPlans")) {
                     OnboardingHaptics.selection()
                     onClose()
@@ -69,16 +71,20 @@ struct OnboardingV2PaywallAnnual: View {
 
             Spacer()
 
-            VStack(spacing: 10) {
+            // Le bouton descend au plus près du bas : la note de prix est collée dessous,
+            // puis la ligne légale, sans marge inutile entre les trois.
+            VStack(spacing: 0) {
                 Text(languageManager.text("onboardingV2.pw.twoTaps"))
                     .font(DS.sans(.footnote, .medium))
                     .foregroundStyle(OV2.inkSecondary)
+                    .padding(.bottom, 10)
 
                 OnboardingV2Button(
                     title: purchasing
                         ? languageManager.text("common.processing")
                         : languageManager.trialText("onboardingV2.pw.startTrial", days: store.annualTrialDays),
                     enabled: !purchasing,
+                    bottomPadding: 8,
                     action: purchase
                 )
 
@@ -89,15 +95,40 @@ struct OnboardingV2PaywallAnnual: View {
                         .font(DS.sans(.footnote, .medium))
                         .foregroundStyle(OV2.inkSecondary)
                         .multilineTextAlignment(.center)
+                        .padding(.bottom, 8)
                 }
 
-                legalRow.padding(.bottom, 12)
+                legalRow.padding(.bottom, 10)
             }
         }
         .ov2Background()
         .onAppear {
             store.trackPaywallImpression(paywallId: "onboarding_annual")
+            if photos.isEmpty { photos = Array(OnboardingStudentPhotos.load().prefix(3)) }
         }
+    }
+
+    /// Preuve sociale discrète : trois visages, la note et le nombre d'utilisateurs, sur
+    /// une ligne, sous la promesse d'essai.
+    private var socialProofRow: some View {
+        HStack(spacing: 10) {
+            if !photos.isEmpty {
+                OnboardingV2PhotoRow(photos: photos, size: 28)
+            }
+            HStack(spacing: 4) {
+                Image(systemName: "star.fill")
+                    .font(.system(size: 11))
+                    .foregroundStyle(OV2.warm)
+                Text((4.8).formatted(.number.precision(.fractionLength(1)).locale(languageManager.locale)))
+                    .font(DS.sans(.footnote, .bold))
+                    .foregroundStyle(OV2.ink)
+                Text("· " + languageManager.text("onboardingV2.loading.social.count"))
+                    .font(DS.sans(.footnote, .medium))
+                    .foregroundStyle(OV2.inkSecondary)
+                    .lineLimit(1)
+            }
+        }
+        .accessibilityElement(children: .combine)
     }
 
     /// "Essaie 3 jours gratuitement, puis 3,33 € / mois (facturé annuellement)." — the free
@@ -214,7 +245,8 @@ struct OnboardingV2PaywallComparison: View {
                     comparisonTable
                 }
                 .padding(.horizontal, 24)
-                .padding(.bottom, 12)
+                // De l'air entre le tableau et le choix des plans.
+                .padding(.bottom, 30)
             }
 
             VStack(spacing: 10) {
@@ -228,13 +260,15 @@ struct OnboardingV2PaywallComparison: View {
                             ? languageManager.trialText("onboardingV2.pw.startTrial", days: trialDays(selected))
                             : languageManager.text("onboardingV2.pw.subscribe")),
                     enabled: !purchasing,
+                    bottomPadding: 10,
                     action: purchase
                 )
 
                 OnboardingV2LegalRow(onRestore: { Task { await store.restore() } })
-                    .padding(.bottom, 12)
+                    .padding(.bottom, 10)
             }
             .padding(.horizontal, 24)
+            .padding(.top, 6)
         }
         .ov2Background()
         .onAppear {
@@ -244,56 +278,85 @@ struct OnboardingV2PaywallComparison: View {
 
     /// Free / PRO column width — room for TR/HU/BG free labels with scale, still aligned for icons.
     private var comparisonColumnWidth: CGFloat { 72 }
+    private static let rowHeight: CGFloat = 46
 
+    /// Le tableau dans une carte ; la colonne PRO est une bande teintée, couronnée, avec des
+    /// coches pleines, face à une colonne Gratuit en gris : l'œil va tout de suite à PRO.
     private var comparisonTable: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
                 Spacer(minLength: 0)
                 Text(languageManager.text("onboardingV2.pw.free"))
-                    .font(DS.sans(.caption, .semibold)).foregroundStyle(OV2.inkSecondary)
+                    .font(DS.sans(.caption, .semibold)).foregroundStyle(OV2.inkTertiary)
                     .lineLimit(2)
                     .minimumScaleFactor(0.75)
                     .multilineTextAlignment(.center)
                     .frame(width: comparisonColumnWidth)
-                Text(languageManager.text("onboardingV2.pw.pro"))
-                    .font(DS.sans(.caption, .bold)).foregroundStyle(.white)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.8)
-                    .padding(.horizontal, 8)
-                    .frame(minWidth: comparisonColumnWidth, minHeight: 22)
-                    .background(OV2.accent, in: Capsule())
-                    .frame(width: comparisonColumnWidth)
+                VStack(spacing: 4) {
+                    Image(systemName: "crown.fill")
+                        .font(.system(size: 15, weight: .bold))
+                        .foregroundStyle(OV2.warm)
+                    Text(languageManager.text("onboardingV2.pw.pro"))
+                        .font(DS.sans(.caption, .heavy)).foregroundStyle(.white)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
+                        .padding(.horizontal, 10)
+                        .frame(minWidth: 52, minHeight: 24)
+                        .background(OV2.accent, in: Capsule())
+                }
+                .frame(width: comparisonColumnWidth)
             }
-            .padding(.bottom, 8)
+            .frame(height: 64)
 
-            ForEach(ov2PaywallFeatures, id: \.key) { feature in
+            ForEach(Array(ov2PaywallFeatures.enumerated()), id: \.element.key) { index, feature in
+                if index > 0 {
+                    Divider().overlay(OV2.hairline)
+                }
                 HStack(spacing: 0) {
                     Text(languageManager.text(feature.key))
-                        .font(DS.sans(.subheadline, .medium))
+                        .font(DS.sans(.subheadline, .semibold))
                         .foregroundStyle(OV2.ink)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     Group {
                         if feature.free {
-                            Image(systemName: "checkmark.circle.fill")
-                                .font(.system(size: 18))
+                            Image(systemName: "checkmark")
+                                .font(.system(size: 13, weight: .bold))
                                 .foregroundStyle(OV2.inkTertiary)
                         } else {
-                            Image(systemName: "minus")
+                            Image(systemName: "xmark")
                                 .font(.system(size: 12, weight: .bold))
-                                .foregroundStyle(OV2.inkTertiary)
+                                .foregroundStyle(OV2.inkTertiary.opacity(0.6))
                         }
                     }
                     .frame(width: comparisonColumnWidth)
                     Image(systemName: "checkmark.circle.fill")
-                        .font(.system(size: 18))
-                        .foregroundStyle(OV2.accent)
+                        .font(.system(size: 22))
+                        .foregroundStyle(.white, OV2.accent)
                         .frame(width: comparisonColumnWidth)
                 }
-                .padding(.vertical, 10)
-                Divider().overlay(OV2.hairline)
+                .frame(minHeight: Self.rowHeight)
             }
         }
+        .padding(.leading, 16)
+        .background(alignment: .trailing) {
+            // La bande PRO, du haut en bas de la carte.
+            LinearGradient(
+                colors: [OV2.accent.opacity(0.14), OV2.accentSoft.opacity(0.05)],
+                startPoint: .top, endPoint: .bottom
+            )
+            .frame(width: comparisonColumnWidth)
+            .overlay(alignment: .leading) {
+                Rectangle().fill(OV2.accent.opacity(0.18)).frame(width: 1)
+            }
+        }
+        .background(OV2.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(OV2.hairline, lineWidth: 1)
+        )
+        .shadow(color: .black.opacity(0.05), radius: 14, y: 6)
     }
 
     private func planCard(_ plan: Plan) -> some View {
