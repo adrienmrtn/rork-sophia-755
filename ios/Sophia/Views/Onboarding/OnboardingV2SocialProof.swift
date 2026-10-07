@@ -6,8 +6,8 @@ import UIKit
 /// entre deux lauriers, la disponibilité dans plus de 140 pays au-dessus du bouton, et le CTA
 /// « C'est parti ».
 ///
-/// Les photos sont les `student_<n>.jpg` du bundle (voir `Resources/StudentPhotos/README.md`) ;
-/// tant qu'il n'y en a pas, les portraits des avis (`review_avatar_<n>`) servent de placeholders.
+/// Les photos sont les `student_<n>.jpg` du bundle (voir `Resources/StudentPhotos/README.md`),
+/// suivies des portraits des avis (`review_avatar_<n>`), dans une grille symétrique.
 struct OnboardingV2SocialProof: View {
     @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
@@ -36,9 +36,9 @@ struct OnboardingV2SocialProof: View {
 
                 if !photos.isEmpty {
                     OnboardingV2StudentCluster(photos: photos, revealed: revealedPhotos)
-                        .frame(height: 176)
+                        .padding(.horizontal, 16)
 
-                    Spacer().frame(height: 24)
+                    Spacer().frame(height: 26)
                 }
 
                 OnboardingV2LaurelBadge {
@@ -85,16 +85,16 @@ struct OnboardingV2SocialProof: View {
 
     private func reveal() {
         guard revealedPhotos == 0 else { return }
-        let count = min(photos.count, OnboardingV2StudentCluster.slotCount)
+        let count = min(photos.count, OnboardingV2StudentCluster.maxPhotos)
         for i in 0..<count {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3 + Double(i) * 0.1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3 + Double(i) * 0.08) {
                 withAnimation(.spring(response: 0.5, dampingFraction: 0.62)) {
                     revealedPhotos = i + 1
                 }
                 OnboardingHaptics.selection()
             }
         }
-        let afterPhotos = 0.4 + Double(count) * 0.1
+        let afterPhotos = 0.4 + Double(count) * 0.08
         DispatchQueue.main.asyncAfter(deadline: .now() + afterPhotos) {
             withAnimation(.spring(response: 0.55, dampingFraction: 0.6)) {
                 ratingIn = true
@@ -111,46 +111,60 @@ struct OnboardingV2SocialProof: View {
 
 // MARK: - Photos d'étudiants
 
-/// Photos d'étudiants dans des ronds, posées en deux rangées décalées, comme une pile de
-/// polaroïds. Seules les vraies photos sont montrées : sans photo pour un emplacement, pas
-/// de rond.
+/// Photos d'étudiants dans des ronds de même taille, en rangées centrées (cinq par rangée au
+/// plus, les rangées équilibrées entre elles) : une grille symétrique, le même style pour
+/// toutes. Seules les vraies photos sont montrées.
 struct OnboardingV2StudentCluster: View {
     let photos: [UIImage]
     let revealed: Int
 
-    /// Position (par rapport au centre) et diamètre de chaque rond.
-    private static let slots: [(x: CGFloat, y: CGFloat, size: CGFloat)] = [
-        (-118, -34, 58), (-40, -50, 66), (42, -42, 60), (118, -28, 56),
-        (-80, 36, 64), (2, 48, 72), (84, 38, 62),
-    ]
+    static let maxPhotos = 10
+    private static let perRow = 5
+    private static let diameter: CGFloat = 58
+    private static let spacing: CGFloat = 10
+    private static let rowSpacing: CGFloat = 12
 
-    static var slotCount: Int { slots.count }
-
-    /// Autant de ronds que de photos, dans la limite des emplacements.
-    private var shownCount: Int { min(photos.count, Self.slots.count) }
+    /// Les rangées, aussi pleines les unes que les autres : 10 → 5 + 5, 7 → 4 + 3, 5 → 5.
+    private var rows: [[Int]] {
+        let count = min(photos.count, Self.maxPhotos)
+        guard count > 0 else { return [] }
+        let rowCount = Int((Double(count) / Double(Self.perRow)).rounded(.up))
+        let base = count / rowCount
+        let extra = count % rowCount
+        var rows: [[Int]] = []
+        var next = 0
+        for row in 0..<rowCount {
+            let size = base + (row < extra ? 1 : 0)
+            rows.append(Array(next..<(next + size)))
+            next += size
+        }
+        return rows
+    }
 
     var body: some View {
-        ZStack {
-            ForEach(0..<shownCount, id: \.self) { i in
-                let slot = Self.slots[i]
-                portrait(photos[i], size: slot.size)
-                    .offset(x: slot.x, y: slot.y)
-                    .scaleEffect(i < revealed ? 1 : 0.2)
-                    .opacity(i < revealed ? 1 : 0)
+        VStack(spacing: Self.rowSpacing) {
+            ForEach(Array(rows.enumerated()), id: \.offset) { _, row in
+                HStack(spacing: Self.spacing) {
+                    ForEach(row, id: \.self) { i in
+                        portrait(photos[i])
+                            .scaleEffect(i < revealed ? 1 : 0.2)
+                            .opacity(i < revealed ? 1 : 0)
+                    }
+                }
             }
         }
         .frame(maxWidth: .infinity)
         .accessibilityHidden(true)
     }
 
-    private func portrait(_ image: UIImage, size: CGFloat) -> some View {
+    private func portrait(_ image: UIImage) -> some View {
         Image(uiImage: image)
             .resizable()
             .scaledToFill()
-            .frame(width: size, height: size)
+            .frame(width: Self.diameter, height: Self.diameter)
             .clipShape(Circle())
             .overlay(Circle().strokeBorder(.white, lineWidth: 3))
-            .shadow(color: .black.opacity(0.14), radius: 10, y: 5)
+            .shadow(color: .black.opacity(0.14), radius: 8, y: 4)
     }
 }
 
@@ -178,11 +192,10 @@ struct OnboardingV2PhotoRow: View {
 }
 
 /// Les photos de la page : `student_<n>.jpg|png` du bundle (`Resources/StudentPhotos`), dans
-/// l'ordre de n ; sinon les portraits des avis, en attendant les vraies photos.
+/// l'ordre de n, puis les portraits des avis (`review_avatar_<n>`), tous dans le même style.
 enum OnboardingStudentPhotos {
     static func load() -> [UIImage] {
-        let students = bundled(prefix: "student_")
-        return students.isEmpty ? bundled(prefix: "review_avatar_") : students
+        bundled(prefix: "student_") + bundled(prefix: "review_avatar_")
     }
 
     /// `UIImage(named:)` ne trouve pas un JPG du bundle sans son extension ; recherche par URL.
