@@ -4,7 +4,8 @@ import RevenueCat
 /// Coordinateur d'onboarding V2 — séquence **fixe** (les pages valeur ne dépendent plus des
 /// objectifs sélectionnés).
 ///
-/// Welcome · Langue · Objectifs (multi) · « Sophia va t'aider » · « Me cultiver » (questions) ·
+/// Welcome · Langue · Présentation (4 pages reliées par des points) · Preuve sociale (500 000
+/// utilisateurs) · Objectifs (multi) · « Sophia va t'aider » · « Me cultiver » (questions) ·
 /// Temps d'écran (slider) · Ta vie en années · « Transforme ce temps » · Avis · « Fais bon
 /// usage » · Swipe · Loading · Profil · Notifications · **Login** · Essai · Rappel · Paywall
 /// annuel · Paywall comparatif. Les pages « Se cultiver, c'est long et cher » et « Des cours
@@ -31,7 +32,7 @@ struct OnboardingV2View: View {
     @State private var showExistingAccountSignIn = false
 
     private enum Screen: Hashable {
-        case welcome, language, objectives, objectiveIntro
+        case welcome, language, intro, socialProof, objectives, objectiveIntro
         case questions, phoneTime, yearsGrid, transform, review, personalize
         case swipe, loading, profile, readingTime, notifications, login
         case trialSteps, reminder, paywallAnnual, paywallComparison
@@ -43,6 +44,8 @@ struct OnboardingV2View: View {
             switch self {
             case .welcome: "welcome"
             case .language: "language"
+            case .intro: "intro"
+            case .socialProof: "social_proof"
             case .objectives: "objective"
             case .objectiveIntro: "objective_intro"
             case .questions: "questions"
@@ -73,7 +76,7 @@ struct OnboardingV2View: View {
     /// l'offering servie (variante d'expérience RevenueCat) n'inclut pas d'essai, sinon on
     /// promettrait un essai que l'utilisateur n'aura pas.
     private var screens: [Screen] {
-        var list: [Screen] = [.welcome, .language, .objectives, .objectiveIntro,
+        var list: [Screen] = [.welcome, .language, .intro, .socialProof, .objectives, .objectiveIntro,
                               .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
                               .swipe, .loading, .profile, .readingTime, .notifications, .login]
         if store.offerings == nil || store.annualHasFreeTrial {
@@ -150,6 +153,10 @@ struct OnboardingV2View: View {
             )
         case .language:
             OnboardingV2Language(onNext: advance)
+        case .intro:
+            OnboardingV2IntroCarousel(onNext: advance)
+        case .socialProof:
+            OnboardingV2SocialProof(onNext: advance)
         case .objectives:
             OnboardingV2Objective(vm: vm, onNext: advance)
         case .objectiveIntro:

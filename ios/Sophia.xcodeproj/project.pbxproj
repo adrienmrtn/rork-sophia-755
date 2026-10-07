@@ -96,6 +96,8 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Resources/ReviewAvatars/README.md,
+				Resources/StudentPhotos/README.md,
+				Resources/UniversityLogos/README.md,
 				Services/CourseData.swift,
 			);
 			target = 105FC5792E9EAD3100EA8BCF /* Sophia */;
