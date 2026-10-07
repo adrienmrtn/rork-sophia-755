@@ -11,11 +11,14 @@ REST API v2, makes sure that:
        `premium` entitlement — the audit found two approved products that were not;
     3. every offering of the manifest exists, with its packages, each package
        attached to the App Store, Play Store and Test Store products that exist.
+       When the manifest names another product for a store, the package's old
+       product for that store is detached first (a package holds one per store).
 
 Two subcommands:
 
     plan     print what `apply` would create or attach. Writes nothing.
-    apply    do it. Idempotent: nothing is created twice, nothing is deleted.
+    apply    do it. Idempotent: nothing is created twice, nothing is deleted;
+             only a package product the manifest replaced is detached.
 
 Experiments and audiences are not in RevenueCat's API: they stay a dashboard
 step (docs/plan-ab-tests-prix.md § 6). Test Store products are attached when
@@ -136,12 +139,13 @@ def ensure_offering(api_key: str, project_id: str, offerings: dict[str, dict], s
     return created
 
 
-def ensure_package(api_key: str, project_id: str, offering: dict, lookup_key: str, product_ids: list[str], dry_run: bool) -> None:
+def ensure_package(api_key: str, project_id: str, offering: dict, lookup_key: str, wanted: dict[str, str], dry_run: bool) -> None:
+    """``wanted`` maps app id -> product id: the one product each store sells in this package."""
     packages = {p["lookup_key"]: p for p in paginate(api_key, f"/projects/{project_id}/offerings/{offering['id']}/packages")}
     package = packages.get(lookup_key)
     if not package:
         if dry_run:
-            print(f"    would create package {lookup_key} with {len(product_ids)} products")
+            print(f"    would create package {lookup_key} with {len(wanted)} products")
             return
         name, position = PACKAGE_NAMES.get(lookup_key, (lookup_key, 9))
         package = request_json(
@@ -152,24 +156,44 @@ def ensure_package(api_key: str, project_id: str, offering: dict, lookup_key: st
         )
         print(f"    created package {lookup_key}")
     # Each item is {"product": {...}, "eligibility_criteria": ...}, not a bare product.
-    have = {
-        (item.get("product") or item).get("id")
+    attached = [
+        item.get("product") or item
         for item in paginate(api_key, f"/projects/{project_id}/packages/{package['id']}/products")
-    }
-    missing = [p for p in product_ids if p not in have]
-    if not missing:
-        print(f"    package {lookup_key}: {len(product_ids)} products attached")
+    ]
+    have = {product.get("id") for product in attached}
+    # A store whose product the manifest changed: its old product leaves the package. Stores the
+    # manifest has no product for are left alone, so a package never loses a store's only product.
+    stale = [
+        product
+        for product in attached
+        if product.get("app_id") in wanted and product.get("id") != wanted[product["app_id"]]
+    ]
+    missing = [p for p in wanted.values() if p not in have]
+    if not missing and not stale:
+        print(f"    package {lookup_key}: {len(wanted)} products attached")
         return
     if dry_run:
-        print(f"    would attach {len(missing)} products to package {lookup_key}")
+        for product in stale:
+            print(f"    would detach {product.get('store_identifier')} ({product.get('id')}) from package {lookup_key}")
+        if missing:
+            print(f"    would attach {len(missing)} products to package {lookup_key}: {', '.join(missing)}")
         return
-    request_json(
-        "POST",
-        f"/projects/{project_id}/packages/{package['id']}/actions/attach_products",
-        api_key=api_key,
-        body={"products": [{"product_id": p, "eligibility_criteria": "all"} for p in missing]},
-    )
-    print(f"    package {lookup_key}: attached {len(missing)} products")
+    if stale:
+        request_json(
+            "POST",
+            f"/projects/{project_id}/packages/{package['id']}/actions/detach_products",
+            api_key=api_key,
+            body={"product_ids": [product["id"] for product in stale]},
+        )
+        print(f"    package {lookup_key}: detached {', '.join(str(product.get('store_identifier')) for product in stale)}")
+    if missing:
+        request_json(
+            "POST",
+            f"/projects/{project_id}/packages/{package['id']}/actions/attach_products",
+            api_key=api_key,
+            body={"products": [{"product_id": p, "eligibility_criteria": "all"} for p in missing]},
+        )
+        print(f"    package {lookup_key}: attached {len(missing)} products")
 
 
 def run(api_key: str, manifest: dict, dry_run: bool) -> int:
@@ -230,15 +254,15 @@ def run(api_key: str, manifest: dict, dry_run: bool) -> int:
         offering = ensure_offering(api_key, project_id, offerings, spec, dry_run)
         for package_key, ios_id in spec["packages"].items():
             ids = store_ids(manifest, ios_id)
-            product_ids = []
+            wanted: dict[str, str] = {}
             for store, store_identifier in ids.items():
                 app = apps.get(store)
                 if app and store_identifier and (app["id"], store_identifier) in products:
-                    product_ids.append(products[(app["id"], store_identifier)]["id"])
+                    wanted[app["id"]] = products[(app["id"], store_identifier)]["id"]
             if offering is None:
-                print(f"    would create package {package_key} ({ios_id}: {len(product_ids)} store products known)")
+                print(f"    would create package {package_key} ({ios_id}: {len(wanted)} store products known)")
                 continue
-            ensure_package(api_key, project_id, offering, package_key, product_ids, dry_run)
+            ensure_package(api_key, project_id, offering, package_key, wanted, dry_run)
 
     print("\nNothing was written (plan)." if dry_run else "\nDone. Experiments and audiences: RevenueCat dashboard (plan § 6).")
     return 0

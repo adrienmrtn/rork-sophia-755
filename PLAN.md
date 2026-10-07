@@ -111,6 +111,12 @@ code iOS et Android. Coche les cases des actions que tu valides.
   (`appVersion >= 1.1.7`, comparaison numérique vérifiée), créées par `revenuecat-experiments ·
   apply`. Ordre : Stop sur les 5 expériences v1 dans le dashboard, puis Start sur les 5 « · v2 ».
   Lecture à J+21 / J+30 / J+45 depuis le démarrage de la v2.
+- [x] Test discount 19,99 vs 29,99 — **terminé le 07/10, 19,99 gagne** : du 01/10 au 07/10, groupe A
+  (19,99) 130 achats et 2 850 $, groupe B (29,99) 69 achats et 2 195 $, pour des groupes de même
+  taille (13 210 et 13 026) ; 19,99 rapporte plus avec 93 % de certitude, sans perte d'achats au
+  prix plein (104 abonnés payants en A, 95 en B). L'offering `offre_discount_2999` vend désormais
+  `discount_yearly` (iOS) et `sophia_pro:annual-promo` (Play) : tout le monde voit 19,99, sans
+  mise à jour de l'app. Le tirage et l'attribut `discount_bucket` restent dans l'app, sans effet.
 - [ ] Disponibilité des produits de test limitée aux pays de leur test (`available_in` du
   manifeste) : le 01/10, un abonné suédois est passé de `Sophia_yearly` (39,99 €) au palier 25 %
   depuis les réglages d'abonnement d'Apple, qui listent tous les produits du groupe vendus dans
