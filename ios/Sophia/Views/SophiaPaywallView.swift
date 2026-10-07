@@ -18,6 +18,9 @@ enum SophiaPaywallContext: String, Identifiable {
     /// Audio mode unlock (listen, queue, download). Falls back to an `audio` offering, which
     /// does not need to exist: the current offering is sold first, like every context.
     case audio = "audio"
+    /// Anti-scroll (TikTok blocker) unlock, from the home badge, the profile card or the
+    /// blocker settings. Like `audio`, its `blocker` offering does not need to exist.
+    case blocker = "blocker"
 
     var id: String { rawValue }
 
@@ -36,9 +39,10 @@ enum SophiaPaywallContext: String, Identifiable {
 ///
 /// - `.offreDiscount` → `SophiaDiscountPaywall` (flash sale on the `offre_discount` offering).
 /// - `.entrainement` → `SophiaTrainingPaywall` (sells the spaced-repetition training method).
-/// - `.quizz` → `SophiaQuizPaywall` (auto-playing quiz demo, FAQ, activate-trial CTA).
-/// - `.debloquerCours` → `SophiaCourseUnlockPaywall` (rating, 6-courses/day stat, reviews, countdown).
+/// - `.quizz` → `SophiaQuizPaywall` (forgetting curve with and without quizzes, what PRO unlocks).
+/// - `.debloquerCours` → `SophiaCourseUnlockPaywall` (locked course, countdown, « OU » Sophia PRO).
 /// - `.audio` → `SophiaAudioPaywall` (sells listening: lock screen, French and English, offline).
+/// - `.blocker` → `SophiaBlockerPaywall` (take back your time with the anti-scroll, what PRO unlocks).
 /// - `.finOnboarding` → `SophiaStandardPaywall` (single annual plan, price and trial from the store).
 struct SophiaPaywallView: View {
     let context: SophiaPaywallContext
@@ -94,6 +98,13 @@ struct SophiaPaywallView: View {
             SophiaAudioPaywall(
                 store: store,
                 course: course,
+                onPurchased: onPurchased,
+                onRestored: onRestored,
+                onDismissed: onDismissed
+            )
+        case .blocker:
+            SophiaBlockerPaywall(
+                store: store,
                 onPurchased: onPurchased,
                 onRestored: onRestored,
                 onDismissed: onDismissed

@@ -395,6 +395,8 @@ struct CourseCompletedView: View {
 
 // MARK: - Streak Celebration screen
 
+/// La série : une flamme rose-orange qui bat, le compteur qui saute d'un cran avec une
+/// pluie de confettis, la semaine en pastilles roses. Peps et chaleur, pas de gris.
 struct StreakCelebrationView: View {
     @Environment(LanguageManager.self) private var languageManager
     let streak: Int
@@ -406,6 +408,13 @@ struct StreakCelebrationView: View {
     @State private var flameScale: CGFloat = 0.5
     @State private var numberAppeared: Bool = false
     @State private var displayedStreak: Int = 0
+    @State private var numberBounce: CGFloat = 1
+    @State private var haloPulse = false
+    @State private var confetti = false
+
+    private static let pink = AnimatedFlameBadge.pink
+    private static let orange = AnimatedFlameBadge.orange
+    private static let yellow = AnimatedFlameBadge.yellow
 
     var body: some View {
         ZStack {
@@ -425,10 +434,12 @@ struct StreakCelebrationView: View {
 
                             VStack(spacing: 4) {
                                 Text("\(displayedStreak)")
-                                    .font(.jakarta(size: 72, weight: .semibold))
-                                    .foregroundStyle(DS.ink)
+                                    .font(.jakarta(size: 76, weight: .heavy))
+                                    .foregroundStyle(
+                                        LinearGradient(colors: [Self.pink, Self.orange], startPoint: .top, endPoint: .bottom)
+                                    )
                                     .contentTransition(.numericText())
-                                    .scaleEffect(numberAppeared ? 1 : 0.6)
+                                    .scaleEffect((numberAppeared ? 1 : 0.6) * numberBounce)
                                     .opacity(numberAppeared ? 1 : 0)
 
                                 Text(streak <= 1 ? languageManager.text("course.streak.day") : languageManager.text("course.streak.days"))
@@ -456,7 +467,7 @@ struct StreakCelebrationView: View {
 
                             Text(languageManager.text("course.streak.onTrack"))
                                 .font(DS.title(.headline, .semibold))
-                                .foregroundStyle(DS.ink)
+                                .foregroundStyle(Self.pink)
                                 .opacity(appeared ? 1 : 0)
 
                             Spacer(minLength: 20)
@@ -483,21 +494,43 @@ struct StreakCelebrationView: View {
                 .opacity(appeared ? 1 : 0)
                 .offset(y: appeared ? 0 : 10)
             }
+
+            if confetti {
+                PathConfettiBurst(
+                    colors: [Self.pink, Self.orange, Self.yellow, DS.accentSoft],
+                    pieceCount: 60,
+                    duration: 2.6,
+                    origin: CGPoint(x: 0.5, y: 0.3)
+                )
+                .ignoresSafeArea()
+                .allowsHitTesting(false)
+            }
         }
         .onAppear {
             displayedStreak = max(0, streak - 1)
 
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.75).delay(0.05)) {
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.6).delay(0.05)) {
                 flameScale = 1.0
             }
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.75).delay(0.3)) {
+            withAnimation(.easeInOut(duration: 1.1).repeatForever(autoreverses: true).delay(0.4)) {
+                haloPulse = true
+            }
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.65).delay(0.3)) {
                 numberAppeared = true
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
-                withAnimation(.snappy) { displayedStreak = streak }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
+                // Le compteur saute d'un cran : un petit rebond et des confettis.
+                withAnimation(.spring(response: 0.3, dampingFraction: 0.45)) {
+                    displayedStreak = streak
+                    numberBounce = 1.18
+                }
+                withAnimation(.spring(response: 0.4, dampingFraction: 0.7).delay(0.18)) {
+                    numberBounce = 1
+                }
+                confetti = true
                 UINotificationFeedbackGenerator().notificationOccurred(.success)
             }
-            withAnimation(.easeOut(duration: 0.45).delay(0.55)) {
+            withAnimation(.easeOut(duration: 0.45).delay(0.6)) {
                 appeared = true
             }
         }
@@ -506,14 +539,20 @@ struct StreakCelebrationView: View {
     private var flameView: some View {
         ZStack {
             Circle()
-                .fill(DS.accentTint)
+                .fill(Self.pink.opacity(0.14))
+                .frame(width: 164, height: 164)
+                .scaleEffect(haloPulse ? 1.08 : 0.94)
+                .opacity(haloPulse ? 0.7 : 1)
+
+            Circle()
+                .fill(
+                    LinearGradient(colors: [Self.pink.opacity(0.22), Self.orange.opacity(0.18)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                )
                 .frame(width: 128, height: 128)
 
-            Image(systemName: "flame.fill")
-                .font(.jakarta(size: 60, weight: .regular))
-                .foregroundStyle(DS.accent)
+            AnimatedFlameBadge(size: 60, showGlow: false)
         }
-        .frame(height: 128)
+        .frame(height: 164)
     }
 
     private var weekStrip: some View {
@@ -548,13 +587,15 @@ struct StreakCelebrationView: View {
                         .foregroundStyle(DS.inkTertiary)
                     ZStack {
                         if isDone {
-                            Circle().fill(DS.accent)
+                            Circle().fill(
+                                LinearGradient(colors: [Self.pink, Self.orange], startPoint: .topLeading, endPoint: .bottomTrailing)
+                            )
                             Image(systemName: "checkmark")
-                                .font(.jakarta(size: 11, weight: .semibold))
+                                .font(.jakarta(size: 11, weight: .bold))
                                 .foregroundStyle(.white)
                         } else if isToday {
                             Circle().fill(DS.surface)
-                            Circle().strokeBorder(DS.accentSoft, lineWidth: 2)
+                            Circle().strokeBorder(Self.pink, lineWidth: 2)
                         } else {
                             Circle().fill(DS.surfaceMuted)
                         }

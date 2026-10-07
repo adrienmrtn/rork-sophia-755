@@ -63,6 +63,8 @@ extension AnyTransition {
 struct OnboardingV2Button: View {
     let title: String
     var enabled: Bool = true
+    /// Marge sous le bouton ; les paywalls la réduisent pour coller la note de prix.
+    var bottomPadding: CGFloat = 20
     let action: () -> Void
     @State private var tap = 0
 
@@ -91,7 +93,7 @@ struct OnboardingV2Button: View {
         .disabled(!enabled)
         .sensoryFeedback(.impact(weight: .medium), trigger: tap)
         .padding(.horizontal, 24)
-        .padding(.bottom, 20)
+        .padding(.bottom, bottomPadding)
     }
 }
 

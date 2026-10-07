@@ -42,6 +42,8 @@ struct HomeViewTikTok: View {
     var onShowDiscountPaywall: (() -> Void)? = nil
     /// Opens the reader's own history. Presented by `ContentView`, which owns the sheets.
     var onOpenMyCourses: (() -> Void)? = nil
+    /// The anti-scroll badge, left of the streak. Presented by `ContentView` as well.
+    var onOpenAntiScroll: (() -> Void)? = nil
 
     @State private var cards: [Course] = []
     @State private var scrolledCardId: String?
@@ -178,8 +180,28 @@ struct HomeViewTikTok: View {
             Spacer(minLength: 8)
 
             myCoursesBadge
+            antiScrollBadge
             streakBadge
         }
+    }
+
+    /// Le téléphone barré de l'anti-scroll, à gauche des streaks : bleu quand le blocage est
+    /// armé, gris sinon. Un tap ouvre l'explication (ou les réglages, une fois actif).
+    private var antiScrollBadge: some View {
+        let armed = TikTokBlockerManager.shared.isArmed
+        return Button {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            onOpenAntiScroll?()
+        } label: {
+            Image(systemName: "iphone.slash")
+                .font(.jakarta(size: 15, weight: .semibold))
+                .foregroundStyle(armed ? DS.accent : DS.inkSecondary)
+                .frame(width: 36, height: 36)
+                .background(armed ? DS.accentTint : DS.surface, in: Circle())
+                .overlay(Circle().strokeBorder(armed ? DS.accent.opacity(0.25) : DS.hairline, lineWidth: 1))
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(Text(languageManager.text("antiScroll.cta")))
     }
 
     /// Same badge shape as the streak, beside it: the two things worth a glance from home
@@ -215,9 +237,15 @@ struct HomeViewTikTok: View {
 
     private var streakBadge: some View {
         HStack(spacing: 6) {
-            Image(systemName: "flame")
-                .font(.jakarta(size: 14, weight: .medium))
-                .foregroundStyle(DS.inkSecondary)
+            // Une série en cours brûle rose-orange ; à zéro, la flamme reste éteinte.
+            if progressManager.streak > 0 {
+                AnimatedFlameBadge(size: 13, showGlow: false)
+                    .frame(width: 16, height: 16)
+            } else {
+                Image(systemName: "flame")
+                    .font(.jakarta(size: 14, weight: .medium))
+                    .foregroundStyle(DS.inkSecondary)
+            }
             Text("\(progressManager.streak)")
                 .font(DS.sans(.subheadline, .semibold))
                 .foregroundStyle(DS.ink)

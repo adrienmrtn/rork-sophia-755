@@ -32,6 +32,9 @@ struct OnboardingV2WelcomeAboard: View {
                     .scaleEffect(badgeIn ? 1 : 0.4)
                     .opacity(badgeIn ? 1 : 0)
             }
+            // Les images de cours flottent autour du logo, dans sa bande : jamais derrière
+            // le titre, le sous-titre ou le bouton.
+            .background { OnboardingV2FloatingCourseImages() }
             .scaleEffect(logoIn ? 1 : 0.82)
             .opacity(logoIn ? 1 : 0)
 
@@ -57,9 +60,6 @@ struct OnboardingV2WelcomeAboard: View {
                 .ov2Reveal(delay: 0.75, yOffset: 10)
 
             OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
-        }
-        .background {
-            OnboardingV2FloatingCourseImages()
         }
         .ov2Background()
         .overlay {
@@ -117,12 +117,14 @@ struct OnboardingV2WelcomeAboard: View {
 
 // MARK: - Images de cours qui flottent
 
-/// Six petites images de cours posées sur les bords, qui dérivent doucement et en boucle
-/// derrière le contenu. Elles apparaissent en fondu, rien ne saute.
+/// Six petites images de cours autour du logo, qui dérivent doucement et en boucle. Elles
+/// sont posées par rapport au centre du logo et restent dans sa bande (jamais sous le
+/// titre, le sous-titre ou le bouton : un texte ne passe jamais devant une image).
 private struct OnboardingV2FloatingCourseImages: View {
+    /// Décalage par rapport au centre du logo, taille, inclinaison.
     private static let slots: [(x: CGFloat, y: CGFloat, size: CGFloat, rotation: Double)] = [
-        (0.12, 0.13, 46, -8), (0.87, 0.11, 40, 7), (0.07, 0.47, 38, 5),
-        (0.93, 0.43, 44, -6), (0.15, 0.80, 42, 6), (0.85, 0.76, 48, -5),
+        (-148, -60, 44, -8), (150, -50, 40, 7), (-128, 46, 38, 5),
+        (134, 56, 44, -6), (-62, -126, 42, 6), (76, -130, 46, -5),
     ]
     private static let courseIds = [
         "course_42_pourquoi_reve_t_on",
@@ -137,7 +139,7 @@ private struct OnboardingV2FloatingCourseImages: View {
     @State private var shown = false
 
     var body: some View {
-        GeometryReader { geo in
+        ZStack {
             ForEach(Array(Self.slots.enumerated()), id: \.offset) { i, slot in
                 OnboardingV2FloatingImage(
                     image: i < images.count ? images[i] : nil,
@@ -145,7 +147,7 @@ private struct OnboardingV2FloatingCourseImages: View {
                     rotation: slot.rotation,
                     phase: Double(i)
                 )
-                .position(x: geo.size.width * slot.x, y: geo.size.height * slot.y)
+                .offset(x: slot.x, y: slot.y)
             }
         }
         .opacity(shown ? 1 : 0)
