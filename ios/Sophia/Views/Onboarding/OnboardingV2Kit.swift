@@ -200,3 +200,52 @@ extension View {
             .frame(maxWidth: .infinity)
     }
 }
+
+// MARK: - Lauriers (preuve sociale)
+
+/// Deux lauriers autour d'un contenu (note, nombre d'utilisateurs…) : le motif de preuve
+/// sociale repris sur les pages avis, preuve sociale, chargement et atouts.
+struct OnboardingV2LaurelBadge<Content: View>: View {
+    var size: CGFloat = 54
+    var tint: Color = OV2.warm
+    @ViewBuilder let content: () -> Content
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "laurel.leading")
+                .font(.system(size: size, weight: .regular))
+                .foregroundStyle(tint)
+            content()
+            Image(systemName: "laurel.trailing")
+                .font(.system(size: size, weight: .regular))
+                .foregroundStyle(tint)
+        }
+        .accessibilityElement(children: .combine)
+    }
+}
+
+/// Cinq étoiles, la note « 4,8 » au séparateur décimal de la langue, et une légende.
+struct OnboardingV2RatingStack: View {
+    @Environment(LanguageManager.self) private var languageManager
+    let caption: String
+    var compact: Bool = false
+
+    var body: some View {
+        VStack(spacing: compact ? 2 : 3) {
+            HStack(spacing: 3) {
+                ForEach(0..<5, id: \.self) { _ in
+                    Image(systemName: "star.fill")
+                        .font(.system(size: compact ? 12 : 14))
+                        .foregroundStyle(OV2.warm)
+                }
+            }
+            Text((4.8).formatted(.number.precision(.fractionLength(1)).locale(languageManager.locale)))
+                .font(DS.title(compact ? .title2 : .largeTitle, .heavy))
+                .foregroundStyle(OV2.ink)
+            Text(caption)
+                .font(DS.sans(.caption, .semibold))
+                .foregroundStyle(OV2.inkSecondary)
+                .lineLimit(1)
+        }
+    }
+}

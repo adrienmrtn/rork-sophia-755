@@ -101,8 +101,9 @@ struct OnboardingV2PhoneTime: View {
 // MARK: - Page 2/4 — Ta vie en années (80 carrés)
 
 /// 80 carrés = 80 années de vie. Ils se colorent par tiers : le sommeil en vert, le travail
-/// en marron, puis le temps libre qui reste, et dedans, en rouge, les années de temps libre
-/// passées sur le téléphone (d'après le temps d'écran quotidien déclaré).
+/// en marron, puis le temps libre qui reste. Ensuite tout s'efface sauf le temps libre, et
+/// dedans, carré après carré, en rouge, les années passées sur le téléphone (d'après le temps
+/// d'écran quotidien déclaré) ; le nombre s'affiche en grand, puis la phrase.
 struct OnboardingV2YearsGrid: View {
     @Environment(LanguageManager.self) private var languageManager
     let vm: OnboardingV2ViewModel
@@ -116,7 +117,10 @@ struct OnboardingV2YearsGrid: View {
     @State private var freeFilled: Int = 0
     /// Carrés rouges dans le temps libre (phase finale : années passées sur le téléphone).
     @State private var screenFilled: Int = 0
+    /// `true` quand le sommeil et le travail s'effacent pour ne laisser que le temps libre.
+    @State private var focusPhone = false
     @State private var showTitle = false
+    @State private var showNumber = false
     @State private var showCaption = false
     @State private var showButton = false
     /// `true` une fois la séquence jouée jusqu'au bout : inutile de la rejouer si la page
@@ -168,7 +172,7 @@ struct OnboardingV2YearsGrid: View {
     /// Page content; the container above is what keeps the CTA on screen.
     private var pageBody: some View {
         VStack(spacing: 0) {
-            Spacer(minLength: 72)
+            Spacer(minLength: 64)
 
             Text(languageManager.text("onboardingV2.yearsGrid.title"))
                 .font(DS.title(.title, .heavy))
@@ -178,7 +182,7 @@ struct OnboardingV2YearsGrid: View {
                 .opacity(showTitle ? 1 : 0)
                 .offset(y: showTitle ? 0 : 14)
 
-            Spacer().frame(height: 30)
+            Spacer().frame(height: 26)
 
             LazyVGrid(columns: gridColumns, spacing: 8) {
                 ForEach(0..<totalYears, id: \.self) { i in
@@ -188,33 +192,42 @@ struct OnboardingV2YearsGrid: View {
                         .fill(squareColor(i))
                         .aspectRatio(1, contentMode: .fit)
                         .scaleEffect(isRevealed ? (filled ? 1 : 0.9) : 0.3)
-                        .opacity(isRevealed ? 1 : 0)
+                        .opacity(isRevealed ? squareOpacity(i) : 0)
                 }
             }
             .padding(.horizontal, 36)
 
-            Spacer().frame(height: 22)
+            Spacer().frame(height: 20)
 
             legend
                 .padding(.horizontal, 28)
 
-            Spacer().frame(height: 22)
+            Spacer().frame(height: 18)
+
+            // Le nombre en grand, puis la phrase : c'est ce que la page veut faire retenir.
+            Text(AppLocalizable.yearsString(screenYears, language: languageManager.current))
+                .font(.jakarta(size: 44, weight: .heavy))
+                .foregroundStyle(OV2.danger)
+                .monospacedDigit()
+                .scaleEffect(showNumber ? 1 : 0.6)
+                .opacity(showNumber ? 1 : 0)
 
             Text(String(
                 format: languageManager.text("onboardingV2.yearsGrid.captionFree"),
                 freeYears, screenYears
             ))
-            .font(DS.sans(.subheadline, .bold))
+            .font(DS.sans(.body, .bold))
             .foregroundStyle(OV2.danger)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
-            .padding(.horizontal, 36)
+            .padding(.horizontal, 32)
+            .padding(.top, 8)
             .opacity(showCaption ? 1 : 0)
             .offset(y: showCaption ? 0 : 12)
 
-            // Le pendant du `Spacer(minLength: 72)` du haut : les deux ensemble recentrent
-            // le contenu quand il tient, et se réduisent à 72 pt dès que ça défile.
-            Spacer(minLength: 72)
+            // Le pendant du `Spacer(minLength: 64)` du haut : les deux ensemble recentrent
+            // le contenu quand il tient, et se réduisent dès que ça défile.
+            Spacer(minLength: 48)
         }
     }
 
@@ -243,19 +256,24 @@ struct OnboardingV2YearsGrid: View {
         return free < freeFilled || free < screenFilled
     }
 
+    /// Le sommeil et le travail s'effacent quand le temps libre devient le sujet.
+    private func squareOpacity(_ i: Int) -> Double {
+        (focusPhone && i < sleepYears + workYears) ? 0.3 : 1
+    }
+
     // MARK: - Légende
 
     /// Une pastille par tiers, qui apparaît quand son tiers commence à se colorer.
     private var legend: some View {
         OV2FlowLayout(spacing: 8, lineSpacing: 8) {
-            legendChip(color: Self.sleepColor, textColor: Self.sleepColor, key: "onboardingV2.yearsGrid.sleep", years: sleepYears, shown: sleepFilled > 0)
-            legendChip(color: Self.workColor, textColor: Self.workColor, key: "onboardingV2.yearsGrid.work", years: workYears, shown: workFilled > 0)
-            legendChip(color: Self.freeColor, textColor: OV2.accentSoft, key: "onboardingV2.yearsGrid.free", years: freeYears, shown: freeFilled > 0)
-            legendChip(color: OV2.danger, textColor: OV2.danger, key: "onboardingV2.yearsGrid.screen", years: screenYears, shown: screenFilled > 0)
+            legendChip(color: Self.sleepColor, textColor: Self.sleepColor, key: "onboardingV2.yearsGrid.sleep", years: sleepYears, shown: sleepFilled > 0, dimmed: focusPhone)
+            legendChip(color: Self.workColor, textColor: Self.workColor, key: "onboardingV2.yearsGrid.work", years: workYears, shown: workFilled > 0, dimmed: focusPhone)
+            legendChip(color: Self.freeColor, textColor: OV2.accentSoft, key: "onboardingV2.yearsGrid.free", years: freeYears, shown: freeFilled > 0, dimmed: false)
+            legendChip(color: OV2.danger, textColor: OV2.danger, key: "onboardingV2.yearsGrid.screen", years: screenYears, shown: screenFilled > 0, dimmed: false)
         }
     }
 
-    private func legendChip(color: Color, textColor: Color, key: String, years: Int, shown: Bool) -> some View {
+    private func legendChip(color: Color, textColor: Color, key: String, years: Int, shown: Bool, dimmed: Bool) -> some View {
         HStack(spacing: 7) {
             Circle().fill(color).frame(width: 10, height: 10)
             Text(languageManager.text(key))
@@ -269,9 +287,10 @@ struct OnboardingV2YearsGrid: View {
         .padding(.vertical, 6)
         .background(OV2.surface, in: Capsule())
         .overlay(Capsule().strokeBorder(OV2.hairline, lineWidth: 1))
-        .opacity(shown ? 1 : 0)
+        .opacity(shown ? (dimmed ? 0.45 : 1) : 0)
         .scaleEffect(shown ? 1 : 0.85)
         .animation(.spring(response: 0.4, dampingFraction: 0.75), value: shown)
+        .animation(.easeInOut(duration: 0.5), value: dimmed)
     }
 
     // MARK: - Séquence
@@ -298,61 +317,74 @@ struct OnboardingV2YearsGrid: View {
         }
     }
 
-    /// Enchaînement scénarisé, rapide : (1) ouverture des 80 carrés gris, (2) titre,
-    /// (3) sommeil en vert, travail en marron, temps libre en bleu pâle, (4) en rouge les
-    /// années de temps libre passées sur le téléphone, (5) légende rouge puis bouton.
+    /// Enchaînement scénarisé, posé : (1) ouverture des 80 carrés gris, (2) titre, (3) sommeil
+    /// en vert, travail en marron, temps libre en bleu pâle, chacun avec sa pastille,
+    /// (4) le sommeil et le travail s'effacent, (5) carré après carré, en rouge, les années de
+    /// temps libre passées sur le téléphone, (6) le nombre en grand, la phrase, le bouton.
     /// Reprend à l'état courant, donc rejouable sans repartir de zéro. Retourne `false` si
     /// elle a été annulée en cours de route.
     private func playSequence() async -> Bool {
         // Phase 1 — ouverture des carrés gris.
         if revealed < totalYears {
-            try? await Task.sleep(nanoseconds: 250_000_000)
+            try? await Task.sleep(nanoseconds: 300_000_000)
             for i in (revealed + 1)...totalYears {
                 if Task.isCancelled { return false }
                 withAnimation(.spring(response: 0.4, dampingFraction: 0.72)) { revealed = i }
                 if i % 10 == 0 { OnboardingHaptics.selection() }
-                try? await Task.sleep(nanoseconds: 6_000_000)
+                try? await Task.sleep(nanoseconds: 10_000_000)
             }
         }
 
         // Phase 2 — « Voici ta vie en années ».
         if !showTitle {
-            try? await Task.sleep(nanoseconds: 300_000_000)
+            try? await Task.sleep(nanoseconds: 400_000_000)
             if Task.isCancelled { return false }
-            withAnimation(.easeOut(duration: 0.6)) { showTitle = true }
-            try? await Task.sleep(nanoseconds: 350_000_000)
+            withAnimation(.easeOut(duration: 0.7)) { showTitle = true }
+            try? await Task.sleep(nanoseconds: 700_000_000)
         }
 
-        // Phase 3 — les trois tiers.
-        let sleepDone = await fill(to: sleepYears, from: sleepFilled, interval: 12_000_000) { sleepFilled = $0 }
+        // Phase 3 — les trois tiers, chacun le temps d'être lu.
+        let sleepDone = await fill(to: sleepYears, from: sleepFilled, interval: 30_000_000) { sleepFilled = $0 }
         guard sleepDone else { return false }
-        try? await Task.sleep(nanoseconds: 200_000_000)
-        let workDone = await fill(to: workYears, from: workFilled, interval: 12_000_000) { workFilled = $0 }
+        try? await Task.sleep(nanoseconds: 550_000_000)
+        let workDone = await fill(to: workYears, from: workFilled, interval: 30_000_000) { workFilled = $0 }
         guard workDone else { return false }
-        try? await Task.sleep(nanoseconds: 200_000_000)
-        let freeDone = await fill(to: freeYears, from: freeFilled, interval: 10_000_000) { freeFilled = $0 }
+        try? await Task.sleep(nanoseconds: 550_000_000)
+        let freeDone = await fill(to: freeYears, from: freeFilled, interval: 30_000_000) { freeFilled = $0 }
         guard freeDone else { return false }
+        try? await Task.sleep(nanoseconds: 700_000_000)
 
-        // Phase 4 — les années de temps libre passées sur le téléphone, un peu plus lentes.
+        // Phase 4 — le sommeil et le travail s'effacent : il ne reste que le temps libre.
+        if !focusPhone {
+            if Task.isCancelled { return false }
+            withAnimation(.easeInOut(duration: 0.6)) { focusPhone = true }
+            try? await Task.sleep(nanoseconds: 700_000_000)
+        }
+
+        // Phase 5 — les années de temps libre passées sur le téléphone, une par une.
         let target = screenYears
         if screenFilled < target {
-            try? await Task.sleep(nanoseconds: 350_000_000)
             for i in (screenFilled + 1)...target {
                 if Task.isCancelled { return false }
-                withAnimation(.easeInOut(duration: 0.3)) { screenFilled = i }
+                withAnimation(.spring(response: 0.35, dampingFraction: 0.6)) { screenFilled = i }
                 OnboardingHaptics.counterTick(progress: Double(i) / Double(target))
-                try? await Task.sleep(nanoseconds: 45_000_000)
+                try? await Task.sleep(nanoseconds: 140_000_000)
             }
             OnboardingHaptics.counterComplete()
         }
 
-        // Phase 5 — texte rouge puis bouton (révélé par l'appelant).
+        // Phase 6 — le nombre en grand, puis la phrase, puis le bouton (révélé par l'appelant).
+        if !showNumber {
+            try? await Task.sleep(nanoseconds: 250_000_000)
+            if Task.isCancelled { return false }
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.6)) { showNumber = true }
+            try? await Task.sleep(nanoseconds: 450_000_000)
+        }
         if !showCaption {
-            try? await Task.sleep(nanoseconds: 200_000_000)
             if Task.isCancelled { return false }
             withAnimation(.easeOut(duration: 0.6)) { showCaption = true }
         }
-        try? await Task.sleep(nanoseconds: 400_000_000)
+        try? await Task.sleep(nanoseconds: 600_000_000)
         return !Task.isCancelled
     }
 

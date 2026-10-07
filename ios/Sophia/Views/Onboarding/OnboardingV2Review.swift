@@ -1,7 +1,8 @@
 import SwiftUI
 import UIKit
 
-/// Page 8 — preuve sociale, épurée : un titre qui s'affiche doucement, puis des avis
+/// Page 8 — preuve sociale, épurée : un titre qui s'affiche doucement, les lauriers « 4,8 ·
+/// 500 000 utilisateurs », puis des avis
 /// d'utilisateurs qui défilent en **roulette floutée** (même effet que « Avec Sophia, tu
 /// sauras répondre à ces questions ») : l'avis centré est net, ses voisins sont atténués et
 /// floutés, et l'ensemble glisse lentement vers le haut.
@@ -76,6 +77,14 @@ struct OnboardingV2Review: View {
                 .padding(.horizontal, 28)
                 .opacity(titleIn ? 1 : 0)
                 .offset(y: titleIn ? 0 : 12)
+
+            Spacer().frame(height: 18)
+
+            OnboardingV2LaurelBadge(size: 46) {
+                OnboardingV2RatingStack(caption: languageManager.text("onboardingV2.loading.social.count"), compact: true)
+            }
+            .opacity(titleIn ? 1 : 0)
+            .offset(y: titleIn ? 0 : 12)
 
             Spacer()
 

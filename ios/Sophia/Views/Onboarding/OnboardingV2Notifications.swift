@@ -43,7 +43,7 @@ struct OnboardingV2Notifications: View {
                 Spacer().frame(height: 10)
 
                 Text(languageManager.text("onboardingV2.notifications.subtitle"))
-                    .font(DS.sans(.subheadline, .medium))
+                    .font(DS.sans(.body, .medium))
                     .foregroundStyle(OV2.inkSecondary)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)

@@ -2,8 +2,9 @@ import SwiftUI
 import UIKit
 
 /// Cinquième page de présentation, après le carrousel : « Rejoins les 500 000 utilisateurs
-/// heureux qui apprennent avec Sophia ». Des photos d'étudiants, la note App Store entre deux
-/// lauriers, la disponibilité dans plus de 140 pays, et le CTA « C'est parti ».
+/// heureux qui apprennent avec Sophia » en haut, des photos d'étudiants, la note App Store
+/// entre deux lauriers, la disponibilité dans plus de 140 pays au-dessus du bouton, et le CTA
+/// « C'est parti ».
 ///
 /// Les photos sont les `student_<n>.jpg` du bundle (voir `Resources/StudentPhotos/README.md`) ;
 /// tant qu'il n'y en a pas, les portraits des avis (`review_avatar_<n>`) servent de placeholders.
@@ -21,18 +22,7 @@ struct OnboardingV2SocialProof: View {
         // le contenu défile, le CTA reste épinglé.
         OV2ScrollableContent {
             VStack(spacing: 0) {
-                Spacer().frame(height: 28)
-
-                OnboardingV2StudentCluster(photos: photos, revealed: revealedPhotos)
-                    .frame(height: 176)
-
-                Spacer().frame(height: 22)
-
-                ratingBadge
-                    .scaleEffect(ratingIn ? 1 : 0.7)
-                    .opacity(ratingIn ? 1 : 0)
-
-                Spacer().frame(height: 26)
+                Spacer().frame(height: 64)
 
                 OV2Markup.highlighted(languageManager.text("onboardingV2.intro.social.title"))
                     .font(DS.title(.title, .heavy))
@@ -40,16 +30,28 @@ struct OnboardingV2SocialProof: View {
                     .multilineTextAlignment(.center)
                     .minimumScaleFactor(0.8)
                     .padding(.horizontal, 28)
-                    .opacity(textIn ? 1 : 0)
-                    .offset(y: textIn ? 0 : 14)
+                    .ov2Reveal(delay: 0.05)
 
-                Spacer().frame(height: 18)
+                Spacer(minLength: 20)
+
+                OnboardingV2StudentCluster(photos: photos, revealed: revealedPhotos)
+                    .frame(height: 176)
+
+                Spacer().frame(height: 24)
+
+                OnboardingV2LaurelBadge {
+                    OnboardingV2RatingStack(caption: languageManager.text("onboardingV2.review.appStore"))
+                }
+                .scaleEffect(ratingIn ? 1 : 0.7)
+                .opacity(ratingIn ? 1 : 0)
+
+                Spacer(minLength: 24)
 
                 countriesLine
                     .opacity(textIn ? 1 : 0)
                     .offset(y: textIn ? 0 : 14)
 
-                Spacer(minLength: 20)
+                Spacer().frame(height: 10)
             }
         } footer: {
             OnboardingV2Button(title: languageManager.text("onboardingV2.intro.social.cta"), action: onNext)
@@ -61,49 +63,19 @@ struct OnboardingV2SocialProof: View {
         }
     }
 
-    // MARK: - Note App Store
-
-    /// La note entre deux lauriers, avec ses cinq étoiles ; le nombre suit le séparateur
-    /// décimal de la langue (« 4,8 » en français).
-    private var ratingBadge: some View {
-        HStack(spacing: 10) {
-            Image(systemName: "laurel.leading")
-                .font(.system(size: 56, weight: .regular))
-                .foregroundStyle(OV2.warm)
-            VStack(spacing: 3) {
-                HStack(spacing: 3) {
-                    ForEach(0..<5, id: \.self) { _ in
-                        Image(systemName: "star.fill")
-                            .font(.system(size: 14))
-                            .foregroundStyle(OV2.warm)
-                    }
-                }
-                Text((4.8).formatted(.number.precision(.fractionLength(1)).locale(languageManager.locale)))
-                    .font(DS.title(.largeTitle, .heavy))
-                    .foregroundStyle(OV2.ink)
-                Text(languageManager.text("onboardingV2.review.appStore"))
-                    .font(DS.sans(.caption, .semibold))
-                    .foregroundStyle(OV2.inkSecondary)
-                    .lineLimit(1)
-            }
-            Image(systemName: "laurel.trailing")
-                .font(.system(size: 56, weight: .regular))
-                .foregroundStyle(OV2.warm)
-        }
-        .accessibilityElement(children: .combine)
-    }
-
+    /// « Disponible dans plus de 140 pays », centré, juste au-dessus du bouton.
     private var countriesLine: some View {
-        HStack(alignment: .firstTextBaseline, spacing: 8) {
+        VStack(spacing: 8) {
             Image(systemName: "globe.europe.africa.fill")
-                .font(.system(size: 15))
+                .font(.system(size: 18))
                 .foregroundStyle(OV2.accentSoft)
             Text(languageManager.text("onboardingV2.intro.social.countries"))
-                .font(DS.sans(.subheadline, .medium))
+                .font(DS.sans(.body, .medium))
                 .foregroundStyle(OV2.inkSecondary)
-                .multilineTextAlignment(.leading)
+                .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }
+        .frame(maxWidth: .infinity)
         .padding(.horizontal, 32)
     }
 
@@ -113,14 +85,14 @@ struct OnboardingV2SocialProof: View {
         guard revealedPhotos == 0 else { return }
         let count = OnboardingV2StudentCluster.slotCount
         for i in 0..<count {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2 + Double(i) * 0.1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3 + Double(i) * 0.1) {
                 withAnimation(.spring(response: 0.5, dampingFraction: 0.62)) {
                     revealedPhotos = i + 1
                 }
                 OnboardingHaptics.selection()
             }
         }
-        let afterPhotos = 0.3 + Double(count) * 0.1
+        let afterPhotos = 0.4 + Double(count) * 0.1
         DispatchQueue.main.asyncAfter(deadline: .now() + afterPhotos) {
             withAnimation(.spring(response: 0.55, dampingFraction: 0.6)) {
                 ratingIn = true
@@ -193,6 +165,29 @@ struct OnboardingV2StudentCluster: View {
         .clipShape(Circle())
         .overlay(Circle().strokeBorder(.white, lineWidth: 3))
         .shadow(color: .black.opacity(0.14), radius: 10, y: 5)
+    }
+}
+
+/// Une rangée de portraits qui se chevauchent, pour les pages qui citent les utilisateurs
+/// sans leur laisser toute la place (chargement, avis).
+struct OnboardingV2PhotoRow: View {
+    let photos: [UIImage]
+    var size: CGFloat = 36
+
+    var body: some View {
+        HStack(spacing: -(size * 0.28)) {
+            ForEach(Array(photos.enumerated()), id: \.offset) { i, image in
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: size, height: size)
+                    .clipShape(Circle())
+                    .overlay(Circle().strokeBorder(.white, lineWidth: 2))
+                    .shadow(color: .black.opacity(0.10), radius: 5, y: 2)
+                    .zIndex(Double(photos.count - i))
+            }
+        }
+        .accessibilityHidden(true)
     }
 }
 

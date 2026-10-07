@@ -120,7 +120,7 @@ Matière : sciences · Rubrique : Découvertes qui ont changé le monde · Prof 
 | `arpanet_logical_map_1977_network_diagram` | partie 2 | 4:3 | La carte logique d'ARPANET en mars 1977 : les nœuds (universités, laboratoires, bases militaires) reliés par des lignes, document officiel. | Wikimedia Commons, « ARPANET logical map, March 1977 » (DARPA, domaine public) |
 | `tim_berners_lee_next_computer_cern_first_web_server` | partie 3 | 4:3 | Le NeXT Cube de Tim Berners-Lee au CERN, premier serveur web (1990), avec son étiquette « This machine is a server. DO NOT POWER IT DOWN!! ». | Wikimedia Commons, catégorie « First web server » (CC BY-SA) |
 
-### 149 · La Joconde comptait-elle vraiment pour Léonard ? (remplace le cours existant)
+### 149 · Pourquoi la Joconde est-elle aussi connue ? (remplace le cours existant)
 
 Matière : art · Rubrique : Œuvres iconiques · Prof : Dusan Nikolic
 

@@ -2,8 +2,9 @@ import SwiftUI
 import UIKit
 
 /// Les deux pages qui suivent la création du compte : « Bienvenue à bord, {prénom} ! » avec
-/// des confettis, puis « {prénom}, apprendre n'a pas à être compliqué » avec les atouts de
-/// Sophia, la note App Store et « Sans engagement, annulable à tout moment ».
+/// des confettis et des images de cours qui flottent derrière, puis « {prénom}, apprendre n'a
+/// pas à être compliqué » avec les atouts de Sophia, la note App Store et « Sans engagement,
+/// annulable à tout moment ».
 
 // MARK: - Bienvenue à bord
 
@@ -28,10 +29,10 @@ struct OnboardingV2WelcomeAboard: View {
                 }
                 checkBadge
                     .offset(x: -30, y: -30)
-                    .scaleEffect(badgeIn ? 1 : 0.2)
+                    .scaleEffect(badgeIn ? 1 : 0.4)
                     .opacity(badgeIn ? 1 : 0)
             }
-            .scaleEffect(logoIn ? 1 : 0.7)
+            .scaleEffect(logoIn ? 1 : 0.82)
             .opacity(logoIn ? 1 : 0)
 
             Spacer().frame(height: 36)
@@ -42,37 +43,41 @@ struct OnboardingV2WelcomeAboard: View {
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.8)
                 .padding(.horizontal, 28)
-                .ov2Reveal(delay: 0.35)
+                .ov2Reveal(delay: 0.45, yOffset: 12)
 
             Spacer()
 
             Text(languageManager.text("onboardingV2.aboard.subtitle"))
-                .font(DS.sans(.subheadline, .medium))
+                .font(DS.sans(.body, .medium))
                 .foregroundStyle(OV2.inkSecondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
                 .padding(.horizontal, 32)
                 .padding(.bottom, 18)
-                .ov2Reveal(delay: 0.6)
+                .ov2Reveal(delay: 0.75, yOffset: 10)
 
             OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
+        }
+        .background {
+            OnboardingV2FloatingCourseImages()
         }
         .ov2Background()
         .overlay {
             if confetti {
                 PathConfettiBurst(
                     colors: [OV2.accent, OV2.accentSoft, OV2.pink, OV2.warm, OV2.success],
-                    pieceCount: 80,
-                    duration: 2.6,
+                    pieceCount: 70,
+                    duration: 3.0,
                     origin: CGPoint(x: 0.5, y: 0.32)
                 )
                 .ignoresSafeArea()
             }
         }
         .onAppear {
-            withAnimation(.spring(response: 0.8, dampingFraction: 0.7)) { logoIn = true }
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.55).delay(0.45)) { badgeIn = true }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            // Un seul ressort doux pour le logo, la coche qui suit : rien ne claque.
+            withAnimation(.spring(response: 1.0, dampingFraction: 0.85)) { logoIn = true }
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.72).delay(0.5)) { badgeIn = true }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
                 confetti = true
                 OnboardingHaptics.counterComplete()
             }
@@ -110,9 +115,91 @@ struct OnboardingV2WelcomeAboard: View {
     }
 }
 
+// MARK: - Images de cours qui flottent
+
+/// Six petites images de cours posées sur les bords, qui dérivent doucement et en boucle
+/// derrière le contenu. Elles apparaissent en fondu, rien ne saute.
+private struct OnboardingV2FloatingCourseImages: View {
+    private static let slots: [(x: CGFloat, y: CGFloat, size: CGFloat, rotation: Double)] = [
+        (0.12, 0.13, 46, -8), (0.87, 0.11, 40, 7), (0.07, 0.47, 38, 5),
+        (0.93, 0.43, 44, -6), (0.15, 0.80, 42, 6), (0.85, 0.76, 48, -5),
+    ]
+    private static let courseIds = [
+        "course_42_pourquoi_reve_t_on",
+        "course_149_la_joconde",
+        "course_290_comment_les_etats_unis_ont_ils_gagne_la",
+        "course_67_qu_est_ce_qu_un_trou_noir",
+        "course_264_qui_a_vraiment_construit_les_pyramides",
+        "course_150_la_nuit_etoilee_van_gogh",
+    ]
+
+    @State private var images: [UIImage?] = []
+    @State private var shown = false
+
+    var body: some View {
+        GeometryReader { geo in
+            ForEach(Array(Self.slots.enumerated()), id: \.offset) { i, slot in
+                OnboardingV2FloatingImage(
+                    image: i < images.count ? images[i] : nil,
+                    size: slot.size,
+                    rotation: slot.rotation,
+                    phase: Double(i)
+                )
+                .position(x: geo.size.width * slot.x, y: geo.size.height * slot.y)
+            }
+        }
+        .opacity(shown ? 1 : 0)
+        .allowsHitTesting(false)
+        .accessibilityHidden(true)
+        .onAppear {
+            if images.isEmpty {
+                images = Self.courseIds.map { CourseImageMap.loadImage(for: $0) }
+            }
+            withAnimation(.easeOut(duration: 1.4).delay(0.25)) { shown = true }
+        }
+    }
+}
+
+private struct OnboardingV2FloatingImage: View {
+    let image: UIImage?
+    let size: CGFloat
+    let rotation: Double
+    let phase: Double
+
+    @State private var drift = false
+
+    var body: some View {
+        Group {
+            if let image {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+            } else {
+                OV2.accentSoft.opacity(0.25)
+            }
+        }
+        .frame(width: size, height: size)
+        .clipShape(RoundedRectangle(cornerRadius: size * 0.28, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: size * 0.28, style: .continuous).strokeBorder(.white.opacity(0.8), lineWidth: 1.5))
+        .shadow(color: .black.opacity(0.08), radius: 8, y: 4)
+        .opacity(0.72)
+        .rotationEffect(.degrees(rotation + (drift ? 3 : -3)))
+        .offset(y: drift ? -9 : 9)
+        .onAppear {
+            withAnimation(
+                .easeInOut(duration: 3.2 + phase * 0.35)
+                .repeatForever(autoreverses: true)
+                .delay(phase * 0.3)
+            ) {
+                drift = true
+            }
+        }
+    }
+}
+
 // MARK: - Apprendre n'a pas à être compliqué
 
-/// Quatre atouts de Sophia sur une frise verticale (les chiffres viennent du catalogue de la
+/// Six atouts de Sophia sur une frise verticale (les chiffres viennent du catalogue de la
 /// langue), la note App Store entre deux lauriers, les étoiles et le nombre d'avis, puis
 /// « Sans engagement, annulable à tout moment ».
 struct OnboardingV2Features: View {
@@ -130,7 +217,8 @@ struct OnboardingV2Features: View {
         let text: String
     }
 
-    private static let rowHeight: CGFloat = 58
+    private static let rowHeight: CGFloat = 52
+    private static let featureCount = 6
 
     var body: some View {
         OV2ScrollableContent {
@@ -144,20 +232,22 @@ struct OnboardingV2Features: View {
                     .padding(.horizontal, 28)
                     .ov2Reveal(delay: 0.05)
 
-                Spacer().frame(height: 30)
+                Spacer().frame(height: 28)
 
                 featureList
                     .padding(.horizontal, 28)
 
-                Spacer().frame(height: 30)
+                Spacer().frame(height: 28)
 
-                laurels
-                    .ov2Reveal(delay: 0.9)
+                OnboardingV2LaurelBadge(size: 50, tint: OV2.inkSecondary) {
+                    appStoreStack
+                }
+                .ov2Reveal(delay: 1.1)
 
                 Spacer().frame(height: 14)
 
                 reviews
-                    .ov2Reveal(delay: 1.05)
+                    .ov2Reveal(delay: 1.25)
 
                 Spacer().frame(height: 22)
 
@@ -166,7 +256,7 @@ struct OnboardingV2Features: View {
                     .foregroundStyle(OV2.ink)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 28)
-                    .ov2Reveal(delay: 1.2)
+                    .ov2Reveal(delay: 1.4)
 
                 Spacer(minLength: 24)
             }
@@ -178,8 +268,8 @@ struct OnboardingV2Features: View {
             if features.isEmpty {
                 features = Self.makeFeatures(languageManager: languageManager)
             }
-            for i in 0..<4 {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25 + Double(i) * 0.16) {
+            for i in 0..<Self.featureCount {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25 + Double(i) * 0.14) {
                     withAnimation(.spring(response: 0.5, dampingFraction: 0.75)) { revealed = i + 1 }
                     OnboardingHaptics.selection()
                 }
@@ -187,8 +277,8 @@ struct OnboardingV2Features: View {
         }
     }
 
-    /// Les quatre atouts ; les nombres de cours et de questions de quiz sont ceux du
-    /// catalogue de la langue, arrondis vers le bas (« 300+ », « 2 600+ »).
+    /// Les six atouts ; les nombres de cours et de questions de quiz sont ceux du catalogue
+    /// de la langue, arrondis vers le bas (« 300+ », « 2 600+ »).
     private static func makeFeatures(languageManager: LanguageManager) -> [Feature] {
         let language = languageManager.current
         let courses = ContentCatalog.courses(for: language)
@@ -201,7 +291,9 @@ struct OnboardingV2Features: View {
             Feature(id: 0, icon: "puzzlepiece.extension.fill", color: Color(red: 0.94, green: 0.47, blue: 0.24), text: languageManager.text("onboardingV2.features.row1")),
             Feature(id: 1, icon: "text.book.closed.fill", color: Color(red: 0.48, green: 0.36, blue: 0.84), text: courseText),
             Feature(id: 2, icon: "trophy.fill", color: Color(red: 0.24, green: 0.73, blue: 0.66), text: questionText),
-            Feature(id: 3, icon: "atom", color: Color(red: 0.95, green: 0.64, blue: 0.23), text: languageManager.text("onboardingV2.features.row4")),
+            Feature(id: 3, icon: "headphones", color: Color(red: 0.29, green: 0.48, blue: 0.97), text: languageManager.text("onboardingV2.features.row5")),
+            Feature(id: 4, icon: "hand.raised.fill", color: Color(red: 0.95, green: 0.64, blue: 0.23), text: languageManager.text("onboardingV2.features.row6")),
+            Feature(id: 5, icon: "atom", color: Color(red: 0.30, green: 0.69, blue: 0.48), text: languageManager.text("onboardingV2.features.row4")),
         ]
     }
 
@@ -215,7 +307,7 @@ struct OnboardingV2Features: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 24, style: .continuous)
                     .fill(DS.accentTint)
-                    .frame(width: 50, height: trackHeight)
+                    .frame(width: 48, height: trackHeight)
                 VStack(spacing: 0) {
                     ForEach(features) { feature in
                         iconBadge(feature)
@@ -225,7 +317,7 @@ struct OnboardingV2Features: View {
                     }
                 }
             }
-            .frame(width: 50, height: trackHeight)
+            .frame(width: 48, height: trackHeight)
 
             VStack(spacing: 0) {
                 ForEach(features) { feature in
@@ -245,38 +337,30 @@ struct OnboardingV2Features: View {
 
     private func iconBadge(_ feature: Feature) -> some View {
         ZStack {
-            Circle().fill(feature.color).frame(width: 38, height: 38)
+            Circle().fill(feature.color).frame(width: 36, height: 36)
             Image(systemName: feature.icon)
-                .font(.system(size: 16, weight: .bold))
+                .font(.system(size: 15, weight: .bold))
                 .foregroundStyle(.white)
         }
     }
 
     // MARK: - Lauriers, étoiles, avis
 
-    private var laurels: some View {
-        HStack(spacing: 8) {
-            Image(systemName: "laurel.leading")
-                .font(.system(size: 50, weight: .regular))
+    /// Dans les lauriers : la pomme, « 4,8 / 5 », « sur l'App Store ».
+    private var appStoreStack: some View {
+        VStack(spacing: 3) {
+            Image(systemName: "apple.logo")
+                .font(.system(size: 16, weight: .semibold))
+                .foregroundStyle(OV2.ink)
+            Text((4.8).formatted(.number.precision(.fractionLength(1)).locale(languageManager.locale)) + " / 5")
+                .font(DS.title(.title3, .heavy))
+                .foregroundStyle(OV2.ink)
+            Text(languageManager.text("onboardingV2.review.appStore").uppercasedInApp())
+                .font(DS.sans(.caption2, .bold))
+                .tracking(1.2)
                 .foregroundStyle(OV2.inkSecondary)
-            VStack(spacing: 3) {
-                Image(systemName: "apple.logo")
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundStyle(OV2.ink)
-                Text((4.8).formatted(.number.precision(.fractionLength(1)).locale(languageManager.locale)) + " / 5")
-                    .font(DS.title(.title3, .heavy))
-                    .foregroundStyle(OV2.ink)
-                Text(languageManager.text("onboardingV2.review.appStore").uppercasedInApp())
-                    .font(DS.sans(.caption2, .bold))
-                    .tracking(1.2)
-                    .foregroundStyle(OV2.inkSecondary)
-                    .lineLimit(1)
-            }
-            Image(systemName: "laurel.trailing")
-                .font(.system(size: 50, weight: .regular))
-                .foregroundStyle(OV2.inkSecondary)
+                .lineLimit(1)
         }
-        .accessibilityElement(children: .combine)
     }
 
     private var reviews: some View {
