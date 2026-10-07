@@ -388,7 +388,8 @@ struct OnboardingV2PaywallComparison: View {
                 }
                 Spacer()
                 VStack(alignment: .trailing, spacing: 3) {
-                    Text(isYearly ? prices.yearlyPerShortPeriod : prices.shortPlanPrice)
+                    // Les deux plans dans la même unité : « 3,33 € / mois » face à « 9,99 € / mois ».
+                    Text(isYearly ? prices.yearlyPerShortPeriod : shortPlanPriceWithPeriod)
                         .font(DS.sans(.body, .bold))
                         .foregroundStyle(OV2.ink)
                         .lineLimit(1)
@@ -426,6 +427,11 @@ struct OnboardingV2PaywallComparison: View {
             }
         }
         .buttonStyle(SoftPressButtonStyle())
+    }
+
+    /// « 9,99 € / mois » (ou « / semaine ») : le prix du plan court avec son unité.
+    private var shortPlanPriceWithPeriod: String {
+        prices.shortPlanPrice + " " + languageManager.text(shortIsWeekly ? "paywall.plan.perWeek" : "paywall.plan.perMonth")
     }
 
     private var closeButton: some View {
