@@ -4,9 +4,13 @@ import RevenueCat
 /// Coordinateur d'onboarding V2 — séquence **fixe** (les pages valeur ne dépendent plus des
 /// objectifs sélectionnés).
 ///
-/// Welcome · Langue · Objectifs (multi) · « Sophia va t'aider » · « Me cultiver » (questions) ·
+/// Welcome · Langue · Présentation (4 pages reliées par des points) · Preuve sociale (500 000
+/// utilisateurs) · Prénom · Âge · Culture générale (curseur) · Motivation · Objectifs (multi) ·
+/// Sujets (6 carrés) · « Sophia va t'aider » · Mission (gratuite à l'essai) · « Me cultiver »
+/// (questions) ·
 /// Temps d'écran (slider) · Ta vie en années · « Transforme ce temps » · Avis · « Fais bon
-/// usage » · Swipe · Loading · Profil · Notifications · **Login** · Essai · Rappel · Paywall
+/// usage » · Swipe · Loading · Profil · Notifications · **Login** · Bienvenue à bord · Atouts ·
+/// Essai · Rappel · Paywall
 /// annuel · Paywall comparatif. Les pages « Se cultiver, c'est long et cher » et « Des cours
 /// écrits par des docteurs et des profs » ont été retirées le 29/09/2026.
 struct OnboardingV2View: View {
@@ -31,10 +35,11 @@ struct OnboardingV2View: View {
     @State private var showExistingAccountSignIn = false
 
     private enum Screen: Hashable {
-        case welcome, language, objectives, objectiveIntro
+        case welcome, language, intro, socialProof, name, age, knowledge, motivation
+        case objectives, topics, objectiveIntro, mission
         case questions, phoneTime, yearsGrid, transform, review, personalize
         case swipe, loading, profile, readingTime, notifications, login
-        case trialSteps, reminder, paywallAnnual, paywallComparison
+        case welcomeAboard, features, trialSteps, reminder, paywallAnnual, paywallComparison
 
         /// Nom stable de l'écran, mémorisé pour reprendre l'onboarding au bon endroit : la
         /// séquence étant dynamique (page d'essai retirée quand l'offering n'inclut pas
@@ -43,8 +48,16 @@ struct OnboardingV2View: View {
             switch self {
             case .welcome: "welcome"
             case .language: "language"
+            case .intro: "intro"
+            case .socialProof: "social_proof"
+            case .name: "name"
+            case .age: "age"
+            case .knowledge: "knowledge"
+            case .motivation: "motivation"
             case .objectives: "objective"
+            case .topics: "topics"
             case .objectiveIntro: "objective_intro"
+            case .mission: "mission"
             case .questions: "questions"
             case .phoneTime: "phone_time"
             case .yearsGrid: "years_grid"
@@ -57,6 +70,8 @@ struct OnboardingV2View: View {
             case .readingTime: "reading_time"
             case .notifications: "notifications"
             case .login: "login"
+            case .welcomeAboard: "welcome_aboard"
+            case .features: "features"
             case .trialSteps: "trial_steps"
             case .reminder: "reminder"
             case .paywallAnnual: "paywall_annual"
@@ -73,9 +88,11 @@ struct OnboardingV2View: View {
     /// l'offering servie (variante d'expérience RevenueCat) n'inclut pas d'essai, sinon on
     /// promettrait un essai que l'utilisateur n'aura pas.
     private var screens: [Screen] {
-        var list: [Screen] = [.welcome, .language, .objectives, .objectiveIntro,
+        var list: [Screen] = [.welcome, .language, .intro, .socialProof,
+                              .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro, .mission,
                               .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
-                              .swipe, .loading, .profile, .readingTime, .notifications, .login]
+                              .swipe, .loading, .profile, .readingTime, .notifications, .login,
+                              .welcomeAboard, .features]
         if store.offerings == nil || store.annualHasFreeTrial {
             list.append(.trialSteps)
         }
@@ -84,7 +101,8 @@ struct OnboardingV2View: View {
     }
 
     private static let dotScreens: Set<Screen> = [
-        .objectives, .objectiveIntro, .questions, .phoneTime, .yearsGrid, .review, .swipe, .loading,
+        .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro, .mission,
+        .questions, .phoneTime, .yearsGrid, .review, .swipe, .loading,
     ]
 
     private var current: Screen {
@@ -150,10 +168,26 @@ struct OnboardingV2View: View {
             )
         case .language:
             OnboardingV2Language(onNext: advance)
+        case .intro:
+            OnboardingV2IntroCarousel(onNext: advance)
+        case .socialProof:
+            OnboardingV2SocialProof(onNext: advance)
+        case .name:
+            OnboardingV2Name(vm: vm, onNext: advance)
+        case .age:
+            OnboardingV2Age(vm: vm, onNext: advance)
+        case .knowledge:
+            OnboardingV2Knowledge(vm: vm, onNext: advance)
+        case .motivation:
+            OnboardingV2Motivation(vm: vm, onNext: advance)
         case .objectives:
             OnboardingV2Objective(vm: vm, onNext: advance)
+        case .topics:
+            OnboardingV2Topics(vm: vm, onNext: advance)
         case .objectiveIntro:
-            OnboardingV2ObjectiveIntro(onNext: advance)
+            OnboardingV2ObjectiveIntro(firstName: vm.trimmedFirstName, onNext: advance)
+        case .mission:
+            OnboardingV2Mission(onNext: advance)
         case .questions:
             OnboardingV2QuestionsScreen(onNext: advance)
         case .phoneTime:
@@ -169,7 +203,7 @@ struct OnboardingV2View: View {
         case .swipe:
             OnboardingV2SwipeCourses(vm: vm, onNext: advance)
         case .loading:
-            OnboardingV2Loading(onNext: advance)
+            OnboardingV2Loading(firstName: vm.trimmedFirstName, onNext: advance)
         case .profile:
             OnboardingV2Profile(vm: vm, onNext: advance)
         case .readingTime:
@@ -178,6 +212,10 @@ struct OnboardingV2View: View {
             OnboardingV2Notifications(vm: vm, onNext: advance)
         case .login:
             OnboardingV2Login(onSignedIn: advance)
+        case .welcomeAboard:
+            OnboardingV2WelcomeAboard(vm: vm, onNext: advance)
+        case .features:
+            OnboardingV2Features(vm: vm, onNext: advance)
         case .trialSteps:
             OnboardingV2TrialSteps(trialDays: store.annualTrialDays, onNext: advance)
         case .reminder:

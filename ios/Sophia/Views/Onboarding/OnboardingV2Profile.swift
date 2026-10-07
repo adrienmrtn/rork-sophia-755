@@ -127,7 +127,7 @@ struct OnboardingV2Profile: View {
             }
 
             VStack(spacing: 8) {
-                Text(languageManager.text("onboardingV2.profile.eyebrow").uppercasedInApp())
+                Text(vm.personalizedText("onboardingV2.profile.eyebrow", language: languageManager.current).uppercasedInApp())
                     .font(DS.sans(.caption, .bold))
                     .tracking(1.6)
                     .foregroundStyle(OV2.accentSoft)

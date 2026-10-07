@@ -50,7 +50,26 @@ struct OnboardingV2Notifications: View {
                     .padding(.horizontal, 30)
                     .ov2Reveal(delay: 0.14)
 
-                Spacer().frame(height: 30)
+                Spacer().frame(height: 14)
+
+                // L'argument chiffré, le nombre en rose comme sur les pages de présentation.
+                HStack(alignment: .firstTextBaseline, spacing: 8) {
+                    Image(systemName: "chart.line.uptrend.xyaxis")
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundStyle(OV2.pink)
+                    OV2Markup.highlighted(languageManager.text("onboardingV2.notifications.boost"))
+                        .font(DS.sans(.subheadline, .bold))
+                        .foregroundStyle(OV2.ink)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                .padding(.horizontal, 14)
+                .padding(.vertical, 10)
+                .background(OV2.pink.opacity(0.08), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+                .padding(.horizontal, 24)
+                .ov2Reveal(delay: 0.2)
+
+                Spacer().frame(height: 24)
 
                 previewCard
                     .padding(.horizontal, 24)

@@ -1,9 +1,11 @@
 import SwiftUI
 
-/// Page de transition après les objectifs : « Sophia va t'aider à atteindre tous tes objectifs ».
+/// Page de transition après les objectifs : « Sophia va t'aider à atteindre tous tes objectifs »,
+/// avec le prénom devant quand il a été donné.
 /// Gras progressif sur le texte (guide la lecture), pas de CTA : tap n'importe où pour continuer.
 struct OnboardingV2ObjectiveIntro: View {
     @Environment(LanguageManager.self) private var languageManager
+    var firstName: String = ""
     let onNext: () -> Void
 
     @State private var boldCount = 0
@@ -12,7 +14,9 @@ struct OnboardingV2ObjectiveIntro: View {
     @State private var canTap = false
 
     private var words: [String] {
-        languageManager.text("onboardingV2.objectiveIntro.title").split(separator: " ").map(String.init)
+        OnboardingV2ViewModel.personalizedText("onboardingV2.objectiveIntro.title", name: firstName, language: languageManager.current)
+            .split(separator: " ")
+            .map(String.init)
     }
 
     var body: some View {

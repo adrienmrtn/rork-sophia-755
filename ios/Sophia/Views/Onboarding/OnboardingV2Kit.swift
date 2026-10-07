@@ -18,6 +18,9 @@ enum OV2 {
     static let warm = Color(red: 0.90, green: 0.70, blue: 0.20)
     static let danger = Color(red: 0.86, green: 0.35, blue: 0.36)
     static let success = DS.success
+    /// Rose des mots mis en avant sur les pages de présentation (« smarter », « real
+    /// researchers »…), marqués entre `**` dans les textes (voir `OV2Markup`).
+    static let pink = Color(red: 0.95, green: 0.33, blue: 0.56)
 
     /// Largeur maximale du contenu d'un écran d'onboarding ou d'un paywall.
     ///
