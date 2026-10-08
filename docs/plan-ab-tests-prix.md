@@ -607,6 +607,26 @@ Mise en œuvre sans version d'app : le package `$rc_annual` de `offre_discount_2
 `discount_yearly` et `sophia_pro:annual-promo`, comme `offre_discount`. Les abonnés déjà à
 `discount_yearly_2999` gardent leur produit, qui reste rattaché à `premium`.
 
+### 9.6 Paliers bas retirés avant J+30 (08/10)
+
+Décision produit, prise avant les dates de lecture du § 9.3. Chance que la variante rapporte plus que le
+prix actuel, cadeau compris, au 08/10 (trois modèles indépendants) :
+
+| Variante | Cadeau compris | Sans le cadeau | Décision |
+|---|---|---|---|
+| Türkiye, palier 25 % | 11-16 % | 56-75 % | retirée |
+| Türkiye, palier 50 % | 16-25 % | 55-74 % | retirée (cadeau au même prix que l'annuel : variante incohérente telle quelle) |
+| C, palier 25 % | 16-34 % | 43-60 % | retirée |
+| C, palier 50 % | 44-55 % | 64-80 % | continue en v3, contre le prix actuel |
+
+L'écart vient du cadeau : au prix actuel, une part des visiteurs le prend (environ 18-20 €) ; aux
+paliers bas, il coûte autant ou plus que l'annuel et ne se vend pas. Le test ne dit donc pas que ces pays
+refusent un annuel moins cher, seulement que « palier bas + ce cadeau » fait moins bien que « prix actuel
++ cadeau ». Mise en œuvre : Stop TR v2 (`expe2a6836f94`) et C v2 (`expaa99dcbc5d`) ; Start C v3 juste
+après le Stop de C v2. Lecture C v3 à J+21 / J+30 / J+45 depuis son démarrage. Les paliers restent en
+vente dans App Store Connect (restriction `available_in` non appliquée) : les abonnés existants les
+gardent, et les réglages d'abonnement d'Apple permettent toujours d'y passer.
+
 ## 10. Grille de prix par pays (hypothèse, arrêtée à J+45)
 
 | Groupe | Annuel | Mensuel / hebdo | Discount | Décidé par |

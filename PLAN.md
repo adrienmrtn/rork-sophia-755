@@ -117,6 +117,12 @@ code iOS et Android. Coche les cases des actions que tu valides.
   prix plein (104 abonnés payants en A, 95 en B). L'offering `offre_discount_2999` vend désormais
   `discount_yearly` (iOS) et `sophia_pro:annual-promo` (Play) : tout le monde voit 19,99, sans
   mise à jour de l'app. Le tirage et l'attribut `discount_bucket` restent dans l'app, sans effet.
+- [ ] Paliers bas retirés le 08/10 (décision produit) : prix à 25 % et 50 % en Türkiye, prix à 25 % dans
+  le groupe C. Cadeau compris, ils rapportent probablement moins que le prix actuel (≈ 75-87 % selon les
+  modèles, pas une certitude) ; sans le cadeau, ils sont à égalité ou devant. RevenueCat ne permet pas de
+  retirer une variante : Stop sur TR v2 et C v2 (dashboard), puis Start sur « Prix C · palier 50 % · v3 »
+  (contrôle contre palier 50 %, brouillon créé par `revenuecat-experiments · apply`), sans les laisser
+  tourner en même temps. Les abonnés déjà aux paliers gardent leur prix.
 - [ ] Disponibilité des produits de test limitée aux pays de leur test (`available_in` du
   manifeste) : le 01/10, un abonné suédois est passé de `Sophia_yearly` (39,99 €) au palier 25 %
   depuis les réglages d'abonnement d'Apple, qui listent tous les produits du groupe vendus dans
