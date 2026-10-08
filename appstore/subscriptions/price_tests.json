@@ -638,6 +638,27 @@
         "c__t25"
       ],
       "notes": "Mêmes produits que TR, prix locaux générés par Apple (≈ 50 % et 25 % du prix actuel). Seuil : ×2 pour 50 %, ×4 pour 25 %. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS en version 1.1.7 ou plus uniquement (la 1.1.6, sans le correctif R1, affichait le prix de la variante et facturait 39,99 € sur les paywalls cours et quiz ; la v1 du 01/10 a été arrêtée pour cette raison). Android inchangé."
+    },
+    {
+      "name": "Prix P · annuel 49,99 / 69,99 · v3",
+      "audience": "Prix · P (pays riches, iOS 1.1.7+)",
+      "type": "price_point",
+      "control": "fin_onboarding",
+      "treatments": [
+        "p__4999",
+        "p__6999"
+      ],
+      "notes": "Hypothèse : les pays à fort pouvoir d'achat supportent un annuel plus cher que 39,99. Seuil de neutralité : 49,99 doit garder ≥ 80 % de la conversion du contrôle, 69,99 ≥ 57 %. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS en version 1.1.7 ou plus uniquement (la 1.1.6, sans le correctif R1, affichait le prix de la variante et facturait 39,99 € sur les paywalls cours et quiz ; la v1 du 01/10 a été arrêtée pour cette raison). Android inchangé. v3 : variante 59,99 retirée ; la v2 (exp12af938507, 4 variantes) a été arrêtée le 01/10 à 15:44 UTC après ~7 h."
+    },
+    {
+      "name": "Prix C · palier 50 % · v3",
+      "audience": "Prix · C (reste du monde, iOS 1.1.7+)",
+      "type": "price_point",
+      "control": "fin_onboarding",
+      "treatments": [
+        "c__t50"
+      ],
+      "notes": "Mêmes produits que TR, prix locaux générés par Apple (≈ 50 % et 25 % du prix actuel). Seuil : ×2 pour 50 %. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS en version 1.1.7 ou plus uniquement (la 1.1.6, sans le correctif R1, affichait le prix de la variante et facturait 39,99 € sur les paywalls cours et quiz ; la v1 du 01/10 a été arrêtée pour cette raison). Android inchangé. v3 : palier 25 % retiré le 08/10 (en Turquie et ici, ≈ 75-87 % de chances qu'il rapporte moins que le prix actuel, cadeau compris) ; la v2 (expaa99dcbc5d, 3 variantes) est arrêtée, la lecture J+21/J+30/J+45 repart du démarrage de la v3."
     }
   ],
   "experiment_settings": {
