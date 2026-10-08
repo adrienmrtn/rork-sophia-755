@@ -13,7 +13,7 @@
 #   push      write it.
 #
 # Both refuse to run unless the version being prepared is the one named below,
-# so notes written for 1.1.7 can never land on another release. Neither creates
+# so notes written for 1.1.8 can never land on another release. Neither creates
 # a localization: a language missing from the version is reported and skipped.
 #
 # Same three secrets as "App Store metadata": ASC_KEY_ID, ASC_ISSUER_ID,
@@ -26,7 +26,7 @@ on:
       version:
         description: "Version being prepared in App Store Connect"
         type: string
-        default: "1.1.7"
+        default: "1.1.8"
       action:
         description: "What to do"
         type: choice
@@ -93,7 +93,7 @@ jobs:
           ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
         run: |
           if [ -z "$VERSION" ]; then
-            echo "Give the version being prepared, e.g. 1.1.7." >&2
+            echo "Give the version being prepared, e.g. 1.1.8." >&2
             exit 1
           fi
 
