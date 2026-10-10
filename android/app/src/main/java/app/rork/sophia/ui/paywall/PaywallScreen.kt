@@ -1,14 +1,7 @@
 package app.rork.sophia.ui.paywall
 
 import android.app.Activity
-import android.content.Intent
-import android.net.Uri
 import android.widget.Toast
-import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.core.tween
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -31,19 +24,20 @@ import androidx.compose.material.icons.filled.Bolt
 import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.Headphones
 import androidx.compose.material.icons.filled.Language
-import androidx.compose.material.icons.filled.PhoneAndroid
-import androidx.compose.material.icons.filled.Speed
 import androidx.compose.material.icons.filled.LockOpen
+import androidx.compose.material.icons.filled.PhoneAndroid
 import androidx.compose.material.icons.filled.Quiz
 import androidx.compose.material.icons.filled.RestartAlt
 import androidx.compose.material.icons.filled.School
+import androidx.compose.material.icons.filled.Speed
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -54,8 +48,12 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.view.WindowCompat
@@ -64,13 +62,16 @@ import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.DiscountBucket
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.domain.formatted
+import app.rork.sophia.ui.LocalFullBleedBackground
 import app.rork.sophia.ui.components.SectionLabel
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
-import app.rork.sophia.ui.LocalFullBleedBackground
 import app.rork.sophia.ui.legal.LegalDocKind
-import app.rork.sophia.ui.onboarding.readableWidth
 import app.rork.sophia.ui.legal.LegalDocumentScreen
+import app.rork.sophia.ui.onboarding.PhotoRow
+import app.rork.sophia.ui.onboarding.readableWidth
+import app.rork.sophia.ui.onboarding.studentPhotos
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -81,7 +82,6 @@ import com.revenuecat.purchases.PurchasesError
 import com.revenuecat.purchases.PurchasesErrorCode
 import com.revenuecat.purchases.interfaces.PurchaseCallback
 import com.revenuecat.purchases.models.StoreTransaction
-import kotlinx.coroutines.delay
 
 /**
  * Paywall contexts. [offeringId] is the **fallback** RevenueCat offering of the context: the price
@@ -99,8 +99,18 @@ enum class PaywallContext(val offeringId: String) {
     AUDIO("audio"),
 }
 
+/**
+ * The comparison rows, and whether the free plan has each one. This is the real freemium
+ * rule: free readers already have every subject and unlimited favourites; what they do not
+ * have is more than one course a day, the quizzes and the audio mode. (iOS adds the app
+ * blocker, which Android does not have.)
+ */
 private val COMPARISON_FEATURES = listOf(
-    "allSubjects", "unlimited", "quiz", "favorites", "noAds", "weekly",
+    "allSubjects" to true,
+    "favorites" to true,
+    "unlimited" to false,
+    "quiz" to false,
+    "audio" to false,
 )
 
 @Composable
@@ -341,6 +351,7 @@ private fun OnboardingAnnualPaywall(
     val trialDays = storeViewModel.trialDays(annual) ?: 3
     val yearly = storeViewModel.formattedPrice(annual, StoreViewModel.UNKNOWN_PRICE)
     val perMonth = perMonthLabel(context, language, storeViewModel, annual)
+    val photos = remember { studentPhotos(context).take(3) }
 
     LaunchedEffect(Unit) { storeViewModel.trackPaywallImpression("onboarding_annual") }
 
@@ -363,58 +374,54 @@ private fun OnboardingAnnualPaywall(
                     .readableWidth()
                     .verticalScroll(rememberScrollState())
                     .padding(horizontal = 28.dp),
-                verticalArrangement = Arrangement.Center,
+                verticalArrangement = Arrangement.spacedBy(20.dp, Alignment.CenterVertically),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 PaywallHero(icon = Icons.Filled.School)
-                Spacer(Modifier.height(20.dp))
-                if (hasTrial) {
-                    Text(
-                        text = StringStore.trialText(context, "onboardingV2.pw.tryFree", language, trialDays),
-                        style = SophiaTypography.titleLarge.copy(fontSize = 22.sp, color = DS.success),
-                        textAlign = TextAlign.Center,
-                    )
-                    Spacer(Modifier.height(6.dp))
-                    Text(
-                        text = StringStore.text(context, "onboardingV2.pw.thenPrice", language, perMonth, yearly),
-                        style = SophiaTypography.titleLarge.copy(fontSize = 22.sp),
-                        textAlign = TextAlign.Center,
-                    )
+                // « Essaie 3 jours gratuitement, puis 3,33 € / mois (facturé annuellement). »:
+                // the free days in green, then the monthly equivalent. The wording follows the
+                // product the store serves: Google Play only grants a trial to an eligible
+                // account, so without one the page states the price instead of promising days.
+                val headline = if (hasTrial) {
+                    buildAnnotatedString {
+                        withStyle(SpanStyle(color = DS.success)) {
+                            append(StringStore.trialText(context, "onboardingV2.pw.tryFree", language, trialDays))
+                        }
+                        append(" ")
+                        append(StringStore.text(context, "onboardingV2.pw.thenPrice", language, perMonth))
+                    }
                 } else {
-                    Text(
-                        text = StringStore.text(context, "onboardingV2.pw.priceNoTrial", language, perMonth, yearly),
-                        style = SophiaTypography.titleLarge.copy(fontSize = 22.sp),
-                        textAlign = TextAlign.Center,
-                    )
+                    AnnotatedString(StringStore.text(context, "onboardingV2.pw.priceNoTrial", language, perMonth))
                 }
-                Spacer(Modifier.height(20.dp))
+                Text(
+                    text = headline,
+                    style = SophiaTypography.titleLarge.copy(fontSize = 22.sp, lineHeight = 29.sp, fontWeight = FontWeight.ExtraBold),
+                    textAlign = TextAlign.Center,
+                )
+                AnnualSocialProofRow(language = language, photos = photos)
                 Text(
                     text = StringStore.text(context, "onboardingV2.pw.viewAllPlans", language),
                     style = SophiaTypography.labelLarge.copy(fontSize = 15.sp, color = DS.accentSoft),
                     modifier = Modifier.softPress(onClick = onViewAllPlans).padding(8.dp),
                 )
-                if (error != null) {
-                    Spacer(Modifier.height(16.dp))
-                    PaywallErrorNote(error!!)
-                }
-                if (notice != null) {
-                    Spacer(Modifier.height(12.dp))
-                    PaywallNotice(notice!!)
-                }
+                if (error != null) PaywallErrorNote(error!!)
+                if (notice != null) PaywallNotice(notice!!)
             }
         }
+        // The button sits as low as it can: the price note is glued under it, then the legal
+        // row, with no wasted space between the three.
         Column(
             modifier = Modifier
                 .readableWidth()
                 .padding(horizontal = 24.dp)
-                .padding(bottom = 12.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
+                .padding(bottom = 10.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
                 text = StringStore.text(context, "onboardingV2.pw.twoTaps", language),
                 style = SophiaTypography.labelMedium.copy(fontSize = 12.sp),
                 textAlign = TextAlign.Center,
+                modifier = Modifier.padding(bottom = 10.dp),
             )
             PurchaseButton(
                 text = if (hasTrial) {
@@ -437,7 +444,40 @@ private fun OnboardingAnnualPaywall(
                     )
                 },
             )
+            // What the store actually charges, small and grey, right under the button:
+            // « (facturé 39,99 € par an) ».
+            if (yearly != StoreViewModel.UNKNOWN_PRICE) {
+                Text(
+                    text = "(" + StringStore.text(context, "paywall.plan.billedYearly", language, yearly) + ")",
+                    style = SophiaTypography.labelMedium.copy(fontSize = 12.sp),
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.padding(top = 8.dp, bottom = 8.dp),
+                )
+            } else {
+                Spacer(Modifier.height(10.dp))
+            }
             legalFooter()
+        }
+    }
+}
+
+/** Discreet social proof under the trial promise: three faces, the rating, the user count. */
+@Composable
+private fun AnnualSocialProofRow(language: AppLanguage, photos: List<String>) {
+    val context = LocalContext.current
+    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+        if (photos.isNotEmpty()) PhotoRow(photos = photos, size = 28.dp)
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+            Icon(Icons.Filled.Star, contentDescription = null, tint = DS.warm, modifier = Modifier.size(12.dp))
+            Text(
+                text = 4.8.formatted(language, 1),
+                style = SophiaTypography.labelMedium.copy(fontSize = 13.sp, fontWeight = FontWeight.Bold, color = DS.ink),
+            )
+            Text(
+                text = "· " + StringStore.text(context, "onboardingV2.loading.social.count", language),
+                style = SophiaTypography.labelMedium.copy(fontSize = 13.sp),
+                maxLines = 1,
+            )
         }
     }
 }
@@ -510,13 +550,14 @@ private fun ComparisonPaywall(
             )
             Spacer(Modifier.height(20.dp))
             ComparisonTable(
-                features = COMPARISON_FEATURES.map {
-                    StringStore.text(context, "onboardingV2.pw.feature.$it", language)
+                features = COMPARISON_FEATURES.map { (key, free) ->
+                    ComparisonFeature(StringStore.text(context, "onboardingV2.pw.feature.$key", language), free)
                 },
                 freeLabel = StringStore.text(context, "onboardingV2.pw.free", language),
                 proLabel = StringStore.text(context, "onboardingV2.pw.pro", language),
             )
-            Spacer(Modifier.height(12.dp))
+            // Room between the table and the choice of plans.
+            Spacer(Modifier.height(30.dp))
         }
         Column(
             modifier = Modifier
@@ -552,7 +593,16 @@ private fun ComparisonPaywall(
                     if (shortIsWeekly) "onboardingV2.pw.weeklyBilling" else "onboardingV2.pw.monthlyBilling",
                     language,
                 ),
-                price = shortPlanPrice,
+                // « 9,99 € / mois » (or « / semaine »): the same unit as the annual card.
+                price = if (shortPlan == null) {
+                    shortPlanPrice
+                } else {
+                    shortPlanPrice + " " + StringStore.text(
+                        context,
+                        if (shortIsWeekly) "paywall.plan.perWeek" else "paywall.plan.perMonth",
+                        language,
+                    )
+                },
                 selected = !yearlySelected,
                 onClick = { yearlySelected = false },
                 trialBadge = if (shortHasTrial) shortTrialBadge else null,
@@ -589,7 +639,11 @@ private fun ComparisonPaywall(
     }
 }
 
-/** Free daily course already used: cover, rating, countdown to the next free course. */
+/**
+ * Free daily course already used. The course they were reading, locked; the live countdown to
+ * the next free course; then « OR » and the other way out: Sophia PRO, built to maximise what
+ * you remember, with what it unlocks. The close button waits two seconds.
+ */
 @Composable
 private fun CourseUnlockPaywall(
     language: AppLanguage,
@@ -611,7 +665,6 @@ private fun CourseUnlockPaywall(
     val hasTrial = storeViewModel.hasFreeTrial(annual)
     val trialDays = storeViewModel.trialDays(annual) ?: 3
     val yearly = storeViewModel.formattedPrice(annual, StoreViewModel.UNKNOWN_PRICE)
-    val perMonth = perMonthLabel(context, language, storeViewModel, annual)
     val dailyCourseId = app.progressManager.progress.value.dailyFreeCourseId
     val secondsToReset = remember { app.progressManager.secondsUntilDailyReset() }
     var purchasing by remember { mutableStateOf(false) }
@@ -622,12 +675,8 @@ private fun CourseUnlockPaywall(
         language = language,
         onDismiss = onDismiss,
         closeDelayMillis = 2000,
-        priceLine = priceLineText(context, language, hasTrial, trialDays, yearly, perMonth),
-        ctaText = StringStore.text(
-            context,
-            if (hasTrial) "paywall.cta.unlockFree" else "paywall.cta.subscribe",
-            language,
-        ),
+        priceLine = priceLineText(context, language, hasTrial, trialDays, yearly),
+        ctaText = ctaContinueText(context, language, storeViewModel, annual, hasTrial),
         ctaIcon = if (hasTrial) Icons.Filled.LockOpen else Icons.Filled.AutoAwesome,
         purchasing = purchasing,
         error = error,
@@ -654,56 +703,35 @@ private fun CourseUnlockPaywall(
         } else {
             PaywallHero(icon = Icons.AutoMirrored.Filled.MenuBook)
         }
-        Spacer(Modifier.height(14.dp))
-        RatingLine(StringStore.text(context, "paywall.rating", language))
-        Spacer(Modifier.height(14.dp))
+        Spacer(Modifier.height(20.dp))
         Text(
             text = StringStore.text(context, "paywall.course.title", language),
             style = SophiaTypography.titleLarge.copy(fontSize = 24.sp, lineHeight = 30.sp),
             textAlign = TextAlign.Center,
         )
-        Spacer(Modifier.height(8.dp))
-        Text(
-            text = StringStore.text(context, "paywall.course.subtitle", language),
-            style = SophiaTypography.bodyMedium,
-            textAlign = TextAlign.Center,
-        )
-        Spacer(Modifier.height(18.dp))
+        Spacer(Modifier.height(20.dp))
         CountdownCard(
             label = StringStore.text(context, "paywall.course.comeBack", language),
             secondsRemaining = secondsToReset,
         )
-        Spacer(Modifier.height(16.dp))
-        Row(
-            modifier = Modifier.fillMaxWidth().sophiaCard(fill = DS.accentTint).padding(18.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(16.dp),
-        ) {
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(
-                    text = StringStore.text(context, "paywall.course.stat.value", language),
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.ExtraBold,
-                    fontSize = 34.sp,
-                    color = DS.accent,
-                )
-                Text(
-                    text = StringStore.text(context, "paywall.course.stat.label", language),
-                    style = SophiaTypography.labelMedium.copy(fontSize = 11.sp, color = DS.accentSoft),
-                )
-            }
-            Box(modifier = Modifier.size(width = 1.dp, height = 44.dp).background(DS.hairline))
-            Text(
-                text = StringStore.text(context, "paywall.course.stat.caption", language),
-                style = SophiaTypography.bodyMedium.copy(fontSize = 14.sp),
-            )
-        }
-        Spacer(Modifier.height(18.dp))
-        ReviewsCarousel(
-            reviews = (1..3).map { i ->
-                StringStore.text(context, "paywall.reviews.r$i.quote", language) to
-                    StringStore.text(context, "paywall.reviews.r$i.author", language)
-            },
+        Spacer(Modifier.height(20.dp))
+        PaywallOrDivider(
+            text = StringStore.text(context, "paywall.course.or", language),
+            modifier = Modifier.padding(horizontal = 16.dp),
+        )
+        Spacer(Modifier.height(20.dp))
+        // « Débloque Sophia PRO, étudié pour maximiser ce que tu retiens. »
+        Text(
+            text = StringStore.text(context, "paywall.course.proPitch", language),
+            style = SophiaTypography.titleLarge.copy(fontSize = 20.sp, lineHeight = 26.sp, color = DS.accent),
+            textAlign = TextAlign.Center,
+            modifier = Modifier.padding(horizontal = 4.dp),
+        )
+        Spacer(Modifier.height(20.dp))
+        PaywallUnlockList(
+            language = language,
+            titleKey = "paywall.unlock.you",
+            items = listOf(PaywallUnlockItem.AUDIO, PaywallUnlockItem.UNLIMITED, PaywallUnlockItem.QUIZ),
         )
     }
 }
@@ -728,7 +756,6 @@ private fun TrainingPaywall(
     val hasTrial = storeViewModel.hasFreeTrial(annual)
     val trialDays = storeViewModel.trialDays(annual) ?: 3
     val yearly = storeViewModel.formattedPrice(annual, StoreViewModel.UNKNOWN_PRICE)
-    val perMonth = perMonthLabel(context, language, storeViewModel, annual)
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
     var notice by remember { mutableStateOf<String?>(null) }
@@ -736,7 +763,7 @@ private fun TrainingPaywall(
     PaywallShell(
         language = language,
         onDismiss = onDismiss,
-        priceLine = priceLineText(context, language, hasTrial, trialDays, yearly, perMonth),
+        priceLine = priceLineText(context, language, hasTrial, trialDays, yearly),
         ctaText = StringStore.text(
             context,
             if (hasTrial) "paywall.cta.activateTrial" else "paywall.cta.subscribe",
@@ -839,7 +866,6 @@ private fun AudioPaywall(
     val hasTrial = storeViewModel.hasFreeTrial(annual)
     val trialDays = storeViewModel.trialDays(annual) ?: 3
     val yearly = storeViewModel.formattedPrice(annual, StoreViewModel.UNKNOWN_PRICE)
-    val perMonth = perMonthLabel(context, language, storeViewModel, annual)
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
     var notice by remember { mutableStateOf<String?>(null) }
@@ -847,7 +873,7 @@ private fun AudioPaywall(
     PaywallShell(
         language = language,
         onDismiss = onDismiss,
-        priceLine = priceLineText(context, language, hasTrial, trialDays, yearly, perMonth),
+        priceLine = priceLineText(context, language, hasTrial, trialDays, yearly),
         ctaText = StringStore.text(
             context,
             if (hasTrial) "paywall.cta.activateTrial" else "paywall.cta.subscribe",
@@ -910,7 +936,12 @@ private fun AudioPaywall(
     }
 }
 
-/** Quiz paywall: an auto-playing demo of the question types, then the FAQ. */
+/**
+ * Quiz paywall, opened when a free reader taps the quiz at the end of a course. « Don't forget
+ * what you just learned »: the forgetting curve drawn twice (with the quizzes it stays high
+ * and climbs back at every reminder; without them it drops and never recovers), then what
+ * else PRO unlocks, the rating, and the CTA. The close button waits four seconds.
+ */
 @Composable
 private fun QuizPaywall(
     language: AppLanguage,
@@ -929,31 +960,16 @@ private fun QuizPaywall(
     val hasTrial = storeViewModel.hasFreeTrial(annual)
     val trialDays = storeViewModel.trialDays(annual) ?: 3
     val yearly = storeViewModel.formattedPrice(annual, StoreViewModel.UNKNOWN_PRICE)
-    val perMonth = perMonthLabel(context, language, storeViewModel, annual)
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
     var notice by remember { mutableStateOf<String?>(null) }
-    var expandedFaq by remember { mutableStateOf<Int?>(null) }
-    // The answers are shared with iOS and talk about the App Store. On Android the only
-    // place a subscription can be cancelled is Google Play, so cancellation answers use the
-    // `.play` variants; the trial answer (a3) names no store and is reused as is.
-    val faq = listOf(
-        "paywall.quiz.faq.q1" to "paywall.quiz.faq.a1.play",
-        "paywall.quiz.faq.q2" to "paywall.quiz.faq.a2",
-        (if (hasTrial) "paywall.quiz.faq.q3" else "paywall.quiz.faq.q3.noTrial") to
-            (if (hasTrial) "paywall.quiz.faq.a3" else "paywall.quiz.faq.a3.noTrial.play"),
-    )
 
     PaywallShell(
         language = language,
         onDismiss = onDismiss,
         closeDelayMillis = 4000,
-        priceLine = priceLineText(context, language, hasTrial, trialDays, yearly, perMonth),
-        ctaText = StringStore.text(
-            context,
-            if (hasTrial) "paywall.cta.activateTrial" else "paywall.cta.subscribe",
-            language,
-        ),
+        priceLine = priceLineText(context, language, hasTrial, trialDays, yearly),
+        ctaText = ctaContinueText(context, language, storeViewModel, annual, hasTrial),
         ctaIcon = Icons.Filled.AutoAwesome,
         purchasing = purchasing,
         error = error,
@@ -975,159 +991,28 @@ private fun QuizPaywall(
             )
         },
     ) {
-        PaywallHero(icon = Icons.Filled.Quiz)
-        Spacer(Modifier.height(18.dp))
+        Spacer(Modifier.height(6.dp))
         Text(
             text = StringStore.text(context, "paywall.quiz.title", language),
-            style = SophiaTypography.titleLarge.copy(fontSize = 24.sp, lineHeight = 30.sp),
+            style = SophiaTypography.titleLarge.copy(fontSize = 26.sp, lineHeight = 32.sp),
             textAlign = TextAlign.Center,
         )
-        Spacer(Modifier.height(8.dp))
+        Spacer(Modifier.height(10.dp))
         Text(
             text = StringStore.text(context, "paywall.quiz.subtitle", language),
             style = SophiaTypography.bodyMedium,
             textAlign = TextAlign.Center,
         )
-        Spacer(Modifier.height(20.dp))
-        QuizShowcase(language = language)
-        Spacer(Modifier.height(20.dp))
-        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            faq.forEachIndexed { index, (qKey, aKey) ->
-                FaqItem(
-                    question = StringStore.text(context, qKey, language),
-                    answer = StringStore.text(context, aKey, language),
-                    expanded = expandedFaq == index,
-                    onToggle = { expandedFaq = if (expandedFaq == index) null else index },
-                )
-            }
-        }
-        Spacer(Modifier.height(12.dp))
-        // Play's own subscription centre, deep-linked to Sophia. Saying where to cancel and
-        // then making them find it is half an answer.
-        Text(
-            text = StringStore.text(context, "paywall.manageSubscription", language),
-            style = SophiaTypography.labelMedium.copy(fontSize = 12.sp, color = DS.accentSoft),
-            modifier = Modifier
-                .softPress(onClick = { openPlaySubscriptions(context, annual?.product?.id) })
-                .padding(horizontal = 8.dp, vertical = 6.dp),
+        Spacer(Modifier.height(22.dp))
+        QuizRetentionChart(language = language)
+        Spacer(Modifier.height(22.dp))
+        PaywallUnlockList(
+            language = language,
+            titleKey = "paywall.unlock.also",
+            items = listOf(PaywallUnlockItem.AUDIO, PaywallUnlockItem.UNLIMITED),
         )
-        Spacer(Modifier.height(12.dp))
-        RatingLine(StringStore.text(context, "paywall.quiz.rating", language))
-    }
-}
-
-/**
- * Opens Google Play on the Sophia subscription, falling back to the subscription list and
- * then to the Play listing in the browser — a phone with the Play app removed still has to
- * land somewhere real.
- *
- * [productId] is the store product RevenueCat actually served, never a hardcoded sku: the
- * deep link only lands on the right subscription when the id matches what Play sold, and a
- * guess would silently drop the user on an empty page. When offerings have not loaded yet it
- * is null, and the plain subscription list is the honest destination.
- */
-private fun openPlaySubscriptions(context: android.content.Context, productId: String?) {
-    val packageName = context.packageName
-    // RevenueCat reports a subscription product as "product:base_plan"; Play wants the
-    // product alone.
-    val sku = productId?.substringBefore(':')?.takeIf { it.isNotBlank() }
-    val targets = listOfNotNull(
-        sku?.let { "https://play.google.com/store/account/subscriptions?sku=$it&package=$packageName" },
-        "https://play.google.com/store/account/subscriptions",
-        "https://play.google.com/store/apps/details?id=$packageName",
-    )
-    for (url in targets) {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        if (runCatching { context.startActivity(intent) }.isSuccess) return
-    }
-}
-
-/** Cycles through the question types with the answer revealing itself, like the iOS demo. */
-@Composable
-private fun QuizShowcase(language: AppLanguage) {
-    val context = LocalContext.current
-    var step by remember { mutableIntStateOf(0) }
-    var revealed by remember { mutableStateOf(false) }
-    LaunchedEffect(Unit) {
-        while (true) {
-            revealed = false
-            delay(1350)
-            revealed = true
-            delay(2600)
-            step = (step + 1) % 2
-            delay(600)
-        }
-    }
-    Column(
-        modifier = Modifier.fillMaxWidth().sophiaCard().padding(18.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                text = StringStore.text(
-                    context,
-                    if (step == 0) "paywall.quiz.demo.badge.mcq" else "paywall.quiz.demo.badge.trueFalse",
-                    language,
-                ),
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Bold,
-                fontSize = 11.sp,
-                letterSpacing = 0.5.sp,
-                color = DS.accentSoft,
-                modifier = Modifier
-                    .clip(CircleShape)
-                    .background(DS.accentTint)
-                    .padding(horizontal = 10.dp, vertical = 5.dp),
-            )
-            Spacer(Modifier.weight(1f))
-            Text("✨", fontSize = 13.sp)
-        }
-        Text(
-            text = StringStore.text(context, "paywall.quiz.demo.title", language),
-            style = SophiaTypography.labelMedium.copy(fontSize = 12.sp, fontWeight = FontWeight.SemiBold),
-        )
-        AnimatedContent(
-            targetState = step,
-            transitionSpec = { fadeIn(tween(320)) togetherWith fadeOut(tween(220)) },
-            label = "quizDemo",
-        ) { current ->
-            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                Text(
-                    text = StringStore.text(
-                        context,
-                        if (current == 0) "paywall.quiz.demo.mcq.q" else "paywall.quiz.demo.tf.q",
-                        language,
-                    ),
-                    style = SophiaTypography.titleMedium.copy(fontSize = 16.sp),
-                )
-                val options = if (current == 0) {
-                    listOf("paywall.quiz.demo.mcq.o1", "paywall.quiz.demo.mcq.o2", "paywall.quiz.demo.mcq.o3")
-                } else {
-                    listOf("paywall.quiz.demo.tf.true", "paywall.quiz.demo.tf.false")
-                }
-                options.forEachIndexed { i, key ->
-                    val correct = revealed && i == if (current == 0) 0 else 1
-                    Text(
-                        text = StringStore.text(context, key, language),
-                        style = SophiaTypography.bodyMedium.copy(
-                            color = if (correct) DS.success else DS.ink,
-                            fontWeight = if (correct) FontWeight.SemiBold else FontWeight.Normal,
-                        ),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(DS.controlShape)
-                            .background(if (correct) DS.successTint else DS.canvas)
-                            .border(
-                                1.dp,
-                                if (correct) DS.success else DS.hairline,
-                                DS.controlShape,
-                            )
-                            .padding(horizontal = 12.dp, vertical = 10.dp),
-                    )
-                }
-            }
-        }
+        Spacer(Modifier.height(22.dp))
+        RatingLine(StringStore.text(context, "paywall.quiz.rating", language), language)
     }
 }
 
@@ -1386,17 +1271,40 @@ private fun PaywallShell(
     }
 }
 
+/**
+ * The price above the CTA of the feature paywalls: one small grey line, « Essai gratuit de 3
+ * jours, puis 39,99 € / an ». The button says what today costs; this says what the store
+ * charges once the trial is over.
+ */
 private fun priceLineText(
     context: android.content.Context,
     language: AppLanguage,
     hasTrial: Boolean,
     trialDays: Int,
     yearly: String,
-    perMonth: String,
 ): String = if (hasTrial) {
-    StringStore.trialText(context, "paywall.price.trialThenYearly", language, trialDays, yearly, perMonth)
+    StringStore.trialText(context, "paywall.price.trialThenYearly", language, trialDays, yearly)
 } else {
-    StringStore.text(context, "paywall.price.yearlyNoTrial", language, yearly, perMonth)
+    StringStore.text(context, "paywall.price.yearlyNoTrial", language, yearly)
+}
+
+/**
+ * « Continuer pour 0,00 € » while a trial is served: what today costs, in the store's
+ * currency. Without a trial (or before the store has answered) the button says what it does.
+ */
+private fun ctaContinueText(
+    context: android.content.Context,
+    language: AppLanguage,
+    storeViewModel: StoreViewModel,
+    annual: Package?,
+    hasTrial: Boolean,
+): String {
+    val zero = storeViewModel.formattedZeroPrice(annual)
+    return if (hasTrial && zero.isNotEmpty()) {
+        StringStore.text(context, "paywall.cta.continueFor", language, zero)
+    } else {
+        StringStore.text(context, "paywall.cta.subscribe", language)
+    }
 }
 
 /**

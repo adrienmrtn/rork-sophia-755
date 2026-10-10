@@ -1,6 +1,5 @@
 package app.rork.sophia.ui.paywall
 
-import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.Spring
@@ -12,7 +11,6 @@ import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
-import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -22,7 +20,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -33,9 +30,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.Lock
-import androidx.compose.material.icons.filled.Remove
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
@@ -43,7 +38,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -62,6 +56,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.domain.formatted
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
@@ -322,77 +317,11 @@ fun PlanSelectorCard(
                 modifier = Modifier
                     .align(Alignment.TopEnd)
                     .padding(end = 12.dp)
-                    .offset(y = (-9).dp)
+                    .offset(y = (-12).dp)
                     .clip(CircleShape)
                     .background(DS.accent)
                     .padding(horizontal = 8.dp, vertical = 4.dp),
             )
-        }
-    }
-}
-
-/** Free vs Pro feature table. */
-@Composable
-fun ComparisonTable(
-    features: List<String>,
-    freeLabel: String,
-    proLabel: String,
-    modifier: Modifier = Modifier,
-) {
-    Column(modifier = modifier.fillMaxWidth()) {
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Spacer(Modifier.weight(1f))
-            Text(
-                text = freeLabel,
-                style = SophiaTypography.labelMedium.copy(fontSize = 12.sp, fontWeight = FontWeight.SemiBold),
-                textAlign = TextAlign.Center,
-                modifier = Modifier.width(72.dp),
-            )
-            Text(
-                text = proLabel,
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Bold,
-                fontSize = 12.sp,
-                color = Color.White,
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .width(72.dp)
-                    .clip(CircleShape)
-                    .background(DS.accent)
-                    .padding(vertical = 4.dp),
-            )
-        }
-        features.forEach { feature ->
-            Row(
-                modifier = Modifier.fillMaxWidth().padding(vertical = 10.dp),
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                Text(
-                    text = feature,
-                    style = SophiaTypography.bodyMedium.copy(color = DS.ink, fontWeight = FontWeight.Medium),
-                    modifier = Modifier.weight(1f),
-                )
-                Box(modifier = Modifier.width(72.dp), contentAlignment = Alignment.Center) {
-                    Icon(
-                        Icons.Filled.Remove,
-                        contentDescription = null,
-                        tint = DS.inkTertiary,
-                        modifier = Modifier.size(14.dp),
-                    )
-                }
-                Box(modifier = Modifier.width(72.dp), contentAlignment = Alignment.Center) {
-                    Icon(
-                        Icons.Filled.CheckCircle,
-                        contentDescription = null,
-                        tint = DS.accent,
-                        modifier = Modifier.size(18.dp),
-                    )
-                }
-            }
-            androidx.compose.material3.HorizontalDivider(color = DS.hairline)
         }
     }
 }
@@ -435,102 +364,6 @@ fun CountdownCard(
             fontSize = 22.sp,
             color = DS.ink,
         )
-    }
-}
-
-/** Expandable question card. */
-@Composable
-fun FaqItem(
-    question: String,
-    answer: String,
-    expanded: Boolean,
-    onToggle: () -> Unit,
-) {
-    val rotation by animateFloatAsState(
-        targetValue = if (expanded) 180f else 0f,
-        animationSpec = spring(dampingRatio = 0.86f, stiffness = Spring.StiffnessMediumLow),
-        label = "faqChevron",
-    )
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .softPress(onClick = onToggle)
-            .clip(DS.cardShape)
-            .background(DS.surface)
-            .border(
-                1.dp,
-                if (expanded) DS.accentSoft.copy(alpha = 0.35f) else DS.hairline,
-                DS.cardShape,
-            )
-            .padding(16.dp),
-    ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                text = question,
-                style = SophiaTypography.bodyMedium.copy(color = DS.ink, fontWeight = FontWeight.SemiBold),
-                modifier = Modifier.weight(1f),
-            )
-            Icon(
-                Icons.Filled.ExpandMore,
-                contentDescription = null,
-                tint = DS.inkTertiary,
-                modifier = Modifier.size(18.dp).graphicsLayer { rotationZ = rotation },
-            )
-        }
-        AnimatedVisibility(visible = expanded) {
-            Text(
-                text = answer,
-                style = SophiaTypography.labelMedium,
-                modifier = Modifier.padding(top = 10.dp),
-            )
-        }
-    }
-}
-
-/** Auto-advancing testimonials with page dots. */
-@Composable
-fun ReviewsCarousel(
-    reviews: List<Pair<String, String>>,
-    modifier: Modifier = Modifier,
-) {
-    if (reviews.isEmpty()) return
-    var index by remember { mutableIntStateOf(0) }
-    LaunchedEffect(reviews.size) {
-        while (true) {
-            delay(3200)
-            index = (index + 1) % reviews.size
-        }
-    }
-    Column(modifier = modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-        AnimatedContent(
-            targetState = index,
-            transitionSpec = { fadeIn(tween(320)) togetherWith fadeOut(tween(220)) },
-            label = "review",
-        ) { i ->
-            val (quote, author) = reviews[i]
-            Column(
-                modifier = Modifier.fillMaxWidth().sophiaCard().padding(16.dp),
-                verticalArrangement = Arrangement.spacedBy(10.dp),
-            ) {
-                Text("★★★★★", color = DS.warm, fontSize = 12.sp)
-                Text(
-                    text = quote,
-                    style = SophiaTypography.bodyMedium.copy(color = DS.ink, fontWeight = FontWeight.Medium),
-                )
-                Text(text = author, style = SophiaTypography.labelMedium)
-            }
-        }
-        Spacer(Modifier.height(10.dp))
-        Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-            reviews.indices.forEach { i ->
-                Box(
-                    modifier = Modifier
-                        .size(if (i == index) 8.dp else 6.dp)
-                        .clip(CircleShape)
-                        .background(if (i == index) DS.accent else DS.hairline),
-                )
-            }
-        }
     }
 }
 
@@ -691,13 +524,14 @@ fun PaywallLegalRow(
     }
 }
 
-/** Rating line reused by the quiz and course-unlock paywalls. */
+/** Discreet rating line of the quiz paywall: five stars, « 4,8 · sur Google Play ». */
 @Composable
-fun RatingLine(text: String, light: Boolean = false) {
+fun RatingLine(text: String, language: AppLanguage, light: Boolean = false) {
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
         Text("★★★★★", color = DS.warm, fontSize = 11.sp)
         Text(
-            text = "4,8 · $text",
+            // The decimal separator of the reading language: « 4,8 » in French, « 4.8 » in English.
+            text = "${4.8.formatted(language, 1)} · $text",
             style = SophiaTypography.labelMedium.copy(fontSize = 11.sp),
             color = if (light) Color.White.copy(alpha = 0.8f) else DS.inkTertiary,
         )
