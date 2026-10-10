@@ -61,6 +61,36 @@ object CatalogStream {
         return emptyList()
     }
 
+    /**
+     * Quizzes of several courses in a single pass over `courses.{lang}.json`, stopping as
+     * soon as the last one is read. A Parcours level quiz draws from up to a dozen courses;
+     * one stream per course would read the 1.3 MB catalogue a dozen times.
+     */
+    fun readQuizzesForCourses(input: InputStream, courseIds: Set<String>): Map<String, List<QuizQuestion>> {
+        val found = HashMap<String, List<QuizQuestion>>()
+        if (courseIds.isEmpty()) return found
+        JsonReader(InputStreamReader(input, Charsets.UTF_8)).use { reader ->
+            reader.beginArray()
+            while (reader.hasNext() && found.size < courseIds.size) {
+                reader.beginObject()
+                var id = ""
+                var quiz: List<QuizQuestion>? = null
+                while (reader.hasNext()) {
+                    when (reader.nextName()) {
+                        "id" -> id = reader.nextString()
+                        // The id usually comes first; when it does not, the quiz is kept
+                        // until the id says whether it was wanted.
+                        "quiz" -> if (id.isEmpty() || id in courseIds) quiz = readQuizArray(reader) else reader.skipValue()
+                        else -> reader.skipValue()
+                    }
+                }
+                reader.endObject()
+                if (id in courseIds) found[id] = quiz.orEmpty()
+            }
+        }
+        return found
+    }
+
     /** Number of quiz questions in `courses.{lang}.json`, without building a single one. */
     fun countQuizQuestions(input: InputStream, skipCourseIds: Set<String> = emptySet()): Int {
         var total = 0

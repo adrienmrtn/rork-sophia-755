@@ -174,6 +174,26 @@ data class TrainingQuestionState(
     val nextReviewDate: String? = null,
 )
 
+/**
+ * Outcome of the end-of-level quiz of one Parcours level, keyed by collection id in
+ * [UserProgress.pathLevelResults]. Same fields and JSON names as iOS, so a level passed on
+ * one platform is passed on the other.
+ */
+@Serializable
+data class PathLevelResult(
+    /** Most fully-correct answers reached in a single attempt. */
+    val bestCorrect: Int = 0,
+    /** Question count of the attempt that set [bestCorrect]. */
+    val bestTotal: Int = 0,
+    val attempts: Int = 0,
+    /** ISO-8601 date of the first passing attempt; null while the level is not passed. */
+    val passedAt: String? = null,
+    /** Whether the one-time global XP reward for passing was already granted. */
+    val xpAwarded: Boolean = false,
+) {
+    val isPassed: Boolean get() = passedAt != null
+}
+
 @Serializable
 data class PendingGlobalRankUp(
     val previousRankRawValue: String = "",
@@ -229,6 +249,12 @@ data class UserProgress(
      * the previous count was assumed to be "one less" rather than looked up.
      */
     val celebratedCollectionCounts: Map<String, Int> = emptyMap(),
+    /**
+     * Parcours levels, by collection id. Written by iOS too: before Android knew the field,
+     * `ignoreUnknownKeys` dropped it on read and the next push erased the levels passed on
+     * the iPhone.
+     */
+    val pathLevelResults: Map<String, PathLevelResult> = emptyMap(),
 )
 
 /**

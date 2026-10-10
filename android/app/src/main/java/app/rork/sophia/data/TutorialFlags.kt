@@ -12,6 +12,7 @@ class TutorialFlags(context: Context) {
         COLLECTIONS("sophia_tut_collections"),
         TRAINING("sophia_tut_training"),
         TRAINING_ONBOARDING("sophia_tut_training_onboarding"),
+        PATH("sophia_tut_path"),
     }
 
     fun seen(id: Id): Boolean = prefs.getBoolean(id.key, false)
