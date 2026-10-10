@@ -215,7 +215,11 @@ fun MainTabs(
         val p = app.progressManager.progress.value
         val steps = mutableListOf<PostCompletionRewardStep>()
         if (app.progressManager.shouldShowStreakCelebration()) {
-            steps += PostCompletionRewardStep.Streak(p.streak)
+            steps += PostCompletionRewardStep.Streak(
+                days = p.streak,
+                subject = ContentCatalog.cachedStub(language, courseId)?.subjectEnum,
+                lastActiveDate = p.lastActiveDate,
+            )
         }
         p.pendingGlobalRankUp?.let { pending ->
             steps += PostCompletionRewardStep.RankUp(pending.newRankRawValue, pending.newLevel)

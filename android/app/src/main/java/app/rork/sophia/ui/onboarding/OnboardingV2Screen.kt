@@ -2,6 +2,7 @@ package app.rork.sophia.ui.onboarding
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
@@ -35,6 +36,7 @@ import androidx.compose.ui.unit.dp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.CourseAffinityStore
 import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.InAppReviewHelper
@@ -206,6 +208,8 @@ fun OnboardingV2Screen(
         mutableStateOf(DeviceCapabilities.hasGooglePlayServices(context))
     }
     val scope = rememberCoroutineScope()
+    // « I already have an account », opened from the welcome page.
+    var showExistingAccount by remember { mutableStateOf(false) }
 
     // A racing timer (last swipe card, word animation) must not skip a whole screen.
     fun goTo(next: OnboardingStep) {
@@ -229,6 +233,7 @@ fun OnboardingV2Screen(
         val appContext = context.applicationContext
         runCatching {
             ContentCatalog.summariesAsync(appContext, language)
+            CourseAffinityStore.load(appContext)
             GlossaryStore.preload(appContext, language)
         }
     }
@@ -267,6 +272,47 @@ fun OnboardingV2Screen(
         } else {
             OnboardingStep.Login
         }
+
+    /**
+     * Google sign-in, shared by the login page and « I already have an account ». A returning
+     * user gets their cloud progress back, same as signing in from settings, then [onSignedIn].
+     */
+    fun signInWithGoogle(onSignedIn: () -> Unit) {
+        // Guard, not just a disabled button: a fast double tap can land two clicks before
+        // recomposition shows the disabled state, and the second Credential Manager request
+        // cancels the first.
+        if (signingIn) return
+        signingIn = true
+        signInError = null
+        scope.launch {
+            val outcome = try {
+                app.authService.signInWithGoogle(context)
+            } catch (e: CancellationException) {
+                // The user left the step while the sheet was up. Nothing to report, and
+                // nothing left to update — this scope is gone.
+                throw e
+            } catch (e: Exception) {
+                SignInOutcome.Failure(StringStore.text(context, "auth.error.generic", language))
+            }
+            signingIn = false
+            when (outcome) {
+                is SignInOutcome.Success -> {
+                    runCatching {
+                        app.progressSyncService.pullOnLogin(app.progressManager.progress.value)
+                    }
+                    app.onboardingStore.markAccountOffered()
+                    onSignedIn()
+                }
+                // Dismissed on purpose: leave the page exactly as it was.
+                is SignInOutcome.Cancelled -> Unit
+                is SignInOutcome.Unavailable -> {
+                    googleAvailable = false
+                    signInError = StringStore.text(context, "auth.unavailable.body", language)
+                }
+                is SignInOutcome.Failure -> signInError = outcome.message
+            }
+        }
+    }
 
     /** Login, skipped or done, lands on the same next page. */
     fun advanceFromLogin() {
@@ -341,7 +387,19 @@ fun OnboardingV2Screen(
             label = "onboardingStep",
         ) { current ->
             when (current) {
-                OnboardingStep.Welcome -> WelcomeStep(language) { goTo(OnboardingStep.Language) }
+                OnboardingStep.Welcome -> WelcomeStep(
+                    language = language,
+                    onContinue = { goTo(OnboardingStep.Language) },
+                    // Without Google there is nothing to sign in with: no door to show.
+                    onExistingAccount = if (googleAvailable) {
+                        {
+                            signInError = null
+                            showExistingAccount = true
+                        }
+                    } else {
+                        null
+                    },
+                )
                 OnboardingStep.Language -> LanguageStep(
                     language = language,
                     onSelect = onLanguageSelected,
@@ -457,52 +515,7 @@ fun OnboardingV2Screen(
                     signingIn = signingIn,
                     errorMessage = signInError,
                     googleAvailable = googleAvailable,
-                    onGoogle = {
-                        // Guard, not just a disabled button: a fast double tap can land two
-                        // clicks before recomposition shows the disabled state, and the
-                        // second Credential Manager request cancels the first.
-                        if (signingIn) return@LoginStep
-                        signingIn = true
-                        signInError = null
-                        scope.launch {
-                            val outcome = try {
-                                app.authService.signInWithGoogle(context)
-                            } catch (e: CancellationException) {
-                                // The user left the step while the sheet was up. Nothing to
-                                // report, and nothing left to update — this scope is gone.
-                                throw e
-                            } catch (e: Exception) {
-                                SignInOutcome.Failure(
-                                    StringStore.text(context, "auth.error.generic", language),
-                                )
-                            }
-                            signingIn = false
-                            when (outcome) {
-                                is SignInOutcome.Success -> {
-                                    // A returning user signing in here gets their cloud
-                                    // progress back, same as signing in from settings.
-                                    runCatching {
-                                        app.progressSyncService.pullOnLogin(
-                                            app.progressManager.progress.value,
-                                        )
-                                    }
-                                    app.onboardingStore.markAccountOffered()
-                                    advanceFromLogin()
-                                }
-                                // Dismissed on purpose: leave the page exactly as it was.
-                                is SignInOutcome.Cancelled -> Unit
-                                is SignInOutcome.Unavailable -> {
-                                    googleAvailable = false
-                                    signInError = StringStore.text(
-                                        context,
-                                        "auth.unavailable.body",
-                                        language,
-                                    )
-                                }
-                                is SignInOutcome.Failure -> signInError = outcome.message
-                            }
-                        }
-                    },
+                    onGoogle = { signInWithGoogle { advanceFromLogin() } },
                     onContinueWithoutAccount = {
                         // Progress lives on the device from here on. The app asks again in
                         // the profile tab and after the third course.
@@ -544,6 +557,28 @@ fun OnboardingV2Screen(
                 current = dotIndex,
                 total = DOT_STEPS.size,
                 modifier = Modifier.align(Alignment.TopCenter).padding(top = 14.dp),
+            )
+        }
+
+        // Someone reinstalling or switching phone: sign in and land in the app with their
+        // history, skipping the questions they answered the first time (as on iOS).
+        AnimatedVisibility(
+            visible = showExistingAccount,
+            enter = slideInVertically(spring(dampingRatio = 0.9f, stiffness = Spring.StiffnessMediumLow)) { it } + fadeIn(),
+            exit = slideOutVertically(tween(260)) { it } + fadeOut(tween(200)),
+        ) {
+            BackHandler { if (!signingIn) showExistingAccount = false }
+            ExistingAccountStep(
+                language = language,
+                signingIn = signingIn,
+                errorMessage = signInError,
+                onGoogle = {
+                    signInWithGoogle {
+                        showExistingAccount = false
+                        finish()
+                    }
+                },
+                onClose = { if (!signingIn) showExistingAccount = false },
             )
         }
     }

@@ -19,7 +19,6 @@ import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Bolt
 import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material.icons.filled.Group
-import androidx.compose.material.icons.filled.LocalFireDepartment
 import androidx.compose.material.icons.filled.CloudUpload
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Star
@@ -51,6 +50,10 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.rememberCourseSummaries
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.UserProgress
+import app.rork.sophia.ui.components.ShareSophiaCard
+import app.rork.sophia.ui.components.ShareSophiaSheet
+import app.rork.sophia.ui.components.AnimatedFlameBadge
+import app.rork.sophia.ui.components.RewardBadgeKind
 import app.rork.sophia.ui.components.CalmProgressBar
 import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.CourseImage
@@ -83,6 +86,10 @@ fun ProfileScreen(
     val app = context.applicationContext as SophiaApplication
     val userId by app.authService.userId.collectAsState()
     val handle by app.socialService.myHandle.collectAsState()
+    var showShare by remember { mutableStateOf(false) }
+    if (showShare) {
+        ShareSophiaSheet(language = language, onDismiss = { showShare = false })
+    }
     val leaderboard by app.socialService.leaderboard.collectAsState()
     val pending by app.socialService.pendingRequests.collectAsState()
     val period by app.socialService.period.collectAsState()
@@ -197,12 +204,7 @@ fun ProfileScreen(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                Icon(
-                    Icons.Filled.LocalFireDepartment,
-                    contentDescription = null,
-                    tint = DS.accentSoft,
-                    modifier = Modifier.size(24.dp),
-                )
+                AnimatedFlameBadge(size = 22.dp, showGlow = false, modifier = Modifier.size(28.dp))
                 Text(
                     text = "${progress.streak}",
                     fontFamily = PlusJakartaSans,
@@ -225,12 +227,14 @@ fun ProfileScreen(
                     value = "$completedCount",
                     label = StringStore.text(context, "settings.courses.completed", language, completedCount),
                     modifier = Modifier.weight(1f),
+                    badge = RewardBadgeKind.Courses,
                 )
                 StatTile(
                     icon = Icons.Filled.Bolt,
                     value = "${progress.globalXP}",
                     label = "XP",
                     modifier = Modifier.weight(1f),
+                    badge = RewardBadgeKind.Xp,
                 )
             }
         }
@@ -242,6 +246,9 @@ fun ProfileScreen(
                 leadingIcon = Icons.Filled.WorkspacePremium,
             )
         }
+
+        // « Partage Sophia », before the friends, where iOS puts it.
+        ShareSophiaCard(language = language, onClick = { showShare = true })
 
         if (userId != null) {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {

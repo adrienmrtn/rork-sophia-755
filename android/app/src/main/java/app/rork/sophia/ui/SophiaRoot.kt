@@ -35,6 +35,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
+import app.rork.sophia.data.CourseAffinityStore
 import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
@@ -74,6 +75,9 @@ fun SophiaRoot(
             tabsReady = false
             return@LaunchedEffect
         }
+        // The home deck is ordered from the course affinity file: read it during the splash
+        // so the feed is dealt on its first frame instead of after a spinner.
+        CourseAffinityStore.load(context.applicationContext)
         delay(if (constrained) 480L else 80L)
         tabsReady = true
     }

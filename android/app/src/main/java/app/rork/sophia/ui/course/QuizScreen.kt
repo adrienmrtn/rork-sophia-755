@@ -56,7 +56,9 @@ import app.rork.sophia.domain.QuizQuestionType
 import app.rork.sophia.domain.QuizScoring
 import app.rork.sophia.domain.QuizShuffler
 import app.rork.sophia.domain.ShuffledQuestion
+import app.rork.sophia.ui.components.AnimatedRewardBadge
 import app.rork.sophia.ui.components.AnswerOptionRow
+import app.rork.sophia.ui.components.RewardBadgeKind
 import app.rork.sophia.ui.components.AnswerState
 import app.rork.sophia.ui.components.CalmProgressBar
 import app.rork.sophia.ui.components.CircleIconButton
@@ -420,7 +422,12 @@ private fun QuizResults(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-        QuizHero(icon = Icons.Filled.EmojiEvents)
+        Box(
+            modifier = Modifier.size(120.dp).clip(CircleShape).background(DS.accentTint),
+            contentAlignment = Alignment.Center,
+        ) {
+            AnimatedRewardBadge(kind = RewardBadgeKind.Trophy, size = 50.dp)
+        }
         Spacer(Modifier.height(24.dp))
         Text(
             text = StringStore.text(context, "quiz.completed", language),

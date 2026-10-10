@@ -26,12 +26,12 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.LocalFireDepartment
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.outlined.LocalFireDepartment
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -65,6 +65,8 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.IntOffset
@@ -72,15 +74,23 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.CourseAffinityStore
 import app.rork.sophia.data.CourseImagePrefetch
+import app.rork.sophia.data.DeckSkipStore
 import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.TutorialFlags
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.domain.CourseAffinity
 import app.rork.sophia.domain.CourseSummary
+import app.rork.sophia.domain.DeckContext
+import app.rork.sophia.domain.HomeDeckBuilder
 import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.audio.CourseAudioButton
+import app.rork.sophia.ui.components.AnimatedFlameBadge
+import app.rork.sophia.ui.components.AnimatedRewardBadge
 import app.rork.sophia.ui.components.CourseImage
+import app.rork.sophia.ui.components.RewardBadgeKind
 import app.rork.sophia.ui.components.FirstOpenExplanation
 import app.rork.sophia.ui.components.Pill
 import app.rork.sophia.ui.components.SophiaPrimaryButton
@@ -92,8 +102,10 @@ import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlin.math.abs
 import kotlin.math.roundToInt
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @Composable
 fun HomeTikTokScreen(
@@ -111,25 +123,63 @@ fun HomeTikTokScreen(
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
-    val cached = remember(language) {
-        ContentCatalog.cachedSummaries(language).orEmpty()
+    val skipStore = remember { DeckSkipStore(context.applicationContext) }
+
+    /**
+     * The deck, ordered by affinity as on iOS (`HomeDeckBuilder`) rather than shuffled.
+     * Coming back from a course keeps the deck the reader was swiping through; any other
+     * arrival on the home (launch, tab switch, language) deals a fresh one, like iOS's
+     * `onAppear`.
+     */
+    fun buildDeck(summaries: List<CourseSummary>): List<CourseSummary> {
+        val progress = app.progressManager.progress.value
+        val deckContext = DeckContext.from(
+            progress = progress,
+            catalogue = summaries,
+            objectiveSubjects = app.onboardingStore.answers().topics.toSet(),
+            skipCounts = skipStore.counts(),
+        )
+        return HomeDeckBuilder.deck(
+            courses = summaries,
+            affinity = CourseAffinityStore.cached() ?: CourseAffinity.NONE,
+            context = deckContext,
+            isCompleted = { progress.courseProgress[it]?.isCompleted == true },
+        )
     }
-    var cards by remember(language) { mutableStateOf(cached) }
-    var catalogReady by remember(language) { mutableStateOf(cached.isNotEmpty()) }
+
+    fun initialDeck(): List<CourseSummary> {
+        val summaries = ContentCatalog.cachedSummaries(language) ?: return emptyList()
+        if (autoSwipeCourseId != null) {
+            HomeDeckSession.restore(language, summaries)?.let { return it }
+        }
+        if (CourseAffinityStore.cached() == null) return emptyList()
+        return buildDeck(summaries)
+    }
+
+    var cards by remember(language) { mutableStateOf(initialDeck()) }
+    var catalogReady by remember(language) { mutableStateOf(cards.isNotEmpty()) }
     var showExplain by remember { mutableStateOf(false) }
-    var index by remember(language) { mutableIntStateOf(0) }
+    var index by remember(language) {
+        mutableIntStateOf(if (autoSwipeCourseId != null) HomeDeckSession.index(language, cards.size) else 0)
+    }
 
     LaunchedEffect(language) {
-        if (cards.isEmpty()) {
-            cards = ContentCatalog.summariesAsync(context.applicationContext, language).shuffled()
-        } else if (cards === cached && cached.isNotEmpty()) {
-            cards = cached.shuffled()
+        if (!catalogReady) {
+            val summaries = ContentCatalog.summariesAsync(context.applicationContext, language)
+            CourseAffinityStore.load(context.applicationContext)
+            val restored = if (autoSwipeCourseId != null) HomeDeckSession.restore(language, summaries) else null
+            cards = restored ?: withContext(Dispatchers.Default) { buildDeck(summaries) }
+            index = if (restored != null) HomeDeckSession.index(language, cards.size) else 0
+            catalogReady = true
         }
-        catalogReady = true
         if (!DeviceCapabilities.isEmulator() && !app.tutorialFlags.seen(TutorialFlags.Id.HOME_SWIPE)) {
             delay(900)
             showExplain = true
         }
+    }
+    // Remembered for the way back from a course, which tears this screen down.
+    LaunchedEffect(cards, index) {
+        if (catalogReady) HomeDeckSession.save(language, cards, index)
     }
 
     // Covers are the first thing the feed shows, so they are warmed with no debounce:
@@ -148,11 +198,15 @@ fun HomeTikTokScreen(
         CourseImagePrefetch.warmCourse(context.applicationContext, language, courseId)
     }
 
-    LaunchedEffect(autoSwipeCourseId, cards) {
+    // Back from a course opened on the feed: like iOS, it goes to the end of the deck ("come
+    // back to it later") and the card after it takes its place.
+    LaunchedEffect(autoSwipeCourseId, catalogReady) {
         val id = autoSwipeCourseId ?: return@LaunchedEffect
+        if (!catalogReady) return@LaunchedEffect
         val found = cards.indexOfFirst { it.id == id }
-        if (found >= 0 && found + 1 < cards.size) {
-            index = found + 1
+        if (found >= 0 && cards.size > 1) {
+            cards = cards.toMutableList().apply { add(removeAt(found)) }
+            index = found.coerceAtMost(cards.lastIndex)
             onUserSwipe()
         }
         onAutoSwipeConsumed()
@@ -189,11 +243,16 @@ fun HomeTikTokScreen(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
-                    Icon(
-                        Icons.AutoMirrored.Filled.MenuBook,
-                        contentDescription = StringStore.text(context, "myCourses.title", language),
-                        tint = DS.accentSoft,
-                        modifier = Modifier.size(18.dp),
+                    // Coloured like the rewards, but still: moving badges here would
+                    // compete with the course cards (iOS keeps them still too).
+                    AnimatedRewardBadge(
+                        kind = RewardBadgeKind.Courses,
+                        size = 17.dp,
+                        showGlow = false,
+                        animated = false,
+                        modifier = Modifier
+                            .size(18.dp)
+                            .semantics { contentDescription = StringStore.text(context, "myCourses.title", language) },
                     )
                     Text(
                         text = "$completedCourses",
@@ -211,12 +270,22 @@ fun HomeTikTokScreen(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
-                    Icon(
-                        Icons.Filled.LocalFireDepartment,
-                        contentDescription = null,
-                        tint = DS.warm,
-                        modifier = Modifier.size(18.dp),
-                    )
+                    // A running streak burns pink-orange (still); at zero the flame is out.
+                    if (streak > 0) {
+                        AnimatedFlameBadge(
+                            size = 17.dp,
+                            showGlow = false,
+                            animated = false,
+                            modifier = Modifier.size(18.dp),
+                        )
+                    } else {
+                        Icon(
+                            Icons.Outlined.LocalFireDepartment,
+                            contentDescription = null,
+                            tint = DS.inkSecondary,
+                            modifier = Modifier.size(18.dp),
+                        )
+                    }
                     Text(
                         text = "$streak",
                         fontFamily = PlusJakartaSans,
@@ -258,6 +327,8 @@ fun HomeTikTokScreen(
                     index = index,
                     onIndexChange = { next ->
                         if (next != index) {
+                            // The card scrolled away from was dealt and not opened.
+                            cards.getOrNull(index)?.let { skipStore.registerSkip(it.id) }
                             index = next
                             onUserSwipe()
                         }
@@ -276,7 +347,10 @@ fun HomeTikTokScreen(
                         language = language,
                         isFavorite = course.id in favoriteIds,
                         onToggleFavorite = { onToggleFavorite(course.id) },
-                        onStart = { onStartCourse(course.id) },
+                        onStart = {
+                            skipStore.clear(course.id)
+                            onStartCourse(course.id)
+                        },
                     )
                 }
             }
@@ -587,4 +661,29 @@ private fun readsCountShort(id: String): String {
     } else {
         "${rounded / 1000} k"
     }
+}
+
+/**
+ * The deck being swiped through, kept for the way back from a course: the reader is torn
+ * down while a course is open, and should find the feed where they left it.
+ */
+private object HomeDeckSession {
+    private var language: AppLanguage? = null
+    private var deckIds: List<String> = emptyList()
+    private var index = 0
+
+    fun save(language: AppLanguage, cards: List<CourseSummary>, index: Int) {
+        this.language = language
+        deckIds = cards.map { it.id }
+        this.index = index
+    }
+
+    fun restore(language: AppLanguage, summaries: List<CourseSummary>): List<CourseSummary>? {
+        if (this.language != language || deckIds.isEmpty()) return null
+        val byId = summaries.associateBy { it.id }
+        return deckIds.mapNotNull { byId[it] }.takeIf { it.isNotEmpty() }
+    }
+
+    fun index(language: AppLanguage, size: Int): Int =
+        if (this.language == language && size > 0) index.coerceIn(0, size - 1) else 0
 }

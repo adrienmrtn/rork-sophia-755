@@ -55,6 +55,8 @@ import app.rork.sophia.domain.QuizQuestionType
 import app.rork.sophia.domain.QuizScoring
 import app.rork.sophia.domain.QuizShuffler
 import app.rork.sophia.domain.UserProgress
+import app.rork.sophia.ui.components.AnimatedRewardBadge
+import app.rork.sophia.ui.components.RewardBadgeKind
 import app.rork.sophia.ui.components.AnswerOptionRow
 import app.rork.sophia.ui.components.AnswerState
 import app.rork.sophia.ui.components.CalmProgressBar
@@ -274,7 +276,12 @@ private fun TrainingSession(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            TrainingHero(icon = Icons.Filled.VerifiedUser)
+            Box(
+                modifier = Modifier.size(128.dp).clip(CircleShape).background(DS.successTint),
+                contentAlignment = Alignment.Center,
+            ) {
+                AnimatedRewardBadge(kind = RewardBadgeKind.Seal, size = 54.dp)
+            }
             Spacer(Modifier.height(24.dp))
             TrainingCopy(
                 title = StringStore.text(context, "training.sessionComplete.title", language),

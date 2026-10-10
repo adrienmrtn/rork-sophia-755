@@ -46,6 +46,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -957,6 +958,122 @@ internal fun LoginStep(
                 )
             }
             Spacer(Modifier.height(20.dp))
+        }
+    }
+}
+
+/**
+ * « I already have an account », from the welcome page: sign in and go straight into the
+ * app. Deliberately not the login page of the flow, which sits after the questions: a
+ * returning reader answered them once already, and their history comes back from the cloud
+ * the moment they sign in. Port of iOS's `OnboardingV2ExistingAccountSheet`.
+ */
+@Composable
+internal fun ExistingAccountStep(
+    language: AppLanguage,
+    signingIn: Boolean,
+    errorMessage: String?,
+    onGoogle: () -> Unit,
+    onClose: () -> Unit,
+) {
+    val context = LocalContext.current
+    var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(OV2.bg)
+            // Nothing behind the page may be tapped through it.
+            .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {},
+    ) {
+        Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp).padding(top = 8.dp),
+                horizontalArrangement = Arrangement.End,
+            ) {
+                Box(
+                    modifier = Modifier
+                        .size(40.dp)
+                        .clip(CircleShape)
+                        .clickable(enabled = !signingIn, onClick = onClose),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Icon(Icons.Filled.Close, contentDescription = null, tint = OV2.inkSecondary, modifier = Modifier.size(20.dp))
+                }
+            }
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState()),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center,
+            ) {
+                Text(
+                    text = StringStore.text(context, "onboardingV2.existingAccount.title", language),
+                    style = OV2.title,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 28.dp),
+                )
+                Spacer(Modifier.height(12.dp))
+                Text(
+                    text = StringStore.text(context, "onboardingV2.existingAccount.subtitle", language),
+                    style = OV2.body,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp),
+                )
+                if (errorMessage != null) {
+                    Spacer(Modifier.height(18.dp))
+                    LoginErrorNote(errorMessage)
+                }
+            }
+            OnboardingCta(
+                text = StringStore.text(
+                    context,
+                    if (errorMessage == null) "auth.continueWithGoogle" else "paywall.error.retry",
+                    language,
+                ),
+                enabled = !signingIn,
+                onClick = onGoogle,
+                bottomInset = 12.dp,
+            )
+            LegalNote(language = language, onOpen = { legalDoc = it })
+            Spacer(Modifier.height(28.dp))
+        }
+        legalDoc?.let { doc ->
+            Box(modifier = Modifier.fillMaxSize().background(OV2.bg)) {
+                LegalDocumentScreen(kind = doc, language = language, onBack = { legalDoc = null })
+            }
+        }
+    }
+}
+
+/** Signing in creates the account when there is none, so the terms belong on the page. */
+@Composable
+private fun LegalNote(language: AppLanguage, onOpen: (LegalDocKind) -> Unit) {
+    val context = LocalContext.current
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Text(
+            text = StringStore.text(context, "auth.legal.prefix", language),
+            style = OV2.caption.copy(fontSize = 12.sp, color = OV2.inkTertiary),
+            textAlign = TextAlign.Center,
+            modifier = Modifier.padding(horizontal = 32.dp),
+        )
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(
+                text = StringStore.text(context, "legal.terms.title", language),
+                style = OV2.caption.copy(fontSize = 12.sp, color = OV2.accentSoft),
+                modifier = Modifier
+                    .clickable { onOpen(LegalDocKind.Terms) }
+                    .padding(horizontal = 6.dp, vertical = 4.dp),
+            )
+            Text("·", color = OV2.inkTertiary)
+            Text(
+                text = StringStore.text(context, "legal.privacy.title", language),
+                style = OV2.caption.copy(fontSize = 12.sp, color = OV2.accentSoft),
+                modifier = Modifier
+                    .clickable { onOpen(LegalDocKind.Privacy) }
+                    .padding(horizontal = 6.dp, vertical = 4.dp),
+            )
         }
     }
 }

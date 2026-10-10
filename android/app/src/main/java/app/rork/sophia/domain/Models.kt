@@ -137,7 +137,15 @@ data class CollectionProgressEvent(
 }
 
 sealed class PostCompletionRewardStep {
-    data class Streak(val days: Int) : PostCompletionRewardStep()
+    /**
+     * [subject] of the course just finished, for « you're becoming unbeatable in … »;
+     * [lastActiveDate] (yyyy-MM-dd) draws the week strip.
+     */
+    data class Streak(
+        val days: Int,
+        val subject: Subject? = null,
+        val lastActiveDate: String? = null,
+    ) : PostCompletionRewardStep()
     data class RankUp(val rankKey: String, val level: Int) : PostCompletionRewardStep()
     data class Collection(val event: CollectionProgressEvent) : PostCompletionRewardStep()
     data class LevelUp(val level: Int) : PostCompletionRewardStep()

@@ -3,6 +3,7 @@ package app.rork.sophia.ui.course
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -45,6 +46,8 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
+import app.rork.sophia.ui.components.AnimatedRewardBadge
+import app.rork.sophia.ui.components.RewardBadgeKind
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.onboarding.readableWidth
 import app.rork.sophia.ui.theme.DS
@@ -130,6 +133,13 @@ fun CourseCompletedScreen(
                     style = SophiaTypography.labelMedium,
                     modifier = Modifier.weight(1f),
                 )
+                AnimatedRewardBadge(
+                    kind = RewardBadgeKind.Xp,
+                    size = 16.dp,
+                    showGlow = false,
+                    modifier = Modifier.size(20.dp),
+                )
+                Spacer(Modifier.width(4.dp))
                 Text(
                     text = "+$earnedXP XP",
                     style = SophiaTypography.titleMedium,

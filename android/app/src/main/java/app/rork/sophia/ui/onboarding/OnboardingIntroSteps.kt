@@ -54,6 +54,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.StringStore
@@ -71,7 +72,12 @@ internal val OBJECTIVE_EMOJI = mapOf(
 )
 
 @Composable
-internal fun WelcomeStep(language: AppLanguage, onContinue: () -> Unit) {
+internal fun WelcomeStep(
+    language: AppLanguage,
+    onContinue: () -> Unit,
+    /** Someone reinstalling or switching phone. Null hides the link (no Google to sign in with). */
+    onExistingAccount: (() -> Unit)? = null,
+) {
     val context = LocalContext.current
     var logoIn by remember { mutableStateOf(false) }
     var titleIn by remember { mutableStateOf(false) }
@@ -150,7 +156,29 @@ internal fun WelcomeStep(language: AppLanguage, onContinue: () -> Unit) {
             )
         }
         Spacer(Modifier.weight(1f))
-        OnboardingCta(StringStore.text(context, "onboardingV2.welcome.cta", language), onContinue)
+        if (onExistingAccount == null) {
+            OnboardingCta(StringStore.text(context, "onboardingV2.welcome.cta", language), onContinue)
+        } else {
+            OnboardingCta(
+                StringStore.text(context, "onboardingV2.welcome.cta", language),
+                onContinue,
+                bottomInset = 4.dp,
+            )
+            // Quiet on purpose: this is the door for people who already know the app, and it
+            // must not compete with « Get started » for a new one.
+            Text(
+                text = StringStore.text(context, "onboardingV2.welcome.existingAccount", language),
+                style = OV2.subheadline.copy(
+                    fontWeight = FontWeight.SemiBold,
+                    textDecoration = TextDecoration.Underline,
+                ),
+                modifier = Modifier
+                    .graphicsLayer { alpha = titleAlpha }
+                    .clickable(onClick = onExistingAccount)
+                    .padding(horizontal = 20.dp, vertical = 10.dp),
+            )
+            Spacer(Modifier.height(14.dp))
+        }
     }
 }
 
