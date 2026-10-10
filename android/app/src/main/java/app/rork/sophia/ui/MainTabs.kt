@@ -21,7 +21,7 @@ import androidx.compose.material.icons.filled.Autorenew
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.RestartAlt
-import androidx.compose.material.icons.filled.ViewModule
+import androidx.compose.material.icons.filled.Route
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -60,8 +60,8 @@ import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
+import app.rork.sophia.domain.PathLevel
 import app.rork.sophia.domain.PostCompletionRewardStep
-import app.rork.sophia.ui.collections.CollectionsScreen
 import app.rork.sophia.ui.components.ConfirmDialog
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.ConfirmDialog
@@ -74,6 +74,8 @@ import app.rork.sophia.ui.home.DiscountSideTab
 import app.rork.sophia.ui.home.HomeTikTokScreen
 import app.rork.sophia.ui.library.LibraryScreen
 import app.rork.sophia.ui.library.MyCoursesScreen
+import app.rork.sophia.ui.path.LearningPathScreen
+import app.rork.sophia.ui.path.PathQuizScreen
 import app.rork.sophia.ui.paywall.PaywallContext
 import app.rork.sophia.ui.paywall.PaywallScreen
 import app.rork.sophia.ui.legal.LegalDocKind
@@ -136,6 +138,8 @@ fun MainTabs(
     // Audio mode: the full player, and the course a free user wanted to hear.
     var showAudioPlayer by remember { mutableStateOf(false) }
     var audioPaywallCourseId by remember { mutableStateOf<String?>(null) }
+    // End-of-level quiz of the Parcours, and whether its level is the last one.
+    var pathQuiz by remember { mutableStateOf<Pair<PathLevel, Boolean>?>(null) }
 
     LaunchedEffect(isPremium) { CourseAudioPlayer.isPremium = isPremium }
     DisposableEffect(Unit) {
@@ -211,7 +215,11 @@ fun MainTabs(
         val p = app.progressManager.progress.value
         val steps = mutableListOf<PostCompletionRewardStep>()
         if (app.progressManager.shouldShowStreakCelebration()) {
-            steps += PostCompletionRewardStep.Streak(p.streak)
+            steps += PostCompletionRewardStep.Streak(
+                days = p.streak,
+                subject = ContentCatalog.cachedStub(language, courseId)?.subjectEnum,
+                lastActiveDate = p.lastActiveDate,
+            )
         }
         p.pendingGlobalRankUp?.let { pending ->
             steps += PostCompletionRewardStep.RankUp(pending.newRankRawValue, pending.newLevel)
@@ -352,7 +360,8 @@ fun MainTabs(
         val tabs = listOf(
             Triple("tab.home", Icons.Filled.Home, 0),
             Triple("tab.library", Icons.Filled.AutoStories, 1),
-            Triple("tab.collections", Icons.Filled.ViewModule, 2),
+            // The path took the collections' slot, as on iOS.
+            Triple("tab.path", Icons.Filled.Route, 2),
             Triple("tab.training", Icons.Filled.Autorenew, 3),
             Triple("tab.profile", Icons.Filled.Person, 4),
         )
@@ -427,11 +436,16 @@ fun MainTabs(
                         progress = progress,
                         onOpenCourse = { openCourseById(it) },
                     )
-                    2 -> CollectionsScreen(
+                    2 -> LearningPathScreen(
                         modifier = tabModifier,
                         language = language,
                         progress = progress,
+                        // What changed is played back once nothing is drawn over the path:
+                        // the level quiz, the rewards of a finished course, a paywall.
+                        isCovered = pathQuiz != null || rewardSteps != null || paywall != null ||
+                            overlay != null || showAudioPlayer,
                         onOpenCourse = { openCourseById(it) },
+                        onOpenQuiz = { level, isLastLevel -> pathQuiz = level to isLastLevel },
                     )
                     3 -> TrainingScreen(
                         modifier = tabModifier,
@@ -602,6 +616,18 @@ fun MainTabs(
                         modifier = Modifier.fillMaxSize(),
                     )
                 }
+            }
+        }
+
+        pathQuiz?.let { (level, isLastLevel) ->
+            SophiaOverlayLayer {
+                PathQuizScreen(
+                    level = level,
+                    isLastLevel = isLastLevel,
+                    language = language,
+                    progressManager = app.progressManager,
+                    onDismiss = { pathQuiz = null },
+                )
             }
         }
 

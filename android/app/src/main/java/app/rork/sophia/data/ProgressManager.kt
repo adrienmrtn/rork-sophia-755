@@ -8,6 +8,7 @@ import app.rork.sophia.domain.CourseProgress
 import app.rork.sophia.domain.GlobalLevelProgress
 import app.rork.sophia.domain.GlobalRank
 import app.rork.sophia.domain.LearningCollection
+import app.rork.sophia.domain.PathLevelResult
 import app.rork.sophia.domain.PendingGlobalRankUp
 import app.rork.sophia.domain.QuizQuestion
 import app.rork.sophia.domain.TrainingQuestionState
@@ -22,6 +23,7 @@ import kotlinx.serialization.json.Json
 import java.time.Instant
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
+import java.time.temporal.ChronoUnit
 
 class ProgressManager(context: Context) {
     private val prefs = context.getSharedPreferences("sophia_prefs", Context.MODE_PRIVATE)
@@ -466,9 +468,73 @@ class ProgressManager(context: Context) {
         }
     }
 
+    // Learning path ("Parcours"): every collection is a level, closed by a mixed quiz.
+
+    fun pathLevelResult(collectionId: String): PathLevelResult? =
+        _progress.value.pathLevelResults[collectionId]
+
+    fun isPathLevelPassed(collectionId: String): Boolean =
+        _progress.value.pathLevelResults[collectionId]?.isPassed == true
+
+    /**
+     * Records one end-of-level quiz attempt and returns whether it is the first to pass the
+     * level. Passing again later changes nothing but the attempt count and the best score.
+     */
+    fun recordPathQuizAttempt(collectionId: String, correct: Int, total: Int, passed: Boolean): Boolean {
+        var newlyPassed = false
+        mutate { current ->
+            val results = current.pathLevelResults.toMutableMap()
+            var result = results[collectionId] ?: PathLevelResult()
+            result = result.copy(attempts = result.attempts + 1)
+            if (correct > result.bestCorrect || result.bestTotal == 0) {
+                result = result.copy(bestCorrect = correct, bestTotal = total)
+            }
+            if (passed && result.passedAt == null) {
+                // Whole seconds, like the iOS formatter, so both platforms write the same shape.
+                result = result.copy(passedAt = Instant.now().truncatedTo(ChronoUnit.SECONDS).toString())
+                newlyPassed = true
+            }
+            results[collectionId] = result
+            current.copy(pathLevelResults = results)
+        }
+        return newlyPassed
+    }
+
+    /**
+     * The one-time reward for passing a level, as on iOS. Returns the XP granted: 0 when it
+     * was already given (on this device or the other platform) or the level is not passed.
+     */
+    fun awardPathLevelPassedXpIfNeeded(collectionId: String): Int {
+        var awarded = 0
+        mutate { current ->
+            val result = current.pathLevelResults[collectionId] ?: return@mutate current
+            if (!result.isPassed || result.xpAwarded) return@mutate current
+            val results = current.pathLevelResults.toMutableMap()
+            results[collectionId] = result.copy(xpAwarded = true)
+            val before = globalLevelProgress(current.globalXP)
+            val globalXP = current.globalXP + PATH_LEVEL_PASSED_XP
+            val after = globalLevelProgress(globalXP)
+            val pending = if (before.rank != after.rank) {
+                PendingGlobalRankUp(
+                    previousRankRawValue = before.rank.storageKey,
+                    newRankRawValue = after.rank.storageKey,
+                    newLevel = after.level,
+                )
+            } else {
+                current.pendingGlobalRankUp
+            }
+            awarded = PATH_LEVEL_PASSED_XP
+            current.copy(pathLevelResults = results, globalXP = globalXP, pendingGlobalRankUp = pending)
+        }
+        return awarded
+    }
+
     companion object {
         private const val KEY = "sophia_user_progress"
         val TRAINING_INTERVALS = listOf(1, 3, 7, 14, 30)
+
+        /** Global XP for passing a Parcours level the first time. */
+        const val PATH_LEVEL_PASSED_XP = 100
 
         fun globalLevelProgress(xp: Int): GlobalLevelProgress {
             // Same curve spirit as iOS: level 1..100 from cumulative XP.

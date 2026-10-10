@@ -21,6 +21,8 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
@@ -31,6 +33,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Slider
@@ -43,22 +46,27 @@ import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.locale
 import app.rork.sophia.ui.theme.PlusJakartaSans
+import kotlin.math.roundToInt
 import kotlinx.coroutines.delay
 
 /** « 3h30 » / « 3h » / « 45 min », like the iOS screen-time label. */
@@ -153,57 +161,146 @@ internal fun PhoneTimeStep(
     }
 }
 
+/** « 27 ans », « 1 an », « 3 года »: the word for years agreed with the number. */
+internal fun yearsText(context: android.content.Context, years: Int, language: AppLanguage): String =
+    StringStore.text(context, "onboardingV2.yearsGrid.years", language, years)
+
+private const val TOTAL_YEARS = 80
+private const val GRID_COLUMNS = 10
+
+/** A third of a life asleep, a third at work; the rest is free time. */
+private const val SLEEP_YEARS = 27
+private const val WORK_YEARS = 27
+private const val FREE_YEARS = TOTAL_YEARS - SLEEP_YEARS - WORK_YEARS
+
+private val SleepColor = Color(0xFF4D9E6B)
+private val WorkColor = Color(0xFF8C613D)
+private val FreeColor = Color(0xFFB8D1F2)
+
 /**
- * 80 squares, one per year of a life. They open first, the title lands, then the years
- * lost to the phone fill in red one by one.
+ * 80 squares, one per year of a life. They colour in by thirds: sleep in green, work in
+ * brown, then the free time that is left. Sleep and work then fade out, and inside the free
+ * time, square after square, in red, the years spent on the phone (from the daily screen
+ * time given before); the number lands big, then the sentence.
+ *
+ * Every counter is saved, so a rotation or a trip to the background resumes the sequence
+ * where it was instead of replaying it, and the button always ends up on screen.
  */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun YearsGridStep(language: AppLanguage, phoneMinutes: Int, onContinue: () -> Unit) {
     val context = LocalContext.current
     val haptics = rememberOnboardingHaptics()
-    val totalYears = 80
-    val columns = 10
-    val redYears = remember(phoneMinutes) {
-        (totalYears * phoneMinutes / (24.0 * 60.0)).toInt().coerceIn(1, totalYears)
+    // Free-time years spent on the phone: the daily screen time over 80 years, capped at
+    // the free time (beyond it, all the free time goes there).
+    val screenYears = remember(phoneMinutes) {
+        (TOTAL_YEARS * phoneMinutes / (24.0 * 60.0)).roundToInt().coerceIn(1, FREE_YEARS)
     }
-    var revealed by remember { mutableIntStateOf(0) }
-    var filled by remember { mutableIntStateOf(0) }
-    var showTitle by remember { mutableStateOf(false) }
-    var showCaption by remember { mutableStateOf(false) }
-    var showButton by remember { mutableStateOf(false) }
+    var revealed by rememberSaveable { mutableIntStateOf(0) }
+    var sleepFilled by rememberSaveable { mutableIntStateOf(0) }
+    var workFilled by rememberSaveable { mutableIntStateOf(0) }
+    var freeFilled by rememberSaveable { mutableIntStateOf(0) }
+    var screenFilled by rememberSaveable { mutableIntStateOf(0) }
+    var focusPhone by rememberSaveable { mutableStateOf(false) }
+    var showTitle by rememberSaveable { mutableStateOf(false) }
+    var showNumber by rememberSaveable { mutableStateOf(false) }
+    var showCaption by rememberSaveable { mutableStateOf(false) }
+    var showButton by rememberSaveable { mutableStateOf(false) }
 
-    LaunchedEffect(redYears) {
-        delay(350)
-        repeat(totalYears) { i ->
-            revealed = i + 1
-            if ((i + 1) % 8 == 0) haptics.selection()
-            delay(24)
+    LaunchedEffect(screenYears) {
+        try {
+            // 1 — the grey squares open.
+            if (revealed < TOTAL_YEARS) {
+                delay(300)
+                for (i in revealed + 1..TOTAL_YEARS) {
+                    revealed = i
+                    if (i % 10 == 0) haptics.selection()
+                    delay(10)
+                }
+            }
+            // 2 — « Here is your life in years ».
+            if (!showTitle) {
+                delay(400)
+                showTitle = true
+                delay(700)
+            }
+            // 3 — the three thirds, each given time to be read.
+            suspend fun fill(target: Int, current: Int, apply: (Int) -> Unit) {
+                for (i in current + 1..target) {
+                    apply(i)
+                    if (i % 9 == 0) haptics.selection()
+                    delay(30)
+                }
+            }
+            if (sleepFilled < SLEEP_YEARS) {
+                fill(SLEEP_YEARS, sleepFilled) { sleepFilled = it }
+                delay(550)
+            }
+            if (workFilled < WORK_YEARS) {
+                fill(WORK_YEARS, workFilled) { workFilled = it }
+                delay(550)
+            }
+            if (freeFilled < FREE_YEARS) {
+                fill(FREE_YEARS, freeFilled) { freeFilled = it }
+                delay(700)
+            }
+            // 4 — sleep and work fade: only the free time is left.
+            if (!focusPhone) {
+                focusPhone = true
+                delay(700)
+            }
+            // 5 — the free-time years spent on the phone, one by one.
+            if (screenFilled < screenYears) {
+                for (i in screenFilled + 1..screenYears) {
+                    screenFilled = i
+                    haptics.selection()
+                    delay(140)
+                }
+                haptics.commit()
+            }
+            // 6 — the number, big, then the sentence, then the button.
+            if (!showNumber) {
+                delay(250)
+                showNumber = true
+                delay(450)
+            }
+            showCaption = true
+            delay(600)
+        } finally {
+            // Finished or interrupted, the page always offers a way out.
+            showButton = true
         }
-        delay(550)
-        showTitle = true
-        delay(1100)
-        repeat(redYears) { i ->
-            filled = i + 1
-            haptics.selection()
-            delay(150)
-        }
-        haptics.commit()
-        delay(350)
-        showCaption = true
-        delay(600)
-        showButton = true
     }
 
-    val titleAlpha by animateFloatAsState(if (showTitle) 1f else 0f, tween(900), label = "gridTitle")
-    val captionAlpha by animateFloatAsState(if (showCaption) 1f else 0f, tween(700), label = "gridCaption")
+    val titleAlpha by animateFloatAsState(if (showTitle) 1f else 0f, tween(700), label = "gridTitle")
+    val numberProgress by animateFloatAsState(
+        targetValue = if (showNumber) 1f else 0f,
+        animationSpec = spring(dampingRatio = 0.6f, stiffness = Spring.StiffnessMediumLow),
+        label = "gridNumber",
+    )
+    val captionAlpha by animateFloatAsState(if (showCaption) 1f else 0f, tween(600), label = "gridCaption")
     val buttonAlpha by animateFloatAsState(if (showButton) 1f else 0f, tween(500), label = "gridCta")
 
+    fun squareColor(i: Int): Color {
+        if (i < SLEEP_YEARS) return if (i < sleepFilled) SleepColor else OV2.hairline.copy(alpha = 0.7f)
+        val work = i - SLEEP_YEARS
+        if (work < WORK_YEARS) return if (work < workFilled) WorkColor else OV2.hairline.copy(alpha = 0.7f)
+        val free = i - SLEEP_YEARS - WORK_YEARS
+        if (free < screenFilled) return OV2.danger
+        return if (free < freeFilled) FreeColor else OV2.hairline.copy(alpha = 0.7f)
+    }
+
+    fun isFilled(i: Int): Boolean {
+        if (i < SLEEP_YEARS) return i < sleepFilled
+        val work = i - SLEEP_YEARS
+        if (work < WORK_YEARS) return work < workFilled
+        val free = i - SLEEP_YEARS - WORK_YEARS
+        return free < freeFilled || free < screenFilled
+    }
+
     Column(modifier = Modifier.fillMaxSize()) {
-        // The CTA is pinned outside the scroll. The cells are square and were sized by
-        // dividing the full width by ten, so on a tablet each one became ~100dp, the eight
-        // rows overflowed the screen, the weighted spacer collapsed to zero and the button
-        // ended up off-screen — the page could not be left. Capping the grid keeps the
-        // proportions of a phone, and the scroll covers short-and-wide windows too.
+        // The CTA is pinned outside the scroll, and the grid is capped: on a tablet each
+        // square used to grow to ~100dp and push the button off the screen for good.
         Column(
             modifier = Modifier
                 .weight(1f)
@@ -211,7 +308,7 @@ internal fun YearsGridStep(language: AppLanguage, phoneMinutes: Int, onContinue:
                 .verticalScroll(rememberScrollState()),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Spacer(Modifier.height(72.dp))
+            Spacer(Modifier.height(64.dp))
             Text(
                 text = StringStore.text(context, "onboardingV2.yearsGrid.title", language),
                 style = OV2.title,
@@ -219,9 +316,9 @@ internal fun YearsGridStep(language: AppLanguage, phoneMinutes: Int, onContinue:
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 28.dp)
-                    .graphicsLayer { alpha = titleAlpha; translationY = (1f - titleAlpha) * 14f },
+                    .graphicsLayer { alpha = titleAlpha; translationY = (1f - titleAlpha) * 14f * density },
             )
-            Spacer(Modifier.height(36.dp))
+            Spacer(Modifier.height(26.dp))
             Column(
                 modifier = Modifier
                     .widthIn(max = GRID_MAX_WIDTH)
@@ -229,30 +326,55 @@ internal fun YearsGridStep(language: AppLanguage, phoneMinutes: Int, onContinue:
                     .padding(horizontal = 36.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                repeat(totalYears / columns) { row ->
+                repeat(TOTAL_YEARS / GRID_COLUMNS) { row ->
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        repeat(columns) { column ->
-                            val index = row * columns + column
+                        repeat(GRID_COLUMNS) { column ->
+                            val index = row * GRID_COLUMNS + column
                             YearCell(
                                 revealed = index < revealed,
-                                red = index < filled,
+                                filled = isFilled(index),
+                                color = squareColor(index),
+                                dimmed = focusPhone && index < SLEEP_YEARS + WORK_YEARS,
                                 modifier = Modifier.weight(1f),
                             )
                         }
                     }
                 }
             }
-            Spacer(Modifier.height(28.dp))
+            Spacer(Modifier.height(20.dp))
+            FlowRow(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 28.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                LegendChip(SleepColor, SleepColor, "onboardingV2.yearsGrid.sleep", SLEEP_YEARS, sleepFilled > 0, focusPhone, language)
+                LegendChip(WorkColor, WorkColor, "onboardingV2.yearsGrid.work", WORK_YEARS, workFilled > 0, focusPhone, language)
+                LegendChip(FreeColor, OV2.accentSoft, "onboardingV2.yearsGrid.free", FREE_YEARS, freeFilled > 0, false, language)
+                LegendChip(OV2.danger, OV2.danger, "onboardingV2.yearsGrid.screen", screenYears, screenFilled > 0, false, language)
+            }
+            Spacer(Modifier.height(18.dp))
+            // The number, big, then the sentence: what the page wants remembered.
             Text(
-                text = StringStore.text(context, "onboardingV2.yearsGrid.caption", language, redYears),
-                style = OV2.subheadline.copy(color = OV2.danger, fontWeight = FontWeight.Bold),
+                text = yearsText(context, screenYears, language),
+                style = OV2.titleLarge.copy(fontSize = 44.sp, lineHeight = 50.sp, color = OV2.danger),
+                modifier = Modifier.graphicsLayer {
+                    val s = 0.6f + 0.4f * numberProgress
+                    scaleX = s
+                    scaleY = s
+                    alpha = numberProgress.coerceIn(0f, 1f)
+                },
+            )
+            Text(
+                text = StringStore.text(context, "onboardingV2.yearsGrid.captionFree", language, FREE_YEARS, screenYears),
+                style = OV2.body.copy(color = OV2.danger, fontWeight = FontWeight.Bold),
                 textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 36.dp)
-                    .graphicsLayer { alpha = captionAlpha; translationY = (1f - captionAlpha) * 12f },
+                    .padding(horizontal = 32.dp)
+                    .padding(top = 8.dp)
+                    .graphicsLayer { alpha = captionAlpha; translationY = (1f - captionAlpha) * 12f * density },
             )
-            Spacer(Modifier.height(24.dp))
+            Spacer(Modifier.height(48.dp))
         }
         Box(modifier = Modifier.alpha(buttonAlpha)) {
             OnboardingCta(
@@ -268,16 +390,27 @@ internal fun YearsGridStep(language: AppLanguage, phoneMinutes: Int, onContinue:
 private val GRID_MAX_WIDTH = 460.dp
 
 @Composable
-private fun YearCell(revealed: Boolean, red: Boolean, modifier: Modifier = Modifier) {
+private fun YearCell(
+    revealed: Boolean,
+    filled: Boolean,
+    color: Color,
+    dimmed: Boolean,
+    modifier: Modifier = Modifier,
+) {
     val scale by animateFloatAsState(
-        targetValue = if (!revealed) 0.3f else if (red) 1f else 0.9f,
+        targetValue = if (!revealed) 0.3f else if (filled) 1f else 0.9f,
         animationSpec = spring(dampingRatio = 0.72f, stiffness = Spring.StiffnessMedium),
         label = "yearScale",
     )
-    val color by androidx.compose.animation.animateColorAsState(
-        targetValue = if (red) OV2.danger else OV2.hairline,
-        animationSpec = tween(400),
+    val animatedColor by androidx.compose.animation.animateColorAsState(
+        targetValue = color,
+        animationSpec = tween(250),
         label = "yearColor",
+    )
+    val alpha by animateFloatAsState(
+        targetValue = if (!revealed) 0f else if (dimmed) 0.3f else 1f,
+        animationSpec = tween(if (dimmed) 600 else 200),
+        label = "yearAlpha",
     )
     Box(
         modifier = modifier
@@ -285,11 +418,56 @@ private fun YearCell(revealed: Boolean, red: Boolean, modifier: Modifier = Modif
             .graphicsLayer {
                 scaleX = scale
                 scaleY = scale
-                alpha = if (revealed) 1f else 0f
+                this.alpha = alpha
             }
             .clip(RoundedCornerShape(4.dp))
-            .background(color),
+            .background(animatedColor),
     )
+}
+
+/** One chip per third, shown when its third starts to colour in. */
+@Composable
+private fun LegendChip(
+    dot: Color,
+    textColor: Color,
+    key: String,
+    years: Int,
+    shown: Boolean,
+    dimmed: Boolean,
+    language: AppLanguage,
+) {
+    val context = LocalContext.current
+    val progress by animateFloatAsState(
+        targetValue = if (shown) 1f else 0f,
+        animationSpec = spring(dampingRatio = 0.75f, stiffness = Spring.StiffnessMediumLow),
+        label = "legendIn",
+    )
+    val dim by animateFloatAsState(if (dimmed) 0.45f else 1f, tween(500), label = "legendDim")
+    Row(
+        modifier = Modifier
+            .graphicsLayer {
+                alpha = progress.coerceIn(0f, 1f) * dim
+                val s = 0.85f + 0.15f * progress
+                scaleX = s
+                scaleY = s
+            }
+            .clip(CircleShape)
+            .background(OV2.surface)
+            .border(1.dp, OV2.hairline, CircleShape)
+            .padding(horizontal = 10.dp, vertical = 6.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(7.dp),
+    ) {
+        Box(modifier = Modifier.size(10.dp).background(dot, CircleShape))
+        Text(
+            text = StringStore.text(context, key, language),
+            style = OV2.caption.copy(fontSize = 12.sp, color = OV2.ink),
+        )
+        Text(
+            text = yearsText(context, years, language),
+            style = OV2.caption.copy(fontSize = 12.sp, fontWeight = FontWeight.Bold, color = textColor),
+        )
+    }
 }
 
 /**
@@ -471,7 +649,10 @@ private fun TapToContinueScaffold(
     }
 }
 
-/** Social proof on the same blurred wheel as the questions screen. */
+/**
+ * Social proof: a title that fades in, the laurels « 4.8 · 500,000 users », then reviews on
+ * the same blurred wheel as the questions screen, each with the reviewer's photo.
+ */
 @Composable
 internal fun ReviewStep(
     language: AppLanguage,
@@ -479,10 +660,15 @@ internal fun ReviewStep(
     onContinue: () -> Unit,
 ) {
     val context = LocalContext.current
+    val avatars = remember { onboardingAssets(context, "review_avatar_") }
     val testimonials = remember(language) {
         (1..6).map { i ->
-            StringStore.text(context, "onboardingV2.review.t$i.quote", language) to
-                StringStore.text(context, "onboardingV2.review.t$i.author", language)
+            Testimonial(
+                index = i,
+                quote = StringStore.text(context, "onboardingV2.review.t$i.quote", language),
+                author = StringStore.text(context, "onboardingV2.review.t$i.author", language),
+                avatar = avatars.firstOrNull { it.endsWith("review_avatar_$i.jpg") || it.endsWith("review_avatar_$i.png") },
+            )
         }
     }
     var listIn by remember { mutableStateOf(false) }
@@ -508,54 +694,100 @@ internal fun ReviewStep(
                 .padding(horizontal = 28.dp)
                 .ov2Reveal(50),
         )
+        Spacer(Modifier.height(18.dp))
+        LaurelBadge(size = 46.dp, modifier = Modifier.ov2Reveal(150)) {
+            RatingStack(
+                caption = StringStore.text(context, "onboardingV2.loading.social.count", language),
+                language = language,
+                compact = true,
+            )
+        }
+        Spacer(Modifier.height(24.dp))
         OnboardingRoulette(
             items = testimonials,
-            slotSpacing = 172.dp,
+            slotSpacing = 188.dp,
             tickMillis = 3000,
             running = listIn,
             blurEnabled = richMotion,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(360.dp)
+                .height(400.dp)
                 .padding(horizontal = 24.dp)
                 .alpha(listAlpha),
-        ) { testimonial, _ ->
-            ReviewCard(quote = testimonial.first, author = testimonial.second)
+        ) { testimonial, focused ->
+            ReviewCard(testimonial = testimonial, focused = focused)
         }
     }
 }
 
+private data class Testimonial(val index: Int, val quote: String, val author: String, val avatar: String?)
+
 @Composable
-private fun ReviewCard(quote: String, author: String) {
-    val stars by rememberInfiniteTransition(label = "stars").animateFloat(
-        initialValue = 0.85f,
-        targetValue = 1f,
-        animationSpec = infiniteRepeatable(tween(1800), RepeatMode.Reverse),
-        label = "starPulse",
-    )
+private fun ReviewCard(testimonial: Testimonial, focused: Boolean) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .height(150.dp)
+            .height(164.dp)
+            .shadow(
+                if (focused) 10.dp else 4.dp,
+                OV2Shapes.card,
+                ambientColor = Color.Black.copy(alpha = 0.06f),
+                spotColor = Color.Black.copy(alpha = 0.06f),
+            )
             .clip(OV2Shapes.card)
             .background(OV2.surface)
             .border(1.dp, OV2.hairline, OV2Shapes.card)
-            .padding(18.dp),
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp),
     ) {
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            ReviewAvatar(testimonial)
+            Column(verticalArrangement = Arrangement.spacedBy(3.dp)) {
+                Text(text = testimonial.author, style = OV2.caption.copy(color = OV2.ink))
+                StarRow(starSize = 11.dp, spacing = 2.dp)
+            }
+        }
         Text(
-            text = "★★★★★",
-            color = OV2.warm,
-            fontSize = 13.sp,
-            modifier = Modifier.alpha(stars),
-        )
-        Spacer(Modifier.height(10.dp))
-        Text(
-            text = quote,
-            style = OV2.body.copy(color = OV2.ink),
+            text = testimonial.quote,
+            style = OV2.body.copy(color = OV2.ink, fontSize = 15.sp, lineHeight = 21.sp),
             maxLines = 4,
+            overflow = TextOverflow.Ellipsis,
         )
-        Spacer(Modifier.weight(1f))
-        Text(text = author, style = OV2.caption)
+    }
+}
+
+/** Gradients of the generated portraits, always the same for the same reviewer. */
+private val AvatarPalettes = listOf(
+    Color(0xFFFA9E73) to Color(0xFFED5973),
+    Color(0xFF73B8FA) to Color(0xFF4073D9),
+    Color(0xFF8CD9A6) to Color(0xFF389973),
+    Color(0xFFD9A6FA) to Color(0xFF8F66EB),
+    Color(0xFFFCCC66) to Color(0xFFEB8C26),
+    Color(0xFF8CD9EB) to Color(0xFF4099BF),
+)
+
+/** The bundled `review_avatar_<n>` when there is one, otherwise the initial on a gradient. */
+@Composable
+private fun ReviewAvatar(testimonial: Testimonial) {
+    val modifier = Modifier
+        .size(36.dp)
+        .clip(CircleShape)
+        .border(1.dp, Color.White.copy(alpha = 0.6f), CircleShape)
+    if (testimonial.avatar != null) {
+        AssetPicture(url = testimonial.avatar, modifier = modifier)
+    } else {
+        val palette = AvatarPalettes[(testimonial.index - 1).mod(AvatarPalettes.size)]
+        Box(
+            modifier = modifier.background(Brush.linearGradient(listOf(palette.first, palette.second))),
+            contentAlignment = Alignment.Center,
+        ) {
+            Text(
+                text = testimonial.author.trim().take(1).uppercase(),
+                color = Color.White,
+                fontWeight = FontWeight.Bold,
+                fontSize = 15.sp,
+            )
+        }
     }
 }
 

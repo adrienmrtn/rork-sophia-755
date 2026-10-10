@@ -373,21 +373,33 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
     private fun formattedYearlyPerPeriod(pkg: Package?, periodsPerYear: Int, fallbackYearly: String): String {
         val price = pkg?.product?.price ?: return fallbackYearly
         val monthlyMicros = price.amountMicros / periodsPerYear.toDouble()
-        return try {
-            val appLanguage = (getApplication() as? SophiaApplication)
-                ?.languageManager?.current?.value
-            val currency = Currency.getInstance(price.currencyCode)
-            val format = NumberFormat.getCurrencyInstance(appLanguage?.locale ?: Locale.getDefault())
-            format.currency = currency
-            (format as? DecimalFormat)?.let { decimal ->
-                decimal.decimalFormatSymbols = decimal.decimalFormatSymbols.apply {
-                    currencySymbol = currency.getSymbol(Locale.getDefault())
-                }
+        return formatAmount(monthlyMicros / 1_000_000.0, price.currencyCode) ?: fallbackYearly
+    }
+
+    /**
+     * « 0,00 € » in the currency of the store that serves [pkg]: what tapping the button
+     * costs today while a free trial is served. Empty when no price has arrived yet.
+     */
+    fun formattedZeroPrice(pkg: Package?): String {
+        val price = pkg?.product?.price ?: return ""
+        return formatAmount(0.0, price.currencyCode).orEmpty()
+    }
+
+    /** [amount] with the reading language's digits and the device's currency symbol (see above). */
+    private fun formatAmount(amount: Double, currencyCode: String): String? = try {
+        val appLanguage = (getApplication() as? SophiaApplication)
+            ?.languageManager?.current?.value
+        val currency = Currency.getInstance(currencyCode)
+        val format = NumberFormat.getCurrencyInstance(appLanguage?.locale ?: Locale.getDefault())
+        format.currency = currency
+        (format as? DecimalFormat)?.let { decimal ->
+            decimal.decimalFormatSymbols = decimal.decimalFormatSymbols.apply {
+                currencySymbol = currency.getSymbol(Locale.getDefault())
             }
-            format.format(monthlyMicros / 1_000_000.0)
-        } catch (_: Exception) {
-            fallbackYearly
         }
+        format.format(amount)
+    } catch (_: Exception) {
+        null
     }
 
     /**

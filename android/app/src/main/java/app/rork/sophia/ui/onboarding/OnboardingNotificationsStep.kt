@@ -22,6 +22,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.TrendingUp
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -32,6 +35,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -112,7 +116,30 @@ internal fun NotificationsStep(language: AppLanguage, onContinue: () -> Unit) {
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 30.dp).ov2Reveal(140),
             )
-            Spacer(Modifier.height(30.dp))
+            Spacer(Modifier.height(18.dp))
+            // The figure, the number in pink as on the presentation pages.
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 24.dp)
+                    .ov2Reveal(200)
+                    .clip(RoundedCornerShape(14.dp))
+                    .background(OV2Pink.copy(alpha = 0.08f))
+                    .padding(horizontal = 14.dp, vertical = 10.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                Icon(
+                    Icons.AutoMirrored.Filled.TrendingUp,
+                    contentDescription = null,
+                    tint = OV2Pink,
+                    modifier = Modifier.size(16.dp).padding(top = 2.dp),
+                )
+                Text(
+                    text = highlighted(StringStore.text(context, "onboardingV2.notifications.boost", language)),
+                    style = OV2.subheadline.copy(color = OV2.ink, fontWeight = FontWeight.Bold),
+                )
+            }
+            Spacer(Modifier.height(24.dp))
             NotificationPreviewCard(
                 title = StringStore.text(context, "notification.courseNudge.title", language),
                 body = previewCourseTitle?.let {

@@ -319,12 +319,23 @@ fun StatTile(
     value: String,
     label: String,
     modifier: Modifier = Modifier,
+    /** A reward badge in place of the plain icon, as on the iOS profile. */
+    badge: RewardBadgeKind? = null,
 ) {
     Column(
         modifier = modifier.sophiaCard().padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp),
     ) {
-        TintedIconBox(icon = icon, size = 38.dp, shape = CircleShape)
+        if (badge != null) {
+            Box(
+                modifier = Modifier.size(38.dp).clip(CircleShape).background(DS.accentTint),
+                contentAlignment = Alignment.Center,
+            ) {
+                AnimatedRewardBadge(kind = badge, size = 17.dp, showGlow = false)
+            }
+        } else {
+            TintedIconBox(icon = icon, size = 38.dp, shape = CircleShape)
+        }
         Text(
             text = value,
             fontFamily = PlusJakartaSans,

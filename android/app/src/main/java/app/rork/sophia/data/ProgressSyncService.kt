@@ -95,10 +95,12 @@ class ProgressSyncService(
     }
 
     private fun isEmpty(p: UserProgress): Boolean =
-        p.courseProgress.isEmpty() && p.globalXP == 0 && p.favoriteCourseIds.isEmpty()
+        p.courseProgress.isEmpty() && p.globalXP == 0 && p.favoriteCourseIds.isEmpty() &&
+            p.pathLevelResults.isEmpty()
 
     private fun syncSignal(p: UserProgress): Int =
-        p.globalXP + p.courseProgress.size * 3 + p.completedQuizCourseIds.size * 5 + p.streak
+        p.globalXP + p.courseProgress.size * 3 + p.completedQuizCourseIds.size * 5 + p.streak +
+            p.pathLevelResults.values.count { it.isPassed } * 100
 
     @Serializable
     private data class UpsertProgressRow(

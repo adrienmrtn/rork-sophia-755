@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Generate `ios/Sophia/Utilities/CourseAffinity.swift` from the Supabase export.
+"""Generate `ios/Sophia/Utilities/CourseAffinity.swift` and its Android twin
+`android/app/src/main/assets/course_affinity.json` from the Supabase export.
 
 The app ships the whole catalogue, Supabase holds none of it, so the two halves of
 the model are produced here and baked into a Swift file rather than fetched at
@@ -29,6 +30,7 @@ from __future__ import annotations
 
 import csv
 import datetime
+import json
 import re
 import sys
 from pathlib import Path
@@ -38,6 +40,8 @@ CATALOGUE_SQL = ROOT / "supabase" / "queries" / "top_courses.sql"
 QUALITY_CSV = ROOT / "scripts" / "data" / "course_quality.csv"
 NEIGHBOURS_CSV = ROOT / "scripts" / "data" / "course_neighbours.csv"
 OUT_SWIFT = ROOT / "ios" / "Sophia" / "Utilities" / "CourseAffinity.swift"
+# Same numbers, same rounding, read by `CourseAffinityStore` on Android.
+OUT_ANDROID_JSON = ROOT / "android" / "app" / "src" / "main" / "assets" / "course_affinity.json"
 
 # A pair read together by fewer than this many people says nothing; a lift under
 # this much is what popularity alone produces. Both are there to keep the model
@@ -235,7 +239,27 @@ nonisolated enum CourseAffinity {{
     ]
 
     OUT_SWIFT.write_text("".join(parts), encoding="utf-8")
+
+    # Rounded exactly as in the Swift file, so both apps deal from the same numbers.
+    android = {
+        "generatedOn": generated_on,
+        "subjectBaseWeight": {key: round(weights[key], 3) for key in SUBJECT_KEYS},
+        "quality": {course_id: round(scores[course_id], 3) for course_id in sorted(scores)},
+        "neighbourIds": {
+            course_id: [neighbour for neighbour, _ in neighbours[course_id]]
+            for course_id in sorted(neighbours)
+        },
+        "neighbourLifts": {
+            course_id: [round(lift, 1) for _, lift in neighbours[course_id]]
+            for course_id in sorted(neighbours)
+        },
+    }
+    OUT_ANDROID_JSON.write_text(
+        json.dumps(android, ensure_ascii=False, separators=(",", ":")) + "\n",
+        encoding="utf-8",
+    )
     print(f"{OUT_SWIFT.relative_to(ROOT)}: {len(quality)} courses, {covered} with neighbours")
+    print(f"{OUT_ANDROID_JSON.relative_to(ROOT)}: same data")
     for key in SUBJECT_KEYS:
         print(f"  {key:<18} {weights[key] * 100:5.1f}%")
     return 0

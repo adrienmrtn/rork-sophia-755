@@ -34,11 +34,19 @@ Debug APK uses the placeholder RevenueCat key (`goog_REPLACE_ME`) until you set 
 
 ## Implemented so far
 
-- 5-tab shell + TikTok home + library/collections/profile
+- 5-tab shell + TikTok home + library / Parcours / training / profile
+- **Parcours** (iOS learning path): every collection is a level, courses open one after the other,
+  a 20-question mixed quiz passed at 11/20 opens the next level (+100 XP once, synced with iOS as
+  `pathLevelResults`); changes since the last visit are replayed (pod fill, connector, level unlock
+  with confetti). It took the collections tab's slot, as on iOS.
 - Course reader (v2 blocks) + freemium locks + **glossary `[[terms]]`**
 - Full quiz engine (mcq / trueFalse / chronological / sliders)
 - Training SRS session
-- Onboarding V2 funnel (~17 steps: phone time, years grid, swipe courses, trial, dual paywalls)
+- Onboarding V2 funnel, iOS 1.1.8 sequence (four presentation pages, 500,000-users social proof, first
+  name / age / knowledge / motivation / subjects, mission, life in years by thirds, swipe, loading,
+  profile, notifications, login, welcome aboard, strengths, trial, dual paywalls), with the
+  « personalized route » presentation page previewing the Parcours. Not ported: the reading-time
+  page (no daily-course notification on Android).
 - Context paywalls (fin_onboarding annual+comparison, discount flash, quiz/course unlock)
 - RevenueCat purchase hooks
 - Google Sign-In → Supabase + progress sync / conflict dialog (with summaries)
@@ -46,7 +54,7 @@ Debug APK uses the placeholder RevenueCat key (`goog_REPLACE_ME`) until you set 
 - **Friends** (handle, requests, leaderboard, friend profile, rank ring)
 - **Post-completion rewards** (streak → rank-up → collection → level-up)
 - **Glossary** `[[terms]]` + first-term coachmark
-- **First-open tutorials** (home / collections / training)
+- **First-open tutorials** (home / Parcours / training)
 - **Training mini-onboarding** (Discover → 3 screens → fin_onboarding paywalls)
 - **Trial reminder** local notifications + POST_NOTIFICATIONS
 - **Course share** (`sophia://course/{id}`)

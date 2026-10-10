@@ -1,6 +1,7 @@
 package app.rork.sophia.ui.onboarding
 
 import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
@@ -45,6 +46,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -70,17 +72,16 @@ import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
-import app.rork.sophia.domain.formatted
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.legal.LegalDocKind
 import app.rork.sophia.ui.legal.LegalDocumentScreen
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.uppercaseInApp
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import java.util.Locale
 import kotlin.math.abs
 import kotlin.math.min
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 /** Tinder-style deck: drag a card left or right, or use the two buttons. */
 @Composable
@@ -429,26 +430,43 @@ private fun SwipeCompletion(language: AppLanguage) {
     }
 }
 
-/** Three staged steps with real progress bars, then the App Store style rating. */
+/** Length of each bar: three different loads, like three real steps. */
+private val LOADING_DURATIONS = listOf(1300, 2200, 1600)
+
+/** Fast at first, slower and slower towards the end, like a real load. */
+private val LoadingEasing = CubicBezierEasing(0.05f, 0.75f, 0.3f, 1f)
+
+/**
+ * « We are preparing your knowledge journey »: three bars filling like a real load (each at
+ * its own pace, the next starting when the previous is ticked), then the social proof —
+ * users' photos, the 4.8 rating between two laurels, « 500,000 users read courses on Sophia
+ * every month » — and the « see my profile » CTA.
+ */
 @Composable
-internal fun LoadingProfileStep(language: AppLanguage, onContinue: () -> Unit) {
+internal fun LoadingProfileStep(language: AppLanguage, firstName: String, onContinue: () -> Unit) {
     val context = LocalContext.current
     val haptics = rememberOnboardingHaptics()
+    val photos = remember { studentPhotos(context).take(5) }
     val progress = remember { List(3) { Animatable(0f) } }
     var completed by remember { mutableStateOf(listOf(false, false, false)) }
     var allDone by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
-        repeat(3) { i ->
-            progress[i].animateTo(1f, tween(1000))
-            completed = completed.toMutableList().also { it[i] = true }
-            haptics.selection()
-            delay(100)
+        // Staged, with no network behind it: the CTA must always end up enabled.
+        try {
+            repeat(3) { i ->
+                progress[i].animateTo(1f, tween(LOADING_DURATIONS[i], easing = LoadingEasing))
+                delay(80)
+                completed = completed.toMutableList().also { it[i] = true }
+                haptics.selection()
+                delay(180)
+            }
+            haptics.commit()
+        } finally {
+            allDone = true
         }
-        haptics.commit()
-        allDone = true
     }
-    val ratingAlpha by animateFloatAsState(if (allDone) 1f else 0.4f, tween(300), label = "rating")
+    val proofAlpha by animateFloatAsState(if (allDone) 1f else 0.45f, tween(500), label = "loadingProof")
 
     OnboardingPage(
         contentArrangement = Arrangement.Top,
@@ -460,9 +478,9 @@ internal fun LoadingProfileStep(language: AppLanguage, onContinue: () -> Unit) {
             )
         },
     ) {
-        Spacer(Modifier.height(84.dp))
+        Spacer(Modifier.height(72.dp))
         Text(
-            text = StringStore.text(context, "onboardingV2.loading.title", language),
+            text = personalizedText(context, "onboardingV2.loading.title", firstName, language),
             style = OV2.title,
             textAlign = TextAlign.Center,
             modifier = Modifier
@@ -470,7 +488,7 @@ internal fun LoadingProfileStep(language: AppLanguage, onContinue: () -> Unit) {
                 .padding(horizontal = 28.dp)
                 .ov2Reveal(50),
         )
-        Spacer(Modifier.height(40.dp))
+        Spacer(Modifier.height(32.dp))
         Column(
             modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp),
             verticalArrangement = Arrangement.spacedBy(22.dp),
@@ -483,21 +501,37 @@ internal fun LoadingProfileStep(language: AppLanguage, onContinue: () -> Unit) {
                 )
             }
         }
-        Spacer(Modifier.height(32.dp))
+        Spacer(Modifier.height(30.dp))
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.alpha(ratingAlpha),
+            verticalArrangement = Arrangement.spacedBy(14.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 32.dp)
+                .alpha(proofAlpha),
         ) {
-            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                Text("${4.8.formatted(language, 1)}/5", style = OV2.headline)
-                Text("★★★★★", color = OV2.warm, fontSize = 13.sp)
+            if (photos.isNotEmpty()) PhotoRow(photos = photos, size = 38.dp)
+            LaurelBadge(size = 48.dp) {
+                RatingStack(
+                    caption = StringStore.text(context, "onboardingV2.loading.social.count", language),
+                    language = language,
+                    compact = true,
+                )
             }
-            Spacer(Modifier.height(4.dp))
-            Text(
-                text = StringStore.text(context, "onboardingV2.loading.reviews", language),
-                style = OV2.caption,
-            )
+            Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text(
+                    text = StringStore.text(context, "onboardingV2.loading.social.body", language),
+                    style = OV2.body,
+                    textAlign = TextAlign.Center,
+                )
+                Text(
+                    text = StringStore.text(context, "onboardingV2.loading.social.join", language),
+                    style = OV2.body.copy(color = OV2.ink, fontWeight = FontWeight.Bold),
+                    textAlign = TextAlign.Center,
+                )
+            }
         }
+        Spacer(Modifier.height(20.dp))
     }
 }
 
@@ -560,6 +594,7 @@ private data class ProfileMetrics(
 @Composable
 internal fun ProfileRewardStep(
     language: AppLanguage,
+    firstName: String,
     objectiveKeys: List<String>,
     likedCourseIds: List<String>,
     onContinue: () -> Unit,
@@ -632,7 +667,7 @@ internal fun ProfileRewardStep(
                     modifier = Modifier.padding(horizontal = 28.dp).alpha(nameAlpha),
                 ) {
                     Text(
-                        text = StringStore.text(context, "onboardingV2.profile.eyebrow", language)
+                        text = personalizedText(context, "onboardingV2.profile.eyebrow", firstName, language)
                             .uppercaseInApp(),
                         style = OV2.caption.copy(color = OV2.accentSoft),
                         letterSpacing = 1.2.sp,
@@ -923,6 +958,122 @@ internal fun LoginStep(
                 )
             }
             Spacer(Modifier.height(20.dp))
+        }
+    }
+}
+
+/**
+ * « I already have an account », from the welcome page: sign in and go straight into the
+ * app. Deliberately not the login page of the flow, which sits after the questions: a
+ * returning reader answered them once already, and their history comes back from the cloud
+ * the moment they sign in. Port of iOS's `OnboardingV2ExistingAccountSheet`.
+ */
+@Composable
+internal fun ExistingAccountStep(
+    language: AppLanguage,
+    signingIn: Boolean,
+    errorMessage: String?,
+    onGoogle: () -> Unit,
+    onClose: () -> Unit,
+) {
+    val context = LocalContext.current
+    var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(OV2.bg)
+            // Nothing behind the page may be tapped through it.
+            .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {},
+    ) {
+        Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp).padding(top = 8.dp),
+                horizontalArrangement = Arrangement.End,
+            ) {
+                Box(
+                    modifier = Modifier
+                        .size(40.dp)
+                        .clip(CircleShape)
+                        .clickable(enabled = !signingIn, onClick = onClose),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Icon(Icons.Filled.Close, contentDescription = null, tint = OV2.inkSecondary, modifier = Modifier.size(20.dp))
+                }
+            }
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState()),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center,
+            ) {
+                Text(
+                    text = StringStore.text(context, "onboardingV2.existingAccount.title", language),
+                    style = OV2.title,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 28.dp),
+                )
+                Spacer(Modifier.height(12.dp))
+                Text(
+                    text = StringStore.text(context, "onboardingV2.existingAccount.subtitle", language),
+                    style = OV2.body,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp),
+                )
+                if (errorMessage != null) {
+                    Spacer(Modifier.height(18.dp))
+                    LoginErrorNote(errorMessage)
+                }
+            }
+            OnboardingCta(
+                text = StringStore.text(
+                    context,
+                    if (errorMessage == null) "auth.continueWithGoogle" else "paywall.error.retry",
+                    language,
+                ),
+                enabled = !signingIn,
+                onClick = onGoogle,
+                bottomInset = 12.dp,
+            )
+            LegalNote(language = language, onOpen = { legalDoc = it })
+            Spacer(Modifier.height(28.dp))
+        }
+        legalDoc?.let { doc ->
+            Box(modifier = Modifier.fillMaxSize().background(OV2.bg)) {
+                LegalDocumentScreen(kind = doc, language = language, onBack = { legalDoc = null })
+            }
+        }
+    }
+}
+
+/** Signing in creates the account when there is none, so the terms belong on the page. */
+@Composable
+private fun LegalNote(language: AppLanguage, onOpen: (LegalDocKind) -> Unit) {
+    val context = LocalContext.current
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Text(
+            text = StringStore.text(context, "auth.legal.prefix", language),
+            style = OV2.caption.copy(fontSize = 12.sp, color = OV2.inkTertiary),
+            textAlign = TextAlign.Center,
+            modifier = Modifier.padding(horizontal = 32.dp),
+        )
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(
+                text = StringStore.text(context, "legal.terms.title", language),
+                style = OV2.caption.copy(fontSize = 12.sp, color = OV2.accentSoft),
+                modifier = Modifier
+                    .clickable { onOpen(LegalDocKind.Terms) }
+                    .padding(horizontal = 6.dp, vertical = 4.dp),
+            )
+            Text("·", color = OV2.inkTertiary)
+            Text(
+                text = StringStore.text(context, "legal.privacy.title", language),
+                style = OV2.caption.copy(fontSize = 12.sp, color = OV2.accentSoft),
+                modifier = Modifier
+                    .clickable { onOpen(LegalDocKind.Privacy) }
+                    .padding(horizontal = 6.dp, vertical = 4.dp),
+            )
         }
     }
 }

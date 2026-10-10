@@ -14,6 +14,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.automirrored.filled.Login
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
@@ -59,6 +60,7 @@ import androidx.compose.material.icons.filled.Download
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.UserProgress
+import app.rork.sophia.ui.components.ShareSophiaSheet
 import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.ConfirmDialog
 import app.rork.sophia.ui.components.ScreenTitle
@@ -96,6 +98,10 @@ fun SettingsScreen(
     val userId by app.authService.userId.collectAsState()
     var showResetProgress by remember { mutableStateOf(false) }
     var showCreatorChoice by remember { mutableStateOf(false) }
+    var showShare by remember { mutableStateOf(false) }
+    if (showShare) {
+        ShareSophiaSheet(language = language, onDismiss = { showShare = false })
+    }
     var showDeleteAccount by remember { mutableStateOf(false) }
     var deletingAccount by remember { mutableStateOf(false) }
     var deleteError by remember { mutableStateOf<String?>(null) }
@@ -260,6 +266,13 @@ fun SettingsScreen(
 
         SettingsSection(StringStore.text(context, "settings.section.help", language))
         SettingsGroup {
+            SettingsRow(
+                icon = Icons.AutoMirrored.Filled.Send,
+                label = StringStore.text(context, "share.card.title", language),
+                subtitle = StringStore.text(context, "share.card.subtitle", language),
+                onClick = { showShare = true },
+            )
+            HorizontalDivider(color = DS.hairline)
             SettingsRow(
                 icon = Icons.Filled.QuestionAnswer,
                 label = StringStore.text(context, "settings.feedback.title", language),

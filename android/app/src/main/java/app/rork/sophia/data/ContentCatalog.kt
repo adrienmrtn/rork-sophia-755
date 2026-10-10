@@ -160,6 +160,61 @@ object ContentCatalog {
         id: String,
     ): List<QuizQuestion> = withContext(Dispatchers.IO) { quizQuestions(context, language, id) }
 
+    /**
+     * Quizzes of [ids], from the cache where already read and in one pass over the
+     * catalogue for the rest. Withheld courses come back empty.
+     */
+    suspend fun quizQuestionsForCoursesAsync(
+        context: Context,
+        language: AppLanguage,
+        ids: List<String>,
+    ): Map<String, List<QuizQuestion>> = withContext(Dispatchers.IO) {
+        val result = HashMap<String, List<QuizQuestion>>()
+        val missing = HashSet<String>()
+        for (id in ids) {
+            if (isWithheld(language, id)) {
+                result[id] = emptyList()
+                continue
+            }
+            val cached = quizCache["${language.code}:$id"]
+            if (cached != null) result[id] = cached else missing += id
+        }
+        if (missing.isNotEmpty()) {
+            val loaded = try {
+                context.assets.open("locales/courses.${language.code}.json").use {
+                    CatalogStream.readQuizzesForCourses(it, missing)
+                }
+            } catch (_: Exception) {
+                emptyMap()
+            }
+            for (id in missing) {
+                val quiz = loaded[id].orEmpty()
+                quizCache["${language.code}:$id"] = quiz
+                result[id] = quiz
+            }
+        }
+        result
+    }
+
+    private val quizCountCache = ConcurrentHashMap<String, Int>()
+
+    /**
+     * Quiz questions across the language's catalogue (withheld courses left out), or 0.
+     * Streams the whole `courses.{lang}.json` once per language, then answers from memory.
+     */
+    suspend fun quizQuestionCountAsync(context: Context, language: AppLanguage): Int {
+        quizCountCache[language.code]?.let { return it }
+        return withContext(Dispatchers.IO) {
+            try {
+                context.assets.open("locales/courses.${language.code}.json").use {
+                    CatalogStream.countQuizQuestions(it, withheldCourseIds[language].orEmpty())
+                }.also { quizCountCache[language.code] = it }
+            } catch (_: Exception) {
+                0
+            }
+        }
+    }
+
     fun hasStructuredContent(context: Context, language: AppLanguage, courseId: String): Boolean {
         if (isWithheld(language, courseId)) return false
         return try {
@@ -195,5 +250,6 @@ object ContentCatalog {
         collectionCache.clear()
         singleCourseCache.clear()
         quizCache.clear()
+        quizCountCache.clear()
     }
 }

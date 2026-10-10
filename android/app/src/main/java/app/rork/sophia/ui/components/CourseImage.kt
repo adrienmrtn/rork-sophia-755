@@ -13,6 +13,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.CourseCoverUrls
 import app.rork.sophia.data.DeviceCapabilities
@@ -29,6 +30,8 @@ fun CourseImage(
     modifier: Modifier = Modifier,
     contentScale: ContentScale = ContentScale.Crop,
     maxEdgePx: Int = 720,
+    /** Size of the initial on the placeholder tile; small thumbnails pass a smaller one. */
+    letterSize: TextUnit = 42.sp,
 ) {
     val context = LocalContext.current
     val url = remember(courseId) { CourseCoverUrls.url(context, courseId) }
@@ -45,7 +48,7 @@ fun CourseImage(
             text = letter,
             fontFamily = FontFamily.SansSerif,
             fontWeight = FontWeight.Bold,
-            fontSize = 42.sp,
+            fontSize = letterSize,
             color = Color.White.copy(alpha = 0.92f),
         )
         if (url != null) {

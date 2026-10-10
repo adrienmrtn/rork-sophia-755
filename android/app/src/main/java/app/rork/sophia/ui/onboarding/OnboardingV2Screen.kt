@@ -2,6 +2,7 @@ package app.rork.sophia.ui.onboarding
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
@@ -35,15 +36,18 @@ import androidx.compose.ui.unit.dp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.CourseAffinityStore
 import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.InAppReviewHelper
 import app.rork.sophia.data.NotificationPermission
+import app.rork.sophia.data.OnboardingAnswers
 import app.rork.sophia.data.SignInOutcome
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
+import app.rork.sophia.domain.Subject
 import app.rork.sophia.ui.paywall.OnboardingPaywallFlow
 import app.rork.sophia.ui.theme.DS
 import com.revenuecat.purchases.Package
@@ -51,11 +55,32 @@ import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+/**
+ * The fixed sequence of the iOS 1.1.8 onboarding:
+ *
+ * Welcome · Language · Presentation (pages joined by dots) · Social proof (500,000 users) ·
+ * First name · Age · General knowledge (slider) · Motivation · Objectives · Subjects ·
+ * « Sophia will help you » · Mission · Questions · Phone time · Life in years · « Turn that
+ * time » · Reviews · Personalize · Swipe · Loading · Profile · Notifications · Login ·
+ * Welcome aboard · Strengths · Trial · Reminder · Paywall.
+ *
+ * Two iOS pages are not here: the reading-time page sets the hour of the daily-course
+ * notification, which Android does not send, and the presentation page previewing the
+ * Parcours tab, which Android does not have.
+ */
 private enum class OnboardingStep {
     Welcome,
     Language,
+    Intro,
+    SocialProof,
+    Name,
+    Age,
+    Knowledge,
+    Motivation,
     Objectives,
+    Topics,
     ObjectiveIntro,
+    Mission,
     Questions,
     PhoneTime,
     YearsGrid,
@@ -67,6 +92,8 @@ private enum class OnboardingStep {
     Profile,
     Notifications,
     Login,
+    WelcomeAboard,
+    Features,
     Trial,
     Reminder,
     Paywall,
@@ -74,14 +101,36 @@ private enum class OnboardingStep {
 
 /** Steps that carry the progress dots, matching the iOS `dotScreens` set. */
 private val DOT_STEPS = listOf(
+    OnboardingStep.Name,
+    OnboardingStep.Age,
+    OnboardingStep.Knowledge,
+    OnboardingStep.Motivation,
     OnboardingStep.Objectives,
+    OnboardingStep.Topics,
     OnboardingStep.ObjectiveIntro,
+    OnboardingStep.Mission,
     OnboardingStep.Questions,
     OnboardingStep.PhoneTime,
     OnboardingStep.YearsGrid,
     OnboardingStep.Review,
     OnboardingStep.Swipe,
     OnboardingStep.Loading,
+)
+
+/** Subjects behind each objective, for the swipe deck when the subjects page gave nothing. */
+private fun subjectsFor(objective: String): List<String> = when (objective) {
+    "exams" -> listOf("histoire", "sciences", "litterature", "comprendreLeMonde")
+    "impress" -> listOf("histoire", "art", "litterature", "mythologie")
+    "curiosity" -> listOf("sciences", "mythologie", "art", "comprendreLeMonde")
+    else -> Subject.entries.map { it.storageKey }
+}
+
+/** Four hand-picked hooks open the swipe deck, in this order (same list as iOS). */
+private val PINNED_SWIPE_COURSE_IDS = listOf(
+    "course_47_pourquoi_baille_t_on",
+    "course_201_la_naissance_du_conflit_israelo_palestin",
+    "course_149_la_joconde",
+    "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
 )
 
 /** Saves the step by name, so a reordering of the enum cannot restore a different page. */
@@ -91,17 +140,21 @@ private val OnboardingStepSaver: Saver<OnboardingStep, String> = Saver(
 )
 
 /**
- * The page back should land on. Mostly the declaration order, with the two branches the
- * forward flow can skip: the notifications page is not shown once the permission is settled,
- * and the trial explanation is skipped when the served product has no trial. Going back
+ * The page back should land on. Mostly the declaration order, with the branches the forward
+ * flow can skip: the notifications page is not shown once the permission is settled, and
+ * the trial explanation is skipped when the served product has no trial. Going back
  * through a page that was never shown would strand the user on a dead end.
  */
-private fun previousStep(step: OnboardingStep, showsTrialSteps: Boolean): OnboardingStep? = when (step) {
+private fun previousStep(
+    step: OnboardingStep,
+    showsTrialSteps: Boolean,
+    showsNotifications: Boolean,
+): OnboardingStep? = when (step) {
     OnboardingStep.Welcome -> null
     // The paywall is the end of the flow; its own close button decides what "leaving" means.
     OnboardingStep.Paywall -> null
-    OnboardingStep.Reminder -> if (showsTrialSteps) OnboardingStep.Trial else OnboardingStep.Login
-    OnboardingStep.Trial -> OnboardingStep.Login
+    OnboardingStep.Reminder -> if (showsTrialSteps) OnboardingStep.Trial else OnboardingStep.Features
+    OnboardingStep.Login -> if (showsNotifications) OnboardingStep.Notifications else OnboardingStep.Profile
     else -> OnboardingStep.entries.getOrNull(step.ordinal - 1)
 }
 
@@ -141,6 +194,13 @@ fun OnboardingV2Screen(
             restore = { mutableStateOf(it) },
         ),
     ) { mutableStateOf(listOf()) }
+    // Saved on every answer, like iOS's resume store: killing the app on any page resumes
+    // there with everything given before.
+    var answers by remember { mutableStateOf(app.onboardingStore.answers()) }
+    fun updateAnswers(transform: (OnboardingAnswers) -> OnboardingAnswers) {
+        answers = transform(answers)
+        app.onboardingStore.saveAnswers(answers)
+    }
     var lastAdvanceAt by remember { mutableLongStateOf(0L) }
     var signingIn by remember { mutableStateOf(false) }
     var signInError by remember { mutableStateOf<String?>(null) }
@@ -148,6 +208,8 @@ fun OnboardingV2Screen(
         mutableStateOf(DeviceCapabilities.hasGooglePlayServices(context))
     }
     val scope = rememberCoroutineScope()
+    // « I already have an account », opened from the welcome page.
+    var showExistingAccount by remember { mutableStateOf(false) }
 
     // A racing timer (last swipe card, word animation) must not skip a whole screen.
     fun goTo(next: OnboardingStep) {
@@ -157,6 +219,10 @@ fun OnboardingV2Screen(
         step = next
     }
 
+    // Counted long before the strengths page needs it (« 2,600+ quiz questions »).
+    LaunchedEffect(language) {
+        runCatching { ContentCatalog.quizQuestionCountAsync(context.applicationContext, language) }
+    }
     LaunchedEffect(step) {
         // Killing the app mid-onboarding used to restart the whole flow, answers and all.
         app.onboardingStore.rememberStep(step.name)
@@ -167,6 +233,7 @@ fun OnboardingV2Screen(
         val appContext = context.applicationContext
         runCatching {
             ContentCatalog.summariesAsync(appContext, language)
+            CourseAffinityStore.load(appContext)
             GlossaryStore.preload(appContext, language)
         }
     }
@@ -206,8 +273,53 @@ fun OnboardingV2Screen(
             OnboardingStep.Login
         }
 
+    /**
+     * Google sign-in, shared by the login page and « I already have an account ». A returning
+     * user gets their cloud progress back, same as signing in from settings, then [onSignedIn].
+     */
+    fun signInWithGoogle(onSignedIn: () -> Unit) {
+        // Guard, not just a disabled button: a fast double tap can land two clicks before
+        // recomposition shows the disabled state, and the second Credential Manager request
+        // cancels the first.
+        if (signingIn) return
+        signingIn = true
+        signInError = null
+        scope.launch {
+            val outcome = try {
+                app.authService.signInWithGoogle(context)
+            } catch (e: CancellationException) {
+                // The user left the step while the sheet was up. Nothing to report, and
+                // nothing left to update — this scope is gone.
+                throw e
+            } catch (e: Exception) {
+                SignInOutcome.Failure(StringStore.text(context, "auth.error.generic", language))
+            }
+            signingIn = false
+            when (outcome) {
+                is SignInOutcome.Success -> {
+                    runCatching {
+                        app.progressSyncService.pullOnLogin(app.progressManager.progress.value)
+                    }
+                    app.onboardingStore.markAccountOffered()
+                    onSignedIn()
+                }
+                // Dismissed on purpose: leave the page exactly as it was.
+                is SignInOutcome.Cancelled -> Unit
+                is SignInOutcome.Unavailable -> {
+                    googleAvailable = false
+                    signInError = StringStore.text(context, "auth.unavailable.body", language)
+                }
+                is SignInOutcome.Failure -> signInError = outcome.message
+            }
+        }
+    }
+
     /** Login, skipped or done, lands on the same next page. */
     fun advanceFromLogin() {
+        goTo(OnboardingStep.WelcomeAboard)
+    }
+
+    fun advanceFromFeatures() {
         // Skip trial explanation when the served annual product has no free trial.
         goTo(
             if (storeViewModel.shouldShowTrialSteps()) {
@@ -226,17 +338,29 @@ fun OnboardingV2Screen(
     }
 
     val primaryObjective = selectedObjectives.firstOrNull() ?: "cultivate"
+    // Subjects of the subjects page or, when it gave nothing, those of the objectives.
+    val interests = answers.topics.toSet().ifEmpty { selectedObjectives.flatMap(::subjectsFor).toSet() }
     var swipeCourses by remember(language) { mutableStateOf<List<CourseSummary>>(emptyList()) }
     var swipeReady by remember(language) { mutableStateOf(false) }
-    LaunchedEffect(language) {
-        swipeCourses = ContentCatalog.summariesAsync(context.applicationContext, language).shuffled().take(5)
+    LaunchedEffect(language, interests) {
+        // The four pinned hooks, then two courses from the chosen subjects.
+        val all = ContentCatalog.summariesAsync(context.applicationContext, language)
+        val byId = all.associateBy { it.id }
+        val pinned = PINNED_SWIPE_COURSE_IDS.mapNotNull { byId[it] }
+        val pool = all.filter { it.id !in PINNED_SWIPE_COURSE_IDS }
+        val matching = pool.filter { interests.isEmpty() || it.subject in interests }.ifEmpty { pool }
+        swipeCourses = pinned + matching.shuffled().take(PINNED_SWIPE_COURSE_IDS.size + 2 - pinned.size)
         swipeReady = true
     }
 
     // Back walks the flow backwards. The welcome page is the one place with nothing behind
     // it, so there the system default (leave the app) is the right answer.
     BackHandler(enabled = step != OnboardingStep.Welcome) {
-        val previous = previousStep(step, storeViewModel.shouldShowTrialSteps())
+        val previous = previousStep(
+            step,
+            showsTrialSteps = storeViewModel.shouldShowTrialSteps(),
+            showsNotifications = NotificationPermission.shouldAsk(context),
+        )
         if (previous != null) {
             lastAdvanceAt = System.currentTimeMillis()
             step = previous
@@ -263,10 +387,52 @@ fun OnboardingV2Screen(
             label = "onboardingStep",
         ) { current ->
             when (current) {
-                OnboardingStep.Welcome -> WelcomeStep(language) { goTo(OnboardingStep.Language) }
+                OnboardingStep.Welcome -> WelcomeStep(
+                    language = language,
+                    onContinue = { goTo(OnboardingStep.Language) },
+                    // Without Google there is nothing to sign in with: no door to show.
+                    onExistingAccount = if (googleAvailable) {
+                        {
+                            signInError = null
+                            showExistingAccount = true
+                        }
+                    } else {
+                        null
+                    },
+                )
                 OnboardingStep.Language -> LanguageStep(
                     language = language,
                     onSelect = onLanguageSelected,
+                    onContinue = { goTo(OnboardingStep.Intro) },
+                )
+                OnboardingStep.Intro -> IntroCarouselStep(language) { goTo(OnboardingStep.SocialProof) }
+                OnboardingStep.SocialProof -> SocialProofStep(language) { goTo(OnboardingStep.Name) }
+                OnboardingStep.Name -> NameStep(
+                    language = language,
+                    initialName = answers.firstName,
+                    onSubmit = { name ->
+                        updateAnswers { it.copy(firstName = name.take(FIRST_NAME_MAX_LENGTH)) }
+                        goTo(OnboardingStep.Age)
+                    },
+                )
+                OnboardingStep.Age -> AgeStep(
+                    language = language,
+                    selected = answers.ageRange,
+                    onSelect = { key -> updateAnswers { it.copy(ageRange = key) } },
+                    onContinue = { goTo(OnboardingStep.Knowledge) },
+                )
+                OnboardingStep.Knowledge -> KnowledgeStep(
+                    language = language,
+                    initialLevel = answers.knowledgeLevel,
+                    onContinue = { level ->
+                        updateAnswers { it.copy(knowledgeLevel = level) }
+                        goTo(OnboardingStep.Motivation)
+                    },
+                )
+                OnboardingStep.Motivation -> MotivationStep(
+                    language = language,
+                    selected = answers.motivation,
+                    onSelect = { key -> updateAnswers { it.copy(motivation = key) } },
                     onContinue = { goTo(OnboardingStep.Objectives) },
                 )
                 OnboardingStep.Objectives -> ObjectivesStep(
@@ -278,12 +444,23 @@ fun OnboardingV2Screen(
                         }
                     },
                     onContinue = {
-                        goTo(OnboardingStep.ObjectiveIntro)
+                        goTo(OnboardingStep.Topics)
                     },
                 )
-                OnboardingStep.ObjectiveIntro -> ObjectiveIntroStep(language) {
-                    goTo(OnboardingStep.Questions)
+                OnboardingStep.Topics -> TopicsStep(
+                    language = language,
+                    selected = answers.topics,
+                    onToggle = { key ->
+                        updateAnswers {
+                            it.copy(topics = if (key in it.topics) it.topics - key else it.topics + key)
+                        }
+                    },
+                    onContinue = { goTo(OnboardingStep.ObjectiveIntro) },
+                )
+                OnboardingStep.ObjectiveIntro -> ObjectiveIntroStep(language, answers.firstName) {
+                    goTo(OnboardingStep.Mission)
                 }
+                OnboardingStep.Mission -> MissionStep(language) { goTo(OnboardingStep.Questions) }
                 OnboardingStep.Questions -> QuestionsStep(language, richMotion) {
                     goTo(OnboardingStep.PhoneTime)
                 }
@@ -320,9 +497,12 @@ fun OnboardingV2Screen(
                         goTo(OnboardingStep.Loading)
                     },
                 )
-                OnboardingStep.Loading -> LoadingProfileStep(language) { goTo(OnboardingStep.Profile) }
+                OnboardingStep.Loading -> LoadingProfileStep(language, answers.firstName) {
+                    goTo(OnboardingStep.Profile)
+                }
                 OnboardingStep.Profile -> ProfileRewardStep(
                     language = language,
+                    firstName = answers.firstName,
                     objectiveKeys = selectedObjectives.toList().ifEmpty { listOf(primaryObjective) },
                     likedCourseIds = likedCourseIds,
                     onContinue = { goTo(stepAfterProfile()) },
@@ -335,52 +515,7 @@ fun OnboardingV2Screen(
                     signingIn = signingIn,
                     errorMessage = signInError,
                     googleAvailable = googleAvailable,
-                    onGoogle = {
-                        // Guard, not just a disabled button: a fast double tap can land two
-                        // clicks before recomposition shows the disabled state, and the
-                        // second Credential Manager request cancels the first.
-                        if (signingIn) return@LoginStep
-                        signingIn = true
-                        signInError = null
-                        scope.launch {
-                            val outcome = try {
-                                app.authService.signInWithGoogle(context)
-                            } catch (e: CancellationException) {
-                                // The user left the step while the sheet was up. Nothing to
-                                // report, and nothing left to update — this scope is gone.
-                                throw e
-                            } catch (e: Exception) {
-                                SignInOutcome.Failure(
-                                    StringStore.text(context, "auth.error.generic", language),
-                                )
-                            }
-                            signingIn = false
-                            when (outcome) {
-                                is SignInOutcome.Success -> {
-                                    // A returning user signing in here gets their cloud
-                                    // progress back, same as signing in from settings.
-                                    runCatching {
-                                        app.progressSyncService.pullOnLogin(
-                                            app.progressManager.progress.value,
-                                        )
-                                    }
-                                    app.onboardingStore.markAccountOffered()
-                                    advanceFromLogin()
-                                }
-                                // Dismissed on purpose: leave the page exactly as it was.
-                                is SignInOutcome.Cancelled -> Unit
-                                is SignInOutcome.Unavailable -> {
-                                    googleAvailable = false
-                                    signInError = StringStore.text(
-                                        context,
-                                        "auth.unavailable.body",
-                                        language,
-                                    )
-                                }
-                                is SignInOutcome.Failure -> signInError = outcome.message
-                            }
-                        }
-                    },
+                    onGoogle = { signInWithGoogle { advanceFromLogin() } },
                     onContinueWithoutAccount = {
                         // Progress lives on the device from here on. The app asks again in
                         // the profile tab and after the third course.
@@ -391,6 +526,13 @@ fun OnboardingV2Screen(
                         if (DeviceCapabilities.allowsLoginBypass()) advanceFromLogin()
                     },
                 )
+                OnboardingStep.WelcomeAboard -> WelcomeAboardStep(
+                    language = language,
+                    firstName = answers.firstName,
+                    richMotion = richMotion,
+                    onContinue = { goTo(OnboardingStep.Features) },
+                )
+                OnboardingStep.Features -> FeaturesStep(language, answers.firstName) { advanceFromFeatures() }
                 OnboardingStep.Trial -> TrialStepsStep(language, storeViewModel.annualTrialDays()) { goTo(OnboardingStep.Reminder) }
                 OnboardingStep.Reminder -> ReminderStep(language, onContinue = { advanceFromReminder() })
                 OnboardingStep.Paywall -> {
@@ -415,6 +557,28 @@ fun OnboardingV2Screen(
                 current = dotIndex,
                 total = DOT_STEPS.size,
                 modifier = Modifier.align(Alignment.TopCenter).padding(top = 14.dp),
+            )
+        }
+
+        // Someone reinstalling or switching phone: sign in and land in the app with their
+        // history, skipping the questions they answered the first time (as on iOS).
+        AnimatedVisibility(
+            visible = showExistingAccount,
+            enter = slideInVertically(spring(dampingRatio = 0.9f, stiffness = Spring.StiffnessMediumLow)) { it } + fadeIn(),
+            exit = slideOutVertically(tween(260)) { it } + fadeOut(tween(200)),
+        ) {
+            BackHandler { if (!signingIn) showExistingAccount = false }
+            ExistingAccountStep(
+                language = language,
+                signingIn = signingIn,
+                errorMessage = signInError,
+                onGoogle = {
+                    signInWithGoogle {
+                        showExistingAccount = false
+                        finish()
+                    }
+                },
+                onClose = { if (!signingIn) showExistingAccount = false },
             )
         }
     }
