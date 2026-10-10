@@ -283,7 +283,7 @@ internal fun PathPod(
 }
 
 @Composable
-private fun PathPodFace(state: PathNodeState, tint: Color, icon: ImageVector, diameter: Dp) {
+internal fun PathPodFace(state: PathNodeState, tint: Color, icon: ImageVector, diameter: Dp) {
     val fill by animateColorAsState(
         targetValue = when (state) {
             PathNodeState.COMPLETED -> tint
@@ -429,7 +429,7 @@ private fun PathStartBubble(text: String, tint: Color) {
 
 /** Soft breathing glow behind the pod to play next. */
 @Composable
-private fun PathPulseHalo(tint: Color, diameter: Dp, modifier: Modifier = Modifier) {
+internal fun PathPulseHalo(tint: Color, diameter: Dp, modifier: Modifier = Modifier) {
     val breath = rememberInfiniteTransition(label = "halo")
     val expanded by breath.animateFloat(
         initialValue = 0f,

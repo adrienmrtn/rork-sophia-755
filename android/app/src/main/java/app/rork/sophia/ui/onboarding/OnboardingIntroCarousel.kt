@@ -1,6 +1,7 @@
 package app.rork.sophia.ui.onboarding
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
@@ -82,14 +83,13 @@ import kotlinx.coroutines.launch
  * leads to « Join the 500,000 users » ([SocialProofStep]).
  *
  * Lessons (four cards) · Real researchers (professors and universities) · Quizzes (course
- * pictures). iOS has a fourth page previewing the Parcours tab; Android has no Parcours
- * yet, so the page is left out rather than promising a screen the app does not have.
+ * pictures) · Personalized route (a preview of the Parcours tab).
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 internal fun IntroCarouselStep(language: AppLanguage, onContinue: () -> Unit) {
     val context = LocalContext.current
-    val pageCount = 3
+    val pageCount = 4
     var savedPage by rememberSaveable { mutableIntStateOf(0) }
     val pagerState = rememberPagerState(initialPage = savedPage) { pageCount }
     val scope = rememberCoroutineScope()
@@ -108,7 +108,8 @@ internal fun IntroCarouselStep(language: AppLanguage, onContinue: () -> Unit) {
             when (page) {
                 0 -> IntroLessonsPage(language, active)
                 1 -> IntroResearchersPage(language, active)
-                else -> IntroQuizzesPage(language, active)
+                2 -> IntroQuizzesPage(language, active)
+                else -> IntroRoutePage(language, active)
             }
         }
         PagerDots(
@@ -168,12 +169,31 @@ private fun IntroPageFrame(
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Spacer(Modifier.height(top))
+            // Up to four lines, shrinking to 75 % before giving up, like iOS's
+            // `minimumScaleFactor(0.75)`: the « personalized route » title runs to five
+            // lines in French at full size and lost its end.
+            val titleStyle = OV2.title
+            var titleScale by remember(title) { mutableFloatStateOf(1f) }
+            var titleFits by remember(title) { mutableStateOf(false) }
             Text(
                 text = highlighted(title),
-                style = OV2.title,
+                style = titleStyle.copy(
+                    fontSize = titleStyle.fontSize * titleScale,
+                    lineHeight = titleStyle.lineHeight * titleScale,
+                ),
                 textAlign = TextAlign.Center,
                 maxLines = 4,
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 28.dp),
+                onTextLayout = { layout ->
+                    if (layout.hasVisualOverflow && titleScale > 0.75f) {
+                        titleScale = (titleScale - 0.05f).coerceAtLeast(0.75f)
+                    } else {
+                        titleFits = true
+                    }
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 28.dp)
+                    .drawWithContent { if (titleFits) drawContent() },
             )
             Spacer(Modifier.weight(1f))
             Box(
@@ -594,6 +614,35 @@ private fun QuizSquare(
                 )
             }
         }
+    }
+}
+
+// MARK: - 4. Personalized route
+
+/** « Sophia builds you a personalized route »: the Parcours preview, fading and growing in. */
+@Composable
+private fun IntroRoutePage(language: AppLanguage, active: Boolean) {
+    val context = LocalContext.current
+    val shown = remember { Animatable(0f) }
+    OnPageActivated(active) {
+        delay(150)
+        shown.animateTo(1f, spring(dampingRatio = 0.85f, stiffness = 80f))
+    }
+    IntroPageFrame(
+        title = StringStore.text(context, "onboardingV2.intro.route.title", language),
+        subtitle = StringStore.text(context, "onboardingV2.intro.route.subtitle", language),
+    ) { width, height ->
+        OnboardingPathPreview(
+            language = language,
+            width = width,
+            height = height,
+            modifier = Modifier.graphicsLayer {
+                val scale = 0.94f + 0.06f * shown.value
+                scaleX = scale
+                scaleY = scale
+                alpha = shown.value.coerceIn(0f, 1f)
+            },
+        )
     }
 }
 
