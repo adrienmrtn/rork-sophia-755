@@ -116,6 +116,7 @@ fun MainTabs(
     val scope = rememberCoroutineScope()
     val constrained = remember { DeviceCapabilities.isConstrained(context) }
     val isPremium by storeViewModel.isPremium.collectAsState()
+    val debugPremium by storeViewModel.debugPremium.collectAsState()
     val trialExpiresInOneDay by storeViewModel.trialExpiresInOneDay.collectAsState()
     val progress by app.progressManager.progress.collectAsState()
     val discount by app.discountManager.state.collectAsState()
@@ -526,6 +527,8 @@ fun MainTabs(
                             onOpenTerms = { openFromSettings(OverlayScreen.Terms) },
                             onOpenPrivacy = { openFromSettings(OverlayScreen.Privacy) },
                             onOpenAudioDownloads = { openFromSettings(OverlayScreen.AudioDownloads) },
+                            debugPremium = debugPremium,
+                            onDebugPremiumChange = storeViewModel::setDebugPremium,
                             onRestorePurchases = {
                                 storeViewModel.restore { result ->
                                     val key = when (result) {

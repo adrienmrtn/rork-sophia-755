@@ -1,6 +1,7 @@
 package app.rork.sophia.billing
 
 import android.app.Application
+import android.content.Context
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import app.rork.sophia.AppConfig
@@ -39,7 +40,19 @@ import java.util.Locale
 import java.util.concurrent.TimeUnit
 
 class StoreViewModel(app: Application) : AndroidViewModel(app) {
-    private val _isPremium = MutableStateFlow(false)
+    /**
+     * Debug builds only: Premium forced on from the settings, to test the Premium side of the
+     * app on an emulator, where Play sells nothing. Kept across launches. Always false in a
+     * release build, where `BuildConfig.DEBUG` is a compile-time false.
+     */
+    private val debugPrefs = app.getSharedPreferences(DEBUG_PREFS, Context.MODE_PRIVATE)
+    private val _debugPremium = MutableStateFlow(BuildConfig.DEBUG && debugPrefs.getBoolean(KEY_DEBUG_PREMIUM, false))
+    val debugPremium: StateFlow<Boolean> = _debugPremium.asStateFlow()
+
+    /** What the store says, before the debug switch is laid over it. */
+    private var entitledPremium = false
+
+    private val _isPremium = MutableStateFlow(_debugPremium.value)
     val isPremium: StateFlow<Boolean> = _isPremium.asStateFlow()
 
     /** Active Premium entitlement currently in a free-trial period. */
@@ -74,7 +87,8 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         val entitlement = customerInfo.entitlements[AppConfig.PREMIUM_ENTITLEMENT]
         val active = entitlement?.isActive == true
         val inTrial = active && entitlement?.periodType == PeriodType.TRIAL
-        _isPremium.value = active
+        entitledPremium = active
+        publishPremium()
         _isInFreeTrial.value = inTrial
         _trialExpiresInOneDay.value = isTrialExpiringInOneDay(entitlement)
         val trialEnd = if (inTrial) entitlement?.expirationDate else null
@@ -430,7 +444,20 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun setPremiumDebug(value: Boolean) {
-        _isPremium.value = value
+        entitledPremium = value
+        publishPremium()
+    }
+
+    /** The settings switch of debug builds; does nothing in a release build. */
+    fun setDebugPremium(enabled: Boolean) {
+        if (!BuildConfig.DEBUG) return
+        _debugPremium.value = enabled
+        debugPrefs.edit().putBoolean(KEY_DEBUG_PREMIUM, enabled).apply()
+        publishPremium()
+    }
+
+    private fun publishPremium() {
+        _isPremium.value = entitledPremium || _debugPremium.value
     }
 
     /**
@@ -450,7 +477,7 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
             onSuccess = { info ->
                 applyCustomerInfo(info)
                 onResult(
-                    if (_isPremium.value) RestoreResult.RESTORED else RestoreResult.NOTHING_FOUND,
+                    if (entitledPremium) RestoreResult.RESTORED else RestoreResult.NOTHING_FOUND,
                 )
             },
         )
@@ -467,5 +494,8 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
          * price experiment or a country tier serves anything else.
          */
         const val UNKNOWN_PRICE = "…"
+
+        private const val DEBUG_PREFS = "sophia_debug"
+        private const val KEY_DEBUG_PREMIUM = "forcePremium"
     }
 }

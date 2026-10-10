@@ -36,6 +36,8 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.Switch
+import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -91,6 +93,9 @@ fun SettingsScreen(
     onOpenPrivacy: () -> Unit,
     onRestorePurchases: () -> Unit,
     onOpenAudioDownloads: () -> Unit = {},
+    /** Debug builds only: Premium forced on, to test it on an emulator where Play sells nothing. */
+    debugPremium: Boolean = false,
+    onDebugPremiumChange: (Boolean) -> Unit = {},
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -341,6 +346,21 @@ fun SettingsScreen(
                     ),
                     showChevron = false,
                     onClick = { app.progressManager.resetDailyCourseFlag() },
+                )
+                HorizontalDivider(color = DS.hairline)
+                SettingsRow(
+                    icon = Icons.Filled.WorkspacePremium,
+                    label = StringStore.text(context, "settings.debug.premium", language),
+                    subtitle = StringStore.text(context, "settings.debug.premium.subtitle", language),
+                    showChevron = false,
+                    onClick = { onDebugPremiumChange(!debugPremium) },
+                    trailing = {
+                        Switch(
+                            checked = debugPremium,
+                            onCheckedChange = onDebugPremiumChange,
+                            colors = SwitchDefaults.colors(checkedTrackColor = DS.accent),
+                        )
+                    },
                 )
             }
         }
