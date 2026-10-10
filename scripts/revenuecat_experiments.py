@@ -148,17 +148,81 @@ def run(api_key: str, manifest: dict, dry_run: bool) -> int:
     return 0
 
 
+STEP_VERBS = {"stop": ("running", "paused"), "start": ("draft",)}
+EXPECTED_AFTER = {"stop": "stopped", "start": "running"}
+
+
+def parse_steps(text: str) -> list[tuple[str, str]]:
+    steps = []
+    for raw in filter(None, (part.strip() for part in text.split(","))):
+        verb, _, experiment_id = raw.partition(":")
+        verb, experiment_id = verb.strip().lower(), experiment_id.strip()
+        if verb not in STEP_VERBS or not experiment_id.startswith("exp"):
+            raise RevenueCatError(f"bad step {raw!r}: expected stop:<experiment id> or start:<experiment id>")
+        steps.append((verb, experiment_id))
+    if not steps:
+        raise RevenueCatError("no step given: pass e.g. stop:expaa99dcbc5d,start:expc04e8ff651")
+    return steps
+
+
+def switch(api_key: str, steps_text: str, check_only: bool) -> int:
+    """Stop and start experiments in the given order, after checking the whole sequence first.
+
+    A stop needs a running or paused experiment, a start needs a draft, and a start is refused if
+    another experiment on the same audience would still be running at that point: RevenueCat gives
+    each new customer to the first running experiment by priority, so the newcomer would get nobody.
+    """
+    project_id = resolve_project_id(api_key, os.environ.get("REVENUECAT_PROJECT_ID"))
+    steps = parse_steps(steps_text)
+    experiments = {e["id"]: e for e in paginate(api_key, f"/projects/{project_id}/experiments")}
+    status = {exp_id: e.get("status") for exp_id, e in experiments.items()}
+    print(f"Project {project_id}: {len(steps)} steps")
+    for verb, exp_id in steps:
+        experiment = experiments.get(exp_id)
+        if not experiment:
+            raise RevenueCatError(f"{verb}:{exp_id}: no such experiment")
+        if status[exp_id] not in STEP_VERBS[verb]:
+            raise RevenueCatError(f"{verb}:{exp_id} ({experiment['display_name']}): status is {status[exp_id]}, expected {' or '.join(STEP_VERBS[verb])}")
+        if verb == "start":
+            clash = [
+                e["display_name"] for other, e in experiments.items()
+                if other != exp_id and status[other] in ("running", "paused") and e.get("audience_id") == experiment.get("audience_id")
+            ]
+            if clash:
+                raise RevenueCatError(f"start:{exp_id} ({experiment['display_name']}): still running on the same audience: {', '.join(clash)}; stop it first")
+        status[exp_id] = EXPECTED_AFTER[verb]
+        print(f"  ok  {verb:<5} {exp_id}  {experiment['display_name']}  ({experiment.get('status')} -> {status[exp_id]})")
+    if check_only:
+        print("\nChecked only: nothing was changed.")
+        return 0
+
+    print("\nRunning")
+    for verb, exp_id in steps:
+        request_json("POST", f"/projects/{project_id}/experiments/{exp_id}/actions/{verb}", api_key=api_key, body={})
+        after = request_json("GET", f"/projects/{project_id}/experiments/{exp_id}", api_key=api_key)
+        stamp = after.get("stopped_at") if verb == "stop" else after.get("started_at")
+        print(f"  {verb:<5} {exp_id}  {after.get('display_name')}: status {after.get('status')} (at {stamp})")
+        if after.get("status") != EXPECTED_AFTER[verb]:
+            raise RevenueCatError(f"{verb}:{exp_id}: status is {after.get('status')}, expected {EXPECTED_AFTER[verb]}; later steps not run")
+    print("\nDone.")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["plan", "apply"])
+    parser.add_argument("command", choices=["plan", "apply", "switch"])
     parser.add_argument("--manifest", type=Path, default=MANIFEST)
+    parser.add_argument("--steps", default="", help="switch: ordered steps, e.g. stop:expaa99dcbc5d,start:expc04e8ff651")
+    parser.add_argument("--check", action="store_true", help="switch: check the steps and change nothing")
     args = parser.parse_args()
     api_key = os.environ.get("REVENUECAT_SECRET_API_KEY", "").strip()
     if not api_key.startswith("sk_"):
         print("REVENUECAT_SECRET_API_KEY is missing or is not a v2 secret key (sk_…).", file=sys.stderr)
         return 2
-    manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
     try:
+        if args.command == "switch":
+            return switch(api_key, args.steps, check_only=args.check)
+        manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
         return run(api_key, manifest, dry_run=args.command == "plan")
     except RevenueCatError as error:
         print(f"RevenueCat refused: {error}", file=sys.stderr)
