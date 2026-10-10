@@ -160,6 +160,25 @@ object ContentCatalog {
         id: String,
     ): List<QuizQuestion> = withContext(Dispatchers.IO) { quizQuestions(context, language, id) }
 
+    private val quizCountCache = ConcurrentHashMap<String, Int>()
+
+    /**
+     * Quiz questions across the language's catalogue (withheld courses left out), or 0.
+     * Streams the whole `courses.{lang}.json` once per language, then answers from memory.
+     */
+    suspend fun quizQuestionCountAsync(context: Context, language: AppLanguage): Int {
+        quizCountCache[language.code]?.let { return it }
+        return withContext(Dispatchers.IO) {
+            try {
+                context.assets.open("locales/courses.${language.code}.json").use {
+                    CatalogStream.countQuizQuestions(it, withheldCourseIds[language].orEmpty())
+                }.also { quizCountCache[language.code] = it }
+            } catch (_: Exception) {
+                0
+            }
+        }
+    }
+
     fun hasStructuredContent(context: Context, language: AppLanguage, courseId: String): Boolean {
         if (isWithheld(language, courseId)) return false
         return try {
@@ -195,5 +214,6 @@ object ContentCatalog {
         collectionCache.clear()
         singleCourseCache.clear()
         quizCache.clear()
+        quizCountCache.clear()
     }
 }

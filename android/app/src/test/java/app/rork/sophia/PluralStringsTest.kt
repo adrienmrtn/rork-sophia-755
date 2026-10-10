@@ -56,6 +56,7 @@ class PluralStringsTest {
         "settings.streak.title",
         "favorites.badge.count",
         "onboardingV2.weeks.title",
+        "onboardingV2.yearsGrid.years",
     )
 
     private fun table(code: String): Map<String, String> {

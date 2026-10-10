@@ -468,13 +468,16 @@ private fun SelectionMark(selected: Boolean, shape: androidx.compose.ui.graphics
     }
 }
 
-/** « Sophia va t'aider… » — bold walks through the sentence, then a tap anywhere continues. */
+/**
+ * « Sophia va t'aider… », with the first name in front when one was given — bold walks
+ * through the sentence, then a tap anywhere continues.
+ */
 @Composable
-internal fun ObjectiveIntroStep(language: AppLanguage, onContinue: () -> Unit) {
+internal fun ObjectiveIntroStep(language: AppLanguage, firstName: String, onContinue: () -> Unit) {
     val context = LocalContext.current
     val haptics = rememberOnboardingHaptics()
-    val words = remember(language) {
-        StringStore.text(context, "onboardingV2.objectiveIntro.title", language)
+    val words = remember(language, firstName) {
+        personalizedText(context, "onboardingV2.objectiveIntro.title", firstName, language)
             .split(' ')
             .filter { it.isNotBlank() }
     }

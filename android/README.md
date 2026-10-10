@@ -38,7 +38,10 @@ Debug APK uses the placeholder RevenueCat key (`goog_REPLACE_ME`) until you set 
 - Course reader (v2 blocks) + freemium locks + **glossary `[[terms]]`**
 - Full quiz engine (mcq / trueFalse / chronological / sliders)
 - Training SRS session
-- Onboarding V2 funnel (~17 steps: phone time, years grid, swipe courses, trial, dual paywalls)
+- Onboarding V2 funnel, iOS 1.1.8 sequence (presentation pages, 500,000-users social proof, first
+  name / age / knowledge / motivation / subjects, mission, life in years by thirds, swipe, loading,
+  profile, notifications, login, welcome aboard, strengths, trial, dual paywalls). Not ported: the
+  reading-time page (no daily-course notification on Android) and the Parcours preview page.
 - Context paywalls (fin_onboarding annual+comparison, discount flash, quiz/course unlock)
 - RevenueCat purchase hooks
 - Google Sign-In → Supabase + progress sync / conflict dialog (with summaries)

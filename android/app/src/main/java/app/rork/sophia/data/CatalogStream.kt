@@ -61,6 +61,37 @@ object CatalogStream {
         return emptyList()
     }
 
+    /** Number of quiz questions in `courses.{lang}.json`, without building a single one. */
+    fun countQuizQuestions(input: InputStream, skipCourseIds: Set<String> = emptySet()): Int {
+        var total = 0
+        JsonReader(InputStreamReader(input, Charsets.UTF_8)).use { reader ->
+            reader.beginArray()
+            while (reader.hasNext()) {
+                reader.beginObject()
+                var id = ""
+                var count = 0
+                while (reader.hasNext()) {
+                    when (reader.nextName()) {
+                        "id" -> id = reader.nextString()
+                        "quiz" -> {
+                            reader.beginArray()
+                            while (reader.hasNext()) {
+                                reader.skipValue()
+                                count += 1
+                            }
+                            reader.endArray()
+                        }
+                        else -> reader.skipValue()
+                    }
+                }
+                reader.endObject()
+                if (id !in skipCourseIds) total += count
+            }
+            reader.endArray()
+        }
+        return total
+    }
+
     private fun readSummary(reader: JsonReader): CourseSummary? {
         reader.beginObject()
         var id = ""
