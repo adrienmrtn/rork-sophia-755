@@ -622,8 +622,9 @@ prix actuel, cadeau compris, au 08/10 (trois modèles indépendants) :
 L'écart vient du cadeau : au prix actuel, une part des visiteurs le prend (environ 18-20 €) ; aux
 paliers bas, il coûte autant ou plus que l'annuel et ne se vend pas. Le test ne dit donc pas que ces pays
 refusent un annuel moins cher, seulement que « palier bas + ce cadeau » fait moins bien que « prix actuel
-+ cadeau ». Mise en œuvre : Stop TR v2 (`expe2a6836f94`) et C v2 (`expaa99dcbc5d`) ; Start C v3 juste
-après le Stop de C v2. Lecture C v3 à J+21 / J+30 / J+45 depuis son démarrage. Les paliers restent en
++ cadeau ». Mise en œuvre le 10/10 à 14:08 UTC, par le workflow « Pricing tests » (`revenuecat-experiments ·
+switch`, `stop:expaa99dcbc5d,start:expc04e8ff651,stop:expe2a6836f94`) : C v2 et TR v2 arrêtés, C v3
+(`expc04e8ff651`) démarré dans la même seconde. Lecture C v3 à J+21 / J+30 / J+45 depuis son démarrage. Les paliers restent en
 vente dans App Store Connect (restriction `available_in` non appliquée) : les abonnés existants les
 gardent, et les réglages d'abonnement d'Apple permettent toujours d'y passer.
 
