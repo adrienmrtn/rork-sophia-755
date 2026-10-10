@@ -129,7 +129,9 @@ fun CourseCompletedScreen(
             Spacer(Modifier.height(10.dp))
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    text = course.subjectEnum.name.lowercase(java.util.Locale.ROOT).replaceFirstChar { it.titlecase(java.util.Locale.ROOT) },
+                    // The translated subject, as iOS shows it; the enum name printed « Litterature »
+                    // and « Comprendre_le_monde » in every language.
+                    text = StringStore.text(context, "subject.${course.subjectEnum.storageKey}.short", language),
                     style = SophiaTypography.labelMedium,
                     modifier = Modifier.weight(1f),
                 )
