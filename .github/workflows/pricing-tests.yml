@@ -22,8 +22,11 @@
 #     plan     previews the 5 country audiences (iOS only) and lists the 5 draft
 #              experiments `apply` would create. Writes nothing.
 #     apply    creates the missing audiences and the missing experiments, as
-#              drafts. Never starts one: that is a click in the dashboard on the
-#              day Apple approves the products.
+#              drafts. Never starts one.
+#     switch   stops / starts experiments in the order given in `only`, e.g.
+#              stop:expaa99dcbc5d,start:expc04e8ff651. The whole sequence is
+#              checked first (stop needs running, start needs a draft, never two
+#              running on one audience) and nothing runs if a step fails.
 #
 # Extra key permissions for that target: audiences:audiences:read_write and
 # project_configuration:experiments:read_write.
@@ -50,8 +53,9 @@ on:
           - status
           - prices
           - submit
+          - switch
       only:
-        description: "appstore only: one product id, e.g. Sophia_yearly_4999 (blank = all)"
+        description: "appstore: one product id, e.g. Sophia_yearly_4999 (blank = all). revenuecat-experiments · switch: ordered steps, e.g. stop:exp…,start:exp…"
         type: string
         default: ""
 
@@ -122,6 +126,7 @@ jobs:
             revenuecat/apply)  set -- scripts/revenuecat_pricing_setup.py apply ;;
             revenuecat-experiments/plan)  set -- scripts/revenuecat_experiments.py plan ;;
             revenuecat-experiments/apply) set -- scripts/revenuecat_experiments.py apply ;;
+            revenuecat-experiments/switch) set -- scripts/revenuecat_experiments.py switch --steps "$ONLY" ;;
             *) echo "unsupported: $TARGET / $ACTION" >&2; exit 1 ;;
           esac
           {
