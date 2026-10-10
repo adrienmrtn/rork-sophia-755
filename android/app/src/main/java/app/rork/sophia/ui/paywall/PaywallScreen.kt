@@ -347,7 +347,12 @@ private fun OnboardingAnnualPaywall(
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
     var notice by remember { mutableStateOf<String?>(null) }
-    val hasTrial = storeViewModel.hasFreeTrial(annual)
+    // Worded with the trial, as on iOS (decision of 29/09), as long as the store has not said
+    // otherwise: products not loaded yet (slow network, emulator without Play) read « Essaie
+    // 3 jours gratuitement… », not « Premium à … ». Unlike iOS, a product Google Play serves
+    // without a trial (an account that already had one) states the price: promising days the
+    // store will not grant would be a misleading offer.
+    val hasTrial = annual == null || storeViewModel.hasFreeTrial(annual)
     val trialDays = storeViewModel.trialDays(annual) ?: 3
     val yearly = storeViewModel.formattedPrice(annual, StoreViewModel.UNKNOWN_PRICE)
     val perMonth = perMonthLabel(context, language, storeViewModel, annual)
@@ -379,9 +384,7 @@ private fun OnboardingAnnualPaywall(
             ) {
                 PaywallHero(icon = Icons.Filled.School)
                 // « Essaie 3 jours gratuitement, puis 3,33 € / mois (facturé annuellement). »:
-                // the free days in green, then the monthly equivalent. The wording follows the
-                // product the store serves: Google Play only grants a trial to an eligible
-                // account, so without one the page states the price instead of promising days.
+                // the free days in green, then the monthly equivalent.
                 val headline = if (hasTrial) {
                     buildAnnotatedString {
                         withStyle(SpanStyle(color = DS.success)) {
@@ -1078,7 +1081,9 @@ private fun DiscountPaywall(
         }
     }
 
-    Box(modifier = Modifier.fillMaxSize()) {
+    // Painted here as well: from the tabs the paywall sits in an opaque layer (SophiaOverlayLayer)
+    // that hid the root gradient, leaving white text on the pale canvas.
+    Box(modifier = Modifier.fillMaxSize().background(gradient)) {
         Column(
             modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
