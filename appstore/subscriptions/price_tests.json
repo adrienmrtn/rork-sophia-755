@@ -659,6 +659,16 @@
         "c__t50"
       ],
       "notes": "Mêmes produits que TR, prix locaux générés par Apple (≈ 50 % et 25 % du prix actuel). Seuil : ×2 pour 50 %. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS en version 1.1.7 ou plus uniquement (la 1.1.6, sans le correctif R1, affichait le prix de la variante et facturait 39,99 € sur les paywalls cours et quiz ; la v1 du 01/10 a été arrêtée pour cette raison). Android inchangé. v3 : palier 25 % retiré le 08/10 (en Turquie et ici, ≈ 75-87 % de chances qu'il rapporte moins que le prix actuel, cadeau compris) ; la v2 (expaa99dcbc5d, 3 variantes) est arrêtée, la lecture J+21/J+30/J+45 repart du démarrage de la v3."
+    },
+    {
+      "name": "Prix P · annuel 49,99 · v4",
+      "audience": "Prix · P (pays riches, iOS 1.1.7+)",
+      "type": "price_point",
+      "control": "fin_onboarding",
+      "treatments": [
+        "p__4999"
+      ],
+      "notes": "Hypothèse : les pays à fort pouvoir d'achat supportent un annuel plus cher que 39,99. Seuil de neutralité : 49,99 doit garder ≥ 80 % de la conversion du contrôle. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS en version 1.1.7 ou plus uniquement (la 1.1.6, sans le correctif R1, affichait le prix de la variante et facturait 39,99 € sur les paywalls cours et quiz ; la v1 du 01/10 a été arrêtée pour cette raison). Android inchangé. v4 : variante 69,99 retirée le 11/10 (moins d'essais, 11,1 % contre 15,1 %, et moins d'essais payés, 21 % contre 39 %, chacun sûr à plus de 99 % ; revenu par visiteur plus bas avec 76-96 % de certitude) ; la v3 (expecf89281b0) est arrêtée. Les données 49,99 de la v3 restent comparables et peuvent être additionnées à celles de la v4."
     }
   ],
   "experiment_settings": {
