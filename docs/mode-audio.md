@@ -1,11 +1,11 @@
 # Mode audio (iOS et Android)
 
-Chaque cours peut être écouté comme un podcast, en 2 langues : **français et anglais**. Réservé
+Chaque cours peut être écouté comme un podcast, en 5 langues : **français, anglais, espagnol, allemand, turc**. Réservé
 aux Premium. Mêmes fonctions, mêmes fichiers Supabase et mêmes textes sur iOS et Android.
 
 L'espagnol, l'allemand et le turc ont été retirés le 30/09/2026 : l'app ne les connaît plus, une
-file d'attente ou un téléchargement resté dans l'une de ces langues est ignoré ou effacé au
-lancement, et `--purge-other-languages` vide les dossiers `es/`, `de/`, `tr/` du bucket.
+Une file d'attente ou un téléchargement dans une langue retirée du catalogue est ignoré ou
+effacé au lancement, et `--purge-other-languages` vide du bucket tout dossier hors catalogue.
 
 ## Ce que voit l'utilisateur
 

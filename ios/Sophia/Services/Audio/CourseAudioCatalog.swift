@@ -1,14 +1,14 @@
 import Foundation
 import Observation
 
-/// The two languages courses are narrated in. A subset of `AppLanguage`: the app reads in
-/// 26 languages, narrations exist in French and English only.
-///
-/// Spanish, German and Turkish were dropped: whatever still refers to them (a saved queue,
-/// a download, a manifest key) is ignored or cleaned up, never played.
+/// The five languages courses are narrated in. A subset of `AppLanguage`: the app reads in
+/// 26 languages, narrations exist in these five.
 nonisolated enum AudioLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
     case french = "fr"
     case english = "en"
+    case spanish = "es"
+    case german = "de"
+    case turkish = "tr"
 
     var id: String { rawValue }
 
@@ -17,20 +17,26 @@ nonisolated enum AudioLanguage: String, CaseIterable, Identifiable, Codable, Sen
         switch self {
         case .french: "Français"
         case .english: "English"
+        case .spanish: "Español"
+        case .german: "Deutsch"
+        case .turkish: "Türkçe"
         }
     }
 
-    /// "FR", "EN" for the compact chips.
+    /// "FR", "EN"… for the compact chips.
     var shortCode: String { rawValue.uppercased() }
 
     var flag: String {
         switch self {
         case .french: "🇫🇷"
         case .english: "🇬🇧"
+        case .spanish: "🇪🇸"
+        case .german: "🇩🇪"
+        case .turkish: "🇹🇷"
         }
     }
 
-    /// The narration language matching an app language, nil for the 24 others.
+    /// The narration language matching an app language, nil for the 21 others.
     init?(appLanguageCode code: String) {
         self.init(rawValue: code)
     }
@@ -84,7 +90,7 @@ final class CourseAudioCatalog {
 
     // MARK: - Queries
 
-    /// Narration languages for a course, in the fixed FR, EN order.
+    /// Narration languages for a course, in the fixed FR, EN, ES, DE, TR order.
     func languages(for courseId: String) -> [AudioLanguage] {
         AudioLanguage.allCases.filter { hasAudio(courseId, language: $0) }
     }

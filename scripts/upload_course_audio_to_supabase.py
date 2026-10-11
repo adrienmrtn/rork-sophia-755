@@ -19,10 +19,10 @@ Objects land at `<language>/<course_id>.mp3`, which is the path
 content/courses/<language>/ and a mismatch stops the run: a typo here surfaces
 in the app as a silent 404 on a course that looks perfectly normal.
 
-Narrations exist in French and English only. A narration already in the bucket
+Narrations exist in the five languages of `LANGUAGES`. A narration already in the bucket
 with the same size is skipped, so an interrupted run is resumed by running the
 same command again (`--force` re-uploads everything).
-`--purge-other-languages` deletes what an earlier setup left under es/, de/, tr/.
+`--purge-other-languages` deletes any folder outside those five.
 """
 
 from __future__ import annotations
@@ -41,7 +41,7 @@ BUCKET = "course-audio"
 DEFAULT_URL = "https://afnmcoovdvbtkgohtdij.supabase.co"
 MAX_BYTES = 50 * 1024 * 1024
 # The app's `AudioLanguage` (iOS and Android). The manifest lists these and nothing else.
-LANGUAGES = ("fr", "en")
+LANGUAGES = ("fr", "en", "es", "de", "tr")
 
 
 def env_key() -> str:
@@ -219,7 +219,7 @@ def main() -> int:
     ap.add_argument("--manifest-only", action="store_true",
                     help="rewrite manifest.json from the bucket, re-upload nothing")
     ap.add_argument("--purge-other-languages", action="store_true",
-                    help="delete every folder but fr/ and en/ from the bucket, then rewrite the manifest")
+                    help="delete every folder outside LANGUAGES from the bucket, then rewrite the manifest")
     args = ap.parse_args()
 
     if args.manifest_only or args.purge_other_languages:

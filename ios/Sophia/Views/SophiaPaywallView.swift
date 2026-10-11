@@ -41,7 +41,7 @@ enum SophiaPaywallContext: String, Identifiable {
 /// - `.entrainement` → `SophiaTrainingPaywall` (sells the spaced-repetition training method).
 /// - `.quizz` → `SophiaQuizPaywall` (forgetting curve with and without quizzes, what PRO unlocks).
 /// - `.debloquerCours` → `SophiaCourseUnlockPaywall` (locked course, countdown, « OU » Sophia PRO).
-/// - `.audio` → `SophiaAudioPaywall` (sells listening: lock screen, French and English, offline).
+/// - `.audio` → `SophiaAudioPaywall` (sells listening: lock screen, five languages, offline).
 /// - `.blocker` → `SophiaBlockerPaywall` (take back your time with the anti-scroll, what PRO unlocks).
 /// - `.finOnboarding` → `SophiaStandardPaywall` (single annual plan, price and trial from the store).
 struct SophiaPaywallView: View {
