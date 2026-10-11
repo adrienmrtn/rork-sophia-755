@@ -628,6 +628,19 @@ switch`, `stop:expaa99dcbc5d,start:expc04e8ff651,stop:expe2a6836f94`) : C v2 et 
 vente dans App Store Connect (restriction `available_in` non appliquée) : les abonnés existants les
 gardent, et les réglages d'abonnement d'Apple permettent toujours d'y passer.
 
+### 9.7 Pays riches : 69,99 retiré (11/10)
+
+| Au 11/10 13:00 UTC | 39,99 (contrôle) | 49,99 | 69,99 |
+|---|---|---|---|
+| Visiteurs | 1 495 | 1 549 | 1 490 |
+| Essais annuels lancés | 225 (15,1 %) | 205 (13,2 %) | 165 (11,1 %) |
+| Essais terminés qui ont payé | 49 / 127 (39 %) | 38 / 104 (37 %) | 18 / 86 (21 %) |
+| Chance de rapporter plus que 39,99 (cadeau compris) | — | 40 % (34-51 %) | 8 % (4-24 %) |
+
+Le 69,99 est retiré ; le 49,99 continue contre 39,99 dans P v4 (`expeff5486efd`, démarrée le 11/10 à
+13:50:30 UTC, juste après l'arrêt de P v3). Les clients déjà inscrits dans la v3 voient de nouveau
+`fin_onboarding` ; ceux déjà abonnés à 49,99 ou 69,99 gardent leur prix.
+
 ## 10. Grille de prix par pays (hypothèse, arrêtée à J+45)
 
 | Groupe | Annuel | Mensuel / hebdo | Discount | Décidé par |
