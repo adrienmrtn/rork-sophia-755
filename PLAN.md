@@ -123,6 +123,11 @@ code iOS et Android. Coche les cases des actions que tu valides.
   retirer une variante : Stop sur TR v2 et C v2 (dashboard), puis Start sur « Prix C · palier 50 % · v3 »
   (contrôle contre palier 50 %, brouillon créé par `revenuecat-experiments · apply`), sans les laisser
   tourner en même temps. Les abonnés déjà aux paliers gardent leur prix.
+- [x] Pays riches : 69,99 retiré le 11/10 à 13:50 UTC (P v3 `expecf89281b0` arrêtée, P v4 `expeff5486efd`
+  démarrée la seconde suivante par `revenuecat-experiments · switch` : 39,99 contre 49,99). Le 69,99 lançait
+  moins d'essais (11,1 % contre 15,1 %) et moins d'essais payaient (21 % contre 39 %), chacun sûr à plus de
+  99 % ; revenu par visiteur plus bas avec 76-96 % de certitude. Les données 49,99 de la v3 s'additionnent à
+  la v4 dans nos calculs. Lecture P v4 à J+21 le 01/11.
 - [ ] Disponibilité des produits de test limitée aux pays de leur test (`available_in` du
   manifeste) : le 01/10, un abonné suédois est passé de `Sophia_yearly` (39,99 €) au palier 25 %
   depuis les réglages d'abonnement d'Apple, qui listent tous les produits du groupe vendus dans
