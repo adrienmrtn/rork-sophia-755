@@ -143,7 +143,7 @@ subscriptions with whatever this folder holds. **App Store release notes**
 and `whats_new.txt` and nothing else:
 
 ```bash
-python3 scripts/appstore_metadata.py push --fields promotional_text,whats_new --version 1.1.8 --dry-run
+python3 scripts/appstore_metadata.py push --fields promotional_text,whats_new --version 1.1.9 --dry-run
 ```
 
 It only updates: a language the version does not have yet is reported and
@@ -151,8 +151,10 @@ skipped, never created with release notes and no description. And it refuses to
 run unless the version being prepared is the one named, so one release's notes
 cannot land on the next.
 
-The 1.1.8 notes say "minor bug fixes" in every language, and the promotional
-text is the one 1.1.7 shipped with, unchanged.
+The 1.1.9 notes and promotional text announce audio mode in Spanish, German and
+Turkish, plus minor bug fixes. The Spanish, German and Turkish pages say it in
+the reader's own language ("now in Spanish"); every other page says "now also in
+Spanish, German and Turkish", since audio there defaults to English.
 
 ## Or from a terminal
 

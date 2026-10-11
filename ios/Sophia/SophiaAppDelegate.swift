@@ -22,23 +22,32 @@ final class SophiaAppDelegate: NSObject, UIApplicationDelegate, UNUserNotificati
     }
 
     // MARK: - UNUserNotificationCenterDelegate
+    //
+    // Variantes à completion handler, surtout pas les `async` : une méthode `async`
+    // `nonisolated` se termine sur l'exécuteur global, et le pont Swift rappelait alors le
+    // bloc du système hors du fil principal. UIKit l'exige sur le fil principal (« Call must
+    // be made on main thread ») : l'app plantait à chaque toucher sur une notification.
 
     nonisolated func userNotificationCenter(
         _ center: UNUserNotificationCenter,
-        didReceive response: UNNotificationResponse
-    ) async {
-        guard let link = response.notification.request.content.userInfo["deepLink"] as? String,
-              let url = URL(string: link) else { return }
-        await MainActor.run {
-            _ = DeepLinkRouter.shared.open(url)
+        didReceive response: UNNotificationResponse,
+        withCompletionHandler completionHandler: @escaping () -> Void
+    ) {
+        let link = response.notification.request.content.userInfo["deepLink"] as? String
+        DispatchQueue.main.async {
+            if let link, let url = URL(string: link) {
+                DeepLinkRouter.shared.open(url)
+            }
+            completionHandler()
         }
     }
 
     /// App ouverte : la notification s'affiche quand même (bannière), comme en arrière-plan.
     nonisolated func userNotificationCenter(
         _ center: UNUserNotificationCenter,
-        willPresent notification: UNNotification
-    ) async -> UNNotificationPresentationOptions {
-        [.banner, .list, .sound]
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+    ) {
+        completionHandler([.banner, .list, .sound])
     }
 }
