@@ -138,6 +138,20 @@ them.
 translation engine answers 429 to some data-centre ranges. Build locally and push
 from Actions if it does.
 
+## Opening the next version
+
+Metadata is only written to a version being prepared. Once the last release is
+live there is none, and every push stops with "No editable App Store version".
+`create-version` opens it, as "+ Version" does in the browser, and Apple copies
+the live version's text into it:
+
+```bash
+python3 scripts/appstore_metadata.py create-version 1.1.10 --dry-run
+```
+
+The workflow offers it as the `create-version` action, with the version in its
+own field. It refuses when another version is already being prepared.
+
 ## Release notes only
 
 When the rest of the page is already finished in App Store Connect, a full

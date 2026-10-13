@@ -8,6 +8,8 @@
 #   check     lengths and locales. Needs no secrets at all.
 #   pull      read the live page into appstore/metadata/ and commit it.
 #   build     translate the locales still missing text, and commit them.
+#   create-version  open the version below in App Store Connect when the last
+#             one is live (metadata only goes to a version being prepared).
 #   dry-run   what a push would create or change. Writes nothing to Apple.
 #   push      write it to App Store Connect.
 #
@@ -38,6 +40,7 @@ on:
           - check
           - pull
           - build
+          - create-version
           - dry-run
           - push
           - prune-dry-run
@@ -46,6 +49,10 @@ on:
         description: "One locale only, e.g. de-DE (blank = all)"
         type: string
         default: ""
+      version:
+        description: "create-version: the version to open, e.g. 1.1.10"
+        type: string
+        default: "1.1.10"
       include_edits:
         description: "prune: also delete drafts on locales that already carry an approved row"
         type: boolean
@@ -101,6 +108,7 @@ jobs:
         env:
           ACTION: ${{ inputs.action }}
           LOCALE: ${{ inputs.locale }}
+          VERSION: ${{ inputs.version }}
           INCLUDE_EDITS: ${{ inputs.include_edits }}
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
@@ -127,6 +135,9 @@ jobs:
             # this step fails on the network rather than on the content, run
             # build on a laptop and push from here.
             build)   set -- build --from en-US "${only[@]}" ;;
+            # Metadata only goes to a version being prepared; once the last one is
+            # live, this opens the next, as "+ Version" does in the browser.
+            create-version) set -- create-version "$VERSION" ;;
             dry-run) set -- push --dry-run "${only[@]}" ;;
             push)    set -- push "${only[@]}" ;;
             prune-dry-run) set -- prune --dry-run "${only[@]}" "${edits[@]}" ;;
