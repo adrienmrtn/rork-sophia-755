@@ -138,6 +138,20 @@ them.
 translation engine answers 429 to some data-centre ranges. Build locally and push
 from Actions if it does.
 
+## Opening the next version
+
+Metadata is only written to a version being prepared. Once the last release is
+live there is none, and every push stops with "No editable App Store version".
+`create-version` opens it, as "+ Version" does in the browser, and Apple copies
+the live version's text into it:
+
+```bash
+python3 scripts/appstore_metadata.py create-version 1.10 --dry-run
+```
+
+The workflow offers it as the `create-version` action, with the version in its
+own field. It refuses when another version is already being prepared.
+
 ## Release notes only
 
 When the rest of the page is already finished in App Store Connect, a full
@@ -147,7 +161,7 @@ subscriptions with whatever this folder holds. **App Store release notes**
 and `whats_new.txt` and nothing else:
 
 ```bash
-python3 scripts/appstore_metadata.py push --fields promotional_text,whats_new --version 1.1.9 --dry-run
+python3 scripts/appstore_metadata.py push --fields promotional_text,whats_new --version 1.10 --dry-run
 ```
 
 It only updates: a language the version does not have yet is reported and
@@ -155,10 +169,10 @@ skipped, never created with release notes and no description. And it refuses to
 run unless the version being prepared is the one named, so one release's notes
 cannot land on the next.
 
-The 1.1.9 notes and promotional text announce audio mode in Spanish, German and
-Turkish, plus minor bug fixes. The Spanish, German and Turkish pages say it in
-the reader's own language ("now in Spanish"); every other page says "now also in
-Spanish, German and Turkish", since audio there defaults to English.
+The 1.10 notes announce the two Portuguese editions (Brazilian, and the new
+European one), fixes in a few courses and quizzes, and minor bug fixes. The
+promotional text keeps 1.1.9's audio line everywhere except `pt-PT`, which
+announces its own edition.
 
 ## Or from a terminal
 
