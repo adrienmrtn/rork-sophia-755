@@ -54,7 +54,6 @@ REFERENCE = {
     "annual-promo": ("prod87ca86a482", "discount_yearly"),
 }
 API = f"https://androidpublisher.googleapis.com/androidpublisher/v3/applications/{PACKAGE}"
-REGIONS_VERSION = "2022/02"
 MIN_RATIO = Decimal("0.5")
 
 
@@ -104,6 +103,20 @@ def play_call(token: str, method: str, url: str, body: dict | None = None) -> di
             return json.loads(raw) if raw else {}
     except urllib.error.HTTPError as error:
         raise PlayError(f"{method} {url} -> {error.code}: {error.read().decode()[:1500]}") from error
+
+
+def latest_regions_version(token: str) -> str:
+    """Current Play regions version, as returned by the (read-only) price conversion endpoint.
+
+    A patch must name the regions version its currencies follow; the subscription was edited in
+    Play Console at the latest one (Argentina in ARS, not USD as in 2022/02).
+    """
+    result = play_call(token, "POST", f"{API}/pricing:convertRegionPrices",
+                       {"price": {"currencyCode": "USD", "units": "10"}})
+    version = (result.get("regionVersion") or {}).get("version")
+    if not version:
+        raise PlayError(f"convertRegionPrices returned no regionVersion: {sorted(result)}")
+    return version
 
 
 # --- prices --------------------------------------------------------------------------------
@@ -180,7 +193,7 @@ def print_changes(changes: dict, notes: list[str]) -> None:
         print(note)
 
 
-def apply_changes(token: str, subscription: dict, changes: dict) -> dict:
+def apply_changes(token: str, subscription: dict, changes: dict, regions_version: str) -> dict:
     for base_plan in subscription.get("basePlans") or []:
         regions = changes.get(base_plan["basePlanId"]) or {}
         for config in base_plan.get("regionalConfigs") or []:
@@ -189,7 +202,7 @@ def apply_changes(token: str, subscription: dict, changes: dict) -> dict:
                 config["price"] = decimal_to_money(new, currency)
     query = urllib.parse.urlencode({
         "updateMask": "basePlans",
-        "regionsVersion.version": REGIONS_VERSION,
+        "regionsVersion.version": regions_version,
         "latencyTolerance": "PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_SENSITIVE",
     })
     return play_call(token, "PATCH", f"{API}/subscriptions/{SUBSCRIPTION}?{query}", subscription)
@@ -228,6 +241,8 @@ def main() -> int:
         token = access_token(service_account)
         subscription = play_call(token, "GET", f"{API}/subscriptions/{SUBSCRIPTION}")
         print(f"Play {PACKAGE} / {SUBSCRIPTION}: base plans {[bp['basePlanId'] for bp in subscription.get('basePlans') or []]}")
+        regions_version = latest_regions_version(token)
+        print(f"Play regions version: {regions_version}")
         project_id = resolve_project_id(rc_key, os.environ.get("REVENUECAT_PROJECT_ID"))
         changes, notes = plan_changes(subscription, ios_prices(rc_key, project_id))
         print_changes(changes, notes)
@@ -237,7 +252,7 @@ def main() -> int:
         if not any(changes.values()):
             print("\nNothing to change.")
             return 0
-        apply_changes(token, subscription, changes)
+        apply_changes(token, subscription, changes, regions_version)
         return verify(play_call(token, "GET", f"{API}/subscriptions/{SUBSCRIPTION}"), changes)
     except (PlayError, RevenueCatError) as error:
         print(f"Refused: {error}", file=sys.stderr)
