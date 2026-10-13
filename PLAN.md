@@ -10,7 +10,7 @@ code iOS et Android. Coche les cases des actions que tu valides.
 - Offering courante : `fin_onboarding` (paywall publié le 16/07). Les apps référencent 4 offerings :
   `fin_onboarding`, `quizz` (aussi pour le contexte `entrainement`), `debloquer_cours`, `offre_discount`.
 - Prix FR : iOS annuel 39,99 € et mensuel 9,99 € (essai 3 jours), discount 19,99 € ;
-  Android annuel 47,99 €, mensuel 9,99 €, promo 23,99 €.
+  Android annuel 47,99 €, mensuel 11,99 €, promo 23,99 € (TVA ajoutée par erreur ; alignés sur iOS le 13/10).
 - 28 derniers jours : 5 199 abonnements actifs, 698 essais actifs, MRR 17 574, revenus 74 838.
 
 **Ce qui va changer**
@@ -96,9 +96,9 @@ code iOS et Android. Coche les cases des actions que tu valides.
   `status` = `WAITING_FOR_REVIEW`, puis attendre la validation Apple (1 à 3 jours).
 - [ ] Tests prix, Play Console — **reporté après les résultats iOS** (décision du 27/09) : abonnement `sophia_pro`, 9 base plans
   `p1y-4999`, `p1y-5999`, `p1y-6999`, `p1y-2999`, `p1y-t50`, `p1y-t25`, `monthly-notrial`,
-  `weekly-699`, `annual-promo-2999` (essai 3 j en offre sur les annuels) ; aligner `p1y`
-  47,99 → 39,99 € et `annual-promo` 23,99 → 19,99 €. Les produits RevenueCat correspondants
-  existent déjà, rien à importer ensuite.
+  `weekly-699`, `annual-promo-2999` (essai 3 j en offre sur les annuels). L'alignement de `p1y`,
+  `monthly` et `annual-promo` sur iOS est fait (13/10, ci-dessous). Les produits RevenueCat
+  correspondants existent déjà, rien à importer ensuite.
 - [x] Tests prix, RevenueCat catalogue — **fait le 27/09 par le workflow** (`revenuecat · apply`) :
   14 produits créés (7 App Store, 7 Play), 16 produits rattachés à `premium` dont
   `Sophia_yearly_5999` et `Sophia_monthly_notrial`, 13 offerings avec leurs packages
@@ -133,6 +133,14 @@ code iOS et Android. Coche les cases des actions que tu valides.
   iOS 1.1.7+) -> offering `s__3999_mnotrial` (annuel 39,99 avec essai, mensuel 9,99 sans essai). Au 13/10 :
   90 % de chances de rapporter plus cadeau compris (88-91 %), 97-98 % hors cadeau ; essais annuels +28 %
   (98 %), essais payés 39 % contre 31 % (89 %). Android inchangé.
+- [x] Android aligné sur l'App Store le 13/10 à 10:05 UTC (`play · apply`, `scripts/play_pricing.py`) :
+  les prix Play avaient été saisis hors taxe et Google ajoutait la TVA (France 47,99 / 11,99 / 23,99 €).
+  376 prix mis au prix App Store du même pays, même devise : annuel 39,99 €, mensuel 9,99 €, cadeau
+  19,99 € (US 34,99 / 8,99 / 17,99 $ ; Pologne 149,99 zł ; Türkiye 1 999,99 ₺ à l'année). Relu par
+  Google puis via RevenueCat : aucun pays au-dessus d'iOS. Inchangés : Colombie et Pérou (déjà moins
+  chers), 30 pays facturés dans une autre devise sur Play (AR, UA, MA, KE…, passe ultérieure avec
+  conversion), 17 sans prix iOS. Les abonnés Android existants gardent leur prix. Détail : §9.9 de
+  `docs/plan-ab-tests-prix.md`.
 - [ ] Disponibilité des produits de test limitée aux pays de leur test (`available_in` du
   manifeste) : le 01/10, un abonné suédois est passé de `Sophia_yearly` (39,99 €) au palier 25 %
   depuis les réglages d'abonnement d'Apple, qui listent tous les produits du groupe vendus dans

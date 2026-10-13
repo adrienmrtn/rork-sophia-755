@@ -30,11 +30,14 @@ Offerings référencées par les apps (`SophiaPaywallContext` côté iOS, `Paywa
 
 | Offering | Courante | Package | iOS (App Store) | Android (Play) | Test Store |
 | --- | --- | --- | --- | --- | --- |
-| `fin_onboarding` | oui | `$rc_annual` | `Sophia_yearly` 39,99 €, essai 3 j | `sophia_pro:p1y` 47,99 € | `sophia_annual` |
+| `fin_onboarding` | oui | `$rc_annual` | `Sophia_yearly` 39,99 €, essai 3 j | `sophia_pro:p1y` 39,99 € | `sophia_annual` |
 | `fin_onboarding` | oui | `$rc_monthly` | `Sophia_monthly` 9,99 €, essai 3 j | `sophia_pro:monthly` 9,99 € | `sophia_monthly` |
 | `quizz` (+ `entrainement`) | non | `$rc_annual` / `$rc_monthly` | idem | idem | idem |
 | `debloquer_cours` | non | `$rc_annual` / `$rc_monthly` | idem | idem | idem |
-| `offre_discount` | non | `$rc_annual` | `discount_yearly` 19,99 € | `sophia_pro:annual-promo` 23,99 € | `discount_yearly` |
+| `offre_discount` | non | `$rc_annual` | `discount_yearly` 19,99 € | `sophia_pro:annual-promo` 19,99 € | `discount_yearly` |
+
+Prix Android alignés sur l'App Store pays par pays le 13/10/2026 (`scripts/play_pricing.py`) ; avant,
+Google ajoutait la TVA (47,99 / 11,99 / 23,99 € en France).
 
 Entitlement unique : `premium` (`entl5b0c63b9a1`). Les 20 autres offerings et la plupart des 42 paywalls
 sont des restes d'expériences terminées ; voir `PLAN.md` pour le nettoyage proposé.
