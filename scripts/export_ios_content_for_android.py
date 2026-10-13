@@ -119,7 +119,7 @@ def copy_locale_json(ref: str | None) -> list[str]:
 def export_courses_v2(ref: str | None) -> dict[str, int]:
     """Map iOS CoursesV2/<id>.<lang>.json → android courses_v2/<lang>/<id>.json."""
     counts: dict[str, int] = {lang: 0 for lang in ALL_LANGS}
-    pattern = re.compile(r"^(?P<id>.+)\.(?P<lang>[a-z]{2})\.json$")
+    pattern = re.compile(r"^(?P<id>.+)\.(?P<lang>[a-z]{2}(?:-[A-Z]{2})?)\.json$")
 
     sources: list[tuple[str, bytes]] = []  # (filename, bytes)
 
@@ -182,7 +182,8 @@ STORE_KEYS = (
 )
 PLAY_STORE_PHRASE = {
     "fr": "sur Google Play", "en": "on Google Play", "es": "en Google Play",
-    "de": "bei Google Play", "pt": "no Google Play", "it": "su Google Play",
+    "de": "bei Google Play", "pt": "no Google Play", "pt-PT": "no Google Play",
+    "it": "su Google Play",
     "tr": "Google Play'de", "pl": "w Google Play", "ro": "pe Google Play",
     "nl": "in Google Play", "el": "στο Google Play", "sv": "på Google Play",
     "hu": "a Google Play-en", "bg": "в Google Play", "cs": "na Google Play",

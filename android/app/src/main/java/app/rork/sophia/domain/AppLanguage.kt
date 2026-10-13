@@ -7,7 +7,9 @@ enum class AppLanguage(val code: String, val displayName: String, val flag: Stri
     ENGLISH("en", "English", "🇬🇧"),
     SPANISH("es", "Español", "🇪🇸"),
     GERMAN("de", "Deutsch", "🇩🇪"),
-    PORTUGUESE("pt", "Português", "🇵🇹"),
+    /** Brazilian Portuguese. A bare `pt` is Brazilian, as it is for Apple and Google. */
+    PORTUGUESE("pt", "Português (Brasil)", "🇧🇷"),
+    PORTUGUESE_PORTUGAL("pt-PT", "Português (Portugal)", "🇵🇹"),
     ITALIAN("it", "Italiano", "🇮🇹"),
     TURKISH("tr", "Türkçe", "🇹🇷"),
     POLISH("pl", "Polski", "🇵🇱"),
@@ -59,23 +61,59 @@ enum class AppLanguage(val code: String, val displayName: String, val flag: Stri
             "arb" to "ar",
         )
 
+        /**
+         * Set once a stored `pt` has been read under its current meaning. Until the Brazilian
+         * and European editions were split, `pt` was the only Portuguese and readers in
+         * Portugal chose it too; on the first launch after the split, a stored `pt` on a phone
+         * that asks for European Portuguese becomes `pt-PT`. After that it is never revisited.
+         */
+        const val PORTUGUESE_SPLIT_KEY = "sophia_pt_variant_resolved"
+
+        /** Regions whose Portuguese follows the European norm: CLDR's `pt_*` other than Brazil. */
+        private val EUROPEAN_PORTUGUESE_REGIONS =
+            setOf("PT", "AO", "MZ", "CV", "GW", "ST", "TL", "MO", "GQ", "LU", "CH")
+
         fun fromCode(code: String?): AppLanguage =
             entries.firstOrNull { it.code.equals(code, ignoreCase = true) } ?: DEFAULT
 
+        /** The app language for one device locale, or null when Sophia does not speak it. */
+        fun match(locale: Locale): AppLanguage? {
+            val primary = locale.language.lowercase(Locale.ROOT)
+            if (primary == "pt") {
+                val region = locale.country.uppercase(Locale.ROOT)
+                return if (region in EUROPEAN_PORTUGUESE_REGIONS) PORTUGUESE_PORTUGAL else PORTUGUESE
+            }
+            val normalized = DEVICE_ALIASES[primary] ?: primary
+            return entries.firstOrNull { it.code == normalized }
+        }
+
+        private fun deviceLocales(): List<Locale> = try {
+            val configLocales = android.content.res.Resources.getSystem().configuration.locales
+            (0 until configLocales.size()).map { configLocales[it] }
+        } catch (_: Exception) {
+            listOf(Locale.getDefault())
+        }
+
         /** Match device preferred languages to a supported app language. */
-        fun preferredFromDevice(): AppLanguage {
-            val locales = try {
-                val configLocales = android.content.res.Resources.getSystem().configuration.locales
-                (0 until configLocales.size()).map { configLocales[it] }
-            } catch (_: Exception) {
-                listOf(Locale.getDefault())
-            }
+        fun preferredFromDevice(): AppLanguage =
+            deviceLocales().firstNotNullOfOrNull { match(it) } ?: DEFAULT
+
+        /**
+         * Whether the phone asks for European Portuguese: the first Portuguese in its language
+         * list is a European one or, with no Portuguese listed, the phone sits in a
+         * European-norm region.
+         */
+        fun deviceWantsEuropeanPortuguese(): Boolean {
+            val locales = deviceLocales()
             for (locale in locales) {
-                val primary = locale.language.lowercase(Locale.ROOT)
-                val normalized = DEVICE_ALIASES[primary] ?: primary
-                entries.firstOrNull { it.code == normalized }?.let { return it }
+                when (match(locale)) {
+                    PORTUGUESE_PORTUGAL -> return true
+                    PORTUGUESE -> return false
+                    else -> Unit
+                }
             }
-            return DEFAULT
+            val region = locales.firstOrNull()?.country ?: Locale.getDefault().country
+            return region.uppercase(Locale.ROOT) in EUROPEAN_PORTUGUESE_REGIONS
         }
     }
 }

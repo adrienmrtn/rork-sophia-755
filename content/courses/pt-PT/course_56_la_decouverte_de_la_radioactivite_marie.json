@@ -1,0 +1,100 @@
+{
+  "id": "course_56_la_decouverte_de_la_radioactivite_marie",
+  "title": "A descoberta da radioatividade",
+  "subtitle": "Marie Curie",
+  "subject": "sciences",
+  "subcategory": "Descobertas que mudaram o mundo",
+  "description": "Marie Curie, com Pierre Curie e Henri Becquerel, abre o capítulo da radioatividade. Dois prémios Nobel, um trabalho esmagador e um legado imenso.",
+  "hero": {
+    "image": "la_decouverte_de_la_radioactivite_marie_curie",
+    "ratio": "16:9",
+    "hook": "Ela pesou toneladas de minério para isolar alguns gramas de um elemento invisível."
+  },
+  "sections": [
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Marie Curie** (nascida Maria Skłodowska) é a primeira mulher a receber um prémio Nobel. Continua a ser a única pessoa a receber **dois** em duas ciências diferentes: física, depois química."
+        },
+        {
+          "type": "paragraph",
+          "text": "O tema dela: a **radioatividade**, ou seja, o facto de certos átomos enviarem sozinhos energia e partículas."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
+      "title": "Uma porta estreita rumo à ciência",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nascida na Polónia, parte para estudar em Paris porque as universidades locais fecham muitas portas às mulheres. Trabalha duro, muitas vezes em condições precárias."
+        },
+        {
+          "type": "paragraph",
+          "text": "Casa-se com **Pierre Curie**, físico. Juntos, formam uma dupla de laboratório rara para a época."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
+      "title": "Nomear o invisível",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em **1896**, **Henri Becquerel** repara que o urânio velou placas fotográficas sem luz. Marie Curie decide estudar o fenómeno em detalhe. Inventa a palavra **radioatividade**."
+        },
+        {
+          "type": "image",
+          "asset": "marie_curie_pitchblende_radioactivity",
+          "ratio": "4:3",
+          "caption": "Toneladas de pechblenda para isolar o rádio e o polónio"
+        },
+        {
+          "type": "paragraph",
+          "text": "Com Pierre, descobre dois elementos novos: o **polónio** (nomeado em homenagem à Polónia) e o **rádio**. Para os isolar, é preciso tratar quantidades enormes de minério, a pechblenda."
+        },
+        {
+          "type": "funFact",
+          "text": "O rádio brilha fraquinho no escuro. No início, o mundo maravilhou-se, antes de perceber o perigo."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
+      "title": "Glória e preço a pagar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em **1903**, Marie, Pierre e Becquerel recebem o Nobel da Física. Em **1911**, Marie recebe sozinha o Nobel da Química. Pierre morre num acidente em 1906. Ela continua."
+        },
+        {
+          "type": "paragraph",
+          "text": "Durante a Primeira Guerra Mundial, organiza unidades móveis de radiografia para tratar os feridos. Expõe o corpo a doses que hoje se saberiam inaceitáveis."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
+      "title": "Um legado de duas faces",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A radioatividade permitiu a radioterapia contra certos cancros, e também as armas nucleares. O saber é neutro; os usos não são."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marie Curie transformou uma observação estranha em ciência nova: a radioatividade. O seu trabalho abriu a física moderna, ao preço de riscos então mal compreendidos."
+        }
+      ]
+    }
+  ]
+}

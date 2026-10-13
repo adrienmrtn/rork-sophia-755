@@ -1,0 +1,108 @@
+{
+  "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
+  "title": "Como foi descoberta a eletricidade?",
+  "subtitle": "De Franklin a Tesla",
+  "subject": "sciences",
+  "subcategory": "Descobertas que mudaram o mundo",
+  "description": "A eletricidade não foi inventada de uma vez. Primeiro foi observada, depois compreendida, depois domesticada. Estas são as etapas-chave.",
+  "hero": {
+    "image": "la_decouverte_de_l_electricite",
+    "ratio": "16:9",
+    "hook": "Do raio ao smartphone: dois séculos para domar o invisível."
+  },
+  "sections": [
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A eletricidade existe na natureza: raios, peixes elétricos, atritos. O que mudou o mundo foi aprender a **produzir**, **transportar** e usar essa força."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta história estende-se por mais de dois séculos, com experiências arriscadas e grandes rivalidades."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
+      "title": "Compreender o raio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No século XVIII, **Benjamin Franklin** mostra que o raio é um fenómeno elétrico. A sua experiência do papagaio de papel (muitas vezes contada de modo romanceado) quer provar que o céu e a máquina de atrito brincam com a mesma força."
+        },
+        {
+          "type": "image",
+          "asset": "benjamin_franklin_kite_lightning_experiment",
+          "ratio": "4:3",
+          "caption": "Franklin liga raio e eletricidade: uma ideia perigosa, mas fundadora"
+        },
+        {
+          "type": "paragraph",
+          "text": "Inventa-se também o **para-raios**, uma haste de metal que oferece ao raio um caminho seguro até ao solo. A eletricidade sai do mistério e entra na engenharia."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
+      "title": "Faraday: produzir corrente",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No século XIX, **Michael Faraday** mostra que um íman em movimento perto de um fio pode criar uma corrente elétrica. É a **indução**. Sem esta ideia, não há dínamo, não há alternador, não há central elétrica moderna."
+        },
+        {
+          "type": "image",
+          "asset": "faraday_electromagnetic_induction_experiment",
+          "ratio": "4:3",
+          "caption": "Faraday transforma movimento e magnetismo em corrente"
+        },
+        {
+          "type": "funFact",
+          "text": "Faraday vinha de um meio humilde e começou como encadernador. Aprendeu ciência a ler o que encadernava."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
+      "title": "Edison contra Tesla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No fim do século XIX, dois campos enfrentam-se. **Thomas Edison** defende a corrente contínua. **Nikola Tesla** (e a empresa Westinghouse) defendem a corrente alternada, mais fácil de transportar por longas distâncias."
+        },
+        {
+          "type": "image",
+          "asset": "tesla_edison_electric_power_station",
+          "ratio": "4:3",
+          "caption": "A corrente alternada vence para alimentar as cidades"
+        },
+        {
+          "type": "paragraph",
+          "text": "A corrente alternada leva a melhor nas redes urbanas. As cidades acendem-se. As fábricas mudam de ritmo."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
+      "title": "Um mundo ligado",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hoje, a eletricidade faz funcionar hospitais, comboios, a internet, frigoríficos. O desafio já não é só produzir, mas fazê-lo de modo limpo e fiável."
+        },
+        {
+          "type": "takeaway",
+          "text": "A eletricidade foi compreendida e depois domesticada: Franklin para o raio, Faraday para produzir a corrente, Tesla e a corrente alternada para levar a energia até às casas. O nosso dia a dia ainda depende disso."
+        }
+      ]
+    }
+  ]
+}

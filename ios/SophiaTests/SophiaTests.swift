@@ -101,6 +101,18 @@ struct AppearancePreferenceTests {
         }
     }
 
+    @Test func portugueseDeviceLanguagesPickTheRightEdition() {
+        #expect(AppLanguage.match(deviceIdentifier: "pt-PT") == .portuguesePortugal)
+        #expect(AppLanguage.match(deviceIdentifier: "pt_AO") == .portuguesePortugal)
+        #expect(AppLanguage.match(deviceIdentifier: "pt-Latn-PT") == .portuguesePortugal)
+        #expect(AppLanguage.match(deviceIdentifier: "pt-BR") == .portuguese)
+        #expect(AppLanguage.match(deviceIdentifier: "pt") == .portuguese)
+        #expect(AppLanguage.match(deviceIdentifier: "nn-NO") == .norwegian)
+        #expect(AppLanguage.match(deviceIdentifier: "ja-JP") == nil)
+        #expect(AppLanguage.portuguese.localeIdentifier == "pt_BR")
+        #expect(AppLanguage.portuguesePortugal.localeIdentifier == "pt_PT")
+    }
+
     @Test func frenchAndEnglishNightLabels() {
         #expect(AppLocalizable.string("settings.appearance.dark", language: .french) == "Nuit")
         #expect(AppLocalizable.string("settings.appearance.dark", language: .english) == "Night")

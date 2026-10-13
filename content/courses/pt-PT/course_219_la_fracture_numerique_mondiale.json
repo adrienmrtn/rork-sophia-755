@@ -1,0 +1,104 @@
+{
+  "id": "course_219_la_fracture_numerique_mondiale",
+  "title": "Porque é que um terço da humanidade ainda vive sem internet?",
+  "subtitle": "Um terço da humanidade offline",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economia & sociedade",
+  "description": "2,7 mil milhões de pessoas ainda não têm acesso à internet. Num mundo cada vez mais digital, esta falta de ligação torna-se uma nova forma de exclusão.",
+  "hero": {
+    "image": "la_fracture_numerique_mondiale",
+    "ratio": "16:9",
+    "hook": "O Quénia inventou o pagamento por telefone dez anos antes da Europa, por falta de agências bancárias."
+  },
+  "sections": [
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Enquanto as sociedades desenvolvidas vivem uma revolução impulsionada pela inteligência artificial, uma dura realidade persiste: **2,7 mil milhões de pessoas**, cerca de um terço da humanidade, ainda não têm acesso à internet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta **exclusão digital** não é só um atraso técnico: tornou-se uma verdadeira barreira, que afasta milhões de pessoas da educação, da saúde e da economia mundial. Vejamos porque persiste, e como alguns países tentam reduzir este fosso."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p1",
+      "title": "Um mapa do mundo em duas velocidades",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em 2024, cerca de 5,4 mil milhões de pessoas estão ligadas à internet no mundo, mas o progresso estagna nas regiões mais pobres. A Europa e a América do Norte ultrapassam 90% de ligação, enquanto a África subsariana se fica pelos 37%."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta exclusão tem várias causas. Primeiro, a falta de infraestrutura: instalar fibra ótica em certas regiões isoladas é considerado demasiado caro pelos operadores. Depois, o preço: em alguns países, um [[smartphone]] básico equivale a vários meses de salário. Por fim, a barreira da língua (cerca de 70% do conteúdo da web está em inglês) e a falta de formação digital limitam a utilização mesmo quando já existe uma ligação."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p2",
+      "title": "Quando a falta de infraestrutura força a inovação",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Esta exclusão funciona como um multiplicador de desigualdades. Num mundo em que o teletrabalho, o comércio online e o ensino à distância (os [[MOOC]]) se tornam a norma, ficar sem ligação é ficar invisível para a economia mundial."
+        },
+        {
+          "type": "image",
+          "asset": "digital_divide_africa_rural_village_smartphone",
+          "ratio": "16:9",
+          "caption": "Em muitas regiões rurais, o telemóvel continua a ser o único ponto de acesso à internet."
+        },
+        {
+          "type": "paragraph",
+          "text": "O Quénia ilustra outro caminho: por falta de agências bancárias, o país adotou em massa desde 2007 um sistema simples de pagamento por SMS, o [[M-Pesa queniano]], e ficou dez anos à frente da Europa. Este sistema permitiu que milhões de pessoas sem conta bancária fizessem transações seguras com um telemóvel comum."
+        },
+        {
+          "type": "funFact",
+          "text": "O Quénia apelidou esta estratégia de «salto de carneiro» tecnológico: em vez de instalar infraestruturas caras e já ultrapassadas, o país passou diretamente para uma solução mais moderna e mais barata."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p3",
+      "title": "Internet por satélite: uma solução com condições",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Para ligar as aldeias mais isoladas, novos atores apostam no espaço. O projeto [[Starlink]] envia milhares de satélites para órbita baixa, e permite uma ligação rápida mesmo em desertos ou nas altas montanhas, sem ser preciso instalar qualquer cabo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mas o custo da subscrição e do equipamento continua alinhado pelos padrões ocidentais, o que deixa estas soluções fora do alcance das populações rurais mais pobres sem ajuda externa. Resolver a exclusão digital, portanto, não se fará só com tecnologia: também exige vontade política para tornar a internet um bem acessível a todos."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p4",
+      "title": "A inteligência artificial, um fosso novo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A ascensão rápida da inteligência artificial ameaça aprofundar ainda mais esta exclusão. Exige enormes capacidades de cálculo e de dados, recursos concentrados nas mãos de poucos países e empresas. As populações sem ligação correm então o risco de depender de ferramentas pensadas sem ter em conta a cultura ou a língua local."
+        },
+        {
+          "type": "paragraph",
+          "text": "O hiato de competências entre alunos com e sem ligação também pode crescer muito depressa. O desafio dos próximos anos, portanto, já não será só levar uma ligação, mas sim garantir um acesso justo à criação de valor digital, conjugando descida de custos, conteúdos locais e formação."
+        },
+        {
+          "type": "takeaway",
+          "text": "2,7 mil milhões de pessoas continuam hoje excluídas da internet, uma exclusão que pode agravar-se com a inteligência artificial. Reduzir este hiato exige transformar a conectividade num bem verdadeiramente acessível a todos, e não só num produto à venda."
+        }
+      ]
+    }
+  ]
+}

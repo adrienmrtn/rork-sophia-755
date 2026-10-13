@@ -1,0 +1,131 @@
+{
+  "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la",
+  "title": "Porque é que a Lua se está a afastar da Terra?",
+  "subtitle": "3,8 cm por ano",
+  "subject": "sciences",
+  "subcategory": "A Terra e o Universo",
+  "description": "Todos os anos, a Lua afasta-se 3,8 cm de nós, mais ou menos a velocidade a que cresce uma unha. Quem a empurra são os nossos oceanos, e a fatura chega em dias mais longos e em eclipses totais com os dias contados.",
+  "author": "muhammad-zaheer",
+  "hero": {
+    "image": "full_moon_rising_over_ocean_horizon",
+    "ratio": "4:3",
+    "hook": "A Lua afasta-se de nós à velocidade a que crescem as nossas unhas: um dia, já nenhum eclipse total será possível."
+  },
+  "sections": [
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A que distância fica a Lua? Pode medir-se com laser. Durante as [[missões Apollo]], os astronautas deixaram refletores especiais no solo lunar. A partir da Terra, cientistas disparam impulsos de laser contra eles e cronometram o tempo que a luz leva a voltar. Resultado: a Lua fica em média a cerca de **385.000 km** de nós."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mas essa distância não é fixa. Todos os anos, a Lua afasta-se cerca de **3,8 cm**, mais ou menos a velocidade a que crescem as nossas unhas. De um ano para o outro, a mudança é minúscula. Ao longo de milhões de anos, vai-se somando. Então, o que poderá estar a empurrar a Lua para longe de nós?"
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p1",
+      "title": "A Lua levanta os oceanos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tal como a Terra, a Lua tem [[gravidade]], uma força que atrai os objetos para ela, incluindo a Terra. Mas essa atração não é igual em toda a parte. O lado da Terra voltado para a Lua é um pouco mais atraído do que o lado oposto. Essa diferença cria duas [[protuberâncias de maré]], ligeiros inchaços dos oceanos, uma virada para a Lua e a outra do lado oposto."
+        },
+        {
+          "type": "image",
+          "asset": "mont_saint_michel_bay_high_tide_aerial",
+          "ratio": "3:2",
+          "caption": "O Mont-Saint-Michel na maré baixa: o mar, que a Lua levanta duas vezes por dia, recuou para longe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Essas protuberâncias não ficam exatamente por baixo da Lua. A Terra gira sobre si mesma em **24 horas**, enquanto a Lua leva cerca de um mês a dar-lhe a volta. Como a Terra gira muito mais depressa, arrasta as protuberâncias um pouco à frente da Lua. Este pequeno desfasamento faz toda a diferença: permite que a protuberância puxe a Lua para a frente na sua [[órbita]]."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p2",
+      "title": "A Terra empurra a Lua",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A protuberância oceânica tem massa e, portanto, gravidade própria. Como fica um pouco à frente da Lua, a sua atração puxa a Lua ligeiramente para a frente enquanto esta gira em torno da Terra. Esse puxão acrescenta energia à órbita da Lua. Em vez de acelerar na mesma trajetória, a Lua passa para uma órbita um pouco mais larga. É por isso que a sua distância média aumenta cerca de **3,8 cm** por ano."
+        },
+        {
+          "type": "image",
+          "asset": "apollo_11_lunar_laser_retroreflector_nasa_1969",
+          "ratio": "4:3",
+          "caption": "Retrorrefletor de laser da Apollo (exemplar do Museu Nacional do Ar e do Espaço): o mesmo modelo está na Lua desde julho de 1969."
+        },
+        {
+          "type": "paragraph",
+          "text": "Não há, portanto, nenhuma força misteriosa a empurrar a Lua. A energia vem da rotação da Terra. Ao girar sobre si mesmo, o nosso planeta cede aos poucos à Lua parte da sua [[energia de rotação]], através das marés. Um empurrão ínfimo, mas repetido a cada volta."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p3",
+      "title": "A Terra também desacelera",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A energia dada à Lua tem um preço. A Terra perde aos poucos uma pequena parte da sua energia de rotação e, por isso, gira um bocadinho mais devagar. À escala de uma vida humana, a mudança é impercetível. Ao longo de milhões de anos, acumula-se."
+        },
+        {
+          "type": "funFact",
+          "text": "Num passado distante, a Terra girava mais depressa sobre si mesma: um dia durava menos do que as **24 horas** que conhecemos hoje."
+        },
+        {
+          "type": "paragraph",
+          "text": "As marés, portanto, fazem duas coisas ao mesmo tempo: afastam a Lua e travam a rotação da Terra. Não são dois fenómenos separados, mas os dois lados de uma mesma troca entre a Terra e a Lua. Essa troca acontece há milhares de milhões de anos e continua hoje, a cada maré."
+        }
+      ]
+    },
+    {
+      "id": "course_285_pourquoi_la_lune_s_eloigne_t_elle_de_la_p4",
+      "title": "O fim dos eclipses totais",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Este lento recuo vai acabar por mudar algo espetacular no nosso céu. Hoje, o Sol é cerca de **400 vezes** mais largo do que a Lua. Também está cerca de 400 vezes mais longe da Terra. Por pura coincidência, os dois astros parecem quase do mesmo tamanho. É isso que permite à Lua cobrir o Sol por inteiro num [[eclipse total do Sol]]."
+        },
+        {
+          "type": "image",
+          "asset": "total_solar_eclipse_corona_2017_nasa",
+          "ratio": "3:2",
+          "caption": "Vista da nave Artemis II em abril de 2026: a Lua encobre o Sol e deixa ver a sua coroa."
+        },
+        {
+          "type": "paragraph",
+          "text": "À medida que se afasta, a Lua vai parecer um pouco mais pequena. Daqui a cerca de **600 milhões de anos**, talvez mais, já não vai parecer suficientemente grande para esconder o Sol por completo. Os eclipses totais vão então desaparecer de vez. A Lua não está perto de escapar à Terra. Mas o seu lento recuo lembra que um espetáculo tão familiar como o céu noturno não tem nada de permanente."
+        },
+        {
+          "type": "takeaway",
+          "text": "A Lua afasta-se **3,8 cm** por ano porque as marés lhe transferem parte da energia de rotação da Terra: os nossos dias ficam mais longos e, daqui a 600 milhões de anos, os eclipses totais terão desaparecido."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "NASA Jet Propulsion Laboratory, «The Apollo Experiment That Keeps on Giving», 2019."
+    },
+    {
+      "text": "A. Fraknoi, D. Morrison e S. C. Wolff, Astronomy 2e, OpenStax, 2022, secção 4.6 «Ocean Tides and the Moon», p. 116-119."
+    },
+    {
+      "text": "NASA Science, «Tidal Locking»."
+    },
+    {
+      "text": "NASA Science, «Eclipses and the Moon»."
+    }
+  ]
+}

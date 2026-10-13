@@ -1,0 +1,112 @@
+{
+  "id": "course_69_comment_se_forment_les_eclairs",
+  "title": "Como se formam os raios?",
+  "subtitle": "Tempestades",
+  "subject": "sciences",
+  "subcategory": "A Terra e o Universo",
+  "description": "Um raio não é magia: é uma descarga elétrica enorme numa nuvem de tempestade. Vê como se prepara, e depois como atinge.",
+  "hero": {
+    "image": "comment_se_forment_les_eclairs",
+    "ratio": "16:9",
+    "hook": "Numa fração de segundo, o ar passa a 30.000 °C. Cinco vezes mais quente que a superfície do Sol."
+  },
+  "sections": [
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Um raio liberta uma energia colossal num piscar de olhos. O ar no canal do raio sobe a cerca de **30.000 °C**. O trovão é só o barulho desse calor brutal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para entender o raio, é preciso seguir três etapas: como a nuvem se carrega, como a eletricidade encontra um caminho, e porque é que se ouve o trovão depois."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p1",
+      "title": "Na nuvem, as cargas separam-se",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os raios nascem sobretudo nos [[cumulonimbus]]: nuvens de tempestade bem grandes, que podem subir até cerca de **15 km**. Lá dentro, o ar sobe e desce com muita força."
+        },
+        {
+          "type": "image",
+          "asset": "cumulonimbus_thunderstorm_cloud",
+          "ratio": "4:3",
+          "caption": "O cumulonimbus: a fábrica de tempestades"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nesse caos, pequenos **cristais de gelo** sobem, e grãos de gelo mais pesados (o [[granizo]]) descem. Quando eles se chocam, trocam-se cargas elétricas. Pouco a pouco, o alto da nuvem fica sobretudo positivo, a base sobretudo negativa."
+        },
+        {
+          "type": "funFact",
+          "text": "O lago de Maracaibo, na Venezuela, é um dos lugares mais atingidos por raios do planeta: tempestades quase diárias são observadas ali durante grande parte do ano."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p2",
+      "title": "Quando o ar cede: a descarga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O ar é um mau condutor. Mas se a diferença de carga ficar demasiado forte (muitas vezes **centenas de milhões de volts**), o ar acaba por ceder. As moléculas perdem eletrões: tornam-se condutoras. É a [[ionização do ar]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Um canal invisível parte da nuvem em pequenos saltos. Do solo, filetes elétricos sobem sobretudo a partir das pontas (árvores, para-raios, edifícios). Quando os dois se encontram, o circuito fecha-se."
+        },
+        {
+          "type": "paragraph",
+          "text": "A grande luz que se vê, o **arco de retorno**, sobe sobretudo do solo para a nuvem. A corrente pode chegar a dezenas de milhares de amperes. Várias descargas podem suceder-se no mesmo canal: daí o efeito de cintilação."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p3",
+      "title": "Porque é que o trovão chega depois",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O raio aquece o ar tão depressa que ele se dilata de uma vez. Essa onda de choque torna-se o **trovão**. A luz chega quase de imediato. O som avança a cerca de **340 m/s**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Truque simples: conta os segundos entre o relâmpago e o trovão e depois divide por **3**. Obténs uma estimativa da distância em quilómetros."
+        },
+        {
+          "type": "funFact",
+          "text": "A Terra é atingida por cerca de **100 raios por segundo** em média. Em França, contam-se cerca de **um milhão** de impactos no solo por ano."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p4",
+      "title": "Perigo, fertilidade e curiosidades",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O raio continua perigoso, sobretudo ao ar livre, perto de árvores isoladas ou da água. Ele também provoca incêndios. Mas tem um efeito menos conhecido: ajuda a fabricar compostos azotados que fertilizam o solo com a chuva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Acima das tempestades, câmaras também captaram fenómenos estranhos, como os [[sprites]]: clarões breves na alta atmosfera, invisíveis a olho nu a partir do solo."
+        },
+        {
+          "type": "takeaway",
+          "text": "Num cumulonimbus, colisões gelo/granizo separam as cargas. Quando a tensão fica demasiado forte, o ar ioniza-se: o raio aquece a ~30.000 °C, e essa dilatação brutal produz o trovão."
+        }
+      ]
+    }
+  ]
+}

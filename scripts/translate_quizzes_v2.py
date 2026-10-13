@@ -53,6 +53,7 @@ TRUE_FALSE = {
     "es": ["Verdadero", "Falso"],
     "de": ["Wahr", "Falsch"],
     "pt": ["Verdadeiro", "Falso"],
+    "pt-PT": ["Verdadeiro", "Falso"],
     "it": ["Vero", "Falso"],
     "tr": ["Doğru", "Yanlış"],
     "pl": ["Prawda", "Fałsz"],
@@ -86,7 +87,7 @@ UNIT_FIXED = {
     "km": {lang: "km" for lang in LANGS},
     "cm": {lang: "cm" for lang in LANGS},
     "ans": {
-        "en": "years", "es": "años", "de": "Jahre", "pt": "anos", "it": "anni",
+        "en": "years", "es": "años", "de": "Jahre", "pt": "anos", "pt-PT": "anos", "it": "anni",
         "tr": "yıl", "pl": "lat", "ro": "ani", "nl": "jaar", "el": "έτη",
         "sv": "år", "hu": "év", "bg": "години", "cs": "let",
         "da": "år",
@@ -102,7 +103,7 @@ UNIT_FIXED = {
         "et": "aastat",
     },
     "jours": {
-        "en": "days", "es": "días", "de": "Tage", "pt": "dias", "it": "giorni",
+        "en": "days", "es": "días", "de": "Tage", "pt": "dias", "pt-PT": "dias", "it": "giorni",
         "tr": "gün", "pl": "dni", "ro": "zile", "nl": "dagen", "el": "ημέρες",
         "sv": "dagar", "hu": "nap", "bg": "дни", "cs": "dny",
         "da": "dage",
@@ -118,7 +119,7 @@ UNIT_FIXED = {
         "et": "päeva",
     },
     "heures": {
-        "en": "hours", "es": "horas", "de": "Stunden", "pt": "horas", "it": "ore",
+        "en": "hours", "es": "horas", "de": "Stunden", "pt": "horas", "pt-PT": "horas", "it": "ore",
         "tr": "saat", "pl": "godzin", "ro": "ore", "nl": "uur", "el": "ώρες",
         "sv": "timmar", "hu": "óra", "bg": "часа", "cs": "hodin",
         "da": "timer",
@@ -134,7 +135,7 @@ UNIT_FIXED = {
         "et": "tundi",
     },
     "semaines": {
-        "en": "weeks", "es": "semanas", "de": "Wochen", "pt": "semanas", "it": "settimane",
+        "en": "weeks", "es": "semanas", "de": "Wochen", "pt": "semanas", "pt-PT": "semanas", "it": "settimane",
         "tr": "hafta", "pl": "tygodni", "ro": "săptămâni", "nl": "weken", "el": "εβδομάδες",
         "sv": "veckor", "hu": "hét", "bg": "седмици", "cs": "týdnů",
         "da": "uger",
@@ -150,7 +151,7 @@ UNIT_FIXED = {
         "et": "nädalat",
     },
     "fois": {
-        "en": "times", "es": "veces", "de": "Mal", "pt": "vezes", "it": "volte",
+        "en": "times", "es": "veces", "de": "Mal", "pt": "vezes", "pt-PT": "vezes", "it": "volte",
         "tr": "kez", "pl": "razy", "ro": "ori", "nl": "keer", "el": "φορές",
         "sv": "gånger", "hu": "alkalom", "bg": "пъти", "cs": "krát",
         "da": "gange",
@@ -166,7 +167,7 @@ UNIT_FIXED = {
         "et": "korda",
     },
     "millions": {
-        "en": "million", "es": "millones", "de": "Millionen", "pt": "milhões", "it": "milioni",
+        "en": "million", "es": "millones", "de": "Millionen", "pt": "milhões", "pt-PT": "milhões", "it": "milioni",
         "tr": "milyon", "pl": "milionów", "ro": "milioane", "nl": "miljoen", "el": "εκατομμύρια",
         "sv": "miljoner", "hu": "millió", "bg": "милиони", "cs": "milionů",
         "da": "millioner",
@@ -182,7 +183,7 @@ UNIT_FIXED = {
         "et": "miljonit",
     },
     "milliards": {
-        "en": "billion", "es": "miles de millones", "de": "Milliarden", "pt": "bilhões", "it": "miliardi",
+        "en": "billion", "es": "miles de millones", "de": "Milliarden", "pt": "bilhões", "pt-PT": "mil milhões", "it": "miliardi",
         "tr": "milyar", "pl": "miliardów", "ro": "miliarde", "nl": "miljard", "el": "δισεκατομμύρια",
         "sv": "miljarder", "hu": "milliárd", "bg": "милиарди", "cs": "miliard",
         "da": "milliarder",
@@ -198,7 +199,7 @@ UNIT_FIXED = {
         "et": "miljardit",
     },
     "milliers": {
-        "en": "thousands", "es": "miles", "de": "Tausende", "pt": "milhares", "it": "migliaia",
+        "en": "thousands", "es": "miles", "de": "Tausende", "pt": "milhares", "pt-PT": "milhares", "it": "migliaia",
         "tr": "binler", "pl": "tysiące", "ro": "mii", "nl": "duizenden", "el": "χιλιάδες",
         "sv": "tusentals", "hu": "ezrek", "bg": "хиляди", "cs": "tisíce",
         "da": "tusinder",

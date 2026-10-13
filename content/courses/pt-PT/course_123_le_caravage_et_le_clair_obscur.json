@@ -1,0 +1,144 @@
+{
+  "id": "course_123_le_caravage_et_le_clair_obscur",
+  "title": "Caravaggio e o chiaroscuro",
+  "subtitle": "1571-1610",
+  "subject": "art",
+  "subcategory": "Pintura & movimentos",
+  "description": "**Michelangelo Merisi**, chamado Caravaggio, revoluciona a pintura com um realismo brutal e um contraste extremo de luz e sombra: o chiaroscuro.",
+  "hero": {
+    "image": "le_caravage_et_le_clair_obscur",
+    "ratio": "16:9",
+    "hook": "Santos de pés sujos, uma luz de holofote: a arte nunca mais seria a mesma."
+  },
+  "sections": [
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Michelangelo Merisi**, chamado **Caravaggio** (1571-1610), quebra os códigos da beleza ideal herdados do Renascimento. Confronta o sagrado e o quotidiano: mendigos, tabernas, corpos cansados."
+        },
+        {
+          "type": "paragraph",
+          "text": "A sua arma: um chiaroscuro radical. Os corpos saltam do preto como sob um holofote. Essa rutura anuncia o espírito do [[Barroco na pintura]] e transforma o espectador em testemunha de um drama."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_self_portrait",
+          "ratio": "4:3",
+          "caption": "Caravaggio, pintor de génio e figura da vida romana turbulenta"
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p1",
+      "title": "Génio, violência e exílio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nascido perto de Milão, Caravaggio chega a Roma por volta de **1593**. A sua carreira muda em **1600** com as telas da capela Contarelli, na igreja de São Luís dos Franceses. *A Vocação de São Mateus* estonteia Roma: o sagrado tem ali o rosto da rua."
+        },
+        {
+          "type": "funFact",
+          "text": "Em Malta, é feito cavaleiro da Ordem e depois atirado para a prisão por ter agredido um superior. Foge de um forte tido como inexpugnável, com uma corda de cânhamo."
+        },
+        {
+          "type": "paragraph",
+          "text": "A sua vida é tão violenta como os seus quadros. Em **1606**, numa rixa, mata **Ranuccio Tomassoni**. Condenado à morte, foge para Nápoles, Malta e depois a Sicília. Caçado e ferido, morre aos **38 anos** em [[Porto Ercole]], poucos dias antes de um perdão papal."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p2",
+      "title": "O tenebrismo: uma luz que golpeia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Caravaggio inventa o **tenebrismo**, uma forma extrema do chiaroscuro. Acabou-se a luz suave que acaricia as formas: uma escuridão opaca, e corpos que dela saltam com força escultórica. A luz é artificial, como um holofote de palco."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_tenebrism_chiaroscuro_painting",
+          "ratio": "4:3",
+          "caption": "No tenebrismo, o preto concentra o olhar no drama"
+        },
+        {
+          "type": "funFact",
+          "text": "Para obter essa iluminação, trabalhava num atelier de paredes pretas, aberto apenas por uma pequena claraboia no alto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ao suprimir cenários e paisagens, força o olhar para os rostos e os gestos. Essa luz também serve à [[Contrarreforma]]: a Igreja católica quer emocionar os fiéis. Nele, a luz torna-se a graça que fere a alma sem aviso."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p3",
+      "title": "Santos que parecem gente da rua",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O que mais escandaliza é a sua recusa de idealizar. Escolhe os modelos na rua: operários, mendigos, cortesãs. A Virgem e os apóstolos têm rugas, pés sujos, corpos cansados."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_madonna_dei_pellegrini_painting",
+          "ratio": "4:3",
+          "caption": "A Madonna dos Peregrinos: pés nus e sujos em primeiro plano"
+        },
+        {
+          "type": "paragraph",
+          "text": "*A Morte da Virgem* é recusada: dizem que teria usado como modelo uma mulher afogada. *A Madonna dos Peregrinos* choca pelos pés sujos dos pobres ajoelhados. Recusa os artifícios do [[Maneirismo]], aquele estilo gracioso e deformado que o precedeu. Para ele, a salvação dirige-se primeiro aos humildes."
+        },
+        {
+          "type": "funFact",
+          "text": "A sua primeira versão de *São Mateus e o Anjo* mostrava um evangelista de pés sujos, com ar inculto. Os clientes exigiram que a pintasse de novo."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p4",
+      "title": "O caravagismo: uma Europa sob influência",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Não fundou escola, mas o seu estilo espalha-se: o **caravagismo**. [[Artemisia Gentileschi]] em Itália, Georges de La Tour em França, Zurbarán em Espanha, Rubens nas Flandres. Mais tarde, **Rembrandt** herda a sua poesia da sombra, **Velázquez** a sua dignidade do povo."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1600",
+              "title": "Capela Contarelli",
+              "detail": "Roma descobre A Vocação de São Mateus."
+            },
+            {
+              "date": "1606",
+              "title": "Crime e exílio",
+              "detail": "Condenado à morte, Caravaggio foge de Roma."
+            },
+            {
+              "date": "1610",
+              "title": "Morte em Porto Ercole",
+              "detail": "Ele morre aos 38 anos, pouco antes do perdão."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Esquecido durante dois séculos, é redescoberto no século XX. O seu enquadramento fechado e a sua luz ainda influenciam o cinema e a fotografia."
+        },
+        {
+          "type": "takeaway",
+          "text": "Caravaggio (1571-1610) impõe o tenebrismo e um realismo social radical. Ao pintar o sagrado com modelos da rua, torna-se o pai espiritual da pintura barroca."
+        }
+      ]
+    }
+  ]
+}

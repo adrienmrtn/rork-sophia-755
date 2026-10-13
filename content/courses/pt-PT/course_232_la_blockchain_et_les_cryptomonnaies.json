@@ -1,0 +1,112 @@
+{
+  "id": "course_232_la_blockchain_et_les_cryptomonnaies",
+  "title": "Como funcionam a blockchain e as criptomoedas?",
+  "subtitle": "Desde 2009",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Ambiente & futuro",
+  "description": "A **blockchain** inventou um registo que ninguém consegue falsificar sozinho, e abriu caminho para uma nova economia digital.",
+  "hero": {
+    "image": "la_blockchain_et_les_cryptomonnaies",
+    "ratio": "16:9",
+    "hook": "Um caderno de contas que ninguém possui, mas que milhares de computadores vigiam juntos."
+  },
+  "sections": [
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Imagina um caderno de contas que ninguém possui sozinho, mas que milhares de computadores atualizam ao mesmo tempo, em todo o mundo, e que é quase impossível falsificar. Essa é a ideia de partida da **blockchain**, uma tecnologia muitas vezes reduzida à sua primeira aplicação, o **Bitcoin**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ao permitir trocar valor sem passar por um banco, essa invenção fez nascer toda uma economia paralela, entre promessas de liberdade financeira e críticas duras ao custo energético."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p1",
+      "title": "Um registo que ninguém controla sozinho",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No coração da blockchain está uma ideia simples: o **registo distribuído**. Ao contrário de um banco, que guarda as contas nos seus próprios servidores, a blockchain apoia-se numa rede de [[pares]], ou seja, milhares de computadores que guardam, cada um, uma cópia idêntica de todas as transações."
+        },
+        {
+          "type": "funFact",
+          "text": "O primeiro bloco da blockchain Bitcoin, chamado «bloco génese», trazia uma mensagem escondida: a manchete de um jornal britânico de 3 de janeiro de 2009, sobre o resgate dos bancos pelo Estado. Um aceno político do criador."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada transação é primeiro verificada pela rede, depois agrupada com outras num **bloco**. Esse bloco liga-se ao anterior graças a um cálculo matemático chamado [[hashing]]: uma espécie de impressão digital única. O resultado é uma cadeia ininterrupta de blocos, daí o nome blockchain. Para alterar uma só transação antiga, seria preciso recalcular a cadeia inteira e convencer mais de metade da rede, o que é quase impossível em grande escala."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p2",
+      "title": "Bitcoin e Ethereum: do pagamento ao programa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O **Bitcoin**, lançado em **2009** por uma pessoa (ou um grupo) que ficou anónima sob o nome de [[Satoshi Nakamoto]], provou que um sistema monetário podia funcionar sem banco central. Para garantir a escassez, o criador fixou um teto rígido: nunca poderão existir mais de **21 milhões de bitcoins**, um pouco como o ouro é limitado na Terra."
+        },
+        {
+          "type": "image",
+          "asset": "blockchain_technology_distributed_ledger_visualization",
+          "ratio": "4:3",
+          "caption": "Cada transação é verificada por uma rede de computadores antes de ser acrescentada à cadeia"
+        },
+        {
+          "type": "paragraph",
+          "text": "Em 2015, uma segunda geração de blockchain surgiu com o **Ethereum**. A sua grande inovação: os **contratos inteligentes**. São programas que se executam sozinhos assim que uma condição é cumprida, por exemplo um reembolso automático em caso de atraso do comboio, sem necessidade de intermediário."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
+      "title": "As críticas: energia e instabilidade",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O sucesso das criptomoedas não vem sem problemas. O mais discutido é o **consumo de energia** da rede Bitcoin: o gasto elétrico anual compara-se hoje ao de um país inteiro como a Argentina."
+        },
+        {
+          "type": "paragraph",
+          "text": "O mercado também sofre de uma **volatilidade** extrema: o preço do Bitcoin pode variar 10% ou 20% em poucas horas. Essa instabilidade ainda o impede de se tornar uma verdadeira moeda no dia a dia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Por fim, o anonimato relativo das transações serviu por vezes para atividades ilegais. Mas a blockchain é, na verdade, totalmente transparente: as autoridades podem seguir os fluxos de dinheiro, o que torna o branqueamento mais difícil do que no sistema clássico do dinheiro em numerário."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p4",
+      "title": "Rumo a uma integração institucional",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hoje, as criptomoedas saem da margem e entram nas finanças tradicionais. Grandes bancos já se oferecem para guardar ativos digitais dos clientes, e vários Estados pensam em criar a sua própria moeda digital oficial, uma **[[MNBC]]** (moeda digital de banco central)."
+        },
+        {
+          "type": "paragraph",
+          "text": "As **stablecoins**, criptomoedas cujo preço se estabiliza graças a uma reserva de dólares ou de euros, servem de ponte entre os dois mundos. Além das finanças, setores como o luxo (para combater a contrafação), a logística (para rastrear contentores) ou a saúde (para proteger processos clínicos) também adotam a blockchain pela sua fiabilidade."
+        },
+        {
+          "type": "funFact",
+          "text": "Em 2021, El Salvador tornou-se o primeiro país do mundo a adotar o Bitcoin como moeda legal, a par do dólar americano, obrigando cada comerciante a aceitá-lo se tiver os meios técnicos."
+        },
+        {
+          "type": "takeaway",
+          "text": "Criada em 2009, a blockchain é um registo partilhado e quase impossível de falsificar, cuja oferta máxima de bitcoins está fixada em 21 milhões de unidades. Lançou as bases de uma nova economia digital, hoje em plena integração institucional."
+        }
+      ]
+    }
+  ]
+}

@@ -2,7 +2,7 @@ import Foundation
 import Observation
 
 /// The five languages courses are narrated in. A subset of `AppLanguage`: the app reads in
-/// 26 languages, narrations exist in these five.
+/// 27 languages, narrations exist in these five.
 nonisolated enum AudioLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
     case french = "fr"
     case english = "en"
@@ -36,7 +36,7 @@ nonisolated enum AudioLanguage: String, CaseIterable, Identifiable, Codable, Sen
         }
     }
 
-    /// The narration language matching an app language, nil for the 21 others.
+    /// The narration language matching an app language, nil for the 22 others.
     init?(appLanguageCode code: String) {
         self.init(rawValue: code)
     }

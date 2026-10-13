@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fill the App Store product page in every language the app speaks.
 
-Sophia ships 26 languages and App Store Connect will take 23 of them. Estonian,
+Sophia ships 27 languages and App Store Connect will take 24 of them. Estonian,
 Serbian and Bulgarian are not among the 50 locales Apple offers for store
 metadata, so those readers get a product page in the primary language and an app
 in theirs -- which works, because the app picks its language itself rather than
@@ -91,7 +91,9 @@ ASC_LOCALE: dict[str, str | None] = {
     "en": "en-US",
     "es": "es-ES",
     "de": "de-DE",
-    "pt": "pt-PT",
+    # Portuguese ships as two editions, each with its own store page.
+    "pt": "pt-BR",
+    "pt-PT": "pt-PT",
     "it": "it",
     "nl": "nl-NL",
     "pl": "pl",
@@ -125,9 +127,11 @@ ASC_LOCALE: dict[str, str | None] = {
 
 #: Regional variants that take a copy of their base locale, not a translation.
 #:
-#: The account already carries en-AU, en-CA, en-GB, es-MX and pt-BR on its
+#: The account already carries en-AU, en-CA, en-GB and es-MX on its
 #: subscriptions, each spelling its text exactly like the base locale -- all four
-#: English rows read "Unlocks all of Sophia's premium features". Handling only
+#: English rows read "Unlocks all of Sophia's premium features". pt-BR used to be
+#: here too; it is now the page of the Brazilian edition (`pt`), written for
+#: Brazil rather than copied from pt-PT. Handling only
 #: en-US would leave those rows on the previous release's copy while en-US moved
 #: on, which is worse than not touching them at all.
 #:
@@ -136,7 +140,6 @@ ASC_LOCALE: dict[str, str | None] = {
 VARIANTS: dict[str, tuple[str, ...]] = {
     "en-US": ("en-GB", "en-AU", "en-CA"),
     "es-ES": ("es-MX",),
-    "pt-PT": ("pt-BR",),
 }
 VARIANT_OF = {variant: base for base, group in VARIANTS.items() for variant in group}
 

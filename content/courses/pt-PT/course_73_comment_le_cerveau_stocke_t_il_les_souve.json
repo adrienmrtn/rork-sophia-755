@@ -1,0 +1,108 @@
+{
+  "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve",
+  "title": "Como é que o cérebro guarda as memórias?",
+  "subtitle": "Memória e neurónios",
+  "subject": "sciences",
+  "subcategory": "A Terra e o Universo",
+  "description": "A memória não é uma biblioteca de gavetas. É uma rede viva de neurónios que se reforçam, se reconstroem e às vezes se enganam.",
+  "hero": {
+    "image": "comment_le_cerveau_stocke_les_souvenirs",
+    "ratio": "16:9",
+    "hook": "Uma memória não é um ficheiro: é um caminho que o cérebro aprendeu a refazer."
+  },
+  "sections": [
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Imaginamos a memória como um disco rígido. Na verdade, é uma rede viva. Milhares de milhões de **neurónios**, células nervosas, reconectam-se, reforçam-se ou enfraquecem conforme o que se vive."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nada fica guardado num só lugar. Uma memória é um rasto espalhado, frágil no início, mais sólido depois do sono, e sempre um pouco reconstruído quando nos lembramos."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
+      "title": "Ligações que se reforçam",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entre dois neurónios, o ponto de contacto chama-se **sinapse**, a junção onde passa o sinal nervoso. O cérebro humano tem cerca de **86 mil milhões** de neurónios e mais de **100 biliões** de sinapses."
+        },
+        {
+          "type": "image",
+          "asset": "hippocampus_memory_brain",
+          "ratio": "auto",
+          "caption": "O hipocampo tem um papel central na formação das memórias"
+        },
+        {
+          "type": "paragraph",
+          "text": "Quando uma informação é repetida ou ligada a uma emoção forte, os mesmos neurónios ativam-se em conjunto. A sua ligação fica mais fácil de desencadear: é a [[potenciação de longa duração]], o reforço duradouro das sinapses. Quanto mais um circuito é usado, mais o caminho fica «largo». Uma memória, portanto, não é um objeto guardado, mas sim um **rasto** na rede."
+        },
+        {
+          "type": "funFact",
+          "text": "A capacidade de armazenamento do cérebro é estimada em cerca de **2,5 petabytes**, o equivalente a milhões de horas de vídeo. Mas não é um disco: é um tecido vivo que se reorganiza."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
+      "title": "O hipocampo, chefe de estação das memórias",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O **hipocampo**, pequena estrutura do [[lobo temporal]], região atrás das têmporas, não guarda as memórias para sempre. Recebe-as, **codifica-as**, transforma-as em rasto de memória e depois redistribui-as pelo **córtex**, a camada externa do cérebro. Essa transferência chama-se **consolidação**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Acontece sobretudo durante o **sono**. Sem um hipocampo funcional, é possível viver o instante presente, mas já não se fixam novas memórias conscientes. A pessoa fica presa num presente sem passado recente."
+        },
+        {
+          "type": "funFact",
+          "text": "O paciente **H.M.**, operado em 1953, já não formava novas memórias. Mesmo assim, progredia todos os dias no desenho ao espelho, sem se lembrar de já ter tentado: a memória dos gestos estava intacta."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p3",
+      "title": "Lembrar é reconstruir",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Evocar uma memória não é voltar a passar um vídeo. Cada vez que a recuperamos, ela volta a ficar **maleável**, modificável. As emoções do momento, os novos conhecimentos ou uma sugestão podem alterá-la antes de ser «regravada»."
+        },
+        {
+          "type": "paragraph",
+          "text": "A psicóloga **Elizabeth Loftus** mostrou que se podem implantar **falsas memórias** com perguntas simples. Daí a cautela atual perante testemunhos oculares: de boa-fé, o cérebro tapa os buracos."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p4",
+      "title": "Várias memórias num só cérebro",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A memória dos factos e dos episódios de vida, o que se pode contar, passa sobretudo pelo hipocampo. A [[memória procedimental]], a da bicicleta ou da natação, depende mais do **cerebelo**, estrutura na parte de trás do cérebro, e de outras estruturas mais antigas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Por isso alguns pacientes amnésicos esquecem o próprio nome mas ainda tocam piano. A memória não é uma gaveta única: é um mosaico de sistemas."
+        },
+        {
+          "type": "takeaway",
+          "text": "Uma memória é um rasto dinâmico: sinapses reforçadas, consolidadas sobretudo à noite, e reconstruídas a cada evocação. Nunca é um ficheiro parado."
+        }
+      ]
+    }
+  ]
+}
