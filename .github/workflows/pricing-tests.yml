@@ -27,6 +27,9 @@
 #              stop:expaa99dcbc5d,start:expc04e8ff651. The whole sequence is
 #              checked first (stop needs running, start needs a draft, never two
 #              running on one audience) and nothing runs if a step fails.
+#     rollout  serves an offering to a saved audience with a targeting rule
+#              (an experiment's winner), `only` = <audience id>:<offering>.
+#              Needs project_configuration:targeting_rules:read_write.
 #
 # Extra key permissions for that target: audiences:audiences:read_write and
 # project_configuration:experiments:read_write.
@@ -54,6 +57,7 @@ on:
           - prices
           - submit
           - switch
+          - rollout
       only:
         description: "appstore: one product id, e.g. Sophia_yearly_4999 (blank = all). revenuecat-experiments · switch: ordered steps, e.g. stop:exp…,start:exp…"
         type: string
@@ -127,6 +131,7 @@ jobs:
             revenuecat-experiments/plan)  set -- scripts/revenuecat_experiments.py plan ;;
             revenuecat-experiments/apply) set -- scripts/revenuecat_experiments.py apply ;;
             revenuecat-experiments/switch) set -- scripts/revenuecat_experiments.py switch --steps "$ONLY" ;;
+            revenuecat-experiments/rollout) set -- scripts/revenuecat_experiments.py rollout --target "$ONLY" ;;
             *) echo "unsupported: $TARGET / $ACTION" >&2; exit 1 ;;
           esac
           {

@@ -208,12 +208,61 @@ def switch(api_key: str, steps_text: str, check_only: bool) -> int:
     return 0
 
 
+def rollout(api_key: str, spec_text: str, check_only: bool) -> int:
+    """Serve an offering to a saved audience with a targeting rule (an experiment's winner).
+
+    `spec_text` is `<audience id>:<offering lookup key>`. Refused while an experiment still runs or
+    is paused on that audience (it would keep its customers), and idempotent: a rule already serving
+    that offering to that audience is left as it is.
+    """
+    project_id = resolve_project_id(api_key, os.environ.get("REVENUECAT_PROJECT_ID"))
+    audience_id, _, lookup = (part.strip() for part in spec_text.partition(":"))
+    if not audience_id.startswith("aud") or not lookup:
+        raise RevenueCatError(f"bad rollout {spec_text!r}: expected <audience id>:<offering lookup key>")
+    audience = request_json("GET", f"/projects/{project_id}/audiences/{audience_id}", api_key=api_key)
+    offerings = {o["lookup_key"]: o for o in paginate(api_key, f"/projects/{project_id}/offerings")}
+    if lookup not in offerings:
+        raise RevenueCatError(f"no offering {lookup!r}")
+    offering = offerings[lookup]
+    busy = [
+        e["display_name"] for e in paginate(api_key, f"/projects/{project_id}/experiments")
+        if e.get("audience_id") == audience_id and e.get("status") in ("running", "paused")
+    ]
+    if busy:
+        raise RevenueCatError(f"experiment still running or paused on this audience: {', '.join(busy)}; stop it first")
+    rules = paginate(api_key, f"/projects/{project_id}/targeting_rules")
+    same = [r for r in rules if r.get("audience_id") == audience_id and r.get("state") == "active"]
+    print(f"Project {project_id}: audience {audience.get('name')} ({audience_id}) -> offering {lookup} ({offering['id']})")
+    print(f"  audience rules: {json.dumps(audience.get('rules'), ensure_ascii=False)}")
+    if any((r.get("offering_id") or (r.get("offering") or {}).get("id")) == offering["id"] for r in same):
+        print("  an active rule already serves this offering to this audience: nothing to do")
+        return 0
+    if same:
+        raise RevenueCatError(f"another active rule already targets this audience: {[r.get('display_name') for r in same]}")
+    body = {
+        "display_name": f"{audience.get('name')} -> {lookup}",
+        "rule_type": "legacy",
+        "offering_id": offering["id"],
+        "audience_id": audience_id,
+        "state": "active",
+    }
+    if check_only:
+        print(f"  would create: {json.dumps(body, ensure_ascii=False)}")
+        print("\nChecked only: nothing was changed.")
+        return 0
+    created = request_json("POST", f"/projects/{project_id}/targeting_rules", api_key=api_key, body=body)
+    print(f"  created targeting rule {created.get('id')}: state {created.get('state')}")
+    print(f"  {json.dumps(created, ensure_ascii=False)[:800]}")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["plan", "apply", "switch"])
+    parser.add_argument("command", choices=["plan", "apply", "switch", "rollout"])
     parser.add_argument("--manifest", type=Path, default=MANIFEST)
     parser.add_argument("--steps", default="", help="switch: ordered steps, e.g. stop:expaa99dcbc5d,start:expc04e8ff651")
-    parser.add_argument("--check", action="store_true", help="switch: check the steps and change nothing")
+    parser.add_argument("--target", default="", help="rollout: <audience id>:<offering lookup key>")
+    parser.add_argument("--check", action="store_true", help="switch / rollout: check and change nothing")
     args = parser.parse_args()
     api_key = os.environ.get("REVENUECAT_SECRET_API_KEY", "").strip()
     if not api_key.startswith("sk_"):
@@ -222,6 +271,8 @@ def main() -> int:
     try:
         if args.command == "switch":
             return switch(api_key, args.steps, check_only=args.check)
+        if args.command == "rollout":
+            return rollout(api_key, args.target, check_only=args.check)
         manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
         return run(api_key, manifest, dry_run=args.command == "plan")
     except RevenueCatError as error:
