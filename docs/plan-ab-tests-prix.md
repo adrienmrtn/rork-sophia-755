@@ -406,7 +406,7 @@ arrondit loin de 50 % / 25 %.
 
 **Play Console (≈ 1 h)** — abonnement `sophia_pro` : base plans `p1y-4999`, `p1y-5999`, `p1y-6999`,
 `p1y-2999`, `p1y-t50`, `p1y-t25`, `monthly-notrial`, `weekly-699`, `annual-promo-2999` (essai 3 j
-en offre sur les annuels ; `p1y-5999` et `monthly-notrial` n'existaient que côté iOS). **Aligner** `p1y` 47,99 → 39,99 € et `annual-promo` 23,99 → 19,99 €.
+en offre sur les annuels ; `p1y-5999` et `monthly-notrial` n'existaient que côté iOS). **Aligner** `p1y` 47,99 → 39,99 € et `annual-promo` 23,99 → 19,99 € (fait le 13/10, § 9.9).
 Aucune revue. Puis importer les produits Play dans RevenueCat.
 
 **RevenueCat (≈ 2 h, dashboard ou MCP avec une clé `read_write`)** — les points 1 et 3 sont
@@ -654,6 +654,27 @@ Sans essai sur le mensuel, une partie des visiteurs prend l'essai de l'annuel. M
 (`exp90f7c3d0d8`) arrêté le 13/10 à 08:34 UTC ; la règle de ciblage `1ae80bc2cd` (créée à 08:38 par
 `revenuecat-experiments · rollout`) sert `s__3999_mnotrial` à l'audience S. Les variantes à 49,99 du test S
 sont abandonnées (aucun gain mesuré).
+
+### 9.9 Android aligné sur l'App Store (13/10)
+
+Les prix de `sophia_pro` avaient été saisis comme hors taxe : Google ajoutait la TVA de chaque pays
+(France 47,99 € au lieu de 39,99 €, Malte 47,19 € = 39,99 × 1,18) et convertissait le reste à ses taux
+(Pologne +40 %, Türkiye +33 %, US +31 % par rapport à iOS). Le 13/10 à 10:05 UTC, `play · apply`
+(`scripts/play_pricing.py`) a mis chaque prix Play au prix App Store du même pays, quand la devise est la
+même :
+
+| Base plan Play | Référence iOS | Prix baissés | France avant → après | US avant → après |
+|---|---|---|---|---|
+| `p1y` | `Sophia_yearly` | 126 | 47,99 → 39,99 € | 45,99 → 34,99 $ |
+| `monthly` | `Sophia_monthly` | 125 | 11,99 → 9,99 € | 11,99 → 8,99 $ |
+| `annual-promo` | `discount_yearly` | 125 | 23,99 → 19,99 € | 22,99 → 17,99 $ |
+
+Relu par Google (376 sur 376), puis via le `store_state` RevenueCat : aucun pays au-dessus d'iOS.
+Inchangés : Colombie et Pérou (déjà moins chers), 30 pays facturés dans une autre devise sur Play qu'iOS
+(AR, AZ, UA, MA, KE, RS…), 17 pays sans prix iOS. Les abonnés existants gardent leur prix (Google ne les
+migre pas). Les audiences des tests sont iOS uniquement : aucun test n'est touché. Le premier essai a été
+refusé sans rien écrire (version de régions 2022/02 au lieu de 2026/01), corrigé dans #267. Base de
+comparaison : conversion Android le jour de l'installation 2,8 % (iOS 7,9 %) avant le changement.
 
 ## 10. Grille de prix par pays (hypothèse, arrêtée à J+45)
 
