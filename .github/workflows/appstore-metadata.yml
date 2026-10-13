@@ -50,9 +50,9 @@ on:
         type: string
         default: ""
       version:
-        description: "create-version: the version to open, e.g. 1.1.10"
+        description: "create-version: the version to open, e.g. 1.10"
         type: string
-        default: "1.1.10"
+        default: "1.10"
       include_edits:
         description: "prune: also delete drafts on locales that already carry an approved row"
         type: boolean

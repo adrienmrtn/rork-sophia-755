@@ -14,7 +14,7 @@ Four steps, each its own subcommand, in the order you run them:
     check   validate lengths and locales -- no network, no account needed
     push    write the tree back to App Store Connect
 
-Before the first push of a release, ``create-version 1.1.10`` opens that version
+Before the first push of a release, ``create-version 1.10`` opens that version
 in App Store Connect when the previous one is already live.
 
 A fifth subcommand, ``prune``, runs outside that cycle and only deletes: it
@@ -1604,7 +1604,7 @@ def main() -> int:
     creator = sub.add_parser(
         "create-version", help="open the next iOS version in App Store Connect"
     )
-    creator.add_argument("version", help="the version string, e.g. 1.1.10")
+    creator.add_argument("version", help="the version string, e.g. 1.10")
     creator.add_argument("--dry-run", action="store_true", help="report, create nothing")
 
     pruner = sub.add_parser(
