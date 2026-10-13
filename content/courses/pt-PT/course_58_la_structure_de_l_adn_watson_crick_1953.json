@@ -1,0 +1,102 @@
+{
+  "id": "course_58_la_structure_de_l_adn_watson_crick_1953",
+  "title": "A estrutura do ADN",
+  "subtitle": "1953",
+  "subject": "sciences",
+  "subcategory": "Descobertas que mudaram o mundo",
+  "description": "Em 1953, Watson e Crick descrevem a dupla hélice do ADN. Por trás dessa glória, o trabalho decisivo de Rosalind Franklin.",
+  "hero": {
+    "image": "la_structure_de_l_adn",
+    "ratio": "16:9",
+    "hook": "A forma de uma molécula, e o segredo da hereditariedade."
+  },
+  "sections": [
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Já se sabia que os traços passam dos pais para os filhos. Mas que objeto químico transporta essa informação? Em meados do século XX, a resposta torna-se mais clara: o **ADN**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Em **1953**, **James Watson** e **Francis Crick** publicam um modelo famoso: a **dupla hélice**. Essa forma explica como o ADN se pode copiar."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
+      "title": "Encontrar o suporte da hereditariedade",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O ADN (ácido desoxirribonucleico) é uma molécula longa presente nas nossas células. Contém «letras» químicas que formam um código. Mas nos anos 1940-1950 ainda não se conhece a sua forma em 3D."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sem a forma, é difícil perceber como esse código se pode duplicar a cada divisão celular."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p2",
+      "title": "A foto que muda tudo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "rosalind_franklin_photo_51_x_ray",
+          "ratio": "4:3",
+          "caption": "A Foto 51 de Rosalind Franklin revela uma estrutura helicoidal"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Rosalind Franklin**, física e química, obtém imagens do ADN por raios X. A sua famosa **Foto 51** mostra pistas claras de uma hélice."
+        },
+        {
+          "type": "paragraph",
+          "text": "Watson e Crick veem esses dados (em condições hoje vistas como injustas para Franklin) e constroem o modelo. Franklin morre em 1958; o Nobel de 1962 vai para Watson, Crick e Wilkins, não para ela."
+        },
+        {
+          "type": "funFact",
+          "text": "Franklin também fez trabalhos importantes sobre vírus. O seu papel no ADN ficou demasiado tempo apagado nos relatos populares."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
+      "title": "Porque é que a dupla hélice importa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "dna_double_helix_model_watson_crick",
+          "ratio": "4:3",
+          "caption": "Duas cadeias complementares: a cópia torna-se imaginável"
+        },
+        {
+          "type": "paragraph",
+          "text": "Duas cadeias enrolam-se. As letras ficam frente a frente, aos pares. Quando as cadeias se separam, cada uma pode servir de modelo para reconstruir a outra. A hereditariedade torna-se um mecanismo químico compreensível."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
+      "title": "A biologia moderna começa aqui",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dessa descoberta nascem a genética moderna, a sequenciação, os testes de ADN, as terapias génicas. E também debates éticos: o que fazer com esse poder?"
+        },
+        {
+          "type": "takeaway",
+          "text": "Em **1953**, o modelo da dupla hélice explica como o ADN guarda e copia a informação dos seres vivos. Franklin deu provas decisivas, apagadas demasiado tempo do relato."
+        }
+      ]
+    }
+  ]
+}

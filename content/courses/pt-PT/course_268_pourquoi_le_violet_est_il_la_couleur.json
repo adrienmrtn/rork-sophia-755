@@ -1,0 +1,131 @@
+{
+  "id": "course_268_pourquoi_le_violet_est_il_la_couleur",
+  "title": "Porque é que o roxo é a cor dos reis?",
+  "subtitle": "A púrpura de Tiro",
+  "subject": "sciences",
+  "subcategory": "Descobertas que mudaram o mundo",
+  "description": "A cor dos imperadores romanos saía de uma glândula de caracol marinho, à razão de alguns gramas de tinta para milhares de conchas. Um químico redescobriu a receita em 1998, e hoje a molécula serve de transístor.",
+  "author": "guido-manuel-de-la-torre-olvera",
+  "hero": {
+    "image": "justinian_mosaic_san_vitale_ravenna_purple_robe",
+    "ratio": "4:3",
+    "hook": "O corante mais caro da Antiguidade sai da glândula de veneno de um caracol marinho."
+  },
+  "sections": [
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A púrpura era a cor **mais cara** do mundo antigo. Púrpura real, púrpura imperial: enfeitava a orla da toga dos senadores romanos e depois passou a ser tão controlada que usá-la podia custar a vida. Vinha de um caracol marinho, o [[múrex]], recolhido ao largo de [[Tiro]], na Fenícia, na costa do atual Líbano. Foi esta cidade que deu nome à cor."
+        },
+        {
+          "type": "paragraph",
+          "text": "A química cabe numa molécula. Pega no [[índigo]], o azul da ganga, e prende-lhe **dois átomos** de [[bromo]]. Esta é toda a diferença entre o corante mais barato da história e o mais caro. Porque, para extrair a púrpura do animal, são precisos **milhares de caracóis** para alguns gramas de tinta."
+        }
+      ]
+    },
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_p1",
+      "title": "Uma cor reservada aos imperadores",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os fenícios já tingiam com púrpura por volta de **1200** a.C., e o comércio sobreviveu-lhes. A Grécia apoderou-se dele, depois Roma, e a produção continuou até à queda de Constantinopla, a capital do Império Bizantino, em **1453**. Durante a maior parte destes **vinte e seis séculos**, a cor foi controlada."
+        },
+        {
+          "type": "paragraph",
+          "text": "Roma definia quem tinha o direito de a usar. Mais tarde, os imperadores reservaram a **púrpura integral** só para si. O tom é bonito, mas foi sobretudo o preço que o tornou um sinal fiável: se te podes vestir de caracóis, toda a gente percebe. É por isso que o roxo ainda hoje parece real. A associação sobreviveu ao corante, ao império e ao caracol. Herdámos um símbolo de estatuto deixado por uma indústria que já não existe."
+        }
+      ]
+    },
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_p2",
+      "title": "Doze mil caracóis para uma barra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os múrex vivem no Mediterrâneo oriental e ao longo da costa atlântica de Marrocos. Segundo um relato antigo, **12.000** conchas rendem cerca de **1,4 grama** de tinta, o suficiente para tingir a barra de uma única peça de roupa. A cor vem de uma única glândula, sob a concha. Os tintureiros antigos esmagavam os caracóis inteiros; os investigadores de hoje retiram só a glândula."
+        },
+        {
+          "type": "image",
+          "asset": "bolinus_brandaris_murex_shells_tyrian_purple",
+          "ratio": "5:4",
+          "caption": "Conchas de múrex em Tiro, no Líbano: o caracol marinho cuja glândula fornece a púrpura."
+        },
+        {
+          "type": "paragraph",
+          "text": "O caracol não produz esta cor para ficar bonito. A sua secreção adormece as presas e protege os ovos das bactérias. A púrpura dos imperadores é, portanto, o subproduto de uma **arma química**, uma defesa de molusco que os tintureiros transformaram em adorno."
+        },
+        {
+          "type": "funFact",
+          "text": "O bromo da molécula vem do próprio mar, que está cheio dele. Um animal terrestre não conseguiria fabricar essa cor."
+        }
+      ]
+    },
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_p3",
+      "title": "Um caracol, várias púrpuras",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Não existe uma única púrpura de Tiro. O que sai da glândula é uma mistura, e o tom depende das proporções. Sem bromo, a molécula é um índigo azul comum. Um átomo de bromo torna-a roxa. **Dois** dão o púrpura avermelhado que os romanos tanto apreciavam."
+        },
+        {
+          "type": "paragraph",
+          "text": "A luz muda tudo de novo. O sol arranca átomos de bromo e empurra a cor para o **azul**: é assim que o mesmo caracol também fornece o [[tekhelet]], o azul das franjas rituais judaicas. O calor também desloca o tom. O tintureiro, então, não segue a receita de uma cor: conduz uma reação. Os químicos de hoje sabem separar a mistura e ler exatamente que moléculas deram o seu tom a um tecido antigo."
+        }
+      ]
+    },
+    {
+      "id": "course_268_pourquoi_le_violet_est_il_la_couleur_p4",
+      "title": "Da tina de tingimento ao transístor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A receita perdeu-se durante séculos. Só em **1998** é que um químico, depois de muitas tentativas, percebeu como a tina devia funcionar. Leu relatos dos séculos XV a XVIII, inspirou-se no modo como os tintureiros fermentam o pastel-dos-tintureiros, uma planta que dá azul, e consultou a receita incompleta deixada por [[Plínio, o Velho]]. Ajustando o sal marinho e acrescentando potassa, conseguiu finalmente um púrpura profundo na lã."
+        },
+        {
+          "type": "paragraph",
+          "text": "A molécula ganhou mais tarde uma segunda vida. Conduz eletricidade e transporta os **dois tipos** de carga elétrica, algo raro. Evaporada em camada fina, funciona como um [[transístor]]. O que a faz funcionar é o mesmo encaixe apertado entre moléculas que fixa a cor no tecido."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "por volta de 1200 a.C.",
+              "title": "Os fenícios tingem com púrpura",
+              "detail": "O comércio parte de Tiro e vai sobreviver aos seus fundadores."
+            },
+            {
+              "date": "1453",
+              "title": "Fim da produção",
+              "detail": "A queda de Constantinopla encerra vinte e seis séculos de púrpura."
+            },
+            {
+              "date": "1998",
+              "title": "A receita redescoberta",
+              "detail": "Um químico faz a tina funcionar de novo e tinge a lã de púrpura profundo."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "A púrpura de Tiro deve o seu prestígio à raridade, milhares de caracóis para alguns gramas, e a sua molécula, um índigo com dois átomos de bromo, serve hoje de transístor."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "University of Chicago Library, «Tyrian Purple», The Origins of Color: Organic Dyes and Lakes (exposição online).",
+      "url": "https://www.lib.uchicago.edu/collex/exhibits/originsof-color/organic-dyes-and-lakes/tyrian-purple/"
+    }
+  ]
+}

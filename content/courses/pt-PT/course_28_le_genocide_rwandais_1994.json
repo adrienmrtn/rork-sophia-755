@@ -1,0 +1,131 @@
+{
+  "id": "course_28_le_genocide_rwandais_1994",
+  "title": "Como foi possível o genocídio dos tutsis no Ruanda?",
+  "subtitle": "1994",
+  "subject": "histoire",
+  "subcategory": "Guerra Fria & mundo contemporâneo",
+  "description": "Em **100 dias**, entre abril e julho de **1994**, centenas de milhares de tutsis e de hutus moderados são massacrados no Ruanda. O genocídio mais rápido do século desenrola-se diante dos olhos do mundo.",
+  "hero": {
+    "image": "le_genocide_rwandais_1994",
+    "ratio": "16:9",
+    "hook": "Cem dias. Centenas de milhares de mortos. E um mundo que escolheu não intervir."
+  },
+  "sections": [
+    {
+      "id": "course_28_le_genocide_rwandais_1994_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entre abril e julho de **1994**, em apenas **100 dias**, o Ruanda vive uma tragédia de uma densidade rara na história. Entre **500.000** e **800.000** tutsis, e também hutus moderados, são assassinados de forma sistemática."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este genocídio distingue-se pela rapidez e pela inação da comunidade internacional. Compreender 1994 é compreender raízes coloniais, um planeamento político e um silêncio diplomático."
+        }
+      ]
+    },
+    {
+      "id": "course_28_le_genocide_rwandais_1994_p1",
+      "title": "Quando a identidade se torna um documento",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No Ruanda, hutus (cerca de **85%**) e tutsis (cerca de **14%**) não formavam, antes da colonização, «raças» fixas. A distinção era sobretudo social e económica: um hutu enriquecido em gado podia tornar-se tutsi, e vice-versa."
+        },
+        {
+          "type": "funFact",
+          "text": "Em **1933**, a administração belga fixa a pertença no **bilhete de identidade étnico**. Classifica-se por vezes pela forma do nariz... ou pelo número de vacas: acima de dez, a pessoa é tutsi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Os colonos belgas, influenciados por teorias raciais, apoiam-se primeiro nos tutsis e depois voltam-se para a maioria hutu com a aproximação da independência (**1962**). Pogroms empurram milhares de tutsis para o exílio. O ódio torna-se herança."
+        }
+      ]
+    },
+    {
+      "id": "course_28_le_genocide_rwandais_1994_p2",
+      "title": "Um extermínio planeado",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nos anos 1990, o presidente **Juvénal Habyarimana** dirige o país. O seu regime está em guerra contra a [[Frente Patriótica Ruandesa]], formada por exilados tutsis. Os extremistas do [[Hutu Power]] formam as milícias Interahamwe. [[A Rádio das Mil Colinas]] espalha todos os dias o ódio e desumaniza os tutsis."
+        },
+        {
+          "type": "image",
+          "asset": "rwandan_genocide_1994",
+          "ratio": "4:3",
+          "caption": "O Ruanda em 1994, palco de um genocídio planeado"
+        },
+        {
+          "type": "paragraph",
+          "text": "A **6 de abril de 1994**, o avião presidencial é abatido. Numa hora, as barreiras fecham-se. Cerca de **8.000** pessoas são mortas por dia. O massacre é de proximidade: vizinhos, colegas, autoridades locais. Não é uma explosão espontânea. É uma operação organizada."
+        }
+      ]
+    },
+    {
+      "id": "course_28_le_genocide_rwandais_1994_p3",
+      "title": "O silêncio do mundo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No local, [[A MINUAR e o general Dallaire]], a missão da ONU comandada pelo canadiano Roméo Dallaire, tem apenas um mandato de observação. Traumatizados pelo fracasso na [[Somália]], os Estados Unidos travam qualquer intervenção. Evita-se até a palavra «genocídio», que obrigaria a agir segundo a Convenção de 1948."
+        },
+        {
+          "type": "image",
+          "asset": "paul_kagame_rpf_rwanda",
+          "ratio": "4:3",
+          "caption": "Paul Kagame e a FPR, cuja ofensiva põe fim aos massacres"
+        },
+        {
+          "type": "paragraph",
+          "text": "A França lança tardiamente a operação [[Turquesa]], oficialmente humanitária, mas controversa por ter facilitado a fuga de genocidas para o [[Zaire]], a atual República Democrática do Congo. Não é a ONU que trava as matanças: é a ofensiva da FPR, liderada por **Paul Kagame**, que toma Kigali, a capital, a **4 de julho de 1994**."
+        }
+      ]
+    },
+    {
+      "id": "course_28_le_genocide_rwandais_1994_p4",
+      "title": "Justiça e memória",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Depois de julho de 1994, o país precisa de julgar o injulgável. Os tribunais [[Gacaca]], jurisdições de bairro, tratam de quase dois milhões de processos. O [[Tribunal Penal Internacional para o Ruanda]] julga os grandes organizadores. O memorial de Kigali acolhe mais de **250.000** vítimas."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1933",
+              "title": "Bilhetes de identidade étnicos",
+              "detail": "A colonização belga fixa hutu e tutsi."
+            },
+            {
+              "date": "6 de abril de 1994",
+              "title": "Atentado e viragem",
+              "detail": "O avião presidencial é abatido; o genocídio começa."
+            },
+            {
+              "date": "abr.-jul. 1994",
+              "title": "100 dias",
+              "detail": "500.000 a 800.000 mortos; inação internacional."
+            },
+            {
+              "date": "4 jul. 1994",
+              "title": "Tomada de Kigali",
+              "detail": "A FPR põe fim aos massacres."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Em **100 dias** (1994), centenas de milhares de tutsis são assassinados no Ruanda. Apesar dos alertas, o mundo não intervém; só a ofensiva da FPR trava o genocídio."
+        }
+      ]
+    }
+  ]
+}

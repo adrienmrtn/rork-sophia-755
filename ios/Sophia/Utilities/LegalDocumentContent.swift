@@ -161,9 +161,24 @@ private static let termsGerman: [LegalSection] = [
         LegalSection(id: "10", title: "10. Kontakt", body: "Bei Fragen zu diesen Bedingungen kannst du uns über den App Store oder per E-Mail an die auf unserer App-Store-Seite angegebene Adresse kontaktieren."),
     ]
 
-    // MARK: - Terms (PT)
+    // MARK: - Terms (PT-BR)
 
 private static let termsPortuguese: [LegalSection] = [
+        LegalSection(id: "1", title: "1. Aceitação dos termos", body: "Ao baixar, instalar ou usar o aplicativo Sophia (doravante “o Aplicativo”), você aceita ficar vinculado aos presentes Termos de Uso (“Termos”). Se você não aceitar estes termos, não use o Aplicativo."),
+        LegalSection(id: "2", title: "2. Descrição do serviço", body: "A Sophia é um aplicativo móvel educativo de cultura geral que oferece cursos, questionários e conteúdos interativos. O Aplicativo está disponível para iOS e pode oferecer conteúdos gratuitos, bem como assinaturas premium."),
+        LegalSection(id: "3", title: "3. Conta e uso", body: "A criação de uma conta (pela Apple ou pelo Google) é oferecida para salvar seu progresso e sincronizá-lo entre seus dispositivos. Os novos usuários fazem login no primeiro acesso; os usuários existentes podem criar uma conta a qualquer momento nas configurações. Sem conta, seus dados de progresso são armazenados localmente no seu dispositivo, e reinstalar o Aplicativo pode resultar na perda desses dados. Você pode excluir sua conta a qualquer momento nas configurações."),
+        LegalSection(id: "4", title: "4. Assinaturas e compras", body: "A Sophia oferece assinaturas premium (mensal e anual) pela App Store da Apple. Os preços são apresentados no Aplicativo e podem variar de acordo com seu país. O pagamento é cobrado na sua conta Apple ID após a confirmação da compra. A assinatura se renova automaticamente, exceto se a renovação automática for desativada pelo menos 24 horas antes do fim do período em curso. Você pode gerenciar e cancelar suas assinaturas nas configurações da sua conta da App Store."),
+        LegalSection(id: "5", title: "5. Período de teste gratuito", body: "Pode ser oferecido um período de teste gratuito aos novos usuários. No fim do período de teste, a assinatura será automaticamente convertida em uma assinatura paga, salvo cancelamento prévio. Qualquer parte não utilizada do período de teste gratuito é perdida ao adquirir uma assinatura."),
+        LegalSection(id: "6", title: "6. Propriedade intelectual", body: "Todos os conteúdos do Aplicativo (textos, ilustrações, design, logotipo, cursos, questionários) estão protegidos por direitos autorais e permanecem propriedade exclusiva da Sophia. Qualquer reprodução, distribuição ou utilização não autorizada é estritamente proibida."),
+        LegalSection(id: "7", title: "7. Limitação de responsabilidade", body: "Os conteúdos disponibilizados no Aplicativo são fornecidos para fins educativos e informativos. A Sophia não garante a exatidão, integralidade ou atualidade das informações apresentadas. O Aplicativo é fornecido “no estado em que se encontra”, sem qualquer garantia."),
+        LegalSection(id: "8", title: "8. Alteração dos termos", body: "A Sophia se reserva o direito de alterar os presentes Termos a qualquer momento. Os usuários serão informados de alterações significativas. A continuidade do uso do Aplicativo após uma alteração implica a aceitação dos novos termos."),
+        LegalSection(id: "9", title: "9. Lei aplicável", body: "Os presentes Termos são regidos pela lei francesa. Qualquer litígio relativo à interpretação ou execução destes Termos será submetido aos tribunais competentes."),
+        LegalSection(id: "10", title: "10. Contato", body: "Para qualquer questão relativa aos presentes Termos, você pode entrar em contato conosco pela App Store ou por e-mail, no endereço indicado na nossa página da App Store."),
+    ]
+
+    // MARK: - Terms (PT-PT)
+
+private static let termsPortuguesePortugal: [LegalSection] = [
         LegalSection(id: "1", title: "1. Aceitação dos termos", body: "Ao descarregar, instalar ou utilizar a aplicação Sophia (doravante «a Aplicação»), aceitas ficar vinculado aos presentes Termos de Utilização («Termos»). Se não aceitares estes termos, não utilizes a Aplicação."),
         LegalSection(id: "2", title: "2. Descrição do serviço", body: "A Sophia é uma aplicação móvel educativa de cultura geral que oferece cursos, questionários e conteúdos interativos. A Aplicação está disponível em iOS e pode oferecer conteúdos gratuitos, bem como subscrições premium."),
         LegalSection(id: "3", title: "3. Conta e utilização", body: "A criação de uma conta (através da Apple ou Google) é proposta para guardar o teu progresso e sincronizá-lo entre os teus dispositivos. Os novos utilizadores iniciam sessão durante a integração; os utilizadores existentes podem criar uma conta a qualquer momento nas definições. Sem conta, os teus dados de progresso são armazenados localmente no teu dispositivo e reinstalar a Aplicação pode resultar na sua perda. Podes eliminar a tua conta a qualquer momento nas definições."),
@@ -175,9 +190,6 @@ private static let termsPortuguese: [LegalSection] = [
         LegalSection(id: "9", title: "9. Lei aplicável", body: "Os presentes Termos regem-se pela lei francesa. Qualquer litígio relativo à interpretação ou execução dos presentes será submetido aos tribunais competentes."),
         LegalSection(id: "10", title: "10. Contacto", body: "Para qualquer questão relativa aos presentes Termos, podes contactar-nos através da App Store ou por email para o endereço indicado na nossa página da App Store."),
     ]
-
-    // Stand-in until the European Portuguese text lands.
-    private static let termsPortuguesePortugal: [LegalSection] = termsPortuguese
 
     // MARK: - Terms (IT)
 
@@ -224,9 +236,24 @@ private static let privacyGerman: [LegalSection] = [
         LegalSection(id: "10", title: "10. Änderungen", body: "Wir behalten uns das Recht vor, diese Richtlinie jederzeit zu ändern. Alle Änderungen werden über ein App-Update mitgeteilt.\n\nZuletzt aktualisiert: September 2026"),
     ]
 
-    // MARK: - Privacy (PT)
+    // MARK: - Privacy (PT-BR)
 
 private static let privacyPortuguese: [LegalSection] = [
+        LegalSection(id: "1", title: "1. Introdução", body: "A presente Política de Privacidade descreve como a Sophia (doravante “nós”, “nosso” ou “o Aplicativo”) coleta, usa e protege suas informações pessoais. Nós nos comprometemos a proteger sua privacidade e a tratar seus dados de forma transparente."),
+        LegalSection(id: "2", title: "2. Dados coletados", body: "A Sophia foi concebida segundo o princípio da minimização de dados. O Aplicativo armazena no seu dispositivo:\n\n- Seu progresso nos cursos e questionários\n- Suas preferências (interesses, objetivos)\n- Sua sequência (dias consecutivos de uso)\n- Seus cursos favoritos\n\nEsses dados locais não são transmitidos aos nossos servidores.\n\nSe você nos enviar comentários pelo formulário nas configurações, sua mensagem e, caso você o informe, seu endereço de e-mail são transmitidos ao Formspree para que possamos responder a você. As informações técnicas (versão do app, idioma, dispositivo) são anexadas automaticamente."),
+        LegalSection(id: "3", title: "3. Dados de assinatura", body: "Se você assinar um plano premium, a transação é gerenciada integralmente pela Apple por meio da App Store. Não temos acesso às suas informações de pagamento (número do cartão, endereço de cobrança). Recebemos apenas a confirmação do status da sua assinatura por meio do RevenueCat, nosso parceiro de gestão de assinaturas."),
+        LegalSection(id: "4", title: "4. RevenueCat", body: "Usamos o RevenueCat para gerenciar as assinaturas dentro do app. O RevenueCat pode coletar um identificador anônimo do dispositivo para verificar o status da sua assinatura. Nenhuma informação de identificação pessoal é compartilhada. Para mais informações, consulte a política de privacidade do RevenueCat no respectivo site."),
+        LegalSection(id: "5", title: "5. Dados do Apple Analytics", body: "O Aplicativo também pode se beneficiar de estatísticas anônimas fornecidas pela Apple (App Analytics). Esses dados são agregados e não permitem identificar você pessoalmente. Você pode desativar o compartilhamento de dados analíticos nos ajustes do seu iPhone (Ajustes > Privacidade > Análise e Melhorias)."),
+        LegalSection(id: "6", title: "6. Armazenamento de dados", body: "Todos os seus dados de progresso são armazenados localmente no seu dispositivo por meio do UserDefaults. Eles não são salvos na nuvem. Desinstalar o Aplicativo exclui definitivamente esses dados."),
+        LegalSection(id: "7", title: "7. Compartilhamento de dados", body: "Não vendemos, alugamos nem compartilhamos quaisquer dados pessoais com terceiros para fins comerciais ou publicitários. Os dados transmitidos se limitam a: Apple e RevenueCat (assinaturas), Formspree (comentários de usuários enviados voluntariamente a partir das configurações)."),
+        LegalSection(id: "8", title: "8. Direitos dos usuários", body: "Nos termos do Regulamento Geral sobre a Proteção de Dados (RGPD) e das leis aplicáveis, você dispõe dos seguintes direitos:\n\n- Direito de acesso aos seus dados\n- Direito de retificação\n- Direito ao apagamento (redefinir nas configurações)\n- Direito à portabilidade\n- Direito de oposição\n\nPara exercer esses direitos, entre em contato conosco pelo endereço indicado na nossa página da App Store."),
+        LegalSection(id: "9", title: "9. Proteção de menores", body: "A Sophia é um aplicativo educativo adequado a todas as idades. Não coletamos conscientemente dados pessoais de menores de 16 anos. O Aplicativo não contém conteúdos inadequados."),
+        LegalSection(id: "10", title: "10. Alterações", body: "Reservamo-nos o direito de alterar esta política a qualquer momento. Quaisquer alterações serão comunicadas por meio de uma atualização do Aplicativo.\n\nÚltima atualização: setembro de 2026"),
+    ]
+
+    // MARK: - Privacy (PT-PT)
+
+private static let privacyPortuguesePortugal: [LegalSection] = [
         LegalSection(id: "1", title: "1. Introdução", body: "A presente Política de Privacidade descreve como a Sophia (doravante «nós», «nosso» ou «a Aplicação») recolhe, utiliza e protege as tuas informações pessoais. Comprometemo-nos a proteger a tua privacidade e a tratar os teus dados de forma transparente."),
         LegalSection(id: "2", title: "2. Dados recolhidos", body: "A Sophia foi concebida segundo o princípio da minimização de dados. A Aplicação armazena no teu dispositivo:\n\n- O teu progresso nos cursos e questionários\n- As tuas preferências (interesses, objetivos)\n- A tua sequência (dias consecutivos de utilização)\n- Os teus cursos favoritos\n\nEstes dados locais não são transmitidos aos nossos servidores.\n\nSe nos enviares comentários através do formulário nas definições, a tua mensagem e, caso o indiques, o teu endereço de email são transmitidos ao Formspree para que possamos responder-te. As informações técnicas (versão da app, idioma, dispositivo) são anexadas automaticamente."),
         LegalSection(id: "3", title: "3. Dados de subscrição", body: "Se subscreveres um plano premium, a transação é gerida integralmente pela Apple através da App Store. Não temos acesso às tuas informações de pagamento (número do cartão, morada de faturação). Recebemos apenas a confirmação do teu estado de subscrição através do RevenueCat, o nosso parceiro de gestão de subscrições."),
@@ -234,13 +261,10 @@ private static let privacyPortuguese: [LegalSection] = [
         LegalSection(id: "5", title: "5. Dados do Apple Analytics", body: "A Aplicação pode também beneficiar de estatísticas anónimas fornecidas pela Apple (App Analytics). Estes dados são agregados e não permitem identificar-te pessoalmente. Podes desativar a partilha de dados analíticos nas definições do teu iPhone (Definições > Privacidade > Análise e melhorias)."),
         LegalSection(id: "6", title: "6. Armazenamento de dados", body: "Todos os teus dados de progresso são armazenados localmente no teu dispositivo através do UserDefaults. Não são guardados na cloud. Desinstalar a Aplicação elimina definitivamente estes dados."),
         LegalSection(id: "7", title: "7. Partilha de dados", body: "Não vendemos, alugamos nem partilhamos quaisquer dados pessoais com terceiros para fins comerciais ou publicitários. Os dados transmitidos limitam-se a: Apple e RevenueCat (subscrições), Formspree (comentários de utilizadores enviados voluntariamente a partir das definições)."),
-        LegalSection(id: "8", title: "8. Direitos dos utilizadores", body: "Nos termos do Regulamento Geral sobre a Proteção de Dados (RGPD) e das leis aplicáveis, dispões dos seguintes direitos:\n\n- Direito de acesso aos teus dados\n- Direito de retificação\n- Direito ao apagamento (repor nas definições)\n- Direito à portabilidade\n- Direito de oposição\n\nPara exercer estes direitos, contacta-nos através da morada indicada na nossa página da App Store."),
+        LegalSection(id: "8", title: "8. Direitos dos utilizadores", body: "Nos termos do Regulamento Geral sobre a Proteção de Dados (RGPD) e das leis aplicáveis, dispões dos seguintes direitos:\n\n- Direito de acesso aos teus dados\n- Direito de retificação\n- Direito ao apagamento (repor nas definições)\n- Direito à portabilidade\n- Direito de oposição\n\nPara exercer estes direitos, contacta-nos através do endereço indicado na nossa página da App Store."),
         LegalSection(id: "9", title: "9. Proteção de menores", body: "A Sophia é uma aplicação educativa adequada a todas as idades. Não recolhemos conscientemente dados pessoais de menores de 16 anos. A Aplicação não contém conteúdos inadequados."),
         LegalSection(id: "10", title: "10. Alterações", body: "Reservamo-nos o direito de alterar esta política a qualquer momento. Quaisquer alterações serão comunicadas através de uma atualização da Aplicação.\n\nÚltima atualização: setembro de 2026"),
     ]
-
-    // Stand-in until the European Portuguese text lands.
-    private static let privacyPortuguesePortugal: [LegalSection] = privacyPortuguese
 
     // MARK: - Privacy (IT)
 

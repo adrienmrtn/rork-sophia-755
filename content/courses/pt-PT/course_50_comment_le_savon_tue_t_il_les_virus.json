@@ -1,0 +1,100 @@
+{
+  "id": "course_50_comment_le_savon_tue_t_il_les_virus",
+  "title": "Como é que o sabão mata os vírus?",
+  "subtitle": "Higiene",
+  "subject": "sciences",
+  "subcategory": "O nosso quotidiano explicado",
+  "description": "O sabão não é «mágico». Ataca a casca gordurosa de certos vírus e arranca-os da tua pele. Vê porque é que 20 segundos contam.",
+  "hero": {
+    "image": "comment_le_savon_tue_les_virus",
+    "ratio": "16:9",
+    "hook": "Uma arma simples contra os vírus: moléculas que gostam de água... e de gordura."
+  },
+  "sections": [
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Durante a pandemia de COVID-19, um gesto bem simples voltou ao centro: lavar as mãos com sabão. Sem precisar de laboratório. Só água, sabão e um pouco de tempo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Porque é que isto funciona tão bem? Porque muitos vírus perigosos têm um envelope feito de gordura. E o sabão é ótimo para destruir gordura."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p1",
+      "title": "A fraqueza de certos vírus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alguns vírus, como os **coronavírus** ou o vírus da gripe, têm um envelope externo feito de lípidos (gorduras). Esse envelope protege-os... até encontrar sabão."
+        },
+        {
+          "type": "paragraph",
+          "text": "Outros vírus, ditos «nus», não têm esse envelope. Resistem melhor ao sabão e ao álcool. Por sorte, muitos dos vírus que circulam pelas mãos e pelas gotículas são envelopados."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
+      "title": "O sabão, uma molécula de duas faces",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "handwashing_soap_water_hands",
+          "ratio": "4:3",
+          "caption": "A fricção ajuda o sabão a alcançar todos os cantos das mãos"
+        },
+        {
+          "type": "paragraph",
+          "text": "As moléculas de sabão são [[tensioativos]]. Têm uma cabeça que gosta de água e uma cauda que gosta de gordura. A cauda enfia-se no envelope gorduroso do vírus. A cabeça permanece virada para a água."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultado: o envelope rasga-se. O vírus é desativado. Depois a água leva os detritos. O sabão não «queima» o vírus como um ácido: **dissolve-o** e remove-o."
+        },
+        {
+          "type": "funFact",
+          "text": "É o mesmo princípio que faz a gordura sair de uma frigideira: o sabão agarra a gordura e deixa-a ir embora com a água."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p3",
+      "title": "Porquê 20 segundos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "É preciso tempo para o sabão alcançar todas as dobras: entre os dedos, debaixo das unhas, em volta dos pulsos. Cerca de **20 segundos** de fricção, esse é o mínimo muitas vezes recomendado."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sem fricção, o sabão funciona pior. A água sozinha também não: não ataca bem o envelope gorduroso."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p4",
+      "title": "Sabão ou gel desinfetante?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Um gel com pelo menos **60%** de álcool também pode destruir muitos vírus envelopados. Mas se houver sujidade visível ou gordura, o gel rende menos: a sujidade funciona como uma barreira. Nesse caso, água e sabão continuam a ser a melhor escolha."
+        },
+        {
+          "type": "takeaway",
+          "text": "O sabão mata muitos vírus ao rasgar o seu envelope gorduroso, e depois ao levá-los embora com a água. Tempo + fricção = eficácia."
+        }
+      ]
+    }
+  ]
+}

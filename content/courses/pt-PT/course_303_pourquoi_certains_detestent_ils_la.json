@@ -1,0 +1,123 @@
+{
+  "id": "course_303_pourquoi_certains_detestent_ils_la",
+  "title": "Porque é que há quem odeie coentros?",
+  "subtitle": "Um sabor a sabão",
+  "subject": "sciences",
+  "subcategory": "O nosso quotidiano explicado",
+  "description": "Para uma parte da humanidade, os coentros sabem a sabão. A causa: uma única letra que muda num gene do olfato, e talvez uma herança dos nossos antepassados.",
+  "author": "stacy-jankowski",
+  "hero": {
+    "image": "fresh_coriander_cilantro_bunch_leaves",
+    "ratio": "4:3",
+    "hook": "A mesma folha, dois sabores: erva fresca para uns, sabão para outros. A diferença está numa única letra do teu ADN."
+  },
+  "sections": [
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os coentros são uma das plantas mais antigas e mais usadas do mundo. Gregos e romanos da Antiguidade já os cultivavam, tanto para a cozinha como para a medicina. Aparecem no sul da Ásia, na China e na América Latina, em milhares de receitas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mesmo assim, algumas pessoas não os suportam. Onde a maioria sente uma erva fresca, elas juram que estão a mastigar sabão. Não é esquisitice nem falta de hábito: a resposta está no nariz delas e, mais precisamente, nos genes."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p1",
+      "title": "Os recetores olfativos, do nariz ao cérebro",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tudo o que provamos ou cheiramos tem uma composição química que o cérebro tem de decifrar. O paladar e o olfato, a que os cientistas chamam [[olfação]], estão muito ligados: boa parte do «sabor» de um prato passa na verdade pelo nariz, enquanto ainda estamos a mastigar."
+        },
+        {
+          "type": "image",
+          "asset": "olfactory_nerve_nasal_cavity_gray_anatomy_plate",
+          "ratio": "3:2",
+          "caption": "Corte da mucosa nasal ao microscópio: é a parede da cavidade nasal que abriga os recetores olfativos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na cavidade nasal, algumas células têm [[recetores olfativos]]. Estes detetam as moléculas dos alimentos e transformam-nas num sinal, que neurónios olfativos levam até ao cérebro. Cada recetor é fabricado a partir de um gene. Se esse gene muda, o recetor muda também, e com ele o sabor percebido. É exatamente o que acontece com os coentros."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p2",
+      "title": "OR6A2, o gene do sabor a sabão",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os geneticistas identificaram o culpado: um gene chamado [[OR6A2]]. Codifica um recetor olfativo sensível aos [[aldeídos insaturados]], moléculas presentes nos coentros. Na maioria das pessoas, esse recetor tradu-las numa nota fresca e herbácea."
+        },
+        {
+          "type": "image",
+          "asset": "dna_double_helix_nhgri_illustration",
+          "ratio": "2:1",
+          "caption": "A dupla hélice do ADN: basta uma única letra trocada para modificar um recetor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Algumas pessoas têm nesse gene um [[polimorfismo de nucleótido único]], ou SNP: uma única «letra» do ADN é diferente. Essa mudança minúscula altera a forma como o gene se exprime e, portanto, o recetor que ele produz. O recetor ainda funciona: deteta a molécula e envia um sinal ao cérebro. Mas a mensagem já não é exata. Em vez de erva fresca, o cérebro lê: sabão."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p3",
+      "title": "Porque é que esta mutação sobreviveu?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Esta variante não aparece por acaso numa pessoa. Passa de pais para filhos há séculos. Consoante a região do mundo, de **4%** a **20%** da população é portadora dela. Mas porque é que um traço assim se manteve, se tantas cozinhas fazem dos coentros um ingrediente básico?"
+        },
+        {
+          "type": "image",
+          "asset": "cilantro_lime_mexican_tacos_street_food",
+          "ratio": "3:2",
+          "caption": "Um food truck de tacos nos Estados Unidos: na cozinha mexicana, os coentros frescos são um ingrediente básico."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alguns biólogos evolucionistas propõem uma hipótese. No mundo antigo, plantas tóxicas também sabiam a sabão. Um recetor que torna esse sabor repulsivo teria servido como mecanismo de sobrevivência: afastava os nossos antepassados dos vegetais perigosos. Os coentros, inofensivos, seriam a vítima colateral desse sinal de alarme."
+        }
+      ]
+    },
+    {
+      "id": "course_303_pourquoi_certains_detestent_ils_la_p4",
+      "title": "É possível aprender a gostar de coentros?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Boa notícia para quem sonha com um verdadeiro taco: o cérebro pode ser reeducado. O recetor não vai mudar, mas é possível aprender, com o tempo, a ignorar o sinal que ele envia ao cérebro. O método cabe numa palavra: repetição."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na prática, começa por pôr alguns coentros num prato de que já gostas. Também podes disfarçar a nota de sabão com um sabor forte, como sumo de limão ou vinagre. De tanto repetir a experiência sem sustos, o cérebro acaba por aceitar que os coentros não são uma ameaça, e a aversão diminui."
+        },
+        {
+          "type": "takeaway",
+          "text": "O sabor a sabão dos coentros vem de uma variante do gene OR6A2, presente em 4% a 20% das pessoas consoante a região: o recetor olfativo delas traduz mal os seus aldeídos, talvez um antigo reflexo de proteção contra plantas tóxicas."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "N. Eriksson, S. Wu, C. B. Do et al., «A genetic variant near olfactory receptor genes influences cilantro preference», Flavour, vol. 1, 2012, art. 22.",
+      "url": "https://doi.org/10.1186/2044-7248-1-22"
+    },
+    {
+      "text": "Academic Path, «Why coriander tastes like soap».",
+      "url": "https://academicpath.org/why-coriander-tastes-like-soap"
+    }
+  ]
+}
