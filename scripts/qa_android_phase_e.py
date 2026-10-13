@@ -92,7 +92,7 @@ def check_app_language(c: Checker) -> None:
     kt = (JAVA / "domain" / "AppLanguage.kt").read_text(encoding="utf-8")
     codes = re.findall(r'enum class AppLanguage.*?^}', kt, re.S)
     body = codes[0] if codes else kt
-    found = re.findall(r'\("([a-z]{2})",', body)
+    found = re.findall(r'\("([a-z]{2}(?:-[A-Z]{2})?)",', body)
     if found != LANGS:
         c.fail(f"AppLanguage codes mismatch: {found}")
     else:

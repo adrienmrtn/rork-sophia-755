@@ -69,7 +69,7 @@ enum GlossaryClassification: String, CaseIterable, Sendable {
             case .personnage: "Person"
             case .lieuInstitution: "Ort"
             }
-        case .portuguese:
+        case .portuguese, .portuguesePortugal:
             switch self {
             case .referenceHistorique: "Referência"
             case .concept: "Conceito"

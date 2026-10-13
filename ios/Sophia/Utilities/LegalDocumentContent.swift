@@ -14,6 +14,7 @@ enum LegalDocumentContent {
         case .spanish: termsSpanish
         case .german: termsGerman
         case .portuguese: termsPortuguese
+        case .portuguesePortugal: termsPortuguesePortugal
         case .italian: termsItalian
         case .turkish: termsTurkish
         case .polish: termsPolish
@@ -45,6 +46,7 @@ enum LegalDocumentContent {
         case .spanish: privacySpanish
         case .german: privacyGerman
         case .portuguese: privacyPortuguese
+        case .portuguesePortugal: privacyPortuguesePortugal
         case .italian: privacyItalian
         case .turkish: privacyTurkish
         case .polish: privacyPolish
@@ -174,6 +176,9 @@ private static let termsPortuguese: [LegalSection] = [
         LegalSection(id: "10", title: "10. Contacto", body: "Para qualquer questão relativa aos presentes Termos, podes contactar-nos através da App Store ou por email para o endereço indicado na nossa página da App Store."),
     ]
 
+    // Stand-in until the European Portuguese text lands.
+    private static let termsPortuguesePortugal: [LegalSection] = termsPortuguese
+
     // MARK: - Terms (IT)
 
 private static let termsItalian: [LegalSection] = [
@@ -233,6 +238,9 @@ private static let privacyPortuguese: [LegalSection] = [
         LegalSection(id: "9", title: "9. Proteção de menores", body: "A Sophia é uma aplicação educativa adequada a todas as idades. Não recolhemos conscientemente dados pessoais de menores de 16 anos. A Aplicação não contém conteúdos inadequados."),
         LegalSection(id: "10", title: "10. Alterações", body: "Reservamo-nos o direito de alterar esta política a qualquer momento. Quaisquer alterações serão comunicadas através de uma atualização da Aplicação.\n\nÚltima atualização: setembro de 2026"),
     ]
+
+    // Stand-in until the European Portuguese text lands.
+    private static let privacyPortuguesePortugal: [LegalSection] = privacyPortuguese
 
     // MARK: - Privacy (IT)
 
