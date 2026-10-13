@@ -31,6 +31,14 @@
 #              (an experiment's winner), `only` = <audience id>:<offering>.
 #              Needs project_configuration:targeting_rules:read_write.
 #
+#   target = play
+#     plan     Google Play prices of sophia_pro (p1y, monthly, annual-promo) next to
+#              the App Store price of the matching iOS product, country by country,
+#              and what `apply` would lower. Writes nothing.
+#     apply    lowers each Play price to the App Store price where the currency is
+#              the same, then reads the subscription back (scripts/play_pricing.py).
+#              Needs the PLAY_SERVICE_ACCOUNT_JSON secret.
+#
 # Extra key permissions for that target: audiences:audiences:read_write and
 # project_configuration:experiments:read_write.
 name: Pricing tests
@@ -46,6 +54,7 @@ on:
           - appstore
           - revenuecat
           - revenuecat-experiments
+          - play
       action:
         description: "What to do (plan writes nothing)"
         type: choice
@@ -115,6 +124,7 @@ jobs:
           ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
           REVENUECAT_SECRET_API_KEY: ${{ secrets.REVENUECAT_SECRET_API_KEY }}
           REVENUECAT_PROJECT_ID: ${{ secrets.REVENUECAT_PROJECT_ID }}
+          PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
         run: |
           only=()
           if [ -n "$ONLY" ]; then
@@ -132,6 +142,8 @@ jobs:
             revenuecat-experiments/apply) set -- scripts/revenuecat_experiments.py apply ;;
             revenuecat-experiments/switch) set -- scripts/revenuecat_experiments.py switch --steps "$ONLY" ;;
             revenuecat-experiments/rollout) set -- scripts/revenuecat_experiments.py rollout --target "$ONLY" ;;
+            play/plan)         set -- scripts/play_pricing.py plan ;;
+            play/apply)        set -- scripts/play_pricing.py apply ;;
             *) echo "unsupported: $TARGET / $ACTION" >&2; exit 1 ;;
           esac
           {
