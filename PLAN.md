@@ -128,6 +128,11 @@ code iOS et Android. Coche les cases des actions que tu valides.
   moins d'essais (11,1 % contre 15,1 %) et moins d'essais payaient (21 % contre 39 %), chacun sûr à plus de
   99 % ; revenu par visiteur plus bas avec 76-96 % de certitude. Les données 49,99 de la v3 s'additionnent à
   la v4 dans nos calculs. Lecture P v4 à J+21 le 01/11.
+- [x] Europe du Sud : gagnant du test S appliqué le 13/10 — test S arrêté à 08:34 UTC, règle de ciblage
+  `1ae80bc2cd` créée à 08:38 par `revenuecat-experiments · rollout` : audience S (IT, ES, PT, GR, CY, MT,
+  iOS 1.1.7+) -> offering `s__3999_mnotrial` (annuel 39,99 avec essai, mensuel 9,99 sans essai). Au 13/10 :
+  90 % de chances de rapporter plus cadeau compris (88-91 %), 97-98 % hors cadeau ; essais annuels +28 %
+  (98 %), essais payés 39 % contre 31 % (89 %). Android inchangé.
 - [ ] Disponibilité des produits de test limitée aux pays de leur test (`available_in` du
   manifeste) : le 01/10, un abonné suédois est passé de `Sophia_yearly` (39,99 €) au palier 25 %
   depuis les réglages d'abonnement d'Apple, qui listent tous les produits du groupe vendus dans

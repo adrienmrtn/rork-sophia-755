@@ -641,6 +641,20 @@ Le 69,99 est retiré ; le 49,99 continue contre 39,99 dans P v4 (`expeff5486efd`
 13:50:30 UTC, juste après l'arrêt de P v3). Les clients déjà inscrits dans la v3 voient de nouveau
 `fin_onboarding` ; ceux déjà abonnés à 49,99 ou 69,99 gardent leur prix.
 
+### 9.8 Europe du Sud : mensuel sans essai adopté (13/10)
+
+| Au 13/10 08:00 UTC | 39,99, mensuel avec essai (contrôle) | 39,99, mensuel sans essai |
+|---|---|---|
+| Visiteurs | 1 434 | 1 448 |
+| Essais annuels lancés | 124 (8,6 %) | 160 (11,0 %) |
+| Essais annuels terminés qui ont payé | 26 / 84 (31 %) | 43 / 109 (39 %) |
+| Chance de rapporter plus (cadeau compris / hors cadeau) | — | 90 % (88-91 %) / 97-98 % |
+
+Sans essai sur le mensuel, une partie des visiteurs prend l'essai de l'annuel. Mise en œuvre : test S
+(`exp90f7c3d0d8`) arrêté le 13/10 à 08:34 UTC ; la règle de ciblage `1ae80bc2cd` (créée à 08:38 par
+`revenuecat-experiments · rollout`) sert `s__3999_mnotrial` à l'audience S. Les variantes à 49,99 du test S
+sont abandonnées (aucun gain mesuré).
+
 ## 10. Grille de prix par pays (hypothèse, arrêtée à J+45)
 
 | Groupe | Annuel | Mensuel / hebdo | Discount | Décidé par |
