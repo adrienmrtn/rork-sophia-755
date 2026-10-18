@@ -676,6 +676,28 @@ migre pas). Les audiences des tests sont iOS uniquement : aucun test n'est touch
 refusé sans rien écrire (version de régions 2022/02 au lieu de 2026/01), corrigé dans #267. Base de
 comparaison : conversion Android le jour de l'installation 2,8 % (iOS 7,9 %) avant le changement.
 
+### 9.10 Europe de l'Est et reste du monde arrêtés, offre par défaut rétablie (15-18/10)
+
+B v2 et C v3 arrêtés le 15/10 à 14:58 UTC. Lecture finale du 18/10, essais tous terminés, chance de
+rapporter plus que le prix actuel :
+
+| Test | Variante | Cadeau compris | Hors cadeau | Médiane (cadeau compris) |
+|---|---|---|---|---|
+| B (Europe de l'Est) | 29,99 | 77 % | 77 % | +8 % |
+| B (Europe de l'Est) | 49,99 | 32 % | 21 % | -5 % |
+| C v3 (reste du monde) | palier 50 % | 78 % | 98 % | +15 % |
+| C v2 + v3 cumulés | palier 50 % | 59 % | 95 % | +3 % |
+
+Aucune variante n'atteint 95 % : on garde 39,99 et le prix actuel (règle 2, § 9.3). Le 15/10, sur des
+essais pas encore terminés, B 29,99 était à 55 % et C v3 à 39 % : ils ont monté une fois les essais finis,
+alors que P v4 49,99 est passé de 90 % (15/10) à 46 % (18/10). Le palier 50 % gagne hors cadeau, mais au
+prix actuel beaucoup prennent le cadeau à 19,99 (35 achats contre 8), ce qui égalise.
+
+Offre par défaut : la clôture du test S dans le tableau de bord (13/10, entre 08:35 et 09:20 UTC) a aussi
+rendu `s__3999_mnotrial` courante pour tout le projet. Constaté le 15/10, rétabli le 18/10 à 15:53 UTC par
+`revenuecat-experiments · default` (`fin_onboarding`). Entre-temps, hors test et hors règle, le mensuel
+était sans essai sur iOS et absent sur Android (`sophia_pro:monthly-notrial` n'existe pas sur Play).
+
 ## 10. Grille de prix par pays (hypothèse, arrêtée à J+45)
 
 | Groupe | Annuel | Mensuel / hebdo | Discount | Décidé par |
