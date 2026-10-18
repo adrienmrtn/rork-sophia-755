@@ -12,6 +12,9 @@ v2:
              experiments that are missing (matched by display name), as DRAFTS.
              Idempotent: nothing is created twice, nothing is started, nothing
              is deleted.
+    default  makes an offering the project's current (default) offering, the one
+             served to everyone no running experiment or targeting rule covers,
+             then reads it back. Idempotent.
 
 An audience is "country is any of <list> AND platform is <platform> AND app
 version >= <min_app_version>": the price tests run on iOS only until the Play
@@ -256,13 +259,40 @@ def rollout(api_key: str, spec_text: str, check_only: bool) -> int:
     return 0
 
 
+def make_default(api_key: str, lookup: str, check_only: bool) -> int:
+    """Make the offering with lookup key `lookup` the project's current (default) offering.
+
+    The current offering is what every customer outside a running experiment or an active
+    targeting rule sees, on iOS and Android alike. Idempotent, and read back after the change.
+    """
+    project_id = resolve_project_id(api_key, os.environ.get("REVENUECAT_PROJECT_ID"))
+    lookup = lookup.strip()
+    offerings = {o["lookup_key"]: o for o in paginate(api_key, f"/projects/{project_id}/offerings")}
+    if lookup not in offerings:
+        raise RevenueCatError(f"no offering {lookup!r}")
+    current = sorted(key for key, o in offerings.items() if o.get("is_current"))
+    print(f"Project {project_id}: current offering {', '.join(current) or 'none'} -> {lookup} ({offerings[lookup]['id']})")
+    if current == [lookup]:
+        print("  already the current offering: nothing to do")
+        return 0
+    if check_only:
+        print("\nChecked only: nothing was changed.")
+        return 0
+    request_json("POST", f"/projects/{project_id}/offerings/{offerings[lookup]['id']}", api_key=api_key, body={"is_current": True})
+    after = sorted(o["lookup_key"] for o in paginate(api_key, f"/projects/{project_id}/offerings") if o.get("is_current"))
+    if after != [lookup]:
+        raise RevenueCatError(f"current offering is now {after}, expected [{lookup!r}]")
+    print(f"  current offering is now {lookup}")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["plan", "apply", "switch", "rollout"])
+    parser.add_argument("command", choices=["plan", "apply", "switch", "rollout", "default"])
     parser.add_argument("--manifest", type=Path, default=MANIFEST)
     parser.add_argument("--steps", default="", help="switch: ordered steps, e.g. stop:expaa99dcbc5d,start:expc04e8ff651")
-    parser.add_argument("--target", default="", help="rollout: <audience id>:<offering lookup key>")
-    parser.add_argument("--check", action="store_true", help="switch / rollout: check and change nothing")
+    parser.add_argument("--target", default="", help="rollout: <audience id>:<offering lookup key>; default: <offering lookup key>")
+    parser.add_argument("--check", action="store_true", help="switch / rollout / default: check and change nothing")
     args = parser.parse_args()
     api_key = os.environ.get("REVENUECAT_SECRET_API_KEY", "").strip()
     if not api_key.startswith("sk_"):
@@ -273,6 +303,8 @@ def main() -> int:
             return switch(api_key, args.steps, check_only=args.check)
         if args.command == "rollout":
             return rollout(api_key, args.target, check_only=args.check)
+        if args.command == "default":
+            return make_default(api_key, args.target, check_only=args.check)
         manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
         return run(api_key, manifest, dry_run=args.command == "plan")
     except RevenueCatError as error:

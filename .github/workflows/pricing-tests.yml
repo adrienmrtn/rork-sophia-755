@@ -30,6 +30,9 @@
 #     rollout  serves an offering to a saved audience with a targeting rule
 #              (an experiment's winner), `only` = <audience id>:<offering>.
 #              Needs project_configuration:targeting_rules:read_write.
+#     default  makes an offering the default (current) one, served to everyone no
+#              experiment or targeting rule covers, `only` = <offering lookup key>.
+#              Needs project_configuration:offerings:read_write.
 #
 #   target = play
 #     plan     Google Play prices of sophia_pro (p1y, monthly, annual-promo) next to
@@ -67,6 +70,7 @@ on:
           - submit
           - switch
           - rollout
+          - default
       only:
         description: "appstore: one product id, e.g. Sophia_yearly_4999 (blank = all). revenuecat-experiments · switch: ordered steps, e.g. stop:exp…,start:exp…"
         type: string
@@ -142,6 +146,7 @@ jobs:
             revenuecat-experiments/apply) set -- scripts/revenuecat_experiments.py apply ;;
             revenuecat-experiments/switch) set -- scripts/revenuecat_experiments.py switch --steps "$ONLY" ;;
             revenuecat-experiments/rollout) set -- scripts/revenuecat_experiments.py rollout --target "$ONLY" ;;
+            revenuecat-experiments/default) set -- scripts/revenuecat_experiments.py default --target "$ONLY" ;;
             play/plan)         set -- scripts/play_pricing.py plan ;;
             play/apply)        set -- scripts/play_pricing.py apply ;;
             *) echo "unsupported: $TARGET / $ACTION" >&2; exit 1 ;;
