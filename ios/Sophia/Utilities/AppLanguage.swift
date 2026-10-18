@@ -5,7 +5,9 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
     case english = "en"
     case spanish = "es"
     case german = "de"
+    /// Brazilian Portuguese. `pt` alone is Brazilian, as in Apple's own `pt.lproj`.
     case portuguese = "pt"
+    case portuguesePortugal = "pt-PT"
     case italian = "it"
     case turkish = "tr"
     case polish = "pl"
@@ -36,7 +38,8 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .english: "en_US"
         case .spanish: "es_ES"
         case .german: "de_DE"
-        case .portuguese: "pt_PT"
+        case .portuguese: "pt_BR"
+        case .portuguesePortugal: "pt_PT"
         case .italian: "it_IT"
         case .turkish: "tr_TR"
         case .polish: "pl_PL"
@@ -96,7 +99,8 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .english: "🇬🇧"
         case .spanish: "🇪🇸"
         case .german: "🇩🇪"
-        case .portuguese: "🇵🇹"
+        case .portuguese: "🇧🇷"
+        case .portuguesePortugal: "🇵🇹"
         case .italian: "🇮🇹"
         case .turkish: "🇹🇷"
         case .polish: "🇵🇱"
@@ -127,7 +131,8 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .english: "English"
         case .spanish: "Español"
         case .german: "Deutsch"
-        case .portuguese: "Português"
+        case .portuguese: "Português (Brasil)"
+        case .portuguesePortugal: "Português (Portugal)"
         case .italian: "Italiano"
         case .turkish: "Türkçe"
         case .polish: "Polski"
@@ -173,28 +178,77 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
 
     static let userDefaultsKey = "sophia_app_language"
 
+    /// Regions whose Portuguese follows the European norm (CLDR's `pt_*` locales other than
+    /// Brazil). A bare `pt` is Brazilian, as it is for Apple.
+    private static let europeanPortugueseRegions: Set<String> = [
+        "pt", "ao", "mz", "cv", "gw", "st", "tl", "mo", "gq", "lu", "ch",
+    ]
+
+    /// The app language for one device language identifier (`fr-FR`, `pt_PT`, `nb`…), or nil.
+    static func match(deviceIdentifier identifier: String) -> AppLanguage? {
+        let parts = identifier
+            .replacingOccurrences(of: "_", with: "-")
+            .lowercased()
+            .split(separator: "-")
+            .map(String.init)
+        guard let primary = parts.first else { return nil }
+        if primary == "pt" {
+            // `pt-Latn-PT` carries a script before the region; the region is the last
+            // two-letter part.
+            let region = parts.dropFirst().last { $0.count == 2 }
+            return region.map { europeanPortugueseRegions.contains($0) } == true ? .portuguesePortugal : .portuguese
+        }
+        return AppLanguage(rawValue: deviceCodeAliases[primary] ?? primary)
+    }
+
     /// Best matching app language for the phone's preferred languages (e.g. `fr-FR` → `.french`).
     static func preferredFromDevice() -> AppLanguage {
         for identifier in Locale.preferredLanguages {
-            let normalized = identifier
-                .replacingOccurrences(of: "_", with: "-")
-                .lowercased()
-            let primary = String(normalized.split(separator: "-").first ?? Substring(normalized))
-            if let match = AppLanguage(rawValue: deviceCodeAliases[primary] ?? primary) {
-                return match
+            if let language = match(deviceIdentifier: identifier) {
+                return language
             }
         }
         return defaultLanguage
     }
 
+    /// Set once the stored `pt` has been read under its current meaning.
+    ///
+    /// Until the Brazilian and European editions were split, `pt` was the only Portuguese,
+    /// and readers in Portugal chose it too. On the first launch after the split, a stored
+    /// `pt` on a phone that asks for European Portuguese (or sits in a European-norm region
+    /// when no Portuguese is listed) becomes `pt-PT`. After that, `pt` is a choice like any
+    /// other and is never second-guessed.
+    static let portugueseSplitKey = "sophia_pt_variant_resolved"
+
+    private static func deviceWantsEuropeanPortuguese() -> Bool {
+        for identifier in Locale.preferredLanguages {
+            switch match(deviceIdentifier: identifier) {
+            case .portuguesePortugal?: return true
+            case .portuguese?: return false
+            default: continue
+            }
+        }
+        let region = Locale.current.region?.identifier.lowercased() ?? ""
+        return europeanPortugueseRegions.contains(region)
+    }
+
     /// Reads the persisted language, or the phone language on first launch (then persists it).
     static func currentPersisted() -> AppLanguage {
-        if let stored = UserDefaults.standard.string(forKey: userDefaultsKey),
+        let defaults = UserDefaults.standard
+        if let stored = defaults.string(forKey: userDefaultsKey),
            let language = AppLanguage(rawValue: stored) {
+            if language == .portuguese, !defaults.bool(forKey: portugueseSplitKey) {
+                defaults.set(true, forKey: portugueseSplitKey)
+                if deviceWantsEuropeanPortuguese() {
+                    defaults.set(AppLanguage.portuguesePortugal.rawValue, forKey: userDefaultsKey)
+                    return .portuguesePortugal
+                }
+            }
             return language
         }
         let detected = preferredFromDevice()
-        UserDefaults.standard.set(detected.rawValue, forKey: userDefaultsKey)
+        defaults.set(detected.rawValue, forKey: userDefaultsKey)
+        defaults.set(true, forKey: portugueseSplitKey)
         return detected
     }
 

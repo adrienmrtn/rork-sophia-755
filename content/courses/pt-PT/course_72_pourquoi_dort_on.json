@@ -1,0 +1,108 @@
+{
+  "id": "course_72_pourquoi_dort_on",
+  "title": "Porque é que dormimos?",
+  "subtitle": "Corpo e cérebro",
+  "subject": "sciences",
+  "subcategory": "A Terra e o Universo",
+  "description": "Passamos um terço da vida a dormir. Isso não é tempo perdido: o sono limpa o cérebro, repara o corpo e grava as memórias.",
+  "hero": {
+    "image": "pourquoi_dort_on",
+    "ratio": "16:9",
+    "hook": "Dormir não é desligar-se: é o grande estaleiro noturno do corpo."
+  },
+  "sections": [
+    {
+      "id": "course_72_pourquoi_dort_on_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Numa vida de 75 anos, dormimos perto de **25 anos**. Durante muito tempo, pensou-se que o sono era só uma pausa. Na verdade, é um trabalho ativo, tão vital como beber ou comer."
+        },
+        {
+          "type": "paragraph",
+          "text": "A ciência ainda não tem todas as respostas sobre o «porquê» do sono. Mas sabe muito bem o que acontece quando não se dorme, e o que a noite repara em silêncio."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p1",
+      "title": "O que a falta de sono revela",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em **1964**, o estudante americano **Randy Gardner** fica **11 dias** sem dormir. Alucinações, paranoia, mente que desaba: a prova de que o cérebro não aguenta sem descanso."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_bedroom_night",
+          "ratio": "auto",
+          "caption": "O sono, indispensável à recuperação do cérebro e do corpo"
+        },
+        {
+          "type": "paragraph",
+          "text": "No rato, a ausência total de sono mata em **2 a 3 semanas**, como a fome. No ser humano, uma doença genética rara, a **insónia familiar fatal**, também leva à morte. No dia a dia, 17 horas acordado equivalem a uma taxa de álcool no sangue de **0,5 g/l**. O cérebro força então [[microssonos]], curtos apagões de consciência involuntários."
+        },
+        {
+          "type": "funFact",
+          "text": "Depois do recorde, Randy Gardner dormiu **14 horas** seguidas. Acordou capaz de funcionar, mas o seu sono levou semanas a reencontrar um ritmo normal."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p2",
+      "title": "À noite, o cérebro faz a limpeza",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Durante o sono, o cérebro não para: muda de modo. O **hipocampo**, estrutura-chave da memória em forma de cavalo-marinho, «repete» o dia e envia as informações para o [[neocórtex]], a camada externa do cérebro, para um armazenamento duradouro. Resultado: em geral, aprende-se **20 a 40%** melhor depois de uma boa noite."
+        },
+        {
+          "type": "paragraph",
+          "text": "O sono profundo também dispara a **hormona do crescimento**, que repara músculos e tecidos, e estimula as [[citocinas]], moléculas de sinalização do sistema imunitário. Outra descoberta importante: o [[sistema glinfático]], uma rede de drenagem cerebral **dez vezes** mais ativa à noite. Evacua resíduos, incluindo proteínas ligadas ao risco de Alzheimer."
+        },
+        {
+          "type": "funFact",
+          "text": "Durante o sono profundo, as células do cérebro retraem-se cerca de **60%**. O espaço assim criado deixa o líquido de limpeza circular melhor."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p3",
+      "title": "Quem dorme quanto, e como",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os gatos dormem **12 a 16 horas**: predadores em segurança. As girafas contentam-se às vezes com **30 minutos a 2 horas**, em sestas curtas, prontas a fugir. Os golfinhos dormem com **um só hemisfério**, metade do cérebro, de cada vez, para continuarem a subir para respirar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Os bebés dormem até **18 horas**, com muito [[sono REM]], a fase dos sonhos com movimentos oculares rápidos. Essa fase ajuda a [[sinaptogénese]], a fabricação das ligações entre neurónios."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p4",
+      "title": "O relógio interno e a luz azul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Duas forças empurram-nos para a cama: o cansaço que se acumula durante o dia, e os [[ritmos circadianos]], o relógio interno acertado para **24 horas**. Quando a luz diminui, o cérebro liberta **melatonina**, uma hormona que prepara o corpo para o sono sem o impor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Os ecrãs à noite enganam esse relógio e atrasam o adormecer. Não se «recupera» verdadeiramente uma dívida de sono ao fim de semana: o cansaço diminui, mas não todos os estragos. Horários regulares e um quarto escuro e fresco continuam a ser os melhores aliados."
+        },
+        {
+          "type": "takeaway",
+          "text": "O sono limpa o cérebro, repara o corpo e consolida a memória. Uma privação total mata em poucas semanas: dormir não é luxo, é manutenção vital."
+        }
+      ]
+    }
+  ]
+}

@@ -13,6 +13,7 @@ NON_FR_LANGS: list[str] = [
     "es",
     "de",
     "pt",
+    "pt-PT",
     "it",
     "tr",
     "pl",
@@ -43,6 +44,8 @@ RTL_LANGS: frozenset[str] = frozenset({"ar", "he"})
 
 # Google Translate target codes. Norwegian Bokmal is "no" upstream and Serbian
 # must be requested in Cyrillic ("sr" already is); every other app code is 1:1.
+# Portuguese ships twice: "pt" is Brazilian (Google's "pt" is too) and "pt-PT"
+# European, which Google takes under the same code.
 GT_TARGETS: dict[str, str] = {code: code for code in NON_FR_LANGS}
 GT_TARGETS["nb"] = "no"
 
@@ -56,6 +59,7 @@ SWIFT_CASE_BY_CODE: dict[str, str] = {
     "es": "spanish",
     "de": "german",
     "pt": "portuguese",
+    "pt-PT": "portuguesePortugal",
     "it": "italian",
     "tr": "turkish",
     "pl": "polish",

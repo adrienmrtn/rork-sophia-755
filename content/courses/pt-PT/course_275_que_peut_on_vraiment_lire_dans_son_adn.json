@@ -1,0 +1,155 @@
+{
+  "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn",
+  "title": "O que se pode ler realmente no teu ADN?",
+  "subtitle": "Genes e destino",
+  "subject": "sciences",
+  "subcategory": "O nosso quotidiano explicado",
+  "description": "Gostos, personalidade, riscos de doença, origens remotas: o nosso ADN diz muito sobre nós. Mas predisposição nunca foi destino.",
+  "author": "kate-waddams",
+  "hero": {
+    "image": "dna_double_helix_3d_render_blue",
+    "ratio": "4:3",
+    "hook": "O teu ADN conta de onde vens, do que gostas e o que te ameaça, mas não decide tudo."
+  },
+  "sections": [
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O nosso ADN diz muita coisa sobre nós: de onde viemos, do que o nosso corpo é capaz e talvez até o que nos espera. É a nossa história e o nosso plano de construção. Mas o que é ele, exatamente? O ADN está em quase todas as células do corpo. Enrolado em **dupla hélice**, contém as instruções genéticas que regulam o nosso funcionamento, crescimento, desenvolvimento e reprodução."
+        },
+        {
+          "type": "paragraph",
+          "text": "As suas cadeias são feitas de apenas **quatro pequenas unidades**, os nucleótidos, representados pelas letras A, T, C e G. É a sequência destas quatro letras que forma o nosso [[genoma]], um plano genético único para cada um de nós. O que se pode realmente ler ali? Os nossos gostos, os nossos riscos de doença, as nossas origens. E até que ponto este texto escreve o nosso futuro?"
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p1",
+      "title": "Os teus genes moldam os teus gostos e a tua personalidade",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Um [[gene]] é um segmento deste texto. Funciona como um manual biológico: diz ao corpo como fabricar as suas **proteínas**, que por sua vez constroem e fazem funcionar as nossas células. Daí nascem as nossas características visíveis. Mas os genes têm um papel muito mais profundo do que a aparência."
+        },
+        {
+          "type": "image",
+          "asset": "identical_twins_sisters_portrait_nature_nurture",
+          "ratio": "5:4",
+          "caption": "«As Companheiras de Viagem», de Augustus Egg (1862): duas raparigas iguais em tudo, uma dorme, a outra lê."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uma [[variante genética]] é uma versão um pouco diferente de um gene. Recentemente, cientistas associaram várias delas à **personalidade**. Ajustes genéticos subtis podem orientar as nossas preferências: adorar ou detestar desporto, ser extrovertido, colecionar passatempos. O nosso ADN pesaria no dia a dia muito mais do que imaginamos. Daí a pergunta: quanto do nosso comportamento já está escrito na nossa biologia?"
+        },
+        {
+          "type": "funFact",
+          "text": "Chá ou café? Até esta preferência tão simples pode depender de variações subtis dos nossos genes, segundo os estudos que ligam o ADN à personalidade."
+        },
+        {
+          "type": "paragraph",
+          "text": "E talvez não fique por aí. O ADN também dá pistas sobre pessoas que têm [[predisposição genética]] para certas perturbações de **saúde mental**, como a depressão. Não informa apenas sobre aquilo de que gostamos, mas também sobre o que nos pode deixar vulneráveis."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p2",
+      "title": "O que o ADN revela sobre riscos de doença",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A saúde mental não é a única afetada. A composição do nosso ADN pode deixar-nos mais vulneráveis a outras doenças, algumas das quais «vêm de família». Um exemplo conhecido: variantes herdadas dos genes [[BRCA1 e BRCA2]] predispõem certas mulheres a um **cancro da mama precoce**."
+        },
+        {
+          "type": "image",
+          "asset": "dna_sequencing_chromatogram_sanger_readout",
+          "ratio": "2:1",
+          "caption": "Cromatograma de sequenciação: cada pico colorido é uma letra do ADN. É nesta leitura que um teste encontra uma variante."
+        },
+        {
+          "type": "paragraph",
+          "text": "É aí que o [[teste genético]] mostra todo o seu valor, tanto para o sistema de saúde como para as pessoas envolvidas. Detetar um risco hereditário permite agir cedo: **rastreio** mais precoce, acompanhamento próximo, medicamentos ou outro tratamento preventivo. Esta vantagem pode salvar vidas e reduzir os custos médicos."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p3",
+      "title": "Uma máquina do tempo: de onde vens?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O nosso ADN passa de geração em geração. Guarda pistas sobre os nossos antepassados: de onde vinham, o que comiam, como viviam. É uma verdadeira máquina do tempo. Comparando os **padrões genéticos** das populações atuais, os cientistas conseguiram refazer o caminho percorrido pelos humanos por todo o globo."
+        },
+        {
+          "type": "image",
+          "asset": "early_human_migrations_out_of_africa_map",
+          "ratio": "5:4",
+          "caption": "As primeiras linhagens de Homo sapiens em África e a sua saída rumo à Eurásia, reconstituídas pela genética de populações."
+        },
+        {
+          "type": "paragraph",
+          "text": "Um exemplo. As fontes escritas contam que populações do **Norte de África** se instalaram na [[península Ibérica]] entre **700 e 1200**. O ADN confirma o relato: os habitantes atuais da península ainda trazem a marca genética destes encontros."
+        },
+        {
+          "type": "funFact",
+          "text": "Até as nossas origens mais remotas são mais complicadas do que uma simples árvore genealógica. Um estudo baseado em genomas completos encontrou o rasto de duas populações humanas antigas, separadas há cerca de **1,5 milhões de anos**, que depois voltaram a misturar-se."
+        }
+      ]
+    },
+    {
+      "id": "course_275_que_peut_on_vraiment_lire_dans_son_adn_p4",
+      "title": "Predisposição não é destino",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O teu ADN influencia, portanto, muitas das tuas características. Mas ter predisposição para algo não quer dizer que a tua sorte esteja selada. Ter um risco genético de **depressão** não significa que vais desenvolver depressão. Um risco genético não é uma certeza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Os genes abrem possibilidades, não as impõem. As nossas experiências, as nossas escolhas e as nossas circunstâncias contam tanto como eles. Ler o próprio ADN é ler uma parte de si: uma parte preciosa, às vezes decisiva para a saúde, mas só uma parte."
+        },
+        {
+          "type": "takeaway",
+          "text": "O ADN conta os nossos gostos, os nossos riscos e as nossas origens, mas predisposição nunca é certeza: o teu ADN é só uma parte de ti."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "text": "Yale School of Medicine, «How Genes Shape Personality Traits: New Links Are Discovered», Yale Medicine News, 9 de setembro de 2024.",
+      "url": "https://medicine.yale.edu/news-article/how-genes-shape-personality-traits-new-links-are-discovered/"
+    },
+    {
+      "text": "«DNA», Wikipedia, The Free Encyclopedia.",
+      "url": "https://en.wikipedia.org/wiki/DNA"
+    },
+    {
+      "text": "Institute of Medicine (US), «Genetics and Health», em L. M. Hernandez e D. G. Blazer (org.), Genes, Behavior, and the Social Environment: Moving Beyond the Nature/Nurture Debate, National Academies Press, Washington (DC), 2006.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK19932/"
+    },
+    {
+      "text": "NIHR Oxford Biomedical Research Centre, «International study reveals how our genes shape blood proteins linked to disease».",
+      "url": "https://oxfordbrc.nihr.ac.uk/international-study-reveals-how-our-genes-shape-blood-proteins-linked-to-disease/"
+    },
+    {
+      "text": "«What Our DNA Can Tell Us About the History of Humans», Frontiers for Young Minds, 2020.",
+      "url": "https://kids.frontiersin.org/articles/10.3389/frym.2020.00106"
+    },
+    {
+      "text": "«How genetics determine our life choices», BBC Future, 9 de maio de 2023.",
+      "url": "https://www.bbc.co.uk/future/article/20230509-how-genetics-determine-our-life-choices"
+    },
+    {
+      "text": "University of Cambridge, «Genetic study reveals hidden chapter in human evolution», Research news, 18 de março de 2025.",
+      "url": "https://www.cam.ac.uk/research/news/genetic-study-reveals-hidden-chapter-in-human-evolution"
+    }
+  ]
+}

@@ -243,6 +243,16 @@ enum TikTokBlockerShared {
             )
         case "pt":
             return ShieldCopy(
+                title: "Aprenda antes de rolar o feed",
+                subtitle: "Termine seu curso do dia na Sophia para desbloquear o TikTok até amanhã.",
+                pendingSubtitle: "Anotado! Abra a Sophia agora: seu curso está esperando.",
+                primaryButton: "Abrir Sophia",
+                secondaryButton: "Fechar",
+                notificationTitle: "Um curso, depois o feed",
+                notificationBody: "Toque aqui: seu curso do dia desbloqueia o TikTok."
+            )
+        case "pt-PT":
+            return ShieldCopy(
                 title: "Cultiva-te antes de fazer scroll",
                 subtitle: "Termina o teu curso do dia na Sophia para desbloquear o TikTok até amanhã.",
                 pendingSubtitle: "Anotado! Abre a Sophia agora: o teu curso está à espera.",

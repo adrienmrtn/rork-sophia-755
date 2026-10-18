@@ -48,6 +48,7 @@ COURSE_UNLOCK_TITLES = {
     "en_US": "Unlock this course for free",
     "es_ES": "Desbloquea este curso gratis",
     "de_DE": "Schalte diesen Kurs kostenlos frei",
+    "pt_BR": "Desbloqueie este curso grátis",
     "pt_PT": "Desbloqueia este curso grátis",
     "it_IT": "Sblocca questo corso gratis",
     # Step 7 — 9 new app languages (RC paywall localization keys).

@@ -25,6 +25,7 @@ final class LanguageManager {
         guard current != language else { return }
         current = language
         UserDefaults.standard.set(language.rawValue, forKey: AppLanguage.userDefaultsKey)
+        UserDefaults.standard.set(true, forKey: AppLanguage.portugueseSplitKey)
         LocalizedContentLoader.resetCache()
     }
 

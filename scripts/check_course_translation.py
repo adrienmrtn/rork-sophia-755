@@ -295,6 +295,21 @@ PORTUGUESE_RULES = LanguageRules(
     era_hint="should be a.C. / d.C.",
 )
 
+#: European Portuguese: the Brazilian rules, with the guillemets Portugal quotes with.
+EUROPEAN_PORTUGUESE_RULES = LanguageRules(
+    stranded_spaced=PORTUGUESE_RULES.stranded_spaced,
+    stranded_tight=PORTUGUESE_RULES.stranded_tight,
+    leading_articles=PORTUGUESE_RULES.leading_articles,
+    leftover_extra_skip=PORTUGUESE_RULES.leftover_extra_skip,
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,
+    century_hint="should be 'século XV'",
+    era_hint="should be a.C. / d.C.",
+    allowed_chars=frozenset({"\u00ab", "\u00bb"}),
+)
+
 ITALIAN_RULES = LanguageRules(
     stranded_spaced=re.compile(
         r"\b(il|lo|la|i|gli|le|un|uno|una|di|del|della|dei|delle|in|nel|"
@@ -763,6 +778,7 @@ RULES_BY_LANG: dict[str, LanguageRules] = {
     "de": GERMAN_RULES,
     "es": SPANISH_RULES,
     "pt": PORTUGUESE_RULES,
+    "pt-PT": EUROPEAN_PORTUGUESE_RULES,
     "it": ITALIAN_RULES,
     "tr": TURKISH_RULES,
     "pl": POLISH_RULES,
@@ -883,6 +899,7 @@ ARTICLE_BEFORE_RE = {
     "de": re.compile(r"\b(der|die|das|dem|den|des|ein|eine|eines|einem|einen)$", re.IGNORECASE),
     "es": re.compile(r"\b(el|la|los|las|un|una)$", re.IGNORECASE),
     "pt": re.compile(r"\b(o|a|os|as|um|uma)$", re.IGNORECASE),
+    "pt-PT": re.compile(r"\b(o|a|os|as|um|uma)$", re.IGNORECASE),
     "it": re.compile(r"\b(il|lo|la|i|gli|le|un|uno|una)$", re.IGNORECASE),
     "tr": re.compile(r"\b(bir|bu|\u015fu)$", re.IGNORECASE),
     "pl": re.compile(r"\b(ten|ta|to|ci|te)$", re.IGNORECASE),

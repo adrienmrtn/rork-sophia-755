@@ -29,6 +29,8 @@ private val AppLanguage.bcp47Tag: String
         // month names would come back in Cyrillic.
         AppLanguage.SERBIAN -> "sr-Latn-u-nu-latn"
         AppLanguage.NORWEGIAN -> "nb-NO-u-nu-latn"
+        // `pt` alone is Brazilian; the region makes the Brazilian formats explicit, as on iOS.
+        AppLanguage.PORTUGUESE -> "pt-BR-u-nu-latn"
         else -> "$code-u-nu-latn"
     }
 

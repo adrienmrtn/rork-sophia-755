@@ -25,6 +25,9 @@ Nesta ordem:
    ideias, o mesmo comprimento com 20 por cento de folga, para o layout
    aguentar.
 
+A edição de Portugal (`pt-PT`) é adaptada desta, frase a frase; ver
+`TRANSLATION_GUIDE_PT_PT.md`.
+
 Registro: **português brasileiro padrão**. Sem europeísmo (`facto`,
 `acção`, `telemóvel`, `autocarro`). Sem sotaque regional escrito. Tratamento
 informal em **você**, nunca o *tu* ou o *vós* europeus. Ortografia do

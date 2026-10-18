@@ -26,6 +26,7 @@ class PluralStringsTest {
         "de" to setOf("one", "other"),
         "it" to setOf("one", "other"),
         "pt" to setOf("one", "other"),
+        "pt-PT" to setOf("one", "other"),
         "nl" to setOf("one", "other"),
         "sv" to setOf("one", "other"),
         "da" to setOf("one", "other"),

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fill the App Store product page in every language the app speaks.
 
-Sophia ships 26 languages and App Store Connect will take 23 of them. Estonian,
+Sophia ships 27 languages and App Store Connect will take 24 of them. Estonian,
 Serbian and Bulgarian are not among the 50 locales Apple offers for store
 metadata, so those readers get a product page in the primary language and an app
 in theirs -- which works, because the app picks its language itself rather than
@@ -13,6 +13,9 @@ Four steps, each its own subcommand, in the order you run them:
     build   translate the source locale into every locale still missing text
     check   validate lengths and locales -- no network, no account needed
     push    write the tree back to App Store Connect
+
+Before the first push of a release, ``create-version 1.10`` opens that version
+in App Store Connect when the previous one is already live.
 
 A fifth subcommand, ``prune``, runs outside that cycle and only deletes: it
 drops subscription and subscription-group localizations that were typed into
@@ -91,7 +94,9 @@ ASC_LOCALE: dict[str, str | None] = {
     "en": "en-US",
     "es": "es-ES",
     "de": "de-DE",
-    "pt": "pt-PT",
+    # Portuguese ships as two editions, each with its own store page.
+    "pt": "pt-BR",
+    "pt-PT": "pt-PT",
     "it": "it",
     "nl": "nl-NL",
     "pl": "pl",
@@ -125,9 +130,11 @@ ASC_LOCALE: dict[str, str | None] = {
 
 #: Regional variants that take a copy of their base locale, not a translation.
 #:
-#: The account already carries en-AU, en-CA, en-GB, es-MX and pt-BR on its
+#: The account already carries en-AU, en-CA, en-GB and es-MX on its
 #: subscriptions, each spelling its text exactly like the base locale -- all four
-#: English rows read "Unlocks all of Sophia's premium features". Handling only
+#: English rows read "Unlocks all of Sophia's premium features". pt-BR used to be
+#: here too; it is now the page of the Brazilian edition (`pt`), written for
+#: Brazil rather than copied from pt-PT. Handling only
 #: en-US would leave those rows on the previous release's copy while en-US moved
 #: on, which is worse than not touching them at all.
 #:
@@ -136,7 +143,6 @@ ASC_LOCALE: dict[str, str | None] = {
 VARIANTS: dict[str, tuple[str, ...]] = {
     "en-US": ("en-GB", "en-AU", "en-CA"),
     "es-ES": ("es-MX",),
-    "pt-PT": ("pt-BR",),
 }
 VARIANT_OF = {variant: base for base, group in VARIANTS.items() for variant in group}
 
@@ -369,6 +375,49 @@ def find_version(client: Client, app_id: str, expect: str | None = None) -> tupl
         f"being prepared; this app's versions are: {states}.\n"
         "Create the next version in App Store Connect first."
     )
+
+
+def create_version(client: Client, version: str) -> int:
+    """Open the next iOS version in App Store Connect, as "+ Version" does in the browser.
+
+    Every push needs a version being prepared, and once the last one is live there is
+    none until someone opens the next. Apple copies the live version's localizations
+    into the new one, so the push that follows only has to send what changed.
+
+    Refuses when another version is already being prepared: Apple allows one at a
+    time, and a second one opened by mistake would take the release notes.
+    """
+    app_id = find_app(client, BUNDLE_ID)
+    for record in client.get_all(f"/apps/{app_id}/appStoreVersions"):
+        attributes = record.get("attributes") or {}
+        if attributes.get("platform", "IOS") != "IOS":
+            continue
+        found = attributes.get("versionString") or "?"
+        if found == version:
+            print(f"{version} already exists ({state_of(record)}). Nothing to do.")
+            return 0
+        if state_of(record) in EDITABLE:
+            sys.exit(
+                f"{found} is already being prepared ({state_of(record)}); Apple allows one "
+                f"version in preparation at a time. Nothing created."
+            )
+    if client.dry_run:
+        print(f"dry run: would create iOS version {version}")
+        return 0
+    created = client.call(
+        "POST",
+        "/appStoreVersions",
+        body={
+            "data": {
+                "type": "appStoreVersions",
+                "attributes": {"platform": "IOS", "versionString": version},
+                "relationships": {"app": {"data": {"type": "apps", "id": app_id}}},
+            }
+        },
+    )
+    record = created.get("data") or {}
+    print(f"created iOS version {version} ({state_of(record) or 'state not reported'}), id {record.get('id')}")
+    return 0
 
 
 def find_app_info(client: Client, app_id: str) -> str:
@@ -1552,6 +1601,12 @@ def main() -> int:
         help="refuse unless the version being prepared is this one (e.g. 1.1.7)",
     )
 
+    creator = sub.add_parser(
+        "create-version", help="open the next iOS version in App Store Connect"
+    )
+    creator.add_argument("version", help="the version string, e.g. 1.10")
+    creator.add_argument("--dry-run", action="store_true", help="report, create nothing")
+
     pruner = sub.add_parser(
         "prune", help="delete the subscription text that was never submitted to review"
     )
@@ -1589,6 +1644,8 @@ def main() -> int:
             return pull(client)
         if args.command == "prune":
             return prune(client, args.locale, args.include_edits)
+        if args.command == "create-version":
+            return create_version(client, args.version)
         if fields:
             return push_fields(client, args.locale, fields, args.expect_version)
         return push(client, args.locale)

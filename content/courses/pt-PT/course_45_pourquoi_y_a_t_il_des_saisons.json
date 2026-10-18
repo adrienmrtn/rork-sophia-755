@@ -1,0 +1,100 @@
+{
+  "id": "course_45_pourquoi_y_a_t_il_des_saisons",
+  "title": "Porque é que existem estações?",
+  "subtitle": "Terra e Sol",
+  "subject": "sciences",
+  "subcategory": "O nosso quotidiano explicado",
+  "description": "As estações não vêm do facto de a Terra estar mais perto ou mais longe do Sol. A verdadeira causa é a inclinação do eixo da Terra.",
+  "hero": {
+    "image": "pourquoi_y_a_t_il_des_saisons",
+    "ratio": "16:9",
+    "hook": "Não, o verão não chega porque a Terra se aproxima do Sol."
+  },
+  "sections": [
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Muita gente pensa que o verão chega quando a Terra está mais **perto** do Sol, e o inverno quando está mais **longe**. Isso é falso. E vê-se logo: quando é verão em França, é inverno na Austrália."
+        },
+        {
+          "type": "paragraph",
+          "text": "A verdadeira explicação cabe numa só coisa: o eixo de rotação da Terra é **inclinado**, tombado em relação ao plano da órbita à volta do Sol."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p1",
+      "title": "A Terra inclina-se",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Terra gira em torno de si mesma em **24 horas**: é o dia e a noite. Também gira à volta do Sol em **um ano**, numa órbita em forma de **elipse**, um círculo um pouco achatado. Mas o eixo, a linha imaginária do polo Norte ao polo Sul, não está direito em relação à órbita. Inclina-se cerca de **23,5 graus**: é [[A inclinação axial da Terra (23,5°)]]."
+        },
+        {
+          "type": "image",
+          "asset": "earth_summer_winter_seasons_illustration",
+          "ratio": "auto",
+          "caption": "A inclinação do eixo da Terra explica o ciclo das estações"
+        },
+        {
+          "type": "paragraph",
+          "text": "Essa inclinação mantém-se quase na mesma direção o ano inteiro. Aponta sempre para a mesma região do céu, perto da estrela Polar. Resultado: conforme o lugar da Terra na órbita, um hemisfério «olha» mais para o Sol, o outro menos."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p2",
+      "title": "Mais luz, mais calor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No verão do hemisfério norte, o polo Norte inclina-se em direção ao Sol. Os dias ficam mais longos: o **fotoperíodo**, a relação entre a duração do dia e da noite, aumenta. Os raios também chegam mais «a pique» ao solo: a energia concentra-se numa superfície menor. Por isso aquece mais."
+        },
+        {
+          "type": "funFact",
+          "text": "Em janeiro, a Terra está até um pouco **mais perto** do Sol do que em julho: é o **periélio**, o ponto mais próximo da órbita. E mesmo assim é inverno no hemisfério norte. Prova de que a distância não explica as estações."
+        },
+        {
+          "type": "paragraph",
+          "text": "No inverno, é o inverso: dias curtos, raios mais oblíquos, energia espalhada numa superfície maior. Menos calor recebido. Os **solstícios**, momentos em que o Sol atinge a posição mais ao norte ou ao sul, marcam o começo do verão ou do inverno."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p3",
+      "title": "E perto do equador?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Perto do **equador**, a linha imaginária que divide a Terra em dois hemisférios, a inclinação muda pouco a duração do dia. Não há de facto quatro estações como na Europa, mas sim períodos mais secos e mais húmidos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nos **polos**, o efeito é extremo: vários meses de dia contínuo no verão, vários meses de noite no inverno. O contraste lá é bem mais forte do que na Europa."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p4",
+      "title": "Um planeta sem inclinação",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se o eixo da Terra fosse perfeitamente direito, cada lugar receberia quase a mesma quantidade de sol o ano inteiro. Sem um verdadeiro verão, sem um verdadeiro inverno. O clima, as culturas agrícolas, as migrações de animais: tudo seria diferente."
+        },
+        {
+          "type": "takeaway",
+          "text": "As estações vêm da **inclinação** do eixo da Terra, cerca de **23,5°**, não da distância ao Sol. Um hemisfério inclina-se para o Sol: é verão. O outro inclina-se para o lado oposto: é inverno."
+        }
+      ]
+    }
+  ]
+}
