@@ -141,6 +141,18 @@ code iOS et Android. Coche les cases des actions que tu valides.
   chers), 30 pays facturés dans une autre devise sur Play (AR, UA, MA, KE…, passe ultérieure avec
   conversion), 17 sans prix iOS. Les abonnés Android existants gardent leur prix. Détail : §9.9 de
   `docs/plan-ab-tests-prix.md`.
+- [x] Europe de l'Est (B v2 `expaaff2977ef`) et reste du monde (C v3 `expc04e8ff651`) arrêtés le 15/10 à
+  14:58 UTC (`revenuecat-experiments · switch`) : aucune variante ne bat le prix actuel. Lecture finale,
+  essais tous terminés (18/10, cadeau compris) : B 29,99 77 % (médiane +8 %), B 49,99 32 % ; C palier
+  50 % 78 % seul, 59 % cumulé avec la v2 (médiane +3 %). Sous la barre de 95 % : on garde 39,99 et le prix
+  actuel. Il ne reste que P v4 (39,99 contre 49,99), décision le 22/10. Détail : §9.10.
+- [x] Offre par défaut rétablie le 18/10 à 15:53 UTC (`revenuecat-experiments · default`) : depuis la
+  clôture du test S dans le tableau de bord le 13/10 (entre 08:35 et 09:20 UTC), l'offre courante du
+  projet était `s__3999_mnotrial` au lieu de `fin_onboarding`. Tout le monde hors test et hors règle
+  voyait le mensuel sans essai, et sur Android le mensuel disparaissait (le base plan `monthly-notrial`
+  n'existe pas sur Play). `fin_onboarding` est de nouveau l'offre par défaut ; l'Europe du Sud garde
+  `s__3999_mnotrial` par la règle `1ae80bc2cd`. Les témoins des tests affichaient explicitement
+  `fin_onboarding` : résultats non touchés. La comparaison Android avant/après le 13/10 est brouillée.
 - [ ] Disponibilité des produits de test limitée aux pays de leur test (`available_in` du
   manifeste) : le 01/10, un abonné suédois est passé de `Sophia_yearly` (39,99 €) au palier 25 %
   depuis les réglages d'abonnement d'Apple, qui listent tous les produits du groupe vendus dans
