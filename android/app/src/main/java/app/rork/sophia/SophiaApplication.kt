@@ -114,9 +114,11 @@ class SophiaApplication : Application(), ImageLoaderFactory {
                 MemoryCache.Builder(this@SophiaApplication).maxSizePercent(0.08).build()
             }
             .diskCache {
+                // Every course image comes from Supabase, and its egress is what the app
+                // pays for: roomy enough that a heavy reader never evicts and refetches.
                 DiskCache.Builder()
                     .directory(cacheDir.resolve("covers"))
-                    .maxSizeBytes(48L * 1024 * 1024)
+                    .maxSizeBytes(192L * 1024 * 1024)
                     .build()
             }
             .respectCacheHeaders(false)
