@@ -10,8 +10,9 @@ import UIKit
 ///    app for pictures most readers never open.
 ///
 /// A slug is resolved through `CourseImageAliases` to the object name, which is also
-/// the file name in the bundle. Downloads are kept in the Caches directory, so an image
-/// is fetched once per install; the memory cache covers the paging back and forth.
+/// the file name in the bundle. Downloads are kept on disk (Application Support, which the
+/// system never purges), so an image is fetched once per install; the memory cache covers
+/// the paging back and forth.
 enum CourseImageLoader {
     private static let memory: NSCache<NSString, UIImage> = {
         let cache = NSCache<NSString, UIImage>()
@@ -99,12 +100,28 @@ enum CourseImageLoader {
 
     // MARK: - Disk cache
 
+    /// Application Support rather than Caches: the system empties Caches when the phone
+    /// runs low on space, and every image then came down from the bucket again. Egress
+    /// is the one Supabase line this app actually pays for, so the files stay. Excluded
+    /// from backups, as they can always be fetched again.
     private static let cacheDirectory: URL? = {
-        guard let base = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else {
+        let fm = FileManager.default
+        guard let base = fm.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else {
             return nil
         }
-        let directory = base.appendingPathComponent("CourseImages", isDirectory: true)
-        try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        var directory = base.appendingPathComponent("CourseImages", isDirectory: true)
+        if !fm.fileExists(atPath: directory.path) {
+            // Carry over what an earlier version downloaded into Caches, when still there.
+            let old = fm.urls(for: .cachesDirectory, in: .userDomainMask).first?
+                .appendingPathComponent("CourseImages", isDirectory: true)
+            if let old, fm.fileExists(atPath: old.path) {
+                try? fm.moveItem(at: old, to: directory)
+            }
+            try? fm.createDirectory(at: directory, withIntermediateDirectories: true)
+        }
+        var values = URLResourceValues()
+        values.isExcludedFromBackup = true
+        try? directory.setResourceValues(values)
         return directory
     }()
 

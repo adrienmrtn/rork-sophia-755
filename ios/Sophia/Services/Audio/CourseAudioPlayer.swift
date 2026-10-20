@@ -110,6 +110,8 @@ final class CourseAudioPlayer {
     /// The queue item the `AVPlayer` currently holds. Nil after a relaunch: the restored
     /// narration is only loaded when the listener presses play.
     @ObservationIgnored private var loadedItemID: UUID?
+    /// The item whose narration is being fetched before it can be loaded into the player.
+    @ObservationIgnored private var downloadingItemID: UUID?
     @ObservationIgnored private var pendingStartTime: Double?
     @ObservationIgnored private var playWhenReady = false
     @ObservationIgnored private var reportedCompletion = false
@@ -268,6 +270,13 @@ final class CourseAudioPlayer {
 
     func resume() {
         guard let current else { return }
+        if downloadingItemID == current.id, !failedToLoad {
+            // Still fetching: play as soon as the file lands.
+            playWhenReady = true
+            activateSession()
+            syncPlaybackState()
+            return
+        }
         if loadedItemID != current.id || player.currentItem == nil || failedToLoad {
             load(current, autoplay: true)
             return
@@ -297,6 +306,7 @@ final class CourseAudioPlayer {
         player.replaceCurrentItem(with: nil)
         observeItem(nil)
         loadedItemID = nil
+        downloadingItemID = nil
         current = nil
         queue.removeAll()
         currentTime = 0
@@ -435,11 +445,49 @@ final class CourseAudioPlayer {
     // MARK: - Loading
 
     private func load(_ item: AudioQueueItem, autoplay: Bool) {
-        guard let url = CourseAudioDownloads.shared.localURL(courseId: item.courseId, language: item.language)
-            ?? CourseAudioCatalog.remoteURL(courseId: item.courseId, language: item.language) else {
+        if let url = CourseAudioDownloads.shared.localURL(courseId: item.courseId, language: item.language) {
+            downloadingItemID = nil
+            loadLocal(item, url: url, autoplay: autoplay)
+            return
+        }
+        guard CourseAudioCatalog.remoteURL(courseId: item.courseId, language: item.language) != nil else {
             failedToLoad = true
             return
         }
+        // Not on the phone yet: fetched to disk first, then played from there. Never streamed,
+        // so a narration costs its download once per install instead of once per listen.
+        failedToLoad = false
+        reportedCompletion = false
+        duration = 0
+        currentTime = positions[item.key.path] ?? 0
+        pendingStartTime = nil
+        playWhenReady = autoplay
+        observeItem(nil)
+        player.replaceCurrentItem(with: nil)
+        loadedItemID = item.id
+        downloadingItemID = item.id
+        if autoplay {
+            activateSession()
+        }
+        configureRemoteCommandsIfNeeded()
+        syncPlaybackState()
+        updateNowPlaying()
+
+        Task { @MainActor [weak self] in
+            let saved = await CourseAudioDownloads.shared.ensureDownloaded(
+                courseId: item.courseId, language: item.language
+            )
+            guard let self, self.downloadingItemID == item.id, self.current?.id == item.id else { return }
+            self.downloadingItemID = nil
+            if saved, let url = CourseAudioDownloads.shared.localURL(courseId: item.courseId, language: item.language) {
+                self.loadLocal(item, url: url, autoplay: self.playWhenReady)
+            } else {
+                self.itemFailed()
+            }
+        }
+    }
+
+    private func loadLocal(_ item: AudioQueueItem, url: URL, autoplay: Bool) {
         failedToLoad = false
         reportedCompletion = false
         duration = 0
@@ -537,6 +585,7 @@ final class CourseAudioPlayer {
     }
 
     private func itemFailed() {
+        downloadingItemID = nil
         playWhenReady = false
         failedToLoad = true
         player.pause()
@@ -586,7 +635,7 @@ final class CourseAudioPlayer {
         let status = player.timeControlStatus
         let loading = playWhenReady && player.currentItem?.status != .readyToPlay
         isPlaying = status != .paused || playWhenReady
-        isBuffering = status == .waitingToPlayAtSpecifiedRate || loading
+        isBuffering = status == .waitingToPlayAtSpecifiedRate || loading || downloadingItemID != nil
         updateNowPlaying()
     }
 
