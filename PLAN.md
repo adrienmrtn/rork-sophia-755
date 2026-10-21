@@ -153,6 +153,11 @@ code iOS et Android. Coche les cases des actions que tu valides.
   n'existe pas sur Play). `fin_onboarding` est de nouveau l'offre par défaut ; l'Europe du Sud garde
   `s__3999_mnotrial` par la règle `1ae80bc2cd`. Les témoins des tests affichaient explicitement
   `fin_onboarding` : résultats non touchés. La comparaison Android avant/après le 13/10 est brouillée.
+- [x] Pays riches : P v4 (`expeff5486efd`, 39,99 contre 49,99) arrêté le 21/10 à 13:43 UTC, on garde
+  39,99. À J+10 : essais 16,0 % contre 14,3 %, essais payés 38 % contre 30 %, remboursés 4 contre 8 ;
+  le 49,99 rapporte plus avec 54 % de chances cadeau compris (68 % en cumulant la v3, médiane +4 %),
+  29 % hors cadeau. Égalité de revenu, environ 20 % d'abonnés en plus au 39,99, remboursements en
+  hausse : contrôle gardé (règle 2, § 9.3). Plus aucun test en cours. Détail : §9.11.
 - [ ] Disponibilité des produits de test limitée aux pays de leur test (`available_in` du
   manifeste) : le 01/10, un abonné suédois est passé de `Sophia_yearly` (39,99 €) au palier 25 %
   depuis les réglages d'abonnement d'Apple, qui listent tous les produits du groupe vendus dans
