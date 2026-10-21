@@ -698,6 +698,25 @@ rendu `s__3999_mnotrial` courante pour tout le projet. Constaté le 15/10, réta
 `revenuecat-experiments · default` (`fin_onboarding`). Entre-temps, hors test et hors règle, le mensuel
 était sans essai sur iOS et absent sur Android (`sophia_pro:monthly-notrial` n'existe pas sur Play).
 
+### 9.11 Pays riches : 39,99 gardé (21/10)
+
+P v4 (`expeff5486efd`) arrêté le 21/10 à 13:43 UTC, à J+10.
+
+| Au 21/10 | 39,99 | 49,99 |
+|---|---|---|
+| Visiteurs | 3 394 | 3 413 |
+| Essais annuels lancés | 16,0 % | 14,3 % |
+| Essais terminés qui paient | 105 / 273 (38 %) | 82 / 269 (30 %) |
+| Remboursés | 4 | 8 |
+| Chance de rapporter plus, cadeau compris | — | 54 % (v4) ; 68 % v3 + v4, médiane +4 % |
+| Hors cadeau | — | 29 % (v4) ; 44 % v3 + v4 |
+
+Égalité de revenu : le 49,99 perd des essais et des payeurs, et ne revient à égalité que par le cadeau
+à 19,99 (107 achats contre 73). Pour le même revenu, le 39,99 fait environ 20 % d'abonnés en plus. Les
+remboursements montent : on garde le contrôle (règle 2, § 9.3). Le 15/10, sur des essais pas encore
+terminés, le 49,99 était à 90 % : ne pas décider sur des essais en cours. Plus aucun test ne tourne ;
+piste suivante : le mensuel sans essai (gagnant en Europe du Sud) dans les autres groupes.
+
 ## 10. Grille de prix par pays (hypothèse, arrêtée à J+45)
 
 | Groupe | Annuel | Mensuel / hebdo | Discount | Décidé par |
