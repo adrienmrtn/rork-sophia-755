@@ -84,6 +84,8 @@ final class CourseAudioDownloads {
     private(set) var failed: Set<AudioTrackKey> = []
 
     @ObservationIgnored private var tasks: [AudioTrackKey: URLSessionDownloadTask] = [:]
+    /// Callers of `ensureDownloaded`, resumed when the file is on disk or the download failed.
+    @ObservationIgnored private var waiters: [AudioTrackKey: [CheckedContinuation<Bool, Never>]] = [:]
     @ObservationIgnored private let delegate: CourseAudioDownloadDelegate
     @ObservationIgnored private let session: URLSession
 
@@ -149,11 +151,27 @@ final class CourseAudioDownloads {
         task.resume()
     }
 
+    /// The narration on disk, downloading it first when needed. True once the file is there.
+    ///
+    /// This is how the player gets its audio: a narration is fetched once per install and
+    /// every listen after that is local. Streaming it from the bucket cost the whole file
+    /// on every play, which is what blew through the storage egress quota.
+    func ensureDownloaded(courseId: String, language: AudioLanguage) async -> Bool {
+        let key = AudioTrackKey(courseId: courseId, language: language)
+        if downloaded.contains(key) { return true }
+        download(courseId: courseId, language: language)
+        guard tasks[key] != nil else { return false }
+        return await withCheckedContinuation { continuation in
+            waiters[key, default: []].append(continuation)
+        }
+    }
+
     func cancel(courseId: String, language: AudioLanguage) {
         let key = AudioTrackKey(courseId: courseId, language: language)
         tasks[key]?.cancel()
         tasks[key] = nil
         inFlight[key] = nil
+        resumeWaiters(key, with: false)
     }
 
     func delete(courseId: String, language: AudioLanguage) {
@@ -166,6 +184,7 @@ final class CourseAudioDownloads {
     func deleteAll() {
         for task in tasks.values { task.cancel() }
         tasks.removeAll()
+        for key in waiters.keys { resumeWaiters(key, with: false) }
         inFlight.removeAll()
         try? FileManager.default.removeItem(at: CourseAudioStorage.directory)
         downloaded.removeAll()
@@ -187,11 +206,18 @@ final class CourseAudioDownloads {
         switch outcome {
         case .saved:
             downloaded.insert(key)
+            resumeWaiters(key, with: true)
         case .failed:
             failed.insert(key)
+            resumeWaiters(key, with: false)
         case .cancelled:
             break
         }
+    }
+
+    private func resumeWaiters(_ key: AudioTrackKey, with success: Bool) {
+        guard let pending = waiters.removeValue(forKey: key) else { return }
+        for continuation in pending { continuation.resume(returning: success) }
     }
 
     private static func scanDisk() -> Set<AudioTrackKey> {

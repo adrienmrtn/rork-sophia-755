@@ -11,7 +11,14 @@ import androidx.media3.common.MediaMetadata
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
+import androidx.media3.database.StandaloneDatabaseProvider
+import androidx.media3.datasource.DefaultDataSource
+import androidx.media3.datasource.DefaultHttpDataSource
+import androidx.media3.datasource.cache.CacheDataSource
+import androidx.media3.datasource.cache.LeastRecentlyUsedCacheEvictor
+import androidx.media3.datasource.cache.SimpleCache
 import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
 import androidx.media3.session.MediaController
 import androidx.media3.session.SessionToken
 import app.rork.sophia.SophiaApplication
@@ -20,6 +27,7 @@ import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.CourseCoverUrls
 import app.rork.sophia.data.StringStore
 import com.google.common.util.concurrent.ListenableFuture
+import java.io.File
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
@@ -69,6 +77,8 @@ private data class SavedAudioSession(val items: List<AudioQueueItem> = emptyList
 @OptIn(UnstableApi::class)
 object CourseAudioPlayer {
     const val SKIP_MS = 15_000L
+    /** Streamed narrations kept on disk, least recently heard evicted first. */
+    private const val STREAM_CACHE_BYTES = 256L * 1024 * 1024
     const val COMPLETION_THRESHOLD = 0.9
     const val SPEED_MIN = 0.5f
     const val SPEED_MAX = 2.0f
@@ -151,6 +161,7 @@ object CourseAudioPlayer {
     fun player(context: Context): Player {
         init(context)
         return exo ?: ExoPlayer.Builder(appContext)
+            .setMediaSourceFactory(DefaultMediaSourceFactory(dataSourceFactory(appContext)))
             .setAudioAttributes(
                 AudioAttributes.Builder()
                     .setUsage(C.USAGE_MEDIA)
@@ -168,6 +179,28 @@ object CourseAudioPlayer {
                 player.addListener(listener)
                 exo = player
             }
+    }
+
+    private var streamCache: SimpleCache? = null
+
+    /**
+     * Keeps what the player streams. A narration not downloaded used to come down from the
+     * bucket in full on every listen, and storage egress is the one Supabase line this app
+     * pays for: with this cache a listen costs its bytes once, then replays from disk.
+     * `filesDir`, not the cache directory, so the system does not empty it. Downloaded
+     * files (`file://`) go straight to [DefaultDataSource] and are not copied here.
+     */
+    private fun dataSourceFactory(context: Context): DefaultDataSource.Factory {
+        val cache = streamCache ?: SimpleCache(
+            File(context.filesDir, "course_audio_stream_cache"),
+            LeastRecentlyUsedCacheEvictor(STREAM_CACHE_BYTES),
+            StandaloneDatabaseProvider(context),
+        ).also { streamCache = it }
+        val cached = CacheDataSource.Factory()
+            .setCache(cache)
+            .setUpstreamDataSourceFactory(DefaultHttpDataSource.Factory())
+            .setFlags(CacheDataSource.FLAG_IGNORE_CACHE_ON_ERROR)
+        return DefaultDataSource.Factory(context, cached)
     }
 
     /** Binding a controller is what starts [CourseAudioService] and its notification. */
