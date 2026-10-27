@@ -1,0 +1,724 @@
+{
+ "langue": "fi",
+ "synthese": null,
+ "scores_relecteur_par_surface": {
+  "ui": 2.5
+ },
+ "justifications_relecteur": {
+  "ui": "Le socle de l'app (réglages, parcours, entraînement, bloqueur TikTok, lecteur audio) est en finnois correct et souvent naturel, mais l'onboarding et les paywalls — ce que l'utilisateur voit en premier — accumulent des erreurs qu'un natif remarque immédiatement : faux sens graves (« essai » = procès, « lumière » = léger, « Practice » = coutume), mots inventés (« PYYHÄVÄ LÖYDÄKSI », « Tietustelut »), marque réécrite « Sofia », fragments assemblés avec des chiffres mal déclinés et phrases sans verbe. La terminologie produit n'est pas stabilisée (quatre mots pour « quiz », trois pour « parcours », anglicismes blocker/anti-scroll) et les témoignages sentent la traduction automatique. L'ensemble reste compréhensible mais se lit clairement comme traduit, avec des erreurs fréquentes dans le tunnel de conversion."
+ },
+ "constats_non_listes_par_le_relecteur": {
+  "ui": 52
+ },
+ "motifs_recurrents": [
+  {
+   "description": "« Quiz » rendu par quatre termes différents selon l'écran (tietokilpailu = jeu-concours, tietovisa, visa, et le mot inventé « Tietustelut »), parfois dans deux clés voisines.",
+   "frequency": "systématique",
+   "example": "course.quiz « Tietovisa » / course.quiz.access « Avaa tietokilpailu » / path.quiz.title « Tason visa » / onboardingV2.exams.quote3 « Tietustelut »",
+   "regex_target": "(?i)tietokilpailu|tietovisa|\\bvisa\\w*|tietustelu",
+   "regex_fr": "(?i)\\bquiz\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Nom de marque réécrit « Sofia » (4 occurrences) alors que Sophia doit rester tel quel.",
+   "frequency": "fréquent",
+   "example": "onboarding.graph.subtitle « Sofian kanssa ja ilman », paywall.quiz.reviews.title « He oppivat Sofian kanssa »",
+   "regex_target": "\\bSofia\\w*",
+   "pack": "ui"
+  },
+  {
+   "description": "Nombre + nom au nominatif ou au partitif pluriel au lieu du partitif singulier (fragments assemblés avec un chiffre).",
+   "frequency": "fréquent",
+   "example": "« %d tietokilpailut », « menetettyjä tunteja vuodessa », « %@ täydet päivät », « asioita, jotka todella tiedät », « oikeat vastaukset »",
+   "regex_target": "(%d|%@|\\b\\d+)\\s+\\w+(?:t|ja|jä)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Nominalisations françaises (« Analyse de… ») et infinitifs d'objectifs (« Réduire mon… ») rendus par des verbes conjugués à l'impératif, à la 3e personne ou par un gérondif, avec possessif de 1re personne incohérent.",
+   "frequency": "fréquent",
+   "example": "onboarding.loading.step2 « Valitsemalla 3 aihettasi », onboardingV2.objective.reduceScreen « Vähennä näyttöaikaani »",
+   "regex_target": "^(?:Analysoi|Valitsemalla|Valmistelee|Laajenna|Vähennä|Opi|Menesty|Tee)\\b",
+   "regex_fr": "^(?:Analyse|Sélection|Préparation|Création) de\\b|^(?:Me cultiver|Réduire|Apprendre|Réussir|Impressionner|Être)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« Culture / cultivé » (culture générale) rendu par tieto/tiedot (information) ou kulttuuri/kulttuurinen (arts) au lieu de sivistys / sivistynyt.",
+   "frequency": "fréquent",
+   "example": "onboarding.graph.title « Kulttuurinen edistymisesi », onboarding.graph.culture « TIEDOT », paywall.review2.quote « kulttuuriksi »",
+   "regex_target": "(?i)kulttuuri\\w*|\\btiedoksi\\b|\\bTIEDOT\\b|tietomatka\\w*",
+   "regex_fr": "(?i)\\bcultur(?:e|el|elle)\\b|\\bcultivé",
+   "pack": "ui"
+  },
+  {
+   "description": "« Scroller » rendu par vieritys (défilement UI), rullata/rullaus (rouler) ou skrollata selon l'écran ; seul skrollata/skrollailu sonne naturel dans une app grand public.",
+   "frequency": "fréquent",
+   "example": "onboarding.objective.reduceScroll « vieritysaikaa », onboardingV2.review.t1.quote « rullaan », tiktokBlocker.title « skrollaat »",
+   "regex_target": "(?i)vierity\\w*|rulla\\w*|skrolla\\w*",
+   "regex_fr": "(?i)\\bscroll\\w*",
+   "pack": "ui"
+  },
+  {
+   "description": "Noms de fonctions laissés en anglais et déclinés (blocker, anti-scroll, paywall) alors que l'app dispose déjà de termes finnois (TikTok-esto, esto, maksumuuri).",
+   "frequency": "fréquent",
+   "example": "paywall.blocker.title « blockerilla », antiScroll.cta « Ota anti-scroll käyttöön », settings.debug.discountPaywall « alennus-paywall »",
+   "regex_target": "(?i)\\bblocker\\w*|anti-scroll|paywall",
+   "pack": "ui"
+  },
+  {
+   "description": "Typographie finnoise non respectée : % collé au chiffre, trait d'union pour les plages, unités collées (1h), guillemets droits au lieu de ”…”, milliers sans espace (1000+).",
+   "frequency": "fréquent",
+   "example": "« -70% IKUISESTI », « 1h - 2h », « 30-100€/kk », « 1000+ arvostelua », \"Sophian ansiosta…\"",
+   "regex_target": "\\d%|\\d\\s?-\\s?\\d|\\b\\d+[hH]\\b|\\\"[^\\\"\\n]+\\\"|\\b\\d{4}\\+",
+   "pack": "ui"
+  },
+  {
+   "description": "« Parcours » rendu tantôt par matka (voyage), polku (sentier), reitti (itinéraire) ou le composé étrange tietomatka ; polku est le terme déjà utilisé pour l'onglet.",
+   "frequency": "fréquent",
+   "example": "onboarding.loading.step3 « matkaasi », onboardingV2.intro.route.title « reitin », collections.badge.path « MATKA », tab.path « Polku »",
+   "regex_target": "(?i)\\b(?:matka|polku|reitti|tietomatka)\\w*",
+   "regex_fr": "(?i)\\bparcours\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« Essai » (gratuit) pris au sens de procès judiciaire (oikeudenkäynti).",
+   "frequency": "isolé",
+   "example": "onboarding.premiumTrial.cta « Aloita oikeudenkäyntini », onboarding.trial.trialEnds « Oikeudenkäynti päättyy »",
+   "regex_target": "oikeudenkäynti\\w*",
+   "regex_fr": "(?i)\\bessai\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« Pour + infinitif » systématiquement rendu par des chaînes de translatif (-ksesi), grammaticales mais lourdes et administratives pour une app au ton « tu ».",
+   "frequency": "fréquent",
+   "example": "account.signedOut.body « Luo tili tallentaaksesi edistymisesi ja käyttääksesi sitä… », auth.onboarding.title « Luo tilisi aloittaaksesi »",
+   "regex_target": "\\w+(?:a|ä)kse(?:si|en|mme)\\b",
+   "regex_fr": "(?i)\\bpour (?:te |se |m')?\\w+(?:er|ir|re)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« Série » (streak) rendu par sarja, compréhensible mais flou (série TV) ; le terme gamifié établi est putki, déjà utilisé pour « Combo » (quiz.combo « Putki x%d »), ce qui crée une inversion.",
+   "frequency": "fréquent",
+   "example": "friends.stats.streak « Sarja », course.streak.onTrack « Matkalla sarjaan! », settings.streak.title « %d päivän sarja »",
+   "regex_target": "(?i)\\bsarja\\w*",
+   "regex_fr": "(?i)\\bsérie\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Prénoms des témoignages : gardés en français dans l'ensemble (conforme), mais ponctuellement finnisés (Tuomas, Saara, Lea), ce qui trahit l'incohérence.",
+   "frequency": "isolé",
+   "example": "paywall.quiz.review2.author « Tuomas, 29 », paywall.review5.author « Saara, 26 », onboardingV2.review.author « Lea, 24 »",
+   "regex_target": "\\b(?:Tuomas|Saara|Lea)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« Soit… / C'est… » devant un chiffre calqué en « Se on / Siinä on », au lieu de « Eli » ou d'une tournure sans copule.",
+   "frequency": "fréquent",
+   "example": "onboardingV2.weeks.title « Se on %d viikkoa vuodessa », onboarding.wasted.daysComplete « Siinä on %@ täydet päivät. »",
+   "regex_target": "^(?:Se on|Siinä on)\\b",
+   "regex_fr": "^(?:Soit|C'est)\\b",
+   "pack": "ui"
+  }
+ ],
+ "constats": [
+  {
+   "location": "onboarding.premiumTrial.cta",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Aloita oikeudenkäyntini",
+   "gloss_fr": "Commence mon procès (au tribunal)",
+   "problem": "« Essai » a été pris au sens juridique : le bouton principal de l'écran d'essai invite à démarrer un procès.",
+   "fix": "Aloita kokeilujakso",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.trial.trialEnds",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Oikeudenkäynti päättyy",
+   "gloss_fr": "Le procès (judiciaire) se termine",
+   "problem": "Même faux sens « trial = procès » sur la frise de l'essai gratuit.",
+   "fix": "Kokeilu päättyy",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.showcase.courses.swipe",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "PYYHÄVÄ LÖYDÄKSI",
+   "gloss_fr": "deux mots qui n'existent pas en finnois",
+   "problem": "Formes inventées (ni « pyyhävä » ni « löydäksi » n'existent) : illisible pour un natif, en capitales sur l'onboarding.",
+   "fix": "PYYHKÄISE JA TUTUSTU",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.showcase.quiz.option.1",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Kevyt",
+   "gloss_fr": "Léger (poids)",
+   "problem": "« La lumière » a été lu comme l'adjectif « light/léger » ; la bonne réponse du quiz de démo devient absurde.",
+   "fix": "Valo",
+   "surface": "ui"
+  },
+  {
+   "location": "training.how.step2",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Sen kysymykset liittyvät käytäntöösi",
+   "gloss_fr": "Ses questions se rapportent à ta pratique/coutume",
+   "problem": "« Practice » (la section Entraînement, appelée Harjoittelu partout ailleurs) a été rendu par käytäntö = usage/coutume ; la phrase n'a plus de sens.",
+   "fix": "Sen kysymykset siirtyvät Harjoitteluusi",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.author2",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Inès, vanhempi vuosi",
+   "gloss_fr": "Inès, année plus âgée",
+   "problem": "« Senior year » traduit mot à mot ; aucun sens en finnois (terminale = abiturientti).",
+   "fix": "Inès, abiturientti",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote3",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Tietustelut auttoivat minua…",
+   "gloss_fr": "Les « tietustelut » (mot inexistant) m'ont aidée…",
+   "problem": "Mot inventé pour « quiz » dans un témoignage très visible.",
+   "fix": "Visat auttoivat minua muistamaan olennaisen ennen kokeita.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.graph.subtitle",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Sofian kanssa ja ilman",
+   "gloss_fr": "Avec et sans Sofia",
+   "problem": "La marque est réécrite « Sofia » (idem onboarding.graph.withSophia / withoutSophia) alors qu'elle est « Sophia » partout ailleurs.",
+   "fix": "Sophian kanssa ja ilman",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.reviews.title",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "He oppivat Sofian kanssa",
+   "gloss_fr": "Ils apprennent avec Sofia",
+   "problem": "Marque mal orthographiée sur un titre de paywall.",
+   "fix": "He oppivat Sophian kanssa",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.graph.tagline",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Sophia yhdistää mitä tiedät⏎– nopeasti.",
+   "gloss_fr": "Sophia combine ce que tu sais – vite.",
+   "problem": "« compounds » (EN) a été lu comme « combine » ; le sens « accélère ta culture de façon exponentielle » est perdu.",
+   "fix": "Sophia kasvattaa sivistystäsi⏎eksponentiaalisesti.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.graph.title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Kulttuurinen⏎edistymisesi",
+   "gloss_fr": "Ta progression culturelle (au sens arts/culture)",
+   "problem": "« culture » = culture générale se dit sivistys ; « kulttuurinen edistyminen » sonne comme un rapport administratif, pas une app.",
+   "fix": "Sivistyksesi⏎kehitys",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.loading.step2",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Valitsemalla 3 aihettasi",
+   "gloss_fr": "En sélectionnant tes 3 matières",
+   "problem": "Nominalisation française rendue par un gérondif instrumental : fragment sans sens pendant le chargement.",
+   "fix": "Valitaan 3 aihettasi",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.loading.step1",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Analysoi vastauksiasi",
+   "gloss_fr": "Analyse tes réponses ! / Il analyse tes réponses",
+   "problem": "Se lit comme un impératif ou une 3e personne ; même défaut pour step3 « Valmistelee matkaasi » (→ « Valmistellaan polkuasi »).",
+   "fix": "Analysoidaan vastauksiasi",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.loading.subtitle",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Vain muutama sekunti, lupaa.",
+   "gloss_fr": "Quelques secondes, promets ! (impératif)",
+   "problem": "« promis » rendu par l'impératif « lupaa » au lieu de « lupaan » (je promets).",
+   "fix": "Vain muutama sekunti, lupaan.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.program.hoursSavedCaption",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "säästetystä ajasta",
+   "gloss_fr": "du temps économisé (élatif isolé)",
+   "problem": "Calque de « of time saved » ; après « %d h » le finnois demande le partitif « säästettyä aikaa ».",
+   "fix": "säästettyä aikaa",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.program.nickname.mythologie",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Mytologiasta utelias",
+   "gloss_fr": "Curieux depuis / à partir de la mythologie",
+   "problem": "Construction agrammaticale pour un surnom de profil affiché en gros.",
+   "fix": "Mytologian tutkija",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.projection.newThings",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "asioita, jotka todella tiedät",
+   "gloss_fr": "des choses que tu sais vraiment (partitif pluriel après un nombre)",
+   "problem": "Le fragment suit un nombre (« Se on 500 asioita… ») : il faut le partitif singulier, et « nouvelles » a disparu.",
+   "fix": "uutta asiaa, jotka todella osaat",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.showcase.courses.quizCount",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "%d tietokilpailut",
+   "gloss_fr": "N les-quiz (nominatif pluriel)",
+   "problem": "Après un nombre le nom doit être au partitif singulier ; le terme quiz est en outre incohérent avec le reste de l'app.",
+   "fix": "%d visaa",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.trial.badge",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Tervetuloa tarjous",
+   "gloss_fr": "Bienvenue offre (deux mots juxtaposés)",
+   "problem": "Le finnois exige un mot composé ; tel quel c'est une faute d'écolier sur un badge.",
+   "fix": "Tervetuliaistarjous",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.trial.notifyTitle",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Ilmoitamme sinulle⏎1 päivää ennen loppua⏎ilmaisesta kokeilustasi",
+   "gloss_fr": "Nous t'informons 1 jour avant la fin, de ton essai gratuit (cas faux)",
+   "problem": "Ordre des mots et cas calqués sur le français ; un natif bute sur « loppua ilmaisesta kokeilustasi ».",
+   "fix": "Ilmoitamme sinulle⏎päivää ennen⏎ilmaisen kokeilusi päättymistä",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.wasted.daysComplete",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Siinä on %@ täydet päivät.",
+   "gloss_fr": "Là-dedans il y a N les-jours-entiers.",
+   "problem": "« Soit %@ complets » rendu par une phrase agrammaticale (nominatif pluriel après nombre, « siinä on » hors sujet).",
+   "fix": "Eli kokonaiset %@.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.wasted.hoursLost",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "menetettyjä tunteja vuodessa.",
+   "gloss_fr": "des heures perdues par an (partitif pluriel)",
+   "problem": "Suit un nombre (« 730 menetettyjä tunteja ») : partitif singulier obligatoire.",
+   "fix": "menetettyä tuntia vuodessa.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.wasted.intro",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "%@ päivässä puhelimessasi",
+   "gloss_fr": "N par jour dans ton téléphone (sans « c'est »)",
+   "problem": "Le « c'est » a été supprimé : la phrase assemblée (intro + nombre + hoursLost) n'a plus de verbe.",
+   "fix": "%@ päivässä puhelimella tarkoittaa",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.welcome.rotating.comprendreLeMonde",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "ajankohtaisohjelmat",
+   "gloss_fr": "les émissions d'actualité (télé)",
+   "problem": "« Le monde actuel » devient « programmes télé d'actualité » ; à mettre au génitif pour s'accorder avec le titre corrigé.",
+   "fix": "nykymaailman",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.welcome.title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Sophia on kumppanisi (+ « taide », « historia »…)",
+   "gloss_fr": "Sophia est ton partenaire [art] – le verbe « maîtriser » a disparu",
+   "problem": "Le titre et le mot tournant ne s'accordent pas (« Sophia on kumppanisi taide ») ; il faut un verbe et le génitif sur les mots tournants (taiteen, historian, kirjallisuuden, mytologian, tieteen, nykymaailman).",
+   "fix": "Sophia on kumppanisi, kun haluat hallita",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote2",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Tarkastelen 10 minuuttia päivässä",
+   "gloss_fr": "J'examine / j'observe 10 minutes par jour",
+   "problem": "« réviser » rendu par tarkastella (examiner) ; le témoignage ne dit plus qu'elle révise.",
+   "fix": "Kertaan 10 minuuttia päivässä, ja arvosanani lähtivät oikeasti nousuun.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote4",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Täydellinen tarkistamiseen tien päällä.",
+   "gloss_fr": "Parfait pour vérifier sur la route.",
+   "problem": "« réviser dans les transports » devient « vérifier sur la route » (tarkistaa = contrôler).",
+   "fix": "Täydellinen kertaamiseen bussissa tai junassa. Opettajani huomasivat eron.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.objective.cultivate",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Laajenna mieltäni päivittäin",
+   "gloss_fr": "Élargis mon esprit chaque jour (ordre donné à quelqu'un d'autre)",
+   "problem": "Toute la liste d'objectifs mélange impératif et possessif de 1re personne (« Opi… », « Menesty… », « Tee… ») ; en finnois on attend l'infinitif : Oppia uteliaisuudesta, Menestyä opinnoissa / kokeissa, Tehdä vaikutus seurassa.",
+   "fix": "Sivistyä joka päivä",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.objective.reduceScreen",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Vähennä näyttöaikaani",
+   "gloss_fr": "Réduis mon temps d'écran (impératif + mon)",
+   "problem": "Même incohérence impératif/possessif, et « näyttöaika » alors que le terme établi (iOS, paywall.benefit.screenTime, tiktokBlocker) est « ruutuaika ».",
+   "fix": "Vähentää ruutuaikaani",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.t1.quote",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Koska rullaan vähemmän ja käytän Sophiaa, … muistan itse asiassa paljon enemmän.",
+   "gloss_fr": "Parce que je « roule » moins et utilise Sophia, … je retiens en fait beaucoup plus.",
+   "problem": "« Depuis que » rendu par « parce que », « scroller » par rullata (rouler) et « actually » calqué en « itse asiassa ».",
+   "fix": "Sen jälkeen kun aloin skrollata vähemmän ja käyttää Sophiaa, tuntuu, että muistan paljon enemmän.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.t4.quote",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Vaihdan loputtoman rullaukseni kurssiin. Kuukaudessa ympärilläni olevat ihmiset huomasivat eron.",
+   "gloss_fr": "J'échange mon roulement infini contre un cours. En un mois les gens situés autour de moi ont vu la différence.",
+   "problem": "« rullaus » n'est pas « scroller », et « ympärilläni olevat ihmiset » est un calque lourd de « people around me » (mes proches = läheiseni).",
+   "fix": "Korvaan loputtoman skrollailun kurssilla. Kuukaudessa läheiseni huomasivat eron.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.rightPlace.caption",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "…että tällä tavoitteella todellista edistystä Sophian kanssa.",
+   "gloss_fr": "…que avec cet objectif un vrai progrès avec Sophia (pas de verbe)",
+   "problem": "Phrase cassée : « että » orphelin et aucun verbe ; le natif ne comprend pas la statistique.",
+   "fix": "…joilla on tämä tavoite, edistyvät selvästi Sophian avulla.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.yearsGrid.title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Tässä on elämäsi vuosissa",
+   "gloss_fr": "Voici ta vie dans les années (cas faux)",
+   "problem": "« en années » demande l'essif « vuosina », pas l'inessif.",
+   "fix": "Tässä on elämäsi vuosina",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.blocker.title",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Ota vihdoin aikasi hallintaan blockerilla.",
+   "gloss_fr": "…avec le « blocker » (anglais décliné)",
+   "problem": "« blocker » laissé en anglais et décliné (blockerilla, blockerin, « Avaa blocker ») alors que l'app dit déjà « TikTok-esto » / « Esto » ailleurs ; idem paywall.blocker.subtitle (→ « Kokeile sovellusestoa {n} päivää ilmaiseksi. ») et .noTrial (→ « Avaa sovellusesto Sophia PROlla. »).",
+   "fix": "Ota vihdoin aikasi hallintaan sovellusestolla.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.freeSubjects",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "3 vapaata aihettasi",
+   "gloss_fr": "tes 3 matières libres (disponibles / non occupées)",
+   "problem": "« gratuites » rendu par vapaa (libre) au lieu de ilmainen ; le natif lit « sujets libres ».",
+   "fix": "3 ilmaista aihettasi",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.review1.quote",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Tietokilpailut saivat minut muistamaan paljon muutakin kuin vain lukemisen. 5 min ja se tarttuu.",
+   "gloss_fr": "Les quiz m'ont fait retenir bien d'autres choses que la lecture. 5 min et c'est contagieux.",
+   "problem": "Comparatif mal construit (« retenir autre chose que la lecture ») et « ça reste » rendu par tarttua (se transmettre / coller).",
+   "fix": "Visojen avulla muistan paljon enemmän kuin pelkästään lukemalla. 5 min ja se jää mieleen.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.review3.quote",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Tunnen oloni kulttuurisemmaksi joka viikko. Tietokilpailut ankkuroivat kaiken.",
+   "gloss_fr": "Je me sens plus « culturel » chaque semaine. Les quiz ancrent tout (mot à mot).",
+   "problem": "« cultivé » ≠ kulttuurinen (relatif à la culture) ; « ancrent » traduit littéralement par ankkuroida (jeter l'ancre).",
+   "fix": "Tunnen itseni sivistyneemmäksi joka viikko. Visat painavat kaiken mieleen.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.review2.quote",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Lopuksi sovellus, joka muuttaa rullaamisen kulttuuriksi.",
+   "gloss_fr": "Pour finir, une app qui transforme le roulement en culture (arts).",
+   "problem": "« Enfin » pris au sens « en dernier lieu » (lopuksi), « scroll » rendu par rullata, « culture » par kulttuuri : trois faux sens dans une ligne.",
+   "fix": "Vihdoin sovellus, joka muuttaa skrollailun sivistykseksi.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.trial.in2days",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "2 päivässä",
+   "gloss_fr": "en 2 jours (durée nécessaire)",
+   "problem": "« Dans 2 jours » (date) se dit « 2 päivän päästä » ; « 2 päivässä » signifie « en l'espace de 2 jours ». Idem paywall.trial.in3days (→ « 3 päivän päästä »).",
+   "fix": "2 päivän päästä",
+   "surface": "ui"
+  },
+  {
+   "location": "collections.badge.complete",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "TÄYDELLINEN",
+   "gloss_fr": "PARFAIT / INTÉGRAL",
+   "problem": "« Terminée » rendu par « parfait(e) » ; le badge de collection terminée se dit VALMIS (cf. collections.complete « Kokoelma valmis »).",
+   "fix": "VALMIS",
+   "surface": "ui"
+  },
+  {
+   "location": "friends.period.all",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Koko ajan",
+   "gloss_fr": "Tout le temps / en permanence",
+   "problem": "Le filtre de période « Tout » devient l'adverbe « constamment ».",
+   "fix": "Kaikki",
+   "surface": "ui"
+  },
+  {
+   "location": "friends.handle.edit.subtitle",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "@-tunnuksesi antaa ystävillesi löytää sinut.",
+   "gloss_fr": "Ton @ donne à tes amis trouver toi.",
+   "problem": "Calque de « lets friends find you » : antaa + allatif + infinitif est agrammatical.",
+   "fix": "@-tunnuksen avulla ystäväsi löytävät sinut.",
+   "surface": "ui"
+  },
+  {
+   "location": "globalRank.xpBefore",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "%d XP - %@",
+   "gloss_fr": "N XP - [rang] (le « avant » a disparu)",
+   "problem": "« %d XP avant Érudit » devient « 250 XP - Oppinut » : la relation (il manque N XP pour atteindre…) n'est plus exprimée.",
+   "fix": "%d XP arvonimeen %@",
+   "surface": "ui"
+  },
+  {
+   "location": "quiz.correctAnswers",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "oikeat vastaukset",
+   "gloss_fr": "les bonnes réponses (nominatif pluriel)",
+   "problem": "Libellé affiché après un nombre (« 7 oikeat vastaukset ») : il faut le partitif singulier, comme pour quiz.pointsEarned « pistettä ansaittu ».",
+   "fix": "oikeaa vastausta",
+   "surface": "ui"
+  },
+  {
+   "location": "training.how.step3",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Tarkista ne oikeaan aikaan, jotta et unohda",
+   "gloss_fr": "Vérifie-les au bon moment pour ne pas oublier",
+   "problem": "« Révise » rendu par tarkistaa (contrôler) ; le terme produit est kerrata (cf. training.readyTitle « Aika kerrata »).",
+   "fix": "Kertaa ne oikeaan aikaan, niin et unohda niitä",
+   "surface": "ui"
+  },
+  {
+   "location": "training.ob.recall.title",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Kysymme sinulta, jotta oppimasi todella jää mieleen.",
+   "gloss_fr": "Nous te demandons (quoi ?), pour que ce que tu as appris reste.",
+   "problem": "Verbe sans objet : « kysymme sinulta » appelle une question ; la mémorisation active du FR a disparu.",
+   "fix": "Täällä käytämme aktiivista kertausta, jotta kurssit todella jäävät mieleesi.",
+   "surface": "ui"
+  },
+  {
+   "location": "course.quiz.access",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Avaa tietokilpailu",
+   "gloss_fr": "Ouvrir le concours de culture générale (terme différent de la clé voisine « Tietovisa »)",
+   "problem": "« Quiz » est rendu par quatre termes selon l'écran (tietokilpailu, tietovisa, visa, « Tietustelut ») ; tietokilpailu évoque un jeu télévisé, et la clé voisine course.quiz dit déjà « Tietovisa » — choisir « visa » (ou « tietovisa ») partout.",
+   "fix": "Avaa visa",
+   "surface": "ui"
+  },
+  {
+   "location": "offer.feature2",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Rajoittamaton interaktiivinen tietokilpailu",
+   "gloss_fr": "Un concours interactif illimité (singulier)",
+   "problem": "Pluriel perdu et « rajoittamaton » calqué ; en finnois naturel : « rajattomasti … visoja ».",
+   "fix": "Rajattomasti interaktiivisia visoja",
+   "surface": "ui"
+  },
+  {
+   "location": "offer.expiresIn",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "Vanhenee v",
+   "gloss_fr": "Expire d (chaîne tronquée)",
+   "problem": "Chaîne visiblement coupée (« v » orphelin) avant le compte à rebours ; vanheta se dit en outre d'un produit périmé.",
+   "fix": "Päättyy",
+   "surface": "ui"
+  },
+  {
+   "location": "audio.browse.title",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Kaikki äänet",
+   "gloss_fr": "Tous les sons",
+   "problem": "« audios » (cours audio) rendu par äänet = sons/bruits, comme dans audio.browse « Selaa kaikkia ääniä », audio.downloads.title « Ladatut äänet », deleteAll.confirm, downloads.empty/footer ; il faut äänikurssit / äänitteet.",
+   "fix": "Kaikki äänikurssit",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.intro.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Tule sivistyneeksi⏎10 minuutissa⏎päivässä",
+   "gloss_fr": "Deviens cultivé en 10 minutes par jour (tournure « devenir + translatif », lourde)",
+   "problem": "Grammatical mais traduit ; le verbe « sivistyä » existe et donne un titre court et naturel.",
+   "fix": "Sivisty⏎10 minuutissa⏎päivässä",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.review2.author",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "Tuomas, 29",
+   "gloss_fr": "Thomas finnisé en « Tuomas »",
+   "problem": "Les prénoms des témoignages sont tantôt gardés (Thomas, Camille, Inès), tantôt finnisés (Tuomas, Saara pour Sarah, Lea pour Léa) : incohérent et moins crédible.",
+   "fix": "Thomas, 29",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.pw.feature.quiz",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Tietovisat ja Harjoittelu",
+   "gloss_fr": "Quiz et Entraînement (majuscule interne à l'anglaise)",
+   "problem": "Le finnois ne met pas de majuscule au second mot d'un libellé.",
+   "fix": "Visat ja harjoittelu",
+   "surface": "ui"
+  },
+  {
+   "location": "offer.discount",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "-70% IKUISESTI",
+   "gloss_fr": "-70% POUR TOUJOURS (sans espace avant %)",
+   "problem": "Le finnois met une espace avant % (« -70 % », comme dans offer.unlock) ; idem paywall.training.stat1.value « +200% » et stat2.value « 90% ».",
+   "fix": "-70 % IKUISESTI",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.phone.1to2h",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "1h - 2h",
+   "gloss_fr": "1h - 2h (trait d'union, unité collée)",
+   "problem": "Plage finnoise : tiret demi-cadratin et unité séparée (« 1–2 h ») ; idem « Alle 1h », « Yli 4h », « 30-100€/kk », « 1-2h/kk ».",
+   "fix": "1–2 h",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote1",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "\"Sophian ansiosta historiani keskiarvo nousi…\"",
+   "gloss_fr": "guillemets droits \"…\" au lieu des guillemets finnois ”…”",
+   "problem": "Les témoignages mélangent guillemets droits (exams.quote1–4, review.quote, paywall.course.subtitle.named, explain.course.termBody) et guillemets finnois ”…” (review.t3, notification.courseNudge.body).",
+   "fix": "”Sophian ansiosta historian keskiarvoni nousi 3 pistettä tällä lukukaudella.”",
+   "surface": "ui"
+  },
+  {
+   "location": "common.backHome",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Takaisin kotiin",
+   "gloss_fr": "Retour à la maison (chez soi)",
+   "problem": "« Accueil » (écran) rendu par « kotiin » : se lit comme « rentrer chez soi ».",
+   "fix": "Takaisin etusivulle",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.pw.startTrial",
+   "severity": "mineur",
+   "category": "longueur",
+   "current": "Aloita {n} päivän ilmainen kokeilujaksoni",
+   "gloss_fr": "Commencer ma période d'essai gratuite de {n} jours",
+   "problem": "Six mots pour un bouton principal ; idem paywall.cta.activateTrial « Aktivoi ilmainen kokeilujaksoni » et profile.unlock.trial.",
+   "fix": "Aloita {n} päivän kokeilu",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.training.footnote",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Ajoitettu kertaus",
+   "gloss_fr": "révision chronométrée / planifiée",
+   "problem": "« Répétition espacée » se dit hajautettu kertaus (ou jaksotettu toisto) ; « ajoitettu » (minuté) revient aussi dans stat1.label et onboardingV2.review.t6.quote « Ajoitetut tietovisat ».",
+   "fix": "Hajautettu kertaus",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.lockedSubjectsWithPremium",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "3 aihetta lukituksen avaamiseen Premiumilla",
+   "gloss_fr": "3 matières pour l'ouverture du verrou avec Premium",
+   "problem": "Nominalisation lourde ; un natif dit « avattavissa Premiumilla ».",
+   "fix": "3 aihetta avattavissa Premiumilla",
+   "surface": "ui"
+  }
+ ]
+}

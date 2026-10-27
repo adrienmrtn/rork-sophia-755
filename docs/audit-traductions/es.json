@@ -1,0 +1,1897 @@
+{
+ "langue": "es",
+ "synthese": {
+  "verdict": "La plainte n'est pas vraiment justifiée pour l'espagnol : l'UI et les cours sont fluides, souvent bien localisés (« sobremesa », « enhorabuena »), tutoiement et placeholders respectés. Ce qu'un utilisateur espagnol remarque, c'est un mélange de variantes régionales incompatible avec la cible es-ES : prétérit simple à la latino-américaine (« Subiste de nivel », « Ya usaste »), lexique d'Amérique (costo, postularse, en promedio, teléfono au lieu de móvil), et une terminologie produit instable (parcours = recorrido / ruta / viaje / camino / itinerario ; quizzes / quiz). Dans les cours, quelques fautes réelles (« desde medio del Sena »), des contresens isolés (« terror » pour angoisse, « llave » pour clé, « alejandrino de 12 sílabas ») et des calques récurrents (« se vuelve » + nom, « cuenta como », ponctuation américaine dans les guillemets).",
+  "scores": {
+   "ui": 4,
+   "cours": 4,
+   "global": 4
+  },
+  "top_issues": [
+   {
+    "title": "Variante latino-américaine dans une édition es-ES",
+    "where": "UI : Subiste de nivel, Ya usaste, sin costo, postularse, en promedio",
+    "current": "Subiste de nivel",
+    "gloss_fr": "prétérit simple ; l'Espagne dit « Has subido de nivel »",
+    "fix": "Has subido de nivel",
+    "severity": "majeur"
+   },
+   {
+    "title": "Point d'exclamation ouvrant manquant",
+    "where": "onboarding.dailyGoal.perDay",
+    "current": "%@ al día!",
+    "gloss_fr": "« %@ par jour ! » sans ¡",
+    "fix": "¡%@ al día!",
+    "severity": "majeur"
+   },
+   {
+    "title": "Bouton d'essai à l'impératif + possessif",
+    "where": "onboarding.premiumTrial.cta",
+    "current": "Empieza mi prueba",
+    "gloss_fr": "« Commence (toi) mon essai »",
+    "fix": "Empezar mi prueba",
+    "severity": "majeur"
+   },
+   {
+    "title": "Témoignage féminin au masculin",
+    "where": "paywall.quiz.review3.quote",
+    "current": "Me siento más culto cada semana.",
+    "gloss_fr": "cultivé (masculin) pour Inès",
+    "fix": "Me siento más culta cada semana.",
+    "severity": "majeur"
+   },
+   {
+    "title": "L'alexandrin donné à 12 syllabes",
+    "where": "course_100_les_fleurs_du_mal_baudelaire/s3.b2.text",
+    "current": "el **alejandrino**, un verso de 12 sílabas",
+    "gloss_fr": "l'alexandrin espagnol a 14 syllabes",
+    "fix": "el **alejandrino**, un verso de 14 sílabas (12 en francés)",
+    "severity": "majeur"
+   }
+  ],
+  "systematic": [
+   "Variantes latino-américaines (prétérit, lexique) dans une édition es-ES.",
+   "Terminologie « parcours » instable (cinq mots) ; pluriel de quiz instable.",
+   "Ponctuation anglo-américaine à l'intérieur des guillemets ; guillemets français avec espaces dans certains témoignages.",
+   "Calques : « se vuelve » + nom, « contar como », « Voici comment… » rendu au passé."
+  ],
+  "action": "corrections_ciblees",
+  "effort": "UI : 0,5 jour (variantes, terminologie) ; cours : corrections ponctuelles, 1 jour."
+ },
+ "scores_relecteur_par_surface": {
+  "ui": 4,
+  "courses": 4
+ },
+ "justifications_relecteur": {
+  "ui": "L'espagnol est globalement fluide et souvent bien localisé (« sobremesa », « un hacha », « vuelta a empezar », « enhorabuena »), avec les placeholders et le tutoiement respectés. Les défauts qu'un utilisateur espagnol remarque sont surtout : un mélange de variantes régionales incompatible avec la cible es-ES (prétérit simple à la latino-américaine « Subiste de nivel », « Ya usaste », « sin costo », « postularse », « en promedio »), quelques calques du français/anglais (« viaje de conocimiento », « gratis para probar », « listo cuando cuenta », « nunca en ráfagas »), et des incohérences terminologiques (parcours rendu par recorrido/ruta/viaje/camino/itinerario ; pluriel quiz/quizzes ; blocker/bloqueador). Deux ou trois erreurs de sens ou de grammaire (« sorteo », « Casi... » pour une mauvaise réponse, « Empieza mi prueba », « Sácale partido » après « para: ») méritent une correction rapide.",
+  "courses": "L'espagnol est globalement fluide, bien rythmé et adapté à un adolescent : la plupart des paragraphes se lisent comme un texte natif. Mais un lecteur espagnol butera sur une poignée de vraies fautes (« desde medio del Sena », « lienzos que una vez se burlaron », « una frase que se quedó »), quelques contresens (« terror » pour angoisse, « llave » pour clé, « poder político real » ambigu, « alejandrino de 12 sílabas » qui contredit la métrique espagnole) et des calques récurrents (« se volvió » + nom pour « devient », « cuenta como », ponctuation américaine à l'intérieur des guillemets, clés de glossaire gonflées en pleines phrases). Rien d'inutilisable, mais une relecture native est nécessaire pour effacer l'effet « traduit »."
+ },
+ "constats_non_listes_par_le_relecteur": {
+  "ui": 0,
+  "courses": 6
+ },
+ "motifs_recurrents": [
+  {
+   "description": "Prétérit simple (variante latino-américaine) pour des actions récentes ou liées au présent, là où l'espagnol d'Espagne emploie le passé composé : Subiste, usaste, empezaste, hiciste, viste, odié, salió mal, se encontraron, mejoraron.",
+   "frequency": "fréquent",
+   "example": "¡Subiste de nivel! → ¡Has subido de nivel!",
+   "regex_target": "\\b(Subiste|usaste|empezaste|hiciste|viste|odié|salió mal|[Ss]e encontr(ó|aron)|[Mm]ejoraron|subí)\\b",
+   "regex_fr": "\\b(Tu as|Tu viens|J'ai|Ils ont|Vous avez)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Lexique latino-américain au lieu des formes d'Espagne : costo, postularse, en promedio, opción múltiple, vistas, teléfono (au lieu de móvil).",
+   "frequency": "fréquent",
+   "example": "sin costo → sin coste",
+   "regex_target": "\\b(costo|postular(me|se|te|as)?|en promedio|[Oo]pción múltiple|las vistas)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Terme « parcours » rendu de façon instable : recorrido, ruta, viaje de conocimiento, camino, itinerario.",
+   "frequency": "fréquent",
+   "example": "Preparamos tu recorrido / Estamos preparando tu viaje de conocimiento / un camino claro / Tu ruta",
+   "regex_target": "\\b(recorrido|viaje de conocimiento|camino|itinerarios?|rutas?)\\b",
+   "regex_fr": "\\bparcours\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Pluriel de « quiz » instable : « quizzes » (majorité) contre « quiz » invariable (paywall quiz).",
+   "frequency": "fréquent",
+   "example": "Con los quiz / Todos los quizzes",
+   "regex_target": "\\b(los|las|sin|tus|mis|todos los)\\s+quiz\\b",
+   "regex_fr": "\\bquiz\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Anglicisme « blocker » non traduit à côté de « bloqueador ».",
+   "frequency": "isolé",
+   "example": "el blocker → el bloqueador",
+   "regex_target": "\\bblocker\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Calques structurels du français/anglais : « se vuelve saber », « gratis para probar », « listo cuando cuenta », « que más se parezca a ti », « nunca en ráfagas », « Ven a descubrir », « Para descubrir hoy », « tiempo ganado ».",
+   "frequency": "fréquent",
+   "example": "Sophia es gratis para probar. → Puedes probar Sophia gratis.",
+   "regex_target": "(se vuelve saber|gratis para probar|listo cuando cuenta|se parezca a ti|en ráfagas|Ven a descubrir|Para descubrir hoy|tiempo ganado|cuesta caro)",
+   "regex_fr": "\\b(c'est|À découvrir|Viens découvrir|temps gagné|en rafale)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Guillemets français « … » avec espaces intérieures dans certains témoignages, alors que l'espagnol écrit «…» sans espace (comme ailleurs dans l'app).",
+   "frequency": "fréquent",
+   "example": "« Gracias a Sophia, … » → «Gracias a Sophia, …»",
+   "regex_target": "«\\s+[^»]+\\s+»",
+   "regex_fr": "«\\s",
+   "pack": "ui"
+  },
+  {
+   "description": "Espace avant « % » incohérente : « -70% » contre « 89 % », « +200 % ».",
+   "frequency": "isolé",
+   "example": "-70% PARA SIEMPRE → -70 % PARA SIEMPRE",
+   "regex_target": "\\d%(?!\\s?\\d)",
+   "pack": "ui"
+  },
+  {
+   "description": "Accord au masculin par défaut (Bienvenido, culto, sincero, Apasionado), y compris dans des témoignages signés par des prénoms féminins (Inès : « más culto »).",
+   "frequency": "fréquent",
+   "example": "Inès : Me siento más culto → más culta",
+   "regex_target": "\\b(Bienvenido|más culto|Sé sincero|Apasionado|Curioso incansable)\\b",
+   "regex_fr": "\\b(Bienvenue|cultivé|curieux|Passionné)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Un même bouton ou terme FR rendu par plusieurs variantes ES : C'est parti (Empecemos / Vamos / ¡Vamos allá!), Passer (Saltar / Omitir), Découvrir un cours (Descubre / Descubrir), essai gratuit (prueba gratis / gratuita), App Store (el / la), facturé (facturado / se cobra), Email / Correo.",
+   "frequency": "fréquent",
+   "example": "Saltar / Omitir pour « Passer »",
+   "regex_target": "\\b(Empecemos|Vamos allá|Saltar|Omitir|se cobra|la App Store|el App Store)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Les prénoms des témoignages restent français (Léa, Camille, Inès, Yanis, Malik, Thomas) ; crédible pour une app d'origine française mais un utilisateur espagnol remarque l'absence totale de prénoms locaux.",
+   "frequency": "systématique",
+   "example": "Camille, 22 / Inès, 25",
+   "regex_target": "\\b(Léa|Camille|Inès|Yanis|Malik|Thomas|Lucas|Marie|Sarah),\\s",
+   "pack": "ui"
+  },
+  {
+   "description": "Ponctuation anglo-américaine : virgule ou point placés à l'intérieur des guillemets fermants (“…,” “….”), alors que l'espagnol les place après le guillemet.",
+   "frequency": "systématique",
+   "example": "Un tribunal lo condenó por “ultraje a la moral pública.”",
+   "regex_target": "[,.]”",
+   "pack": "courses"
+  },
+  {
+   "description": "« devenir » rendu par « volverse / se vuelve / se ha vuelto » + groupe nominal ; en espagnol « volverse » s'emploie avec un adjectif, un nom demande « convertirse en » ou « pasar a ser ».",
+   "frequency": "fréquent",
+   "example": "se volvió un jefe · se volvió el cemento del imperio · El insulto se ha vuelto un triunfo",
+   "regex_target": "\\bse (volvió|vuelve|ha vuelto|volvieron|vuelven) (un|una|el|la|los|las|unos|unas) ",
+   "regex_fr": "\\b(devient|deviennent|devenir|est devenu|devenue)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "« compter comme / passer pour / être considéré comme » rendu par « contar como », calque de l'anglais « count as » ; l'espagnol dit « considerarse ».",
+   "frequency": "fréquent",
+   "example": "un ataque a un miembro cuenta como un ataque a todos",
+   "regex_target": "\\b(cuenta|cuentan|contaba|contaban) como\\b",
+   "regex_fr": "\\b(passent? pour|considérée?s? comme)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Clé de glossaire insérée telle quelle dans la phrase avec un article majuscule, un intitulé long ou un gras absent du FR ([[El Salón oficial de París]], [[Los tubos de pintura y el plein air]], [[Simbolismo y legado de Baudelaire]]), ce qui casse la lecture.",
+   "frequency": "fréquent",
+   "example": "Con **[[Los tubos de pintura y el plein air]]**, por fin podía instalarse al aire libre",
+   "regex_target": "\\*\\*\\[\\[|\\[\\[(El|La|Los|Las) ",
+   "pack": "courses"
+  },
+  {
+   "description": "« Voici comment… » (phrase d'annonce en fin d'introduction) traduit par une phrase au passé qui sonne comme une conclusion (« Así empezó todo », « Así cambió el impresionismo… ») au lieu de « Así es como… / Te contamos cómo… ».",
+   "frequency": "fréquent",
+   "example": "Así empezó todo.",
+   "regex_target": "^Así (empezó|cambió|nació|comenzó)\\b",
+   "regex_fr": "\\bVoici comment\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Années à trois chiffres employées sans article (« en 622 », « hacia 570 », « en 610 ») ; en espagnol courant on dit « en el 622 / en el año 622 ». Acceptable mais sent la traduction.",
+   "frequency": "fréquent",
+   "example": "dijo que empezó a recibir revelaciones en **610**",
+   "regex_target": "\\b(en|hacia|desde) \\*{0,2}\\d{3}\\*{0,2}\\b",
+   "regex_fr": "\\b(en|vers|dès) \\*{0,2}\\d{3}\\*{0,2}\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Mots polysémiques du FR pris dans le mauvais sens (clé → llave, réel/vrai → real, angoisse → terror, immeubles → manzanas, phénomène sonore → efecto de sonido).",
+   "frequency": "fréquent",
+   "example": "El mito se volvió una llave de la psicología moderna",
+   "regex_target": "\\b(una llave de la|poder [a-z]+ real|efecto de sonido)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Tournures d'Amérique latine ou vieillies dans une édition es-ES (« enfrentar a », « guardarse de », « querellas »).",
+   "frequency": "isolé",
+   "example": "Construida para enfrentar a un enemigo",
+   "regex_target": "\\b(para|al|de) enfrentar a\\b|\\bguardarse de\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Gras ajouté autour des termes [[glossaire]] dans le cours sur l'impressionnisme alors que la source n'en met pas : balisage non conservé et rendu incohérent d'un cours à l'autre.",
+   "frequency": "fréquent",
+   "example": "Inspirados por el químico **[[Michel-Eugène Chevreul]]**",
+   "regex_target": "\\*\\*\\[\\[[^\\]]+\\]\\]\\*\\*",
+   "pack": "courses"
+  }
+ ],
+ "constats": [
+  {
+   "location": "onboarding.dailyGoal.perDay",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "%@ al día!",
+   "gloss_fr": "« %@ par jour ! » sans le point d'exclamation ouvrant",
+   "problem": "Il manque le « ¡ » ouvrant, obligatoire en espagnol ; très visible sur un écran d'onboarding.",
+   "fix": "¡%@ al día!",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.premiumTrial.cta",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Empieza mi prueba",
+   "gloss_fr": "« Commence (toi) mon essai »",
+   "problem": "Impératif à la 2e personne combiné au possessif de la 1re personne : incohérent, aucun natif ne dirait cela.",
+   "fix": "Empezar mi prueba",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.benefit.screenTime",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "📱 Sácale partido a la pantalla",
+   "gloss_fr": "« Tire profit de l'écran » (impératif)",
+   "problem": "Cette puce suit le titre « Sophia, tu arma secreta para: » ; un impératif après « para: » est agrammatical alors que les autres puces sont à l'infinitif.",
+   "fix": "📱 Aprovechar tu tiempo de pantalla",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.review3.quote",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Me siento más culto cada semana. Los quizzes lo anclan todo.",
+   "gloss_fr": "« Je me sens plus cultivé (masculin) chaque semaine »",
+   "problem": "L'auteure est Inès (prénom féminin) : l'accord doit être au féminin, sinon le témoignage perd toute crédibilité.",
+   "fix": "Me siento más culta cada semana. Los quizzes lo fijan todo.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.reviews.r3.quote",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Me siento más culto cada semana. Difícil pararme en un solo curso.",
+   "gloss_fr": "« Je me sens plus cultivé (masculin)… »",
+   "problem": "Même problème : Inès est une femme, « culto » doit être « culta » ; « pararme en » est en outre un calque de « m'arrêter à ».",
+   "fix": "Me siento más culta cada semana. Es difícil quedarme en un solo curso.",
+   "surface": "ui"
+  },
+  {
+   "location": "path.quiz.rule.retries",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Intentos ilimitados, con un nuevo sorteo cada vez",
+   "gloss_fr": "« Essais illimités, avec une nouvelle loterie/un nouveau tirage au sort à chaque fois »",
+   "problem": "« Sorteo » signifie tirage au sort/loterie ; pour un tirage de questions, le mot est faux et prête à sourire.",
+   "fix": "Intentos ilimitados, con preguntas nuevas cada vez",
+   "surface": "ui"
+  },
+  {
+   "location": "quiz.feedback.wrong",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Casi...",
+   "gloss_fr": "« Presque... »",
+   "problem": "« Pas tout à fait... » (mauvaise réponse) est rendu par le même texte que quiz.feedback.close (« Presque ! ») : l'utilisateur ne distingue plus une réponse proche d'une réponse fausse.",
+   "fix": "No exactamente...",
+   "surface": "ui"
+  },
+  {
+   "location": "antiScroll.title",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Activa el anti-scroll: lees un curso de Sophia para desbloquear tus apps",
+   "gloss_fr": "« Active l'anti-scroll : tu lis un cours Sophia pour débloquer tes apps »",
+   "problem": "Le présent « lees » ne rend pas « on te fait lire » ; la phrase semble décrire un fait au lieu d'une condition, logique cassée.",
+   "fix": "Activa el anti-scroll: tendrás que leer un curso de Sophia para desbloquear tus apps",
+   "surface": "ui"
+  },
+  {
+   "location": "levelUp.title",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "¡Subiste de nivel!",
+   "gloss_fr": "« Tu montas de niveau ! » (passé simple)",
+   "problem": "Pour un événement qui vient d'arriver, l'espagnol d'Espagne emploie le passé composé ; le prétérit simple sonne latino-américain sur un écran très visible.",
+   "fix": "¡Has subido de nivel!",
+   "surface": "ui"
+  },
+  {
+   "location": "quiz.levelUp",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "¡Subiste de nivel!",
+   "gloss_fr": "« Tu montas de niveau ! »",
+   "problem": "Même variante latino-américaine du prétérit sur un écran de célébration ; cible es-ES.",
+   "fix": "¡Has subido de nivel!",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.trial.cancelAnytime",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "Cancela en cualquier momento, sin costo.",
+   "gloss_fr": "« Annule à tout moment, sans coût » avec le mot latino-américain « costo »",
+   "problem": "« Costo » est un marqueur net d'espagnol d'Amérique ; en Espagne on dit « coste » ou mieux « sin gastos ».",
+   "fix": "Cancela cuando quieras, sin coste.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.cancelAnytime",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "Cancela en cualquier momento, sin costo.",
+   "gloss_fr": "« Annule à tout moment, sans coût (costo) »",
+   "problem": "Même régionalisme « costo », incompatible avec la cible es-ES.",
+   "fix": "Cancela cuando quieras, sin coste.",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.discover.cta",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "Quiero postularme",
+   "gloss_fr": "« Je veux me postuler »",
+   "problem": "« Postularse » est le verbe latino-américain pour candidater ; en Espagne on dit « presentar mi candidatura » ou « apuntarse ».",
+   "fix": "Me apunto",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.how.step1",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "Te postulas en 1 minuto aquí mismo.",
+   "gloss_fr": "« Tu te postules en 1 minute ici même »",
+   "problem": "Même régionalisme « postularse », peu naturel en Espagne.",
+   "fix": "Envías tu candidatura en 1 minuto, aquí mismo.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.loading.title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Estamos preparando tu viaje de conocimiento",
+   "gloss_fr": "« Nous préparons ton voyage de connaissance »",
+   "problem": "Calque de l'anglais « knowledge journey » ; « viaje de conocimiento » n'existe pas en espagnol courant, et le reste de l'app dit « recorrido », « ruta » ou « camino ».",
+   "fix": "Estamos preparando tu ruta de aprendizaje",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.loading.titleNamed",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Estamos preparando tu viaje de conocimiento, {name}",
+   "gloss_fr": "« Nous préparons ton voyage de connaissance, {name} »",
+   "problem": "Même calque « viaje de conocimiento ».",
+   "fix": "Estamos preparando tu ruta de aprendizaje, {name}",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.loading.title / onboarding.loading.step3 / onboardingV2.intro.route.title / onboardingV2.problem.line3 / onboarding.showcase.collections.title",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "recorrido / ruta personalizada / camino claro / itinerarios por temas",
+   "gloss_fr": "Le mot « parcours » est rendu par quatre à cinq mots différents (recorrido, ruta, viaje, camino, itinerario)",
+   "problem": "Le concept central « parcours » n'a pas de terme stable dans l'onboarding alors que l'onglet s'appelle « Ruta » et les collections « Itinerario » ; l'utilisateur ne relie pas les écrans entre eux.",
+   "fix": "Utiliser « ruta » partout pour le parcours de l'app (Preparando tu ruta ; Sophia te crea una ruta personalizada ; una ruta clara y personalizada) et garder « itinerario » uniquement pour les collections.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.blocker.title",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Toma por fin el control de tu tiempo con el blocker.",
+   "gloss_fr": "« Prends enfin le contrôle de ton temps avec le blocker » (mot anglais non traduit)",
+   "problem": "« Blocker » reste en anglais alors que la fonctionnalité s'appelle « Bloqueador de TikTok » partout ailleurs.",
+   "fix": "Toma por fin el control de tu tiempo con el bloqueador.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.blocker.subtitle",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "{n} días de prueba gratis para probar el blocker.",
+   "gloss_fr": "« {n} jours d'essai gratuit pour essayer le blocker »",
+   "problem": "Anglicisme « blocker » incohérent avec « bloqueador » ; répétition « prueba… probar ».",
+   "fix": "{n} días gratis para probar el bloqueador.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.blocker.subtitle.noTrial",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Desbloquea el blocker con Sophia PRO.",
+   "gloss_fr": "« Débloque le blocker avec Sophia PRO »",
+   "problem": "Même anglicisme « blocker ».",
+   "fix": "Desbloquea el bloqueador con Sophia PRO.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.chart.with / paywall.quiz.chart.without / paywall.quiz.subtitle / paywall.unlock.quiz",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Con los quiz / Sin quiz / los quiz interactivos / Quiz personalizados",
+   "gloss_fr": "Pluriel « quiz » invariable, alors que tout le reste de l'app écrit « quizzes »",
+   "problem": "Deux pluriels concurrents pour le terme produit principal (quizzes dans 20+ clés, quiz dans 4) ; il faut en choisir un seul.",
+   "fix": "Con los quizzes / Sin quizzes / los quizzes interactivos / Quizzes personalizados",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.pw.compare.title",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Los de Pro aprenden más, más rápido",
+   "gloss_fr": "« Ceux de Pro apprennent plus, plus vite »",
+   "problem": "« Los de Pro » est familier et ambigu (on dirait un nom d'équipe) ; « abonnés » a disparu.",
+   "fix": "Los suscriptores Pro aprenden más y más rápido",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.mission.title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Sophia es gratis para probar.",
+   "gloss_fr": "« Sophia est gratuite pour essayer » (structure anglaise « free to try »)",
+   "problem": "Calque de « free to try » ; en espagnol on tourne la phrase avec un verbe.",
+   "fix": "Puedes probar Sophia gratis.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.motivation.subtitle",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Elige la razón que más se parezca a ti.",
+   "gloss_fr": "« Choisis la raison qui te ressemble le plus » (mot à mot)",
+   "problem": "« Una razón que se parece a ti » est un calque du français ; une raison ne « ressemble » pas à quelqu'un en espagnol.",
+   "fix": "Elige la razón con la que más te identificas.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.profile.tagline.exams",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Aprendes con método, listo cuando cuenta.",
+   "gloss_fr": "« Tu apprends avec méthode, prêt quand ça compte »",
+   "problem": "« Listo cuando cuenta » est un calque de l'anglais « ready when it counts », incompréhensible pour un natif ; le FR parle du jour J.",
+   "fix": "Aprendes con método para estar listo el día del examen.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.notifications.bullet2",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "En el momento justo, nunca en ráfagas",
+   "gloss_fr": "« Au bon moment, jamais en rafales »",
+   "problem": "« En ráfagas » se dit d'une arme ou du vent ; pour des notifications, l'expression est un calque du français qui fait sourire.",
+   "fix": "En el momento justo, sin bombardearte",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.wasted.transform",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Con Sophia, ese tiempo se vuelve saber.",
+   "gloss_fr": "« Avec Sophia, ce temps devient savoir »",
+   "problem": "« Volverse saber » est une tournure forcée ; l'espagnol dirait « convertirse en cultura/conocimiento ».",
+   "fix": "Con Sophia, ese tiempo se convierte en cultura.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.transform.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Con Sophia, ese tiempo se vuelve saber",
+   "gloss_fr": "« Avec Sophia, ce temps devient savoir »",
+   "problem": "Même tournure forcée « se vuelve saber ».",
+   "fix": "Con Sophia, ese tiempo se convierte en cultura",
+   "surface": "ui"
+  },
+  {
+   "location": "notification.courseNudge.title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Para descubrir hoy",
+   "gloss_fr": "« Pour découvrir aujourd'hui »",
+   "problem": "Calque de « À découvrir aujourd'hui » : en espagnol ce titre de notification est un fragment sans sujet qui ne se dit pas.",
+   "fix": "Descúbrelo hoy",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.course.subtitle",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Ya usaste tu curso gratis de hoy. Vuelve mañana, o desbloquea todo ahora.",
+   "gloss_fr": "« Tu utilisas déjà ton cours gratuit d'aujourd'hui » (prétérit simple)",
+   "problem": "Prétérit latino-américain pour une action d'aujourd'hui, et incohérent avec le titre juste au-dessus (« Ya has leído ») ; virgule superflue avant « o ».",
+   "fix": "Ya has leído tu curso gratis de hoy. Vuelve mañana o desbloquéalo todo ahora.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.course.subtitle.named",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Ya usaste tu curso gratis de hoy. Desbloquea «%@» y todos los cursos ahora, o vuelve mañana.",
+   "gloss_fr": "« Tu utilisas déjà ton cours gratuit d'aujourd'hui… »",
+   "problem": "Même prétérit latino-américain « usaste » sur un écran paywall très exposé.",
+   "fix": "Ya has leído tu curso gratis de hoy. Desbloquea «%@» y todos los cursos ahora o vuelve mañana.",
+   "surface": "ui"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b3.text",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "convirtió un mensaje espiritual en un poder político real",
+   "gloss_fr": "a transformé un message spirituel en un pouvoir politique « real » — qui se lit d'abord comme « royal » en espagnol",
+   "problem": "« real » est polysémique (réel/royal) et, placé après « poder político », il se lit comme « pouvoir royal » ; de plus « puissance » est « potencia ».",
+   "fix": "En solo **22 años** (610-632), Mahoma convirtió un mensaje espiritual en una auténtica potencia política.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b2.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "dos gigantes se gastaban en guerras sin fin",
+   "gloss_fr": "deux géants « se dépensaient / s'usaient » (verbe employé pour des objets ou de l'argent) dans des guerres sans fin",
+   "problem": "« gastarse » ne se dit pas d'empires qui s'épuisent ; le verbe naturel est « desgastarse » ou « agotarse ».",
+   "fix": "Alrededor, dos gigantes se desgastaban en guerras sin fin",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b1.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "El poder pasó entonces a sus sucesores, cada uno un [[Califa]].",
+   "gloss_fr": "Le pouvoir passa alors à ses successeurs, chacun un Calife.",
+   "problem": "Apposition artificielle fabriquée pour éviter le pluriel du terme de glossaire ; un natif ne construirait jamais la phrase ainsi.",
+   "fix": "El poder pasó entonces a los [[Califa]]s, sus sucesores.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s3.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "o el **alejandrino**, un verso de 12 sílabas",
+   "gloss_fr": "ou l'alexandrin, un vers de 12 syllabes",
+   "problem": "Pour un lecteur espagnol l'« alejandrino » est un vers de 14 syllabes (métrique scolaire) ; sans préciser « francés », la phrase paraît fausse.",
+   "fix": "Escribía a menudo **sonetos**, poemas de 14 versos, o en **alejandrinos** franceses, versos de 12 sílabas.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "El libro no es un montón de poemas.",
+   "gloss_fr": "Le livre n'est pas un tas de poèmes.",
+   "problem": "« un montón de » est familier et dévalorisant ; « un simple recueil » est neutre.",
+   "fix": "El libro no es una simple colección de poemas.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s0.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Escribió sobre la fealdad, el pecado, la ciudad y el terror.",
+   "gloss_fr": "Il écrivit sur la laideur, le péché, la ville et la terreur.",
+   "problem": "« l'angoisse » est « la angustia », pas « el terror » ; le sens baudelairien est perdu.",
+   "fix": "Escribió sobre la fealdad, el pecado, la ciudad y la angustia.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s3.b2.text",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Esa poética es el camino que lleva al **[[Simbolismo y legado de Baudelaire]]**, que luego siguieron Verlaine y Mallarmé.",
+   "gloss_fr": "Cette poétique est le chemin qui mène au « Symbolisme et héritage de Baudelaire », que suivirent ensuite Verlaine et Mallarmé.",
+   "problem": "La clé de glossaire a été remplacée par un intitulé d'article qui casse la phrase ; le FR met simplement [[symbolisme]].",
+   "fix": "Esa poética abre el camino al **[[simbolismo]]**, que más tarde encarnarían Verlaine y Mallarmé.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b4.text",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "El libro fundó la **[[Modernidad]]** en verso y abrió el camino al **[[Simbolismo y legado de Baudelaire]]**",
+   "gloss_fr": "Le livre fonda la Modernité en vers et ouvrit la voie au « Symbolisme et héritage de Baudelaire »",
+   "problem": "Même intitulé de glossaire gonflé en pleine phrase, plus un ajout « en verso » absent du FR.",
+   "fix": "**Las flores del mal** cambió la poesía al sacar belleza del mal y de la vida diaria de la ciudad. El libro instauró la **[[Modernidad]]** y el **[[simbolismo]]**, pese a una condena que duró casi un siglo.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b3.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "En Baudelaire se vuelve un extraño que ve lo que la sociedad preferiría ocultar.",
+   "gloss_fr": "Chez Baudelaire il devient un étranger / un inconnu qui voit ce que la société préférerait cacher.",
+   "problem": "« marginal » est « marginado » ; « extraño » signifie étranger ou bizarre.",
+   "fix": "En Baudelaire se convierte en un marginado que ve lo que la sociedad preferiría ocultar.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s2.b2.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "para pintar desde medio del Sena",
+   "gloss_fr": "pour peindre « depuis demi du Seine » (article manquant)",
+   "problem": "« desde medio del » est agrammatical ; il faut « desde el centro / desde la mitad del Sena ».",
+   "fix": "Monet a veces alquilaba una barca acondicionada como estudio para pintar desde el centro del Sena, lo más cerca posible de los reflejos.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b2.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Hoy esos lienzos que una vez se burlaron están entre las obras más visitadas del **[[museo de Orsay]]**. El insulto se ha vuelto un triunfo.",
+   "gloss_fr": "Aujourd'hui ces toiles « qui une fois se sont moquées » sont parmi les plus visitées… L'insulte « s'est tournée » un triomphe.",
+   "problem": "« lienzos que se burlaron » fait des toiles le sujet de la moquerie ; il faut « de los que se burlaban » ; et « volverse un triunfo » est un calque.",
+   "fix": "Hoy esos lienzos de los que antes se burlaban están entre las obras más visitadas del [[museo de Orsay]]. El insulto se ha convertido en un triunfo.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s0.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "unos treinta artistas que habían renunciado a **[[El Salón oficial de París]]**",
+   "gloss_fr": "une trentaine d'artistes qui avaient renoncé au Salon officiel de Paris",
+   "problem": "« lassés du Salon » = fatigués du Salon, pas « y avaient renoncé » ; en outre la clé de glossaire porte un article majuscule et un gras absents du FR.",
+   "fix": "unos treinta artistas, hartos del [[Salón oficial de París]], abrieron una exposición privada",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s4.b1.text",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "El mito se volvió una llave de la psicología moderna",
+   "gloss_fr": "Le mythe devint une « clé » au sens de clé de serrure (llave) de la psychologie moderne",
+   "problem": "Mauvais sens du mot « clé » : au figuré c'est « clave », « llave » est l'objet métallique.",
+   "fix": "El mito se convirtió en una clave de la psicología moderna",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s1.b0.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "resumió su misión en una frase que se quedó:",
+   "gloss_fr": "résuma sa mission dans une phrase « qui est restée » (inachevé, on attend « restée célèbre »)",
+   "problem": "« que se quedó » tout seul est incomplet en espagnol ; un natif attend « que se hizo célebre / que pasó a la historia ».",
+   "fix": "resumió su misión en una frase que se hizo célebre:",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s2.b1.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "donde Vladímir Putin lo llamó una provocación y una promesa rota del fin de la Guerra Fría",
+   "gloss_fr": "où Poutine l'appela une provocation et « une promesse cassée de la fin de la Guerre froide »",
+   "problem": "« una promesa rota del fin de la Guerra Fría » est une suite de mots sans logique ; le FR parle de la rupture des promesses faites à la fin de la Guerre froide.",
+   "fix": "donde Vladímir Putin denuncia una provocación y la ruptura de las promesas hechas al final de la Guerra Fría",
+   "surface": "courses"
+  },
+  {
+   "location": "auth.error.generic",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Algo salió mal. Inténtalo de nuevo.",
+   "gloss_fr": "« Quelque chose se passa mal » (prétérit, calque de « Something went wrong »)",
+   "problem": "Formule latino-américaine calquée de l'anglais ; en Espagne on écrit « Algo ha ido mal » ou « Ha ocurrido un error ». Idem dans friends.error.generic.",
+   "fix": "Algo ha ido mal. Inténtalo de nuevo.",
+   "surface": "ui"
+  },
+  {
+   "location": "profile.streak.beginning",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "¡Ya empezaste, sigue así!",
+   "gloss_fr": "« Tu commenças déjà, continue ! »",
+   "problem": "Prétérit simple pour une action récente : variante américaine, à aligner sur l'es-ES.",
+   "fix": "¡Ya has empezado, sigue así!",
+   "surface": "ui"
+  },
+  {
+   "location": "training.ob.algo.body",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Te devolvemos los quizzes que ya hiciste, justo a tiempo.",
+   "gloss_fr": "« On te rend les quiz que tu fis déjà »",
+   "problem": "« que ya hiciste » (et « que ya viste » dans explain.training.body) : prétérit américain, l'Espagne dit « que ya has hecho / visto ».",
+   "fix": "Te volvemos a preguntar los quizzes que ya has hecho, justo en el momento adecuado.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.t3.quote",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Siempre odié «estudiar», pero esto entra solo. La memoria me sorprende.",
+   "gloss_fr": "« J'ai toujours détesté (prétérit simple) réviser… »",
+   "problem": "« Siempre odié » avec « siempre » appelle le passé composé en Espagne ; « me sorprende la memoria » manque le possessif.",
+   "fix": "Siempre he odiado «estudiar», pero esto entra solo. Mi memoria me sorprende.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.title",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Mejoraron sus resultados",
+   "gloss_fr": "« Ils améliorèrent leurs résultats »",
+   "problem": "Prétérit simple là où l'espagnol d'Espagne dirait « Han mejorado ».",
+   "fix": "Han mejorado sus resultados",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.phone.subtitle",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Cada día, en promedio.",
+   "gloss_fr": "« Chaque jour, en moyenne » avec le tour latino-américain « en promedio »",
+   "problem": "« En promedio » est surtout américain ; l'app utilise ailleurs « de media » (onboardingV2.screenTime.caption), qui est la forme espagnole.",
+   "fix": "Cada día, de media.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.profile.nickname.reduceScreen",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Dueño de su tiempo",
+   "gloss_fr": "« Maître de son temps » (3e personne, sans article)",
+   "problem": "Les autres surnoms sont « El Explorador », « El Estratega »… ; celui-ci rompt le patron et parle de l'utilisateur à la 3e personne.",
+   "fix": "El Dueño del Tiempo",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.profile.tagline.reduceScreen",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Estás retomando el control de tu tiempo y atención.",
+   "gloss_fr": "« Tu es en train de reprendre le contrôle… » (progressif anglais)",
+   "problem": "Progressif calqué de l'anglais « You're taking back » ; le présent simple est plus naturel et le possessif doit être répété.",
+   "fix": "Recuperas el control de tu tiempo y de tu atención.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.intro.social.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Únete a los **500.000** usuarios felices que **aprenden** con Sophia",
+   "gloss_fr": "« Rejoins les 500 000 utilisateurs heureux… »",
+   "problem": "« Usuarios felices » est un calque marketing anglais ; en espagnol on dit « satisfechos » ou on omet l'adjectif.",
+   "fix": "Únete a los **500.000** usuarios que ya **aprenden** con Sophia",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.features.row1",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Aprendizaje gamificado, paso a paso",
+   "gloss_fr": "« Apprentissage gamifié, étape par étape »",
+   "problem": "« Gamificado » est un jargon marketing éloigné du ton simple et chaleureux voulu ; le FR dit « ludique ».",
+   "fix": "Aprende jugando, paso a paso",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.mission.body1",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Nuestra misión: hacer que aprender sea fácil, y para todos.",
+   "gloss_fr": "« …rendre l'apprentissage facile, et pour tous » (virgule française avant « y »)",
+   "problem": "Virgule calquée du FR avant « y », et « accessible » a disparu.",
+   "fix": "Nuestra misión: hacer que aprender sea fácil y accesible para todos.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.objectiveIntro.title",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Sophia te ayuda a cumplir todos tus objetivos",
+   "gloss_fr": "« Sophia t'aide à accomplir tous tes objectifs »",
+   "problem": "La variante avec prénom dit « te ayudará a alcanzar » : deux formulations pour la même phrase selon que le prénom est connu ou non.",
+   "fix": "Sophia te ayudará a alcanzar todos tus objetivos",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.profile.eyebrow",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Aquí está tu perfil",
+   "gloss_fr": "« Voici ton profil » (littéral « ici est »)",
+   "problem": "La version avec prénom (« {name}, este es tu perfil ») est plus naturelle ; il faut aligner les deux.",
+   "fix": "Este es tu perfil",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote1",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "« Gracias a Sophia, subí 3 puntos de media en historia este trimestre. »",
+   "gloss_fr": "Guillemets français avec espaces intérieures, prétérit « subí »",
+   "problem": "Les guillemets espagnols « » s'écrivent sans espace intérieure (comme dans review.t3) ; les quotes 1-4 et review.quote gardent la typographie française. « Este trimestre » appelle « he subido ».",
+   "fix": "«Gracias a Sophia, he subido 3 puntos de media en Historia este trimestre.»",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.quote",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "« Antes pasaba 7 h al día con el teléfono. Ahora solo 40 minutos con Sophia, y me siento más inteligente cada semana. »",
+   "gloss_fr": "Guillemets avec espaces à la française",
+   "problem": "Espaces intérieures dans les guillemets, incohérent avec «%@» ailleurs ; virgule avant « y » superflue.",
+   "fix": "«Antes pasaba 7 h al día con el móvil. Ahora solo 40 minutos con Sophia y me siento más inteligente cada semana.»",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.author2",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Inès, último año",
+   "gloss_fr": "« Inès, dernière année » (de quoi ?)",
+   "problem": "« Último año » sans complément est vague ; l'équivalent espagnol de la terminale est « 2.º de bachillerato ».",
+   "fix": "Inès, 2.º de bachillerato",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.author3",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Camille, universidad",
+   "gloss_fr": "« Camille, université »",
+   "problem": "Un nom seul après le prénom sonne comme une étiquette brute ; on attend un statut.",
+   "fix": "Camille, universitaria",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.program.hoursSavedCaption",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "de tiempo ganado",
+   "gloss_fr": "« de temps gagné » (mot à mot)",
+   "problem": "En espagnol on « ahorra » du temps ; « tiempo ganado » est un calque du français.",
+   "fix": "de tiempo ahorrado",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.program.nickname.mythologie",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Curioso de la Mitología",
+   "gloss_fr": "« Curieux de la Mythologie »",
+   "problem": "« Curioso de » ne se construit pas ainsi en espagnol ; les majuscules sur les noms communs (Arte, Historia, Mitología) ne suivent pas non plus l'usage espagnol.",
+   "fix": "Fan de la mitología",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.showcase.xp.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Sube de nivel y⏎ponte entre los⏎más curiosos",
+   "gloss_fr": "« Monte de niveau et mets-toi parmi les plus curieux »",
+   "problem": "« Ponte entre los más curiosos » est gauche ; le FR parle de grimper au classement.",
+   "fix": "Sube de nivel y⏎escala en el ranking⏎de los más cultos",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.graph.culture",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "SABER",
+   "gloss_fr": "« SAVOIR » (verbe substantivé) comme étiquette d'axe",
+   "problem": "Sur un graphique, « SABER » se lit comme un verbe ; « CULTURA » est l'étiquette naturelle et reprend le titre de l'écran (« Tu progreso cultural »).",
+   "fix": "CULTURA",
+   "surface": "ui"
+  },
+  {
+   "location": "offer.unlock",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Desbloquear mi -70%",
+   "gloss_fr": "« Débloquer mon -70% »",
+   "problem": "« Mi -70% » sans nom est elliptique ; l'espagnol met en outre une espace avant « % » (l'app écrit « 89 % », « +200 % » ailleurs).",
+   "fix": "Desbloquear mi -70 %",
+   "surface": "ui"
+  },
+  {
+   "location": "offer.discount",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "-70% PARA SIEMPRE",
+   "gloss_fr": "« -70% pour toujours » sans espace avant le %",
+   "problem": "Incohérence de l'espace avant « % » dans l'app (« 89 % », « 90 % » vs « -70% »).",
+   "fix": "-70 % PARA SIEMPRE",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.features.row2",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "%@+ cursos escritos por investigadores de verdad",
+   "gloss_fr": "« %@+ cours écrits par de vrais chercheurs »",
+   "problem": "La notation « 240+ » est un anglicisme ; en espagnol on écrit « Más de 240 cursos » (idem row3).",
+   "fix": "Más de %@ cursos escritos por investigadores de verdad",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.swipe.noted",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "¡Hecho!",
+   "gloss_fr": "« Fait ! »",
+   "problem": "« C'est noté ! » signifie que la préférence est enregistrée ; « ¡Hecho! » suggère une action accomplie.",
+   "fix": "¡Anotado!",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.intro.social.cta / onboardingV2.profile.cta / onboardingV2.trial.cta / path.quiz.go",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Empecemos / Vamos / ¡Vamos allá! / Vamos",
+   "gloss_fr": "Le même « C'est parti » est rendu de trois façons",
+   "problem": "Trois formulations pour le même bouton ; choisir une forme unique.",
+   "fix": "¡Vamos!",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.appStore / paywall.quiz.rating / paywall.quiz.faq.a1 / paywall.quiz.faq.a3.noTrial",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "en el App Store / Ve a la App Store",
+   "gloss_fr": "Genre masculin puis féminin pour « App Store »",
+   "problem": "Le genre d'App Store change d'une clé à l'autre ; Apple Espagne utilise le masculin (« en el App Store »).",
+   "fix": "Ve al App Store → tu cuenta → … / cancela cuando quieras desde el App Store",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.course.stat.caption",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "leídos de media por los miembros Sophia Premium",
+   "gloss_fr": "« lus en moyenne par les membres Sophia Premium » (sans préposition)",
+   "problem": "Il manque « de » entre « miembros » et « Sophia Premium ».",
+   "fix": "leídos de media por los miembros de Sophia Premium",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.plan.billedYearly",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "se cobra %@ al año",
+   "gloss_fr": "« on prélève %@ par an »",
+   "problem": "Partout ailleurs « facturé » est rendu par « facturado » ; ici « se cobra », incohérent sur le même écran.",
+   "fix": "facturado a %@ al año",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.demo.badge.mcq",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Opción múltiple",
+   "gloss_fr": "« Choix multiple » (terme latino-américain)",
+   "problem": "En Espagne, un QCM se dit « tipo test » ; « opción múltiple » est le terme américain.",
+   "fix": "Tipo test",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.faq.a2",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Sí. Sophia Pro también abre el Repaso: te pregunta en el momento justo para que se te quede.",
+   "gloss_fr": "« Sophia Pro ouvre aussi le Repaso… »",
+   "problem": "« Abre » au lieu de « desbloquea » pour une fonctionnalité ; la notion de mémorisation active a disparu.",
+   "fix": "Sí. Sophia Pro también desbloquea el Repaso de Sophia: la memorización activa que te pregunta en el momento justo para que lo aprendido se te quede.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.subtitle",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Desbloquea Sophia PRO para tener los quiz interactivos y volverte culto.",
+   "gloss_fr": "« …et devenir cultivé » (volverte culto)",
+   "problem": "« Volverte culto » est une tournure sèche et peu idiomatique ; et pluriel « quiz ».",
+   "fix": "Desbloquea Sophia PRO para tener los quizzes interactivos y ser cada día más culto.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.discount.subtitle",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Un acceso Premium de por vida al saber, al precio más bajo que hemos ofrecido.",
+   "gloss_fr": "« Un accès Premium à vie au savoir, au prix le plus bas que nous avons offert »",
+   "problem": "Ordre des compléments calqué du FR (« de por vida al saber ») ; « nunca » manque pour rendre « jamais proposé ».",
+   "fix": "Acceso Premium al saber, para toda la vida, al precio más bajo que hemos ofrecido nunca.",
+   "surface": "ui"
+  },
+  {
+   "location": "trial.endingSoon.banner",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "En 1 día, pierdes el acceso a Sophia Premium.",
+   "gloss_fr": "« En 1 jour, tu perds l'accès… »",
+   "problem": "« En 1 día » calque « dans 1 jour » ; l'espagnol dit « dentro de » ou simplement « mañana ».",
+   "fix": "Mañana perderás el acceso a Sophia Premium.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.objective.exams",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Triunfar en mis estudios / exámenes",
+   "gloss_fr": "« Triompher dans mes études / examens »",
+   "problem": "« Triunfar » est emphatique ; un ado dirait « aprobar » ou « ir bien en ».",
+   "fix": "Aprobar mis estudios / exámenes",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.problem.line1",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Cultivarse lleva tiempo… y cuesta caro.",
+   "gloss_fr": "« Se cultiver prend du temps… et coûte cher »",
+   "problem": "« Cuesta caro » est un calque du FR ; l'espagnol dit « sale caro » ou « es caro ».",
+   "fix": "Cultivarse lleva tiempo… y sale caro.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.t4.quote",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Cambio mis scrolls infinitos por un curso. En un mes, mi entorno notó la diferencia.",
+   "gloss_fr": "« J'échange mes scrolls infinis… mon entourage (entorno) remarqua la différence »",
+   "problem": "« Mis scrolls infinitos » (pluriel de scroll) et « mi entorno » pour « mes proches » sont des calques ; prétérit à corriger.",
+   "fix": "Cambio el scroll infinito por un curso. En un mes, la gente de mi alrededor ha notado la diferencia.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.final.subtitle / onboardingV2.aboard.title / onboardingV2.aboard.titleNamed / onboardingV2.aboard.subtitle / onboardingV2.welcome.title",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Bienvenido a Sophia / ¡Bienvenido a bordo! / ¡Bienvenido al club Sophia!",
+   "gloss_fr": "« Bienvenu » au masculin pour tous les utilisateurs",
+   "problem": "« Bienvenido » exclut les utilisatrices ; les apps espagnoles utilisent aujourd'hui la forme neutre « Te damos la bienvenida ».",
+   "fix": "Te damos la bienvenida a Sophia / ¡Bienvenido/a a bordo! → Te damos la bienvenida a bordo, {name}",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.premiumTrial.title / onboardingV2.trial.title / paywall.trialBadge / onboarding.premiumTrial.badge",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Tu prueba gratis / tu prueba gratuita / Prueba gratis de 3 días / Prueba gratuita",
+   "gloss_fr": "« Essai gratuit » rendu tantôt « prueba gratis », tantôt « prueba gratuita »",
+   "problem": "Deux variantes du terme produit « essai gratuit » dans les mêmes écrans.",
+   "fix": "Harmoniser sur « prueba gratuita » (titres) et « gratis » seul dans les CTA courts.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.phone.title",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "¿Cuánto tiempo⏎pasas con tu teléfono?",
+   "gloss_fr": "« Combien de temps passes-tu avec ton téléphone ? »",
+   "problem": "En Espagne on parle du « móvil » (utilisé une fois dans onboarding.objective.reduceScroll) ; « teléfono » partout ailleurs sonne traduit.",
+   "fix": "¿Cuánto tiempo⏎pasas con el móvil?",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.program.heading",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Conviértete en embajador Sophia",
+   "gloss_fr": "« Deviens ambassadeur Sophia » (sans « de »)",
+   "problem": "L'espagnol exige « embajador de Sophia » (idem « programa de embajadores de Sophia » dans ambassador.intro).",
+   "fix": "Conviértete en embajador de Sophia",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.role.ugc.body",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Creas posts en TikTok. Ingresos según las vistas.",
+   "gloss_fr": "« Revenus selon les vues (vistas) »",
+   "problem": "En Espagne, les vues d'une vidéo sont des « visualizaciones » (terme de TikTok/YouTube ES) ; « vistas » est américain.",
+   "fix": "Creas posts en TikTok. Ingresos según las visualizaciones.",
+   "surface": "ui"
+  },
+  {
+   "location": "account.createLater.body",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Crea una cuenta y tus cursos te acompañarán a tu próximo teléfono.",
+   "gloss_fr": "« …tes cours t'accompagneront vers ton prochain téléphone »",
+   "problem": "« Acompañar a un teléfono » est une image calquée du FR « te suivront sur ».",
+   "fix": "Crea una cuenta y tendrás tus cursos en tu próximo móvil.",
+   "surface": "ui"
+  },
+  {
+   "location": "cards.successRate",
+   "severity": "mineur",
+   "category": "longueur",
+   "current": "tasa de acierto",
+   "gloss_fr": "« taux de réussite » (trois mots pour un libellé de carte)",
+   "problem": "Le FR tient en un mot (« réussite ») sur une carte ; trois mots risquent de déborder.",
+   "fix": "aciertos",
+   "surface": "ui"
+  },
+  {
+   "location": "course.funFact",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "¿SABÍAS QUE?",
+   "gloss_fr": "« SAVAIS-TU QUE ? » (fragment suspendu)",
+   "problem": "« ¿Sabías que? » sans suite est un fragment ; le titre espagnol consacré est « ¿Lo sabías? » ou « ¿Sabías que…? ».",
+   "fix": "¿LO SABÍAS?",
+   "surface": "ui"
+  },
+  {
+   "location": "course.streak.day / course.streak.days",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Racha de 1 día / Racha",
+   "gloss_fr": "« Série de 1 jour » / « Série » comme libellés après un compteur",
+   "problem": "Si le chiffre est affiché devant (« 3 Jours de suite »), « Racha de 1 día » donne « 1 Racha de 1 día » ; prévoir des libellés qui suivent un nombre.",
+   "fix": "día seguido / días seguidos",
+   "surface": "ui"
+  },
+  {
+   "location": "explain.home.title",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Deslizamiento vertical",
+   "gloss_fr": "« Glissement vertical » (nom technique)",
+   "problem": "Substantif technique froid pour un tutoriel chaleureux ; l'app dit ailleurs « Desliza ».",
+   "fix": "Desliza en vertical",
+   "surface": "ui"
+  },
+  {
+   "location": "explain.training.title / tab.training / paywall.training.subtitle / training.ob.welcome.line",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "El repaso / Repaso / El Repaso / tu Repaso",
+   "gloss_fr": "Nom de la fonctionnalité « Entraînement » tantôt avec majuscule, tantôt sans",
+   "problem": "La capitalisation du nom de fonctionnalité varie (Repaso / repaso), ce qui empêche de le reconnaître comme un nom propre produit.",
+   "fix": "Écrire « Repaso » avec majuscule partout où il désigne la section (El Repaso, Desbloquea el Repaso).",
+   "surface": "ui"
+  },
+  {
+   "location": "friends.add.requestSubtitle",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Introduce el @ de tu amigo: recibirá una solicitud para aceptar.",
+   "gloss_fr": "« …il recevra une demande pour accepter »",
+   "problem": "« Una solicitud para aceptar » est ambigu (une demande afin d'accepter ?) ; calque de « à accepter ».",
+   "fix": "Introduce el @ de tu amigo: recibirá una solicitud que tendrá que aceptar.",
+   "surface": "ui"
+  },
+  {
+   "location": "home.allCaughtUp",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Has hecho todos los cursos, ¡bravo!",
+   "gloss_fr": "« Tu as fait tous les cours, bravo ! »",
+   "problem": "« ¡Bravo! » (aussi dans home.bravo, path.end.doneBody) est peu usité en Espagne hors du théâtre ; « ¡enhorabuena! » (déjà utilisé dans path.allPassed) est la forme naturelle.",
+   "fix": "Has hecho todos los cursos, ¡enhorabuena!",
+   "surface": "ui"
+  },
+  {
+   "location": "home.skip",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Saltar",
+   "gloss_fr": "« Sauter »",
+   "problem": "Le même FR « Passer » est rendu « Omitir » dans onboardingV2.name.skip ; choisir un seul terme.",
+   "fix": "Omitir",
+   "surface": "ui"
+  },
+  {
+   "location": "home.swipe.subtitle",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Desliza a la izquierda o derecha para el siguiente",
+   "gloss_fr": "« Glisse à gauche ou droite pour le suivant » (sans verbe)",
+   "problem": "« Para el siguiente » sans verbe est elliptique et peu naturel.",
+   "fix": "Desliza a la izquierda o a la derecha para pasar al siguiente",
+   "surface": "ui"
+  },
+  {
+   "location": "myCourses.progress",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "%1$d de %2$d páginas",
+   "gloss_fr": "« 3 de 12 pages »",
+   "problem": "Pour une position dans un livre, l'espagnol dit « Página 3 de 12 ».",
+   "fix": "Página %1$d de %2$d",
+   "surface": "ui"
+  },
+  {
+   "location": "notification.courseNudge.body",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Ven a descubrir «%@»: cinco minutos bastan.",
+   "gloss_fr": "« Viens découvrir « %@ » : cinq minutes suffisent »",
+   "problem": "« Ven a descubrir » calque « Viens découvrir » ; en espagnol on dit directement « Descubre » et « con cinco minutos basta/te sobra ».",
+   "fix": "Descubre «%@»: te bastan cinco minutos.",
+   "surface": "ui"
+  },
+  {
+   "location": "profile.quiz.lockedSubtitle",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Disponibles con la prueba gratis — 3 días gratis",
+   "gloss_fr": "« Disponibles avec l'essai gratuit — 3 jours gratuits » (gratis deux fois)",
+   "problem": "Répétition « gratis… gratis » dans six mots.",
+   "fix": "Disponibles con la prueba gratuita: 3 días gratis",
+   "surface": "ui"
+  },
+  {
+   "location": "quiz.xpProgress",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Progreso XP",
+   "gloss_fr": "« Progression XP » (sans préposition)",
+   "problem": "L'apposition nue « Progreso XP » est un anglicisme ; il manque « de ».",
+   "fix": "Progreso de XP",
+   "surface": "ui"
+  },
+  {
+   "location": "sync.conflict.title",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Se encontraron dos progresos",
+   "gloss_fr": "« On trouva deux progrès »",
+   "problem": "Prétérit américain « se encontraron » et pluriel « progresos » peu naturel.",
+   "fix": "Hay dos progresos guardados",
+   "surface": "ui"
+  },
+  {
+   "location": "tab.library",
+   "severity": "mineur",
+   "category": "longueur",
+   "current": "Biblioteca",
+   "gloss_fr": "« Bibliothèque » (10 caractères dans un onglet là où le FR abrège « Biblio »)",
+   "problem": "Le FR abrège volontairement pour la barre d'onglets ; « Biblioteca » est le libellé le plus long des cinq onglets et risque d'être tronqué sur petit écran.",
+   "fix": "Biblio",
+   "surface": "ui"
+  },
+  {
+   "location": "tiktokBlocker.title / tiktokBlocker.card.off.title / tiktokBlocker.card.premium.subtitle / tiktokBlocker.settings.row.subtitle",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Cultívate antes de scrollear",
+   "gloss_fr": "« Cultive-toi avant de scroller » avec le verbe argotique « scrollear »",
+   "problem": "« Cultívate » est littéraire et « scrollear » un argot instable ; l'app dit ailleurs « hacer scroll ». Le slogan répété 5 fois mérite une formule plus naturelle.",
+   "fix": "Aprende algo antes de hacer scroll",
+   "surface": "ui"
+  },
+  {
+   "location": "tiktokBlocker.picker.footer",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "…para que funcione el botón para volver.",
+   "gloss_fr": "« …pour que fonctionne le bouton pour revenir »",
+   "problem": "Deux « para » enchaînés ; le bouton est « el botón de volver (a TikTok) ».",
+   "fix": "Apple no nos dice qué app has marcado. Asegúrate de elegir TikTok, y nada más, para que funcione el botón de volver.",
+   "surface": "ui"
+  },
+  {
+   "location": "tiktokBlocker.status.unlocked.subtitle",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Quedan",
+   "gloss_fr": "« Il reste » (pluriel figé) devant une durée",
+   "problem": "Le verbe figé au pluriel donnera « Quedan 1 h » ; un nom évite l'accord.",
+   "fix": "Tiempo restante:",
+   "surface": "ui"
+  },
+  {
+   "location": "training.emptyCta",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Descubre un curso",
+   "gloss_fr": "« Découvre un cours » (impératif) alors que myCourses.empty.cta dit « Descubrir un curso »",
+   "problem": "Même bouton FR, deux formes (impératif / infinitif) ; l'app utilise surtout l'infinitif pour ses boutons.",
+   "fix": "Descubrir un curso",
+   "surface": "ui"
+  },
+  {
+   "location": "training.ob.recall.stat.suffix",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "información de sus cursos que quien no lo usa.",
+   "gloss_fr": "« …d'informations de leurs cours que celui qui ne l'utilise pas » (singulier après un pluriel)",
+   "problem": "Le préfixe est au pluriel (« quienes usan… retienen ») et la comparaison retombe au singulier « quien no lo usa ».",
+   "fix": "información de sus cursos que quienes no lo usan.",
+   "surface": "ui"
+  },
+  {
+   "location": "training.ob.welcome.line",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Aquí está tu Repaso.",
+   "gloss_fr": "« Ici est ton Repaso »",
+   "problem": "Phrase d'accueil sèche et littérale ; le FR dit « Bienvenue dans la section entraînement ».",
+   "fix": "Te damos la bienvenida a tu Repaso.",
+   "surface": "ui"
+  },
+  {
+   "location": "training.locked.tagline",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Que se te quede lo que aprendes, de verdad.",
+   "gloss_fr": "« Que ça te reste, ce que tu apprends, vraiment » (subjonctif suspendu)",
+   "problem": "Un subjonctif optatif en titre (« Que se te quede… ») est oral et étrange en accroche ; idem paywall.training.title.",
+   "fix": "Retén lo que aprendes, para siempre.",
+   "surface": "ui"
+  },
+  {
+   "location": "settings.ambassador.banner.subtitle",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Gana dinero publicando Sophia en TikTok",
+   "gloss_fr": "« Gagne de l'argent en publiant Sophia sur TikTok »",
+   "problem": "« Publicar Sophia » (publier l'app elle-même) est un calque du FR ; il faut un objet.",
+   "fix": "Gana dinero publicando sobre Sophia en TikTok",
+   "surface": "ui"
+  },
+  {
+   "location": "globalRank.reachedLevel",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Acabas de llegar al nivel %d",
+   "gloss_fr": "« Tu viens d'arriver au niveau %d »",
+   "problem": "Pour un niveau, l'espagnol dit « alcanzar », pas « llegar a ».",
+   "fix": "Acabas de alcanzar el nivel %d",
+   "surface": "ui"
+  },
+  {
+   "location": "account.email / feedback.email.label / ambassador.form.email.label",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Correo / Email (opcional) / Email",
+   "gloss_fr": "« Courriel » puis « Email » pour le même champ",
+   "problem": "Deux termes pour l'adresse e-mail selon l'écran.",
+   "fix": "Harmoniser sur « Correo electrónico » (ou « Email » partout).",
+   "surface": "ui"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b1.text",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "Abu Bakr, luego Úmar, lanzaron",
+   "gloss_fr": "Abou Bakr, puis « Úmar » (translittération savante)",
+   "problem": "La forme espagnole établie et scolaire est « Omar ».",
+   "fix": "Abu Bakr, y luego Omar, lanzaron una expansión rápida hacia Siria, Irak y Egipto.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "esa fecha se volvió el año 1 del calendario musulmán",
+   "gloss_fr": "cette date « se tourna » l'an 1 du calendrier musulman",
+   "problem": "« volverse » + nom est un calque de « devenir » ; l'espagnol dit « pasar a ser / convertirse en ».",
+   "fix": "Más tarde, esa fecha pasó a ser el año 1 del calendario musulmán.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s2.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "buscaban un árbitro para calmar sus querellas. … Allí ya no era solo un profeta: se volvió un jefe.",
+   "gloss_fr": "cherchaient un arbitre pour calmer leurs « querelles » (mot juridique/littéraire) … il « se tourna » un chef",
+   "problem": "« querellas » est un faux ami de registre (plainte judiciaire) et « se volvió un jefe » est un calque de « devient chef ».",
+   "fix": "buscaban un árbitro para calmar sus conflictos. … Allí ya no era solo un profeta: se convirtió en jefe.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "unas pocas ciudades mercantes como La Meca",
+   "gloss_fr": "quelques villes « marchandes » (adjectif réservé à la marine marchande / au droit)",
+   "problem": "« ciudad mercante » ne se dit pas ; on dit « ciudad comercial ».",
+   "fix": "unas pocas ciudades comerciales como La Meca",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s0.b1.text",
+   "severity": "mineur",
+   "category": "mt_artefact",
+   "current": "Nadie podía verlo aún. … Así empezó todo.",
+   "gloss_fr": "Personne ne pouvait le voir encore. … C'est ainsi que tout a commencé (ton de conclusion).",
+   "problem": "« verlo » est trop littéral pour « on ne le voit pas encore venir » et « Voici comment tout a commencé » annonce le récit, alors que « Así empezó todo » le clôt.",
+   "fix": "Nadie lo sabía todavía. … Así es como empezó todo.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s2.b3.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "En inferioridad numérica, sus seguidores aun así ganaron en **Badr** en **624**.",
+   "gloss_fr": "En infériorité numérique, ses fidèles « quand même » gagnèrent à Badr en 624 (ordre des mots bancal).",
+   "problem": "« aun así » placé entre sujet et verbe rend la phrase raide ; la concession se dit plus naturellement avec « aunque ».",
+   "fix": "Aunque eran menos, sus seguidores vencieron en **Badr** en **624**.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b1.text",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "**Fustat** (el futuro El Cairo)",
+   "gloss_fr": "Fostat (le futur « El Cairo », double article)",
+   "problem": "« el futuro El Cairo » accumule deux articles et sonne faux.",
+   "fix": "**Fustat** (germen de la futura ciudad de El Cairo)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "El árabe se volvió el cemento del imperio … la civilización islámica se volvió una encrucijada del saber griego, persa e indio",
+   "gloss_fr": "L'arabe « se tourna » le ciment de l'empire … la civilisation « se tourna » un carrefour",
+   "problem": "Deux fois « se volvió » + nom pour « devient » dans le même paragraphe ; l'espagnol dit « se convirtió en ».",
+   "fix": "El árabe se convirtió en el cemento del imperio … la civilización islámica se convirtió en una encrucijada de los saberes griego, persa e indio",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b3.e3.detail",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Rendición sin combate, luego un perdón general.",
+   "gloss_fr": "Reddition sans combat, ensuite un pardon général.",
+   "problem": "« luego un » dans une entrée de frise est lourd ; le FR coordonne simplement.",
+   "fix": "Rendición sin combate y perdón general.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s1.b0.text",
+   "severity": "mineur",
+   "category": "non_traduit",
+   "current": "encarnó al **poète maudit**, el poeta maldito: un escritor al margen, desfasado de su tiempo. Su vida dura alimentó la obra.",
+   "gloss_fr": "incarna le « poète maudit » (en français), le poète maudit : un écrivain en marge, « déphasé » de son temps. Sa vie dure nourrit l'œuvre.",
+   "problem": "Le terme français est gardé puis traduit alors que « poeta maldito » est l'expression espagnole établie ; « desfasado » (dépassé) n'est pas « mal aimé », et « la obra » sans possessif est raide.",
+   "fix": "encarnó al **poeta maldito**: un escritor al margen, incomprendido por su época. Su vida difícil alimentó su obra.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s0.b1.text",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "El libro escandalizó. Un tribunal lo condenó por “ultraje a la moral pública.”",
+   "gloss_fr": "Le livre scandalisa (sans objet). Un tribunal le condamna pour « outrage à la morale publique. » (point à l'intérieur des guillemets)",
+   "problem": "« escandalizar » sans complément est bancal, et la ponctuation à l'intérieur des guillemets est une convention anglo-américaine ; en espagnol le point va après le guillemet fermant (défaut systématique dans tout l'échantillon).",
+   "fix": "El libro provocó un escándalo. Un tribunal lo condenó por “ultraje a la moral pública”.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "El **spleen**, una palabra inglesa que él pasó al francés, nombra un tedio hondo, una tristeza sin causa. El **ideal** es la sed de altura y de belleza pura.",
+   "gloss_fr": "Le spleen, un mot anglais « qu'il fit passer au français », « nomme » un ennui profond… L'idéal est la soif de « hauteur » et de beauté pure.",
+   "problem": "Le FR dit seulement « emprunté à l'anglais » (pas introduit par Baudelaire), « nombra » est un calque de « désigne » et « sed de altura » ne rend pas « élévation ».",
+   "fix": "El **spleen**, palabra tomada del inglés, designa un hastío profundo, una melancolía sin causa. El **ideal** es la sed de elevación y de belleza pura.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b3.text",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "reflejan los humores del poeta. … París se reconstruía: bulevares anchos, manzanas nuevas.",
+   "gloss_fr": "reflètent les « humeurs » (sens médical/ancien) du poète… Paris se reconstruisait : larges boulevards, nouveaux « pâtés de maisons ».",
+   "problem": "« états d'âme » = « estados de ánimo » ; « immeubles » = « edificios », pas « manzanas » (blocs).",
+   "fix": "reflejan los estados de ánimo del poeta. … París se transformaba: bulevares anchos, edificios nuevos.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b3.text",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "Las secciones “El vino,” “Flores del mal” y “Revuelta” ensayan vías de escape antes de que el libro cierre en “La muerte.”",
+   "gloss_fr": "Les sections « Le Vin, » « Fleurs du Mal » et « Révolte » … avant que le livre se ferme sur « La Mort. »",
+   "problem": "La section « La Révolte » s'appelle « Rebelión » dans les éditions espagnoles, et les virgules/points sont placés à l'intérieur des guillemets.",
+   "fix": "Las secciones “El vino”, “Flores del mal” y “Rebelión” ensayan vías de escape antes de que el libro se cierre con “La muerte”.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b2.caption",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "París de noche en los años 1850",
+   "gloss_fr": "Paris de nuit dans « les années 1850 » (calque)",
+   "problem": "« los años 1850 » est un calque du français ; l'espagnol dit « la década de 1850 ».",
+   "fix": "París de noche en la década de 1850: el escenario del spleen baudelairiano",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s3.b0.text",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Escribía a menudo el **soneto**, un poema de 14 versos, o el **alejandrino**, un verso de 12 sílabas. En esas formas viejas metió una visión nueva.",
+   "gloss_fr": "Il écrivait souvent « le sonnet »… ou « l'alexandrin »… Dans ces vieilles formes il « fourra » une vision nouvelle.",
+   "problem": "« escribir el soneto » n'est pas idiomatique (on écrit « sonetos » / « en alejandrinos »), et « metió » est trop familier pour « y fait entrer ».",
+   "fix": "Escribía a menudo **sonetos**, poemas de 14 versos, o en **alejandrinos** franceses, versos de 12 sílabas. Pero en esas formas clásicas introdujo una visión nueva.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s1.b4.text",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "**Edgar Allan Poe**, el maestro estadounidense de lo inquietante. Lo llamaba un “hermano del alma,” porque",
+   "gloss_fr": "Edgar Allan Poe, « le maître américain de l'inquiétant ». Il l'appelait un « frère d'âme, » (virgule dans les guillemets)",
+   "problem": "Embellissement absent du FR (« écrivain américain du fantastique ») et virgule anglo-saxonne à l'intérieur des guillemets.",
+   "fix": "**Edgar Allan Poe**, escritor estadounidense de lo fantástico. Lo consideraba un “hermano del alma”, porque compartían el gusto por lo macabro.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b1.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "un libro póstumo de poemas en prosa cortos sobre París",
+   "gloss_fr": "un livre posthume de poèmes en prose « courts » (adjectif rejeté après le complément)",
+   "problem": "L'ordre « poemas en prosa cortos » est maladroit ; le sous-titre de l'œuvre est « Pequeños poemas en prosa ».",
+   "fix": "un libro póstumo de pequeños poemas en prosa sobre París",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b2.e0.detail",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Escándalo y luego una condena por inmoralidad.",
+   "gloss_fr": "Scandale et ensuite une condamnation pour immoralité.",
+   "problem": "« y luego una » alourdit une entrée de frise qui doit rester nominale.",
+   "fix": "Escándalo y condena por inmoralidad.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/description",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Un crítico se burló de Monet y le dio por accidente su nombre al **impresionismo**.",
+   "gloss_fr": "Un critique se moqua de Monet et « lui donna par accident son nom à l'impressionnisme ».",
+   "problem": "Double complément « le … al impresionismo » lourd ; « baptiser sans le vouloir » se dit « bautizar sin querer ».",
+   "fix": "Un crítico se burló de Monet y, sin querer, bautizó el **impresionismo**.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s0.b1.text",
+   "severity": "mineur",
+   "category": "mt_artefact",
+   "current": "Leroy nombró por accidente el primer gran movimiento … Así cambió el **impresionismo** la forma de mirar el mundo real.",
+   "gloss_fr": "Leroy « nomma par accident » le premier grand mouvement… Ainsi l'impressionnisme changea la façon de regarder le monde réel (conclusion au lieu d'annonce).",
+   "problem": "« nombrar por accidente » est un calque ; et « Voici comment… » annonce la leçon, alors que la version ES la clôt en perdant « notre ».",
+   "fix": "Leroy bautizó sin querer el primer gran movimiento de vanguardia del arte moderno. Así es como el **impresionismo** cambió nuestra forma de mirar la realidad.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Arriba estaba la pintura de historia. El paisaje y la vida cotidiana contaban como temas menores.",
+   "gloss_fr": "« En haut était » la peinture d'histoire. Le paysage et la vie quotidienne « comptaient comme » thèmes mineurs.",
+   "problem": "« Arriba estaba » est oral et vague, « contar como » est un calque (anglais « count as ») de « passer pour ».",
+   "fix": "En lo más alto, la pintura de historia. El paisaje y las escenas cotidianas se consideraban géneros menores.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b1.text",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "autorizó entonces el **Salon des Refusés**, una exposición de las obras rechazadas",
+   "gloss_fr": "autorisa alors le « Salon des Refusés » (en français) suivi d'une glose",
+   "problem": "L'espagnol a une forme établie, « Salón de los Rechazados » (idem dans la frise s4.b1.e0.title) ; la glose devient inutile.",
+   "fix": "autorizó entonces el **Salón de los Rechazados**, una exposición con las obras excluidas",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b3.text",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "los guerreros antiguos de sus cuadros favoritos llevaban yelmos",
+   "gloss_fr": "les guerriers antiques « de leurs tableaux préférés » portaient des casques",
+   "problem": "Le FR parle des guerriers de leurs propres tableaux (les académiques peignaient ces casques), pas de « tableaux préférés ».",
+   "fix": "los guerreros antiguos de sus cuadros llevaban cascos que recordaban a los de los bomberos de París.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b4.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Trabajaba en contrastes secos. Sin llamarse nunca impresionista, se volvió el rostro de esta **[[vanguardia]]**",
+   "gloss_fr": "Il travaillait en contrastes « secs ». … il « se tourna » le visage de cette avant-garde (gras ajouté).",
+   "problem": "« contrastes francs » = « contrastes nítidos/marcados » ; « volverse el rostro » calque « devient la figure » ; le gras n'est pas dans le FR.",
+   "fix": "Pintaba con contrastes nítidos. Sin llamarse nunca impresionista, se convirtió en la figura de esa [[vanguardia]] que ponía el color por delante del dibujo perfecto.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s2.b0.text",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Con **[[Los tubos de pintura y el plein air]]**, por fin podía instalarse al aire libre",
+   "gloss_fr": "Avec « Les tubes de peinture et le plein air » (majuscule d'article en milieu de phrase, gras ajouté)",
+   "problem": "La clé de glossaire est insérée telle quelle avec article majuscule et gras, ce qui casse la phrase ; le FR a [[tubes de peinture et plein air]] sans article ni gras.",
+   "fix": "Con los [[tubos de pintura y el plein air]], por fin podía instalarse al aire libre frente a su motivo.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s2.b3.text",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Inspirados por el químico **[[Michel-Eugène Chevreul]]**, desterraron el negro de sus sombras y prefirieron los **[[colores complementarios]]**",
+   "gloss_fr": "Inspirés par le chimiste Chevreul (en gras), … préférèrent les couleurs complémentaires (en gras)",
+   "problem": "Du gras a été ajouté autour de tous les termes [[glossaire]] de ce cours alors que le FR n'en met pas : le balisage n'est pas préservé et la page sera visuellement plus chargée que les autres.",
+   "fix": "Inspirados por el químico [[Michel-Eugène Chevreul]], desterraron el negro de sus sombras y prefirieron los [[colores complementarios]]",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s3.b2.text",
+   "severity": "mineur",
+   "category": "mt_artefact",
+   "current": "Leroy los llamó “impresionistas” para decir que solo eran esbozos. … ocho exposiciones fijaron una idea nueva: pinta tu sensación, no una copia congelada de la naturaleza.",
+   "gloss_fr": "Leroy les appela « impressionnistes » pour dire qu'« ils » n'étaient que des ébauches… huit expositions « fixèrent » une idée neuve : « peins ta sensation » (impératif adressé au lecteur).",
+   "problem": "« solo eran esbozos » renvoie aux peintres et non aux toiles ; l'infinitif impersonnel « peindre sa sensation » devient un impératif à la 2e personne ; « imposent » = « impusieron ».",
+   "fix": "Leroy los llamó “impresionistas” para decir que sus cuadros no eran más que bocetos. … ocho exposiciones impusieron una idea nueva: pintar la propia sensación, no una copia inerte de la naturaleza.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b0.text",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "donde los contornos se disuelven y aparece la abstracción",
+   "gloss_fr": "où les contours se dissolvent et « l'abstraction apparaît »",
+   "problem": "Le FR dit que les Nymphéas « annoncent » l'abstraction ; dire qu'elle « apparaît » est historiquement faux.",
+   "fix": "donde los contornos se disuelven y anuncian la abstracción",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b1.e2.detail",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "El grupo había ganado una libertad nueva para pintar.",
+   "gloss_fr": "Le groupe « avait gagné » une nouvelle liberté de peindre.",
+   "problem": "Plus-que-parfait isolé dans une frise au présent/passé composé ; « a imposé » = « ha impuesto ».",
+   "fix": "El grupo ha impuesto una nueva libertad de pintar.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b1.e1.detail",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Leroy acuña la palabra “impresionistas.”",
+   "gloss_fr": "Leroy forge le mot « impressionnistes. » (point dans les guillemets)",
+   "problem": "Ponctuation anglo-américaine ; en espagnol le point se place après le guillemet fermant.",
+   "fix": "En el estudio de Nadar, Leroy acuña la palabra “impresionistas”.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s4.b0.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "el **narciso**, inclinada sobre el agua como el joven sobre su imagen",
+   "gloss_fr": "le narcisse, « penchée » (féminin) vers l'eau",
+   "problem": "L'adjectif suit immédiatement « narciso » (masculin) mais est au féminin ; un lecteur y voit une faute d'accord.",
+   "fix": "el **narciso**, inclinado sobre el agua como el joven sobre su imagen",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.b0.text",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "Antes de volverse un simple efecto de sonido",
+   "gloss_fr": "Avant de devenir un simple « effet sonore » (bruitage de cinéma)",
+   "problem": "« phénomène sonore » n'est pas « efecto de sonido » (bruitage) ; et « volverse un » est un calque.",
+   "fix": "Antes de convertirse en un simple fenómeno acústico",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s3.b3.text",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "No puedes unirte a tu propio reflejo.",
+   "gloss_fr": "Tu ne peux pas t'unir à ton propre reflet (adresse soudaine au lecteur).",
+   "problem": "Le FR est impersonnel (« Impossible de s'unir à soi-même ») ; la 2e personne fait sortir du récit.",
+   "fix": "Es imposible unirse a uno mismo.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s4.b2.text",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "Dos modos de fallarle al otro, una sola tragedia.",
+   "gloss_fr": "Deux façons de « faire faux bond / décevoir » l'autre, une seule tragédie.",
+   "problem": "« manquer l'autre » = ne pas le rencontrer ; « fallarle a alguien » = le décevoir.",
+   "fix": "Dos maneras de no llegar al otro, una sola tragedia.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Sus propios deseos ya no tenían lengua.",
+   "gloss_fr": "Ses propres désirs n'avaient plus de « langue » (organe/idiome).",
+   "problem": "Calque de « n'ont plus de langue » ; l'image espagnole est « ya no tenían voz ».",
+   "fix": "Sus propios deseos ya no tenían voz.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.b3.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "se quedó como la más famosa",
+   "gloss_fr": "« est restée comme » la plus célèbre",
+   "problem": "« quedarse como » n'est pas idiomatique ici ; on dit « sigue siendo ».",
+   "fix": "La versión de Ovidio, donde se consume de amor, sigue siendo la más famosa.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s3.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "En un día de calor, Narciso se inclinó sobre un manantial claro. Vio su propio rostro. Creyó mirar a un espíritu del agua.",
+   "gloss_fr": "« Dans » un jour de chaleur… Il crut « regarder » un esprit de l'eau.",
+   "problem": "« En un día de calor » et « creyó mirar » sont des calques ; l'espagnol dit « Un día de calor » et « creyó ver ».",
+   "fix": "Un día de calor, Narciso se inclinó sobre un manantial claro. Vio su propio rostro. Creyó ver a un espíritu del agua.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s3.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "La crueldad de Narciso agotó a los dioses.",
+   "gloss_fr": "La cruauté de Narcisse « épuisa » les dieux.",
+   "problem": "« lasser » = « cansar / hartar » ; « agotar » suggère un épuisement physique.",
+   "fix": "La crueldad de Narciso acabó por hartar a los dioses.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/hero.hook",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Él no tiene ojos más que para sí.",
+   "gloss_fr": "Il n'a d'yeux que pour « soi » (pronom tronqué).",
+   "problem": "« para sí » tout seul sonne incomplet ; l'idiome est « para sí mismo ».",
+   "fix": "Ella no tiene voz propia. Él solo tiene ojos para sí mismo. Su encuentro es imposible.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s1.b0.text",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "“mantener a los rusos fuera, a los estadounidenses dentro y a los alemanes abajo.”",
+   "gloss_fr": "« garder les Russes dehors, les Américains dedans et les Allemands en bas. » (point dans les guillemets)",
+   "problem": "« abajo » (en bas) ne rend pas « sous contrôle » ; et point mal placé.",
+   "fix": "“mantener a los rusos fuera, a los estadounidenses dentro y a los alemanes bajo control”.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/hero.hook",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Construida para enfrentar a un enemigo que no existe desde 1991",
+   "gloss_fr": "Construite pour « affronter à » un ennemi (tournure latino-américaine)",
+   "problem": "En Espagne on dit « enfrentarse a » ou « hacer frente a » ; « enfrentar a » marque l'espagnol d'Amérique dans une édition es-ES.",
+   "fix": "Creada para hacer frente a un enemigo que no existe desde 1991, la OTAN nunca ha tenido tantos miembros.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/description",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Hoy es más grande y está más ocupada que nunca.",
+   "gloss_fr": "Aujourd'hui elle est plus grande et « plus occupée » que jamais.",
+   "problem": "« plus active » se dit « más activa » ; « ocupada » évoque une personne débordée.",
+   "fix": "Hoy es más grande y más activa que nunca.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/subtitle",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "1949 hasta hoy",
+   "gloss_fr": "1949 jusqu'à aujourd'hui (sans préposition initiale)",
+   "problem": "La plage de dates demande « De … a » ou « Desde … » en espagnol.",
+   "fix": "De 1949 a hoy",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s1.b1.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Su contribución descansa en estaciones de radar, una guardia costera y en acoger aviones aliados en su suelo.",
+   "gloss_fr": "Sa contribution repose « en » stations radar, une garde-côte « et en » accueillir des avions (parallélisme cassé).",
+   "problem": "La préposition n'est pas répétée de façon cohérente et « descansa en » est un calque de « repose sur ».",
+   "fix": "Su contribución se basa en radares, guardacostas y la acogida de aviones aliados en su territorio.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s1.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "un ataque a un miembro cuenta como un ataque a todos. … demasiado costosa para arriesgarla.",
+   "gloss_fr": "une attaque contre un membre « compte comme » une attaque contre tous… trop coûteuse « pour la risquer ».",
+   "problem": "« contar como » (anglais « count as ») n'est pas l'expression naturelle ; « arriesgarla » avec pronom est bancal.",
+   "fix": "un ataque contra un miembro se considera un ataque contra todos. … demasiado costosa como para intentarla.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s2.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "lanzaron a la OTAN a una crisis de identidad. … Eligió reinventarse en dos líneas. … para guardarse de cualquier regreso del imperialismo ruso.",
+   "gloss_fr": "« lancèrent » l'OTAN dans une crise d'identité… Elle choisit de se réinventer « en deux lignes »… pour « se garder de » tout retour de l'impérialisme russe.",
+   "problem": "Trois tournures calquées : « plonger » = « sumir », « deux axes » = « dos ejes » (« dos líneas » évoque deux lignes de texte), « guardarse de » est vieilli.",
+   "fix": "sumieron a la OTAN en una crisis de identidad. … Eligió reinventarse en torno a dos ejes. … para protegerse de un posible regreso del imperialismo ruso.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s3.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "El choque de 2022 y el regreso de la defensa territorial",
+   "gloss_fr": "Le choc de 2022 et le retour « de » la défense territoriale (la défense qui revient)",
+   "problem": "« retour à » = « vuelta/retorno a » ; « regreso de » change le sens.",
+   "fix": "El choque de 2022 y la vuelta a la defensa territorial",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s3.b2.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "un apoyo logístico a una escala sin precedente. … con Alemania liberando fondos masivos para modernizar",
+   "gloss_fr": "un soutien logistique à une échelle « sans précédent » (singulier) … « avec l'Allemagne libérant » des fonds massifs",
+   "problem": "L'idiome espagnol est « sin precedentes » ; la construction « con + sujet + gérondif » est un calque du français/anglais.",
+   "fix": "un apoyo logístico sin precedentes. La guerra también ha forzado un rearme general en Europa, y Alemania ha desbloqueado fondos enormes para modernizar un ejército descuidado durante treinta años.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s3.b3.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "existe en dos formas espejo, una por cada lengua oficial",
+   "gloss_fr": "existe en deux « formes miroir », une par langue officielle",
+   "problem": "« formas espejo » n'est pas idiomatique ; le FR dit « inversées ».",
+   "fix": "La sigla de la organización existe en dos formas invertidas, una por cada lengua oficial: NATO en inglés y OTAN en francés.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s4.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "como nuevos dominios oficiales de operación. Los ataques informáticos a infraestructuras críticas cuentan ahora como actos de agresión",
+   "gloss_fr": "comme nouveaux « domaines officiels d'opération »… les cyberattaques « comptent maintenant comme » des actes d'agression",
+   "problem": "« dominios de operación » calque le FR (« ámbitos operativos ») et « contar como » revient une troisième fois.",
+   "fix": "como nuevos ámbitos operativos oficiales. Los ataques informáticos a infraestructuras críticas se consideran ahora agresiones que pueden, en algunos casos, justificar la defensa colectiva.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s4.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "ha empujado a la OTAN a construir asociaciones con Japón, Corea del Sur y Australia, lo que preocupa a algunos miembros europeos, que temen un desvío respecto al área geográfica original.",
+   "gloss_fr": "a poussé l'OTAN à « construire des associations »… qui craignent « une déviation par rapport à » la zone géographique initiale.",
+   "problem": "« nouer des partenariats » = « establecer alianzas » ; « un desvío respecto al área » est une nominalisation raide.",
+   "fix": "ha llevado a la OTAN a establecer alianzas con Japón, Corea del Sur y Australia, lo que preocupa a algunos miembros europeos, que temen que la alianza se aleje de su zona geográfica original.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s3.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "la OTAN reencontró su misión fundadora",
+   "gloss_fr": "l'OTAN « retrouva (rencontra de nouveau) » sa mission fondatrice",
+   "problem": "« reencontrar » s'emploie pour des personnes ; pour une mission on dit « recuperar ».",
+   "fix": "la OTAN recuperó su misión original: defender el territorio europeo.",
+   "surface": "courses"
+  }
+ ]
+}

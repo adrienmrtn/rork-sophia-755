@@ -1,0 +1,701 @@
+{
+ "langue": "sr",
+ "synthese": {
+  "verdict": "La plainte est justifiée et vise d'abord les cours. L'interface serbe (4/5) est fluide et tutoyée ; ses accrocs sont la marque tantôt déclinée (uz Sophiju), tantôt non (Bez Sophia, Ostani u Sophia), tantôt mal déclinée (Podeli Sophiu), un masculin par défaut (Dobro došao, Spreman sam), quelques calques (« Bienvenue sur le bateau », « la personne la plus intéressante du local ») et des termes produit instables (kurs / lekcija, staza / putanja, proba / probni period). Les cours (2/5) sont, pour quatre leçons sur cinq, de la traduction automatique brute : « on » rendu par « nous » (56 segments), « Rendez-vous sans combat » à l'impératif, « l'Antiquité s'approche » pour « l'Antiquité s'achève », « beau-père » rendu par « père de l'épouse », « Spleen » par « la rate », « U 622 » au lieu de « 622. godine » (148 phrases), termes de glossaire au nominatif, noms propres en graphie française mutilée.",
+  "scores": {
+   "ui": 4,
+   "cours": 2,
+   "global": 3
+  },
+  "top_issues": [
+   {
+    "title": "« on » rendu par « nous »",
+    "where": "course_1_la_naissance_de_l_islam_622/s0.b0.text (56 segments dans le corpus)",
+    "current": "Želimo da ga ubijemo.",
+    "gloss_fr": "Nous voulons le tuer.",
+    "fix": "Hoće da ga ubiju.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Reddition rendue à l'impératif",
+    "where": "course_1_la_naissance_de_l_islam_622/s3.b3 (timeline)",
+    "current": "Predajte se bez borbe i opšteg pomilovanja.",
+    "gloss_fr": "Rendez-vous sans combat ni pardon général.",
+    "fix": "Predaja bez borbe i opšte pomilovanje.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« L'Antiquité s'achève » = « s'approche »",
+    "where": "course_1_la_naissance_de_l_islam_622/s4.b2.text",
+    "current": "Malo po malo, Antika se približava.",
+    "gloss_fr": "Peu à peu, l'Antiquité s'approche.",
+    "fix": "Malo-pomalo, antika se završava.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« beau-père » = « père de l'épouse »",
+    "where": "course_100_les_fleurs_du_mal_baudelaire/s1.b0.text",
+    "current": "svađa sa svojim tastom, generalom **Aupick**",
+    "gloss_fr": "se dispute avec le père de son épouse",
+    "fix": "svađa se sa očuhom, generalom **Opikom**",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« Spleen » = « la rate »",
+    "where": "course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+    "current": "**„Slezina i ideal“**",
+    "gloss_fr": "« La Rate (l'organe) et l'idéal »",
+    "fix": "**„Splin i ideal“**",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« En 622 » calqué « U 622 »",
+    "where": "cours : 148 phrases sur 244",
+    "current": "U **622**, trgovac iz Meke…",
+    "gloss_fr": "préposition de lieu sans « godine »",
+    "fix": "Godine **622.** trgovac iz Meke…",
+    "severity": "majeur"
+   },
+   {
+    "title": "Marque non déclinée ou mal déclinée",
+    "where": "onboarding.graph.withoutSophia, share.card.title",
+    "current": "Bez Sophia / Podeli Sophiu",
+    "gloss_fr": "Sophia au nominatif après préposition ; accusatif mal formé",
+    "fix": "Bez Sophije / Podeli Sophiju",
+    "severity": "majeur"
+   },
+   {
+    "title": "« Bienvenue sur le bateau ! »",
+    "where": "onboardingV2.aboard.title",
+    "current": "Dobro došao na brod!",
+    "gloss_fr": "Bienvenue sur le bateau",
+    "fix": "Dobro nam došao/la!",
+    "severity": "majeur"
+   },
+   {
+    "title": "« la personne la plus intéressante du local »",
+    "where": "paywall.header",
+    "current": "najzanimljivija⏎osoba u prostoriji",
+    "gloss_fr": "du local, de la salle",
+    "fix": "Postani⏎najzanimljivija⏎osoba u društvu.",
+    "severity": "majeur"
+   }
+  ],
+  "systematic": [
+   "« on » impersonnel rendu par « nous » : 56 segments sur 168.",
+   "« En <année> » calqué « U <année> » (148 cas) au lieu de « 622. godine » / « Godine 622. ».",
+   "Termes de glossaire [[…]] insérés au nominatif quelle que soit la fonction dans la phrase.",
+   "Noms propres et titres d'œuvres en graphie française ou anglaise, accents supprimés, transcription incohérente (le serbe transcrit : Opik, Bodler).",
+   "Mots polysémiques pris dans le mauvais sens : beau-père → tast, condamnation → uverenje, états → države, Spleen → slezina.",
+   "Genre calqué du français (Écho, Médine, le recueil) ; masculin par défaut pour l'utilisateur.",
+   "Marque Sophia déclinée de trois façons ; termes produit instables (kurs / lekcija, staza / putanja, proba / probni period, blocker / bloker)."
+  ],
+  "action": "relecture_complete",
+  "effort": "UI : 0,5 jour ; cours, quiz et glossaire : relecture native complète, 2 à 3 semaines."
+ },
+ "scores_relecteur_par_surface": {
+  "combined": 3
+ },
+ "justifications_relecteur": {
+  "combined": "Oui, la plainte « ça ne sonne pas naturel » est justifiée pour le serbe, mais elle vise avant tout les cours. L'interface (UI : 4/5) est un serbe fluide et tutoyé, avec des boutons courts ; ses accrocs sont visibles mais limités : nom de marque tantôt décliné (uz Sophiju), tantôt non (Bez Sophia, Ostani u Sophia), tantôt mal décliné (Podeli Sophiu), masculin par défaut (Dobro došao, Iskoristio si, Spreman sam), calques (« na brod », « u prostoriji »), collisions d'idiomes (« Nema veze » = « peu importe », « slušaš bez veze » = « pour rien ») et termes produit instables (kurs/lekcija, staza/putanja, proba/probni period, blocker/bloker). Les cours (2/5) sont, pour quatre leçons sur cinq, de la traduction automatique brute non relue : « on » impersonnel rendu par « nous » (Želimo da ga ubijemo, Tamo živimo u plemenima, Zahtevamo), « En 622 » calqué en « U 622 », polysémies prises à contresens (beau-père → tast, Spleen → la rate, deux états → deux pays, touche → contact, Impression → la presse, condamnation → uverenje, levés → supprimés), noms propres mutilés ou laissés en graphie française (Zeus → « imao », Pan → « Bang », Monet/Leroi/Leroj, Musee d'Orsai, Posteriti), titres d'œuvres sans leur forme serbe établie (Splin i ideal, Saglasja, Doručak na travi, Lokvanji, Pariski splin, Gospođa Bovari), accords de genre calqués sur le français (Écho au masculin, knjiga/Cveće au masculin, NATO au féminin) et termes de glossaire [[…]] jamais déclinés. Seule la leçon sur l'OTAN ressemble à un texte relu. Ce qui domine n'est donc pas une lourdeur stylistique mais des erreurs de sens qui rendent plusieurs paragraphes faux ou risibles ; la surface la plus dégradée est le corps des cours de littérature, d'art et de mythologie, c'est-à-dire le cœur du produit. Score global : 3, tiré vers le bas par les cours."
+ },
+ "constats_non_listes_par_le_relecteur": {
+  "combined": 95
+ },
+ "motifs_recurrents": [
+  {
+   "description": "Le « on » impersonnel français est rendu par la première personne du pluriel (« nous ») dans les cours, ce qui fait parler l'application à la place des personnages.",
+   "frequency": "fréquent",
+   "example": "courses:course_1/s1.b0.text « Tamo živimo u plemenima. » (On y vit en tribus)",
+   "regex_fr": "\\bOn (?:veut|y vit|exige|appelle|peut|prie)\\b",
+   "regex_target": "(?i)\\b(?:mi\\s+)?(?:želimo|živimo|zahtevamo|zovemo)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "« En <année> » calqué en « U **622** » (préposition de lieu, sans « godine » ni point ordinal) ; en serbe on écrit « 622. godine » ou « Godine 622. ».",
+   "frequency": "systématique",
+   "example": "courses:course_100/s0.b0.text « U **1857**, **Šarl Bodler** je objavio »",
+   "regex_fr": "\\bEn \\*{0,2}\\d{3,4}\\*{0,2}",
+   "regex_target": "\\b[Uu] \\*{0,2}\\d{3,4}\\*{0,2}(?!\\.)",
+   "pack": "combined"
+  },
+  {
+   "description": "Termes de glossaire [[…]] insérés au nominatif quelle que soit la fonction dans la phrase (après préposition, en complément d'objet) : agrammatical en serbe, langue à cas.",
+   "frequency": "systématique",
+   "example": "courses:course_207/s2.b0.text « bivše zemlje **[[Varšavski pakt]]** » (devrait être « Varšavskog pakta »)",
+   "regex_target": "(?i)\\b(?:u|na|ka|od|pod|sa|iz|ovog|svom|idealom|zahvaljujući|zemlje)\\s+\\*{0,2}\\[\\[[^\\]]+\\]\\]",
+   "pack": "combined"
+  },
+  {
+   "description": "Noms propres et titres d'œuvres laissés en graphie française/anglaise, mutilés (accents supprimés) ou transcrits de façon incohérente, alors que le serbe transcrit phonétiquement et possède des titres établis.",
+   "frequency": "systématique",
+   "example": "courses:course_122/s4.b2.text « [[Musee d'Orsai]] » (Muzej Orse) ; Leroa/Leroi/Leroj ; « Madame Bovari » (Gospođa Bovari) ; « Le Spleen de Paris » (Pariski splin)",
+   "regex_target": "\\b(?:Monet|Renoir|Pissarro|Degas|Morisot|Aupick|Duval|Freud|Echo|Leroi|Leroj|Nemesis|Naiads|Oread|Guerbois|Chevreul|Durand-Ruel|Refuses|Dejeuner|Orsai|Hegira|Kaaba|Iathrib|Posteriti)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Mots polysémiques pris dans le mauvais sens (souvent via l'anglais) : beau-père → tast, condamnation → uverenje, états → države, Spleen → slezina, touche → dodir, hommes → muškarci, francs → iskreni, motif → šara, tubes → cevi, Impression → Štampa, espace → prostor, postérité → potomstvo, dehors → spolja, se consumer → potrošen.",
+   "frequency": "systématique",
+   "example": "courses:course_100/s1.b1.text « sa svojim tastom » (beau-père = očuh)",
+   "regex_target": "\\b(?:uverenje|tastom|dvema državama|[Ss]lezin\\w*|dodire čiste boje|ove dodire|dodir u tačke|slobodan dodir|muškaraca|iskrenim kontrastima|šare|cevi za farbanje|Štampa|potomstvo|spolja|potrošen)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Accords de genre calqués sur le genre français du référent (Écho, Médine, le livre, le recueil « Cveće zla », Narcisse « Njena lepota », l'OTAN « njenog ») au lieu du genre serbe.",
+   "frequency": "fréquent",
+   "example": "courses:course_1/s2.b1.text « Medina… Preimenovan u „grad proroka“… ime je zadržao do danas » (Medina est féminin)",
+   "regex_target": "\\b(?:Eho,? (?:osuđen|veran)|Ponižen, Eho|Njegovo telo|Preimenovan u|Osuđen je za|Cveće zla\\*{0,2} je (?:takođe izašao|prvo skandalizovao)|Njena lepota|njen(?:og|u) (?:protivnika|raspada|korisnost))\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Masculin par défaut quand l'app s'adresse à l'utilisateur (participes passés, adjectifs), sans variante féminine ni formulation neutre.",
+   "frequency": "systématique",
+   "example": "ui:paywall.course.subtitle « Iskoristio si današnji besplatni kurs. »",
+   "regex_target": "(?i)\\b(?:dobro došao|si (?:pročitao|završio|prošao|naučio|uradio|dostigao|čitao)|iskoristio si|krenuo si|spreman sam|jesi li znao|budi iskren|prijavljen preko|mogao da)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Nom de marque « Sophia » traité de trois façons : non décliné après préposition (Uz Sophia, Bez Sophia, u Sophia), décliné correctement (Sophiju, Sophije) ou mal décliné sans « j » (Sophiu, Sophii).",
+   "frequency": "fréquent",
+   "example": "ui:onboarding.graph.subtitle « Uz Sophia i bez nje » vs ui:onboardingV2.intro.social.title « uz Sophiju » vs ui:share.card.title « Podeli Sophiu »",
+   "regex_target": "(?i)(?:\\b(?:uz|bez|u|na|zahvaljujući|objavljujući)\\s+Sophia\\b(?!\\s+(?:Premium|PRO|Pro|klub|vidžet|ambasador|kurs))|\\bSophi[ui]\\b)",
+   "pack": "combined"
+  },
+  {
+   "description": "Termes produit instables dans l'UI : cours = kurs / lekcija ; parcours = staza / putanja / put / putovanje ; essai gratuit = besplatna proba / probni period / besplatni period ; blocker = blocker / bloker / blokada ; favoris = favoriti / omiljeno ; « Cours illimités » rendu de trois façons.",
+   "frequency": "fréquent",
+   "example": "ui:paywall.unlock.unlimited « Neograničene lekcije » vs ui:paywall.feature.unlimitedCourses « Kursevi bez limita » vs ui:onboarding.trial.unlimitedCourses « Neograničeni kursevi »",
+   "regex_target": "(?i)\\b(?:lekcij\\w*|putanj\\w*|blocker|besplatn[aeu] prob\\w*|bez limita|favorit\\w*)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Calques lexicaux de verbes et tournures françaises : pousser → gurati, « chez Hugo » → « U Hugu », « faire de X un Y » → « učiniti X Y », « en infériorité numérique » → « nadjačana », « incarne » → « igra », « à bord » → « na brod », « in the room » → « u prostoriji ».",
+   "frequency": "fréquent",
+   "example": "courses:course_100/s4.b3.text « U Hugu pesnik i dalje vodi naciju. U Bodleru… » (Kod Igoa / Kod Bodlera)",
+   "regex_target": "\\b(?:gura(?:ti|nuti)?|gurnuli|U Hugu|U Bodleru|U Nadaru|na brod|u prostoriji|nadjačana|igra \\*{0,2}Prokletog)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Typographie incohérente dans les cours : guillemets mêlés („…“, „…”, \"…\"), point ordinal manquant après les années (« iz 1863 », « 610-632 »), trait d'union au lieu du tiret dans les intervalles, « Hladni rat » tantôt avec majuscule tantôt sans.",
+   "frequency": "fréquent",
+   "example": "courses:course_166/s2.b1.text « \"Ima li nekoga?\" » vs « „Ja sam onaj koga vidim.“ » ; courses:course_122/s1.title « skandal iz 1863 »",
+   "regex_target": "„[^“”]*”|\"[^\"\\n]+\"|\\b(?:iz|od|do|između)\\s+\\d{4}\\b(?!\\.)|\\(\\d{3,4}-\\d{3,4}\\)",
+   "pack": "combined"
+  },
+  {
+   "description": "Collision avec un idiome serbe : « veza » (connexion) dans « Nema veze » (= peu importe) et « bez veze » (= pour rien / nul) rend les messages réseau comiques.",
+   "frequency": "isolé",
+   "example": "ui:paywall.error.network « Nema veze. Proveri mrežu i pokušaj ponovo. »",
+   "regex_target": "\\b[Nn]ema veze\\b|\\bbez veze\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Dérive temporelle dans la narration des cours : le présent narratif du français glisse vers le passé au milieu d'un paragraphe (« nije zanimala… žive », « Sastavio je… osnovao » après « postaje vođa »).",
+   "frequency": "fréquent",
+   "example": "courses:course_1/s2.b0.text « on postaje vođa. Sastavio je [[Ustav Medine]]… i osnovao »",
+   "pack": "combined"
+  }
+ ],
+ "constats": [
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Želimo da ga ubijemo.",
+   "gloss_fr": "Nous voulons le tuer.",
+   "problem": "Le « on » impersonnel (« On veut le tuer ») est rendu à la première personne du pluriel : le cours affirme que nous voulons tuer Muhammad.",
+   "fix": "Hoće da ga ubiju.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Tamo živimo u plemenima.",
+   "gloss_fr": "Là-bas, nous vivons en tribus.",
+   "problem": "« On y vit en tribus » rendu par « nous y vivons » : absurde pour le lecteur serbe.",
+   "fix": "Tamo se živi u plemenima.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s3.b3.e3.detail",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Predajte se bez borbe i opšteg pomilovanja.",
+   "gloss_fr": "Rendez-vous (impératif) sans combat ni pardon général.",
+   "problem": "Le nom « reddition » est devenu un ordre adressé au lecteur et le « pardon général » est nié par la construction.",
+   "fix": "Predaja bez borbe i opšte pomilovanje.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s4.b2.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Malo po malo, Antika se približava.",
+   "gloss_fr": "Peu à peu, l'Antiquité s'approche.",
+   "problem": "« L'Antiquité se referme » (s'achève) est traduit par son contraire.",
+   "fix": "Malo-pomalo, antika se završava.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/hero.hook",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "jedno uverenje",
+   "gloss_fr": "une conviction (au sens de croyance)",
+   "problem": "« Condamnation » est passé par l'anglais « conviction » et rendu par « croyance » : l'accroche du cours n'a plus de sens.",
+   "fix": "Šest cenzurisanih pesama, jedna sudska osuda i rađanje moderne poezije.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s1.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "svađa sa svojim tastom, generalom **Aupick**",
+   "gloss_fr": "se dispute avec le père de son épouse, le général Aupick",
+   "problem": "« Beau-père » pris au sens de père de l'épouse (tast) au lieu de second mari de la mère (očuh) ; Baudelaire n'a jamais été marié.",
+   "fix": "svađa se sa očuhom, generalom **Opikom**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "**„Slezina i ideal“**, prvi veći deo, suprotstavlja se dvema državama. **slezina**, reč pozajmljena iz engleskog… **idealan** je žeđ",
+   "gloss_fr": "« La Rate (l'organe) et l'idéal », première grande partie, s'oppose à deux États (pays). La rate, mot emprunté à l'anglais… « idéal » (adjectif) est la soif…",
+   "problem": "Spleen traduit par l'organe, « états » (d'âme) par « pays », « idéal » par un adjectif : le titre consacré en serbe est « Splin i ideal » (même erreur dans s2.b2.caption « Bodlerove slezine »).",
+   "fix": "**„Splin i ideal“**, prvi veliki deo zbirke, suprotstavlja dva stanja. **Splin**, reč pozajmljena iz engleskog, označava duboku dosadu, melanholiju bez razloga. **Ideal** je žeđ za uzdizanjem i čistom lepotom.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "čini grad dekoracijom enterijera",
+   "gloss_fr": "fait de la ville une décoration d'intérieur (d'appartement)",
+   "problem": "« Décor intérieur » (paysage de l'âme) a été compris comme décoration d'appartement.",
+   "fix": "pretvara grad u unutrašnji pejzaž pesnika",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s3.title",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "Prepiska i poetska alhemija",
+   "gloss_fr": "Correspondance (échange de lettres) et alchimie poétique",
+   "problem": "Le poème « Correspondances » est rendu par « échange de lettres » (aussi dans s3.b0.text « „Prepiske“ » et s3.b1.attribution) ; son titre serbe établi est « Saglasja ».",
+   "fix": "Saglasja i poetska alhemija (et **„Saglasja“** / Šarl Bodler, „Saglasja“)",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s4.b2.e1.detail",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Šest cenzurisanih pesama je konačno uklonjeno.",
+   "gloss_fr": "Les six poèmes censurés sont enfin supprimés.",
+   "problem": "« Levés » (interdiction levée) traduit par « retirés » : sens inverse de la réhabilitation.",
+   "fix": "Zabrana šest cenzurisanih pesama konačno je ukinuta.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s4.b2.e2.date",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Posteriti",
+   "gloss_fr": "mot inexistant (translittération de l'anglais « posterity »)",
+   "problem": "Mot inventé, incompréhensible pour un lecteur serbe, affiché comme étiquette de frise.",
+   "fix": "Nasleđe",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s0.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "naslovu *Štampa, izlazeće sunce*… Ovako je **utisak** promenio",
+   "gloss_fr": "au titre « La Presse / l'imprimerie, soleil levant »… Voici comment « l'impression (sensation) » a changé",
+   "problem": "Le tableau « Impression, soleil levant » (serbe établi : « Impresija, rađanje sunca ») devient « la Presse », et « impressionnisme » devient « impression ».",
+   "fix": "Rugajući se naslovu *Impresija, rađanje sunca*, Leroa je nehotice krstio prvi veliki avangardni pokret moderne umetnosti. Evo kako je **impresionizam** promenio način na koji gledamo stvarnost.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s1.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Zahtevamo precizan crtež i glatku površinu, bez tragova četkice.",
+   "gloss_fr": "Nous exigeons un dessin précis et une surface lisse.",
+   "problem": "« On exige » rendu par « nous exigeons » : l'application semble imposer ses propres règles au lecteur.",
+   "fix": "Traže se precizan crtež i glatka površina, bez traga četkice.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Sa [[cevi za farbanje i plener]], konačno može da sedne napolju ispred šare.",
+   "gloss_fr": "Avec les tuyaux pour peindre (en bâtiment) et le plein air, il peut enfin s'asseoir dehors devant le motif décoratif.",
+   "problem": "« Tubes de peinture » devient « tuyaux de peinture en bâtiment » et « motif » (sujet du tableau) devient « motif décoratif ».",
+   "fix": "Uz [[boje u tubama i plener]] konačno može da se smesti napolju, pred samim motivom.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Ona pomaže **imao**, kralju bogova",
+   "gloss_fr": "Elle aide « a eu » (forme du verbe avoir), roi des dieux",
+   "problem": "Le nom de Zeus a été remplacé par la forme verbale « imao » : phrase absurde en gras.",
+   "fix": "Ona pomaže **Zevsu**, kralju bogova",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.b3.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "bog **Bang**",
+   "gloss_fr": "le dieu « Bang »",
+   "problem": "Pan est devenu « Bang » ; le dieu n'est plus reconnaissable.",
+   "fix": "bog **Pan**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.b1.caption",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "Eho, osuđen da bude ništa drugo do glas koji se ponavlja.",
+   "gloss_fr": "Écho, condamné (masculin) à n'être qu'une voix qui se répète elle-même.",
+   "problem": "Écho est traitée au masculin dans tout le cours (postao, osuđen, Ponižen, Njegovo telo, Njegove želje, veran, nije mogao) : la nymphe devient un homme et l'histoire d'amour est incompréhensible.",
+   "fix": "Eho, osuđena da bude samo glas koji ponavlja.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s3.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "NATO na engleskom i NATO na francuskom",
+   "gloss_fr": "NATO en anglais et NATO en français",
+   "problem": "L'anecdote sur les deux sigles inversés est détruite : les deux formes citées sont identiques.",
+   "fix": "NATO na engleskom i OTAN na francuskom",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:audio.downloads.footer",
+   "severity": "bloquant",
+   "category": "autre",
+   "current": "Preuzete zapise slušaš bez veze.",
+   "gloss_fr": "Tu écoutes les audios téléchargés pour rien / n'importe comment (« bez veze » = idiome « sans intérêt »).",
+   "problem": "« bez veze » est d'abord lu comme l'idiome « pour rien, nul » et non comme « sans connexion » : phrase risible.",
+   "fix": "Preuzete zapise možeš slušati i bez interneta.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.welcome.title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Dobro došao u Sophia",
+   "gloss_fr": "Bienvenue (masculin) dans Sophia (nom non décliné)",
+   "problem": "Forme masculine qui exclut les utilisatrices et nom de marque laissé au nominatif là où l'accusatif est obligatoire (idem onboarding.final.subtitle, onboardingV2.aboard.subtitle).",
+   "fix": "Dobro došao/la u Sophiju",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboarding.graph.withoutSophia",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Bez Sophia",
+   "gloss_fr": "Sans Sophia (nom non décliné)",
+   "problem": "Nom de marque non décliné après préposition (aussi « Uz Sophia », « Zahvaljujući Sophia », « Ostani u Sophia ») alors qu'ailleurs il est décliné (uz Sophiju, Tim Sophije) : trois régimes incohérents ; si la marque doit rester invariable, dire « bez aplikacije Sophia ».",
+   "fix": "Bez Sophije (et « Uz Sophiju », « Ostani u Sophiji »)",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:share.card.title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Podeli Sophiu",
+   "gloss_fr": "Partage Sophia (accusatif mal formé)",
+   "problem": "Accusatif sans le « j » obligatoire (Sophia → Sophiju) ; même faute dans share.title « Preporuči Sophiu » et share.message « na Sophii ».",
+   "fix": "Podeli Sophiju (et « Preporuči Sophiju », « na Sophiji »)",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.aboard.title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Dobro došao na brod!",
+   "gloss_fr": "Bienvenue sur le bateau !",
+   "problem": "« Bienvenue à bord » traduit mot à mot ; en serbe personne n'accueille « sur le bateau » (idem titleNamed).",
+   "fix": "Dobro nam došao/la! (titleNamed : Dobro nam došao/la, {name}!)",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.header",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "najzanimljivija⏎osoba u prostoriji",
+   "gloss_fr": "la personne la plus intéressante du local / de la salle",
+   "problem": "« De la pièce / in the room » calqué ; l'expression idiomatique serbe est « u društvu ».",
+   "fix": "Postani⏎najzanimljivija⏎osoba u društvu.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:offer.unlock",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Otključaj mojih -70 %",
+   "gloss_fr": "Débloque de mes -70 % (génitif sans nom)",
+   "problem": "Bouton agrammatical : « mojih » au génitif pluriel sans nom, incompréhensible.",
+   "fix": "Otključaj -70 % popusta",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.pw.startTrial",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Započni {n} dana besplatno",
+   "gloss_fr": "Commence {n} jours gratuitement",
+   "problem": "« Commencer sept jours » ne se dit pas en serbe ; c'est le CTA principal du paywall.",
+   "fix": "Isprobaj {n} dana besplatno",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.unlock.unlimited",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Neograničene lekcije",
+   "gloss_fr": "Leçons illimitées",
+   "problem": "« Cours illimités » apparaît en trois versions sur les paywalls : Neograničene lekcije, Kursevi bez limita (paywall.feature.unlimitedCourses), Neograničeni kursevi (onboarding.trial.unlimitedCourses).",
+   "fix": "Neograničeni kursevi (partout)",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.features.row2",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "%@+ lekcija koje su napisali pravi istraživači",
+   "gloss_fr": "%@+ leçons écrites par de vrais chercheurs",
+   "problem": "« Cours » est « kurs » dans les onglets et la bibliothèque mais « lekcija » dans l'onboarding (row5, swipe.title, age.subtitle), share.message et antiScroll.title : l'utilisateur croit à deux objets différents.",
+   "fix": "%@+ kurseva koje su napisali pravi istraživači",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.error.network",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "Nema veze.",
+   "gloss_fr": "Peu importe. / Ce n'est pas grave.",
+   "problem": "« Nema veze » est avant tout l'idiome « ce n'est pas grave » ; le message d'erreur devient comique.",
+   "fix": "Nema internet veze. Proveri mrežu i pokušaj ponovo.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:profile.streak.great",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Gori ti 🔥",
+   "gloss_fr": "Ça brûle chez toi / ça urge pour toi",
+   "problem": "« Tu es en feu » calqué : « gori ti » se lit « quelque chose brûle chez toi » ou « tu es pressé », pas « tu cartonnes ».",
+   "fix": "Rasturaš 🔥",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:collections.badge.path",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "PUTANJA",
+   "gloss_fr": "TRAJECTOIRE",
+   "problem": "« Parcours » est « Staza » dans l'onglet et le module Parcours, mais « Putanja » (trajectoire physique) dans les collections (collections.path, pathComplete, subtitle) et l'onboarding (showcase.collections.title « tematske putanje »).",
+   "fix": "STAZA (et « Tvoja staza », « Staza je završena », « Vođene staze koje povezuju ideje. », « Prati tematske⏎staze »)",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.course.title",
+   "severity": "majeur",
+   "category": "registre",
+   "current": "Već si pročitao današnji besplatni kurs",
+   "gloss_fr": "Tu as déjà lu (masculin) ton cours gratuit du jour",
+   "problem": "Masculin par défaut dans toute l'app (pročitao, Iskoristio si, Završio si, Prošao si, Krenuo si, Budi iskren, Spreman sam, JESI LI ZNAO?) alors qu'une formulation neutre est possible ; les utilisatrices le remarquent.",
+   "fix": "Današnji besplatni kurs je već pročitan",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.review.quote",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Ranije sam na telefonu provodio 7 sati dnevno.",
+   "gloss_fr": "Avant, je passais (masculin) 7 h par jour sur mon téléphone.",
+   "problem": "Témoignage signé Lea (femme) rédigé au masculin ; même doute pour Kamij (Camille) dans paywall.quiz.review1 et paywall.reviews.r1 (« zapamtio », « naučio »).",
+   "fix": "Ranije sam na telefonu provodila 7 sati dnevno.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.blocker.subtitle",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "{n} dana besplatne probe za blocker.",
+   "gloss_fr": "{n} jours d'essai gratuit pour le « blocker » (anglais)",
+   "problem": "« blocker » laissé en anglais (aussi paywall.blocker.title et subtitle.noTrial) alors que l'app dit « bloker » (TikTok bloker) et « Blokada » ailleurs.",
+   "fix": "{n} dana besplatno da isprobaš bloker.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Kako se impresionizam rodio protiv Salona?",
+   "gloss_fr": "Comment l'impressionnisme s'est-il né contre le Salon ?",
+   "problem": "« Naître contre » calqué du français ; titre de cours vu par tous les utilisateurs.",
+   "fix": "Kako je impresionizam nastao iz pobune protiv Salona?",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/description",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Kritičar se ruga Monet i nesvesno ga naziva **impresionizmom**.",
+   "gloss_fr": "Un critique se moque de Monet (non décliné) et l'appelle, lui Monet, « impressionnisme ».",
+   "problem": "Monet non décliné et « baptiser l'impressionnisme » devient « appeler Monet impressionnisme ».",
+   "fix": "Kritičar se ruga Moneu i nehotice daje ime **impresionizmu**.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/description",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "početak svetske civilizacije",
+   "gloss_fr": "le début de la civilisation mondiale (de l'humanité)",
+   "problem": "« Une civilisation mondiale » devient « la civilisation du monde » ; même glissement dans hero.hook (« rodio svetsku civilizaciju », verbe réservé à l'accouchement).",
+   "fix": "početak jedne svetske civilizacije (hook : « stvorio jednu svetsku civilizaciju »)",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "nosi ime: **Hegira**",
+   "gloss_fr": "porte le nom : Hégire (forme latine/française)",
+   "problem": "Le terme établi en serbe est « Hidžra » ; « Hegira » apparaît six fois (description, s2.title, s2.b0, s2.b1, frise).",
+   "fix": "nosi ime: **Hidžra**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "U **622**, trgovac iz Meke",
+   "gloss_fr": "Dans (le lieu) 622, un marchand de La Mecque",
+   "problem": "« En 622 » calqué (« U 622 ») sans « godine » ni point ordinal ; systématique dans les quatre cours (U 630, u 624, U 1857, U 1863, U 1874, U 1914).",
+   "fix": "**622.** godine trgovac iz Meke",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/description",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Eho može samo da se ponovi.",
+   "gloss_fr": "Écho ne peut que se répéter elle-même.",
+   "problem": "« Répéter » (les mots des autres) est devenu réfléchi ; la description du cours fausse le mythe.",
+   "fix": "Eho može samo da ponavlja.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s2.b0.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "i osnovao [[Umma]], zajednicu vernika",
+   "gloss_fr": "et fonda [[Oumma]] (nominatif), la communauté des croyants",
+   "problem": "Les termes de glossaire [[…]] sont insérés au nominatif sans déclinaison dans tous les cours (na [[kalif]], idealom [[Jihad]], u svom [[Metamorfoze]], bivše zemlje [[Varšavski pakt]], ovog [[avangarda]], umornih od [[Zvanični pariski salon]]) : agrammatical à chaque occurrence.",
+   "fix": "i osnovao [[Umu]], zajednicu vernika (ou, si le glossaire exige le nominatif : « i osnovao zajednicu vernika, [[Umma]] »)",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s3.b0.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Grupa okuplja **Monet**, **Renoir**, **Pissarro**, **Degas** i **Berthe Morisot**",
+   "gloss_fr": "Le groupe réunit Monet, Renoir, Pissarro, Degas et Berthe Morisot (graphie française, non déclinés)",
+   "problem": "Le serbe transcrit les noms (le cours écrit « Kloda Monea » en s0.b0 puis « Monet » ensuite) ; Leroy apparaît sous trois graphies (Leroa/Leroi/Leroj), de même Aupick, Jeanne Duval, Freud, Echo/Eho, Iathrib/Jatrib, Kaaba/Kaba.",
+   "fix": "Grupa okuplja **Monea**, **Renoara**, **Pisaroa**, **Degaa** i **Bertu Morizo**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s0.b1.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Knjiga je izazvala skandal. Osuđen je za",
+   "gloss_fr": "Le livre a provoqué un scandale. Il (masculin) est condamné pour",
+   "problem": "Accord calqué sur le français « il » : « knjiga » est féminin ; même erreur avec « Cveće zla » (neutre) en s1.b4 (« je takođe izašao ») et s4.b3 (« je prvo skandalizovao… postao »).",
+   "fix": "Knjiga je izazvala skandal. Osuđena je za (et « Cveće zla je takođe izašlo pred sud », « je prvo skandalizovalo, a zatim postalo »)",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s0.b1.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Nestanak njenog protivnika 1991. godine… njenog raspada… njenu korisnost",
+   "gloss_fr": "La disparition de son (féminin) adversaire… sa dissolution… son utilité",
+   "problem": "NATO est masculin en serbe (« Osnovan », « NATO je porastao », « Njegov prvi generalni sekretar ») ; le féminin vient de « l'OTAN, elle ».",
+   "fix": "Nestanak njegovog protivnika 1991. godine… njegovog raspada… njegovu korisnost",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s4.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "**[[Sajber prostor]]** i prostor kao nova zvanična područja",
+   "gloss_fr": "le cyberespace et l'espace (au sens générique) comme nouveaux domaines",
+   "problem": "« L'espace » (extra-atmosphérique) rendu par « prostor » (espace générique) : la phrase est vide de sens.",
+   "fix": "**[[Sajber prostor]]** i svemir kao nova zvanična područja delovanja",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s4.b0.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Monet će gurnuti ovu logiku u *Vodene ljiljane*",
+   "gloss_fr": "Monet poussera cette logique dans les « Lys d'eau »",
+   "problem": "Les « Nymphéas » ont un titre serbe établi, « Lokvanji » ; « gurnuti » est un calque de « pousser ».",
+   "fix": "Mone će tu logiku doterati do krajnosti u *Lokvanjima*",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s3.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Muhamed maršira na Meku sa **10.000 muškaraca**",
+   "gloss_fr": "Muhammad marche sur La Mecque avec 10 000 individus de sexe masculin",
+   "problem": "« Hommes » (soldats) traduit par « muškaraca » (mâles) ; « U 630, situacija je obrnuta » et « gura plemena » (pousse) sont des calques dans le même bloc.",
+   "fix": "Muhamed kreće na Meku sa **10.000 ljudi**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s4.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "olakšava instalaciju nove moći u umornim regionima Vizantije",
+   "gloss_fr": "facilite l'installation (technique) de la nouvelle puissance dans les régions fatiguées appartenant à Byzance",
+   "problem": "« Régions fatiguées de Byzance » (lasses de Byzance) devient « régions fatiguées de l'empire byzantin » ; « instalacija » et « moć » sont des calques pour « installation du pouvoir ».",
+   "fix": "olakšava učvršćivanje nove vlasti u oblastima umornim od Vizantije",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s1.b1.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "ovlastio **Salon des Refuses**. Javnost otkriva *Ručak na travi* **Eduard Manet**… Skandal je odmah.",
+   "gloss_fr": "a habilité le « Salon des Refuses » (sans accent). Le public découvre « Déjeuner sur l'herbe » Édouard Manet (non décliné)… Le scandale est tout de suite.",
+   "problem": "Titres établis en serbe ignorés (« Salon odbijenih », « Doručak na travi »), nom non décliné, « ovlastio » (habiliter) pour « autoriser », et « Skandal je odmah » agrammatical.",
+   "fix": "odobrio **Salon odbijenih**. Javnost otkriva *Doručak na travi* **Eduara Manea**… Skandal izbija odmah.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s2.b3.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "postavljaju dodire čiste boje jedan pored drugog… oko posmatrača meša ove dodire",
+   "gloss_fr": "ils posent des « touchers » (contacts) de couleur pure… l'œil mélange ces contacts",
+   "problem": "« Touche » (coup de pinceau) rendu par « dodir » (contact physique), aussi en s4.b0 (« dodir u tačke ») et s4.b3 (« slobodan dodir »).",
+   "fix": "postavljaju poteze čiste boje jedan pored drugog… oko posmatrača meša te poteze",
+   "surface": "combined"
+  }
+ ]
+}

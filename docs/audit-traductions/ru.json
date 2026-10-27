@@ -1,0 +1,687 @@
+{
+ "langue": "ru",
+ "synthese": {
+  "verdict": "La plainte est pleinement justifiée et vise les cours. L'interface russe (4/5) a été relue : tutoiement cohérent, boutons courts, pluriels prévus ; il reste des calques (« в комнате », « общая культура » pour culture générale, « уроков » pour cours), un masculin par défaut qui jure avec les témoignages signés de prénoms féminins, et une terminologie instable (тест / квиз, курс / урок, путь / маршрут, блокер / блокировщик). Les cours (1,5 à 2/5) sont de la traduction automatique brute : « on » rendu par « мы » (74 segments), « Spleen » rendu « селезёнка » (la rate) dans tout le cours Baudelaire, « flâneur » rendu « коляска » (poussette), « six poèmes condamnés » devenus « six versificateurs condamnés », « l'Antiquité approche » pour « s'achève », « razzias » translittéré tel quel, « В 622 » sans « году » (207 phrases), termes de glossaire au nominatif, genres perdus (Écho, НАТО), temps verbaux qui sautent du présent au futur. Un lecteur russe reconnaît la machine dès les premières lignes.",
+  "scores": {
+   "ui": 4,
+   "cours": 1.5,
+   "global": 2.5
+  },
+  "top_issues": [
+   {
+    "title": "« on » rendu par « nous »",
+    "where": "course_1_la_naissance_de_l_islam_622/s0.b0.text (74 segments dans le corpus)",
+    "current": "Мы хотим его убить.",
+    "gloss_fr": "Nous voulons le tuer.",
+    "fix": "Его хотят убить.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« Spleen » = « la rate » dans tout le cours",
+    "where": "course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+    "current": "**«Селезенка и идеал»** … **селезенка**, слово, заимствованное…",
+    "gloss_fr": "« Rate et Idéal » … la rate (organe), mot emprunté…",
+    "fix": "**«Сплин и идеал»** … **сплин**, слово, заимствованное…",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« flâneur » = « poussette »",
+    "where": "course_100_les_fleurs_du_mal_baudelaire/s2.b2.text",
+    "current": "Бодлер бродит как **коляска**",
+    "gloss_fr": "Baudelaire erre comme une poussette",
+    "fix": "Бодлер бродит по городу как **фланёр**",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« six poèmes » = « six versificateurs »",
+    "where": "course_100_les_fleurs_du_mal_baudelaire/s2.b2.text",
+    "current": "Шесть стихотворцев были осуждены в 1857 году",
+    "gloss_fr": "Six poètes furent condamnés en 1857",
+    "fix": "Шесть стихотворений были запрещены в 1857 году",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« L'Antiquité s'achève » = « approche »",
+    "where": "course_1_la_naissance_de_l_islam_622/s4.b2.text",
+    "current": "Постепенно приближается античность.",
+    "gloss_fr": "Peu à peu, l'Antiquité approche.",
+    "fix": "Античность постепенно уходит в прошлое.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« En 622 » sans « году »",
+    "where": "cours : 207 phrases sur 244",
+    "current": "В **622** …",
+    "gloss_fr": "la date se lit comme un nombre nu",
+    "fix": "В **622 году** …",
+    "severity": "majeur"
+   },
+   {
+    "title": "« culture générale » = « culture commune »",
+    "where": "offer.feature1",
+    "current": "240 курсов по общей культуре",
+    "gloss_fr": "240 cours de culture commune / collective",
+    "fix": "240 курсов для эрудиции",
+    "severity": "majeur"
+   },
+   {
+    "title": "Témoignage féminin au masculin",
+    "where": "onboardingV2.review.quote",
+    "current": "«Раньше я сидел в телефоне по 7 часов в день…»",
+    "gloss_fr": "Léa parle au masculin",
+    "fix": "«Раньше я сидела в телефоне по 7 часов в день…»",
+    "severity": "majeur"
+   }
+  ],
+  "systematic": [
+   "« on » impersonnel rendu par « мы / нам » : 74 segments sur 168.",
+   "Mots polysémiques pris dans le mauvais sens : Pan → Хлопнуть, spleen → селезёнка, flâneur → коляска, motif → выкройка, Impression → Впечатление.",
+   "« En <année> » rendu « В <année> » sans « году » : 207 phrases sur 244.",
+   "Termes [[glossaire]] au nominatif dans une phrase qui exige un autre cas (« основал [[Умма]] »).",
+   "Titres d'œuvres et noms propres sans leur forme russe établie ou laissés en latin (Monet, Manet, Le Déjeuner sur l'herbe).",
+   "Genres perdus (Écho, НАТО он/она/оно) ; temps verbaux incohérents (présent de narration rendu au passé ou au futur).",
+   "UI : terminologie тест / квиз, курс / урок, путь / маршрут, блокер / блокировщик ; masculin par défaut."
+  ],
+  "action": "relecture_complete",
+  "effort": "UI : 0,5 jour (terminologie, féminin, « общая культура ») ; cours, quiz et glossaire : relecture native complète, 3 semaines."
+ },
+ "scores_relecteur_par_surface": {
+  "combined": 2.5
+ },
+ "justifications_relecteur": {
+  "combined": "La plainte « ça ne sonne pas naturel » est pleinement justifiée pour le russe, mais elle recouvre deux réalités très différentes. L'interface (UI : 4/5) a visiblement été relue par un humain : tutoiement cohérent, boutons courts, formes plurielles prévues pour la plupart des compteurs ; il reste des calques (« в комнате », « общая культура », « ведомые маршруты »), un masculin par défaut qui jure avec les témoignages signés de prénoms féminins, et surtout une terminologie instable (quiz = тест/квиз, cours = курс/урок, parcours = путь/маршрут, essai gratuit = бесплатный/пробный период, blocker = блокер/блокировщик/блокировка). Les cours (1,5/5) sont de la traduction automatique brute non relue : « on » rendu par « nous », polysémie prise à contresens (Pan → « Хлопнуть », spleen → « селезёнка », flâneur → « коляска », appeler → « téléphoner », beau-père → « тесть », poèmes → « poètes »), titres d'œuvres inventés (« Распечатать, Восходящее Солнце », « Салон отказников », « Обед на траве », « Переписки », « Ле Сплин де Пари »), genres et temps incohérents, noms laissés en latin, balises de glossaire jamais déclinées. La surface la plus dégradée est donc celle des cours — le cœur du produit — ce qui ruine la promesse « écrit par de vrais chercheurs, pas par une IA » ; l'UI, elle, ne demande qu'une passe d'harmonisation terminologique. Note globale 2,5 : l'application est utilisable, mais chaque leçon contient au moins une erreur embarrassante qu'un natif repère immédiatement."
+ },
+ "constats_non_listes_par_le_relecteur": {
+  "combined": 75
+ },
+ "motifs_recurrents": [
+  {
+   "description": "Cours : le « on » impersonnel français est rendu par « мы/нам » (nous), ce qui fait parler le narrateur à la première personne (« nous voulons le tuer », « nous vivons en tribus », « nous exigeons un dessin précis »).",
+   "frequency": "fréquent",
+   "example": "courses:course_1/s0.b0.text « Мы хотим его убить. » ; course_122/s1.b0.text « Нам нужен точный рисунок »",
+   "regex_fr": "\\bOn (veut|y vit|peut|exige|appelle|prie)\\b",
+   "regex_target": "\\b(?:Мы|мы) (?:хотим|живем|живём|можем|называем)\\b|\\bНам нужен\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Cours : mots polysémiques pris dans le mauvais sens par la MT (Pan → Хлопнуть, spleen → селезёнка, flâneur → коляска, motif → выкройка, Impression → Распечатать, académiques → учёные, touche → ключ, appeler → звонить, beau-père → тесть, poèmes → стихотворцы, refusés → отказавшиеся, se referme → приближается).",
+   "frequency": "systématique",
+   "example": "courses:course_166/s1.b3.text « бог **Хлопнуть** »",
+   "regex_target": "\\b(?:Хлопнуть|[Сс]елезенк\\w*|коляск\\w+|выкройк\\w+|Распечатать|звонит|тестем|стихотворцев|отказников|ученых)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Cours : titres d'œuvres et noms propres sans leur forme russe établie, ou laissés en alphabet latin (Monet, Manet, Le Déjeuner sur l'herbe, Салон отказников, Обед на траве, Водяные лилии, Переписки, Ле Сплин де Пари, Лерой/Леруа, Тиресиас/Тиресий, Мухаммад/Мухаммед).",
+   "frequency": "fréquent",
+   "example": "courses:course_122/s0.b1.text « *Распечатать, Восходящее Солнце* »",
+   "regex_target": "(?<![\\[\\*A-Za-z])(?:Monet|Manet|Nadar|Le Déjeuner sur l'herbe)(?![A-Za-z])|\\b(?:Лерой|Тиресиас|Водяные лилии|Обед на траве|отказников)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Cours : « En 622 », « En 1857 » rendus par « В **622** », « В **1857** » sans le mot « году » obligatoire en russe ; la date se lit comme un nombre nu.",
+   "frequency": "systématique",
+   "example": "courses:course_1/s0.b0.text « В **622** купец из Мекки »",
+   "regex_fr": "\\bEn \\*{0,2}\\d{3,4}\\*{0,2}\\b",
+   "regex_target": "\\b[Вв] \\*{0,2}\\d{3,4}\\*{0,2}(?!\\s*(?:году|г\\.|-м|—))",
+   "pack": "combined"
+  },
+  {
+   "description": "Cours : les termes de glossaire [[…]] restent au nominatif à l'intérieur d'une phrase qui exige un autre cas (« основал [[Умма]] », « создали [[Дхимма]] », « к [[Халиф]] », « молится [[Немезида]] », « при [[Барон Осман]] », « страны [[Варшавский договор]] », « уставших от [[Официальный Парижский салон]] »).",
+   "frequency": "systématique",
+   "example": "courses:course_207/s2.b0.text « бывшие страны **[[Варшавский договор]]** »",
+   "regex_target": "\\b(?:к|при|от|у|из|основал|создали|молится|страны|фигурой этого)\\s+\\*{0,2}\\[\\[",
+   "pack": "combined"
+  },
+  {
+   "description": "Cours : accords de genre perdus par la MT (Écho au masculin/neutre, НАТО tantôt он/она/оно, « Расширение… Она », « Цветы Зла… произвел », « Фрейд опубликована »).",
+   "frequency": "fréquent",
+   "example": "courses:course_166/s2.b2.text « Его тело увядает, его кости превращаются в камень » (pour Écho)",
+   "regex_target": "\\bЭхо, обреченное\\b|\\bВерное, несмотря\\b|\\bОно позиционировало\\b|\\bОна также организована\\b|\\bФрейд\\*\\* опубликована\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Cours : temps verbaux incohérents — le présent de narration français est rendu tantôt au passé, tantôt au futur (« Скандал разразится », « Финляндия присоединится в 2023 », « разрушило великие империи » pour un futur).",
+   "frequency": "fréquent",
+   "example": "courses:course_207/s3.b0.text « Финляндия присоединится к альянсу в 2023 году »",
+   "regex_target": "\\b(?:разразится|присоединится|перенесет)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Cours : absence systématique de la lettre « ё » (еще, ее, свое, черный, разъяренный) alors que l'UI l'emploie partout (ещё, твоё, учёных) ; l'incohérence trahit deux sources différentes.",
+   "frequency": "systématique",
+   "example": "courses:course_1/s0.b1.text « Никто этого еще не видит … Вот как все началось. »",
+   "regex_target": "\\b(?:еще|ее|нее|свое|своей|черный|желтой|идет|идут|зеленый|разъяренный|обреченное)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "UI : termes produit traduits de plusieurs façons concurrentes — quiz (тест/квиз), cours (курс/урок), parcours (путь/маршрут), essai gratuit (бесплатный период/пробный период), blocker (блокер/блокировщик/блокировка), cours illimités (quatre variantes), confidentialité (Приватность/Конфиденциальность).",
+   "frequency": "systématique",
+   "example": "ui:tab.path « Путь » vs ui:collections.badge.path « МАРШРУТ »",
+   "regex_target": "\\b(?:квиз\\w*|урок\\w*|блокер\\w*|[Пп]уть|бесплатн\\w+ период\\w*|Приватность)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "UI : masculin par défaut dans les verbes au passé et les adjectifs adressés à l'utilisateur ou dans les témoignages (« я сидел » signé Léa, « Ты уже прочитал », « Ты прошёл », « А ТЫ ЗНАЛ? », « Я готов », « ты мог бы », « Продвинулся в подборке! »), alors que le français n'est pas marqué ; une utilisatrice le remarque à chaque écran.",
+   "frequency": "fréquent",
+   "example": "ui:course.funFact « А ТЫ ЗНАЛ? » → « ЗНАЕШЬ ЛИ ТЫ? » ; ui:onboardingV2.trial.cta « Я готов » → « Поехали »",
+   "regex_target": "\\b(?:[Тт]ы|[Яя]|ТЫ)\\s+(?:уже\\s+|только что\\s+|ещё не\\s+|реально\\s+)?\\w+(?:л|Л)(?:ся)?\\b|\\bЯ готов\\b|\\bмог бы\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "UI : typographie non russe — point final placé à l'intérieur des guillemets « …четверть.» (cinq témoignages), tirets d'intervalle espacés « 18 – 24 », pourcentage tantôt collé « 89% » tantôt espacé « -70 % », « в 2,2× больше » au lieu de « в 2,2 раза больше ».",
+   "frequency": "fréquent",
+   "example": "ui:onboardingV2.exams.quote1 « …вырос на 3 пункта за четверть.» → « …за четверть». »",
+   "regex_target": "[.!?]»|\\d – \\d|\\d%(?!\\s)|\\d×\\s",
+   "pack": "combined"
+  },
+  {
+   "description": "UI : calques anglais/français qui ne sont pas des tournures russes (« в комнате », « общая культура », « никогда пачками », « самый доказанный способ », « ведомые маршруты », « 10 минут культуры », « которому ты следуешь каждый день », « готов, когда это важно », « учиться не обязательно сложно »).",
+   "frequency": "fréquent",
+   "example": "ui:paywall.header « самым интересным человеком в комнате »",
+   "regex_target": "\\bв комнате\\b|\\bобщей культуре\\b|\\bникогда пачками\\b|\\bсамый доказанный\\b|\\bВедомые\\b|\\bминут культуры\\b",
+   "pack": "combined"
+  }
+ ],
+ "constats": [
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Мы хотим его убить.",
+   "gloss_fr": "Nous voulons le tuer.",
+   "problem": "Le « on » impersonnel est rendu par « nous » : c'est le narrateur (et le lecteur) qui veut tuer Muhammad, dès le premier paragraphe du cours.",
+   "fix": "Его хотят убить.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s2.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Мухаммед совершает [[Раззиас]] … Несмотря на численное превосходство, его верные победили в **Бадр** … выдержали **осаду Медины**Z в **627**.",
+   "gloss_fr": "Muhammad accomplit des « Razzias » (translittéré tel quel) … Malgré leur supériorité numérique, ses fidèles ont vaincu à Badr … ont tenu le siège de MédineZ",
+   "problem": "Sens inversé (« en infériorité numérique » devient « supériorité numérique »), terme de glossaire non traduit, et un « Z » parasite collé au gras.",
+   "fix": "Мухаммед устраивает [[раззии]] — быстрые набеги, чтобы перехватывать вражеские караваны. Хотя его сторонников меньше, они побеждают при **Бадре** в **624** году. Эту победу воспринимают как чудо. Несмотря на неудачу при Ухуде, они выдерживают **осаду Медины** в **627** году. Его авторитет крепнет.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s4.b2.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Постепенно приближается античность.",
+   "gloss_fr": "Peu à peu, l'Antiquité approche.",
+   "problem": "« L'Antiquité se referme » (prend fin) est traduit par son contraire : l'Antiquité « s'approche ».",
+   "fix": "Античность постепенно уходит в прошлое.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "**«Селезенка и идеал»** … **селезенка**, слово, заимствованное из английского языка … **идеальный** — это жажда возвышения",
+   "gloss_fr": "« Rate et Idéal » … la rate (l'organe), mot emprunté à l'anglais … « idéal » (adjectif), c'est la soif d'élévation",
+   "problem": "« Spleen » est traduit par l'organe (la rate) au lieu du terme établi « сплин », et « l'idéal » devient un adjectif ; la section la plus célèbre du recueil est méconnaissable.",
+   "fix": "**«Сплин и идеал»**, первый большой раздел, противопоставляет два состояния. **Сплин**, слово, заимствованное из английского, — это глубокая тоска, беспричинная меланхолия. **Идеал** же — жажда возвышенного и чистой красоты.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b2.caption",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "декорации бодлеровской селезенки",
+   "gloss_fr": "décor de la rate baudelairienne",
+   "problem": "Même contresens anatomique sur « spleen » dans une légende d'image.",
+   "fix": "Ночной Париж 1850-х: декорации бодлеровского сплина.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Затем Бодлер бродит как **коляска**, то есть пешеход, который наблюдает за городом",
+   "gloss_fr": "Baudelaire erre alors comme une poussette (calèche), c'est-à-dire un piéton qui observe la ville",
+   "problem": "« Flâneur » est rendu par « коляска » (poussette/calèche), mot absurde alors que le russe a « фланёр ».",
+   "fix": "Бодлер бродит по городу как **фланёр** — праздный прохожий, который наблюдает за городом без определённой цели.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s1.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "ссорится со своим тестем, генералом **Опик**",
+   "gloss_fr": "se dispute avec son beau-père (le père de son épouse), le général Aupick",
+   "problem": "« Beau-père » pris au sens « père de l'épouse » (тесть) au lieu de « отчим » ; Baudelaire n'a jamais été marié, et le nom n'est pas décliné.",
+   "fix": "ссорится с отчимом, генералом **Опиком**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s1.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Шесть стихотворцев были осуждены в 1857 году",
+   "gloss_fr": "Six poètes furent condamnés en 1857",
+   "problem": "« Poèmes » est traduit par « poètes » : ce sont six poèmes, pas six auteurs, qui furent condamnés.",
+   "fix": "Шесть стихотворений были запрещены в 1857 году и официально реабилитированы лишь в 1949-м — через 92 года после приговора.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s3.b0.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "Его стихотворение **«Переписки»** (aussi s3.title « Переписка и поэтическая алхимия », s3.b1.attribution « Шарль Бодлер, «Переписки» »)",
+   "gloss_fr": "Son poème « Correspondances » au sens d'échanges de lettres",
+   "problem": "Le poème « Correspondances » a un titre russe établi, « Соответствия » ; « Переписки » signifie « échanges épistolaires ».",
+   "fix": "Его стихотворение **«Соответствия»** ; s3.title : «Соответствия» и поэтическая алхимия ; attribution : Шарль Бодлер, «Соответствия»",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s4.b1.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "**[[Ле Сплин де Пари]]**",
+   "gloss_fr": "« Le Spleen de Paris » translittéré phonétiquement en cyrillique",
+   "problem": "Le recueil s'appelle en russe « Парижский сплин » ; la translittération est incompréhensible pour un lecteur russe.",
+   "fix": "**[[Парижский сплин]]**, посмертном сборнике маленьких стихотворений в прозе о Париже",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s0.b1.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "Высмеивая название *Распечатать, Восходящее Солнце*, Лерой",
+   "gloss_fr": "En se moquant du titre « Imprimer (commande informatique), Soleil Levant », Leroy",
+   "problem": "Le tableau fondateur du mouvement devient « Imprimer » ; le titre établi est « Впечатление. Восходящее солнце ».",
+   "fix": "Высмеивая название *Впечатление. Восходящее солнце*, Леруа невольно даёт имя первому большому авангардному движению современного искусства.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s1.b1.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "проведение **Салона отказников** … *Обед на траве* работы **Эдуара Мане** … Скандал разразится немедленно.",
+   "gloss_fr": "la tenue du « Salon des refuzniks » … « Le Dîner sur l'herbe » d'Édouard Manet … Le scandale éclatera (futur) immédiatement.",
+   "problem": "Deux titres établis ignorés (« Салон отверженных », « Завтрак на траве » ; « отказник » signifie refuznik/objecteur) et un futur injustifié.",
+   "fix": "Тогда император **Наполеон III** разрешает открыть **Салон отверженных**. Публика видит там *Завтрак на траве* **Эдуара Мане**: обнажённая женщина завтракает с двумя мужчинами в современных костюмах. Скандал разражается мгновенно. (s4.b1.e0.title → «Салон отверженных»)",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s4.b1.e0.detail",
+   "severity": "bloquant",
+   "category": "non_traduit",
+   "current": "Manet скандалит с выпуском Le Déjeuner sur l'herbe.",
+   "gloss_fr": "Manet fait du scandale avec la sortie (commerciale) de Le Déjeuner sur l'herbe (titre laissé en français)",
+   "problem": "Titre et nom laissés en français dans la frise chronologique, avec un verbe familier (« скандалит ») et un « выпуск » (sortie de produit) absurde.",
+   "fix": "Мане шокирует публику «Завтраком на траве».",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s4.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Monet перенесет эту логику на *Водяные лилии*, где контуры растворяются и объявляют абстракцию. [[Неоимпрессионизм]] Сёра затем систематизирует ключ по пунктам.",
+   "gloss_fr": "Monet transférera cette logique aux « Lys d'eau », où les contours se dissolvent et déclarent l'abstraction. Le néo-impressionnisme de Seurat systématise ensuite la clé point par point.",
+   "problem": "« La touche en points » devient « la clé point par point » (phrase vide de sens), « Nymphéas » perd son titre établi « Кувшинки » et Monet reste en latin.",
+   "fix": "Моне доведёт эту логику до *Кувшинок*, где контуры растворяются и предвещают абстракцию. Затем [[неоимпрессионизм]] Сёра превратит мазок в систему точек.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Раньше художник молотил пигменты в мастерской. С помощью [[тюбики с красками и пленэр]] он наконец-то может сидеть снаружи перед выкройкой.",
+   "gloss_fr": "Avant, le peintre battait (au fléau) ses pigments à l'atelier. À l'aide de tubes de peinture et plein air il peut enfin s'asseoir dehors devant le patron de couture.",
+   "problem": "« Motif » pris au sens « patron de couture » (выкройка) et « broyer » rendu par « battre au fléau » ; la phrase est absurde pour un lecteur russe.",
+   "fix": "Раньше художник растирал пигменты в мастерской. Благодаря [[тюбикам с красками и пленэру]] он наконец может работать на открытом воздухе, прямо перед натурой.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s1.b4.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Manet отказывается от мягкого моделирования ученых. Он пишет на откровенных контрастах.",
+   "gloss_fr": "Manet refuse le doux modelage des scientifiques. Il peint sur des contrastes sincères.",
+   "problem": "« Les académiques » (peintres académistes) est traduit par « les scientifiques », et « francs » par « sincères ».",
+   "fix": "Мане отказывается от мягкой светотени академистов. Он пишет резкими контрастами.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/description",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "художники, отказавшиеся от Салона, организовали собственную выставку. Критик высмеивает Monet",
+   "gloss_fr": "des peintres ayant renoncé au Salon organisent leur propre exposition. Un critique se moque de Monet (en alphabet latin)",
+   "problem": "« Refusés par le Salon » devient « ayant renoncé au Salon » (inversion du sens) dans la description que tout utilisateur lit avant d'ouvrir le cours ; Monet reste en latin.",
+   "fix": "В 1874 году художники, отвергнутые Салоном, устраивают собственную выставку. Критик высмеивает Моне и невольно даёт название **импрессионизму**.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "бог **Хлопнуть**, разъяренный тем, что его отвергли",
+   "gloss_fr": "le dieu « Claquer » (verbe), furieux d'avoir été repoussé",
+   "problem": "Le dieu Pan est traduit comme le verbe anglais « to pan/bang » ; le nom établi est « Пан ».",
+   "fix": "бог **Пан**, разъярённый отказом, велит разорвать Эхо на куски.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s2.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Нарцисс звонит: «Есть кто-нибудь?» Она отвечает: «Кто-то!» » Когда",
+   "gloss_fr": "Narcisse téléphone : « Il y a quelqu'un ? » Elle répond : « Quelqu'un ! » » (guillemet fermant en trop)",
+   "problem": "« Appeler » est pris au sens « téléphoner » (звонит) dans un mythe antique, et un guillemet français parasite reste dans le texte.",
+   "fix": "Нарцисс кричит: «Есть здесь кто-нибудь?» Она отвечает: «Кто-нибудь!» Когда она подходит, чтобы обнять его, он с презрением её отталкивает.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.b0.text",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "Пока он присоединяется к другим нимфам, она сохраняет **Гера**, ревнивую жену, с бесконечными разговорами.",
+   "gloss_fr": "Pendant qu'il rejoint d'autres nymphes, elle conserve Héra (non décliné), l'épouse jalouse, avec des conversations interminables.",
+   "problem": "« Retenir » traduit par « conserver », nom propre non décliné et instrumental manquant : la phrase est agrammaticale et incompréhensible.",
+   "fix": "Пока он развлекается с другими нимфами, она отвлекает **Геру**, ревнивую супругу, бесконечными разговорами.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Ее красота привлекает всех. Его гордость отталкивает всех. Прорицатель **Тиресиас** предупредил свою мать",
+   "gloss_fr": "Sa beauté (à elle) attire tout le monde. Son orgueil (à lui) repousse tout le monde. Le devin Tirésias avait prévenu sa propre mère",
+   "problem": "Le possessif change de genre d'une phrase à l'autre (la beauté de Narcisse devient « sa beauté à elle ») et Tirésias prévient « sa propre mère » au lieu de celle de Narcisse ; le nom établi est « Тиресий ».",
+   "fix": "Его красота влечёт всех, а его гордыня всех отталкивает. Прорицатель **Тиресий** предупредил его мать: «Он доживёт до старости, если не познает себя».",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s4.b1.text",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "В **1914** **Фрейд** опубликована статья «Ввести нарциссизм».",
+   "gloss_fr": "En 1914 Freud (est) publiée un article « Introduire le narcissisme ».",
+   "problem": "Phrase agrammaticale (participe au féminin sans sujet) et titre de l'essai inventé alors que le titre russe établi est « К введению в нарциссизм ».",
+   "fix": "В **1914** году **Фрейд** публикует работу «К введению в нарциссизм».",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s3.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "в двух перевернутых формах на двух официальных языках: НАТО на английском и НАТО на французском языке.",
+   "gloss_fr": "sous deux formes inversées dans ses deux langues officielles : OTAN en anglais et OTAN en français.",
+   "problem": "Les deux sigles sont rendus par le même « НАТО », ce qui vide l'anecdote de tout sens.",
+   "fix": "Аббревиатура организации на двух официальных языках пишется зеркально: NATO по-английски и OTAN по-французски.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s3.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Финляндия присоединится к альянсу в 2023 году, Швеция – в 2024 году.",
+   "gloss_fr": "La Finlande rejoindra (futur) l'alliance en 2023, la Suède – en 2024.",
+   "problem": "Le présent de narration est rendu au futur pour des faits déjà passés : le lecteur comprend que l'adhésion n'a pas encore eu lieu ; tiret court au lieu du tiret cadratin.",
+   "fix": "Финляндия вступила в альянс в 2023 году, Швеция — в 2024-м.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:offer.feature1",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "240 курсов по общей культуре",
+   "gloss_fr": "240 cours de « culture commune/collective »",
+   "problem": "« Culture générale » calqué en « общая культура », qui en russe désigne le niveau d'éducation ou les bonnes manières, pas le savoir encyclopédique.",
+   "fix": "240 курсов для эрудиции",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.header",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Стань самым⏎интересным человеком⏎в комнате.",
+   "gloss_fr": "Deviens la personne la plus intéressante dans la pièce (le local).",
+   "problem": "L'idiome anglais « in the room » n'existe pas en russe : « в комнате » évoque littéralement une chambre, sur le titre principal du paywall.",
+   "fix": "Стань самым⏎интересным человеком⏎в любой компании.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.weaponHeadline",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Sophia — твоё секретное⏎оружие для:  (suivi de « 🔥 Больше уверенности », « 💬 Разговоры интереснее », « 📱 Экранное время с пользой »)",
+   "gloss_fr": "Sophia, ton arme secrète pour : (+ des groupes au nominatif) « Plus de confiance », « Conversations plus intéressantes »",
+   "problem": "La préposition « для » exige le génitif, mais les bénéfices qui suivent sont au nominatif ; l'ensemble ne forme pas une phrase russe.",
+   "fix": "Sophia — твоё секретное⏎оружие:  (sans « для » ; les bénéfices au nominatif s'enchaînent alors naturellement, le surlignage « секретное » reste valable)",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.review.quote",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "«Раньше я сидел в телефоне по 7 часов в день…» (auteur : Леа, 24)",
+   "gloss_fr": "« Avant, je passais (masculin) 7 h par jour sur mon téléphone » signé Léa",
+   "problem": "Le verbe au passé est au masculin alors que le témoignage est signé d'un prénom féminin ; incohérence visible sur le paywall.",
+   "fix": "«Раньше я сидела в телефоне по 7 часов в день. Теперь 40 минут с Sophia — и каждую неделю чувствую себя умнее».",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.intro.quizzes.title",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "**весёлыми квизами** (aussi features.row3 « вопросов в квизах », paywall.quiz.chart.with/without « С квизами / Без квизов », paywall.unlock.quiz « Персональные квизы », paywall.quiz.subtitle « с интерактивными квизами »)",
+   "gloss_fr": "« quiz » rendu par l'anglicisme « квиз » ici, mais par « тест » dans tout le reste de l'app (course.quiz, path.quiz.*, profile.quiz.*)",
+   "problem": "Le terme produit « quiz » a deux traductions concurrentes (« тест » dans l'app, « квиз » sur l'onboarding et le paywall) ; l'utilisateur ne sait pas s'il s'agit de la même fonctionnalité.",
+   "fix": "Sophia проверяет тебя **весёлыми тестами**, чтобы ты действительно запоминал. (et « тест » partout : «вопросов в тестах», «С тестами / Без тестов», «Персональные тесты», «с интерактивными тестами»)",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.features.row2",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "%@+ уроков от настоящих учёных (aussi features.row5 « каждый урок », age.subtitle « подходящие уроки », swipe.title « первые уроки », paywall.unlock.unlimited « Безлимитные уроки », antiScroll.title « урок Sophia », share.message « 10-минутные уроки »)",
+   "gloss_fr": "%@+ leçons par de vrais scientifiques",
+   "problem": "« Cours » est traduit « курс » dans toute l'app mais « урок » dans une dizaine de chaînes, alors que « урок » sert déjà à « leçon » (objectif quotidien) ; les deux notions se confondent.",
+   "fix": "%@+ курсов от настоящих учёных (et « курс » pour « cours » partout : «Слушай каждый курс в аудио», «подходящие курсы», «первые курсы», «Безлимитные курсы», «прочитай курс Sophia», «10-минутные курсы»)",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.cta.activateTrial",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Активировать бесплатный период (vs « пробный период » dans onboarding.trial.trialEnds, onboardingV2.reminder.title, paywall.trial.reminderDetail, paywall.discount.noTrial ; « бесплатный пробный период » dans onboardingV2.trial.title)",
+   "gloss_fr": "Activer la période gratuite",
+   "problem": "« Essai gratuit » oscille entre « бесплатный период », « пробный период » et « бесплатный пробный период » sur les écrans de paywall ; « бесплатный период » seul est vague.",
+   "fix": "Начать пробный период (unifier : «Пробный период» pour les badges, «Начать пробный период» pour les CTA, «до конца пробного периода» pour les rappels)",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:tab.path",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Путь (aussi path.title, explain.path.title « Твой путь », path.end.doneTitle « Путь пройден ») vs « МАРШРУТ » (collections.badge.path), « Твой маршрут » (collections.path), « Маршрут пройден » (collections.pathComplete), « персональный маршрут » (onboardingV2.intro.route.title)",
+   "gloss_fr": "« Parcours » traduit « Chemin » dans l'onglet mais « Itinéraire » dans les collections et l'onboarding",
+   "problem": "La même fonctionnalité « Parcours » porte deux noms selon l'écran ; l'onboarding promet un « маршрут » que l'utilisateur ne retrouve pas dans la barre d'onglets.",
+   "fix": "Маршрут (tab.path, path.title) ; «Твой маршрут» (explain.path.title) ; «Маршрут пройден» (path.end.doneTitle) ; «Весь маршрут пройден!» (path.quiz.passed.last) ; «Конец маршрута… пока что» (path.end.title)",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:collections.subtitle",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Ведомые маршруты, которые связывают идеи.",
+   "gloss_fr": "Des itinéraires « menés/pilotés » (participe passif) qui relient des idées.",
+   "problem": "« Guidés » est rendu par « ведомые », participe passif inusité ici (« ведомый » = qui se laisse mener, ou ailier en aviation) ; un natif tique immédiatement.",
+   "fix": "Пошаговые маршруты, которые связывают идеи между собой.",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboarding.dailyGoal.plural",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "урока (singulier « урок »), inséré dans « %d %@ » et « %@ в день! »",
+   "gloss_fr": "forme « 2–4 leçons » utilisée pour tout pluriel : « 5 урока в день ! »",
+   "problem": "Le russe a trois formes (урок / урока / уроков) ; avec seulement singulier/pluriel, « 5 урока », « 10 урока » s'affichent, faute grossière sur un écran d'onboarding.",
+   "fix": "Prévoir trois formes : one = «урок», few = «урока», many/other = «уроков» (ou reformuler sans accord : «Уроков в день: %d»)",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.features.title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Учиться не обязательно сложно (et titleNamed « {name}, учиться не обязательно сложно »)",
+   "gloss_fr": "Apprendre pas obligatoirement difficile (construction sans prédicat, bancale)",
+   "problem": "Construction agrammaticale calquée sur « doesn't have to be complicated » ; en russe il manque un prédicat.",
+   "fix": "Учиться может быть просто / {name}, учиться может быть просто",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.unlock.antiScroll",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Режим anti-scroll (aussi antiScroll.cta « Включить anti-scroll », antiScroll.title « Включи anti-scroll: чтобы разблокировать приложения, ты читаешь урок Sophia »)",
+   "gloss_fr": "Mode anti-scroll (laissé en anglais)",
+   "problem": "Le nom de la fonctionnalité reste en alphabet latin dans l'interface russe, alors que le « blocker » voisin est traduit ; en plus « урок » au lieu de « курс ».",
+   "fix": "Режим «Антискролл» ; antiScroll.cta : «Включить антискролл» ; antiScroll.title : «Включи антискролл: чтобы разблокировать приложения, прочитай курс Sophia»",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.blocker.subtitle",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "{n} {dayWord} бесплатно, чтобы попробовать блокер. (aussi paywall.blocker.title « с блокером », blocker.subtitle.noTrial « Открой блокер ») vs « Блокировщик TikTok » (pw.feature.tiktokBlocker, tiktokBlocker.*) et « Блокировка приложений » (features.row6)",
+   "gloss_fr": "… pour essayer le « bloker » (anglicisme argotique)",
+   "problem": "Trois noms pour la même fonctionnalité (блокер / блокировщик / блокировка) ; « блокер » est un anglicisme de forum, pas un terme d'interface.",
+   "fix": "{n} {dayWord} бесплатно, чтобы попробовать блокировщик. ; title : «Наконец-то возьми своё время под контроль — с блокировщиком.» ; noTrial : «Открой блокировщик с Sophia PRO.»",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:paywall.unlock.unlimited",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Безлимитные уроки (vs « Безлимитные курсы » pw.feature.unlimited, « Курсы без лимита » paywall.feature.unlimitedCourses, « Курсы без ограничений » onboarding.trial.unlimitedCourses, « Курсы без лимита каждый день » paywall.benefit.unlimited)",
+   "gloss_fr": "Leçons illimitées",
+   "problem": "« Cours illimités » a quatre traductions différentes sur les seuls écrans de paywall ; l'avantage principal de Premium n'a pas de nom stable.",
+   "fix": "Безлимитные курсы (partout : paywall.unlock.unlimited, paywall.feature.unlimitedCourses, onboarding.trial.unlimitedCourses)",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.yearsGrid.caption",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Это %d полных лет, которые ты теряешь в телефоне за всю жизнь.",
+   "gloss_fr": "Ce sont %d années pleines (forme « 5 et plus ») que tu perds sur ton téléphone…",
+   "problem": "« полных лет » n'est correct que pour 5–20 ; avec 2, 3 ou 4 (valeurs plausibles) on lit « 3 полных лет » au lieu de « 3 полных года », et il n'existe pas de variantes .one/.few.",
+   "fix": "%d — столько полных лет ты теряешь в телефоне за всю жизнь. (ou ajouter les formes one/few/many)",
+   "surface": "combined"
+  },
+  {
+   "location": "ui:onboardingV2.notifications.bullet2",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "В нужный момент и никогда пачками",
+   "gloss_fr": "Au bon moment et jamais par paquets (mot à mot)",
+   "problem": "« Jamais en rafale » calqué mot à mot ; « никогда пачками » n'est pas une tournure russe (il manque le verbe et l'opposition).",
+   "fix": "Вовремя, а не пачками",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/title",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "Цветы зла, Бодлер (et « **Цветы Зла** » dans s0.b0, s1.b4, s4.b3, s4.b4)",
+   "gloss_fr": "Fleurs du mal, Baudelaire — sans guillemets ; « Fleurs du Mal » avec majuscule dans le corps",
+   "problem": "Un titre d'œuvre se met entre guillemets « … » en russe, et la graphie oscille entre « зла » et « Зла » (forme établie : « Цветы зла »).",
+   "fix": "«Цветы зла», Бодлер ; dans le corps : **«Цветы зла»**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "В VII веке Аравия почти никого не интересовала. Мы живем там племенами.",
+   "gloss_fr": "Au VIIe siècle l'Arabie n'intéressait presque personne. Nous y vivons en tribus.",
+   "problem": "« On y vit en tribus » devient « nous y vivons », avec en prime un saut passé/présent ; premier paragraphe de la première section.",
+   "fix": "В VII веке Аравия почти никого не интересует. Люди живут здесь племенами.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s1.b2.caption",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Manet шокирует Салон (aussi « Monet » dans description, s2.b1.caption, s2.b2, s4.b0 ; « Manet » dans s1.b4, s4.b1.e0.detail — alors que s0.b0 et s3.b0 écrivent « Моне », « Мане »)",
+   "gloss_fr": "Manet (en alphabet latin) choque le Salon",
+   "problem": "Les noms des deux peintres principaux alternent entre alphabet latin et cyrillique dans le même cours ; un lecteur russe y voit un texte non relu.",
+   "fix": "Мане шокирует Салон, смешивая обнажённую натуру и современную жизнь. (et « Моне » / « Мане » partout)",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s0.b1.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Лерой невольно окрестил (aussi s3.b2 « Лерой говорит », s4.b1.e1.detail « В Надаре Лерой придумал ») vs « Луи Леруа » (s0.b0)",
+   "gloss_fr": "« Leroy » prononcé à l'anglaise (Leroï) ; « Chez Nadar » rendu « dans Nadar » comme un lieu",
+   "problem": "Le critique Louis Leroy est transcrit « Леруа » puis « Лерой » (prononciation anglaise) dans le même cours ; « Chez Nadar » devient « В Надаре » (comme une ville).",
+   "fix": "Леруа partout ; s4.b1.e1.detail : «В мастерской Надара Леруа придумывает слово «импрессионисты».»",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/description",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Эхо может только повторяться.",
+   "gloss_fr": "Écho ne peut que se répéter (elle-même).",
+   "problem": "Le pronominal « повторяться » signifie « se répéter » et non « répéter (les mots des autres) » ; contresens dès la description du cours.",
+   "fix": "Эхо может только повторять чужие слова. Нарцисс любит только своё отражение. Две судьбы, которым не суждено соединиться, — и слово «нарциссизм», рождённое из этого мифа.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.b2.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Его собственные желания больше не имеют языка. (aussi s1.b1.caption « Эхо, обреченное », s2.b2 « Его тело увядает, его кости », s3.b3 « Верное, несмотря ни на что, Эхо повторяет свое »)",
+   "gloss_fr": "Ses (à lui) propres désirs n'ont plus de langue… Écho, condamné (neutre)… Son (à lui) corps se dessèche… Fidèle (neutre), Écho",
+   "problem": "La nymphe Écho est traitée au masculin ou au neutre dans quatre segments (le nom commun « эхо » étant neutre, la MT perd le personnage) ; le personnage doit rester au féminin.",
+   "fix": "Её собственные желания больше не имеют голоса. ; caption : «Эхо, обречённая быть лишь повторяющим голосом.» ; s2.b2 : «Её тело иссыхает, кости становятся камнем.» ; s3.b3 : «Верная до конца, Эхо повторяет его последнее «прощай».»",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/description",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "**НАТО** должна была исчезнуть… Сегодня он больше и активнее (aussi s1.b0 « НАТО возникло… Ее первый », s2.b0 « он предпочитает », s4.b0 « НАТО должна… Он включил », s4.b2 « Оно позиционировало »)",
+   "gloss_fr": "L'OTAN devait (féminin) disparaître… Aujourd'hui il (masculin) est plus grand",
+   "problem": "Le genre de НАТО change de phrase en phrase (féminin, masculin, neutre) tout au long du cours ; la norme est le féminin (организация) et il faut s'y tenir.",
+   "fix": "Основанная против СССР в 1949 году, **НАТО** должна была исчезнуть вместе с холодной войной. Сегодня она больше и активнее, чем когда-либо. (et « она » partout)",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s1.b0.text",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "подписали в Вашингтоне Североатлантический договор **[[Североатлантический договор]]**",
+   "gloss_fr": "ont signé à Washington le Traité de l'Atlantique Nord [[Traité de l'Atlantique Nord]] (doublon)",
+   "problem": "Le terme est écrit deux fois de suite, une fois en clair et une fois en balise de glossaire ; artefact visible dans le premier paragraphe de la section.",
+   "fix": "подписали в Вашингтоне **[[Североатлантический договор]]**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s3.b1.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Затем власть переходит к [[Халиф]], его преемникам. Абу Бакр, тогдашний Умар, начал быструю экспансию",
+   "gloss_fr": "Le pouvoir passe au [[Calife]] (singulier non décliné), ses successeurs. Abu Bakr, l'Umar de l'époque, a lancé une expansion",
+   "problem": "« Puis Umar » est lu comme l'adjectif « тогдашний » (« de l'époque »), Umar devenant un qualificatif d'Abu Bakr ; le pluriel « califes » est perdu.",
+   "fix": "Затем власть переходит к [[халифам]], его преемникам. Абу Бакр, а затем Умар начинают стремительную экспансию в Сирию, Ирак и Египет.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/hero.hook",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Созданная для противостояния врагу, которого не существовало с 1991 года",
+   "gloss_fr": "Créée pour affronter un ennemi qui n'existait pas depuis 1991",
+   "problem": "« Qui n'existe plus depuis 1991 » devient « qui n'existait pas depuis 1991 » (comme si l'ennemi n'avait jamais existé) ; accroche affichée en tête du cours.",
+   "fix": "Созданная против врага, которого нет уже с 1991 года, НАТО никогда ещё не насчитывала столько членов.",
+   "surface": "combined"
+  }
+ ]
+}

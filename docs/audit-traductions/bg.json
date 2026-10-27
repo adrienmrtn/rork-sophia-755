@@ -1,0 +1,2684 @@
+{
+ "langue": "bg",
+ "synthese": {
+  "verdict": "La plainte est partiellement justifiée. Le bulgare est compréhensible et souvent fluide (onboarding, réglages, bloqueur TikTok, cours scientifiques), mais il trahit la traduction par des faux amis récurrents : « cultivé » rendu par « културен » (poli, bien élevé), « anecdotes » par « анекдоти » (blagues), « Renaissance » par « Възраждане » (le Réveil national bulgare). La terminologie produit n'est pas stabilisée (курс / урок, тест / куиз, маршрут / пътека / път, Premium / Премиум) et l'adresse est au masculin par défaut, jusque dans les témoignages signés Léa ou Inès. Les cours d'histoire (islam, OTAN, 1929, Suez, Lancelot) et de littérature mélangent aoriste et présent dans le même paragraphe, calquent les verbes français (lancer → пусна, transformer → обърна), insèrent les termes de glossaire sans accord et gardent des noms propres en latin ; le « tsar Arthur » et le « siège militaire périlleux » sont des contresens. Les conventions typographiques bulgares ne sont pas respectées (« 7. век » au lieu de « VII век », point comme séparateur de milliers, année sans « г. »). Le « on » → « nous » n'apparaît pas : la passe guidée a bien eu lieu.",
+  "scores": {
+   "ui": 3,
+   "cours": 3,
+   "global": 3
+  },
+  "top_issues": [
+   {
+    "title": "« Renaissance » = « Réveil national bulgare »",
+    "where": "paywall.quiz.demo.chrono.i3",
+    "current": "Възраждане",
+    "gloss_fr": "le Réveil national bulgare (XVIIIe–XIXe siècle)",
+    "fix": "Ренесанс",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« cultivé » = « poli, bien élevé »",
+    "where": "paywall.quiz.subtitle, share.message (motif systématique)",
+    "current": "…и стани истински културен.",
+    "gloss_fr": "…et deviens vraiment bien élevé.",
+    "fix": "…и стани истински начетен.",
+    "severity": "majeur"
+   },
+   {
+    "title": "« anecdotes » = « blagues »",
+    "where": "paywall.review4.quote",
+    "current": "откъде намирам всички тези анекдоти",
+    "gloss_fr": "d'où je trouve toutes ces blagues",
+    "fix": "откъде знам всички тези интересни факти",
+    "severity": "majeur"
+   },
+   {
+    "title": "« Siège périlleux » = siège militaire",
+    "where": "course_195_lancelot_guenievre_et_la_table_ronde/s2.b3.text",
+    "current": "На масата [[Опасна обсада]] чака…",
+    "gloss_fr": "À la table, le Siège (militaire) dangereux attend…",
+    "fix": "На масата [[Опасното място]] чака…",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Le roi Arthur devenu « tsar »",
+    "where": "course_195_lancelot_guenievre_et_la_table_ronde",
+    "current": "цар **Артур** … царица **Гуиневира**",
+    "gloss_fr": "le tsar Arthur, la tsarine Guenièvre",
+    "fix": "крал **Артур** … кралица **Гуиневир**",
+    "severity": "majeur"
+   },
+   {
+    "title": "Siècles en ordinal à point",
+    "where": "cours : motif systématique",
+    "current": "7. век, 19. век",
+    "gloss_fr": "convention non bulgare",
+    "fix": "VII век, XIX век",
+    "severity": "majeur"
+   },
+   {
+    "title": "Chaînes assemblées agrammaticales",
+    "where": "onboarding (durées, pourcentages)",
+    "current": "Това са 23 дни пълни дни / 87% на потребителите",
+    "gloss_fr": "« Ce sont 23 jours pleins jours » / « 87 % des utilisateurs » (mauvaise préposition)",
+    "fix": "Това са 23 цели дни / 87% от потребителите",
+    "severity": "majeur"
+   }
+  ],
+  "systematic": [
+   "Faux ami « culture / cultivé » → « култура / културен » (systématique).",
+   "Terminologie produit instable : курс / урок, тест / куиз, маршрут / пътека / път / пътешествие, Premium / Премиум.",
+   "Masculin par défaut pour l'utilisateur et dans les témoignages féminins.",
+   "Présent historique rendu tantôt à l'aoriste, tantôt au présent dans le même paragraphe (cours d'histoire).",
+   "Typographie : siècles en ordinal (7. век), point comme séparateur de milliers, année sans « г. ».",
+   "Calques verbaux : lancer → пусна, transformer → обърна, compter → брои ; termes de glossaire insérés sans accord."
+  ],
+  "action": "corrections_ciblees",
+  "effort": "UI : 1 jour (table de terminologie, faux amis, féminin) ; cours d'histoire et de littérature : 1 semaine de relecture native ; typographie : script."
+ },
+ "scores_relecteur_par_surface": {
+  "ui": 3,
+  "courses": 3
+ },
+ "justifications_relecteur": {
+  "ui": "La version bulgare est globalement compréhensible et souvent fluide (onboarding, réglages, blocker TikTok), mais elle trahit la traduction par des faux amis récurrents (« културен/култура » pour « cultivé/culture », « анекдоти » pour « anecdotes », « Възраждане » pour « Renaissance »), des calques de métaphores (« залепва », « закотвят », « Серията идва », « Ти гориш ») et plusieurs chaînes assemblées agrammaticales (« Това са 23 дни пълни дни », « 87% на потребителите », « това е … загубени часове »). La terminologie produit n'est pas stabilisée : cours = курс/урок, quiz = тест/куиз, parcours = маршрут/пътека/път, Premium = Premium/Премиум, essai = пробен период/пробна версия/безплатен период. Enfin le masculin par défaut (« Добре дошъл », « Готов съм ») et des témoignages de femmes rédigés au masculin seront remarqués par une utilisatrice.",
+  "courses": "Qualité très inégale d'un cours à l'autre : les cours scientifiques (hoquet, étoiles, voix) et Notre-Dame sont quasi natifs, alors que les cours d'histoire (islam, OTAN, 1929, Suez, Lancelot) et Baudelaire/Dostoïevski sont visiblement traduits : mélange aoriste/présent dans un même paragraphe, calques verbaux du français (lancer → пусна, transformer → обърна, compter → брои), termes de glossaire insérés sans accord, noms propres laissés en latin ou mal établis (Aupick, Le Spleen de Paris, Café Guerbois, цар Артур). Quelques contresens graves (« Siège périlleux » rendu par un siège militaire, « s'épuisent » → « se brisent », « surprend le meurtre » → « surprend le crime »). Les conventions typographiques bulgares (siècles en chiffres romains, « г. » après l'année, séparateur de milliers) ne sont pas respectées de façon systématique."
+ },
+ "constats_non_listes_par_le_relecteur": {
+  "ui": 9,
+  "courses": 18
+ },
+ "motifs_recurrents": [
+  {
+   "description": "Faux ami « culture / cultivé » rendu par « култура / културен » (= poli, bien élevé ; culturel). Le bulgare dit « начетен, образован, знания, обща култура ».",
+   "frequency": "systématique",
+   "example": "paywall.quiz.subtitle : « стани истински културен »",
+   "regex_target": "по-културн|\\bкултурен\\b|в култура\\b|минути култура",
+   "regex_fr": "cultiv[ée]s?\\b|\\bculture\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Terme produit « cours » rendu tantôt « курс », tantôt « урок » (leçon).",
+   "frequency": "fréquent",
+   "example": "paywall.unlock.unlimited : « Неограничени уроци » vs « Неограничени курсове »",
+   "regex_target": "\\bурок(а|и)?\\b|\\bуроци\\b",
+   "regex_fr": "\\bcours\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« quiz » rendu « тест » dans la majorité des chaînes mais « куиз » dans certains écrans paywall/onboarding.",
+   "frequency": "fréquent",
+   "example": "paywall.quiz.chart.with : « С куизове »",
+   "regex_target": "куиз(ове|а)?\\b",
+   "regex_fr": "\\bquiz\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« parcours » rendu par маршрут / пътека / път / пътешествие selon l'écran, y compris pour la même fonctionnalité.",
+   "frequency": "fréquent",
+   "example": "collections.path « Твоят маршрут » vs explain.path.title « Твоята пътека »",
+   "regex_target": "маршрут|пътек|\\bпът(я|ят)? ти|пътешеств",
+   "regex_fr": "\\bparcours\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Marque « Premium » translittérée « Премиум » dans quelques chaînes.",
+   "frequency": "fréquent",
+   "example": "paywall.premiumColumn : « Премиум »",
+   "regex_target": "Премиум",
+   "pack": "ui"
+  },
+  {
+   "description": "Masculin par défaut pour s'adresser à l'utilisateur (Добре дошъл, Готов съм, Бъди честен, Завършил си, Влязъл си).",
+   "frequency": "systématique",
+   "example": "onboardingV2.aboard.title : « Добре дошъл на борда! »",
+   "regex_target": "Добре дошъл|Готов съм|Бъди честен|Завършил си|Влязъл си|си правил|по-(умен|начетен|добър)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Témoignages signés d'un prénom féminin (Léa, Inès, Camille) rédigés au masculin.",
+   "frequency": "fréquent",
+   "example": "onboardingV2.review.quote (Léa) : « се чувствам по-умен »",
+   "regex_target": "по-(умен|културен)\\b|не съм научавал",
+   "pack": "ui"
+  },
+  {
+   "description": "Métaphores « rester / ancrer / coller / nourrir » calquées littéralement (за да остане, закотвят, залепва, нахрани, закрепи).",
+   "frequency": "fréquent",
+   "example": "paywall.benefit.quiz : « Всички тестове, за да остане »",
+   "regex_target": "за да остан(е|ат)\\b|остава с теб|залепва|закотв|нахран|закрепи",
+   "regex_fr": "\\b(reste|rester|ancr\\w+|retenir|nourri\\w+)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Mélange nom verbal (Изтриване, Запазване, Скриване…) et impératif sur les boutons d'un même écran.",
+   "frequency": "fréquent",
+   "example": "account.delete.action « Изтрий акаунта ми » puis account.delete.confirm « Изтриване »",
+   "regex_target": "^(Изтриване|Запазване|Скриване|Управление|Възстановяване|Показване|Добавяне|Премахване|Нулиране|Рестартиране)\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« facturé » rendu par le participe isolé « таксуван » au lieu de « таксува се ».",
+   "frequency": "fréquent",
+   "example": "onboardingV2.pw.thenPrice : « (таксуван годишно) »",
+   "regex_target": "таксуван",
+   "regex_fr": "factur[ée]",
+   "pack": "ui"
+  },
+  {
+   "description": "Terminologie de l'essai gratuit instable : пробен период / пробна версия / безплатен период.",
+   "frequency": "fréquent",
+   "example": "onboarding.premiumTrial.badge : « Безплатна пробна версия »",
+   "regex_target": "пробна версия|безплатни?я?т? период",
+   "regex_fr": "\\bessai\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "« sans engagement » rendu par ангажимент / ангажименти / обвързване.",
+   "frequency": "fréquent",
+   "example": "paywall.quiz.faq.a3.noTrial « Без обвързване » vs .play « Без ангажимент »",
+   "regex_target": "ангажимент",
+   "regex_fr": "engagement",
+   "pack": "ui"
+  },
+  {
+   "description": "« matières / sujets » rendus tantôt « предмети » (matières scolaires), tantôt « теми ».",
+   "frequency": "fréquent",
+   "example": "paywall.feature.3subjects « 3 предмета » vs paywall.freeSubjects « 3 безплатни теми »",
+   "regex_target": "\\bпредмет(а|и)\\b",
+   "regex_fr": "mati[èe]res?|\\bsujets?\\b",
+   "pack": "ui"
+  },
+  {
+   "description": "Pluriel forgé « аудиа » pour « audios » (аудио est invariable).",
+   "frequency": "fréquent",
+   "example": "audio.browse.title : « Всички аудиа »",
+   "regex_target": "аудиа",
+   "regex_fr": "audios?",
+   "pack": "ui"
+  },
+  {
+   "description": "Typographie : unité collée au chiffre (1ч), symbole € avant le nombre, guillemet fermant anglais ”, espace avant ×.",
+   "frequency": "fréquent",
+   "example": "onboarding.phone.1to2h : « 1ч до 2ч » ; exams.quote1 fermée par ”",
+   "regex_target": "\\d+ч\\b|€\\d|”|\\d ×",
+   "pack": "ui"
+  },
+  {
+   "description": "Terme « anti-scroll » laissé en latin, et famille blocker rendue par блокер / блокиране / блокировка.",
+   "frequency": "isolé",
+   "example": "antiScroll.cta : « Включи anti-scroll »",
+   "regex_target": "[Aa]nti-scroll|блокировка",
+   "pack": "ui"
+  },
+  {
+   "description": "« scroll » rendu « превъртане » (rembobinage) dans les témoignages alors que l'app dit « скролване ».",
+   "frequency": "isolé",
+   "example": "paywall.review2.quote : « превръща превъртането в култура »",
+   "regex_target": "превърта",
+   "regex_fr": "scroll",
+   "pack": "ui"
+  },
+  {
+   "description": "Pronom sujet « Те » explicite en tête de titre (calque de « Ils … »).",
+   "frequency": "isolé",
+   "example": "paywall.quiz.reviews.title : « Те учат със Sophia »",
+   "regex_target": "^Те \\S",
+   "regex_fr": "^Ils ",
+   "pack": "ui"
+  },
+  {
+   "description": "Siècles écrits avec un ordinal à point (« 7. век », « 19. век ») au lieu des chiffres romains bulgares (VII век, XIX век).",
+   "frequency": "systématique",
+   "example": "През 7. век Арабия почти никого не интересуваше.",
+   "regex_target": "\\b\\d{1,2}\\.\\s?век\\b",
+   "regex_fr": "\\b[IVX]+e siècle\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Point utilisé comme séparateur de milliers (10.000, 3.000, 65.000) au lieu de l'espace.",
+   "frequency": "systématique",
+   "example": "Мохамед тръгна към Мека с **10.000 души**.",
+   "regex_target": "\\b\\d{1,3}\\.\\d{3}\\b",
+   "regex_fr": "\\b\\d{1,3}[  ]\\d{3}\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Année isolée sans l'abréviation « г. » obligatoire en bulgare (surtout dans les cours d'histoire ; les cours sciences/art l'ont).",
+   "frequency": "fréquent",
+   "example": "През 622 един търговец от Мека на име Мохамед избяга",
+   "regex_target": "(?:През|през|от|до|след|преди)\\s+\\*{0,2}\\d{3,4}\\*{0,2}(?!\\s*(?:г\\.|-|–|до\\s|и\\s+\\d))(?=[\\s,.;:)])",
+   "regex_fr": "\\b[Ee]n \\*{0,2}\\d{3,4}\\*{0,2}\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Présent historique français rendu tantôt à l'aoriste, tantôt au présent, dans le même paragraphe ou la même phrase (islam, OTAN, 1929, Suez, Lancelot, Narcisse).",
+   "frequency": "systématique",
+   "example": "трябваше да бяга от града си. Искаха да го убият. Този човек се казва **Мохамед**.",
+   "regex_target": "(?:ше|ха|я|и)\\s+[^.]*?\\.\\s+[^.]*?\\b(?:става|е|носи|казва|прави)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "« lancer / mettre en place / poser / établir » rendus par « пусна » (lâcher) ou « слага » (poser un objet) au lieu de започва / предприема / въвежда / установява / полага.",
+   "frequency": "fréquent",
+   "example": "Абу Бакр, после Умар, пуснаха бързо разширение към Сирия",
+   "regex_target": "\\b(?:пусна|пуснаха|пуска|сложи|сложиха|слага|слагат)\\b",
+   "regex_fr": "\\b(?:lanc(?:e|ent|a|èrent)|m(?:et|ettent|it) en place|pos(?:e|ent|é)|établi[ts])\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "« transformer / marquer un tournant / révolutionner » rendus par « обръща / обърна » (retourner) au lieu de « превръща / променя / бележи обрат ».",
+   "frequency": "fréquent",
+   "example": "Достоевски обръща престъплението в лаборатория на съвестта",
+   "regex_target": "\\bобър(?:на|ща|нат|наха)\\b",
+   "regex_fr": "\\btransform(?:e|ent|a|é)|tournant\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Terme de glossaire inséré tel quel (titre complet, nominatif défini, majuscule) sans accord avec la phrase, ce qui produit un article impossible après préposition ou un nom sans article.",
+   "frequency": "fréquent",
+   "example": "Тази поетика води към **[[Символизмът и наследството на Бодлер]]**.",
+   "regex_target": "(?:към|на|срещу|в|от|с|при)\\s+\\*{0,2}\\[\\[[А-Я][а-я]+(?:ът|ят|та|то|те)\\b",
+   "regex_fr": "\\[\\[(?:Le|La|Les|L')\\s?[^\\]]+\\]\\]",
+   "pack": "courses"
+  },
+  {
+   "description": "« compter » (avoir, dénombrer) calqué par « брои / броят ».",
+   "frequency": "fréquent",
+   "example": "Каймановите острови броят 65.000 жители",
+   "regex_target": "\\bбро(?:и|ят|яла|ила|ят)\\b",
+   "regex_fr": "\\bcompt(?:e|ent|ait|aient)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Verbes familiers/oraux (почна, ползва, маха, вкарва, бутне, пипа, вади) dans une prose par ailleurs neutre.",
+   "frequency": "fréquent",
+   "example": "НАТО почна да се намесва извън територията си",
+   "regex_target": "\\b(?:почна|почва|ползва|ползват|маха|махна|вкарва|бутне|пипа|вади)\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "Noms propres ou titres laissés en alphabet latin (Aupick, Le Spleen de Paris, Café Guerbois) alors que le reste est translittéré.",
+   "frequency": "isolé",
+   "example": "генерал **Aupick**",
+   "regex_target": "\\b(?!XP\\b|NATO\\b|OTAN\\b|PRIMO\\b|Ever Given|Rex|Quondam|Rexque|Futurus|Arturus|singultus|haven|heaven|tax|fin|amor|Sharks|Jets)[A-Z][a-z]{3,}\\b",
+   "pack": "courses"
+  },
+  {
+   "description": "« цар / царица » pour un roi occidental (Arthur) au lieu de « крал / кралица ».",
+   "frequency": "isolé",
+   "example": "Легендата за цар **Артур**",
+   "regex_target": "\\bцар(?:ят|я|ица|ицата)?\\s+\\*{0,2}(?:Артур|Хенри|Луи|Филип)",
+   "pack": "courses"
+  },
+  {
+   "description": "Titre de section « Introduction » rendu tantôt « Увод », tantôt « Въведение ».",
+   "frequency": "isolé",
+   "example": "[s0.title] BG: Въведение",
+   "regex_target": "^BG: Въведение$",
+   "pack": "courses"
+  }
+ ],
+ "constats": [
+  {
+   "location": "paywall.quiz.demo.chrono.i3",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "Възраждане",
+   "gloss_fr": "le Réveil national bulgare (XVIIIe–XIXe siècle)",
+   "problem": "En bulgare « Възраждане » désigne le Renouveau national bulgare ; la Renaissance européenne s'appelle « Ренесанс », la chronologie Antiquité/Moyen Âge/Renaissance devient fausse dans une app de culture générale.",
+   "fix": "Ренесанс",
+   "surface": "ui"
+  },
+  {
+   "location": "course_195_lancelot_guenievre_et_la_table_ronde/s2.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "На масата [[Опасна обсада]] чака предопределения рицар.",
+   "gloss_fr": "« À la table, le Siège (militaire) dangereux attend le chevalier prédestiné. »",
+   "problem": "« Siège » (le fauteuil de la Table Ronde) a été pris au sens militaire : « обсада » = siège d'une ville, ce qui rend la phrase absurde.",
+   "fix": "На масата [[Опасното място]] чака предопределения рицар.",
+   "surface": "courses"
+  },
+  {
+   "location": "paywall.review4.quote",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Приятелите ми питат откъде намирам всички тези анекдоти.",
+   "gloss_fr": "Mes amis me demandent où je trouve toutes ces blagues.",
+   "problem": "Faux ami : « анекдот » signifie « blague » en bulgare, pas « anecdote/fait intéressant ».",
+   "fix": "Приятелите ми питат откъде знам всички тези любопитни факти.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.subtitle",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "…и стани истински културен.",
+   "gloss_fr": "…et deviens vraiment poli / bien élevé.",
+   "problem": "« културен » veut dire « poli, bien élevé » (ou « culturel »), jamais « cultivé » ; faux ami repris dans toute l'app (le mot juste est « начетен/образован »).",
+   "fix": "Отключи Sophia PRO за интерактивните тестове и стани истински начетен.",
+   "surface": "ui"
+  },
+  {
+   "location": "share.message",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Чета 10-минутни уроци в Sophia и всеки ден ставам по-културен. Опитай:",
+   "gloss_fr": "Je lis des leçons de 10 min sur Sophia et chaque jour je deviens plus poli. Essaie :",
+   "problem": "Même faux ami « по-културен », plus « уроци » alors que l'app dit « курсове » ; ce message est partagé hors de l'app, donc très visible.",
+   "fix": "Чета 10-минутни курсове в Sophia и всеки ден научавам нещо ново. Опитай:",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.review2.quote",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Най-накрая приложение, което превръща превъртането в култура.",
+   "gloss_fr": "Enfin une app qui transforme le rembobinage en culture.",
+   "problem": "« превъртане » = rembobiner/faire défiler mécaniquement (ailleurs l'app dit « скролване ») et « култура » ne rend pas « culture générale ».",
+   "fix": "Най-накрая приложение, което превръща скролването в знания.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.review3.quote",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Всяка седмица се чувствам по-културен. Тестовете закотвят всичко.",
+   "gloss_fr": "Chaque semaine je me sens plus poli (au masculin). Les quiz jettent l'ancre sur tout.",
+   "problem": "Inès est une femme mais l'adjectif est au masculin, « културен » est un faux ami et « закотвят » est un calque littéral d'« ancrer ».",
+   "fix": "Всяка седмица се чувствам по-начетена. Тестовете затвърждават всичко.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.reviews.r3.quote",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Всяка седмица се чувствам по-културен. Трудно е да се спре само на един курс.",
+   "gloss_fr": "Chaque semaine je me sens plus poli (masc.). Il est difficile de s'arrêter à un seul cours.",
+   "problem": "Témoignage d'Inès au masculin, faux ami « културен », et tournure impersonnelle froide pour « difficile de m'arrêter ».",
+   "fix": "Всяка седмица се чувствам по-начетена. Трудно ми е да спра само на един курс.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.quote",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "…и всяка седмица се чувствам по-умен.",
+   "gloss_fr": "…et chaque semaine je me sens plus intelligent (masculin).",
+   "problem": "Léa, 24 ans est une femme ; l'adjectif doit être au féminin.",
+   "fix": "„Преди прекарвах 7 часа на ден на телефона си. Сега само 40 минути със Sophia и всяка седмица се чувствам по-умна.“",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.review1.quote",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "5 минути и залепва.",
+   "gloss_fr": "5 minutes et ça colle.",
+   "problem": "Calque de l'anglais « it sticks » ; « залепва » signifie « ça colle » physiquement.",
+   "fix": "Тестовете ме накараха да запомня много повече, отколкото само с четене. 5 минути и се запомня.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.t3.quote",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "…но тук влиза само.",
+   "gloss_fr": "…mais ici ça entre tout seul.",
+   "problem": "« влиза само » est incompréhensible sans complément ; l'idiome bulgare est « влиза ми в главата от само себе си ».",
+   "fix": "Винаги съм мразила „зубренето“, но тук всичко ми влиза в главата от само себе си. Паметта ми ме изненадва.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.wasted.daysComplete",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Това са %@ пълни дни.",
+   "gloss_fr": "Ce sont 23 jours pleins jours. (le %@ contient déjà « 23 дни »)",
+   "problem": "Le placeholder reçoit « 23 дни » (clés onboarding.wasted.days.*), donc « дни » apparaît deux fois ; « пълни дни » est en outre un calque, le bulgare dit « цели ».",
+   "fix": "Това са цели %@.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.wasted.intro + onboarding.wasted.hoursLost",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "%@ на ден на телефона ти, това е / загубени часове на година.",
+   "gloss_fr": "2 h par jour sur ton téléphone, c'est (sing.) 730 heures (forme non comptée) perdues par an.",
+   "problem": "Après un nombre le bulgare exige la forme comptée « часа » et un pluriel « това са » ; « на ден на телефона » accumule deux « на ».",
+   "fix": "intro : „%@ на ден пред телефона — това са“ ; hoursLost : „загубени часа годишно.“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.rightPlace.ofUsers",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "на потребителите",
+   "gloss_fr": "87 % aux utilisateurs",
+   "problem": "Un pourcentage se construit avec « от » (87 % от потребителите), pas « на ».",
+   "fix": "от потребителите",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.weeks.title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Това е %d седмици в годината",
+   "gloss_fr": "C'est (sing.) 12 semaines dans l'année",
+   "problem": "Accord : avec un pluriel il faut « това са » (la variante .other l'a, pas la clé de base, ce qui crée une incohérence).",
+   "fix": "Това са %d седмици годишно",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.welcome.title + onboarding.welcome.rotating.*",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Sophia е партньорът ти, за да овладееш + изкуство / история / литература / митология / наука",
+   "gloss_fr": "Sophia est ton partenaire pour que tu maîtrises art (sans article).",
+   "problem": "Le complément d'« овладееш » doit être défini ; la phrase assemblée est agrammaticale, et « партньорът ти, за да » est un calque lourd.",
+   "fix": "title : „Със Sophia овладяваш“ ; rotating : „изкуството“, „историята“, „литературата“, „митологията“, „науките“, „днешния свят“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.questions.q10",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Каква е относителността на Айнщайн?",
+   "gloss_fr": "Comment est la relativité d'Einstein ?",
+   "problem": "« каква » interroge sur la qualité, pas sur la nature ; il faut « какво е ».",
+   "fix": "Какво е теорията на относителността на Айнщайн?",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.tapToContinue",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Докосни навсякъде, за да продължиш",
+   "gloss_fr": "Touche partout pour continuer",
+   "problem": "« навсякъде » = partout ; « n'importe où » se dit « където и да е ».",
+   "fix": "Докосни където и да е, за да продължиш",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.notifications.bullet2",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "В подходящия момент, никога на серии",
+   "gloss_fr": "Au bon moment, jamais en séries (TV)",
+   "problem": "« на серии » ne rend pas « en rafale » ; l'idée est « jamais en masse / d'un coup ».",
+   "fix": "В точния момент, никога на куп",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.benefit.quiz",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Всички тестове, за да остане",
+   "gloss_fr": "Tous les quiz pour que ça reste (quoi ?)",
+   "problem": "Subordonnée sans sujet ni complément, incompréhensible seule.",
+   "fix": "Всички тестове, за да запомняш",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.weaponHeadline + paywall.benefit.confidence + paywall.benefit.curiosity",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Sophia, твоето тайно оръжие за: / 🔥 Изгради увереността си / 💡 Нахрани любопитството си",
+   "gloss_fr": "Sophia, ton arme secrète pour : Construis ta confiance / Nourris ta curiosité",
+   "problem": "Après « за: » des impératifs sont agrammaticaux ; il faut des groupes nominaux (et « нахрани » est un calque animalier).",
+   "fix": "benefit.confidence : „🔥 Повече увереност“ ; benefit.curiosity : „💡 Повече любопитство“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.trial.badge",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Предложение за добре дошли",
+   "gloss_fr": "Proposition pour bienvenus",
+   "problem": "Tournure inexistante en bulgare ; en plus « предложение » rompt avec « оферта » utilisé partout ailleurs.",
+   "fix": "Начална оферта",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.pw.startTrial",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Старт {n} дни безплатно",
+   "gloss_fr": "Start {n} jours gratuitement",
+   "problem": "Suite de mots sans verbe conjugué, style télégraphique étranger au bulgare.",
+   "fix": "Започни {n} дни безплатно",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.profile.tagline.exams",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Учиш с метод, готов си, когато има значение.",
+   "gloss_fr": "Tu apprends avec méthode, tu es prêt, quand ça a de l'importance.",
+   "problem": "Phrase hachée calquée sur l'anglais « ready when it counts », un natif bute dessus.",
+   "fix": "Учиш методично, за да си готов в решителния ден.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.profile.tagline.impress",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Скоро ти ще си с най-добрите истории.",
+   "gloss_fr": "Bientôt tu seras avec les meilleures histoires.",
+   "problem": "« ще си с … истории » n'est pas idiomatique.",
+   "fix": "Скоро ти ще разказваш най-интересните истории.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.showcase.xp.title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Качи ниво⏎и влез при⏎най-любопитните",
+   "gloss_fr": "Monte un niveau et entre chez les plus curieux",
+   "problem": "L'idée de classement (« hisse-toi au classement ») est perdue et « влез при » est bizarre.",
+   "fix": "Качвай нива⏎и се изкачи в класацията⏎на най-начетените",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.graph.tagline",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Sophia ускорява знанията ти⏎— бързо.",
+   "gloss_fr": "Sophia accélère tes connaissances — vite.",
+   "problem": "« ускорява знанията » n'est pas une collocation bulgare et « — бързо » est redondant ; le FR parle de croissance exponentielle.",
+   "fix": "Със Sophia знанията ти⏎растат експоненциално.",
+   "surface": "ui"
+  },
+  {
+   "location": "course.streak.onTrack",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Серията идва!",
+   "gloss_fr": "La série arrive ! (comme une série TV)",
+   "problem": "Formule étrange en bulgare ; « en route pour ta série » se rend autrement.",
+   "fix": "На път си към серия!",
+   "surface": "ui"
+  },
+  {
+   "location": "profile.streak.great",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Ти гориш 🔥",
+   "gloss_fr": "Tu brûles (en argot : tu es cuit / grillé)",
+   "problem": "« гориш » en argot bulgare signifie « tu es fichu / pris la main dans le sac », l'inverse du compliment voulu.",
+   "fix": "В страхотна форма си 🔥",
+   "surface": "ui"
+  },
+  {
+   "location": "profile.streak.good",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Супер редовност 👏",
+   "gloss_fr": "Super régularité (au sens de ponctualité/transit)",
+   "problem": "« редовност » évoque la ponctualité administrative ou le transit, pas une belle série d'apprentissage.",
+   "fix": "Браво за постоянството 👏",
+   "surface": "ui"
+  },
+  {
+   "location": "training.emptyTitle",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "Всичко е актуално!",
+   "gloss_fr": "Tout est à jour ! (sens logiciel)",
+   "problem": "« актуално » = mis à jour (logiciel) ; ici il s'agit de « plus rien à réviser ».",
+   "fix": "Нищо за преговор днес!",
+   "surface": "ui"
+  },
+  {
+   "location": "notification.courseNudge.title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "За откриване днес",
+   "gloss_fr": "Pour découverte aujourd'hui",
+   "problem": "Groupe nominal calqué sur « À découvrir », inusité comme titre de notification.",
+   "fix": "Открий днес",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.unlock.antiScroll / antiScroll.cta / antiScroll.title",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Anti-scroll режим / Включи anti-scroll / Включи anti-scroll: прочиташ урок в Sophia…",
+   "gloss_fr": "Mode anti-scroll (en latin) / Active anti-scroll",
+   "problem": "Terme laissé en alphabet latin au milieu du cyrillique, et incohérent avec « блокер / блокиране » utilisés pour la même fonction ; « урок » au lieu de « курс ».",
+   "fix": "paywall.unlock.antiScroll : „Антискрол режим“ ; antiScroll.cta : „Включи антискрол режима“ ; antiScroll.title : „Включи антискрол режима: прочиташ курс в Sophia, за да отключиш приложенията си“",
+   "surface": "ui"
+  },
+  {
+   "location": "audio.browse / audio.browse.title / audio.downloads.title / audio.downloads.empty / audio.downloads.footer / audio.downloads.deleteAll.confirm",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Всички аудиа / Изтеглени аудиа / Изтеглените аудиа се слушат без връзка.",
+   "gloss_fr": "Tous les audios (pluriel forgé « аудиа »)",
+   "problem": "« аудио » est invariable en bulgare ; le pluriel « аудиа » est fautif et répété six fois.",
+   "fix": "„Всички аудио курсове“ / „Изтеглени аудио курсове“ / „Изтеглените аудио курсове се слушат без връзка.“ / „Да се изтрият ли всички изтеглени аудио курсове?“ / „Все още няма изтеглени аудио курсове. Изтегли курс от плейъра, за да го слушаш офлайн.“",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.form.presentation.label / ambassador.form.hint",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Кратко въведение / (въведение: мин. 10 знака)",
+   "gloss_fr": "Courte introduction (préface d'un texte)",
+   "problem": "« въведение » = introduction d'un ouvrage ; se présenter soi-même se dit « представяне ».",
+   "fix": "„Кратко представяне“ / „Попълни целия формуляр (представяне: мин. 10 знака), за да активираш изпращането.“",
+   "surface": "ui"
+  },
+  {
+   "location": "collections.path vs explain.path.title (+ collections.badge.path, tab.path, onboarding.showcase.collections.title, onboardingV2.intro.route.title)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "Твоят маршрут / Твоята пътека / МАРШРУТ / Пътека / маршрути / персонализиран маршрут",
+   "gloss_fr": "Ton itinéraire / Ton sentier — deux mots pour le même « parcours »",
+   "problem": "La même fonctionnalité « Parcours » s'appelle tantôt « маршрут », tantôt « пътека » (même source FR « Ton parcours »), plus « път/пътешествие » dans le chargement.",
+   "fix": "Unifier sur „пътека“ : collections.path „Твоята пътека“, collections.badge.path „ПЪТЕКА“, showcase „Следвай тематични⏎пътеки“, intro.route „**персонализирана пътека**“",
+   "surface": "ui"
+  },
+  {
+   "location": "course_195_lancelot_guenievre_et_la_table_ronde/s0.b0.text (et tout le cours : hero.hook, s0.b1, s1.b1.caption, s1.b3, s4.b1)",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Легендата за цар **Артур** … царица **Гуиневира** … жената на царя … спящия цар",
+   "gloss_fr": "« la légende du tsar Arthur … la tsarine Guenièvre »",
+   "problem": "En bulgare les rois occidentaux sont « крал », jamais « цар » ; la forme établie est « крал Артур ».",
+   "fix": "Легендата за крал **Артур** … кралица **Гуиневир** … жената на краля … спящият крал (remplacer цар/царица par крал/кралица dans tout le cours)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_195_lancelot_guenievre_et_la_table_ronde/s1.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Зад Артур се мярка бретонски военачалник, може би на име **Arturus**, който уж устоял на саксите",
+   "gloss_fr": "« un chef de guerre de Bretagne (française) »",
+   "problem": "« breton » désigne ici un Breton de l'île de Bretagne (Briton), pas un habitant de la Bretagne française ; « бретонски » est faux.",
+   "fix": "Зад Артур се мярка бритски военачалник, може би на име **Arturus**, който устоял на саксонците след оттеглянето на римляните.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_195_lancelot_guenievre_et_la_table_ronde/s1.b2.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Хенри VIII я нареди да я изрисуват, за да се върже с Артур.",
+   "gloss_fr": "« Henri VIII l'a ordonné elle de la faire peindre pour s'attacher à Arthur »",
+   "problem": "Double complément d'objet (« я нареди да я ») agrammatical, et « да се върже » est familier.",
+   "fix": "Хенри VIII наредил да я изрисуват, за да се свърже с Артур.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_195_lancelot_guenievre_et_la_table_ronde/s2.b3.text",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "стигнаха до Граала. … се провали: любовта му към Гуиневира го прави недостоен",
+   "gloss_fr": "« atteignirent le Graal … échoua : son amour le rend indigne » (aoriste puis présent)",
+   "problem": "Alternance aoriste/présent dans la même phrase, symptôme du présent historique français rendu au hasard ; le récit doit rester au présent.",
+   "fix": "стигат до Граала. … се проваля: любовта му към Гуиневир го прави недостоен за божественото видение.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b2.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Наоколо двама гиганти се трошаха в безкрайни войни",
+   "gloss_fr": "« Autour, deux géants se brisaient / se cassaient dans des guerres sans fin »",
+   "problem": "« s'épuisent » a été rendu par « се трошаха » (se casser), verbe qui n'a pas ce sens.",
+   "fix": "Наоколо два гиганта се изтощават в безкрайни войни",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b2.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "**Мохамед**, роден към **570**, каза, че получава откровения от **610**",
+   "gloss_fr": "« Muhammad, né vers (direction) 570, a dit qu'il reçoit des révélations à partir de 610 »",
+   "problem": "« роден към » calque « né vers » (en bulgare « към » = en direction de) ; « каза » (aoriste) pour « dit recevoir » est faux.",
+   "fix": "**Мохамед**, роден около **570** г., твърди, че от **610** г. получава откровения в пещера на планината Хира.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s2.b0.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Застрашен със смърт, Мохамед прие поканата",
+   "gloss_fr": "« Mis en danger avec la mort, Muhammad accepta l'invitation »",
+   "problem": "La collocation est « заплашен със смърт » ; « застрашен със » est fautif.",
+   "fix": "Заплашен със смърт, Мохамед приема поканата на оазис, наречен Ятриб.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s2.b3.text",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Мохамед пусна [[раззиас]], бързи набези",
+   "gloss_fr": "« Muhammad a lâché des “razzias” (pluriel français translittéré) »",
+   "problem": "« раззиас » est le pluriel français translittéré, inexistant en bulgare ; « пусна » (lâcher) calque « lance ».",
+   "fix": "Мохамед предприема [[раззии]], бързи набези, за да пресича вражеските кервани.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b1.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "счупи идолите и я освети на единствения Бог",
+   "gloss_fr": "« cassa les idoles et la consacra sur le Dieu unique »",
+   "problem": "« освети на » est une construction fautive ; on dit « посвещава на » et « единния Бог ».",
+   "fix": "разбива идолите и я посвещава на единния Бог",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b1.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Абу Бакр, после Умар, пуснаха бързо разширение към Сирия, Ирак и Египет.",
+   "gloss_fr": "« Abu Bakr, puis Umar, lâchèrent une expansion rapide vers… »",
+   "problem": "« lancent » rendu par « пуснаха » (lâcher/laisser aller) ; le verbe ne se dit pas d'une expansion.",
+   "fix": "Абу Бакр, а после Умар, започват бърза експанзия към Сирия, Ирак и Египет.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b3.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Мохамед обърна духовно послание в истинска политическа сила. Той сложи основите на империя",
+   "gloss_fr": "« a retourné un message spirituel en une vraie puissance politique. Il a mis (posé) les bases »",
+   "problem": "« transformer » = « превърна », pas « обърна » ; l'idiome est « полага основите », pas « слага ».",
+   "fix": "Мохамед превръща духовно послание в истинска политическа сила. Той полага основите на империя, която ще владее част от света векове наред.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b0.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "То е и уредено. Завоевателите сложиха [[Дхимма]] … Тази рамкирана търпимост улесни настаняването на новата власт",
+   "gloss_fr": "« Elle est aussi arrangée. Les conquérants ont mis la Dhimma … Cette tolérance encadrée (au sens de mise dans un cadre) a facilité l'installation (logement) du nouveau pouvoir »",
+   "problem": "« рамкирана » (mise dans un cadre) et « настаняване » (logement) sont des calques mot à mot incompréhensibles ici.",
+   "fix": "Тя е и организирана. Завоевателите въвеждат [[дхимма]] … Тази регламентирана търпимост улеснява утвърждаването на новата власт",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s4.b2.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Постепенно Античността се затвори.",
+   "gloss_fr": "« Peu à peu l'Antiquité s'est fermée (comme une porte). »",
+   "problem": "« se referme » ne se dit pas d'une époque en bulgare ; la phrase est opaque.",
+   "fix": "Постепенно Античността си отива.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "majeur",
+   "category": "mt_artefact",
+   "current": "трябваше да бяга от града си. Искаха да го убият. Този човек се казва **Мохамед**. Заминаването му … носи име … По-късно тази дата стана година 1",
+   "gloss_fr": "« devait fuir … voulaient le tuer … s'appelle … porte un nom … est devenue l'an 1 » (passé, présent, passé)",
+   "problem": "Le présent historique du français est rendu tantôt à l'aoriste tantôt au présent dans le même paragraphe ; « година 1 » est un calque.",
+   "fix": "трябва да избяга от града си. Искат да го убият. Този човек се казва **Мохамед**. Заминаването му към оазиса Медина има име: **Хиджра**. По-късно тази дата става първата година на мюсюлманския календар.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Живееше се на племена. [[бедуини]], номади на пустинята, съжителстваха с няколко търговски града",
+   "gloss_fr": "« On vivait-se en tribus. bédouins (minuscule, sans article), nomades du désert, cohabitaient »",
+   "problem": "« Живееше се » est lourd, et la phrase suivante commence par un nom commun sans majuscule ni article défini.",
+   "fix": "Хората живеят на племена. [[Бедуините]], пустинните номади, съжителстват с няколко търговски града като Мека.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b3.e1.detail",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Първа голяма победа, при по-малък брой.",
+   "gloss_fr": "« Première grande victoire, à un plus petit nombre. »",
+   "problem": "« en infériorité numérique » rendu par un fragment incompréhensible.",
+   "fix": "Първа голяма победа срещу по-многоброен противник.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "През 7. век Арабия почти никого не интересуваше.",
+   "gloss_fr": "« Au 7. siècle » (ordinal à l'allemande)",
+   "problem": "Le bulgare écrit les siècles en chiffres romains (VII век) ; « 7. век » est une convention étrangère, répétée dans tout le corpus (19. век, 20. век, 13. век…).",
+   "fix": "През VII век Арабия почти никого не интересува.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s1.b1.text",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "се кара с пастрока си, генерал **Aupick**",
+   "gloss_fr": "« avec son beau-père, le général Aupick » (nom laissé en alphabet latin)",
+   "problem": "Nom propre non translittéré alors que tous les autres le sont.",
+   "fix": "се кара с пастрока си, генерал **Опик**",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b1.text",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Бодлер го развива в **[[Le Spleen de Paris]]**, посмъртна сбирка",
+   "gloss_fr": "« dans Le Spleen de Paris » (titre laissé en français)",
+   "problem": "Le titre a une forme bulgare établie (« Парижки сплин ») ; « сбирка » est en outre impropre pour un recueil.",
+   "fix": "Бодлер го развива в **[[Парижки сплин]]**, посмъртен сборник от кратки стихотворения в проза за Париж.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Книгата не е просто купчина стихове. Бодлер прокарва през нея ход.",
+   "gloss_fr": "« Le livre n'est pas simplement un tas de vers. Baudelaire fait passer à travers elle un coup/une marche. »",
+   "problem": "« купчина » (tas) est péjoratif pour « simple recueil », et « прокарва ход » n'a aucun sens.",
+   "fix": "Книгата не е обикновен сборник стихове. Бодлер гради в нея развитие.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s0.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Сборникът обръща историята на поезията.",
+   "gloss_fr": "« Le recueil retourne l'histoire de la poésie. »",
+   "problem": "« marque un tournant » rendu par « обръща » (retourner), ce qui est faux et bizarre.",
+   "fix": "Сборникът бележи обрат в историята на поезията.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s1.b0.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "писател встрани, зле обичан от своето време",
+   "gloss_fr": "« écrivain à côté, mal aimé par son temps »",
+   "problem": "« встрани » et « зле обичан » sont des calques mot à mot de « en marge » et « mal aimé ».",
+   "fix": "писател в периферията, неразбран от епохата си",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s3.b2.text (idem s4.b4.text)",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Тази поетика води към **[[Символизмът и наследството на Бодлер]]**. По-късно Верлен и Маларме го поемат.",
+   "gloss_fr": "« Cette poétique mène vers “Le symbolisme et l'héritage de Baudelaire” (nominatif défini après préposition). »",
+   "problem": "Le titre complet de la fiche de glossaire est inséré dans la phrase, avec un article nominatif impossible après « към » ; il faut un terme court et accordé.",
+   "fix": "Тази поетика отваря пътя към **[[символизма]]**, който по-късно поемат Верлен и Маларме.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s2.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Превратът минава и през техниката.",
+   "gloss_fr": "« Le coup d'État passe aussi par la technique. »",
+   "problem": "« преврат » signifie coup d'État ; pour une révolution artistique on dit « революция / промяна ».",
+   "fix": "Революцията засяга и техниката.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b3.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "античните им войни носели шлемове",
+   "gloss_fr": "« leurs guerres antiques portaient des casques »",
+   "problem": "« войни » = guerres ; « guerriers » s'écrit « воини ».",
+   "fix": "античните им воини носели шлемове",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s3.b0.text",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "се събират в [[Кафе Guerbois]]",
+   "gloss_fr": "« se réunissent au Café Guerbois » (moitié translittéré, moitié français)",
+   "problem": "Nom propre à moitié en alphabet latin ; translittérer entièrement.",
+   "fix": "се събират в [[кафене „Гербоа“]]",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b2.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "сред най-посещаваните в [[Музеят д'Орсе]]",
+   "gloss_fr": "« parmi les plus visités dans Le-Musée d'Orsay » (article nominatif après préposition)",
+   "problem": "Forme nominative définie « Музеят » impossible après « в » ; la forme usuelle est « музея „Орсе“ ».",
+   "fix": "сред най-посещаваните в [[музея „Орсе“]]",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s3.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Жестокостта на Нарцис умори боговете.",
+   "gloss_fr": "« La cruauté de Narcisse a tué / a fatigué les dieux. »",
+   "problem": "« умори » se lit d'abord « a tué » ; « lasse » se rend par « омръзва на ».",
+   "fix": "Жестокостта на Нарцис омръзва на боговете.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/hero.hook",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Създадена да срещне враг, който от 1991 го няма, НАТО никога не е брояла толкова членове.",
+   "gloss_fr": "« Créée pour rencontrer un ennemi qui, depuis 1991, il n'y en a plus, l'OTAN n'a jamais compté (dénombré) autant de membres. »",
+   "problem": "Trois calques en une phrase : « affronter » → « срещне », relative familière « който … го няма », « compter » → « брояла ».",
+   "fix": "Създадена, за да се противопостави на враг, който не съществува от 1991 г., НАТО никога не е имала толкова много членове.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s0.b1.text (idem s2.b0.text)",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "тридесет години търсене на самоличност … криза на самоличността",
+   "gloss_fr": "« trente ans de quête de pièce d'identité »",
+   "problem": "« самоличност » désigne l'identité administrative d'une personne ; le concept est « идентичност ».",
+   "fix": "тридесет години търсене на идентичност … криза на идентичността",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s2.b0.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Той все пак избра да се преизобрети около две оси.",
+   "gloss_fr": "« Elle a pourtant choisi de se ré-inventer autour de deux axes » (verbe inexistant)",
+   "problem": "« преизобрети » n'existe pas en bulgare ; calque de « se réinventer ».",
+   "fix": "Той все пак избира да се преосмисли в две посоки.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s2.b1.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "храни остра обида в Москва, където Владимир Путин изобличава провокация и скъсване на обещания",
+   "gloss_fr": "« nourrit une vive insulte à Moscou, où Poutine dénonce provocation et déchirure de promesses »",
+   "problem": "« обида » = insulte, pas ressentiment ; « скъсване на обещания » est un calque de « rupture des promesses ».",
+   "fix": "подхранва силно негодувание в Москва, където Владимир Путин говори за провокация и за нарушени обещания, дадени в края на Студената война",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s2.b0.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "После дойдоха [[банкови бягания]]",
+   "gloss_fr": "« Puis vinrent des “courses bancaires” » (calque de bank runs)",
+   "problem": "« банкови бягания » n'existe pas ; le phénomène se dit « банкова паника » / « масово теглене на депозити ».",
+   "fix": "После идва [[банковата паника]]: вълни от клиенти, които панически теглят парите си.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s1.b0.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "**Дау Джоунс** … се умножи по шест",
+   "gloss_fr": "« le Dow Jones s'est multiplié par six » (formulation arithmétique)",
+   "problem": "« се умножи по шест » est du langage de calcul ; on dit « нараства шест пъти ».",
+   "fix": "**Дау Джоунс**, индексът на големите американски акции, нараства шест пъти",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s4.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Възходът остана крехък… до мобилизацията от 1941.",
+   "gloss_fr": "« L'ascension resta fragile… »",
+   "problem": "« la reprise » (économique) se dit « възстановяването », pas « възходът » (ascension).",
+   "fix": "Възстановяването остава крехко… до мобилизацията от 1941 г.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s4.b0.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "**Франклин Д. Рузвелт** пусна [[Новият курс на Рузвелт (1933)]]. … Държавата заложи на [[възстановяване]]",
+   "gloss_fr": "« Roosevelt a lâché “Le New Deal de Roosevelt (1933)” (nominatif défini en position d'objet). L'État a misé sur “rétablissement” »",
+   "problem": "« пусна » calque « lance », et le titre de glossaire au nominatif défini est agrammatical en position d'objet ; « relance » → « стимулиране ».",
+   "fix": "**Франклин Д. Рузвелт** стартира [[Новия курс]]. … Държавата залага на [[стимулиране на икономиката]]",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s0.b1.text (idem s4.b1.text « Романът още гори днес »)",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Романът пита нещо, което още гори",
+   "gloss_fr": "« Le roman demande quelque chose qui brûle encore »",
+   "problem": "« question brûlante » rendu littéralement ; « гори » ne porte pas ce sens figuré en bulgare.",
+   "fix": "Романът поставя въпрос, който и днес е парещ: можеш ли да убиеш в името на по-висша идея? / Романът е все така актуален днес",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s1.b0.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Достоевски пише романа обсипан с дългове, под натиск от издателя.",
+   "gloss_fr": "« Dostoïevski écrit le roman parsemé de dettes »",
+   "problem": "« обсипан » (parsemé, couvert de fleurs) est impropre ; l'idiome est « затънал в дългове » ; virgule manquante.",
+   "fix": "Достоевски пише романа затънал в дългове, под натиск от издателя си.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s1.b0.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Сблъсъкът със смъртта обръща дълбоко погледа му към света.",
+   "gloss_fr": "« La confrontation avec la mort retourne profondément son regard vers le monde. »",
+   "problem": "« transforme sa vision du monde » rendu par « обръща погледа » (tourner le regard) : sens perdu.",
+   "fix": "Сблъсъкът със смъртта променя дълбоко мирогледа му.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s1.b3.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "се бори срещу **[[Руският нихилизъм от 1860 г]]**",
+   "gloss_fr": "« combat “Le nihilisme russe de l'an 1860” (nominatif après préposition, point manquant) »",
+   "problem": "« des années 1860 » devient une seule année « 1860 г » (sans point), avec un article nominatif impossible après « срещу ».",
+   "fix": "се бори срещу **[[руския нихилизъм от 1860-те години]]**",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s2.b2.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "невинната сестра на старицата, която изненадва убийството",
+   "gloss_fr": "« la sœur innocente, qui surprend (étonne) le meurtre »",
+   "problem": "« surprendre » au sens de « tomber sur » rendu par « изненадва » (étonner) : la phrase est absurde.",
+   "fix": "невинната сестра на старицата, която става неволен свидетел на убийството",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/subtitle",
+   "severity": "majeur",
+   "category": "typographie",
+   "current": "10.000 милиарда, скрити",
+   "gloss_fr": "« 10.000 milliards, cachés » (virgule et séparateur de milliers étranges)",
+   "problem": "Sous-titre maladroit et incohérent avec le titre qui dit « 10 трилиона » ; le bulgare dit naturellement « трилиона ».",
+   "fix": "10 трилиона в сянка",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s1.b0.text",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "онова, което наричат икономиката [[офшорка]]",
+   "gloss_fr": "« ce qu'on appelle l'économie “petite boîte offshore” (argot) »",
+   "problem": "« офшорка » est un terme argotique désignant une société écran, pas l'adjectif « offshore ».",
+   "fix": "така наречената [[офшорна]] икономика",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s2.title",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Изкуството да изчезне една печалба",
+   "gloss_fr": "« L'art qu'un profit disparaisse »",
+   "problem": "Construction infinitive impossible : il manque le verbe causatif « faire disparaître ».",
+   "fix": "Изкуството да накараш печалбата да изчезне",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s3.b1.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "със международно споразумение … Идеята: да се спре страните да се конкурират",
+   "gloss_fr": "« avec-z un accord international … L'idée : d'arrêter les pays de se concurrencer »",
+   "problem": "« със » ne s'emploie que devant с/з ; « да се спре страните да… » est agrammatical (« попречи на страните »).",
+   "fix": "с международно споразумение, което въвежда минимална данъчна ставка от 15% за мултинационалните компании. Идеята: да се попречи на страните да се надпреварват, като безкрайно свалят данъците",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s2.b2.text",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "Българското „данъчен рай“ идва от грешка в превода",
+   "gloss_fr": "« Le mot bulgare “paradis fiscal” vient d'une erreur de traduction »",
+   "problem": "Adaptation qui affirme un fait non étayé sur le bulgare (le terme vient du français via calque) et contredit le reste du cours qui emploie « данъчни убежища ».",
+   "fix": "Френското „paradis fiscal“ (откъдето идва и нашето „данъчен рай“) се дължи на грешка в превода: английското *tax haven* е сигурно пристанище за парите (haven), не рай (heaven).",
+   "surface": "courses"
+  },
+  {
+   "location": "course_104_romeo_et_juliette_shakespeare/s2.b0.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Сцената на балкона слави любовта, но и отказва фамилното име",
+   "gloss_fr": "« La scène du balcon célèbre l'amour, mais aussi refuse le nom de famille » (la scène devient le sujet qui refuse)",
+   "problem": "Le parallélisme français « célèbre l'amour, mais aussi le refus du nom » est cassé : en bulgare c'est la scène qui refuse le nom.",
+   "fix": "Сцената на балкона възпява любовта, но и отхвърлянето на фамилното име",
+   "surface": "courses"
+  },
+  {
+   "location": "course_104_romeo_et_juliette_shakespeare/s3.b1.text",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "**Принцът на Верона** стои за закон, безсилен пред частните милиции",
+   "gloss_fr": "« Le Prince de Vérone se tient pour une loi impuissante » (calque de l'anglais stands for)",
+   "problem": "« стои за » n'a pas le sens de « représente » en bulgare.",
+   "fix": "**Принцът на Верона** олицетворява закон, безсилен пред частните милиции на двете семейства.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_206_le_canal_de_suez_pourquoi_il_est_strateg/description",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Един заседнал кораб през 2021 стигна, за да парализира планетата",
+   "gloss_fr": "« Un seul navire échoué en 2021 est arrivé pour paralyser la planète » (« стигна » lu comme « est arrivé »)",
+   "problem": "« a suffi » rendu par « стигна », qui se lit d'abord « est arrivé » ; la tournure est ambiguë et maladroite.",
+   "fix": "Един заседнал кораб през 2021 г. беше достатъчен, за да парализира планетата: добре дошъл в **Суец**.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_206_le_canal_de_suez_pourquoi_il_est_strateg/s2.b2.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Това е краят на първата роля на Франция и Обединеното кралство като колониални сили",
+   "gloss_fr": "« C'est la fin du premier rôle (le rôle n°1) de la France et du Royaume-Uni »",
+   "problem": "« rôle de premier plan » rendu par « първата роля » (premier rôle au théâtre).",
+   "fix": "Това е краят на водещата роля на Франция и Обединеното кралство като колониални сили",
+   "surface": "courses"
+  },
+  {
+   "location": "share.card.subtitle",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Подари на приятел 10 минути култура",
+   "gloss_fr": "Offre à un ami 10 minutes de culture (au sens institutionnel)",
+   "problem": "« култура » seul évoque la culture institutionnelle/les bonnes manières, pas le savoir.",
+   "fix": "Подари на приятел 10 минути знания",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.reviews.r1.quote",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Никога не съм научавал толкова много.",
+   "gloss_fr": "Je n'ai jamais appris autant (participe masculin).",
+   "problem": "Camille est accordée au féminin dans le source (« m'ont aidée ») ; le participe bulgare est au masculin.",
+   "fix": "Поглъщам курс винаги, когато имам 5 минути. Никога не съм учила толкова много.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.review.t4.quote",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Сменям безкрайното си превъртане с урок.",
+   "gloss_fr": "Je change mon rembobinage infini contre une leçon.",
+   "problem": "« превъртане » n'est pas le mot courant pour « scroll » (l'app utilise « скролване » ailleurs) et « сменям » est moins naturel que « заменям ».",
+   "fix": "Заменям безкрайното скролване с курс. След месец хората около мен забелязаха разликата.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.unlock.unlimited (vs onboarding.trial.unlimitedCourses, paywall.feature.unlimitedCourses)",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Неограничени уроци",
+   "gloss_fr": "Leçons illimitées",
+   "problem": "« cours » est rendu « курс » partout sauf ici et dans quelques écrans d'onboarding (« уроци »), ce qui brouille le terme produit.",
+   "fix": "Неограничени курсове",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.features.row2 / onboardingV2.swipe.title / onboardingV2.age.subtitle",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "%@+ урока, написани от истински изследователи / Избери първите уроци, които ще прочетеш / …подходящи уроци.",
+   "gloss_fr": "leçons (au lieu de cours)",
+   "problem": "Incohérence cours = курс / урок dans l'onboarding.",
+   "fix": "„%@+ курса, написани от истински изследователи“ / „Избери първите курсове, които ще прочетеш“ / „За да ти предложим подходящи курсове.“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.features.row5",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Слушай всеки урок като аудио",
+   "gloss_fr": "Écoute chaque leçon comme audio",
+   "problem": "« като аудио » est un calque ; et « урок » pour « cours ».",
+   "fix": "Всеки курс и в аудио формат",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.features.row3 / onboardingV2.intro.quizzes.title / paywall.quiz.chart.with / paywall.quiz.chart.without / paywall.unlock.quiz",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "%@+ въпроса за куиз / забавни куизове / С куизове / Без куизове / Персонализирани куизове",
+   "gloss_fr": "quiz rendu « куиз » alors que l'app dit « тест » partout ailleurs",
+   "problem": "Deux termes pour « quiz » (тест / куиз) ; « въпроса за куиз » est en outre maladroit.",
+   "fix": "„%@+ тестови въпроса“ / „**забавни тестове**“ / „С тестове“ / „Без тестове“ / „Персонализирани тестове“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.intro.quizzes.title",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "…за да учиш наистина.",
+   "gloss_fr": "…pour que tu apprennes vraiment (au lieu de : retiennes).",
+   "problem": "« retenir » devient « apprendre ».",
+   "fix": "Sophia те проверява със **забавни тестове**, за да запомняш наистина.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.premiumTrial.step1.title / paywall.premiumColumn / settings.section.premium / paywall.discount.subtitle",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Премиум достъпът е активиран / Премиум / Премиум / Премиум знания за цял живот…",
+   "gloss_fr": "Premium translittéré en cyrillique",
+   "problem": "Le terme de marque « Premium » est gardé en latin partout ailleurs ; la translittération crée une incohérence visible dans le tableau comparatif.",
+   "fix": "„Premium достъпът е активиран“ / „Premium“ / „Premium“ / „Premium достъп до знания за цял живот на най-ниската цена, която някога сме предлагали.“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.premiumTrial.badge",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Безплатна пробна версия",
+   "gloss_fr": "Version d'essai gratuite (logiciel)",
+   "problem": "« пробна версия » désigne une version logicielle ; pour un abonnement on dit « пробен период », terme utilisé ailleurs dans l'app.",
+   "fix": "Безплатен пробен период",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.premiumTrial.title / paywall.cta.activateTrial / paywall.trialSheet.start / profile.unlock.trial",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Твоят безплатен период / Активирай безплатния период / Започни безплатния период / Отключи с безплатния период",
+   "gloss_fr": "ta période gratuite (sans « d'essai »)",
+   "problem": "« безплатен период » seul est vague ; l'app dit ailleurs « пробен период ».",
+   "fix": "„Твоят пробен период⏎в 3 стъпки“ / „Активирай пробния период“ / „Започни пробния период“ / „Отключи с пробния период“",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.freeSubjects / paywall.lockedSubjects / paywall.benefit.allSubjects vs paywall.feature.3subjects / paywall.feature.allSubjects / onboarding.final.subjects",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "3 безплатни теми / 3 теми за отключване / Всички теми vs 3 предмета / Всички предмети / ТВОИТЕ ПРЕДМЕТИ",
+   "gloss_fr": "matières = thèmes / matières scolaires, selon l'écran",
+   "problem": "Le même « matières/sujets » est rendu « теми » ou « предмети » (matières scolaires) d'un écran à l'autre, parfois sur le même paywall.",
+   "fix": "Unifier sur „теми“ : „3 теми“, „Всички теми“, „ТВОИТЕ ТЕМИ“, „Избор на твоите 3 теми“",
+   "surface": "ui"
+  },
+  {
+   "location": "quiz.trueFalse.false / paywall.quiz.demo.badge.trueFalse vs paywall.quiz.demo.tf.false",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Грешно / Вярно / Грешно vs Невярно",
+   "gloss_fr": "Faux rendu « erroné » ici, « non vrai » là",
+   "problem": "Deux formes pour « Faux » ; la paire scolaire établie est « Вярно / Невярно ».",
+   "fix": "„Невярно“ / „Вярно / Невярно“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.features.noCommitment / paywall.quiz.faq.a3.noTrial.play vs paywall.quiz.faq.a3.noTrial / paywall.discount.perMonth",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Без ангажимент / Без ангажимент vs Без обвързване / без ангажименти",
+   "gloss_fr": "sans engagement rendu par trois mots différents",
+   "problem": "« ангажимент » (singulier/pluriel) et « обвързване » alternent, y compris entre les deux variantes iOS/Android de la même FAQ ; « обвързване » est le terme naturel pour un abonnement.",
+   "fix": "Unifier sur „без обвързване“ : „Без обвързване, отказваш се по всяко време.“ / „на месец, без обвързване“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.pw.monthly / onboardingV2.pw.weekly / onboardingV2.pw.yearly vs paywall.plan.monthly / paywall.plan.yearly",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Месечен / Седмичен / Годишен vs Месечно / Годишно",
+   "gloss_fr": "Mensuel (adj. masc.) vs Mensuellement (adverbe)",
+   "problem": "Les noms de plans changent de forme grammaticale entre les deux paywalls.",
+   "fix": "paywall.plan.monthly „Месечен“, paywall.plan.yearly „Годишен“",
+   "surface": "ui"
+  },
+  {
+   "location": "offer.billed / onboardingV2.pw.monthlyBilling / onboardingV2.pw.weeklyBilling / onboardingV2.pw.yearlyBilling / onboardingV2.pw.thenPrice",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "таксуван / таксуван месечно / таксуван седмично / таксуван годишно / след това %@ (таксуван годишно).",
+   "gloss_fr": "facturé (participe adjectival isolé)",
+   "problem": "Participe calqué sur « facturé » ; le bulgare dit « таксува се … », forme d'ailleurs employée dans paywall.plan.billedYearly et pw.priceNoTrial.",
+   "fix": "„таксува се“ / „таксува се месечно“ / „таксува се седмично“ / „таксува се годишно“ / „след това %@ (таксува се годишно).“",
+   "surface": "ui"
+  },
+  {
+   "location": "library.filter.inProgress vs myCourses.tab.inProgress / library.status.inProgress",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "В ход vs В процес / В ПРОЦЕС",
+   "gloss_fr": "En cours rendu de deux façons",
+   "problem": "Deux libellés pour le même statut dans deux listes de cours.",
+   "fix": "В процес",
+   "surface": "ui"
+  },
+  {
+   "location": "account.delete.confirm / friends.handle.save / profile.mastery.hide / paywall.manageSubscription / offer.restore",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Изтриване / Запазване / Скриване на подробности / Управление на абонамента / Възстановяване на покупките",
+   "gloss_fr": "Suppression / Sauvegarde / Masquage… (noms verbaux) alors que les boutons voisins sont à l'impératif",
+   "problem": "Mélange nom verbal / impératif sur un même écran (ex. « Изтрий акаунта ми » puis bouton « Изтриване » ; « Виж подробности » puis « Скриване на подробности »).",
+   "fix": "„Изтрий“ / „Запази“ / „Скрий подробностите“ / „Управлявай абонамента си“ / „Възстанови покупките“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.final.subtitle / onboardingV2.aboard.title / onboardingV2.aboard.titleNamed / onboardingV2.aboard.subtitle / onboardingV2.welcome.title",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Добре дошъл в Sophia. / Добре дошъл на борда! / Добре дошъл на борда, {name}! / Добре дошъл в клуба на Sophia! / Добре дошъл в Sophia",
+   "gloss_fr": "Bienvenu (masculin singulier)",
+   "problem": "Masculin par défaut, remarqué par les utilisatrices ; en bulgare la formule neutre admise même en tutoiement est « Добре дошли ».",
+   "fix": "„Добре дошли в Sophia.⏎Започни да учиш веднага.“ / „Добре дошли на борда!“ / „Добре дошли на борда, {name}!“ / „Добре дошли в клуба на Sophia! …“ / „Добре дошли в Sophia“",
+   "surface": "ui"
+  },
+  {
+   "location": "account.provider",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Влязъл си с",
+   "gloss_fr": "Tu es connecté (masculin) avec",
+   "problem": "Participe masculin pour toutes les utilisatrices ; une étiquette neutre existe.",
+   "fix": "Вход с",
+   "surface": "ui"
+  },
+  {
+   "location": "course.dailyFreeDone",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Завършил си безплатния си курс за днес",
+   "gloss_fr": "Tu as terminé (masc.) ton cours gratuit du jour",
+   "problem": "Parfait au masculin ; l'aoriste est neutre et déjà utilisé dans paywall.course.title.",
+   "fix": "Завърши безплатния си курс за днес",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.trial.cta",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Готов съм",
+   "gloss_fr": "Je suis prêt (masculin)",
+   "problem": "Bouton au masculin ; « C'est parti » a un équivalent neutre utilisé ailleurs.",
+   "fix": "Да започваме",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.knowledge.subtitle",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Бъди честен, служи само за настройване на нивото.",
+   "gloss_fr": "Sois honnête (masc.), sert seulement à régler le niveau.",
+   "problem": "Deuxième proposition sans sujet et adjectif masculin.",
+   "fix": "Отговори честно — това служи само за настройване на нивото.",
+   "surface": "ui"
+  },
+  {
+   "location": "training.ob.algo.body",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Връщаме ти тестове, които вече си правил, точно навреме. Всички са тук.",
+   "gloss_fr": "On te ramène des quiz que tu as déjà faits (masc.), juste à temps.",
+   "problem": "Participe masculin ; formulation neutre possible.",
+   "fix": "Връщаме ти вече решените тестове точно навреме. Всички са тук, на едно място.",
+   "surface": "ui"
+  },
+  {
+   "location": "course.streak.message",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Ставаш непобедим в %@!",
+   "gloss_fr": "Tu deviens invincible (masc.) en Histoire !",
+   "problem": "Adjectif masculin et « непобедим в » (invincible dans une matière) n'est pas idiomatique pour « incollable ».",
+   "fix": "Вече си експерт по %@!",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.phone.1to2h / onboarding.phone.lessThan1h / onboarding.phone.moreThan4h vs onboarding.phone.2to4h",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "1ч до 2ч / По-малко от 1ч / Повече от 4ч vs 2 до 4 часа",
+   "gloss_fr": "1h à 2h (sans espace avant l'unité) vs 2 à 4 heures",
+   "problem": "Unité collée au chiffre (le bulgare écrit « 1 ч ») et formats incohérents entre options voisines.",
+   "fix": "„1–2 ч“ / „Под 1 ч“ / „Над 4 ч“ / „2–4 ч“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.phone.intensity.intense / onboarding.phone.intensity.light",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Много / Малко",
+   "gloss_fr": "Beaucoup / Peu (à côté de « Élevé » et « Modéré »)",
+   "problem": "Échelle hétérogène : deux adverbes de quantité au milieu d'adjectifs d'intensité.",
+   "fix": "„Интензивно“ / „Леко“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote1 (idem quote2, quote3, quote4)",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "„Благодарение на Sophia средният ми успех по история се вдигна с 3 точки този срок.”",
+   "gloss_fr": "guillemet fermant anglais ” au lieu du bulgare “",
+   "problem": "Les quatre citations ferment avec ” (U+201D) alors que le bulgare utilise „…“ (comme dans onboardingV2.review.quote) ; « се вдигна » est familier pour une moyenne.",
+   "fix": "„Благодарение на Sophia средният ми успех по история се повиши с 3 точки този срок.“ (et fermer les 3 autres citations avec “)",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.author1 / author2 / author3",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "Томас, ученик / Инес, последен клас / Камил, университет",
+   "gloss_fr": "Thomas, élève (prépa) / Inès, dernière classe / Camille, université",
+   "problem": "« prépa » est post-bac (donc « студент »), « terminale » se dit « 12-и клас », et « университет » n'est pas un statut de personne.",
+   "fix": "„Томас, студент“ / „Инес, 12-и клас“ / „Камил, студентка“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.quote2 / onboardingV2.exams.quote4",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Повтарям по 10 минути на ден… / Идеално за повторение в движение.",
+   "gloss_fr": "Je répète 10 minutes par jour / Parfait pour la répétition en déplacement",
+   "problem": "Pour « réviser » (scolaire) le bulgare dit « преговарям / преговор » ; « повтарям » se comprend comme « répéter ».",
+   "fix": "„Преговарям по 10 минути на ден и оценките ми наистина скочиха.“ / „Идеално за преговор в движение. Учителите ми забелязаха разликата.“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.exams.title / paywall.quiz.reviews.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Те подобриха оценките си / Те учат със Sophia",
+   "gloss_fr": "Ils ont amélioré leurs notes / Ils apprennent avec Sophia (pronom explicite)",
+   "problem": "Le pronom sujet « Те » en tête de titre est un calque du français ; le bulgare l'omet.",
+   "fix": "„Подобриха оценките си“ / „Напредват със Sophia“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.graph.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Твоят културен⏎напредък",
+   "gloss_fr": "Ton progrès culturel (sociétal)",
+   "problem": "« културен напредък » évoque le progrès d'une société, pas celui de tes connaissances.",
+   "fix": "Напредъкът ти⏎в знанията",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.objective.impress",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Да впечатля близките",
+   "gloss_fr": "Impressionner les proches (sans possessif)",
+   "problem": "Le possessif réfléchi « си » manque.",
+   "fix": "Да впечатля близките си",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.objective.reduceScroll",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "По-малко скролване",
+   "gloss_fr": "Moins de défilement (nom) parmi des options verbales « Да … »",
+   "problem": "Seule option de la liste à ne pas suivre le schéma « Да + verbe ».",
+   "fix": "Да скролвам по-малко",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.premiumGift.badge",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Безплатен подарък",
+   "gloss_fr": "Cadeau gratuit (pléonasme)",
+   "problem": "Pléonasme calqué sur l'anglais « free gift ».",
+   "fix": "Подарък за теб",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.trial.notifyTitle",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Ще ти кажем⏎1 ден преди края⏎на безплатния период",
+   "gloss_fr": "On te dira 1 jour avant la fin de la période gratuite",
+   "problem": "« ще ти кажем » est trop familier pour « on te préviendra » et « безплатния период » manque « пробен ».",
+   "fix": "Ще те предупредим⏎1 ден преди края⏎на пробния период",
+   "surface": "ui"
+  },
+  {
+   "location": "onboarding.loading.step3 / onboarding.loading.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Подготовка на пътя ти / Подготвяме пътя ти",
+   "gloss_fr": "Préparation de ta route / On prépare ta route",
+   "problem": "« път » (route) pour « parcours » sonne littéral ; les autres étapes parlent de programme.",
+   "fix": "„Подготовка на програмата ти“ / „Подготвяме програмата ти“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.features.row6",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Блокировка за приложенията, които те разсейват",
+   "gloss_fr": "Verrou (mécanique) pour les apps qui te distraient",
+   "problem": "« блокировка » est un terme mécanique ; l'app utilise « блокер » ailleurs pour la même fonction.",
+   "fix": "Блокер за приложенията, които те разсейват",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.intro.researchers.title",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "…и доктори на науките.",
+   "gloss_fr": "…et docteurs ès sciences (grade DSc, supérieur au doctorat)",
+   "problem": "« доктор на науките » est le grade supérieur bulgare, pas un simple PhD.",
+   "fix": "Написани от **истински изследователи** с докторска степен. Не от изкуствен интелект.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.mission.body1",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Нашата мисия: да направим ученето лесно, и за всички.",
+   "gloss_fr": "Notre mission : rendre l'apprentissage facile, et pour tous aussi.",
+   "problem": "Virgule avant « и » fautive, « accessible » a disparu, le sens glisse vers « et pour tous aussi ».",
+   "fix": "Нашата мисия: да направим ученето лесно и достъпно за всички.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.mission.body2",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "…в служба на една-единствена мисия…",
+   "gloss_fr": "…en service d'une seule mission…",
+   "problem": "« в служба на » calque « au service de » ; le bulgare dit « в името на ».",
+   "fix": "Нашият екип от преподаватели и дизайнери разчита на теб, за да продължи да създава страхотно съдържание в името на една-единствена мисия: да направи ученето лесно.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.mission.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Sophia е безплатна за изпробване.",
+   "gloss_fr": "Sophia est gratuite pour essai.",
+   "problem": "Calque de « free to try ».",
+   "fix": "Можеш да изпробваш Sophia безплатно.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.notifications.subtitle",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Дискретно напомняне, когато един курс наистина си заслужава времето ти. Нищо друго.",
+   "gloss_fr": "Un rappel discret quand un (= le chiffre un) cours vaut ton temps.",
+   "problem": "« един » comme article indéfini est un calque ; « jamais » a disparu.",
+   "fix": "Дискретно напомняне, когато има курс, който наистина си заслужава времето ти. Нищо друго, никога.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.objective.exams",
+   "severity": "mineur",
+   "category": "longueur",
+   "current": "Да се справям добре в ученето и на изпитите",
+   "gloss_fr": "Bien me débrouiller dans les études et aux examens",
+   "problem": "Option de choix trop longue et lourde par rapport aux autres puces.",
+   "fix": "Успех в училище и на изпитите",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.profile.nickname.reduceScreen",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Господар на времето",
+   "gloss_fr": "Maître du temps (sans article, contrairement aux autres surnoms)",
+   "problem": "Les autres surnoms sont définis (Любопитният ум, Изследователят, Стратегът, Блестящият).",
+   "fix": "Господарят на времето",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.profile.tagline.curiosity",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Любопитството ти няма граници — нека го нахраним.",
+   "gloss_fr": "Ta curiosité n'a pas de limites — donnons-lui à manger.",
+   "problem": "« нахраним » (donner à manger) ; pour une curiosité on dit « подхраним ».",
+   "fix": "Любопитството ти няма граници — нека го подхраним.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.questions.q2 / q7 / q8",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Как Наполеон спечели при Улм? / Коя всъщност беше Клеопатра? / Как се роди Вселената?",
+   "gloss_fr": "Comment Napoléon gagna à Ulm (verbe sans objet) / Qui était (imparfait) Cléopâtre / Comment naquit l'Univers",
+   "problem": "Choix de verbes/temps peu naturels pour des questions d'histoire (« спечели » attend un objet, « беше » appelle le parfait, « се роди » est littéral).",
+   "fix": "„Как Наполеон победи при Улм?“ / „Коя всъщност е била Клеопатра?“ / „Как е възникнала Вселената?“",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.questions.q5",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Как функционира публичният дълг?",
+   "gloss_fr": "Comment fonctionne la dette publique (terme calqué)",
+   "problem": "Le terme courant en bulgare est « държавен дълг ».",
+   "fix": "Как работи държавният дълг?",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.screenTime.caption",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Средно сега нашите потребители прекарват само 39 минути на ден на телефона си.",
+   "gloss_fr": "En moyenne maintenant nos utilisateurs passent seulement 39 minutes…",
+   "problem": "Ordre des mots calqué, « средно сега » en tête est maladroit.",
+   "fix": "Нашите потребители вече прекарват средно само 39 минути на ден на телефона си.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.weeks.subtitle",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Това е твоята година. В червено: времето на екрана ти.",
+   "gloss_fr": "En rouge : le temps sur (la surface de) ton écran.",
+   "problem": "« времето на екрана » est un calque ; le bulgare dit « време пред екрана ».",
+   "fix": "Това е твоята година. В червено: времето пред екрана.",
+   "surface": "ui"
+  },
+  {
+   "location": "onboardingV2.trial.step2.detail",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "Ще ти напомним с известие. Отмени когато искаш, до 15 секунди.",
+   "gloss_fr": "Annule quand tu veux, dans un délai de 15 secondes.",
+   "problem": "« до 15 секунди » se lit comme une fenêtre de 15 s pour annuler, alors que le source dit que l'annulation prend 15 s.",
+   "fix": "Ще ти напомним с известие. Отказваш се за 15 секунди.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.blocker.subtitle",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "{n} дни безплатен пробен период, за да изпробваш блокера.",
+   "gloss_fr": "{n} jours période d'essai gratuite pour essayer le blocker.",
+   "problem": "Juxtaposition « дни безплатен пробен период » sans liaison.",
+   "fix": "{n} дни безплатно, за да изпробваш блокера.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.blocker.title",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Поеми най-накрая контрол над времето си с блокера.",
+   "gloss_fr": "Prends enfin (mal placé) le contrôle…",
+   "problem": "Position de « най-накрая » peu naturelle.",
+   "fix": "Най-накрая поеми контрол над времето си с блокера.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.course.stat.label",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "курсове / ден",
+   "gloss_fr": "cours (forme non comptée) / jour, affiché après « 6 »",
+   "problem": "Après un chiffre la forme comptée « курса » est obligatoire.",
+   "fix": "курса / ден",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.course.stat.caption / tiktokBlocker.toggle.subtitle.premium",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "четени средно от членове на Sophia Premium / Само за членове на Premium",
+   "gloss_fr": "lus par des membres de Sophia Premium",
+   "problem": "« членове » (membres d'un club) ; pour un abonnement on dit « абонати ».",
+   "fix": "„четени средно от абонатите на Sophia Premium“ / „Само за абонати на Premium“",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.discount.cta",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Вземам я сега",
+   "gloss_fr": "Je la prends maintenant (pronom sans antécédent visible)",
+   "problem": "Pronom « я » sans référent sur un bouton.",
+   "fix": "Възползвай се сега",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.discount.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Флаш оферта, само днес",
+   "gloss_fr": "Flash offre (anglicisme)",
+   "problem": "« флаш оферта » est un anglicisme marketing ; un équivalent bulgare existe.",
+   "fix": "Светкавична оферта, само днес",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.error.retry",
+   "severity": "mineur",
+   "category": "autre",
+   "current": "Отново",
+   "gloss_fr": "Encore / À nouveau (seul)",
+   "problem": "Bouton trop elliptique pour « Réessayer » ; ailleurs l'app dit « Опитай отново ».",
+   "fix": "Опитай отново",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.header",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Стани най-интересният⏎човек⏎в стаята.",
+   "gloss_fr": "Deviens la personne la plus intéressante dans la pièce.",
+   "problem": "« в стаята » calque l'anglais « in the room » ; l'idiome bulgare est « в компанията ».",
+   "fix": "Стани най-интересният⏎човек⏎в компанията.",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.demo.badge.slider",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "Оценка",
+   "gloss_fr": "Note / évaluation",
+   "problem": "« Оценка » = note scolaire ; le type de question est « estimation ».",
+   "fix": "Познай",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.demo.mcq.q",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Кой нарисува Звездна нощ?",
+   "gloss_fr": "Qui peignit Nuit étoilée (titre sans guillemets)",
+   "problem": "Titre d'œuvre sans guillemets bulgares, et aoriste moins naturel que le parfait ici.",
+   "fix": "Кой е нарисувал „Звездна нощ“?",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.demo.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Изпробвай се след всеки курс",
+   "gloss_fr": "Essaie-toi après chaque cours",
+   "problem": "« изпробвай се » n'est pas l'expression pour « teste-toi ».",
+   "fix": "Провери знанията си след всеки курс",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.quiz.faq.q1",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Абонаментът отменя ли се лесно?",
+   "gloss_fr": "L'abonnement s'annule-t-il facilement ? (ordre lourd)",
+   "problem": "Ordre des mots peu naturel pour une question.",
+   "fix": "Лесно ли се отменя абонаментът?",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.training.title",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Закрепи наученото завинаги",
+   "gloss_fr": "Fixe (visse) ce que tu as appris pour toujours",
+   "problem": "« закрепи » est physique ; pour des connaissances on dit « затвърди ».",
+   "fix": "Затвърди наученото — завинаги",
+   "surface": "ui"
+  },
+  {
+   "location": "paywall.training.footnote",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Интервалното повторение е най-доказаният начин знанието да остане.",
+   "gloss_fr": "…la façon la plus prouvée pour que le savoir reste.",
+   "problem": "« да остане » elliptique (reste où ?), calque de « stick » qui revient dans plusieurs chaînes.",
+   "fix": "Интервалното повторение е най-добре доказаният метод за трайно запомняне.",
+   "surface": "ui"
+  },
+  {
+   "location": "purchase.pending",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Чакащо плащане. Достъпът ти ще се активира веднага щом бъде потвърдено.",
+   "gloss_fr": "Paiement attendant. Ton accès s'activera dès que confirmé.",
+   "problem": "« Чакащо плащане » calque « pending payment ».",
+   "fix": "Плащането се обработва. Достъпът ти ще се активира веднага след потвърждението.",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.form.email.placeholder",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "ти@email.com",
+   "gloss_fr": "toi@email.com",
+   "problem": "Le jeu de mots « ton@email.com » ne fonctionne pas en bulgare et ressemble à une faute.",
+   "fix": "име@email.com",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.role.slideshow.income / ambassador.role.ugc.income",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "€30-100 / месец / €50-1000 / месец",
+   "gloss_fr": "€30-100 (symbole avant le nombre, trait d'union)",
+   "problem": "En bulgare le symbole monétaire suit le nombre et la plage prend un tiret demi-cadratin.",
+   "fix": "„30–100 € / месец“ / „50–1000 € / месец“",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.role.ugc.body",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Печалбата зависи от гледанията.",
+   "gloss_fr": "Le bénéfice (profit) dépend des vues.",
+   "problem": "« печалба » = profit ; il s'agit de revenus (« приходи », cf. ambassador.stat.income « Доходи »).",
+   "fix": "Ти правиш публикации в TikTok. Приходите зависят от гледанията. Даваме ти UGC примери и обучение, за да се справяш отлично.",
+   "surface": "ui"
+  },
+  {
+   "location": "ambassador.form.error.generic / feedback.error.generic",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Сега не се получи. Опитай отново по-късно.",
+   "gloss_fr": "Là, ça n'a pas marché. Réessaie plus tard.",
+   "problem": "Trop vague et familier : on ne dit pas ce qui a échoué.",
+   "fix": "Изпращането не успя. Опитай отново по-късно.",
+   "surface": "ui"
+  },
+  {
+   "location": "audio.deleteDownload",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Изтрий изтеглянето",
+   "gloss_fr": "Supprime le téléchargement (l'action)",
+   "problem": "On supprime le fichier téléchargé, pas l'action de télécharger.",
+   "fix": "Изтрий изтегления файл",
+   "surface": "ui"
+  },
+  {
+   "location": "audio.playNext",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "Пусни следващо",
+   "gloss_fr": "Lance le suivant (ambigu avec « passer au suivant »)",
+   "problem": "« Lire ensuite » (mettre en tête de file) se confond avec « piste suivante ».",
+   "fix": "Пусни след това",
+   "surface": "ui"
+  },
+  {
+   "location": "audio.queue.empty",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Нищо не следва. Задръж върху курс, за да го добавиш към опашката.",
+   "gloss_fr": "Rien ne suit.",
+   "problem": "« Нищо не следва » est une phrase étrange pour une file vide.",
+   "fix": "Опашката е празна. Задръж върху курс, за да го добавиш.",
+   "surface": "ui"
+  },
+  {
+   "location": "collections.subtitle",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Насочени пътеки, които свързват идеите.",
+   "gloss_fr": "Sentiers orientés qui relient les idées.",
+   "problem": "« насочени » (orientés/dirigés) ne rend pas « guidés » ; « entre elles » a disparu.",
+   "fix": "Водени пътеки, които свързват идеите една с друга.",
+   "surface": "ui"
+  },
+  {
+   "location": "collections.badge.complete",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "ГОТОВО",
+   "gloss_fr": "FINI (neutre) sur une collection (féminin)",
+   "problem": "Le badge ne s'accorde pas avec « колекция » alors que collections.complete dit « Колекцията е завършена ».",
+   "fix": "ЗАВЪРШЕНА",
+   "surface": "ui"
+  },
+  {
+   "location": "course.sources.hint",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Докосни, за да видиш препратките",
+   "gloss_fr": "Touche pour voir les renvois/liens",
+   "problem": "« препратки » = renvois/hyperliens ; il s'agit des sources.",
+   "fix": "Докосни, за да видиш източниците",
+   "surface": "ui"
+  },
+  {
+   "location": "dailyQuestion.widget.description",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "По един въпрос на ден, отговорът за 5 минути.",
+   "gloss_fr": "Une question par jour, la réponse (défini) en 5 minutes.",
+   "problem": "Article défini inutile, phrase décousue.",
+   "fix": "По един въпрос на ден, с отговор за 5 минути.",
+   "surface": "ui"
+  },
+  {
+   "location": "path.locked.level / explain.path.body",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Премини теста на ниво %d, за да отключиш това ниво. / …а после премини теста му…",
+   "gloss_fr": "Traverse le quiz du niveau %d…",
+   "problem": "« премини теста » calque « pass the test » ; le bulgare dit « издържи теста ».",
+   "fix": "„Издържи теста на ниво %d, за да отключиш това.“ / „Завърши курсовете от едно ниво по ред, а после издържи теста му, за да отключиш следващото ниво.“",
+   "surface": "ui"
+  },
+  {
+   "location": "favorites.empty.subtitle",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Докосни сърцето на курс,⏎за да го намериш тук.",
+   "gloss_fr": "Touche le cœur d'un cours (son centre) pour le retrouver ici.",
+   "problem": "« сърцето на курс » se lit comme « le cœur (centre) d'un cours » ; l'icône s'appelle « сърчице ».",
+   "fix": "Докосни сърчицето на даден курс,⏎за да го намериш тук.",
+   "surface": "ui"
+  },
+  {
+   "location": "feedback.technicalNote",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "…се прикачват автоматично, за да ни помогнат.",
+   "gloss_fr": "…sont joints automatiquement pour nous aider (à quoi ?).",
+   "problem": "Finale elliptique.",
+   "fix": "Версията на приложението, езикът и моделът на устройството се прикачват автоматично, за да можем да разберем проблема.",
+   "surface": "ui"
+  },
+  {
+   "location": "friends.handle.rules",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "3–20 знака, само букви и цифри, трябва да започват с буква.",
+   "gloss_fr": "…doivent (pluriel) commencer par une lettre.",
+   "problem": "Le sujet est le pseudo (singulier), pas les caractères.",
+   "fix": "3–20 знака, само букви и цифри, трябва да започва с буква.",
+   "surface": "ui"
+  },
+  {
+   "location": "friends.period.all",
+   "severity": "mineur",
+   "category": "longueur",
+   "current": "За цялото време",
+   "gloss_fr": "Pour tout le temps",
+   "problem": "Trop long pour un segment de filtre face à « 7 дни ».",
+   "fix": "Общо",
+   "surface": "ui"
+  },
+  {
+   "location": "profile.quiz.lockedSubtitle",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Предлага се с безплатния пробен период — 3 дни безплатно",
+   "gloss_fr": "Se propose (sing.) avec l'essai gratuit — 3 jours gratuits",
+   "problem": "« Предлага се » est bancal et ne s'accorde pas avec « quiz » (pluriel « Disponibles »).",
+   "fix": "Достъпни с безплатния пробен период — 3 дни подарък",
+   "surface": "ui"
+  },
+  {
+   "location": "quiz.feedback.far",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Недалеч",
+   "gloss_fr": "Pas loin (adverbe de lieu isolé)",
+   "problem": "« Недалеч » seul se comprend géographiquement.",
+   "fix": "Близо си",
+   "surface": "ui"
+  },
+  {
+   "location": "quiz.xpProgress",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "XP прогрес",
+   "gloss_fr": "XP progrès (anglicisme)",
+   "problem": "« прогрес » alors que l'app dit « напредък » partout ailleurs.",
+   "fix": "Напредък в XP",
+   "surface": "ui"
+  },
+  {
+   "location": "settings.appearance.dark / settings.appearance.hint",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Нощ / Автоматично следва режима на телефона.",
+   "gloss_fr": "Nuit (nom) à côté de « Светла » (adjectif) ; Automatique (sans guillemets) suit le mode du téléphone",
+   "problem": "Options de formes différentes (nom / adjectif / adverbe) et nom d'option non délimité dans l'aide.",
+   "fix": "„Тъмна“ / „„Автоматично“ следва режима на телефона.“",
+   "surface": "ui"
+  },
+  {
+   "location": "settings.privacy.title / settings.terms.title",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Поверителност / Условия",
+   "gloss_fr": "Confidentialité / Conditions (au lieu de Politique de confidentialité / Conditions générales)",
+   "problem": "Les intitulés complets du source sont raccourcis et deviennent identiques aux liens courts du paywall.",
+   "fix": "„Политика за поверителност“ / „Общи условия“",
+   "surface": "ui"
+  },
+  {
+   "location": "share.card.title",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "Споделѝ Sophia",
+   "gloss_fr": "Partage Sophia (avec accent grave de désambiguïsation)",
+   "problem": "L'accent sur « и » est inutile ici et se rend mal dans certaines polices.",
+   "fix": "Сподели Sophia",
+   "surface": "ui"
+  },
+  {
+   "location": "training.ob.algo.highlight.label",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "за траен спомен, който наистина остава.",
+   "gloss_fr": "pour un souvenir durable qui reste vraiment.",
+   "problem": "« спомен » = souvenir d'un événement ; il s'agit de la mémoire/rétention.",
+   "fix": "за трайна памет, която наистина остава.",
+   "surface": "ui"
+  },
+  {
+   "location": "training.ob.recall.stat.highlight",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "2,2 × повече",
+   "gloss_fr": "2,2 × (espace avant ×) plus",
+   "problem": "Espace avant « × » incohérent avec « 0,5× до 2× » du paywall audio.",
+   "fix": "2,2× повече",
+   "surface": "ui"
+  },
+  {
+   "location": "training.ob.recall.stat.prefix / training.ob.recall.stat.suffix",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "…редовните потребители на Sophia Упражнения запомнят / от курсовете си, отколкото тези, които не ги ползват.",
+   "gloss_fr": "les utilisateurs réguliers de « Sophia Exercices » retiennent … que ceux qui ne les (les cours ?) utilisent pas",
+   "problem": "Nom de fonctionnalité incohérent (« Упражненията » ailleurs) et pronom « ги » au référent ambigu.",
+   "fix": "prefix : „След една седмица редовните потребители на Упражненията запомнят“ ; suffix : „информация от курсовете си, отколкото останалите.“",
+   "surface": "ui"
+  },
+  {
+   "location": "training.ob.recall.title / training.ob.welcome.line",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Питаме те, за да остане наученото. / Това са Упражненията.",
+   "gloss_fr": "On te questionne pour que l'appris reste. / Ce sont les Exercices.",
+   "problem": "Deux chaînes trop elliptiques et sèches par rapport au source (mémorisation active, bienvenue).",
+   "fix": "„Тук използваме активно припомняне, за да запомниш курсовете си наистина.“ / „Добре дошли в Упражненията — мястото за преговор.“",
+   "surface": "ui"
+  },
+  {
+   "location": "tiktokBlocker.status.idle.subtitle",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Включи го, за да ти иска TikTok курс.",
+   "gloss_fr": "Active-le pour que te demande TikTok un cours (ordre bancal).",
+   "problem": "Ordre des mots peu naturel.",
+   "fix": "Включи го и TikTok ще ти иска курс.",
+   "surface": "ui"
+  },
+  {
+   "location": "course_195_lancelot_guenievre_et_la_table_ronde/s2.b3.text",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "Само **Галахад**, **Парсифал** и **Борс** стигнаха до Граала. **Ланселот от Езерото**",
+   "gloss_fr": "« Parsifal » (forme wagnérienne) et « Lancelot du Lac » traduit mot à mot",
+   "problem": "Dans la tradition arthurienne bulgare, Perceval est « Персивал » et Lancelot du Lac « Ланселот Езерни ».",
+   "fix": "Само **Галахад**, **Персивал** и **Борс** стигат до Граала. **Ланселот Езерни**",
+   "surface": "courses"
+  },
+  {
+   "location": "course_195_lancelot_guenievre_et_la_table_ronde/s0.b0.text",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "смесица от мъглява история, келтски фолклор и християнски нрав",
+   "gloss_fr": "« un mélange d'histoire floue, de folklore celte et de tempérament chrétien »",
+   "problem": "« нрав » signifie caractère/tempérament ; « morale » se dit « морал ».",
+   "fix": "смесица от мъглява история, келтски фолклор и християнски морал",
+   "surface": "courses"
+  },
+  {
+   "location": "course_195_lancelot_guenievre_et_la_table_ronde/s4.b0.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Гуиневира свърши в манастир, Ланселот като отшелник. Артур, казват, тръгна към острова **Авалон**.",
+   "gloss_fr": "« Guenièvre a fini dans un couvent, Lancelot en ermite … vers l'île-la Avalon »",
+   "problem": "« свърши » est brutal (« a crevé »), et « острова Авалон » porte un article indu devant un nom propre.",
+   "fix": "Гуиневир се оттегля в манастир, Ланселот става отшелник. Артур, казват, отплава към остров **Авалон**.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_195_lancelot_guenievre_et_la_table_ronde/hero.hook",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Камелот няма да се оправи от това.",
+   "gloss_fr": "« Camelot ne va pas s'en remettre (familier : ne va pas se remettre d'aplomb) »",
+   "problem": "Tournure trop familière pour une accroche ; « се оправи » évoque quelqu'un qui guérit d'un rhume.",
+   "fix": "Камелот никога няма да се възстанови.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/hero.hook",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Как един изселен търговец за двадесет години роди световна цивилизация.",
+   "gloss_fr": "« Comment un marchand déplacé/réinstallé a accouché d'une civilisation mondiale »",
+   "problem": "« изселен » (réinstallé) n'est pas « exilé », et « роди » se dit mal d'un homme.",
+   "fix": "Как един прокуден търговец създава световна цивилизация за двадесет години.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/description",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "бележи година 1 на исляма",
+   "gloss_fr": "« marque année 1 de l'islam »",
+   "problem": "« година 1 » n'est pas idiomatique ; on dit « първата година ».",
+   "fix": "бележи първата година на исляма",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s1.b1.text",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "Каабата криеше около **360 идола**",
+   "gloss_fr": "« La Kaaba cachait environ 360 idoles »",
+   "problem": "« abritait » (hébergeait) rendu par « криеше » (cachait), ce qui change le sens.",
+   "fix": "В Каабата се помещавали около **360 идола**",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "той даде **обща прошка**",
+   "gloss_fr": "« il a donné un pardon commun »",
+   "problem": "« обща прошка » n'existe pas comme expression ; on parle d'« всеобща амнистия ».",
+   "fix": "той обявява **всеобща амнистия**",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s0.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "държава от Испания до вратите на Индия",
+   "gloss_fr": "« un État de l'Espagne jusqu'aux portes (de maison) de l'Inde »",
+   "problem": "L'idiome bulgare est « портите на Индия », « врати » désigne des portes de maison.",
+   "fix": "държава от Испания до портите на Индия",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/s3.b0.text",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "с **10.000 души**",
+   "gloss_fr": "« avec 10.000 hommes » (point comme séparateur de milliers)",
+   "problem": "Le séparateur de milliers bulgare est l'espace (10 000) ; le point se lit comme un séparateur décimal ou une erreur ; répété partout (3.000, 9.000, 65.000, 100.000, 7.000, 20.000).",
+   "fix": "с **10 000 души**",
+   "surface": "courses"
+  },
+  {
+   "location": "course_1_la_naissance_de_l_islam_622/description",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "През 622 един търговец от Мека",
+   "gloss_fr": "« En 622 un marchand » (sans l'abréviation « г. » obligatoire)",
+   "problem": "En bulgare une année isolée est suivie de « г. » ; l'omission est fréquente dans les cours d'histoire alors que d'autres cours l'ont correctement.",
+   "fix": "През 622 г. един търговец от Мека",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s1.b0.text",
+   "severity": "mineur",
+   "category": "contresens",
+   "current": "но познава и упадъка, и дълга",
+   "gloss_fr": "« mais il connaît aussi la déchéance et le devoir »",
+   "problem": "« дълга » au singulier se lit d'abord « le devoir » ; les dettes se disent « дълговете ».",
+   "fix": "но познава и упадъка, и дълговете",
+   "surface": "courses"
+  },
+  {
+   "location": "course_100_les_fleurs_du_mal_baudelaire/s4.b4.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "**Цветя на злото** обръща поезията, като вади красота от злото",
+   "gloss_fr": "« Les Fleurs du Mal retourne la poésie en sortant de la beauté du mal »",
+   "problem": "« révolutionnent » rendu par « обръща » ; « вади » (sortir, extraire physiquement) est familier.",
+   "fix": "**Цветя на злото** преобразява поезията, като извлича красота от злото и от градското всекидневие.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s0.b1.text",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "*Импресия, изгрев слънце*",
+   "gloss_fr": "« Impression, lever soleil » (titre non établi)",
+   "problem": "La forme bulgare consacrée du tableau est « Импресия, изгряващо слънце ».",
+   "fix": "*Импресия, изгряващо слънце*",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s2.b3.text (idem s4.b0, s4.b3)",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "те слагат петна чист цвят едно до друго … свободното петно",
+   "gloss_fr": "« ils posent des taches de couleur pure … la tache libre »",
+   "problem": "La « touche » du peintre se dit « мазка » ; « петно » est une tache.",
+   "fix": "те полагат мазки чист цвят една до друга … свободната мазка",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s2.b3.text",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "[[Мишел-Йожен Шеврол]]",
+   "gloss_fr": "« Chevrol » au lieu de Chevreul",
+   "problem": "Translittération usuelle : Шеврьол.",
+   "fix": "[[Мишел-Йожен Шеврьол]]",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s1.b0.text",
+   "severity": "mineur",
+   "category": "mt_artefact",
+   "current": "Искат точна рисунка и гладка повърхност",
+   "gloss_fr": "« Ils veulent un dessin précis » (sujet indéterminé, « on exige »)",
+   "problem": "Le « on » impersonnel devient un « ils » sans antécédent ; le bulgare préfère la forme impersonnelle.",
+   "fix": "Изисква се прецизна рисунка и гладка повърхност, без следа от четка.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s3.b2.text",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "благодарение на [[Японски щампи]]: асиметрични кадри",
+   "gloss_fr": "« grâce à Estampes Japonaises » (majuscule et sans article en milieu de phrase)",
+   "problem": "Majuscule injustifiée et absence d'article défini sur un terme de glossaire inséré tel quel.",
+   "fix": "благодарение на [[японските щампи]]: асиметрични кадри",
+   "surface": "courses"
+  },
+  {
+   "location": "course_122_la_naissance_de_l_impressionnisme/s4.b0.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "[[Неоимпресионизъм]] на Сьора после систематизира петното в точки.",
+   "gloss_fr": "« Néo-impressionnisme de Seurat » (sans article)",
+   "problem": "Sujet sans article défini, et « петно » pour la touche.",
+   "fix": "[[Неоимпресионизмът]] на Сьора после систематизира мазката в точки.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.b3.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "богът **Пан**, ядосан че е отхвърлен, нарежда Ехо да бъде накъсана",
+   "gloss_fr": "« le dieu Pan, fâché qu'il est rejeté, ordonne qu'Écho soit déchirée (en petits bouts, comme du papier) »",
+   "problem": "Virgule obligatoire avant « че » manquante ; « накъсана » se dit du papier, pas d'un corps.",
+   "fix": "богът **Пан**, ядосан, че е отхвърлен, заповядва Ехо да бъде разкъсана на парчета",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Собствените ѝ желания вече нямат език.",
+   "gloss_fr": "« Ses propres désirs n'ont plus de langue (organe). »",
+   "problem": "Calque de « n'ont plus de langue » ; en bulgare on dirait « нямат глас ».",
+   "fix": "Собствените ѝ желания вече нямат глас.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s4.b1.text",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "**Фройд** публикува „Към въвеждане в нарцисизма“",
+   "gloss_fr": "« Freud publie “Vers une introduction au narcissisme” »",
+   "problem": "Le titre bulgare usuel de l'essai est « Въведение в нарцисизма ».",
+   "fix": "**Фройд** публикува „Въведение в нарцисизма“",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s1.b0.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "**Ехо** е [[Ореад]], планинска нимфа",
+   "gloss_fr": "« Écho est Oréade (forme masculine/sans flexion) »",
+   "problem": "Le nom est féminin en bulgare : « ореада ».",
+   "fix": "**Ехо** е [[ореада]], планинска нимфа",
+   "surface": "courses"
+  },
+  {
+   "location": "course_166_narcisse_et_echo/s2.b1.text",
+   "severity": "mineur",
+   "category": "mt_artefact",
+   "current": "В гората Ехо го видя и се влюби. … тя чакаше. Нарцис викна",
+   "gloss_fr": "« Dans les bois Écho le vit et tomba amoureuse… » (aoriste alors que les sections précédentes sont au présent)",
+   "problem": "Passage brutal du présent (s1, s2.b0) à l'aoriste ; le récit mythologique doit garder un seul temps.",
+   "fix": "В гората Ехо го вижда и се влюбва. Неспособна да проговори първа, тя чака. Нарцис вика: „Има ли някой?“",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s4.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "подтиква НАТО да плете партньорства",
+   "gloss_fr": "« incite l'OTAN à tricoter des partenariats »",
+   "problem": "« nouer » rendu par « плете » (tricoter) ; on dit « изгражда / установява партньорства ».",
+   "fix": "подтиква НАТО да изгражда партньорства с Япония, Южна Корея или Австралия",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s1.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "който слага принцип на колективна отбрана … твърде скъп, за да се пробва",
+   "gloss_fr": "« qui met un principe de défense collective … trop cher pour qu'on l'essaie (familier) »",
+   "problem": "« établit » → « слага » (poser un objet) et « се пробва » est familier.",
+   "fix": "който установява принципа на колективната отбрана … твърде скъп, за да бъде рискуван",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s2.b1.text",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "НАТО почна да се намесва извън територията си",
+   "gloss_fr": "« l'OTAN a commencé (familier “почна”) à intervenir »",
+   "problem": "« почна » est oral/familier dans un texte par ailleurs neutre (même chose pour « почва » dans Dostoïevski et Roméo).",
+   "fix": "НАТО започва да се намесва извън територията си",
+   "surface": "courses"
+  },
+  {
+   "location": "course_207_l_otan_a_quoi_ca_sert_encore/s3.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Нашествието в Украйна от Русия на 24 февруари 2022",
+   "gloss_fr": "« L'invasion en Ukraine par la Russie » (ordre des mots calqué)",
+   "problem": "Ordre des compléments calqué du français ; le bulgare met l'adjectif devant.",
+   "fix": "Руското нашествие в Украйна на 24 февруари 2022 г.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s0.b0.text (idem s2.b0.text „Черния вторник“)",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "На **24 октомври 1929**, **Черния четвъртък**, нюйоркската борса се срина.",
+   "gloss_fr": "« le Jeudi noir » avec l'article court (forme complément) alors qu'il est en apposition au sujet",
+   "problem": "Article défini court « Черния » là où l'apposition appelle la forme pleine « Черният » ; « Нюйоркската » prend une majuscule.",
+   "fix": "На **24 октомври 1929 г.**, **Черният четвъртък**, Нюйоркската борса се срива.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s3.b1.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "(да сваляш цени и заплати, за да „оздравиш“)",
+   "gloss_fr": "« (baisser prix et salaires pour que tu “guérisses”) »",
+   "problem": "« оздравиш » est intransitif (guérir soi-même) ; « assainir » demande un objet.",
+   "fix": "(сваляне на цените и заплатите, за да се „оздрави“ икономиката)",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s4.b1.e2.title",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Нов курс",
+   "gloss_fr": "« Nouveau cours » (sans article) alors que le cours dit « Новият курс » ailleurs",
+   "problem": "Incohérence de terme dans le même cours ; la forme établie est « Новият курс ».",
+   "fix": "Новият курс",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/s2.b0.text",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "дойдоха единадесет милиона заповеди за продажба",
+   "gloss_fr": "« onze millions d'ordres (commandements) de vente »",
+   "problem": "En bourse l'ordre se dit « нареждане », pas « заповед » (ordre militaire).",
+   "fix": "постъпват единадесет милиона нареждания за продажба",
+   "surface": "courses"
+  },
+  {
+   "location": "course_18_la_grande_depression_1929/hero.hook",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "и светът падна в десетилетие на мизерия",
+   "gloss_fr": "« et le monde est tombé dans une décennie de misère »",
+   "problem": "« падна в » ne se dit pas d'une période ; l'idiome est « потъва в ».",
+   "fix": "и светът потъва в десетилетие на мизерия",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s3.b0.text",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Съдията **Порфирий Петрович**",
+   "gloss_fr": "« Le juge Porfiri Petrovitch »",
+   "problem": "Dans la tradition bulgare du roman, Porfiri est « следователят » (juge d'instruction), pas « съдия ».",
+   "fix": "Следователят **Порфирий Петрович**",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s2.b0.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "която смята за безполезна и вредна на обществото",
+   "gloss_fr": "« nuisible à-la société » (mauvaise préposition)",
+   "problem": "« вредна » se construit avec « за », pas « на ».",
+   "fix": "която смята за безполезна и вредна за обществото",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/s4.b0.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "**Ницше** ще познае по-късно в Достоевски изключителен психолог",
+   "gloss_fr": "« Nietzsche connaîtra plus tard en Dostoïevski… »",
+   "problem": "« reconnaître » = « разпознае » ; « познае » signifie deviner/connaître.",
+   "fix": "По-късно **Ницше** ще разпознае в Достоевски изключителен психолог на вината и прегрешението.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_107_crime_et_chatiment_dostoievski/description",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Достоевски обръща престъплението в лаборатория на съвестта",
+   "gloss_fr": "« Dostoïevski retourne le crime en laboratoire »",
+   "problem": "« transformer en » = « превръща в » ; « обръща в » est un calque récurrent dans tout le corpus.",
+   "fix": "Достоевски превръща престъплението в лаборатория на съвестта и изкуплението.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s0.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "пари, които можеха да хранят болници или училища",
+   "gloss_fr": "« de l'argent qui aurait pu nourrir des hôpitaux ou des écoles »",
+   "problem": "« financer » rendu par « хранят » (nourrir) : image étrange en bulgare.",
+   "fix": "пари, с които можеха да се финансират болници или училища",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/hero.hook (idem s1.b3.text)",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Каймановите острови броят 65.000 жители",
+   "gloss_fr": "« Les îles Caïmans comptent (dénombrent) 65.000 habitants »",
+   "problem": "« compter » au sens d'« avoir » ne se traduit pas par « броят » ; même calque dans le cours OTAN.",
+   "fix": "Каймановите острови имат 65 000 жители и над 100 000 фирми.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s1.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "можеш да създадеш фирма-екран",
+   "gloss_fr": "« tu peux créer une firme-écran »",
+   "problem": "« фирма-екран » est un calque ; le bulgare dit « фиктивна фирма » ou « куха фирма ».",
+   "fix": "можеш да създадеш фиктивна фирма",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s2.b0.text (idem course_206/s4.b2.text « сечиво на британско имперско господство »)",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "Главното сечиво се нарича [[трансферно ценообразуване]]",
+   "gloss_fr": "« Le principal outil (outil à main, archaïque) s'appelle… »",
+   "problem": "« сечиво » désigne un outil tranchant/manuel, archaïque ; pour un outil abstrait on dit « инструмент ».",
+   "fix": "Основният инструмент се нарича [[трансферно ценообразуване]]",
+   "surface": "courses"
+  },
+  {
+   "location": "course_212_les_paradis_fiscaux_expliques/s0.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "са настанени там",
+   "gloss_fr": "« y sont logés (comme des personnes) »",
+   "problem": "« логés » calqué par « настанени » (installés dans un logement), impropre pour de l'argent.",
+   "fix": "са укрити там",
+   "surface": "courses"
+  },
+  {
+   "location": "course_104_romeo_et_juliette_shakespeare/s1.b2.text (idem course_195/s3.b0.text)",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "**[[Средновековна придворна любов]]**",
+   "gloss_fr": "« amour de cour médiéval » (terme non consacré)",
+   "problem": "Le terme littéraire établi en bulgare est « куртоазна любов ».",
+   "fix": "**[[Средновековна куртоазна любов]]**",
+   "surface": "courses"
+  },
+  {
+   "location": "course_104_romeo_et_juliette_shakespeare/s1.b2.text",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "влюбен в Розалинда",
+   "gloss_fr": "« amoureux de Rosalinde » (personnage de Comme il vous plaira)",
+   "problem": "Dans les traductions bulgares de la pièce le personnage est « Розалина » (Rosaline).",
+   "fix": "влюбен в Розалина",
+   "surface": "courses"
+  },
+  {
+   "location": "course_104_romeo_et_juliette_shakespeare/s2.b2.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Финалните самоубийства твърдят абсолютна свобода там, където светът вече не им оставя място.",
+   "gloss_fr": "« Les suicides finaux prétendent une liberté absolue »",
+   "problem": "« твърдят » (prétendre, affirmer un fait) ne prend pas un nom abstrait comme objet ; « affirment » = « утвърждават ».",
+   "fix": "Финалните самоубийства утвърждават абсолютна свобода там, където светът вече не оставя място за тях.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_104_romeo_et_juliette_shakespeare/s3.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Пиесата чете вендетата като мотор на разрушение.",
+   "gloss_fr": "« La pièce lit la vendetta comme moteur de destruction. »",
+   "problem": "« analyse » rendu par « чете » (lit), calque d'un usage critique anglo-français peu naturel en bulgare.",
+   "fix": "Пиесата разглежда вендетата като двигател на разрушението.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_104_romeo_et_juliette_shakespeare/s1.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "тонът пада завинаги в трагедията",
+   "gloss_fr": "« le ton tombe pour toujours dans la tragédie »",
+   "problem": "« bascule dans » calqué ; « пада в » ne se dit pas d'un ton.",
+   "fix": "тонът окончателно преминава в трагедия",
+   "surface": "courses"
+  },
+  {
+   "location": "course_206_le_canal_de_suez_pourquoi_il_est_strateg/s4.b0.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "Египет пусна през 2015 „новия Суецки канал“",
+   "gloss_fr": "« l'Égypte a lâché en 2015 le “nouveau canal de Suez” »",
+   "problem": "« lancer » → « пусна » encore ; pour un canal on dit « откри ».",
+   "fix": "Египет откри през 2015 г. „новия Суецки канал“",
+   "surface": "courses"
+  },
+  {
+   "location": "course_206_le_canal_de_suez_pourquoi_il_est_strateg/s3.b0.text",
+   "severity": "mineur",
+   "category": "grammaire",
+   "current": "Но тясната му ширина, пред гигантизма на съвременните кораби, е голяма уязвимост.",
+   "gloss_fr": "« Mais sa largeur étroite… est une grande vulnérabilité »",
+   "problem": "« тясна ширина » est un oxymore ; « е голяма уязвимост » est un calque de « constitue une vulnérabilité ».",
+   "fix": "Но ограничената му ширина, на фона на гигантските съвременни кораби, го прави силно уязвим.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_206_le_canal_de_suez_pourquoi_il_est_strateg/s0.b1.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "той остава голям залог за суверенитет",
+   "gloss_fr": "« il reste un grand gage/pari de souveraineté »",
+   "problem": "« enjeu » rendu par « залог » (gage, mise) : le sens « question majeure » est perdu.",
+   "fix": "той остава ключов въпрос на суверенитета",
+   "surface": "courses"
+  },
+  {
+   "location": "course_206_le_canal_de_suez_pourquoi_il_est_strateg/s2.b1.text",
+   "severity": "mineur",
+   "category": "registre",
+   "current": "тази агресия ще бутне третия свят към СССР",
+   "gloss_fr": "« cette agression va pousser (familier : “bousculer”) le tiers-monde vers l'URSS »",
+   "problem": "« бутне » est familier ; dans un récit géopolitique on dit « тласне ».",
+   "fix": "тази агресия ще тласне третия свят към СССР",
+   "surface": "courses"
+  },
+  {
+   "location": "course_206_le_canal_de_suez_pourquoi_il_est_strateg/s1.b0.text",
+   "severity": "mineur",
+   "category": "mt_artefact",
+   "current": "Пробиването на Суецкия провлак води френският инженер Фердинанд дьо Лесепс. Между 1859 и 1869 хиляди египетски работници изкопаха",
+   "gloss_fr": "« mène (présent) … creusèrent (aoriste) »",
+   "problem": "Présent puis aoriste dans deux phrases consécutives ; le cours entier oscille entre les deux temps.",
+   "fix": "Пробиването на Суецкия провлак се ръководи от френския инженер Фердинанд дьо Лесепс. Между 1859 и 1869 г. хиляди египетски работници изкопават този воден път от 193 километра.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_281_comment_meurt_une_etoile/s2.b1.caption",
+   "severity": "mineur",
+   "category": "nom_propre",
+   "current": "Мъглявината Спирала",
+   "gloss_fr": "« La nébuleuse Spirale » (traduction littérale de Hélice)",
+   "problem": "Le nom établi en bulgare est « мъглявината Хеликс ».",
+   "fix": "Мъглявината Хеликс: газът, изхвърлен от умираща звезда, с бялото джудже в центъра.",
+   "surface": "courses"
+  },
+  {
+   "location": "course_305_pourquoi_deteste_t_on_entendre_sa_voix/s1.b1.text (idem s1.b2.caption)",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "хиляди космести клетки",
+   "gloss_fr": "« des milliers de cellules poilues »",
+   "problem": "Le terme médical bulgare est « космени клетки » (ou « власинкови клетки ») ; « космести » = poilu.",
+   "fix": "хиляди космени клетки, покрити със [[стереоцилии]]",
+   "surface": "courses"
+  },
+  {
+   "location": "course_255_comment_un_roman_a_t_il_sauve_notre_dame/s2.b0.text (idem s2.b1.caption, s4.b3.e2.title)",
+   "severity": "mineur",
+   "category": "typographie",
+   "current": "*Парижката света Богородица*",
+   "gloss_fr": "« Notre-Dame de Paris » avec « света » en minuscule",
+   "problem": "Le titre bulgare consacré s'écrit « Парижката Света Богородица » (majuscule à Света).",
+   "fix": "*Парижката Света Богородица*",
+   "surface": "courses"
+  },
+  {
+   "location": "course_255_comment_un_roman_a_t_il_sauve_notre_dame/s4.b2.text",
+   "severity": "mineur",
+   "category": "calque",
+   "current": "и по пътя обединява цялата планета",
+   "gloss_fr": "« et, sur la route, unit toute la planète »",
+   "problem": "« au passage » rendu littéralement par « по пътя ».",
+   "fix": "и покрай това обединява цялата планета",
+   "surface": "courses"
+  },
+  {
+   "location": "course_242_pourquoi_a_t_on_le_hoquet/s0.title (idem course_281/s0.title)",
+   "severity": "mineur",
+   "category": "terminologie",
+   "current": "Въведение",
+   "gloss_fr": "« Introduction » traduit « Въведение » ici et « Увод » dans les 14 autres cours",
+   "problem": "Incohérence du titre de section standard entre cours.",
+   "fix": "Увод",
+   "surface": "courses"
+  }
+ ]
+}
