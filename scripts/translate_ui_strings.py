@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
-"""Machine-translate AppLocalizable English UI keys into new app languages.
+"""Machine-translate AppLocalizable French UI keys into new app languages.
 
-Source of truth for keys/values: the English dictionary in
-``ios/Sophia/Utilities/AppLocalizable.swift``.
+Source of truth for keys/values: the **French** dictionary in
+``ios/Sophia/Utilities/AppLocalizable.swift``. The English table is a target
+like any other: translating from it took French words in their most frequent
+English sense (essai -> trial -> court trial, léger -> light -> the light,
+mensuel -> monthly -> magazine). Run ``scripts/check_terminology.py`` after a
+translation; it flags those renderings in every language.
 
 Outputs:
-  - ``content/locales/_ui_mt_cache/<lang>.json`` (MT cache, gitignored)
+  - ``content/locales/_ui_mt_cache_fr/<lang>.json`` (MT cache, gitignored)
   - ``content/locales/<lang>/ui_strings.json`` (key → translated string)
   - optionally rewrites ``AppLocalizable.swift`` with dedicated dictionaries
 
@@ -26,11 +30,11 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-from i18n_languages import NON_FR_LANGS, SWIFT_CASE_BY_CODE
+from i18n_languages import MT_SOURCE_LANG, NON_FR_LANGS, SWIFT_CASE_BY_CODE
 
 ROOT = Path(__file__).resolve().parents[1]
 LOCALIZABLE = ROOT / "ios" / "Sophia" / "Utilities" / "AppLocalizable.swift"
-CACHE_DIR = ROOT / "content" / "locales" / "_ui_mt_cache"
+CACHE_DIR = ROOT / "content" / "locales" / "_ui_mt_cache_fr"
 LOCALES_DIR = ROOT / "content" / "locales"
 
 # Languages that already ship hand-maintained packs — never overwrite them here.
@@ -209,15 +213,15 @@ def restore_tokens(text: str, tokens: list[str]) -> str:
     return out
 
 
-def pinned_value(key: str, english: str) -> str | None:
+def pinned_value(key: str, french: str) -> str | None:
     if key.startswith("language.") and key != "language.section":
         name = key.removeprefix("language.")
-        return NATIVE_LANGUAGE_NAMES.get(name, english)
-    # Pure brand / empty / punctuation-only — keep English.
-    if english.strip() in {"", "Sophia", "Sophia.", "XP", "OK", "iOS"}:
-        return english
-    if not re.search(r"[A-Za-zÀ-ÿ]", english):
-        return english
+        return NATIVE_LANGUAGE_NAMES.get(name, french)
+    # Pure brand / empty / punctuation-only — keep the French value as is.
+    if french.strip() in {"", "Sophia", "Sophia.", "XP", "OK", "iOS"}:
+        return french
+    if not re.search(r"[A-Za-zÀ-ÿ]", french):
+        return french
     return None
 
 
@@ -233,7 +237,7 @@ def translate_one(target: str, text: str) -> str:
     if not re.search(r"[A-Za-zÀ-ÿ]", protected):
         return text
 
-    client = GoogleTranslator(source="en", target=target)
+    client = GoogleTranslator(source=MT_SOURCE_LANG, target=target)
     for attempt in range(6):
         try:
             result = client.translate(protected)
@@ -242,10 +246,10 @@ def translate_one(target: str, text: str) -> str:
             return restore_tokens(result, tokens)
         except Exception as error:  # noqa: BLE001
             time.sleep(min(2**attempt, 20))
-            client = GoogleTranslator(source="en", target=target)
+            client = GoogleTranslator(source=MT_SOURCE_LANG, target=target)
             if attempt == 5:
                 print(
-                    f"    warn: MT failed, keeping EN: {text[:60]!r} ({error})",
+                    f"    warn: MT failed, keeping FR: {text[:60]!r} ({error})",
                     file=sys.stderr,
                 )
                 return text
@@ -261,8 +265,8 @@ def translate_lang(lang: str, workers: int, force: bool) -> Path:
         raise SystemExit(f"Unsupported lang {lang!r}. Expected one of {NEW_UI_LANGS}")
 
     source = LOCALIZABLE.read_text(encoding="utf-8")
-    entries = extract_dict_entries(source, "english")
-    print(f"[{lang}] English keys: {len(entries)}")
+    entries = extract_dict_entries(source, "french")
+    print(f"[{lang}] French keys: {len(entries)}")
 
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     cache_path = CACHE_DIR / f"{lang}.json"
@@ -273,22 +277,22 @@ def translate_lang(lang: str, workers: int, force: bool) -> Path:
     out: dict[str, str] = {}
     pending: list[tuple[str, str]] = []
 
-    for key, english in entries:
-        pinned = pinned_value(key, english)
+    for key, french in entries:
+        pinned = pinned_value(key, french)
         if pinned is not None:
             out[key] = pinned
             continue
-        cached = cache.get(english)
+        cached = cache.get(french)
         if cached is not None and not force:
             out[key] = cached
             continue
-        pending.append((key, english))
+        pending.append((key, french))
 
     print(f"[{lang}] cached/pinned={len(entries) - len(pending)}  to_translate={len(pending)}")
 
     if pending:
-        # Dedupe by English source text.
-        unique = sorted({english for _, english in pending})
+        # Dedupe by French source text.
+        unique = sorted({french for _, french in pending})
         translated_unique: dict[str, str] = {}
 
         def work(text: str) -> tuple[str, str]:
@@ -309,8 +313,8 @@ def translate_lang(lang: str, workers: int, force: bool) -> Path:
                         encoding="utf-8",
                     )
 
-        for key, english in pending:
-            out[key] = translated_unique[english]
+        for key, french in pending:
+            out[key] = translated_unique[french]
 
     # Soft placeholder repair: if counts drift, fall back to English for that key.
     en_map = dict(entries)
@@ -365,12 +369,12 @@ def load_pack_entries(lang: str) -> list[tuple[str, str]]:
         raise SystemExit(f"Missing UI pack: {path}. Run translate first.")
     data = json.loads(path.read_text(encoding="utf-8"))
     source = LOCALIZABLE.read_text(encoding="utf-8")
-    english = extract_dict_entries(source, "english")
-    en_keys = [k for k, _ in english]
-    missing = [k for k in en_keys if k not in data]
+    french = extract_dict_entries(source, "french")
+    fr_keys = [k for k, _ in french]
+    missing = [k for k in fr_keys if k not in data]
     if missing:
-        raise SystemExit(f"{lang}: missing {len(missing)} keys vs EN (e.g. {missing[:5]})")
-    return [(k, data[k]) for k in en_keys]
+        raise SystemExit(f"{lang}: missing {len(missing)} keys vs FR (e.g. {missing[:5]})")
+    return [(k, data[k]) for k in fr_keys]
 
 
 def inject() -> None:
@@ -445,6 +449,9 @@ enum AppLocalizable {{
 
 def qa(langs: list[str]) -> int:
     source = LOCALIZABLE.read_text(encoding="utf-8")
+    french = dict(extract_dict_entries(source, "french"))
+    # A key the French table has and the English one lacks is dead or French-only;
+    # it is reported, not counted, so the gate measures parity with the source.
     english = dict(extract_dict_entries(source, "english"))
     hard = 0
     for lang in langs:
@@ -456,16 +463,19 @@ def qa(langs: list[str]) -> int:
             hard += 1
             continue
         data = dict(entries)
-        missing = sorted(set(english) - set(data))
-        if missing:
-            print(f"HARD {lang}: missing {len(missing)} keys (e.g. {missing[:3]})")
-            hard += len(missing)
+        missing = sorted(set(french) - set(data))
+        counted = [k for k in missing if k in english]
+        if counted:
+            print(f"HARD {lang}: missing {len(counted)} keys vs FR (e.g. {counted[:3]})")
+            hard += len(counted)
+        if len(missing) > len(counted):
+            print(f"note {lang}: {len(missing) - len(counted)} French-only keys absent")
         drift = 0
-        for key, en_val in english.items():
+        for key, fr_val in french.items():
             val = data.get(key)
             if val is None:
                 continue
-            if placeholder_signature(val) != placeholder_signature(en_val):
+            if placeholder_signature(val) != placeholder_signature(fr_val):
                 drift += 1
         if drift:
             print(f"HARD {lang}: placeholder drift on {drift} keys")
@@ -480,22 +490,22 @@ def qa(langs: list[str]) -> int:
 
 def translate_infoplist(langs: list[str]) -> None:
     """Translate NSUserTrackingUsageDescription into each new .lproj."""
-    from deep_translator import GoogleTranslator
+    from mt_backend import GoogleTranslator
 
-    en = (
-        ROOT / "ios" / "Sophia" / "en.lproj" / "InfoPlist.strings"
+    fr = (
+        ROOT / "ios" / "Sophia" / "fr.lproj" / "InfoPlist.strings"
     ).read_text(encoding="utf-8")
-    m = re.search(r'NSUserTrackingUsageDescription\s*=\s*"(.*)";', en)
+    m = re.search(r'NSUserTrackingUsageDescription\s*=\s*"(.*)";', fr)
     if not m:
-        print("warn: could not parse EN InfoPlist.strings", file=sys.stderr)
+        print("warn: could not parse FR InfoPlist.strings", file=sys.stderr)
         return
-    en_text = m.group(1)
+    fr_text = decode_swift_string(m.group(1))
     for lang in langs:
         try:
-            translated = GoogleTranslator(source="en", target=lang).translate(en_text)
+            translated = GoogleTranslator(source=MT_SOURCE_LANG, target=lang).translate(fr_text)
         except Exception as error:  # noqa: BLE001
             print(f"warn: InfoPlist {lang}: {error}", file=sys.stderr)
-            translated = en_text
+            translated = fr_text
         path = ROOT / "ios" / "Sophia" / f"{lang}.lproj" / "InfoPlist.strings"
         path.parent.mkdir(parents=True, exist_ok=True)
         escaped = encode_swift_string(translated)
@@ -510,7 +520,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="cmd", required=True)
 
-    p_tr = sub.add_parser("translate", help="MT English UI keys into locale JSON packs")
+    p_tr = sub.add_parser("translate", help="MT French UI keys into locale JSON packs")
     p_tr.add_argument("--lang", required=True, help="Language code or 'all'")
     p_tr.add_argument("--workers", type=int, default=8)
     p_tr.add_argument("--force", action="store_true")

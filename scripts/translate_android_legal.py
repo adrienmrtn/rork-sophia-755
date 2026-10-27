@@ -4,8 +4,10 @@
 The Android documents are not a brand-swap of the iOS ones: whole passages
 differ (the analytics section names Play Console and the Android settings path,
 not App Analytics and the iPhone one). So they are translated from the Android
-English pack directly, which is already correct for Play, rather than derived
-from ``content/locales/<lang>/legal.json``.
+French pack directly (``legal/fr.json``, already correct for Play), rather than
+derived from ``content/locales/<lang>/legal.json``. English is a target like
+every other language: translating from it took French words in their most
+frequent English sense.
 
 Section ids, ordering and counts are copied unchanged; only titles and bodies
 are translated. ``scripts/qa_android_phase_e.py`` then lints the result for
@@ -25,11 +27,12 @@ import sys
 from pathlib import Path
 
 import mt_backend
-from i18n_languages import GT_TARGETS, NON_FR_LANGS
+from i18n_languages import GT_TARGETS, MT_SOURCE_LANG, NON_FR_LANGS
 
 ROOT = Path(__file__).resolve().parents[1]
 LEGAL_DIR = ROOT / "android" / "app" / "src" / "main" / "assets" / "legal"
-SOURCE = LEGAL_DIR / "en.json"
+#: The French text is the source; English is translated like every other language.
+SOURCE = LEGAL_DIR / "fr.json"
 
 #: Words the engine must not touch. Hidden behind opaque tokens, restored after.
 KEEP = [
@@ -77,7 +80,7 @@ def translate_lang(lang: str, source: dict, force: bool) -> Path | None:
                 slots.append((kind, index, field))
 
     target = GT_TARGETS.get(lang, lang)
-    translated = mt_backend.translate_batch(flat, target, source="en")
+    translated = mt_backend.translate_batch(flat, target, source=MT_SOURCE_LANG)
 
     out = {kind: [dict(section) for section in source[kind]] for kind in ("terms", "privacy")}
     for (kind, index, field), value, kept in zip(slots, translated, kept_per_string):
@@ -112,8 +115,6 @@ def main() -> int:
 
     source = json.loads(SOURCE.read_text(encoding="utf-8"))
     for lang in langs:
-        if lang == "en":
-            continue
         translate_lang(lang, source, args.force)
     return 0
 
