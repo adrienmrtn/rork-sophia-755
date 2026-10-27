@@ -25954,7 +25954,7 @@ enum AppLocalizable {
         "profile.mastery.title": "ملامح ثقافتك",
         "profile.mastery.details": "اعرض التفاصيل حسب المادة",
         "profile.mastery.hide": "إخفاء التفاصيل",
-        "profile.unlock.trial": "افتح القفل مع التجربة المجانية",
+        "profile.unlock.trial": "افتح القفل بالتجربة المجانية",
         "profile.quiz.retry": "أعد المحاولة",
         "profile.quiz.all": "كل اختباراتي",
         "profile.quiz.none": "لا توجد اختبارات حتى الآن.",

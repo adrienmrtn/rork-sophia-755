@@ -58,6 +58,12 @@ COURSES_PER_LOT, QUIZ_COURSES_PER_LOT, GLOSSARY_PER_LOT = 4, 10, 150
 PLACEHOLDER = re.compile(r"%(?:\d+\$)?(?:lld|ld|lu|lf|f|d|@|s)|\{[a-zA-Z]+\}")
 GLOSS = re.compile(r"\[\[(.+?)\]\]")
 NUM = re.compile(r"\d+")
+GROUP_SEP = re.compile(r"(?<=\d)[,.\u00a0\u202f ](?=\d{3}(?!\d))")
+
+
+def _nums(s: str) -> set[str]:
+    """Numbers in a text, thousands separators removed (1 000, 1,000, 1.000 → 1000)."""
+    return set(NUM.findall(GROUP_SEP.sub("", s)))
 
 
 def _load(p: Path):
@@ -323,8 +329,10 @@ def check_edit(kind: str, old: str, new: str, fr: str | None, allowed: set[str] 
             return "terme de glossaire inconnu : " + ", ".join(t for t in terms if t not in allowed)[:80]
         if len(terms) < min(len(GLOSS.findall(old)), len(GLOSS.findall(fr or ""))):
             return "terme de glossaire perdu"
-    nums_new = set(NUM.findall(new))
-    allowed_nums = set(NUM.findall(old)) | set(NUM.findall(fr or ""))
+    nums_new = _nums(new)
+    allowed_nums = _nums(old) | _nums(fr or "")
+    # "100 ألف", "100 тыс." → 100000 is the same number written out
+    allowed_nums |= {n + "000" for n in allowed_nums} | {n + "000000" for n in allowed_nums}
     extra = {n for n in nums_new - allowed_nums if len(n) >= 2}
     if extra:
         return "nombre nouveau : " + ", ".join(sorted(extra))[:40]
