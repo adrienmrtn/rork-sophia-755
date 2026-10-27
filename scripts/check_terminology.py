@@ -24,6 +24,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+from concurrent.futures import ProcessPoolExecutor
 import re
 import sys
 from collections import Counter, defaultdict
@@ -189,6 +191,7 @@ def compile_rules(code: str, traps: list[dict], terms: list[dict], works: list[d
 
 
 def scan(code: str, rules) -> list[dict]:
+    """Every rule on every string; a rule reports at most one occurrence per string."""
     hits = []
     for surface, location, text in iter_texts(code):
         for kind, ident, expected, pattern, surfaces in rules:
@@ -205,6 +208,12 @@ def scan(code: str, rules) -> list[dict]:
     return hits
 
 
+def _scan_language(code: str) -> tuple[str, int, list[dict]]:
+    traps, terms, works = load_lists()
+    rules = compile_rules(code, traps, terms, works)
+    return code, len(rules), scan(code, rules)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--lang", default="all")
@@ -218,9 +227,11 @@ def main() -> int:
         print(f"Aucune liste dans {TERM_DIR} ; rien à vérifier.")
         return 0
     all_hits: list[dict] = []
-    for code in langs:
-        rules = compile_rules(code, traps, terms, works)
-        hits = scan(code, rules)
+    # The regex engine dominates (about 25 s per language): one process per language.
+    with ProcessPoolExecutor(max_workers=max(1, min(len(langs), os.cpu_count() or 1))) as pool:
+        results = list(pool.map(_scan_language, langs))
+    for code, rules_count, hits in results:
+        rules = range(rules_count)
         all_hits.extend(hits)
         by_surface = Counter(h["surface"] for h in hits)
         by_id = Counter(f"{h['type']}:{h['id']}" for h in hits)
