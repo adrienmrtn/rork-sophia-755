@@ -32,7 +32,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
         "question": "Čo predstavuje hidžra v roku 622?",
-        "explanation": "Hijra je odchod Mohameda, ktorému v Mekke hrozí smrť, do oázy Medina. Tento dátum sa stáva prvým rokom moslimského kalendára.",
+        "explanation": "Hidžra je odchod Mohameda, ktorému v Mekke hrozí smrť, do oázy Medina. Tento dátum sa stáva prvým rokom moslimského kalendára.",
         "options": [
           "Mohamedov odchod z Mekky do Mediny",
           "Prvé zjavenie prijaté Mohamedom",
@@ -69,7 +69,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
         "question": "V ktorom roku zomrel Mohamed a zostala tak Arábia zjednotená pod jednou autoritou?",
-        "explanation": "Mohamed zomrel v roku 632, iba desať rokov po Hegire, keď bola takmer celá Arábia zjednotená.",
+        "explanation": "Mohamed zomrel v roku 632, iba desať rokov po hidžre, keď bola takmer celá Arábia zjednotená.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
         "sliderMax": 660.0,
@@ -5456,7 +5456,7 @@
   },
   {
     "id": "course_40_la_guerre_de_secession_americaine_1861_1",
-    "title": "Americká občianska vojna – vojna proti otroctvu?",
+    "title": "Americká občianska vojna, vojna proti otroctvu?",
     "description": "Od **1861** po **1865** sa Spojené štáty roztrhli na kusy: zomrelo viac ako **620.000**. V srdci vojny, otroctva, národnej jednoty a zrodu silnejšieho federálneho štátu.",
     "subject": "histoire",
     "subcategory": "Studená vojna a súčasný svet",
@@ -19529,7 +19529,7 @@
   {
     "id": "course_141_la_naissance_de_la_photographie",
     "title": "Kto vynašiel fotografiu?",
-    "description": "V **1839** viacerí vynálezcovia konečne prišli na to, ako opraviť obrázok na tanieri. Za menej ako storočie zmenila fotografia spôsob, akým vidíme, pamätáme si a veríme.",
+    "description": "V roku **1839** viacerí vynálezcovia konečne prišli na to, ako opraviť obrázok na tanieri. Za menej ako storočie zmenila fotografia spôsob, akým vidíme, pamätáme si a veríme.",
     "subject": "art",
     "subcategory": "Film, fotografia a architektúra + veľdiela",
     "lessons": [
@@ -20416,7 +20416,7 @@
           "V Île-de-France okolo roku 1140",
           "V Toskánsku okolo roku 1400",
           "V Bavorsku okolo roku 1250",
-          "V Normandii okolo 1000"
+          "V Normandii okolo roku 1000"
         ],
         "correctIndex": 0
       },

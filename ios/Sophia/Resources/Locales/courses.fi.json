@@ -2,7 +2,7 @@
   {
     "id": "course_1_la_naissance_de_l_islam_622",
     "title": "Miten islam syntyi?",
-    "description": "Vuonna 622 kauppias Mekasta nimeltä Muhammed pakeni kaupungistaan Medinaan. Tuo lähtö, Hijra, merkitsee islamin ensimmäistä vuotta ja maailman sivilisaation alkua.",
+    "description": "Vuonna 622 kauppias Mekasta nimeltä Muhammed pakeni kaupungistaan Medinaan. Tuo lähtö, hidžra, merkitsee islamin ensimmäistä vuotta ja maailman sivilisaation alkua.",
     "subject": "histoire",
     "subcategory": "Antiikki ja keskiaika",
     "lessons": [
@@ -31,8 +31,8 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q1",
         "type": "mcq",
-        "question": "Mitä Hegira edustaa 622:ssa?",
-        "explanation": "Hijra on kuolemalla uhatun Muhammedin lähtö Mekassa kohti Medinan keitaa. Tästä päivämäärästä tulee muslimikalenterin vuosi 1.",
+        "question": "Mitä hidžra edustaa vuonna 622?",
+        "explanation": "Hidžra on kuolemalla uhatun Muhammedin lähtö Mekassa kohti Medinan keitaa. Tästä päivämäärästä tulee muslimikalenterin vuosi 1.",
         "options": [
           "Muhammedin lähtö Mekasta Medinaan",
           "Ensimmäinen Muhammedin saama ilmoitus",
@@ -69,7 +69,7 @@
         "id": "course_1_la_naissance_de_l_islam_622_q4",
         "type": "numericSlider",
         "question": "Minä vuonna Muhammed kuoli jättäen Arabian yhden vallan alle?",
-        "explanation": "Muhammed kuoli vuonna 632, vain kymmenen vuotta Hegiran jälkeen, jolloin lähes koko Arabia yhdistyi.",
+        "explanation": "Muhammed kuoli vuonna 632, vain kymmenen vuotta hidžran jälkeen, jolloin lähes koko Arabia yhdistyi.",
         "correctValue": 632.0,
         "sliderMin": 600.0,
         "sliderMax": 660.0,
@@ -82,7 +82,7 @@
         "question": "Laita nämä tapahtumat Muhammedin elämässä kronologiseen järjestykseen.",
         "explanation": "Nämä neljä päivämäärää (622, 624, 630, 632) merkitsevät kahtakymmentä vuotta, jolloin Muhammed muuttui uhanalaisesta profeetasta Arabian yhdistävän valtion päämieheksi.",
         "items": [
-          "Hegira: lähtö Medinaan",
+          "Hidžra: lähtö Medinaan",
           "Badrin taistelu",
           "Mekan valloitus",
           "Muhammedin kuolema"
@@ -104,7 +104,7 @@
       {
         "id": "course_1_la_naissance_de_l_islam_622_q7",
         "type": "mcq",
-        "question": "Mitkä kaksi suurta imperiumia uuvuttivat sotinsa Arabian ympärillä 700-luvulla?",
+        "question": "Mitkä kaksi suurta imperiumia uuvuttivat sotinsa Arabian ympärillä 600-luvulla?",
         "explanation": "Loputtomat sodat Bysantin (Itä-Rooman valtakunta) ja sassanidipersalaisten välillä loivat geopoliittisen tyhjiön, josta Muhammedin uusi viesti käytti hyväkseen.",
         "options": [
           "Bysantin ja Sassanidin valtakunnat",
@@ -5314,7 +5314,7 @@
   {
     "id": "course_39_la_democratie_athenienne",
     "title": "Kenellä oli todellinen valta Ateenan demokratiassa?",
-    "description": "500-luvulla eKr. Ateena keksi järjestelmän, jossa kansalaiset hallitsivat suoraan. Valinta arvalla, yhtäläinen puheoikeus ja laajamittainen poissulkeminen.",
+    "description": "400-luvulla eKr. Ateena keksi järjestelmän, jossa kansalaiset hallitsivat suoraan. Valinta arvalla, yhtäläinen puheoikeus ja laajamittainen poissulkeminen.",
     "subject": "histoire",
     "subcategory": "Kylmä sota ja nykymaailma",
     "lessons": [
@@ -5456,7 +5456,7 @@
   },
   {
     "id": "course_40_la_guerre_de_secession_americaine_1861_1",
-    "title": "Amerikan sisällissota – sota orjuutta vastaan?",
+    "title": "Amerikan sisällissota, sota orjuutta vastaan?",
     "description": "Yhdysvallat repi itsensä osiin **1861**:stä **1865**:hen: yli **620 000** kuoli. Sodan ytimessä orjuus, kansallinen yhtenäisyys ja vahvemman liittovaltion synty.",
     "subject": "histoire",
     "subcategory": "Kylmä sota ja nykymaailma",
@@ -19529,7 +19529,7 @@
   {
     "id": "course_141_la_naissance_de_la_photographie",
     "title": "Kuka keksi valokuvauksen?",
-    "description": "**1839**:ssä useat keksijät keksivät vihdoin kuinka kiinnittää kuvan lautaselle. Alle vuosisadassa valokuvaus muutti tapaamme nähdä, muistaa ja uskoa.",
+    "description": "Vuonna **1839** useat keksijät keksivät vihdoin kuinka kiinnittää kuvan lautaselle. Alle vuosisadassa valokuvaus muutti tapaamme nähdä, muistaa ja uskoa.",
     "subject": "art",
     "subcategory": "Elokuva, valokuvaus ja arkkitehtuuri + mestariteokset",
     "lessons": [
@@ -22374,7 +22374,7 @@
         "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_q7",
         "type": "mcq",
         "question": "Missä tekstissä runoilija Hesiodos kertoo kreikkalaisten jumalien syntymästä?",
-        "explanation": "Hesiodos kertoo teogoniassa 800-luvulla eaa., kuinka maailma siirtyy kaaoksesta Zeuksen hoviin.",
+        "explanation": "Hesiodos kertoo teogoniassa 700-luvulla eaa., kuinka maailma siirtyy kaaoksesta Zeuksen hoviin.",
         "options": [
           "Teogonia",
           "Iliad",

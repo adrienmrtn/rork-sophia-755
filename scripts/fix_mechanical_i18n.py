@@ -80,6 +80,30 @@ def _sentence_start(text: str, pos: int) -> bool:
     return not before or before[-1] in ".!?:\n«\"“"
 
 
+def _hr_sr_year(m: re.Match[str], lang: str) -> str:
+    """Croatian and Serbian: "U 1857, …" → "Godine 1857., …" (hr) / "Godine 1857." or "1857. godine, …" (sr).
+
+    The ordinal dot never absorbs a comma (Hrvatski pravopis); only a full stop
+    after the year serves as both. Serbian keeps the natural mid-sentence order
+    "<year>. godine" and drops the comma only after a sentence-opening date.
+    The ordinal dot goes after the bold markers: "**1857**." (a dot inside the
+    bold span reads as a sentence break to the course validator).
+    """
+    b1, year, b2, comma = m.group(2), m.group(3), m.group(4), m.group(5) or ""
+    nxt = m.string[m.end():m.end() + 1]
+    start = _sentence_start(m.string, m.start())
+    y = f"{b1}{year}{b2}"
+    if nxt == "." and not comma:
+        return f"{_cap('godine', m.group(1))} {y}"
+    if nxt and nxt in ":;!?)" and not comma:
+        return f"{y}. godine"
+    if lang == "hr":
+        return f"{_cap('godine', m.group(1))} {y}.{',' if comma else ''}"
+    if start:
+        return f"Godine {y}."
+    return f"{y}. godine{',' if comma else ''}"
+
+
 Y = r"(?<!\*)(\*{0,2})({year})(\*{0,2})(?!\*)"
 NOT_AFTER = r"(?!\d|\s*[-–]\s*\d)"
 
@@ -94,36 +118,31 @@ def year_rules(lang: str):
                       lambda m: f"{m.group(1)} {m.group(2)}{m.group(3)}{m.group(4)} года"))
     elif lang in ("cs", "sk"):
         word = "roce" if lang == "cs" else "roku"
-        rules.append(("en", r"(?<![\w-])([Vv])\s+" + Y + NOT_AFTER,
+        rules.append(("en", r"(?<![\w-])([Vv])\s+" + Y + NOT_AFTER + r"(?!\.\s*(?:let|rok|stol)|\s+a\s+\**\d)",
                       lambda m, w=word: f"{m.group(1)} {w} {m.group(2)}{m.group(3)}{m.group(4)}"))
         rules.append(("vers", r"(?<![\w-])([Kk]olem|[Oo]kolo)\s+" + Y + NOT_AFTER,
                       lambda m: f"{m.group(1)} roku {m.group(2)}{m.group(3)}{m.group(4)}"))
     elif lang == "sl":
-        rules.append(("en", r"(?<![\w-])([Vv]|[Pp]ri|[Oo]b)\s+" + Y + NOT_AFTER,
+        rules.append(("en", r"(?<![\w-])([Vv]|[Pp]ri|[Oo]b)\s+" + Y + NOT_AFTER + r"(?!-?ih\b|\.\s*let|\s+in\s+\**\d)",
                       lambda m: f"{_cap('leta', m.group(1))} {m.group(2)}{m.group(3)}{m.group(4)}"))
         rules.append(("vers", r"(?<![\w-])([Oo]koli|[Oo]krog)\s+" + Y + NOT_AFTER,
                       lambda m: f"{m.group(1)} leta {m.group(2)}{m.group(3)}{m.group(4)}"))
     elif lang in ("hr", "sr"):
-        # The ordinal dot of "1857." doubles as the full stop when the year ends the sentence.
-        rules.append(("en", r"(?<![\w-])([Uu])\s+" + Y + r"(?!\d|\s*[-–]\s*\d)(\s*,)?",
-                      lambda m: f"{_cap('godine', m.group(1))} {m.group(2)}{m.group(3)}{m.group(4)}"
-                                + ("" if m.string[m.end():m.end() + 1] == "." else ".")
-                      if not m.group(4) else
-                      f"{_cap('godine', m.group(1))} {m.group(2)}{m.group(3)}"
-                      + ("" if m.string[m.end():m.end() + 1] == "." else ".") + m.group(4)))
+        rules.append(("en", r"(?<![\w-])([Uu])\s+" + Y + r"(?!\d|\s*[-–]\s*\d|\.?\s*godin|\s+i\s+\**\d)(\s*,)?",
+                      lambda m, lang=lang: _hr_sr_year(m, lang)))
         rules.append(("vers", r"(?<![\w-])([Oo]ko)\s+" + Y + r"(?![.\d]|\s*[-–]\s*\d)",
-                      lambda m: f"{m.group(1)} {m.group(2)}{m.group(3)}.{m.group(4)} godine"))
+                      lambda m: f"{m.group(1)} {m.group(2)}{m.group(3)}{m.group(4)}. godine"))
     elif lang == "bg":
         # "г." ending a sentence keeps a single full stop.
         def bg_g(m):
             return " г" if m.string[m.end():m.end() + 1] == "." else " г."
-        rules.append(("en", r"(?<![\w-])([Пп]рез|[Вв]ъв|[Вв])\s+" + Y + NOT_AFTER + r"(?!\s*г\b)",
+        rules.append(("en", r"(?<![\w-])([Пп]рез|[Вв]ъв|[Вв])\s+" + Y + NOT_AFTER + r"(?!\s*г\b|\s+и\s+\**\d)",
                       lambda m: f"{_cap('през', m.group(1))} {m.group(2)}{m.group(3)}{m.group(4)}{bg_g(m)}"))
         rules.append(("vers", r"(?<![\w-])([Оо]коло)\s+" + Y + NOT_AFTER + r"(?!\s*г\b)",
                       lambda m: f"{m.group(1)} {m.group(2)}{m.group(3)}{m.group(4)}{bg_g(m)}"))
     elif lang == "fi":
         rules.append(("en", r"(?<![\w-])(Julkaisussa|Asiassa|Alueella|Mallissa|Teoksessa|Kirjassa|Elokuvassa|Kaupungissa|"
-                            r"Tapauksessa|Numerossa|Sarjassa|julkaisussa|asiassa|alueella|mallissa|teoksessa|kirjassa|"
+                            r"Tapauksessa|Numerossa|Sarjassa|Paikassa|paikassa|julkaisussa|asiassa|alueella|mallissa|teoksessa|kirjassa|"
                             r"elokuvassa|kaupungissa|tapauksessa|numerossa|sarjassa)\s+" + Y + NOT_AFTER,
                       lambda m: f"{_cap('vuonna', m.group(1))} {m.group(2)}{m.group(3)}{m.group(4)}"))
         rules.append(("en", r"(?<![\w-])" + Y + r":(?:ssa|ssä)\b",
@@ -166,13 +185,21 @@ def fix_centuries(lang: str, text: str, fr: str | None) -> tuple[str, int]:
         def roman(m):
             v = int(m.group(1))
             return f"{ROMAN[v]} {m.group(2)}" if 1 <= v <= 21 else m.group(0)
+        # First bound of a range: "от 5. до 12. век" → "от V до XII век".
+        text, k = re.subn(r"(?<![\w.-])(\d{1,2})\s*\.(?=\s*(?:до|–|-|—|и)\s*\d{1,2}\s*\.\s*век)",
+                          lambda m: ROMAN[int(m.group(1))] if 1 <= int(m.group(1)) <= 21 else m.group(0), text); n += k
         text, k = re.subn(r"(?<![\w.-])(\d{1,2})\s*\.\s*(век\w*)", roman, text); n += k
         text, k = re.subn(r"(?<![\w.-])(\d{1,2})\s*-?\s*(?:ти|ви|ри|ми|и)\s+(век\w*)", roman, text); n += k
     fr_c = fr_centuries(fr)
+    # "Du XIIe au XVIe siècle": only the last numeral sits next to "siècle".
+    fr_any = {ROMAN_VALUE[r] for r in FR_ANY_ROMAN_RE.findall(fr or "") if r in ROMAN_VALUE}
     if lang == "ru" and fr_c:
         def roman_ru(m):
             v = int(m.group(1))
             return f"{ROMAN[v]} {m.group(2)}" if v in fr_c and 1 <= v <= 21 else m.group(0)
+        # First bound of a range: "С 12 по 16 век" → "С XII по XVI век".
+        text, k = re.subn(r"(?<![\w.-])(\d{1,2})(?:-?(?:го|й))?(?=\s*(?:по|–|-|—|и|или)\s*\d{1,2}(?:-?(?:й|го|м|ом|ого))?\s+век)",
+                          lambda m: ROMAN[int(m.group(1))] if int(m.group(1)) in fr_any else m.group(0), text); n += k
         text, k = re.subn(r"(?<![\w.-])(\d{1,2})(?:-?(?:й|го|м|ом|ого|ый))?\s+(век(?:а|е|у|ом)?)\b(?!\w)", roman_ru, text); n += k
     shifted = {"fi": r"luvu\w*|luku\w*", "da": r"tallet\w*", "nb": r"tallet\w*", "sv": r"talet\w*"}
     if lang in shifted and fr:
@@ -191,7 +218,11 @@ def fix_centuries(lang: str, text: str, fr: str | None) -> tuple[str, int]:
 def fix_percent(lang: str, text: str) -> tuple[str, int]:
     if lang != "tr":
         return text, 0
-    return re.subn(r"(?<![%\w.,])(\d+(?:[.,]\d+)?)\s?%(?![\w%])", r"%\1", text)
+    # Ranges carry the sign on both bounds: "30 ile 99%" → "%30 ile %99", "30-99%" → "%30-99".
+    text, k1 = re.subn(r"(?<![%\w.,])(\d+(?:[.,]\d+)?)(\s+(?:ile|ve|veya)\s+)(\d+(?:[.,]\d+)?)\s?%(?![\w%])", r"%\1\2%\3", text)
+    text, k2 = re.subn(r"(?<![%\w.,])(\d+(?:[.,]\d+)?)(\s*[-–]\s*)(\d+(?:[.,]\d+)?)\s?%(?![\w%])", r"%\1\2\3", text)
+    text, k3 = re.subn(r"(?<![%\w.,])(\d+(?:[.,]\d+)?)\s?%(?![\w%])", r"%\1", text)
+    return text, k1 + k2 + k3
 
 
 def fix_punctuation(lang: str, text: str, fr: str | None, location: str) -> tuple[str, int]:
@@ -206,18 +237,33 @@ def fix_punctuation(lang: str, text: str, fr: str | None, location: str) -> tupl
                 parts[i], k = re.subn(r"«([^«»\[\]]*)»", r"„\1”", part); n += k
         text = "".join(parts)
     is_title = location.endswith("/title")
-    if is_title and fr and " : " in fr and " – " in text and ":" not in text:
-        text = text.replace(" – ", ": ", 1); n += 1
+    if is_title and fr and " – " in text and " – " not in fr:
+        if " : " in fr and ":" not in text:
+            text = text.replace(" – ", ": ", 1); n += 1
+        elif ", " in fr:
+            text = text.replace(" – ", ", ", 1); n += 1
     return text, n
+
+
+def _outside_glossary(func, text: str, *args) -> tuple[str, int]:
+    """Apply ``func`` to the text outside [[...]] spans: a glossary term must keep matching its key."""
+    parts = re.split(r"(\[\[.*?\]\])", text)
+    total = 0
+    for i, part in enumerate(parts):
+        if part.startswith("[[") or not part:
+            continue
+        parts[i], k = func(part, *args)
+        total += k
+    return "".join(parts), total
 
 
 def fix(lang: str, text: str, fr: str | None, location: str = "") -> tuple[str, Counter]:
     rules = Counter()
-    new, k = fix_years(lang, text, fr)
+    new, k = _outside_glossary(lambda t: fix_years(lang, t, fr), text)
     rules["annee"] += k
-    new, k = fix_centuries(lang, new, fr)
+    new, k = _outside_glossary(lambda t: fix_centuries(lang, t, fr), new)
     rules["siecle"] += k
-    new, k = fix_percent(lang, new)
+    new, k = _outside_glossary(lambda t: fix_percent(lang, t), new)
     rules["pourcent"] += k
     new, k = fix_punctuation(lang, new, fr, location)
     rules["ponctuation"] += k

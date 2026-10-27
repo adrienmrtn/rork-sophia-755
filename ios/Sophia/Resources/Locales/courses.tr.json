@@ -2392,7 +2392,7 @@
   {
     "id": "course_18_la_grande_depression_1929",
     "title": "Büyük Buhran",
-    "description": "**24 Ekim 1929**'da Wall Street çöker. Üç yıl içinde işsizlik Amerikalıların **25%**'ini vurur ve kriz Avrupa'da uçların yolunu açar.",
+    "description": "**24 Ekim 1929**'da Wall Street çöker. Üç yıl içinde işsizlik Amerikalıların **%25**'ini vurur ve kriz Avrupa'da uçların yolunu açar.",
     "subject": "histoire",
     "subcategory": "Devrimler ve modern çatışmalar",
     "lessons": [
@@ -29614,10 +29614,10 @@
         "question": "İrlanda'yı vergi optimizasyonunda Avrupa'nın merkezi haline getiren resmi kurumlar vergisi oranı nedir?",
         "explanation": "İrlanda, %12,5'lik resmi vergi oranı ve vergi kuralları adı verilen gizli anlaşmalarıyla Avrupa'nın vergi optimizasyonu merkezi haline geldi.",
         "options": [
-          "12,5%",
-          "25%",
-          "5%",
-          "33%"
+          "%12,5",
+          "%25",
+          "%5",
+          "%33"
         ],
         "correctIndex": 0
       },
@@ -29836,10 +29836,10 @@
         "question": "En yoksul yüzde 50 küresel gelirden ne kadar pay almalı?",
         "explanation": "En yoksul yüzde 50'nin küresel gelirin yalnızca yüzde 8'ini paylaşması gerekirken, en zengin yüzde 10'un payı yüzde 52'den fazla.",
         "options": [
-          "8%",
-          "25%",
-          "40%",
-          "15%"
+          "%8",
+          "%25",
+          "%40",
+          "%15"
         ],
         "correctIndex": 0
       },
@@ -31293,10 +31293,10 @@
         "question": "170 milyon insanın yaşadığı Bangladeş'te deniz seviyesindeki bir metrelik artışla ne kadar toprak kaybedilebilir?",
         "explanation": "Bangladeş'te deniz seviyesindeki bir metrelik artış, toprakların %17'sinin kaybına neden olabilir.",
         "options": [
-          "17%",
-          "50%",
-          "5%",
-          "80%"
+          "%17",
+          "%50",
+          "%5",
+          "%80"
         ],
         "correctIndex": 0
       },
@@ -32513,7 +32513,7 @@
         "id": "course_234_la_securite_alimentaire_mondiale_q4",
         "type": "percentageSlider",
         "question": "Dünyada yetişkinlerin ne kadarı fazla kilolu?",
-        "explanation": "Yetişkinlerin 40%'ı fazla kiloluyken beş yaş altı çocukların 7%'si yetersiz besleniyor.",
+        "explanation": "Yetişkinlerin %40'ı fazla kiloluyken beş yaş altı çocukların %7'si yetersiz besleniyor.",
         "correctValue": 40,
         "sliderMin": 0,
         "sliderMax": 100,
@@ -36666,7 +36666,7 @@
         "id": "course_266_pourquoi_y_a_t_il_du_cobalt_dans_nos_q1",
         "type": "mcq",
         "question": "Dünyadaki kobaltın neredeyse tamamı nasıl çıkarılır?",
-        "explanation": "Kobaltın yaklaşık 99%'u, bakırı ya da nikeli için işletilen cevherlerin yan ürünü olarak topraktan çıkar.",
+        "explanation": "Kobaltın yaklaşık %99'u, bakırı ya da nikeli için işletilen cevherlerin yan ürünü olarak topraktan çıkar.",
         "options": [
           "Bakır ve nikel madenlerinin yan ürünü olarak",
           "Özellikle onun için açılan madenlerde",
@@ -37615,7 +37615,7 @@
         "id": "course_273_pourquoi_la_suisse_n_est_elle_jamais_en_q5",
         "type": "percentageSlider",
         "question": "2025'te İsviçreli seçmenlerin ne kadarı zorunlu askerliğin kaldırılmasını reddetti?",
-        "explanation": "2025 referandumunda seçmenlerin 84%'ü hayır dedi: silahlı tarafsızlık halkın gözünde hâlâ gözde bir tercih.",
+        "explanation": "2025 referandumunda seçmenlerin %84'ü hayır dedi: silahlı tarafsızlık halkın gözünde hâlâ gözde bir tercih.",
         "correctValue": 84,
         "sliderMin": 0,
         "sliderMax": 100,
@@ -38118,7 +38118,7 @@
         "id": "course_277_les_sanctions_evitent_elles_vraiment_la_q4",
         "type": "percentageSlider",
         "question": "BM'ye göre 2000 yılında Irak'taki pompa istasyonlarından çıkan ham atık suyun ne kadarı doğrudan nehirlere dökülüyordu?",
-        "explanation": "BM 2000'de ham atık suyun yaklaşık 90% kadarının nehirlere ve derelere karıştığını ve halkı hastalıklara açık bıraktığını tahmin etti.",
+        "explanation": "BM 2000'de ham atık suyun yaklaşık %90 kadarının nehirlere ve derelere karıştığını ve halkı hastalıklara açık bıraktığını tahmin etti.",
         "correctValue": 90,
         "sliderMin": 0,
         "sliderMax": 100,
@@ -38540,7 +38540,7 @@
         "id": "course_280_pourquoi_le_dollar_domine_t_il_le_monde_q7",
         "type": "percentageSlider",
         "question": "2026 başında dünyada bildirilen döviz rezervlerinin ne kadarı dolar cinsindendi?",
-        "explanation": "IMF'ye göre dolar, 2026 başında bildirilen döviz rezervlerinin yaklaşık 57%'sini oluşturuyor.",
+        "explanation": "IMF'ye göre dolar, 2026 başında bildirilen döviz rezervlerinin yaklaşık %57'sini oluşturuyor.",
         "correctValue": 57,
         "sliderMin": 0,
         "sliderMax": 100,
@@ -38939,7 +38939,7 @@
         "id": "course_283_qu_y_a_t_il_vraiment_dans_un_smartphone_q8",
         "type": "percentageSlider",
         "question": "2022'de üretilen elektronik atığın ne kadarı toplanıp geri dönüştürüldü?",
-        "explanation": "2022'de üretilen 62 milyon tonun ancak 20%'sinden biraz fazlası (Global E-waste Monitor 2024'e göre 22%) toplanıp geri dönüştürüldü.",
+        "explanation": "2022'de üretilen 62 milyon tonun ancak %20'sinden biraz fazlası (Global E-waste Monitor 2024'e göre %22) toplanıp geri dönüştürüldü.",
         "correctValue": 22,
         "sliderMin": 0,
         "sliderMax": 100,
@@ -38994,7 +38994,7 @@
         "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_q2",
         "type": "percentageSlider",
         "question": "Mars'ın bugünkü atmosfer basıncı Dünya'dakinin ne kadarı?",
-        "explanation": "Mars atmosferi o kadar ince ki basıncı Dünya'dakinin 1%'inden az: sıvı su orada donar ya da buharlaşır.",
+        "explanation": "Mars atmosferi o kadar ince ki basıncı Dünya'dakinin %1'inden az: sıvı su orada donar ya da buharlaşır.",
         "correctValue": 1,
         "sliderMin": 0,
         "sliderMax": 100,
@@ -39005,7 +39005,7 @@
         "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_q3",
         "type": "mcq",
         "question": "Sıvı su bugün Mars'ın yüzeyinde neden kararlı kalamıyor?",
-        "explanation": "Dünya'dakinin 1%'inden düşük bir basınçta sıvı su yüzeyde uzun süre kalamaz: donar ya da buharlaşır.",
+        "explanation": "Dünya'dakinin %1'inden düşük bir basınçta sıvı su yüzeyde uzun süre kalamaz: donar ya da buharlaşır.",
         "options": [
           "Atmosfer basıncı çok düşük, su donuyor ya da buhara dönüşüyor",
           "Toprak çok sıcak ve suyu kaynatıyor",
@@ -39055,10 +39055,10 @@
         "id": "course_284_pourquoi_mars_est_elle_devenue_un_desert_q7",
         "type": "mcq",
         "question": "2021 tarihli bir çalışmaya göre Mars'taki suyun ne kadarı kabuğundaki minerallere hapsolmuş olabilir?",
-        "explanation": "2021'de Science dergisinde yayımlanan çalışma, Mars suyunun 30 ile 99% arasındaki bir kısmının kabuk kayalarına kimyasal olarak hapsolmuş olabileceğini tahmin ediyor.",
+        "explanation": "2021'de Science dergisinde yayımlanan çalışma, Mars suyunun %30 ile %99 arasındaki bir kısmının kabuk kayalarına kimyasal olarak hapsolmuş olabileceğini tahmin ediyor.",
         "options": [
-          "30 ile 99% arası",
-          "5%'ten az",
+          "%30 ile %99 arası",
+          "%5'ten az",
           "Tam olarak yarısı",
           "Hiç: suyun hepsi kaçtı"
         ],
@@ -40285,7 +40285,7 @@
         "id": "course_294_pourquoi_l_irlande_affamee_exportait_q2",
         "type": "percentageSlider",
         "question": "Mildiyö 1845'te İrlanda'nın patates ürününün ne kadarını yok etti?",
-        "explanation": "Mildiyö daha 1845'te ülkenin patates ürününün 50%'sine kadarını yok etti.",
+        "explanation": "Mildiyö daha 1845'te ülkenin patates ürününün %50'sine kadarını yok etti.",
         "correctValue": 50,
         "sliderMin": 0,
         "sliderMax": 100,
@@ -40335,7 +40335,7 @@
         "options": [
           "İrlanda kıtlık sırasında ihraç ettiğinin üç katından fazla tahıl ithal etti",
           "İhracat daha 1845 sonbaharında durdu",
-          "Patates ürünü yalnızca 10% azaldı",
+          "Patates ürünü yalnızca %10 azaldı",
           "Tüccarlar tahılı bedava dağıttı"
         ],
         "correctIndex": 0
@@ -40528,19 +40528,19 @@
         "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_q1",
         "type": "mcq",
         "question": "2025'te bütün veri merkezleri dünya elektriğinin ne kadarını kullandı?",
-        "explanation": "Uluslararası Enerji Ajansı'na göre veri merkezleri, bütün hizmetler dahil, 2025'te dünya elektriğinin yaklaşık 1,5%'ini kullandı.",
+        "explanation": "Uluslararası Enerji Ajansı'na göre veri merkezleri, bütün hizmetler dahil, 2025'te dünya elektriğinin yaklaşık %1,5'ini kullandı.",
         "options": [
-          "Yaklaşık 1,5%",
-          "Yaklaşık 15%",
-          "Yaklaşık 5%",
-          "0,1%'den az"
+          "Yaklaşık %1,5",
+          "Yaklaşık %15",
+          "Yaklaşık %5",
+          "%0,1'den az"
         ],
         "correctIndex": 0
       },
       {
         "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_q2",
         "type": "trueFalse",
-        "question": "Doğru ya da yanlış: bu 1,5%'lik rakam yalnızca yapay zekânın tüketimine karşılık gelir.",
+        "question": "Doğru ya da yanlış: bu %1,5'lik rakam yalnızca yapay zekânın tüketimine karşılık gelir.",
         "explanation": "Bu rakam yalnızca yapay zekâyı değil, veri merkezlerinde barındırılan bütün hizmetleri kapsar.",
         "options": [
           "Doğru",
@@ -40552,7 +40552,7 @@
         "id": "course_296_l_ia_consomme_t_elle_beaucoup_d_energie_q3",
         "type": "percentageSlider",
         "question": "Sunucular, modern bir veri merkezinin elektriğinin ortalama ne kadarını tüketir?",
-        "explanation": "Hesaplamanın büyük kısmını sunucular yapar ve modern bir veri merkezinin elektriğinin ortalama yaklaşık 60%'ını alır.",
+        "explanation": "Hesaplamanın büyük kısmını sunucular yapar ve modern bir veri merkezinin elektriğinin ortalama yaklaşık %60'ını alır.",
         "correctValue": 60,
         "sliderMin": 0,
         "sliderMax": 100,
@@ -40705,7 +40705,7 @@
         "id": "course_297_d_ou_vient_vraiment_l_electricite_de_q5",
         "type": "percentageSlider",
         "question": "2025'te ABD'deki büyük santrallerin ürettiği elektriğin ne kadarı yenilenebilir enerji kaynaklarından geliyordu?",
-        "explanation": "Henüz geçici rakamlara göre, 2025'te büyük Amerikan santrallerinin ürettiği elektriğin yaklaşık dörtte biri (24%) yenilenebilir kaynaklardan geliyordu.",
+        "explanation": "Henüz geçici rakamlara göre, 2025'te büyük Amerikan santrallerinin ürettiği elektriğin yaklaşık dörtte biri (%24) yenilenebilir kaynaklardan geliyordu.",
         "correctValue": 24,
         "sliderMin": 0,
         "sliderMax": 100,
@@ -41490,7 +41490,7 @@
         "id": "course_303_pourquoi_certains_detestent_ils_la_q6",
         "type": "percentageSlider",
         "question": "Dünyanın en çok etkilenen bölgelerinde nüfusun ne kadarı bu gen varyantını taşır?",
-        "explanation": "Dünyanın bölgesine göre nüfusun 4% ile 20% arasındaki bir kısmı OR6A2 geninin bu varyantını taşır.",
+        "explanation": "Dünyanın bölgesine göre nüfusun %4 ile %20 arasındaki bir kısmı OR6A2 geninin bu varyantını taşır.",
         "correctValue": 20,
         "sliderMin": 0,
         "sliderMax": 100,
