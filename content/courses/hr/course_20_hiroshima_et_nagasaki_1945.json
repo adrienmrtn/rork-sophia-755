@@ -1,139 +1,139 @@
 {
-  "id": "course_20_hiroshima_et_nagasaki_1945",
-  "title": "Zašto su SAD bombardirale Hirošimu i Nagasaki?",
-  "subtitle": "1945",
-  "subject": "histoire",
-  "subcategory": "Revolucije i sukobi novog vijeka",
   "description": "**A 6. kolovoza 1945**., atomska bomba sravnila je Hirošimu. Tri dana kasnije, Nagasaki. Drugi svjetski rat završava...i počinje nuklearno doba.",
   "hero": {
+    "hook": "U bljesku svjetlijem od tisuću sunaca, cijeli jedan grad nestaje.",
     "image": "hiroshima_et_nagasaki_1945",
-    "ratio": "16:9",
-    "hook": "U bljesku svjetlijem od tisuću sunaca, cijeli jedan grad nestaje."
+    "ratio": "16:9"
   },
+  "id": "course_20_hiroshima_et_nagasaki_1945",
   "sections": [
     {
-      "id": "course_20_hiroshima_et_nagasaki_1945_intro",
-      "title": "Uvod",
+      "blocks": [
+        {
+          "text": "Dana **A 6. kolovoza 1945**., u **8:15 ujutro**, nebo **Hirošima**, japanskog grada, planulo je. U trenutku jedna bomba ubije između **70.000 i 80.000** ljudi. Tri dana kasnije, **Nagasaki** doživio je istu sudbinu.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Ovi udari završavaju rat u Aziji i otvaraju **nuklearnu eru**: po prvi put čovječanstvo ima oružje sposobno za samouništenje.",
+          "type": "paragraph"
+        }
+      ],
       "free": true,
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Dana **A 6. kolovoza 1945**., u **8:15 ujutro**, nebo **Hirošima**, japanskog grada, planulo je. U trenutku jedna bomba ubije između **70.000 i 80.000** ljudi. Tri dana kasnije, **Nagasaki** doživio je istu sudbinu."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ovi udari završavaju rat u Aziji i otvaraju **nuklearnu eru**: po prvi put čovječanstvo ima oružje sposobno za samouništenje."
-        }
-      ]
+      "id": "course_20_hiroshima_et_nagasaki_1945_intro",
+      "title": "Uvod"
     },
     {
-      "id": "course_20_hiroshima_et_nagasaki_1945_p1",
-      "title": "Projekt Manhattan",
-      "free": false,
       "blocks": [
         {
-          "type": "paragraph",
-          "text": "Zbog straha od nacističke bombe, pismo Alberta Einsteina, napisano s fizičarem [[Leó Szilárd]], tjera Washington da djeluje. Godine **1942**, Sjedinjene Države pokrenule su **Projekt Manhattan**: približno **130.000** ljudi, **2 milijarde** dolara. Tajna mjesta rođena su u Oak Ridgeu, Hanfordu, Los Alamosu."
+          "text": "Zbog straha od nacističke bombe, pismo Alberta Einsteina, napisano s fizičarem [[Leó Szilárd]], tjera Washington da djeluje. Godine **1942**, Sjedinjene Države pokrenule su **Projekt Manhattan**: približno **130.000** ljudi, **2 milijarde** dolara. Tajna mjesta rođena su u Oak Ridgeu, Hanfordu, Los Alamosu.",
+          "type": "paragraph"
         },
         {
-          "type": "image",
           "asset": "trinity_nuclear_test_1945",
+          "caption": "Trinity test, 16. srpnja 1945.: prva nuklearna eksplozija.",
           "ratio": "4:3",
-          "caption": "Trinity test, 16. srpnja 1945.: prva nuklearna eksplozija."
+          "type": "image"
         },
         {
-          "type": "funFact",
-          "text": "**Trojstvo** test, u pustinji [[Jornada del Muerto]] (Novi Meksiko), bio je toliko snažan da su stanovnici više od **150 km** mislili da su vidjeli sunce kako izlazi dvaput."
+          "text": "**Trojstvo** test, u pustinji [[Jornada del Muerto]] (Novi Meksiko), bio je toliko snažan da su stanovnici više od **150 km** mislili da su vidjeli sunce kako izlazi dvaput.",
+          "type": "funFact"
         },
         {
-          "type": "paragraph",
-          "text": "Dana **, 16. srpnja 1945**., **Trojstvo** test je prošao. **Robert Oppenheimer**, znanstveni direktor projekta, zatim se sjeti rečenice iz Mahabharate, drevnog indijskog teksta: \"Postao sam Smrt, razarač svjetova.\""
+          "text": "Dana **, 16. srpnja 1945**., **Trojstvo** test je prošao. **Robert Oppenheimer**, znanstveni direktor projekta, zatim se sjeti rečenice iz Mahabharate, drevnog indijskog teksta: \"Postao sam Smrt, razarač svjetova.\"",
+          "type": "paragraph"
         }
-      ]
+      ],
+      "free": false,
+      "id": "course_20_hiroshima_et_nagasaki_1945_p1",
+      "title": "Projekt Manhattan"
     },
     {
+      "blocks": [
+        {
+          "text": "Kada je Franklin Roosevelt umro, novi američki predsjednik **Harry Truman** otkrio je postojanje bombe. Njemačka je kapitulirala, ali Japan nastavlja, osobito sa [[kamikaze]], pilotima koji jurišaju svojim zrakoplovima na savezničke brodove. Invazija Japana mogla bi koštati **500.000 do milijun** američkih gubitaka.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Hirošima je namjerno bila pošteđena od konvencionalnih napada, kako bi se precizno izmjerili učinci jedne nuklearne eksplozije.",
+          "type": "funFact"
+        },
+        {
+          "text": "Na [[Potsdam]], savezničkoj konferenciji u srpnju 1945., porasle su napetosti sa SSSR-om. Korištenje bombe također je prikaz američke moći. Hirošima je odabrana zbog svoje vojne uloge i reljefa u obliku bazena koji koncentrira dah.",
+          "type": "paragraph"
+        }
+      ],
+      "free": false,
       "id": "course_20_hiroshima_et_nagasaki_1945_p2",
-      "title": "Trumanov izbor",
-      "free": false,
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Kada je Franklin Roosevelt umro, novi američki predsjednik **Harry Truman** otkrio je postojanje bombe. Njemačka je kapitulirala, ali Japan nastavlja, osobito sa [[kamikaze]], pilotima koji jurišaju svojim zrakoplovima na savezničke brodove. Invazija Japana mogla bi koštati **500.000 do milijun** američkih gubitaka."
-        },
-        {
-          "type": "funFact",
-          "text": "Hirošima je namjerno bila pošteđena od konvencionalnih napada, kako bi se precizno izmjerili učinci jedne nuklearne eksplozije."
-        },
-        {
-          "type": "paragraph",
-          "text": "Na [[Potsdam]], savezničkoj konferenciji u srpnju 1945., porasle su napetosti sa SSSR-om. Korištenje bombe također je prikaz američke moći. Hirošima je odabrana zbog svoje vojne uloge i reljefa u obliku bazena koji koncentrira dah."
-        }
-      ]
+      "title": "Trumanov izbor"
     },
     {
-      "id": "course_20_hiroshima_et_nagasaki_1945_p3",
-      "title": "Dvije bombe, pa predaja",
-      "free": false,
       "blocks": [
         {
-          "type": "paragraph",
-          "text": "**A 6. kolovoza**, bombarder **Enola Gay** baca **Mali Dječak** na Hirošimu. Do **140.000** smrtnih slučajeva do kraja godine, uključujući opekline i [[Radijacijska bolest (akutni radijacijski sindrom)]]. **A 9. kolovoza**, [[Bockscar]] prvo cilja na [[Kokura]], ali ga oblaci šalju natrag u **Nagasaki**. **Debeli čovjek** bomba eksplodira."
+          "text": "**A 6. kolovoza**, bombarder **Enola Gay** baca **Mali Dječak** na Hirošimu. Do **140.000** smrtnih slučajeva do kraja godine, uključujući opekline i [[Radijacijska bolest (akutni radijacijski sindrom)]]. **A 9. kolovoza**, [[Bockscar]] prvo cilja na [[Kokura]], ali ga oblaci šalju natrag u **Nagasaki**. **Debeli čovjek** bomba eksplodira.",
+          "type": "paragraph"
         },
         {
-          "type": "image",
           "asset": "hiroshima_atomic_bomb_mushroom_cloud_1945",
+          "caption": "Oblak gljive u Hirošimi, 6. kolovoza 1945.",
           "ratio": "4:3",
-          "caption": "Oblak gljive u Hirošimi, 6. kolovoza 1945."
+          "type": "image"
         },
         {
-          "type": "funFact",
-          "text": "**Tsutomu Yamaguchi** preživio je obje bombe: ozlijeđen u Hirošimi 6. vratio se u Nagasaki... gdje je još bio 9. kolovoza."
+          "text": "**Tsutomu Yamaguchi** preživio je obje bombe: ozlijeđen u Hirošimi 6. vratio se u Nagasaki... gdje je još bio 9. kolovoza.",
+          "type": "funFact"
         },
         {
-          "type": "paragraph",
-          "text": "Istoga dana [[Sovjetska invazija na Mandžuriju (9. kolovoza 1945.)]] uništila je nadu u sovjetsko posredovanje. Dana **U 15. kolovoza**, car **Hirohito** objavio je predaju na radiju, u [[Gyokuon-hōsō]], povijesnoj adresi."
+          "text": "Istoga dana [[Sovjetska invazija na Mandžuriju (9. kolovoza 1945.)]] uništila je nadu u sovjetsko posredovanje. Dana **U 15. kolovoza**, car **Hirohito** objavio je predaju na radiju, u [[Gyokuon-hōsō]], povijesnoj adresi.",
+          "type": "paragraph"
         }
-      ]
+      ],
+      "free": false,
+      "id": "course_20_hiroshima_et_nagasaki_1945_p3",
+      "title": "Dvije bombe, pa predaja"
     },
     {
-      "id": "course_20_hiroshima_et_nagasaki_1945_p4",
-      "title": "Duga sjena atoma",
-      "free": false,
       "blocks": [
         {
-          "type": "paragraph",
-          "text": "Preživjeli, [[Hibakusha]], nose rak, stigme i beskrajnu etičku raspravu. Geopolitički, počinje doba [[Nuklearno odvraćanje]]: prijetnja bombom da se spriječi onaj drugi u napadu. Počinje Hladni rat. Hirošima ostaje najoštrije upozorenje znanosti stavljeno u službu uništenja."
+          "text": "Preživjeli, [[Hibakusha]], nose rak, stigme i beskrajnu etičku raspravu. Geopolitički, počinje doba [[Nuklearno odvraćanje]]: prijetnja bombom da se spriječi onaj drugi u napadu. Počinje Hladni rat. Hirošima ostaje najoštrije upozorenje znanosti stavljeno u službu uništenja.",
+          "type": "paragraph"
         },
         {
-          "type": "timeline",
           "events": [
             {
               "date": "16. srpnja 1945. godine",
-              "title": "Trojstvo",
-              "detail": "Prvi uspješni nuklearni test."
+              "detail": "Prvi uspješni nuklearni test.",
+              "title": "Trojstvo"
             },
             {
               "date": "6. kolovoza 1945. godine",
-              "title": "Hirošima",
-              "detail": "Dječačić sravnio grad."
+              "detail": "Dječačić sravnio grad.",
+              "title": "Hirošima"
             },
             {
               "date": "9. kolovoza 1945. godine",
-              "title": "Nagasaki i SSSR",
-              "detail": "Debeli i ulazak Sovjetskog Saveza u rat."
+              "detail": "Debeli i ulazak Sovjetskog Saveza u rat.",
+              "title": "Nagasaki i SSSR"
             },
             {
               "date": "15. kolovoza 1945. godine",
-              "title": "Kapitulacija",
-              "detail": "Hirohito nameće mir."
+              "detail": "Hirohito nameće mir.",
+              "title": "Kapitulacija"
             }
-          ]
+          ],
+          "type": "timeline"
         },
         {
-          "type": "takeaway",
-          "text": "**Hirošima**, **A6. kolovoza 1945**.: deseci tisuća mrtvih u trenu. Nakon Nagasakija, Japan je kapitulirao... i počelo je nuklearno doba."
+          "text": "**Hirošima**, **6. kolovoza 1945**.: deseci tisuća mrtvih u trenu. Nakon Nagasakija, Japan je kapitulirao... i počelo je nuklearno doba.",
+          "type": "takeaway"
         }
-      ]
+      ],
+      "free": false,
+      "id": "course_20_hiroshima_et_nagasaki_1945_p4",
+      "title": "Duga sjena atoma"
     }
-  ]
+  ],
+  "subcategory": "Revolucije i sukobi novog vijeka",
+  "subject": "histoire",
+  "subtitle": "1945",
+  "title": "Zašto su SAD bombardirale Hirošimu i Nagasaki?"
 }
