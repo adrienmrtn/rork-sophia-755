@@ -19818,7 +19818,7 @@ enum AppLocalizable {
         "sync.conflict.body": "Выбери, какой прогресс оставить. Второй будет заменён.",
         "sync.conflict.local": "Это устройство",
         "sync.conflict.remote": "Твой аккаунт",
-        "sync.conflict.summary": "Курсов: %d · уровень %d · серия %d дн.",
+        "sync.conflict.summary": "Пройдено курсов: %d · уровень %d · серия %d дн.",
         "onboardingV2.welcome.title": "Добро пожаловать в Sophia",
         "onboardingV2.welcome.subtitle": "Становись чуть умнее каждый день.",
         "onboardingV2.welcome.cta": "Начать",
