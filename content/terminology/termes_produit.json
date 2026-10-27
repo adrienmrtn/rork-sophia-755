@@ -1,0 +1,915 @@
+{
+ "_readme": [
+  "Termes produit : un terme canonique par langue, employé partout dans l'interface ; variantes_a_signaler = expressions régulières des autres mots à remplacer.",
+  "Premium et Sophia restent en latin."
+ ],
+ "langues": [
+  "en",
+  "es",
+  "he",
+  "et"
+ ],
+ "termes": [
+  {
+   "id": "quiz",
+   "fr": "Quiz (questionnaire de fin de cours ; mini quiz)",
+   "par_langue": {
+    "en": {
+     "canon": "quiz",
+     "variantes_a_signaler": [
+      "\\b(questionnaire|quizz|mini-?test|knowledge\\s+check|self-test|trivia\\s+game|survey)\\b",
+      "\\b(test|exam|examination)\\s+(at\\s+the\\s+end\\s+of|after|following)\\s+(the|each|every|this)\\s+(course|lesson)\\b",
+      "\\b(final|end|end-of-course)\\s+(test|exam)\\b(?=[^.\\n]{0,30}\\b(course|lesson)\\b)"
+     ],
+     "note": "'quiz' is the natural US word for a short, low-stakes knowledge check; 'test' and 'exam' sound like school grading and collide with the exam-prep testimonials."
+    },
+    "es": {
+     "canon": "quiz (plural: quizzes)",
+     "variantes_a_signaler": [
+      "\\bcuestionarios?\\b",
+      "\\btrivia\\b",
+      "\\bquizes\\b|\\bquices\\b|\\bquizs\\b",
+      "\\b(?:los|sin|unos|estos|tus|mis)\\s+quiz\\b|\\bquiz\\s+(?:interactivos|personalizados|ilimitados|espaciados|recientes)\\b"
+     ],
+     "note": "« quiz » es corriente en España y lo usa toda la app; el plural « quizzes » (mayoritario en la app) debe ser sistemático; el plural invariable « los quiz » del paywall se marca. « test » y « examen » no se marcan porque aparecen legítimamente (test de personalidad, exámenes del instituto)."
+    },
+    "he": {
+     "canon": "חידון",
+     "variantes_a_signaler": [
+      "שאלו[נן](ים)?",
+      "בחינ(ה|ות)",
+      "מבחן|מבחנים",
+      "קוו?יז"
+     ],
+     "note": "חידון est le mot israélien du jeu de questions ; שאלון = formulaire, מבחן / בחינה = examen (tous trois observés)."
+    },
+    "et": {
+     "canon": "viktoriin",
+     "variantes_a_signaler": [
+      "\\bquiz\\w*",
+      "\\bkvii[sz]\\w*",
+      "\\bküsimustik\\w*",
+      "\\bmälumäng\\w*"
+     ],
+     "note": "„viktoriin“ on eesti haridusrakendustes (Kahoot, Quizlet) kinnistunud vaste; „kviis“ on släng, „küsimustik“ tähendab ankeeti, „mälumäng“ on pubimäng."
+    }
+   }
+  },
+  {
+   "id": "cours",
+   "fr": "Cours (une leçon de 10 minutes ; l'unité de contenu)",
+   "par_langue": {
+    "en": {
+     "canon": "course",
+     "variantes_a_signaler": [
+      "\\blessons?\\b",
+      "\\b(classes?|lectures?|modules?|units?|tutorials?|sessions?|chapters?)\\b(?=[^.\\n]{0,30}\\b(10-min\\w*|minutes?|completed?|unlock\\w*|finish\\w*|quiz|start\\w*|new|explore|discover)\\b)"
+     ],
+     "note": "'course' is the content unit used in the app and the stores; 'lesson' is the machine's default and must not coexist."
+    },
+    "es": {
+     "canon": "curso",
+     "variantes_a_signaler": [
+      "\\blecci[oó]n(?:es)?\\b",
+      "\\bclases?\\s+(?:de\\s+10\\s+minutos|cortas?|diarias?|r[aá]pidas?)\\b|\\b(?:una|la|esta)\\s+clase\\s+(?:de\\s+hoy|diaria)\\b",
+      "\\bm[oó]dulos?\\s+(?:de\\s+(?:aprendizaje|cursos?)|de\\s+10\\s+minutos)\\b",
+      "\\btutorial(?:es)?\\b"
+     ],
+     "note": "La unidad de contenido es « curso » en toda la interfaz (Cursos ilimitados, Buscar un curso); « lecciones » aparece en el onboarding y debe unificarse. « lección » en prosa (la lección de Gilgamesh) es legítima: falso positivo aceptado."
+    },
+    "he": {
+     "canon": "קורס",
+     "variantes_a_signaler": [
+      "שיעור(ים)?",
+      "לקח(ים)?",
+      "יחיד(ת|ות)\\s+לימוד",
+      "הרצא(ה|ות)"
+     ],
+     "note": "קורס désigne l'unité de 10 minutes ; שיעור (leçon, observé partout) renvoie à l'école, הרצאה = conférence."
+    },
+    "et": {
+     "canon": "kursus",
+     "variantes_a_signaler": [
+      "\\bõppetund\\w*",
+      "\\bloeng\\w*",
+      "\\bõppetük\\w*",
+      "\\b(10|kümne)[-\\s]*minuti\\w*\\s+tund\\w*"
+     ],
+     "note": "„kursus“ on sisuüksuse nimi; „tund/õppetund“ = leçon (ja „tund“ tähendab ka tundi), „loeng“ = ülikooliloeng."
+    }
+   }
+  },
+  {
+   "id": "parcours",
+   "fr": "Parcours (onglet : chemin de progression thématique)",
+   "par_langue": {
+    "en": {
+     "canon": "path",
+     "variantes_a_signaler": [
+      "\\b(journey|route|pathway|itinerary|roadmap|trail|track|curriculum)s?\\b(?=[^.\\n]{0,40}\\b(your|completed?|progress|tab|personali[sz]ed|daily|learning|courses?|follow)\\b)",
+      "\\b(your|personali[sz]ed|learning|daily|custom)\\s+(journey|route|pathway|itinerary|roadmap|trail|track|curriculum)s?\\b",
+      "\\blearning\\s+paths?\\b"
+     ],
+     "note": "Audit: rendered as path / journey / route / learning paths; the tab is 'Path', so 'Your path', 'PATH', 'Path complete' everywhere."
+    },
+    "es": {
+     "canon": "ruta",
+     "variantes_a_signaler": [
+      "\\brecorridos?\\b",
+      "\\bitinerarios?\\b",
+      "\\bviaje\\s+de\\s+(?:conocimiento|aprendizaje)\\b|\\btrayectoria\\s+de\\s+aprendizaje\\b",
+      "\\bcamino\\s+(?:personalizado|de\\s+aprendizaje|claro)\\b|\\btu\\s+camino\\b|\\bparcours\\b"
+     ],
+     "note": "La pestaña ya se llama « Ruta » (tab.path, « ruta personalizada ») y la auditoría pide « ruta » en todas partes; « recorrido », « itinerario » y « viaje de conocimiento » conviven hoy en el onboarding y las colecciones."
+    },
+    "he": {
+     "canon": "מסלול",
+     "variantes_a_signaler": [
+      "מסע",
+      "שביל(ים)?",
+      "נתיב(ים)?",
+      "דרך\\s+(ה)?למידה"
+     ],
+     "note": "מסלול = itinéraire de progression ; מסע = voyage et שבילים = sentiers (observés)."
+    },
+    "et": {
+     "canon": "teekond",
+     "variantes_a_signaler": [
+      "\\bREIS\\b|\\breis\\w*(?=.{0,40}(ettevalmist|valmista|sinu|õppe|alusta))",
+      "\\bõpperad\\w*|\\bõpperaja\\w*",
+      "\\bmarsruu[dt]\\w*",
+      "\\bparcours\\b"
+     ],
+     "note": "audit: „reis“ (= voyage) asendatakse „teekonnaga“; teekond kannab edenemise ja raja mõtet."
+    }
+   }
+  },
+  {
+   "id": "collection",
+   "fr": "Collection (ensemble thématique de cours)",
+   "par_langue": {
+    "en": {
+     "canon": "collection",
+     "variantes_a_signaler": [
+      "\\b(bundle|pack|packs|set|sets|series|playlist|anthology|compilation|theme\\s+pack|thematic\\s+(set|group))\\b(?=[^.\\n]{0,40}\\b(courses?|of\\s+\\d+|explore|discover|new|themed?)\\b)",
+      "\\b(course|courses)\\s+(bundle|pack|set|series|playlist)\\b"
+     ],
+     "note": "Same word in English; the variants are what a machine picks to avoid repetition."
+    },
+    "es": {
+     "canon": "colección",
+     "variantes_a_signaler": [
+      "\\bconjuntos?\\s+(?:de\\s+cursos|tem[aá]tic\\w+)\\b",
+      "\\bseries?\\s+de\\s+cursos\\b",
+      "\\bpacks?\\b|\\bpaquetes?\\s+de\\s+cursos\\b",
+      "\\bselecci[oó]n\\s+de\\s+cursos\\b"
+     ],
+     "note": "« colección » es transparente y ya es el nombre de la pestaña (Colecciones)."
+    },
+    "he": {
+     "canon": "אוסף",
+     "variantes_a_signaler": [
+      "קולקצי[הת]",
+      "אסופ[הת]",
+      "סדר[הת]\\s+(קורסים|נושאית)",
+      "מקב[צץ](ים)?"
+     ],
+     "note": "אוסף = ensemble thématique ; קולקציה évoque la mode, אסופה l'anthologie littéraire."
+    },
+    "et": {
+     "canon": "kogumik",
+     "variantes_a_signaler": [
+      "\\bkollektsioon\\w*",
+      "\\bkomplekt\\w*(?=.{0,30}kursus)",
+      "\\bkursuste\\s+kogu\\b",
+      "\\bsar[ij]\\w*(?=.{0,20}kursus)"
+     ],
+     "note": "„kogumik“ = temaatiline kursuste kogum; „kollektsioon“ on eesti keeles mood/kunst (ja auditis valesti Baudelaire’i luulekogu kohta)."
+    }
+   }
+  },
+  {
+   "id": "niveau",
+   "fr": "Niveau (NIV. 3 ; progression XP)",
+   "par_langue": {
+    "en": {
+     "canon": "level (abbreviation: LVL, no period)",
+     "variantes_a_signaler": [
+      "\\blvl\\.|\\bniv\\.?\\b|\\blv\\.\\s*\\d",
+      "\\b(tier|rank|grade|stage|degree)\\s*\\d+\\b",
+      "\\b(tier|rank|grade|stage)\\b(?=[^.\\n]{0,30}\\b(xp|points|level\\s+up|unlock)\\b)"
+     ],
+     "note": "Audit: 'LVL.' with a period is calqued on 'NIV.'; English writes 'LVL 3'."
+    },
+    "es": {
+     "canon": "nivel (abreviatura: niv.)",
+     "variantes_a_signaler": [
+      "\\blevel\\b|\\bLVL\\b|\\bLV\\.?\\s*\\d",
+      "\\bgrado\\s+\\d+\\b",
+      "\\brango\\s+\\d+\\b|\\betapa\\s+\\d+\\b",
+      "\\bNV\\.?\\s*\\d"
+     ],
+     "note": "« nivel » es el término de la progresión XP (« niv. 3 », « ¡Subes de nivel! »). « grado » y « rango » se marcan solo seguidos de número para no tocar la prosa."
+    },
+    "he": {
+     "canon": "רמה (רמה 3)",
+     "variantes_a_signaler": [
+      "(ה)?שלב\\s+(\\d+|הבא|הנוכחי|הקודם)",
+      "לבל",
+      "מפלס(ים)?",
+      "דרג[הת]\\s+\\d"
+     ],
+     "note": "רמה est le mot des jeux pour un niveau XP ; שלב = étape (utilisé dans l'audit, à unifier) ; דרגה est réservé au rang (דרגה עולמית)."
+    },
+    "et": {
+     "canon": "tase (TASE 3)",
+     "variantes_a_signaler": [
+      "\\bnivoo\\w*",
+      "\\bLVL\\b|\\blevel\\w*",
+      "\\bNIV\\.?\\s*\\d",
+      "\\bast(e|me)\\w*\\s*\\d"
+     ],
+     "note": "„tase“ on mängustatud rakenduste standardsõna; „aste“ = degré, „nivoo“ on kõnekeelne laen."
+    }
+   }
+  },
+  {
+   "id": "serie",
+   "fr": "Série (streak : jours consécutifs)",
+   "par_langue": {
+    "en": {
+     "canon": "streak",
+     "variantes_a_signaler": [
+      "\\bseries\\b(?=[^.\\n]{0,40}\\b(days?|consecutive|in\\s+a\\s+row|keep\\s+(up|it|your)|lose|lost|freeze|fire)\\b)",
+      "\\b(stripes?|run\\s+of\\s+days|day\\s+chain|chain\\s+of\\s+days|daily\\s+sequence)\\b",
+      "\\b\\d+-?\\s?day\\s+(series|sequence|chain|run)\\b"
+     ],
+     "note": "'streak' is the gamification standard (Duolingo, Snapchat); 'series' is the literal calque."
+    },
+    "es": {
+     "canon": "racha",
+     "variantes_a_signaler": [
+      "\\bserie\\s+de\\s+\\d+\\s+d[ií]as\\b|\\b\\d+\\s+d[ií]as\\s+de\\s+serie\\b|\\btu\\s+serie\\b",
+      "\\bstreak\\b",
+      "\\bseguidilla\\b",
+      "\\bcadena\\s+de\\s+d[ií]as\\b"
+     ],
+     "note": "Misma decisión que el mot piège serie_streak: « racha » es la palabra que usan las apps en español (Racha de 7 días)."
+    },
+    "he": {
+     "canon": "רצף",
+     "variantes_a_signaler": [
+      "סדר[הת]",
+      "סטריק",
+      "שריט[הת]",
+      "(ה)?פס\\s+(שלך|היומי)"
+     ],
+     "note": "רצף = suite de jours consécutifs ; סדרה = série TV (faux positif possible dans un cours, accepté)."
+    },
+    "et": {
+     "canon": "seeria",
+     "variantes_a_signaler": [
+      "\\bsar[ij]\\w*(?=.{0,30}\\bpäev\\w*)",
+      "\\btriip\\w*|\\btriibu\\w*",
+      "\\bstreak\\w*",
+      "\\bjada\\b"
+     ],
+     "note": "„seeria“ (päevade seeria) on Duolingo jt eesti UI-s kinnistunud; „sari“ = telesari, „triip“ = rayure."
+    }
+   }
+  },
+  {
+   "id": "essai_gratuit",
+   "fr": "Essai gratuit (période d'essai de l'abonnement)",
+   "par_langue": {
+    "en": {
+     "canon": "free trial",
+     "variantes_a_signaler": [
+      "\\b(free\\s+)?(test\\s+period|trial\\s+period|testing\\s+period|trial\\s+version|demo\\s+(period|version|access))\\b",
+      "\\bfree\\s+(test|attempt|essay|sample|period|week|try-?out)\\b",
+      "\\b(gratis|complimentary)\\s+(trial|period|week|days)\\b",
+      "\\btrial\\s+(offer|phase|stage)\\b"
+     ],
+     "note": "'free trial' is the App Store / Google Play term ('7-day free trial'); 'trial period' is acceptable only in legal text."
+    },
+    "es": {
+     "canon": "prueba gratuita",
+     "variantes_a_signaler": [
+      "\\bprueba\\s+gratis\\b",
+      "\\bper[ií]odo\\s+de\\s+prueba\\b",
+      "\\bversi[oó]n\\s+de\\s+prueba\\b|\\btrial\\b|\\bdemo\\b",
+      "\\bensayo\\s+gratuito\\b|\\bjuicio\\s+gratuito\\b"
+     ],
+     "note": "La auditoría pide unificar en « prueba gratuita » en títulos (hoy alternan « prueba gratis » y « prueba gratuita »); « gratis » solo queda en CTA cortos (« 3 días gratis »)."
+    },
+    "he": {
+     "canon": "ניסיון חינם",
+     "variantes_a_signaler": [
+      "ניסיון\\s+(חינמי|בחינם|ללא\\s+תשלום)",
+      "(ה)?ניסיון\\s+שלי",
+      "משפט\\s+(חינם|חינמי)|המשפט\\s+מסתיים",
+      "טרייל"
+     ],
+     "note": "ניסיון חינם est la formule des stores israéliens ; «הניסיון שלי» (observé) = ma tentative."
+    },
+    "et": {
+     "canon": "tasuta prooviperiood",
+     "variantes_a_signaler": [
+      "\\balusta\\s+(minu\\s+|oma\\s+)?kohtuprotsess\\w*|\\bkohtuprotsess\\w*(?=.{0,30}(lõp|päev|tasuta))",
+      "\\bprooviversioon\\w*",
+      "\\bkatseae\\w*|\\bkatseaj\\w*",
+      "\\btasuta\\s+(proov|katse)\\b"
+     ],
+     "note": "„prooviperiood“ on App Store’i/Google Play eesti vaste; „kohtuprotsess“ = procès (audit), „katseaeg“ = période probatoire (töösuhe), „prooviversioon“ = démo."
+    }
+   }
+  },
+  {
+   "id": "premium",
+   "fr": "Premium (nom de l'offre : conservé tel quel, jamais traduit ni translittéré)",
+   "par_langue": {
+    "en": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bsophia\\s+(pro|plus|gold|vip|unlimited|full)\\b|\\bpro\\s+(plan|version|subscription|membership|account|courses?)\\b",
+      "\\b(paid|paying|full|plus|gold|vip|deluxe|upgraded|unlimited)\\s+(plan|version|membership|account|tier|offer|subscription)\\b",
+      "\\bpremi(a|ums)\\b|\\b(pr[ée]mium|premiom|premyum|primium)\\b",
+      "(пре|прэ)миум|بريميوم|פרימיום|πρίμιουμ"
+     ],
+     "note": "Brand name kept as is. Audit: 'Sophia Pro', 'Sophia PRO', 'premium' coexist; one name 'Premium' / 'Sophia Premium'. Lowercase cannot be caught by a case-insensitive regex."
+    },
+    "es": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bprémium\\b|\\bpremiun\\b|\\bpremiums\\b",
+      "\\b(?:plan|versi[oó]n|suscripci[oó]n|cuenta)\\s+(?:de\\s+pago|superior|de\\s+primera|completa|de\\s+lujo)\\b",
+      "\\bprima\\s+(?:mensual|anual|del?\\s+(?:seguro|suscripci[oó]n|plan))\\b",
+      "\\bsobreprecio\\b|\\brecargo\\s+(?:Sophia|de\\s+suscripci[oó]n)\\b"
+     ],
+     "note": "Marca de la oferta, en latín tal cual, sin tilde ni plural. « Sophia Pro » aparece en la fuente francesa y no es una variante."
+    },
+    "he": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "פרימי(ו|או)ם|פרמיום",
+      "פרמי[הת]",
+      "(מנוי|גרסה|תוכנית|חבילה)\\s+(יוקרתי|יוקרתית|מובחר|מובחרת)",
+      "Pr[ée]myum|Premyum"
+     ],
+     "note": "Nom d'offre conservé en latin ; פרימיום (translittération) et פרמיה (prime) observés."
+    },
+    "et": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bpreemium\\w*",
+      "\\bpreemia\\w*",
+      "\\blisatasu\\w*",
+      "\\b(esmaklassiline|tipptase\\w*|tipp-?pakett|kõrgem\\s+pakett)\\b"
+     ],
+     "note": "kaubamärk jääb ladina kujul; käändelõpp liitub otse (Premiumi, Premiumiga); „preemia“/„lisatasu“ on kindlustus-/supplémenti tähendused."
+    }
+   }
+  },
+  {
+   "id": "sophia",
+   "fr": "Sophia (marque : jamais translittérée ; déclinée seulement si la langue l'exige)",
+   "par_langue": {
+    "en": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\b(sofia|sophie|sofie|sophya|sofya|sofija|sofiya|zofia|sofhia|sophiya)\\b",
+      "(софия|софія|σοφ[ίι]α|سوفيا|صوفيا|סופיה)",
+      "\\bwisdom\\s+app\\b"
+     ],
+     "note": "Brand, never translated or transliterated; the foreign-script forms are leaks from other editions."
+    },
+    "es": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "(?<!Santa )(?<!Hagia )(?<!Reina )\\bSof[ií]a\\b(?!\\s+(?:Coppola|Loren|Vergara|de\\s+Grecia|Gandarias))",
+      "\\bSophía\\b",
+      "\\bSophie\\b|\\bSofie\\b",
+      "\\bSoﬁa\\b"
+     ],
+     "note": "Nunca « Sofía » (grafía española del nombre). El lookbehind excluye « Santa Sofía » (Hagia Sophia) y « Reina Sofía », legítimos en los cursos; otras Sofías reales pueden dar un falso positivo."
+    },
+    "he": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "סופי[הא]ה?",
+      "סופיא",
+      "Sofia",
+      "Sophya"
+     ],
+     "note": "Marque jamais translittérée (observé סופיה) ; préfixes avec trait d'union : ל-Sophia, ב-Sophia."
+    },
+    "et": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\bSoofia\\w*",
+      "\\bSofia\\w*",
+      "\\bSophia'\\w+",
+      "\\bSofja\\w*|София"
+     ],
+     "note": "kaubamärk jääb muutmata; häälduv lõpuvokaal → käändelõpp ilma ülakomata (Sophiaga, Sophiat), seega „Sophia’ga“ on viga."
+    }
+   }
+  },
+  {
+   "id": "bloqueur",
+   "fr": "Bloqueur (TikTok blocker : fonction qui verrouille TikTok)",
+   "par_langue": {
+    "en": {
+     "canon": "blocker (TikTok blocker)",
+     "variantes_a_signaler": [
+      "\\b(lock|locker|blocking\\s+tool|blockade|block\\s+function|barrier|shield|firewall|limiter|lockout|jammer|guard)\\b(?=[^.\\n]{0,40}\\btiktok\\b)",
+      "\\btiktok\\s+(lock|locker|blockade|barrier|shield|limiter|jammer|guard|blocking)\\b",
+      "\\bblockers?\\s+of\\s+tiktok\\b"
+     ],
+     "note": "'blocker' is the established app-category word (ad blocker, app blocker); the feature locks TikTok, the feature itself is the blocker."
+    },
+    "es": {
+     "canon": "bloqueador",
+     "variantes_a_signaler": [
+      "\\bblocker\\b",
+      "\\bbloqueante\\b",
+      "\\bbloqueo\\s+de\\s+(?:apps|TikTok|aplicaciones|redes)\\b",
+      "\\bbloqueador\\s+(?:de\\s+apps|de\\s+aplicaciones)\\b"
+     ],
+     "note": "La auditoría vio el anglicismo « blocker » junto a « bloqueador »; se unifica en « bloqueador » (el bloqueador, el bloqueador de TikTok)."
+    },
+    "he": {
+     "canon": "חוסם TikTok",
+     "variantes_a_signaler": [
+      "בלוקר",
+      "מחסום\\s+(TikTok|טיקטוק)",
+      "טיקטוק",
+      "נועל\\s+(TikTok|טיקטוק)"
+     ],
+     "note": "חוסם = bloqueur ; TikTok reste en latin comme Apple et Google."
+    },
+    "et": {
+     "canon": "blokeerija (TikToki blokeerija)",
+     "variantes_a_signaler": [
+      "\\bblocker\\w*",
+      "\\bblokker\\w*",
+      "\\blukustaja\\w*",
+      "\\btõkesti\\w*"
+     ],
+     "note": "audit: ingliskeelne „blocker“ oli käänatud eesti lõppudega; „blokeerija“ on läbipaistev tegijanimi."
+    }
+   }
+  },
+  {
+   "id": "entrainement",
+   "fr": "Entraînement (onglet de révision espacée)",
+   "par_langue": {
+    "en": {
+     "canon": "Practice",
+     "variantes_a_signaler": [
+      "\\b(training|workout|workouts|drills?|coaching|rehearsal|exercise\\s+(mode|tab)|exercises\\s+tab)\\b(?=[^.\\n]{0,40}\\b(tab|screen|review|cards?|questions?|sophia|session|spaced|courses?|mode|empty)\\b)",
+      "\\bsophia\\s+(training|workout|coaching|drill)\\b",
+      "\\bgo\\s+train(ing)?\\b"
+     ],
+     "note": "Audit: 'Sophia Practice' is the feature name; 'training' is the code key, not the label."
+    },
+    "es": {
+     "canon": "Repaso",
+     "variantes_a_signaler": [
+      "\\bentrenamientos?\\b|\\bentrenar\\b",
+      "\\bmodo\\s+pr[aá]ctica\\b|\\bsesi[oó]n\\s+de\\s+pr[aá]ctica\\b",
+      "\\bejercitaci[oó]n\\b|\\bejercicios\\s+de\\s+memoria\\b",
+      "\\bformaci[oó]n\\b[^.!?\\n]{0,70}\\b(?:preguntas|quiz|memoria)\\b|\\b(?:preguntas|quiz|memoria)\\b[^.!?\\n]{0,70}\\bformaci[oó]n\\b"
+     ],
+     "note": "Nombre de la pestaña de repetición espaciada: « Repaso » (El Repaso, Desbloquea el Repaso), con mayúscula cuando designa la sección, como pide la auditoría. « entrenamiento » en cursos de deporte o de IA: falso positivo aceptado."
+    },
+    "he": {
+     "canon": "אימון",
+     "variantes_a_signaler": [
+      "תרגול",
+      "פרקטיק[הת]",
+      "התאמנות",
+      "אימונים"
+     ],
+     "note": "אימון, singulier, comme nom d'onglet ; תרגול = exercice, acceptable mais à unifier."
+    },
+    "et": {
+     "canon": "Harjutamine",
+     "variantes_a_signaler": [
+      "\\bpraktika\\w*",
+      "\\btreening\\w*",
+      "\\btrenn\\w*",
+      "\\bpraktiseeri\\w*"
+     ],
+     "note": "„Harjutamine“ (audit: „sinu Harjutamisse“) on neutraalne ja kooliline; „praktika“ = stage, „treening“ = sport."
+    }
+   }
+  },
+  {
+   "id": "reviser",
+   "fr": "Réviser (revoir ses cours)",
+   "par_langue": {
+    "en": {
+     "canon": "review",
+     "variantes_a_signaler": [
+      "\\brevis(e|es|ed|ing|ion|ions)\\b",
+      "\\b(re-?read|reread|re-?learn|recap|brush\\s+up|go\\s+over)\\b(?=[^.\\n]{0,30}\\b(courses?|lessons?|cards?|knowledge)\\b)",
+      "\\b(repeat|repetition\\s+of)\\s+(your|the)\\s+courses?\\b"
+     ],
+     "note": "US English: 'review your courses'; 'revise' means to edit (British for study). In testimonials about school, 'study'."
+    },
+    "es": {
+     "canon": "repasar",
+     "variantes_a_signaler": [
+      "\\brevisar\\b|\\brevisi[oó]n\\b",
+      "\\bpasar\\s+revista\\b",
+      "\\bvolver\\s+a\\s+estudiar\\b|\\bestudiar\\s+de\\s+nuevo\\b",
+      "\\breleer\\s+(?:los|tus)\\s+cursos\\b"
+     ],
+     "note": "« repasar » es el verbo escolar (repasar para el examen); « revisar » es comprobar. « revisar » suelto puede ser legítimo en prosa: falso positivo aceptado."
+    },
+    "he": {
+     "canon": "לחזור על החומר (nom : חזרה)",
+     "variantes_a_signaler": [
+      "(לסקור|סקירה)\\s+(של\\s+)?(ה)?(חומר|קורס|קורסים)",
+      "לשנן|שינון",
+      "(לתקן|תיקון)\\s+(תוך\\s+כדי|את\\s+ה(חומר|קורס))",
+      "ר[יו]ו?יזי[הת]"
+     ],
+     "note": "חזרה על החומר est l'expression scolaire israélienne ; שינון = par cœur, תיקון = réparer (observé)."
+    },
+    "et": {
+     "canon": "kordama (Korda / kordamine)",
+     "variantes_a_signaler": [
+      "\\bülevaata\\w*|\\büle\\s*vaata\\w*|\\bvaata\\w*\\s+üle\\b",
+      "\\brevi(deeri|sjon)\\w*",
+      "\\bläbi\\s*vaata\\w*|\\bläbivaat\\w*",
+      "\\bkorrigeeri\\w*"
+     ],
+     "note": "eesti koolikeeles „kordama“ = réviser; „üle vaatama“ = inspecter, „revideerima“ = auditer, „korrigeerima“ = corriger."
+    }
+   }
+  },
+  {
+   "id": "objectif",
+   "fr": "Objectif (but choisi dans l'onboarding)",
+   "par_langue": {
+    "en": {
+     "canon": "goal",
+     "variantes_a_signaler": [
+      "\\b(objective|objectives|aim|aims|target|targets|purpose|ambition|mission)\\b(?=[^.\\n]{0,40}\\b(your|choose|chosen|pick|select|set|daily|analy[sz]ing|learn|onboarding)\\b)",
+      "\\b(your|my|daily|learning|chosen)\\s+(objective|aim|target|purpose|ambition)s?\\b"
+     ],
+     "note": "Audit: 'Analyzing your objective' -> 'goal'; 'goal' is the warm, app-register word."
+    },
+    "es": {
+     "canon": "objetivo",
+     "variantes_a_signaler": [
+      "\\b(?:tu|tus|mi|mis|elige\\s+(?:un|tu))\\s+(?:metas?|prop[oó]sitos?)\\b",
+      "\\bmetas?\\s+(?:diaria|semanal|de\\s+aprendizaje|de\\s+lectura)\\b",
+      "\\bgoals?\\b",
+      "\\bobjectivos?\\b|\\bobjetibos?\\b"
+     ],
+     "note": "La app ya usa « objetivo » (¿Cuál es tu objetivo con Sophia?, Aumentar objetivo). « meta » y « propósito » solo se marcan como posesión del usuario (tu meta) para no tocar la prosa (« a propósito », « la meta de la carrera »)."
+    },
+    "he": {
+     "canon": "יעד",
+     "variantes_a_signaler": [
+      "מטר[הת]",
+      "אובייקטיב",
+      "שאיפ[הת]",
+      "תכלית"
+     ],
+     "note": "יעד = objectif chiffré que l'on augmente ou réduit (הגדלת היעד) ; מטרה (observé) reste admis dans la prose marketing mais pas dans les libellés."
+    },
+    "et": {
+     "canon": "eesmärk",
+     "variantes_a_signaler": [
+      "\\bsiht\\b|\\bsihi\\w*",
+      "\\bobjektiiv\\w*",
+      "\\bsihtmärk\\w*",
+      "\\bülesanne\\w*(?=.{0,30}(vali|onboard|alusta))"
+     ],
+     "note": "„eesmärk“ on tavaline; „objektiiv“ on fotoobjektiiv, „sihtmärk“ = cible."
+    }
+   }
+  },
+  {
+   "id": "matiere",
+   "fr": "Matière (histoire, sciences… ; distinct de « sujet »)",
+   "par_langue": {
+    "en": {
+     "canon": "subject",
+     "variantes_a_signaler": [
+      "\\bprogress\\s+by\\s+(topic|theme|discipline|category|field|matter|area)\\b",
+      "\\b(topic|theme|discipline|category|field|matter|material)s?\\b(?=\\s*[:(]?\\s*(history|science|sciences|literature|art|economics|geography|philosophy|mythology)\\b)",
+      "\\b(school\\s+)?(matters?|materials?)\\b(?=[^.\\n]{0,30}\\b(history|science|courses?|learn|favorite)\\b)"
+     ],
+     "note": "Audit: 'PROGRESS BY TOPIC' while 'subject' is used everywhere else; 'subject' is the school-discipline word, 'topic' is 'sujet'."
+    },
+    "es": {
+     "canon": "materia",
+     "variantes_a_signaler": [
+      "\\basignaturas?\\b",
+      "\\b(?:tus|mis|elige|selecciona)\\s+(?:\\d+\\s+)?disciplinas\\b|\\bdisciplinas?\\s+(?:favoritas?|preferidas?|desbloqueadas?|gratis)\\b|\\btodas\\s+las\\s+disciplinas\\b",
+      "\\bcampos?\\s+(?:de\\s+conocimiento|tem[aá]ticos?)\\b",
+      "\\bcategor[ií]as?\\s+(?:de\\s+cursos|tem[aá]ticas?)\\b"
+     ],
+     "note": "« materia » (historia, ciencias…) ya está en la interfaz (Tus 3 materias gratis); « tema » queda reservado al « sujet » de un curso y no se marca; « disciplina » solo como posesión del usuario, porque en prosa es legítima."
+    },
+    "he": {
+     "canon": "תחום",
+     "variantes_a_signaler": [
+      "מקצוע(ות)?",
+      "חומר\\s+(ה)?(היסטוריה|מדע|מדעים|אמנות|ספרות|פילוסופיה|גאוגרפיה)",
+      "דיסציפלינ(ה|ות)",
+      "(ה)?נושאים\\s+(שלך|המועדפים|הזמינים)"
+     ],
+     "note": "תחום = domaine de savoir (histoire, sciences) ; נושא reste pour « sujet » d'un cours ; מקצוע est le mot scolaire, חומר le piège « matter »."
+    },
+    "et": {
+     "canon": "aine (õppeaine)",
+     "variantes_a_signaler": [
+      "\\bobjekt\\w*(?=.{0,30}(ava|premium|tasuta|lukus))|\\b\\d\\s+(avatavat\\s+)?objekti\\b",
+      "\\bmaterjal\\w*(?=.{0,30}(ajalugu|teadus|ava|lukus))",
+      "\\bsubjekt\\w*",
+      "\\bdistsipliin\\w*"
+     ],
+     "note": "audit: „objekt“ (= objet) pro „aine“; „aine“ eristub „teemast“ (sujet), mida kasutatakse edenemise jaotuses."
+    }
+   }
+  },
+  {
+   "id": "ami",
+   "fr": "Ami (fonction amis et classement)",
+   "par_langue": {
+    "en": {
+     "canon": "friend",
+     "variantes_a_signaler": [
+      "\\b(buddy|buddies|pal|pals|mate|mates|contact|contacts|follower|followers|connection|connections|companion|companions|peer|peers)\\b(?=[^.\\n]{0,40}\\b(leaderboard|add|invite|ranking|username|compete|challenge|list)\\b)",
+      "\\b(add|invite)\\s+(a\\s+)?(buddy|pal|mate|contact|follower|connection)s?\\b",
+      "\\b(your|my)\\s+(buddies|pals|mates|contacts|followers|connections)\\b",
+      "(\\b(your|an?|this|their|his|her|my)\\s+|'s\\s+)@(?!\\w)"
+     ],
+     "note": "'friend' matches the social feature; the last regex catches '@' used as a noun for 'username' (audit: 'your @')."
+    },
+    "es": {
+     "canon": "amigo (amigos, amiga)",
+     "variantes_a_signaler": [
+      "\\b(?:tus|mis)\\s+(?:colegas|compa[ñn]er[oa]s|contactos|seguidores)\\b",
+      "\\b(?:a[ñn]adir|invitar|retar|agregar)\\s+(?:a\\s+)?(?:un\\s+|una\\s+)?(?:colega|compa[ñn]er[oa]|contacto|seguidor)\\b",
+      "\\bclasificaci[oó]n\\s+(?:de|entre)\\s+(?:colegas|compa[ñn]eros|contactos)\\b",
+      "\\bfriends?\\b(?!-)"
+     ],
+     "note": "Función social: « amigos » y « clasificación ». « compañero » y « contacto » son frecuentes en prosa (compañero de viaje, contacto con extraterrestres), así que solo se marcan como posesión del usuario o tras añadir / invitar."
+    },
+    "he": {
+     "canon": "חבר (pl. חברים)",
+     "variantes_a_signaler": [
+      "ידיד(ים|ה|ות)?",
+      "עמית(ים)?",
+      "פרנד(ס)?",
+      "מכר(ים)?"
+     ],
+     "note": "חברים = amis dans toutes les apps sociales israéliennes ; ידיד est plus distant."
+    },
+    "et": {
+     "canon": "sõber (sõbrad)",
+     "variantes_a_signaler": [
+      "\\bsemu\\w*",
+      "\\bkaaslane\\w*|\\bkaaslas\\w*",
+      "\\bkontakt\\w*(?=.{0,30}(lisa|kutsu|edetabel|kutse))",
+      "\\bfriend\\w*"
+     ],
+     "note": "„sõber“ on sotsiaalsete funktsioonide standard; „semu“ on liiga kõnekeelne, „kaaslane“ = compagnon."
+    }
+   }
+  },
+  {
+   "id": "abonnement",
+   "fr": "Abonnement (mensuel / annuel)",
+   "par_langue": {
+    "en": {
+     "canon": "subscription",
+     "variantes_a_signaler": [
+      "\\b(membership|memberships|season\\s+pass|pass|fees?|contract|enrollment|enrolment|sign-?up)\\b(?=[^.\\n]{0,40}\\b(monthly|yearly|annual|billed|renew\\w*|cancel\\w*|premium|price|\\$|€)\\b)",
+      "\\b(monthly|yearly|annual)\\s+(membership|fee|pass|contract|enrollment|enrolment|formula|package)\\b",
+      "\\bsubscriptions?\\s+formula\\b|\\babonnement\\b"
+     ],
+     "note": "'subscription' is the store term; 'membership' and 'formula' are the usual drifts."
+    },
+    "es": {
+     "canon": "suscripción",
+     "variantes_a_signaler": [
+      "\\bsubscripci[oó]n(?:es)?\\b",
+      "\\babonos?\\s+(?:mensual|anual|Premium)\\b|\\btu\\s+abono\\b|\\babonamiento\\b",
+      "\\bmembres[ií]a\\b",
+      "\\bsubscription\\b"
+     ],
+     "note": "« suscripción » es la forma recomendada por la RAE y la usada en las tiendas de apps; « abono » es de transporte o fútbol (y de agricultura, por eso se marca solo con mensual / anual). « membresía » es americano: en España « suscripción » (o « pertenencia / ingreso » si habla de la OTAN)."
+    },
+    "he": {
+     "canon": "מנוי",
+     "variantes_a_signaler": [
+      "מינוי",
+      "הרשמה\\s+(חודשית|שנתית)",
+      "סא?בסקריפשן",
+      "חתימה\\s+(חודשית|שנתית)"
+     ],
+     "note": "מנוי = abonnement ; מינוי (un yod de plus) = nomination, erreur fréquente ; הרשמה = inscription."
+    },
+    "et": {
+     "canon": "tellimus (kuutellimus / aastatellimus)",
+     "variantes_a_signaler": [
+      "\\babonement\\w*|\\babonnement\\w*",
+      "\\bliitumi\\w*",
+      "\\bliikmesus\\w*|\\bliikmelisus\\w*",
+      "\\btellimine\\w*"
+     ],
+     "note": "„tellimus“ on rakenduste poe eesti termin; „abonement“ = teatri hooajapilet, „liikmesus“ = adhésion."
+    }
+   }
+  },
+  {
+   "id": "debloquer",
+   "fr": "Débloquer (rendre accessible un cours ou Premium)",
+   "par_langue": {
+    "en": {
+     "canon": "unlock",
+     "variantes_a_signaler": [
+      "\\bunblock(s|ed|ing)?\\b(?=[^.\\n]{0,40}\\b(courses?|premium|content|lessons?|everything|all)\\b)",
+      "\\bde-?block(s|ed|ing)?\\b",
+      "\\b(release|open\\s+up|free\\s+up)\\s+(premium|all\\s+courses|this\\s+course|the\\s+course|everything)\\b",
+      "\\b(remove|lift|disable|undo)\\s+(the\\s+)?lock(ing)?\\b"
+     ],
+     "note": "'unlock' is the in-app-purchase convention; 'unblock' belongs to the TikTok blocker domain."
+    },
+    "es": {
+     "canon": "desbloquear",
+     "variantes_a_signaler": [
+      "\\bliberar\\s+(?:el\\s+|la\\s+|los\\s+)?(?:cursos?|Premium|acceso|quiz(?:zes)?)\\b",
+      "\\bdestrabar\\b|\\bdesatascar\\b",
+      "\\b(?:quitar|anular|retirar|desactivar)\\s+el\\s+bloqueo\\b",
+      "\\bhabilitar\\s+(?:el\\s+|la\\s+)?(?:curso|Premium|acceso)\\b"
+     ],
+     "note": "« desbloquear » ya es el verbo de la app (Desbloquear, Desbloquea Premium 3 días GRATIS)."
+    },
+    "he": {
+     "canon": "לפתוח (פתח את…)",
+     "variantes_a_signaler": [
+      "ביטול\\s+(ה)?נעילה|בטל\\s+(את\\s+)?(ה)?נעילה",
+      "(שחרר|לשחרר|שחרור)\\s+(את\\s+)?(ה?קורס|Premium|פרימיום|גישה)",
+      "אנלוק|אן-לוק",
+      "הסר(ת)?\\s+(את\\s+)?ה(נעילה|חסימה)"
+     ],
+     "note": "פתח / פתיחה est le verbe naturel pour rendre un contenu accessible ; ביטול נעילה est le calque du téléphone."
+    },
+    "et": {
+     "canon": "avama (Ava)",
+     "variantes_a_signaler": [
+      "\\blukust\\s+lahti\\w*",
+      "\\bdeblok\\w*",
+      "\\bvabasta\\w*(?=.{0,30}(kursus|aine|premium|sisu))",
+      "\\b(eemalda|tühista)\\s+(blokeering|lukustus)\\w*"
+     ],
+     "note": "„Ava“ on lühike ja UI-s kinnistunud; „lukust lahti“ on füüsiline uks, „vabastama“ = libérer."
+    }
+   }
+  },
+  {
+   "id": "glossaire",
+   "fr": "Glossaire (définitions des termes d'un cours)",
+   "par_langue": {
+    "en": {
+     "canon": "glossary",
+     "variantes_a_signaler": [
+      "\\b(lexicon|vocabulary|vocab|dictionary|definitions\\s+list|key\\s+terms|terms\\s+list|word\\s+list|wordlist|index\\s+of\\s+terms|keywords|jargon)\\b(?=[^.\\n]{0,40}\\b(course|terms?|definitions?|tab|see|open|section)\\b)",
+      "\\b(course|lesson)\\s+(lexicon|vocabulary|vocab|dictionary|key\\s+terms|word\\s+list)\\b",
+      "\\bglossar\\b"
+     ],
+     "note": "'glossary' is the exact English equivalent and the section label."
+    },
+    "es": {
+     "canon": "glosario",
+     "variantes_a_signaler": [
+      "\\bdiccionario\\s+(?:del\\s+curso|de\\s+t[eé]rminos)\\b|\\bver\\s+(?:el\\s+)?diccionario\\b",
+      "\\bl[eé]xico\\s+del\\s+curso\\b|\\bvocabulario\\s+del\\s+curso\\b|\\bver\\s+(?:el\\s+)?vocabulario\\b",
+      "\\bterminolog[ií]a\\s+del\\s+curso\\b",
+      "\\bglossary\\b|\\bglosary\\b"
+     ],
+     "note": "« glosario » es el término exacto para definiciones de un texto. « vocabulario », « léxico » y « diccionario » aparecen legítimamente en prosa, así que solo se marcan referidos al curso."
+    },
+    "he": {
+     "canon": "מילון מונחים",
+     "variantes_a_signaler": [
+      "גלוסר(י)?",
+      "לקסיקון",
+      "מונחון|רשימת\\s+מונחים",
+      "(ה)?מילון(?!\\s+מונחים)"
+     ],
+     "note": "מילון מונחים est la forme usuelle ; מילון seul = dictionnaire."
+    },
+    "et": {
+     "canon": "sõnastik",
+     "variantes_a_signaler": [
+      "\\bglossaar\\w*",
+      "\\bsõnaraamat\\w*",
+      "\\bsõnaseletus\\w*|\\bmõistete\\s+(loend|nimekiri)\\w*",
+      "\\bterminoloogia\\w*|\\bleksikon\\w*"
+     ],
+     "note": "„sõnastik“ = kursuse mõistete loend; „sõnaraamat“ = dictionnaire, „glossaar“ on võõrsõna."
+    }
+   }
+  },
+  {
+   "id": "xp",
+   "fr": "XP (points d'expérience : conservé)",
+   "par_langue": {
+    "en": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\b(experience\\s+points?|exp\\s+points?|skill\\s+points?|knowledge\\s+points?|learning\\s+points?)\\b",
+      "\\bxps\\b|\\bx\\.p\\.",
+      "\\b\\d+\\s*(exp|pts)\\b(?=[^.\\n]{0,30}\\b(level|lvl|streak|quiz|course)\\b)"
+     ],
+     "note": "XP is the universal gamification token; 'experience points' only as a one-time gloss."
+    },
+    "es": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\bpuntos\\s+de\\s+experiencia\\b",
+      "\\bpuntos\\s+XP\\b",
+      "\\bEXP\\b",
+      "\\bxps\\b|\\bX\\.P\\."
+     ],
+     "note": "Se conserva « XP » (+10 XP). « puntos de experiencia » solo puede aparecer una vez como glosa en la explicación, no como etiqueta."
+    },
+    "he": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "נקודות\\s+ניסיון",
+      "נק[\\\"״]?ן",
+      "אקס\\s?פי",
+      "נ[\\\"״]נ"
+     ],
+     "note": "XP conservé en latin (+10 XP) comme dans tous les jeux ; aucune abréviation hébraïque n'est établie."
+    },
+    "et": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\bkogemuspunkt\\w*",
+      "\\bKP\\b",
+      "\\bkogemus\\w*\\s*(punkt|p\\.)",
+      "\\bexp\\b"
+     ],
+     "note": "XP jääb (mängustatud rakenduste tava); „kogemuspunktid“ on pikk ja ebatavaline UI-s."
+    }
+   }
+  },
+  {
+   "id": "bibliotheque",
+   "fr": "Biblio / Bibliothèque (onglet de tous les cours)",
+   "par_langue": {
+    "en": {
+     "canon": "Library",
+     "variantes_a_signaler": [
+      "\\b(biblio|bibliotheque|biblioth[èe]que)\\b",
+      "\\b(catalog|catalogue|bookshelf|archive|archives|course\\s+list|all\\s+courses)\\s+(tab|screen)\\b",
+      "\\b(catalog|catalogue|bookshelf|browse|explore)\\b(?=[^.\\n]{0,40}\\b(tab|screen|all\\s+courses|go\\s+to)\\b)"
+     ],
+     "note": "'Library' is the familiar tab name for 'all your courses' in US apps; 'Biblio' is an untranslatable French clipping."
+    },
+    "es": {
+     "canon": "Biblioteca",
+     "variantes_a_signaler": [
+      "\\bbiblio\\b",
+      "\\blibrer[ií]a\\b",
+      "\\bcat[aá]logo\\s+de\\s+cursos\\b",
+      "\\blibrary\\b"
+     ],
+     "note": "Pestaña « Biblioteca ». « librería » es un falso amigo (tienda de libros); « biblio » no se abrevia en español."
+    },
+    "he": {
+     "canon": "ספרייה",
+     "variantes_a_signaler": [
+      "ביבליו(תק[הת])?",
+      "ספריה(?!י)",
+      "ארכיון",
+      "קטלוג"
+     ],
+     "note": "ספרייה avec deux yod (graphie de l'Académie) ; ספריה est la graphie défective à unifier."
+    },
+    "et": {
+     "canon": "Raamatukogu",
+     "variantes_a_signaler": [
+      "\\bteek\\b|\\bteegi\\w*",
+      "\\bbiblio\\w*",
+      "\\bkataloog\\w*(?=.{0,30}(kursus|kõik))",
+      "\\bkogu\\b(?=\\s*(vahekaart|tab)\\b)"
+     ],
+     "note": "„Raamatukogu“ on kõigi kursuste vahekaardile arusaadav; „Teek“ (Apple) on lühike, kuid kõlab tehniliselt; „Biblio“ jääb prantsuse lühendiks."
+    }
+   }
+  }
+ ]
+}
