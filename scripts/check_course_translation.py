@@ -20,6 +20,11 @@ Usage:
     python scripts/check_course_translation.py --lang el --json report.json
     python scripts/check_course_translation.py --lang cs --json report.json
     python scripts/check_course_translation.py --lang bg --json report.json
+    python scripts/check_course_translation.py --lang all          # the 26 languages, one line each
+
+Every app language goes through this validator, with or without a translation
+guide: the eleven languages that never had one (da nb fi ru et he sk hr sr sl ar)
+are where machine-translation artefacts stayed in the app.
 """
 
 from __future__ import annotations
@@ -1164,6 +1169,19 @@ def main() -> int:
     parser.add_argument("--json", type=Path, help="Write the full report as JSON")
     parser.add_argument("--rule", action="append", help="Only report these rules")
     args = parser.parse_args()
+
+    if args.lang == "all":
+        from i18n_languages import NON_FR_LANGS
+        failed = 0
+        for lang in NON_FR_LANGS:
+            sub = [sys.argv[0], *args.patterns, "--lang", lang] + sum((["--rule", r] for r in args.rule or []), [])
+            saved, sys.argv = sys.argv, sub
+            try:
+                failed += main()
+            finally:
+                sys.argv = saved
+        print(f"\n{len(NON_FR_LANGS) - failed}/{len(NON_FR_LANGS)} language(s) clean.")
+        return 1 if failed else 0
 
     allowed_by_course = glossary_keys_by_course(args.lang)
     course_ids = [p.stem for p in sorted((CONTENT_ROOT / "fr").glob("*.json"))]
