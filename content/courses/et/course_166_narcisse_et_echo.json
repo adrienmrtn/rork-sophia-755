@@ -1,14 +1,14 @@
 {
   "id": "course_166_narcisse_et_echo",
   "title": "Kust pärineb Narkissose müüt?",
-  "subtitle": "Armastus, mida ei saa täita",
+  "subtitle": "Armastus, mis ei jõua kohtumiseni",
   "subject": "mythologie",
   "subcategory": "Kreeka jumalad",
-  "description": "Kaja saab ainult korrata. Narcissus armastab ainult oma peegelpilti. Kaks saatust, mis kunagi kokku ei jõua ja millest sünnib sõna nartsissism.",
+  "description": "Echo saab ainult korrata. Narkissos armastab ainult oma peegelpilti. Kaks saatust, mis kunagi kokku ei saa ja millest sünnib sõna „nartsissism“.",
   "hero": {
     "image": "narcisse_et_echo",
     "ratio": "16:9",
-    "hook": "Tal pole enam oma häält. Tal on silmad ainult enda jaoks. Nende kohtumine on võimatu."
+    "hook": "Echol pole enam oma häält. Narkissos näeb ainult iseennast. Nende kohtumine on võimatu."
   },
   "sections": [
     {
@@ -18,97 +18,97 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rooma luuletaja [[Ovidius]] jutustab oma [[Metamorfoosid]] **Nartsiss** ja **Kaja** ristuvast saatusest. Ta on oma sõnadest ilma jäänud nümf. Tema, noor mees, kes on oma imagost lummatud."
+          "text": "Rooma luuletaja [[Ovidius]] jutustab oma teoses [[Metamorfoosid]] **Narkissose** ja **Echo** põimunud saatustest. Echo on nümf, kellelt on võetud tema enda sõna. Narkissos on noormees, keda lummab tema enda kujutis."
         },
         {
           "type": "paragraph",
-          "text": "See müüt on sõna **nartsissism** otsene allikas. See räägib võimatust armastusest, ükskõiksusest ja ainult iseenda tahtmise lõksust."
+          "text": "See müüt on sõna **nartsissism** otsene allikas. See räägib võimatust armastusest, ükskõiksusest ja lõksust, mis ootab seda, kes ihaldab ainult iseennast."
         }
       ]
     },
     {
       "id": "course_166_narcisse_et_echo_p1",
-      "title": "Kaja kaotab hääle",
+      "title": "Echo kaotab hääle",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Enne lihtsaks helinähtuseks muutumist on **Kaja** [[Oread]], mäginümf, kuulus oma rikkaliku kõne poolest. Ta aitab jumalate kuningal **Zeus**-l oma truudusetust varjata. Sel ajal, kui ta ühineb teiste nümfidega, hoiab naine **Hera**, armukade abikaasa lõputute vestlustega."
+          "text": "Enne kui **Echo** muutub pelgaks helinähtuseks, on ta [[Oreaad]] ehk mäginümf, kes on kuulus oma lakkamatu jutu poolest. Ta aitab jumalate kuningat **Zeusi** tema truudusetust varjata. Kui Zeus teiste nümfidega kohtub, hoiab Echo tema armukadedat abikaasat **Herat** lõputute vestlustega kinni."
         },
         {
           "type": "image",
           "asset": "echo_nymph_mountain_greek_mythology_painting",
           "ratio": "4:3",
-          "caption": "Kaja, mis on määratud olema vaid korduv hääl."
+          "caption": "Echo, kelle saatus on olla vaid kordav hääl."
         },
         {
           "type": "paragraph",
-          "text": "Kui Hera võtte avastab, karistab ta Echot. Nümf ei saa enam lauset alustada. Ta saab **korda ainult teiste viimaste sonu**. Tema enda soovidel pole enam keelt."
+          "text": "Kui Hera pettuse avastab, karistab ta Echot. Nümf ei saa enam ise lauset alustada. Ta saab vaid **korrata teiste viimaseid sõnu**. Oma soove ei saa ta enam sõnadesse panna."
         },
         {
           "type": "funFact",
-          "text": "Teises versioonis rebib tagasilükkamise pärast vihane jumal **Pauk** Echo tükkideks. Kõige kuulsamaks on jäänud Ovidiuse versioon, kus teda tarbitakse armastusega."
+          "text": "Ühes teises versioonis laseb jumal **Paan**, kes on vihane, et Echo ta tõrjus, nümfi tükkideks rebida. Kuulsaimaks on jäänud Ovidiuse versioon, kus Echo armastusest hääbub."
         }
       ]
     },
     {
       "id": "course_166_narcisse_et_echo_p2",
-      "title": "Narcissus keeldub igasugusest armastusest",
+      "title": "Narkissos tõrjub igasuguse armastuse",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Nartsiss** on jõejumal Cephisuse ja nümf Liriope poeg. Tema ilu köidab kõiki. Tema uhkus tõukab kõik eemale. Ennustaja **Tirésias** oli oma ema hoiatanud: \"Ta elab vanaks, kui ta ennast ei tunne.\""
+          "text": "**Narkissos** on jõejumal Kephisose ja nümf Liriope poeg. Tema ilu tõmbab kõiki ligi. Tema uhkus aga tõukab kõik eemale. Ennustaja **Teiresias** oli tema ema hoiatanud: „Ta elab vanaks, kui ta iseennast ei tunne.“"
         },
         {
           "type": "paragraph",
-          "text": "Metsas näeb Echo teda ja armub temasse. Ta ei saa esimesena rääkida, vaid ootab. Narcisse helistab: \"Kas seal on kedagi?\" Ta vastab: \"Keegi!\" Kui naine läheneb teda kallistama, lükkab ta ta põlgusega tagasi."
+          "text": "Metsas näeb Echo teda ja armub. Kuna ta ei saa esimesena rääkida, jääb ta ootama. Narkissos hüüab: „Kas siin on keegi?“ Echo vastab: „Keegi!“ Kui nümf läheneb, et teda embada, tõukab Narkissos ta põlglikult eemale."
         },
         {
           "type": "funFact",
-          "text": "Alandatud Echo taandub koobastesse. Ta lõpetab söömise. Tema keha närbub, tema luud muutuvad kiviks. Mägedesse jääb vaid uitav hääl."
+          "text": "Alandatud Echo tõmbub koobastesse. Ta lõpetab söömise. Tema keha kuivab, luud muutuvad kiviks. Järele jääb vaid mägedes ekslev hääl."
         }
       ]
     },
     {
       "id": "course_166_narcisse_et_echo_p3",
-      "title": "Peegeldus allikas",
+      "title": "Peegelpilt allikavees",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Narkissuse julmus väsitab jumalaid. Üks tema ohver palvetab õiglase kättemaksu jumalanna [[Nemesis]] poole, et ta armastaks iseennast ega saaks kunagi oma armastuse objekti omada. Soov on täidetud."
+          "text": "Jumalad tüdinevad Narkissose julmusest. Üks tema ohvritest palub, et õiglase kättemaksu jumalanna [[Nemesis]] laseks tal samamoodi iseennast armastada, kuid oma armastatut mitte kunagi omada. Palve läheb täide."
         },
         {
           "type": "paragraph",
-          "text": "Ühel palaval päeval kaldub Narcisse selgesse allikasse. Ta paljastab oma näo. Ta arvab, et näeb veevaimu. Ta armub temasse. Teiresiase ennustus täitub: iseennast tundes kaotab ta iseenda."
+          "text": "Ühel palaval päeval kummardub Narkissos selge allika kohale. Ta näeb oma nägu. Ta arvab, et see on veevaim. Ta armub sellesse. Teiresiase ennustus täitub: iseennast tundma õppides kaotab ta iseenda."
         },
         {
           "type": "funFact",
-          "text": "Ta püüab peegeldust suudelda. Vesi muutub häguseks. Selle steriilse kire vangis unustab ta süüa ja juua."
+          "text": "Ta püüab peegelpilti suudelda. Vesi läheb sogaseks. Selle viljatu kire vangis unustab ta süüa ja juua."
         },
         {
           "type": "paragraph",
-          "text": "Siis tuleb traagiline selgus: \"Mina olen see, keda ma näen.\" Võimatu endaga ühineda. Narkissos on ära kulunud. Kaja, kõigele vaatamata truu, kordab oma viimast hüvastijätt."
+          "text": "Siis saabub traagiline selgus: „Mina olen see, keda ma näen.“ Iseendaga ühineda on võimatu. Narkissos hääbub. Echo, kõigest hoolimata truu, kordab tema viimast hüvastijättu."
         }
       ]
     },
     {
       "id": "course_166_narcisse_et_echo_p4",
-      "title": "Lillest sõna nartsissism",
+      "title": "Lillest sõnani nartsissism",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kui matusele tulevad vesinümfid [[Naiad]] ja puunümfid [[Dryaadid]], on surnukeha kadunud. Selle asemel kasvab kollase südame ja valgete kroonlehtedega lill: **nartsiss**, mis kaldub vee poole nagu noormees oma kuju poole."
+          "text": "Kui matustele tulevad [[Naiaadid]] ehk veenümfid ja [[Dryaadid]] ehk puunümfid, on surnukeha kadunud. Selle asemel kasvab kollase südame ja valgete kroonlehtedega lill: **nartsiss**, mis kummardub vee poole nagu noormees oma peegelpildi poole."
         },
         {
           "type": "paragraph",
-          "text": "**1914** avaldas **Freud** „Nartsissismi tutvustamiseks”. Ta kirjeldab armastust, mis on suunatud pigem iseenda kui teise vastu. Müüdist saab moodsa psühholoogia võti ja hoiatus: ilma tõelise kohtumiseta jääb järele vaid hääl ilma kehata ja lill ilma hingeta."
+          "text": "Aastal **1914** avaldab **Freud** essee „Sissejuhatus nartsissismi“. Selles kirjeldab ta armastust, mis on suunatud pigem iseendale kui teisele. Müüdist saab moodsa psühholoogia võti ja ühtlasi hoiatus: ilma tõelise kohtumiseta jääb järele vaid kehatu hääl ja hingetu lill."
         },
         {
           "type": "takeaway",
-          "text": "**Kaja** sureb, kuna ta ei saa oma soovi väljendada. **Nartsiss** hukkub sellepärast, et ta ihaldab ainult iseennast. Kaks võimalust teisest ilma jääda, üks tragöödia."
+          "text": "**Echo** sureb, sest ei saa oma ihalust välja öelda. **Narkissos** hukkub, sest ihaldas ainult iseennast. Kaks viisi teisest mööda minna, üks ja sama tragöödia."
         }
       ]
     }

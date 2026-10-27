@@ -8,7 +8,7 @@
   "hero": {
     "image": "gilgamesh_le_premier_heros",
     "ratio": "16:9",
-    "hook": "Enne Homerost, enne Piiblit: surmahirmus kuningas läheb teele maa äärde... ja toob tagasi õppetunni, mitte igaviku."
+    "hook": "Enne Homerost, enne Piiblit: surma kartev kuningas rändab maailma otsa… ja toob tagasi õppetunni, mitte igaviku."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Gilgameš**, Mesopotaamia **Uruki** linna kuningas, on **E Gilgameši** pildi kangelane. Rohkem kui **4000 aastat tagasi** savitahvlitele graveeritud teos pärineb Homerosest ja piiblilugudest."
+          "text": "**Gilgameš**, Mesopotaamia **Uruki** linna kuningas, on **Gilgameši eepose** kangelane. Rohkem kui **4000 aastat tagasi** savitahvlitele uuristatud teos on vanem kui Homeros ja piiblilood."
         },
         {
           "type": "paragraph",
-          "text": "See pole lihtsalt seiklus. See on lugu türannist, kes avastab sõpruse, seejärel hirmu surra, seejärel karmi tarkuse: surematus ei ole kehas, vaid selles, mida me endast maha jätame."
+          "text": "See pole lihtsalt seikluslugu. See on lugu türannist, kes avastab sõpruse, siis surmahirmu ja lõpuks karmi tarkuse: surematus ei peitu kehas, vaid selles, mis inimesest maha jääb."
         }
       ]
     },
     {
       "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_p1",
-      "title": "Eepos liivast välja",
+      "title": "Liiva alt tõusnud eepos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tekst koondab muistsed sumeri lood. Selle klassikaline versioon akadi keeles on omistatud kirjatundjale [[Sîn-lēqi-unninni]] (umbes 12. sajand eKr). Liiva alla unustatud, kerkis see uuesti pinnale 19. sajandil **Niinive** kuninga [[Ashurbanipal]] raamatukogus."
+          "text": "Tekst ühendab vanu sumeri lugusid. Selle klassikalise akadikeelse versiooni autor on traditsiooni järgi kirjutaja [[Sîn-lēqi-unninni]] (umbes 12. sajand eKr). Liiva alla unustatud teos tuleb uuesti päevavalgele 19. sajandil **Niinives**: see leitakse raamatukogust, mille omanik oli kuningas [[Assurbanipal]]."
         },
         {
           "type": "image",
           "asset": "gilgamesh_tablet_cuneiform_nineveh_british_museum",
           "ratio": "4:3",
-          "caption": "Kiilkirjatahvel eeposest, Briti Muuseum."
+          "caption": "Eepose kiilkirjatahvel, Briti Muuseum."
         },
         {
           "type": "paragraph",
-          "text": "Aastal **1872** dešifreeris assürioloog **George Smith** Briti muuseumis loo üleujutusest, laevast ja ellujäämisest, mis on umbes aastatuhande võrra eelnenud Genesise raamatule. Savi sisse pressitud kiri **kiilkiri** salvestas teksti kohta, kus papüürus oleks kadunud."
+          "text": "Aastal **1872** dešifreeris assürioloog **George Smith** Briti Muuseumis loo veeuputusest, laevast ja ellujäämisest. See lugu on umbes aastatuhande võrra vanem kui piibli Genesis. Savisse vajutatud **kiilkiri** päästis teksti seal, kus papüürus oleks hävinud."
         },
         {
           "type": "funFact",
-          "text": "Väidetavalt oli George Smith üleujutuse tahvelarvutit lugedes nii elevil, et hakkas Briti muuseumis üllatunud kolleegide ees lahti riietuma."
+          "text": "Räägitakse, et George Smith oli veeuputuse tahvlit lugedes nii elevil, et hakkas Briti Muuseumis jahmunud kolleegide silme all riideid seljast võtma."
         }
       ]
     },
@@ -58,38 +58,38 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Alguses on **Gilgameš** talumatu kuningas: kaks kolmandikku jumalik, üks kolmandik inimlik, kuid Uruki türann. Tema suunamiseks kujundab jumalanna [[Aruru]] gasellide seas elava metsiku mehe **Enkidu**."
+          "text": "Alguses on **Gilgameš** talumatu kuningas: kaks kolmandikku jumal, üks kolmandik inimene, kuid Uruki elanikele türann. Et teda ohjeldada, vormib jumalanna [[Aruru]] **Enkidu**, metsiku mehe, kes elab gasellide seas."
         },
         {
           "type": "image",
           "asset": "gilgamesh_enkidu_ancient_sumerian_art",
           "ratio": "4:3",
-          "caption": "Gilgameš ja Enkidu: võitlusest vennasõpruseni."
+          "caption": "Gilgameš ja Enkidu: kaklusest vennalikuks sõpruseni."
         },
         {
           "type": "paragraph",
-          "text": "Nad võitlevad, keegi ei võida ja rivaalitsemisest saab sõprus. Koos tapavad nad seedrimetsas koletise **Humbaba** ja seejärel jumalanna **Ištar** saadetud **taevahärgi**. Ärritatud jumalad mõistavad Enkidu hukka haigusesse surema. Sõbra surm muudab kõik."
+          "text": "Nad kaklevad, keegi ei võida ja rivaalitsemisest saab sõprus. Koos tapavad nad Seedrimetsas koletise **Humbaba** ja seejärel jumalanna **Ištari** saadetud **Taevahärja**. Vihastunud jumalad määravad Enkidu haigusse surema. Sõbra surm muudab kõik."
         }
       ]
     },
     {
       "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_p3",
-      "title": "Püüdlus surematuse poole",
+      "title": "Surematuse otsingud",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Enkidu surnukeha ees mõistab Gilgameš, et ka tema sureb. Ta hülgab oma krooni, katab end loomanahkadega ja läheb otsima **Ut-napišti**, ainsat meest, kes sai surematuks pärast [[Veeuputuse narratiiv eeposes]]. Teekond viib ta mööda [[Mashu]] mägedest ja Surmavetest."
+          "text": "Enkidu surnukeha ees mõistab Gilgameš, et ka tema sureb. Ta heidab krooni kõrvale, rõivastub loomanahkadesse ja läheb otsima **Ut-napištit**, ainsat inimest, kes sai pärast veeuputust surematuks; sellest jutustab [[Veeuputuse narratiiv eeposes]]. Teekond viib ta kaugemale kui Surmaveed ja mäeahelik, mille nimi on [[Mashu]]."
         },
         {
           "type": "image",
           "asset": "gilgamesh_flood_tablet_utnapishtim_myth",
           "ratio": "4:3",
-          "caption": "Veeuputuse lugu: tuhat aastat enne Noad, juba savi peal."
+          "caption": "Veeuputuse lugu: tuhat aastat enne Noad, juba savitahvlil."
         },
         {
           "type": "paragraph",
-          "text": "Ut-napišti paneb talle proovile: olla ärkvel kuus päeva ja seitse ööd. Gilgameš jääb kohe magama. Kes und ei võida, see ei võida surma. Talle näidatakse nooruse taime; madu varastab selle talt suplemise ajal. Madu sulab. Kuningas lahkub tühjade kätega."
+          "text": "Ut-napišti paneb ta proovile: ta peab olema ärkvel kuus päeva ja seitse ööd. Gilgameš jääb kohe magama. Kes und ei võida, see ei võida ka surma. Talle juhatatakse kätte noorendav taim; madu varastab selle, kui ta supleb. Madu ajab nahka. Kuningas lahkub tühjade kätega."
         },
         {
           "type": "funFact",
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tagasi **Urukis** vaatab Gilgamesh oma linna valli. Õppetund on selge: bioloogiline surematus kuulub jumalatele. Inimene püsib oma tegude ja elavate mälu kaudu."
+          "text": "Tagasi **Urukis** vaatab Gilgameš oma linna müüre. Õppetund on selge: bioloogiline surematus kuulub jumalatele. Inimene aga püsib oma tegude ja elavate mälestuse kaudu."
         },
         {
           "type": "paragraph",
-          "text": "Neli aastatuhandet hiljem toidab lugu endiselt maailmakultuuri, alates piibellikust Noast kuni [[Joseph Campbell]] monomüüdi teooriateni. Gilgameši lugemine tähendab esimesi suuri inimlikke küsimusi surma ees."
+          "text": "Neli aastatuhandet hiljem toidab lugu endiselt maailmakultuuri, piibli Noast monomüüdi teooriateni, mille autor on [[Joseph Campbell]]. Lugeda Gilgamešit tähendab kuulda inimkonna esimesi suuri küsimusi surma ees."
         },
         {
           "type": "takeaway",
-          "text": "**Epilt Gilgamešist**, **4000 aastat vana**, sisaldab juba enne Piiblit veeuputust. Tema kangelane saab teada, et surematus ei ole bioloogiline: see on seintes, mida ehitame, ja mälestustes, mille me maha jätame."
+          "text": "**4000 aastat** vana **Gilgameši eepos** sisaldab veeuputuse lugu juba enne Piiblit. Selle kangelane saab teada, et surematus ei ole bioloogiline: see peitub müürides, mida ehitatakse, ja mälestuses, mis maha jäetakse."
         }
       ]
     }

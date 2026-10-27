@@ -1,14 +1,14 @@
 {
   "id": "course_226_l_ia_et_l_emploi",
-  "title": "Kas tehisintellekt asendab teadmistepõhised ametid?",
+  "title": "Kas tehisintellekt asendab teadmistöötajad?",
   "subtitle": "Oht või uus laine?",
   "subject": "comprendreLeMonde",
   "subcategory": "Keskkond ja tulevik",
-  "description": "Iga tehnoloogiline revolutsioon on tekitanud hirmu tööhõive pärast. Kuid generatiivne AI mõjutab esimest korda **intelligentsus** elukutseid, mitte ainult füüsilist jõudu.",
+  "description": "Iga tehnoloogiline revolutsioon on tekitanud hirmu töökohtade pärast. Kuid generatiivne tehisintellekt puudutab esimest korda **vaimse töö** ameteid, mitte ainult füüsilist jõudu.",
   "hero": {
     "image": "l_ia_et_l_emploi",
     "ratio": "16:9",
-    "hook": "Masinad on juba käed välja vahetanud. Kas nad asendavad nüüd aju?"
+    "hook": "Masinad on juba asendanud inimkäsi. Kas nüüd on järg ajude käes?"
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kas tehisintellekt hävitab miljoneid töökohti või loob uusi? See küsimus on viimase kahe sajandi jooksul esile kerkinud kõigi suuremate tehnoloogiliste edusammudega."
+          "text": "Kas tehisintellekt hävitab miljoneid töökohti või loob uusi? See küsimus kerkib juba kaks sajandit üles iga suure tehnoloogilise edusammu puhul."
         },
         {
           "type": "paragraph",
-          "text": "Seekord on uudsus mujal: AI ei asenda enam ainult füüsilist jõudu, vaid ülesandeid, mis meie arvates olid reserveeritud inimmõistusele, näiteks teksti kirjutamine või faili analüüsimine. See kursus jälgib seda iidset hirmu ja uurib, mis tänapäeval tegelikult muutub."
+          "text": "Seekord peitub uudsus mujal: tehisintellekt ei asenda enam ainult füüsilist jõudu, vaid ka ülesandeid, mida peeti inimmõistuse pärusmaaks, näiteks teksti kirjutamist või toimiku analüüsimist. See kursus jälgib selle vana hirmu ajalugu ja uurib, mis tänapäeval tegelikult muutub."
         }
       ]
     },
@@ -33,65 +33,65 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hirm, et masinad asendavad inimesi, pole uus. 19. sajandi alguses hävitasid Briti tekstiilitöölised [[Luddiidid (1811-1816)]] mehaanilised kangasteljed, mis ohustasid nende oskusi."
+          "text": "Hirm, et masin asendab inimese, pole uus. 19. sajandi alguses tegutsesid Suurbritannias [[Luddiidid (1811-1816)]], tekstiilitöölised, kes purustasid mehaanilisi kangasteljesid, sest need ohustasid nende ametioskusi."
         },
         {
           "type": "image",
           "asset": "luddites_industrial_revolution_machine_breaking",
           "ratio": "4:3",
-          "caption": "19. sajandil ründasid ludidid masinaid, mis ohustasid nende elukutset."
+          "caption": "19. sajandil ründasid luddiidid masinaid, mis ohustasid nende ametit."
         },
         {
           "type": "paragraph",
-          "text": "Iga suurem tehnoloogiline laine on järginud sama loogikat: hävitab teatud töökohad, kuid loob teisi mujale. Üleminek põllumajanduselt tööstusele vähendas sajandiga põllumeeste osakaalu 40%-lt 2%-le töötavast elanikkonnast, põhjustamata seejuures püsivat tööpuudust, kuna need töötajad kolisid uutesse sektoritesse."
+          "text": "Iga suur tehnoloogiline laine on järginud sama loogikat: see hävitab osa töökohti, kuid loob mujal uusi. Üleminek põllumajanduselt tööstusele vähendas sajandiga põllupidajate osakaalu tööjõus 40%-lt 2%-le, kuid püsivat tööpuudust see ei põhjustanud, sest töötajad siirdusid uutesse sektoritesse."
         },
         {
           "type": "funFact",
-          "text": "Väidetavalt pärineb sõna \"sabotaaž\" prantsuse töötajatelt, kes viskasid oma puidust kingad, sabotid, masinate hammasrataste vahele, et neid blokeerida, kuigi selle sõna täpse päritolu üle vaieldakse."
+          "text": "Sõna „sabotaaž“ pärineb väidetavalt prantsuse töölistelt, kes viskasid oma puukingi ehk sabot'sid masinate hammasrataste vahele, et need seisma panna, kuigi sõna täpse päritolu üle vaieldakse siiani."
         }
       ]
     },
     {
       "id": "course_226_l_ia_et_l_emploi_p2",
-      "title": "Läbimurre: AI ründab teadmistega elukutseid",
+      "title": "Murrang: tehisintellekt ründab teadmistöö ameteid",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Generatiivne tehisintellekt (AI)]] tähistab tõelist muutust, sest see ei järgi enam ainult eelnevalt fikseeritud reegleid: see loob originaalsisu. Klassikaline andmetöötlus asendas korduvad ülesanded, nagu andmete sisestamine. Kaasaegne tehisintellekt võib kirjutada, analüüsida lepingut, koostada muusikat või isegi aidata panna meditsiinilist diagnoosi."
+          "text": "[[Generatiivne tehisintellekt (AI)]] tähistab tõelist pööret, sest see ei järgi enam ainult ette antud reegleid: see loob originaalset sisu. Klassikaline arvutitarkvara asendas korduvaid ülesandeid, nagu andmesisestus. Moodne tehisintellekt oskab aga kirjutada, lepingut analüüsida, muusikat komponeerida või isegi aidata meditsiinilist diagnoosi panna."
         },
         {
           "type": "image",
           "asset": "AI_generative_writing_artificial_intelligence",
           "ratio": "4:3",
-          "caption": "Generatiivne AI tegeleb ülesannetega, mis arvati olevat reserveeritud inimmõistusele."
+          "caption": "Generatiivne tehisintellekt võtab ette ülesandeid, mida peeti inimmõistuse pärusmaaks."
         },
         {
           "type": "paragraph",
-          "text": "See mitmekülgsus paljastab eriti [[valgekraed]], teenindussektori elukutsed, mille peamiseks töövahendiks on analüüs. Viimaste aruannete kohaselt on advokaadid, toimetajad ja finantsanalüütikud ühed elukutsed, mis selle muutusega kõige enam kokku puutuvad."
+          "text": "Selle mitmekülgsuse tõttu on kõige suuremas ohus [[valgekraed]]: teenindussektori töötajad, kelle peamine töövahend on analüüs. Värskete aruannete järgi kuuluvad juristid, tekstikirjutajad ja finantsanalüütikud nende ametite hulka, mida see muutus kõige enam puudutab."
         },
         {
           "type": "funFact",
-          "text": "1950. aastal ennustas Alan Turing, et masin võib ühel päeval inimese lolli teha, simuleerides nende mõtlemist. Mõnda AI-d on sellest ajast alates peetud tegelike teaduslike patentide kaasautoriteks."
+          "text": "1950. aastal ennustas Alan Turing, et masin suudab ühel päeval inimest petta, jäljendades inimese mõtlemist. Sellest ajast on mõnd tehisintellekti nimetatud isegi päris teaduslike patentide kaasautoriks."
         }
       ]
     },
     {
       "id": "course_226_l_ia_et_l_emploi_p3",
-      "title": "Pigem kaaspiloot kui asenduspiloot?",
+      "title": "Pigem kaaspiloot kui asendaja?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Optimistlikum vaade näeb AI-d pigem assistendi kui asendajana. Vähem huvitavate ülesannete, nagu dokumentaaluuringud või kokkuvõtted, automatiseerimine jätaks spetsialistidele rohkem aega oma töö inimliku, eetilise või strateegilise aspekti jaoks."
+          "text": "Optimistlikum vaade näeb tehisintellekti pigem abilise kui asendajana. Kui see automatiseerib vähem huvitavad ülesanded, nagu taustamaterjali otsimise või kokkuvõtete tegemise, jääks spetsialistidel rohkem aega oma töö inimlikule, eetilisele või strateegilisele poolele."
         },
         {
           "type": "paragraph",
-          "text": "Juba on ilmumas uusi elukutseid, näiteks [[Kiire insener]], kes teab, kuidas sõnastada täpseid juhiseid, et AI-st parimat saada. Tehisintellekti abistatav arst ei kao kuhugi: ta suudab rohkem patsiente täpsemalt jälgida."
+          "text": "Juba tekib uusi ameteid, näiteks [[Promptiinsener]] (inglise keeles prompt engineer), kes oskab sõnastada täpseid juhiseid, et tehisintellektist parim välja võtta. Arst, keda tehisintellekt abistab, ei kao kuhugi: ta saab jälgida rohkem patsiente ja teha seda täpsemalt."
         },
         {
           "type": "paragraph",
-          "text": "Murekohaks jääb muutuste kiirus. Varasemad tööstusrevolutsioonid kestsid aastakümneid, andes aega kohanemiseks. AI ümberkujundamine toimub mõne aasta jooksul, mis võib tekitada oskuste puudujäägi, mida on paljudel töötajatel raske täita."
+          "text": "Muret teeb endiselt muutuste kiirus. Varasemad tööstusrevolutsioonid venisid aastakümnete pikkuseks ja jätsid aega kohaneda. Tehisintellekti revolutsioon toimub mõne aastaga, mistõttu võib paljudel töötajatel tekkida oskuste lõhe, mida on raske ületada."
         }
       ]
     },
@@ -102,19 +102,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Selle muudatuse tulemus sõltub eelkõige sellega kaasnevatest poliitilistest valikutest. Täiendkoolitus muutub hädavajalikuks, et aidata töötajatel uusi oskusi arendada."
+          "text": "Selle muutuse tulemus sõltub eelkõige poliitilistest valikutest, mis sellega kaasnevad. Täiendõpe muutub hädavajalikuks, et aidata töötajatel omandada uusi oskusi."
         },
         {
           "type": "paragraph",
-          "text": "Uuesti kerkib esile ka debatt masinate tekitatud rikkuse ümberjagamise üle. Kui tehisintellekt võimaldab vähemate töötajatega rohkem toota, siis kuidas saame rahastada oma sotsiaalsüsteeme? Just selles kontekstis on võitmas [[Universaalne põhisissetulek (UBI)]] idee, mitte utoopia, vaid tõelise turvavõrguna."
+          "text": "Uuesti kerkib esile ka arutelu masinate loodud rikkuse ümberjagamise üle. Kui tehisintellekt võimaldab vähemate töötajatega rohkem toota, kuidas siis rahastada meie sotsiaalsüsteeme? Just sellel taustal kogub poolehoidu [[universaalne põhisissetulek (UBI)]], mida ei nähta utoopiana, vaid tõelise turvavõrguna."
         },
         {
           "type": "paragraph",
-          "text": "Mõned pakuvad ka tehisintellekti kasutamise maksu, et kompenseerida tööga seotud sissemaksete vähenemist. Lõppkokkuvõttes sunnib tehisintellekt meid ümber mõtlema töökoha enda elus."
+          "text": "Mõned pakuvad välja ka tehisintellekti kasutamise maksu, et korvata tööga seotud sotsiaalmaksete vähenemist. Lõpuks sunnib tehisintellekt meid ümber mõtestama, millist kohta töö meie elus üldse hõivab."
         },
         {
           "type": "takeaway",
-          "text": "Varasemad tööstusrevolutsioonid hävitasid töökohti ja lõid neid mujal. Generatiivne AI on esimene, mis ohustab korraga kognitiivseid ja loomingulisi ülesandeid, muutes kohanemise kiireloomulisemaks kui kunagi varem."
+          "text": "Varasemad tööstusrevolutsioonid hävitasid töökohti, kuid lõid mujal uusi. Generatiivne tehisintellekt on esimene, mis ohustab korraga nii kognitiivseid kui ka loomingulisi ülesandeid, ja seetõttu on kohanemine kiireloomulisem kui kunagi varem."
         }
       ]
     }

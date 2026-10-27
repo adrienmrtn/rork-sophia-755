@@ -4,11 +4,11 @@
   "subtitle": "Mälu ja neuronid",
   "subject": "sciences",
   "subcategory": "Maa ja universum",
-  "description": "Mälu ei ole sahtlite raamatukogu. See on elav neuronite võrgustik, mis tugevdavad üksteist, ehitavad end uuesti üles ja teevad mõnikord vigu.",
+  "description": "Mälu ei ole sahtlitega raamatukogu. See on elav neuronivõrk, mis tugevneb, ehitab end ümber ja vahel eksib.",
   "hero": {
     "image": "comment_le_cerveau_stocke_les_souvenirs",
     "ratio": "16:9",
-    "hook": "Mälu ei ole fail: see on tee, mida aju on õppinud ümber tegema."
+    "hook": "Mälestus ei ole fail: see on tee, mida aju on õppinud uuesti läbima."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sageli kujutame mälu ette kõvakettana. Tegelikkuses on see elav võrgustik. Miljardid **neuroniid**, närvirakud, ühendavad uuesti, tugevdavad või nõrgenevad olenevalt sellest, mida kogeme."
+          "text": "Mälu kujutatakse sageli ette kõvakettana. Tegelikult on see elav võrgustik. Miljardid **neuronid** ehk närvirakud loovad uusi ühendusi, tugevnevad või nõrgenevad olenevalt sellest, mida inimene kogeb."
         },
         {
           "type": "paragraph",
-          "text": "Midagi ei salvestata ühes kohas. Mälestus on hajutatud jälg, alguses habras, pärast und tugevam ja alati veidi rekonstrueeritud, kui me seda mäletame."
+          "text": "Midagi ei talletata ühes kohas. Mälestus on laiali jaotunud jälg: alguses habras, pärast und tugevam ja meenutamisel alati veidi ümber ehitatud."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
-      "title": "Ühendused, mis tugevdavad",
+      "title": "Ühendused, mis tugevnevad",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kahe neuroni vahelist kokkupuutepunkti nimetatakse **sünapsiks**, ristmik, kust närvisignaal läbib. Inimese ajus on ligikaudu **86 miljardit** neuronit ja rohkem kui **100 000 miljardit** sünapsi."
+          "text": "Kahe neuroni kokkupuutepunkti nimetatakse **sünapsiks**: see on liitekoht, kust närvisignaal edasi liigub. Inimese ajus on umbes **86 miljardit** neuronit ja üle **100 000 miljardi** sünapsi."
         },
         {
           "type": "image",
@@ -43,30 +43,30 @@
         },
         {
           "type": "paragraph",
-          "text": "Kui teavet korratakse või seostatakse tugeva emotsiooniga, aktiveeruvad samad neuronid koos. Nende seost on lihtsam käivitada: see on [[Pikaajaline võimendamine]], sünapside püsiv tugevdamine. Mida rohkem vooluringi kasutatakse, seda \"laiemaks\" läheb tee. Mälu ei ole seega salvestatud objekt, vaid võrgus olev **jälg**."
+          "text": "Kui infot korratakse või see seostub tugeva emotsiooniga, aktiveeruvad samad neuronid koos. Nendevahelist sidet on siis lihtsam käivitada: see on [[pikaajaline võimendamine]], sünapside püsiv tugevnemine. Mida rohkem ahelat kasutatakse, seda „laiemaks“ rada muutub. Mälestus pole seega riiulile pandud ese, vaid **jälg** võrgustikus."
         },
         {
           "type": "funFact",
-          "text": "Aju salvestusmaht on hinnanguliselt umbes **2,5 petabaiti**, mis võrdub miljonite tundide pikkuse videoga. Kuid see pole ketas: see on elav kude, mis korraldab end ümber."
+          "text": "Aju mahutavuseks hinnatakse umbes **2,5 petabaiti**, mis vastab miljonitele tundidele videole. Ometi pole see ketas: see on elav kude, mis end ümber korraldab."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
-      "title": "Merihobune, mälestuste jaamaülem",
+      "title": "Hipokampus, mälestuste jaamaülem",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**hipokampus**, väike ehitis [[oimusagara]], templite taga asuvas piirkonnas, ei säilita mälestusi igavesti. See võtab need vastu, **kodeerida**, muudab need mälujälgedeks, seejärel jaotab need ümber **ajukoor**, aju välimisse kihti. Seda ülekandmist nimetatakse **konsolideerimiseks**."
+          "text": "**Hipokampus** on väike [[oimusagar]] struktuur (oimusagar asub meelekohtade taga) ega hoia mälestusi igavesti. See võtab need vastu, **kodeerib** ehk muudab mälujäljeks ja jagab seejärel edasi **ajukoorde**, aju välimisse kihti. Seda ülekannet nimetatakse **konsolideerimiseks**."
         },
         {
           "type": "paragraph",
-          "text": "Seda tehakse peamiselt **ajakirjandus** ajal. Ilma toimiva hipokampuseta saame elada praeguses hetkes, kuid me ei hoia enam endas uusi teadlikke mälestusi. Me jääme kinni olevikku ilma lähiminevikuta."
+          "text": "See toimub peamiselt **une** ajal. Toimiva hipokampuseta saab elada käesolevas hetkes, kuid uusi teadlikke mälestusi enam ei talletu. Inimene jääb kinni olevikku, millel puudub lähiminevik."
         },
         {
           "type": "funFact",
-          "text": "1953. aastal opereeritud patsient **H.M.** ei tekitanud enam uusi mälestusi. Peeglisse joonistamises edenes ta aga iga päev, mäletamata, et oleks juba proovinud: tema mälu žestidest oli terve."
+          "text": "1953. aastal opereeritud patsient **H.M.** ei suutnud enam uusi mälestusi luua. Ometi joonistas ta peegli abil iga päevaga paremini, kuigi ei mäletanud, et oli seda varem proovinud: tema liigutuste mälu oli puutumata."
         }
       ]
     },
@@ -77,22 +77,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mälu tagasikutsumine ei ole video taasesitamine. Iga kord, kui selle välja võtate, muutub see muudetavaks **vormitavaks**. Meie praegused emotsioonid, meie uued teadmised või soovitus võivad seda muuta, enne kui see uuesti salvestatakse."
+          "text": "Mälestuse meenutamine ei ole video taasesitamine. Iga kord, kui see välja võetakse, muutub see uuesti **vormitavaks** ehk muudetavaks. Hetke emotsioonid, uued teadmised või kellegi vihje võivad seda muuta, enne kui see „uuesti salvestatakse“."
         },
         {
           "type": "paragraph",
-          "text": "Psühholoog **Elizabeth Loftus** näitas, et lihtsate küsimuste abil saate implanteerida **valed mälestused**. Sellest ka tänane ettevaatlikkus pealtnägijate ütluste ees: heas usus täidab aju lüngad."
+          "text": "Psühholoog **Elizabeth Loftus** näitas, et lihtsate küsimustega saab inimesele siirdada **valemälestusi**. Sellepärast suhtutakse tänapäeval pealtnägijate ütlustesse ettevaatlikult: aju täidab lüngad heauskselt."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p4",
-      "title": "Mitu mälestust ühes ajus",
+      "title": "Mitu mälu ühes ajus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Faktide ja eluepisoodide mälu, mida me saame öelda, läbib peamiselt hipokampust. [[Protseduuriline mälu]], rattasõidu või ujumise oma, sõltub hoopis **väikeaju**, aju tagumises struktuuris ja muudest vanematest struktuuridest."
+          "text": "Faktide ja elusündmuste mälu, see, mida saab jutustada, toimib peamiselt hipokampuse kaudu. [[Protseduuriline mälu]], näiteks jalgrattasõidu või ujumise oskus, sõltub aga pigem **väikeajust**, aju tagaosas asuvast struktuurist, ja teistest vanematest struktuuridest."
         },
         {
           "type": "paragraph",
@@ -100,7 +100,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Mälu on dünaamiline jälg: sünapsid tugevdatakse, konsolideeritakse eriti öösel ja taastatakse iga meeldetuletusega. See pole kunagi fikseeritud fail."
+          "text": "Mälestus on dünaamiline jälg: tugevnenud sünapsid, mis kinnistuvad peamiselt öösel ja ehitatakse ümber iga meenutamisega. See pole kunagi muutumatu fail."
         }
       ]
     }

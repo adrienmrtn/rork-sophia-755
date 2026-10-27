@@ -4,7 +4,7 @@
   "subtitle": "Eksobioloogia",
   "subject": "sciences",
   "subcategory": "Maa ja universum",
-  "description": "Tuhanded miljardid planeedid ja ometi raadiovaikus. Teadus otsib elu mujalt, lubamata väikseid rohelisi mehikesi.",
+  "description": "Tuhandeid miljardeid planeete ja ometi raadiovaikus. Teadus otsib elu mujalt, lubamata väikseid rohelisi mehikesi.",
   "hero": {
     "image": "y_a_t_il_de_la_vie_ailleurs_dans_l_univers",
     "ratio": "16:9",
@@ -18,40 +18,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vaadeldav universum sisaldab ligikaudu **2 triljoniiti** galaktikat, tohutuid tähtede kogusid, millest igaühes on sadu miljardeid tähti. Statistika abil peaks potentsiaalselt elamiskõlblikke planeete olema lugematu arv. Ometi pole meil alates kaasaegse astronoomia algusest olnud kinnitatud kontakte."
+          "text": "Vaadeldavas universumis on umbes **2 triljonit** galaktikat: hiiglaslikke tähekogumeid, millest igaühes on sadu miljardeid tähti. Statistiliselt peaks võimalike elamiskõlblike planeetide hulk olema lugematu. Ometi pole meil moodsa astronoomia algusest saadik olnud ühtegi kinnitatud kontakti."
         },
         {
           "type": "paragraph",
-          "text": "Sellel vastuolul on nimi: **Fermi** paradoks füüsiku **Enrico Fermi** järgi. Küsimus pole enam ainult ulmes. See kuulub [[Eksobioloogia]] alla: teadus, mis uurib elu mujale ilmumise tingimusi ja selle tuvastamise vahendeid."
+          "text": "Sellel vastuolul on nimi: **Fermi paradoks**, füüsik **Enrico Fermi** järgi. Küsimus pole enam pelgalt ulme. Sellega tegeleb [[Eksobioloogia]]: teadus, mis uurib, millistel tingimustel võib elu mujal tekkida ja kuidas seda avastada."
         }
       ]
     },
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p1",
-      "title": "Mida elu näib küsivat",
+      "title": "Mida elu näib vajavat",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kui vaadata mujalt, lähtume ainsast teadaolevast näitest: maapealsest elust. See põhineb peamiselt keerukaid molekule moodustava aatomi **szénu** keemial ja **vedelal veel**, mis võimaldab keemilistel reaktsioonidel hästi toimuda."
+          "text": "Et elu mujalt otsida, lähtutakse ainsast teadaolevast näitest: elust Maal. See tugineb eelkõige **süsiniku** keemiale (see aatom moodustab keerukaid molekule) ja **vedelale veele**, mis laseb keemilistel reaktsioonidel hästi kulgeda."
         },
         {
           "type": "image",
           "asset": "radio_telescope_seti",
           "ratio": "auto",
-          "caption": "Raadioteleskoobid skaneerivad taevast, kuulates võimalikku signaali."
+          "caption": "Raadioteleskoobid uurivad taevast ja kuulatavad, kas kuskilt tuleb signaal."
         },
         {
           "type": "paragraph",
-          "text": "Kandidaatplaneet peab sageli asuma oma tähe [[elamiskõlblik ala]]: ei liiga lähedal, muidu vesi aurustub, ega liiga kaugel, muidu vesi külmub. Alates 1990. aastatest on avastatud rohkem kui **5 500 eksoplaneeti**, planeete, mis ümbritsevad muid tähti peale Päikese. Peaaegu igal meie galaktika tähel oleks vähemalt üks täht."
+          "text": "Paljulubava planeedi puhul on sageli määrav tema tähe [[elamiskõlblik tsoon]]: planeet ei tohi olla liiga lähedal, sest siis vesi aurustub, ega liiga kaugel, sest siis vesi külmub. 1990. aastatest alates on avastatud üle **5,5 tuhande eksoplaneedi** ehk planeedi, mis tiirleb mõne muu tähe kui Päikese ümber. Peaaegu igal meie galaktika tähel olevat neid vähemalt üks."
         },
         {
           "type": "funFact",
-          "text": "Vaadeldavas universumis on rohkem tähti kui kõigis Maa randades on liivaterasid."
+          "text": "Vaadeldavas universumis on rohkem tähti kui liivaterasid kõigil Maa randadel."
         },
         {
           "type": "paragraph",
-          "text": "Aastal **1961** pakkus astronoom **Frank Drake** välja [[Drake'i võrrand]]: valemi, mis korrutab tegurid - tähed, elamiskõlblikud planeedid, tsivilisatsioonide kestus -, et hinnata tsivilisatsioonide arvu, mis on võimelised liikuma. Arvud on endiselt väga ebakindlad. Valemit kasutatakse peamiselt arutelu struktureerimiseks."
+          "text": "Aastal **1961** pakub astronoom **Frank Drake** välja valemi, millest saab [[Drake'i võrrand]]. See korrutab omavahel mitu tegurit (tähed, elamiskõlblikud planeedid, tsivilisatsioonide eluiga), et hinnata, mitu suhtlemisvõimelist tsivilisatsiooni Linnuteel võib olla. Arvud on endiselt väga ebakindlad. Valem aitab eelkõige arutelu korrastada."
         }
       ]
     },
@@ -62,15 +62,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pole vaja kohe teiste staaride juurde minna. Meie päikesesüsteemis on mitmed maailmad intrigeerivad. **Euroopas**, Jupiteri kuu, sisaldab tõenäoliselt jääkooriku all vedelat vett. See ookean jääks vedelaks tänu [[Loodete jõud]]: Jupiteri tohutu külgetõmme deformeerib Euroopat ja soojendab selle sisemust hõõrdumise tõttu."
+          "text": "Kohe teiste tähtede juurde rändama ei pea. Ka meie Päikesesüsteemis on mitu maailma, mis teadlasi huvitavad. **Europa**, üks Jupiteri kaaslastest, peidab jääkooriku all tõenäoliselt vedela vee ookeani. Seda ookeani hoiaksid vedelana [[loodete jõud]]: Jupiteri tohutu külgetõmme deformeerib Europat ja soojendab hõõrdumise kaudu selle sisemust."
         },
         {
           "type": "paragraph",
-          "text": "**Enceladus**, Saturni väike kuu, paiskab välja **geiserid**, auru- ja ainejoad. **Cassini** sond leidis märke **hüdrotermilis** aktiivsusest, mis kuumeneb ookeani põhjas keemiliste reaktsioonide tõttu ja mis põhimõtteliselt on võimeline toitma mikroobe ilma päikesevalguseta."
+          "text": "**Enceladus**, Saturni väike kaaslane, paiskab välja **geisreid**: auru- ja ainejugasid. Kosmosesond **Cassini** leidis sealt märke **hüdrotermilisest** tegevusest ehk ookeanipõhja soojenemisest keemiliste reaktsioonide toel. See võiks põhimõtteliselt toita mikroobe ka ilma päikeseta."
         },
         {
           "type": "paragraph",
-          "text": "**märtsil**-l voolas kunagi pinnal vedel vesi. Robotid otsivad [[Biosignatuurid]]: eelmise elu fossiilseid või keemilisi jälgi, enne kui planeet kaotas suure osa oma atmosfäärist ja veest."
+          "text": "**Marsi** pinnal voolas kunagi vedel vesi. Robotite otsingute siht on seal [[biosignatuurid]]: möödunud elu fossiilsed või keemilised jäljed ajast, mil planeet polnud veel kaotanud suurt osa oma atmosfäärist ja veest."
         }
       ]
     },
@@ -81,38 +81,38 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aastal **1950** küsib Fermi: kui arenenud tsivilisatsioone on tuhandeid, siis miks me ei näe neist jälgegi? Universum on vana. Vaid miljon aastat ees oleval tsivilisatsioonil oleks olnud aega silma paista isegi ilma valguse kiirusel liikumata."
+          "text": "Aastal **1950** küsib Fermi: kui arenenud tsivilisatsioone on tuhandeid, miks me siis neist ühtegi jälge ei näe? Universum on vana. Tsivilisatsioonil, mis on meist kõigest miljon aastat ees, oleks olnud aega end märgatavaks teha isegi valguse kiirusel reisimata."
         },
         {
           "type": "paragraph",
-          "text": "Üks hüpotees on [[Suur filter]]: peaaegu võimatu samm evolutsioonis, näiteks üleminek keerulisele elule või tehnoloogiline enesehävitamine. Kas oleme selle juba läbinud või on see meie ees."
+          "text": "Üks hüpotees on [[Suur filter]]: peaaegu ületamatu etapp evolutsioonis, näiteks üleminek keerukale elule või tehnoloogiline enesehävitus. Me oleme selle kas juba läbinud või ootab see meid alles ees."
         },
         {
           "type": "paragraph",
-          "text": "Muud ideed: me ei pruugi kuulata õigeid signaale. Programm **SETI** Otsi maavälist intelligentsi skaneerib peamiselt raadiolaineid. Või on tsivilisatsioonid liiga lühikesed ja liiga kaugel, et oma teed ristuda. Või [[Loomaaia hüpotees]]: Maa jäetaks vabatahtlikult kõrvale nagu reserv."
+          "text": "Teisi võimalusi: võib-olla ei kuula me õigeid signaale. Programm **SETI** (Search for Extraterrestrial Intelligence ehk maavälise mõistuse otsing) kuulab peamiselt raadiolaineid. Või on tsivilisatsioonid liiga lühiealised ja üksteisest liiga kaugel, et kohtuda. Või kehtib hoopis [[loomaaia hüpotees]]: Maa olevat meelega kõrvale jäetud nagu looduskaitseala."
         }
       ]
     },
     {
       "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p4",
-      "title": "Kuidas me täna otsime",
+      "title": "Kuidas tänapäeval otsitakse",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kosmoseteleskoop **James Webb** analüüsib kaugete planeetide atmosfääri läbivat valgust, kasutades [[Spektroskoopia]], valguse lõikamist, et tuvastada olemasolevaid gaase. Otsime gaase nagu hapnik või metaan kummalises koguses, võimalikke elumärke."
+          "text": "Kosmoseteleskoop **James Webb** analüüsib kaugete planeetide atmosfääri läbivat valgust ja selles aitab teda [[spektroskoopia]]: valguse lahutamine osadeks, et tuvastada seal leiduvad gaasid. Otsitakse näiteks hapnikku või metaani ebatavalistes kogustes, sest need võivad olla elu märgid."
         },
         {
           "type": "funFact",
-          "text": "Kui keegi Andromeeda galaktikas meile \"praegu\" otsa vaataks, näeks ta Maad sellisena, nagu see oli **2,5 miljonit aastat tagasi**: valguse liikumiseks kulub nii kaua."
+          "text": "Kui keegi Andromeeda galaktikas meid „praegu“ vaatleks, näeks ta Maad sellisena, nagu see oli **2,5 miljonit aastat tagasi**: just nii kaua kulub valgusel selle teekonna läbimiseks."
         },
         {
           "type": "paragraph",
-          "text": "Isegi mikroobide elu muudaks kõike: see tõestaks, et elusolendid pole ainulaadne õnnetus. Vahepeal on **Reisimiseks** sondid alates **1977** kandnud kuldseid plaate Maa helide ja piltidega. Pealtkuulamise tõenäosus: peaaegu null. Ei pea tundma end üksikuna: puutumata."
+          "text": "Isegi mikroobne elu muudaks kõike: see tõestaks, et elu pole ainukordne juhus. Seni kannavad **Voyageri** sondid alates **1977**. aastast pardal kuldplaate Maa helide ja piltidega. Tõenäosus, et keegi need kinni püüab: peaaegu null. Vajadus tunda, et me pole üksi: täiesti puutumata."
         },
         {
           "type": "takeaway",
-          "text": "Planeete on lugematu arv ja elu tundub statistiliselt usutav. Kuid kontakti puudumine, Fermi paradoks, tuletab meile meelde, et tehnoloogiline luure võib olla väga haruldane või väga lühike."
+          "text": "Planeete on lugematu hulk ja elu tundub statistiliselt usutav. Kuid kontakti puudumine ehk Fermi paradoks tuletab meelde, et tehnoloogiline mõistus võib olla väga haruldane või väga lühiealine."
         }
       ]
     }

@@ -8,7 +8,7 @@
   "hero": {
     "image": "merlin_l_enchanteur",
     "ratio": "16:9",
-    "hook": "Deemoni poeg, hällist ristitud: Merlin teenib head kurjast sündinud jõududega."
+    "hook": "Deemoni poeg, kes ristiti juba hällis: Merlin teenib head jõududega, mis on sündinud kurjast."
   },
   "sections": [
     {
@@ -18,47 +18,47 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Merlin** on läänekeskaja kuulsaim mustkunstnik. Bard, prohvet, kuninga **Arthur** nõunik: ta seisab iidse keldi maailma ja kristliku rüütelkonna piiril."
+          "text": "**Merlin** on Lääne keskaja kuulsaim võlur. Bard, prohvet, kuningas **Arthuri** nõuandja: ta seisab vana keldi maailma ja kristliku rüütelkonna piiril."
         },
         {
           "type": "paragraph",
-          "text": "Selle olemus on paradoksaalne. Osa temast pärineb deemonitest, teine taevast. Tema lugu ei ole mustkunstietendus: see on hübriidse olendi võitlus, kes otsustab teenida head, kuni armastus ta maailmast eemaldab."
+          "text": "Tema olemus on paradoksaalne. Osa temast pärineb deemonitelt, teine osa taevast. Tema lugu pole mustkunstietendus, vaid hübriidolendi võitlus: ta valib hea teenimise, kuni armastus ta maailmast eemaldab."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p1",
-      "title": "Hübriidne päritolu deemoni ja ristimise vahel",
+      "title": "Hübriidne päritolu: deemon ja ristimine",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Luuletajas **Robert de Boron** (12. sajand) tahavad deemonid luua antikristuse. [[inkubuse deemon]], vaim, kes ühineb magava naisega, võrgutab noore vaga kristlase naise. Plaan ebaõnnestub: ema tunnistab üles ja laseb lapse ristida."
+          "text": "12. sajandi luuletaja **Robert de Boron** jutustab, et deemonid tahavad luua antikristuse. Üks [[inkubuse deemon]], vaim, kes ühineb magava naisega, võrgutab noore ja vaga kristlasest neiu. Plaan ebaõnnestub: ema käib pihil ja laseb lapse ristida."
         },
         {
           "type": "image",
           "asset": "merlin_wizard_medieval_manuscript_illumination",
           "ratio": "4:3",
-          "caption": "Merlin, keskaegse maagi kuju metsa ja õue vahel."
+          "caption": "Merlin, keskaegne maag metsa ja õukonna vahel."
         },
         {
           "type": "funFact",
-          "text": "Nimi \"Merlin\" pärineb kõmri sõnast **Myrddin**. Geoffrey of Monmouth muutis tähe d täheks l, et vältida ladina keelele *jama* liiga lähedast sõnamängu."
+          "text": "Nimi „Merlin“ pärineb kõmrikeelsest nimest **Myrddin**. Geoffrey of Monmouth asendas d-tähe l-tähega, et vältida sõnamängu, mis oleks liiga sarnanenud ladina sõnaga *merda* („väljaheide“)."
         },
         {
           "type": "paragraph",
-          "text": "[[Ristimine]] kustutab needuse, kuid jätab volitused: mineviku tundmine (deemonlik pärand) ja [[ennustus keskaegses kultuuris]] kingitus. Merlin suudab kuju muuta. Tema selja tagant leiame **Myrddin Wyllt**, 6. sajandi Walesi bardi, kes pärast lahingut hullununa põgenes [[Celyddon]] metsa."
+          "text": "[[Ristimine]] kustutab needuse, kuid võimed jäävad alles: mineviku tundmine (deemonlik pärand) ja prohvetiand ehk [[ennustus keskaegses kultuuris]]. Merlin oskab oma kuju muuta. Tema taga on **Myrddin Wyllt**, 6. sajandi kõmri bard, kes läks pärast lahingut hulluks ja põgenes metsa, mille nimi on [[Celyddon]]."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p2",
-      "title": "Arturi saatuse arhitekt",
+      "title": "Arthuri saatuse arhitekt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin ei ole illusionist. Ta on kuningriigi käendaja. Ta aitab kuningal [[Utherpendragon]] omandada Cornwalli hertsogi jooned, et ühineda hertsoginna **Igerne**-ga. Sellest ööst sündis **Arthur**."
+          "text": "Merlin ei ole silmamoondaja. Ta on kuningriigi kaitsja. Kuningas [[Uther Pendragon]] saab tema abiga Cornwalli hertsogi välimuse ja pääseb nii hertsoginna **Igerne** juurde. Sellest ööst sünnib **Arthur**."
         },
         {
           "type": "image",
@@ -68,32 +68,32 @@
         },
         {
           "type": "paragraph",
-          "text": "Ta kasvatab last salaja, orkestreerib mõõga alasis, seejärel juhatab Arturi Järve Daami juurde, et saada [[Excalibur]], mille tupp kaitseb surmahaavade eest. Ettevõttes **Camelot** kujundab ta **Ümarlaua** ja asetab [[Siege Perilous]], vaba istme, mis on reserveeritud puhtaimale rüütlile. Ta näeb ohte tulemas. Ta teab ka, et saatus läheb lõpuks alati mööda."
+          "text": "Ta kasvatab last salaja, korraldab proovi mõõgaga alasis ja viib siis Arthuri Järve Daami juurde, kus talle antakse [[Excalibur]]: mõõk, mille tupp kaitseb surmavate haavade eest. **Camelotis** kujundab ta **Ümarlaua**, mille ääres on [[Ohtlik Iste]] ehk Ohtlik Iste: vaba koht, mis on hoitud kõige puhtamale rüütlile. Ta näeb ohte ette. Ta teab ka, et saatus täitub lõpuks alati."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p3",
-      "title": "Võlu kukkumine: armastus ja unustamine",
+      "title": "Võluri langus: armastus ja unustus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin jõuab lõpule. Siiski armub ta Barentoni purskkaevu lähedal järveleedi **Viviane**-sse. Ta õpetab talle oma salajasemaid loitsusid, kuigi ta teab, et naine kaotab selle."
+          "text": "Merlin teab ette oma lõppu. Siiski armub ta Barentoni allika juures Järve Daami, kelle nimi on **Viviane**. Ta õpetab talle oma kõige salajasemaid loitse, kuigi teab, et naine saab talle saatuslikuks."
         },
         {
           "type": "image",
           "asset": "viviane_lady_of_the_lake_merlin_medieval_art",
           "ratio": "4:3",
-          "caption": "Viviane paneb Merlini lukku: maagide aja lõpp."
+          "caption": "Viviane vangistab Merlini: maagide ajastu lõpp."
         },
         {
           "type": "funFact",
-          "text": "Olenevalt versioonist lukustab Viviane ta viirpuupõõsasse, klaastorni või **Brocéliande** õõnsusse. Surematu Merlin pole surnud: ta magab väljaspool maailma."
+          "text": "Eri versioonide järgi sulgeb Viviane ta viirpuupõõsasse, klaastorni või **Brocéliande'i** koopasse. Merlin on surematu ega ole surnud: ta magab maailmast väljaspool."
         },
         {
           "type": "paragraph",
-          "text": "Kui rüütlid Graali poole lahkuvad, pole Merlini maagial enam ruumi. Selle tagasitõmbumine tähistab üleminekut müütide ajast usu aega."
+          "text": "Kui rüütlid lähevad Graali otsima, pole Merlini maagial enam kohta. Tema lahkumine tähistab üleminekut müütide ajastult usu ajastule."
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin vahtis vana targa mehe pilti: habe, kepp, mõistatused. Temast pärineb **Gandalf** Tolkieni jaoks ja **Dumbledore** Rowlingu jaoks. Ta on adjuvant, kes teab, kuid ei saa tegutseda kangelase asemel."
+          "text": "Merlin kinnistas vana targa kuvandi: habe, kepp, mõistatused. Temast põlvnevad Tolkieni **Gandalf** ja Rowlingu **Dumbledore**. Ta on abiline, kes teab, kuid ei saa kangelase eest tegutseda."
         },
         {
           "type": "paragraph",
-          "text": "Silda metsiku metsa ja õukonna vahel hoiab ta kuningatele nõu andes [[Druiidid]] jäljendit. Praegugi sosistab ta, et impeeriumid on haprad ja tarkus ei kaitse alati iseennast."
+          "text": "Ta on sild metsiku metsa ja õukonna vahel: kuningaid nõustades kannab ta endas jälge, mille on jätnud [[druiidid]]. Tänapäevalgi sosistab ta, et impeeriumid on haprad ja et tarkus ei kaitse alati iseenda eest."
         },
         {
           "type": "takeaway",
-          "text": "**Merlin**, kes on sündinud deemonist ja päästetud ristimisega, kujundab **Arthur saatuse, seejärel kaob**, Viviane vang, kes on lääne võluri kestev mudel."
+          "text": "**Merlin**, deemonist sündinud ja ristimisega päästetud, rajab **Arthuri** saatuse ja kaob siis **Viviane'i** vangina: lääne võluri püsiv eeskuju."
         }
       ]
     }

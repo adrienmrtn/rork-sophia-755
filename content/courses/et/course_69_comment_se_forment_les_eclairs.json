@@ -1,14 +1,14 @@
 {
   "id": "course_69_comment_se_forment_les_eclairs",
-  "title": "Kuidas välk moodustub?",
+  "title": "Kuidas välk tekib?",
   "subtitle": "Äikesetormid",
   "subject": "sciences",
   "subcategory": "Maa ja universum",
-  "description": "Välk ei ole maagia: see on tohutu elektrilahendus tormipilves. Siin on, kuidas ta valmistub ja seejärel lööb.",
+  "description": "Välk ei ole võlukunst: see on tohutu elektrilahendus äikesepilves. Vaata, kuidas see valmib ja kuidas see siis lööb.",
   "hero": {
     "image": "comment_se_forment_les_eclairs",
     "ratio": "16:9",
-    "hook": "Sekundi murdosaga tõuseb õhk 30 000°C-ni. Viis korda kuumem kui Päikese pind."
+    "hook": "Sekundi murdosa jooksul kuumeneb õhk 30 000 °C-ni. See on viis korda kuumem kui Päikese pind."
   },
   "sections": [
     {
@@ -18,74 +18,74 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Piksenool vabastab silmapilguga kolossaalse energia. Õhk välgukanalis tõuseb umbes **30 000 °C**-ni. Äike on lihtsalt selle jõhkra kuumuse heli."
+          "text": "Välk vabastab silmapilguga kolossaalse energia. Välgukanalis kuumeneb õhk kuni umbes **30 000 °C**. Müristamine on lihtsalt selle järsu kuumenemise heli."
         },
         {
           "type": "paragraph",
-          "text": "Välgu mõistmiseks peate järgima kolme sammu: kuidas pilv laeb, kuidas elekter tee leiab ja miks pärast äikest kuulete."
+          "text": "Välgu mõistmiseks tuleb läbida kolm sammu: kuidas pilv saab laengu, kuidas elekter endale tee leiab ja miks müristamist kuuleb alles pärast."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p1",
-      "title": "Pilves laengud eraldi",
+      "title": "Pilves laengud eralduvad",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Välk esineb peamiselt [[cumulonimbus]]: väga suurtes tormipilvedes, mis võivad tõusta umbes **15 km**-ni. Toas õhk tõuseb ja langeb väga tugevalt."
+          "text": "Välkude sünnikoht on enamasti [[cumulonimbus]]: väga suur äikesepilv, mis võib ulatuda umbes **15 km** kõrgusele. Pilve sees liigub õhk järsult üles ja alla."
         },
         {
           "type": "image",
           "asset": "cumulonimbus_thunderstorm_cloud",
           "ratio": "4:3",
-          "caption": "Cumulonimbus: tormitehas."
+          "caption": "Rünksajupilv: äikesetehas."
         },
         {
           "type": "paragraph",
-          "text": "Selles kaoses tõusevad väikesed **jääkristallid** ja laskuvad alla raskemad jääterad ([[lörtsi]]). Kui need kokku põrkuvad, vahetuvad elektrilaengud. Vähehaaval muutub pilve tipp pigem positiivseks, põhi pigem negatiivseks."
+          "text": "Selles kaoses tõusevad üles väikesed **jääkristallid**, alla aga langeb raskemaid jääteri ehk [[jääkruubid]]. Kui need omavahel kokku põrkavad, vahetuvad elektrilaengud. Vähehaaval muutub pilve ülaosa pigem positiivseks ja alaosa pigem negatiivseks."
         },
         {
           "type": "funFact",
-          "text": "Venezuelas asuv Maracaibo järv on üks enim välgutabamuse saanud paiku planeedil: seal täheldatakse peaaegu iga päev torme suure osa aastast."
+          "text": "Venezuelas asuv Maracaibo järv on üks planeedi välgurohkemaid paiku: suure osa aastast on seal peaaegu iga päev äike."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p2",
-      "title": "Kui õhk laseb lahti: heide",
+      "title": "Kui õhk alla annab: lahendus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Õhk on halb juht. Kuid kui laengu erinevus muutub liiga suureks (sageli **sad miljonid voltid**), annab õhk lõpuks järele. Molekulid kaotavad elektrone: muutuvad juhtivaks. See on [[Õhu ionisatsioon]]."
+          "text": "Õhk juhib elektrit halvasti. Kui aga laengute erinevus muutub liiga suureks (sageli **sadu miljoneid volte**), annab õhk lõpuks järele. Molekulid kaotavad elektrone ja muutuvad juhtivaks. See on [[õhu ioniseerimine]]."
         },
         {
           "type": "paragraph",
-          "text": "Nähtamatu kanal lahkub pilvest väikeste hüpetega. Maapinnalt tõusevad elektrivõrgud eriti punktidest (puud, piksevardad, hooned). Kui need kaks kokku saavad, vooluring sulgub."
+          "text": "Pilvest liigub väikeste hüpetena allapoole nähtamatu kanal. Maapinnalt tõusevad talle vastu peenikesed lahendusjoad, peamiselt kõrgematest kohtadest (puud, piksevardad, hooned). Kui need kaks kohtuvad, sulgub vooluring."
         },
         {
           "type": "paragraph",
-          "text": "Suurepärane valgus, mida me näeme, **kaar tagasi**, tõuseb peamiselt maapinnalt pilve poole. Vool võib ulatuda kümnete tuhandete ampriteni. Samas kanalis võivad üksteisele järgneda mitu väljavoolu: sellest tuleneb ka virvendusefekt."
+          "text": "Ere sähvatus, mida näha on, ehk **tagasilöök**, liigub peamiselt maapinnalt pilve poole. Voolutugevus võib ulatuda kümnete tuhandete amprini. Samas kanalis võib järjest toimuda mitu lahendust: sellest tulebki välgu virvendus."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p3",
-      "title": "Miks äike tuleb hiljem?",
+      "title": "Miks müristamine kostab hiljem",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Välk soojendab õhu nii kiiresti, et see äkki paisub. Sellest lööklainest saab **äike**. Valgus tuleb peaaegu kohe; heli liigub umbes **340 m/s**."
+          "text": "Välk kuumutab õhku nii kiiresti, et see paisub järsku. Sellest lööklainest saabki **müristamine**. Valgus jõuab kohale peaaegu kohe, heli liigub aga umbes **340 m/s**."
         },
         {
           "type": "paragraph",
-          "text": "Lihtne nõuanne: loendage sekundeid välgu ja äikese vahel, seejärel jagage arvuga **3**. Saate hinnangulise vahemaa kilomeetrites."
+          "text": "Lihtne nipp: loe sekundeid välgu ja müristamise vahel ning jaga see arv **3**-ga. Nii saad kauguse ligikaudse hinnangu kilomeetrites."
         },
         {
           "type": "funFact",
-          "text": "Maad lööb keskmiselt umbes **100 väärtuses münti**. Prantsusmaal mõjub maapinnale aastas umbes **üks** miljon."
+          "text": "Maad tabab keskmiselt umbes **100 välku sekundis**. Prantsusmaal lööb välk maasse umbes **miljon** korda aastas."
         }
       ]
     },
@@ -96,15 +96,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Välk jääb ohtlikuks, eriti õues, üksikute puude või vee läheduses. See tekitab ka tulekahjusid. Kuid sellel on vähem tuntud mõju: see aitab toota lämmastikuühendeid, mis väetavad mulda vihmaga."
+          "text": "Välk on endiselt ohtlik, eriti lagedal, üksikute puude või vee lähedal. See põhjustab ka tulekahjusid. Kuid välgul on ka vähem tuntud mõju: see aitab tekitada lämmastikuühendeid, mis koos vihmaga mulda väetavad."
         },
         {
           "type": "paragraph",
-          "text": "Tormide kohal jäädvustasid kaamerad ka veidraid nähtusi, nagu [[Leprechaunid]]: põgusad helendavad atmosfääri ülakihtides, mis on maapinnalt palja silmaga nähtamatud."
+          "text": "Äikesepilvede kohal on kaamerad jäädvustanud ka veidraid nähtusi. Nende hulka kuuluvad [[Elfid]]: lühiajalised kumad atmosfääri ülakihtides, mida maapinnalt palja silmaga ei näe."
         },
         {
           "type": "takeaway",
-          "text": "Cumulonimbusis eraldavad laengud kokkupõrked jää ja lörtsiga. Kui pinge läheb liiga kõrgeks, siis õhk ioniseerub: välk kuumeneb ~30 000°C-ni ja see äkiline paisumine tekitab äikest."
+          "text": "Rünksajupilves eraldavad laenguid jää ja lörtsi kokkupõrked. Kui pinge muutub liiga suureks, õhk ioniseerub: välk kuumeneb ~30 000 °C-ni ja see järsk paisumine tekitab müristamise."
         }
       ]
     }

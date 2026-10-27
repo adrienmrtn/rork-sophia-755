@@ -1,14 +1,14 @@
 {
   "id": "course_213_l_evasion_fiscale_des_multinationales",
-  "title": "Kuidas maksavad GAFAM nii vähe makse?",
-  "subtitle": "Kuidas GAFAM nii vähe makse maksab?",
+  "title": "Kuidas GAFAM-ettevõtted nii vähe makse maksavad?",
+  "subtitle": "Kuidas GAFAM-ettevõtted nii vähe makse maksavad",
   "subject": "comprendreLeMonde",
   "subcategory": "Majandus ja ühiskond",
   "description": "Digihiiglased maksavad sageli oma kasumiga võrreldes tühiseid makse. See ei ole alati ebaseaduslik: see on rahvusvahelise õiguse lünkade tagajärg.",
   "hero": {
     "image": "l_evasion_fiscale_des_multinationales",
     "ratio": "16:9",
-    "hook": "2014. aastal maksis Apple Iirimaal tegelikku maksumäära, mis oli ligi 0,005%. Kuidas see võimalik on?"
+    "hook": "2014. aastal oli Apple'i tegelik maksumäär Iirimaal ligikaudu 0,005%. Kuidas see võimalik on?"
   },
   "sections": [
     {
@@ -18,30 +18,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "GAFAM, see tähendab Google, Apple, Facebook (Meta), Amazon ja Microsoft, kuuluvad maailma rikkamate ettevõtete hulka. Kuid proportsionaalselt oma kasumiga maksavad nad sageli palju vähem makse kui traditsiooniline VKE."
+          "text": "GAFAM ehk Google, Apple, Facebook (Meta), Amazon ja Microsoft kuuluvad maailma rikkaimate ettevõtete hulka. Ometi maksavad nad oma kasumiga võrreldes sageli palju vähem makse kui tavaline VKE."
         },
         {
           "type": "paragraph",
-          "text": "See ei ole pettus selle kitsas tähenduses: see on **Maksude optimeerimine**, st rahvusvahelise õiguse lünkade oskuslik ärakasutamine. See mehhanism jätab osariigid igal aastal ilma sadadest miljarditest dollaritest. Siin on, kuidas see töötab ja kuidas maailm üritab sellele reageerida."
+          "text": "See ei ole pettus kitsas mõttes: see on **maksuoptimeerimine** ehk rahvusvahelise õiguse lünkade osav ärakasutamine. See mehhanism jätab riigid igal aastal ilma sadadest miljarditest dollaritest. Vaata, kuidas see toimib ja kuidas maailm püüab sellele vastu astuda."
         }
       ]
     },
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_p1",
-      "title": "Maks, mis on mõeldud tehastele, mitte digitaalsele",
+      "title": "Tehastele, mitte digimaailmale mõeldud maks",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rahvusvaheline maksusüsteem loodi 20. sajandi alguses tööstusmajanduse jaoks: ettevõttel pidi olema riigis tehased või kontorid, mida nimetatakse [[püsiv tegevuskoht]], et seal maksustada."
+          "text": "Rahvusvaheline maksusüsteem loodi 20. sajandi alguses tööstusmajanduse jaoks: ettevõttel pidi riigis olema tehaseid või kontoreid (see on nn [[püsiv tegevuskoht]]), et teda seal maksustada saaks."
         },
         {
           "type": "paragraph",
-          "text": "Digitehnoloogia on selle sideme territooriumiga katkestanud. Ettevõte saab täna domineerida turul, koguda miljonite kasutajate andmeid ja teenida riigis palju raha, ilma et tal oleks seal ühtegi hoonet. Seejärel saab ta eraldada oma raha teenimise koha ja kohast, kus ta seda deklareerib."
+          "text": "Digimaailm on selle seose territooriumiga katkestanud. Ettevõte võib tänapäeval mõnes riigis turgu valitseda, koguda miljonite kasutajate andmeid ja teenida tohutult raha, ilma et tal oleks seal ainsatki hoonet. Nii saab ta lahutada koha, kus ta raha teenib, kohast, kus ta selle deklareerib."
         },
         {
           "type": "funFact",
-          "text": "2014. aastal leidis USA maksuamet, et Microsoft on intellektuaalomandi õiguste kaudu suunanud Puerto Ricosse 39 miljardit dollarit kasumit, säästes maksudelt üle 6,5 miljardi dollari."
+          "text": "2014. aastal avastas USA maksuamet, et Microsoft oli intellektuaalomandi õiguste abil kandnud Puerto Ricosse 39 miljardit dollarit kasumit ja säästnud nii makse üle 6,5 miljardi dollari."
         }
       ]
     },
@@ -52,17 +52,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "OECD andmetel maksavad need tavad riigieelarvetele üle maailma 100-240 miljardit dollarit aastas ehk 4-10% kõigist planeedil kogutavatest ettevõtete maksudest."
+          "text": "OECD andmetel lähevad need võtted maailma riigieelarvetele maksma 100-240 miljardit dollarit aastas ehk 4-10% kõigist maailmas kogutavatest ettevõtete tulumaksudest."
         },
         {
           "type": "image",
           "asset": "multinational_corporate_tax_avoidance_structure",
           "ratio": "16:9",
-          "caption": "Digigigantide Euroopa peakorterid asuvad sageli riikides, kus maksud on kõige madalamad."
+          "caption": "Digihiiglaste Euroopa peakontorid asuvad sageli riikides, kus maksud on kõige madalamad."
         },
         {
           "type": "paragraph",
-          "text": "See puudujääk sunnib riike valima, kas tõsta kodumajapidamiste ja VKEde makse või vähendada riiklikke kulutusi, nagu tervishoid või haridus. Kohalik ettevõte maksab keskmiselt palju kõrgemat maksumäära kui rahvusvaheline ettevõte, mis tekitab ebaausat konkurentsi."
+          "text": "See saamata jäänud tulu sunnib riike valima: kas tõsta kodumajapidamiste ja VKEde makse või kärpida avalikke kulutusi, näiteks tervishoiule või haridusele. Kohalik ettevõte maksab keskmiselt palju kõrgemat maksumäära kui rahvusvaheline kontsern, ja see tekitab ebaausa konkurentsi."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "2021. aastal kehtestati OECD ja G20 egiidi all ajaloolise kokkuleppega [[Globaalne miinimummaks 15%.]]. See on suunatud ettevõtetele, mille käive ületab 750 miljonit eurot: kui nad maksavad riigis vaid 5% makse, saab nende päritoluriik nüüd taotleda puuduolevat 10%."
+          "text": "2021. aastal kehtestati OECD ja G20 egiidi all sõlmitud ajaloolise kokkuleppega [[15% globaalne miinimummaks]]. See on suunatud ettevõtetele, mille käive ületab 750 miljonit eurot: kui nad maksavad mõnes riigis makse vaid 5%, võib nende päritoluriik nüüd nõuda puuduvat 10%."
         },
         {
           "type": "paragraph",
-          "text": "Mõned riigid, näiteks Prantsusmaa, on samuti loonud riikliku maksu, mis on otseselt suunatud digitaalsete hiiglaste käibele. Samal ajal peavad rahvusvahelised ettevõtted nüüd riikide kaupa avaldama oma töötajate asukoha, kasumi ja maksud: läbipaistvus, mis võimaldab tuvastada kõige silmatorkavamad lahknevused."
+          "text": "Mõned riigid, näiteks Prantsusmaa, on kehtestanud ka riikliku maksu, mis on suunatud otse digihiiglaste käibele. Lisaks peavad rahvusvahelised kontsernid nüüd riikide kaupa avaldama, kus asuvad nende töötajad, kasum ja maksud: selline läbipaistvus aitab märgata kõige silmatorkavamaid lahknevusi."
         }
       ]
     },
@@ -88,15 +88,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Iirimaa, mille ametlik maksumäär on 12,5% ja salalepingud nimega [[maksuotsused]], on muutunud Euroopa maksude optimeerimise pöördepunktiks. Tänu keerulisele struktuurile maksis Apple 2014. aastal tegelikku maksumäära, mis oli ligi 0,005%."
+          "text": "Iirimaast on saanud Euroopa maksuoptimeerimise keskus: ametlik maksumäär on seal 12,5% ja kasutusel on salajased kokkulepped ehk [[maksuotsused]]. Keerulise struktuuri abil oli Apple'i tegelik maksumäär 2014. aastal ligikaudu 0,005%."
         },
         {
           "type": "paragraph",
-          "text": "Euroopa Komisjon on nõudnud Iirimaalt Apple'ilt 13 miljardit eurot tasumata makse, kuid riik on pikka aega keeldunud neid sisse nõudmast: kardab, et liiga karmid reeglid sunnivad peakontoreid teistesse maailma piirkondadesse põgenema. Maksuõigluse kaitsjad juhivad tähelepanu ka sellele, et see 15% määr jääb arenenud riikide keskmisest madalamaks ning vaesemad riigid, sageli need, keda maksudest kõrvalehoidumine mõjutab kõige rohkem, saavad tagasi vaid väikese osa."
+          "text": "Euroopa Komisjon nõudis, et Iirimaa koguks Apple'ilt sisse 13 miljardit eurot tasumata makse, kuid riik keeldus kaua seda tegemast: ta kardab, et liiga ranged reeglid peletavad peakontorid teistesse maailma piirkondadesse. Maksuõigluse eestkõnelejad tuletavad ka meelde, et see 15% määr on endiselt madalam kui arenenud riikide keskmine ning et kõige vaesemad riigid, keda maksudest kõrvalehoidumine sageli kõige rängemalt tabab, saavad sellest tagasi vaid tühise osa."
         },
         {
           "type": "takeaway",
-          "text": "GAFAM on pikka aega ära kasutanud rahvusvahelise õiguse lünki, et maksta naeruväärseid makse, mis läheb riigieelarvetele maksma kuni 240 miljardit dollarit aastas. Alates 2021. aastast on ülemaailmne 15-protsendiline miinimummaks püüdnud seda tasakaalustamatust parandada, kuid võitlus õiglasema maksustamise eest jätkub."
+          "text": "GAFAM-ettevõtted on kaua kasutanud rahvusvahelise õiguse lünki, et maksta tühiseid makse, ja see on läinud riigieelarvetele maksma kuni 240 miljardit dollarit aastas. Alates 2021. aastast püüab 15% suurune globaalne miinimummaks seda tasakaalustamatust parandada, kuid võitlus õiglasema maksustamise eest jätkub."
         }
       ]
     }

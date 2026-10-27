@@ -1,14 +1,14 @@
 {
   "id": "course_186_les_valkyries_et_le_valhalla",
   "title": "Valküürid: mida tegid langenud sõdalased Valhallas?",
-  "subtitle": "Norra mütoloogia",
+  "subtitle": "Põhjala mütoloogia",
   "subject": "mythologie",
   "subcategory": "Muud mütoloogiad",
-  "description": "Põhjataevas valivad sõdalased Valhalla asustamiseks surnuid. Nende armee peab seisma silmitsi jumalate hämarusega.",
+  "description": "Põhjala taevas valivad sõdalasneiud surnuid, kellega Valhallat asustada. Nende armee peab vastu astuma jumalate hämarusele.",
   "hero": {
     "image": "les_valkyries_et_le_valhalla",
     "ratio": "16:9",
-    "hook": "Surma mõõk käes ei ole lõpp: see on valik maailma viimaseks sõjaks."
+    "hook": "Surm, mõõk käes, ei ole lõpp: see on väljavalimine maailma viimaseks sõjaks."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Norra mütoloogias ei ole surm lahingus lõpp. See on **valik**. **Valküürid**, kelle nimi tähendab \"need, kes valivad tapmised\", rändavad suveräänse jumala Odini lahinguväljadel."
+          "text": "Põhjala mütoloogias ei ole surm lahingus lõpp. See on **väljavalimine**. **Valküürid**, kelle nimi tähendab „langenute valijad“, rändavad kõrgeima jumala Odini heaks mööda lahinguvälju."
         },
         {
           "type": "paragraph",
-          "text": "Nende missioon: viia julgemad **Valhalla**, \"tapmise tuppa\". See palee pole puhkamise paradiis. See on taevane kasarm. Sest Odin valmistab armeed ette [[Ragnarök]] jaoks, viimaseks lahinguks, mis peab hävitama maailma ja tapma jumalad."
+          "text": "Nende ülesanne on viia vapraimad **Valhallasse**, „langenute saali“. See palee ei ole puhkuse paradiis. See on taevane kasarm. Sest Odin paneb armeed valmis: ees ootab [[Ragnarök]], viimane lahing, mis peab hävitama maailma ja tapma jumalad."
         }
       ]
     },
     {
       "id": "course_186_les_valkyries_et_le_valhalla_p1",
-      "title": "Odin värbab Ragnaröki",
+      "title": "Odin kogub sõdureid Ragnarökiks",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Odin** teab ennustust. [[Ragnarök]]-l laskuvad hiiglased ja koletised [[Asgard]]-le, jumalate kodule. Vältimatu edasilükkamiseks vajab ta eliitsõdureid: **Einherjar**, \"neid, kes võitlevad üksi\"."
+          "text": "**Odin** teab ennustust. Kui saabub [[Ragnarök]], langeb [[Asgard]], jumalate kodu, hiiglaste ja koletiste rünnaku alla. Et vältimatut edasi lükata, on tal vaja eliitsõdureid: need on **Einherjar**, „üksi võitlejad“."
         },
         {
           "type": "image",
@@ -43,76 +43,76 @@
         },
         {
           "type": "funFact",
-          "text": "Valhalla hoidis ainult lahingus hukkunud sõdalaste **pool**. Teine pool liitus Fólkvangriga, jumalanna **Freyja** domeeniga. Isegi pärast kangelaslikku surma jagunesid kangelased kaheks."
+          "text": "Valhalla võttis vastu ainult **poole** lahingus langenud sõdalastest. Teine pool läks Fólkvangrisse, jumalanna **Freyja** valdustesse. Isegi kangelasliku surma järel jagati kangelased kaheks."
         },
         {
           "type": "paragraph",
-          "text": "Asgardis asuvas Valhallas on **540 väravad**. Igaüks neist on piisavalt suur, et kaheksasada võitlejat saaksid üksteisest mööda sõita. Ainult neil, kes langesid julgelt, mõõk käes, on õigus sellele. Valküürid sorteerivad asju taevast."
+          "text": "Asgardis asuval Valhallal on **540 väravat**. Igaüks neist on nii lai, et kaheksasada võitlejat mahub kõrvuti läbi. Sinna pääsevad ainult need, kes langesid vapralt, mõõk käes. Valküürid teevad valiku taevast."
         }
       ]
     },
     {
       "id": "course_186_les_valkyries_et_le_valhalla_p2",
-      "title": "Sõdalased tumedamad, kui me arvame",
+      "title": "Sõdalasneiud, kes on süngemad, kui arvatakse",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Valküüride moodne kuvand pärineb sageli 19. sajandi romantismist: õrnad neitsid hobuse seljas. Iidsed tekstid, nagu [[Poeetiline Edda]], maalivad palju karmimaid kujundeid. Neid seostatakse varestega, laibalindudega. Mõned luuletused näitavad neid jubedate ketrajatena: nende niidid on sisikonnad, nende raskused on pead."
+          "text": "Valküüride moodne kuvand pärineb sageli 19. sajandi romantismist: õrnad neitsid ratsa. Vanad tekstid, nagu [[Poeetiline Edda]], kujutavad neid palju karmimatena. Neid seostatakse rongadega, laibalindudega. Mõnes luuletuses on nad jubedad ketrajad: nende lõngadeks on sooled ja kangaspuude raskusteks pead."
         },
         {
           "type": "image",
           "asset": "valkyrie_riding_winged_horse_norse_art",
           "ratio": "4:3",
-          "caption": "Valküüria lennul: Odini käskjalg ja kangelaste pakkuja."
+          "caption": "Valküür lennul: Odini käskjalg ja kangelaste tooja."
         },
         {
           "type": "paragraph",
-          "text": "Figuuridel nagu **Brynhildr** või [[Sigrun]] on samuti inimnägu: nad kõhklevad Odini korralduste ja oma tunnete vahel surelike vastu. Valhallas nende roll muutub. Nad jätavad raudrüü kangelastele mõdu serveerimiseks. Žest räägib äratundmisest: vapratest surnutest on saanud Asgardi eliit."
+          "text": "Sellistel kujudel nagu **Brynhildr** või [[Sigrun]] on ka inimlik pale: nad kõhklevad Odini käskude ja oma tunnete vahel, mis neil on surelike vastu. Valhallas nende roll muutub. Nad panevad raudrüü kõrvale ja kannavad kangelastele mõdu ette. See žest väljendab tunnustust: vaprast surnust on saanud Asgardi eliit."
         }
       ]
     },
     {
       "id": "course_186_les_valkyries_et_le_valhalla_p3",
-      "title": "Iga päev võidelda, igal õhtul tähistada",
+      "title": "Iga päev võitlus, iga õhtu pidu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Valhallas ei ole rahulikku taganemist. Kuke kiremise ajal [[Gullinkambi]] võtavad Einherjarid käed ja tapavad üksteist [[Idavoll]] tasandikul. Õhtul haavad sulguvad. Surnud tõusevad uuesti üles. Siis tuleb pidu."
+          "text": "Valhallas ei ole rahulikku vanaduspõlve. Kui kireb kukk [[Gullinkambi]], haaravad Einherjarid relvad ja tapavad üksteist. Lahinguväljaks on tasandik [[Idavoll]]. Õhtul haavad sulguvad. Surnud tõusevad taas püsti. Siis algab pidusöök."
         },
         {
           "type": "image",
           "asset": "valhalla_feast_norse_warriors_einherjar_painting",
           "ratio": "4:3",
-          "caption": "Einherjari pidu: päeval võitlus, öösel banketid."
+          "caption": "Einherjaride pidu: päeval võitlus, öösel pidusöögid."
         },
         {
           "type": "funFact",
-          "text": "Metssiga **Sæhrímnir** keedab kokk [[Andhrímnir]] iga päev, seejärel sünnib see uuesti. Mõdu voolab kitse [[Heidrun]] udaratest. Viikingiparadiis on alaline koolitusruum."
+          "text": "Iga päev keedab kokk [[Andhrímnir]] metssea **Sæhrímniri** ära, kuid see ärkab uuesti ellu. Mõdu annab kits [[Heidrun]]: see voolab tema udarast. Viikingite paradiis on igavene treeningsaal."
         },
         {
           "type": "paragraph",
-          "text": "See vägivalla ja naudingu tsükkel ühendab Odini armee. Sajandeid kestnud sõbralikke lahinguid tõelise vaenlase ees."
+          "text": "See vägivalla ja naudingu tsükkel liidab Odini armeed. Sajandeid sõbralikke lahinguid enne kohtumist tõelise vaenlasega."
         }
       ]
     },
     {
       "id": "course_186_les_valkyries_et_le_valhalla_p4",
-      "title": "Pigem väärikas surm kui \"kõrresurm\"",
+      "title": "Pigem väärikas surm kui „kõrresurm“",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "See nägemus surmajärgsest elust tähistas viikingite Skandinaaviat. Füüsilist julgust hinnati. Vanadusse või haigusesse suremine, \"kõrresurm\", viis **Hel**, igava kuningriigini. Parem oli kukkuda, relvad käes."
+          "text": "See arusaam teispoolsusest jättis viikingiaja Skandinaaviale sügava jälje. Füüsilist julgust hinnati kõrgelt. Vanadusse või haigusesse suremine, „kõrresurm“, viis **Helisse**, tuhmi riiki. Parem oli langeda, relv käes."
         },
         {
           "type": "paragraph",
-          "text": "Valküüria on kestnud sajandeid. Richard Wagner fikseeris selle Euroopa mällu [[Valküüride sõit]]-ga. Tänaseks on temast saanud võimsa naise arhetüüp, kes on sageli kaugel oma peamisest funktsioonist: surnukehade varustaja jumalale, kes plaanib oma eesmärki."
+          "text": "Valküür on läbinud sajandeid. Euroopa mällu kinnistas ta Richard Wagneri [[Valküüride sõit]]. Tänapäeval on temast saanud võimsa naise arhetüüp, sageli kaugel oma algsest ülesandest: tuua laipu jumalale, kes valmistab ette omaenda lõppu."
         },
         {
           "type": "takeaway",
-          "text": "**Valküürid** värbab parimaid surnuid **Valhalla** jaoks. Seal võitlevad ja pidutsevad Einherjar lõputult, valmistudes [[Ragnarök]]. Põhjala paradiis on kasarm, mitte pelgupaik."
+          "text": "**Valküürid** värbavad **Valhallasse** parimaid surnuid. Seal võitlevad ja pidutsevad Einherjarid lõputult, sest ees ootab [[Ragnarök]]. Põhjala paradiis on kasarm, mitte pelgupaik."
         }
       ]
     }

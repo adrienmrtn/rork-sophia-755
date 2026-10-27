@@ -4,11 +4,11 @@
   "subtitle": "Kogemata",
   "subject": "sciences",
   "subcategory": "Maailma muutnud avastused",
-  "description": "1945. aastal märkas insener, et tema kompvek oli radari lähedal üles sulanud. Sellest tähelepanekust sündis mikrolaineahi.",
+  "description": "1945. aastal märkab üks insener, et tema šokolaadibatoon on radari lähedal sulanud. Sellest tähelepanekust sünnib mikrolaineahi.",
   "hero": {
     "image": "la_decouverte_du_micro_ondes",
     "ratio": "16:9",
-    "hook": "Sulatatud šokolaaditahvel… ja moodne köök muutub."
+    "hook": "Sulanud šokolaadibatoon… ja moodne köök muutub."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ameerika Ühendriikides aastal **1945** töötab radaritel insener **Percy Spencer**. Ühel päeval märkab ta, et tema taskus olev komm on sulanud. Mitte kehasoojuse tõttu: radarilainete tõttu."
+          "text": "**1945**. aastal töötab insener **Percy Spencer** Ameerika Ühendriikides radarite kallal. Ühel päeval märkab ta, et taskus olev šokolaadibatoon on sulanud. Mitte kehasoojuse tõttu, vaid radarilainete tõttu."
         },
         {
           "type": "paragraph",
-          "text": "Ta katsetab maisiga: popkorn hüppab. Sündis idee erinevalt kütvast ahjust."
+          "text": "Ta katsetab maisiteradega: popkorn paukub. Sünnib idee ahjust, mis kuumutab teistmoodi."
         }
       ]
     },
@@ -39,11 +39,11 @@
         },
         {
           "type": "paragraph",
-          "text": "**Mikrolained** on elektromagnetlained, nagu raadiovalgus, kuid \"energilisemad\" kui paljud tavalised raadiolained. Sõja ajal kasutati neid peamiselt radaritena lennukite ja paatide tuvastamiseks."
+          "text": "**Mikrolained** on elektromagnetlained nagu valgus või raadiolained, kuid „energilisemad“ kui paljud tavalised raadiolained. Sõja ajal kasutati neid peamiselt radarites lennukite ja laevade avastamiseks."
         },
         {
           "type": "paragraph",
-          "text": "Spencer mõistab, et nad võivad ka toidus vett ja rasvu segada... ja seetõttu seda soojendada."
+          "text": "Spencer mõistab, et need võivad panna liikuma ka toidus oleva vee ja rasva… ning seega toitu soojendada."
         }
       ]
     },
@@ -60,22 +60,22 @@
         },
         {
           "type": "paragraph",
-          "text": "Esimene kommertsmudel **Radarange** ilmus **1947** paiku. See on tohutu, kallis ja mõeldud peamiselt restoranidele või paatidele. Selle miniatuurseks muutmiseks ja kodude jaoks taskukohaseks muutmiseks kulub aastakümneid."
+          "text": "Esimene müügimudel, **Radarange**, ilmub umbes **1947**. aastal. See on hiiglaslik, kallis ja mõeldud pigem restoranidele või laevadele. Kulub aastakümneid, enne kui see muudetakse väiksemaks ja kodudele taskukohaseks."
         },
         {
           "type": "funFact",
-          "text": "Alguses kartsid mõned, et ahi \"muutb toidu radioaktiivseks\". Vale: mikrolained kuumenevad, need ei muuda sind radioaktiivseks."
+          "text": "Alguses kartsid mõned, et ahi „muudab toidu radioaktiivseks“. Vale: mikrolained soojendavad, need ei muuda midagi radioaktiivseks."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
-      "title": "Kuidas see tegelikult kuumeneb?",
+      "title": "Kuidas see tegelikult soojendab",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mikrolained vibreerivad peamiselt veemolekule (ja veidi ka rasvu ja suhkruid). See segamine tekitab **kuumuse** toidu sees, mitte ainult pinnal nagu pann."
+          "text": "Mikrolained panevad võnkuma peamiselt veemolekulid (ja veidi ka rasvad ning suhkrud). See liikumine tekitab soojust **toidu sisemuses**, mitte ainult pinnal nagu pann."
         },
         {
           "type": "paragraph",
@@ -85,16 +85,16 @@
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
-      "title": "Igapäevane objekt",
+      "title": "Igapäevane tarbeese",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1970.-1980. aastatest jõudis mikrolaineahi miljonitesse köökidesse. See muudab harjumusi: kiiresti soojendada, valmistoidud, kiirem elu."
+          "text": "Alates 1970.-1980. aastatest jõuab mikrolaineahi miljonitesse köökidesse. See muudab harjumusi: kiire soojendamine, valmistoidud, kiirem elu."
         },
         {
           "type": "takeaway",
-          "text": "Mikrolaineahi sündis juhuslikult, mida Percy Spencer jälgis radari lähedal. Lained segavad peamiselt toidus olevat vett ja soojendavad seda seestpoolt."
+          "text": "Mikrolaineahi sündis juhusest, mida Percy Spencer radari lähedal märkas. Lained panevad liikuma peamiselt toidus oleva vee ja soojendavad toitu seestpoolt."
         }
       ]
     }

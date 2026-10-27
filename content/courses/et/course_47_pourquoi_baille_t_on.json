@@ -1,14 +1,14 @@
 {
   "id": "course_47_pourquoi_baille_t_on",
-  "title": "Miks me haigutame?",
+  "title": "Miks haigutatakse?",
   "subtitle": "Keha & aju",
   "subject": "sciences",
   "subcategory": "Meie igapäevaelu lahti seletatud",
-  "description": "Kõik haigutavad: inimesed, koerad, vahel ka looted. Tõenäoliselt pole see \"hapnikupuuduse\" pärast. Siin on kõige tugevamad juhid.",
+  "description": "Kõik haigutavad: inimesed, koerad, vahel isegi looted. Põhjus pole tõenäoliselt „hapnikupuudus“. Vaatame kõige usutavamaid seletusi.",
   "hero": {
     "image": "pourquoi_baille_t_on",
     "ratio": "16:9",
-    "hook": "Sa haigutad. Su naaber haigutab. Ja see pole (peaaegu) juhuslikult nakkav."
+    "hook": "Sina haigutad. Su naaber haigutab. Ja see, et haigutus nakkab, pole (peaaegu) juhus."
   },
   "sections": [
     {
@@ -22,28 +22,28 @@
         },
         {
           "type": "paragraph",
-          "text": "Pikka aega ütlesime: \"see on rohkem hapnikku\". Sellest ideest on nüüdseks suures osas loobutud. Tänapäevased seletused on huvitavamad."
+          "text": "Kaua aega öeldi: „See on selleks, et saada rohkem hapnikku.“ Sellest ideest on tänaseks suuresti loobutud. Tänapäevased seletused on huvitavamad."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p1",
-      "title": "Mitte (eriti) hapniku jaoks",
+      "title": "Mitte (peamiselt) hapniku pärast",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Katsed on näidanud, et hapniku suurendamine õhus ei takista haigutamist. Vähendage ka süsihappegaasi veidi. Seega ei ole haigutamine lihtne \"õhu järele püüdmine\"."
+          "text": "Katsed on näidanud, et kui õhus on rohkem hapnikku, ei takista see haigutamist. Ka süsihappegaasi veidi vähendamine ei aita. Seega ei ole haigutamine lihtsalt „õhupuuduse korvamine“."
         },
         {
           "type": "paragraph",
-          "text": "Tänapäeval tugev edumaa: haigutamine aitab **reguleeritud temperatuuri reguleerimine**. Laialt sisse hingates ja nägu venitades “tuulutame” ja jahutame veidi pead, eriti kui oleme väsinud."
+          "text": "Üks tugev hüpotees on praegu see: haigutamine võib aidata **reguleerida aju temperatuuri**. Sügavalt sisse hingates ja nägu venitades „tuulutatakse“ ja jahutatakse veidi pead, eriti väsinuna."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p2",
-      "title": "Miks see on nakkav?",
+      "title": "Miks haigutus nakkab",
       "free": false,
       "blocks": [
         {
@@ -54,22 +54,22 @@
         },
         {
           "type": "paragraph",
-          "text": "Inimestel võib haigutuse esile kutsuda sõna \"haigutamine\" nägemine, kuulmine või isegi lugemine. See pole lihtsalt loll imitatsioon: see mõjutab ka **empaatia** ja [[Peegelneuronid ja nakkavus]]-ga seotud ajuahelaid, neuroneid, mis aktiveeruvad, kui me tegutseme... või kui näeme kedagi tegutsemas."
+          "text": "Inimesel võib haigutuse esile kutsuda juba see, kui ta näeb või kuuleb haigutamist või isegi loeb sõna „haigutama“. See pole lihtsalt rumal matkimine: asi puudutab ka **empaatiat** ja ajuahelaid. Mängus on [[peegelneuronid ja nakkavus]]: peegelneuronid aktiveeruvad, kui inimene ise tegutseb… või näeb kedagi teist tegutsemas."
         },
         {
           "type": "funFact",
-          "text": "Väikesed lapsed haigutavad nakkuse tõttu vähe. See tundlikkus tuleb hiljem koos teatud sotsiaalsete oskustega."
+          "text": "Väikesed lapsed haigutavad teiste järel harva. See vastuvõtlikkus tekib hiljem, koos teatud sotsiaalsete oskustega."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p3",
-      "title": "Me haigutame juba enne sündi",
+      "title": "Haigutama hakatakse juba enne sündi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Looted haigutavad umbes **11. rasedusnädalast**. Selles vanuses nende kopsud veel õhku ei hinga. Nii et jällegi pole asi \"hapniku otsas\"."
+          "text": "Looted haigutavad juba umbes **11. rasedusnädalast** alates. Selles vanuses ei hinga nende kopsud veel õhku. Seega ei ole põhjus jällegi „hapnikupuudus“."
         },
         {
           "type": "paragraph",
@@ -84,11 +84,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Me haigutame sageli, kui oleme väsinud... aga ka vahetult enne testi või kui meil on igav, püüdes keskenduda. Venitamine võib stimuleerida närvisüsteemi ja aidata **olla klapp**."
+          "text": "Sageli haigutatakse väsimusest… aga ka vahetult enne mõnda katsumust või siis, kui on igav, kuid tahetakse keskenduda. Venitus võib ergutada närvisüsteemi ja aidata **erksaks jääda**."
         },
         {
           "type": "takeaway",
-          "text": "Haigutamine pole ilmselt hapnikupuudus. Pigem kasutataks seda aju reguleerimiseks (temperatuur, valvsus) ja inimestel levib see ka sotsiaalse nakkuse teel."
+          "text": "Haigutamise põhjus pole tõenäoliselt hapnikupuudus. Pigem aitab see reguleerida aju tööd (temperatuuri, erksust) ning inimestel levib see ka sotsiaalse nakkusena."
         }
       ]
     }

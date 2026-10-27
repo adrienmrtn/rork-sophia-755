@@ -1,14 +1,14 @@
 {
   "id": "course_220_la_desinformation_et_les_fake_news",
   "title": "Miks levivad võltsuudised kiiremini kui tõde?",
-  "subtitle": "Lamades viiruseajastul",
+  "subtitle": "Vale viraalsuse ajastul",
   "subject": "comprendreLeMonde",
   "subcategory": "Majandus ja ühiskond",
-  "description": "Valeinfo levib sotsiaalmeedias 6 korda kiiremini kui tõde. Miks ja kuidas ennast kaitsta?",
+  "description": "Valeinfo levib sotsiaalmeedias 6 korda kiiremini kui tõde. Miks see nii on ja kuidas end selle eest kaitsta?",
   "hero": {
     "image": "la_desinformation_et_les_fake_news",
     "ratio": "16:9",
-    "hook": "MIT-i uuring näitas, et võltsuudised levivad Twitteris kuus korda kiiremini kui tõde. Siin on põhjus."
+    "hook": "MIT-i uuring näitas, et võltsuudised levivad Twitteris 6 korda kiiremini kui tõde. Vaata, miks."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Poliitilise eesmärgi teenimiseks valetamine pole midagi uut: selle jälgi on leitud juba antiikajast. Kuid Internet ja sotsiaalvõrgustikud on olukorda muutnud: valeinformatsioon ei liigu enam ainult riigist elanikkonnani, vaid levib nüüd horisontaalselt, kodanike vahel."
+          "text": "Valetamine poliitilistel eesmärkidel pole midagi uut: selle jälgi leidub juba antiikajast. Kuid internet ja sotsiaalmeedia on olukorra pea peale pööranud: valeinfo ei liigu enam ainult riigilt rahvale, vaid levib nüüd horisontaalselt, kodanikult kodanikule."
         },
         {
           "type": "paragraph",
-          "text": "See nihe on loonud maailma, kus tõde tundub viraalsuse taustal mõnikord valikuline. Teadmine, kuidas **desinformatsioon** levib ja kes sellest kasu saab, on muutunud kodanikevahelise usalduse säilitamiseks oluliseks."
+          "text": "See murrang on loonud maailma, kus tõde tundub viraalsuse kõrval vahel lausa valikuline. Et hoida kodanike omavahelist usaldust, on hädavajalik mõista, kuidas **desinformatsioon** levib ja kes sellest kasu lõikab."
         }
       ]
     },
@@ -33,26 +33,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Peame eristama desinformatsiooni, mida levitatakse tahtlikult manipuleerimiseks, lihtsatest ausatest vigadest. Selle võltsuudise edu sõltub sellest, mida teadlased nimetavad tähelepanumajanduseks: sotsiaalmeedia algoritmid on loodud ekraaniaja maksimeerimiseks ning meie aju reageerib emotsioonidele ja šokile tugevamini kui nüanssidele."
+          "text": "Tuleb eristada desinformatsiooni, mida levitatakse tahtlikult, et manipuleerida, heausksest eksitusest. Valeinfo edu tugineb sellele, mida teadlased nimetavad **tähelepanumajanduseks**: sotsiaalmeedia algoritmid on loodud selleks, et hoida meid võimalikult kaua ekraani ees, ning meie aju reageerib emotsioonile ja šokile tugevamalt kui nüanssidele."
         },
         {
           "type": "funFact",
-          "text": "[[MIT]] 2018. aastal avaldatud uuring näitas, et võltsuudised levivad Twitteris umbes 6 korda kiiremini kui kontrollitud uudised, kuna need tunduvad uuemad ja emotsionaalselt intensiivsemad."
+          "text": "2018. aastal avaldas [[MIT]] uuringu, mis näitas, et Twitteris levivad valeuudised umbes 6 korda kiiremini kui kontrollitud uudised, sest need tunduvad uudsemad ja emotsionaalselt intensiivsemad."
         },
         {
           "type": "paragraph",
-          "text": "Algoritmid lukustavad ka Interneti-kasutajad [[filtri mullid]]: nad näitavad neile ainult sisu, mis kinnitab nende juba olemasolevaid arvamusi. Vandenõuteoorias veendunud inimene näeb siis iga uut valeinfot kui lisatõendit, mis muudab igasuguse hilisema paranduse väga keeruliseks."
+          "text": "Algoritmide tõttu tekivad ka [[filtrimullid]], kuhu internetikasutajad lõksu jäävad: neile näidatakse ainult sisu, mis kinnitab nende juba väljakujunenud arvamusi. Vandenõuteooriasse uskuv inimene näeb siis iga uut valeuudist järjekordse tõendina, mistõttu on teda hiljem väga raske ümber veenda."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p2",
-      "title": "Valetööstus riikide ja kasumi vahel",
+      "title": "Valetööstus: riigid ja kasumijaht",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Desinformatsioonist on saanud tõeline tööstusharu. Sellised riigid nagu Venemaa on Interneti-uuringute agentuuri kaudu loonud tuhandeid võltsitud automatiseeritud kontosid, et õhutada pingeid lääne demokraatiates, püüdmata isegi kaitsta kindlat leeri: sageli on eesmärk tekitada kaost ja panna inimesi uskuma, et \"kõik valetavad\"."
+          "text": "Desinformatsioonist on saanud tõeline tööstusharu. Sellised riigid nagu Venemaa on Interneti-uuringute agentuuri kaudu loonud tuhandeid automaatseid võltskontosid, et õhutada pingeid lääne demokraatiates, püüdmata seejuures isegi mõnda kindlat poolt toetada: sageli on eesmärk külvata kaost ja panna inimesi uskuma, et „kõik valetavad“."
         },
         {
           "type": "image",
@@ -62,41 +62,41 @@
         },
         {
           "type": "paragraph",
-          "text": "Sellel on ka puhtalt tulus mõõde: Põhja-Makedoonias Velesi linnas lõid noored ettevõtjad 2016. aastal sensatsiooni tekitavaid saite ilma igasuguse poliitilise veendumuseta, et teenida raha sotsiaalvõrgustikes genereeritud liikluse kaudu. Valest saab siis lihtne kasumlik kaup."
+          "text": "Asjal on ka puhtalt rahaline pool: Põhja-Makedoonias Velesi linnas lõid noored ettevõtjad 2016. aastal kõmulisi veebisaite ilma igasuguse poliitilise veendumuseta, ainult selleks, et teenida raha sotsiaalmeediast tuleva liikluse pealt. Valest saab siis lihtsalt tulus kaup."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p3",
-      "title": "Kuidas eraldada fakte fiktsioonist",
+      "title": "Kuidas eristada tõde valest",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Selle uputusega silmitsi seistes korrastub teabemaailm ise. **faktide kontrollimine**, see tähendab faktide kontrollimine, on muutunud omaette ajakirjanduslikuks distsipliiniks. Agentuurid, nagu [[AFP]] või spetsialiseeritud toimetused, kasutavad pildiotsingu tööriistu võltsimise tuvastamiseks ja kahtlase sisu analüüsimiseks."
+          "text": "Selle uputuse vastu hakkab infomaailm end organiseerima. **Faktikontroll** ehk faktide kontrollimine on muutunud omaette ajakirjandusvaldkonnaks. Sellised agentuurid nagu [[AFP]] ja spetsialiseerunud toimetused kasutavad pildiotsingu tööriistu, et tuvastada võltsinguid ja analüüsida kahtlast sisu."
         },
         {
           "type": "paragraph",
-          "text": "Kuid võidujooks rünnaku ja kaitse vahel on ebavõrdne. [[Sügavad võltsingud]] ehk tehisintellektiga võltsitud videod, kus inimene pannakse midagi häiriva realismiga ütlema, muudab tõe ja vale eristamise harjumatu silma jaoks üha keerulisemaks."
+          "text": "Kuid võidujooks rünnaku ja kaitse vahel on endiselt ebavõrdne. Kuna on tekkinud [[süvavõltsingud]] ehk tehisintellektiga võltsitud videod, kus inimese suhu pannakse häiriva usutavusega ükskõik mida, muutub tõe ja vale eristamine harjumatule silmale üha raskemaks."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p4",
-      "title": "Usalduse leidmine piltide maailmas",
+      "title": "Usalduse taastamine piltide maailmas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Väärinformatsiooni pikaajaline mõju on sügav: praegu räägime **tõejärgsest** ajastust, kus objektiivsetel faktidel on mõnikord vähem kaalu kui emotsioonidel ja isiklikel tõekspidamistel. Selline üldine relativiseerimine nõrgendab kindlustunnet, mis on vajalik globaalsete väljakutsetega, nagu kliima või rahvatervis, koos lahendamiseks."
+          "text": "Desinformatsiooni pikaajaline mõju on sügav: nüüd räägitakse **tõejärgsest** ajastust, kus objektiivsed faktid kaaluvad mõnikord vähem kui emotsioonid ja isiklikud uskumused. Selline üldine relativism õõnestab usaldust, mida on vaja, et koos lahendada üleilmseid probleeme, nagu kliima või rahvatervis."
         },
         {
           "type": "paragraph",
-          "text": "Kõige kindlam vastus on endiselt meediakasvatus: õppige allikat kontrollima, mitmele teabele ristviiteid viima ja mõistma, kuidas algoritmid töötavad. Mõned toetuvad ka sisu sertifitseerimistehnoloogiatele, et tagada video päritolu alates selle loomisest. Seniks jääb esimeseks kaitseliiniks kõigi valvsus."
+          "text": "Kõige kindlam vastus on endiselt meediaharidus: õppida allikat kontrollima, eri teateid omavahel võrdlema ja mõistma, kuidas algoritmid töötavad. Mõned panustavad ka sisu sertifitseerimise tehnoloogiatele, mis tagaksid video päritolu juba selle loomise hetkest. Seni jääb esimeseks kaitseliiniks igaühe valvsus."
         },
         {
           "type": "takeaway",
-          "text": "Valeinfo levib sotsiaalvõrgustikes keskmiselt 6 korda kiiremini kui tõde, sest see kasutab ära meie emotsioone ja uudsusejanu. Seistes silmitsi sügavate võltsingute ja trollifarmidega, on meediaharidus endiselt parim relv kollektiivse usalduse säilitamiseks."
+          "text": "Valeinfo levib sotsiaalmeedias keskmiselt 6 korda kiiremini kui tõde, sest see kasutab ära meie emotsioone ja uudsusejanu. Sügavate võltsingute ja trollifarmide vastu on meediaharidus endiselt parim relv, et hoida ühiskonnas usaldust."
         }
       ]
     }

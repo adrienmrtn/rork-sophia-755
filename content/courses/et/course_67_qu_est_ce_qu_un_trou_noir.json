@@ -1,14 +1,14 @@
 {
   "id": "course_67_qu_est_ce_qu_un_trou_noir",
   "title": "Mis on must auk?",
-  "subtitle": "Äärmuslik tõsidus",
+  "subtitle": "Äärmuslik gravitatsioon",
   "subject": "sciences",
   "subcategory": "Maa ja universum",
   "description": "Must auk ei ole kosmiline tolmuimeja. See on piirkond, kus gravitatsioon on nii tugev, et isegi valgus ei pääse välja.",
   "hero": {
     "image": "qu_est_ce_qu_un_trou_noir",
     "ratio": "16:9",
-    "hook": "Välja ei tule midagi, isegi valgust mitte. Siiski sattusime pildistama selle varju."
+    "hook": "Sealt ei pääse välja midagi, isegi mitte valgus. Ometi on selle varju lõpuks õnnestunud pildistada."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Must auk on **ruumi-aja** piirkond, ruumi ja aega ühendav kangas, kus gravitatsioon on nii intensiivne, et põgenemiseks vajalik kiirus ületab valguse kiiruse. Midagi ei tule välja: ükskõik, valgussignaali pole."
+          "text": "Must auk on piirkond **aegruumis**, selles kangas, mis ühendab ruumi ja aja. Seal on gravitatsioon nii tugev, et põgenemiseks vajalik kiirus ületab valguse kiiruse. Sealt ei pääse välja midagi: ei ainet ega valgussignaali."
         },
         {
           "type": "paragraph",
-          "text": "See ei ole \"auk\" tunneli mõttes. See on äärmiselt kontsentreeritud materjal, mis painutab seda kangast väga tugevalt. Pikka aega puhas teooria, mis tuleneb Einsteini võrranditest, vaadeldakse tänapäeval musti auke mitmel viisil."
+          "text": "See ei ole „auk“ tunneli mõttes. See on äärmiselt tihedalt kokku surutud aine, mis seda kangast väga tugevasti kõverdab. Pikka aega olid mustad augud vaid Einsteini võrranditest tulenev teooria, kuid tänapäeval vaadeldakse neid mitmel eri viisil."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tähe must auk sünnib sageli väga massiivse tähe surmast, mille mass on vähemalt **20 kuni 25 korda suurem kui Päike. Täht püsib oma elu jooksul tänu tasakaalule: gravitatsioon tõmbab tsentri poole**, Tuumasünteesi rõhk surub väljapoole. Tähe südames muutub vesinik heeliumiks."
+          "text": "Tähemassiga must auk sünnib sageli väga massiivse tähe surmast: täht peab olema vähemalt **20 kuni 25 korda** Päikesest massiivsem. Oma eluajal püsib täht tasakaalus: gravitatsioon tõmbab keskme poole, **tuumasünteesi** rõhk surub väljapoole. Tähe südamikus muutub vesinik heeliumiks."
         },
         {
           "type": "image",
@@ -43,34 +43,34 @@
         },
         {
           "type": "paragraph",
-          "text": "Kui kütus saab otsa, siis rõhk langeb. Tähe süda on muserdatud. **supernoova** plahvatus võib seejärel galaktika valgustada. Kui ülejäänud tuum on piisavalt massiivne, ei peata tihendamist miski."
+          "text": "Kui kütus saab otsa, kaob ka rõhk. Tähe südamik vajub kokku. Siis võib **supernoova** plahvatus valgustada kogu galaktikat. Kui järelejäänud südamik on piisavalt massiivne, ei peata kokkusurumist enam miski."
         },
         {
           "type": "paragraph",
-          "text": "Teooria keskmes kirjeldab [[Gravitatsiooniline singulaarsus]]: punkti, kus tihedus ja kumerus muutuvad äärmuslikuks ning kus meie praegused võrrandid lakkavad hästi töötamast. Selle ümbert leiame [[Sündmuste horisont]]: nähtamatu piiri. Pärast ületamist pole ülejäänud universumisse tagasipöördumine võimalik."
+          "text": "Keskel on teooria järgi [[gravitatsiooniline singulaarsus]]: punkt, kus tihedus ja kõverus muutuvad äärmuslikuks ja kus meie praegused võrrandid enam hästi ei tööta. Selle ümber on [[sündmuste horisont]]: nähtamatu piir. Kui see on ületatud, pole ülejäänud universumisse enam tagasiteed."
         },
         {
           "type": "funFact",
-          "text": "Kui sa langeksid musta augu poole, tõmbaks gravitatsioon sinu jalgu palju tugevamini kui pead. Seda venitamist nimetatakse \"spagettimiseks\"."
+          "text": "Kui sa kukuksid musta augu poole, tõmbaks gravitatsioon su jalgu palju tugevamini kui pead. Seda venitamist nimetatakse „spagetifikatsiooniks“."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p2",
-      "title": "Pole kosmiline tolmuimeja",
+      "title": "Mitte kosmiline tolmuimeja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vastupidiselt levinud arvamusele ei ime must auk endasse kõike, mis kaugusest möödub. Selle gravitatsioon sõltub selle massist ja kaugusest, nagu iga objekti puhul. Kui Päike asendataks sama massiga musta auguga, jätkaks Maa tiirlemist. Aga ilma valguse ja soojuseta jääksime ära."
+          "text": "Erinevalt levinud arvamusest ei ime must auk endasse kõike, mis kaugelt mööda läheb. Tema gravitatsioon sõltub massist ja kaugusest nagu iga teise keha puhul. Kui Päike asendataks sama massiga musta auguga, tiirleks Maa edasi. Aga ilma valguse ja soojuseta me külmuksime."
         },
         {
           "type": "paragraph",
-          "text": "Peaaegu kõigi galaktikate keskmes on ka **ülimassiivsed mustad augud**, mille päikesemassid on miljoneid kuni miljardeid. Linnuteel on see **Ambur A***, umbes **4 miljonit** päikesemassi."
+          "text": "Peaaegu kõigi galaktikate keskmes on ka **ülimassiivsed mustad augud**, mille mass ulatub miljonitest kuni miljardite päikesemassideni. Linnuteel on see **Sagittarius A***, umbes **4 miljonit** päikesemassi."
         },
         {
           "type": "paragraph",
-          "text": "Neid märgatakse sageli tänu [[Akretsiooni ketas]]: gaasi- ja tolmurõngale, mis pöörleb nende ümber väga kiiresti. Hõõrdumine soojendab seda materjali, kuni see muutub röntgenikiirguse või raadiolainete mõjul äärmiselt heledaks. Seejärel näeme sellel helendaval taustal musta augu varju."
+          "text": "Sageli reedab neid [[akretsiooniketas]]: gaasi- ja tolmurõngas, mis tiirleb nende ümber väga kiiresti. Hõõrdumine kuumutab seda ainet nii palju, et see hakkab röntgenkiirguses või raadiolainetes eredalt helendama. Selle heleda tausta peal paistabki musta augu vari."
         }
       ]
     },
@@ -81,21 +81,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**aprill 2019** avaldab Event Horizon Telescope projekt esimese musta augu kujutise. Ühendades kaheksa raadioteleskoopi [[Interferomeetria]] abil loovad teadlased Maa suuruse virtuaalse teleskoobi."
+          "text": "**Aprillis 2019** avaldab projekt Event Horizon Telescope esimese pildi mustast august. Kaheksa raadioteleskoopi seob kokku [[interferomeetria]] ja nii loovad teadlased Maa-suuruse virtuaalse teleskoobi."
         },
         {
           "type": "paragraph",
-          "text": "Sihtmärk on **M87***, ülimassiivne must auk galaktikas Messier 87, **55 tuhat** valgusaasta kaugusel. Näeme tumeda ala ümber heledat rõngast: sündmuste horisondi siluetti. Jaotises **2022** järgneb pilt meie naabrist Amburist A*."
+          "text": "Sihtmärk on **M87***, galaktika Messier 87 ülimassiivne must auk, mis asub **55 miljoni** valgusaasta kaugusel. Pildil on näha hele rõngas tumeda ala ümber: sündmuste horisondi siluett. **2022**. aastal järgneb pilt meie naabrist, kelle nimi on Sagittarius A*."
         },
         {
           "type": "funFact",
-          "text": "Alates **2015**-st on LIGO ja Virgo observatooriumid tuvastanud ka **gravitatsiooniaineid**: kahe musta augu ühinemisel tekkivad väikesed aegruumi vibratsioonid."
+          "text": "Alates **2015**. aastast tuvastavad LIGO ja Virgo observatooriumid ka **gravitatsioonilaineid**: aegruumi pisikesi võnkumisi, mis tekivad kahe musta augu ühinemisel."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p4",
-      "title": "Hawking ja aeglane aurumine",
+      "title": "Hawking ja aeglane aurustumine",
       "free": false,
       "blocks": [
         {
@@ -104,15 +104,15 @@
         },
         {
           "type": "paragraph",
-          "text": "Tulemus: isoleeritud must auk kaotaks aeglaselt massi ja lõpuks aurustuks. Tähe musta augu puhul kuluks selleks fantastiliselt kauem aega kui universumi praegune vanus. See idee tõstatab ka teabe paradoksi: mis saab sisse kukkunu teabest, kui must auk kaob?"
+          "text": "Tulemus: üksik must auk kaotaks aeglaselt massi ja aurustuks lõpuks. Tähemassiga musta augu puhul kuluks selleks aga meeletult palju rohkem aega, kui on universumi praegune vanus. See idee tekitab ka informatsiooniparadoksi: mis saab sisse kukkunu informatsioonist, kui must auk kaob?"
         },
         {
           "type": "paragraph",
-          "text": "Musta augu lähedal möödub aeg ka kaugema vaatleja jaoks aeglasemalt, see on **aja laienemised** relativistlik efekt. Need objektid jäävad füüsika piiride testimiseks parimate laborite hulka."
+          "text": "Musta augu lähedal kulgeb aeg kauge vaatleja jaoks ka aeglasemalt. Seda relativistlikku efekti nimetatakse **aja dilatatsiooniks**. Need objektid on endiselt ühed parimad laborid, kus füüsika piire katsetada."
         },
         {
           "type": "takeaway",
-          "text": "Must auk tekib sageli massiivse tähe kokkuvarisemisel. Seda piirab sündmuste horisont, mis on esimest korda pildistatud **2019** ümber maantee M87*."
+          "text": "Must auk tekib sageli massiivse tähe kokkuvarisemisel. Selle piiriks on sündmuste horisont, mida pildistati esimest korda **2019**. aastal M87* ümber."
         }
       ]
     }

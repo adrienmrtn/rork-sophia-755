@@ -4,7 +4,7 @@
   "subtitle": "Franklinist Teslani",
   "subject": "sciences",
   "subcategory": "Maailma muutnud avastused",
-  "description": "Elektrit ei leiutatud ootamatult. Esmalt vaadeldi, siis mõisteti, seejärel kodustati. Siin on peamised sammud.",
+  "description": "Elektrit ei leiutatud ühe hoobiga. Kõigepealt seda vaadeldi, siis mõisteti ja lõpuks taltsutati. Need on peamised etapid.",
   "hero": {
     "image": "la_decouverte_de_l_electricite",
     "ratio": "16:9",
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Elekter on looduses olemas: välk, elektrikala, hõõrdumine. Maailma muutis **tootmine**, **transport** ja selle kasutamine."
+          "text": "Elekter on looduses olemas: välk, elektrikalad, hõõrdumine. Maailma muutis see, et õpiti seda **tootma**, **edastama** ja kasutama."
         },
         {
           "type": "paragraph",
-          "text": "See lugu hõlmab riskantsete katsete ja suurte rivaalitsemistega rohkem kui kahte sajandit."
+          "text": "See lugu kestab üle kahe sajandi ning on täis riskantseid katseid ja suurt rivaalitsemist."
         }
       ]
     },
@@ -33,17 +33,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "18. sajandil näitas **Benjamin Franklin**, et välk on elektriline nähtus. Tema tuulelohe lennutamise katse (mida sageli räägitakse väljamõeldud viisil) eesmärk on tõestada, et taevas ja hõõrdemasin mängivad sama jõuga."
+          "text": "18. sajandil näitab **Benjamin Franklin**, et välk on elektriline nähtus. Tema tuulelohekatse (mida kirjeldatakse sageli ilustatult) pidi tõestama, et taevas ja hõõrdemasinas toimib sama jõud."
         },
         {
           "type": "image",
           "asset": "benjamin_franklin_kite_lightning_experiment",
           "ratio": "4:3",
-          "caption": "Franklin ühendab välku ja elektrit: ohtlik, kuid alusmõte."
+          "caption": "Franklin seob välgu elektriga: ohtlik, kuid alusepanev idee."
         },
         {
           "type": "paragraph",
-          "text": "Samuti leiutasime **äike** - metallvarda, mis pakub välgule ohutut teed maapinnale. Elekter jätab tehnikasse sisenemiseks saladuse."
+          "text": "Leiutatakse ka **piksevarras**, metallvarras, mis juhib välgu ohutult maasse. Elekter tuleb saladuste varjust välja ja jõuab inseneride kätte."
         }
       ]
     },
@@ -54,7 +54,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "19. sajandil näitas **Michael Faraday**, et juhtme lähedal liikuv magnet võib tekitada elektrivoolu. See on **induktsioon**. Ilma selle ideeta pole dünamo, generaatorit ega kaasaegset elektrijaama."
+          "text": "19. sajandil näitab **Michael Faraday**, et juhtme lähedal liikuv magnet võib tekitada elektrivoolu. See on **induktsioon**. Ilma selle ideeta poleks dünamot, vahelduvvoolugeneraatorit ega moodsat elektrijaama."
         },
         {
           "type": "image",
@@ -64,7 +64,7 @@
         },
         {
           "type": "funFact",
-          "text": "Faraday oli pärit tagasihoidlikust taustast ja alustas raamatuköitjana. Ta õppis teadust, lugedes seda, mida ta reliaba."
+          "text": "Faraday oli pärit lihtsast perest ja alustas raamatuköitjana. Teadust õppis ta, lugedes raamatuid, mida ise köitis."
         }
       ]
     },
@@ -75,32 +75,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "19. sajandi lõpus põrkasid kaks leeri kokku. **Thomas Edison** surub alalisvoolu. **Nikola Tesla** (ja ettevõte Westinghouse) kaitsevad vahelduvvoolu, mida on lihtsam pikki vahemaid transportida."
+          "text": "19. sajandi lõpus seisavad vastamisi kaks leeri. **Thomas Edison** propageerib alalisvoolu. **Nikola Tesla** (ja firma Westinghouse) kaitsevad vahelduvvoolu, mida on lihtsam pikkade vahemaade taha edastada."
         },
         {
           "type": "image",
           "asset": "tesla_edison_electric_power_station",
           "ratio": "4:3",
-          "caption": "Linnades kogub võimu vahelduvvool."
+          "caption": "Linnade varustamisel võidab vahelduvvool."
         },
         {
           "type": "paragraph",
-          "text": "Linnavõrkude vahelduvvool võidab. Linnad süttivad. Tehased muudavad tempot."
+          "text": "Linnade elektrivõrkudes jääb peale vahelduvvool. Linnades süttivad tuled. Tehaste töörütm muutub."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
-      "title": "Ühendatud maailm",
+      "title": "Maailm vooluvõrgus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tänapäeval toidab elekter haiglaid, ronge, internetti ja külmikuid. Väljakutse pole enam lihtsalt seda toota, vaid teha seda puhtalt ja usaldusväärselt."
+          "text": "Tänapäeval paneb elekter tööle haiglad, rongid, interneti ja külmikud. Väljakutse pole enam ainult seda toota, vaid toota seda puhtalt ja usaldusväärselt."
         },
         {
           "type": "takeaway",
-          "text": "Elekter mõisteti ja seejärel kodustati: Franklin välgu jaoks, Faraday voolu tootmiseks, Tesla ja vahelduvvool selle kodudesse toomiseks. Sellest sõltub ikka meie igapäevaelu."
+          "text": "Elektrit õpiti kõigepealt mõistma ja seejärel taltsutama: Franklin selgitas välku, Faraday õpetas voolu tootma, Tesla ja vahelduvvool tõid selle kodudesse. Meie igapäevaelu sõltub sellest tänini."
         }
       ]
     }

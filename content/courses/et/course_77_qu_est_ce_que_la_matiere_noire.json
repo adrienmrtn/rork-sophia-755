@@ -4,11 +4,11 @@
   "subtitle": "Nähtamatu kosmos",
   "subject": "sciences",
   "subcategory": "Maa ja universum",
-  "description": "Me ei näinud teda kunagi. Kuid ilma selleta laguneksid galaktikad laiali. Tumeaine on universumi nähtamatu liim.",
+  "description": "Keegi pole seda kunagi näinud. Ometi laguneksid galaktikad ilma selleta laiali. Tumeaine on universumi nähtamatu liim.",
   "hero": {
     "image": "qu_est_ce_que_la_matiere_noire",
     "ratio": "16:9",
-    "hook": "Kujutage ette nähtamatut liimi, mis hoiab galaktikaid koos. Me ei näe teda, aga me näeme, mida ta tagasi hoiab."
+    "hook": "Kujuta ette nähtamatut liimi, mis hoiab galaktikaid koos. Seda ei ole näha, küll aga on näha, mida see kinni hoiab."
   },
   "sections": [
     {
@@ -18,51 +18,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tunned tuult nägemata: oksad liiguvad, juuksed lendavad. **Tume materia** on kosmose mastaabis natuke selline. See ei sära, ei peegelda valgust, ei blokeeri kiirteid. Me näeme seda ainult selle järgi, mida see liikuma paneb."
+          "text": "Tunned tuult, kuigi sa ei näe seda: oksad liiguvad, juuksed lehvivad. **Tumeaine** on kosmose mastaabis midagi sarnast. See ei helenda, ei peegelda valgust ega takista ühtegi kiirt. Seda saab „näha“ ainult selle järgi, mida see liikuma paneb."
         },
         {
           "type": "paragraph",
-          "text": "See esindaks ligikaudu **27%** universumist, viis korda rohkem kui kogu tavaline aine: tähed, planeedid, gaas. Ilma selleta pöörleksid galaktikad liiga kiiresti, et koos püsida."
+          "text": "Arvatakse, et see moodustab umbes **27%** universumist ehk viis korda rohkem kui kogu tavaline aine: tähed, planeedid, gaas. Ilma selleta pöörleksid galaktikad liiga kiiresti, et koos püsida."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p1",
-      "title": "Ääremaal tärkab liiga kiiresti",
+      "title": "Liiga kiired tähed galaktika servas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aastatel **1970** mõõtis Ameerika astronoom **Vera Rubin** tähtede kiirust spiraalgalaktikates. Päikesesüsteemis, mida kaugemale me Päikesest läheme, seda aeglasemalt me pöörleme. Ta ootas sama mustrit."
+          "text": "**1970**. aastatel mõõtis Ameerika astronoom **Vera Rubin** tähtede kiirust spiraalgalaktikates. Päikesesüsteemis on tiirlemine seda aeglasem, mida kaugemal Päikesest. Ta ootas sama mustrit."
         },
         {
           "type": "image",
           "asset": "dark_matter_galaxy_cluster",
           "ratio": "auto",
-          "caption": "Tumeaine reedab oma kohalolekut tänu gravitatsioonilisele mõjule galaktikaparvedele."
+          "caption": "Tumeaine reedab end gravitatsioonilise mõjuga galaktikaparvedele."
         },
         {
           "type": "paragraph",
-          "text": "Nüüd pöörasid äärel olevad tähed **asid kiiresti** nagu keskel olevad tähed. Ainuüksi nähtava massiga oleksid nad pidanud minema lendama. Seetõttu oli nende tagasihoidmiseks vajalik nähtamatu mass, **halo**, nähtamatu sfääriline ümbris ümber galaktika. [[Galaktika pöörlemiskõver]] on saanud tumeaine lipulaevaks."
+          "text": "Ent servas asuvad tähed tiirlesid **sama kiiresti** kui keskel asuvad. Ainult nähtava massi korral oleksid nad pidanud minema lendama. Nende kinnihoidmiseks oli seega vaja nähtamatut massi, **halo**, nähtamatut sfäärilist ümbrist galaktika ümber. [[Galaktika pöörlemiskõver]] sai tumeaine olulisimaks tõendiks."
         },
         {
           "type": "funFact",
-          "text": "Vera Rubin on pidanud pikka aega võitlema, et teda tõsiselt võetaks. Princeton keeldus talle pikka aega astronoomia doktorikraadi omandamast, kuna ta oli naine, kuni 1975. aastani."
+          "text": "Vera Rubin pidi kaua võitlema, et teda tõsiselt võetaks. Princeton ei võtnud teda kaua astronoomia doktorantuuri… sest ta oli naine. Nii oli see kuni 1975. aastani."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p2",
-      "title": "Millest see tehtud on? Me ikka otsime",
+      "title": "Millest see koosneb? Vastust alles otsitakse",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "See ei ole tavaline aine, mida nimetatakse **barüooniline**, mis koosneb prootonitest ja neutronitest: see ei interakteeru valgusega. See läbib Maa ja meid, jätmata nähtavat jälge."
+          "text": "See ei ole tavaline ehk **barüooniline** aine, mis koosneb prootonitest ja neutronitest: valgusega see vastastikmõjusse ei astu. See läbib Maad ja meid, jätmata nähtavat jälge."
         },
         {
           "type": "paragraph",
-          "text": "Pikka aega eelistatud plii **WIMP**, nõrgalt interakteeruv massiivne osake, oleks raske osake väljaspool [[Füüsika standardmudel]], tuntud elementaarosakesi kirjeldavat teooriat. Maa alla maetud **Liquidxeon** detektorid loodavad haruldast põrutust. Hetkel selge eduta. Teised toetuvad ülikergele osakesele **aksioon** või gravitatsioonile, mida tuleb üle vaadata. Vahepeal painutab tumeaine ruumi ja tekitab [[gravitatsiooniläätsed]], mis moonutab massiivse objekti valgust."
+          "text": "Kaua oli lemmikkandidaat **WIMP** ehk nõrgalt vastastikmõjuv massiivne osake. [[Füüsika standardmudel]], teooria teadaolevatest elementaarosakestest, sellist rasket osakest ei sisalda. Maa alla peidetud **vedela ksenooniga** detektorid loodavad tabada haruldast põrget. Seni selge tulemuseta. Teised panustavad ülikergele osakesele **aksionile** või sellele, et gravitatsiooni tuleb ümber mõtestada. Seni aga kõverdab tumeaine ruumi, nii et tekivad [[gravitatsiooniläätsed]], mis moonutavad massiivse objekti valgust."
         }
       ]
     },
@@ -73,26 +73,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tumeaine tõmbab ligi. Punktis **1998** avastatud [[Tume energia]] toimib vastupidiselt: see kiirendab **universumi paisumist**, galaktikate kauguse suurenemist. Galaktikad eemalduvad üha kiiremini, samas kui gravitatsioon peaks liikumist aeglustama."
+          "text": "Tumeaine tõmbab ligi. [[Tumeenergia]], mis avastati **1998**. aastal, teeb vastupidist: see kiirendab **universumi paisumist** ehk galaktikate üha suuremat eemaldumist. Galaktikad eemalduvad üha kiiremini, kuigi gravitatsioon peaks liikumist pidurdama."
         },
         {
           "type": "paragraph",
-          "text": "See kaaluks umbes **68%** kosmosest. Tumeainega muudab see **95%** nähtamatust universumist. Kõik, mida me näeme, aatomid ja valgus, on vaid **5 %** vaht."
+          "text": "Arvatakse, et see moodustab umbes **68%** kosmosest. Koos tumeainega on universumist **95%** nähtamatu. Kõik, mida me näeme, aatomid ja valgus, on vaid **5%** suurune vahukiht."
         },
         {
           "type": "funFact",
-          "text": "Väga kauges tulevikus võib tume energia tõrjuda teisi galaktikaid nii kaugele, et muuta need Linnuteelt nähtamatuks: peaaegu tühi taevas."
+          "text": "Väga kauges tulevikus võib tume energia viia teised galaktikad nii kaugele, et neid pole Linnuteelt enam näha: taevas oleks peaaegu tühi."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p4",
-      "title": "Massilised tõendid, osakest ei leitud",
+      "title": "Kaalukad tõendid, tabamatu osake",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ühest küljest koguneb kaudseid tõendeid: galaktilised pöörlemised, **kosmiline mikrolaine taust**, noore universumi fossiilne kiirgus, universumi filamentstruktuur. Teisest küljest puudub otsene osakeste tuvastamine."
+          "text": "Ühelt poolt kuhjuvad kaudsed tõendid: galaktikate pöörlemine, **kosmiline mikrolainetaust** ehk noore universumi reliktkiirgus ja universumi niitjas struktuur. Teiselt poolt pole osakest veel kordagi otse tuvastatud."
         },
         {
           "type": "paragraph",
@@ -100,7 +100,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Tumeaine moodustab universumist **27 %**. Seda tõestab selle gravitatsioon tähtedel ja valgusel, isegi kui me pole seda kunagi otseselt näinud."
+          "text": "Tumeaine moodustab **27%** universumist. Selle olemasolu tõestab gravitatsioon, millega see mõjutab tähti ja valgust, kuigi otse pole seda kunagi nähtud."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "Rooma mütoloogia",
   "subject": "mythologie",
   "subcategory": "Muud mütoloogiad",
-  "description": "Imetavad emahunt, Rooma asutajad… ja vennatapud. Müüt, mis seab seaduse ja piirid vere ette.",
+  "description": "Emahundi imetatud, Rooma rajajad… ja vennatapjad. Müüt, mille järgi seadus ja piir on tähtsamad kui veri.",
   "hero": {
     "image": "romulus_et_remus_la_fondation_de_rome",
     "ratio": "16:9",
-    "hook": "Rooma ei sündinud pehmest paktist. Ta sündis hundist, pühast vaost... ja tapetud vennast."
+    "hook": "Rooma ei sünni leebest kokkuleppest. See sünnib emahundist, pühast vaost… ja tapetud vennast."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Romulus** ja **Rémus** lugu on Rooma asutamismüüt. See ei ole lastejutt. See on lugu kahekordsest purunemisest: [[vestal neitsi]], kes rikub puhtusetõotust, seejärel **fratrikid**, kes seab seaduse verd ette."
+          "text": "**Romuluse** ja **Remuse** lugu on Rooma asutamismüüt. See ei ole muinasjutt lastele. See on lugu kahest murrangust: kõigepealt rikub [[vestaal]] oma puhtusetõotuse, seejärel seab **vennatapp** seaduse verest kõrgemale."
         },
         {
           "type": "paragraph",
-          "text": "Rooma traditsioon seda kuritegu ei varja. See muudab selle pühale piirile rajatud linna ja riigi püsimajäämise aluseks rohkem kui perekonnale."
+          "text": "Rooma pärimus seda kuritegu ei varja. Sellest saab alus linnale, mis on rajatud pühale piirile ja riigi püsimisele rohkem kui perekonnale."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Alba the Long, Aenease järeltulijate linnas, jahib anastaja **Amulius** oma venda Numitorit. Suguvõsa kustutamiseks sunnib ta oma õetütre **Rhéa Silvia** vestaaliks saama. Kuid **märtsil**, sõjajumal, ühineb temaga. Sünnivad kaksikud."
+          "text": "Aenease järeltulijate linnas Alba Longas kukutab anastaja **Amulius** oma venna Numitori. Et suguvõsa välja suretada, sunnib ta vennatütart **Rhea Silviat** hakkama vestaaliks. Kuid sõjajumal **Marss** heidab temaga ühte. Sünnivad kaksikud."
         },
         {
           "type": "image",
@@ -43,17 +43,17 @@
         },
         {
           "type": "paragraph",
-          "text": "Amulius käsib nad Tiberisse uputada. Üleujutatud jõgi ladestab hälli **Palatinus** lähedale viigipuu [[Ficus Ruminalis]] alla. A **ta-hunt** toidab neid rinnaga; rähn, Marsi lind, toidab neid. Karjus Faustulus ja tema naine Acca Larentia kasvatavad neid."
+          "text": "Amulius käsib nad Tiberisse uputada. Üle kallaste tõusnud jõgi kannab hälli **Palatinuse** lähedale viigipuu [[Ficus Ruminalis]] alla. **Emahunt** imetab neid; rähn, Marsi lind, toob neile süüa. Karjus Faustulus ja tema naine Acca Larentia kasvatavad nad üles."
         },
         {
           "type": "image",
           "asset": "capitoline_wolf_romulus_remus_bronze_sculpture",
           "ratio": "1:1",
-          "caption": "Kapitooliumi naishunt, orvuks jäänud ja röövelliku Rooma kuju."
+          "caption": "Kapitooliumi emahunt: orvuks jäänud ja röövelliku Rooma kujutis."
         },
         {
           "type": "funFact",
-          "text": "Ladina keeles tähendab \"lupa\" hunti ja prostituuti. Juba iidsed autorid väitsid, et legendi tõeline \"hunt\" oli Acca Larentia, mille hüüdnimi oli selline."
+          "text": "Ladina keeles tähendab „lupa“ emahunti… ja prostituuti. Juba antiikautorid oletasid, et legendi tõeline „emahunt“ oli Acca Larentia, keda nii hüüti."
         }
       ]
     },
@@ -64,51 +64,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Täiskasvanuna kukutavad kaksikud Amuliuse võimult ja taastavad Numitori. Siis tahavad nad asutada oma linna. Romulus valib **Palatinus**; Remus, Aventiin. Otsustamiseks võtavad nad [[ennustab]]: Remus näeb esimesena kuut raisakotkast; Järgmisena näeb Romulus kahtteist."
+          "text": "Täiskasvanuks saanud kaksikud kukutavad Amuliuse ja taastavad Numitori võimu. Siis tahavad nad rajada oma linna. Romulus valib **Palatinuse**, Remus Aventinuse. Otsustamiseks vaatavad nad, mida linnulend [[linnuennustus]]: Remus näeb esimesena kuus raisakotkast, Romulus seejärel kaksteist."
         },
         {
           "type": "image",
           "asset": "palatine_hill_rome_founding_myth",
           "ratio": "4:3",
-          "caption": "Palatinus: mägi, kus Romulus jälgib Roomat."
+          "caption": "Palatinus: küngas, kus Romulus Rooma piirid maha märgib."
         },
         {
           "type": "paragraph",
-          "text": "Romulus jälgib aediku püha vagu [[pomoerium]] ja lubab surma kõigile, kes selle ületavad. Remus hüppab trotsides üle. Romulus (või tema leitnant Celer) tapab ta. Rooma asutati 21. aprillil 753 eKr., kalendri I aasta [[Ab Urbe Condita (753 eKr)]]."
+          "text": "Romulus künnab püha vao, mis märgib linna piiri: see on [[pomoerium]]. Ta tõotab surma igaühele, kes sellest üle astub. Remus hüppab trotsi pärast üle. Romulus (või tema abiline Celer) tapab ta. Rooma rajatakse **21. aprillil 753 eKr**. Sellest aastast algab ajaarvamine, mille nimi on [[Ab Urbe Condita (753 eKr)]]."
         },
         {
           "type": "funFact",
-          "text": "21. aprill jääb “Natale di Romaks”. Keskpäeval tabab päike Panteoni sissepääsu: efekt, mille iidsed arhitektid oleksid kavandanud võimsuse suurendamiseks."
+          "text": "21. aprill on tänini „Natale di Roma“. Keskpäeval langeb päikesevalgus Pantheoni sissepääsule: väidetavalt kavandasid antiikarhitektid selle efekti võimu ülistamiseks."
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p3",
-      "title": "Sabiinide röövimine",
+      "title": "Sabiinlannade röövimine",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Esimene probleem: linnas napib naisi. Romulus korraldab mänge ja kutsub naabreid. Keset pidu röövivad roomlased noored tüdrukud: **Sabiinide raputamine**. Titus Tatiuse juhitud **Sabinid** kuulutavad sõja."
+          "text": "Esimene mure: linnas napib naisi. Romulus korraldab võistlusmängud ja kutsub naabrid kohale. Keset pidu röövivad roomlased noored neiud: see on **sabiinlannade röövimine**. Titus Tatiuse juhitud **sabiinid** kuulutavad sõja."
         },
         {
           "type": "paragraph",
-          "text": "Lahinguväljal sekkusid isade ja abikaasade vahele sabiini naised, kes olid juba Rooma laste emad. Sõda peatub. Kaks rahvast ühinevad. Romulus ja Titus Tatius valitsevad koos. Roomlased võtsid nimeks [[Quirites]]. Roomast saab ühiskond, mis integreerib vaenlase."
+          "text": "Lahinguväljal astuvad sabiini naised, kes on juba Rooma laste emad, oma isade ja abikaasade vahele. Sõda lõpeb. Kaks rahvast sulanduvad üheks. Romulus ja Titus Tatius valitsevad koos. Roomlaste uus nimi on [[Quirites]]. Roomast saab ühiskond, mis võtab vaenlase omaks."
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p4",
-      "title": "Romulust saab Quirinus",
+      "title": "Romulusest saab Quirinus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pärast 37 valitsemisaastat ja sajast \"isast\" koosneva senati loomist kadus Romulus tormi ajal Champ de Marsil. Ametlik versioon ütleb, et Marss viib ta taevasse: temast saab jumal **Quirinus**. Teine versioon sosistab, et senaatorid mõrvasid ta."
+          "text": "Pärast 37 valitsemisaastat ja sajast „isast“ koosneva senati loomist kaob Romulus tormis Marsi väljal. Ametliku versiooni järgi viib Marss ta taevasse ja temast saab jumal **Quirinus**. Teise, sosinal levinud versiooni järgi mõrvasid ta senaatorid."
         },
         {
           "type": "paragraph",
-          "text": "Alles jääb pilt [[Kapitooliumi hunt]]: vaesterahvastest linn, mida toidab metsikus ja mis suudab marginaliseeritud inimesi muuta maailma peremeesteks."
+          "text": "Alles jääb kujund, mida kehastab [[Kapitooliumi hunt]]: orvuks jäänud linn, mida toidab metsikus ja mis suudab teha tõrjutuist maailma valitsejad."
         },
         {
           "type": "timeline",
@@ -116,20 +116,20 @@
             {
               "date": "Müüt",
               "title": "Kaksikute sünd",
-              "detail": "Marss ja Rhea Silvia; Tiberi hunt."
+              "detail": "Marss ja Rhea Silvia; Tiberi emahunt."
             },
             {
               "date": "753 eKr",
               "title": "Rooma asutamine",
-              "detail": "Romulus tapab Remuse ja jälgib pomooriumit."
+              "detail": "Romulus tapab Remuse ja künnab pomoeriumi."
             },
             {
-              "date": "Jälgides",
-              "title": "Sabiinide vägistamine",
+              "date": "Hiljem",
+              "title": "Sabiinlannade röövimine",
               "detail": "Sõda, siis rahvaste ühinemine."
             },
             {
-              "date": "+37 aastat vana",
+              "date": "+37 aastat",
               "title": "Apoteoos",
               "detail": "Romulus kaob ja temast saab Quirinus."
             }
@@ -137,7 +137,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Vennatapule ja inimröövidele rajatud Rooma ammutab oma müüdist selge idee: riigi püsimajäämine ja püha piiri austamine on enne veresidemeid."
+          "text": "Vennatapule ja naiste röövile rajatud Rooma ammutab oma müüdist selge mõtte: riigi püsimine ja püha piiri austamine on tähtsamad kui veresidemed."
         }
       ]
     }

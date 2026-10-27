@@ -1,14 +1,14 @@
 {
   "id": "course_216_la_dette_mondiale",
-  "title": "Kas peaksime kartma maailma võlga?",
+  "title": "Kas maailma võlga tuleks karta?",
   "subtitle": "Rohkem kui 300% maailma SKTst",
   "subject": "comprendreLeMonde",
   "subcategory": "Majandus ja ühiskond",
-  "description": "Ülemaailmne võlg pole kunagi olnud suurem. Kas me peaksime selle pärast muretsema või on see normaalne vahend majanduskasvu rahastamiseks ja kriisidega toimetulekuks?",
+  "description": "Maailma võlg pole kunagi olnud nii suur. Kas see peaks muret tegema või on see tavaline vahend majanduskasvu rahastamiseks ja kriisidega toimetulekuks?",
   "hero": {
     "image": "la_dette_mondiale",
     "ratio": "16:9",
-    "hook": "Jaapan võlgneb 260% oma SKTst... ja keegi ei muretse. Siin on põhjus."
+    "hook": "Jaapani võlg ulatub 260%ni tema SKTst... ja keegi ei muretse. Vaata, miks."
   },
   "sections": [
     {
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ülemaailmne võlg, riikide, ettevõtete ja majapidamiste võlg kokku, ületab täna **300%st SKTst**, mis on majandusajaloo absoluutne rekord."
+          "text": "Maailma koguvõlg, see tähendab riikide, ettevõtete ja kodumajapidamiste võlg kokku, on praegu **300%st maailma SKTst** suurem. See on majandusajaloo absoluutne rekord."
         },
         {
           "type": "paragraph",
@@ -28,16 +28,16 @@
     },
     {
       "id": "course_216_la_dette_mondiale_p1",
-      "title": "Kuidas riik võlgu jääb",
+      "title": "Kuidas riigil võlg tekib",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Riik läheb võlgadesse, kui tema kulud struktuuriliselt ületavad maksutulu. Seda eelarvepuudujääki täidab finantsturgudelt laenamine. [[Keynesi teooria]] sõnul on kriisi ajal majanduse ergutamiseks laenu võtmine legitiimne tingimusel, et see makstakse tagasi pärast kasvu taastumist."
+          "text": "Riik läheb võlgu, kui tema kulud ületavad struktuurselt maksutulu. See eelarvepuudujääk kaetakse finantsturgudelt laenates. [[Keynesi teooria]] järgi on kriisi ajal majanduse elavdamiseks laenamine õigustatud, kui laen makstakse tagasi siis, kui kasv on taastunud."
         },
         {
           "type": "paragraph",
-          "text": "Praktikas võtavad valitsused halbadel aegadel kergesti laenu, kuid maksavad tagasi harva headel aegadel. Seejärel koguneb võlg pika aja jooksul. Jaapani juhtum on lummav: 260% SKT-st ligilähedase võlaga peaks riik loogiliselt kriisis olema. Siiski ei ole, sest suurem osa tema võlgadest on välisturgude eest kaitstud oma pankade ja hoiustajate käes."
+          "text": "Praktikas võtavad valitsused rasketel aegadel kergesti laenu, kuid headel aegadel maksavad harva tagasi. Nii koguneb võlg püsivalt. Jaapan on põnev näide: ligi 260% suuruse võlaga SKTst peaks riik loogiliselt olema kriisis. Ometi ei ole, sest suurem osa tema võlast kuulub riigi enda pankadele ja hoiustajatele, eemal välisturgude kõikumistest."
         },
         {
           "type": "funFact",
@@ -58,11 +58,11 @@
           "type": "image",
           "asset": "japan_government_debt_statistics_chart",
           "ratio": "16:9",
-          "caption": "Ülemaailmne riigivõlg ületab täna 300% planeedi SKTst."
+          "caption": "Maailma riigivõlg ületab praegu 300% kogu planeedi SKTst."
         },
         {
           "type": "paragraph",
-          "text": "Arengumaad peavad sageli piisavalt stabiilseks peetava valuuta puudumise tõttu laenama dollarites. Kui nende omavääring dollari suhtes väärtust kaotab, kasvab tagasimakstav summa üleöö plahvatuslikult. Nendes kriisides sekkub [[IMF]] sageli, kuid üldiselt kehtestab see range säästupoliitika, mis koormab elanikkonda tugevalt."
+          "text": "Arengumaad peavad aga sageli laenama dollarites, sest nende oma valuutat ei peeta piisavalt stabiilseks. Kui nende omavääring dollari suhtes väärtust kaotab, kasvab tagasimakstav summa üleöö plahvatuslikult. Sellistes kriisides sekkub sageli [[IMF]], kuid tavaliselt nõuab see ranget kokkuhoiupoliitikat, mis koormab elanikkonda raskelt."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Arutelu vastandub kahele majandusnägemusele. [[Kaasaegne rahateooria]] ütleb, et riik ei saa pankrotti minna, kuni ta laenab oma valuutas: tegelik piir ei ole suvaline arv, nagu Euroopas Maastrichti lepinguga kehtestatud 60%, vaid inflatsiooni tase."
+          "text": "Vaidluses on vastamisi kaks majandusnägemust. [[Moodne rahateooria]] väidab, et riik ei saa pankrotti minna, kuni ta laenab oma valuutas: tegelik piir ei ole mingi suvaline arv, nagu Euroopas Maastrichti lepinguga kehtestatud 60%, vaid inflatsiooni tase."
         },
         {
           "type": "paragraph",
-          "text": "Teised ettevaatlikumad majandusteadlased kardavad, et liiga suur võlg peletab turu usalduse, mis toob kaasa intressimäärade järsu tõusu. Euroala kriis aastatel 2010-2012 illustreeris seda riski: selliste riikide nagu Kreeka, kes jäi ilma oma keskpangast, laenuintressid tõusid nii kõrgele, et ohustasid Euroopa valuuta olemasolu."
+          "text": "Teised, ettevaatlikumad majandusteadlased kardavad, et liiga suur võlg kõigutab turgude usaldust ja toob kaasa intressimäärade järsu tõusu. Seda ohtu näitas euroala kriis aastatel 2010-2012: Kreeka-sugustel riikidel, kellel polnud oma keskpanka, tõusid laenuintressid nii kõrgele, et see ohustas Euroopa ühisraha enda olemasolu."
         }
       ]
     },
@@ -88,15 +88,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ülemaailmne võlg ei puuduta ainult riike: ka ettevõtted ja kodumajapidamised kannavad sellest kasvavat osa, mõnikord halvasti reguleeritud finantsosaliste kaudu. Uus arutelu on tekkimas ka kliimavõla üle: kas peaksime käsitlema võlga, millest rahastatakse energia üleminekut, erinevalt võlgadest, mis rahastavad lihtsat tarbimist?"
+          "text": "Maailma võlg ei puuduta ainult riike: ka ettevõtted ja kodumajapidamised kannavad sellest kasvavat osa, mõnikord vähe reguleeritud finantsosaliste kaudu. Tekkimas on ka uus arutelu kliimavõla üle: kas energiaüleminekut rahastavat võlga tuleks käsitleda teisiti kui võlga, millega rahastatakse lihtsalt tarbimist?"
         },
         {
           "type": "paragraph",
-          "text": "Põlvkondadevahelise õigluse küsimus jääb keskseks: täna võlgadesse minemine tähendab homsest maksude võtmist. Aga kui selle rahaga rahastatakse jätkusuutlikku infrastruktuuri või head haridust, võib seda pidada ka tulevastele põlvedele edasi antud kingituseks, mitte koormaks."
+          "text": "Põlvkondadevahelise õigluse küsimus jääb keskseks: täna laenu võtta tähendab võtta raha homsetest maksudest. Kui aga selle rahaga rajatakse pikaealist taristut või tagatakse hea haridus, võib seda pidada ka tulevastele põlvedele antud kingituseks, mitte koormaks."
         },
         {
           "type": "takeaway",
-          "text": "Ülemaailmne võlg ületab 300% planeedi SKTst, mis on ajalooline rekord. Selle ohtlikkus sõltub vähem selle summast kui valuutast, milles see laenatakse: Jaapan tõestab, et 260% võlg võib püsida stabiilsena, kui seda hoida kohapeal."
+          "text": "Maailma võlg ületab 300% planeedi SKTst, mis on ajalooline rekord. Selle ohtlikkus sõltub vähem summast kui valuutast, milles laen võetakse: Jaapan tõestab, et 260% suurune võlg võib püsida stabiilsena, kui see kuulub riigisisestele võlausaldajatele."
         }
       ]
     }
