@@ -1,14 +1,117 @@
 {
  "langue": "fi",
- "synthese": null,
+ "synthese": {
+  "verdict": "La plainte est justifiée pour le finnois, et sur les deux surfaces. L'ossature de l'interface (réglages, parcours, entraînement, bloqueur TikTok, audio) est en finnois correct, mais l'onboarding et le paywall accumulent des erreurs qu'un Finlandais voit tout de suite : « Débloquer mon essai » est devenu « Commence mon procès » (Aloita oikeudenkäyntini), « Fin de l'essai » « le procès se termine », « GLISSE POUR DÉCOUVRIR » deux mots qui n'existent pas (« PYYHÄVÄ LÖYDÄKSI »), la marque réécrite « Sofia », « quiz » rendu par quatre mots dont un inventé (« Tietustelut »). Les cours sont bimodaux : deux cours natifs (hoquet, étoile), deux relus (OTAN, paradis fiscaux), six en traduction brute (islam, Baudelaire, impressionnisme, Narcisse, 1929, Dostoïevski) avec des contresens dès les premières phrases : « 22 ans » devenu « 22 visionnages », « En 1857 » « Dans la publication 1857 », « Vers 630 » « Dans le modèle 630 », « 622 » avec un suffixe de cas collé (« 622:ssa », 93 fois dans le corpus), le VIIe siècle devenu le VIIIe, « on » rendu par « nous » (76 segments), « spleen » par « la rate », « flâneur » par « poussette », mots composés coupés en deux, noms propres sous quatre graphies.",
+  "scores": {
+   "ui": 2.5,
+   "cours": 2,
+   "global": 2.5
+  },
+  "top_issues": [
+   {
+    "title": "Bouton d'essai = « Commence mon procès »",
+    "where": "onboarding.premiumTrial.cta",
+    "current": "Aloita oikeudenkäyntini",
+    "gloss_fr": "Commence mon procès (au tribunal)",
+    "fix": "Aloita kokeilujakso",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« Fin de l'essai » = « Le procès se termine »",
+    "where": "onboarding.trial.trialEnds",
+    "current": "Oikeudenkäynti päättyy",
+    "gloss_fr": "Le procès (judiciaire) se termine",
+    "fix": "Kokeilu päättyy",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Deux mots inexistants sur le carrousel",
+    "where": "onboarding.showcase.courses.swipe",
+    "current": "PYYHÄVÄ LÖYDÄKSI",
+    "gloss_fr": "deux mots qui n'existent pas en finnois",
+    "fix": "PYYHKÄISE JA TUTUSTU",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« 22 ans » = « 22 visionnages »",
+    "where": "course_1_la_naissance_de_l_islam_622/s4.b3.text",
+    "current": "Vain **22 katselukertaa** (610-632)",
+    "gloss_fr": "En seulement 22 visionnages (610-632)",
+    "fix": "Vain **22 vuodessa** (610–632)",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« En 1857 » = « Dans la publication 1857 » ; « 622 » avec suffixe collé",
+    "where": "course_100_les_fleurs_du_mal_baudelaire/s0.b0.text ; course_1/s0.b0.text (93 « <année>:ssa » et 50 « Teoksessa / Kirjassa / Elokuvassa <année> » dans le corpus)",
+    "current": "Julkaisussa **1857** … / **622**:ssa …",
+    "gloss_fr": "Dans la publication 1857 / en « 622-dans »",
+    "fix": "Vuonna **1857** … / Vuonna **622** …",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Le VIIe siècle devenu le VIIIe",
+    "where": "course_1_la_naissance_de_l_islam_622/s1.b0.text",
+    "current": "700-luvulla Arabia ei kiinnostanut melkein ketään.",
+    "gloss_fr": "Au VIIIe siècle (700-799), l'Arabie n'intéressait presque personne",
+    "fix": "600-luvulla Arabia ei kiinnostanut juuri ketään.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« on » rendu par « nous »",
+    "where": "course_1_la_naissance_de_l_islam_622/s0.b0.text (76 segments dans le corpus)",
+    "current": "Haluamme tappaa hänet.",
+    "gloss_fr": "Nous voulons le tuer.",
+    "fix": "Hänet halutaan tappaa.",
+    "severity": "bloquant"
+   },
+   {
+    "title": "« une condamnation » = « une conviction intime »",
+    "where": "course_100_les_fleurs_du_mal_baudelaire/hero.hook",
+    "current": "Kuusi sensuroitua runoa, yksi vakaumus…",
+    "gloss_fr": "Six poèmes censurés, une conviction (croyance)…",
+    "fix": "Kuusi sensuroitua runoa, yksi tuomio…",
+    "severity": "bloquant"
+   },
+   {
+    "title": "Marque réécrite « Sofia »",
+    "where": "onboarding.graph.subtitle, paywall.quiz.reviews.title",
+    "current": "Sofian kanssa ja ilman",
+    "gloss_fr": "Avec et sans Sofia",
+    "fix": "Sophian kanssa ja ilman",
+    "severity": "majeur"
+   },
+   {
+    "title": "Quatre mots pour « quiz », dont un inventé",
+    "where": "UI : tietokilpailu / tietovisa / visa / Tietustelut",
+    "current": "Tietustelut auttoivat minua…",
+    "gloss_fr": "mot inexistant",
+    "fix": "Visat auttoivat minua…",
+    "severity": "majeur"
+   }
+  ],
+  "systematic": [
+   "« En <année> » rendu par un contenant absurde (Julkaisussa, Asiassa, Alueella, Mallissa, Teoksessa, Kirjassa, Elokuvassa : 50 phrases) ou par l'année avec suffixe casuel collé (« 622:ssa » : 93 phrases) ; « Vuonna » n'apparaît que 105 fois sur 244.",
+   "« on » impersonnel rendu par « nous » (me / -mme) : 76 segments sur 168 ; le finnois veut le passif impersonnel.",
+   "Terme de glossaire ou gras laissé au nominatif avec le suffixe collé après le balisage par un deux-points (**Badr**:ssä, [[Kalifi]]:ille).",
+   "« ans » traduit « katselukertaa » (visionnages) : 18 occurrences dans 14 cours, artefact de mémoire de traduction.",
+   "Noms propres et titres instables (Narcissus / Narsissi / Narcisse / Narkissos, Echo / Kaiku, Ovid) ; mots composés coupés (Proosa runo, deflaatio politiikka).",
+   "Faux amis : puissant → tehokas (efficace), touche → kosketus (contact), sensation → sensaatio (scandale), chute → syksy (automne).",
+   "UI : « culture » rendu tieto / kulttuuri au lieu de sivistys ; nombre + nom mal décliné ; anglicismes blocker / anti-scroll / paywall."
+  ],
+  "action": "relecture_complete",
+  "effort": "UI : 1,5 jour (onboarding, paywall, terminologie, déclinaisons) ; cours, quiz et glossaire : relecture native complète, 3 semaines ; « <année>:ssa » → « vuonna » : script."
+ },
  "scores_relecteur_par_surface": {
-  "ui": 2.5
+  "ui": 2.5,
+  "combined": 2
  },
  "justifications_relecteur": {
-  "ui": "Le socle de l'app (réglages, parcours, entraînement, bloqueur TikTok, lecteur audio) est en finnois correct et souvent naturel, mais l'onboarding et les paywalls — ce que l'utilisateur voit en premier — accumulent des erreurs qu'un natif remarque immédiatement : faux sens graves (« essai » = procès, « lumière » = léger, « Practice » = coutume), mots inventés (« PYYHÄVÄ LÖYDÄKSI », « Tietustelut »), marque réécrite « Sofia », fragments assemblés avec des chiffres mal déclinés et phrases sans verbe. La terminologie produit n'est pas stabilisée (quatre mots pour « quiz », trois pour « parcours », anglicismes blocker/anti-scroll) et les témoignages sentent la traduction automatique. L'ensemble reste compréhensible mais se lit clairement comme traduit, avec des erreurs fréquentes dans le tunnel de conversion."
+  "ui": "Le socle de l'app (réglages, parcours, entraînement, bloqueur TikTok, lecteur audio) est en finnois correct et souvent naturel, mais l'onboarding et les paywalls — ce que l'utilisateur voit en premier — accumulent des erreurs qu'un natif remarque immédiatement : faux sens graves (« essai » = procès, « lumière » = léger, « Practice » = coutume), mots inventés (« PYYHÄVÄ LÖYDÄKSI », « Tietustelut »), marque réécrite « Sofia », fragments assemblés avec des chiffres mal déclinés et phrases sans verbe. La terminologie produit n'est pas stabilisée (quatre mots pour « quiz », trois pour « parcours », anglicismes blocker/anti-scroll) et les témoignages sentent la traduction automatique. L'ensemble reste compréhensible mais se lit clairement comme traduit, avec des erreurs fréquentes dans le tunnel de conversion.",
+  "combined": "Oui, la plainte « ça ne sonne pas naturel » est justifiée pour le finnois, mais l'échantillon de cours est bimodal : deux cours (hoquet, mort d'une étoile) sont d'un niveau natif (5/5), deux autres (OTAN, paradis fiscaux) sont une traduction relue correcte avec quelques contresens (3,5/5), et six cours (islam, Baudelaire, impressionnisme, Narcisse, 1929, Dostoïevski) sont de la traduction automatique brute jamais relue (1,5–2/5), avec des contresens embarrassants dès les titres, descriptions et premières phrases (« 10 000 kolikkoa », « lastenrattaat » pour flâneur, « jumala Bang », « Suuri laama », « Perna » pour spleen, « Kirjeenvaihto » pour Correspondances). Ce qui domine n'est pas la raideur mais l'artefact de MT non édité : « En 1857 » rendu par « Julkaisussa/Asiassa/Alueella/Mallissa 1857 », le « on » impersonnel devenu « nous », les termes de glossaire non fléchis avec suffixe collé par deux-points, les faux amis de polysémie (chute→automne, krach→collision, condamnation→vakaumus, réhabilitation→kuntoutus) et des noms propres ou titres d'œuvres instables ou non finnois. La surface la pire est le corps des cours d'histoire, de littérature et d'art ; le lecteur rencontre les erreurs dès l'accroche. Note cours : 2/5 (moyenne arithmétique ~2,5 mais les cours fautifs sont ceux où les titres et descriptions sont déjà faux). Note UI : non attribuée, car les fichiers ui_a.md et ui_b.md ne faisaient pas partie du périmètre de lecture assigné à cette passe (seuls courses_a.md et courses_b.md ont été lus intégralement)."
  },
  "constats_non_listes_par_le_relecteur": {
-  "ui": 52
+  "ui": 52,
+  "combined": 120
  },
  "motifs_recurrents": [
   {
@@ -117,6 +220,85 @@
    "regex_target": "^(?:Se on|Siinä on)\\b",
    "regex_fr": "^(?:Soit|C'est)\\b",
    "pack": "ui"
+  },
+  {
+   "description": "« En <année> » rendu par un nom de lieu/contexte absurde (Julkaisussa, Asiassa, Alueella, Mallissa) ou par l'année avec suffixe casuel collé (622:ssa, 624:ssä, 610:lta) au lieu de « Vuonna <année> ».",
+   "frequency": "systématique",
+   "example": "Julkaisussa **1857** **Charles Baudelaire** julkaisi **Pahan kukat**.",
+   "regex_fr": "\\bEn\\s+\\**\\d{3,4}\\b",
+   "regex_target": "\\b(Julkaisussa|Asiassa|Alueella|Mallissa)\\s+\\**\\d{3,4}\\b|\\b\\d{3,4}\\**:(ssa|ssä|lta|ltä|n)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Le « on » impersonnel français traduit par la 1re personne du pluriel (« nous ») : l'app parle à la place des personnages ou des Mecquois.",
+   "frequency": "systématique",
+   "example": "Haluamme tappaa hänet. / Elämme siellä heimoissa. / Vaadimme tarkan piirustuksen.",
+   "regex_fr": "\\bon\\s+\\w+",
+   "regex_target": "\\b(Haluamme|Elämme|Vaadimme|[Kk]utsumme|Lainaamme|[Pp]uhumme|[Vv]oimme)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Terme de glossaire ou gras laissé au nominatif, avec le suffixe casuel collé après le balisage par un deux-points (**Badr**:ssä, [[Kalifi]]:ille, **Zeusta**:tä, **Dostojevskin**:n) ou simplement absent (hyväksyy kutsun Yathrib-keidas).",
+   "frequency": "systématique",
+   "example": "Valta siirtyy sitten [[Kalifi]]:ille",
+   "regex_target": "(\\]\\]|\\*\\*):[a-zäöA-ZÄÖ]+",
+   "pack": "combined"
+  },
+  {
+   "description": "« ans » (âge, durée) traduit par « katselukertaa » (vues/visionnages), artefact de mémoire de traduction.",
+   "frequency": "fréquent",
+   "example": "Vain **22 katselukertaa** (610-632) / Isänsä orvoksi **6 katselukertaa**",
+   "regex_fr": "\\b\\d+\\s*ans\\b",
+   "regex_target": "\\d+\\s*katselukertaa",
+   "pack": "combined"
+  },
+  {
+   "description": "Noms propres et titres d'œuvres instables ou non finnois : Narcissus/Narsissi/Narcisse/Narkissos, Echo/Kaiku (Ekho), Ovid (Ovidius), Tirésias (Teiresias), Hegira (hidžra), Muhammed/Muhammad, NATO/Nato, Poulcheria/Dounia/Sonya, Lounas nurmikolla / Le Déjeuner sur l'herbe (Aamiainen ruohikolla), Printti (Impressio), Le Spleen de Paris (Pariisin ikävä).",
+   "frequency": "fréquent",
+   "example": "[[Ovid]] kertoo kirjassaan [[Metamorfoosit]] **Narsissi**:n ja **Kaiku**:n",
+   "regex_target": "\\b(Narcissus|Narsissi|Narcisse|Echo[a-zä]*|Ovid|Tirésias|Hegira\\w*|Cephisus\\w*|Oread|Poulcheria|Dounia|Sonya|Printti)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Faux amis et polysémie mal résolue : puissant→tehokas (efficace), touche→kosketus (contact), sensation→sensaatio (scandale), chute→syksy (automne), krach→kolari (collision), conviction/condamnation→vakaumus, réhabilitation→kuntoutus, spleen→perna (organe), conscience→tietoisuus, surhomme→supermies.",
+   "frequency": "fréquent",
+   "example": "**29**, \"Black Tuesday\", syksy kiihtyy.",
+   "regex_target": "\\b(tehok\\w+|kosketu\\w+|sensaatio\\w*|syksy|[Kk]olari\\w*|vakaumus|[Kk]untoutus|[Pp]erna\\w*|supermie\\w+|superihmi\\w+)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Mots composés coupés en deux ou nom de glossaire suivi d'un nom sans trait d'union (Proosa runo, deflaatio politiikka, Quraysh heimo, Varsovan sopimus maat, veron optimointi).",
+   "frequency": "fréquent",
+   "example": "entiset **[[Varsovan sopimus]]** maat",
+   "regex_target": "(\\]\\]|\\*\\*)\\s+(politiikka|maat|heimo|mestari)\\b|Proosa runo|veron optimointi",
+   "pack": "combined"
+  },
+  {
+   "description": "Pronom personnel « hän » (réservé aux personnes) pour un sujet inanimé (l'expansion, l'OTAN), ou ambiguïté hän/hän quand deux personnages interagissent (Écho/Narcisse, Zeus/Écho), le finnois n'ayant pas de genre.",
+   "frequency": "fréquent",
+   "example": "Hän on myös järjestäytynyt. (l'expansion) / Kun hän lähestyy halatakseen häntä, hän hylkää hänet halveksuen.",
+   "regex_target": "\\bHän (on myös|liitti)\\b|\\bhän\\b[^.]*\\bhäntä\\b[^.]*\\bhän\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Anglais ou français laissé tel quel dans le texte finnois : Roaring Twenties, Black Tuesday, Genesis, concierge, razzias, Le Spleen de Paris, Le Déjeuner sur l'herbe.",
+   "frequency": "fréquent",
+   "example": "**Roaring Twenties** (1920-luku) Amerikassa käytettiin luotolla",
+   "regex_target": "\\b(Roaring Twenties|Black Tuesday|Genesis|concierge\\w*|razzias|Le Spleen de Paris|Le Déjeuner sur l'herbe\\w*)\\b",
+   "pack": "combined"
+  },
+  {
+   "description": "Mélange des temps dans un même paragraphe : présent narratif du français alternant avec le passé (julkaisi/merkitsee, laati/on, liittyivät/näyttää), surtout dans les cours non relus.",
+   "frequency": "systématique",
+   "example": "Hän laati [[Medinan perustuslaki]]-sopimuksen … ja perusti [[Ummah]] — après « hänestä tulee johtaja »",
+   "pack": "combined"
+  },
+  {
+   "description": "Guillemets droits \" au lieu des guillemets finnois ” ”, incohérents d'un cours à l'autre (les cours hoquet, étoile et Dostoïevski utilisent ” ”, les autres \" \").",
+   "frequency": "fréquent",
+   "example": "Se on nimetty uudelleen \"Profeetan kaupungiksi\"",
+   "regex_target": "\"[^\"\\n]+\"",
+   "pack": "combined"
   }
  ],
  "constats": [
@@ -179,6 +361,316 @@
    "problem": "« Senior year » traduit mot à mot ; aucun sens en finnois (terminale = abiturientti).",
    "fix": "Inès, abiturientti",
    "surface": "ui"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s0.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "**622**:ssa nykyisen Saudi-Arabian Mekasta kotoisin olevan kauppiaan on paettava kaupungistaan. Haluamme tappaa hänet.",
+   "gloss_fr": "En 622 (suffixe casuel collé à l'année)… Nous voulons le tuer.",
+   "problem": "Le « on » impersonnel est rendu par « nous » (l'app annonce vouloir tuer Muhammad) et « En 622 » est fléchi de façon agrammaticale.",
+   "fix": "Vuonna **622** nykyisen Saudi-Arabian Mekasta kotoisin olevan kauppiaan on paettava kaupungistaan. Häntä halutaan tappaa.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s1.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "700-luvulla Arabia ei kiinnostanut melkein ketään. Elämme siellä heimoissa. … Tehokas [[Quraysh]] heimo hallitsee tätä kauppaa.",
+   "gloss_fr": "Au VIIIe siècle (700-799)… Nous y vivons en tribus. … La tribu Quraysh efficace contrôle ce commerce.",
+   "problem": "Le VIIe siècle devient le VIIIe (en finnois 600-luku), « on » devient « nous » et « puissante » est traduit par « efficace ».",
+   "fix": "600-luvulla Arabia ei kiinnostanut juuri ketään. Siellä elettiin heimoissa. … Mahtava [[Quraysh]]-heimo hallitsee tätä kauppaa.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s2.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Hänen uskollisuutensa voittivat kuitenkin **Badr**:ssä **624**:ssä.",
+   "gloss_fr": "Sa loyauté (notion abstraite) a pourtant gagné à Badr en 624.",
+   "problem": "« Ses fidèles » est lu comme « sa fidélité », l'infériorité numérique disparaît et les suffixes casuels sont collés aux chiffres.",
+   "fix": "Vaikka hänen kannattajansa olivat alakynnessä, he voittivat **Badrissa** vuonna **624**.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s3.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Mallissa **630** tilanne on päinvastainen. Muhammad marssii Mekkaan **10 000 kolikkoa** kanssa.",
+   "gloss_fr": "Dans le modèle 630, la situation est inverse. Muhammad marche sur La Mecque avec 10 000 pièces de monnaie.",
+   "problem": "« En 630 » devient « dans le modèle 630 » et « 10 000 hommes » devient « 10 000 pièces de monnaie ».",
+   "fix": "Vuonna **630** tilanne kääntyy päinvastaiseksi. Muhammad marssii Mekkaan **10 000 miehen** kanssa.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s3.b3.e3.detail",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "Antaudu ilman taistelua ja yleistä anteeksiantoa.",
+   "gloss_fr": "Rends-toi (impératif) sans combat et un pardon général.",
+   "problem": "« Reddition » est rendu par un impératif adressé à l'utilisateur et la fin de phrase est agrammaticale.",
+   "fix": "Antautuminen ilman taistelua ja yleinen armahdus.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s4.b3.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Vain **22 katselukertaa** (610-632)",
+   "gloss_fr": "En seulement 22 visionnages/vues (610-632)",
+   "problem": "« 22 ans » est traduit par « 22 vues » (compteur vidéo) ; le même artefact revient dans le cours Baudelaire (« 6 katselukertaa »).",
+   "fix": "Vain **22 vuodessa** (610–632)",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/hero.hook",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Kuusi sensuroitua runoa, yksi vakaumus ja modernin runouden synty.",
+   "gloss_fr": "Six poèmes censurés, une conviction (croyance intime) et la naissance de la poésie moderne.",
+   "problem": "« Condamnation » est pris au sens anglais de « conviction » (croyance), dans l'accroche du cours.",
+   "fix": "Kuusi sensuroitua runoa, yksi tuomio ja modernin runouden synty.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s0.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Julkaisussa **1857** **Charles Baudelaire** julkaisi **Pahan kukat**.",
+   "gloss_fr": "Dans la publication 1857, Charles Baudelaire a publié Les Fleurs du Mal.",
+   "problem": "« En 1857 » est rendu par « dans la publication 1857 » en première phrase du cours, avec un passé qui rompt le présent narratif.",
+   "fix": "Vuonna **1857** **Charles Baudelaire** julkaisee kokoelman **Pahan kukat**.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s1.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Isänsä orvoksi **6 katselukertaa** hän riitelee anoppinsa kenraali **Aupick** kanssa",
+   "gloss_fr": "Orphelin de père à 6 visionnages, il se dispute avec sa belle-mère (mère de l'épouse), le général Aupick",
+   "problem": "« 6 ans » devient « 6 vues » et « beau-père » devient « belle-mère » (anoppi = mère de l'épouse) ; nom propre non fléchi.",
+   "fix": "Isänsä hän menetti **6-vuotiaana**, ja hän riitelee isäpuolensa, kenraali **Aupickin**, kanssa",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s1.b4.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Asiassa **1857**, samana vuonna kuin … ja hän jakaa makunsa makaaberista.",
+   "gloss_fr": "Dans l'affaire 1857, la même année que … et il partage son goût du macabre (sujet ambigu).",
+   "problem": "« En 1857 » devient « dans l'affaire 1857 » et la fin de phrase est un calque illisible.",
+   "fix": "Vuonna **1857**, samana vuonna kuin … jonka kanssa hän jakaa mieltymyksen makaaberiin.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "**\"Perna ja ihanne\"**, ensimmäinen suuri osa, vastustaa kahta valtiota. **perna**, sana, joka on lainattu englannista",
+   "gloss_fr": "« La Rate (organe) et l'Idéal », la première grande partie, s'oppose à deux États (pays). La rate, mot emprunté à l'anglais",
+   "problem": "« Spleen » est traduit par l'organe « perna », « deux états » par « deux pays », et « élévation » plus loin par « luxe ».",
+   "fix": "**”Spleen ja ihanne”**, ensimmäinen suuri osasto, asettaa vastakkain kaksi mielentilaa. **Spleen**, englannista lainattu sana, tarkoittaa syvää ikävystymistä, syytöntä melankoliaa. **Ihanne** taas on kohoamisen ja puhtaan kauneuden jano.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b2.caption",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Yöllinen Pariisi 1850-luvulla: Baudelairilainen perna.",
+   "gloss_fr": "Paris nocturne des années 1850 : la rate (organe) baudelairienne.",
+   "problem": "Légende d'image qui parle de l'organe « rate » au lieu du spleen baudelairien.",
+   "fix": "Yöllinen Pariisi 1850-luvulla: baudelairelaisen spleenin näyttämö.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s2.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Baudelaire vaeltelee sitten **lastenrattaat**, toisin sanoen kävelijänä",
+   "gloss_fr": "Baudelaire erre alors en poussette (landau pour bébé), c'est-à-dire en promeneur",
+   "problem": "« Flâneur » est traduit par « poussette » ; « décor intérieur » devient aussi « décoration d'intérieur » (sisustus) dans la même phrase.",
+   "fix": "Baudelaire kuljeskelee kaupungissa **flanöörinä**, toisin sanoen kävelijänä",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s3.title",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "Kirjeenvaihto ja runollinen alkemia",
+   "gloss_fr": "Échange de lettres (correspondance épistolaire) et alchimie poétique",
+   "problem": "Le poème « Correspondances » est pris au sens de courrier, dans le titre de section, s3.b0 et l'attribution s3.b1.",
+   "fix": "Vastaavuuksia ja runollinen alkemia (runon nimi: ”Vastaavuuksia”)",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s4.b2.e1.title",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Kuntoutus",
+   "gloss_fr": "Rééducation (médicale)",
+   "problem": "« Réhabilitation » judiciaire est traduite par la rééducation médicale dans la frise, et le détail dit « six poèmes sont soulevés ».",
+   "fix": "Maineenpalautus (detail: Kuuden runon julkaisukielto vihdoin kumotaan.)",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s0.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "noin kolmekymmentä [[Virallinen Pariisin salonki]] avasi yksityisnäyttelyn",
+   "gloss_fr": "environ trente Salon officiel de Paris a ouvert une exposition privée",
+   "problem": "« Artistes lassés du Salon » a disparu : la phrase d'ouverture dit que trente Salons ouvrent une exposition.",
+   "fix": "noin kolmekymmentä [[Pariisin viralliseen Salonkiin]] kyllästynyttä taiteilijaa avaa yksityisnäyttelyn",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s0.b1.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "*Printti, nouseva aurinko*",
+   "gloss_fr": "« Estampe imprimée, soleil levant »",
+   "problem": "Le tableau fondateur Impression, soleil levant perd son titre finnois établi et son sens (printti = tirage imprimé).",
+   "fix": "*Impressio, auringonnousu*",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s1.b1.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Asiassa **1863** tuomaristo hylkäsi enemmän kuin **3 000**-maalaukset. … *Lounas nurmikolla*",
+   "gloss_fr": "Dans l'affaire 1863, le jury a refusé plus que les 3 000-tableaux. … « Lunch sur la pelouse »",
+   "problem": "« En 1863 » devient « dans l'affaire 1863 », numéral mal construit, et Le Déjeuner sur l'herbe n'a pas son titre finnois établi.",
+   "fix": "Vuonna **1863** tuomaristo hylkää yli **3 000** maalausta. … *Aamiainen ruohikolla*",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s3.b0.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Alueella **1874** he järjestävät oman näyttelynsä.",
+   "gloss_fr": "Dans la zone 1874, ils organisent leur propre exposition.",
+   "problem": "« En 1874 » est rendu par « dans la zone 1874 ».",
+   "fix": "Vuonna **1874** he järjestävät oman näyttelynsä.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/s4.title",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "Mikä impressionismi muuttui",
+   "gloss_fr": "En quoi l'impressionnisme s'est transformé (agrammatical)",
+   "problem": "Titre de section agrammatical qui inverse le sens (« ce que l'impressionnisme a changé »).",
+   "fix": "Mitä impressionismi muutti",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s1.b3.text",
+   "severity": "bloquant",
+   "category": "nom_propre",
+   "current": "jumala **Bang**, joka on raivoissaan hylätyksi tulemisesta, on repinyt Echon palasiksi. … jossa häntä kulutetaan rakkaudella",
+   "gloss_fr": "le dieu « Bang » (onomatopée), furieux d'être éconduit, a déchiré Écho … où on la consomme avec amour",
+   "problem": "Le dieu Pan est devenu « Bang » et « se consume d'amour » devient « on la consomme avec amour ».",
+   "fix": "jumala **Pan**, joka raivostuu hylkäämisestä, antaa repiä Ekhon kappaleiksi. … jossa hän riutuu rakkaudesta",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s2.b1.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Narcisse soittaa: \"Onko siellä ketään?\"",
+   "gloss_fr": "Narcisse téléphone : « Y a-t-il quelqu'un ? »",
+   "problem": "« Appelle » est pris au sens de « téléphoner » dans un mythe antique ; nom en forme française.",
+   "fix": "Narkissos huutaa: ”Onko siellä ketään?”",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s4.b1.text",
+   "severity": "bloquant",
+   "category": "mt_artefact",
+   "current": "Julkaisussa **1914** **Freud** julkaisi",
+   "gloss_fr": "Dans la publication 1914, Freud a publié",
+   "problem": "« En 1914 » devient « dans la publication 1914 ».",
+   "fix": "Vuonna **1914** **Freud** julkaisee",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s3.b3.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "NATO englanniksi ja NATO ranskaksi.",
+   "gloss_fr": "NATO en anglais et NATO en français.",
+   "problem": "L'anecdote sur le sigle inversé (NATO/OTAN) est vidée de son sens.",
+   "fix": "NATO englanniksi ja OTAN ranskaksi.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s4.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Hän liitti uusiksi virallisiksi toiminta-alueiksi **[[Kyberavaruus]]** ja tilan.",
+   "gloss_fr": "Il/Elle (une personne) a ajouté comme nouveaux domaines officiels le cyberespace et la pièce (espace-volume).",
+   "problem": "L'OTAN devient une personne (« hän ») et « l'espace » spatial devient « tila » (espace au sens de local).",
+   "fix": "Se on ottanut **[[kyberavaruuden]]** ja avaruuden uusiksi virallisiksi toiminta-alueikseen.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_18_la_grande_depression_1929/s0.b0.text",
+   "severity": "bloquant",
+   "category": "typographie",
+   "current": "Siitä alkaa **Suuri laama**",
+   "gloss_fr": "C'est le début du Grand Lama (l'animal)",
+   "problem": "Coquille en gras dans la première phrase : « laama » (lama, l'animal) au lieu de « lama » (dépression).",
+   "fix": "Siitä alkaa **Suuri lama**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_18_la_grande_depression_1929/s1.b2.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Kolaripäivänä Chicagon pörssissä välittäjät hirtivät",
+   "gloss_fr": "Le jour de l'accident de voiture, à la Bourse de Chicago, les courtiers ont pendu",
+   "problem": "« Krach » est traduit par « collision routière » ; le conditionnel « auraient pendu » disparaît aussi.",
+   "fix": "Romahduspäivänä Chicagon pörssissä välittäjien kerrotaan hirttäneen",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_18_la_grande_depression_1929/s2.b0.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "**10.24**., yksitoista miljoonaa myyntitilausta. **29**, \"Black Tuesday\", syksy kiihtyy. … Sitten tulee [[pankki juoksee]]",
+   "gloss_fr": "Le 10.24 (format américain), onze millions d'ordres de vente. Le 29, « Black Tuesday » (en anglais), l'automne s'accélère. … Puis vient « la banque court »",
+   "problem": "Date au format américain, « chute » traduite par « automne », « Mardi noir » laissé en anglais et « bank runs » rendu par « la banque court ».",
+   "fix": "**24. lokakuuta** annetaan yksitoista miljoonaa myyntitoimeksiantoa. **29. päivänä**, ”mustana tiistaina”, romahdus kiihtyy. … Sitten tulevat [[talletuspaot]]",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_107_crime_et_chatiment_dostoievski/s1.b3.text",
+   "severity": "bloquant",
+   "category": "typographie",
+   "current": "**Ricos ja rangaistus** näyttää",
+   "gloss_fr": "« Ricos (riches, en espagnol) et châtiment » montre",
+   "problem": "Le titre du roman en gras est mal orthographié ici et dans la conclusion s4.b2.",
+   "fix": "**Rikos ja rangaistus** näyttää",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_107_crime_et_chatiment_dostoievski/s3.b0.text",
+   "severity": "bloquant",
+   "category": "grammaire",
+   "current": "Tuomari **Porfiri Petrovitš**, **[[Oikeuslääketieteen psykologia]]** mestari, tietää olevansa syyllinen, mutta antaa hänen syyttää itseään.",
+   "gloss_fr": "Le juge Porfiri, maître de psychologie médico-légale, sait qu'il est lui-même coupable, mais le laisse s'accuser.",
+   "problem": "« olevansa » renvoie au sujet : c'est le juge qui se sait coupable ; « psychologie judiciaire » devient aussi « médecine légale ».",
+   "fix": "Tuomari **Porfiri Petrovitš**, **[[oikeuspsykologian]]** mestari, tietää Raskolnikovin olevan syyllinen, mutta antaa tämän paljastaa itse itsensä.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_212_les_paradis_fiscaux_expliques/s2.b2.text",
+   "severity": "bloquant",
+   "category": "contresens",
+   "current": "Ranskan sana \"tax haven\" tulee käännösvirheestä: englanniksi sanotaan \"tax haven\"",
+   "gloss_fr": "Le mot français « tax haven » vient d'une erreur de traduction : en anglais on dit « tax haven »",
+   "problem": "L'anecdote devient absurde : le mot français cité est le mot anglais lui-même.",
+   "fix": "Ranskan sana ”paradis fiscal” (kuten suomen ”veroparatiisi”) syntyi käännösvirheestä: englannin ”tax haven” tarkoittaa rahan turvasatamaa (haven), ei paratiisia (heaven).",
+   "surface": "combined"
   },
   {
    "location": "onboardingV2.exams.quote3",
@@ -619,6 +1111,196 @@
    "problem": "« audios » (cours audio) rendu par äänet = sons/bruits, comme dans audio.browse « Selaa kaikkia ääniä », audio.downloads.title « Ladatut äänet », deleteAll.confirm, downloads.empty/footer ; il faut äänikurssit / äänitteet.",
    "fix": "Kaikki äänikurssit",
    "surface": "ui"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/description",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Tämä lähtö, Hegira, merkitsee islamin ensimmäistä vuotta ja maailman sivilisaation alkua.",
+   "gloss_fr": "Ce départ, « Hegira » (forme latine/anglaise), marque la première année de l'islam et le début de la civilisation du monde.",
+   "problem": "Le terme finnois établi est « hidžra » (description, s0.b0, s2.title, frise), et « Muhammed/Muhammad » alterne dans tout le cours.",
+   "fix": "Tämä lähtö, hidžra, on islamilaisen ajanlaskun vuosi 1 ja maailmanlaajuisen sivilisaation alku.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s3.b3.e3.title",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Mekan vangitseminen",
+   "gloss_fr": "L'emprisonnement / la capture (d'une personne) de La Mecque",
+   "problem": "La « prise » d'une ville se dit « valtaus » ; « vangitseminen » s'applique à une personne.",
+   "fix": "Mekan valtaus",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_1_la_naissance_de_l_islam_622/s4.b2.text",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Vähitellen antiikin lähestyy.",
+   "gloss_fr": "Peu à peu, de l'Antiquité (génitif isolé) s'approche.",
+   "problem": "Phrase agrammaticale et contresens : « l'Antiquité se referme » devient « s'approche ».",
+   "fix": "Vähitellen antiikki päättyy.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/description",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "poimii kauneutta pahuudesta ja arjesta pariisilaisesta elämästä",
+   "gloss_fr": "extrait la beauté du mal et du quotidien de la vie parisienne (syntaxe cassée)",
+   "problem": "Suite de cas sans structure dans la description visible dans le catalogue.",
+   "fix": "poimii kauneutta pahasta ja pariisilaisesta arjesta",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_100_les_fleurs_du_mal_baudelaire/s4.b1.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "**[[Proosa runo]]** … **[[Le Spleen de Paris]]**:ssä",
+   "gloss_fr": "« Prose poème » (composé coupé en deux) … dans « Le Spleen de Paris » (titre laissé en français)",
+   "problem": "Composé coupé (proosaruno s'écrit en un mot) et titre du recueil non rendu par sa forme finnoise établie « Pariisin ikävä ».",
+   "fix": "**[[Proosaruno]]** … teoksessaan **[[Pariisin ikävä]]**",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/description",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "Salonin kieltämät maalarit järjestivät oman näyttelynsä. Kriitikot pilkkaavat Monet ja kutsuvat sitä tietämättään **impressionismiksi**.",
+   "gloss_fr": "Les peintres interdits par le Salon ont organisé leur exposition. Les critiques (pluriel) se moquent de Monet (non décliné) et l'appellent sans le savoir impressionnisme.",
+   "problem": "« Refusés » devient « interdits », un critique devient plusieurs, Monet n'est pas fléchi et « Salon/Salonki » alterne avec le titre.",
+   "fix": "Salongin hylkäämät maalarit järjestävät oman näyttelynsä. Kriitikko pilkkaa Monet'ta ja antaa liikkeelle vahingossa nimen **impressionismi**.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_122_la_naissance_de_l_impressionnisme/hero.hook",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Kriittinen loukkaus, ja modernin taiteen ensimmäisellä suurella liikkeellä on nimi.",
+   "gloss_fr": "Une insulte critique (= cruciale), et le premier grand mouvement de l'art moderne a un nom.",
+   "problem": "« De critique » (le journaliste) est lu comme l'adjectif « critique ».",
+   "fix": "Kriitikon loukkaus, ja modernin taiteen ensimmäisellä suurella liikkeellä on nimi.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/hero.hook",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "Hänellä ei ole enää omaa ääntä. Hänellä on silmät vain itselleen.",
+   "gloss_fr": "Il/elle n'a plus de voix. Il/elle n'a d'yeux que pour soi (même pronom neutre deux fois).",
+   "problem": "Le finnois n'a pas de genre : le contraste elle/lui est perdu et l'accroche semble parler d'une seule personne.",
+   "fix": "Ekholla ei ole enää omaa ääntä. Narkissoksella on silmät vain itselleen.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s0.b0.text",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "[[Ovid]] kertoo kirjassaan [[Metamorfoosit]] **Narsissi**:n ja **Kaiku**:n ristikkäisestä kohtalosta. … Hän, nuori mies, joka valloitti kuvansa.",
+   "gloss_fr": "Ovid (forme anglaise) raconte dans Métamorphoses le destin croisé de Narsissi (nom de la jonquille) et de Kaiku … Lui, un jeune homme qui a conquis son image.",
+   "problem": "Formes non finnoises et instables (Ovid/Ovidius, Narcissus/Narsissi/Narcisse/Narkissos, Echo/Kaiku, Tirésias/Teiresias) et « captivé par » devient « a conquis ».",
+   "fix": "[[Ovidius]] kertoo teoksessaan [[Muodonmuutoksia]] **Narkissoksen** ja **Ekhon** ristikkäisestä kohtalosta. … Hän taas on nuori mies, jonka oma kuva lumoaa.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_166_narcisse_et_echo/s4.b2.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "**Narsissi** hukkuu, koska hän halusi vain itseään. Kaksi tapaa kaipaa toista, yksi tragedia.",
+   "gloss_fr": "Narcisse se noie parce qu'il n'a voulu que lui-même. Deux façons de regretter (avoir la nostalgie de) l'autre, une tragédie.",
+   "problem": "« Périt » devient « se noie » et « manquer l'autre » devient « avoir la nostalgie de l'autre », avec une faute de flexion.",
+   "fix": "**Narkissos** menehtyy, koska hän ei halunnut ketään muuta kuin itseään. Kaksi tapaa jäädä vaille toista, yksi ainoa tragedia.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_18_la_grande_depression_1929/description",
+   "severity": "majeur",
+   "category": "grammaire",
+   "current": "**24.10.1929**, Wall Street romahtaa. Kolmessa vuodessa työttömyys on vaikuttanut **25 %** amerikkalaisista",
+   "gloss_fr": "24.10.1929, Wall Street s'effondre. En trois ans le chômage a influencé 25 % des Américains",
+   "problem": "Date numérique brute en tête de phrase et « touche » rendu par « a influencé » avec un cas fautif.",
+   "fix": "**24. lokakuuta 1929** Wall Street romahtaa. Kolmessa vuodessa joka neljäs (**25 %**) amerikkalainen on työtön",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_18_la_grande_depression_1929/s1.title",
+   "severity": "majeur",
+   "category": "non_traduit",
+   "current": "Roaring Twenties ja kupla",
+   "gloss_fr": "Roaring Twenties (en anglais) et la bulle",
+   "problem": "Titre de section laissé en anglais (aussi s1.b0 et la légende s1.b1), alors que le finnois dit « hullu 20-luku ».",
+   "fix": "Hullu 20-luku ja kupla",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_18_la_grande_depression_1929/s4.title",
+   "severity": "majeur",
+   "category": "nom_propre",
+   "current": "Roosevelt ja uusi sopimus",
+   "gloss_fr": "Roosevelt et le nouvel accord",
+   "problem": "« New Deal » se conserve tel quel en finnois ; il est traduit littéralement ici, dans le glossaire s4.b0 et la frise.",
+   "fix": "Roosevelt ja New Deal",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_107_crime_et_chatiment_dostoievski/description",
+   "severity": "majeur",
+   "category": "terminologie",
+   "current": "todistaakseen olevansa supermies",
+   "gloss_fr": "pour prouver qu'il est Superman / un super-homme (héros de BD)",
+   "problem": "Le « surhomme » philosophique se dit « yli-ihminen » ; « supermies/superihminen » alterne dans tout le cours et évoque le héros de BD.",
+   "fix": "todistaakseen olevansa yli-ihminen",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_212_les_paradis_fiscaux_expliques/s2.title",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "Voiton tekemisen taito katoaa",
+   "gloss_fr": "L'art de faire du profit disparaît",
+   "problem": "Le titre dit que l'art de faire du profit disparaît, au lieu de « l'art de faire disparaître un profit ».",
+   "fix": "Taito saada voitto katoamaan",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_212_les_paradis_fiscaux_expliques/s2.b0.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "puhumme **veron optimointi**, eli kunkin maan sääntöjen taitavasta käytöstä verojen maksamiseksi",
+   "gloss_fr": "nous parlons d'optimisation fiscale (non déclinée), c'est-à-dire l'usage habile des règles de chaque pays pour payer des impôts",
+   "problem": "« Moins » a disparu (on utilise les règles « pour payer des impôts ») et le terme n'est pas fléchi ; le finnois dit « verosuunnittelu ».",
+   "fix": "puhutaan **verosuunnittelusta** eli kunkin maan sääntöjen taitavasta hyödyntämisestä, jotta veroja maksettaisiin vähemmän",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s1.title",
+   "severity": "majeur",
+   "category": "calque",
+   "current": "Genesis: kilpi itäblokkia vastaan",
+   "gloss_fr": "Genèse (livre biblique / mot anglais) : un bouclier contre le bloc de l'Est",
+   "problem": "« Genesis » n'est pas le mot finnois pour la genèse d'une organisation.",
+   "fix": "Synty: kilpi itäblokkia vastaan",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s1.b2.text",
+   "severity": "majeur",
+   "category": "autre",
+   "current": "Sopimuksen ydin on sen **Artikla 5** … aivan liian kalliiksi yrittääkseen.",
+   "gloss_fr": "Le cœur du traité est son Article 5 (balisage [[ ]] perdu) … bien trop coûteux pour qu'il (le conflit) essaie.",
+   "problem": "Le lien de glossaire [[Article 5]] a été supprimé, et « yrittääkseen » fait du conflit le sujet qui « tente ».",
+   "fix": "Sopimuksen ydin on sen **[[5. artikla]]** … aivan liian kalliiksi yritettäväksi.",
+   "surface": "combined"
+  },
+  {
+   "location": "courses:course_207_l_otan_a_quoi_ca_sert_encore/s3.b2.text",
+   "severity": "majeur",
+   "category": "contresens",
+   "current": "välttääkseen **Ydinvoiman kiihtymisen**",
+   "gloss_fr": "pour éviter l'accélération de l'énergie nucléaire",
+   "problem": "« Escalade nucléaire » devient « accélération de l'énergie nucléaire », avec une majuscule injustifiée.",
+   "fix": "välttääkseen **ydinsodan eskalaation**",
+   "surface": "combined"
   },
   {
    "location": "onboarding.intro.title",

@@ -33,7 +33,8 @@ Scores sur 5 (voir la section 7 pour l'échelle). « Constats relevés » = ce q
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Estonien (`et`) | C | non | **2.0** | 2.5 | 2.0 | 2.5 | 2.0 | – | 240 (102 / 137 / 1) | 74 | 11 | Relecture complète |
 | Hébreu (`he`) | C | non | **2.0** | 2.5 | 2.0 | 2.0 | 2.0 | 2.0 | 386 (112 / 222 / 52) | 68 | 86 | Relecture complète |
-| Arabe (`ar`) | C | non | **2.5** | 3.0 | 2.0 | – | – | – | 120 (39 / 78 / 3) | 37 | 113 | Relecture complète |
+| Arabe (`ar`) | C | non | **2.5** | 3.0 | 2.0 | – | – | – | 170 (74 / 93 / 3) | 37 | 113 | Relecture complète |
+| Finnois (`fi`) | C | non | **2.5** | 2.5 | 2.0 | – | – | – | 110 (37 / 63 / 10) | 76 | 25 | Relecture complète |
 | Russe (`ru`) | C | non | **2.5** | 4.0 | 1.5 | – | – | – | 50 (24 / 26 / 0) | 74 | 68 | Relecture complète |
 | Slovène (`sl`) | C | non | **2.5** | 4.0 | 2.0 | – | – | – | 50 (17 / 33 / 0) | 49 | 16 | Relecture complète |
 | Danois (`da`) | C | non | **3.0** | 4.0 | 2.0 | – | – | – | 50 (26 / 24 / 0) | 90 | 33 | Relecture complète |
@@ -41,7 +42,6 @@ Scores sur 5 (voir la section 7 pour l'échelle). « Constats relevés » = ce q
 | Norvégien (`nb`) | C | non | **3.0** | 4.0 | 2.0 | – | – | – | 72 (44 / 28 / 0) | 90 | 15 | Relecture complète |
 | Slovaque (`sk`) | C | non | **3.0** | 4.0 | 2.0 | – | – | – | 50 (18 / 32 / 0) | 60 | 53 | Relecture complète |
 | Serbe (`sr`) | C | non | **3.0** | 4.0 | 2.0 | – | – | – | 50 (19 / 31 / 0) | 56 | 31 | Relecture complète |
-| Finnois (`fi`) | C | non | **–** | – | – | – | – | – | 60 (6 / 44 / 10) | 76 | 25 | – |
 | Bulgare (`bg`) | B | oui | **3.0** | 3.0 | 3.0 | – | – | – | 236 (2 / 84 / 150) | 0 | 1 | Corrections ciblées |
 | Turc (`tr`) | B | oui | **3.0** | 3.0 | 3.0 | – | – | – | 173 (9 / 66 / 98) | 0 | 0 | Corrections ciblées |
 | Tchèque (`cs`) | B | oui | – | – | – | – | – | – | non échantillonné | 13 | 1 | à échantillonner |
@@ -205,7 +205,7 @@ Motifs récurrents :
 
 La plainte est justifiée. L'interface arabe (3/5) est hétérogène : les écrans récents (onboarding v2, bloqueur TikTok, parcours, audio) sont naturels, mais l'onboarding v1 et le paywall gardent des contresens que tout utilisateur voit : « Gratuit » rendu « libre » (حر), « Premium » « cher » (غالي), « Fin de l'essai » « le procès se termine », « Léger » « lumière », « Reprends du temps pour toi » « prends ton temps vers l'arrière ». La marque est tantôt « صوفيا » tantôt « Sophia », « cours » a trois mots (دورة / درس / دورة تدريبية), « quiz » deux, et les tics de traduction automatique (قم بـ, الخاص بك, يرجى) raidissent le texte. Les cours (2/5) sont, hors deux cours scientifiques, de la traduction brute passée par l'anglais : « on » rendu par « nous » (37 segments), « spleen » rendu « la rate », « flâneur » « poussette », « s'oppose à deux états (d'âme) » devenu « s'oppose à la solution à deux États », « Hégire » rendu par un adjectif, résidus techniques (« **ز** » en gras à la place d'un segment perdu), noms propres en latin ou translittérés à l'anglaise, genres inversés.
 
-Surfaces relues (score du relecteur) : UI (3.0), Cours (2.0). Constats relevés : 120 (39 bloquants, 78 majeurs, 3 mineurs), plus 137 vus mais non listés.
+Surfaces relues (score du relecteur) : UI (3.0), Cours (2.0), UI + cours (relecture combinée) (2.5). Constats relevés : 170 (74 bloquants, 93 majeurs, 3 mineurs), plus 232 vus mais non listés.
 
 Motifs récurrents :
 
@@ -228,6 +228,37 @@ Motifs récurrents :
 | course_100_les_fleurs_du_mal_baudelaire/s2.b0.text | **"الطحال والمثالية"** | « La Rate et l'Idéalisme » | **«سأم ومثال»** | bloquant |
 | course_1_la_naissance_de_l_islam_622/s1.b2.text (et autres … | فكرته عن إله واحد **ز** تهدد | son idée d'un dieu unique **z** menace | فكرته عن **الإله الواحد** تهدد | bloquant |
 | onboardingV2.welcome.title, témoignages, ambassadeur | مرحبًا بك في صوفيا | Bienvenue dans « Sofia » | مرحبًا بك في Sophia | majeur |
+
+### Finnois (`fi`) — groupe C, sans guide de traduction
+
+**Score global : 2.5/5** (UI 2.5, cours 2.0, quiz/glossaire –, catalogue –, App Store –). Action : **Relecture complète**. Effort estimé : UI : 1,5 jour (onboarding, paywall, terminologie, déclinaisons) ; cours, quiz et glossaire : relecture native complète, 3 semaines ; « <année>:ssa » → « vuonna » : script.
+
+La plainte est justifiée pour le finnois, et sur les deux surfaces. L'ossature de l'interface (réglages, parcours, entraînement, bloqueur TikTok, audio) est en finnois correct, mais l'onboarding et le paywall accumulent des erreurs qu'un Finlandais voit tout de suite : « Débloquer mon essai » est devenu « Commence mon procès » (Aloita oikeudenkäyntini), « Fin de l'essai » « le procès se termine », « GLISSE POUR DÉCOUVRIR » deux mots qui n'existent pas (« PYYHÄVÄ LÖYDÄKSI »), la marque réécrite « Sofia », « quiz » rendu par quatre mots dont un inventé (« Tietustelut »). Les cours sont bimodaux : deux cours natifs (hoquet, étoile), deux relus (OTAN, paradis fiscaux), six en traduction brute (islam, Baudelaire, impressionnisme, Narcisse, 1929, Dostoïevski) avec des contresens dès les premières phrases : « 22 ans » devenu « 22 visionnages », « En 1857 » « Dans la publication 1857 », « Vers 630 » « Dans le modèle 630 », « 622 » avec un suffixe de cas collé (« 622:ssa », 93 fois dans le corpus), le VIIe siècle devenu le VIIIe, « on » rendu par « nous » (76 segments), « spleen » par « la rate », « flâneur » par « poussette », mots composés coupés en deux, noms propres sous quatre graphies.
+
+Surfaces relues (score du relecteur) : UI (2.5), UI + cours (relecture combinée) (2.0). Constats relevés : 110 (37 bloquants, 63 majeurs, 10 mineurs), plus 172 vus mais non listés.
+
+Motifs récurrents :
+
+- « En <année> » rendu par un contenant absurde (Julkaisussa, Asiassa, Alueella, Mallissa, Teoksessa, Kirjassa, Elokuvassa : 50 phrases) ou par l'année avec suffixe casuel collé (« 622:ssa » : 93 phrases) ; « Vuonna » n'apparaît que 105 fois sur 244.
+- « on » impersonnel rendu par « nous » (me / -mme) : 76 segments sur 168 ; le finnois veut le passif impersonnel.
+- Terme de glossaire ou gras laissé au nominatif avec le suffixe collé après le balisage par un deux-points (**Badr**:ssä, [[Kalifi]]:ille).
+- « ans » traduit « katselukertaa » (visionnages) : 18 occurrences dans 14 cours, artefact de mémoire de traduction.
+- Noms propres et titres instables (Narcissus / Narsissi / Narcisse / Narkissos, Echo / Kaiku, Ovid) ; mots composés coupés (Proosa runo, deflaatio politiikka).
+- Faux amis : puissant → tehokas (efficace), touche → kosketus (contact), sensation → sensaatio (scandale), chute → syksy (automne).
+- UI : « culture » rendu tieto / kulttuuri au lieu de sivistys ; nombre + nom mal décliné ; anglicismes blocker / anti-scroll / paywall.
+
+| Où | Texte actuel | Ce que ça dit | Proposition | Gravité |
+|---|---|---|---|---|
+| onboarding.premiumTrial.cta | Aloita oikeudenkäyntini | Commence mon procès (au tribunal) | Aloita kokeilujakso | bloquant |
+| onboarding.trial.trialEnds | Oikeudenkäynti päättyy | Le procès (judiciaire) se termine | Kokeilu päättyy | bloquant |
+| onboarding.showcase.courses.swipe | PYYHÄVÄ LÖYDÄKSI | deux mots qui n'existent pas en finnois | PYYHKÄISE JA TUTUSTU | bloquant |
+| course_1_la_naissance_de_l_islam_622/s4.b3.text | Vain **22 katselukertaa** (610-632) | En seulement 22 visionnages (610-632) | Vain **22 vuodessa** (610–632) | bloquant |
+| course_100_les_fleurs_du_mal_baudelaire/s0.b0.text ; course… | Julkaisussa **1857** … / **622**:ssa … | Dans la publication 1857 / en « 622-dans » | Vuonna **1857** … / Vuonna **622** … | bloquant |
+| course_1_la_naissance_de_l_islam_622/s1.b0.text | 700-luvulla Arabia ei kiinnostanut melkein ketään. | Au VIIIe siècle (700-799), l'Arabie n'intéressait presque personne | 600-luvulla Arabia ei kiinnostanut juuri ketään. | bloquant |
+| course_1_la_naissance_de_l_islam_622/s0.b0.text (76 segment… | Haluamme tappaa hänet. | Nous voulons le tuer. | Hänet halutaan tappaa. | bloquant |
+| course_100_les_fleurs_du_mal_baudelaire/hero.hook | Kuusi sensuroitua runoa, yksi vakaumus… | Six poèmes censurés, une conviction (croyance)… | Kuusi sensuroitua runoa, yksi tuomio… | bloquant |
+| onboarding.graph.subtitle, paywall.quiz.reviews.title | Sofian kanssa ja ilman | Avec et sans Sofia | Sophian kanssa ja ilman | majeur |
+| UI : tietokilpailu / tietovisa / visa / Tietustelut | Tietustelut auttoivat minua… | mot inexistant | Visat auttoivat minua… | majeur |
 
 ### Russe (`ru`) — groupe C, sans guide de traduction
 
@@ -432,12 +463,6 @@ Motifs récurrents :
 | onboarding.graph.withoutSophia, share.card.title | Bez Sophia / Podeli Sophiu | Sophia au nominatif après préposition ; accusatif mal formé | Bez Sophije / Podeli Sophiju | majeur |
 | onboardingV2.aboard.title | Dobro došao na brod! | Bienvenue sur le bateau | Dobro nam došao/la! | majeur |
 | paywall.header | najzanimljivija⏎osoba u prostoriji | du local, de la salle | Postani⏎najzanimljivija⏎osoba u društvu. | majeur |
-
-### Finnois (`fi`) — groupe C, sans guide de traduction
-
-**Score global : –/5** (UI –, cours –, quiz/glossaire –, catalogue –, App Store –). Action : **–**. Effort estimé : –
-
-Surfaces relues (score du relecteur) : UI (2.5). Constats relevés : 60 (6 bloquants, 44 majeurs, 10 mineurs), plus 52 vus mais non listés.
 
 
 ### Groupe B — langues avec guide
