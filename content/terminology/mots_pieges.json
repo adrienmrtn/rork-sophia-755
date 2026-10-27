@@ -246,7 +246,7 @@
       "\\b(spusti\\w*|začni\\w*|zruš\\w*|koniec|konc\\w*|bezplatn\\w*)\\s+(\\w+\\s+)?skúšk\\w*",
       "\\bskúšk\\w*\\s+(zadarmo|zdarma|Premium|sa\\s+(končí|skončí))",
       "\\b(bezplatn\\w*|zadarmo)\\s+(súdn\\w*\\s+)?proces\\w*|\\bsúdn\\w*\\s+proces\\w*\\s+zadarmo",
-      "\\b(skúšobn\\w*|demo|beta)\\s+verzi\\w*|\\btrial\\w*"
+      "\\btrial\\w*"
      ],
      "note": "« skúška » = examen (le moteur l'a mis dans « Spustiť skúšku », « koncom skúšky ») ; « súdny proces » = procès ; « skúšobná verzia » = version logicielle. Regex contextualisées car « skúška » est légitime dans les cours."
     },
@@ -367,7 +367,7 @@
     "tr": {
      "forme_imposee": "Hafif (triade « Hafif / Orta / Yoğun »)",
      "fautif": [
-      "\\A\\s*([ıiIİ]ş[ıiIİ]k|ayd[ıi]nl[ıi]k|aç[ıi]k\\s+renk)\\s*\\Z",
+      "\\A\\s*(ayd[ıi]nl[ıi]k|aç[ıi]k\\s+renk)\\s*\\Z",
       "([ıiIİ]ş[ıiIİ]k|ayd[ıi]nl[ıi]k)\\s*[/|•·,–-]\\s*(orta|[ıi]l[ıi]ml[ıi]|yoğun)",
       "(orta|[ıi]l[ıi]ml[ıi])\\s*[/|•·,–-]\\s*([ıiIİ]ş[ıiIİ]k|ayd[ıi]nl[ıi]k)"
      ],
@@ -852,10 +852,9 @@
     "tr": {
      "forme_imposee": "Ücretsiz (colonne de l'offre)",
      "fautif": [
-      "\\A\\s*(özgür|serbest|hür|bedava)\\s*\\Z",
+      "\\A\\s*(özgür|serbest|hür)\\s*\\Z",
       "(özgür|serbest|hür)\\s+(plan|sürüm|paket|üyelik|hesap|kurs|deneme|erişim)",
-      "(plan|sürüm|paket|üyelik|hesap)\\s*:?\\s*(özgür|serbest|hür)\\b",
-      "\\bbedava\\b"
+      "(plan|sürüm|paket|üyelik|hesap)\\s*:?\\s*(özgür|serbest|hür)\\b"
      ],
      "note": "«özgür/serbest» = libre (liberté). «bedava» est correct mais familier : signalé pour harmoniser sur «ücretsiz»."
     },
@@ -1349,8 +1348,7 @@
      "fautif": [
       "\\balmanak",
       "y[ıi]l\\s+kitab[ıi]|y[ıi]ll[ıi]k\\s+(dergi|yay[ıi]n|rehber|kitap)",
-      "\\bsenelik\\b",
-      "y[ıi]lda\\s+\\S+\\s+olarak\\s+tahsil"
+      "\\bsenelik\\b"
      ],
      "note": "En turc «yıllık» est aussi l'annuaire : seules les collocations (dergi, kitap…) trahissent le sens. «senelik» est correct mais à harmoniser. Le 4e regex prend la formule de facturation vue dans l'audit."
     },
@@ -1683,7 +1681,7 @@
      "forme_imposee": "Premium (nesklonné: „s Premium“, „předplatné Premium“)",
      "fautif": [
       "\\bpojistn\\w*",
-      "\\bprémi(e|í|i|ích|ov\\w*|um)\\b",
+      "\\bprémi(um|a|em|u)\\b",
       "\\bPremi(a|u|em|ov\\w*)\\b",
       "Премиум"
      ],
@@ -1742,7 +1740,7 @@
     "sk": {
      "forme_imposee": "Premium (nemenné, nesklonné: „s Premium“, „odomkni Premium“)",
      "fautif": [
-      "\\bprémi\\w*",
+      "\\bprémi(um|a|e|u|ou|í|ám|ách|ami)\\b",
       "\\bpoistn\\w*",
       "\\bPremium(u|om|e|a)\\b",
       "\\bpríplat\\w*\\s+(za\\s+)?(Premium|prístup|verzi)\\w*|Премиум"
@@ -1870,10 +1868,8 @@
     "tr": {
      "forme_imposee": "Kalan süre (étiquette avant le compte à rebours)",
      "fautif": [
-      "süresi\\s+dol(uyor|makta|acak)",
       "\\A\\s*(bitiş|sona\\s+erme)\\s+(y[ıi]l[ıi]|tarihi)\\s*:?\\s*\\Z",
-      "(içinde|y[ıi]l[ıi]nda)\\s+(sona\\s+erer|dolar|biter)\\s*:?\\s*\\Z",
-      "\\bsona\\s+eriyor\\s*:?\\s*\\Z"
+      "(içinde|y[ıi]l[ıi]nda)\\s+(sona\\s+erer|dolar|biter)\\s*:?\\s*\\Z"
      ],
      "note": "«Süresi doluyor» (est en train d'expirer) est la forme observée dans l'audit ; «yılında sona erer» est légitime en histoire, d'où l'ancrage en fin de chaîne."
     },
@@ -2138,7 +2134,6 @@
      "fautif": [
       "(kilidi|kilitleri|engeli|engelini|blokaj[ıi]n?[ıi]?|blokeyi)\\s+kald[ıi]r",
       "serbest\\s+b[ıi]rak",
-      "\\bkilit\\s+aç|kilidi\\s+aç\\b",
       "\\bdeblok|\\bunlock"
      ],
      "note": "«engeli kaldır» (lever le blocage) peut être légitime pour la fonction Bloqueur : vérifier le contexte."
@@ -2218,8 +2213,8 @@
      "fautif": [
       "\\bzruš\\w*\\s+(uzamčen|zámek|zamčen)\\w*",
       "\\bodjist\\w*",
-      "\\botevř\\w*\\s+(si\\s+)?(Premium|kurz\\w*|prémi\\w*)",
-      "\\bodblok\\w*"
+      "\\botevř\\w*\\s+(si\\s+)?(Premium|prémi\\w*)",
+      "\\bodblok\\w*\\s+(si\\s+)?(Premium|kurz\\w*|lekc\\w*|obsah\\w*|přístup\\w*)"
      ],
      "note": "« zrušit uzamčení » = annuler le verrouillage ; « otevřít » = ouvrir (porte, appli) ; « odjistit » = désarmer ; « odblokovat » trop technique : toujours « odemknout »."
     },
@@ -2414,7 +2409,6 @@
      "forme_imposee": "Powtórz (verbe) / powtórka (nom) – « powtórz materiał »",
      "fautif": [
       "\\brewi(zj|duj|dow)\\w*",
-      "\\brecenz\\w*",
       "\\bprzejrzyj\\s+(kurs|lekcj|materiał)\\w*",
       "\\bsprawdź\\s+(kurs|lekcj)\\w*"
      ],
@@ -2543,7 +2537,7 @@
      "fautif": [
       "\\brevíz\\w*",
       "\\brevid\\w*",
-      "\\b(oprav|skontroluj|prezri|preskúmaj)\\w*\\s+(si\\s+)?(\\w+\\s+)?(kurz|lekci|kartičk|poznámk)\\w*"
+      "\\b(oprav|skontroluj)\\w*\\s+(si\\s+)?(\\w+\\s+)?(kurz|lekci|kartičk|poznámk)\\w*"
      ],
      "note": "« revízia / revidovať » = inspection, révision technique ; « opraviť » = réparer ; « skontrolovať » = inspecter. Le sens scolaire est « opakovať si »."
     },
@@ -2667,8 +2661,7 @@
      "fautif": [
       "genel\\s+bilgi(ler)?\\b",
       "kültürel\\s+(ol|biri|insan|kişi)\\b",
-      "(görgülü|terbiyeli|yetiştirilmiş|ekili|işlenmiş)\\s+(ol|biri|insan)\\b",
-      "\\bbilgili\\s+ol\\b"
+      "(görgülü|terbiyeli|yetiştirilmiş|ekili|işlenmiş)\\s+(ol|biri|insan)\\b"
      ],
      "note": "Formes vues dans l'audit : «genel bilgi» → «genel kültür». «ekili/işlenmiş» = cultivé (champ) ; «kültürel» = culturel."
     },
@@ -2805,7 +2798,7 @@
      "fautif": [
       "\\bvšeobecn\\w*\\s+kultúr\\w*",
       "\\b(rastie|rast|rozšír\\w*|zlepš\\w*)\\s+(\\w+\\s+)?vedomi\\w*",
-      "\\bkultivovan\\w*|\\bdobre\\s+vychovan\\w*",
+      "\\bdobre\\s+vychovan\\w*",
       "\\bvšeobecn\\w*\\s+informáci\\w*"
      ],
      "note": "Audit : « Takto rastie tvoje vedomie » (vedomie = conscience). « všeobecná kultúra » est un calque, « kultivovaný » = raffiné/poli."
@@ -2940,7 +2933,6 @@
     "pl": {
      "forme_imposee": "Ciekawostki",
      "fautif": [
-      "\\banegdot\\w*",
       "\\bżart\\w*",
       "\\bdowcip\\w*",
       "\\bśmieszn\\w+\\s+histori\\w*"
@@ -5248,8 +5240,7 @@
      "fautif": [
       "\\b(wytrzyj|przetrzyj)\\b",
       "\\bswip\\w*",
-      "\\b(po)?ślizg\\w*",
-      "\\bprzeciągnij\\b"
+      "\\b(po)?ślizg\\w*"
      ],
      "note": "« wytrzyj » = essuyer, « swipnij » = anglicisme inventé, « ślizg » = glissade, « przeciągnij » = faire glisser (drag), geste différent."
     },
@@ -5826,7 +5817,7 @@
     "cs": {
      "forme_imposee": "Règle : « on » impersonnel = 3e pers. du pluriel, passif réfléchi ou « lidé », jamais « my » : « Chtějí ho zabít », « Žije se tam v kmenech / Lidé tam žijí v kmenech ».",
      "fautif": [
-      "\\b[Mm]y\\s+\\w+me\\b",
+      "(?<![„\"“(«])\\b[Mm]y\\s+\\w+me\\b",
       "\\bchceme\\s+ho\\s+zabít\\b",
       "\\bžijeme\\s+(tam|tu|zde)\\b"
      ],
@@ -5883,9 +5874,7 @@
     "sk": {
      "forme_imposee": "Pravidlo: neosobné „on“ → 3. os. mn. č. bez podmetu, zvratné pasívum alebo „ľudia“; nikdy 1. os. mn. č. Napr. „Chcú ho zabiť.“, „Ľudia tam žijú v kmeňoch.“, „Vyžaduje sa presná kresba.“",
      "fautif": [
-      "\\b(chceme|žijeme|požadujeme|hovoríme|vravíme|nazývame|považujeme|tvrdíme|nachádzame)\\b",
-      "\\b(vieme|veríme|musíme|môžeme|vidíme)\\b",
-      "\\bmy\\s+(sme|\\w+me)\\b"
+      "\\b(chceme|žijeme|požadujeme|hovoríme|vravíme|nazývame|považujeme|tvrdíme|nachádzame)\\b"
      ],
      "note": "Audit : « Chceme ho zabiť », « Žijeme tam v kmeňoch », « Požadujeme presnú kresbu ». La 2e regex est large (verbes fréquents à la 1re pers. du pluriel) : à vérifier à la main, Sophia parle en « ty », pas en « my »."
     },
@@ -6004,7 +5993,7 @@
       "\\b\\d{3,4}(d[ae]n?|t[ae]n?|ler|lar)\\b",
       "\\b\\d{0,3}[1278]'(?:da|ta|te|dan|tan|ten)\\b|\\b\\d{0,3}[69]'(?:de|te|ta|den|ten|tan)\\b|\\b\\d{0,3}[345]'(?:de|da|ta|den|dan|tan)\\b",
       "\\b\\d{0,2}[139]0'(?:de|te|ta|den|ten|tan)\\b|\\b\\d{0,2}[258]0'(?:da|ta|te|dan|tan|ten)\\b|\\b\\d{0,2}[46]0'(?:de|da|te|den|dan|ten)\\b|\\b\\d{0,2}70'(?:de|da|ta|den|dan|tan)\\b|\\b\\d{1,2}00'(?:da|ta|te|dan|tan|ten)\\b",
-      "\\b(içinde|içerisinde)\\s+\\d{3,4}\\b|\\b\\d{3,4}\\s+(içinde|içerisinde|şehrinde|kentinde|filminde)\\b"
+      "\\b\\d{3,4}\\s+(içinde|içerisinde|şehrinde|kentinde|filminde)\\b"
      ],
      "note": "1 : suffixe collé sans apostrophe (622de). 2–3 : mauvaise harmonie vocalique (1929'de, 1945'ta, 1940'da…). 4 : préposition de lieu / « dans la ville 622 ». «1984 filminde» peut être légitime si l'on parle du film."
     },
@@ -6012,7 +6001,7 @@
      "forme_imposee": "Règle : année suivie de « roku » ou « r. » (« w 622 roku », « w roku 622 », « około 630 roku ») ; jamais « w 622 » nu",
      "fautif": [
       "\\bw\\s+\\d{3,4}(?!\\s*(?:r\\.|roku|r\\b|p\\.n\\.e|n\\.e|-|–|\\d|%|:))",
-      "\\b(około|ok\\.)\\s+\\d{3,4}(?!\\s*(?:r\\.|roku|r\\b|p\\.n\\.e|n\\.e|-|–|\\d|%|km|m\\b|tys|mln|lat))",
+      "\\b(około|ok\\.)\\s+\\d{3,4}(?!\\s*(?:r\\.|roku|r\\b|p\\.n\\.e|n\\.e|-|–|\\d|%|km|m\\b|tys|mln|lat|°|stopni))",
       "\\bw\\s+(mieście|filmie)\\s+\\d{3,4}\\b",
       "\\bw\\s+\\d{3,4}-?(tym|ym|ego)\\b"
      ],
@@ -6041,7 +6030,7 @@
     "el": {
      "forme_imposee": "Κανόνας: έτος με άρθρο «το»: «Το 622», «γύρω στο 630», «τον 7ο αιώνα»· ποτέ σκέτη πρόθεση «σε» ούτε λέξη τόπου πριν από το έτος. Η ταινία/βιβλίο «1984» δεν μπαίνει πριν από χρονολογία.",
      "fautif": [
-      "\\bσ[εέ]\\s+\\d{3,4}\\b(?!\\s*(?:χρ[οό]ν|[εέ]τ|λ[εέ]πτ|[ηή]μ[εέ]ρ|μ[εέ]ρ|μ[εέ]τρ|χ[ιίϊΐ]λ|[αά]νθρ[ωώ]π|[αά]νδρ|στρ[αά]τ|[αά]τ[οό]μ|[εέ][υύϋΰ]ρ[ωώ]|δ[οό]λ|%|μ\\.|π\\.))",
+      "(?<!ανάμεσα )(?<!μεταξύ )(?<!εκτιμάται )\\bσ[εέ]\\s+\\d{3,4}\\b(?![.,]\\d)(?!\\s*(?:και|έως|ως|[-–])\\s*\\d)(?!\\s*(?:χρ[οό]ν|[εέ]τ|λ[εέ]πτ|[ηή]μ[εέ]ρ|μ[εέ]ρ|μ[εέ]τρ|χ[ιίϊΐ]λ|[αά]νθρ[ωώ]π|[αά]νδρ|στρ[αά]τ|[αά]τ[οό]μ|[εέ][υύϋΰ]ρ[ωώ]|δ[οό]λ|δ[ιίϊΐ]σ|[εέ]κ[αά]τ|τρ[ιίϊΐ]σ|%|μ\\.|π\\.|°|βαθμ|km|χλμ|κιλ|τόν|τον|γραμμ|λίτρ|ψήφ|μέλ|σελίδ|κομμάτ|είδ|εργαζ|μαθητ|παιδ|ώρ|δευτερ))",
       "\\bστ[ηή]ν\\s+π[οό]λ[ηή]\\s+\\d{3,4}\\b",
       "\\bστ[ηή]ν\\s+τ[αά][ιίϊΐ]ν[ιίϊΐ][αά]\\s+1984\\b",
       "\\bγ[υύϋΰ]ρ[ωώ]\\s+[αά]π[οό]\\s+(?:τ[οό]\\s+)?\\d{3,4}\\b"
@@ -6080,7 +6069,7 @@
      "fautif": [
       "\\bv\\s+\\d{3,4}\\b(?!\\s*(km|m\\b|kg|lid|obyv|vojá|muž|%|Kč|dolar|\\.|let|rok|knih|kus))",
       "\\bv\\s+roku\\s+\\d{3,4}\\b",
-      "\\b(kolem|okolo|zhruba)\\s+\\d{3,4}\\b(?!\\s*(km|m\\b|kg|lid|obyv|vojá|muž|%|Kč|dolar|let|rok|knih|kus))",
+      "\\b(kolem|okolo|zhruba)\\s+1?\\d{3}\\b(?![.,\\s]?\\d)(?!\\s*(km|m\\b|kg|lid|obyv|vojá|muž|%|Kč|dolar|let|rok|knih|kus|milion|miliard|tisíc|mil\\b|metr|hodin|dn|osob|člen|druh|stran|slov|ton|stup))",
       "\\b(ve\\s+městě|ve\\s+filmu|v\\s+knize)\\s+\\d{3}\\b"
      ],
      "note": "« v 622 » se lit comme un lieu ou un nombre ; « v roku » = slovaquisme. Les nombres suivis d'une unité (vojáků, km, dolarů) sont exclus pour éviter les faux positifs."
@@ -6136,7 +6125,7 @@
      "forme_imposee": "Pravidlo: rok vždy so slovom „rok“ v správnom páde: „v roku 622“, „okolo roku 630“, „od roku 610“, „po roku 1945“; dielo „1984“ → „v románe 1984“.",
      "fautif": [
       "\\b[vV]\\s+\\d{3,4}\\b(?!\\s*(km|m\\b|kg|ľud|obyv|metr|€|%|\\d))",
-      "\\b(okolo|približne|od|do|pred|po|zhruba)\\s+\\d{3,4}\\b(?!\\s*(km|m\\b|kg|ľud|obyv|metr|€|%|rok|\\d|\\s?\\d{3}))",
+      "\\b(okolo|približne|od|do|pred|po|zhruba)\\s+\\d{3,4}\\b(?=\\s*(?:[,;:)–—]|\\.(?!\\d)|$)|\\s+(?:až|do|sa|bol|bola|bolo|boli|je|n\\.\\s*l|pred\\s+n|p\\.\\s*n)\\b)",
       "\\b\\d{3,4}-(om|ho|tom|teho|tého)\\b"
      ],
      "note": "Audit : « V 622 » sans « roku » est systématique. La lookahead exclut les quantités (km, €, %, ľudí, rokov)."
@@ -6344,7 +6333,7 @@
       "\\b(v|ve|do|od|z|ze|během|koncem|počátkem|začátkem|polovin\\w*)\\s+\\d{1,2}\\s+stolet\\w*",
       "\\bv\\s+\\d{1,2}00\\.?\\s*letech\\b",
       "\\b\\d{1,2}(th|st|nd|rd)\\s+stolet\\w*",
-      "\\bstolet[íi]\\s+\\d{1,2}\\b"
+      "\\bstolet[íi]\\s+\\d{1,2}\\b(?!\\s*(až|-|–|%|procent))"
      ],
      "note": "« v 700. letech » = « dans les années 700 » (décalage d'un siècle) ; l'ordinal tchèque exige le point."
     },
@@ -6778,8 +6767,7 @@
      "fautif": [
       "\\bwóz(ek|ka|kiem|ki|ków)\\s+(spacerow|dziecięc)\\w*",
       "\\bspacerówk\\w*",
-      "\\bwózek\\b",
-      "\\b(bryczk|powoz|powóz)\\w*"
+      "\\bwózek\\b"
      ],
      "note": "« wózek (spacerowy) / spacerówka » = poussette, « bryczka / powóz » = calèche. « wózek » seul peut être légitime (wózek inwalidzki) : faux positif accepté."
     },
@@ -6807,8 +6795,7 @@
      "fautif": [
       "\\bκ[αά]ρ[οό]τσ[αά]κ[ιίϊΐ]\\w*",
       "\\bπ[αά][ιίϊΐ]δ[ιίϊΐ]κ\\w*\\s+κ[αά]ρ[οό]τσ\\w*",
-      "\\bκ[αά]ρ[οό]τσ(?:[αά]|[ιίϊΐ]|[ιίϊΐ][αά]|[αά]ς)\\b",
-      "\\b[αά]μ[αά]ξ(?:[αά]|[αά]κ[ιίϊΐ]|[αά]κ[ιίϊΐ][αά]|[αά]ς)\\b"
+      "\\bκ[αά]ρ[οό]τσ(?:[αά]|[ιίϊΐ]|[ιίϊΐ][αά]|[αά]ς)\\b"
      ],
      "note": "stroller → «καροτσάκι» (μωρού), «κάρο/καρότσα», «άμαξα». Η «άμαξα» μπορεί να εμφανιστεί νόμιμα σε μάθημα ιστορίας — ψευδώς θετικό αποδεκτό."
     },
@@ -7028,7 +7015,7 @@
     "pl": {
      "forme_imposee": "karawana",
      "fautif": [
-      "\\bprzyczep\\w*",
+      "\\bprzyczep(a|y|ie|ę|ą|om|ami|ach)\\b",
       "\\bkamper\\w*",
       "\\bkaravan\\w*",
       "\\bsamoch(ó|o)d\\w*\\s+kempingow\\w*"
@@ -7092,7 +7079,7 @@
     "cs": {
      "forme_imposee": "karavana (velbloudů, kupců)",
      "fautif": [
-      "\\bkaravan\\b|\\bkaravanem\\b|\\bkaravanech\\b|\\bkaravanům\\b",
+      "\\bkaravan(em|ech|ům)\\b",
       "\\bobytn\\w*\\s+(vůz|vozy|vozem|přívěs|aut)\\w*|\\bobytňák\\w*",
       "\\bkemp\\w*"
      ],
@@ -7518,7 +7505,7 @@
     "pl": {
      "forme_imposee": "ojczym (generał Aupick)",
      "fautif": [
-      "\\bteś[cć]\\w*",
+      "\\bteś(ć|cia|ciem|ciowi|ciu)\\b[^.\\n]{0,60}(Aupick|Baudelaire)|(Aupick|Baudelaire)[^.\\n]{0,60}\\bteś(ć|cia|ciem|ciowi|ciu)\\b",
       "\\bojciec\\s+żony\\b"
      ],
      "note": "« teść » = père de l'épouse, « teściowa » = belle-mère. Faux positif accepté dans un cours sur les liens de parenté."
@@ -7578,7 +7565,7 @@
     "cs": {
      "forme_imposee": "nevlastní otec (otčím)",
      "fautif": [
-      "\\btch[áa]n\\w*"
+      "\\btch[áa]n\\w*[^.\\n]{0,60}\\b(Aupick|Baudelair)\\w*|\\b(Aupick|Baudelair)\\w*[^.\\n]{0,60}\\btch[áa]n\\w*"
      ],
      "note": "« tchán » = père de l'épouse ; peut être légitime ailleurs, mais n'apparaît dans aucun cours prévu : faux positif accepté."
     },
@@ -10051,7 +10038,6 @@
      "forme_imposee": "renesance",
      "fautif": [
       "\\b(italsk\\w*|evropsk\\w*)\\s+(obrozen|znovuzrozen)\\w*",
-      "\\bznovuzrozen\\w*",
       "\\bobrozen\\w*[^.\\n]{0,40}\\b(Itál|Florenc|Leonard|Michelangel|Medicej|1[45]\\d\\d)\\w*"
      ],
      "note": "« obrození » = Réveil national (tchèque), légitime en histoire tchèque ; « znovuzrození » = renaissance au sens de naissance."
@@ -10621,7 +10607,7 @@
      "fautif": [
       "\\bcár\\w*\\s+Art\\w*|\\bcárovn\\w*\\s+(Gin|Guin|Gwen)\\w*",
       "\\bkráľ\\w*\\s+Arthur\\w*",
-      "\\bGuinever\\w*|\\bGwenhwyfar\\b"
+      "\\bGuinevere\\b(?=\\s+(?:a|pád|sa|je|bola|zradí|miluje)\\b)|\\bGwenhwyfar\\b"
      ],
      "note": "« cár / cárovná » = tsar ; la forme slovaque établie est « Artuš » (pas « Arthur ») et « Ginevra »."
     },
@@ -10745,7 +10731,7 @@
     "tr": {
      "forme_imposee": "BM (Birleşmiş Milletler), NATO",
      "fautif": [
-      "(?-i:\\b(?:ONU|OTAN|UNO)\\b)",
+      "(?<!Fransızcada\\s)(?<!Fransızca\\s)(?-i:\\b(?:ONU|OTAN|UNO)\\b)",
       "(?-i:\\bUN\\b)",
       "birleşik\\s+milletler",
       "\\bBMÖ\\b"
@@ -10756,8 +10742,8 @@
      "forme_imposee": "ONZ, NATO",
      "fautif": [
       "\\bONU\\b",
-      "\\bOTAN\\b",
-      "(?<![A-Za-z])UN(?![A-Za-z])",
+      "\\bOTAN\\b(?!\\s+po\\s+francusku)",
+      "(?-i:\\bUN\\b)",
       "\\b(ONZ|NATO)-?(?:u|em|ie)\\b"
      ],
      "note": "« ONU / OTAN » = sigles français non adaptés, « UN » = sigle anglais. Les sigles polonais restent invariables (« ONZ-u » toléré mais hors canon)."
@@ -10785,9 +10771,9 @@
      "forme_imposee": "ΟΗΕ, ΝΑΤΟ (ελληνικά κεφαλαία)",
      "fautif": [
       "\\bUN\\b",
-      "\\bNATO\\b",
+      "\\bNATO\\b(?!\\s+στα\\s+αγγλικά)",
       "\\bμ[ηή][- ](?:[εέ]ν[ωώ]μ[εέ]ν|[εέ]θν)\\w*",
-      "\\b(?:OTAN|ONU)\\b"
+      "\\b(?:OTAN|ONU)\\b(?!\\s+στα\\s+γαλλικά)"
      ],
      "note": "Η regex «NATO» είναι με λατινικά: πιάνει το ομόγλυφο λατινικό NATO, όχι το ελληνικό ΝΑΤΟ. Το γαλλικό «OTAN/ONU» και το «μη-» (UN → un-) είναι λάθη μηχανής. Το ελληνικό «ΟΤΑΝ» δεν μπαίνει: συμπίπτει με το «ΟΤΑΝ» (όταν) σε κεφαλαία."
     },
@@ -10824,7 +10810,7 @@
     "cs": {
      "forme_imposee": "OSN, NATO",
      "fautif": [
-      "\\b(ONU|OTAN|NSO|OAT)\\b",
+      "\\b(ONU|OTAN|NSO|OAT)\\b(?![^.\\n]{0,15}francouz)",
       "\\bUN\\b",
       "\\bne-?OSN\\b"
      ],
@@ -10883,7 +10869,7 @@
     "sk": {
      "forme_imposee": "OSN (Organizácia Spojených národov), NATO",
      "fautif": [
-      "\\bUN\\b|\\bONU\\b",
+      "(?-i:\\bUN\\b|\\bONU\\b)",
       "\\bNATO\\s+vo\\s+francúzštin\\w*|\\bOTAN\\s+v\\s+angličtin\\w*",
       "(?<!Organizácia )(?<!Organizácie )(?<!Organizácii )(?<!Organizáciou )\\bSpojen\\w*\\s+národ\\w*"
      ],
@@ -11280,7 +11266,7 @@
     "pl": {
      "forme_imposee": "razzia, dżizja, kalif, dhimma, umma",
      "fautif": [
-      "\\b(jizya|jizyah|caliph\\w*|ummah|khalif\\w*|calif\\w*)\\b",
+      "\\b(jizya|jizyah|caliph\\w*|ummah|khalif\\w*|calif(e|es|a|at|ate|ates)?)\\b",
       "\\b(kalifs|razzias|dhimmas|jizyas|ummas)\\b",
       "\\bdżizya\\b|\\bdzizj\\w*",
       "\\bummah?\\s+muzułmańsk\\w*"
@@ -11311,7 +11297,7 @@
      "forme_imposee": "ραζία, τζίζια, χαλίφης, ντίμμα, ούμμα",
      "fautif": [
       "\\b(?:razzias?|jizyah?|djizy\\w*|caliph\\w*|calife\\w*|khalif\\w*|dhimm\\w*|ummah?|oumma)\\b",
-      "\\bκ[αά]λ[ιίϊΐ]φ\\w*",
+      "\\bκ[αά]λ[ιίϊΐ]φ(?![οό]ρν)\\w*",
       "\\b[οό][υύϋΰ]μ{1,2}[αά]χ\\b|\\bτζ[ιίϊΐ]ζ[ιίϊΐ](?:[αά]χ|[εέ])\\b"
      ],
      "note": "Ελληνικοί τύποι: «χαλίφης» (όχι «κάλιφ»), «ούμμα» (όχι «ούμμαχ»), «τζίζια»· όχι λατινικοί χαρακτήρες."
@@ -11350,7 +11336,7 @@
      "forme_imposee": "razie (nájezd), džizja, chalífa, dhimma (status chráněných), umma",
      "fautif": [
       "\\b(razzias?|jizyah?|caliphs?|califes?|dhimmis?|Ummah|Oumma)\\b",
-      "\\bcalif\\w*|\\bcaliph\\w*",
+      "\\bcalif(e|es|at|ats)?\\b|\\bcaliph\\w*",
       "\\bjizya\\w*"
      ],
      "note": "Graphies tchèques ; signalés : graphies anglaises ou françaises (pluriel en -s collé)."
@@ -12031,7 +12017,7 @@
     "pl": {
      "forme_imposee": "Pan (bóg pasterzy)",
      "fautif": [
-      "\\bpatelni\\w*",
+      "\\bpatelni\\w*[^.\\n]{0,40}(bóg|boga|bogu|bożk|pasterz|nimf|fletni|satyr)\\w*|(bóg|bożek|pasterz|nimf|fletni|satyr)\\w*[^.\\n]{0,40}\\bpatelni\\w*",
       "\\bpanoram(uj|owan)\\w*",
       "\\btrzas(k|n)\\w*[^.\\n]{0,30}(bóg|bożek|pasterz|nimf|fletni)\\w*"
      ],
@@ -12279,7 +12265,7 @@
      "forme_imposee": "Nemezis",
      "fautif": [
       "\\bNemesis\\b",
-      "\\b(arcy)?wr(ó|o)g\\w*[^.\\n]{0,30}(bogini|zemst|Zeus|Grecj)\\w*",
+      "\\barcywr(ó|o)g\\w*[^.\\n]{0,30}(bogini|zemst|Zeus|Grecj)\\w*",
       "\\bbogini\\s+(wrog|nieprzyjaci)\\w*",
       "\\bnieprzyjaci(el|ółk)\\w*[^.\\n]{0,20}bogini"
      ],
@@ -12305,7 +12291,7 @@
     "el": {
      "forme_imposee": "Νέμεση (θεά της εκδίκησης / της δίκαιης τιμωρίας)",
      "fautif": [
-      "\\bθ[εέ][αά]\\s+(?:τ[οό][υύϋΰ]\\s+|τ[ηή]ς\\s+)?(?:[εέ]χθρ|[αά]ντ[ιίϊΐ]π[αά]λ|[αά]ρχ[εέ]χθρ)\\w*",
+      "\\bθ[εέ][αά]\\s+(?:τ[οό][υύϋΰ]|τ[ηή]ς)\\s+(?:[εέ]χθρ|[αά]ντ[ιίϊΐ]π[αά]λ|[αά]ρχ[εέ]χθρ)\\w*",
       "\\b(?:[εέ]χθρ|[αά]ντ[ιίϊΐ]π[αά]λ|[αά]ρχ[εέ]χθρ)\\w*\\s+τ[ηή]ς\\s+(?:[εέ]κδ[ιίϊΐ]κ[ηή]σ|τ[ιίϊΐ]μ[ωώ]ρ)\\w*",
       "\\bnemesis\\b"
      ],
@@ -12398,7 +12384,6 @@
     "sk": {
      "forme_imposee": "Nemesis (bohyňa pomsty)",
      "fautif": [
-      "\\bbohyň\\w*\\W+(\\w+\\W+)?(nepriateľ|protivník|sok)\\w*",
       "\\b(úhlavn\\w*\\s+)?(nepriateľ|protivník)\\w*\\s*,?\\s+bohyň\\w*\\s+pomst\\w*"
      ],
      "note": "« nepriateľ / protivník » = ennemi ; le nom propre reste Nemesis."
@@ -12523,8 +12508,7 @@
      "fautif": [
       "büyük\\s+depresyon",
       "büyük\\s+(çöküntü|ruhsal\\s+çöküntü|melankoli)",
-      "(klinik|ruhsal)\\s+(depresyon|bunal[ıi]m).{0,40}(1929|borsa|ekonomi)",
-      "büyük\\s+bunal[ıi]m"
+      "(klinik|ruhsal)\\s+(depresyon|bunal[ıi]m).{0,40}(1929|borsa|ekonomi)"
      ],
      "note": "«Büyük Bunalım» est un synonyme attesté : signalé seulement pour harmoniser sur Büyük Buhran."
     },
@@ -13370,8 +13354,7 @@
      "forme_imposee": "New Deal",
      "fautif": [
       "\\bNov\\w*\\s+(dohod|obchod|transakc|smlouv)\\w*[^.\\n]{0,60}\\bRoosevelt\\w*",
-      "\\bRoosevelt\\w*[^.\\n]{0,60}\\bnov\\w*\\s+(dohod|obchod|transakc|smlouv)\\w*",
-      "\\bNov\\w*\\s+úděl\\w*"
+      "\\bRoosevelt\\w*[^.\\n]{0,60}\\bnov\\w*\\s+(dohod|obchod|transakc|smlouv)\\w*"
      ],
      "note": "Nom propre conservé ; « nová dohoda / nový obchod » = nouvel accord, nouvelle transaction ; « Nový úděl » (ancienne traduction) signalé pour uniformiser."
     },
@@ -14061,8 +14044,6 @@
     "pl": {
      "forme_imposee": "Oddźwięki (Correspondances ; synestezja)",
      "fautif": [
-      "\\bkorespondencj\\w*[^.\\n]{0,60}(Baudelaire|synestez|zmysł|sonet)\\w*",
-      "(Baudelaire|synestez|sonet)\\w*[^.\\n]{0,60}\\bkorespondencj\\w*",
       "\\bwymian\\w+\\s+list(ów|y)\\b[^.\\n]{0,40}Baudelaire",
       "„Korespondencj\\w*”"
      ],

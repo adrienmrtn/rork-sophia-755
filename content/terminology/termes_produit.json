@@ -109,7 +109,6 @@
       "\\bkwiz\\w*",
       "\\bkwestionariusz\\w*",
       "\\bsprawdzian\\w*",
-      "\\begzamin\\w*",
       "\\bankiet\\w*"
      ],
      "note": "« quiz » est l'emprunt courant en polonais (décliné : quizu, quizie) ; « kwiz » est une graphie désuète, « sprawdzian / egzamin » sont scolaires et anxiogènes, « test » trop fréquent pour être signalé."
@@ -137,7 +136,6 @@
     "el": {
      "canon": "κουίζ",
      "variantes_a_signaler": [
-      "\\bτ[εέ]στ\\b",
       "\\b[εέ]ρ[ωώ]τ[ηή]μ[αά]τ[οό]λ[οό]γ[ιίϊΐ]\\w*",
       "\\bquiz\\w*",
       "\\bδ[ιίϊΐ][αά]γ[ωώ]ν[ιίϊΐ]σμ\\w*"
@@ -358,7 +356,7 @@
     "tr": {
      "canon": "Kurs",
      "variantes_a_signaler": [
-      "\\bders(ler|i|e|in|ten|ini|leri|lerin)?\\b(?!\\s+çal[ıi]ş)",
+      "\\bders(ler|i|e|in|ten|ini|leri|lerin)?\\b(?!\\s+(çal[ıi]ş|tekrar|ç[ıi]kar))",
       "\\bünite|\\bmodül",
       "\\bkonu(yu|lar[ıi])?\\s+(oku|tamamla|bitir)",
       "\\beğitim(ler)?i?\\s+(oku|tamamla|izle)"
@@ -368,9 +366,7 @@
     "pl": {
      "canon": "Kurs",
      "variantes_a_signaler": [
-      "\\blekcj\\w*",
-      "\\bzajęci\\w*",
-      "\\bwykład\\w*",
+      "\\bwykład(y|ów|u|zie|em|ami|ach|om)?\\b",
       "\\bmoduł\\w*",
       "\\bszkoleni\\w*"
      ],
@@ -398,10 +394,9 @@
     "el": {
      "canon": "μάθημα",
      "variantes_a_signaler": [
-      "\\bδ[ιίϊΐ][αά]λ[εέ]ξ\\w*",
+      "\\bδ[ιίϊΐ][αά]λ[εέ]ξ(?:[ηή]|[ηή]ς|[εέ]ων)\\b|\\b(?:οι|τις)\\s+δ[ιίϊΐ][αά]λ[εέ]ξ[εέ][ιίϊΐ]ς\\b",
       "\\bσ[εέ][ιίϊΐ]ρ\\w*\\s+μ[αά]θ[ηή]μ[αά]τ[ωώ]ν\\b",
-      "\\b(?:course|lesson)s?\\b",
-      "\\bκ[οό][υύϋΰ]ρσ\\w*"
+      "\\b(?:course|lesson)s?\\b"
      ],
      "note": "Η μονάδα των 10 λεπτών είναι «μάθημα» («μάθημα 10 λεπτών»)· «διάλεξη» = ακαδημαϊκή ομιλία, «σειρά μαθημάτων» = course με πολλά μαθήματα."
     },
@@ -633,9 +628,6 @@
      "canon": "Ścieżka",
      "variantes_a_signaler": [
       "\\btras[aęyą]\\b",
-      "\\bszlak\\w*",
-      "\\bprzebieg\\w*",
-      "\\bkarier\\w*",
       "\\bpodróż\\w*\\s+(edukacyjn|tematyczn)\\w*"
      ],
      "note": "« ścieżka » est le terme consacré des apps d'apprentissage ; « trasa / szlak » = itinéraire, « przebieg » = déroulement, « kariera » = parcours professionnel."
@@ -702,7 +694,7 @@
      "variantes_a_signaler": [
       "\\btras(a|y|u|e|ou)\\b",
       "\\b(tvůj|tvoje|záložk\\w*)\\s+průběh\\w*|^\\s*Průběh\\w*\\s*$",
-      "\\bstezk\\w*",
+      "\\b(tvoje|tvá|tvou|záložk\\w*)\\s+stezk\\w*|^\\s*Stezky?\\s*$",
       "^\\s*Kariér\\w*\\s*$|\\b(tvoje|tvá)\\s+kariér\\w*"
      ],
      "note": "« cesta » = chemin de progression, naturel et court ; « trasa » = itinéraire, « průběh » = déroulement, « kariéra » = parcours professionnel."
@@ -757,10 +749,7 @@
     "sk": {
      "canon": "cesta (záložka: „Cesty“)",
      "variantes_a_signaler": [
-      "\\btras[aeyuo]\\b|\\btrasy\\b|\\btrasu\\b",
-      "\\bpriebeh\\w*",
-      "\\bdráh[aeyuo]\\b|\\bdráhu\\b",
-      "\\bkariér\\w*"
+      "\\btras[aeyuo]\\b|\\btrasy\\b|\\btrasu\\b"
      ],
      "note": "« cesta » = chemin de progression, naturel et court ; « trasa » = itinéraire, « priebeh » = déroulement, « kariéra » = parcours professionnel."
     },
@@ -879,7 +868,6 @@
      "canon": "Koleksiyon",
      "variantes_a_signaler": [
       "kolleksiyon",
-      "\\bderleme(ler)?\\b",
       "(kurs|ders)\\s+(seti|serisi|paketi|grubu)"
      ],
      "note": "«Koleksiyon» est le mot courant des apps ; «derleme» = compilation, «seri» entre en collision avec le streak."
@@ -887,10 +875,8 @@
     "pl": {
      "canon": "Kolekcja",
      "variantes_a_signaler": [
-      "\\bzbi(ó|o)r\\w*",
       "\\bzestaw\\w*",
-      "\\bseri[aęią]\\s+kurs\\w*",
-      "\\bpakiet\\w*"
+      "\\bseri[aęią]\\s+kurs\\w*"
      ],
      "note": "« kolekcja » garde la métaphore de l'app ; « zbiór » = recueil, « zestaw » = kit, « seria kursów » entrerait en collision avec « seria » (streak)."
     },
@@ -1140,7 +1126,7 @@
     "tr": {
      "canon": "Seviye",
      "variantes_a_signaler": [
-      "\\bdüzey(i|in|e|de)?\\b",
+      "\\bdüzey(i|in|e|de)?\\s*(\\d|%d|%@|\\{)|(\\d|%d|%@|\\})\\.?\\s*düzey",
       "\\blevel\\b|\\blvl\\b",
       "\\bkademe",
       "\\başama\\s*\\d"
@@ -1152,7 +1138,6 @@
      "variantes_a_signaler": [
       "\\bstopie(ń|nia|niu|niem)\\b",
       "\\bszczebl?\\w*",
-      "\\brang[aęiąo]\\b",
       "\\b(LVL|NIV|LV)\\.?\\s*\\d"
      ],
      "note": "« poziom » est le mot des jeux et apps ; « stopień » = degré/grade, « szczebel » = échelon, « ranga » = rang ; « NIV. » et « LVL » sont des abréviations non adaptées."
@@ -1220,7 +1205,7 @@
      "canon": "úroveň (štítek: „Úroveň 3“, zkratka „Úr. 3“)",
      "variantes_a_signaler": [
       "\\blevel\\w*",
-      "\\bstup(eň|ně|ni|něm|ňů)\\b",
+      "^\\s*Stup(eň|ně)\\s*\\d*\\s*$|\\bstup(eň|ni|ně|něm)\\s+\\d+\\b(?!\\s*(°|%))",
       "\\bLvl\\b|\\bLV\\.?\\s*\\d",
       "\\bNIV\\.?\\s*\\d"
      ],
@@ -1280,7 +1265,7 @@
      "canon": "úroveň (skratka: „Úr. 3“)",
      "variantes_a_signaler": [
       "\\blevel\\w*",
-      "\\bstup(eň|ňa|ni|ňom|ne|ňov)\\b",
+      "\\bstup(eň|ňa|ni|ňom)\\s+\\d+\\b",
       "\\bLvl\\b|\\bLV\\.?\\s*\\d",
       "\\bNIV\\.?\\s*\\d"
      ],
@@ -1932,8 +1917,7 @@
      "variantes_a_signaler": [
       "premiyum|prömiyum|primyum|premyum|premiyom",
       "\\bprim(i|e|in|ler|iyle)?\\b",
-      "(üstün|ayr[ıi]cal[ıi]kl[ıi]|özel|pahal[ıi])\\s+(üyelik|sürüm|paket|plan|teklif)",
-      "sophia\\s+pro\\b"
+      "(üstün|ayr[ıi]cal[ıi]kl[ıi]|özel|pahal[ıi])\\s+(üyelik|sürüm|paket|plan|teklif)"
      ],
      "note": "Marque conservée telle quelle avec suffixe apostrophé (Premium'a). L'audit montre « Sophia PRO » dans le paywall : signalé pour que l'équipe marque tranche entre PRO et Premium."
     },
@@ -2011,7 +1995,7 @@
     "cs": {
      "canon": "Premium",
      "variantes_a_signaler": [
-      "\\bprémi(um|ov)\\w*",
+      "\\bprémi(um|a|em|u)\\b",
       "\\bPremi(a|u|em|ov\\w*)\\b",
       "\\bpojistn\\w*",
       "Премиум"
@@ -2072,7 +2056,7 @@
     "sk": {
      "canon": "Premium",
      "variantes_a_signaler": [
-      "\\bprémi\\w*",
+      "\\bprémi(um|a|e|u|ou|í|ám|ách|ami)\\b",
       "\\bPremium(u|om|e|a)\\b",
       "\\bnadštandard\\w*",
       "Премиум|\\bPremijum\\b"
@@ -2276,7 +2260,6 @@
      "canon": "Sophia",
      "variantes_a_signaler": [
       "\\bSofi(a|e|i|í|ii)\\b",
-      "\\bSophi(i|í|e)\\b",
       "\\bSofij\\w*",
       "Софи\\w*"
      ],
@@ -2470,8 +2453,7 @@
       "\\bbloker\\w*",
       "\\bblocker\\w*",
       "\\bblokownik\\w*",
-      "\\bzapor[aęy]\\b",
-      "\\bblokując\\w+\\s+TikTok"
+      "\\bzapor[aęy]\\b"
      ],
      "note": "« blokada » (nom d'action) est plus naturel qu'un agent « bloker / blokownik », anglicisme ou néologisme ; « zapora » = pare-feu."
     },
@@ -2734,7 +2716,6 @@
      "variantes_a_signaler": [
       "\\bćwiczeni\\w*",
       "\\bpraktyk\\w*",
-      "\\btrenowani\\w*",
       "\\bszkoleni\\w*"
      ],
      "note": "« trening » est court et usuel pour une fonction de répétition ; « ćwiczenia » (exercices) est acceptable en prose mais pas pour l'onglet, « praktyka » est un contresens."
@@ -2761,7 +2742,6 @@
      "canon": "Εξάσκηση",
      "variantes_a_signaler": [
       "\\bπρ[οό]π[οό]ν[ηή]σ\\w*",
-      "\\b[εέ]κπ[αά][ιίϊΐ]δ[εέ][υύϋΰ]σ\\w*",
       "\\bpractice\\b"
      ],
      "note": "«Εξάσκηση» = επανάληψη για να μάθεις· «προπόνηση» είναι αθλητικό, «εκπαίδευση» = training/σπουδές (νόμιμο σε μαθήματα — ψευδώς θετικό αποδεκτό)."
@@ -2859,7 +2839,6 @@
      "variantes_a_signaler": [
       "\\bprecvičovani\\w*",
       "\\bcvičeni[eua]\\b",
-      "\\btrénovani\\w*",
       "\\bpraktik[ay]\\b|\\bprax\\b"
      ],
      "note": "Onglet court et clair ; le verbe dans les phrases reste « precvič si ». « prax / praktika » = pratique professionnelle."
@@ -2982,9 +2961,7 @@
      "canon": "Tekrar et",
      "variantes_a_signaler": [
       "revize\\s+et|revizyon",
-      "gözden\\s+geçir",
-      "yeniden\\s+(çal[ıi]ş|oku)",
-      "\\btekrarla\\b"
+      "gözden\\s+geçir"
      ],
      "note": "«tekrar etmek / ders tekrarı» est le terme scolaire turc ; «revize» = modifier, «gözden geçir» = passer en revue."
     },
@@ -2992,10 +2969,7 @@
      "canon": "Powtórz (nom : powtórka)",
      "variantes_a_signaler": [
       "\\brewi(zj|duj|dow)\\w*",
-      "\\bprzejrz\\w*",
-      "\\bprzegląd\\w*",
-      "\\brecenz\\w*",
-      "\\butrwal\\w*"
+      "\\bprzejrz(yj|yjmy|yjcie|eć|enie|enia)\\b"
      ],
      "note": "« powtórz / powtórka » est le vocabulaire scolaire polonais ; « rewizja » = inspection, « przegląd / przejrzyj » = passer en revue, « utrwal » = synonyme hors canon."
     },
@@ -3123,7 +3097,6 @@
      "variantes_a_signaler": [
       "\\brevid\\w*|\\brevíz\\w*",
       "\\bpreštud\\w*",
-      "\\bpreskúm\\w*",
       "\\bprezri\\s+si\\b"
      ],
      "note": "« opakovať si » = le sens scolaire ; « revidovať » = inspecter, « preskúmať » = examiner."
@@ -3244,8 +3217,7 @@
      "canon": "Hedef",
      "variantes_a_signaler": [
       "\\bobjektif",
-      "\\bamaç(lar|[ıi]n|[ıi]n[ıi]|[ıi])?\\b",
-      "\\bgaye",
+      "\\bgaye(ler|si|n|ni|ye|m)?\\b",
       "\\bmaksat"
      ],
      "note": "«objektif» = objectif photo ; «amaç» est correct mais l'UI harmonise sur «hedef» (but choisi dans l'onboarding)."
@@ -3255,7 +3227,6 @@
      "variantes_a_signaler": [
       "\\bobiektyw\\w*",
       "\\bzamierzeni\\w*",
-      "\\bmisj[aęiąo]\\b",
       "\\btarget\\w*"
      ],
      "note": "« cel » = but ; « obiektyw » = objectif photographique (faux ami direct), « zamierzenie » = intention, « misja » = mission."
@@ -3378,7 +3349,7 @@
      "canon": "cieľ",
      "variantes_a_signaler": [
       "\\bobjektív\\w*",
-      "\\bzámer\\w*",
+      "\\b(tvoj\\w*|svoj\\w*|denn\\w*|môj|moj\\w*)\\s+zámer\\w*",
       "\\bmét[auy]\\b",
       "\\búmys(el|l)\\w*"
      ],
@@ -3498,7 +3469,7 @@
      "canon": "Alan",
      "variantes_a_signaler": [
       "\\bmadde(ler|si)?\\b.{0,20}(tarih|bilim|sanat|felsefe)|(tarih|bilim|sanat).{0,20}\\bmadde",
-      "\\bmateryal|\\bmalzeme",
+      "\\A\\s*(materyal|malzeme)(ler)?\\s*\\Z",
       "\\bbranş",
       "\\bkonu(lar)?\\s*:?\\s*(tarih|bilim|sanat|felsefe|edebiyat)"
      ],
@@ -3507,8 +3478,6 @@
     "pl": {
      "canon": "Przedmiot",
      "variantes_a_signaler": [
-      "\\bmateri[aęią]\\b",
-      "\\bmateriał\\w*",
       "\\bdziedzin\\w*",
       "\\b(wybierz|wszystkie|twoje|ulubione)\\s+temat\\w*",
       "\\bsubject\\w*"
@@ -3624,10 +3593,7 @@
     "sk": {
      "canon": "predmet",
      "variantes_a_signaler": [
-      "\\bmatéri\\w*",
-      "\\bdisciplín\\w*",
-      "\\bodbor(y|u|e|om|och|mi|ov)?\\b",
-      "\\btém[ay]\\b"
+      "\\bmatéri\\w*"
      ],
      "note": "« predmet » = matière scolaire (dejepis, prírodné vedy) ; « téma » réservé à « sujet » ; « matéria » = matière physique."
     },
@@ -3745,7 +3711,7 @@
     "tr": {
      "canon": "Arkadaş",
      "variantes_a_signaler": [
-      "\\bdost(lar|um|un|u|lar[ıi]n)?\\b",
+      "\\A\\s*dost(lar)?\\s*\\Z|\\bdost(lar|um|un|u|lar[ıi]n|lar[ıi]n[ıi]|lar[ıi]m)?\\s+(davet|ekle|ara|listesi|s[ıi]ralamas[ıi])",
       "\\bahbap",
       "\\bkanka",
       "\\btakipçi"
@@ -3755,7 +3721,7 @@
     "pl": {
      "canon": "Znajomy (pl. Znajomi)",
      "variantes_a_signaler": [
-      "\\bprzyjaci(el|ele|ół|ółk|ółmi|elem|elowi|ela)\\w*",
+      "\\b(dodaj|zaproś|zaproszeni\\w*|twoi|twoich|twoim|lista|listy|ranking\\w*)\\s+przyjaci\\w*",
       "\\bkoleg\\w*",
       "\\bkoleżank\\w*",
       "\\bkumpl\\w*",
@@ -3827,7 +3793,7 @@
      "variantes_a_signaler": [
       "\\bfriend\\w*|\\bfrend\\w*",
       "\\b(tvoj\\w*|tvé|tvůj|přidej\\w*|pozvi)\\s+(si\\s+)?kontakt\\w*",
-      "\\bspojen(ec|ce|ci|ců)\\b"
+      "\\b(tvoj\\w*|tvé|tvůj|přidej\\w*|pozvi)\\s+(si\\s+)?spojen(ec|ce|ci|ců|cem)\\b"
      ],
      "note": "« Přátelé » est le libellé standard des fonctions sociales ; « kamarád » toléré dans les textes chaleureux, « kontakt » = carnet d'adresses."
     },
@@ -4019,7 +3985,6 @@
     "pl": {
      "canon": "Subskrypcja",
      "variantes_a_signaler": [
-      "\\babonament\\w*",
       "\\bprenumerat\\w*",
       "\\bczłonkostw\\w*",
       "\\bsubscription\\w*"
@@ -4274,8 +4239,6 @@
      "canon": "Kilidini aç",
      "variantes_a_signaler": [
       "(kilidi|kilitleri|engeli|blokaj[ıi])\\s+kald[ıi]r",
-      "serbest\\s+b[ıi]rak",
-      "\\bkilit\\s+aç",
       "\\bdeblok|\\bunlock"
      ],
      "note": "Terme des apps d'apprentissage (« kursun kilidini aç ») ; pour l'offre, « Premium'a geç » est admis."
@@ -4354,7 +4317,7 @@
     "cs": {
      "canon": "odemknout",
      "variantes_a_signaler": [
-      "\\bodblok\\w*",
+      "\\bodblok\\w*\\s+(si\\s+)?(Premium|kurz\\w*|lekc\\w*|obsah\\w*|přístup\\w*)",
       "\\bzpřístupn\\w*",
       "\\bodjist\\w*",
       "\\bzruš\\w*\\s+(uzamčen|zámek)\\w*"
@@ -5067,9 +5030,8 @@
     "tr": {
      "canon": "Kitaplık",
      "variantes_a_signaler": [
-      "\\bkütüphane",
+      "\\A\\s*kütüphane(m|n)?\\s*\\Z|\\bkütüphane(ye|ne|me|nde|mde)\\s+(ekle|kaydet|git|dön)",
       "\\bbiblio",
-      "\\barşiv",
       "\\bkatalog"
      ],
      "note": "«Kitaplık» est la convention des onglets « Bibliothèque » (YouTube, Apple, Spotify TR) ; «kütüphane» désigne le bâtiment."
@@ -5079,7 +5041,7 @@
      "variantes_a_signaler": [
       "\\bbiblio\\b",
       "\\bksięgozbi(ó|o)r\\w*",
-      "\\bczyteln\\w*",
+      "\\bczytelni[aęą]?\\b",
       "\\bkatalog\\w*",
       "\\blibrar\\w*"
      ],
@@ -5108,7 +5070,6 @@
      "canon": "Βιβλιοθήκη",
      "variantes_a_signaler": [
       "\\bκ[αά]τ[αά]λ[οό]γ(?:[οό]ς|[οό][υύϋΰ])\\b",
-      "\\b[αά]ρχ[εέ][ιίϊΐ](?:[οό]|[αά])\\b",
       "\\blibrary\\b"
      ],
      "note": "«Βιβλιοθήκη» για την καρτέλα με όλα τα μαθήματα (σύντ. «Βιβλιοθ.»)· «κατάλογος/αρχείο» αλλάζουν την έννοια."

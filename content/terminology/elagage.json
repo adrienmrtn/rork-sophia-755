@@ -1,0 +1,5144 @@
+{
+ "_readme": [
+  "Historique de l'élagage : expressions retirées (remplace = null) ou resserrées (remplace = nouvelle expression) par un relecteur natif après vérification sur les occurrences réelles de l'app.",
+  "Déjà appliqué aux listes ; conservé pour la traçabilité."
+ ],
+ "decisions": [
+  {
+   "langue": "ar",
+   "type": "piege",
+   "id": "debloquer",
+   "regex": "(?<![؀-ۿ])(?:افتح|فتح)\\s*(?:Sophia|صوفيا|سوفيا|Premium|بريميوم|Pro|برو)",
+   "remplace": "(?<![؀-ۿ])(?:افتح|فتح)\\s*(?:(?:Sophia|صوفيا|سوفيا)\\s*(?:Pro|برو|Premium|بريميوم)|Premium|بريميوم|Pro|برو)(?![A-Za-z])",
+   "raison": "« افتح Sophia » seul = ouvrir l'app (bouton de l'écran de blocage), correct ; garder seulement Premium/PRO"
+  },
+  {
+   "langue": "ar",
+   "type": "produit",
+   "id": "debloquer",
+   "regex": "(?<![؀-ۿ])(?:افتح|فتح)\\s*(?:Sophia|صوفيا|سوفيا|Premium|بريميوم|Pro|برو)",
+   "remplace": "(?<![؀-ۿ])(?:افتح|فتح)\\s*(?:(?:Sophia|صوفيا|سوفيا)\\s*(?:Pro|برو|Premium|بريميوم)|Premium|بريميوم|Pro|برو)(?![A-Za-z])",
+   "raison": "« افتح Sophia » seul = ouvrir l'app, correct ; garder seulement Premium/PRO"
+  },
+  {
+   "langue": "ar",
+   "type": "piege",
+   "id": "entrainement",
+   "regex": "ممارس(?:ة|تك|ات)(?![؀-ۿ])",
+   "remplace": "(?<![؀-ۿ])(?:ل|ب)?ممارستك(?![؀-ۿ])|^\\s*(?:ال)?ممارسة\\s*$",
+   "raison": "ممارسة = « exercer/pratique » légitime (لممارسة هذه الحقوق) ; ne viser que l'onglet"
+  },
+  {
+   "langue": "ar",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "ممارس(?:ة|تك|ات)(?![؀-ۿ])",
+   "remplace": "(?<![؀-ۿ])(?:ل|ب)?ممارستك(?![؀-ۿ])|^\\s*(?:ال)?ممارسة\\s*$",
+   "raison": "ممارسة إيمانهم etc. = pratique, correct ; ne viser que l'onglet"
+  },
+  {
+   "langue": "ar",
+   "type": "piege",
+   "id": "voici_comment",
+   "regex": "إليك\\s*كيفية",
+   "remplace": null,
+   "raison": "« إليك كيفية » est un arabe correct et naturel pour « voici comment »"
+  },
+  {
+   "langue": "ar",
+   "type": "piege",
+   "id": "on_impersonnel",
+   "regex": "(?<![؀-ۿ])نحن(?![؀-ۿ])",
+   "remplace": "(?<![؀-ۿ])نحن\\s+(?:لا\\s+)?ن(?!قدم|ستخدم|تلقى|ختبرك|ستعد|حتفظ|بيع|جمع)[؀-ۿ]+",
+   "raison": "نحن seul touche le « nous » légitime (légal, UI, citations « نحن الشعب ») ; viser نحن + verbe 1re pl."
+  },
+  {
+   "langue": "ar",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "(?<![؀-ۿ])في\\s+\\d{3,4}(?![\\d])",
+   "remplace": "(?<![؀-ۿ])في\\s+\\d{3,4}(?![\\d])(?!\\s*(?:شارع|صفح|متر|كيلو|كم|درج|شخص|رجل|جندي|نسم|ألف|مليون|نوع|مر[ةا]|يوم|أيام|ساع|دقيق|%|٪))",
+   "raison": "Exclure adresses et quantités (1520 شارع، 123 صفحة) qui ne sont pas des dates"
+  },
+  {
+   "langue": "ar",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "(?:حوالي|نحو|قرابة)\\s+\\d{3,4}(?![\\d])",
+   "remplace": "(?:حوالي|نحو|قرابة)\\s+(?:1\\d{3}|20\\d{2})(?![\\d])(?!\\s*(?:ألف|آلاف|مليون|ملايين|مليار|درج|عام|أعوام|سن|كم|كيلو|متر|م(?![؀-ۿ])|شخص|أشخاص|رجل|جندي|جنود|نسم|قتيل|صفح|كلم|نوع|مر[ةا]|يوم|أيام|ساع|دقيق|سم|طن|دولار|فرنك|جنيه|ميل|قدم|لوح|قصيد|كتاب|عمل|%|٪))",
+   "raison": "Beaucoup de quantités (233 درجة، 180 عامًا، 700 ألف) ; limiter aux années sans unité"
+  },
+  {
+   "langue": "ar",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "(?:مدينة|فيلم|بلدة)\\s+\\d{3,4}(?![\\d])",
+   "remplace": "(?:مدينة|فيلم|بلدة)\\s+(?!2001(?![\\d]))\\d{3,4}(?![\\d])",
+   "raison": "« فيلم 2001 » est le titre du film de Kubrick, correct"
+  },
+  {
+   "langue": "ar",
+   "type": "piege",
+   "id": "termes_islam",
+   "regex": "(?:جيزيا|جزيا|كاليف|كاليفة|كاليفا)(?![؀-ۿ])",
+   "remplace": "(?<![؀-ۿ])(?:ال)?(?:جيزيا|جزيا|كاليف|كاليفة|كاليفا)(?![؀-ۿ])",
+   "raison": "« كاليف » matche dans التكاليف (coûts) ; exiger une frontière de mot"
+  },
+  {
+   "langue": "ar",
+   "type": "piege",
+   "id": "pan",
+   "regex": "(?:انفجار|الانفجار|مقلاة|المقلاة)[^.]{0,30}(?:إيكو|الحورية|صدى)",
+   "remplace": "(?:انفجار|الانفجار|مقلاة|المقلاة)(?!\\s*(?:ال)?(?:كبير|عظيم))[^.]{0,30}(?:إيكو|الحورية|صدى)",
+   "raison": "Exclure « الانفجار الكبير » (Big Bang) suivi de صدى, correct"
+  },
+  {
+   "langue": "ar",
+   "type": "piege",
+   "id": "soupe_populaire",
+   "regex": "(?:مطبخ|مطابخ)\\s*(?:ال)?حساء(?!\\s*(?:ال)?خيري)",
+   "remplace": null,
+   "raison": "« مطابخ الحساء » est la forme établie en arabe pour soup kitchens"
+  },
+  {
+   "langue": "ar",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "(?<![؀-ۿ])(?:ال)?رحلة(?![؀-ۿ])",
+   "remplace": "^\\s*(?:ال)?رحلة\\s*$|اكتمل(?:ت)?\\s*(?:ال)?رحلة",
+   "raison": "رحلة = voyage légitime dans le catalogue ; ne viser que l'étiquette d'onglet"
+  },
+  {
+   "langue": "ar",
+   "type": "produit",
+   "id": "sophia",
+   "regex": "سوفيا",
+   "remplace": "(?<![؀-ۿ])سوفيا(?![؀-ۿ])",
+   "raison": "Matche dans السوفياتية (soviétique) ; exiger le mot isolé"
+  },
+  {
+   "langue": "ar",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "(?<![؀-ۿ])(?:ال)?(?:غاية|غايات)(?![؀-ۿ])",
+   "remplace": null,
+   "raison": "الغاية est un mot courant correct (ما الغاية من طريق الحرير)"
+  },
+  {
+   "langue": "ar",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "(?<![؀-ۿ])(?:ال)?موضوعي(?:ة)?(?![؀-ۿ])",
+   "remplace": null,
+   "raison": "موضوعية = thématique/objectivité (مسارات موضوعية), correct"
+  },
+  {
+   "langue": "ar",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "(?<![؀-ۿ])(?:ال)?(?:موضوع|مواضيع|موضوعات)(?![؀-ۿ])",
+   "remplace": null,
+   "raison": "موضوع/مواضيع = sujet/thème, mot courant correct (حول نفس الموضوع)"
+  },
+  {
+   "langue": "ar",
+   "type": "produit",
+   "id": "bibliotheque",
+   "regex": "(?:ال)?(?:أرشيف|مستودع)(?![؀-ۿ])",
+   "remplace": null,
+   "raison": "الأرشيف = archives historiques, sens légitime sans rapport avec l'onglet"
+  },
+  {
+   "langue": "ar",
+   "type": "produit",
+   "id": "bibliotheque",
+   "regex": "(?:جميع|كل)\\s*(?:ال)?(?:دورات|دروس)(?![؀-ۿ])",
+   "remplace": null,
+   "raison": "« كل الدورات/جميع الدروس » = tous les cours, sans rapport avec l'onglet Bibliothèque"
+  },
+  {
+   "langue": "ar",
+   "type": "oeuvre",
+   "id": "hamlet",
+   "regex": "(?:هامليت|هملت|همليت)(?![؀-ۿ])",
+   "remplace": "(?<![؀-ۿ])(?:هامليت|هملت|همليت)(?![؀-ۿ])",
+   "raison": "Matche dans أُهملت (négligée) ; exiger une frontière avant"
+  },
+  {
+   "langue": "ar",
+   "type": "oeuvre",
+   "id": "meilleur_des_mondes",
+   "regex": "(?:أفضل|خير|أحسن)\\s*(?:ال)?عوالم",
+   "remplace": "(?:أفضل|خير|أحسن)\\s*(?:ال)?عوالم(?!\\s*(?:ال)?ممكنة)",
+   "raison": "« أفضل العوالم الممكنة » = Leibniz/Candide, correct"
+  },
+  {
+   "langue": "ar",
+   "type": "oeuvre",
+   "id": "don_quichotte",
+   "regex": "دون\\s*كيشوت",
+   "remplace": null,
+   "raison": "« دون كيشوت » est la forme arabe la plus établie du titre"
+  },
+  {
+   "langue": "ar",
+   "type": "oeuvre",
+   "id": "oedipe_roi",
+   "regex": "أوديب\\s*(?:ال)?ملك(?![؀-ۿ])",
+   "remplace": null,
+   "raison": "« أوديب الملك » est un titre arabe établi et courant"
+  },
+  {
+   "langue": "ar",
+   "type": "oeuvre",
+   "id": "confessions",
+   "regex": "روسو[^.]{0,15}«?(?:ال)?(?:اعتراف|إقرارات|بوح)»?(?![؀-ۿ])",
+   "remplace": "روسو[^.]{0,15}[«\"*]+\\s*(?:ال)?(?:اعتراف|إقرارات|بوح)\\s*[»\"*]",
+   "raison": "Matche le verbe/concept « الاعتراف » (avouer, confession), correct ; exiger un titre entre guillemets"
+  },
+  {
+   "langue": "ar",
+   "type": "oeuvre",
+   "id": "notre_dame",
+   "regex": "نوتر\\s*دام\\s*(?:دي|دو)\\s*باري(?:س)?",
+   "remplace": "(?:رواية|هوغو|هوجو)[^.]{0,40}نوتر\\s*دام\\s*(?:دي|دو)\\s*باري(?:س)?|نوتر\\s*دام\\s*(?:دي|دو)\\s*باري(?:س)?[^.]{0,40}(?:هوغو|هوجو|كوازيمودو|إزميرالدا)",
+   "raison": "Toutes les occurrences désignent la cathédrale, nom correct ; exiger le contexte du roman"
+  },
+  {
+   "langue": "ar",
+   "type": "oeuvre",
+   "id": "le_prince",
+   "regex": "(?<![؀-ۿ])(?:ال)?برنس(?![؀-ۿ])",
+   "remplace": null,
+   "raison": "برنس matche des noms propres corrects (ديانا برنس)"
+  },
+  {
+   "langue": "ar",
+   "type": "oeuvre",
+   "id": "gilgamesh",
+   "regex": "(?:قصيدة|أسطورة|حكاية|قصة|سيرة)\\s*(?:جلجامش|كلكامش|غلغامش|جيلجامش)",
+   "remplace": null,
+   "raison": "« قصة جلجامش » = l'histoire de Gilgamesh, usage descriptif correct"
+  },
+  {
+   "langue": "ar",
+   "type": "oeuvre",
+   "id": "persistance",
+   "regex": "(?:ال)?ذاكرة\\s*(?:ال)?(?:مستمرة|ثابتة|دائمة|مثابرة)(?![؀-ۿ])",
+   "remplace": "(?:دالي|لوحة|1931)[^.]{0,30}(?:ال)?ذاكرة\\s*(?:ال)?(?:مستمرة|ثابتة|دائمة|مثابرة)(?![؀-ۿ])|(?:ال)?ذاكرة\\s*(?:ال)?(?:مستمرة|ثابتة|دائمة|مثابرة)(?![؀-ۿ])[^.]{0,30}(?:دالي|1931)",
+   "raison": "« ذاكرة دائمة » dans l'UI = mémoire durable, correct ; exiger le contexte Dalí"
+  },
+  {
+   "langue": "ar",
+   "type": "oeuvre",
+   "id": "la_corde",
+   "regex": "(?:هيتشكوك|هتشكوك)[^.]{0,20}«?(?:ال)?(?:حبال|وتر|رباط|سلك)»?(?![؀-ۿ])",
+   "remplace": "(?:هيتشكوك|هتشكوك)[^.]{0,20}(?<![؀-ۿ])«?(?:ال)?(?:حبال|وتر|رباط|سلك)»?(?![؀-ۿ])",
+   "raison": "Matche وتر dans التوتر (tension) ; exiger une frontière de mot"
+  },
+  {
+   "langue": "bg",
+   "type": "piege",
+   "id": "essai_gratuit",
+   "regex": "\\bбезплат\\w*\\s+период\\b",
+   "remplace": null,
+   "raison": "« безплатен период » est un raccourci correct et naturel pour la période d'essai gratuite"
+  },
+  {
+   "langue": "bg",
+   "type": "piege",
+   "id": "serie_streak",
+   "regex": "\\bна\\s+серии\\b",
+   "remplace": null,
+   "raison": "« никога на серии » = jamais en rafale (notifications), sens correct sans rapport avec la série"
+  },
+  {
+   "langue": "bg",
+   "type": "piege",
+   "id": "pas_de_connexion",
+   "regex": "\\bбез\\s+(?:връзка|конекция)\\b",
+   "remplace": null,
+   "raison": "« слушат без връзка » = écouter hors ligne, emploi correct"
+  },
+  {
+   "langue": "bg",
+   "type": "piege",
+   "id": "on_impersonnel",
+   "regex": "\\bние\\s+(?:искаме|живеем|виждаме|знаем|намираме|наричаме|казваме|можем|говорим|мислим|откриваме|разбираме|смятаме|го\\s+наричаме|я\\s+наричаме)\\b",
+   "remplace": "\\bние\\s+(?:искаме|виждаме|знаем|намираме|наричаме|казваме|можем|говорим|мислим|откриваме|разбираме|смятаме|го\\s+наричаме|я\\s+наричаме)\\b",
+   "raison": "« Ние живеем » (âge de fer d'Hésiode, cinquième soleil aztèque) est un vrai « nous » de l'humanité"
+  },
+  {
+   "langue": "bg",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\b(?:в|във|от|до|след|преди|около|към)\\s+(?:града?\\s+|филма\\s+|стая(?:та)?\\s+)?\\d{3,4}\\b(?![\\d–-])(?!\\s*(?:г\\.|год|[–-]|и\\s+\\d|до\\s+\\d))",
+   "remplace": "\\b(?:в|във|от|до|след|преди|около|към)\\s+(?:града?\\s+|филма\\s+|стая(?:та)?\\s+)?(?:(?:1\\d{3}|20[0-4]\\d)(?![\\d.,]\\d)(?!\\**\\s*(?:г\\b|год|[–-]|и\\s+\\d|до\\s+\\d|°|%|\\d|км|km|m\\b|м\\b|метр|километр|мили|милион|милиард|хиляд|души|човек|хора|държав|страни|пъти|годин|войни|защитни|фирми|езика|долар|евро|лев|тон|nm))|\\d{3}(?![\\d.,]\\d)(?=\\**\\s*(?:[.;:!?)]|$)))",
+   "raison": "matchait des quantités (от 196 държави, около 300 000 души, 1300 km) et des fins d'intervalle suivies de ** г."
+  },
+  {
+   "langue": "bg",
+   "type": "piege",
+   "id": "renaissance",
+   "regex": "\\bвъзраждане(?:то)?\\b",
+   "remplace": "\\bвъзраждане(?:то)?\\b[^.]{0,50}\\b(?:Итали|Флоренц|Леонардо|Микеланджело|Медичи|Рафаел|Ботичели|кватроченто)|\\b(?:Итали|Флоренц|Леонардо|Микеланджело|Медичи|Рафаел|Ботичели)\\w*[^.]{0,50}\\bвъзраждане(?:то)?\\b",
+   "raison": "възраждане = renouveau, folk revival, Renouveau national bulgare ou grec : emplois corrects majoritaires"
+  },
+  {
+   "langue": "bg",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bNATO\\b",
+   "remplace": "\\bNATO\\b(?!\\s+на\\s+английски)",
+   "raison": "« NATO на английски и OTAN на френски » cite légitimement le sigle anglais"
+  },
+  {
+   "langue": "bg",
+   "type": "piege",
+   "id": "termes_islam",
+   "regex": "\\bкалиф\\w*\\b",
+   "remplace": "\\bкалиф(?!орни)\\w*\\b",
+   "raison": "les 54 occurrences sont Калифорния/калифорнийски, mot correct"
+  },
+  {
+   "langue": "bg",
+   "type": "piege",
+   "id": "relance",
+   "regex": "\\b(?:излекуван|лечени|изцелен|оздравяван)\\w*\\b[^.]{0,50}\\b(?:икономи|стопанств|криза|депреси)|\\b(?:икономи|стопанств|криза|депреси)\\w*[^.]{0,50}\\b(?:излекуван|лечени|изцелен)\\w*\\b",
+   "remplace": "\\b(?:излекуван|лечени|изцелен|оздравяван)\\w*\\s+(?:на\\s+)?(?:икономи|стопанств)\\w*|\\b(?:икономи|стопанств)\\w*\\s+(?:се\\s+)?(?:излекув|изцел)\\w*",
+   "raison": "matchait « лечение и помощи … в криза » (État-providence, soins médicaux), emploi correct"
+  },
+  {
+   "langue": "bg",
+   "type": "produit",
+   "id": "essai_gratuit",
+   "regex": "\\bбезплат\\w+\\s+(?:период|тест|изпитани|проба)\\b",
+   "remplace": "\\bбезплат\\w+\\s+(?:изпитани\\w*|проба)\\b",
+   "raison": "« безплатен период » est une forme abrégée correcte de l'essai gratuit"
+  },
+  {
+   "langue": "bg",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bпътешестви\\w*\\b",
+   "remplace": null,
+   "raison": "пътешествие est une métaphore correcte (voyage vers le savoir) ou le sens propre (voyages de Sindbad)"
+  },
+  {
+   "langue": "bg",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\bобучение\\b",
+   "remplace": null,
+   "raison": "« UGC примери и обучение » = formation des créateurs, sens correct"
+  },
+  {
+   "langue": "bg",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bпредмет\\w*\\b",
+   "remplace": "\\b(?:всички|твоите|твоя|любими\\w*|избери)\\s+(?:\\d+\\s+)?предмет\\w*\\b|\\b\\d+\\s+предмета\\b",
+   "raison": "предмет = objet dans le catalogue (cubisme, objets du quotidien) ; garder les libellés de l'interface"
+  },
+  {
+   "langue": "bg",
+   "type": "produit",
+   "id": "bibliotheque",
+   "regex": "\\bархив\\w*\\b",
+   "remplace": null,
+   "raison": "Архивите = archives historiques dans le catalogue, emploi correct"
+  },
+  {
+   "langue": "bg",
+   "type": "oeuvre",
+   "id": "petit_prince",
+   "regex": "\\bМалък\\s+принц\\b",
+   "remplace": null,
+   "raison": "« Малък принц от мъничка планета » est une description, pas le titre"
+  },
+  {
+   "langue": "bg",
+   "type": "oeuvre",
+   "id": "alchimiste",
+   "regex": "\\bАлхимика\\b",
+   "remplace": null,
+   "raison": "« Алхимика » désigne le personnage à l'accusatif, forme grammaticale correcte"
+  },
+  {
+   "langue": "bg",
+   "type": "oeuvre",
+   "id": "oedipe_roi",
+   "regex": "\\bЦар\\s+Едип\\b",
+   "remplace": null,
+   "raison": "« Цар Едип » est le titre bulgare établi de la tragédie de Sophocle"
+  },
+  {
+   "langue": "bg",
+   "type": "oeuvre",
+   "id": "madame_bovary",
+   "regex": "\\bГоспожа\\s+Бовари\\b",
+   "remplace": null,
+   "raison": "« Госпожа Бовари » est le titre bulgare établi de la traduction classique"
+  },
+  {
+   "langue": "bg",
+   "type": "oeuvre",
+   "id": "miserables",
+   "regex": "\\bНещастниците\\b",
+   "remplace": "\\bНещастниците\\b[^.]{0,40}\\bЮго|\\bЮго\\w*[^.]{0,40}\\bНещастниците\\b|[„“\\\"«*]\\s*Нещастниците\\s*[“”\\\"»*]",
+   "raison": "нещастниците = les malheureux, mot courant correct"
+  },
+  {
+   "langue": "bg",
+   "type": "oeuvre",
+   "id": "notre_dame",
+   "regex": "\\bНотр\\s*[- ]?\\s*Дам(?:\\s+(?:дьо|де)\\s+Пари)?\\b[^.]{0,40}\\b(?:Юго|роман)|\\b(?:Юго|роман\\w*)\\b[^.]{0,40}\\bНотр\\s*[- ]?\\s*Дам",
+   "remplace": "\\bНотр\\s*[- ]?\\s*Дам(?:\\s+(?:дьо|де)\\s+Пари)?\\s*[“”\\\"»*]*\\s*(?:от|на)\\s+(?:Виктор\\s+)?Юго\\b|\\bроман\\w*\\s+[„“\\\"«*]*\\s*Нотр\\s*[- ]?\\s*Дам",
+   "raison": "Нотр Дам désigne surtout la cathédrale, nom correct ; ne garder que le titre du roman"
+  },
+  {
+   "langue": "cs",
+   "type": "piege",
+   "id": "premium",
+   "regex": "\\bprémi(e|í|i|ích|ov\\w*|um)\\b",
+   "remplace": "\\bprémi(um|a|em|u)\\b",
+   "raison": "« prémiový » et « prémie » sont des mots tchèques corrects ; ne garder que la forme translittérée « prémium »"
+  },
+  {
+   "langue": "cs",
+   "type": "produit",
+   "id": "premium",
+   "regex": "\\bprémi(um|ov)\\w*",
+   "remplace": "\\bprémi(um|a|em|u)\\b",
+   "raison": "l'adjectif « prémiový » est du tchèque naturel ; ne viser que « prémium »"
+  },
+  {
+   "langue": "cs",
+   "type": "piege",
+   "id": "debloquer",
+   "regex": "\\botevř\\w*\\s+(si\\s+)?(Premium|kurz\\w*|prémi\\w*)",
+   "remplace": "\\botevř\\w*\\s+(si\\s+)?(Premium|prémi\\w*)",
+   "raison": "« otevřené kurzy » (cours ouverts) est correct ; limiter à Premium"
+  },
+  {
+   "langue": "cs",
+   "type": "piege",
+   "id": "debloquer",
+   "regex": "\\bodblok\\w*",
+   "remplace": "\\bodblok\\w*\\s+(si\\s+)?(Premium|kurz\\w*|lekc\\w*|obsah\\w*|přístup\\w*)",
+   "raison": "« odblokovat TikTok » (bloqueur) est le sens correct ; ne viser que le déblocage d'un cours ou de Premium"
+  },
+  {
+   "langue": "cs",
+   "type": "produit",
+   "id": "debloquer",
+   "regex": "\\bodblok\\w*",
+   "remplace": "\\bodblok\\w*\\s+(si\\s+)?(Premium|kurz\\w*|lekc\\w*|obsah\\w*|přístup\\w*)",
+   "raison": "« odblokovat TikTok » est correct ; ne viser que cours/Premium"
+  },
+  {
+   "langue": "cs",
+   "type": "piege",
+   "id": "on_impersonnel",
+   "regex": "\\b[Mm]y\\s+\\w+me\\b",
+   "remplace": "(?<![„\"“(«])\\b[Mm]y\\s+\\w+me\\b",
+   "raison": "la seule occurrence est une citation correcte (« My jsme lid ») ; exclure les citations"
+  },
+  {
+   "langue": "cs",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\b(kolem|okolo|zhruba)\\s+\\d{3,4}\\b(?!\\s*(km|m\\b|kg|lid|obyv|vojá|muž|%|Kč|dolar|let|rok|knih|kus))",
+   "remplace": "\\b(kolem|okolo|zhruba)\\s+1?\\d{3}\\b(?![.,\\s]?\\d)(?!\\s*(km|m\\b|kg|lid|obyv|vojá|muž|%|Kč|dolar|let|rok|knih|kus|milion|miliard|tisíc|mil\\b|metr|hodin|dn|osob|člen|druh|stran|slov|ton|stup))",
+   "raison": "capte des quantités (zhruba 800.000, 400 milionů, 110 milionům) ; exclure milliers et unités"
+  },
+  {
+   "langue": "cs",
+   "type": "piege",
+   "id": "siecle",
+   "regex": "\\bstolet[íi]\\s+\\d{1,2}\\b",
+   "remplace": "\\bstolet[íi]\\s+\\d{1,2}\\b(?!\\s*(až|-|–|%|procent))",
+   "raison": "« během století 50 až 90 % » est correct ; exclure les pourcentages et intervalles"
+  },
+  {
+   "langue": "cs",
+   "type": "piege",
+   "id": "caravane",
+   "regex": "\\bkaravan\\b|\\bkaravanem\\b|\\bkaravanech\\b|\\bkaravanům\\b",
+   "remplace": "\\bkaravan(em|ech|ům)\\b",
+   "raison": "« karavan » est aussi le génitif pluriel correct de « karavana » (daň z karavan)"
+  },
+  {
+   "langue": "cs",
+   "type": "piege",
+   "id": "beau_pere",
+   "regex": "\\btch[áa]n\\w*",
+   "remplace": "\\btch[áa]n\\w*[^.\\n]{0,60}\\b(Aupick|Baudelair)\\w*|\\b(Aupick|Baudelair)\\w*[^.\\n]{0,60}\\btch[áa]n\\w*",
+   "raison": "« tchán » est correct pour Laërte, beau-père d'Ulysse ; limiter au contexte Aupick/Baudelaire"
+  },
+  {
+   "langue": "cs",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\b(ONU|OTAN|NSO|OAT)\\b",
+   "remplace": "\\b(ONU|OTAN|NSO|OAT)\\b(?![^.\\n]{0,15}francouz)",
+   "raison": "mention correcte du sigle français (« OTAN francouzsky »)"
+  },
+  {
+   "langue": "cs",
+   "type": "piege",
+   "id": "termes_islam",
+   "regex": "\\bcalif\\w*|\\bcaliph\\w*",
+   "remplace": "\\bcalif(e|es|at|ats)?\\b|\\bcaliph\\w*",
+   "raison": "capte « California »"
+  },
+  {
+   "langue": "cs",
+   "type": "piege",
+   "id": "new_deal",
+   "regex": "\\bNov\\w*\\s+úděl\\w*",
+   "remplace": null,
+   "raison": "« Nový úděl » est la traduction tchèque établie du New Deal"
+  },
+  {
+   "langue": "cs",
+   "type": "piege",
+   "id": "renaissance",
+   "regex": "\\bznovuzrozen\\w*",
+   "remplace": null,
+   "raison": "« znovuzrození » (renaissance spirituelle, renaître) est employé correctement ; rx[0] et rx[2] couvrent le piège"
+  },
+  {
+   "langue": "cs",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bstezk\\w*",
+   "remplace": "\\b(tvoje|tvá|tvou|záložk\\w*)\\s+stezk\\w*|^\\s*Stezky?\\s*$",
+   "raison": "capte « Hedvábná stezka » et « obchodní stezky », corrects"
+  },
+  {
+   "langue": "cs",
+   "type": "produit",
+   "id": "niveau",
+   "regex": "\\bstup(eň|ně|ni|něm|ňů)\\b",
+   "remplace": "^\\s*Stup(eň|ně)\\s*\\d*\\s*$|\\bstup(eň|ni|ně|něm)\\s+\\d+\\b(?!\\s*(°|%))",
+   "raison": "capte « 451 stupňů Fahrenheita », correct ; limiter à l'étiquette de niveau"
+  },
+  {
+   "langue": "cs",
+   "type": "produit",
+   "id": "sophia",
+   "regex": "\\bSophi(i|í|e)\\b",
+   "remplace": null,
+   "raison": "Sophie/Sophii/Sophií sont les déclinaisons tchèques obligatoires de Sophia"
+  },
+  {
+   "langue": "cs",
+   "type": "produit",
+   "id": "ami",
+   "regex": "\\bspojen(ec|ce|ci|ců)\\b",
+   "remplace": "\\b(tvoj\\w*|tvé|tvůj|přidej\\w*|pozvi)\\s+(si\\s+)?spojen(ec|ce|ci|ců|cem)\\b",
+   "raison": "capte « spojenci » (alliés historiques), correct"
+  },
+  {
+   "langue": "cs",
+   "type": "oeuvre",
+   "id": "odyssee",
+   "regex": "\\bOdyssey\\b",
+   "remplace": null,
+   "raison": "« Odyssey » est le génitif tchèque correct de « Odyssea »"
+  },
+  {
+   "langue": "cs",
+   "type": "oeuvre",
+   "id": "iliade",
+   "regex": "\\bIliad\\w*",
+   "remplace": null,
+   "raison": "« Iliada » (Iliady, Iliadě) est une forme tchèque établie à côté de « Ílias »"
+  },
+  {
+   "langue": "cs",
+   "type": "oeuvre",
+   "id": "medee",
+   "regex": "\\bMedea\\b",
+   "remplace": null,
+   "raison": "« Medea/Médea » est le nom tchèque usuel du personnage (et de la pièce)"
+  },
+  {
+   "langue": "cs",
+   "type": "oeuvre",
+   "id": "rouge_noir",
+   "regex": "\\bČerven[áé]\\s+a\\s+čern[áé]\\b",
+   "remplace": "\\bČerven[áé]\\s+a\\s+čern[áé]\\b[^.\\n]{0,30}\\bStendhal\\w*|\\bStendhal\\w*[^.\\n]{0,40}\\bČerven[áé]\\s+a\\s+čern[áé]\\b|[„\"«*]Červen[áé]\\s+a\\s+čern[áé]\\b",
+   "raison": "capte les couleurs (symbolika červené a černé), correct ; limiter au titre"
+  },
+  {
+   "langue": "cs",
+   "type": "oeuvre",
+   "id": "confessions",
+   "regex": "\\bZpověd\\w*\\b[^.\\n]{0,20}\\bRousseau\\w*",
+   "remplace": "(?-i:\\bZpověď\\b)[^.\\n]{0,20}\\bRousseau\\w*",
+   "raison": "capte « zpovědním soudcem », pas un titre ; ne viser que le titre capitalisé"
+  },
+  {
+   "langue": "cs",
+   "type": "oeuvre",
+   "id": "confessions",
+   "regex": "\\bRousseau\\w*[^.\\n]{0,30}\\b(Zpověd|Přiznán|Doznán)\\w*",
+   "remplace": "\\bRousseau\\w*[^.\\n]{0,30}(?-i:\\b(Zpověď|Zpovědi|Přiznání|Doznání)\\b)",
+   "raison": "capte « přiznání » au sens courant ; ne viser que le titre capitalisé"
+  },
+  {
+   "langue": "cs",
+   "type": "oeuvre",
+   "id": "notre_dame",
+   "regex": "\\bNotre[-\\s]Dame\\s+de\\s+Paris\\b",
+   "remplace": "\\bNotre[-\\s]Dame\\s+de\\s+Paris\\b[^.\\n]{0,40}\\bHug\\w*|\\bHug\\w*[^.\\n]{0,60}\\bNotre[-\\s]Dame\\s+de\\s+Paris\\b",
+   "raison": "capte la cathédrale (nom correct) ; limiter au roman de Hugo"
+  },
+  {
+   "langue": "da",
+   "type": "piege",
+   "id": "debloquer",
+   "regex": "\\b(afbloker|deblok|oplås)\\w*",
+   "remplace": "\\b(afbloker|deblok)\\w*|\\boplås(e|er)?\\b",
+   "raison": "« oplåsninger » (nom) est du danois correct ; ne garder que les formes verbales calquées"
+  },
+  {
+   "langue": "da",
+   "type": "produit",
+   "id": "debloquer",
+   "regex": "\\boplås\\w*",
+   "remplace": "\\boplås(e|er)?\\b",
+   "raison": "Le nom « oplåsning(er) » est correct ; ne viser que le verbe « oplås(e) »"
+  },
+  {
+   "langue": "da",
+   "type": "piege",
+   "id": "personne_de_la_piece",
+   "regex": "\\binteressante\\s+person\\s+i\\s+(rummet|lokalet|værelset|stuen|salen|stykket|teaterstykket|pladsen)\\b",
+   "remplace": "\\binteressante\\s+person\\s+i\\s+(værelset|stuen|stykket|teaterstykket|pladsen)\\b",
+   "raison": "« den mest interessante person i rummet » est idiomatique ; garder les vrais contresens (pièce de théâtre, chambre)"
+  },
+  {
+   "langue": "da",
+   "type": "piege",
+   "id": "on_impersonnel",
+   "regex": "\\bvi\\s+(kræver|forlanger|tilbeder|dyrker|kalder|kaldte)\\b",
+   "remplace": "\\bvi\\s+(kræver|forlanger|tilbeder|dyrker)\\b",
+   "raison": "« det vi kalder … » est un tour didactique correct et domine les occurrences"
+  },
+  {
+   "langue": "da",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\bind\\s+i\\s+(år\\s+)?\\d{3,4}\\b",
+   "remplace": "(?<!går\\s)(?<!gik\\s)(?<!gå\\s)\\bind\\s+i\\s+(år\\s+)?\\d{3,4}\\b",
+   "raison": "« går ind i 1992 » (entrer dans l'année) est correct ; exclure ce tour"
+  },
+  {
+   "langue": "da",
+   "type": "piege",
+   "id": "renaissance",
+   "regex": "\\brenaissance\\w*",
+   "remplace": "\\brenaissance\\w*\\b(?!\\s+dam\\b)",
+   "raison": "Exclure le nom propre « Grand Ethiopian Renaissance Dam »"
+  },
+  {
+   "langue": "da",
+   "type": "piege",
+   "id": "pan",
+   "regex": "\\b(bang|pande|gryde|stegepande)\\b[^.\\n]{0,40}\\b(nymfe|Ekko|Echo|Syrinx|fløjte)",
+   "remplace": "(?<!big\\s)\\b(bang|pande|gryde|stegepande)\\b[^.\\n]{0,40}\\b(nymfe|Ekko|Echo|Syrinx|fløjte)",
+   "raison": "Exclure « Big Bang … ekko » (cosmologie), sans rapport avec le dieu Pan"
+  },
+  {
+   "langue": "da",
+   "type": "piege",
+   "id": "hegire",
+   "regex": "\\bhid(j|sj)ra\\b",
+   "remplace": null,
+   "raison": "« hidjra » est la graphie danoise établie (Den Store Danske), pas une faute"
+  },
+  {
+   "langue": "da",
+   "type": "produit",
+   "id": "quiz",
+   "regex": "\\bquizz\\w*",
+   "remplace": "\\bquizz(s)?\\b",
+   "raison": "quizzen/quizzer/quizzerne sont les flexions danoises correctes de « quiz » ; ne viser que la graphie française « quizz »"
+  },
+  {
+   "langue": "da",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bmateriale\\w*",
+   "remplace": null,
+   "raison": "« materiale(r) » = matériaux, mot courant correct (économie circulaire), sans lien avec « Fag »"
+  },
+  {
+   "langue": "da",
+   "type": "produit",
+   "id": "ami",
+   "regex": "\\bkammerat\\w*",
+   "remplace": "\\bkammerat\\w*\\b(?!\\s+napoleon\\b)",
+   "raison": "« Kammerat Napoleon » est le titre danois correct de La Ferme des animaux"
+  },
+  {
+   "langue": "da",
+   "type": "oeuvre",
+   "id": "metamorphose",
+   "regex": "\\bomdannelsen\\b",
+   "remplace": "\\bomdannelsen\\b[^.\\n]{0,40}\\bkafka|\\bkafka\\w*[^.\\n]{0,40}\\bomdannelsen\\b",
+   "raison": "« omdannelsen af sukker » est un emploi courant correct ; limiter au contexte Kafka"
+  },
+  {
+   "langue": "da",
+   "type": "oeuvre",
+   "id": "moby_dick",
+   "regex": "\\bmoby-dick\\b",
+   "remplace": null,
+   "raison": "« Moby-Dick » cite le titre original anglais avec trait d'union, correct"
+  },
+  {
+   "langue": "da",
+   "type": "oeuvre",
+   "id": "banquet",
+   "regex": "\\bfestmåltidet\\b",
+   "remplace": "\\bfestmåltidet\\b[^.\\n]{0,40}\\bplaton|\\bplaton\\w*[^.\\n]{0,40}\\bfestmåltidet\\b",
+   "raison": "« festmåltidet » (repas de fête de Noël) est correct ; limiter au contexte Platon"
+  },
+  {
+   "langue": "da",
+   "type": "oeuvre",
+   "id": "mythe_sisyphe",
+   "regex": "\\bmyten\\s+om\\s+sisy(f|ph)os\\b",
+   "remplace": "\\bcamus\\w*[^.\\n]{0,40}\\bmyten\\s+om\\s+sisy(f|ph)os\\b|\\bmyten\\s+om\\s+sisy(f|ph)os\\b[^.\\n]{0,40}\\bcamus|\\bessay\\w*\\s+[*»\"“]*\\s*myten\\s+om\\s+sisy(f|ph)os\\b",
+   "raison": "« myten om Sisyfos » désigne aussi correctement le mythe grec ; limiter à l'essai de Camus"
+  },
+  {
+   "langue": "da",
+   "type": "oeuvre",
+   "id": "notre_dame",
+   "regex": "\\bnotre[- ]dame\\s+i\\s+paris\\b",
+   "remplace": null,
+   "raison": "Toutes les occurrences désignent la cathédrale « Notre-Dame i Paris », emploi correct"
+  },
+  {
+   "langue": "da",
+   "type": "oeuvre",
+   "id": "joconde",
+   "regex": "\\bla\\s+gioconda\\b",
+   "remplace": null,
+   "raison": "« La Gioconda » est cité à juste titre comme autre nom italien du tableau"
+  },
+  {
+   "langue": "de",
+   "type": "piege",
+   "id": "gratuit",
+   "regex": "(?<![\\wäöüß-])frei(?![\\wäöüß-])(?=\\s*(?:[/|·]|$|\\s+(?:vs\\.?|gegen|oder)\\s+premium))",
+   "remplace": "(?<![\\wäöüß-])frei(?![\\wäöüß-])(?=\\s*(?:[/|·]|\\s+(?:vs\\.?|gegen|oder)\\s+premium))|^\\s*frei\\s*$",
+   "raison": "Les 8 occurrences sont la particule séparable de « freischalten » en fin de phrase (« Du schaltest frei ») ; on ne garde que « Frei » isolé ou opposé à Premium."
+  },
+  {
+   "langue": "de",
+   "type": "piege",
+   "id": "culture_generale",
+   "regex": "\\bkultiviert\\w*\\b",
+   "remplace": null,
+   "raison": "« kultiviert » est un mot allemand correct (cultivé, raffiné), pas un contresens."
+  },
+  {
+   "langue": "de",
+   "type": "piege",
+   "id": "paywall_offre",
+   "regex": "\\bpaywall\\b|\\bpay-?wall\\b",
+   "remplace": "\\bpay-?wall\\b(?![^.!?\\n]{0,40}\\banzeigen\\b)",
+   "raison": "Les 4 occurrences sont des entrées du menu de débogage (settings.debug.* « …-Paywall anzeigen »), non visibles par l'utilisateur."
+  },
+  {
+   "langue": "de",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\bgegen\\s+[1-9]\\d{2,3}\\b(?!\\s*(?:uhr|%|prozent|[.,]\\d|\\d))(?!\\s+(?-i:[A-ZÄÖÜ])[a-zäöüß]{2,})",
+   "remplace": null,
+   "raison": "« gegen 2008-2010 » (vers, aux alentours de) est une tournure allemande correcte, pas un calque fautif."
+  },
+  {
+   "langue": "de",
+   "type": "piege",
+   "id": "siecle",
+   "regex": "\\b(?:I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|XIII|XIV|XV|XVI|XVII|XVIII|XIX|XX|XXI)(?:\\.|e|er|ème|th)?\\s+(?:jahrhundert|jh\\.)",
+   "remplace": "(?-i:\\b(?:XXI|XX|XIX|XVIII|XVII|XVI|XV|XIV|XIII|XII|XI|X|IX|VIII|VII|VI|V|IV|III|II|I))(?:\\.|e|er|ème|th)?\\s+(?:jahrhundert|jh\\.)",
+   "raison": "Insensible à la casse, « VI+er » capte le mot « vier » (« vier Jahrhunderte ») ; chiffres romains en majuscules uniquement."
+  },
+  {
+   "langue": "de",
+   "type": "piege",
+   "id": "siecle",
+   "regex": "\\b(?:im|in\\s+den|die|der)\\s+\\d{1,2}00ern?\\b",
+   "remplace": "\\b(?:im|in\\s+den|die|der)\\s+(?!19|20)\\d{1,2}00ern?\\b(?!-?\\s*jahre)",
+   "raison": "Toutes les occurrences sont la décennie « 2000er Jahre », correcte ; on exclut 1900/2000 et « …er Jahre »."
+  },
+  {
+   "langue": "de",
+   "type": "piege",
+   "id": "termes_islam",
+   "regex": "\\bcaliphs?\\b|\\bkaliph\\w*\\b|\\bkhalif\\w*\\b|\\bcalif\\w*\\b",
+   "remplace": "\\bcaliphs?\\b|\\bkaliph\\w*\\b|\\bkhalif\\w*\\b|\\bcalif(?!ornia)\\w*\\b",
+   "raison": "Les 3 occurrences sont « California » (University of California, lithographie) ; on exclut ce nom propre."
+  },
+  {
+   "langue": "de",
+   "type": "produit",
+   "id": "cours",
+   "regex": "\\blektion(?:en)?\\b",
+   "remplace": null,
+   "raison": "« Lektion(en) » traduit fidèlement « leçons » de la source FR (onboarding) et sert aussi au sens courant (« Lektion für künftige Jäger »)."
+  },
+  {
+   "langue": "de",
+   "type": "produit",
+   "id": "cours",
+   "regex": "\\bunterrichts?(?:stunde|einheit)?n?\\b(?=[^.!?\\n]{0,40}(?:10\\s+minuten|täglich|sophia|freischalt|entdeck))|\\blerneinheit(?:en)?\\b|\\bvorlesung(?:en)?\\b",
+   "remplace": "\\bunterrichts?(?:stunde|einheit)?n?\\b(?=[^.!?\\n]{0,40}(?:10\\s+minuten|täglich|sophia|freischalt|entdeck))|\\bvorlesung(?:en)?\\b",
+   "raison": "« Lerneinheit(en) » traduit correctement « apprentissage(s) » (objectif quotidien), pas « cours » ; on le retire de la regex."
+  },
+  {
+   "langue": "de",
+   "type": "produit",
+   "id": "premium",
+   "regex": "\\bsophia\\s+(?:pro|plus|gold|unlimited)\\b",
+   "remplace": null,
+   "raison": "La source FR dit elle-même « Sophia Pro / Sophia PRO » ; la traduction allemande la reprend correctement."
+  },
+  {
+   "langue": "de",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bsubjekt\\b(?=[^.!?\\n]{0,40}(?:fortschritt|wähl|lern|kurse))|\\bnach\\s+subjekt\\b|\\bnach\\s+thema\\b|\\bfortschritt\\s+nach\\s+themen\\b",
+   "remplace": "\\bsubjekt\\b(?=[^.!?\\n]{0,40}(?:fortschritt|wähl|lern|kurse))|\\bnach\\s+subjekt\\b",
+   "raison": "« Fortschritt nach Themen » traduit correctement la source « PROGRESSION PAR THÈME » ; on ne garde que « Subjekt »."
+  },
+  {
+   "langue": "de",
+   "type": "produit",
+   "id": "debloquer",
+   "regex": "\\bentsperr\\w*\\b(?=[^.!?\\n]{0,40}(?:kurse?|premium|inhalte|lektion|quiz|alle|zugang|sophia))|(?:kurse?|premium|inhalte|quiz)\\b[^.!?\\n]{0,30}\\bentsperr\\w*\\b",
+   "remplace": "\\bentsperr\\w*\\b(?=[^.!?\\n]{0,40}(?:kurse?|premium|inhalte|lektion|quiz|zugang|sophia))|\\b(?:kurse?|premium|inhalte|quiz)\\s+(?:zu\\s+)?entsperr\\w*\\b",
+   "raison": "« deine Apps zu entsperren » (déverrouiller les applis bloquées) est correct ; on n'accepte que « entsperren » directement lié à un cours/Premium."
+  },
+  {
+   "langue": "de",
+   "type": "oeuvre",
+   "id": "mockingbird",
+   "regex": "\\bspottdrossel\\b",
+   "remplace": "\\bwer\\s+die\\s+spottdrossel\\b|\\b(?:tötet|töte|schießt|schieß|schiesst|schiess)\\s+(?:nicht\\s+)?(?:auf\\s+)?die\\s+spottdrossel\\b",
+   "raison": "« Spottdrossel » est le nom correct de l'oiseau-symbole dans le cours ; on ne vise que le titre calqué (« Tötet/Schießt nicht auf die Spottdrossel »)."
+  },
+  {
+   "langue": "de",
+   "type": "oeuvre",
+   "id": "oedipe_roi",
+   "regex": "\\bödipus\\s+(?:der\\s+)?könig\\b|\\bödipus\\s+könig\\b",
+   "remplace": "\\bödipus\\s+der\\s+könig\\b|(?<!wird\\s)(?<!wurde\\s)\\bödipus\\s+könig\\b(?!\\s+(?:von|über)\\b)",
+   "raison": "« wird Ödipus König von Theben » (devient roi) est correct ; on exclut « König von/über » et « wird/wurde »."
+  },
+  {
+   "langue": "el",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\bσ[εέ]\\s+\\d{3,4}\\b(?!\\s*(?:χρ[οό]ν|[εέ]τ|λ[εέ]πτ|[ηή]μ[εέ]ρ|μ[εέ]ρ|μ[εέ]τρ|χ[ιίϊΐ]λ|[αά]νθρ[ωώ]π|[αά]νδρ|στρ[αά]τ|[αά]τ[οό]μ|[εέ][υύϋΰ]ρ[ωώ]|δ[οό]λ|%|μ\\.|π\\.))",
+   "remplace": "(?<!ανάμεσα )(?<!μεταξύ )(?<!εκτιμάται )\\bσ[εέ]\\s+\\d{3,4}\\b(?![.,]\\d)(?!\\s*(?:και|έως|ως|[-–])\\s*\\d)(?!\\s*(?:χρ[οό]ν|[εέ]τ|λ[εέ]πτ|[ηή]μ[εέ]ρ|μ[εέ]ρ|μ[εέ]τρ|χ[ιίϊΐ]λ|[αά]νθρ[ωώ]π|[αά]νδρ|στρ[αά]τ|[αά]τ[οό]μ|[εέ][υύϋΰ]ρ[ωώ]|δ[οό]λ|δ[ιίϊΐ]σ|[εέ]κ[αά]τ|τρ[ιίϊΐ]σ|%|μ\\.|π\\.|°|βαθμ|km|χλμ|κιλ|τόν|τον|γραμμ|λίτρ|ψήφ|μέλ|σελίδ|κομμάτ|είδ|εργαζ|μαθητ|παιδ|ώρ|δευτερ))",
+   "raison": "Capte des montants (« ανάμεσα σε 700.000 », « σε 300 δισεκατομμύρια ») : on exclut fourchettes, milliers et unités."
+  },
+  {
+   "langue": "el",
+   "type": "piege",
+   "id": "flaneur",
+   "regex": "\\b[αά]μ[αά]ξ(?:[αά]|[αά]κ[ιίϊΐ]|[αά]κ[ιίϊΐ][αά]|[αά]ς)\\b",
+   "remplace": null,
+   "raison": "« άμαξα » (voiture, wagon) est un mot courant employé correctement partout."
+  },
+  {
+   "langue": "el",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bNATO\\b",
+   "remplace": "\\bNATO\\b(?!\\s+στα\\s+αγγλικά)",
+   "raison": "Seule occurrence : explication légitime « NATO στα αγγλικά »."
+  },
+  {
+   "langue": "el",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\b(?:OTAN|ONU)\\b",
+   "remplace": "\\b(?:OTAN|ONU)\\b(?!\\s+στα\\s+γαλλικά)",
+   "raison": "Seule occurrence : explication légitime « OTAN στα γαλλικά »."
+  },
+  {
+   "langue": "el",
+   "type": "piege",
+   "id": "termes_islam",
+   "regex": "\\bκ[αά]λ[ιίϊΐ]φ\\w*",
+   "remplace": "\\bκ[αά]λ[ιίϊΐ]φ(?![οό]ρν)\\w*",
+   "raison": "Capte « Καλιφόρνια » (60 occ.) : on exclut Californie."
+  },
+  {
+   "langue": "el",
+   "type": "piege",
+   "id": "nemesis",
+   "regex": "\\bθ[εέ][αά]\\s+(?:τ[οό][υύϋΰ]\\s+|τ[ηή]ς\\s+)?(?:[εέ]χθρ|[αά]ντ[ιίϊΐ]π[αά]λ|[αά]ρχ[εέ]χθρ)\\w*",
+   "remplace": "\\bθ[εέ][αά]\\s+(?:τ[οό][υύϋΰ]|τ[ηή]ς)\\s+(?:[εέ]χθρ|[αά]ντ[ιίϊΐ]π[αά]λ|[αά]ρχ[εέ]χθρ)\\w*",
+   "raison": "Capte « θεά εχθρική προς τους Τρώες » (Héra), texte correct : on exige l'article du génitif."
+  },
+  {
+   "langue": "el",
+   "type": "produit",
+   "id": "quiz",
+   "regex": "\\bτ[εέ]στ\\b",
+   "remplace": null,
+   "raison": "« τεστ » désigne légitimement des tests (nucléaire, créativité) dans les cours."
+  },
+  {
+   "langue": "el",
+   "type": "produit",
+   "id": "cours",
+   "regex": "\\bδ[ιίϊΐ][αά]λ[εέ]ξ\\w*",
+   "remplace": "\\bδ[ιίϊΐ][αά]λ[εέ]ξ(?:[ηή]|[ηή]ς|[εέ]ων)\\b|\\b(?:οι|τις)\\s+δ[ιίϊΐ][αά]λ[εέ]ξ[εέ][ιίϊΐ]ς\\b",
+   "raison": "Capte le verbe « διάλεξε » (choisir) : on ne garde que le nom « διάλεξη »."
+  },
+  {
+   "langue": "el",
+   "type": "produit",
+   "id": "cours",
+   "regex": "\\bκ[οό][υύϋΰ]ρσ\\w*",
+   "remplace": null,
+   "raison": "« κούρσα » (course, compétition) est correct partout (course à la Lune, au pôle)."
+  },
+  {
+   "langue": "el",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\b[εέ]κπ[αά][ιίϊΐ]δ[εέ][υύϋΰ]σ\\w*",
+   "remplace": null,
+   "raison": "« εκπαίδευση » (éducation, entraînement d'un modèle) est un mot courant correct."
+  },
+  {
+   "langue": "el",
+   "type": "produit",
+   "id": "bibliotheque",
+   "regex": "\\b[αά]ρχ[εέ][ιίϊΐ](?:[οό]|[αά])\\b",
+   "remplace": null,
+   "raison": "« αρχεία » (archives, fichiers) est un mot courant correct."
+  },
+  {
+   "langue": "el",
+   "type": "oeuvre",
+   "id": "mockingbird",
+   "regex": "\\bν[αά]\\s+σκ[οό]τ[ωώ]σ\\w*\\s+(?:[εέ]ν[αά]|τ[οό]ν|τ[οό])\\s+(?:κ[οό]ρ[οό][ιίϊΐ]δ[εέ][υύϋΰ]τ|μ[ιίϊΐ]μ[ηή]τ|κ[οό]τσ[υύϋΰ]φ)\\w*",
+   "remplace": "(?:«|\\*\\*|\\[\\[|\")\\s*ν[αά]\\s+σκ[οό]τ[ωώ]σ\\w*\\s+(?:[εέ]ν[αά]|τ[οό]ν|τ[οό])\\s+(?:κ[οό]ρ[οό][ιίϊΐ]δ[εέ][υύϋΰ]τ|μ[ιίϊΐ]μ[ηή]τ|κ[οό]τσ[υύϋΰ]φ)\\w*",
+   "raison": "Capte la métaphore en prose ; on ne vise que le titre entre guillemets, gras ou lien."
+  },
+  {
+   "langue": "el",
+   "type": "oeuvre",
+   "id": "oedipe_roi",
+   "regex": "\\b[οό][ιίϊΐ]δ[ιίϊΐ]π[οό](?:[υύϋΰ]ς|δ[αά]ς)\\s+(?:β[αά]σ[ιίϊΐ]λ[ιίϊΐ]\\w*|β[αά]σ[ιίϊΐ]λ[εέ][υύϋΰ]\\w*|ρ[εέ])\\b",
+   "remplace": "\\b[οό][ιίϊΐ]δ[ιίϊΐ]π[οό](?:[υύϋΰ]ς|δ[αά]ς)\\s+(?:β[αά]σ[ιίϊΐ]λ[ιίϊΐ]\\w*|ρ[εέ])\\b",
+   "raison": "Capte la phrase « Ο Οιδίποδας βασιλεύει » : on retire le verbe βασιλεύω."
+  },
+  {
+   "langue": "el",
+   "type": "oeuvre",
+   "id": "guernica",
+   "regex": "\\bγκ[οό][υύϋΰ][εέ]ρν[ιίϊΐ]κ[αά]\\b",
+   "remplace": null,
+   "raison": "« Γκουέρνικα » est une graphie grecque établie et courante (ville et tableau)."
+  },
+  {
+   "langue": "en",
+   "type": "piege",
+   "id": "essai_gratuit",
+   "regex": "\\b(test|testing|trial|demo|beta)\\s+(period|version|phase|access)\\b",
+   "remplace": "\\b(test|testing|demo|beta)\\s+(period|version|phase|access)\\b",
+   "raison": "« trial period » est l'anglais correct ; on ne garde que test/demo/beta"
+  },
+  {
+   "langue": "en",
+   "type": "piege",
+   "id": "annuel",
+   "regex": "\\bbilled\\s+annually\\b",
+   "remplace": null,
+   "raison": "« Billed annually » est la formule anglaise correcte et usuelle"
+  },
+  {
+   "langue": "en",
+   "type": "piege",
+   "id": "culture_generale",
+   "regex": "\\bcultured\\b",
+   "remplace": null,
+   "raison": "« I feel more cultured » est un anglais naturel et correct"
+  },
+  {
+   "langue": "en",
+   "type": "piege",
+   "id": "paywall_offre",
+   "regex": "\\bpay-?walls?\\b",
+   "remplace": null,
+   "raison": "ne touche que des libellés de debug et le texte légal (paywall interactions), corrects"
+  },
+  {
+   "langue": "en",
+   "type": "piege",
+   "id": "on_impersonnel",
+   "regex": "\\bwe\\s+(wanted|lived|called|believed|thought|said|fought|built|killed|buried|worshipped|worshiped|prayed|traded|elected|crowned|executed|burned|burnt)\\b",
+   "remplace": "\\bwe\\s+(wanted|lived|called|fought|built|killed|buried|worshipped|worshiped|prayed|traded|elected|crowned|executed|burned|burnt)\\b",
+   "raison": "« we thought » (nous collectif légitime) est le seul type de match ; retiré de la liste"
+  },
+  {
+   "langue": "en",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\b(at|on|into)\\s+(the\\s+)?\\d{3,4}\\b(?!\\s*(BC|BCE|AD|CE|°|%|km|m\\b|ft|meters?|metres?|people|men|soldiers|years?|points?|pages?|copies|miles?|\\$|€|inhabitants|km²|feet))",
+   "remplace": "\\b(at|on)\\s+\\d{3,4}(\\s*(BC|BCE|AD|CE))?(?=\\s*[,;:)]|\\s*\\.(\\s|$)|\\s+(he|she|they|the|a|an|it|was|were|after|before|when|during)\\b)",
+   "raison": "tous les matchs sont corrects (adresse, montants, at the 1889 Exhibition, into the 2016 election)"
+  },
+  {
+   "langue": "en",
+   "type": "piege",
+   "id": "flaneur",
+   "regex": "\\bstrollers?\\b",
+   "remplace": null,
+   "raison": "« stroller » n'apparaît que dans la glose voulue de flâneur"
+  },
+  {
+   "langue": "en",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\b(ONU|OTAN)\\b",
+   "remplace": "\\b(ONU|OTAN)\\b(?!\\s+in\\s+French)",
+   "raison": "seul match : mention métalinguistique « OTAN in French », correcte"
+  },
+  {
+   "langue": "en",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\blearning\\s+paths?\\b",
+   "remplace": null,
+   "raison": "« learning paths » emploie déjà le terme imposé path"
+  },
+  {
+   "langue": "en",
+   "type": "produit",
+   "id": "ami",
+   "regex": "(\\b(your|an?|this|their|his|her|my)\\s+|'s\\s+)@(?!\\w)",
+   "remplace": null,
+   "raison": "le @ comme pseudo est une convention UI voulue, sans rapport avec « friend »"
+  },
+  {
+   "langue": "en",
+   "type": "oeuvre",
+   "id": "rouge_noir",
+   "regex": "(?<!the\\s)\\bred\\s+and\\s+the\\s+black\\b|\\bthe\\s+red\\s+and\\s+black\\b",
+   "remplace": "(?<!the\\s)\\bred\\s+and\\s+the\\s+black\\b",
+   "raison": "« the red and black in the title » désigne les couleurs, pas le titre"
+  },
+  {
+   "langue": "en",
+   "type": "oeuvre",
+   "id": "gilgamesh",
+   "regex": "\\bthe\\s+(epopee|epopoeia|epos|saga|legend|poem|epic\\s+poem|story|tale)\\s+of\\s+gilgamesh\\b",
+   "remplace": "\\bthe\\s+(epopee|epopoeia|epos|saga)\\s+of\\s+gilgamesh\\b",
+   "raison": "« the story of Gilgamesh » est un emploi générique correct"
+  },
+  {
+   "langue": "en",
+   "type": "oeuvre",
+   "id": "joconde",
+   "regex": "\\bjoconde\\b|\\bla\\s+gioconda\\b(?!\\s*\\()",
+   "remplace": "\\bjoconde\\b",
+   "raison": "« La Gioconda » cité comme autre nom du tableau est correct"
+  },
+  {
+   "langue": "en",
+   "type": "oeuvre",
+   "id": "ronde_de_nuit",
+   "regex": "\\bthe\\s+(night\\s+(round|rounds|patrol|shift|guard|watchmen|walk|dance|ronde)|nightly\\s+(round|patrol|watch)|round\\s+of\\s+(the\\s+)?night|nocturnal\\s+(round|patrol|watch))\\b",
+   "remplace": "\\bthe\\s+(night\\s+(round|rounds|patrol|shift|guard|watchmen|walk|dance|ronde)|nightly\\s+(round|patrol|watch)|round\\s+of\\s+(the\\s+)?night|nocturnal\\s+(round|patrol|watch))\\b(?=[^.\\n]{0,80}\\b(rembrandt|1642|militia|banning\\s+cocq|amsterdam)\\b)|\\brembrandt'?s?\\s+(the\\s+)?(night\\s+(round|rounds|patrol|shift|ronde)|nightly\\s+(round|patrol|watch)|round\\s+of\\s+(the\\s+)?night)\\b",
+   "raison": "« the night shift » de Tchernobyl est correct ; exiger le contexte Rembrandt"
+  },
+  {
+   "langue": "es",
+   "type": "piege",
+   "id": "gratuit",
+   "regex": "\\bsin\\s+costo\\b",
+   "remplace": null,
+   "raison": "« sin costo » est une tournure espagnole correcte dans une phrase (« Cancela en cualquier momento, sin costo »)."
+  },
+  {
+   "langue": "es",
+   "type": "piege",
+   "id": "premium",
+   "regex": "\\b(?:plan|oferta|versi[oó]n|suscripci[oó]n|cuenta|funciones)\\s+(?:de\\s+primera(?:\\s+calidad)?|superior|de\\s+lujo|de\\s+pago)\\b",
+   "remplace": "\\b(?:plan|oferta|versi[oó]n|suscripci[oó]n|cuenta|funciones)\\s+(?:de\\s+primera(?:\\s+calidad)?|superior|de\\s+lujo)\\b",
+   "raison": "« suscripción de pago » est correct dans le texte légal ; on retire « de pago »."
+  },
+  {
+   "langue": "es",
+   "type": "piege",
+   "id": "culture_generale",
+   "regex": "\\bconocimientos?\\s+general(?:es)?\\b",
+   "remplace": null,
+   "raison": "« conocimientos generales » est une expression espagnole correcte et courante, pas un contresens."
+  },
+  {
+   "langue": "es",
+   "type": "piege",
+   "id": "voici_comment",
+   "regex": "\\bas[ií]\\s+(?:empez[oó]|comenz[oó]|cambi[oó]|naci[oó])\\s+(?:todo|el|la|los|las|un|una)\\b",
+   "remplace": "^\\s*as[ií]\\s+(?:empez[oó]|comenz[oó]|cambi[oó]|naci[oó])\\s+todo\\s*[.!…]?\\s*$",
+   "raison": "Dans les cours, « Así nació/empezó/cambió… » est une narration correcte ; on ne vise que l'intitulé isolé « Así empezó todo »."
+  },
+  {
+   "langue": "es",
+   "type": "piege",
+   "id": "polysemie_courante",
+   "regex": "\\befecto\\s+de\\s+sonido\\b|\\bpoder\\s+pol[ií]tico\\s+real\\b|\\bmanzanas\\s+nuevas\\b",
+   "remplace": "\\befecto\\s+de\\s+sonido\\b|\\bpoder\\s+pol[ií]tico\\s+real\\b",
+   "raison": "« manzanas nuevas » (îlots urbains du Paris d'Haussmann) est correct ; on garde les deux autres calques."
+  },
+  {
+   "langue": "es",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bNATO\\b",
+   "remplace": "\\bNATO\\b(?!\\s+en\\s+ingl[eé]s)",
+   "raison": "Le cours cite légitimement le sigle anglais « NATO en inglés »."
+  },
+  {
+   "langue": "es",
+   "type": "piege",
+   "id": "nemesis",
+   "regex": "\\b(?:archi)?enemig[oa]\\b[^.!?\\n]{0,70}\\b(?:diosa|venganza\\s+divina|h[uú]bris|hybris|Narciso|castigo\\s+divino)\\b|\\b(?:diosa|venganza\\s+divina|h[uú]bris|hybris|Narciso|castigo\\s+divino)\\b[^.!?\\n]{0,70}\\b(?:archi)?enemig[oa]\\b|\\bdiosa\\s+(?:de\\s+la\\s+)?(?:enemig\\w*|adversari\\w*|rival\\w*)",
+   "remplace": "\\b(?:archi)?enemig[oa]\\b[^.!?\\n]{0,70}\\b(?:diosa|venganza\\s+divina|h[uú]bris|hybris|Narciso|castigo\\s+divino)\\b|\\b(?:diosa|venganza\\s+divina|h[uú]bris|hybris|Narciso|castigo\\s+divino)\\b[^.!?\\n]{0,70}\\b(?:archi)?enemig[oa]\\b|\\bdiosa\\s+(?:de\\s+la\\s+)?(?:enemig\\w*|adversari\\w*)",
+   "raison": "« diosa de la rivalidad » (Éris) est correct ; on retire « rival »."
+  },
+  {
+   "langue": "es",
+   "type": "piege",
+   "id": "deux_etats_ame",
+   "regex": "\\bdos\\s+(?:Estados|pa[ií]ses|naciones)\\b[^.!?\\n]{0,70}\\b(?:spleen|ideal|Baudelaire|alma|[aá]nimo|poeta)\\b|\\b(?:spleen|ideal|Baudelaire|alma|[aá]nimo|poeta)\\b[^.!?\\n]{0,70}\\bdos\\s+(?:Estados|pa[ií]ses|naciones)\\b",
+   "remplace": "\\bdos\\s+(?:(?-i:Estados)|pa[ií]ses|naciones)\\b[^.!?\\n]{0,70}\\b(?:spleen|ideal|Baudelaire|alma|[aá]nimo|poeta)\\b|\\b(?:spleen|ideal|Baudelaire|alma|[aá]nimo|poeta)\\b[^.!?\\n]{0,70}\\bdos\\s+(?:(?-i:Estados)|pa[ií]ses|naciones)\\b",
+   "raison": "« dos estados » en minuscule est la forme imposée ; seul « Estados » (pays) avec majuscule est fautif."
+  },
+  {
+   "langue": "es",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\bentrenamientos?\\b|\\bentrenar\\b",
+   "remplace": "^\\s*entrenamientos?\\s*$|\\b(?:pesta[ñn]a|secci[oó]n|modo)\\s+(?:de\\s+)?entrenamiento\\b|\\btu\\s+entrenamiento\\b",
+   "raison": "Dans le catalogue, « entrenamiento del modelo / Entrenar » (IA) est correct ; on ne vise que le nom d'onglet."
+  },
+  {
+   "langue": "es",
+   "type": "oeuvre",
+   "id": "republique",
+   "regex": "\\bThe\\s+Republic\\b|\\bLa\\s+R[eé]publique\\b",
+   "remplace": "(?<!\\bof\\s)\\bThe\\s+Republic\\b|\\bLa\\s+R[eé]publique\\b",
+   "raison": "« The Battle Hymn of the Republic » n'a rien à voir avec Platon."
+  },
+  {
+   "langue": "es",
+   "type": "oeuvre",
+   "id": "travaux_jours",
+   "regex": "\\blos\\s+trabajos\\s+y\\s+los\\s+d[ií]as\\b",
+   "remplace": null,
+   "raison": "« Los trabajos y los días » est un titre espagnol établi d'Hésiode."
+  },
+  {
+   "langue": "es",
+   "type": "oeuvre",
+   "id": "rouge_noir",
+   "regex": "\\bel\\s+rojo\\s+y\\s+el\\s+negro\\b(?!\\s+del\\s+t[ií]tulo)",
+   "remplace": null,
+   "raison": "« El rojo y el negro » est un titre espagnol établi de Stendhal."
+  },
+  {
+   "langue": "es",
+   "type": "oeuvre",
+   "id": "pere_goriot",
+   "regex": "\\b(?:el\\s+)?padre\\s+Goriot\\b",
+   "remplace": null,
+   "raison": "« El padre Goriot » est un titre/nom espagnol établi de Balzac."
+  },
+  {
+   "langue": "es",
+   "type": "oeuvre",
+   "id": "demoiselles",
+   "regex": "\\bse[ñn]oritas\\s+de\\s+Avi[ñn][oó]n\\b",
+   "remplace": null,
+   "raison": "« Las señoritas de Aviñón » est le titre espagnol établi du tableau de Picasso."
+  },
+  {
+   "langue": "es",
+   "type": "oeuvre",
+   "id": "dejeuner_herbe",
+   "regex": "\\balmuerzo\\s+campestre\\b",
+   "remplace": null,
+   "raison": "« El almuerzo campestre » est un titre espagnol établi du tableau de Manet."
+  },
+  {
+   "langue": "et",
+   "type": "piege",
+   "id": "pas_de_connexion",
+   "regex": "\\bühenduseta\\b",
+   "remplace": null,
+   "raison": "« ilma ühenduseta » (hors ligne) est l'estonien correct, pas un faux sens."
+  },
+  {
+   "langue": "et",
+   "type": "piege",
+   "id": "siecle",
+   "regex": "\\b\\d{3,4}\\.?\\s*-?\\s*nda(d|te|tel|id|il)\\b",
+   "remplace": "\\b\\d{1,2}00\\.?\\s*-?\\s*nda(d|te|tel|id|il)\\b",
+   "raison": "Ne viser que les centaines (700ndad = décalage de siècle), pas les décennies correctes (1980ndatel)."
+  },
+  {
+   "langue": "et",
+   "type": "piege",
+   "id": "spleen",
+   "regex": "\\bspleen\\w*",
+   "remplace": "(?<!le )\\bspleen\\w*",
+   "raison": "Exclut le titre original « Le Spleen de Paris » cité légitimement."
+  },
+  {
+   "langue": "et",
+   "type": "piege",
+   "id": "plaques_photo",
+   "regex": "\\btaldrik\\w*",
+   "remplace": "\\btaldrik\\w*(?=.{0,40}(foto|pilt|pildi|dagerro|kaamera|valgust))|(foto|pilt|pildi|dagerro|kaamera)\\w*.{0,40}\\btaldrik\\w*",
+   "raison": "« taldrik » est correct pour l'assiette (toit taldrikul) ; ne garder que le contexte photographique."
+  },
+  {
+   "langue": "et",
+   "type": "piege",
+   "id": "renaissance",
+   "regex": "\\buuestisünd\\w*",
+   "remplace": null,
+   "raison": "« uuestisünd » est la renaissance mythologique/végétale correcte (Perséphone, printemps)."
+  },
+  {
+   "langue": "et",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bONU\\b",
+   "remplace": "(?-i:\\bONU\\b)",
+   "raison": "En insensible à la casse, matche « onu » (oncle), mot estonien correct ; n'accepter que le sigle en majuscules."
+  },
+  {
+   "langue": "et",
+   "type": "piege",
+   "id": "termes_islam",
+   "regex": "\\b(caliph|calife|khalif|kalif)\\w*",
+   "remplace": "\\b(caliph|calife|khalif)\\w*|\\bkalif(?!aa[dt])\\w*",
+   "raison": "« kalifaat/kalifaadi » est la forme estonienne correcte ; ne viser que « kalif- » pour kaliif."
+  },
+  {
+   "langue": "et",
+   "type": "piege",
+   "id": "relance",
+   "regex": "\\btervenemi\\w*|\\btervendami\\w*(?=.{0,40}majandus)",
+   "remplace": "\\b(tervenemi|tervendami)\\w*(?=.{0,40}majandus)",
+   "raison": "Sans contexte, matche la guérison au sens propre (œil d'Horus, thérapie génique), qui est correcte."
+  },
+  {
+   "langue": "et",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bmarsruu[dt]\\w*",
+   "remplace": null,
+   "raison": "« Marsruut » est ici l'itinéraire de Colomb dans un titre de cours, sens correct."
+  },
+  {
+   "langue": "et",
+   "type": "produit",
+   "id": "premium",
+   "regex": "\\bpreemia\\w*",
+   "remplace": null,
+   "raison": "Ne matche que « Nobeli preemia » (prix Nobel), usage correct."
+  },
+  {
+   "langue": "et",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\bpraktiseeri\\w*",
+   "remplace": null,
+   "raison": "« usku praktiseerida » (pratiquer sa religion) est correct."
+  },
+  {
+   "langue": "et",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\bsihtmärk\\w*",
+   "remplace": null,
+   "raison": "« sihtmärk » (cible de 1,5 °C) est un usage correct hors onboarding."
+  },
+  {
+   "langue": "et",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bdistsipliin\\w*",
+   "remplace": null,
+   "raison": "« õige sõna distsipliin » (discipline de Flaubert) est correct."
+  },
+  {
+   "langue": "et",
+   "type": "produit",
+   "id": "abonnement",
+   "regex": "\\bliitumi\\w*",
+   "remplace": null,
+   "raison": "« liitumine » désigne ici l'adhésion (OTAN, mariage, contrats de modem) ou l'onboarding, jamais l'abonnement."
+  },
+  {
+   "langue": "et",
+   "type": "oeuvre",
+   "id": "romeo_juliette",
+   "regex": "\\broméo\\b",
+   "remplace": null,
+   "raison": "Matche le nom propre correct « Roméo Dallaire »."
+  },
+  {
+   "langue": "et",
+   "type": "oeuvre",
+   "id": "meilleur_des_mondes",
+   "regex": "\\bmaailmadest\\s+parim\\w*",
+   "remplace": null,
+   "raison": "« kõigist võimalikest maailmadest parim » (Leibniz) est correct, sans lien avec Huxley."
+  },
+  {
+   "langue": "et",
+   "type": "oeuvre",
+   "id": "metamorphose",
+   "regex": "\\bmuundumine\\b",
+   "remplace": null,
+   "raison": "« muundumine » est un terme correct (transformation chimique), pas le titre de Kafka."
+  },
+  {
+   "langue": "et",
+   "type": "oeuvre",
+   "id": "banquet",
+   "regex": "\\bsümpoosion\\b|\\bsümposion\\b",
+   "remplace": null,
+   "raison": "« sümpoosion/sümposion » désigne correctement l'institution grecque du banquet."
+  },
+  {
+   "langue": "et",
+   "type": "oeuvre",
+   "id": "confessions",
+   "regex": "\\bkonfessioon\\w*",
+   "remplace": null,
+   "raison": "« usuliste konfessioonide » (confessions religieuses) est correct."
+  },
+  {
+   "langue": "et",
+   "type": "oeuvre",
+   "id": "venus_milo",
+   "regex": "\\bmilose\\s+veenus\\b|\\bveenus\\s+milosest\\b",
+   "remplace": null,
+   "raison": "« Milose Veenus » est la forme estonienne établie de la statue."
+  },
+  {
+   "langue": "fi",
+   "type": "piege",
+   "id": "gratuit",
+   "regex": "\\bmaksuton\\w*",
+   "remplace": null,
+   "raison": "maksuton est un synonyme correct et courant de gratuit"
+  },
+  {
+   "langue": "fi",
+   "type": "piege",
+   "id": "entrainement",
+   "regex": "\\bkäytän(tö|nön|töä|töön|töösi|nössä|nöstä)\\w*",
+   "remplace": "\\bkäytän(tö|nö)\\w*si\\b",
+   "raison": "käytäntö (politique, pratique) est correct en légal/catalogue ; garder la forme possessive visant l'onglet"
+  },
+  {
+   "langue": "fi",
+   "type": "piege",
+   "id": "entrainement",
+   "regex": "\\bvalmennu\\w*",
+   "remplace": null,
+   "raison": "valmennus = accompagnement du programme ambassadeur, emploi correct"
+  },
+  {
+   "langue": "fi",
+   "type": "piege",
+   "id": "on_impersonnel",
+   "regex": "\\bme\\s+\\w+mme\\b",
+   "remplace": null,
+   "raison": "me explicite = vrai « nous » (slogan Kodak, Wir sind das Volk), pas le « on » impersonnel"
+  },
+  {
+   "langue": "fi",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\bvuode(ssa|lta|lle)\\s+\\**\\d{3,4}\\b",
+   "remplace": "\\bvuodessa\\s+\\**\\d{3,4}(?!\\d)(?![\\d*]*-)(?!\\**\\s+(kertaa|mm|cm|km|tonnia|euroa|dollaria))",
+   "raison": "vuodelta 1568 (« de 1568 ») et vuodessa + 1900-luvulla sont corrects"
+  },
+  {
+   "langue": "fi",
+   "type": "piege",
+   "id": "siecle",
+   "regex": "700-luvu\\w*.{0,60}(arabia|muhammad|islam|mekka)|(arabia|muhammad|islam|mekka)\\w*.{0,60}700-luvu\\w*",
+   "remplace": "(?<!\\d)700-luvu\\w*.{0,60}(arabia|muhammad|islam|mekka)|(arabia|muhammad|islam|mekka)\\w*.{0,60}(?<!\\d)700-luvu\\w*",
+   "raison": "matchait 1700-luvulla (Galland), date correcte"
+  },
+  {
+   "langue": "fi",
+   "type": "piege",
+   "id": "hommes_troupes",
+   "regex": "(marssi|hyökkä|armeij|sotila|joukk|johta|valloit)\\w*.{0,40}\\b\\d[\\d\\s]*\\s*(kolikk|dollari|uros|urost|miespuoli)\\w*",
+   "remplace": "(marssi|hyökkä|armeij|sotila|joukk|johta|valloit)\\w*.{0,40}\\b\\d[\\d\\s]*\\s*(kolikk|uros|urost|miespuoli)\\w*",
+   "raison": "dollari matche des prix réels (pétrole à 130 dollars)"
+  },
+  {
+   "langue": "fi",
+   "type": "piege",
+   "id": "termes_islam",
+   "regex": "\\bratsi(a|an|oita|at|oissa)\\b",
+   "remplace": "\\bratsi(a|an|oita|at|oissa)\\b.{0,60}(muhammad|karavaan|mekka|medina|beduiin|heimo)|(muhammad|karavaan|mekka|medina|beduiin|heimo)\\w*.{0,60}\\bratsi(a|an|oita|at|oissa)\\b",
+   "raison": "ratsia est le mot correct pour un raid moderne (opération américaine au Pakistan)"
+  },
+  {
+   "langue": "fi",
+   "type": "piege",
+   "id": "renaissance",
+   "regex": "\\brenesanssi\\w*|\\brenaissance\\w*",
+   "remplace": "\\brenesanssi\\w*|\\brenaissance\\b(?!\\s+dam\\b)",
+   "raison": "Grand Ethiopian Renaissance Dam est un nom propre correct"
+  },
+  {
+   "langue": "fi",
+   "type": "produit",
+   "id": "quiz",
+   "regex": "\\btietovisa\\w*",
+   "remplace": null,
+   "raison": "tietovisa est la forme pleine correcte de visa, même sens"
+  },
+  {
+   "langue": "fi",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\breitti\\w*",
+   "remplace": null,
+   "raison": "reitti apparaît dans des titres du catalogue (Reitti länteen), emploi correct"
+  },
+  {
+   "langue": "fi",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\boppimispolk\\w*",
+   "remplace": null,
+   "raison": "oppimispolku contient déjà polku, formulation correcte"
+  },
+  {
+   "langue": "fi",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\bkäytän(tö|nö)\\w*",
+   "remplace": "\\bkäytän(tö|nö)\\w*si\\b",
+   "raison": "käytännön idea (catalogue) et käytäntö (légal) sont corrects"
+  },
+  {
+   "langue": "fi",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\bvalmennu\\w*",
+   "remplace": null,
+   "raison": "valmennus = coaching du programme ambassadeur, emploi correct"
+  },
+  {
+   "langue": "fi",
+   "type": "produit",
+   "id": "reviser",
+   "regex": "\\buudelleen\\s*(luke|opiskel|käy|katso)\\w*",
+   "remplace": null,
+   "raison": "uudelleenlukeminen = relecture opposée à la révision espacée, sens correct"
+  },
+  {
+   "langue": "fi",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\bmaali(si|n|a|t)?\\b",
+   "remplace": null,
+   "raison": "maali = peinture dans le catalogue, mot courant"
+  },
+  {
+   "langue": "fi",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bmateriaali\\w*",
+   "remplace": null,
+   "raison": "materiaali = matériaux dans le catalogue, emploi correct"
+  },
+  {
+   "langue": "fi",
+   "type": "produit",
+   "id": "abonnement",
+   "regex": "\\bliittym\\w*",
+   "remplace": null,
+   "raison": "liittymät = connexions réseau (modems), emploi correct"
+  },
+  {
+   "langue": "fi",
+   "type": "produit",
+   "id": "bibliotheque",
+   "regex": "\\bkaikki\\s+kurssit\\b",
+   "remplace": null,
+   "raison": "« Kaikki kurssit tehty » = tous les cours terminés, phrase correcte"
+  },
+  {
+   "langue": "fi",
+   "type": "oeuvre",
+   "id": "romeo_juliette",
+   "regex": "\\broméo\\b",
+   "remplace": "\\broméo\\b(?!\\s+dallaire)",
+   "raison": "Roméo Dallaire est le nom correct d'une personne"
+  },
+  {
+   "langue": "fi",
+   "type": "oeuvre",
+   "id": "mockingbird",
+   "regex": "\\bmatkijalint\\w*|\\bpilkkalint\\w*",
+   "remplace": "\\bpilkka(aja)?lint\\w*",
+   "raison": "matkijalintu est le nom finnois correct de l'oiseau ; seul pilkkalintu est un calque"
+  },
+  {
+   "langue": "fi",
+   "type": "oeuvre",
+   "id": "moby_dick",
+   "regex": "\\bmoby-dick\\b",
+   "remplace": null,
+   "raison": "Moby-Dick est l'orthographe du titre original anglais cité comme tel"
+  },
+  {
+   "langue": "fi",
+   "type": "oeuvre",
+   "id": "banquet",
+   "regex": "\\bsymposion\\b|\\bsymposium\\b",
+   "remplace": null,
+   "raison": "symposion = terme grec et institution du banquet, emploi correct"
+  },
+  {
+   "langue": "fi",
+   "type": "oeuvre",
+   "id": "poetique",
+   "regex": "\\bpoetiikka\\b",
+   "remplace": "aristotel\\w*.{0,40}\\bpoetiik\\w*|\\bpoetiik\\w*.{0,40}aristotel",
+   "raison": "poetiikka (la poétique en général) est un nom commun correct"
+  },
+  {
+   "langue": "fi",
+   "type": "oeuvre",
+   "id": "rouge_noir",
+   "regex": "\\bpunainen\\s+ja\\s+musta\\b",
+   "remplace": null,
+   "raison": "Punainen ja musta est le titre finnois établi du roman de Stendhal"
+  },
+  {
+   "langue": "fi",
+   "type": "oeuvre",
+   "id": "pere_goriot",
+   "regex": "\\bisä\\s+goriot\\b",
+   "remplace": null,
+   "raison": "Isä Goriot est le titre finnois établi du roman de Balzac"
+  },
+  {
+   "langue": "fi",
+   "type": "oeuvre",
+   "id": "notre_dame",
+   "regex": "\\bnotre[- ]dame\\s+de\\s+paris\\b",
+   "remplace": "\\bnotre[- ]dame\\s+de\\s+paris\\b.{0,40}hugo|hugo\\w*.{0,40}\\bnotre[- ]dame\\s+de\\s+paris\\b",
+   "raison": "Notre-Dame de Paris désigne aussi la cathédrale, nom correct"
+  },
+  {
+   "langue": "fi",
+   "type": "oeuvre",
+   "id": "notre_dame",
+   "regex": "\\bkellonsoittaja\\b",
+   "remplace": null,
+   "raison": "Notre-Damen kellonsoittaja est le titre finnois établi du roman"
+  },
+  {
+   "langue": "fi",
+   "type": "oeuvre",
+   "id": "joconde",
+   "regex": "\\bgioconda\\b",
+   "remplace": null,
+   "raison": "La Gioconda cité comme nom italien du tableau, correct"
+  },
+  {
+   "langue": "fi",
+   "type": "oeuvre",
+   "id": "citizen_kane",
+   "regex": "\\bkansalainen\\s+kane\\b",
+   "remplace": null,
+   "raison": "Kansalainen Kane est le titre finnois établi du film"
+  },
+  {
+   "langue": "he",
+   "type": "piege",
+   "id": "on_impersonnel",
+   "regex": "אנ(חנ)?ו\\s+(רוצים|חיים|לווים|דורשים|קוראים|מכנים|אומרים|רואים|יודעים|מוצאים|מגלים|מדברים|משתמשים|מספרים|חושבים|שומעים|מבינים|לומדים)",
+   "remplace": "(?<![א-ת])אנ(חנ)?ו\\s+(רוצים|חיים|לווים|דורשים|קוראים|מכנים|אומרים|רואים|יודעים|מוצאים|מגלים|מדברים|משתמשים|מספרים|חושבים|שומעים|מבינים|לומדים)",
+   "raison": "Exclut « שאנו מכנים / שאנחנו מספרים », relatives naturelles et correctes en hébreu."
+  },
+  {
+   "langue": "he",
+   "type": "piege",
+   "id": "on_impersonnel",
+   "regex": "(^|\\s)אנו\\s",
+   "remplace": null,
+   "raison": "Trop large : attrape tout « אנו » (nous légitime) ; rx[0] couvre déjà les verbes typiques."
+  },
+  {
+   "langue": "he",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "(ה)?שנים\\s+\\*{0,2}\\d{3}0(?!\\d)",
+   "remplace": "(?<!בין\\s)(?<!בין\\sה)(?<!ה)ה?שנים\\s+\\*{0,2}\\d{3}0(?!\\d)",
+   "raison": "Exclut « בין השנים 1950 ל-1972 », formulation correcte d'un intervalle."
+  },
+  {
+   "langue": "he",
+   "type": "piege",
+   "id": "siecle",
+   "regex": "המאה\\s+ה-?\\d{1,2}\\.",
+   "remplace": null,
+   "raison": "« המאה ה-20. » est précisément la forme imposée ; la regex ne détecte que la ponctuation."
+  },
+  {
+   "langue": "he",
+   "type": "piege",
+   "id": "siecle",
+   "regex": "שנות\\s+ה-?\\d{3}(?!\\d)",
+   "remplace": "שנות\\s+ה-?\\d00(?!\\d)",
+   "raison": "Limiter aux centaines rondes (calque de siècle) ; « שנות ה-450 » est une décennie correcte."
+  },
+  {
+   "langue": "he",
+   "type": "piege",
+   "id": "caravane",
+   "regex": "קר[או]{1,3}[נן]",
+   "remplace": "(?<![א-ת])[הבולמש]?(קרוו?א?ן|קרוו?אנים|קרונות)(?![א-ת])(?!\\s+(רכבת|הרכבת|משא|נוסעים))",
+   "raison": "Trop large : attrape « קראנו », « קרונוס » ; cibler קרון/קרוואן isolés."
+  },
+  {
+   "langue": "he",
+   "type": "piege",
+   "id": "poemes",
+   "regex": "פייטנים",
+   "remplace": null,
+   "raison": "« פייטנים » désigne correctement les chantres/aèdes, sans lien avec les six poèmes condamnés."
+  },
+  {
+   "langue": "he",
+   "type": "piege",
+   "id": "plaques_photo",
+   "regex": "צלח(ת|ות)",
+   "remplace": "צלח(ת|ות)\\s+(טקטוני|צילום|שלא\\s+מפסיקות|זז|נע|שזז|שנע)",
+   "raison": "Exclut l'assiette au sens propre (« האוכל שבצלחת »)."
+  },
+  {
+   "langue": "he",
+   "type": "piege",
+   "id": "termes_islam",
+   "regex": "(?<![א-ת])(כליף|קליף|קאליף|כליפים|קליפים)",
+   "remplace": "(?<![א-ת])[הולב]?(כליף|כליפים|קאליף|קאליפים|קליף(?![א-ת]))",
+   "raison": "Exclut « קליפים » (clips vidéo), mot courant correct."
+  },
+  {
+   "langue": "he",
+   "type": "piege",
+   "id": "termes_islam",
+   "regex": "דהימ[הא]|אוממ[הא]|ג'יזיא|ראזזיה",
+   "remplace": "(?<![א-ת])(דהימ[הא]|אוממ[הא]|ג'יזיא|ראזזיה)(?![א-ת])",
+   "raison": "Exclut « הדהימה » (a stupéfié), verbe courant."
+  },
+  {
+   "langue": "he",
+   "type": "piege",
+   "id": "nemesis",
+   "regex": "(ה)?אל[הת]\\s+(האויב|היריב|האויבת|היריבה)",
+   "remplace": "(ה)?אל[הת]\\s+(האויב|היריב|האויבת|היריבה)(?![א-ת])",
+   "raison": "Exclut « אלת היריבות » (Éris, déesse de la rivalité), correct."
+  },
+  {
+   "langue": "he",
+   "type": "piege",
+   "id": "offshore",
+   "regex": "מול\\s+החוף",
+   "remplace": null,
+   "raison": "« מול החוף » est la tournure correcte pour une île au large d'une côte."
+  },
+  {
+   "langue": "he",
+   "type": "piege",
+   "id": "naturalisme",
+   "regex": "טבעיות",
+   "remplace": null,
+   "raison": "« טבעיות » est l'adjectif pluriel courant (« בהגדרות טבעיות »), correct."
+  },
+  {
+   "langue": "he",
+   "type": "produit",
+   "id": "quiz",
+   "regex": "בחינ(ה|ות)",
+   "remplace": null,
+   "raison": "« בחינה » attrape « מבחינה חברתית » et « בבחינות » (examens scolaires), corrects."
+  },
+  {
+   "langue": "he",
+   "type": "produit",
+   "id": "cours",
+   "regex": "לקח(ים)?",
+   "remplace": null,
+   "raison": "« לקח » attrape « לקחת חלק » et « הלקח » (la morale), corrects."
+  },
+  {
+   "langue": "he",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "מסע",
+   "remplace": "מסע(ות)?\\s+(ה)?(ידע|למידה|לימוד)|(?<![א-ת])ה?מסע(ות)?\\s+(שלך|המודרכים|המודרך)",
+   "raison": "« מסע » (voyage, expédition) est légitime dans les cours ; cibler le parcours d'apprentissage."
+  },
+  {
+   "langue": "he",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "שביל(ים)?",
+   "remplace": "(?<![א-ת])ה?שביל(ים)?(?![א-ת])(?!\\s+החלב)",
+   "raison": "Exclut « בשבילך » (pour toi) et « שביל החלב »."
+  },
+  {
+   "langue": "he",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "נתיב(ים)?",
+   "remplace": null,
+   "raison": "« נתיבי המים » (voies navigables) et autres « נתיב » courants sont corrects."
+  },
+  {
+   "langue": "he",
+   "type": "produit",
+   "id": "niveau",
+   "regex": "לבל",
+   "remplace": "(?<![א-ת])ה?לבל(ים)?(?![א-ת])",
+   "raison": "Exclut « לבלתי » ; ne garder que la translittération isolée."
+  },
+  {
+   "langue": "he",
+   "type": "produit",
+   "id": "niveau",
+   "regex": "מפלס(ים)?",
+   "remplace": null,
+   "raison": "« מפלס הים » (niveau de la mer) est correct."
+  },
+  {
+   "langue": "he",
+   "type": "produit",
+   "id": "essai_gratuit",
+   "regex": "ניסיון\\s+(חינמי|בחינם|ללא\\s+תשלום)",
+   "remplace": null,
+   "raison": "« תקופת הניסיון בחינם » est une variante correcte du terme imposé ניסיון חינם."
+  },
+  {
+   "langue": "he",
+   "type": "produit",
+   "id": "essai_gratuit",
+   "regex": "(ה)?ניסיון\\s+שלי",
+   "remplace": null,
+   "raison": "« הניסיון שלי » emploie bien le terme imposé ניסיון ; correct."
+  },
+  {
+   "langue": "he",
+   "type": "produit",
+   "id": "sophia",
+   "regex": "סופי[הא]ה?",
+   "remplace": "(?<!איה\\s)(?<!אגיה\\s)(?<![א-ת])[בלמוהש]?סופי(ה|א)(?![א-ת])(?!\\s+לורן)",
+   "raison": "Exclut « פילוסופיה », « איה סופיה », « סופיה לורן »."
+  },
+  {
+   "langue": "he",
+   "type": "produit",
+   "id": "reviser",
+   "regex": "לשנן|שינון",
+   "remplace": null,
+   "raison": "« שינון » (mémorisation) traduit correctement le texte du store."
+  },
+  {
+   "langue": "he",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "מטר[הת]",
+   "remplace": "(?<![א-ת])ה?מטר(ה|ות)\\s+(שלך|שלי|היומית|הלימוד)|(?<![א-ת])במטרה\\s+זו",
+   "raison": "« מטרה » est un mot courant (« במטרה ל- ») ; cibler l'objectif d'onboarding."
+  },
+  {
+   "langue": "he",
+   "type": "produit",
+   "id": "ami",
+   "regex": "עמית(ים)?",
+   "remplace": "(?<![א-ת])ה?עמית(ים|יך|יו)?(?![א-ת])",
+   "raison": "Exclut « החד פעמית » et autres mots contenant עמית."
+  },
+  {
+   "langue": "he",
+   "type": "produit",
+   "id": "ami",
+   "regex": "מכר(ים)?",
+   "remplace": "(?<!רב\\s)(?<!רבי\\s)(?<![א-ת])ה?מכר(ים|יך)?(?![א-ת])",
+   "raison": "Exclut « ממכרים », « המכריעים », « רב מכר »."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "le_proces",
+   "regex": "התהליך",
+   "remplace": "[*\\\"«]\\s*התהליך\\s*[*\\\"»]|התהליך\\**\\s*,?\\s*(מאת\\s+|של\\s+)?\\**(פרנץ\\s+)?קפקא|קפקא\\s*[,:(]?\\s*\\**התהליך",
+   "raison": "Exclut « התהליך » courant (procédé de Daguerre) ; ne viser que le titre de Kafka."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "metamorphose",
+   "regex": "הטרנספורמצי[הת]",
+   "remplace": null,
+   "raison": "« הטרנספורמציה » désigne ici la transformation de Gregor, pas le titre ; nom commun correct."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "banquet",
+   "regex": "הסימפוזיון",
+   "remplace": "הסימפוזיון\\s*\\(?\\s*(של\\s+)?אפלטון|אפלטון\\s*[,:]?\\s*\\**הסימפוזיון|[*\\\"«]הסימפוזיון[*\\\"»]",
+   "raison": "Exclut le symposium grec comme pratique (« הסימפוזיון היווני »)."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "banquet",
+   "regex": "הסעודה",
+   "remplace": null,
+   "raison": "« הסעודה » est un nom courant (le festin) ; presque jamais le titre de Platon."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "miserables",
+   "regex": "האומללים",
+   "remplace": "[*\\\"«]האומללים[*\\\"»]|האומללים\\s*\\(?\\s*(של\\s+)?(ויקטור\\s+)?הוגו",
+   "raison": "Exclut l'adjectif courant (« האנשים האומללים »)."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "madame_bovary",
+   "regex": "בווארי",
+   "remplace": "(?<![א-ת])בווארי(?![א-ת])",
+   "raison": "Exclut « בוואריה » (Bavière)."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "rouge_noir",
+   "regex": "אדום\\s+ושחור",
+   "remplace": "[*\\\"«]\\s*(ה)?אדום\\s+ושחור\\s*[*\\\"»]|אדום\\s+ושחור\\s*,?\\s*(מאת\\s+)?סטנדאל",
+   "raison": "Exclut les couleurs au sens propre ; ne viser que le titre de Stendhal."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "journal_anne_frank",
+   "regex": "הבית\\s+האחורי",
+   "remplace": null,
+   "raison": "« הבית האחורי » est le nom hébreu établi de l'Annexe (Achterhuis) ; correct."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "gilgamesh",
+   "regex": "גלגמש",
+   "remplace": null,
+   "raison": "« עלילות גלגמש » est le titre hébreu établi (traduction Shifra-Klein) ; graphie correcte."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "le_cri",
+   "regex": "הזעקה",
+   "remplace": null,
+   "raison": "« הזעקה » est ici le nom commun (le cri entendu), pas le titre ; correct."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "joconde",
+   "regex": "לה\\s+ג'וקונד",
+   "remplace": null,
+   "raison": "« לה ג'וקונדה » est cité à juste titre comme l'autre nom du tableau."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "ronde_de_nuit",
+   "regex": "משמרת\\s+(ה)?לילה",
+   "remplace": "[*\\\"«]\\s*משמרת\\s+(ה)?לילה\\s*[*\\\"»]|רמברנדט[^.]{0,120}משמרת\\s+(ה)?לילה|משמרת\\s+(ה)?לילה[^.]{0,60}רמברנדט|ומשמרת\\s+לילה\\s*:",
+   "raison": "Exclut « משמרת הלילה » au sens de l'équipe de nuit."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "psychose",
+   "regex": "פסיכוז[הת]",
+   "remplace": "[*\\\"«]פסיכוז[הת][*\\\"»]|פסיכוז[הת]\\s*\\(?\\s*(של\\s+)?היצ'קוק",
+   "raison": "Exclut « מטמפסיכוזה » et la psychose au sens médical."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "vertigo",
+   "regex": "סחרחור(ת|ות)",
+   "remplace": "[*\\\"«]סחרחור(ת|ות)[*\\\"»]|סחרחורת\\s*\\(?\\s*(של\\s+)?היצ'קוק",
+   "raison": "« סחרחורת » (vertige) est un nom courant ; ne viser que le titre du film."
+  },
+  {
+   "langue": "he",
+   "type": "oeuvre",
+   "id": "aida",
+   "regex": "איידה",
+   "remplace": "(?<![א-ת])איידה(?![א-ת])",
+   "raison": "Exclut « איידהו » (Idaho)."
+  },
+  {
+   "langue": "hr",
+   "type": "piege",
+   "id": "terminale",
+   "regex": "\\b(?:starij|senior|viš)\\w*\\s+godin\\w*",
+   "remplace": null,
+   "raison": "Ne capte que « 16 ili više godina » (16 ans ou plus), tournure correcte sans rapport avec la terminale."
+  },
+  {
+   "langue": "hr",
+   "type": "piege",
+   "id": "paywall_offre",
+   "regex": "\\bpaywall\\w*",
+   "remplace": "^(?![^\\n\\\"]*\\bprikaži\\b)[^\\n\\\"]*?\\bpaywall\\w*",
+   "raison": "Les 5 occurrences sont des entrées du menu de débogage « Prikaži … paywall », non visibles par l'utilisateur."
+  },
+  {
+   "langue": "hr",
+   "type": "piege",
+   "id": "on_impersonnel",
+   "regex": "\\b(?:želimo|živimo|zahtijevamo|tražimo|zovemo|nazivamo|kažemo|smatramo|vjerujemo|znamo|vidimo|mislimo)\\b",
+   "remplace": "\\bna\\s+\\w+(?:om|em|im)\\s+(?:mi\\s+)?(?:kažemo|zovemo|nazivamo)\\b|\\bzahtijevamo\\b|\\bželimo\\s+(?:ga|ju|je|ih)\\s+\\w+|\\b(?:ondje|tamo|ovdje)\\s+živimo\\b",
+   "raison": "Le « mi » inclusif d'exposé (ono što zovemo, danas znamo, vidimo) est naturel en croate ; on garde « Na grčkom kažemo », « Zahtijevamo », « Želimo ga ubiti », « Tamo živimo »."
+  },
+  {
+   "langue": "hr",
+   "type": "piege",
+   "id": "siecle",
+   "regex": "\\b\\d{1,2}00-(?:ih|te|tih|e)\\b",
+   "remplace": "\\b(?!(?:19|20)00)\\d{1,2}00-(?:ih|te|tih|e)\\b",
+   "raison": "« 2000-ih », « 1900-ih » désignent correctement des décennies ; on ne garde que les siècles calqués (700-te, 1200-ih)."
+  },
+  {
+   "langue": "hr",
+   "type": "piege",
+   "id": "flaneur",
+   "regex": "\\bkao\\s+\\**(?:dječj\\w*\\s+)?(?:kolic|kočij|zapreg)\\w*",
+   "remplace": "\\bkao\\s+\\**(?:dječj\\w*\\s+)?kolic\\w*",
+   "raison": "« bog kao kočijaš » (Krishna cocher dans la Gita) est correct ; on ne garde que « kolica »."
+  },
+  {
+   "langue": "hr",
+   "type": "piege",
+   "id": "plaques_photo",
+   "regex": "\\btanjur\\w*",
+   "remplace": "\\b(?:slik\\w*|fotograf\\w*|dagerotip\\w*|negativ\\w*|ekspozicij\\w*|srebr\\w*|bakren\\w*|staklen\\w*|niépce\\w*|daguerre\\w*)[^.\\n]{0,40}\\btanjur\\w*|\\btanjur\\w*[^.\\n]{0,40}\\b(?:fotograf|dagerotip|negativ|ekspozicij|srebr|bitumen)\\w*",
+   "raison": "« tanjur » est correct pour l'assiette (hrana na tanjuru) ; on ne garde que le contexte photographique (sliku na tanjur)."
+  },
+  {
+   "langue": "hr",
+   "type": "piege",
+   "id": "proces_kafka",
+   "regex": "\\bkafk\\w*[^.\\n]{0,40}\\b(?:suđenj|postup|parnic)\\w*",
+   "remplace": null,
+   "raison": "« Kafka opisuje beskrajno suđenje » décrit l'intrigue (un procès sans fin), pas le titre : traduction correcte."
+  },
+  {
+   "langue": "hr",
+   "type": "piege",
+   "id": "proces_kafka",
+   "regex": "\\b(?:suđenj|postup|parnic)\\w*[^.\\n]{0,40}\\bkafk\\w*",
+   "remplace": "\\b(?:suđenj|postup|parnic)\\w*\\s+\\**(?:franz\\w*\\s+)?kafk\\w*",
+   "raison": "On ne garde que le titre calqué « Suđenje Franza Kafke », pas la description « suđenje … kafkijanski »."
+  },
+  {
+   "langue": "hr",
+   "type": "piege",
+   "id": "renaissance",
+   "regex": "\\bponovn\\w*\\s+rođenj\\w*",
+   "remplace": null,
+   "raison": "« ponovno rođenje » (renaissance spirituelle, mythes de mort et résurrection, phénix) est correct, sans rapport avec la Renaissance."
+  },
+  {
+   "langue": "hr",
+   "type": "piege",
+   "id": "correspondances",
+   "regex": "\\bprepisivanj\\w*",
+   "remplace": null,
+   "raison": "« prepisivanje » (copie de textes par les moines) est un mot correct sans rapport avec le poème."
+  },
+  {
+   "langue": "hr",
+   "type": "produit",
+   "id": "quiz",
+   "regex": "\\btest(?:a|u|om|ovi|ova|ove|ovima)?\\b",
+   "remplace": null,
+   "raison": "« test » est ici un mot courant correct (essai de sécurité à Tchernobyl, tests ADN), pas le quiz de l'app."
+  },
+  {
+   "langue": "hr",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bputovanj\\w*",
+   "remplace": "\\b(?:tvoj\\w*|vođen\\w*|personaliziran\\w*)\\s+putovanj\\w*|\\bputovanj\\w*\\s+do\\s+znanja",
+   "raison": "« putovanje » est correct pour les voyages (Sindbad, explorateurs) ; on ne garde que « tvoje putovanje do znanja » de l'UI."
+  },
+  {
+   "langue": "hr",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\brut[aeiu]\\b",
+   "remplace": null,
+   "raison": "« Ruta », « Rute za bijeg » sont des titres de leçons corrects (route, itinéraire), pas l'onglet Parcours."
+  },
+  {
+   "langue": "hr",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bmaterij[aeiu]\\b",
+   "remplace": null,
+   "raison": "« kroz materiju » (les rayons X traversent la matière) est le sens physique correct."
+  },
+  {
+   "langue": "hr",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bmaterijal\\w*",
+   "remplace": null,
+   "raison": "« materijal » (matériaux, économie circulaire) est un mot correct sans rapport avec la matière scolaire."
+  },
+  {
+   "langue": "hr",
+   "type": "produit",
+   "id": "bibliotheque",
+   "regex": "\\bbibliotek\\w*",
+   "remplace": null,
+   "raison": "« Memorija nije biblioteka ladica » est une métaphore correcte dans un titre de leçon, pas l'onglet."
+  },
+  {
+   "langue": "hr",
+   "type": "oeuvre",
+   "id": "le_proces",
+   "regex": "\\bkafk\\w*[^.\\n]{0,40}\\b(?:suđenj|postup|parnic)\\w*",
+   "remplace": null,
+   "raison": "« Kafka opisuje beskrajno suđenje » décrit l'intrigue, pas le titre : correct."
+  },
+  {
+   "langue": "hr",
+   "type": "oeuvre",
+   "id": "le_proces",
+   "regex": "\\b(?:suđenj|postup|parnic)\\w*[^.\\n]{0,40}\\bkafk\\w*",
+   "remplace": "\\b(?:suđenj|postup|parnic)\\w*\\s+\\**(?:franz\\w*\\s+)?kafk\\w*",
+   "raison": "On ne garde que le titre calqué « Suđenje Franza Kafke », pas la description « suđenje … kafkijanski »."
+  },
+  {
+   "langue": "hr",
+   "type": "oeuvre",
+   "id": "meilleur_des_mondes",
+   "regex": "\\bhrabr\\w*\\s+nov\\w*\\s+svijet",
+   "remplace": "(?<!naslov, \\*)(?<!naslov, )\\bhrabr\\w*\\s+nov\\w*\\s+svijet",
+   "raison": "« Izvorni naslov, *Hrabri novi svijet* » glose légitimement le titre anglais ; on garde l'usage comme titre."
+  },
+  {
+   "langue": "hr",
+   "type": "oeuvre",
+   "id": "antigone",
+   "regex": "\\bantigone\\b",
+   "remplace": null,
+   "raison": "« Antigone » est le génitif croate correct d'Antigona (kćeri Antigone, dijalektika Antigone)."
+  },
+  {
+   "langue": "hr",
+   "type": "oeuvre",
+   "id": "confessions",
+   "regex": "\\bpriznanj[ae]\\b[^.\\n]{0,25}\\brousseau",
+   "remplace": null,
+   "raison": "« sudac priznanja » (juge de l'aveu) est un nom commun correct, le titre y est déjà « Ispovijesti »."
+  },
+  {
+   "langue": "hr",
+   "type": "oeuvre",
+   "id": "journal_anne_frank",
+   "regex": "\\bstražnj[aeu]\\s+kuć\\w*",
+   "remplace": null,
+   "raison": "« Stražnja kuća » est le nom croate établi de l'Achterhuis, la cachette : correct."
+  },
+  {
+   "langue": "hu",
+   "type": "piege",
+   "id": "lumiere_quiz",
+   "regex": "(?m)^\\s*(az?\\s+)?(könnyű|enyhe|világos)\\s*$",
+   "remplace": "(?m)^\\s*(az?\\s+)?könnyű\\s*$",
+   "raison": "« Világos » seul = thème clair de l'UI, « Enyhe » est la forme imposée de l'intensité"
+  },
+  {
+   "langue": "hu",
+   "type": "piege",
+   "id": "debloquer",
+   "regex": "\\bkinyit\\w*",
+   "remplace": "\\bkinyitáshoz\\b|\\bkinyit\\w*\\s+(egy\\s+|a\\s+|az\\s+)?(kurzus|lecke|lecké|premium|prémium|gyűjtemény|tartalm)\\w*",
+   "raison": "« kinyit » est le verbe ouvrir courant (ouvrir l'app, une jarre, les yeux)"
+  },
+  {
+   "langue": "hu",
+   "type": "piege",
+   "id": "debloquer",
+   "regex": "\\bnyisd\\s+(ki|meg)\\b",
+   "remplace": "\\bnyisd\\s+ki\\b|\\bnyisd\\s+meg\\s+(egy\\s+|a\\s+|az\\s+)?(kurzus|lecke|lecké|premium|prémium|gyűjtemény)\\w*",
+   "raison": "« nyisd meg a Sophiát » = ouvrir l'app, correct"
+  },
+  {
+   "langue": "hu",
+   "type": "piege",
+   "id": "paywall_offre",
+   "regex": "\\bfizet(ő|ős|ési)\\s*fal\\w*",
+   "remplace": "(?m)^\\s*fizetőfal\\s*$",
+   "raison": "« fizetőfal » est le terme technique correct dans le texte légal ; ne viser que le titre d'écran"
+  },
+  {
+   "langue": "hu",
+   "type": "piege",
+   "id": "voici_comment",
+   "regex": "\\bíme,?\\s+hogyan\\b",
+   "remplace": null,
+   "raison": "« Íme, hogyan… » est une tournure hongroise naturelle et établie"
+  },
+  {
+   "langue": "hu",
+   "type": "piege",
+   "id": "on_impersonnel",
+   "regex": "\\b(így|ezt|ezért)\\s+(nevezzük|hívjuk|mondjuk)\\b",
+   "remplace": null,
+   "raison": "« ezt nevezzük / hívjuk X-nek » est la tournure impersonnelle normale en hongrois"
+  },
+  {
+   "langue": "hu",
+   "type": "piege",
+   "id": "flaneur",
+   "regex": "\\bhintó\\w*|\\bszekér\\w*|\\btalicska\\w*",
+   "remplace": null,
+   "raison": "hintó/szekér/talicska sont des mots courants corrects (char de Médée)"
+  },
+  {
+   "langue": "hu",
+   "type": "piege",
+   "id": "plaques_photo",
+   "regex": "\\btányér\\w*",
+   "remplace": "(fénykép|fotó|fotográf|daguerre|negatív|expozíció)\\w*[^.\\n]{0,40}\\btányér\\w*|\\btányér\\w*[^.\\n]{0,40}(fénykép|fotó|fotográf|daguerre|expozíció)",
+   "raison": "« tányér » = assiette, sens correct dans tous les exemples"
+  },
+  {
+   "langue": "hu",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bOTAN\\b",
+   "remplace": "(?<!franciául\\s)\\bOTAN\\b",
+   "raison": "le seul match cite légitimement le sigle français (« franciául OTAN »)"
+  },
+  {
+   "langue": "hu",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bÉNSZ\\b|\\bENSz\\b",
+   "remplace": "\\bÉNSZ\\b|(?-i:\\bENSz\\b|\\bEnsz\\b)",
+   "raison": "avec IGNORECASE la regex matche la forme correcte ENSZ (175 occ.)"
+  },
+  {
+   "langue": "hu",
+   "type": "piege",
+   "id": "pan",
+   "regex": "\\bserpenyő\\w*",
+   "remplace": "\\bserpenyő\\w*[^.\\n]{0,40}(isten|pásztor|nimf|pánik)|(isten|pásztor|nimf|pánik)\\w*[^.\\n]{0,40}\\bserpenyő\\w*",
+   "raison": "« serpenyő » = poêle, sens correct dans les leçons de cuisine/orpaillage"
+  },
+  {
+   "langue": "hu",
+   "type": "piege",
+   "id": "nemesis",
+   "regex": "\\bnemesis\\b|\\bnémesis\\b|\\bnemezis\\b",
+   "remplace": "\\bnemesis\\b|\\bnémesis\\b",
+   "raison": "« nemezis » est un nom commun hongrois établi (châtiment fatal)"
+  },
+  {
+   "langue": "hu",
+   "type": "piege",
+   "id": "nemesis",
+   "regex": "\\b(ellenség|ellenfél|ősellenség)\\w*\\s+(istennő|a\\s+bosszú)",
+   "remplace": "\\b(ellenség|ellenfél|ősellenség)(?!es)\\w*\\s+(istennő|a\\s+bosszú)",
+   "raison": "« ellenséges istennő » = déesse hostile (Junon), correct"
+  },
+  {
+   "langue": "hu",
+   "type": "piege",
+   "id": "deux_etats_ame",
+   "regex": "\\bkét\\s+állam\\w*",
+   "remplace": null,
+   "raison": "« két állam » = deux États (Palestine), sens correct ; rx[3] couvre le contexte Baudelaire"
+  },
+  {
+   "langue": "hu",
+   "type": "produit",
+   "id": "quiz",
+   "regex": "\\bteszt(ek|et|je)?\\b",
+   "remplace": "(?m)^\\s*(mini\\s*)?teszt(ek|et|je)?\\s*$|\\b(mini|záró)\\s*teszt\\w*|\\bteszt\\s+(indítása|eredmény)\\w*",
+   "raison": "« teszt » dans un titre de cours désigne un test réel, pas la fonction quiz"
+  },
+  {
+   "langue": "hu",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bpálya\\w*",
+   "remplace": null,
+   "raison": "« pálya / pályaudvar » = trajectoire, gare : mots corrects sans lien avec l'onglet"
+  },
+  {
+   "langue": "hu",
+   "type": "produit",
+   "id": "niveau",
+   "regex": "\\blevel\\w*|\\blvl\\.?\\s*\\d",
+   "remplace": "\\blevel\\b|\\blvl\\.?\\s*\\d",
+   "raison": "« level\\w* » matche « levelek » (feuilles, lettres)"
+  },
+  {
+   "langue": "hu",
+   "type": "produit",
+   "id": "essai_gratuit",
+   "regex": "\\bpróbaidő(t|n|re|ről|vel|je)?\\b",
+   "remplace": null,
+   "raison": "« próbaidő » est un mot hongrois correct et naturel pour la période d'essai"
+  },
+  {
+   "langue": "hu",
+   "type": "produit",
+   "id": "bloqueur",
+   "regex": "\\btiktok\\s+blokkol\\w*",
+   "remplace": null,
+   "raison": "« TikTok blokkolása » (action de bloquer) est un libellé correct"
+  },
+  {
+   "langue": "hu",
+   "type": "produit",
+   "id": "bloqueur",
+   "regex": "\\btiktok[- ]?(tiltó|zár|gátló|letiltó)\\w*",
+   "remplace": "\\btiktok[- ]?(tiltó|gátló|letiltó|zároló)\\w*|\\btiktok-zár\\b",
+   "raison": "« A TikTok zárolva » (TikTok verrouillé) est un message d'état correct"
+  },
+  {
+   "langue": "hu",
+   "type": "produit",
+   "id": "reviser",
+   "regex": "\\bátnéz\\w*",
+   "remplace": "(?m)\\b(kurzus|lecke|lecké|tananyag)\\w*\\s+átnéz\\w*|\\bátnéz\\w*\\s+(a\\s+|az\\s+)?(kurzus|lecke|lecké|tananyag)\\w*|^\\s*átnézés\\w*\\s*$",
+   "raison": "« átnéz » = regarder à travers dans les leçons ; ne viser que la révision de cours"
+  },
+  {
+   "langue": "hu",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\btárgy(ak|at|ad|ai|aid)?\\b",
+   "remplace": "\\btárgyaid\\b|\\bkedvenc\\s+tárgy\\w*|\\bválassz\\w*\\s+(egy\\s+|néhány\\s+)?tárgy\\w*",
+   "raison": "« tárgy » = objet dans la plupart des leçons ; ne viser que l'UI des matières"
+  },
+  {
+   "langue": "hu",
+   "type": "oeuvre",
+   "id": "frankenstein",
+   "regex": "\\bfrankenstein\\s+szörny\\w*",
+   "remplace": null,
+   "raison": "« Frankenstein szörnye » = le monstre de Frankenstein, formulation correcte"
+  },
+  {
+   "langue": "hu",
+   "type": "oeuvre",
+   "id": "poetique",
+   "regex": "\\barisztotelész[^.\\n]{0,20}\\b(költészettan|a\\s+költészet|költői\\s+mesterség)\\b",
+   "remplace": "\\barisztotelész\\w*[^.\\n]{0,20}\\b(költészettan|költői\\s+mesterség)\\b",
+   "raison": "« Arisztotelész szerint a költészet » parle de la poésie, pas du titre"
+  },
+  {
+   "langue": "hu",
+   "type": "oeuvre",
+   "id": "confessions",
+   "regex": "\\bbeismerések\\b|\\bbeismerő\\s+vallomás\\w*",
+   "remplace": "\\bbeismerések\\b",
+   "raison": "« beismerő vallomás » est le terme juridique correct (aveu)"
+  },
+  {
+   "langue": "hu",
+   "type": "oeuvre",
+   "id": "joconde",
+   "regex": "\\bgioconda\\b",
+   "remplace": null,
+   "raison": "« Gioconda » est l'autre nom établi du tableau, cité correctement"
+  },
+  {
+   "langue": "it",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bOTAN\\b",
+   "remplace": "(?<!francese )(?<!spagnolo )(?<!portoghese )\\bOTAN\\b(?!\\s*\\)?\\s*(?:in|in\\s+lingua)\\s+(?:francese|spagnolo|portoghese)\\b)",
+   "raison": "Le seul cas cite le sigle français à titre explicatif (« OTAN in francese »), c'est correct."
+  },
+  {
+   "langue": "it",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bOrganizzazione\\s+del\\s+Trattato\\s+del\\s+Nord\\s+Atlantico\\b|\\bAlleanza\\s+del\\s+Nord\\s+Atlantico\\b|\\bNazioni\\s+Unite\\s+Organizzazione\\b",
+   "remplace": "\\bNazioni\\s+Unite\\s+Organizzazione\\b",
+   "raison": "« Organizzazione del Trattato del Nord Atlantico » est la forme développée italienne correcte ; seul l'ordre calqué est fautif."
+  },
+  {
+   "langue": "it",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bviaggio\\s+(?:nella\\s+conoscenza|di\\s+apprendimento|del\\s+sapere|verso\\s+la\\s+conoscenza)\\b",
+   "remplace": null,
+   "raison": "« il tuo viaggio nella conoscenza » est une métaphore correcte d'écran de chargement, pas le nom de l'onglet Percorso."
+  },
+  {
+   "langue": "it",
+   "type": "produit",
+   "id": "essai_gratuit",
+   "regex": "\\bperiodo\\s+di\\s+prova\\b|\\bprova\\s+gratis\\b|\\bprova\\s+(?:libera|free)\\b",
+   "remplace": "\\bprova\\s+(?:libera|free)\\b",
+   "raison": "« prova gratis » et « periodo di prova » sont des formes italiennes correctes ; seules « prova libera/free » sont fautives."
+  },
+  {
+   "langue": "it",
+   "type": "oeuvre",
+   "id": "notre_dame",
+   "regex": "\\bNotre\\s+Dame\\s+di\\s+Parigi\\b|\\bNotre-Dame\\s+di\\s+Parigi\\b",
+   "remplace": "\\bNotre[\\s-]Dame\\s+di\\s+Parigi\\b(?=[^.!?\\n]{0,60}\\b(?:Hugo|romanzo|Quasimodo|Esmeralda|Frollo)\\b)|\\b(?:Hugo|romanzo|Quasimodo|Esmeralda|Frollo)\\b[^.!?\\n]{0,60}\\bNotre[\\s-]Dame\\s+di\\s+Parigi\\b",
+   "raison": "Toutes les occurrences désignent la cathédrale, dont « Notre-Dame di Parigi » est le nom italien correct ; ne viser que le roman de Hugo."
+  },
+  {
+   "langue": "it",
+   "type": "oeuvre",
+   "id": "meilleur_des_mondes",
+   "regex": "(?<!originale )(?<!originale, )(?<!inglese )(?<!inglese, )(?<!francese )(?<!francese, )(?<!tedesco )(?<!tedesco, )(?<!spagnolo )(?<!spagnolo, )(?:\\bBrave\\s+New\\s+World\\b(?![^.!?\\n]{0,40}\\bmondo\\s+nuovo\\b))",
+   "remplace": "(?<!originale )(?<!originale, )(?<!originale \\*)(?<!originale, \\*)(?<!originale: )(?<!originale: \\*)(?<!originale è )(?<!originale è \\*)(?<!inglese )(?<!inglese, )(?<!inglese \\*)(?<!inglese è \\*)(?<!inglese è )\\bBrave\\s+New\\s+World\\b(?![^.!?\\n]{0,40}\\bmondo\\s+nuovo\\b)",
+   "raison": "Le titre original cité en italique après « titolo originale, » est légitime ; l'exclusion échouait à cause de l'astérisque."
+  },
+  {
+   "langue": "it",
+   "type": "oeuvre",
+   "id": "metamorphose",
+   "regex": "(?<!originale )(?<!originale, )(?<!inglese )(?<!inglese, )(?<!francese )(?<!francese, )(?<!tedesco )(?<!tedesco, )(?<!spagnolo )(?<!spagnolo, )(?:\\bDie\\s+Verwandlung\\b(?![^.!?\\n]{0,30}\\bmetamorfosi\\b))",
+   "remplace": "(?<!originale )(?<!originale \\*)(?<!originale, \\*)(?<!originale, )(?<!tedesco )(?<!tedesco \\*)(?<!tedesco: )(?<!tedesco: \\*)(?<!tedesco è )(?<!tedesco è \\*)(?<!originale è )(?<!originale è \\*)\\bDie\\s+Verwandlung\\b(?![^.!?\\n]{0,30}\\bmetamorfosi\\b)",
+   "raison": "« Il titolo originale tedesco è *Die Verwandlung* » cite légitimement le titre original."
+  },
+  {
+   "langue": "it",
+   "type": "oeuvre",
+   "id": "alchimiste",
+   "regex": "(?<!originale )(?<!originale, )(?<!inglese )(?<!inglese, )(?<!francese )(?<!francese, )(?<!tedesco )(?<!tedesco, )(?<!spagnolo )(?<!spagnolo, )(?:\\bO\\s+Alquimista\\b(?![^.!?\\n]{0,30}\\balchimista\\b))",
+   "remplace": "(?<!originale )(?<!originale \\*)(?<!originale, \\*)(?<!originale, )(?<!portoghese )(?<!portoghese \\*)(?<!portoghese: )(?<!portoghese: \\*)(?<!portoghese è )(?<!portoghese è \\*)(?<!originale è )(?<!originale è \\*)\\bO\\s+Alquimista\\b(?![^.!?\\n]{0,30}\\balchimista\\b)",
+   "raison": "« Il titolo originale in portoghese è *O Alquimista* » cite légitimement le titre original."
+  },
+  {
+   "langue": "nb",
+   "type": "piege",
+   "id": "culture_generale",
+   "regex": "\\bkultivert\\w*",
+   "remplace": null,
+   "raison": "« kultivert » est un adjectif norvégien correct (cultivé)."
+  },
+  {
+   "langue": "nb",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\b(?:på|inn|innen)\\s+(?:år\\s+)?[1-9]\\d{2,3}\\b(?!\\s*-?(?:tallet|årene))",
+   "remplace": null,
+   "raison": "Ne capte que des mesures, adresses, « på 1893-versjonen », « innen 2050 » : aucun vrai calque de date."
+  },
+  {
+   "langue": "nb",
+   "type": "piege",
+   "id": "siecle",
+   "regex": "\\b[IVX]{1,5}\\.?\\s*(?:århundre|hundreår)\\w*",
+   "remplace": "(?-i:\\b(?:[IVX]{2,5}\\.?|[VX]\\.?|I\\.))\\s*(?:århundre|hundreår)\\w*",
+   "raison": "Avec IGNORECASE la préposition « i » passe pour le chiffre romain I (« i århundrer »)."
+  },
+  {
+   "langue": "nb",
+   "type": "piege",
+   "id": "condamnation",
+   "regex": "\\boverbevisning\\w*",
+   "remplace": null,
+   "raison": "« overbevisning » (conviction) est surtout employé correctement ; rx[0] couvre le contresens."
+  },
+  {
+   "langue": "nb",
+   "type": "piege",
+   "id": "hommes_troupes",
+   "regex": "\\b\\d{1,3}(?:[\\s\\u00a0\\u202f.]\\d{3})+\\s+(?:dollar|hanner|hankjønn|mannfolk)\\b",
+   "remplace": "\\b\\d{1,3}(?:[\\s\\u00a0\\u202f.]\\d{3})+\\s+(?:hanner|hankjønn|mannfolk)\\b",
+   "raison": "« dollar » ne relève pas de la règle et ne capte que des montants corrects."
+  },
+  {
+   "langue": "nb",
+   "type": "piege",
+   "id": "renaissance",
+   "regex": "\\bgjenfød(?:else|sel)\\w*",
+   "remplace": null,
+   "raison": "« gjenfødelse » au sens de renaissance spirituelle ou du phénix est correct."
+  },
+  {
+   "langue": "nb",
+   "type": "piege",
+   "id": "offshore",
+   "regex": "\\b(?:til\\s+havs|på\\s+åpent\\s+hav|ute\\s+på\\s+havet|utaskjærs)\\b",
+   "remplace": null,
+   "raison": "« ute på havet », « til havs » sont des tournures courantes et correctes."
+  },
+  {
+   "langue": "nb",
+   "type": "piege",
+   "id": "relance",
+   "regex": "\\b(?:helbred|tilfriskn|restitusjon)\\w*",
+   "remplace": null,
+   "raison": "« helbrede/helbredelse » (guérir) est employé correctement dans les cours."
+  },
+  {
+   "langue": "nb",
+   "type": "piege",
+   "id": "deux_etats_ame",
+   "regex": "\\bto\\s+stater\\b",
+   "remplace": null,
+   "raison": "« to stater » vise surtout Palestine ou Corée (correct) ; rx[3] couvre le cas Baudelaire."
+  },
+  {
+   "langue": "nb",
+   "type": "produit",
+   "id": "quiz",
+   "regex": "\\btest(?:en|er|ene)?\\b",
+   "remplace": null,
+   "raison": "« test/tester » est un mot courant (verbe, « Test varsler », « testen »)."
+  },
+  {
+   "langue": "nb",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\breise(?:n|r)?\\b",
+   "remplace": null,
+   "raison": "« reise » (voyage, verbe se lever) est un mot courant et correct."
+  },
+  {
+   "langue": "nb",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bsti(?:en|er)?\\b",
+   "remplace": null,
+   "raison": "« sti/stier » est un mot courant (titre « To stier, en sykkel »)."
+  },
+  {
+   "langue": "nb",
+   "type": "produit",
+   "id": "serie",
+   "regex": "\\bstrek(?:en)?\\s+på\\b",
+   "remplace": null,
+   "raison": "« en strek på et kart » est correct ; le piège rx[2] couvre la série."
+  },
+  {
+   "langue": "nb",
+   "type": "produit",
+   "id": "bloqueur",
+   "regex": "\\bblokade\\w*",
+   "remplace": null,
+   "raison": "« Blokaden » désigne le blocus de Berlin, emploi correct."
+  },
+  {
+   "langue": "nb",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bmaterie\\w*",
+   "remplace": null,
+   "raison": "« materie » (matière physique) est correct."
+  },
+  {
+   "langue": "nb",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bmateriale\\w*",
+   "remplace": null,
+   "raison": "« materiale/materialer » (matériaux) est correct."
+  },
+  {
+   "langue": "nb",
+   "type": "produit",
+   "id": "debloquer",
+   "regex": "\\bfrigjør\\w*",
+   "remplace": null,
+   "raison": "« frigjøre/frigjøring » (libération) est employé correctement."
+  },
+  {
+   "langue": "nb",
+   "type": "produit",
+   "id": "glossaire",
+   "regex": "\\bleksikon\\w*",
+   "remplace": null,
+   "raison": "« leksikon » (encyclopédie) est un mot légitime."
+  },
+  {
+   "langue": "nb",
+   "type": "oeuvre",
+   "id": "metamorphose",
+   "regex": "\\bmetamorfosen?\\b\\W+(?:\\w+\\W+){0,4}?kafka",
+   "remplace": "\\bmetamorfosen\\b\\W+(?:\\w+\\W+){0,4}?kafka",
+   "raison": "Le nom commun « Gregors metamorfose » est correct ; ne garder que le titre défini."
+  },
+  {
+   "langue": "nb",
+   "type": "oeuvre",
+   "id": "odyssee",
+   "regex": "\\bodyssé\\b",
+   "remplace": null,
+   "raison": "« odyssé » est un nom commun norvégien correct (long voyage)."
+  },
+  {
+   "langue": "nb",
+   "type": "oeuvre",
+   "id": "oedipe_roi",
+   "regex": "\\bødipus\\b",
+   "remplace": null,
+   "raison": "« Ødipus » est la graphie norvégienne usuelle du personnage."
+  },
+  {
+   "langue": "nb",
+   "type": "oeuvre",
+   "id": "oedipe_roi",
+   "regex": "\\boidipus\\s+(?:konge|kongen|rex)\\b",
+   "remplace": "\\boidipus\\s+(?:konge|kongen|rex)\\b(?!\\s+(?:av|over|i)\\b)",
+   "raison": "« Oidipus konge av Theben » (devient roi) est correct."
+  },
+  {
+   "langue": "nb",
+   "type": "oeuvre",
+   "id": "banquet",
+   "regex": "\\bbanketten\\b",
+   "remplace": "(?-i:\\bBanketten\\b)|\\bbanketten\\b\\W+(?:\\w+\\W+){0,4}?platon|\\bplaton\\w*\\W+(?:\\w+\\W+){0,4}?banketten\\b",
+   "raison": "« banketten » commun (Tantale, banquet sacré) est correct ; garder le titre."
+  },
+  {
+   "langue": "nb",
+   "type": "oeuvre",
+   "id": "banquet",
+   "regex": "\\bfestmåltidet\\b",
+   "remplace": null,
+   "raison": "« festmåltidet » ne vise que Father Christmas, emploi correct."
+  },
+  {
+   "langue": "nb",
+   "type": "oeuvre",
+   "id": "republique",
+   "regex": "\\bthe\\s+republic\\b",
+   "remplace": "(?<!hymn\\sof\\s)\\bthe\\s+republic\\b",
+   "raison": "« Battle Hymn of the Republic » est un titre correct."
+  },
+  {
+   "langue": "nb",
+   "type": "oeuvre",
+   "id": "poetique",
+   "regex": "\\bden\\s+poetiske\\b",
+   "remplace": null,
+   "raison": "« den poetiske Edda » est le nom correct de l'Edda poétique."
+  },
+  {
+   "langue": "nb",
+   "type": "oeuvre",
+   "id": "confessions",
+   "regex": "\\btilståelser\\w*",
+   "remplace": null,
+   "raison": "« tilståelser » (aveux sous la torture) est correct."
+  },
+  {
+   "langue": "nb",
+   "type": "oeuvre",
+   "id": "confessions",
+   "regex": "\\bskriftemål\\w*",
+   "remplace": null,
+   "raison": "« skriftemål » (confession religieuse) est employé correctement."
+  },
+  {
+   "langue": "nb",
+   "type": "oeuvre",
+   "id": "etranger",
+   "regex": "\\butlendingen\\b",
+   "remplace": null,
+   "raison": "« utlendingen » (l'étranger, nom commun) est correct."
+  },
+  {
+   "langue": "nb",
+   "type": "oeuvre",
+   "id": "etranger",
+   "regex": "\\bden\\s+utenlandske\\b",
+   "remplace": null,
+   "raison": "« den utenlandske etterspørselen » est correct."
+  },
+  {
+   "langue": "nb",
+   "type": "oeuvre",
+   "id": "journal_anne_frank",
+   "regex": "\\bthe\\s+diary\\s+of\\s+(?:a\\s+young\\s+girl|anne\\s+frank)\\b",
+   "remplace": null,
+   "raison": "Cite à juste titre l'édition américaine et la pièce de Broadway."
+  },
+  {
+   "langue": "nb",
+   "type": "oeuvre",
+   "id": "journal_anne_frank",
+   "regex": "\\bbakhuset\\b",
+   "remplace": null,
+   "raison": "« Bakhuset » est le nom norvégien établi de l'Achterhuis."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "lumiere_quiz",
+   "regex": "\\blichtgewicht\\b",
+   "remplace": null,
+   "raison": "« lichtgewicht » (caméras légères) est un mot néerlandais correct sans lien avec la lumière du quiz."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "premium",
+   "regex": "\\bpremie\\b",
+   "remplace": "\\b(?:Sophia|ontgrendel)\\s+premie\\b|\\bpremie\\b(?=.{0,30}\\b(?:abonnement|ontgrendel|cursus|cursussen|Sophia)\\w*)",
+   "raison": "Les occurrences sont la prime d'assurance sociale (« premie betalen »), correcte ; on exige un contexte d'offre."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "reviser",
+   "regex": "\\bherzie(?:n|t|ne)\\b",
+   "remplace": "\\bherzie(?:n|t|ne)\\b(?=.{0,30}\\b(?:cursus|cursussen|lessen|kennis|quiz)\\w*)",
+   "raison": "« herzien » (réviser une doctrine, une liste) est correct ; on ne garde que le sens scolaire avec cours/connaissances."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "reviser",
+   "regex": "\\b(?:recensie|review)s?\\b",
+   "remplace": "\\b(?:recensie|review)s?\\b(?=.{0,30}\\b(?:cursus|cursussen|lessen|kennis|herhal)\\w*)|\\breviewen\\b",
+   "raison": "Capte surtout des titres de revues (« Review ») et « lovende recensie », corrects ; on exige un contexte de révision."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "culture_generale",
+   "regex": "\\bbeschaafd\\w*\\b(?=.{0,30}\\b(?:persoon|worden|mens|kennis)\\b)",
+   "remplace": null,
+   "raison": "« de beschaafde mens » (l'homme civilisé) est un emploi correct, pas « cultivé »."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "anecdotes",
+   "regex": "\\bgrappige\\s+verhalen\\b",
+   "remplace": null,
+   "raison": "Ne capte que le titre balzacien « De grappige verhalen » (Contes drolatiques), sans rapport avec les anecdotes."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "entrainement",
+   "regex": "\\bpraktijk(?:en)?\\b",
+   "remplace": null,
+   "raison": "« in de praktijk » / « praktijken » sont des mots courants corrects."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "entrainement",
+   "regex": "\\bpraktiseren\\b",
+   "remplace": null,
+   "raison": "« praktiseren » (pratiquer une politique) est correct, sans lien avec l'onglet Oefenen."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "pas_de_connexion",
+   "regex": "\\bgeen\\s+verband\\b",
+   "remplace": "\\bgeen\\s+verband\\b(?=.{0,30}\\b(?:netwerk|internet|offline|opnieuw|wifi)\\w*)",
+   "raison": "« geen verband houden met » (aucun rapport) est correct ; on exige un contexte réseau."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "hegire",
+   "regex": "\\b(?:emigratie|verhuizing|migratie|vlucht)\\b(?=.{0,40}\\b(?:Mekka|Medina|622|Mohammed|Muhammad)\\b)",
+   "remplace": null,
+   "raison": "« vlucht » est ici le verbe (« vlucht een koopman uit Mekka ») et « de vlucht naar Medina » est une description correcte."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "polysemie_courante",
+   "regex": "\\bsensatie\\b(?=.{0,30}\\b(?:tast|huid|zintuig|zenuw|warmte|koude)\\w*)",
+   "remplace": null,
+   "raison": "« sensatie » a aussi en néerlandais le sens sensoriel (gewaarwording) ; l'emploi « sensatie op de huid » est correct."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "paywall_offre",
+   "regex": "\\bpaywall\\b",
+   "remplace": "(?<!toon de )\\bpay-?wall\\b(?!\\s+tonen\\b)",
+   "raison": "Les 2 occurrences sont des entrées du menu de débogage (settings.debug.*), invisibles pour l'utilisateur."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "voici_comment",
+   "regex": "\\bhier\\s+zijn\\s+(?:de|wat|enkele)\\b",
+   "remplace": null,
+   "raison": "« Hier zijn de … » (Hier zijn de sleutelstappen) est une tournure néerlandaise naturelle, pas un calque fautif."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\b(?:binnen|tijdens|op)\\s+\\d{3,4}\\b(?!\\s*(?:v|n)\\.?\\s*C)",
+   "remplace": "\\b(?:binnen|tijdens)\\s+\\d{3,4}\\b(?!\\s*(?:v|n)\\.?\\s*C)(?!\\s+(?:jaar|jaren|dagen|uur|km|kilometer|meter|miljoen|miljard|euro|dollar|mensen)\\b)",
+   "raison": "Toutes les occurrences sont « op + nombre » (op 300 miljard, op 100 kilometer, op 1520 Sedgwick Avenue) ; on retire « op » et les unités."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bOTAN\\b",
+   "remplace": "\\bOTAN\\b(?!\\s+in\\s+het\\s+Frans)",
+   "raison": "Seule occurrence : mention correcte du sigle français (« OTAN in het Frans »)."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bNATO\\b",
+   "remplace": "\\bNATO\\b(?!\\s+in\\s+het\\s+Engels)",
+   "raison": "Seule occurrence : mention correcte du sigle anglais (« NATO in het Engels »)."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "soupe_populaire",
+   "regex": "\\bsoepkeukens?\\b",
+   "remplace": null,
+   "raison": "« soepkeuken » est un mot néerlandais établi (Van Dale), synonyme correct de gaarkeuken."
+  },
+  {
+   "langue": "nl",
+   "type": "piege",
+   "id": "soupe_populaire",
+   "regex": "\\bsoep\\s*keuken\\b",
+   "remplace": null,
+   "raison": "« soepkeuken » est un mot néerlandais établi (Van Dale), synonyme correct de gaarkeuken."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "cours",
+   "regex": "\\bles(?:sen|je|jes)?\\b",
+   "remplace": "\\bSophia-les(?:sen)?\\b|(?:%d|%@\\+?|\\d+)\\s+lessen\\b|\\bonbeperkt\\s+lessen\\b|\\blessen\\W{0,3}\\s+van\\s+10\\s+min|\\belke\\s+les\\b(?=.{0,20}\\b(?:audio|boeiend)\\w*)|\\blessen\\b(?=.{0,30}\\b(?:lezen|geschreven\\s+door|bij\\s+je\\s+passen)\\b)",
+   "raison": "99 occurrences dont la plupart sont le sens courant (« een les over plicht », « universele lessen ») ; on garde les libellés produit."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "cours",
+   "regex": "\\bkoers(?:en)?\\b",
+   "remplace": null,
+   "raison": "« koers(en) » (cours de bourse, changer de cap) est correct et sans lien avec l'unité de contenu."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\btraject(?:en)?\\b",
+   "remplace": "\\b(?:je|jouw)\\s+traject\\b|\\btraject(?:en)?\\b(?=.{0,30}\\b(?:tab|voortgang|thema|cursussen)\\b)",
+   "raison": "« traject(en) » est surtout le sens courant (trajectoire, parcours de Coelho) ; on garde « je traject » et le contexte d'onglet."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "collection",
+   "regex": "\\bverzameling(?:en)?\\b",
+   "remplace": null,
+   "raison": "« verzameling » (ensemble de peuples, d'étoiles, de fables) est un mot courant correct."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "collection",
+   "regex": "\\bbundel(?:s)?\\b",
+   "remplace": null,
+   "raison": "« bundel » (recueil de poèmes, de contes) est le terme correct pour un recueil littéraire."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "collection",
+   "regex": "\\breeks\\b(?=.{0,30}\\bcursus)",
+   "remplace": "\\breeks\\s+(?:van\\s+)?cursus(?:sen)?\\b",
+   "raison": "Capte « je reeks, cursussen » où reeks est la série de jours (correct) ; on exige « reeks (van) cursussen »."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "niveau",
+   "regex": "\\blevel(?:s)?\\b",
+   "remplace": "(?<!-)\\blevels?\\b",
+   "raison": "Exclut « sea-level » des références anglaises ; garde « Nieuw level! »."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "niveau",
+   "regex": "\\bpeil\\b",
+   "remplace": null,
+   "raison": "« peil » (op peil houden, zeespiegelpeil) est un mot courant correct."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "premium",
+   "regex": "\\bpremie\\b",
+   "remplace": "\\b(?:Sophia|ontgrendel)\\s+premie\\b|\\bpremie\\b(?=.{0,30}\\b(?:abonnement|ontgrendel|cursus|cursussen|Sophia)\\w*)",
+   "raison": "Les occurrences sont la prime d'assurance sociale, correcte ; on exige un contexte d'offre."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "premium",
+   "regex": "\\bbetaald(?:e)?\\s+(?:versie|plan|lidmaatschap|abonnement)\\b",
+   "remplace": null,
+   "raison": "« betaald abonnement » dans les CGU (conversion de l'essai en abonnement payant) est correct."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "bloqueur",
+   "regex": "\\bblokkade\\b",
+   "remplace": "\\b(?:app|TikTok)-?blokkade\\b|\\bblokkade\\b(?=.{0,30}\\b(?:apps?|TikTok|afleid)\\w*)",
+   "raison": "Presque toutes les occurrences sont des blocus historiques (Berlin, Biafra) ; on garde le contexte apps/TikTok."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\btraining(?:en)?\\b",
+   "remplace": "\\btraining(?:en)?\\b(?=.{0,20}\\b(?:tab|tabblad|herhal)\\w*)|\\b(?:tab|tabblad)\\s+training\\b",
+   "raison": "« training » est un mot courant correct (formation, entraînement militaire) ; on exige un contexte d'onglet."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\bpraktijk\\b",
+   "remplace": null,
+   "raison": "« in de praktijk » est une locution courante correcte."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\brepetitie\\b",
+   "remplace": null,
+   "raison": "« generale repetitie » est correct ; « repetitie » ne désigne pas l'onglet dans le corpus."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "reviser",
+   "regex": "\\bherzien\\b",
+   "remplace": null,
+   "raison": "« herzien » (réviser une doctrine, une théorie) est correct."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "reviser",
+   "regex": "\\breview(?:en|s)?\\b",
+   "remplace": "\\breviewen\\b|\\breviews?\\b(?=.{0,30}\\b(?:cursus|cursussen|lessen|kennis)\\w*)",
+   "raison": "Capte des titres de revues anglaises dans les références ; on exige un contexte de révision."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\bdoelstelling(?:en)?\\b",
+   "remplace": "\\b(?:je|jouw|dagelijkse)\\s+doelstelling(?:en)?\\b",
+   "raison": "« doelstellingen (NDC) » des États est correct ; on ne garde que l'objectif personnel."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\bdoelwit\\b",
+   "remplace": null,
+   "raison": "« doelwit » (cible d'une bombe) est correct, sans lien avec l'objectif d'onboarding."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\btarget\\b",
+   "remplace": "\\b(?:je|jouw|dagelijkse?)\\s+target\\b",
+   "raison": "Seule occurrence : titre anglais « Off Target » d'une référence."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bmaterie\\b",
+   "remplace": null,
+   "raison": "« materie » (matière physique, matière noire) est correct."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bdiscipline\\b",
+   "remplace": null,
+   "raison": "« discipline » (discipline journalistique, discipline de fer) est correct."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "ami",
+   "regex": "\\bbuddy\\b",
+   "remplace": "\\bbuddy\\b(?!\\s+(?:Bolden|Holly|Guy|Rich))",
+   "raison": "Toutes les occurrences sont le jazzman Buddy Bolden, nom propre correct."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "abonnement",
+   "regex": "\\blidmaatschap\\b",
+   "remplace": "\\blidmaatschap\\b(?=.{0,30}\\b(?:premium|maand|jaar|Sophia|opzeg|verlenging)\\w*)",
+   "raison": "« lidmaatschap » (adhésion à l'OTAN, à un groupe social) est correct ; on exige un contexte d'abonnement."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "glossaire",
+   "regex": "\\b(?:woordenboek|lexicon)\\b",
+   "remplace": "\\b(?:woordenboek|lexicon)\\b(?=.{0,30}\\b(?:cursus|cursussen|begrippen|termen)\\b)",
+   "raison": "« woordenboek van gedrag » (Gandhi) est correct ; on exige un contexte de glossaire."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "bibliotheque",
+   "regex": "\\blibrary\\b",
+   "remplace": "(?<![/\\w-])library\\b(?![-/])(?=.{0,30}\\b(?:cursus|cursussen|tab)\\w*)|^\\s*library\\s*$",
+   "raison": "Ne capte que des références et URL anglaises (House of Lords Library) ; on exige un contexte d'onglet."
+  },
+  {
+   "langue": "nl",
+   "type": "produit",
+   "id": "bibliotheque",
+   "regex": "\\bboekenkast\\b",
+   "remplace": null,
+   "raison": "« draaibare boekenkast » (Anne Frank) est correct."
+  },
+  {
+   "langue": "nl",
+   "type": "oeuvre",
+   "id": "mockingbird",
+   "regex": "\\bspotvogel\\s+doden\\b",
+   "remplace": null,
+   "raison": "« Een spotvogel doden is een onschuld vernietigen » est une explication correcte du thème, pas le titre."
+  },
+  {
+   "langue": "nl",
+   "type": "oeuvre",
+   "id": "odyssee",
+   "regex": "\\bOdyssey\\b",
+   "remplace": "(?<!Space\\s)\\bOdyssey\\b",
+   "raison": "Les occurrences sont « 2001: A Space Odyssey », titre correct du film."
+  },
+  {
+   "langue": "nl",
+   "type": "oeuvre",
+   "id": "oedipe_roi",
+   "regex": "\\bOedipus\\s+koning\\b",
+   "remplace": "(?<!wordt\\s)(?<!werd\\s)\\bOedipus\\s+koning\\b(?!\\s+(?:van|over)\\b)",
+   "raison": "« wordt Oedipus koning van Thebe » est une phrase correcte (il devient roi), pas le titre."
+  },
+  {
+   "langue": "nl",
+   "type": "oeuvre",
+   "id": "notre_dame",
+   "regex": "\\bNotre-?\\s?Dame\\s+van\\s+Parijs\\b",
+   "remplace": "\\bNotre-?\\s?Dame\\s+van\\s+Parijs\\b(?=.{0,60}\\b(?:Hugo|roman|Quasimodo|Esmeralda)\\b)|\\b(?:Hugo|roman)\\b.{0,60}\\bNotre-?\\s?Dame\\s+van\\s+Parijs\\b",
+   "raison": "Toutes les occurrences désignent la cathédrale (bouw begon in 1163), nom correct ; on exige le contexte du roman de Hugo."
+  },
+  {
+   "langue": "nl",
+   "type": "oeuvre",
+   "id": "venus_milo",
+   "regex": "\\bVenus\\s+de\\s+Milo\\b",
+   "remplace": "(?<!The\\s)\\bVenus\\s+de\\s+Milo\\b",
+   "raison": "Seule occurrence : titre anglais d'un livre en référence (The Venus de Milo: Genesis…)."
+  },
+  {
+   "langue": "pl",
+   "type": "piege",
+   "id": "reviser",
+   "regex": "\\brecenz\\w*",
+   "remplace": null,
+   "raison": "« recenzji » = avis d'utilisateurs, sens correct"
+  },
+  {
+   "langue": "pl",
+   "type": "piege",
+   "id": "anecdotes",
+   "regex": "\\banegdot\\w*",
+   "remplace": null,
+   "raison": "« anegdoty » est un mot polonais courant et correct dans ce contexte"
+  },
+  {
+   "langue": "pl",
+   "type": "piege",
+   "id": "glisse",
+   "regex": "\\bprzeciągnij\\b",
+   "remplace": null,
+   "raison": "« przeciągnij » = faire glisser sur la frise, geste correct"
+  },
+  {
+   "langue": "pl",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\b(około|ok\\.)\\s+\\d{3,4}(?!\\s*(?:r\\.|roku|r\\b|p\\.n\\.e|n\\.e|-|–|\\d|%|km|m\\b|tys|mln|lat))",
+   "remplace": "\\b(około|ok\\.)\\s+\\d{3,4}(?!\\s*(?:r\\.|roku|r\\b|p\\.n\\.e|n\\.e|-|–|\\d|%|km|m\\b|tys|mln|lat|°|stopni))",
+   "raison": "exclure les températures (« około 233 °C »)"
+  },
+  {
+   "langue": "pl",
+   "type": "piege",
+   "id": "flaneur",
+   "regex": "\\b(bryczk|powoz|powóz)\\w*",
+   "remplace": null,
+   "raison": "« powóz » désigne de vraies voitures à cheval dans le texte, correct"
+  },
+  {
+   "langue": "pl",
+   "type": "piege",
+   "id": "caravane",
+   "regex": "\\bprzyczep\\w*",
+   "remplace": "\\bprzyczep(a|y|ie|ę|ą|om|ami|ach)\\b",
+   "raison": "ne garder que le nom « przyczepa », pas le verbe « przyczepić »"
+  },
+  {
+   "langue": "pl",
+   "type": "piege",
+   "id": "beau_pere",
+   "regex": "\\bteś[cć]\\w*",
+   "remplace": "\\bteś(ć|cia|ciem|ciowi|ciu)\\b[^.\\n]{0,60}(Aupick|Baudelaire)|(Aupick|Baudelaire)[^.\\n]{0,60}\\bteś(ć|cia|ciem|ciowi|ciu)\\b",
+   "raison": "« teście » = test, « teścia Odyseusza » correct ; limiter au contexte Aupick"
+  },
+  {
+   "langue": "pl",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bOTAN\\b",
+   "remplace": "\\bOTAN\\b(?!\\s+po\\s+francusku)",
+   "raison": "la seule occurrence explique le sigle français, correct"
+  },
+  {
+   "langue": "pl",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "(?<![A-Za-z])UN(?![A-Za-z])",
+   "remplace": "(?-i:\\bUN\\b)",
+   "raison": "sans casse ni limite Unicode, matche « un » dans « Ardżunę »"
+  },
+  {
+   "langue": "pl",
+   "type": "piege",
+   "id": "termes_islam",
+   "regex": "\\b(jizya|jizyah|caliph\\w*|ummah|khalif\\w*|calif\\w*)\\b",
+   "remplace": "\\b(jizya|jizyah|caliph\\w*|ummah|khalif\\w*|calif(e|es|a|at|ate|ates)?)\\b",
+   "raison": "« calif\\w* » matche « California »"
+  },
+  {
+   "langue": "pl",
+   "type": "piege",
+   "id": "pan",
+   "regex": "\\bpatelni\\w*",
+   "remplace": "\\bpatelni\\w*[^.\\n]{0,40}(bóg|boga|bogu|bożk|pasterz|nimf|fletni|satyr)\\w*|(bóg|bożek|pasterz|nimf|fletni|satyr)\\w*[^.\\n]{0,40}\\bpatelni\\w*",
+   "raison": "« patelnia » de cuisine est correcte ; limiter au contexte du dieu"
+  },
+  {
+   "langue": "pl",
+   "type": "piege",
+   "id": "nemesis",
+   "regex": "\\b(arcy)?wr(ó|o)g\\w*[^.\\n]{0,30}(bogini|zemst|Zeus|Grecj)\\w*",
+   "remplace": "\\barcywr(ó|o)g\\w*[^.\\n]{0,30}(bogini|zemst|Zeus|Grecj)\\w*",
+   "raison": "« wrogą Trojanom boginię » (Junon) est correct ; viser « arcywróg »"
+  },
+  {
+   "langue": "pl",
+   "type": "piege",
+   "id": "correspondances",
+   "regex": "\\bkorespondencj\\w*[^.\\n]{0,60}(Baudelaire|synestez|zmysł|sonet)\\w*",
+   "remplace": null,
+   "raison": "« poetyka korespondencji » est le terme critique établi ; le titre est couvert par rx[3]"
+  },
+  {
+   "langue": "pl",
+   "type": "piege",
+   "id": "correspondances",
+   "regex": "(Baudelaire|synestez|sonet)\\w*[^.\\n]{0,60}\\bkorespondencj\\w*",
+   "remplace": null,
+   "raison": "matcherait le concept légitime de « korespondencja zmysłów »"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "quiz",
+   "regex": "\\begzamin\\w*",
+   "remplace": null,
+   "raison": "« egzamin » = vrais examens scolaires, correct"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "cours",
+   "regex": "\\blekcj\\w*",
+   "remplace": null,
+   "raison": "« lekcja » (leçon de 10 min) est naturel et correct en polonais"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "cours",
+   "regex": "\\bzajęci\\w*",
+   "remplace": null,
+   "raison": "« zajęcia » = occupations, sens correct"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "cours",
+   "regex": "\\bwykład\\w*",
+   "remplace": "\\bwykład(y|ów|u|zie|em|ami|ach|om)?\\b",
+   "raison": "exclure « wykładowca » et « wykładany korkiem »"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bszlak\\w*",
+   "remplace": null,
+   "raison": "« szlaki handlowe », « Jedwabny Szlak » corrects"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bprzebieg\\w*",
+   "remplace": null,
+   "raison": "« przebiegły » et « przebieg » sont des mots courants sans rapport"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bkarier\\w*",
+   "remplace": null,
+   "raison": "« kariera » au sens propre, correct"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "collection",
+   "regex": "\\bzbi(ó|o)r\\w*",
+   "remplace": null,
+   "raison": "« zbiór » (recueil de poèmes) correct"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "collection",
+   "regex": "\\bpakiet\\w*",
+   "remplace": null,
+   "raison": "« komutacja pakietów » terme technique correct"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "niveau",
+   "regex": "\\brang[aęiąo]\\b",
+   "remplace": null,
+   "raison": "« ranga » désigne les rangs nommés (%@), distincts du niveau"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "bloqueur",
+   "regex": "\\bblokując\\w+\\s+TikTok",
+   "remplace": null,
+   "raison": "« ekran blokujący TikToka » description correcte"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\btrenowani\\w*",
+   "remplace": null,
+   "raison": "« trenowanie modelu » (IA) correct"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "reviser",
+   "regex": "\\bprzejrz\\w*",
+   "remplace": "\\bprzejrz(yj|yjmy|yjcie|eć|enie|enia)\\b",
+   "raison": "exclure « przejrzysty », « przejrzystość »"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "reviser",
+   "regex": "\\bprzegląd\\w*",
+   "remplace": null,
+   "raison": "« Przeglądaj » = parcourir, correct"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "reviser",
+   "regex": "\\brecenz\\w*",
+   "remplace": null,
+   "raison": "« recenzji » = avis d'utilisateurs, correct"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "reviser",
+   "regex": "\\butrwal\\w*",
+   "remplace": null,
+   "raison": "« utrwalać » (consolider, fixer) est correct dans tous les cas"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\bmisj[aęiąo]\\b",
+   "remplace": null,
+   "raison": "« Nasza misja » = mission de l'entreprise, correct"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bmateri[aęią]\\b",
+   "remplace": null,
+   "raison": "« materia » (physique) correct"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bmateriał\\w*",
+   "remplace": null,
+   "raison": "« materiał » (contenu à retenir, matériaux) correct"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "ami",
+   "regex": "\\bprzyjaci(el|ele|ół|ółk|ółmi|elem|elowi|ela)\\w*",
+   "remplace": "\\b(dodaj|zaproś|zaproszeni\\w*|twoi|twoich|twoim|lista|listy|ranking\\w*)\\s+przyjaci\\w*",
+   "raison": "« przyjaciel Enkidu », « przyjaciół Picassa » corrects ; viser la fonction amis"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "abonnement",
+   "regex": "\\babonament\\w*",
+   "remplace": null,
+   "raison": "« abonament » est un mot polonais courant ; « abonamenty » (modems) correct"
+  },
+  {
+   "langue": "pl",
+   "type": "produit",
+   "id": "bibliotheque",
+   "regex": "\\bczyteln\\w*",
+   "remplace": "\\bczytelni[aęą]?\\b",
+   "raison": "exclure « czytelny », « czytelnik »"
+  },
+  {
+   "langue": "pl",
+   "type": "oeuvre",
+   "id": "mockingbird",
+   "regex": "\\bprzedrzeźniacz\\w*",
+   "remplace": "„[^”\\n]{0,30}przedrzeźniacz\\w*[^”\\n]{0,30}”",
+   "raison": "l'oiseau « drozd-przedrzeźniacz » expliqué est correct ; viser le titre"
+  },
+  {
+   "langue": "pl",
+   "type": "oeuvre",
+   "id": "rouge_noir",
+   "regex": "\\bCzerwony\\s+i\\s+czarny\\b",
+   "remplace": "(?-i:\\bCzerwony\\s+i\\s+czarny\\b)",
+   "raison": "« kolory czerwony i czarny » est correct ; viser le titre capitalisé"
+  },
+  {
+   "langue": "pl",
+   "type": "oeuvre",
+   "id": "confessions",
+   "regex": "\\bSpowied(ź|zi)\\b[^.\\n]{0,30}Rousseau",
+   "remplace": "„Spowied(ź|zi)\\w*”",
+   "raison": "« spowiedź » comme concept est correct ; viser le titre"
+  },
+  {
+   "langue": "pl",
+   "type": "oeuvre",
+   "id": "confessions",
+   "regex": "Rousseau[^.\\n]{0,30}\\bSpowied(ź|zi)\\b",
+   "remplace": null,
+   "raison": "« Rousseau laicyzuje spowiedź » : concept correct, pas le titre"
+  },
+  {
+   "langue": "pl",
+   "type": "oeuvre",
+   "id": "mythe_sisyphe",
+   "regex": "\\bMit\\s+o\\s+Syzyfie\\b",
+   "remplace": "\\bMit\\s+o\\s+Syzyfie\\b[^.\\n]{0,40}Camus|Camus\\w*[^.\\n]{0,40}\\bMit\\w*\\s+o\\s+Syzyfie",
+   "raison": "« mit o Syzyfie » (le mythe lui-même) est correct ; limiter à Camus"
+  },
+  {
+   "langue": "pl",
+   "type": "oeuvre",
+   "id": "vertigo",
+   "regex": "\\bZawroty\\s+głowy\\b",
+   "remplace": "„Zawroty\\s+głowy”|Hitchcock\\w*[^.\\n]{0,40}\\bZawroty\\s+głowy\\b|\\bZawroty\\s+głowy\\b[^.\\n]{0,40}Hitchcock",
+   "raison": "« zawroty głowy » = vertiges, sens courant correct"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "piege",
+   "id": "lumiere_quiz",
+   "regex": "(?<![\\wáàâãéêíóôõúç ])(?:ligeiro|leve|light)(?![\\wáàâãéêíóôõúç ,.;:!?)])",
+   "remplace": "(?<![\\wáàâãéêíóôõúç ])(?:ligeiro|light)(?![\\wáàâãéêíóôõúç ,.;:!?)])",
+   "raison": "« Leve » isolé est l'étiquette d'intensité (correcte), pas l'option lumière"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "piege",
+   "id": "gratuit",
+   "regex": "\\bde\\s+gra[cç]a\\b|\\bfree\\b",
+   "remplace": "\\bfree\\b",
+   "raison": "« de graça » est correct en pt-PT dans les CTA (Desbloqueia de graça)"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "piege",
+   "id": "premium",
+   "regex": "\\b(?:plano|vers[aã]o|subscri[cç][aã]o|conta|acesso)\\s+(?:pag[ao]|superior|de\\s+luxo|complet[ao]|car[ao])\\b",
+   "remplace": "\\b(?:plano|vers[aã]o|subscri[cç][aã]o|conta|acesso)\\s+(?:superior|de\\s+luxo|complet[ao]|car[ao])\\b",
+   "raison": "« subscrição paga » est correct dans le texte légal"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "produit",
+   "id": "premium",
+   "regex": "\\b(?:plano|vers[aã]o|subscri[cç][aã]o|assinatura|conta|acesso)\\s+(?:pag[oa]|superior|de\\s+primeira|complet[oa]|de\\s+luxo|avan[cç]ad[oa])\\b",
+   "remplace": "\\b(?:plano|vers[aã]o|subscri[cç][aã]o|assinatura|conta|acesso)\\s+(?:superior|de\\s+primeira|de\\s+luxo|avan[cç]ad[oa])\\b",
+   "raison": "« subscrição paga » / « acesso completo » sont des formulations correctes"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "piege",
+   "id": "anecdotes",
+   "regex": "\\bpiadas?\\b|\\bhist[oó]rias\\s+engra[cç]adas\\b|\\bgra[cç]as\\b",
+   "remplace": "\\bpiadas?\\b|\\bhist[oó]rias\\s+engra[cç]adas\\b",
+   "raison": "« graças a » (grâce à) est une locution courante correcte"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "piege",
+   "id": "on_impersonnel",
+   "regex": "\\ba\\s+gente\\s+(?:quer|vive|diz|v[eê]|sabe|chama|fala|encontra|pensa|pode)\\b",
+   "remplace": "(?<!toda\\s)\\ba\\s+gente\\s+(?:quer|vive|diz|v[eê]|sabe|chama|fala|encontra|pensa|pode)\\b",
+   "raison": "« toda a gente » (tout le monde) est correct en pt-PT"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\bem\\s+cerca\\s+de\\s+\\d{3,4}\\b|\\bem\\s+aproximadamente\\s+\\d{3,4}\\b|\\bem\\s+por\\s+volta\\s+de\\s+\\d{3,4}\\b",
+   "remplace": "\\bem\\s+(?:cerca\\s+de|aproximadamente|por\\s+volta\\s+de)\\s+\\d{3,4}(?!\\d|[.,]\\d|\\s*[°º%])(?!\\s*(?!a\\.?\\s*C\\b|d\\.?\\s*C\\b)[a-zà-ú])",
+   "raison": "les occurrences sont des quantités (habitants, °C), pas des dates"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "piege",
+   "id": "polysemie_courante",
+   "regex": "\\bpoder\\s+(?:pol[ií]tico\\s+)?real\\b|\\bsentido\\s+real\\b|\\bvida\\s+real\\s+e\\s+verdadeira\\b",
+   "remplace": "\\bvida\\s+real\\s+e\\s+verdadeira\\b",
+   "raison": "« poder real » / « sentido real » = pouvoir réel, usage portugais normal"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "piege",
+   "id": "deux_etats_ame",
+   "regex": "\\bdois\\s+(?:pa[ií]ses|Estados|na[cç][oõ]es)\\b[^.!?\\n]{0,50}\\b(?:spleen|ideal|alma|Baudelaire|poeta|melancolia)\\b|\\b(?:spleen|ideal|Baudelaire)\\b[^.!?\\n]{0,50}\\bdois\\s+(?:pa[ií]ses|Estados|na[cç][oõ]es)\\b",
+   "remplace": "\\bdois\\s+(?:pa[ií]ses|na[cç][oõ]es|(?-i:Estados))\\b[^.!?\\n]{0,50}\\b(?:spleen|ideal|alma|Baudelaire|poeta|melancolia)\\b|\\b(?:spleen|ideal|Baudelaire)\\b[^.!?\\n]{0,50}\\bdois\\s+(?:pa[ií]ses|na[cç][oõ]es|(?-i:Estados))\\b",
+   "raison": "« dois estados » en minuscule est la forme imposée ; ne viser que « Estados »"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "produit",
+   "id": "collection",
+   "regex": "\\bcolet[aâ]neas?\\b|\\bconjuntos?\\s+(?:de\\s+cursos|tem[aá]tic\\w+)\\b",
+   "remplace": "\\bconjuntos?\\s+(?:de\\s+cursos|tem[aá]tic\\w+)\\b|\\bcolet[aâ]neas?\\s+(?:de\\s+cursos|tem[aá]tic\\w+)\\b",
+   "raison": "« coletânea » de contes (Mille et une nuits) est correct"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "produit",
+   "id": "essai_gratuit",
+   "regex": "\\bteste\\s+gr[aá]tis\\b",
+   "remplace": null,
+   "raison": "« teste grátis » est correct et équivalent à « teste gratuito »"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "produit",
+   "id": "essai_gratuit",
+   "regex": "\\bavalia[cç][aã]o\\s+(?:gratuita|gr[aá]tis)\\b|\\bper[ií]odo\\s+de\\s+(?:avalia[cç][aã]o|teste|experi[eê]ncia|degusta[cç][aã]o)\\b|\\bper[ií]odo\\s+(?:experimental|gr[aá]tis|gratuito)\\b",
+   "remplace": "\\bavalia[cç][aã]o\\s+(?:gratuita|gr[aá]tis)\\b|\\bper[ií]odo\\s+de\\s+(?:avalia[cç][aã]o|degusta[cç][aã]o)\\b",
+   "raison": "« período grátis » / « período experimental » sont corrects"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\ba\\s+tua\\s+meta\\b(?!\\s+di[aá]ria)|\\bas\\s+tuas\\s+metas\\b|\\bmetas\\b(?!\\s+di[aá]rias)",
+   "remplace": "\\ba\\s+tua\\s+meta\\b(?!\\s+di[aá]ria)|\\bas\\s+tuas\\s+metas\\b",
+   "raison": "« metas » (objectifs de Kyoto) est un mot courant correct"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\bprop[oó]sitos?\\b|\\bfinalidades?\\b|\\balvos?\\b",
+   "remplace": "\\bo\\s+teu\\s+(?:prop[oó]sito|alvo)\\b|\\ba\\s+tua\\s+finalidade\\b|\\bos\\s+teus\\s+(?:prop[oó]sitos|alvos)\\b",
+   "raison": "« alvo », « propósito » sont des mots courants corrects hors onboarding"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "produit",
+   "id": "abonnement",
+   "regex": "\\bassinaturas?\\b(?![^.!?\\n]{0,20}\\b(?:digital|eletr[oó]nica|do\\s+autor|manuscrita)\\b)|\\bassinar\\s+(?:o\\s+|a\\s+|um\\s+)?(?:plano|Premium|Sophia)\\b|\\bassinantes?\\b",
+   "remplace": "\\bassinaturas?\\s+(?:mensal|anual|Premium|Sophia)\\b|\\b(?:a\\s+tua|cancelar\\s+a|renovar\\s+a|gerir\\s+a)\\s+assinatura\\b|\\bassinar\\s+(?:o\\s+|a\\s+|um\\s+)?(?:plano|Premium|Sophia)\\b|\\bassinantes?\\b",
+   "raison": "« assinatura » = signature (Homo sapiens), sens correct"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "oeuvre",
+   "id": "spleen_de_paris",
+   "regex": "\\bPequenos\\s+Poemas\\s+em\\s+Prosa\\b(?![^.!?\\n]{0,30}\\bSpleen\\b)",
+   "remplace": null,
+   "raison": "« Pequenos Poemas em Prosa » est le titre alternatif réel de l'œuvre"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "oeuvre",
+   "id": "metamorphose",
+   "regex": "\\bA\\s+Transforma[cç][aã]o\\b[^.!?\\n]{0,60}\\bKafka\\b|\\bKafka\\b[^.!?\\n]{0,60}\\bA\\s+Transforma[cç][aã]o\\b",
+   "remplace": "[*«\\\"“]A\\s+Transforma[cç][aã]o[*»\\\"”]",
+   "raison": "« a transformação » nom commun dans une phrase sur Kafka"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "oeuvre",
+   "id": "metamorphose",
+   "regex": "\\bDie\\s+Verwandlung\\b(?![^.!?\\n]{0,20}\\()",
+   "remplace": null,
+   "raison": "citation légitime du titre original allemand"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "oeuvre",
+   "id": "maitre_marguerite",
+   "regex": "\\bO\\s+Mestre\\s+e\\s+(?:a\\s+)?Margarida\\b|\\bMargarida\\s+e\\s+o\\s+Mestre\\b",
+   "remplace": null,
+   "raison": "« O Mestre e Margarida » est le titre établi en portugais"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "oeuvre",
+   "id": "notre_dame",
+   "regex": "\\bO\\s+Corcunda\\s+de\\s+Notre[- ]Dame\\b|\\bThe\\s+Hunchback\\s+of\\s+Notre[- ]Dame\\b",
+   "remplace": "\\bThe\\s+Hunchback\\s+of\\s+Notre[- ]Dame\\b",
+   "raison": "« O Corcunda de Notre-Dame » est un titre portugais établi"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "oeuvre",
+   "id": "2001",
+   "regex": "\\b2001:?\\s+Uma\\s+Odiss[eé]ia\\s+no\\s+Espa[cç]o\\b|\\b2001,\\s+(?:Uma\\s+)?Odiss[eé]ia\\s+no\\s+Espa[cç]o\\b",
+   "remplace": "\\b2001[:,]?\\s+Uma\\s+Odiss[eé]ia\\s+no\\s+Espa[cç]o\\b",
+   "raison": "la virgule au lieu des deux-points n'est que de la ponctuation ; viser « Uma Odisseia »"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "oeuvre",
+   "id": "republique",
+   "regex": "\\bThe\\s+Republic\\b(?![^.!?\\n]{0,20}\\()",
+   "remplace": "\\bThe\\s+Republic\\b[^.!?\\n]{0,60}\\bPlat[aã]o\\b|\\bPlat[aã]o\\b[^.!?\\n]{0,60}\\bThe\\s+Republic\\b",
+   "raison": "matche « The Battle Hymn of the Republic », sans rapport avec Platon"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "oeuvre",
+   "id": "journal_anne_frank",
+   "regex": "\\bA\\s+Casa\\s+dos\\s+Fundos\\b|\\bO\\s+Anexo\\s+Secreto\\b|\\bHet\\s+Achterhuis\\b(?![^.!?\\n]{0,20}\\()",
+   "remplace": "\\bA\\s+Casa\\s+dos\\s+Fundos\\b|\\bO\\s+Anexo\\s+Secreto\\b",
+   "raison": "« Het Achterhuis » cité comme titre original, légitime"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "oeuvre",
+   "id": "miserables",
+   "regex": "\\bOs\\s+Miseraveis\\b|\\bOs\\s+Infelizes\\b",
+   "remplace": "\\bOs\\s+Miseraveis\\b|[*«\\\"“]Os\\s+Infelizes\\b",
+   "raison": "« os infelizes » est un groupe nominal ordinaire"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "oeuvre",
+   "id": "vertigo",
+   "regex": "\\bVertigem\\b[^.!?\\n]{0,60}\\bHitchcock\\b|\\bHitchcock\\b[^.!?\\n]{0,60}\\bVertigem\\b",
+   "remplace": "[*«\\\"“]Vertigem\\b[^.!?\\n]{0,60}\\bHitchcock\\b|\\bHitchcock\\b[^.!?\\n]{0,60}[*«\\\"“]Vertigem\\b",
+   "raison": "« vertigem » nom commun (distorsion optique), pas le titre"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "oeuvre",
+   "id": "aida",
+   "regex": "\\bA[ií]da\\b[^.!?\\n]{0,40}\\bVerdi\\b",
+   "remplace": "\\bA[ïí]da\\b[^.!?\\n]{0,40}\\bVerdi\\b",
+   "raison": "matche la forme imposée « Aida »"
+  },
+  {
+   "langue": "pt-PT",
+   "type": "oeuvre",
+   "id": "mockingbird",
+   "regex": "\\b(?:para\\s+)?matar\\s+(?:um|uma|a|o)\\s+(?:cotovia|rouxinol|sabi[aá]|p[aá]ssaro|tordo|passarinho|zombeteiro|imitador)\\b",
+   "remplace": "\\bpara\\s+matar\\s+(?:um|uma|a|o)\\s+(?:cotovia|rouxinol|sabi[aá]|p[aá]ssaro|tordo|passarinho|zombeteiro|imitador)\\b|[*«\\\"“]Matar\\s+(?:um|uma|a|o)\\s+(?:cotovia|rouxinol|sabi[aá]|p[aá]ssaro|tordo|passarinho|zombeteiro|imitador)\\b",
+   "raison": "« matar uma cotovia » est la métaphore du roman, pas un titre"
+  },
+  {
+   "langue": "pt",
+   "type": "piege",
+   "id": "voici_comment",
+   "regex": "\\beis\\s+(?:como|o\\s+que|por\\s+que|o\\s+porqu[eê]|aqui)\\b",
+   "remplace": null,
+   "raison": "« Eis como / Eis por que / Eis o que » est du portugais correct et courant, pas une erreur de traduction."
+  },
+  {
+   "langue": "pt",
+   "type": "piege",
+   "id": "renaissance",
+   "regex": "\\bRenascen[cç]a\\b",
+   "remplace": null,
+   "raison": "« Renascença » est une forme établie et correcte en portugais du Brésil, synonyme de Renascimento."
+  },
+  {
+   "langue": "pt",
+   "type": "piege",
+   "id": "nemesis",
+   "regex": "\\b(?:arqui-?inimig[oa]|inimig[oa]|advers[aá]ri[oa]|rival)\\b[^.!?\\n]{0,60}\\b(?:deusa|vingan[cç]a|Narciso|retribui[cç][aã]o|h[uú]bris|hybris|Zeus|grega)\\b|\\b(?:deusa|vingan[cç]a|Narciso|retribui[cç][aã]o|h[uú]bris|hybris)\\b[^.!?\\n]{0,60}\\b(?:arqui-?inimig[oa]|inimig[oa]|advers[aá]ri[oa]|rival)\\b",
+   "remplace": "\\barqui-?inimig[oa]\\b[^.!?\\n]{0,60}\\b(?:deusa|vingan[cç]a|Narciso|retribui[cç][aã]o|h[uú]bris|hybris)\\b|\\b(?:deusa|vingan[cç]a|Narciso|retribui[cç][aã]o|h[uú]bris|hybris)\\b[^.!?\\n]{0,60}\\barqui-?inimig[oa]\\b|\\bdeusa\\s+(?:Inimiga|Advers[aá]ria|Rival)\\b",
+   "raison": "Trop large : « adversário de Zeus » (Typhon) est correct ; on ne garde que arqui-inimigo près de deusa/vingança."
+  },
+  {
+   "langue": "pt",
+   "type": "piege",
+   "id": "deux_etats_ame",
+   "regex": "\\bdois\\s+Estados\\b(?!\\s+(?:de\\s+)?(?:alma|esp[ií]rito|d['’]alma|an[ií]micos|emocionais|mentais))[^.!?\\n]{0,70}\\b(?:spleen|ideal|Baudelaire|melancol\\w*)\\b|\\b(?:spleen|ideal|Baudelaire|melancol\\w*)\\b[^.!?\\n]{0,70}\\bdois\\s+Estados\\b(?!\\s+(?:de\\s+)?(?:alma|esp[ií]rito|d['’]alma))",
+   "remplace": "\\bdois\\s+(?-i:Estados)\\b(?!\\s+(?:de\\s+)?(?:alma|esp[ií]rito|d['’]alma|an[ií]micos|emocionais|mentais))[^.!?\\n]{0,70}\\b(?:spleen|ideal|Baudelaire|melancol\\w*)\\b|\\b(?:spleen|ideal|Baudelaire|melancol\\w*)\\b[^.!?\\n]{0,70}\\bdois\\s+(?-i:Estados)\\b(?!\\s+(?:de\\s+)?(?:alma|esp[ií]rito|d['’]alma))",
+   "raison": "« opõe dois estados » (minuscule) est la forme correcte ; seul « Estados » avec majuscule (pays) est fautif."
+  },
+  {
+   "langue": "pt",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\bsua\\s+meta\\b(?!\\s+di[aá]ria)|\\bsuas\\s+metas\\b|\\bmetas\\b(?!\\s+di[aá]rias)",
+   "remplace": "\\bsua\\s+meta\\b(?!\\s+di[aá]ria)|\\bsuas\\s+metas\\b(?!\\s+di[aá]rias)",
+   "raison": "« metas » seul attrape des textes corrects (objectifs de Kyoto) ; on limite à sua/suas meta(s)."
+  },
+  {
+   "langue": "pt",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\bprop[oó]sitos?\\b|\\bfinalidades?\\b|\\balvos?\\b",
+   "remplace": null,
+   "raison": "propósito, finalidade, alvo sont des mots courants (« erra o alvo ») sans lien avec l'objectif de l'onboarding."
+  },
+  {
+   "langue": "pt",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bpercursos?\\b",
+   "remplace": "\\b(?:aba|seus?|meus?)\\s+percursos?\\b|\\bpercursos?\\s+(?:tem[aá]tic\\w+|de\\s+aprendiza(?:do|gem)|personalizad\\w+)\\b",
+   "raison": "« percurso » descriptif d'une collection est correct ; on ne vise que le nom de l'onglet/parcours personnel."
+  },
+  {
+   "langue": "pt",
+   "type": "produit",
+   "id": "collection",
+   "regex": "\\bcolet[aâ]neas?\\b",
+   "remplace": "\\bcolet[aâ]neas?\\s+(?:de\\s+cursos|tem[aá]tic\\w+|Sophia)\\b",
+   "raison": "« coletânea » de contes (Mille et une nuits) est correct ; on ne vise que coletânea de cursos."
+  },
+  {
+   "langue": "pt",
+   "type": "produit",
+   "id": "essai_gratuit",
+   "regex": "\\bavalia[cç][aã]o\\s+(?:gratuita|gr[aá]tis)\\b|\\bper[ií]odo\\s+de\\s+(?:avalia[cç][aã]o|teste|experi[eê]ncia|degusta[cç][aã]o)\\b|\\bper[ií]odo\\s+(?:experimental|gr[aá]tis|gratuito)\\b",
+   "remplace": "\\bavalia[cç][aã]o\\s+(?:gratuita|gr[aá]tis)\\b",
+   "raison": "« período grátis / período de teste » est la formulation naturelle pour la période d'essai ; on garde avaliação gratuita."
+  },
+  {
+   "langue": "pt",
+   "type": "oeuvre",
+   "id": "mockingbird",
+   "regex": "\\b(?:para\\s+)?matar\\s+(?:um|uma|a|o)\\s+(?:sabi[aá]|rouxinol|cotovia|p[aá]ssaro|tordo|passarinho|zombeteiro)\\b",
+   "remplace": "\\bpara\\s+matar\\s+(?:um|uma|a|o)\\s+(?:sabi[aá]|rouxinol|cotovia|p[aá]ssaro|tordo|passarinho|zombeteiro)\\b|[*«\\\"“]\\s*matar\\s+(?:um|uma|a|o)\\s+(?:sabi[aá]|rouxinol|cotovia|p[aá]ssaro|tordo|passarinho|zombeteiro)\\b",
+   "raison": "« Matar um pássaro-mimoso é destruir uma inocência » parle du thème, pas du titre ; on exige un contexte de titre."
+  },
+  {
+   "langue": "pt",
+   "type": "oeuvre",
+   "id": "metamorphose",
+   "regex": "\\bA\\s+Transforma[cç][aã]o\\b[^.!?\\n]{0,60}\\bKafka\\b|\\bKafka\\b[^.!?\\n]{0,60}\\bA\\s+Transforma[cç][aã]o\\b",
+   "remplace": "(?-i:\\bA\\s+Transforma[cç][aã]o\\b)[^.!?\\n]{0,60}\\bKafka\\b|\\bKafka\\b[^.!?\\n]{0,60}(?-i:\\bA\\s+Transforma[cç][aã]o\\b)",
+   "raison": "« Kafka trata a transformação » est un nom commun correct ; seul le titre « A Transformação » en majuscule est fautif."
+  },
+  {
+   "langue": "pt",
+   "type": "oeuvre",
+   "id": "metamorphose",
+   "regex": "\\bDie\\s+Verwandlung\\b(?![^.!?\\n]{0,20}\\()",
+   "remplace": null,
+   "raison": "Mentionner le titre original allemand *Die Verwandlung* est normal et correct en portugais."
+  },
+  {
+   "langue": "pt",
+   "type": "oeuvre",
+   "id": "republique",
+   "regex": "\\bThe\\s+Republic\\b(?![^.!?\\n]{0,20}\\()",
+   "remplace": "(?<!of )\\bThe\\s+Republic\\b(?![^.!?\\n]{0,20}\\()",
+   "raison": "Attrape « The Battle Hymn of the Republic », titre anglais correct ; on exclut « of the Republic »."
+  },
+  {
+   "langue": "pt",
+   "type": "oeuvre",
+   "id": "journal_anne_frank",
+   "regex": "\\bA\\s+Casa\\s+dos\\s+Fundos\\b|\\bHet\\s+Achterhuis\\b(?![^.!?\\n]{0,20}\\()",
+   "remplace": "\\bA\\s+Casa\\s+dos\\s+Fundos\\b|(?<!\\(\\*)(?<!\\()(?<!\\(“)\\bHet\\s+Achterhuis\\b(?![^.!?\\n]{0,20}\\()",
+   "raison": "Le titre original néerlandais entre parenthèses (*Het Achterhuis*) est correct ; on l'exclut."
+  },
+  {
+   "langue": "pt",
+   "type": "oeuvre",
+   "id": "miserables",
+   "regex": "\\bOs\\s+Miseraveis\\b|\\bOs\\s+Infelizes\\b",
+   "remplace": "\\bOs\\s+Miseraveis\\b|(?-i:\\bOs\\s+Infelizes\\b)[^.!?\\n]{0,60}\\bHugo\\b|\\bHugo\\b[^.!?\\n]{0,60}(?-i:\\bOs\\s+Infelizes\\b)",
+   "raison": "« os infelizes que a viram » (Méduse) est correct ; on exige le titre près de Hugo."
+  },
+  {
+   "langue": "pt",
+   "type": "oeuvre",
+   "id": "vertigo",
+   "regex": "\\bVertigem\\b[^.!?\\n]{0,60}\\bHitchcock\\b|\\bHitchcock\\b[^.!?\\n]{0,60}\\bVertigem\\b",
+   "remplace": "(?-i:\\bVertigem\\b)[^.!?\\n]{0,60}\\bHitchcock\\b|\\bHitchcock\\b[^.!?\\n]{0,60}(?-i:\\bVertigem\\b)",
+   "raison": "« distorção ótica da vertigem » (effet vertigo) est correct ; seul le titre « Vertigem » en majuscule est fautif."
+  },
+  {
+   "langue": "pt",
+   "type": "oeuvre",
+   "id": "aida",
+   "regex": "\\bA[ií]da\\b[^.!?\\n]{0,40}\\bVerdi\\b",
+   "remplace": "\\bA[íï]da\\b[^.!?\\n]{0,40}\\bVerdi\\b",
+   "raison": "Attrape la forme correcte « Aida » ; on ne garde que les graphies Aída/Aïda."
+  },
+  {
+   "langue": "ro",
+   "type": "piege",
+   "id": "serie_streak",
+   "regex": "\\bzile\\s+consecutive\\b",
+   "remplace": null,
+   "raison": "« zile consecutive de utilizare » est une glose roumaine correcte de la série, pas une faute."
+  },
+  {
+   "langue": "ro",
+   "type": "oeuvre",
+   "id": "iliade",
+   "regex": "\\bIliade\\b|\\bIliad\\b|\\bIliadă\\b",
+   "remplace": "\\bIliad\\b|(?<!întregii )(?<!unei )(?<!acestei )(?<!acelei )\\bIliade\\b",
+   "raison": "« întregii Iliade » est le génitif roumain correct d'Iliada ; ne garder que les formes étrangères."
+  },
+  {
+   "langue": "ro",
+   "type": "oeuvre",
+   "id": "le_cri",
+   "regex": "\\b[țţ]ip[ăa]t\\w*\\b(?=[^.!?\\n]{0,80}(?:Munch|Oslo|expresion|Ekeberg|1893))|(?:Munch|Oslo|expresion\\w*|Ekeberg)[^.!?\\n]{0,80}\\b[țţ]ip[ăa]t\\w*\\b",
+   "remplace": null,
+   "raison": "« Țipătul » est un titre roumain établi du tableau de Munch, au même titre que « Strigătul »."
+  },
+  {
+   "langue": "ro",
+   "type": "oeuvre",
+   "id": "apologie_socrate",
+   "regex": "\\bApologia\\s+lui\\s+Socrate\\b",
+   "remplace": null,
+   "raison": "« Apologia lui Socrate » est le titre roumain établi du dialogue de Platon."
+  },
+  {
+   "langue": "ru",
+   "type": "piege",
+   "id": "debloquer",
+   "regex": "(?:открыть|открой|открывай|откроет)\\s+(?:premium|преми\\w*)",
+   "remplace": null,
+   "raison": "« Открой Premium » est une tournure russe naturelle et correcte pour débloquer."
+  },
+  {
+   "langue": "ru",
+   "type": "piege",
+   "id": "pas_de_connexion",
+   "regex": "нет\\s+(?:сети|соединени\\w*|связи)\\b",
+   "remplace": null,
+   "raison": "« Нет соединения / нет сети » est la formule russe standard et correcte pour l'absence de réseau."
+  },
+  {
+   "langue": "ru",
+   "type": "piege",
+   "id": "reprends_du_temps",
+   "regex": "\\bвозьми\\s+(?:сво[её]\\s+)?время\\b",
+   "remplace": "\\bвозьми\\s+(?:сво[её]\\s+)?время\\b(?!\\s+под\\s+контрол)",
+   "raison": "« возьми своё время под контроль » est correct (prendre le contrôle de son temps) ; on exclut « под контроль »."
+  },
+  {
+   "langue": "ru",
+   "type": "piege",
+   "id": "glisse",
+   "regex": "\\bсвайп\\w*",
+   "remplace": null,
+   "raison": "« свайп / свайпни » est l'usage courant et correct dans les apps russes (swipe à droite)."
+  },
+  {
+   "langue": "ru",
+   "type": "piege",
+   "id": "glisse",
+   "regex": "\\bслайд\\w*\\s+(?:чтобы|для)",
+   "remplace": "\\bслайд(?!шоу)\\w*,?\\s+(?:чтобы|для)",
+   "raison": "Attrape « слайдшоу для TikTok » ; on exclut « слайдшоу »."
+  },
+  {
+   "langue": "ru",
+   "type": "piege",
+   "id": "voici_comment",
+   "regex": "\\bэто\\s+то,\\s+как\\b",
+   "remplace": "(?:^|[.!?…:]\\s*)это\\s+то,\\s+как\\b",
+   "raison": "« так это то, как » en milieu de phrase est du russe correct ; on ne vise que le début de phrase."
+  },
+  {
+   "langue": "ru",
+   "type": "piege",
+   "id": "plaques_photo",
+   "regex": "\\bтарелк\\w*",
+   "remplace": "тарелк\\w*.{0,30}(?:фото|дагер|снимк|камер|негатив)\\w*|(?:фото|дагер|снимк|камер|негатив)\\w*.{0,30}тарелк\\w*",
+   "raison": "« тарелка » (assiette) est un mot courant ; on exige un contexte photographique."
+  },
+  {
+   "langue": "ru",
+   "type": "piege",
+   "id": "proces_kafka",
+   "regex": "кафк\\w*.{0,40}[«\\\"„']?\\s*(?:суд\\b|судебн\\w*\\s+(?:процесс|разбирательств)|испытани|пробн\\w*\\s+период)\\w*",
+   "remplace": "кафк\\w*.{0,40}(?:[«\\\"„']|\\*\\*?)\\s*(?:суд|судебн\\w*\\s+(?:процесс|разбирательств\\w*)|испытани\\w*|пробн\\w*\\s+период\\w*)\\s*(?:[»\\\"“']|\\*\\*?)",
+   "raison": "Attrape la description correcte de l'intrigue (« судебный процесс ») ; on ne vise que le titre entre guillemets ou en gras."
+  },
+  {
+   "langue": "ru",
+   "type": "piege",
+   "id": "siege_perilleux",
+   "regex": "(?:опасн|смертельн|рискованн)\\w*\\s+(?:сидень|кресл|стул|место)\\w*|гибельн\\w*\\s+(?:кресл|стул|место)\\w*",
+   "remplace": "(?:опасн|смертельн|рискованн)\\w*\\s+(?:сидень|кресл|стул)\\w*|гибельн\\w*\\s+(?:кресл|стул)\\w*|(?:опасн|смертельн|рискованн|гибельн)\\w*\\s+мест\\w*.{0,60}(?:кругл\\w*\\s+стол|артур|мерлин|галахад|грааль)",
+   "raison": "« опасное место » est un usage ordinaire (Haïti, une île) ; « место » seulement en contexte arthurien."
+  },
+  {
+   "langue": "ru",
+   "type": "piege",
+   "id": "roi_arthur",
+   "regex": "\\b(?:гуиневр|дженевр|джиневр|гуинивер|гвиневер|гиневер)\\w*",
+   "remplace": "\\b(?:гуиневр|дженевр|джиневр|гуинивер)\\w*",
+   "raison": "« Гвиневера » est une graphie russe établie et acceptable ; on ne garde que les translittérations fautives."
+  },
+  {
+   "langue": "ru",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bне[- ]?оон\\b|\\bнон[- ]?оон|\\bне[- ]?нато\\b",
+   "remplace": "\\bне-?оон\\b|\\bнон[- ]?оон|\\bне-?нато\\b",
+   "raison": "« Не ООН останавливает… » est du russe correct ; on ne vise que « не-ООН » / « неООН »."
+  },
+  {
+   "langue": "ru",
+   "type": "piege",
+   "id": "termes_islam",
+   "regex": "\\b(?:razzia|jizya|caliph|dhimma|ummah|umma|khalif|калиф)\\w*",
+   "remplace": "\\b(?:razzia|jizya|caliph|dhimma|ummah|umma|khalif)\\w*|\\bкалиф(?!орни)\\w*",
+   "raison": "« калиф » attrape Калифорния ; on exclut « калифорни »."
+  },
+  {
+   "langue": "ru",
+   "type": "piege",
+   "id": "pan",
+   "regex": "\\bбог\\w*\\W{1,6}(?:хлопнуть|хлопок|хлоп|сковород|кастрюл|панорам|пэн|бах)\\w*",
+   "remplace": "\\bбог(?:а|у|ом|е|и)?\\W{1,6}(?:хлопнуть|хлопок|хлоп|сковород|кастрюл|панорам|пэн|бах)\\w*",
+   "raison": "« бог\\w* » attrape « богатым хлопком » ; on limite aux formes de « бог »."
+  },
+  {
+   "langue": "ru",
+   "type": "produit",
+   "id": "quiz",
+   "regex": "\\bвикторин\\w*",
+   "remplace": null,
+   "raison": "« викторина » ne sort que comme mot-clé légitime de la fiche store ; mot russe correct pour un quiz."
+  },
+  {
+   "langue": "ru",
+   "type": "produit",
+   "id": "niveau",
+   "regex": "\\bранг\\w*",
+   "remplace": null,
+   "raison": "« ранг » désigne le classement / les rangs nommés, concept distinct du niveau ; usage correct."
+  },
+  {
+   "langue": "ru",
+   "type": "produit",
+   "id": "premium",
+   "regex": "(?:платн|расширенн|полн)\\w*\\s+(?:верси|доступ|подписк)\\w*",
+   "remplace": "(?:платн|расширенн)\\w*\\s+(?:верси|доступ|подписк)\\w*",
+   "raison": "« Полный доступ » (accès complet) est correct ; on retire « полн »."
+  },
+  {
+   "langue": "ru",
+   "type": "produit",
+   "id": "reviser",
+   "regex": "\\bперечит\\w*",
+   "remplace": null,
+   "raison": "« перечитать / перечитывание » rend correctement « relire » (opposé à la répétition espacée)."
+  },
+  {
+   "langue": "ru",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\bзадач\\w*",
+   "remplace": null,
+   "raison": "« задача » ne sort que dans des contextes ordinaires corrects (catalogue), sans lien avec l'objectif d'onboarding."
+  },
+  {
+   "langue": "ru",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bматери(?:я|и|ю|ей)\\b",
+   "remplace": null,
+   "raison": "« материя » attrape la matière physique (matière noire), usage correct."
+  },
+  {
+   "langue": "ru",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bдисциплин\\w*",
+   "remplace": null,
+   "raison": "« дисциплина » est employé correctement (discipline du mot juste)."
+  },
+  {
+   "langue": "ru",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bобласт\\w*\\s+знани\\w*",
+   "remplace": null,
+   "raison": "« области знаний » (travail intellectuel) est un usage correct."
+  },
+  {
+   "langue": "ru",
+   "type": "produit",
+   "id": "ami",
+   "regex": "\\bподписчик\\w*",
+   "remplace": null,
+   "raison": "« Подписчики Pro » désigne les abonnés, usage correct, pas les amis."
+  },
+  {
+   "langue": "ru",
+   "type": "produit",
+   "id": "debloquer",
+   "regex": "\\bоткр(?:ыть|ой|ывай|ыва\\w*|оет\\w*)\\s+(?:доступ|курс|premium|преми)\\w*",
+   "remplace": null,
+   "raison": "« Открыть курс / Открой Premium » sont des tournures russes correctes et naturelles."
+  },
+  {
+   "langue": "ru",
+   "type": "oeuvre",
+   "id": "crime_chatiment",
+   "regex": "преступлени\\w*\\s+и\\s+(?:кар[аыу]|возмезди|расплат)\\w*",
+   "remplace": "преступлени[ея]\\s+и\\s+(?:кар[аыу]|возмезди[ея]|расплат[аыу])\\b",
+   "raison": "Attrape « раскрывает преступление и карает » ; on ne vise que le titre au nominatif."
+  },
+  {
+   "langue": "ru",
+   "type": "oeuvre",
+   "id": "le_proces",
+   "regex": "[«\\\"„']\\s*суд\\s*[»\\\"“']",
+   "remplace": "кафк\\w*.{0,40}[«\\\"„']\\s*суд\\s*[»\\\"“']|[«\\\"„']\\s*суд\\s*[»\\\"“'].{0,40}кафк",
+   "raison": "« «суд» » glose le mot allemand Gericht, correct ; on exige le contexte Kafka."
+  },
+  {
+   "langue": "ru",
+   "type": "oeuvre",
+   "id": "metamorphose",
+   "regex": "[«\\\"„']\\s*метаморфоз\\w*\\s*[»\\\"“']",
+   "remplace": "[«\\\"„']\\s*метаморфоз(?:а|у|ой|е)\\s*[»\\\"“']",
+   "raison": "« «Метаморфоз» » d'Ovide (pluriel) est correct ; on ne vise que le singulier fautif pour Kafka."
+  },
+  {
+   "langue": "ru",
+   "type": "oeuvre",
+   "id": "metamorphose",
+   "regex": "метаморфоз\\w*.{0,30}(?:кафк|грегор|замз)|(?:кафк|грегор)\\w*.{0,30}метаморфоз\\w*",
+   "remplace": "метаморфоз\\w*[\\W_]{0,4}кафк|кафк\\w*.{0,30}[«\\\"„'*_]\\s*метаморфоз\\w*",
+   "raison": "« метаморфоза Грегора » (nom commun) est correct ; on ne vise que le titre accolé à Kafka."
+  },
+  {
+   "langue": "ru",
+   "type": "oeuvre",
+   "id": "republique",
+   "regex": "[«\\\"„']\\s*республик\\w*\\s*[»\\\"“']",
+   "remplace": "[«\\\"„']\\s*республик(?:а|е|у|ой)\\s*[»\\\"“']|[«\\\"„']\\s*республики\\s*[»\\\"“']\\s*платон",
+   "raison": "Attrape « провозгласили «республики» » (républiques séparatistes) ; on exclut le pluriel hors contexte Platon."
+  },
+  {
+   "langue": "ru",
+   "type": "oeuvre",
+   "id": "candide",
+   "regex": "\\bкэндид\\w*|\\bкандиде\\b",
+   "remplace": "\\bкэндид\\w*|(?<!в\\s)(?<!о\\s)(?<!в\\s«)(?<!о\\s«)\\bкандиде\\b",
+   "raison": "« в «Кандиде» » est le prépositionnel correct de « Кандид » ; on l'exclut après в/о."
+  },
+  {
+   "langue": "ru",
+   "type": "oeuvre",
+   "id": "journal_anne_frank",
+   "regex": "\\bhet\\s+achterhuis\\b|\\ble\\s+journal\\s+d'anne\\s+frank\\b",
+   "remplace": "(?<!\\()(?<!\\(\\*)(?<!\\(_)\\bhet\\s+achterhuis\\b|\\ble\\s+journal\\s+d'anne\\s+frank\\b",
+   "raison": "Le titre original cité entre parenthèses est légitime ; on l'exclut."
+  },
+  {
+   "langue": "sk",
+   "type": "piege",
+   "id": "essai_gratuit",
+   "regex": "\\b(skúšobn\\w*|demo|beta)\\s+verzi\\w*|\\btrial\\w*",
+   "remplace": "\\btrial\\w*",
+   "raison": "« bezplatná skúšobná verzia » est la forme correcte et usuelle (App Store sk) ; ne garder que l'anglais « trial »."
+  },
+  {
+   "langue": "sk",
+   "type": "piege",
+   "id": "premium",
+   "regex": "\\bprémi\\w*",
+   "remplace": "\\bprémi(um|a|e|u|ou|í|ám|ách|ami)\\b",
+   "raison": "L'adjectif « prémiový » est du slovaque correct ; ne viser que le nom « prémia/prémium » (prime, mauvais sens)."
+  },
+  {
+   "langue": "sk",
+   "type": "piege",
+   "id": "reviser",
+   "regex": "\\b(oprav|skontroluj|prezri|preskúmaj)\\w*\\s+(si\\s+)?(\\w+\\s+)?(kurz|lekci|kartičk|poznámk)\\w*",
+   "remplace": "\\b(oprav|skontroluj)\\w*\\s+(si\\s+)?(\\w+\\s+)?(kurz|lekci|kartičk|poznámk)\\w*",
+   "raison": "« Preskúmajte stovky kurzov » (explorer) est correct ; retirer preskúmaj/prezri."
+  },
+  {
+   "langue": "sk",
+   "type": "piege",
+   "id": "culture_generale",
+   "regex": "\\bkultivovan\\w*|\\bdobre\\s+vychovan\\w*",
+   "remplace": "\\bdobre\\s+vychovan\\w*",
+   "raison": "« kultivovaný » (cultivé, raffiné) est un mot slovaque légitime ; garder seulement « dobre vychovaný »."
+  },
+  {
+   "langue": "sk",
+   "type": "piege",
+   "id": "on_impersonnel",
+   "regex": "\\b(vieme|veríme|musíme|môžeme|vidíme)\\b",
+   "remplace": null,
+   "raison": "vieme/môžeme/musíme/vidíme : « nous » d'auteur normal en slovaque et citations correctes (« Správne vidíme iba srdcom »), faux positifs massifs."
+  },
+  {
+   "langue": "sk",
+   "type": "piege",
+   "id": "on_impersonnel",
+   "regex": "\\bmy\\s+(sme|\\w+me)\\b",
+   "remplace": null,
+   "raison": "Ne capte que des citations correctes à la 1re personne (« My sme ľud », slogan Kodak)."
+  },
+  {
+   "langue": "sk",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\b(okolo|približne|od|do|pred|po|zhruba)\\s+\\d{3,4}\\b(?!\\s*(km|m\\b|kg|ľud|obyv|metr|€|%|rok|\\d|\\s?\\d{3}))",
+   "remplace": "\\b(okolo|približne|od|do|pred|po|zhruba)\\s+\\d{3,4}\\b(?=\\s*(?:[,;:)–—]|\\.(?!\\d)|$)|\\s+(?:až|do|sa|bol|bola|bolo|boli|je|n\\.\\s*l|pred\\s+n|p\\.\\s*n)\\b)",
+   "raison": "Capte surtout des quantités (233 °C, 900 výtlačkov, 800 miliárd) ; n'accepter que le nombre suivi de ponctuation ou d'un contexte de date."
+  },
+  {
+   "langue": "sk",
+   "type": "piege",
+   "id": "roi_arthur",
+   "regex": "\\bGuinever\\w*|\\bGwenhwyfar\\b",
+   "remplace": "\\bGuinevere\\b(?=\\s+(?:a|pád|sa|je|bola|zradí|miluje)\\b)|\\bGwenhwyfar\\b",
+   "raison": "Les formes déclinées Guinevera/Guineveru/Guinevery sont une forme slovaque établie ; ne garder que l'anglais « Guinevere » au nominatif."
+  },
+  {
+   "langue": "sk",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bUN\\b|\\bONU\\b",
+   "remplace": "(?-i:\\bUN\\b|\\bONU\\b)",
+   "raison": "Insensible à la casse, capte « Un » dans un nom propre ; rendre le sigle sensible à la casse."
+  },
+  {
+   "langue": "sk",
+   "type": "piege",
+   "id": "nemesis",
+   "regex": "\\bbohyň\\w*\\W+(\\w+\\W+)?(nepriateľ|protivník|sok)\\w*",
+   "remplace": null,
+   "raison": "Capte « Juno, bohyňou nepriateľskou voči Trójanom », texte correct sans rapport avec Némésis ; rx[1] couvre le vrai défaut."
+  },
+  {
+   "langue": "sk",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bpriebeh\\w*",
+   "remplace": null,
+   "raison": "« v priebehu storočí » est une locution courante correcte."
+  },
+  {
+   "langue": "sk",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bdráh[aeyuo]\\b|\\bdráhu\\b",
+   "remplace": null,
+   "raison": "« obežná dráha » (orbite) est correct ; mot courant."
+  },
+  {
+   "langue": "sk",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bkariér\\w*",
+   "remplace": null,
+   "raison": "« kariéra » au sens propre (carrière) est correct."
+  },
+  {
+   "langue": "sk",
+   "type": "produit",
+   "id": "niveau",
+   "regex": "\\bstup(eň|ňa|ni|ňom|ne|ňov)\\b",
+   "remplace": "\\bstup(eň|ňa|ni|ňom)\\s+\\d+\\b",
+   "raison": "Capte « 451 stupňov Fahrenheita » (degrés) ; ne garder que « stupeň 3 » au sens de niveau."
+  },
+  {
+   "langue": "sk",
+   "type": "produit",
+   "id": "premium",
+   "regex": "\\bprémi\\w*",
+   "remplace": "\\bprémi(um|a|e|u|ou|í|ám|ách|ami)\\b",
+   "raison": "L'adjectif « prémiový » est correct ; ne viser que le nom « prémia/prémium »."
+  },
+  {
+   "langue": "sk",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\btrénovani\\w*",
+   "remplace": null,
+   "raison": "« trénovanie modelu » (entraînement d'un modèle d'IA) est correct."
+  },
+  {
+   "langue": "sk",
+   "type": "produit",
+   "id": "reviser",
+   "regex": "\\bpreskúm\\w*",
+   "remplace": null,
+   "raison": "« preskúmať » (explorer) est un verbe légitime, sans lien avec réviser."
+  },
+  {
+   "langue": "sk",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\bzámer\\w*",
+   "remplace": "\\b(tvoj\\w*|svoj\\w*|denn\\w*|môj|moj\\w*)\\s+zámer\\w*",
+   "raison": "Capte l'adverbe « zámerne » ; ne viser que « tvoj/denný zámer » au sens d'objectif."
+  },
+  {
+   "langue": "sk",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bdisciplín\\w*",
+   "remplace": null,
+   "raison": "« disciplína správneho slova » est un sens légitime (rigueur), pas une matière."
+  },
+  {
+   "langue": "sk",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bodbor(y|u|e|om|och|mi|ov)?\\b",
+   "remplace": null,
+   "raison": "« odbor » (métier, domaine) est un mot courant correct."
+  },
+  {
+   "langue": "sk",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\btém[ay]\\b",
+   "remplace": null,
+   "raison": "« téma » est la traduction correcte de « sujet/thème » ; faux positifs."
+  },
+  {
+   "langue": "sk",
+   "type": "oeuvre",
+   "id": "iliade",
+   "regex": "\\bIliade\\b|\\bIliad\\b",
+   "remplace": "\\bIliad\\b",
+   "raison": "« v Iliade » est le locatif slovaque correct d'Iliada ; ne garder que l'anglais « Iliad »."
+  },
+  {
+   "langue": "sk",
+   "type": "oeuvre",
+   "id": "antigone",
+   "regex": "\\bAntigone\\b",
+   "remplace": null,
+   "raison": "« Antigone » est le datif/locatif slovaque correct d'Antigona."
+  },
+  {
+   "langue": "sk",
+   "type": "oeuvre",
+   "id": "rouge_noir",
+   "regex": "\\bČervená\\s+a\\s+čierna\\b",
+   "remplace": "(?-i:\\bČervená\\s+a\\s+čierna\\b)",
+   "raison": "Capte « červená a čierna » (les couleurs) en minuscules ; ne viser que le titre capitalisé."
+  },
+  {
+   "langue": "sk",
+   "type": "oeuvre",
+   "id": "confessions",
+   "regex": "\\b(Spovede?|Priznania)\\b[^.\\n]{0,30}Rousseau\\w*|\\bRousseau\\w*[^.\\n]{0,30}\\b(Spoved|Prizna)\\w*",
+   "remplace": "\\b(Spovede?|Priznania)\\b[^.\\n]{0,30}Rousseau\\w*|\\bRousseau\\w*[^.\\n]{0,30}\\b(Spoved\\w*|Priznani\\w*)",
+   "raison": "Capte le verbe « priznať » (avouer), correct ; ne viser que les noms Spoveď/Priznania."
+  },
+  {
+   "langue": "sl",
+   "type": "piege",
+   "id": "gratuit",
+   "regex": "\\bzastonj\\b",
+   "remplace": null,
+   "raison": "« zastonj » est un mot slovène courant et correct pour « gratuit » (« 3 dni zastonj »)."
+  },
+  {
+   "langue": "sl",
+   "type": "piege",
+   "id": "annuel",
+   "regex": "\\bletnik\\w*",
+   "remplace": null,
+   "raison": "« letnik » est ici l'année scolaire du témoignage (« zadnji letnik »), forme correcte."
+  },
+  {
+   "langue": "sl",
+   "type": "piege",
+   "id": "voici_comment",
+   "regex": "\\bevo\\b",
+   "remplace": "(?<![zs] )\\bevo\\b",
+   "raison": "Exclure « z Evo » (Ève à l'instrumental), garder les « Evo, kako/zakaj » calqués."
+  },
+  {
+   "langue": "sl",
+   "type": "piege",
+   "id": "plaques_photo",
+   "regex": "\\bkrožnik\\w*",
+   "remplace": "\\b(?:slik\\w*|fotografij\\w*)\\s+na\\s+krožnik\\w*|\\bkrožnik\\w*,?\\s+ki\\s+se\\s+(?:nikoli\\s+ne\\s+nehajo\\s+)?premik\\w*|\\b(?:fotografsk|tektonsk)\\w*\\s+krožnik\\w*",
+   "raison": "« hrana na krožniku » (assiette) est correct ; ne viser que plaques photo/tectoniques."
+  },
+  {
+   "langue": "sl",
+   "type": "piege",
+   "id": "renaissance",
+   "regex": "\\bpreporod\\w*",
+   "remplace": null,
+   "raison": "« preporod » = renouveau/revival légitime (duhovni, kulturni, ljudski preporod), pas la Renaissance."
+  },
+  {
+   "langue": "sl",
+   "type": "piege",
+   "id": "renaissance",
+   "regex": "\\bponovn\\w*\\s+rojstv\\w*",
+   "remplace": null,
+   "raison": "« ponovno rojstvo » = renaissance au sens de renouveau (phénix, nature), toujours correct ici."
+  },
+  {
+   "langue": "sl",
+   "type": "piege",
+   "id": "termes_islam",
+   "regex": "\\b(?:caliph|khalif|calif)\\w*",
+   "remplace": "\\b(?:caliph|khalif|calif(?!orni))\\w*",
+   "raison": "Le seul résultat est « California »."
+  },
+  {
+   "langue": "sl",
+   "type": "piege",
+   "id": "pan",
+   "regex": "\\bbog\\w*\\s+\\**(?:pok|ponev|ponv|tresk)\\w*",
+   "remplace": "\\bbog\\w*\\s+\\**(?:pok(?:a|u|om)?|ponev|ponv\\w*|tresk\\w*)\\b",
+   "raison": "Exclure « bogovi poklicati » (verbe) ; garder « bog Pok »."
+  },
+  {
+   "langue": "sl",
+   "type": "piege",
+   "id": "pan",
+   "regex": "\\b(?:pok|ponev|ponv)\\w*[^.]*\\b(?:eh[oa]|nimf|sirinks|pastir)\\w*",
+   "remplace": "\\b(?:pok(?:a|u|om)?|ponev|ponv\\w*)\\b[^.]*\\b(?:eh[oa]|nimf|sirinks|pastir)\\w*",
+   "raison": "« pokrajina … pastirjev » (Arcadie) est correct ; exiger le mot « Pok » entier."
+  },
+  {
+   "langue": "sl",
+   "type": "piege",
+   "id": "panique_bancaire",
+   "regex": "\\bbančn\\w*\\s+(?:tek|posl|operacij|dirk)\\w*",
+   "remplace": "\\bbančn\\w*\\s+(?:tek|dirk)\\w*",
+   "raison": "« bančne poslovalnice » (agences bancaires) est correct ; garder seulement « bančni teki »."
+  },
+  {
+   "langue": "sl",
+   "type": "piege",
+   "id": "relance",
+   "regex": "\\bozdrav\\w*",
+   "remplace": null,
+   "raison": "« ozdraviti/ozdravitev » = guérison au sens médical, toujours correct ici."
+  },
+  {
+   "langue": "sl",
+   "type": "piege",
+   "id": "proces_kafka",
+   "regex": "\\bkafk\\w*[^.]*\\bsojenj\\w*",
+   "remplace": "\\bkafk\\w*[^.]*\\b(?-i:Sojenj)\\w*",
+   "raison": "« neskončno sojenje » décrit correctement un procès ; ne viser que le titre « Sojenje » en majuscule."
+  },
+  {
+   "langue": "sl",
+   "type": "piege",
+   "id": "proces_kafka",
+   "regex": "\\bsojenj\\w*[^.]*\\bkafk\\w*",
+   "remplace": "\\b(?-i:Sojenj)\\w*[^.]*\\bkafk\\w*",
+   "raison": "Même chose : « sojenje » minuscule est le nom commun correct."
+  },
+  {
+   "langue": "sl",
+   "type": "produit",
+   "id": "parcours",
+   "regex": "\\bpotovanj\\w*",
+   "remplace": null,
+   "raison": "« potovanje » désigne de vrais voyages (Sindbad, Ulysse, gènes), mot courant correct."
+  },
+  {
+   "langue": "sl",
+   "type": "produit",
+   "id": "serie",
+   "regex": "\\bdni\\s+zapored\\b",
+   "remplace": null,
+   "raison": "« %d dni zapored » est la tournure slovène naturelle et correcte."
+  },
+  {
+   "langue": "sl",
+   "type": "produit",
+   "id": "essai_gratuit",
+   "regex": "\\bposkus\\w*",
+   "remplace": null,
+   "raison": "« Poskusi znova », « poskusov » = réessayer/tentatives, correct."
+  },
+  {
+   "langue": "sl",
+   "type": "produit",
+   "id": "essai_gratuit",
+   "regex": "\\bpreizkusn\\w*\\s+(?:obdobj|različic)\\w*",
+   "remplace": null,
+   "raison": "« brezplačno preizkusno obdobje » est une forme correcte de l'essai gratuit."
+  },
+  {
+   "langue": "sl",
+   "type": "produit",
+   "id": "sophia",
+   "regex": "\\bsophie\\b",
+   "remplace": null,
+   "raison": "« Sophie » est le génitif slovène régulier de Sophia (Brez Sophie, zaslon Sophie)."
+  },
+  {
+   "langue": "sl",
+   "type": "produit",
+   "id": "bloqueur",
+   "regex": "\\bblokad\\w*",
+   "remplace": "\\bblokad\\w*\\s+(?:za\\s+)?(?:aplikacij|tiktok)\\w*",
+   "raison": "« Blokada in zračni most » (Berlin) et « zaslon blokade » sont corrects ; garder le nom de fonction."
+  },
+  {
+   "langue": "sl",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bkategorij\\w*",
+   "remplace": null,
+   "raison": "« Kategorija » est une étiquette légitime (catégorie), pas une traduction de « matière »."
+  },
+  {
+   "langue": "sl",
+   "type": "oeuvre",
+   "id": "le_proces",
+   "regex": "\\bkafk\\w*[^.]*\\bsojenj\\w*",
+   "remplace": "\\bkafk\\w*[^.]*\\b(?-i:Sojenj)\\w*",
+   "raison": "« neskončno sojenje » est le nom commun correct ; ne viser que le titre « Sojenje »."
+  },
+  {
+   "langue": "sl",
+   "type": "oeuvre",
+   "id": "le_proces",
+   "regex": "\\bsojenj\\w*[^.]*\\bkafk\\w*",
+   "remplace": "\\b(?-i:Sojenj)\\w*[^.]*\\bkafk\\w*",
+   "raison": "Même chose : « sojenje » minuscule est correct."
+  },
+  {
+   "langue": "sl",
+   "type": "oeuvre",
+   "id": "romeo_juliette",
+   "regex": "\\broméo\\b",
+   "remplace": null,
+   "raison": "Toutes les occurrences sont le général Roméo Dallaire (nom propre)."
+  },
+  {
+   "langue": "sl",
+   "type": "oeuvre",
+   "id": "meilleur_des_mondes",
+   "regex": "\\bbrave\\s+new\\s+world",
+   "remplace": "(?<!naslov, )(?<!naslov )(?<!naslov: )\\bbrave\\s+new\\s+world",
+   "raison": "Citer le titre original après « izvirni naslov » est correct."
+  },
+  {
+   "langue": "sl",
+   "type": "oeuvre",
+   "id": "alchimiste",
+   "regex": "\\bo\\s+alquimista",
+   "remplace": null,
+   "raison": "« O Alquimista » est cité comme titre original portugais, correct."
+  },
+  {
+   "langue": "sl",
+   "type": "oeuvre",
+   "id": "oedipe_roi",
+   "regex": "\\bojdip\\s+kralj",
+   "remplace": "\\bojdip\\s+kralj(?:a|u|em)?\\b",
+   "raison": "« Ojdip kraljuje » (verbe régner) est correct."
+  },
+  {
+   "langue": "sl",
+   "type": "oeuvre",
+   "id": "antigone",
+   "regex": "\\bantigone\\b",
+   "remplace": null,
+   "raison": "« Antigone » est le génitif slovène correct d'Antigona (hčerke Antigone, zapora Antigone)."
+  },
+  {
+   "langue": "sl",
+   "type": "oeuvre",
+   "id": "republique",
+   "regex": "\\bthe\\s+republic\\b",
+   "remplace": "(?<!of )\\bthe\\s+republic\\b",
+   "raison": "« The Battle Hymn of the Republic » est un titre de chanson, correct."
+  },
+  {
+   "langue": "sl",
+   "type": "oeuvre",
+   "id": "rouge_noir",
+   "regex": "\\brdeč[ei]\\s+in\\s+črn[ei]\\b",
+   "remplace": "\\brdeč[ei]\\s+in\\s+črn[ei]\\b(?!\\s+barv)",
+   "raison": "« rdeče in črne barve » parle des couleurs, correct."
+  },
+  {
+   "langue": "sl",
+   "type": "oeuvre",
+   "id": "confessions",
+   "regex": "\\brousseau\\w*[^.]*\\bpriznanj\\w*",
+   "remplace": null,
+   "raison": "« boleče priznanje » est le nom commun aveu, correct ; rx[0] couvre le titre."
+  },
+  {
+   "langue": "sl",
+   "type": "oeuvre",
+   "id": "dejeuner_herbe",
+   "regex": "\\bzajtrk\\s+na\\s+trav\\w*",
+   "remplace": null,
+   "raison": "« Zajtrk na travi » est le titre slovène établi du tableau de Manet."
+  },
+  {
+   "langue": "sr",
+   "type": "piege",
+   "id": "essai_gratuit",
+   "regex": "\\bprobn\\w+\\s+(?:period|verzij|rok)\\w*",
+   "remplace": null,
+   "raison": "« probni period » est la forme correcte et usuelle en sr, pas le piège « suđenje »"
+  },
+  {
+   "langue": "sr",
+   "type": "piege",
+   "id": "reviser",
+   "regex": "\\brecenzi\\w*",
+   "remplace": null,
+   "raison": "« recenzija » = avis clients, sens correct"
+  },
+  {
+   "langue": "sr",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\b\\d{3,4}-?(?:oj|te|og|ih)\\b",
+   "remplace": "\\b\\d{3,4}-?(?:oj|og)\\b",
+   "raison": "« 1930-ih » (décennies) est correct ; garder seulement -og/-oj calqués"
+  },
+  {
+   "langue": "sr",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\boko\\s+\\d{3,4}\\b(?!\\.)",
+   "remplace": "\\boko\\s+(?:1\\d{3}|20[0-2]\\d)\\b(?![.,]\\d)(?!\\.)(?!\\s*(?:milijard|milion|hiljad|ljud|km|kilometar|metar|metara|tona|dolar|evr|godin|vrst|stanovnik|vojnik))|\\boko\\s+[1-9]\\d{2}\\b(?![.,]\\d)(?=\\s*(?:\\)|,|;|$|pre\\s+n|n\\.\\s*e))",
+   "raison": "Capte surtout des quantités (oko 800 milijardi) ; limiter aux années"
+  },
+  {
+   "langue": "sr",
+   "type": "piege",
+   "id": "proces_kafka",
+   "regex": "Kafk\\w*[^.\\n]{0,25}\\b(?:Suđenje|Postupak|Procedur)\\w*",
+   "remplace": "Kafk\\w*[^.\\n]{0,25}?(?:[*„\"“«]\\s*|,\\s*)(?:Suđenj|Postupak|Procedur)\\w*",
+   "raison": "« beskrajno suđenje » nom commun correct ; exiger un titre cité"
+  },
+  {
+   "langue": "sr",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bONU\\b",
+   "remplace": "(?-i:\\bONU\\b)",
+   "raison": "Avec IGNORECASE capte le pronom « onu » ; rendre sensible à la casse"
+  },
+  {
+   "langue": "sr",
+   "type": "piege",
+   "id": "termes_islam",
+   "regex": "\\bkhalif\\w*|\\bcalif\\w*",
+   "remplace": "\\bkhalif\\w*|\\bcalif(?!orni)\\w*",
+   "raison": "Capte « California »"
+  },
+  {
+   "langue": "sr",
+   "type": "piege",
+   "id": "nemesis",
+   "regex": "\\b(?:boginj|Narcis)\\w*[^.\\n]{0,40}\\b(?:neprijatelj|protivnik|suparnik)\\w*",
+   "remplace": "\\b(?:boginj|Narcis)\\w*[^.\\n]{0,40}\\b(?:neprijatelj(?:a|u|em|i|ima)?|protivni(?:k|ka|ku|kom|ci)|supar(?:nik|nika|niku|nikom|nici))\\b",
+   "raison": "Capte l'adjectif correct « neprijateljske prema Trojancima » ; limiter au nom"
+  },
+  {
+   "langue": "sr",
+   "type": "piege",
+   "id": "relance",
+   "regex": "\\bstimulus\\b",
+   "remplace": null,
+   "raison": "« stimulus » est un mot légitime (neurologie), sens correct"
+  },
+  {
+   "langue": "sr",
+   "type": "produit",
+   "id": "essai_gratuit",
+   "regex": "\\bprobn\\w+\\s+(?:period|verzij|rok)\\w*",
+   "remplace": null,
+   "raison": "« (besplatni) probni period » est la forme établie et correcte en sr"
+  },
+  {
+   "langue": "sr",
+   "type": "produit",
+   "id": "essai_gratuit",
+   "regex": "\\bbesplatn\\w+\\s+(?:period|rok|verzij)\\w*",
+   "remplace": null,
+   "raison": "« besplatni period » est correct et idiomatique en sr"
+  },
+  {
+   "langue": "sr",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\btrening\\w*",
+   "remplace": "^\\s*trening\\s*$|\\btrening\\w*(?=[^.\\n]{0,30}\\b(?:ponavlj|kartic|tab)\\w*)",
+   "raison": "« trening » mot courant légitime (entraînement d'un modèle) ; limiter à l'étiquette d'onglet"
+  },
+  {
+   "langue": "sr",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bmaterij\\w*",
+   "remplace": null,
+   "raison": "« materija/materijal » = matière physique, sens correct"
+  },
+  {
+   "langue": "sr",
+   "type": "oeuvre",
+   "id": "le_proces",
+   "regex": "Kafk\\w*[^.\\n]{0,25}\\b(?:Suđenje|Postupak)\\b",
+   "remplace": "Kafk\\w*[^.\\n]{0,25}?(?:[*„\"“«]\\s*|,\\s*)(?:Suđenj|Postupak|Procedur)\\w*",
+   "raison": "« beskrajno suđenje » nom commun correct ; exiger un titre cité"
+  },
+  {
+   "langue": "sr",
+   "type": "oeuvre",
+   "id": "metamorphose",
+   "regex": "Kafk\\w*[^.\\n]{0,30}\\b(?:Metamorfoz|Transformacij|Preobraženj)\\w*",
+   "remplace": "Kafk\\w*[^.\\n]{0,30}\\b(?:Metamorfoz|Preobraženj)\\w*|Kafk\\w*[^.\\n]{0,30}[*„\"“«]\\s*Transformacij\\w*",
+   "raison": "« transformacija » nom commun correct hors titre"
+  },
+  {
+   "langue": "sr",
+   "type": "oeuvre",
+   "id": "confessions",
+   "regex": "\\bKonfesij\\w*",
+   "remplace": "\\bKonfesij\\w*(?=[^.\\n]{0,30}\\bRuso\\w*)|Ruso\\w*[^.\\n]{0,30}\\bKonfesij\\w*",
+   "raison": "« verske konfesije » sens correct ; exiger le contexte Rousseau"
+  },
+  {
+   "langue": "sr",
+   "type": "oeuvre",
+   "id": "le_prince",
+   "regex": "Makijavel\\w*[^.\\n]{0,30}\\b(?:Princ|Vladar|Knez)\\b",
+   "remplace": "Makijavel\\w*[^.\\n]{0,30}[*„\"“«]\\s*(?:Princ|Vladar|Knez)\\w*",
+   "raison": "« vladar » nom commun correct ; exiger un titre cité"
+  },
+  {
+   "langue": "sv",
+   "type": "piege",
+   "id": "gratuit",
+   "regex": "\\bkostnadsfri\\w*",
+   "remplace": null,
+   "raison": "« kostnadsfri(tt) » est un synonyme suédois correct de « gratis »."
+  },
+  {
+   "langue": "sv",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\bi\\s+(?:år\\s+)?\\d{3,4}\\b(?!\\s*(?:[-–:]|år\\b|%))",
+   "remplace": "(?<!\\bin\\s)\\bi\\s+(?:år\\s+)?(?!1984\\b)\\d{3,4}\\b(?!\\s*(?:[-–:%]|års?\\b|dagar|dygn|veckor|månader|timmar|minuter|sekunder|meter|kilometer|km|kg|ton\\b|personer|människor|sidor))",
+   "raison": "Capte « varade i 299 dagar », « i 1951 års », « gick in i 1992 » et le roman 1984."
+  },
+  {
+   "langue": "sv",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\bpå\\s+\\d{3,4}\\b(?!\\s*[-–])",
+   "remplace": null,
+   "raison": "« på + nombre » est presque toujours une mesure ou une adresse correcte (på 300 meter, på 123 sidor)."
+  },
+  {
+   "langue": "sv",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\bi\\s+(?:staden|filmen|boken)\\s+\\d{3,4}\\b",
+   "remplace": null,
+   "raison": "« i filmen 2001 » désigne le film 2001, tournure correcte."
+  },
+  {
+   "langue": "sv",
+   "type": "piege",
+   "id": "siecle",
+   "regex": "\\b[IVX]{1,5}(?::e|\\.)?\\s*(?:århundradet|seklet|sek\\.)",
+   "remplace": "\\b(?-i:[IVX]{1,5})(?::e|\\.)\\s*(?:århundradet|seklet|sek\\.)|\\b(?-i:[IVX]{2,5})\\s+(?:århundradet|seklet|sek\\.)",
+   "raison": "Avec IGNORECASE, la préposition « i » passe pour un chiffre romain (« en gång i århundradet »)."
+  },
+  {
+   "langue": "sv",
+   "type": "piege",
+   "id": "plaques_photo",
+   "regex": "\\btallrik\\w*",
+   "remplace": "\\btallrik\\w*(?=[^.\\n]{0,40}(?:foto|kamera|daguerr|exponer))|\\b(?:foto|kamera|daguerr|exponer)\\w*[^.\\n]{0,40}\\btallrik\\w*",
+   "raison": "« tallrik » est l'assiette ordinaire (maten på tallriken) ; limiter au contexte photographique."
+  },
+  {
+   "langue": "sv",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "\\bOTAN\\b",
+   "remplace": "\\bOTAN\\b(?![^.\\n]{0,20}fransk)",
+   "raison": "Capte la mention explicite du sigle français (« OTAN på franska »), correcte."
+  },
+  {
+   "langue": "sv",
+   "type": "piege",
+   "id": "deux_etats_ame",
+   "regex": "\\btvå\\s+stater\\b",
+   "remplace": "\\btvå\\s+stater\\b(?=[^.\\n]{0,50}(?:spleen|ideal|baudelaire|själ|sinne))|\\b(?:spleen|baudelaire)\\w*\\b[^.\\n]{0,50}\\btvå\\s+stater\\b",
+   "raison": "« två stater » est correct en géopolitique (plan de partage de la Palestine) ; exiger le contexte Baudelaire."
+  },
+  {
+   "langue": "sv",
+   "type": "piege",
+   "id": "terminale",
+   "regex": "\\bpensionär\\w*",
+   "remplace": null,
+   "raison": "« pensionär » est un mot courant correct (retraité), sans lien avec la terminale."
+  },
+  {
+   "langue": "sv",
+   "type": "piege",
+   "id": "trimestre",
+   "regex": "\\bmandatperiod\\w*",
+   "remplace": "\\bmandatperiod\\w*(?=[^.\\n]{0,30}(?:skol|betyg|gymnasi|elev))",
+   "raison": "« mandatperiod » est correct en politique ; limiter au contexte scolaire."
+  },
+  {
+   "langue": "sv",
+   "type": "piege",
+   "id": "trimestre",
+   "regex": "\\bämbetsperiod\\w*",
+   "remplace": "\\bämbetsperiod\\w*(?=[^.\\n]{0,30}(?:skol|betyg|gymnasi|elev))",
+   "raison": "« ämbetsperiod » est correct pour un mandat ; limiter au contexte scolaire."
+  },
+  {
+   "langue": "sv",
+   "type": "piege",
+   "id": "debloquer",
+   "regex": "\\böppna\\s+(?:premium|kursen|kurser|alla\\s+kurser)\\b",
+   "remplace": "\\böppna\\s+(?:premium|alla\\s+kurser)\\b",
+   "raison": "« Öppna kursen » (ouvrir un cours) est une action d'interface correcte."
+  },
+  {
+   "langue": "sv",
+   "type": "piege",
+   "id": "pas_de_connexion",
+   "regex": "\\bingen\\s+koppling\\b",
+   "remplace": "\\bingen\\s+koppling\\b(?=[^\\n]{0,30}(?:nätverk|internet|försök|server|uppkoppl|wi-?fi))|^\\s*ingen\\s+koppling\\s*[.!]?\\s*$",
+   "raison": "« ingen koppling » est courant au sens de « aucun lien » ; limiter au contexte réseau."
+  },
+  {
+   "langue": "sv",
+   "type": "piege",
+   "id": "pas_de_connexion",
+   "regex": "\\binget\\s+samband\\b",
+   "remplace": "\\binget\\s+samband\\b(?=[^\\n]{0,30}(?:nätverk|internet|försök|server|uppkoppl|wi-?fi))|^\\s*inget\\s+samband\\s*[.!]?\\s*$",
+   "raison": "« inget samband » (aucune corrélation) est très courant et correct ; limiter au contexte réseau."
+  },
+  {
+   "langue": "sv",
+   "type": "produit",
+   "id": "quiz",
+   "regex": "\\bquizz\\w*",
+   "remplace": "\\bquizzs?\\b",
+   "raison": "« quizzen » est une forme suédoise usuelle de « quiz » ; ne viser que la graphie française « quizz »."
+  },
+  {
+   "langue": "sv",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\btränin?g\\w*",
+   "remplace": "\\bfliken\\s+träning\\w*|\\bträningsfliken\\b",
+   "raison": "« träningen av modellen » (entraînement d'une IA) est correct ; ne viser que le nom de l'onglet."
+  },
+  {
+   "langue": "sv",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\bträna\\b",
+   "remplace": null,
+   "raison": "« träna » est un verbe courant correct (Först träna, sedan svara)."
+  },
+  {
+   "langue": "sv",
+   "type": "produit",
+   "id": "entrainement",
+   "regex": "\\bpraktik\\w*",
+   "remplace": "(?<!\\bi\\s)\\bpraktik(?:en|er)?\\b",
+   "raison": "Capterait « praktisk(t) » et « i praktiken », mots courants corrects."
+  },
+  {
+   "langue": "sv",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\bändamål\\w*",
+   "remplace": null,
+   "raison": "« Helgar ändamålet medlen? » est l'expression consacrée, correcte."
+  },
+  {
+   "langue": "sv",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bmateria\\b",
+   "remplace": null,
+   "raison": "« materia » est la matière physique, sens correct dans les cours de sciences."
+  },
+  {
+   "langue": "sv",
+   "type": "produit",
+   "id": "abonnement",
+   "regex": "\\bmedlemskap\\w*",
+   "remplace": "\\bmedlemskap\\w*(?=[^.\\n]{0,30}(?:premium|sophia|månad|pris|avbryt|förnya))",
+   "raison": "« medlemskap » est correct pour une adhésion (EU, Nato) ; limiter au contexte de l'offre."
+  },
+  {
+   "langue": "sv",
+   "type": "produit",
+   "id": "sophia",
+   "regex": "\\bsophie\\b",
+   "remplace": "\\bsophie\\b(?=[^.\\n]{0,30}(?:app|premium|kurs|team|lär|hälsar))",
+   "raison": "Capterait des personnes réelles (Sophie Scholl, Sophie Germain) ; exiger le contexte de l'app."
+  },
+  {
+   "langue": "sv",
+   "type": "produit",
+   "id": "sophia",
+   "regex": "\\bsofie\\b",
+   "remplace": "\\bsofie\\b(?=[^.\\n]{0,30}(?:app|premium|kurs|team|lär|hälsar))",
+   "raison": "Capterait des prénoms réels ; exiger le contexte de l'app."
+  },
+  {
+   "langue": "sv",
+   "type": "oeuvre",
+   "id": "meilleur_des_mondes",
+   "regex": "\\bbrave\\s+new\\s+world\\b",
+   "remplace": "(?<!originaltiteln, \\*)(?<!originaltitel: \\*)\\bbrave\\s+new\\s+world\\b(?![^.\\n]{0,60}shakespeare)",
+   "raison": "Capte la citation légitime du titre original (« Originaltiteln, *Brave New World*, citerar Shakespeare »)."
+  },
+  {
+   "langue": "sv",
+   "type": "oeuvre",
+   "id": "oedipe_roi",
+   "regex": "\\boidipus\\s+kung\\b",
+   "remplace": "\\boidipus\\s+kung\\b(?!\\s+(?:av|över|i)\\b)",
+   "raison": "« Oidipus kung av Thebe » (devient roi de Thèbes) est une phrase correcte, pas le titre."
+  },
+  {
+   "langue": "sv",
+   "type": "oeuvre",
+   "id": "miserables",
+   "regex": "\\bde\\s+(?:eländiga|olyckliga|miserabla)\\b",
+   "remplace": "\\bde\\s+(?:eländiga|olyckliga|miserabla)\\b(?=[^.\\n]{0,40}(?:hugo|valjean|cosette|javert|roman))|\\bhugos?\\b[^.\\n]{0,40}\\bde\\s+(?:eländiga|olyckliga|miserabla)\\b",
+   "raison": "« de olyckliga » est une expression ordinaire (les malheureux) ; exiger le contexte Hugo."
+  },
+  {
+   "langue": "sv",
+   "type": "oeuvre",
+   "id": "rouge_noir",
+   "regex": "\\bdet\\s+röda\\s+och\\s+det\\s+svarta\\b",
+   "remplace": "[*\\\"«”„]\\s*det\\s+röda\\s+och\\s+det\\s+svarta\\b|\\bdet\\s+röda\\s+och\\s+det\\s+svarta\\b(?=[^.\\n]{0,30}stendhal)|\\bstendhals?\\b[^.\\n]{0,20}\\bdet\\s+röda\\s+och\\s+det\\s+svarta\\b",
+   "raison": "Capte la symbolique des couleurs (« det röda och det svarta »), correcte ; ne viser que l'usage comme titre."
+  },
+  {
+   "langue": "sv",
+   "type": "oeuvre",
+   "id": "notre_dame",
+   "regex": "\\bnotre[- ]dame\\s+(?:i|av|de)\\s+paris\\b",
+   "remplace": "\\bnotre[- ]dame\\s+(?:i|av|de)\\s+paris\\b(?=[^.\\n]{0,40}(?:hugo|roman|quasimodo|esmeralda))|\\bhugos?\\b[^.\\n]{0,40}\\bnotre[- ]dame\\s+(?:i|av|de)\\s+paris\\b",
+   "raison": "Capte le nom de la cathédrale, correct ; ne viser que le roman de Hugo."
+  },
+  {
+   "langue": "sv",
+   "type": "oeuvre",
+   "id": "demoiselles",
+   "regex": "\\b(?:flickorna|damerna|fröknarna|jungfrurna)\\s+(?:från|i)\\s+avignon\\b",
+   "remplace": "\\b(?:damerna|fröknarna|jungfrurna)\\s+(?:från|i)\\s+avignon\\b",
+   "raison": "« Flickorna från Avignon » est le titre suédois usuel ; ne garder que les calques fautifs."
+  },
+  {
+   "langue": "sv",
+   "type": "oeuvre",
+   "id": "persistance",
+   "regex": "\\bminnets\\s+(?:beständighet|uthållighet|varaktighet|persistens)\\b",
+   "remplace": "\\bminnets\\s+(?:uthållighet|varaktighet|persistens)\\b",
+   "raison": "« Minnets beständighet » est le titre suédois établi du tableau de Dalí."
+  },
+  {
+   "langue": "sv",
+   "type": "oeuvre",
+   "id": "etranger",
+   "regex": "\\butlänningen\\b",
+   "remplace": "\\butlänningen\\b(?=[^.\\n]{0,40}(?:camus|meursault))|\\bcamus\\b[^.\\n]{0,40}\\butlänningen\\b",
+   "raison": "« utlänningen » est un mot courant correct ; exiger le contexte Camus."
+  },
+  {
+   "langue": "sv",
+   "type": "oeuvre",
+   "id": "nighthawks",
+   "regex": "\\bnattugglor\\w*",
+   "remplace": "\\bnatt(?:ugglor|hökar|falkar)\\w*(?=[^.\\n]{0,40}hopper)|\\bhoppers?\\b[^.\\n]{0,40}\\bnatt(?:ugglor|hökar|falkar)\\w*",
+   "raison": "« nattugglor » (couche-tard) est un mot courant ; exiger le contexte Hopper."
+  },
+  {
+   "langue": "tr",
+   "type": "piege",
+   "id": "leger_intensite",
+   "regex": "\\A\\s*([ıiIİ]ş[ıiIİ]k|ayd[ıi]nl[ıi]k|aç[ıi]k\\s+renk)\\s*\\Z",
+   "remplace": "\\A\\s*(ayd[ıi]nl[ıi]k|aç[ıi]k\\s+renk)\\s*\\Z",
+   "raison": "« Işık » seul est la forme imposée de l'option de quiz « La lumière » ; garder aydınlık / açık renk"
+  },
+  {
+   "langue": "tr",
+   "type": "piege",
+   "id": "gratuit",
+   "regex": "\\A\\s*(özgür|serbest|hür|bedava)\\s*\\Z",
+   "remplace": "\\A\\s*(özgür|serbest|hür)\\s*\\Z",
+   "raison": "« bedava » a le bon sens (gratuit), seul özgür/serbest/hür sont des contresens"
+  },
+  {
+   "langue": "tr",
+   "type": "piege",
+   "id": "gratuit",
+   "regex": "\\bbedava\\b",
+   "remplace": null,
+   "raison": "« bedava » signifie bien « gratuit » (sans payer), mot courant correct"
+  },
+  {
+   "langue": "tr",
+   "type": "piege",
+   "id": "annuel",
+   "regex": "y[ıi]lda\\s+\\S+\\s+olarak\\s+tahsil",
+   "remplace": null,
+   "raison": "« yılda %@ olarak tahsil edilir » = facturé annuellement, sens correct"
+  },
+  {
+   "langue": "tr",
+   "type": "piege",
+   "id": "expire_dans",
+   "regex": "süresi\\s+dol(uyor|makta|acak)",
+   "remplace": null,
+   "raison": "« Süresi doluyor » (expire bientôt) est correct devant un compte à rebours"
+  },
+  {
+   "langue": "tr",
+   "type": "piege",
+   "id": "expire_dans",
+   "regex": "\\bsona\\s+eriyor\\s*:?\\s*\\Z",
+   "remplace": null,
+   "raison": "« deneme sona eriyor » (l'essai se termine) est une phrase correcte de calendrier"
+  },
+  {
+   "langue": "tr",
+   "type": "piege",
+   "id": "debloquer",
+   "regex": "\\bkilit\\s+aç|kilidi\\s+aç\\b",
+   "remplace": null,
+   "raison": "« kilidi aç » / « kilit açma » est la forme correcte de débloquer"
+  },
+  {
+   "langue": "tr",
+   "type": "piege",
+   "id": "culture_generale",
+   "regex": "\\bbilgili\\s+ol\\b",
+   "remplace": null,
+   "raison": "« bilgili ol » (sois plus cultivé/instruit) est une traduction correcte"
+  },
+  {
+   "langue": "tr",
+   "type": "piege",
+   "id": "en_annee",
+   "regex": "\\b(içinde|içerisinde)\\s+\\d{3,4}\\b|\\b\\d{3,4}\\s+(içinde|içerisinde|şehrinde|kentinde|filminde)\\b",
+   "remplace": "\\b\\d{3,4}\\s+(içinde|içerisinde|şehrinde|kentinde|filminde)\\b",
+   "raison": "« … içinde 130 doları » (en quelques semaines) est correct ; ne garder que l'année suivie de içinde"
+  },
+  {
+   "langue": "tr",
+   "type": "piege",
+   "id": "onu_otan",
+   "regex": "(?-i:\\b(?:ONU|OTAN|UNO)\\b)",
+   "remplace": "(?<!Fransızcada\\s)(?<!Fransızca\\s)(?-i:\\b(?:ONU|OTAN|UNO)\\b)",
+   "raison": "la mention explicite du sigle français (« Fransızcada OTAN ») est correcte"
+  },
+  {
+   "langue": "tr",
+   "type": "produit",
+   "id": "cours",
+   "regex": "\\bders(ler|i|e|in|ten|ini|leri|lerin)?\\b(?!\\s+çal[ıi]ş)",
+   "remplace": "\\bders(ler|i|e|in|ten|ini|leri|lerin)?\\b(?!\\s+(çal[ıi]ş|tekrar|ç[ıi]kar))",
+   "raison": "exclure « ders tekrarı » (forme imposée pour réviser) et « ders çıkarmak »"
+  },
+  {
+   "langue": "tr",
+   "type": "produit",
+   "id": "collection",
+   "regex": "\\bderleme(ler)?\\b",
+   "remplace": null,
+   "raison": "« derleme » décrit correctement un recueil d'œuvres dans le catalogue"
+  },
+  {
+   "langue": "tr",
+   "type": "produit",
+   "id": "niveau",
+   "regex": "\\bdüzey(i|in|e|de)?\\b",
+   "remplace": "\\bdüzey(i|in|e|de)?\\s*(\\d|%d|%@|\\{)|(\\d|%d|%@|\\})\\.?\\s*düzey",
+   "raison": "« en üst düzeye çıkarmak » (maximiser) est correct ; ne viser que le niveau numéroté"
+  },
+  {
+   "langue": "tr",
+   "type": "produit",
+   "id": "premium",
+   "regex": "sophia\\s+pro\\b",
+   "remplace": null,
+   "raison": "« Sophia Pro » vient de la source française, ce n'est pas une variante de traduction"
+  },
+  {
+   "langue": "tr",
+   "type": "produit",
+   "id": "reviser",
+   "regex": "yeniden\\s+(çal[ıi]ş|oku)",
+   "remplace": null,
+   "raison": "« yeniden okuma » = relire (technique d'apprentissage), sens distinct et correct"
+  },
+  {
+   "langue": "tr",
+   "type": "produit",
+   "id": "reviser",
+   "regex": "\\btekrarla\\b",
+   "remplace": null,
+   "raison": "« tekrarla » (répète/révise) est correct et proche de la forme imposée"
+  },
+  {
+   "langue": "tr",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\bamaç(lar|[ıi]n|[ıi]n[ıi]|[ıi])?\\b",
+   "remplace": null,
+   "raison": "« amaç » est un mot courant correct (« Amaç araçları haklı çıkarır mı? »)"
+  },
+  {
+   "langue": "tr",
+   "type": "produit",
+   "id": "objectif",
+   "regex": "\\bgaye",
+   "remplace": "\\bgaye(ler|si|n|ni|ye|m)?\\b",
+   "raison": "la regex capture « gayet » (très) ; borner le mot"
+  },
+  {
+   "langue": "tr",
+   "type": "produit",
+   "id": "matiere",
+   "regex": "\\bmateryal|\\bmalzeme",
+   "remplace": "\\A\\s*(materyal|malzeme)(ler)?\\s*\\Z",
+   "raison": "« malzemeler » (matériaux) est correct dans les textes ; ne viser que l'étiquette isolée"
+  },
+  {
+   "langue": "tr",
+   "type": "produit",
+   "id": "ami",
+   "regex": "\\bdost(lar|um|un|u|lar[ıi]n)?\\b",
+   "remplace": "\\A\\s*dost(lar)?\\s*\\Z|\\bdost(lar|um|un|u|lar[ıi]n|lar[ıi]n[ıi]|lar[ıi]m)?\\s+(davet|ekle|ara|listesi|s[ıi]ralamas[ıi])",
+   "raison": "« Enkidu'nun dostu » est correct ; ne viser que la fonction amis"
+  },
+  {
+   "langue": "tr",
+   "type": "produit",
+   "id": "debloquer",
+   "regex": "serbest\\s+b[ıi]rak",
+   "remplace": null,
+   "raison": "« biçimleri serbest bırakır » (Kandinsky libère les formes) est correct"
+  },
+  {
+   "langue": "tr",
+   "type": "produit",
+   "id": "debloquer",
+   "regex": "\\bkilit\\s+aç",
+   "remplace": null,
+   "raison": "« kilit açma » (déblocage) est correct"
+  },
+  {
+   "langue": "tr",
+   "type": "produit",
+   "id": "bibliotheque",
+   "regex": "\\bkütüphane",
+   "remplace": "\\A\\s*kütüphane(m|n)?\\s*\\Z|\\bkütüphane(ye|ne|me|nde|mde)\\s+(ekle|kaydet|git|dön)",
+   "raison": "« çekmece kütüphanesi » est un usage littéral correct ; ne viser que l'onglet"
+  },
+  {
+   "langue": "tr",
+   "type": "produit",
+   "id": "bibliotheque",
+   "regex": "\\barşiv",
+   "remplace": null,
+   "raison": "« Arşivler » (archives historiques) est un mot correct dans les cours"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "romeo_juliette",
+   "regex": "roméo",
+   "remplace": "roméo\\s+(ve|ile|et|and)\\b",
+   "raison": "« Roméo Dallaire » est le nom correct d'une personne"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "meilleur_des_mondes",
+   "regex": "dünyalar[ıi]n\\s+en\\s+iyisi",
+   "remplace": "huxley.{0,60}dünyalar[ıi]n\\s+en\\s+iyisi|dünyalar[ıi]n\\s+en\\s+iyisi.{0,60}huxley",
+   "raison": "« olası dünyaların en iyisi » (Leibniz) est correct"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "meilleur_des_mondes",
+   "regex": "brave\\s+new\\s+world",
+   "remplace": null,
+   "raison": "citation légitime du titre original (« Özgün başlık *Brave New World* »)"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "metamorphose",
+   "regex": "(kafka|samsa|böcek).{0,40}(metamorfoz|başkalaş[ıi]m|değişim)\\w*",
+   "remplace": "kafka'?n[ıi]n\\s+(metamorfoz|başkalaş[ıi]m|değişim)\\w*|(?<!\\*)\\*(?!\\*)\\s*(metamorfoz|başkalaş[ıi]m|değişim)\\w*\\s*\\*",
+   "raison": "« Gregor'un metamorfozu » désigne la transformation, pas le titre"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "metamorphose",
+   "regex": "die\\s+verwandlung|la\\s+métamorphose",
+   "remplace": "la\\s+métamorphose",
+   "raison": "le titre allemand cité comme « özgün adı » est légitime"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "republique",
+   "regex": "\\bthe\\s+republic\\b|\\bla\\s+république",
+   "remplace": "(?<!of\\s)\\bthe\\s+republic\\b|\\bla\\s+république",
+   "raison": "« The Battle Hymn of the Republic » est un autre titre, correct"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "madame_bovary",
+   "regex": "bayan\\s+bovary|madam\\s+bovary|bovary\\s+han[ıi]m",
+   "remplace": "bayan\\s+bovary|bovary\\s+han[ıi]m",
+   "raison": "« Madam Bovary » est un titre turc établi"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "mythe_sisyphe",
+   "regex": "sisifos(un|'un)?\\s+(miti|efsanesi|mitosu)",
+   "remplace": "camus.{0,60}sisifos(un|'un)?\\s+(miti|efsanesi|mitosu)|sisifos(un|'un)?\\s+(miti|efsanesi|mitosu).{0,60}camus|\\*\\s*sisifos(un|'un)?\\s+(miti|efsanesi|mitosu)",
+   "raison": "« Sisifos miti / efsanesi » désigne le mythe lui-même, pas l'essai de Camus"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "notre_dame",
+   "regex": "notre[- ]dame\\s+de\\s+paris",
+   "remplace": "hugo.{0,80}notre[- ]dame\\s+de\\s+paris|notre[- ]dame\\s+de\\s+paris.{0,80}hugo|(?<!\\*)\\*(?!\\*)\\s*notre[- ]dame\\s+de\\s+paris\\s*\\*(?!\\*)",
+   "raison": "« Notre-Dame de Paris » est le nom correct de la cathédrale ; ne viser que le roman"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "le_prince",
+   "regex": "\\bhükümdar\\b.{0,30}(machiavel|makyavel)|(machiavel|makyavel)\\w*.{0,30}\\bhükümdar\\b",
+   "remplace": null,
+   "raison": "« Hükümdar » est le titre turc établi d'Il Principe"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "journal_anne_frank",
+   "regex": "arka\\s+ev\\b|arkadaki\\s+ev|het\\s+achterhuis",
+   "remplace": null,
+   "raison": "« Arka Ev » est le nom correct de la cachette (l'Annexe), pas le titre du livre"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "joconde",
+   "regex": "\\bla\\s+gioconda|\\bgioconda\\b",
+   "remplace": null,
+   "raison": "« öbür adı Gioconda » explique légitimement l'autre nom du tableau"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "persistance",
+   "regex": "eriyen\\s+saatler",
+   "remplace": null,
+   "raison": "« eriyen saatler » décrit le motif des montres molles, pas le titre"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "ronde_de_nuit",
+   "regex": "gece\\s+(nöbeti|bekçisi|bekçileri|turu|dolaş[ıi]m[ıi]|rondu)",
+   "remplace": "rembrandt.{0,80}gece\\s+(nöbeti|bekçisi|bekçileri|turu|rondu)|gece\\s+(nöbeti|bekçisi|bekçileri|turu|rondu).{0,80}rembrandt|\\*\\s*gece\\s+(nöbeti|bekçisi|bekçileri|turu|dolaş[ıi]m[ıi]|rondu)\\s*\\*|\\[\\[\\s*gece\\s+(nöbeti|bekçisi|bekçileri|turu|rondu)\\s*\\]\\]",
+   "raison": "« gece nöbeti / bekçisi » sont des mots courants ; ne viser que le titre de Rembrandt"
+  },
+  {
+   "langue": "tr",
+   "type": "oeuvre",
+   "id": "2001",
+   "regex": "2001\\s*[:,]?\\s*(bir\\s+)?uzay\\s+(odisesi|odysseia's[ıi]|odise'?si|destan[ıi]|seyahati|yolculuğu)",
+   "remplace": "2001\\s*[:,]?\\s*(bir\\s+)?uzay\\s+(odisesi|odysseia's[ıi]|odise'?si|seyahati|yolculuğu)",
+   "raison": "« 2001: Bir Uzay Destanı » est le titre turc établi du film"
+  },
+  {
+   "langue": "tr",
+   "type": "piege",
+   "id": "grande_depression",
+   "regex": "büyük\\s+bunal[ıi]m",
+   "remplace": null,
+   "raison": "« Büyük Bunalım » est une forme turque établie de la Grande Dépression"
+  }
+ ]
+}

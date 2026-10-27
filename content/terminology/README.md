@@ -44,9 +44,16 @@ interne ; la liste ci-dessous sert à attraper ce qu'il rate.
   `traduction_courante`) et les traductions littérales à signaler.
 
 Les formes par langue ont été remplies par un relecteur natif par langue à
-partir des constats de l'audit (`docs/audit-traductions/`). Elles se
-complètent comme `scripts/proper_nouns.json` : on ajoute une entrée la
-première fois qu'un mot trahit, jamais deux fois.
+partir des constats de l'audit (`docs/audit-traductions/`). Un second
+relecteur natif a ensuite passé chaque expression sur ses occurrences réelles
+dans l'app et retiré ou resserré celles qui attrapaient du texte correct (le
+nom établi d'un personnage, une syllabe commune, un usage légitime) :
+642 décisions sur les 26 langues, consignées dans `elagage.json` et déjà
+appliquées aux listes.
+
+Elles se complètent comme `scripts/proper_nouns.json` : on ajoute une entrée
+la première fois qu'un mot trahit, jamais deux fois ; une expression qui
+attrape du texte correct se resserre plutôt qu'elle ne s'ignore.
 
 ## Le contrôle
 
