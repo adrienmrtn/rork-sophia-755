@@ -7,6 +7,7 @@ Surfaces (French always beside the current text):
   quiz       questions, options, explanations, ten courses per lot
   glossaire  glossary definitions (the term itself is a key the lessons link to: unchanged)
   catalogue  collection titles and descriptions, library section labels
+  legal      terms and privacy (iOS text with its Swift arrays, Android text)
   store      App Store product page
 
 A pack lists, for each item: its id, the French, the current text, the audit
@@ -222,6 +223,17 @@ def packs(lang: str, out: Path) -> dict[str, int]:
             items.append({"id": f"rubrique:{t}", "fr": f, "texte": t, "ctx": "libellé de rubrique de la bibliothèque (court)"})
     write("catalogue", f"# Collections et rubriques {lang}\n", items)
 
+    # legal: terms and privacy, iOS text (Apple) and Android text (Google)
+    items = []
+    for plat, (fr_doc, cur_doc) in _legal_docs(lang).items():
+        for doc in ("terms", "privacy"):
+            for i, sec in enumerate(cur_doc.get(doc, [])):
+                frs = (fr_doc.get(doc) or [])
+                for field in ("title", "body"):
+                    items.append({"id": f"{plat}:{doc}/{i}/{field}", "fr": frs[i][field] if i < len(frs) else "∅",
+                                  "texte": sec[field].replace("\n", "⏎")})
+    write("legal", f"# Conditions et confidentialité {lang} (ios = App Store, android = Google Play). ⏎ = retour à la ligne.\n", items)
+
     # store
     loc = STORE_LOCALE.get(lang)
     if loc and (STORE / loc).is_dir():
@@ -233,6 +245,33 @@ def packs(lang: str, out: Path) -> dict[str, int]:
                               "texte": p.read_text(encoding="utf-8")})
         write("store", f"# Fiche App Store {lang} ({loc})\n", items)
     return counts
+
+
+def _legal_paths(lang: str) -> dict[str, Path]:
+    return {"ios": LOCALES / lang / "legal.json", "android": AND / "legal" / f"{lang}.json"}
+
+
+def _legal_swift(lang: str) -> dict:
+    """iOS legal text as shipped: the Swift arrays (legal.json can lag behind them)."""
+    from translate_legal_docs import LEGAL_SWIFT, SECTION_RE, SWIFT_PROP, _swift_unescape, extract_existing_swift_array
+    swift = LEGAL_SWIFT.read_text(encoding="utf-8")
+    prop = "French" if lang == "fr" else SWIFT_PROP[lang]
+    return {doc: [{"id": _swift_unescape(a), "title": _swift_unescape(b), "body": _swift_unescape(c)}
+                  for a, b, c in SECTION_RE.findall(extract_existing_swift_array(swift, f"{doc}{prop}") or "")]
+            for doc in ("terms", "privacy")}
+
+
+def _legal_docs(lang: str) -> dict[str, tuple[dict, dict]]:
+    out = {"ios": (_legal_swift("fr"), _legal_swift(lang))}
+    a_fr, a_cur = _legal_paths("fr")["android"], _legal_paths(lang)["android"]
+    if a_cur.exists():
+        out["android"] = (_load(a_fr), _load(a_cur))
+    return out
+
+
+def _legal_swift_block(prop: str, doc: str, sections: list[dict]) -> str:
+    from translate_legal_docs import render_sections
+    return f"private static let {doc}{prop}: [LegalSection] = [\n{render_sections(sections)}\n    ]\n"
 
 
 # ------------------------------------------------------------------ checks
@@ -493,6 +532,46 @@ def apply(lang: str, src: Path, dry_run: bool, only: Path | None = None) -> dict
             if labels:
                 apply_mapping(lang, labels)
         report["acceptes"]["catalogue"] = n + len(labels)
+
+    # --- legal: content/locales/<lang>/legal.json + Swift arrays (iOS), assets/legal/<lang>.json (Android)
+    if edits.get("legal"):
+        docs = _legal_docs(lang)
+        changed = set()
+        n = 0
+        for ident, v in edits["legal"].items():
+            m = re.fullmatch(r"(ios|android):(terms|privacy)/(\d+)/(title|body)", ident)
+            if not m or m.group(1) not in docs:
+                reject("legal", ident, "id inconnu"); continue
+            plat, doc, i, field = m.group(1), m.group(2), int(m.group(3)), m.group(4)
+            fr_doc, cur_doc = docs[plat]
+            secs = cur_doc.get(doc) or []
+            if i >= len(secs):
+                reject("legal", ident, "id inconnu"); continue
+            v = v.replace("⏎", "\n")
+            old = secs[i][field]
+            if v == old:
+                continue
+            frs = fr_doc.get(doc) or []
+            why = check_edit("legal", old, v, frs[i][field] if i < len(frs) else None)
+            if why:
+                reject("legal", ident, why); continue
+            secs[i][field] = v
+            changed.add(plat)
+            n += 1
+        if not dry_run:
+            paths = _legal_paths(lang)
+            for plat in changed:
+                raw = paths[plat].read_text(encoding="utf-8") if paths[plat].exists() else None
+                _dump(paths[plat], docs[plat][1], raw)
+            if "ios" in changed:
+                from translate_legal_docs import LEGAL_SWIFT, SWIFT_PROP, extract_existing_swift_array
+                swift = LEGAL_SWIFT.read_text(encoding="utf-8")
+                prop = SWIFT_PROP[lang]
+                for doc in ("terms", "privacy"):
+                    old_block = extract_existing_swift_array(swift, f"{doc}{prop}")
+                    swift = swift.replace(old_block, _legal_swift_block(prop, doc, docs["ios"][1][doc]), 1)
+                LEGAL_SWIFT.write_text(swift, encoding="utf-8")
+        report["acceptes"]["legal"] = n
 
     # --- store
     if edits.get("store"):
