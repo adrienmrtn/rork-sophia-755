@@ -62,9 +62,8 @@ dvomov. Čez nekaj dni se je Nato vrnil` → `… Čez nekaj dni se Nato vrne`.
 | --- | --- |
 | `Tukaj je, kako …` · `PODRSAJ ZA ODKRIVANJE` · `Prijavi se za nadaljevanje.` | `Takole …` · `Podrsaj in odkrij` · `Prijavi se in nadaljuj.` |
 | `Vzemi si čas nazaj` · `Goriš 🔥` · `Lepa rednost 👏` · `Ne čisto...` | `Vzemi si spet čas zase` · `Kar žariš 🔥` · `Lepo ti gre, kar tako naprej 👏` · `Ni čisto tako…` |
-| `letna naplata` (hrvaško) · `Zaženi {n} dni brezplačno` (program) | `zaračunano letno` · `Začni {n}-dnevni brezplačni preizkus` |
+| `letna naplata` (hrvaško) · `Zaženi {n} dni brezplačno` (program) · `Vse življenje znanja s Premium` · `10 minut kulture` | `zaračunano letno` · `Začni {n}-dnevni brezplačni preizkus` · `Dostop Premium do znanja za vse življenje` · `10 minut znanja` |
 | `Rasti po ravneh in se povzpni na lestvici` · `Poslušaj vsako lekcijo kot zvok` | `Osvajaj stopnje in se povzpni po lestvici` · `Vsak tečaj lahko tudi poslušaš` |
-| `Vse življenje znanja s Premium` · `10 minut kulture` | `Dostop Premium do znanja za vse življenje` · `10 minut znanja` |
 | `Kako se je impresionizem rodil proti Salonu?` · `pomembnejši od subjekta` | `Kako je impresionizem nastal iz upora proti Salonu?` · `pomembnejši od motiva` |
 
 **Lažni prijatelji.** Prevajaj po francoskem sobesedilu:
@@ -154,8 +153,7 @@ Stavek mora biti slovničen **z vstavljenim izrazom**. Slovenščina ima šest s
 > Prav: `Pariz preoblikuje **[[Baron Haussmann]]**: široki bulvarji, nove stavbe.` · `Iz te poetike zraste
 > **[[simbolizem]]**, ki sta ga nadaljevala Verlaine in Mallarmé.` · `ko divja **[[Druga svetovna vojna]]**`
 
-Predlog pred ločilom (`na ,`, `pod .`, `med :`) je prazno mesto izraza; validator ga javi. Če ključ ne sede,
-preoblikuj stavek. Ključa v stavku ne spreminjaj.
+Predlog pred ločilom (`na ,`, `pod .`) je prazno mesto izraza. Če ključ ne sede, preoblikuj stavek, ne ključa.
 
 ## 5. Lastna imena
 
@@ -170,17 +168,14 @@ bogov`. Neizgovorjeni končni `-e` odpade: `Baudelaire`, `Baudelaira`, `Baudelai
 
 **Ustaljena slovenska oblika**, enako v vsem tečaju: `Christophe Colomb` → `Krištof Kolumb`, `Guillaume le
 Conquérant` → `Viljem Osvajalec`, `Londres` → `London`, `Pékin` → `Peking`, `Aix-la-Chapelle` → `Aachen`,
-`Charlemagne` → `Karel Veliki`, `Tchernobyl` → `Černobil`, `Michel-Ange` → `Michelangelo`, `Léonard de Vinci` →
-`Leonardo da Vinci`, `Byzance` → `Bizanc`, `Ulysse` → `Odisej`, `roi Arthur, reine Guenièvre` → `kralj Artur,
-kraljica Guinevere`, `Siège périlleux` → `Nevarni sedež`, `ONU`, `OTAN` → `OZN`, `NATO`. Izjema je anekdota o
-kraticah: `NATO v angleščini in OTAN v francoščini`, ne `NATO … in NATO v francoščini`. Grški miti v slovenski
-obliki, ne latinski ali angleški: Narcis (`Narcisa`), Eho (nimfa, ženskega spola; ne `Echo`, ne `Odmev`, ki je le
-zvočni pojav), Ovidij, Tejrezias (ne `Tirezija`), Zevs, Hera, Nemezis, Kefis, Dedal, Ikar, Sizif.
+`Charlemagne` → `Karel Veliki`, `Michel-Ange` → `Michelangelo`, `Byzance` → `Bizanc`, `roi Arthur, reine Guenièvre`
+→ `kralj Artur, kraljica Guinevere`, `Siège périlleux` → `Nevarni sedež`, `ONU`, `OTAN` → `OZN`, `NATO` (v anekdoti
+o kraticah ostane `NATO v angleščini in OTAN v francoščini`). Grški miti v slovenski obliki: Narcis (`Narcisa`), Eho
+(nimfa, ženskega spola; ne `Echo`, ne `Odmev`, ki je zvočni pojav), Ovidij, Tejrezias (ne `Tirezija`), Zevs, Nemezis.
 
-**Islam in arabske besede**: `Mohamed` (`Mohameda`), `Meka` (`proti Meki`), `Medina` (`v Medini`), `Jatrib`, `Kaaba`,
-`hidžra` z malo v prozi (`po hidžri`; naslov gesla `Hidžra`), `umma`, `kalif`, `džizja`, `dhimma`, `džihad`,
-`razzija` (`razzije`), `beduini`. Narobe: `Hegira`, `Hijra`, `Ummah`, `Ummet`, `Yathrib`, `Muhammad`, `razzias`,
-`Jihad`, `jizya`.
+**Islam**: `Mohamed`, `Meka` (`proti Meki`), `Medina`, `Jatrib`, `Kaaba` (`v Kaabo`), `hidžra` z malo (`po hidžri`;
+geslo `Hidžra`), `umma`, `kalif`, `džizja`, `dhimma`, `džihad`, `razzija` (`razzije`), `beduini`. Narobe: `Hegira`,
+`Hijra`, `Ummah`, `Ummet`, `Yathrib`, `Muhammad`, `razzias`, `Jihad`, `jizya`.
 
 **Naslov dela je naslov slovenske izdaje**, ne dobeseden prevod (popoln seznam: `oeuvres.json`):
 
@@ -188,19 +183,14 @@ zvočni pojav), Ovidij, Tejrezias (ne `Tirezija`), Zevs, Hera, Nemezis, Kefis, D
 | --- | --- |
 | *Les Fleurs du Mal* → *Rože zla*; *Le Spleen de Paris* → *Pariški spleen* | »Spleen et Idéal«, »Tableaux parisiens«, »Correspondances«, »Recueillement« → »Spleen in ideal«, »Pariške slike«, »Korespondence«, »Zbranost« |
 | *Impression, soleil levant* → *Impresija, vzhajajoče sonce*; *Les Nymphéas* → *Lokvanji* | *Le Déjeuner sur l'herbe* → *Zajtrk v travi*; *Les Demoiselles d'Avignon* → *Avignonske gospodične* |
-| *La Nuit étoilée* → *Zvezdna noč*; *Le Cri* → *Krik*; *La Joconde* → *Mona Liza* | *La Ferme des animaux* → *Živalska farma*; *Le Petit Prince* → *Mali princ* |
-| *Crime et Châtiment* → *Zločin in kazen*; *Le Procès* → *Proces* | *Les Misérables* → *Nesrečniki*; *Notre-Dame de Paris* → *Notredamski zvonar* |
-| *Le Rouge et le Noir* → *Rdeče in črno*; *L'Étranger* → *Tujec* | *À la recherche du temps perdu* → *Iskanje izgubljenega časa*; *Madame Bovary* → *Gospa Bovary* |
-| *Les Raisins de la colère* → *Grozdi jeze*; *Gatsby le Magnifique* → *Veliki Gatsby* | *Ne tirez pas sur l'oiseau moqueur* → *Ne ubijaj slavca*; *Le Meilleur des mondes* → *Krasni novi svet* |
-| *Psychose*, *Sueurs froides*, *Fenêtre sur cour* → *Psiho*, *Vrtoglavica*, *Dvoriščno okno* | *La République* → *Država*; *Le Prince* → *Vladar*; *Nighthawks* ostane |
+| *La Nuit étoilée* → *Zvezdna noč*; *Le Cri* → *Krik*; *La Joconde* → *Mona Liza*; *Psychose*, *Sueurs froides*, *Fenêtre sur cour* → *Psiho*, *Vrtoglavica*, *Dvoriščno okno* | *La Ferme des animaux* → *Živalska farma*; *Le Petit Prince* → *Mali princ*; *Crime et Châtiment* → *Zločin in kazen*; *Le Procès* → *Proces* |
+| *Les Misérables* → *Nesrečniki*; *Notre-Dame de Paris* → *Notredamski zvonar*; *Madame Bovary* → *Gospa Bovary*; *Le Rouge et le Noir* → *Rdeče in črno*; *L'Étranger* → *Tujec* | *À la recherche du temps perdu* → *Iskanje izgubljenega časa*; *Les Raisins de la colère* → *Grozdi jeze*; *Gatsby le Magnifique* → *Veliki Gatsby*; *Le Meilleur des mondes* → *Krasni novi svet* |
 
 Drugo: `Académie des beaux-arts` → `Akademija lepih umetnosti`; `Salon des Refusés` → `Salon zavrnjenih`; `New Deal`
-ostane (`New Deala`); *1984*: `Big Brother` → `Veliki brat`, za novlangue je registriran ključ `novogovor` (v
-`[[...]]` ne izmišljuj `Newspeak`). V besedilu tečaja je naslov `*ležeče*`; v vmesniku, kvizu in slovarčku (brez
-oznak) v narekovajih: `Kdo je napisal zbirko »Rože zla«?`. Nikoli oglatih oklepajev: `[Le Déjeuner sur l'herbe]` →
-`*Zajtrk v travi*`. Če slovenskega naslova ni, pusti izvirnik in ga ob prvi omembi pojasni v oklepaju. Like prevedene
-književnosti imenuj kot v slovenski izdaji. Register je `scripts/proper_nouns.json` (preglednica `sl` pod
-`per_language`): tja vpiši ime, ne popravljaj istega dvakrat.
+ostane (`New Deala`); *1984*: `Big Brother` → `Veliki brat`, za novlangue je registriran ključ `novogovor`. V tečaju
+je naslov `*ležeče*`; v vmesniku, kvizu in slovarčku v narekovajih (`Kdo je napisal zbirko »Rože zla«?`), nikoli v
+oglatih oklepajih. Brez slovenskega naslova ostane izvirnik, ob prvi omembi pojasnjen v oklepaju. Like imenuj kot v
+slovenski izdaji in jih vpiši v `scripts/proper_nouns.json` (`per_language` → `sl`), da istega ne popravljaš dvakrat.
 
 ## 6. Navedki
 
@@ -209,15 +199,12 @@ Navedek ni prevajalska vaja. Če obstaja kanonična slovenska ubeseditev, uporab
 - Narekovaji `»…«` (začetni U+00BB, končni U+00AB). Ne `"…"`, ne `„…“`, ne francoski `« »` z obrnjeno smerjo:
   `Ima ga za "dušnega brata"` → `Ima ga za »dušnega brata«`; `Ona odgovori: "Nekdo!" »` → `Ona odgovori:
   »Nekdo!«`. Navedka v navedku ne gradi (`‘` je prepovedan); preoblikuj.
-- Pika samostojnega navedenega stavka je znotraj končnega narekovaja: `»Vse živali so enake.«`. Navedek sredi
-  stavka: `Obsojena je zaradi »žalitve javne morale«.`
+- Pika samostojnega stavka je znotraj narekovaja (`»Vse živali so enake.«`), sredi stavka zunaj (`»žalitve«.`).
 - `quote.attribution` je `Avtor, Delo`; pesem v narekovajih: `Charles Baudelaire, »Korespondence«`. Če francoščina da
   govorca za pomišljajem, uporabi vejico ali oklepaj: `Victor Hugo, Nesrečniki (škof Myriel)`.
 - Kanonični navedek iz *Živalske farme*: `»Vse živali so enake, vendar so nekatere živali bolj enake od drugih.«`
 
 ## 7. Ločila in tipografija
-
-Strojno preverjeno, brez izjem.
 
 - **Ni dolgega `—` ne srednjega pomišljaja `–`.** Preoblikuj z vejico, dvopičjem, oklepajem ali piko: `Bodi iskren –
   tako …` → `Odgovori iskreno: tako …`. Razpon s stičnim vezajem: `610-632` (tudi kjer popravek v reviziji piše
@@ -228,26 +215,23 @@ Strojno preverjeno, brez izjem.
   `02:59` in v številu `3,5`). Podpičje redko: slovensko učno besedilo ima rado piko.
 - Vejica pred `ki`, `da`, `ker`, `ko`, `če`, `kjer`, `kolikor(krat)`; nikoli pred `in` pri preprostem priredju:
   `narediti učenje lahko, in dostopno vsem` → `učenje narediti preprosto in dostopno vsem`. Tri pike so en znak `…`.
-- Občna imena sredi stavka z malo: `renesansa`, `impresionizem`, `velika gospodarska kriza`, `hidžra`.
-- Brez francoskih ostankov (`siècle`, `dans`, `l'`, `Salon des Refusés`, `Le Spleen de Paris`) in angleških
-  (`blocker`, `Echo`, `Ovid`, `Doublethink`). To so smeti strojnega prevoda; stavek napiši na novo.
+- Občna imena z malo: `renesansa`, `impresionizem`, `velika gospodarska kriza`, `hidžra`. Brez francoskih (`siècle`,
+  `dans`, `l'`, `Salon des Refusés`) in angleških ostankov (`blocker`, `Echo`, `Ovid`): stavek napiši na novo.
 
 ## 8. Števila, datumi, mere
 
-- Tisočice: pika od petmestnih števil naprej (`30 000` → `30.000`, `10 000 hommes` → `10.000 mož`); štirimestna
-  skupaj (`4000 let`, `4500 km`). Nikoli presledek (validator ga javi), nikoli vejica. Letnice brez ločila.
-- Decimalke z vejico (`3,5`). Odstotek z navadnim presledkom, kot določa pravopis: `3,5 %`, `-70 %`; pridevnik
-  `5-odstoten`. `Mds`/`Md` → `milijard`, `M` → `milijonov`, z besedo. Cena: `9,99 €`.
+- Tisočice: pika od petmestnih števil naprej (`30 000` → `30.000`); štirimestna skupaj (`4000 let`); nikoli presledek
+  (validator ga javi) ali vejica. Decimalke z vejico, odstotek z navadnim presledkom po pravopisu: `3,5 %`, `-70 %`,
+  pridevnik `5-odstoten`. `Mds`/`Md` → `milijard`, `M` → `milijonov`, z besedo. Cena: `9,99 €`.
 - **Sklon za številom.** 1 (in 101) → ednina, 2 → dvojina, 3 in 4 → množina, od 5 naprej rodilnik množine: `1 kviz`,
   `2 kviza`, `3 kvizi`, `5 kvizov`; `2 leti`, `4 leta`, `22 let`; `šest pesmi`. Ključi vmesnika `one` / `two` /
-  `few` / `other` imajo vsak svojo obliko (`%d kviz`, `%d kviza`, `%d kvizi`, `%d kvizov`). Predlog spremeni sklon:
-  `s 10.000 možmi`, `pri 6 letih`, `v 22 letih`, `92 let po obsodbi`.
+  `few` / `other` imajo vsak svojo obliko (`%d kviz`, `%d kviza`, `%d kvizi`, `%d kvizov`). Predlog: `s 10.000 možmi`.
 - **Starost in trajanje**: `à 6 ans` → `pri **6 letih**` (ne `pri 6 črk`, ne `kot šestletnik`, ki nosi spol); `en 22
   ans` → `v **22 letih**`; `il a 20 ans` → `star je 20 let` / `stara je 20 let` po spolu osebe.
 - **Letnica**: `En 1857` → `Leta **1857**`; `Vers 630` → `Okoli leta **630**`; `dès 610` → `že leta 610`; `jusqu'en
-  632` → `do leta 632`; `entre 1945 et 1975` → `med letoma 1945 in 1975` (dvojina) ali `v letih 1945-1975`. Narobe:
-  `V **622** mora trgovec …`, `Pri **630** je situacija obratna`, `Okoli 630`, `v **624**`, `V **1857** je
-  Baudelaire objavil`. Prav: `Leta **622** mora trgovec …`, `Leta **630** se položaj obrne`.
+  632` → `do leta 632`; `entre 1945 et 1975` → `med letoma 1945 in 1975` (dvojina). Narobe: `V **622** mora trgovec
+  …`, `Pri **630** je situacija obratna`, `Okoli 630`, `v **624**`. Prav: `Leta **622** mora trgovec …`, `Leta **630**
+  se položaj obrne`.
 - **Datum**: v besedilu mesec v rodilniku z malo (`**24. februarja 2022**`); na časovnici mesec in leto v
   imenovalniku (`junij 1940`). Razpon: `od 13. marca do 7. maja 1954`. Ena shema na tečaj.
 - **Stoletje**: arabska številka s piko, brez zamika (601-700 je 7. stoletje): `VIIe siècle` → `7. stoletje`, `v 7.
@@ -255,8 +239,7 @@ Strojno preverjeno, brez izjem.
   stoletje). `années 1920` → `dvajseta leta 20. stoletja`, ne `1920-ta`.
 - Štetje let: `pr. n. št.` in `n. št.` z navadnimi presledki (`450 pr. n. št.`, ne `pr.n.št.`), nikoli `av. J.-C.`.
   Hidžra: `Kaj pomeni Hegira v 622?` → `Kaj pomeni hidžra leta 622?`; `l'an 1 de l'Hégire` → `1. leto po hidžri`.
-- Brez pretvarjanja: metrično ostane metrično, presledek med številom in enoto (`4500 km`). XP in stopnje: `100 XP`,
-  `ST. 3`, `120 XP do 5. stopnje`.
+- Brez pretvarjanja; metrično ostane metrično (`4500 km`). XP in stopnje: `100 XP`, `ST. 3`, `120 XP do 5. stopnje`.
 
 ## 9. Preverjanje
 
@@ -265,11 +248,9 @@ python scripts/check_course_translation.py --lang sl
 python scripts/check_course_translation.py --lang sl course_102_*
 ```
 
-Preverjanje po tečajih javi: premaknjen skelet, pokvarjene oznake, število gesel, neregistrirane ključe, izraze,
-parkirane na koncu odstavka, osamljene predloge pred ločilom, prepovedane znake (dovoljena sta le `»` in `«`),
-presledke, francoske in angleške ostanke, uhajajoče žetone in nelokalizirana števila (presledek v tisočicah, rimsko
-stoletje, `av. J.-C.`). Čist zagon je obveznost, ne predlog. Ponavljajočih se napak iz revizije validator ne vidi;
-poišči jih ročno in popravi vse zadetke:
+Javi skelet, oznake, število in registracijo gesel, parkirane izraze, osamljene predloge, prepovedane znake (dovoljena
+sta le `»` in `«`), presledke, francoske in angleške ostanke, žetone in nelokalizirana števila (presledek v tisočicah,
+rimsko stoletje, `av. J.-C.`). Čist zagon je obveznost. Napak iz revizije ne vidi; poišči jih ročno in popravi vse:
 
 ```bash
 grep -rnE '\b([Vv]|[Pp]ri|[Oo]koli)\s+\**[0-9]{3,4}\**\b|\b(Želimo|živimo|Zahtevamo|doživljamo|beremo)\b|\]\][a-zčšž]|\b(Dobrodošel|Dobrodošli|Končal si|Pripravljen sem|si prebral|boš prebral|preživel|pametnejšega)\b|\blekcij|\bblocker|anti-scroll|\bRAV\.|\b(Hegira|Yathrib|Ummah|Ummet|Ovid|Echo|Jihad|razzias|naplata|Zaženi)\b|\b(črk|dolarjev|vranic\w*|lahkotnost|Pok|tastom|Potomci)\b|\bza (nadaljevanje|odkrivanje|razkritje|prikaz)\b|\\"|\.\.\.' content/courses/sl/ content/locales/sl/
