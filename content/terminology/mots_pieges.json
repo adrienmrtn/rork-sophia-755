@@ -8,7 +8,11 @@
  "langues": [
   "en",
   "es",
+  "de",
+  "pt",
+  "ar",
   "he",
+  "fi",
   "et"
  ],
  "entrees": [
@@ -39,6 +43,36 @@
      ],
      "note": "« juicio » es legítimo en los cursos de Kafka, Núremberg o Sócrates; por eso solo se marca « juicio gratuito ». La variante « prueba gratis » se trata en termes_produit/essai_gratuit."
     },
+    "de": {
+     "forme_imposee": "Kostenlos testen (Button) / kostenlose Testphase (Nomen)",
+     "fautif": [
+      "\\bkostenlose[rsn]?\\s+(?:prozess|gerichtsverfahren|gerichtsprozess|verhandlung|prüfung|versuch|essay|aufsatz)\\b",
+      "\\b(?:\\d+|sieben|vierzehn)-?\\s?tägige[rsn]?\\s+(?:prozess|verfahren|verhandlung|versuch|prüfung)\\b",
+      "\\b(?:kostenlose|gratis)[rsn]?\\s+(?:beta|demo)(?:version|phase)?\\b|\\bgratis-?(?:beta|demo)\\b",
+      "\\bfree\\s+trial\\b|\\btrial\\b"
+     ],
+     "note": "„Prozess“ allein ist im Kafka-Kurs legitim, daher nur in Verbindung mit „kostenlos“ oder „7-tägig“ markiert. „Versuch“ ist die Essay-Lesart (essai → Versuch). Weitere Synonyme (Probezeit, Testversion) stehen in termes_produit/essai_gratuit."
+    },
+    "pt": {
+     "forme_imposee": "teste grátis (Teste grátis de 3 dias; Começar o teste grátis)",
+     "fautif": [
+      "\\bjulgamento\\s+(?:gr[aá]tis|gratuito)\\b|\\bjulgamento\\b[^.!?\\n]{0,40}\\b(?:assinatura|Premium|\\d+\\s+dias)\\b",
+      "\\bensaio\\s+(?:gr[aá]tis|gratuito)\\b|\\bensaio\\s+de\\s+\\d+\\s+dias\\b",
+      "\\b(?:prova|exame|avalia[cç][aã]o)\\s+(?:gr[aá]tis|gratuit[ao])\\b",
+      "\\b(?:vers[aã]o\\s+)?(?:beta|demo)\\s+(?:gr[aá]tis|gratuita)\\b|\\bfree\\s+trial\\b|\\btrial\\b"
+     ],
+     "note": "« julgamento » é legítimo nos cursos (Kafka, Nuremberg, Sócrates); só se marca junto a « grátis », « assinatura », « Premium » ou « N dias ». A variante « teste gratuito » (hoje misturada com « teste grátis » no app) é tratada em termes_produit/essai_gratuit."
+    },
+    "ar": {
+     "forme_imposee": "التجربة المجانية",
+     "fautif": [
+      "(?:تنتهي|نهاية|بدء|ابدأ|أيام|فترة)\\s*(?:ال)?محاكمة",
+      "(?:ال)?محاكمة\\s*(?:ال)?مجانية",
+      "(?:النسخة|الإصدار|نسخة|إصدار)\\s*(?:ال)?تجريبي(?:ة)?",
+      "فترة\\s*(?:ال)?(?:اختبار|تجريب)(?![؀-ۿ])"
+     ],
+     "note": "محاكمة (procès) est légitime dans le cours Kafka : on ne le signale qu'au voisinage de fin/début/jours. « النسخة التجريبية » = version bêta/démo, pas essai."
+    },
     "he": {
      "forme_imposee": "ניסיון חינם (תקופת ניסיון חינם; «סיום תקופת הניסיון»)",
      "fautif": [
@@ -48,6 +82,16 @@
       "(בחינה|מבחן|גרסת\\s+בטא|דמו)\\s+(חינם|חינמי)"
      ],
      "note": "משפט = procès ; légitime dans le cours Kafka, donc les regex exigent le contexte abonnement (se termine / chinam / tekufat)."
+    },
+    "fi": {
+     "forme_imposee": "ilmainen kokeilu (jakso : kokeilujakso ; « Aloita kokeilujakso », « Kokeilu päättyy »)",
+     "fautif": [
+      "(aloita|aloitan|ilmai\\w+|päivän|premium\\w*)\\s+oikeudenkäyn\\w*",
+      "oikeudenkäyn\\w*\\s+(päättyy|loppuu|alkaa|umpeutuu|on\\s+päättynyt)",
+      "ilmai(nen|sen|sta|seen)\\s+(koe|kokeen|koetta|testi\\w*|demo\\w*|beta\\w*)",
+      "\\b(demo|beta)-?(versio|jakso)\\w*.{0,30}(tilau|premium)"
+     ],
+     "note": "oikeudenkäynti (procès) n'est flaggé qu'au voisinage du contexte abonnement : il reste légitime dans le cours Kafka."
     },
     "et": {
      "forme_imposee": "tasuta prooviperiood (CTA: „Alusta prooviperioodi“; „Prooviperiood lõpeb“)",
@@ -86,6 +130,34 @@
      ],
      "note": "Escala Ligero / Moderado / Intenso. El tercer regex atrapa « Luz » cuando es toda la etiqueta (sin texto antes ni después); « la luz » en prosa de física no se marca. « liviano » es forma americana, nunca en es-ES."
     },
+    "de": {
+     "forme_imposee": "Leicht",
+     "fautif": [
+      "\\b(?:licht|hell|leuchtend)\\s*[/|·,]\\s*(?:moderat|mäßig|mittel)\\b",
+      "(?<![\\wäöüß ])licht(?![\\wäöüß ,.;:!?)–-])",
+      "\\bleichtgewichtig\\w*\\b|\\blightweight\\b|\\blight\\b"
+     ],
+     "note": "Skala Leicht / Moderat / Intensiv (Handynutzung). Regex 2 trifft „Licht“ nur als alleinstehendes Label; „das Licht“ in Physik-Prosa wird nicht markiert."
+    },
+    "pt": {
+     "forme_imposee": "Leve (escala Leve / Moderado / Intenso)",
+     "fautif": [
+      "(?<![\\wáàâãéêíóôõúç ])luz(?![\\wáàâãéêíóôõúç ,.;:!?)])",
+      "\\bluz\\s*[/|·]\\s*moderad|\\bluz\\b[^.!?\\n]{0,30}\\b(?:moderado|intenso)\\b",
+      "\\bligeir[oa]\\b[^.!?\\n]{0,30}\\b(?:moderado|intenso)\\b|\\b(?:moderado|intenso)\\b[^.!?\\n]{0,30}\\bligeir[oa]\\b",
+      "\\bclaro\\s*[/|·]\\s*moderad"
+     ],
+     "note": "O primeiro regex só pega « Luz » quando é a etiqueta inteira (nada antes nem depois); « a luz » na prosa de física não é marcada. « Claro » sozinho é legítimo (tema claro/escuro nos ajustes). « ligeiro » é a forma de Portugal; no Brasil, « leve »."
+    },
+    "ar": {
+     "forme_imposee": "خفيف",
+     "fautif": [
+      "^\\s*(?:ال)?ضوء\\s*$",
+      "(?:استخدام|استعمال)\\s*(?:ال)?ضوء(?![؀-ۿ])",
+      "ضوء\\s*/\\s*(?:معتدل|متوسط)"
+     ],
+     "note": "ضوء (lumière) est légitime ailleurs (impressionnisme, option de quiz) : le premier motif ne vise que la chaîne-étiquette entière."
+    },
     "he": {
      "forme_imposee": "קל (échelle : קל / מתון / אינטנסיבי)",
      "fautif": [
@@ -93,6 +165,16 @@
       "אור\\s*[/·|,]\\s*מתון"
      ],
      "note": "אור = lumière. Le mot est trop court pour une regex libre : on ne matche que la valeur-label entière ou la triade avec מתון."
+    },
+    "fi": {
+     "forme_imposee": "Kevyt (échelle : Kevyt / Kohtalainen / Runsas)",
+     "fautif": [
+      "\\bvalo\\w*\\b.{0,40}\\b(kohtalainen|kohtuullinen|intensiivinen|runsas)\\b",
+      "\\b(kohtalainen|kohtuullinen|intensiivinen|runsas)\\b.{0,40}\\bvalo\\w*",
+      "\\bvaalea\\b.{0,30}käytt\\w*",
+      "\\bvalo(isa|inen)?\\s+käytt\\w*"
+     ],
+     "note": "valo (lumière) est légitime partout ailleurs : on ne le flagge qu'à côté des autres niveaux d'intensité ou de « käyttö »."
     },
     "et": {
      "forme_imposee": "Kerge (Kerge / Mõõdukas / Intensiivne)",
@@ -130,6 +212,33 @@
      ],
      "note": "Opción del quiz « ¿Qué no puede escapar de un agujero negro? ». « Ligero » suelto no se puede marcar porque es la etiqueta correcta de leger_intensite."
     },
+    "de": {
+     "forme_imposee": "Das Licht",
+     "fautif": [
+      "\\b(?:das|dem)\\s+leichte\\b|\\bdie\\s+leichtigkeit\\b(?=[^.!?\\n]{0,70}schwarze[sn]?\\s+loch)|schwarze[sn]?\\s+loch[^.!?\\n]{0,70}\\bleichtigkeit\\b",
+      "\\b(?:das|dem)\\s+leichtgewicht\\b",
+      "(?<![\\wäöüß])leicht(?![\\wäöüß])(?=[^.!?\\n]{0,120}schwarze[sn]?\\s+loch)"
+     ],
+     "note": "Quiz-Option „Was kann einem Schwarzen Loch nicht entkommen?“. „Leicht“ allein ist das richtige Label von leger_intensite, daher nur in Nähe des Schwarzen Lochs markiert."
+    },
+    "pt": {
+     "forme_imposee": "A luz (opção do quiz: o que não escapa de um buraco negro)",
+     "fautif": [
+      "\\b[oa]\\s+leve\\b(?![\\wáàâãéêíóôõúç])",
+      "\\bleveza\\b[^.!?\\n]{0,70}\\bburaco\\s+negro\\b|\\bburaco\\s+negro\\b[^.!?\\n]{0,70}\\bleveza\\b",
+      "\\b[oa]\\s+clar[oa]\\b[^.!?\\n]{0,60}\\bburaco\\s+negro\\b|\\bburaco\\s+negro\\b[^.!?\\n]{0,60}\\b[oa]\\s+clar[oa]\\b"
+     ],
+     "note": "« Leve » solto não pode ser marcado: é a etiqueta correta de leger_intensite. Só se marca o substantivo « o leve / a leveza » e « o claro » perto de « buraco negro »."
+    },
+    "ar": {
+     "forme_imposee": "الضوء",
+     "fautif": [
+      "(?:ترى|يرى|تراه)\\s*(?:ال)?عين\\s*(?:هو\\s*)?(?:ال)?خفيف",
+      "(?:ال)?خفيف\\s*(?:والظل|واللون|والألوان)",
+      "(?:ال)?وزن\\s*(?:ال)?خفيف\\s*(?:والظل|واللون)"
+     ],
+     "note": "خفيف (poids) est correct pour l'intensité d'usage : signalé seulement près du vocabulaire œil/ombre/couleur."
+    },
     "he": {
      "forme_imposee": "האור (option de quiz : ce que voit l'œil)",
      "fautif": [
@@ -137,6 +246,15 @@
       "(העין\\s+רואה|רואה\\s+העין)[^.]{0,30}\\bקל"
      ],
      "note": "קל = léger (poids). Seule la valeur-option entière est matchée ; faux positif accepté si une autre option vaut «קל»."
+    },
+    "fi": {
+     "forme_imposee": "Valo",
+     "fautif": [
+      "\\bkevy(t|en|ttä|eksi)\\b.{0,60}(silmä|näke|näkö|värit|esineet|verkkokalvo)",
+      "(silmä|näke|näkö|värit|esineet|verkkokalvo)\\w*.{0,60}\\bkevy(t|en|ttä|eksi)\\b",
+      "\\bkeve(ys|yden|yttä)\\b"
+     ],
+     "note": "Kevyt (léger) est correct pour l'intensité d'usage ; ici on cherche le poids glissé dans une option sur la vision. Toute occurrence de Kevyt dans showcase.quiz.option est fautive."
     },
     "et": {
      "forme_imposee": "Valgus (viktoriinivastus: see, mida silm näeb)",
@@ -173,6 +291,35 @@
      ],
      "note": "Columna de la oferta: « Gratis » (frente a « Premium »). « libre » = libertad, nunca « sin pagar ». « sin costo » (visto en la app) es americano: en España « sin coste » o « gratis »."
     },
+    "de": {
+     "forme_imposee": "Gratis",
+     "fautif": [
+      "\\bfreie[rsn]?\\s+(?:testphase|testversion|plan|konto|zugang|zugriff|kurse?|quiz|version|woche|tage|nutzung)\\b",
+      "(?<![\\wäöüß-])frei(?![\\wäöüß-])(?=\\s*(?:[/|·]|$|\\s+(?:vs\\.?|gegen|oder)\\s+premium))",
+      "\\bfür\\s+\\d+\\s+tage\\s+frei\\b|\\bumsonst\\b",
+      "\\bfree\\b|\\blibre\\b"
+     ],
+     "note": "Spalte der Angebotstabelle: „Gratis“ gegenüber „Premium“. „frei“ bedeutet Freiheit, nicht „ohne Bezahlung“. „kostenlos“ ist in Fließtext erlaubt (kostenlos testen); „kostenfrei“ nicht markiert, aber zu vereinheitlichen."
+    },
+    "pt": {
+     "forme_imposee": "Grátis (coluna da oferta, frente a Premium)",
+     "fautif": [
+      "\\b(?:teste|vers[aã]o|plano|conta|acesso|cursos?|quiz(?:zes)?|mat[eé]rias?|coluna|per[ií]odo)\\s+livres?\\b",
+      "\\blivres?\\s+(?:durante|por)\\s+\\d+\\s+dias\\b",
+      "(?<![\\wáàâãéêíóôõúç ])livre(?![\\wáàâãéêíóôõúç ,.;:!?)])",
+      "\\bfree\\b"
+     ],
+     "note": "« livre » = liberdade, nunca « sem pagar »; « ao ar livre », « homem livre » na prosa não são marcados (o terceiro regex só pega « Livre » como etiqueta inteira). « de graça » e « gratuito » são legítimos."
+    },
+    "ar": {
+     "forme_imposee": "مجاني",
+     "fautif": [
+      "(?<![؀-ۿ])حر(?![؀-ۿًٌٍَُِّْ])",
+      "مجان[اً]*\\s*و\\s*حر",
+      "(?<![؀-ۿ])حرة(?![؀-ۿ])\\s*(?:ال)?(?:نسخة|خطة|باقة)"
+     ],
+     "note": "حر = libre (liberté). Faux positif possible sur « التجارة الحرة » ou « حر » (chaud) dans un cours : accepté, la colonne de l'offre est le risque principal."
+    },
     "he": {
      "forme_imposee": "חינם (colonne de l'offre : «חינם» / «בחינם»)",
      "fautif": [
@@ -181,6 +328,16 @@
       "חופשי\\s*[/|]\\s*(Premium|פרימיום)"
      ],
      "note": "חופשי = libre (liberté) ; légitime ailleurs (שוק חופשי, בחירה חופשית), d'où le contexte offre/colonne."
+    },
+    "fi": {
+     "forme_imposee": "Ilmainen (colonne : Ilmainen / Premium)",
+     "fautif": [
+      "\\bvapaa(ta|t|n|ssa|sta|seen|lla|ksi)?\\s+(aihe|aihetta|aiheet|aiheesi|aihettasi|kurssi|kurssia|kurssit|versio|tili|sisältö|jakso|kokeilu|tilaus)\\w*",
+      "\\bvapaa\\b.{0,20}premium|premium.{0,20}\\bvapaa\\b",
+      "\\bvapaasti\\b.{0,20}(kurssi|sisältö|premium)",
+      "\\bmaksuton\\w*"
+     ],
+     "note": "vapaa = libre. maksuton (sans frais) est correct mais non canonique : signalé pour uniformiser sur ilmainen."
     },
     "et": {
      "forme_imposee": "Tasuta",
@@ -219,6 +376,33 @@
      ],
      "note": "Nombre del plan. El sustantivo « mensual » (revista) no existe en español, así que el riesgo real es bajo."
     },
+    "de": {
+     "forme_imposee": "Monatlich",
+     "fautif": [
+      "\\bmonats(?:schrift|zeitschrift|magazin|heft|zeitung)\\b",
+      "\\bmonatliche[rsn]?\\s+(?:zeitschrift|magazin|ausgabe|heft)\\b",
+      "\\bmonthly\\b|\\bmensuel\\b"
+     ],
+     "note": "Name des Abo-Plans (Untertitel: „Monatlich abgerechnet“). Das deutsche Adjektiv ist eindeutig; nur die Zeitschriften-Lesart wird markiert."
+    },
+    "pt": {
+     "forme_imposee": "Mensal (plano; « faturado mensalmente »)",
+     "fautif": [
+      "\\b(?:revista|publica[cç][aã]o|peri[oó]dico|boletim|jornal)\\s+mensal\\b",
+      "\\bmens[aá]rio\\b",
+      "\\bmonthly\\b"
+     ],
+     "note": "O substantivo « mensal » (revista) não existe em português; o risco real é baixo."
+    },
+    "ar": {
+     "forme_imposee": "شهري (شهريًا)",
+     "fautif": [
+      "(?:مجلة|دورية|نشرة)\\s*(?:ال)?شهرية",
+      "(?:ال)?شهرية\\s*(?:ال)?(?:مجلة|دورية)",
+      "(?:ال)?مجلة\\s*(?:ال)?شهر(?![؀-ۿ])"
+     ],
+     "note": "شهري est correct ; seul le sens « périodique mensuel » (مجلة) est fautif."
+    },
     "he": {
      "forme_imposee": "חודשי (מנוי חודשי)",
      "fautif": [
@@ -226,6 +410,15 @@
       "כתב\\s+עת\\s+חודשי"
      ],
      "note": "ירחון = magazine mensuel ; faux positif improbable dans l'app."
+    },
+    "fi": {
+     "forme_imposee": "Kuukausittain (tilaus : kuukausitilaus)",
+     "fautif": [
+      "kuukausi(lehti|lehden|lehteä|lehdessä|julkaisu)\\w*",
+      "aikakaus(lehti|lehden|lehteä|julkaisu)\\w*",
+      "\\bkuukausittainen\\s+(lehti|julkaisu)\\w*"
+     ],
+     "note": "kuukausilehti = magazine mensuel."
     },
     "et": {
      "forme_imposee": "Igakuine (lauses: kuutellimus, „arveldatakse kord kuus“)",
@@ -265,6 +458,33 @@
      ],
      "note": "Nombre del plan (« Facturado anualmente » en el subtítulo)."
     },
+    "de": {
+     "forme_imposee": "Jährlich",
+     "fautif": [
+      "\\bjahrbuch\\b|\\bjahrbücher\\b|\\bjahresbuch\\b",
+      "\\balmanach\\b|\\bjahresalmanach\\b",
+      "\\byearly\\b|\\bannual\\b|\\bannuel\\b"
+     ],
+     "note": "Name des Abo-Plans („Jährlich abgerechnet“). „Jahrbuch“ kann in Geschichtskursen vorkommen: seltener Fehlalarm akzeptiert."
+    },
+    "pt": {
+     "forme_imposee": "Anual (plano; « Cobrado anualmente »)",
+     "fautif": [
+      "\\banu[aá]rios?\\b",
+      "\\balmanaques?\\b",
+      "\\byearly\\b|\\bannual\\b"
+     ],
+     "note": "« anuário » e « almanaque » são os falsos sentidos de « yearly »; não aparecem legitimamente na interface."
+    },
+    "ar": {
+     "forme_imposee": "سنوي (سنويًا)",
+     "fautif": [
+      "(?<![؀-ۿ])(?:ال)?(?:حولية|حوليات)(?![؀-ۿ])",
+      "(?:ال)?كتاب\\s*(?:ال)?سنوي",
+      "(?:ال)?(?:دليل|تقويم)\\s*(?:ال)?سنوي(?![؀-ۿ])"
+     ],
+     "note": "حولية/الكتاب السنوي = annuaire/almanach."
+    },
     "he": {
      "forme_imposee": "שנתי (מנוי שנתי)",
      "fautif": [
@@ -272,6 +492,16 @@
       "אלמנך"
      ],
      "note": "שנתון = annuaire / promotion d'âge ; אלמנך = almanach."
+    },
+    "fi": {
+     "forme_imposee": "Vuosittain (tilaus : vuositilaus)",
+     "fautif": [
+      "\\bvuosikirj\\w*",
+      "\\balmanak\\w*",
+      "\\bvuosikert\\w*",
+      "\\bvuosijulkais\\w*"
+     ],
+     "note": "vuosikirja = annuaire/almanach, vuosikerta = volume annuel d'un périodique."
     },
     "et": {
      "forme_imposee": "Iga-aastane (lauses: aastatellimus, „arveldatakse kord aastas“)",
@@ -311,6 +541,36 @@
      ],
      "note": "Invariable, con mayúscula, sin tilde (« Prémium » es la adaptación de la RAE pero no es el nombre del producto). « la prima » solo se marca en contexto de seguro/suscripción porque también significa « cousin »."
     },
+    "de": {
+     "forme_imposee": "Premium",
+     "fautif": [
+      "\\bprämium\\b|\\bpremiun\\b|\\bpremíum\\b|\\bpremiums\\b",
+      "\\b(?:abo|abonnement|monats|jahres|sophia)-?prämien?\\b|\\b(?:versicherungs)?prämien?\\b(?=[^.!?\\n]{0,40}(?:abo\\b|abonnement|freischalt|kurse|zugang|sophia))",
+      "\\bsophia[- ](?:aufpreis|zuschlag|extra|zusatz)\\b|\\b(?:aufpreis|zuschlag|zusatzgebühr)[- ]?(?:abo|version|zugang)\\b",
+      "\\bteure[rsn]?\\s+(?:version|abo|zugang|stufe|variante)\\b|\\bedel-?(?:version|abo)\\b"
+     ],
+     "note": "Markenname des Bezahlangebots, lateinisch und unveränderlich. „Prämie“ (Versicherung/Belohnung) ist der klassische Pivot-Fehler; in einem Wirtschaftskurs nur in Abo-Nähe markiert."
+    },
+    "pt": {
+     "forme_imposee": "Premium (invariável, maiúscula inicial: o Sophia Premium, cursos Premium)",
+     "fautif": [
+      "\\bpr[êéè]mium\\b|\\bpremiun\\b|\\bpremiums\\b|\\bpremiu\\b",
+      "\\bpr[êé]mios?\\s+(?:mensal|anual|d[oa]\\s+(?:seguro|assinatura|plano))\\b|\\bSophia\\s+Pr[êé]mio\\b|\\b(?:plano|assinatura)\\s+pr[êé]mio\\b",
+      "\\b(?:plano|oferta|vers[aã]o|assinatura|conta|recursos)\\s+(?:de\\s+primeira(?:\\s+(?:linha|qualidade))?|superior|de\\s+luxo|caro)\\b",
+      "\\b(?:sobretaxa|suplemento|taxa\\s+extra|adicional)\\s+(?:Sophia|Premium|d[ae]\\s+assinatura)\\b"
+     ],
+     "note": "« prêmio » só se marca em contexto de seguro/assinatura/plano, porque « prêmio » (recompensa) é legítimo nos cursos (Prêmio Nobel). « Prémio/Prémium » são grafias de Portugal."
+    },
+    "ar": {
+     "forme_imposee": "Premium",
+     "fautif": [
+      "بريمي(?:و|ا)?م",
+      "قسط\\s*(?:ال)?تأمين",
+      "(?<![؀-ۿ])غالي(?:ة|ًا|ا)?(?![؀-ۿ])",
+      "(?:الميزات|الميزة|الخطة|النسخة|العضوية|الباقة|الاشتراك|الإصدار|الحساب)\\s*(?:ال)?مت?ميزة?"
+     ],
+     "note": "Le nom de l'offre reste en latin ; بريميوم (translittération), غالي (cher), المميزة (adjectif) et قسط التأمين (prime) sont tous observés ou plausibles."
+    },
     "he": {
      "forme_imposee": "Premium (en lettres latines, invariable : «שדרג ל-Premium», «גישת Premium»)",
      "fautif": [
@@ -320,6 +580,16 @@
       "(ה)?תוספת\\s+(ה)?פרמיום"
      ],
      "note": "פרמיה = prime d'assurance (légitime seulement dans un cours d'économie) ; פרימיום = translittération interdite."
+    },
+    "fi": {
+     "forme_imposee": "Premium (invariable ; déclinaison finnoise soudée : Premiumin, Premiumia ; composés : Premium-tilaus)",
+     "fautif": [
+      "\\bvakuutusmaksu\\w*",
+      "\\bpreemio\\w*",
+      "\\bensiluokkai(nen|sen|sta|seen)\\b",
+      "\\bpremium:\\w+"
+     ],
+     "note": "vakuutusmaksu = prime d'assurance, preemio = prime financière, ensiluokkainen = haut de gamme ; « Premium:n » (deux-points) est une déclinaison d'abréviation, fautive pour un nom."
     },
     "et": {
      "forme_imposee": "Premium (muutumatu ladina kujul; käändelõpp ilma ülakomata: Premiumi, Premiumiga)",
@@ -360,6 +630,36 @@
      ],
      "note": "Etiqueta antes de una cuenta atrás (« Expira en 02:59 »). « Expira en el año… » y « expirando » son los contrasentidos del pivote inglés."
     },
+    "de": {
+     "forme_imposee": "Läuft ab in",
+     "fautif": [
+      "\\bläuft\\s+(?:ab\\s+)?im\\s+jahr\\b|\\bläuft\\s+ab\\s+in\\s+(?:19|20)\\d{2}\\b",
+      "\\b(?:ist\\s+dabei|im\\s+begriff)[^.!?\\n]{0,20}abzulaufen\\b|\\bläuft\\s+gerade\\s+ab\\b|\\bist\\s+am\\s+ablaufen\\b",
+      "\\bexpiriert\\b|\\bexpiert\\b|\\bexpires?\\s+in\\b|\\bexpire\\s+dans\\b",
+      "\\berlischt\\s+in\\b|\\bstirbt\\s+in\\b"
+     ],
+     "note": "Label vor einem Countdown („Läuft ab in 02:59“). Die Lesarten „im Jahr …“ und Verlaufsform („ist dabei abzulaufen“) sind falsch."
+    },
+    "pt": {
+     "forme_imposee": "Expira em (etiqueta antes da contagem regressiva: « Expira em 02:59 »)",
+     "fautif": [
+      "\\bexpira\\s+(?:em|no)\\s+(?:o\\s+)?ano\\b|\\bexpira\\s+em\\s+(?:19|20)\\d{2}\\b",
+      "\\b(?:est[aá]\\s+)?expirando\\b",
+      "\\bexpira\\s+dentro\\s+de\\b|\\bexpira\\s+daqui\\s+a\\b",
+      "\\b(?:vence|termina|caduca)\\s+(?:em|no)\\s+(?:o\\s+)?ano\\b"
+     ],
+     "note": "« Expira em » com ano e « está expirando » são os falsos sentidos do pivô inglês (expires in 2026 / is expiring). « Vence em » é aceitável mas se unifica em « Expira em »."
+    },
+    "ar": {
+     "forme_imposee": "تنتهي خلال",
+     "fautif": [
+      "(?:ت|ي)نتهي\\s*(?:الصلاحية\\s*)?في\\s*(?:عام|سنة|ال)",
+      "قيد\\s*الانتهاء",
+      "(?:ت|ي)نتهي\\s*الآن(?![؀-ۿ])",
+      "(?:ت|ي)نتهي\\s*في\\s*\\d"
+     ],
+     "note": "L'étiquette précède un compte à rebours : « خلال » (dans un délai), jamais « في عام » (en l'an) ni une forme progressive."
+    },
     "he": {
      "forme_imposee": "פג תוקף בעוד (étiquette avant le compte à rebours : «פג תוקף בעוד 2 ימים»)",
      "fautif": [
@@ -368,6 +668,16 @@
       "(פג|יפוג)\\s+תוקף\\s+ב\\s*$"
      ],
      "note": "«פג ב-2026» = expire en l'an… ; «פוקע» seul = en train d'expirer. La bonne forme exige בעוד."
+    },
+    "fi": {
+     "forme_imposee": "Aikaa jäljellä (étiquette devant un compte à rebours) ; durée : « 2 päivän päästä », jamais « 2 päivässä »",
+     "fautif": [
+      "\\b(vanhenee|päättyy|umpeutuu|erääntyy)\\s+vuonna\\b",
+      "\\bon\\s+(vanhenemassa|päättymässä|umpeutumassa|erääntymässä)\\b",
+      "\\b(vanhenee|päättyy|umpeutuu|erääntyy)\\s+(sisällä|sisään)\\b",
+      "\\b\\d+\\s+päivässä\\b"
+     ],
+     "note": "« N päivässä » = en N jours (durée nécessaire) ; faux positif possible dans un cours (« valloitettiin 3 päivässä »)."
     },
     "et": {
      "forme_imposee": "Lõpeb (silt enne tagasiloendust: „Lõpeb 02:59:59“)",
@@ -408,6 +718,36 @@
      ],
      "note": "La auditoría vio « Sophia Pro también abre el Repaso » por « débloque ». « Abrir el quiz » (Accéder au quiz) es correcto y no se marca."
     },
+    "de": {
+     "forme_imposee": "Freischalten",
+     "fautif": [
+      "\\b(?:kurse?|premium|sophia|inhalte|lektionen|alles|alle\\s+kurse|quiz|zugang)\\s+(?:zu\\s+)?entsperr\\w*\\b|\\bentsperr\\w*\\s+(?:du\\s+)?(?:jetzt\\s+)?(?:alle\\s+)?(?:kurse?|premium|inhalte|quiz|sophia)\\b",
+      "\\bentriegel\\w*\\b|\\baufschließ\\w*\\b|\\baufgeschlossen\\b",
+      "\\bsperre\\s+aufheben\\b|\\bentblock\\w*\\b|\\bentsperrung\\b",
+      "\\bunlock\\w*\\b|\\bdébloquer\\b"
+     ],
+     "note": "„Entsperren“ ist beim TikTok-Blocker legitim (TikTok wird entsperrt) und bei Geräten; deshalb nur in Verbindung mit Kursen/Premium markiert. Siehe auch termes_produit/debloquer."
+    },
+    "pt": {
+     "forme_imposee": "Desbloquear (Desbloquear o curso; Desbloqueie o Premium)",
+     "fautif": [
+      "\\bdestrav\\w+|\\bdestranc\\w+",
+      "\\b(?:remover|tirar|retirar|anular|cancelar|desativar)\\s+o\\s+bloqueio\\b",
+      "\\babr(?:ir|e|a|em|iu)\\s+(?:[oa]s?\\s+)?(?:Revis[aã]o|Premium|Sophia\\s+PRO|acesso|recursos|conte[uú]do|n[ií]ve(?:l|is)|cursos?)\\b",
+      "\\blibera(?:r|m)?\\s+(?:[oa]s?\\s+|tod[oa]s?\\s+(?:[oa]s\\s+)?)?(?:Revis[aã]o|Premium|acesso|cursos?|recursos|conte[uú]do|quiz(?:zes)?|n[ií]ve(?:l|is)|mat[eé]rias?)\\b"
+     ],
+     "note": "O app já diz « O Sophia Pro também libera a Revisão » (paywall.quiz.faq.a2): « liberar » é natural no Brasil, mas se unifica em « desbloquear ». « Abra o Google Play » e « destrancar uma porta » na prosa não são marcados."
+    },
+    "ar": {
+     "forme_imposee": "افتح قفل",
+     "fautif": [
+      "إلغاء\\s*(?:ال)?قفل",
+      "ألغ[يِ]?\\s*(?:ال)?قفل",
+      "(?<![؀-ۿ])(?:افتح|فتح)\\s*(?:Sophia|صوفيا|سوفيا|Premium|بريميوم|Pro|برو)",
+      "(?<![؀-ۿ])(?:افتح|فتح)\\s*(?:ال)?(?:درس|دورة|دروس|دورات|مجموعة|مسار)(?!\\s*قفل)"
+     ],
+     "note": "« افتح X » seul = ouvrir (une app, un écran) ; la forme imposée est « افتح قفل X » / « فتح قفل ». « إلغاء القفل » = annuler le verrouillage."
+    },
     "he": {
      "forme_imposee": "לפתוח / פתיחה (impératif «פתח את הקורס», «פתח את Premium»)",
      "fautif": [
@@ -417,6 +757,16 @@
       "הסר(ת)?\\s+(את\\s+)?ה(נעילה|חסימה)\\s+(של\\s+)?(ה?קורס|Premium)"
      ],
      "note": "En hébreu l'app «ouvre» un contenu ; ביטול נעילה est le calque technique du téléphone, שחרר = relâcher."
+    },
+    "fi": {
+     "forme_imposee": "Avaa (Avaa Premium, Avaa kurssi) ; infinitif avata",
+     "fautif": [
+      "\\bpoista\\w*\\s+lukitu\\w*",
+      "\\blukituksen\\s+(poist|purk)\\w*",
+      "\\bvapauta\\w*\\s+(kurssi|premium|sisält|kaikki)\\w*",
+      "\\bavaa\\w*\\s+lukitu\\w*"
+     ],
+     "note": "poista lukitus / avaa lukitus = retirer un verrou (téléphone). « poista esto » n'est pas flaggé : c'est la désactivation légitime du bloqueur TikTok."
     },
     "et": {
      "forme_imposee": "Ava (Ava kursus / Ava Premiumiga; „3 ainet, mida avada“)",
@@ -457,6 +807,36 @@
      ],
      "note": "« revisar » en español es comprobar o inspeccionar; lo escolar es « repasar ». Las formas de « revisar » sin contexto escolar no se marcan (legítimas en otros cursos)."
     },
+    "de": {
+     "forme_imposee": "Wiederholen (Kurse wiederholen; für die Prüfung lernen)",
+     "fautif": [
+      "\\brevidier\\w*\\b|\\brevision(?:en)?\\b",
+      "\\büberarbeit\\w*\\b(?=[^.!?\\n]{0,40}(?:kurse?|lektion|prüfung|noten|unterwegs|minuten\\s+am\\s+tag|abitur|klausur))",
+      "\\b(?:inspizier|repar|überhol)\\w*\\b(?=[^.!?\\n]{0,40}(?:kurse?|lektion|prüfung|noten|abitur|klausur))",
+      "\\brezensier\\w*\\b|\\breview\\w*\\b|\\bdurchsicht\\b(?=[^.!?\\n]{0,30}(?:kurse?|prüfung|noten))"
+     ],
+     "note": "Schulische Lesart. „revidieren“ (ändern), „überarbeiten“ (einen Text) und „überprüfen“ (kontrollieren) sind Pivot-Fehler von revise/review; „überprüfen“ wird nicht markiert, weil es im Quiz („Antwort überprüfen“) legitim ist."
+    },
+    "pt": {
+     "forme_imposee": "revisar (substantivo: revisão; « Hora de revisar », « perguntas para revisar hoje »)",
+     "fautif": [
+      "\\b(?:inspecion|repar|consert|corrig|modific|alter|verific|chec)\\w*\\s+(?:[oa]s?\\s+|seus?\\s+|suas?\\s+|minh[ao]s?\\s+)?(?:cursos?|li[cç][oõ]es|perguntas|aulas|mat[eé]ria|conhecimentos)\\b",
+      "\\bpassar\\s+em\\s+revista\\b",
+      "\\brevis[aã]o\\s+(?:de\\s+texto|ortogr[aá]fica|gramatical|t[eé]cnica|do\\s+motor|do\\s+carro)\\b[^.!?\\n]{0,60}\\b(?:Sophia|perguntas|quiz|cursos?)\\b",
+      "\\brevisit(?:ar|e|a)\\s+(?:[oa]s?\\s+|seus?\\s+|suas?\\s+)?(?:cursos?|perguntas|li[cç][oõ]es)\\b"
+     ],
+     "note": "No Brasil, « revisar » e « revisão » são as palavras escolares corretas (revisar a matéria, revisão para a prova). Os falsos sentidos (reparar, inspecionar, corrigir, revisão de texto) só se marcam perto de curso/pergunta/matéria."
+    },
+    "ar": {
+     "forme_imposee": "راجع / مراجعة",
+     "fautif": [
+      "(?:تنقيح|نقّح|نقح|ينقح)(?![؀-ۿ])",
+      "(?:ال)?(?:تعديل|تعدل|عدّل)\\s*(?:ال)?(?:درس|دروس|دورة|دورات)",
+      "(?:إصلاح|أصلح|تفقد|تفقّد|فحص)\\s*(?:ال)?(?:درس|دروس|دورة|دورات)",
+      "(?:استعراض|استعرض)\\s*(?:ال)?(?:درس|دروس|دورة|دورات)"
+     ],
+     "note": "revise → تعديل/تنقيح (modifier), review → استعراض (passer en revue) ; le sens scolaire est المراجعة."
+    },
     "he": {
      "forme_imposee": "לחזור על החומר / חזרה (scolaire : «חזרה על החומר 10 דקות ביום»)",
      "fautif": [
@@ -466,6 +846,16 @@
       "(לסקור|סוקר|סוקרת|סקירת)\\s+(את\\s+)?(ה)?(חומר|קורס|שיעור|קורסים)"
      ],
      "note": "Observé : תיקון (réparer), משנה (changer), בדוק (inspecter). לסקור = passer en revue, trop faible."
+    },
+    "fi": {
+     "forme_imposee": "kerrata (nom : kertaus ; « Kertaa 10 minuuttia päivässä »)",
+     "fautif": [
+      "\\btarkist\\w*\\s+(ne|niitä|kurssi\\w*|oppitun\\w*|tietoj\\w*|oppima\\w*|kokeisiin|kokeita)",
+      "\\b(tarkist|tarkast|tarkastel)\\w*\\s+\\d+\\s*(min|minuut)\\w*",
+      "\\brevis(io|oi)\\w*",
+      "\\b(tarkistamis|tarkastelemis|tarkastamis|tarkastus)\\w*"
+     ],
+     "note": "tarkistaa = vérifier (légitime pour « Vérifier » dans le quiz, d'où les regex contextuelles) ; tarkastella = examiner."
     },
     "et": {
      "forme_imposee": "Korda / kordamine („Kordan 10 minutit päevas“, „kui seda ei korrata“)",
@@ -506,6 +896,36 @@
      ],
      "note": "« cultivado » se dice de la tierra, no de las personas; « educado » es « poli »; « conocimientos generales » es calco del pivote « general knowledge »."
     },
+    "de": {
+     "forme_imposee": "Allgemeinbildung / gebildet",
+     "fautif": [
+      "\\ballgemeine[rn]?\\s+kultur\\b|\\ballgemeinkultur\\b|\\bgenerelle\\s+kultur\\b",
+      "\\bgeneral(?:e|es|er)?\\s+(?:wissen|kenntnis)\\w*\\b|\\bgeneral\\s+knowledge\\b|\\bculture\\s+générale\\b",
+      "\\bkultiviert\\w*\\b",
+      "\\bkulturell\\s+(?:gebildet|werden|sein)\\b|\\b(?:deine|die)\\s+kultur\\s+(?:erweitern|verbessern|aufbauen|stärken|trainieren)\\b"
+     ],
+     "note": "„kultiviert“ heißt verfeinert, nicht gebildet; im Landwirtschafts-/Biologiekontext (kultivierte Pflanzen) ist ein Fehlalarm möglich. „Allgemeinwissen“ ist richtig, soll aber zugunsten von „Allgemeinbildung“ vereinheitlicht werden."
+    },
+    "pt": {
+     "forme_imposee": "cultura geral / culto, culta (« Fique mais culto em 10 minutos por dia »)",
+     "fautif": [
+      "\\bconhecimentos?\\s+gera(?:l|is)\\b",
+      "\\b(?:mais|muito|bem)\\s+cultivad[oa]s?\\b|\\bcultivad[oa]s?\\s+(?:pessoa|gente)\\b|\\bpessoa\\s+cultivada\\b",
+      "\\b(?:mais|muito|bem)\\s+(?:educad[oa]s?|letrad[oa]s?)\\b|\\bbem-educad[oa]s?\\b",
+      "\\bcultura\\s+(?:cultural|informativa)\\b|\\bconhecimento\\s+cultural\\b"
+     ],
+     "note": "« conhecimentos gerais » existe no Brasil (concursos), mas o app diz « cultura geral » em toda parte: marcado para unificar. « cultivado » se diz da terra; « educado » é « bem-educado/polido », não « culto »."
+    },
+    "ar": {
+     "forme_imposee": "الثقافة العامة (مثقّف)",
+     "fautif": [
+      "(?:ال)?معرفة\\s*(?:ال)?عامة",
+      "(?:ال)?معلومات\\s*(?:ال)?عامة",
+      "(?:ال)?ثقاف(?:ي|ية)\\s*(?:ال)?عام(?:ة)?(?![؀-ۿ])",
+      "(?:شخص|إنسان)\\s*(?:مهذب|مؤدب|متحضر)"
+     ],
+     "note": "المعرفة العامة est le calque de general knowledge ; l'expression consacrée est الثقافة العامة. مهذب = poli (cultured pris au sens de bien élevé)."
+    },
     "he": {
      "forme_imposee": "ידע כללי ; cultivé = משכיל («הפוך למשכיל באמת»)",
      "fautif": [
@@ -515,6 +935,16 @@
       "(אדם\\s+)?מנומס\\s+(יותר|באמת)"
      ],
      "note": "תרבות כללית = calque de culture ; מתורבת = civilisé / bien élevé ; מידע = information."
+    },
+    "fi": {
+     "forme_imposee": "yleissivistys (adj. : sivistynyt ; « kasvattaa sivistystäsi »)",
+     "fautif": [
+      "\\byleiskulttuuri\\w*",
+      "\\b(skrollaa|skrollail|rullaa|vierit)\\w*.{0,30}kulttuuri\\w*|kulttuuri\\w*.{0,30}(skrollaa|skrollail|rullaa|vierit)\\w*",
+      "\\bkultivoi\\w*",
+      "\\bkulttuuri(nen|sen|sta|seen)\\s+(ihminen|henkilö|tyyppi|persoona)"
+     ],
+     "note": "kulttuuri = les arts (légitime dans les cours), yleistieto = trivia : on ne flagge que les calques (yleiskulttuuri, kultivoitu) et le contexte scroll → culture."
     },
     "et": {
      "forme_imposee": "üldteadmised (adj.: laia silmaringiga)",
@@ -554,6 +984,35 @@
      ],
      "note": "« chiste » y « broma » pueden ser legítimos en prosa (« entre el chiste y el método » en el curso de Dalí): falso positivo aceptado. El último regex atrapa la forma sin tilde."
     },
+    "de": {
+     "forme_imposee": "Anekdoten",
+     "fautif": [
+      "\\bwitze?\\b(?=[^.!?\\n]{0,50}(?:erzähl|teil|lern|kurs|beeindruck|wissen|tisch|freund|abend|party))",
+      "\\blustige[rn]?\\s+geschichten\\b|\\bscherze?\\b|\\bgags?\\b",
+      "\\bfun\\s*facts?\\b|\\bfunfacts?\\b",
+      "\\banecdotes?\\b"
+     ],
+     "note": "„Witz“ im Sinn von Geist (der Witz der Geschichte) kann einen Fehlalarm geben. „Fun Facts“ ist Denglisch und wird zugunsten von „Anekdoten“ markiert."
+    },
+    "pt": {
+     "forme_imposee": "curiosidades (histórias para contar; « Meus amigos me perguntam de onde eu tiro todas essas histórias »)",
+     "fautif": [
+      "\\banedotas?\\b",
+      "\\bpiadas?\\b[^.!?\\n]{0,60}\\b(?:contar|jantar|amigos|conversa|impressionar|festa)\\b|\\b(?:contar|jantar|amigos|conversa|impressionar|festa)\\b[^.!?\\n]{0,60}\\bpiadas?\\b",
+      "\\bhist[oó]rias\\s+(?:engra[cç]adas|divertidas|c[oô]micas)\\b",
+      "\\banecdot\\w*"
+     ],
+     "note": "Falso amigo: no Brasil « anedota » significa sobretudo « piada ». « anedotas de corte » (As Mil e Uma Noites) é aceitável em registro literário: falso positivo aceito. « piada » só se marca perto de contar/jantar/amigos; « Piada ou método? » (Dalí) não é marcado."
+    },
+    "ar": {
+     "forme_imposee": "طرائف",
+     "fautif": [
+      "(?<![؀-ۿ])(?:ال)?نكات(?![؀-ۿ])",
+      "(?<![؀-ۿ])(?:ال)?نكتة(?![؀-ۿ])",
+      "(?:قصص|حكايات)\\s*مضحكة"
+     ],
+     "note": "نكات = blagues. نوادر est toléré comme synonyme."
+    },
     "he": {
      "forme_imposee": "אנקדוטות (sg. אנקדוטה)",
      "fautif": [
@@ -562,6 +1021,15 @@
       "אנקדוט(ה|ות)\\s+מצחיק"
      ],
      "note": "בדיחה = blague ; faux positif possible si un cours cite une vraie blague, accepté."
+    },
+    "fi": {
+     "forme_imposee": "anekdootit (yllättävät faktat)",
+     "fautif": [
+      "\\bvits(i|it|ejä|in|eistä)\\b",
+      "\\bkask(u|ut|uja|un)\\b",
+      "\\bhausk(at|oja|a)\\s+(tarin|jutt)\\w*"
+     ],
+     "note": "vitsi = blague, kasku = histoire drôle."
     },
     "et": {
      "forme_imposee": "põnevad faktid",
@@ -601,6 +1069,36 @@
      ],
      "note": "« serie » en español remite a la televisión o a las matemáticas; para días consecutivos la palabra de uso general es « racha »."
     },
+    "de": {
+     "forme_imposee": "Serie (7-Tage-Serie)",
+     "fautif": [
+      "\\bstreifen\\b(?=[^.!?\\n]{0,40}(?:tage|verlier|halte|brech|lern))|\\b\\d+[- ]?tage[- ]?streifen\\b",
+      "\\bsträhne\\b|\\bglückssträhne\\b",
+      "\\b(?:fernseh|tv)-?serie\\b(?=[^.!?\\n]{0,40}(?:tage|verlier|halte|lern|xp))|\\bstaffel\\b(?=[^.!?\\n]{0,40}(?:tage|verlier|halte|lern|xp))",
+      "\\bsérie\\b|\\bstreaks?\\b"
+     ],
+     "note": "Jours consécutifs. „Streak“ ist als Lehnwort verbreitet (Duolingo), wird aber zur Vereinheitlichung auf „Serie“ markiert. „Fernsehserie“ ist im Kinokurs legitim, deshalb nur in Nähe von Tagen/Verlieren markiert."
+    },
+    "pt": {
+     "forme_imposee": "sequência (Sequência de %d dias; contador: « %d dias seguidos »)",
+     "fautif": [
+      "\\bs[eé]rie\\s+de\\s+\\d+\\s+dias\\b|\\b\\d+\\s+dias\\s+de\\s+s[eé]rie\\b|\\bsua\\s+s[eé]rie\\b|\\bmant(?:er|enha|ém)\\s+(?:a\\s+|sua\\s+)?s[eé]rie\\b",
+      "\\b(?:listra|risca|raia|faixa|linha)\\s+de\\s+\\d+\\s+dias\\b",
+      "\\bstreak\\b",
+      "\\bofensiva\\s+de\\s+\\d+\\s+dias\\b|\\bsua\\s+ofensiva\\b"
+     ],
+     "note": "« série » em português remete à TV ou à matemática; « ofensiva » é o jargão do Duolingo e « listra/risca » o falso sentido de « streak » (listra). « nunca em série » (notificações) não é o streak e não é marcado."
+    },
+    "ar": {
+     "forme_imposee": "سلسلة",
+     "fautif": [
+      "(?<![؀-ۿ])(?:ال)?مسلسل(?:ات)?(?![؀-ۿ])",
+      "ستر[يي]?ك(?![؀-ۿ])",
+      "(?:خط|شريط|خطوط)\\s*(?:من\\s*)?\\d*\\s*(?:ال)?(?:أيام|يوم)",
+      "سلسلة\\s*تلفزيونية"
+     ],
+     "note": "مسلسل = série télévisée ; خط/شريط = ligne/rayure ; ستريك = translittération."
+    },
     "he": {
      "forme_imposee": "רצף (רצף של 5 ימים ; «הרצף שלך»)",
      "fautif": [
@@ -610,6 +1108,16 @@
       "סטריק"
      ],
      "note": "סדרה = série télévisée, פס = rayure, שריטה = éraflure, סטריק = emprunt brut."
+    },
+    "fi": {
+     "forme_imposee": "putki (päiväputki : « 5 päivän putki ») ; combo de quiz → ketju",
+     "fautif": [
+      "\\b\\d+\\s+päivän\\s+sarja\\w*",
+      "\\bpäiväsarja\\w*",
+      "\\bsarja\\w*.{0,20}\\bpäiv\\w*",
+      "\\bstreak\\w*|\\b(raita|raidan|juova|juovan|viiva|viivan)\\b.{0,15}päiv"
+     ],
+     "note": "sarja = série TV, flou ; putki est le terme gamifié établi. Le combo (quiz.combo « Putki x%d ») doit changer de mot pour éviter l'inversion ; faux positif possible si sarja et päivä se croisent dans un cours."
     },
     "et": {
      "forme_imposee": "seeria (päevade seeria)",
@@ -649,6 +1157,35 @@
      ],
      "note": "La app dice hoy « Inès, último año », vago para un lector español. Equivalente del sistema español: 2.º de Bachillerato."
     },
+    "de": {
+     "forme_imposee": "Abiturjahr (Signatur: „Léa, 17, Abiturjahr“)",
+     "fautif": [
+      "\\bsenior-?jahr\\b|\\bsenior\\s+year\\b|\\bseniorenjahr\\b",
+      "\\bältere[sn]?\\s+jahr\\b|\\bletztes\\s+jahr\\b(?=[^.!?\\n]{0,20}(?:\\\"|“|”|$))",
+      "\\bterminale?\\b(?!\\s*(?:station|punkt))",
+      "\\b(?:ist|als)\\s+seniorin?\\b|\\bim\\s+senior\\b"
+     ],
+     "note": "Letztes Gymnasialjahr. „Abschlussklasse“ wäre auch möglich, aber „Abiturjahr“ ist eindeutig. „letztes Jahr“ (= im vergangenen Jahr) wird nur am Ende einer Testimonial-Signatur markiert."
+    },
+    "pt": {
+     "forme_imposee": "3º ano do ensino médio (assinatura de depoimento: « Inès, 3º ano do ensino médio »)",
+     "fautif": [
+      ",\\s*(?:ano\\s+)?s[êe]nior\\b|\\bsenior\\s+year\\b",
+      ",\\s*(?:idos[oa]|ano\\s+mais\\s+velho|pessoa\\s+mais\\s+velha|terminal)\\b",
+      ",\\s*[uú]ltimo\\s+ano\\b",
+      "\\bterminale\\b"
+     ],
+     "note": "O app diz hoje « Inès, último ano » (calco de « senior year »): compreensível mas vago; marcado para unificar em « 3º ano do ensino médio » (ou « terceirão », coloquial)."
+    },
+    "ar": {
+     "forme_imposee": "السنة الأخيرة من الثانوية",
+     "fautif": [
+      "(?:ال)?سنة\\s*(?:ال)?(?:أكبر|كبيرة|كبار|أقدم)",
+      "(?:ال)?عام\\s*(?:ال)?(?:أكبر|كبير|أقدم)",
+      "(?:كبير|كبار)\\s*(?:ال)?سن(?![؀-ۿ])[^.]{0,20}(?:ثانوية|طالب)"
+     ],
+     "note": "senior year → « année plus âgée » / « personne âgée »."
+    },
     "he": {
      "forme_imposee": "י״ב (signature : «אינס, י״ב»)",
      "fautif": [
@@ -658,6 +1195,16 @@
       "(ה)?שנה\\s+(ה)?מבוגרת"
      ],
      "note": "Observé «שנה בוגרת» (année adulte). י״ב = douzième, dernière année de lycée israélien."
+    },
+    "fi": {
+     "forme_imposee": "abiturientti (abi) — « Inès, abiturientti »",
+     "fautif": [
+      "\\bvanhemp(i|aa|ana)\\s+vuo(si|tta|nna)\\b",
+      "\\bseniori\\w*",
+      "\\bterminaali\\w*",
+      ",\\s*(lukion\\s+)?viimei(nen|sen)\\s+vuo(si|den)\\b"
+     ],
+     "note": "vanhempi vuosi = année plus âgée (calque de senior year)."
     },
     "et": {
      "forme_imposee": "12. klass („Inès, 12. klass“)",
@@ -697,6 +1244,36 @@
      ],
      "note": "Los institutos españoles dividen el curso en trimestres (evaluaciones). « semestre » es calco del « term/semester » anglosajón; puede ser legítimo en contexto universitario (falso positivo aceptado). « este término » solo se marca junto a notas / examen, porque « término » = palabra es frecuente en el glosario."
     },
+    "de": {
+     "forme_imposee": "Trimester (Schulabschnitt; wahlweise „Halbjahr“, wenn ans deutsche System angepasst)",
+     "fautif": [
+      "\\bamtszeit\\b[^.!?\\n]{0,60}\\b(?:noten|schule|prüfung|klasse|lernen|lehrer)\\b|\\b(?:noten|schule|prüfung|klasse|lehrer)\\b[^.!?\\n]{0,60}\\bamtszeit\\b",
+      "\\b(?:diesen|im|den|dieser|dieses)\\s+begriff\\b(?=[^.!?\\n]{0,50}(?:noten|schule|prüfung|klasse|lehrer))|\\bbegriff\\b[^.!?\\n]{0,40}\\bnoten\\b",
+      "\\b(?:schul)?quartal\\b(?=[^.!?\\n]{0,50}(?:noten|schule|prüfung|klasse|lehrer))|\\blaufzeit\\b(?=[^.!?\\n]{0,40}(?:noten|schule|klasse))",
+      "\\bterm\\b|\\bsemester\\b(?=[^.!?\\n]{0,50}(?:gymnasium|abitur|schule|klasse\\b))"
+     ],
+     "note": "„Amtszeit“ (politischer Begriff) ist in Politikkursen legitim, daher nur in Schulnähe markiert. „Semester“ gehört zur Hochschule."
+    },
+    "pt": {
+     "forme_imposee": "trimestre (período escolar: « neste trimestre »)",
+     "fautif": [
+      "\\b(?:neste|nesse|no|este|esse|pr[oó]ximo|[uú]ltimo)\\s+(?:mandato|termo|prazo)\\b[^.!?\\n]{0,60}\\b(?:m[eé]dia|notas?|hist[oó]ria|escola|provas?|professor\\w*)\\b",
+      "\\b(?:m[eé]dia|notas?|escola|provas?)\\b[^.!?\\n]{0,60}\\b(?:neste|nesse|no)\\s+(?:mandato|termo|prazo)\\b",
+      "\\btermo\\s+(?:escolar|letivo)\\b|\\bmandato\\s+(?:escolar|letivo)\\b",
+      "\\bschool\\s+term\\b"
+     ],
+     "note": "« mandato » (político) e « termo » são os falsos sentidos de « term »; só se marcam perto de média/notas/escola. « bimestre » é aceitável se a escola do depoimento for brasileira."
+    },
+    "ar": {
+     "forme_imposee": "الفصل الدراسي",
+     "fautif": [
+      "(?:هذا|في|خلال)\\s*(?:ال)?مصطلح(?![؀-ۿ])",
+      "(?:ال)?مصطلح\\s*(?:ال)?دراسي",
+      "(?:مدة|فترة)\\s*(?:ال)?ولاية",
+      "(?:ال)?ولاية\\s*(?:ال)?دراسية"
+     ],
+     "note": "term → مصطلح (terme) ou ولاية (mandat)."
+    },
     "he": {
      "forme_imposee": "סמסטר (témoignage scolaire : «בסמסטר הזה» ; מחצית acceptable)",
      "fautif": [
@@ -706,6 +1283,16 @@
       "(ה)?טרם\\s+(הזה|האחרון)"
      ],
      "note": "Observé קדנציה = mandat politique ; מונח = terme (mot)."
+    },
+    "fi": {
+     "forme_imposee": "lukukausi (période scolaire ; jakso pour un lycée finlandais)",
+     "fautif": [
+      "\\bvuosineljänne\\w*",
+      "\\btoimikau\\w*",
+      "\\bkolmannes\\s*vuo(si|den|tta)\\w*",
+      "\\b(koulu|kurssi|luki)\\w*\\s+termi(n|ä|t|ssä)?\\b"
+     ],
+     "note": "vuosineljännes = trimestre comptable (légitime dans un cours d'économie, faux positif accepté), toimikausi = mandat, termi = terme."
     },
     "et": {
      "forme_imposee": "veerand (sel veerandil)",
@@ -746,6 +1333,36 @@
      ],
      "note": "La app ya usa « Repaso »; la auditoría pide mayúscula sistemática cuando designa la sección. « entrenamiento » puede ser legítimo en un curso de deporte o de IA: falso positivo aceptado."
     },
+    "de": {
+     "forme_imposee": "Training (Tab)",
+     "fautif": [
+      "\\b(?:tab|reiter|registerkarte|bereich)\\s+„?(?:brauch|praxis|praktik|ausübung)\\b|\\bsophia\\s+(?:brauch|praxis|praktik|ausübung)\\b",
+      "\\bpraxis\\b(?=[^.!?\\n]{0,40}(?:wiederhol|kurse|karten|quiz|täglich|freischalt))",
+      "\\bpraktikum\\b|\\bgepflogenheit\\w*\\b",
+      "\\bpractice\\b|\\bentra[iî]nement\\b"
+     ],
+     "note": "Name des Tabs für die verteilte Wiederholung. „Praxis“ (Arztpraxis/Theorie-Praxis), „Brauch“ (Sitte) und „Praktikum“ sind Pivot-Fehler von practice. Siehe termes_produit/entrainement."
+    },
+    "pt": {
+     "forme_imposee": "Revisão (aba de repetição espaçada: « A Revisão », « Desbloquear a Revisão »)",
+     "fautif": [
+      "\\bpr[aá]ticas?\\s+(?:religios|espiritu|cultura|tradicion)\\w*\\b[^.!?\\n]{0,60}\\b(?:perguntas|quiz|Sophia|aba)\\b",
+      "\\b(?:costumes?|h[aá]bitos?)\\s+(?:Sophia|de\\s+revis[aã]o|de\\s+perguntas)\\b",
+      "\\bSophia\\s+(?:Pr[aá]tica|Treino|Treinamento|Practice|Training)\\b",
+      "\\baba\\s+(?:de\\s+)?(?:treino|treinamento|pr[aá]tica|exerc[ií]cios)\\b|\\bmodo\\s+(?:treino|treinamento|pr[aá]tica)\\b"
+     ],
+     "note": "O app já chama a aba de « Revisão » (tab.training, « a Revisão Sophia »), mesmo radical de « revisar »: mantido. « treino/prática » como nome da função são tratados em termes_produit/entrainement; aqui só os falsos sentidos de « practice » (costume, prática religiosa)."
+    },
+    "ar": {
+     "forme_imposee": "التدريب",
+     "fautif": [
+      "ممارس(?:ة|تك|ات)(?![؀-ۿ])",
+      "(?<![؀-ۿ])(?:ال)?طقوس(?![؀-ۿ])",
+      "(?<![؀-ۿ])(?:ال)?شعائر(?![؀-ۿ])",
+      "(?:ال)?تمرين\\s*(?:ال)?(?:ديني|روحي)"
+     ],
+     "note": "practice → ممارسة (coutume/pratique) ou طقوس (pratique religieuse) ; l'onglet s'appelle التدريب."
+    },
     "he": {
      "forme_imposee": "אימון (nom de l'onglet)",
      "fautif": [
@@ -755,6 +1372,16 @@
       "(ה)?פולחן\\s+(היומי|שלך)"
      ],
      "note": "פרקטיקה / מנהג / פולחן = pratique au sens coutume ou rite ; contexte «quotidien / à toi» pour éviter les cours sur les religions."
+    },
+    "fi": {
+     "forme_imposee": "Harjoittelu (onglet ; « siirtyvät Harjoitteluusi »)",
+     "fautif": [
+      "\\bkäytän(tö|nön|töä|töön|töösi|nössä|nöstä)\\w*",
+      "\\btreeni\\w*|\\btreena\\w*",
+      "\\bvalmennu\\w*",
+      "\\bharjoitu(s|kse|st|ksi)\\w*"
+     ],
+     "note": "käytäntö = pratique/coutume, treeni = sport, harjoitus = un exercice isolé (non canon)."
     },
     "et": {
      "forme_imposee": "Harjutamine (vahekaart; „lisanduvad sinu Harjutamisse“)",
@@ -791,6 +1418,36 @@
      ],
      "note": ""
     },
+    "de": {
+     "forme_imposee": "das Angebot (Fehler: „Angebot konnte nicht geladen werden“)",
+     "fautif": [
+      "\\bpaywall\\b|\\bpay-?wall\\b",
+      "\\bbezahlschranke\\b|\\bbezahlmauer\\b|\\bzahlmauer\\b|\\bbezahlwand\\b",
+      "\\bzahlungs?(?:wand|mauer|schranke|sperre)\\b",
+      "\\bbezahlsperre\\b"
+     ],
+     "note": "Interner Monetarisierungsjargon darf nicht sichtbar sein; die französische Quelle sagt „l'offre“."
+    },
+    "pt": {
+     "forme_imposee": "a oferta (tela de assinatura: « Não foi possível carregar a oferta »)",
+     "fautif": [
+      "\\bpaywall\\b",
+      "\\b(?:muro|parede|barreira|port[aã]o)\\s+de\\s+pagamento\\b",
+      "\\btela\\s+de\\s+(?:pagamento|cobran[cç]a)\\b",
+      "\\bpay-?wall\\b"
+     ],
+     "note": "« paywall » é jargão interno; aparece hoje numa string de depuração (« Ver o paywall para desbloquear o curso »). O usuário vê « a oferta »."
+    },
+    "ar": {
+     "forme_imposee": "العرض",
+     "fautif": [
+      "جدار\\s*(?:ال)?دفع",
+      "(?:جدار|حاجز)\\s*(?:ال)?(?:مدفوع|الدفع|مدفوعات)",
+      "نظام\\s*(?:حظر|حجب)\\s*(?:ال)?اشتراك",
+      "(?:حظر|حاجز|حجب)\\s*(?:ال)?اشتراك\\s*غير\\s*(?:ال)?مدفوع"
+     ],
+     "note": "« mur de paiement » mot à mot ; l'écran s'appelle العرض."
+    },
     "he": {
      "forme_imposee": "ההצעה (écran d'abonnement : «לא ניתן לטעון את ההצעה»)",
      "fautif": [
@@ -800,6 +1457,15 @@
       "מחסום\\s+(ה)?תשלום"
      ],
      "note": "Observé חומת תשלום = mur de paiement mot à mot."
+    },
+    "fi": {
+     "forme_imposee": "tarjous (Premium-tarjous ; « Katso tarjous ») — jamais maksumuuri en UI",
+     "fautif": [
+      "\\bpaywall\\w*",
+      "\\bmaksumuur\\w*",
+      "\\bmaksuseinä\\w*"
+     ],
+     "note": "maksumuuri existe dans les clés internes mais ne doit pas apparaître à l'écran."
     },
     "et": {
      "forme_imposee": "pakkumine („Pakkumist ei saa laadida“)",
@@ -839,6 +1505,36 @@
      ],
      "note": "Mensaje: « Sin conexión. Comprueba tu red e inténtalo de nuevo. »"
     },
+    "de": {
+     "forme_imposee": "Keine Verbindung",
+     "fautif": [
+      "\\bkein(?:e|en)?\\s+(?:beziehung|zusammenhang|bezug|anschluss|anbindung|konnektion|verknüpfung)\\b(?=[\\s\\S]{0,80}(?:internet|netz|offline|wlan|erneut|später|versuch))",
+      "\\bmacht\\s+nichts\\b(?=[\\s\\S]{0,60}(?:netz|internet|offline|verbind|wlan))|\\begal\\b(?=[\\s\\S]{0,40}(?:internet|offline|wlan))",
+      "\\bkeine\\s+verbindung\\s+zu\\s+dir\\b|\\bohne\\s+verbindung\\b(?=[^.!?\\n]{0,30}(?:prüf|erneut))",
+      "\\bno\\s+connection\\b|\\bpas\\s+de\\s+connexion\\b"
+     ],
+     "note": "Netzwerkmeldung. „Kein Zusammenhang“ und „Macht nichts“ sind die beobachteten Pivot-Fehler; nur in Netz-Nähe markiert."
+    },
+    "pt": {
+     "forme_imposee": "Sem conexão (« Sem conexão. Verifique sua rede e tente de novo. »)",
+     "fautif": [
+      "\\bsem\\s+(?:liga[cç][aã]o|rela[cç][aã]o|v[ií]nculo)\\b[^.!?\\n]{0,60}\\b(?:rede|internet|tente|verifique|wi-?fi)\\b",
+      "(?<![\\wáàâãéêíóôõúç ])sem\\s+(?:liga[cç][aã]o|rela[cç][aã]o)(?![\\wáàâãéêíóôõúç ])",
+      "\\b(?:n[aã]o\\s+importa|tanto\\s+faz|sem\\s+problema|tudo\\s+bem)\\b[^.!?\\n]{0,40}\\b(?:rede|internet|wi-?fi)\\b",
+      "\\bliga[cç][aã]o\\s+(?:[àa]|com\\s+a)\\s+internet\\b|\\bconex[aã]o\\s+[àa]\\s+internet\\b|\\bcone(?:c[cç]|x)[aã]o\\b(?<!conexão)"
+     ],
+     "note": "« ligação » é a forma de Portugal (e « ligação » = chamada no Brasil); « sem relação » (= sem importância / sem vínculo) é o falso sentido de « no connection ». « Sem internet » é aceitável."
+    },
+    "ar": {
+     "forme_imposee": "لا يوجد اتصال",
+     "fautif": [
+      "لا\\s*(?:يهم|بأس|مشكلة)(?![؀-ۿ])",
+      "(?:لا|بلا|بدون|دون)\\s*(?:علاقة|صلة|رابط)(?![؀-ۿ])",
+      "ليس\\s*(?:مهم|هناك\\s*علاقة)",
+      "لا\\s*(?:توجد|يوجد)\\s*(?:علاقة|صلة|رابط)(?![؀-ۿ])"
+     ],
+     "note": "no connection → « pas grave » ou « sans lien ». « لا علاقة » peut apparaître légitimement dans un cours : faux positif accepté."
+    },
     "he": {
      "forme_imposee": "אין חיבור (réseau : «אין חיבור לאינטרנט»)",
      "fautif": [
@@ -847,6 +1543,16 @@
       "לא\\s+(משנה|חשוב|נורא)\\s*[.!]?\\s*$"
      ],
      "note": "אין קשר / ללא קשר = sans lien ; «ללא קשר ל…» (indépendamment de) est légitime, exclu par la lookahead / fin de chaîne."
+    },
+    "fi": {
+     "forme_imposee": "Ei yhteyttä (Ei verkkoyhteyttä)",
+     "fautif": [
+      "\\bei\\s+väliä\\b",
+      "\\bei\\s+(liitäntää|liitosta|kytkentää)\\b",
+      "\\bei\\s+kirjautumis\\w*",
+      "\\bei\\s+yhteyksiä\\b"
+     ],
+     "note": "ei kirjautumista = pas d'identification (connexion = login) ; ei väliä = peu importe (faux positif rare accepté)."
     },
     "et": {
      "forme_imposee": "Ühendus puudub (Internetiühendus puudub)",
@@ -885,6 +1591,34 @@
      ],
      "note": "« pieza » por habitación es americano y « habitación » suena a dormitorio. La app usa hoy « de la sobremesa », adaptación libre aceptable pero que conviene unificar en « de la sala »."
     },
+    "de": {
+     "forme_imposee": "die interessanteste Person im Raum",
+     "fautif": [
+      "\\binteressanteste[rn]?\\s+(?:person|mensch)\\s+(?:im|des|der|in\\s+der|in\\s+dem|in\\s+diesem|in\\s+dieser)\\s+(?:zimmer|stück|stücks|lokal|halle|saal|teil|münze|wohnung|kammer)\\w*\\b",
+      "\\b(?:person|mensch)\\s+(?:im|des)\\s+(?:stück|stücks|lokal|teil)\\w*\\b",
+      "\\bin\\s+the\\s+room\\b|\\bde\\s+la\\s+pièce\\b",
+      "\\binteressanteste[rn]?\\s+(?:person|mensch)\\s+(?:der|in\\s+der)\\s+(?:gesellschaft|versammlung|runde)\\b"
+     ],
+     "note": "Onboarding-Versprechen. „Person im Zimmer“ allein wird nicht markiert (im Raum/Zimmer ist beides möglich); „Stück“, „Teil“, „Münze“ sind die pièce-Fehler."
+    },
+    "pt": {
+     "forme_imposee": "a pessoa mais interessante da sala",
+     "fautif": [
+      "\\bpessoa\\s+mais\\s+interessante\\s+d[oa]\\s+(?:pe[cç]a|quarto|c[oô]modo|local|espa[cç]o|recinto|ambiente|habita[cç][aã]o|divis[aã]o|aposento)\\b",
+      "\\bmais\\s+interessante\\s+(?:na|no|d[oa])\\s+(?:pe[cç]a|quarto|c[oô]modo|local|recinto|aposento)\\b",
+      "\\bpessoa\\s+mais\\s+interessante\\s+d[oa]\\s+(?:mesa|festa|reuni[aã]o)\\b"
+     ],
+     "note": "« sala » é a tradução certa de « room » aqui. « peça » (teatro / pièce) e « quarto » (dormitório) são os falsos sentidos; « da mesa/da festa » são paráfrases a unificar."
+    },
+    "ar": {
+     "forme_imposee": "أكثر شخص مثير للاهتمام بين الحاضرين",
+     "fautif": [
+      "للاهتمام\\s*في\\s*(?:ال)?(?:غرفة|قاعة|صالة|مكان|فضاء|مساحة|حجرة|قطعة)",
+      "إثارة\\s*في\\s*(?:ال)?(?:غرفة|قاعة|صالة|حجرة|قطعة)",
+      "(?:شخص|إنسان)\\s*في\\s*(?:ال)?(?:غرفة|حجرة|قطعة)(?![؀-ۿ])"
+     ],
+     "note": "in the room → « dans la pièce/salle » ; pièce → قطعة (morceau)."
+    },
     "he": {
      "forme_imposee": "האדם הכי מעניין בחדר",
      "fautif": [
@@ -892,6 +1626,15 @@
       "(האדם|האיש|האישה|הבנאדם)\\s+(ה)?(הכי\\s+)?מעניי[ןנ](ת)?\\S*\\s+(באולם|בחלל|בחלק|במחזה|ביצירה)"
      ],
      "note": "pièce → בחלק (morceau), במחזה (pièce de théâtre), ביצירה (pièce d'art), בחלל (espace), באולם (salle)."
+    },
+    "fi": {
+     "forme_imposee": "porukan kiinnostavin tyyppi (ou : illan kiinnostavin ihminen)",
+     "fautif": [
+      "\\b(salin|tilan|kappaleen|näytelmän|palan|osan)\\s+kiinnostavin",
+      "kiinnostavin\\w*\\s+(ihminen|henkilö|tyyppi)\\s+(salissa|tilassa|kappaleessa|näytelmässä|palassa)",
+      "\\bhuoneen\\s+kiinnostavin|kiinnostavin\\w*\\s+(ihminen|henkilö|tyyppi)\\s+huoneessa"
+     ],
+     "note": "kappale/näytelmä = pièce (morceau/théâtre) ; huoneen kiinnostavin est un anglicisme toléré mais non canon."
     },
     "et": {
      "forme_imposee": "seltskonna kõige huvitavam inimene",
@@ -931,6 +1674,36 @@
      ],
      "note": "« Tómate tu tiempo » es « prends ton temps » (ve despacio), el contrasentido típico."
     },
+    "de": {
+     "forme_imposee": "Hol dir deine Zeit zurück",
+     "fautif": [
+      "\\bnimm\\s+(?:dir\\s+)?(?:deine\\s+)?zeit\\s+(?:zurück|nach\\s+hinten|rückwärts)\\b",
+      "\\bzeit\\s+zurücknehmen\\b|\\bzeit\\s+zurück\\s+nehmen\\b|\\bnimm\\s+(?:die\\s+)?zeit\\s+wieder\\b",
+      "\\b(?:lass\\s+dir|nimm\\s+dir)\\s+zeit\\b(?=[^.!?\\n]{0,50}(?:tiktok|bildschirm|scroll|handy|für\\s+dich\\s+zurück))",
+      "\\btake\\s+your\\s+time\\s+back\\b|\\breprends\\s+du\\s+temps\\b"
+     ],
+     "note": "TikTok-Blocker / Onboarding: „récupère ton temps“. „Nimm dir Zeit“ allein (= lass dir Zeit) ist der falsche Sinn und wird nur in Bildschirmzeit-Nähe markiert."
+    },
+    "pt": {
+     "forme_imposee": "Recupere seu tempo (« Você está retomando o controle do seu tempo »)",
+     "fautif": [
+      "\\b(?:pegue|leve|tome|tire|pega|leva|toma)\\s+(?:o\\s+)?(?:seu|teu)\\s+tempo\\s+(?:de\\s+volta|para\\s+tr[aá]s)\\b",
+      "\\b(?:tome|leve|toma|leva)\\s+(?:o\\s+)?(?:seu|teu)\\s+tempo\\b(?!\\s+(?:de\\s+volta|livre))",
+      "\\btempo\\s+para\\s+tr[aá]s\\b",
+      "\\btake\\s+your\\s+time\\b"
+     ],
+     "note": "« Tome seu tempo » significa « sem pressa » (take your time), não « recupere seu tempo »; « pegue seu tempo de volta » é calco."
+    },
+    "ar": {
+     "forme_imposee": "استعد وقتك لنفسك",
+     "fautif": [
+      "خذ\\s*وقتك\\s*(?:إلى\\s*)?(?:ال)?(?:خلف|وراء)",
+      "خذ\\s*وقتك\\s*(?:للخلف|للوراء|مرة\\s*أخرى)",
+      "استرجع\\s*وقتك\\s*(?:إلى\\s*)?(?:ال)?(?:خلف|وراء)",
+      "خذ\\s*وقتك(?![؀-ۿ])"
+     ],
+     "note": "« خذ وقتك » = prends ton temps (pas de hâte), contresens ; « للخلف » = calque de back."
+    },
     "he": {
      "forme_imposee": "קח בחזרה את הזמן שלך (ou neutre : «הזמן שלך חוזר אליך»)",
      "fautif": [
@@ -939,6 +1712,16 @@
       "הזמן\\s+שלך\\s+(אחורה|לאחור)"
      ],
      "note": "«קח את הזמן שלך» seul = prends ton temps (ne te presse pas) ; «אחורה» = vers l'arrière, calque."
+    },
+    "fi": {
+     "forme_imposee": "Ota aikasi takaisin (ou : Ota aikaa itsellesi)",
+     "fautif": [
+      "\\baika\\w*\\s+taaksepäin\\b",
+      "\\bota\\s+(aikaa|aikasi)\\s+taakse\\w*",
+      "\\bota\\s+rauhassa\\b",
+      "\\bota\\s+aikasi\\b(?!\\s+(takaisin|haltuu|hallintaa))"
+     ],
+     "note": "ota aikasi / ota rauhassa = prends ton temps (sans hâte) : contresens."
     },
     "et": {
      "forme_imposee": "Võta oma aeg tagasi",
@@ -979,6 +1762,36 @@
      ],
      "note": "Gesto táctil: « deslizar » (desliza hacia arriba / a la derecha). « deslízate » sería « deslízate tú »."
     },
+    "de": {
+     "forme_imposee": "Wische zum Entdecken",
+     "fautif": [
+      "\\bgleite?\\b(?=[^.!?\\n]{0,30}(?:entdeck|weiter|links|rechts|um\\s+zu))|\\bgleiten\\s+(?:zum|um)\\b",
+      "\\brutsch(?:e|en)\\b(?=[^.!?\\n]{0,30}(?:entdeck|weiter|links|rechts|um\\s+zu))",
+      "\\babwischen\\b|\\bwische?\\s+ab\\b|\\bwisch\\s+(?:es\\s+)?weg\\b|\\bwegwischen\\b(?=[^.!?\\n]{0,30}entdeck)",
+      "\\bswipe[nst]?\\b|\\bglisse\\b"
+     ],
+     "note": "Wischgeste. „Streichen“ ist Apples offizieller Begriff und wird nicht markiert, soll aber nicht neben „wischen“ koexistieren. „abwischen“ (wipe) und „gleiten/rutschen“ sind Pivot-Fehler."
+    },
+    "pt": {
+     "forme_imposee": "Deslize para descobrir (gesto: « Deslize para cima », « Deslize ← »)",
+     "fautif": [
+      "\\b(?:limpe|esfregue|escorregue|derrape|varra|passe\\s+um\\s+pano)\\b",
+      "\\bdeslise\\b|\\bdezlize\\b|\\bdesliza\\s+para\\b",
+      "\\bswipe\\b",
+      "\\barraste\\s+para\\s+(?:descobrir|ver\\s+(?:mais|todos)|mudar\\s+de\\s+curso)\\b"
+     ],
+     "note": "« deslizar » é o verbo padrão do gesto no Brasil. « arrastar » é legítimo para arrastar itens (quiz cronológico: « toque ou arraste ») e só se marca junto a « descobrir / ver mais »."
+    },
+    "ar": {
+     "forme_imposee": "اسحب لتكتشف",
+     "fautif": [
+      "امسح\\s*(?:ل|لت|لكي|للـ)",
+      "(?:انزلق|انزلاق|تزلج|زلّ?ق)(?![؀-ۿ])",
+      "سواي?ب(?![؀-ۿ])",
+      "(?:مسح|امسح)\\s*(?:الشاشة|لاكتشاف)"
+     ],
+     "note": "swipe → مسح (essuyer) ; glisser → انزلق (glissade) ; سوايب = mot inventé."
+    },
     "he": {
      "forme_imposee": "החלק כדי לגלות (geste : להחליק, החלקה)",
      "fautif": [
@@ -988,6 +1801,16 @@
       "(משוך|גרור)\\s+כדי\\s+לגלות"
      ],
      "note": "נגב = essuyer ; גלוש = surfer ; סווייפ = emprunt brut."
+    },
+    "fi": {
+     "forme_imposee": "Pyyhkäise ja tutustu (bouton : PYYHKÄISE JA TUTUSTU)",
+     "fautif": [
+      "\\bpyyhävä\\b|\\blöydäksi\\b",
+      "\\bpyyhi\\b",
+      "\\bliu['’]?u\\w*\\b|\\bliuku\\w*",
+      "\\bluista\\w*"
+     ],
+     "note": "pyyhi = essuyer, liu'u = glisser (sur la glace) ; pyyhävä/löydäksi sont des non-mots."
     },
     "et": {
      "forme_imposee": "Libista, et avastada",
@@ -1028,6 +1851,36 @@
      ],
      "note": "La auditoría vio « Aquí está tu perfil » y « Así empezó todo / Así cambió el impresionismo » al final de introducciones. El tercer regex puede marcar conclusiones legítimas en pasado (« así nació la radiología »): falso positivo aceptado."
     },
+    "de": {
+     "forme_imposee": "Regel: „So funktioniert's“ / „So geht's“ / „Das erwartet dich“, nie die Lehnübersetzung „Hier ist, wie …“. Beispiele: Voici comment ça marche → So funktioniert's; Voici ce que tu vas apprendre → Das lernst du.",
+     "fautif": [
+      "\\bhier\\s+ist,?\\s+(?:wie|was|warum|wo|wer|wann|weshalb)\\b",
+      "\\bhier\\s+(?:ist|sind)\\s+(?:die\\s+)?(?:art\\s+und\\s+weise|funktionsweise|vorgehensweise|methode)\\b",
+      "\\bdas\\s+ist,?\\s+wie\\b|\\bso\\s+ist\\s+es,?\\s+wie\\b|\\bhier\\s+kommt,?\\s+wie\\b",
+      "\\bhere\\s+is\\s+how\\b|\\bvoici\\s+comment\\b"
+     ],
+     "note": "Kalk aus dem Englischen „Here is how“; das Deutsche verlangt „So …“ mit Verbzweitstellung."
+    },
+    "pt": {
+     "forme_imposee": "Regra: « Veja como… » / « Veja o que… » / « Este é o seu… » (Este é o seu perfil; Veja como tudo começou). Nunca o calco « Aqui está seu… » nem « Aqui é como… »; evitar « Eis » (tom literário) e uma frase no passado que soe como conclusão (« Foi assim que tudo começou »).",
+     "fautif": [
+      "\\baqui\\s+est(?:[aá]|[aã]o)\\s+(?:o\\s+|a\\s+|os\\s+|as\\s+)?(?:seu|sua|seus|suas|teu|tua|como|o\\s+que|um|uma)\\b",
+      "\\baqui\\s+(?:[eé]|est[aá])\\s+(?:como|por\\s+que|o\\s+que|onde)\\b",
+      "\\bfoi\\s+assim\\s+que\\s+(?:tudo\\s+)?(?:come[cç]ou|nasceu|mudou|surgiu)\\b",
+      "\\beis\\s+(?:como|o\\s+que|por\\s+que|o\\s+porqu[eê]|aqui)\\b"
+     ],
+     "note": "O app diz hoje « Aqui está seu programa » e « Aqui está seu perfil » (calco de « here is »), enquanto « {name}, este é o seu perfil » já está certo. « Eis » aparece 30 vezes nas descrições: correto mas formal demais para a voz do app; « Ser ou não ser, eis a questão » não é marcado. O terceiro regex pode pegar conclusões legítimas no passado: falso positivo aceito."
+    },
+    "ar": {
+     "forme_imposee": "إليك كيف… / إليك ما… (إليك كيف تعمل التجربة المجانية ؛ إليك ما ستحصل عليه)",
+     "fautif": [
+      "هنا\\s*(?:هو|هي)?\\s*(?:كيف|كيفية)",
+      "ها\\s*هو\\s*كيف",
+      "هنا\\s*(?:هو|هي)\\s*ما(?![؀-ۿ])",
+      "إليك\\s*كيفية"
+     ],
+     "note": "« هنا كيف » est le calque de here is how ; « إليك كيفية » nominalise. Formule imposée : إليك + proposition conjuguée."
+    },
     "he": {
      "forme_imposee": "Règle : «הנה איך…» / «הנה מה ש…» ou «כך…» (הנה איך זה עובד ; הנה מה שתלמד) ; jamais «כאן הוא איך» ni nominalisation ni להלן",
      "fautif": [
@@ -1036,6 +1889,15 @@
       "להלן\\s+(ה|איך|כיצד|מה|למה)"
      ],
      "note": "להלן = ci-après, registre administratif contraire à la voix du produit (observé «להלן הלידים»)."
+    },
+    "fi": {
+     "forme_imposee": "« Näin … » / « Tältä … » : Voici comment ça marche → Näin se toimii ; Voici ce que tu vas apprendre → Tämän opit",
+     "fautif": [
+      "\\btäss?ä\\s+(on\\s+)?(miten|kuinka)\\b",
+      "\\btäällä\\s+(on\\s+)?(miten|kuinka)\\b",
+      "\\btässä\\s+(on\\s+)?se,?\\s+(mitä|miten|kuinka)\\b"
+     ],
+     "note": "« Tässä on miten » est le calque de here is how."
     },
     "et": {
      "forme_imposee": "Reegel: „Voici comment / ce que“ → „Nii …“ / „Vaata, kuidas …“ / „Seda sa õpid“, mitte „Siin on, kuidas“. Nt: „Voici comment ça marche“ → „Nii see töötab“; „Voici ce que tu vas apprendre“ → „Seda sa õpid“.",
@@ -1075,6 +1937,36 @@
      ],
      "note": "No se marca « nosotros » suelto: en los cursos aparece legítimamente (« han llegado hasta nosotros ») y la interfaz usa la voz de la app (« Te avisaremos »)."
     },
+    "de": {
+     "forme_imposee": "Regel: unpersönliches „man“ oder Passiv, nie „wir“ für das französische „on“. Beispiele: On veut le tuer → Man will ihn töten; On y vit en tribus → Dort lebt man in Stämmen.",
+     "fautif": [
+      "\\bwir\\s+(?:wollen|wollten)\\s+(?:ihn|sie|es)\\s+(?:töten|umbringen|loswerden|beseitigen)\\b",
+      "\\bwir\\s+(?:leben|lebten)\\s+(?:dort|da|hier)?\\s*in\\s+(?:stämmen|clans|sippen|höhlen|dörfern)\\b",
+      "\\b(?:dort|damals|hier|im\\s+mittelalter|in\\s+der\\s+antike|im\\s+\\d+\\.\\s+jahrhundert)\\s+(?:lebten|lebte|sagten|glaubten|wussten|nannten|bauten|beteten|aßen|kämpften)\\s+wir\\b",
+      "\\bwir\\s+(?:sagten|glaubten|wussten|nannten|bauten|beteten|aßen|kämpften)\\s+(?:damals|im\\s+mittelalter|in\\s+der\\s+antike|im\\s+\\d+\\.\\s+jahrhundert|in\\s+rom|in\\s+athen)\\b"
+     ],
+     "note": "Bloßes „wir“ wird nicht markiert: es ist in Kursen („wie wir heute wissen“) und in der App-Stimme („Wir erinnern dich“) legitim."
+    },
+    "pt": {
+     "forme_imposee": "Regra: impessoal ou 3ª pessoa: « Querem matá-lo » / « Ele é perseguido » ; « Vive-se em tribos » / « Vivem em tribos ». Nunca « nós » (queremos matá-lo, vivemos em tribos) para o « on » francês.",
+     "fautif": [
+      "\\b(?:n[oó]s\\s+)?(?:o|a)\\s+queremos\\s+matar\\b|\\bqueremos\\s+mat[áa]-l[oa]s?\\b|\\bqueremos\\s+(?:a\\s+)?morte\\s+dele\\b",
+      "\\bvivemos\\s+em\\s+tribos\\b|\\bvivemos\\s+l[aá]\\s+em\\s+tribos\\b",
+      "\\bn[oó]s\\s+(?:o|a|os|as|lhe|lhes)?\\s*(?:queremos|vivemos|dizemos|sabemos|vemos|achamos|acreditamos|consideramos)\\s+(?:que\\s+)?(?:ele|ela|Muhammad|Maom[eé]|o\\s+profeta)\\b",
+      "\\b(?:a\\s+gente)\\s+(?:quer|queria)\\s+mat[áa]-l[oa]\\b"
+     ],
+     "note": "Não se marca « nós/sabemos/vivemos » soltos: aparecem legitimamente nos cursos (« sabemos muito pouco sobre a Mona Lisa », « Vivemos a sexta extinção ») e na voz do app. O curso do islã já diz « Vive-se em tribos » e « onde o queriam morto » (correto)."
+    },
+    "ar": {
+     "forme_imposee": "مبني للمجهول أو «كان الناس / كان هناك مَن»، لا «نحن» : «كان هناك من يريد قتله»، «كان الناس يعيشون في قبائل»",
+     "fautif": [
+      "(?<![؀-ۿ])نحن(?![؀-ۿ])",
+      "(?<![؀-ۿ])نريد\\s*(?:قتله|أن)",
+      "(?<![؀-ۿ])نعيش\\s*(?:هناك|فيها)",
+      "(?<![؀-ۿ])نقترض\\s*ل"
+     ],
+     "note": "Le pronom explicite نحن est presque toujours un calque de we ; faux positif rare dans un témoignage à la 1re pers. du pluriel, accepté."
+    },
     "he": {
      "forme_imposee": "Règle : «on» → 3e pers. pluriel sans sujet ou passif (רוצים להרוג אותו ; חיים שם בשבטים ; לזה קוראים מקלטי מס) ; jamais אנחנו / אנו",
      "fautif": [
@@ -1082,6 +1974,15 @@
       "(^|\\s)אנו\\s"
      ],
      "note": "אנחנו est légitime dans les témoignages et le texte produit (nous, l'équipe) ; la regex cible les verbes vus dans les cours. אנו est de toute façon trop formel."
+    },
+    "fi": {
+     "forme_imposee": "passif (-taan/-tiin) ou tournure générique, jamais me/-mme : On veut le tuer → Häntä halutaan tappaa ; On y vit en tribus → Siellä elettiin heimoissa",
+     "fautif": [
+      "\\b(elä|asu|halua|puhu|kutsu|sano|näe|tiedä|usko|löydä|voi|teke|tapa|pidä|käytä|ajattele)\\w{0,4}mme\\b",
+      "\\bme\\s+\\w+mme\\b",
+      "\\bmeidän\\b.{0,20}(heimo|mekka|muhammad|baudelaire|roosevelt)"
+     ],
+     "note": "Faux positifs attendus en UI, où « nous » = l'app (käytämme, kysymme) ; à vérifier surtout dans les cours et le catalogue."
     },
     "et": {
      "forme_imposee": "Reegel: umbisikuline „on“ → umbisikuline tegumood (-takse/-ti) või üldisikuline lause, mitte „me/meie“. Nt: „On veut le tuer“ → „Teda tahetakse tappa“; „On y vit en tribus“ → „Seal elatakse hõimudena“.",
@@ -1121,6 +2022,36 @@
      ],
      "note": "La auditoría señala « en 622 », « hacia 570 », « en 610 » sin artículo: correcto pero huele a traducción (55 casos en los cursos). También se vio el artefacto « 390 a.C. BC »."
     },
+    "de": {
+     "forme_imposee": "Regel: Jahreszahl ohne Präposition oder mit „im Jahr“: „622 zieht Mohammed nach Medina“, „im Jahr 1857“; nie „in 622“ (Anglizismus). „Vers 630“ → „um 630“. Vor Christus: „399 v. Chr.“",
+     "fautif": [
+      "\\bin\\s+[1-9]\\d{2,3}\\b(?!\\s*(?:km|m\\b|cm\\b|mm\\b|kg|g\\b|%|prozent|jahren|millionen|milliarden|tausend|personen|tagen|stunden|minuten|sekunden|metern|kilometern|litern|gramm|kilo|euro|dollar|punkten|seiten|versen|gedichten|kapiteln|sprachen|arten|einwohnern|soldaten|männern|frauen|kindern|schiffen|flugzeugen|grad|tonnen|exemplaren|werken|bildern|wörtern|buchstaben|büchern|wochen|monaten|jahrhunderten|generationen|hektar|stimmen|sitzen|toten|opfern|fällen|volt|watt|ampere|hertz|dezibel|kalorien|knoten|fuß|zoll|bar\\b|pascal|kelvin|ppm|teilen|folgen|schritten|ländern|städten|staaten|bänden|zeilen|strophen|von\\b|bis\\b|\\d|[.,]\\d))",
+      "\\b\\d{3,4}\\s*(?:AD|BC|CE|BCE)\\b|\\b(?:v|n)\\.?\\s?Chr\\.?\\s*(?:BC|AD)\\b",
+      "\\bin\\s+(?:der\\s+stadt|dem\\s+film|dem\\s+jahre?)\\s+[1-9]\\d{2,3}\\b",
+      "\\bgegen\\s+[1-9]\\d{2,3}\\b(?!\\s*(?:uhr|%|prozent|[.,]\\d|\\d))(?!\\s+(?-i:[A-ZÄÖÜ])[a-zäöüß]{2,})"
+     ],
+     "note": "„in 1857“ ist der häufigste Anglizismus in maschinell übersetzten deutschen Texten. Regex 1 lässt Mengenangaben (in 100 Jahren, in 10 Minuten) aus; „in 1984“ als Romantitel ohne Anführungszeichen gibt einen akzeptierten Fehlalarm. Regex 4 trifft „gegen 630“ (vers → gegen) außer vor einem Substantiv."
+    },
+    "pt": {
+     "forme_imposee": "Regra: ano sem artigo: « Em 622 », « em 1857 », « por volta de 630 » / « cerca de 630 » (ou « no ano de 622 »); eras: « 399 a.C. », « 79 d.C. » (com pontos, sem espaço). Nunca « no 622 », « em o 622 », « 622 AC/DC/BC/AD ».",
+     "fautif": [
+      "\\b(?:no|em\\s+o|n[oa])\\s+[1-9]\\d{2}\\b(?!\\s*(?:a\\.?\\s?C|d\\.?\\s?C|km|m\\b|cm\\b|mm\\b|kg\\b|g\\b|%|anos|milh[oõ]es|mil\\b|pessoas|dias|horas|vezes|pa[ií]ses|metros|quil[oô]metros|litros|milhas|gramas|quilos|reais|euros|d[oó]lares|pontos|p[aá]ginas|versos|poemas|cap[ií]tulos|idiomas|l[ií]nguas|esp[eé]cies|habitantes|soldados|homens|mulheres|crian[cç]as|navios|avi[oõ]es|minutos|segundos|graus|toneladas|unidades|exemplares|obras|quadros|palavras|letras|livros|semanas|meses|s[eé]culos|gera[cç][oõ]es|hectares|votos|mortos|v[ií]timas|casos|volts|watts|hertz|decib[eé]is|calorias|n[oó]s|p[eé]s|polegadas|da\\s+Sedgwick|\\d|[.,]\\d))",
+      "\\b[1-9]\\d{2,3}\\s*(?:AC|DC|BC|AD|BCE|CE|AEC)\\b",
+      "\\b[ad]\\.\\s?C\\.?\\s*(?:BC|AD)\\b|\\b[ad]\\.\\s+C\\.",
+      "\\b(?:na\\s+cidade|no\\s+filme|na\\s+pel[ií]cula)\\s+(?:[1-9]\\d{2}|1[0-9]{3})\\b"
+     ],
+     "note": "Em português o ano vai sem artigo (« em 622 »), ao contrário do espanhol: o risco são o artigo « no 622 », as eras em inglês (« 550 AD » numa referência bibliográfica em inglês do curso 307: falso positivo aceito) e « a. C. » com espaço (estilo espanhol). « no 1520 da Sedgwick Avenue » (endereço) é excluído."
+    },
+    "ar": {
+     "forme_imposee": "«في عام 622» / «نحو عام 630» : أرقام لاتينية مسبوقة بكلمة «عام» (أو «سنة»)، لا «في 622» مجردة ولا أرقام هندية",
+     "fautif": [
+      "(?<![؀-ۿ])في\\s+\\d{3,4}(?![\\d])",
+      "(?:حوالي|نحو|قرابة)\\s+\\d{3,4}(?![\\d])",
+      "(?:مدينة|فيلم|بلدة)\\s+\\d{3,4}(?![\\d])",
+      "(?:عام|سنة)\\s*[٠-٩]+"
+     ],
+     "note": "« في 622 » sans عام est le calque de in 622 ; les chiffres arabo-indiens (٦٢٢) violent la règle des chiffres latins."
+    },
     "he": {
      "forme_imposee": "Règle : «en 622» → ב-622 (ב + trait d'union + année ; בשנת 622 acceptable) ; «vers 630» → בסביבות 630 ; décennie → שנות ה-80",
      "fautif": [
@@ -1130,6 +2061,15 @@
       "(ה)?שנים\\s+\\*{0,2}\\d{3}0(?!\\d)"
      ],
      "note": "ב622 collé est l'artefact le plus fréquent ; «בסוף השנים 1980» observé → שנות ה-80."
+    },
+    "fi": {
+     "forme_imposee": "Vuonna 622 / noin vuonna 630 (n. 630) ; jamais de suffixe casuel collé à l'année (622:ssa) ni de faux lieu (Julkaisussa 1857)",
+     "fautif": [
+      "\\b(julkaisussa|asiassa|alueella|mallissa|kaupungissa|elokuvassa|tapauksessa|vuodessa|numerossa)\\s+\\**\\d{3,4}\\b",
+      "\\d{3,4}\\**:(ss[aä]|st[aä]|ll[aä]|lt[aä]|lle|n|t[aä]|een|ksi)\\b",
+      "\\bvuode(ssa|lta|lle)\\s+\\**\\d{3,4}\\b"
+     ],
+     "note": "Vise les motifs systématiques de l'audit (Julkaisussa/Asiassa/Alueella/Mallissa + année, 624:ssä) ; un nombre ordinaire décliné (1 000:n) peut donner un faux positif."
     },
     "et": {
      "forme_imposee": "Reegel: „En 622“ → „aastal 622“ või „622. aastal“ (punkt + aastal); „Vers 630“ → „umbes 630. aastal“. Mitte „linnas 622“, „filmis 1947“, „ajakirjas 1866“, „kohtuasjas 1857“, „saates 29“, „622-s“, „610-l“.",
@@ -1170,6 +2110,36 @@
      ],
      "note": "El español no tiene el desfase de « 700-tallet »; el riesgo es el ordinal con punto o el romano antepuesto."
     },
+    "de": {
+     "forme_imposee": "Regel: Ordnungszahl mit Punkt: „7. Jahrhundert“ (601–700), „14.–16. Jahrhundert“; keine römischen Zahlen (VII. Jahrhundert), kein „7th century“, keine Verschiebung („die 700er“).",
+     "fautif": [
+      "\\b(?:I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|XIII|XIV|XV|XVI|XVII|XVIII|XIX|XX|XXI)(?:\\.|e|er|ème|th)?\\s+(?:jahrhundert|jh\\.)",
+      "\\b\\d{1,2}(?:st|nd|rd|th)\\s+century\\b|\\bcentury\\b|\\bsiècle\\b",
+      "\\b\\d{1,2}\\s+jahrhundert\\b|\\b\\d{1,2}(?:te[sn]?|ter)\\s+jahrhundert\\b",
+      "\\b(?:im|in\\s+den|die|der)\\s+\\d{1,2}00ern?\\b"
+     ],
+     "note": "Das Deutsche kennt die skandinavische Verschiebung (700-tallet) nicht; die Risiken sind römische Zahlen aus dem Französischen (VIIe → VII.) und die fehlende Punktsetzung („7 Jahrhundert“)."
+    },
+    "pt": {
+     "forme_imposee": "Regra: século em algarismos romanos depois do substantivo: « século VII » (601-700), « séculos XIV-XVI », abreviação « séc. VII ». Nunca « 7º século », « século 7 », « VII século », « século sétimo », « anos 700 » para o século VII.",
+     "fautif": [
+      "\\b\\d{1,2}\\s?[ºo°.]?\\s*s[eé]culo\\b|\\b\\d{1,2}(?:st|nd|rd|th)\\s+century\\b",
+      "\\bs[eé]c(?:ulo|\\.)\\s+\\d{1,2}\\b",
+      "\\b(?:I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|XIII|XIV|XV|XVI|XVII|XVIII|XIX|XX|XXI)\\s+s[eé]culo\\b",
+      "\\bs[eé]culo\\s+(?:primeiro|segundo|terceiro|quarto|quinto|sexto|s[eé]timo|oitavo|nono|d[eé]cimo|vig[eé]simo)\\b"
+     ],
+     "note": "A edição brasileira já escreve « século VII » em toda parte. Alguns jornais brasileiros usam « século 7 » (arábico): marcado para unificar no romano, que é a forma escolar."
+    },
+    "ar": {
+     "forme_imposee": "«القرن السابع» (601–700) : الترتيب بالكلمات بعد «القرن»، لا أرقام رومانية ولا «1920s» : «في القرن السابع الميلادي»، «القرن التاسع عشر»",
+     "fautif": [
+      "القرن\\s*(?:الـ?\\s*)?\\d{1,2}",
+      "القرن\\s*[IVXivx]+(?![a-z])",
+      "(?<![\\w])\\d{3,4}s(?![\\w])",
+      "\\d{1,2}(?:th|st|nd|rd)\\s*(?:القرن|قرن)"
+     ],
+     "note": "Pas de décalage possible en arabe (السابع = 7e) ; on signale les formes chiffrées et les décennies à l'anglaise (1920s → العشرينيات)."
+    },
     "he": {
      "forme_imposee": "Règle : «VIIe siècle» → המאה ה-7 (ordinal avec ה- et chiffre arabe) ou המאה השביעית ; le chiffre reste le numéro du siècle, jamais romain, jamais «מאה 7» ni «שנות ה-600»",
      "fautif": [
@@ -1179,6 +2149,16 @@
       "שנות\\s+ה-?\\d{3}(?!\\d)"
      ],
      "note": "שנות ה-600 = «les années 600», décalage de lecture ; les chiffres romains ne s'emploient pas en hébreu."
+    },
+    "fi": {
+     "forme_imposee": "600-luvulla (VIIe siècle = 601–700 ; 1800-luvulla = XIXe) ; jamais de décalage (700-luvulla = VIIIe) ni de chiffres romains",
+     "fautif": [
+      "\\b(?-i:[IVX]+)\\.?\\s*vuosisa\\w*",
+      "\\b\\d{1,2}\\.\\s*luvulla\\b",
+      "\\b\\d{1,2}\\s*(th|st|nd|rd)\\s*(century|vuosisa)\\w*",
+      "700-luvu\\w*.{0,60}(arabia|muhammad|islam|mekka)|(arabia|muhammad|islam|mekka)\\w*.{0,60}700-luvu\\w*"
+     ],
+     "note": "Le décalage d'un siècle (7th → 700-luku) ne se détecte pas génériquement : seul le cas du cours sur l'islam est couvert, le reste se relit à la main."
     },
     "et": {
      "forme_imposee": "Reegel: VIIe siècle → „7. sajand“ / „7. sajandil“ (araabia number + punkt, nihketa). Mitte „700ndad“ (= 8. sajand), „7th sajand“, „7ndal sajandil“.",
@@ -1218,6 +2198,35 @@
      ],
      "note": "« bazo » solo se marca en la misma frase que Baudelaire / ideal / melancolía, porque el órgano es legítimo en anatomía. « esplín » (adaptación RAE) se marca para unificar en « spleen »."
     },
+    "de": {
+     "forme_imposee": "Spleen (Schwermut, Weltschmerz); Abteilung „Spleen und Ideal“",
+     "fautif": [
+      "\\bmilz\\b(?=[^.!?\\n]{0,80}(?:baudelaire|ideal|paris|gedicht|melanchol|schwermut|langeweile))|(?:baudelaire|ideal|gedicht)[^.!?\\n]{0,80}\\bmilz\\b",
+      "\\bmilz\\s+(?:von|aus)\\s+paris\\b|\\bpariser\\s+milz\\b|\\bmilz\\s+und\\s+ideal\\b",
+      "\\b(?:marotte|schrulle|macke|tick|laune|spleenig\\w*)\\b(?=[^.!?\\n]{0,60}(?:baudelaire|ideal|langeweile|schwermut|melanchol))",
+      "\\bspleen\\s+und\\s+ideale\\b|\\bspleen\\s+&\\s+ideal\\b|\\bspleen\\s+et\\s+idéal\\b"
+     ],
+     "note": "Doppelte Falle: Englisch „spleen“ = Milz, Deutsch „Spleen“ = Marotte. Im Baudelaire-Kontext bleibt „Spleen“ als Fachwort mit Erklärung (Schwermut). „Milz“ ist im Anatomiekurs legitim und wird nur in Baudelaire-Nähe markiert."
+    },
+    "pt": {
+     "forme_imposee": "spleen (em itálico; seção « Spleen e Ideal »; « O Spleen de Paris »)",
+     "fautif": [
+      "\\bba[cç]o\\b[^.!?\\n]{0,70}\\b(?:Baudelaire|ideal|melancol\\w*|poe\\w*|Paris|t[eé]dio)\\b|\\b(?:Baudelaire|ideal|melancol\\w*|poe\\w*|Paris|t[eé]dio)\\b[^.!?\\n]{0,70}\\bba[cç]o\\b",
+      "\\bba[cç]o\\s+e\\s+ideal\\b|\\b[oa]\\s+ba[cç]o\\s+de\\s+paris\\b",
+      "\\besplim\\b|\\besplin\\b|\\bspl[ií]n\\b"
+     ],
+     "note": "« baço » (órgão) só se marca na mesma frase que Baudelaire/ideal/melancolia, porque é legítimo em anatomia. « esplim » (aportuguesamento do Houaiss) é marcado para unificar em « spleen »."
+    },
+    "ar": {
+     "forme_imposee": "السأم (Spleen) ؛ عنوان القسم : «سأم ومثال»",
+     "fautif": [
+      "(?:ال)?طحال\\s*و\\s*(?:ال)?مثال(?:ية)?",
+      "(?:ال)?طحال\\s*والمثال(?:ية)?",
+      "طحال\\s*باريس",
+      "(?<![؀-ۿ])(?:ال)?طحال(?![؀-ۿ])"
+     ],
+     "note": "الطحال = la rate (organe), observé dans l'audit. Faux positif accepté dans un éventuel cours d'anatomie."
+    },
     "he": {
      "forme_imposee": "ספלין (section «ספלין ואידיאל» ; «הספלין הבודלרי»)",
      "fautif": [
@@ -1226,11 +2235,20 @@
      ],
      "note": "טחול = la rate ; légitime seulement dans un cours de biologie, faux positif accepté."
     },
+    "fi": {
+     "forme_imposee": "spleen (mot conservé ; section « Spleen ja ihanne » ; baudelairelainen spleen)",
+     "fautif": [
+      "\\bperna\\w*.{0,60}(baudelair|ihanne|runo|melankol|pariisi)",
+      "(baudelair\\w*|ihanne|runo\\w*|pariisi\\w*).{0,60}\\bperna\\w*",
+      "\\bperna\\s+ja\\s+ihanne"
+     ],
+     "note": "perna = la rate ; légitime dans un cours de biologie, d'où le contexte."
+    },
     "et": {
      "forme_imposee": "spliin („Spliin ja ideaal“; Baudelaire’i spliin)",
      "fautif": [
-      "\\bpõrn\\w*(?=.{0,60}(ideaal|baudelaire|pariis|luule))",
-      "(?:ideaal|baudelaire)\\w*.{0,60}\\bpõrn\\w*",
+      "\\bpõrn\\w*(?=.{0,60}(ideaal|baudelair|pariis|luule))",
+      "(?:ideaal|baudelair)\\w*.{0,60}\\bpõrn\\w*",
       "[„\\\"“]põrn\\w*[“\\\"”]",
       "\\bspleen\\w*"
      ],
@@ -1264,6 +2282,36 @@
      ],
      "note": "El galicismo « flâneur » es de uso corriente en crítica literaria española; se conserva con circunflejo y una glosa (« paseante »). « paseador » es quien pasea perros."
     },
+    "de": {
+     "forme_imposee": "Flaneur (der Flaneur; ohne Zirkumflex)",
+     "fautif": [
+      "\\bkinderwagen\\b|\\bbuggys?\\b|\\bkindersportwagen\\b",
+      "\\b(?:karren|kutsche|schubkarre|wagen)\\b(?=[^.!?\\n]{0,60}(?:baudelaire|boulevard|passagen|großstadt|beobacht|modern))",
+      "\\bspaziergänger\\b(?=[^.!?\\n]{0,60}(?:baudelaire|boulevard|passagen|modernität|benjamin))|\\bbummler\\b|\\bherumtreiber\\b",
+      "\\bflâneur\\b|\\bstroller\\b"
+     ],
+     "note": "Duden-Schreibung „Flaneur“ (ohne Zirkumflex, Plural Flaneure). „Kinderwagen“ ist der klassische stroller-Fehler; „Spaziergänger“ verliert den Begriff und wird nur in Baudelaire-Nähe markiert."
+    },
+    "pt": {
+     "forme_imposee": "flâneur (em itálico, com glosa: « o passeante que observa a cidade »)",
+     "fautif": [
+      "\\b(?:carrinho(?:\\s+de\\s+(?:beb[eê]|passeio|crian[cç]a))?|andador|carro[cç]a|charrete|carruagem|cadeirinha|carrinho\\s+de\\s+m[aã]o)\\b[^.!?\\n]{0,70}\\b(?:Baudelaire|Paris|bulevar\\w*|poeta|multid[aã]o|cidade\\s+moderna|passante)\\b|\\b(?:Baudelaire|Paris|bulevar\\w*|poeta|multid[aã]o|cidade\\s+moderna)\\b[^.!?\\n]{0,70}\\b(?:carrinho(?:\\s+de\\s+(?:beb[eê]|passeio|crian[cç]a))?|andador|carro[cç]a|charrete|carruagem|cadeirinha)\\b",
+      "\\bflaneur\\b",
+      "\\bpasseador\\b|\\bvadio\\b[^.!?\\n]{0,40}\\bBaudelaire\\b",
+      "\\bflanador\\b"
+     ],
+     "note": "O galicismo « flâneur » é corrente na crítica literária brasileira; o app já o usa com a glosa « passeante ». « flanador » existe mas se marca para unificar; « passeador » é quem passeia cachorros; « carrinho » é o falso sentido de « stroller »."
+    },
+    "ar": {
+     "forme_imposee": "المتسكّع (flâneur)",
+     "fautif": [
+      "عربة\\s*(?:ال)?أطفال",
+      "عربة\\s*(?:ال)?(?:طفل|رضيع|رضّع)",
+      "بودلير[^.]{0,40}(?:ال)?عربة",
+      "(?:ال)?عربة[^.]{0,30}بودلير"
+     ],
+     "note": "stroller → عربة أطفال (poussette), observé dans l'audit."
+    },
     "he": {
      "forme_imposee": "פלאנר (explication : הולך רגל שמתבונן בעיר ללא מטרה)",
      "fautif": [
@@ -1272,6 +2320,16 @@
       "טיולון"
      ],
      "note": "עגלה = poussette / charrette (observé deux fois), כרכרה = calèche ; עגלה seul est légitime ailleurs, d'où le contexte משוטט."
+    },
+    "fi": {
+     "forme_imposee": "flanööri (« kuljeskelee flanöörinä »)",
+     "fautif": [
+      "\\blastenratta\\w*|\\blastenvaunu\\w*",
+      "\\bratta(at|ita|issa|illa|iden|isiin)\\b",
+      "\\bkärry\\w*.{0,30}(baudelaire|kävelij|pariisi)",
+      "\\bvaunu\\w*.{0,30}(baudelaire|kävelij)"
+     ],
+     "note": "lastenrattaat = poussette."
     },
     "et": {
      "forme_imposee": "flanöör (flanöörina ehk jalutajana, kes vaatleb linna)",
@@ -1309,12 +2367,49 @@
      ],
      "note": "« caravana » tiene en español la misma polisemia que en francés (camping incluido); el contrasentido solo aparece con « autocaravana », « remolque » o « casa rodante »."
     },
+    "de": {
+     "forme_imposee": "Karawane",
+     "fautif": [
+      "\\bwohnwagen\\b|\\bwohnmobil\\b|\\bcampingwagen\\b|\\bcampinganhänger\\b",
+      "\\bcaravans?\\b",
+      "\\bkamel-?(?:wohnwagen|anhänger)\\b|\\bwohnwagen\\s+(?:der|von)\\s+(?:händlern|kaufleuten|mekka)\\b"
+     ],
+     "note": "Handelskarawane (Kamele, Mekka). „Wohnwagen“ könnte in einem Soziologiekurs legitim sein: Fehlalarm akzeptiert."
+    },
+    "pt": {
+     "forme_imposee": "caravana (de mercadores, de camelos)",
+     "fautif": [
+      "\\b(?:trailer|motorhome|autocaravana|reboque|casa\\s+m[oó]vel|kombi|trailers)\\b[^.!?\\n]{0,70}\\b(?:camelos?|mercadores|deserto|Meca|Medina|rota\\s+da\\s+seda|comerciantes|bedu[ií]nos|o[aá]sis)\\b|\\b(?:camelos?|mercadores|deserto|Meca|Medina|rota\\s+da\\s+seda|comerciantes|bedu[ií]nos|o[aá]sis)\\b[^.!?\\n]{0,70}\\b(?:trailer|motorhome|autocaravana|reboque|casa\\s+m[oó]vel|kombi)\\b",
+      "\\bcaravana\\s+de\\s+camping\\b|\\bcaravana\\s+motorizada\\b",
+      "\\bautocaravana\\b"
+     ],
+     "note": "« caravana » cobre o sentido histórico em português; « trailer/motorhome » (caravan de camping) só se marcam perto de camelos/deserto/Meca. « trailer » de filme na prosa não é marcado."
+    },
+    "ar": {
+     "forme_imposee": "قافلة",
+     "fautif": [
+      "(?:ال)?كرفان(?:ات)?(?![؀-ۿ])",
+      "(?:ال)?كارافان(?:ات)?(?![؀-ۿ])",
+      "(?:مقطورة|عربة)\\s*(?:ال)?(?:تخييم|سكن|سفر)",
+      "(?:بيت|منزل)\\s*متنقل"
+     ],
+     "note": "كرفان = caravane de camping ; قافلة = caravane de marchands."
+    },
     "he": {
      "forme_imposee": "שיירה (שיירות סוחרים)",
      "fautif": [
       "קר[או]{1,3}[נן]"
      ],
      "note": "קרוואן / קראוון = caravane de camping ; couvre toutes les graphies."
+    },
+    "fi": {
+     "forme_imposee": "karavaani",
+     "fautif": [
+      "\\basuntovaunu\\w*",
+      "\\bmatkailuvaunu\\w*",
+      "\\basuntoauto\\w*"
+     ],
+     "note": "asuntovaunu = caravane de camping."
     },
     "et": {
      "forme_imposee": "karavan (kaubakaravan, kaamelikaravan)",
@@ -1353,6 +2448,35 @@
      ],
      "note": "« convicción » es creencia; lo judicial es « condena »."
     },
+    "de": {
+     "forme_imposee": "Verurteilung (Baudelaire wurde 1857 verurteilt)",
+     "fautif": [
+      "\\büberzeugung\\b(?=[^.!?\\n]{0,60}(?:1857|gericht|prozess|geldstrafe|gedichte|baudelaire|flaubert|zensur|sittlichkeit|unzucht))",
+      "\\b(?:1857|gericht|prozess|geldstrafe|verurteilt|zensur)\\b[^.!?\\n]{0,60}\\büberzeugung\\b",
+      "\\bseine[rn]?\\s+überzeugung\\s+(?:wegen|für|im\\s+jahr|zu\\s+einer\\s+geldstrafe)\\b",
+      "\\bkonviktion\\b|\\bconviction\\b"
+     ],
+     "note": "conviction → Überzeugung ist der Pivot-Fehler; „Überzeugung“ ist sonst überall legitim, deshalb nur in Gerichtsnähe markiert."
+    },
+    "pt": {
+     "forme_imposee": "condenação (Baudelaire condenado em 1857; « condenação por imoralidade »)",
+     "fautif": [
+      "\\bconvic[cç][aã]o\\b[^.!?\\n]{0,70}\\b(?:1857|tribunal|multa|processo|poemas?|censur\\w*|Flores\\s+do\\s+Mal|Baudelaire|obscenidade|ofensa|moral\\s+p[uú]blica|r[eé]u|juiz)\\b|\\b(?:1857|tribunal|multa|processo|poemas?|censur\\w*|Flores\\s+do\\s+Mal|Baudelaire|obscenidade|moral\\s+p[uú]blica|r[eé]u|juiz)\\b[^.!?\\n]{0,70}\\bconvic[cç][aã]o\\b",
+      "\\bconvic[cç][aã]o\\s+(?:judicial|penal|criminal)\\b",
+      "\\bconviction\\b"
+     ],
+     "note": "« convicção » (crença) é legítimo em outros cursos (« convicção moral », Antígona); só se marca perto de tribunal/1857/Baudelaire/processo."
+    },
+    "ar": {
+     "forme_imposee": "حكم بالإدانة (الإدانة)",
+     "fautif": [
+      "(?:ال)?قناعة\\s*(?:واحدة|عام\\s*1857)",
+      "(?<![؀-ۿ])وقناعة(?![؀-ۿ])",
+      "(?:ال)?اقتناع\\s*(?:ب|في)\\s*(?:عام\\s*)?1857",
+      "بودلير[^.]{0,60}(?:ال)?قناعة"
+     ],
+     "note": "conviction → قناعة (croyance), observé dans le hook du cours Baudelaire ; قناعة reste légitime ailleurs, d'où le contexte."
+    },
     "he": {
      "forme_imposee": "הרשעה (בודלר הורשע / נידון ב-1857)",
      "fautif": [
@@ -1361,6 +2485,15 @@
       "1857\\s*,?\\s*(ה)?(שכנוע|אמונה|הכרה\\s+פנימית)"
      ],
      "note": "שכנוע / אמונה = conviction intime ; restreint au contexte Baudelaire 1857."
+    },
+    "fi": {
+     "forme_imposee": "tuomio (« yksi tuomio » ; verbe : tuomittiin)",
+     "fautif": [
+      "\\bvakaumu\\w*.{0,60}(1857|runo|baudelaire|oikeu|tuomar|sakko|sensur)",
+      "(1857|runo\\w*|baudelaire\\w*|oikeu\\w*|tuomar\\w*|sakko\\w*|sensur\\w*).{0,60}\\bvakaumu\\w*",
+      "\\bvakuuttuneisuu\\w*"
+     ],
+     "note": "vakaumus = conviction intime ; légitime dans un cours sur la religion ou la politique."
     },
     "et": {
      "forme_imposee": "süüdimõistmine / kohtuotsus (Baudelaire mõisteti 1857 süüdi)",
@@ -1399,6 +2532,34 @@
      ],
      "note": "« suegro » es el padre del cónyuge; « padre político » es ambiguo. Para el marido de la madre: « padrastro »."
     },
+    "de": {
+     "forme_imposee": "Stiefvater (General Aupick)",
+     "fautif": [
+      "\\bschwiegervater\\b(?=[^.!?\\n]{0,80}(?:aupick|baudelaire|general|mutter))|(?:aupick|baudelaire)[^.!?\\n]{0,80}\\bschwiegervater\\b",
+      "\\bschwiegervater\\s+aupick\\b|\\bgeneral\\s+aupick,?\\s+(?:sein|der)\\s+schwiegervater\\b",
+      "\\bstiefpapa\\b|\\bziehvater\\b(?=[^.!?\\n]{0,40}aupick)"
+     ],
+     "note": "Zweiter Ehemann der Mutter → Stiefvater. „Schwiegervater“ ist in anderen Kursen legitim und wird nur in Aupick-/Baudelaire-Nähe markiert."
+    },
+    "pt": {
+     "forme_imposee": "padrasto (o general Aupick, segundo marido da mãe de Baudelaire)",
+     "fautif": [
+      "\\bsogro\\b[^.!?\\n]{0,70}\\b(?:Aupick|Baudelaire|general|m[aã]e)\\b|\\b(?:Aupick|Baudelaire)\\b[^.!?\\n]{0,70}\\bsogro\\b",
+      "\\bpai\\s+adotivo\\b[^.!?\\n]{0,60}\\b(?:Aupick|Baudelaire)\\b|\\b(?:Aupick|Baudelaire)\\b[^.!?\\n]{0,60}\\bpai\\s+adotivo\\b",
+      "\\bsegundo\\s+pai\\b[^.!?\\n]{0,40}\\bAupick\\b|\\bpai\\s+por\\s+afinidade\\b"
+     ],
+     "note": "« sogro » (pai do cônjuge) é o falso sentido; legítimo noutros cursos (Laertes, sogro de Ulisses), por isso só se marca perto de Aupick/Baudelaire. O curso já diz « padrasto »."
+    },
+    "ar": {
+     "forme_imposee": "زوج أمه",
+     "fautif": [
+      "والد\\s*زوجته",
+      "(?:أبو|أبي|أبا)\\s*زوجته",
+      "(?<![؀-ۿ])حماه(?![؀-ۿ])",
+      "(?:ال)?حمو(?![؀-ۿ])"
+     ],
+     "note": "stepfather → father-in-law → والد زوجته / حماه, observé dans l'audit."
+    },
     "he": {
      "forme_imposee": "אביו החורג (הגנרל אופיק)",
      "fautif": [
@@ -1407,6 +2568,16 @@
       "(חמו|חותנו)\\s+של\\s+בודלר"
      ],
      "note": "חמו / חותנו = père de l'épouse (observé «רב עם חמו»)."
+    },
+    "fi": {
+     "forme_imposee": "isäpuoli (« isäpuolensa, kenraali Aupickin »)",
+     "fautif": [
+      "\\b(anoppi|anopin|anoppia|anoppinsa|anopilleen|anoppiinsa)\\b",
+      "\\b(appi|apen|appea|appensa|appeensa|apelleen)\\b",
+      "\\bvaimon\\s+isä\\w*",
+      "\\bisoisä\\w*.{0,30}aupick"
+     ],
+     "note": "anoppi = belle-mère (mère de l'épouse), appi = beau-père par alliance ; faux positif possible dans un cours sur la famille."
     },
     "et": {
      "forme_imposee": "kasuisa (kindral Aupick, Baudelaire’i kasuisa)",
@@ -1445,6 +2616,34 @@
      ],
      "note": "Trampa poco probable en español (« ans » no se confunde); se cubren las formas del pivote inglés (letters, views). « vistas » por « visualizaciones » es además americano."
     },
+    "de": {
+     "forme_imposee": "Jahre(n): „in 22 Jahren“, „mit 6 Jahren“",
+     "fautif": [
+      "\\b(?:bei|an|zu)\\s+\\d{1,2}\\s+jahren\\b(?=[^.!?\\n]{0,40}(?:verlor|starb|wurde|begann|schrieb|zog|lernte|erlebte|kam|verließ|heiratete|veröffentlichte))",
+      "\\b\\d{1,2}\\s+jahre\\s+alt\\s+jahre\\b|\\bjahre\\s+jahre\\b",
+      "\\b\\d{1,3}\\s+(?:briefe|ansichten|aufrufe|views|buchstaben)\\b(?=[^.!?\\n]{0,30}(?:alt|später|lang|danach))",
+      "\\b\\d{1,2}\\s+years?\\b|\\b\\d{1,2}\\s+ans\\b"
+     ],
+     "note": "Im Deutschen keine Polysemie von „Jahre“; Risiko ist nur die Präposition (à 6 ans → mit 6 Jahren, nicht „bei 6 Jahren“)."
+    },
+    "pt": {
+     "forme_imposee": "anos (« em 22 anos », « aos 6 anos »)",
+     "fautif": [
+      "\\b\\d{1,3}\\s+years?\\s+old\\b|\\b\\d{1,3}\\s+years?\\b",
+      "\\b\\d{1,3}\\s+ans\\b",
+      "\\bem\\s+\\d{1,3}\\s+anos\\s+de\\s+idade\\b"
+     ],
+     "note": "Sem polissemia em português (« anos » não se confunde com letras/visualizações). Só se marcam restos do pivô (« 22 years ») ou do francês (« 22 ans ») e a redundância « em 22 anos de idade »."
+    },
+    "ar": {
+     "forme_imposee": "سنة / سنوات (العمر والمدة) : «في 22 سنة»، «في السادسة من عمره»",
+     "fautif": [
+      "(?:تيتم|يتيم|يُتّم|يتّم)[^.]{0,25}في\\s*\\*{0,2}\\s*\\d+\\s*\\*{0,2}\\s*(?:سنوات|سنة)",
+      "في\\s*\\*{0,2}\\s*6\\s*\\*{0,2}\\s*سنوات",
+      "\\d+\\s*(?:مشاهدات|مشاهدة|حرف|حروف|أحرف|رسائل)(?![؀-ۿ])"
+     ],
+     "note": "« à 6 ans » rendu « في 6 سنوات » (dans 6 ans) observé ; l'âge s'exprime « في السادسة من عمره ». views/letters sont des artefacts d'autres pivots, gardés par prudence."
+    },
     "he": {
      "forme_imposee": "שנים / שנה (âge : בן 6, בגיל 6 ; durée : תוך 22 שנה)",
      "fautif": [
@@ -1453,11 +2652,21 @@
      ],
      "note": "Piège quasi impossible en hébreu (שנים n'a pas d'homonyme) ; regex de garde pour les contresens vus ailleurs."
     },
+    "fi": {
+     "forme_imposee": "vuotta / vuodessa / N-vuotiaana (22 vuodessa ; 6-vuotiaana)",
+     "fautif": [
+      "\\d+\\s*katselukert\\w*",
+      "\\d+\\s*näyttökert\\w*",
+      "\\d+\\s*katselu(a|t|ita)\\b",
+      "\\d+\\s*kirjain\\w*"
+     ],
+     "note": "katselukertaa = visionnages (artefact de mémoire). « N kirjainta » peut être légitime (alphabet) : faux positif accepté."
+    },
     "et": {
      "forme_imposee": "aastat / -aastaselt (6-aastaselt isast orvuks; 25-aastaselt lavastab; 22 aastaga)",
      "fautif": [
-      "\\borvuks\\s+jäänud\\s+\\**\\d+\\**\\s+aastat\\b",
-      "\\b\\**\\d+\\**\\s+aastat\\s+(juhib|lavasta\\w*|kirjuta\\w*|sureb|abiellu\\w*|läheb)\\b",
+      "\\borvuks\\s+jäänud\\s+\\**\\d+\\s+aastat\\**\\b",
+      "(?<![\\w-])\\**\\d+\\s+aastat\\**\\s+(juhib|lavasta\\w*|kirjuta\\w*|sureb|abiellu\\w*|läheb)\\b",
       "\\b\\d+\\s+(kirja|vaatamist|vaadet|vaatamise)\\b(?=.{0,30}(vana|sünd|surm|orv))",
       "\\b\\d+\\s+aastat\\s+vana(na)?\\s+(läheb|tülli|lavastab)"
      ],
@@ -1490,6 +2699,34 @@
      ],
      "note": ""
     },
+    "de": {
+     "forme_imposee": "Mann (10.000 Mann = Soldaten)",
+     "fautif": [
+      "\\b\\d[\\d.\\s]*\\s*männchen\\b",
+      "\\b\\d[\\d.\\s]*\\s*(?:dollar|\\$|usd)\\b(?=[^.!?\\n]{0,50}(?:armee|heer|truppen|soldat|schlacht|marsch|belager|feldzug|kavallerie))|\\b(?:armee|heer|truppe|streitmacht)\\w*\\s+(?:von|mit|aus)\\s+\\d[\\d.\\s]*\\s*(?:dollar|\\$|usd)\\b",
+      "\\b\\d{1,3}(?:[.\\s]\\d{3})+\\s+männer\\b(?=[^.!?\\n]{0,50}(?:armee|heer|truppen|schlacht|marsch|belager|angriff|feldzug|legion))",
+      "\\b\\d[\\d.\\s]*\\s*menschen\\b(?=[^.!?\\n]{0,30}(?:stark(?:e|en)?\\s+(?:armee|heer|truppe)|unter\\s+(?:seinem|ihrem)\\s+kommando))"
+     ],
+     "note": "Militärische Mengenangabe: „10.000 Mann“ (unflektiert). „Männer“ ist verständlich, aber unidiomatisch; „Männchen“ und „Dollar“ sind Pivot-Fehler (men → males / $)."
+    },
+    "pt": {
+     "forme_imposee": "homens (10.000 homens = soldados; separador de milhar com ponto)",
+     "fautif": [
+      "\\b\\d[\\d.\\s]*\\s*(?:machos|var[oõ]es|seres\\s+humanos|humanos)\\b[^.!?\\n]{0,60}\\b(?:ex[eé]rcito|tropas?|batalha|Meca|Medina|cerco|marcha|cavalaria|soldados)\\b",
+      "\\b(?:10|dez)\\s?(?:000|\\.000|mil)\\s+(?:d[oó]lares|machos|humanos|pessoas)\\b[^.!?\\n]{0,60}\\b(?:Meca|Medina|ex[eé]rcito|marcha|cerco)\\b",
+      "\\b\\d[\\d.]*\\s+men\\b"
+     ],
+     "note": "« homens » é a forma direta e a edição já a usa (« 10.000 homens », « 60.000 homens »). Só se marcam « machos/humanos/dólares » em contexto militar e o inglês « men »."
+    },
+    "ar": {
+     "forme_imposee": "رجل / جندي (10000 رجل)",
+     "fautif": [
+      "10[\\s,.]?000\\s*(?:دولار|ذكر|ذكور)",
+      "\\d+\\s*(?:ذكر|ذكور|ذكرًا|ذكورًا)(?![؀-ۿ])",
+      "(?:جيش|قوة)\\s*(?:من|قوامها|قوامه)\\s*[\\d,.\\s]+\\s*(?:دولار|\\$)"
+     ],
+     "note": "men → ذكور (mâles) ou confusion avec dollars."
+    },
     "he": {
      "forme_imposee": "לוחמים / איש (10,000 לוחמים ; 10,000 איש)",
      "fautif": [
@@ -1497,6 +2734,15 @@
       "\\d[\\d,.]*\\s*(אלף\\s+)?דולר(ים)?\\s+(צעדו|נלחמו|התקדמו|יצאו|חצו)"
      ],
      "note": "גברים = mâles ; légitime dans un cours de démographie, la regex exige un chiffre devant."
+    },
+    "fi": {
+     "forme_imposee": "10 000 miestä (ou sotilasta)",
+     "fautif": [
+      "(marssi|hyökkä|armeij|sotila|joukk|johta|valloit)\\w*.{0,40}\\b\\d[\\d\\s]*\\s*(kolikk|dollari|uros|urost|miespuoli)\\w*",
+      "\\b\\d[\\d\\s]*\\s*(kolikk|dollari|uros|urost|miespuoli)\\w*.{0,40}(marssi|hyökkä|armeij|sotila|joukk|valloit)\\w*",
+      "\\b10\\s?000\\s+kolikk\\w*"
+     ],
+     "note": "kolikkoa = pièces de monnaie (audit : « 10 000 kolikkoa ») ; dollaria n'est flaggé qu'en contexte militaire."
     },
     "et": {
      "forme_imposee": "meest (10 000 meest = sõdurit)",
@@ -1535,6 +2781,34 @@
      ],
      "note": ""
     },
+    "de": {
+     "forme_imposee": "Gedichte (sechs verurteilte Gedichte)",
+     "fautif": [
+      "\\bsechs\\s+(?:verurteilte|verbotene|zensierte|gestrichene)\\s+(?:dichter|poeten)\\b",
+      "\\b(?:dichter|poeten)\\s+(?:wurden|werden|mussten)\\s+(?:verurteilt|verboten|zensiert|entfernt|gestrichen)\\b(?=[^.!?\\n]{0,60}(?:1857|baudelaire|blumen|sammlung))",
+      "\\bpoeme?s?\\b"
+     ],
+     "note": "poems → poets ist der beobachtete Fehler; „Poem“ existiert im Deutschen, wird aber zugunsten von „Gedicht“ vereinheitlicht."
+    },
+    "pt": {
+     "forme_imposee": "poemas (seis poemas condenados)",
+     "fautif": [
+      "\\b(?:seis|6)\\s+poetas\\s+(?:condenad|censurad|proibid|retirad|reabilitad)\\w*",
+      "\\bpoetas\\s+(?:condenados|censurados|proibidos|banidos)\\b[^.!?\\n]{0,60}\\b(?:1857|1949|Flores|tribunal|Baudelaire)\\b",
+      "\\bversificadores?\\b",
+      "\\b(?:seis|6)\\s+poesias\\b"
+     ],
+     "note": "« poetas » por « poemas » é o falso sentido; « poesias » (contável) é coloquial e se unifica em « poemas »."
+    },
+    "ar": {
+     "forme_imposee": "قصائد (ست قصائد)",
+     "fautif": [
+      "(?:ست|ستة|6)\\s*(?:شعراء|شاعر)(?![؀-ۿ])",
+      "(?:ال)?شعراء\\s*(?:ال)?(?:ستة|الست|محظور|ممنوع|مدان)",
+      "(?:إدانة|حظر|منع)\\s*(?:ال)?شعراء"
+     ],
+     "note": "poems → poets → شعراء ; signalé seulement avec le nombre six ou l'idée de condamnation."
+    },
     "he": {
      "forme_imposee": "שירים (שישה שירים נאסרו / נפסלו)",
      "fautif": [
@@ -1543,6 +2817,15 @@
       "פייטנים"
      ],
      "note": "משוררים = poètes ; restreint au contexte des six poèmes condamnés."
+    },
+    "fi": {
+     "forme_imposee": "runoa (« kuusi sensuroitua runoa »)",
+     "fautif": [
+      "\\b(kuusi|kuutta|kuuden|6)\\s+(sensuroitua\\s+|tuomittua\\s+|kiellettyä\\s+)?runoilij\\w*",
+      "\\d+\\s+(sensuroitua|tuomittua|kiellettyä)\\s+runoilij\\w*",
+      "\\brunosepp\\w*"
+     ],
+     "note": "runoilija = poète."
     },
     "et": {
      "forme_imposee": "luuletust (kuus süüdimõistetud luuletust)",
@@ -1579,12 +2862,50 @@
      ],
      "note": "« platos » solo se marca en contexto fotográfico (legítimo en cocina)."
     },
+    "de": {
+     "forme_imposee": "Fotoplatten (fotografische Platten)",
+     "fautif": [
+      "\\b(?:foto|fotografische[rn]?|lichtempfindliche[rn]?|belichtete[rn]?)\\s*-?\\s*teller\\b",
+      "\\bteller\\b(?=[^.!?\\n]{0,50}(?:belicht|fotograf|kamera|daguerr|negativ|silber|dunkelkammer))",
+      "\\b(?:fotografische|belichtete)[rn]?\\s+(?:schilder|tafeln)\\b|\\bschilder\\b(?=[^.!?\\n]{0,40}(?:belicht|fotograf|daguerr|dunkelkammer))",
+      "\\bnummernschild\\w*\\b(?=[^.!?\\n]{0,40}(?:fotograf|belicht|kamera))"
+     ],
+     "note": "plates → Teller/Schilder. „Platten“ allein ist richtig und wird nicht markiert."
+    },
+    "pt": {
+     "forme_imposee": "placas fotográficas (« o urânio velou placas fotográficas »; « chapas fotográficas » também é aceitável)",
+     "fautif": [
+      "\\bpratos\\b[^.!?\\n]{0,60}\\b(?:fotogr\\w+|daguerr\\w+|exposi[cç][aã]o|c[aâ]mera|negativ\\w+|revel\\w+|col[oó]dio|gelatina|ur[aâ]nio|Becquerel|raios\\s+X)\\b|\\b(?:fotogr\\w+|daguerr\\w+|c[aâ]mera|negativ\\w+|col[oó]dio|gelatina|ur[aâ]nio|Becquerel|raios\\s+X)\\b[^.!?\\n]{0,60}\\bpratos\\b",
+      "\\bpratos\\s+(?:de\\s+vidro|fotogr[aá]ficos|de\\s+cobre|sens[ií]veis)\\b",
+      "\\bphotographic\\s+plates?\\b"
+     ],
+     "note": "« prato » (louça) é o falso sentido de « plate »; legítimo no curso do micro-ondas, por isso só se marca perto de fotografia/Becquerel/urânio. A edição já usa « placas fotográficas »."
+    },
+    "ar": {
+     "forme_imposee": "ألواح (فوتوغرافية)",
+     "fautif": [
+      "(?:ال)?(?:صحون|أطباق|صحن|طبق)\\s*(?:ال)?(?:فوتوغرافية|تصوير|ضوئية|زجاجية)",
+      "(?:ال)?(?:أطباق|صحون)[^.]{0,30}(?:تصوير|كاميرا|مصور)",
+      "(?:تصوير|كاميرا|مصور)[^.]{0,30}(?:ال)?(?:أطباق|صحون)"
+     ],
+     "note": "plates → أطباق (assiettes)."
+    },
     "he": {
      "forme_imposee": "לוחות (לוח צילום ; לוחות טקטוניים)",
      "fautif": [
       "צלח(ת|ות)"
      ],
      "note": "צלחת = assiette ; observé «לצלחת» (photo) et «מאגמה וצלחות» (tectonique). Faux positif accepté dans un cours de cuisine."
+    },
+    "fi": {
+     "forme_imposee": "valokuvauslevy (lasilevy ; en contexte : levy)",
+     "fautif": [
+      "\\b(valokuva\\w*|kuvaus\\w*|kamera\\w*)\\s+lauta(nen|sta|set|sia|sen)\\b",
+      "\\blauta(nen|sta|set|sia|sen)\\b.{0,30}(valokuv|kamera|kuvaus|daguerre)",
+      "(valokuv|kamera|kuvaus|daguerre)\\w*.{0,30}\\blauta(nen|sta|set|sia|sen)\\b",
+      "\\bvalokuvalaut\\w*"
+     ],
+     "note": "lautanen = assiette."
     },
     "et": {
      "forme_imposee": "fotoplaadid (valgustundlikud plaadid)",
@@ -1622,6 +2943,35 @@
      ],
      "note": "En es-ES « falla » es solo geológica; un defecto de sistema o de mercado es « fallo ». « fallas de seguridad » es americano. La falla californiana es « de San Andrés »."
     },
+    "de": {
+     "forme_imposee": "Verwerfungen (Geologie) / Schwachstellen, Schwächen (Mängel)",
+     "fautif": [
+      "\\b(?:tektonische|geologische)[rn]?\\s+(?:fehler|störungen|ausfälle|schuld|pannen|defekte|fehlfunktionen)\\b",
+      "\\bsan-?\\s?andreas-?\\s?(?:fehler|störung|ausfall|schuld|panne)\\b",
+      "\\b(?:fehler|pannen|ausfälle|defekte|schuld)\\b(?=[^.!?\\n]{0,50}(?:erdbeben|erdkruste|erdplatten|plattengrenze|plattentektonik|verschieben\\s+sich|bruchlinie))",
+      "\\b(?:ausfälle|pannen|fehlfunktionen|bugs)\\b(?=[^.!?\\n]{0,40}(?:charakter|held|figur|persönlichkeit|mensch(?:en|lich)))"
+     ],
+     "note": "Geologisch heißt faille „Verwerfung“ (San-Andreas-Verwerfung); als Charakterschwäche „Schwachstelle“. „Fehler“ ist in Technikkursen legitim, deshalb nur mit Tektonik-/Charakter-Kontext markiert."
+    },
+    "pt": {
+     "forme_imposee": "falhas (geológicas: « a falha de San Andreas »; defeitos: « falhas de caráter »)",
+     "fautif": [
+      "\\b(?:panes?|avarias?|quebras?)\\b[^.!?\\n]{0,60}\\b(?:terremot\\w*|s[ií]smic\\w*|tect[oô]nic\\w*|placas|geol[oó]gic\\w*|crosta|San\\s+Andreas|Santo\\s+Andr[eé])\\b|\\b(?:terremot\\w*|s[ií]smic\\w*|tect[oô]nic\\w*|geol[oó]gic\\w*|crosta|San\\s+Andreas)\\b[^.!?\\n]{0,60}\\b(?:panes?|avarias?|quebras?)\\b",
+      "\\b(?:erros|bugs|defeitos)\\s+(?:geol[oó]gic\\w+|tect[oô]nic\\w+|s[ií]smic\\w+)\\b",
+      "\\bfalhas\\s+(?:t[eé]cnicas|do\\s+sistema|de\\s+energia)\\b[^.!?\\n]{0,60}\\b(?:terremot\\w*|crosta|placas\\s+tect[oô]nicas)\\b"
+     ],
+     "note": "« pane » (avaria) é o falso sentido de « fault »; legítimo no Pequeno Príncipe (« uma pane em pleno Saara »), por isso só se marca em contexto sísmico."
+    },
+    "ar": {
+     "forme_imposee": "صدوع (جيولوجية) / عيوب (ثغرات)",
+     "fautif": [
+      "(?:ال)?أعطال\\s*(?:ال)?(?:جيولوجية|أرضية|زلزالية|تكتونية)",
+      "(?:ال)?(?:أخطاء|خطأ)\\s*(?:ال)?(?:جيولوجية|أرضية|زلزالية|تكتونية)",
+      "(?:ال)?(?:عطل|أعطال)\\s*(?:في\\s*)?(?:ال)?(?:قشرة|صفائح)",
+      "(?:ال)?(?:أخطاء|أعطال)\\s*(?:سان\\s*أندرياس|الصفائح)"
+     ],
+     "note": "faults → أعطال (pannes) / أخطاء (erreurs)."
+    },
     "he": {
      "forme_imposee": "שברים גאולוגיים ; (défauts) פגמים / ליקויים",
      "fautif": [
@@ -1631,6 +2981,16 @@
       "(טעויות|שגיאות)\\s+(גאולוגי|טקטוני)"
      ],
      "note": "תקלה = panne ; légitime dans les messages d'erreur de l'app, d'où le contexte géologique."
+    },
+    "fi": {
+     "forme_imposee": "siirros (géologie : siirroslinja) ; au figuré : heikko kohta, puute",
+     "fautif": [
+      "\\b(maan|maankuoren|geologi\\w*|tektoni\\w*)\\s*vi(ka|at|koja|an)\\b",
+      "\\bvi(ka|at|koja|an)\\b.{0,30}(maankuor|mannerlaat|tektoni|san andreas)",
+      "\\b(häiriö|virhe)\\w*.{0,30}(maankuor|mannerlaat|tektoni|san andreas)",
+      "\\b(maankuor|mannerlaat|tektoni)\\w*.{0,30}\\b(häiriö|virhe|vi(ka|at|koja))\\w*"
+     ],
+     "note": "vika = panne/défaut, virhe = erreur ; sans contexte géologique le mot est trop courant pour être flaggé."
     },
     "et": {
      "forme_imposee": "murrangud (geol.; nõrkused: lõhed, nõrgad kohad)",
@@ -1670,6 +3030,34 @@
      ],
      "note": "« gravedad » es polisémica en español igual que en francés; el único contrasentido posible es « seriedad / severidad »."
     },
+    "de": {
+     "forme_imposee": "Schwerkraft / Gravitation",
+     "fautif": [
+      "\\bgravität\\b",
+      "\\b(?:ernst|ernsthaftigkeit)\\b(?=[^.!?\\n]{0,50}(?:newton|einstein|apfel|planeten|masse|anziehung|raumzeit|schwarze[sn]?\\s+loch|erdanziehung|mond|umlaufbahn|fallen))",
+      "\\b(?:newton|einstein|planeten|raumzeit|umlaufbahn)\\b[^.!?\\n]{0,50}\\b(?:ernst|ernsthaftigkeit|schwere\\s+der\\s+(?:lage|situation))\\b",
+      "\\bgesetz\\s+der\\s+(?:ernsthaftigkeit|schwere\\s+der\\s+lage)\\b|\\bgesetz\\s+des\\s+ernstes\\b"
+     ],
+     "note": "gravity → Ernst/Schwere der Lage. „Gravität“ bedeutet im Deutschen Würde, nicht Schwerkraft. „Schwere“ allein (Schwerebeschleunigung) ist physikalisch möglich und wird nicht markiert."
+    },
+    "pt": {
+     "forme_imposee": "gravidade (força: « a gravidade da Terra »)",
+     "fautif": [
+      "\\b(?:seriedade|severidade)\\b[^.!?\\n]{0,70}\\b(?:Newton|Einstein|ma[cç][aã]|planetas?|[oó]rbita\\w*|massa|queda\\s+livre|for[cç]a|Terra|Lua|buraco\\s+negro|relatividade|f[ií]sica)\\b|\\b(?:Newton|Einstein|ma[cç][aã]|planetas?|[oó]rbita\\w*|queda\\s+livre|buraco\\s+negro|relatividade)\\b[^.!?\\n]{0,70}\\b(?:seriedade|severidade)\\b",
+      "\\b(?:for[cç]a|lei|centro)\\s+d[ae]\\s+(?:seriedade|severidade)\\b",
+      "\\bgravidez\\b[^.!?\\n]{0,50}\\b(?:Newton|for[cç]a|f[ií]sica|planetas?|[oó]rbita)\\b"
+     ],
+     "note": "« gravidade » cobre os dois sentidos em português; o risco é « seriedade/severidade » em contexto de física (e o lapso « gravidez »)."
+    },
+    "ar": {
+     "forme_imposee": "الجاذبية",
+     "fautif": [
+      "(?:ال)?(?:خطورة|شدة|جدية)\\s*(?:ال)?(?:أرض|أرضية|قمر|كون|نيوتن)",
+      "(?:قانون|قوة)\\s*(?:ال)?(?:خطورة|جدية|شدة)(?![؀-ۿ])",
+      "نيوتن[^.]{0,40}(?:ال)?(?:خطورة|جدية)"
+     ],
+     "note": "gravity → خطورة (sévérité) / جدية (sérieux)."
+    },
     "he": {
      "forme_imposee": "כבידה (כוח הכבידה ; כבידה קיצונית)",
      "fautif": [
@@ -1679,6 +3067,15 @@
       "כובד\\s+ראש\\s+(קיצוני|של\\s+(החור|כדור))"
      ],
      "note": "חומרה = sévérité (ou matériel informatique), observé «חומרה קיצונית»."
+    },
+    "fi": {
+     "forme_imposee": "painovoima (en physique : gravitaatio acceptable)",
+     "fautif": [
+      "\\bvakavuu(s|den|tta|teen)\\b.{0,40}(voima|newton|einstein|planeet|putoa|omena|fysiik|avaruu|massa)",
+      "(newton|einstein|planeet|putoa\\w*|omena|fysiik\\w*|avaruu\\w*|massa).{0,40}\\bvakavuu(s|den|tta|teen)\\b",
+      "\\bvakavuu(s|den)\\s*laki\\w*"
+     ],
+     "note": "vakavuus = sérieux/gravité d'une situation (légitime dans un cours sur une crise)."
     },
     "et": {
      "forme_imposee": "gravitatsioon (raskusjõud)",
@@ -1718,6 +3115,35 @@
      ],
      "note": "« aceite » queda sin marcar en contexto culinario."
     },
+    "de": {
+     "forme_imposee": "Erdöl (in Komposita: Ölpreis, Ölkrise)",
+     "fautif": [
+      "\\bpetroleum\\b(?=[^.!?\\n]{0,60}(?:förder|opec|preis|krise|vorkommen|export|barrel|konzern|bohr|reserven|markt|industrie|saudi|golf|nordsee|pipeline))|(?:opec|barrel|bohr|saudi|pipeline)[^.!?\\n]{0,60}\\bpetroleum\\b",
+      "\\bpetrol\\b(?!eum)|\\bpétrole\\b",
+      "\\b(?:speise|oliven|sonnenblumen|raps|motor)öl\\b(?=[^.!?\\n]{0,60}(?:opec|barrel|förder|ölkrise|1973|pipeline|bohrinsel|scheich))",
+      "\\b(?:das\\s+)?öl\\s+(?:von|aus)\\s+(?:saudi|texas|dem\\s+golf|der\\s+nordsee)\\b"
+     ],
+     "note": "„Petroleum“ ist im Deutschen Lampenöl/Kerosin (klassischer falscher Freund); „Petrol“ ist eine Farbe. „Öl“ allein ist in Wirtschaftskontexten gängig und wird nur in Speiseöl-Form markiert."
+    },
+    "pt": {
+     "forme_imposee": "petróleo",
+     "fautif": [
+      "\\b[oó]leo\\b[^.!?\\n]{0,70}\\b(?:barr(?:il|is)\\w*|OPEP|bruto|jazidas?|petrol[ií]f\\w*|po[cç]os?|gasolina|Ar[aá]bia|Texas|oleoduto|xisto|fracking|extra[cç][aã]o|refinari\\w*|Petrobras|pr[eé]-sal)\\b|\\b(?:barr(?:il|is)\\w*|OPEP|jazidas?|petrol[ií]f\\w*|po[cç]os?|gasolina|Ar[aá]bia|Texas|oleoduto|xisto|fracking|refinari\\w*|Petrobras|pr[eé]-sal)\\b[^.!?\\n]{0,70}\\b[oó]leo\\b",
+      "\\b(?:pre[cç]o|crise|choque|mercado|produ[cç][aã]o|reservas|guerra)\\s+do\\s+[oó]leo\\b",
+      "\\b[oó]leo\\s+(?:bruto|de\\s+xisto|de\\s+pedra|mineral)\\b",
+      "\\b(?:pa[ií]ses|empresas|companhias|exportador\\w*|produtor\\w*)\\s+de\\s+[oó]leo\\b"
+     ],
+     "note": "« óleo » fica sem marcar em contexto culinário e artístico (« óleo sobre tela »)."
+    },
+    "ar": {
+     "forme_imposee": "النفط",
+     "fautif": [
+      "(?:ال)?زيت\\s*(?:ال)?(?:خام|صخري|أوبك)",
+      "(?:أسعار|سعر|برميل|براميل|حقول|حقل|آبار|بئر|شركات|شركة|أزمة|صدمة)\\s*(?:ال)?زيت(?![؀-ۿ])",
+      "(?:ال)?زيت\\s*و\\s*(?:ال)?غاز"
+     ],
+     "note": "oil → زيت (huile). زيت reste légitime en cuisine, d'où les contextes économiques."
+    },
     "he": {
      "forme_imposee": "נפט",
      "fautif": [
@@ -1727,6 +3153,15 @@
       "שמן\\s+גולמי"
      ],
      "note": "שמן = huile ; légitime (שמן זית), donc restreint aux collocations pétrolières."
+    },
+    "fi": {
+     "forme_imposee": "öljy (raakaöljy, maaöljy)",
+     "fautif": [
+      "\\bpetroli\\w*",
+      "\\b(ruoka|kasvi|oliivi|voitelu|moottori)öljy\\w*.{0,40}(opec|barrel|tynnyr|saudi|lähi-?it|porau|öljykriis)",
+      "(opec|barrel|tynnyr\\w*|saudi\\w*|porau\\w*).{0,40}\\b(ruoka|kasvi|oliivi|voitelu|moottori)öljy\\w*"
+     ],
+     "note": "petroli = pétrole lampant (faux ami) ; ruokaöljy = huile de cuisine."
     },
     "et": {
      "forme_imposee": "nafta (toornafta, naftahind)",
@@ -1765,6 +3200,35 @@
      ],
      "note": "Título establecido: « El proceso ». « juicio » es legítimo como nombre común en la trama; solo se marca como título o en la misma frase que Kafka / Josef K."
     },
+    "de": {
+     "forme_imposee": "Der Prozess (Kafka; Gerichtsprozess; Originalschreibung „Der Process“ zulässig)",
+     "fautif": [
+      "\\b(?:der|den|dem)\\s+(?:vorgang|ablauf|prozessablauf)\\b(?=[^.!?\\n]{0,60}kafka)|kafka[^.!?\\n]{0,60}\\b(?:der|den|dem)\\s+(?:vorgang|ablauf)\\b",
+      "\\b(?:das|dem)\\s+verfahren\\b(?=[^.!?\\n]{0,60}kafka)|kafka[^.!?\\n]{0,60}\\b(?:das|dem)\\s+verfahren\\b",
+      "\\bkafkas?\\s+(?:versuch|prüfung|verhandlung|probe)\\b|\\b(?:der|die)\\s+(?:versuch|prüfung|verhandlung|probe)\\b(?=[^.!?\\n]{0,30}kafka)",
+      "\\bthe\\s+trial\\b|\\ble\\s+procès\\b"
+     ],
+     "note": "process → Vorgang/Verfahren ist der Pivot-Fehler; der Buchtitel ist „Der Prozess“ (siehe oeuvres/le_proces)."
+    },
+    "pt": {
+     "forme_imposee": "O Processo (Kafka)",
+     "fautif": [
+      "\\bO\\s+Julgamento\\b[^.!?\\n]{0,70}(?:Kafka|Josef\\s+K\\b|Joseph\\s+K\\b)|(?:Kafka|Josef\\s+K\\b|Joseph\\s+K\\b)[^.!?\\n]{0,70}\\bO\\s+Julgamento\\b",
+      "\\b(?:romance|livro|obra)\\s+(?:«|\\\"|“)?O\\s+Julgamento\\b",
+      "\\bprocessamento\\b[^.!?\\n]{0,70}\\bKafka\\b|\\bKafka\\b[^.!?\\n]{0,70}\\bprocessamento\\b",
+      "\\bThe\\s+Trial\\b"
+     ],
+     "note": "Título estabelecido: « O Processo ». « julgamento » é legítimo como substantivo comum na trama; só se marca como título ou na mesma frase que Kafka / Josef K."
+    },
+    "ar": {
+     "forme_imposee": "المحاكمة (كافكا)",
+     "fautif": [
+      "(?:ال)?(?:عملية|سيرورة)\\s*(?:ل|لـ)?(?:فرانز\\s*)?كافكا",
+      "كافكا[^.]{0,30}«?(?:ال)?(?:عملية|سيرورة)»?",
+      "رواية\\s*«?(?:ال)?(?:عملية|سيرورة)»?(?![؀-ۿ])"
+     ],
+     "note": "process → العملية (processus) au lieu de المحاكمة."
+    },
     "he": {
      "forme_imposee": "המשפט (קפקא, 1925)",
      "fautif": [
@@ -1773,6 +3237,15 @@
       "[*\\\"«]התהליך[*\\\"»]"
      ],
      "note": "תהליך = processus ; restreint au voisinage de Kafka ou aux titres entre guillemets."
+    },
+    "fi": {
+     "forme_imposee": "Oikeusjuttu (titre établi) ; le procès lui-même : oikeudenkäynti",
+     "fautif": [
+      "\\bprosessi\\w*.{0,40}kafka|kafka\\w*.{0,40}\\bprosessi\\w*",
+      "\\bkokeilu\\w*.{0,40}kafka|kafka\\w*.{0,40}\\bkokeilu\\w*",
+      "\\boikeudenkäynti\\b\\s*\\(?\\s*kafka|kafka\\w*\\s*[:,]?\\s*\\boikeudenkäynti\\b"
+     ],
+     "note": "prosessi = processus ; Oikeudenkäynti comme titre est compréhensible mais n'est pas le titre publié."
     },
     "et": {
      "forme_imposee": "Protsess (Kafka romaan „Protsess“)",
@@ -1810,12 +3283,51 @@
      ],
      "note": "En España « celular » es solo adjetivo; el teléfono es « el móvil ». El sustantivo « el celular » (americano) se marca siempre."
     },
+    "de": {
+     "forme_imposee": "zellulär / Zell- (Zellteilung, Zellatmung)",
+     "fautif": [
+      "\\bmobil(?:funk|telefon)?-?(?:teilung|atmung|struktur|membran|kern|wand|biologie|ebene|organismus)\\b",
+      "\\bhandy-?(?:teilung|atmung|struktur|membran|biologie|ebene)\\b",
+      "\\bmobil(?:er|e|es|en)?\\s+(?:atmung|teilung|struktur|membran|ebene|organismus|biologie|energie)\\b",
+      "\\bauf\\s+(?:mobiler|handy|mobilfunk)-?\\s?ebene\\b|\\bcellular\\b"
+     ],
+     "note": "cellular → Mobilfunk/Handy. Das deutsche „zellulär/Zell-“ hat keine Telefon-Lesart."
+    },
+    "pt": {
+     "forme_imposee": "celular (adjetivo: divisão celular, biologia celular)",
+     "fautif": [
+      "\\b(?:o|um|seu|do|no|ao|pelo)\\s+celular\\b[^.!?\\n]{0,70}\\b(?:biolog\\w*|c[eé]lulas?|membrana\\w*|mitoc[oô]ndri\\w*|DNA|tecidos?|organismos?|n[uú]cleo)\\b|\\b(?:biolog\\w*|c[eé]lulas?|membrana\\w*|mitoc[oô]ndri\\w*|DNA|tecidos?|organismos?)\\b[^.!?\\n]{0,70}\\b(?:o|um|seu|do|no|ao|pelo)\\s+celular\\b",
+      "\\btelem[oó]ve(?:l|is)\\b",
+      "\\btelefone\\s+celular\\b[^.!?\\n]{0,60}\\b(?:c[eé]lulas?|biolog\\w*|membrana|DNA)\\b|\\b(?:c[eé]lulas?|biolog\\w*|membrana|DNA)\\b[^.!?\\n]{0,60}\\btelefone\\s+celular\\b",
+      "\\bcellular\\b"
+     ],
+     "note": "No Brasil « o celular » (substantivo) é o telefone: legítimo na interface (« 7 h por dia no celular »). Só se marca o substantivo em contexto de biologia; « telemóvel » (Portugal) é sempre marcado."
+    },
+    "ar": {
+     "forme_imposee": "خلوي (بيولوجيا)",
+     "fautif": [
+      "(?:ال)?(?:تنفس|انقسام|غشاء|نواة|بنية)\\s*(?:ال)?(?:هاتف|هواتف|جوال)(?:ي|ية)?",
+      "(?:الهاتف|الجوال|المحمول)\\s*(?:ال)?(?:تنفس|انقسام|بيولوجيا)",
+      "(?:بيولوجيا|علم\\s*الأحياء)\\s*(?:ال)?(?:هاتف|هواتف|جوال|محمول)",
+      "(?:خلية|خلايا)[^.]{0,20}(?:ال)?(?:هاتف|جوال)\\s*(?:ال)?(?:محمول|خلوي)"
+     ],
+     "note": "cellular → هاتف خلوي (téléphone portable) ; signalé seulement près du vocabulaire biologique."
+    },
     "he": {
      "forme_imposee": "תאי (ברמה התאית ; תיקון תאי)",
      "fautif": [
       "סלולר"
      ],
      "note": "סלולר / סלולרי = téléphone portable ; faux positif accepté dans un cours de télécoms."
+    },
+    "fi": {
+     "forme_imposee": "solu- (solutaso, soluhengitys, solubiologia)",
+     "fautif": [
+      "\\b(matkapuheli|kännyk|puheli)\\w*.{0,40}(solu|biolog|dna|mitokond|jakautu|hengity)",
+      "(solu\\w*|biolog\\w*|dna|mitokond\\w*|jakautu\\w*).{0,40}\\b(matkapuheli|kännyk|puheli)\\w*",
+      "\\bselluläär\\w*|\\bsellulaari\\w*"
+     ],
+     "note": "matkapuhelin = téléphone portable (cellular)."
     },
     "et": {
      "forme_imposee": "raku- (rakuline, rakutasandil, rakuhingamine)",
@@ -1855,6 +3367,35 @@
      ],
      "note": "« renacimiento » en minúscula (volver a nacer: Osiris, el ave fénix) es legítimo y no se marca."
     },
+    "de": {
+     "forme_imposee": "Renaissance (14.–16. Jahrhundert)",
+     "fautif": [
+      "\\b(?:italienische|florentiner|florentinische|europäische|französische)[rn]?\\s+wiedergeburt\\b",
+      "\\b(?:die|der|zur)\\s+wiedergeburt\\b(?=[^.!?\\n]{0,50}(?:leonardo|michelangelo|florenz|medici|\\d{2}\\.\\s*jahrhundert|epoche|zeitalter|humanis|kunstepoche))",
+      "\\b(?:wiedererwachen|neugeburt|wiederauferstehung)\\b(?=[^.!?\\n]{0,50}(?:italien|florenz|epoche|\\d{2}\\.\\s*jahrhundert|medici|leonardo))",
+      "\\bnationale\\s+wiedergeburt\\b|\\bbulgarische\\s+wiedergeburt\\b"
+     ],
+     "note": "„Wiedergeburt“ als Erklärung der Etymologie (Renaissance = Wiedergeburt) ist legitim: Fehlalarm akzeptiert. Als Epochenname nur „Renaissance“."
+    },
+    "pt": {
+     "forme_imposee": "Renascimento (séculos XIV-XVI, Itália)",
+     "fautif": [
+      "\\bRenascen[cç]a\\b",
+      "\\bRenaissance\\b",
+      "\\b(?:ressurgimento|revival|renascer)\\b[^.!?\\n]{0,60}\\b(?:It[aá]lia|Floren[cç]a|Leonardo|Michelangelo|M[eé]dici|humanismo|s[eé]culo\\s+X(?:IV|V|VI))\\b|\\b(?:Floren[cç]a|Leonardo|Michelangelo|M[eé]dici|humanismo)\\b[^.!?\\n]{0,60}\\b(?:ressurgimento|revival|renascer)\\b"
+     ],
+     "note": "« Renascença » também existe, mas a edição diz « Renascimento » 34 vezes contra 1: marcado para unificar. « renascimento cultural » (minúscula, sentido comum) não é um erro."
+    },
+    "ar": {
+     "forme_imposee": "عصر النهضة",
+     "fautif": [
+      "(?:ال)?نهضة\\s*(?:ال)?بلغارية",
+      "(?:ال)?(?:ولادة|ميلاد)\\s*(?:ال)?(?:جديدة?|من\\s*جديد|ثانية?)\\s*(?:ال)?(?:إيطالية?|في\\s*إيطاليا|فلورنسا)",
+      "(?:إعادة|اعادة)\\s*(?:ال)?(?:ولادة|ميلاد)(?![؀-ۿ])",
+      "(?:ال)?بعث\\s*(?:ال)?(?:إيطالي|فني)"
+     ],
+     "note": "إعادة الولادة = renaissance au sens de naissance ; النهضة البلغارية = Réveil national bulgare."
+    },
     "he": {
      "forme_imposee": "הרנסאנס (הרנסאנס האיטלקי ; graphie רנסנס tolérée)",
      "fautif": [
@@ -1864,6 +3405,16 @@
       "תחיית\\s+(איטליה|פירנצה|האמנויות)"
      ],
      "note": "תחייה = renaissance au sens de réveil national ; לידה מחדש = naissance."
+    },
+    "fi": {
+     "forme_imposee": "renessanssi (renessanssin Italia)",
+     "fautif": [
+      "\\b(uudesti|uudelleen|jälleen)\\s*syntym\\w*.{0,40}(firenze|italia|leonardo|michelangelo|taide|1400|1500|medici)",
+      "(firenze|italia\\w*|leonardo|michelangelo|taide\\w*|1400|1500|medici\\w*).{0,40}\\b(uudesti|uudelleen|jälleen)\\s*syntym\\w*",
+      "\\brenesanssi\\w*|\\brenaissance\\w*",
+      "\\bkansalli\\w*\\s+herää\\w*.{0,40}(italia|firenze)"
+     ],
+     "note": "uudestisyntyminen = renaissance au sens de naissance ; renesanssi (un seul s) est une faute d'orthographe fréquente."
     },
     "et": {
      "forme_imposee": "renessanss (Itaalia renessanss, 14.–16. sajand)",
@@ -1904,6 +3455,36 @@
      ],
      "note": "Forma ya usada en el glosario de la app; el quiz de Merlín dice en cambio « el Asedio Peligroso » (siege → asedio), que es el contrasentido. « Silla Peligrosa » existe en traducciones antiguas; se marca solo para unificar."
     },
+    "de": {
+     "forme_imposee": "der Gefährliche Sitz (Siège périlleux, der leere Platz an der Tafelrunde)",
+     "fautif": [
+      "\\b(?:gefährliche|riskante|perilöse|bedrohliche)[rn]?\\s+belagerung\\b",
+      "\\bbelagerung\\s+perilous\\b|\\bsiege\\s+perilous\\b|\\bperilous\\b",
+      "\\bgefährliche[rn]?\\s+(?:thron|sessel|hocker|bank)\\b|\\briskante[rn]?\\s+(?:sitz|stuhl)\\b",
+      "\\bgefährliche[rn]?\\s+blockade\\b"
+     ],
+     "note": "siege → Belagerung ist der Pivot-Fehler; die Artus-Literatur kennt „Gefährlicher Sitz“. „Gefährlicher Stuhl“ wäre tolerierbar."
+    },
+    "pt": {
+     "forme_imposee": "Assento Perigoso (a cadeira vazia da Távola Redonda)",
+     "fautif": [
+      "\\bcerco\\s+perigoso\\b",
+      "\\bs[ií]tio\\s+perigoso\\b",
+      "\\bcerco\\b[^.!?\\n]{0,60}\\b(?:T[aá]vola|Galaaz|Galahad|Graal|cadeira\\s+vazia|assento\\s+vago)\\b|\\b(?:T[aá]vola|Galaaz|Galahad|Graal|cadeira\\s+vazia)\\b[^.!?\\n]{0,60}\\bcerco\\b",
+      "\\bSiege\\s+Perilous\\b|\\bbloqueio\\s+perigoso\\b"
+     ],
+     "note": "« cerco » (siege militar) é o falso sentido; pode ser legítimo num curso arturiano com cerco de castelo: falso positivo aceito. A edição já usa « Assento Perigoso »."
+    },
+    "ar": {
+     "forme_imposee": "المقعد الخطر (Siège périlleux)",
+     "fautif": [
+      "(?:ال)?حصار\\s*(?:ال)?(?:خطير|خطر|محفوف)",
+      "(?:ال)?حصار\\s*(?:ال)?(?:مائدة|طاولة)\\s*(?:ال)?مستديرة",
+      "(?:حصار|محاصرة)[^.]{0,40}(?:المائدة|الطاولة)\\s*المستديرة",
+      "(?:ال)?حصار\\s*(?:ال)?(?:بيريلوس|بيرلوس|بيريلو)"
+     ],
+     "note": "siege → حصار (siège militaire)."
+    },
     "he": {
      "forme_imposee": "המושב המסוכן (הכיסא הריק של השולחן העגול)",
      "fautif": [
@@ -1912,6 +3493,16 @@
       "(ה)?הסגר\\s+(ה)?מסוכן"
      ],
      "note": "מצור = siège militaire, légitime dans les cours d'histoire, d'où le contexte."
+    },
+    "fi": {
+     "forme_imposee": "Vaarallinen istuin (pyöreän pöydän tyhjä paikka)",
+     "fautif": [
+      "\\bvaaralli\\w*\\s+piirity\\w*",
+      "\\bpiirity\\w*.{0,40}(pyöre\\w*\\s+pöy|arthur|graal|galahad)",
+      "(pyöre\\w*\\s+pöy\\w*|arthur\\w*|graal\\w*|galahad\\w*).{0,40}\\bpiirity\\w*",
+      "\\bsaart\\w*.{0,30}(pyöre\\w*\\s+pöy|arthur|graal)"
+     ],
+     "note": "piiritys = siège militaire (légitime ailleurs), saarto = blocus."
     },
     "et": {
      "forme_imposee": "Ohtlik Iste (Ümarlaua tühi tool, Siège périlleux)",
@@ -1950,6 +3541,36 @@
      ],
      "note": "Nombres adaptados (Arturo, Ginebra, Lanzarote, Merlín) y título en minúscula: « el rey Arturo »."
     },
+    "de": {
+     "forme_imposee": "König Artus, Königin Guinevere",
+     "fautif": [
+      "\\bzar(?:in)?\\s+(?:artus|arthur|guinevere|ginevra|ginover)\\b",
+      "\\bkaiser(?:in)?\\s+(?:artus|arthur|guinevere|ginevra)\\b",
+      "\\bkönig\\s+arthur\\b|\\bkönigin\\s+(?:guenièvre|guenevere|jenifer|genièvre)\\b",
+      "\\bkönig\\s+artur\\b|\\bking\\s+arthur\\b"
+     ],
+     "note": "Deutsche Tradition: „Artus“ (nicht Arthur). Die Königin heißt im Deutschen meist Guinevere (mittelalterlich Ginover); „Guenièvre“ ist die französische Form."
+    },
+    "pt": {
+     "forme_imposee": "rei Artur, rainha Genebra (títulos reais; Lancelote, Galaaz)",
+     "fautif": [
+      "\\bczar\\w*\\s+(?:Artur|Arthur)\\b|\\bczarina\\s+(?:Genebra|Guinevere|Ginevra)\\b|\\b(?:tsar|tzar)\\w*\\s+(?:Artur|Arthur)\\b",
+      "\\bKing\\s+Arthur\\b|\\bQueen\\s+Guinevere\\b|\\brei\\s+Arthur\\b",
+      "\\b(?:Guinevere|Ginevra|Gueni[eè]vre|Guenevere)\\b",
+      "\\b(?:imperador|imperatriz)\\s+(?:Artur|Genebra)\\b"
+     ],
+     "note": "A edição já diz « rei Artur » e « rainha Genebra » (forma portuguesa tradicional de Guinevere). « Genebra » = Genebra (Suíça) nos outros cursos não é problema: é a mesma grafia correta."
+    },
+    "ar": {
+     "forme_imposee": "الملك آرثر، الملكة غينيفير",
+     "fautif": [
+      "(?:ال)?قيصر\\s*(?:آرثر|أرثر|ارثر)",
+      "(?:ال)?قيصرة\\s*(?:غينيفير|جينيفير|غوينيفير|جوينيفير|غنيفير)",
+      "(?:ال)?إمبراطور\\s*(?:آرثر|أرثر|ارثر)",
+      "(?:ال)?إمبراطورة\\s*(?:غينيفير|جينيفير|غوينيفير|جوينيفير)"
+     ],
+     "note": "king/queen → قيصر/قيصرة (tsar/tsarine)."
+    },
     "he": {
      "forme_imposee": "המלך ארתור, המלכה גווינביר",
      "fautif": [
@@ -1958,6 +3579,16 @@
       "(ה)?קיסר(ית)?\\s+(ארתור|ג[וי]+נ[יב]+[יו]?ר)"
      ],
      "note": "צאר / צארינה = titres russes importés par le pivot."
+    },
+    "fi": {
+     "forme_imposee": "kuningas Arthur, kuningatar Guinevere",
+     "fautif": [
+      "\\btsaari\\w*\\s+art(hur|turi)\\w*",
+      "\\btsaaritar\\w*\\s+(guinevere|ginevra|guenièvre|gwen)\\w*",
+      "\\bkeisari\\w*\\s+art(hur|turi)\\w*",
+      "\\bartturi\\w*"
+     ],
+     "note": "Artturi est la forme enfantine ; manuels et traductions gardent Arthur."
     },
     "et": {
      "forme_imposee": "kuningas Arthur, kuninganna Guinevere",
@@ -1998,6 +3629,36 @@
      ],
      "note": "Siglas españolas sin puntos."
     },
+    "de": {
+     "forme_imposee": "UNO (Vereinte Nationen), NATO",
+     "fautif": [
+      "\\bONU\\b|\\bOTAN\\b",
+      "\\bvereinigte[rn]?\\s+nationen\\b|\\bunited\\s+nations\\b",
+      "\\bnicht-?atlantik\\w*\\b|\\bnon-?\\s?(?:uno|un|nato)\\b|\\bNATO-?organisation\\b",
+      "\\bnord-?atlantische[rn]?\\s+vertrags-?\\s?(?:organisation|allianz)\\b(?![^.!?\\n]{0,20}\\(NATO\\))"
+     ],
+     "note": "„UN“ ist als Variante geduldet, aber zu vereinheitlichen. „Vereinigte Nationen“ (statt Vereinte) ist ein typischer Übersetzungsfehler. Die ausgeschriebene NATO-Form ohne Sigel wird markiert."
+    },
+    "pt": {
+     "forme_imposee": "ONU, OTAN (siglas brasileiras, sem pontos)",
+     "fautif": [
+      "\\bNATO\\b(?![^.!?\\n]{0,40}\\bem\\s+ingl[eê]s\\b)",
+      "\\b(?:a|da|na|pela|[àa])\\s+UN\\b",
+      "\\bU\\.\\s?N\\.|\\bN\\.\\s?A\\.\\s?T\\.\\s?O\\.|\\bO\\.\\s?N\\.\\s?U\\.|\\bO\\.\\s?T\\.\\s?A\\.\\s?N\\.",
+      "\\bn[aã]o-?(?:ONU|OTAN)\\b|\\bNa[cç][oõ]es\\s+Unidas\\s+Organiza[cç][aã]o\\b"
+     ],
+     "note": "« NATO em inglês e OTAN em francês » (curso 207) é uma menção metalinguística legítima e é excluída pelo lookahead."
+    },
+    "ar": {
+     "forme_imposee": "الأمم المتحدة ؛ الناتو (حلف شمال الأطلسي)",
+     "fautif": [
+      "(?<![؀-ۿ])(?:ال)?أونو(?![؀-ۿ])",
+      "(?<![؀-ۿ])(?:ال)?أوتان(?![؀-ۿ])",
+      "(?:ال)?يو\\s*إن(?![؀-ۿ])",
+      "(?<![A-Za-z])(?:OTAN|ONU)(?![A-Za-z])"
+     ],
+     "note": "Sigles français laissés tels quels ou translittérés. Faux positif accepté dans le bloc du cours OTAN qui explique NATO/OTAN."
+    },
     "he": {
      "forme_imposee": "האו״ם, נאט״ו (sigles hébreux établis) ; dans la phrase sur les langues : «NATO באנגלית ו-OTAN בצרפתית»",
      "fautif": [
@@ -2007,6 +3668,16 @@
       "ארגון\\s+האומות\\s+המאוחדות\\s*\\(?\\s*ONU"
      ],
      "note": "UN lu comme préfixe «un-» → בלתי (observé) ; OTAN n'est pas un sigle hébreu."
+    },
+    "fi": {
+     "forme_imposee": "YK (Yhdistyneet kansakunnat) ; Nato (pas NATO) ; OTAN seulement quand on parle du sigle français",
+     "fautif": [
+      "\\b(?-i:ONU)\\b",
+      "\\b(?-i:OTAN)\\w*(?!\\s+ranska)",
+      "\\b(?-i:UN):\\w+|\\b(?-i:UN)\\s+(on|oli)\\b",
+      "\\b(?-i:NATO)\\b"
+     ],
+     "note": "Groupes (?-i:…) pour rester sensibles à la casse malgré IGNORECASE (otan = je prends). NATO en capitales est un signalement de style, Kotus recommande Nato ; UN:n = sigle anglais décliné."
     },
     "et": {
      "forme_imposee": "ÜRO, NATO",
@@ -2045,6 +3716,35 @@
      ],
      "note": "Nombre propio con tilde y mayúscula. El regex « hegira » (sin tilde) no coincide con « Hégira » porque la é es otro carácter. « héjira » es variante RAE; se marca para unificar."
     },
+    "de": {
+     "forme_imposee": "Hidschra (622; Eigenname)",
+     "fautif": [
+      "\\bhijrah?\\b|\\bhegira\\b|\\bhégire\\b|\\bhegire\\b|\\bhidjra\\b",
+      "\\bhedschra\\b|\\bhidschrah\\b|\\bhidschrisch\\w*\\b",
+      "\\b(?:die\\s+)?(?:auswanderung|emigration|flucht|auszug|exodus)\\s+(?:mohammeds|des\\s+propheten|von\\s+mohammed|nach\\s+medina)\\b(?![^.!?\\n]{0,50}hidschra)",
+      "\\bnach\\s+der\\s+(?:auswanderung|emigration|flucht)\\b(?=[^.!?\\n]{0,30}622)"
+     ],
+     "note": "Duden: „Hidschra“ (Nebenform Hedschra, zu vereinheitlichen). Die Umschreibung „Auswanderung nach Medina“ ist als Erklärung mit nachgestelltem „(Hidschra)“ erlaubt; ohne den Eigennamen markiert."
+    },
+    "pt": {
+     "forme_imposee": "Hégira (a Hégira, 622; nome próprio com acento e maiúscula)",
+     "fautif": [
+      "\\bhijrah?\\b|\\bhegirah?\\b|\\bh[eé]jira\\b|\\bhidjra\\b",
+      "\\bemigra[cç][aã]o\\b[^.!?\\n]{0,70}\\b(?:Medina|622|Maom[eé]|Muhammad|Profeta|calend[aá]rio\\s+(?:mu[cç]ulmano|isl[aâ]mico))\\b|\\b(?:Medina|622|Maom[eé]|Muhammad|Profeta)\\b[^.!?\\n]{0,70}\\bemigra[cç][aã]o\\b",
+      "\\bheg[ií]ric\\w*|\\bhegirian\\w*|\\bh[eé]gir[ií]an\\w*"
+     ],
+     "note": "« hegira » (sem acento) não bate com « Hégira » porque o é é outro caractere: o regex pega justamente a forma latina não adaptada. A edição já usa « Hégira »."
+    },
+    "ar": {
+     "forme_imposee": "الهجرة (اسم علم، معرّف بأل)",
+     "fautif": [
+      "اسم:?\\s*\\*{0,2}(?:ال)?هجرية",
+      "(?:هيجرا|هيجيرا|هجيرة|الهيجرة|الهجيرا)(?![؀-ۿ])",
+      "(?:ال)?(?:نزوح|ترحيل|لجوء)\\s*(?:إلى|نحو)\\s*(?:ال)?(?:مدينة|يثرب)",
+      "(?<![A-Za-z])(?:Hegira|Hijra|Hegire)(?![A-Za-z])"
+     ],
+     "note": "هجرية (adjectif) observé ; le nom propre est الهجرة. التقويم الهجري reste légitime, d'où le contexte « اسم: »."
+    },
     "he": {
      "forme_imposee": "ההיג׳רה (nom propre ; «ההיג'רה מציינת את שנת 1 לאסלאם»)",
      "fautif": [
@@ -2054,6 +3754,15 @@
       "שנת\\s+ההגירה"
      ],
      "note": "הגירה = émigration (nom commun, observé) ; légitime dans un cours sur les migrations, d'où le contexte."
+    },
+    "fi": {
+     "forme_imposee": "hidžra (minuscule ; islamilainen ajanlasku alkaa hidžrasta)",
+     "fautif": [
+      "\\b(hegira|hijra|hijrah|hidjra|hidzhra|hedzhra|hedžra)\\w*",
+      "\\b(maastamuut|muuttoliik|siirtolaisuu|emigraati)\\w*.{0,50}(622|medina|muhammad)",
+      "(622|medina|muhammad\\w*).{0,50}\\b(maastamuut|muuttoliik|siirtolaisuu|emigraati)\\w*"
+     ],
+     "note": "Hegira = forme latine/anglaise ; maastamuutto = émigration (nom commun)."
     },
     "et": {
      "forme_imposee": "hidžra (väike algustäht; hidžrat, pärast hidžrat)",
@@ -2094,6 +3803,36 @@
      ],
      "note": "El glosario de la app usa hoy « Dhimma » y un quiz « jizya » (transliteraciones inglesas): en español, « dimma » y « yizia ». « razzia » está en el DLE como variante, pero la forma principal es « razia »."
     },
+    "de": {
+     "forme_imposee": "Razzia (Pl. Razzien), Dschizya, Kalif, Dhimma, Umma",
+     "fautif": [
+      "\\bjizyah?\\b|\\bdjizya\\b|\\bjizia\\b|\\bgizya\\b",
+      "\\bcaliphs?\\b|\\bkaliph\\w*\\b|\\bkhalif\\w*\\b|\\bcalif\\w*\\b",
+      "\\bummah\\b|\\boumma\\b|\\bumm\\b",
+      "\\brazzias\\b|\\brazia\\b|\\bghazw\\w*\\b|\\bdhimmah\\b|\\bdimma\\b"
+     ],
+     "note": "Deutsche Umschrift (Duden/Islamwissenschaft): Dschizya, Kalif, Umma, Dhimma; französischer Plural „Razzias“ und englische Umschriften (jizya, caliph, Ummah) werden markiert."
+    },
+    "pt": {
+     "forme_imposee": "razia, jizya, califa, dhimma, Umma (redondo; plural português: razias, califas)",
+     "fautif": [
+      "\\brazzias?\\b",
+      "\\bjizyah\\b|\\bjizia\\b|\\bdjizya\\b|\\byizya\\b|\\bgizya\\b",
+      "\\bdhimmah\\b|\\bdimma\\b|\\bzimma\\b|\\bdhimm[ií]s\\b",
+      "\\bummah\\b|\\bcaliphs?\\b|\\bkhalifa\\b|\\bcalifes\\b"
+     ],
+     "note": "A edição usa hoje « razias », « jizya », « dhimma », « Umma », « califa »: formas correntes nos manuais brasileiros. Marcam-se as transliterações inglesas (ummah, caliph), o « razzia » com dois z e o plural francês « califes »."
+    },
+    "ar": {
+     "forme_imposee": "غزوة/غزوات، الجزية، الخليفة، الذمة، الأمة (كلمات عربية أصلية، لا نقحرة)",
+     "fautif": [
+      "(?:رازيا|راتزيا|راتسيا|غازيا)س?(?![؀-ۿ])",
+      "(?:جيزيا|جزيا|كاليف|كاليفة|كاليفا)(?![؀-ۿ])",
+      "(?:ذيما|ضيما|دهيما|أومّ?ا|أوماه)(?![؀-ۿ])",
+      "(?<![A-Za-z])(?:razzias?|jizya|caliphs?|dhimma|ummah)(?![A-Za-z])"
+     ],
+     "note": "رازياس (translittération du français) observé ; en arabe les termes existent nativement."
+    },
     "he": {
      "forme_imposee": "ראזיה (פשיטה), ג׳יזיה, ח׳ליף / ח׳ליפים, ד׳ימה, אומה (אל-אומה) — avec geresh, pluriel hébreu",
      "fautif": [
@@ -2103,6 +3842,16 @@
       "דהימ[הא]|אוממ[הא]|ג'יזיא|ראזזיה"
      ],
      "note": "Observé «כליףs» (pluriel latin collé) ; קליף = translittération anglaise de caliph."
+    },
+    "fi": {
+     "forme_imposee": "ryöstöretki (razzia), jizya, kalifi, dhimma, umma — formes finnoises, suffixe soudé au mot (kalifille), jamais après le balisage ([[Kalifi]]:ille)",
+     "fautif": [
+      "\\bratsi(a|an|oita|at|oissa)\\b",
+      "\\brazzias\\b|\\bcaliph\\w*|\\bummah\\b|\\bjizyah\\b|\\bdhimmah\\b|\\bkhalif\\w*",
+      "\\]\\]:(lle|ille|n|a|ä|ta|tä|ssa|ssä|sta|stä|lla|llä|lta|ltä|ksi|na|nä|in|en)\\b",
+      "\\*\\*:(lle|ille|n|a|ä|ta|tä|ssa|ssä|sta|stä|lla|llä|lta|ltä|ksi|na|nä|in|en)\\b"
+     ],
+     "note": "ratsia = descente de police (faux ami de razzia) ; les deux dernières regex attrapent tout terme balisé suivi d'un suffixe après deux-points."
     },
     "et": {
      "forme_imposee": "rüüsteretk (razzia), džizja, kaliif, dhimma, umma",
@@ -2142,6 +3891,35 @@
      ],
      "note": ""
     },
+    "de": {
+     "forme_imposee": "Impression, Sonnenaufgang (Monet)",
+     "fautif": [
+      "\\b(?:eindruck|abdruck|druck|aufdruck|ausdruck|prägung)\\s*[,:–-]?\\s+(?:sonnenaufgang|aufgehende\\s+sonne)\\b",
+      "\\bimpression\\s*[,:–-]?\\s+aufgehende\\s+sonne\\b",
+      "\\bsonnenaufgangs?-?\\s?(?:druck|abdruck|eindruck)\\b",
+      "\\bimpression,?\\s+sunrise\\b"
+     ],
+     "note": "impression → Eindruck/Abdruck/Druck. Etablierter deutscher Titel: „Impression, Sonnenaufgang“ (auch mit Gedankenstrich)."
+    },
+    "pt": {
+     "forme_imposee": "Impressão, nascer do sol (quadro de Monet; título estabelecido)",
+     "fautif": [
+      "\\b(?:estampa|gravura|impresso|tiragem|impress[aã]o\\s+digital)\\s*,?\\s+(?:nascer\\s+do\\s+sol|sol\\s+nascente|amanhecer)\\b",
+      "\\bImpression,?\\s+(?:Sunrise|soleil\\s+levant)\\b(?![^.!?\\n]{0,20}\\(|[^.!?\\n]{0,20}t[ií]tulo\\s+original)",
+      "\\bImpress[aã]o,?\\s+(?:sol\\s+nascente|amanhecer|alvorada|nascente\\s+do\\s+sol|sol\\s+a\\s+nascer)\\b",
+      "\\bImpress[aã]o\\s+do\\s+(?:nascer\\s+do\\s+sol|sol\\s+nascente)\\b"
+     ],
+     "note": "A edição já usa « Impressão, nascer do sol » (7 vezes). « estampa/gravura » é o falso sentido de « print »; « sol nascente » é calco a unificar."
+    },
+    "ar": {
+     "forme_imposee": "انطباع، شروق الشمس",
+     "fautif": [
+      "(?:ال)?(?:طباعة|طبعة|مطبوع|مطبوعة|نقش)[،,]?\\s*(?:ال)?(?:شروق|شمس)",
+      "(?:ال)?انطباع[،,]?\\s*(?:ال)?شمس\\s*(?:ال)?(?:مشرقة|ساطعة|صاعدة|طالعة)",
+      "(?:طبعة|طباعة|مطبوعة)[^.]{0,20}(?:مونيه|شروق)"
+     ],
+     "note": "« الانطباع، الشمس المشرقة » observé (soleil brillant) ; print → طبعة (estampe)."
+    },
     "he": {
      "forme_imposee": "אימפרסיה, זריחה (מונה, 1872)",
      "fautif": [
@@ -2150,6 +3928,15 @@
       "אימפרסיה,?\\s+שמש\\s+עולה"
      ],
      "note": "הדפס = estampe (observé dans un titre de cours) ; רושם / התרשמות = impression au sens de sentiment."
+    },
+    "fi": {
+     "forme_imposee": "Impressio, auringonnousu",
+     "fautif": [
+      "\\bprintti\\w*,?\\s+(nouseva|auringon)",
+      "\\b(painatus|painokuva|vedos|jäljennös|vaikutelma|vaikutus)\\w*,?\\s+(nouseva|auringon)",
+      ",\\s*nouseva\\s+aurinko\\b"
+     ],
+     "note": "printti/vedos = estampe/tirage."
     },
     "et": {
      "forme_imposee": "Impressioon. Tõusev päike",
@@ -2187,6 +3974,34 @@
      ],
      "note": "« masticar » se marca solo en la misma frase que El grito / Edvard / noruego, porque es legítimo en un curso de digestión."
     },
+    "de": {
+     "forme_imposee": "Munch (Edvard Munch)",
+     "fautif": [
+      "\\b(?:mampf|kau|knabber|mümmel)\\w*\\b(?=[^.!?\\n]{0,40}(?:schrei|edvard|norweg|expressionis|gemälde|1893))",
+      "\\bedvard\\s+(?:mampf|kau|knabber)\\w*\\b",
+      "\\bmunsch\\b|\\bmünch\\b(?=[^.!?\\n]{0,40}(?:schrei|edvard|norweg))"
+     ],
+     "note": "Eigenname; „munch“ als Verb (mampfen/kauen) nur in Nähe von „Schrei“/„Edvard“ markiert."
+    },
+    "pt": {
+     "forme_imposee": "Munch (Edvard Munch, nome próprio)",
+     "fautif": [
+      "\\b(?:mastig|masc|petisc|mord)\\w*\\b[^.!?\\n]{0,60}\\b(?:Grito|Edvard|Oslo|expressionis\\w*|noruegu[eê]s)\\b|\\b(?:Grito|Edvard|Oslo|expressionis\\w*|noruegu[eê]s)\\b[^.!?\\n]{0,60}\\b(?:mastig|masc|petisc|mord)\\w*\\b",
+      "\\bEdvard\\s+(?:Mastigar|Mascar|Morder)\\b",
+      "\\bM[uü]nch\\b(?<!Munch)"
+     ],
+     "note": "« mastigar » é o falso sentido de « munch »; legítimo no curso do coentro, por isso só se marca perto de Grito/Edvard/Oslo."
+    },
+    "ar": {
+     "forme_imposee": "مونك (إدفارد مونك)",
+     "fautif": [
+      "(?:ال)?(?:مضغ|يمضغ|قضم|يقضم|قرمشة|يقرمش)[^.]{0,20}(?:الصرخة|1893|إدفارد|إدوارد)",
+      "(?:إدفارد|إدوارد|ادفارد)\\s*(?:ال)?(?:مضغ|يمضغ|قضم|يقضم)",
+      "(?:الصرخة|لوحة)[^.]{0,30}(?:ال)?(?:مضغ|قضم|يقرمش)",
+      "(?:إدفارد|إدوارد|ادفارد|إدوار)\\s*(?:مونش|مانش|منش|مونتش|مونخ)"
+     ],
+     "note": "munch → مضغ (mâcher) ; مونش = prononciation française, mauvaise graphie."
+    },
     "he": {
      "forme_imposee": "מונק (אדוורד מונק)",
      "fautif": [
@@ -2195,6 +4010,14 @@
       "מ[וא]נץ'?"
      ],
      "note": "ללעוס = mâcher (observé) ; faux positif accepté dans un cours de biologie."
+    },
+    "fi": {
+     "forme_imposee": "Munch (Edvard Munch ; génitif Munchin)",
+     "fautif": [
+      "\\b(mutust|puresk|järsi|napostel|rouskut)\\w*.{0,30}(huuto|skrik|edvard)",
+      "(huuto|skrik|edvard).{0,30}\\b(mutust|puresk|järsi|napostel|rouskut)\\w*"
+     ],
+     "note": "mutustaa = mâcher."
     },
     "et": {
      "forme_imposee": "Munch (Edvard Munch)",
@@ -2232,6 +4055,34 @@
      ],
      "note": "El pivote inglés « pan » da « sartén ». Además, « el dios del pan » (alimento) sería un contrasentido interno del español."
     },
+    "de": {
+     "forme_imposee": "Pan (griechischer Hirtengott)",
+     "fautif": [
+      "\\b(?:gott|hirtengott|der\\s+gott)\\s+(?:pfanne|bratpfanne|topf|schwenk)\\b",
+      "\\bpfanne\\b(?=[^.!?\\n]{0,50}(?:nymphe|syrinx|hirten|arkadien|flöte|ziegen|bocksbein|hermes))|(?:nymphe|syrinx|arkadien|hirtengott)[^.!?\\n]{0,50}\\bpfanne\\b",
+      "\\bschwenk\\b(?=[^.!?\\n]{0,40}(?:nymphe|syrinx|hirten|arkadien|flöte|bocksbein))",
+      "\\bpanik\\s+(?:gott|gottheit)\\b"
+     ],
+     "note": "pan → Pfanne / Kameraschwenk. „Panflöte“ und „Panik“ (von Pan abgeleitet) sind korrekt und werden nicht markiert."
+    },
+    "pt": {
+     "forme_imposee": "Pã (deus grego; « a palavra pânico vem do deus Pã »; flauta de Pã)",
+     "fautif": [
+      "\\b(?:panela|frigideira|ca[cç]arola)\\b[^.!?\\n]{0,60}\\b(?:deus|ninfas?|flauta|s[aá]tiro|bosques?|pastor\\w*|Arc[aá]dia|p[aâ]nico|Siringe|Syrinx|Eco)\\b|\\b(?:deus|ninfas?|flauta|s[aá]tiro|Arc[aá]dia|p[aâ]nico|Siringe|Syrinx)\\b[^.!?\\n]{0,60}\\b(?:panela|frigideira|ca[cç]arola)\\b",
+      "\\b(?:o\\s+)?deus\\s+Pan\\b|\\bPan\\s*,\\s+(?:o\\s+)?deus\\b|\\bflauta\\s+de\\s+Pan\\b",
+      "\\bPan\\s+(?:e\\s+Siringe|e\\s+Eco|e\\s+as\\s+ninfas)\\b"
+     ],
+     "note": "Em português o deus é « Pã » (a edição já o usa). « Pan » só se marca junto a deus/flauta/ninfas, para não tocar « pan-africanismo », « Pan-eslavismo » nem a marca."
+    },
+    "ar": {
+     "forme_imposee": "بان (الإله الإغريقي)",
+     "fautif": [
+      "(?:ال)?إله\\s*\\*{0,2}(?:انفجار|الانفجار|مقلاة|المقلاة|طرق|الطرق|صفع|ضربة|دوي)",
+      "(?:انفجار|الانفجار|مقلاة|المقلاة)[^.]{0,30}(?:إيكو|الحورية|صدى)",
+      "(?:الإله|إله)\\s*\\*{0,2}(?:بن|بين|عموم)(?![؀-ۿ])"
+     ],
+     "note": "« الإله انفجار » (Explosion) observé dans l'audit ; pan → مقلاة (poêle)."
+    },
     "he": {
      "forme_imposee": "פאן (האל פאן)",
      "fautif": [
@@ -2241,10 +4092,20 @@
      ],
      "note": "Observé «האל לדפוק» (verbe argotique) ; מחבת = poêle."
     },
+    "fi": {
+     "forme_imposee": "Pan (jumala Pan ; génitif Panin)",
+     "fautif": [
+      "\\bjumala\\s+\\**(bang|pannu|paistinpannu|läimäy|pamau)\\w*",
+      "\\b(bang|pannu)\\w*,?\\s+joka\\s+(on\\s+)?raivo\\w*",
+      "\\bpannu\\w*.{0,30}(nymf|syrinx|huilu|ekho|echo|metsänjumal)",
+      "(nymf\\w*|syrinx|huilu\\w*|ekho\\w*|metsänjumal\\w*).{0,30}\\bpannu\\w*"
+     ],
+     "note": "Bang = onomatopée (audit), pannu = poêle."
+    },
     "et": {
      "forme_imposee": "Paan (jumal Paan)",
      "fautif": [
-      "\\bjumal\\s+pauk\\w*",
+      "\\bjumal\\w*\\s+\\**pauk\\w*",
       "\\bpauk\\w*(?=.{0,40}(nümf|jumal|syrinx|süürinks|karjus|flööt|echo|kaja))",
       "\\bpann\\b(?=.{0,30}(jumal|nümf))",
       "\\bjumal\\s+pan\\b"
@@ -2279,6 +4140,34 @@
      ],
      "note": "El primer regex atrapa la forma sin tilde (« nemesis » no coincide con « Némesis »)."
     },
+    "de": {
+     "forme_imposee": "Nemesis (Göttin der ausgleichenden Gerechtigkeit und Rache)",
+     "fautif": [
+      "\\b(?:göttin|gottheit)\\s+(?:erzfeind|erzfeindin|widersacher|gegner|feind|rivale)\\w*\\b",
+      "\\b(?:erzfeind|widersacher|erzrivale|erzfeindin)\\w*\\b(?=[^.!?\\n]{0,50}(?:göttin|rache|hybris|vergeltung|olymp|griech|mythologie))",
+      "\\bnémésis\\b|\\bnemesis\\s+\\(erzfeind\\)"
+     ],
+     "note": "nemesis → Erzfeind ist die englische Alltagsbedeutung; als Göttin bleibt „Nemesis“."
+    },
+    "pt": {
+     "forme_imposee": "Nêmesis (deusa da vingança; acento circunflexo no Brasil)",
+     "fautif": [
+      "\\b(?:arqui-?inimig[oa]|inimig[oa]|advers[aá]ri[oa]|rival)\\b[^.!?\\n]{0,60}\\b(?:deusa|vingan[cç]a|Narciso|retribui[cç][aã]o|h[uú]bris|hybris|Zeus|grega)\\b|\\b(?:deusa|vingan[cç]a|Narciso|retribui[cç][aã]o|h[uú]bris|hybris)\\b[^.!?\\n]{0,60}\\b(?:arqui-?inimig[oa]|inimig[oa]|advers[aá]ri[oa]|rival)\\b",
+      "\\bN[eé]mesis\\b",
+      "\\bn[êeé]mesis\\s+(?:dele|dela|de\\s+\\w+)\\b[^.!?\\n]{0,40}\\b(?:inimig|rival)"
+     ],
+     "note": "« Némesis » (Portugal) e « Nemesis » (inglês/latim) se marcam para unificar em « Nêmesis »; « nemesis_destroying_chinese_war_junks » é um id de imagem (falso positivo inofensivo). « inimigo » só se marca perto de deusa/vingança/Narciso."
+    },
+    "ar": {
+     "forme_imposee": "نيميسيس (إلهة الانتقام)",
+     "fautif": [
+      "\\[\\[(?:ال)?(?:عدو|خصم|غريم)\\]\\]",
+      "(?:ال)?(?:عدو|عدوة|خصم|غريم)[،,]?\\s*(?:إلهة|آلهة|ربة)\\s*(?:ال)?(?:انتقام|ثأر|عدالة)",
+      "(?:إلهة|ربة)\\s*(?:ال)?(?:انتقام|ثأر)[^.]{0,15}(?:ال)?(?:عدو|خصم)",
+      "(?:نمسيس|نيمسيس|نيميزيس|نيميسس)(?![؀-ۿ])"
+     ],
+     "note": "[[العدو]] (l'ennemi) observé ; graphies concurrentes signalées pour l'uniformité."
+    },
     "he": {
      "forme_imposee": "נמסיס (אלת הנקמה)",
      "fautif": [
@@ -2287,6 +4176,16 @@
       "(האויבת|היריבה)\\s+המושבעת"
      ],
      "note": "אויב / יריב = l'ennemi (sens anglais courant de nemesis)."
+    },
+    "fi": {
+     "forme_imposee": "Nemesis (koston jumalatar ; génitif Nemesiksen)",
+     "fautif": [
+      "\\b(arkki|veri|pää)?viholli\\w*.{0,40}(jumalatar|koston|narkisso|narsiss)",
+      "(jumalatar|koston|narkisso\\w*|narsiss\\w*).{0,40}\\b(arkki|veri|pää)?viholli\\w*",
+      "\\bnemesisi(n|a|ä|lle|ssä)\\b",
+      "\\bjumalatar\\s+(vastustaja|vihollinen)"
+     ],
+     "note": "vihollinen = ennemi ; Nemesisin est une déclinaison fautive (il faut Nemesiksen)."
     },
     "et": {
      "forme_imposee": "Nemesis (kättemaksujumalanna Nemesis)",
@@ -2327,6 +4226,35 @@
      ],
      "note": "Misma polisemia que en francés: « Gran Depresión » con mayúsculas es inequívoco. « Gran Recesión » es la crisis de 2008, no la de 1929."
     },
+    "de": {
+     "forme_imposee": "Weltwirtschaftskrise (ab 1929; „Große Depression“ geduldet)",
+     "fautif": [
+      "\\b(?:schwere|tiefe|nervliche|klinische|seelische)[rn]?\\s+depression\\b(?=[^.!?\\n]{0,60}(?:1929|börse|wall\\s+street|roosevelt|arbeitslos|banken|krise|new\\s+deal|hoover))",
+      "\\b(?:1929|börsenkrach|wall\\s+street|roosevelt|hoover)\\b[^.!?\\n]{0,60}\\b(?:niedergeschlagenheit|schwermut|depressionen|depressiv)\\b",
+      "\\bgroße[rn]?\\s+(?:niedergeschlagenheit|schwermut|depressivität|senke|vertiefung)\\b",
+      "\\bgrande\\s+dépression\\b"
+     ],
+     "note": "Im Deutschen heißt die Krise von 1929 „Weltwirtschaftskrise“; „Große Depression“ ist als Lehnbegriff in Wirtschaftstexten verbreitet und wird nicht markiert. Die psychologische Lesart wird in Krisen-Nähe markiert."
+    },
+    "pt": {
+     "forme_imposee": "Grande Depressão (crise de 1929)",
+     "fautif": [
+      "\\b(?:grande\\s+)?depress[aã]o\\s+(?:nervosa|ps[ií]quica|mental|cl[ií]nica|profunda)\\b[^.!?\\n]{0,70}\\b(?:1929|Wall\\s+Street|Roosevelt|crise\\s+econ[oô]mica|desemprego|bolsa|Hoover)\\b|\\b(?:1929|Wall\\s+Street|Roosevelt|desemprego|Hoover)\\b[^.!?\\n]{0,70}\\bdepress[aã]o\\s+(?:nervosa|ps[ií]quica|mental|cl[ií]nica)\\b",
+      "\\bGrande\\s+Recess[aã]o\\b[^.!?\\n]{0,60}\\b(?:1929|Roosevelt|New\\s+Deal|Hoover|1930)\\b|\\b(?:1929|Roosevelt|New\\s+Deal|Hoover)\\b[^.!?\\n]{0,60}\\bGrande\\s+Recess[aã]o\\b",
+      "\\bGreat\\s+Depression\\b"
+     ],
+     "note": "« Grande Recessão » é a crise de 2008; « depressão nervosa » o falso sentido médico."
+    },
+    "ar": {
+     "forme_imposee": "الكساد الكبير",
+     "fautif": [
+      "(?:ال)?اكتئاب\\s*(?:ال)?(?:كبير|عظيم|كبرى|عظمى)",
+      "(?:ال)?اكتئاب[^.]{0,25}(?:1929|وول\\s*ستريت|روزفلت|البورصة)",
+      "(?:1929|وول\\s*ستريت)[^.]{0,25}(?:ال)?اكتئاب",
+      "(?:ال)?إحباط\\s*(?:ال)?(?:كبير|عظيم)"
+     ],
+     "note": "depression → اكتئاب (dépression nerveuse)."
+    },
     "he": {
      "forme_imposee": "השפל הגדול (1929)",
      "fautif": [
@@ -2335,6 +4263,16 @@
       "דיכאון\\s+כלכלי"
      ],
      "note": "דיכאון = dépression nerveuse (observé «דיכאון גדול»)."
+    },
+    "fi": {
+     "forme_imposee": "suuri lama (1930-luvun lama)",
+     "fautif": [
+      "\\bsuur\\w*\\s+masennu\\w*",
+      "\\bsuur\\w*\\s+depressio\\w*",
+      "\\bsuur\\w*\\s+(painauma|painuma|taantuma)\\w*",
+      "\\bmasennu\\w*.{0,40}(1929|pörssi|roosevelt|wall street)|(1929|pörssi\\w*|roosevelt|wall street).{0,40}\\bmasennu\\w*"
+     ],
+     "note": "masennus = dépression nerveuse ; taantuma = récession (trop faible)."
     },
     "et": {
      "forme_imposee": "suur depressioon (1929)",
@@ -2373,6 +4311,36 @@
      ],
      "note": "« cocina popular » puede ser legítimo (gastronomía tradicional): falso positivo aceptado."
     },
+    "de": {
+     "forme_imposee": "Suppenküche",
+     "fautif": [
+      "\\bvolkssuppen?\\b|\\bvolks-?suppe\\b",
+      "\\b(?:populäre|beliebte|volkstümliche|öffentliche)[rn]?\\s+suppen?\\b",
+      "\\bsuppenkosmetik\\w*\\b|\\bkosmetik(?:küche|suppe)\\b|\\bsuppen-?kochen\\b",
+      "\\bsoup\\s+kitchen\\b|\\bsoupe\\s+populaire\\b"
+     ],
+     "note": "soup kitchen → Suppenküche (auch Armenküche). „Volkssuppe“ ist die wörtliche Übertragung."
+    },
+    "pt": {
+     "forme_imposee": "sopa popular (« milhões de pessoas dependem de sopas populares »; filas da sopa)",
+     "fautif": [
+      "\\bcozinhas?\\s+d[ea]\\s+sopas?\\b",
+      "\\bcozinhas?\\s+(?:de\\s+)?cosm[eé]tic\\w*\\b",
+      "\\bsoup\\s+kitchens?\\b",
+      "\\brefeit[oó]rios?\\s+de\\s+sopa\\b|\\bbancos?\\s+de\\s+sopa\\b"
+     ],
+     "note": "A edição já diz « sopas populares » (curso 18). « cozinha de sopa » é o calco de « soup kitchen »; « cozinha comunitária » seria aceitável mas se unifica."
+    },
+    "ar": {
+     "forme_imposee": "مطابخ الحساء الخيرية",
+     "fautif": [
+      "(?:مطبخ|مطابخ)\\s*(?:ال)?(?:مستحضرات|تجميل|مكياج|كوزمتيك)",
+      "(?:مطبخ|مطابخ)\\s*(?:ال)?حساء(?!\\s*(?:ال)?خيري)",
+      "(?:ال)?شوربة\\s*(?:ال)?شعبية?(?![؀-ۿ])",
+      "(?:حساء|شوربة)\\s*(?:ال)?(?:شعب|شعبي)(?![؀-ۿ])"
+     ],
+     "note": "« مطبخ الحساء » seul est le calque de soup kitchen ; « الشوربة الشعبية » est le calque du français."
+    },
     "he": {
      "forme_imposee": "בית תמחוי (pl. בתי תמחוי)",
      "fautif": [
@@ -2381,6 +4349,16 @@
       "מרק\\s+(עממי|עממית|ציבורי|פופולרי)"
      ],
      "note": "Observé «מטבחי תמרוקים» (cuisines de cosmétiques)."
+    },
+    "fi": {
+     "forme_imposee": "soppakeittiö (file d'attente : soppajono)",
+     "fautif": [
+      "\\bkeittokeitti\\w*",
+      "\\bkansan\\s*(keitto|soppa)\\w*",
+      "\\bkosmetiik\\w*\\s*keitti\\w*",
+      "\\bsoppa\\s+keitti\\w*"
+     ],
+     "note": "keittokeittiö / kansankeitto = calques."
     },
     "et": {
      "forme_imposee": "supiköök (tasuta supiköögid)",
@@ -2420,6 +4398,36 @@
      ],
      "note": "El quiz de la app dice « corridas bancarias »: jerga americana; en España, « pánico bancario »."
     },
+    "de": {
+     "forme_imposee": "Ansturm auf die Banken (Bank Run)",
+     "fautif": [
+      "\\bbank(?:en)?läufe?\\b|\\bbank(?:en)?rennen\\b|\\bbankenrennen\\b",
+      "\\b(?:die\\s+)?bank(?:en)?\\s+(?:läuft|lief|rennt|rannte|laufen|liefen|rennen|rannten)\\b",
+      "\\bbankgeschäfte\\b(?=[^.!?\\n]{0,50}(?:1929|193\\d|krise|panik|abheb|sparer|einlagen|schalter|stürm))|(?:1929|193\\d|panik|abheb|sparer|einlagen)[^.!?\\n]{0,50}\\bbankgeschäfte\\b",
+      "\\bbankoperationen\\b|\\bbankbetrieb\\b(?=[^.!?\\n]{0,40}(?:panik|sparer|abheb))"
+     ],
+     "note": "bank runs → Bankläufe / die Bank läuft / Bankgeschäfte. „Bank Run“ ist als Fachbegriff im Deutschen geläufig, daher in Klammern erlaubt."
+    },
+    "pt": {
+     "forme_imposee": "corrida aos bancos (corrida bancária: saques em massa)",
+     "fautif": [
+      "\\bbank\\s+runs?\\b",
+      "\\b(?:o\\s+)?banco\\s+corre\\b|\\bbancos\\s+correm\\b|\\bcorridas?\\s+d[eo]\\s+banco\\b",
+      "\\bopera[cç][oõ]es\\s+banc[aá]rias\\b[^.!?\\n]{0,70}\\b(?:1929|193[0-3]|p[aâ]nico|Depress[aã]o|saques?|fal[eê]ncia\\w*|quebr\\w+)\\b|\\b(?:1929|193[0-3]|p[aâ]nico|Depress[aã]o|saques?)\\b[^.!?\\n]{0,70}\\bopera[cç][oõ]es\\s+banc[aá]rias\\b",
+      "\\bexecu[cç](?:[aã]o|[oõ]es)\\s+banc[aá]rias?\\b"
+     ],
+     "note": "O glossário do curso 18 ainda tem o termo « bank runs » em inglês ([[bank runs]]), enquanto o quiz diz « corridas aos bancos »: unificar em português."
+    },
+    "ar": {
+     "forme_imposee": "التهافت على سحب الودائع (التهافت على البنوك)",
+     "fautif": [
+      "يعمل\\s*(?:ال)?بنك(?![؀-ۿ])",
+      "\\[\\[(?:ال)?بنك\\s*(?:يعمل|يجري|يركض)\\]\\]",
+      "(?:ال)?بنك\\s*(?:يجري|يركض)(?![؀-ۿ])",
+      "(?:عمليات|تشغيل|أعمال|جري|ركض|سباق)\\s*(?:ال)?(?:بنوك|بنكية|مصرفية|بنكي|مصرفي)[^.]{0,20}(?:ذعر|موجات|1929|سحب)"
+     ],
+     "note": "[[يعمل البنك]] (la banque travaille) observé."
+    },
     "he": {
      "forme_imposee": "ריצה אל הבנק / בהלת בנקים (retraits massifs)",
      "fautif": [
@@ -2429,6 +4437,16 @@
       "מרוצי\\s+בנק"
      ],
      "note": "«הבנק רץ» = la banque court ; פעולות בנקאיות = opérations bancaires."
+    },
+    "fi": {
+     "forme_imposee": "talletuspako (pankkipaniikki)",
+     "fautif": [
+      "\\bpankki\\s*juoks\\w*",
+      "\\bpank(in|it|ki)\\s+juokse\\w*",
+      "\\bpankkiajo\\w*",
+      "\\bpankkitoimin\\w*.{0,40}(1929|1930|paniik|talletta|romahd)|(1929|1930|paniik\\w*|talletta\\w*|romahd\\w*).{0,40}\\bpankkitoimin\\w*"
+     ],
+     "note": "pankkitoiminta = opérations bancaires."
     },
     "et": {
      "forme_imposee": "pangajooks (pangajooksud; pangapaanika)",
@@ -2468,6 +4486,34 @@
      ],
      "note": "Nombre propio sin traducir ni cursiva. « Nuevo Trato » circula en manuales, pero se unifica en « New Deal »."
     },
+    "de": {
+     "forme_imposee": "New Deal",
+     "fautif": [
+      "\\bneue[rsn]?\\s+(?:geschäft|deal|vereinbarung|abkommen|abmachung|handel|kurs|verteilung|karte)\\b(?=[^.!?\\n]{0,80}(?:roosevelt|1933|arbeitslos|krise|präsident|usa|amerika))",
+      "\\b(?:roosevelt|1933)\\b[^.!?\\n]{0,80}\\bneue[rsn]?\\s+(?:geschäft|deal|vereinbarung|abkommen|abmachung|handel|verteilung)\\b",
+      "\\bneuer\\s+deal\\b|\\bneues\\s+geschäft\\b|\\bneu-?deal\\b",
+      "\\bnew-?deal-?programm\\b"
+     ],
+     "note": "Eigenname, bleibt englisch und ohne Bindestrich-Komposita („New-Deal-Programm“ ist orthografisch korrekt, hier aber zur Vereinheitlichung markiert)."
+    },
+    "pt": {
+     "forme_imposee": "New Deal (nome próprio, sem tradução)",
+     "fautif": [
+      "\\bNov[oa]\\s+(?:Acordo|Transa[cç][aã]o|Neg[oó]cio|Pacto|Trato|Contrato|Distribui[cç][aã]o|Oferta)\\b[^.!?\\n]{0,60}\\b(?:Roosevelt|1933|Depress[aã]o|EUA|Estados\\s+Unidos)\\b|\\b(?:Roosevelt|1933|Depress[aã]o)\\b[^.!?\\n]{0,60}\\bNov[oa]\\s+(?:Acordo|Transa[cç][aã]o|Neg[oó]cio|Pacto|Trato|Contrato)\\b",
+      "\\bNew-Deal\\b|\\bNewdeal\\b",
+      "\\bnovo\\s+acordo\\s+de\\s+Roosevelt\\b"
+     ],
+     "note": "« Novo Acordo » só se marca perto de Roosevelt/1933 (« Novo Acordo Ortográfico » e « novo pacto sobre a migração » são legítimos)."
+    },
+    "ar": {
+     "forme_imposee": "الصفقة الجديدة (New Deal)",
+     "fautif": [
+      "(?:ال)?صفقة\\s*روزفلت\\s*(?:ال)?جديدة",
+      "(?:ال)?(?:معاملة|اتفاق|اتفاقية|عقد)\\s*(?:ال)?(?:جديد|جديدة)[^.]{0,20}(?:روزفلت|1933)",
+      "روزفلت[^.]{0,30}(?:معاملة|اتفاق|اتفاقية|عقد)\\s*(?:ال)?جديد"
+     ],
+     "note": "« صفقة روزفلت الجديدة » (nouvelle transaction de Roosevelt) observé ; le nom propre est الصفقة الجديدة, éventuellement suivi de (نيو ديل)."
+    },
     "he": {
      "forme_imposee": "הניו דיל (nom propre : «הניו דיל של רוזוולט»)",
      "fautif": [
@@ -2476,6 +4522,15 @@
       "(ה)?עסקה\\s+(ה)?חדשה\\s*\\(?1933"
      ],
      "note": "Observé «העסקה החדשה של רוזוולט» = nouvelle transaction."
+    },
+    "fi": {
+     "forme_imposee": "New Deal (conservé ; génitif New Dealin)",
+     "fautif": [
+      "\\buu(si|den|tta|teen)\\s+(sopimu|kaupp|diil|jako|järjestely)\\w*.{0,60}(roosevelt|1933|lama)|(roosevelt|1933|lama\\w*).{0,60}\\buu(si|den|tta|teen)\\s+(sopimu|kaupp|diil|jako|järjestely)\\w*",
+      "\\broosevelt\\s+ja\\s+uusi\\s+\\w+",
+      "\\buusi\\s+diili\\b"
+     ],
+     "note": "uusi sopimus = nouvel accord (légitime pour un traité, d'où le contexte Roosevelt)."
     },
     "et": {
      "forme_imposee": "New Deal (Roosevelti New Deal; käändes New Deali)",
@@ -2515,6 +4570,35 @@
      ],
      "note": "« alta mar » es legítimo en cursos de navegación; solo se marca en la misma frase que un contexto fiscal."
     },
+    "de": {
+     "forme_imposee": "Offshore (Offshore-Konto, Steueroase)",
+     "fautif": [
+      "\\b(?:konten|konto|firmen|gesellschaften|vermögen|gelder|geld|banken|briefkastenfirmen)\\s+(?:auf\\s+hoher\\s+see|vor\\s+der\\s+küste|im\\s+offenen\\s+meer|auf\\s+dem\\s+meer|auf\\s+see)\\b",
+      "\\b(?:auf\\s+hoher\\s+see|vor\\s+der\\s+küste|im\\s+offenen\\s+meer|küstennah\\w*)\\b(?=[^.!?\\n]{0,50}(?:steuer|konten|konto|briefkasten|vermögen|panama|bahamas|cayman|kaiman|schweiz))",
+      "\\bhochsee-?(?:konten|konto|firma|firmen|gesellschaft|bank)\\w*\\b",
+      "\\boff-?shore-?(?:windpark|plattform|anlage)\\b(?=[^.!?\\n]{0,50}(?:steuer|konto|vermögen))"
+     ],
+     "note": "offshore → auf hoher See. „Offshore“ ist im deutschen Finanzjargon gängig; „Steueroase“ und „Steuerparadies“ sind beide korrekt."
+    },
+    "pt": {
+     "forme_imposee": "offshore / paraíso fiscal (« economia offshore »)",
+     "fautif": [
+      "\\b(?:alto-?\\s?mar|ao\\s+largo|costa\\s+afora|em\\s+alto\\s+mar|mar\\s+aberto|fora\\s+da\\s+costa)\\b[^.!?\\n]{0,70}\\b(?:fiscal|impostos?|contas?\\s+banc[aá]rias?|empresas?\\s+de\\s+fachada|para[ií]so|evas[aã]o|sonega[cç][aã]o|Panam[aá]|Caim[aã]|Cayman|Bermudas|Luxemburgo|fortunas?|milion[aá]rios?)\\b|\\b(?:fiscal|impostos?|para[ií]so|evas[aã]o|sonega[cç][aã]o|Panam[aá]|Caim[aã]|Cayman|Bermudas)\\b[^.!?\\n]{0,70}\\b(?:alto-?\\s?mar|ao\\s+largo|costa\\s+afora|mar\\s+aberto|fora\\s+da\\s+costa)\\b",
+      "\\b(?:empresas?|contas?|sociedades?)\\s+(?:em|de)\\s+alto-?\\s?mar\\b",
+      "\\bpara[ií]sos?\\s+de\\s+impostos\\b|\\brefu[gú]gios?\\s+de\\s+impostos\\b"
+     ],
+     "note": "« ao largo de Marselha », « perfuração em alto mar » (petróleo) são legítimos; só se marca o sentido marítimo perto de fiscal/impostos/paraíso."
+    },
+    "ar": {
+     "forme_imposee": "أوفشور (خارج الحدود) ؛ الملاذ الضريبي",
+     "fautif": [
+      "(?:في|إلى|عرض)\\s*(?:ال)?(?:بحر|بحار)\\s*(?:ال)?(?:عالي|عالية|مفتوح|مفتوحة)[^.]{0,30}(?:ضريب|مال|شركة|شركات|حساب)",
+      "(?:شركات|شركة|حسابات|حساب)\\s*(?:في\\s*)?(?:عرض|أعالي)\\s*(?:ال)?(?:بحر|بحار)",
+      "(?:ال)?(?:بحرية|بعيدة\\s*عن\\s*الشاطئ)\\s*(?:ال)?(?:ضريبية|مالية)",
+      "(?:ال)?ملاذ(?:ات)?\\s*(?:ال)?(?:بحري|بحرية|بحر)(?![؀-ۿ])"
+     ],
+     "note": "offshore → en haute mer / au large."
+    },
     "he": {
      "forme_imposee": "אופשור (כלכלת האופשור) ; paradis fiscal = מקלט מס",
      "fautif": [
@@ -2524,6 +4608,16 @@
       "(?<![A-Za-z])offshore"
      ],
      "note": "Observé «מחוץ לחוף» = au large de la côte."
+    },
+    "fi": {
+     "forme_imposee": "veroparatiisi ; offshore conservé comme adjectif (offshore-yhtiö)",
+     "fautif": [
+      "\\bavomer\\w*.{0,40}(vero|yhtiö|tili|pankki|rahasto)|(vero\\w*|yhtiö\\w*|tili\\w*|pankki\\w*|rahasto\\w*).{0,40}\\bavomer\\w*",
+      "\\brannikon\\s+edustalla.{0,40}(vero|yhtiö|tili|pankki)",
+      "\\bmerellä\\s+(olev\\w+\\s+)?(yhti|tili|pankk)\\w*",
+      "\\bulkomer\\w*"
+     ],
+     "note": "avomeri = haute mer ; merituulivoima (offshore wind) reste légitime."
     },
     "et": {
      "forme_imposee": "offshore (offshore-majandus; maksuparadiis)",
@@ -2563,6 +4657,36 @@
      ],
      "note": "« recuperación » (recovery) es aceptable para la salida de la crisis; « curar / sanar » no."
     },
+    "de": {
+     "forme_imposee": "Konjunkturbelebung / Ankurbelung (Konjunkturprogramm)",
+     "fautif": [
+      "\\b(?:wirtschaftliche|ökonomische)[rn]?\\s+(?:genesung|heilung|wiederherstellung|rekonvaleszenz)\\b",
+      "\\b(?:genesung|heilung)\\s+der\\s+(?:wirtschaft|konjunktur)\\b|\\b(?:wirtschaft|konjunktur)\\s+(?:heilen|genesen|zu\\s+heilen|gesund\\s+machen)\\b",
+      "\\b(?:mahnung|erinnerung|nachfass\\w*|neuauflage)\\b(?=[^.!?\\n]{0,40}(?:wirtschaft|konjunktur|roosevelt|krise|nachfrage))|\\bwirtschaftliche[rn]?\\s+(?:mahnung|erinnerung)\\b",
+      "\\bstimulus\\b|\\brelance\\b"
+     ],
+     "note": "recovery → Genesung/Heilung; relance → Mahnung (zweite französische Lesart). „Erholung“ (wirtschaftliche Erholung) ist korrekt und wird nicht markiert."
+    },
+    "pt": {
+     "forme_imposee": "retomada (econômica) / estímulo (« O Estado aposta na retomada »)",
+     "fautif": [
+      "\\b(?:cura|curar|curou|cicatriz\\w*|convalescen\\w*|sarar)\\b[^.!?\\n]{0,60}\\b(?:econom\\w*|crise|desemprego|PIB|Depress[aã]o|New\\s+Deal|consumo|mercado)\\b|\\b(?:econom\\w*|crise|desemprego|PIB|Depress[aã]o|New\\s+Deal)\\b[^.!?\\n]{0,60}\\b(?:cura|curar|curou|sarar)\\b",
+      "\\brelan[cç]amento\\s+(?:econ[oô]mico|da\\s+economia)\\b",
+      "\\b(?:de\\s+)?relance\\s+(?:econ[oô]mico|da\\s+economia)\\b|\\bplano\\s+de\\s+relance\\b",
+      "\\breativa[cç][aã]o\\s+econ[oô]mica\\b"
+     ],
+     "note": "« cura » é o falso sentido de « recovery » (guérison); « relance » em português é « olhar rápido ». « recuperação » e « reanimar a economia » são aceitáveis."
+    },
+    "ar": {
+     "forme_imposee": "الإنعاش الاقتصادي",
+     "fautif": [
+      "(?:ال)?(?:شفاء|علاج|يشفى|تشفى)\\s*(?:ال)?اقتصاد",
+      "(?:ال)?اقتصاد[^.]{0,10}(?:شفاء|يُشفى|علاج)",
+      "تعتمد\\s*الدولة\\s*على\\s*التعافي",
+      "(?:خطة|برنامج|سياسة)\\s*(?:ال)?(?:تعافي|شفاء|علاج)(?![؀-ۿ])"
+     ],
+     "note": "recovery → شفاء/تعافي (guérison) ; pour la relance on impose الإنعاش (التعافي toléré seulement pour « reprise » constatée)."
+    },
     "he": {
      "forme_imposee": "התאוששות (כלכלית) ; plan de relance = תוכנית תמריצים",
      "fautif": [
@@ -2572,6 +4696,16 @@
       "תוכנית\\s+(החלמה|ריפוי)"
      ],
      "note": "החלמה / ריפוי = guérison (médical) ; השקה מחדש = relancer un produit."
+    },
+    "fi": {
+     "forme_imposee": "elvytys (elvytyspaketti) ; reprise = elpyminen",
+     "fautif": [
+      "\\b(talou|lama|kriisi)\\w*\\s+(parantu|parane|paranta)\\w*|\\b(parantu|parane|paranta)\\w*\\s+(talou|lama)\\w*",
+      "\\buudelleen\\s*käynnist\\w*.{0,30}talou|talou\\w*.{0,30}uudelleen\\s*käynnist\\w*",
+      "\\btalou\\w*\\s+(muistutu|seuranta)\\w*",
+      "\\btoipumi\\w*.{0,20}(talou|lama)"
+     ],
+     "note": "parantua = guérir ; toipuminen = convalescence (toléré mais non canon)."
     },
     "et": {
      "forme_imposee": "majanduse elavdamine (elavdamispakett; taastumine)",
@@ -2611,6 +4745,35 @@
      ],
      "note": "En singular, « correspondencia » es el correo; el título va en plural. « las cartas de Baudelaire » es legítimo si habla de su epistolario: por eso se exige contexto de soneto / sinestesia."
     },
+    "de": {
+     "forme_imposee": "Correspondances (Gedicht; dt. „Entsprechungen“)",
+     "fautif": [
+      "\\bbriefwechsel\\b(?=[^.!?\\n]{0,80}(?:baudelaire|sonett|synästhes|düfte|farben|klänge|natur\\s+ist\\s+ein\\s+tempel|symbol))|(?:baudelaire|sonett|synästhes)[^.!?\\n]{0,80}\\bbriefwechsel\\b",
+      "\\b(?:korrespondenz|briefverkehr|schriftverkehr|post|briefe)\\b(?=[^.!?\\n]{0,80}(?:sonett|synästhes|düfte|farben\\s+und\\s+klänge|tempel|symbole|sinne))",
+      "\\bgedicht\\s+[„\\\"']?(?:korrespondenz|briefwechsel|briefverkehr)\\b",
+      "\\bkorrespondenzen\\b(?=[^.!?\\n]{0,60}(?:baudelaire|sonett|sinne|düfte))"
+     ],
+     "note": "correspondences → Briefwechsel. Deutsche Übersetzungen des Sonetts heißen „Entsprechungen“ (auch „Einklänge“); der französische Titel bleibt stehen."
+    },
+    "pt": {
+     "forme_imposee": "Correspondências (poema de Baudelaire; analogias entre os sentidos)",
+     "fautif": [
+      "\\b(?:correio|cartas|troca\\s+de\\s+cartas|mala\\s+direta|correspond[eê]ncia\\s+postal)\\b[^.!?\\n]{0,70}\\b(?:Baudelaire|soneto|sinestesia|perfumes|cores\\s+e\\s+sons|floresta\\s+de\\s+s[ií]mbolos|natureza\\s+[eé]\\s+um\\s+templo)\\b|\\b(?:Baudelaire|soneto|sinestesia|floresta\\s+de\\s+s[ií]mbolos|natureza\\s+[eé]\\s+um\\s+templo)\\b[^.!?\\n]{0,70}\\b(?:correio|cartas|troca\\s+de\\s+cartas|mala\\s+direta)\\b",
+      "\\bpoema\\s+(?:«|\\\"|“)?(?:Correio|Cartas|Correspond[eê]ncia)(?:»|\\\"|”)?\\b(?!s)",
+      "\\bCorrespondences\\b|\\bCorrespondances\\b"
+     ],
+     "note": "« correio » e « troca de cartas » são os falsos sentidos; legítimos na prosa (Aéropostale, correio mongol), por isso só se marcam perto de Baudelaire/sinestesia. O título vai no plural."
+    },
+    "ar": {
+     "forme_imposee": "تجاوبات (قصيدة بودلير)",
+     "fautif": [
+      "(?<![؀-ۿ])(?:ال)?مراسلات(?![؀-ۿ])",
+      "(?<![؀-ۿ])(?:ال)?مراسلة(?![؀-ۿ])",
+      "(?:ال)?(?:تطابقات|توافقات)(?![؀-ۿ])",
+      "قصيدة\\s*«?(?:ال)?(?:رسائل|بريد)"
+     ],
+     "note": "«المراسلات» (courrier) observé ; مراسلات reste légitime pour une correspondance épistolaire ailleurs : faux positif accepté."
+    },
     "he": {
      "forme_imposee": "התאמות (השיר «התאמות» של בודלר ; פואטיקת ההתאמות)",
      "fautif": [
@@ -2620,6 +4783,16 @@
       "חליפת\\s+מכתבים"
      ],
      "note": "התכתבות = courrier (observé «התכתובת של בודלר») ; faux positif accepté pour une vraie correspondance épistolaire."
+    },
+    "fi": {
+     "forme_imposee": "Vastaavuuksia (runo ; « Vastaavuuksia ja runollinen alkemia »)",
+     "fautif": [
+      "\\bkirjeenvaih\\w*.{0,40}(baudelaire|runo|synestes|alkemia)|(baudelaire|runo\\w*|synestes\\w*|alkemia).{0,40}\\bkirjeenvaih\\w*",
+      "\\bkirjeenvaihto\\s+ja\\s+runolli\\w*",
+      "\\bkirje(et|itä)\\b.{0,20}(ja\\s+runolli|baudelaire)",
+      "\\bvaihtoyhtey\\w*"
+     ],
+     "note": "kirjeenvaihto = échange de lettres."
     },
     "et": {
      "forme_imposee": "Vastavused (luuletus „Vastavused“; vastavuste poeetika)",
@@ -2659,6 +4832,34 @@
      ],
      "note": "Título de las traducciones españolas de Las flores del mal: « Recogimiento »."
     },
+    "de": {
+     "forme_imposee": "Recueillement (Gedicht; dt. „Sammlung“ / „Besinnung“)",
+     "fautif": [
+      "\\b(?:eintreibung|beitreibung|einziehung|inkasso|erhebung|forderungseinzug)\\b(?=[^.!?\\n]{0,80}(?:baudelaire|gedicht|sonett|schmerz|sei\\s+ruhig|abend))",
+      "\\b(?:baudelaire|gedicht|sonett)\\b[^.!?\\n]{0,80}\\b(?:eintreibung|beitreibung|einziehung|inkasso|forderungseinzug)\\b",
+      "\\bgedicht\\s+[„\\\"']?(?:eintreibung|einziehung|inkasso|erholung|wiederherstellung|rückgewinnung)\\b",
+      "\\b(?:erholung|wiederherstellung|rückgewinnung)\\b(?=[^.!?\\n]{0,60}(?:baudelaire|sonett|sei\\s+ruhig,?\\s+(?:o\\s+)?mein\\s+schmerz))"
+     ],
+     "note": "recouvrement (Inkasso) ist die falsche französische Lesart; „Contemplation“ (Pivot) → Erholung/Wiederherstellung sind die Pivot-Fehler von recovery."
+    },
+    "pt": {
+     "forme_imposee": "Recolhimento (poema de Baudelaire; meditação)",
+     "fautif": [
+      "\\b(?:cobran[cç]a|recobran[cç]a|recupera[cç][aã]o\\s+de\\s+(?:cr[eé]ditos|d[ií]vidas)|arrecada[cç][aã]o)\\b[^.!?\\n]{0,70}\\b(?:Baudelaire|poema|soneto|minha\\s+Dor|s[eê]\\s+s[aá]bia|Flores\\s+do\\s+Mal)\\b|\\b(?:Baudelaire|poema|soneto|Flores\\s+do\\s+Mal)\\b[^.!?\\n]{0,70}\\b(?:cobran[cç]a|recobran[cç]a|arrecada[cç][aã]o)\\b",
+      "\\bpoema\\s+(?:«|\\\"|“)?(?:Contempla[cç][aã]o|Medita[cç][aã]o|Cobran[cç]a|Recobran[cç]a|Recolha|Coleta)(?:»|\\\"|”)?\\b",
+      "\\b(?:Contempla[cç][aã]o|Medita[cç][aã]o)\\b[^.!?\\n]{0,40}\\bBaudelaire\\b[^.!?\\n]{0,40}\\bpoema\\b"
+     ],
+     "note": "« cobrança/recobrança » (recouvrement) e « Contemplação » (pivô inglês) são os falsos sentidos. « meditação » na prosa (Moby Dick) não é marcado."
+    },
+    "ar": {
+     "forme_imposee": "تأمّل (قصيدة بودلير)",
+     "fautif": [
+      "(?<![؀-ۿ])(?:ال)?تحصيل(?![؀-ۿ])",
+      "(?:ال)?استرداد\\s*(?:ال)?(?:ديون|أموال)",
+      "قصيدة\\s*«?(?:ال)?(?:تحصيل|استرداد|استعادة|جمع)"
+     ],
+     "note": "recueillement → recouvrement → تحصيل (de créances)."
+    },
     "he": {
      "forme_imposee": "התכנסות (השיר «התכנסות», Recueillement)",
      "fautif": [
@@ -2667,6 +4868,15 @@
       "איסוף\\s+חובות\\s*\\(?\\s*בודלר"
      ],
      "note": "גבייה = recouvrement de créances (observé en option de quiz) ; גביית מס est légitime dans le cours fiscal, d'où le contexte guillemets / Baudelaire."
+    },
+    "fi": {
+     "forme_imposee": "Hiljentyminen (runo ; sens : mietiskely)",
+     "fautif": [
+      "\\bperin(tä|nän|tää|nässä)\\b.{0,40}(baudelaire|runo)|(baudelaire|runo\\w*).{0,40}\\bperin(tä|nän|tää)\\b",
+      "\\b(kokoaminen|keräys|keräily|toipuminen|kerääminen)\\b.{0,40}(baudelaire|runo)",
+      "\\bsaatavien\\s+perin\\w*"
+     ],
+     "note": "perintä = recouvrement de créances. Titre sans traduction canonique unique ; Hiljentyminen est la forme courante."
     },
     "et": {
      "forme_imposee": "Mõtisklus (luuletus „Mõtisklus“)",
@@ -2705,6 +4915,34 @@
      ],
      "note": "« naturismo » podría ser legítimo en un curso de salud: falso positivo aceptado."
     },
+    "de": {
+     "forme_imposee": "Naturalismus (Zola)",
+     "fautif": [
+      "\\bnaturismus\\b|\\bnaturist\\w*\\b|\\bfkk\\b|\\bnudismus\\b",
+      "\\bveganismus\\b(?=[^.!?\\n]{0,60}(?:zola|literatur|roman|strömung|bewegung\\s+des\\s+19|maupassant))",
+      "\\bnaturalisierung\\b(?=[^.!?\\n]{0,60}(?:zola|literatur|roman|strömung))|\\beinbürgerung\\b(?=[^.!?\\n]{0,60}(?:zola|literatur|roman))",
+      "\\bnaturheilkunde\\b(?=[^.!?\\n]{0,60}(?:zola|literatur|roman|strömung))"
+     ],
+     "note": "naturism (FKK) und naturalization (Einbürgerung) sind die Pivot-Fehler; „Naturalismus“ ist eindeutig."
+    },
+    "pt": {
+     "forme_imposee": "naturalismo (corrente literária: Zola, Aluísio Azevedo)",
+     "fautif": [
+      "\\bnaturis(?:mo|tas?)\\b[^.!?\\n]{0,70}\\b(?:Zola|literatur\\w*|romances?|Alu[ií]sio|Azevedo|corti[cç]o|realismo|corrente|movimento|s[eé]culo\\s+XIX|escola)\\b|\\b(?:Zola|literatur\\w*|romances?|Alu[ií]sio|Azevedo|realismo|corrente|movimento)\\b[^.!?\\n]{0,70}\\bnaturis(?:mo|tas?)\\b",
+      "\\bveganismo\\b[^.!?\\n]{0,70}\\b(?:Zola|literatur\\w*|romances?|realismo|corrente)\\b|\\b(?:Zola|literatur\\w*|realismo)\\b[^.!?\\n]{0,70}\\bveganismo\\b",
+      "\\bnaturista\\s+liter[aá]ri\\w*"
+     ],
+     "note": "« naturismo » (nudismo) e « veganismo » são os falsos sentidos. « naturalista » (Darwin, Wallace) é legítimo e não é marcado."
+    },
+    "ar": {
+     "forme_imposee": "المذهب الطبيعي (الطبيعية في الأدب)",
+     "fautif": [
+      "(?:مذهب|تيار|حركة)\\s*(?:ال)?(?:نباتي|عراة|عري|تعري)(?![؀-ۿ])",
+      "(?:زولا|موباسان)[^.]{0,30}(?:ال)?(?:نباتي|عراة|عري|تعري)(?![؀-ۿ])",
+      "(?:ال)?(?:نباتية|عراة|عري)\\s*(?:ال)?(?:أدبي|أدبية|في\\s*الأدب)"
+     ],
+     "note": "naturalism → نباتية (véganisme) / عراة (naturisme)."
+    },
     "he": {
      "forme_imposee": "נטורליזם",
      "fautif": [
@@ -2713,6 +4951,16 @@
       "טבעיות"
      ],
      "note": "טבעונות = véganisme (observé) ; נטוריזם = naturisme."
+    },
+    "fi": {
+     "forme_imposee": "naturalismi (kirjallisuus ; Zola)",
+     "fautif": [
+      "\\bnaturism\\w*",
+      "\\bnudism\\w*",
+      "\\bvegan\\w*.{0,30}(zola|kirjallisuu|romaan)",
+      "\\bluonnonmukai\\w*.{0,30}(zola|kirjallisuu|romaan)"
+     ],
+     "note": "naturismi = naturisme."
     },
     "et": {
      "forme_imposee": "naturalism (kirjandusvool)",
@@ -2750,6 +4998,36 @@
      ],
      "note": "« dos Estados coreanos » y la « solución de dos Estados » son legítimos en los cursos de historia; solo se marca en la misma frase que spleen / ideal / Baudelaire."
     },
+    "de": {
+     "forme_imposee": "zwei Seelenzustände (Spleen und Ideal)",
+     "fautif": [
+      "\\bzwei\\s+staaten\\b(?=[^.!?\\n]{0,80}(?:spleen|ideal|baudelaire|seele|schwermut|dichter|gemüt))|(?:spleen|ideal|baudelaire)[^.!?\\n]{0,80}\\bzwei\\s+staaten\\b",
+      "\\bzwei-?staaten-?lösung\\b(?=[^.!?\\n]{0,80}(?:spleen|ideal|baudelaire))|(?:spleen|ideal|baudelaire)[^.!?\\n]{0,80}\\bzwei-?staaten-?lösung\\b",
+      "\\bzwei\\s+(?:länder|nationen|bundesstaaten|reiche)\\b(?=[^.!?\\n]{0,60}(?:spleen|ideal|seele|baudelaire))",
+      "\\bzwischen\\s+zwei\\s+staaten\\b(?=[^.!?\\n]{0,60}(?:seele|gemüt|dichter|spleen))"
+     ],
+     "note": "states → Staaten. Im Deutschen „Seelenzustände“ oder „Gemütszustände“; „zwei Zustände“ ist vage, aber nicht falsch."
+    },
+    "pt": {
+     "forme_imposee": "dois estados de alma (spleen e ideal; « opõe dois estados »)",
+     "fautif": [
+      "\\bdois\\s+Estados\\b(?!\\s+(?:de\\s+)?(?:alma|esp[ií]rito|d['’]alma|an[ií]micos|emocionais|mentais))[^.!?\\n]{0,70}\\b(?:spleen|ideal|Baudelaire|melancol\\w*)\\b|\\b(?:spleen|ideal|Baudelaire|melancol\\w*)\\b[^.!?\\n]{0,70}\\bdois\\s+Estados\\b(?!\\s+(?:de\\s+)?(?:alma|esp[ií]rito|d['’]alma))",
+      "\\bsolu[cç][aã]o\\s+de\\s+dois\\s+Estados\\b[^.!?\\n]{0,60}\\b(?:Baudelaire|spleen|ideal)\\b|\\b(?:Baudelaire|spleen|ideal)\\b[^.!?\\n]{0,60}\\bsolu[cç][aã]o\\s+de\\s+dois\\s+Estados\\b",
+      "\\bdois\\s+pa[ií]ses\\b[^.!?\\n]{0,60}\\b(?:spleen|ideal|Baudelaire)\\b|\\b(?:spleen|ideal|Baudelaire)\\b[^.!?\\n]{0,60}\\bdois\\s+pa[ií]ses\\b",
+      "\\bduas\\s+na[cç][oõ]es\\b[^.!?\\n]{0,60}\\b(?:spleen|ideal|Baudelaire)\\b"
+     ],
+     "note": "Com re.I, « Estados » e « estados » coincidem: por isso o regex exige a proximidade de spleen/ideal/Baudelaire e exclui « estados de alma ». « dois Estados » (Coreia, Palestina) é legítimo noutros cursos."
+    },
+    "ar": {
+     "forme_imposee": "حالتان نفسيتان (السأم والمثال)",
+     "fautif": [
+      "حل\\s*(?:ال)?دولتين",
+      "(?:يعارض|يقابل|يقارن)\\s*(?:بين\\s*)?(?:ال)?دولت(?:ين|ان)",
+      "بودلير[^.]{0,80}دولت(?:ين|ان)",
+      "دولت(?:ين|ان)[^.]{0,30}(?:سأم|طحال|مثال)"
+     ],
+     "note": "« حل الدولتين » (solution à deux États) observé ; دولتين légitime en géopolitique, d'où le contexte."
+    },
     "he": {
      "forme_imposee": "שני מצבי נפש (ספלין ואידיאל)",
      "fautif": [
@@ -2758,6 +5036,14 @@
       "מתנגד\\s+לשתי\\s+מדינות|מעמיד\\s+(זה\\s+מול\\s+זה\\s+)?שתי\\s+מדינות"
      ],
      "note": "שתי מדינות = deux États, légitime dans le cours Israël-Palestine ; restreint au contexte Baudelaire."
+    },
+    "fi": {
+     "forme_imposee": "kaksi mielentilaa (spleen ja ihanne)",
+     "fautif": [
+      "\\bka(ksi|hta|hden)\\s+(valtio|osavaltio|maata)\\w*.{0,60}(spleen|ihanne|baudelaire|perna)|(spleen|ihanne|baudelaire\\w*|perna\\w*).{0,60}\\bka(ksi|hta|hden)\\s+(valtio|osavaltio|maata)\\w*",
+      "\\bkahden\\s+valtion\\s+ratkaisu.{0,40}(baudelaire|runo)"
+     ],
+     "note": "valtio = État (pays)."
     },
     "et": {
      "forme_imposee": "kaks hingeseisundit (vastandab kaht hingeseisundit)",
@@ -2798,6 +5084,36 @@
      ],
      "note": "Casos vistos en la auditoría: « una llave de la psicología moderna », « poder político real », « el terror » por angustia, « manzanas nuevas » por inmuebles, « efecto de sonido » por fenómeno sonoro."
     },
+    "de": {
+     "forme_imposee": "Regel: Sinn nach Kontext. touche → Taste (Klavier) / Pinselstrich, Farbtupfer (Malerei), nie „Berührung“; sensation → Sinneseindruck (sinnlich) / Sensation (Skandal); chute → Fall, Sturz, Untergang (nie „Herbst“); puissant → mächtig, stark, wirkungsvoll; réel → wirklich, echt; clé de lecture → Schlüssel zum Verständnis (nie „Taste“).",
+     "fautif": [
+      "\\bherbst\\s+(?:des|der|von)\\s+(?:römischen\\s+reichs?|reichs?|imperiums|mauer|regimes|roms|konstantinopels?|bastille|jerusalems?|berlins?|napoleons|körper|stadt|dynastie|monarchie|diktatur|zarenreichs?)\\b",
+      "\\b(?:berührung|anschlag)\\s+(?:des|der)\\s+(?:malers|pinsels|impressionisten|künstlers)\\b|\\bberührung\\b(?=[^.!?\\n]{0,30}(?:klavier|tastatur|piano|flügel))",
+      "\\b(?:sinnes)?empfindung\\b(?=[^.!?\\n]{0,40}(?:skandal|salon|presse|aufsehen|publikum))|\\b(?:erregte|löste)\\s+(?:eine\\s+)?(?:empfindung|ein\\s+gefühl)\\s+(?:aus\\b|im\\s+salon)",
+      "\\btaste\\s+(?:zum|des|der|für\\s+das)\\s+(?:verständnis|lektüre|lesart|interpretation|psychologie|verstehen)\\b|\\bschlüssel-?taste\\s+(?:zum|des|der)\\b"
+     ],
+     "note": "Beispiele der Pivot-Fehler: „Herbst des Römischen Reichs“ (fall), „Berührung des Malers“ (touch), „Empfindung im Salon“ (sensation), „Taste zum Verständnis“ (key). „real“ ist im Deutschen keine Falle (keine königliche Lesart)."
+    },
+    "pt": {
+     "forme_imposee": "Regra: sentido pelo contexto. clé de lecture → « chave » (nunca « tecla »); touche de piano → « tecla » (toucher → « toque »); sensation → « sensação » (sensoriel) / « sucesso, escândalo » (fit sensation); chute → « queda » (nunca « outono »); puissant → « poderoso, potente »; réel/vrai → « verdadeiro, de verdade » (« real » é ambíguo com « régio »); angoisse → « angústia » (nunca « terror »); phénomène sonore → « fenômeno sonoro » (nunca « efeito sonoro »).",
+     "fautif": [
+      "\\btecla\\s+(?:de\\s+(?:leitura|interpreta[cç][aã]o|compreens[aã]o)|da\\s+psicolog\\w*|para\\s+(?:entender|compreender|ler))\\b|\\bchaves?\\s+d[oe]\\s+piano\\b",
+      "\\boutono\\s+d[oa]\\s+(?:imp[eé]rio|muro|regime|Roma|Constantinopla|Bastilha|Jerusal[eé]m|Berlim|Napole[aã]o|corpos?|cidade|Biz[aâ]ncio)\\b",
+      "\\befeito\\s+sonoro\\b|\\befeito\\s+de\\s+som\\b|\\bpoder\\s+pol[ií]tico\\s+real\\b|\\bpot[eê]ncia\\s+pol[ií]tica\\s+real\\b",
+      "\\b(?:fei[uú]ra|pecado|a\\s+cidade)[^.]{0,40}\\bo\\s+terror\\b|\\bfez\\s+uma\\s+sensa[cç][aã]o\\b"
+     ],
+     "note": "Casos a vigiar nos cursos: « uma chave da psicologia moderna » (certo no curso 166), « fenômeno sonoro » (certo), « a angústia » (certo no curso 100). « O Terror » (Revolução Francesa) e « lançou o terror » são legítimos e não são marcados."
+    },
+    "ar": {
+     "forme_imposee": "ترجم حسب السياق لا حسب المعنى الإنجليزي الأشيع : touche → لمسة (لا مفتاح)، sensation → إحساس (لا ضجة)، chute → سقوط (لا خريف)، puissant → قوي، réel → حقيقي، clé → مفتاح القراءة",
+     "fautif": [
+      "(?:مفتاح|مفاتيح|زر|أزرار)\\s*(?:ال)?(?:فرشاة|ريشة|لمس|رسام|لون|ألوان)",
+      "(?:ال)?خريف\\s*(?:ال)?(?:إمبراطورية|روما|الباستيل|جدار|النظام|الحكم|نابليون|القسطنطينية)",
+      "(?:ضجة|ضجّة)\\s*(?:بصرية|حسية|لونية|الضوء)",
+      "(?:تنظيم|تحويل)\\s*(?:ال)?لمس\\s*(?:إلى|في)\\s*نقاط"
+     ],
+     "note": "« تنظيم اللمس إلى نقاط » (touche → toucher) observé ; les autres motifs couvrent key/fall/sensation."
+    },
     "he": {
      "forme_imposee": "Règle : traduire le sens français, pas le pivot : touche (piano) → קליד, toucher → מגע / משיכת מכחול ; sensation (sensoriel) → תחושה, jamais סנסציה ; chute → נפילה, pas סתיו ; puissant → רב-עוצמה / חזק ; réel → ממשי / אמיתי ; clé (de lecture) → מפתח",
      "fautif": [
@@ -2807,6 +5123,16 @@
       "(ה)?מפתחות\\s+(של\\s+)?(ה)?(קריאה|הבנה|הפסנתר)"
      ],
      "note": "Observé «מגע קל, חופשי וסנסציה אישית» ; סתיו = automne pour une chute d'empire ; מפתחות = clefs d'un trousseau."
+    },
+    "fi": {
+     "forme_imposee": "touche → kosketin (piano) / kosketus ; sensation → aistimus (pas sensaatio) ; chute → putoaminen, romahdus (pas syksy) ; puissant → mahtava, voimakas (pas tehokas) ; réel → todellinen ; clé → avain",
+     "fautif": [
+      "\\bsyksy\\s+(kiihty|syvene|nopeutu|jatku)\\w*",
+      "\\bkolari\\w*.{0,30}(pörssi|1929|wall street|markkin)|(pörssi\\w*|1929|markkin\\w*).{0,30}\\bkolari\\w*",
+      "\\btehok(as|kaan|asta|kaat)\\b.{0,25}\\b(heimo|suku|klaani|valtakunta|kuningas|armeija|imperiumi|keisari)",
+      "\\bsensaatio\\w*.{0,20}(aisti|iho|tunto)|\\bpianon\\s+kosketu(s|kset|ksia)\\b"
+     ],
+     "note": "Exemples tirés de l'audit : Tehokas Quraysh, kolari pour krach, syksy pour la chute de la Bourse."
     },
     "et": {
      "forme_imposee": "Reegel: mitmetähenduslik sõna tõlgi lause järgi, mitte inglise sagedasema tähenduse järgi: touche → klahv/puudutus (mitte „nupp/võti“); chute → kukkumine/langus (mitte „sügis“); sensation → aisting/tundmus (mitte „sensatsioon“); puissant → võimas/tõhus; réel → tõeline; clé de lecture → tõlgendusvõti.",

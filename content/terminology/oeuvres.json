@@ -5,7 +5,11 @@
  "langues": [
   "en",
   "es",
+  "de",
+  "pt",
+  "ar",
   "he",
+  "fi",
   "et"
  ],
  "oeuvres": [
@@ -34,6 +38,35 @@
       "\\blas\\s+flores\\s+de\\s+mal\\b"
      ]
     },
+    "de": {
+     "titre": "Die Blumen des Bösen",
+     "statut": "etabli",
+     "fautif": [
+      "\\bblumen\\s+des\\s+übels\\b|\\bblumen\\s+der\\s+bosheit\\b",
+      "\\bdie\\s+bösen\\s+blumen\\b|\\bblumen\\s+des\\s+schlechten\\b",
+      "\\bblüten\\s+des\\s+bösen\\b"
+     ]
+    },
+    "pt": {
+     "titre": "As Flores do Mal",
+     "statut": "etabli",
+     "fautif": [
+      "\\bflores\\s+do\\s+diabo\\b",
+      "\\bflores\\s+malvadas\\b|\\bflores\\s+do\\s+mau\\b",
+      "\\bas\\s+flores\\s+de\\s+mal\\b",
+      "\\bFleurs\\s+du\\s+Mal\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "أزهار الشر",
+     "statut": "etabli",
+     "fautif": [
+      "زهور\\s*(?:ال)?(?:شر|ملز|مال)",
+      "أزهار\\s*(?:ال)?(?:ملز|مال)",
+      "(?:زهور|أزهار)\\s*(?:ال)?(?:شرير|شريرة|مرض|مريضة)",
+      "فلور\\s*دو\\s*مال"
+     ]
+    },
     "he": {
      "titre": "פרחי הרע",
      "statut": "etabli",
@@ -41,6 +74,16 @@
       "פרחי\\s+(ה)?רוע",
       "פרחי\\s+(ה)?רשע",
       "הפרחים\\s+של\\s+הרע"
+     ]
+    },
+    "fi": {
+     "titre": "Pahan kukat",
+     "statut": "etabli",
+     "fautif": [
+      "\\bpahuuden\\s+kuk\\w*",
+      "\\bpahan\\s+kukkas\\w*",
+      "\\bpahat\\s+kukat\\b",
+      "\\bles\\s+fleurs\\s+du\\s+mal\\b"
      ]
     },
     "et": {
@@ -67,7 +110,6 @@
      "statut": "etabli",
      "fautif": [
       "\\bthe\\s+spleen\\s+of\\s+paris\\b",
-      "\\bparis'?s?\\s+(melancholy|boredom|spleen)\\b",
       "\\bparisian\\s+spleen\\b"
      ]
     },
@@ -80,6 +122,32 @@
       "\\bspleen\\s+de\\s+paris\\b"
      ]
     },
+    "de": {
+     "titre": "Der Spleen von Paris",
+     "statut": "etabli",
+     "fautif": [
+      "\\bmilz\\s+(?:von|aus)\\s+paris\\b|\\bpariser\\s+milz\\b",
+      "\\bdie\\s+milz\\s+paris\\b|\\bparis-?milz\\b"
+     ]
+    },
+    "pt": {
+     "titre": "O Spleen de Paris",
+     "statut": "etabli",
+     "fautif": [
+      "\\bba[cç]o\\s+de\\s+paris\\b",
+      "\\besplim\\s+de\\s+paris\\b",
+      "\\bSpleen\\s+de\\s+Paris\\b(?<!O Spleen de Paris)(?<!Le Spleen de Paris)"
+     ]
+    },
+    "ar": {
+     "titre": "سأم باريس",
+     "statut": "etabli",
+     "fautif": [
+      "طحال\\s*باريس",
+      "سبلين\\s*باريس",
+      "كآبة\\s*باريس"
+     ]
+    },
     "he": {
      "titre": "הספלין של פריז",
      "statut": "traduction_courante",
@@ -87,6 +155,15 @@
       "טחול\\s+(של\\s+)?פריז|לה\\s+טחול\\s+דה\\s+פריז",
       "הטחול\\s+הפריזאי",
       "ספלין\\s+דה\\s+פריז"
+     ]
+    },
+    "fi": {
+     "titre": "Pariisin ikävä",
+     "statut": "etabli",
+     "fautif": [
+      "\\bpariisin\\s+perna\\w*",
+      "\\ble\\s+spleen\\s+de\\s+paris\\b",
+      "\\bpariisin\\s+spleen\\w*"
      ]
     },
     "et": {
@@ -123,12 +200,44 @@
       "\\bnineteen\\s+eighty-?four\\b"
      ]
     },
+    "de": {
+     "titre": "1984",
+     "statut": "etabli",
+     "fautif": [
+      "\\bneunzehnhundertvierundachtzig\\b",
+      "\\bnineteen\\s+eighty-?four\\b"
+     ]
+    },
+    "pt": {
+     "titre": "1984",
+     "statut": "etabli",
+     "fautif": [
+      "\\bmil\\s+novecentos\\s+e\\s+oitenta\\s+e\\s+quatro\\b",
+      "\\bnineteen\\s+eighty-?four\\b"
+     ]
+    },
+    "ar": {
+     "titre": "1984",
+     "statut": "etabli",
+     "fautif": [
+      "(?:تسعة|تسع)\\s*عشر\\s*(?:أربعة|أربع)\\s*وثمانون",
+      "١٩٨٤"
+     ]
+    },
     "he": {
      "titre": "1984",
      "statut": "etabli",
      "fautif": [
       "אלף\\s+תשע\\s+מאות\\s+שמונים\\s+וארבע",
       "תשע-?\\s?עשרה\\s+שמונים\\s+וארבע"
+     ]
+    },
+    "fi": {
+     "titre": "Vuonna 1984",
+     "statut": "etabli",
+     "fautif": [
+      "\\byhdeksäntoista\\s*kahdeksankymmentä\\w*",
+      "\\bvuosi\\s+1984\\b"
      ]
     },
     "et": {
@@ -165,6 +274,34 @@
       "\\brebeli[oó]n\\s+de\\s+la\\s+granja\\b"
      ]
     },
+    "de": {
+     "titre": "Farm der Tiere",
+     "statut": "etabli",
+     "fautif": [
+      "\\b(?:die\\s+)?tierfarm\\b|\\btier(?:bauern)?hof\\b",
+      "\\bbauernhof\\s+der\\s+tiere\\b|\\btierische[rn]?\\s+bauernhof\\b",
+      "\\bfarm\\s+der\\s+animale\\b|\\banimal\\s+farm\\b(?![^.!?\\n]{0,10}\\))"
+     ]
+    },
+    "pt": {
+     "titre": "A Revolução dos Bichos",
+     "statut": "etabli",
+     "fautif": [
+      "\\b(?:a\\s+)?fazenda\\s+d(?:os|e)\\s+animais\\b|\\bfazenda\\s+animal\\b",
+      "\\bo\\s+triunfo\\s+dos\\s+porcos\\b|\\ba\\s+quinta\\s+dos\\s+animais\\b",
+      "\\brevolu[cç][aã]o\\s+dos\\s+animais\\b|\\brevolta\\s+dos\\s+bichos\\b",
+      "\\bAnimal\\s+Farm\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "مزرعة الحيوان",
+     "statut": "etabli",
+     "fautif": [
+      "مزرعة\\s*(?:ال)?حيوانات",
+      "مزرعة\\s*حيوانية",
+      "حظيرة\\s*(?:ال)?حيوان"
+     ]
+    },
     "he": {
      "titre": "חוות החיות",
      "statut": "etabli",
@@ -172,6 +309,15 @@
       "חוות\\s+(ה)?בעלי\\s+(ה)?חיים",
       "משק\\s+(ה)?חיות",
       "חוות\\s+(ה)?בהמות"
+     ]
+    },
+    "fi": {
+     "titre": "Eläinten vallankumous",
+     "statut": "etabli",
+     "fautif": [
+      "\\beläinfarmi\\w*",
+      "\\beläinten\\s+farmi\\w*",
+      "\\beläin(maa)?tila\\b|\\beläinten\\s+(maa)?tila\\b"
      ]
     },
     "et": {
@@ -205,6 +351,25 @@
      "statut": "original",
      "fautif": []
     },
+    "de": {
+     "titre": "Hamlet",
+     "statut": "original",
+     "fautif": []
+    },
+    "pt": {
+     "titre": "Hamlet",
+     "statut": "original",
+     "fautif": [
+      "\\bHamleto\\b|\\bHamlete\\b"
+     ]
+    },
+    "ar": {
+     "titre": "هاملت",
+     "statut": "etabli",
+     "fautif": [
+      "(?:هامليت|هملت|همليت)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "המלט",
      "statut": "etabli",
@@ -212,6 +377,11 @@
       "האמלט",
       "המלת(?![א-ת])"
      ]
+    },
+    "fi": {
+     "titre": "Hamlet",
+     "statut": "etabli",
+     "fautif": []
     },
     "et": {
      "titre": "Hamlet",
@@ -246,6 +416,31 @@
       "\\bRomeo\\s+y\\s+Juliette\\b"
      ]
     },
+    "de": {
+     "titre": "Romeo und Julia",
+     "statut": "etabli",
+     "fautif": [
+      "\\bromeo\\s+und\\s+juliet(?:te)?\\b|\\broméo\\s+und\\b",
+      "\\bromeo\\s+and\\s+juliet\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Romeu e Julieta",
+     "statut": "etabli",
+     "fautif": [
+      "\\bRomeo\\s+(?:and|et|y)\\s+Juliet(?:te|a)?\\b",
+      "\\bRomeo\\s+e\\s+Julieta\\b",
+      "\\bRomeu\\s+e\\s+Juliet(?:te|a)?\\b(?<!Romeu e Julieta)"
+     ]
+    },
+    "ar": {
+     "titre": "روميو وجولييت",
+     "statut": "etabli",
+     "fautif": [
+      "روميو\\s*و\\s*(?:جوليت|جولييتا|جوليات|جولييت[ةه])(?![؀-ۿ])",
+      "رومي\\s*و\\s*جوليي?ت"
+     ]
+    },
     "he": {
      "titre": "רומיאו ויוליה",
      "statut": "etabli",
@@ -253,6 +448,14 @@
       "רומיאו\\s+וג'ולי(י?ט|ה)",
       "רומאו\\s+ו",
       "רומיאו\\s+ויוליאט"
+     ]
+    },
+    "fi": {
+     "titre": "Romeo ja Julia",
+     "statut": "etabli",
+     "fautif": [
+      "\\bromeo\\s+ja\\s+juliet(te|ta|)\\b",
+      "\\broméo\\b"
      ]
     },
     "et": {
@@ -290,6 +493,33 @@
       "\\bun\\s+mundo\\s+nuevo\\s+y\\s+valiente\\b"
      ]
     },
+    "de": {
+     "titre": "Schöne neue Welt",
+     "statut": "etabli",
+     "fautif": [
+      "\\b(?:die\\s+)?beste\\s+(?:aller|der)\\s+welten\\b",
+      "\\b(?:tapfere|mutige|kühne)\\s+neue\\s+welt\\b",
+      "\\bschöne\\s+neue\\s+welten\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Admirável Mundo Novo",
+     "statut": "etabli",
+     "fautif": [
+      "\\bo\\s+melhor\\s+dos\\s+mundos\\b(?!\\s+poss[ií]veis)",
+      "\\b(?:bravo|corajoso|valente)\\s+(?:novo\\s+)?mundo(?:\\s+novo)?\\b",
+      "\\bmundo\\s+novo\\s+e\\s+(?:corajoso|valente)\\b",
+      "\\badmir[aá]vel\\s+novo\\s+mundo\\b"
+     ]
+    },
+    "ar": {
+     "titre": "عالم جديد شجاع",
+     "statut": "etabli",
+     "fautif": [
+      "(?:أفضل|خير|أحسن)\\s*(?:ال)?عوالم",
+      "(?:ال)?عالم\\s*(?:ال)?أفضل(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "עולם חדש מופלא",
      "statut": "etabli",
@@ -297,6 +527,15 @@
       "עולם\\s+חדש\\s+ו?אמיץ",
       "הטוב\\s+שבעולמות",
       "מיטב\\s+העולמות"
+     ]
+    },
+    "fi": {
+     "titre": "Uljas uusi maailma",
+     "statut": "etabli",
+     "fautif": [
+      "\\bparas\\s+(mahdollinen\\s+)?maailm\\w*",
+      "\\brohkea\\s+uusi\\s+maailma\\b",
+      "\\bmaailmoista\\s+paras\\b"
      ]
     },
     "et": {
@@ -332,6 +571,27 @@
       "\\bFrankestein\\b|\\bFranskenstein\\b|\\bFrankenstien\\b"
      ]
     },
+    "de": {
+     "titre": "Frankenstein",
+     "statut": "original",
+     "fautif": [
+      "\\bfrankenstein\\s+oder\\s+der\\s+neue\\s+prometheus\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Frankenstein",
+     "statut": "original",
+     "fautif": [
+      "\\bFrankestein\\b|\\bFranskenstein\\b|\\bFrankenstien\\b|\\bFrankstein\\b"
+     ]
+    },
+    "ar": {
+     "titre": "فرانكنشتاين",
+     "statut": "etabli",
+     "fautif": [
+      "(?:فرانكشتاين|فرانكنستين|فرنكنشتاين)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "פרנקנשטיין",
      "statut": "etabli",
@@ -339,6 +599,11 @@
       "פרנקנשטין(?![א-ת])",
       "פרנקשטיין"
      ]
+    },
+    "fi": {
+     "titre": "Frankenstein",
+     "statut": "etabli",
+     "fautif": []
     },
     "et": {
      "titre": "Frankenstein",
@@ -374,6 +639,32 @@
       "\\bcrimen\\s+y\\s+castigos\\b"
      ]
     },
+    "de": {
+     "titre": "Schuld und Sühne",
+     "statut": "etabli",
+     "fautif": [
+      "\\bverbrechen\\s+und\\s+(?:bestrafung|züchtigung)\\b",
+      "\\bkriminalität\\s+und\\s+strafe\\b",
+      "\\bschuld\\s+und\\s+strafe\\b|\\bschuld\\s+und\\s+buße\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Crime e Castigo",
+     "statut": "etabli",
+     "fautif": [
+      "\\bcrime\\s+e\\s+puni[cç][aã]o\\b",
+      "\\bcrime\\s+e\\s+pena\\b",
+      "\\bCrime\\s+et\\s+Ch[aâ]timent\\b"
+     ]
+    },
+    "ar": {
+     "titre": "الجريمة والعقاب",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?جريمة\\s*و\\s*(?:ال)?(?:عقوبة|قصاص|معاقبة)",
+      "(?:ال)?إثم\\s*و\\s*(?:ال)?عقاب"
+     ]
+    },
     "he": {
      "titre": "החטא ועונשו",
      "statut": "etabli",
@@ -381,6 +672,15 @@
       "פשע\\s+ועונש(ו)?",
       "החטא\\s+והעונש",
       "פשע\\s+וענישה"
+     ]
+    },
+    "fi": {
+     "titre": "Rikos ja rangaistus",
+     "statut": "etabli",
+     "fautif": [
+      "\\brikos\\s+ja\\s+(tuomio|kosto)\\b",
+      "\\brikokset\\s+ja\\s+rangaistukset\\b",
+      "\\brikos\\s+ja\\s+rankais\\w*"
      ]
     },
     "et": {
@@ -418,12 +718,49 @@
       "\\b(?:novela|libro|obra)\\s+(?:«|\\\")?El\\s+juicio\\b"
      ]
     },
+    "de": {
+     "titre": "Der Prozess",
+     "statut": "original",
+     "fautif": [
+      "\\b(?:der|den|dem)\\s+(?:vorgang|ablauf)\\b(?=[^.!?\\n]{0,60}kafka)|kafka[^.!?\\n]{0,60}\\b(?:der|den|dem)\\s+(?:vorgang|ablauf)\\b",
+      "\\b(?:das|dem)\\s+verfahren\\b(?=[^.!?\\n]{0,60}kafka)|kafka[^.!?\\n]{0,60}\\b(?:das|dem)\\s+verfahren\\b",
+      "\\b(?:der|die)\\s+(?:versuch|prüfung|verhandlung|probe)\\b(?=[^.!?\\n]{0,40}kafka)",
+      "\\bthe\\s+trial\\b"
+     ]
+    },
+    "pt": {
+     "titre": "O Processo",
+     "statut": "etabli",
+     "fautif": [
+      "\\bO\\s+Julgamento\\b[^.!?\\n]{0,70}(?:Kafka|Josef\\s+K\\b)|(?:Kafka|Josef\\s+K\\b)[^.!?\\n]{0,70}\\bO\\s+Julgamento\\b",
+      "\\bprocessamento\\b[^.!?\\n]{0,60}\\bKafka\\b",
+      "\\bThe\\s+Trial\\b"
+     ]
+    },
+    "ar": {
+     "titre": "المحاكمة",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:عملية|سيرورة)\\s*(?:ل|لـ)?(?:فرانز\\s*)?كافكا",
+      "كافكا[^.]{0,20}«(?:ال)?(?:عملية|سيرورة|دعوى)»",
+      "(?:ال)?(?:قضية|دعوى)\\s*(?:ل|لـ)?كافكا"
+     ]
+    },
     "he": {
      "titre": "המשפט",
      "statut": "etabli",
      "fautif": [
       "התהליך",
       "הפרוצס"
+     ]
+    },
+    "fi": {
+     "titre": "Oikeusjuttu",
+     "statut": "etabli",
+     "fautif": [
+      "\\bprosessi\\w*.{0,30}kafka|kafka\\w*.{0,30}\\bprosessi\\w*",
+      "\\boikeudenkäynti\\b\\s*\\(?\\s*kafka|kafka\\w*\\s*[:,]?\\s*\\boikeudenkäynti\\b",
+      "\\bkokeilu\\w*.{0,30}kafka"
      ]
     },
     "et": {
@@ -459,6 +796,32 @@
       "\\bQuichotte\\b|\\bQuixote\\b"
      ]
     },
+    "de": {
+     "titre": "Don Quijote",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdon\\s+quichotte\\b|\\bdon\\s+quichote\\b",
+      "\\bdon\\s+quixote\\b|\\bdon\\s+kichote\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Dom Quixote",
+     "statut": "etabli",
+     "fautif": [
+      "\\bDon\\s+Qui(?:xote|chotte)\\b",
+      "\\bDom\\s+Qui(?:jote|chotte|xotte)\\b",
+      "\\bDon\\s+Quijote\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "دون كيخوتي",
+     "statut": "etabli",
+     "fautif": [
+      "دون\\s*كيشوت",
+      "دون\\s*كويكسوت",
+      "دونكيشوت"
+     ]
+    },
     "he": {
      "titre": "דון קיחוטה",
      "statut": "etabli",
@@ -466,6 +829,15 @@
       "דון\\s+קיג'וטה",
       "דון\\s+קוו?יקסוט(ה)?",
       "דון\\s+קיקסוטה"
+     ]
+    },
+    "fi": {
+     "titre": "Don Quijote",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdon\\s+quichotte\\b",
+      "\\bdon\\s+quixote\\b",
+      "\\bdon\\s+kihotti\\b"
      ]
     },
     "et": {
@@ -503,6 +875,34 @@
       "\\bracimos\\s+de\\s+(?:la\\s+)?ira\\b"
      ]
     },
+    "de": {
+     "titre": "Früchte des Zorns",
+     "statut": "etabli",
+     "fautif": [
+      "\\b(?:wein)?trauben\\s+des\\s+zorns\\b",
+      "\\bfrüchte\\s+der\\s+wut\\b|\\btrauben\\s+der\\s+wut\\b",
+      "\\brosinen\\s+des\\s+zorns\\b|\\brosinen\\s+der\\s+wut\\b"
+     ]
+    },
+    "pt": {
+     "titre": "As Vinhas da Ira",
+     "statut": "etabli",
+     "fautif": [
+      "\\b(?:as\\s+)?uvas\\s+da\\s+(?:ira|c[oó]lera)\\b",
+      "\\b(?:os\\s+)?cachos\\s+da\\s+ira\\b|\\b(?:os\\s+)?frutos\\s+da\\s+ira\\b",
+      "\\bvinhas\\s+da\\s+c[oó]lera\\b",
+      "\\bGrapes\\s+of\\s+Wrath\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "عناقيد الغضب",
+     "statut": "etabli",
+     "fautif": [
+      "عنب\\s*(?:ال)?غضب",
+      "زبيب\\s*(?:ال)?غضب",
+      "ثمار\\s*(?:ال)?غضب"
+     ]
+    },
     "he": {
      "titre": "ענבי זעם",
      "statut": "etabli",
@@ -510,6 +910,15 @@
       "ענבי\\s+(ה)?כעס",
       "הענבים\\s+של\\s+הזעם",
       "ענבי\\s+החמה"
+     ]
+    },
+    "fi": {
+     "titre": "Vihan hedelmät",
+     "statut": "etabli",
+     "fautif": [
+      "\\bvihan\\s+(viini)?rypäle\\w*",
+      "\\braivon\\s+hedelm\\w*",
+      "\\bvihan\\s+rusina\\w*"
      ]
     },
     "et": {
@@ -549,6 +958,35 @@
       "\\bno\\s+dispar\\w+\\s+(?:al|sobre\\s+el|contra\\s+el)\\s+(?:ruise[ñn]or|p[aá]jaro)\\b"
      ]
     },
+    "de": {
+     "titre": "Wer die Nachtigall stört",
+     "statut": "etabli",
+     "fautif": [
+      "\\bspottdrossel\\b",
+      "\\bwer\\s+die\\s+nachtigall\\s+(?:tötet|stört\\s+nicht|töten)\\b|\\bnachtigall\\s+töten\\b",
+      "\\b(?:schieß|schießt|schießen\\s+sie)\\s+nicht\\s+auf\\b"
+     ]
+    },
+    "pt": {
+     "titre": "O Sol é para Todos",
+     "statut": "etabli",
+     "fautif": [
+      "\\b(?:para\\s+)?matar\\s+(?:um|uma|a|o)\\s+(?:sabi[aá]|rouxinol|cotovia|p[aá]ssaro|tordo|passarinho|zombeteiro)\\b",
+      "\\bmataram\\s+a\\s+cotovia\\b",
+      "\\bn[aã]o\\s+atire\\s+no\\s+p[aá]ssaro\\b",
+      "\\bTo\\s+Kill\\s+a\\s+Mockingbird\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "أن تقتل طائرًا بريئًا",
+     "statut": "etabli",
+     "fautif": [
+      "(?:قتل|اقتل|تقتل)\\s*(?:ال)?طائر\\s*(?:ال)?(?:محاكي|مقلد|محاكٍ|مغرد)",
+      "لا\\s*تطلق\\s*(?:النار\\s*)?على\\s*(?:ال)?طائر",
+      "(?:ال)?طائر\\s*(?:ال)?(?:محاكي|مقلد|ساخر)(?![؀-ۿ])",
+      "موكينج\\s*بيرد|موكنجبيرد"
+     ]
+    },
     "he": {
      "titre": "אל תיגע בזמיר",
      "statut": "etabli",
@@ -557,6 +995,16 @@
       "להרוג\\s+זמיר",
       "לירות\\s+ב(זמיר|ציפור)",
       "ציפור\\s+מלגלגת"
+     ]
+    },
+    "fi": {
+     "titre": "Kuin surmaisi satakielen",
+     "statut": "etabli",
+     "fautif": [
+      "\\btappa\\w*\\s+matkij\\w*",
+      "\\bmatkijalint\\w*|\\bpilkkalint\\w*",
+      "\\bälä\\s+ammu\\s+matkij\\w*",
+      "\\bsatakielen\\s+tappa\\w*"
      ]
     },
     "et": {
@@ -594,12 +1042,46 @@
       "\\bel\\s+magn[ií]fico\\s+Gatsby\\b"
      ]
     },
+    "de": {
+     "titre": "Der große Gatsby",
+     "statut": "etabli",
+     "fautif": [
+      "\\bgatsby\\s+der\\s+(?:großartige|prächtige|wunderbare|große)\\b",
+      "\\bder\\s+(?:großartige|prächtige|tolle|grosse)\\s+gatsby\\b"
+     ]
+    },
+    "pt": {
+     "titre": "O Grande Gatsby",
+     "statut": "etabli",
+     "fautif": [
+      "\\bGatsby,?\\s+o\\s+Magn[ií]fico\\b",
+      "\\bo\\s+Magn[ií]fico\\s+Gatsby\\b",
+      "\\bThe\\s+Great\\s+Gatsby\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "غاتسبي العظيم",
+     "statut": "etabli",
+     "fautif": [
+      "غاتسبي\\s*(?:ال)?(?:رائع|كبير|مذهل|بديع)",
+      "جاتسبي\\s*(?:ال)?(?:عظيم|رائع|كبير)"
+     ]
+    },
     "he": {
      "titre": "גטסבי הגדול",
      "statut": "etabli",
      "fautif": [
       "גטסבי\\s+(המופלא|הנהדר|הנפלא|המדהים)",
       "גאטסבי"
+     ]
+    },
+    "fi": {
+     "titre": "Kultahattu",
+     "statut": "etabli",
+     "fautif": [
+      "\\bsuuri\\s+gatsby\\b",
+      "\\bmahtava\\s+gatsby\\b",
+      "\\bgatsby\\s+suuri\\b"
      ]
     },
     "et": {
@@ -637,6 +1119,33 @@
       "\\bel\\s+amo\\s+de\\s+los\\s+anillos\\b"
      ]
     },
+    "de": {
+     "titre": "Der Herr der Ringe",
+     "statut": "etabli",
+     "fautif": [
+      "\\bder\\s+lord\\s+der\\s+ringe\\b",
+      "\\b(?:herrscher|meister|gebieter)\\s+der\\s+ringe\\b",
+      "\\bder\\s+herr\\s+des\\s+rings\\b"
+     ]
+    },
+    "pt": {
+     "titre": "O Senhor dos Anéis",
+     "statut": "etabli",
+     "fautif": [
+      "\\bSenhor\\s+dos\\s+Aneis\\b",
+      "\\bMestre\\s+dos\\s+An[eé]is\\b|\\bSenhor\\s+do\\s+Anel\\b",
+      "\\bLord\\s+of\\s+the\\s+Rings\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "سيد الخواتم",
+     "statut": "etabli",
+     "fautif": [
+      "(?:رب|مالك|أمير|ملك)\\s*(?:ال)?خواتم",
+      "سيد\\s*(?:ال)?(?:حلقات|خاتم|حلقة)(?![؀-ۿ])",
+      "لورد\\s*(?:ال)?(?:خواتم|حلقات)"
+     ]
+    },
     "he": {
      "titre": "שר הטבעות",
      "statut": "etabli",
@@ -644,6 +1153,15 @@
       "אדון\\s+הטבעות",
       "שר\\s+הטבעת(?![א-ת])",
       "מלך\\s+הטבעות"
+     ]
+    },
+    "fi": {
+     "titre": "Taru sormusten herrasta",
+     "statut": "etabli",
+     "fautif": [
+      "\\bsormusten\\s+herra\\b",
+      "\\bsormusten\\s+valtias\\b",
+      "\\bsormuksen\\s+herra\\w*"
      ]
     },
     "et": {
@@ -680,12 +1198,43 @@
       "\\bFahrenheit\\s+415\\b"
      ]
     },
+    "de": {
+     "titre": "Fahrenheit 451",
+     "statut": "original",
+     "fautif": [
+      "\\b451\\s+fahrenheit\\b|\\bfahrenheit\\s+vierhunderteinundfünfzig\\b",
+      "\\b(?:233|232)\\s*°?\\s*celsius\\b(?=[^.!?\\n]{0,40}bradbury)"
+     ]
+    },
+    "pt": {
+     "titre": "Fahrenheit 451",
+     "statut": "original",
+     "fautif": [
+      "\\bFarenheit\\s+451\\b|\\bFahreinheit\\s+451\\b",
+      "\\b451\\s+Fahrenheit\\b",
+      "\\bFahrenheit\\s+quatrocentos\\b"
+     ]
+    },
+    "ar": {
+     "titre": "فهرنهايت 451",
+     "statut": "etabli",
+     "fautif": [
+      "فهرنهايت\\s*٤٥١",
+      "(?:فارنهايت|فهرنهيت)\\s*451",
+      "451\\s*فهرنهايت"
+     ]
+    },
     "he": {
      "titre": "פרנהייט 451",
      "statut": "etabli",
      "fautif": [
       "פהרנהייט|פארנהייט|פרנהיט"
      ]
+    },
+    "fi": {
+     "titre": "Fahrenheit 451",
+     "statut": "etabli",
+     "fautif": []
     },
     "et": {
      "titre": "451° Fahrenheiti",
@@ -721,6 +1270,32 @@
       "\\b100\\s+a[ñn]os\\s+de\\s+soledad\\b"
      ]
     },
+    "de": {
+     "titre": "Hundert Jahre Einsamkeit",
+     "statut": "etabli",
+     "fautif": [
+      "\\beinhundert\\s+jahre\\s+(?:der\\s+)?einsamkeit\\b|\\bhundert\\s+jahre\\s+der\\s+einsamkeit\\b",
+      "\\b(?:ein\\s+)?jahrhundert\\s+(?:der\\s+)?einsamkeit\\b",
+      "\\bhundert\\s+jahre\\s+(?:allein|alleinsein)\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Cem Anos de Solidão",
+     "statut": "etabli",
+     "fautif": [
+      "\\bcem\\s+anos\\s+de\\s+(?:solitude|solid[aã]o\\s+e)\\b|\\bcem\\s+anos\\s+de\\s+solidade\\b",
+      "\\bcento\\s+anos\\s+de\\s+solid[aã]o\\b|\\bcem\\s+anos\\s+da\\s+solid[aã]o\\b",
+      "\\bCien\\s+a[ñn]os\\s+de\\s+soledad\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "مئة عام من العزلة",
+     "statut": "etabli",
+     "fautif": [
+      "(?:مئة|مائة|100)\\s*(?:عام|سنة)\\s*من\\s*(?:ال)?(?:وحدة|انعزال|عزل)(?![؀-ۿ])",
+      "100\\s*(?:عام|سنة)\\s*من\\s*(?:ال)?عزلة"
+     ]
+    },
     "he": {
      "titre": "מאה שנים של בדידות",
      "statut": "etabli",
@@ -728,6 +1303,15 @@
       "מאה\\s+שנות\\s+בדידות",
       "מאה\\s+שנה\\s+של\\s+בדידות",
       "100\\s+שנים?\\s+של\\s+בדידות"
+     ]
+    },
+    "fi": {
+     "titre": "Sadan vuoden yksinäisyys",
+     "statut": "etabli",
+     "fautif": [
+      "\\bsata\\s+vuotta\\s+yksin\\w*",
+      "\\b100\\s+vuotta\\s+yksinäisyy\\w*",
+      "\\bsadan\\s+vuoden\\s+yksinolo\\w*"
      ]
     },
     "et": {
@@ -766,6 +1350,32 @@
       "\\blas\\s+metamorfosis\\b[^.!?\\n]{0,70}\\b(?:Kafka|Samsa)\\b|\\b(?:Kafka|Samsa)\\b[^.!?\\n]{0,70}\\blas\\s+metamorfosis\\b"
      ]
     },
+    "de": {
+     "titre": "Die Verwandlung",
+     "statut": "original",
+     "fautif": [
+      "\\bdie\\s+metamorphose\\b(?=[^.!?\\n]{0,60}(?:kafka|samsa|käfer|ungeziefer))|(?:kafka|samsa)[^.!?\\n]{0,60}\\bdie\\s+metamorphose\\b",
+      "\\bdie\\s+(?:umwandlung|transformation|verwandlungen)\\b(?=[^.!?\\n]{0,60}(?:kafka|samsa))"
+     ]
+    },
+    "pt": {
+     "titre": "A Metamorfose",
+     "statut": "etabli",
+     "fautif": [
+      "\\bA\\s+Transforma[cç][aã]o\\b[^.!?\\n]{0,60}\\bKafka\\b|\\bKafka\\b[^.!?\\n]{0,60}\\bA\\s+Transforma[cç][aã]o\\b",
+      "\\bA\\s+Metamorfosis\\b|\\bAs\\s+Metamorfoses\\b[^.!?\\n]{0,40}\\bKafka\\b",
+      "\\bDie\\s+Verwandlung\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "المسخ",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?تحو[لّ]+\\s*(?:ل|لـ)?كافكا",
+      "كافكا[^.]{0,20}«?(?:ال)?(?:تحول|تحوّل|استحالة|تغير)»?(?![؀-ۿ])",
+      "رواية\\s*«?(?:ال)?(?:تحول|تحوّل)»?(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "הגלגול",
      "statut": "etabli",
@@ -773,6 +1383,14 @@
       "המטמורפוז[הת]",
       "(השינוי|ההשתנות)\\s*\\(?\\s*(של\\s+)?קפקא",
       "הטרנספורמצי[הת]"
+     ]
+    },
+    "fi": {
+     "titre": "Muodonmuutos",
+     "statut": "etabli",
+     "fautif": [
+      "\\bmetamorfoosi\\b.{0,20}kafka|kafka\\w*.{0,20}\\bmetamorfoosi\\b",
+      "\\bmuodonvaihdo\\w*"
      ]
     },
     "et": {
@@ -811,6 +1429,31 @@
       "\\bmaestro\\s+y\\s+la\\s+Margarita\\b"
      ]
     },
+    "de": {
+     "titre": "Der Meister und Margarita",
+     "statut": "etabli",
+     "fautif": [
+      "\\bmeister\\s+und\\s+(?:margarete|marguerite|margerite|margarethe)\\b",
+      "\\b(?:der\\s+herr|der\\s+lehrer|die\\s+meister)\\s+und\\s+margarita\\b"
+     ]
+    },
+    "pt": {
+     "titre": "O Mestre e Margarida",
+     "statut": "etabli",
+     "fautif": [
+      "\\bO\\s+Mestre\\s+e\\s+a\\s+Margarida\\b",
+      "\\bO\\s+Maestro\\s+e\\s+Margarida\\b|\\bO\\s+Mestre\\s+e\\s+Marguerite\\b|\\bO\\s+Mestre\\s+e\\s+Margarita\\b",
+      "\\bThe\\s+Master\\s+and\\s+Margarita\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "المعلم ومارغريتا",
+     "statut": "etabli",
+     "fautif": [
+      "(?:السيد|الأستاذ|المايسترو)\\s*و\\s*مارغريتا",
+      "المعلم\\s*و\\s*(?:مارجريت|مارغريت|مارجريتا)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "האמן ומרגריטה",
      "statut": "etabli",
@@ -819,6 +1462,15 @@
       "האדון\\s+ומרגריטה",
       "המורה\\s+ומרגריטה",
       "האמן\\s+ומרגרט"
+     ]
+    },
+    "fi": {
+     "titre": "Saatana saapuu Moskovaan",
+     "statut": "etabli",
+     "fautif": [
+      "\\bmestari\\s+ja\\s+margar\\w*",
+      "\\bmestari\\s+ja\\s+marguerite\\b",
+      "\\bmaisteri\\s+ja\\s+margar\\w*"
      ]
     },
     "et": {
@@ -855,6 +1507,27 @@
       "\\bMobby\\s+Dick\\b|\\bMobi\\s+Dick\\b"
      ]
     },
+    "de": {
+     "titre": "Moby-Dick",
+     "statut": "etabli",
+     "fautif": [
+      "\\bmobi-?\\s?dick\\b|\\bmobby-?\\s?dick\\b|\\bmoby\\s+dik\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Moby Dick",
+     "statut": "original",
+     "fautif": [
+      "\\bMobi\\s+Dick\\b|\\bMoby\\s+Dique\\b|\\bMobby\\s+Dick\\b"
+     ]
+    },
+    "ar": {
+     "titre": "موبي ديك",
+     "statut": "etabli",
+     "fautif": [
+      "موبي\\s*(?:دك|دِك)|موبيديك|مابي\\s*ديك"
+     ]
+    },
     "he": {
      "titre": "מובי דיק",
      "statut": "etabli",
@@ -862,6 +1535,13 @@
       "מובי\\s+דיך",
       "מוביי\\s+דיק",
       "מובי\\s+דיק\\s+הלוויתן"
+     ]
+    },
+    "fi": {
+     "titre": "Moby Dick",
+     "statut": "etabli",
+     "fautif": [
+      "\\bmoby-dick\\b"
      ]
     },
     "et": {
@@ -897,6 +1577,32 @@
       "\\bel\\s+pr[ií]ncipe\\s+peque[ñn]o\\b"
      ]
     },
+    "de": {
+     "titre": "Der kleine Prinz",
+     "statut": "etabli",
+     "fautif": [
+      "\\bder\\s+kleine\\s+fürst\\b|\\bder\\s+fürst\\b(?=[^.!?\\n]{0,40}(?:saint-?exup|rose|planet|fuchs|schaf))",
+      "\\bder\\s+kleine\\s+prince\\b|\\ble\\s+petit\\s+prinz\\b",
+      "\\bdas\\s+prinzchen\\b|\\bder\\s+kleine\\s+prinzen\\b"
+     ]
+    },
+    "pt": {
+     "titre": "O Pequeno Príncipe",
+     "statut": "etabli",
+     "fautif": [
+      "\\bO\\s+Principezinho\\b",
+      "\\bO\\s+Pequeno\\s+Princ[ií]pe\\b(?<!Príncipe)|\\bPequenino\\s+Pr[ií]ncipe\\b",
+      "\\bLe\\s+Petit\\s+Prince\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "الأمير الصغير",
+     "statut": "etabli",
+     "fautif": [
+      "الأمير\\s*(?:ال)?(?:صغيرة|قليل|ضئيل|قصير|صغير\\s*السن)",
+      "لو\\s*بوتي\\s*برانس"
+     ]
+    },
     "he": {
      "titre": "הנסיך הקטן",
      "statut": "etabli",
@@ -904,6 +1610,15 @@
       "הנסיך\\s+הקטנטן",
       "הנסיכון",
       "הפרינץ\\s+הקטן"
+     ]
+    },
+    "fi": {
+     "titre": "Pikku Prinssi",
+     "statut": "etabli",
+     "fautif": [
+      "\\bpieni\\s+prinssi\\b",
+      "\\bpikkuprinssi\\b",
+      "\\bpikku\\s+ruhtinas\\b"
      ]
     },
     "et": {
@@ -937,6 +1652,31 @@
      "statut": "etabli",
      "fautif": []
     },
+    "de": {
+     "titre": "Der Alchimist",
+     "statut": "etabli",
+     "fautif": [
+      "\\bder\\s+alchemist\\b|\\bder\\s+alchymist\\b",
+      "\\bder\\s+alchemiker\\b|\\bder\\s+goldmacher\\b(?=[^.!?\\n]{0,40}coelho)"
+     ]
+    },
+    "pt": {
+     "titre": "O Alquimista",
+     "statut": "original",
+     "fautif": [
+      "\\bO\\s+Alquimisto\\b|\\bO\\s+Alqu[ií]mico\\b",
+      "\\bL['’]Alchimiste\\b|\\bThe\\s+Alchemist\\b"
+     ]
+    },
+    "ar": {
+     "titre": "الخيميائي",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?كيميائي(?![؀-ۿ])[^.]{0,20}كويلو",
+      "كويلو[^.]{0,20}(?:ال)?كيميائي(?![؀-ۿ])",
+      "رواية\\s*«?(?:ال)?كيميائي»?(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "האלכימאי",
      "statut": "etabli",
@@ -944,6 +1684,14 @@
       "האלכימיסט",
       "האלכמיסט",
       "הכימאי\\s*\\(?\\s*קואלו"
+     ]
+    },
+    "fi": {
+     "titre": "Alkemisti",
+     "statut": "etabli",
+     "fautif": [
+      "\\balkemiisti\\b",
+      "\\bkemisti\\b.{0,20}coelho"
      ]
     },
     "et": {
@@ -980,6 +1728,30 @@
       "\\bOdissea\\b|\\bOdysee\\b"
      ]
     },
+    "de": {
+     "titre": "Odyssee",
+     "statut": "etabli",
+     "fautif": [
+      "\\bodyssey\\b|\\bodyssée\\b",
+      "\\bodysee\\b|\\bodüssee\\b|\\bodyseé\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Odisseia",
+     "statut": "etabli",
+     "fautif": [
+      "\\bOdiss[eé]ia\\b(?<!Odisseia)",
+      "\\bOdyssey\\b|\\bOdiss[eé]e\\b",
+      "\\bOdissea\\b"
+     ]
+    },
+    "ar": {
+     "titre": "الأوديسة",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:أوديسا|أوديسيا|أوديسي|اوديسي)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "האודיסיאה",
      "statut": "etabli",
@@ -987,6 +1759,15 @@
       "אודיסאה",
       "האודיסי(?![א-ת])",
       "אודיסיי"
+     ]
+    },
+    "fi": {
+     "titre": "Odysseia",
+     "statut": "etabli",
+     "fautif": [
+      "\\bodyssee\\b",
+      "\\bodysseija\\b",
+      "\\bodyssey\\b"
      ]
     },
     "et": {
@@ -1022,6 +1803,29 @@
       "\\bIliad\\b|\\bIliade\\b"
      ]
     },
+    "de": {
+     "titre": "Ilias",
+     "statut": "etabli",
+     "fautif": [
+      "\\biliade\\b|\\biliad\\b",
+      "\\bdie\\s+iliada\\b|\\biliass\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Ilíada",
+     "statut": "etabli",
+     "fautif": [
+      "\\bIliada\\b",
+      "\\bIliad\\b|\\bIl[ií]ade\\b"
+     ]
+    },
+    "ar": {
+     "titre": "الإلياذة",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:إلياد|إيلياد|إلياده|ايلياد|إلياذه)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "האיליאדה",
      "statut": "etabli",
@@ -1029,6 +1833,15 @@
       "איליאד(?![א-ת])",
       "האליאדה",
       "איליאס"
+     ]
+    },
+    "fi": {
+     "titre": "Ilias",
+     "statut": "etabli",
+     "fautif": [
+      "\\biliadi\\b",
+      "\\biliade\\b",
+      "\\biliad\\b"
      ]
     },
     "et": {
@@ -1065,6 +1878,33 @@
       "\\bEdipo\\s+Rex\\b"
      ]
     },
+    "de": {
+     "titre": "König Ödipus",
+     "statut": "etabli",
+     "fautif": [
+      "\\bödipus\\s+(?:der\\s+)?könig\\b|\\bödipus\\s+könig\\b",
+      "\\bkönig\\s+oedipus\\b|\\boedipe\\b|\\bödipe\\s+roi\\b|\\bödipus\\s+rex\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Édipo Rei",
+     "statut": "etabli",
+     "fautif": [
+      "\\bEdipo\\s+Rei\\b",
+      "\\bOedipus\\s+Rex\\b|\\b[ÉE]dipo\\s+Rey\\b|\\b[ÉE]dipe\\s+Roi\\b",
+      "\\b[ÉE]dipo,\\s+o\\s+Rei\\b"
+     ]
+    },
+    "ar": {
+     "titre": "أوديب ملكًا",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?ملك\\s*أوديب",
+      "أوديب\\s*(?:ال)?ملك(?![؀-ۿ])",
+      "(?:أوديبوس|أوديبس|إيديب)\\s*(?:ال)?(?:ملك|ريكس)",
+      "أوديب\\s*ريكس"
+     ]
+    },
     "he": {
      "titre": "אדיפוס המלך",
      "statut": "etabli",
@@ -1072,6 +1912,15 @@
       "המלך\\s+אדיפוס",
       "אדיפוס\\s+רקס",
       "אדיפ\\s+(ה)?מלך"
+     ]
+    },
+    "fi": {
+     "titre": "Kuningas Oidipus",
+     "statut": "etabli",
+     "fautif": [
+      "\\boidipus\\s+kuningas\\b",
+      "\\bkuningas\\s+(oedipus|ödipus|oidipos)\\b",
+      "\\boedipe\\b"
      ]
     },
     "et": {
@@ -1108,12 +1957,42 @@
       "\\bAntigone\\b"
      ]
     },
+    "de": {
+     "titre": "Antigone",
+     "statut": "original",
+     "fautif": [
+      "\\bantigona\\b|\\bantigonä\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Antígona",
+     "statut": "etabli",
+     "fautif": [
+      "\\bAntigona\\b",
+      "\\bAntigone\\b"
+     ]
+    },
+    "ar": {
+     "titre": "أنتيغونه",
+     "statut": "etabli",
+     "fautif": [
+      "أنتي?[جغ]وني(?![؀-ۿ])",
+      "(?<![؀-ۿ])(?:انتيغون|أنتيغون)(?![؀-ۿاةه])"
+     ]
+    },
     "he": {
      "titre": "אנטיגונה",
      "statut": "etabli",
      "fautif": [
       "אנטיגון(?![א-ת])",
       "אנטיגוני"
+     ]
+    },
+    "fi": {
+     "titre": "Antigone",
+     "statut": "etabli",
+     "fautif": [
+      "\\bantigona\\b|\\bantigoni\\b"
      ]
     },
     "et": {
@@ -1150,6 +2029,33 @@
       "\\bel\\s+fest[ií]n\\b[^.!?\\n]{0,70}\\bPlat[oó]n\\b|\\bPlat[oó]n\\b[^.!?\\n]{0,70}\\bel\\s+fest[ií]n\\b"
      ]
     },
+    "de": {
+     "titre": "Das Gastmahl",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdas\\s+bankett\\b(?=[^.!?\\n]{0,60}(?:platon|sokrates|eros|liebe|diotima))|(?:platon|sokrates)[^.!?\\n]{0,60}\\bdas\\s+bankett\\b",
+      "\\bdas\\s+festmahl\\b(?=[^.!?\\n]{0,60}(?:platon|sokrates|eros))|\\bdas\\s+festessen\\b(?=[^.!?\\n]{0,60}platon)",
+      "\\bdie\\s+party\\b(?=[^.!?\\n]{0,40}platon)|\\bdas\\s+gelage\\b(?=[^.!?\\n]{0,40}platon)"
+     ]
+    },
+    "pt": {
+     "titre": "O Banquete",
+     "statut": "etabli",
+     "fautif": [
+      "\\bO\\s+Simp[oó]sio\\b[^.!?\\n]{0,60}\\bPlat[aã]o\\b|\\bPlat[aã]o\\b[^.!?\\n]{0,60}\\bO\\s+Simp[oó]sio\\b",
+      "\\bSymposium\\b",
+      "\\bO\\s+Festim\\b[^.!?\\n]{0,40}\\bPlat[aã]o\\b"
+     ]
+    },
+    "ar": {
+     "titre": "المأدبة",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:وليمة|حفلة|مأدبة\\s*العشاء)\\s*(?:ل|لـ)?أفلاطون",
+      "أفلاطون[^.]{0,20}«?(?:ال)?(?:وليمة|حفل|عشاء|ندوة|سمبوزيوم)»?(?![؀-ۿ])",
+      "(?:ال)?(?:ندوة|سمبوزيوم|سيمبوزيوم)(?![؀-ۿ])[^.]{0,20}أفلاطون"
+     ]
+    },
     "he": {
      "titre": "המשתה",
      "statut": "etabli",
@@ -1158,6 +2064,16 @@
       "הסעודה",
       "הבנקט",
       "המסיבה\\s*\\(?\\s*אפלטון"
+     ]
+    },
+    "fi": {
+     "titre": "Pidot",
+     "statut": "etabli",
+     "fautif": [
+      "\\bbanketti\\b",
+      "\\bjuhla-?ateria\\w*.{0,20}platon",
+      "\\bsymposion\\b|\\bsymposium\\b",
+      "\\bjuhlat\\b.{0,20}platon"
      ]
     },
     "et": {
@@ -1195,12 +2111,44 @@
       "\\bThe\\s+Republic\\b|\\bLa\\s+R[eé]publique\\b"
      ]
     },
+    "de": {
+     "titre": "Der Staat",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdie\\s+republik\\b(?=[^.!?\\n]{0,60}(?:platon|sokrates|philosophenkönig|höhle|gerechtigkeit))|(?:platon|sokrates)[^.!?\\n]{0,60}\\bdie\\s+republik\\b",
+      "\\bplatons?\\s+republik\\b|\\bder\\s+republik\\s+platons\\b"
+     ]
+    },
+    "pt": {
+     "titre": "A República",
+     "statut": "etabli",
+     "fautif": [
+      "\\bA\\s+Republica\\b",
+      "\\bThe\\s+Republic\\b(?![^.!?\\n]{0,20}\\()",
+      "\\bA\\s+Rep[uú]blica\\s+de\\s+Platon\\b"
+     ]
+    },
+    "ar": {
+     "titre": "الجمهورية",
+     "statut": "etabli",
+     "fautif": [
+      "(?:بلاتو|بلاتون|بليتو)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "המדינה",
      "statut": "etabli",
      "fautif": [
       "הרפובליקה\\s*\\(?\\s*(של\\s+)?אפלטון",
       "אפלטון\\s*[,:]?\\s*\\**הרפובליקה"
+     ]
+    },
+    "fi": {
+     "titre": "Valtio",
+     "statut": "etabli",
+     "fautif": [
+      "\\btasavalta\\b.{0,30}platon|platon\\w*.{0,30}\\btasavalta\\b",
+      "\\btasavalta\\s*\\(\\s*platon"
      ]
     },
     "et": {
@@ -1239,6 +2187,33 @@
       "\\bdefensa\\s+de\\s+S[oó]crates\\b"
      ]
     },
+    "de": {
+     "titre": "Apologie des Sokrates",
+     "statut": "etabli",
+     "fautif": [
+      "\\bentschuldigung\\s+(?:des|von)\\s+sokrates\\b|\\bsokrates'?\\s+entschuldigung\\b",
+      "\\bapologie\\s+von\\s+sokrates\\b|\\bapology\\b|\\bsokrates'?\\s+apologie\\b",
+      "\\brechtfertigung\\s+des\\s+sokrates\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Apologia de Sócrates",
+     "statut": "etabli",
+     "fautif": [
+      "\\b(?:pedido\\s+de\\s+)?desculpas\\s+de\\s+S[oó]crates\\b",
+      "\\bApologia\\s+de\\s+Socrates\\b|\\bApologia\\s+a\\s+S[oó]crates\\b",
+      "\\bApology\\s+of\\s+Socrates\\b"
+     ]
+    },
+    "ar": {
+     "titre": "دفاع سقراط",
+     "statut": "etabli",
+     "fautif": [
+      "(?:اعتذار|اعتذارية|الاعتذار)\\s*(?:ل|لـ)?سقراط",
+      "سقراط[^.]{0,15}(?:ال)?اعتذار",
+      "(?:أبولوجيا|أبولوجي|أبولوغيا)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "אפולוגיה של סוקרטס",
      "statut": "etabli",
@@ -1246,6 +2221,15 @@
       "התנצלות\\s+(של\\s+)?סוקרטס",
       "ההתנצלות",
       "סוקרטס\\s+מתנצל"
+     ]
+    },
+    "fi": {
+     "titre": "Sokrateen puolustuspuhe",
+     "statut": "etabli",
+     "fautif": [
+      "\\bsokrateen\\s+apologia\\b",
+      "\\bsokrateen\\s+anteeksipyyntö\\b",
+      "\\bapologia\\b.{0,20}sokrat"
      ]
     },
     "et": {
@@ -1283,6 +2267,32 @@
       "\\barte\\s+po[eé]tica\\b[^.!?\\n]{0,70}\\bArist[oó]teles\\b|\\bArist[oó]teles\\b[^.!?\\n]{0,70}\\barte\\s+po[eé]tica\\b"
      ]
     },
+    "de": {
+     "titre": "Poetik",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdie\\s+poetique\\b|\\bpoétique\\b|\\bpoetics\\b",
+      "\\bdie\\s+poesie\\b(?=[^.!?\\n]{0,40}aristoteles)|\\bdie\\s+poetische\\b(?=[^.!?\\n]{0,30}aristoteles)"
+     ]
+    },
+    "pt": {
+     "titre": "Poética",
+     "statut": "etabli",
+     "fautif": [
+      "\\bPoetics\\b|\\bPo[eé]tique\\b",
+      "\\bA\\s+Poesia\\s+de\\s+Arist[oó]teles\\b",
+      "\\bPoetica\\b(?<!Poética)"
+     ]
+    },
+    "ar": {
+     "titre": "فن الشعر",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:شاعرية|شعرية)\\s*(?:ل|لـ)?أرسطو",
+      "أرسطو[^.]{0,15}«?(?:ال)?(?:شاعرية|شعرية|بويطيقا)»?(?![؀-ۿ])",
+      "(?:ال)?(?:بويتيكا|بويتيك|بوتيكس)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "פואטיקה",
      "statut": "etabli",
@@ -1290,6 +2300,15 @@
       "הפיוטיות",
       "פיוטיקה",
       "השירה\\s*\\(?\\s*אריסטו"
+     ]
+    },
+    "fi": {
+     "titre": "Runousoppi",
+     "statut": "etabli",
+     "fautif": [
+      "\\bpoetiikka\\b",
+      "\\brunous\\b.{0,10}aristotel",
+      "\\brunoustaide\\b"
      ]
     },
     "et": {
@@ -1327,6 +2346,32 @@
       "\\bWorks\\s+and\\s+Days\\b"
      ]
     },
+    "de": {
+     "titre": "Werke und Tage",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdie\\s+arbeiten\\s+und\\s+(?:die\\s+)?tage\\b|\\barbeit\\s+und\\s+tage\\b",
+      "\\bwerke\\s+und\\s+die\\s+tage\\b|\\bdie\\s+werke\\s+und\\s+die\\s+tage\\b",
+      "\\bbauarbeiten\\s+und\\s+tage\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Os Trabalhos e os Dias",
+     "statut": "etabli",
+     "fautif": [
+      "\\bObras\\s+e\\s+(?:os\\s+)?Dias\\b",
+      "\\bWorks\\s+and\\s+Days\\b",
+      "\\bOs\\s+Trabalhos\\s+e\\s+Dias\\b"
+     ]
+    },
+    "ar": {
+     "titre": "الأعمال والأيام",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:أشغال|وظائف|مهام)\\s*و\\s*(?:ال)?أيام",
+      "هسيود[^.]{0,20}(?:ال)?(?:أشغال|مهام)"
+     ]
+    },
     "he": {
      "titre": "מעשים וימים",
      "statut": "etabli",
@@ -1334,6 +2379,15 @@
       "עבודות\\s+וימים",
       "העבודות\\s+והימים",
       "מלאכות\\s+וימים"
+     ]
+    },
+    "fi": {
+     "titre": "Työt ja päivät",
+     "statut": "etabli",
+     "fautif": [
+      "\\btyöt\\s+ja\\s+päivä\\b",
+      "\\bteokset\\s+ja\\s+päivät\\b",
+      "\\btyö\\s+ja\\s+päivät\\b"
      ]
     },
     "et": {
@@ -1369,6 +2423,30 @@
       "\\bMédea\\b"
      ]
     },
+    "de": {
+     "titre": "Medea",
+     "statut": "etabli",
+     "fautif": [
+      "\\bmédée\\b|\\bmedée\\b|\\bmedee\\b",
+      "\\bmedeia\\b(?=[^.!?\\n]{0,40}euripides)"
+     ]
+    },
+    "pt": {
+     "titre": "Medeia",
+     "statut": "etabli",
+     "fautif": [
+      "\\bMed[eé]ia\\b(?<!Medeia)",
+      "\\bMedea\\b|\\bM[eé]d[eé]e\\b"
+     ]
+    },
+    "ar": {
+     "titre": "ميديا",
+     "statut": "etabli",
+     "fautif": [
+      "(?<![؀-ۿ])(?:ميدي|ميديه|مديا|ميدييا)(?![؀-ۿ])",
+      "(?:ال)?إعلام[^.]{0,20}(?:يوربيديس|يوريبيديس)"
+     ]
+    },
     "he": {
      "titre": "מדיאה",
      "statut": "etabli",
@@ -1376,6 +2454,15 @@
       "מדאה",
       "מידאה",
       "מדיה\\s*\\(?\\s*אוריפידס"
+     ]
+    },
+    "fi": {
+     "titre": "Medeia",
+     "statut": "etabli",
+     "fautif": [
+      "\\bmedea\\b",
+      "\\bmédée\\b",
+      "\\bmedee\\b"
      ]
     },
     "et": {
@@ -1412,6 +2499,32 @@
       "\\bLes\\s+Mis[eé]rables\\b[^.!?\\n]{0,70}\\b(?:novela|Hugo)\\b|\\b(?:novela|Hugo)\\b[^.!?\\n]{0,70}\\bLes\\s+Mis[eé]rables\\b"
      ]
     },
+    "de": {
+     "titre": "Die Elenden",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdie\\s+(?:miserablen|erbärmlichen|armseligen|jämmerlichen)\\b",
+      "\\bdie\\s+unglücklichen\\b(?=[^.!?\\n]{0,60}hugo)|\\bdie\\s+verlorenen\\b(?=[^.!?\\n]{0,40}hugo)"
+     ]
+    },
+    "pt": {
+     "titre": "Os Miseráveis",
+     "statut": "etabli",
+     "fautif": [
+      "\\bOs\\s+Miseraveis\\b|\\bOs\\s+Infelizes\\b",
+      "\\bLes\\s+Mis[eé]rables\\b(?![^.!?\\n]{0,20}(?:\\(|musical))"
+     ]
+    },
+    "ar": {
+     "titre": "البؤساء",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:تعساء|أشقياء|مساكين|فقراء|بائسون|بائسين)\\s*(?:ل|لـ)?(?:فيكتور\\s*)?هوغو",
+      "(?:هوغو|هيغو|هوجو)[^.]{0,20}«?(?:ال)?(?:تعساء|أشقياء|مساكين|فقراء|بائسون|بائسين)»?",
+      "رواية\\s*«?(?:ال)?(?:تعساء|أشقياء|بائسون|بائسين)»?",
+      "لي\\s*ميزيرابل|ليه\\s*ميزيرابل"
+     ]
+    },
     "he": {
      "titre": "עלובי החיים",
      "statut": "etabli",
@@ -1420,6 +2533,15 @@
       "המסכנים\\s*\\(?\\s*הוגו",
       "העלובים",
       "לה\\s+מיזרבל"
+     ]
+    },
+    "fi": {
+     "titre": "Kurjat",
+     "statut": "etabli",
+     "fautif": [
+      "\\bonnettomat\\b.{0,20}hugo",
+      "\\bkurjalisto\\b",
+      "\\bsurkeat\\b.{0,20}hugo"
      ]
     },
     "et": {
@@ -1455,6 +2577,30 @@
       "\\bSra\\.?\\s+Bovary\\b"
      ]
     },
+    "de": {
+     "titre": "Madame Bovary",
+     "statut": "original",
+     "fautif": [
+      "\\bfrau\\s+bovary\\b|\\bmadam\\s+bovary\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Madame Bovary",
+     "statut": "original",
+     "fautif": [
+      "\\bSenhora\\s+Bovary\\b|\\bDona\\s+Bovary\\b",
+      "\\bMadame\\s+Bovari\\b"
+     ]
+    },
+    "ar": {
+     "titre": "مدام بوفاري",
+     "statut": "etabli",
+     "fautif": [
+      "(?:السيدة|سيدة)\\s*بوفاري",
+      "مدام\\s*(?:بوفري|بوفاريه|بوفارى|بوڤاري)",
+      "مادام\\s*بوفاري"
+     ]
+    },
     "he": {
      "titre": "מאדאם בובארי",
      "statut": "etabli",
@@ -1462,6 +2608,13 @@
       "גברת\\s+בובארי",
       "בוברי",
       "בווארי"
+     ]
+    },
+    "fi": {
+     "titre": "Rouva Bovary",
+     "statut": "etabli",
+     "fautif": [
+      "\\bmadame\\s+bovary\\b"
      ]
     },
     "et": {
@@ -1498,6 +2651,31 @@
       "\\blo\\s+rojo\\s+y\\s+lo\\s+negro\\b"
      ]
     },
+    "de": {
+     "titre": "Rot und Schwarz",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdas\\s+rot\\s+und\\s+das\\s+schwarz\\b|\\bdas\\s+rote\\s+und\\s+das\\s+schwarze\\b",
+      "\\bder\\s+rote\\s+und\\s+der\\s+schwarze\\b|\\brot\\s+&\\s+schwarz\\b"
+     ]
+    },
+    "pt": {
+     "titre": "O Vermelho e o Negro",
+     "statut": "etabli",
+     "fautif": [
+      "\\bO\\s+Vermelho\\s+e\\s+o\\s+Preto\\b",
+      "\\bO\\s+Rubro\\s+e\\s+o\\s+Negro\\b|\\bVermelho\\s+e\\s+Preto\\b",
+      "\\bLe\\s+Rouge\\s+et\\s+le\\s+Noir\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "الأحمر والأسود",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:حمراء|حمرة)\\s*و\\s*(?:ال)?(?:سوداء|سواد)(?![؀-ۿ])",
+      "(?:ستاندهال|ستيندهال|ستندهال)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "האדום והשחור",
      "statut": "etabli",
@@ -1505,6 +2683,15 @@
       "אדום\\s+ושחור",
       "הסקרלט\\s+והשחור",
       "הארגמן\\s+והשחור"
+     ]
+    },
+    "fi": {
+     "titre": "Punaista ja mustaa",
+     "statut": "etabli",
+     "fautif": [
+      "\\bpunainen\\s+ja\\s+musta\\b",
+      "\\bpuna\\s*musta\\b",
+      "\\bpunaista\\s+ja\\s+musta\\b"
      ]
     },
     "et": {
@@ -1540,6 +2727,33 @@
       "\\bCandido\\b"
      ]
     },
+    "de": {
+     "titre": "Candide",
+     "statut": "etabli",
+     "fautif": [
+      "\\bkandid\\b|\\bcandid\\b(?!e)",
+      "\\bder\\s+(?:naive|aufrichtige|arglose)\\b(?=[^.!?\\n]{0,40}voltaire)"
+     ]
+    },
+    "pt": {
+     "titre": "Cândido",
+     "statut": "etabli",
+     "fautif": [
+      "\\bCandido\\b(?<!Cândido)",
+      "\\bC[aâ]ndida\\b[^.!?\\n]{0,40}\\bVoltaire\\b",
+      "\\bCandide\\b(?![^.!?\\n]{0,20}(?:\\(|,\\s*ou))"
+     ]
+    },
+    "ar": {
+     "titre": "كانديد",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:صريح|ساذج|بريء|سذاجة)\\s*(?:ل|لـ)?(?:فولتير|ڤولتير)",
+      "(?:فولتير|ڤولتير)[^.]{0,15}«?(?:ال)?(?:صريح|ساذج|بريء)»?(?![؀-ۿ])",
+      "(?<![؀-ۿ])كانديدا(?![؀-ۿ])",
+      "(?:كنديد|كونديد|كانديت)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "קנדיד",
      "statut": "etabli",
@@ -1547,6 +2761,15 @@
       "קנדידה",
       "קאנדיד",
       "התמים\\s*\\(?\\s*וולטר"
+     ]
+    },
+    "fi": {
+     "titre": "Candide",
+     "statut": "etabli",
+     "fautif": [
+      "\\bkandidi\\b",
+      "\\bkandide\\b",
+      "\\bviaton\\b.{0,20}voltaire"
      ]
     },
     "et": {
@@ -1584,6 +2807,31 @@
       "\\bLes\\s+Confessions\\b"
      ]
     },
+    "de": {
+     "titre": "Bekenntnisse",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdie\\s+geständnisse\\b(?=[^.!?\\n]{0,60}rousseau)|rousseau[^.!?\\n]{0,60}\\bgeständnisse\\b",
+      "\\bdie\\s+beichten?\\b(?=[^.!?\\n]{0,60}rousseau)|\\bdie\\s+konfessionen\\b(?=[^.!?\\n]{0,60}rousseau)"
+     ]
+    },
+    "pt": {
+     "titre": "Confissões",
+     "statut": "etabli",
+     "fautif": [
+      "\\bConfess[oõ]es\\b",
+      "\\bLes\\s+Confessions\\b|\\bThe\\s+Confessions\\b",
+      "\\bConfiss[aã]o\\s+de\\s+Rousseau\\b"
+     ]
+    },
+    "ar": {
+     "titre": "الاعترافات",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:إقرارات|بوح|معترفات|إعترافات)(?![؀-ۿ])[^.]{0,15}روسو",
+      "روسو[^.]{0,15}«?(?:ال)?(?:اعتراف|إقرارات|بوح)»?(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "הווידויים",
      "statut": "etabli",
@@ -1591,6 +2839,15 @@
       "ההודאות",
       "ההתוודויות",
       "וידוי\\s*\\(?\\s*רוסו"
+     ]
+    },
+    "fi": {
+     "titre": "Tunnustuksia",
+     "statut": "etabli",
+     "fautif": [
+      "\\btunnustukset\\b.{0,20}rousseau|rousseau\\w*.{0,20}\\btunnustukset\\b",
+      "\\brippi\\w*.{0,20}rousseau",
+      "\\btunnustus\\b.{0,20}rousseau"
      ]
     },
     "et": {
@@ -1629,6 +2886,33 @@
       "\\bL['’][EÉ]tranger\\b"
      ]
     },
+    "de": {
+     "titre": "Der Fremde",
+     "statut": "etabli",
+     "fautif": [
+      "\\bder\\s+ausländer\\b(?=[^.!?\\n]{0,60}(?:camus|meursault|algier))|(?:camus|meursault)[^.!?\\n]{0,60}\\bder\\s+ausländer\\b",
+      "\\bder\\s+fremdling\\b|\\bdie\\s+fremde\\b(?=[^.!?\\n]{0,40}(?:camus|meursault))",
+      "\\bder\\s+(?:außenseiter|unbekannte)\\b(?=[^.!?\\n]{0,40}camus)"
+     ]
+    },
+    "pt": {
+     "titre": "O Estrangeiro",
+     "statut": "etabli",
+     "fautif": [
+      "\\bO\\s+Estranho\\b[^.!?\\n]{0,60}\\bCamus\\b|\\bCamus\\b[^.!?\\n]{0,60}\\bO\\s+Estranho\\b",
+      "\\bO\\s+Forasteiro\\b|\\bO\\s+Desconhecido\\b[^.!?\\n]{0,40}\\bCamus\\b",
+      "\\bL['’][ÉE]tranger\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "الغريب",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:أجنبي|دخيل)\\s*(?:ل|لـ)?(?:ألبير\\s*)?كامو",
+      "كامو[^.]{0,15}«?(?:ال)?(?:أجنبي|دخيل|غريب\\s*الأطوار)»?(?![؀-ۿ])",
+      "رواية\\s*«?(?:ال)?(?:أجنبي|دخيل)»?(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "הזר",
      "statut": "etabli",
@@ -1636,6 +2920,15 @@
       "הנכרי",
       "המוזר\\s*\\(?\\s*קאמי",
       "הזר\\s+מבחוץ"
+     ]
+    },
+    "fi": {
+     "titre": "Sivullinen",
+     "statut": "etabli",
+     "fautif": [
+      "\\bmuukalainen\\b.{0,30}camus|camus\\w*.{0,30}\\bmuukalainen\\b",
+      "\\bulkomaalainen\\b.{0,30}camus",
+      "\\bvieras\\b.{0,20}camus"
      ]
     },
     "et": {
@@ -1675,6 +2968,33 @@
       "\\bS[ií]sifo\\s+mito\\b"
      ]
     },
+    "de": {
+     "titre": "Der Mythos des Sisyphos",
+     "statut": "etabli",
+     "fautif": [
+      "\\bmythos\\s+(?:von|des)\\s+sisyphus\\b|\\bsisyphus-?mythos\\b",
+      "\\bder\\s+mythos\\s+sisyphos\\b|\\bdie\\s+(?:sage|legende)\\s+(?:von|des)\\s+sisyph\\w*\\b",
+      "\\bmythe\\s+de\\s+sisyphe\\b"
+     ]
+    },
+    "pt": {
+     "titre": "O Mito de Sísifo",
+     "statut": "etabli",
+     "fautif": [
+      "\\bMito\\s+de\\s+Sisifo\\b|\\bMito\\s+de\\s+S[ií]sipho\\b",
+      "\\bMito\\s+de\\s+Sisyph(?:us|e)\\b",
+      "\\bMythe\\s+de\\s+Sisyphe\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "أسطورة سيزيف",
+     "statut": "etabli",
+     "fautif": [
+      "(?:خرافة|حكاية|قصة|ميثولوجيا)\\s*(?:سيزيف|سيسيف|سيسيفوس)",
+      "أسطورة\\s*(?:سيسيف|سيسيفوس|سيزيفوس|سيزيفس)(?![؀-ۿ])",
+      "(?:ال)?ميث\\s*(?:ل|لـ)?سيزيف"
+     ]
+    },
     "he": {
      "titre": "המיתוס של סיזיפוס",
      "statut": "etabli",
@@ -1682,6 +3002,15 @@
       "אגדת\\s+סיזיפוס",
       "סיסיפוס",
       "המיתוס\\s+של\\s+סיזיף(?!וס)"
+     ]
+    },
+    "fi": {
+     "titre": "Sisyfoksen myytti",
+     "statut": "etabli",
+     "fautif": [
+      "\\b(sisyphoksen|sisyfuksen|sisyphuksen)\\s+myytti\\b",
+      "\\bsisyfos\\s+myytti\\b",
+      "\\bmyytti\\s+sisyf\\w*"
      ]
     },
     "et": {
@@ -1720,6 +3049,33 @@
       "\\brecuerdo\\s+de\\s+las\\s+cosas\\s+pasadas\\b"
      ]
     },
+    "de": {
+     "titre": "Auf der Suche nach der verlorenen Zeit",
+     "statut": "etabli",
+     "fautif": [
+      "\\bsuche\\s+nach\\s+(?:der\\s+)?verlorene[rn]\\s+zeiten\\b|\\bsuche\\s+nach\\s+verlorener\\s+zeit\\b",
+      "\\b(?:in\\s+)?erinnerung\\s+an\\s+(?:die\\s+)?vergangene(?:n)?\\s+(?:dinge|zeiten?)\\b",
+      "\\bsuche\\s+nach\\s+der\\s+(?:verschwundenen|vergangenen|verpassten)\\s+zeit\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Em Busca do Tempo Perdido",
+     "statut": "etabli",
+     "fautif": [
+      "\\b[ÀA]\\s+Procura\\s+do\\s+Tempo\\s+Perdido\\b",
+      "\\bNa\\s+Busca\\s+do\\s+Tempo\\s+Perdido\\b|\\b[ÀA]\\s+Busca\\s+do\\s+Tempo\\s+Perdido\\b",
+      "\\bLembran[cç]a\\s+das\\s+Coisas\\s+Passadas\\b|\\bRemembrance\\s+of\\s+Things\\s+Past\\b|\\bIn\\s+Search\\s+of\\s+Lost\\s+Time\\b"
+     ]
+    },
+    "ar": {
+     "titre": "البحث عن الزمن المفقود",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?بحث\\s*عن\\s*(?:ال)?وقت\\s*(?:ال)?(?:مفقود|ضائع)",
+      "(?:تذكر|ذكرى|ذكريات)\\s*(?:ال)?(?:أشياء|أمور)\\s*(?:ال)?(?:ماضية|ماضي)",
+      "(?:استعادة|استرجاع)\\s*(?:ال)?(?:زمن|وقت)\\s*(?:ال)?(?:ضائع|مفقود)"
+     ]
+    },
     "he": {
      "titre": "בעקבות הזמן האבוד",
      "statut": "etabli",
@@ -1728,6 +3084,15 @@
       "החיפוש\\s+אחר\\s+הזמן\\s+(האבוד|שאבד)",
       "בעקבות\\s+הזמן\\s+שאבד",
       "זיכרון\\s+הדברים\\s+שחלפו"
+     ]
+    },
+    "fi": {
+     "titre": "Kadonnutta aikaa etsimässä",
+     "statut": "etabli",
+     "fautif": [
+      "\\bkadonneen\\s+ajan\\s+(etsint|haku|etsimi)\\w*",
+      "\\bmenetetyn\\s+ajan\\s+\\w+",
+      "\\bhukatun\\s+ajan\\b"
      ]
     },
     "et": {
@@ -1766,6 +3131,31 @@
       "\\bP[eè]re\\s+Goriot\\b"
      ]
     },
+    "de": {
+     "titre": "Vater Goriot",
+     "statut": "etabli",
+     "fautif": [
+      "\\bder\\s+vater\\s+goriot\\b|\\bpapa\\s+goriot\\b",
+      "\\bpère\\s+goriot\\b|\\bpater\\s+goriot\\b|\\bder\\s+alte\\s+goriot\\b"
+     ]
+    },
+    "pt": {
+     "titre": "O Pai Goriot",
+     "statut": "etabli",
+     "fautif": [
+      "\\bPapai\\s+Goriot\\b",
+      "\\bO\\s+Velho\\s+Goriot\\b|\\bFather\\s+Goriot\\b",
+      "\\bP[eè]re\\s+Goriot\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "الأب غوريو",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:أبي|والد|عجوز|بابا)\\s*(?:غوريو|جوريو|غوريوت|جوريوت)",
+      "(?:الأب|أب)\\s*(?:جوريو|غوريوت|جوريوت|غوريوه)"
+     ]
+    },
     "he": {
      "titre": "אבא גוריו",
      "statut": "etabli",
@@ -1774,6 +3164,15 @@
       "אבי\\s+גוריו",
       "גוריוט",
       "הכומר\\s+גוריו"
+     ]
+    },
+    "fi": {
+     "titre": "Ukko Goriot",
+     "statut": "etabli",
+     "fautif": [
+      "\\bisä\\s+goriot\\b",
+      "\\bvanha\\s+goriot\\b",
+      "\\bgoriot[- ]?isä\\w*"
      ]
     },
     "et": {
@@ -1812,6 +3211,33 @@
       "\\bNuestra\\s+Se[ñn]ora\\s+de\\s+Paris\\b"
      ]
     },
+    "de": {
+     "titre": "Der Glöckner von Notre-Dame",
+     "statut": "etabli",
+     "fautif": [
+      "\\bunsere\\s+(?:liebe\\s+)?frau\\s+(?:von|in|zu)\\s+paris\\b",
+      "\\bder\\s+bucklige\\s+von\\s+notre-?\\s?dame\\b",
+      "\\bglöckner\\s+von\\s+notre\\s+dame\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Notre-Dame de Paris",
+     "statut": "original",
+     "fautif": [
+      "\\bNossa\\s+Senhora\\s+de\\s+Paris\\b",
+      "\\bNotre\\s+Dame\\s+de\\s+Paris\\b",
+      "\\bThe\\s+Hunchback\\s+of\\s+Notre[- ]Dame\\b"
+     ]
+    },
+    "ar": {
+     "titre": "أحدب نوتردام",
+     "statut": "etabli",
+     "fautif": [
+      "(?:سيدتنا|سيدة)\\s*(?:باريس|في\\s*باريس)",
+      "(?:كاتدرائية|كنيسة)\\s*(?:سيدتنا|العذراء)\\s*(?:في\\s*)?باريس[^.]{0,20}(?:رواية|هوغو)",
+      "نوتر\\s*دام\\s*(?:دي|دو)\\s*باري(?:س)?"
+     ]
+    },
     "he": {
      "titre": "הגיבן מנוטרדאם",
      "statut": "etabli",
@@ -1819,6 +3245,15 @@
       "גבירתנו\\s+(של|מ)\\s*פריז",
       "הגיבן\\s+של\\s+נוטרדאם",
       "הגבן\\s+מנוטרדאם"
+     ]
+    },
+    "fi": {
+     "titre": "Pariisin Notre-Dame",
+     "statut": "etabli",
+     "fautif": [
+      "\\bnotre[- ]dame\\s+de\\s+paris\\b",
+      "\\bkellonsoittaja\\b",
+      "\\bnotre-damen\\s+kyttyräselk\\w*"
      ]
     },
     "et": {
@@ -1856,12 +3291,48 @@
       "\\bThe\\s+Prince\\b"
      ]
     },
+    "de": {
+     "titre": "Der Fürst",
+     "statut": "etabli",
+     "fautif": [
+      "\\bder\\s+prinz\\b(?=[^.!?\\n]{0,60}machiavelli)|machiavelli[^.!?\\n]{0,60}\\bder\\s+prinz\\b",
+      "\\bmachiavellis?\\s+prinz\\b|\\bil\\s+principe\\s*[,(]?\\s*der\\s+prinz\\b",
+      "\\bder\\s+herrscher\\b(?=[^.!?\\n]{0,30}machiavelli)"
+     ]
+    },
+    "pt": {
+     "titre": "O Príncipe",
+     "statut": "etabli",
+     "fautif": [
+      "\\bO\\s+Principe\\b(?<!Príncipe)",
+      "\\bIl\\s+Principe\\b(?![^.!?\\n]{0,20}\\()",
+      "\\bThe\\s+Prince\\b[^.!?\\n]{0,40}\\bMaquiavel\\b"
+     ]
+    },
+    "ar": {
+     "titre": "الأمير",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:رئيس|حاكم|سلطان|ملك)\\s*(?:ل|لـ)?(?:ماكيافيلي|مكيافيلي|ميكافيلي|ماكيافيللي)",
+      "(?:ماكيافيلي|مكيافيلي|ميكافيلي)[^.]{0,15}«?(?:ال)?(?:حاكم|سلطان|رئيس|برنس)»?(?![؀-ۿ])",
+      "(?<![؀-ۿ])(?:ال)?برنس(?![؀-ۿ])",
+      "(?:إل\\s*برينسيبي|برينشيبي)"
+     ]
+    },
     "he": {
      "titre": "הנסיך",
      "statut": "etabli",
      "fautif": [
       "השליט\\s*\\(?\\s*מקיאוולי",
       "הפרינס|הפרינץ"
+     ]
+    },
+    "fi": {
+     "titre": "Ruhtinas",
+     "statut": "etabli",
+     "fautif": [
+      "\\bprinssi\\b.{0,30}machiavelli|machiavelli\\w*.{0,30}\\bprinssi\\b",
+      "\\bprinssi\\s*\\(\\s*machiavelli"
      ]
     },
     "et": {
@@ -1900,6 +3371,34 @@
       "\\bel\\s+anexo\\s+secreto\\b"
      ]
     },
+    "de": {
+     "titre": "Das Tagebuch der Anne Frank",
+     "statut": "etabli",
+     "fautif": [
+      "\\b(?:das\\s+)?journal\\s+(?:der|von)\\s+anne\\s+frank\\b|\\banne\\s+franks?\\s+journal\\b",
+      "\\bzeitung\\s+(?:der|von)\\s+anne\\s+frank\\b|\\bzeitschrift\\s+(?:der|von)\\s+anne\\s+frank\\b",
+      "\\btagebuch\\s+von\\s+anne\\s+frank\\b"
+     ]
+    },
+    "pt": {
+     "titre": "O Diário de Anne Frank",
+     "statut": "etabli",
+     "fautif": [
+      "\\bDi[aá]rio\\s+de\\s+Ana\\s+Frank\\b",
+      "\\bJornal\\s+de\\s+Anne\\s+Frank\\b",
+      "\\bA\\s+Casa\\s+dos\\s+Fundos\\b|\\bHet\\s+Achterhuis\\b(?![^.!?\\n]{0,20}\\()",
+      "\\bDi[aá]rio\\s+de\\s+uma\\s+Jovem\\b"
+     ]
+    },
+    "ar": {
+     "titre": "يوميات آن فرانك",
+     "statut": "etabli",
+     "fautif": [
+      "(?:مذكرات|مفكرة|دفتر|جريدة|صحيفة|سجل)\\s*(?:آن|آنا|أن|ان|آني)\\s*فرانك",
+      "يوميات\\s*(?:آنا|أن|ان|آني|أنا)\\s*فرانك",
+      "(?:آن|آنا)\\s*(?:فرنك|فرانكس|فرانكه)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "יומנה של אנה פרנק",
      "statut": "etabli",
@@ -1908,6 +3407,15 @@
       "אן\\s+פרנק",
       "הבית\\s+האחורי",
       "העיתון\\s+של\\s+אנה"
+     ]
+    },
+    "fi": {
+     "titre": "Nuoren tytön päiväkirja",
+     "statut": "etabli",
+     "fautif": [
+      "\\banne\\s+frankin\\s+(lehti|lokikirja|journaali|sanomalehti)\\w*",
+      "\\banne\\s+frank\\s+päiväkirja\\b",
+      "\\btakatalo\\b.{0,20}frank"
      ]
     },
     "et": {
@@ -1947,6 +3455,34 @@
       "\\bGilgam[eé]s\\b"
      ]
     },
+    "de": {
+     "titre": "Gilgamesch-Epos",
+     "statut": "etabli",
+     "fautif": [
+      "\\bgilgamesh\\b|\\bgilgamès\\b|\\bgilgamesch\\s+epos\\b",
+      "\\bepos\\s+(?:von|des)\\s+gilgamesch\\b|\\bepopöe\\s+(?:von|des)\\s+gilgamesch\\b",
+      "\\bgilgamesch-?\\s?epik\\b|\\bgilgamesch-?\\s?legende\\b"
+     ]
+    },
+    "pt": {
+     "titre": "A Epopeia de Gilgamesh",
+     "statut": "etabli",
+     "fautif": [
+      "\\bEpop[eé]ia\\s+de\\s+Gilgamesh\\b(?<!Epopeia de Gilgamesh)",
+      "\\b[ÉE]pico\\s+de\\s+Gilgamesh\\b",
+      "\\bEpic\\s+of\\s+Gilgamesh\\b",
+      "\\bGilgam[eé]s\\b"
+     ]
+    },
+    "ar": {
+     "titre": "ملحمة جلجامش",
+     "statut": "etabli",
+     "fautif": [
+      "(?:قصيدة|أسطورة|حكاية|قصة|سيرة)\\s*(?:جلجامش|كلكامش|غلغامش|جيلجامش)",
+      "ملحمة\\s*(?:غلغامش|جيلجامش|غيلغامش|جلجاميش)",
+      "(?:إبيك|ايبيك|ملحمه)\\s*(?:جلجامش|كلكامش)"
+     ]
+    },
     "he": {
      "titre": "עלילות גילגמש",
      "statut": "etabli",
@@ -1955,6 +3491,15 @@
       "אפוס\\s+גילגמש",
       "גלגמש",
       "גילגאמש"
+     ]
+    },
+    "fi": {
+     "titre": "Gilgameš-eepos",
+     "statut": "etabli",
+     "fautif": [
+      "\\bgilgamesh\\w*",
+      "\\bgilgameš\\s+eepos\\b",
+      "\\bgilgamešin\\s+epopea\\b"
      ]
     },
     "et": {
@@ -1991,6 +3536,34 @@
       "\\bThe\\s+Scream\\b"
      ]
     },
+    "de": {
+     "titre": "Der Schrei",
+     "statut": "etabli",
+     "fautif": [
+      "\\bder\\s+ruf\\b(?=[^.!?\\n]{0,60}munch)|munch[^.!?\\n]{0,60}\\bder\\s+ruf\\b",
+      "\\b(?:der\\s+aufschrei|das\\s+geschrei|das\\s+schreien)\\b(?=[^.!?\\n]{0,40}munch)",
+      "\\bthe\\s+scream\\b"
+     ]
+    },
+    "pt": {
+     "titre": "O Grito",
+     "statut": "etabli",
+     "fautif": [
+      "\\bO\\s+Berro\\b",
+      "\\bO\\s+Guincho\\b|\\bO\\s+Urro\\b",
+      "\\bThe\\s+Scream\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "الصرخة",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:صراخ|صريخ|زعيق|صيحة)\\s*(?:ل|لـ)?(?:مونك|مونش|مونخ)",
+      "(?:مونك|مونش|مونخ)[^.]{0,15}«?(?:ال)?(?:صراخ|صريخ|زعيق|صيحة|صرخه)»?(?![؀-ۿ])",
+      "لوحة\\s*«?(?:ال)?(?:صراخ|صيحة|زعيق)»?(?![؀-ۿ])",
+      "(?<![؀-ۿ])(?:ال)?سكريم(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "הצעקה",
      "statut": "etabli",
@@ -1999,6 +3572,15 @@
       "הצרחה",
       "הצווחה",
       "הסקריים"
+     ]
+    },
+    "fi": {
+     "titre": "Huuto",
+     "statut": "etabli",
+     "fautif": [
+      "\\bkirkuna\\b.{0,20}munch|munch\\w*.{0,20}\\bkirkuna\\b",
+      "\\bparkaisu\\b.{0,20}munch",
+      "\\bkiljahdus\\b.{0,20}munch"
      ]
     },
     "et": {
@@ -2039,6 +3621,34 @@
       "\\bimpresi[oó]n\\s+del\\s+sol\\s+naciente\\b|\\bimpresi[oó]n\\s+sol\\s+naciente\\b"
      ]
     },
+    "de": {
+     "titre": "Impression, Sonnenaufgang",
+     "statut": "etabli",
+     "fautif": [
+      "\\b(?:eindruck|abdruck|druck|aufdruck|ausdruck|prägung)\\s*[,:–-]?\\s+(?:sonnenaufgang|aufgehende\\s+sonne)\\b",
+      "\\bimpression\\s*[,:–-]?\\s+aufgehende\\s+sonne\\b",
+      "\\bsonnenaufgangs?-?\\s?(?:druck|abdruck|eindruck)\\b|\\bimpression,?\\s+sunrise\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Impressão, nascer do sol",
+     "statut": "etabli",
+     "fautif": [
+      "\\b(?:estampa|gravura|impresso|tiragem)\\s*,?\\s+(?:nascer\\s+do\\s+sol|sol\\s+nascente|amanhecer)\\b",
+      "\\bImpress[aã]o,?\\s+(?:sol\\s+nascente|amanhecer|alvorada|nascente\\s+do\\s+sol)\\b",
+      "\\bImpression,?\\s+Sunrise\\b"
+     ]
+    },
+    "ar": {
+     "titre": "انطباع، شروق الشمس",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:طباعة|طبعة|مطبوع|مطبوعة|نقش)[،,]?\\s*(?:ال)?(?:شروق|شمس)",
+      "(?:ال)?انطباع[،,]?\\s*(?:ال)?شمس\\s*(?:ال)?(?:مشرقة|ساطعة|صاعدة|طالعة)",
+      "(?:ال)?انطباع[،,]?\\s*(?:ال)?(?:مشرق|مشرقة)(?![؀-ۿ])",
+      "(?:إمبريشن|امبريشن|إمبرسيون)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "אימפרסיה, זריחה",
      "statut": "traduction_courante",
@@ -2046,6 +3656,15 @@
       "(הדפס(ה)?|תדפיס),?\\s+(שמש\\s+עולה|זריח)",
       "(רושם|התרשמות),?\\s+(שמש\\s+עולה|זריחה)",
       "אימפרסיה,?\\s+שמש\\s+עולה"
+     ]
+    },
+    "fi": {
+     "titre": "Impressio, auringonnousu",
+     "statut": "etabli",
+     "fautif": [
+      "\\bprintti\\w*,?\\s+(nouseva|auringon)",
+      "\\b(painatus|painokuva|vedos|jäljennös|vaikutelma|vaikutus)\\w*,?\\s+(nouseva|auringon)",
+      "\\bimpressio,?\\s+nouseva\\s+aurinko\\b"
      ]
     },
     "et": {
@@ -2083,6 +3702,32 @@
       "\\bMonna\\s+Lisa\\b"
      ]
     },
+    "de": {
+     "titre": "Mona Lisa",
+     "statut": "etabli",
+     "fautif": [
+      "\\b(?:die|la)\\s+joconde\\b|\\bjokonde\\b",
+      "\\bdie\\s+lächelnde\\b(?=[^.!?\\n]{0,30}leonardo)|\\bmonna\\s+lisa\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Mona Lisa",
+     "statut": "etabli",
+     "fautif": [
+      "\\bMonalisa\\b|\\bMona\\s+Liza\\b",
+      "\\b(?:A\\s+)?J[oa]conda\\b|\\bLa\\s+Joconde\\b",
+      "\\bA\\s+Gioconda\\b"
+     ]
+    },
+    "ar": {
+     "titre": "الموناليزا",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:جوكوند|جوكند|لاجوكوند)(?![؀-ۿاة])",
+      "مونا\\s*ليسا|موناليسا",
+      "(?:ال)?(?:مرحة|سعيدة|بشوشة)\\s*(?:ليوناردو|لدافنشي)"
+     ]
+    },
     "he": {
      "titre": "המונה ליזה",
      "statut": "etabli",
@@ -2091,6 +3736,16 @@
       "לה\\s+ג'וקונד",
       "ג'יוקונדה",
       "מונה\\s+ליסה"
+     ]
+    },
+    "fi": {
+     "titre": "Mona Lisa",
+     "statut": "etabli",
+     "fautif": [
+      "\\bjoconde\\b",
+      "\\bgioconda\\b",
+      "\\bmona\\s+liisa\\b",
+      "\\bjokondi\\b"
      ]
     },
     "et": {
@@ -2128,6 +3783,33 @@
       "\\bcielo\\s+estrellado\\b[^.!?\\n]{0,70}\\bVan\\s+Gogh\\b|\\bVan\\s+Gogh\\b[^.!?\\n]{0,70}\\bcielo\\s+estrellado\\b"
      ]
     },
+    "de": {
+     "titre": "Sternennacht",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdie\\s+sternenklare\\s+nacht\\b|\\bdie\\s+sternige\\s+nacht\\b|\\bdie\\s+sternhelle\\s+nacht\\b",
+      "\\bnacht\\s+der\\s+sterne\\b|\\bdie\\s+gestirnte\\s+nacht\\b",
+      "\\bstarry\\s+night\\b|\\bnuit\\s+étoilée\\b"
+     ]
+    },
+    "pt": {
+     "titre": "A Noite Estrelada",
+     "statut": "etabli",
+     "fautif": [
+      "\\bNoite\\s+Estelar\\b|\\bNoite\\s+de\\s+Estrelas\\b",
+      "\\bStarry\\s+Night\\b(?![^.!?\\n]{0,20}\\()",
+      "\\bDe\\s+sterrennacht\\b"
+     ]
+    },
+    "ar": {
+     "titre": "ليلة النجوم",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?ليلة\\s*(?:ال)?نجمية",
+      "(?:ال)?ليل\\s*(?:ال)?(?:نجمي|منجم)(?![؀-ۿ])",
+      "ستاري\\s*نايت"
+     ]
+    },
     "he": {
      "titre": "ליל כוכבים",
      "statut": "etabli",
@@ -2136,6 +3818,16 @@
       "לילה\\s+מכוכב",
       "הלילה\\s+הזרוע\\s+כוכבים",
       "ליל\\s+הכוכבים"
+     ]
+    },
+    "fi": {
+     "titre": "Tähtikirkas yö",
+     "statut": "etabli",
+     "fautif": [
+      "\\btähtiyö\\b",
+      "\\btähtinen\\s+yö\\b",
+      "\\btähtitaivas\\b.{0,15}van\\s+gogh",
+      "\\btähtikirkas\\s+ilta\\b"
      ]
     },
     "et": {
@@ -2171,6 +3863,28 @@
       "\\bGernika\\b[^.!?\\n]{0,70}\\b(?:Picasso|cuadro|lienzo|pintura|mural)\\b|\\b(?:Picasso|cuadro|lienzo|pintura|mural)\\b[^.!?\\n]{0,70}\\bGernika\\b"
      ]
     },
+    "de": {
+     "titre": "Guernica",
+     "statut": "original",
+     "fautif": [
+      "\\bgernika\\b(?=[^.!?\\n]{0,40}(?:picasso|gemälde|bild))"
+     ]
+    },
+    "pt": {
+     "titre": "Guernica",
+     "statut": "original",
+     "fautif": [
+      "\\bGu[eé]rnica\\b(?<!Guernica)",
+      "\\bGernika\\b[^.!?\\n]{0,40}\\bPicasso\\b"
+     ]
+    },
+    "ar": {
+     "titre": "غيرنيكا",
+     "statut": "etabli",
+     "fautif": [
+      "(?:جيرنيكا|غرنيكا|غيرنكا|جورنيكا|غويرنيكا)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "גרניקה",
      "statut": "etabli",
@@ -2179,6 +3893,11 @@
       "גרניקא",
       "גוורניקה"
      ]
+    },
+    "fi": {
+     "titre": "Guernica",
+     "statut": "etabli",
+     "fautif": []
     },
     "et": {
      "titre": "Guernica",
@@ -2214,6 +3933,33 @@
       "\\bla\\s+libertad\\s+que\\s+gu[ií]a\\s+al\\s+pueblo\\b"
      ]
     },
+    "de": {
+     "titre": "Die Freiheit führt das Volk",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdie\\s+freiheit\\s+(?:leitet|lenkt|führend|anführend|geleitet)\\s+das\\s+volk\\b",
+      "\\bfreiheit,?\\s+die\\s+das\\s+volk\\s+(?:führt|leitet|anführt)\\b",
+      "\\bdie\\s+freiheit\\s+führt\\s+die\\s+(?:leute|menschen|massen)\\b|\\bfreiheit\\s+auf\\s+den\\s+barrikaden\\b"
+     ]
+    },
+    "pt": {
+     "titre": "A Liberdade Guiando o Povo",
+     "statut": "etabli",
+     "fautif": [
+      "\\bLiberdade\\s+(?:Liderando|Dirigindo|Conduzindo)\\s+o\\s+Povo\\b",
+      "\\bLiberdade\\s+Conduz\\s+o\\s+Povo\\b|\\bLiberdade\\s+Guia\\s+o\\s+Povo\\b",
+      "\\bLiberty\\s+Leading\\s+the\\s+People\\b"
+     ]
+    },
+    "ar": {
+     "titre": "الحرية تقود الشعب",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?حرية\\s*(?:ترشد|توجه|تهدي|تهدى)\\s*(?:ال)?(?:شعب|ناس)",
+      "(?:ال)?حرية\\s*تقود\\s*(?:ال)?(?:ناس|جماهير|جمهور|قوم)(?![؀-ۿ])",
+      "(?:ال)?حرية\\s*(?:ال)?(?:مرشدة|موجهة|قائدة)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "החירות מובילה את העם",
      "statut": "etabli",
@@ -2221,6 +3967,16 @@
       "החופש\\s+מוביל",
       "החירות\\s+(מנחה|מדריכה)\\s+את\\s+העם",
       "חופש\\s+מוביל\\s+את\\s+(ה)?(עם|אנשים)"
+     ]
+    },
+    "fi": {
+     "titre": "Vapaus johtaa kansaa",
+     "statut": "etabli",
+     "fautif": [
+      "\\bvapaus\\s+opasta\\w*\\s+kansaa\\b",
+      "\\bvapaus\\s+ohja\\w*\\s+kansaa\\b",
+      "\\bkansaa\\s+johtava\\s+vapaus\\b",
+      "\\bvapaus\\s+johtamassa\\b"
      ]
     },
     "et": {
@@ -2258,6 +4014,32 @@
       "\\bla\\s+creaci[oó]n\\s+del\\s+hombre\\b[^.!?\\n]{0,70}\\b(?:Miguel\\s+[AÁ]ngel|Sixtina)\\b|\\b(?:Miguel\\s+[AÁ]ngel|Sixtina)\\b[^.!?\\n]{0,70}\\bla\\s+creaci[oó]n\\s+del\\s+hombre\\b"
      ]
     },
+    "de": {
+     "titre": "Die Erschaffung Adams",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdie\\s+schöpfung\\s+(?:von\\s+)?adams?\\b",
+      "\\bdie\\s+erschaffung\\s+von\\s+adam\\b|\\bdie\\s+kreation\\s+adams?\\b",
+      "\\badams\\s+erschaffung\\b"
+     ]
+    },
+    "pt": {
+     "titre": "A Criação de Adão",
+     "statut": "etabli",
+     "fautif": [
+      "\\bCria[cç][aã]o\\s+de\\s+Adam\\b|\\bCria[cç][aã]o\\s+do\\s+Ad[aã]o\\b",
+      "\\bCreazione\\s+di\\s+Adamo\\b|\\bThe\\s+Creation\\s+of\\s+Adam\\b"
+     ]
+    },
+    "ar": {
+     "titre": "خلق آدم",
+     "statut": "etabli",
+     "fautif": [
+      "(?:إبداع|صنع|إنشاء|تكوين|صناعة)\\s*آدم",
+      "(?:ال)?خليقة\\s*(?:ل|لـ)?آدم",
+      "خلق\\s*(?:أدم|ادم|آدام)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "בריאת אדם",
      "statut": "etabli",
@@ -2265,6 +4047,16 @@
       "יצירת\\s+אדם",
       "היצירה\\s+של\\s+אדם",
       "בריאתו\\s+של\\s+אדם"
+     ]
+    },
+    "fi": {
+     "titre": "Aadamin luominen",
+     "statut": "etabli",
+     "fautif": [
+      "\\badamin\\s+luomi\\w*",
+      "\\baadamin\\s+luonti\\b",
+      "\\badamin\\s+luonti\\b",
+      "\\baatamin\\s+luomi\\w*"
      ]
     },
     "et": {
@@ -2302,6 +4094,32 @@
       "\\bp[aá]jaros\\s+nocturnos\\b[^.!?\\n]{0,70}\\bHopper\\b|\\bHopper\\b[^.!?\\n]{0,70}\\bp[aá]jaros\\s+nocturnos\\b"
      ]
     },
+    "de": {
+     "titre": "Nighthawks",
+     "statut": "original",
+     "fautif": [
+      "\\bnachtfalken\\b|\\bdie\\s+nachthabichte\\b|\\bnachtgreifvögel\\b",
+      "\\bnight\\s+hawks\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Nighthawks",
+     "statut": "original",
+     "fautif": [
+      "\\b(?:Falc[oõ]es|Gavi[oõ]es)\\s+da\\s+Noite\\b",
+      "\\bAves\\s+Noturnas\\b[^.!?\\n]{0,40}\\bHopper\\b",
+      "\\bNight\\s+Hawks\\b"
+     ]
+    },
+    "ar": {
+     "titre": "صقور الليل (Nighthawks)",
+     "statut": "traduction_courante",
+     "fautif": [
+      "(?:ال)?صقور\\s*(?:ال)?ليلية",
+      "(?:ال)?(?:طيور|نسور|بوم|بومات)\\s*(?:ال)?ليل(?![؀-ۿ])",
+      "نايت\\s*هوكس|نايتهوكس"
+     ]
+    },
     "he": {
      "titre": "ציפורי לילה",
      "statut": "traduction_courante",
@@ -2310,6 +4128,15 @@
       "עופות\\s+(ה)?לילה",
       "ינשופי\\s+לילה",
       "נייט\\s?הוקס"
+     ]
+    },
+    "fi": {
+     "titre": "Nighthawks",
+     "statut": "original",
+     "fautif": [
+      "\\byöhauk\\w*",
+      "\\byökyöpel\\w*",
+      "\\byölinnut\\b"
      ]
     },
     "et": {
@@ -2348,6 +4175,32 @@
       "\\bse[ñn]oritas\\s+de\\s+Aviny[oó]\\b"
      ]
     },
+    "de": {
+     "titre": "Les Demoiselles d'Avignon",
+     "statut": "original",
+     "fautif": [
+      "\\bdie\\s+(?:fräulein|mädchen|damen|jungfrauen|fräuleins|mädels)\\s+(?:von|aus)\\s+avignon\\b",
+      "\\bdie\\s+demoiselles\\s+(?:von|aus)\\s+avignon\\b|\\bdemoiselles\\s+von\\s+avignon\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Les Demoiselles d'Avignon",
+     "statut": "original",
+     "fautif": [
+      "\\bAs\\s+Donzelas\\s+de\\s+Avi(?:gnon|nh[aã]o)\\b",
+      "\\bAs\\s+Senhoritas\\s+de\\s+Avinh[aã]o\\b|\\bAs\\s+Senhoras\\s+de\\s+Avi(?:gnon|nh[aã]o)\\b",
+      "\\bAs\\s+(?:Mo[cç]as|Meninas|Mocinhas)\\s+de\\s+Avi(?:gnon|nh[aã]o)\\b"
+     ]
+    },
+    "ar": {
+     "titre": "آنسات أفينيون",
+     "statut": "etabli",
+     "fautif": [
+      "(?:سيدات|فتيات|بنات|عذارى|نساء|صبايا)\\s*(?:أفينيون|افينيون|أفيجنون|أفينون)",
+      "آنسات\\s*(?:أفيجنون|افيغنون|أفينون|أفيغنيون)",
+      "ليه\\s*دوموازيل"
+     ]
+    },
     "he": {
      "titre": "העלמות מאביניון",
      "statut": "etabli",
@@ -2356,6 +4209,16 @@
       "הנערות\\s+מאביניון",
       "העלמות\\s+של\\s+אביניון",
       "אבינון"
+     ]
+    },
+    "fi": {
+     "titre": "Avignonin naiset",
+     "statut": "etabli",
+     "fautif": [
+      "\\bavignonin\\s+neido\\w*",
+      "\\bavignonin\\s+neitos\\w*",
+      "\\bavignonin\\s+tytöt\\b",
+      "\\bavignonin\\s+neidit\\b"
      ]
     },
     "et": {
@@ -2391,6 +4254,33 @@
       "\\bla\\s+permanencia\\s+de\\s+la\\s+memoria\\b"
      ]
     },
+    "de": {
+     "titre": "Die Beständigkeit der Erinnerung",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdie\\s+(?:persistenz|beharrlichkeit|ausdauer|hartnäckigkeit|fortdauer)\\s+der\\s+erinnerung\\b",
+      "\\bbeständigkeit\\s+des\\s+gedächtnisses\\b|\\bbeständigkeit\\s+der\\s+erinnerungen\\b",
+      "\\bdie\\s+zerrinnende\\s+zeit\\b|\\bdie\\s+weichen\\s+uhren\\b(?=[^.!?\\n]{0,10}[,.])"
+     ]
+    },
+    "pt": {
+     "titre": "A Persistência da Memória",
+     "statut": "etabli",
+     "fautif": [
+      "\\bPersist[eê]ncia\\s+de\\s+Mem[oó]ria\\b",
+      "\\bPersist[eê]ncia\\s+da\\s+Lembran[cç]a\\b|\\bPermanência\\s+da\\s+Mem[oó]ria\\b",
+      "\\bThe\\s+Persistence\\s+of\\s+Memory\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "إصرار الذاكرة",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ثبات|استمرار|استمرارية|مثابرة|دوام|بقاء|تواصل)\\s*(?:ال)?ذاكرة",
+      "(?:ال)?ذاكرة\\s*(?:ال)?(?:مستمرة|ثابتة|دائمة|مثابرة)(?![؀-ۿ])",
+      "إصرار\\s*(?:ال)?(?:ذكرى|ذكريات|تذكر)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "התמדת הזיכרון",
      "statut": "etabli",
@@ -2399,6 +4289,14 @@
       "התמשכות\\s+הזיכרון",
       "הזיכרון\\s+המתמיד",
       "הישארות\\s+הזיכרון"
+     ]
+    },
+    "fi": {
+     "titre": "Muiston pysyvyys",
+     "statut": "traduction_courante",
+     "fautif": [
+      "\\bmuisti[n]?\\s+(sinnikkyy|sitkey|jatkuvuu|säilyvyy)\\w*",
+      "\\bmuiston\\s+(sinnikkyy|sitkey|jatkuvuu|säilyvyy)\\w*"
      ]
     },
     "et": {
@@ -2437,6 +4335,33 @@
       "\\bla\\s+vigilancia\\s+nocturna\\b"
      ]
     },
+    "de": {
+     "titre": "Die Nachtwache",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdie\\s+nachtrunde\\b|\\bder\\s+nachtrundgang\\b",
+      "\\bdie\\s+nachtpatrouille\\b|\\bnächtliche\\s+runde\\b|\\bdie\\s+nachtstreife\\b",
+      "\\bnight\\s+watch\\b|\\bronde\\s+de\\s+nuit\\b"
+     ]
+    },
+    "pt": {
+     "titre": "A Ronda Noturna",
+     "statut": "etabli",
+     "fautif": [
+      "\\bA\\s+Ronda\\s+da\\s+Noite\\b",
+      "\\b(?:A\\s+)?(?:Vig[ií]lia|Guarda|Patrulha)\\s+Noturna\\b[^.!?\\n]{0,40}\\bRembrandt\\b|\\bRembrandt\\b[^.!?\\n]{0,40}\\b(?:Vig[ií]lia|Guarda|Patrulha)\\s+Noturna\\b",
+      "\\bThe\\s+Night\\s+Watch\\b|\\bDe\\s+Nachtwacht\\b"
+     ]
+    },
+    "ar": {
+     "titre": "الحراسة الليلية",
+     "statut": "etabli",
+     "fautif": [
+      "(?:جولة|دورية|رقصة|حلقة)\\s*(?:ال)?(?:ليل|ليلية)(?![؀-ۿ])",
+      "(?:ال)?(?:ساعة|مراقبة)\\s*(?:ال)?ليل(?:ية)?[^.]{0,15}(?:رامبرانت|رمبرانت|ريمبرانت)",
+      "(?:رامبرانت|رمبرانت|ريمبرانت)[^.]{0,20}(?:جولة|دورية|رقصة|ساعة)\\s*(?:ال)?ليل"
+     ]
+    },
     "he": {
      "titre": "משמר הלילה",
      "statut": "etabli",
@@ -2445,6 +4370,16 @@
       "הסיבוב\\s+הלילי",
       "משמרת\\s+(ה)?לילה",
       "הסיור\\s+הלילי"
+     ]
+    },
+    "fi": {
+     "titre": "Yövartio",
+     "statut": "etabli",
+     "fautif": [
+      "\\byökierros\\b",
+      "\\byövartija\\w*\\b.{0,20}rembrandt|rembrandt\\w*.{0,20}yövartija\\w*",
+      "\\byöpartio\\b",
+      "\\byön\\s+kierros\\b"
      ]
     },
     "et": {
@@ -2482,6 +4417,31 @@
       "\\bAfrodita\\s+de\\s+Milo\\b"
      ]
     },
+    "de": {
+     "titre": "Venus von Milo",
+     "statut": "etabli",
+     "fautif": [
+      "\\bvenus\\s+(?:de|aus|vom|des)\\s+milo\\b",
+      "\\bmilo-?venus\\b|\\bvenus\\s+milo\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Vênus de Milo",
+     "statut": "etabli",
+     "fautif": [
+      "\\bV[eé]nus\\s+de\\s+Milo\\b(?<!Vênus de Milo)",
+      "\\bV[eê]nus\\s+de\\s+Milos\\b|\\bVenus\\s+of\\s+Milo\\b"
+     ]
+    },
+    "ar": {
+     "titre": "فينوس دي ميلو",
+     "statut": "etabli",
+     "fautif": [
+      "فينوس\\s*(?:من|دو|ديه|دى)\\s*ميلو",
+      "(?:الزهرة|فينوس)\\s*(?:ال)?(?:مايلو|ميلوس)(?![؀-ۿ])",
+      "(?:ال)?زهرة\\s*(?:دي\\s*)?ميلو(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "ונוס ממילו",
      "statut": "etabli",
@@ -2489,6 +4449,15 @@
       "ונוס\\s+דה\\s+מילו",
       "ונוס\\s+של\\s+מילו",
       "ונוס\\s+מילו"
+     ]
+    },
+    "fi": {
+     "titre": "Milon Venus",
+     "statut": "etabli",
+     "fautif": [
+      "\\bvenus\\s+de\\s+milo\\b",
+      "\\bmilos\\w*\\s+venus\\b",
+      "\\bvenus\\s+milo\\b"
      ]
     },
     "et": {
@@ -2528,6 +4497,35 @@
       "\\balmuerzo\\s+campestre\\b"
      ]
     },
+    "de": {
+     "titre": "Das Frühstück im Grünen",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdas\\s+mittagessen\\s+(?:im|auf\\s+dem)\\s+(?:gras|grünen|rasen)\\b",
+      "\\bdas\\s+frühstück\\s+(?:auf\\s+dem|im)\\s+(?:gras|rasen)\\b",
+      "\\bdas\\s+picknick\\s+im\\s+grünen\\b|\\bpicknick\\s+auf\\s+dem\\s+gras\\b|\\bluncheon\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Almoço na Relva",
+     "statut": "etabli",
+     "fautif": [
+      "\\bAlmo[cç]o\\s+sobre\\s+a\\s+(?:Relva|Grama)\\b",
+      "\\bAlmo[cç]o\\s+na\\s+Grama\\b|\\bPiquenique\\s+na\\s+Relva\\b",
+      "\\bCaf[eé]\\s+da\\s+Manh[aã]\\s+(?:na|sobre\\s+a)\\s+(?:Relva|Grama)\\b",
+      "\\bLuncheon\\s+on\\s+the\\s+Grass\\b"
+     ]
+    },
+    "ar": {
+     "titre": "الغداء على العشب",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:فطور|إفطار|وجبة)\\s*على\\s*(?:ال)?(?:عشب|حشيش)",
+      "(?:ال)?غداء\\s*(?:على|في|فوق)\\s*(?:ال)?(?:حشيش|حشائش|مرج|أعشاب|عشبة)(?![؀-ۿ])",
+      "(?:ال)?نزهة\\s*على\\s*(?:ال)?عشب",
+      "(?:لو\\s*ديجونيه|ديجونيه\\s*سور)"
+     ]
+    },
     "he": {
      "titre": "ארוחת צהריים על הדשא",
      "statut": "etabli",
@@ -2536,6 +4534,16 @@
       "פיקניק\\s+על\\s+הדשא",
       "ארוחת\\s+צהריים\\s+בדשא",
       "ארוחה\\s+על\\s+העשב"
+     ]
+    },
+    "fi": {
+     "titre": "Aamiainen ruohikolla",
+     "statut": "etabli",
+     "fautif": [
+      "\\blounas\\s+(nurmikolla|ruohikolla|ruohossa|nurmella)\\b",
+      "\\baamiainen\\s+(nurmikolla|nurmella|ruohossa)\\b",
+      "\\bpiknik\\w*.{0,15}manet",
+      "\\ble\\s+déjeuner\\s+sur\\s+l'herbe\\b"
      ]
     },
     "et": {
@@ -2573,13 +4581,45 @@
       "\\bCitizen\\s+Kane\\b"
      ]
     },
+    "de": {
+     "titre": "Citizen Kane",
+     "statut": "original",
+     "fautif": [
+      "\\bbürger\\s+kane\\b|\\bder\\s+bürger\\s+kane\\b|\\bstaatsbürger\\s+kane\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Cidadão Kane",
+     "statut": "etabli",
+     "fautif": [
+      "\\bCidadao\\s+Kane\\b",
+      "\\bCitizen\\s+Kane\\b(?![^.!?\\n]{0,20}\\()",
+      "\\bO\\s+Cidad[aã]o\\s+Kane\\b"
+     ]
+    },
+    "ar": {
+     "titre": "المواطن كين",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?مواطن\\s*(?:كاين|كاني|قاين|كان|كيين)(?![؀-ۿ])",
+      "(?:سيتيزن|سيتزن)\\s*(?:كين|كاين)",
+      "(?:ال)?(?:مدني|ساكن|شخص)\\s*كين(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "האזרח קיין",
      "statut": "etabli",
      "fautif": [
       "סיטיזן\\s+קיין",
-      "אזרח\\s+קיין(?![א-ת])",
       "האזרח\\s+(קאן|קן)(?![א-ת])"
+     ]
+    },
+    "fi": {
+     "titre": "Citizen Kane",
+     "statut": "etabli",
+     "fautif": [
+      "\\bkansalainen\\s+kane\\b",
+      "\\bkanen\\s+kansalainen\\b"
      ]
     },
     "et": {
@@ -2619,6 +4659,34 @@
       "\\b2001:?\\s+odisea\\s+del\\s+espacio\\b"
      ]
     },
+    "de": {
+     "titre": "2001: Odyssee im Weltraum",
+     "statut": "etabli",
+     "fautif": [
+      "\\b2001[,:]?\\s+(?:eine\\s+)?(?:weltraum-?odyssee|odyssee\\s+(?:des|im)\\s+(?:raums|raumes|alls|weltalls))\\b",
+      "\\b2001,?\\s+(?:die\\s+)?odyssee\\s+des\\s+weltraums\\b|\\b2001,?\\s+die\\s+weltraumodyssee\\b",
+      "\\b2001,?\\s+(?:eine\\s+)?raumodyssee\\b"
+     ]
+    },
+    "pt": {
+     "titre": "2001: Uma Odisseia no Espaço",
+     "statut": "etabli",
+     "fautif": [
+      "\\b2001,\\s+(?:Uma\\s+)?Odiss[eé]ia\\s+(?:no|do)\\s+Espa[cç]o\\b",
+      "\\b2001:?\\s+(?:Uma\\s+)?Odiss[eé]ia\\s+(?:do\\s+Espa[cç]o|Espacial)\\b|\\bOdiss[eé]ia\\s+no\\s+Espa[cç]o\\b(?<!Odisseia no Espaço)",
+      "\\b2001:?\\s+A\\s+Space\\s+Odyssey\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "2001: أوديسة الفضاء",
+     "statut": "etabli",
+     "fautif": [
+      "2001[:،,]?\\s*(?:ال)?(?:رحلة|ملحمة|مغامرة|أوديسي|اوديسي)\\s*(?:ال)?(?:فضاء|فضائية)",
+      "(?:ال)?أوديس(?:ة|ا)\\s*(?:ال)?(?:مكانية|مساحة|مساحية)",
+      "٢٠٠١",
+      "(?:ال)?(?:مساحة|مسافة|فراغ)\\s*(?:ال)?أوديس"
+     ]
+    },
     "he": {
      "titre": "2001: אודיסיאה בחלל",
      "statut": "etabli",
@@ -2627,6 +4695,16 @@
       "אודיסאת\\s+חלל|אודיסיאת\\s+החלל",
       "2001:?\\s*מסע\\s+בחלל",
       "אודיסאה\\s+בחלל"
+     ]
+    },
+    "fi": {
+     "titre": "2001: Avaruusseikkailu",
+     "statut": "etabli",
+     "fautif": [
+      "\\b2001,?\\s+avaruuden\\s+odysseia\\b",
+      "\\bavaruusodysseia\\b",
+      "\\bavaruuden\\s+odyssei\\w*",
+      "\\b2001:\\s*avaruus\\s+odysseia\\b"
      ]
     },
     "et": {
@@ -2664,6 +4742,32 @@
       "\\bPsychose\\b"
      ]
     },
+    "de": {
+     "titre": "Psycho",
+     "statut": "etabli",
+     "fautif": [
+      "\\bpsychose\\b(?=[^.!?\\n]{0,60}(?:hitchcock|bates|dusche|motel|1960))|(?:hitchcock|bates\\s+motel)[^.!?\\n]{0,60}\\bpsychose\\b",
+      "\\bder\\s+psychopath\\b(?=[^.!?\\n]{0,40}hitchcock)|\\bpsychotisch\\b(?=[^.!?\\n]{0,30}hitchcock)"
+     ]
+    },
+    "pt": {
+     "titre": "Psicose",
+     "statut": "etabli",
+     "fautif": [
+      "\\bPsycho\\b(?![^.!?\\n]{0,20}\\()",
+      "\\bPsicopata\\b[^.!?\\n]{0,40}\\bHitchcock\\b|\\bPsic[oó]tico\\b[^.!?\\n]{0,40}\\bHitchcock\\b"
+     ]
+    },
+    "ar": {
+     "titre": "سايكو",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:ذهان|جنون|هوس|مختل)(?![؀-ۿ])[^.]{0,20}(?:هيتشكوك|هتشكوك|1960)",
+      "(?:هيتشكوك|هتشكوك)[^.]{0,20}(?:ال)?(?:ذهان|جنون|هوس|مختل|بسيكو|بسيكوز)",
+      "(?:ال)?مريض\\s*(?:ال)?نفسي\\s*\\(?\\s*(?:فيلم|1960)",
+      "(?:بسيكو|بسيكوز|بسايكو)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "פסיכו",
      "statut": "etabli",
@@ -2671,6 +4775,15 @@
       "פסיכוז[הת]",
       "פסיכולוגי[הת]\\s*\\(?\\s*היצ'קוק|\\*פסיכולוגיה\\*",
       "פסיכוטי"
+     ]
+    },
+    "fi": {
+     "titre": "Psyko",
+     "statut": "etabli",
+     "fautif": [
+      "\\bpsykoosi\\b.{0,20}hitchcock|hitchcock\\w*.{0,20}\\bpsykoosi\\b",
+      "\\bpsychose\\b",
+      "\\bpsycho\\b.{0,10}hitchcock"
      ]
     },
     "et": {
@@ -2709,6 +4822,35 @@
       "\\bsudores\\s+fr[ií]os\\b"
      ]
     },
+    "de": {
+     "titre": "Vertigo – Aus dem Reich der Toten",
+     "statut": "etabli",
+     "fautif": [
+      "\\bkalter\\s+schweiß\\b(?=[^.!?\\n]{0,60}hitchcock)|hitchcock[^.!?\\n]{0,60}\\bkalter\\s+schweiß\\b|\\bkalte\\s+schweißausbrüche\\b",
+      "\\b(?:der\\s+)?schwindel\\b(?=[^.!?\\n]{0,40}(?:hitchcock|1958|james\\s+stewart|kim\\s+novak))",
+      "\\bsueurs\\s+froides\\b|\\bhöhenangst\\b(?=[^.!?\\n]{0,30}hitchcock\\b)"
+     ]
+    },
+    "pt": {
+     "titre": "Um Corpo que Cai",
+     "statut": "etabli",
+     "fautif": [
+      "\\bVertigem\\b[^.!?\\n]{0,60}\\bHitchcock\\b|\\bHitchcock\\b[^.!?\\n]{0,60}\\bVertigem\\b",
+      "\\bSuores\\s+Frios\\b",
+      "\\bA\\s+Mulher\\s+que\\s+Viveu\\s+Duas\\s+Vezes\\b",
+      "\\bVertigo\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "فيرتيغو",
+     "statut": "etabli",
+     "fautif": [
+      "(?:عرق|تعرق)\\s*(?:ال)?بارد",
+      "(?:ال)?(?:دوار|دوخة)\\s*\\(?\\s*(?:فيلم|1958|هيتشكوك)",
+      "(?:هيتشكوك|هتشكوك)[^.]{0,20}«?(?:ال)?(?:دوار|دوخة|عرق\\s*بارد)»?(?![؀-ۿ])",
+      "(?:ال)?(?:دوار|دوخة)(?![؀-ۿ])[^.]{0,20}(?:هيتشكوك|هتشكوك|1958)"
+     ]
+    },
     "he": {
      "titre": "ורטיגו",
      "statut": "etabli",
@@ -2716,6 +4858,15 @@
       "סחרחור(ת|ות)",
       "זיעה\\s+קרה",
       "פחד\\s+גבהים\\s*\\(?\\s*היצ'קוק"
+     ]
+    },
+    "fi": {
+     "titre": "Vertigo – punainen kyynel",
+     "statut": "etabli",
+     "fautif": [
+      "\\bkylmä\\w*\\s+hi(ki|et)\\b.{0,20}hitchcock|hitchcock\\w*.{0,20}\\bkylmä\\w*\\s+hi(ki|et)\\b",
+      "\\bsueurs\\s+froides\\b",
+      "\\bhuimaus\\b.{0,20}hitchcock"
      ]
     },
     "et": {
@@ -2755,6 +4906,33 @@
       "\\bRear\\s+Window\\b"
      ]
     },
+    "de": {
+     "titre": "Das Fenster zum Hof",
+     "statut": "etabli",
+     "fautif": [
+      "\\bfenster\\s+(?:auf|über|in)\\s+den\\s+(?:innen)?hof\\b|\\bfenster\\s+zum\\s+innenhof\\b",
+      "\\bdas\\s+(?:heckfenster|rückfenster|hinterfenster)\\b|\\bhinteres\\s+fenster\\b",
+      "\\bfenster\\s+zum\\s+(?:gericht|gerichtshof|gerichtssaal)\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Janela Indiscreta",
+     "statut": "etabli",
+     "fautif": [
+      "\\bJanela\\s+(?:para\\s+o\\s+P[aá]tio|Traseira|dos\\s+Fundos|de\\s+Tr[aá]s)\\b",
+      "\\bRear\\s+Window\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "النافذة الخلفية",
+     "statut": "etabli",
+     "fautif": [
+      "(?:نافذة|شباك)\\s*(?:على|إلى|تطل\\s*على)\\s*(?:ال)?(?:فناء|ساحة|حديقة|محكمة|ملعب)",
+      "(?:نافذة|شباك)\\s*(?:ال)?(?:محكمة|ملعب|فناء)(?![؀-ۿ])",
+      "(?:ال)?شباك\\s*(?:ال)?خلفي(?![؀-ۿ])",
+      "(?:ال)?نافذة\\s*(?:ال)?(?:خلف|مؤخرة|ورائية)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "חלון אחורי",
      "statut": "etabli",
@@ -2762,6 +4940,16 @@
       "החלון\\s+האחורי",
       "חלון\\s+(לחצר|אל\\s+החצר|על\\s+החצר)",
       "החלון\\s+מאחור"
+     ]
+    },
+    "fi": {
+     "titre": "Takaikkuna",
+     "statut": "etabli",
+     "fautif": [
+      "\\bikkuna\\s+pihalle\\b",
+      "\\bikkuna\\s+(sisä)?pihaan\\b",
+      "\\bpihanäkymä\\w*",
+      "\\bfenêtre\\s+sur\\s+cour\\b"
      ]
     },
     "et": {
@@ -2799,6 +4987,33 @@
       "\\bRope\\b[^.!?\\n]{0,70}\\bHitchcock\\b|\\bHitchcock\\b[^.!?\\n]{0,70}\\bRope\\b"
      ]
     },
+    "de": {
+     "titre": "Cocktail für eine Leiche",
+     "statut": "etabli",
+     "fautif": [
+      "\\bdas\\s+seil\\b(?=[^.!?\\n]{0,60}hitchcock)|hitchcock[^.!?\\n]{0,60}\\bdas\\s+seil\\b",
+      "\\b(?:der\\s+strick|die\\s+schnur|die\\s+kordel|das\\s+tau)\\b(?=[^.!?\\n]{0,60}hitchcock)",
+      "\\bdie\\s+saite\\b(?=[^.!?\\n]{0,40}hitchcock)|\\bla\\s+corde\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Festim Diabólico",
+     "statut": "etabli",
+     "fautif": [
+      "\\bA\\s+Corda\\b[^.!?\\n]{0,60}\\bHitchcock\\b|\\bHitchcock\\b[^.!?\\n]{0,60}\\bA\\s+Corda\\b",
+      "\\bFestim\\s+Diab[oó]lico\\b(?<!Festim Diabólico)",
+      "\\bRope\\b[^.!?\\n]{0,40}\\bHitchcock\\b"
+     ]
+    },
+    "ar": {
+     "titre": "الحبل",
+     "statut": "etabli",
+     "fautif": [
+      "(?:ال)?(?:حبال|وتر|رباط|سلك|جديلة)\\s*\\(?\\s*(?:فيلم|1948|هيتشكوك)",
+      "(?:هيتشكوك|هتشكوك)[^.]{0,20}«?(?:ال)?(?:حبال|وتر|رباط|سلك)»?(?![؀-ۿ])",
+      "(?:روب|روپ)(?![؀-ۿ])\\s*\\(?(?:فيلم|1948)"
+     ]
+    },
     "he": {
      "titre": "חבל",
      "statut": "etabli",
@@ -2806,6 +5021,15 @@
       "הכבל\\s*\\(?\\s*היצ'קוק|\\*הכבל\\*",
       "חבל\\s+התלייה",
       "\\*(ה)?מיתר\\*|\\*(ה)?חוט\\*"
+     ]
+    },
+    "fi": {
+     "titre": "Köysi",
+     "statut": "etabli",
+     "fautif": [
+      "\\bnaru\\b.{0,20}hitchcock|hitchcock\\w*.{0,20}\\bnaru\\b",
+      "\\bnuora\\b.{0,20}hitchcock",
+      "\\bla\\s+corde\\b"
      ]
     },
     "et": {
@@ -2844,6 +5068,33 @@
       "\\bla\\s+coronaci[oó]n\\s+de\\s+la\\s+primavera\\b|\\bel\\s+sacrificio\\s+de\\s+la\\s+primavera\\b"
      ]
     },
+    "de": {
+     "titre": "Le Sacre du printemps",
+     "statut": "original",
+     "fautif": [
+      "\\bdie\\s+(?:weihe|krönung|heiligung|salbung)\\s+des\\s+frühlings\\b",
+      "\\bder\\s+heilige\\s+frühling\\b|\\bfrühlingsweihe\\b",
+      "\\bder\\s+frühlingsritus\\b|\\brite\\s+of\\s+spring\\b"
+     ]
+    },
+    "pt": {
+     "titre": "A Sagração da Primavera",
+     "statut": "etabli",
+     "fautif": [
+      "\\bO\\s+Rito\\s+da\\s+Primavera\\b",
+      "\\bA\\s+Consagra[cç][aã]o\\s+da\\s+Primavera\\b",
+      "\\bO\\s+Sacre\\s+da\\s+Primavera\\b|\\bSacrif[ií]cio\\s+da\\s+Primavera\\b",
+      "\\bThe\\s+Rite\\s+of\\s+Spring\\b(?![^.!?\\n]{0,20}\\()"
+     ]
+    },
+    "ar": {
+     "titre": "طقوس الربيع",
+     "statut": "etabli",
+     "fautif": [
+      "(?:تكريس|تتويج|تقديس|تنصيب|احتفال)\\s*(?:ال)?ربيع",
+      "(?:ال)?ربيع\\s*(?:ال)?(?:مقدس|مكرس)(?![؀-ۿ])"
+     ]
+    },
     "he": {
      "titre": "פולחן האביב",
      "statut": "etabli",
@@ -2852,6 +5103,16 @@
       "הקדשת\\s+האביב",
       "טקס\\s+האביב",
       "האביב\\s+הקדוש"
+     ]
+    },
+    "fi": {
+     "titre": "Kevätuhri",
+     "statut": "etabli",
+     "fautif": [
+      "\\bkevään\\s+(pyhitys|vihkiminen|kruunaus|pyhittäminen|siunaus)\\b",
+      "\\bkevään\\s+uhri\\b",
+      "\\ble\\s+sacre\\s+du\\s+printemps\\b",
+      "\\bkevätuhrit\\b"
      ]
     },
     "et": {
@@ -2888,6 +5149,30 @@
       "\\bA[ïí]da\\b[^.!?\\n]{0,70}\\b(?:Verdi|[oó]pera|Egipto|Radam[eé]s)\\b|\\b(?:Verdi|[oó]pera|Egipto|Radam[eé]s)\\b[^.!?\\n]{0,70}\\bA[ïí]da\\b"
      ]
     },
+    "de": {
+     "titre": "Aida",
+     "statut": "original",
+     "fautif": [
+      "\\baïda\\b|\\baída\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Aida",
+     "statut": "original",
+     "fautif": [
+      "\\bA[ïi]da\\b(?<!Aida)",
+      "\\bA[ií]da\\b[^.!?\\n]{0,40}\\bVerdi\\b"
+     ]
+    },
+    "ar": {
+     "titre": "عايدة",
+     "statut": "etabli",
+     "fautif": [
+      "(?<![؀-ۿ])(?:أيدا|ايدا|آيدا|أييدا)(?![؀-ۿ])",
+      "(?:أوبرا|فيردي)[^.]{0,10}(?:ال)?عائدة",
+      "(?:ال)?عائدة\\s*(?:ل|لـ)?فيردي"
+     ]
+    },
     "he": {
      "titre": "אאידה",
      "statut": "etabli",
@@ -2895,6 +5180,14 @@
       "איידה",
       "(?<![א-ת])אידה(?![א-ת])",
       "עאידה"
+     ]
+    },
+    "fi": {
+     "titre": "Aida",
+     "statut": "etabli",
+     "fautif": [
+      "\\baïda\\b",
+      "\\baiida\\b"
      ]
     },
     "et": {
@@ -2932,12 +5225,48 @@
       "\\bBob\\s+Dylan\\s+(?:a\\s+rueda\\s+libre|sin\\s+ataduras|libre)\\b"
      ]
     },
+    "de": {
+     "titre": "The Freewheelin' Bob Dylan",
+     "statut": "original",
+     "fautif": [
+      "\\bder\\s+(?:freiradelnde|freilaufende|unbekümmerte|sorglose|ungebundene)\\s+bob\\s+dylan\\b",
+      "\\bfreewheeling\\s+bob\\s+dylan\\b|\\bfreewheelin\\s+bob\\b"
+     ]
+    },
+    "pt": {
+     "titre": "The Freewheelin' Bob Dylan",
+     "statut": "original",
+     "fautif": [
+      "\\b(?:O\\s+)?(?:Despreocupado|Livre|Desimpedido|Descontra[ií]do|Desenvolto)\\s+Bob\\s+Dylan\\b",
+      "\\bBob\\s+Dylan\\s+(?:Despreocupado|Desimpedido|em\\s+Roda\\s+Livre)\\b",
+      "\\bFreewheeling\\s+Bob\\s+Dylan\\b"
+     ]
+    },
+    "ar": {
+     "titre": "The Freewheelin' Bob Dylan",
+     "statut": "original",
+     "fautif": [
+      "(?:ال)?(?:حر|حرة|طليق|منطلق|متحرر|حرة\\s*الحركة|ذو\\s*العجلات\\s*الحرة|عجلات\\s*حرة)\\s*(?:بوب\\s*)?ديلان",
+      "بوب\\s*ديلان\\s*(?:ال)?(?:حر|طليق|منطلق|متحرر|ذو\\s*العجلات)(?![؀-ۿ])",
+      "(?:ال)?(?:دراجة|عجلة|عجلات)\\s*(?:ال)?حرة[^.]{0,20}ديلان",
+      "(?:فريويلين|فري\\s*ويلين|فريوهيلين)"
+     ]
+    },
     "he": {
      "titre": "The Freewheelin' Bob Dylan",
      "statut": "original",
      "fautif": [
       "בוב\\s+דילן\\s+(החופשי|המשוחרר|חסר\\s+המעצורים)",
       "ה?פרי+וו?ילין"
+     ]
+    },
+    "fi": {
+     "titre": "The Freewheelin' Bob Dylan",
+     "statut": "original",
+     "fautif": [
+      "\\bvapaasti\\s+pyöri\\w*\\s+bob\\b",
+      "\\bvapaapyörä\\w*",
+      "\\bhuoleton\\s+bob\\s+dylan\\b"
      ]
     },
     "et": {
@@ -2974,12 +5303,46 @@
       "\\b(?:el\\s+)?(?:deleite|placer|delicia|gozo)\\s+del\\s+rapero\\b"
      ]
     },
+    "de": {
+     "titre": "Rapper's Delight",
+     "statut": "original",
+     "fautif": [
+      "\\b(?:die\\s+)?(?:freude|wonne|vergnügen|entzücken|lust)\\s+des\\s+rappers\\b|\\brapper-?freude\\b",
+      "\\brappers\\s+delight\\b|\\brapper’s\\s+delight\\b"
+     ]
+    },
+    "pt": {
+     "titre": "Rapper's Delight",
+     "statut": "original",
+     "fautif": [
+      "\\b(?:O\\s+)?(?:Deleite|Del[ií]cia|Prazer|Delei[tç]o)\\s+do\\s+Rapper\\b",
+      "\\bRappers\\s+Delight\\b|\\bRapper\\s+Delight\\b"
+     ]
+    },
+    "ar": {
+     "titre": "Rapper's Delight",
+     "statut": "original",
+     "fautif": [
+      "(?:بهجة|متعة|سرور|فرحة|لذة|سعادة)\\s*(?:ال)?(?:رابر|مغني\\s*الراب|مغنّي\\s*الراب|راب)(?![؀-ۿ])",
+      "(?:ال)?(?:رابر|مغني\\s*الراب)\\s*(?:ال)?(?:بهجة|سعيد|مبتهج)",
+      "(?:رابرز|رابر'?ز)\\s*ديلايت"
+     ]
+    },
     "he": {
      "titre": "Rapper's Delight",
      "statut": "original",
      "fautif": [
       "(תענוג|עונג|שמחת|הנאת)\\s+(ה)?ראפר",
       "ראפרס\\s+דילייט"
+     ]
+    },
+    "fi": {
+     "titre": "Rapper's Delight",
+     "statut": "original",
+     "fautif": [
+      "\\bräppärin\\s+(ilo|nautinto|riemu|herkku)\\b",
+      "\\brapparin\\s+\\w+",
+      "\\bräpin\\s+ilo\\b"
      ]
     },
     "et": {
