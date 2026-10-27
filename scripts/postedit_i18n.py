@@ -24,6 +24,7 @@ Usage:
     python scripts/postedit_i18n.py packs --lang fi --out DIR
     python scripts/postedit_i18n.py apply --lang fi --from DIR [--dry-run]
     python scripts/postedit_i18n.py check --lang fi --file DIR/cours_000.json
+    python scripts/postedit_i18n.py dump --lang fi course_100_les_fleurs_du_mal_baudelaire
 """
 
 from __future__ import annotations
@@ -272,6 +273,34 @@ def _legal_docs(lang: str) -> dict[str, tuple[dict, dict]]:
 def _legal_swift_block(prop: str, doc: str, sections: list[dict]) -> str:
     from translate_legal_docs import render_sections
     return f"private static let {doc}{prop}: [LegalSection] = [\n{render_sections(sections)}\n    ]\n"
+
+
+def dump(lang: str, course_ids: list[str]) -> str:
+    """One course at a time: its lesson segments, quiz items and glossary definitions, ids as apply expects."""
+    quizzes = {q["courseId"]: q["quiz"] for q in _load(LOCALES / lang / "quizzes_v2.json")}
+    gloss = _load(IOS / "Locales" / f"glossary.{lang}.json")
+    out = []
+    for cid in course_ids:
+        p = COURSES / lang / f"{cid}.json"
+        if not p.exists():
+            continue
+        out.append(f"## COURS {cid}")
+        out.append("# fichier cours_*")
+        for key, text in segments(_load(p)):
+            out.append(f"### {cid}/{key}\n{text}")
+        out.append("# fichier quiz_*")
+        for q in quizzes.get(cid, []):
+            for field in ("question", "explanation", "statement"):
+                if q.get(field):
+                    out.append(f"### {q['id']}/{field}\n{q[field]}")
+            for field in ("options", "items"):
+                for j, o in enumerate(q.get(field) or []):
+                    out.append(f"### {q['id']}/{field}/{j}\n{o}")
+        out.append("# fichier glossaire_* (texte = définition seule ; \"terme\" pour renommer)")
+        for k, v in gloss.items():
+            if k.startswith(cid + "|"):
+                out.append(f"### {k}\n{v.get('explanation', '')}")
+    return "\n".join(out)
 
 
 # ------------------------------------------------------------------ checks
@@ -674,9 +703,14 @@ def main() -> int:
     a = sub.add_parser("packs"); a.add_argument("--lang", required=True); a.add_argument("--out", type=Path, required=True)
     b = sub.add_parser("apply"); b.add_argument("--lang", required=True); b.add_argument("--from", dest="src", type=Path, required=True)
     b.add_argument("--dry-run", action="store_true"); b.add_argument("--report", type=Path)
+    d = sub.add_parser("dump", help="every editable item of some courses (body, quiz, glossary), with ids")
+    d.add_argument("--lang", required=True); d.add_argument("courses", nargs="+")
     c = sub.add_parser("check", help="dry run of one output file, one line per rejected edit")
     c.add_argument("--lang", required=True); c.add_argument("--file", type=Path, required=True)
     args = ap.parse_args()
+    if args.cmd == "dump":
+        print(dump(args.lang, args.courses))
+        return 0
     if args.cmd == "check":
         rep = apply(args.lang, args.file.parent, True, only=args.file)
         for r in rep["rejets"]:
