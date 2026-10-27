@@ -41,7 +41,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Verkko tarkistaa ensin jokaisen tapahtuman ja kokoaa sen sitten muiden kanssa **lohkoon**. Lohko kytketään edelliseen matemaattisella laskutoimituksella, jonka nimi on [[hajautus]]: se on eräänlainen ainutlaatuinen digitaalinen sormenjälki. Tuloksena on katkeamaton lohkojen ketju, ja siitä nimi lohkoketju. Yhden vanhan tapahtuman muuttaminen vaatisi koko ketjun laskemista uudelleen ja yli puolen verkon saamista puolelleen, mikä on suuressa mittakaavassa käytännössä mahdotonta."
+          "text": "Verkko tarkistaa ensin jokaisen tapahtuman ja kokoaa sen sitten muiden kanssa **lohkoon**. Lohko kytketään edelliseen matemaattisella laskutoimituksella, jonka tulos on [[hash-tiiviste]]: eräänlainen ainutlaatuinen digitaalinen sormenjälki. Tuloksena on katkeamaton lohkojen ketju, ja siitä nimi lohkoketju. Yhden vanhan tapahtuman muuttaminen vaatisi koko ketjun laskemista uudelleen ja yli puolen verkon saamista puolelleen, mikä on suuressa mittakaavassa käytännössä mahdotonta."
         }
       ]
     },
@@ -100,7 +100,7 @@
         },
         {
           "type": "funFact",
-          "text": "Vuonna 2021 El Salvadorista tuli maailman ensimmäinen maa, joka hyväksyi Bitcoinin viralliseksi maksuvälineeksi Yhdysvaltain dollarin rinnalle, ja jokainen kauppias velvoitettiin ottamaan se vastaan, jos siihen on tekniset valmiudet."
+          "text": "Vuonna 2021 El Salvadorista tuli maailman ensimmäinen maa, joka hyväksyi Bitcoinin lailliseksi maksuvälineeksi Yhdysvaltain dollarin rinnalle, ja jokainen kauppias velvoitettiin ottamaan se vastaan, jos siihen on tekniset valmiudet."
         },
         {
           "type": "takeaway",
