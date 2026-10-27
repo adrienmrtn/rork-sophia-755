@@ -26703,7 +26703,7 @@ enum AppLocalizable {
         "home.bravo": "כל הכבוד!",
         "home.allCompleted": "סיימת את כל הקורסים הזמינים.",
         "discount.gift.title": "הפתעה בשבילך!",
-        "discount.gift.tapToOpen": "הקש כדי לפתוח אותו",
+        "discount.gift.tapToOpen": "הקש כדי לפתוח",
         "discount.gift.keepTapping": "המשך להקיש!",
         "discount.gift.almost": "כמעט!",
         "home.locked": "נעול",
