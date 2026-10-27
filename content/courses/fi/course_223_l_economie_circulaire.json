@@ -1,14 +1,14 @@
 {
   "id": "course_223_l_economie_circulaire",
   "title": "Kiertotalous: entä jos jätettä ei enää olisi?",
-  "subtitle": "Päästä eroon kaikesta kertakäyttöisestä",
+  "subtitle": "Eroon kertakäyttökulttuurista",
   "subject": "comprendreLeMonde",
   "subcategory": "Ympäristö ja tulevaisuus",
-  "description": "**Epurista, valmista, heitä herneet**: tämä malli kuluttaa planeettaamme. Kiertotalous ehdottaa päinvastaista: esineiden ja materiaalien pitämistä liikkeessä mahdollisimman pitkään.",
+  "description": "**Louhi, valmista, heitä pois**: tämä malli kuluttaa planeetan loppuun. Kiertotalous ehdottaa päinvastaista: esineet ja materiaalit pidetään kierrossa mahdollisimman pitkään.",
   "hero": {
     "image": "l_economie_circulaire",
     "ratio": "16:9",
-    "hook": "Entä jos jätettä ei olisi olemassa? Se on luonnon inspiroima talousmallin veto."
+    "hook": "Entä jos jätettä ei olisi olemassa? Tähän panostaa luonnosta mallia ottava talousmalli."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Teollisen vallankumouksen jälkeen taloutemme on toiminut yhteen suuntaan: hankimme resursseja, valmistamme esineitä ja sitten heitämme ne pois. Tämä malli olettaa, että resurssit ovat rajattomat. He eivät ole."
+          "text": "Teollisesta vallankumouksesta lähtien taloutemme on toiminut vain yhteen suuntaan: luonnonvaroja louhitaan, niistä valmistetaan esineitä ja esineet heitetään pois. Malli olettaa, että luonnonvarat ovat loputtomat. Sitä ne eivät ole."
         },
         {
           "type": "paragraph",
-          "text": "**Kiertotalous** tarjoaa toisen logiikan, joka on saanut inspiraationsa luonnosta ja jossa mikään ei häviä. Tavoitteena on pitää tuotteiden ja materiaalien arvo liikkeessä mahdollisimman pitkään sen sijaan, että ne muuttuisivat jätteeksi."
+          "text": "**Kiertotalous** tarjoaa toisenlaisen, luonnosta mallia ottavan logiikan, jossa mikään ei oikeastaan mene hukkaan. Tavoitteena on pitää tuotteiden ja materiaalien arvo kierrossa mahdollisimman pitkään sen sijaan, että niistä tulisi jätettä."
         }
       ]
     },
@@ -33,40 +33,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Moderni talous rakennettiin mallille nimeltä **lineaarinen**: pura, valmista, heitä pois. Otamme raaka-aineet luonnosta, teemme niistä tuotteita, ja kun ne ovat kuluneet tai menneet pois muodista, niistä tulee jätettä."
+          "text": "Moderni talous on rakentunut niin sanotun **lineaarisen** mallin varaan: louhi, valmista, heitä pois. Luonnosta otetaan raaka-aineita, niistä tehdään tuotteita, ja kun tuotteet ovat kuluneet tai menneet pois muodista, niistä tulee jätettä."
         },
         {
           "type": "image",
           "asset": "landfill_waste_garbage_linear_economy",
           "ratio": "16:9",
-          "caption": "\"Ota, tee, heitä pois\" -malli edellyttää loputtomia resursseja."
+          "caption": "”Louhi, valmista, heitä pois” -malli olettaa, että luonnonvarat ovat loputtomat."
         },
         {
           "type": "paragraph",
-          "text": "Tämä järjestelmä perustuu ajatukseen, että resurssit ovat rajattomat ja että luonto pystyy imemään kaiken saastumisen. Mutta nykyään maailmantalous kuluttaa resursseja 1,7 planeetan verran vuosittain. Tiettyjä digitaalitekniikalle välttämättömiä metalleja, kuten [[Litium]], voi olla vaikea löytää jo vuonna 2040."
+          "text": "Järjestelmä perustuu ajatukseen, että luonnonvarat ovat rajattomat ja että luonto pystyy imemään kaiken saasteen. Nykyään maailmantalous kuitenkin kuluttaa vuosittain 1,7 planeetan verran luonnonvaroja. Jotkin digitaaliteknologialle välttämättömät metallit, kuten [[Litium]], voivat olla vaikeasti saatavilla jo vuodesta 2040 alkaen."
         },
         {
           "type": "funFact",
-          "text": "Vain 9 % kaikesta ihmiskunnan koskaan valmistamasta muovista on kierrätetty. Loput päätyvät luontoon tai kaatopaikalle, jossa se voi jäädä 450 vuodeksi."
+          "text": "Vain 9 % kaikesta ihmiskunnan koskaan valmistamasta muovista on kierrätetty. Loppu päätyy luontoon tai kaatopaikalle, jossa se voi säilyä 450 vuotta."
         },
         {
           "type": "paragraph",
-          "text": "Siivous- ja jätehuoltokustannukset eivät juuri koskaan sisälly tuotteen myyntihintaan. Se on piilohinta, jonka kaikki maksavat myöhemmin."
+          "text": "Siivous- ja jätehuoltokustannukset eivät juuri koskaan sisälly tuotteen myyntihintaan. Ne ovat piilokustannus, jonka kaikki maksavat myöhemmin."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p2",
-      "title": "Korjaa ennen kierrätystä",
+      "title": "Ensin korjaus, sitten kierrätys",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kiertotalous tarjoaa useita silmukoita ja aina samassa tärkeysjärjestyksessä: lyhin silmukka on parempi, koska se kuluttaa vähemmän energiaa ja materiaalia. Kaikki alkaa **ekologinen suunnittelu**:stä eli tuotteen ympäristövaikutusten pohtimisesta sen luomisesta lähtien valitsemalla materiaalit, jotka ovat kestäviä ja helposti purettavia."
+          "text": "Kiertotaloudessa on useita kiertoja, ja niillä on aina sama tärkeysjärjestys: mitä lyhyempi kierto, sitä parempi, koska se tuhlaa vähemmän energiaa ja materiaalia. Kaikki alkaa **ekosuunnittelusta** eli siitä, että tuotteen ympäristövaikutukset mietitään jo sen suunnitteluvaiheessa ja valitaan kestäviä ja helposti purettavia materiaaleja."
         },
         {
           "type": "paragraph",
-          "text": "Sitten tulee **uudelleenkäyttö** (objekti vaihtaa omistajaa muuttumatta, kuten käytettyjen tuotteiden markkinoilla), sitten **korjaus**, joka pidentää tuotteen käyttöikää. Nämä askeleet taistelevat suoraan [[Suunniteltu vanhentuminen]], tämä käytäntö, joka vapaaehtoisesti lyhentää esineen elinikää."
+          "text": "Seuraavana on **uudelleenkäyttö** (esine vaihtaa omistajaa muuttumatta, kuten käytettyjen tavaroiden kaupassa) ja sitten **korjaaminen**, joka pidentää tuotteen käyttöikää. Nämä vaiheet torjuvat suoraan ilmiötä nimeltä [[suunniteltu vanheneminen]], eli käytäntöä, jossa esineen käyttöikää lyhennetään tarkoituksella."
         },
         {
           "type": "image",
@@ -76,32 +76,32 @@
         },
         {
           "type": "paragraph",
-          "text": "**Kierrätys** tapahtuu vain viimeisenä keinona. Se säilyy hyödyllisenä: alumiinin kierrätys kuluttaa 95 % vähemmän energiaa kuin sen louhinta raakamalmista, [[Bauksiitti]]. Mutta se on silti vähemmän tehokasta kuin pelkkä esineen uudelleenkäyttö."
+          "text": "**Kierrätykseen** turvaudutaan vasta viimeisenä keinona. Siitä on silti hyötyä: alumiinin kierrättäminen kuluttaa 95 % vähemmän energiaa kuin sen tuottaminen raakamalmista ([[Bauksiitti]]). Se on kuitenkin aina tehottomampaa kuin esineen yksinkertainen uudelleenkäyttö."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p3",
-      "title": "Miksi se on vaikeaa vielä tänään",
+      "title": "Miksi se on yhä vaikeaa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kaikesta kiinnostuksestaan huolimatta kiertotalous kohtaa yksinkertaisen ongelman: lineaarinen malli jää usein **halvemmaksi lyhyellä aikavälillä**. Uuden materiaalin louhinta on joskus halvempaa kuin monimutkaisen jätteen lajittelu ja kierrätys, varsinkin kun raaka-aineet ovat halpoja."
+          "text": "Hyödyistään huolimatta kiertotalous törmää yksinkertaiseen ongelmaan: lineaarinen malli on usein **halvempi lyhyellä aikavälillä**. Uuden raaka-aineen louhinta maksaa joskus vähemmän kuin monimutkaisen jätteen lajittelu ja kierrätys, varsinkin kun raaka-aineet ovat halpoja."
         },
         {
           "type": "image",
           "asset": "repair_right_electronics_reuse",
           "ratio": "4:3",
-          "caption": "\"Korjausoikeus\" edellyttää, että valmistajat toimittavat varaosia."
+          "caption": "”Korjausoikeus” velvoittaa valmistajat toimittamaan varaosia."
         },
         {
           "type": "paragraph",
-          "text": "Tämän johdosta viranomaiset puuttuvat yhä enemmän asiaan. Euroopan unioni käynnisti vuonna 2020 suunnitelman, joka asettaa tiukemmat kestävän kehityksen säännöt. Yksi tärkeimmistä akseleista on \"korjausoikeus\", joka velvoittaa elektroniikkalaitteiden valmistajat toimittamaan varaosia useiden vuosien ajan."
+          "text": "Siksi julkinen valta puuttuu asiaan yhä useammin. Euroopan unioni käynnisti vuonna 2020 suunnitelman, joka asettaa tuotteiden kestävyydelle tiukempia sääntöjä. Yksi sen tärkeimmistä painopisteistä on ”korjausoikeus”, joka velvoittaa elektroniikkalaitteiden valmistajat toimittamaan varaosia useiden vuosien ajan."
         },
         {
           "type": "paragraph",
-          "text": "Toinen vipu: [[Laajennettu tuottajavastuu]], joka saa valmistajat maksamaan tuotteidensa jätehuollosta. Tämä antaa heille taloudellisen kannustimen suunnitella esineitä, jotka ovat vähemmän saastuttavia ja helpompia korjata."
+          "text": "Toinen keino: [[Laajennettu tuottajavastuu]], joka velvoittaa valmistajat maksamaan tuotteidensa jätehuollon. Näin valmistajilla on taloudellinen kannustin suunnitella esineitä, jotka saastuttavat vähemmän ja ovat helpompia korjata."
         }
       ]
     },
@@ -112,19 +112,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kiertotalous ei ole vain kierrätyskysymys: se on projekti hillitymmän ja kestävämmän yhteiskunnan puolesta. Riippumalla vähemmän tuontiraaka-aineista maa saa myös turvaa epävakaammassa maailmassa."
+          "text": "Kiertotalous ei ole pelkkä kierrätyskysymys: se on yhteiskunnallinen hanke, jonka tavoitteena on kohtuullisempi ja kriisinkestävämpi yhteiskunta. Kun maa on vähemmän riippuvainen tuoduista raaka-aineista, se on myös turvallisemmassa asemassa yhä epävakaammassa maailmassa."
         },
         {
           "type": "paragraph",
-          "text": "Tämän muutoksen onnistuminen riippuu myös meistä kuluttajista. 3R-sääntö, vähennä, käytä uudelleen, kierrätä, alkaa ensimmäisestä vaiheesta: vähennä, eli kysy itseltäsi, onko osto todella tarpeellinen. Tämä on ensimmäinen toimenpide, jolla on suurin vaikutus ilmastoon."
+          "text": "Muutoksen onnistuminen riippuu myös meistä kuluttajina. 3R-sääntö (vähennä, käytä uudelleen, kierrätä) alkaa ensimmäisestä vaiheesta: vähentämisestä eli siitä, että kysyt itseltäsi, onko ostos todella tarpeen. Juuri tällä ensimmäisellä teolla on suurin vaikutus ilmastoon."
         },
         {
           "type": "funFact",
-          "text": "Nykyään tonnissa vanhoja älypuhelimien elektronisia levyjä on enemmän kultaa kuin perinteisestä kultakaivoksesta louhitussa tonnissa malmia."
+          "text": "Tonnissa vanhojen älypuhelinten piirilevyjä on nykyään enemmän kultaa kuin tonnissa tavallisesta kultakaivoksesta louhittua malmia."
         },
         {
           "type": "takeaway",
-          "text": "Kiertotalouden tavoitteena on katkaista \"purkaa, valmista, heitä pois\" -kierto pitämällä resurssit liikkeessä ekologisen suunnittelun, korjauksen ja kierrätyksen avulla, jotta voidaan kunnioittaa planeettamme fyysisiä rajoja."
+          "text": "Kiertotalouden tavoitteena on katkaista ”louhi, valmista, heitä pois” -kierre pitämällä luonnonvarat kierrossa ekosuunnittelun, korjaamisen ja kierrättämisen avulla, jotta planeettamme fyysisiä rajoja kunnioitetaan."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_175_jason_et_la_toison_d_or",
   "title": "Olisiko Iason saanut kultaisen taljan ilman Medeiaa?",
-  "subtitle": "Argonautien etsintä",
+  "subtitle": "Argonauttien retki",
   "subject": "mythologie",
   "subcategory": "Kreikan sankarit",
-  "description": "Jason ja argonautit menevät Colchikseen etsimään Golden Fleeceä. Seikkailun takana on tarina rakkaudesta ja petoksesta taikuri Medean kanssa.",
+  "description": "Iason ja argonautit lähtevät Kolkhikseen hakemaan kultaista taljaa. Seikkailun takana on tarina rakkaudesta ja petoksesta, ja sen toinen osapuoli on noita Medeia.",
   "hero": {
     "image": "jason_et_la_toison_d_or",
     "ratio": "16:9",
-    "hook": "Viisikymmentä sankaria, maaginen laiva, lohikäärmeen vartioima fleece. Ja taikuri, jota ilman mikään ei olisi onnistunut."
+    "hook": "Viisikymmentä sankaria, taianomainen laiva, lohikäärmeen vartioima talja. Ja noita, jota ilman mikään ei olisi onnistunut."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Jason** kokoaa **[[Argonauts]]**, kreikkalaisten sankarien eliittiryhmän, hakemaan **Golden Fleece**: jumalallisen pässin fleece, joka on ripustettu Kolkisiin, joka vastaa suunnilleen nykyistä Georgiaa."
+          "text": "**Iason** kokoaa **[[Argonautit]]**, kreikkalaisten sankarien eliittijoukon, hakemaan **kultaista taljaa**. Se on jumalallisen oinaan talja, ja se riippuu alueella nimeltä [[Kolkhis]], joka vastaa suunnilleen nykyistä Georgiaa."
         },
         {
           "type": "paragraph",
-          "text": "Tämä matka on yksi lännen vanhimmista navigointitarinoista. Hän puhuu kuninkaallisesta legitimiteetistä, jumalallisesta avusta... ja ennen kaikkea tuhoisasta intohimosta Jasonin ja **Medea**:n, taikurin, joka tekee voiton mahdolliseksi, mutta kauheaksi, välillä."
+          "text": "Matka on yksi länsimaiden vanhimmista merenkulkutarinoista. Se kertoo kuninkaallisesta oikeutuksesta, jumalten avusta… ja ennen kaikkea tuhoisasta intohimosta Iasonin ja noita **Medeian** välillä. Medeia tekee voiton ensin mahdolliseksi, sitten kauhistuttavaksi."
         }
       ]
     },
@@ -33,82 +33,82 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jason on Thessalian Iolkosin kuninkaan Aesonin poika. Hänen setänsä [[Pelias]] kaappasi valtaistuimen. Kentauri [[Chiron]] kasvattama Jason palaa lunastaakseen perintönsä. Matkan varrella hän auttaa vanhaa naista ylittämään puron. Se on [[Hera]] valepuvussa. Hän menettää sandaalin mudassa."
+          "text": "Iason on Thessalian Iolkoksen kuninkaan Aisonin poika. Hänen setänsä [[Pelias]] on anastanut valtaistuimen. Iasonin on kasvattanut kentauri [[Chiron]], ja nyt hän palaa vaatimaan perintöään. Matkalla hän auttaa vanhaa naista ylittämään vuolaan puron. Nainen on valepukuinen [[Hera]]. Iason menettää toisen sandaalinsa mutaan."
         },
         {
           "type": "funFact",
-          "text": "Colchiksessa lampaannahkoja asetettiin joskus jokien pohjalle kultahiutaleiden vangitsemiseksi. \"Golden fleecellä\" voi olla todellinen kaivosjuuri."
+          "text": "Kolkhiksessa jokien pohjaan asetettiin joskus lampaantaljoja, joihin kultahiput tarttuivat. ”Kultaisen taljan” taustalla voi olla todellinen kullankaivuu."
         },
         {
           "type": "paragraph",
-          "text": "Pelias pelkää: oraakkeli oli varoittanut häntä sandaalimiehestä. Hän lupaa valtaistuimen, jos Jason tuo takaisin Fleecen, jota lohikäärme vartioi. Jason rakensi [[Argo]]-laivan, jolla oli puhuva keula, käyttämällä [[Dodona]]:n pyhää puuta. Laivalla: **Herakles**, **Orpheus**, **Castor ja Pollux** ja monet muut."
+          "text": "Pelias pelkää: oraakkeli on varoittanut häntä miehestä, jolla on vain yksi sandaali. Hän lupaa valtaistuimen, jos Iason tuo hänelle lohikäärmeen vartioiman taljan. Iason rakennuttaa [[Argo]]-laivan, jonka keula osaa puhua, koska sen puu on peräisin pyhältä paikalta nimeltä [[Dodona]]. Laivalla ovat muun muassa **Herakles**, **Orfeus** sekä **Kastor ja Polydeukes**."
         },
         {
           "type": "image",
           "asset": "argonauts_ship_argo_jason_greek_myth",
           "ratio": "4:3",
-          "caption": "Argo, ensimmäinen suuri laiva kreikkalaisessa legendassa."
+          "caption": "Argo, kreikkalaisten tarujen ensimmäinen suuri laiva."
         }
       ]
     },
     {
       "id": "course_175_jason_et_la_toison_d_or_p2",
-      "title": "Törmäävät kivet",
+      "title": "Yhteen iskeytyvät kalliot",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Matkalla argonautit pelastavat kuningas Phineuksen **Harpiet**-hirviöiltä, jotka varastivat hänen ruokaansa. Vastineeksi Phinée paljastaa, kuinka ylittää **Symplegades Rocks**, kalliot, jotka törmäävät mihin tahansa laivaan Mustanmeren suulla."
+          "text": "Matkalla argonautit pelastavat kuningas Fineuksen **harpyijoilta**, hirviöiltä, jotka varastivat hänen ruokansa. Vastineeksi Fineus kertoo, miten **Symplegadien kalliot** ohitetaan. Ne ovat jyrkänteitä, jotka iskeytyvät yhteen ja murskaavat jokaisen laivan Mustanmeren suulla."
         },
         {
           "type": "paragraph",
-          "text": "Jason vapauttaa kyyhkysen. Kivet sulkeutuvat sen höyhenillä ja avautuvat sitten. Argo menee tuskin ohi. Kolkisissa kuningas **Aeétès** asettaa mahdottomia tehtäviä: valjastaa tuliset härkät, kyntää [[Ares]] peltoa, kylvää lohikäärmeen hampaita, joista syntyy sotureita. Ilman apua Jason kuolisi."
+          "text": "Iason päästää lentoon kyyhkysen. Kalliot iskeytyvät yhteen sen pyrstösulkien kohdalla ja aukeavat sitten. Argo pääsee täpärästi läpi. Kolkhiksessa kuningas **Aietes** määrää mahdottomia tehtäviä: on valjastettava tulta syöksevät härät, kynnettävä pelto, jonka omistaa [[Ares]], ja kylvettävä lohikäärmeen hampaita, joista kasvaa sotureita. Ilman apua Iason kuolisi."
         }
       ]
     },
     {
       "id": "course_175_jason_et_la_toison_d_or_p3",
-      "title": "Medea, voiton arkkitehti",
+      "title": "Medeia, voiton arkkitehti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Aphrodite]], rakkauden jumalatar, saa **Medean**:n, Aeeteen tyttären ja [[Hecate]]:n papin, rakastumaan Jasoniin. Hän antaa hänelle voidetta härkien tulta vastaan. Hampaista syntyneille sotureille hän neuvoo heitä heittämään kiven heidän joukkoonsa: he tappavat toisensa."
+          "text": "[[Aphrodite]], rakkauden jumalatar, saa **Medeian** rakastumaan Iasoniin. Medeia on Aieteen tytär ja papitar, jonka jumalatar on [[Hekate]]. Hän antaa Iasonille voidetta, joka suojaa härkien tulelta. Hampaista syntyneiden soturien varalle hän neuvoo heittämään kiven niiden keskelle: ne tappavat toisensa."
         },
         {
           "type": "image",
           "asset": "medea_jason_greek_myth_waterhouse_painting",
           "ratio": "4:3",
-          "caption": "Medea ja Jason: taikuutta tehtävän palveluksessa."
+          "caption": "Medeia ja Iason: taikuus retken palveluksessa."
         },
         {
           "type": "paragraph",
-          "text": "Lopulta hän nukuttaa lohikäärmeen. Jason kaataa Fleecen. Paetakseen Medea tappaa veljensä **Absyrtos** ja hajottaa hänen jäännöksensä mereen. Aeetes pysähtyy keräämään ruumista. Pariskunta on yhtenäinen… ja jo kirottu."
+          "text": "Lopulta Medeia nukuttaa lohikäärmeen. Iason irrottaa taljan. Päästäkseen pakoon Medeia tappaa veljensä **Absyrtoksen** ja hajottaa tämän ruumiinosat mereen. Aietes pysähtyy keräämään ruumista. Pari on nyt yhdessä… ja jo kirottu."
         }
       ]
     },
     {
       "id": "course_175_jason_et_la_toison_d_or_p4",
-      "title": "Pettäminen ja kaatuminen",
+      "title": "Petos ja tuho",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Iolcosissa Pelias kieltäytyy antamasta periksi. Medea pettää tyttäriään: he \"nuorentavat\" isäänsä leikkaamalla hänet. Pois ajettu pariskunta pakeni Korintiin. Vuosia myöhemmin Jason haluaa mennä naimisiin kuningas Kreonin tyttären kanssa. Medea kostaa: myrkytetty puku kilpailijalle, sitten heidän omien lastensa murha."
+          "text": "Iolkoksessa Pelias kieltäytyy luopumasta vallasta. Medeia huijaa hänen tyttäriään: he ”nuorentavat” isänsä paloittelemalla hänet. Karkotettu pari pakenee Korinttiin. Vuosia myöhemmin Iason haluaa naida kuningas Kreonin tyttären. Medeia kostaa: myrkytetty puku kilpailijalle, sitten heidän omien lastensa murha."
         },
         {
           "type": "image",
           "asset": "medea_vengeance_delacroix_painting",
           "ratio": "4:3",
-          "caption": "Medean kosto Jasonin pettämisen jälkeen."
+          "caption": "Medeian kosto Iasonin petoksen jälkeen."
         },
         {
           "type": "paragraph",
-          "text": "Jason vanhenee yksin. Hän kuolee surkeasti, murskattuna mätä Argon palasta, jonka alla hän lepäsi. Sankari, joka oli voittanut kaiken muiden avulla, tuhoutuu, koska hän on kieltänyt hänet, joka oli pelastanut hänet."
+          "text": "Iason vanhenee yksin. Hän kuolee kurjasti, kun lahonnut kappale Argosta murskaa hänet hänen levätessään sen alla. Sankari, joka oli voittanut kaiken muiden avulla, tuhoutuu, koska hylkäsi naisen, joka oli pelastanut hänet."
         },
         {
           "type": "takeaway",
-          "text": "Jason valloittaa Fleecen Medean ja [[Argo]]:n ansiosta. Hänen petoksensa rikkoo heidän sopimuksensa ja johtaa tuhoon: myytti osoittaa, että sankari, joka kieltää liittolaisensa, menettää kaiken."
+          "text": "Iason saa taljan, koska hänen apunaan ovat Medeia ja [[Argo]]. Hänen petoksensa rikkoo heidän liittonsa ja johtaa tuhoon: myytti osoittaa, että sankari, joka hylkää liittolaisensa, menettää lopulta kaiken."
         }
       ]
     }

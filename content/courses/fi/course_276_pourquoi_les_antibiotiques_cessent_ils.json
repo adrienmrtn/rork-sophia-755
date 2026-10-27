@@ -4,7 +4,7 @@
   "subtitle": "Bakteerit iskevät takaisin",
   "subject": "sciences",
   "subcategory": "Arkemme selitettynä",
-  "description": "Angiina, virtsatietulehdus, rutiinileikkaus: ilman tehoavia antibiootteja kaikki muuttuu jälleen vaaralliseksi. Ja käyttämällä niitä liikaa opetamme bakteerit selviytymään niistä.",
+  "description": "Angiina, virtsatietulehdus, rutiinileikkaus: ilman tehoavia antibiootteja kaikki muuttuu jälleen vaaralliseksi. Ja käyttämällä niitä liikaa opetamme bakteereja selviytymään niistä.",
   "author": "kate-waddams",
   "hero": {
     "image": "antibiogram_petri_dish_inhibition_zones",
@@ -27,13 +27,13 @@
         },
         {
           "type": "paragraph",
-          "text": "Tulehduksen mukaan lääkäri valitsee joko **laajakirjoisen** antibiootin, joka tehoaa moniin lajeihin, tai kapeakirjoisen, joka on tarkoitettu vain muutamalle. Nämä tehokkaat, edulliset ja helposti saatavat lääkkeet kattavat valtavan kirjon tulehduksia. Juuri tämä menestys sai nykymaailman käyttämään niitä liikaa. Ja bakteerit alkoivat vastata."
+          "text": "Infektiosta riippuen lääkäri valitsee joko **laajakirjoisen** antibiootin, joka tehoaa moniin bakteerilajeihin, tai kapeakirjoisen, joka tehoaa vain muutamaan. Nämä tehokkaat, edulliset ja helposti saatavat lääkkeet kattavat valtavan kirjon infektioita. Juuri tämä menestys sai nykymaailman käyttämään niitä liikaa. Ja bakteerit alkoivat iskeä takaisin."
         }
       ]
     },
     {
       "id": "course_276_pourquoi_les_antibiotiques_cessent_ils_p1",
-      "title": "Miten bakteerit oppivat vastustamaan",
+      "title": "Miten bakteerit oppivat kestämään lääkkeitä",
       "free": false,
       "blocks": [
         {
@@ -52,7 +52,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Nämä keinot ovat kirjoitettuina geeneihin. Kun resistentti bakteeri jakautuu, se siirtää ne jälkeläisilleen, jotka siirtävät ne puolestaan eteenpäin. Yksi ainoa eloonjäänyt voi perustaa kokonaisen resistenttien bakteerien suvun. Näin resistenssi leviää."
+          "text": "Nämä keinot on kirjoitettu geeneihin. Kun resistentti bakteeri jakautuu, se siirtää ne jälkeläisilleen, jotka siirtävät ne puolestaan eteenpäin. Yksi ainoa eloonjäänyt voi perustaa kokonaisen resistenttien bakteerien suvun. Näin resistenssi leviää."
         }
       ]
     },
@@ -63,11 +63,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Resistentti bakteeri matkaa kuten mikä tahansa mikrobi. **Covid**-pandemia osoitti, kuinka nopeasti virus siirtyy ihmisestä toiseen ja maasta toiseen. Bakteerit liikkuvat samalla tavalla: ihmiskontaktien välityksellä, suotuisissa ympäristöissä, puutteellisen hygienian vuoksi tai eläimistä ihmisiin."
+          "text": "Resistentti bakteeri leviää kuten mikä tahansa mikrobi. **Covid**-pandemia osoitti, kuinka nopeasti virus siirtyy ihmisestä toiseen ja maasta toiseen. Bakteerit liikkuvat samalla tavalla: ihmiskontaktien välityksellä, suotuisissa ympäristöissä, puutteellisen hygienian vuoksi tai eläimistä ihmisiin."
         },
         {
           "type": "paragraph",
-          "text": "Lisäksi niillä on käytössään oikotie, jota lisääntyminen ei tarjoa: [[horisontaalinen geeninsiirto]]. Resistentti bakteeri voi luovuttaa resistenssigeeninsä suoraan naapurilleen odottamatta jakautumista. Hyvin lyhyessä ajassa syntyy kokonainen resistenttien bakteerien populaatio."
+          "text": "Lisäksi niillä on käytössään oikotie: [[horisontaalinen geeninsiirto]]. Resistentti bakteeri voi luovuttaa resistenssigeeninsä suoraan naapurilleen odottamatta jakautumista. Hyvin lyhyessä ajassa syntyy kokonainen resistenttien bakteerien populaatio."
         },
         {
           "type": "image",
@@ -77,7 +77,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Tunnetuin niistä on [[MRSA]], metisilliiniresistentti Staphylococcus aureus. Se kestää monia yleisesti käytettyjä antibiootteja, mistä se on saanut lempinimen ”superbakteeri”. Antibioottien massakäyttö hävitti heikot kannat ja jätti kentän vapaaksi niille, jotka sen tavoin oppivat vastustamaan. Seuraukset voivat olla kuolettavia."
+          "text": "Tunnetuin niistä on [[MRSA]], metisilliiniresistentti Staphylococcus aureus. Se kestää monia yleisesti käytettyjä antibiootteja, mistä se on saanut lempinimen ”superbakteeri”. Antibioottien massakäyttö on hävittänyt heikot kannat ja jättänyt kentän vapaaksi niille, jotka MRSA:n tavoin ovat oppineet kestämään lääkkeitä. Seuraukset voivat olla kuolettavia."
         }
       ]
     },
@@ -92,11 +92,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Luvut kertovat vaaran mittakaavan. Pelkästään vuonna 2019 maailmassa **1,27 miljoonaa** kuolemaa johtui mikrobilääkeresistenssistä. Ja käyrä nousee: ennusteiden mukaan kuolemia on vuoteen **2050** mennessä **10 miljoonaa** vuodessa."
+          "text": "Luvut kertovat vaaran mittakaavan. Pelkästään vuonna 2019 mikrobilääkeresistenssin syyksi luettiin maailmassa **1,27 miljoonaa** kuolemaa. Ja käyrä nousee: ennusteiden mukaan vuoteen **2050** mennessä kuolemia on **10 miljoonaa** vuodessa."
         },
         {
           "type": "paragraph",
-          "text": "Tutkijat eivät seiso toimettomina. He kehittävät uusia ja tarkempia hoitoja, jotka kohdistuvat resistentteihin bakteereihin. He pyrkivät myös palauttamaan nykyisten antibioottien tehon ja vähentämään turhia määräyksiä: jokainen vältetty hoitokuuri on bakteereille yksi tilaisuus vähemmän sopeutua."
+          "text": "Tutkijat eivät seiso toimettomina. He kehittävät uusia ja tarkempia hoitoja, jotka kohdistuvat resistentteihin bakteereihin. He pyrkivät myös palauttamaan nykyisten antibioottien tehon ja vähentämään turhia lääkemääräyksiä: jokainen vältetty hoitokuuri on bakteereille yksi tilaisuus vähemmän sopeutua."
         }
       ]
     },
@@ -121,7 +121,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Nykylääketieteen tulevaisuus riippuu yhdestä asiasta: antibioottien tehon säilyttämisestä, eli siitä, että lakkaamme käyttämästä niitä liikaa."
+          "text": "Nykylääketieteen tulevaisuus riippuu yhdestä asiasta: antibioottien teho on säilytettävä, ja siksi niiden liikakäyttö on lopetettava."
         }
       ]
     }

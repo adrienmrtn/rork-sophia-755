@@ -1,14 +1,14 @@
 {
   "id": "course_211_comment_fonctionne_le_prix_du_petrole",
   "title": "Kuka määrää öljyn hinnan?",
-  "subtitle": "Maailmantalouden hermo",
+  "subtitle": "Maailmantalouden elinhermo",
   "subject": "comprendreLeMonde",
   "subcategory": "Talous ja yhteiskunta",
-  "description": "Öljyn hintaa ei määrää yksittäinen myyjä. Se syntyy **sodankäynnistä** tuottajamaiden, rahoitusmarkkinoiden ja äkillisten kriisien välillä, joskus järjettömyyteen asti.",
+  "description": "Öljyn hintaa ei määrää yksittäinen myyjä. Se syntyy tuottajamaiden, rahoitusmarkkinoiden ja äkillisten kriisien **köydenvedossa**, joskus järjettömyyksiin asti.",
   "hero": {
     "image": "comment_fonctionne_le_prix_du_petrole",
     "ratio": "16:9",
-    "hook": "Vuonna 2020 öljymyyjät maksoivat ostajilleen, jotta he pääsisivät eroon niistä. Tässä on syy."
+    "hook": "Vuonna 2020 öljyn myyjät maksoivat ostajille, jotta pääsisivät öljystään eroon. Tässä syy."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Öljyä kutsutaan joskus \"talouden vereksi\". Sen hinta vaikuttaa inflaatioon, bensiinin hintaan ja jopa tiettyjen maiden vakauteen. Kukaan ei kuitenkaan aseta tätä hintaa leimalla."
+          "text": "Öljyä kutsutaan joskus ”talouden vereksi”. Sen hinta vaikuttaa inflaatioon, bensiinin hintaan ja jopa joidenkin maiden vakauteen. Silti kukaan ei päätä hintaa yhdellä leimasimen iskulla."
         },
         {
           "type": "paragraph",
-          "text": "Se syntyy kolmen voiman kohtaamisesta: öljyä ottavat maat, rahoitusmarkkinat, jotka käyvät kauppaa sillä ennen kuin se edes lähtee maasta, ja kriisit, jotka saavat kaikki paniikkiin. Suuntaa Arabian aavikolle, Teksasin tasangoille ja Chicagon näytöille."
+          "text": "Hinta syntyy kolmen voiman kohtaamisesta: öljyä pumppaavat maat, rahoitusmarkkinat, joilla öljyllä käydään kauppaa jo ennen kuin se on nostettu maasta, ja kriisit, jotka saavat kaikki paniikkiin. Suuntana Arabian aavikot, Teksasin tasangot ja Chicagon pörssinäytöt."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p1",
-      "title": "OPEC vastaan amerikkalainen liuske: tarjonnan taistelu",
+      "title": "OPEC vastaan Yhdysvaltain liuskeöljy: taistelu tarjonnasta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Öljymarkkinoilla on erityispiirre: lyhyellä aikavälillä kysyntä tuskin putoa hintojen noustessa. Autot, tehtaat ja lentokoneet eivät voi muuttaa energiaa yhdessä yössä. Ekonomistit kutsuvat tätä kysynnän **inelastisuudeksi**."
+          "text": "Öljymarkkinoilla on erityispiirre: lyhyellä aikavälillä kysyntä tuskin laskee, vaikka hinnat nousevat. Autot, tehtaat ja lentokoneet eivät voi vaihtaa energianlähdettä yhdessä yössä. Ekonomistit kutsuvat tätä kysynnän **joustamattomuudeksi**."
         },
         {
           "type": "paragraph",
-          "text": "Vuodesta 1960 lähtien joukko tuottajamaita on organisoitunut vaikuttamaan näille markkinoille: [[OPEC]]. Sopimalla tuotantokiintiöistä sen jäsenet pyrkivät pitämään hinnat korkeina. Vuodesta 2016 lähtien Venäjä on liittynyt allianssiin muodostaen OPEC+:n. Yhdessä nämä maat hallitsevat noin 40 prosenttia maailman öljystä."
+          "text": "Vuodesta 1960 lähtien joukko tuottajamaita on toiminut yhdessä vaikuttaakseen näihin markkinoihin: [[OPEC]]. Sopimalla tuotantokiintiöistä sen jäsenet pyrkivät pitämään hinnat korkeina. Vuonna 2016 myös Venäjä liittyi mukaan, ja syntyi OPEC+. Yhdessä nämä maat hallitsevat noin 40 prosenttia maailman öljystä."
         },
         {
           "type": "funFact",
-          "text": "Yksi öljytynnyri, 159 litraa, sisältää yhtä paljon energiaa kuin yhden ihmisen noin vuoden käsityö."
+          "text": "Yksi öljytynnyri, 159 litraa, sisältää yhtä paljon energiaa kuin ihminen tuottaa ruumiillisella työllä noin vuodessa."
         },
         {
           "type": "paragraph",
-          "text": "Mutta tämä voima on horjunut. Hydraulisen murtamisen tekniikan ansiosta Yhdysvalloista tuli maailman suurin öljyntuottaja 10 vuodessa ohittaen Saudi-Arabian. Tämä uusi, nopeammin mukautuva tarjous on tehnyt markkinoista kilpailukykyisempiä ja OPEC+:n vaikeampi hallita niitä."
+          "text": "Tämä valta on kuitenkin horjunut. Vesisärötykseksi kutsutun tekniikan ansiosta Yhdysvalloista tuli kymmenessä vuodessa maailman suurin öljyntuottaja, ohi Saudi-Arabian. Tämä uusi, nopeammin säädettävä tarjonta on tehnyt markkinoista kilpailullisemmat ja OPEC+:lle vaikeammin hallittavat."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p2",
-      "title": "\"Paperiöljy\": kun rahoitus tulee mukaan",
+      "title": "”Paperiöljy”: kun finanssimaailma sekaantuu peliin",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Varsinaisten laivalla tai putkella toimitettujen tynnyrien lisäksi öljyä käydään kauppaa myös rahoitusmarkkinoilla. Suurin osa transaktioista tapahtuu futuurimarkkinoiden kautta: ostamme tänään tynnyrin, joka toimitetaan vain yhden, kolmen tai kuuden kuukauden kuluttua."
+          "text": "Laivalla tai putkea pitkin toimitettujen todellisten tynnyrien lisäksi öljyllä käydään kauppaa myös rahoitusmarkkinoilla. Suurin osa kaupoista tehdään futuurimarkkinoilla: niillä ostetaan tänään tynnyri, joka toimitetaan vasta yhden, kolmen tai kuuden kuukauden kuluttua."
         },
         {
           "type": "image",
           "asset": "oil_futures_trading_floor_markets",
           "ratio": "16:9",
-          "caption": "Öljy käy kauppaa rahoitusmarkkinoilla kauan ennen kuin se toimitetaan."
+          "caption": "Öljyllä käydään kauppaa rahoitusmarkkinoilla kauan ennen kuin se toimitetaan."
         },
         {
           "type": "paragraph",
-          "text": "Pankit ja hedge-rahastot ostavat ja myyvät näitä sopimuksia haluamatta koskaan koskea tynnyriin: ne yksinkertaisesti lyövät vetoa siitä, nousevatko vai laskevatko hinnat. Tämä tuo rahaa markkinoille, mutta tekee myös hinnoista hermostuneempia. Maailmassa vertailukohtana toimii kaksi hintaa: [[Brent]], öljy Pohjanmereltä ja WTI, öljy Texasista. Näiden kahden välinen ero heijastaa eroja laadussa ja kuljetuksissa."
+          "text": "Pankit ja hedgerahastot ostavat ja myyvät näitä sopimuksia aikomatta koskaan koskea ainuttakaan tynnyriä: ne yksinkertaisesti lyövät vetoa hintojen noususta tai laskusta. Tämä tuo markkinoille rahaa, mutta tekee hinnoista myös herkemmin heilahtelevia. Maailmassa on kaksi viitehintaa: [[Brent]] eli Pohjanmeren öljy ja WTI eli Teksasin öljy. Niiden välinen ero heijastaa eroja laadussa ja kuljetuksessa."
         }
       ]
     },
@@ -77,19 +77,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Öljymarkkinat toimivat julmissa sykleissä. Kun hinnat nousevat pitkään, tuottajat sijoittavat kalliisiin talletuksiin, mikä lopulta luo ylitarjontaa. Kun hinnat pysyvät alhaisina, tapahtuu päinvastoin: tutkimme vähemmän, mikä varautuu seuraavaan pulaan."
+          "text": "Öljymarkkinat toimivat rajuina sykleinä. Kun hinnat nousevat pitkään, tuottajat investoivat kalliisiin öljykenttiin, mikä luo ajan mittaan ylitarjontaa. Kun hinnat pysyvät alhaisina, käy päinvastoin: uusia esiintymiä etsitään vähemmän, mikä pohjustaa seuraavaa pulaa."
         },
         {
           "type": "paragraph",
-          "text": "COVID-19-kriisi on osoittanut tämän näyttävästi. Huhtikuussa 2020 maailmantalous pysähtyi äkillisesti: kukaan ei lentänyt eikä ajanut, mutta kaivot jatkoivat tuotantoaan. Varastosäiliöt täyttyivät ääriään myöten. WTI:n hinta laski sitten miinus 37 dollariin: myyjät maksoivat ostajilleen varastojen tyhjentämisestä."
+          "text": "COVID-19-kriisi osoitti tämän näyttävästi. Huhtikuussa 2020 maailmantalous pysähtyi kerralla: kukaan ei enää lentänyt eikä ajanut autoa, mutta öljylähteet jatkoivat tuotantoa. Varastosäiliöt täyttyivät ääriään myöten. WTI:n hinta putosi silloin miinus 37 dollariin: myyjät maksoivat ostajille, jotta nämä tyhjentäisivät varastot."
         },
         {
           "type": "paragraph",
-          "text": "Toisaalta vuonna 2022 Venäjän hyökkäys Ukrainaan herätti pelkoa pulasta: Venäjä on maailman toiseksi suurin viejä, ja Brent ylitti 130 dollaria muutamassa viikossa. Öljy on siksi edelleen maailman jännitteiden hermostunut barometri."
+          "text": "Vuonna 2022 taas Venäjän hyökkäys Ukrainaan herätti pelon pulasta: koska Venäjä on maailman toiseksi suurin öljynviejä, Brent ylitti 130 dollaria muutamassa viikossa. Öljy on siis yhä maailman jännitteiden herkkä mittari."
         },
         {
           "type": "funFact",
-          "text": "Yhden älypuhelimen tekemiseen materiaalien, muoviosien ja kuljetuksen välillä kuluu noin 7 litraa öljyä."
+          "text": "Yhden älypuhelimen valmistamiseen kuluu noin 7 litraa öljyä, kun mukaan lasketaan raaka-aineiden louhinta, muoviosat ja kuljetus."
         }
       ]
     },
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pitkällä aikavälillä öljyllä on uusi haaste: siirtyminen puhtaaseen energiaan. Jos sähköautot vähentävät maailmanlaajuista kysyntää, tuottajamaat voivat käydä hintasotaa myydäkseen polttoaineensa ennen kuin ne menettävät arvonsa."
+          "text": "Pitkällä aikavälillä öljyllä on edessään uusi haaste: siirtyminen puhtaaseen energiaan. Jos sähköautot vähentävät maailmanlaajuista kysyntää, tuottajamaat voisivat ryhtyä hintasotaan myydäkseen varantonsa ennen kuin ne menettävät arvoaan."
         },
         {
           "type": "paragraph",
-          "text": "Markkinoita uhkaa kuitenkin paradoksi: sijoittajien luopuessa uusista öljyprojekteista ilmastosyistä tarjonta voi laskea kysyntää nopeammin, mikä aiheuttaa uusia hintojen nousuja. Öljy ei katoa yhtäkkiä: se on edelleen välttämätöntä muoville, lannoitteille ja raskaalle liikenteelle, kuten lentoliikenteelle."
+          "text": "Markkinoita uhkaa kuitenkin paradoksi: kun sijoittajat hylkäävät uusia öljyhankkeita ilmastosyistä, tarjonta voi laskea kysyntää nopeammin, mikä aiheuttaa uusia hintapiikkejä. Öljy ei katoa kerralla: sitä tarvitaan yhä muoveihin, lannoitteisiin ja raskaaseen liikenteeseen, kuten ilmailuun."
         },
         {
           "type": "takeaway",
-          "text": "Öljyn hinta on seurausta OPEC+:n, Amerikan liusketuotannon ja spekulatiivisten rahoitusmarkkinoiden vastakkainasettelusta. Tulos: hinnat voivat romahtaa tai räjähtää pienimmässäkin geopoliittisessa shokissa."
+          "text": "Öljyn hinta syntyy OPEC+:n, Yhdysvaltain liuskeöljyn tuotannon ja spekulatiivisten rahoitusmarkkinoiden köydenvedossa. Tuloksena hinnat, jotka voivat romahtaa tai räjähtää pienimmästäkin geopoliittisesta shokista."
         }
       ]
     }

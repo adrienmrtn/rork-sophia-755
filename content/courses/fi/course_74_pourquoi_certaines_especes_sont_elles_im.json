@@ -4,11 +4,11 @@
   "subtitle": "Biologia ja pitkäikäisyys",
   "subject": "sciences",
   "subcategory": "Maa ja maailmankaikkeus",
-  "description": "Jotkut lajit näyttävät uhmaavan kuolemaa. Meduusat, jotka nuorentavat, hydrat ilman ikääntymistä: salaisuus on solujen korjaamisessa.",
+  "description": "Jotkin lajit näyttävät uhmaavan kuolemaa. Nuortuvat meduusat ja vanhenemattomat hydrat: salaisuus piilee solujen korjaamisessa.",
   "hero": {
     "image": "pourquoi_certaines_especes_sont_immortelles",
     "ratio": "16:9",
-    "hook": "Ikääntyminen ei ole elämän ehdoton laki. Jotkut lajit ovat löytäneet vian."
+    "hook": "Ikääntyminen ei ole elämän ehdoton laki. Jotkin lajit ovat löytäneet siihen porsaanreiän."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vanhenemme ja sitten kuolemme. Meduusa [[Turritopsis dohrnii]] voi kuitenkin palata nuorisovaiheeseen ja aloittaa alusta. Simpukka **Ming** eli **507 vuotta**. Ikääntyminen ei siis ole yleinen sääntö: se on prosessi, jota tietyt lajit kiertävät."
+          "text": "Me vanhenemme ja sitten kuolemme. Silti [[Turritopsis dohrnii]] -meduusa voi palata nuoruusvaiheeseensa ja aloittaa alusta. **Ming**-simpukka eli **507 vuotta**. Ikääntyminen ei siis ole yleinen sääntö: se on prosessi, jonka jotkin lajit onnistuvat kiertämään."
         },
         {
           "type": "paragraph",
-          "text": "Näitä poikkeuksia tutkimalla tutkijat etsivät vähemmän tieteiskirjallisuuden kuolemattomuutta kuin elämän temppuja solujen parantamiseksi."
+          "text": "Näitä poikkeuksia tutkiessaan tutkijat eivät niinkään etsi tieteisfiktion kuolemattomuutta vaan luonnon keinoja korjata soluja paremmin."
         }
       ]
     },
@@ -33,40 +33,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ikääntyminen ei ole vain \"kulumista\" kuin kone. Se on epätasapaino: vauriot kertyvät nopeammin kuin korjaukset."
+          "text": "Ikääntyminen ei ole pelkkää koneen kaltaista ”kulumista”. Se on epätasapaino: vauriot kertyvät nopeammin kuin niitä ehditään korjata."
         },
         {
           "type": "image",
           "asset": "chromosome_dna_telomere_aging_cell",
           "ratio": "auto",
-          "caption": "Telomeerit kromosomien päissä lyhenevät jokaisen solun jakautumisen myötä."
+          "caption": "Kromosomien päissä olevat telomeerit lyhenevät jokaisessa solunjakautumisessa."
         },
         {
           "type": "paragraph",
-          "text": "Kromosomiemme päissä oleva [[Telomeerit]] toimii kuin kengännauhojen kärjet. Jokaisella solunjakaumalla ne lyhenevät. Liian lyhyt, solu lakkaa jakautumasta. Samaan aikaan aineenvaihdunta tuottaa aggressiivisia molekyylejä, jotka vahingoittavat proteiineja ja DNA:ta. \"Zombie\"-solut kerääntyvät ja tulehtivat ympärillään olevia kudoksia."
+          "text": "Kromosomiemme päissä [[telomeerit]] toimivat kuin kengännauhojen kärkiholkit. Ne lyhenevät jokaisessa solunjakautumisessa. Kun ne käyvät liian lyhyiksi, solu lakkaa jakautumasta. Samaan aikaan aineenvaihdunta tuottaa aggressiivisia molekyylejä, jotka vaurioittavat proteiineja ja DNA:ta. Silloin kertyy ”zombisoluja”, jotka aiheuttavat tulehdusta ympäröiviin kudoksiin."
         },
         {
           "type": "funFact",
-          "text": "Tardigrade, pieni \"vesikarhu\", voi melkein lakata elämästä kuivumalla. Hänen aineenvaihduntansa putoaa **99,99 %:iin**, ja hän selviytyy avaruuden tyhjiöstä tai äärimmäisestä säteilystä ikääntymättä."
+          "text": "Pikkuruinen karhukainen eli ”vesikarhu” voi kuivuessaan melkein lakata elämästä. Sen aineenvaihdunta hidastuu jopa **99,99 %**, ja se kestää avaruuden tyhjiön tai äärimmäisen säteilyn juuri ikääntymättä."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
-      "title": "Mestarit, jotka välttävät kuolemaa",
+      "title": "Kuoleman kiertävät mestarit",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Loukkaantunut tai nälkäinen [[Turritopsis dohrnii]] muuttaa aikuiset solunsa \"tyhjiksi\" soluiksi, minkä jälkeen siitä tulee jälleen polyyppi, aloitusvaihe. Tämä askel taaksepäin, nimeltään transdifferentiaatio, antaa sille eräänlaisen **biologisen kuolemattomuuden**."
+          "text": "Kun [[Turritopsis dohrnii]] loukkaantuu tai näkee nälkää, se muuttaa aikuiset solunsa ”tyhjiksi” soluiksi ja palaa polyypiksi, elämänsä lähtövaiheeseen. Tämä paluu taaksepäin, transdifferentiaatio, antaa sille eräänlaisen **biologisen kuolemattomuuden**."
         },
         {
           "type": "paragraph",
-          "text": "**hydra**, pieni makean veden polyyppi, uudistaa koko kehonsa [[kantasolut]]:n lähes rajattoman määrän ansiosta. Hän ei osoita mitattavia ikääntymisen merkkejä. Keulavalas voi ylittää **200 vuotta** erittäin tehokkaan DNA-korjauksen ja vahvan syövän vastustuskyvyn ansiosta."
+          "text": "**Hydra**, pieni makean veden polyyppi, uudistaa koko kehonsa: sen apuna ovat [[kantasolut]], joita sillä on lähes rajaton varasto. Siinä ei näy mitattavia ikääntymisen merkkejä. Grönlanninvalas puolestaan voi elää yli **200 vuotta**, koska sen DNA:n korjaus on erittäin tehokasta ja se vastustaa hyvin syöpää."
         },
         {
           "type": "funFact",
-          "text": "Hummerit tuottavat telomeraasia kaikkialla kehossaan: niiden telomeerit eivät lyhene. Ne kasvavat koko elämänsä ajan ja kuolevat varsinkin, kun sulaminen tulee liian kalliiksi."
+          "text": "Hummerit tuottavat telomeraasia kaikkialla kehossaan, joten niiden telomeerit eivät lyhene. Ne kasvavat koko elämänsä ja kuolevat useimmiten silloin, kun nahanluonti käy liian raskaaksi."
         }
       ]
     },
@@ -77,11 +77,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ajatuksena ei ole enää vain hoitaa Alzheimerin tautia tai nivelrikkoa yksitellen, vaan hyökätä itse ikääntymiseen. **senolyyttiset aineet** pyrkii poistamaan zombiesoluja. Eläimillä tämä on jo uudistanut tiettyjä toimintoja."
+          "text": "Ajatuksena ei ole enää vain hoitaa Alzheimerin tautia tai nivelrikkoa yksi kerrallaan, vaan käydä itse ikääntymisen kimppuun. **Senolyytit** pyrkivät poistamaan zombisolut. Eläimillä ne ovat jo nuorentaneet joitakin elimistön toimintoja."
         },
         {
           "type": "paragraph",
-          "text": "Kalorien rajoittaminen ilman aliravitsemusta aktivoi myös korjausreittejä, erityisesti hidastamalla [[mTOR]]-proteiinia, joka kiihdyttää kasvua... ja joskus myös laskua. Muut laboratoriot yrittävät \"kelata kelloa\" soluista, kuten meduusoista, muuttamatta niitä kasvaimeksi."
+          "text": "Kalorien rajoittaminen ilman aliravitsemusta käynnistää myös korjausmekanismeja, etenkin jarruttamalla [[mTOR]]-proteiinia, joka kiihdyttää kasvua… ja joskus myös rappeutumista. Toiset laboratoriot yrittävät meduusan tapaan ”kääntää solujen kelloa taaksepäin” muuttamatta soluja kasvaimiksi."
         }
       ]
     },
@@ -92,15 +92,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jopa biologisesti kuolematon laji kuolee petoeläimiin, tauteihin tai katastrofeihin. Kuolema on edelleen evoluution liikkeellepaneva voima: se väistää uusia, paremmin sopeutuneita sukupolvia."
+          "text": "Biologisesti kuolematonkin laji kuolee saalistajien, tautien tai onnettomuuksien vuoksi. Kuolema on yhä evoluution moottori: se tekee tilaa uusille, paremmin sopeutuneille sukupolville."
         },
         {
           "type": "paragraph",
-          "text": "Ihmisille realistinen haaste ei ole elää ikuisesti, vaan pidentää vuosia **terveenä**. Pitkäikäinen teknologia nostaisi myös valtavia kysymyksiä oikeudenmukaisuudesta ja resursseista."
+          "text": "Ihmiselle realistinen tavoite ei ole elää ikuisesti vaan lisätä **terveitä** elinvuosia. Teknologiaksi muuttunut pitkäikäisyys herättäisi myös valtavia kysymyksiä tasa-arvosta ja resurssien riittävyydestä."
         },
         {
           "type": "takeaway",
-          "text": "Biologinen kuolemattomuus perustuu solujen korjaamiseen tai palauttamiseen. Turritopsis dohrnii meduusa nuoreutuu; hydra uusiutuu jatkuvasti. Ikääntyminen ei ole yleinen kuolemantapaus."
+          "text": "Biologinen kuolemattomuus perustuu solujen korjaamiseen tai nollaamiseen. Turritopsis dohrnii -meduusa nuortuu; hydra uusiutuu lakkaamatta. Ikääntyminen ei ole kaikkia koskeva kohtalo."
         }
       ]
     }

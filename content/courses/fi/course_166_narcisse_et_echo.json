@@ -1,14 +1,14 @@
 {
   "id": "course_166_narcisse_et_echo",
   "title": "Mistä Narkissoksen myytti on peräisin?",
-  "subtitle": "Rakkautta, jota ei voi tavata",
+  "subtitle": "Rakkaus, joka ei kohtaa",
   "subject": "mythologie",
   "subcategory": "Kreikan jumalat",
-  "description": "Kaiku voi vain toistaa. Narcissus rakastaa vain heijastustaan. Kaksi kohtaloa, jotka eivät koskaan pääse yhteen ja jotka synnyttävät sanan narsismi.",
+  "description": "Ekho osaa vain toistaa. Narkissos rakastaa vain omaa heijastustaan. Kaksi kohtaloa, jotka eivät koskaan kohtaa ja joista syntyy sana narsismi.",
   "hero": {
     "image": "narcisse_et_echo",
     "ratio": "16:9",
-    "hook": "Hänellä ei ole enää omaa ääntä. Hänellä on silmät vain itselleen. Heidän tapaamisensa on mahdotonta."
+    "hook": "Ekholla ei ole enää omaa ääntä. Narkissos näkee vain itsensä. Heidän kohtaamisensa on mahdoton."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Roomalainen runoilija [[Ovid]] kertoo kirjassaan [[Metamorfoosit]] **Narsissi**:n ja **Kaiku**:n ristikkäisestä kohtalosta. Hän on nymfi, jolta on riistetty omat sanansa. Hän, nuori mies, joka valloitti kuvansa."
+          "text": "Roomalainen runoilija [[Ovidius]] kertoo teoksessaan [[Muodonmuutoksia]] **Narkissoksen** ja **Ekhon** toisiinsa kietoutuvista kohtaloista. Ekho on nymfi, jolta on viety oma puhe. Narkissos taas on nuori mies, jonka oma kuva lumoaa."
         },
         {
           "type": "paragraph",
-          "text": "Tämä myytti on sanan **narsismi** suora lähde. Se puhuu mahdottomasta rakkaudesta, välinpitämättömyydestä ja vain itsensä haluamisen ansasta."
+          "text": "Tämä myytti on sanan **narsismi** suora lähde. Se kertoo mahdottomasta rakkaudesta, välinpitämättömyydestä ja siitä ansasta, että ihminen haluaa vain itseään."
         }
       ]
     },
     {
       "id": "course_166_narcisse_et_echo_p1",
-      "title": "Kaiku menettää äänensä",
+      "title": "Ekho menettää äänensä",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ennen kuin siitä tulee yksinkertainen ääniilmiö, **Kaiku** on [[Oread]], vuoristonymfi, joka on kuuluisa runsaasta puheestaan. Hän auttaa **Zeusta**:tä, jumalten kuningasta, piilottamaan uskottomuutensa. Kun hän liittyy muihin nymfiin, hän pitää **Hera**:n, mustasukkaisen vaimon, loputtomilla keskusteluilla."
+          "text": "Ennen kuin **Ekhosta** tulee pelkkä ääni-ilmiö, hän on [[Oreadi]], vuorten nymfi, joka on kuuluisa puheliaisuudestaan. Hän auttaa jumalten kuningasta **Zeusta** salaamaan uskottomuutensa. Kun Zeus tapailee muita nymfejä, Ekho viivyttää tämän mustasukkaista vaimoa **Heraa** loputtomalla jutustelulla."
         },
         {
           "type": "image",
           "asset": "echo_nymph_mountain_greek_mythology_painting",
           "ratio": "4:3",
-          "caption": "Kaiku, joka on tuomittu vain toistuvaksi ääneksi."
+          "caption": "Ekho, joka on tuomittu olemaan enää pelkkä toistava ääni."
         },
         {
           "type": "paragraph",
-          "text": "Kun Hera huomaa juonen, hän rankaisee Echoa. Nymfi ei voi enää aloittaa lausetta. Hän voi vain **toistaa muiden viimeiset sanat**. Hänen omilla haluillaan ei ole enää kieltä."
+          "text": "Kun Hera huomaa juonen, hän rankaisee Ekhoa. Nymfi ei voi enää aloittaa lausetta. Hän voi vain **toistaa toisten viimeiset sanat**. Omille haluilleen hänellä ei ole enää sanoja."
         },
         {
           "type": "funFact",
-          "text": "Toisessa versiossa jumala **Bang**, joka on raivoissaan hylätyksi tulemisesta, on repinyt Echon palasiksi. Ovidiuksen versio, jossa häntä kulutetaan rakkaudella, on säilynyt tunnetuimpana."
+          "text": "Toisessa versiossa jumala **Pan** raivostuu, kun Ekho torjuu hänet, ja antaa repiä nymfin kappaleiksi. Ovidiuksen versio, jossa Ekho riutuu rakkaudesta, on jäänyt tunnetuimmaksi."
         }
       ]
     },
     {
       "id": "course_166_narcisse_et_echo_p2",
-      "title": "Narcissus kieltäytyy kaikesta rakkaudesta",
+      "title": "Narkissos torjuu kaiken rakkauden",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Narsissi** on jokijumala Cephisuksen ja nymfi Liriopen poika. Hänen kauneutensa houkuttelee kaikkia. Hänen ylpeytensä työntää kaikki pois. Ennakoija **Tirésias** oli varoittanut äitiään: \"Hän elää vanhaksi, jos hän ei tunne itseään.\""
+          "text": "**Narkissos** on jokijumala Kefisoksen ja nymfi Leiriopen poika. Hänen kauneutensa vetää puoleensa kaikkia. Hänen ylpeytensä taas torjuu kaikki. Tietäjä **Teiresias** oli varoittanut Narkissoksen äitiä: ”Hän elää vanhaksi, jos ei tunne itseään.”"
         },
         {
           "type": "paragraph",
-          "text": "Metsässä Echo näkee hänet ja rakastuu häneen. Hän ei pysty puhumaan ensin, vaan odottaa. Narcisse soittaa: \"Onko siellä ketään?\" Hän vastaa: \"Joku!\" Kun hän lähestyy halatakseen häntä, hän hylkää hänet halveksuen."
+          "text": "Metsässä Ekho näkee Narkissoksen ja rakastuu häneen. Koska hän ei voi puhua ensin, hän odottaa. Narkissos huutaa: ”Onko siellä ketään?” Ekho vastaa: ”Ketään!” Kun Ekho lähestyy halatakseen Narkissosta, tämä torjuu hänet halveksien."
         },
         {
           "type": "funFact",
-          "text": "Nöyryytettynä Echo vetäytyy luoliin. Hän lopettaa syömisen. Hänen ruumiinsa kuihtuu, hänen luunsa muuttuvat kiveksi. Vain vaeltava ääni jää vuorille."
+          "text": "Nöyryytetty Ekho vetäytyy luoliin. Hän lakkaa syömästä. Hänen ruumiinsa kuihtuu, ja hänen luunsa muuttuvat kiveksi. Jäljelle jää vain vuorilla harhaileva ääni."
         }
       ]
     },
@@ -77,19 +77,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Narkissuksen julmuus väsyttää jumalat. Yksi hänen uhreistaan rukoilee [[Nemesis]], oikeudenmukaisen koston jumalatarta: että hän siten rakastaisi itseään eikä koskaan saisi hallita rakkautensa kohdetta. Toive toteutuu."
+          "text": "Jumalat kyllästyvät Narkissoksen julmuuteen. Yksi hänen uhreistaan rukoilee, ja rukouksen kuulee [[Nemesis]], oikeutetun koston jumalatar. Uhri pyytää, että Narkissos rakastaisi itse samoin eikä koskaan saisi rakkautensa kohdetta omakseen. Toive toteutuu."
         },
         {
           "type": "paragraph",
-          "text": "Eräänä kuumana päivänä Narcisse nojaa kirkkaaseen lähteeseen. Hän paljastaa kasvonsa. Hän luulee näkevänsä vesihengen. Hän rakastuu häneen. Teiresiaksen ennustus toteutuu: tunteessaan itsensä hän menettää itsensä."
+          "text": "Eräänä kuumana päivänä Narkissos kumartuu kirkkaan lähteen ylle. Hän näkee vedessä omat kasvonsa. Hän luulee näkevänsä vedenhengen. Hän rakastuu siihen. Teiresiaan ennustus toteutuu: kun hän oppii tuntemaan itsensä, hän tuhoutuu."
         },
         {
           "type": "funFact",
-          "text": "Hän yrittää suudella heijastusta. Vesi muuttuu sameaksi. Tämän steriilin intohimon vankina hän unohtaa syödä ja juoda."
+          "text": "Hän yrittää suudella heijastusta. Vesi samenee. Hedelmättömän intohimonsa vankina hän unohtaa syödä ja juoda."
         },
         {
           "type": "paragraph",
-          "text": "Sitten tulee traaginen selkeys: \"Minä olen se, jonka näen.\" Mahdoton yhdistyä itsensä kanssa. Narkissos on kulutettu. Kaiku, uskollinen kaikesta huolimatta, toistaa viimeiset jäähyväiset."
+          "text": "Sitten tulee traaginen oivallus: ”Minä olen se, jonka näen.” Itsensä kanssa ei voi yhdistyä. Narkissos riutuu. Ekho, kaikesta huolimatta uskollinen, toistaa hänen viimeiset jäähyväisensä."
         }
       ]
     },
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kun [[Naiadit]], vesinymfit, ja [[Dryadit]], puunymfit, tulevat hautajaisiin, ruumis on kadonnut. Sen tilalle kasvaa kukka, jossa on keltainen sydän ja valkoiset terälehdet: **narsissi**, joka nojaa veteen kuin nuori mies kuvaansa kohti."
+          "text": "Kun [[Naiadit]], vesien nymfit, ja [[Dryadit]], puiden nymfit, saapuvat hautajaisiin, ruumis on kadonnut. Sen paikalla kasvaa kukka, jolla on keltainen keskusta ja valkoiset terälehdet: **narsissi**, joka kumartuu veden puoleen kuin nuorukainen kuvansa puoleen."
         },
         {
           "type": "paragraph",
-          "text": "Vuonna **1914** **Freud** julkaisi \"Narsismin esittelyn\". Hän kuvailee rakkautta, joka on kääntynyt itseään kohtaan eikä toiseen. Myytistä tulee avain moderniin psykologiaan ja varoitus: ilman todellista kohtaamista jäljellä on vain ääni ilman ruumista ja kukka ilman sielua."
+          "text": "Vuonna **1914** **Freud** julkaisee kirjoituksen ”Johdatus narsismiin”. Siinä hän kuvaa rakkautta, joka suuntautuu omaan itseen eikä toiseen. Myytistä tulee yksi modernin psykologian avaimista ja samalla varoitus: ilman todellista kohtaamista jäljelle jää vain ääni ilman ruumista ja kukka ilman sielua."
         },
         {
           "type": "takeaway",
-          "text": "**Kaiku** kuolee, koska hän ei pysty ilmaisemaan halujaan. **Narsissi** hukkuu, koska hän halusi vain itseään. Kaksi tapaa kaipaa toista, yksi tragedia."
+          "text": "**Ekho** kuolee, koska ei voi sanoa ääneen haluaan. **Narkissos** menehtyy, koska ei halunnut ketään muuta kuin itsensä. Kaksi tapaa jäädä kohtaamatta toista, yksi ainoa tragedia."
         }
       ]
     }

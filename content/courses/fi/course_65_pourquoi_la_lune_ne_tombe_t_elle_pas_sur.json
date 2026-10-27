@@ -4,11 +4,11 @@
   "subtitle": "Rata & painovoima",
   "subject": "sciences",
   "subcategory": "Maa ja maailmankaikkeus",
-  "description": "Kuu laskee jatkuvasti kohti Maata. Hän vain kaipaa sitä joka kerta. Juuri sitä kiertorata on.",
+  "description": "Kuu putoaa jatkuvasti kohti Maata. Se vain menee joka kerta ohi. Juuri sitä kiertorata on.",
   "hero": {
     "image": "pourquoi_la_lune_ne_tombe_pas",
     "ratio": "16:9",
-    "hook": "Kuu laskee meitä kohti. Hän vain kaipaa maapalloa joka käänteessä."
+    "hook": "Kuu putoaa meitä kohti. Se vain menee joka kierroksella Maan ohi."
   },
   "sections": [
     {
@@ -18,26 +18,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jos Maan painovoima vetää Kuuta, miksi se ei törmää meihin? Vastaus vaikuttaa oudolta: Kuu **todellakin putoaa** kohti Maata. Hän vain kaipaa sitä joka hetki."
+          "text": "Jos Maan painovoima vetää Kuuta puoleensa, miksi se ei törmää meihin? Vastaus kuulostaa oudolta: Kuu todella **putoaa** kohti Maata. Se vain menee joka hetki ohi."
         },
         {
           "type": "paragraph",
-          "text": "Pudotuksen ja sivuttaisnopeuden välinen tasapaino on **kiertoradalla**, kaareva lentorata tähden ympärillä. Englantilainen fyysikko **Isaac Newton** oli ensimmäinen, joka yhdisti omenan putoamisen ja tähtien liikkeet samalla idealla."
+          "text": "Tätä putoamisen ja sivuttaisnopeuden tasapainoa kutsutaan **kiertoradaksi**: se on kaareva rata taivaankappaleen ympäri. Englantilainen fyysikko **Isaac Newton** selitti ensimmäisenä omenan putoamisen ja taivaankappaleiden liikkeen samalla ajatuksella."
         },
         {
           "type": "funFact",
-          "text": "Jos painoisit **60 kg** maan päällä, painaisit vain noin **10** Kuussa: sen painovoima on kuusi kertaa heikompi."
+          "text": "Jos painaisit Maassa **60 kg**, painaisit Kuussa vain noin **10** kiloa: Kuun painovoima on kuusi kertaa heikompi."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
-      "title": "Newtonin kuvitteellinen kaanoni",
+      "title": "Newtonin kuviteltu tykki",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton kuvittelee tykin vuoren huipulla niin korkealla, että se nousisi ilmakehästä. Ammumme pallon vaakasuoraan. Pienellä teholla se putoaa nopeasti. Enemmän voimalla hän menee pidemmälle."
+          "text": "Newton kuvittelee tykin niin korkean vuoren huipulle, että vuori ulottuisi ilmakehän yläpuolelle. Tykillä ammutaan kuula vaakasuoraan. Pienellä voimalla kuula putoaa nopeasti. Suuremmalla voimalla se lentää pidemmälle."
         },
         {
           "type": "image",
@@ -47,11 +47,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Tietyllä nopeudella, nimeltään [[Ratanopeus]], tapahtuu jotain merkittävää. Kun pallo putoaa, maapallo, joka on pyöreä, kaartaa sen alle samalla nopeudella. Ammus putoaa… koskematta koskaan maahan. Hän on **pysyvässä vapaassa pudotuksessa** painovoiman vetämänä ilman törmäystä."
+          "text": "Tietyllä nopeudella, nimeltään [[Ratanopeus]], tapahtuu jotain merkillistä. Kun kuula putoaa, pyöreän Maan pinta kaartuu sen alla samaa tahtia. Ammus putoaa… koskematta koskaan maahan. Se on **jatkuvassa vapaassa pudotuksessa**: painovoima vetää sitä, mutta se ei törmää."
         },
         {
           "type": "paragraph",
-          "text": "Kuu tekee saman asian. Hänellä on tarpeeksi sivunopeutta muuttaakseen putoamisen silmukaksi. Ilman tätä nopeutta se sukeltaisi suoraan meitä kohti."
+          "text": "Kuu tekee samoin. Sillä on tarpeeksi sivuttaisnopeutta, jotta putoaminen muuttuu kierrokseksi. Ilman tätä nopeutta se syöksyisi suoraan meitä kohti."
         }
       ]
     },
@@ -62,57 +62,57 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kuu kiertää noin **384 000 km**. Sen sivunopeus on noin **1 km/s**. Jos se pysähtyy äkillisesti, se kaatuu muutamassa päivässä. Jos painovoima yhtäkkiä katoaisi, se kulkisi suoraa linjaa avaruudessa [[Inertia]] periaatteen mukaan: kappale säilyttää nopeudensa, jos sitä ei hidasta."
+          "text": "Kuu kiertää noin **384 000 km** etäisyydellä. Sen sivuttaisnopeus on noin **1 km/s**. Jos se pysähtyisi kuin seinään, se syöksyisi Maahan muutamassa päivässä. Jos painovoima katoaisi yhtäkkiä, Kuu jatkaisi suoraan avaruuteen [[Inertia]]-periaatteen mukaisesti: kappale säilyttää nopeutensa, jos mikään ei hidasta sitä."
         },
         {
           "type": "paragraph",
-          "text": "[[Newtonin yleisen painovoiman laki]] sanoo, että jokainen massa vetää puoleensa jokaista muuta massaa ja vetovoima pienenee etäisyyden, tarkemmin sanottuna etäisyyden neliön myötä. Mitä lähempänä satelliitti on, sitä nopeammin sen täytyy mennä putoamisen välttämiseksi."
+          "text": "[[Newtonin yleisen painovoiman laki]] sanoo, että jokainen massa vetää puoleensa jokaista muuta massaa ja että vetovoima heikkenee etäisyyden kasvaessa, tarkemmin sanottuna etäisyyden neliön mukaan. Mitä lähempänä satelliitti on, sitä nopeammin sen täytyy kulkea, jotta se ei putoa."
         },
         {
           "type": "funFact",
-          "text": "Kansainvälinen avaruusasema, joka sijaitsee vain **400 km** korkeudessa, kulkee noin **28 000 km/h**. Se kiertää maapallon **90 minuuttia**. Kauempana oleva Kuu kestää **27,3 päivää**."
+          "text": "Kansainvälinen avaruusasema kiitää vain **400 km** korkeudessa noin **28 000 km/h** nopeudella. Se kiertää Maan **90 minuutissa**. Kauempana oleva Kuu tarvitsee siihen **27,3 päivää**."
         },
         {
           "type": "paragraph",
-          "text": "Joten kiertorata ei ole taikuutta. Se on jatkuva kompromissi \"kadon\" ja \"liikun liian nopeasti lyödäkseni\" välillä."
+          "text": "Kiertorata ei siis ole taikaa. Se on jatkuva kompromissi ”putoan” ja ”kuljen liian nopeasti osuakseni” välillä."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p3",
-      "title": "Vuorovesi työntää Kuun pois",
+      "title": "Vuorovedet loitontavat Kuuta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rata ei ole kiinteä. [[Vuorovesivoimat]] tulee peliin. Kuun painovoima vetää kovemmin sitä puolta olevaa Maan puolta kuin sen keskustaa. Se muuttaa valtamerten muotoja ja muodostaa vesipulloksen."
+          "text": "Kiertorata ei ole muuttumaton. Peliin tulevat [[vuorovesivoimat]]. Kuun painovoima vetää Maan sitä puolta, joka on Kuuta kohti, voimakkaammin kuin Maan keskustaa. Se venyttää valtameriä ja muodostaa vesipullistuman."
         },
         {
           "type": "paragraph",
-          "text": "Kun maa pyörii akselinsa ympäri nopeammin kuin Kuu pyörii sen ympärillä, tämä harju etenee hieman Kuun edessä. Kitka hidastaa Maan pyörimistä hyvin vähän: päivämme pitenevät noin **1,4 millisekuntia** vuosisadassa. Vastineeksi Kuu siirtyy pois noin **3,8 cm** vuodessa."
+          "text": "Koska Maa pyörii akselinsa ympäri nopeammin kuin Kuu kiertää sitä, pullistuma kulkee hieman Kuun edellä. Kitka hidastaa Maan pyörimistä hyvin vähän: vuorokautemme pitenevät noin **1,4 millisekuntia** vuosisadassa. Vastineeksi Kuu loittonee noin **3,8 cm** vuodessa."
         },
         {
           "type": "paragraph",
-          "text": "Miljardeja vuosia sitten Kuu oli paljon lähempänä. Vuorovedet olivat valtavia. Tämä veden ja kemian sekoittaminen on saattanut auttaa varhaisia elämänmuotoja. Ja dinosaurukset asuivat maapallolla, jossa päivät kestivät vain **22 tai 23 tuntia**."
+          "text": "Miljardeja vuosia sitten Kuu oli paljon lähempänä. Vuorovedet olivat valtavia. Veden ja kemiallisten aineiden sekoittuminen saattoi auttaa ensimmäisiä elämänmuotoja. Dinosaurukset puolestaan elivät Maassa, jossa vuorokausi kesti vain **22 tai 23 tuntia**."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
-      "title": "Pimennykset…toistaiseksi",
+      "title": "Pimennyksiä… toistaiseksi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nykyään Aurinko on geometrisen sattuman seurauksena noin **400 kertaa** suurempi kuin Kuu, mutta myös **400 kertaa** kauempana. Näillä kahdella on siis sama **ilmiökoko**, kulma, jossa näemme ne taivaalla. Täydelliset auringonpimennykset ovat mahdollisia."
+          "text": "Geometrisen sattuman ansiosta Aurinko on nykyään noin **400 kertaa** Kuuta suurempi, mutta myös **400 kertaa** kauempana. Siksi niillä on sama **näennäinen koko** eli kulma, jossa ne näkyvät taivaalla. Täydelliset auringonpimennykset ovat mahdollisia."
         },
         {
           "type": "paragraph",
-          "text": "Noin **600 tuhatta dollaria** kuluttua Kuu on liian kaukana peittääkseen Auringon kokonaan. Jäljelle jää vain rengaspimennykset: valorengas kuun kiekon ympärillä. Hyvin pitkällä aikavälillä Maa ja Kuu voisivat synkronoida: kukin keho näyttäisi aina samat kasvot toisilleen. Mutta Aurinko muuttuu **punainen jättiläiseksi**, meidän kaltaisen tähden viimeinen vaihe, muuttaa järjestelmän paljon aikaisemmin."
+          "text": "Noin **600 miljoonan vuoden** kuluttua Kuu on liian kaukana peittääkseen Auringon kokonaan. Jäljelle jäävät vain rengasmaiset pimennykset: valorengas Kuun kiekon ympärillä. Hyvin pitkällä aikavälillä Maa ja Kuu voisivat synkronoitua: kumpikin näyttäisi toiselle aina saman puolensa. Mutta kun Aurinko muuttuu **punaiseksi jättiläiseksi**, mikä on meidän kaltaisemme tähden viimeinen vaihe, se mullistaa järjestelmän paljon ennen sitä."
         },
         {
           "type": "takeaway",
-          "text": "Kuu ei törmää, koska sen sivunopeus tasapainottaa Maan vetovoimaa: se on jatkuvassa vapaassa pudotuksessa. Ja se poistuu edelleen noin **3,8 cm** vuodessa."
+          "text": "Kuu ei syöksy Maahan, koska sen sivuttaisnopeus tasapainottaa Maan vetovoiman: se on jatkuvassa vapaassa pudotuksessa. Lisäksi se loittonee yhä noin **3,8 cm** vuodessa."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_129_l_art_abstrait_kandinsky_et_mondrian",
   "title": "Abstrakti taide: Kandinsky ja Mondrian",
-  "subtitle": "1910-1920 luvut",
+  "subtitle": "1910-1920-luvut",
   "subject": "art",
   "subcategory": "Maalaustaide ja tyylisuunnat",
-  "description": "Ensimmäistä kertaa maalaus ei enää edusta mitään näkyvästä maailmasta. **Kandinsky** vapauttaa lomakkeita; **Mondrian** pelkistää kaiken geometriaan.",
+  "description": "Ensimmäistä kertaa maalaus ei esitä mitään näkyvästä maailmasta. **Kandinsky** vapauttaa muodot; **Mondrian** pelkistää kaiken geometriaksi.",
   "hero": {
     "image": "l_art_abstrait_kandinsky_et_mondrian",
     "ratio": "16:9",
-    "hook": "Entä jos maalauksen ei enää tarvitsisi kertoa maailman tarinaa ihmisten liikuttamiseksi?"
+    "hook": "Entä jos maalauksen ei tarvitsisi enää kertoa maailmasta koskettaakseen?"
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vuosina **1910** ja **1920** abstraktio rikkoi maalauksen vanhimman säännön: [[mimesis]], velvollisuuden edustaa näkyvää maailmaa. Pöytä ei ole enää ikkuna: se on itsenäinen objekti."
+          "text": "**1910-** ja **1920-luvuilla** abstraktio rikkoo maalaustaiteen vanhimman säännön, joka on [[mimesis]] eli velvollisuus esittää näkyvä maailma. Taulu ei ole enää ikkuna: se on itsenäinen esine."
         },
         {
           "type": "paragraph",
-          "text": "Kaksi rinnakkaista tehtävää: **Wassily Kandinsky** kääntää sielun vapaiden muotojen kautta; **Piet Mondrian** etsii maailmankaikkeuden lakeja puhtaassa geometriassa."
+          "text": "Kaksi rinnakkaista etsintää: **Wassily Kandinsky** ilmaisee sielua vapain muodoin; **Piet Mondrian** etsii maailmankaikkeuden lakeja puhtaasta geometriasta."
         }
       ]
     },
     {
       "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_p1",
-      "title": "Kandinsky: maalaus kuin yksi säveltää",
+      "title": "Kandinsky: maalata kuin säveltäisi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Wassily Kandinsky** (1866-1944), venäläinen lakimies, josta tuli taidemaalari, asettui Müncheniin. **1910**:n tienoilla, palatessaan kotiin iltahämärässä, hän hukkuu maalaukseen, jonka aihetta hän ei tunnista. Se on yksi hänen, ylösalaisin. Todellisuuden samankaltaisuus näyttää sitten hänelle esteenä."
+          "text": "**Wassily Kandinsky** (1866-1944), taidemaalariksi ryhtynyt venäläinen juristi, asettuu Müncheniin. Noin vuonna **1910** hän palaa kotiin iltahämärissä ja järkyttyy maalauksesta, jonka aihetta hän ei tunnista. Se on hänen oma työnsä, ylösalaisin asetettuna. Silloin hän alkaa nähdä todellisuuden jäljittelyn esteenä."
         },
         {
           "type": "image",
           "asset": "kandinsky_first_abstract_watercolor_1910",
           "ratio": "4:3",
-          "caption": "Noin 1910 Kandinsky otti askeleen kohti abstraktiota."
+          "caption": "Noin vuonna 1910 Kandinsky ottaa askeleen kohti abstraktiota."
         },
         {
           "type": "funFact",
-          "text": "Synestesialla lahjana hän sanoi \"kuulleen\" värejä ja \"näkevänsä\" ääniä. Tästä syystä sen otsikot: sävellykset, improvisaatiot."
+          "text": "Hänellä oli synestesia: hän sanoi ”kuulevansa” värit ja ”näkevänsä” äänet. Siitä hänen teostensa nimet: Sommitelmat, Improvisaatiot."
         },
         {
           "type": "paragraph",
-          "text": "Vuonna **1911** hän julkaisi teoksen *Henkisyys taiteessa* ja teoretisoi [[lyyrinen abstraktio]]. Jokaisella värillä on värinä: sininen herättää taivaallisen; keltainen, aggressiivisempi, voi \"kuulostaa\" trumpetilta. Maalauksen tulee vaikuttaa sieluun kuin musiikin, ilman kerrontaa."
+          "text": "Vuonna **1911** hän julkaisee teoksen *Henkisestä taiteessa* ja luo teoreettisen pohjan, jolle rakentuu [[lyyrinen abstraktio]]. Jokaisella värillä on oma värähtelynsä: sininen tuo mieleen taivaallisen; aggressiivisempi keltainen voi ”soida” kuin trumpetti. Maalauksen pitää vaikuttaa sieluun musiikin tavoin, ilman kertomusta."
         }
       ]
     },
@@ -58,21 +58,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hollantilainen **Piet Mondrian** (1872-1944) saavuttaa abstraktion todellisuuden hitaalla [[dekantointi]]. Hänen puusarjansa **1908**:n ja **1912**:n välillä näyttää rungon ja oksat, jotka katoavat viivojen mukaisesti."
+          "text": "Hollantilaisen **Piet Mondrianin** (1872-1944) tie abstraktioon on todellisuuden hidas [[dekantointi]]. Vuosina **1908**-**1912** maalatuissa puusarjoissa runko ja oksat katoavat, ja tilalle jää viivojen verkko."
         },
         {
           "type": "image",
           "asset": "mondrian_tree_series_abstraction_painting",
           "ratio": "4:3",
-          "caption": "Puusta linjaverkostoon: Mondrian yksinkertaistaa sen olennaiseen."
+          "caption": "Puusta viivojen verkostoon: Mondrian pelkistää kaiken olennaiseen."
         },
         {
           "type": "funFact",
-          "text": "Hän pyysi usein istumaan ravintoloissa selkä ikkunaa vasten, jotta hän ei näkisi puita ja puutarhoja, joita hän piti liian järjettömänä."
+          "text": "Ravintolassa hän pyysi usein saada istua selkä ikkunaan päin, jottei näkisi puita ja puutarhoja, joita hän piti liian epäjärjestyksellisinä."
         },
         {
           "type": "paragraph",
-          "text": "Vuonna **1917** hän perusti liikkeen **De Stijl** ja teoria **neoplastismi**: taiteen pelkistäminen kosmoksen elementeiksi. Jäljelle jää vain suora viiva ja kolme pääväriä. Oikean kulman on heijastettava universaalien voimien tasapainoa, kaukana yksittäisistä tunteista. Hän jopa kielsi vihreän studiossaan, jota pidettiin liian \"luonnollisena\"."
+          "text": "Vuonna **1917** hän perustaa **De Stijl** -liikkeen ja muotoilee **neoplastismin** teorian: taide pelkistetään kosmoksen perusaineksiin. Jäljelle jäävät vain suora viiva ja kolme pääväriä. Suoran kulman on ilmaistava universaalien voimien tasapainoa, kaukana yksilön tunteista. Hän jopa kieltää vihreän värin ateljeestaan, koska pitää sitä liian ”luonnollisena”."
         }
       ]
     },
@@ -83,13 +83,13 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Abstraktio ei jää museoon. [[Walter Gropius]]:n perustamassa [[Bauhaus]]:ssa vuonna **1919** taidemaalarit, arkkitehdit ja suunnittelijat tekevät yhteistyötä. Kandinsky opettaa siellä; Mondrianin estetiikka inspiroi suunnitelmia ja julkisivuja."
+          "text": "Abstraktio ei jää museoon. Vuonna **1919** [[Walter Gropius]] perustaa arkkitehtuurin ja taideteollisuuden koulun, jonka nimi on [[Bauhaus]]; siellä taidemaalarit, arkkitehdit ja muotoilijat tekevät yhteistyötä. Kandinsky on koulun opettajia; Mondrianin estetiikka innoittaa pohjapiirroksia ja julkisivuja."
         },
         {
           "type": "image",
           "asset": "bauhaus_weimar_gropius_building_1919",
           "ratio": "4:3",
-          "caption": "Bauhaus: kun abstrakti taide kohtaa suunnittelun ja arkkitehtuurin."
+          "caption": "Bauhaus: kun abstrakti taide kohtaa muotoilun ja arkkitehtuurin."
         },
         {
           "type": "funFact",
@@ -97,7 +97,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Moderni muotoilu syntyy: \"muoto seuraa toimintoa\". Gerrit Rietveldin kuuluisa punainen ja sininen tuoli näyttää 3D Mondrianilta. Mondrian havaitsi, että todellinen esine rikkoi abstraktion puhtauden."
+          "text": "Syntyy moderni muotoilu: ”muoto seuraa käyttötarkoitusta”. Gerrit Rietveldin kuuluisa Punasininen tuoli näyttää kolmiulotteiselta Mondrianilta. Mondrian itse kuitenkin katsoi, että todellinen esine rikkoi abstraktion puhtauden."
         }
       ]
     },
@@ -108,7 +108,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ilman tarinaa kerrottavana, maalaus kutsuu katsojan projisoimaan oman merkityksensä. Tämä vapaus avaa [[Käsitteellinen taide]], jossa idea menee materiaalin edelle. Sotien jälkeen abstraktio kertoo myös sen, mitä figuraatio ei enää pysty välittämään."
+          "text": "Kun maalaus ei kerro tarinaa, katsoja saa itse antaa sille merkityksen. Tämän vapauden ansiosta voi syntyä [[Käsitteellinen taide]], jossa idea menee materiaalin edelle. Sotien jälkeen abstraktio ilmaisee myös sen, mitä esittävä taide ei enää jaksa kantaa."
         },
         {
           "type": "timeline",
@@ -116,7 +116,7 @@
             {
               "date": "1910-1911",
               "title": "Abstrakti Kandinsky",
-              "detail": "Spiritual in Art teoretisoi lyyristä abstraktiota."
+              "detail": "Henkisestä taiteessa -teos luo lyyrisen abstraktion teorian."
             },
             {
               "date": "1917",
@@ -132,11 +132,11 @@
         },
         {
           "type": "paragraph",
-          "text": "Heidän opetuksensa säilyy älypuhelinliittymistämme kaupunkikyltteihin. Amerikkalainen [[Abstrakti ekspressionismi]] ja [[Minimal Art]] pidentävät vallankumousta."
+          "text": "Puhelintemme käyttöliittymistä kaupunkien opasteisiin heidän oppinsa elää yhä. Amerikkalainen [[Abstrakti ekspressionismi]] ja [[Minimalismi]] jatkavat vallankumousta."
         },
         {
           "type": "takeaway",
-          "text": "Abstrakti taide syntyy kahdella tavalla: Kandinsky vapauttaa muodot sielun ilmaisuun; Mondrian geometrisoi maailman pyrkiäkseen universaaliin."
+          "text": "Abstrakti taide syntyy kahta tietä: Kandinsky vapauttaa muodot ilmaisemaan sielua; Mondrian geometrisoi maailman tavoitellakseen yleispätevää."
         }
       ]
     }

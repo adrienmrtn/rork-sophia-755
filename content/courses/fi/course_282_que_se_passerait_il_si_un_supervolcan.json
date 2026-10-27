@@ -9,7 +9,7 @@
   "hero": {
     "image": "yellowstone_grand_prismatic_spring_aerial",
     "ratio": "4:3",
-    "hook": "Purkaus alkaisi yhdestä ainoasta paikasta, mutta sen vaikutukset kiertäisivät koko planeetan."
+    "hook": "Purkaus alkaisi yhdestä kohdasta, mutta sen vaikutukset ulottuisivat ympäri maapallon."
   },
   "sections": [
     {
@@ -19,7 +19,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Purkaus, joka syöksee ulos yli **1 000 km³** tuhkaa, kiveä ja kaasuja, tarpeeksi täyttämään **400 miljoonaa** olympiauima-allasta: tällaisesta mittakaavasta puhutaan, kun kyseessä on [[supertulivuori]]. Se ei välttämättä näytä kartiomaiselta vuorelta. Sen jättipurkauksista jää jälkeen pikemminkin [[kaldera]], valtava allas, joka syntyy, kun maa romahtaa suuren magmamäärän paettua sen alta."
+          "text": "Purkaus, joka syöksee ulos yli **1 000 km³** tuhkaa, kiveä ja kaasuja, eli niin paljon, että sillä täyttäisi **400 miljoonaa** olympiauima-allasta: tällaisesta mittakaavasta puhutaan, kun kyseessä on [[supertulivuori]]. Se ei välttämättä näytä kartiomaiselta vuorelta. Sen jättipurkauksista jää jälkeen pikemminkin [[kaldera]], valtava allas, joka syntyy, kun maanpinta luhistuu sen alta purkautuneen suuren magmamäärän jälkeen."
         },
         {
           "type": "paragraph",
@@ -42,7 +42,7 @@
         },
         {
           "type": "funFact",
-          "text": "Tulivuori voi täristä, paisua ja päästää enemmän kaasuja ja sitten rauhoittua ilman pienintäkään purkausta. Herääminen ei ole räjähtämistä."
+          "text": "Tulivuori voi täristä, paisua ja päästää enemmän kaasuja ja sitten vaipua takaisin uneen purkautumatta lainkaan. Herääminen ei ole räjähtämistä."
         }
       ]
     },
@@ -63,7 +63,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Myös valtava tuhka- ja kaasupilari nousisi korkealle tulivuoren ylle. Ja koska maan alta purkautuu valtavia määriä ainesta, osa sen päällä olevasta maasta voisi romahtaa. Purkauksen lähellä tuho olisi katastrofaalinen. Vaara ei kuitenkaan päättyisi siihen: kuuma tuhka ja kaasut leviävät nopeasti, ja tuhkasade koskettaisi paljon laajempaa aluetta."
+          "text": "Myös valtava tuhka- ja kaasupilari nousisi korkealle tulivuoren ylle. Ja koska maan alta purkautuu valtavia määriä ainesta, osa sen päällä olevasta maasta voisi romahtaa. Purkauksen lähellä tuho olisi katastrofaalinen. Vaara ei kuitenkaan päättyisi siihen: kuuma tuhka ja kaasut leviävät nopeasti, ja tuhkasade ulottuisi paljon laajemmalle alueelle."
         }
       ]
     },
@@ -84,7 +84,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Yellowstonen kokoluokan purkauksessa tuhka peittäisi tietokonemallien mukaan suuren osan Pohjois-Amerikkaa ja ulottuisi yli **1 500 kilometrin** päähän tulivuoresta. Kerros ohenisi etäisyyden kasvaessa, mutta sen vaikutukset olisivat vakavia vielä hyvin kaukana kraaterista. Supertulivuoren naapurissa ei tarvitse asua kärsiäkseen seurauksista."
+          "text": "Yellowstonen kokoluokan purkauksessa tuhka peittäisi tietokonemallien mukaan suuren osan Pohjois-Amerikkaa ja ulottuisi yli **1 500 kilometrin** päähän tulivuoresta. Kerros ohenisi etäisyyden kasvaessa, mutta sen vaikutukset olisivat vakavia vielä hyvin kaukana kraaterista. Seurauksista voi kärsiä, vaikkei asuisi lainkaan supertulivuoren naapurissa."
         }
       ]
     },
@@ -95,7 +95,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Supertulivuori vaikuttaisi myös alueisiin kaukana tuhkapilven ulkopuolella. Jättipurkauksen laajin vaikutus kulkee kaasun kautta: sen vapauttama [[rikkidioksidi]] on pistävän hajuinen kaasu, joka voi nousta hyvin korkealle ilmakehään. Siellä se muodostaa pieniä hiukkasia, jotka heijastavat osan auringonvalosta takaisin avaruuteen. Planeetta viilenee silloin tilapäisesti: tätä kutsutaan vulkaaniseksi talveksi."
+          "text": "Supertulivuori vaikuttaisi myös alueisiin kaukana tuhkapilven ulkopuolella. Jättipurkauksesta vapautuu kaasu nimeltä [[rikkidioksidi]], joka haisee pistävältä ja voi nousta hyvin korkealle ilmakehään. Siellä se muodostaa pieniä hiukkasia, jotka heijastavat osan auringonvalosta takaisin avaruuteen. Planeetta viilenee silloin tilapäisesti: tätä kutsutaan vulkaaniseksi talveksi."
         },
         {
           "type": "image",

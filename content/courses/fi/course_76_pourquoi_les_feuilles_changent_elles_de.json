@@ -4,11 +4,11 @@
   "subtitle": "Syksy ja pigmentit",
   "subject": "sciences",
   "subcategory": "Maa ja maailmankaikkeus",
-  "description": "Syksy ei keksi värejä: se poistaa ne peittävän vihreän. Esityksen takana selviytymisstrategia talven ylitse.",
+  "description": "Syksy ei keksi värejä: se poistaa vihreän, joka peitti ne. Värinäytelmän takana on selviytymiskeino, jolla puu pääsee talven yli.",
   "hero": {
     "image": "pourquoi_les_feuilles_changent_de_couleur",
     "ratio": "16:9",
-    "hook": "Syksyn lehdet eivät meikkaa: ne poistavat vihreän."
+    "hook": "Syksyn lehdet eivät meikkaa: ne riisuvat vihreänsä."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Joka syksy metsät muuttuvat vihreästä kultaiseksi, kupariksi ja violetiksi. Tämä ei ole esteettinen päähänpisto. Se on strategia: puu palauttaa mitä voi ennen kuin pudottaa lehtiään talveksi."
+          "text": "Joka syksy metsät vaihtavat vihreästä kultaan, kupariin ja purppuraan. Kyse ei ole esteettisestä oikusta. Se on strategia: puu ottaa talteen kaiken minkä voi, ennen kuin pudottaa lehtensä talveksi."
         },
         {
           "type": "paragraph",
-          "text": "Lämpimät värit eivät näy tyhjästä. Usein he olivat jo siellä viheriön alla piilossa. Syksyn ymmärtäminen tarkoittaa suuren biokemiallisen puhdistuksen ymmärtämistä."
+          "text": "Lämpimät värit eivät ilmesty tyhjästä. Usein ne olivat jo paikalla vihreän alle kätkeytyneinä. Syksyn ymmärtäminen on suuren biokemiallisen siivouksen ymmärtämistä."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Keväästä loppukesään lehdet ovat täynnä **klorofylliä**, pigmenttiä, joka ruokkii fotosynteesiä. Se hajoaa valon alla, mutta puu korvaa sen jatkuvasti. Niin kauan kuin se hallitsee, lehti pysyy vihreänä."
+          "text": "Keväästä loppukesään lehdet ovat täynnä **klorofylliä**, pigmenttiä, joka pitää fotosynteesin käynnissä. Se hajoaa valossa, mutta puu korvaa sen jatkuvasti. Niin kauan kuin klorofylli on vallitsevana, lehti pysyy vihreänä."
         },
         {
           "type": "image",
@@ -43,60 +43,60 @@
         },
         {
           "type": "paragraph",
-          "text": "Lehti sisältää kuitenkin myös **karotenoideja**, keltaisia ja oransseja pigmenttejä (kuten porkkanoissa). Kesällä ne ovat siellä, mutta näkymättömiä viheriön alla. Syksyllä klorofyllin tuotanto pysähtyy. Vihreä haalistuu, keltainen ja oranssi paljastuvat."
+          "text": "Lehdessä on kuitenkin myös **karotenoideja**, keltaisia ja oransseja pigmenttejä (samoja kuin porkkanassa). Kesällä ne ovat paikalla, mutta vihreä peittää ne näkyvistä. Syksyllä klorofyllin tuotanto loppuu. Vihreä haalistuu, ja keltainen ja oranssi tulevat esiin."
         },
         {
           "type": "funFact",
-          "text": "\"Klorofylli\" tulee kreikan sanoista *kloori* (vihreä) ja *phyllon* (lehti). \"Karotenoidilla\" on juuri porkkana, josta tämä pigmentti tunnistettiin ensimmäisen kerran."
+          "text": "”Klorofylli” tulee kreikan sanoista *chloros* (vihreä) ja *phyllon* (lehti). ”Karotenoidi” taas on samaa juurta kuin… porkkana (lat. *carota*), josta tämä pigmentti tunnistettiin ensimmäisenä."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
-      "title": "Todellinen laukaisin: yöt, jotka pidentyvät",
+      "title": "Varsinainen laukaisija: pitenevät yöt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Syksyllä ei pääsääntöisesti ole kylmä, vaan öiden pituus. Puut mittaavat sen käyttämällä valoantureita, [[fytokromit]]. Kun yöt pitenevät, jokaiselle lehdelle menee hormonaalinen signaali."
+          "text": "Syksyn ei käynnistä niinkään kylmyys vaan öiden pituus. Puut mittaavat sitä valoantureilla, joiden nimi on [[fytokromit]]. Kun yöt pitenevät, jokaiseen lehteen lähtee hormonaalinen viesti."
         },
         {
           "type": "paragraph",
-          "text": "Lehden tyveen muodostuu [[Erotusvyöhyke (abscissio)]], eräänlainen korkki. Mehu nousee vähemmän, sokerit laskevat huonosti. Eristettynä lehti hajottaa klorofyllinsä nopeammin. Vakaammat keltaiset säilyvät muutaman viikon, sitten lehti putoaa."
+          "text": "Lehtiruodin tyveen muodostuu [[erotusvyöhyke (abscissio)]], eräänlainen tulppa. Nesteet nousevat lehteen heikommin, eivätkä sokerit pääse kunnolla laskeutumaan. Eristyksissä lehti hajottaa klorofyllinsä entistä nopeammin. Kestävämmät keltaiset säilyvät muutaman viikon, ja sitten lehti putoaa."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
-      "title": "Mistä kirkkaat punaiset tulevat?",
+      "title": "Mistä hehkuvat punaiset tulevat",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Keltainen oli jo siellä. Punainen ja violetti ovat usein **tehty** kauden lopussa. Nämä ovat [[Antosyaanit]], joita syntyy, kun sokerit jäävät loukkuun lehtiin."
+          "text": "Keltainen oli lehdessä jo valmiina. Punaisen ja violetin lehti sen sijaan usein **valmistaa** vasta kauden lopulla. [[Antosyaanit]] ovat väriaineita, joita syntyy, kun sokereita jää loukkuun lehteen."
         },
         {
           "type": "paragraph",
-          "text": "Miksi investoida energiaa juuri ennen paperin hävittämistä? Luultavasti suojaamaan kierrätyksen aikana. ota Puu talteen**azine** ja muita arvokkaita ravinteita. Ilman klorofylliä aurinko voi vahingoittaa vielä aktiivisia kudoksia. Antosyaanit toimivat auringon suodattimena suuren liikkeen aikana juuria kohti."
+          "text": "Miksi käyttää energiaa juuri ennen kuin lehti hylätään? Luultavasti **suojatakseen** sitä kierrätyksen ajan. Puu ottaa talteen **typen** ja muita arvokkaita ravinteita. Ilman klorofylliä aurinko voi vaurioittaa vielä toimivia kudoksia. Antosyaanit toimivat aurinkosuojana sen ajan, kun suuri muutto juuriin on käynnissä."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
-      "title": "Miksi jotkut syksyt polttavat enemmän",
+      "title": "Miksi jotkin syksyt hehkuvat muita kirkkaammin",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kauneimmat punaiset syntyvät usein aurinkoisista päivistä ja viileistä, pakkasettomista öistä. Paljon sokeria, muuttuminen antosyaaniineiksi. Harmaa ja sateinen syksy antaa himmeämpiä sävyjä. Varhainen pakkanen tappaa lehdet ennen näyttelyä."
+          "text": "Kauneimmat punaiset syntyvät usein aurinkoisista päivistä ja viileistä, hallattomista öistä. Paljon sokeria, joka muuttuu antosyaaneiksi. Harmaa ja sateinen syksy antaa himmeämpiä sävyjä. Varhainen halla tappaa lehdet ennen värinäytelmää."
         },
         {
           "type": "paragraph",
-          "text": "Lopulta jäljelle jää vain [[tanniinit]], ruskeita aineita metsän kerroksesta. Jotkut tutkimukset uskovat myös, että kirkkaat värit varoittavat [[kirvoja]]: puun muoto, vahvat puolustukset, parempi mennä muualle."
+          "text": "Lopulta jäljelle jäävät lähinnä [[tanniinit]], metsänpohjan ruskeat aineet. Joidenkin tutkimusten mukaan kirkkaat värit myös varoittavat [[kirvoja]]: puu on hyvässä kunnossa ja sen puolustus vahva, joten kannattaa mennä muualle."
         },
         {
           "type": "takeaway",
-          "text": "Syksy paljastaa jo olemassa olevat keltaiset, kun klorofylli katoaa, ja joskus punaistaa suojellakseen ravinteiden kierrätystä ennen lehtien putoamista."
+          "text": "Kun klorofylli katoaa, syksy paljastaa lehdessä jo olleet keltaiset sävyt ja valmistaa joskus punaista suojaamaan ravinteiden kierrätystä ennen lehtien putoamista."
         }
       ]
     }

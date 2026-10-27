@@ -1,14 +1,14 @@
 {
   "id": "course_165_orphee_et_eurydice",
-  "title": "Orpheus ja Eurydike",
+  "title": "Orfeus ja Eurydike",
   "subtitle": "Rakkaus, joka uhmaa kuolemaa",
   "subject": "mythologie",
   "subcategory": "Kreikan jumalat",
-  "description": "Orpheus laskeutuu alamaailmaan tuomaan takaisin Eurydiken. Hänen musiikkinsa taivuttaa kuoleman. Yksikin kielletty katse riittää menettämään kaiken.",
+  "description": "Orfeus laskeutuu manalaan hakemaan Eurydiken takaisin. Hänen musiikkinsa taivuttaa kuoleman. Yksi ainoa kielletty katse riittää, ja kaikki on menetetty.",
   "hero": {
     "image": "orphee_et_eurydice",
     "ratio": "16:9",
-    "hook": "Hänen lyyransa rauhoittaa alamaailmaa. Hänen epäilyksensä tekee Eurydicesta ikuisesti."
+    "hook": "Hänen lyyransa rauhoittaa manalan. Hänen epäilynsä taas vie häneltä Eurydiken ikuisiksi ajoiksi."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Orpheus** on muusikko, jonka lyyra jopa liikuttaa kiviä. Kun hänen vaimonsa **Eurydice** kuolee, hän kieltäytyy suremasta. Hän menee alas elävänä kuolleille tuodakseen hänet takaisin."
+          "text": "**Orfeus** on muusikko, jonka lyyra liikuttaa jopa kiviä. Kun hänen vaimonsa **Eurydike** kuolee, hän ei suostu hyväksymään menetystä. Hän laskeutuu elävänä kuolleiden luo tuodakseen vaimonsa takaisin."
         },
         {
           "type": "paragraph",
-          "text": "Latinalaiset runoilijat [[Virgil]] ja [[Ovid]] korjasivat tämän kertomuksen. Traagisen rakkauden lisäksi se on tarina epäilystä, kärsimättömyydestä ja taiteen voimasta kuoleman edessä."
+          "text": "Latinalaiset runoilijat [[Vergilius]] ja [[Ovidius]] vakiinnuttivat tämän tarinan. Traagisen rakkauden lisäksi se on tarina epäilystä, kärsimättömyydestä ja taiteen voimasta kuoleman edessä."
         }
       ]
     },
@@ -33,86 +33,86 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orpheus on Muse **Calliope** poika. Hänen **lyyra**, taiteen jumalan **Apollo** lahja, ei käytetä vain miellyttämiseen. Hän rauhoittaa eläimiä, liikuttaa puita, rauhoittaa villiä luontoa. Siellä missä muut sankarit voittavat voimalla, Orpheus voittaa harmonian."
+          "text": "Orfeus on muusa **Kalliopen** poika. Hänen **lyyransa**, taiteiden jumalan **Apollonin** lahja, ei ole vain ilahduttamista varten. Se rauhoittaa eläimet, siirtää puita ja tyynnyttää villin luonnon. Siinä missä muut sankarit voittavat voimalla, Orfeus voittaa sopusoinnulla."
         },
         {
           "type": "image",
           "asset": "orpheus_lyre_painting_ancient_myth",
           "ratio": "4:3",
-          "caption": "Orpheus ja hänen lyyransa: taide valtana maailmassa."
+          "caption": "Orfeus ja lyyra: taiteen valta maailmaan"
         },
         {
           "type": "paragraph",
-          "text": "**Argonautit**:n retkikunnan aikana, jota johtaa sankari [[Jason]], Sireenit yrittävät houkutella miehistöä. Orpheus laulaa kovemmin ja pelastaa kumppaninsa. Sitten hän menee naimisiin ryadin **Eurydice** kanssa, puunymfin. Onni on lyhyt."
+          "text": "Kun **argonautit** ovat retkellään sankari [[Iason]] johtajanaan, seireenit yrittävät houkutella miehistön tuhoon. Orfeus laulaa niitä kovempaa ja pelastaa toverinsa. Sitten hän nai dryadin **Eurydiken**, metsänymfin. Onni jää lyhyeksi."
         },
         {
           "type": "funFact",
-          "text": "Hääpäivänä Eurydice pakenee paimenta [[Aristaeus]]. Hän astuu käärmeen päälle. Myrkky tappaa hänet. Hänen varjonsa lähtee kohti [[Styx]], helvetin jokea."
+          "text": "Hääpäivänä Eurydike yrittää päästä pakoon paimenelta, jonka nimi on [[Aristaios]]. Hän astuu käärmeen päälle. Myrkky tappaa hänet. Hänen varjonsa lähtee kohti [[Styx]]-jokea, manalan virtaa."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p2",
-      "title": "Laskeudu elävänä kuolleiden joukkoon",
+      "title": "Elävänä kuolleiden luo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orpheus yrittää [[Catabasis]]: laskeutua helvettiin. Ei aseita. Vain hänen musiikkinsa. Hän nukkuu [[Cerberus]], kolmipäinen koira, joka vartioi sisäänkäyntiä. Hän taivuttaa [[Charon]], kuolleiden veneilijän."
+          "text": "Orfeuksen yritys on [[katabaasi]]: laskeutuminen manalaan. Ei aseita. Vain musiikki. Se nukuttaa sisäänkäyntiä vartioivan kolmipäisen [[Kerberos]]-koiran. Se taivuttaa myös [[Kharon]]-lautturin, joka kuljettaa kuolleita."
         },
         {
           "type": "paragraph",
-          "text": "Alamaailman hallitsijoiden **Hadès**:n ja **Persephone**:n edessä Orpheus soittaa elämänsä liikuttavimman sävelmän. Alamaailma pysähtyy hetkeksi. **Sisyphus** ja **Tantalus** unohtavat kidutuksensa. [[Eronyes]], koston jumalattaret, vuodatti kyyneleitä."
+          "text": "Alamaailman hallitsijoiden **Hadeksen** ja **Persefonen** edessä Orfeus soittaa elämänsä koskettavimman sävelmän. Manala pysähtyy hetkeksi. **Sisyfos** ja **Tantalos** unohtavat piinansa. Jopa [[Erinyt]], koston jumalattaret, vuodattavat kyyneliä."
         },
         {
           "type": "funFact",
-          "text": "Joissakin versioissa Orpheus koskettaa Persephonea muistuttaen häntä omasta Hadesin sieppauksesta. Kuolleiden kuningatar tunnistaa kipunsa."
+          "text": "Joissakin versioissa Orfeus liikuttaa Persefonea muistuttamalla tätä siitä, kuinka Hades aikoinaan sieppasi hänet. Kuolleiden kuningatar tunnistaa Orfeuksen tuskan."
         },
         {
           "type": "paragraph",
-          "text": "Hades hyväksyy mahdottoman: Eurydice voi nousta takaisin. Mutta ehdoton ehto. Orpheuksen täytyy kävellä hänen edessään kääntymättä, kunnes he saavuttavat valon."
+          "text": "Hades suostuu mahdottomaan: Eurydike saa palata maan päälle. Ehto on kuitenkin ehdoton. Orfeuksen on kuljettava hänen edellään katsomatta taakseen, kunnes he ovat päässeet valoon."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p3",
-      "title": "Ulkonäkö, joka menettää kaiken",
+      "title": "Katse, joka vie kaiken",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Takaisin nousu on koettelemus. Hänen takanaan, hiljaisuus. Varjot eivät aiheuta ääntä. Lähellä uloskäyntiä epäilys vallitsee. Entä jos Hades olisi pettänyt häntä? Orphée **Kääntyy ympäri**."
+          "text": "Paluumatka on tuskien taival. Hänen takanaan on hiljaista. Varjot eivät pidä ääntä. Lähellä uloskäyntiä epäilys voittaa. Entä jos Hades on pettänyt hänet? Orfeus **kääntyy katsomaan**."
         },
         {
           "type": "paragraph",
-          "text": "Heidän katseensa kohtaavat hetkeksi. Sitten pimeys valtaa Eurydiken. Tällä kertaa tappio johtui inhimillisestä erehdyksestä. Kulku sulkeutuu. Orpheus vaeltelee ja vetäytyy sitten Traakiaan."
+          "text": "Heidän katseensa kohtaavat sekunnin ajan. Sitten pimeys nielaisee Eurydiken. Tällä kertaa menetys johtuu inhimillisestä erehdyksestä. Käytävä sulkeutuu. Orfeus vaeltaa ja vetäytyy sitten Traakiaan."
         },
         {
           "type": "funFact",
-          "text": "Hänen kuolemansa jälkeen Orpheuksen pää, joka heitettiin jokeen [[Hebrus]], olisi ajautunut Lesbokselle. Siellä hänestä olisi tullut oraakkeli, niin voimakas, että **Apollo** itse olisi vaatinut häntä vaikenemaan."
+          "text": "Kerrotaan, että Orfeuksen kuoleman jälkeen hänen päänsä heitettiin [[Hebros]]-jokeen ja se ajelehti Lesbokselle asti. Siellä siitä tuli oraakkeli, niin mahtava, että **Apollon** itse vaati sitä vaikenemaan."
         },
         {
           "type": "paragraph",
-          "text": "Hänen kieltäytymisensä uudesta rakkaudesta herättää [[Maenads]], **Dionysos**:n papittareiden raivoa rituaalisen deliriumin vallassa. He repivät sen osiin. Hänen lyyransa kuitenkin jatkaa lauluaan virran mukana."
+          "text": "Kun Orfeus torjuu kaiken uuden rakkauden, raivostuvat [[Mainadit]], **Dionysoksen** papittaret, jotka ovat rituaalisen hurmoksen vallassa. He repivät hänet kappaleiksi. Hänen lyyransa jatkaa silti lauluaan virran viemänä."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p4",
-      "title": "Mitä myytti välitti",
+      "title": "Mitä myytti on jättänyt perinnöksi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orpheuksen kuolemasta syntyi [[Orfismi]], uskonnollinen liike, joka lupasi sielulle pelastuksen puhdistusriittien kautta. Kuolema ei ole enää synkkä loppu, vaan kohta, johon on valmistauduttava."
+          "text": "[[Orfismi]], uskonnollinen suuntaus, joka lupasi sielulle pelastuksen puhdistusriittien avulla, sai alkunsa Orfeuksen kuolemasta. Siinä kuolema ei ole enää synkkä loppu vaan siirtymä, johon on valmistauduttava."
         },
         {
           "type": "paragraph",
-          "text": "\"Orpheuksen katse\" inspiroi edelleen oopperaa, elokuvaa, erityisesti [[Jean Cocteau]], ja kirjallisuutta. [[Maurice Blanchot]]:lle taiteilija on se, joka katsoo pimeyttä, vaikka se menettää sen, mitä hän rakastaa. Jumalat asettavat lopulta lyyran taivaalle tähtikuvioon: taide kestää kauemmin kuin taiteilija."
+          "text": "”Orfeuksen katse” innoittaa yhä oopperaa, elokuvaa, jossa aihetta on käsitellyt erityisesti [[Jean Cocteau]], ja kirjallisuutta. [[Maurice Blanchot]] näkee taiteilijan ihmisenä, joka katsoo pimeyteen, vaikka menettäisi sen, mitä rakastaa. Lopulta jumalat asettavat lyyran taivaalle tähdistöksi: taide elää kauemmin kuin taiteilija."
         },
         {
           "type": "takeaway",
-          "text": "**Orpheus** hurmaa alamaailman musiikillaan ja menettää sitten **Eurydice** kääntymällä ympäri liian aikaisin. Taide voi taivuttaa kuoleman; inhimillinen epäilys on viimeinen sana."
+          "text": "**Orfeus** lumoaa manalan musiikillaan mutta menettää **Eurydiken**, koska kääntyy katsomaan liian aikaisin. Taide voi taivuttaa kuoleman, mutta viimeinen sana on ihmisen epäilyllä."
         }
       ]
     }

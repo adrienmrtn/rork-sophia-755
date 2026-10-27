@@ -9,7 +9,7 @@
   "hero": {
     "image": "wind_turbines_coal_power_plant_landscape",
     "ratio": "4:3",
-    "hook": "Pistorasia on kaikkialla sama. Sen takana oleva ei ole koskaan."
+    "hook": "Pistorasia on kaikkialla sama. Se, mitä sen takana on, ei ole koskaan."
   },
   "sections": [
     {
@@ -19,7 +19,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kytket puhelimesi lataukseen, ja sähkö saapuu ilman tuotemerkintää. Pistorasiassa mikään ei kerro, onko se tuotettu auringonvalolla, padon vedellä vai voimalaitoksessa poltetulla polttoaineella. Edes saman kadun kaksi taloa eivät pysty osoittamaan voimalaa, josta kukin niiden sähköyksikkö tulee."
+          "text": "Kytket puhelimen lataukseen, ja sähkö tulee ilman mitään merkintää. Pistorasiassa mikään ei kerro, onko se tuotettu auringonvalolla, padon vedellä vai voimalaitoksessa poltetulla polttoaineella. Edes kaksi saman kadun taloa ei pysty osoittamaan, mistä voimalasta kukin sähköyksikkö tulee."
         },
         {
           "type": "paragraph",
@@ -40,11 +40,11 @@
           "type": "image",
           "asset": "steam_turbine_generator_hall_power_plant",
           "ratio": "2:1",
-          "caption": "Varhainen höyryturbiinigeneraattori Wienin teknillisessä museossa: turbiini on kytketty generaattoriinsa."
+          "caption": "Vanha höyryturbiinigeneraattori Wienin tekniikan museossa: turbiini on kytketty generaattoriinsa."
         },
         {
           "type": "paragraph",
-          "text": "Tuuliturbiinit pyörivät tuulen, vesivoimalat virtaavan veden voimalla. Aurinkopaneelit kulkevat toista tietä: ne tuottavat sähköä suoraan valosta ilman ainuttakaan pyörivää siipeä. Nämä lähteet eivät toimi samoissa olosuhteissa. Aurinkosähkön tuotanto romahtaa auringonlaskun aikaan, ja tuulivoiman tuotanto vaihtelee sään mukaan. Polttoainetta polttavat voimalat voivat silloin tuottaa virtaa, kun muut tuottavat vähemmän."
+          "text": "Tuulivoimalat pyörivät tuulen, vesivoimalat virtaavan veden voimalla. Aurinkopaneelit toimivat toisin: ne tuottavat sähköä suoraan valosta ilman ainuttakaan pyörivää siipeä. Nämä lähteet eivät toimi samoissa olosuhteissa. Aurinkosähkön tuotanto romahtaa auringonlaskun aikaan, ja tuulivoiman tuotanto vaihtelee sään mukaan. Polttoainetta polttavat voimalat voivat silloin tuottaa sähköä, kun muut tuottavat vähemmän."
         },
         {
           "type": "funFact",
@@ -69,7 +69,7 @@
         },
         {
           "type": "paragraph",
-          "text": "[[Verkko-operaattori]], eli tätä verkostoa ohjaava organisaatio, joutuu pitämään tarjonnan ja kysynnän jatkuvasti tasapainossa. Jotkin voimalat säätävät tuotantoaan. Siellä, missä on akkuja, ne palauttavat aiemmin varastoitua sähköä. Muut lähteet paikkaavat laskevan auringon jättämää aukkoa. Päivittäistä reseptiä ei ole: keskipäivän mix voi näyttää hyvin erilaiselta kuin muutamaa tuntia myöhemmin, vaikka pistorasiasi ei ole muuttunut."
+          "text": "[[Verkko-operaattori]], eli tätä verkostoa ohjaava organisaatio, joutuu pitämään tarjonnan ja kysynnän jatkuvasti tasapainossa. Jotkin voimalat säätävät tuotantoaan. Siellä, missä on akkuja, ne palauttavat aiemmin varastoitua sähköä. Muut lähteet paikkaavat laskevan auringon jättämää aukkoa. Kiinteää päivittäistä kaavaa ei ole: keskipäivän mix voi olla hyvin erilainen kuin muutamaa tuntia myöhemmin, vaikka pistorasiasi on yhä sama."
         }
       ]
     },
@@ -109,7 +109,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Pistorasiasi sähkö on sekoitus, joka muuttuu tunnista toiseen ja ylittää rajoja, joten sen alkuperää ei kerro yksin vuosikeskiarvo eikä paikallinen tuotanto."
+          "text": "Pistorasiasi sähkö on sekoitus, joka muuttuu tunnista toiseen ja ylittää rajoja, joten vuosikeskiarvo tai paikallinen tuotanto ei yksinään kerro, mistä se tulee."
         }
       ]
     }

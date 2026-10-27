@@ -1,14 +1,14 @@
 {
   "id": "course_154_impression_soleil_levant_monet",
-  "title": "Printti, nouseva aurinko, Monet",
+  "title": "Impressio, auringonnousu, Monet",
   "subtitle": "1872",
   "subject": "art",
   "subcategory": "Elokuva, valokuvaus ja arkkitehtuuri + mestariteokset",
-  "description": "Le Havren laivasto maalasi nopeasti, pilkkasi kriitikko, ja sana \"impressionismi\" syntyi. Monet korjaa teollisen ja valon hetken.",
+  "description": "Nopeasti maalattu Le Havren merimaisema, pilkkaava kriitikko, ja sana ”impressionismi” on syntynyt. Monet vangitsee teollisen ja valoisan hetken.",
   "hero": {
     "image": "impression_soleil_levant_monet",
     "ratio": "16:9",
-    "hook": "Oranssi aurinko satamassa… ja koko liike löytää nimensä."
+    "hook": "Oranssi aurinko sataman yllä… ja kokonainen taidesuuntaus saa nimensä."
   },
   "sections": [
     {
@@ -18,26 +18,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1872**:n ympärillä **Claude Monet** maalaa Le Havren satamaa aikaisin aamulla. Maalauksen nimi on *Printti, nouseva aurinko*."
+          "text": "**Claude Monet** maalaa noin vuonna **1872** Le Havren sataman varhain aamulla. Maalauksen nimi on *Impressio, auringonnousu*."
         },
         {
           "type": "paragraph",
-          "text": "Vuonna **1874** kriitikko [[Louis Leroy]] nauraa siitä… ja kastaa itsestään huolimatta impressionismia."
+          "text": "Vuonna **1874** kriitikko [[Louis Leroy]] pilkkaa sitä… ja antaa tahtomattaan nimen impressionismille."
         }
       ]
     },
     {
       "id": "course_154_impression_soleil_levant_monet_p1",
-      "title": "Industrial Haven",
+      "title": "Teollinen Le Havre",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tämä ei ole postikortti laivasto. Näemme savupiippuja, laivoja, sumua [[Le Havren satama]] täydessä teollistumisessa. Monet maalaa modernin maailman [[ulkoilma]]."
+          "text": "Tämä ei ole postikortin merimaisema. Kuvassa näkyy savupiippuja, laivoja ja sumua: [[Le Havren satama]] on keskellä teollistumista. Monet maalaa modernia maailmaa, ja hänen ateljeensa on [[ulkoilmamaalaus]]."
         },
         {
           "type": "paragraph",
-          "text": "Monet palaa usein samaan aiheeseen eri aikoina. Tässä pääasia ei ole dokumenttiparatiisi, vaan oranssi värähtely harmaassa sumussa."
+          "text": "Monet palaa usein samaan aiheeseen eri vuorokaudenaikoina. Tässä pääasia ei ole Le Havre dokumenttina vaan oranssi värähtely harmaassa usvassa."
         },
         {
           "type": "image",
@@ -49,41 +49,41 @@
     },
     {
       "id": "course_154_impression_soleil_levant_monet_p2",
-      "title": "Nadarissa loukkaus",
+      "title": "Pilkkaa Nadarin luona",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Näyttelyssä [[Nadar]] vuonna **1874**, maalaus skandaalisoi niitä, jotka haluavat \"valmis\". Leroy on ironinen otsikon suhteen. Ryhmä pitää sanaa lippuna. Katso [[Louis Leroy ja sanan \"impressionismi\" synty]]."
+          "text": "Vuonna **1874** maalaus on esillä tiloissa, joita isännöi [[Nadar]], ja se kuohuttaa niitä, jotka kaipaavat ”viimeisteltyä”. Leroy pilkkaa teoksen nimeä. Ryhmä ottaa sanan tunnuksekseen. Katso [[Louis Leroy ja sanan \"impressionismi\" synty]]."
         },
         {
           "type": "paragraph",
-          "text": "Vuoden 1874 yhteenotto Nadarin talossa oli kollektiivinen teko. Ilman tätä Salonin kieltäytymistä maalaus olisi ehkä jäänyt uudeksi merimaisemaksi."
+          "text": "Vuoden 1874 näyttely Nadarin luona on yhteinen teko. Ilman tätä irtiottoa Salongista maalaus olisi ehkä jäänyt yhdeksi merimaisemaksi muiden joukossa."
         },
         {
           "type": "funFact",
-          "text": "Vuonna 2014 astrofyysikko ajoi paikan 13. marraskuuta 1872 noin kello 7.35 vuoroveden ja auringon ansiosta."
+          "text": "Vuonna 2014 eräs astrofyysikko ajoitti näkymän 13. marraskuuta 1872 noin kello 7.35 vuorovesien ja auringon avulla."
         }
       ]
     },
     {
       "id": "course_154_impression_soleil_levant_monet_p3",
-      "title": "Durand-Ruel ja muut",
+      "title": "Durand-Ruel ja jatko",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kauppias [[Paul Durand-Ruel]] tukee Monet, kun ranskalainen yleisö epäröi. Myöhemmin *Vesililjat* työnsi painatuksen logiikan lähes puhtaaseen abstraktioon."
+          "text": "Taidekauppias [[Paul Durand-Ruel]] tukee Monet'ta, kun ranskalainen yleisö epäröi. Myöhemmin *Lumpeet* vievät impression logiikan lähes puhtaaseen abstraktioon asti."
         },
         {
           "type": "paragraph",
-          "text": "Amerikan markkinat Durand-Ruelin kautta pelastivat taloudellisesti useita impressionisteja. Nykyaikaisuus näkyy myös kauppiaan tileissä."
+          "text": "Yhdysvaltain markkinat pelastavat Durand-Ruelin kautta useiden impressionistien talouden. Modernius ratkeaa myös taidekauppiaan tilikirjoissa."
         },
         {
           "type": "image",
           "asset": "le_havre_port_19th_century",
           "ratio": "4:3",
-          "caption": "Le Havre: savua, mastot, nykyaikaa."
+          "caption": "Le Havre: savua, mastoja, modernia aikaa."
         }
       ]
     },
@@ -94,19 +94,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tämä pieni oranssi aurinko antoi nimensä vallankumoukselle. Teos muistuttaa, että otsikko, pilkka ja hetki voivat muuttaa taiteen historiaa."
+          "text": "Tämä pieni oranssi aurinko antoi nimensä vallankumoukselle. Teos muistuttaa, että nimi, pilkka ja hetki voivat muuttaa taidehistorian kulun."
         },
         {
           "type": "paragraph",
-          "text": "Ymmärtääksesi täysin vaikutelman, nousevan auringon, Monet, sinun on pidettävä mielessä yksi asia: jokainen tekninen yksityiskohta palvelee tunnetta tai ideaa. Teos ei ole koskaan vain koristeellista."
+          "text": "Kun haluat ymmärtää kunnolla Monet'n Impressio, auringonnousu -maalausta, pidä mielessä yksi asia: jokainen tekninen yksityiskohta palvelee tunnetta tai ajatusta. Teos ei ole koskaan pelkkä koriste."
         },
         {
           "type": "paragraph",
-          "text": "Konteksti on yhtä tärkeä kuin tyyli. Päivämäärät, paikat, sponsorit, yleisö: kaikki tämä selittää, miksi lomake ilmestyy tietyllä hetkellä, eikä sitä ennen."
+          "text": "Konteksti on yhtä tärkeä kuin tyyli. Ajankohdat, paikat, tilaajat, yleisö: kaikki tämä selittää, miksi jokin muoto ilmaantuu juuri tietyllä hetkellä eikä aiemmin."
         },
         {
           "type": "paragraph",
-          "text": "Lopuksi perintöä mitataan pitkällä aikavälillä. Se, mitä näemme nykyään museoissa, elokuvissa tai populaarimusiikissa, kantaa edelleen näiden keksintöjen jälkiä."
+          "text": "Lopuksi perintöä mitataan pitkällä aikavälillä. Se, mitä museoissa, elokuvissa ja populaarimusiikissa nykyään nähdään, kantaa yhä näiden keksintöjen jälkiä."
         },
         {
           "type": "paragraph",
@@ -114,7 +114,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Impressionin, nousevan auringon kanssa Monet loi portin hetken… ja tarjosi Leroystä huolimatta nimen modernille taiteelle."
+          "text": "Impressio, auringonnousu -maalauksessa Monet vangitsi hetken satamasta… ja antoi Leroysta huolimatta nimen modernille taiteelle."
         }
       ]
     }

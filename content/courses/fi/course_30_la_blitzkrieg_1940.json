@@ -4,11 +4,11 @@
   "subtitle": "1940",
   "subject": "histoire",
   "subcategory": "Kylmä sota ja nykymaailma",
-  "description": "Saksan armeija valloitti Ranskan ja Benelux-maiden **kuudessa avoin** **10. toukokuuta** - **22. kesäkuuta 1940**. \"Blitzkrieg\" mullistaa sodan taiteen nopeudella.",
+  "description": "Saksan armeija valloitti Ranskan ja Benelux-maat **kuudessa viikossa**, **10. toukokuuta** ja **22. kesäkuuta 1940** välisenä aikana. ”Salamasota” mullisti sodankäynnin nopeudellaan.",
   "hero": {
     "image": "la_blitzkrieg_1940",
     "ratio": "16:9",
-    "hook": "Kuusi viikkoa tuhota Euroopan ensimmäinen armeija."
+    "hook": "Kuusi viikkoa riitti kaatamaan armeijan, jota pidettiin Euroopan vahvimpana."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**10. toukokuuta** - **22. kesäkuuta 1940** Saksan armeija valloitti vain kuudessa viikossa Ranskan, Alankomaiden, Belgian ja Luxemburgin. Euroopan johtava sotilaallinen voima on romahtamassa maailman silmien edessä."
+          "text": "**10. toukokuuta** ja **22. kesäkuuta 1940** välisenä aikana Saksan armeija valloitti vain kuudessa viikossa Ranskan, Alankomaat, Belgian ja Luxemburgin. Euroopan johtava sotilasmahti romahti koko maailman silmien edessä."
         },
         {
           "type": "paragraph",
-          "text": "**Blitzkrieg** (Blitzkrieg) ei ole vain sarja voittoja. Se on vallankumous: vihollisen nopeus ja epäjärjestyminen merkitsevät enemmän kuin sen välitön fyysinen tuho."
+          "text": "**Blitzkrieg** (salamasota) ei ole pelkkä voittojen sarja. Se on vallankumous: nopeus ja vihollisen saattaminen sekasortoon merkitsevät enemmän kuin sen välitön fyysinen tuhoaminen."
         }
       ]
     },
@@ -33,36 +33,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sana Blitzkrieg ei ole virallinen [[Wehrmacht]], Saksan armeija vuosina 1935-1945. Anglosaksinen lehdistö keksi sen. Saksalaiset puhuvat liikesodasta. [[Schwerpunkt]]:n periaate: keskitä kaikki keinot kapeaan kohtaan etuosan rikkomiseksi."
+          "text": "Blitzkrieg ei ollut virallinen sana, eikä [[Wehrmacht]], Saksan armeija vuosina 1935-1945, käyttänyt sitä. Sen keksi englanninkielinen lehdistö. Saksalaiset puhuivat liikesodasta. Keskeinen periaate oli [[Schwerpunkt]]: kaikki voimat keskitettiin kapealle kohdalle, jotta rintama murtuisi."
         },
         {
           "type": "funFact",
-          "text": "Stukasin sireeneillä, näillä \"Jerikon trumpetit\" kutsutuilla sukelluspommittajilla ei ole todellista sotilaallista käyttöä. Niillä vain terrorisoidaan sotilaita ja siviilejä."
+          "text": "Stukien, ”Jerikon pasuunoiksi” kutsuttujen syöksypommittajien, sireeneillä ei ollut todellista sotilaallista hyötyä. Niiden ainoa tehtävä oli kylvää kauhua sotilaisiin ja siviileihin."
         },
         {
           "type": "paragraph",
-          "text": "Siellä missä ranskalaiset hajottivat panssarivaunut jalkaväen tueksi, saksalaiset ryhmittelivät ne autonomisiin panssaroituihin divisioonoihin, jotka yhdistettiin radion välityksellä. Stukat toimivat kuin lentävä tykistö. Samaan aikaan Ranska uskoo edelleen [[Maginot-linja]], tähän Saksan rajalla sijaitsevaan linnoitusketjuun."
+          "text": "Ranskalaiset hajauttivat panssarivaununsa jalkaväen tueksi, mutta saksalaiset kokosivat ne itsenäisiksi panssaridivisiooniksi, joita yhdisti radio. Stukat toimivat lentävänä tykistönä. Ranska taas uskoi yhä, että sitä suojasi [[Maginot-linja]], Saksan rajaa seurannut linnakeketju."
         }
       ]
     },
     {
       "id": "course_30_la_blitzkrieg_1940_p2",
-      "title": "Sirppihalvaus",
+      "title": "Sirppileikkaus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kenraali **Erich von Manstein** neuvosta Hitler hyväksyi [[Sichelschnitt]], \"sirppiliikkeen\": liittoutuneiden houkutteleminen Belgiaan, kun taas suurin osa panssarivaunuista, saksalaiset panssarit, ylitti **Ardennesas, jota harkittiin**. Z13**. toukokuuta** kenraali **Heinz Guderian** ylitti Maasin paikassa **Sedan**. Kanavan reitti on auki."
+          "text": "Kenraali **Erich von Mansteinin** neuvosta Hitler omaksui suunnitelman nimeltä [[Sichelschnitt]], ”sirppileikkaus”: liittoutuneet houkuteltaisiin Belgiaan, ja sillä välin pääosa panssareista eli Saksan panssarivaunuista ylittäisi **Ardennit**, joita pidettiin läpipääsemättöminä. **13. toukokuuta** kenraali **Heinz Guderian** ylitti Maasin **Sedanin** kohdalla. Tie Englannin kanaalille oli auki."
         },
         {
           "type": "image",
           "asset": "german_tanks_blitzkrieg_1940",
           "ratio": "4:3",
-          "caption": "Saksalaiset tankit vuoden 1940 kampanjan aikana."
+          "caption": "Saksalaisia panssarivaunuja vuoden 1940 sotaretkellä."
         },
         {
           "type": "paragraph",
-          "text": "Viikon aikana liittoutuneiden armeijat piiritettiin selkä mereen päin. Dunkerquessa [[Operaatio Dynamo (Dunkirk)]] evakuoi **338 000** ranskalais-brittiläisiä sotilaita. Iso-Britannia pelastaa armeijansa. Ranska jää yksin."
+          "text": "Viikossa liittoutuneiden armeijat oli saarrettu selkä merta vasten. Dunkerquessa [[Operaatio Dynamo]] evakuoi **338 000** ranskalaista ja brittiläistä sotilasta. Iso-Britannia pelasti armeijansa. Ranska jäi yksin."
         },
         {
           "type": "image",
@@ -79,26 +79,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ranska romahti, kun sen parhaat osastot riistettiin. Pariisi julistetaan avoimeksi kaupungiksi 14. kesäkuuta. Marsalkka **Philippe Pétain** pyytää aselepoa, joka allekirjoitettiin **kesäkuun 22. päivänä** Compiègnessa, samassa vaunussa kuin **1918**: Hitler kostaa."
+          "text": "Parhaat divisioonansa menettänyt Ranska romahti. Pariisi julistettiin avoimeksi kaupungiksi **14. kesäkuuta**. Marsalkka **Philippe Pétain** pyysi aselepoa, ja se allekirjoitettiin **22. kesäkuuta** Compiègnessa samassa junanvaunussa kuin vuonna **1918**: Hitler teki kostostaan näytöksen."
         },
         {
           "type": "funFact",
-          "text": "Seremoniaa varten Hitler vei vaunun ulos Compiègnen museosta ja asetti sen täsmälleen sinne, missä Saksa oli antautunut 22 vuotta aiemmin."
+          "text": "Seremoniaa varten Hitler käski tuoda vaunun ulos Compiègnen museosta ja sijoittaa sen täsmälleen samaan paikkaan, jossa Saksa oli antautunut 22 vuotta aiemmin."
         },
         {
           "type": "paragraph",
-          "text": "**6.18**. Lontoosta, **Kenraali de Gaulle** esittää vetoomuksensa BBC:lle: Ranska on hävinnyt taistelun, ei sotaa. Välitön vaikutus on vähäinen. Vapaan Ranskan perusta on luotu."
+          "text": "Lontoossa oleva **kenraali de Gaulle** esitti **18. kesäkuuta** BBC:n radiossa vetoomuksensa: Ranska oli hävinnyt taistelun, ei sotaa. Välitön vaikutus oli vähäinen. Vapaan Ranskan perusta oli kuitenkin luotu."
         }
       ]
     },
     {
       "id": "course_30_la_blitzkrieg_1940_p4",
-      "title": "Kaksinkertainen voitto",
+      "title": "Kaksiteräinen voitto",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1940 vahvisti Saksan Euroopan mestariksi. Mutta Blitzkrieg on lyhyt sotastrategia: rajallinen polttoaine, hauras logistiikka. Vuonna **1941** se juuttui Neuvostoliiton suunnattomuuden kohtaamiseen. Historioitsija **Marc Bloch** puhuu \"Strange Defeatista\": ranskalaisesta älyllisestä ja aineellisesta epäonnistumisesta."
+          "text": "Vuosi 1940 teki Saksasta Euroopan herran. Blitzkrieg oli kuitenkin lyhyen sodan strategia: polttoainetta oli rajallisesti, ja huolto oli haavoittuvaa. Vuonna **1941** se juuttui Neuvostoliiton valtaviin etäisyyksiin. Historioitsija **Marc Bloch** puhui myöhemmin ”oudosta tappiosta”: Ranskan epäonnistuminen oli yhtä lailla älyllinen kuin aineellinen."
         },
         {
           "type": "timeline",
@@ -114,7 +114,7 @@
               "detail": "Panssarit ylittävät Maasin."
             },
             {
-              "date": "Touko-kesäkuu 1940",
+              "date": "touko-kesäkuu 1940",
               "title": "Dunkerque",
               "detail": "338 000 sotilasta evakuoitiin Englantiin."
             },
@@ -127,7 +127,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Kuudessa viikossa Blitzkrieg yhdistää panssarin, ilmailun ja radion murskatakseen puolustavan opin. Nopeus ja voimien keskittyminen vallitsi Maginot-linjalla."
+          "text": "Kuudessa viikossa Blitzkrieg yhdisti panssarivaunut, lentokoneet ja radion ja murskasi puolustukseen nojanneen sotilasopin. Nopeus ja voimien keskittäminen löivät Maginot-linjan."
         }
       ]
     }

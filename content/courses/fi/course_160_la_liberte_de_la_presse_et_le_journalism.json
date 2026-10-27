@@ -1,14 +1,14 @@
 {
   "id": "course_160_la_liberte_de_la_presse_et_le_journalism",
-  "title": "Voiko kuvajournalismi muuttaa katsetta sotaan?",
-  "subtitle": "1900-luvulla",
+  "title": "Voiko kuvajournalismi muuttaa sitä, miten sota nähdään?",
+  "subtitle": "1900-luku",
   "subject": "art",
   "subcategory": "Elokuva, valokuvaus ja arkkitehtuuri + mestariteokset",
-  "description": "Cartier-Bressonista Nick Utiin, lehdistökuva tallentaa historian yhteen kuvaan. Median vapaus, etiikka ja valta samassa etsimessä.",
+  "description": "Cartier-Bressonista Nick Utiin lehtikuva vangitsee historian yhteen kuvaan. Vapaus, etiikka ja median valta samassa etsimessä.",
   "hero": {
     "image": "la_liberte_de_la_presse_et_le_journalisme_photographique",
     "ratio": "16:9",
-    "hook": "Valokuva voi pysäyttää sodan… tai valehdella. Meidän on vielä pystyttävä julkaisemaan se."
+    "hook": "Valokuva voi pysäyttää sodan… tai valehdella. Kunhan sen vain saa julkaista."
   },
   "sections": [
     {
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Valokuvajournalismi syntyy, kun kuva kiinnittää uutisen yhtä vahvasti kuin artikkeli. Yksi näkemys voi tiivistää sodan, nälänhädän, voiton."
+          "text": "Kuvajournalismi syntyy, kun kuva välittää uutisen yhtä voimakkaasti kuin kirjoitettu juttu. Yksi ainoa kuva voi tiivistää sodan, nälänhädän tai voiton."
         },
         {
           "type": "paragraph",
@@ -33,11 +33,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Henri Cartier-Bresson]] teoretisoi \"ratkaisevan hetken\": olemisen oikeassa paikassa, oikeaan aikaan, oikealla kehystyksellä. [[Gerda Taro]] Capan rinnalla kuoli Espanjan sisällissodassa. Valokuvajournalismilla on marttyyrinsä."
+          "text": "[[Henri Cartier-Bresson]] muotoilee teorian ”ratkaisevasta hetkestä”: pitää olla oikeassa paikassa oikeaan aikaan ja rajata kuva oikein. [[Gerda Taro]] kuolee Capan rinnalla kuvatessaan Espanjan sisällissotaa. Kuvajournalismilla on marttyyrinsa."
         },
         {
           "type": "paragraph",
-          "text": "Kuvitettujen aikakauslehtien ja valokuvatoimistojen ilmestyminen ammattimaisti ammattia. Toimittaja lähtee laitteella kuten muutkin muistikirjan kanssa. Riski on fyysinen."
+          "text": "Kuvitettujen aikakauslehtien ja kuvatoimistojen synty tekee työstä ammatin. Reportteri lähtee matkaan kamera mukanaan, kuten toiset muistikirja kädessä. Riski on fyysinen."
         },
         {
           "type": "image",
@@ -54,36 +54,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vietnamissa [[Nick Ut]]:n valokuva napalmin polttamasta pikkutytöstä ravistelee yleistä mielipidettä. Kuva ei \"päätä\" sotaa yksin, mutta se tekee inhimillisistä kustannuksista mahdotonta kieltää."
+          "text": "Vietnamissa kuva, jonka [[Nick Ut]] ottaa napalmin polttamasta pikkutytöstä, järkyttää yleistä mielipidettä. Kuva ei yksin ”lopeta” sotaa, mutta sen jälkeen inhimillistä hintaa on mahdoton kiistää."
         },
         {
           "type": "paragraph",
-          "text": "Suuret demokratiat suojelevat teoreettisesti lehdistöä. Diktatuurit hallitsevat etsintä. Vapaudesta julkaista kuva tulee poliittinen barometri."
+          "text": "Suuret demokratiat suojelevat lehdistöä ainakin teoriassa. Diktatuurit sen sijaan pitävät etsimen omassa hallussaan. Vapaudesta julkaista kuva tulee poliittinen ilmapuntari."
         },
         {
           "type": "funFact",
-          "text": "Monet kuuluisat valokuvat sensuroitiin tai niistä keskusteltiin ennen kuin niistä tuli historiallisia todisteita."
+          "text": "Monet kuuluisat kuvat sensuroitiin tai kiistettiin aluksi, ennen kuin niistä tuli historiallisia itsestäänselvyyksiä."
         }
       ]
     },
     {
       "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p3",
-      "title": "Etiikka ja keskittyminen",
+      "title": "Etiikka ja median keskittyminen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Kuvajournalismin etiikka]] kysyy: voimmeko rajata kärsimyksen? Retusoida? Myös [[Median keskittyminen ja toimituksellinen riippumattomuus]] uhkaa vapaata katsetta."
+          "text": "[[Kuvajournalismin etiikka]] herättää kysymyksiä: saako kärsimystä rajata kuvaan? Saako kuvaa retusoida? Myös [[Median keskittyminen ja toimituksellinen riippumattomuus]] uhkaa vapaata katsetta."
         },
         {
           "type": "paragraph",
-          "text": "Digitaalisella aikakaudella todentaminen on välttämätöntä: metatiedot, käänteinen kuvahaku, konteksti. Valokuvaus on edelleen voimakas, mutta sitä voidaan käsitellä nopeammin kuin koskaan."
+          "text": "Digitaalisella aikakaudella todentaminen on välttämätöntä: metatiedot, käänteinen kuvahaku, konteksti. Valokuva on yhä vaikuttava, mutta sitä voidaan manipuloida nopeammin kuin koskaan."
         },
         {
           "type": "image",
           "asset": "photojournalism_war_correspondent_camera",
           "ratio": "4:3",
-          "caption": "Toimittaja: todistaja aseistettu objektiivilla."
+          "caption": "Reportteri: objektiivilla aseistautunut todistaja."
         }
       ]
     },
@@ -94,27 +94,27 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Verkkojen aikakaudella kaikki ottavat valokuvia. Tarve luotettaville, kontekstuaalisille kuville, joita suojaa oikeus saada tietoa, ei ole koskaan ollut näin voimakas."
+          "text": "Sosiaalisen median aikana kaikki kuvaavat. Luotettavia ja taustoitettuja kuvia, joita tiedonvälityksen vapaus suojaa, ei ole koskaan tarvittu yhtä kipeästi."
         },
         {
           "type": "paragraph",
-          "text": "Ymmärtääksesi täysin lehdistönvapautta ja valokuvajournalismia, sinun on pidettävä mielessä yksi asia: jokainen tekninen yksityiskohta palvelee tunnetta tai ideaa. Teos ei ole koskaan vain koristeellista."
+          "text": "Lehdistönvapauden ja kuvajournalismin ymmärtämiseksi kannattaa muistaa yksi asia: jokainen tekninen yksityiskohta palvelee tunnetta tai ajatusta. Teos ei ole koskaan pelkkää koristetta."
         },
         {
           "type": "paragraph",
-          "text": "Konteksti on yhtä tärkeä kuin tyyli. Päivämäärät, paikat, sponsorit, yleisö: kaikki tämä selittää, miksi lomake ilmestyy tietyllä hetkellä, eikä sitä ennen."
+          "text": "Konteksti on yhtä tärkeä kuin tyyli. Ajankohdat, paikat, tilaajat, yleisö: kaikki tämä selittää, miksi jokin muoto syntyy juuri tiettynä hetkenä eikä aiemmin."
         },
         {
           "type": "paragraph",
-          "text": "Lopuksi perintöä mitataan pitkällä aikavälillä. Se, mitä näemme nykyään museoissa, elokuvissa tai populaarimusiikissa, kantaa edelleen näiden keksintöjen jälkiä."
+          "text": "Lopuksi perintöä mitataan pitkällä aikavälillä. Se, mitä nykyään nähdään museoissa, elokuvissa tai populaarimusiikissa, kantaa yhä näiden keksintöjen jälkiä."
         },
         {
           "type": "paragraph",
-          "text": "Harjoittele silmää, puolusta ilmiantajia, maksa kenttäjournalismista: ilman tätä jäljellä on vain virtaus. 1900-luvun perintö on vaatimus, ei nostalgia."
+          "text": "Katseen kouluttaminen, ilmiantajien puolustaminen, kenttäjournalismista maksaminen: ilman niitä jäljelle jää vain loputon sisältövirta. 1900-luvun perintö on vaatimus, ei nostalgiaa."
         },
         {
           "type": "takeaway",
-          "text": "Cartier-Bressonin Leicasta sotakuviin valokuvajournalismi on osoittanut, että ilmaisella kuvalla voi olla yhtä paljon painoa kuin toimituksellisella kuvalla."
+          "text": "Cartier-Bressonin Leicasta sotakuviin kuvajournalismi on osoittanut, että vapaa kuva voi painaa yhtä paljon kuin pääkirjoitus."
         }
       ]
     }

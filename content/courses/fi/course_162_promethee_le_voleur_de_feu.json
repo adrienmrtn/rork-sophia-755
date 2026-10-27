@@ -4,11 +4,11 @@
   "subtitle": "Titaani, joka uhmaa Zeusta",
   "subject": "mythologie",
   "subcategory": "Kreikan jumalat",
-  "description": "Prometheus varastaa tulta jumalilta ihmisten puolesta ja kestää sitten loputonta piinaa. Myytti edistyksestä, oveluudesta ja vapauden hinnasta.",
+  "description": "Prometheus varastaa jumalilta tulen ihmisille ja joutuu sitten kärsimään loputonta piinaa. Myytti edistyksestä, oveluudesta ja vapauden hinnasta.",
   "hero": {
     "image": "promethee_le_voleur_de_feu",
     "ratio": "16:9",
-    "hook": "Titaani varastaa tulen Olympuksesta. Miehet saavat sivistyksen. Hän saa kotkan ja ketjun."
+    "hook": "Titaani varastaa tulen Olympokselta. Ihmiset saavat sivilisaation. Hän itse saa kotkan ja kahleet."
   },
   "sections": [
     {
@@ -18,63 +18,63 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Prometheus** on titaani, edellisen sukupolven jumala. Sen nimi herättää ennakoivan. Kreikkalaisissa myyteissä hän muotoilee ensimmäiset miehet, suojelee heitä **Zeukselta**:ltä, Olympoksen kuninkaalta, ja maksaa valinnasta hirvittävän rangaistuksen."
+          "text": "**Prometheus** on titaani, vanhemman sukupolven jumala. Hänen nimensä viittaa siihen, joka näkee ennalta. Kreikkalaisissa myyteissä hän muovaa ensimmäiset ihmiset, suojelee heitä Olympoksen kuninkaalta **Zeukselta** ja maksaa valinnastaan hirvittävän rangaistuksen."
         },
         {
           "type": "paragraph",
-          "text": "Varastamalla tulta kuolevaisille hän antaa ihmisille tekniikkaa ja tietoa. Hänen kidutuksestaan Kaukasuksella tulee sen neron symboli, joka uskaltaa haastaa vallan."
+          "text": "Varastaessaan tulen kuolevaisille hän antaa ihmisille tekniikan ja tiedon. Hänen piinastaan Kaukasuksella tulee sellaisen neron symboli, joka uskaltaa uhmata valtaa."
         }
       ]
     },
     {
       "id": "course_162_promethee_le_voleur_de_feu_p1",
-      "title": "Ihminen syntyy alasti, Prometheus-temppu",
+      "title": "Ihminen syntyy alastomana, Prometheus juonii",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sanotaan, että Prometheus mallinsi ensimmäiset ihmiset savella ja vedellä. Hänen veljensä [[Epimetheus]] toimii liian nopeasti. Hän vastaa eläinten varustamisesta ja antaa kaiken: kynnet, siivet, turkin, nopeuden. Kun miehen vuoro tulee, ei jää mitään. Ihminen syntyy hauraana ja puolustuskyvyttömänä."
+          "text": "Kerrotaan, että Prometheus muovaa ensimmäiset ihmiset savesta ja vedestä. Hänen veljensä [[Epimetheus]] taas toimii liian hätäisesti. Hän saa tehtäväkseen varustaa eläimet ja antaa niille kaiken: kynnet, siivet, turkin, nopeuden. Kun on ihmisen vuoro, mitään ei ole enää jäljellä. Ihminen syntyy hauraana ja puolustuskyvyttömänä."
         },
         {
           "type": "paragraph",
-          "text": "Prometheus päättää kompensoida. Uhriessaan [[Mecone]]:lle hän leikkaa härän kahteen osaan. Ruman ihon alle se kätkee hyvän lihan. Ruokahaluisen rasvan alla se piilottaa luut. **Zeus** valitsee hyvän ulkonäön. Siitä lähtien ihmiset ovat syöneet lihaa ja tarjonneet luita jumalille."
+          "text": "Prometheus päättää korjata vahingon. Kun [[Mekone]]-nimisessä paikassa uhrataan, hän jakaa härän kahteen osaan. Ruman nahan alle hän kätkee hyvän lihan. Houkuttelevan rasvan alle hän kätkee luut. **Zeus** valitsee kauniimman näköisen osan. Siitä lähtien ihmiset syövät lihan ja uhraavat luut jumalille."
         },
         {
           "type": "funFact",
-          "text": "Palon piilottamiseen Prometheus käyttää [[Ferule]] sauvaa. Sen luuydin palaa hyvin hitaasti: Välimeren paimenet käyttivät sitä todella kannettavana sytyttimenä."
+          "text": "Tulen kätkemiseen Prometheus käyttää [[ferula]]-kasvin vartta. Sen ydin palaa hyvin hitaasti: Välimeren paimenet käyttivät sitä oikeasti kannettavana sytyttimenä."
         },
         {
           "type": "paragraph",
-          "text": "Raivoissaan petetyksi tulemisesta Zeus ottaa ihmisiltä tulen pois. Ilman lämpöä tai valoa ne putoavat takaisin melkein eläinelämään."
+          "text": "Petoksesta raivostunut Zeus vie ihmisiltä tulen. Ilman lämpöä ja valoa he vajoavat takaisin lähes eläimen elämään."
         }
       ]
     },
     {
       "id": "course_162_promethee_le_voleur_de_feu_p2",
-      "title": "Tulen varastaminen ja kidutus",
+      "title": "Tulen varkaus ja piina",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Prometheus astuu Olympukseen. Hän varastaa kipinän Auringon vaunuista tai seppien jumalan **Hephaestuksen**:n takomosta versiosta riippuen. Hän piilottaa sen onttoon varreensa ja tuo sen takaisin kuolevaisille."
+          "text": "Prometheus hiipii Olympokselle. Hän varastaa kipinän Auringon vaunuista tai, version mukaan, seppien jumalan **Hefaistoksen** ahjosta. Hän kätkee sen onttoon varteensa ja vie sen kuolevaisille."
         },
         {
           "type": "image",
           "asset": "prometheus_steal_fire_ancient_greek_painting",
           "ratio": "4:3",
-          "caption": "Prometheus tuo tulen ihmisiin, tekniikan perustan."
+          "caption": "Prometheus tuo ihmisille tulen: teko, josta tekniikka sai alkunsa."
         },
         {
           "type": "paragraph",
-          "text": "Kreikkalaisille tuli ei ole vain liekki. Hän ilmentää **tekninen**- ja **syy**-elementtejä, joiden avulla ihminen voi muuttaa maailmaa. Zeus kostaa. Ihmisyyttä vastaan hän lähettää myöhemmin Pandoran. Prometheusta vastaan rangaistus on suora."
+          "text": "Kreikkalaisille tuli ei ole pelkkä liekki. Se edustaa **tekniikkaa** ja **järkeä**, joiden avulla ihminen voi muuttaa maailmaa. Zeus iskee takaisin. Ihmiskunnan kiusaksi hän lähettää myöhemmin Pandoran. Prometheusta hän rankaisee suoraan."
         },
         {
           "type": "funFact",
-          "text": "Muinaisessa lääketieteessä **maksa** pidettiin tunteiden ja elinvoiman paikkana. Zeus valitsi tämän urut murtaakseen titaanin tahdon."
+          "text": "Antiikin lääketieteessä **maksaa** pidettiin tunteiden ja elinvoiman asuinsijana. Zeus valitsi juuri tämän elimen, jotta titaanin tahto murtuisi."
         },
         {
           "type": "paragraph",
-          "text": "Titan on ketjutettu **Kaukasuksen**:n seinään. Joka päivä kotka syö hänen maksansa. Joka ilta urut syntyvät uudelleen. Kidutus alkaa taas aamunkoitteessa, ilman loppua."
+          "text": "Titaani kahlitaan **Kaukasuksen** kallioseinämään. Joka päivä kotka syö hänen maksansa. Joka yö maksa kasvaa uudelleen. Piina alkaa taas aamunkoitteessa, loputtomasti."
         }
       ]
     },
@@ -85,34 +85,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Prometheus kieltäytyi vuosisatojen ajan antamasta periksi. Hän tietää vaarallisen salaisuuden: mikä nainen synnyttää Zeusta vahvemman pojan. Kidutuksesta huolimatta hän on hiljaa. Siitä tulee vastarinnan symboli tyrannian edessä."
+          "text": "Prometheus kieltäytyy vuosisatojen ajan antamasta periksi. Hän tietää vaarallisen salaisuuden: kuka nainen synnyttää Zeusta vahvemman pojan. Kidutuksesta huolimatta hän vaikenee. Hänestä tulee tyrannian vastustamisen symboli."
         },
         {
           "type": "paragraph",
-          "text": "Sankari **Herakles**, Zeuksen poika, saapuu Kaukasiaan. Hän tappaa kotkan nuolella ja vapauttaa vangin. Zeus ottaa vastaan armon: Prometheus paljastaa vihdoin salaisuuden nymfistä **Thétis**. Näin jumalten kuningas välttää oman lankeemuksensa."
+          "text": "Zeuksen poika, sankari **Herakles**, saapuu lopulta Kaukasukselle. Hän ampuu kotkan nuolella ja vapauttaa vangin. Zeus suostuu armahdukseen: Prometheus paljastaa vihdoin nymfi **Thetistä** koskevan salaisuuden. Näin jumalten kuningas välttää oman kukistumisensa."
         },
         {
           "type": "paragraph",
-          "text": "Kunnioittaakseen valan, joka sitoi hänet kallioon, Prometheus käyttää sormusta, joka on tehty hänen ketjujensa raudasta ja kivenpalasta. Hän pysyy \"sidottuina\" vuoreen, mutta vapaana."
+          "text": "Koska vala sitoi hänet kallioon, Prometheus kantaa sormusta, joka on tehty hänen kahleidensa raudasta ja kivensirusta. Hän on yhä ”sidottu” vuoreen, mutta vapaa."
         }
       ]
     },
     {
       "id": "course_162_promethee_le_voleur_de_feu_p4",
-      "title": "Myytti, joka ei koskaan sammu",
+      "title": "Myytti, joka ei sammu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "400-luvulla eaa. tragedia [[Aischylus]] esitti \"Prometheuksen ketjuissa\". Myöhemmin myytti inspiroi tiedettä ja edistystä. Mary Shelley tekstittää \"Frankenstein\" \"The Modern Prometheus\": Elämän luominen ilman viisautta voi myös tuhota."
+          "text": "400-luvulla eKr. tragediankirjoittaja [[Aiskhylos]] tuo näyttämölle näytelmän *Kahlittu Prometheus*. Myöhemmin myytti innoittaa tiedettä ja edistystä. Mary Shelley antaa romaanilleen *Frankenstein* alaotsikon *Moderni Prometheus*: elämän luominen ilman viisautta voi myös tuhota."
         },
         {
           "type": "paragraph",
-          "text": "Filosofi [[Gaston Bachelard]] puhuu jopa \"Prometheus-kompleksista\": halusta tietää enemmän kuin mestarinsa. Nykyään verrataan usein tekoälyä tai genetiikkaa uuteen tuleen: valtava voima, joka on edelleen huonosti hallinnassa."
+          "text": "Filosofi [[Gaston Bachelard]] puhuu jopa ”Prometheus-kompleksista”: halusta tietää enemmän kuin opettajansa. Nykyään tekoälyä tai geenitekniikkaa verrataan usein uuteen tuleen: valtava voima, jota ei vielä osata kunnolla hallita."
         },
         {
           "type": "takeaway",
-          "text": "**Prometheus** tarjoaa miehille sivilisaation tulen varastamisen kautta, kestää tuhat vuotta vanhaa piinaa ja sitten **Herakles** toimittaa sen. Edistyksellä on hintansa, samoin kuin jumalallisella voimalla."
+          "text": "**Prometheus** antaa ihmisille sivilisaation varastamalla tulen, kärsii tuhansia vuosia kestävän piinan ja vapautuu lopulta **Herakleen** avulla. Edistyksellä on hintansa, ja niin on jumalten vallallakin."
         }
       ]
     }

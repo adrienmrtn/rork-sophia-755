@@ -1,14 +1,14 @@
 {
   "id": "course_200_re_et_la_creation_du_monde_egypte",
   "title": "Mitä Ra tekee joka yö pelastaakseen maailman?",
-  "subtitle": "Luova aurinko",
+  "subtitle": "Aurinko luojana",
   "subject": "mythologie",
   "subcategory": "Muut mytologiat",
-  "description": "Re, Egyptin aurinkojumala: hän luo maailman, ylittää taivaan joka päivä, taistelee kaaosta yöllä ja rankaisee ihmisiä silmällään.",
+  "description": "Ra, Egyptin aurinkojumala: hän luo maailman, kulkee taivaan halki joka päivä, taistelee yöllä kaaosta vastaan ja rankaisee ihmisiä Silmällään.",
   "hero": {
     "image": "re_et_la_creation_du_monde_egypte",
     "ratio": "16:9",
-    "hook": "Jokainen aamunkoitto on voitto. Ilman Ra:n venettä maailma putoaisi tyhjäksi."
+    "hook": "Jokainen aamunkoitto on voitto. Ilman Ran venettä maailma vajoaisi takaisin tyhjyyteen."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**D** (tai Râ) ei ole vain aurinko. **Heliopolis**:n, auringonpalvonnan kaupungin lähellä nykyistä Kairoa, egyptiläisille se on olemassaolon periaate: luoda maailma, sitten puolustaa sitä joka ilta tyhjyyttä vastaan."
+          "text": "**Ra** (tai Re) ei ole pelkkä aurinko. Nykyisen Kairon lähellä sijainneen **Heliopoliksen**, auringonpalvonnan kaupungin, egyptiläisille hän on itse olemassaolon perusta: hän luo maailman ja puolustaa sitä sitten joka yö tyhjyyttä vastaan."
         },
         {
           "type": "paragraph",
-          "text": "Kolmen vuosituhannen ajan hänen hahmonsa ylitti valtion uskonnon. Re:n ymmärtäminen tarkoittaa sen ymmärtämistä, kuinka Egypti ajatteli maailmankaikkeuden syntymisestä, järjestyksen hauraudesta ja siitä, miksi jokainen aamunkoitto on voitto, joka on voitettava uudelleen."
+          "text": "Kolmen vuosituhannen ajan hänen hahmonsa kulkee läpi koko valtionuskonnon. Kun ymmärtää Raa, ymmärtää, miten Egyptissä ajateltiin maailmankaikkeuden syntyä ja järjestyksen haurautta ja miksi jokainen aamunkoitto on voitto, joka on saavutettava aina uudelleen."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p1",
-      "title": "Maailman syntyminen: alkukanta",
+      "title": "Maailman synty: alkukumpu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ennen aikaa siellä on **Substantiivi**: tumma, ääretön vesi, täynnä bakteereita. [[Heliopoliittinen kosmogonia]] kuvaa **Atum**:n ulkonäköä, \"sen, joka on valmis\". Se luo itsensä ja ilmestyy **Pierre Benben**:lle, ensimmäiselle kiinteälle pisteelle."
+          "text": "Ennen aikaa on olemassa **Nun**: pimeä, ääretön vesi, täynnä elämän siemeniä. [[Heliopoliittinen kosmogonia]] kuvaa, miten **Atum**, ”se, joka on täydellinen”, ilmestyy. Hän synnyttää itse itsensä ja nousee esiin **Benben-kivellä**, ensimmäisellä kiinteällä kohdalla."
         },
         {
           "type": "image",
           "asset": "atum_primordial_egyptian_creation_benben",
           "ratio": "4:3",
-          "caption": "Atum syntyy substantiivista Benben-kivellä."
+          "caption": "Atum nousee Nunista Benben-kivelle."
         },
         {
           "type": "funFact",
-          "text": "Heliopoliksessa papit pitivät pyhää lintua **Bénou** (Feeniksin esi-isä), jonka piti olla Ra:n sielu ja laskeutuvan Benbenille ilmoittamaan uudesta kierrosta."
+          "text": "Heliopoliksessa papit hoitivat pyhää lintua, **Benua** (feeniksin esikuvaa), jonka uskottiin olevan Ran sielu ja joka laskeutui Benben-kivelle ilmoittamaan uuden kierron alkamisesta."
         },
         {
           "type": "paragraph",
-          "text": "Yksin Atoum luo **Kaali** (ilma) ja **Tefnut** (kosteus), sitten **Geb** (Maa) ja **Mutteri** (Taivas), erotettuina ja jättää asuintilan. **Osiris**, **Isis**, **Seth** ja **Nephthys** ovat syntyneet: Atumin kanssa **suuri Ennead** (yhdeksän). [[Egyptiläinen jumalallinen synkretismi]] yhdistäisi myöhemmin Atumin ja Ran yhdeksi luovaksi hahmoksi."
+          "text": "Yksin Atum luo **Šun** (ilma) ja **Tefnutin** (kosteus), sitten **Gebin** (maa) ja **Nutin** (taivas), jotka erotetaan toisistaan, jotta elämälle jää tilaa. Syntyvät **Osiris**, **Isis**, **Seth** ja **Nefthys**: yhdessä Atumin kanssa he muodostavat **suuren enneadin** (yhdeksän jumalaa). [[Egyptiläinen jumalallinen synkretismi]] yhdistää myöhemmin Atumin ja Ran yhdeksi luojahahmoksi."
         }
       ]
     },
@@ -58,21 +58,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Päivän aikana Re purjehtii veneellä **Mandjet**. Hämärässä hän kulkee **Mesektetin**:n yli ja ylittää [[Duat]]:n, kuolleiden maailman, kaksitoista tuntia. Tämä ei ole lepoa: se on sotaa **Isfet**, epäjärjestystä vastaan."
+          "text": "Päivällä Ra purjehtii **Mandjet**-veneellä. Iltahämärissä hän siirtyy **Mesektet**-veneeseen ja kulkee [[Duat]]-tuonelan eli kuolleiden maailman kaksitoista tuntia. Se ei ole lepoa: se on sotaa **Isfetiä**, epäjärjestystä, vastaan."
         },
         {
           "type": "image",
           "asset": "ra_solar_barque_egyptian_hieroglyphics",
           "ratio": "4:3",
-          "caption": "Re:n aurinkovene, ajan päivittäinen moottori."
+          "caption": "Ran aurinkovene, ajan päivittäinen moottori."
         },
         {
           "type": "funFact",
-          "text": "Neljännestä dynastiasta lähtien lähes kaikkien faaraoiden nimessä oli \"Re\": he kutsuivat itseään \"Re-pojiksi\", jotka ovat aurinkokierron takaajia."
+          "text": "Neljännestä dynastiasta alkaen lähes kaikkien faaraoiden nimessä on ”Ra”: he kutsuvat itseään ”Ran pojiksi”, aurinkokierron takaajiksi."
         },
         {
           "type": "paragraph",
-          "text": "Käärme **Apopis** yrittää kaataa veneen tai juoda taivaallisen Niilin vesiä. **Seth** itse puolustaa joskus jousta. Kun Re syntyy uudelleen aamunkoitteessa skarabeuksen, **Khépri**:n, varjossa, **Maât** (tasapaino) voittaa jälleen. Pimennys? Apopis melkein voitti."
+          "text": "Käärme **Apopis** yrittää kaataa veneen tai juoda taivaallisen Niilin vedet. Joskus **Seth** itse puolustaa keulaa. Kun Ra syntyy aamunkoitteessa uudelleen skarabeuskuoriaisena, **Kheprinä**, **Maat** (tasapaino) voittaa jälleen kerran. Auringonpimennys? Apopis oli vähällä voittaa."
         }
       ]
     },
@@ -83,36 +83,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jopa Ra on tulossa vanhaksi. Tarinassa \"The Destruction of Men\" hänen luunsa muuttuvat hopeaksi ja ihmiskunta tekee salaliiton häntä vastaan. Loukkaantunut hän vapauttaa tulisen silmänsä: jumalatar [[Sekhmet]], verenhimoinen leijona."
+          "text": "Jopa Ra vanhenee. Tarinassa ”Ihmiskunnan tuho” hänen luunsa muuttuvat hopeaksi ja ihmiset juonivat häntä vastaan. Loukattuna hän päästää valloilleen tulisen Silmänsä: jumalatar [[Sekhmet]], verenhimoinen naarasleijona."
         },
         {
           "type": "image",
           "asset": "sekhmet_hathor_lioness_egyptian_goddess",
           "ratio": "4:3",
-          "caption": "Sekhmet, Reen silmä, ennen kuin hänestä tuli taas Hathor."
+          "caption": "Sekhmet, Ran Silmä, ennen kuin hänestä tulee jälleen Hathor."
         },
         {
           "type": "paragraph",
-          "text": "Verilöyly uhkaa sammuttaa luomakunnan. Rê valmistaa tuhansia punaisen okran värisiä olutpurkkeja, jotka kaadetaan pelloille. Sekhmet uskoo juovansa verta, juovuttaa ja rauhoittuu: hänestä tulee suloinen **Hathor**. Myytti selittää pahuuden ja oikeuttaa juopumisen juhlan, jossa ihmiset joivat juhlimaan ihmisten pelastusta."
+          "text": "Verilöyly uhkaa tuhota koko luomakunnan. Ra panettaa tuhansia ruukullisia punaisella okralla värjättyä olutta, joka kaadetaan pelloille. Sekhmet luulee juovansa verta, humaltuu ja rauhoittuu: hänestä tulee lempeä **Hathor**. Myytti selittää pahan ja antaa perustan juopumuksen juhlalle, jossa juotiin ihmisten pelastuksen kunniaksi."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p4",
-      "title": "Jälkipolvet ja fuusio: avatar Amon-Re",
+      "title": "Perintö ja sulautuminen: Amon-Ra",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uudessa kuningaskunnassa theban jumala **Amon** sulautui Re: **Amon-Rê** syntyi, \"Jumalien kuningas\", näkymätön luoja ja näkyvä aurinko. Hänelle kohoavat suurimmat pyhäköt, kuten [[Karnakin temppeli]]."
+          "text": "Uuden valtakunnan aikana Theban jumala **Amon** sulautuu Raan: syntyy **Amon-Ra**, ”jumalten kuningas”, näkymätön luoja ja näkyvä aurinko. Hänelle rakennetaan valtavimmat pyhäköt, kuten [[Karnakin temppeli]]."
         },
         {
           "type": "paragraph",
-          "text": "Pyramidit ja obeliskit kivettävät auringonsäteet nostaakseen faaraon taivaallista isäänsä kohti. Jopa **Akhenaten**:n uudistus, joka asetti **Aten** (levyn) kultin, radikalisoi jo aurinkoisen idean. Ra on edelleen Egyptin vakauden ylitsepääsemätön symboli."
+          "text": "Pyramidit ja obeliskit ovat kiveksi muuttuneita auringonsäteitä, jotka nostavat faaraon taivaallisen isänsä luo. Jopa **Ehnatonin** uudistus, joka teki **Atonin** (aurinkokiekon) palvonnasta pakollista, vei äärimmilleen jo valmiiksi aurinkoon liittyvän ajatuksen. Ra on edelleen Egyptin vakauden ylittämätön symboli."
         },
         {
           "type": "takeaway",
-          "text": "**D** luo maailman Heliopoliksesta, puolustaa sitä joka ilta veneessään **Apopis**:tä vastaan ja rankaisee ja pelastaa ihmiskunnan Silmän kautta **Sekhmet**. Hänestä tulee **Amon-Rê**, ja hän hallitsee faaraoiden Egyptin huipulla."
+          "text": "**Ra** luo maailman Heliopoliksesta käsin, puolustaa sitä joka yö veneessään **Apopista** vastaan ja rankaisee ja pelastaa ihmiskunnan Silmänsä, **Sekhmetin**, avulla. Muututtuaan **Amon-Raksi** hän hallitsee faaraoiden Egyptin huipulla."
         }
       ]
     }

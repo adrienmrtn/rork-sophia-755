@@ -4,11 +4,11 @@
   "subtitle": "1810-1850",
   "subject": "art",
   "subcategory": "Maalaustaide ja tyylisuunnat",
-  "description": "Vuosina 1810-1850 romanttisuus kapinoi uusklassismin kylmyyttä vastaan. Väri vs. piirtäminen, intohimo vs. syy: **Géricault** ja **Delacroix**.",
+  "description": "Vuosina 1810-1850 romantiikka kapinoi uusklassismin kylmyyttä vastaan. Väri piirustusta vastaan, intohimo järkeä vastaan: **Géricault** ja **Delacroix**.",
   "hero": {
     "image": "le_romantisme_en_peinture",
     "ratio": "16:9",
-    "hook": "Kun maalaus lakkaa jäljittelemästä muinaisia patsaita maalatakseen intohimoa ja skandaalia."
+    "hook": "Kun maalaustaide lakkaa jäljittelemästä antiikin patsaita ja alkaa kuvata intohimoa ja skandaaleja."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**romanttinen** maalauksessa kukoistaa **1810**:n ja **1850**:n välillä. Se vastustaa [[Davidin uusklassismi]] ankaruutta: vähemmän kylmää syytä, enemmän tunteita, liikettä ja piinaa."
+          "text": "**Romantiikka** kukoistaa maalaustaiteessa vuosien **1810** ja **1850** välillä. Se vastustaa ankaruutta, jota [[Davidin uusklassismi]] edustaa: vähemmän kylmää järkeä, enemmän tunnetta, liikettä ja tuskaa."
         },
         {
           "type": "paragraph",
-          "text": "**Théodore Géricault**:n ja **Eugène Delacroixin**:n kanssa maalauksesta tulee intohimojen ja poliittisten draamien peili. Asettamalla värin piirustuksen yläpuolelle he avasivat tien impressionismiin."
+          "text": "**Théodore Géricault** ja **Eugène Delacroix** tekevät maalaustaiteesta intohimojen ja poliittisten draamojen peilin. Asettamalla värin piirustuksen edelle he raivaavat tien impressionismille."
         }
       ]
     },
     {
       "id": "course_125_le_romantisme_en_peinture_delacroix_geri_p1",
-      "title": "Riko akateemisesta järjestyksestä",
+      "title": "Irti akateemisesta järjestyksestä",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1800-luvun alussa [[uusklassismi]] hallitsi. Sen johtaja **Jacques-Louis David** kannattaa selkeyttä, tasapainoa ja moraalia. Muotoilulla on enemmän merkitystä kuin värillä: yksi on äly, toinen aistien nautinto."
+          "text": "1800-luvun alussa vallitsee [[uusklassismi]]. Sen johtohahmo **Jacques-Louis David** ihannoi selkeyttä, tasapainoa ja moraalia. Piirustus on tärkeämpää kuin väri: toinen edustaa älyä, toinen aistinautintoa."
         },
         {
           "type": "image",
           "asset": "jacques_louis_david_oath_of_horatii_painting",
           "ratio": "4:3",
-          "caption": "Davidin horattien vala: uusklassinen kurinalaisuuden ihanne."
+          "caption": "Davidin Horatiusten vala: uusklassisen ankaruuden ihanne."
         },
         {
           "type": "funFact",
-          "text": "*Horatioiden vala* -esityksessä katsojat pyörtyivät teoksen voimasta: jopa uusklassismi osasi liikkua ennen kuin siitä tuli akateeminen."
+          "text": "Kun *Horatiusten vala* esiteltiin, jotkut naiskatsojat pyörtyivät teoksen voimasta: jopa uusklassismi osasi liikuttaa, ennen kuin siitä tuli akateemista."
         },
         {
           "type": "paragraph",
-          "text": "Romantikot haluavat draamaa, mysteeriä, tunteiden väkivaltaa. He pitävät enemmän [[Shakespeare]] tai [[Byron]] kuin kreikkalaiset sankarit ja villi luonto siisteistä maisemista. Kosketus tulee näkyvämmäksi, kontrastit näkyvämmäksi."
+          "text": "Romantikot haluavat draamaa, mysteeriä ja väkeviä tunteita. Kreikkalaisten sankarien sijaan heidän esikuviaan ovat [[Shakespeare]] ja [[Byron]], ja siistien maisemien sijaan he suosivat villiä luontoa. Siveltimenjälki tulee näkyvämmäksi, kontrastit voimakkaammiksi."
         }
       ]
     },
@@ -58,61 +58,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Théodore Géricault** vie romantiikan julkiselle areenalle *Medusan lautta* (**1819**). Teos perustuu todelliseen skandaaliin: fregatin *Meduusa* uppoamiseen vuonna **1816**. Kuninkaallisen suosion nimittämä kapteeni hylkää noin **150** merimiehiä väliaikaisella lautalla."
+          "text": "**Théodore Géricault** nostaa romantiikan julkisen keskustelun keskiöön teoksellaan *Medusan lautta* (**1819**). Teos perustuu todelliseen skandaaliin: fregatti *Méduse* haaksirikkoutui vuonna **1816**. Kuninkaan suosiosta nimitetty kapteeni jättää noin **150** merimiestä hätäisesti kyhätylle lautalle."
         },
         {
           "type": "image",
           "asset": "gericault_raft_of_the_medusa_painting",
           "ratio": "4:3",
-          "caption": "Medusan lautta: nimettömien ihmisten tuska monumentaalisessa muodossa."
+          "caption": "Medusan lautta: tuntemattomien ihmisten kuolinkamppailu monumentaalikoossa."
         },
         {
           "type": "funFact",
-          "text": "Géricaultilla oli todellinen kokoinen kopio lautasta, jonka rakensi sama Médusen puuseppä, joka selvisi haaksirikkoutumisesta, tarkistaakseen jokaisen lankun."
+          "text": "Géricault teetti lautasta luonnollisen kokoisen kopion, ja sen rakensi Méduse-aluksen oma kirvesmies, joka oli selvinnyt haaksirikosta. Näin hän pystyi tarkistamaan jokaisen lankun."
         },
         {
           "type": "paragraph",
-          "text": "Hän tutkii ruumiita maalatakseen ruumiiden totuuden. Kuninkaallisen kokoisella kankaalla hän näyttää anonyymien ihmisten tuskan. Sävellyksen huipulla musta merimies heiluttaa rievulla pientä laivaa: [[abolitionisti]]-ele ja eliitin kritiikki."
+          "text": "Hän tutkii ruumiita voidakseen maalata kehot totuudenmukaisesti. Kuninkaallisen kokoisella kankaalla hän näyttää tuntemattomien ihmisten kuolinkamppailun. Sommitelman huipulla musta merimies heiluttaa riepua kohti pientä laivaa: [[abolitionisti]]-henkinen ele ja eliitin kritiikki."
         }
       ]
     },
     {
       "id": "course_125_le_romantisme_en_peinture_delacroix_geri_p3",
-      "title": "Delacroix: väri, vapaus, orientaatio",
+      "title": "Delacroix: väri, vapaus, itämaat",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Géricault'n ennenaikaisen kuoleman jälkeen **Eugène Delacroix**:stä tuli liikkeen johtaja. Hänelle **väri** kantaa tunteita. Hänen akateeminen kilpailijansa [[Jean-Auguste-Dominique Ingres]] puolustaa tasaista ja tarkkaa linjaa."
+          "text": "Géricault'n ennenaikaisen kuoleman jälkeen **Eugène Delacroix'sta** tulee liikkeen johtaja. Hänelle **väri** välittää tunteen. Hänen akateeminen kilpailijansa [[Jean-Auguste-Dominique Ingres]] puolustaa sileää ja tarkkaa viivaa."
         },
         {
           "type": "image",
           "asset": "delacroix_liberty_leading_the_people_painting",
           "ratio": "4:3",
-          "caption": "Liberty Leading the People juhlii kolmea kunniakasta vuotta 1830."
+          "caption": "Vapaus johtaa kansaa juhlistaa vuoden 1830 heinäkuun vallankumousta."
         },
         {
           "type": "paragraph",
-          "text": "*Vapaus johtaa ihmisiä* (**1830**) juhlii [[Heinäkuun vallankumous]], heinäkuun vallankumouksellisia päiviä. Vapauden allegoria kävelee opiskelijan, työläisen ja Pariisin pojan kanssa."
+          "text": "*Vapaus johtaa kansaa* (**1830**) juhlistaa kolmea kunniakasta päivää, joina [[Heinäkuun vallankumous]] tapahtuu. Vapautta esittävä allegorinen hahmo marssii ylioppilaan, työläisen ja pariisilaisen katupojan rinnalla."
         },
         {
           "type": "funFact",
-          "text": "Algerissa vuonna 1832 Delacroix meni salaa haaremiin satamakapteenin ansiosta. Nämä luonnokset ruokkivat *Algerian naiset niissä asunnossaan*."
+          "text": "Algerissa vuonna 1832 Delacroix pääsee salaa haaremiin erään satamakapteenin avulla. Näistä luonnoksista syntyy myöhemmin *Algerin naiset huoneessaan*."
         },
         {
           "type": "paragraph",
-          "text": "Vuonna **1832** hänen matkansa Marokkoon muuttaa hänen palettinsa. Siellä hän löysi uuden valon ja perusti osittain [[orientalismi]]. Hän ymmärtää myös, että varjo ei ole musta, vaan täynnä värillisiä heijastuksia: opetus, jonka impressionistit muistavat."
+          "text": "Vuonna **1832** matka Marokkoon muuttaa hänen palettinsa. Siellä hän löytää uudenlaisen valon ja luo osaltaan pohjan, jolle [[orientalismi]] rakentuu. Hän ymmärtää myös, ettei varjo ole musta vaan täynnä värikkäitä heijastuksia: tämän opin impressionistit omaksuvat."
         }
       ]
     },
     {
       "id": "course_125_le_romantisme_en_peinture_delacroix_geri_p4",
-      "title": "Romantismin perintö",
+      "title": "Romantiikan perintö",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Romantiikka ei kuollut vuonna 1850: se muuttui. Vapauttamalla kosketuksen ja värin Delacroix vaikuttaa **Van Goghiin** ja **Cézanne**. Taiteilija ei ole enää pelkkä käskyjen toteuttaja: hänestä tulee visionääri."
+          "text": "Romantiikka ei kuole vuonna 1850: se muuntuu. Vapauttamalla siveltimenvedon ja värin Delacroix vaikuttaa **Van Goghiin** ja **Cézanneen**. Taiteilija ei ole enää pelkkä tilaustöiden toteuttaja: hänestä tulee visionääri."
         },
         {
           "type": "timeline",
@@ -124,23 +124,23 @@
             },
             {
               "date": "1830",
-              "title": "Vapaus johtaa ihmisiä",
+              "title": "Vapaus johtaa kansaa",
               "detail": "Delacroix maalaa heinäkuun vallankumouksen."
             },
             {
               "date": "1832",
-              "title": "Matkaa Marokkoon",
-              "detail": "Uusi valo Delacroix-paletille."
+              "title": "Matka Marokkoon",
+              "detail": "Uusi valo Delacroix'n paletille."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Niiden kanssa historiamaalauksesta tulee yhteiskuntakritiikkiä. Taiteen täytyy ravistaa, ei vain tasoittaa."
+          "text": "Heidän myötään historiamaalauksesta tulee yhteiskuntakritiikkiä. Taiteen täytyy ravistella, ei vain mielistellä."
         },
         {
           "type": "takeaway",
-          "text": "Romantiikka korvaa intohimolla järjen ja värin värähtelyn piirtämisen ankaruuden sijaan. Géricault ja Delacroix tekevät yksilöllisistä tunteista universaalin aiheen."
+          "text": "Romantiikka asettaa intohimon järjen tilalle ja värin värinän piirustuksen ankaruuden tilalle. Géricault ja Delacroix tekevät yksilön tunteista yleispätevän aiheen."
         }
       ]
     }

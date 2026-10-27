@@ -1,14 +1,14 @@
 {
   "id": "course_222_la_crise_de_la_biodiversite",
-  "title": "Elämmekö kuudetta joukkosukupuuttoa?",
+  "title": "Elämmekö kuudetta massasukupuuttoa?",
   "subtitle": "Kuudes sukupuutto",
   "subject": "comprendreLeMonde",
   "subcategory": "Ympäristö ja tulevaisuus",
-  "description": "Villieläinten populaatiot ovat pudonneet **69 % vuodesta 1970**. Koemme Maan historian kuudetta massasukupuuttoa, ensimmäisen yhden lajin aiheuttaman sukupuuton: me.",
+  "description": "Villieläinten populaatiot ovat pienentyneet **69 % vuodesta 1970**. Olemme keskellä Maan historian kuudetta massasukupuuttoa, ensimmäistä, jonka on aiheuttanut yksi ainoa laji: me.",
   "hero": {
     "image": "la_crise_de_la_biodiversite",
     "ratio": "16:9",
-    "hook": "Ei asteroidia, ei tulivuoria: tällä kertaa massasukupuutolla on ihmisen kasvot."
+    "hook": "Ei asteroidia, ei tulivuorta: tällä kertaa massasukupuutolla on ihmisen kasvot."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Maapallo on jo kokenut viisi suurta massasukupuuttoa, jotka ovat aiheutuneet asteroideista tai jättimäisistä tulivuorenpurkauksista. Tänään on meneillään kuudes, mutta ensimmäistä kertaa sillä ei ole luonnollista syytä."
+          "text": "Maapallo on jo kokenut viisi suurta massasukupuuttoa, joiden aiheuttajina olivat asteroidit tai jättimäiset tulivuorenpurkaukset. Nyt on meneillään kuudes, mutta ensimmäistä kertaa sen syy ei ole luonnollinen."
         },
         {
           "type": "paragraph",
-          "text": "Lajit katoavat nykyään **10-1000 kertaa0** kuin luonnollinen tahti, ja syyllinen on yksi laji: meidän. Tämä kurssi selittää ongelman laajuuden, sen syyt ja miksi se koskee meitä suoraan."
+          "text": "Lajeja katoaa nykyään **100-1 000 kertaa nopeammin** kuin luonnollisella tahdilla, ja syyllinen on yksi ainoa laji: oma lajimme. Tämä kurssi selittää, kuinka laaja ongelma on, mistä se johtuu ja miksi se koskee meitä suoraan."
         }
       ]
     },
     {
       "id": "course_222_la_crise_de_la_biodiversite_p1",
-      "title": "Mitattu romahdus, kuva kuviolta",
+      "title": "Romahdus mitattuna luku luvulta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Luonnon tilan seurantaan tutkijat käyttävät **Living Planet -indeksi**, jonka organisaatio [[WWF]] julkaisee vuosittain. Vuoden 2022 havainto on karu: vuosina 1970-2018 luonnonvaraisten eläinten (nisäkkäät, linnut, kalat, matelijat, sammakkoeläimet) populaatiot putosivat maailmanlaajuisesti keskimäärin **69 %**."
+          "text": "Luonnon tilan seuraamiseen tutkijat käyttävät **Living Planet -indeksiä**, jonka [[WWF]]-järjestö julkaisee joka vuosi. Vuoden 2022 havainto on karu: vuosina 1970-2018 luonnonvaraisten eläinten (nisäkkäiden, lintujen, kalojen, matelijoiden ja sammakkoeläinten) populaatiot pienenivät maailmanlaajuisesti keskimäärin **69 %**."
         },
         {
           "type": "paragraph",
-          "text": "Tämä lasku vaikuttaa pääasiassa trooppisiin alueisiin, joilla elää eniten lajeja. Latinalaisessa Amerikassa se on 94 prosenttia. Tämä ei tarkoita, että 94 prosenttia lajeista olisi kadonnut, vaan että niiden populaatiot ovat vähentyneet, mikä tekee niistä erittäin hauraita täydellisen sukupuuton edessä."
+          "text": "Lasku koskee ennen kaikkea trooppisia alueita, joilla elää eniten lajeja. Latinalaisessa Amerikassa se on 94 %. Tämä ei tarkoita, että 94 % lajeista olisi kadonnut, vaan että niiden kannat ovat hupenneet, minkä vuoksi ne ovat hyvin alttiita kuolemaan kokonaan sukupuuttoon."
         },
         {
           "type": "image",
           "asset": "amazon_deforestation_rainforest_aerial",
           "ratio": "16:9",
-          "caption": "Amazonin metsien hävittäminen tuhoaa yhden planeetan rikkaimmista elämän varastoista."
+          "caption": "Amazonin sademetsän hävittäminen tuhoaa yhden maapallon rikkaimmista elämän aarreaitoista."
         },
         {
           "type": "funFact",
-          "text": "Jos maapallon historia olisi kestänyt 24 tuntia, ihmiset olisivat ilmestyneet kello 23.58. Heiltä kesti vain kaksi sekuntia massasukupuuton laukaisemiseen."
+          "text": "Jos maapallon historia kestäisi 24 tuntia, ihmiset olisivat ilmestyneet kello 23.58. Kaksi sekuntia riitti heille massasukupuuton käynnistämiseen."
         },
         {
           "type": "paragraph",
-          "text": "[[IPBES]]:n mukaan noin miljoona eläin- ja kasvilajia on nyt uhattuna sukupuuttoon, joskus tulevina vuosikymmeninä."
+          "text": "[[IPBES]]-luontopaneelin mukaan noin miljoona eläin- ja kasvilajia on nykyään vaarassa kuolla sukupuuttoon, osa jo lähivuosikymmeninä."
         }
       ]
     },
     {
       "id": "course_222_la_crise_de_la_biodiversite_p2",
-      "title": "Viisi syytä, yksi syy",
+      "title": "Viisi syytä, yksi alkulähde",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tämä katastrofi ei ole sattuma: se tulee suoraan meidän tavastamme tuottaa ja kuluttaa. Tutkijat tunnistavat viisi tärkeintä syytä. Ensimmäinen ja tuhoisin on maankäytön muutos: metsien hävittäminen karjankasvatusta varten, kaupungistuminen, intensiivinen maatalous, joka pilkkoo luonnolliset elinympäristöt pieniksi paloiksi, jotka ovat liian eristettyjä selviytyäkseen."
+          "text": "Tämä katastrofi ei ole sattumaa: se johtuu suoraan tavastamme tuottaa ja kuluttaa. Tutkijat tunnistavat viisi pääsyytä. Ensimmäinen ja tuhoisin on maankäytön muutos: metsien hävittäminen karjankasvatuksen tieltä, kaupungistuminen ja tehomaatalous, joka pilkkoo luonnon elinympäristöt pieniksi paloiksi, liian eristyksiin, jotta lajit selviäisivät niissä."
         },
         {
           "type": "paragraph",
-          "text": "Sitten tulevat liikakalastus (liikakalastus, laiton metsästys) ja saastuminen: torjunta-aineet, lannoitteet, jotka luovat kuolleita vyöhykkeitä valtameriin, mikromuovit, joita löytyy koko ravintoketjusta."
+          "text": "Seuraavina tulevat liikakäyttö (liikakalastus, salametsästys) ja saastuminen: torjunta-aineet, lannoitteet, jotka synnyttävät valtameriin kuolleita alueita, ja mikromuovit, joita päätyy koko ravintoketjuun."
         },
         {
           "type": "image",
@@ -76,7 +76,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Kaksi viimeistä tekijää ovat muualta tulleet lajit, jotka usein erehdyksessä kuljetetaan globaalin kaupan mukana, jotka syrjäyttävät paikalliset lajit, sekä ilmastonmuutos, joka muuttaa lämpötilaa nopeammin kuin lajit pystyvät sopeutumaan."
+          "text": "Kaksi viimeistä tekijää ovat vieraslajit, joita maailmankauppa kuljettaa usein vahingossa mukanaan ja jotka syrjäyttävät paikallisia lajeja, sekä ilmastonmuutos, joka muuttaa lämpötiloja nopeammin kuin lajit ehtivät sopeutua."
         }
       ]
     },
@@ -87,7 +87,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Biologinen monimuotoisuus ei ole vain estetiikkakysymys. Luonto tekee meistä [[Ekosysteemipalvelut]] välttämättömiä, usein näkymättömiä, koska ne ovat ilmaisia. [[Dasgupta arvostelu]] -raportti muistuttaa meitä liian usein unohdetusta asiasta: taloutemme on riippuvainen luonnosta, ei päinvastoin."
+          "text": "Biologinen monimuotoisuus ei ole vain estetiikkaa. Luonnon meille tarjoamat [[ekosysteemipalvelut]] ovat elintärkeitä, mutta usein näkymättömiä, koska ne ovat ilmaisia. [[Dasgupta Review]] -raportti muistuttaa itsestäänselvyydestä, joka unohtuu liian usein: taloutemme on riippuvainen luonnosta, ei päinvastoin."
         },
         {
           "type": "image",
@@ -97,34 +97,34 @@
         },
         {
           "type": "paragraph",
-          "text": "Konkreettinen esimerkki: noin 75 % maailman ruokakasveista on riippuvaisia pölytettävistä hyönteisistä. Luonto on myös suurin apteekkimme, sillä 25 % nykyaikaisista lääkkeistä tulee kasveissa olevista molekyyleistä. Se säätelee myös vettä, muodostaa hedelmällistä maaperää ja imee osan ylimääräisestä CO₂:sta."
+          "text": "Konkreettinen esimerkki: noin 75 % maailman ruokakasveista tarvitsee hyönteisiä pölytykseen. Luonto on myös suurin apteekkimme, sillä 25 % nykyaikaisista lääkkeistä perustuu kasveista löydettyihin molekyyleihin. Lisäksi luonto säätelee vesitaloutta, muodostaa hedelmällistä maaperää ja sitoo osan ylimääräisestä CO₂:sta."
         },
         {
           "type": "paragraph",
-          "text": "Tuhoamalla biologista monimuotoisuutta tuhoamme siis omaa taloudellista ja ruokaelämäämme tukevaa luonnonpääomaa kuluttamalla planeetan luonnonvaroja paljon nopeammin kuin ne uusiutuvat."
+          "text": "Kun tuhoamme biologista monimuotoisuutta, tuhoamme siis sitä luonnonpääomaa, jonka varassa oma taloutemme ja ruokamme ovat, ja kulutamme planeetan luonnonvaroja paljon nopeammin kuin ne uusiutuvat."
         }
       ]
     },
     {
       "id": "course_222_la_crise_de_la_biodiversite_p4",
-      "title": "Rajat, joita ei saa ylittää, mahdollisuus palautua takaisin",
+      "title": "Rajat, joita ei saa ylittää, ja mahdollisuus toipua",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Biodiversiteetti on yksi yhdeksästä [[planetaariset rajat]], joita ei saa ylittää, jotta maapallo pysyy asuttavana, ja tämä kynnys on jo ylitetty. Todellinen vaara on [[Ekologiset käännekohdat]]: kynnykset, joissa ekosysteemi romahtaa äkillisesti ja tavalla, jota on lähes mahdotonta kääntää, kuin Amazonin metsä muuttuu savaniksi."
+          "text": "Biodiversiteetti kuuluu yhdeksään rajaan, jotka tunnetaan nimellä [[planetaariset rajat]] ja joita ei saa ylittää, jos maapallon halutaan pysyvän asuttavana, ja tämä raja on jo ylitetty. Todellinen vaara ovat [[ekologiset käännekohdat]]: kynnykset, joiden kohdalla ekosysteemi romahtaa äkillisesti ja lähes peruuttamattomasti, kuten jos Amazonin sademetsä muuttuisi savanniksi."
         },
         {
           "type": "paragraph",
-          "text": "Ratkaisuja on kuitenkin olemassa. Montrealissa vuonna 2022 järjestetyssä [[COP15]]-tapahtumassa maailman maat asettivat tavoitteeksi suojella 30 prosenttia maasta ja meristä vuoteen 2030 mennessä. Tämä tarkoittaa maatalouden muuttamista, kosteikkojen ennallistamista ja käytävien jättämistä lajeille."
+          "text": "Ratkaisuja on kuitenkin olemassa. Montrealissa vuonna 2022 pidetyssä [[COP15]]-kokouksessa maailman maat asettivat tavoitteeksi suojella 30 % maa- ja merialueista vuoteen 2030 mennessä. Se edellyttää maatalouden muuttamista, kosteikkojen ennallistamista ja käytävien jättämistä, jotta lajit voivat liikkua."
         },
         {
           "type": "paragraph",
-          "text": "Luonnolla on suuri kapasiteetti [[joustavuutta]], jos annamme sille tilaa ja aikaa. Metsän suojeleminen tarkoittaa miljoonien lajien suojelemista ja samalla välttämättömän hiilinielun ylläpitämistä ilmaston lämpenemistä vastaan."
+          "text": "Luonnossa on paljon [[palautumiskyky]] eli kykyä toipua, jos sille annetaan tilaa ja aikaa. Metsän suojeleminen tarkoittaa miljoonien lajien suojelemista ja samalla tärkeän hiilinielun säilyttämistä ilmaston lämpenemistä vastaan."
         },
         {
           "type": "takeaway",
-          "text": "Villieläinpopulaatiot putosivat 69 % vuosina 1970-2018: kyseessä on kuudes massasukupuutto, ensimmäinen yhden lajin aiheuttama sukupuutto, mikä kyseenalaistaa luonnon meille ilmaiseksi tarjoamat elintärkeät palvelut."
+          "text": "Villieläinpopulaatiot pienenivät 69 % vuosina 1970-2018: kyseessä on kuudes massasukupuutto, ensimmäinen yhden lajin aiheuttama, ja se uhkaa niitä elintärkeitä palveluja, joita luonto tarjoaa meille ilmaiseksi."
         }
       ]
     }

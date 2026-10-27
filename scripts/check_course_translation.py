@@ -156,7 +156,10 @@ INITIALISM_VOWEL_LETTERS = set("AEFHILMNORSX")
 
 #: Abbreviations whose period belongs inside a bold span.
 ABBREVIATION_TAIL_RE = re.compile(
-    r"(?:\b[A-Za-z]|Jr|Sr|St|Mt|Dr|Mr|Mrs|Ms|Prof|Gen|Col|Capt|Inc|Ltd|etc|vol|no)\.$"
+    r"(?:\b[A-Za-z]|Jr|Sr|St|Mt|Dr|Mr|Mrs|Ms|Prof|Gen|Col|Capt|Inc|Ltd|etc|vol|no"
+    # era and date abbreviations of the edited languages: eKr./jKr. (fi), eKr./pKr. (et),
+    # f.Kr./e.Kr. (da, nb), н. э. / г. / в. (ru), and ordinal dates or centuries ("12.", "8.")
+    r"|eKr|jKr|pKr|Kr|eaa|jaa|\b[а-яё]|\d)\.$"
 )
 
 # Articles that must not precede a glossary key that already carries one.
@@ -836,7 +839,11 @@ def bold_spans(text: str) -> list[str]:
     return parts[1:-1:2] if len(parts) % 2 else []
 
 
-def residual_english(text: str) -> tuple[str, str] | None:
+#: Words that look like English function words but are ordinary words of a language.
+ENGLISH_LEFTOVER_EXCLUDE_BY_LANG = {"fi": frozenset({"into"}), "et": frozenset({"into"})}
+
+
+def residual_english(text: str, exclude: frozenset[str] = frozenset()) -> tuple[str, str] | None:
     """First untranslated English function word, or None.
 
     Same exemptions as ``residual_french``: glossary keys and anything inside
@@ -853,6 +860,8 @@ def residual_english(text: str) -> tuple[str, str] | None:
             lowered = candidate.lower()
             start = index + len(phrase)
     for match in ENGLISH_LEFTOVERS.finditer(candidate):
+        if match.group(0).lower() in exclude:
+            continue
         before = candidate[: match.start()].rstrip()
         after = candidate[match.end() :].lstrip()
         previous_word = re.search(r"([\w'\u00c0-\u024f-]+)$", before)
@@ -1111,7 +1120,7 @@ def check_segment(
 
     # --- residual English -------------------------------------------------
     if lang != "en":
-        match = residual_english(english)
+        match = residual_english(english, ENGLISH_LEFTOVER_EXCLUDE_BY_LANG.get(lang, frozenset()))
         if match:
             word, context = match
             report("english-leftover", f"{word!r}: {context}")

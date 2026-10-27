@@ -1,14 +1,14 @@
 {
   "id": "course_88_la_poetique_aristote",
   "title": "Aristoteleen ”Runousoppi”: mihin tragediaa tarvitaan?",
-  "subtitle": "4. vuosisadalla eKr",
+  "subtitle": "Neljäs vuosisata eKr.",
   "subject": "litterature",
   "subcategory": "Antiikin kreikkalaiset ja filosofit",
-  "description": "Aristoteles analysoi kreikkalaista tragediaa ja keksii sanoja kaikkialla: mimesis, katarsis, peripeteia. Poetiikka on ensimmäinen suuri kerronnan ohjekirja.",
+  "description": "Aristoteles erittelee kreikkalaista tragediaa ja luo sanoja, joita käytetään yhä kaikkialla: mimesis, katarsis, peripetia. *Runousoppi* on kerronnan ensimmäinen suuri käyttöopas.",
   "hero": {
     "image": "la_poetique_aristote",
     "ratio": "16:9",
-    "hook": "Ennen käsikirjoituskäsikirjoja oli Aristoteles ja kreikkalainen tragedia."
+    "hook": "Ennen käsikirjoitusoppaita olivat Aristoteles ja kreikkalainen tragedia."
   },
   "sections": [
     {
@@ -18,47 +18,47 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**4. vuosisadalla BC** **Aristoteles**, Platonin oppilas silloisen itsenäisen ajattelijan, **Lukio**:n perustaja Ateenassa, kirjoitti **Poetiikkaa**. Se ei ole runo. Se on analyysi runoudesta, erityisesti **tragedia**, kreikkalaisesta teatterilajista, joka kuvaa sankarin kaatumista. Miten tarina saa aikaan pelkoa ja sääliä? Miksi tästä tulee hyvä mieli?"
+          "text": "**Neljännellä vuosisadalla eKr.** **Aristoteles** kirjoittaa **Runousopin**. Hän oli ensin Platonin oppilas, sitten itsenäinen ajattelija ja Ateenan **Lykeionin** perustaja. Teos ei ole runo. Se on runouden erittely, ennen kaikkea **tragedian**, kreikkalaisen näytelmälajin, joka kuvaa sankarin tuhoa. Miten tarina herättää pelkoa ja sääliä? Miksi siitä tulee hyvä olo?"
         },
         {
           "type": "paragraph",
-          "text": "Meille saapunut teksti on osittaista, joskus kuivaa, kirjoitettua muistiinpanoihin. Silti hän muotoili teatteria, romaania ja sitten elokuvaa. Monet \"hyvän tarinankerrontamisen\" säännöt löytävät sieltä kreikkalaisen esi-isän. Aristoteles tarkkailee, mikä näyttämöllä toimii, ja ammentaa siitä sitten periaatteet."
+          "text": "Säilynyt teksti on vaillinainen, paikoin kuiva ja muistiinpanojen muotoinen. Silti se on muovannut teatteria, romaania ja myöhemmin elokuvaa. Monella ”hyvän tarinan” säännöllä on siinä kreikkalainen esikuvansa. Aristoteles tarkkailee, mikä toimii näyttämöllä, ja johtaa siitä periaatteita."
         }
       ]
     },
     {
       "id": "course_88_la_poetique_aristote_p1",
-      "title": "Matkiminen ei ole pettämistä",
+      "title": "Jäljittely ei ole huijausta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Platon suhtautui epäluuloisesti kuviin, joita hän vertasi harhaanjohtaviin varjoihin. Aristoteles kuntouttaa [[Aristoteelinen mimesis]]. Hänelle taide jäljittelee luontoa valikoivasti. Se ei näytä asioita sellaisina kuin ne ovat, vaan sellaisina kuin ne voisivat olla. Ihmisten tekojen esittäminen ei ole valehtelua. Se on oppimista. Lapsi matkii ymmärtääkseen. Taidetta myös."
+          "text": "Platon suhtautui epäluuloisesti kuviin, joita hän vertasi harhaanjohtaviin varjoihin. Aristoteles taas nostaa jäljittelyn kunniaan: [[Aristoteelinen mimesis]] on hänelle arvokas asia. Hänen mukaansa taide jäljittelee luontoa valikoiden. Se ei näytä asioita sellaisina kuin ne ovat vaan sellaisina kuin ne voisivat olla. Ihmisten tekojen esittäminen ei ole valehtelua. Se on oppimista. Lapsi matkii ymmärtääkseen. Niin myös taide."
         },
         {
           "type": "image",
           "asset": "aristotle_portrait_bust_sculpture",
           "ratio": "1:1",
-          "caption": "Aristoteles: luokittelee maailmaa, mukaan lukien tarinat, joita kerromme itsellemme."
+          "caption": "Aristoteles luokitteli maailmaa, myös tarinoita, joita ihmiset kertovat toisilleen."
         },
         {
           "type": "paragraph",
-          "text": "Tragedia jäljittelee tietyn suuruisia vakavia, täydellisiä tekoja. Kriteeri ei ole tarkka dokumentti. Tämä on **todennäköistä** ja **Tarpeet**: mitä tässä tarinassa piti tapahtua tarinan sisäisen logiikan mukaan. Aristoteles erottaa myös eeppisen, pitkän jakeisen tarinan ja tragedian, teatraalisen toiminnan rajoitetussa ajassa."
+          "text": "Tragedia jäljittelee vakavia, kokonaisia ja laajuudeltaan merkittäviä tekoja. Mittapuuna ei ole dokumentaarinen tarkkuus. Se on **uskottava** ja **välttämätön**: se, minkä piti tapahtua juuri tässä tarinassa kertomuksen sisäisen logiikan mukaan. Aristoteles erottaa myös eepoksen, pitkän runomuotoisen kertomuksen, ja tragedian, rajatussa ajassa näyttämöllä etenevän toiminnan."
         }
       ]
     },
     {
       "id": "course_88_la_poetique_aristote_p2",
-      "title": "Katarsisi: pelko, sääli, helpotus",
+      "title": "Katarsis: pelko, sääli, helpotus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aristoteles sanoo, että tragedia täyttää säälin ja pelon tunteiden [[katarsis]]. Sanan tarkasta merkityksestä on kiistelty 25 vuosisataa: puhdistus, evakuointi, selkeytys? Keskeinen ajatus säilyy: väkivaltainen spektaakkeli ei vain innosta. Hän **Tilaukset** vaikuttaa meihin. Itkemme ja vapisemme turvassa, teatterissa."
+          "text": "Aristoteleen mukaan tragedian tehtävä on säälin ja pelon tunteiden [[katarsis]]. Sanan tarkasta merkityksestä on kiistelty 25 vuosisataa: puhdistumista, tyhjentämistä, selkiytymistä? Keskeinen ajatus pysyy: väkivaltainen näytelmä ei vain kiihota. Se **järjestää** katsojan tunteet. Teatterissa saa itkeä ja vapista turvassa."
         },
         {
           "type": "funFact",
-          "text": "Keskiajalla ja renessanssilla teksti kulki arabian- ja latinankielisten käännösten läpi, mukaan lukien ne, jotka liittyvät [[Averroes]]:ään, 1100-luvun andalusialaiseen filosofiin. Aristoteles palaa Eurooppaan tieteellisiä kiertoteitä pitkin, ei suoraan."
+          "text": "Keskiajalla ja renessanssin aikana teksti kulkee arabian- ja latinankielisten käännösten kautta, joista osaan liittyy [[Averroes]], 1100-luvun andalusialainen filosofi. Aristoteles palaa Eurooppaan oppineita kiertoteitä, ei suoraan."
         },
         {
           "type": "image",
@@ -70,16 +70,16 @@
     },
     {
       "id": "course_88_la_poetique_aristote_p3",
-      "title": "Juonittelu, käänne, tunnustus",
+      "title": "Juoni, käänne, tunnistaminen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aristoteleelle draaman sydän on *muthos*, juoni, toimintojen järjestys. Se arvostaa **peripetia**, tilanteen äkillistä käännettä ja **tunnustusta**, *anagnorisi*, hetkeä, jolloin hahmo siirtyy tietämättömyydestä tietoon. Sophoklen **Oidipus kuningas** on hänen tähtesimerkkinsä: sankari huomaa liian myöhään, kuka hän on."
+          "text": "Aristoteleelle draaman ydin on *muthos* eli juoni, tapahtumien ketju. Hän arvostaa **peripetiaa**, tilanteen äkillistä käännettä, ja **tunnistamista** (kreikaksi *anagnorisis*), hetkeä, jolloin henkilö siirtyy tietämättömyydestä tietoon. Sofokleen **Kuningas Oidipus** on hänen lempiesimerkkinsä: sankari saa liian myöhään tietää, kuka hän on."
         },
         {
           "type": "paragraph",
-          "text": "Hän pitää parempana **virhe**, *hamartia*, tahatonta virhettä tai vääristynyttä tuomiota, puhdasta jumalattomuutta. Sankari ei ole täysin hyvä eikä hirviömäinen. Hänen kaatumisensa täytyy näyttää loogiselta ja siksi kauhealta. Tämä sekoitus herättää sääliä: tunnistamme inhimillisen heikkouden, emme vain karikatyyriä roistoa."
+          "text": "Puhtaan pahuuden sijaan hän suosii **erehdystä**, *hamartiaa*, tahatonta virhettä tai väärää arviota. Sankari ei ole täysin hyvä eikä hirviö. Hänen tuhonsa täytyy näyttää loogiselta ja siksi kauhealta. Juuri tämä sekoitus herättää sääliä: katsoja tunnistaa inhimillisen heikkouden eikä pelkkää karikatyyristä roistoa."
         }
       ]
     },
@@ -90,15 +90,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1600-luvun ranskalaiset klassismit, modernit dramaturgiat, Hollywood-puhet: löydämme kaikkialta toiminnan yhtenäisyyden, solmun, lopputuloksen. Voimme kiistää Aristoteleen. Lainaamme häntä edelleen. [[Epidauruksen teatteri]], akustiikkastaan merkittävä kreikkalainen teatteri, ei ole enää ainoa paikka tarinassa, mutta sen kysymyksiä on jäljellä."
+          "text": "1600-luvun ranskalainen klassismi, modernit näytelmät, Hollywoodin elokuvaideoiden myyntipuheet: kaikkialta löytyvät toiminnan yhtenäisyys, juonen solmu ja ratkaisu. Aristoteleen voi kyseenalaistaa. Häntä lainataan silti yhä. [[Epidauroksen teatteri]], akustiikastaan tunnettu kreikkalainen teatteri, ei ole enää kertomusten ainoa näyttämö, mutta sen kysymykset elävät."
         },
         {
           "type": "paragraph",
-          "text": "Aristoteles muistuttaa myös, että runous sanoo yleisen, kun taas historia sanoo näin. Hyvin tehty juoni näyttää, mitä olisi voinut tapahtua todennäköisyyden mukaan. Tästä syystä Oidipus pysyy mallina: jokainen ilmestys näyttää sekä yllättävältä että väistämättömältä. Klassiset teatterin kirjoittajat, sitten modernit käsikirjoittajat, ovat ottaneet tämän narratiivisen välttämättömyyden vaatimuksen."
+          "text": "Aristoteles muistuttaa myös, että runous kertoo **yleisestä**, kun taas historia kertoo **yksittäisestä**. Hyvin rakennettu juoni näyttää, mitä olisi voinut uskottavasti tapahtua. Siksi Oidipus on yhä esikuva: jokainen paljastus tuntuu yhtä aikaa yllättävältä ja väistämättömältä. Klassiset näytelmäkirjailijat ja myöhemmin nykyajan käsikirjoittajat ovat omaksuneet tämän kerronnallisen välttämättömyyden vaatimuksen."
         },
         {
           "type": "takeaway",
-          "text": "Aristoteleen **Poetiikka** antaa lännelle sen ensimmäisen suuren kerrontasanaston: jäljittele, liiku, käännä tilanne. Ennen tarinan kirjoittamista monet ajattelevat sitä hänen kanssaan."
+          "text": "Aristoteleen **Runousoppi** antaa länsimaille ensimmäisen suuren kerronnan sanaston: jäljitellä, liikuttaa, kääntää tilanne. Moni ajattelee tarinaansa yhä hänen avullaan ennen kuin kirjoittaa sen."
         }
       ]
     }

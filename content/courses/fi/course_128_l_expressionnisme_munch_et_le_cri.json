@@ -4,11 +4,11 @@
   "subtitle": "1880-1930",
   "subject": "art",
   "subcategory": "Maalaustaide ja tyylisuunnat",
-  "description": "Ekspressionismi asettaa sisäiset tunteet etusijalle ulkomaailmaan nähden. **Munch**:n ja *The Scream*:n avulla modernista ahdistuksesta tulee ikoni.",
+  "description": "Ekspressionismi asettaa sisäisen tunteen ulkomaailman edelle. **Munchin** ja *Huudon* myötä modernista ahdistuksesta tulee ikoni.",
   "hero": {
     "image": "l_expressionnisme_munch_et_le_cri",
     "ratio": "16:9",
-    "hook": "Huuto ilman ääntä, taivas, joka huutaa: nykyajan tuskan kasvot."
+    "hook": "Äänetön huuto, ulvova taivas: modernin ahdistuksen kasvot."
   },
   "sections": [
     {
@@ -18,51 +18,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**ekspressionismi** kukoisti **1880**:n ja **1930**:n välillä. Siellä missä impressionismi vangitsi ulkomaailman valon, tämä liike heijastaa sisällisyyden todellisuuteen. Se vääristää, pakottaa värejä, koventaa viivaa."
+          "text": "**Ekspressionismi** kukoistaa vuosina **1880**-**1930**. Siinä missä impressionismi tallensi ulkomaailman valoa, tämä liike heijastaa sisäisen maailman todellisuuteen. Se vääristää muotoja, voimistaa värejä ja koventaa viivaa."
         },
         {
           "type": "paragraph",
-          "text": "Norjalainen **Edvard Munch** on edelläkävijä. *The Scream*:n avulla nykyajan ihmisen ahdistuksesta ja yksinäisyydestä tulee universaali symboli."
+          "text": "Norjalainen **Edvard Munch** on sen uranuurtajia. *Huudon* myötä modernin ihmisen ahdistuksesta ja yksinäisyydestä tulee yleismaailmallinen symboli."
         }
       ]
     },
     {
       "id": "course_128_l_expressionnisme_munch_et_le_cri_p1",
-      "title": "Vääristää kertoaksesi todellisen tunteen",
+      "title": "Vääristely todellisen tunteen välineenä",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Eurooppa teollistuu. Monet taiteilijat pitävät kaupungista [[pettymys]]. [[positiivisuus]]:tä vastaan, joka uskoo selittävän kaiken tieteen kautta, he tekevät maalaamisesta [[subjektiivisuus]]:n alueen."
+          "text": "Eurooppa teollistuu. Monien taiteilijoiden tunne kaupungin edessä on [[lumouksen purkautuminen]]. He torjuvat ajattelutavan, jonka mukaan tiede selittää kaiken ([[positivismi]]), ja tekevät maalauksesta alueen, jota hallitsee [[subjektiivisuus]]."
         },
         {
           "type": "paragraph",
-          "text": "Ei enää *mimesis*, uskollinen luonnon jäljitelmä. Värit eivät enää kopioi todellisuutta: niillä on symbolinen arvo. Saksassa kaksi ryhmää rakentee hengityksen: [[Die Brücke]], raaempi ja vaistonvaraisempi, ja [[Blaue Reiter]], henkisempi ja abstraktioon suuntautunut. Van Gogh ja Gauguin olivat jo tasoittaneet tietä."
+          "text": "Ei enää *mimesistä* eli luonnon uskollista jäljittelyä. Värit eivät enää jäljittele todellisuutta: niillä on symbolinen arvo. Saksassa uutta virtausta jäsentää kaksi ryhmää: raaempi ja vaistonvaraisempi [[Die Brücke]] sekä henkisempi, abstraktioon suuntautuva [[Blaue Reiter]]. Van Gogh ja Gauguin olivat jo raivanneet tietä."
         },
         {
           "type": "funFact",
-          "text": "Sanaa \"ekspressionismi\" käytettiin ensimmäisen kerran vuonna 1911 Berliinin Secessionissa erottamaan taiteilijat, jotka kieltäytyivät impressionistisesta lempeydestä."
+          "text": "Sanaa ”ekspressionismi” käytettiin ensimmäisen kerran vuonna 1911 Berliinin secessiossa: sillä erotettiin taiteilijat, jotka torjuivat impressionismin pehmeyden."
         },
         {
           "type": "paragraph",
-          "text": "Munchissa maiseman linjat näyttävät imevän hahmoihin. Muodonmuutos ei ole enää kömpelöä: se on strategia [[tyhjyys]]:n ja raakatunteen maalaamiseen."
+          "text": "Munchin maalauksissa maiseman linjat näyttävät imevän hahmot sisäänsä. Vääristely ei ole enää kömpelyyttä: se on keino maalata [[tyhjyys]] ja raaka tunne."
         }
       ]
     },
     {
       "id": "course_128_l_expressionnisme_munch_et_le_cri_p2",
-      "title": "Munch: maalaamalla selviytyäksesi",
+      "title": "Munch: maalaaminen selviytymiskeinona",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Munchin työtä leimaavat varhaiset menetykset. Hurskaassa ja hauraassa perheessä hän menetti äitinsä ja sisarensa Sophien tuberkuloosiin. Maalauksesta tulee välttämättömyys: kauhujen korjaaminen, jotta ne eivät kuluisi niitä."
+          "text": "Munchin tuotantoa leimaavat varhaiset menetykset. Hurskaassa ja hauraassa perheessä hän menettää äitinsä ja sisarensa Sophien tuberkuloosille. Maalaamisesta tulee välttämättömyys: kauhut on kiinnitettävä kankaalle, jotteivät ne kuluttaisi häntä loppuun."
         },
         {
           "type": "image",
           "asset": "oslo_fjord_red_sunset_sky_munch",
           "ratio": "4:3",
-          "caption": "Oslon vuono: todellinen maisema Screamin vision takana."
+          "caption": "Oslon vuono: todellinen maisema Huudon näyn takana."
         },
         {
           "type": "funFact",
@@ -70,7 +70,7 @@
         },
         {
           "type": "paragraph",
-          "text": "*Itkeä* juontaa juurensa kävelyyn [[Ekeberg]] kukkulalla Oslossa. Auringonlaskun taivas muuttuu tuleksi. Jotkut yhdistävät tämän näkemyksen [[Krakatoa purkaus (1883) ja punainen taivas]]: tulivuoren tuhka oli sävyttänyt auringonlaskut verenpunaiseksi kaikkialla maailmassa. Munchille se ei ole enää sää: se on kosmos, joka huutaa."
+          "text": "*Huudon* synty juontaa juurensa kävelyretkeen [[Ekeberg]]-kukkulalla Oslossa. Laskevan auringon taivas muuttuu tulipaloksi. Jotkut arvelevat, että taustalla on [[Krakataun purkaus (1883) ja punainen taivas]]: tulivuoren tuhka oli värjännyt auringonlaskut verenpunaisiksi kaikkialla maailmassa. Munchille kyse ei ole enää säästä: koko kosmos huutaa."
         }
       ]
     },
@@ -81,60 +81,60 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ensimmäinen *Itkeä*-versio on peräisin **1893**. Se on osa \"The Frieze of Life\" -elokuvaa, jossa Munch tutkii rakkautta, tuskaa ja kuolemaa. Hän maalaa **neljä versiota** (tempera, pastelli, öljy): aihe kummittelee häntä."
+          "text": "*Huudon* ensimmäinen versio on vuodelta **1893**. Se kuuluu sarjaan ”Elämän friisi”, jossa Munch käsittelee rakkautta, ahdistusta ja kuolemaa. Hän maalaa aiheesta **neljä versiota** (tempera, pastelli, öljy): aihe ei jätä häntä rauhaan."
         },
         {
           "type": "image",
           "asset": "edvard_munch_the_scream_painting",
           "ratio": "4:3",
-          "caption": "Huuto: hahmo peittää korvansa maailman ulvoa vastaan."
+          "caption": "Huuto: hahmo tukkii korvansa maailman ulvonnalta."
         },
         {
           "type": "funFact",
-          "text": "Kynäkirjoitus vuoden 1893 versiossa lukee: \"Voi olla vain hullun maalaama.\" Infrapunakuvat osoittivat vuonna 2021, että Munch itse kirjoitti sen."
+          "text": "Vuoden 1893 versioon on kirjoitettu lyijykynällä: ”Vain hullu on voinut maalata tämän.” Infrapunakuvaus osoitti vuonna 2021, että teksti on Munchin itsensä kirjoittama."
         },
         {
           "type": "paragraph",
-          "text": "Spektrihahmo muistuttaa muumiota. Hänen kätensä peittävät hänen korvansa: itku on sisäistä. Silta jäykillä linjoillaan herättää sivistyksen; taivaan kaaret, hirvittävä luonto. [[Oslon kansallisgalleria]] sekä Munch-museosta varastettu maalaus sai \"kirotun\" maalauksen auran."
+          "text": "Aavemainen hahmo muistuttaa muumiota. Kädet tukkivat korvat: huuto on sisäinen. Jäykkälinjainen silta viittaa sivilisaatioon, taivaan kaaret hirviömäiseen luontoon. Varkauksien kohteina ovat olleet sekä [[Oslon kansallisgalleria]] että Munch-museo, ja teos on saanut ”kirotun” maalauksen maineen."
         }
       ]
     },
     {
       "id": "course_128_l_expressionnisme_munch_et_le_cri_p4",
-      "title": "Intiimistä traumasta globaaliin ikoniin",
+      "title": "Intiimistä traumasta maailmanlaajuiseksi ikoniksi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "*Itkeä* on ohittanut Munchin. Kauhuelokuva, parodiat, johdannaiset: eksistentiaalista ahdistusta on tullut yhteinen kieli. Uskallessaan pelon vääristämien kasvojen \"rumuuden\" Munch osoitti, että psykologinen totuus on tärkeämpää kuin täydellinen anatomia."
+          "text": "*Huuto* on kasvanut Munchia suuremmaksi. Kauhuelokuvat, parodiat, oheistuotteet: eksistentiaalisesta ahdistuksesta on tullut yhteinen kieli. Uskaltamalla kuvata pelon vääristämien kasvojen ”rumuuden” Munch osoitti, että psykologinen totuus on tärkeämpi kuin täydellinen anatomia."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1893",
-              "title": "Ensimmäinen versio Screamista",
-              "detail": "Munch tuijottaa näkyä ahdistuksesta Oslon sillalla."
+              "title": "Huudon ensimmäinen versio",
+              "detail": "Munch tallentaa ahdistuksen näyn Oslon sillalla."
             },
             {
               "date": "1911",
-              "title": "Sana \"ekspressionismi\"",
-              "detail": "Berliinin Secession kastaa impressionismin kieltäytymisen."
+              "title": "Sana ”ekspressionismi”",
+              "detail": "Berliinin secessio antaa nimen impressionismin torjunnalle."
             },
             {
-              "date": "1900-luku",
+              "date": "1900-luvun alku",
               "title": "Die Brücke ja Der Blaue Reiter",
-              "detail": "Saksa järjestää liikkeen ryhmiin."
+              "detail": "Saksassa liike jäsentyy ryhmiksi."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Tämä rohkeus avaa tien [[surrealismi]] ja nykytaiteeseen. Muodin antaminen kuulumattomalle huudolle: tämä on ekspressionismin kollektiivinen katarsisi."
+          "text": "Tämän rohkeuden jalanjäljissä kulkevat [[surrealismi]] ja nykytaide. Kuulumattomalle huudolle muodon antaminen: siinä on ekspressionismin yhteinen katarsis."
         },
         {
           "type": "takeaway",
-          "text": "Munchin traumoista syntynyt ekspressionismi vääristää todellisuutta värien ja viivojen kautta. *The Scream*:n avulla henkilökohtaisesta ahdistuksesta tulee modernin universaali ikoni."
+          "text": "Munchin traumoista syntynyt ekspressionismi vääristää todellisuutta värin ja viivan avulla. *Huudon* myötä henkilökohtaisesta ahdistuksesta tulee modernin ajan yleismaailmallinen ikoni."
         }
       ]
     }

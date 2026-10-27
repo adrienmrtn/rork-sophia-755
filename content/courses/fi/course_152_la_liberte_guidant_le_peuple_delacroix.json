@@ -4,11 +4,11 @@
   "subtitle": "1830",
   "subject": "art",
   "subcategory": "Elokuva, valokuvaus ja arkkitehtuuri + mestariteokset",
-  "description": "Delacroix maalaa Glorious Three: Mariannen lipun kanssa, sekalaisia ihmisiä, barrikadeja. Poliittinen romantiikka tulee museoon.",
+  "description": "Delacroix maalaa heinäkuun vallankumouksen kolme loistavaa päivää: Marianne lippuineen, kirjava kansanjoukko, barrikadit. Poliittinen romantiikka pääsee museoon.",
   "hero": {
     "image": "la_liberte_guidant_le_peuple_delacroix",
     "ratio": "16:9",
-    "hook": "Nainen lipun kanssa, ja vallankumouksesta tulee taas kuva."
+    "hook": "Lippua kantava nainen, ja vallankumouksesta tulee jälleen kuva."
   },
   "sections": [
     {
@@ -18,51 +18,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vuonna **1830** [[Heinäkuun vallankumous (27.-29. heinäkuuta 1830)]] ajoi ulos kuningas Kaarlen."
+          "text": "Vuonna **1830** [[Heinäkuun vallankumous (27.-29. heinäkuuta 1830)]] ajaa kuningas Kaarle X:n vallasta. **Eugène Delacroix** maalaa heti teoksen *Vapaus johtaa kansaa*."
         },
         {
           "type": "paragraph",
-          "text": "Allegoria ja reportaasi sekoittuvat: se on [[Romantiikka]] toiminnassa."
+          "text": "Allegoria ja reportaasi sulautuvat yhteen: tämä on [[Romantiikka]] käytännössä."
         }
       ]
     },
     {
       "id": "course_152_la_liberte_guidant_le_peuple_delacroix_p1",
-      "title": "Restauroinnin jälkeen",
+      "title": "Restauraation jälkeen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bourbonien [[Restaurointi]] pettyi. Kolmessa päivässä Pariisi peittyi barrikadeihin. Delacroix, porvaristo, päättää kuitenkin juhlia aseita."
+          "text": "Bourbonien [[Restauraatio]] on ollut pettymys. Kolmessa päivässä Pariisi täyttyy barrikadeista. Porvaristoon kuuluva Delacroix päättää silti ylistää aseisiin tarttunutta kansaa."
         },
         {
           "type": "paragraph",
-          "text": "Delacroix asettaa ruumiita etualalle. Voitolla on hintansa. Vapaus, paljasrinta, ei ole kaukainen jumalatar: hän kävelee mudassa ihmisten kanssa."
+          "text": "Delacroix sijoittaa kuolleita etualalle. Voitolla on hintansa. Paljasrintainen Vapaus ei ole kaukainen jumalatar: hän kahlaa mudassa kansan rinnalla."
         },
         {
           "type": "image",
           "asset": "delacroix_liberty_leading_people_louvre",
           "ratio": "4:3",
-          "caption": "Liberty tulee kaduille."
+          "caption": "Vapaus astuu kadulle."
         }
       ]
     },
     {
       "id": "course_152_la_liberte_guidant_le_peuple_delacroix_p2",
-      "title": "Marianne ja sosiaaliset tyypit",
+      "title": "Marianne ja yhteiskuntaluokat",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nainen, jolla on frigialainen lippalakki, ilmentää [[Marianne, tasavallan symboli]]. Hänen ympärillään: työläinen, porvari, lapsi, joka on lähellä [[Gavroche]] Hugossa. Maalaus yhdistää kapinan luokat."
+          "text": "Frygialaismyssypäisessä naisessa ruumiillistuu [[Marianne, tasavallan symboli]]. Hänen ympärillään ovat työläinen, porvari ja katupoika, joka muistuttaa Hugon [[Gavroche]]-hahmoa. Maalauksessa kapina yhdistää yhteiskuntaluokat."
         },
         {
           "type": "paragraph",
-          "text": "Kolmivärinen lippu jäsentää sävellystä. Ympärillä yhteiskuntaluokat sekoittuvat hetkeksi. Kuva luo visuaalisen veljeyden, jota reaalipolitiikan on vaikea ylläpitää."
+          "text": "Kolmivärinen lippu jäsentää sommitelman. Sen ympärillä yhteiskuntaluokat sekoittuvat hetkeksi. Kuva luo visuaalisen veljeyden, jota todellinen politiikka ei juuri pysty lunastamaan."
         },
         {
           "type": "funFact",
-          "text": "Delacroix kertoi sanoneen: \"Opin modernin aiheen, barrikadin.\""
+          "text": "Delacroix'n kerrotaan sanoneen: ”Olen ryhtynyt moderniin aiheeseen, barrikadiin.”"
         }
       ]
     },
@@ -73,17 +73,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Näyttelyssä [[Salonit]], maalaus nolottaa nopeasti uuden kuninkaan [[Louis-Philippe I]]. Laitoimme sen pois. Myöhemmin hänestä tuli taas republikaanien ikoni."
+          "text": "Maalaus on esillä, kun [[Salonit]] järjestetään, mutta uusi kuningas [[Ludvig Filip]] alkaa pian pitää sitä kiusallisena. Teos siirretään syrjään. Myöhemmin siitä tulee jälleen tasavaltalaisuuden ikoni."
         },
         {
           "type": "paragraph",
-          "text": "Varovaisuudesta poistettu maalaus odottaa republikaanisia konteksteja tullakseen jälleen ikoniksi. Sen vastaanoton historia on 1800-luvun Ranskassa."
+          "text": "Varovaisuuden vuoksi seinältä poistettu maalaus odottaa tasavaltaisempia aikoja, jotta siitä voisi taas tulla ikoni. Sen vastaanoton historia on samalla 1800-luvun Ranskan historia."
         },
         {
           "type": "image",
           "asset": "july_revolution_1830_barricades",
           "ratio": "4:3",
-          "caption": "1830: kolme päivää, jotka muuttivat valtaistuimen."
+          "caption": "1830: kolme päivää, jotka vaihtavat kuninkaan."
         }
       ]
     },
@@ -94,31 +94,31 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Julisteet, liput, koulumuistelmat: kuva on mennyt pöydän ulkopuolelle. Se vahvistaa ajatuksen vapaudesta, joka voitetaan savussa."
+          "text": "Julisteet, setelit, koulumuistot: kuva on kasvanut maalausta suuremmaksi. Se vakiinnuttaa ajatuksen vapaudesta, joka voitetaan savun keskellä."
         },
         {
           "type": "paragraph",
-          "text": "Ymmärtääksesi täysin Liberty Leading the People, Delacroix, sinun on pidettävä mielessä yksi asia: jokainen tekninen yksityiskohta palvelee tunnetta tai ideaa. Teos ei ole koskaan vain koristeellista."
+          "text": "Kun haluat ymmärtää kunnolla Delacroix'n Vapaus johtaa kansaa -maalausta, pidä mielessä yksi asia: jokainen tekninen yksityiskohta palvelee tunnetta tai ajatusta. Teos ei ole koskaan pelkkä koriste."
         },
         {
           "type": "paragraph",
-          "text": "Konteksti on yhtä tärkeä kuin tyyli. Päivämäärät, paikat, sponsorit, yleisö: kaikki tämä selittää, miksi lomake ilmestyy tietyllä hetkellä, eikä sitä ennen."
+          "text": "Konteksti on yhtä tärkeä kuin tyyli. Ajankohdat, paikat, tilaajat, yleisö: kaikki tämä selittää, miksi jokin muoto ilmaantuu juuri tietyllä hetkellä eikä aiemmin."
         },
         {
           "type": "paragraph",
-          "text": "Lopuksi perintöä mitataan pitkällä aikavälillä. Se, mitä näemme nykyään museoissa, elokuvissa tai populaarimusiikissa, kantaa edelleen näiden keksintöjen jälkiä."
+          "text": "Lopuksi perintöä mitataan pitkällä aikavälillä. Se, mitä museoissa, elokuvissa ja populaarimusiikissa nykyään nähdään, kantaa yhä näiden keksintöjen jälkiä."
         },
         {
           "type": "paragraph",
-          "text": "Vuoden 1830 kadulta koulujen oppikirjoihin teos on vakiinnuttanut mielikuvituksen: vapaus voitetaan, sitä ei vain mietitä."
+          "text": "Vuoden 1830 katutaisteluista koulukirjoihin teos on vakiinnuttanut mielikuvan: vapaus otetaan, sitä ei vain katsella."
         },
         {
           "type": "paragraph",
-          "text": "Ymmärtääksesi täysin Liberty Leading the People, Delacroix, sinun on pidettävä mielessä yksi asia: jokainen tekninen yksityiskohta palvelee tunnetta tai ideaa. Teos ei ole koskaan vain koristeellista."
+          "text": "Kun haluat ymmärtää kunnolla Delacroix'n Vapaus johtaa kansaa -maalausta, pidä mielessä yksi asia: jokainen tekninen yksityiskohta palvelee tunnetta tai ajatusta. Teos ei ole koskaan pelkkä koriste."
         },
         {
           "type": "takeaway",
-          "text": "Delacroix teki heinäkuusta 1830 elävän vertauskuvan: Marianne opastaa sekalaisia barrikadeille."
+          "text": "Delacroix teki heinäkuusta 1830 elävän allegorian: Marianne johtaa kirjavaa kansanjoukkoa barrikadeilla."
         }
       ]
     }
