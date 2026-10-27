@@ -8,6 +8,19 @@
   "es",
   "de",
   "pt",
+  "pt-PT",
+  "it",
+  "ro",
+  "nl",
+  "sv",
+  "hu",
+  "bg",
+  "da",
+  "nb",
+  "ru",
+  "hr",
+  "sl",
+  "sr",
   "ar",
   "he",
   "fi",
@@ -55,6 +68,136 @@
       "\\b(?:o|os|um|uns|seus?|meus?|este|esses?|do|no)\\s+testes?\\s+(?:do\\s+curso|do\\s+n[ií]vel|de\\s+fim\\s+de\\s+curso|final|da\\s+aula|de\\s+conhecimentos?)\\b|\\bmini-?testes?\\b|\\bprovinha\\b"
      ],
      "note": "« quiz » é corrente no Brasil e já é a palavra do app; o plural « quizzes » (usado em todo o app) deve ser sistemático. « teste » e « prova » não se marcam sozinhos porque aparecem legitimamente (teste grátis, provas do colégio)."
+    },
+    "pt-PT": {
+     "canon": "quiz (plural: quizzes)",
+     "variantes_a_signaler": [
+      "\\bquestion[aá]rios?\\b",
+      "\\btrivia\\b|\\bconcursos?\\s+de\\s+perguntas\\b",
+      "\\b(?:o|os|um|uns|teus?|meus?|este|estes|do|no)\\s+testes?\\s+(?:do\\s+curso|do\\s+n[ií]vel|de\\s+fim\\s+de\\s+curso|final|da\\s+aula|de\\s+conhecimentos?)\\b|\\bmini-?testes?\\b"
+     ],
+     "note": "« quiz » (pl. « quizzes ») é corrente em Portugal e é a palavra da app; « questionário » é formal/administrativo. « teste » e « prova » só se marcam colados a curso/nível porque aparecem legitimamente (teste gratuito, provas de exame)."
+    },
+    "it": {
+     "canon": "quiz (pluriel invariable : « i quiz »)",
+     "variantes_a_signaler": [
+      "\\bquizz(?:es)?\\b|\\bquizes\\b|\\bquizs\\b|\\bquizzes\\b",
+      "\\bquestionari[oi]\\b",
+      "\\btrivia\\b",
+      "\\b(?:test|esame|verifica|interrogazione)\\s+(?:di\\s+fine\\s+corso|finale\\s+del\\s+corso|del\\s+corso)\\b|\\bmini[- ]?test\\b"
+     ],
+     "note": "« quiz » est courant en italien et déjà majoritaire dans l'app (135 occurrences) ; le pluriel anglais « quizzes » (3 occurrences) est à ramener à « quiz ». « test » seul reste légitime (test de personnalité)."
+    },
+    "ro": {
+     "canon": "quiz (pl. quizuri)",
+     "variantes_a_signaler": [
+      "\\btest(?:ul|ului|e|ele|elor)?\\b(?!\\s+(?:Turing|ADN|PCR|de\\s+sarcin|nuclear|gratuit|de\\s+inteligen[țţ]|psihologic))",
+      "\\bchestionar\\w*\\b",
+      "\\btrivia\\b|\\bquizz\\w*\\b|\\bquiz-?zes\\b",
+      "\\bquiz-(?:uri\\w*|ul|ului)\\b"
+     ],
+     "note": "L'app mélange « quiz-uri », « Mini Quiz », « chestionare » et surtout « test » (66 chaînes : « Testul nivelului », « Refă testul »). « quiz » est le terme produit, distinct de l'examen ; pluriel « quizuri » (déjà dans la fiche store), le trait d'union « quiz-uri » est à unifier."
+    },
+    "nl": {
+     "canon": "quiz",
+     "variantes_a_signaler": [
+      "\\bkwis\\b",
+      "\\bquizz\\b",
+      "\\bvragenlijst\\b",
+      "\\b(?:eind)?toets(?:en|je)?\\b(?=.{0,30}\\b(?:cursus|les|einde|punten|XP)\\b)"
+     ],
+     "note": "'quiz' staat in Van Dale en is de gangbare term in Nederlandse apps; 'kwis' is verouderd/Vlaams, 'toets' klinkt schools, 'vragenlijst' is een enquête."
+    },
+    "sv": {
+     "canon": "Quiz",
+     "variantes_a_signaler": [
+      "\\bfrågesport\\w*",
+      "\\bfrågeformulär\\w*",
+      "\\bquizz\\w*",
+      "\\b(?:test|prov)(?:et)?\\s+(?:efter|i\\s+slutet\\s+av)\\s+kursen\\b"
+     ],
+     "note": "quiz is fully naturalised in Swedish (SAOL: quiz, quizet, pl. quiz); frågesport is a TV genre and frågeformulär a survey form."
+    },
+    "hu": {
+     "canon": "kvíz",
+     "variantes_a_signaler": [
+      "\\bquiz\\w*",
+      "\\bkérdőív\\w*",
+      "\\bteszt(ek|et|je)?\\b",
+      "\\bvetélkedő\\w*"
+     ],
+     "note": "A „kvíz” az MTA szerinti magyar írásmód, rövid és a tanulóappokban bevett; „kérdőív” felmérés, „teszt” vizsga, „vetélkedő” műsor."
+    },
+    "bg": {
+     "canon": "тест",
+     "variantes_a_signaler": [
+      "\\bкуиз\\w*\\b",
+      "\\bквиз\\w*\\b",
+      "\\bвикторин\\w*\\b",
+      "\\bвъпросник\\w*\\b"
+     ],
+     "note": "Одитът показва „тест“ в мнозинството низове и „куиз“ само в някои paywall/onboarding екрани; „тест“ е естественото, неутрално българско название, „куиз/викторина“ са чуждици или ТВ формат."
+    },
+    "da": {
+     "canon": "Quiz",
+     "variantes_a_signaler": [
+      "\\bquizz\\w*",
+      "\\bspørgeskema\\w*",
+      "\\b(mini[- ]?test|spørgeleg|spørgerunde)\\w*",
+      "\\b(afsluttende|lille|kort)\\s+(test|prøve|eksamen)\\b"
+     ],
+     "note": "»quiz« est naturalisé en danois (quizzen, quizzer) ; »spørgeskema« = questionnaire d'enquête, »test/prøve« = examen."
+    },
+    "nb": {
+     "canon": "quiz",
+     "variantes_a_signaler": [
+      "\\bspørrekonkurranse\\w*",
+      "\\bspørsmålsrunde\\w*",
+      "\\bquizz\\w*",
+      "\\btest(?:en|er|ene)?\\b",
+      "\\bkunnskapstest\\w*"
+     ],
+     "note": "«quiz» (en quiz, quizen) er innarbeidet norsk; «prøve/test» betyr eksamen."
+    },
+    "ru": {
+     "canon": "тест",
+     "variantes_a_signaler": [
+      "\\bквиз\\w*",
+      "\\bвикторин\\w*",
+      "\\bопрос\\w*",
+      "\\bquiz\\w*"
+     ],
+     "note": "Аудит: «тест» во всём приложении, «квиз» только в онбординге — унифицируем на «тест». «Викторина» — ТВ-игра, «опрос» — survey, «квиз» — англицизм."
+    },
+    "hr": {
+     "canon": "kviz",
+     "variantes_a_signaler": [
+      "\\bquiz\\w*",
+      "\\bupitnik\\w*",
+      "\\btest(?:a|u|om|ovi|ova|ove|ovima)?\\b",
+      "\\bpitalic\\w*"
+     ],
+     "note": "„Kviz” je uvriježena hrvatska riječ za igru znanja (TV kviz); „test/ispit” zvuči školski, „upitnik” je anketa."
+    },
+    "sl": {
+     "canon": "kviz",
+     "variantes_a_signaler": [
+      "\\bquiz\\w*",
+      "\\bvprašalnik\\w*",
+      "\\b(?:preizkus|preverjanje|test)\\w*\\s+znanja\\b",
+      "\\bmini[\\s-]?test\\w*"
+     ],
+     "note": "kviz je ustaljena, kratka in topla slovenska beseda (SSKJ); vprašalnik je anketa, test je šolski."
+    },
+    "sr": {
+     "canon": "kviz",
+     "variantes_a_signaler": [
+      "\\bquiz\\w*",
+      "\\bupitnik\\w*",
+      "\\btest(?:ovi|ova|ovima|a|u|om)?\\b(?=[^.\\n]{0,30}\\b(?:kraj|kurs|lekcij|znanj|pitanj)\\w*)",
+      "\\bkvizić\\w*"
+     ],
+     "note": "„kviz“ je ustaljena, topla reč (TV kviz); „upitnik“ = anketa, „test“ = ispit."
     },
     "ar": {
      "canon": "اختبار",
@@ -142,6 +285,137 @@
      ],
      "note": "A unidade de conteúdo é « curso » em toda a interface (Cursos ilimitados, Buscar um curso); « lição/lições » ainda aparece no onboarding (« lições de 10 minutos », « %d lições », meta diária « lição ») e na ficha da App Store: unificar. « lição » na prosa (a lição de Gilgamesh) é legítima: falso positivo aceito."
     },
+    "pt-PT": {
+     "canon": "curso",
+     "variantes_a_signaler": [
+      "\\bli[cç](?:[aã]o|[oõ]es)\\b",
+      "\\baulas?\\s+(?:de\\s+10\\s+minutos|curtas?|di[aá]rias?|r[aá]pidas?)\\b|\\b(?:uma|a|esta|tua)\\s+aula\\s+(?:de\\s+hoje|di[aá]ria)\\b|\\ba\\s+tua\\s+aula\\b",
+      "\\bm[oó]dulos?\\s+(?:de\\s+(?:aprendizagem|cursos?)|de\\s+10\\s+minutos)\\b",
+      "\\btutoria(?:l|is)\\b|\\bcap[ií]tulos?\\s+de\\s+10\\s+minutos\\b"
+     ],
+     "note": "A unidade de conteúdo é « curso » (Cursos ilimitados; Procurar um curso); « lição » e « aula » são os sinónimos que a máquina mistura no onboarding e na ficha da loja. « lição » na prosa (a lição de Gilgamesh) é falso positivo aceite."
+    },
+    "it": {
+     "canon": "corso",
+     "variantes_a_signaler": [
+      "\\blezion[ei]\\b",
+      "\\b(?:class[ei]|modul[oi]|unit[àa]|capitol[oi]|tutorial)\\s+(?:di\\s+10\\s+minuti|giornalier[oaie]|quotidian[oaie]|brev[ei])\\b",
+      "\\bmicro-?(?:corso|lezione|learning)\\b",
+      "\\blessons?\\b|\\bcourses?\\b"
+     ],
+     "note": "« corso » est l'unité partout (Corsi illimitati, Trova un corso) ; « lezione / lezioni » apparaît dans l'onboarding (« lezioni di 10 minuti », « %d lezioni », « Lezione completata! ») et doit être unifié. « lezione » en prose (la lezione di Gilgamesh) est légitime : faux positif accepté."
+    },
+    "ro": {
+     "canon": "curs",
+     "variantes_a_signaler": [
+      "\\blec[țţ]i\\w*\\b",
+      "\\bunit[ăa][țţ]\\w*\\s+de\\s+(?:înv[ăa][țţ]are|con[țţ]inut)\\b|\\bmodul\\w*\\s+de\\s+(?:10\\s+minute|înv[ăa][țţ]are)\\b",
+      "\\bcapitol\\w*\\s+de\\s+10\\s+minute\\b|\\btutorial\\w*\\b",
+      "\\blessons?\\b"
+     ],
+     "note": "« curs » est l'unité partout (« Cursuri nelimitate », « Caută un curs ») mais l'onboarding et la fiche store disent encore « lecții de 10 minute », « %d lecții », « Fiecare lecție » : à unifier. « lecția » en prose (« o lecție despre datorie ») est légitime : faux positif accepté."
+    },
+    "nl": {
+     "canon": "cursus",
+     "variantes_a_signaler": [
+      "\\bles(?:sen|je|jes)?\\b",
+      "\\bkoers(?:en)?\\b",
+      "\\bcollege?s?\\b(?=.{0,30}\\b(?:10\\s*min|minuten|volg|start)\\b)",
+      "\\bmodule(?:s)?\\b"
+     ],
+     "note": "Eén contenteenheid van 10 minuten heet 'cursus' (meervoud cursussen); 'les' blijft vrij voor de productstem, 'koers' is de klassieke cours→course→koers-fout."
+    },
+    "sv": {
+     "canon": "Kurs",
+     "variantes_a_signaler": [
+      "\\blektion\\w*",
+      "\\bföreläsning\\w*",
+      "\\bmodul(?:en|er|erna)?\\b",
+      "\\bklass(?:en|er|erna)?\\b(?=[^.\\n]{0,30}(?:10\\s*min|minuter|lär))"
+     ],
+     "note": "The 10-minute unit is a kurs; lektion (lesson) and föreläsning (lecture) are what a translator substitutes."
+    },
+    "hu": {
+     "canon": "kurzus",
+     "variantes_a_signaler": [
+      "\\blecke\\w*|\\blecké\\w*",
+      "\\btanfolyam\\w*",
+      "\\btananyag\\w*",
+      "\\bkurz\\b"
+     ],
+     "note": "A 10 perces tartalmi egység neve kurzus; „lecke” = leçon (házi feladat íze), „tanfolyam” = hosszú képzés, „tananyag” = anyag általában."
+    },
+    "bg": {
+     "canon": "курс",
+     "variantes_a_signaler": [
+      "\\bурок\\w*\\b|\\bуроци\\w*\\b",
+      "\\bлекци\\w*\\b",
+      "\\bзаняти\\w*\\b",
+      "\\bучебна\\s+единица\\b"
+     ],
+     "note": "Одитът: „cours“ ту „курс“, ту „урок“ (leçon). Единицата на съдържанието е „курс“; „урок“ се допуска само когато текстът говори за училищен урок."
+    },
+    "da": {
+     "canon": "Kursus (pl. kurser)",
+     "variantes_a_signaler": [
+      "\\blektion\\w*",
+      "\\blekti(e|er|erne)\\b",
+      "\\bmodul(er|et|erne)?\\b",
+      "\\b(skole|undervisnings)time\\w*"
+     ],
+     "note": "L'audit flotte entre kurser/lektioner ; »kursus« garde l'unité produit (»Ubegrænsede kurser«), »lektie« = devoir."
+    },
+    "nb": {
+     "canon": "kurs",
+     "variantes_a_signaler": [
+      "\\bleksjon\\w*",
+      "\\blekse\\w*",
+      "\\bforelesning\\w*",
+      "\\bkursmodul\\w*",
+      "\\blesson\\w*"
+     ],
+     "note": "Appens norm er «kurs» (et kurs, kurset); «leksjon» observert i onboarding."
+    },
+    "ru": {
+     "canon": "курс",
+     "variantes_a_signaler": [
+      "\\bурок\\w*",
+      "\\bзаняти\\w*",
+      "\\bлекци\\w*",
+      "\\blesson\\w*"
+     ],
+     "note": "Аудит: «уроков от настоящих учёных», «Безлимитные уроки» → «курсов», «Безлимитные курсы». Единица контента — «курс» (10 минут); «урок» — школьная коннотация."
+    },
+    "hr": {
+     "canon": "tečaj",
+     "variantes_a_signaler": [
+      "\\blekcij\\w*",
+      "\\bkurs\\w*",
+      "\\bpredavanj\\w*",
+      "\\bnastavn\\w*\\s+jedinic\\w*"
+     ],
+     "note": "Audit: „tečaj” svuda gdje FR kaže cours („Neograničeni tečajevi”); „lekcija” je školska, „kurs” srpski/kolokvijalan."
+    },
+    "sl": {
+     "canon": "tečaj",
+     "variantes_a_signaler": [
+      "\\blekcij\\w*",
+      "\\bpredavanj\\w*",
+      "\\bkurz\\w*",
+      "\\bcourse\\w*"
+     ],
+     "note": "Audit: tečaj/lekcija plavata (»Neomejene lekcije« → »Neomejeni tečaji«); tečaj je enota vsebine, lekcija ostane prosta za podenote."
+    },
+    "sr": {
+     "canon": "kurs",
+     "variantes_a_signaler": [
+      "\\blekcij\\w*",
+      "\\bpredavanj\\w*",
+      "\\btečaj\\w*",
+      "\\bčas(?:ovi|ova|ovima|a|u|om)?\\b(?=[^.\\n]{0,25}\\b(?:od\\s+)?10\\s*min)"
+     ],
+     "note": "audit: „lekcija“ i „kurs“ pomešani; svuda „kurs“ („Neograničeni kursevi“); „tečaj“ je hrvatski."
+    },
     "ar": {
      "canon": "درس",
      "variantes_a_signaler": [
@@ -228,6 +502,136 @@
      ],
      "note": "A aba já se chama « Trilha » (tab.path, « trilha personalizada », « Trilhas guiadas »), palavra consagrada nas plataformas brasileiras de ensino; « jornada de conhecimento » (tela de carregamento) e « trajeto » no sentido de deslocamento (« Perfeito para o trajeto ») são respectivamente a unificar e legítimo."
     },
+    "pt-PT": {
+     "canon": "percurso",
+     "variantes_a_signaler": [
+      "\\btrilhas?\\b|\\btrilhos?\\s+de\\s+aprendizagem\\b",
+      "\\bitiner[aá]rios?\\b|\\brotas?\\s+(?:personalizada|de\\s+aprendizagem)\\b|\\ba\\s+tua\\s+rota\\b",
+      "\\bjornada\\s+de\\s+(?:conhecimento|aprendizagem)\\b|\\btrajet[oó]ria\\s+de\\s+aprendizagem\\b|\\ba\\s+tua\\s+jornada\\b",
+      "\\bcaminho\\s+(?:personalizado|de\\s+aprendizagem|claro)\\b|\\bo\\s+teu\\s+caminho\\b|\\bparcours\\b|\\blearning\\s+paths?\\b"
+     ],
+     "note": "« percurso » é a palavra natural em Portugal (percurso de aprendizagem); « trilha » é o termo brasileiro das plataformas de ensino; « rota / jornada / caminho » são as variantes instáveis a unificar. « trajeto » no sentido de deslocação (« ideal para o trajeto ») é legítimo e não se marca."
+    },
+    "it": {
+     "canon": "Percorso",
+     "variantes_a_signaler": [
+      "\\b(?:itinerari[oi]|cammino|sentier[oi]|tragitto|traiettoria)\\b(?=[^.!?\\n]{0,50}\\b(?:cors[oi]|livell[oi]|quiz|tematic\\w*|personalizzat\\w*|apprendimento|Sophia)\\b)",
+      "\\bviaggio\\s+(?:nella\\s+conoscenza|di\\s+apprendimento|del\\s+sapere|verso\\s+la\\s+conoscenza)\\b",
+      "\\bstrada\\s+(?:personalizzata|del\\s+sapere|di\\s+apprendimento)\\b|(?<![\\wàèéìòù ])itinerario(?![\\wàèéìòù ,.;:!?)])",
+      "\\bpath\\b|\\bparcours\\b"
+     ],
+     "note": "L'onglet s'appelle déjà « Percorso » (tab.path, « Il tuo percorso ») ; « viaggio nella conoscenza » (loading) et le badge « ITINERARIO » (collections.badge.path, observé) sont à aligner."
+    },
+    "ro": {
+     "canon": "Traseu",
+     "variantes_a_signaler": [
+      "\\bparcurs(?:ul)?\\s+(?:t[ăa]u|personalizat|de\\s+înv[ăa][țţ]are|tematic)\\b|\\bparcursuri(?:le)?\\s+(?:tale|tematice|ghidate)\\b",
+      "\\bitinerar\\w*\\b|\\brut[ăa]\\s+(?:personalizat|de\\s+înv[ăa][țţ]are)\\w*",
+      "\\b(?:cale|calea|drum(?:ul)?)\\s+(?:ta|t[ăa]u|de\\s+înv[ăa][țţ]are|personalizat)\\w*\\b",
+      "\\blearning\\s+paths?\\b|\\bpath\\b"
+     ],
+     "note": "L'onglet s'appelle déjà « Traseu » (tab.path, « traseu personalizat », « trasee tematice ») : mot courant des plateformes d'apprentissage roumaines. « parcurs » au sens de carrière reste légitime, d'où les motifs contextuels."
+    },
+    "nl": {
+     "canon": "Leerpad",
+     "variantes_a_signaler": [
+      "\\bparcours\\b",
+      "\\btraject(?:en)?\\b",
+      "\\bleerroute\\b",
+      "\\broute\\b(?=.{0,30}\\b(?:tab|voortgang|thema)\\b)"
+     ],
+     "note": "'leerpad' is de e-learningterm in het Nederlands; 'parcours' betekent in het Nederlands een wedstrijdomloop."
+    },
+    "sv": {
+     "canon": "Lärväg",
+     "variantes_a_signaler": [
+      "\\bparkour\\w*",
+      "\\b(?:rutt|bana|stig|lärstig|kursväg)(?:en|er|erna|ar|arna)?\\b(?=[^.\\n]{0,30}(?:kurs|lär|tema|flik))",
+      "\\bpath\\b"
+     ],
+     "note": "lärväg is the Swedish e-learning word for a learning path; parkour is the sports loan a machine picks for 'parcours', lärstig is the Finland-Swedish variant."
+    },
+    "hu": {
+     "canon": "Tanulási út",
+     "variantes_a_signaler": [
+      "\\bpálya\\w*",
+      "\\bútvonal\\w*",
+      "\\bparkúr\\w*|\\bparcours\\b",
+      "\\bhaladási\\s+út\\w*|\\bkurzusút\\w*"
+     ],
+     "note": "Fülnév: tematikus haladási ösvény; „útvonal” navigációs, „pálya” sport/karrier (hamis találat sportkurzusban elfogadva)."
+    },
+    "bg": {
+     "canon": "пътека",
+     "variantes_a_signaler": [
+      "\\bмаршрут\\w*\\b",
+      "\\bпътешестви\\w*\\b",
+      "\\bтраектори\\w*\\b",
+      "\\b(?:учебен|твоят|твоя|персонализиран|тематичен)\\s+път\\b"
+     ],
+     "note": "Одитът предлага унифициране на „пътека“ (collections.path „Твоята пътека“, badge „ПЪТЕКА“); „маршрут/път/пътешествие“ са другите наблюдавани форми."
+    },
+    "da": {
+     "canon": "Forløb",
+     "variantes_a_signaler": [
+      "\\brute(n|r|rne)?\\b",
+      "\\b(din|dit|mit|min)\\s+(rejse|sti|vej|bane)\\b",
+      "\\blærings(sti|rejse|vej|rute)\\w*",
+      "\\bpath\\b"
+     ],
+     "note": "»Rute« (itinéraire) observé sur l'onglet ; »forløb« est le mot pédagogique danois pour une progression."
+    },
+    "nb": {
+     "canon": "Løype",
+     "variantes_a_signaler": [
+      "\\brute(?:n|r|ne)?\\b",
+      "\\breise(?:n|r)?\\b",
+      "\\bsti(?:en|er)?\\b",
+      "\\blæringsvei\\w*",
+      "\\bkursløp\\w*"
+     ],
+     "note": "Fanen heter Løype; «rute» (GPS) og «reise» observert. «reise» er legitimt i kursinnhold – falsk positiv godtatt."
+    },
+    "ru": {
+     "canon": "маршрут",
+     "variantes_a_signaler": [
+      "\\b(?:твой|мой|свой|ваш)\\s+пут(?:ь|и|ём|ем)\\b",
+      "пут(?:ь|и)\\s+(?:пройден|завершён|завершен|окончен)\\w*",
+      "\\bтраектори\\w*",
+      "\\bдорожн\\w*\\s+карт\\w*"
+     ],
+     "note": "Аудит: вкладка «Путь», но «Маршрут» в коллекциях — унифицируем на «Маршрут» («Твой маршрут», «Маршрут пройден»). Голое «путь» не ловим (Шёлковый путь)."
+    },
+    "hr": {
+     "canon": "staza",
+     "variantes_a_signaler": [
+      "\\bputanj\\w*",
+      "\\bputovanj\\w*",
+      "\\brut[aeiu]\\b",
+      "\\b(?:vođen|personaliziran|tvoj|tvoju|tvoje|tvog)\\w*\\s+put(?:a|u|em|ov[ie]|evi|eva)?\\b"
+     ],
+     "note": "Audit: „staza” (STAZA, Vođene staze, Pripremamo tvoju stazu); „putanja” je trajektorija, „put/putovanje” plutaju."
+    },
+    "sl": {
+     "canon": "Pot",
+     "variantes_a_signaler": [
+      "\\bparkur\\w*",
+      "\\b(?:prog[aeio]|stez[aeio]|tras[aeio])\\b",
+      "\\bpotovanj\\w*",
+      "\\bparcours\\b"
+     ],
+     "note": "Zavihek Pot (dolga oblika: učna pot); parkur je šport, proga/steza/trasa so fizične poti."
+    },
+    "sr": {
+     "canon": "staza",
+     "variantes_a_signaler": [
+      "\\bputanj\\w*",
+      "\\bput(?:evi|eva|evima|a|u|em)?\\b(?=[^.\\n]{0,25}\\b(?:završen|tvoj|vođen|tematsk|kurs)\\w*)",
+      "\\bputovanj\\w*(?=[^.\\n]{0,30}\\b(?:završen|tvoj|vođen|tematsk|kurs)\\w*)",
+      "\\brut[aeiu]\\b"
+     ],
+     "note": "audit: PUTANJA (= trajectoire) → STAZA („Tvoja staza“, „Staza je završena“)."
+    },
     "ar": {
      "canon": "مسار",
      "variantes_a_signaler": [
@@ -312,6 +716,136 @@
       "\\bsele[cç][aã]o\\s+de\\s+cursos\\b|\\bkits?\\s+de\\s+cursos\\b"
      ],
      "note": "« coleção » é transparente e já é o nome da aba (Coleções). « coletânea » na prosa (As Mil e Uma Noites) é legítimo: falso positivo aceito."
+    },
+    "pt-PT": {
+     "canon": "coleção",
+     "variantes_a_signaler": [
+      "\\bcolec[cç][aã]o\\b|\\bcolec[cç][oõ]es\\b",
+      "\\bcolet[aâ]neas?\\b|\\bconjuntos?\\s+(?:de\\s+cursos|tem[aá]tic\\w+)\\b",
+      "\\bs[eé]ries?\\s+de\\s+cursos\\b|\\bpacotes?\\s+de\\s+cursos\\b|\\bpacks?\\b",
+      "\\bsele[cç][aã]o\\s+de\\s+cursos\\b|\\bkits?\\s+de\\s+cursos\\b"
+     ],
+     "note": "« coleção » é transparente e é o nome do separador; « colecção » é a grafia anterior ao Acordo Ortográfico (a app segue o AO90). « coletânea » na prosa (As Mil e Uma Noites) é falso positivo aceite."
+    },
+    "it": {
+     "canon": "collezione",
+     "variantes_a_signaler": [
+      "\\braccolt[ae]\\b(?=[^.!?\\n]{0,50}\\b(?:cors[oi]|tematic\\w*|avanzat\\w*|complet\\w*|Sophia|segui\\w*|sblocc\\w*)\\b)",
+      "\\b(?:serie|insieme|gruppo|pacchetto|pack)\\s+(?:di\\s+corsi|tematic[oaie])\\b",
+      "\\bantologi[ae]\\b(?=[^.!?\\n]{0,40}\\bcors\\w*\\b)",
+      "\\bcollections?\\b"
+     ],
+     "note": "« Collezioni » est le nom de l'onglet ; « Sei avanzato nella raccolta! » (variante observée) est à aligner. « raccolta » reste légitime pour un recueil de poèmes : contexte requis."
+    },
+    "ro": {
+     "canon": "colecție",
+     "variantes_a_signaler": [
+      "\\bculeger\\w*\\s+de\\s+cursuri\\b",
+      "\\b(?:set|pachet|serie|grup)\\w*\\s+de\\s+cursuri\\b",
+      "\\bcolecta\\b|\\bcollection\\w*\\b",
+      "\\bselec[țţ]i[ea]\\s+de\\s+cursuri\\b"
+     ],
+     "note": "« colecție » est déjà le nom de l'onglet (Colecții). « culegere » (recueil de poèmes) dans le catalogue est légitime et n'est signalé qu'avec « de cursuri »."
+    },
+    "nl": {
+     "canon": "collectie",
+     "variantes_a_signaler": [
+      "\\bverzameling(?:en)?\\b",
+      "\\bbundel(?:s)?\\b",
+      "\\bserie(?:s)?\\b(?=.{0,30}\\bcursus)",
+      "\\breeks\\b(?=.{0,30}\\bcursus)"
+     ],
+     "note": "'collectie' is gangbaar voor een samengestelde set (museum, mode, Netflix); 'verzameling' is te wiskundig/alledaags."
+    },
+    "sv": {
+     "canon": "Samling",
+     "variantes_a_signaler": [
+      "\\bkollektion\\w*",
+      "\\binsamling\\w*(?=[^.\\n]{0,30}kurs)",
+      "\\buppsättning\\w*\\s+(?:av\\s+)?kurser\\b",
+      "\\bkurspaket\\w*"
+     ],
+     "note": "kollektion is a fashion collection, insamling a fundraising; samling is the neutral set of courses."
+    },
+    "hu": {
+     "canon": "gyűjtemény",
+     "variantes_a_signaler": [
+      "\\bkollekció\\w*",
+      "\\bcollection\\w*",
+      "\\bkurzussorozat\\w*|\\bkurzus\\w*\\s+sorozat\\w*",
+      "\\bválogatás\\w*"
+     ],
+     "note": "„kollekció” divat/jövevényszó; „sorozat” a streak kanonja, ezért kurzus mellett jelezve."
+    },
+    "bg": {
+     "canon": "колекция",
+     "variantes_a_signaler": [
+      "\\bсборник\\w*\\b[^.]{0,30}\\bкурс",
+      "\\bкомплект\\w*\\s+(?:от\\s+)?курс",
+      "\\bподборк\\w*\\b",
+      "\\bсерия\\s+(?:от\\s+)?курсове\\b"
+     ],
+     "note": "„Колекция“ е прозрачна и вече се ползва в приложението; „сборник“ е легитимен за стихосбирки (Бодлер), затова се лови само до „курс“."
+    },
+    "da": {
+     "canon": "Samling",
+     "variantes_a_signaler": [
+      "\\bkollektion\\w*",
+      "\\bcollection\\w*",
+      "\\bkursuspakke\\w*",
+      "\\bkursussæt\\b"
+     ],
+     "note": "»kollektion« = collection de mode."
+    },
+    "nb": {
+     "canon": "samling",
+     "variantes_a_signaler": [
+      "\\bkolleksjon\\w*",
+      "\\bcollection\\w*",
+      "\\bkurspakke\\w*",
+      "\\bkursserie\\w*"
+     ],
+     "note": "«kolleksjon» er motebransje; «samling» er riktig for kurs."
+    },
+    "ru": {
+     "canon": "коллекция",
+     "variantes_a_signaler": [
+      "\\bподборк\\w*",
+      "\\bсборник\\w*",
+      "\\bнабор\\w*\\s+курс\\w*",
+      "\\bколлекшн\\w*"
+     ],
+     "note": "Тематический набор курсов — «коллекция»; «подборка/сборник/набор» — синонимы переводчика, транслит «коллекшн» — ошибка."
+    },
+    "hr": {
+     "canon": "kolekcija",
+     "variantes_a_signaler": [
+      "\\bzbirk\\w*\\s+\\**tečaj\\w*",
+      "\\b(?:nov[aeu]|sve|tematsk\\w*|cijel\\w*)\\s+zbirk\\w*",
+      "\\bzbornik\\w*",
+      "\\bserij\\w*\\s+tečaj\\w*"
+     ],
+     "note": "„Kolekcija” je uobičajeno u aplikacijama; „zbirka” se čuva za književne zbirke (zbirka pjesama Cvjetovi zla), zato se označava samo uz tečajeve."
+    },
+    "sl": {
+     "canon": "zbirka",
+     "variantes_a_signaler": [
+      "\\bkolekcij\\w*",
+      "\\bkomplet\\w*",
+      "\\bsklop\\w*",
+      "\\bserij\\w*\\s+tečaj\\w*"
+     ],
+     "note": "zbirka je domača beseda; kolekcija je modna kolekcija, serija je rezervirana za niz."
+    },
+    "sr": {
+     "canon": "kolekcija",
+     "variantes_a_signaler": [
+      "\\bzbirk\\w*\\s+(?:kurs|lekcij)\\w*",
+      "\\b(?:skup|serij|paket)\\w*\\s+kurs\\w*",
+      "\\bcollection\\w*",
+      "\\bkolekcij\\w*\\s+lekcij\\w*"
+     ],
+     "note": "„zbirka“ ostaje za zbirku pesama u kursevima; za skup kurseva „kolekcija“."
     },
     "ar": {
      "canon": "مجموعة",
@@ -399,6 +933,137 @@
      ],
      "note": "« nível » é o termo da progressão por XP (« NÍV. 3 », « Você subiu de nível! »). « grau », « etapa », « fase » só se marcam seguidos de número; « NIV. » sem acento é erro de grafia."
     },
+    "pt-PT": {
+     "canon": "nível (abreviatura: NÍV. / nív.)",
+     "variantes_a_signaler": [
+      "\\blevel\\b|\\bLVL\\.?\\b|\\bLV\\.?\\s*\\d",
+      "\\b(?:grau|etapa|est[aá]gio|patamar|fase)\\s+\\d+\\b",
+      "\\bNIV\\.?\\s*\\d|\\bNV\\.?\\s*\\d",
+      "\\bn[ií]vel\\s+de\\s+XP\\b"
+     ],
+     "note": "« nível » é o termo da progressão por XP (« NÍV. 3 », « Subiste de nível! »). « grau / etapa / fase » só se marcam seguidos de número; « NIV. » sem acento é erro de grafia."
+    },
+    "it": {
+     "canon": "livello (abréviation : « liv. 3 »)",
+     "variantes_a_signaler": [
+      "\\bLV\\.?\\s*\\d|\\blvl\\.?\\s*\\d|\\bNIV\\.?\\s*\\d|\\bnivel\\b",
+      "\\b(?:grado|tier|stadio|rango|fase)\\s+\\d+\\b(?=[^.!?\\n]{0,40}\\b(?:XP|quiz|sblocc\\w*|cors[oi]|successiv\\w*)\\b)",
+      "\\bsali\\s+di\\s+(?:grado|rango|tier)\\b|\\bpassare\\s+al\\s+(?:grado|rango|tier)\\b",
+      "\\blevel\\b"
+     ],
+     "note": "« livello » et « liv. » sont déjà la forme de l'app (« %d XP al liv. %d », « LIVELLO »). « grado / rango » sont des variantes de traducteur."
+    },
+    "ro": {
+     "canon": "nivel (abréviation : NIV. / niv.)",
+     "variantes_a_signaler": [
+      "\\blevel\\w*\\b|\\bLVL\\.?\\b|\\bLV\\.?\\s*\\d",
+      "\\b(?:treapt[ăa]|etap[ăa]|grad(?:ul)?|stadiu(?:l)?)\\s+\\d+\\b",
+      "\\bNV\\.?\\s*\\d",
+      "\\bnivel\\w*\\s+de\\s+XP\\b"
+     ],
+     "note": "« nivel » est le terme de la progression XP (« NIV. 3 », « Nivelul %d a fost deblocat »). « treaptă/etapă/grad » ne sont signalés que suivis d'un nombre."
+    },
+    "nl": {
+     "canon": "Niveau (afkorting: Niv. 3)",
+     "variantes_a_signaler": [
+      "\\blevel(?:s)?\\b",
+      "\\bLVL\\b",
+      "\\bpeil\\b",
+      "\\btrede\\b"
+     ],
+     "note": "'niveau' is Nederlands; 'level' is gaming-jargon dat de machine vanuit het Engels laat staan."
+    },
+    "sv": {
+     "canon": "Nivå (förk. Niv. 3)",
+     "variantes_a_signaler": [
+      "\\blevel\\w*",
+      "\\blvl\\.?\\s*\\d",
+      "\\bgrad(?:en)?\\s+\\d",
+      "\\bsteg\\s+\\d+\\b(?=[^.\\n]{0,20}xp)"
+     ],
+     "note": "nivå is the standard gamification word; level/lvl are untranslated leftovers, grad means degree."
+    },
+    "hu": {
+     "canon": "szint (pl. „3. szint”)",
+     "variantes_a_signaler": [
+      "\\bnívó\\w*",
+      "\\bfokozat\\w*",
+      "\\blevel\\w*|\\blvl\\.?\\s*\\d",
+      "\\bniv\\.?\\s*\\d"
+     ],
+     "note": "A NIV. 3 rövidítés magyarul nem rövidítve: „3. szint”; „nívó” színvonal, „fokozat” rang."
+    },
+    "bg": {
+     "canon": "ниво (съкр. НИВ. 3)",
+     "variantes_a_signaler": [
+      "\\bлевел\\w*\\b",
+      "\\bстепен\\w*\\b[^.]{0,20}\\bXP\\b|\\bXP\\b[^.]{0,20}\\bстепен",
+      "\\bетап\\s+\\d+\\b",
+      "\\bLv?l\\.?\\s*\\d"
+     ],
+     "note": "„Ниво“ е стандартът в игри и приложения; „степен/етап“ са описателни, „левел“ е жаргон."
+    },
+    "da": {
+     "canon": "Niveau (abrégé : Niv. 3)",
+     "variantes_a_signaler": [
+      "\\blevel\\w*",
+      "\\blvl\\.?\\s*\\d",
+      "\\btrin\\s*\\d",
+      "\\bstadie\\s*\\d"
+     ],
+     "note": "»trin« = étape, »level« = anglicisme."
+    },
+    "nb": {
+     "canon": "nivå (NIVÅ 3)",
+     "variantes_a_signaler": [
+      "\\blevel\\w*",
+      "\\bniv\\.",
+      "\\btrinn\\s*\\d",
+      "\\bgrad\\s*\\d",
+      "\\bklasse\\s*\\d"
+     ],
+     "note": "«nivå» er kort nok til å unngå forkortelse."
+    },
+    "ru": {
+     "canon": "уровень",
+     "variantes_a_signaler": [
+      "\\bлевел\\w*",
+      "\\blvl\\b|\\bлвл\\b",
+      "\\bступен\\w*.{0,10}(?:\\d|xp)",
+      "\\bранг\\w*"
+     ],
+     "note": "«Уровень 3», сокращённо «ур. 3». «Левел», «lvl», «ранг», «ступень» — не наш термин."
+    },
+    "hr": {
+     "canon": "razina",
+     "variantes_a_signaler": [
+      "\\bnivo\\w*",
+      "\\blevel\\w*",
+      "\\blvl\\b",
+      "\\bstup(?:anj|nja|nju)\\s+\\d|\\bstup\\.\\s*\\d"
+     ],
+     "note": "Kratica „Raz. 3”; „nivo” je srpski/kolokvijalan, „level/lvl” engleski, „stupanj” je drugo (temperatura, stupanj obrazovanja)."
+    },
+    "sl": {
+     "canon": "stopnja (okrajšava: ST. 3)",
+     "variantes_a_signaler": [
+      "\\brav(?:en|ni|nijo|nem|neh|nmi)\\b",
+      "\\bRAV\\.",
+      "\\bnivo\\w*",
+      "\\blevel\\w*"
+     ],
+     "note": "Audit: raven/stopnja plavata in izmišljena »RAV.«; stopnja je oblika iz iger (stopnja 3), raven je raven znanja."
+    },
+    "sr": {
+     "canon": "nivo (NIVO 3)",
+     "variantes_a_signaler": [
+      "\\bstepen\\w*(?=[^.\\n]{0,20}\\b(?:XP|\\d)\\b)",
+      "\\brazin\\w*",
+      "\\blevel\\w*|\\bLVL\\b",
+      "\\bNIV\\.\\s*\\d"
+     ],
+     "note": "„nivo“ je standard; skraćenica „NIV.“ nije prirodna, piše se „NIVO 3“; „razina“ je hrvatski."
+    },
     "ar": {
      "canon": "المستوى (مستوى 3)",
      "variantes_a_signaler": [
@@ -483,6 +1148,137 @@
       "\\b(?:corrente|cadeia|maratona)\\s+de\\s+\\d+\\s+dias\\b|\\bdias\\s+consecutivos\\b"
      ],
      "note": "Mesma decisão que o mot piège serie_streak: « sequência » (friends.stats.streak, « sequência de %d dias ») com « dias seguidos » no contador; « ofensiva » é o jargão do Duolingo e « dias consecutivos » se unifica em « dias seguidos »."
+    },
+    "pt-PT": {
+     "canon": "sequência (contador: « %d dias seguidos »)",
+     "variantes_a_signaler": [
+      "\\bs[eé]rie\\s+de\\s+\\d+\\s+dias\\b|\\b\\d+\\s+dias\\s+de\\s+s[eé]rie\\b|\\ba\\s+tua\\s+s[eé]rie\\b",
+      "\\bstreak\\b",
+      "\\bofensiva\\s+de\\s+\\d+\\s+dias\\b|\\ba\\s+tua\\s+ofensiva\\b|\\bmaratona\\s+de\\s+\\d+\\s+dias\\b",
+      "\\b(?:corrente|cadeia|racha)\\s+de\\s+\\d+\\s+dias\\b|\\bdias\\s+consecutivos\\b"
+     ],
+     "note": "Mesma decisão que o mot piège serie_streak: « sequência » (sequência de %d dias) com « dias seguidos » no contador; « ofensiva » é o jargão brasileiro do Duolingo e « dias consecutivos » unifica-se em « dias seguidos »."
+    },
+    "it": {
+     "canon": "serie (jours consécutifs : « serie di 7 giorni »)",
+     "variantes_a_signaler": [
+      "\\bstreak\\b",
+      "\\bstrisci[ae]\\b(?=[^.!?\\n]{0,40}\\b(?:giorn[oi]|consecutiv\\w*|di\\s+fila|vincente)\\b)",
+      "\\b(?:catena|sequenza|racha|costanza)\\s+di\\s+\\d+\\s+giorni\\b",
+      "\\bserie\\s+di\\s+giornate\\b"
+     ],
+     "note": "« serie » est déjà dans l'app (friends.stats.streak, sync.conflict) ; « Giorni di fila » / « giorni consecutivi » sont des descriptifs légitimes et ne sont pas signalés."
+    },
+    "ro": {
+     "canon": "serie (compteur : « %d zile la rând »)",
+     "variantes_a_signaler": [
+      "\\bstreak\\w*\\b",
+      "\\bdung[ăi]\\w*\\b|\\blinie\\s+de\\s+\\d+\\s+zile\\b",
+      "\\bzile\\s+consecutive\\b|\\bzile\\s+(?:una\\s+dup[ăa]\\s+alta|în\\s+[șş]ir)\\b",
+      "\\bserial\\w*\\b|\\b[șş]ir(?:ul)?\\s+(?:t[ăa]u|de\\s+\\d+\\s+zile)\\b"
+     ],
+     "note": "Même choix que le piège serie_streak : « Serie » (friends.stats.streak, « Seria e aproape! ») et « zile la rând » pour le compteur ; « zile consecutive » et « șir de zile » sont à unifier."
+    },
+    "nl": {
+     "canon": "Reeks",
+     "variantes_a_signaler": [
+      "\\bstreaks?\\b",
+      "\\bserie(?:s)?\\b(?=.{0,30}\\b(?:dag|dagen|op\\s+rij|verlies|behoud)\\b)",
+      "\\bstre(?:ep|pen)\\b(?=.{0,30}\\b(?:dag|dagen)\\b)",
+      "\\bdagenserie\\b"
+     ],
+     "note": "'reeks' is de term die Duolingo en andere NL-apps gebruiken; 'serie' is in het Nederlands eerst een tv-serie."
+    },
+    "sv": {
+     "canon": "Svit",
+     "variantes_a_signaler": [
+      "\\bstreak\\w*",
+      "\\bserie(?:n|r|rna)?\\b(?=[^.\\n]{0,30}dag)",
+      "\\bkedja(?:n)?\\b(?=[^.\\n]{0,30}dag)",
+      "\\bstrimm\\w*"
+     ],
+     "note": "svit (as in vinstsvit, 'nuvarande svit' in Swedish Wordle) is the established word for a run of consecutive days; serie means a TV series."
+    },
+    "hu": {
+     "canon": "sorozat (pl. „7 napos sorozat”)",
+     "variantes_a_signaler": [
+      "\\bcsík\\w*",
+      "\\bszéria\\w*",
+      "\\bstreak\\w*",
+      "\\b(tévé|tv)-?\\s?sorozat\\w*"
+     ],
+     "note": "A Duolingo és más magyar tanulóappok a „sorozat” szót használják a napi streakre."
+    },
+    "bg": {
+     "canon": "серия",
+     "variantes_a_signaler": [
+      "\\bстрийк\\w*\\b|\\bстрик\\b",
+      "\\bпоредица\\s+(?:от\\s+)?дни\\b",
+      "\\bниз\\s+(?:от\\s+)?дни\\b",
+      "\\bивиц\\w*\\b(?!\\s*Газа)"
+     ],
+     "note": "„Серия“ (дни поред) е утвърдената форма в Duolingo и подобни приложения; „стрийк“ е англицизъм, „ивица“ = stripe."
+    },
+    "da": {
+     "canon": "Stime",
+     "variantes_a_signaler": [
+      "\\bstreak\\w*",
+      "\\bstribe[rn]?\\b",
+      "\\b(din|min|ny|længste)\\s+(serie|række)\\b",
+      "\\b(din|min|ny|længste)\\s+dage\\s+i\\s+træk\\b"
+     ],
+     "note": "Terme de gamification établi en danois (Duolingo) ; »serie« = série télé, »dage i træk« ne fonctionne pas comme substantif."
+    },
+    "nb": {
+     "canon": "rekke (X dager på rad)",
+     "variantes_a_signaler": [
+      "\\bstreak\\w*",
+      "\\bstripe\\w*",
+      "\\bdagsserie\\w*",
+      "\\bserie(?:n|r|ne)?\\b",
+      "\\bstrek(?:en)?\\s+på\\b"
+     ],
+     "note": "«serie» leses som TV-serie; «rekke/dagsrekke» er klart. «serie» er legitimt i kurs – falsk positiv godtatt."
+    },
+    "ru": {
+     "canon": "серия",
+     "variantes_a_signaler": [
+      "\\bстрик\\w*",
+      "\\bударн\\w*\\s+режим\\w*",
+      "\\bцепочк\\w*\\s+дн\\w*",
+      "\\bполос\\w*\\s+(?:дн|побед)\\w*"
+     ],
+     "note": "Streak — «серия» (7 дней подряд). «Стрик» — транслит, «ударный режим» — термин Duolingo, «полоса» — калька."
+    },
+    "hr": {
+     "canon": "niz",
+     "variantes_a_signaler": [
+      "\\bstreak\\w*",
+      "\\bserij\\w*\\s+(?:od\\s+)?\\d+\\s*dan",
+      "\\bserij\\w*[^.\\n]{0,25}\\bzaredom",
+      "\\blan(?:ac|ca|cu)\\s+(?:od\\s+)?\\d+\\s*dan"
+     ],
+     "note": "„Dnevni niz” je standard u hrvatskim aplikacijama za učenje; „serija” je TV serija."
+    },
+    "sl": {
+     "canon": "niz",
+     "variantes_a_signaler": [
+      "\\bserij\\w*",
+      "\\bstreak\\w*",
+      "\\bzaporedj\\w*\\s+dni\\b",
+      "\\bdni\\s+zapored\\b"
+     ],
+     "note": "Audit: niz/dni zapored plavata; »niz« je oblika iz učnih aplikacij. »dni zapored« je dovoljen v razlagalnem stavku, ne kot oznaka."
+    },
+    "sr": {
+     "canon": "niz",
+     "variantes_a_signaler": [
+      "\\bserij\\w*(?=[^.\\n]{0,25}\\b(?:dan[ai]|zaredom|uzastop)\\w*)",
+      "\\bstrik\\w*|\\bstreak\\w*",
+      "\\blanac\\w*\\s+dan\\w*",
+      "\\bserij\\w*\\s+(?:od\\s+)?\\d+"
+     ],
+     "note": "„niz od 5 dana“; „serija“ asocira na TV seriju."
     },
     "ar": {
      "canon": "سلسلة",
@@ -571,6 +1367,138 @@
      ],
      "note": "O app alterna hoje « Teste gratuito » (badge, título, CTA) e « teste grátis » (preço, FAQ), além de « período grátis »: unificar em « teste grátis », mais curto e mais quente; « 3 dias grátis » sozinho continua válido nos CTAs curtos."
     },
+    "pt-PT": {
+     "canon": "teste gratuito",
+     "variantes_a_signaler": [
+      "\\bteste\\s+gr[aá]tis\\b",
+      "\\bavalia[cç][aã]o\\s+(?:gratuita|gr[aá]tis)\\b|\\bper[ií]odo\\s+de\\s+(?:avalia[cç][aã]o|teste|experi[eê]ncia|degusta[cç][aã]o)\\b|\\bper[ií]odo\\s+(?:experimental|gr[aá]tis|gratuito)\\b",
+      "\\bfree\\s+trial\\b|\\btrial\\b|\\bexperi[eê]ncia\\s+gratuita\\b|\\bamostra\\s+gr[aá]tis\\b",
+      "\\bensaio\\s+(?:gr[aá]tis|gratuito)\\b|\\bjulgamento\\s+(?:gr[aá]tis|gratuito)\\b|\\bprova\\s+(?:gr[aá]tis|gratuita)\\b"
+     ],
+     "note": "Em Portugal « gratuito » é a forma neutra (as lojas escrevem « teste gratuito »); « teste grátis » e « período experimental » são variantes a unificar. « 3 dias grátis » sozinho continua válido nos CTA curtos."
+    },
+    "it": {
+     "canon": "prova gratuita",
+     "variantes_a_signaler": [
+      "\\bperiodo\\s+di\\s+prova\\b|\\bprova\\s+gratis\\b|\\bprova\\s+(?:libera|free)\\b",
+      "\\btrial\\b|\\bfree\\s+trial\\b",
+      "\\b(?:versione\\s+di\\s+prova|versione\\s+trial|demo)\\s+(?:gratuit[oa]|gratis|di\\s+\\d+\\s+giorni)\\b",
+      "\\b(?:fine|termine|scadenza)\\s+del\\s+test\\b|\\btest\\s+(?:gratuito|gratis|di\\s+\\d+\\s+giorni)\\b"
+     ],
+     "note": "« prova gratuita » est déjà la forme de l'app ; « fine del test » (paywall.trial.reminderDetail, observé) rend « trial » par « test » et doit être corrigé. « periodo di prova » est correct mais à unifier."
+    },
+    "ro": {
+     "canon": "probă gratuită",
+     "variantes_a_signaler": [
+      "\\bîncerc[ăa]r\\w*\\s+gratuit\\w*\\b|\\bversiune\\w*\\s+de\\s+încercare\\b",
+      "\\bperioad\\w*\\s+de\\s+(?:încercare|testare)\\b|\\btest(?:are)?\\s+gratuit\\w*\\b",
+      "\\btrial\\b|\\bfree\\s+trial\\b",
+      "\\bproces(?:ul|ului)?\\s+(?:gratuit|se\\s+termin[ăa]|se\\s+încheie)\\b"
+     ],
+     "note": "« Probă gratuită » domine déjà (badge, CTA « Activează proba gratuită », FAQ) ; « încercare gratuită » / « versiunea de încercare » (profil, paywall du bloqueur) sont à unifier. « 3 zile gratuit » seul reste valable."
+    },
+    "nl": {
+     "canon": "gratis proefperiode",
+     "variantes_a_signaler": [
+      "\\bgratis\\s+(?:proef|trial|test|proefversie|probeerperiode|proeftijd)\\b",
+      "\\bproeftijd\\b",
+      "\\bfree\\s+trial\\b",
+      "\\btrial\\b"
+     ],
+     "note": "'proefperiode' is de App Store/Google Play-term; 'proeftijd' is arbeidsrecht, 'proefversie' een demo."
+    },
+    "sv": {
+     "canon": "Gratis provperiod",
+     "variantes_a_signaler": [
+      "\\bgratis\\s+(?:test(?:period|version)|prövotid|rättegång)\\b",
+      "\\bfri\\s+(?:prov|test)(?:period|version)\\b",
+      "\\btestperiod\\w*",
+      "\\bprov(?:version|tid)\\w*"
+     ],
+     "note": "provperiod is the App Store / Google Play wording in Swedish; testperiod and provversion drift toward a software trial build."
+    },
+    "hu": {
+     "canon": "ingyenes próbaidőszak",
+     "variantes_a_signaler": [
+      "\\bpróbaverzió\\w*",
+      "\\bpróbaidő(t|n|re|ről|vel|je)?\\b",
+      "\\bfree\\s+trial\\b|\\btrial\\b",
+      "\\bingyenes\\s+(teszt|kipróbálás|per|tárgyalás)\\w*"
+     ],
+     "note": "„próbaidő” munkajogi (probation), „próbaverzió” szoftverdemó; a rövid „Ingyenes próba” gombon elfogadott."
+    },
+    "bg": {
+     "canon": "безплатен пробен период",
+     "variantes_a_signaler": [
+      "\\bпробн\\w+\\s+версия\\b",
+      "\\bбезплат\\w+\\s+(?:период|тест|изпитани|проба)\\b",
+      "\\bтриал\\w*\\b|\\btrial\\b",
+      "\\bбезплатно\\s+изпробване\\b"
+     ],
+     "note": "Одитът намира три нестабилни форми (пробен период / пробна версия / безплатен период); „пробна версия“ е софтуерен смисъл, канонът е „безплатен пробен период“."
+    },
+    "da": {
+     "canon": "Gratis prøveperiode",
+     "variantes_a_signaler": [
+      "\\bgratis\\s+(prøve|forsøg|test|periode|retssag)\\b",
+      "\\bprøvetid\\w*",
+      "\\bprøveabonnement\\w*",
+      "\\b(free\\s+)?trial\\w*"
+     ],
+     "note": "L'audit flotte entre »gratis prøve« et »prøveperiode« ; »prøvetid« = période d'essai d'un emploi."
+    },
+    "nb": {
+     "canon": "gratis prøveperiode",
+     "variantes_a_signaler": [
+      "\\bgratis\\s+prøve\\b",
+      "\\bstart\\s+prøven\\b",
+      "\\bprøvetid\\w*",
+      "\\btestperiode\\w*",
+      "\\bgratisperiode\\w*",
+      "\\bprøveversjon\\w*"
+     ],
+     "note": "Bare «prøveperiode» er idiomatisk (revisjonen); «prøve» alene = eksamen."
+    },
+    "ru": {
+     "canon": "пробный период",
+     "variantes_a_signaler": [
+      "бесплатн\\w*\\s+период\\w*",
+      "бесплатн\\w*\\s+(?:пробн\\w*\\s+)?(?:верси|испытани|проб[аыу]|тест)\\w*",
+      "\\bтриал\\w*|\\btrial\\b",
+      "испытательн\\w*\\s+(?:срок|период)\\w*"
+     ],
+     "note": "Аудит: «бесплатный период» vs «пробный период» → «Пробный период» (бейдж), «Начать пробный период» (CTA)."
+    },
+    "hr": {
+     "canon": "besplatno probno razdoblje",
+     "variantes_a_signaler": [
+      "\\bbesplatn\\w*\\s+prob[aeu]\\b",
+      "\\bprobn\\w*\\s+(?:verzij|period|rok)\\w*",
+      "\\btrial\\w*",
+      "\\bbesplatn\\w*\\s+(?:suđenj|pokus|ispit)\\w*"
+     ],
+     "note": "Audit nalazi „besplatna proba / probno razdoblje”; kanon je puni oblik, „{n} dana besplatno” u gumbima."
+    },
+    "sl": {
+     "canon": "brezplačni preizkus",
+     "variantes_a_signaler": [
+      "\\bpreskus\\w*",
+      "\\bposkus\\w*",
+      "\\bpreizkusn\\w*\\s+(?:obdobj|različic)\\w*",
+      "\\btrial\\w*"
+     ],
+     "note": "preizkus je pogostejša knjižna oblika; preskus je dopustna dvojnica, a se poenoti; poskus = attempt."
+    },
+    "sr": {
+     "canon": "besplatna proba",
+     "variantes_a_signaler": [
+      "\\bprobn\\w+\\s+(?:period|verzij|rok)\\w*",
+      "\\bbesplatn\\w+\\s+(?:period|rok|verzij)\\w*",
+      "\\btrial\\w*",
+      "\\bsuđenj\\w*(?=[^.\\n]{0,30}\\b(?:besplat|pretplat|dan[ai])\\b)"
+     ],
+     "note": "audit: besplatna proba / probni period / besplatni period nestabilni; jedna forma: „besplatna proba“ (glagolski: „isprobaj besplatno“)."
+    },
     "ar": {
      "canon": "التجربة المجانية",
      "variantes_a_signaler": [
@@ -656,6 +1584,137 @@
       "\\bsobretaxa\\b|\\btaxa\\s+extra\\s+(?:Sophia|d[ae]\\s+assinatura)\\b"
      ],
      "note": "Marca da oferta, em latim tal qual, sem acento nem plural (« o Sophia Premium », « cursos Premium » com maiúscula). « Sophia Pro / PRO » vem da fonte francesa e não é uma variante de tradução."
+    },
+    "pt-PT": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bpr[éêè]mium\\b|\\bpremiun\\b|\\bpremiums\\b|\\bpremiu\\b",
+      "\\b(?:plano|vers[aã]o|subscri[cç][aã]o|assinatura|conta|acesso)\\s+(?:pag[oa]|superior|de\\s+primeira|complet[oa]|de\\s+luxo|avan[cç]ad[oa])\\b",
+      "\\bpr[éê]mios?\\s+(?:mensal|anual|d[oa]\\s+(?:seguro|subscri[cç][aã]o|plano))\\b|\\bSophia\\s+Pr[éê]mio\\b",
+      "\\bsobretaxa\\b|\\btaxa\\s+extra\\s+(?:Sophia|d[ae]\\s+subscri[cç][aã]o)\\b"
+     ],
+     "note": "Marca da oferta, em latim tal qual, sem acento nem plural (« o Sophia Premium », « cursos Premium » com maiúscula). « Sophia Pro / PRO » vem da fonte francesa e não é uma variante de tradução."
+    },
+    "it": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bSophia\\s+(?:PRO|Pro)\\b|\\bpassa\\s+a\\s+Pro\\b|\\bchi\\s+è\\s+Pro\\b|\\b(?:membro|utente|versione|piano|abbonamento)\\s+Pro\\b",
+      "\\b(?:prémium|premiun|premiùm|premioum|primium|premiumm|prémio)\\b|Премиум|Πρίμιουμ|بريميوم",
+      "\\bpremio\\b(?=[^.!?\\n]{0,40}\\b(?:abbonamento|abbonati|piano|sblocc\\w*|funzionalit\\w*|a\\s+vita|accesso)\\b)",
+      "\\b(?:versione|piano|abbonamento|offerta)\\s+(?:pagante|pregiat[oa]|superiore|di\\s+qualit[àa]\\s+superiore|plus)\\b"
+     ],
+     "note": "Marque latine conservée telle quelle. L'app italienne utilise à la fois « Premium » et « Sophia PRO / Pro » (paywall.quiz.subtitle, proPitch, onboardingV2.pw.compare) : à unifier sur Premium."
+    },
+    "ro": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bpremium-?(?:ul|ului|uri|urile)\\b",
+      "\\bprim[ăa]\\s+(?:de\\s+asigurare|lunar[ăa]|anual[ăa])\\b|\\bSophia\\s+Prim[ăa]\\b",
+      "\\bpremiu(?:l|lui|ri|rile)?\\s+Sophia\\b|\\bSophia\\s+Premiu(?:l|lui|ri|rile)?\\b|\\babonament\\w*\\s+premiu\\b",
+      "\\bpremiun\\b|\\bprémium\\b|\\bpremiums\\b"
+     ],
+     "note": "Nom de l'offre, en latin tel quel, sans article enclitique (« Sophia Premium », « membrii Premium »). « Sophia PRO / Pro » vient de la source française et n'est pas une variante de traduction."
+    },
+    "nl": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bpremie\\b",
+      "\\bprémium\\b",
+      "\\bbetaald(?:e)?\\s+(?:versie|plan|lidmaatschap|abonnement)\\b",
+      "\\b(?:hoogwaardig|luxe|topklasse)\\s+(?:abonnement|lidmaatschap|versie)\\b"
+     ],
+     "note": "Latijnse merknaam, onvertaald en onverbogen; alleen 'Premium-abonnement' met koppelteken is toegestaan."
+    },
+    "sv": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bpremie\\w*",
+      "\\bprémium\\b",
+      "\\bpremium(?:et|en|s)\\b",
+      "\\b(?:förstklassig|exklusiv|betald?)\\w*\\s+(?:plan|version|medlemskap|konto)\\b"
+     ],
+     "note": "Brand name kept in Latin script and never inflected (no premiumet); premie is an insurance premium."
+    },
+    "hu": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bprémium\\w*",
+      "\\bbiztosítási\\s+díj\\w*",
+      "\\bfelár\\w*",
+      "\\b(kiemelt|exkluzív)\\s+(csomag|tagság|verzió|szint)\\w*"
+     ],
+     "note": "Márkanév, ékezet nélkül, toldalék közvetlenül (Premiumot, Premiumra); az ékezetes „prémium” magyarosítás, a „kiemelt csomag” fordítás."
+    },
+    "bg": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bпремиум\\w*\\b",
+      "\\bпреми(?:я|и|ята|ален|ална|ално|ални)\\b",
+      "\\bпървокласн\\w*\\s+(?:план|абонамент|достъп)\\b",
+      "\\bплатен\\w*\\s+(?:план|версия|абонамент)\\b[^.]{0,20}\\b(?:активир|отключ)"
+     ],
+     "note": "Марката остава на латиница и не се скланя; „Премиум“ е транслитерацията от одита, „премия“ е застрахователен термин."
+    },
+    "da": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bpræmie\\w*",
+      "\\bpremie\\b",
+      "\\b(betalt|betalings)\\s*(version|udgave|abonnement)\\w*",
+      "\\bførsteklasses\\b"
+     ],
+     "note": "Nom d'offre invariable ; composé avec trait d'union (Premium-abonnement). »præmie« = prime."
+    },
+    "nb": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bpremie\\w*",
+      "\\bforsikringspremie\\w*",
+      "\\bprémium\\b",
+      "\\bførsteklasses\\b",
+      "\\bpremiumen\\b"
+     ],
+     "note": "Merkenavn, uendret, stor P."
+    },
+    "ru": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bпремиум\\w*",
+      "\\bпремиальн\\w*",
+      "(?:платн|расширенн|полн)\\w*\\s+(?:верси|доступ|подписк)\\w*",
+      "\\bпро[- ]верси\\w*"
+     ],
+     "note": "Название тарифа латиницей, не склоняется: «подписка Premium», «Разблокировать Premium». Транслит и перифразы («платная версия») — сигналить."
+    },
+    "hr": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bpremijum\\w*",
+      "\\bpremij(?:[aeiu]|om)\\b",
+      "\\bpremijsk\\w*",
+      "\\b(?:vrhunsk|plaćen|napredn)\\w*\\s+(?:plan|verzij|inačic|članstv)\\w*"
+     ],
+     "note": "Brend ostaje latinicom i nesklonjiv („Sophia Premium”, „uz Premium”); „premija” je osiguranje, „premijum” transliteracija."
+    },
+    "sl": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bpremij\\w*",
+      "\\bpremium(?:a|u|om)\\b",
+      "\\bprémium",
+      "\\bnadstandard\\w*"
+     ],
+     "note": "Ime ponudbe ostane nesklanjano: »naročnina Premium«, »različica Premium«; premija = zavarovalnina."
+    },
+    "sr": {
+     "canon": "Premium",
+     "variantes_a_signaler": [
+      "\\bpremij(?!er)\\w*",
+      "\\bpremium(?:-|a|u|om|e)\\w*\\b",
+      "\\bvrhunsk\\w+\\s+(?:plan|ponud|verzij|pretplat)\\w*",
+      "\\bpremijum\\w*"
+     ],
+     "note": "brend ostaje latinicom i nepromenljiv; „premija“ = prime, „Premijum“ = transliteracija."
     },
     "ar": {
      "canon": "Premium",
@@ -743,6 +1802,136 @@
      ],
      "note": "Nunca « Sofia » (grafia portuguesa do nome). O lookbehind exclui « Santa Sofia » (Hagia Sophia, curso de Constantinopla) e « rainha Sofia »; a capital da Bulgária é excluída pelo lookahead « , capital »; outras Sofias reais podem dar falso positivo. Gênero: « a Sophia » (o app), « o Sophia Premium » (o plano)."
     },
+    "pt-PT": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "(?<!Santa )(?<!Hagia )(?<!Bas[ií]lica de )(?<!rainha )(?<!Rainha )\\bSof[ií]a\\b(?!(?:\\s+(?:Coppola|Loren|Vergara|Kovalevsk\\w+|de\\s+Gr[eé]cia|Grove)|,\\s+(?:a\\s+)?capital))",
+      "\\bSoph[ií]a\\b(?<!Sophia)|\\bS[oó]phia\\b(?<!Sophia)",
+      "\\bSophie\\b|\\bSofie\\b|\\bSofya\\b",
+      "\\bSophia\\s*['’]s\\b|\\bSophias\\b"
+     ],
+     "note": "Nunca « Sofia » (grafia portuguesa do nome). O lookbehind exclui « Santa Sofia » (Hagia Sophia, curso de Constantinopla) e « rainha Sofia »; a capital da Bulgária é excluída pelo lookahead « , capital ». Género: « a Sophia » (a app), « o Sophia Premium » (o plano)."
+    },
+    "it": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\bSof[iì]a\\b(?=[^.!?\\n]{0,40}\\b(?:app|cors[oi]|quiz|Premium|Pro|abbonamento|ambasciator\\w*|ripasso|impar\\w*|serie|TikTok)\\b)",
+      "\\bSophia['’]s\\b|\\bSophias\\b|\\bSofía\\b|\\bSophie\\b(?=[^.!?\\n]{0,40}\\b(?:app|cors[oi]|quiz|Premium)\\b)",
+      "Σοφ[ίι]α|Софи[яа]|סופיה|صوفيا",
+      "\\bl['’]app\\s+Sofia\\b|\\bsu\\s+Sofia\\b|\\bcon\\s+Sofia\\b"
+     ],
+     "note": "Jamais translittérée. « Sofia » est aussi la capitale bulgare et un prénom (Sofia Loren) : signalé seulement en contexte app ou après « su / con / l'app »."
+    },
+    "ro": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "(?<!Sfânta )(?<!Hagia )(?<!Sf\\. )(?<!Sf )\\bSof[ií]a\\b(?!\\s*,\\s*capitala)(?!\\s+(?:Loren|Coppola|Vergara|Kovalevsk\\w+))",
+      "\\bSofiei\\b|\\bSophie\\b|\\bSofie\\b|\\bZofia\\b",
+      "\\bSophía\\b|\\bSóphia\\b|\\bSoﬁa\\b",
+      "\\bSophia['’]s\\b"
+     ],
+     "note": "Jamais « Sofia » (graphie roumaine du prénom et capitale bulgare). Les lookbehind excluent « Sfânta Sofia » / « Hagia Sofia » (cours de Constantinople) ; le terme de glossaire « Sofia » (sagesse grecque, cours d'Icare) est hors surfaces produit. Génitif « Sophiei » toléré quand la syntaxe l'exige."
+    },
+    "nl": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\bSofia\\b",
+      "\\bSofie\\b",
+      "\\bSophie\\b(?=.{0,30}\\b(?:app|premium|cursus)\\b)",
+      "\\bσοφία\\b"
+     ],
+     "note": "Het Nederlands verbuigt niet; alleen de bezitsvorm 'Sophia's' is toegestaan. 'Sofia/Sofie' zijn vernederlandsingen."
+    },
+    "sv": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\bsofia\\b(?=[^.\\n]{0,30}(?:app|premium|kurs|team|lär|hälsar))",
+      "\\bsofias\\b(?=[^.\\n]{0,30}(?:app|premium|kurs))",
+      "\\bsophie\\b",
+      "\\bsofie\\b"
+     ],
+     "note": "Sofia is the Swedish spelling a machine normalises to (and the Bulgarian capital, hence the context guard); the genitive Sophias is required by Swedish and accepted."
+    },
+    "hu": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\bSzófia\\w*|\\bSzofia\\w*",
+      "\\bZsófia\\w*|\\bZsófi\\w*",
+      "\\bSophie\\w*|\\bSofia\\w*",
+      "\\bbölcsesség\\s+(app|alkalmazás)\\w*"
+     ],
+     "note": "Márkanév; toldalék a magyar szabály szerint (Sophiát, Sophiával, Sophiában) megengedett; Szófia (város), Zsófia (magyar név) és a „bölcsesség” fordítás hibás."
+    },
+    "bg": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\bСофия\\s+(?:те|ти|ще|предлага|приложение|курс)",
+      "\\b(?:в|с|от|на|със)\\s+София\\b[^.]{0,30}\\b(?:курс|тест|урок|приложение|абонамент|уведомлени)",
+      "\\bСофиа\\b|\\bСофија\\b",
+      "\\bSofia\\b"
+     ],
+     "note": "„София“ е столицата на България — транслитерацията би била двусмислена и комична; затова се лови само до продуктови думи. Марката остава Sophia, без склонение."
+    },
+    "da": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\bSofia\\b",
+      "\\bSofie\\b",
+      "\\bSophie\\b",
+      "\\bSophia['’]s\\b"
+     ],
+     "note": "Jamais danisé en »Sofia« ; génitif danois sans apostrophe (»Sophias kurser«). Faux positif possible : Sofia (Bulgarie)."
+    },
+    "nb": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\bsofia\\w*",
+      "\\bsophie\\b",
+      "\\bsofie\\b",
+      "\\bsophiaen\\b"
+     ],
+     "note": "Genitiv «Sophias» er påkrevd norsk bøying og flagges ikke."
+    },
+    "ru": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\bсофи(?:я|и|ю|ей|е|йя|а)\\b",
+      "\\bsofia\\b|\\bsophya\\b|\\bsofya\\b",
+      "\\bсоф[ьи]я\\b",
+      "\\bсофия[- ]?(?:app|апп|приложени)"
+     ],
+     "note": "Бренд латиницей, не склоняется: «Sophia проверяет тебя». В курсах «София» (имя, город, Святая София) легитимна — проверять только UI-строки."
+    },
+    "hr": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\bsofij\\w*",
+      "\\bsofia\\b",
+      "\\bsophie\\b",
+      "\\bsofi\\b"
+     ],
+     "note": "Hrvatska deklinacija je dopuštena (Sophije, Sophiji, Sophijin), zato se „Sophij-” ne označava; „Sofija/Sofia” su transliteracije."
+    },
+    "sl": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\bsofij\\w*",
+      "\\bsofi[ae]\\b|\\bsofía\\b",
+      "\\bsophie\\b",
+      "Софи\\w*"
+     ],
+     "note": "Sklanjanju se izognemo z »aplikacija Sophia«; rodilnik »Sophie« je dopusten le, če ni druge poti (zato ga regex označi za pregled)."
+    },
+    "sr": {
+     "canon": "Sophia",
+     "variantes_a_signaler": [
+      "\\bSofij\\w*|\\bSofi[aeu]\\b",
+      "\\bSophi(?:u|i|om|e)\\b",
+      "\\b(?:uz|bez|u|sa|od|o|na|za|prema|kroz)\\s+Sophia\\b",
+      "\\bMudrost\\w*(?=[^.\\n]{0,20}\\b(?:aplikacij|app)\\w*)"
+     ],
+     "note": "audit: tri tretmana imena; pravilo: latinica, dekliniše se sa „j“ (Sophije, Sophiji, Sophiju, Sophijom), nikad „Sophiu/Sophii“ ni nedeklinirano iza predloga."
+    },
     "ar": {
      "canon": "Sophia",
      "variantes_a_signaler": [
@@ -826,6 +2015,136 @@
       "\\bbloqueio\\s+do\\s+TikTok\\b"
      ],
      "note": "A interface já diz « Bloqueador do TikTok », mas o paywall ainda deixou o anglicismo « o blocker » (paywall.blocker.title/subtitle/noTrial): unificar em « bloqueador ». « Modo anti-scroll » é outro nome de função e não é marcado."
+    },
+    "pt-PT": {
+     "canon": "bloqueador (o Bloqueador do TikTok)",
+     "variantes_a_signaler": [
+      "\\bblocker\\b",
+      "\\bbloqueante\\b|\\btrav[aã]o\\b[^.!?\\n]{0,20}\\bTikTok\\b|\\bbloqueio\\s+de\\s+(?:apps|aplica[cç][oõ]es|TikTok|redes)\\b",
+      "\\bbloqueador\\s+(?:de\\s+apps|de\\s+aplica[cç][oõ]es|de\\s+an[uú]ncios)\\b",
+      "\\bbloqueio\\s+do\\s+TikTok\\b"
+     ],
+     "note": "A interface diz « Bloqueador do TikTok », mas o paywall deixou o anglicismo « o blocker » (paywall.blocker.*): unificar em « bloqueador ». « Modo anti-scroll » é outro nome de função e não se marca."
+    },
+    "it": {
+     "canon": "Blocco TikTok (fonction qui verrouille TikTok)",
+     "variantes_a_signaler": [
+      "\\bbloccator[ei]\\b",
+      "\\bblocker\\b|\\bblocca-?TikTok\\b",
+      "\\b(?:bloccante|bloccaggio|lucchetto|interruttore)\\s+(?:di\\s+|per\\s+)?TikTok\\b",
+      "\\bTikTok\\s+(?:blocker|bloccatore|bloccante)\\b"
+     ],
+     "note": "La fonction n'existe pas encore dans les chaînes italiennes. « bloccatore » (calque de « blocker ») est maladroit en italien ; « Blocco TikTok » est le nom de fonction naturel (cf. « Blocco app » sur iOS)."
+    },
+    "ro": {
+     "canon": "blocator (Blocatorul TikTok)",
+     "variantes_a_signaler": [
+      "\\bblocker\\w*\\b",
+      "\\bblocant\\w*\\b",
+      "\\bblocare\\s+(?:a\\s+)?TikTok\\w*\\b|\\bTikTok\\s+blocker\\b",
+      "\\bblocaj\\w*\\s+(?:de\\s+)?TikTok\\b"
+     ],
+     "note": "L'app hésite entre « Blocare TikTok », « blocker-ul » (paywall) et « un blocant » : « blocator » est le nom roumain courant de l'outil (« blocator de reclame »)."
+    },
+    "nl": {
+     "canon": "Blokkering (TikTok-blokkering)",
+     "variantes_a_signaler": [
+      "\\bblockers?\\b",
+      "\\bblokkers?\\b",
+      "\\bblokkeerder\\b",
+      "\\bblokkade\\b"
+     ],
+     "note": "Nederlandse apps noemen de functie 'blokkering' (app-blokkering); 'blokker' is bovendien een winkelketen, 'blokkeerder' een persoon."
+    },
+    "sv": {
+     "canon": "Blockerare (TikTok-blockerare)",
+     "variantes_a_signaler": [
+      "\\b(?:tiktok[- ]?)?blocker(?:n|s)?\\b",
+      "\\bspärr(?:en|ar)?\\b(?=[^.\\n]{0,30}tiktok)",
+      "\\blås(?:et|are|aren)?\\b(?=[^.\\n]{0,30}tiktok)",
+      "\\bblockad(?:en)?\\b(?=[^.\\n]{0,30}tiktok)"
+     ],
+     "note": "blockerare follows annonsblockerare (ad blocker); blocker is the untranslated English, spärr/blockad are telecom and politics words."
+    },
+    "hu": {
+     "canon": "TikTok-blokkoló",
+     "variantes_a_signaler": [
+      "\\btiktok\\s+blokkol\\w*",
+      "\\bzároló\\w*",
+      "\\bblocker\\w*",
+      "\\btiktok[- ]?(tiltó|zár|gátló|letiltó)\\w*"
+     ],
+     "note": "Tulajdonnév + köznév kötőjellel (TikTok-blokkoló); „zároló/tiltó” más árnyalat, „blocker” jövevényszó."
+    },
+    "bg": {
+     "canon": "блокер",
+     "variantes_a_signaler": [
+      "\\bблокировк\\w*\\b",
+      "\\bблокиране\\b[^.]{0,20}\\bTikTok|\\bTikTok\\s+блокиране\\b",
+      "\\bблокатор\\w*\\b",
+      "\\bзаключване\\s+на\\s+TikTok\\b"
+     ],
+     "note": "Одитът поправя „Блокировка“ (механична ключалка) на „Блокер“; семейството блокер/блокиране/блокировка трябва да се сведе до „блокер“ за функцията."
+    },
+    "da": {
+     "canon": "Blokering (TikTok-blokering)",
+     "variantes_a_signaler": [
+      "\\bblocker\\w*",
+      "\\bblokker(en|e|ne)?\\b",
+      "\\bblokkering\\w*",
+      "\\bspærr(ing|ingen|er|eren)\\b"
+     ],
+     "note": "»blokker« est une faute d'orthographe/anglicisme ; »spærring« = barrage."
+    },
+    "nb": {
+     "canon": "blokkering (TikTok-blokkering)",
+     "variantes_a_signaler": [
+      "\\bblocker\\w*",
+      "\\bblokkeren\\b",
+      "\\bsperre(?:n|r|ne)?\\b",
+      "\\bblokade\\w*"
+     ],
+     "note": "«blockeren» (engelsk bøyd) observert; «blokkeringen» foreslått i revisjonen."
+    },
+    "ru": {
+     "canon": "блокировщик",
+     "variantes_a_signaler": [
+      "\\bблокер\\w*",
+      "\\bблокиратор\\w*",
+      "\\bblocker\\b",
+      "\\bблокировк\\w*\\s+тикток\\w*\\s*\\(?\\s*функци"
+     ],
+     "note": "Аудит: «блокер» (жаргон) → «блокировщик». Функция: «блокировщик TikTok»."
+    },
+    "hr": {
+     "canon": "blokator",
+     "variantes_a_signaler": [
+      "\\bblocker\\w*",
+      "\\bbloker\\w*",
+      "\\bblokad\\w*\\s+\\**tiktok",
+      "\\bzaključav\\w*\\s+\\**tiktok"
+     ],
+     "note": "Audit: „blocker” neprevedeno; „blokator” je tvorbeno pravilno (kao „blokator oglasa”)."
+    },
+    "sl": {
+     "canon": "blokator",
+     "variantes_a_signaler": [
+      "\\bblocker\\w*",
+      "\\bblokad\\w*",
+      "\\banti[\\s-]?scroll\\w*",
+      "\\bzapor[ao]\\s+(?:tiktok|aplikacij)\\w*"
+     ],
+     "note": "Audit: blocker/blokator/blokada/anti-scroll plavajo; blokator je domača tvorba (prim. blokator oglasov). Blokada bo lažni zadetek v zgodovinskih tečajih."
+    },
+    "sr": {
+     "canon": "bloker (TikTok bloker)",
+     "variantes_a_signaler": [
+      "\\bblocker\\w*",
+      "\\bblokator\\w*",
+      "\\bblokad\\w*(?=[^.\\n]{0,20}\\bTikTok)",
+      "\\bzaključavač\\w*"
+     ],
+     "note": "audit: „blocker“ ostavljen na engleskom; „bloker“ je prirodna domaća adaptacija."
     },
     "ar": {
      "canon": "مانع تيك توك",
@@ -913,6 +2232,136 @@
      ],
      "note": "Nome da aba de repetição espaçada: « Revisão » (tab.training, « Desbloquear a Revisão », « a Revisão Sophia »), com maiúscula quando designa a seção. « treino/treinamento » em cursos de esporte ou de IA: só se marcam perto de perguntas/quiz/memória."
     },
+    "pt-PT": {
+     "canon": "Treino (o separador; « o Treino Sophia »)",
+     "variantes_a_signaler": [
+      "\\btreinamentos?\\b",
+      "\\bmodo\\s+pr[aá]tica\\b|\\bsess[aã]o\\s+de\\s+pr[aá]tica\\b|\\bSophia\\s+(?:Pr[aá]tica|Practice|Training|Treinamento)\\b|\\b(?:separador|aba)\\s+(?:de\\s+)?(?:pr[aá]tica|exerc[ií]cios|treinamento)\\b",
+      "\\bRevis[aã]o\\s+Sophia\\b|\\bSophia\\s+Revis[aã]o\\b|\\b(?:separador|aba)\\s+(?:de\\s+)?Revis[aã]o\\b|\\bDesbloquear\\s+a\\s+Revis[aã]o\\b",
+      "\\bexercita[cç][aã]o\\b|\\bexerc[ií]cios\\s+de\\s+mem[oó]ria\\b|\\bpractice\\b|\\btraining\\b"
+     ],
+     "note": "Nome do separador de repetição espaçada: « Treino » (natural em Portugal: treino diário), com maiúscula quando designa a secção. « Revisão » fica para o substantivo de « rever » (Hora da revisão) e não para o nome do separador; « treinamento » é brasileiro. « treino » em cursos de desporto é legítimo e não se marca."
+    },
+    "it": {
+     "canon": "Ripasso (onglet)",
+     "variantes_a_signaler": [
+      "\\ballenamento\\b(?=[^.!?\\n]{0,50}\\b(?:domand\\w*|ripetizione|spaziat\\w*|quiz|cors[oi]|scheda|sessione)\\b)|(?<![\\wàèéìòù ])allenamento(?![\\wàèéìòù ,.;:!?)])",
+      "\\bpratica\\b(?=[^.!?\\n]{0,40}\\b(?:domand\\w*|spaziat\\w*|quiz|scheda|sessione|ripetizione)\\b)|(?<![\\wàèéìòù ])pratica(?![\\wàèéìòù ,.;:!?)])",
+      "\\b(?:esercitazion[ei]|esercizi|workout|revisione)\\b(?=[^.!?\\n]{0,40}\\b(?:domand\\w*|spaziat\\w*|quiz|scheda|sessione|ripetizione)\\b)",
+      "\\btraining\\b|\\bpractice\\b"
+     ],
+     "note": "L'app a choisi « Ripasso » pour l'onglet (tab.training, « Benvenuto nel Ripasso ») : « Allenamento » (sport) et « Pratica » sont les variantes qu'un traducteur produirait."
+    },
+    "ro": {
+     "canon": "Recapitulare",
+     "variantes_a_signaler": [
+      "\\bantrenament\\w*\\b",
+      "\\bexersare\\w*\\b|\\bexerseaz[ăa]\\w*\\b",
+      "(?:\\bpractic[ăa](?:re)?\\b)(?=[^.!?\\n]{0,60}(?:\\b(?:întreb[ăa]ri|quiz|memori|fil[ăa]|tab|Sophia)\\w*))|(?:\\b(?:întreb[ăa]ri|quiz|memori|fil[ăa]|tab|Sophia)\\w*)[^.!?\\n]{0,60}(?:\\bpractic[ăa](?:re)?\\b)",
+      "\\btraining\\b|\\bpractice\\s+(?:mode|session|tab)\\b|\\bpractic[ăa]\\s+Sophia\\b"
+     ],
+     "note": "Onglet de répétition espacée : « Recapitulare » (tab.training, « Deblochează Recapitularea », « Recapitularea Sophia »), avec majuscule quand il désigne la section."
+    },
+    "nl": {
+     "canon": "Oefenen",
+     "variantes_a_signaler": [
+      "\\btraining(?:en)?\\b",
+      "\\bpraktijk\\b",
+      "\\brepetitie\\b",
+      "\\boefeningen\\b(?=.{0,20}\\b(?:tab|tabblad)\\b)"
+     ],
+     "note": "'Oefenen' is de gangbare tabnaam (Duolingo, Babbel); 'training' is sportief, 'praktijk' de beroepspraktijk."
+    },
+    "sv": {
+     "canon": "Öva",
+     "variantes_a_signaler": [
+      "\\btränin?g\\w*",
+      "\\bträna\\b",
+      "\\bpraktik\\w*",
+      "\\bpraxis\\b"
+     ],
+     "note": "Öva is the Duolingo-style tab verb for spaced practice; träning is physical training, praktik an internship. träning may be legitimate in a sports course."
+    },
+    "hu": {
+     "canon": "Gyakorlás",
+     "variantes_a_signaler": [
+      "\\bedzés\\w*",
+      "\\bgyakorlat(ok|ot)?\\b",
+      "\\btréning\\w*",
+      "\\bpraxis\\w*"
+     ],
+     "note": "Fülnév az időzített ismétléshez; „gyakorlat” = feladat/exercise (kurzusszövegben jogos: hamis találat elfogadva), „edzés/tréning” sport."
+    },
+    "bg": {
+     "canon": "Тренировка",
+     "variantes_a_signaler": [
+      "\\bпрактика\\b",
+      "\\bупражнени\\w*\\b",
+      "\\bобучение\\b",
+      "\\bтрениране\\b"
+     ],
+     "note": "„Тренировка“ е кратко и мотивиращо за таб за интервално преговаряне; „практика“ е фалшив приятел (practice), „обучение“ е прекалено общо. „Упражнение“ може да е легитимно в текст на курс — фалшивите положителни се приемат."
+    },
+    "da": {
+     "canon": "Træning",
+     "variantes_a_signaler": [
+      "\\bpraksis\\b",
+      "\\bøvelse(r|n|rne)?\\b",
+      "\\bpractice\\b"
+     ],
+     "note": "»praksis« = pratique/coutume (légitime dans les cours : »i praksis«, faux positif accepté)."
+    },
+    "nb": {
+     "canon": "Trening",
+     "variantes_a_signaler": [
+      "\\bpraksis\\b",
+      "\\bøving\\w*",
+      "\\bøvelse\\w*",
+      "\\bpractice\\b",
+      "\\btreningsøkt\\w*"
+     ],
+     "note": "Fanenavn; «praksis» er feil betydning."
+    },
+    "ru": {
+     "canon": "тренировка",
+     "variantes_a_signaler": [
+      "\\bпрактик(?:а|у|и|е|ой)\\b",
+      "\\bупражнени\\w*",
+      "\\bтренинг\\w*",
+      "\\bтренаж[её]р\\w*"
+     ],
+     "note": "Вкладка интервального повторения — «Тренировка». «Практика» — пивот practice (ложные срабатывания в курсах допускаем), «тренинг» — корпоративный смысл."
+    },
+    "hr": {
+     "canon": "Vježbanje",
+     "variantes_a_signaler": [
+      "\\btrening\\w*",
+      "\\bpraks[aeiu]\\b",
+      "\\buvježbavanj\\w*",
+      "\\bvježb[aeu]\\b"
+     ],
+     "note": "Kartica „Vježbanje”, gumb „Vježbaj”; „trening” je sportski, „praksa” je kriv smisao pivota practice, jednina „vježba” pluta."
+    },
+    "sl": {
+     "canon": "Vadba",
+     "variantes_a_signaler": [
+      "\\btrening\\w*",
+      "\\burjenj\\w*",
+      "(?<!v )\\bpraks[aeio]\\b",
+      "\\bvadenj\\w*"
+     ],
+     "note": "Vadba je zavihek za razmaknjeno ponavljanje (oblika iz učnih aplikacij); trening je športen, praksa je navada."
+    },
+    "sr": {
+     "canon": "Vežbanje",
+     "variantes_a_signaler": [
+      "\\btrening\\w*",
+      "\\bpraks[aeiu]\\b",
+      "\\buvežbavanj\\w*",
+      "\\bpractice\\b"
+     ],
+     "note": "ime kartice; „trening“ je sportski, „praksa“ = običaj."
+    },
     "ar": {
      "canon": "التدريب",
      "variantes_a_signaler": [
@@ -999,6 +2448,137 @@
      ],
      "note": "« revisar » é o verbo escolar brasileiro (« Reviso 10 minutos por dia », « Hora de revisar ») e combina com o nome da aba « Revisão »; « rever », « repassar » e « recapitular » são sinônimos a unificar."
     },
+    "pt-PT": {
+     "canon": "rever",
+     "variantes_a_signaler": [
+      "\\brevisar\\b|\\brevis(?:o|as|a|amos|am|ei|ou|ando)\\b",
+      "\\brepassar\\s+(?:o|os|a|as|teus?|tuas?|meus?|minhas?)\\s+(?:cursos?|li[cç][oõ]es|mat[eé]ria|conte[uú]do|perguntas)\\b",
+      "\\brecapitular\\b|\\brecapitula[cç][aã]o\\b",
+      "\\b(?:treinar|praticar|estudar\\s+de\\s+novo)\\s+(?:o|os|a|as|teus?|tuas?)\\s+(?:cursos?|perguntas|conhecimentos|li[cç][oõ]es)\\b"
+     ],
+     "note": "« rever » é o verbo escolar português (Revejo 10 minutos por dia; Hora de rever); « revisar » é brasileiro ou significa inspecionar; « repassar » e « recapitular » são sinónimos a unificar. O substantivo « revisão » é legítimo."
+    },
+    "it": {
+     "canon": "ripassare (substantif : ripasso)",
+     "variantes_a_signaler": [
+      "\\b(?:rivedi|rivedere|rivedo|riveder[eò])\\s+(?:i\\s+(?:tuoi\\s+)?cors[oi]|le\\s+(?:tue\\s+)?domande|i\\s+quiz|le\\s+lezioni)\\b",
+      "\\brevision(?:e|i|a|are|ato|ando)\\b(?=[^.!?\\n]{0,50}\\b(?:cors[oi]|quiz|domand\\w*|lezion\\w*|imparat\\w*|memoria)\\b)",
+      "\\b(?:ripetere|ripeti|ripeto)\\s+(?:i\\s+(?:tuoi\\s+)?cors[oi]|le\\s+lezioni|le\\s+domande)\\b|\\bripetizion[ei]\\s+(?:dei\\s+cors[oi]|delle\\s+lezioni)\\b",
+      "\\b(?:riesamin\\w+|riguard\\w+|passa(?:re)?\\s+in\\s+rassegna|review)\\b(?=[^.!?\\n]{0,40}\\b(?:cors[oi]|quiz|domand\\w*|lezion\\w*)\\b)"
+     ],
+     "note": "« ripassare » est le verbe scolaire italien et déjà celui de l'app (« domande da ripassare », « Ora di ripassare »). « ripetizione spaziata » (la méthode) est correct et n'est pas signalé."
+    },
+    "ro": {
+     "canon": "a recapitula (Recapitulează)",
+     "variantes_a_signaler": [
+      "\\brevizui\\w*\\b",
+      "\\btrec\\w*\\s+în\\s+revist[ăa]\\b|\\brecap\\b",
+      "\\b(?:revede|revezi|rev[ăa]d|rev[ăa]zut|rev[ăa]zând)\\w*\\s+(?:cursurile|lec[țţ]iile|materia|întreb[ăa]rile|cuno[șş]tin[țţ]ele)\\b",
+      "\\brepet\\w*\\s+(?:cursurile|lec[țţ]iile|materia)\\b"
+     ],
+     "note": "« a recapitula » est le verbe scolaire (« E timpul să recapitulezi », « %d întrebări de recapitulat ») et s'accorde avec l'onglet ; « a revizui » et « a revedea » sont à unifier."
+    },
+    "nl": {
+     "canon": "Herhalen",
+     "variantes_a_signaler": [
+      "\\bherzien\\b",
+      "\\brevise(?:ren|er)\\b",
+      "\\breview(?:en|s)?\\b",
+      "\\bnakijken\\b"
+     ],
+     "note": "Schools Nederlands 'herhalen' (de stof herhalen); 'herzien' is een tekst bewerken, 'reviseren' een machine."
+    },
+    "sv": {
+     "canon": "Repetera",
+     "variantes_a_signaler": [
+      "\\brevider\\w*",
+      "\\brevision\\w*",
+      "\\bgranska\\s+(?:dina|din|kurs)\\w*",
+      "\\b(?:se|ser)\\s+över\\s+(?:dina|din|kurs)\\w*"
+     ],
+     "note": "repetera is the school word for going over material again; revidera means to amend and revision an audit."
+    },
+    "hu": {
+     "canon": "Ismétlés (ige: ismételd át)",
+     "variantes_a_signaler": [
+      "\\bátnéz\\w*",
+      "\\bfelülvizsg\\w*",
+      "\\brevideál\\w*|\\brevízi\\w*",
+      "\\bátdolgoz\\w*|\\btanulj\\s+újra\\b"
+     ],
+     "note": "„átnéz/felülvizsgál” = review (ellenőriz), „átdolgoz” = revise (szöveget); az iskolai értelem ismétlés."
+    },
+    "bg": {
+     "canon": "преговор (гл. преговори)",
+     "variantes_a_signaler": [
+      "\\bревизи\\w*\\b",
+      "\\bпреразглед\\w*\\b",
+      "\\bповтори\\s+(?:курса|урока|курс)\\b",
+      "\\bпрегледай\\s+(?:отново|пак)\\b"
+     ],
+     "note": "Училищното „réviser“ е „преговарям/преговор“; „ревизия“ = инспекция, „преразглеждане“ = review на документ."
+    },
+    "da": {
+     "canon": "Repetér (repetition)",
+     "variantes_a_signaler": [
+      "\\brevider\\w*",
+      "\\brevision\\w*",
+      "\\bgenopfrisk\\w*",
+      "\\breview\\w*"
+     ],
+     "note": "»repetere« est le mot des élèves danois ; »genopfrisk« acceptable mais à harmoniser."
+    },
+    "nb": {
+     "canon": "repetere",
+     "variantes_a_signaler": [
+      "\\brevider\\w*",
+      "\\brevisjon\\w*",
+      "\\bgjennomgå\\w*",
+      "\\bgjenoppfrisk\\w*",
+      "\\bfriske\\s+opp\\b"
+     ],
+     "note": "Skolebetydning; «revidere» er regnskap/tekst."
+    },
+    "ru": {
+     "canon": "повторять",
+     "variantes_a_signaler": [
+      "пересм[ао]тр\\w*",
+      "\\bревиз\\w*",
+      "\\bперечит\\w*",
+      "\\bосвеж\\w*\\s+(?:в\\s+)?памят\\w*"
+     ],
+     "note": "«Повтори курс», «повторение». «Пересмотреть/ревизия» — пивот review/revise; «перечитать», «освежить в памяти» — перифразы, унифицируем."
+    },
+    "hr": {
+     "canon": "ponoviti",
+     "variantes_a_signaler": [
+      "\\brevidir\\w*",
+      "\\brevizij\\w*",
+      "\\brecenzir\\w*",
+      "\\bobnov\\w*\\s+\\**(?:gradiv|tečaj|znanj)\\w*"
+     ],
+     "note": "Gumb „Ponovi”, imenica „ponavljanje”; „revidirati/revizija” su uredski, „obnoviti znanje” je prihvatljivo ali pluta."
+    },
+    "sl": {
+     "canon": "ponoviti (gumb: Ponovi; samostalnik: ponavljanje)",
+     "variantes_a_signaler": [
+      "\\brevidir\\w*",
+      "\\brevizij\\w*",
+      "\\bobnov[ie]\\w*\\s+(?:znanj|tečaj|snov)\\w*",
+      "\\bponovno\\s+pregle\\w*"
+     ],
+     "note": "ponoviti/ponavljanje je šolski izraz; revidirati je računovodski; obnoviti znanje je dopustno, a se poenoti."
+    },
+    "sr": {
+     "canon": "ponovi (ponavljanje)",
+     "variantes_a_signaler": [
+      "\\brevidir\\w*|\\brevizij\\w*",
+      "\\bpregledaj\\w*\\s+(?:ponovo\\s+)?(?:kurs|lekcij|gradiv)\\w*",
+      "\\bobnov\\w*\\s+(?:kurs|lekcij|gradiv|znanj)\\w*",
+      "\\bponovn\\w+\\s+pregled\\w*"
+     ],
+     "note": "školski smisao: „ponovi gradivo“; „revizija“ = audit."
+    },
     "ar": {
      "canon": "راجع (المراجعة)",
      "variantes_a_signaler": [
@@ -1084,6 +2664,135 @@
      ],
      "note": "« objetivo » é a palavra do onboarding (« Seu objetivo com a Sophia? », « Analisando seu objetivo »). « meta diária » (objectif quotidien: « Aumentar meta », « Meta diária ») é outro conceito e fica fora; « objectivo » é grafia de Portugal."
     },
+    "pt-PT": {
+     "canon": "objetivo",
+     "variantes_a_signaler": [
+      "\\ba\\s+tua\\s+meta\\b(?!\\s+di[aá]ria)|\\bas\\s+tuas\\s+metas\\b|\\bmetas\\b(?!\\s+di[aá]rias)",
+      "\\bprop[oó]sitos?\\b|\\bfinalidades?\\b|\\balvos?\\b",
+      "\\bgoals?\\b",
+      "\\bobjectivos?\\b"
+     ],
+     "note": "« objetivo » (grafia AO90) é a palavra do onboarding (« O teu objetivo com a Sophia? »); « objectivo » é a grafia anterior ao Acordo. « meta diária » (objectif quotidien) é outro conceito e fica fora."
+    },
+    "it": {
+     "canon": "obiettivo",
+     "variantes_a_signaler": [
+      "\\b(?:scopo|meta|traguardo|finalit[àa]|target)\\s+(?:giornalier[oa]|quotidian[oa]|del\\s+giorno)\\b|\\b(?:scegli|seleziona|modifica|imposta)\\s+(?:il\\s+tuo\\s+|un\\s+|i\\s+tuoi\\s+|la\\s+tua\\s+)?(?:scopo|meta|traguardo|target)\\b|\\b(?:il\\s+tuo|i\\s+tuoi)\\s+(?:scopo|scopi|traguard[oi]|target)\\s+con\\s+Sophia\\b",
+      "\\bobbiettiv[oi]\\b",
+      "\\bgoal\\b|\\bobjective\\b",
+      "\\bmissione\\b(?=[^.!?\\n]{0,30}\\b(?:giornaliera|quotidiana|scegli|seleziona)\\b)"
+     ],
+     "note": "« obiettivo » est déjà dans l'app (« Il tuo obiettivo », « Obiettivo giornaliero ») ; « obbiettivo » est la graphie fautive courante ; « meta / scopo / traguardo » sont des synonymes de traducteur."
+    },
+    "ro": {
+     "canon": "obiectiv",
+     "variantes_a_signaler": [
+      "\\bscop(?:ul|uri|urile)?\\s+(?:t[ăa]u|tale|zilnic)\\b",
+      "\\b[țţ]el\\w*\\s+(?:t[ăa]u|tale)\\b|\\b[țţ]int[ăa]\\s+(?:ta|zilnic)\\w*\\b",
+      "\\bgoals?\\b"
+     ],
+     "note": "« obiectiv » est le mot de l'onboarding (« Obiectivul tău cu Sophia? », « Care sunt obiectivele tale? ») ; « Scopul tău », « Scopul zilnic » (profil, programme) sont à unifier."
+    },
+    "nl": {
+     "canon": "Doel",
+     "variantes_a_signaler": [
+      "\\bobjectief\\b",
+      "\\bdoelstelling(?:en)?\\b",
+      "\\bdoelwit\\b",
+      "\\btarget\\b"
+     ],
+     "note": "'doel' is kort en warm; 'objectief' is in het Nederlands vooral een adjectief of een cameralens."
+    },
+    "sv": {
+     "canon": "Mål",
+     "variantes_a_signaler": [
+      "\\bobjektiv(?:et|en)?\\b",
+      "\\bsyfte\\w*(?=[^.\\n]{0,30}(?:välj|ditt|onboard))",
+      "\\bändamål\\w*",
+      "\\bgoal\\w*"
+     ],
+     "note": "objektiv is a camera lens; mål is the onboarding goal."
+    },
+    "hu": {
+     "canon": "Cél",
+     "variantes_a_signaler": [
+      "\\bcélkitűzés\\w*",
+      "\\bobjektív\\w*",
+      "\\bcélpont\\w*",
+      "\\btörekvés\\w*"
+     ],
+     "note": "Rövid, meleg forma az onboardinghoz; „objektív” = lencse/tárgyilagos, „célpont” = target, „célkitűzés” hivatalos."
+    },
+    "bg": {
+     "canon": "цел",
+     "variantes_a_signaler": [
+      "\\bобектив\\w*\\b",
+      "\\bмисия\\b[^.]{0,20}\\b(?:избери|твоята)",
+      "\\bтвоята\\s+задача\\b",
+      "\\bстремеж\\w*\\b"
+     ],
+     "note": "„Цел“ е еднословно и ясно; „обектив“ е лещата на камерата (фалшив приятел), „мисия/задача“ са други регистри."
+    },
+    "da": {
+     "canon": "Mål",
+     "variantes_a_signaler": [
+      "\\bobjektiv\\w*",
+      "\\bformål\\w*",
+      "\\bmålsætning\\w*",
+      "\\btarget\\w*"
+     ],
+     "note": "»objektiv« = objectif photo / adjectif ; »formål« = finalité."
+    },
+    "nb": {
+     "canon": "mål",
+     "variantes_a_signaler": [
+      "\\bobjektiv\\w*",
+      "\\bformål\\w*",
+      "\\bmålsetting\\w*",
+      "\\bhensikt\\w*",
+      "\\bgoal\\w*"
+     ],
+     "note": "«objektiv» er kameralinse."
+    },
+    "ru": {
+     "canon": "цель",
+     "variantes_a_signaler": [
+      "\\bзадач\\w*",
+      "\\bобъектив\\w*",
+      "\\bнамерени\\w*",
+      "\\bтаргет\\w*"
+     ],
+     "note": "Выбор цели в онбординге — «цель». «Объектив» — ложный друг (линза); «задача», «намерение» — синонимы переводчика (в курсах «задача» легитимна — проверять UI)."
+    },
+    "hr": {
+     "canon": "cilj",
+     "variantes_a_signaler": [
+      "\\bobjektiv\\w*",
+      "\\bsvrh[aeu]\\b",
+      "\\bnamjer[aeu]\\b"
+     ],
+     "note": "„Objektiv” je leća fotoaparata; „svrha/namjera” nisu cilj koji korisnik bira."
+    },
+    "sl": {
+     "canon": "cilj",
+     "variantes_a_signaler": [
+      "\\bobjektiv(?:a|u|om|i|e|ov)?\\b",
+      "\\btarč\\w*",
+      "\\b(?:izberi|tvoj|moj)\\s+namen\\b",
+      "\\bsmoter\\w*"
+     ],
+     "note": "objektiv = leča fotoaparata; tarča = cible; namen = purpose."
+    },
+    "sr": {
+     "canon": "cilj",
+     "variantes_a_signaler": [
+      "\\bobjektiv\\w*",
+      "\\bsvrh[aeu]\\b(?=[^.\\n]{0,20}\\b(?:izaber|odaber|tvoj)\\w*)",
+      "\\bnamer[aeu]\\b(?=[^.\\n]{0,20}\\b(?:izaber|odaber|tvoj)\\w*)",
+      "\\bmet[aeu]\\b(?=[^.\\n]{0,20}\\b(?:izaber|odaber|tvoj|dnevn)\\w*)"
+     ],
+     "note": "„objektiv“ = sočivo; „cilj“ je prirodno za onboarding."
+    },
     "ar": {
      "canon": "الهدف",
      "variantes_a_signaler": [
@@ -1167,6 +2876,135 @@
       "\\bsubjects?\\b"
      ],
      "note": "« matéria » (história, ciências…) é o termo da interface (« Suas 3 matérias », « PROGRESSO POR MATÉRIA »); « tema » fica reservado aos interesses do onboarding (« Quais temas te interessam? »). « disciplina » na prosa (disciplina militar) é falso positivo aceito."
+    },
+    "pt-PT": {
+     "canon": "matéria",
+     "variantes_a_signaler": [
+      "\\bdisciplinas?\\b[^.!?\\n]{0,40}\\b(?:progresso|bloquead\\w*|desbloquead\\w*|gratuit\\w*|XP|3\\b)|\\b(?:progresso|as\\s+tuas\\s+3|3)\\s+disciplinas\\b",
+      "\\b(?:progresso|progress[aã]o)\\s+por\\s+(?:tema|assunto|[aá]rea|categoria|disciplina)\\b|\\btodos\\s+os\\s+(?:temas|assuntos)\\b|\\b3\\s+(?:temas|assuntos|[aá]reas)\\b",
+      "\\b(?:temas|assuntos|[aá]reas)\\s+(?:bloquead|gratuit|desbloquead)\\w*\\b|\\bas\\s+tuas\\s+3\\s+(?:temas|assuntos|[aá]reas)\\b",
+      "\\bsubjects?\\b"
+     ],
+     "note": "« matéria » (história, ciências…) é o termo da interface (« As tuas 3 matérias », « PROGRESSO POR MATÉRIA ») e evita a ambiguidade de « disciplina » (militar); « tema » fica reservado aos interesses do onboarding. « disciplina » só se marca perto de progresso/bloqueado/3."
+    },
+    "it": {
+     "canon": "materia (histoire, scienze… ; distinct de « argomento », le sujet d'un cours)",
+     "variantes_a_signaler": [
+      "\\bargoment[oi]\\b(?=[^.!?\\n]{0,40}\\b(?:progress\\w*|gratuit\\w*|sblocc\\w*|Premium|tutt[ie]|le\\s+tue\\s+3|tre|seleziona\\s+almeno)\\b)",
+      "\\bsoggett[oi]\\b(?=[^.!?\\n]{0,40}\\b(?:storia|scienz\\w*|cors[oi]|progress\\w*|sblocc\\w*|tutt[ie]|gratuit\\w*)\\b)",
+      "\\b(?:tem[ai]|disciplin[ae]|categori[ae]|settor[ei])\\b(?=[^.!?\\n]{0,40}\\b(?:sblocc\\w*|Premium|gratuit\\w*|le\\s+tue\\s+3|tre\\s+materie)\\b)",
+      "\\bsubjects?\\b"
+     ],
+     "note": "L'app mélange « materie » (paywall : « Tutte le materie », « 3 materie gratuite ») et « argomenti » (profile : « PROGRESSI PER ARGOMENTI », « Seleziona almeno un argomento ») pour la même notion : unifier sur « materia ». « soggetto » est le calque de « subject »."
+    },
+    "ro": {
+     "canon": "materie",
+     "variantes_a_signaler": [
+      "\\bsubiecte(?:le|lor)?\\b",
+      "\\b(?:un|alt|fiecare|niciun|acest)\\s+subiect\\b",
+      "\\bdisciplin[ăe]\\w*\\b",
+      "\\b(?:toate|\\d+|cele\\s+\\d+)\\s+(?:domeniile|temele|categoriile)\\b"
+     ],
+     "note": "L'app dit « MATERIILE TALE », « Cele 3 materii tale gratuite » mais aussi « Toate subiectele », « 3 subiecte de deblocat », « Ce subiecte te interesează » : unifier en « materie ». « zeci de subiecte » (store) et « subiectul » = sujet d'une œuvre donneront des faux positifs acceptés."
+    },
+    "nl": {
+     "canon": "Vak",
+     "variantes_a_signaler": [
+      "\\bmaterie\\b",
+      "\\bvakgebied\\b",
+      "\\bdiscipline\\b",
+      "\\bonderwerp(?:en)?\\b(?=.{0,30}\\b(?:geschiedenis|wetenschap|kies\\s+je|filter)\\b)"
+     ],
+     "note": "'vak' (geschiedenis, wetenschap) onderscheidt zich van 'onderwerp' (sujet); 'materie' = stof/substantie."
+    },
+    "sv": {
+     "canon": "Ämne",
+     "variantes_a_signaler": [
+      "\\bmaterial(?:et|en)?\\b(?=[^.\\n]{0,30}(?:historia|vetenskap|konst|välj|alla))",
+      "\\bmateria\\b",
+      "\\bsubjekt\\w*",
+      "\\bfält(?:et|en)?\\b(?=[^.\\n]{0,30}(?:historia|vetenskap|konst|välj))"
+     ],
+     "note": "ämne is the school subject; material/materia are the physical senses of matière, subjekt a grammatical subject."
+    },
+    "hu": {
+     "canon": "tantárgy",
+     "variantes_a_signaler": [
+      "(válassz|válaszd|kedvenc|összes)\\s+(egy\\s+)?anyag\\w*",
+      "\\bszakterület\\w*",
+      "\\bmatéria\\w*",
+      "\\btárgy(ak|at|ad|ai|aid)?\\b"
+     ],
+     "note": "„matière” = tantárgy (történelem, tudományok), megkülönböztetve a „téma” (sujet) szótól; „anyag” = matter/anyag (tudományos kurzusban jogos, ezért UI-kontextushoz kötve), a puszta „tárgy” tárgy/object (hamis találat művészeti kurzusban elfogadva)."
+    },
+    "bg": {
+     "canon": "тема",
+     "variantes_a_signaler": [
+      "\\bпредмет\\w*\\b",
+      "\\bдисциплин\\w*\\b",
+      "\\bматери(?:я|и|ята|ите)\\b[^.]{0,20}\\b(?:избери|твоите|любими|3\\b)",
+      "\\bучебн\\w+\\s+предмет\\w*\\b"
+     ],
+     "note": "Одитът предлага унифициране на „теми“ (3 теми, Всички теми, ТВОИТЕ ТЕМИ); „предмет“ е училищен, „материя“ е физика."
+    },
+    "da": {
+     "canon": "Fag",
+     "variantes_a_signaler": [
+      "\\bmateriale\\w*",
+      "\\bmaterie[rn]?\\b",
+      "\\bemne(r|t|rne)?\\s*:\\s*(historie|naturvidenskab|videnskab|kunst|litteratur|filosofi|økonomi|geografi)"
+     ],
+     "note": "»fag« = matière scolaire ; »emne« = sujet (distinct) ; »materiale« = matériau."
+    },
+    "nb": {
+     "canon": "fag",
+     "variantes_a_signaler": [
+      "\\bmaterie\\w*",
+      "\\bmateriale\\w*",
+      "\\bemne(?:t|r|ne)?\\b",
+      "\\bkategori\\w*",
+      "\\bsubject\\w*"
+     ],
+     "note": "«fag» (historie, naturfag) skilles fra «emne/tema» (sujet). «emne» er legitimt for sujet – sjekk konteksten."
+    },
+    "ru": {
+     "canon": "предмет",
+     "variantes_a_signaler": [
+      "\\bматери(?:я|и|ю|ей)\\b",
+      "\\bдисциплин\\w*",
+      "\\bтематик\\w*",
+      "\\bобласт\\w*\\s+знани\\w*"
+     ],
+     "note": "Школьный «предмет» (история, науки), в отличие от «темы» (sujet). «Материя» — ложный друг (физика — легитимна в курсах, проверять UI)."
+    },
+    "hr": {
+     "canon": "predmet",
+     "variantes_a_signaler": [
+      "\\bmaterij[aeiu]\\b",
+      "\\bmaterijal\\w*",
+      "\\bsubjekt\\w*",
+      "\\bpodručj\\w*\\s*[:：]"
+     ],
+     "note": "Školski „predmet” (povijest, znanost); „materija” je tvar, „tema” ostaje za sujet i ne označava se."
+    },
+    "sl": {
+     "canon": "predmet",
+     "variantes_a_signaler": [
+      "\\bmaterij\\w*",
+      "\\bsubjekt\\w*",
+      "\\bkategorij\\w*"
+     ],
+     "note": "predmet (zgodovina, znanost) kot v šoli; tema ostane za sujet; materija = snov v fiziki; subjekt je lažni prijatelj (audit: »pomembnejši od subjekta«)."
+    },
+    "sr": {
+     "canon": "oblast",
+     "variantes_a_signaler": [
+      "\\bmaterij\\w*",
+      "\\bsubjekt\\w*",
+      "\\bpredmet\\w*(?=[^.\\n]{0,25}\\b(?:istorij|nauk|umetnost|izaber|odaber|filtr)\\w*)",
+      "\\bkategorij\\w*(?=[^.\\n]{0,25}\\b(?:istorij|nauk|umetnost)\\w*)"
+     ],
+     "note": "„oblast“ (istorija, nauka…) se razlikuje od „tema“ (sujet); „materija“ = matière physique; „predmet“ zvuči školski i znači i objekat."
     },
     "ar": {
      "canon": "مادة",
@@ -1255,6 +3093,135 @@
      ],
      "note": "« amigo » é a palavra da função (« Adicionar amigo », « Ranking de amigos »); « colega », « contato » e « seguidor » só se marcam perto de ranking/XP/adicionar."
     },
+    "pt-PT": {
+     "canon": "amigo (amigos; « Classificação de amigos »)",
+     "variantes_a_signaler": [
+      "\\bcolegas?\\b[^.!?\\n]{0,40}\\b(?:ranking|classifica[cç][aã]o|XP|adicionar)\\b|\\b(?:adicionar|remover)\\s+(?:um\\s+)?(?:colega|contacto|contato|parceiro|seguidor)\\b",
+      "\\bconta[c]?tos?\\b[^.!?\\n]{0,40}\\b(?:ranking|XP|adicionar)\\b",
+      "\\bfriends?\\b|\\bamigx\\b|\\bamig@s\\b",
+      "\\bseguidor(?:es)?\\b[^.!?\\n]{0,40}\\b(?:ranking|XP)\\b|\\bamizades?\\b[^.!?\\n]{0,30}\\b(?:adicionar|remover|ranking)\\b"
+     ],
+     "note": "« amigo » é a palavra da função (« Adicionar amigo », « Classificação de amigos »); « colega », « contacto » e « seguidor » só se marcam perto de ranking/XP/adicionar. « ranking » como anglicismo é tolerado mas « classificação » é preferível."
+    },
+    "it": {
+     "canon": "amico (pl. amici)",
+     "variantes_a_signaler": [
+      "\\b(?:compagn[oi]|contatt[oi]|conoscent[ei]|follower|seguaci|buddy|pal)\\b(?=[^.!?\\n]{0,40}\\b(?:classifica|aggiung\\w*|@|richiesta|invit\\w*|confront\\w*|XP)\\b)",
+      "\\bfriends?\\b(?!-)",
+      "\\bamicizi[ae]\\s+(?:in\\s+attesa|richieste)\\b"
+     ],
+     "note": "« amico / amici » est déjà la forme de l'app (friends.*) ; « contatti / follower » sont les variantes réseau social."
+    },
+    "ro": {
+     "canon": "prieten",
+     "variantes_a_signaler": [
+      "\\bamic\\w*\\b",
+      "\\bfriends?\\b|\\bbuddy\\b",
+      "\\btovar[ăa][șş]\\w*\\b|\\bcamarad\\w*\\b",
+      "\\bcoleg\\w*\\s+(?:de\\s+)?(?:clasament|Sophia|de\\s+app)\\b"
+     ],
+     "note": "« prieten » est déjà partout (« CLASAMENTUL PRIETENILOR », « Adaugă un prieten ») ; « amic » est plus familier et à proscrire dans l'interface."
+    },
+    "nl": {
+     "canon": "Vriend (vrienden)",
+     "variantes_a_signaler": [
+      "\\bkameraad\\w*\\b",
+      "\\bvriendje(?:s)?\\b",
+      "\\bbuddy\\b",
+      "\\bcontact(?:en)?\\b(?=.{0,30}\\b(?:klassement|ranglijst|toevoegen|uitnodigen)\\b)"
+     ],
+     "note": "'vrienden' is genderneutraal in meervoud; 'vriendje' is een partner, 'kameraad' is politiek gekleurd."
+    },
+    "sv": {
+     "canon": "Vän",
+     "variantes_a_signaler": [
+      "\\bkompis\\w*",
+      "\\bkamrat\\w*",
+      "\\bpolare\\b",
+      "\\bföljare\\b(?=[^.\\n]{0,30}(?:topplista|ranking|rankning|lägg\\s+till))"
+     ],
+     "note": "vän is neutral and fits the warm du-voice; kompis/polare are too colloquial for a feature name, följare is a follower."
+    },
+    "hu": {
+     "canon": "barát",
+     "variantes_a_signaler": [
+      "\\bismerős\\w*",
+      "\\bhaver\\w*",
+      "\\bkövető\\w*",
+      "\\bbarátnő\\w*|\\bpajtás\\w*"
+     ],
+     "note": "„ismerős” a Facebook-féle friend, „követő” follower, „barátnő” nemhez kötött; a funkció neve Barátok."
+    },
+    "bg": {
+     "canon": "приятел",
+     "variantes_a_signaler": [
+      "\\bдругар\\w*\\b",
+      "\\bприятелч\\w*\\b",
+      "\\bпознат\\w*\\b[^.]{0,20}\\b(?:класаци|покани)",
+      "\\bконтакт\\w*\\b[^.]{0,20}\\bкласаци"
+     ],
+     "note": "„Приятел“ е неутрално и съответства на социалните приложения; „другар“ е остаряло/политическо, „познат/контакт“ са по-студени."
+    },
+    "da": {
+     "canon": "Ven (pl. venner)",
+     "variantes_a_signaler": [
+      "\\bkammerat\\w*",
+      "\\bkontakter(ne)?\\b",
+      "\\bfølger(e|ne)\\b",
+      "\\b(buddy|buddies|friends?)\\b"
+     ],
+     "note": "»følger« = abonné/follower, »kammerat« = camarade."
+    },
+    "nb": {
+     "canon": "venn",
+     "variantes_a_signaler": [
+      "\\bkompis\\w*",
+      "\\bkamerat\\w*",
+      "\\bfriend\\w*",
+      "\\bbekjent\\w*"
+     ],
+     "note": "Nøytralt og varmt; «kamerat» er datert."
+    },
+    "ru": {
+     "canon": "друг",
+     "variantes_a_signaler": [
+      "\\bприятел\\w*",
+      "\\bтоварищ\\w*",
+      "\\bфренд\\w*",
+      "\\bподписчик\\w*"
+     ],
+     "note": "Функция друзей и рейтинга — «друг / друзья». «Приятель», «товарищ» — стилистически чужие, «френд» — транслит, «подписчик» — follower."
+    },
+    "hr": {
+     "canon": "prijatelj",
+     "variantes_a_signaler": [
+      "\\bfrend\\w*",
+      "\\bpratitelj\\w*",
+      "\\bdrug(?:ovi|ova|ove|ovima|ar)\\w*",
+      "\\bkontakt\\w*[^.\\n]{0,20}\\b(?:rang|ljestvic|poziv)"
+     ],
+     "note": "„Prijatelji” (ž. „prijateljica”); „pratitelj” je follower, „frend” žargon, „drugovi” zastarjelo ili povijesno (moguć lažni pozitiv)."
+    },
+    "sl": {
+     "canon": "prijatelj",
+     "variantes_a_signaler": [
+      "\\bfrend\\w*",
+      "\\bkoleg\\w*",
+      "\\bsledil(?:ec|c)\\w*",
+      "\\bznanc\\w*|\\bznanec\\b"
+     ],
+     "note": "prijatelj/prijateljica; frend je sleng, sledilec je družbeno omrežje, kolega je sodelavec."
+    },
+    "sr": {
+     "canon": "prijatelj",
+     "variantes_a_signaler": [
+      "\\bdrug(?:ovi|ova|ovima|a|u|om|aric\\w*)?\\b(?=[^.\\n]{0,25}\\b(?:dodaj|pozovi|rang|list|takmič)\\w*)",
+      "\\bpratilac\\w*|\\bpratioc\\w*",
+      "\\bfrend\\w*",
+      "\\bkontakt\\w*(?=[^.\\n]{0,20}\\b(?:dodaj|pozovi|rang)\\w*)"
+     ],
+     "note": "„prijatelji“ i „rang-lista“; „pratilac“ = follower, „drug“ regionalno/šk."
+    },
     "ar": {
      "canon": "صديق",
      "variantes_a_signaler": [
@@ -1340,6 +3307,137 @@
       "\\bsubscriptions?\\b|\\bmembership\\b"
      ],
      "note": "« assinatura » é a palavra brasileira (« Gerenciar minha assinatura »); « subscrição » é de Portugal. « plano » (mensal/anual) é legítimo para a fórmula e não é marcado."
+    },
+    "pt-PT": {
+     "canon": "subscrição",
+     "variantes_a_signaler": [
+      "\\bassinaturas?\\b(?![^.!?\\n]{0,20}\\b(?:digital|eletr[oó]nica|do\\s+autor|manuscrita)\\b)|\\bassinar\\s+(?:o\\s+|a\\s+|um\\s+)?(?:plano|Premium|Sophia)\\b|\\bassinantes?\\b",
+      "\\binscri[cç](?:[aã]o|[oõ]es)\\b[^.!?\\n]{0,50}\\b(?:cancel\\w*|mensal|anual|renov\\w*|pag\\w*)\\b|\\b(?:cancel\\w*|renov\\w*)\\s+(?:a\\s+|tua\\s+|minha\\s+)?inscri[cç][aã]o\\b",
+      "\\bades[aã]o\\b[^.!?\\n]{0,40}\\b(?:mensal|anual|cancel\\w*)\\b|\\bmensalidade\\b",
+      "\\bsubscriptions?\\b|\\bmembership\\b"
+     ],
+     "note": "« subscrição » é a palavra de Portugal (Gerir a minha subscrição; App Store pt-PT); « assinatura » é a forma brasileira e em Portugal significa sobretudo a assinatura manuscrita. « plano » (mensal/anual) é legítimo para a fórmula e não se marca."
+    },
+    "it": {
+     "canon": "abbonamento",
+     "variantes_a_signaler": [
+      "\\bsottoscrizion[ei]\\b(?=[^.!?\\n]{0,40}\\b(?:mensile|annuale|Premium|annull\\w*|rinnov\\w*|prezzo|fatturat\\w*|Sophia|abbonati|gestisci)\\b)|\\b(?:la\\s+tua|il\\s+tuo|gestisci\\s+la|annulla\\s+la)\\s+sottoscrizione\\b",
+      "\\biscrizion[ei]\\b(?=[^.!?\\n]{0,40}\\b(?:mensile|annuale|Premium|annull\\w*|rinnov\\w*|pagament\\w*|prezzo|fatturat\\w*)\\b)",
+      "\\b(?:subscription|abonnement|suscripci[oó]n)\\b",
+      "\\b(?:piano|formula)\\s+(?:di\\s+)?(?:sottoscrizione|iscrizione|membership)\\b|\\bmembership\\b"
+     ],
+     "note": "« abbonamento » est déjà partout (« Gestisci il mio abbonamento ») ; « sottoscrizione » est le calque de « subscription », « iscrizione » = inscription (légitime pour la création de compte)."
+    },
+    "ro": {
+     "canon": "abonament",
+     "variantes_a_signaler": [
+      "\\bsubscrip[țţ]i\\w*\\b|\\bsubscri\\w*\\b",
+      "\\bsubscription\\b|\\bmembership\\b",
+      "\\bcalitate\\w*\\s+de\\s+membru\\b|\\bplan\\s+de\\s+membru\\b",
+      "\\bînscriere\\w*\\s+(?:lunar|anual)\\w*\\b"
+     ],
+     "note": "« abonament » est en place (« Gestionează-mi abonamentul », « Abonamentul tău începe ») ; « subscripție » est le calque anglais."
+    },
+    "nl": {
+     "canon": "abonnement",
+     "variantes_a_signaler": [
+      "\\bsubscriptie\\b",
+      "\\bsubscription\\b",
+      "\\blidmaatschap\\b",
+      "\\binschrijving\\b(?=.{0,30}\\b(?:maand|jaar|premium|betaal)\\w*)"
+     ],
+     "note": "'abonnement' is de App Store-term; 'lidmaatschap' hoort bij een vereniging."
+    },
+    "sv": {
+     "canon": "Prenumeration",
+     "variantes_a_signaler": [
+      "\\babonnemang\\w*",
+      "\\bmedlemskap\\w*",
+      "\\bsubscription\\w*",
+      "\\babonnera\\w*"
+     ],
+     "note": "prenumeration is Apple's and Google's Swedish store wording; abonnemang is telecom usage, medlemskap a membership."
+    },
+    "hu": {
+     "canon": "előfizetés",
+     "variantes_a_signaler": [
+      "\\bfeliratkozás\\w*",
+      "\\btagság\\w*",
+      "\\bbérlet\\w*",
+      "\\bsubscription\\w*"
+     ],
+     "note": "subscription → „feliratkozás” (hírlevél) gépi hiba; „tagság” membership, „bérlet” pass."
+    },
+    "bg": {
+     "canon": "абонамент",
+     "variantes_a_signaler": [
+      "\\bподписк\\w*\\b",
+      "\\bсубскрипци\\w*\\b",
+      "\\bабониране\\b",
+      "\\bчленств\\w*\\b"
+     ],
+     "note": "„Абонамент“ е стандартът в App Store/Google Play на български; „подписка“ е русизъм, „субскрипция“ англицизъм."
+    },
+    "da": {
+     "canon": "Abonnement",
+     "variantes_a_signaler": [
+      "\\bmedlemskab\\w*",
+      "\\bsubscription\\w*",
+      "\\bkontingent\\w*",
+      "\\b(månedlig|årlig)\\w*\\s+(plan|pakke|tilmelding)\\b"
+     ],
+     "note": "»medlemskab« = adhésion, »kontingent« = cotisation."
+    },
+    "nb": {
+     "canon": "abonnement",
+     "variantes_a_signaler": [
+      "\\bsubscription\\w*",
+      "\\bmedlemskap\\w*",
+      "\\bsubskripsjon\\w*",
+      "\\bavbryt\\s+abonnement\\w*",
+      "\\bavslutt\\s+abonnement\\w*"
+     ],
+     "note": "Oppsigelse heter «si opp abonnementet» (revisjonen), ikke «avbryt/avslutt»."
+    },
+    "ru": {
+     "canon": "подписка",
+     "variantes_a_signaler": [
+      "\\bабонемент\\w*",
+      "\\bчленств\\w*",
+      "\\bтарифн\\w*\\s+план\\w*",
+      "\\bсабскрипш\\w*"
+     ],
+     "note": "«Абонемент» — ложный друг (на спортзал/театр); «членство» — membership; «тарифный план» — телеком-термин."
+    },
+    "hr": {
+     "canon": "pretplata",
+     "variantes_a_signaler": [
+      "\\bsubskripcij\\w*",
+      "\\bsupskripcij\\w*",
+      "\\bčlanarin\\w*",
+      "\\bčlanstv\\w*"
+     ],
+     "note": "„Pretplata” (mjesečna/godišnja); „članarina/članstvo” su klubovi, „subskripcija” anglizam."
+    },
+    "sl": {
+     "canon": "naročnina",
+     "variantes_a_signaler": [
+      "\\babonma\\w*",
+      "\\bpretplat\\w*",
+      "\\bsubskripcij\\w*",
+      "\\bčlanarin\\w*"
+     ],
+     "note": "abonma je gledališki/koncertni (lažni prijatelj); pretplata je hrvaško; članarina je članstvo."
+    },
+    "sr": {
+     "canon": "pretplata",
+     "variantes_a_signaler": [
+      "\\bčlanarin\\w*",
+      "\\bsu[bp]skripcij\\w*",
+      "\\babonman\\w*",
+      "\\bsubscription\\w*"
+     ],
+     "note": "„pretplata“ (mesečna / godišnja); „članarina“ = cotisation."
     },
     "ar": {
      "canon": "الاشتراك",
@@ -1427,6 +3525,137 @@
      ],
      "note": "« desbloquear » é sistemático na interface (Desbloquear o curso, Nível desbloqueado); « libera a Revisão » (FAQ do paywall) é natural mas se unifica. « Ativar o período grátis » é outra ação e não é marcado."
     },
+    "pt-PT": {
+     "canon": "desbloquear",
+     "variantes_a_signaler": [
+      "\\blibera(?:r|s|m|do|da)?\\s+(?:[oa]s?\\s+|tod[oa]s?\\s+(?:[oa]s\\s+)?)?(?:Treino|Premium|acesso|cursos?|recursos|conte[uú]do|quiz(?:zes)?|n[ií]ve(?:l|is)|mat[eé]rias?)\\b",
+      "\\bdestrav\\w+|\\bdestranc\\w+|\\blibert(?:ar|a|am)\\s+(?:o\\s+|os\\s+)?(?:curso|acesso|Premium|conte[uú]do)\\b",
+      "\\babr(?:ir|e|a|em|iu)\\s+(?:[oa]s?\\s+)?(?:Treino|Premium|Sophia\\s+PRO|acesso|recursos|conte[uú]do|n[ií]ve(?:l|is))\\b",
+      "\\b(?:remover|tirar|retirar|anular)\\s+o\\s+bloqueio\\b|\\bunlock\\b"
+     ],
+     "note": "« desbloquear » é sistemático na interface (Desbloquear o curso, Nível desbloqueado); « liberar » é brasileiro, « libertar » é contrassenso. « Ativar o teste gratuito » é outra ação e não se marca."
+    },
+    "it": {
+     "canon": "sbloccare (impératif UI : « Sblocca »)",
+     "variantes_a_signaler": [
+      "\\bdisblocc\\w*\\b|\\bsbloccaggio\\b|\\bdeblocc\\w*\\b",
+      "\\b(?:apri|aprire|libera|liberare|attiva|attivare|ottieni|ottenere)\\s+(?:Premium|il\\s+ripasso|tutti\\s+i\\s+corsi|il\\s+livello|quest[oa]\\s+(?:corso|livello)|i\\s+(?:miei|tuoi)\\s+quiz)\\b",
+      "\\b(?:rimuovi|togli|annulla|elimina)\\s+il\\s+blocco\\b|\\brendi\\s+accessibile\\b",
+      "\\bunlock\\b"
+     ],
+     "note": "« Sblocca » est déjà systématique dans l'app (Sblocca Premium, Sblocca il ripasso, Sblocca il corso). « Attiva Premium » est correct mais à unifier."
+    },
+    "ro": {
+     "canon": "a debloca (Deblochează)",
+     "variantes_a_signaler": [
+      "\\bdescui\\w*\\b|\\bdesferec\\w*\\b",
+      "\\bdeschide\\s+(?:toate\\s+cursurile|accesul|premium|nivelul)\\b",
+      "\\bunlock\\w*\\b",
+      "\\bdebloca[țţ]i\\w*\\b"
+     ],
+     "note": "« Deblochează » est le verbe de l'app (« Deblochează Recapitularea », « Nivelul %d a fost deblocat ») ; « Deblocați-mi chestionarele » est au registre de politesse, à ramener au tutoiement."
+    },
+    "nl": {
+     "canon": "Ontgrendelen",
+     "variantes_a_signaler": [
+      "\\bdeblokk?eren\\b",
+      "\\bontsluiten\\b",
+      "\\bvrij(?:spelen|schakelen)\\b",
+      "\\bunlocken\\b"
+     ],
+     "note": "'ontgrendelen' is de iOS/Android-norm; 'vrijspelen' is gaming-jargon, 'deblokkeren' is het opheffen van een blokkade."
+    },
+    "sv": {
+     "canon": "Lås upp",
+     "variantes_a_signaler": [
+      "\\bavblocker\\w*",
+      "\\böppna\\s+upp\\b",
+      "\\bfrigör\\w*(?=[^.\\n]{0,30}(?:kurs|premium))",
+      "\\bhäv\\s+(?:lås|block|spärr)\\w*"
+     ],
+     "note": "lås upp is the standard in-app purchase verb; avblockera means to unblock a contact."
+    },
+    "hu": {
+     "canon": "feloldás (ige: oldd fel)",
+     "variantes_a_signaler": [
+      "\\bkinyit\\w*",
+      "\\bkiold\\w*",
+      "\\b(zár|zárolás|blokkolás|lezárás)\\s+(feloldás|megszüntetés|eltávolítás)\\w*",
+      "\\bunlock\\w*"
+     ],
+     "note": "„kinyit” ajtó/app, „kiold” mechanikus; a hozzáférhetővé tétel magyarul feloldás."
+    },
+    "bg": {
+     "canon": "отключи (отключване)",
+     "variantes_a_signaler": [
+      "\\b(?:де|раз)блокир\\w*\\b",
+      "\\bотвори\\s+(?:Premium|курса|достъпа)\\b",
+      "\\bактивирай\\s+(?:курса|курс)\\b",
+      "\\bосвободи\\s+(?:курса|достъпа)\\b"
+     ],
+     "note": "„Отключи“ е утвърденият глагол за unlock в мобилните приложения; „деблокирай/разблокирай“ са за снемане на блокировка."
+    },
+    "da": {
+     "canon": "Lås op",
+     "variantes_a_signaler": [
+      "\\boplås\\w*",
+      "\\b(afbloker|deblok)\\w*",
+      "\\bfrigør\\b|\\bfrigiv\\b",
+      "\\bophæv\\s+(låsen|blokering\\w*|spærring\\w*)"
+     ],
+     "note": "»oplåse« est un norvégisme ; »frigør« = libérer."
+    },
+    "nb": {
+     "canon": "lås opp",
+     "variantes_a_signaler": [
+      "\\bdeblokker\\w*",
+      "\\bavblokker\\w*",
+      "\\bfrigjør\\w*",
+      "\\bopphev\\s+(?:lås|sperr)\\w*",
+      "\\båpne\\s+opp\\b"
+     ],
+     "note": "Standard iOS/Android-norsk."
+    },
+    "ru": {
+     "canon": "разблокировать",
+     "variantes_a_signaler": [
+      "\\b(?:отпер|отомкн|отпир)\\w*",
+      "\\bанлок\\w*|\\bunlock\\w*",
+      "(?:снять|снима\\w*|снятие)\\s+блокировк\\w*",
+      "\\bоткр(?:ыть|ой|ывай|ыва\\w*|оет\\w*)\\s+(?:доступ|курс|premium|преми)\\w*"
+     ],
+     "note": "«Разблокировать курс», «Разблокировать Premium». «Открыть доступ» — допустимая русская фраза, но для единообразия сигналим."
+    },
+    "hr": {
+     "canon": "otključati",
+     "variantes_a_signaler": [
+      "\\bdeblokir\\w*",
+      "\\bodblokir\\w*\\s+\\**(?:tečaj|premium|lekcij|sve|sadržaj|kolekcij)",
+      "\\botvor\\w*\\s+\\**(?:premium|sve\\s+tečaj)",
+      "\\boslobod\\w*\\s+\\**(?:tečaj|premium)"
+     ],
+     "note": "Gumb „Otključaj”; „odblokirati” se čuva za TikTok blokator, „deblokirati” je kalk."
+    },
+    "sl": {
+     "canon": "odkleni (odkleniti)",
+     "variantes_a_signaler": [
+      "\\bdeblokir\\w*",
+      "\\bodblokir\\w*",
+      "\\b(?:odstrani|prekliči|razveljavi)\\s+zaklep\\w*",
+      "\\bsprosti\\w*\\s+(?:dostop|tečaj|premium)\\w*"
+     ],
+     "note": "odkleni je oblika iz mobilnih UI (odkleni funkcijo); deblokirati/odblokirati sta tehnična kalka."
+    },
+    "sr": {
+     "canon": "otključaj",
+     "variantes_a_signaler": [
+      "\\b(?:de|od)blokir\\w*(?=[^.\\n]{0,25}\\b(?:kurs|Premium|sadržaj|sve|lekcij)\\w*)",
+      "\\botvor\\w*\\s+(?:Premium|sve\\s+kurs)\\w*",
+      "\\boslobod\\w*\\s+(?:kurs|Premium)\\w*",
+      "\\bunlock\\w*"
+     ],
+     "note": "„odblokiraj“ samo za TikTok bloker."
+    },
     "ar": {
      "canon": "افتح قفل",
      "variantes_a_signaler": [
@@ -1512,6 +3741,136 @@
       "\\bglossary\\b|\\bglos[aá]rio\\b|\\bglosario\\b"
      ],
      "note": "« glossário » é transparente e já é o nome usado nas notas de versão (« cursos, quizzes e glossário »). « dicionário » na prosa (curso sobre dicionários) é falso positivo aceito."
+    },
+    "pt-PT": {
+     "canon": "glossário",
+     "variantes_a_signaler": [
+      "\\bvocabul[aá]rio\\b",
+      "\\bdicion[aá]rio\\b",
+      "\\bl[eé]xico\\b|\\bdefini[cç][oõ]es\\s+dos\\s+termos\\b",
+      "\\bglossary\\b|\\bglos[aá]rio\\b|\\bglosario\\b"
+     ],
+     "note": "« glossário » é transparente e é o nome usado nas notas de versão (« cursos, quizzes e glossário »). « dicionário » na prosa (curso sobre dicionários) é falso positivo aceite."
+    },
+    "it": {
+     "canon": "glossario",
+     "variantes_a_signaler": [
+      "\\b(?:lessico|vocabolario|dizionario|dizionarietto)\\b(?=[^.!?\\n]{0,40}\\b(?:cors[oi]|termin[ei]|definizion\\w*|parole\\s+chiave)\\b)",
+      "\\bparole\\s+chiave\\s+del\\s+corso\\b|\\bterminologia\\s+del\\s+corso\\b",
+      "\\bglossary\\b|\\bglossaire\\b"
+     ],
+     "note": "« glossario » est le mot italien courant pour les définitions d'un cours ; « lessico / vocabolario » sont les variantes de traducteur."
+    },
+    "ro": {
+     "canon": "glosar",
+     "variantes_a_signaler": [
+      "\\bvocabular\\w*\\b",
+      "\\bdic[țţ]ionar\\w*\\b|\\blexic\\w*\\b",
+      "\\bglossar\\w*\\b|\\bglos[ăa]\\b|\\bglose\\b",
+      "\\blist[ăa]\\s+de\\s+(?:termeni|defini[țţ]ii)\\b"
+     ],
+     "note": "« glosar » est le mot roumain courant et déjà celui de la fiche store (« cursuri, quizuri și glosar ») ; l'interface n'a pas encore d'étiquette dédiée (« Termenii evidențiați ascund o definiție »)."
+    },
+    "nl": {
+     "canon": "Begrippenlijst",
+     "variantes_a_signaler": [
+      "\\bglossarium\\b",
+      "\\bglossary\\b",
+      "\\bwoordenlijst\\b",
+      "\\b(?:woordenboek|lexicon)\\b"
+     ],
+     "note": "'begrippenlijst' is de schoolboekterm voor gedefinieerde begrippen; 'woordenlijst' is een spellinglijst, 'glossarium' academisch."
+    },
+    "sv": {
+     "canon": "Ordlista",
+     "variantes_a_signaler": [
+      "\\bglossar\\w*",
+      "\\bglosor\\w*",
+      "\\b(?:ordbok|lexikon)\\w*",
+      "\\bbegreppslista\\w*"
+     ],
+     "note": "ordlista is the plain word; glossarium is academic, glosor are vocabulary drills, ordbok a dictionary."
+    },
+    "hu": {
+     "canon": "szószedet",
+     "variantes_a_signaler": [
+      "\\bglosszárium\\w*",
+      "\\bfogalomtár\\w*",
+      "\\bszótár\\w*",
+      "\\bkifejezések\\s+(listája|jegyzéke|tára)\\b"
+     ],
+     "note": "„szószedet” rövid, iskolai; „glosszárium” idegen, „szótár” teljes szótár, „fogalomtár” nehézkes."
+    },
+    "bg": {
+     "canon": "речник",
+     "variantes_a_signaler": [
+      "\\bглосар\\w*\\b",
+      "\\bтерминологи\\w*\\b",
+      "\\bлексикон\\w*\\b",
+      "\\bсписък\\s+(?:с|на)\\s+термини\\b"
+     ],
+     "note": "„Речник“ е простата българска дума за glossary в учебно приложение; „глосар“ е чуждица, „терминология“ е абстрактно."
+    },
+    "da": {
+     "canon": "Ordliste",
+     "variantes_a_signaler": [
+      "\\bglossar\\w*",
+      "\\bordbog\\w*",
+      "\\bleksikon\\w*",
+      "\\b(glossary|begrebsliste|terminologi)\\w*"
+     ],
+     "note": "»ordliste« est le mot des manuels ; »ordbog« = dictionnaire."
+    },
+    "nb": {
+     "canon": "ordliste",
+     "variantes_a_signaler": [
+      "\\bglossar\\w*",
+      "\\bglosar\\w*",
+      "\\bordbok\\w*",
+      "\\bbegrepsliste\\w*",
+      "\\bleksikon\\w*"
+     ],
+     "note": "«ordliste» er det vanlige i norske apper; «glossar» er fagspråk."
+    },
+    "ru": {
+     "canon": "глоссарий",
+     "variantes_a_signaler": [
+      "\\bсловар\\w*",
+      "\\bтерминологи\\w*",
+      "\\bлексикон\\w*",
+      "\\bсловник\\w*"
+     ],
+     "note": "Определения терминов курса — «глоссарий». «Словарь» — синоним переводчика (в курсах «словарь Даля» легитимен — проверять UI)."
+    },
+    "hr": {
+     "canon": "pojmovnik",
+     "variantes_a_signaler": [
+      "\\bglosar\\w*",
+      "\\brječnik\\w*",
+      "\\bglossar\\w*",
+      "\\bleksikon\\w*"
+     ],
+     "note": "„Pojmovnik” je hrvatski naziv popisa pojmova s definicijama; „rječnik” može biti legitiman u jezičnom tečaju (lažni pozitiv prihvaćen)."
+    },
+    "sl": {
+     "canon": "slovarček",
+     "variantes_a_signaler": [
+      "\\bglosar\\w*",
+      "\\bbesednjak\\w*",
+      "\\bpojmovnik\\w*",
+      "\\bslovar(?:ja|ju|jem|ji|jev|je)?\\b"
+     ],
+     "note": "slovarček je topla, uveljavljena oblika za seznam pojmov ob tečaju; slovar je samostojen priročnik, glosar je strokoven."
+    },
+    "sr": {
+     "canon": "Rečnik",
+     "variantes_a_signaler": [
+      "\\bglosar\\w*",
+      "\\bpojmovnik\\w*",
+      "\\brečnik\\s+pojmova\\b",
+      "\\bleksikon\\w*|\\bterminolog\\w*"
+     ],
+     "note": "kratko i poznato; „pojmovnik“ je precizan ali hladniji, „glosar“ je tuđica."
     },
     "ar": {
      "canon": "المسرد",
@@ -1599,6 +3958,134 @@
      ],
      "note": "Mantém-se « XP » (+10 XP, « %d XP até o nív. %d »). « pontos de experiência » só pode aparecer uma vez como glosa na explicação, não como etiqueta."
     },
+    "pt-PT": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\bpontos\\s+de\\s+experi[eê]ncia\\b",
+      "\\bpontos\\s+XP\\b|\\bpontos\\s+de\\s+XP\\b",
+      "\\bEXP\\b",
+      "\\bxps\\b|\\bX\\.P\\."
+     ],
+     "note": "Mantém-se « XP » (+10 XP, « %d XP até ao nív. %d »). « pontos de experiência » só pode aparecer uma vez como glosa na explicação, não como etiqueta."
+    },
+    "it": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\bpunti\\s+(?:esperienza|di\\s+esperienza|XP)\\b",
+      "\\b(?:PE|EXP)\\s*\\d+\\b|\\b\\d+\\s*(?:PE|EXP)\\b",
+      "\\bpunti\\s+exp\\b|\\bexp\\s+points?\\b|\\bexperience\\s+points?\\b"
+     ],
+     "note": "« XP » est conservé tel quel et déjà dans l'app (« %d XP al liv. %d ») ; « punti XP » est redondant, « PE » (punti esperienza) est la traduction à éviter."
+    },
+    "ro": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\bpuncte\\s+de\\s+experien[țţ][ăa]\\b",
+      "\\bXP-?uri\\w*\\b",
+      "\\bexperience\\s+points?\\b|\\bEXP\\b"
+     ],
+     "note": "« XP » invariable (« +%d XP », « XP-ul tău ») ; pas de pluriel « XP-uri » ni de développement « puncte de experiență » dans l'interface."
+    },
+    "nl": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\bervaringspunten\\b",
+      "\\bEP\\b(?=\\s*\\d)",
+      "\\bexperience\\s+points\\b",
+      "\\bxp-?punten\\b"
+     ],
+     "note": "'XP' is gaming-standaard en blijft staan; 'XP-punten' is dubbelop."
+    },
+    "sv": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\berfarenhetspoäng\\w*",
+      "\\bexp\\.?\\s*\\d",
+      "\\bEP\\b(?=\\s*\\d|\\s*poäng)",
+      "\\bxp-?poäng\\w*"
+     ],
+     "note": "XP is kept as in the source; erfarenhetspoäng is the spelled-out translation, XP-poäng a tautology to normalise."
+    },
+    "hu": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\btapasztalat(i)?\\s*pont\\w*",
+      "\\bTP\\b",
+      "\\bexp\\b|\\bexperience\\s+points?\\b",
+      "\\bxp-?k\\b|\\bixpé\\w*"
+     ],
+     "note": "Változatlan rövidítés, toldalék kötőjellel (XP-t, XP-vel); „tapasztalati pont / TP” fordítás, „XP-k” többes felesleges."
+    },
+    "bg": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\bХП\\b",
+      "\\bточки\\s+(?:за|на)\\s+опит\\b",
+      "\\bекспириънс\\w*\\b",
+      "\\bXP\\s+прогрес\\b"
+     ],
+     "note": "XP се запазва на латиница (универсално в игрите); „XP прогрес“ е англицизъм от одита (quiz.xpProgress → „Напредък в XP“)."
+    },
+    "da": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\boplevelsespoint\\w*",
+      "\\berfaringspoint\\w*",
+      "\\b\\d+\\s*EP\\b",
+      "\\bexperience\\s*points?\\b"
+     ],
+     "note": "»oplevelsespoint« = points d'expérience vécue (faux sens) ; XP conservé."
+    },
+    "nb": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\berfaringspoeng\\w*",
+      "(?-i:\\bEP\\b)",
+      "\\bxp-?poeng\\b",
+      "\\bexperience\\s+points\\b"
+     ],
+     "note": "Beholdes som XP."
+    },
+    "ru": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\bхп\\b",
+      "\\bочк\\w*\\s+опыта",
+      "\\bэкспа\\w*|\\bэкспи\\b|\\bэксп\\b",
+      "\\bбалл\\w*\\s+опыта"
+     ],
+     "note": "Сохраняем латиницей: «+10 XP». «ХП» (путается с HP), «очки опыта», «экспа» — сигналить."
+    },
+    "hr": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\biskustven\\w*\\s+bod\\w*",
+      "\\bbod\\w*\\s+iskustv\\w*",
+      "(?-i:\\bIB\\b)",
+      "\\bxp-?(?:a|u|om|ova|ovi)\\b"
+     ],
+     "note": "„XP” ostaje nesklonjiv („150 XP”); „iskustveni bodovi / IB” su prijevodi koje treba vratiti na XP."
+    },
+    "sl": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\bizkustven\\w*\\s+točk\\w*",
+      "\\btočk\\w*\\s+izkuš\\w*",
+      "\\bexp\\b",
+      "\\bxp-(?:ja|ju|jem|ji|jev|je)\\b"
+     ],
+     "note": "XP ostane nesklanjan (100 XP); prevodi »izkustvene točke« in sklanjane oblike XP-ja se označijo."
+    },
+    "sr": {
+     "canon": "XP",
+     "variantes_a_signaler": [
+      "\\b(?:bod|poen)\\w*\\s+iskustv\\w*",
+      "\\biskustven\\w+\\s+(?:bod|poen)\\w*",
+      "\\bIks[- ]?pe\\b",
+      "\\bXP-?(?:a|u|om|ova|ove)\\b"
+     ],
+     "note": "ostaje „XP“, nepromenljivo („50 XP“)."
+    },
     "ar": {
      "canon": "XP",
      "variantes_a_signaler": [
@@ -1683,6 +4170,135 @@
       "\\blibrary\\b"
      ],
      "note": "Aba « Biblioteca » (tab.library, « Biblioteca completa »). « livraria » é falso amigo (loja de livros); « biblio » não se abrevia em português; « acervo » é sinônimo a unificar."
+    },
+    "pt-PT": {
+     "canon": "Biblioteca",
+     "variantes_a_signaler": [
+      "\\bbiblio\\b",
+      "\\blivraria\\b",
+      "\\bcat[aá]logo\\s+de\\s+cursos\\b|\\bacervo\\b",
+      "\\blibrary\\b"
+     ],
+     "note": "Separador « Biblioteca » (tab.library, « Biblioteca completa »). « livraria » é falso amigo (loja de livros); « biblio » não se abrevia em português; « acervo » é brasileirismo/sinónimo a unificar."
+    },
+    "it": {
+     "canon": "Biblioteca (onglet de tous les cours)",
+     "variantes_a_signaler": [
+      "\\blibreri[ae]\\b(?=[^.!?\\n]{0,40}\\b(?:complet[ae]|cors[oi]|Sophia|scheda|tab|tutti)\\b)|(?<![\\wàèéìòù ])libreria(?![\\wàèéìòù ,.;:!?)])",
+      "\\b(?:catalogo|archivio)\\s+(?:dei\\s+|di\\s+)?corsi\\b|\\bcatalogo\\s+completo\\b",
+      "\\blibrary\\b|\\bbiblio\\b(?!teca)|\\bbiblioth[eè]que\\b"
+     ],
+     "note": "« Biblioteca » est le nom de l'onglet (tab.library) ; « Libreria completa » (chaîne Swift, observé) est le calque de « library » (= librairie, ou bibliothèque logicielle)."
+    },
+    "ro": {
+     "canon": "Bibliotecă",
+     "variantes_a_signaler": [
+      "\\blibr[ăa]r\\w*\\b",
+      "\\blibrary\\b",
+      "\\bBiblio\\b(?!tec)",
+      "\\bcatalog(?:ul)?\\s+(?:de\\s+)?cursuri\\b"
+     ],
+     "note": "Onglet « Bibliotecă » (tab.library, « Bibliotecă completă »). « librărie » = librairie (faux ami de library) ; l'abréviation française « Biblio » n'existe pas en roumain."
+    },
+    "nl": {
+     "canon": "Bibliotheek",
+     "variantes_a_signaler": [
+      "\\bbiblio\\b",
+      "\\blibrary\\b",
+      "\\bcatalogus\\b",
+      "\\bboekenkast\\b"
+     ],
+     "note": "'Bibliotheek' past op het tabblad; 'Bieb' is de informele NL-afkorting en aanvaardbaar als korte variant, 'Biblio' niet."
+    },
+    "sv": {
+     "canon": "Bibliotek",
+     "variantes_a_signaler": [
+      "\\bbiblio\\b",
+      "\\bkatalog\\w*",
+      "\\barkiv\\w*(?=[^.\\n]{0,30}kurs)",
+      "\\blibrary\\b"
+     ],
+     "note": "Swedish has no clipped 'Biblio'; the tab is Bibliotek. katalog/arkiv are substitutions seen in other editions."
+    },
+    "hu": {
+     "canon": "Könyvtár",
+     "variantes_a_signaler": [
+      "\\bbiblio\\w*",
+      "\\bkönyvesbolt\\w*",
+      "\\bmédiatár\\w*|\\btananyagtár\\w*",
+      "\\blibrary\\w*"
+     ],
+     "note": "Fülnév az összes kurzushoz; „Biblio” lefordítatlan, „könyvesbolt” bolt, „médiatár” más funkció. A „katalógus” a katalógus jogos neve, nem szűrjük."
+    },
+    "bg": {
+     "canon": "Библиотека",
+     "variantes_a_signaler": [
+      "\\bбиблио\\b",
+      "\\bкаталог\\w*\\b",
+      "\\bархив\\w*\\b",
+      "\\bкнижарниц\\w*\\b"
+     ],
+     "note": "„Библиотека“ е пълната, ясна форма за таба с всички курсове; съкращението „Библио“ не е прието в български, „каталог/архив“ са други концепции."
+    },
+    "da": {
+     "canon": "Bibliotek",
+     "variantes_a_signaler": [
+      "\\bbiblio\\b",
+      "\\blibrary\\b",
+      "\\bkatalog\\w*",
+      "\\barkiv(et)?\\b"
+     ],
+     "note": "»Biblio« est l'abréviation française ; »katalog« est flagué comme libellé d'onglet (faux positif possible dans un cours)."
+    },
+    "nb": {
+     "canon": "Bibliotek",
+     "variantes_a_signaler": [
+      "\\bbiblio\\b",
+      "\\bbibl\\.",
+      "\\bkatalog\\w*",
+      "\\bkursoversikt\\w*",
+      "\\blibrary\\b"
+     ],
+     "note": "Fanenavn; «Biblio» er fransk forkortelse."
+    },
+    "ru": {
+     "canon": "библиотека",
+     "variantes_a_signaler": [
+      "\\bбиблио\\b",
+      "\\bкаталог\\w*",
+      "\\bкнижн\\w*\\s+полк\\w*",
+      "\\bмедиатек\\w*"
+     ],
+     "note": "Вкладка всех курсов — «Библиотека» (без усечения «Библио»). «Каталог» — допустимый синоним, но унифицируем."
+    },
+    "hr": {
+     "canon": "Knjižnica",
+     "variantes_a_signaler": [
+      "\\bbibliotek\\w*",
+      "\\bbiblio\\b",
+      "\\blibrary\\b",
+      "\\bkatalog\\w*"
+     ],
+     "note": "Hrvatski standard je „knjižnica”; „biblioteka” je srpski/stariji, „Biblio” se ne skraćuje jer hrvatska riječ nema taj korijen."
+    },
+    "sl": {
+     "canon": "Knjižnica",
+     "variantes_a_signaler": [
+      "\\bbibliotek\\w*",
+      "\\bbiblio\\b",
+      "\\bkatalog\\w*"
+     ],
+     "note": "Zavihek Knjižnica (vsi tečaji); biblioteka je zastarela, Biblio ostaja francoska okrajšava, katalog je prodajni."
+    },
+    "sr": {
+     "canon": "Biblioteka",
+     "variantes_a_signaler": [
+      "\\bknjižnic\\w*",
+      "\\bbiblio\\b",
+      "\\blibrar\\w*",
+      "\\barhiv\\w*(?=[^.\\n]{0,15}\\b(?:kurs|tab|kartic)\\w*)"
+     ],
+     "note": "puna reč „Biblioteka“ (skraćenica „Biblio“ nije prirodna); „knjižnica“ je hrvatski."
     },
     "ar": {
      "canon": "المكتبة",
